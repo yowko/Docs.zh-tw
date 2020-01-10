@@ -1,18 +1,17 @@
 ---
 title: '#line - C# 參考'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#line'
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: b4ac4fd3277fb53251e87321500d1b8007458037
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 79033fa652af62c76d54737fbf0a0b47cf3aae99
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608533"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712490"
 ---
 # <a name="line-c-reference"></a>#line (C# 參考)
 
@@ -81,7 +80,7 @@ class MainClass
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

@@ -3,14 +3,12 @@ title: XML 與關聯式資料和 ADO.NET 互相整合
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6c37e494431eae9d17f442b2c32dea5f0b4bcf2b
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 373e28d1fffd8c47acb4acb70271db056aa3a27b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67397793"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709929"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML 與關聯式資料和 ADO.NET 互相整合
 **XmlDataDocument** 類別是 **XmlDocument** 的衍生類別，而且含有 XML 資料。 **XmlDataDocument** 的好處是提供關聯式與階層式資料之間的橋樑。 可被結合到 **DataSet**，而且兩種類別都可以隨內含資料而同步變更的即是 **XmlDocument**。 結合 **DataSet** 的 **XmlDocument** 允許 XML 和關聯式資料互相整合，因而您的資料並不一定要成為 XML 或以關聯式格式表示。 兩種您都可以選擇，而不必受限於單一資料表示法。  
@@ -47,6 +45,6 @@ ms.locfileid: "67397793"
   
  如果您需要從 **XmlDataDocument** 載入 **DataSet**，請參閱[使用 XML 文件同步資料集](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在 DataSet 中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

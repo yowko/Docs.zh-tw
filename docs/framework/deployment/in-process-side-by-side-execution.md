@@ -5,14 +5,12 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a33d3c4216ed8c5d79aef4017c6b9256fc1ad7c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 0c699f90143a87b7e7bee24c892efe2936a9399e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052108"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716485"
 ---
 # <a name="in-process-side-by-side-execution"></a>同處理序並存執行
 從 .NET Framework 4 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
@@ -40,9 +38,9 @@ ms.locfileid: "71052108"
   
     |.NET Framework 版本|1.1|2.0 - 3.5|4|  
     |----------------------------|---------|----------------|-------|  
-    |1.1|不適用|否|[是]|  
+    |1.1|不適用|否|是|  
     |2.0 - 3.5|否|不適用|是|  
-    |4|[是]|是|不適用|  
+    |4|是|是|不適用|  
   
 > [!NOTE]
 > .NET Framework 3.0 和 3.5 版是根據 2.0 版透過累加方式所建置，不需要並存執行。 這些本質上是相同的版本。  
@@ -50,15 +48,15 @@ ms.locfileid: "71052108"
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>常見並存裝載案例  
   
-- **情節 1：** 使用舊版 .NET Framework 所建置 COM 元件的原生應用程式。  
+- **情節 1：** 使用舊版 .NET Framework 所建置之 COM 元件的原生應用程式。  
   
-     已安裝的 .NET Framework 版本：COM 元件使用的 .NET Framework 4 以及所有其他 .NET Framework 版本。  
+     已安裝的 .NET Framework 版本： .NET Framework 4 和 COM 元件所使用的所有其他版本的 .NET Framework。  
   
      處理方式：在此情節中，不執行任何動作。 COM 元件會與註冊它們的 .NET Framework 版本一起執行。  
   
-- **情節 2**：您想同時執行使用 .NET Framework 2.0 SP1 建置的受控應用程式與 .NET Framework 2.0，但也願意在 .NET Framework 2.0 版不存在時，於 .NET Framework 4 上執行。  
+- **案例 2**：使用 .NET FRAMEWORK 2.0 SP1 建立的受控應用程式，您希望以 .NET Framework 2.0 執行，但如果沒有2.0 版本，則願意在 .NET Framework 4 上執行。  
   
-     已安裝的 .NET Framework 版本：舊版 .NET Framework 和 .NET Framework 4。  
+     安裝的 .NET Framework 版本：舊版的 .NET Framework 和 .NET Framework 4。  
   
      處理方式：在應用程式目錄的[應用程式組態檔](../configure-apps/index.md)中，使用 [\<startup> 項目](../configure-apps/file-schema/startup/startup-element.md)和 [\<supportedRuntime> 項目](../configure-apps/file-schema/startup/supportedruntime-element.md)，其設定方式如下：  
   
@@ -71,9 +69,9 @@ ms.locfileid: "71052108"
     </configuration>  
     ```  
   
-- **情節 3：** 原生應用程式使用舊版 .NET Framework 所建置的 COM 元件，而您想要將其與 .NET Framework 4 一起執行。  
+- **案例3：** 原生應用程式，其使用以舊版 .NET Framework 建立的 COM 元件，而您想要使用 .NET Framework 4 來執行。  
   
-     已安裝的 .NET Framework 版本：.NET Framework 4。  
+     已安裝的 .NET Framework 版本： .NET Framework 4。  
   
      處理方式：在應用程式目錄的應用程式組態檔中，搭配使用 `<startup>` 項目與設為 `true` 的 `useLegacyV2RuntimeActivationPolicy` 屬性以及設定如下的 `<supportedRuntime>` 項目：  
   
@@ -173,7 +171,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [\<startup> 項目](../configure-apps/file-schema/startup/startup-element.md)
 - [\<supportedRuntime> 項目](../configure-apps/file-schema/startup/supportedruntime-element.md)

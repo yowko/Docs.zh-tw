@@ -1,16 +1,15 @@
 ---
 title: out 參數修飾詞 - C# 參考
-ms.custom: seodec18
 ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 81d60782cf8e16d55889fb3c7c05858070a97741
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: bc3814b91ed4327f4af1a4a1bfbda632b0393bb8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602069"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713276"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 參數修飾詞 (C# 參考)
 `out` 關鍵字會導致引數由參考傳遞。 它會使形式參數成為引數的別名，其必須為變數。 換句話說，參數上的任何作業都會在引數上進行。 它類似於 [ref](ref.md) 關鍵字，只是 `ref` 需要在傳遞之前，先初始化變數。 其類似於 [in](in-parameter-modifier.md) 關鍵字，但不同處在於 `in` 不允許呼叫的方法來修改引數的值。 若要使用 `out` 參數，方法定義和呼叫方法都必須明確地使用 `out` 關鍵字。 例如：  
@@ -71,7 +70,7 @@ class CS0663_Example
 ## <a name="c-language-specification"></a>C# 語言規格  
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

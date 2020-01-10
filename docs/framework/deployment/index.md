@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975685"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716468"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和應用程式
 
@@ -32,9 +30,9 @@ ms.locfileid: "73975685"
 
   - 安裝程式選項：
 
-    - [Web 安裝程式](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Web installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [離線安裝程式](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Offline installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - 安裝模式：
 
@@ -136,7 +134,7 @@ ms.locfileid: "73975685"
 
      使用這個選項時，您將會建立搭配 Windows Installer 使用的 .msi 檔，或封裝您的應用程式以搭配另一個安裝程式使用。
 
-### <a name="distribution"></a>散發
+### <a name="distribution"></a>發佈
 
 .NET Framework 提供下列散發應用程式的選項：
 
@@ -165,7 +163,7 @@ ms.locfileid: "73975685"
 |[執行階段如何找出組件](how-the-runtime-locates-assemblies.md)|描述 Common Language Runtime 如何決定要用哪個組件來實現繫結要求。|
 |[組件載入的最佳做法](best-practices-for-assembly-loading.md)|討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型識別的問題。|
 |[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](reducing-system-restarts.md)|描述可防止在任何可能的情況下重新開機的重新啟動管理員，並說明安裝 .NET Framework 的應用程式如何利用 .NET Framework。|
-|[系統管理員部署手冊](guide-for-administrators.md)|說明系統管理員如何使用 System Center Configuration Manager (SCCM)，在整個網路上部署 .NET Framework 及其系統相依性。|
+|[系統管理員部署手冊](guide-for-administrators.md)|說明系統管理員如何使用 Microsoft 端點 Configuration Manager，在網路上部署 .NET Framework 及其系統相依性。|
 |[開發人員部署手冊](deployment-guide-for-developers.md)|說明開發人員如何將 .NET Framework 隨使用者的應用程式安裝在其電腦上。|
 |[部署應用程式、服務和元件](/visualstudio/deployment/deploying-applications-services-and-components)|討論 Visual Studio 中的部署選項，包括使用 ClickOnce 和 Windows Installer 技術發行應用程式的指示。|
 |[發行 ClickOnce 應用程式](/visualstudio/deployment/publishing-clickonce-applications)|描述如何封裝 Windows Forms 應用程式，並使用 ClickOnce 將它部署到網路上的用戶端電腦。|

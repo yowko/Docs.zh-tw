@@ -1,16 +1,15 @@
 ---
 title: 使用結構 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 491ee0224ffa39262992f7f42d20e5f97560b73f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d85b11204eb1f1de3a95efc67054cdffc4c219e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429491"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714668"
 ---
 # <a name="using-structs-c-programming-guide"></a>使用結構（C#程式設計手冊）
 
@@ -42,13 +41,13 @@ ms.locfileid: "74429491"
 
 ## <a name="example-2"></a>範例 2
 
-此範例示範結構特有的功能。 其無須使用 `new` 運算子就能建立 Coords 物件。 如果您以 `struct` 一字取代 `class`一字，將不會編譯程式。
+此範例示範結構特有的功能。 其無須使用 `new` 運算子就能建立 Coords 物件。 如果您以 `class` 一字取代 `struct` 一字，將不會編譯程式。
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
 [!code-csharp[csProgGuideObjects#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#3)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](index.md)

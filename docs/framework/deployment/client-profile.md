@@ -9,14 +9,12 @@ helpviewer_keywords:
 - profile [.NET Framework Client Profile]
 - .NET Framework Client Profile
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 72749f47d85c4ed910bf8bf925d14246dcb4244a
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 32fc29500a8a2e95b52ba16847020cdb390caceb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195172"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716564"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 .NET Client Profile 是 .NET Framework 的子集，隨附於 .NET Framework 4 (含) 以前版本，並已針對用戶端應用程式最佳化。 .NET Framework 是 Windows、Windows Phone 和 Microsoft Azure 的開發平台，並提供 Managed 應用程式執行環境和 .NET Framework 類別庫。 .NET Framework 4 (含) 以前版本提供了兩種部署選項：完整 .NET Framework 和 Client Profile。 Client Profile 提供比完整 .NET Framework 更快速的部署方式，產生的應用程式安裝套件也更小。  
@@ -31,5 +29,5 @@ ms.locfileid: "73195172"
 
 - [.NET Framework Client Profile (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)
 - [Visual Studio 多目標概觀](/visualstudio/ide/visual-studio-multi-targeting-overview)
-- [進行 .NET Framework 目標錯誤的疑難排解](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
+- [疑難排解 .NET Framework 目標錯誤](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)
 - [如何：以 .NET Framework 版本為目標](/visualstudio/ide/visual-studio-multi-targeting-overview)

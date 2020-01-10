@@ -2,13 +2,13 @@
 title: 使用 Visual Studio 來進行 Hello World .NET Core 應用程式的 Debug
 description: 瞭解如何在 Visual Studio 中C# ，對以或 Visual Basic 撰寫的 Hello World 應用程式進行 debug。
 ms.date: 12/05/2019
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 016b677639543c749a9940856f01b86e9a70859c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.custom: vs-dotnet
+ms.openlocfilehash: bc2736165ec827c1f2670605f23f549ceed4e83a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340102"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714060"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>使用 Visual Studio C#來 Debug 或 Visual Basic .net Core Hello World 應用程式
 

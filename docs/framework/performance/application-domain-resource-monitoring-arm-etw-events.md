@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, application domain monitoring events
 - application domain monitoring events [.NET Framework]
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e1c2a38be6f2c15a118b35925570119b474f096
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0e453b2bafffd9e07a1bdddd97282c5b97f5483d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040571"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716220"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>應用程式定義域資源監視 (ARM) ETW 事件
 
@@ -24,14 +22,14 @@ ms.locfileid: "73040571"
 
 下表說明關鍵字和層級。 如需詳細資訊，請參閱[CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)。
 
-|引發事件的關鍵字|層級|
+|引發事件的關鍵字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|
 |`ThreadingKeyword` (0x10000)|Informational(4)|
 
 下表說明事件資訊：
 
-|Event - 事件|事件 ID|引發的時機|
+|Event|事件 ID|引發的時機|
 |-----------|--------------|-----------------|
 |`ThreadCreated`|85|已為應用程式網域建立執行緒。|
 
@@ -50,13 +48,13 @@ ms.locfileid: "73040571"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|層級|
+|引發事件的關鍵字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|
 
 下表說明事件資訊：
 
-|Event - 事件|事件 ID|引發的時機|
+|Event|事件 ID|引發的時機|
 |-----------|--------------|-----------------|
 |`AppDomainMemAllocated`|83|每 4 MB 的記憶體 (大約)，配置於應用程式網域中。|
 
@@ -72,13 +70,13 @@ ms.locfileid: "73040571"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|層級|
+|引發事件的關鍵字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|
 
 下表說明事件資訊：
 
-|Event - 事件|事件 ID|引發的時機|
+|Event|事件 ID|引發的時機|
 |-----------|--------------|-----------------|
 |`AppDomainMemSurvived`|84|已結束回收每個記憶體。|
 
@@ -95,14 +93,14 @@ ms.locfileid: "73040571"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|層級|
+|引發事件的關鍵字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|
 |`ThreadingKeyword` (0x10000)|Informational(4)|
 
 下表說明事件資訊：
 
-|Event - 事件|事件 ID|引發的時機|
+|Event|事件 ID|引發的時機|
 |-----------|--------------|-----------------|
 |`ThreadAppDomainEnter`|87|進入應用程式網域的執行緒。|
 
@@ -118,14 +116,14 @@ ms.locfileid: "73040571"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|層級|
+|引發事件的關鍵字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementKeyword` (0x800)|Informational(4)|
 |`ThreadingKeyword` (0x10000)|Informational(4)|
 
 下表說明事件資訊：
 
-|Event - 事件|事件 ID|引發的時機|
+|Event|事件 ID|引發的時機|
 |-----------|--------------|-----------------|
 |`ThreadTerminated`|86|一個執行緒終止。|
 

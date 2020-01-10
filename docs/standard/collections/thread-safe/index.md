@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c7ffa98aec115db2d8c9a40e977f8cb7d33441a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 30660c2fb89fd3738abb05122a5daf175677265c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962985"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711242"
 ---
 # <a name="thread-safe-collections"></a>安全執行緒集合
 .NET Framework 4 引進了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間，其中包含數個兼具安全執行緒與調整能力的集合類別。 多個執行緒可以安全且有效率地新增或移除這些集合中的項目，而不需要利用使用者程式碼進行額外同步處理。 當您撰寫新的程式碼時，只要多個執行緒將同時寫入集合，就使用並行集合類別。 如果您僅讀取共用集合，則可以使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間中的類別。 除非您需要將目標設為 .NET Framework 1.1 或舊版本的執行階段，否則建議您不要使用 1.0 集合類別。  
@@ -34,7 +32,7 @@ ms.locfileid: "69962985"
   
  下表列出 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的集合類型。  
   
-|類型|說明|  
+|類型|描述|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|提供任何可實作 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 之類型的界限和封鎖功能。 如需詳細資訊，請參閱 [BlockingCollection 概觀](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)。|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|索引鍵/值組字典的安全執行緒實作。|  
@@ -45,14 +43,14 @@ ms.locfileid: "69962985"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[BlockingCollection 概觀](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|描述 <xref:System.Collections.Concurrent.BlockingCollection%601> 類型所提供的功能。|  
-|[如何：在 ConcurrentDictionary 中新增和移除項目](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|描述如何新增和移除 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 中的項目|  
-|[如何：從 BlockingCollection 個別加入和擷取項目](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|描述在未使用唯讀列舉值的情況下，如何新增和擷取封鎖回收中的項目。|  
-|[如何：將界限和封鎖功能加入至集合](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|描述如何使用任何集合類別作為 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 集合的基礎儲存機制。|  
-|[如何：使用 ForEach 來移除 BlockingCollection 中的項目](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|描述如何使用 `foreach` (在 Visual Basic 中為 `For Each`) 來移除封鎖集合中的所有項目。|  
-|[如何：在管線中使用封鎖集合的陣列](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|描述如何同時使用多個封鎖回收來實作管線。|  
+|[操作說明：在 ConcurrentDictionary 中新增和移除項目](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|描述如何新增和移除 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 中的項目|  
+|[操作說明：從 BlockingCollection 個別新增和擷取項目](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|描述在未使用唯讀列舉值的情況下，如何新增和擷取封鎖回收中的項目。|  
+|[操作說明：將界限和封鎖功能新增至集合](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|描述如何使用任何集合類別作為 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 集合的基礎儲存機制。|  
+|[操作說明：使用 ForEach 來移除 BlockingCollection 中的項目](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|描述如何使用 `foreach` (在 Visual Basic 中為 `For Each`) 來移除封鎖集合中的所有項目。|  
+|[操作說明：在管線中使用封鎖集合的陣列](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|描述如何同時使用多個封鎖回收來實作管線。|  
 |[如何：使用 ConcurrentBag 建立物件集區](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|示範在您可以重複使用物件而非持續建立新物件的情況下，如何使用並行資料包改善效能。|  
   
 ## <a name="reference"></a>參考資料  

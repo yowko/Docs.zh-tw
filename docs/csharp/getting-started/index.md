@@ -5,31 +5,30 @@ helpviewer_keywords:
 - Visual C#, getting started
 - getting started, Visual C#
 ms.date: 04/05/2019
-ms.custom: seoapril2019
-ms.openlocfilehash: 7ea84f9bb815b7080625508bd28364bc75255afe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aff810aa7ba533682f9976fbb59ef4d7ec43ca58
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099960"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713925"
 ---
 # <a name="get-started-with-c"></a>開始使用 C\#
 
-本節提供簡短且簡單的教學課程，可讓您使用 C# 和 .NET Core 快速建置應用程式。 本節內容涵蓋適用於 Visual Studio 2017 和 Visual Studio Code 的使用者入門主題。 這些文章假設您有一些程式設計經驗。 如果您是程式設計的新手，請嘗試我們的 [C# 簡介](../tutorials/intro-to-csharp/index.md)互動式教學課程。
+本節提供簡短且簡單的教學課程，可讓您使用 C# 和 .NET Core 快速建置應用程式。 有 Visual Studio 和 Visual Studio Code 的快速入門主題。 這些文章假設您有一些程式設計經驗。 如果您是程式設計的新手，請嘗試我們的 [C# 簡介](../tutorials/intro-to-csharp/index.md)互動式教學課程。
 
 我們將提供下列主題：
 
-- [C# 語言和 .NET Framework 簡介](introduction-to-the-csharp-language-and-the-net-framework.md)
+- [C#語言和 .NET Framework 簡介](introduction-to-the-csharp-language-and-the-net-framework.md)
 
      提供 C# 語言和 .NET 的概觀。
 
-- [在 Visual Studio 2017 中使用 .NET Core 建置 C# Hello World 應用程式](../../core/tutorials/with-visual-studio.md)
+- [在 Visual Studio C#中使用 .net Core 建立 Hello World 應用程式](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio lets you code, compile, run, debug, profile, and publish your applications from an integrated development environment for Windows or Mac.
+   Visual Studio 可讓您從適用于 Windows 或 Mac 的整合式開發環境，對應用程式進行編碼、編譯、執行、分析、剖析和發行。
 
-   此主題可讓您建立並執行簡單的 Hello World 應用程式，然後修改它以執行稍微更具互動性的 Hello World 應用程式。 當您完成建置並執行應用程式之後，您也可以學習如何[為應用程式偵錯](../../core/tutorials/debugging-with-visual-studio.md)，以及如何[發行應用程式](../../core/tutorials/publishing-with-visual-studio.md)，讓它可在任何 .NET Core 支援的平台上執行。
+   本主題可讓您建立和執行簡單的 Hello World 應用程式，然後加以修改，以執行稍微多一點的互動式 Hello World 應用程式。 當您完成建置並執行應用程式之後，您也可以學習如何[為應用程式偵錯](../../core/tutorials/debugging-with-visual-studio.md)，以及如何[發行應用程式](../../core/tutorials/publishing-with-visual-studio.md)，讓它可在任何 .NET Core 支援的平台上執行。
 
-- [在 Visual Studio 2017 中使用 C# 和 .NET Core 建置類別庫](../../core/tutorials/library-with-visual-studio.md)
+- [使用C#和 .NET Standard 在 Visual Studio 中建立類別庫](../../core/tutorials/library-with-visual-studio.md)
 
    類別庫讓您能夠定義可從另一個應用程式呼叫的型別和型別成員。 此主題可讓您建立具有單一方法的類別庫，來決定字串是否要以大寫字元為開頭。 當您完成建置類別庫之後，可以開發[單元測試](../../core/tutorials/testing-library-with-visual-studio.md)以確保該類別庫可如預期般運作，然後您可以讓[想要取用它的應用程式](../../core/tutorials/consuming-library-with-visual-studio.md)能夠使用該類別庫。
 

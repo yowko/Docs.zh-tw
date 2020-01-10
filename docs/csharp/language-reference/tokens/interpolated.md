@@ -1,6 +1,5 @@
 ---
 title: $-字串內插C#補點-參考
-ms.custom: seodec18
 description: 字串內插補點提供比傳統字串複合格式化更容易讀取且方便的語法來格式化字串輸出。
 ms.date: 09/02/2019
 f1_keywords:
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: cda8582da9ca8262ec2ce6bcfbb76e2e2f5f6006
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421848"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715075"
 ---
 # <a name="---string-interpolation-c-reference"></a>$-字串插補C# （參考）
 
@@ -61,7 +60,7 @@ ms.locfileid: "73421848"
 內插逐字字串是以 `$` 字元開頭，後面接著 `@` 字元。 如需逐字字串的詳細資訊，請參閱[字串](../builtin-types/reference-types.md)和[逐字識別碼](verbatim.md)主題。
 
 > [!NOTE]
-> 從C# 8.0 開始，您可以使用`$`，並以任何順序`@`權杖： `$@"..."`和`@$"..."`都是有效的內插逐字字串。 在舊版C#中，`$` token 必須出現在 `@` token 前面。
+> 從C# 8.0 開始，您可以使用 `$`，並以任何順序 `@` 權杖： `$@"..."` 和 `@$"..."` 都是有效的內插逐字字串。 在舊版C#中，`$` token 必須出現在 `@` token 前面。
 
 ## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>隱含轉換和如何指定 `IFormatProvider` 的執行
 

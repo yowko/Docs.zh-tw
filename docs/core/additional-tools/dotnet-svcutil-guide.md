@@ -3,13 +3,12 @@ title: WCF svcutil 工具概觀
 description: Microsoft WCF dotnet-svcutil 工具的概觀，此工具可新增 .NET Core 和 ASP.NET Core 專案功能，與 .NET Framework 專案的 WCF svcutil 工具類似。
 author: mlacouture
 ms.date: 02/22/2019
-ms.custom: seodec18
-ms.openlocfilehash: 89fe72c8116498ff60d439ce17ef2e857edf621e
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: d204576f27227ce6e65d61471f19cdf3ec4df37a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771975"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714555"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>適用於 .NET Core 的 WCF dotnet-svcutil 工具
 
@@ -22,7 +21,7 @@ Windows Communication Foundation (WCF) **dotnet-svcutil** 工具是一種 .NET C
 > [!IMPORTANT]
 > 您只應該參考來自信任來源的服務。 新增不信任來源的參考可能會危及安全性。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 <!-- markdownlint-disable MD025 -->
 
@@ -38,7 +37,7 @@ Windows Communication Foundation (WCF) **dotnet-svcutil** 工具是一種 .NET C
 
 ---
 
-## <a name="getting-started"></a>使用者入門
+## <a name="getting-started"></a>入門
 
 下列範例會引導您完成將 Web 服務參考新增到 .NET Core Web 專案並叫用服務的必要步驟。 您建立名為 *HelloSvcutil* 的 .NET Core Web 應用程式，並對實作下列合約的 Web 服務新增參考：
 
@@ -84,7 +83,7 @@ public interface ISayHello
     </ItemGroup>
     ```
 
-    接著使用[ 命令還原 `dotnet restore`dotnet-svcutil](../tools/dotnet-restore.md) 套件，如下所示：
+    接著使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令還原 _dotnet-svcutil_ 套件，如下所示：
 
     ```dotnetcli
     dotnet restore

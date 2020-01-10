@@ -1,5 +1,5 @@
 ---
-title: 作法：預期隔離儲存區發生空間不足的情況
+title: HOW TO：預期隔離儲存區發生空間不足的情況
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -22,16 +22,14 @@ helpviewer_keywords:
 - isolated storage, out of space conditions
 - data storage using isolated storage, out of space conditions
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cf5144cb1abd3a916d2b5afc361c8c96a221d47e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: HT
+ms.openlocfilehash: 5666019e1a65880221261ef5ad704f82c37263b2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372291"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708111"
 ---
-# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>作法：預期隔離儲存區發生空間不足的情況
+# <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>HOW TO：預期隔離儲存區發生空間不足的情況
 
 使用隔離儲存區的程式碼受到[配額](../../../docs/standard/io/isolated-storage.md#quotas)的限制，此限制可針對隔離儲存區檔案和目錄所在的資料區間，指定其大小上限。 配額由安全性原則所定義且由系統管理員設定。 當您嘗試寫入資料時，如果超過允許的大小上限，則會擲回 <xref:System.IO.IsolatedStorage.IsolatedStorageException> 例外狀況，且作業會失敗。 這有助於防止惡意的拒絕服務攻擊，此功能可能會因為資料存放區已滿而導致應用程式拒絕要求。
 
@@ -47,8 +45,8 @@ ms.locfileid: "57372291"
 [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
 [!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [隔離儲存區](../../../docs/standard/io/isolated-storage.md)
-- [如何：取得隔離儲存區的存放區](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+- [操作說明：取得隔離儲存區的存放區](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

@@ -4,13 +4,12 @@ description: 透過逐步使用 dotnet test 和 MSTest 建置範例方案的互�
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.custom: seodec18
-ms.openlocfilehash: d9ad21aded45c8955e24b93fd4ddf8a86b989055
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 2d432f5efd6f8de3593f939abbd488f9fe68b73e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116180"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715390"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>使用 MSTest 與 .NET Core 為 C# 進行單元測試
 
@@ -95,7 +94,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 
 ## <a name="create-the-first-test"></a>建立第一個測試
 
-您會撰寫一個失敗測試，讓它通過，然後重複此程序。 從 *PrimeService.Tests* 目錄移除 *UnitTest1.cs*，然後使用下列內容建立名為 *PrimeService_IsPrimeShould.cs* 的新 C# 檔案：
+撰寫一個會失敗的測試，再使其通過，然後重複這個過程。 從 *PrimeService.Tests* 目錄移除 *UnitTest1.cs*，然後使用下列內容建立名為 *PrimeService_IsPrimeShould.cs* 的新 C# 檔案：
 
 ```csharp
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -145,7 +144,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="add-more-features"></a>新增更多功能
 
-現在，您已經讓一個測試順利通過，您可以撰寫更多測試。 還有一些其他適用於下列質數的簡單案例：0、-1。 您可以使用 [TestMethod 屬性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)新增新的測試，但這段過程很快就會單調乏味。 因此，還有其他 MSTest 屬性，可讓您撰寫類似的測試套件。  [DataTestMethod 屬性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute)代表一套測試，這套測試會執行相同的程式碼，但具有不同的輸入引數。 您可以使用 [DataRow 屬性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute)來指定這些輸入的值。
+現在，您已經讓一個測試順利通過，您可以撰寫更多測試。 還有一些其他適用於質數 0、-1 的簡單案例。 您可以使用 [TestMethod 屬性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)新增新的測試，但這段過程很快就會單調乏味。 因此，還有其他 MSTest 屬性，可讓您撰寫類似的測試套件。  [DataTestMethod 屬性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute)代表一套測試，這套測試會執行相同的程式碼，但具有不同的輸入引數。 您可以使用 [DataRow 屬性](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute)來指定這些輸入的值。
 
 您不需要建立新測試，只要套用這兩個屬性以建立單一資料驅動測試即可。 資料驅動型測試是一種測試方法，其會測試數個低於二 (最小質數) 的值：
 
@@ -161,7 +160,7 @@ if (candidate < 2)
 
 您已建置好小型的程式庫和該程式庫的一組單元測試， 您已建立方案結構，因此加入新套件與測試是一般工作流程的一部分。 您已集中大部分的時間與精力以解決應用程式目標。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
 - [在單元測試中使用 MSTest 架構](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)

@@ -1,17 +1,15 @@
 ---
-title: .NET Framework 和 Out-of-Band 發行版本
+title: .NET Framework 和不定期發行
 ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1df04df8aa08fa66c91d03d4b67318b434a93d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a2dcd011548df857a1399c5bbdfe6ed33927672e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051960"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716407"
 ---
-# <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 和 Out-of-Band 發行版本
+# <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 和不定期發行
 
 .NET Framework 持續朝向容納不同平台 (例如 Windows Phone 和 Windows 市集應用程式以及傳統桌面和 Web 應用程式)，以及獲得最大程式碼重複使用率而不斷進化。 除了定期發行的 .NET Framework 版本之外，我們還會發行非常態 (Out-of-Band，OOB) 新功能，藉此改善跨平台開發工作或引入新功能。 本主題將討論 .NET Framework 及其 OOB 版本的未來方向。
 
@@ -53,6 +51,6 @@ ms.locfileid: "71051960"
 
  若要尋找發行前版本和穩定套件，請在 NuGet 套件管理員中選擇 [包含發行前版本]。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [快速入門](index.md)
+- [使用者入門](index.md)

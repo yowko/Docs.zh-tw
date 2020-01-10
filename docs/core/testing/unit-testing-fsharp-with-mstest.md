@@ -4,13 +4,12 @@ description: 透過逐步使用 dotnet test 和 MSTest 建置範例方案的互�
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.custom: seodec18
-ms.openlocfilehash: 46cbf00bbf1578e35d25d5b4deaecfed03a47fd0
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
-ms.translationtype: HT
+ms.openlocfilehash: a685ed8a56393fb6e1c1b9400f0ed4bcef15f9b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559509"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714270"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>使用 dotnet test 與 MSTest 為 .NET Core 中的 F# 程式庫進行單元測試
 

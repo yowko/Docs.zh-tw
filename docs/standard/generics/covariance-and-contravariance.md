@@ -11,14 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee8cc1b677ad6f6c2718c155edbba632df38dbd3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974702"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708393"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>泛型中的共變數和反變數
 共變數和反變數是指使用比原本指定更多衍生型別（更明確）或較少衍生型別（較不明確）之能力的詞彙。 泛型類型參數支援共變數和反變數，可在指派和使用泛型類型時提供更大的彈性。 當您參考類型系統時，共變數、反變數和不可變數的定義如下。 範例中會假設名為 `Base` 的基底類別，以及名為 `Derived`的衍生類別。  
@@ -57,7 +55,7 @@ ms.locfileid: "73974702"
   
  一般來說，Covariant 類型參數可以用來做為委派的傳回類型，而 Contravariant 類型參數可以用來做為參數類型。 例如，Covariant 類型參數可以用來做為介面方法的傳回類型，而 Contravariant 類型參數可以用來做為介面方法的參數類型。  
   
- 共變數和反變數合稱為「變異數」。 未標示 Covariant 或 Contravariant 的泛型類型參數，稱為 *Invariant*參數。 通用語言執行平台中變異數事實的簡短摘要。  
+ 共變性和逆變性合稱為「 *變異性*」(Variance)。 未標示 Covariant 或 Contravariant 的泛型類型參數，稱為 *Invariant*參數。 通用語言執行平台中變異數事實的簡短摘要。  
   
 - 在 .NET Framework 4 中，Variant 型別參數限制為泛型介面和泛型委派型別。  
   
@@ -128,7 +126,7 @@ ms.locfileid: "73974702"
  從 .NET Framework 4 開始，Visual Basic 和 C# 提供可讓您將介面及委派的泛型型別參數標記為 Covariant 或 Contravariant 的關鍵字。  
   
 > [!NOTE]
-> 從 .NET Framework 2.0 版開始，通用語言執行平台在泛型類型參數上支援變異數附註。 在 .NET Framework 4 之前，若要定義具有這些附註的泛型型別，唯一的辦法就是使用 Microsoft Intermediate Language (MSIL)，即透過 [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 編譯類別，或是在動態組件中發出類別。  
+> 從 .NET Framework 2.0 版開始，通用語言執行平台在泛型型別參數上支援變異數附註。 在 .NET Framework 4 之前，若要定義具有這些附註的泛型型別，唯一的辦法就是使用 Microsoft Intermediate Language (MSIL)，即透過 [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 編譯類別，或是在動態組件中發出類別。  
   
  Covariant 類型參數是以 `out` 關鍵字 (在 Visual Basic 中為`Out` 關鍵字，在 `+` MSIL 組合語言 [中則為](../../../docs/framework/tools/ilasm-exe-il-assembler.md)) 來標記。 您可以使用 Covariant 類型參數當做屬於介面之方法的傳回值，或當做委派的傳回類型。 但是，您不能將 Covariant 類型參數當做介面方法的泛型類型條件約束使用。  
   
@@ -139,30 +137,30 @@ ms.locfileid: "73974702"
   
  只有介面類型和委派類型可以有 Variant 類型參數。 介面或委派類型可以同時具有 Covariant 和 Contravariant 類型參數。  
   
- Visual Basic 和 C# 不允許您違反使用 Covariant 和 Contravariant 類型參數的規則，也不允許您將 Covariant 和 Contravariant 附註加入至介面及委派以外類型的類型參數。 [MSIL 組合語言](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 不會執行這類檢查，如果您嘗試載入違反規則的類型，便會擲回 <xref:System.TypeLoadException> 。  
+ Visual Basic 和 C# 不允許您違反使用 Covariant 和 Contravariant 型別參數的規則，也不允許您將 Covariant 和 Contravariant 附註加入至介面及委派以外類型的型別參數。 [MSIL 組合語言](../../../docs/framework/tools/ilasm-exe-il-assembler.md) 不會執行這類檢查，如果您嘗試載入違反規則的類型，便會擲回 <xref:System.TypeLoadException> 。  
   
  如需詳細資訊與範例程式碼，請參閱[泛型介面中的變異數 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) 和[泛型介面中的變異數 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)。  
 
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Variant 泛型介面與委派類型的清單
  在 .NET Framework 4 中，下列介面和委派型別具有 Covariant 及/或 Contravariant 型別參數。  
   
-|輸入|Covariant 類型參數|Contravariant 類型參數|  
+|類型|Covariant 類型參數|Contravariant 類型參數|  
 |----------|-------------------------------|-----------------------------------|  
-|<xref:System.Action%601> 至 <xref:System.Action%6016>||[是]|  
-|<xref:System.Comparison%601>||[是]|  
-|<xref:System.Converter%602>|[是]|[是]|  
-|<xref:System.Func%601>|[是]||  
-|<xref:System.Func%602> 至 <xref:System.Func%6017>|[是]|[是]|  
-|<xref:System.IComparable%601>||[是]|  
-|<xref:System.Predicate%601>||[是]|  
-|<xref:System.Collections.Generic.IComparer%601>||[是]|  
-|<xref:System.Collections.Generic.IEnumerable%601>|[是]||  
-|<xref:System.Collections.Generic.IEnumerator%601>|[是]||  
-|<xref:System.Collections.Generic.IEqualityComparer%601>||[是]|  
-|<xref:System.Linq.IGrouping%602>|[是]||  
-|<xref:System.Linq.IOrderedEnumerable%601>|[是]||  
-|<xref:System.Linq.IOrderedQueryable%601>|[是]||  
-|<xref:System.Linq.IQueryable%601>|[是]||  
+|<xref:System.Action%601> 至 <xref:System.Action%6016>||是|  
+|<xref:System.Comparison%601>||是|  
+|<xref:System.Converter%602>|是|是|  
+|<xref:System.Func%601>|是||  
+|<xref:System.Func%602> 至 <xref:System.Func%6017>|是|是|  
+|<xref:System.IComparable%601>||是|  
+|<xref:System.Predicate%601>||是|  
+|<xref:System.Collections.Generic.IComparer%601>||是|  
+|<xref:System.Collections.Generic.IEnumerable%601>|是||  
+|<xref:System.Collections.Generic.IEnumerator%601>|是||  
+|<xref:System.Collections.Generic.IEqualityComparer%601>||是|  
+|<xref:System.Linq.IGrouping%602>|是||  
+|<xref:System.Linq.IOrderedEnumerable%601>|是||  
+|<xref:System.Linq.IOrderedQueryable%601>|是||  
+|<xref:System.Linq.IQueryable%601>|是||  
   
 ## <a name="see-also"></a>請參閱
 

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 951941af2568e72fe093860801bd2595b3037e41
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3763e93ff3a14819f59102a01cf3285e85afd12d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428172"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716203"
 ---
 # <a name="clr-etw-events"></a>CLR ETW 事件
 本節中的主題描述 Windows (ETW) 事件的事件追蹤。 每個事件都有相關聯的關鍵字和層級，如 [CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)主題中所述。 CLR 具有事件的兩個提供者：  
@@ -24,7 +22,7 @@ ms.locfileid: "74428172"
   
  如需提供者的詳細資訊，請參閱 [CLR ETW 提供者](clr-etw-providers.md)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [執行階段資訊事件](runtime-information-etw-events.md)  
  擷取執行階段的相關資訊，包含 SKU、版本號碼、執行階段啟用方式、用來啟動它的命令列參數、GUID (適用時)，以及其他相關資訊。  
   
@@ -61,9 +59,9 @@ ms.locfileid: "74428172"
  [堆疊事件](stack-etw-event.md)  
  擷取與其他事件搭配使用以在引發事件之後產生堆疊追蹤的資訊。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [使用 ETW 改善調試和效能微調](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
+- [使用 ETW 改善偵錯和效能調整](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)
 - [Windows 效能 Blog](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)
 - [控制 .NET Framework 記錄](controlling-logging.md)
 - [CLR ETW 提供者](clr-etw-providers.md)

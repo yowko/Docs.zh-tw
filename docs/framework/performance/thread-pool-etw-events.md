@@ -5,14 +5,12 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f1c92154fe62b1b6ba6981606680daf37d087f4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e1deb17dfdfea4c8b66eb8d836a10bf888727e1a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974870"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715906"
 ---
 # <a name="thread-pool-etw-events"></a>執行緒集區 ETW 事件
 這些事件會收集背景工作和 I/O 執行緒的資訊。  
@@ -29,13 +27,13 @@ ms.locfileid: "73974870"
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart 與 ThreadPoolWorkerThreadStop  
  下表顯示這些事件的關鍵字與層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|告知性 (4)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|建立背景工作執行緒時。|  
 |`ThreadPoolWorkerThreadStop`|51|停止背景工作執行緒時。|  
@@ -56,13 +54,13 @@ ms.locfileid: "73974870"
 #### <a name="threadpoolworkerthreadadjustmentsample"></a>ThreadPoolWorkerThreadAdjustmentSample  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|告知性 (4)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|表示單一範例的資訊集合。亦即，具有特定並行層級之輸送量的瞬間量。|  
   
@@ -76,13 +74,13 @@ ms.locfileid: "73974870"
 #### <a name="threadpoolworkerthreadadjustmentadjustment"></a>ThreadPoolWorkerThreadAdjustmentAdjustment  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|告知性 (4)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|當執行緒插入 (攀登) 演算法判斷具有並行層級時，記錄控制中的變更。|  
   
@@ -98,13 +96,13 @@ ms.locfileid: "73974870"
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|告知性 (4)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|收集執行緒集區的資料。|  
   
@@ -114,10 +112,10 @@ ms.locfileid: "73974870"
 |----------------|---------------|-----------------|  
 |持續期間|win:Double|收集這些統計資料期間的時間量 (以秒為單位)。|  
 |輸送量|win:Double|在這段間隔期間，每秒完成的平均數目。|  
-|ThreadWave|win:Double|保留供內部使用。|  
-|ThroughputWave|win:Double|保留供內部使用。|  
-|ThroughputErrorEstimate|win:Double|保留供內部使用。|  
-|AverageThroughputErrorEstimate|win:Double|保留供內部使用。|  
+|ThreadWave|win:Double|保留為內部使用。|  
+|ThroughputWave|win:Double|保留為內部使用。|  
+|ThroughputErrorEstimate|win:Double|保留為內部使用。|  
+|AverageThroughputErrorEstimate|win:Double|保留為內部使用。|  
 |ThroughputRatio|win:Double|在這段間隔期間，正在作用中的背景工作執行緒計數變更所造成的輸送量相對改善。|  
 |Confidence|win:Double|ThroughputRatio 欄位有效性的度量。|  
 |NewcontrolSetting|win:Double|作用中背景工作執行緒數目，其將做為作用中執行緒計數未來變化的基準。|  
@@ -130,13 +128,13 @@ ms.locfileid: "73974870"
 ### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|告知性 (4)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|在執行緒集區中建立 I/O 執行緒時。|  
   
@@ -151,13 +149,13 @@ ms.locfileid: "73974870"
 ### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|告知性 (4)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|當 I/O 執行緒變成淘汰候選時。|  
   
@@ -172,13 +170,13 @@ ms.locfileid: "73974870"
 ### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|告知性 (4)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|因為在執行緒變成淘汰候選之後，I/O 在等候期間內到達，而導致 I/O 執行緒取消淘汰時。|  
   
@@ -193,13 +191,13 @@ ms.locfileid: "73974870"
 ### <a name="iothreadterminate"></a>IOThreadTerminate  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`ThreadingKeyword` (0x10000)|告知性 (4)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`IOThreadTerminate`|45|在執行緒集區中建立 I/O 執行緒時。|  
   

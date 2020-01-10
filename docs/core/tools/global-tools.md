@@ -3,13 +3,12 @@ title: .NET Core 通用工具
 description: 說明何為 .NET Core 通用工具以及它們可用之 .NET Core CLI 命令的概觀。
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.custom: seodec18
-ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 665cee64cb92efd16f5528feb656b377f9f3283c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318311"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714164"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core 通用工具概觀
 
@@ -69,7 +68,7 @@ Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 
 通用工具可以安裝在預設目錄或特定位置中。 預設目錄如下：
 
-| OS          | 路徑                          |
+| 作業系統          | {2&gt;路徑&lt;2}                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |

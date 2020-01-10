@@ -4,13 +4,12 @@ description: 透過逐步使用 dotnet test 和 xUnit 建置範例方案的互�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.custom: seodec18
-ms.openlocfilehash: 420ab4c7f23ef3fd6cd26d91c2b4f075f1a205f5
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835443"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714241"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 .NET Core 中的 C# 進行單元測試
 
@@ -85,7 +84,7 @@ ms.locfileid: "74835443"
   dotnet new xunit -o PrimeService.Tests
   ```
 
-* 上述命令會：
+* 上述命令：
   * 在*PrimeService. 測試*目錄中建立*PrimeService*專案。 測試專案使用[xUnit](https://xunit.github.io/)做為測試程式庫。
   * 藉由將下列 `<PackageReference />`元素新增至專案檔，來設定測試執行器：
     * 「Microsoft .NET. Test Sdk」

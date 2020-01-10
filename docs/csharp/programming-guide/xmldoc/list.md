@@ -1,6 +1,5 @@
 ---
 title: <list> - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 0df6653171aa0366f555c39e4644f13b2b7384f9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 6e6f3a3399f2bffe84b5cec733833c974a0bb51b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523426"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711749"
 ---
 # <a name="list-c-programming-guide"></a>\<list> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  

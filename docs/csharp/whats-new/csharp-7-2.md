@@ -2,12 +2,12 @@
 title: C# 7.2 的新功能
 description: C# 7.2 新功能的概觀。
 ms.date: 08/16/2017
-ms.openlocfilehash: d559f07c501b2a79472d01e2815b50cd8f0f57a5
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 7febefb81bbea6f24690adb05488ad6a18bbf552
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332312"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694591"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 的新功能
 
@@ -49,7 +49,7 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 
 您可以在[撰寫安全、有效率的程式碼](../write-safe-efficient-code.md)深入了解這些變更。
 
-## <a name="non-trailing-named-arguments"></a>非後置具名引數
+## <a name="non-trailing-named-arguments"></a>無後置具名引數
 
 當具名引數位於正確位置時，方法呼叫現在可以在位置引數前面使用具名引數。 如需詳細資訊，請參閱[具名和選擇性引數](../programming-guide/classes-and-structs/named-and-optional-arguments.md)。
 
@@ -57,7 +57,7 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 
 C# 7.0 中的數字分隔符號之實作支援，並不允許將 `_` 作為常值的第一個字元。 十六進位與二進位數值常值現在可以使用 `_` 開頭。
 
-例如:
+例如：
 
 ```csharp
 int binaryValue = 0b_0101_0101;

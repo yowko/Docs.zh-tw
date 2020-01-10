@@ -1,21 +1,19 @@
 ---
 title: 類型封送處理 - .NET
 description: 了解 .NET 如何將您的類型封送處理至原生表示法。
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: bc44a2c63dfa3fde3e3c4197e5d1fe79857ea717
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929059"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706262"
 ---
 # <a name="type-marshaling"></a>類型封送處理
 
 當類型需要跨越受控程式碼和機器碼之間的界限時，**封送處理**便是轉換類型的程序。
 
-之所以需要進行封送處理，是因受控程式碼和非受控程式碼中的類型並不相同。 例如，在 Managed 程式碼中會有 `String`，而在 Unmanaged 程式碼中，字串可以是 Unicode (「寬」)、非 Unicode、以 null 終止的及 ASCII 等等。根據預設，P/Invoke 子系統會嘗試根據預設行為 (已於本文中描述) 執行正確動作。 不過，在您需要進行額外控制的情況下，您可以運用 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 屬性來指定非受控端的預期類型。 比方說，如果您想要用以 null 終止的 ANSI 字串形式來傳送字串，您可以下列方式執行它︰
+之所以需要進行封送處理，是因受控程式碼和非受控程式碼中的類型並不相同。 例如，在 managed 程式碼中，您有一個 `String`，而非受控世界字串可以是 Unicode （「寬」）、非 Unicode、以 null 終止的、ASCII 等等。根據預設，P/Invoke 子系統會依照本文所述的預設行為，嘗試執行正確的動作。 不過，在您需要進行額外控制的情況下，您可以運用 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 屬性來指定非受控端的預期類型。 比方說，如果您想要用以 null 終止的 ANSI 字串形式來傳送字串，您可以下列方式執行它︰
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
@@ -60,7 +58,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 下表包含僅限 Windows 的預設封送處理規則。 在非 Windows 平台上，您無法對這些類型進行封送處理。
 
-| .NET 類型 | 原生類型 (參數) | 原生類型 (欄位) |
+| .NET 型別 | 原生類型 (參數) | 原生類型 (欄位) |
 |-----------|-------------------------|---------------------|
 | `object`  | `VARIANT`               | `IUnknown*`         |
 | `System.Array` | COM 介面 | 需要有 `[MarshalAs]` 屬性，否則不允許 |
@@ -71,7 +69,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 某些類型只能以參數 (而非欄位) 的形式進行封送處理。 這些類型已列於下表中：
 
-| .NET 類型 | 原生類型 (僅限參數) |
+| .NET 型別 | 原生類型 (僅限參數) |
 |-----------|------------------------------|
 | `System.Text.StringBuilder` | `char*` 或 `char16_t*`，取決於 P/Invoke 的 `CharSet`。  請參閱[字元集文件](charset.md)。 |
 | `System.ArgIterator` | `va_list` (僅限 Windows x86/x64/arm64) |

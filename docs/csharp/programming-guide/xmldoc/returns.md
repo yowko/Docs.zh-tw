@@ -1,6 +1,5 @@
 ---
 title: <returns> - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - returns
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: dce36c762879c829a68897d6e3c2ff18903318c6
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 16105ed0f4d7b2ea0067e1b2f0409dfa5b30c4a4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523345"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694864"
 ---
 # <a name="returns-c-programming-guide"></a>\<returns> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  

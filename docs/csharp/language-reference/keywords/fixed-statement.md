@@ -1,18 +1,17 @@
 ---
 title: fixed 陳述式 - C# 參考
-ms.custom: seodec18
 ms.date: 05/10/2018
 f1_keywords:
 - fixed_CSharpKeyword
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: d3c87f0e71095bbcc7c5a1d64b026e92838a6306
-ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
-ms.translationtype: HT
+ms.openlocfilehash: e527e8a54a739391d18b180532372b5b70f34d37
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68433759"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713526"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 陳述式 (C# 參考)
 
@@ -69,7 +68,7 @@ fixed (byte* ps = srcarray, pd = dstarray)
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [fixed 陳述式](~/_csharplang/spec/unsafe-code.md#the-fixed-statement)一節。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

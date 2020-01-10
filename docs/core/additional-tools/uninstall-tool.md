@@ -2,15 +2,15 @@
 title: 解除安裝工具
 description: 概述 .NET Core 卸載工具，這是一個引導式工具，可讓您控制 .NET Core Sdk 和執行時間的清理。
 author: sfoslund
-ms.date: 12/17/2019
-ms.openlocfilehash: 5a1a419d5ad09643a7063cc03ec727c547268cc6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.date: 01/06/2020
+ms.openlocfilehash: 4944c983cbd02b456c3a09a1b03bc28ba6e458cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75443544"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714545"
 ---
-# <a name="net-core-uninstall-tool"></a>.NET Core 卸載工具
+# <a name="net-core-uninstall-tool"></a>.NET Core 解除安裝工具
 
 [.Net Core 卸載工具](https://github.com/dotnet/cli-lab/releases)（`dotnet-core-uninstall`）可讓您從系統中移除 .Net Core Sdk 和執行時間。 有一組選項可用來指定您要卸載的版本。
 
@@ -446,7 +446,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
   設定詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `normal`。
 
-* **`-y, --yes`** 執行命令，而不需要 Y/n 確認。
+* **`-y, --yes`** 執行命令，而不需要 Y/N 確認。
   
 * **`--force`** 強制移除 Visual Studio 或 Sdk 可能使用的版本。
 
@@ -462,7 +462,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 > [!NOTE]
 > 根據預設，Visual Studio 或其他 Sdk 可能需要的 .NET Core Sdk 和執行時間會保留下來。 在下列範例中，某些指定的 Sdk 和執行時間可能會保留，視電腦的狀態而定。 若要移除所有 Sdk 和執行時間，請將它們明確地列為引數，或使用 [`--force`] 選項。
 
-* 移除 `3.0.0-preview6-27804-01` 版本以外的所有 x86 .NET Core 執行時間，而不需要進行 Y/n 確認：
+* 移除 `3.0.0-preview6-27804-01` 版本以外的所有 .NET Core 執行時間，而不需要進行 Y/N 確認：
 
   ```console
   dotnet-core-uninstall remove --all-but 3.0.0-preview6-27804-01 --runtime --yes
@@ -477,7 +477,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 * 移除沒有主控台輸出的 .NET Core 1.1.11 SDK：
 
   ```console
-  dotnet-core-uninstall remove 1.1.11 --sdk --yes -verbosity q
+  dotnet-core-uninstall remove 1.1.11 --sdk --yes --verbosity q
   ```
 
 * 移除此工具可安全移除的所有 .NET Core Sdk：

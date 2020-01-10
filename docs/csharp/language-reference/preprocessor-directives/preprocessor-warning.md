@@ -1,18 +1,17 @@
 ---
 title: '#warning - C# 參考'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#warning'
 helpviewer_keywords:
 - '#warning directive [C#]'
 ms.assetid: e6fb496d-bb8b-4018-baf6-5b60a0c8902b
-ms.openlocfilehash: 3d09cd95ef4d53e3f11d9feb9675ebba22d6f857
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 38c3807a696599390667060d3bf374c68845fed0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608519"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715062"
 ---
 # <a name="warning-c-reference"></a>#warning (C# 參考)
 `#warning` 可讓您從程式碼中的特定位置產生 [CS1030](../../misc/cs1030.md) 層級一的編譯器警告。 例如：  
@@ -41,7 +40,7 @@ class MainClass
 }  
 ```  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

@@ -1,16 +1,19 @@
 ---
-title: 如何：使用當地語系化例外狀況訊息來建立使用者定義的例外狀況
+title: 如何使用當地語系化的例外狀況訊息來建立使用者定義的例外狀況
 description: 瞭解如何使用當地語系化的例外狀況訊息來建立使用者定義的例外狀況
 author: Youssef1313
+dev_langs:
+- csharp
+- vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 453e332541628770932da2a6802fdcaee5211a84
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9360fccf27a0900d8380461e03baa5806ce1e0da
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141520"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708914"
 ---
-# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>如何：使用當地語系化例外狀況訊息來建立使用者定義的例外狀況
+# <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>如何使用當地語系化的例外狀況訊息來建立使用者定義的例外狀況
 
 在本文中，您將瞭解如何使用附屬元件，建立繼承自基底 <xref:System.Exception> 類別的使用者定義例外狀況，以及當地語系化的例外狀況訊息。
 
@@ -27,6 +30,13 @@ ms.locfileid: "73141520"
     [Serializable]
     public class StudentNotFoundException : Exception { }
     ```
+    
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+    End Class
+    ```
 
 1. 新增預設的構造函式：
 
@@ -42,6 +52,24 @@ ms.locfileid: "73141520"
         public StudentNotFoundException(string message, Exception inner)
             : base(message, inner) { }
     }
+    ```
+    
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+
+        Public Sub New()
+        End Sub
+
+        Public Sub New(message As String)
+            MyBase.New(message)
+        End Sub
+
+        Public Sub New(message As String, inner As Exception)
+            MyBase.New(message, inner)
+        End Sub
+    End Class
     ```
 
 1. 定義任何其他屬性和構造函式：
@@ -68,12 +96,41 @@ ms.locfileid: "73141520"
     }
     ```
 
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+
+        Public ReadOnly Property StudentName As String
+
+        Public Sub New()
+        End Sub
+
+        Public Sub New(message As String)
+            MyBase.New(message)
+        End Sub
+
+        Public Sub New(message As String, inner As Exception)
+            MyBase.New(message, inner)
+        End Sub
+
+        Public Sub New(message As String, studentName As String)
+            Me.New(message)
+            StudentName = studentName
+        End Sub
+    End Class
+    ```
+
 ## <a name="create-localized-exception-messages"></a>建立當地語系化的例外狀況訊息
 
 您已建立自訂例外狀況，您可以使用類似下列的程式碼在任何地方擲回它：
 
 ```csharp
 throw new StudentNotFoundException("The student cannot be found.", "John");
+```
+
+```vb
+Throw New StudentNotFoundException("The student cannot be found.", "John")
 ```
 
 前一行的問題在於，`"The student cannot be found."` 只是一個常數位串。 在當地語系化的應用程式中，您想要根據使用者文化特性來擁有不同的訊息。
@@ -100,8 +157,8 @@ throw new StudentNotFoundException("The student cannot be found.", "John");
     throw new StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John");
     ```
 
-  > [!NOTE]
-  > 如果專案名稱是 `TestProject`，而資源檔*ExceptionMessages*位於專案的*Resources*資料夾中，則資源檔的完整名稱會是 `TestProject.Resources.ExceptionMessages`。
+    > [!NOTE]
+    > 如果專案名稱是 `TestProject`，而資源檔*ExceptionMessages*位於專案的*Resources*資料夾中，則資源檔的完整名稱會是 `TestProject.Resources.ExceptionMessages`。
 
 ## <a name="see-also"></a>請參閱
 

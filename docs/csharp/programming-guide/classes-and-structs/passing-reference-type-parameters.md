@@ -1,17 +1,16 @@
 ---
 title: 傳遞參考類型的參數 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: 6489d31ac1e466fdbf2b47ce1aae7e1139af0960
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6fa0e60fafabaa9fb04cdc5d5bf3f9e29490e84f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419049"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714711"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>傳遞參考類型的參數 (C# 程式設計手冊)
 [參考型別](../../language-reference/keywords/reference-types.md)的變數不會直接包含其資料；它會包含其資料的參考。 以值的方式傳遞參考型別參數時，可以變更屬於參考資料的資料，例如類別成員的值。 但您無法變更參考本身的值；例如，您無法使用相同的參考，為新的物件配置記憶體，並讓其保存在方法之外。 若要這樣做，請使用 [ref](../../language-reference/keywords/ref.md) 或 [out](../../language-reference/keywords/out-parameter-modifier.md) 關鍵字來傳遞參數。 為求簡化，下列範例使用 `ref`。  

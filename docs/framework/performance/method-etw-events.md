@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, method events (CLR)
 - method events [.NET Framework]
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4937afe8bb23be58b72d082cd5ba200b4948ab4d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974922"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715988"
 ---
 # <a name="method-etw-events"></a>方法 ETW 事件
 
@@ -26,7 +24,7 @@ ms.locfileid: "73974922"
 
 下表說明關鍵字和層級。 如需詳細資訊，請參閱[CLR ETW 關鍵字和層級](clr-etw-keywords-and-levels.md)。
 
-|引發事件的關鍵字|層級|
+|引發事件的關鍵字|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 執行階段提供者|告知性 (4)|
 |`NGenKeyword` (0x20) 執行階段提供者|告知性 (4)|
@@ -35,7 +33,7 @@ ms.locfileid: "73974922"
 
 下表說明事件資訊：
 
-|Event - 事件|事件 ID|描述|
+|Event|事件 ID|描述|
 |-----------|--------------|-----------------|
 |`MethodLoad_V1`|136|在 Just-In-Time 載入 (JIT 載入) 方法或 NGEN 映像載入時引發。 動態和泛型的方法並不會使用這個版本的方法載入。 JIT Helper 永遠不會使用這個版本。|
 |`MethodUnLoad_V1`|137|在模組已卸載或應用程式定義域損毀時引發。 動態方法永遠不會使用這個版本的方法卸載。|
@@ -60,7 +58,7 @@ ms.locfileid: "73974922"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|層級|
+|引發事件的關鍵字|Level|
 |-----------------------------------|-----------|
 |`AppDomainResourceManagementRundownKeyword` (0x800) 取消提供者|告知性 (4)|
 |`JitRundownKeyword` (0x10) 取消提供者|告知性 (4)|
@@ -68,7 +66,7 @@ ms.locfileid: "73974922"
 
 下表說明事件資訊：
 
-|Event - 事件|事件 ID|描述|
+|Event|事件 ID|描述|
 |-----------|--------------|----------------|
 |`DCStartInit_V1`|147|在啟動取消期間、列舉開始之前傳送。|
 |`DCStartComplete_V1`|145|在啟動取消期間、列舉結尾時傳送。|
@@ -85,7 +83,7 @@ ms.locfileid: "73974922"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|層級|
+|引發事件的關鍵字|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 執行階段提供者|詳細資訊 (5)|
 |`NGenKeyword` (0x20) 執行階段提供者|詳細資訊 (5)|
@@ -94,7 +92,7 @@ ms.locfileid: "73974922"
 
 下表說明事件資訊：
 
-|Event - 事件|事件 ID|描述|
+|Event|事件 ID|描述|
 |-----------|--------------|-----------------|
 |`MethodLoadVerbose_V1`|143|在 JIT 載入方法或 NGEN 映像載入時引發。 動態和泛型的方法一律會使用這個版本的方法載入。 JIT Helper 一律會使用這個版本。|
 |`MethodUnLoadVerbose_V1`|144|在動態方法損毀、模組已卸載或應用程式定義域損毀時引發。 動態方法永遠一律會使用這個版本的方法卸載。|
@@ -120,7 +118,7 @@ ms.locfileid: "73974922"
 
 下表說明關鍵字和層級：
 
-|引發事件的關鍵字|層級|
+|引發事件的關鍵字|Level|
 |-----------------------------------|-----------|
 |`JITKeyword` (0x10) 執行階段提供者|詳細資訊 (5)|
 |`NGenKeyword` (0x20) 執行階段提供者|詳細資訊 (5)|
@@ -129,7 +127,7 @@ ms.locfileid: "73974922"
 
 下表說明事件資訊：
 
-|Event - 事件|事件 ID|描述|
+|Event|事件 ID|描述|
 |-----------|--------------|-----------------|
 |`MethodJittingStarted`|145|當某個方法正在進行 JIT 編譯時引發。|
 

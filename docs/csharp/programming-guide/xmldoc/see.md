@@ -1,6 +1,5 @@
 ---
 title: <see> - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <see>
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: e292e116ac468246bfe81e1eb5d5c5819a506701
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 995b67362bccbc3527f44e5a1d6b659f330e3afd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69587681"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711710"
 ---
 # <a name="see-c-programming-guide"></a>\<see> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
@@ -38,7 +37,7 @@ ms.locfileid: "69587681"
   
  [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

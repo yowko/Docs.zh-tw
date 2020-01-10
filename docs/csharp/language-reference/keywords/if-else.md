@@ -1,6 +1,5 @@
 ---
 title: if-else - C# 參考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - if_CSharpKeyword
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: 18b41446eb13f4b91db86d79316a5299b0f3020a
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
-ms.translationtype: HT
+ms.openlocfilehash: 98c1a8dceec3e5a47627841988e2d722c56fc36c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300484"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715268"
 ---
 # <a name="if-else-c-reference"></a>if-else (C# 參考)
 
@@ -62,7 +61,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#3)]
 
-如果條件 `(m > 10)` 評估為 false，就會顯示 `Result2`。
+如果條件`Result2` 評估為 false，就會顯示 `(m > 10)` 。
 
 ## <a name="example"></a>範例
 
@@ -135,11 +134,11 @@ if (!(m >= n || m >= p))
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [?:運算子](../operators/conditional-operator.md)
+- [?: 運算子](../operators/conditional-operator.md)
 - [if-else 陳述式 (C++)](/cpp/cpp/if-else-statement-cpp)
 - [switch](switch.md)

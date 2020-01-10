@@ -1,5 +1,5 @@
 ---
-title: 作法：讀取字串中的字元
+title: 如何：從字串讀取字元
 ms.date: 01/21/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +13,17 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e890e4172e645e9919ea88ec5835aaed7432c0c6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: HT
+ms.openlocfilehash: 0c3516c4abadfd22609c3568beffc14e027ef69e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835196"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706669"
 ---
-# <a name="how-to-read-characters-from-a-string"></a>HOW TO：讀取字串中的字元
+# <a name="how-to-read-characters-from-a-string"></a>如何：從字串讀取字元
 下列程式碼範例會示範如何以同步或非同步的方式，從字串讀取字元。  
   
-## <a name="example-read-characters-synchronously"></a>範例：以同步方式讀取字元 
+## <a name="example-read-characters-synchronously"></a>範例：同步讀取字元 
  此範例會以同步方式，從字串讀取 13 個字元、將其儲存在陣列中，然後顯示它們。 接著讀取字串中剩餘的字元、從陣列的第六個元素開始儲存這些字元，然後顯示陣列的內容。  
   
  [!code-csharp[Conceptual.StringReader#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source.cs#1)]
@@ -37,15 +35,15 @@ ms.locfileid: "56835196"
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.cs)]
  [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StringReaderWriter/MainWindow.xaml.vb)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.StringReader>  
 - <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
 - [非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [如何：建立目錄清單](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
+- [How to：建立目錄清單](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
 - [如何：讀取和寫入新建立的資料檔案](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
 - [如何：開啟並附加至記錄檔](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [如何：讀取檔案中的文字](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [如何：從檔案讀取文字](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
 - [如何：將文字寫入檔案](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
 - [如何：將字元寫入字串](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
 - [檔案和資料流 I/O](../../../docs/standard/io/index.md)

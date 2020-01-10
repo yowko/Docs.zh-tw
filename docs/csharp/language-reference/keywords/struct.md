@@ -1,6 +1,5 @@
 ---
 title: struct - C# 參考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - struct_CSharpKeyword
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: a78488ad902b0a96a30ad197b0ece043543c3d69
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9363cff913027d491f7df0e0d0dac61638d6f802
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422303"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715129"
 ---
 # <a name="struct-c-reference"></a>struct (C# 參考)
 
@@ -55,6 +54,6 @@ public struct Book
 - [內建型別表](built-in-types-table.md)
 - [型別](/dotnet/csharp/language-reference/keywords)
 - [實值型別](value-types.md)
-- [class](class.md)
+- [Class - 類別](class.md)
 - [interface](interface.md)
 - [類別和結構](../../programming-guide/classes-and-structs/index.md)

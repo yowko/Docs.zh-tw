@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a59d31c-0ec5-4de6-a2a9-558531c8116e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bcd45a97ab0f0b0ac462d50c18fb68f9d7bd386
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 58407d5f0c6e602af15f5b19b9a19cc6379b9af7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590032"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710280"
 ---
 # <a name="resolving-external-resources-during-xslt-processing"></a>XSLT 處理期間解析外部資源
 在 XSLT 轉換期間，您可能需要進行數次外部資源解析。  
@@ -44,7 +42,7 @@ ms.locfileid: "64590032"
  [!code-csharp[XslCompiledTransform.Load#11](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Load/CS/Xslt_Load_v2.cs#11)]
  [!code-vb[XslCompiledTransform.Load#11](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Load/VB/Xslt_Load_v2.vb#11)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - <xref:System.Xml.Xsl.XsltSettings>

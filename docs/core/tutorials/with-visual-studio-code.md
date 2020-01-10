@@ -3,19 +3,18 @@ title: C# 與 Visual Studio Code 使用者入門
 description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您的第一個 .NET Core 應用程式。
 author: kendrahavens
 ms.date: 12/05/2018
-ms.custom: seodec18
-ms.openlocfilehash: 4e283f631f463953185a37bf196a1a9b706eee2b
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002328"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715313"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 
 .NET Core 提供快速且模組化的平台，可建立在 Windows、Linux 和 macOS 上執行的應用程式。 搭配使用 Visual Studio Code 與 C# 擴充功能，以取得具備 C# IntelliSense (智慧型程式碼完成) 與偵錯完整支援的強大編輯體驗。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 1. 安裝 [Visual Studio Code (英文)](https://code.visualstudio.com/)。
 2. 安裝 [.NET Core SDK (英文)](https://dotnet.microsoft.com/download)。
@@ -139,9 +138,9 @@ ms.locfileid: "72002328"
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>我缺少在 Visual Studio Code 中建置及偵錯 C# 所需的資產。 我的偵錯工具顯示「沒有組態」。
 
-Visual Studio Code C# 延伸模組可為您產生用於建置和偵錯的資產。 Visual Studio Code 會在您第一次開啟 C# 專案時，提示您產生這些資產。 如果您當時未產生資產，仍可以透過開啟 [命令選擇區] ([檢視] > [命令選擇區])，然後鍵入 ">.NET:Generate Assets for Build and Debug" 來執行此命令。 選取此程式會產生*vscode*、*啟動 json*和您需要的*json*設定檔案。
+Visual Studio Code C# 延伸模組可為您產生用於建置和偵錯的資產。 Visual Studio Code 會在您第一次開啟 C# 專案時，提示您產生這些資產。 如果您當時未產生資產，仍可以透過開啟 [命令選擇區] ([檢視] > [命令選擇區])，然後鍵入 ">.NET: Generate Assets for Build and Debug" 來執行此命令。 選取此程式會產生*vscode*、*啟動 json*和您需要的*json*設定檔案。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [設定 Visual Studio Code (英文)](https://code.visualstudio.com/docs/setup/setup-overview)
 - [在 Visual Studio Code 中偵錯 (英文)](https://code.visualstudio.com/Docs/editor/debugging)

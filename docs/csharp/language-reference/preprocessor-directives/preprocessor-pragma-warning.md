@@ -1,18 +1,17 @@
 ---
 title: '##pragma warning - C# 參考'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma warning'
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: dc221235e78a187f921815ed6e6c7750778014d8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5620ea9e5f31c22e26bee95a450335bb179ced25
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922268"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712464"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (C# 參考)
 `#pragma warning` 可以啟用或停用特定警告。  
@@ -31,7 +30,7 @@ ms.locfileid: "69922268"
  未指定警告編號時，`disable` 會停用所有警告，而 `restore` 會啟用所有警告。  
   
 > [!NOTE]
-> 若要尋找 Visual Studio 中的警告編號，請建立專案，然後在 [輸出]  視窗中尋找警告編號。  
+> 若要尋找 Visual Studio 中的警告編號，請建立專案，然後在 [輸出] 視窗中尋找警告編號。  
   
 ## <a name="example"></a>範例  
   
@@ -59,7 +58,7 @@ public class D
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

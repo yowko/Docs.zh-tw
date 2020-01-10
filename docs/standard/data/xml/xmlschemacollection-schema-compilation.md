@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40d7ef11dde882d99c21fe541c2689c52a634edf
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1f300bab01f94af8c70c8b67a69a73fbc5ba5bac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69915942"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709825"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection 結構描述編譯
 **XmlSchemaCollection** 是一種快取 (Cache) 或程式庫，您可在此儲存和驗證 XML 資料精簡 (XDR) 和 XML 結構描述定義語言 (XSD) 結構描述。 **XmlSchemaCollection** 會藉由在記憶體中快取結構描述，而不是從檔案或 URL 存取它們的方式來提升效能。  
@@ -57,7 +55,7 @@ xsc.Add("urn:bookstore-schema", "Books.xsd");
 vr.Schemas.Add(xsc);  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 XmlSchemaCollection 的 XDR 驗證](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)
 - [使用 XmlSchemaCollection 進行 XML 結構描述 (XSD) 驗證](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)

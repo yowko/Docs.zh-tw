@@ -12,13 +12,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.custom: seodec18
-ms.openlocfilehash: e41c333dc088c8f712866cb7a130c4f8e1c9722f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140530"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711528"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>規則運算式中的反向參考建構
 
@@ -33,7 +32,7 @@ ms.locfileid: "73140530"
 
 編號反向參考會使用下列語法：
 
-`\` number
+`\`*數位*
 
 其中 *number* 是規則運算式中的擷取群組序數位置。 例如，`\4` 會比對第四個擷取群組的內容。 如果規則運算式模式中未定義 *number*，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。 例如，規則運算式 `\b(\w+)\s\1` 有效，因為 `(\w+)` 是運算式中第一個和唯一的擷取群組。 另一方面，`\b(\w+)\s\2` 無效並擲回引數例外狀況，因為沒有編號為 `\2` 的擷取群組。 此外，如果 *number* 識別在特定序數位置的擷取群組，但擷取群組已經被指派和其序數順序不同的數值名稱，則規則運算式剖析器也會擲回 <xref:System.ArgumentException>。
 
@@ -63,11 +62,11 @@ ms.locfileid: "73140530"
 
 具名反向參考是使用下列語法來定義：
 
-`\k<` *name* `>`
+`\k<`*名稱*`>`
 
 或：
 
-`\k'` *name* `'`
+`\k'`*名稱*`'`
 
 其中 *name* 是規則運算式模式中所定義之擷取群組的名稱。 如果規則運算式模式中未定義 *name*，便會發生剖析錯誤，而規則運算式引擎會擲回 <xref:System.ArgumentException>。
 

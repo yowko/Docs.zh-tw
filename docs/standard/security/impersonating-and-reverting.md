@@ -10,14 +10,12 @@ helpviewer_keywords:
 - security [.NET Framework], impersonating Windows accounts
 - impersonating Windows accounts
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 97b15ea2202ca410dd517db63a7145d27f62bb48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14b01ec3ac800abd795e87b641a442df100f102b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018589"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706015"
 ---
 # <a name="impersonating-and-reverting"></a>模擬和還原
 有時候您可能需要取得 Windows 帳戶權杖，才能模擬 Windows 帳戶。 例如，ASP.NET 型應用程式可能必須在不同的時間代表數個使用者。 您的應用程式可能會接受來自網際網路資訊服務 (IIS) 代表系統管理員的權杖、模擬該使用者、執行作業，然後還原成之前的身分識別。 接下來，它可能會接受來自 IIS 代表具有較少權限的使用者的權杖、執行某項作業，然後再次還原。  
@@ -56,11 +54,11 @@ ms.locfileid: "62018589"
     myImpersonation.Undo()  
     ```  
   
- 如果信任的程式碼具有已經附加<xref:System.Security.Principal.WindowsPrincipal>物件的執行緒，您可以呼叫執行個體方法**Impersonate**，這不會取得帳戶權杖。 請注意，這只適用於執行緒上的 **WindowsPrincipal** 物件代表非處理序目前執行所使用之使用者身分的使用者。 比方說，您可能會在使用 ASP.NET 並開啟 Windows 驗證、關閉模擬時遇到這種情況。 在此情況下，處理序會以網際網路資訊服務 (IIS) 中設定的帳戶身分執行，同時主體代表正在存取網頁的 Windows 使用者。  
+ 如果信任的程式碼已將 <xref:System.Security.Principal.WindowsPrincipal> 物件附加至執行緒，您可以呼叫**實例方法模擬**，這不會採用帳戶 token。 請注意，這只適用於執行緒上的 **WindowsPrincipal** 物件代表非處理序目前執行所使用之使用者身分的使用者。 比方說，您可能會在使用 ASP.NET 並開啟 Windows 驗證、關閉模擬時遇到這種情況。 在此情況下，處理序會以網際網路資訊服務 (IIS) 中設定的帳戶身分執行，同時主體代表正在存取網頁的 Windows 使用者。  
   
- 請注意，都**Impersonate**也不**復原**變更**主體**物件 (<xref:System.Security.Principal.IPrincipal>) 與目前呼叫內容相關聯。 相反地，模擬和還原會變更與目前作業系統處理序相關聯的權杖。  
+ 請注意，**模擬**或**復原**都不會變更與目前呼叫內容關聯的**主體**物件（<xref:System.Security.Principal.IPrincipal>）。 相反地，模擬和還原會變更與目前作業系統處理序相關聯的權杖。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Security.Principal.WindowsIdentity>
 - <xref:System.Security.Principal.WindowsImpersonationContext>

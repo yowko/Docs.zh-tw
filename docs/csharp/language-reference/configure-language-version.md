@@ -2,12 +2,12 @@
 title: C# 語言版本控制 - C# 指南
 description: 了解如何根據您的專案決定 C# 語言版本，以及您可以手動調整的不同值。
 ms.date: 07/10/2019
-ms.openlocfilehash: aa4f16d91b38fec7f5d4cd0b2632e62552b64eb7
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 90624816a68de694cacd0017c6d3162f6a89431c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698811"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713866"
 ---
 # <a name="c-language-versioning"></a>C# 語言版本控制
 
@@ -23,10 +23,10 @@ ms.locfileid: "71698811"
 |----------------|-------|---------------------------|
 |.NET Core|3.x|C# 8.0|
 |.NET Core|2.x|C# 7.3|
-|.NET Standard|2.1|C# 8.0|
-|.NET Standard|2.0|C# 7.3|
-|.NET Standard|1.x|C# 7.3|
-|.NET Framework|all|C# 7.3|
+|.NET 標準|2.1|C# 8.0|
+|.NET 標準|2.0|C# 7.3|
+|.NET 標準|1.x|C# 7.3|
+|.NET Framework|全部|C# 7.3|
 
 ## <a name="default-for-previews"></a>預設為預覽
 
@@ -38,7 +38,7 @@ ms.locfileid: "71698811"
 
 - 手動編輯您的[專案檔](#edit-the-project-file)。
 - 針對[子目錄中的多個專案](#configure-multiple-projects)設定語言版本。
-- 設定 [`-langversion` 編譯器選項](compiler-options/langversion-compiler-option.md)
+- 設定 [`-langversion`編譯器選項](compiler-options/langversion-compiler-option.md)。
 
 ### <a name="edit-the-project-file"></a>編輯專案檔
 
@@ -70,7 +70,7 @@ ms.locfileid: "71698811"
 
 下表顯示所有目前的 C# 語言版本。 如果您的編譯器版本較舊，可能不一定了解每個值。 如果您安裝 .NET Core 3.0，您將能存取所列的所有項目。
 
-|值|意義|
+|{2&gt;值&lt;2}|意義|
 |------------|-------------|
 |preview|編譯器會接受最新預覽版本的所有有效語言語法。|
 |latest|編譯器會接受編譯器最新已發行版本 (包括次要版本) 的語法。|

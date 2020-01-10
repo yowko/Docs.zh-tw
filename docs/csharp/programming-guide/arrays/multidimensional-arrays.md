@@ -1,22 +1,21 @@
 ---
 title: 多維陣列 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: 63b8729a14e4c309e85a588c5cddc692fb6a6fad
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: eb49f4386b6106328f1613b5ec70794ac26fc9b7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597416"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715043"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>多維陣列 (C# 程式設計手冊)
 
-陣列可以有多個維度。例如，下列宣告會建立具有四列和兩行的二維陣列。
-
+陣列可以有多個維度。 例如，下列宣告會建立具有四列和兩行的二維陣列。  
+  
  [!code-csharp[csProgGuideArrays#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#11)]  
   
  下列宣告會建立三維 (4、2 和 3) 陣列。  
@@ -49,7 +48,7 @@ ms.locfileid: "69597416"
   
  [!code-csharp[csProgGuideArrays#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#17)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [陣列](./index.md)

@@ -1,15 +1,13 @@
 ---
 title: .NET Framework 安裝指南
 description: 了解如何在 Windows 上安裝 .NET Framework。
-author: rlander
-ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: 284f194248687fbe3838ee7aa578ae612757cc1a
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b14be7a429138069545ede835025dff33b4f3919
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853931"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716357"
 ---
 # <a name="installation-guide"></a>安裝指南
 
@@ -27,7 +25,7 @@ ms.locfileid: "70853931"
 
 - [Windows XP 和 Windows Server 2003](on-windows-xp.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [下載 .NET Framework](https://dotnet.microsoft.com/download)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)

@@ -1,18 +1,17 @@
 ---
 title: '#undef - C# 參考'
-ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#undef'
 helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
-ms.openlocfilehash: fdf22e90be766e87e823a7f8cc27ea00c17d2bb5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 21923412aa178c3b86e94a54bd911130e48e4deb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605582"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712438"
 ---
 # <a name="undef-c-reference"></a>#undef (C# 參考)
 `#undef` 可讓您取消定義符號，如此一來，在 [#if](./preprocessor-if.md) 指示詞中使用符號作為運算式，運算式就會評估為 `false`。  
@@ -41,7 +40,7 @@ class MyClass
 
 **未定義 DEBUG**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

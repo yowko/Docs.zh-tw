@@ -1,6 +1,5 @@
 ---
 title: is - C# 參考
-ms.custom: seodec18
 ms.date: 06/21/2019
 f1_keywords:
 - is_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a04105137fad7cd3a25b869c3aa7fcbe91ed20ab
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
-ms.translationtype: HT
+ms.openlocfilehash: 1a1f539e80f8d843f40640fa798cf6122f316a9f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566303"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715243"
 ---
 # <a name="is-c-reference"></a>is (C# 參考)
 
@@ -45,7 +44,7 @@ ms.locfileid: "69566303"
 
 - *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
 
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」  是定義於變數宣告的變數類型。 變數的「執行階段類型」  是指派給該變數的執行個體類型。
+- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」是定義於變數宣告的變數類型。 變數的「執行階段類型」是指派給該變數的執行個體類型。
 
 - *expr* 是實作 *type* 介面的類型執行個體。
 
@@ -124,7 +123,7 @@ ms.locfileid: "69566303"
 - [模式比對](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
 - [以一般項進行的模式比對](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)

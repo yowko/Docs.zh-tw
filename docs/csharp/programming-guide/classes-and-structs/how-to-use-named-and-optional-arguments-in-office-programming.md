@@ -1,18 +1,17 @@
 ---
 title: 如何在 Office 程式設計中使用命名和選擇性自C#變數-程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - named and optional arguments [C#], Office programming
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: d7efd13f26912f8cd944bcbc5568e9bbca92c3a0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 36b5c8b49404606c8240d24953c3677d5612d30e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970499"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714868"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>如何在 Office 程式設計中使用命名和選擇性自C#變數（程式設計手冊）
 
@@ -28,7 +27,7 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
 
 1. 啟動 Visual Studio。
 
-2. 在 [檔案] **Deploying Office Solutions** 功能表中，指向 [新增]，然後按一下 [專案]。
+2. 在 [檔案] 功能表中，指向 [新增]，然後按一下 [專案]。
 
 3. 在 [範本類別] 窗格中，展開 [Visual C#]，然後按一下 [Windows]。
 
@@ -38,9 +37,9 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
 
 6. 在 [名稱] 欄位中鍵入專案的名稱。
 
-7. 按一下 [確定]。
+7. 按一下 [ **確定**]。
 
-     新的專案隨即出現在方案總管中。
+     新的專案隨即會出現在方案總管中。
 
 ## <a name="to-add-a-reference"></a>若要加入參考
 
@@ -48,7 +47,7 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
 
 2. 在 [.NET] 頁面上，選取 [元件名稱] 清單中的 [Microsoft.Office.Interop.Word]。
 
-3. 按一下 [確定]。
+3. 按一下 [ **確定**]。
 
 ## <a name="to-add-necessary-using-directives"></a>加入必要的 using 指示詞
 
@@ -68,7 +67,7 @@ C# 4 中引進的具名引數和選擇性引數，可加強 C# 程式設計的�
 
      [!code-csharp[csProgGuideNamedAndOptional#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#7)]
 
-## <a name="to-run-the-application"></a>若要執行應用程式
+## <a name="to-run-the-application"></a>執行應用程式
 
 1. 將下列語句加入 Main：
 

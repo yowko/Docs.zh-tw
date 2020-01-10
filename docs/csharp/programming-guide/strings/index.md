@@ -1,17 +1,16 @@
 ---
 title: 字串 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dd76450c2a6a1726d630285f652d252c5f66183f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969722"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711905"
 ---
 # <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
 字串是 <xref:System.String> 類型的物件，其值為文字。 就內部而言，文字會儲存為 <xref:System.Char> 物件的循序唯讀集合。 C# 字串的結尾沒有終止的 Null 字元，因此 C# 字串可以包含任何數目的內嵌 Null 字元 ('\0')。 字串的 <xref:System.String.Length%2A> 屬性代表它包含的 `Char` 物件數目，而非 Unicode 字元的數目。 若要存取字串中的個別 Unicode 字碼指標，請使用 <xref:System.Globalization.StringInfo> 物件。  
@@ -56,7 +55,7 @@ ms.locfileid: "73969722"
 |\\"|雙引號|0x0022|  
 |\\\\ |反斜線|0x005C|  
 |\0|Null|0x0000|  
-|\a|警示|0x0007|  
+|\a|Alert|0x0007|  
 |\b|退格鍵|0x0008|  
 |\f|換頁字元|0x000C|  
 |\n|換行|0x000A|  
@@ -125,7 +124,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>字串、擴充方法和 LINQ  
- 因為 <xref:System.String> 類型會實作 <xref:System.Collections.Generic.IEnumerable%601>，所以您可以對字串使用 <xref:System.Linq.Enumerable> 類別中所定義的擴充方法。 為了避免視覺雜亂，這些方法會從 <xref:System.String> 類型的 IntelliSense 中排除，不過您還是可以使用它們。 您也可以在字串上使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢運算式。 如需詳細資訊，請參閱 [LINQ 和字串](../concepts/linq/linq-and-strings.md)。  
+ 因為 <xref:System.String> 類型會實作 <xref:System.Collections.Generic.IEnumerable%601>，所以您可以對字串使用 <xref:System.Linq.Enumerable> 類別中所定義的擴充方法。 為了避免視覺雜亂，這些方法會從 <xref:System.String> 類型的 IntelliSense 中排除，不過您還是可以使用它們。 您也可以在字串上使用 LINQ 查詢運算式。 如需詳細資訊，請參閱 [LINQ 和字串](../concepts/linq/linq-and-strings.md)。  
   
 ## <a name="related-topics"></a>相關主題  
   
@@ -139,7 +138,7 @@ string s = String.Empty;
 |[如何判斷字串是否代表數值](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|示範如何安全地剖析字串，以查看它是否有有效的數值。|  
 |[字串內插補點](../../language-reference/tokens/interpolated.md)|描述可提供方便語法以設定格式字串的字串內插補點功能。|
 |[基本字串作業](../../../standard/base-types/basic-string-operations.md)|提供使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 方法執行基本字串作業之主題的連結。|  
-|[剖析字串](../../../standard/base-types/parsing-strings.md)|描述如何將.NET 基底類型的字串表示轉換成對應類型的執行個體。|  
+|[Parsing Strings](../../../standard/base-types/parsing-strings.md)|描述如何將.NET 基底類型的字串表示轉換成對應類型的執行個體。|  
 |[在 .NET 中剖析日期和時間字串](../../../standard/base-types/parsing-datetime.md)|示範如何將 "01/24/2008" 這類字串轉換為 <xref:System.DateTime?displayProperty=nameWithType> 物件。|  
 |[比較字串](../../../standard/base-types/comparing.md)|包含如何比較字串的相關資訊，並提供以 C# 和 Visual Basic 撰寫的範例。|  
 |[使用 StringBuilder 類別](../../../standard/base-types/stringbuilder.md)|描述如何使用 <xref:System.Text.StringBuilder> 類別來建立及修改動態字串物件。|  

@@ -11,42 +11,41 @@ helpviewer_keywords:
 - type design guidelines, structures
 - structures [.NET Framework], design guidelines
 ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
-author: KrzysztofCwalina
-ms.openlocfilehash: e787c5b34848a561b43c3457341673f11cc2bd00
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8841a30f1dd0420b2ea45740b1e33bde5199c3f9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775553"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709045"
 ---
 # <a name="struct-design"></a>結構設計
-一般用途的實值型別最常稱為結構時，它的 C# 關鍵字。 本節提供一般的結構設計指導方針。  
+一般用途的實值型別通常稱為結構，也就是它C#的關鍵字。 本節提供一般結構設計的指導方針。  
   
- **X DO NOT**結構提供的無參數建構函式。  
+ **X 不會**為結構提供無參數的函式。  
   
- 遵循此指導方針，可讓建立而不需陣列的每個項目上執行建構函式的結構陣列。 請注意，C#不允許有無參數建構函式的結構。  
+ 遵循此指導方針，可讓您建立結構陣列，而不需要在陣列的每個專案上執行此函式。 請注意C# ，不允許結構具有無參數的函數。  
   
- **X DO NOT** 定義可變動的值型別。  
+ **X 不會**定義可變的實數值型別。  
   
- 可變動的實值型別有幾個問題。 例如，當屬性 getter 傳回實值型別時，呼叫端會收到複本。 因為隱含地建立複本時，可能不知道複本，而不是原始的值會變更開發人員。 此外，某些語言 （特別是，動態語言） 有取值時，甚至是本機變數，會造成複本設為使用可變動的實值型別，因為的問題。  
+ 可變的實值型別有幾個問題。 例如，當屬性 getter 傳回實數值型別時，呼叫端會收到複本。 因為複本是以隱含方式建立的，所以開發人員可能不知道它們會改變複本，而不是原始值。 此外，某些語言（尤其是動態語言）在使用可變值型別時遇到問題，因為在取值時，即使是區域變數，也會造成複製的執行。  
   
- **✓ DO** 確保所有執行個體資料的狀態設為零，false 或 null （視情況） 無效。  
+ **✓確實**確保所有實例資料都設定為零、false 或 null （適當）的狀態是有效的。  
   
- 建立結構的陣列時，這會防止意外建立無效的執行個體。  
+ 這可避免在建立結構的陣列時，意外建立不正確實例。  
   
- **✓ DO** 實作 <xref:System.IEquatable%601> 實值型別。  
+ **✓**會在實數值型別上執行 <xref:System.IEquatable%601>。  
   
- <xref:System.Object.Equals%2A?displayProperty=nameWithType>實值型別上的方法會導致 boxing，和其預設實作不是非常有效率，因為它會使用反映。 <xref:System.IEquatable%601.Equals%2A> 可以有更好的效能，並使它不會造成 boxing 可以實作。  
+ 實值型別上的 <xref:System.Object.Equals%2A?displayProperty=nameWithType> 方法會造成「裝箱」，而且它的預設執行不會非常有效率，因為它會使用反映。 <xref:System.IEquatable%601.Equals%2A> 可以有更好的效能，而且可以實作為不會造成裝箱的問題。  
   
- **X DO NOT** 明確地延長 <xref:System.ValueType>。 事實上，大部分語言避免這個問題。  
+ **X 不會**明確地延伸 <xref:System.ValueType>。 事實上，大部分的語言都會阻止這種情況。  
   
- 一般情況下，結構可以很有幫助，但僅用於小型、 單一、 不可變的值，將不會進行 boxed 處理常見問題。  
+ 一般來說，結構可能非常有用，但僅適用于不會頻繁地裝箱的小型、單一、不可變的值。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [類型設計方針](../../../docs/standard/design-guidelines/type.md)
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

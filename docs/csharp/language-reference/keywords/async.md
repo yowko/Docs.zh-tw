@@ -1,6 +1,5 @@
 ---
 title: async - C# 參考
-ms.custom: seodec18
 ms.date: 05/22/2017
 f1_keywords:
 - async_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: ab9c1be484d9cc77324e3105124a1b1f2257251d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 3d3f045eed3bad3624ed4994aebb862c52a4e196
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925353"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713775"
 ---
 # <a name="async-c-reference"></a>async (C# 參考)
 
@@ -65,7 +64,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 [!code-csharp[wpf-async](../../../../samples/snippets/csharp/language-reference/keywords/async/wpf/mainwindow.xaml.cs#1)]
   
 > [!IMPORTANT]
-> 如需工作以及等候工作時執行之程式碼的詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../../programming-guide/concepts/async/index.md)。 如需使用類似元素的完整 WPF 範例，請參閱[逐步解說：使用 Async 和 Await 存取 Web](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
+> 如需工作以及等候工作時執行之程式碼的詳細資訊，請參閱[使用 async 和 await 進行非同步程式設計](../../programming-guide/concepts/async/index.md)。 如需使用類似項目的完整 WPF 範例，請參閱[逐步解說：使用 async 和 await 存取 Web](../../programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。  
   
 ## <a name="return-types"></a>傳回型別  
 非同步方法可有下列傳回型別：
@@ -85,7 +84,7 @@ string contents = await httpClient.GetStringAsync(requestUrl);
 
 如需詳細資訊和範例，請參閱[非同步方法的傳回型別](../../programming-guide/concepts/async/async-return-types.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>
 - [await](../operators/await.md)

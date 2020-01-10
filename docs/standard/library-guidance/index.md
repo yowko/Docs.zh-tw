@@ -1,17 +1,15 @@
 ---
 title: 開放原始碼 .NET 程式庫指導方針
 description: 協助開發人員建立高品質 .NET 程式庫的最佳做法建議。
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928955"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706448"
 ---
-# <a name="open-source-library-guidance"></a>開放原始碼程式庫指導
+# <a name="open-source-library-guidance"></a>開放原始碼程式庫指導方針
 
 這份指導提供協助開發人員建立高品質 .NET 程式庫的最佳做法建議。 本文件的重點在於建置 .NET 程式庫時的「內容」與「原因」，而不是「方法」。
 
@@ -42,11 +40,11 @@ ms.locfileid: "70928955"
 
 **避免**建議指的是通常不建議採行的建議，但有時違反規則尚屬合理情況：
 
-**❌ 避免**要求明確版本的 NuGet 套件參考。
+**❌ 避免**需要確切版本的 NuGet 套件參考。
 
 最後，**禁止**類型的建議表示在多數情況下都不應採取的動作：
 
-**❌ 禁止**發行程式庫的強式名稱和非強式名稱版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
+**❌ 不要**發佈程式庫的強式名稱和非強式名稱版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 >[!div class="step-by-step"]
->[下一個](get-started.md)
+>[下一步](get-started.md)

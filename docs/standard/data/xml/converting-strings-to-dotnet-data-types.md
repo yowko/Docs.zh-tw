@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 31f277d11cba8191c326d56f017b8acc6503c6b7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ac7e1b68f3f43a0c84c7330666825207e5b90004
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968718"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711047"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>將字串轉換成 .NET Framework 資料型別
 若要將一個字串轉換成 .NET Framework 資料型別，請使用符合應用程式需求的 **XmlConvert** 方法。 如需所有可用於 **XmlConvert** 類別的轉換方法清單，請參閱 <xref:System.Xml.XmlConvert>。  
@@ -49,9 +47,9 @@ DateTime date = new DateTime (2001, 08, 04);
 writer.WriteElementString("Date", XmlConvert.ToString(date));  
 ```  
   
- **輸出**  
+ **Output**  
   
- `<Date>2001-08-04T00:00:00</Date>`.  
+ `<Date>2001-08-04T00:00:00</Date>`。  
   
  下列程式碼會將整數轉換成字串：  
   
@@ -67,7 +65,7 @@ Int32 value = 200;
 writer.WriteElementString("Number", XmlConvert.ToString(value));  
 ```  
   
- **輸出**  
+ **Output**  
   
  `<Number>200</Number>`  
   
@@ -133,7 +131,7 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 資料類型轉換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [將 .NET Framework 類型轉換成字串](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

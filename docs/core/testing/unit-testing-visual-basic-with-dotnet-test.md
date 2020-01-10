@@ -4,13 +4,12 @@ description: 透過逐步使用 dotnet test 和 xUnit 建置範例 Visual Basic 
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.custom: seodec18
-ms.openlocfilehash: 1738aa805947fbe0c1b7c2c770947ce650692b5f
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c587aaa5c4c50ec66ac6cd8cd7aefd7b0ca1a80c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117051"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715415"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 Visual Basic .NET Core 程式庫進行單元測試
 
@@ -129,7 +128,7 @@ End Function
 
 ## <a name="adding-more-features"></a>新增更多功能
 
-現在，您已經讓一個測試順利通過，您可以撰寫更多測試。 還有一些其他適用於下列質數的簡單案例：0、-1。 您可以使用 `<Fact>` 屬性將那些案例新增為新測試，但很快就會單調乏味。 因此，還有其他 xUnit 屬性，可讓您撰寫類似的測試套件。  `<Theory>` 屬性代表執行相同程式碼但有不同輸入引數的測試套件。 您可以使用 `<InlineData>` 屬性來指定這些輸入值。
+現在，您已經讓一個測試順利通過，您可以撰寫更多測試。 還有一些其他適用於質數 0、-1 的簡單案例。 您可以使用 `<Fact>` 屬性將那些案例新增為新測試，但很快就會單調乏味。 因此，還有其他 xUnit 屬性，可讓您撰寫類似的測試套件。  `<Theory>` 屬性代表執行相同程式碼但有不同輸入引數的測試套件。 您可以使用 `<InlineData>` 屬性來指定這些輸入值。
 
 您不需要建立新測試，只要套用這兩個屬性以建立單一理論即可。 該理論是一種方法，這種方法會測試數個低於二 (最小的質數) 的值：
 

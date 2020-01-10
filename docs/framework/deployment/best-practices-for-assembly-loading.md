@@ -1,5 +1,5 @@
 ---
-title: 組件載入的最佳作法
+title: 組件載入的最佳做法
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies,binding
@@ -12,16 +12,14 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a95679f659f13956fd230f07e9401af9097a043c
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d1b6c2cd9f96a4acf48cbced48a86bc3e3409562
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182476"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716580"
 ---
-# <a name="best-practices-for-assembly-loading"></a>組件載入的最佳作法
+# <a name="best-practices-for-assembly-loading"></a>組件載入的最佳做法
 本文討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型身分識別的問題。 本文討論下列建議：  
   
 - [了解載入內容的優缺點](#load_contexts)  
@@ -164,7 +162,7 @@ ms.locfileid: "71182476"
   
  請注意，您可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法來載入這些組件。 因為它們現在是在探查路徑中，所以會將其載入到預設載入內容，而非載入來源內容。 不過，建議您切換成 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法，並提供完整組件顯示名稱，確保一律使用正確版本。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

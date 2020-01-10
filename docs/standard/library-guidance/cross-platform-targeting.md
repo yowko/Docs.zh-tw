@@ -1,25 +1,23 @@
 ---
 title: .NET 程式庫的跨平台目標設定
 description: 建立跨平台 .NET 程式庫的最佳做法建議。
-author: jamesnk
-ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
+ms.date: 08/12/2019
+ms.openlocfilehash: 45eb67837c924558ec51381dd924abf9fd0fa315
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129710"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706513"
 ---
 # <a name="cross-platform-targeting"></a>跨平台目標設定
 
 新式 .NET 支援多種作業系統與裝置。 .NET 開放原始碼程式庫要儘可能支援許多開發人員，無論是建置裝載於 Azure 的 ASP.NET 網站，還是 Unity 中的 .NET 遊戲，這一點非常重要。
 
-## <a name="net-standard"></a>.NET Standard
+## <a name="net-standard"></a>.NET 標準
 
 .NET Standard 是為 .NET 程式庫新增跨平台支援的最佳方式。 [.NET Standard](../net-standard.md) 是在所有 .NET 實作都可以使用的 .NET API 規格。 將目標設為 .NET Standard，您可以產生限制為使用給定 .NET Standard 版本中之 API 的程式庫，這表示它可以被實作該 .NET 版本的所有平台使用。
 
-![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
+![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET 標準")
 
 將目標設為 .NET Standard 並成功地編譯您的專案，並不保證程式庫將可在所有平台上順利執行：
 
@@ -41,7 +39,7 @@ ms.locfileid: "53129710"
 
 > 所有支援 .NET Standard 2.0 的平台都將使用 `netstandard2.0` 目標，並從較小的套件圖形中受益，而較舊的平台仍會運作，並改為使用 `netstandard1.x` 目標。
 
-**❌ 請勿**包含 .NET Standard 目標 (如果程式庫依賴平台特定應用程式模型)。
+如果程式庫依賴平臺特定應用程式模型， **❌** 不包括 .NET Standard 目標。
 
 > 例如，UWP 控制項工具組程式庫相依於只有 UWP 上可用的應用程式模型。 .NET Standard 中將不提供應用程式模型特定 API。
 
@@ -51,7 +49,7 @@ ms.locfileid: "53129710"
 
 為了保護您的取用者不必為個別架構建置，您應該努力獲得 .NET Standard 輸出，加上一或多個架構特定輸出。 使用多目標時，所有組件都會封裝在單一 NuGet 套件中。 接著，取用者可以參考相同的套件，NuGet 將挑選適當的實作。 您的 .NET Standard 程式庫會作為在任何地方使用的後援程式庫，但您的 NuGet 套件提供架構特定實作的案例除外。 多目標可讓您在程式碼中使用條件式編譯，並呼叫架構特定 API。
 
-![包含多個組件的 NuGet 套件](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "包含多個組件的 NuGet 套件")
+![具有多個元件的 NuGet 套件](./media/cross-platform-targeting/nuget-package-multiple-assemblies.png "具有多個元件的 NuGet 套件")
 
 **✔️ 考慮**將 .NET 實作設為目標 (除了 .NET Standard 之外)。
 
@@ -59,11 +57,42 @@ ms.locfileid: "53129710"
 >
 > 執行此動作時，請不要捨棄 .NET Standard 的支援。 相反地，從實作擲回並提供功能API。 這樣，您的程式庫便能任何地方使用，並支援執行階段啟動功能。
 
-**❌ 避免**使用多目標以及 .NET Standard 目標設定 (如果您的原始程式碼也適用於所有目標)。
+```csharp
+public static class GpsLocation
+{
+    // This project uses multi-targeting to expose device-specific APIs to .NET Standard.
+    public static async Task<(double latitude, double longitude)> GetCoordinatesAsync()
+    {
+#if NET461
+        return CallDotNetFramworkApi();
+#elif WINDOWS_UWP
+        return CallUwpApi();
+#else
+        throw new PlatformNotSupportedException();
+#endif
+    }
+
+    // Allows callers to check without having to catch PlatformNotSupportedException
+    // or replicating the OS check.
+    public static bool IsSupported
+    {
+        get
+        {
+#if NET461 || WINDOWS_UWP
+            return true;
+#else
+            return false;
+#endif
+        }
+    }
+}
+```
+
+如果您的原始程式碼對所有目標都相同， **❌ 避免**多目標和目標 .NET Standard。
 
 > NuGet 將自動使用 .NET Standard 組件。 將單一 .NET 實作設為目標會增加 `*.nupkg` 大小，沒有任何好處。
 
-**✔️ 考慮**針對 `net461` 新增目標 (當您提供 `netstandard2.0` 目標時)。 
+**✔️ 考慮**針對 `net461` 新增目標 (當您提供 `netstandard2.0` 目標時)。
 
 > 使用 .NET Framework 中的 .NET Standard 2.0，會有一些在 .NET Framework 4.7.2 中已經解決的問題。 您可以透過為仍在 .NET Framework 4.6.1 - 4.7.1 上的開發人員提供針對 .NET Framework 4.6.1 建置的二進位檔，以改善其體驗。
 
@@ -88,11 +117,11 @@ ms.locfileid: "53129710"
 
 .NET 支援長期不支援的 .NET Framework 的目標版本，以及不再常用的平台。 雖然使您的程式庫在儘可能多的目標上運作是有價值的，但是必須針對 API 遺漏問題找出因應措施會增加重大額外負荷。 考慮到其範圍與限制，我們認為特定架構已不再值得設為目標。
 
-**❌ 請勿**包含可攜式類別庫 (PCL) 目標。 例如，`portable-net45+win8+wpa81+wp8`。
+**❌** 不包含可移植的類別庫（PCL）目標。 例如，`portable-net45+win8+wpa81+wp8`。
 
 > .NET Standard 是支援跨平台 .NET 程式庫並取代 PCL 的新式方法。
 
-**❌ 請勿**包含不再支援之 .NET 平台的目標。 例如，`SL4`、`WP`。
+**❌** 不包含不再支援之 .net 平臺的目標。 例如，`SL4`、`WP`。
 
 >[!div class="step-by-step"]
 >[上一頁](get-started.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: 3df7e622f97a5a1291736180e3964b1b3deaea2f
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 7f14ce07a2928f4dbffd3aa57f8cdd514b75694c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005456"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716708"
 ---
 # <a name="-netcf"></a>-netcf
 
@@ -45,7 +45,7 @@ ms.locfileid: "72005456"
 
   [!code-vb[VbVbalrCompiler#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#35)]
 
-- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)、 [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)和[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)修飾詞已停用。 [Declare 語句](../../../visual-basic/language-reference/statements/declare-statement.md)語句的語法也會修改為 `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`。 下列程式碼顯示在編譯時 `-netcf` 的效果。
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)、 [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md)和[Unicode](../../../visual-basic/language-reference/modifiers/unicode.md)修飾詞已停用。 [Declare 語句](../../../visual-basic/language-reference/statements/declare-statement.md)的語法也會修改為 `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`。 下列程式碼顯示在編譯時 `-netcf` 的效果。
 
   [!code-vb[VbVbalrCompiler#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#36)]
 
@@ -91,7 +91,7 @@ ms.locfileid: "72005456"
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

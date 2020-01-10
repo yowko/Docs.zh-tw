@@ -1,16 +1,15 @@
 ---
 title: new 修飾詞 - C# 參考
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 082cd37eca6b5de1251d73a5483665f8a98b0132
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c4fedd469efb79f91780dff26da89b586de2d1c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422674"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713336"
 ---
 # <a name="new-modifier-c-reference"></a>new 修飾詞 (C# 參考)
 
@@ -18,7 +17,7 @@ ms.locfileid: "73422674"
 
 您也可以使用 `new` 關鍵字來[建立型別執行個體](../operators/new-operator.md)或作為[泛型型別條件約束](./new-constraint.md)。
 
-若要隱藏繼承的成員，請在衍生類別中使用相同的成員名稱宣告該成員，並且使用 `new` 關鍵讚加以修飾。 例如:
+若要隱藏繼承的成員，請在衍生類別中使用相同的成員名稱宣告該成員，並且使用 `new` 關鍵讚加以修飾。 例如：
 
 [!code-csharp[csrefKeywordsOperator#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#8)]
 

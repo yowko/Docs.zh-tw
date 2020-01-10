@@ -1,17 +1,16 @@
 ---
 title: 具有命名與匿名方法的委派- C#程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 310d0abd8fd2ceac5f8dfaa2647cb6ac26513a0f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 1ec366999ca6457471b705fa83f06fcde4293f4e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346412"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712373"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>使用具名和匿名方法委派的比較 (C# 程式設計手冊)
 [delegate](../../language-reference/builtin-types/reference-types.md) 可以與具名方法產生關聯。 當您使用具名方法具現化委派時，方法會當做參數傳遞，例如：  

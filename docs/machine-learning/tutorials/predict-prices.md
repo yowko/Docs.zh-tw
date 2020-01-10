@@ -3,13 +3,13 @@ title: 教學課程：使用回歸預測價格
 description: 本教學課程會示範如何使用 ML.NET 建置迴歸模型，特別針對紐約市的計程車費用預測價格。
 ms.date: 09/30/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 500eef32f569acfe3a28adbd63b1465c8153d5ba
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: e4014dbdfb81af65c35d2f7693ef2c57885303ff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344980"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711619"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>教學課程：使用回歸與 ML.NET 預測價格
 

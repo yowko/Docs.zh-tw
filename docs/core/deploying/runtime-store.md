@@ -3,13 +3,12 @@ title: 執行階段套件存放區
 description: 了解如何使用 .NET Core 所使用的執行階段套件存放區和目標資訊清單。
 author: bleroy
 ms.date: 08/12/2017
-ms.custom: seodec18
-ms.openlocfilehash: 8a8d2d3298f144347c36c640700a1e578dc14715
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: aa0fd3a0895bc79ddb80aeb599d3e3820b3be6db
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116548"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714451"
 ---
 # <a name="runtime-package-store"></a>執行階段套件存放區
 
@@ -145,7 +144,7 @@ ASP.NET Core 隱含存放區只適用於 ASP.NET Core 2.0。 強烈建議應用�
 
 於發行時「修剪」部署，已發行的輸出只保留您指定的資訊清單套件特定版本。 主機必須要有指定版本的套件，應用程式才能啟動。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [dotnet-publish](../tools/dotnet-publish.md)
 - [dotnet-store](../tools/dotnet-store.md)

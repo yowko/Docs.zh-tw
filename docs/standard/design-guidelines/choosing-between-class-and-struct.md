@@ -12,48 +12,47 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-author: KrzysztofCwalina
-ms.openlocfilehash: 5041368ca1a440698c399c935ac72aba2002c3ba
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34ab2589364e244fed1c64c1703205fb4b0832e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615272"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709513"
 ---
 # <a name="choosing-between-class-and-struct"></a>在類別和結構之間選擇
-每個 framework 設計工具所面臨的基本設計決策之一是設計為型別，做為類別 （參考型別） 或結構 （實值型別）。 深入了解的參考型別和實值類型的行為差異是非常重要的做此選擇。  
+每個架構設計工具所面臨的基本設計決策之一，是要將型別設計為類別（參考型別）還是結構（實值型別）。 瞭解參考型別和實值型別的行為差異，對於進行這項選擇十分重要。  
   
- 第一個參考型別和實值型別是參考型別在堆積上配置和回收，則實值型別會配置在堆疊上，或包含內嵌類型，並解除配置時，我們會考慮之間的差異堆疊回溯時或當其包含的型別取得已取消配置。 因此，實值類型的配置和解除會比參考類型的配置和解除便宜的一般。  
+ 參考型別和實值型別之間的第一個差異在於，參考型別會在堆積上配置並進行垃圾收集，而實值型別則會在堆疊上配置，或在包含型別中內嵌，而在堆疊中則會解除配置。回溯或其包含類型解除配置時。 因此，實數值型別的配置和取消配置，通常比參考類型的配置和取消配置來得便宜。  
   
- 接下來，參考類型的陣列配置外行，這表示的陣列項目是只在堆積上的參考類型的執行個體的參考。 值型別陣列的配置是內嵌，這表示陣列項目實值型別的實際的執行個體。 因此，值型別陣列的配置和解除會比參考型別陣列的配置和解除成本更低。 此外，在大多數情況下值型別陣列顯現出更好的參考位置。  
+ 接下來，參考型別的陣列是配置的，這表示陣列元素只是在堆積上之參考型別實例的參考。 實值型別陣列是以內嵌方式配置，這表示陣列元素是實值型別的實際實例。 因此，實數值型別陣列的配置和取消配置，比參考類型陣列的配置和取消配置更便宜。 此外，在大部分的情況下，實數值型別陣列表現出更好的參考位置。  
   
- 下一項差異被與記憶體使用量。 取得 boxed 實值型別，當轉換成參考型別或其中一個所實作的介面。 他們會收到 unboxed 時轉換回實值型別。 因為方塊是在堆積上配置，而且會回收，太多 boxing 和 unboxing 的物件可以有堆積、 記憶體回收行程，以及最終的應用程式效能的負面影響。  相反地，當參考型別會轉換，就會不發生任何這類 boxing。 (如需詳細資訊，請參閱 < [Boxing 和 Unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md))。
+ 下一個差異與記憶體使用量有關。 轉換成參考型別或其所實的其中一個介面時，實數值型別會得到裝箱。 當轉換回實值型別時，它們會被取消裝箱。 因為 box 是在堆積上配置的物件，而且會進行垃圾收集，所乙太多的裝箱和取消裝箱可能會對堆積、垃圾收集行程和最終應用程式效能產生負面影響。  相反地，在參考型別轉換時，不會發生這類的裝箱。 （如需詳細資訊，請參閱[裝箱和取消裝箱](../../csharp/programming-guide/types/boxing-and-unboxing.md)）。
   
- 接下來，參考型別指派會複製參考，而值的型別指派會複製整個值。 因此，大型的參考類型的指派成本較低的大型值型別指派比。  
+ 接下來，參考型別指派會複製參考，而實值型別指派則會複製整個值。 因此，大型參考型別的指派比大型實值型別的指派便宜。  
   
- 最後，參考型別是傳址方式傳遞，而由值傳遞實值型別。 參考類型的執行個體的變更會影響所有指向執行個體的參考。 依值傳遞時，會複製值型別執行個體。 變更的實值型別執行個體時，它當然不會影響任何其複本。 因為複本不由使用者明確建立，但隱含建立引數會傳遞或傳回值傳回時，可以變更的實值型別可以是許多使用者造成混淆。 因此，實值型別應該是不可變的。  
+ 最後，參考型別會以傳址方式傳遞，而實值型別則會以傳值方式傳遞。 對參考型別的實例所做的變更會影響指向該實例的所有參考。 數值型別實例會在以傳值方式傳遞時複製。 當實值型別的實例變更時，當然不會影響它的任何複本。 由於複本不是由使用者明確建立，而是在傳遞引數或傳回值時以隱含方式建立，因此可以變更的實數值型別可能會讓許多使用者感到困惑。 因此，實數值型別應該是不可變的。  
   
- 根據經驗法則，大部分的架構中的類型應該是類別。 有，不過，某些情況中實值類型的特性讓它更適合使用結構。  
+ 根據經驗法則，架構中的大部分類型都應該是類別。 不過，在某些情況下，實數值型別的特性會使其更適合使用結構。  
   
- **✓ CONSIDER** 定義而不是類別結構，如果執行個體類型的小，通常存留較短或嵌入其他物件。  
+ 如果類型的實例很小，而且通常很短，或通常內嵌于其他物件中，則**✓會考慮**定義結構，而不是類別。  
   
- **X AVOID** 定義結構，除非該類型具有所有下列特性：  
+ **X**除非類型具有下列所有特性，否則請避免定義結構：  
   
-- 它以邏輯方式表示的單一值，類似於基本型別 (`int`， `double`，依此類推。)。  
+- 它會以邏輯方式表示單一值，類似于基本類型（`int`、`double`等）。  
   
-- 它具有執行個體大小小於 16 個位元組。  
+- 其實例大小低於16個位元組。  
   
-- 它永遠不變。  
+- 它是不可變的。  
   
-- 它不會經常 boxed。  
+- 不需要經常進行裝箱。  
   
- 在其他情況下，您應該做為類別定義您的型別。  
+ 在所有其他情況下，您應該將類型定義為類別。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [類型設計方針](../../../docs/standard/design-guidelines/type.md)
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

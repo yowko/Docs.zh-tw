@@ -1,16 +1,15 @@
 ---
 title: 如何明確執行介面成員-程式C#設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 4efc325b3587ee790cce739727506a28c3a1f524
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: d006db2a7501a3273f5cd11e82bc589b21e1ce9f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635401"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712087"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>如何明確執行介面成員（C#程式設計手冊）
 這個範例會宣告[介面](../../language-reference/keywords/interface.md) (`IDimensions`) 和類別 (`Box`)，它會明確實作介面成員 `getLength` 和 `getWidth`。 成員是透過介面執行個體 `dimensions` 存取。  

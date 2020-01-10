@@ -3,21 +3,19 @@ title: 使用 DOM 模型處理 XML 資料
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 56b6e9c7-ed82-4a65-a647-7be32c83bcc8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d34d22d8329f0bc26c1e29653137211bf300d324
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 01ef4bef57b8a2e3e13f28a98adb21b111f3f4ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647827"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710449"
 ---
 # <a name="process-xml-data-using-the-dom-model"></a>使用 DOM 模型處理 XML 資料
 XML 文件物件模型 (DOM) 會將 XML 資料視為一組標準物件來處理，可用於處理記憶體中的 XML 資料。 `System.Xml` 命名空間提供以程式設計方式表示的 XML 文件、片段、節點或節點集。 它是以全球資訊網協會 (W3C) DOM 層級 1 核心及 DOM 層級 2 核心建議事項為基礎。  
   
  <xref:System.Xml.XmlDocument> 類別表示 XML 文件。 它包含可用於擷取及建立所有其他 XML 物件的成員。 透過 <xref:System.Xml.XmlDocument> 及其相關類別，您可以建構 XML 文件、載入並存取資料、修改資料，以及儲存變更。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
   
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
   

@@ -1,6 +1,5 @@
 ---
 title: 轉型和類型轉換 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - type conversion [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 33195ef77e2f51e52cd9ed69a11b12bed8d9ead1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969617"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711892"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>轉型和類型轉換 (C# 程式設計指南)
 
@@ -34,7 +33,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **使用者定義的轉換**：使用者定義的轉換是透過特殊方法所執行，而您可以定義特殊方法來啟用沒有基底類別/衍生類別關聯性之自訂類型間的明確和隱含轉換。 如需詳細資訊，請參閱[使用者定義轉換運算子](../../language-reference/operators/user-defined-conversion-operators.md)。  
   
-- **使用協助程式類別轉換**：若要轉換不相容類型 (例如，整數和 <xref:System.DateTime?displayProperty=nameWithType> 物件，或十六進位字串和位元組陣列)，您可以使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別、<xref:System.Convert?displayProperty=nameWithType> 類別，以及內建數字類型的 `Parse` 方法 (例如，<xref:System.Int32.Parse%2A?displayProperty=nameWithType>)。 如需詳細資訊，請參閱[如何：將位元組陣列轉換為整數](./how-to-convert-a-byte-array-to-an-int.md)、[如何：將字串轉換為數值](./how-to-convert-a-string-to-a-number.md)和[如何：在十六進位字串和數字類型間轉換](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。  
+- **使用協助程式類別轉換**：若要轉換不相容類型 (例如，整數和 <xref:System.DateTime?displayProperty=nameWithType> 物件，或十六進位字串和位元組陣列)，您可以使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別、<xref:System.Convert?displayProperty=nameWithType> 類別，以及內建數字類型的 `Parse` 方法 (例如，<xref:System.Int32.Parse%2A?displayProperty=nameWithType>)。 如需詳細資訊，請參閱[如何將位元組陣列轉換成](./how-to-convert-a-byte-array-to-an-int.md)整數、[如何將字串轉換成數位](./how-to-convert-a-string-to-a-number.md)，以及[如何在十六進位字串和數位類型之間進行轉換](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。
   
 ## <a name="implicit-conversions"></a>隱含轉換
 
@@ -96,4 +95,4 @@ Giraffe g2 = (Giraffe) a;
 - [() 轉換運算子](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
 - [使用者定義轉換運算子](../../language-reference/operators/user-defined-conversion-operators.md)
 - [產生的類型轉換](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
-- [如何：將字串轉換為數值](./how-to-convert-a-string-to-a-number.md)
+- [如何將字串轉換成數位](./how-to-convert-a-string-to-a-number.md)

@@ -1,6 +1,5 @@
 ---
 title: 如何執行自訂事件存取子C# -程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - accessors [C#], event accessors
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - events [C#], remove accessor
 - remove accessor [C#]
 ms.assetid: bf903abf-03a4-4f7b-ab6b-b7e59bc2ee1e
-ms.openlocfilehash: af44b88ddd0e34f9dfd0b56718b5bc7241ef5d03
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 34e816799f472e8945962e334b9a90b2582e0393
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635453"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705349"
 ---
 # <a name="how-to-implement-custom-event-accessors-c-programming-guide"></a>如何執行自訂事件存取子C# （程式設計手冊）
 事件是一種特殊的多點傳送委派，只能從宣告所在類別內叫用。 在事件引發時，用戶端程式碼透過提供應該叫用的方法參考，來訂閱事件。 這些方法會透過類似屬性存取子的事件存取子新增至委派叫用清單，不同之處在於事件存取子名為 `add` 和 `remove`。 在大部分情況下，您不必提供自訂事件存取子。 當程式碼中不提供任何自訂事件存取子時，編譯器會自動新增它們。 不過，在某些情況下，您可能必須提供自訂行為。 其中一個這類案例如[如何執行介面事件](./how-to-implement-interface-events.md)主題中所示。

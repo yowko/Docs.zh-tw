@@ -1,18 +1,17 @@
 ---
 title: 擴充方法 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 66c8dee059d65f6628bf38edecf2f5abec320eea
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 1ab831b10b4152e8713cdfba4962822042c15673
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635830"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714949"
 ---
 # <a name="extension-methods-c-programming-guide"></a>擴充方法 (C# 程式設計手冊)
 擴充方法可讓您在現有類型中「加入」方法，而不需要建立新的衍生類型、重新編譯，或是修改原始類型。 擴充方法是一種特殊的靜態方法，但是會將它們當成擴充類型上的執行個體方法來呼叫。 對於以 C#、F# 和 Visual Basic 撰寫的用戶端程式碼，呼叫擴充方法或是在類型中實際定義的方法，兩者之間並沒有明顯的差別。  

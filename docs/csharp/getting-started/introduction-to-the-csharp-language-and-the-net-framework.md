@@ -6,14 +6,14 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: a9dddb4a3e7af2ca76bb5d3f953cc36c6142623a
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: d2fd879203932ea3f2211e38a2efdd626928962b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635999"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713916"
 ---
-# <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
+# <a name="introduction-to-the-c-language-and-the-net-framework"></a>C#語言和 .NET Framework 簡介
 
 C# 是型別安全的優質物件導向語言，可讓開發人員建置各種在 .NET Framework 上執行且兼具安全性與穩定性的應用程式。 您可以使用 C# 建立 Windows 用戶端應用程式、XML Web 服務、分散式元件、主從應用程式、資料庫應用程式，而且還不僅止於此。 Visual C# 提供進階的程式碼編輯器、使用方便的使用者介面設計工具、整合式偵錯工具及許多其他工具，以根據 C# 語言和 .NET Framework 輕鬆地開發應用程式。  
   
@@ -22,7 +22,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
 ## <a name="c-language"></a>C# 語言
 
- C# 語法的表達能力相當高，同時也很簡單且易於了解。 熟悉 C、C++ 或 Java 的任何人都能立即辨識出 C# 的大括號語法。 了解上述任何一種語言的開發人員一般都能在極短時間內開始用 C# 有效率地工作。 C# 語法可大幅簡化 C++ 的複雜性，並提供強大的功能，例如可為 Null 的實值型別、列舉、委派、lambda 運算式，還有 Java 中所沒有的直接記憶體存取。 C# 支援泛型方法和型別，提供更高的型別安全和效能。C# 也支援迭代器，讓集合類別的實作者定義自訂的反覆項目表現方式，使得用戶端程式碼可以容易地使用。 語言整合式查詢（LINQ）運算式會將強型別查詢設為第一類語言結構。  
+C# 語法的表達能力相當高，同時也很簡單且易於了解。 任何熟悉 C、 C# C++或 JAVA 的人，都能立即辨識的大括弧語法。 了解上述任何一種語言的開發人員一般都能在極短時間內開始用 C# 有效率地工作。 C#語法簡化了的許多複雜性， C++並提供強大的功能，例如可為 null 的實數值型別、列舉、委派、lambda 運算式，以及直接記憶體存取。 C# 支援泛型方法和型別，提供更高的型別安全和效能。C# 也支援迭代器，讓集合類別的實作者定義自訂的反覆項目表現方式，使得用戶端程式碼可以容易地使用。 語言整合式查詢（LINQ）運算式會將強型別查詢設為第一類語言結構。  
   
  C# 為物件導向語言，支援封裝、繼承和多型的概念。 包括應用程式的進入點 `Main` 方法在內，所有變數和方法都會封裝在類別定義內。 類別可直接繼承自一個父類別，但可以實作數目不拘的介面。 覆寫父類別中虛擬方法的方法需要利用 `override` 關鍵字，避免意外重複定義。 在 C# 中，結構就像輕量型的類別。它是堆疊配置型別，可以實作介面，但不支援繼承。  
   
@@ -38,7 +38,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
 - 語言整合式查詢（LINQ），可在各種不同的資料來源中提供內建的查詢功能。  
   
- 如果您必須與 COM 物件或原生 Win32 DLL 等其他 Windows 軟體互動，您可以在 C# 中透過稱為 "Interop" 的處理序來達到此目的。 Interop 幾乎可讓 C# 程式執行大部分原生 C++ 應用程式的功能。 對於直接記憶體存取是絕對必要的情況，C# 甚至支援指標和「不安全」的程式碼概念。  
+ 如果您必須與 COM 物件或原生 Win32 DLL 等其他 Windows 軟體互動，您可以在 C# 中透過稱為 "Interop" 的處理序來達到此目的。 Interop 幾乎可讓 C# 程式執行大部分原生 C++ 應用程式的功能。 C#甚至針對直接記憶體存取很重要的情況，支援指標和「unsafe」程式碼的概念。  
   
  相較於 C 和 C++，C# 建置流程相當簡單，也比 Java 更有彈性。 沒有個別標頭檔，也不需要以特定順序宣告方法和型別。 C# 原始程式檔可以定義數目不拘的類別、結構、介面及事件。  
   
@@ -56,9 +56,9 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
  以 C# 撰寫的原始程式碼會編譯成符合 CLI 規格的[中繼語言 (IL)](../../standard/managed-code.md)。 IL 程式碼和像是點陣圖和字串的資源，會以稱為組件的可執行檔儲存在磁碟上，副檔名通常為 .exe 或 .dll。 組件包含的資訊清單提供有關組件的型別、版本、文化特性及安全性需求資訊。  
   
- C# 程式執行時，組件會載入至 CLR，根據資訊清單中的資訊執行各種不同動作。 然後，如果符合安全性需求，CLR 就會執行 Just-In-Time (JIT) 編譯以將 IL 程式碼轉換成原生機器指令。 CLR 也提供有關自動記憶體回收、例外狀況處理和資源管理的其他服務。 由 CLR 執行的程式碼有時稱為「Managed 程式碼 」，相對於會以特定系統為目標編譯成原生機器語言的「Unmanaged 程式碼 」。 下圖說明 C# 原始程式碼檔、.NET Framework 類別庫、組件及 CLR 的編譯時期和執行階段關聯性。  
+ C# 程式執行時，組件會載入至 CLR，根據資訊清單中的資訊執行各種不同動作。 然後，如果符合安全性需求，CLR 會執行即時（JIT）編譯，將 IL 程式碼轉換成原生機器指令。 CLR 也提供有關自動記憶體回收、例外狀況處理和資源管理的其他服務。 CLR 執行的程式碼有時稱為「managed 程式碼」，與「非受控碼」相反，它會編譯成以特定系統為目標的原生電腦語言。 下圖說明 C# 原始程式碼檔、.NET Framework 類別庫、組件及 CLR 的編譯時期和執行階段關聯性。  
   
- ![從 C&#35; 原始程式碼到電腦執行](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
+ ![從 C# 原始程式碼到電腦執行](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
  語言互通性是 .NET Framework 的一項重要功能。 由於 C# 編譯器所產生的 IL 程式碼符合通用型別規格 (CTS)，所以從 C# 產生的 IL 程式碼可以和從 Visual Basic、Visual C++ 的 .NET 版本所產生的程式碼互動，或和 20 種以上的任何其他 CTS 相容語言互動。 單一組件可包含以不同的 .NET 語言撰寫的多個模組，而且型別可以彼此參考，如同它們都以相同的語言撰寫一般。  
   

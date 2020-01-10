@@ -3,13 +3,12 @@ title: 使用 .NET Core 命令列組織和測試專案
 description: 本教學課程說明如何從命令列組織和測試 .NET Core 專案。
 author: cartermp
 ms.date: 09/10/2018
-ms.custom: seodec18
-ms.openlocfilehash: 38017a788a8e43601f49a98230cb4d96e0390061
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.openlocfilehash: fdaa42be4d3b8872a3119f97f253ce277564339e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884211"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715346"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>使用 .NET Core 命令列組織和測試專案
 

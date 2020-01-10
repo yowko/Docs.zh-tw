@@ -1,17 +1,16 @@
 ---
 title: 靜態建構函式 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 6d1a39008ebb965649104c2e74241780731911bb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596029"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714680"
 ---
 # <a name="static-constructors-c-programming-guide"></a>靜態建構函式 (C# 程式設計手冊)
 靜態建構函式用來初始化任何 [static](../../language-reference/keywords/static.md) 資料，或執行只需要執行一次的特定動作。 在建立第一個執行個體或參考任何靜態成員之前，會自動進行呼叫。  
@@ -44,7 +43,7 @@ ms.locfileid: "69596029"
 > [!Note]
 > 雖然無法直接存取明確靜態建構函式，但應記錄其存在，以協助對初始化例外狀況進行疑難排解。
 
-### <a name="usage"></a>使用量
+### <a name="usage"></a>使用
 
 - 靜態建構函式的一般用法為：當類別正在使用記錄檔，且建構函式用來將項目寫入這個檔案時。  
 - 如果建構函式可以呼叫 `LoadLibrary` 方法，靜態建構函式在建立 unmanaged 程式碼的包裝函式類別時也很有用。  
@@ -59,7 +58,7 @@ ms.locfileid: "69596029"
 ## <a name="c-language-specification"></a>C# 語言規格
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[靜態建構函式](~/_csharplang/spec/classes.md#static-constructors)一節。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)
@@ -67,4 +66,4 @@ ms.locfileid: "69596029"
 - [靜態類別和靜態類別成員](./static-classes-and-static-class-members.md)
 - [完成項](./destructors.md)
 - [建構函式設計指導方針](../../../standard/design-guidelines/constructor.md#type-constructor-guidelines)
-- [安全性警告 - CA2121：靜態建構函式應該為私用的](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)
+- [安全性警告-CA2121：靜態的構造函式應該是私用的](https://docs.microsoft.com/visualstudio/code-quality/ca2121-static-constructors-should-be-private)

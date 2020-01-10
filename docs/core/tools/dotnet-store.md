@@ -3,19 +3,18 @@ title: dotnet store 命令
 description: "'dotnet store' 命令會在執行階段套件存放區中儲存指定的組件。"
 author: bleroy
 ms.date: 05/29/2018
-ms.custom: seodec18
-ms.openlocfilehash: 58889039d117a2231cda693e4aca7790f018d1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 3a81e06f36ffbed68b7cc35de47aa5dca32bab6e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606747"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714191"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet store` - 會在[執行階段套件存放區](../deploying/runtime-store.md)中儲存指定的組件。
 
@@ -23,7 +22,7 @@ ms.locfileid: "54606747"
 
 `dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
 
-## <a name="description"></a>說明
+## <a name="description"></a>描述
 
 `dotnet store` 會在[執行階段套件存放區](../deploying/runtime-store.md)中儲存指定的組件。 根據預設，會針對目標執行階段和架構最佳化組件。 如需詳細資訊，請參閱[執行階段套件存放區](../deploying/runtime-store.md)主題。
 
@@ -81,6 +80,6 @@ ms.locfileid: "54606747"
 
 `dotnet store --manifest packages.csproj --skip-optimization`
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [執行階段套件存放區](../deploying/runtime-store.md)

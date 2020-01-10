@@ -3,13 +3,12 @@ title: 使用 Visual Studio for Mac 建立完整的 .NET Core 解決方案
 description: 本文會逐步引導您建立 .NET Core 解決方案，其中包含可重複使用的程式庫和單元測試。
 author: mairaw
 ms.date: 12/19/2019
-ms.custom: seodec18
-ms.openlocfilehash: 361df77a45f22ae72e50a818cf0e2a5b24c4b67d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: f4284cd4c3c8b358b87c31c0fd5c067b1e7fb8a2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340263"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715357"
 ---
 # <a name="build-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上建立完整的 .NET Core 解決方案
 

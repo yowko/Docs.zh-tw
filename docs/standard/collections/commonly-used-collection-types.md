@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c21a1303cd67f5f5de42241f4d5ada929e68bf2c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
-ms.translationtype: HT
+ms.openlocfilehash: 1004a2f9a0594d9150d147dec1e16b56205e0d13
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589897"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711398"
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合類型
 集合類型是資料集合 (例如雜湊表、佇列、堆疊、封包、字典和清單) 最常見的一些呈現方式。  
@@ -34,7 +32,7 @@ ms.locfileid: "65589897"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[集合和資料結構](../../../docs/standard/collections/index.md)|討論 .NET Framework 中可用的各種集合類型，包括堆疊、佇列、清單、陣列和字典。|  
 |[Hashtable 和 Dictionary 集合類型](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|說明泛型和非泛型雜湊字典類型的功能。|  

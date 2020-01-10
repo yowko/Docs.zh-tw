@@ -7,14 +7,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2fd602901955be218379386d8ed1b7c14b30078c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4503e2cff18f4aa901d20c76cfe4076a7fed3600
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974527"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715771"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 
@@ -76,7 +74,7 @@ ms.locfileid: "73974527"
 - [Mage.exe (資訊清單產生和編輯工具)](mage-exe-manifest-generation-and-editing-tool.md)  
 可讓您建立、編輯和簽署應用程式以及部署資訊清單。 由於 *Mage.exe* 是命令列工具，因此可以從批次指令碼及其他 Windows 應用程式 (包括 ASP.NET 應用程式) 中執行。
 
-- [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
+- [MageUI.exe (資訊清單產生和編輯工具、圖形用戶端)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
 支援與命令列工具 Mage.exe 相同的功能，但使用 Windows 架構使用者介面 (UI)。 支援與命令列工具*mage.exe*相同的功能，但使用以 Windows 為基礎的使用者介面（UI）。
 
 - [MDbg.exe (.NET Framework 命令列偵錯工具)](mdbg-exe.md)  

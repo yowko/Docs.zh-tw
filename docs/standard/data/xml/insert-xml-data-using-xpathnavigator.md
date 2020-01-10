@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 68c003467d837fe79d5e275968e47fa5dc3490cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966959"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710722"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 插入 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供一組方式，可在 XML 文件中插入同層級節點、子節點及屬性節點。 為了使用這些方法，<xref:System.Xml.XPath.XPathNavigator> 物件必須是可編輯的，也就是說，它的 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 屬性必須為 `true`。  
@@ -256,7 +254,7 @@ navigator.SetTypedValue(DateTime.Now);
   
  下表說明 <xref:System.Xml.XmlWriter> 類別不支援的 <xref:System.Xml.XPath.XPathNavigator> 類別方法。  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |<xref:System.Xml.XmlWriter.WriteEntityRef%2A>|會擲回 <xref:System.NotSupportedException> 例外狀況。|  
 |<xref:System.Xml.XmlWriter.WriteDocType%2A>|在根層級會被忽略，如果在 XML 文件的任何其他層級呼叫，則擲回 <xref:System.NotSupportedException> 例外狀況。|  
@@ -330,7 +328,7 @@ document.Save("book.xml");
 ## <a name="saving-an-xml-document"></a>儲存 XML 文件  
  使用 <xref:System.Xml.XmlDocument> 類別的方法，將用本主題中說明之方法對 <xref:System.Xml.XmlDocument> 物件所做的變更儲存下來。 如需儲存 <xref:System.Xml.XmlDocument> 物件之變更的詳細資訊，請參閱[儲存與寫入文件](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

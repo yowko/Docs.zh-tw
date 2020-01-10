@@ -1,6 +1,5 @@
 ---
 title: yield 內容關鍵字 - C# 參考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - yield
@@ -8,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 0d2c3f67715b9b2161a6c908576ac9f964ff13d6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
-ms.translationtype: HT
+ms.openlocfilehash: e3c9e37e7b543eaddae837a85604c4ba91fbc744
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363126"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712776"
 ---
 # <a name="yield-c-reference"></a>yield (C# 參考)
 
-在陳述式中使用 `yield` [內容關鍵字](index.md#contextual-keywords)時，您會指出關鍵字所在的方法、運算子或 `get` 存取子是迭代器。 如果使用 `yield` 定義迭代器，當您為自訂集合類型實作 <xref:System.Collections.Generic.IEnumerator%601> 和 <xref:System.Collections.IEnumerable> 模式時，就不需要明確的額外類別 (保存列舉之狀態的類別，請參閱 <xref:System.Collections.IEnumerator> 中的範例)。
+當您在語句中使用 `yield` 內容[關鍵字](index.md#contextual-keywords)時，您會指出其所在的方法、運算子或 `get` 存取子是反覆運算器。 如果使用 `yield` 定義迭代器，當您為自訂集合類型實作 <xref:System.Collections.Generic.IEnumerator%601> 和 <xref:System.Collections.IEnumerable> 模式時，就不需要明確的額外類別 (保存列舉之狀態的類別，請參閱 <xref:System.Collections.IEnumerator> 中的範例)。
 
 下列範例將示範兩種形式的 `yield` 陳述式。
 
@@ -42,7 +41,7 @@ yield break;
 
 - 傳回類型必須是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。
 
-- 宣告不可包含任何 [in](in-parameter-modifier.md)、[ref](ref.md) 或 [out](out-parameter-modifier.md) 參數。
+- 宣告[中](in-parameter-modifier.md)不能有任何[ref](ref.md)或[out](out-parameter-modifier.md)參數。
 
 傳回 `yield` 或 <xref:System.Collections.IEnumerable> 的 <xref:System.Collections.IEnumerator> 類型迭代器為 `object`。  如果迭代器傳回 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.Generic.IEnumerator%601>，則 `yield return` 陳述式中必須進行從運算式類型轉換成泛型類型參數的隱含轉換。
 
@@ -96,7 +95,7 @@ Iterator 方法的傳回類型是 <xref:System.Collections.IEnumerable>，其為
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../../language-reference/index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

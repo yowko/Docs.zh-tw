@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: b5757c4a-ea59-467e-ac62-be2bfe24eb77
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f80157ddf394fdd058793830bfe3052b41ad1e40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 889c5f85a2ea3fc08dadefda5509de0fcfab76ec
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576482"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710410"
 ---
 # <a name="reading-and-writing-xml-schemas"></a>讀取及寫入 XML 結構描述
 結構描述物件模型 (SOM) API 可從檔案或其他來源中讀取及寫入 XML 結構描述定義語言 (XSD) 結構描述，並使用 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的類別 (該命名空間對應於全球資訊網協會 (W3C) XML 結構描述建議事項中所定義的結構) 來建置記憶體中的 XML 結構描述。  
@@ -47,7 +45,7 @@ ms.locfileid: "54576482"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)

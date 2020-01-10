@@ -1,6 +1,5 @@
 ---
 title: Checked 與 Unchecked - C# 參考
-ms.custom: seodec18
 ms.date: 05/15/2018
 helpviewer_keywords:
 - operators [C#], checked and unchecked
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: 7abc19e0657330752e7798d060516c48aa402297
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a3b1ef8e6d8e496eda74ab25b3fe17f8174bac11
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771769"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713722"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked 與 Unchecked (C# 參考)
 C# 陳述式可在 checked 或 unchecked 內容中執行。 在 checked 內容中，算術溢位會引發例外狀況。 在未經檢查的內容中，會忽略算術溢位，並捨棄目的型別不適用的高序位位元，以便將結果截斷。  

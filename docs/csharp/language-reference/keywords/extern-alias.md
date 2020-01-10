@@ -1,6 +1,5 @@
 ---
 title: 外部別名 - C# 參考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - alias_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - aliases [C#], extern keyword
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
-ms.openlocfilehash: 09d1247c51f0e600973840cfef2d3b396d9bf0d0
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 86202333484933d7449b0c4d8c5a3f1a63cd7775
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520285"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713553"
 ---
 # <a name="extern-alias-c-reference"></a>外部別名 (C# 參考)
 您可能必須參考兩個具有相同完整類型名稱的組件版本。 例如，您可能必須在相同的應用程式中使用兩個或多個組件版本。 藉由使用外部組件別名，來自每個組件的命名空間可包裝在別名所命名的根層級命名空間內，這樣即可讓它們在相同的檔案中使用。  
@@ -28,7 +27,7 @@ ms.locfileid: "72520285"
   
  `/r:GridV2=grid20.dll`  
   
- 這會建立外部別名 `GridV1` 和 `GridV2`。 若要從程式內使用這些別名，請使用 `extern` 關鍵字參考別名。 例如:  
+ 這會建立外部別名 `GridV1` 和 `GridV2`。 若要從程式內使用這些別名，請使用 `extern` 關鍵字參考別名。 例如：  
   
  `extern alias GridV1;`  
   

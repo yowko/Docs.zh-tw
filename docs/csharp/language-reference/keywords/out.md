@@ -1,6 +1,5 @@
 ---
 title: out 關鍵字 - C# 參考
-ms.custom: seodec18
 ms.date: 03/01/2017
 f1_keywords:
 - out_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - out [C#]
 - out keyword [C#]
 ms.assetid: 7e911a0c-3f98-4536-87be-d539b7536ca8
-ms.openlocfilehash: eccc89d3cee687f7b6ecf7b0ce2030ef709a81b1
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
-ms.translationtype: HT
+ms.openlocfilehash: 75b556535c5c0c0b55bf029cc400eb61b1002cb2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235819"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713257"
 ---
 # <a name="out-c-reference"></a>out (C# 參考)
 
@@ -24,6 +23,6 @@ ms.locfileid: "53235819"
 
 - 在介面及委派的[泛型型別參數宣告](out-generic-modifier.md)中，指定型別參數是 Covariant。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)

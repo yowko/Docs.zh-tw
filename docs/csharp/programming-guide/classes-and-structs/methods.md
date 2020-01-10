@@ -1,21 +1,20 @@
 ---
 title: 方法 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 318f51afefd780ed7be0ab8c2a72acb5fcf9db15
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699973"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714774"
 ---
 # <a name="methods-c-programming-guide"></a>方法 (C# 程式設計手冊)
 
-方法是包含一系列陳述式的程式碼區塊。 程式會造成呼叫方法並指定任何所需的方法引數來執行陳述式。 在 C# 中，每個執行的指示是在方法的內容中執行。 @No__t-0 方法是每個C#應用程式的進入點，而且會在程式啟動時由 common language RUNTIME （CLR）呼叫。
+方法是包含一系列陳述式的程式碼區塊。 程式會造成呼叫方法並指定任何所需的方法引數來執行陳述式。 在 C# 中，每個執行的指示是在方法的內容中執行。 `Main` 方法是每個C#應用程式的進入點，而且會在程式啟動時由 common language RUNTIME （CLR）呼叫。
 
 > [!NOTE]
 > 本文討論命名的方法。 如需匿名函式的資訊，請參閱[匿名函式 (C# 程式設計手冊)](../statements-expressions-operators/anonymous-functions.md)。
@@ -39,7 +38,7 @@ ms.locfileid: "71699973"
 
 ## <a name="method-parameters-vs-arguments"></a>方法參數與引數的比較
 
-方法定義會指定所需的任何參數的名稱和類型。 在呼叫程式碼呼叫此方法時，它會提供對每個參數呼叫的引數的具體值。 引數必須與參數類型相容，但是在呼叫程式碼中使用的引數名稱（如果有的話）不需要與方法中所定義的參數相同。 例如:
+方法定義會指定所需的任何參數的名稱和類型。 在呼叫程式碼呼叫此方法時，它會提供對每個參數呼叫的引數的具體值。 引數必須與參數類型相容，但是在呼叫程式碼中使用的引數名稱（如果有的話）不需要與方法中所定義的參數相同。 例如：
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
@@ -53,7 +52,7 @@ ms.locfileid: "71699973"
 
 [!code-csharp[csProgGuideObjects#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#42)]
 
-現在，如果您將此類型為基礎的物件傳遞至方法，即會傳遞物件的參考。 下列範例會將類型 `SampleRefType` 的物件傳遞給方法 `ModifyObject`：
+現在，如果您將此類型為基礎的物件傳遞至方法，即會傳遞物件的參考。 下列範例會將 `SampleRefType` 類型的物件傳遞至方法 `ModifyObject`：
 
 [!code-csharp[csProgGuideObjects#75](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#75)]
 
@@ -92,7 +91,7 @@ public ref double GetEstimatedDistance()
 ref int distance = plant
 ```
 
-如果呼叫函式已將陣列傳入 `M`，則不需要從修改陣列內容的 `M` 方法傳回多維度陣列。  您可能會從 `M` 針對值的良好樣式或功能流程傳回產生的陣列，但這不需要，因為 C# 會以傳值方式傳遞所有參考型別，而且陣列參考的值是陣列的指標。 在方法 `M` 中，對陣列內容所做的任何變更都可透過任何具有陣列參考的程式碼觀察到，如下列範例所示：
+如果呼叫函式已將陣列傳入 `M`，則不需要從修改陣列內容的 `M` 方法傳回多維度陣列。  您可能會從 `M` 針對值的良好樣式或功能流程傳回產生的陣列，但這不需要，因為 C# 會以傳值方式傳遞所有參考型別，而且陣列參考的值是陣列的指標。 在方法 `M`中，對陣列內容所做的任何變更都可透過任何具有陣列參考的程式碼觀察到，如下列範例所示：
 
 ```csharp
 static void Main(string[] args)
@@ -152,7 +151,7 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 如果方法會傳回 `void` 或非同步方法，則方法的主體必須是陳述式運算式 (如同 lambda)。 若為屬性和索引子，它們必須是唯讀，因此您不應使用 `get` 存取子關鍵字。
 
-## <a name="iterators"></a>迭代器
+## <a name="iterators"></a>Iterators
 
 迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](../../language-reference/keywords/yield.md) 陳述式來一次傳回一個項目。 當 [yield return](../../language-reference/keywords/yield.md) 到達陳述式時，會記住在程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。
 
@@ -160,13 +159,13 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。
 
-如需詳細資訊，請參閱 [Iterator](../concepts/iterators.md)。
+如需詳細資訊，請參閱[迭代器](../concepts/iterators.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](index.md)

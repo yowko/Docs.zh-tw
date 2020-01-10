@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f789317defe3f4b44b37e6d94d37b974d003bcae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 627da3c8c45d007e677c4f92f4d5cd602d34ae84
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967001"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710852"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 擷取 XML 資料
 可採用幾種不同方式表示 Microsoft .NET Framework 中的 XML 文件。 包括使用 <xref:System.String>，或使用 <xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter>、<xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 類別。 為便於在 XML 文件的不同表示之間進行切換，<xref:System.Xml.XPath.XPathNavigator> 類別提供了一些方法及屬性，可將 XML 當做 <xref:System.String>、<xref:System.Xml.XmlReader> 物件或 <xref:System.Xml.XmlWriter> 物件擷取。  
@@ -162,7 +160,7 @@ book.Close();
   
  範例將在本主題的前面部分所找到的 `books.xml` 檔案當做輸入。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
