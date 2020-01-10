@@ -1,15 +1,13 @@
 ---
 title: .NET Core Runtime 與 SDK 如何進行版本設定
 description: 此文章說明 .NET Core SDK 與 Runtime 如何進行版本設定 (類似語意式版本設定)。
-author: bleroy
 ms.date: 07/26/2018
-ms.custom: seodec18
-ms.openlocfilehash: b8cfb2d40b1ae88ef03daca6c31b283256bc6f26
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179963"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777322"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 版本設定概觀
 
@@ -25,16 +23,16 @@ ms.locfileid: "72179963"
 
 SDK 版本號碼的第三個位置同時傳達次要與修補號碼。 次要版本會被乘以 100。 次要版本 1、修補版本 2 將以 102 表示。 最後兩位數代表修補號碼。 例如，.NET Core 2.2 的發行可能會建立如下表的發行版本：
 
-| 變更                | .NET Core 執行階段 | .NET Core SDK (*) |
+| 變更                | .NET Core 執行階段 | .NET Core SDK （\*） |
 |-----------------------|-------------------|-------------------|
 | 初始版本       | 2.2.0             | 2.2.100           |
 | SDK 修補程式             | 2.2.0             | 2.2.101           |
 | 執行階段與 SDK 修補程式 | 2.2.1             | 2.2.102           |
 | SDK 功能變更    | 2.2.1             | 2.2.200           |
 
-(\*) 此圖表使用未來的 2.2 .NET Core 執行階段做為範例，因為歷史成品表示 .NET Core 2.1 的第一個 SDK 是 2.1.300。 如需詳細資訊，請參閱 [.NET Core 版本選擇](selection.md)。
+（\*）此圖表使用 2.2 .NET Core 執行時間作為範例，因為歷史成品是指 .NET Core 2.1 的第一個 SDK 是2.1.300。 如需詳細資訊，請參閱 [.NET Core 版本選擇](selection.md)。
 
-注意：
+附註：
 
 - 若 SDK 在執行階段功能更新之前有 10 個功能更新，版本號碼會滾入 1000 系列，且具有 2.2.1000 做為 2.2.900 之後的未來發行版本。 此情況不應該發生。
 - 不會發生沒有功能發行版本的 99 修補發行版本。 若發行版本接近此號碼，它會強制功能發行版本。
@@ -98,7 +96,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 .NET Core 的每個版本都實作 .NET Standard. 的版本。 實作 .NET Standard 的版本意指支援舊版 .NET Standard。 .NET Standard 與 .NET Core 版本彼此獨立。 .NET Core 2.0 實作 .NET Standard 2.0 只是巧合。 .NET Core 2.1 也實作 .NET Standard 2.0。 .NET Core 將支援未來推出的 .NET Standard 版本。
 
-| .NET Core | .NET Standard |
+| .NET Core | .NET 標準 |
 |-----------|---------------|
 | 1.0       | 最高到 1.6     |
 | 2.0       | 最高到 2.0     |
@@ -106,7 +104,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 | 2.2       | 最高到 2.0     |
 | 3.0       | 最多2.1     |
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [目標架構](../../standard/frameworks.md)
 - [.NET Core 發佈封裝](../build/distribution-packaging.md)
