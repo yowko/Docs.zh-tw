@@ -1,46 +1,44 @@
 ---
 title: 來源連結與 .NET 程式庫
 description: 使用來源連結改善 .NET 程式庫偵錯的最佳做法建議。
-author: jamesnk
-ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 89f9e3b1fd70003c528465f29a143b157468d539
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 0ebc7601f1ad92b0fc6ab4c7599b010cb42feb5d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089290"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706435"
 ---
-# <a name="source-link"></a><span data-ttu-id="24847-103">來源連結</span><span class="sxs-lookup"><span data-stu-id="24847-103">Source Link</span></span>
+# <a name="source-link"></a><span data-ttu-id="e925f-103">來源連結</span><span class="sxs-lookup"><span data-stu-id="e925f-103">Source Link</span></span>
 
-<span data-ttu-id="24847-104">來源連結技術可讓開發人員對來自 NuGet 的 .NET 組件進行原始程式碼偵錯。</span><span class="sxs-lookup"><span data-stu-id="24847-104">Source Link is a technology that enables source code debugging of .NET assemblies from NuGet by developers.</span></span> <span data-ttu-id="24847-105">來源連結會在建立 NuGet 套件時執行，並將原始程式碼控制中繼資料內嵌在組件和套件。</span><span class="sxs-lookup"><span data-stu-id="24847-105">Source Link executes when creating the NuGet package and embeds source control metadata inside assemblies and the package.</span></span> <span data-ttu-id="24847-106">下載套件並在 Visual Studio 中啟用來源連結的開發人員可以逐步執行原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="24847-106">Developers who download the package and have Source Link enabled in Visual Studio can step into its source code.</span></span> <span data-ttu-id="24847-107">來源連結提供原始程式碼控制中繼資料來建立絕佳的偵錯體驗。</span><span class="sxs-lookup"><span data-stu-id="24847-107">Source Link provides source control metadata to create a great debugging experience.</span></span>
+<span data-ttu-id="e925f-104">來源連結技術可讓開發人員對來自 NuGet 的 .NET 組件進行原始程式碼偵錯。</span><span class="sxs-lookup"><span data-stu-id="e925f-104">Source Link is a technology that enables source code debugging of .NET assemblies from NuGet by developers.</span></span> <span data-ttu-id="e925f-105">來源連結會在建立 NuGet 套件時執行，並將原始程式碼控制中繼資料內嵌在組件和套件。</span><span class="sxs-lookup"><span data-stu-id="e925f-105">Source Link executes when creating the NuGet package and embeds source control metadata inside assemblies and the package.</span></span> <span data-ttu-id="e925f-106">下載套件並在 Visual Studio 中啟用來源連結的開發人員可以逐步執行原始程式碼。</span><span class="sxs-lookup"><span data-stu-id="e925f-106">Developers who download the package and have Source Link enabled in Visual Studio can step into its source code.</span></span> <span data-ttu-id="e925f-107">來源連結提供原始程式碼控制中繼資料來建立絕佳的偵錯體驗。</span><span class="sxs-lookup"><span data-stu-id="e925f-107">Source Link provides source control metadata to create a great debugging experience.</span></span>
 
-## <a name="source-link-demo"></a><span data-ttu-id="24847-108">來源連結示範</span><span class="sxs-lookup"><span data-stu-id="24847-108">Source Link demo</span></span>
+## <a name="source-link-demo"></a><span data-ttu-id="e925f-108">來源連結示範</span><span class="sxs-lookup"><span data-stu-id="e925f-108">Source Link demo</span></span>
 
 > [!VIDEO https://www.youtube.com/embed/gyRGhCQPkB4?start=61]
 
-## <a name="using-source-link"></a><span data-ttu-id="24847-109">使用來源連結</span><span class="sxs-lookup"><span data-stu-id="24847-109">Using Source Link</span></span>
+## <a name="using-source-link"></a><span data-ttu-id="e925f-109">使用來源連結</span><span class="sxs-lookup"><span data-stu-id="e925f-109">Using Source Link</span></span>
 
-<span data-ttu-id="24847-110">使用來源連結的指示位於 [dotnet/sourceLink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub 存放庫。</span><span class="sxs-lookup"><span data-stu-id="24847-110">Instructions for using Source Link can be found on the [dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub repository.</span></span>
+<span data-ttu-id="e925f-110">使用來源連結的指示位於 [dotnet/sourceLink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub 存放庫。</span><span class="sxs-lookup"><span data-stu-id="e925f-110">Instructions for using Source Link can be found on the [dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub repository.</span></span>
 
-<span data-ttu-id="24847-111">您可以使用 [NuGet 套件總管](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)確認來源連結中繼資料已成功內嵌在套件中。</span><span class="sxs-lookup"><span data-stu-id="24847-111">You can use [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) to confirm that the Source Link metadata has been successfully embedded in the package.</span></span> <span data-ttu-id="24847-112">檢查具有認可識別碼的 `Repository` 中繼資料是否存在，而且 .pdb 檔案會與每個目標的 .dll 一併找到。</span><span class="sxs-lookup"><span data-stu-id="24847-112">Check the `Repository` metadata is present with a commit identifier and that .pdb files are located with each target's .dll.</span></span>
+<span data-ttu-id="e925f-111">您可以使用 [NuGet 套件總管](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)確認來源連結中繼資料已成功內嵌在套件中。</span><span class="sxs-lookup"><span data-stu-id="e925f-111">You can use [NuGet Package Explorer](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) to confirm that the Source Link metadata has been successfully embedded in the package.</span></span> <span data-ttu-id="e925f-112">檢查具有認可識別碼的 `Repository` 中繼資料是否存在，而且 .pdb 檔案會與每個目標的 .dll 一併找到。</span><span class="sxs-lookup"><span data-stu-id="e925f-112">Check the `Repository` metadata is present with a commit identifier and that .pdb files are located with each target's .dll.</span></span>
 
-<span data-ttu-id="24847-113">![NuGet 封裝瀏覽器中的來源連結](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet 封裝瀏覽器中的來源連結")</span><span class="sxs-lookup"><span data-stu-id="24847-113">![Source Link in NuGet Package Explorer](./media/sourcelink/nuget-package-explorer-sourcelink.png "Source Link in NuGet Package Explorer")</span></span>
+<span data-ttu-id="e925f-113">![NuGet 封裝瀏覽器中的來源連結](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet 封裝瀏覽器中的來源連結")</span><span class="sxs-lookup"><span data-stu-id="e925f-113">![Source Link in NuGet Package Explorer](./media/sourcelink/nuget-package-explorer-sourcelink.png "Source Link in NuGet Package Explorer")</span></span>
 
-<span data-ttu-id="24847-114">**✔️ 請考慮**使用來源連結以將原始程式碼控制中繼資料新增到您的組件與 NuGet 套件。</span><span class="sxs-lookup"><span data-stu-id="24847-114">**✔️ CONSIDER** using Source Link to add source control metadata to your assemblies and NuGet packages.</span></span>
+<span data-ttu-id="e925f-114">**✔️ 請考慮**使用來源連結以將原始程式碼控制中繼資料新增到您的組件與 NuGet 套件。</span><span class="sxs-lookup"><span data-stu-id="e925f-114">**✔️ CONSIDER** using Source Link to add source control metadata to your assemblies and NuGet packages.</span></span>
 
 > [!TIP]
-> <span data-ttu-id="24847-115">您可以將偵錯工具屬性新增至您的類型，進一步加強開發人員的偵錯體驗。</span><span class="sxs-lookup"><span data-stu-id="24847-115">You can further enhance a developer's debugging experience by adding debugger attributes to your types.</span></span>
+> <span data-ttu-id="e925f-115">您可以將偵錯工具屬性新增至您的類型，進一步加強開發人員的偵錯體驗。</span><span class="sxs-lookup"><span data-stu-id="e925f-115">You can further enhance a developer's debugging experience by adding debugger attributes to your types.</span></span>
 >
-> * <span data-ttu-id="24847-116"><xref:System.Diagnostics.DebuggerDisplayAttribute> 可以自訂類別或欄位在偵錯工具變數視窗中顯示的方式。</span><span class="sxs-lookup"><span data-stu-id="24847-116"><xref:System.Diagnostics.DebuggerDisplayAttribute> can customize how a class or field is displayed in the debugger variable windows.</span></span>
-> * <span data-ttu-id="24847-117"><xref:System.Diagnostics.DebuggerStepThroughAttribute> 指示偵錯工具逐步執行程式碼，而不要進入程式碼。</span><span class="sxs-lookup"><span data-stu-id="24847-117"><xref:System.Diagnostics.DebuggerStepThroughAttribute> instructs the debugger to step through the code instead of stepping into the code.</span></span>
-> * <span data-ttu-id="24847-118"><xref:System.Diagnostics.DebuggerBrowsableAttribute> 控制成員是否要顯示在偵錯工具變數視窗中。</span><span class="sxs-lookup"><span data-stu-id="24847-118"><xref:System.Diagnostics.DebuggerBrowsableAttribute> controls whether a member is displayed in the debugger variable windows.</span></span>
+> * <span data-ttu-id="e925f-116"><xref:System.Diagnostics.DebuggerDisplayAttribute> 可以自訂類別或欄位在偵錯工具變數視窗中顯示的方式。</span><span class="sxs-lookup"><span data-stu-id="e925f-116"><xref:System.Diagnostics.DebuggerDisplayAttribute> can customize how a class or field is displayed in the debugger variable windows.</span></span>
+> * <span data-ttu-id="e925f-117"><xref:System.Diagnostics.DebuggerStepThroughAttribute> 指示偵錯工具逐步執行程式碼，而不要進入程式碼。</span><span class="sxs-lookup"><span data-stu-id="e925f-117"><xref:System.Diagnostics.DebuggerStepThroughAttribute> instructs the debugger to step through the code instead of stepping into the code.</span></span>
+> * <span data-ttu-id="e925f-118"><xref:System.Diagnostics.DebuggerBrowsableAttribute> 控制成員是否要顯示在偵錯工具變數視窗中。</span><span class="sxs-lookup"><span data-stu-id="e925f-118"><xref:System.Diagnostics.DebuggerBrowsableAttribute> controls whether a member is displayed in the debugger variable windows.</span></span>
 
-<span data-ttu-id="24847-119">**✔️ CONSIDER**發行符號檔 (`*.pdb`)。</span><span class="sxs-lookup"><span data-stu-id="24847-119">**✔️ CONSIDER** publishing symbol files (`*.pdb`).</span></span>
+<span data-ttu-id="e925f-119">**✔️ CONSIDER**發行符號檔 (`*.pdb`)。</span><span class="sxs-lookup"><span data-stu-id="e925f-119">**✔️ CONSIDER** publishing symbol files (`*.pdb`).</span></span>
 
-> <span data-ttu-id="24847-120">如需最佳偵錯體驗，您的程式庫應該發佈符號檔，以及使用來源連結。</span><span class="sxs-lookup"><span data-stu-id="24847-120">For the best debugging experience your library should publish symbol files as well as use Source Link.</span></span> <span data-ttu-id="24847-121">如需有關符號檔和符號套件的詳細資訊，請參閱[符號套件](./nuget.md#symbol-packages)。</span><span class="sxs-lookup"><span data-stu-id="24847-121">For more information about symbol files and symbol packages, see [Symbol packages](./nuget.md#symbol-packages).</span></span>
+> <span data-ttu-id="e925f-120">如需最佳偵錯體驗，您的程式庫應該發佈符號檔，以及使用來源連結。</span><span class="sxs-lookup"><span data-stu-id="e925f-120">For the best debugging experience your library should publish symbol files as well as use Source Link.</span></span> <span data-ttu-id="e925f-121">如需有關符號檔和符號套件的詳細資訊，請參閱[符號套件](./nuget.md#symbol-packages)。</span><span class="sxs-lookup"><span data-stu-id="e925f-121">For more information about symbol files and symbol packages, see [Symbol packages](./nuget.md#symbol-packages).</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="24847-122">[上一頁](dependencies.md)
->[下一頁](publish-nuget-package.md)</span><span class="sxs-lookup"><span data-stu-id="24847-122">[Previous](dependencies.md)
+><span data-ttu-id="e925f-122">[上一頁](dependencies.md)
+>[下一頁](publish-nuget-package.md)</span><span class="sxs-lookup"><span data-stu-id="e925f-122">[Previous](dependencies.md)
 [Next](publish-nuget-package.md)</span></span>

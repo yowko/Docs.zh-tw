@@ -1,6 +1,5 @@
 ---
 title: Hello World--在 Windows 或 Mac 上使用 Visual Studio 的第一個C#程式-程式設計指南
-ms.custom: seodec18
 ms.date: 09/12/2019
 f1_keywords:
 - cs.program
@@ -9,39 +8,39 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: edab64bf02a2b60cce21af536d2da98193dea9a1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 910fa4af1b4e45ce627b589a06910dc168490047
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196224"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712139"
 ---
-# <a name="hello-world----your-first-program"></a><span data-ttu-id="d8045-102">Hello World--您的第一個程式</span><span class="sxs-lookup"><span data-stu-id="d8045-102">Hello World -- Your first program</span></span>
+# <a name="hello-world----your-first-program"></a><span data-ttu-id="2b052-102">Hello World--您的第一個程式</span><span class="sxs-lookup"><span data-stu-id="2b052-102">Hello World -- Your first program</span></span>
 
-<span data-ttu-id="d8045-103">在本文中，您將使用 Visual Studio 來建立傳統的「Hello World！」</span><span class="sxs-lookup"><span data-stu-id="d8045-103">In this article, you'll use Visual Studio to create the traditional "Hello World!"</span></span> <span data-ttu-id="d8045-104">程式。</span><span class="sxs-lookup"><span data-stu-id="d8045-104">program.</span></span> <span data-ttu-id="d8045-105">Visual Studio 是一種專業整合式開發環境（IDE），具有專為 .NET 開發所設計的許多功能。</span><span class="sxs-lookup"><span data-stu-id="d8045-105">Visual Studio is a professional Integrated Development Environment (IDE) with many features designed for .NET development.</span></span> <span data-ttu-id="d8045-106">您只會使用 Visual Studio 中的幾項功能來建立此程式。</span><span class="sxs-lookup"><span data-stu-id="d8045-106">You'll use only a few of the features in Visual Studio to create this program.</span></span> <span data-ttu-id="d8045-107">若要深入瞭解 Visual Studio，請參閱[使用 Visual C#消費者入門](/visualstudio/ide/quickstart-csharp-console)。</span><span class="sxs-lookup"><span data-stu-id="d8045-107">To learn more about Visual Studio, see [Getting Started with Visual C#](/visualstudio/ide/quickstart-csharp-console).</span></span>
+<span data-ttu-id="2b052-103">在本文中，您將使用 Visual Studio 來建立傳統的「Hello World！」</span><span class="sxs-lookup"><span data-stu-id="2b052-103">In this article, you'll use Visual Studio to create the traditional "Hello World!"</span></span> <span data-ttu-id="2b052-104">程式。</span><span class="sxs-lookup"><span data-stu-id="2b052-104">program.</span></span> <span data-ttu-id="2b052-105">Visual Studio 是一種專業整合式開發環境（IDE），具有專為 .NET 開發所設計的許多功能。</span><span class="sxs-lookup"><span data-stu-id="2b052-105">Visual Studio is a professional Integrated Development Environment (IDE) with many features designed for .NET development.</span></span> <span data-ttu-id="2b052-106">您只會使用 Visual Studio 中的幾項功能來建立此程式。</span><span class="sxs-lookup"><span data-stu-id="2b052-106">You'll use only a few of the features in Visual Studio to create this program.</span></span> <span data-ttu-id="2b052-107">若要深入瞭解 Visual Studio，請參閱[使用 Visual C#消費者入門](/visualstudio/ide/quickstart-csharp-console)。</span><span class="sxs-lookup"><span data-stu-id="2b052-107">To learn more about Visual Studio, see [Getting Started with Visual C#](/visualstudio/ide/quickstart-csharp-console).</span></span>
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="create-a-new-application"></a><span data-ttu-id="d8045-108">建立新的應用程式</span><span class="sxs-lookup"><span data-stu-id="d8045-108">Create a new application</span></span>
+## <a name="create-a-new-application"></a><span data-ttu-id="2b052-108">建立新的應用程式</span><span class="sxs-lookup"><span data-stu-id="2b052-108">Create a new application</span></span>
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[<span data-ttu-id="d8045-109">Windows</span><span class="sxs-lookup"><span data-stu-id="d8045-109">Windows</span></span>](#tab/windows)
+# <a name="windowstabwindows"></a>[<span data-ttu-id="2b052-109">Windows</span><span class="sxs-lookup"><span data-stu-id="2b052-109">Windows</span></span>](#tab/windows)
 
-<span data-ttu-id="d8045-110">啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="d8045-110">Start Visual Studio.</span></span> <span data-ttu-id="d8045-111">您會在 Windows 上看到下列影像：</span><span class="sxs-lookup"><span data-stu-id="d8045-111">You'll see the following image on Windows:</span></span>
+<span data-ttu-id="2b052-110">啟動 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="2b052-110">Start Visual Studio.</span></span> <span data-ttu-id="2b052-111">您會在 Windows 上看到下列影像：</span><span class="sxs-lookup"><span data-stu-id="2b052-111">You'll see the following image on Windows:</span></span>
 
 ![Visual Studio Windows 上的歡迎畫面](./media/hello-world-your-first-program/visual-studio-windows-start-screen.png)
 
-<span data-ttu-id="d8045-113">選取影像右下角的 [**建立新專案**]。</span><span class="sxs-lookup"><span data-stu-id="d8045-113">Select **Create a new project** in the lower right corner of the image.</span></span> <span data-ttu-id="d8045-114">Visual Studio 會顯示 [**新增專案**] 對話方塊：</span><span class="sxs-lookup"><span data-stu-id="d8045-114">Visual Studio displays the **New Project** dialog:</span></span>
+<span data-ttu-id="2b052-113">選取影像右下角的 [**建立新專案**]。</span><span class="sxs-lookup"><span data-stu-id="2b052-113">Select **Create a new project** in the lower right corner of the image.</span></span> <span data-ttu-id="2b052-114">Visual Studio 會顯示 [**新增專案**] 對話方塊：</span><span class="sxs-lookup"><span data-stu-id="2b052-114">Visual Studio displays the **New Project** dialog:</span></span>
 
 ![在 Windows 上 Visual Studio 新增專案畫面](./media/hello-world-your-first-program/visual-studio-windows-new-project.png)
 
 > [!NOTE]
-> <span data-ttu-id="d8045-116">如果這是您第一次啟動 Visual Studio，[**最近使用的專案範本**] 清單會是空的。</span><span class="sxs-lookup"><span data-stu-id="d8045-116">If this is the first time you've started Visual Studio, the **Recent project templates** list is empty.</span></span>
+> <span data-ttu-id="2b052-116">如果這是您第一次啟動 Visual Studio，[**最近使用的專案範本**] 清單會是空的。</span><span class="sxs-lookup"><span data-stu-id="2b052-116">If this is the first time you've started Visual Studio, the **Recent project templates** list is empty.</span></span>
 
-<span data-ttu-id="d8045-117">在 [新增專案] 對話方塊中，選擇 [主控台應用程式（.NET Core）]，然後按 **[下一步]** 。</span><span class="sxs-lookup"><span data-stu-id="d8045-117">On the new project dialog, choose "Console App (.NET Core)" and then press **Next**.</span></span> <span data-ttu-id="d8045-118">為您的專案命名，例如 "HelloWorld"，然後按 [**建立**]。</span><span class="sxs-lookup"><span data-stu-id="d8045-118">Give your project a name, such as "HelloWorld", then press **Create**.</span></span>
+<span data-ttu-id="2b052-117">在 [新增專案] 對話方塊中，選擇 [主控台應用程式（.NET Core）]，然後按 **[下一步]** 。</span><span class="sxs-lookup"><span data-stu-id="2b052-117">On the new project dialog, choose "Console App (.NET Core)" and then press **Next**.</span></span> <span data-ttu-id="2b052-118">為您的專案命名，例如 "HelloWorld"，然後按 [**建立**]。</span><span class="sxs-lookup"><span data-stu-id="2b052-118">Give your project a name, such as "HelloWorld", then press **Create**.</span></span>
 
-<span data-ttu-id="d8045-119">Visual Studio 會開啟您的專案。</span><span class="sxs-lookup"><span data-stu-id="d8045-119">Visual Studio opens your project.</span></span> <span data-ttu-id="d8045-120">它已經是基本的「Hello World！」</span><span class="sxs-lookup"><span data-stu-id="d8045-120">It's already a basic "Hello World!"</span></span> <span data-ttu-id="d8045-121">為例。</span><span class="sxs-lookup"><span data-stu-id="d8045-121">example.</span></span> <span data-ttu-id="d8045-122">按 `Ctrl` + `F5` 以執行您的專案。</span><span class="sxs-lookup"><span data-stu-id="d8045-122">Press `Ctrl` + `F5` to run your project.</span></span> <span data-ttu-id="d8045-123">Visual Studio 會建立您的專案，並將原始程式碼轉換成可執行檔。</span><span class="sxs-lookup"><span data-stu-id="d8045-123">Visual Studio builds your project, converting the source code into an executable.</span></span> <span data-ttu-id="d8045-124">然後，它會啟動執行新應用程式的命令視窗。</span><span class="sxs-lookup"><span data-stu-id="d8045-124">Then, it launches a command window that runs your new application.</span></span> <span data-ttu-id="d8045-125">您應該會在視窗中看到下列文字：</span><span class="sxs-lookup"><span data-stu-id="d8045-125">You should see the following text in the window:</span></span>
+<span data-ttu-id="2b052-119">Visual Studio 會開啟您的專案。</span><span class="sxs-lookup"><span data-stu-id="2b052-119">Visual Studio opens your project.</span></span> <span data-ttu-id="2b052-120">它已經是基本的「Hello World！」</span><span class="sxs-lookup"><span data-stu-id="2b052-120">It's already a basic "Hello World!"</span></span> <span data-ttu-id="2b052-121">為例。</span><span class="sxs-lookup"><span data-stu-id="2b052-121">example.</span></span> <span data-ttu-id="2b052-122">按 `Ctrl` + `F5` 以執行您的專案。</span><span class="sxs-lookup"><span data-stu-id="2b052-122">Press `Ctrl` + `F5` to run your project.</span></span> <span data-ttu-id="2b052-123">Visual Studio 會建立您的專案，並將原始程式碼轉換成可執行檔。</span><span class="sxs-lookup"><span data-stu-id="2b052-123">Visual Studio builds your project, converting the source code into an executable.</span></span> <span data-ttu-id="2b052-124">然後，它會啟動執行新應用程式的命令視窗。</span><span class="sxs-lookup"><span data-stu-id="2b052-124">Then, it launches a command window that runs your new application.</span></span> <span data-ttu-id="2b052-125">您應該會在視窗中看到下列文字：</span><span class="sxs-lookup"><span data-stu-id="2b052-125">You should see the following text in the window:</span></span>
 
 ```console
 Hello World!
@@ -50,24 +49,24 @@ C:\Program Files\dotnet\dotnet.exe (process 11964) exited with code 0.
 Press any key to close this window . . .
 ```
 
-<span data-ttu-id="d8045-126">按下任意鍵即可關閉視窗。</span><span class="sxs-lookup"><span data-stu-id="d8045-126">Press a key to close the window.</span></span>
+<span data-ttu-id="2b052-126">按下任意鍵即可關閉視窗。</span><span class="sxs-lookup"><span data-stu-id="2b052-126">Press a key to close the window.</span></span>
 
-# <a name="macostabmacos"></a>[<span data-ttu-id="d8045-127">macOS</span><span class="sxs-lookup"><span data-stu-id="d8045-127">macOS</span></span>](#tab/macos)
+# <a name="macostabmacos"></a>[<span data-ttu-id="2b052-127">macOS</span><span class="sxs-lookup"><span data-stu-id="2b052-127">macOS</span></span>](#tab/macos)
 
-<span data-ttu-id="d8045-128">啟動 Visual Studio for Mac。</span><span class="sxs-lookup"><span data-stu-id="d8045-128">Start Visual Studio for Mac.</span></span> <span data-ttu-id="d8045-129">您會在 Mac 上看到下列影像：</span><span class="sxs-lookup"><span data-stu-id="d8045-129">You'll see the following image on Mac:</span></span>
+<span data-ttu-id="2b052-128">啟動 Visual Studio for Mac。</span><span class="sxs-lookup"><span data-stu-id="2b052-128">Start Visual Studio for Mac.</span></span> <span data-ttu-id="2b052-129">您會在 Mac 上看到下列影像：</span><span class="sxs-lookup"><span data-stu-id="2b052-129">You'll see the following image on Mac:</span></span>
 
 ![Visual Studio Mac 上的歡迎使用畫面](./media/hello-world-your-first-program/visual-studio-mac-start-screen.png)
 
 > [!NOTE]
-> <span data-ttu-id="d8045-131">如果這是您第一次啟動 Visual Studio for Mac，[**最近使用的專案**] 清單會是空的。</span><span class="sxs-lookup"><span data-stu-id="d8045-131">If this is the first time you've started Visual Studio for Mac, the **Recent projects** list is empty.</span></span>
+> <span data-ttu-id="2b052-131">如果這是您第一次啟動 Visual Studio for Mac，[**最近使用的專案**] 清單會是空的。</span><span class="sxs-lookup"><span data-stu-id="2b052-131">If this is the first time you've started Visual Studio for Mac, the **Recent projects** list is empty.</span></span>
 
-<span data-ttu-id="d8045-132">選取影像右上角的 [**新增**]。</span><span class="sxs-lookup"><span data-stu-id="d8045-132">Select **New** in the upper right corner of the image.</span></span> <span data-ttu-id="d8045-133">Visual Studio for Mac 會顯示 [**新增專案**] 對話方塊：</span><span class="sxs-lookup"><span data-stu-id="d8045-133">Visual Studio for Mac displays the **New Project** dialog:</span></span>
+<span data-ttu-id="2b052-132">選取影像右上角的 [**新增**]。</span><span class="sxs-lookup"><span data-stu-id="2b052-132">Select **New** in the upper right corner of the image.</span></span> <span data-ttu-id="2b052-133">Visual Studio for Mac 會顯示 [**新增專案**] 對話方塊：</span><span class="sxs-lookup"><span data-stu-id="2b052-133">Visual Studio for Mac displays the **New Project** dialog:</span></span>
 
 ![在 Mac 上 Visual Studio 新增專案 畫面](./media/hello-world-your-first-program/visual-studio-mac-new-project.png)
 
-<span data-ttu-id="d8045-135">在 [新增專案] 對話方塊中，選擇 [.NET Core] 和 [主控台應用程式]，然後按 **[下一步]** 。</span><span class="sxs-lookup"><span data-stu-id="d8045-135">On the new project dialog, choose ".NET Core", and "Console App" and then press **Next**.</span></span> <span data-ttu-id="d8045-136">您必須選取目標 framework。</span><span class="sxs-lookup"><span data-stu-id="d8045-136">You'll need to select the target framework.</span></span> <span data-ttu-id="d8045-137">預設值是正常的，因此請按 [下一步]。</span><span class="sxs-lookup"><span data-stu-id="d8045-137">The default is fine, so press next.</span></span> <span data-ttu-id="d8045-138">為您的專案命名，例如 "HelloWorld"，然後按 [**建立**]。</span><span class="sxs-lookup"><span data-stu-id="d8045-138">Give your project a name, such as "HelloWorld", then press **Create**.</span></span> <span data-ttu-id="d8045-139">您可以使用預設的專案位置。</span><span class="sxs-lookup"><span data-stu-id="d8045-139">You can use the default project location.</span></span> <span data-ttu-id="d8045-140">請勿將這個專案加入至原始檔控制。</span><span class="sxs-lookup"><span data-stu-id="d8045-140">Don't add this project to source control.</span></span>
+<span data-ttu-id="2b052-135">在 [新增專案] 對話方塊中，選擇 [.NET Core] 和 [主控台應用程式]，然後按 **[下一步]** 。</span><span class="sxs-lookup"><span data-stu-id="2b052-135">On the new project dialog, choose ".NET Core", and "Console App" and then press **Next**.</span></span> <span data-ttu-id="2b052-136">您必須選取目標 framework。</span><span class="sxs-lookup"><span data-stu-id="2b052-136">You'll need to select the target framework.</span></span> <span data-ttu-id="2b052-137">預設值是正常的，因此請按 [下一步]。</span><span class="sxs-lookup"><span data-stu-id="2b052-137">The default is fine, so press next.</span></span> <span data-ttu-id="2b052-138">為您的專案命名，例如 "HelloWorld"，然後按 [**建立**]。</span><span class="sxs-lookup"><span data-stu-id="2b052-138">Give your project a name, such as "HelloWorld", then press **Create**.</span></span> <span data-ttu-id="2b052-139">您可以使用預設的專案位置。</span><span class="sxs-lookup"><span data-stu-id="2b052-139">You can use the default project location.</span></span> <span data-ttu-id="2b052-140">請勿將這個專案加入至原始檔控制。</span><span class="sxs-lookup"><span data-stu-id="2b052-140">Don't add this project to source control.</span></span>
 
-<span data-ttu-id="d8045-141">Visual Studio for Mac 會開啟您的專案。</span><span class="sxs-lookup"><span data-stu-id="d8045-141">Visual Studio for Mac opens your project.</span></span> <span data-ttu-id="d8045-142">它已經是基本的「Hello World！」</span><span class="sxs-lookup"><span data-stu-id="d8045-142">It's already a basic "Hello World!"</span></span> <span data-ttu-id="d8045-143">為例。</span><span class="sxs-lookup"><span data-stu-id="d8045-143">example.</span></span> <span data-ttu-id="d8045-144">按 `Ctrl` + `Fn` + `F5` 以執行您的專案。</span><span class="sxs-lookup"><span data-stu-id="d8045-144">Press `Ctrl` + `Fn` + `F5` to run your project.</span></span> <span data-ttu-id="d8045-145">Visual Studio for Mac 會建立您的專案，並將原始程式碼轉換成可執行檔。</span><span class="sxs-lookup"><span data-stu-id="d8045-145">Visual Studio for Mac builds your project, converting the source code into an executable.</span></span> <span data-ttu-id="d8045-146">然後，它會啟動執行新應用程式的命令視窗。</span><span class="sxs-lookup"><span data-stu-id="d8045-146">Then, it launches a command window that runs your new application.</span></span> <span data-ttu-id="d8045-147">您應該會在視窗中看到下列文字：</span><span class="sxs-lookup"><span data-stu-id="d8045-147">You should see the following text in the window:</span></span>
+<span data-ttu-id="2b052-141">Visual Studio for Mac 會開啟您的專案。</span><span class="sxs-lookup"><span data-stu-id="2b052-141">Visual Studio for Mac opens your project.</span></span> <span data-ttu-id="2b052-142">它已經是基本的「Hello World！」</span><span class="sxs-lookup"><span data-stu-id="2b052-142">It's already a basic "Hello World!"</span></span> <span data-ttu-id="2b052-143">為例。</span><span class="sxs-lookup"><span data-stu-id="2b052-143">example.</span></span> <span data-ttu-id="2b052-144">按 `Ctrl` + `Fn` + `F5` 以執行您的專案。</span><span class="sxs-lookup"><span data-stu-id="2b052-144">Press `Ctrl` + `Fn` + `F5` to run your project.</span></span> <span data-ttu-id="2b052-145">Visual Studio for Mac 會建立您的專案，並將原始程式碼轉換成可執行檔。</span><span class="sxs-lookup"><span data-stu-id="2b052-145">Visual Studio for Mac builds your project, converting the source code into an executable.</span></span> <span data-ttu-id="2b052-146">然後，它會啟動執行新應用程式的命令視窗。</span><span class="sxs-lookup"><span data-stu-id="2b052-146">Then, it launches a command window that runs your new application.</span></span> <span data-ttu-id="2b052-147">您應該會在視窗中看到下列文字：</span><span class="sxs-lookup"><span data-stu-id="2b052-147">You should see the following text in the window:</span></span>
 
 ```console
 Hello World!
@@ -75,57 +74,57 @@ Hello World!
 Press any key to close this window . . .
 ```
 
-<span data-ttu-id="d8045-148">按下鍵以結束會話。</span><span class="sxs-lookup"><span data-stu-id="d8045-148">Press a key to end the session.</span></span>
+<span data-ttu-id="2b052-148">按下鍵以結束會話。</span><span class="sxs-lookup"><span data-stu-id="2b052-148">Press a key to end the session.</span></span>
 
 ---
 
-## <a name="elements-of-a-c-program"></a><span data-ttu-id="d8045-149">C#程式的元素</span><span class="sxs-lookup"><span data-stu-id="d8045-149">Elements of a C# program</span></span>
+## <a name="elements-of-a-c-program"></a><span data-ttu-id="2b052-149">C#程式的元素</span><span class="sxs-lookup"><span data-stu-id="2b052-149">Elements of a C# program</span></span>
 
-<span data-ttu-id="d8045-150">讓我們來檢查這個程式的重要部分。</span><span class="sxs-lookup"><span data-stu-id="d8045-150">Let's examine the important parts of this program.</span></span> <span data-ttu-id="d8045-151">第一行包含註解。</span><span class="sxs-lookup"><span data-stu-id="d8045-151">The first line contains a comment.</span></span> <span data-ttu-id="d8045-152">字元 `//` 會將該行的其餘部分轉換成註解。</span><span class="sxs-lookup"><span data-stu-id="d8045-152">The characters `//` convert the rest of the line to a comment.</span></span>
+<span data-ttu-id="2b052-150">讓我們來檢查這個程式的重要部分。</span><span class="sxs-lookup"><span data-stu-id="2b052-150">Let's examine the important parts of this program.</span></span> <span data-ttu-id="2b052-151">第一行包含註解。</span><span class="sxs-lookup"><span data-stu-id="2b052-151">The first line contains a comment.</span></span> <span data-ttu-id="2b052-152">字元 `//` 會將該行的其餘部分轉換成註解。</span><span class="sxs-lookup"><span data-stu-id="2b052-152">The characters `//` convert the rest of the line to a comment.</span></span>
 
 [!code-csharp[csProgGuide#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#32)]
 
-<span data-ttu-id="d8045-153">您也可以用 `/*` 和 `*/` 字元括住它，註解文字區塊。</span><span class="sxs-lookup"><span data-stu-id="d8045-153">You can also comment out a block of text by enclosing it between the `/*` and `*/` characters.</span></span> <span data-ttu-id="d8045-154">這在下列範例中顯示。</span><span class="sxs-lookup"><span data-stu-id="d8045-154">This is shown in the following example.</span></span>
+<span data-ttu-id="2b052-153">您也可以用 `/*` 和 `*/` 字元括住它，註解文字區塊。</span><span class="sxs-lookup"><span data-stu-id="2b052-153">You can also comment out a block of text by enclosing it between the `/*` and `*/` characters.</span></span> <span data-ttu-id="2b052-154">這在下列範例中顯示。</span><span class="sxs-lookup"><span data-stu-id="2b052-154">This is shown in the following example.</span></span>
 
 [!code-csharp[csProgGuide#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#33)]
 
-<span data-ttu-id="d8045-155">C# 主控台應用程式必須包含 `Main` 方法，控制項在此開始和結束。</span><span class="sxs-lookup"><span data-stu-id="d8045-155">A C# console application must contain a `Main` method, in which control starts and ends.</span></span> <span data-ttu-id="d8045-156">`Main` 方法是您建立物件和執行其他方法的所在。</span><span class="sxs-lookup"><span data-stu-id="d8045-156">The `Main` method is where you create objects and execute other methods.</span></span>
+<span data-ttu-id="2b052-155">C# 主控台應用程式必須包含 `Main` 方法，控制項在此開始和結束。</span><span class="sxs-lookup"><span data-stu-id="2b052-155">A C# console application must contain a `Main` method, in which control starts and ends.</span></span> <span data-ttu-id="2b052-156">`Main` 方法是您建立物件和執行其他方法的所在。</span><span class="sxs-lookup"><span data-stu-id="2b052-156">The `Main` method is where you create objects and execute other methods.</span></span>
 
-<span data-ttu-id="d8045-157">`Main` 方法是位於類別或結構內的[靜態](../../language-reference/keywords/static.md)方法。</span><span class="sxs-lookup"><span data-stu-id="d8045-157">The `Main` method is a [static](../../language-reference/keywords/static.md) method that resides inside a class or a struct.</span></span> <span data-ttu-id="d8045-158">在上一個 "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="d8045-158">In the previous "Hello World!"</span></span> <span data-ttu-id="d8045-159">範例中，它位於名為 `Hello` 的類別中。</span><span class="sxs-lookup"><span data-stu-id="d8045-159">example, it resides in a class named `Hello`.</span></span> <span data-ttu-id="d8045-160">您可以下列方式之一宣告 `Main` 方法：</span><span class="sxs-lookup"><span data-stu-id="d8045-160">You can declare the `Main` method in one of the following ways:</span></span>
+<span data-ttu-id="2b052-157">`Main` 方法是位於類別或結構內的[靜態](../../language-reference/keywords/static.md)方法。</span><span class="sxs-lookup"><span data-stu-id="2b052-157">The `Main` method is a [static](../../language-reference/keywords/static.md) method that resides inside a class or a struct.</span></span> <span data-ttu-id="2b052-158">在上一個 "Hello World!"</span><span class="sxs-lookup"><span data-stu-id="2b052-158">In the previous "Hello World!"</span></span> <span data-ttu-id="2b052-159">範例中，它位於名為 `Hello` 的類別中。</span><span class="sxs-lookup"><span data-stu-id="2b052-159">example, it resides in a class named `Hello`.</span></span> <span data-ttu-id="2b052-160">您可以下列方式之一宣告 `Main` 方法：</span><span class="sxs-lookup"><span data-stu-id="2b052-160">You can declare the `Main` method in one of the following ways:</span></span>
 
-- <span data-ttu-id="d8045-161">它會傳回 `void`。</span><span class="sxs-lookup"><span data-stu-id="d8045-161">It can return `void`.</span></span> <span data-ttu-id="d8045-162">這表示您的程式不會傳回值。</span><span class="sxs-lookup"><span data-stu-id="d8045-162">That means your program doesn't return a value.</span></span>
+- <span data-ttu-id="2b052-161">它會傳回 `void`。</span><span class="sxs-lookup"><span data-stu-id="2b052-161">It can return `void`.</span></span> <span data-ttu-id="2b052-162">這表示您的程式不會傳回值。</span><span class="sxs-lookup"><span data-stu-id="2b052-162">That means your program doesn't return a value.</span></span>
 
 [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
-- <span data-ttu-id="d8045-163">它也可以傳回整數。</span><span class="sxs-lookup"><span data-stu-id="d8045-163">It can also return an integer.</span></span> <span data-ttu-id="d8045-164">整數是應用程式的結束**代碼**。</span><span class="sxs-lookup"><span data-stu-id="d8045-164">The integer is the **exit code** for your application.</span></span>
+- <span data-ttu-id="2b052-163">它也可以傳回整數。</span><span class="sxs-lookup"><span data-stu-id="2b052-163">It can also return an integer.</span></span> <span data-ttu-id="2b052-164">整數是應用程式的結束**代碼**。</span><span class="sxs-lookup"><span data-stu-id="2b052-164">The integer is the **exit code** for your application.</span></span>
 
 [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-- <span data-ttu-id="d8045-165">使用任一傳回型別，它可以接受引數。</span><span class="sxs-lookup"><span data-stu-id="d8045-165">With either of the return types, it can take arguments.</span></span>
+- <span data-ttu-id="2b052-165">使用任一傳回型別，它可以接受引數。</span><span class="sxs-lookup"><span data-stu-id="2b052-165">With either of the return types, it can take arguments.</span></span>
 
 [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-<span data-ttu-id="d8045-166">-或-</span><span class="sxs-lookup"><span data-stu-id="d8045-166">-or-</span></span>
+<span data-ttu-id="2b052-166">-或-</span><span class="sxs-lookup"><span data-stu-id="2b052-166">-or-</span></span>
 
 [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
-<span data-ttu-id="d8045-167">`Main` 方法的參數 `args`，是包含用來叫用程式的命令列引數的 `string` 陣列。</span><span class="sxs-lookup"><span data-stu-id="d8045-167">The parameter of the `Main` method, `args`, is a `string` array that contains the command-line arguments used to invoke the program.</span></span>
+<span data-ttu-id="2b052-167">`Main` 方法的參數 `args`，是包含用來叫用程式的命令列引數的 `string` 陣列。</span><span class="sxs-lookup"><span data-stu-id="2b052-167">The parameter of the `Main` method, `args`, is a `string` array that contains the command-line arguments used to invoke the program.</span></span>
 
-<span data-ttu-id="d8045-168">如需如何使用命令列引數的詳細資訊，請參閱[Main （）和命令列引數](../main-and-command-args/index.md)中的範例。</span><span class="sxs-lookup"><span data-stu-id="d8045-168">For more information about how to use command-line arguments, see the examples in [Main() and Command-Line Arguments](../main-and-command-args/index.md).</span></span>
+<span data-ttu-id="2b052-168">如需如何使用命令列引數的詳細資訊，請參閱[Main （）和命令列引數](../main-and-command-args/index.md)中的範例。</span><span class="sxs-lookup"><span data-stu-id="2b052-168">For more information about how to use command-line arguments, see the examples in [Main() and Command-Line Arguments](../main-and-command-args/index.md).</span></span>
 
-## <a name="input-and-output"></a><span data-ttu-id="d8045-169">輸入和輸出</span><span class="sxs-lookup"><span data-stu-id="d8045-169">Input and output</span></span>
+## <a name="input-and-output"></a><span data-ttu-id="2b052-169">輸入和輸出</span><span class="sxs-lookup"><span data-stu-id="2b052-169">Input and output</span></span>
 
-<span data-ttu-id="d8045-170">C# 程式通常會使用 .NET Framework 執行階段程式庫所提供的輸入/輸出服務。</span><span class="sxs-lookup"><span data-stu-id="d8045-170">C# programs generally use the input/output services provided by the run-time library of the .NET Framework.</span></span> <span data-ttu-id="d8045-171">陳述式 `System.Console.WriteLine("Hello World!");` 使用 <xref:System.Console.WriteLine%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="d8045-171">The statement `System.Console.WriteLine("Hello World!");` uses the <xref:System.Console.WriteLine%2A> method.</span></span> <span data-ttu-id="d8045-172">這是執行階段程式庫中 <xref:System.Console> 類別的其中一個輸出方法。</span><span class="sxs-lookup"><span data-stu-id="d8045-172">This is one of the output methods of the <xref:System.Console> class in the run-time library.</span></span> <span data-ttu-id="d8045-173">它會在標準輸出資料流中顯示其字串參數，後面接著新行。</span><span class="sxs-lookup"><span data-stu-id="d8045-173">It displays its string parameter on the standard output stream followed by a new line.</span></span> <span data-ttu-id="d8045-174">其他 <xref:System.Console> 方法可供不同的輸入和輸出作業使用。</span><span class="sxs-lookup"><span data-stu-id="d8045-174">Other <xref:System.Console> methods are available for different input and output operations.</span></span> <span data-ttu-id="d8045-175">如果您在程式開始處包含 `using System;` 指示詞，就可以直接使用 <xref:System> 類別和方法，而不必完整限定它們。</span><span class="sxs-lookup"><span data-stu-id="d8045-175">If you include the `using System;` directive at the beginning of the program, you can directly use the <xref:System> classes and methods without fully qualifying them.</span></span> <span data-ttu-id="d8045-176">例如，您可以呼叫 `Console.WriteLine` 而不用呼叫 `System.Console.WriteLine`：</span><span class="sxs-lookup"><span data-stu-id="d8045-176">For example, you can call `Console.WriteLine` instead of `System.Console.WriteLine`:</span></span>
+<span data-ttu-id="2b052-170">C# 程式通常會使用 .NET Framework 執行階段程式庫所提供的輸入/輸出服務。</span><span class="sxs-lookup"><span data-stu-id="2b052-170">C# programs generally use the input/output services provided by the run-time library of the .NET Framework.</span></span> <span data-ttu-id="2b052-171">陳述式 `System.Console.WriteLine("Hello World!");` 使用 <xref:System.Console.WriteLine%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="2b052-171">The statement `System.Console.WriteLine("Hello World!");` uses the <xref:System.Console.WriteLine%2A> method.</span></span> <span data-ttu-id="2b052-172">這是執行階段程式庫中 <xref:System.Console> 類別的其中一個輸出方法。</span><span class="sxs-lookup"><span data-stu-id="2b052-172">This is one of the output methods of the <xref:System.Console> class in the run-time library.</span></span> <span data-ttu-id="2b052-173">它會在標準輸出資料流中顯示其字串參數，後面接著新行。</span><span class="sxs-lookup"><span data-stu-id="2b052-173">It displays its string parameter on the standard output stream followed by a new line.</span></span> <span data-ttu-id="2b052-174">其他 <xref:System.Console> 方法可供不同的輸入和輸出作業使用。</span><span class="sxs-lookup"><span data-stu-id="2b052-174">Other <xref:System.Console> methods are available for different input and output operations.</span></span> <span data-ttu-id="2b052-175">如果您在程式開始處包含 `using System;` 指示詞，就可以直接使用 <xref:System> 類別和方法，而不必完整限定它們。</span><span class="sxs-lookup"><span data-stu-id="2b052-175">If you include the `using System;` directive at the beginning of the program, you can directly use the <xref:System> classes and methods without fully qualifying them.</span></span> <span data-ttu-id="2b052-176">例如，您可以呼叫 `Console.WriteLine` 而不用呼叫 `System.Console.WriteLine`：</span><span class="sxs-lookup"><span data-stu-id="2b052-176">For example, you can call `Console.WriteLine` instead of `System.Console.WriteLine`:</span></span>
 
 [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
 [!code-csharp[csProgGuide#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#23)]
 
-<span data-ttu-id="d8045-177">如需輸入/輸出方法的詳細資訊，請參閱 <xref:System.IO>。</span><span class="sxs-lookup"><span data-stu-id="d8045-177">For more information about input/output methods, see <xref:System.IO>.</span></span>
+<span data-ttu-id="2b052-177">如需輸入/輸出方法的詳細資訊，請參閱 <xref:System.IO>。</span><span class="sxs-lookup"><span data-stu-id="2b052-177">For more information about input/output methods, see <xref:System.IO>.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d8045-178">請參閱</span><span class="sxs-lookup"><span data-stu-id="d8045-178">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b052-178">請參閱</span><span class="sxs-lookup"><span data-stu-id="2b052-178">See also</span></span>
 
-- [<span data-ttu-id="d8045-179">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="d8045-179">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="d8045-180">範例與教學課程</span><span class="sxs-lookup"><span data-stu-id="d8045-180">Samples and tutorials</span></span>](../../../samples-and-tutorials/index.md)
-- [<span data-ttu-id="d8045-181">Main() 和命令列引數</span><span class="sxs-lookup"><span data-stu-id="d8045-181">Main() and Command-Line Arguments</span></span>](../main-and-command-args/index.md)
-- [<span data-ttu-id="d8045-182">使用視覺效果消費者入門C#</span><span class="sxs-lookup"><span data-stu-id="d8045-182">Getting Started with Visual C#</span></span>](/visualstudio/ide/quickstart-csharp-console)
+- [<span data-ttu-id="2b052-179">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="2b052-179">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="2b052-180">範例與教學課程</span><span class="sxs-lookup"><span data-stu-id="2b052-180">Samples and tutorials</span></span>](../../../samples-and-tutorials/index.md)
+- [<span data-ttu-id="2b052-181">Main() 和命令列引數</span><span class="sxs-lookup"><span data-stu-id="2b052-181">Main() and Command-Line Arguments</span></span>](../main-and-command-args/index.md)
+- [<span data-ttu-id="2b052-182">使用視覺效果消費者入門C#</span><span class="sxs-lookup"><span data-stu-id="2b052-182">Getting Started with Visual C#</span></span>](/visualstudio/ide/quickstart-csharp-console)

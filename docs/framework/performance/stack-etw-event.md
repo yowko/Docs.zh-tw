@@ -5,40 +5,38 @@ helpviewer_keywords:
 - stack event [.NET Framework]
 - ETW, stack event (CLR)
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5dc23f5105b589d5b74c9ea6b7f40b84c2b04e6a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f3014a04ba7cacbe37b6706e2919ffd7de19aa65
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046160"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715913"
 ---
-# <a name="stack-etw-event"></a><span data-ttu-id="ac6b9-102">堆疊 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="ac6b9-102">Stack ETW Event</span></span>
-<span data-ttu-id="ac6b9-103">堆疊事件應該搭配其他事件一起使用，以在引發事件之後產生堆疊追蹤。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-103">The stack event should be used in conjunction with other events to generate stack traces after an event is raised.</span></span> <span data-ttu-id="ac6b9-104">它會在啟用執行階段提供者時記錄。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-104">It is logged when the runtime provider is enabled.</span></span> <span data-ttu-id="ac6b9-105">這是非常高頻率的事件，因為每當引發另一個執行階段事件時，就會引發此事件。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-105">This is a very high frequency event, because it is raised whenever another runtime event is raised.</span></span> <span data-ttu-id="ac6b9-106">基於這個理由，我們建議您小心使用此事件。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-106">For this reason, we recommend that you use this event with caution.</span></span>  
+# <a name="stack-etw-event"></a><span data-ttu-id="2965e-102">堆疊 ETW 事件</span><span class="sxs-lookup"><span data-stu-id="2965e-102">Stack ETW Event</span></span>
+<span data-ttu-id="2965e-103">堆疊事件應該搭配其他事件一起使用，以在引發事件之後產生堆疊追蹤。</span><span class="sxs-lookup"><span data-stu-id="2965e-103">The stack event should be used in conjunction with other events to generate stack traces after an event is raised.</span></span> <span data-ttu-id="2965e-104">它會在啟用執行階段提供者時記錄。</span><span class="sxs-lookup"><span data-stu-id="2965e-104">It is logged when the runtime provider is enabled.</span></span> <span data-ttu-id="2965e-105">這是非常高頻率的事件，因為每當引發另一個執行階段事件時，就會引發此事件。</span><span class="sxs-lookup"><span data-stu-id="2965e-105">This is a very high frequency event, because it is raised whenever another runtime event is raised.</span></span> <span data-ttu-id="2965e-106">基於這個理由，我們建議您小心使用此事件。</span><span class="sxs-lookup"><span data-stu-id="2965e-106">For this reason, we recommend that you use this event with caution.</span></span>  
   
- <span data-ttu-id="ac6b9-107">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-107">The following table shows the keyword and level.</span></span> <span data-ttu-id="ac6b9-108">(如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-108">(For more information, see [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)</span></span>  
+ <span data-ttu-id="2965e-107">下表說明關鍵字和層級。</span><span class="sxs-lookup"><span data-stu-id="2965e-107">The following table shows the keyword and level.</span></span> <span data-ttu-id="2965e-108">(如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。</span><span class="sxs-lookup"><span data-stu-id="2965e-108">(For more information, see [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md).)</span></span>  
   
-|<span data-ttu-id="ac6b9-109">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="ac6b9-109">Keyword for raising the event</span></span>|<span data-ttu-id="ac6b9-110">層級</span><span class="sxs-lookup"><span data-stu-id="ac6b9-110">Level</span></span>|  
+|<span data-ttu-id="2965e-109">引發事件的關鍵字</span><span class="sxs-lookup"><span data-stu-id="2965e-109">Keyword for raising the event</span></span>|<span data-ttu-id="2965e-110">Level</span><span class="sxs-lookup"><span data-stu-id="2965e-110">Level</span></span>|  
 |-----------------------------------|-----------|  
-|<span data-ttu-id="ac6b9-111">`StackKeyword` (0x40000000)</span><span class="sxs-lookup"><span data-stu-id="ac6b9-111">`StackKeyword` (0x40000000)</span></span>|<span data-ttu-id="ac6b9-112">LogAlways(0)</span><span class="sxs-lookup"><span data-stu-id="ac6b9-112">LogAlways(0)</span></span>|  
+|<span data-ttu-id="2965e-111">`StackKeyword` (0x40000000)</span><span class="sxs-lookup"><span data-stu-id="2965e-111">`StackKeyword` (0x40000000)</span></span>|<span data-ttu-id="2965e-112">LogAlways(0)</span><span class="sxs-lookup"><span data-stu-id="2965e-112">LogAlways(0)</span></span>|  
   
- <span data-ttu-id="ac6b9-113">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-113">The following table shows the event information.</span></span>  
+ <span data-ttu-id="2965e-113">下表說明事件資訊。</span><span class="sxs-lookup"><span data-stu-id="2965e-113">The following table shows the event information.</span></span>  
   
-|<span data-ttu-id="ac6b9-114">Event - 事件</span><span class="sxs-lookup"><span data-stu-id="ac6b9-114">Event</span></span>|<span data-ttu-id="ac6b9-115">事件 ID</span><span class="sxs-lookup"><span data-stu-id="ac6b9-115">Event ID</span></span>|<span data-ttu-id="ac6b9-116">引發的時機</span><span class="sxs-lookup"><span data-stu-id="ac6b9-116">Raised when</span></span>|  
+|<span data-ttu-id="2965e-114">Event</span><span class="sxs-lookup"><span data-stu-id="2965e-114">Event</span></span>|<span data-ttu-id="2965e-115">事件 ID</span><span class="sxs-lookup"><span data-stu-id="2965e-115">Event ID</span></span>|<span data-ttu-id="2965e-116">引發的時機</span><span class="sxs-lookup"><span data-stu-id="2965e-116">Raised when</span></span>|  
 |-----------|--------------|-----------------|  
-|`CLRStackWalk`|<span data-ttu-id="ac6b9-117">82</span><span class="sxs-lookup"><span data-stu-id="ac6b9-117">82</span></span>|<span data-ttu-id="ac6b9-118">搭配其他事件，來產生事件之後的堆疊追蹤。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-118">In conjunction with other events to generate stack traces following an event.</span></span>|  
+|`CLRStackWalk`|<span data-ttu-id="2965e-117">82</span><span class="sxs-lookup"><span data-stu-id="2965e-117">82</span></span>|<span data-ttu-id="2965e-118">搭配其他事件，來產生事件之後的堆疊追蹤。</span><span class="sxs-lookup"><span data-stu-id="2965e-118">In conjunction with other events to generate stack traces following an event.</span></span>|  
   
- <span data-ttu-id="ac6b9-119">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-119">The following table shows the event data.</span></span>  
+ <span data-ttu-id="2965e-119">下表說明事件資料。</span><span class="sxs-lookup"><span data-stu-id="2965e-119">The following table shows the event data.</span></span>  
   
-|<span data-ttu-id="ac6b9-120">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="ac6b9-120">Field name</span></span>|<span data-ttu-id="ac6b9-121">資料類型</span><span class="sxs-lookup"><span data-stu-id="ac6b9-121">Data Type</span></span>|<span data-ttu-id="ac6b9-122">說明</span><span class="sxs-lookup"><span data-stu-id="ac6b9-122">Description</span></span>|  
+|<span data-ttu-id="2965e-120">欄位名稱</span><span class="sxs-lookup"><span data-stu-id="2965e-120">Field name</span></span>|<span data-ttu-id="2965e-121">資料類型</span><span class="sxs-lookup"><span data-stu-id="2965e-121">Data Type</span></span>|<span data-ttu-id="2965e-122">描述</span><span class="sxs-lookup"><span data-stu-id="2965e-122">Description</span></span>|  
 |----------------|---------------|-----------------|  
-|<span data-ttu-id="ac6b9-123">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="ac6b9-123">ClrInstanceID</span></span>|<span data-ttu-id="ac6b9-124">win:Uint16</span><span class="sxs-lookup"><span data-stu-id="ac6b9-124">win:Uint16</span></span>|<span data-ttu-id="ac6b9-125">唯一執行階段識別項。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-125">Unique runtime identifier.</span></span>|  
-|<span data-ttu-id="ac6b9-126">Reserved1</span><span class="sxs-lookup"><span data-stu-id="ac6b9-126">Reserved1</span></span>|<span data-ttu-id="ac6b9-127">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="ac6b9-127">win:UInt8</span></span>|<span data-ttu-id="ac6b9-128">保留的。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-128">Reserved.</span></span>|  
-|<span data-ttu-id="ac6b9-129">Reserved2</span><span class="sxs-lookup"><span data-stu-id="ac6b9-129">Reserved2</span></span>|<span data-ttu-id="ac6b9-130">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="ac6b9-130">win:UInt8</span></span>|<span data-ttu-id="ac6b9-131">保留的。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-131">Reserved.</span></span>|  
-|<span data-ttu-id="ac6b9-132">FrameCount</span><span class="sxs-lookup"><span data-stu-id="ac6b9-132">FrameCount</span></span>|<span data-ttu-id="ac6b9-133">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="ac6b9-133">win:UInt32</span></span>|<span data-ttu-id="ac6b9-134">堆疊追蹤裡的框架數。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-134">The number of frames in the stack trace.</span></span>|  
-|<span data-ttu-id="ac6b9-135">堆疊</span><span class="sxs-lookup"><span data-stu-id="ac6b9-135">Stack</span></span>|<span data-ttu-id="ac6b9-136">win:Pointer</span><span class="sxs-lookup"><span data-stu-id="ac6b9-136">win:Pointer</span></span>|<span data-ttu-id="ac6b9-137">指令指標的資料行。</span><span class="sxs-lookup"><span data-stu-id="ac6b9-137">Columns of instruction pointers.</span></span>|  
+|<span data-ttu-id="2965e-123">ClrInstanceID</span><span class="sxs-lookup"><span data-stu-id="2965e-123">ClrInstanceID</span></span>|<span data-ttu-id="2965e-124">win:Uint16</span><span class="sxs-lookup"><span data-stu-id="2965e-124">win:Uint16</span></span>|<span data-ttu-id="2965e-125">唯一執行階段識別項。</span><span class="sxs-lookup"><span data-stu-id="2965e-125">Unique runtime identifier.</span></span>|  
+|<span data-ttu-id="2965e-126">Reserved1</span><span class="sxs-lookup"><span data-stu-id="2965e-126">Reserved1</span></span>|<span data-ttu-id="2965e-127">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="2965e-127">win:UInt8</span></span>|<span data-ttu-id="2965e-128">保留。</span><span class="sxs-lookup"><span data-stu-id="2965e-128">Reserved.</span></span>|  
+|<span data-ttu-id="2965e-129">Reserved2</span><span class="sxs-lookup"><span data-stu-id="2965e-129">Reserved2</span></span>|<span data-ttu-id="2965e-130">win:UInt8</span><span class="sxs-lookup"><span data-stu-id="2965e-130">win:UInt8</span></span>|<span data-ttu-id="2965e-131">保留。</span><span class="sxs-lookup"><span data-stu-id="2965e-131">Reserved.</span></span>|  
+|<span data-ttu-id="2965e-132">FrameCount</span><span class="sxs-lookup"><span data-stu-id="2965e-132">FrameCount</span></span>|<span data-ttu-id="2965e-133">win:UInt32</span><span class="sxs-lookup"><span data-stu-id="2965e-133">win:UInt32</span></span>|<span data-ttu-id="2965e-134">堆疊追蹤裡的框架數。</span><span class="sxs-lookup"><span data-stu-id="2965e-134">The number of frames in the stack trace.</span></span>|  
+|<span data-ttu-id="2965e-135">堆疊</span><span class="sxs-lookup"><span data-stu-id="2965e-135">Stack</span></span>|<span data-ttu-id="2965e-136">win:Pointer</span><span class="sxs-lookup"><span data-stu-id="2965e-136">win:Pointer</span></span>|<span data-ttu-id="2965e-137">指令指標的資料行。</span><span class="sxs-lookup"><span data-stu-id="2965e-137">Columns of instruction pointers.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="ac6b9-138">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ac6b9-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2965e-138">請參閱</span><span class="sxs-lookup"><span data-stu-id="2965e-138">See also</span></span>
 
-- [<span data-ttu-id="ac6b9-139">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="ac6b9-139">CLR ETW Events</span></span>](clr-etw-events.md)
+- [<span data-ttu-id="2965e-139">CLR ETW 事件</span><span class="sxs-lookup"><span data-stu-id="2965e-139">CLR ETW Events</span></span>](clr-etw-events.md)
