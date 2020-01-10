@@ -10,17 +10,17 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: fb7ad54f61d9dcfe94379aef14930a0395da5291
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424584"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636324"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>XAML 瀏覽器應用程式（Xbap）結合了 Web 應用程式和豐富型用戶端應用程式的功能。 如同 Web 應用程式，XBAP 可以部署至 Web 伺服器，並且從 Internet Explorer 或 Firefox 啟動。 如同豐富型用戶端應用程式，Xbap 可以利用 WPF 的功能。 開發 XBAP 也類似於豐富型用戶端開發。 本主題提供 XBAP 開發的簡單、高階介紹，並且描述 XBAP 開發與標準豐富型用戶端開發的不同之處。
 
- 此主題包括下列章節：
+ 本主題包含下列各節：
 
 - [建立新的 XAML 瀏覽器應用程式 (XBAP)](#creating_a_new_xaml_browser_application_xbap)
 
@@ -51,7 +51,7 @@ ms.locfileid: "73424584"
 |應用程式資訊清單 (.manifest)|它包含與應用程式相關聯的中繼資料，副檔名為 .manifest。|
 |部署資訊清單 (.xbap)|此檔案包含 ClickOnce 用來部署應用程式並具有 xbap 副檔名的資訊。|
 
- 您會將 Xbap 部署到 Web 服務器，例如 Microsoft Internet Information Services （IIS）5.0 或更新版本。 您不需要在 Web 服務器上安裝 .NET Framework，但必須註冊 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 多用途網際網路郵件延伸（MIME）類型和副檔名。 如需詳細資訊，請參閱[設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。
+ 您會將 Xbap 部署到 Web 服務器，例如 Microsoft Internet Information Services （IIS）5.0 或更新版本。 您不需要在 Web 服務器上安裝 .NET Framework，但必須註冊 WPF 多用途網際網路郵件延伸（MIME）類型和副檔名。 如需詳細資訊，請參閱[設定 IIS 5.0 和 IIS 6.0 以部署 WPF 應用程式](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)。
 
  若要準備您的 XBAP 以進行部署，將 .exe 和相關聯的資訊清單複製到 Web 伺服器。 建立 HTML 網頁，其中包含可開啟部署資訊清單 (它是副檔名為 .xbap 的檔案) 的超連結。 當使用者按一下 xbap 檔案的連結時，ClickOnce 會自動處理下載和啟動應用程式的機制。 下列範例程式碼顯示包含指向 XBAP 之超連結的 HTML 網頁。
 
@@ -113,7 +113,7 @@ ms.locfileid: "73424584"
 
      [網際網路選項] 對話方塊隨即出現。
 
-6. 按一下 [進階] 按鈕。
+6. 按一下 [**進階**] 索引標籤。
 
 7. 在 [安全性] 底下的 [設定]清單中，勾選 [允許檔案中的主動式內容在我的電腦上執行] 核取方塊。
 
@@ -168,7 +168,7 @@ ms.locfileid: "73424584"
 
 |安全性區域|行為|取得完全信任|
 |-------------------|--------------|------------------------|
-|本機電腦|自動的完全信任|不需要採取任何動作。|
+|本機電腦|自動的完全信任|無須任何動作。|
 |內部網路和信任的網站|完全信任的提示|使用憑證簽署 XBAP，讓使用者在提示中看到來源。|
 |網際網路|因為「未授與信任」而失敗|使用憑證簽署 XBAP。|
 
@@ -185,7 +185,7 @@ ms.locfileid: "73424584"
 
  此外，改善 ClickOnce 下載順序的並行處理可改善最多10% 的開始時間。 ClickOnce 下載並驗證資訊清單之後，應用程式下載隨即啟動，且進度列會開始更新。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [部署 WPF 應用程式](deploying-a-wpf-application-wpf.md)
