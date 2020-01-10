@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ba4e8ff639cdfbbec596da45a6e950fff921974
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740716"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740283"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的印刷樣式
 本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。 這些功能包括改善文字轉譯的品質和效能、OpenType 印刷樣式支援、增強的國際文字、增強的字型支援，以及新的文字應用程式開發介面（Api）。  
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>提升文字的品質與效能  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文字會使用 Microsoft ClearType 轉譯，這可增強文字的清晰度和可讀性。 ClearType 是由 Microsoft 開發的軟體技術，可改善現有 Lcd （液晶顯示器）的文字可讀性，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。 ClearType 使用子圖元轉譯，藉由在圖元的小數部分對齊字元，讓文字顯示為真形狀的精確度更高。 額外的解析度可提高文字顯示細節的解析度，即使經過長時間也很容易閱讀。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，ClearType 的另一項改進是 y 方向消除鋸齒，這會平滑文字字元中淺層曲線的頂端和底端。 如需 ClearType 功能的詳細資訊，請參閱[Cleartype 總覽](cleartype-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文字會使用 Microsoft ClearType 轉譯，這可增強文字的清晰度和可讀性。 ClearType 是由 Microsoft 開發的軟體技術，可改善現有 Lcd （液晶顯示器）的文字可讀性，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。 ClearType 使用子圖元轉譯，藉由在圖元的小數部分對齊字元，讓文字顯示為真形狀的精確度更高。 額外的解析度可提高文字顯示細節的銳度，即使經過長時間也容易閱讀。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，ClearType 的另一項改進是 y 方向消除鋸齒，這會平滑文字字元中淺層曲線的頂端和底端。 如需 ClearType 功能的詳細資訊，請參閱[Cleartype 總覽](cleartype-overview.md)。  
   
  ![套用 ClearType Y 方向消除鋸齒功能的文字](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 以 ClearType Y 方向消除鋸齒功能顯示的文字  
@@ -59,7 +59,7 @@ ms.locfileid: "73740716"
   
 - 字型行為與全域設定 (例如系統地區設定) 無關。  
   
-- 用來定義 <xref:System.Windows.Media.FontFamily>的個別 <xref:System.Windows.FontWeight>、<xref:System.Windows.FontStretch>和 <xref:System.Windows.FontStyle> 類型。 這提供的彈性比使用 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式設計還要大，其中的斜體與粗體布林值組合是用來定義字型家族。  
+- 用來定義 <xref:System.Windows.Media.FontFamily>的個別 <xref:System.Windows.FontWeight>、<xref:System.Windows.FontStretch>和 <xref:System.Windows.FontStyle> 類型。 這可提供比 Win32 程式設計更大的彈性，其中使用斜體和粗體的布林組合來定義字型系列。  
   
 - 書寫方向 (水平和垂直) 會與字型名稱分開處理。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "73740716"
 ### <a name="advanced-text-formatting"></a>進階文字格式化  
  在最先進的文字 Api 層級中，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您使用 <xref:System.Windows.Media.TextFormatting> 命名空間中的 <xref:System.Windows.Media.TextFormatting.TextFormatter> 物件和其他類型，建立自訂文字配置。 <xref:System.Windows.Media.TextFormatting.TextFormatter> 和相關聯的類別可讓您執行自訂的文字版面配置，以支援您自己的字元格式定義、段落樣式、分行規則，以及其他國際文字的版面配置功能。 在非常少數的情況下，您會想要覆寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文字配置支援的預設實作。 不過，如果您要建立文字編輯控制項或應用程式，您可能需要不同於預設 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的實作。  
   
- 不同于傳統文字 API，<xref:System.Windows.Media.TextFormatting.TextFormatter> 會透過一組回呼方法與文字佈局用戶端互動。 它要求用戶端在 <xref:System.Windows.Media.TextFormatting.TextSource> 類別的執行中提供這些方法。 下圖說明用戶端應用程式與 <xref:System.Windows.Media.TextFormatting.TextFormatter> 之間的文字版面配置互動。  
+ 不同于傳統文字 API，<xref:System.Windows.Media.TextFormatting.TextFormatter> 會透過一組回呼方法與文字佈局用戶端互動。 它要求用戶端在 <xref:System.Windows.Media.TextFormatting.TextSource> 類別的執行中提供這些方法。 下圖說明用戶端應用程式和 <xref:System.Windows.Media.TextFormatting.TextFormatter>之間的文字版面配置互動。  
   
  ![文字配置用戶端和 TextFormatter 的圖表](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
@@ -156,5 +156,5 @@ ms.locfileid: "73740716"
 - [OpenType 字型功能](opentype-font-features.md)
 - [繪製格式化的文字](drawing-formatted-text.md)
 - [進階文字格式化](advanced-text-formatting.md)
-- [Text](optimizing-performance-text.md)
+- [文字](optimizing-performance-text.md)
 - [Microsoft 印刷樣式](https://docs.microsoft.com/typography/)

@@ -1,15 +1,13 @@
 ---
 title: dotnet-傾印-.NET Core
 description: 安裝和使用 dotnet-傾印命令列工具。
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973460"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740769"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>傾印集合和分析公用程式（`dotnet-dump`）
 
@@ -75,7 +73,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`--type <Heap|Mini>`**
 
-  指定傾印類型，它會決定從進程收集的資訊種類。 有兩種類型：
+  指定傾印類型，它會決定從進程收集的資訊種類。 它有兩種類型：
 
   - `Heap`-包含模組清單、執行緒清單、所有堆疊、例外狀況資訊、處理資訊和所有記憶體（對應的影像除外）的大型且較完整的傾印。
   - `Mini`-包含模組清單、執行緒清單、例外狀況資訊和所有堆疊的小型傾印。
@@ -107,7 +105,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 ```
 
-### <a name="arguments"></a>引數
+### <a name="arguments"></a>Arguments
 
 - **`<dump_path>`**
 
@@ -121,7 +119,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ### <a name="analyze-sos-commands"></a>分析 SOS 命令
 
-| 命令                             | 功能                                                                                      |
+| 命令                             | 函數                                                                                      |
 | ----------------------------------- | --------------------------------------------------------------------------------------------- |
 | `soshelp`                           | 顯示所有可用的命令                                                               |
 | `soshelp|help <command>`            | 顯示指定的命令。                                                               |
@@ -148,19 +146,19 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `ip2md <arguments>`                 | 在 JIT 程式碼中，以指定的位址顯示 MethodDesc 結構。                       |
 | `histclear <arguments>`             | 釋放 `hist*` 命令系列所使用的任何資源。                                |
 | `histinit <arguments>`              | 初始化在偵錯項目中儲存之壓力記錄檔中的 SOS 結構。                     |
-| `histobj <arguments>`               | 顯示與 `<arguments>` 相關的垃圾收集壓力記錄重設。              |
+| `histobj <arguments>`               | 顯示與 `<arguments>`相關的垃圾收集壓力記錄重設。              |
 | `histobjfind <arguments>`           | 顯示參考位於指定位址之物件的所有記錄檔項目。               |
 | `histroot <arguments>`              | 顯示與指定之根的提升和重新配置都相關的資訊。        |
 | `lm|modules`                        | 顯示進程中的原生模組。                                                   |
-| `name2ee <arguments>`               | 顯示 `<argument>` 的 MethodTable 結構和 EEClass 結構。                |
-| `pe|printexception <arguments>`     | 顯示從位址 `<argument>` 的例外狀況類別衍生的任何物件。             |
+| `name2ee <arguments>`               | 顯示 `<argument>`的 MethodTable 結構和 EEClass 結構。                |
+| `pe|printexception <arguments>`     | 顯示從位址 `<argument>`的例外狀況類別衍生的任何物件。             |
 | `setsymbolserver <arguments>`       | 啟用符號伺服器支援                                                             |
 | `syncblk <arguments>`               | 顯示 SyncBlock 持有者資訊。                                                           |
 | `threads|setthread <threadid>`      | 設定或顯示 SOS 命令的目前線程識別碼。                                  |
 
 ## <a name="using-dotnet-dump"></a>使用 `dotnet-dump`
 
-第一個步驟是收集傾印。 如果已產生核心傾印，則可以略過此步驟。 作業系統或 .NET Core 執行時間的內建傾印[功能](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy)，都可以建立核心傾印。
+第一個步驟是收集傾印。 如果已產生核心傾印，則可以略過此步驟。 作業系統或 .NET Core 執行時間的內建傾印[功能](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md)，都可以建立核心傾印。
 
 ```console
 $ dotnet-dump collect --process-id 1902

@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 82a2c1780c6e0e1d94a206b9b959d8e1944fd0a9
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 4c5c7ffcab118978baf1b2f7602f39291452d1e6
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802317"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740405"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 
@@ -772,7 +772,7 @@ WCF 包含許多可消除競爭情形的程式碼變更，因此可改善效能�
 
 **新的 WPF 列印 API 實作**
 
-WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中的列印 API 會呼叫 Windows [列印文件套件 API](/windows/desktop/printdocs/tailored-app-printing-api)，而不是已被取代的 [XPS 列印 API](/windows/desktop/printdocs/xps-printing)。 如需此變更對應用程式相容性的影響，請參閱 [.NET Framework 4.7 中的重定目標變更](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。
+WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中的列印 API 會呼叫 Windows [列印文件套件 API](/windows/desktop/printdocs/tailored-app-printing-api)，而不是已被取代的 [XPS 列印 API](/windows/desktop/printdocs/xps-printing)。 如需這項變更對應用程式相容性的影響，請參閱 [.NET Framework 4.7 中的重定目標變更](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)。
 
 <a name="v462" />
 
@@ -784,7 +784,7 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中
 
 - [字元類別](#Strings)
 
-- [密碼編譯](#Crypto462)
+- [加密](#Crypto462)
 
 - [SqlClient](#SQLClient)
 
@@ -895,7 +895,7 @@ End Interface
 
 .NET Framework 4.6.2 中的字元是根據 [Unicode 標準 8.0.0 版](https://www.unicode.org/versions/Unicode8.0.0/) 分類。 在 .NET Framework 4.6 和 .NET Framework 4.6.1 中，字元是根據 Unicode 6.3 字元類別分類。
 
-對 Unicode 8.0 的支援僅限於 <xref:System.Globalization.CharUnicodeInfo> 類別的字元分類，以及依賴它的類型和方法。 這些包括 <xref:System.Globalization.StringInfo> 類別、多載 <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> 方法，以及 .NET Framework 規則運算式引擎可辨識的[字元類別](../../standard/base-types/character-classes-in-regular-expressions.md)。  字元和字串比較和排序不會受到這項變更的影響，並且會繼續依賴基礎作業系統，在 Windows 7 系統上則是依賴 .NET Framework 所提供的字元資料。
+對 Unicode 8.0 的支援僅限於 <xref:System.Globalization.CharUnicodeInfo> 類別的字元分類，以及依賴它的類型和方法。 這些包括 <xref:System.Globalization.StringInfo> 類別、多載 <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> 方法，以及 .NET Framework 規則運算式引擎可辨識的[字元類別](../../standard/base-types/character-classes-in-regular-expressions.md)。  字元和字串比較和排序不會受到此變更的影響，並且會繼續依賴基礎作業系統，在 Windows 7 系統上則是依賴 .NET Framework 所提供的字元資料。
 
 若要了解從 Unicode 6.0 到 Unicode 7.0 的字元類別變更，請參閱 Unicode 協會網站上的 [The Unicode Standard, Version 7.0.0 (Unicode 標準 7.0.0 版)](https://www.unicode.org/versions/Unicode7.0.0/)。 若要了解從 Unicode 7.0 到 Unicode 8.0 的變更，請參閱 Unicode 協會網站上的 [The Unicode Standard, Version 8.0.0 (Unicode 標準 8.0.0 版)](https://www.unicode.org/versions/Unicode8.0.0/)。
 
@@ -1109,9 +1109,9 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 **NetNamedPipeBinding 最符合項目**
 
-WCF 有新的應用程式設定，可以在用戶端應用程式上設定，以確保它們一律連線到在最符合所要求之 URI 上接聽的服務。 當此應用程式設定設為 `false` (預設值) 時，用戶端可以使用 <xref:System.ServiceModel.NetNamedPipeBinding> 來嘗試連接到正在接聽所要求 URI 子字串之 URI 的服務。
+WCF 有新的應用程式設定，可以在用戶端應用程式上設定，以確保它們永遠連接至在最符合要求的 URI 上接聽的服務。 當此應用程式設定設為 `false` (預設值) 時，用戶端可以使用 <xref:System.ServiceModel.NetNamedPipeBinding> 來嘗試連接到正在接聽所要求 URI 子字串之 URI 的服務。
 
-例如，用戶端嘗試連接到接聽 `net.pipe://localhost/Service1` 的服務，但該電腦上以系統管理員權限執行的不同服務正在接聽 `net.pipe://localhost`。 當此應用程式設定是設為 `false` 時，用戶端會嘗試連線到錯誤的服務。 將應用程式設定設為 `true` 後，用戶端一律都會連線到最符合的服務。
+例如，用戶端嘗試連接到接聽 `net.pipe://localhost/Service1` 的服務，但該電腦上以系統管理員權限執行的不同服務正在接聽 `net.pipe://localhost`。 當此應用程式設定是設為 `false` 時，用戶端會嘗試連線到錯誤的服務。 將應用程式設定設為 `true` 後，用戶端一律都會連接至最符合的服務。
 
 > [!NOTE]
 > 使用 <xref:System.ServiceModel.NetNamedPipeBinding> 的用戶端會根據服務的基底位址 (如果存在的話) 來尋找服務，而不是根據完整的端點位址。 為了確保此設定一律適用，服務應該使用唯一的基底位址。
@@ -1248,7 +1248,7 @@ Windows 現在提供將現有 Windows 傳統型應用程式 (包括 WPF 和 Wind
 
 .NET Framework 4.6.1 包含下列領域的新功能：
 
-- [密碼編譯](#Crypto)
+- [加密](#Crypto)
 
 - [ADO.NET](#ADO.NET461)
 
@@ -1300,7 +1300,7 @@ ADO.NET 現在支援在硬體安全模組 (HSM) 中以原生方式儲存 Always 
 
 **改善 AlwaysOn 的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 連線行為**
 
-SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。 它會明確偵測應用程式是否連線到不同子網路上的 AlwaysOn 可用性群組 (AG)，並快速找到目前使用中的伺服器和提供伺服器連線。 在此版本之前，應用程式必須設定連接字串包含 `"MultisubnetFailover=true"`，以表示它要連線到 AlwaysOn 可用性群組。 如果不在 `true` 設定連接關鍵字，應用程式可能會在連接到 AlwaysOn 可用性群組時發生逾時狀況。 使用此版本，應用程式就「不再」需要將 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 設定為 `true`。 如需 AlwaysOn 可用性群組的 SqlClient 支援詳細資訊，請參閱[高可用性、災害復原的 SqlClient 支援](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。
+SqlClient 現在會自動提供更快的 AlwaysOn 可用性群組 (AG) 連線。 它會明確偵測應用程式是否連線到不同子網路上的 AlwaysOn 可用性群組 (AG)，並快速找到目前使用中的伺服器和提供伺服器連線。 在此版本之前，應用程式必須設定連接字串包含 `"MultisubnetFailover=true"`，以表示它要連線到 AlwaysOn 可用性群組。 如果不在 `true` 設定連線關鍵字，應用程式可能會在連線到 AlwaysOn 可用性群組時發生逾時狀況。 使用此版本，應用程式就「不再」需要將 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> 設定為 `true`。 如需 AlwaysOn 可用性群組的 SqlClient 支援詳細資訊，請參閱[高可用性、嚴重損壞修復的 SqlClient 支援](../data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md)。
 
 <a name="WPF461" />
 
@@ -1318,7 +1318,7 @@ Windows 8.1 和更新版本已更新了 WPF 的拼字檢查程式，運用作業
 
 如同舊版的 .NET Framework，依下列順序尋找資訊會偵測到 <xref:System.Windows.Controls.TextBox> 控制項或 <xref:System.Windows.Controls.RichTextBox> 區塊的語言：
 
-- `xml:lang` (如有)。
+- `xml:lang` (如果有的話)。
 
 - 目前的輸入語言。
 
@@ -1349,13 +1349,13 @@ Windows 8.1 和更新版本已更新了 WPF 的拼字檢查程式，運用作業
 
 **DirectX 延伸模組**
 
-WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.DirectX-x86/)，提供新的 <xref:System.Windows.Interop.D3DImage> 實作，讓您輕鬆地與 DX10 和 Dx11 內容相互作用。 這個套件的程式碼為開放原始碼，並可於 [GitHub](https://github.com/Microsoft/WPFDXInterop) 取得。
+WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.DirectX-x86/)，提供新的 <xref:System.Windows.Interop.D3DImage> 實作，讓您輕鬆地與 DX10 和 Dx11 內容相互作用。 這個套件的程式碼為開放式原始碼，並可於 [GitHub](https://github.com/Microsoft/WPFDXInterop) 取得。
 
 <a name="WWF461" />
 
 ### <a name="windows-workflow-foundation-transactions"></a>Windows Workflow Foundation：交易
 
-<xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> 方法現在可以使用 MSDTC 以外的分散式交易管理員升級交易。 要想這麼做，請將 GUID 交易升級程式識別碼指定給新的 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> 多載。 如果這項作業成功，交易的功能上就會放置一些限制。 一旦登錄了非 MSDTC 的交易升級程式，下列方法就會擲回 <xref:System.Transactions.TransactionPromotionException>，因為這些方法需要升級至 MSDTC：
+<xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> 方法現在可以使用 MSDTC 以外的分散式交易管理員升級交易。 要想這麼做，請將 GUID 交易升級程式識別碼指定給新的 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%28System.Transactions.IPromotableSinglePhaseNotification%2CSystem.Guid%29?displayProperty=nameWithType> 多載。 如果此作業成功，交易的功能上就會加諸一些限制。 一旦登錄了非 MSDTC 的交易升級程式，下列方法就會擲回 <xref:System.Transactions.TransactionPromotionException>，因為這些方法需要升級至 MSDTC：
 
 - <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>
 
@@ -1393,7 +1393,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
 <a name="v46" />
 
-## <a name="whats-new-in-net-2015"></a>.NET 2015 的新功能
+## <a name="whats-new-in-net-2015"></a>.NET 2015 中的新增功能
 
 .NET 2015 引進 Framework 4.6 和 .NET Core。 其中一些新功能適用於兩者，另一些功能則專屬於 .NET Framework 4.6 或 .NET Core。
 
@@ -1407,13 +1407,13 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
 - **ASP.NET 更新**
 
-  - **可非同步排清回應且以工作為基礎的 API**
+  - **能執行非同步回應排清的工作型 API**
 
     ASP.NET 現在提供一個以工作為基礎的簡單 API 來進行非同步回應清除，亦即 <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=nameWithType>，其可使用您語言的 `async/await` 支援來非同步清除回應。
 
   - **模型繫結支援 task-returning 方法**
 
-    在 .NET Framework 4.5 中，ASP.NET 加入「模型繫結」功能，可保障 Web Forms 頁面和使用者控制項中以 CRUD 為基礎之資料作業方式的可延伸性並以程式碼為重心。 模型繫結系統現在支援由 <xref:System.Threading.Tasks.Task>傳回的模型繫結方法。 此功能可讓 Web Forms 開發人員在使用包括 Entity Framework 的較新版 ORM 時，透過簡單的資料繫結系統獲得非同步延展性的優勢。
+    在 .NET Framework 4.5 中，ASP.NET 加入「模型繫結」功能，可保障 Web Forms 頁面和使用者控制項中以 CRUD 為基礎之資料作業方式的可延伸性並以程式碼為重心。 模型繫結系統現在支援由 <xref:System.Threading.Tasks.Task>傳回的模型繫結方法。 這項功能可讓 Web Form 開發人員在使用包括 Entity Framework 的較新版 ORM 時，透過簡單的資料繫結系統獲得非同步延展性的優勢。
 
     非同步模型繫結是由 `aspnet:EnableAsyncModelBinding` 組態設定所控制。
 
@@ -1448,7 +1448,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
   - **隨機字串雜湊演算法**
 
-    .NET Framework 4.5 引進了[隨機字串雜湊演算法](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。 不過，由於部分 ASP.NET 功能相依於穩定的雜湊程式碼，因此 ASP.NET 並不支援此演算法。 在 .NET Framework 4.6 中，現已支援隨機字串雜湊演算法。 若要啟用這項功能，請使用 `aspnet:UseRandomizedStringHashAlgorithm` 組態設定。
+    .NET Framework 4.5 引進了[隨機字串雜湊演算法](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。 不過，由於部分 ASP.NET 功能相依於穩定的雜湊程式碼，因此 ASP.NET 並不支援此演算法。 在 .NET Framework 4.6 中，現已支援隨機字串雜湊演算法。 若要啟用此功能，請使用 `aspnet:UseRandomizedStringHashAlgorithm` 組態設定。
 
     ```xml
     <appSettings>
@@ -1470,7 +1470,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
   現在，組件載入器會在載入對應的 NGEN 映像之後即卸載 IL 組件，因此可以更有效率地使用記憶體。 此變更會減少虛擬記憶體，這對大型的 32 位元應用程式 (例如 Visual Studio) 特別有幫助，也可節省實體記憶體。
 
-- **基底類別程式庫變更**
+- **基底類別庫變更**
 
   .NET Framework 4.6 已新增許多新的 API，以便能在重要情節中使用。 其中包括下列變更和新功能：
 
@@ -1494,7 +1494,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
     因為新的 64 位元 JIT 編譯器也包含硬體 SIMD 加速功能，所以在搭配支援 SIMD 的類型與新的 64 位元 JIT 編譯器時有特別顯著的效能改進。
 
-  - **密碼編譯更新**
+  - **加密更新**
 
     目前正在更新 <xref:System.Security.Cryptography?displayProperty=nameWithType> API 以支援 [Windows CNG 密碼編譯 API](/windows/desktop/SecCNG/cng-reference)。 舊版 .NET Framework 完全倚賴[舊版的 Windows 密碼編譯 API](/windows/desktop/SecCrypto/cryptography-portal)作為 <xref:System.Security.Cryptography?displayProperty=nameWithType> 實作的基礎。 我們已經要求支援 CNG API，因為它支援[現代的加密演算法](/windows/desktop/SecCNG/cng-features#suite-b-support)，這些演算法對特定類別的應用程式來說非常重要。
 
@@ -1628,7 +1628,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
     />
     ```
 
-    含不同 DPI 設定 (多 DPI 設定) 且跨多個監視器的 WPF 視窗，現可完全顯示，而不會有被遮蔽的區域。 您可將下面這一行加入 app.config 檔案的 `<appSettings>` 區段，以選擇停用這個新行為：
+    含不同 DPI 設定 (多 DPI 設定) 且跨多個監視器的 WPF 視窗，現可完全顯示，而不會有被遮蔽的區域。 您可將下列這一行加入 app.config 檔的 `<appSettings>` 區段，以選擇停用這項新的行為：
 
     ```xml
     <add key="EnableMultiMonitorDisplayClipping" value="true"/>
@@ -1669,7 +1669,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
     - **使用連線群組名稱前置詞**
 
-      使用者可以指定字串，讓 WCF 用作連線群組名稱的前置詞。 系統會使用不同的底層 HTTP 連線來傳送含有不同前置詞的兩個訊息。 您可以將鍵/值組加入訊息的 <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> 屬性，以設定前置詞。 機碼是 "HttpTransportConnectionGroupNamePrefix"；值則為所需的前置詞。
+      使用者可以指定字串，讓 WCF 用作連線群組名稱的前置詞。 系統會使用不同的基礎 HTTP 連線來傳送含有不同前置詞的兩個訊息。 您可以將鍵/值組加入訊息的 <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> 屬性，以設定前置詞。 索引鍵是 "HttpTransportConnectionGroupNamePrefix"；值則為所需的前置詞。
 
     - **使用不同的通道處理站**
 
@@ -1707,7 +1707,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
   <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/>
   ```
 
-  預設值是 `false`。
+  預設值為 `false`。
 
 - **網路**
 
@@ -1755,7 +1755,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
 - **開放原始碼 .NET Framework 套件**
 
-  .NET Core 套件 (例如不可變的集合)、[SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd) 及網路功能 API (例如在 <xref:System.Net.Http> 命名空間中找到的 API) 現在都在 [GitHub](https://github.com/) 上以開放原始碼套件的形式提供。 若要存取這些程式碼，請參閱 [GitHub 上的 CoreFx](https://github.com/dotnet/corefx)。 如需詳細資訊以及如何參與這些套件的建立，請前往 [itHub 上的 .NET 首頁](https://github.com/dotnet/home)，並參閱 [.NET Core 和開放原始碼](../get-started/net-core-and-open-source.md)。
+  .NET Core 套件 (例如不可變的集合)、[SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd) 及網路功能 API (例如在 <xref:System.Net.Http> 命名空間中找到的 API) 現在都在 [GitHub](https://github.com/) 上以開放原始碼套件的形式提供。 若要存取程式碼，請參閱[GitHub 上的 .net](https://github.com/dotnet/runtime)。 如需詳細資訊以及如何參與這些套件的建立，請前往 [itHub 上的 .NET 首頁](https://github.com/dotnet/home)，並參閱 [.NET Core 和開放原始碼](../get-started/net-core-and-open-source.md)。
 
 <a name="v452" />
 
@@ -1910,7 +1910,7 @@ Windows Forms 的增強功能包括：
 
 - 透過伺服器的背景記憶體回收改善效能。 當您在 .NET Framework 4.5 中使用伺服器記憶體回收時，背景記憶體回收會自動啟用。 請參閱[記憶體回收的基本概念](../../standard/garbage-collection/fundamentals.md)主題的＜背景伺服器記憶體回收＞一節。
 
-- 背景 Just-in-Time (JIT) 編譯，它可在多核心處理器上選擇性提供，以改善應用程式效能。 請參閱<xref:System.Runtime.ProfileOptimization>.
+- 背景 Just-in-Time (JIT) 編譯，它可在多核心處理器上選擇性提供，以改善應用程式效能。 請參閱 <xref:System.Runtime.ProfileOptimization>。
 
 - 能夠限制正則運算式引擎在超時之前，會嘗試解析正則運算式的時間長度。請參閱 <xref:System.Text.RegularExpressions.Regex.MatchTimeout%2A?displayProperty=nameWithType> 屬性。
 
@@ -1930,7 +1930,7 @@ Windows Forms 的增強功能包括：
 
 - 將字串比較作業委派給作業系統，該字串比較會在 Windows 8 上使用 .NET Framework 時實作 Unicode 6.0。 在其他平台上執行時，.NET Framework 會包含自己的字串比較資料 (該資料會實作 Unicode 5.x)。 請參閱 <xref:System.String> 類別以及 <xref:System.Globalization.SortVersion> 類別的＜備註＞一節。
 
-- 可用每個應用程式定義域做為基準，計算字串之雜湊碼的功能。 請參閱 [\<UseRandomizedStringHashAlgorithm> 元素](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。
+- 可用每個應用程式定義域做為基準，計算字串之雜湊碼的功能。 請參閱 [\<UseRandomizedStringHashAlgorithm> 項目](../configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)。
 
 - 類型反映支援在 <xref:System.Type> 和 <xref:System.Reflection.TypeInfo> 類別之間分割。 請參閱[適用於 Windows 市集應用程式之 .NET Framework 中的反映](../reflection-and-codedom/reflection-for-windows-store-apps.md)。
 
@@ -2076,7 +2076,7 @@ ASP.NET 4.5 和 4.5.1 加入了 Web Forms、WebSocket 支援、非同步處理�
 
   - 建立狀態機器工作流程的活動，包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition>。
 
-- 增強的「工作流程設計工具」功能，例如：
+- 增強的「工作流程設計工具」功能，如下所示：
 
   - 增強 Visual Studio 中的工作流程搜尋功能，包括「快速尋找」和「檔案中尋找」。
 

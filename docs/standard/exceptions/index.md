@@ -11,14 +11,12 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a417e964c2f44c291892f9ddec6e32438fbff9a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945427"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741350"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>在 .NET 中處理和擲回例外狀況
 
@@ -48,7 +46,7 @@ ms.locfileid: "61945427"
 
 下表列出一些常見的例外狀況，並提供可能造成這些例外狀況的原因範例。
 
-| 例外狀況類型 | 說明 | 範例 |
+| 例外狀況類型 | 描述 | 範例 |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | 適用於所有例外狀況的基底類別。 | 無 (使用這個例外狀況的衍生類別)。 |
 | <xref:System.IndexOutOfRangeException> | 只有當陣列索引不正確時，才由執行階段擲回。 | 在陣列有效範圍之外對它進行索引： <br /> `arr[arr.Length+1]` |
@@ -58,15 +56,15 @@ ms.locfileid: "61945427"
 | <xref:System.ArgumentNullException> | 由不允許引數為 Null 的方法擲回。 | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
 | <xref:System.ArgumentOutOfRangeException> | 由驗證引數是在指定範圍內的方法擲回。 | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [例外狀況類別和屬性](exception-class-and-properties.md)
-- [如何：使用 Try/Catch 區塊攔截例外狀況](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-- [如何：使用 Catch 區塊中的特定例外狀況](how-to-use-specific-exceptions-in-a-catch-block.md)
-- [如何：明確擲回例外狀況](how-to-explicitly-throw-exceptions.md)
-- [如何：建立使用者定義的例外狀況](how-to-create-user-defined-exceptions.md)
+- [操作說明：使用 Try/Catch 區塊攔截例外狀況](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+- [操作說明：使用 Catch 區塊中的特定例外狀況](how-to-use-specific-exceptions-in-a-catch-block.md)
+- [操作說明：明確擲回例外狀況](how-to-explicitly-throw-exceptions.md)
+- [操作說明：建立使用者定義的例外狀況](how-to-create-user-defined-exceptions.md)
 - [使用使用者篩選的例外狀況處理常式](using-user-filtered-exception-handlers.md)
-- [如何：使用 Finally 區塊](how-to-use-finally-blocks.md)
+- [操作說明：使用 Finally 區塊](how-to-use-finally-blocks.md)
 - [處理 COM Interop 例外狀況](handling-com-interop-exceptions.md)
 - [例外狀況的最佳做法](best-practices-for-exceptions.md)
-- [每個開發人員針對執行階段中例外狀況所需知道的概念](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md)
+- [每個開發人員針對執行階段中例外狀況所需知道的概念](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/exceptions.md)

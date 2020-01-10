@@ -2,12 +2,12 @@
 title: 關於 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: ed153e817746a88277c191dfb14c465ff2d8bfa1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: c6d120445bc6625b37c461c1bf2686b10833dc13
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344913"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740949"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -18,7 +18,7 @@ ms.locfileid: "75344913"
 - **命令列工具：** 包含易用的命令列工具，可用於本機開發及持續整合案例。
 - **彈性的部署：** 可以包含在您的應用程式中，或並存安裝（全使用者或全系統安裝）。 可搭配 [Docker 容器](docker/introduction.md)使用。
 - **相容：** .net Core 可透過[.NET Standard](../standard/net-standard.md)與 .NET Framework、Xamarin 和 Mono 相容。
-- **開放原始碼︰** .NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
+- **開放原始碼︰** NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
 - **受 Microsoft 支援：** .NET Core 根據 [.NET Core 支援](https://dotnet.microsoft.com/platform/support/policy)受 Microsoft 支援。
 
 ## <a name="languages"></a>程式語言
@@ -113,7 +113,7 @@ Windows 與 Unix 實作大小相近。 Windows 有更大的執行，因為 .NET 
 
 ### <a name="comparison-with-mono"></a>與 Mono 的比較
 
-[Mono](https://www.mono-project.com/)是 .net 的原始跨平臺執行。 它會以[開放原始](https://github.com/mono/mono)碼替代方式開始使用 .NET Framework 並轉換成以行動裝置為目標，因為 IOS 和 Android 裝置變得很熱門。 它可以視為 .NET Framework 的社群複製體。 Mono 專案小組依賴 Microsoft 發佈的開放[.net 標準](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md)（尤其是 ECMA 335）來提供相容的執行。
+[Mono](https://www.mono-project.com/)是 .net 的原始跨平臺執行。 它會以[開放原始](https://github.com/mono/mono)碼替代方式開始使用 .NET Framework 並轉換成以行動裝置為目標，因為 IOS 和 Android 裝置變得很熱門。 它可以視為 .NET Framework 的社群複製體。 Mono 專案小組依賴 Microsoft 發佈的開放[.net 標準](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md)（尤其是 ECMA 335）來提供相容的執行。
 
 .NET Core 和 Mono 的主要差異︰
 

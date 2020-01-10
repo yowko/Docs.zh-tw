@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 4193f92223cb9c9f924c1021b2f3e58a5e8b988d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6d4525aeea458e1ec810efa659f373a2b5f21f57
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441514"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741302"
 ---
 # <a name="ui-automation-events-for-clients"></a>用戶端的 UI 自動化事件
 > [!NOTE]
@@ -18,12 +18,12 @@ ms.locfileid: "74441514"
   
  本主題描述使用者介面自動化用戶端如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 可讓用戶端訂閱感的事件。 這項功能會提高效能，因為不必持續輪詢系統中的所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目，以查看是否有任何資訊、結構或狀態變更。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 允許用戶端訂閱感興趣的事件。 這項功能會提高效能，因為不必持續輪詢系統中的所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 項目，以查看是否有任何資訊、結構或狀態變更。  
   
  同時也因為能夠只接聽定義範圍內的事件，而改善效率。 例如，用戶端可以接聽樹狀結構中所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目的焦點變更事件，或是只接聽一個項目和其下階的焦點變更事件。  
   
 > [!NOTE]
-> 請勿假設所有可能的事件都由 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供者引發。 例如，並非所有的屬性變更都會導致 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控制項的標準 Proxy 提供者引發事件。  
+> 請勿假設所有可能的事件都由 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供者引發。 例如，並非所有屬性變更都會導致 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 和 Win32 控制項的標準 proxy 提供者引發事件。  
   
  如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的更廣泛觀點，請參閱[UI 自動化事件總覽](ui-automation-events-overview.md)。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "74441514"
   
  如需範例程式碼，請參閱[訂閱使用者介面自動化事件](subscribe-to-ui-automation-events.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [訂閱 UI 自動化事件](subscribe-to-ui-automation-events.md)
 - [UI 自動化事件概觀](ui-automation-events-overview.md)

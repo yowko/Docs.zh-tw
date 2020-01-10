@@ -4,14 +4,12 @@ description: 本教學課程說明如何使用預先定型的 TensorFlow 模型�
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 8c3544b60b1fba1d419ca091b0a1d85fbbdbe2d6
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204927"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738693"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>教學課程：在 ML.NET 中使用預先定型的 TensorFlow 模型來分析電影評論的情感
 
@@ -28,7 +26,7 @@ ms.locfileid: "74204927"
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TextClassificationTF) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 * 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)版本。
 
@@ -38,7 +36,7 @@ ms.locfileid: "74204927"
 
 1. 建立名為 "TextClassificationTF" 的 **.Net Core 主控台應用程式**。
 
-2. 在您專案中建立名為 *Data* 的目錄以儲存資料集檔案。
+2. 在專案中建立一個名為 *Data* 的目錄以儲存資料集檔案。
 
 3. 安裝「Microsoft.ML NuGet 套件」：
 
@@ -64,7 +62,7 @@ ms.locfileid: "74204927"
 
 ### <a name="add-using-statements-and-global-variables"></a>加入 using 語句和全域變數
 
-1. 在 `using`Program.cs*檔案頂端新增下列額外的* 陳述式：
+1. 在 *Program.cs* 檔案頂端新增下列額外的 `using` 陳述式：
 
    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TextClassificationTF/Program.cs#AddUsings "Add necessary usings")]
 
@@ -75,20 +73,20 @@ ms.locfileid: "74204927"
     * `_modelPath` 是已定型模型的檔案路徑。
     * `FeatureLength` 是模型所預期的整數功能陣列長度。
 
-### <a name="model-the-data"></a>建立資料模型
+### <a name="model-the-data"></a>將資料模型化
 
 電影評論是自由格式的文字。 您的應用程式會將文字轉換成模型所預期的輸入格式，這幾個不同的階段。
 
 第一種方式是將文字分割成不同的字組，然後使用提供的對應檔案，將每個單字對應到整數編碼。 此轉換的結果是可變長度的整數陣列，其長度會對應到句子中的單字數目。
 
-|屬性| 值|類型|
+|屬性| {2&gt;值&lt;2}|類型|
 |-------------|-----------------------|------|
 |ReviewText|這部電影真的不錯|string|
 |VariableLengthFeatures|14、22、9、66、78,。 |int []|
 
 然後，可變長度功能陣列會調整為固定長度的600。 這是 TensorFlow 模型所預期的長度。
 
-|屬性| 值|類型|
+|屬性| {2&gt;值&lt;2}|類型|
 |-------------|-----------------------|------|
 |ReviewText|這部電影真的不錯|string|
 |VariableLengthFeatures|14、22、9、66、78,。 |int []|
@@ -104,7 +102,7 @@ ms.locfileid: "74204927"
 
     [!code-csharp[VariableLengthFeatures](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#VariableLengthFeatures "Declare variable length features type")]
 
-    `VariableLengthFeatures` 屬性具有[VectorType](xref:Microsoft.ML.Data.VectorTypeAttribute.%23ctor%2A)屬性，可將它指定為向量。  所有向量元素都必須是相同的類型。 在具有大量資料行的資料集內，將多個資料行當做單一向量載入，可減少套用資料轉換時的資料傳遞數目。
+    屬性具有 [VectorType](xref:Microsoft.ML.Data.VectorTypeAttribute.%23ctor%2A) 屬性，可將它指定為向量。`VariableLengthFeatures`  所有向量元素都必須是相同的類型。 在具有大量資料行的資料集內，將多個資料行當做單一向量載入，可減少套用資料轉換時的資料傳遞數目。
 
     這個類別會在 `ResizeFeatures` 動作中使用。 其屬性的名稱（在此案例中只有一個）用來指示 DataView 中的哪些資料行可以當做自訂對應動作的_輸入_使用。
 
@@ -124,18 +122,18 @@ ms.locfileid: "74204927"
 
 ### <a name="create-the-mlcontext-lookup-dictionary-and-action-to-resize-features"></a>建立 MLCoNtext、查閱字典，以及調整功能大小的動作
 
-[MLContext 類別](xref:Microsoft.ML.MLContext)是所有 ML.NET 作業的起點。 初始化 `mlContext` 會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，類似於 Entity Framework 中的 `DBContext`。
+[MLContext 類別](xref:Microsoft.ML.MLContext)是所有 ML.NET 作業的起點。 將 `mlContext` 初始化會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，類似於 Entity Framework 中的 `DBContext`。
 
-1. 將 `Console.WriteLine("Hello World!")` 方法中的 `Main` 程式碼行取代為下列程式碼，以宣告 mlContext 變數並將它初始化：
+1. 將 `Main` 方法中的 `Console.WriteLine("Hello World!")` 程式碼行取代為下列程式碼，以宣告 mlContext 變數並將它初始化：
 
    [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateMLContext "Create the ML Context")]
 
 1. 建立字典，使用[`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%2A)方法從檔案載入對應資料，將單字編碼為整數，如下表所示：
 
-    |Word     |Index    |
+    |Word     |{2&gt;索引&lt;2}    |
     |---------|---------|
     |小子     |  362    |
-    |要     |  181    |
+    |want     |  181    |
     |發生    |  355    |
     |效果  |  302    |
     |感受  |  547    |
@@ -216,7 +214,7 @@ ms.locfileid: "74204927"
     > [!NOTE]
     > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。
 
-1. 透過建立 `Predict()` 的執行個體，在 `MovieReview` 方法中新增評論，以測試定型模型的預測：
+1. 透過建立 `MovieReview` 的執行個體，在 `Predict()` 方法中新增評論，以測試定型模型的預測：
 
     [!code-csharp[CreateTestData](~/samples/machine-learning/tutorials/TextClassificationTF/Program.cs#CreateTestData)]
 
@@ -226,7 +224,7 @@ ms.locfileid: "74204927"
 
 1. [Predict （）](xref:Microsoft.ML.PredictionEngine%602.Predict%2A)函數會對單一資料列進行預測：
 
-    |屬性| 值|類型|
+    |屬性| {2&gt;值&lt;2}|類型|
     |-------------|-----------------------|------|
     |預測|[0.5459937，0.454006255]|float []|
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Menu Item control type
 - UI Automation, Menu Item control type
 ms.assetid: 54bce311-3d23-40b9-ba90-1bdbdaf8fbba
-ms.openlocfilehash: c65e30ffea64a9b577cfee7535fd92e489bc7632
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e8755292d97e88ff97e039fa2fbafc60ebc4eae
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446713"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741570"
 ---
 # <a name="ui-automation-support-for-the-menuitem-control-type"></a>MenuItem 控制項類型的 UI 自動化支援
 
@@ -22,13 +22,13 @@ ms.locfileid: "74446713"
 
 功能表控制項可將命令和事件處理常式的關聯項目以階層方式組織。 在典型的 Microsoft Windows 應用程式中，功能表列會包含數個功能表項目 **（例如 [** 檔案]、[**編輯**] 和 [**視窗]** ），而每個功能表項目都會顯示一個功能表。 功能表又包含一組功能表項目 (例如 [開新檔案]、[開啟舊檔]和 [關閉檔案])，這些項目可展開顯示更多的功能表項目，或在按一下時可執行特定的動作。 功能表項目可裝載於功能表、功能表列或工具列中。
 
-下列章節會定義 MenuItem 類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有清單控制項。
+下列章節會定義 MenuItem 類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求適用于所有清單控制項，無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]。
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構
 
-下表描述與功能表項目控制項相關之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Properties Overview](ui-automation-tree-overview.md)需求都適用於所有文字控制項。
+下表描述與功能表項目控制項相關之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](ui-automation-tree-overview.md)。
 
 |控制項檢視|內容檢視|
 |------------------|------------------|
@@ -44,7 +44,7 @@ ms.locfileid: "74446713"
 
 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與功能表項目控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。
 
-|屬性|值|描述|
+|屬性|{2&gt;值&lt;2}|描述|
 |--------------|-----------|-----------------|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|
@@ -61,9 +61,9 @@ ms.locfileid: "74446713"
 
 ## <a name="required-ui-automation-control-patterns"></a>必要的使用者介面自動化控制項模式
 
-下表列出功能表項目控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱 [F:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty](ui-automation-control-patterns-overview.md)。
+下表列出功能表項目控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。
 
-|控制項模式屬性|支援|附註|
+|控制項模式屬性|支援|注意事項|
 |------------------------------|-------------|-----------|
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|視情況而定|如果可以展開或摺疊控制項，則實作 <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>。|
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|視情況而定|如果控制項執行單一動作或命令，則實作 <xref:System.Windows.Automation.Provider.IInvokeProvider>。|
@@ -76,7 +76,7 @@ ms.locfileid: "74446713"
 
 下表列出與功能表項目控制項相關聯的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 事件。
 
-|事件|支援|說明|
+|Event|支援|說明|
 |-----------|-------------|-----------------|
 |<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|視情況而定|如果控制項支援叫用控制項模式，則必須引發此一事件。|
 |<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 屬性變更事件。|視情況而定|如果控制項支援切換控制項模式，則必須引發此一事件。|
@@ -87,27 +87,27 @@ ms.locfileid: "74446713"
 
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件
 
-下表列出所有功能表項目控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [F:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty](ui-automation-events-overview.md)。
+下表列出所有功能表項目控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需 [UI Automation Events Overview](ui-automation-events-overview.md)事件的詳細資訊，請參閱
 
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援/值|附註|
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援/值|注意事項|
 |---------------------------------------------------------------------------------|--------------------|-----------|
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|視情況而定|無|
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|視情況而定|無|
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|視情況而定|無|
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|視情況而定|無|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要項|無|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要項|無|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 屬性變更事件。|視情況而定|無|
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 屬性變更事件。|視情況而定|無|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|視情況而定|None|
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|視情況而定|None|
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|視情況而定|None|
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|視情況而定|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要|None|
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 屬性變更事件。|視情況而定|None|
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 屬性變更事件。|視情況而定|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|None|
 
 <a name="Legacy_Issues"></a>
 
 ## <a name="legacy-issues"></a>舊版問題
 
-當勾選 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 功能表項目，並可利用程式設計方式判斷是否有必要支援切換模式時，才會支援切換模式。 由於 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 功能表項目不會公開是否能夠勾選，因此當未勾選功能表項目時，會支援叫用模式。 就算是應該只支援叫用模式的功能表項目，也會有一律支援叫用模式的例外狀況。 如此一來，用戶端就不會對支援叫用模式 (未勾選功能表項目時) 的項目一旦變成勾選時，是否就不再支援該模式的問題感到困惑。
+只有在檢查 Win32 功能表項目時，才支援切換模式，並可透過程式設計方式決定是否需要支援切換模式。 由於 Win32 功能表項目不會公開是否能夠進行檢查，因此當未核取功能表項目時，將會支援叫用模式。 就算是應該只支援叫用模式的功能表項目，也會有一律支援叫用模式的例外狀況。 如此一來，用戶端就不會對支援叫用模式 (未勾選功能表項目時) 的項目一旦變成勾選時，是否就不再支援該模式的問題感到困惑。
 
 ## <a name="see-also"></a>請參閱
 

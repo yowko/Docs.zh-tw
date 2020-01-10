@@ -6,24 +6,24 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: b7e378d79109d33859a38ea398cffd2193044abd
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 22966c8ed80be99497e7d05b56455c3057fdd81a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800194"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741411"
 ---
 # <a name="ui-automation-textpattern-overview"></a>UI 自動化 TextPattern 概觀
 
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。
 
-本概觀說明如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 來公開 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支援平台中，文字控制項的文字內容，包括格式和樣式屬性。 這些控制項包括（但不限於） Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.RichTextBox>，以及其 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 對等專案。
+本概觀說明如何使用 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 來公開 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]支援平台中，文字控制項的文字內容，包括格式和樣式屬性。 這些控制項包括（但不限於） Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.RichTextBox>，以及其 Win32 對等專案。
 
 若要公開控制項的文字內容，您可以使用 <xref:System.Windows.Automation.TextPattern> 控制項模式，它會將文字容器的內容表示成文字資料流。 接著， <xref:System.Windows.Automation.TextPattern> 會需要 <xref:System.Windows.Automation.Text.TextPatternRange> 類別的支援來公開格式和樣式屬性。 <xref:System.Windows.Automation.Text.TextPatternRange> 可支援 <xref:System.Windows.Automation.TextPattern> ，其方法是使用 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 和 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 端點的集合，來表示文字容器中的連續或多個非連續文字範圍。 <xref:System.Windows.Automation.Text.TextPatternRange> 可支援選取、比較、擷取和周遊之類的功能。
 
 > [!NOTE]
-> <xref:System.Windows.Automation.TextPattern> 類別沒有提供插入或修改文字的方法。 不過，依據控制項，可能可以藉由 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> 或透過直接鍵盤輸入來完成此作業。 如需範例，請參閱 [TextPattern Insert Text Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText) 。
+> <xref:System.Windows.Automation.TextPattern> 類別沒有提供插入或修改文字的方法。 不過，視控制項而定，這可能是由 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> 或透過直接鍵盤輸入來完成。 如需範例，請參閱 [TextPattern Insert Text Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText) 。
 
 對輔助技術廠商及其使用者而言，本概觀中所描述的功能非常重要。 輔助技術可以使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 來收集使用者的完整文字格式化資訊，並依 <xref:System.Windows.Automation.Text.TextUnit> (字元、單字、字行或段落) 提供以程式設計方式巡覽和選取文字的功能。
 
@@ -41,7 +41,7 @@ ms.locfileid: "74800194"
 
 ## <a name="control-types"></a>控制項類型
 
-### <a name="text"></a>Text
+### <a name="text"></a>文字
 
 文字控制項是用來表示螢幕上一段文字的基本項目。
 

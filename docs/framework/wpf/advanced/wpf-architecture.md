@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 04e6c6fb5dd903e0f52a29bb2c0739d899ce2bb1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 382facef15e79c4ce49fdedaeb1a072b7591e4a0
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636350"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740222"
 ---
 # <a name="wpf-architecture"></a>WPF 架構
 本主題提供 Windows Presentation Foundation （WPF）類別階層的導覽。 其中涵蓋 WPF 的大部分主要子系統，並說明它們的互動方式。 它也會詳細說明 WPF 架構設計人員所做的一些選擇。  
@@ -38,7 +38,7 @@ ms.locfileid: "75636350"
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- WPF 中的大部分物件都是衍生自 <xref:System.Windows.Threading.DispatcherObject>，它會提供基本的結構來處理平行存取和執行緒。 WPF 是以發送器所執行的訊息系統為基礎。 其運作方式與熟悉的 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 訊息抽取相同;事實上，WPF 發送器會使用 User32 訊息來執行跨執行緒呼叫。  
+ WPF 中的大部分物件都是衍生自 <xref:System.Windows.Threading.DispatcherObject>，它會提供基本的結構來處理平行存取和執行緒。 WPF 是以發送器所執行的訊息系統為基礎。 其運作方式與熟悉的 Win32 訊息抽取相同;事實上，WPF 發送器會使用 User32 訊息來執行跨執行緒呼叫。  
   
  在 WPF 中討論並行時，實際上有兩個核心概念–發送器和執行緒親和性。  
   

@@ -3,17 +3,16 @@ title: 適用於 .NET Core 獨立式應用程式部署的執行階段向前復�
 description: 了解獨立式部署的 dotnet publish 變更。
 author: KathleenDollard
 ms.date: 05/31/2018
-ms.custom: seodec18
-ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 22385c7b5d2bf87755fd51cd6268d21fe3431c74
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522097"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740791"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>獨立式部署執行階段向前復原
 
-.NET Core [獨立式應用程式部署](index.md)包含 .NET Core l 程式庫和 .NET Core 執行階段。 從 NET Core 2.1 SDK (版本 2.1.300) 開始，獨立式應用程式部署[會發佈電腦上的最高修補程式執行階段](https://github.com/dotnet/designs/pull/36)。 根據預設，用於獨立式部署的 [`dotnet publish`](../tools/dotnet-publish.md) 會選取發佈電腦上已安裝為 SDK 一部分的最新版本。 這可讓您部署的應用程式使用 `publish` 期間所提供的安全性修正 (和其他修正) 來執行。 應用程式必須重新發佈，才能取得新的修補程式。 藉由在 `dotnet publish` 命令上指定 `-r <RID>`，或者在專案檔 (csproj / vbproj) 中或命令列上指定[執行階段識別碼 (RID)](../rid-catalog.md)，即可建立獨立式應用程式。
+.NET Core [獨立式應用程式部署](index.md)包含 .NET Core l 程式庫和 .NET Core 執行階段。 從 NET Core 2.1 SDK (版本 2.1.300) 開始，獨立式應用程式部署[會發佈電腦上的最高修補程式執行階段](https://github.com/dotnet/designs/pull/36)。 根據預設，用於獨立式部署的 [`dotnet publish`](../tools/dotnet-publish.md) 會選取發佈電腦上已安裝為 SDK 一部分的最新版本。 這可讓您部署的應用程式使用 `publish` 期間所提供的安全性修正 (和其他修正) 來執行。 必須重新發行應用程式，才能取得新的修補程式。 藉由在 `dotnet publish` 命令上指定 `-r <RID>`，或者在專案檔 (csproj / vbproj) 中或命令列上指定[執行階段識別碼 (RID)](../rid-catalog.md)，即可建立獨立式應用程式。
 
 ## <a name="patch-version-roll-forward-overview"></a>修補程式版本向前復原概觀
 

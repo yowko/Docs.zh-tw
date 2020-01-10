@@ -3,13 +3,12 @@ title: 減少與 project.json 的封裝相依性
 description: 撰寫以 project.json 為基礎的程式庫時，請降低套件相依性。
 author: cartermp
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674961"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740821"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>減少與 project.json 的封裝相依性
 
@@ -17,13 +16,13 @@ ms.locfileid: "57674961"
 
 ## <a name="why-its-important"></a>為何重要
 
-.NET Core 是由 NuGet 封裝組成的產品。  必要的封裝是 [.NETStandard.Library 中繼封裝](https://www.nuget.org/packages/NETStandard.Library) \(英文\)，由 NuGet 封裝組成的其他封裝。  它提供的一組封裝，保證都能在多個 .NET 實作上運作，例如 .NET Framework、.NET Core 和 Xamarin/Mono。
+.NET Core 是由 NuGet 封裝組成的產品。  必要的封裝是 [.NETStandard.Library 中繼封裝](https://www.nuget.org/packages/NETStandard.Library) \(英文\)，由 NuGet 封裝組成的其他封裝。 它提供了一組可保證在多個 .NET 部署上工作的套件，例如 .NET Framework、.NET Core 和 Xamarin/Mono。
 
 不過，您的程式庫有極大的可能不會使用其包含的每個單一封裝。  在撰寫程式庫並透過 NuGet 散發時，最佳的作法是將相依性「修剪」至實際使用的封裝。  這會減少 NuGet 封裝的整體使用量。
 
 ## <a name="how-to-do-it"></a>作法
 
-目前沒有任何修剪封裝參考的正式 `dotnet` 命令。  您必須改以手動作業。  一般程序如下所示︰
+目前沒有可修剪套件參考的官方 `dotnet` 命令。  您必須改以手動作業。  一般程序如下所示︰
 
 1. 參考您 `project.json` 的 `dependencies` 區段的 `NETStandard.Library` 版本 `1.6.0`。
 2. 從命令列使用 `dotnet restore` ([請參閱附註](#dotnet-restore-note)) 還原套件。
@@ -34,12 +33,12 @@ ms.locfileid: "57674961"
 
 您可以下列方法之一，找出不需要的封裝︰
 
-1. 試驗與錯誤。  這牽涉到移除封裝、還原、查看程式庫是否仍在編譯，以及重複此程序。
-2. 使用諸如 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 或 [.NET 反射程式](https://www.red-gate.com/products/dotnet-development/reflector)等工具預覽參考，查看程式碼實際使用的參考。  接著移除與所用類型不對應的封裝。
+1. 試驗與錯誤。 這牽涉到移除封裝、還原、查看程式庫是否仍在編譯，以及重複此程序。
+2. 使用諸如 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 或 [.NET 反射程式](https://www.red-gate.com/products/dotnet-development/reflector)等工具預覽參考，查看程式碼實際使用的參考。 接著，您可以移除未對應至您所使用之類型的封裝。
 
 ## <a name="example"></a>範例
 
-假設您撰寫的程式庫提供了泛型集合類型的額外功能。  這類程式庫需要依賴如 `System.Collections` 的封裝，但可能完全不依賴如 `System.Net.Http` 的封裝。  如此，將封裝相依性修剪至此程式庫所需就很好！
+假設您撰寫了一個程式庫，其中提供了泛型集合類型的其他功能。 這類程式庫需要依賴如 `System.Collections` 的封裝，但可能完全不依賴如 `System.Net.Http` 的封裝。 如此，將封裝相依性修剪至此程式庫所需就很好！
 
 若要修剪此程式庫，您可以從 `project.json` 檔案開始，將參考加入 `NETStandard.Library` 版本 `1.6.0`。
 

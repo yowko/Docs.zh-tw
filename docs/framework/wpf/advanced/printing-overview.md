@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 22d363fde369bc7e84a9354d27f57af356f30ebb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 3f99b0e93e6b16ac66f6869c284c1119ddfc3751
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636454"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740312"
 ---
 # <a name="printing-overview"></a>列印概觀
 透過 Microsoft .NET Framework，使用 Windows Presentation Foundation （WPF）的應用程式開發人員有一組豐富的列印和列印系統管理 Api。 在 Windows Vista 中，這些列印系統的一些增強功能也適用于使用非受控碼建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式和開發人員的開發人員。 這項新功能的核心是新的 XML 論文規格（XPS）檔案格式和 XPS 列印路徑。  
@@ -47,7 +47,7 @@ ms.locfileid: "75636454"
   
 - 進階色彩設定檔的原生支援，其中包含每個通道 32 位元 (bpc)、CMYK、具名色彩、n-inks 和透明及漸層效果的原生支援。  
   
-- 改善 .NET Framework 和 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 應用程式的列印效能。  
+- 改善 .NET Framework 和 Win32 應用程式的列印效能。  
   
 - 業界標準 XPS 格式。  
   
@@ -60,9 +60,9 @@ ms.locfileid: "75636454"
 - 可擴充的篩選管線。 XPS 印表機驅動程式（XPSDrv）篩選器管線的設計，是為了啟用 XPS 檔的直接與可調整列印。 如需詳細資訊，請參閱[XPSDrv 印表機驅動程式](/windows-hardware/drivers/print/xpsdrv-printer-drivers)。 
   
 ### <a name="print-path-architecture"></a>列印路徑架構  
- 雖然 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 .NET Framework 應用程式都支援 XPS，[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 Windows Forms 應用程式會使用 GDI 進行 XPS 轉換，以便為 XPS 印表機驅動程式（XPSDrv）建立 XPS 格式的內容。 這些應用程式不需要使用 XPS 列印路徑，而且可以繼續使用增強型中繼檔（EMF）為基礎的列印。 不過，大部分的 XPS 功能和增強僅適用于以 XPS 列印路徑為目標的應用程式。  
+ 雖然 Win32 和 .NET Framework 應用程式都支援 XPS，但 Win32 和 Windows Forms 應用程式都使用 GDI 進行 XPS 轉換，以建立 xps 印表機驅動程式（XPSDrv）的 XPS 格式內容。 這些應用程式不需要使用 XPS 列印路徑，而且可以繼續使用增強型中繼檔（EMF）為基礎的列印。 不過，大部分的 XPS 功能和增強僅適用于以 XPS 列印路徑為目標的應用程式。  
   
- XPS 印表機驅動程式（XPSDrv）支援將 GDI 轉換成 XPS 格式，以啟用使用 XPSDrv 印表機的 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 Windows Forms 應用程式。 XPSDrv 模型也提供 XPS 到 GDI 格式的轉換器，讓 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 應用程式可以列印 XPS 檔。 若為 WPF 應用程式，當寫入作業的目標列印佇列沒有 XPSDrv 驅動程式時，<xref:System.Windows.Xps.XpsDocumentWriter> 類別的 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 和 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法會自動完成 XPS 到 GDI 格式的轉換。 （Windows Forms 應用程式無法列印 XPS 檔。）  
+ 為了讓 Win32 和 Windows Forms 應用程式能夠使用 XPSDrv 型印表機，XPS 印表機驅動程式（XPSDrv）支援將 GDI 轉換成 XPS 格式。 XPSDrv 模型也提供 XPS 到 GDI 格式的轉換器，讓 Win32 應用程式可以列印 XPS 檔。 若為 WPF 應用程式，當寫入作業的目標列印佇列沒有 XPSDrv 驅動程式時，<xref:System.Windows.Xps.XpsDocumentWriter> 類別的 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 和 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法會自動完成 XPS 到 GDI 格式的轉換。 （Windows Forms 應用程式無法列印 XPS 檔。）  
   
  下圖說明列印子系統，並定義 Microsoft 所提供的部分，以及軟體和硬體廠商所定義的部分：  
   
@@ -106,7 +106,7 @@ ms.locfileid: "75636454"
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI 列印路徑  
- WPF 應用程式原本就支援 XPS 列印路徑，[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 Windows Forms 應用程式也可以利用某些 XPS 功能。 XPS 印表機驅動程式（XPSDrv）可以將 GDI 型輸出轉換成 XPS 格式。 針對先進的案例，使用[MICROSOFT XPS 檔轉換子（MXDC）](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)可支援內容的自訂轉換。 同樣地，WPF 應用程式也可以藉由呼叫 <xref:System.Windows.Xps.XpsDocumentWriter> 類別的其中一個 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 或 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法，並將非 XpsDrv 印表機指定為目標列印佇列，以輸出至 GDI 列印路徑。  
+ WPF 應用程式原本就支援 XPS 列印路徑，Win32 和 Windows Forms 應用程式也可以利用某些 XPS 功能。 XPS 印表機驅動程式（XPSDrv）可以將 GDI 型輸出轉換成 XPS 格式。 針對先進的案例，使用[MICROSOFT XPS 檔轉換子（MXDC）](/windows/desktop/printdocs/microsoft-xps-document-converter--mxdc-)可支援內容的自訂轉換。 同樣地，WPF 應用程式也可以藉由呼叫 <xref:System.Windows.Xps.XpsDocumentWriter> 類別的其中一個 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> 或 <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 方法，並將非 XpsDrv 印表機指定為目標列印佇列，以輸出至 GDI 列印路徑。  
 
 對於不需要 XPS 功能或支援的應用程式，目前的 GDI 列印路徑會保持不變。  
   

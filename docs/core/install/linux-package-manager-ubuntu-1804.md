@@ -1,15 +1,15 @@
 ---
 title: 在 Ubuntu 18.04 套件管理員上安裝 .NET Core-.NET Core
-description: 使用套件管理員在 Ubuntu 18.04 上安裝 .NET Core SDK 和執行時間。
+description: 使用套件管理員在 Ubuntu 18.04 上安裝 .NET Core SDK 和執行階段。
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 38568b31bf9cd02a19a15addfe4926e8857a87b5
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a8e92cab30302c5636d23f098eb60637141545ca
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959804"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740617"
 ---
 # <a name="ubuntu-1804-package-manager---install-net-core"></a>Ubuntu 18.04 套件管理員-安裝 .NET Core
 
@@ -17,13 +17,13 @@ ms.locfileid: "74959804"
 
 本文說明如何使用套件管理員在 Ubuntu 18.04 上安裝 .NET Core。 如果您要安裝執行時間，我們建議您安裝[ASP.NET Core 運行](#install-the-aspnet-core-runtime)時間，因為它同時包含 .net Core 和 ASP.NET Core 執行時間。
 
-## <a name="register-microsoft-key-and-feed"></a>註冊 Microsoft 金鑰和摘要
+## <a name="register-microsoft-key-and-feed"></a>註冊 Microsoft 金鑰和總結
 
 安裝 .NET 之前，您必須：
 
-- 註冊 Microsoft 金鑰
-- 註冊產品存放庫
-- 安裝必要的相依性
+- 註冊 Microsoft 金鑰。
+- 註冊產品存放庫。
+- 安裝必要的相依性。
 
 每部電腦只需要執行這項作業一次。
 
@@ -62,11 +62,11 @@ sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> 如果您收到類似 [**找不到封裝 aspnetcore-執行時間-3.1**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
+> 如果您收到類似「找不到套件 aspnetcore-runtime-3.1」的錯誤訊息，請參閱[針對套件管理員進行疑難排解](#troubleshoot-the-package-manager)一節。
 
-## <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行時間
+## <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行階段
 
-更新可供安裝的產品，然後安裝 .NET Core 執行時間。 在您的終端機中，執行下列命令。
+更新可供安裝的產品，然後安裝 .NET Core 執行階段。 在您的終端機中，執行下列命令。
 
 ```bash
 sudo add-apt-repository universe
@@ -77,7 +77,7 @@ sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> 如果您收到類似 [**找不到封裝 dotnet-執行時間-3.1**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
+> 如果您收到類似「找不到套件 dotnet-runtime-3.1」的錯誤訊息，請參閱[針對套件管理員進行疑難排解](#troubleshoot-the-package-manager)一節。
 
 ## <a name="how-to-install-other-versions"></a>如何安裝其他版本
 

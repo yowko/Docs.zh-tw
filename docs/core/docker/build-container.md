@@ -3,13 +3,13 @@ title: 使用 Docker 教學課程將應用程式容器化
 description: 在此教學課程中，您將了解如何使用 Docker 來將 .NET Core 應用程式容器化。
 ms.date: 06/26/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: b344731c7d356f3705d9909b6901234f91ec7d6d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.custom: mvc
+ms.openlocfilehash: e012fcf78c88e7f64f6ee205cd69b69683bed9c3
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521883"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740768"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教學課程：容器化 .NET Core 應用程式
 
@@ -26,7 +26,7 @@ ms.locfileid: "72521883"
 
 您將了解 .NET Core 應用程式的 Docker 容器建置及部署工作。 「Docker 平台」會使用「Docker 引擎」快速建置應用程式，並將其封裝為「Docker 映像」。 這些映像是以 *Dockerfile* 格式所撰寫，可在分層式容器中部署及執行。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 安裝下列先決條件：
 
@@ -124,7 +124,7 @@ namespace myapp
 }
 ```
 
-儲存檔案，然後使用 `dotnet run` 再次測試程式。 請記住此應用程式會無限期執行。 使用 [取消] 命令<kbd>CTRL</kbd> +<kbd>C</kbd>來停止它。 您將會看到下列輸出：
+儲存檔案，然後使用 `dotnet run` 再次測試程式。 請記住此應用程式會無限期執行。 使用 [取消] 命令<kbd>CTRL</kbd>+<kbd>C</kbd>來停止它。 您將會看到下列輸出：
 
 ```console
 > dotnet run
@@ -371,7 +371,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 #### <a name="windows"></a>Windows
 
-在此範例中，`ENTRYPOINT` 會變更為 `cmd.exe`。 <kbd>CTRL</kbd> +<kbd>C</kbd>已按下以結束處理常式並停止容器。
+在此範例中，`ENTRYPOINT` 會變更為 `cmd.exe`。 <kbd>CTRL</kbd>+<kbd>C</kbd>已按下以結束處理常式並停止容器。
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -422,7 +422,7 @@ Docker 有許多不同的命令，其中涵蓋您想要使用容器和映像來�
 
 ## <a name="clean-up-resources"></a>清除資源
 
-在此教學課程中，您建立了容器與映像。 您可以視需要刪除這些資源。 使用下列命令
+在本教學課程中，您已建立容器和映射。 您可以視需要刪除這些資源。 使用下列命令
 
 01. 列出所有容器
 

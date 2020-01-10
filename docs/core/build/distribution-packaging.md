@@ -3,13 +3,12 @@ title: .NET Core 發佈封裝
 description: 了解如何封裝、命名以及建立 .NET Core 版本以進行發佈。
 author: tmds
 ms.date: 10/09/2019
-ms.custom: seodec18
-ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cfd6003cfac5c00fc06ebc6195eccd55a0d7afe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393588"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740930"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 發佈封裝
 
@@ -84,7 +83,7 @@ ms.locfileid: "72393588"
 
 - (8) **LICENSE.txt、ThirdPartyNotices.txt** 分別是在 .NET Core 中使用的 .NET Core 授權和第三方程式庫授權。
 
-- (9、10) **dotnet.1.gz，dotnet** `dotnet.1.gz` 是 dotnet 手冊頁面。 `dotnet` 是 dotnet host(1) 的符號連結。 這些檔案會安裝在已知位置，以進行系統整合。
+- （9，10） **dotnet. 1. gz，dotnet** `dotnet.1.gz` 是 dotnet 手冊頁面。 `dotnet` 是 dotnet host(1) 的符號連結。 這些檔案會安裝在已知的位置以進行系統整合。
 
 - （11，12） NETCore 會分別描述 .NET Core `x.y` 版本的 API，以及 ASP.NET Core 的**應用程式**開發介面。 這些套件會在針對那些目標版本進行編譯時使用。
 
@@ -126,7 +125,7 @@ SDK 版本使用相同的 `[major].[minor]`，且具有獨立的 `[patch]`，其
 - `dotnet-runtime-deps-[major].[minor]` _（選用）_ -安裝執行獨立應用程式的相依性
   - **版本：** \<執行階段版本 >
   - **範例：** dotnet-runtime-.deps.json-2.1
-  - 相依性 **：** _散發版本特定_的相依性
+  - 相依性 **：** _散發特定的_相依性
 
 - `dotnet-runtime-[major].[minor]`-安裝特定執行時間
   - **版本：** \<執行階段版本 >
@@ -175,7 +174,7 @@ SDK 版本使用相同的 `[major].[minor]`，且具有獨立的 `[patch]`，其
 
 - `shared/Microsoft.AspNetCore.All` 下的第三方程式庫無法從來源輕鬆建置。 因此會從 `aspnetcore-runtime` 套件省略該資料夾。
 
-- 使用 `NuGetFallbackFolder` 中的二進位成品填入 `nuget.org`。 它應該維持空白。
+- 使用 `nuget.org` 中的二進位成品填入 `NuGetFallbackFolder`。 它應該維持空白。
 
 多個 `dotnet-sdk` 套件可能會提供相同的 `NuGetFallbackFolder` 檔案。 為了避免套件管理員問題，這些檔案都應該相同 (總和檢查碼、修改日期等)。
 

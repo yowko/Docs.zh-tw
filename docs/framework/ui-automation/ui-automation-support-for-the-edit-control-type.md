@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Edit control type
 - UI Automation, Edit control type
 ms.assetid: 6db9d231-c0a0-4e17-910e-ac80357f774f
-ms.openlocfilehash: 500dc450ad171ed50316c8e08d62258d745049cb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f51e55a8a87ad1112c1b752568220611b9bf70e8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448467"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741662"
 ---
 # <a name="ui-automation-support-for-the-edit-control-type"></a>Edit 控制項類型的 UI 自動化支援
 
@@ -22,7 +22,7 @@ ms.locfileid: "74448467"
 
 本主題提供編輯控制項類型之使用者介面自動化支援的相關資訊。
 
-下列章節會定義編輯控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有編輯控制項。
+下列章節會定義編輯控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求都適用于所有編輯控制項。
 
 <a name="Required_UI_Automation_Tree_Structure"></a>
 
@@ -32,7 +32,7 @@ ms.locfileid: "74448467"
 
 |控制項檢視|內容檢視|
 |------------------|------------------|
-|編輯|編輯|
+|Edit|Edit|
 
 因為實作編輯控制項類型的控制項在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視中是單行控制項，所以一律不會有捲軸。 在某些配置案例中，單行文字可能會換行。 編輯控制項類型最適合用於保存少量可編輯或可選取的文字。
 
@@ -42,7 +42,7 @@ ms.locfileid: "74448467"
 
 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與編輯控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。
 
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意事項|
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|{2&gt;值&lt;2}|注意事項|
 |------------------------------------------------------------------------------------|-----------|-----------|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|
@@ -50,7 +50,7 @@ ms.locfileid: "74448467"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|編輯控制項的名稱通常是從靜態文字標籤產生的。 如果沒有靜態文字標籤，則必須由應用程式開發人員指定 `Name` 的屬性值。 `Name` 屬性不應該包含編輯控制項的文字內容。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|請參閱備註。|如果控制項有關聯的靜態文字標籤，則這個屬性必須公開該控制項的參考。 如果文字控制項是其他控制項的子元件，則將不會設定 `LabeledBy` 屬性。|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|編輯|所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的這個值都相同。|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Edit|此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「編輯」|對應到編輯控制項類型的當地語系化字串。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|此編輯控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視。|
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|此編輯控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視。|
@@ -60,7 +60,7 @@ ms.locfileid: "74448467"
 
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>必要的使用者介面自動化控制項模式和屬性
 
-下表列出所有編輯控制項都必須支援的控制項模式。 如需控制項模式的詳細資訊，請參閱 [F:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty](ui-automation-control-patterns-overview.md)。
+下表列出所有編輯控制項都必須支援的控制項模式。 如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。
 
 |控制項模式/控制項模式屬性|支援/值|注意事項|
 |-----------------------------------------------|--------------------|-----------|
@@ -79,29 +79,29 @@ ms.locfileid: "74448467"
 
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件
 
-下表列示所有編輯控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [F:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty](ui-automation-events-overview.md)。
+下表列示所有編輯控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](ui-automation-events-overview.md)。
 
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意事項|
 |---------------------------------------------------------------------------------|-------------|-----------|
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|必要項|無|
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|必要項|無|
-|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|必要項|無|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要項|無|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要項|無|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 屬性變更事件。|必要項|無|
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性變更事件。|視情況而定|無|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 屬性變更事件。|一律不|無|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 屬性變更事件。|一律不|無|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 屬性變更事件。|一律不|無|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 屬性變更事件。|一律不|無|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 屬性變更事件。|一律不|無|
-|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 屬性變更事件。|一律不|無|
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|必要|None|
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|必要|None|
+|<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|必要|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 屬性變更事件。|必要|None|
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性變更事件。|視情況而定|None|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 屬性變更事件。|一律不|None|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 屬性變更事件。|一律不|None|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 屬性變更事件。|一律不|None|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 屬性變更事件。|一律不|None|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 屬性變更事件。|一律不|None|
+|<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 屬性變更事件。|一律不|None|
 |<xref:System.Windows.Automation.RangeValuePatternIdentifiers.ValueProperty> 屬性變更事件。|視情況而定|如果此控制項支援範圍值控制項模式，就必須支援這個事件。|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|None|
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|None|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Automation.ControlType.Edit>
 - [UI 自動化控制項類型概觀](ui-automation-control-types-overview.md)

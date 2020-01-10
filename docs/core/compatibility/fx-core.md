@@ -2,18 +2,21 @@
 title: 重大變更-.NET Framework 至 .NET Core
 description: 列出從 .NET Framework 到 .NET Core 的重大變更。
 ms.date: 12/18/2019
-ms.openlocfilehash: 6ec20388e89e59238be3f2d68949059453af216d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e01ca522b7ec29e2f6db8a5a0c2fcdfc30a38168
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75443516"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740908"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>從 .NET Framework 遷移至 .NET Core 的突破性變更
 
 如果您要將應用程式從 .NET Framework 遷移至 .NET Core，本文中所列的重大變更可能會對您造成影響。 此外， [.Net core 上無法使用的 .NET Framework 技術](../porting/net-framework-tech-unavailable.md)一文提供 .net core 不支援之技術的相關資訊，例如應用程式域和 .net 遠端處理。
 
 重大變更會依類別目錄分組。
+
+> [!NOTE]
+> 本文不是 .NET Framework 和 .NET Core 之間的重大變更完整清單。 最重要的重大變更會在這裡新增，因為我們會注意到它們。
 
 ## <a name="corefx"></a>CoreFx
 

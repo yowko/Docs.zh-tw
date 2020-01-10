@@ -3,12 +3,12 @@ title: 使用 .NET Compiler Platform SDK 語法模型
 description: 此概觀說明您使用的類型，以了解與管理語法節點。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 2cfd3c8bc8f47421c7992f7fea28c7b156450147
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fc1b1f5ae5ec985425c8d6aec49ef7f830ea9162
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346921"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740481"
 ---
 # <a name="work-with-syntax"></a>使用語法
 
@@ -65,11 +65,11 @@ ms.locfileid: "75346921"
 
 每個節點、權杖或邏輯都知道其在原始程式文字內的位置及其組成字元數。 文字位置是以 32 位元的整數表示，也就是以零起始的 `char` 索引。 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 物件是起始位置和字元計數，兩個都以整數表示。 如果 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 長度為零，即指兩個字元之間的位置。
 
-每個節點均有兩個 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 屬性：<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 與 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>。
+每個節點均有兩個 <xref:Microsoft.CodeAnalysis.Text.TextSpan> 屬性：<xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> 與 <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A>。
 
-<xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> 屬性是從節點子樹狀結構的第一個權杖開頭到最後一個權杖結尾的文字。 此範圍不包含任何開頭或尾端邏輯。
+<xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> 屬性是從節點子樹狀結構的第一個權杖開頭到最後一個權杖結尾的文字。 此範圍不包含任何開頭或尾端邏輯。
 
-<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> 屬性是包含節點正常範圍的文字範圍，加上任何開頭或尾端邏輯的範圍。
+<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> 屬性是包含節點正常範圍的文字範圍，加上任何開頭或尾端邏輯的範圍。
 
 例如：
 
@@ -85,11 +85,11 @@ ms.locfileid: "75346921"
 
 ## <a name="kinds"></a>種類
 
-每個節點、權杖或邏輯都有 <xref:System.Int32?displayProperty=nameWithType> 類型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 屬性，可識別所代表的確切語法項目。 這個值可以轉換成語言特定的列舉型別。 每個語言C# （或 Visual Basic）都有單一 `SyntaxKind` 列舉（分別為<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>），其中會列出文法中所有可能的節點、權杖和邏輯元素。 可透過存取 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> 擴充方法來自動完成這項轉換。
+每個節點、權杖或邏輯都有 <xref:System.Int32?displayProperty=nameWithType> 類型的 <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 屬性，可識別所代表的確切語法項目。 這個值可以轉換成語言特定的列舉型別。 每個語言C# （或 Visual Basic）都有單一 `SyntaxKind` 列舉（分別為<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> 和 <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>），其中會列出文法中所有可能的節點、權杖和邏輯元素。 可透過存取 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> 或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType> 擴充方法來自動完成這項轉換。
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> 屬性允許共用相同節點類別的語法節點類型簡單去除混淆。 對權杖和邏輯而言，這個屬性是區別某項目類型的唯一方式。
 
-例如，單一 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 類別有 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> 子系。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> 屬性可區別其為 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> 或 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> 種類的語法節點。
+例如，單一 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> 類別有 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> 和 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> 子系。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A> 屬性可區別其為 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> 或 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> 種類的語法節點。
 
 ## <a name="errors"></a>錯誤
 

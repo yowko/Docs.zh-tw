@@ -1,15 +1,13 @@
 ---
 title: 中斷性變更與 .NET 程式庫
 description: 建立 .NET 程式庫時巡覽中斷性變更的最佳做法建議。
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104664"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740977"
 ---
 # <a name="breaking-changes"></a>重大變更
 
@@ -66,9 +64,9 @@ public class Task
 
 二進位中斷性變更也可能會中斷**整個組件**。 使用 `AssemblyName` 重新命名組件，或是新增、移除或變更組件的強式命名金鑰，則會變更組件的身分識別。 變更組件的身分識別會中斷所有使用它的編譯程式碼。
 
-**❌ 請不要**變更組件名稱。
+**❌** 不變更元件名稱。
 
-**❌ 請不要**新增、移除或變更強式命名金鑰。
+**❌ 不要**加入、移除或變更強式命名金鑰。
 
 **✔️ 請考慮**使用抽象基底類別，而非介面。
 
@@ -98,11 +96,11 @@ public class Document
 
 > 移除 API 是一項二進位中斷性變更。 若維持已淘汰類型和方法的成本低廉，也不會為您的程式庫增加技術債務，則請考慮維持已淘汰的類型和方法。 避免移除類型和方法，可協助避免上述提到的最差情況。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [適用於 C# 開發人員的版本和更新考量](../../csharp/whats-new/version-update-considerations.md)
 - [A definitive guide to API-breaking changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net) (.NET 中 API 中斷性變更的完整指南)
-- [CoreFX Breaking Change Rules](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md) (CoreFX 中斷性變更規則)
+- [.NET 重大變更規則](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[上一步](versioning.md)

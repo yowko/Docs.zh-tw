@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: a45cb570ccf572a699359598319fd3867fb5e5dd
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d36909e06bd9a3de0940c4c1b2b9eacbf9cafe7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340964"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740587"
 ---
 # <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行時間
 
@@ -97,7 +97,7 @@ dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 腳本預設為安裝最新的[長期支援（LTS）](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)版本，也就是 .net Core 3.1。 您可以藉由指定 `current` 參數來選擇特定版本。 包含 `runtime` 參數，以安裝執行時間。 否則，腳本會安裝[SDK](sdk.md)。
 
 ```bash
-./dotnet-install.sh --current 3.1 --runtime aspnetcore
+./dotnet-install.sh --channel 3.1 --runtime aspnetcore
 ```
 
 > [!NOTE]

@@ -11,17 +11,17 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: c9ddbcf8f7b6307ab2d89b819aee4809f753a0fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138602"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738776"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用強式名稱簽署元件
 
 > [!NOTE]
-> 雖然 .NET Core 支援強式名稱的元件，而且 .NET Core 程式庫中的所有元件都已簽署，但大部分的協力廠商元件都不需要強名稱。 如需詳細資訊，請參閱 GitHub 上的[強式名稱簽署](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md)。
+> 雖然 .NET Core 支援強式名稱的元件，而且 .NET Core 程式庫中的所有元件都已簽署，但大部分的協力廠商元件都不需要強名稱。 如需詳細資訊，請參閱 GitHub 上的[強式名稱簽署](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md)。
 
 以下是幾種以強式名稱簽署組件的方式：  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73138602"
   
 在[Visual Studio 的開發人員命令提示字元](../../framework/tools/developer-command-prompt-for-vs.md)中，輸入下列命令：  
 
-**al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
+**al** **/Out：** \<*assemblyName*>  *\<moduleName >* **/keyfile：** \<*keyfileName*>  
 
 其中：  
 

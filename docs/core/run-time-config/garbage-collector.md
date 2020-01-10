@@ -3,12 +3,12 @@ title: 垃圾收集行程 config 設定
 description: 瞭解用來設定垃圾收集行程如何管理 .NET Core 應用程式記憶體的執行時間設定。
 ms.date: 11/13/2019
 ms.topic: reference
-ms.openlocfilehash: e7f6877a3cbc7f28776a93b9126f4b64026487fa
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 41157db7770a89f4402fa6675f7031c508f33aca
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800624"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740554"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>用於垃圾收集的執行時間設定選項
 
@@ -217,7 +217,7 @@ ms.locfileid: "74800624"
 ### <a name="complus_gcname"></a>COMPlus_GCName
 
 - 指定包含執行時間打算載入之垃圾收集行程的程式庫路徑。
-- 如需詳細資訊，請參閱[獨立 GC 載入器設計](https://github.com/dotnet/coreclr/blob/master/Documentation/design-docs/standalone-gc-loading.md)。
+- 如需詳細資訊，請參閱[獨立 GC 載入器設計](https://github.com/dotnet/runtime/blob/master/docs/design/features/standalone-gc-loading.md)。
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |

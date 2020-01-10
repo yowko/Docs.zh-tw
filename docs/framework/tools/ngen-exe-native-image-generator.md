@@ -18,19 +18,19 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: e6c4baae854e5997b153e1363ca8ed4204e10e2b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085200"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741800"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (原生映像產生器)
 
 原生映像產生器 (Ngen.exe) 是一種可以增進 Managed 應用程式效能的工具。 Ngen.exe 會建立原生映像，也就是包含已編譯之處理器特定機器碼的檔案，然後將原生映像安裝到本機電腦上的原生映像快取中。 執行階段就可以從快取中使用原生映像，而不是使用 Just-In-Time (JIT) 編譯器來編譯原始組件。
 
 > [!NOTE]
-> Ngen.exe 會針對僅以 .NET Framework 為目標的組件編譯原生映像。 適用於 .NET Core 的對等原生映像產生器是 [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md) \(英文\)。 
+> Ngen.exe 會針對僅以 .NET Framework 為目標的組件編譯原生映像。 適用於 .NET Core 的對等原生映像產生器是 [CrossGen](https://github.com/dotnet/runtime/blob/master/docs/workflow/building/coreclr/crossgen.md) \(英文\)。
 
 Ngen.exe 在 .NET Framework 4 版中的變更：
 
@@ -57,7 +57,7 @@ Ngen.exe 在 .NET Framework 2.0 版中的變更：
 > [!NOTE]
 > 您可以在[原生映像產生器 (Ngen.exe) 舊版語法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms165073(v=vs.100))中找到 .NET Framework 1.0 和 1.1 版的 Ngen.exe 語法。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
 在命令提示字元下輸入下列命令：
 
@@ -86,7 +86,7 @@ ngen /? | /help
 
 <a name="ArgumentTable"></a>
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a>Arguments
 
 |引數|描述|
 |--------------|-----------------|
@@ -117,7 +117,7 @@ ngen /? | /help
 
 ## <a name="config"></a>組態
 
-|Configuration|描述|
+|組態|描述|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|使用指定之可執行組件的組態。<br /><br /> Ngen.exe 繫結至相依性時，必須做出與載入器一樣的決定。 在執行階段載入共用元件時，如果使用 <xref:System.Reflection.Assembly.Load%2A> 方法，應用程式的組態檔就會判斷為共用元件載入的相依性，例如，載入的相依性版本。 `/ExeConfig` 參數會對 Ngen.exe 提供在執行階段時載入的相依性指引。|
 |`/AppBase:` `directoryPath`|在尋找相依性時，使用指定的目錄做為應用程式基底。|
@@ -149,7 +149,7 @@ Ngen.exe 會產生 `install` 動作的 `assemblyname` 引數所指定組件的�
 
 Ngen.exe 會維護相依性的計數。 例如，假設 `MyAssembly.exe` 和 `YourAssembly.exe` 兩者都安裝在原生映像快取中，且兩者都有 `OurDependency.dll` 的參考。 如果 `MyAssembly.exe` 已解除安裝，則 `OurDependency.dll` 不會解除安裝。 只有在 `YourAssembly.exe` 也解除安裝時，才會將它移除。
 
-如果正在全域組件快取中產生組件的原生映像，請指定它的顯示名稱。 請參閱<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>.
+如果正在全域組件快取中產生組件的原生映像，請指定它的顯示名稱。 請參閱 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType>。
 
 Ngen.exe 產生的原生映像可以在應用程式定義域之間共用。 這表示您可以在需要跨應用程式定義域共用組件的應用程式案例中使用 Ngen.exe。 若要指定定義域中立性：
 
@@ -461,7 +461,7 @@ ngen install c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ngen uninstall c:\myfiles\MyLib.dll /ExeConfig:c:\myapps\MyApp.exe
 ```
 
-若要在全域組件快取中建立組件的原生映像，請使用組件的顯示名稱。 例如:
+若要在全域組件快取中建立組件的原生映像，請使用組件的顯示名稱。 例如：
 
 ```console
 ngen install "ClientApp, Version=1.0.0.0, Culture=neutral,
@@ -566,8 +566,8 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 
 |工作名稱|32 位元電腦|64 位元電腦|
 |---------------|----------------------|----------------------|
-|NET Framework NGEN v4.0.30319|[是]|[是]|
-|NET Framework NGEN v4.0.30319 64|否|[是]|
+|NET Framework NGEN v4.0.30319|是|是|
+|NET Framework NGEN v4.0.30319 64|否|是|
 
 在 Windows 8 或更新版本上執行時，可在 .NET Framework 4.5 和更新版本中使用原生映像工作。 在舊版 Windows 中，.NET Framework 會使用 [原生映像服務](#native-image-service)。
 

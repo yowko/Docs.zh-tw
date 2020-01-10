@@ -2,12 +2,12 @@
 title: 中斷性變更的類型-.NET Core
 description: 瞭解 .NET Core 如何嘗試維護跨 .NET 版本開發人員的相容性，以及將哪種變更視為重大變更。
 ms.date: 06/10/2019
-ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a84468c0c0e04f367dc7e89ce806ac01b2b49b48
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567710"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740890"
 ---
 # <a name="changes-that-affect-compatibility"></a>影響相容性的變更
 
@@ -19,7 +19,7 @@ ms.locfileid: "74567710"
 
 除了 .NET 實作之間的相容性之外，開發人員還希望 .NET Core 版本之間具有高層級相容性。 特別是，針對較早版本的 .NET Core 所撰寫的程式碼應該在新版的 .NET Core 上順暢地執行。 實際上，許多開發人員預期在新發行的 .NET Core 版本中找到的新 API，也應該與引入那些 API 的發行前版本相容。
 
-此文章概述相容性變更 (或中斷性變更) 的類別，以及 .NET 小組評估每個類別中的變更的方式。 瞭解 .NET 小組如何解決可能的重大變更，對於在修改現有 Api 行為的[dotnet/corefx](https://github.com/dotnet/corefx) GitHub 存放庫中開啟提取要求的開發人員而言特別有用。
+此文章概述相容性變更 (或中斷性變更) 的類別，以及 .NET 小組評估每個類別中的變更的方式。 瞭解 .NET 小組如何解決可能的重大變更，對於在修改現有 Api 行為的[dotnet/runtime](https://github.com/dotnet/runtime) GitHub 存放庫中開啟提取要求的開發人員而言特別有用。
 
 > [!NOTE]
 > 如需相容性類別的定義，例如二進位檔案相容性和回溯相容性，請參閱[中斷性變更類別](categories.md)。
@@ -178,7 +178,7 @@ ms.locfileid: "74567710"
 
 - **❌ 減少成員的可見度**
 
-   這包括在可存取 (公用或受保護) 建構函式且型別*非* [sealed](../../csharp/language-reference/keywords/sealed.md) 時，降低[受保護](../../csharp/language-reference/keywords/protected.md)成員的可見性。 如果不是這種情況，則允許降低受保護成員的可見性。
+   這包括減少[受保護](../../csharp/language-reference/keywords/protected.md)成員的可見度（當有*可存取*的（公用或受保護）的函式，而且該類型*不*是[密封](../../csharp/language-reference/keywords/sealed.md)的）。 如果不是這種情況，則允許降低受保護成員的可見性。
 
    請注意，這允許增加成員的可見性。
 
