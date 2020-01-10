@@ -11,13 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.custom: seodec18
-ms.openlocfilehash: 3ac5602c32ce0dcfe21e913868faa7ab356e4194
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3cd461d8c56c3f31bf3ffe04acf239ecd32fe328
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120596"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711437"
 ---
 # <a name="character-encoding-in-net"></a>.NET 中的字元編碼
 
@@ -54,7 +53,7 @@ ms.locfileid: "73120596"
 
 - 使用 <xref:System.Text.Encoding> 類別的靜態屬性，這些屬性會傳回代表 .NET 中可用之標準字元編碼 (ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32) 的物件。 例如， <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Text.UnicodeEncoding> 物件。 每個物件會使用取代後援，來處理無法編碼的字串和無法解碼的位元組。 (如需詳細資訊，請參閱 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 一節。)
 
-- 呼叫編碼的類別建構函式。 ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32 編碼的物件可以透過這種方式執行個體化。 每個物件預設會使用取代後援，來處理無法編碼的字串和無法解碼的位元組，不過您可以指定改為擲回例外狀況。 (如需詳細資訊，請參閱 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 和 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 一節。)
+- 呼叫編碼的類別建構函式。 ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32 編碼的物件可以透過這種方式執行個體化。 每個物件預設會使用取代後援，來處理無法編碼的字串和無法解碼的位元組，不過您可以指定改為擲回例外狀況 (如需詳細資訊，請參閱 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 和 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 一節。)
 
 - 呼叫 <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 建構函式，並將代表編碼的整數傳遞給該建構函式。 標準編碼物件使用取代後援，來處理無法編碼的字串和無法解碼的位元組，而字碼頁和雙位元組字元集 (DBCS) 編碼物件則是使用自動調整後援。 (如需詳細資訊，請參閱 [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) 一節。)
 
@@ -67,7 +66,7 @@ ms.locfileid: "73120596"
 
 您可以藉由呼叫 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 方法，來擷取 .NET 中所有可用編碼的相關資訊。 .NET 支援下表所列的字元編碼系統。
 
-|編碼|執行個體|描述|優點/缺點|
+|Encoding|類別|描述|優點/缺點|
 |--------------|-----------|-----------------|-------------------------------|
 |ASCII|<xref:System.Text.ASCIIEncoding>|使用位元組較低的七個位元編碼有限範圍的字元。|由於這個編碼僅支援 U+0000 到 U+007F 之間的字元值，因此大部分的情況下並不適用於國際化的應用程式。|
 |UTF-7|<xref:System.Text.UTF7Encoding>|以 7 位元 ASCII 字元序列表示字元。 非 ASCII 的 Unicode 字元則以 ASCII 字元的逸出序列表示。|UTF-7 支援電子郵件和新聞群組通訊協定之類的通訊協定。 不過，UTF-7 並沒有特別安全或穩固。 在某些情況下，變更一個位元便可能會徹底改變整個 UTF-7 字串的解譯。 而在其他情況下，不同的 UTF-7 字串可能會編碼為相同的文字。 對於包含非 ASCII 字元的序列而言，UTF-7 比 UTF-8 需要更多空間，而且編碼/解碼的速度比較慢。 因此，您應該盡可能使用 UTF-8，而不是 UTF-7。|
@@ -217,7 +216,7 @@ ms.locfileid: "73120596"
 
 <a name="Custom"></a>
 
-## <a name="implementing-a-custom-fallback-strategy"></a>Implementing a Custom Fallback Strategy
+## <a name="implementing-a-custom-fallback-strategy"></a>實作自訂後援策略
 
 除了字碼頁在內部實作的自動調整對應之外，.NET 還包括下列實作後援策略的類別：
 

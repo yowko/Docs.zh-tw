@@ -1,19 +1,17 @@
 ---
 title: 如何使用C# -.net 序列化和還原序列化 JSON
-author: tdykstra
-ms.author: tdykstra
 ms.date: 09/16/2019
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3d3dc0011562e25854938aff857f2832a5978b49
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283339"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705791"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>如何在 .NET 中序列化和還原序列化 JSON
 
@@ -377,11 +375,11 @@ JSON 屬性命名原則：
 
 以下是要序列化和 JSON 輸出的範例物件：
 
-|屬性 |值  |
+|屬性 |{2&gt;值&lt;2}  |
 |---------|---------|
 | 日期    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| 摘要| null|
+| 總結| null|
 
 ```json
 {
@@ -460,7 +458,7 @@ JSON 屬性命名原則：
 
 ## <a name="serialize-properties-of-derived-classes"></a>序列化衍生類別的屬性
 
-當您在編譯時期指定要序列化的型別時，不支援多型序列化。 例如，假設您有 `WeatherForecast` 類別和衍生類別 `WeatherForecastWithWind`：
+當您在編譯時期指定要序列化的型別時，不支援多型序列化。 例如，假設您有 `WeatherForecast` 類別和衍生類別 `WeatherForecastDerived`：
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -470,7 +468,7 @@ JSON 屬性命名原則：
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-在此案例中，即使 `weatherForecast` 物件實際上是 `WeatherForecastWithWind` 物件，`WindSpeed` 屬性也不會序列化。 只有基類屬性會序列化：
+在此案例中，即使 `weatherForecast` 物件實際上是 `WeatherForecastDerived` 物件，`WindSpeed` 屬性也不會序列化。 只有基類屬性會序列化：
 
 ```json
 {
@@ -571,11 +569,11 @@ JSON 屬性命名原則：
 
 當您將稍早所示的 JSON 還原序列化為此範例類型時，額外的資料會變成 `ExtensionData` 屬性的機碼值組：
 
-|屬性 |值  |注意事項  |
+|屬性 |{2&gt;值&lt;2}  |注意事項  |
 |---------|---------|---------|
 | 日期    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | 區分大小寫不相符（`temperatureCelsius` 在 JSON 中），因此不會設定屬性。 |
-| 摘要 | 熱 ||
+| 總結 | 熱 ||
 | ExtensionData | temperatureCelsius：25 |因為大小寫不相符，所以這個 JSON 屬性會是額外的，而且會成為字典中的索引鍵/值組。|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON 中的額外屬性會變成索引鍵/值組，並以陣列做為值物件。|
 | |SummaryWords:<br>酷<br>風大<br>潮濕 |JSON 中的額外屬性會變成索引鍵/值組，並以陣列做為值物件。|

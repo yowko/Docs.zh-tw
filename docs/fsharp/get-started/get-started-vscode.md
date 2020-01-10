@@ -2,12 +2,12 @@
 title: 開始在 Visual Studio Code 中使用 F#
 description: 瞭解如何搭配 Visual Studio Code F#和 Ionide 外掛程式套件使用。
 ms.date: 12/23/2018
-ms.openlocfilehash: 2802438144eb2352c3abeeccfc126b16c6a87d8f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204917"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559660"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>開始在 Visual Studio Code 中使用 F#
 
@@ -20,7 +20,7 @@ ms.locfileid: "74204917"
 若要建立新F#的專案，請開啟命令列，並使用 .NET Core CLI 建立新的專案：
 
 ```dotnetcli
-dotnet new console -lang F# -o FirstIonideProject
+dotnet new console -lang "F#" -o FirstIonideProject
 ```
 
 完成後，請將目錄變更為專案，並開啟 Visual Studio Code：
@@ -42,7 +42,7 @@ code .
 
 這目前是必要的，因為 .NET Framework 型腳本中的一些舊版行為不適用於 .NET Core 腳本，而 Ionide 目前致力於回溯相容性。 未來，.NET Core 腳本會成為預設值。
 
-### <a name="write-your-first-script"></a>撰寫您的第一個腳本
+### <a name="write-your-first-script"></a>撰寫您的第一個指令碼
 
 設定 Visual Studio Code 以使用 .NET Core 腳本之後，請流覽至 Visual Studio Code 中的 Explorer 視圖，並建立新的檔案。 將它命名為*MyFirstScript. run.fsx*。
 
@@ -62,7 +62,7 @@ code .
 2. 它會傳送您在 FSI.EXE 流程上反白顯示的程式碼。
 3. FSI.EXE 流程會評估您傳送的程式碼。
 
-由於您傳送的[內容是函式，因此](../language-reference/functions/index.md)您現在可以使用 fsi.exe 來呼叫該函式！ 在 [互動式] 視窗中，輸入下列內容：
+由於您傳送的內容是[函式](../language-reference/functions/index.md), 因此您現在可以使用 fsi.exe 來呼叫該函式! 在 [互動式] 視窗中，輸入下列內容：
 
 ```fsharp
 toPigLatin "banana";;
@@ -109,7 +109,7 @@ val toPigLatin : word:string -> string
 
 在函式的主體中，您會注意到兩個不同的部分：
 
-1. 內部函式，稱為 `isVowel`，藉由檢查指定的字元（`c`）是否符合其中一個透過[模式](../language-reference/pattern-matching.md)比對所提供的模式，來判斷其是否為母音：
+1. 稱為`isVowel`的內部函式, 藉由透過[模式比對](../language-reference/pattern-matching.md)檢查指定的字元 (`c`) 是否符合其中一種提供的模式, 來判斷其是否為母音:
 
    [!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/to-pig-latin.fsx#L2-L6)]
 
@@ -125,7 +125,7 @@ val toPigLatin : word:string -> string
 
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>將主控台應用程式轉換成 Pig 的拉丁產生器
 
-本文中的先前章節示範了撰寫F#程式碼的常見第一個步驟：撰寫初始函式，並使用 fsi.exe 以互動方式執行它。 這就是所謂的複寫驅動開發[，其中複寫](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)代表「讀取-評估-列印迴圈」。 這是實驗功能的絕佳方式，直到您有一些工作可以運作為止。
+本文中的先前章節示範了撰寫F#程式碼的常見第一個步驟：撰寫初始函式，並使用 fsi.exe 以互動方式執行它。 這就是所謂的複寫驅動開發, 其中[REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)複寫代表「讀取-評估-列印迴圈」。 這是實驗功能的絕佳方式，直到您有一些工作可以運作為止。
 
 以複寫為導向的開發的下一個步驟是將工作程式碼F#移至執行檔案。 然後編譯器會將它編譯F#成可執行檔元件。
 
@@ -133,7 +133,7 @@ val toPigLatin : word:string -> string
 
 接下來，建立稱為 `PigLatin` 的新[`module`](../language-reference/modules.md) ，並將您稍早建立的 `toPigLatin` 函式複製到其中，如下所示：
 
-[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
+[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L3-L14)]
 
 此模組應高於 `main` 函式和 `open System` 宣告底下。 宣告的順序很重要F#，因此您必須先定義函式，才能在檔案中呼叫它。
 
@@ -151,7 +151,7 @@ let main argv =
 
 現在您可以從命令列執行主控台應用程式：
 
-```console
+```dotnetcli
 dotnet run apple banana
 ```
 
@@ -164,7 +164,7 @@ dotnet run apple banana
 1. 若要取得 Ionide 的程式碼編輯功能， F#您的檔案必須儲存至磁片，以及在 Visual Studio Code 工作區中開啟的資料夾內。
 1. 如果您已對系統進行變更，或已安裝 Ionide 的必要條件 Visual Studio Code 開啟，請重新開機 Visual Studio Code。
 1. 如果您的專案目錄中有不正確字元，Ionide 可能無法使用。  如果是這種情況，請重新命名您的專案目錄。
-1. 如果沒有可用的 Ionide 命令，請檢查您的[Visual Studio Code keybindings](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) ，以查看是否不小心覆寫它們。
+1. 如果沒有可用的 Ionide 命令，請檢查您[Visual Studio Code 的金鑰](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization)系結，以查看您是否意外覆寫它們。
 1. 如果您的電腦上的 Ionide 已中斷，而上述未修正您的問題，請嘗試移除電腦上的 `ionide-fsharp` 目錄，然後重新安裝外掛程式套件。
 1. 如果無法載入專案（ F#方案總管將會顯示這種情況），請以滑鼠右鍵按一下該專案，然後按一下 [**查看詳細資料**] 以取得更多診斷資訊。
 

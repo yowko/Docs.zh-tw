@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a35e06837ac35a743a3f0424cb2a7ad5bbeb5400
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 0af160b720b9eddd9e72689c920316bffdc6d21e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589966"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710215"
 ---
 # <a name="saving-and-writing-a-document"></a>儲存與寫入文件
 載入及儲存 <xref:System.Xml.XmlDocument> 時，儲存的文件與原始文件在下列方面可能不同：  
@@ -22,7 +20,7 @@ ms.locfileid: "64589966"
   
 - 屬性之間的所有泛空白字元會縮減為單一空格字元。  
   
-- 變更項目之間的泛空白字元。 保留顯著的泛空白字元，但不保留不顯著的泛空白字元。 不過，在儲存文件時，依預設會使用 <xref:System.Xml.XmlTextWriter> **Indenting** 模式將輸出整齊列印出來，使其易於讀取。  
+- 變更項目之間的泛空白字元。 保留顯著的泛空白字元，但不保留不顯著的泛空白字元。 但是儲存檔時，預設會使用 <xref:System.Xml.XmlTextWriter>**縮**排模式，以整齊地列印輸出，使其更容易閱讀。  
   
 - 依預設，會將屬性值周圍的引號字元變更為雙引號。 您可以使用 <xref:System.Xml.XmlTextReader.QuoteChar%2A> 上的 <xref:System.Xml.XmlTextWriter> 屬性，將引號字元設為雙引號或單引號。  
   
@@ -35,7 +33,7 @@ ms.locfileid: "64589966"
 ## <a name="writing-an-xmldeclaration"></a>寫入 XmlDeclaration  
  除了 <xref:System.Xml.XmlDocument> 及 <xref:System.Xml.XmlDeclaration> 的 <xref:System.Xml.XmlNode.OuterXml%2A> 方法之外，<xref:System.Xml.XmlNode.InnerXml%2A>、<xref:System.Xml.XmlNode.WriteTo%2A> 及 <xref:System.Xml.XmlDocument> 的<xref:System.Xml.XmlDocument.Save%2A> 及 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 成員也會建立 XML 宣告。  
   
- 對於 <xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlNode.OuterXml%2A> 與 <xref:System.Xml.XmlDocument.InnerXml%2A>、<xref:System.Xml.XmlDocument.Save%2A> 及 <xref:System.Xml.XmlDocument.WriteTo%2A> 方法的 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 屬性，XML 宣告中寫出的編碼取自 <xref:System.Xml.XmlDeclaration> 節點。 如果不存在 <xref:System.Xml.XmlDeclaration> 節點，則不會寫出 <xref:System.Xml.XmlDeclaration>。如果 <xref:System.Xml.XmlDeclaration> 節點中沒有編碼，則不會在 XML 宣告中寫出編碼。  
+ 對於 <xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlNode.OuterXml%2A> 與 <xref:System.Xml.XmlDocument.InnerXml%2A>、<xref:System.Xml.XmlDocument.Save%2A> 及 <xref:System.Xml.XmlDocument.WriteTo%2A> 方法的 <xref:System.Xml.XmlDocument.WriteContentTo%2A> 屬性，XML 宣告中寫出的編碼取自 <xref:System.Xml.XmlDeclaration> 節點。 如果沒有 <xref:System.Xml.XmlDeclaration> 節點，<xref:System.Xml.XmlDeclaration> 就不會寫出。如果 <xref:System.Xml.XmlDeclaration> 節點中沒有編碼，則不會在 XML 宣告中寫出編碼。  
   
  <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> 及 <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> 方法始終會寫出 <xref:System.Xml.XmlDeclaration>。 這些方法從其正寫入的寫入器取得編碼。 換言之，寫入器上的編碼值會覆寫文件上及 <xref:System.Xml.XmlDeclaration> 中的編碼。 例如，下列程式碼不會將編碼寫入輸出檔案 `out.xml` 中發現的 XML 宣告。  
   
@@ -55,7 +53,7 @@ doc.Save(tw);
   
  針對 <xref:System.Xml.XmlDocument.Save%2A> 方法，會使用 <xref:System.Xml.XmlWriter.WriteStartDocument%2A> 類別中的 <xref:System.Xml.XmlWriter> 方法寫出 XML 宣告。 因此，覆寫 <xref:System.Xml.XmlWriter.WriteStartDocument%2A> 方法會變更文件開頭的寫入方式。  
   
- 針對 <xref:System.Xml.XmlNode.OuterXml%2A>、<xref:System.Xml.XmlDeclaration.WriteTo%2A> 及 <xref:System.Xml.XmlNode.InnerXml%2A> 的 <xref:System.Xml.XmlDeclaration> 成員，如果未設定 <xref:System.Xml.XmlDeclaration.Encoding%2A> 屬性，則不會寫出編碼。否則，在 XML 宣告中寫出之編碼與在 <xref:System.Xml.XmlDeclaration.Encoding%2A> 屬性中發現的編碼相同。  
+ 針對 <xref:System.Xml.XmlNode.OuterXml%2A>、<xref:System.Xml.XmlDeclaration.WriteTo%2A>和 <xref:System.Xml.XmlNode.InnerXml%2A>的 <xref:System.Xml.XmlDeclaration> 成員，如果未設定 [<xref:System.Xml.XmlDeclaration.Encoding%2A>] 屬性，則不會寫出編碼。否則，在 XML 宣告中寫出的編碼與在 <xref:System.Xml.XmlDeclaration.Encoding%2A> 屬性中找到的編碼相同。  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>使用 OuterXml 屬性寫入文件內容  
  <xref:System.Xml.XmlNode.OuterXml%2A> 屬性是全球資訊網協會 (W3C) XML 文件物件模型 (DOM) 標準的 Microsoft 擴充程式。 <xref:System.Xml.XmlNode.OuterXml%2A> 屬性可用於取得整個 XML 文件的標記，或僅取得單一節點及其子節點的標記。 <xref:System.Xml.XmlNode.OuterXml%2A> 會傳回表示給定節點及其所有子節點的標記。  
@@ -90,6 +88,6 @@ string xml = mydoc.DocumentElement.OuterXml;
   
  相反地，如果您需要子節點的內容，則可使用 <xref:System.Xml.XmlNode.InnerText%2A> 屬性。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

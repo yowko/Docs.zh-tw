@@ -6,14 +6,12 @@ helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e17fa07fe2dd19cdcd03bc923940abfef886219c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: df05150a5bdd5d24766be252f5cec9a436720d8c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283128"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708941"
 ---
 # <a name="exception-class-and-properties"></a>Exception 類別和屬性
 
@@ -39,6 +37,6 @@ ms.locfileid: "74283128"
 
 建議只擲回及攔截衍生自 <xref:System.Exception> 的物件，但您可以擲回任何衍生自 <xref:System.Object> 類別的物件作為例外狀況。 請注意，並非所有語言都能擲回及攔截不是衍生自 <xref:System.Exception> 的物件。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [例外狀況](index.md)

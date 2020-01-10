@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140394"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344762"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 分析工具和 Windows 市集應用程式
 
@@ -25,7 +25,7 @@ ms.locfileid: "73140394"
 
 ## <a name="introduction"></a>簡介
 
-如果您已將它放在簡介段落之後，您就會熟悉 CLR 分析 API。 您已經撰寫一種診斷工具，適用于受管理的桌面應用程式。 現在您想知道該怎麼做，讓您的工具可與受控的 Windows Store 應用程式搭配使用。 也許您已經試過這項工作，併發現它不是一項簡單的任務。 事實上，所有工具開發人員可能都不會對您有許多考慮。 例如:
+如果您已將它放在簡介段落之後，您就會熟悉 CLR 分析 API。 您已經撰寫一種診斷工具，適用于受管理的桌面應用程式。 現在您想知道該怎麼做，讓您的工具可與受控的 Windows Store 應用程式搭配使用。 也許您已經試過這項工作，併發現它不是一項簡單的任務。 事實上，所有工具開發人員可能都不會對您有許多考慮。 例如：
 
 - Windows Store 應用程式會在具有嚴重降低許可權的內容中執行。
 
@@ -53,7 +53,7 @@ ms.locfileid: "73140394"
 
 **Profiler DLL**
 
-這是載入所分析應用程式之進程空間的元件。 此元件（也稱為 profiler 「代理程式」）會執行[ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback 介面](icorprofilercallback-interface.md)（2、3等）介面，並使用[ICorProfilerInfo](icorprofilerinfo-interface.md)（2，3，等）介面來收集有關的資料。分析的應用程式，並可能修改應用程式行為的各個層面。
+這是載入所分析應用程式之進程空間的元件。 此元件（也稱為 profiler 「代理程式」）會執行[ICorProfilerCallback](icorprofilercallback-interface.md)[ICorProfilerCallback 介面](icorprofilercallback-interface.md)（2、3等）介面，並使用[ICorProfilerInfo](icorprofilerinfo-interface.md)（2，3）介面來收集分析應用程式的相關資料，並可能修改應用程式行為的各個層面。
 
 **Profiler UI**
 
@@ -112,7 +112,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 ### <a name="startup-load"></a>啟動載入
 
-一般來說，在傳統型應用程式中，分析工具 UI 會藉由初始化包含必要 CLR 分析 API 環境變數（也就是 `COR_PROFILER`、`COR_ENABLE_PROFILING`和 `COR_PROFILER_PATH`）的環境區塊，來提示您分析工具 DLL 的啟動負載，然後建立新的使用該環境區塊的處理常式。 Windows Store 應用程式也是如此，但機制不同。
+一般來說，在傳統型應用程式中，分析工具 UI 會藉由初始化包含必要 CLR 分析 API 環境變數（也就是 `COR_PROFILER`、`COR_ENABLE_PROFILING`和 `COR_PROFILER_PATH`）的環境區塊，然後使用該環境區塊建立新的進程，來提示您分析工具 DLL 的啟動負載。 Windows Store 應用程式也是如此，但機制不同。
 
 **不要以提高許可權執行**
 
@@ -302,7 +302,7 @@ tempDir = appData.TemporaryFolder.Path;
 
 如果您想要讓分析工具 UI 與 Profiler DLL 之間有簡單的信號，您可以在 Windows Store 應用程式和桌面應用程式中使用事件。
 
-從您的分析工具 DLL，您可以直接呼叫[CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa)函式，以您喜歡的任何名稱來建立名為的事件。 例如:
+從您的分析工具 DLL，您可以直接呼叫[CreateEventEx](/windows/desktop/api/synchapi/nf-synchapi-createeventexa)函式，以您喜歡的任何名稱來建立名為的事件。 例如：
 
 ```cpp
 // Profiler DLL in Windows Store app (C++).
@@ -342,7 +342,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 
 ### <a name="managed-and-non-managed-winmds"></a>受控和非受控 Winmd
 
-如果開發人員使用 Visual Studio 建立新的 Windows 執行階段元件專案，則該專案的組建會產生 WinMD 檔案，以描述開發人員所撰寫的中繼資料（類別、介面等的類型描述）。 如果此專案是以C#或 VB 撰寫的 managed 語言專案，則相同的 WinMD 檔案也會包含這些類型的實作為（表示它包含從開發人員的原始程式碼所編譯的所有 IL）。 這類檔案稱為受控 WinMD 檔案。 它們很有趣，因為它們同時包含 Windows 執行階段中繼資料和基礎執行。
+如果開發人員使用 Visual Studio 建立新的 Windows 執行階段元件專案，則該專案的組建會產生 WinMD 檔案，以描述開發人員所撰寫的中繼資料（類別、介面等的類型描述）。 如果此專案是以C#或 Visual Basic 撰寫的 managed 語言專案，則相同的 WinMD 檔案也會包含這些類型的實作為（表示它包含從開發人員的原始程式碼所編譯的所有 IL）。 這類檔案稱為受控 WinMD 檔案。 它們很有趣，因為它們同時包含 Windows 執行階段中繼資料和基礎執行。
 
 相反地，如果開發人員建立的 Windows 執行階段元件專案C++，則該專案的組建會產生僅包含中繼資料的 WinMD 檔案，並將此實編譯成個別的原生 DLL。 同樣地，隨附于 Windows SDK 中的 WinMD 檔案只包含中繼資料，並編譯成個別的原生 Dll，並隨附于 Windows 中。
 
@@ -382,7 +382,7 @@ WinMD 檔案（例如一般模組）包含可以透過[中繼資料 api](../../.
 
 相關的重點是，您的分析工具所建立之執行緒上的呼叫一律會視為同步，即使這些呼叫是從您的其中一個 Profiler DLL 的[ICorProfilerCallback](icorprofilercallback-interface.md)方法以外的地方進行。 至少，這是用來做為案例的情況。 既然 CLR 已將分析工具的執行緒轉換成 managed 執行緒，因為您呼叫[ForceGC 方法](icorprofilerinfo-forcegc-method.md)，該執行緒就不再被視為分析工具的執行緒。 因此，CLR 會針對該執行緒強制執行更嚴格的定義，亦即呼叫必須源自其中一個分析工具 DLL 的[ICorProfilerCallback](icorprofilercallback-interface.md)方法，才能限定為同步。
 
-這在實務上的意義為何？ 大部分的[ICorProfilerInfo](icorprofilerinfo-interface.md)方法都只能以同步方式呼叫，否則會立即失敗。 因此，如果您的分析工具 DLL 重複使用[ForceGC 方法](icorprofilerinfo-forcegc-method.md)執行緒，以進行通常在分析工具建立的執行緒上進行的其他呼叫（例如， [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)或[RequestRevert](icorprofilerinfo4-requestrevert-method.md)），您就會遇到問題. 即使是非同步安全的函式（例如[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) ），從 managed 執行緒呼叫時也有特殊的規則。 （如需詳細資訊，請參閱 blog 文章分析工具[堆疊的流覽：基本概念和](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)更多）。
+這在實務上的意義為何？ 大部分的[ICorProfilerInfo](icorprofilerinfo-interface.md)方法都只能以同步方式呼叫，否則會立即失敗。 因此，如果您的分析工具 DLL 重複使用[ForceGC 方法](icorprofilerinfo-forcegc-method.md)執行緒，以進行通常在分析工具建立的執行緒上進行的其他呼叫（例如， [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)、 [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)或[RequestRevert](icorprofilerinfo4-requestrevert-method.md)），您就會遇到問題。 即使是非同步安全的函式（例如[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) ），從 managed 執行緒呼叫時也有特殊的規則。 （如需詳細資訊，請參閱 blog 文章分析工具[堆疊的流覽：基本概念和](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)更多）。
 
 因此，我們建議您 Profiler DLL 所建立的任何執行緒呼叫[ForceGC 方法](icorprofilerinfo-forcegc-method.md)，都應該*僅*用於觸發 GC，然後回應 gc 回呼的目的。 它不應該呼叫分析 API 來執行其他工作，例如堆疊取樣或卸離。
 

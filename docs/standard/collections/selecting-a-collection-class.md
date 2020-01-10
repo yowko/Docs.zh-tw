@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 21c708f63faaedb9fbce60d7e4aef314f7a41ef8
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
-ms.translationtype: HT
+ms.openlocfilehash: fb03200c810290c970f7aa56a0e15d385aca7ca8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185554"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711346"
 ---
 # <a name="selecting-a-collection-class"></a>選取集合類別
 
@@ -83,7 +81,7 @@ ms.locfileid: "58185554"
   
  PLINQ 提供 LINQ to Objects 的平行實作，這項實作透過更有效率地使用多核心電腦，在許多情況下會提供更快的查詢執行速度。 如需詳細資訊，請參閱 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>

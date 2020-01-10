@@ -15,15 +15,15 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: e9a646d60bb22507f4c6bcbcdf9222fd0ed18f02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b9216dba23f49e4d9fd99687e38f5c13addde8fb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345754"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636870"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本查詢作業 (Visual Basic)
-本主題提供 Visual Basic 中 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 運算式，以及您在查詢中執行的一些一般作業的簡介。 如需詳細資訊，請參閱下列主題：  
+本主題提供 Visual Basic 中的語言整合式查詢（LINQ）運算式的簡介，以及您在查詢中執行的一些一般作業類型。 如需詳細資訊，請參閱下列主題：  
   
  [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74345754"
  [逐步解說：在 Visual Basic 中撰寫查詢](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>指定資料來源（從）  
- 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，第一個步驟是指定您想要查詢的資料來源。 因此，查詢中的 `From` 子句一律會先出現。 查詢運算子會根據來源的類型來選取和塑造結果。  
+ 在 LINQ 查詢中，第一個步驟是指定您想要查詢的資料來源。 因此，查詢中的 `From` 子句一律會先出現。 查詢運算子會根據來源的類型來選取和塑造結果。  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
@@ -124,7 +124,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Garcia、Hugo  
   
- Garcia、Debra  
+ Garcia, Debra  
   
  Tucker、Lance  
   

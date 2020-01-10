@@ -1,6 +1,5 @@
 ---
 title: 繼承 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - abstract methods [C#]
@@ -10,16 +9,16 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 3211a4741eb56ad9e138a848e52fabbc1d3daaeb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 3c59741fa646111d27f6d1087a9275178c1a41a1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924475"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705544"
 ---
 # <a name="inheritance-c-programming-guide"></a>繼承 (C# 程式設計手冊)
 
-繼承是物件導向程式設計的三個主要特性之一，另外兩個是封裝和多型。 繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。 成員被繼承的類別稱為「基底類別」  ，而繼承這種成員的類別即稱為「衍生類別」  。 衍生類別只能有一個基底類別。 不過，繼承是可轉移的。 如果 ClassC 衍生自 ClassB，而 ClassB 衍生自 ClassA，則 ClassC 會繼承在 ClassB 和 ClassA 中宣告的所有成員。  
+繼承是物件導向程式設計的三個主要特性之一，另外兩個是封裝和多型。 繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。 成員被繼承的類別稱為「基底類別」，而繼承這種成員的類別即稱為「衍生類別」。 衍生類別只能有一個基底類別。 不過，繼承是可轉移的。 如果 ClassC 衍生自 ClassB，而 ClassB 衍生自 ClassA，則 ClassC 會繼承在 ClassB 和 ClassA 中宣告的所有成員。  
   
 > [!NOTE]
 > 結構不支援繼承，但可以實作介面。 如需詳細資訊，請參閱[介面](../interfaces/index.md)。  
@@ -43,7 +42,7 @@ ms.locfileid: "69924475"
  如果您想要防止使用 [new](../../language-reference/operators/new-operator.md) 運算子來直接具現化，您可以將類別宣告為[抽象](../../language-reference/keywords/abstract.md)。 如果這麼做，只有在新類別衍生自此類別時，才能使用此類別。 抽象類別可以包含一或多個本身宣告為抽象的方法簽章。 這些簽章可指定參數和傳回值，但沒有實作 (方法主體)。 抽象類別不需要包含抽象成員；但如果某個類別包含抽象成員，則該類別本身必須宣告為抽象。 本身不是抽象的衍生類別，必須為來自抽象基底類別的所有抽象方法提供實作。 如需詳細資訊，請參閱[抽象和密封類別以及類別成員](./abstract-and-sealed-classes-and-class-members.md)。  
   
 ## <a name="interfaces"></a>介面  
- 「介面」  是一種參考型別，某些方面與只包含抽象成員的抽象基底類別類似。 當類別實作介面時，必須為介面的所有成員提供實作。 一個類別可以實作多個介面，但只能衍生自單一直接基底類別。  
+ 「介面」是一種參考型別，某些方面與只包含抽象成員的抽象基底類別類似。 當類別實作介面時，必須為介面的所有成員提供實作。 一個類別可以實作多個介面，但只能衍生自單一直接基底類別。  
   
  介面可用來為不一定有「是」關聯性的類別，定義其特定功能。 例如，所有必須啟用用戶端程式碼的類別或結構，都可以實作 <xref:System.IEquatable%601?displayProperty=nameWithType> 介面來判斷屬於該類型的兩個物件是否對等 (不過其類型會定義等價)。 <xref:System.IEquatable%601> 不表示基底類別和衍生類別之間存在「是」這類的關聯性 (例如 `Mammal` 是 `Animal`)。 如需詳細資訊，請參閱[介面](../interfaces/index.md)。  
   
@@ -53,9 +52,9 @@ ms.locfileid: "69924475"
 ## <a name="derived-class-hiding-of-base-class-members"></a>衍生類別隱藏基底類別成員  
  衍生類別可藉由以相同的名稱和簽章宣告基底類別成員，來隱藏這些成員。 您可以使用 [new](../../language-reference/keywords/new-modifier.md) 修飾詞，明確指示成員不是用於基底成員的覆寫。 您不一定要使用 [new](../../language-reference/keywords/new-modifier.md)，但如果未使用 [new](../../language-reference/keywords/new-modifier.md)，則會產生編譯器警告。 如需詳細資訊，請參閱[使用 Override 和 New 關鍵字進行版本控制](./versioning-with-the-override-and-new-keywords.md)和[了解使用 Override 和 New 關鍵字的時機](./knowing-when-to-use-override-and-new-keywords.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)
-- [class](../../language-reference/keywords/class.md)
+- [Class - 類別](../../language-reference/keywords/class.md)
 - [struct](../../language-reference/keywords/struct.md)

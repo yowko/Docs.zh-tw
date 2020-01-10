@@ -1,17 +1,16 @@
 ---
 title: 搭配陣列使用 foreach - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 05/23/2018
 helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: a22cb939370b38780881eca0d9585a14002c8250
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: HT
+ms.openlocfilehash: bb121b0f5d990ef6e596b34a45606e2abde6811a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966407"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705674"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>搭配陣列使用 foreach (C# 程式設計手冊)
 
@@ -27,7 +26,7 @@ ms.locfileid: "56966407"
 
 但是在使用多維陣列時，使用巢狀 [for](../../language-reference/keywords/for.md) 迴圈能夠讓您進一步控制處理陣列元素的順序。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Array>
 - [C# 程式設計指南](../index.md)

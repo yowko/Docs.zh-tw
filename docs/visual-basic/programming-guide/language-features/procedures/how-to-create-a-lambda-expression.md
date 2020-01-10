@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: bb0bdb3c10a7df2ca954fbdb9382a25bf805068d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1c65841e4c124252cfa41bcd4d0c305a426687ee
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349747"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632346"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>如何：建立 Lambda 運算式 (Visual Basic)
 *Lambda 運算式*是不具有名稱的函數或副程式。 只要委派型別有效，就可以使用 lambda 運算式。  
@@ -65,7 +65,7 @@ ms.locfileid: "74349747"
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3. 請按 ENTER 鍵。 系統會自動新增 `End Function` 語句。  
+3. 按 ENTER。 系統會自動新增 `End Function` 語句。  
   
 4. 在函式主體內，新增下列程式碼以建立運算式並傳回值。 您不能使用 `As` 子句來指定傳回型別。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "74349747"
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3. 請按 ENTER 鍵。 系統會自動新增 `End Sub` 語句。  
+3. 按 ENTER。 系統會自動新增 `End Sub` 語句。  
   
 4. 在函式主體內，新增下列程式碼，以在叫用副程式時執行。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "74349747"
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- 上一個範例相當於下列程式碼，以 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 語法撰寫：  
+ 上一個範例相當於下列程式碼，這是以語言整合式查詢（LINQ）語法撰寫的：  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bb231df9ed33b89fa15cde998379b2964cf32ff9
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 9b868bd5ed77788cd9b44c11623ae38eba58153c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204763"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711359"
 ---
 # <a name="collections-and-data-structures"></a>集合和資料結構
 使用集合進行儲存與管理時，通常可以更有效率地處理類似的資料。 您可以使用 <xref:System.Array?displayProperty=nameWithType> 類別或 <xref:System.Collections>、<xref:System.Collections.Generic>、<xref:System.Collections.Concurrent> 和 System.Collections.Immutable 命名空間中的類別，來新增、移除和修改集合中的個別項目或某個範圍項目。  
@@ -50,7 +48,7 @@ ms.locfileid: "74204763"
   
 - **一致的下限**  
   
-     集合的下限是其第一個元素的索引。 <xref:System.Collections> 命名空間中的所有索引集合下限皆為零，表示它們為 0 索引。 根據預設，<xref:System.Array> 下限為零，但使用 **建立**Array<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 類別的執行個體時，可以定義其他下限。  
+     集合的下限是其第一個元素的索引。 <xref:System.Collections> 命名空間中的所有索引集合下限皆為零，表示它們為 0 索引。 根據預設，<xref:System.Array> 下限為零，但使用 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 建立 **Array** 類別的執行個體時，可以定義其他下限。  
   
 - **從多個執行緒存取的同步處理** (僅限 <xref:System.Collections> 類別)。  
   
@@ -78,15 +76,15 @@ ms.locfileid: "74204763"
 |-----------|-----------------|  
 |[選取集合類別](../../../docs/standard/collections/selecting-a-collection-class.md)|說明不同的集合，並協助您選取用於您案例的集合。|  
 |[常用的集合類型](../../../docs/standard/collections/commonly-used-collection-types.md)|說明常用的泛型與非泛型集合類型，例如 <xref:System.Array?displayProperty=nameWithType>、<xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。|  
-|[使用泛型集合的時機](../../../docs/standard/collections/when-to-use-generic-collections.md)|說明泛型集合類型的用法。|  
+|[何時使用泛型集合](../../../docs/standard/collections/when-to-use-generic-collections.md)|說明泛型集合類型的用法。|  
 |[在集合內比較和排序](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|討論在集合中使用相等比較和排序比較。|  
-|[排序的集合類型](../../../docs/standard/collections/sorted-collection-types.md)|說明經過排序之集合的效能與特性|  
+|[排序集合類型](../../../docs/standard/collections/sorted-collection-types.md)|說明經過排序之集合的效能與特性|  
 |[Hashtable 和 Dictionary 集合類型](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|說明泛型和非泛型雜湊字典類型的功能。|  
 |[安全執行緒集合](../../../docs/standard/collections/thread-safe/index.md)|說明如 <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 和 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> 這類集合類型，這類類型支援從多個執行緒進行安全有效率的並行存取。|  
 |System.Collections.Immutable|介紹不可變的集合並提供集合類型的連結。|  
   
 <a name="BKMK_Reference"></a>   
-## <a name="reference"></a>參考  
+## <a name="reference"></a>參考資料  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

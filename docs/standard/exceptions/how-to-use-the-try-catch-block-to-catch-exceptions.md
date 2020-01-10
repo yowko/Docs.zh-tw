@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Try-Catch 區塊攔截例外狀況
+title: 操作說明：使用 Try/Catch 區塊攔截例外狀況
 ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,12 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eaa389f461e70aae41f2e09437fd725a3bcefa5e
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696725"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708462"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>如何使用 try/catch 區塊攔截例外狀況
 
@@ -38,7 +36,7 @@ ms.locfileid: "71696725"
 > [!NOTE]
 > 多數程式碼可以擲回例外狀況，而且某些例外狀況 (例如 <xref:System.OutOfMemoryException>) 可能在任何時間由 CLR 本身擲回。 雖然應用程式不必處理這些例外狀況，但是請在撰寫供他人使用的程式庫時注意其發生的可能性。 如需何時在 `try` 區塊中設定程式碼的建議，請參閱[例外狀況的最佳做法](best-practices-for-exceptions.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [例外狀況](index.md)
 - [在 .NET 中處理 I/O 錯誤](../io/handling-io-errors.md)
