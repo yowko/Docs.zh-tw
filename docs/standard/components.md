@@ -5,18 +5,18 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4e787377bf954de3be499ae0fc74ef274a61e129
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 4f52a89179e241dcfce5c888e03518d878009175
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552878"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348051"
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
 .NET 應用程式是針對一或多個「.NET 實作」所開發並在其中執行。  .NET 實作包括 .NET Framework、.NET Core 和 Mono。 所有 .NET 實作有一個通用的 API 規格，稱為 .NET Standard。 本文提供上述每個概念的簡介。
 
-## <a name="net-standard"></a>.NET Standard
+## <a name="net-standard"></a>.NET 標準
 
 .NET Standard 是一組 API，由 .NET 實作的基底類別庫所實作。 正式地說，它是構成制式協定的 .NET API 規格，讓您據以編譯程式碼。 各個 .NET 實作中都會實作這些協定。 這會跨不同的 .NET 實作啟用可攜性，以有效地讓您的程式碼在任何地方執行。
 
@@ -37,7 +37,7 @@ Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.
 
 ### <a name="net-core"></a>.NET Core
 
-.NET Core 是 .NET 的跨平台實作，目的是處理大規模的伺服器與雲端工作負載。 可在 Windows、macOS 及 Linux 執行。 它會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在 .NET Core 上執行。 [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows Forms](../framework/winforms/windows-forms-overview.md) 和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 都是在 .NET Core 上執行。
+.NET Core 是 .NET 的跨平台實作，目的是處理大規模的伺服器與雲端工作負載。 它會在 Windows、macOS 和 Linux 上執行。 它會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在 .NET Core 上執行。 [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows Forms](../framework/winforms/windows-forms-overview.md) 和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 都是在 .NET Core 上執行。
 
 若要深入了解 .NET Core，請參閱 [.NET Core 指南](../core/index.md)及[為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md)。
 
@@ -49,7 +49,7 @@ Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.
 
 ### <a name="mono"></a>Mono
 
-Mono 是需要小型執行階段時主要使用的 .NET 實作。 它是支援 Android、Mac、iOS、tvOS 和 watchOS 版 Xamarin 應用程式的執行階段，主要著重於較小的使用量。 Mono 也支援使用 Unity 引擎所建置的遊戲。
+Mono 是需要小型執行階段時主要使用的 .NET 實作。 它是在 Android、macOS、iOS、tvOS 和 watchOS 上提供 Xamarin 應用程式的執行時間，主要著重于較小的使用量。 Mono 也支援使用 Unity 引擎所建置的遊戲。
 
 它支援目前發行的所有 .NET Standard 版本。
 
@@ -61,7 +61,7 @@ Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS �
 
 ### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
 
-UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 其設計目的是為了整合您可能想要設為目標的不同裝置類型，包括電腦、平板電腦、平板手機、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 您可以使用 C++、C#、VB.NET 和 JavaScript 來撰寫應用程式。 使用 C# 和 VB.NET 時，.NET API 是由 .NET Core 所提供。
+UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 其設計目的是為了整合您可能想要設為目標的不同裝置類型，包括電腦、平板電腦、平板手機、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 應用程式可以用C++、 C#、Visual Basic 和 JavaScript 撰寫。 當使用C#和 Visual Basic 時，.net api 是由 .net Core 提供。
 
 若要深入了解 UWP，請參閱[通用 Windows 平台簡介](/windows/uwp/get-started/universal-application-platform-guide)。
 
@@ -112,4 +112,4 @@ C#語言和通用語言基礎結構（CLI）規格會透過[ECMA International®
 - [.NET Framework 指南](../framework/index.md)
 - [C# 指南](../csharp/index.yml)
 - [F# 指南](../fsharp/index.yml)
-- [VB.NET 指南](../visual-basic/index.md)
+- [Visual Basic 指南](../visual-basic/index.yml)
