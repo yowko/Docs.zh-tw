@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0b4727ead8abb9b3618f8b9dda8f7a9eb4b2321f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742470"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710748"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>從 XML 文件推斷結構描述
 本主題說明如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 類別，從 XML 文件結構推斷 XML 結構描述定義語言 (XSD) 結構描述。  
@@ -82,7 +80,7 @@ ms.locfileid: "54742470"
 ## <a name="schemas-that-cannot-be-refined"></a>無法進一步調整的結構描述  
  有些 W3C XML 結構描述建構在指定要調整的型別時會擲回例外狀況，則 XML 結構描述定義語言 (XSD) 結構描述 <xref:System.Xml.Schema.XmlSchemaInference> 處理序無法處理這類的結構描述。 最上層建構元不屬於序列的複雜型別即是一例。 在結構描述物件模型 (SOM) 中，它會對應至 <xref:System.Xml.Schema.XmlSchemaComplexType> 屬性不屬於 <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> 之執行個體的 <xref:System.Xml.Schema.XmlSchemaSequence>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

@@ -1,16 +1,15 @@
 ---
 title: 相等比較 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: b39ccd87e3b45628a2fe1d7bae7d6434331b29fc
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: d8dc1fd9ba99116d4d6ec84ca6e48b4307b30dbb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635154"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699180"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>相等比較 (C# 程式設計指南)
 

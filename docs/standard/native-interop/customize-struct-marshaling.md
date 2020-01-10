@@ -1,18 +1,16 @@
 ---
 title: 自訂結構封送處理 - .NET
 description: 了解如何自訂 .NET 如何以原生表示法封送處理您的結構。
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423997"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706344"
 ---
 # <a name="customizing-structure-marshaling"></a>自訂結構封送處理
 
@@ -249,7 +247,7 @@ struct UTF8String
 > [!NOTE]
 > 使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 需要 .NET Framework 4.7 (或更新版本) 或 .NET Core 1.1 (或更新版本)。 它在 .NET Standard 2.0 中不提供。
 
-若您要處理 COM API，您可能必須將字串封送處理為 `BSTR`。 使用 <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> 值時，您可以將字串封送處理為 `BSTR`。
+若您要處理 COM API，您可能必須將字串封送處理為 `BSTR`。 使用 <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> 值，您可以將字串封送處理為 `BSTR`。
 
 ```csharp
 public struct BString
@@ -266,7 +264,7 @@ struct BString
 };
 ```
 
-使用 WinRT 型 API 時，您可能需要將字串封送處理為 `HSTRING`。  使用 <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> 值時，您可以將字串封送處理為 `HSTRING`。
+使用 WinRT 型 API 時，您可能需要將字串封送處理為 `HSTRING`。  使用 <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> 值，您可以將字串封送處理為 `HSTRING`。
 
 ```csharp
 public struct HString

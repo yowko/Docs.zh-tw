@@ -3,14 +3,12 @@ title: XSLT 編譯器 (xsltc.exe)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 729e6caa36ed8c2f6e77153f8d8ae356513b0603
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 83d880da65c2fc0730819f0a51c4e8b29deb4c8f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71956986"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709721"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT 編譯器 (xsltc.exe)
 XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後編譯的樣式表可以直接傳遞到新的 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。 您無法使用 xsltc.exe 產生簽署的組件。  
@@ -29,15 +27,15 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |--------------|-----------------|  
 |`sourceFile`|指定樣式表的名稱。 樣式表必須是本機檔案或位於內部網路上。|  
   
-## <a name="options"></a>選項。  
+## <a name="options"></a>選項  
   
 |選項|描述|  
 |------------|-----------------|  
 |`/c[lass]:` `name`|為下列樣式表的類別指定名稱。 類別名稱可以是完整名稱。<br /><br /> 類別名稱預設為樣式表的名稱。 例如，如果編譯了樣式表 customers.xsl，預設類別名稱就是 customers。|  
-|`/debug[`+&#124;-`]`|指定是否要產生偵錯資訊。<br /><br /> 指定 `+` 或 `/debug` 會讓編譯器產生偵錯資訊，並將其放在程式資料庫 (PDB) 檔案中。 產生的 PDB 檔案名稱是 `assemblyName`.pdb。<br /><br /> 指定 `-` (當您未指定 `/debug` 時，它就會生效) 不會建立任何偵錯資訊。 產生正式版本組件。 **注意：** 在偵錯模式下編譯會對 XSLT 效能造成顯著的影響。|  
+|`/debug[`+&#124;-`]`|指定是否要產生偵錯資訊。<br /><br /> 指定 `+` 或 `/debug` 會讓編譯器產生偵錯資訊，並將其放在程式資料庫 (PDB) 檔案中。 產生的 PDB 檔案名稱是 `assemblyName`.pdb。<br /><br /> 指定 `-` (當您未指定 `/debug` 時，它就會生效) 不會建立任何偵錯資訊。 產生正式版本組件。 **注意：** 在偵錯模式下編譯對於 XSLT 效能會有顯著的影響。|  
 |`/help`|顯示工具的命令語法和選項。|  
 |`/nologo`|隱藏編譯器著作權訊息，使其無法顯示。|  
-|`/platform:` `string`|指定可執行組件的平台。 以下將描述有效的平台值：<br /><br /> `x86` 會編譯將由 32 位元、x86 相容的 Common Language Runtime 所執行的組件。<br /><br /> `x64` 會在支援 AMD64 或 EM64T 指令集的電腦上編譯將由 64 位元 Common Language Runtime 所執行的組件。<br /><br /> Itanium 會在搭載 Itanium 處理器的電腦上編譯要由 64 位元通用語言執行平台執行的組件。<br /><br /> `anycpu` 會編譯要在任何平台上執行的組件。 這是預設值。|  
+|`/platform:` `string`|指定可執行組件的平台。 以下將描述有效的平台值：<br /><br /> `x86` 會編譯將由 32 位元、x86 相容的 Common Language Runtime 所執行的組件。<br /><br /> `x64` 會在支援 AMD64 或 EM64T 指令集的電腦上編譯將由 64 位元 Common Language Runtime 所執行的組件。<br /><br /> Itanium 會在搭載 Itanium 處理器的電腦上編譯要由 64 位元通用語言執行平台執行的組件。<br /><br /> `anycpu` 會編譯要在任何平台上執行的組件。 這是預設設定。|  
 |`/out:` `assemblyName`|指定當做輸出的組件名稱。 組件名稱預設為主要樣式表的名稱，如果有多個樣式表存在，則預設為第一個樣式表名稱。<br /><br /> 如果此樣式表包含指令碼，指令碼會儲存到個別組件中。 指令碼組件名稱是從主要組件名稱產生而來。 例如，如果您指定 CustOrders.dll 當做組件名稱，第一個指令碼組件會命名為 CustOrders_Script1.dll。|  
 |`/settings:` `document+-, script+-, DTD+-,`|指定樣式表中是否允許 `document()` 函式、XSLT 指令碼或文件類型定義 (DTD)。<br /><br /> 預設行為會停用 DTD、`document()` 函式和指令碼的支援。|  
 |`@` `file`|讓您指定包含編譯器選項的檔案。|  
@@ -82,7 +80,7 @@ xsltc /settings:DTD+,script+ /out:myTest calc.xsl
 xsltc booksort.xsl output.xsl  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [如何：使用組件執行 XSLT 轉換](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)

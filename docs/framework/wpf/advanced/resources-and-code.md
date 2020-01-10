@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 3d504467c137c1e3f494e120217957661f4e75a3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 11903a9bae25b0646d944fb11038e07434996015
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458764"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559739"
 ---
 # <a name="resources-and-code"></a>資源和程式碼
 本概觀將著重於如何使用程式碼 (而非 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 語法) 來存取 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資源。 如需從 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 語法觀點來了解一般資源使用方式和資源的詳細資訊，請參閱 [XAML 資源](xaml-resources.md)。  
@@ -42,7 +42,7 @@ ms.locfileid: "73458764"
   
 <a name="objectaskey"></a>   
 ## <a name="using-objects-as-keys"></a>使用物件做為索引鍵  
- 大多數的資源使用方式會將資源的索引鍵設定為字串。 不過，各種 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能刻意不使用字串類型來指定索引鍵，而是此參數就是一個物件。 讓物件將資源當成索引鍵的功能，是透過 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 樣式和佈景主題支援來使用。 主題中做為非樣式控制項之預設樣式的樣式，每個都是由應用程式應套用至的控制項 <xref:System.Type>。 依類型做為索引鍵，會提供可靠的查閱機制，在每個控制項類型的預設執行個體上運作，而且類型可以依反射來偵測，並用於設定衍生類型的樣式，即使衍生的類型不具預設樣式也一樣。 您可以使用[X:Type 標記延伸](../../xaml-services/x-type-markup-extension.md)，為 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中定義的資源指定 <xref:System.Type> 的索引鍵。 還有類似的延伸可供支援 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能的其他非字串索引鍵使用方式使用，例如 [ComponentResourceKey 標記延伸](componentresourcekey-markup-extension.md)。  
+ 大多數的資源使用方式會將資源的索引鍵設定為字串。 不過，各種 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能刻意不使用字串類型來指定索引鍵，而是此參數就是一個物件。 讓物件將資源當成索引鍵的功能，是透過 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 樣式和佈景主題支援來使用。 主題中做為非樣式控制項之預設樣式的樣式，每個都是由應用程式應套用至的控制項 <xref:System.Type>。 依類型做為索引鍵，會提供可靠的查閱機制，在每個控制項類型的預設執行個體上運作，而且類型可以依反射來偵測，並用於設定衍生類型的樣式，即使衍生的類型不具預設樣式也一樣。 您可以使用[X:Type 標記延伸](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)，為 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中定義的資源指定 <xref:System.Type> 的索引鍵。 還有類似的延伸可供支援 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能的其他非字串索引鍵使用方式使用，例如 [ComponentResourceKey 標記延伸](componentresourcekey-markup-extension.md)。  
   
 ## <a name="see-also"></a>請參閱
 

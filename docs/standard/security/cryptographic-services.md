@@ -1,5 +1,5 @@
 ---
-title: 密碼編譯服務
+title: Cryptographic Services
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -24,16 +24,14 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6f0e268995449bc27b93c92ac8654c09fca9cd14
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 66af8126ab61d37065b9a328d5e088ed7bf4cbef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975831"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709201"
 ---
-# <a name="cryptographic-services"></a>密碼編譯服務
+# <a name="cryptographic-services"></a>Cryptographic Services
 
 公用網路（例如網際網路）無法在兩實體之間提供一種可安全通訊的方式。 這類網路上的通訊很容易被人讀取，或是被未經授權的協力廠商所修改。 密碼編譯有助於保護資料不受人檢視，可提供一種方式來偵測資料是否已遭修改，比起其他非安全的通道，它有助提供安全的通訊方式。 比方說，可以利用密碼編譯演算法來加密資料，並以加密的狀態傳送，而稍後由指定的一方解密資料。 假使第三方攔截到加密資料，也難以破解。
 
@@ -59,7 +57,7 @@ ms.locfileid: "73975831"
 
 若要達成這些目標，您可以將演算法與稱為密碼編譯基本類型的做法搭配組合，以創造密碼編譯的配置。 下表列出密碼編譯基本類型以及它們的用法。
 
-|密碼編譯基本類型|請使用|
+|密碼編譯基本類型|使用|
 |-----------------------------|---------|
 |私密金鑰加密 (對稱密碼編譯)|執行資料轉換，以防止第三方讀取。 這類加密使用單一共用的私密金鑰來加密和解密資料。|
 |公開金鑰加密 (非對稱密碼編譯)|執行資料轉換，以防止第三方讀取。 這類加密使用公開/私密金鑰組來加密和解密資料。|
@@ -90,15 +88,15 @@ CBC 加密使用初始化向量 (IV) 來加密純文字的第一個區塊，克�
 
 - <xref:System.Security.Cryptography.AesManaged> （在 .NET Framework 3.5 中引進）。
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>。
 
 - <xref:System.Security.Cryptography.HMACSHA1> (技術上算是秘密金鑰演算法，因為它代表使用結合私密金鑰的加密編譯雜湊函式所計算出的訊息驗證碼。 請參閱本主題稍後的 [雜湊值](#hash-values))
 
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>。
 
-- <xref:System.Security.Cryptography.RijndaelManaged>
+- <xref:System.Security.Cryptography.RijndaelManaged>。
 
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>。
 
 ## <a name="public-key-encryption"></a>公開金鑰加密
 
@@ -187,21 +185,21 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 .NET Framework 提供下列可執行雜湊演算法的類別：
 
-- <xref:System.Security.Cryptography.HMACSHA1>
+- <xref:System.Security.Cryptography.HMACSHA1>。
 
-- <xref:System.Security.Cryptography.MACTripleDES>
+- <xref:System.Security.Cryptography.MACTripleDES>。
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>。
 
-- <xref:System.Security.Cryptography.RIPEMD160>
+- <xref:System.Security.Cryptography.RIPEMD160>。
 
-- <xref:System.Security.Cryptography.SHA1Managed>
+- <xref:System.Security.Cryptography.SHA1Managed>。
 
-- <xref:System.Security.Cryptography.SHA256Managed>
+- <xref:System.Security.Cryptography.SHA256Managed>。
 
-- <xref:System.Security.Cryptography.SHA384Managed>
+- <xref:System.Security.Cryptography.SHA384Managed>。
 
-- <xref:System.Security.Cryptography.SHA512Managed>
+- <xref:System.Security.Cryptography.SHA512Managed>。
 
 - 所有安全雜湊演算法 (SHA) 的 HMAC 變數，訊息摘要 5 (MD5) 和 RIPEMD-160 演算法。
 

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：存取硬體加密裝置
+title: 如何：存取硬體加密裝置
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,19 +13,17 @@ helpviewer_keywords:
 - hardware encryption
 - CspParameters
 ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9c16c994e3976fb3ee569799461db1d1789a6186
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6ee22fd9fb0c11e22ac01ff83b3269e37e37763
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654387"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706171"
 ---
-# <a name="how-to-access-hardware-encryption-devices"></a>HOW TO：存取硬體加密裝置
+# <a name="how-to-access-hardware-encryption-devices"></a>如何：存取硬體加密裝置
 您可以使用 <xref:System.Security.Cryptography.CspParameters> 類別來存取硬體加密裝置。 例如，您可以使用這個類別來整合應用程式與智慧卡、硬體亂數產生器或特定密碼編譯演算法的硬體實作。  
   
- <xref:System.Security.Cryptography.CspParameters> 類別會建立存取正確安裝之硬體加密裝置的密碼編譯服務提供者 (CSP)。  您可以檢查下列登錄機碼使用登錄編輯程式 (Regedit.exe)，以驗證 CSP 的可用性：HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider.  
+ <xref:System.Security.Cryptography.CspParameters> 類別會建立存取正確安裝之硬體加密裝置的密碼編譯服務提供者 (CSP)。  您可以使用登錄編輯程式 (Regedit.exe) 檢查下列登錄機碼，以驗證 CSP 的可用性：HKEY_LOCAL_MACHINE\Software\Microsoft\Cryptography\Defaults\Provider。  
   
 ### <a name="to-sign-data-using-a-key-card"></a>使用金鑰卡簽署資料  
   

@@ -9,38 +9,37 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-author: KrzysztofCwalina
-ms.openlocfilehash: 44627aafd9ec779625413a0862412a8f6c408109
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b64a3ef6e12f8ea1abf7efd9c22f2f4333dda5c8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756880"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709162"
 ---
 # <a name="naming-resources"></a>命名資源
-因為可以透過特定的物件參考可當地語系化的資源，如同它們是屬性，就有一個資源的命名方針如下屬性指導方針。  
+因為可當地語系化的資源可以透過特定物件來參考，如同它們是屬性一樣，資源的命名指導方針類似于屬性方針。  
   
- **✓ DO** PascalCasing 用於資源索引鍵。  
+ **✓ DO**在資源金鑰中使用 PascalCasing。  
   
- **✓ DO** 提供描述性的而不是簡短的識別項。  
+ **✓確實**提供描述性而不是簡短識別碼。  
   
- **X DO NOT** 使用主要的 CLR 語言的語言特有的關鍵字。  
+ **X 不會**使用主要 CLR 語言的特定語言關鍵字。  
   
- **✓ DO** 使用只使用英數字元和底線命名資源。  
+ **✓**只在命名資源中使用英數位元和底線。  
   
- **✓ DO** 下列命名慣例用於例外狀況訊息的資源。  
+ **✓ DO**針對例外狀況訊息資源使用下列命名慣例。  
   
- 例外狀況型別名稱再加上例外狀況的簡短識別項，應該使用的資源識別碼：  
+ 資源識別碼應該是例外狀況類型名稱加上例外狀況的簡短識別碼：  
   
  `ArgumentExceptionIllegalCharacters`  
  `ArgumentExceptionInvalidName`  
  `ArgumentExceptionFileNameIsMalformed`  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -11,20 +11,18 @@ helpviewer_keywords:
 - permissions [.NET Framework]
 - security [.NET Framework], about security
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fe4c2e1775313039e8612ae7efbd3d22af710bab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: b7bcb7e56ca14d129eadcaeac19452d4a443713d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69917250"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705968"
 ---
 # <a name="key-security-concepts"></a>重要的安全性概念
 Microsoft.NET Framework 提供以角色為基礎的安全性，以幫助解除對行動程式碼安全性的相關疑慮，並提供支援，讓元件能夠判斷哪些使用者有權執行。  
   
 ## <a name="type-safety-and-security"></a>類型安全和安全性  
- 類型安全程式碼只會存取經授權存取的記憶體位置。 (這裡所討論的類型安全是專指記憶體類型安全，不應與廣義的類型安全混淆。)例如，類型安全程式碼無法從另一個物件的私用欄位讀取值。 它只會以妥善定義、可允許的方式來存取類型。  
+ 類型安全程式碼只會存取經授權存取的記憶體位置。 （在此討論中，型別安全特別指的是記憶體型別安全，不應與更廣泛的型別安全混淆）。例如，型別安全程式碼無法讀取來自另一個物件之私用欄位的值。 它只會以妥善定義、可允許的方式來存取類型。  
   
  在 Just-In-Time (JIT) 編譯期間，選擇性的驗證程序會檢查中繼資料，以及要以 JIT 編譯成原生機器程式碼之方法的 Microsoft Intermediate Language (MSIL)，以驗證其類型安全。 如果程式碼具有略過驗證的權限，則會略過此程序。 如需有關驗證的詳細資訊，請參閱 [Managed 執行程序](../../../docs/standard/managed-execution-process.md)。  
   
@@ -43,7 +41,7 @@ Microsoft.NET Framework 提供以角色為基礎的安全性，以幫助解除�
   
  如需詳細資訊，請參閱[主體和身分識別物件](../../../docs/standard/security/principal-and-identity-objects.md)。  
   
-## <a name="authentication"></a>驗證  
+## <a name="authentication"></a>驗證  (可能為英文網頁)  
  驗證是探索並確認主體身分識別的程序，它會檢查使用者的認證，並針對某授權單位來驗證那些認證。 在驗證期間取得的資訊可直接供是由您的程式碼使用。 您也可以使用 .NET Framework 以角色為基礎的安全性來驗證目前使用者，以及判斷是否允許該主體存取您的程式碼。 請參閱 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%2A?displayProperty=nameWithType> 方法的多載，以取得如何針對特定角色來驗證主體的範例。 例如，您可以使用 <xref:System.Security.Principal.WindowsPrincipal.IsInRole%28System.String%29?displayProperty=nameWithType> 多載來判斷目前使用者是否為系統管理員群組的成員。  
   
  當今所使用的驗證機制非常多樣化，其中有許多可以搭配 .NET Framework 以角色為基礎的安全性。 部分最常用的機制有基本、摘要式、Passport、作業系統 (例如 NTLM 或 Kerberos) 或應用程式定義的機制。  
@@ -64,5 +62,5 @@ Microsoft.NET Framework 提供以角色為基礎的安全性，以幫助解除�
  [!code-csharp[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/CS/source.cs#1)]
  [!code-vb[System.Security.Principal.WindowsBuiltInRole Example#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Security.Principal.WindowsBuiltInRole Example/VB/source.vb#1)]  
   
-## <a name="authorization"></a>Authorization  
+## <a name="authorization"></a>授權  
  授權是決定是否允許主體執行所要求動作的程序。 授權會在驗證之後進行，它會使用主體的身分識別和角色相關資訊來判斷主體可以存取哪些資源。 您可以使用 .NET Framework 以角色為基礎的安全性來實作授權。

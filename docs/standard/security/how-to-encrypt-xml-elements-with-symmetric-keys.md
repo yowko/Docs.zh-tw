@@ -1,5 +1,5 @@
 ---
-title: 如何：使用對稱金鑰加密 XML 項目
+title: HOW TO：使用對稱金鑰加密 XML 項目
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,16 +16,14 @@ helpviewer_keywords:
 - Advanced Encryption Standard algorithm
 - Rijndael
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b792fd6eea0a33b0143fafa03641a78947d7e127
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cda5a32e9a7421cd65b2046b403fde9e05230493
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458066"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706080"
 ---
-# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>如何：使用對稱金鑰加密 XML 項目
+# <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>HOW TO：使用對稱金鑰加密 XML 項目
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密可讓您儲存或傳輸機密的 XML，而不必擔心資料被輕易讀取。  此程式會使用進階加密標準（AES）演算法（也稱為 Rijndael）來加密 XML 元素。  
   
  如需如何解密使用此程式加密之 XML 元素的詳細資訊，請參閱[如何：使用對稱金鑰解密 Xml 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)。  

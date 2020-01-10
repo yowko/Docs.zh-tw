@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e6848c47-ee5d-401a-89a5-50b5eed40f30
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 882e92c6c8cb6e638ca299ed4c43b9da8f4bf235
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f0988c3a112fefc351175de02c790dc25fe6e94a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69923332"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710683"
 ---
 # <a name="matching-nodes-using-xpathnavigator"></a>使用 XPathNavigator 比對節點
 <xref:System.Xml.XPath.XPathNavigator> 類別提供 <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 方法來判斷節點是否符合 XPath 運算式。 <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 方法採用 XPath 運算式做為輸入並傳回<xref:System.Boolean>，其指出目前節點是否符合指定的 XPath 運算式或指定之編譯的 <xref:System.Xml.XPath.XPathExpression> 物件。  
@@ -38,7 +36,7 @@ XPathNavigator navigator = document.CreateNavigator();
 navigator.Matches("b[@c]");  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

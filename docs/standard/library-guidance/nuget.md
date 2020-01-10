@@ -1,15 +1,13 @@
 ---
 title: NuGet 與 .NET 程式庫
 description: 針對 .NET 程式庫搭配 NuGet 進行封裝的最佳做法建議。
-author: jamesnk
-ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 9288bf440692302c3a0b1954236540af6363f367
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 71c380f6062c09a8951769009b29b567fddfddfc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775317"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706474"
 ---
 # <a name="nuget"></a>NuGet
 

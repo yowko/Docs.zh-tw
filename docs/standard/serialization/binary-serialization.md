@@ -10,13 +10,12 @@ helpviewer_keywords:
 - serialization, cross-framework
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
-ms.author: mairaw
-ms.openlocfilehash: 4a061b3128f8d0952f800be7173203b62f89c672
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 34ba6cb658a52b647c6fbf9a4161d046f31cd73e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639123"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705817"
 ---
 # <a name="binary-serialization"></a>二進位序列化
 
@@ -37,24 +36,24 @@ ms.locfileid: "65639123"
 
 ### <a name="serializable-types"></a>可序列化類型
 
-- <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.AccessViolationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.AggregateException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.AppDomainUnloadedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ApplicationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ArgumentException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ArgumentNullException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ArgumentOutOfRangeException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ArithmeticException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.AccessViolationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.AggregateException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.AppDomainUnloadedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ApplicationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ArgumentException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ArgumentNullException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ArgumentOutOfRangeException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ArithmeticException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Array?displayProperty=nameWithType>
 - <xref:System.ArraySegment%601?displayProperty=nameWithType>
-- <xref:System.ArrayTypeMismatchException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.ArrayTypeMismatchException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Attribute?displayProperty=nameWithType>
-- <xref:System.BadImageFormatException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.BadImageFormatException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Boolean?displayProperty=nameWithType>
 - <xref:System.Byte?displayProperty=nameWithType>
-- <xref:System.CannotUnloadAppDomainException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.CannotUnloadAppDomainException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Char?displayProperty=nameWithType>
 - <xref:System.Collections.ArrayList?displayProperty=nameWithType>
 - <xref:System.Collections.BitArray?displayProperty=nameWithType>
@@ -64,7 +63,7 @@ ms.locfileid: "65639123"
 - <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.EqualityComparer%601?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType>
-- <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Collections.Generic.KeyValuePair%602?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>
@@ -88,44 +87,44 @@ ms.locfileid: "65639123"
 - <xref:System.Collections.Specialized.StringCollection?displayProperty=nameWithType>
 - <xref:System.Collections.Specialized.StringDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Stack?displayProperty=nameWithType>
-- `System.Collections.Generic.NonRandomizedStringEqualityComparer` （適用於.NET Core 2.0.4 和更新版本）
+- `System.Collections.Generic.NonRandomizedStringEqualityComparer` （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.ComponentModel.BindingList%601?displayProperty=nameWithType>
-- <xref:System.ComponentModel.DataAnnotations.ValidationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ComponentModel.Design.CheckoutException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ComponentModel.InvalidAsynchronousStateException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本，從.NET Framework 到.NET Core 不支援序列化）
-- <xref:System.ComponentModel.WarningException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ComponentModel.Win32Exception?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Configuration.ConfigurationErrorsException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Configuration.ConfigurationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Configuration.Provider.ProviderException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Configuration.SettingsPropertyIsReadOnlyException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Configuration.SettingsPropertyNotFoundException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Configuration.SettingsPropertyWrongTypeException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ContextMarshalException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DBNull?displayProperty=nameWithType> （適用於.NET Core 2.0.2 和更新版本）
-- <xref:System.Data.Common.DbException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.ConstraintException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.DataException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.ComponentModel.DataAnnotations.ValidationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ComponentModel.Design.CheckoutException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ComponentModel.InvalidAsynchronousStateException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> （適用于 .NET Core 2.0.4 版和更新版本，不支援從 .NET Framework 到 .NET Core 的序列化）
+- <xref:System.ComponentModel.WarningException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ComponentModel.Win32Exception?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Configuration.ConfigurationErrorsException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Configuration.ConfigurationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Configuration.Provider.ProviderException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Configuration.SettingsPropertyIsReadOnlyException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Configuration.SettingsPropertyNotFoundException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Configuration.SettingsPropertyWrongTypeException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ContextMarshalException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DBNull?displayProperty=nameWithType> （可在 .NET Core 2.0.2 和更新版本中取得）
+- <xref:System.Data.Common.DbException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.ConstraintException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.DataException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Data.DataSet?displayProperty=nameWithType>
-- <xref:System.Data.DataTable?displayProperty=nameWithType>（除非 RemotingFormat 設 SerializationFormat.Binary 在此情況下它可以只交換與.NET Core 2.1 和更新版本。） 
-- <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.EvaluateException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.InRowChangingEventException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.InvalidConstraintException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.InvalidExpressionException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.MissingPrimaryKeyException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.NoNullAllowedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.Odbc.OdbcException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.OperationAbortedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.Data.DataTable?displayProperty=nameWithType> （除非您將 RemotingFormat 設定為 SerializationFormat，在此情況下，它只能與 .NET Core 2.1 和更新版本交換）。
+- <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.EvaluateException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.InRowChangingEventException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.InvalidConstraintException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.InvalidExpressionException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.MissingPrimaryKeyException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.NoNullAllowedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.Odbc.OdbcException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.OperationAbortedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Data.PropertyCollection?displayProperty=nameWithType>
-- <xref:System.Data.ReadOnlyException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.RowNotInTableException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本，從.NET Framework 到.NET Core 不支援序列化）
-- <xref:System.Data.SqlTypes.SqlAlreadyFilledException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.Data.ReadOnlyException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.RowNotInTableException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> （適用于 .NET Core 2.0.4 版和更新版本，不支援從 .NET Framework 到 .NET Core 的序列化）
+- <xref:System.Data.SqlTypes.SqlAlreadyFilledException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=nameWithType>
 - <xref:System.Data.SqlTypes.SqlByte?displayProperty=nameWithType>
 - <xref:System.Data.SqlTypes.SqlDateTime?displayProperty=nameWithType>
@@ -134,42 +133,42 @@ ms.locfileid: "65639123"
 - <xref:System.Data.SqlTypes.SqlInt16?displayProperty=nameWithType>
 - <xref:System.Data.SqlTypes.SqlInt32?displayProperty=nameWithType>
 - <xref:System.Data.SqlTypes.SqlInt64?displayProperty=nameWithType>
-- <xref:System.Data.SqlTypes.SqlNotFilledException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.SqlTypes.SqlNullValueException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.Data.SqlTypes.SqlNotFilledException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.SqlTypes.SqlNullValueException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Data.SqlTypes.SqlString?displayProperty=nameWithType>
-- <xref:System.Data.SqlTypes.SqlTruncateException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.SqlTypes.SqlTypeException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.StrongTypingException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.SyntaxErrorException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Data.VersionNotFoundException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DataMisalignedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.Data.SqlTypes.SqlTruncateException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.SqlTypes.SqlTypeException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.StrongTypingException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.SyntaxErrorException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Data.VersionNotFoundException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DataMisalignedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
 - <xref:System.Decimal?displayProperty=nameWithType>
-- `System.Diagnostics.Contracts.ContractException` （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Diagnostics.Tracing.EventSourceException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.AccountManagement.MultipleMatchesException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.AccountManagement.NoMatchingPrincipalException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.AccountManagement.PasswordException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.AccountManagement.PrincipalException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.AccountManagement.PrincipalExistsException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.AccountManagement.PrincipalOperationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.AccountManagement.PrincipalServerDownException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.ActiveDirectory.ForestTrustCollisionException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOperationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.DirectoryServicesCOMException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.Protocols.BerConversionException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.Protocols.DirectoryException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.Protocols.DirectoryOperationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.Protocols.LdapException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DirectoryServices.Protocols.TlsOperationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DivideByZeroException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.DllNotFoundException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- `System.Diagnostics.Contracts.ContractException` （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Diagnostics.Tracing.EventSourceException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.AccountManagement.MultipleMatchesException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.AccountManagement.NoMatchingPrincipalException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.AccountManagement.PasswordException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.AccountManagement.PrincipalException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.AccountManagement.PrincipalExistsException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.AccountManagement.PrincipalOperationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.AccountManagement.PrincipalServerDownException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.ActiveDirectory.ForestTrustCollisionException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOperationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.DirectoryServicesCOMException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.Protocols.BerConversionException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.Protocols.DirectoryException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.Protocols.DirectoryOperationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.Protocols.LdapException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DirectoryServices.Protocols.TlsOperationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DivideByZeroException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.DllNotFoundException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Double?displayProperty=nameWithType>
 - <xref:System.Drawing.Color?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
@@ -178,163 +177,163 @@ ms.locfileid: "65639123"
 - <xref:System.Drawing.RectangleF?displayProperty=nameWithType>
 - <xref:System.Drawing.Size?displayProperty=nameWithType>
 - <xref:System.Drawing.SizeF?displayProperty=nameWithType>
-- <xref:System.DuplicateWaitObjectException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.EntryPointNotFoundException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.DuplicateWaitObjectException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.EntryPointNotFoundException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Enum?displayProperty=nameWithType>
-- <xref:System.EventArgs?displayProperty=nameWithType> （適用於.NET Core 2.0.6 和更新版本）
+- <xref:System.EventArgs?displayProperty=nameWithType> （可在 .NET Core 2.0.6 和更新版本中取得）
 - <xref:System.Exception?displayProperty=nameWithType>
-- <xref:System.ExecutionEngineException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.FieldAccessException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.FormatException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.ExecutionEngineException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.FieldAccessException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.FormatException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>
-- <xref:System.Globalization.CultureNotFoundException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.Globalization.CultureNotFoundException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Globalization.SortVersion?displayProperty=nameWithType>
 - <xref:System.Guid?displayProperty=nameWithType>
-- `System.IO.Compression.ZLibException` （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.IO.DriveNotFoundException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.IO.EndOfStreamException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.IO.FileFormatException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.IO.FileLoadException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.IO.IOException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.IO.InternalBufferOverflowException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.IO.InvalidDataException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.IO.IsolatedStorage.IsolatedStorageException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.IO.PathTooLongException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.InsufficientExecutionStackException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.InsufficientMemoryException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- `System.IO.Compression.ZLibException` （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.IO.DriveNotFoundException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.IO.EndOfStreamException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.IO.FileFormatException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.IO.FileLoadException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.IO.IOException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.IO.InternalBufferOverflowException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.IO.InvalidDataException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.IO.IsolatedStorage.IsolatedStorageException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.IO.PathTooLongException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.InsufficientExecutionStackException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.InsufficientMemoryException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Int16?displayProperty=nameWithType>
 - <xref:System.Int32?displayProperty=nameWithType>
 - <xref:System.Int64?displayProperty=nameWithType>
 - <xref:System.IntPtr?displayProperty=nameWithType>
-- <xref:System.InvalidCastException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.InvalidOperationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.InvalidProgramException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.InvalidTimeZoneException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.MemberAccessException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.MethodAccessException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.MissingFieldException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.MissingMemberException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.MissingMethodException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.MulticastNotSupportedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.InvalidCastException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.InvalidOperationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.InvalidProgramException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.InvalidTimeZoneException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.MemberAccessException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.MethodAccessException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.MissingFieldException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.MissingMemberException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.MissingMethodException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.MulticastNotSupportedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Net.Cookie?displayProperty=nameWithType>
 - <xref:System.Net.CookieCollection?displayProperty=nameWithType>
 - <xref:System.Net.CookieContainer?displayProperty=nameWithType>
-- <xref:System.Net.CookieException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Net.HttpListenerException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Net.Mail.SmtpException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Net.Mail.SmtpFailedRecipientException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Net.Mail.SmtpFailedRecipientsException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Net.NetworkInformation.NetworkInformationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Net.NetworkInformation.PingException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Net.ProtocolViolationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Net.Sockets.SocketException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Net.WebException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Net.WebSockets.WebSocketException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.NotFiniteNumberException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.NotImplementedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.NotSupportedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.NullReferenceException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.Net.CookieException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Net.HttpListenerException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Net.Mail.SmtpException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Net.Mail.SmtpFailedRecipientException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Net.Mail.SmtpFailedRecipientsException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Net.NetworkInformation.NetworkInformationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Net.NetworkInformation.PingException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Net.ProtocolViolationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Net.Sockets.SocketException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Net.WebException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Net.WebSockets.WebSocketException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.NotFiniteNumberException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.NotImplementedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.NotSupportedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.NullReferenceException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Numerics.BigInteger?displayProperty=nameWithType>
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>
 - <xref:System.Object?displayProperty=nameWithType>
-- <xref:System.ObjectDisposedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.OperationCanceledException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.OutOfMemoryException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.OverflowException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.PlatformNotSupportedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.RankException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Reflection.AmbiguousMatchException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Reflection.CustomAttributeFormatException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Reflection.InvalidFilterCriteriaException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本，從.NET Framework 到.NET Core 不支援序列化）
-- <xref:System.Reflection.TargetException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Reflection.TargetInvocationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Reflection.TargetParameterCountException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Resources.MissingManifestResourceException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Resources.MissingSatelliteAssemblyException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Runtime.CompilerServices.RuntimeWrappedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Runtime.InteropServices.COMException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Runtime.InteropServices.ExternalException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Runtime.InteropServices.InvalidComObjectException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Runtime.InteropServices.InvalidOleVariantTypeException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Runtime.InteropServices.MarshalDirectiveException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Runtime.InteropServices.SEHException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Runtime.Serialization.InvalidDataContractException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Runtime.Serialization.SerializationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.ObjectDisposedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.OperationCanceledException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.OutOfMemoryException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.OverflowException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.PlatformNotSupportedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.RankException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Reflection.AmbiguousMatchException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Reflection.CustomAttributeFormatException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Reflection.InvalidFilterCriteriaException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> （適用于 .NET Core 2.0.4 版和更新版本，不支援從 .NET Framework 到 .NET Core 的序列化）
+- <xref:System.Reflection.TargetException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Reflection.TargetInvocationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Reflection.TargetParameterCountException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Resources.MissingManifestResourceException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Resources.MissingSatelliteAssemblyException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Runtime.CompilerServices.RuntimeWrappedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Runtime.InteropServices.COMException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Runtime.InteropServices.ExternalException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Runtime.InteropServices.InvalidComObjectException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Runtime.InteropServices.InvalidOleVariantTypeException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Runtime.InteropServices.MarshalDirectiveException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Runtime.InteropServices.SEHException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Runtime.Serialization.InvalidDataContractException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Runtime.Serialization.SerializationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.SByte?displayProperty=nameWithType>
-- <xref:System.Security.AccessControl.PrivilegeNotHeldException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Security.Authentication.AuthenticationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Security.Authentication.InvalidCredentialException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Security.Cryptography.CryptographicException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- `System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException` （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Security.HostProtectionException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Security.Policy.PolicyException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Security.Principal.IdentityNotMappedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Security.SecurityException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本中，有限的序列化資料）
-- <xref:System.Security.VerificationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Security.XmlSyntaxException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ServiceProcess.TimeoutException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.Security.AccessControl.PrivilegeNotHeldException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Security.Authentication.AuthenticationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Security.Authentication.InvalidCredentialException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Security.Cryptography.CryptographicException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- `System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException` （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Security.HostProtectionException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Security.Policy.PolicyException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Security.Principal.IdentityNotMappedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Security.SecurityException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中使用，限制序列化資料）
+- <xref:System.Security.VerificationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Security.XmlSyntaxException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ServiceProcess.TimeoutException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Single?displayProperty=nameWithType>
-- <xref:System.StackOverflowException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.StackOverflowException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.String?displayProperty=nameWithType>
 - <xref:System.StringComparer?displayProperty=nameWithType>
-- <xref:System.SystemException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Text.DecoderFallbackException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Text.EncoderFallbackException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Text.RegularExpressions.RegexMatchTimeoutException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.SystemException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Text.DecoderFallbackException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Text.EncoderFallbackException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Text.RegularExpressions.RegexMatchTimeoutException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Text.StringBuilder?displayProperty=nameWithType>
-- <xref:System.Threading.AbandonedMutexException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Threading.BarrierPostPhaseException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Threading.LockRecursionException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Threading.SemaphoreFullException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Threading.SynchronizationLockException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Threading.Tasks.TaskCanceledException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Threading.Tasks.TaskSchedulerException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Threading.ThreadAbortException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Threading.ThreadInterruptedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Threading.ThreadStartException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Threading.ThreadStateException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Threading.WaitHandleCannotBeOpenedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.Threading.AbandonedMutexException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Threading.BarrierPostPhaseException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Threading.LockRecursionException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Threading.SemaphoreFullException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Threading.SynchronizationLockException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Threading.Tasks.TaskCanceledException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Threading.Tasks.TaskSchedulerException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Threading.ThreadAbortException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Threading.ThreadInterruptedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Threading.ThreadStartException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Threading.ThreadStateException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Threading.WaitHandleCannotBeOpenedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.TimeSpan?displayProperty=nameWithType>
 - <xref:System.TimeZoneInfo.AdjustmentRule?displayProperty=nameWithType>
 - <xref:System.TimeZoneInfo?displayProperty=nameWithType>
-- <xref:System.TimeZoneNotFoundException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.TimeoutException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Transactions.TransactionAbortedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Transactions.TransactionException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Transactions.TransactionInDoubtException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Transactions.TransactionManagerCommunicationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Transactions.TransactionPromotionException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.TimeZoneNotFoundException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.TimeoutException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Transactions.TransactionAbortedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Transactions.TransactionException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Transactions.TransactionInDoubtException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Transactions.TransactionManagerCommunicationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Transactions.TransactionPromotionException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Tuple?displayProperty=nameWithType>
-- <xref:System.TypeAccessException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.TypeInitializationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.TypeLoadException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.TypeUnloadedException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.TypeAccessException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.TypeInitializationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.TypeLoadException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.TypeUnloadedException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.UInt16?displayProperty=nameWithType>
 - <xref:System.UInt32?displayProperty=nameWithType>
 - <xref:System.UInt64?displayProperty=nameWithType>
 - <xref:System.UIntPtr?displayProperty=nameWithType>
-- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 - <xref:System.Uri?displayProperty=nameWithType>
-- <xref:System.UriFormatException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.ValueTuple?displayProperty=nameWithType> （未序列化在.NET Framework 4.7 和更早版本）
+- <xref:System.UriFormatException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.ValueTuple?displayProperty=nameWithType> （在 .NET Framework 4.7 和更早版本中無法序列化）
 - <xref:System.ValueType?displayProperty=nameWithType>
 - <xref:System.Version?displayProperty=nameWithType>
 - <xref:System.WeakReference%601?displayProperty=nameWithType>
 - <xref:System.WeakReference?displayProperty=nameWithType>
-- <xref:System.Xml.Schema.XmlSchemaException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Xml.Schema.XmlSchemaInferenceException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Xml.Schema.XmlSchemaValidationException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Xml.XPath.XPathException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Xml.XmlException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Xml.Xsl.XsltCompileException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
-- <xref:System.Xml.Xsl.XsltException?displayProperty=nameWithType> （適用於.NET Core 2.0.4 和更新版本）
+- <xref:System.Xml.Schema.XmlSchemaException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Xml.Schema.XmlSchemaInferenceException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Xml.Schema.XmlSchemaValidationException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Xml.XPath.XPathException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Xml.XmlException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Xml.Xsl.XsltCompileException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
+- <xref:System.Xml.Xsl.XsltException?displayProperty=nameWithType> （可在 .NET Core 2.0.4 版和更新版本中取得）
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -344,19 +343,19 @@ ms.locfileid: "65639123"
 - [基本序列化](../../../docs/standard/serialization/basic-serialization.md)\
 說明如何使用二進位與 SOAP 格式子來序列化物件。
 
-- [選擇式序列化](../../../docs/standard/serialization/selective-serialization.md)\
+- [選擇性序列化](../../../docs/standard/serialization/selective-serialization.md)\
 說明如何避免序列化某些類別的成員。
 
 - [自訂序列化](../../../docs/standard/serialization/custom-serialization.md)\
 描述如何使用 <xref:System.Runtime.Serialization.ISerializable> 介面自訂類別的序列化。
 
-- [在序列化程序中的步驟](../../../docs/standard/serialization/steps-in-the-serialization-process.md)\
+- [序列化程式中的步驟](../../../docs/standard/serialization/steps-in-the-serialization-process.md)\
 說明在格式子上呼叫 <xref:System.Runtime.Serialization.Formatter.Serialize%2A> 方法時，執行序列化工作的過程。
 
 - [版本相容序列化](../../../docs/standard/serialization/version-tolerant-serialization.md)\
 說明如何建立可隨時間變更序列化型別，而不會造成應用程式擲回例外狀況。
 
-- [序列化方針](../../../docs/standard/serialization/serialization-guidelines.md)\
+- [序列化指導方針](../../../docs/standard/serialization/serialization-guidelines.md)\
 提供決定何時序列化物件的幾個基本指導原則。
 
 ## <a name="reference"></a>參考資料
@@ -372,8 +371,8 @@ ms.locfileid: "65639123"
 - [安全性和序列化](../../../docs/framework/misc/security-and-serialization.md)\
 說明在撰寫執行序列化的程式碼時要遵循的安全程式碼撰寫方針。
 
-- [.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+- [.Net 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
 說明 .NET Framework 中可用來進行遠端通訊的各種通訊方法。
 
-- [使用 ASP.NET 和 XML Web Service 用戶端建立的 XML Web Service](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+- [使用 ASP.NET 和 Xml Web Service 用戶端建立的 Xml Web 服務](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
 提供一個主題，說明並解釋如何設計使用 ASP.NET 建立的 XML Web 服務。

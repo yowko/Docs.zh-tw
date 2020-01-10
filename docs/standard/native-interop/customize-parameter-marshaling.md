@@ -1,15 +1,13 @@
 ---
 title: 自訂參數封送處理 - .NET
 description: 了解如何自訂 .NET 將您的參數封送處理為原生表示法的方式。
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 877eb00c18c9108fe6bcfb50104ff5ed813e85f3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
-ms.translationtype: HT
+ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065971"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706357"
 ---
 # <a name="customizing-parameter-marshaling"></a>自訂參數封送處理
 
@@ -23,7 +21,7 @@ ms.locfileid: "65065971"
 
 每種格式都將傳遞以 Null 結尾的字串至機器碼。 它們因原生字串的編碼方式而不同。
 
-| `System.Runtime.InteropServices.UnmanagedType` 值 | 編碼 |
+| `System.Runtime.InteropServices.UnmanagedType` 值 | Encoding |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
 | LPUTF8Str | UTF-8 | 

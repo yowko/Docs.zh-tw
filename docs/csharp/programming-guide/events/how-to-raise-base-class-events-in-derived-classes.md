@@ -1,16 +1,15 @@
 ---
 title: 如何在衍生類別中引發基類事件-程式C#設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], in derived classes
 ms.assetid: 2d20556a-0aad-46fc-845e-f85d86ea617a
-ms.openlocfilehash: 6176b94b15edccb139ddd7de3101930b505d98a8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 48f95871aa8a5a33923286262093a143cbd16d40
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346297"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712321"
 ---
 # <a name="how-to-raise-base-class-events-in-derived-classes-c-programming-guide"></a>如何在衍生類別中引發基類事件（C#程式設計手冊）
 下列簡單的範例示範在基底類別中宣告事件的標準方式，讓事件也可以從衍生類別引發。 這個模式會在 .NET Framework 類別庫的 Windows Forms 類別中廣泛使用。  

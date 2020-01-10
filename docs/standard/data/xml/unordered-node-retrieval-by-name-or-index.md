@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7701f887410aa263483e52a5dd65a09d1444aa6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 8c6819b4c1628d9e09a9bbf96ae8d5edbb6c643d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589876"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710072"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>根據名稱或索引擷取的未排序節點
 根據全球資訊網協會 (W3C) 規格中的說明，**XmlNamedNodeMap** 是一種 NamedNodeMap，若要處理的是未排序節點集，則必須使用它，因為它可以根據名稱或索引而參考節點。 存取 **XmlNamedNodeMap** 的唯一方法，是當 **XmlNamedNodeMap** 經由方法或屬性傳回時。 有三種方法或屬性會傳回 **XmlNamedNodeMap**：  
@@ -119,6 +117,6 @@ class test {
   
  若要查看會顯示從 **AttributeCollection** 移除屬性的其他程式碼範例，請參閱 [XmlNamedNodeMap.RemoveNamedItem 方法](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem)。 如需方法和屬性的詳細資訊，請參閱 [XmlNamedNodeMap 成員](AllMembers.T:System.Xml.XmlNamedNodeMap)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

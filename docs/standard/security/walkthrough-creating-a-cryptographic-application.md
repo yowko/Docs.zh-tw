@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：建立密碼編譯應用程式
+title: 逐步解說： 建立密碼編譯的應用程式
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee6dafa8578c59d23908bf0e184091bb4ceaeb45
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 6e2d9b8bebdfd2ea5d5507cc73d444fa8bf785fb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70895282"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705830"
 ---
-# <a name="walkthrough-creating-a-cryptographic-application"></a>逐步解說：建立密碼編譯應用程式
+# <a name="walkthrough-creating-a-cryptographic-application"></a>逐步解說： 建立密碼編譯的應用程式
 本逐步解說示範如何加密和解密內容。 程式碼範例是針對 Windows Form 應用程式所設計。 此應用程式不會示範真實世界案例，例如使用智慧卡。 相反地，它會示範加密和解密的基本概念。  
   
  本逐步解說針對加密使用下列指導方針：  
@@ -45,7 +43,7 @@ ms.locfileid: "70895282"
 |匯入公開金鑰|將金鑰從 XML 檔案載入到金鑰容器。|  
 |測試應用程式|列出測試此應用程式的程序。|  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>必要條件：  
  您需要下列元件才能完成此逐步解說：  
   
 - <xref:System.IO> 和 <xref:System.Security.Cryptography> 命名空間的參考。  
@@ -53,7 +51,7 @@ ms.locfileid: "70895282"
 ## <a name="creating-a-windows-forms-application"></a>建立 Windows Forms 應用程式  
  在此逐步解說中的大部分程式碼範例，已設計為按鈕控制項的事件處理常式。 下表列出範例應用程式所需的控制項，及其必要名稱以符合程式碼範例。  
   
-|控制項|名稱|文字屬性 (如有需要)|  
+|控制項|Name|文字屬性 (如有需要)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|加密檔案|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|解密檔案|  
@@ -82,7 +80,7 @@ ms.locfileid: "70895282"
  [!code-vb[CryptoWalkThru#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#2)]  
   
 ## <a name="encrypting-a-file"></a>加密檔案  
- 這項工作牽涉到兩個方法： `Encrypt File`按鈕的事件處理常式方法（`buttonEncryptFile_Click`） `EncryptFile`和方法。 第一種方法會顯示一個對話方塊來選取檔案，並將檔案名稱傳遞給第二個方法，後者則會執行加密。  
+ 這項工作牽涉到兩個方法： `Encrypt File` 按鈕的事件處理常式方法（`buttonEncryptFile_Click`）和 `EncryptFile` 方法。 第一種方法會顯示一個對話方塊來選取檔案，並將檔案名稱傳遞給第二個方法，後者則會執行加密。  
   
  加密的內容、金鑰和 IV 全都儲存到一個 <xref:System.IO.FileStream>，稱為加密套件。  
   
@@ -210,6 +208,6 @@ ms.locfileid: "70895282"
   
 2. 按一下 `Decrypt File` 按鈕，然後選取剛才加密的檔案。 這將會成功，因為您有完整金鑰組可以解密。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [The signature is valid](../../../docs/standard/security/cryptographic-services.md)

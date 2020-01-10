@@ -1,6 +1,5 @@
 ---
 title: Main() 和命令列引數 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 08/02/2017
 f1_keywords:
 - CS5001
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: a5707e8cfff11dd9d27fffc9deb41662fb2c4460
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0571ec6dbc42f103ec922a6b2b13a52510640a78
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281758"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700597"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() 和命令列引數 (C# 程式設計指南)
 
@@ -49,13 +48,13 @@ public static async Task Main(string[] args) { }
 public static async Task<int> Main(string[] args) { }
 ```
 
-當主控台應用程式必須啟動且等待 `async` 中的 `Task` 非同步作業時，新增的 `Task<int>` 與 `await`、`Main` 傳回型別可簡化程式碼。
+當主控台應用程式必須啟動且等待 `Main` 中的 `await` 非同步作業時，新增的 `async` 與 `Task`、`Task<int>` 傳回型別可簡化程式碼。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 csc.exe 建置命令列](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [C# 程式設計指南](../index.md)

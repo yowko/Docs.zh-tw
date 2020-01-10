@@ -1,6 +1,5 @@
 ---
 title: var - C# 參考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - var
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
-ms.openlocfilehash: a523e575f14c88ea385bf115f0b07f54190499a5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: ff8348a725f43fa8789c73fa58549da26126369c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633207"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712880"
 ---
 # <a name="var-c-reference"></a>var (C# 參考)
 
@@ -32,7 +31,7 @@ int i = 10; // Explicitly typed.
 
 [!code-csharp[csrefKeywordsTypes#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#18)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

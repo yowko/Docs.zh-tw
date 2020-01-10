@@ -3,12 +3,12 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言版本 7.0 中新功能的概觀。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0f26a9647503ebb667d961fefaa05a25a71ec6f5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 73563a04dea04c942a6326d6a04ddd54bb80b0ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926566"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694578"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
@@ -211,7 +211,7 @@ C# 語言具備數個規則，可防止您濫用 `ref` 區域變數並傳回︰
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> 區域函式支援的部分設計也可以使用「Lambda 運算式」完成。 有興趣的人可以[進一步了解差異](../local-functions-vs-lambdas.md)
+> 區域函式支援的部分設計也可以使用「Lambda 運算式」完成。 如需詳細資訊，請參閱區域函式[與 lambda 運算式](../local-functions-vs-lambdas.md)。
 
 ## <a name="more-expression-bodied-members"></a>更多運算式主體成員
 

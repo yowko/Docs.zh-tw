@@ -1,6 +1,5 @@
 ---
-title: 如何：在十六進位字串和數位類型之間轉換- C#程式設計指南
-ms.custom: seodec18
+title: 如何在十六進位字串和數位類型之間轉換- C#程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - hexadecimal strings [C#], converting to numeric type
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - strings [C#], converting hexadecimal strings
 - hexadecimal strings [C#]
 ms.assetid: 7115c49f-7d1d-40c3-8bd9-aae0cc1d46b6
-ms.openlocfilehash: 8b72734f9b617fed2ff65977c9a0e60f46424ae8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0e1f6ad2606b367d369c1c644c947831b2aa8289
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429449"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698517"
 ---
-# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>如何：在十六進位字串和數字類型間轉換 (C# 程式設計手冊)
+# <a name="how-to-convert-between-hexadecimal-strings-and-numeric-types-c-programming-guide"></a>如何在十六進位字串和數位類型之間轉換（C#程式設計手冊）
 這些範例示範如何執行下列工作：  
   
 - 取得[字串](../../language-reference/builtin-types/reference-types.md)中每個字元的十六進位值。  
@@ -44,17 +43,17 @@ ms.locfileid: "74429449"
  [!code-csharp[csProgGuideTypes#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#32)]  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 `string` 類別和 [ 方法，以將十六進位 ](../../language-reference/builtin-types/floating-point-numeric-types.md) 轉換為 <xref:System.BitConverter?displayProperty=nameWithType>float<xref:System.UInt32.Parse%2A?displayProperty=nameWithType>。  
+ 下列範例示範如何使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別和 <xref:System.UInt32.Parse%2A?displayProperty=nameWithType> 方法，以將十六進位 `string` 轉換為 [float](../../language-reference/builtin-types/floating-point-numeric-types.md)。  
   
  [!code-csharp[csProgGuideTypes#39](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#39)]  
   
 ## <a name="example"></a>範例  
- 下例示範如何使用 [ 類別，將 ](../../language-reference/builtin-types/integral-numeric-types.md)byte<xref:System.BitConverter?displayProperty=nameWithType> 陣列轉換為十六進位的字串。  
+ 下例示範如何使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別，將 [byte](../../language-reference/builtin-types/integral-numeric-types.md) 陣列轉換為十六進位的字串。  
   
  [!code-csharp[csProgGuideTypes#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#38)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)
 - [型別](./index.md)
-- [如何：判斷字串是否表示數值](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [如何判斷字串是否代表數值](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

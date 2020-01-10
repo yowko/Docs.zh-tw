@@ -8,14 +8,12 @@ helpviewer_keywords:
 - interprocess communication [.NET Framework], pipes
 - I/O [.NET Framework], pipes
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0f02f7a8a327e117b92ef826b8dcd7fc742c9b4c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 693dd1eb0b0b9bb87973eead26a344ed67641e34
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647789"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706552"
 ---
 # <a name="pipe-operations-in-net"></a>.NET 中的管道作業
 管道會提供一種處理序間通訊的方法。 管道有兩種類型：  
@@ -26,7 +24,7 @@ ms.locfileid: "64647789"
   
      在 .NET 中，您可以使用 <xref:System.IO.Pipes.AnonymousPipeServerStream> 和 <xref:System.IO.Pipes.AnonymousPipeClientStream> 類別實作匿名管道。  
   
-     請參閱[如何：使用匿名管道進行本機處理序間通訊](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)。  
+     請參閱[操作說明：使用匿名管道進行本機處理序間通訊](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)。  
   
 - 具名管道。  
   
@@ -34,10 +32,10 @@ ms.locfileid: "64647789"
   
      在 .NET 中，您可以使用 <xref:System.IO.Pipes.NamedPipeServerStream> 和 <xref:System.IO.Pipes.NamedPipeClientStream> 類別實作匿名管道。  
   
-     請參閱[如何：使用具名管道進行網路處理序間通訊](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)。  
+     請參閱[操作說明：使用具名管道進行網路處理序間通訊](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [檔案和資料流 I/O](../../../docs/standard/io/index.md)
-- [如何：使用匿名管道進行本機處理序間通訊](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
-- [如何：使用具名管道進行網路處理序間通訊](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [操作說明：使用匿名管道進行本機處理序間通訊](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+- [操作說明：使用具名管道進行網路處理序間通訊](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

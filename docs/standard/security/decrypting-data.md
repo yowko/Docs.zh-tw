@@ -11,14 +11,12 @@ helpviewer_keywords:
 - asymmetric decryption
 - decryption
 ms.assetid: 9b266b6c-a9b2-4d20-afd8-b3a0d8fd48a0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e287d3c73df247febf99967a9dc4b0413f01def0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 37194380d9f08d328f836bcb8648772348958768
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353855"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706236"
 ---
 # <a name="decrypting-data"></a>解密資料
 
@@ -208,4 +206,4 @@ symmetricIV = rsa.Decrypt(encryptedSymmetricIV , false);
 
 - [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [加密資料](../../../docs/standard/security/encrypting-data.md)
-- [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)
+- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)

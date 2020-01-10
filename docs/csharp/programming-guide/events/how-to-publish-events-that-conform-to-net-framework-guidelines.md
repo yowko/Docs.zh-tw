@@ -1,16 +1,15 @@
 ---
 title: 如何發行符合 .NET Framework 方針的事件-程式C#設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: fe8334d4a6aadc8e2d1f1f5d60c96d4e8689b67f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 0ae240d0c078b5eaa690f128c037ee2471325872
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346326"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705336"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>如何發行符合 .NET Framework 方針的事件（C#程式設計手冊）
 下列程序示範如何將遵循標準 .NET Framework 模式的事件，新增至您的類別和結構。 .NET Framework 類別庫中的所有事件都是以 <xref:System.EventHandler> 委派為基礎，其定義如下：  

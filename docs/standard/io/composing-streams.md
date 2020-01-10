@@ -13,14 +13,12 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 452071e9726a95b4b3d9bb9cefe720d39bbc3e0c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
-ms.translationtype: HT
+ms.openlocfilehash: 689cc9537cd7a5fe6a677d42e5790bbcf1b3aefa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674343"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708144"
 ---
 # <a name="compose-streams"></a>撰寫資料流
 *備份存放區*是一種儲存媒體，例如磁碟或記憶體。 每個不同的備份存放區都會實作自己的資料流，作為 <xref:System.IO.Stream> 類別的實作。 
@@ -46,7 +44,7 @@ ms.locfileid: "55674343"
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]
  [!code-vb[System.IO.StreamReader#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source3.vb#21)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>

@@ -1,18 +1,17 @@
 ---
 title: 檔案系統和登錄 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file system [C#]
 - registry [C#]
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
-ms.openlocfilehash: 3e78d49881a4def5fe9c70ecfe890c8ffee811e8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 2540c816a102a7f11f1f103b993194cccf0f4688
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635297"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75704517"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>檔案系統和登錄 (C# 程式設計手冊)
 下列主題示範如何使用 C# 和 .NET Framework 來針對檔案、資料夾及登錄執行各種基本作業。  
