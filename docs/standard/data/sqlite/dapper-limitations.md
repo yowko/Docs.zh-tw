@@ -2,12 +2,12 @@
 title: Dapper 限制
 ms.date: 12/13/2019
 description: 說明您在使用 Dapper 時會遇到的一些限制。
-ms.openlocfilehash: 90c7fb24f068d663081390bdba9b1b222b4be56e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 396507f25f591a9ab5c3bb07c0af6fd8d175e4ea
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447276"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901202"
 ---
 # <a name="dapper-limitations"></a>Dapper 限制
 
@@ -15,7 +15,7 @@ ms.locfileid: "75447276"
 
 ## <a name="parameters"></a>參數
 
-SQLite 參數名稱會區分大小寫。 請確定 SQL 中所使用的參數名稱符合匿名物件屬性的大小寫。 問題[#18861](https://github.com/aspnet/EntityFrameworkCore/issues/18861)會改善這項體驗。
+SQLite 參數名稱會區分大小寫。 請確定 SQL 中所使用的參數名稱符合匿名物件屬性的大小寫。 問題[#18861](https://github.com/dotnet/efcore/issues/18861)會改善這項體驗。
 
 Dapper 也預期參數會使用 `@` 前置詞。 其他首碼將無法使用。
 

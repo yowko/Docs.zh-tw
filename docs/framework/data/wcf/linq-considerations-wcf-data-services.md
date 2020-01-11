@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 41f1d1f0ca04dff0faa9eb070882f845ef4827d2
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f6ff9cf732e11bbf61eeb7e5cff3f1cba2b744e6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568968"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900989"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>LINQ 考量 (WCF Data Services)
 本主題提供當您使用 WCF Data Services 用戶端時，撰寫和執行 LINQ 查詢的方式的相關資訊，以及使用 LINQ 來查詢可實作為開放式資料通訊協定（OData）之資料服務的限制。 如需針對以 OData 為基礎的資料服務撰寫和執行查詢的詳細資訊，請參閱[查詢資料服務](querying-the-data-service-wcf-data-services.md)。  
@@ -215,4 +215,4 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 - [查詢資料服務](querying-the-data-service-wcf-data-services.md)
 - [查詢投影](query-projections-wcf-data-services.md)
 - [物件具體化](object-materialization-wcf-data-services.md)
-- [OData： URI 慣例](https://go.microsoft.com/fwlink/?LinkID=185564)
+- [OData： URI 慣例](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)

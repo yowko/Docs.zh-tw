@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 89af89d3580fd1396335a0cd8964b46c13d7637e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 0c88d40e34d2d6458bb463a09d716dea42b711fe
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344308"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901913"
 ---
 ### <a name="authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters"></a>授權： IAllowAnonymous 已從 AuthorizationFilterCoNtext 移除。篩選
 
@@ -37,7 +37,7 @@ if (endpoint?.Metadata?.GetMetadata<IAllowAnonymous>() != null)
 }
 ```
 
-這項技術的範例可在[此 HasAllowAnonymous 方法](https://github.com/aspnet/AspNetCore/blob/bd65275148abc9b07a3b59797a88d485341152bf/src/Mvc/Mvc.Core/src/Authorization/AuthorizeFilter.cs#L236)中找到。
+這項技術的範例可在[此 HasAllowAnonymous 方法](https://github.com/dotnet/aspnetcore/blob/bd65275148abc9b07a3b59797a88d485341152bf/src/Mvc/Mvc.Core/src/Authorization/AuthorizeFilter.cs#L236)中找到。
 
 #### <a name="category"></a>分類
 

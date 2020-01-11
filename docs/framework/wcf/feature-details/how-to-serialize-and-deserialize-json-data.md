@@ -2,21 +2,21 @@
 title: 如何：使用 DataContractJsonSerializer
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 354f0c58a83e07ff3180977311adf85ae306dd21
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3cf8cc52587a64e7273ab9e0de0b1751d00827cf
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976878"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901219"
 ---
 # <a name="how-to-use-datacontractjsonserializer"></a>如何使用 DataContractJsonSerializer
 
 > [!NOTE]
-> 本文是關於 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。 對於涉及序列化和還原序列化 JSON 的大部分案例，我們建議您在 system.string[命名空間](../../../standard/serialization/system-text-json-overview.md)中的工具。
+> 本文是關於 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。 對於涉及序列化和還原序列化 JSON 的大部分案例，我們建議在 system.string[命名空間](../../../standard/serialization/system-text-json-overview.md)中的 api。
 
 JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可以在用戶端瀏覽器與啟用 AJAX 的 Web 服務之間啟用快速的小量資料交換作業。
 
-本文示範如何將 .NET 類型物件序列化為 JSON 編碼資料，然後將 JSON 格式的資料還原序列化回 .NET 類型的實例。 這個範例會使用資料合約來示範使用者定義的 `Person` 類型的序列化和還原序列化，並使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。
+本文示範如何將 .NET 類型物件序列化為 JSON 編碼資料，然後將 JSON 格式的資料還原序列化回 .NET 類型的實例。 這個範例會使用資料合約來示範使用者定義之 `Person` 類型的序列化和還原序列化，並使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。
 
 一般來說，當您在服務作業中使用資料合約型別，而這些類型是在已啟用 AJAX 的端點上公開時，Windows Communication Foundation （WCF）會自動處理 JSON 序列化和還原序列化。 不過，在某些情況下，您可能需要直接使用 JSON 資料。
 

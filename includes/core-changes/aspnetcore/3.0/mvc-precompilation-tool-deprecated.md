@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3f702febc78488b9413ec9303ded211493650f02
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1e081c9f37fbd7ab754ce44ba89d7aa5cabfc219
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198385"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901784"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC：先行編譯工具已被取代
 
@@ -22,7 +22,7 @@ ms.locfileid: "73198385"
 
 #### <a name="new-behavior"></a>新的行為
 
-Razor SDK 原本就支援這種功能。 已不再更新 `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` 套件。
+Razor SDK 原本就支援這種功能。 `Microsoft.AspNetCore.Mvc.Razor.ViewCompilation` 套件已不再更新。
 
 #### <a name="reason-for-change"></a>變更的原因
 
@@ -30,9 +30,9 @@ Razor SDK 會提供更多功能，並在組建時驗證 *. cshtml*檔案的正�
 
 #### <a name="recommended-action"></a>建議的動作
 
-針對 ASP.NET Core 2.1 或更新版本的使用者，請更新以在[RAZOR SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0)中使用先行編譯的原生支援。 如果 bug 或遺漏功能導致無法遷移至 Razor SDK，請在[aspnet/AspNetCore](https://github.com/aspnet/AspNetCore/issues)開啟問題。
+針對 ASP.NET Core 2.1 或更新版本的使用者，請更新以在[RAZOR SDK](/aspnet/core/razor-pages/sdk?view=aspnetcore-3.0)中使用先行編譯的原生支援。 如果 bug 或遺漏功能導致無法遷移至 Razor SDK，請在[dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues)開啟問題。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>分類
 
 ASP.NET Core
 

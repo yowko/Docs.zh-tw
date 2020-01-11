@@ -10,16 +10,16 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 764ea6a77ba267e691d48bc72d17c02f6b3c18ca
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568891"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900964"
 ---
 # <a name="query-projections-wcf-data-services"></a>查詢投影 (WCF 資料服務)
 
-投射提供開放式資料通訊協定（OData）中的機制，藉由指定在回應中只傳回實體的特定屬性，來減少查詢所傳回之摘要中的資料量。 如需詳細資訊，請參閱[OData： Select 系統查詢選項（$select）](https://go.microsoft.com/fwlink/?LinkId=186076)。
+投射提供開放式資料通訊協定（OData）中的機制，藉由指定在回應中只傳回實體的特定屬性，來減少查詢所傳回之摘要中的資料量。 如需詳細資訊，請參閱第4.8 節。 選取 [ [URI 慣例（OData 2.0 版）](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)] 中的 [系統查詢選項（$select）]。
 
 本主題描述如何定義查詢投影、實體與非實體類型的需求為何、對投影結果進行更新、建立投影類型，以及列出一些投影考量因素。
 

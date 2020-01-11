@@ -4,12 +4,12 @@ description: 此文章提供 .NET Core 與 .NET Standard 專案單元測試的�
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 776a430868c7a4829e11a2958fb998c11315c43d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714303"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899890"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core 與 .NET Standard 中的單元測試
 
@@ -28,7 +28,7 @@ ms.locfileid: "75714303"
 此外，也請記得撰寫測試時可採用最佳做法。 舉例來說，[測試驅動開發 (TDD)](https://deviq.com/test-driven-development/) 可在撰寫單元測試前，用在單元測試要檢查的程式碼上。 使用 TDD 就像是在寫書之前打好草稿。 它的目標是協助開發人員撰寫更簡單、更易讀且更有效率的程式碼。 
 
 > [!NOTE]
-> ASP.NET 小組遵循了[這些慣例](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests)，來協助開發人員為測試類型與方法下個好名稱。
+> ASP.NET 小組遵循了[這些慣例](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests)，來協助開發人員為測試類型與方法下個好名稱。
 
 請試著不要在撰寫單元測試時於基礎結構導入相依性。 相依性會導致測試變慢且不穩定，它們應該留給整合測試使用。 您可以遵循 [Explicit Dependencies Principle](https://deviq.com/explicit-dependencies-principle/) (明確相依性準則) 的內容，並使用 [Dependency Injection](/aspnet/core/fundamentals/dependency-injection) (相依性注入)，來在應用程式中避免這些相依性。 您也可以將單元測試保留在個別專案中，和您的整合測試分開。 這能確保您的單元測試專案不會對基礎結構套件具有參考或相依性。
 

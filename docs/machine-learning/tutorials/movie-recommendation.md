@@ -5,14 +5,14 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 382683f8b8500a2235a2d610a67119cf9a7fc301
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977385"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900693"
 ---
-# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>教學課程：使用矩陣 factorizaton 搭配 ML.NET 來建立電影推薦
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>教學課程：使用矩陣分解搭配 ML.NET 來建立電影推薦
 
 本教學課程會示範如何在 .NET Core 主控台應用程式中使用 ML.NET 建置電影推薦工具。 這些步驟會使用 C# 和 Visual Studio 2019。
 
@@ -36,7 +36,7 @@ ms.locfileid: "73977385"
 3. [評估您的模型](#evaluate-your-model)
 4. [使用您的模型](#use-your-model)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 * 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)版本。
 
@@ -48,7 +48,7 @@ ms.locfileid: "73977385"
 
 ### <a name="create-a-project"></a>建立專案
 
-1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "MovieRecommender"，然後選取 [確定] 按鈕。
+1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案] >  [新增] >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，鍵入 "MovieRecommender"，然後選取 [確定] 按鈕。
 
 2. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集：
 
@@ -416,7 +416,7 @@ Movie 10 is recommended for user 6
 
 有幾種方式可讓您改善模型的效能，以便您進行更精確的預測。
 
-### <a name="data"></a>資料
+### <a name="data"></a>Data
 
 為每位使用者和影片識別碼新增更多具有足夠樣本的已定型資料，有助於改善推薦模型的品質。
 

@@ -3,12 +3,12 @@ title: .NET Core 通用工具
 description: 說明何為 .NET Core 通用工具以及它們可用之 .NET Core CLI 命令的概觀。
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.openlocfilehash: 665cee64cb92efd16f5528feb656b377f9f3283c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714164"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899871"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core 通用工具概觀
 
@@ -34,7 +34,7 @@ ms.locfileid: "75714164"
 
 * 您可以在 [NuGet](https://www.nuget.org) 上找到 .NET Core 通用工具。 不過，NuGet 尚未允許您專門搜尋 .NET Core 通用工具。
 * 您可以在 blog 文章或[natemcmaster/dotnet 工具](https://github.com/natemcmaster/dotnet-tools)GitHub 存放庫中找到工具建議。
-* 您可以在[aspnet/DotNetTools](https://github.com/aspnet/DotNetTools/) GitHub 存放庫中查看 ASP.NET 小組所建立之通用工具的原始程式碼。
+* 您可以在[dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) GitHub 存放庫中查看 ASP.NET 小組所建立之通用工具的原始程式碼。
 * 您可以在[.Net Core dotnet 診斷通用工具](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)瞭解診斷工具。
 
 ## <a name="check-the-author-and-statistics"></a>檢查作者和統計資料

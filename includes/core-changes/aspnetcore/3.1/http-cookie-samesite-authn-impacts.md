@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b0d093cc30a09b3248cc57a521b386bf581b5451
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 02602c70689a6d2729e03d3d7230cda5ae7a4994
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552151"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901735"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP：瀏覽器 SameSite 變更影響驗證
 
 某些瀏覽器（例如 Chrome 和 Firefox）對其 cookie 的 `SameSite` 進行了重大變更。 這些變更會影響遠端驗證案例，例如 OpenID Connect 和 WS-同盟，這必須藉由傳送 `SameSite=None`來退出宣告。 不過，`SameSite=None` 會在 iOS 12 和一些較舊版本的其他瀏覽器上中斷。 應用程式必須探查這些版本，並省略 `SameSite`。
 
-如需此問題的討論，請參閱[aspnet/AspNetCore # 14996](https://github.com/aspnet/AspNetCore/issues/14996)。
+如需此問題的討論，請參閱[dotnet/aspnetcore # 14996](https://github.com/dotnet/aspnetcore/issues/14996)。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -136,7 +136,7 @@ public void Configure(IApplicationBuilder app)
 * `Microsoft.Owin` 4.1
 * `System.Web` （適用于 .NET Framework 4.7.2 和更新版本）
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>分類
 
 [ASP.NET]
 

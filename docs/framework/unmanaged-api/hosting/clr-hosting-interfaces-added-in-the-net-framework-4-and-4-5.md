@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-ms.openlocfilehash: aea88430d8f83234a1568bcaf433c2a75492e23a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8484b47549f83795778420048d610e2d1626d87b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195918"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899724"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 和 4.5 中新增的 CLR 裝載介面
 本節說明非受控主機可用來將 .NET Framework 4、.NET Framework 4.5 和更新版本中的 common language runtime （CLR）整合到其應用程式的介面。 這些介面會提供方法，讓主機設定並將執行時間載入進程中。  
@@ -22,7 +22,7 @@ ms.locfileid: "73195918"
   
 - 它們不會使用 COM 類型，例如 `BSTR`、`SAFEARRAY`或 `VARIANT`。  
   
-- 沒有使用[CoCreateInstance 函數](https://go.microsoft.com/fwlink/?LinkId=142894)的單元模型、匯總或登錄啟用。  
+- 沒有使用[CoCreateInstance 函數](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)的單元模型、匯總或登錄啟用。  
   
 ## <a name="in-this-section"></a>本章節內容  
  [ICLRAppDomainResourceMonitor 介面](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  

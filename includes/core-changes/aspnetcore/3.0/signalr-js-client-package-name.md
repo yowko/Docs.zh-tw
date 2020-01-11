@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: acef6d7177ee5ad7e18dc8ba1e383d6f76263623
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394097"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901762"
 ---
 ### <a name="signalr-javascript-client-package-name-changed"></a>SignalR： JavaScript 用戶端封裝名稱已變更
 
@@ -12,7 +12,7 @@ ms.locfileid: "72394097"
 
 若要回應這項變更，請變更您*封裝*中的參考、`require` 語句和 ECMAScript `import` 語句。 在此重新命名過程中，不會變更任何 API。
 
-如需討論，請參閱[aspnet/AspNetCore # 11637](https://github.com/aspnet/AspNetCore/issues/11637)。
+如需討論，請參閱[dotnet/aspnetcore # 11637](https://github.com/dotnet/aspnetcore/issues/11637)。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -34,13 +34,13 @@ ms.locfileid: "72394097"
 
 切換至新的封裝 `@microsoft/signalr`。
 
-#### <a name="category"></a>類別
+#### <a name="category"></a>分類
 
 ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-無
+None
 
 <!-- 
 

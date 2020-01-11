@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 656b8d9eb2bda2d01f001748c992958e95387744
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712503"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899846"
 ---
-# <a name="if-c-reference"></a>#if (C# 參考)
+# <a name="if-c-reference"></a>#if （C#參考）
 
-當 C# 編譯器遇到 `#if` 指示詞，且其後接著 [#endif](preprocessor-endif.md) 指示詞時，只有在定義了指定的符號時，它才會編譯指示詞之間的程式碼。 不同於 C 和 C++，您無法將數值指派給符號。 C# 中的 #if 陳述式是布林值，且只測試是否已經定義符號。 例如：
+當 C# 編譯器遇到 `#if` 指示詞，且其後接著 [#endif](preprocessor-endif.md) 指示詞時，只有在定義了指定的符號時，它才會編譯指示詞之間的程式碼。 不同於 C 和 C++，您無法將數值指派給符號。 中C#的 `#if` 語句是布林值，而且只會測試是否已定義符號。 例如：
 
 ```csharp
 #if DEBUG
@@ -23,7 +23,7 @@ ms.locfileid: "75712503"
 #endif
 ```
 
-您只能使用運算子[==](../operators/equality-operators.md#equality-operator-) （相等）和[！ =](../operators/equality-operators.md#inequality-operator-) （不等）來測試 `true` 或 `false`的[bool](../builtin-types/bool.md)值。 True 表示已定義符號。 `#if DEBUG` 陳述式的意義與 `#if (DEBUG == true)` 一樣。 您可以使用運算子 [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (且)、[&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (或) 及 [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (非)，來評估是否已定義多個符號。 您也可以使用括弧來將符號和運算子分組。
+您只能使用運算子[==](../operators/equality-operators.md#equality-operator-) （相等）和[！ =](../operators/equality-operators.md#inequality-operator-) （不等）來測試 `true` 或 `false`的[bool](../builtin-types/bool.md)值。 `true` 表示已定義符號。 `#if DEBUG` 陳述式的意義與 `#if (DEBUG == true)` 一樣。 您可以使用[& & （和）](../operators/boolean-logical-operators.md#conditional-logical-and-operator-)、 [ &#124; &#124; （或）](../operators/boolean-logical-operators.md#conditional-logical-or-operator-)和[！（不是）](../operators/boolean-logical-operators.md#logical-negation-operator-)用來評估是否已定義多個符號的運算子。 您也可以使用括弧來將符號和運算子分組。
 
 ## <a name="remarks"></a>備註
 
