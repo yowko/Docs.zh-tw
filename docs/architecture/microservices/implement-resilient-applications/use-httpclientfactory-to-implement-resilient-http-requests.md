@@ -2,12 +2,12 @@
 title: 使用 HttpClientFactory 實作復原 HTTP 要求
 description: 了解如何使用 HttpClientFactory，自 .NET Core 2.1 開始提供，可用來建立 `HttpClient` 執行個體，方便您在應用程式中使用。
 ms.date: 08/08/2019
-ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 1a6d65509d669166e73ad907b506bae7fa26536d
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737762"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900317"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>使用 HttpClientFactory 實作復原 HTTP 要求
 
@@ -37,7 +37,7 @@ ms.locfileid: "73737762"
 - 管理 `HttpClientMessageHandlers` 的存留期，以避免所提及的問題/在自行管理 `HttpClient` 存留期時可能發生的問題。
 
 > [!NOTE]
-> `HttpClientFactory` 緊密系結至 `Microsoft.Extensions.DependencyInjection` NuGet 封裝中的相依性插入（DI）實作為關聯性。 如需使用其他相依性插入容器的詳細資訊，請參閱此[GitHub 討論](https://github.com/aspnet/Extensions/issues/1345)。
+> `HttpClientFactory` 緊密系結至 `Microsoft.Extensions.DependencyInjection` NuGet 封裝中的相依性插入（DI）實作為關聯性。 如需使用其他相依性插入容器的詳細資訊，請參閱此[GitHub 討論](https://github.com/dotnet/extensions/issues/1345)。
 
 ## <a name="multiple-ways-to-use-httpclientfactory"></a>使用 HttpClientFactory 的多種方式
 
@@ -52,7 +52,7 @@ ms.locfileid: "73737762"
 
 ## <a name="how-to-use-typed-clients-with-httpclientfactory"></a>如何搭配 HttpClientFactory 使用具型別用戶端
 
-那麼，什麼是「具型別用戶端」？ 它只是 `HttpClient` 插入時所設定的一個 `DefaultHttpClientFactory`。
+那麼，什麼是「具型別用戶端」？ 它只是 `DefaultHttpClientFactory` 插入時所設定的一個 `HttpClient`。
 
 下圖顯示具型別用戶端如何搭配 `HttpClientFactory` 使用：
 
@@ -62,7 +62,7 @@ ms.locfileid: "73737762"
 
 在上圖中，ClientService （由控制器或用戶端程式代碼使用）會使用已註冊 `IHttpClientFactory`所建立的 `HttpClient`。 此處理站會從所管理的集區中指派 `HttpMessageHandler` 的 `HttpClient`。 在使用擴充方法 `AddHttpClient`的 DI 容器中註冊 `IHttpClientFactory` 時，可以使用 Polly 的原則來設定 `HttpClient`。
 
-若要設定上述結構，請安裝包含 `IServiceCollection``AddHttpClient()` 擴充方法的 `Microsoft.Extensions.Http` NuGet 封裝，以在應用程式中新增 `HttpClientFactory`。 這個擴充方法註冊將用來做為介面 `DefaultHttpClientFactory` 之單一物件的 `IHttpClientFactory`。 它為 `HttpMessageHandlerBuilder` 定義暫時性設定。 此訊息處理常式 (`HttpMessageHandler` 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
+若要設定上述結構，請安裝包含 `IServiceCollection``AddHttpClient()` 擴充方法的 `Microsoft.Extensions.Http` NuGet 封裝，以在應用程式中新增 `HttpClientFactory`。 這個擴充方法註冊將用來做為介面 `IHttpClientFactory` 之單一物件的 `DefaultHttpClientFactory`。 它為 `HttpMessageHandlerBuilder` 定義暫時性設定。 此訊息處理常式 (`HttpMessageHandler` 物件) 取自集區，供處理站傳回的 `HttpClient` 使用。
 
 在下一個程式碼中，您可以看到如何使用 `AddHttpClient()` 來註冊需要使用 `HttpClient` 的具型別用戶端 (服務代理程式)。
 
@@ -103,11 +103,11 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 
 ### <a name="httpclient-lifetimes"></a>HttpClient 存留期
 
-每次您從 `HttpClient` 取得 `IHttpClientFactory` 物件時，都會傳回一個新的執行個體。 但只要 `HttpClient` 的存留期間尚未過期，每個 `HttpMessageHandler` 就都會使用 `IHttpClientFactory`，它會由 `HttpMessageHandler` 組成集區並重複使用以減少資源耗用量。
+每次您從 `IHttpClientFactory` 取得 `HttpClient` 物件時，都會傳回一個新的執行個體。 但只要 `HttpMessageHandler` 的存留期間尚未過期，每個 `HttpClient` 就都會使用 `HttpMessageHandler`，它會由 `IHttpClientFactory` 組成集區並重複使用以減少資源耗用量。
 
 處理常式的集合是需要的做法，因為每個處理常式通常會管理自己的基礎 HTTP 連線；建立比所需數目更多的處理常式可能會導致連線延遲。 有些處理常式也會保持連線無限期地開啟，這可能導致處理常式無法對 DNS 變更回應。
 
-集區中的 `HttpMessageHandler` 物件有存留期，也就是集區中該 `HttpMessageHandler` 執行個體可重複使用的時間長度。 預設值為 2 分鐘，但是可針對各個具型別用戶端分別覆寫。 若要覆寫它，請在建立用戶端時所傳回的 `SetHandlerLifetime()` 上呼叫 `IHttpClientBuilder`，如下列程式碼所示：
+集區中的 `HttpMessageHandler` 物件有存留期，也就是集區中該 `HttpMessageHandler` 執行個體可重複使用的時間長度。 預設值為 2 分鐘，但是可針對各個具型別用戶端分別覆寫。 若要覆寫它，請在建立用戶端時所傳回的 `IHttpClientBuilder` 上呼叫 `SetHandlerLifetime()`，如下列程式碼所示：
 
 ```csharp
 //Set 5 min as the lifetime for the HttpMessageHandler objects in the pool used for the Catalog Typed Client
@@ -119,7 +119,7 @@ services.AddHttpClient<ICatalogService, CatalogService>()
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>實作使用已插入和已設定之 HttpClient 的具型別用戶端類別
 
-在上一個步驟中，您必須先定義具型別用戶端類別，例如範例程式碼中的類別，像是 'BasketService'、'CatalogService'、'OrderingService' 等等，具型別用戶端是接受 `HttpClient` 物件 (透過建構函式插入) 並使用該物件來呼叫某些遠端 HTTP 服務的類別。 例如，
+在上一個步驟中，您必須先定義具型別用戶端類別，例如範例程式碼中的類別，像是 'BasketService'、'CatalogService'、'OrderingService' 等等，具型別用戶端是接受 `HttpClient` 物件 (透過建構函式插入) 並使用該物件來呼叫某些遠端 HTTP 服務的類別。 例如：
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -188,14 +188,14 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 - **在 .NET Core 中使用 HttpClientFactory**  
   [https://docs.microsoft.com/aspnet/core/fundamentals/http-requests](/aspnet/core/fundamentals/http-requests)
 
-- **`aspnet/Extensions` GitHub 存放庫中的 HttpClientFactory 原始程式碼**  
-  <https://github.com/aspnet/Extensions/tree/master/src/HttpClientFactory>
+- **`dotnet/extensions` GitHub 存放庫中的 HttpClientFactory 原始程式碼**  
+  <https://github.com/dotnet/extensions/tree/master/src/HttpClientFactory>
 
 - **Polly (.NET 復原和暫時性錯誤處理程式庫)**  
   <http://www.thepollyproject.org/>
   
 - **使用不具相依性插入的 HttpClientFactory （GitHub 問題）**  
-  <https://github.com/aspnet/Extensions/issues/1345>
+  <https://github.com/dotnet/extensions/issues/1345>
 
 >[!div class="step-by-step"]
 >[上一頁](explore-custom-http-call-retries-exponential-backoff.md)

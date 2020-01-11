@@ -2,12 +2,12 @@
 title: 設計領域模型層中的驗證
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解領域模型驗證的關鍵概念。
 ms.date: 10/08/2018
-ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674245"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899672"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>設計領域模型層中的驗證
 
@@ -53,7 +53,7 @@ public void SetAddress(string line1, string line2,
 
 ### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>在以資料註解為基礎的模型中使用驗證屬性
 
-資料註解與 Required 或 MaxLength 屬性相似，可用來設定 EF Core 資料庫欄位屬性 (如[資料表對應](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping)一節中詳細資料所述)，但與 .NET Framework 中 EF 4.x 以來的版本不同，它們[已不再能用於 EF Core 中的實體驗證](https://github.com/aspnet/EntityFrameworkCore/issues/3680) (<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> 方法也一樣)。
+資料註解與 Required 或 MaxLength 屬性相似，可用來設定 EF Core 資料庫欄位屬性 (如[資料表對應](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping)一節中詳細資料所述)，但與 .NET Framework 中 EF 4.x 以來的版本不同，它們[已不再能用於 EF Core 中的實體驗證](https://github.com/dotnet/efcore/issues/3680) (<xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType> 方法也一樣)。
 
 資料註解和 <xref:System.ComponentModel.DataAnnotations.IValidatableObject> 介面與過去相同，仍然可以在控制器的動作叫用前，於模型繫結期間用於模型驗證，但該模型應用來作為 ViewModel 或 DTO。這是 MVC 或 API 的考量事項，而非領域模型的考量事項。
 
@@ -61,7 +61,7 @@ public void SetAddress(string line1, string line2,
 
 您仍然可以在實體類別中使用資料註解和 `IValidatableObject.Validate` 方法，透過覆寫 DbContext 的 SaveChanges 方法來實作自訂驗證。
 
-您可以在 [GitHub 上的這個留言](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539)裡看到驗證 `IValidatableObject` 實體的範例實作。 該範例不會進行以屬性為基礎的驗證，但它們可以在相同覆寫中，使用反映來輕鬆實作。
+您可以在 [GitHub 上的這個留言](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539)裡看到驗證 `IValidatableObject` 實體的範例實作。 該範例不會執行以屬性為基礎的驗證，但是在相同的覆寫中，使用反映就可以輕鬆地執行。
 
 不過，從 DDD 觀點，領域模型會妥善使用您實體行為方法中的例外狀況，或藉由實作規格和通知模式來強制執行驗證規則。
 
@@ -85,25 +85,25 @@ public void SetAddress(string line1, string line2,
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Rachel Appel：ASP.NET Core MVC 中的模型驗證簡介** \
+- **Rachel Appel。ASP.NET Core MVC \ 中的模型驗證簡介**
   <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
-- **Rick Anderson，新增驗證** \
+- **Rick Anderson。新增驗證** \
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **Martin Fowler：在驗證中將擲回例外狀況取代為通知** \
+- **聖馬丁 Fowler。將擲回例外狀況取代為驗證中的通知** \
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
 - **規格和通知模式** \
   <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
-- **Lev Gorodinski：網域驅動設計 (DDD) 中的驗證** \
+- **Lev Gorodinski。網域驅動設計（DDD） \ 中的驗證**
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **Colin Jack：領域模型驗證** \
+- **Colin 插孔。領域模型驗證** \
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
-- **Jimmy Bogard：DDD 世界中的驗證** \
+- **Jimmy Bogard。DDD world \ 中的驗證**
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
