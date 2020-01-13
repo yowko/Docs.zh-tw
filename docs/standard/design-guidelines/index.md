@@ -1,5 +1,6 @@
 ---
 title: Framework 設計方針
+titleSuffix: ''
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-ms.openlocfilehash: 623391de63891c1695a63482a424bb76a861deba
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8abe64476a5d3d1319dfa30dd7a06dc2bb541a0f
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709305"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904619"
 ---
 # <a name="framework-design-guidelines"></a>Framework 設計方針
 本節提供設計程式庫的指導方針，這些程式庫會擴充 .NET Framework 並與之互動。 其目標是提供統一的程式設計模型，獨立于用於開發的程式設計語言，以協助程式庫設計人員確保 API 一致性和便於使用。 我們建議您在開發擴充 .NET Framework 的類別和元件時，遵循這些設計方針。 不一致的程式庫設計會對開發人員生產力和避免採用造成不良影響。  

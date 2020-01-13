@@ -1,20 +1,20 @@
 ---
 title: 如何撰寫 JSON 序列化的自訂轉換器-.NET
-ms.date: 10/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: efbaf852f07b2b59111f0e330cf52470e3eca4c3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a2af76ca64359c12fafce6678def14d11d9f029
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705804"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904559"
 ---
-# <a name="how-to-write-custom-converters-for-json-serialization-in-net"></a>如何在 .NET 中撰寫 JSON 序列化的自訂轉換器
+# <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何在 .NET 中撰寫 JSON 序列化（封送處理）的自訂轉換器
 
 本文說明如何為 <xref:System.Text.Json> 命名空間中提供的 JSON 序列化類別建立自訂的轉換器。 如需 `System.Text.Json`的簡介，請參閱[如何在 .net 中序列化和還原序列化 JSON](system-text-json-how-to.md)。
 
@@ -23,7 +23,7 @@ ms.locfileid: "75705804"
 * 覆寫內建轉換器的預設行為。 例如，您可能想要以 mm/dd/yyyy 格式來表示 `DateTime` 值，而不是預設的 ISO 8601-1:2019 格式。
 * 支援自訂實值型別。 例如，`PhoneNumber` 結構。
 
-您也可以撰寫自訂轉換器，使用目前版本中未包含的功能來擴充 `System.Text.Json`。 本文稍後會涵蓋下列案例：
+您也可以撰寫自訂轉換器，使用目前版本中未包含的功能來自訂或擴充 `System.Text.Json`。 本文稍後會涵蓋下列案例：
 
 * [將推斷的類型還原序列化為物件屬性](#deserialize-inferred-types-to-object-properties)。
 * [支援具有非字串索引鍵的字典](#support-dictionary-with-non-string-key)。
@@ -70,7 +70,7 @@ ms.locfileid: "75705804"
 * 覆寫 `Write` 方法，將 `T`類型的傳入物件序列化。 使用傳遞至方法的 <xref:System.Text.Json.Utf8JsonWriter> 來寫入 JSON。
 * 只有在必要時，才覆寫 `CanConvert` 方法。 當要轉換的型別是 `T`型別時，預設的實值會傳回 `true`。 因此，只支援類型 `T` 的轉換器不需要覆寫此方法。 如需需要覆寫此方法之轉換器的範例，請參閱本文稍後[的多](#support-polymorphic-deserialization)型還原序列化一節。
 
-您可以參考[內建的轉換器原始程式碼](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json/src/System/Text/Json/Serialization/Converters/)做為參考執行，以撰寫自訂的轉換器。
+您可以參考[內建的轉換器原始程式碼](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/)做為參考執行，以撰寫自訂的轉換器。
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>遵循 factory 模式的步驟
 
@@ -179,14 +179,15 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ### <a name="deserialize-inferred-types-to-object-properties"></a>將推斷的類型還原序列化為物件屬性
 
-當還原序列化為 `Object`類型的屬性時，會建立 `JsonElement` 物件。 原因是還原序列化程式不知道要建立什麼 CLR 型別，而且也不會嘗試猜到。 例如，如果 JSON 屬性具有 "true"，則還原序列化程式並不會推斷值為 `Boolean`，如果元素具有 "01/01/2019"，則還原序列化程式不會推斷它是 `DateTime`。
+當還原序列化為 `object`類型的屬性時，會建立 `JsonElement` 物件。 原因是還原序列化程式不知道要建立什麼 CLR 型別，而且也不會嘗試猜到。 例如，如果 JSON 屬性具有 "true"，則還原序列化程式並不會推斷值為 `Boolean`，如果元素具有 "01/01/2019"，則還原序列化程式不會推斷它是 `DateTime`。
 
 型別推斷可能不正確。 如果還原序列化程式會剖析沒有小數點的 JSON 數位做為 `long`，如果值原本序列化為 `ulong` 或 `BigInteger`，可能會導致超出範圍的問題。 如果數位原本序列化為 `decimal`，則剖析具有小數點做為 `double` 的數位可能會失去精確度。
 
-針對需要型別推斷的案例，下列程式碼會顯示 `Object` 屬性的自訂轉換器。 程式碼會轉換：
+針對需要型別推斷的案例，下列程式碼會顯示 `object` 屬性的自訂轉換器。 程式碼會轉換：
 
 * `true` 和 `false` 至 `Boolean`
-* 要 `long` 或 `double` 的數位
+* 不含小數的數位以 `long`
+* 包含小數的數位以 `double`
 * 要 `DateTime` 的日期
 * 要 `string` 的字串
 * `JsonElement` 的其他專案
@@ -195,9 +196,9 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 下列程式碼會註冊轉換器：
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertInferredTypesToObject.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DeserializeInferredTypesToObject.cs?name=SnippetRegister)]
 
-以下是具有 `Object` 屬性的範例型別：
+以下是具有 `object` 屬性的範例型別：
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithObjectProperties)]
 
@@ -213,7 +214,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 如果沒有自訂轉換器，還原序列化會將 `JsonElement` 放入每個屬性中。
 
-`System.Text.Json.Serialization` 命名空間中的 [[單元測試] 資料夾](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/)，有更多範例可處理還原序列化為物件屬性的自訂轉換器。
+`System.Text.Json.Serialization` 命名空間中的 [[單元測試] 資料夾](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)，有更多自訂轉換器的範例，可處理還原序列化為 `object` 屬性。
 
 ### <a name="support-dictionary-with-non-string-key"></a>支援具有非字串索引鍵的字典
 
@@ -225,7 +226,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 下列程式碼會註冊轉換器：
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripDictionaryTkeyEnumTValue.cs?name=SnippetRegister)]
 
 轉換器可以序列化和還原序列化下列類別中使用下列 `Enum`的 `TemperatureRanges` 屬性：
 
@@ -245,11 +246,11 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 }
 ```
 
-`System.Text.Json.Serialization` 命名空間中的 [[單元測試] 資料夾](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/)，有更多可處理非字串索引鍵字典的自訂轉換器範例。
+`System.Text.Json.Serialization` 命名空間中的 [[單元測試] 資料夾](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)，有更多可處理非字串索引鍵字典的自訂轉換器範例。
 
 ### <a name="support-polymorphic-deserialization"></a>支援多型還原序列化
 
-多型[序列化](system-text-json-how-to.md#serialize-properties-of-derived-classes)不需要自訂轉換器，但是還原序列化的確需要自訂轉換器。
+內建功能提供有限範圍的多型[序列化](system-text-json-how-to.md#serialize-properties-of-derived-classes)，但完全不支援還原序列化。 還原序列化需要自訂的轉換器。
 
 例如，假設您有一個 `Person` 的抽象基類，`Employee` 和 `Customer` 衍生的類別。 多型還原序列化表示在設計階段，您可以指定 `Person` 做為還原序列化目標，而且 JSON 中的 `Customer` 和 `Employee` 物件會在執行時間正確地還原序列化。 在還原序列化期間，您必須尋找識別 JSON 中所需類型的線索。 可用的線索種類會因每個案例而異。 例如，鑒別子屬性可能可供使用，或者您可能必須依賴特定屬性的存在與否。 目前的 `System.Text.Json` 版本並未提供屬性來指定如何處理多型還原序列化案例，因此需要自訂轉換器。
 
@@ -261,7 +262,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 下列程式碼會註冊轉換器：
 
-[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ConvertPolymorphic.cs?name=SnippetRegister)]
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/RoundtripPolymorphic.cs?name=SnippetRegister)]
 
 轉換器可以還原序列化使用相同的轉換子所建立的 JSON，例如：
 
@@ -282,22 +283,25 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 
 ## <a name="other-custom-converter-samples"></a>其他自訂轉換器範例
 
-`System.Text.Json.Serialization` 原始程式碼中的 [[單元測試] 資料夾](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/tests/Serialization/)包含其他自訂轉換器範例，例如：
+[從 Newtonsoft 遷移至 system.object](system-text-json-migrate-from-newtonsoft-how-to.md)文章包含自訂轉換器的其他範例。
 
-* 在還原序列化時，將 null 轉換為0的 `Int32` 轉換器
-* 在還原序列化時允許字串和數值的 `Int32` 轉換器
-* `Enum` 轉換器
-* 接受外部資料的 `List<T>` 轉換器
-* 可搭配以逗號分隔的數位清單使用的 `Long[]` 轉換器 
+`System.Text.Json.Serialization` 原始程式碼中的 [[單元測試] 資料夾](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/)包含其他自訂轉換器範例，例如：
+
+* [在還原序列化時，將 null 轉換為0的 Int32 轉換子](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.NullValueType.cs)
+* [Int32 轉換器，可在還原序列化時同時允許字串和數位值](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
+* [列舉轉換器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
+* [列出接受外部資料的\<T > 轉換器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
+* [Long [] 轉換器，適用于以逗號分隔的數位清單](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs) 
+
+如果您需要建立可修改現有內建轉換器行為的轉換器，您可以取得[現有轉換器的原始程式碼](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)，做為自訂的起點。
 
 ## <a name="additional-resources"></a>其他資源
 
+* [內建轉換器的原始程式碼](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
+* [System.web 中的 DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
 * [System.web. Text. Json 總覽](system-text-json-overview.md)
-* [System.web API 參考](xref:System.Text.Json)
 * [如何使用 System.object](system-text-json-how-to.md)
-* [內建轉換器的原始程式碼](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json/src/System/Text/Json/Serialization/Converters/)
-* `System.Text.Json` 自訂轉換器的相關 GitHub 問題
-  * [36639引進自訂轉換器](https://github.com/dotnet/corefx/issues/36639)
-  * [38713關於還原序列化為物件](https://github.com/dotnet/corefx/issues/38713)
-  * [40120有關非字串索引鍵的字典](https://github.com/dotnet/corefx/issues/40120)
-  * [37787關於多型還原序列化](https://github.com/dotnet/corefx/issues/37787)
+* [如何從 Newtonsoft 遷移](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.web API 參考](xref:System.Text.Json)
+* [System.object。序列化 API 參考](xref:System.Text.Json.Serialization)
+<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->
