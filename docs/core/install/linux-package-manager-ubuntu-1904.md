@@ -15,7 +15,7 @@ ms.locfileid: "75740603"
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-本文說明如何使用套件管理員在 Ubuntu 19.04 上安裝 .NET Core。 如果您僅要安裝執行階段，我們建議您安裝 [ASP.NET Core runtime](#install-the-aspnet-core-runtime)，因為它同時包含 .net Core 和 ASP.NET Core 執行階段。
+本文說明如何使用套件管理員在 Ubuntu 19.04 上安裝 .NET Core。如果您僅要安裝執行階段，我們建議您安裝 [ASP.NET Core runtime](#install-the-aspnet-core-runtime)，因為它同時包含 .net Core 和 ASP.NET Core 執行階段。
 
 ## <a name="register-microsoft-key-and-feed"></a>註冊 Microsoft 金鑰和總結
 
@@ -50,7 +50,7 @@ sudo apt-get install dotnet-sdk-3.1
 
 ## <a name="install-the-aspnet-core-runtime"></a>安裝 ASP.NET Core 執行階段
 
-更新可供安裝的產品，然後安裝 ASP.NET Core 執行階段。 在您的終端機中，執行下列命令。
+更新可供安裝的產品，然後安裝 ASP.NET Core 執行階段。在您的終端機中，執行下列命令。
 
 ```bash
 sudo apt-get update
@@ -64,7 +64,7 @@ sudo apt-get install aspnetcore-runtime-3.1
 
 ## <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行階段
 
-更新可供安裝的產品，然後安裝 .NET Core 執行階段。 在您的終端機中，執行下列命令。
+更新可供安裝的產品，然後安裝 .NET Core 執行階段。在您的終端機中，執行下列命令。
 
 ```bash
 sudo apt-get update
