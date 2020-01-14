@@ -2,12 +2,12 @@
 title: Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 description: 了解 DevOps 工作流程的「外部迴圈」步驟
 ms.date: 02/15/2019
-ms.openlocfilehash: 7c465ab380770441005f7365f53bc585236c31bd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738289"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936786"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 
@@ -91,7 +91,7 @@ Visual Studio Azure DevOps Services 包含組建與發行範本，您可以在 C
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
 > - 使用 Azure DevOps Services 建置 .NET Core Linux Docker 映像：\
->   <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
+>   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - 透過 Docker 支援建置 Linux 型 Visual Studio Team Service 組建電腦：\
 >   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
@@ -158,7 +158,7 @@ Docker 映像的不變性確保可重複部署已開發、已透過 CI 測試並
 
 **圖 5-7**。 在 Azure DevOps Services 管線中新增 Docker Compose 工作
 
-當您在 Azure DevOps Services 中建立發行時，它會接受一組輸入成品。 這些成品在所有不同環境的發行存留期中會保持不變。 當您引進容器時，輸入成品會識別登錄中要部署的映像。 根據這些映像的識別方式，不保證會在發行期間保持相同的輸送量，最明顯的例子是當您從 `myimage:latest` 檔案參考 `docker-compose` 時。
+當您在 Azure DevOps Services 中建立發行時，它會接受一組輸入成品。 這些成品在所有不同環境的發行存留期中會保持不變。 當您引進容器時，輸入成品會識別登錄中要部署的映像。 根據這些映像的識別方式，不保證會在發行期間保持相同的輸送量，最明顯的例子是當您從 `docker-compose` 檔案參考 `myimage:latest` 時。
 
 Azure DevOps Services 範本可讓您產生包含特定登錄映像摘要的組建成品，保證可唯一識別相同的映像二進位檔。 這些是您真正想要用作發行輸入的檔案。
 

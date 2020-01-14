@@ -2,12 +2,12 @@
 title: 移轉至混合式雲端案例
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |遷移至混合式雲端案例
 ms.date: 04/30/2018
-ms.openlocfilehash: 4348a9b538042fee7ebd9c08f480491f17425937
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: dcbb799a45609f8bb811866c4041951abf1fda8b
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72394538"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937368"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>移轉至混合式雲端案例
 
@@ -31,17 +31,17 @@ Azure Stack 是混合式雲端平臺，可讓您從組織的資料中心提供 A
 
 有兩個部署選項提供 Azure Stack，以符合您的需求：
 
-- Azure Stack 整合式系統
+- Azure Stack 整合系統
 
 - Azure Stack 開發套件
 
-### <a name="azure-stack-integrated-systems"></a>Azure Stack 整合式系統
+### <a name="azure-stack-integrated-systems"></a>Azure Stack 整合系統
 
-Azure Stack 整合系統是透過 Microsoft 與硬體合作夥伴的合作關係來提供。 合作關係所建立的解決方案提供了雲端進度的創新，並與管理中的簡單性達成平衡。 因為 Azure Stack 會當做硬體和軟體的整合系統提供，所以您可以取得適當的彈性和控制量，同時仍採用雲端的創新。 Azure Stack 整合系統的大小範圍是4到12個節點，且硬體合作夥伴和 Microsoft 共同支援。 使用 Azure Stack 整合式系統，為您的生產環境工作負載實行新的案例。
+Azure Stack 整合系統是透過 Microsoft 與硬體合作夥伴的合作關係來提供。 合作關係所建立的解決方案提供了雲端進度的創新，並與管理中的簡單性達成平衡。 由於是以硬體與軟體的整合系統形式來提供 Azure Stack，因此除了仍然會採用來自雲端的創新之外，您還有適度的彈性和控制。 Azure Stack 整合系統的大小範圍是4到12個節點，且硬體合作夥伴和 Microsoft 共同支援。 使用 Azure Stack 整合式系統，為您的生產環境工作負載實行新的案例。
 
 ### <a name="azure-stack-development-kit"></a>Azure Stack 開發套件
 
-Microsoft Azure Stack 開發工具組是 Azure Stack 的單一節點部署，您可以用來評估和瞭解 Azure Stack。 您也可以使用 Azure Stack 開發套件做為開發人員環境，您可以在其中使用與 Azure 一致的 Api 和工具進行開發。 Azure Stack 開發套件不適合作為生產環境使用。
+「Microsoft Azure Stack 開發套件」是單一節點的 Azure Stack 部署，您可以用來評估和瞭解 Azure Stack。 您也可以使用 Azure Stack 開發套件做為開發人員環境，您可以在其中使用與 Azure 一致的 Api 和工具進行開發。 「Azure Stack 開發套件」不應該用來作為生產環境。
 
 ### <a name="additional-resources"></a>其他資源
 
@@ -59,7 +59,7 @@ Microsoft Azure Stack 開發工具組是 Azure Stack 的單一節點部署，您
 
 - **建立具有 Active Directory 支援的容器**
 
-    <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
+    <https://docs.microsoft.com/archive/blogs/containerstuff/create-a-container-with-active-directory-support>
 
 - **Azure Hybrid Benefit 授權**
 
