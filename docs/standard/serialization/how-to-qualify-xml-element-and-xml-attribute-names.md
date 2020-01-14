@@ -1,5 +1,5 @@
 ---
-title: HOW TO：限定 XML 元素和 XML 屬性名稱
+title: 如何限定 XML 元素和 XML 屬性名稱
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 1f79caf6ff295d793c615b17d387cdd165e440e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 383dc7687e67e183b86598857067801c950b0312
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353104"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545086"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>HOW TO：限定 XML 元素和 XML 屬性名稱
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>如何限定 XML 元素和 XML 屬性名稱
 
 <xref:System.Xml.Serialization.XmlSerializerNamespaces> 類別的實例所包含的 XML 命名空間，必須符合[在 XML 中稱為命名空間](https://www.w3.org/TR/REC-xml-names/)的全球資訊網協會（W3C）規格。
 
@@ -40,32 +40,18 @@ XML 命名空間提供限定 XML 文件中 XML 項目和 XML 屬性名稱的方�
 
 ## <a name="example"></a>範例
 
-下列範例建立 `XmlSerializerNamespaces`，並在物件加入兩個前置詞和命名空間配對。 程式碼建立用來系列化 `XmlSerializer` 類別執行個體的 `Books`。 程式碼以 `Serialize``XmlSerializerNamespaces`呼叫 {3} 方法，讓 XML 能包含有前置詞的命名空間。
+下列範例建立 `XmlSerializerNamespaces`，並在物件加入兩個前置詞和命名空間配對。 程式碼建立用來系列化 `XmlSerializer` 類別執行個體的 `Books`。 程式碼以 `Serialize``XmlSerializerNamespaces`呼叫  方法，讓 XML 能包含有前置詞的命名空間。
 
-<!-- TODO: THE FOLLOWING VB SNIPPET ISN'T CORRECT!! -->
 ```vb
-Option Explicit
-public class Price
-{
-    [XmlAttribute(Namespace = "http://www.cpandl.com")]
-    public string currency;
-    [XmlElement(Namespace = "http://www.cohowinery.com")]
-    public decimal price;
-}
-
-Option Strict
-
-Imports System
 Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization
 
-Public Class Run
+Public Module Program
 
-    Public Shared Sub Main()
-        Dim test As New Run()
-        test.SerializeObject("XmlNamespaces.xml")
-    End Sub 'Main
+    Public Sub Main()
+        SerializeObject("XmlNamespaces.xml")
+    End Sub
 
     Public Sub SerializeObject(filename As String)
         Dim mySerializer As New XmlSerializer(GetType(Books))
@@ -90,16 +76,15 @@ Public Class Run
         mySerializer.Serialize(myWriter, myBooks, myNamespaces)
         myWriter.Close()
     End Sub
-End Class
+End Module
 
 Public Class Books
     <XmlElement([Namespace] := "http://www.cohowinery.com")> _
     Public Book As Book
-End Class 'Books
+End Class
 
 <XmlType([Namespace] := "http://www.cpandl.com")> _
 Public Class Book
-
     <XmlElement([Namespace] := "http://www.cpandl.com")> _
     Public TITLE As String
     <XmlElement([Namespace] := "http://www.cohowinery.com")> _
@@ -109,8 +94,8 @@ End Class
 Public Class Price
     <XmlAttribute([Namespace] := "http://www.cpandl.com")> _
     Public currency As String
-    Public <XmlElement([Namespace] := "http://www.cohowinery.com")> _
-        price As Decimal
+    <XmlElement([Namespace] := "http://www.cohowinery.com")> _
+    Public price As Decimal
 End Class
 ```
 
@@ -120,36 +105,35 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 
-public class Run
+public class Program
 {
     public static void Main()
     {
-        Run test = new Run();
-        test.SerializeObject("XmlNamespaces.xml");
+        SerializeObject("XmlNamespaces.xml");
     }
-    public void SerializeObject(string filename)
+    
+    public static void SerializeObject(string filename)
     {
-        XmlSerializer mySerializer = new XmlSerializer(typeof(Books));
+        var mySerializer = new XmlSerializer(typeof(Books));
         // Writing a file requires a TextWriter.
         TextWriter myWriter = new StreamWriter(filename);
 
         // Creates an XmlSerializerNamespaces and adds two
         // prefix-namespace pairs.
-        XmlSerializerNamespaces myNamespaces =
-        new XmlSerializerNamespaces();
+        var myNamespaces = new XmlSerializerNamespaces();
         myNamespaces.Add("books", "http://www.cpandl.com");
         myNamespaces.Add("money", "http://www.cohowinery.com");
 
         // Creates a Book.
-        Book myBook = new Book();
+        var myBook = new Book();
         myBook.TITLE = "A Book Title";
-        Price myPrice = new Price();
+        var myPrice = new Price();
         myPrice.price = (decimal) 9.95;
         myPrice.currency = "US Dollar";
         myBook.PRICE = myPrice;
-        Books myBooks = new Books();
+        var myBooks = new Books();
         myBooks.Book = myBook;
-        mySerializer.Serialize(myWriter,myBooks,myNamespaces);
+        mySerializer.Serialize(myWriter, myBooks, myNamespaces);
         myWriter.Close();
     }
 }
@@ -168,15 +152,23 @@ public class Book
     [XmlElement(Namespace ="http://www.cohowinery.com")]
     public Price PRICE;
 }
+
+public class Price
+{
+    [XmlAttribute(Namespace = "http://www.cpandl.com")]
+    public string currency;
+    [XmlElement(Namespace = "http://www.cohowinery.com")]
+    public decimal price;
+}
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML 結構描述定義工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML 序列化簡介](introducing-xml-serialization.md)
 - [XmlSerializer 類別](xref:System.Xml.Serialization.XmlSerializer)
 - [可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
-- [如何：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [如何：指定 XML 資料流程的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [如何：序列化物件](how-to-serialize-an-object.md)
 - [如何：還原序列化物件](how-to-deserialize-an-object.md)
