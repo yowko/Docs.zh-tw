@@ -1,5 +1,5 @@
 ---
-title: 作法：刪除隔離儲存區中的存放區
+title: HOW TO：刪除隔離儲存區中的存放區
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,16 +15,14 @@ helpviewer_keywords:
 - storing data using isolated storage, deleting stores
 - data storage using isolated storage, deleting stores
 ms.assetid: 3947e333-5af6-4601-b2f1-24d4d6129cf3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a935ec663dd178d35aff745e907d2aae48e5b65c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 6b1e8e651fd8e18c79dd629c154fb6c4d74243e3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622586"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75707823"
 ---
-# <a name="how-to-delete-stores-in-isolated-storage"></a>作法：刪除隔離儲存區中的存放區
+# <a name="how-to-delete-stores-in-isolated-storage"></a>HOW TO：刪除隔離儲存區中的存放區
 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別提供兩種方法來刪除隔離儲存區檔案：  
   
 - 執行個體方法 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove> 不接受任何引數，並刪除呼叫它的存放區。 這個作業不需要使用權限。 能夠存取存放區的任何程式碼，都可以刪除在它之內的任何或所有資料。  
@@ -38,7 +36,7 @@ ms.locfileid: "64622586"
  [!code-csharp[Conceptual.IsolatedStorage#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source3.cs#3)]
  [!code-vb[Conceptual.IsolatedStorage#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - [隔離儲存區](../../../docs/standard/io/isolated-storage.md)

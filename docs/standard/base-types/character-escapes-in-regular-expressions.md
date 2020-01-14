@@ -15,13 +15,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-ms.custom: seodec18
-ms.openlocfilehash: 0179c4313ebce3cf6f2ad09d527d43aeb627bf77
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 82e60b3cb5eb777d48219209550367642f78d8c3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120580"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711424"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>在規則運算式中執行字元逸出
 規則運算式中的反斜線 (\\) 表示下列其中之一：  
@@ -38,7 +37,7 @@ ms.locfileid: "73120580"
   
 |字元或序列|描述|  
 |---------------------------|-----------------|  
-|下列字元以外的所有字元：<br /><br /> 執行個體時提供 SQL Server 登入。 $ ^ { [ ( &#124; ) * + ? \ |不同於列在 [字元或序列] 資料行中的其他字元在規則運算式中沒有任何特殊的意義；它們符合其本身。<br /><br /> [字元或序列] 資料行中所包含的字元是規則運算式的特殊語言項目。 若要在規則運算式中進行比對，它們必須逸出或包含在[正字元群組](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，規則運算式 `\$\d+` 或 `[$]\d+` 符合「$1200」。|  
+|下列字元以外的所有字元：<br /><br /> 。 $ ^ { [ ( &#124; ) * + ? \ |不同於列在 [字元或序列] 資料行中的其他字元在規則運算式中沒有任何特殊的意義；它們符合其本身。<br /><br /> [字元或序列] 資料行中所包含的字元是規則運算式的特殊語言項目。 若要在規則運算式中進行比對，它們必須逸出或包含在[正字元群組](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。 例如，規則運算式 `\$\d+` 或 `[$]\d+` 符合「$1200」。|  
 |`\a`|符合警鈴 (警示) 字元 `\u0007`。|  
 |`\b`|在 `[`*character_group*`]` 字元類別，比對退格鍵 `\u0008`。  （請參閱[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。）在字元類別之外，`\b` 是符合字邊界的錨點。 (請參閱[錨點](../../../docs/standard/base-types/anchors-in-regular-expressions.md)。)|  
 |`\t`|符合索引標籤， `\u0009`。|  

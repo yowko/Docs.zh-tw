@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: ceab7db1f9eeb47ec020e220ec702af8181855e2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 645c44998812453008fc91d5cf4b8463c51bef9a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442487"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741734"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自動化和畫面縮放比例
 > [!NOTE]
@@ -58,14 +58,14 @@ ms.locfileid: "74442487"
   
  解決方法分為兩個部分。  
   
-1. 首先，將用戶端應用程式設為 DPI 感知。 若要執行這項動作，請在啟動時呼叫 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函式 `SetProcessDPIAware` 。 以 Managed 程式碼的下列宣告，讓這個函式成為可用的。  
+1. 首先，將用戶端應用程式設為 DPI 感知。 若要這麼做，請在啟動時呼叫 Win32 函數 `SetProcessDPIAware`。 以 Managed 程式碼的下列宣告，讓這個函式成為可用的。  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      此函式會使整個進程 DPI 感知，這表示屬於該進程的所有視窗都是無比例的。 例如，在[螢光筆的範例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)中，構成反白顯示矩形的四個視窗位於從 UI 自動化取得的實體座標，而非邏輯座標。 如果範例不是 DPI 感知，就會在桌面的邏輯座標上繪製反白顯示，這會導致非 96 DPI 環境中的位置不正確。  
   
-2. 若要取得游標座標，請呼叫 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函式 `GetPhysicalCursorPos`。 下列範例顯示如何宣告及使用這個函式。  
+2. 若要取得游標座標，請呼叫 Win32 函數 `GetPhysicalCursorPos`。 下列範例顯示如何宣告及使用這個函式。  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
@@ -73,8 +73,8 @@ ms.locfileid: "74442487"
 > [!CAUTION]
 > 請勿使用 <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>。 這個屬性在縮放環境中用戶端視窗之外的行為是未定義的。  
   
- 如果您的應用程式執行與非 DPI 感知應用程式的直接跨進程通訊，您可能會使用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函式 `PhysicalToLogicalPoint` 和 `LogicalToPhysicalPoint`，在邏輯和實體座標之間進行轉換。  
+ 如果您的應用程式執行與非 DPI 感知應用程式的直接跨進程通訊，您可能會使用 Win32 函數 `PhysicalToLogicalPoint` 和 `LogicalToPhysicalPoint`，在邏輯和實體座標之間轉換。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

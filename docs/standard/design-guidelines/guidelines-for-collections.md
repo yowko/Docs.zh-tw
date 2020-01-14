@@ -3,132 +3,131 @@ title: 集合方針
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: KrzysztofCwalina
-ms.openlocfilehash: a8e8672d71500478dbbe28512e413e8ada501f45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 231d8b04c11f19c4440e184533e1eeaded72b70b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669040"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709318"
 ---
 # <a name="guidelines-for-collections"></a>集合方針
-任何型別，專門設計來管理一組具有一些共同的特性的物件可以視為一個集合。 幾乎都是實作這種類型的適當<xref:System.Collections.IEnumerable>或<xref:System.Collections.Generic.IEnumerable%601>，所以在本節中，我們只考慮實作一個或多個這些介面的型別是集合。  
+專為操作具有一些通用特性之物件群組而設計的任何類型，都可視為集合。 這種類型幾乎都適合用來執行 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>，因此在本節中，我們只會考慮將其中一個或兩個介面都實作為集合的類型。  
   
- **X DO NOT** 在公用 Api 中使用弱式型別的的集合。  
+ **X 不會**在公用 api 中使用弱式類型集合。  
   
- 所有傳回值以及代表集合的項目參數的類型應該是確切的項目類型，不是任何基底類型 （這只適用於集合的公用成員）。  
+ 所有代表集合專案的傳回值和參數類型，都應該是確切的專案類型，而不是其任何基底類型（這僅適用于集合的公用成員）。  
   
- **X DO NOT** 使用 <xref:System.Collections.ArrayList> 或 <xref:System.Collections.Generic.List%601> 在公用 Api。  
+ **X 不會**在公用 api 中使用 <xref:System.Collections.ArrayList> 或 <xref:System.Collections.Generic.List%601>。  
   
- 這些類型是設計來在內部實作中，不在公用 Api 中的資料結構。 `List<T>` 已針對效能和但要付出的 Api 和彈性的 cleanness 電源最佳化。 例如，如果您傳回`List<T>`，您將以往無法接收通知，當用戶端程式碼會修改集合。 此外，`List<T>`公開許多成員，例如<xref:System.Collections.Generic.List%601.BinarySearch%2A>，不實用或適用於許多案例。 下列兩節會描述專為使用公用 Api 中的類型 （抽象）。  
+ 這些類型是設計用來在內部執行時使用的資料結構，而不是在公用 Api 中。 `List<T>` 已針對效能和能力進行優化，但 cleanness Api 和彈性的成本。 例如，如果您傳回 `List<T>`，當用戶端程式代碼修改集合時，您就不會收到通知。 此外，`List<T>` 會公開許多在許多情況下都不實用或適用的成員，例如 <xref:System.Collections.Generic.List%601.BinarySearch%2A>。 下列兩節描述專為在公用 Api 中使用而設計的類型（抽象）。  
   
- **X DO NOT** 使用 `Hashtable` 或 `Dictionary<TKey,TValue>` 在公用 Api。  
+ **X 不會**在公用 api 中使用 `Hashtable` 或 `Dictionary<TKey,TValue>`。  
   
- 這些類型是設計來在內部實作的資料結構。 應該使用公用 Api <xref:System.Collections.IDictionary>， `IDictionary <TKey, TValue>`，或實作一或兩個介面的自訂型別。  
+ 這些類型是設計用來在內部執行時使用的資料結構。 公用 Api 應該使用 <xref:System.Collections.IDictionary>、`IDictionary <TKey, TValue>`，或可執行一或兩個介面的自訂類型。  
   
- **X DO NOT** 使用 <xref:System.Collections.Generic.IEnumerator%601>， <xref:System.Collections.IEnumerator>，或實作介面，其中除了為傳回類型的任何其他型別 `GetEnumerator` 方法。  
+ **X 不會**使用 <xref:System.Collections.Generic.IEnumerator%601>、<xref:System.Collections.IEnumerator>，或是任何其他實作為其中一個介面的其他類型，但 `GetEnumerator` 方法的傳回型別除外。  
   
- 從方法傳回列舉值以外的類型`GetEnumerator`不能搭配`foreach`陳述式。  
+ 從 `GetEnumerator` 以外的方法傳回枚舉器的類型，不能與 `foreach` 語句搭配使用。  
   
- **X DO NOT** 同時實作 `IEnumerator<T>` 和 `IEnumerable<T>` 上相同的型別。 這同樣適用於非泛型介面`IEnumerator`和`IEnumerable`。  
+ **X 不會**同時在相同的類型上同時執行 `IEnumerator<T>` 和 `IEnumerable<T>`。 這同樣適用于非泛型介面 `IEnumerator` 和 `IEnumerable`。  
   
-## <a name="collection-parameters"></a>收集參數  
- **✓ DO** 使用可能的最低特製化類型做為參數類型。 取得集合，作為參數使用的大部分成員`IEnumerable<T>`介面。  
+## <a name="collection-parameters"></a>集合參數  
+ **✓**會使用最少特殊化的類型做為參數類型。 大部分以集合作為參數的成員都會使用 `IEnumerable<T>` 介面。  
   
- **X AVOID** 使用 <xref:System.Collections.Generic.ICollection%601>或<xref:System.Collections.ICollection> 做為參數，只是為了存取 `Count` 屬性。  
+ **X 請避免**使用 <xref:System.Collections.Generic.ICollection%601> 或 <xref:System.Collections.ICollection> 做為參數，只是用來存取 `Count` 屬性。  
   
- 請考慮改用`IEnumerable<T>`或是`IEnumerable`並以動態方式檢查物件是否實作`ICollection<T>`或`ICollection`。  
+ 相反地，請考慮使用 `IEnumerable<T>` 或 `IEnumerable`，並動態檢查物件是否會執行 `ICollection<T>` 或 `ICollection`。  
   
 ## <a name="collection-properties-and-return-values"></a>集合屬性和傳回值  
- **X DO NOT** 提供可設定的集合屬性。  
+ **X**不提供可設定的集合屬性。  
   
- 使用者可以取代集合的內容，先清除集合，然後再將新的內容。 如果取代整個集合是常見的案例，請考慮提供`AddRange`集合上的方法。  
+ 使用者可以藉由先清除集合，然後再新增新內容，來取代集合的內容。 如果取代整個集合是常見的案例，請考慮在集合上提供 `AddRange` 方法。  
   
- **✓ DO** 使用 `Collection<T>` 或的子類別 `Collection<T>` 針對屬性或傳回值表示讀取/寫入集合。  
+ **✓**會使用 `Collection<T>` 或 `Collection<T>` 的子類別，以取得代表讀取/寫入集合的屬性或傳回值。  
   
- 如果`Collection<T>`不符合某些需求 (例如，集合必須不會實作<xref:System.Collections.IList>)，藉由實作使用自訂的集合`IEnumerable<T>`， `ICollection<T>`，或<xref:System.Collections.Generic.IList%601>。  
+ 如果 `Collection<T>` 不符合某些需求（例如，集合不能實作為 <xref:System.Collections.IList>），請藉由執行 `IEnumerable<T>`、`ICollection<T>`或 <xref:System.Collections.Generic.IList%601>來使用自訂集合。  
   
- **✓ DO** 使用 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 的子類別 `ReadOnlyCollection<T>`，或在極少數的情況下 `IEnumerable<T>` 針對屬性或傳回值表示唯讀的集合。  
+ **✓**會使用 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>、`ReadOnlyCollection<T>`的子類別，或在罕見的情況下 `IEnumerable<T>` 用於代表唯讀集合的屬性或傳回值。  
   
- 一般情況下，偏好`ReadOnlyCollection<T>`。 如果不符合某些需求 (例如，集合必須不會實作`IList`)，藉由實作使用自訂的集合`IEnumerable<T>`， `ICollection<T>`，或`IList<T>`。 如果您實作自訂的唯讀集合，實作`ICollection<T>.IsReadOnly`傳回`true`。  
+ 一般來說，偏好 `ReadOnlyCollection<T>`。 如果不符合某些需求（例如，集合不能實作為 `IList`），請藉由執行 `IEnumerable<T>`、`ICollection<T>`或 `IList<T>`來使用自訂集合。 如果您確實執行自訂的唯讀集合，請執行 `ICollection<T>.IsReadOnly` 以傳回 `true`。  
   
- 在您會確定只有您會想要支援的案例是順向的反覆項目的情況下，您可以直接使用`IEnumerable<T>`。  
+ 如果您確定您想要支援的唯一案例是順向反復專案，您可以直接使用 `IEnumerable<T>`。  
   
- **✓ CONSIDER** 使用泛型基底集合的子類別，而不直接使用集合。  
+ **✓請考慮**使用泛型基底集合的子類別，而不是直接使用集合。  
   
- 這可讓更適合的名稱以及加入未出現在基底的集合型別上的 helper 成員。 這是特別適用於高階 Api。  
+ 這可讓您取得更好的名稱，以及加入不存在於基底集合類型上的 helper 成員。 這特別適用于高階 Api。  
   
- **✓ CONSIDER** 傳回的子類別 `Collection<T>` 或 `ReadOnlyCollection<T>` 從相當常用的方法和屬性。  
+ **✓請考慮**從非常常用的方法和屬性傳回 `Collection<T>` 或 `ReadOnlyCollection<T>` 的子類別。  
   
- 這會讓您可新增 helper 方法，或變更在未來的集合實作。  
+ 這可讓您在未來新增 helper 方法或變更集合的執行。  
   
- **✓ CONSIDER** 使用索引鍵的集合，如果儲存在集合中的項目具有唯一索引鍵 （名稱、 識別碼、 等等。）。 索引的集合是由整數和索引鍵編製的索引，通常由繼承自集合`KeyedCollection<TKey,TItem>`。  
+ 如果集合中儲存的專案具有唯一索引鍵（名稱、識別碼等），則**✓會考慮**使用金鑰集合。 「索引集合」是一種集合，可以透過整數和金鑰來編制索引，而且通常是藉由繼承自 `KeyedCollection<TKey,TItem>`來執行。  
   
- 索引的集合通常會較大的記憶體使用量，而且不應在記憶體額外負荷超過索引鍵的效益。  
+ 索引集合通常會有較大的記憶體佔用量，如果記憶體額外負荷高於擁有金鑰的優點，則不應使用。  
   
- **X DO NOT** 集合屬性中或從方法傳回集合，傳回 null 值。 而是傳回空集合或空陣列。  
+ **X 不會**從集合屬性或傳回集合的方法傳回 null 值。 改為傳回空的集合或空陣列。  
   
- 一般規則是，應該是 null 和空的 （0 個項目） 集合或陣列視為相同。  
+ 一般規則是 null 和空的（0專案）集合或陣列應視為相同。  
   
-### <a name="snapshots-versus-live-collections"></a>快照集與即時的集合  
- 集合表示在某個時間點狀態的時間稱為快照集集合。 例如，包含從資料庫查詢傳回的資料列的集合會是快照集。 集合一律會代表目前的狀態，稱為即時的集合。 比方說，許多`ComboBox`項目是即時的集合。  
+### <a name="snapshots-versus-live-collections"></a>快照集與即時集合  
+ 代表某個時間點之狀態的集合稱為快照集集合。 例如，包含資料庫查詢所傳回之資料列的集合會是快照集。 一律代表目前狀態的集合稱為「即時集合」。 例如，`ComboBox` 專案的集合是即時集合。  
   
- **X DO NOT** 屬性從傳回快照集的集合。 屬性應該傳回即時的集合。  
+ **X 不會**從屬性傳回快照集集合。 屬性應該會傳回即時集合。  
   
- 屬性 getter 應該是非常輕量型的作業。 傳回快照集需要 o （n） 作業中建立一份內部集合。  
+ 屬性 getter 應該是非常輕量的作業。 傳回快照集需要在 O （n）運算中建立內部集合的複本。  
   
- **✓ DO** 使用快照集收集或即時 `IEnumerable<T>` （或它的子類型） 來表示為變動性的集合 （亦即，可以變更而不需明確修改集合）。  
+ **✓**會使用快照集集合或即時 `IEnumerable<T>` （或其子類型）來代表變動性的集合（也就是在不明確修改集合的情況下可以變更）。  
   
- 一般情況下，所有的集合，表示共用的資源 （例如，在目錄中的檔案） 是變動性。 這類集合是很難或無法實作做為即時的集合，除非實作就只是順向的列舉值。  
+ 一般來說，代表共用資源的所有集合（例如目錄中的檔案）都是變動的。 這類集合非常難以或無法實作為即時集合，除非它只是順向列舉值。  
   
-## <a name="choosing-between-arrays-and-collections"></a>陣列和集合之間進行選擇  
- **✓ DO** 集合，而不用陣列。  
+## <a name="choosing-between-arrays-and-collections"></a>在陣列與集合之間選擇  
+ **✓**會偏好陣列的集合。  
   
- 集合提供更充分掌控內容，可以隨著時間演進，而且更實用。 此外，因為複製陣列成本高昂，建議使用陣列的唯讀狀態的案例。 可用性研究顯示，有些開發人員會覺得較喜歡使用以集合為基礎的 Api。  
+ 集合可讓您更充分掌控內容、隨著時間而演變，而且更為有用。 此外，不建議針對唯讀案例使用陣列，因為複製陣列的成本是「不」。 可用性研究顯示，有些開發人員會覺得使用以集合為基礎的 Api 更加熟悉。  
   
- 不過，如果您正在開發的低階 Api，它可能是更好讀寫案例中使用陣列項目。 陣列有較小的記憶體耗用量，進而降低工作集，而且陣列中項目的存取速度，因為它會透過執行階段進行最佳化。  
+ 不過，如果您正在開發低層級的 Api，則使用陣列來進行讀寫案例可能會是較好的方式。 陣列的記憶體使用量較小，這有助於減少工作集，而且陣列中的元素存取速度較快，因為它是由執行時間優化。  
   
- **✓ CONSIDER** 低階 Api 中使用陣列記憶體耗用量降到最低，並將效能最大化。  
+ **✓請考慮**在低層級 api 中使用陣列，將記憶體耗用量降到最低，並將效能最大化。  
   
- **✓ DO** 使用位元組陣列，而不是位元組的集合。  
+ **✓**會使用位元組陣列，而不是位元組的集合。  
   
- **X DO NOT** 使用屬性的陣列，如果屬性必須在呼叫屬性 getter 的每次會傳回新的陣列 （例如，內部陣列的複本）。  
+ 如果屬性必須在每次呼叫屬性 getter 時傳回新的陣列（例如內部陣列的複本），則**X**不會使用屬性的陣列。  
   
-## <a name="implementing-custom-collections"></a>實作自訂的集合  
- **✓ CONSIDER** 繼承自 `Collection<T>`， `ReadOnlyCollection<T>`，或 `KeyedCollection<TKey,TItem>` 設計新的集合時。  
+## <a name="implementing-custom-collections"></a>執行自訂集合  
+ ✓在設計新的集合時，**請考慮**從 `Collection<T>`、`ReadOnlyCollection<T>`或 `KeyedCollection<TKey,TItem>` 繼承。  
   
- **✓ DO** 實作 `IEnumerable<T>` 設計新的集合時。 請考慮實作`ICollection<T>`甚至`IList<T>`派得上用場。  
+ **✓**會在設計新的集合時，執行 `IEnumerable<T>`。 請考慮在合理的地方執行 `ICollection<T>` 或甚至 `IList<T>`。  
   
- 在實作這類的自訂集合時，請依照下列所建立的 API 模式`Collection<T>`和`ReadOnlyCollection<T>`儘可能密集地。 也就是明確地實作相同的成員，為參數命名，例如這兩個集合名稱，依此類推。  
+ 在執行這類自訂集合時，請遵循 `Collection<T>` 所建立的 API 模式，並盡可能 `ReadOnlyCollection<T>`。 也就是說，請明確地執行相同的成員，將這些參數命名為這兩個集合的名稱，依此類推。  
   
- **✓ CONSIDER** 實作非泛型集合介面 (`IList` 和 `ICollection`) 如果集合將通常會傳遞至應用程式開發介面採用這些介面做為輸入。  
+ 如果集合通常會傳遞給採用這些介面做為輸入的 Api， **✓請考慮**執行非泛型集合介面（`IList` 和 `ICollection`）。  
   
- **X AVOID** 型別上實作的集合介面具有複雜的應用程式開發介面不相關的概念的集合。  
+ **X 避免**在具有與集合概念無關之複雜 api 的類型上，執行集合介面。  
   
- **X DO NOT** 例如繼承自非泛型基底集合 `CollectionBase`。 使用`Collection<T>`， `ReadOnlyCollection<T>`，和`KeyedCollection<TKey,TItem>`改。  
+ **X 不會**繼承自非泛型基底集合，例如 `CollectionBase`。 請改用 `Collection<T>`、`ReadOnlyCollection<T>` 和 `KeyedCollection<TKey,TItem>`。  
   
 ### <a name="naming-custom-collections"></a>命名自訂集合  
- 集合 (型別都會實作`IEnumerable`) 會建立主要的原因有二：（1） 若要建立新的資料結構與結構特定作業通常比現有的資料結構的不同效能特性 (例如<xref:System.Collections.Generic.List%601>， <xref:System.Collections.Generic.LinkedList%601>， <xref:System.Collections.Generic.Stack%601>)，以及 （2） 若要建立特製化的集合保存一組特定的項目 (例如<xref:System.Collections.Specialized.StringCollection>)。 在內部實作應用程式和程式庫中最常使用的資料結構。 特製化的集合是主要是為了公開 Api 中 （屬性和參數的型別）。  
+ 集合（實 `IEnumerable`的型別）主要是為了兩個原因而建立：（1）建立具有結構特定作業的新資料結構，以及通常與現有資料結構（例如，<xref:System.Collections.Generic.List%601>、<xref:System.Collections.Generic.LinkedList%601>、<xref:System.Collections.Generic.Stack%601>）和（2）不同的效能特性，以建立用於保存特定專案集（例如 <xref:System.Collections.Specialized.StringCollection>）的特殊集合。 資料結構最常用於應用程式和程式庫的內部執行。 專門的集合主要是在 Api 中公開（作為屬性和參數類型）。  
   
- **✓ DO** 抽象層實作名稱中使用 「 字典 」 尾碼 `IDictionary` 或 `IDictionary<TKey,TValue>`。  
+ **✓**會在用來執行 `IDictionary` 或 `IDictionary<TKey,TValue>`的抽象概念名稱中使用「字典」尾碼。  
   
- **✓ DO** 實作的型別名稱中使用"Collection"後置詞 `IEnumerable` （或其任何子代） 及表示項目清單。  
+ **✓確實**會在型別的名稱中使用 "Collection" 後置詞，這些型別會實作為 `IEnumerable` （或其子系的任何子系）並代表專案清單。  
   
- **✓ DO** 使用適當的資料結構名稱的自訂資料結構。  
+ **✓ DO**會針對自訂資料結構使用適當的資料結構名稱。  
   
- **X AVOID** 集合的抽象概念的名稱中使用隱含的特定實作，例如"LinkedList 」 或 「 雜湊表，「 任何尾碼。  
+ **X**在集合抽象的名稱中，請避免使用任何尾碼來隱含特定的執行，例如 "linkedlist<t>" 或 "Hashtable"。  
   
- **✓ CONSIDER** 前面加上的項目類型名稱的集合名稱。 例如，儲存項目類型的集合`Address`(實作`IEnumerable<Address>`) 應該命名為`AddressCollection`。 如果項目類型是介面，"I"前置詞之項目的型別，則可以省略。 因此，一堆<xref:System.IDisposable>項目可以稱為`DisposableCollection`。  
+ **✓請考慮**在集合名稱前面加上專案類型的名稱。 例如，儲存類型 `Address` （執行 `IEnumerable<Address>`）之專案的集合應該命名為 `AddressCollection`。 如果專案類型是介面，則可以省略專案類型的 "I" 前置詞。 因此，可以 `DisposableCollection`呼叫 <xref:System.IDisposable> 專案的集合。  
   
- **✓ CONSIDER** 的唯讀集合的名稱中使用"ReadOnly"前置詞，如果對應的可寫入集合可能會加入或已存在於架構。  
+ 如果對應的可寫入集合可能已加入或已存在於架構中，則**✓會考慮**在唯讀集合的名稱中使用 "ReadOnly" 前置詞。  
   
- 比方說，應該呼叫唯讀的集合，這些字串`ReadOnlyStringCollection`。  
+ 例如，應該 `ReadOnlyStringCollection`呼叫字串的唯讀集合。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [用法方針](../../../docs/standard/design-guidelines/usage-guidelines.md)

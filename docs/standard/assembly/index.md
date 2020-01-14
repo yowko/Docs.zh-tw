@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 8e68d2dbb13d226ba738bdf8455418c9e771d6a6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733148"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900587"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的組件
 
@@ -43,7 +43,7 @@ ms.locfileid: "73733148"
 
 元件會定義下列資訊：
 
-- Common language runtime 所執行的程式碼。 請注意，每個元件只能有一個進入點： `DllMain`、`WinMain` 或 `Main`。
+- Common language runtime 所執行的程式碼。 請注意，每個元件只能有一個進入點： `DllMain`、`WinMain`或 `Main`。
 
 - 安全性界限。 組件是要求和授與權限的單位。 如需元件中安全性界限的詳細資訊，請參閱[元件安全性考慮](security-considerations.md)。
 
@@ -85,7 +85,7 @@ ms.locfileid: "73733148"
 若要在應用程式中使用元件，您必須加入它的參考。 參考元件之後，所有可存取的類型、屬性、方法和其命名空間的其他成員，都可供您的應用程式使用，就像其程式碼屬於您的來源檔案。
 
 > [!NOTE]
-> 系統會自動參考 .NET 類別庫中的大多數組件。 如果未自動參考系統元件，則針對 .NET Core，您可以加入包含元件之 NuGet 套件的參考。 在 Visual Studio 中使用 NuGet 套件管理員，或將元件的[\<PackageReference >](../../core/tools/dependencies.md#the-new-packagereference-element)專案新增至 *.csproj*或 *. vbproj*專案。 在 .NET Framework 中，您可以使用 Visual Studio 中的 [**加入參考**] 對話方塊，或使用[C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)或[Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)編譯器的 `-reference` 命令列選項，加入元件的參考。
+> 系統會自動參考 .NET 類別庫中的大多數組件。 如果未自動參考系統元件，則針對 .NET Core，您可以加入包含元件之 NuGet 套件的參考。 請使用 Visual Studio 中的 NuGet 套件管理員，或將元件的[\<PackageReference >](../../core/tools/dependencies.md#the-new-packagereference-element)專案新增至 *.csproj*或 *. vbproj*專案。 在 .NET Framework 中，您可以使用 Visual Studio 中的 [**加入參考**] 對話方塊，或使用[C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md)或[Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)編譯器的 `-reference` 命令列選項，加入元件的參考。
 
 在C#中，您可以在單一應用程式中使用相同元件的兩個版本。 如需詳細資訊，請參閱[外部別名](../../csharp/language-reference/keywords/extern-alias.md)。
 
@@ -111,7 +111,6 @@ ms.locfileid: "73733148"
 ## <a name="see-also"></a>請參閱
 
 - [.NET 組件檔格式](file-format.md)
-- [.NET 中的組件](index.md)
 - [Friend 元件](friend.md)
 - [參考元件](reference-assemblies.md)
 - [如何：載入和卸載元件](load-unload.md)

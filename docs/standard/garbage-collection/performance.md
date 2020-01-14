@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974754"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900574"
 ---
 # <a name="garbage-collection-and-performance"></a>記憶體回收和效能
 
@@ -133,7 +133,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 分散可能會在層代 1 和層代 2 成為問題。 如果這些層代在記憶體回收之後有大量的可用空間，應用程式的物件使用方式可能需要修改，而且您應該考慮重新評估長期物件的存留期。
 
-固定過多物件可能會增加分散。 如果分散很高，可能是已固定太多物件。
+固定過多物件可能會增加分散。 如果分散程度很高，可能已釘選了太多物件。
 
 如果虛擬記憶體的分散導致記憶體回收行程無法加入區段，原因可能是下列其中一項：
 
@@ -209,7 +209,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
 - 如果在記憶體回收之前立即測量，您會測量到記憶體回收開始之前最多的可能配置。
 
-- 在記憶體回收期間測量會有問題，因為記憶體回收行程資料結構不在周遊的有效狀態，而且可能無法提供完整的結果。 這是依設計的結果。
+- 在記憶體回收期間測量會有問題，因為記憶體回收行程資料結構不在周遊的有效狀態，而且可能無法提供完整的結果。 這是設計所致。
 
 - 當您使用工作站記憶體回收與並行記憶體回收時，回收的物件不會壓縮，因此堆積大小可能相同或更大 (分散可能讓它看起來似乎較大)。
 
@@ -423,7 +423,7 @@ Common Language Runtime (CLR) 程式碼剖析介面提供在記憶體回收期�
 
   如果 Managed 堆積很大，**dumpheap** 可能需要一些時間才能完成。
 
-  您可以從輸出的最後幾行開始分析，因為它們列出使用最多空間的物件。 例如:
+  您可以從輸出的最後幾行開始分析，因為它們列出使用最多空間的物件。 例如：
 
   ```console
   2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo

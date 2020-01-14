@@ -2,14 +2,15 @@
 title: 如何從 XmlReader 串流 XML 片段（C#）
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: 20fa4096a79648edc3f5d699f764fc6d71fa0ba4
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: f7914d33622518f983a685dd2e844a25fd3ca15f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635648"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714647"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>如何從 XmlReader 串流 XML 片段（C#）
+
 當您必須處理大型 XML 檔案時，可能無法將整個 XML 樹狀載入記憶體中。 這個主題顯示如何使用 <xref:System.Xml.XmlReader> 串流片段。  
   
  使用 <xref:System.Xml.XmlReader> 讀取 <xref:System.Xml.Linq.XElement> 物件的其中一個最有效方式為，撰寫您自己自訂的座標軸方法。 座標軸方法通常會傳回集合，例如，<xref:System.Collections.Generic.IEnumerable%601> 的 <xref:System.Xml.Linq.XElement>，如本主題的範例中所示。 在自訂座標軸方法中，呼叫 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 方法來建立 XML 片段後，使用 `yield return` 傳回集合。 這會將延後執行語意 (Semantics) 提供給您自訂的座標軸方法。  
@@ -81,4 +82,3 @@ ccc
 ```  
   
  在此範例中，來源文件很小。 但是，即使有數百萬的 `Child` 元素，此範例的記憶體使用量還是很小。  
-  

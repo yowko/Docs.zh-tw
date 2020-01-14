@@ -3,12 +3,12 @@ title: 全球化 config 設定
 description: 瞭解設定 .NET Core 應用程式全球化層面的執行時間設定，例如，它如何剖析日文日期。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 0571c64eff5b38aafa37026fb2ba7f4aef778beb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 76cd4a0a0f93f4df3ff243c6024b952576e8e6cb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802775"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740536"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>全球化的執行時間設定選項
 
@@ -16,7 +16,7 @@ ms.locfileid: "74802775"
 
 - 判斷 .NET Core 應用程式是否以全球化不變模式執行，而不需要存取特定文化特性的資料和行為，或是否可存取文化特性資料。
 - 預設值：執行可存取文化特性資料的應用程式（`false`）。
-- 如需詳細資訊，請參閱[.Net Core 全球化不變模式](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)。
+- 如需詳細資訊，請參閱[.Net Core 全球化不變模式](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)。
 
 | | 設定名稱 | 值 |
 | - | - | - |

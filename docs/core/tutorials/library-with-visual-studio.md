@@ -2,13 +2,13 @@
 title: 在 Visual Studio 中建立 .NET Standard 類別庫
 description: 瞭解如何使用 Visual Studio 來建立以C#或 Visual Basic 撰寫的 .NET Standard 類別庫
 ms.date: 12/09/2019
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 160993a4dd40356cde541616a1f15f87712e8ae2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.custom: vs-dotnet
+ms.openlocfilehash: 748a1499e0c3a4a41613a69b715dbcfbd585bfe3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343132"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714012"
 ---
 # <a name="build-a-net-standard-library-in-visual-studio"></a>在 Visual Studio 中建立 .NET Standard 程式庫
 

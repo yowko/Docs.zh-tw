@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: bd79d95a18fb1935d97fff2d1b2c7767752b9765
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d186670489ada51fced67ff9adeb73b14909b664
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351724"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716692"
 ---
 # <a name="-target-visual-basic"></a>-target （Visual Basic）
 
@@ -29,7 +29,7 @@ ms.locfileid: "74351724"
 
 |**選項**|**Behavior**|
 |----------------|------------------|
-|`-target:exe`|讓編譯器建立可執行檔主控台應用程式。<br /><br /> 這是未指定任何 `-target` 選項時的預設選項。 可執行檔是以 .exe 副檔名來建立。<br /><br /> 除非另有 `/out` 選項指定，否則輸出檔名稱會採用包含 `Sub Main` 程式之輸入檔的名稱。<br /><br /> 編譯成 .exe 檔案的原始程式碼檔中只需要一個 `Sub Main` 程式。 使用 `-main` 編譯器選項，指定哪個類別包含 `Sub Main` 程式。|
+|`-target:exe`|讓編譯器建立可執行檔主控台應用程式。<br /><br /> 這是未指定任何 `-target` 選項時的預設選項。 可執行檔是以 .exe 副檔名來建立。<br /><br /> 除非另有 `-out` 選項指定，否則輸出檔名稱會採用包含 `Sub Main` 程式之輸入檔的名稱。<br /><br /> 編譯成 .exe 檔案的原始程式碼檔中只需要一個 `Sub Main` 程式。 使用 `-main` 編譯器選項，指定哪個類別包含 `Sub Main` 程式。|
 |`-target:library`|讓編譯器建立動態連結程式庫（DLL）。<br /><br /> 動態連結程式庫檔案是使用 .dll 副檔名所建立。<br /><br /> 除非另有指定 `-out` 選項，否則輸出檔名稱會採用第一個輸入檔的名稱。<br /><br /> 建立 DLL 時，不需要 `Sub Main` 程式。|
 |`-target:module`|使編譯器產生可新增至元件的模組。<br /><br /> 系統會使用副檔名 .netmodule 來建立輸出檔案。<br /><br /> .NET common language runtime 無法載入沒有元件的檔案。 不過，您可以使用 `-reference`，將這類檔案併入元件的組件資訊清單中。<br /><br /> 當某個模組中的程式碼參考另一個模組中的內部類型時，必須使用 `-reference`將這兩個模組併入組件資訊清單。<br /><br /> [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)選項會從模組匯入中繼資料。|
 |`-target:winexe`|讓編譯器建立可執行檔 Windows 應用程式。<br /><br /> 可執行檔是以 .exe 副檔名來建立。 以 Windows 為基礎的應用程式則是從 .NET Framework Class Library 或 Windows Api 提供使用者介面。<br /><br /> 除非另有 `-out` 選項指定，否則輸出檔名稱會採用包含 `Sub Main` 程式之輸入檔的名稱。<br /><br /> 編譯成 .exe 檔案的原始程式碼檔中只需要一個 `Sub Main` 程式。 如果您的程式碼有多個具有 `Sub Main` 程式的類別，請使用 `-main` 編譯器選項來指定哪一個類別包含 `Sub Main` 程式|
@@ -58,7 +58,7 @@ ms.locfileid: "74351724"
 vbc -target:library in.vb
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)

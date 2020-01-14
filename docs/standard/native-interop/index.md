@@ -1,15 +1,13 @@
 ---
 title: 原生互通性 - .NET
 description: 了解如何連接到 .NET 中的原生元件。
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 3ca213bc7228d2e4337607df2d47b334c5bea14f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 330466d74cc268214f74c4f575e6a2961f678972
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106810"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706331"
 ---
 # <a name="native-interoperability"></a>原生互通性
 
@@ -26,7 +24,7 @@ ms.locfileid: "70106810"
 > [!NOTE]
 > 本節中大部分範例會針對 .NET Core 的所有三種支援平台 (Windows、Linux 和 macOS) 來呈現。 不過，對於一些簡短和說明性的範例，只會顯示一個使用 Windows 檔名和副檔名 (也就是代表程式庫的 "dll") 的範例。 這不表示您無法在 Linux 或 macOS 上使用這些功能，如此呈現只是為了方便起見。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平台叫用 (P/Invoke)](pinvoke.md)
 - [型別封送處理](type-marshaling.md)

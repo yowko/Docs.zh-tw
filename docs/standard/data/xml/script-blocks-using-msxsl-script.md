@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1488fb6b7671acd86286bcac6fbfce8bee9429ad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a63452df16e452a90eff3977ac8726cc0a5ac439
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939595"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710189"
 ---
 # <a name="script-blocks-using-msxslscript"></a>使用 msxsl:script 的指令碼區塊
 <xref:System.Xml.Xsl.XslCompiledTransform> 類別支援使用 `msxsl:script` 項目的內嵌指令碼。 載入樣式表時，程式碼文件物件模型 (CodeDOM) 會將任何已定義的函式編譯成 Microsoft Intermediate Language (MSIL)，並在執行階段期間執行。 從內嵌指令碼區塊產生的組件不同於為樣式表產生的組件。  
@@ -94,7 +92,7 @@ ms.locfileid: "69939595"
 #### <a name="namespaces"></a>命名空間  
  預設會包含下列命名空間：  
   
-- 系統  
+- System  
   
 - System.Collection  
   
@@ -133,7 +131,7 @@ ms.locfileid: "69939595"
 #### <a name="calcxsl"></a>calc.xsl  
  [!code-xml[XSLT_Script#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Script/XML/calc.xsl#3)]  
   
-### <a name="output"></a>輸出  
+### <a name="output"></a>Output  
   
 ```xml  
 <circles xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:user="urn:my-scripts">  
@@ -148,7 +146,7 @@ ms.locfileid: "69939595"
 </circles>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [動態原始程式碼的產生和編譯](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

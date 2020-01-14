@@ -2,12 +2,12 @@
 title: C# 7.1 中的新增功能
 description: C# 7.1 新功能的概觀。
 ms.date: 04/09/2019
-ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105556"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714585"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
@@ -17,7 +17,7 @@ C# 7.1 也新增了[語言版本選擇](../language-reference/configure-language
 
 此版本的新款語言功能包括：
 
-- [`async``Main`方法](#async-main)
+- [`async` `Main` 方法](#async-main)
   - 應用程式的進入點允許使用`async`修飾詞。
 - [`default`常值運算式](#default-literal-expressions)
   - 目標類型可以推斷時，可以在預設值運算式中使用預設常值運算式。
@@ -39,7 +39,7 @@ C# 7.1 也新增了[語言版本選擇](../language-reference/configure-language
 
 ## <a name="async-main"></a>非同步主要
 
-「非同步主要」  方法可讓您在 `Main` 方法中使用 `await`。
+「非同步主要」方法可讓您在 `Main` 方法中使用 `await`。
 在過去您必須這樣寫：
 
 ```csharp
@@ -88,7 +88,7 @@ Func<string, bool> whereClause = default;
 
 如需詳細資訊，請參閱[預設運算子](../language-reference/operators/default.md)一文中的[預設常值](../language-reference/operators/default.md#default-literal)一節。
 
-## <a name="inferred-tuple-element-names"></a>推斷的 Tuple 元素名稱
+## <a name="inferred-tuple-element-names"></a>Tuple 型別推導
 
 本方法為 C# 7.0 版本 Tuple 方法的改進， 許多時候，當您初始化 Tuple 時，用於指派右側的變數會與您想要的元組項目名稱相同：
 
@@ -114,5 +114,5 @@ var pair = (count, label); // element names are "count" and "label"
 
 ## <a name="reference-assembly-generation"></a>參考組件產生
 
-有兩個新編譯器選項會產生「僅參考的組件」  ：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
+有兩個新編譯器選項會產生「僅參考的組件」：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
 連結的文章將更詳細地說明這些選項和參考組件。

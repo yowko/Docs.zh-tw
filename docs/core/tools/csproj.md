@@ -2,12 +2,12 @@
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.date: 04/08/2019
-ms.openlocfilehash: 4ce9227839a610308071c36185b63db8b1ee86ed
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4a05709da63c4f6a200039ba5dd59358c700130e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739292"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899876"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -143,7 +143,7 @@ ms.locfileid: "73739292"
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-#### <a name="version"></a>版本
+#### <a name="version"></a>{2&gt;版本&lt;2}
 
 必要的 `Version` 屬性會指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
 
@@ -156,7 +156,7 @@ ms.locfileid: "73739292"
 `PrivateAssets` 屬性指定應取用哪些資產 (屬於由 `<PackageReference>` 所指定但未流向下一個專案的套件)。 根據預設，當此屬性不存在時，`Analyzers`、`Build` 和 `ContentFiles` 會是私人資產。
 
 > [!NOTE]
-> `PrivateAssets` 相當於 *project.json*/*xproj* `SuppressParent` 項目。
+> `PrivateAssets` 相當於*專案. json*/*xproj* `SuppressParent` 元素。
 
 這些屬性可包含下列一或多個項目，若列出不只一個，則以分號 `;` 字元分隔：
 
@@ -180,7 +180,9 @@ ms.locfileid: "73739292"
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-#### <a name="version"></a>版本
+請注意，`DotNetCliToolReference`[現在](https://github.com/dotnet/announcements/issues/107)已被取代，以取代[.Net Core 本機工具](https://aka.ms/local-tools)。
+
+#### <a name="version"></a>{2&gt;版本&lt;2}
 
 `Version` 指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
 
@@ -254,7 +256,7 @@ RID 允許發行獨立部署。
 
 ### <a name="ispackable"></a>IsPackable
 
-布林值，指定是否可封裝專案。 預設值是 `true`。
+布林值，指定是否可封裝專案。 預設值為 `true`。
 
 ### <a name="packageversion"></a>PackageVersion
 
@@ -450,7 +452,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
 
-布林值，啟用或停用所有 AssemblyInfo 產生。 預設值是 `true`。
+布林值，啟用或停用所有 AssemblyInfo 產生。 預設值為 `true`。
 
 ### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile
 

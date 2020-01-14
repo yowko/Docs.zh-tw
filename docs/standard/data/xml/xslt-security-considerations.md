@@ -3,14 +3,12 @@ title: XSLT 安全性考量
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 683cf4a38ed08e0c569df62778c2ff80323ef261
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e6e490c0f637aace57dacc88ef49cc9be87532cd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910483"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709682"
 ---
 # <a name="xslt-security-considerations"></a>XSLT 安全性考量
 XSLT 語言具有一組豐富的功能，可讓您擁有強大的能力與彈性。 它還包含許多可由外部來源利用的功能 (若有幫助)。 若要安全使用 XSLT，您必須瞭解使用 XSLT 時會出現的各種安全性問題，以及為了減緩這些危險可使用的基本策略。  
@@ -56,7 +54,7 @@ XSLT 語言具有一組豐富的功能，可讓您擁有強大的能力與彈性
   
 - 如果要確保不存取任何外部資源，您可對 `null` 引數指定 <xref:System.Xml.XmlResolver>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [XSLT 處理期間解析外部資源](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)

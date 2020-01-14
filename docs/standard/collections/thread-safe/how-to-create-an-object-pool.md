@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - object pool, in .NET Framework
 ms.assetid: 0480e7ff-b6f9-480e-a889-2ed4264d8372
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bc0c6bebbab6e84c165f41300a4cb16c8746a07
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
-ms.translationtype: HT
+ms.openlocfilehash: 888521eb5c3c3169c4b39a26e82fef2e35c286d9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121125"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711268"
 ---
 # <a name="how-to-create-an-object-pool-by-using-a-concurrentbag"></a>如何：使用 ConcurrentBag 建立物件集區
 這個範例示範如何使用並行資料包來實作物件集區。 在需要多個類別執行個體的情況下，物件集區可以改善應用程式效能，而且類別的建立或終結成本相當高。 用戶端程式要求新的物件時，物件集區會先嘗試提供已建立並傳回給集區的物件。 如果沒有，則只會建立新的物件。  
@@ -26,6 +24,6 @@ ms.locfileid: "49121125"
  [!code-csharp[CDS#04](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/objectpool.cs#04)]
  [!code-vb[CDS#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/objectpool04.vb#04)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)

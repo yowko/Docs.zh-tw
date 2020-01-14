@@ -9,14 +9,12 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 01cef9646ca9c4f49ab8376364648f66b9651e4a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c462a6df2d5221907a6b574c33bb8fa1c52abac5
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052134"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741333"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>執行階段如何找出組件
 
@@ -35,7 +33,7 @@ ms.locfileid: "71052134"
 
 您也可以只提供組件的部分資訊給呼叫方法 (例如只指定組件名稱)，以對組件進行動態參考。 在此情況下，只會搜尋組件的應用程式目錄，而不會進行任何其他檢查。 您可以使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType>等各種方法來載入組件，以進行部分參考。
 
-最後，您可使用 <xref:System.Reflection.Assembly.Load*?displayProperty=nameWithType> 等方法建立動態參考，並且只提供部分資訊；然後使用應用程式組態檔中的 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素授與參考資格。 這個項目可讓您在應用程式組態檔中，而不是在您的程式碼中，提供完整的參考資訊 (名稱、版本、文化特性和 (適用的話) 公開金鑰語彙基元)。 如果您想要完整限定參考外部應用程式目錄中的組件，或者如果您想要參考全域組件快取中的組件，但又想要在組態檔中 (而不是在您的程式碼中) 指定完整參考的方便性，您就會使用這項技術。
+最後，您可使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 等方法建立動態參考，並且只提供部分資訊；然後使用應用程式組態檔中的 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 元素授與參考資格。 這個項目可讓您在應用程式組態檔中，而不是在您的程式碼中，提供完整的參考資訊 (名稱、版本、文化特性和 (適用的話) 公開金鑰語彙基元)。 如果您想要完整限定參考外部應用程式目錄中的組件，或者如果您想要參考全域組件快取中的組件，但又想要在組態檔中 (而不是在您的程式碼中) 指定完整參考的方便性，您就會使用這項技術。
 
 > [!NOTE]
 > 這種類型的部分參考不應該用於數個應用程式之間共用的組件。 因為組態設定是依各應用程式來套用，而且依各組件，所以使用這種部分參考的共用組件，會要求使用共用組件的每個應用程式，在其組態檔中都要有合格的資訊。
@@ -83,7 +81,7 @@ ms.locfileid: "71052134"
 
 第一，Common Language Runtime 會檢查應用程式組態檔中，是否有資訊會覆寫儲存在呼叫組件資訊清單中的版本資訊。 應用程式組態檔可以隨著應用程式一起部署，但並不是執行應用程式的必要項目。 通常擷取這個檔案幾乎是瞬間完成，但是如果應用程式基底是在遠端電腦上 (例如在 Internet Explorer Web 架構案例中)，就必須下載組態檔。
 
-針對用戶端可執行檔，應用程式組態檔會位在與應用程式可執行檔相同的目錄中，而且基底名稱與可執行檔相同，副檔名為 .config。 例如，C:\Program Files\Myapp\Myapp.exe 的組態檔為 C:\Program Files\Myapp\Myapp.exe.config。在以瀏覽器為主的案例中，HTML 檔必須使用 **\<link>** 項目明確指向組態檔。
+針對用戶端可執行檔，應用程式組態檔會位在與應用程式可執行檔相同的目錄中，而且基底名稱與可執行檔相同，副檔名為 .config。 例如，C:\Program Files\Myapp\Myapp.exe 的設定檔是 C:\Program Files\Myapp\Myapp.exe.config。在以瀏覽器為基礎的案例中，HTML 檔案必須使用 **\<連結 >** 元素，才能明確地指向設定檔。
 
 下列程式碼提供應用程式組態檔的簡單範例。 這個範例會將 <xref:System.Diagnostics.TextWriterTraceListener> 加入 <xref:System.Diagnostics.Debug.Listeners%2A> 集合，以啟用將偵錯資訊記錄至檔案的功能。
 
@@ -266,7 +264,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 
 比方說，如果 Assembly1 參考 Assembly2，而且 Assembly1 是從 `http://www.code.microsoft.com/utils` 下載，則該位置會被視為有關在哪裡可以找到 Assembly2.dll 的提示。 執行階段接著會探查 `http://www.code.microsoft.com/utils/Assembly2.dll` 和 `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll` 中的組件。 如果在這兩個位置都找不到 Assembly2，執行階段就會查詢 Windows Installer。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [組件載入的最佳做法](best-practices-for-assembly-loading.md)
 - [部署](index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 26fd25a268204ad2644a07b6a56967cc5d2df95e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 41d3af831ff3c99e7f3000593db52d307d37ac38
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568837"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900899"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>在用戶端應用程式中使用資料服務 (WCF 資料服務)
 您可以藉由提供 Web 瀏覽器的 URI，來存取公開開放式資料通訊協定（OData）摘要的服務。 URI 可提供資源的位址，而要求訊息會傳送至這些位址，以存取或變更資源所代表的基礎資料。 瀏覽器會發出 HTTP GET 命令，並傳回要求的資源做為 OData 摘要。 如需詳細資訊，請參閱[從網頁瀏覽器存取服務](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)。  
@@ -33,23 +33,23 @@ ms.locfileid: "74568837"
   
 - **HTTP merge** -由於只為了變更實體資料而執行刪除時，如果只是在資料來源中插入，所以 OData 引進了新的 HTTP MERGE 動作。 要求訊息的承載包含在定址實體資源中必須變更的屬性。 由於 HTTP 規格中未定義 HTTP MERGE，因此可能需要額外的處理，才能透過非 OData 感知伺服器來路由傳送 HTTP MERGE 要求。  
   
- 如需詳細資訊，請參閱[OData：作業](https://go.microsoft.com/fwlink/?LinkId=185792)。  
+ 如需詳細資訊，請參閱[OData：作業](https://www.odata.org/documentation/odata-version-2-0/operations/)。
   
 ### <a name="payload-formats"></a>承載格式  
  若為 HTTP PUT、HTTP POST 或 HTTP MERGE 要求，要求訊息的裝載會包含您傳送至資料服務的實體資料。 承載的內容取決於訊息的資料格式。 所有動作 (DELETE 除外) 的 HTTP 回應也包含此類承載。 OData 支援使用下列裝載格式來存取和變更服務的資料：  
   
-- **Atom** -由 OData 定義為 Atom 發行通訊協定（AtomPub）之延伸的 XML 型訊息編碼，可讓 Web 摘要、播客、WIKI 和 XML 型網際網路功能的資料透過 HTTP 交換。 如需詳細資訊，請參閱[OData： Atom 格式](https://go.microsoft.com/fwlink/?LinkId=185794)。  
+- **Atom** -由 OData 定義為 Atom 發行通訊協定（AtomPub）之延伸的 XML 型訊息編碼，可讓 Web 摘要、播客、WIKI 和 XML 型網際網路功能的資料透過 HTTP 交換。 如需詳細資訊，請參閱[OData： Atom 格式](https://www.odata.org/documentation/odata-version-2-0/atom-format/)。
   
-- **Json** JAVASCRIPT 物件標記法（json）是輕量的資料交換格式，以 JavaScript 程式設計語言的子集為基礎。 如需詳細資訊，請參閱[OData： JSON 格式](https://go.microsoft.com/fwlink/?LinkId=185795)。  
+- **Json** JAVASCRIPT 物件標記法（json）是輕量的資料交換格式，以 JavaScript 程式設計語言的子集為基礎。 如需詳細資訊，請參閱[OData： JSON 格式](https://www.odata.org/documentation/odata-version-2-0/json-format/)。
   
- HTTP 要求訊息的標頭中會要求裝載的訊息格式。 如需詳細資訊，請參閱[OData：作業](https://go.microsoft.com/fwlink/?LinkID=185792)。  
+ HTTP 要求訊息的標頭中會要求裝載的訊息格式。 如需詳細資訊，請參閱[OData：作業](https://www.odata.org/documentation/odata-version-2-0/operations/)。
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>使用用戶端程式庫存取及變更資料  
  WCF Data Services 包含用戶端程式庫，可讓您更輕鬆地從 .NET Framework 和 Silverlight 架構的用戶端應用程式取用 OData 摘要。 這些程式庫會簡化 HTTP 訊息的傳送與接收。 他們也會將訊息承載轉譯為代表實體資料的 CLR 物件。 用戶端程式庫具有兩個核心類別： <xref:System.Data.Services.Client.DataServiceContext> 和 <xref:System.Data.Services.Client.DataServiceQuery%601>。 這些類別可讓您查詢資料服務，然後使用傳回的實體資料當做 CLR 物件。 如需詳細資訊，請參閱[WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)和[WCF Data Services （Silverlight）](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95))。  
   
  您可以使用 Visual Studio 中的 [**加入服務參考**] 對話方塊，將參考加入至資料服務。 此工具會從參考的資料服務要求服務中繼資料，並產生代表資料服務的 <xref:System.Data.Services.Client.DataServiceContext>，同時也會產生代表實體的用戶端資料服務類別。 如需詳細資訊，請參閱[產生資料服務用戶端程式庫](generating-the-data-service-client-library-wcf-data-services.md)。  
   
- 有一些可供您使用的程式設計程式庫，可讓您在其他種類的用戶端應用程式中取用 OData 摘要。 如需詳細資訊，請參閱[ODATA SDK](https://go.microsoft.com/fwlink/?LinkId=185796)。  
+ 有一些可供您使用的程式設計程式庫，可讓您在其他種類的用戶端應用程式中取用 OData 摘要。 如需 OData SDK 的詳細資訊，請參閱[ODATA sdk-範例程式碼](https://www.odata.org/ecosystem/#sdk)。
   
 ## <a name="see-also"></a>請參閱
 

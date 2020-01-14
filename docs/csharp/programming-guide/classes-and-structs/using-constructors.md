@@ -1,16 +1,15 @@
 ---
 title: 使用建構函式 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: cb6a0befb9e2e628f066061282532513019c1419
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7d027a67e533cb1ed7b2cea38112b4f585bf5fbc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418727"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714635"
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用建構函式 (C# 程式設計手冊)
 
@@ -55,7 +54,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  因此您不需要呼叫實值型別的無參數建構函式。  
   
- 類別和 `structs` 都可以定義使用參數的建構函式。 使用參數的建構函式必須透過 `new` 陳述式或 [base](../../language-reference/keywords/base.md) 陳述式呼叫。 類別和 `structs` 也可以定義多個建構函式，且皆無須定義無參數建構函式。 例如:  
+ 類別和 `structs` 都可以定義使用參數的建構函式。 使用參數的建構函式必須透過 `new` 陳述式或 [base](../../language-reference/keywords/base.md) 陳述式呼叫。 類別和 `structs` 也可以定義多個建構函式，且皆無須定義無參數建構函式。 例如：  
   
  [!code-csharp[csProgGuideObjects#54](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#54)]  
   
@@ -63,7 +62,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#55)]  
   
- 建構函式可以使用 `base` 關鍵字呼叫基底類別的建構函式。 例如:  
+ 建構函式可以使用 `base` 關鍵字呼叫基底類別的建構函式。 例如：  
   
  [!code-csharp[csProgGuideObjects#56](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#56)]  
   

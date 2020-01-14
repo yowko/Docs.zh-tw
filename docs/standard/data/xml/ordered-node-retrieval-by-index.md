@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4e4847dd6bc05127799cb6d8424a8fdb63fbc0f7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 72e866e43b556d8534024a219d924b1f372ed073
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590067"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710514"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>根據索引擷取的已排序節點
 全球資訊網協會 (W3C) XML 文件物件模型 (DOM) 也說明了 NodeList；相對於能夠處理未排序節點集的 **XmlNamedNodeMap**，NodeList 具有處理已排序節點清單的功能。 Microsoft .NET Framework 中的 NodeList 稱為 **XmlNodeList**。 傳回 **XmlNodeList** 的方法和屬性有：  
@@ -94,6 +92,6 @@ End While
   
  如需 **XmlNodeList** 上可以使用之方法和屬性的詳細資訊，請參閱 <xref:System.Xml.XmlNodeList>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

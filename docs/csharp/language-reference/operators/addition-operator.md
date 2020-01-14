@@ -1,6 +1,5 @@
 ---
 title: + 及 += 運算子 - C# 參考
-ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
 - +_CSharpKeyword
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: e6a190e3d6e283f2ce3b1690ec2bfd15d50dfc6e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0c468f0fe56c68a16de660dbb3bd6356b4b6a00f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972644"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712763"
 ---
 # <a name="-and--operators-c-reference"></a>+ 及 += 運算子 (C# 參考)
 
@@ -71,7 +70,7 @@ x = x + y
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義型別可以[多載](operator-overloading.md) `+` 運算子。 多載二元 `+` 運算子時，`+=` 運算子也會隱含地多載。 使用者定義型別無法明確地多載 `+=` 運算子。
+使用者定義型別可以[多載](operator-overloading.md)`+` 運算子。 多載二元 `+` 運算子時，`+=` 運算子也會隱含地多載。 使用者定義型別無法明確地多載 `+=` 運算子。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -84,4 +83,4 @@ x = x + y
 - [如何串連多個字串](../../how-to/concatenate-multiple-strings.md)
 - [事件](../../programming-guide/events/index.md)
 - [算術運算子](arithmetic-operators.md)
-- [ - 及 -= 運算子](subtraction-operator.md)
+- [- 及 = 運算子](subtraction-operator.md)

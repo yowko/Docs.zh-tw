@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2945465bb6a3a362dc640641056712dffd73d559
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 60ebcd9fc9ca18c33d31b82ba5020426d22a7d5a
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393961"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901829"
 ---
 ### <a name="authentication-httpcontextauthentication-property-removed"></a>驗證：已移除 HttpCoNtext 驗證屬性
 
@@ -12,9 +12,9 @@ ms.locfileid: "72393961"
 
 #### <a name="change-description"></a>變更描述
 
-作為[aspnet/AspNetCore # 6504](https://github.com/aspnet/AspNetCore/pull/6504)的一部分，已移除 `HttpContext` 上已淘汰的 `Authentication` 屬性。 @No__t-0 屬性自2.0 起已被取代。 已發行[遷移指南](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)，以將使用此已淘汰屬性的程式碼遷移至新的取代 api。 認可[aspnet/AspNetCore@d7a7c65](https://github.com/aspnet/AspNetCore/commit/d7a7c65)中已移除與舊的 ASP.NET Core 1.x 驗證堆疊相關的其餘未使用類別/api。
+做為[dotnet/aspnetcore # 6504](https://github.com/dotnet/aspnetcore/pull/6504)的一部分，已移除 `HttpContext` 上已淘汰的 `Authentication` 屬性。 2\.0 之後，`Authentication` 屬性已被取代。 已發行[遷移指南](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)，以將使用此已淘汰屬性的程式碼遷移至新的取代 api。 與舊的 ASP.NET Core 1.x 驗證堆疊相關的其餘未使用類別/Api，已在認可[dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65)中移除。
 
-如需討論，請參閱[aspnet/AspNetCore # 6533 沒有](https://github.com/aspnet/AspNetCore/issues/6533)。
+如需討論，請參閱[dotnet/aspnetcore # 6533 沒有](https://github.com/dotnet/aspnetcore/issues/6533)。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -22,7 +22,7 @@ ms.locfileid: "72393961"
 
 #### <a name="reason-for-change"></a>變更的原因
 
-ASP.NET Core 1.0 Api 已由 <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName> 中的擴充方法所取代。
+ASP.NET Core 1.0 Api 已由 <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>中的擴充方法所取代。
 
 #### <a name="recommended-action"></a>建議的動作
 

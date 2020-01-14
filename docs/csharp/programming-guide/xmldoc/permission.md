@@ -1,6 +1,5 @@
 ---
 title: <permission> - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - permission
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 454928d5dfd023639bc68f194f2f5ec9e2d7dc22
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 67e9d398d1bb43d480f8ca56733106e0f0a22731
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523390"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696567"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  

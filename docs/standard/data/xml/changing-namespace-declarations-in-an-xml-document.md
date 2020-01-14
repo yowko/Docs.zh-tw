@@ -6,17 +6,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2758f40-e497-4964-8d8d-1bb68af14dcd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5457eab1f34eb3e7424d508509f5dd6a42ffb51f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b8aa670764deb8e77cfb67fd16dbcf8b1cc9b4c0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976940"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711125"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>變更 XML 文件中的命名空間宣告
-**XmlDocument** 公開命名空間宣告，而且 **xmlns** 屬性是文件物件模型的一部份。 這些是儲存在 **XmlDocument** 中，因此當您儲存文件時，它可以保留那些屬性的位置。 變更這些屬性對已經存在於樹狀結構中之節點的 **Name**、**NamespaceURI** 和 **Prefix** 屬性並沒有影響。 例如，如果載入下列文件，則 `test` 項目會具有 **NamespaceURI** `123.`  
+**XmlDocument** 公開命名空間宣告，而且 **xmlns** 屬性是文件物件模型的一部份。 這些是儲存在 **XmlDocument** 中，因此當您儲存文件時，它可以保留那些屬性的位置。 變更這些屬性對已經存在於樹狀結構中之節點的 **Name**、**NamespaceURI** 和 **Prefix** 屬性並沒有影響。 例如，如果您載入下列檔，則 `test` 元素會有**NamespaceURI** `123.`  
   
 ```xml  
 <test xmlns="123"/>  
@@ -32,7 +30,7 @@ doc.documentElement.RemoveAttribute("xmlns")
 doc.documentElement.RemoveAttribute("xmlns");  
 ```  
   
- 同樣地，如果如下所示將不同的 `xmlns` 屬性加入 `doc` 項目，則 `test` 項目仍會具有 **NamespaceURI** `123`。  
+ 同樣地，如果您將不同的 `xmlns` 屬性加入至 `doc` 專案，如下所示，則 `test` 元素仍然具有**NamespaceURI** `123`。  
   
 ```vb  
 doc.documentElement.SetAttribute("xmlns","456")

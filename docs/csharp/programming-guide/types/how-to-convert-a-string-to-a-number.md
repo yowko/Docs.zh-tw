@@ -1,6 +1,5 @@
 ---
-title: 如何：將字串轉換為數字程式C#設計指南
-ms.custom: seodec18
+title: 如何將字串轉換成數位程式C#設計指南
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 8cd5a54bead2790d8e6e4c8e4a5649352f12869d
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 21732acd65eb4522b19ce84600fd8b333fb8a705
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552403"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711866"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>如何：將字串轉換為數值 (C# 程式設計手冊)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>如何將字串轉換成數位（C#程式設計手冊）
 
 您可以透過呼叫可在數個數值型別 (`int`、`long`、`double` 等) 上找到的 `Parse` 或 `TryParse` 方法，或透過使用 <xref:System.Convert?displayProperty=nameWithType> 類別中的方法，將 [string](../../language-reference/builtin-types/reference-types.md) 轉換為數字。  
   
@@ -58,5 +57,5 @@ ms.locfileid: "74552403"
 ## <a name="see-also"></a>請參閱
 
 - [型別](./index.md)
-- [如何：判斷字串是否表示數值](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [如何判斷字串是否代表數值](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))

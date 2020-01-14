@@ -1,21 +1,19 @@
 ---
 title: 如何使用C# -.net 序列化和還原序列化 JSON
-author: tdykstra
-ms.author: tdykstra
-ms.date: 09/16/2019
+ms.date: 01/10/2020
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3d3dc0011562e25854938aff857f2832a5978b49
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283339"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904650"
 ---
-# <a name="how-to-serialize-and-deserialize-json-in-net"></a>如何在 .NET 中序列化和還原序列化 JSON
+# <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化（封送處理和 unmarshal） JSON
 
 本文說明如何使用 <xref:System.Text.Json> 命名空間，在 JavaScript 物件標記法（JSON）進行序列化和還原序列化。
 
@@ -111,7 +109,7 @@ using System.Text.Json.Serialization;
 * [預設編碼器](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default)會將非 ascii 字元、ASCII 範圍內的 HTML 敏感字元，以及必須根據[RFC 8259 JSON 規格](https://tools.ietf.org/html/rfc8259#section-7)進行轉義的字元進行轉義。
 * 根據預設，JSON 是縮減。 您可以[整齊列印 JSON](#serialize-to-formatted-json)。
 * 根據預設，JSON 名稱的大小寫會符合 .NET 名稱。 您可以[自訂 JSON 名稱大小寫](#customize-json-names-and-values)。
-* 偵測到迴圈參考，並擲回例外狀況。 如需詳細資訊，請參閱 GitHub 上的 dotnet/corefx 存放庫中的[迴圈參考問題 38579](https://github.com/dotnet/corefx/issues/38579) 。
+* 偵測到迴圈參考，並擲回例外狀況。
 * 目前已排除欄位。
 
 支援的類型包括：
@@ -120,7 +118,7 @@ using System.Text.Json.Serialization;
 * 使用者定義的[簡單 CLR 物件（poco）](https://stackoverflow.com/questions/250001/poco-definition)。
 * 一維和不規則陣列（`ArrayName[][]`）。
 * `Dictionary<string,TValue>`，其中 `TValue` 是 `object`、`JsonElement`或 POCO。
-* 下列命名空間中的集合。 如需詳細資訊，請參閱 GitHub 上的 dotnet/corefx 存放庫中的[集合支援問題](https://github.com/dotnet/corefx/issues/36643)。
+* 下列命名空間中的集合。
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
   * <xref:System.Collections.Immutable>
@@ -156,7 +154,7 @@ using System.Text.Json.Serialization;
 * 根據預設，屬性名稱比對會區分大小寫。 您可以[指定不區分大小寫](#case-insensitive-property-matching)。
 * 如果 JSON 包含唯讀屬性的值，則會忽略此值，而且不會擲回任何例外狀況。
 * 不支援在沒有無參數的函式的情況下還原序列化成參考型別。
-* 不支援還原序列化為不可變的物件或唯讀屬性。 如需詳細資訊，請參閱 github[問題 38569 on 不可變物件支援](https://github.com/dotnet/corefx/issues/38569)和問題38163上的 dotnet/corefx 存放庫中的[唯讀屬性支援](https://github.com/dotnet/corefx/issues/38163)。
+* 不支援還原序列化為不可變的物件或唯讀屬性。
 * 根據預設，列舉會當做數位來支援。 您可以將[列舉名稱序列化為字串](#enums-as-strings)。
 * 欄位不受支援。
 * 根據預設，JSON 中的批註或尾端逗號會擲回例外狀況。 您可以[允許批註和尾端的逗號](#allow-comments-and-trailing-commas)。
@@ -377,11 +375,11 @@ JSON 屬性命名原則：
 
 以下是要序列化和 JSON 輸出的範例物件：
 
-|屬性 |值  |
+|屬性 |{2&gt;值&lt;2}  |
 |---------|---------|
 | 日期    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| 摘要| null|
+| 總結| null|
 
 ```json
 {
@@ -460,7 +458,9 @@ JSON 屬性命名原則：
 
 ## <a name="serialize-properties-of-derived-classes"></a>序列化衍生類別的屬性
 
-當您在編譯時期指定要序列化的型別時，不支援多型序列化。 例如，假設您有 `WeatherForecast` 類別和衍生類別 `WeatherForecastWithWind`：
+不支援多型類型階層的序列化。 例如，如果屬性定義為介面或抽象類別，則即使執行時間類型有其他屬性，還是會序列化在介面或抽象類別上定義的屬性。 這一節將說明此行為的例外狀況。
+
+例如，假設您有 `WeatherForecast` 類別和衍生類別 `WeatherForecastDerived`：
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -470,7 +470,7 @@ JSON 屬性命名原則：
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-在此案例中，即使 `weatherForecast` 物件實際上是 `WeatherForecastWithWind` 物件，`WindSpeed` 屬性也不會序列化。 只有基類屬性會序列化：
+在此案例中，即使 `weatherForecast` 物件實際上是 `WeatherForecastDerived` 物件，`WindSpeed` 屬性也不會序列化。 只有基類屬性會序列化：
 
 ```json
 {
@@ -482,7 +482,7 @@ JSON 屬性命名原則：
 
 這個行為的目的是協助防止在衍生的執行時間建立的類型中意外公開資料。
 
-若要序列化衍生類型的屬性，請使用下列其中一種方法：
+若要在上述範例中序列化衍生型別的屬性，請使用下列其中一種方法：
 
 * 呼叫 <xref:System.Text.Json.JsonSerializer.Serialize%2A> 的多載，可讓您在執行時間指定類型：
 
@@ -496,14 +496,74 @@ JSON 屬性命名原則：
 
 ```json
 {
+  "WindSpeed": 35,
   "Date": "2019-08-01T00:00:00-07:00",
   "TemperatureCelsius": 25,
-  "Summary": "Hot",
-  "WindSpeed": 35
+  "Summary": "Hot"
 }
 ```
 
-如需多型還原序列化的詳細資訊，請參閱[支援](system-text-json-converters-how-to.md#support-polymorphic-deserialization)多型還原序列化。
+> [!IMPORTANT]
+> 這些方法只會針對要序列化的根物件提供多型序列化，而不是針對該根物件的屬性。 
+
+如果您將較低層級的物件定義為 `object`的類型，您就可以取得其多型序列化。 例如，假設您的 `WeatherForecast` 類別具有一個名為 `PreviousForecast` 的屬性，可以定義為 `WeatherForecast` 或 `object`的類型：
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPrevious)]
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPreviousAsObject)]
+
+如果 `PreviousForecast` 屬性包含 `WeatherForecastDerived`的實例：
+
+* 序列化 `WeatherForecastWithPrevious` 的 JSON 輸出**不包含**`WindSpeed`。
+* 序列化 `WeatherForecastWithPreviousAsObject` 的 JSON 輸出**包含**`WindSpeed`。
+
+若要將 `WeatherForecastWithPreviousAsObject`序列化，則不需要呼叫 `Serialize<object>` 或 `GetType`，因為根物件不是可能屬於衍生類型的物件。 下列程式碼範例不會呼叫 `Serialize<object>` 或 `GetType`：
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeSecondLevel)]
+
+上述程式碼會正確地將 `WeatherForecastWithPreviousAsObject`序列化：
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureCelsius": 25,
+  "Summary": "Hot",
+  "PreviousForecast": {
+    "WindSpeed": 35,
+    "Date": "2019-08-01T00:00:00-07:00",
+    "TemperatureCelsius": 25,
+    "Summary": "Hot"
+  }
+}
+```
+
+將屬性定義為 `object` 與介面搭配使用的相同方法。 假設您有下列介面和實作為，而且您想要使用包含實作為實例的屬性來序列化類別：
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/IForecast.cs)]
+
+當您將 `Forecasts`的實例序列化時，只有 `Tuesday` 會顯示 `WindSpeed` 屬性，因為 `Tuesday` 會定義為 `object`：
+
+[!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeInterface)]
+
+下列範例顯示上述程式碼所產生的 JSON：
+
+```json
+{
+  "Monday": {
+    "Date": "2020-01-06T00:00:00-08:00",
+    "TemperatureCelsius": 10,
+    "Summary": "Cool"
+  },
+  "Tuesday": {
+    "Date": "2020-01-07T00:00:00-08:00",
+    "TemperatureCelsius": 11,
+    "Summary": "Rainy",
+    "WindSpeed": 10
+  }
+}
+```
+
+如需多型**序列化**的詳細資訊，以及還原序列化**的相關資訊**，請參閱[如何從 Newtonsoft 遷移至 system.object](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)。
 
 ## <a name="allow-comments-and-trailing-commas"></a>允許批註和尾端逗號
 
@@ -571,11 +631,11 @@ JSON 屬性命名原則：
 
 當您將稍早所示的 JSON 還原序列化為此範例類型時，額外的資料會變成 `ExtensionData` 屬性的機碼值組：
 
-|屬性 |值  |注意事項  |
+|屬性 |{2&gt;值&lt;2}  |注意事項  |
 |---------|---------|---------|
 | 日期    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | 區分大小寫不相符（`temperatureCelsius` 在 JSON 中），因此不會設定屬性。 |
-| 摘要 | 熱 ||
+| 總結 | 熱 ||
 | ExtensionData | temperatureCelsius：25 |因為大小寫不相符，所以這個 JSON 屬性會是額外的，而且會成為字典中的索引鍵/值組。|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON 中的額外屬性會變成索引鍵/值組，並以陣列做為值物件。|
 | |SummaryWords:<br>酷<br>風大<br>潮濕 |JSON 中的額外屬性會變成索引鍵/值組，並以陣列做為值物件。|
@@ -628,11 +688,11 @@ JSON 屬性命名原則：
 
 使用此選項時，`WeatherForecastWithDefault` 物件的 `Summary` 屬性是還原序列化後的預設值「沒有摘要」。
 
-JSON 中的 Null 值只有在有效時才會被忽略。 不可為 null 的實數值型別的 Null 值會造成例外狀況。 如需詳細資訊，請參閱 GitHub 上的 dotnet/corefx 存放庫中的針對[不可為 null 的實數值型別問題 40922](https://github.com/dotnet/corefx/issues/40922) 。
+JSON 中的 Null 值只有在有效時才會被忽略。 不可為 null 的實數值型別的 Null 值會造成例外狀況。
 
 ## <a name="utf8jsonreader-utf8jsonwriter-and-jsondocument"></a>Utf8JsonReader、Utf8JsonWriter 和 JsonDocument
 
-<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> 是一個高效能、低配置、只能順向讀取的 UTF-8 編碼 JSON 文字讀取器，會從 `ReadOnlySpan<byte>` 開始讀取。 `Utf8JsonReader` 是可以用來建立自訂剖析器和還原序列化程式的低層級類型。 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 方法會使用幕後的 `Utf8JsonReader`。
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> 是適用于 UTF-8 編碼 JSON 文字的高效能、低配置、順向讀取器，可從 `ReadOnlySpan<byte>` 或 `ReadOnlySequence<byte>`讀取。 `Utf8JsonReader` 是可以用來建立自訂剖析器和還原序列化程式的低層級類型。 <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> 方法會使用幕後的 `Utf8JsonReader`。
 
 <xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName> 是一種高效能的方式，可從常見的 .NET 類型（例如 `String`、`Int32`和 `DateTime`）撰寫 UTF-8 編碼的 JSON 文字。 寫入器是可以用來建立自訂序列化程式的低層級類型。 <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> 方法會使用幕後的 `Utf8JsonWriter`。
 
@@ -701,14 +761,15 @@ JSON 中的 Null 值只有在有效時才會被忽略。 不可為 null 的實�
 
 上述程式碼：
 
+* 假設 JSON 包含物件的陣列，而且每個物件都可以包含 string 類型的 "name" 屬性。
+* 計算以 "大學" 結尾的物件和「名稱」屬性值。
 * 假設檔案是以 UTF-16 編碼，並將其轉碼為 UTF-8。 您可以使用下列程式碼，直接將編碼為 UTF-8 的檔案讀入 `ReadOnlySpan<byte>`中：
 
   ```csharp
   ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
   ```
 
-* 假設 JSON 包含物件的陣列，而且每個物件都可以包含 string 類型的 "name" 屬性。
-* 計算物件，並 `name` 以「大學」結尾的屬性值。
+  如果檔案包含 UTF-8 位元組順序標記（BOM），請先將它移除，再將位元組傳遞給 `Utf8JsonReader`，因為讀取器需要文字。 否則，BOM 會被視為不正確 JSON，而讀取器會擲回例外狀況。
 
 以下是上述程式碼可以讀取的 JSON 範例。 產生的摘要訊息為「2個以上的名稱，其結尾為 ' 大學 '」：
 
@@ -717,7 +778,8 @@ JSON 中的 Null 值只有在有效時才會被忽略。 不可為 null 的實�
 ## <a name="additional-resources"></a>其他資源
 
 * [System.web. Text. Json 總覽](system-text-json-overview.md)
-* [System.web API 參考](xref:System.Text.Json)
-* [撰寫 System.object 的自訂轉換器](system-text-json-converters-how-to.md)
+* [如何撰寫自訂轉換器](system-text-json-converters-how-to.md)
+* [如何從 Newtonsoft 遷移](system-text-json-migrate-from-newtonsoft-how-to.md)
 * [System.web 中的 DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
-* [Dotnet/corefx 存放庫中標示為 json-功能的 GitHub 問題-doc](https://github.com/dotnet/corefx/labels/json-functionality-doc) 
+* [System.web API 參考](xref:System.Text.Json)
+<!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

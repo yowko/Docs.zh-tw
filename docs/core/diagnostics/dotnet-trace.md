@@ -1,15 +1,13 @@
 ---
 title: dotnet-追蹤工具-.NET Core
 description: 安裝和使用 dotnet 追蹤命令列工具。
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 11/21/2019
-ms.openlocfilehash: 07eaec843e27f5d291b6d18fab53c43051794626
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428889"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714426"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-追蹤效能分析公用程式
 
@@ -110,7 +108,7 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
 dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 ```
 
-### <a name="arguments"></a>引數
+### <a name="arguments"></a>Arguments
 
 - **`<input-filename>`**
 

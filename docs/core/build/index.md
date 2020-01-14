@@ -3,13 +3,12 @@ title: 從原始檔建置 .NET Core
 description: 了解如何從原始程式碼建置 .NET Core 和 .NET Core CLI。
 author: bleroy
 ms.date: 06/28/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: fe5431667d861d830c2ec56252e6e3e2ca08a866
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105389"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740912"
 ---
 # <a name="build-net-core-from-source"></a>從原始檔建置 .NET Core
 
@@ -18,7 +17,7 @@ ms.locfileid: "70105389"
 
 ## <a name="build-the-clr-from-source"></a>從原始檔建置 CLR
 
-您可以在 GitHub 上的 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 存放庫中找到 .NET Core CLR 的原始程式碼。
+您可以在 GitHub 上的[dotnet/runtime](https://github.com/dotnet/runtime/)存放庫中找到 .net CoreCLR 的原始程式碼。
 
 此組建目前相依於下列必要條件：
 
@@ -27,7 +26,7 @@ ms.locfileid: "70105389"
 - [Python](https://www.python.org/)
 - C++ 編譯器。
 
-安裝這些必要條件之後，您可以叫用 [dotnet/coreclr](https://github.com/dotnet/coreclr/) 存放庫基底的組建指令碼 (在 Windows 上為 `build.cmd`，或者在 Linux 和 macOS 上為 `build.sh`) 來建置 CLR。
+安裝這些必要條件之後，您可以在[dotnet/runtime](https://github.com/dotnet/runtime/)存放庫的基底叫用組建腳本（在 Windows 上為`build.cmd`，或在 Linux 和 macOS 上 `build.sh`）來建立 CLR。
 
 安裝的元件會隨著作業系統 (OS) 而有所不同。 請參閱特定 OS 的建置指示：
 
@@ -43,7 +42,7 @@ ms.locfileid: "70105389"
 組建有兩個主要的 `buildTypes`：
 
 - 偵錯 (預設)：以最低最佳化來編譯執行階段，並進行額外的執行階段檢查 (判斷提示)。 降低最佳化層級與額外的檢查會讓執行階段的執行變慢，但是有助於偵錯。 這是開發和測試環境的建議設定。
-- 發行：以完整最佳化來編譯執行階段，且沒有額外的執行階段檢查。 如此會提高執行階段的效能，但是需要較長的建置時間，且偵錯較為困難。 若要選取此建置類型，請將 `release` 傳遞至建置指令碼。
+- 發行：以完整最佳化來編譯執行階段，且沒有額外的執行階段檢查。 這會產生更快的執行時間效能，但可能需要較長的時間來建立，而且可能很難以進行調試。 若要選取此建置類型，請將 `release` 傳遞至建置指令碼。
 
 此外根據預設，組建不只會建立執行階段可執行檔，也會建立所有測試。
 由於有相當多的測試，因此如果您只想要試驗變更，這些測試會花費不必要的大量時間。
@@ -72,13 +71,13 @@ ms.locfileid: "70105389"
 您有兩個基本技術可使用新的執行階段：
 
  1. **使用 dotnet.exe 和 NuGet 撰寫應用程式**。
-    如需使用您剛建立的 NuGet 套件和 'dotnet' 命令列介面 (CLI) 來建立使用新執行階段之程式的指示，請參閱 [Using your .NET Core Runtime Build](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md) (使用您的 .NET Core 執行階段組建)。 非執行階段開發人員預期可能會使用這項技術來取用您的新執行階段。
+    如需使用您剛建立的 NuGet 套件和 'dotnet' 命令列介面 (CLI) 來建立使用新執行階段之程式的指示，請參閱 [Using your .NET Core Runtime Build](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-your-build.md) (使用您的 .NET Core 執行階段組建)。 非執行階段開發人員預期可能會使用這項技術來取用您的新執行階段。
 
  2. **使用 corerun.exe 透過未封裝的 DLL 執行應用程式**。
     此存放庫也會定義一個與 NuGet 沒有任何相依性的簡單主機，稱為 corerun.exe。
     您必須告訴主機何處可取得您實際使用的必要 DLL，而且您必須手動將這些 DLL 收集在一起。
-    這項技術可供 [dotnet/coreclr](https://github.com/dotnet/coreclr) 存放庫中的所有測試使用，並且有助於在本機快速重複「編輯-編譯-偵錯」循環，例如初步單元測試。
-    如需使用這項技術的詳細資料，請參閱 [Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) (使用 corerun.exe 執行 .NET Core 應用程式)。
+    這項技術可供[dotnet/運行](https://github.com/dotnet/runtime)時間存放庫中的所有測試使用，並且適用于快速本機的「編輯-編譯-debug」迴圈，例如初步單元測試。
+    如需使用這項技術的詳細資料，請參閱 [Executing .NET Core Apps with CoreRun.exe](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-corerun.md) (使用 corerun.exe 執行 .NET Core 應用程式)。
 
 ## <a name="build-the-cli-from-source"></a>從原始檔建置 CLI
 
@@ -99,8 +98,8 @@ ms.locfileid: "70105389"
 
 使用 *artifacts/{os}-{arch}/stage2* 中的 `dotnet` 可執行檔來試用新建置的 CLI。 如果您想要在從目前主控台叫用 `dotnet` 時使用建置輸出，您也可以將 *artifacts/{os}-{arch}/stage2* 新增至 PATH。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [.NET Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [.NET 執行時間](https://github.com/dotnet/runtime/blob/master/README.md)
 - [.NET Core CLI 開發人員指南](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
 - [.NET Core 發佈封裝](./distribution-packaging.md)

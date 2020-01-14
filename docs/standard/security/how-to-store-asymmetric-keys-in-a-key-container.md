@@ -15,14 +15,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], asymmetric keys
 - decryption keys
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8edb88d13732650e00292d63ad4e1975a97ac704
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8ca4c4c5b1257411ecdf86858040bf428a9e6ce0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291637"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706054"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>如何：將對稱金鑰儲存在金鑰容器中
 非對稱私密金鑰不應逐字或以純文字儲存到本機電腦上。 如果您需要儲存私密金鑰，您應該使用金鑰容器。 如需金鑰容器的詳細資訊，請參閱[了解電腦層級和使用者層級的 RSA 金鑰容器](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))。  
@@ -223,9 +221,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [加密資料](../../../docs/standard/security/encrypting-data.md)
 - [解密資料](../../../docs/standard/security/decrypting-data.md)
-- [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)
+- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)

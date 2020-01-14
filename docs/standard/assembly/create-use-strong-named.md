@@ -1,5 +1,5 @@
 ---
-title: 建立和使用強式名稱的 ssemblies
+title: 建立和使用強式名稱的組件
 ms.date: 08/19/2019
 helpviewer_keywords:
 - strong-name bypass feature
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18a0b7d657290835a34c705513d0d7a4ccbfc61c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122503"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738678"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>建立和使用強式名稱的組件
 
-強式名稱 (Strong Name) 是由組件的識別 (Identity)，也就是其簡單文字名稱、版本號碼及文化特性資訊 (如果有提供)，加上公開金鑰和數位簽章所組成的。 這是使用對應的私密金鑰，從組件檔案所產生 (組件檔案包含附屬組件資訊清單，而資訊清單則包含組件中所有檔案的名稱和雜湊)。
+強式名稱 (Strong Name) 是由組件的識別 (Identity)，也就是其簡單文字名稱、版本號碼及文化特性資訊 (如果有提供)，加上公開金鑰和數位簽章所組成的。 此為使用對應的私密金鑰，從組件檔所產生 (組件檔含有組件資訊清單，後者包含構成組件的所有檔案的名稱與雜湊)。
 
 > [!WARNING]
 > 請勿依賴強式名稱提供安全性。 強式名稱僅提供唯一識別。
@@ -29,7 +29,7 @@ ms.locfileid: "73122503"
 強式名稱的組件只可使用來自其他強式名稱組件的類型。 否則，強式名稱組件的完整性會受到危害。
 
 > [!NOTE]
-> 雖然 .NET Core 支援強式名稱的元件，而且 .NET Core 程式庫中的所有元件都已簽署，但大部分的協力廠商元件都不需要強名稱。 如需詳細資訊，請參閱 GitHub 上的[強式名稱簽署](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md)。
+> 雖然 .NET Core 支援強式名稱的元件，而且 .NET Core 程式庫中的所有元件都已簽署，但大部分的協力廠商元件都不需要強名稱。 如需詳細資訊，請參閱 GitHub 上的[強式名稱簽署](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md)。
 
 ## <a name="strong-name-scenario"></a>強式名稱案例
 

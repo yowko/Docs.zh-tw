@@ -1,6 +1,5 @@
 ---
-title: ?? 還有？= 運算子- C#參考
-ms.custom: seodec18
+title: ?? 與 ??= 運算子- C#參考
 ms.date: 09/10/2019
 f1_keywords:
 - ??_CSharpKeyword
@@ -11,24 +10,24 @@ helpviewer_keywords:
 - null-coalescing assignment [C#]
 - ??= operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 2bd6fe3d2d283e64eebc2251416fa5234e30bdad
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b3d56c6c08443d344002b8e780a72fc547c316bb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739667"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712646"
 ---
-# <a name="-and--operators-c-reference"></a>?? 還有？= 運算子（C#參考）
+# <a name="-and--operators-c-reference"></a>?? 還有 ??= 運算子（C#參考）
 
 如果 Null 聯合運算子 `??` 不是 `null`，會傳回其左方運算元的值；否則它會評估右方運算元，並傳回其結果。 如果左方運算元評估為非 Null，`??` 運算子不會評估其右方運算元。
 
-可在C# 8.0 和更新版本中使用，如果左運算元評估為`null`，則 null 聯合指派運算子`??=`會將其右運算元的值指派給其左邊的運算元。 如果左方運算元評估為非 Null，`??=` 運算子不會評估其右方運算元。
+Null 聯合指派運算子 `??=` (在 C# 8.0 與更新版本中提供) 只會在左運算元評估為 `null` 時，才會將其右運算元的值指派給其左運算元。 如果左方運算元評估為非 Null，`??=` 運算子不會評估其右方運算元。
 
 [!code-csharp[null-coalescing assignment](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#Assignment)]
 
 `??=` 運算子的左邊運算元必須是變數、[屬性](../../programming-guide/classes-and-structs/properties.md)或[索引子](../../programming-guide/indexers/index.md)元素。
 
-在C# 7.3 和更早版本中，`??` 運算子的左邊運算元類型必須是[參考型別](../keywords/reference-types.md)或[可為 null 的實數值型別](../builtin-types/nullable-value-types.md)。 從C# 8.0 開始，這項需求會以下列內容取代：`??`和`??=`運算子的左邊運算元類型不能是不可為 null 的實數值型別。 特別是從C# 8.0 開始，您可以使用 null 聯合運算子搭配不受限制的類型參數：
+在C# 7.3 和更早版本中，`??` 運算子的左邊運算元類型必須是[參考型別](../keywords/reference-types.md)或[可為 null 的實數值型別](../builtin-types/nullable-value-types.md)。 從C# 8.0 開始，這項需求會以下列內容取代： `??` 和 `??=` 運算子的左邊運算元類型不能是不可為 null 的實數值型別。 特別是從C# 8.0 開始，您可以使用 null 聯合運算子搭配不受限制的類型參數：
 
 [!code-csharp[unconstrained type parameter](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#UnconstrainedType)]
 
@@ -60,13 +59,13 @@ d ??= (e ??= f)
 
   如果可為 Null 型別的值為 `null` 時要使用的值為基礎實值型別的預設值，請使用 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 方法。
 
-- 從C# 7.0 開始，您可以使用[`throw` 運算式](../keywords/throw.md#the-throw-expression)做為`??`運算子的右運算元，讓引數檢查程式碼變得更簡潔：
+- 從C# 7.0 開始，您可以使用[`throw` 運算式](../keywords/throw.md#the-throw-expression)做為 `??` 運算子的右運算元，讓引數檢查程式碼變得更簡潔：
 
   [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
 
   上述範例中也會示範如何使用[運算式主體成員](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)定義屬性。
 
-- 從C# 8.0 開始，您可以使用`??=`運算子來取代表單的程式碼
+- 從C# 8.0 開始，您可以使用 `??=` 運算子來取代表單的程式碼
 
   ```csharp
   if (variable is null)
@@ -75,7 +74,7 @@ d ??= (e ??= f)
   }
   ```
 
-  使用下列程式碼：
+  取代為下列程式碼：
 
   ```csharp
   variable ??= expression;

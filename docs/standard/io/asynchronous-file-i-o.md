@@ -17,14 +17,12 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b39373239d6aefaa671afebbb85dc2156866358f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 66e7d01f37a1119b9d2076a9131aa40f26d15625
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204810"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708187"
 ---
 # <a name="asynchronous-file-io"></a>非同步檔案 I/O
 
@@ -59,7 +57,7 @@ C# 和 Visual Basic 各有兩個進行非同步程式設計的關鍵字：
 
 [!code-xaml[System.IO.WindowsRuntimeStorageExtensions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/cs/blankpage.xaml#1)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.Stream>
 - [檔案和資料流 I/O](index.md)

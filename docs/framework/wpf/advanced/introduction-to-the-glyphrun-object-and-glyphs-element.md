@@ -9,12 +9,12 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 2f7bb3fb4f28b063c78dde9f9f354b38a5e707f3
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9af07d48877fee0e94f8e5fa2556c4361795df6a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581897"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740364"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>GlyphRun 物件和 Glyphs 項目簡介
 本主題描述 <xref:System.Windows.Media.GlyphRun> 物件和 <xref:System.Windows.Documents.Glyphs> 元素。  
@@ -31,7 +31,7 @@ ms.locfileid: "72581897"
   
     - Microsoft XPS 檔寫入器。  
   
-    - 先前的印表機驅動程式，從 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 應用程式輸出為固定格式。  
+    - 先前的印表機驅動程式，從 Win32 應用程式輸出為固定格式。  
   
     - 列印多工緩衝處理格式。  
   
@@ -42,15 +42,15 @@ ms.locfileid: "72581897"
   
 <a name="text_glyphrunovw_glyphrunobject"></a>   
 ## <a name="the-glyphrun-object"></a>GlyphRun 物件  
- @No__t_0 物件代表單一字型單一字型的一系列字元，並以單一轉譯樣式呈現。  
+ <xref:System.Windows.Media.GlyphRun> 物件代表單一字型單一字型的一系列字元，並以單一轉譯樣式呈現。  
   
  <xref:System.Windows.Media.GlyphRun> 包括字型的詳細資料，例如圖像 <xref:System.Windows.Documents.Glyphs.Indices%2A> 和個別的圖像位置。 它也包含從產生執行的原始 Unicode 程式碼點、字元到圖像緩衝區位移對應資訊，以及每個字元和每個字元的旗標。  
   
- <xref:System.Windows.Media.GlyphRun> 有對應的高階 <xref:System.Windows.FrameworkElement>，<xref:System.Windows.Documents.Glyphs>。 <xref:System.Windows.Documents.Glyphs> 可以用於專案樹狀結構和 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記中，以代表 <xref:System.Windows.Media.GlyphRun> 的輸出。  
+ <xref:System.Windows.Media.GlyphRun> 具有對應的高階 <xref:System.Windows.FrameworkElement>，<xref:System.Windows.Documents.Glyphs>。 <xref:System.Windows.Documents.Glyphs> 可以用於專案樹狀結構和 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記中，以代表 <xref:System.Windows.Media.GlyphRun> 的輸出。  
   
 <a name="text_glyphrunovw_glyphselement"></a>   
 ## <a name="the-glyphs-element"></a>Glyphs 項目  
- @No__t_0 元素代表 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中 <xref:System.Windows.Media.GlyphRun> 的輸出。 下列標記語法是用來描述 <xref:System.Windows.Documents.Glyphs> 元素。  
+ <xref:System.Windows.Documents.Glyphs> 元素代表 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中 <xref:System.Windows.Media.GlyphRun> 的輸出。 下列標記語法是用來描述 <xref:System.Windows.Documents.Glyphs> 元素。  
   
  [!code-xaml[GlyphsOvwSample1#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSample1/CS/default.xaml#1)]  
   
@@ -65,7 +65,7 @@ ms.locfileid: "72581897"
   
 <a name="text_glyphrunovw_indicesproperty"></a>   
 ### <a name="indices-property"></a>Indices 屬性  
- @No__t_0 屬性是圖像規格的字串。 如果由一系列字符形成單一叢集，則會先指定叢集中的第一個字符，再指定合併多少字符和多少字碼指標來形成叢集。 @No__t_0 屬性會在一個字串中收集下列屬性。  
+ <xref:System.Windows.Documents.Glyphs.Indices%2A> 屬性是圖像規格的字串。 如果由一系列字符形成單一叢集，則會先指定叢集中的第一個字符，再指定合併多少字符和多少字碼指標來形成叢集。 <xref:System.Windows.Documents.Glyphs.Indices%2A> 屬性會在一個字串中收集下列屬性。  
   
 - 字符索引  
   
@@ -83,13 +83,13 @@ ms.locfileid: "72581897"
   
 <a name="text_glyphrunovw_glyphmetrics"></a>   
 ## <a name="glyph-metrics"></a>字符度量  
- 每個字元都會定義度量，以指定其與其他 <xref:System.Windows.Documents.Glyphs> 的對齊方式。 下圖定義兩個不同字符字元的各種印刷品質。  
+ 每個字元都會定義度量，以指定其與其他 <xref:System.Windows.Documents.Glyphs>的對齊方式。 下圖定義兩個不同字符字元的各種印刷品質。  
   
  ![字元測量繪圖器](./media/glyph-example.png "glyph_example")  
   
 <a name="text_glyphrunovw_glyphsmarkup"></a>   
 ## <a name="glyphs-markup"></a>字符標記  
- 下列程式碼範例示範如何在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中使用 <xref:System.Windows.Documents.Glyphs> 元素的各種屬性。  
+ 下列程式碼範例示範如何在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中使用 <xref:System.Windows.Documents.Glyphs> 元素的各種屬性。  
   
  [!code-xaml[GlyphsOvwSamp2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   
@@ -97,4 +97,4 @@ ms.locfileid: "72581897"
 
 - [WPF 中的印刷樣式](typography-in-wpf.md)
 - [WPF 中的文件](documents-in-wpf.md)
-- [Text](optimizing-performance-text.md)
+- [文字](optimizing-performance-text.md)

@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 ForEach 來移除 BlockingCollection 中的項目
+title: 如何：使用 ForEach 來移除 BlockingCollection 中的項目
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,18 +8,16 @@ dev_langs:
 helpviewer_keywords:
 - thread-safe collections, how to enumerate blocking collection
 ms.assetid: 2096103c-22f7-420d-b631-f102bc33a6dd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 10fa77f6948a10959db5f79c37692eba67d47ecd
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: f9a858dea74be63634f887c4204aefa8ac338ad0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666544"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711229"
 ---
-# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>作法：使用 ForEach 來移除 BlockingCollection 中的項目
+# <a name="how-to-use-foreach-to-remove-items-in-a-blockingcollection"></a>如何：使用 ForEach 來移除 BlockingCollection 中的項目
 
-除了使用 <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 方法從 <xref:System.Collections.Concurrent.BlockingCollection%601> 擷取項目之外，您也可以使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) (Visual Basic 中為 [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)) 來移除項目，直到新增完成，而且集合是空的。 這稱為「變動列舉」  或「使用列舉」  ，因為不像一般 `foreach` (`For Each`) 迴圈，這個列舉程式會透過移除項目以修改來源集合。
+除了使用 <xref:System.Collections.Concurrent.BlockingCollection%601.Take%2A> 和 <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 方法從 <xref:System.Collections.Concurrent.BlockingCollection%601> 擷取項目之外，您也可以使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) (Visual Basic 中為 [For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)) 來移除項目，直到新增完成，而且集合是空的。 這稱為「變動列舉」或「使用列舉」，因為不像一般 `foreach` (`For Each`) 迴圈，這個列舉程式會透過移除項目以修改來源集合。
 
 ## <a name="example"></a>範例
 
@@ -34,7 +32,7 @@ ms.locfileid: "69666544"
 
 若要列舉集合，而不修改集合，則只要使用 `foreach` (`For Each`)，而不要使用 <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> 方法。 不過，請務必了解這種列舉代表集合在精確時間點的快照集。 如果其他執行緒在您執行迴圈時同時新增或移除項目，則迴圈可能不會代表集合的實際狀態。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [平行程式設計](../../../../docs/standard/parallel-programming/index.md)

@@ -10,34 +10,33 @@ helpviewer_keywords:
 - classes [.NET Framework], design guidelines
 - type design guidelines, classes
 ms.assetid: d67c14d8-c4dd-443f-affb-4ccae677c9b6
-author: KrzysztofCwalina
-ms.openlocfilehash: d0a2f11b53f50f2ec2f301f7b88df65e1cd7b811
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 35bcf1d403c78cdfcbb476b2eb5de2251a564b9a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762042"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709058"
 ---
 # <a name="static-class-design"></a>靜態類別設計
-靜態類別會定義為只包含靜態成員的類別 (當然除了繼承自的執行個體成員<xref:System.Object?displayProperty=nameWithType>和可能的私用的建構函式)。 某些語言中提供靜態類別的內建的支援。 在 C# 2.0 和更新版本中，當類別宣告為靜態，它是密封的抽象，而且可以覆寫或宣告任何執行個體成員。  
+靜態類別定義為僅包含靜態成員的類別（當然，除了繼承自 <xref:System.Object?displayProperty=nameWithType> 的實例成員之外，可能也會是私用的函數）。 某些語言會提供靜態類別的內建支援。 在C# 2.0 和更新版本中，將類別宣告為靜態時，它是密封的、抽象的，而且不能覆寫或宣告任何實例成員。  
   
- 靜態類別都是單純的物件導向設計和簡易性之間取得折衷。 它們通常用來提供其他作業的捷徑 (例如<xref:System.IO.File?displayProperty=nameWithType>)，擴充方法，或功能的完整物件導向包裝函式的非預期的持有者 (例如<xref:System.Environment?displayProperty=nameWithType>)。  
+ 靜態類別是單純的物件導向設計與簡單的取捨。 它們通常用來提供其他作業的快捷方式（例如 <xref:System.IO.File?displayProperty=nameWithType>）、擴充方法的持有者，或預期完整物件導向包裝函式的功能（例如 <xref:System.Environment?displayProperty=nameWithType>）。  
   
- **✓ DO** 謹慎使用靜態類別。  
+ **✓ DO**謹慎使用靜態類別。  
   
- 靜態類別應該僅被用作為支援物件導向的核心架構的類別。  
+ 靜態類別只能當做架構物件導向核心的支援類別使用。  
   
- **X DO NOT** 視為其他的值區的靜態類別。  
+ **X 不會**將靜態類別視為其他值區。  
   
- **X DO NOT** 宣告或覆寫在靜態類別中的執行個體成員。  
+ **X 不會**宣告或覆寫靜態類別中的實例成員。  
   
- **✓ DO** 宣告為密封，抽象的並加入私用執行個體建構函式，如果您的程式語言並沒有內建支援靜態類別。  
+ 如果您的程式設計語言沒有靜態類別的內建支援，則**✓**會將靜態類別宣告為 sealed、abstract，並加入私用實例的函式。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [類型設計方針](../../../docs/standard/design-guidelines/type.md)
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

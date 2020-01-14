@@ -9,65 +9,64 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-author: KrzysztofCwalina
-ms.openlocfilehash: e0da4cd747846921d170d9c07d6f1fb91dbd4ed7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fee7f5b7749c97a87e37581f67cbe1b49250b9ce
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615258"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709526"
 ---
 # <a name="capitalization-conventions"></a>大小寫慣例
-簡單的方法，使用這一章配置中的指導方針情況下，當套用一致的方式，請識別項型別、 成員和參數容易閱讀。  
+本章中的指導方針會配置一個簡單的方法，以便在一致地套用時，讓型別、成員和參數的識別碼易於閱讀。  
   
-## <a name="capitalization-rules-for-identifiers"></a>識別項的大小寫規則  
- 若要區分識別項中的文字，利用識別項中的每個單字的第一個字母。 請勿使用底線來區分文字，或就此而言，在識別項中任何位置。 有兩個適當的方法，可以改為大寫識別碼，根據所使用的識別項：  
+## <a name="capitalization-rules-for-identifiers"></a>識別碼的大小寫規則  
+ 若要區分識別碼中的單字，請將識別碼中每個單字的第一個字母大寫。 請不要使用底線來區別單字，或在識別碼中的任何位置區分。 有兩個適當的方式可將識別碼大寫，視使用識別碼而定：  
   
 - PascalCasing  
   
 - camelCasing  
   
- 參數名稱除外的所有識別項所使用的 PascalCasing 慣例轉換成大寫字母 （包括透過長度的兩個字母的縮寫） 的每個字的第一個字元，如下列範例所示：  
+ PascalCasing 慣例，用於參數名稱以外的所有識別碼，會將每個字組的第一個字元（包含長度超過兩個字母的縮寫）設為大寫，如下列範例所示：  
   
  `PropertyDescriptor`  
  `HtmlTag`  
   
- 特殊案例是進行中這兩個字母大寫，兩個字母縮寫，下列識別碼中所示：  
+ 特殊案例是針對兩個字母的縮寫，其中兩個字母都是大寫，如下列識別碼所示：  
   
  `IOStream`  
   
- CamelCasing 慣例，參數名稱，僅用於轉換成大寫字母的第一個字，除了每個單字的第一個字元，如下列範例所示。 因為此範例也示範，開始使用依照 camel 命名法大小寫的識別項的兩個字母縮略字都是小寫。  
+ CamelCasing 慣例僅用於參數名稱，會將每個字組的第一個字元設為大寫，但第一個單字除外，如下列範例所示。 如範例所示，開始使用 camel 大小寫識別碼的兩個字母縮略字，兩者都是小寫。  
   
  `propertyDescriptor`  
  `ioStream`  
  `htmlTag`  
   
- **✓ 請** 為所有由多個單字所組成的公用成員、 類型和命名空間名稱使用 PascalCasing。  
+ **✓**會針對所有包含多個單字的公用成員、類型和命名空間名稱使用 PascalCasing。  
   
- **✓ 請** 為參數名稱使用 camelCasing。    
+ **✓ DO**使用 camelCasing 做為參數名稱。  
   
- 下表描述不同類型的識別項的大小寫規則。  
+ 下表描述不同識別碼類型的大小寫規則。  
   
 |識別碼|大小寫|範例|  
 |----------------|------------|-------------|  
-|命名空間|Pascal 命名法|`namespace System.Security { ... }`|  
-|類型|Pascal 命名法|`public class StreamReader { ... }`|  
-|介面|Pascal 命名法|`public interface IEnumerable { ... }`|  
-|方法|Pascal 命名法|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
-|屬性|Pascal 命名法|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
-|Event - 事件|Pascal 命名法|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
-|欄位|Pascal 命名法|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
-|列舉值|Pascal 命名法|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
-|參數|依照 camel 命名法|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
+|命名空間|Pascal|`namespace System.Security { ... }`|  
+|類型|Pascal|`public class StreamReader { ... }`|  
+|介面|Pascal|`public interface IEnumerable { ... }`|  
+|方法|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|  
+|屬性|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|  
+|Event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|  
+|欄位|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|  
+|列舉值|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|  
+|參數|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|  
   
-## <a name="capitalizing-compound-words-and-common-terms"></a>大寫的複合字和一般詞彙  
- 大部分的複合詞彙會被視為單一字詞大小寫的目的。  
+## <a name="capitalizing-compound-words-and-common-terms"></a>將複合字和共同詞彙大寫  
+ 大部分的複合詞匯會視為大寫用途的單一單字。  
   
- **X DO NOT** 所謂的封閉式複合字組中的每個字大寫。  
+ **X 不會**將所謂的封閉表單複合單字中的每個單字全部大寫。  
   
- 這些是寫成單字，例如端點的複合字。 大小寫的指導方針，以將關閉表單的複合字視為單一的文字。 使用目前的字典來判斷複合字以關閉表單。  
+ 這些是以單一單字撰寫的複合字組，例如端點。 基於大小寫方針的目的，請將封閉形式的複合字視為單一單字。 使用目前的字典來判斷複合字是否以已關閉的形式寫入。  
   
-|Pascal 命名法|依照 camel 命名法|否|  
+|Pascal|Camel|否|  
 |------------|-----------|---------|  
 |`BitFlag`|`bitFlag`|`Bitflag`|  
 |`Callback`|`callback`|`CallBack`|  
@@ -96,15 +95,15 @@ ms.locfileid: "64615258"
 |`Writable`|`writable`|`Writeable`|  
   
 ## <a name="case-sensitivity"></a>區分大小寫  
- 雖然有些可以在 CLR 執行的語言不需要支援區分大小寫。 即使您的語言支援，可能會存取您的架構的其他語言則否。 任何 Api，從外部存取，因此，不能依賴來區別兩個名稱相同的內容中的案例。  
+ 可以在 CLR 上執行的語言並不需要支援區分大小寫，雖然有些也是如此。 即使您的語言支援它，其他可能存取您架構的語言也不會。 因此，可從外部存取的任何 Api 都不能單獨依賴大小寫來區別相同內容中的兩個名稱。  
   
- **X DO NOT** 假設所有的程式語言不區分大小寫。 但它們並不相等。 名稱不能單獨的大小寫不同。  
+ **X**不會假設所有程式設計語言都區分大小寫。 但它們並不相等。 名稱不能單獨以大小寫不同。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

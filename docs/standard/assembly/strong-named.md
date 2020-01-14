@@ -5,14 +5,12 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 67beeba6ce33fb1a8c3d02337d98282ccf30341a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 12b8df3195b2708e4556d4f8065227054db9eb14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991299"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711567"
 ---
 # <a name="strong-named-assemblies"></a>強式名稱組件
 
@@ -22,7 +20,7 @@ ms.locfileid: "70991299"
 
 強式名稱的組件是透過私密金鑰所產生，該私密金鑰對應至隨組件或當做組件本身散發的公開金鑰。 該組件包含組件資訊清單，其中包含構成組件之所有檔案的名稱和雜湊。 具有相同強式名稱的組件應該是相同的。
 
-您可以使用 Visual Studio 或命令列工具強式命名組件。 如需詳細資訊，請參閱[如何：使用強式名稱](sign-strong-name.md)或[sn.exe （強式名稱工具）](../../framework/tools/sn-exe-strong-name-tool.md)簽署元件。
+您可以使用 Visual Studio 或命令列工具強式命名組件。 如需詳細資訊，請參閱[如何：使用強式名稱簽署元件](sign-strong-name.md)或[Sn.exe （強式名稱工具）](../../framework/tools/sn-exe-strong-name-tool.md)。
 
 建立強式名稱的組件時，會包含組件的簡單文字名稱、版本號碼、文化特性資訊 (選擇性)、數位簽章，以及對應至用於簽署之私密金鑰的公開金鑰。
 
@@ -45,9 +43,9 @@ ms.locfileid: "70991299"
 
 如果您是開放原始碼開發人員，而且想要強名稱元件的身分識別優點，請考慮將與元件相關聯的私密金鑰簽入到您的原始檔控制系統。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [全域組件快取](../../framework/app-domains/gac.md)
-- [如何：使用強式名稱簽署組件](sign-strong-name.md)
+- [如何：使用強式名稱簽署元件](sign-strong-name.md)
 - [Sn.exe （強式名稱工具）](../../framework/tools/sn-exe-strong-name-tool.md)
 - [建立和使用強式名稱的元件](create-use-strong-named.md)

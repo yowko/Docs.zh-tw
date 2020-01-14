@@ -1,33 +1,32 @@
 ---
 title: 使用 Windows 相容性套件將程式碼移植到 .NET Core
-description: 了解 Windows 相容性套件，以及如何使用它將現有的 .NET Framework 程式碼移植到 .NET Core
+description: 瞭解 Windows 相容性套件，以及如何使用它將現有的 .NET Framework 程式碼移植到 .NET Core。
 author: terrajobst
 ms.date: 12/07/2018
-ms.custom: seodec18
-ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 65530987a3cded941b6a292118ed9bfdb6f5b86c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521275"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715473"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>使用 Windows 相容性套件將程式碼移植到 .NET Core
 
-將現有程式碼移植到 .NET Core 時發現的一些最常見問題，是僅在 .NET Framework 中找到的 API 和技術相依性。 *Windows 相容性套件*提供許多這些技術，因此建置 .NET Core 應用程式和 .NET Standard 程式庫很容易。
+將現有程式碼移植到 .NET Core 時所發現的一些最常見問題，是只在 .NET Framework 中找到的 Api 和技術相依性。 *Windows 相容性套件*提供許多這些技術，因此建置 .NET Core 應用程式和 .NET Standard 程式庫很容易。
 
-此套件是邏輯的 [.NET Standard 2.0 延伸模組](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)，可大幅增加 API 集和現有的程式碼編譯，幾乎不需要修改。 但為信守 .NET Standard 的承諾 (「它是所有 .NET 實作提供的 API 集」)，這不包括無法跨所有平台的技術，例如登錄、Windows Management Instrumentation (WMI) 或反映發出 API。
+此套件是邏輯的 [.NET Standard 2.0 延伸模組](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)，可大幅增加 API 集和現有的程式碼編譯，幾乎不需要修改。 為了維持 .NET Standard （「這是所有 .NET 部署所提供的一組 Api」）的承諾，套件不包含無法在所有平臺（例如登錄、Windows Management Instrumentation （WMI）或反映發出）上工作的技術。Api.
 
-「Windows 相容性套件」位階高於 .NET Standard，並提供存取僅限 Windows 的技術。 它特別適合想要移至 .NET Core，但第一個步驟計劃停留在 Windows 的客戶。 在這種情況下，無法使用僅限 Windows 技術只是無架構優勢的移轉障礙。
+Windows 相容性套件位於 .NET Standard 之上，並可讓您存取僅限 Windows 的技術。 它特別適合想要移至 .NET Core，但第一個步驟計劃停留在 Windows 的客戶。 在這種情況下，無法使用僅限 Windows 的技術，只是無架構優勢的遷移障礙。
 
 ## <a name="package-contents"></a>套件內容
 
-「Windows 相容性套件」透過 NuGet 套件 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) 提供，可從以 .NET Core 或 .NET Standard 為目標的專案參考。
+Windows 相容性套件是透過[Microsoft. Windows 相容性 NuGet 套件](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)提供，而且可以從以 .net Core 或 .NET Standard 為目標的專案中參考。
 
 它提供約 20,000 個 API，包括僅限 Windows 以及來自下列技術領域的跨平台 API：
 
 - 字碼頁
 - CodeDom
-- Configuration
+- 組態
 - 目錄服務
 - 繪圖
 - ODBC
@@ -47,15 +46,15 @@ ms.locfileid: "72521275"
 
 ## <a name="get-started"></a>開始使用
 
-1. 移植前，請務必查看[移植程序](index.md)。
+1. 在移植之前，請務必查看[移植](index.md)程式。
 
-2. 將現有的程式碼移植到 .NET Core 或 .NET Standard 時，請安裝 NuGet 套件 [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)。
+2. 將現有程式碼移植到 .NET Core 或 .NET Standard 時，請安裝[Microsoft Windows 相容性 NuGet 套件](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)。
 
-3. 如果您想要留在 Windows，即已完成所有準備。
+   如果您想要留在 Windows，即已完成所有準備。
 
-4. 如果您想要在 Linux 或 macOS 上執行 .NET Core 應用程式或 .NET Standard 程式庫，請使用 [API 分析器](../../standard/analyzers/api-analyzer.md)尋找無法跨平台運作的 API 使用方式。
+3. 如果您想要在 Linux 或 macOS 上執行 .NET Core 應用程式或 .NET Standard 程式庫，請使用 [API 分析器](../../standard/analyzers/api-analyzer.md)尋找無法跨平台運作的 API 使用方式。
 
-5. 移除這些 API 的使用方式，以跨平台的替代方案取代，或使用平台檢查保護它們，例如：
+4. 移除這些 API 的使用方式，以跨平台的替代方案取代，或使用平台檢查保護它們，例如：
 
     ```csharp
     private static string GetLoggingPath()

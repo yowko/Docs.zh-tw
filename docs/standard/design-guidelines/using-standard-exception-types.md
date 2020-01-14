@@ -8,62 +8,61 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-author: KrzysztofCwalina
-ms.openlocfilehash: b947c7cce057c060b1ab5054d1227f5703ccbf89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6b202d618d9d2216c8998181303250081de6781c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026332"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708980"
 ---
 # <a name="using-standard-exception-types"></a>使用標準例外狀況類型
-本章節描述的架構和其使用方式詳細資料所提供的標準例外狀況。 清單並不詳盡。 請參閱.NET Framework 參考文件的使用方式的其他 Framework 例外狀況型別。  
+本節說明架構所提供的標準例外狀況，以及其使用方式的詳細資料。 清單完全不是完整的。 如需其他架構例外狀況類型的使用方式，請參閱 .NET Framework 參考檔。  
   
-## <a name="exception-and-systemexception"></a>例外狀況和 SystemException  
- **X DO NOT** 擲回 <xref:System.Exception?displayProperty=nameWithType> 或 <xref:System.SystemException?displayProperty=nameWithType>。  
+## <a name="exception-and-systemexception"></a>Exception 和 SystemException  
+ **X 不會**擲回 <xref:System.Exception?displayProperty=nameWithType> 或 <xref:System.SystemException?displayProperty=nameWithType>。  
   
- **X DO NOT** 攔截 `System.Exception` 或 `System.SystemException` framework 程式碼中，除非您想要重新擲回。  
+ **X 不會**攔截 framework 程式碼中的 `System.Exception` 或 `System.SystemException`，除非您想要重新擲回。  
   
- **X AVOID** 攔截 `System.Exception` 或 `System.SystemException`，除非在最上層例外狀況處理常式。  
+ **X 避免**攔截 `System.Exception` 或 `System.SystemException`，但最上層的例外狀況處理常式除外。  
   
 ## <a name="applicationexception"></a>ApplicationException  
- **X DO NOT** 擲回或衍生自 <xref:System.ApplicationException>。  
+ **X 不會**擲回或衍生自 <xref:System.ApplicationException>。  
   
 ## <a name="invalidoperationexception"></a>InvalidOperationException  
- **✓ DO** 擲回 <xref:System.InvalidOperationException> 的物件是否不適當的狀態。  
+ 如果物件處於不適當的狀態， **✓ DO**會擲回 <xref:System.InvalidOperationException>。  
   
-## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException、 ArgumentNullException 和 ArgumentOutOfRangeException  
- **✓ DO** 擲回 <xref:System.ArgumentException> 或如果不正確的引數會傳遞給成員及其子型別之一。 如果適用的話，偏好使用最具衍生性的例外狀況類型。  
+## <a name="argumentexception-argumentnullexception-and-argumentoutofrangeexception"></a>ArgumentException、System.argumentnullexception 和 ArgumentOutOfRangeException  
+ 如果將不正確的引數傳遞給成員，則**✓**會擲回 <xref:System.ArgumentException> 或其中一個子類型。 偏好最常衍生的例外狀況類型（如果適用的話）。  
   
- **✓ DO** 設定 `ParamName` 屬性時擲回的子類別的其中一個 `ArgumentException`。  
+ **✓**會在擲回 `ArgumentException`的其中一個子類別時，設定 `ParamName` 屬性。  
   
- 這個屬性代表造成擲回的例外狀況的參數名稱。 請注意，屬性可以使用其中一個建構函式多載設定。  
+ 這個屬性代表導致擲回例外狀況的參數名稱。 請注意，您可以使用其中一個函式多載來設定屬性。  
   
- **✓ DO** 使用 `value` 屬性 setter 的隱含值參數的名稱。  
+ **✓ DO**使用 `value` 做為屬性 setter 之隱含值參數的名稱。  
   
-## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException、 IndexOutOfRangeException 和 AccessViolationException  
- **X DO NOT** 允許公開呼叫 Api，明確或隱含地擲回 <xref:System.NullReferenceException>， <xref:System.AccessViolationException>， 或 <xref:System.IndexOutOfRangeException>。 這些例外狀況會保留並擲回的執行引擎在大部分情況下是 bug。  
+## <a name="nullreferenceexception-indexoutofrangeexception-and-accessviolationexception"></a>NullReferenceException、IndexOutOfRangeException 和 AccessViolationException  
+ **X**不允許可公開呼叫的 api 明確或隱含地擲回 <xref:System.NullReferenceException>、<xref:System.AccessViolationException>或 <xref:System.IndexOutOfRangeException>。 這些例外狀況是由執行引擎保留和擲回，而在大部分情況下則表示 bug。  
   
- 執行檢查，以避免擲回這些例外狀況的引數。 擲回這些例外狀況會公開實作詳細資料，您可能會隨著時間變更的方法。  
+ 執行引數檢查以避免擲回這些例外狀況。 擲回這些例外狀況會公開可能隨著時間變更之方法的執行詳細資料。  
   
 ## <a name="stackoverflowexception"></a>StackOverflowException  
- **X DO NOT** 明確擲回 <xref:System.StackOverflowException>。 應該在只能由 CLR 明確擲回例外狀況。  
+ **X 不會**明確地擲回 <xref:System.StackOverflowException>。 例外狀況應該僅由 CLR 明確擲回。  
   
  **X DO NOT** 攔截 `StackOverflowException`。  
   
- 它幾乎是不可能撰寫受管理的程式碼，保持一致且任意的堆疊溢位。 藉由使用探查來移動堆疊溢位為妥善定義的位置，而不是藉由從任意的堆疊溢位備份，CLR 的 unmanaged 的部分都保持一致。  
+ 在出現任意堆疊溢位的情況中，幾乎不可能撰寫會保持一致的 managed 程式碼。 CLR 的非受控元件會使用探查將堆疊溢位移到妥善定義的位置，而不是從任意堆疊溢位進行備份，以保持一致。  
   
 ## <a name="outofmemoryexception"></a>OutOfMemoryException  
- **X DO NOT** 明確擲回 <xref:System.OutOfMemoryException>。 這個例外狀況是只由 CLR 基礎結構擲回。  
+ **X 不會**明確地擲回 <xref:System.OutOfMemoryException>。 這個例外狀況只會由 CLR 基礎結構擲回。  
   
-## <a name="comexception-sehexception-and-executionengineexception"></a>ComException、 SEHException 和 ExecutionEngineException  
- **X DO NOT** 明確擲回 <xref:System.Runtime.InteropServices.COMException>， <xref:System.ExecutionEngineException>，和 <xref:System.Runtime.InteropServices.SEHException>。 這些例外狀況是只由 CLR 基礎結構擲回。  
+## <a name="comexception-sehexception-and-executionengineexception"></a>ComException、SEHException 和 ExecutionEngineException  
+ **X 不會**明確地擲回 <xref:System.Runtime.InteropServices.COMException>、<xref:System.ExecutionEngineException>和 <xref:System.Runtime.InteropServices.SEHException>。 這些例外狀況只會由 CLR 基礎結構擲回。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [例外狀況的設計方針](../../../docs/standard/design-guidelines/exceptions.md)

@@ -2,18 +2,18 @@
 title: Byrefs
 description: 深入瞭解中F#的 byref 和 byref 型別，其適用于低層級的程式設計。
 ms.date: 11/04/2019
-ms.openlocfilehash: 2c46cea2329b6817dd753e67c6702fb163ce2193
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5aaee1e4eac9ce0d7e9ba89a2ab5f745d31367a0
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976820"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901302"
 ---
 # <a name="byrefs"></a>Byrefs
 
 F#有兩個主要的功能領域，可應付低層級程式設計的空間：
 
-* `byref`/`inref`/`outref` 類型，這是 managed 指標。 它們對使用方式有限制，因此您無法編譯在執行時間不正確程式。
+* `byref`/`inref`/`outref` 類型，也就是 managed 指標。 它們對使用方式有限制，因此您無法編譯在執行時間不正確程式。
 * `byref`類似的結構，這是具有類似的語義和 `byref<'T>`的編譯時間限制的[結構](structures.md)。 其中一個範例是 <xref:System.Span%601>。
 
 ## <a name="syntax"></a>語法
@@ -104,7 +104,7 @@ let f (x: inref<SomeStruct>) = x.SomeField
 
 ### <a name="outref-semantics"></a>Outref 的語義
 
-`outref<'T>` 的目的是要指出指標只能從讀取。 不預期地，`outref<'T>` 允許讀取基礎值，而不論其名稱。 這是為了相容性之故。 就語義而言，`outref<'T>` 與 `byref<'T>`不同。
+`outref<'T>` 的目的是要指出指標應該只寫入至。 不預期地，`outref<'T>` 允許讀取基礎值，而不論其名稱。 這是為了相容性之故。 就語義而言，`outref<'T>` 與 `byref<'T>`不同。
 
 ### <a name="interop-with-c"></a>與 C\# 的 Interop
 
@@ -134,7 +134,7 @@ C#除了 `ref` 傳回以外，支援 `in ref` 和 `out ref` 關鍵字。 下表�
 2. 結構型別上沒有可變欄位的 `this` 指標。
 3. 衍生自另一個 `inref<_>` 指標之記憶體位置的位址。
 
-當取得 `inref` 的隱含位址時，會慣用具有類型 `SomeType` 引數的多載，而此多載具有類型 `inref<SomeType>`的引數。 例如:
+當取得 `inref` 的隱含位址時，會慣用具有類型 `SomeType` 引數的多載，而此多載具有類型 `inref<SomeType>`的引數。 例如：
 
 ```fsharp
 type C() =
@@ -175,11 +175,11 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 這最後一點對F#管線型程式設計很重要，因為 `|>` 是參數化其輸入類型的泛型函式。 這項限制可能會在未來 `|>` 放寬，因為它是內嵌的，而且不會對其主體中的非內嵌泛型函式進行任何呼叫。
 
-雖然這些規則非常嚴格地限制使用方式，但它們會以安全的方式滿足高效能運算的承諾。
+雖然這些規則會嚴格限制使用方式，但它們會以安全的方式滿足高效能計算的承諾。
 
 ## <a name="byref-returns"></a>Byref 傳回
 
-可以產生和F#取用來自函數或成員的 Byref 回傳。 使用 `byref`傳回的方法時，會隱含地取值此值。 例如:
+可以產生和F#取用來自函數或成員的 Byref 回傳。 使用 `byref`傳回的方法時，會隱含地取值此值。 例如：
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

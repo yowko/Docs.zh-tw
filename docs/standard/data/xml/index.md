@@ -3,14 +3,12 @@ title: XML 文件和資料
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0c3f3e99b06b65caf79d87a7831369f6fb33b08
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424858"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710787"
 ---
 # <a name="xml-documents-and-data"></a>XML 文件和資料
 
@@ -28,7 +26,7 @@ ms.locfileid: "73424858"
 
 如需完整清單，請在 [.NET API 瀏覽器](https://docs.microsoft.com/dotnet/api/?term=system.xml)搜尋 "System.Xml"。
 
-這些命名空間中的類別支援全球資訊網協會 (W3C) 的建議。 例如:
+這些命名空間中的類別支援全球資訊網協會 (W3C) 的建議。 例如：
 
 - <xref:System.Xml.XmlDocument?displayProperty=nameWithType> 類別會實作 [W3C 文件物件模型 (DOM) 層級 1 核心](https://www.w3.org/TR/REC-DOM-Level-1/)和 [DOM 層級 2 核心](https://www.w3.org/TR/DOM-Level-2-Core/)的建議事項。
 

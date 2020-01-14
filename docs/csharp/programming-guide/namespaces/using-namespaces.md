@@ -1,6 +1,5 @@
 ---
 title: 使用命名空間 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: b27a2fa42fc8e0d9ff0d1524c5d1bc19acbfbdb0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588863"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75700194"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>使用命名空間 (C# 程式設計手冊)
 
@@ -31,7 +30,7 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
   
  [!code-csharp[csProgGuide#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#31)]  
   
- 而非：  
+ 不要：  
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
@@ -91,7 +90,7 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
   
  這會適用，但是如果後續引進名為 `Alias` 的類型，`Alias.` 會改為繫結至該類型。 使用 `Alias::Exception` 來確保將 `Alias` 視為命名空間別名，而非型別。  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [命名空間](./index.md)

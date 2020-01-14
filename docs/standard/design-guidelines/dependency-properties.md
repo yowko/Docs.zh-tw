@@ -3,44 +3,43 @@ title: 相依性屬性
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 212cfb1e-cec4-4047-94a6-47209b387f6f
-author: KrzysztofCwalina
-ms.openlocfilehash: 52d7a69a3f52c67ebff3f3db1daf0790e995913a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd12d05dbba133503778e6df3cd0e6c3e5689d5b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778764"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709487"
 ---
 # <a name="dependency-properties"></a>相依性屬性
-相依性屬性 (DP) 是將其值儲存在屬性存放區，而不是儲存在類型變數 （欄位），例如一般屬性。  
+相依性屬性（DP）是將其值儲存在屬性存放區中的一般屬性，而不是將它儲存在類型變數（欄位）中，例如。  
   
- 附加的相依性屬性是一種相依性屬性化為代表 「 屬性 」 描述的物件和其容器之間的關聯性的靜態 Get 和 Set 方法 (例如，位置`Button`物件上`Panel`容器）。  
+ 附加的相依性屬性是一種以靜態 Get 和 Set 方法模型化的相依性屬性，其代表描述物件及其容器之間關聯性的「屬性」（例如，在 `Panel` 容器上 `Button` 物件的位置）。  
   
- **✓ DO** 提供的相依性屬性，如果您需要支援 WPF 功能，例如樣式、 觸發程序、 資料繫結、 動畫、 動態的資源和繼承的屬性。  
+ 如果您需要屬性來支援樣式、觸發程式、資料系結、動畫、動態資源和繼承等 WPF 功能，則**✓**會提供相依性屬性。  
   
 ## <a name="dependency-property-design"></a>相依性屬性設計  
- **✓ DO** 繼承自 <xref:System.Windows.DependencyObject>，或其中一個它的子類型，實作相依性屬性時。 類型提供非常有效率的屬性存放區實作，而且會自動支援 WPF 資料繫結。  
+ 在執行相依性屬性時， **✓ DO**會繼承自 <xref:System.Windows.DependencyObject>或它的其中一個子類型。 型別提供非常有效率的屬性存放區執行，並自動支援 WPF 資料系結。  
   
- **✓ DO** 提供規則的 CLR 屬性和公用靜態唯讀欄位中儲存的執行個體 <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> 每一個相依性屬性。  
+ **✓ DO**提供一般 CLR 屬性和公用靜態唯讀欄位，以儲存每個相依性屬性的 <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> 實例。  
   
- **✓ DO** 呼叫執行個體方法來實作相依性屬性 <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> 和 <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>。  
+ **✓**會藉由呼叫實例方法 <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> 和 <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>來執行相依性屬性。  
   
- **✓ DO** 藉由使用 「 屬性 」。 屬性名稱的尾碼名稱相依性屬性的靜態欄位  
+ **✓ DO**藉由 suffixing 具有 "property" 屬性的屬性名稱，來命名相依性屬性靜態欄位。  
   
- **X DO NOT** 程式碼中明確設定相依性屬性的預設值，則將它們設定在中繼資料。  
+ **X 不會**在程式碼中明確設定相依性屬性的預設值;請改為在中繼資料中設定它們。  
   
- 如果您明確設定屬性的預設值，您可能會阻止該屬性所設定的某些隱含的方式，例如樣式。  
+ 如果您明確地設定屬性預設值，您可能會防止某個隱含的方式設定該屬性，例如樣式。  
   
- **X DO NOT** 放置在屬性存取子標準的程式碼以外，若要存取的靜態欄位的程式碼。  
+ **X 不會**將程式碼放在標準程式碼以外的屬性存取子中，以存取靜態欄位。  
   
- 程式碼不會執行，如果屬性設定透過隱含的方式，例如樣式中，因為樣式時，直接使用靜態欄位。  
+ 如果屬性是以隱含方式設定（例如樣式），則該程式碼將不會執行，因為樣式會直接使用靜態欄位。  
   
- **X DO NOT** 使用相依性屬性來儲存資料的安全。 即使是私人的相依性屬性可以公開存取。  
+ **X**不使用相依性屬性來儲存安全的資料。 甚至可以公開存取私用相依性屬性。  
   
 ## <a name="attached-dependency-property-design"></a>附加的相依性屬性設計  
- 上一節中所述的相依性屬性代表宣告的類型; 的內建屬性例如，`Text`屬性是屬性`TextButton`，其中會宣告它。 一種特殊的相依性屬性是附加的相依性屬性。  
+ 上一節所述的相依性屬性代表宣告類型的內建屬性。例如，`Text` 屬性是 `TextButton`的屬性，其會將其宣告。 特殊類型的相依性屬性是附加的相依性屬性。  
   
- 附加屬性的典型的範例是<xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType>屬性。 此屬性代表按鈕的 （不方格的） 資料行位置，但僅相關如果按鈕包含在方格中，因此它 「 附加 」 至按鈕的方格。  
+ 附加屬性的典型範例是 <xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType> 屬性。 屬性代表按鈕的（而不是方格的）資料行位置，但只有在按鈕包含在方格中，而且它是「附加」至按鈕 by 格線時才相關。  
   
 ```xaml
 <Grid>  
@@ -54,7 +53,7 @@ ms.locfileid: "61778764"
 </Grid>  
 ```  
   
- 附加屬性的定義看起來大部分的一般相依性屬性，不同之處在於存取子都由靜態 Get 和 Set 方法：  
+ 附加屬性的定義與一般相依性屬性大致相似，不同之處在于存取子是以靜態 Get 和 Set 方法來表示：  
   
 ```csharp
 public class Grid {  
@@ -77,27 +76,27 @@ public class Grid {
 ```  
   
 ## <a name="dependency-property-validation"></a>相依性屬性驗證  
- 屬性通常會實作稱為驗證。 當嘗試變更屬性的值時，就會執行驗證邏輯。  
+ 屬性通常會執行所謂的驗證。 當嘗試變更屬性的值時，就會執行驗證邏輯。  
   
- 不幸的是相依性屬性存取子不能包含任意的驗證程式碼。 相反地，必須在屬性註冊中指定相依性屬性驗證邏輯。  
+ 可惜的是，相依性屬性存取子不能包含任意驗證程式代碼。 相反地，在屬性註冊期間，必須指定相依性屬性驗證邏輯。  
   
- **X DO NOT** 放在屬性存取子的相依性屬性的驗證邏輯。 請改為傳遞驗證回呼，以`DependencyProperty.Register`方法。  
+ **X 不會**將相依性屬性驗證邏輯放在屬性的存取子中。 相反地，請將驗證回呼傳遞給 `DependencyProperty.Register` 方法。  
   
 ## <a name="dependency-property-change-notifications"></a>相依性屬性變更通知  
- **X DO NOT** 在相依性屬性存取子實作變更通知邏輯。 相依性屬性具有必須藉由提供變更通知回呼來使用內建的異動通知功能<xref:System.Windows.PropertyMetadata>。  
+ **X 不會**在相依性屬性存取子中執行變更通知邏輯。 相依性屬性具有內建變更通知功能，必須透過提供 <xref:System.Windows.PropertyMetadata>的變更通知回呼來使用。  
   
 ## <a name="dependency-property-value-coercion"></a>相依性屬性值強制型轉  
- 屬性強制型轉之前實際修改的屬性存放區的 setter 修改指定給屬性 setter 的值時會發生。  
+ 當 setter 在實際修改屬性存放區之前修改了指定給屬性 setter 的值時，就會發生屬性強制型轉。  
   
- **X DO NOT** 強制型轉邏輯實作相依性屬性存取子中。  
+ **X 不會**在相依性屬性存取子中執行強制型轉邏輯。  
   
- 相依性屬性有內建強制型轉功能，並可供提供強制型轉回撥到`PropertyMetadata`。  
+ 相依性屬性具有內建強制型轉功能，而且可以藉由提供 `PropertyMetadata`的強制型轉回呼來使用。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [一般設計模式](../../../docs/standard/design-guidelines/common-design-patterns.md)

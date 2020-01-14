@@ -4,14 +4,12 @@ description: 不論是在線上或是離線，ML.NET 都能讓您將機器學習
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.author: nakersha
-author: natke
-ms.openlocfilehash: 7d15c49ade4cd32389f7c86440b3a66aec8e4ea8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345191"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740089"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
@@ -214,7 +212,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
 
 呼叫 `Fit()` 會使用輸入定型資料來評估模型的參數。 這就是所謂的「定型」(Training) 模型。 請記住，上述的線性迴歸模型有兩個模型參數：**偏差**和**權數**。 呼叫 `Fit()` 之後，即已知參數值。 大部分模型的參數都比這個模型多。
 
-您可以在[如何定型模型](./how-to-guides/train-machine-learning-model-ml-net.md)中深入了解模型定型
+您可以在[如何訓練模型](./how-to-guides/train-machine-learning-model-ml-net.md)中深入瞭解模型定型。
 
 產生的模型物件會實作 <xref:Microsoft.ML.ITransformer> 介面。 亦即，模型會將輸入資料轉換成預測。
 

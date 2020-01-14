@@ -1,6 +1,5 @@
 ---
 title: <para> - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <para>
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <para> C# XML tag
 - para C# XML tag
 ms.assetid: c74b8705-29df-40b1-bff5-237492b0e978
-ms.openlocfilehash: 136906de855f559c8eeb27a4ae7ec481dfec3435
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 3ebadf43f0627cea98b456de8b4c9a0e2bf84af9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523439"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711736"
 ---
 # <a name="para-c-programming-guide"></a>\<para> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  

@@ -4,13 +4,13 @@ description: Microsoft XML 序列化程式產生器的概觀。 您可以使用 
 author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 403651978667c8cf531c3f87f1156f67206fb490
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.custom: mvc
+ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522824"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714517"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程式產生器
 
@@ -26,7 +26,7 @@ ms.locfileid: "72522824"
 
 [Microsoft.XmlSerializer.Generator NuGet 套件](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator)類似於 [XML 序列化程式產生器 (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md)，是 .NET Core 和 .NET Standard 專案的對等項目。 此套件能夠為組件中包含的類型建立 XML 序列化組件，可在將這些類型的物件序列化或還原序列化時，使用 <xref:System.Xml.Serialization.XmlSerializer> 來提升 XML 序列化的啟動效能。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 完成本教學課程：
 
@@ -52,7 +52,7 @@ dotnet new console
 
 使用 [`dotnet add package`](../tools//dotnet-add-package.md) 命令，在專案中新增參考。
 
-類型:
+類型：
 
 ```dotnetcli
 dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
@@ -131,5 +131,5 @@ dotnet run
 ## <a name="related-resources"></a>相關資源
 
 - [XML 序列化簡介](../../standard/serialization/introducing-xml-serialization.md)
-- [如何：使用 XmlSerializer 進行序列化 (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [如何使用 XmlSerializer 進行序列化（C#）](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
 - [如何：使用 XmlSerializer 進行序列化 (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

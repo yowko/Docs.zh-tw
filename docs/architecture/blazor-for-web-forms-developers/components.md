@@ -4,12 +4,12 @@ description: 瞭解如何使用 Blazor 建立可重複使用的 UI 元件，以�
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b34bdf61a425807030cf7648df245cc7a01c95de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337391"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705726"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>使用 Blazor 建立可重複使用的 UI 元件
 
@@ -269,7 +269,7 @@ public partial class Counter : System.Web.UI.UserControl
 處理事件之後，會呈現元件以考慮任何元件狀態變更。 使用非同步事件處理常式時，元件會在處理常式執行完成之後立即轉譯。 非同步 `Task` 完成之後，會*再次*轉譯此元件。 這個非同步執行模式可讓您在非同步 `Task` 仍在進行時，呈現一些適當的 UI。
 
 ```razor
-<button @onclick="Get message">Get message</button>
+<button @onclick="ShowMessage">Get message</button>
 
 @if (showMessage)
 {

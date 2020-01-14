@@ -5,14 +5,12 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6928b5ac41a6af36dc7d5e7f5bb02074ba742e5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 73665915a70225c2b1da47c7b60347b089564884
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974595"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716036"
 ---
 # <a name="loader-etw-events"></a>載入器 ETW 事件
 這些事件收集載入及卸載應用程式定義域、組件和模組的相關資訊。  
@@ -22,7 +20,7 @@ ms.locfileid: "73974595"
 ## <a name="application-domain-events"></a>應用程式定義域事件
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|Event - 事件|層級|  
+|引發事件的關鍵字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` 和 `AppDomainUnLoad_V1`|告知性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|告知性 (4)|  
@@ -30,7 +28,7 @@ ms.locfileid: "73974595"
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (針對所有應用程式定義域記錄)|156|每當在處理序的存留期間建立應用程式定義域時引發。|  
 |`AppDomainUnLoad_V1`|157|每當在處理序的存留期間終結應用程式定義域時引發。|  
@@ -50,7 +48,7 @@ ms.locfileid: "73974595"
 ## <a name="clr-loader-assembly-events"></a>CLR 載入器組件事件  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|Event - 事件|層級|  
+|引發事件的關鍵字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` 和 `AssemblyUnload`|告知性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|告知性 (4)|  
@@ -58,7 +56,7 @@ ms.locfileid: "73974595"
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|載入組件時引發。|  
 |`AssemblyUnload_V1`|155|卸載組件時引發。|  
@@ -79,7 +77,7 @@ ms.locfileid: "73974595"
 ## <a name="module-events"></a>模組事件
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|Event - 事件|層級|  
+|引發事件的關鍵字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` 和 `ModuleUnload_V2`|告知性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|告知性 (4)|  
@@ -88,7 +86,7 @@ ms.locfileid: "73974595"
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|在處理序的存留期間載入模組時引發。|  
 |`ModuleUnload_V2`|153|在處理序的存留期間卸載模組時引發。|  
@@ -124,7 +122,7 @@ ms.locfileid: "73974595"
 ## <a name="clr-domain-module-events"></a>CLR 定義域模組事件
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|Event - 事件|層級|  
+|引發事件的關鍵字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|告知性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|告知性 (4)|  
@@ -132,7 +130,7 @@ ms.locfileid: "73974595"
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|針對應用程式定義域載入模組時引發。|  
 |`DomainModuleDCStart_V1`|151|在開始取消期間列舉針對應用程式定義域所載入的模組，並且針對所有應用程式定義域記錄。|  
@@ -154,7 +152,7 @@ ms.locfileid: "73974595"
 ## <a name="module-range-events"></a>模組範圍事件
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|Event - 事件|層級|  
+|引發事件的關鍵字|Event|Level|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|告知性 (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|告知性 (4)|  
@@ -162,7 +160,7 @@ ms.locfileid: "73974595"
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|描述|  
+|Event|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|如果已載入的原生映像產生器 (NGen) 已使用 IBC 最佳化，就會出現這個事件，其中包含有關 NGen 映像作用範圍的資訊。|  
 |`ModuleRangeDCStart`|160|在開始取消期間引發的 `ModuleRange` 事件。|  

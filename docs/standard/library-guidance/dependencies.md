@@ -1,15 +1,13 @@
 ---
 title: 相依性與 .NET 程式庫
 description: 在 .NET 程式庫中管理 NuGet 相依性的最佳做法建議。
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 0cd00ff36ad52bc46769ca1793b9efd02db14da1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: b5742bf4724c4aff4beb4ca40a543bd096528a00
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644218"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706500"
 ---
 # <a name="dependencies"></a>相依性
 
@@ -58,11 +56,11 @@ NuGet 用來解決相依性的規則非常[複雜](/nuget/consume-packages/depen
 
 ![菱形相依性衝突](./media/dependencies/diamond-dependency-conflict.png "菱形相依性衝突")
 
-**❌ 請勿**使用沒有最小版本的 NuGet 套件參考。
+**❌** 沒有最低版本的 NuGet 套件參考。
 
-**❌ 避免**要求明確版本的 NuGet 套件參考。
+**❌ 避免**需要確切版本的 NuGet 套件參考。
 
-**❌ 請避免**使用具有版本較高限制的 NuGet 套件參考。
+**❌ 避免**具有版本上限的 NuGet 套件參考。
 
 ## <a name="nuget-shared-source-packages"></a>NuGet 共用的來源套件
 
@@ -88,11 +86,11 @@ NuGet 用來解決相依性的規則非常[複雜](/nuget/consume-packages/depen
 
 > 此設定能告訴 NuGet 該套件僅適用於開發階段，且不應該公開為公用相依性。
 
-**❌ 請勿**在您的公用 API 中包含共用的來源套件類型。
+**❌** 在公用 API 中沒有共用的來源套件類型。
 
 > 共用來源類型會編譯為參考組件，且不能跨越組件界線進行交換。 例如，某個專案中的共用來源 `IRepository` 類型，與另一個專案中相同的共用來源 `IRepository` 將會是完全不同的類型。 共用來源套件中的類型應該僅具有 `internal` 可見性。
 
-**❌ 請勿**將共用的來源套件發佈至 NuGet.org。
+**❌ 不要**將共用的來源套件發佈至 NuGet.org。
 
 > 共用的來源套件包含原始程式碼，而且只能用於具有相同語言類型的專案。 例如，以 F# 撰寫的應用程式將無法使用以 C# 撰寫的共用來源套件。
 >

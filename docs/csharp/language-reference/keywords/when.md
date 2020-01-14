@@ -1,6 +1,5 @@
 ---
 title: when 內容關鍵字 - C# 參考
-ms.custom: seodec18
 ms.date: 03/07/2017
 f1_keywords:
 - when_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: f0dbfb611ab563c16c97b1f6313134df38a174df
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633104"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712828"
 ---
 # <a name="when-c-reference"></a>when (C# 參考)
 
@@ -50,7 +49,7 @@ case (expr) when (when-condition):
 
 [!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [switch 陳述式](switch.md)
 - [try/catch 陳述式](try-catch.md)

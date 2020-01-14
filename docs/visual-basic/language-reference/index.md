@@ -10,18 +10,18 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: 7e1838fe6c9d563358757700d74cbf27228812a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 90cd1984ceb3bdb9de62450e86184f493e7417f0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349947"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636714"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 語言參考
 
 本節提供 Visual Basic 語言各個層面的參考資訊。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
 
  [印刷樣式與程式碼慣例](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
  摘要說明在 Visual Basic 檔中，語言的關鍵字、預留位置和其他元素的格式化方式。  
@@ -62,11 +62,11 @@ ms.locfileid: "74349947"
  [運算子](../../visual-basic/language-reference/operators/index.md)  
  記錄 Visual Basic 中可用的運算子。  
   
- [內容](../../visual-basic/language-reference/properties.md)  
+ [屬性](../../visual-basic/language-reference/properties.md)  
  記錄 Visual Basic 中可用的屬性。  
   
  [查詢](../../visual-basic/language-reference/queries/index.md)  
- 提供在程式碼中使用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 運算式的參考資訊。  
+ 提供有關在您的程式碼中使用語言整合式查詢（LINQ）運算式的參考資訊。  
   
  [陳述式](../../visual-basic/language-reference/statements/index.md)  
  記錄 Visual Basic 中可用的宣告和可執行語句。  
@@ -85,8 +85,5 @@ ms.locfileid: "74349947"
   
 ## <a name="related-sections"></a>相關章節  
 
- [Visual Basic](../../visual-basic/index.md)  
- 針對 Visual Basic 語言的所有區域提供完整的協助。  
-  
  [Visual Basic 命令列編譯器](../../visual-basic/reference/command-line-compiler/index.md)  
  描述如何使用命令列編譯器，做為從 Visual Studio 整合式開發環境（IDE）內編譯器的替代方法。

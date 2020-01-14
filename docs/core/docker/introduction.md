@@ -2,13 +2,13 @@
 title: Docker 簡介
 description: 本文在 .NET Core 應用程式內容中提供了 Docker 的簡介及概觀。
 ms.date: 03/20/2019
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 22c8fa4cda5cfd6564695d3b86072c64f22fa335
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.custom: mvc
+ms.openlocfilehash: 278c921de83282d61b25f4d44e91535981285e83
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087394"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715555"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
@@ -61,7 +61,7 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 - [Azure 容器執行個體](https://azure.microsoft.com/services/container-instances/)
 在沒有任何較高層級管理服務的情況下，將容器裝載於雲端。
 
-- [Azure Batch](https://azure.microsoft.com/services/batch/)
+- [Azure Batch](https://azure.microsoft.com/services/batch/)\
 使用容器執行重複的計算工作。
 
 - [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)

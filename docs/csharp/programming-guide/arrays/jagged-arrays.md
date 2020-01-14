@@ -1,17 +1,16 @@
 ---
 title: 不規則陣列 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: 8d1be351e3aabea44138323d04c922dd1cccb78a
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 56013f0143d5efcb31a476909cb6e92504ff0dbc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597336"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705700"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>不規則陣列 (C# 程式設計手冊)
 
@@ -65,7 +64,7 @@ ms.locfileid: "69597336"
   
  [!code-csharp[csProgGuideArrays#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#18)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Array>
 - [C# 程式設計指南](../index.md)

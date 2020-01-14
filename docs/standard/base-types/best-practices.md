@@ -10,13 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.custom: seodec18
-ms.openlocfilehash: 56014469f14280deae5f220da6d786f4363ea98f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 158964d1e04091faaa9b3acf82bf4ce2b5aba797
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105726"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711489"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正則運算式最佳做法
 
@@ -205,7 +204,7 @@ ms.locfileid: "73105726"
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]
 
-.NET 中的規則運算式語言包括下列語言項目，可讓您用來消除巢狀數量詞。 如需詳細資訊，請參閱[分組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
+.NET 中的規則運算式語言包括下列語言項目，可讓您用來消除巢狀數量詞。 如需詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
 |語言項目|描述|
 |----------------------|-----------------|

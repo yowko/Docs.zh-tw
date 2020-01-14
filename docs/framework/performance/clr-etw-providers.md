@@ -5,14 +5,12 @@ helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93a0271c521de6e390e323d92e93a5e7bf94444f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dbdd4ad862ae300c330dc56a82fcd65b866855b6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046729"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716175"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 提供者
 Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取消提供者。  
@@ -37,7 +35,7 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
   
  一般來說，會在啟動處理序之前啟用 ETW 記錄，並在處理序結束之後關閉記錄。 不過，如果在處理序執行時開啟 ETW 記錄，則需要處理序的額外資訊。 例如，進行符號解析時，您必須針對已在開啟記錄之前載入的方法，來記錄方法事件。  
   
- `DCStart` 和 `DCEnd` 事件會擷取啟動和停止資料收集時的處理序狀態 (狀態是指高階資訊，包含已進行 Just-In-Time (JIT) 編譯的方法，以及已載入的組件)。這兩個事件都可以提供處理序中發生情況的相關資訊；例如，哪些方法已進行 JIT 編譯，依此類推。  
+ `DCStart` 和 `DCEnd` 事件會擷取啟動和停止資料收集時的處理序狀態 （狀態指的是高階資訊，包括已編譯的一次性（JIT）和已載入元件的方法）。這兩個事件可以提供處理常式中已發生之內容的相關資訊;例如，哪些方法已進行 JIT 編譯，依此類推。  
   
  在取消提供者下，只會引發其名稱含有 `DC`、`DCStart`、`DCEnd` 或 `DCInit` 的事件。 此外，只會在取消提供者下引發這些事件。  
   
@@ -91,6 +89,6 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
   
  工具可以執行步驟 2 和 3 (啟動取消工作階段，然後終止分析)，而不是在使用者要求停止分析時立即關閉分析。 工具也可以執行步驟 4。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Common Language Runtime 中的 ETW 事件](etw-events-in-the-common-language-runtime.md)

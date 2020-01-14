@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0704e78a0e7fbf3987b3bc75bb46e135f00110e9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 91503ce0bffa1a9390432a51bff1ef10d80f563a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615342"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709773"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath 查詢及命名空間
 XPath 查詢可辨識 XML文件中的命名空間，並可使用命名空間前置詞來限定項目及屬性名稱。 使用命名空間前置詞限定項目及屬性名稱，會將 XPath 查詢傳回的節點限制為那些只屬於特定命名空間的節點。  
@@ -78,7 +76,7 @@ query.SetContext(manager);
 XPathNodeIterator nodes = navigator.Select(query);  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

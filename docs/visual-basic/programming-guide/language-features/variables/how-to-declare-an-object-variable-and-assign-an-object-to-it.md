@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object variables [Visual Basic], declaring
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
-ms.openlocfilehash: 4cfad1d820b584d4610d24c392b14ac3958471b7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: eaaeda2a986584e6e1a2e0d2cda3890fb6187598
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352910"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344241"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>如何：在 Visual Basic 中宣告物件變數，並指派物件給它
 
@@ -31,7 +31,7 @@ thisObject = "This is an Object"
 Dim thisObject As Object= "This is an Object"
 ```
 
-## <a name="compiling-the-code"></a>編譯程式碼
+## <a name="compile-the-code"></a>編譯程式碼
 
 這個範例需要：
 
@@ -41,7 +41,7 @@ Dim thisObject As Object= "This is an Object"
 
 - 要在其中放置指派語句的程式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

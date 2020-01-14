@@ -1,6 +1,5 @@
 ---
 title: static 修飾詞 - C# 參考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - static
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: cbd0f6b4ef7976ccc2da2a735ccbba2bf23177e4
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4ca3fcf809e723d2144654f1da949eb4d6de1b4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422337"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713062"
 ---
 # <a name="static-c-reference"></a>static (C# 參考)
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-ms.openlocfilehash: 3ca11cfe948a53292de8e68d87e3e45816a18162
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 34614fe24127787a113bab4975a50f1c8d2d875e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134989"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899504"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>ICLRStrongName::StrongNameSignatureGenerationEx 方法
 根據指定的旗標，產生指定元件的強式名稱簽章。  
@@ -72,7 +72,7 @@ HRESULT StrongNameSignatureGenerationEx (
 - `SN_TEST_SIGN` （0x00000002）-測試-簽署元件。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
  為 `wszFilePath` 指定 null 以計算簽章的大小，而不建立簽章。  

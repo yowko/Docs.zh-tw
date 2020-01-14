@@ -3,12 +3,12 @@ title: C# 中的數字 - C# 教學課程簡介
 description: 透過探索數值類型及其屬性和方法來了解 C#。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a06bc57e5c979b62e19407747cb2c8a2447ca114
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 7537bb597665461021946a792e342149f29c0e95
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739146"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694656"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>在 C\# 中操作整數和浮點數數字
 
@@ -338,7 +338,7 @@ Console.WriteLine(c / d);
 您已經了解不同的數字型別，接著請撰寫程式碼，以計算半徑 2.50 公分的圓形面積。 提醒您圓形面積是 PI 乘以半徑的平方。 提示：.NET 包含 PI 的常數：<xref:System.Math.PI?displayProperty=nameWithType>，可用來作為該值。
 
 您應該會取得介於 19 和 20 的答案。
-您可以[在 GitHub 上查看完成的範例程式碼](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106) \(英文\) 來檢查您的答案
+您可以[查看 GitHub 上已完成的範例程式碼](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)來檢查您的答案。
 
 如果您想要的話，可以嘗試其他公式。
 

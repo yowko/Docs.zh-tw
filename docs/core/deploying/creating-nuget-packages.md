@@ -4,13 +4,12 @@ description: 了解如何使用 'dotnet pack' 命令建立 NuGet 套件。
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.custom: seodec18
-ms.openlocfilehash: 4927e3796be42d70d25a1947d4519312aef7e289
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: ddc19faa7547637036686146f8600f40713541a8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343608"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740872"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>如何使用 .NET Core 命令列介面 (CLI) 工具建立 NuGet 套件
 
@@ -19,9 +18,9 @@ ms.locfileid: "75343608"
 
 .NET Standard 和 .NET Core 程式庫預期以 NuGet 封裝方式散發。 實際上，所有的 .NET 標準程式庫都是以這種方式散發及取用。 `dotnet pack` 命令最容易完成此作業。
 
-假設您剛寫完酷炫的新程式庫，希望透過 NuGet 散發。 您可以使用跨平台工具建立 NuGet 封裝，絲毫不差地完成此作業！ 下例假設 **SuperAwesomeLibrary** 程式庫以 `netstandard1.0` 為目標。
+假設您剛寫完酷炫的新程式庫，希望透過 NuGet 散發。 您可以使用跨平臺工具建立 NuGet 套件來執行這種操作！ 下列範例假設名為**SuperAwesomeLibrary**的程式庫是以 `netstandard1.0`為目標。
 
-如果您有可轉移的相依性，也就是相依於另一個套件的專案，您必須先使用 `dotnet restore` 命令確保還原整個解決方案的套件，再建立 NuGet 套件。 未完成這項操作，會導致 `dotnet pack` 命令無法正常運作。
+如果您有可轉移的相依性（也就是依存于另一個套件的專案），請務必在建立 NuGet 套件之前，使用 `dotnet restore` 命令來還原整個解決方案的套件。 如果無法這麼做，將導致 `dotnet pack` 命令無法正常運作。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -46,7 +45,7 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-請注意，這會產生能夠被偵錯的封裝。 如果想要建置具有版本二進位檔案的 NuGet 套件，您只需要新增 `--configuration` (或 `-c`) 參數，並使用 `release` 作為引數。
+這會產生能夠進行調試的封裝。 如果想要建置具有版本二進位檔案的 NuGet 套件，您只需要新增 `--configuration` (或 `-c`) 參數，並使用 `release` 作為引數。
 
 ```dotnetcli
 dotnet pack --configuration release

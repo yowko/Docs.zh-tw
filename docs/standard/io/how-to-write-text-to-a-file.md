@@ -1,5 +1,5 @@
 ---
-title: 作法：將文字寫入檔案中
+title: 如何：將文字寫入檔案
 ms.date: 01/04/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d2fb5a30e165b78fef797bf8bfe536b66cae9a1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 42b758eeb36a4c319c3e1f24676cb600d580902e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640754"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706604"
 ---
-# <a name="how-to-write-text-to-a-file"></a>作法：將文字寫入檔案中
+# <a name="how-to-write-text-to-a-file"></a>如何：將文字寫入檔案
 本主題說明針對 .NET 應用程式將文字寫入檔案的不同方式。 
 
 通常會使用下列類別和方法，將文字寫入至檔案：  
@@ -48,7 +46,7 @@ ms.locfileid: "65640754"
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/append.cs)] 
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/append.vb)]  
 
-## <a name="example-asynchronously-write-text-with-streamwriter"></a>範例：使用 StreamWriter 同步寫入文字
+## <a name="example-asynchronously-write-text-with-streamwriter"></a>範例：使用 StreamWriter 以非同步方式寫入文字
 
 下列範例示範如何使用 <xref:System.IO.StreamWriter> 類別，以非同步方式將文字寫入至新檔案。 若要叫用 <xref:System.IO.StreamWriter.WriteAsync%2A> 方法，必須在 `async` 方法中呼叫此方法。 C# 範例需要 C# 7.1 或更新版本，它會在程式進入點新增對 `async` 修飾詞的支援。 
 
@@ -62,7 +60,7 @@ ms.locfileid: "65640754"
 [!code-csharp[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.basicio.textfiles/cs/file.cs)] 
 [!code-vb[Conceptual.BasicIO.TextFiles#WriteLine](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/file.vb)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.IO.StreamWriter>
 - <xref:System.IO.Path>
@@ -70,5 +68,5 @@ ms.locfileid: "65640754"
 - [如何：列舉目錄和檔案](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
 - [如何：讀取和寫入新建立的資料檔案](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
 - [如何：開啟並附加至記錄檔](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
-- [如何：讀取檔案中的文字](../../../docs/standard/io/how-to-read-text-from-a-file.md)
+- [如何：從檔案讀取文字](../../../docs/standard/io/how-to-read-text-from-a-file.md)
 - [檔案和資料流 I/O](../../../docs/standard/io/index.md)

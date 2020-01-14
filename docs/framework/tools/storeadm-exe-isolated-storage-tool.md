@@ -8,14 +8,12 @@ helpviewer_keywords:
 - stores, current user
 - removing stores
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1ca9b10623e4a8a1a977c926262c63f3f2ab076e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 46e846eaf92835fb2a9130b85ed20749934ca5a1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044138"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715720"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (隔離儲存區工具)
 隔離儲存區 (Isolated Storage) 工具可以列出或移除目前使用者的所有現有存放區。  
@@ -32,7 +30,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 ## <a name="parameters"></a>參數  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/h**[**elp**]|顯示工具的命令語法和選項。|  
 |**/list**|顯示目前使用者的所有現有存放區。 包括這個使用者所執行的所有應用程式或組件的存放區。|  
@@ -60,7 +58,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  使用者的漫遊實際上是否啟用，並不會影響 Storeadm.exe 的系統管理。 執行該工具而沒有使用任何選項時，會將所有動作套用至本機存放區。 執行該工具搭配 **/roaming** 選項時，會將所有動作套用至能夠漫遊的存放區。 執行該工具搭配 **/machine** 選項時，會將所有動作套用至電腦存放區。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工具](index.md)
 - [隔離儲存區](../../standard/io/isolated-storage.md)

@@ -3,19 +3,17 @@ title: 實體參考是可擴充且沒有保留
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.openlocfilehash: ae3db77d7659b7e1d36a9bccf7143f52c536dbbf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45998418"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710930"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>實體參考是可擴充且沒有保留
 當實體參考擴充並且由它所表示的文字所取代時，就不會建立 **XmlEntityReference** 節點。 相反的，實體宣告會剖析，而從宣告中之內容建立的節點會複製到 **XmlEntityReference** 的位置。 因此，在 `&publisher;` 範例中，不會儲存 `&publisher;`，但會建立 **XmlText** 節點。  
   
- ![擴充樹狀結構](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
+ ![展開的樹狀結構](../../../../docs/standard/data/xml/media/xmlentityref-expanded-nodes.gif "xmlentityref_expanded_nodes")  
 擴充之實體參考的樹狀  
   
  字元實體 (例如 `B` 或 `<`) 不會予以保留。 相反的，它們一定會擴充且以文字節點表示。  
@@ -30,7 +28,7 @@ ms.locfileid: "45998418"
   
  XmlText: Microsoft Press  
   
- 如果實體參考在 DOM 中擴充 (這是預設方法)，此結構擁有這種樹狀結構類型：  
+ 如果實體參考在 DOM 中擴充 (這是預設方法)，此結構擁有這種樹狀類型：  
   
  XmlElement: publisher  
   
@@ -40,6 +38,6 @@ ms.locfileid: "45998418"
   
  如果您使用無法解析實體的讀取器，當 **Load** 方法遇到實體參考時，會擲回例外狀況。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

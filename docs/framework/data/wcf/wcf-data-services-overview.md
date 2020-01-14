@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: b3feb2a22fc38c6a2d13d6802b94386d6f7841ac
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a4121bb10de7bfe51c5fec6bc14a40ad4bdcdaf7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568796"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900898"
 ---
 # <a name="wcf-data-services-overview"></a>WCF 資料服務概觀
 WCF Data Services 可以使用開放式資料通訊協定（OData）來建立及取用 Web 或內部網路的資料服務。 OData 可讓您將資料公開為可由 Uri 定址的資源。 這可讓您使用具像狀態傳輸 (REST) (英文) 的語意存取及變更資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。 本主題概述 OData 所定義的模式和作法，以及 WCF Data Services 所提供的功能，以在 .NET Framework 架構的應用程式中利用 OData。  
@@ -25,7 +25,7 @@ WCF Data Services 可以使用開放式資料通訊協定（OData）來建立及
 ## <a name="interoperable-data-access"></a>可互通的資料存取  
  OData 是以標準網際網路通訊協定為基礎，可讓資料服務與不使用 .NET Framework 的應用程式互通。 因為您可以使用標準 Uri 來處理資料，所以您的應用程式可以使用具像狀態傳輸（REST）的語義來存取和變更資料，特別是 GET、PUT、POST 和 DELETE 的標準 HTTP 動詞命令。 這樣能讓您從任何用戶端存取這些服務 (這些用戶端需可剖析及存取透過標準 HTTP 通訊協定傳輸的資料)。  
   
- OData 會定義一組 Atom 發行通訊協定（AtomPub）的延伸模組。 它可支援採用多種資料格式的 HTTP 要求和回應，配合各種用戶端應用程式和平台。 OData 摘要可以代表 Atom、JavaScript 物件標記法（JSON）和純 XML 格式的資料。 雖然 Atom 是預設格式，但是摘要的格式會在 HTTP 要求的標頭中指定。 如需詳細資訊，請參閱[odata： Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)和[Odata： JSON 格式](https://go.microsoft.com/fwlink/?LinkID=185795)。  
+OData 會定義一組 Atom 發行通訊協定（AtomPub）的延伸模組。 它可支援採用多種資料格式的 HTTP 要求和回應，配合各種用戶端應用程式和平台。 OData 摘要可以代表 Atom、JavaScript 物件標記法（JSON）和純 XML 格式的資料。 雖然 Atom 是預設格式，但是摘要的格式會在 HTTP 要求的標頭中指定。 如需詳細資訊，請參閱[odata： Atom 格式](https://www.odata.org/documentation/odata-version-2-0/atom-format/)和[Odata： JSON 格式](https://www.odata.org/documentation/odata-version-2-0/json-format/)。  
   
  將資料發佈為 OData 摘要時，WCF Data Services 會依賴其他現有的網際網路設施，做為快取和驗證之類的作業。 為了達成此目的，WCF Data Services 整合了現有的裝載應用程式和服務，例如 ASP.NET、Windows Communication Foundation （WCF）和 Internet Information Services （IIS）。  
   
@@ -48,7 +48,7 @@ WCF Data Services 可以使用開放式資料通訊協定（OData）來建立及
   
  WCF Data Services 包括 .NET Framework 型和 Silverlight 型用戶端應用程式的用戶端程式庫。 這些用戶端程式庫可讓您利用 .NET Framework 物件與資料服務互動。 它們也支援以物件為基礎的查詢和 LINQ 查詢、載入相關物件、變更追蹤以及識別解析。 如需詳細資訊，請參閱[WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)。  
   
- 除了隨附于 .NET Framework 和 Silverlight 的 OData 用戶端程式庫之外，還有其他用戶端程式庫可讓您在用戶端應用程式中取用 OData 摘要，例如 PHP、AJAX 和 JAVA 應用程式。 如需詳細資訊，請參閱[ODATA SDK](https://go.microsoft.com/fwlink/?LinkID=185796)。  
+ 除了隨附于 .NET Framework 和 Silverlight 的 OData 用戶端程式庫之外，還有其他用戶端程式庫可讓您在用戶端應用程式中取用 OData 摘要，例如 PHP、AJAX 和 JAVA 應用程式。 如需 OData SDK 的詳細資訊，請參閱[ODATA sdk-範例程式碼](https://www.odata.org/ecosystem/#sdk)。
   
 ## <a name="architecture-overview"></a>架構概觀  
  下圖說明在支援 OData 的用戶端程式庫中公開 OData 摘要和使用這些摘要的 WCF Data Services 架構：  
@@ -62,4 +62,4 @@ WCF Data Services 可以使用開放式資料通訊協定（OData）來建立及
 - [定義 WCF Data Services](defining-wcf-data-services.md)
 - [存取資料服務資源（WCF Data Services）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [WCF Data Services 用戶端程式庫](wcf-data-services-client-library.md)
-- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919) (具像狀態傳輸 (REST))
+- [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) (具像狀態傳輸 (REST))

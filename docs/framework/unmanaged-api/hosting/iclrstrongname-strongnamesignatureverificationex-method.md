@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbd2f662-208b-4174-b301-5c99af91040f
 topic_type:
 - apiref
-ms.openlocfilehash: 3e4181cbd14674336133314acdcd6cdcf0c9ff6b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fbc9ea6aab9f0c3d9be95e6affcd04342ce4c5cc
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134936"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901080"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a>ICLRStrongName::StrongNameSignatureVerificationEx 方法
 取得值，指出所提供路徑的組件資訊清單是否包含強式名稱簽章。  
@@ -46,7 +46,7 @@ HRESULT StrongNameSignatureVerificationEx (
  [out] `true` 是否已驗證強式名稱簽章;否則，`false`。 如果驗證因為登錄設定而成功，`pfWasVerified` 也會設定為 `false`。  
   
 ## <a name="return-value"></a>傳回值  
- 如果驗證成功，則 `S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果驗證成功，則 `S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
  [ICLRStrongName：： StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)方法提供的功能類似于[ICLRStrongName：： StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)方法。 不過， [ICLRStrongName：： StrongNameSignatureVerificationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)的第二個輸入參數和 output 參數是 `BOOLEAN` 類型，而不是 `DWORD`。  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立 WindowsPrincipal 物件
+title: 如何：建立 WindowsPrincipal 物件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f298a7b036857e783efa128ce45ee8634ce993d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d409c0e9a2a6564e5fb16e4e2c72ab661ae2d5ce
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795174"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706158"
 ---
-# <a name="how-to-create-a-windowsprincipal-object"></a>HOW TO：建立 WindowsPrincipal 物件
+# <a name="how-to-create-a-windowsprincipal-object"></a>如何：建立 WindowsPrincipal 物件
 有兩種方式來建立 <xref:System.Security.Principal.WindowsPrincipal> 物件，視程式碼是否必須重複執行以角色為基礎的驗證，還是它只必須執行一次而定。  
   
  如果程式碼必須重複執行以角色為基礎的驗證，下列程序的第一個會產生較少負荷。 程式碼只需要進行一次以角色為基礎的驗證時，您可以使用下列程序的第二個來建立 <xref:System.Security.Principal.WindowsPrincipal> 物件。  
@@ -77,6 +75,6 @@ ms.locfileid: "61795174"
   
 3. 建立主體物件之後，您可以數種方法的其中一種來進行驗證。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Principal 和 Identity 物件](../../../docs/standard/security/principal-and-identity-objects.md)

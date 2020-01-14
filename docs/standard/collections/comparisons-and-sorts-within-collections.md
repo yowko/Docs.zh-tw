@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2d9124c90d09e2fa94a0eaa2ff8cd4e4ab15206f
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
-ms.translationtype: HT
+ms.openlocfilehash: fc6972061994e17c2176d3ab278b8d2b37c725ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135677"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711385"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>在集合內比較和排序
 <xref:System.Collections> 類別幾乎會在管理集合內的所有處理序中執行比較，包含搜尋要移除的項目，或傳回成對的索引鍵與值。  
@@ -59,7 +57,7 @@ ms.locfileid: "67135677"
  [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)]
  [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.IComparer>
 - <xref:System.IEquatable%601>

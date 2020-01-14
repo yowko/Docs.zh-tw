@@ -4,13 +4,13 @@ description: 了解如何在群集案例中使用 ML.NET
 author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18, title-hack-0516
-ms.openlocfilehash: 77c077df27c856855322b27d6101218d59d29173
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: cc3a1ae984289eb01ad8fdee9741f3f9788196c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336668"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716238"
 ---
 # <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>教學課程：使用 k 來分類鳶尾花的花卉-表示使用 ML.NET 的叢集
 

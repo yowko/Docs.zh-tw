@@ -4,13 +4,12 @@ description: 透過逐步使用 MSTest 建置範例 Visual Basic 方案的互動
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.custom: seodec18
-ms.openlocfilehash: c52fc7393718f6af44bd85dd23353f3e32f29f79
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 14c145ffc227078378897feeb75db0df8da4be6f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428725"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714255"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>使用 dotnet test 與 MSTest 為 Visual Basic .NET Core 程式庫進行單元測試
 
@@ -42,7 +41,7 @@ Namespace Prime.Services
 End Namespace
 ```
 
-將目錄變更回 *unit-testing-vb-using-mstest* 目錄。 執行 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) 以將類別庫專案加到方案中。
+將目錄變更回 *unit-testing-vb-using-mstest* 目錄。 執行 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) 以將類別庫專案加入方案中。
 
 ## <a name="creating-the-test-project"></a>建立測試專案
 
@@ -88,7 +87,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
         PrimeServiceTests.vbproj
 ```
 
-執行 [unit-testing-vb-mstest`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` 目錄中的 ](../tools/dotnet-sln.md)。
+執行 *unit-testing-vb-mstest* 目錄中的 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md)。
 
 ## <a name="creating-the-first-test"></a>建立第一個測試
 

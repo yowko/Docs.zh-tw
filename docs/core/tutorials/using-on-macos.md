@@ -2,13 +2,12 @@
 title: 教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
 description: 本文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。
 ms.date: 12/19/2019
-ms.custom: seodec18
-ms.openlocfilehash: 825665264d4db902ba4c6cbcce7a7add11ec003d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75339607"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715308"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
 

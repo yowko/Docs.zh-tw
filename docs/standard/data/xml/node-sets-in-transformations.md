@@ -3,14 +3,12 @@ title: 轉換中的節點集
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fbcd9b93f63d48229c174b0f6518fd0150e98e18
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: 2828b95f6a4050dd05b38e7ab6ef740ee4eb16b4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957023"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710553"
 ---
 # <a name="node-sets-in-transformations"></a>轉換中的節點集
 節點集是 XML 路徑語言 (XPath) 運算式傳回的四種基本資料型別之一。 節點集是一個沒有順序、不重複的節點集合，它依據文件的順序建立，可以指定給樣式表中的變數。  
@@ -40,7 +38,7 @@ ms.locfileid: "71957023"
 </xsl:stylesheet>  
 ```  
   
-## <a name="input"></a>Input  
+## <a name="input"></a>輸入  
   
 ```xml  
 <bookstore>  
@@ -74,7 +72,7 @@ History of Trenton Vol 3
 ******  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [使用 XslTransform 類別進行 XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)

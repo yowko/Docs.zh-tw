@@ -1,16 +1,15 @@
 ---
 title: using 陳述式 - C# 參考
-ms.custom: seodec18
 ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: f5ff78eaf9d565a9708c7a3a11754579389e79e8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 52cde99fd029ce50f159b2a87fbfbf47fc79dccc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422250"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712958"
 ---
 # <a name="using-statement-c-reference"></a>using 陳述式 (C# 參考)
 

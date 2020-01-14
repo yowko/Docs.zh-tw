@@ -4,12 +4,12 @@ description: .NET 微服務和 Web 應用程式中的安全性 - Azure Key Vault
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 63bf357c95b82a820b6dfb6a2d24a5d89f66de72
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 4d121f584188c5d5fa9ddf0d91bea5e107eff0cb
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675665"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899662"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>使用 Azure Key Vault 在生產階段保護祕密
 
@@ -17,7 +17,7 @@ ms.locfileid: "68675665"
 
 **Microsoft.Extensions.Configuration.AzureKeyVault** 套件允許 ASP.NET Core 應用程式從 Azure Key Vault 中讀取設定資訊。 若要開始使用 Azure Key Vault 中的密碼，您可以遵循下列步驟：
 
-1. 將應用程式註冊為 Azure AD 應用程式。 (對金鑰保存庫的存取是由 Azure AD 所管理)。這可以透過 Azure 管理入口網站完成。\
+1. 將應用程式註冊為 Azure AD 應用程式。 （金鑰保存庫的存取權是由 Azure AD 管理）。這可以透過 Azure 管理入口網站來完成。
 
    或者，如果您想要應用程式使用憑證進行驗證，而不是使用密碼或用戶端密碼，則可以使用 [New-AzADApplication](/powershell/module/az.resources/new-azadapplication) PowerShell Cmdlet。 您向 Azure Key Vault 註冊的憑證只需要公開金鑰 您的應用程式將會使用私密金鑰。
 
@@ -50,7 +50,7 @@ ms.locfileid: "68675665"
   [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - **Microsoft.Extensions.Configuration.KeyPerFile** GitHub 存放庫。 \
-  <https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile>
+  <https://github.com/dotnet/extensions/tree/master/src/Configuration/Config.KeyPerFile>
 
 >[!div class="step-by-step"]
 >[上一頁](developer-app-secrets-storage.md)

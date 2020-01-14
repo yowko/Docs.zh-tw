@@ -5,17 +5,17 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], about LINQ to XML
 - LINQ [Visual Basic], LINQ to XML
 ms.assetid: 01c62a79-6d58-468e-84fb-039c05947701
-ms.openlocfilehash: 80d94ecb7dcc196ad831be7418bfecc785015cf9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0d804a00eca1910a5415859b1ed3a18ad2f8e9d2
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346241"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636220"
 ---
 # <a name="overview-of-linq-to-xml-in-visual-basic"></a>Visual Basic 中的 LINQ to XML 概觀
 Visual Basic 透過 XML 常值和 XML 軸屬性來提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 的支援。 這可讓您使用熟悉、方便的語法，在您的 Visual Basic 程式碼中使用 XML。 *Xml 常*值可讓您直接在程式碼中包含 xml。 *Xml 軸屬性*可讓您存取子節點、子代節點，以及 xml 常值的屬性。 如需詳細資訊，請參閱[Xml 常值總覽](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)和[存取 VISUAL BASIC 中的 xml](../../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)。  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是一種記憶體中的 XML 程式設計 API，專門設計用來充分利用 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。 雖然您可以直接呼叫 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Api，但只有 Visual Basic 可讓您宣告 XML 常值，並直接存取 XML 軸屬性。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 是一種記憶體中的 XML 程式設計 API，專門設計用來利用語言整合式查詢（LINQ）。 雖然您可以直接呼叫 LINQ Api，但只有 Visual Basic 可讓您宣告 XML 常值，並直接存取 XML 軸屬性。  
   
 > [!NOTE]
 > ASP.NET 網頁中的宣告式程式碼不支援 XML 常值和 XML 軸屬性。 若要使用 Visual Basic XML 功能，請將您的程式碼放在 ASP.NET 應用程式的程式碼後置頁面中。  
@@ -23,14 +23,14 @@ Visual Basic 透過 XML 常值和 XML 軸屬性來提供 [!INCLUDE[sqltecxlinq](
  [播放按鈕](./media/overview-of-linq-to-xml/play-video-icon-example.gif)如需相關的影片示範，請參閱[如何開始使用 LINQ to XML？](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-get-started-with-linq-to-xml)和[如何使用 LINQ to XML 建立 Excel 試算表？](/aspnet/web-forms/videos/data-access/linq-videos-from-the-vb-team/how-do-i-create-excel-spreadsheets-using-linq-to-xml)。   
   
 ## <a name="creating-xml"></a>建立 XML  
- 有兩種方式可在 Visual Basic 中建立 XML 樹狀結構。 您可以直接在程式碼中宣告 XML 常值，也可以使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Api 來建立樹狀結構。 這兩個處理常式都可讓程式碼反映 XML 樹狀結構的最終結構。 例如，下列程式碼範例會建立 XML 元素：  
+ 有兩種方式可在 Visual Basic 中建立 XML 樹狀結構。 您可以直接在程式碼中宣告 XML 常值，也可以使用 LINQ Api 來建立樹狀結構。 這兩個處理常式都可讓程式碼反映 XML 樹狀結構的最終結構。 例如，下列程式碼範例會建立 XML 元素：  
   
  [!code-vb[VbXmlSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
  如需詳細資訊，請參閱[在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)。  
   
 ## <a name="accessing-and-navigating-xml"></a>存取和流覽 XML  
- Visual Basic 提供 XML 軸屬性來存取和流覽 XML 結構。 這些屬性可讓您藉由指定 XML 子專案名稱來存取 XML 元素和屬性。 或者，您也可以明確地呼叫 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 方法，以流覽和尋找專案和屬性。 例如，下列程式碼範例會使用 XML 軸屬性來參考 XML 專案的屬性和子項目。 此程式碼範例會使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢來抓取子專案，並將其輸出為 XML 元素，並有效地執行轉換。  
+ Visual Basic 提供 XML 軸屬性來存取和流覽 XML 結構。 這些屬性可讓您藉由指定 XML 子專案名稱來存取 XML 元素和屬性。 或者，您也可以明確地呼叫 LINQ 方法，以流覽和尋找專案和屬性。 例如，下列程式碼範例會使用 XML 軸屬性來參考 XML 專案的屬性和子項目。 此程式碼範例會使用 LINQ 查詢來抓取子專案，並將其輸出為 XML 元素，並有效地執行轉換。  
   
  [!code-vb[VbXmlSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.custom: seodec18
-ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973951"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711476"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>在 .NET 中使用字串的最佳做法
 
@@ -75,7 +74,7 @@ ms.locfileid: "73973951"
 基於下列原因，建議您選取不使用預設值的多載：
 
 - 有些使用預設參數的多載 (其會在字串執行個體中搜尋 <xref:System.Char> ) 會執行序數比較，而其他多載 (其會搜尋字串執行個體中的字串) 有區分文化特性。 使用者很難記住哪一種方法使用預設值，也很容易混淆多載。
-- 依賴預設值來執行方法呼叫的程式碼意圖並不清楚。 在下列依賴預設值的範例中，我們很難知道開發人員到底要進行兩個字串的序數或語言比較，也很難判斷 `protocol` 和 "http" 之間的大小寫差異是否會造成相等測試傳回 `false`。
+- 依賴預設值來執行方法呼叫的程式碼意圖並不清楚。 在下列使用預設值的範例中，我們難以知道開發人員要進行兩個字串的序數或語言比較，也很難判斷 `protocol` 和 "http" 之間的大小寫差異是否會造成相等測試傳回 `false`類別參數的方法多載。
 
      [!code-csharp[Conceptual.Strings.BestPractices#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/explicitargs1.cs#1)]
      [!code-vb[Conceptual.Strings.BestPractices#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/explicitargs1.vb#1)]
@@ -200,7 +199,7 @@ InvariantCulture: a + ̊ = å
 
 下表概述從語義字串內容到 <xref:System.StringComparison> 列舉成員的對應：
 
-|資料|行為|對應的 System.StringComparison<br /><br /> value|
+|Data|行為|對應的 System.StringComparison<br /><br /> value|
 |----------|--------------|-----------------------------------------------------|
 |區分大小寫的內部識別項。<br /><br /> 在標準中區分大小寫的識別項，例如 XML 和 HTTP。<br /><br /> 區分大小寫的安全性相關設定。|位元組完全相符的非語言識別項。|<xref:System.StringComparison.Ordinal>|
 |不區分大小寫的內部識別項。<br /><br /> 在標準中區分大小寫的識別項，例如 XML 和 HTTP。<br /><br /> 檔案路徑。<br /><br /> 登錄機碼和值。<br /><br /> 環境變數。<br /><br /> 資源識別項 (例如控制代碼名稱)。<br /><br /> 不區分大小寫的安全性相關設定。|大小寫不重要的非語言識別項，特別是大部分 Windows 系統服務中儲存的資料。|<xref:System.StringComparison.OrdinalIgnoreCase>|
@@ -281,7 +280,7 @@ InvariantCulture: a + ̊ = å
 
 預設解譯： <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>。
 
-當您將任何資料儲存在集合中，或從檔案或資料庫將保存的資料讀入集合時，切換目前文化特性會使集合中的非變異失效。 <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 方法假設要搜尋之陣列中的項目已排序。 若要排序陣列中的任何字串項目， <xref:System.Array.Sort%2A?displayProperty=nameWithType> 方法會呼叫 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法來排序個別項目。 從排序陣列到搜尋其內容這段時間當中，如果文化特性變更，則使用區分文化特性的比較子可能會有危險。 例如，在下列程式碼中，儲存和擷取作業在 `Thread.CurrentThread.CurrentCulture` 屬性所隱含提供的比較子上執行。 如果文化特性在呼叫 `StoreNames` 和 `DoesNameExist` 之間可能變更，尤其是如果陣列內容在這兩個方法呼叫之間保存在某處，則二進位搜尋可能會失敗。
+當您將任何資料儲存在集合中，或從檔案或資料庫將保存的資料讀入集合時，切換目前文化特性會使集合中的非變異失效。 <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> 方法假設要搜尋之陣列中的項目已排序。 若要排序陣列中的任何字串項目， <xref:System.Array.Sort%2A?displayProperty=nameWithType> 方法會呼叫 <xref:System.String.Compare%2A?displayProperty=nameWithType> 方法來排序個別項目。 從排序陣列到搜尋其內容這段時間當中，如果文化特性變更，則使用區分文化特性的比較子可能會有危險。 例如，在下列程式碼中，儲存和擷取作業在 `Thread.CurrentThread.CurrentCulture` 屬性。 如果文化特性在呼叫 `StoreNames` 和 `DoesNameExist`之間可能變更，尤其是如果陣列內容在這兩個方法呼叫之間保存在某處，則二進位搜尋可能會失敗。
 
 [!code-csharp[Conceptual.Strings.BestPractices#7](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#7)]
  [!code-vb[Conceptual.Strings.BestPractices#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#7)]

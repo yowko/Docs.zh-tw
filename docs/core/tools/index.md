@@ -2,13 +2,12 @@
 title: .NET Core 命令列介面 (Command-Line Interface, CLI) 工具
 description: .NET Core 命令列介面 (CLI) 工具與功能概觀。
 ms.date: 08/14/2017
-ms.custom: seodec18
-ms.openlocfilehash: 4ff5cfd6c5a70c92387911ab87ddea5cee80275e
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117391"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714142"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
 
@@ -140,7 +139,7 @@ dotnet build
 
 此命令會執行動作。 例如，`dotnet build` 會建置程式碼。 `dotnet publish` 會發佈程式碼。 命令是使用 `dotnet {command}` 慣例實作為主控台應用程式。
 
-### <a name="arguments"></a>引數
+### <a name="arguments"></a>Arguments
 
 您在命令列上傳遞的引數即為叫用命令的引數。 例如當您執行 `dotnet publish my_app.csproj` 時，`my_app.csproj` 引數表示要發佈的專案，並且會傳遞給 `publish` 命令。
 
@@ -152,7 +151,7 @@ dotnet build
 
 如果您使用 Preview 2 工具來產生 *project.json* 型專案，請參閱 [dotnet migrate](dotnet-migrate.md) 主題，來取得移轉專案至 MSBuild/ *.csproj* 以搭配發行工具使用的詳細資訊。 對於在 Preview 2 工具發行之前建立的 .NET Core 專案，請依照[從 DNX 移轉到 .NET Core CLI (project.json)](../migration/from-dnx.md) 中的指導，手動更新專案，然後再使用 `dotnet migrate` 或直接升級您的專案。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [dotnet/CLI GitHub 存放庫 (英文)](https://github.com/dotnet/cli/)
 - [.NET core 安裝指南 (英文)](https://aka.ms/dotnetcoregs)

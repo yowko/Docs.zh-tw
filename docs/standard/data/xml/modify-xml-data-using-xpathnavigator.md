@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ba6393d19909d8be762ee38b4c925987528d6304
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 906de1ded4961b7c67d48a010555d139df97cded
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967358"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710631"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 修改 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供一組可用於修改 XML 文件中節點及值的方法。 為了使用這些方法，<xref:System.Xml.XPath.XPathNavigator> 物件必須是可編輯的，也就是說，它的 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 屬性必須為 `true`。  
@@ -248,7 +246,7 @@ Console.WriteLine(navigator.OuterXml);
 ## <a name="saving-an-xml-document"></a>儲存 XML 文件  
  儲存對 <xref:System.Xml.XmlDocument> 物件所進行的變更 (由本主題中說明的編輯方法所導致) 是使用 <xref:System.Xml.XmlDocument> 類別的方法來執行。 如需儲存 <xref:System.Xml.XmlDocument> 物件之變更的詳細資訊，請參閱[儲存與寫入文件](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

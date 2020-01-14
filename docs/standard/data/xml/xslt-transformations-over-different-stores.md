@@ -3,14 +3,12 @@ title: 在不同存放區上的 XSLT 轉換
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6a967ffe5db0b8b08adacff9085c7573867f21a4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 490ac30a3e4f0c50cb5d011f1d583c6e5ce9e672
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910356"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709656"
 ---
 # <a name="xslt-transformations-over-different-stores"></a>在不同存放區上的 XSLT 轉換
 > [!NOTE]
@@ -20,6 +18,6 @@ ms.locfileid: "69910356"
   
  XML DOM 提供在 XML 文件中存取資料，和提供額外的類別，以在 XML 文件中讀取、寫入和巡覽。 <xref:System.Xml> 命名空間支援這些類別，並且將 XML DOM 與 ADO.NET 所提供的資料存取服務統一。 <xref:System.Xml.XmlDataDocument> 可提供資料的關聯式存取。 <xref:System.Xml.XmlDataDocument> 會將 XML 對應至 ADO.NET <xref:System.Data.DataSet> 中的關聯式資料。 任何以 .NET Framework 為基礎的應用程式都可使用 <xref:System.Xml> 命名空間中類別來存取及操縱 <xref:System.Xml.XmlDataDocument> 中 XML 文件與關聯式資料。 這項實作支援收集和分送資料的 N-Tier 架構。 如需詳細資訊，請參閱 [XML 與關聯式資料和 ADO.NET 互相整合](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

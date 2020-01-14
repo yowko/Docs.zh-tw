@@ -3,13 +3,12 @@ title: 執行多樣化選擇的單元測試
 description: 如何在 .NET Core 中使用篩選運算式搭配 dotnet 測試命令執行多樣化選擇的單元測試。
 author: smadala
 ms.date: 03/22/2017
-ms.custom: seodec18
-ms.openlocfilehash: 6160a8b9184d031fcc06356b5b489ee24b765e84
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: HT
+ms.openlocfilehash: 57428dad2de6c2507ca2cdc42e3df9e83a1edd69
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201413"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715452"
 ---
 # <a name="running-selective-unit-tests"></a>執行多樣化選擇的單元測試
 
@@ -45,7 +44,7 @@ namespace MSTestNamespace
 | ---------- | ------ |
 | `dotnet test --filter Method` | 執行 `FullyQualifiedName` 包含 `Method` 的測試。 `vstest 15.1+` 提供此測試。 |
 | `dotnet test --filter Name~TestMethod1` | 執行名稱包含 `TestMethod1` 的測試。 |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | 執行類別為 `MSTestNamespace.UnitTest1` 的測試。<br>**注意：**`ClassName` 值應會有命名空間，所以 `ClassName=UnitTest1` 將無法運作。 |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | 執行類別為 `MSTestNamespace.UnitTest1` 的測試。<br>**注意︰** `ClassName`值應會有命名空間，所以 `ClassName=UnitTest1` 將無法運作。 |
 | `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | 執行 `MSTestNamespace.UnitTest1.TestMethod1` 以外的所有測試。 |
 | `dotnet test --filter TestCategory=CategoryA` | 執行標示有 `[TestCategory("CategoryA")]` 註釋的測試。 |
 | `dotnet test --filter Priority=2` | 執行標示有 `[Priority(2)]` 註釋的測試。<br>
@@ -54,9 +53,9 @@ namespace MSTestNamespace
 
 | 運算式 | 結果 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | 執行 `FullyQualifiedName` **或** `TestCategory` 中之 `UnitTest1` 為 `CategoryA` 的測試。 |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | 執行 `FullyQualifiedName` **及** `TestCategory` 中之 `UnitTest1` 為 `CategoryA` 的測試。 |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | 執行 `FullyQualifiedName` 所含之 `UnitTest1` **及** `TestCategory` 為 `CategoryA` **或** `Priority` 為 1 的測試。 |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | 執行 `UnitTest1` 在 `FullyQualifiedName`**或**`TestCategory` `CategoryA`中的測試。 |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | 在 `FullyQualifiedName` 中執行具有 `UnitTest1` 的測試 **，並**`CategoryA``TestCategory`。 |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | 執行測試，其中包含 `UnitTest1` 的 `FullyQualifiedName` **，且**`TestCategory` `CategoryA`**或**`Priority` 為1。 |
 
 ## <a name="xunit"></a>xUnit
 
@@ -100,9 +99,9 @@ namespace XUnitNamespace
 
 | 運算式 | 結果 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | 執行 `FullyQualifiedName` **或** `Category` 中之 `TestClass1` 為 `CategoryA` 的測試。 |
-| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | 執行 `FullyQualifiedName` **及** `Category` 中之 `TestClass1` 為 `CategoryA` 的測試。 |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | 執行 `FullyQualifiedName` 所含之 `TestClass1` **及** `Category` 為 `CategoryA` **或** `Priority` 為 1 的測試。 |
+| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | 執行 `TestClass1` 在 `FullyQualifiedName`**或**`Category` `CategoryA`中的測試。 |
+| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | 在 `FullyQualifiedName` 中執行具有 `TestClass1` 的測試 **，並**`CategoryA``Category`。 |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | 執行測試，其中包含 `TestClass1` 的 `FullyQualifiedName` **，且**`Category` `CategoryA`**或**`Priority` 為1。 |
 
 ## <a name="nunit"></a>NUnit
 
@@ -142,6 +141,6 @@ namespace NUnitNamespace
 
 | 運算式 | 結果 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | 執行 `FullyQualifiedName` **或** `TestCategory` 中之 `UnitTest1` 為 `CategoryA` 的測試。 |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | 執行 `FullyQualifiedName` **及** `TestCategory` 中之 `UnitTest1` 為 `CategoryA` 的測試。 |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | 執行 `FullyQualifiedName` 所含之 `UnitTest1` **及** `TestCategory` 為 `CategoryA` **或** `Priority` 為 1 的測試。 |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | 執行 `UnitTest1` 在 `FullyQualifiedName`**或**`TestCategory` `CategoryA`中的測試。 |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | 在 `FullyQualifiedName` 中執行具有 `UnitTest1` 的測試 **，並**`CategoryA``TestCategory`。 |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | 執行測試，其中包含 `UnitTest1` 的 `FullyQualifiedName` **，且**`TestCategory` `CategoryA`**或**`Priority` 為1。 |

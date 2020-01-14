@@ -3,14 +3,12 @@ title: 在 DOM 中建立新節點
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59ac88b2e7c6b3ecd4d06c0183a2f8a7f4a9e2d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f48990286405baee347becef87d0511cd42e9e77
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590256"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710995"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>在 DOM 中建立新節點
 <xref:System.Xml.XmlDocument> 有一個適用於所有節點型別的建立方法。 必要時請為該方法提供名稱，並針對具有內容的節點 (例如，文字節點) 提供內容或其他參數，即可建立節點。 下列方法需要填入名稱及一些其他參數來建立適當的節點。  
@@ -51,6 +49,6 @@ ms.locfileid: "64590256"
 |<xref:System.Xml.XmlNode.PrependChild%2A>|將節點加入至指定節點之子節點的清單開頭。 如果加入的節點為 <xref:System.Xml.XmlDocumentFragment>，則文件片段的全部內容都會移至此節點的子清單中。 如需詳細資訊，請參閱 <xref:System.Xml.XmlNode.PrependChild%2A> 方法。|  
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|將 <xref:System.Xml.XmlAttribute> 節點附加至與項目關聯之屬性集合的結尾。 如需詳細資訊，請參閱 <xref:System.Xml.XmlAttributeCollection.Append%2A> 方法。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

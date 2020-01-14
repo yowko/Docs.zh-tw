@@ -1,14 +1,13 @@
 ---
 title: ML.NET 教學課程
 description: 探索 ML.NET 教學課程，了解如何建置自訂 AI 解決方案，以及將其整合到 .NET 應用程式。
-ms.custom: seodec18
 ms.date: 07/08/2019
-ms.openlocfilehash: bf59efb4118d9d4fac24413d7568df412a0e9475
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 771ecd83d3f901af84da1f55d7b48152e8145205
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977178"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716624"
 ---
 # <a name="mlnet-tutorials"></a>ML.NET 教學課程
 

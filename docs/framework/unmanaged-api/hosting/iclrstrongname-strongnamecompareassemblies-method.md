@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1fb356c-72cf-4aa4-8376-f291a6d97c01
 topic_type:
 - apiref
-ms.openlocfilehash: fdca03b781e07b709cbc54e673dbaa2a1130fbe3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 16b51393c945061efb0e94e48e5388c60472ee11
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135153"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899748"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>ICLRStrongName::StrongNameCompareAssemblies 方法
 判斷兩個組件是否只有強制名稱簽章不同。  
@@ -52,7 +52,7 @@ HRESULT StrongNameCompareAssemblies (
 - `SN_CMP_SIGONLY` （2）-指定元件只有簽章和總和檢查碼不同。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

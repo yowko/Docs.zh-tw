@@ -1,16 +1,15 @@
 ---
 title: in 參數修飾詞 - C# 參考
-ms.custom: seodec18
 ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: e39d470308ed5a2b2ed82ade0faf8ba925228c2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 10e7b91f9a6bf280c5f0654b243492bac8cde1e0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112641"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715244"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 參數修飾詞 (C# 參考)
 
@@ -57,7 +56,7 @@ class InOverloads
 
 首先，在呼叫位置指定 `in` 會強制編譯器選取定義了符合之 `in` 參數的方法。 否則，當兩個方法的差異只在於 `in` 是否存在時，傳值方式的多載是較佳的相符項目。
 
-第二，指定 `in` 會宣告您以傳址方式傳遞引數的意圖。 搭配 `in` 使用的引數必須代表可以直接參考的位置。 適用和 `out` 與 `ref` 引數相同的一般規則：您無法使用常數、一般屬性或其他會產生值的運算式。 否則，在呼叫位置省略 `in` 會通知編譯器，您將允許它建立暫存變數，傳遞唯讀參考給方法。 編譯器會建立暫存變數，以克服 `in` 引數的幾項限制：
+第二，指定 `in` 會宣告您以傳址方式傳遞引數的意圖。 搭配 `in` 使用的引數必須代表可以直接參考的位置。 `out` 和 `ref` 引數的相同一般規則同樣適用：您無法使用常數、一般屬性或其他會產生值的運算式。 否則，在呼叫位置省略 `in` 會通知編譯器，您將允許它建立暫存變數，傳遞唯讀參考給方法。 編譯器會建立暫存變數，以克服 `in` 引數的幾項限制：
 
 - 暫存變數允許編譯時期常數作為 `in` 參數。
 - 暫存變數允許屬性或其他運算式作為 `in` 參數。
@@ -121,10 +120,10 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計手冊](../../programming-guide/index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [方法參數](method-parameters.md)
 - [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)

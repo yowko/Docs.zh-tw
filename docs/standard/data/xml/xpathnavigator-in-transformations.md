@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57290af1df8d370c928a97aba1622e41a6a33589
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
-ms.translationtype: HT
+ms.openlocfilehash: 240f9ca7a887a4a146437fdef46de776b299705a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003980"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709747"
 ---
 # <a name="xpathnavigator-in-transformations"></a>轉換中的 XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> 類別可提供資料的唯讀隨機存取，並可當作可延伸樣式表語言轉換 (XSLT) 的輸入。 它可實作於 <xref:System.Xml.XPath.XPathDocument>、<xref:System.Xml.XmlDataDocument> 及 <xref:System.Xml.XmlDocument>。 <xref:System.Xml.XPath.XPathNavigator> 以 XML 路徑語言 (XPath) 之建議事項第 5 節中所說明的全球資訊網協會 (W3C) 資料模型為基礎。  
@@ -109,13 +107,13 @@ public class sample
 }  
 ```  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  轉換結果儲存在檔案 **out.xml** 內：  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>Joe  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

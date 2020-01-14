@@ -1,5 +1,5 @@
 ---
-title: 排序集合類型
+title: 排序的集合類型
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - SortedList collection type
 - collections [.NET Framework], SortedList collection type
 ms.assetid: 3db965b2-36a6-4b12-b76e-7f074ff7275a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c49b3fcd5b50cc5b48497dcf97862e80b066ab46
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: adabda4801abc7a11a9b22181701eb233b35a251
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957875"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711333"
 ---
-# <a name="sorted-collection-types"></a>排序集合類型
+# <a name="sorted-collection-types"></a>排序的集合類型
 <xref:System.Collections.SortedList?displayProperty=nameWithType> 類別、<xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType> 泛型類別和 <xref:System.Collections.Generic.SortedDictionary%602?displayProperty=nameWithType> 泛型類別，類似於實作 <xref:System.Collections.IDictionary> 介面的 <xref:System.Collections.Hashtable> 類別和 <xref:System.Collections.Generic.Dictionary%602> 泛型類別，但它們會依索引鍵的排序次序維持其項目，沒有 O(1) 插入和雜湊資料表的擷取特性。 三個類別有數個共用功能︰  
   
 - 這三個類別都實作 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 介面。 兩個泛型類別還會實作 <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType> 泛型介面。  
@@ -48,7 +46,7 @@ ms.locfileid: "69957875"
   
  自 .NET Framework 4 開始，<xref:System.Collections.Generic.SortedSet%601> 類別會提供自我平衡樹狀目錄，以便在插入、刪除和搜尋之後依排序次序維護資料。 這個類別和 <xref:System.Collections.Generic.HashSet%601> 類別會實作 <xref:System.Collections.Generic.ISet%601> 介面。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.IDictionary?displayProperty=nameWithType>
 - <xref:System.Collections.Generic.IDictionary%602?displayProperty=nameWithType>

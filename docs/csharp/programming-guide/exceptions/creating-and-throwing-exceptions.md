@@ -1,6 +1,5 @@
 ---
 title: 建立和擲回例外狀況 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - catching exceptions [C#]
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: dfc852722531c06f986f54221ad094b13496561f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f775a0917560a219f24329adcb1542f605d47dc2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417942"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712295"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>建立和擲回例外狀況 (C# 程式設計手冊)
 例外狀況是用來表示執行程式時發生錯誤。 建立描述錯誤的例外狀況物件，然後使用 [throw](../../language-reference/keywords/throw.md) 關鍵字「擲回」。 執行階段接著會搜尋最相容的例外狀況處理常式。  
@@ -56,7 +55,7 @@ ms.locfileid: "73417942"
 - 請不要建立可在偵錯模式中擲回的例外狀況，而不是釋放模式。 若要在開發階段期間識別執行階段錯誤，請改用「偵錯判斷提示」。  
   
 ## <a name="defining-exception-classes"></a>定義例外狀況類別  
- 程式可以擲回 <xref:System> 命名空間中預先定義的例外狀況類別 (但先前註明的項目除外)，或藉由衍生自 <xref:System.Exception> 來建立自己的例外狀況類別。 衍生的類別應至少定義四個建構函式：一個無參數建構函式、一個設定訊息屬性，以及一個設定 <xref:System.Exception.Message%2A> 和 <xref:System.Exception.InnerException%2A> 屬性。 第四個建構函式是用來序列化例外狀況。 新的例外狀況類別應為可序列化。 例如:  
+ 程式可以擲回 <xref:System> 命名空間中預先定義的例外狀況類別 (但先前註明的項目除外)，或藉由衍生自 <xref:System.Exception> 來建立自己的例外狀況類別。 衍生的類別應至少定義四個建構函式：一個無參數建構函式、一個設定訊息屬性，以及一個設定 <xref:System.Exception.Message%2A> 和 <xref:System.Exception.InnerException%2A> 屬性。 第四個建構函式是用來序列化例外狀況。 新的例外狀況類別應為可序列化。 例如：  
   
  [!code-csharp[csProgGuideExceptions#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#15)]  
   

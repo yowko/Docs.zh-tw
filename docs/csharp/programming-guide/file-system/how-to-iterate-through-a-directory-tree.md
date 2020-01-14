@@ -1,17 +1,16 @@
 ---
 title: 如何逐一查看目錄樹狀結構程式C#設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 5ae41fa0b18ef31c7cd7d00fb8a9c4afa7df93ac
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635375"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712256"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>如何逐一查看目錄樹狀結構（C#程式設計手冊）
 「逐一查看樹狀目錄」一詞，代表存取指定根資料夾下每個巢狀子目錄中任意深度的每個檔案。 您不需要開啟每個檔案。 您可以只擷取的檔案名稱或子目錄當成 `string`，或者可以擷取格式為 <xref:System.IO.FileInfo?displayProperty=nameWithType> 或 <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> 物件的其他資訊。  
@@ -61,4 +60,4 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 
 - <xref:System.IO>
 - [LINQ 和檔案目錄](../concepts/linq/linq-and-file-directories.md)
-- [檔案系統和登錄 (C# 程式設計手冊)](./index.md)
+- [檔案系統和登錄 (C# 程式設計指南)](./index.md)

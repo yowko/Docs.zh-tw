@@ -7,48 +7,47 @@ helpviewer_keywords:
 - type design guidelines, interfaces
 - class library design guidelines [.NET Framework], interfaces
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
-author: KrzysztofCwalina
-ms.openlocfilehash: 1f982aa37f92b7270725574d949989ca120297d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06b2e0d281314f3bd6346a7dbbd8bb56928fe58b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026363"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709292"
 ---
 # <a name="interface-design"></a>介面設計
-雖然大部分 Api 最會使用類別和結構建立模型，但有一些的情況介面比較適合或是唯一的選項。  
+雖然大部分的 Api 都是使用類別和結構來進行模型化，但有時候介面較合適或是唯一的選項。  
   
- CLR 不支援多重繼承 （亦即，CLR 類別無法繼承多個基底類別），但它不允許類型實作一或多個介面，除了繼承自基底類別。 因此，介面常用來達到多重繼承的效果。 比方說，<xref:System.IDisposable>是一種介面，允許以支援 disposability 它們要在其中加入任何其他繼承階層架構的獨立類型。  
+ CLR 不支援多重繼承（也就是 CLR 類別無法繼承自一個以上的基類），但是除了繼承自基類之外，它還允許型別執行一或多個介面。 因此，通常會使用介面來達到多重繼承的效果。 例如，<xref:System.IDisposable> 是一個介面，可讓類型支援 disposability，而不受其想要參與的任何其他繼承階層。  
   
- 在哪一個定義的介面是適當的情況下是建立可由數種類型，包括一些實值型別支援的通用介面。 實值型別無法繼承型別以外<xref:System.ValueType>，但它們可以實作介面，所以使用的介面是唯一的選項，以提供通用的基底類型。  
+ 定義介面的另一種情況是建立可由數種類型支援的通用介面，包括一些實數值型別。 實值型別無法繼承自 <xref:System.ValueType>以外的型別，但它們可以實作為介面，因此使用介面是唯一的選項，以便提供一般基底型別。  
   
- **✓ DO** 定義介面，如果您需要一組型別，其中包含實值類型必須支援某些一般的 API。  
+ 如果您需要一些通用 API，以包含實數值型別的一組類型來支援，則**✓**會定義介面。  
   
- **✓ CONSIDER** 定義介面，如果您需要在已經繼承自其他類型的型別上支援其功能。  
+ 如果您需要在已經繼承自其他類型的類型上支援其功能， **✓請考慮**定義介面。  
   
- **X AVOID** 使用標記介面 （不含成員的介面）。  
+ **X 避免**使用標記介面（沒有成員的介面）。  
   
- 如果您需要將類別標示為具有特定特性 （標記），在一般情況下，使用自訂屬性，而不是介面。  
+ 如果您需要將類別標示為具有特定特性（標記），則一般會使用自訂屬性，而不是介面。  
   
- **✓ DO** 提供至少一個型別是介面的實作。  
+ **✓確實**提供至少一個型別，也就是介面的執行。  
   
- 此舉有助於驗證介面的設計。 例如，<xref:System.Collections.Generic.List%601>是實作<xref:System.Collections.Generic.IList%601>介面。  
+ 這麼做有助於驗證介面的設計。 例如，<xref:System.Collections.Generic.List%601> 是 <xref:System.Collections.Generic.IList%601> 介面的執行。  
   
- **✓ DO** 提供至少一個應用程式開發介面使用您定義每個介面 （做為參數或屬性取得介面的方法型別為介面）。  
+ **✓確實**提供至少一個使用您所定義之介面的 API （此方法會將介面當做參數或屬性輸入為介面）。  
   
- 此舉有助於驗證介面設計。 例如，<xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType>耗用<xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType>介面。  
+ 這麼做有助於驗證介面設計。 例如，<xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> 會使用 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 介面。  
   
- **X DO NOT** 將成員加入至先前已發佈的介面。   
+ **X 不會**將成員新增至先前出貨的介面。  
   
- 這樣會中斷介面的實作。 您應該建立新的介面，以避免版本控制問題。  
+ 這麼做會中斷介面的實現。 您應該建立新的介面，以避免版本控制問題。  
   
- 除了這些指導方針所述的情況下，您應，在一般情況下，選擇類別，而不是介面設計的 managed 程式碼可重複使用程式庫。  
+ 除了這些指導方針中所述的情況之外，您通常應該選擇 [類別]，而不是 [設計 managed 程式碼可重複使用的程式庫] 中的介面。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [類型設計方針](../../../docs/standard/design-guidelines/type.md)
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

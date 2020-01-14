@@ -1,6 +1,5 @@
 ---
 title: await 運算子 - C# 參考
-ms.custom: seodec18
 ms.date: 11/08/2019
 f1_keywords:
 - await_CSharpKeyword
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 36cb4a5def6b75281edbe878d89af0c18ab226ec
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 6dc058f3850e30d8c424d4372c47b127c7d361b6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140651"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712737"
 ---
 # <a name="await-operator-c-reference"></a>await 運算子 (C# 參考)
 
@@ -40,7 +39,7 @@ ms.locfileid: "74140651"
 
 ## <a name="await-operator-in-the-main-method"></a>Main 方法中的 await 運算子
 
-從C# 7.1 開始， [`Main` 方法](../../programming-guide/main-and-command-args/index.md)（也就是應用程式進入點）可以傳回`Task`或`Task<int>`，讓它可以是非同步，因此您可以在其主體中使用`await`運算子。 在舊版 C# 中，若要確保 `Main` 方法會等候非同步作業完成，您可以擷取對應非同步方法所傳回 <xref:System.Threading.Tasks.Task%601> 執行個體的 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 屬性值。 針對不會產生值的非同步作業，您可以呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法。 如需有關如何選取語言版本的詳細資訊，請參閱[ C#語言](../configure-language-version.md)版本設定。
+從C# 7.1 開始， [`Main` 方法](../../programming-guide/main-and-command-args/index.md)（也就是應用程式進入點）可以傳回 `Task` 或 `Task<int>`，讓它可以是非同步，因此您可以在其主體中使用 `await` 運算子。 在舊版 C# 中，若要確保 `Main` 方法會等候非同步作業完成，您可以擷取對應非同步方法所傳回 <xref:System.Threading.Tasks.Task%601> 執行個體的 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 屬性值。 針對不會產生值的非同步作業，您可以呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法。 如需有關如何選取語言版本的詳細資訊，請參閱[ C#語言](../configure-language-version.md)版本設定。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

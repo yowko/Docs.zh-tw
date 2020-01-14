@@ -6,22 +6,22 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 8a991af5e8e48ce377acf1c1d8342d163d17c1e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6302a1d3d27ba9a32242cac6232fe495e8e6b4b9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441075"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741241"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>DataGrid 控制項類型的 UI 自動化支援
 > [!NOTE]
 > 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- 本主題提供 DataGrid 控制項類型的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 `ControlType` 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定指導方針。  
+ 本主題提供 DataGrid 控制項類型的 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 `ControlType` 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值和控制項模式的特定方針。  
   
  DataGrid 控制項類型可讓使用者易於使用包含以資料行所表示之中繼資料的項目。 資料格控制項具有項目資料列和關於這些項目的資訊資料行。 Microsoft Vista 檔案總管中的「清單檢視」控制項即是支援 DataGrid 控制項類型的範例。  
   
- 下列章節會定義 DataGrid 控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]或 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]， [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]需求都適用於所有資料格項目控制項。  
+ 下列章節會定義 DataGrid 控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 或 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求都適用于所有資料格控制項。  
   
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
  下表描述與資料格項目控制項相關之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Properties Overview](ui-automation-tree-overview.md)需求都適用於所有文件控制項。  
@@ -34,7 +34,7 @@ ms.locfileid: "74441075"
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
  下表列出屬性，其值或定義與資料格項目控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。  
   
-|屬性|值|注意事項|  
+|屬性|{2&gt;值&lt;2}|注意事項|  
 |--------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
@@ -48,7 +48,7 @@ ms.locfileid: "74441075"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|資料格控制項通常會從靜態文字標籤取得其 `Name` 屬性值。 如果沒有靜態文字標籤，應用程式開發人員就必須指派 `Name` 屬性的值。 `Name` 屬性的值絕不能是編輯控制項的文字內容。|  
   
 ## <a name="required-ui-automation-control-patterns"></a>必要的使用者介面自動化控制項模式  
- 下表列出所有資料格控制項必須支援的控制項模式。 如需控制項模式的詳細資訊，請參閱 [F:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty](ui-automation-control-patterns-overview.md)。  
+ 下表列出所有資料格控制項必須支援的控制項模式。 如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
 |控制項模式|支援|注意事項|  
 |---------------------|-------------|-----------|  
@@ -69,24 +69,24 @@ ms.locfileid: "74441075"
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
- 下表列出所有資料項目控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [F:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty](ui-automation-events-overview.md)。  
+ 下表列出所有資料項目控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](ui-automation-events-overview.md)。  
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意事項|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|視情況而定|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> 屬性變更事件。|視情況而定|無|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LayoutInvalidatedEvent>|視情況而定|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|None|  
+|<xref:System.Windows.Automation.MultipleViewPatternIdentifiers.CurrentViewProperty> 屬性變更事件。|視情況而定|None|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 屬性變更事件。|視情況而定|如果此控制項支援捲動模式，就必須支援這個事件。|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 屬性變更事件。|視情況而定|如果此控制項支援捲動模式，就必須支援這個事件。|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 屬性變更事件。|視情況而定|如果此控制項支援捲動模式，就必須支援這個事件。|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 屬性變更事件。|視情況而定|如果此控制項支援捲動模式，就必須支援這個事件。|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 屬性變更事件。|視情況而定|如果此控制項支援捲動模式，就必須支援這個事件。|  
 |<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 屬性變更事件。|視情況而定|如果此控制項支援捲動模式，就必須支援這個事件。|  
-|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|必要項|無|  
+|<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|必要|None|  
   
 ## <a name="date-grid-control-type-example"></a>日期方格控制項類型範例  
  下圖顯示實作 DataGrid 控制項類型的清單檢視控制項。  
@@ -101,7 +101,7 @@ ms.locfileid: "74441075"
   
  \* 上一個範例顯示包含多個控制項層級的 DataGrid。 Group ("Contoso") 控制項包含兩個 DataItem 控制項 ("Accounts Receivable.doc" 和 "Accounts Payable.doc")。 DataGrid/GridItem 對組與另一層級的對組無關， Group 底下的 DataItem 控制項也可以公開為 ListItem 控制項類型，如此可以更清楚將其表明為可選取的物件，而非僅是簡單的資料項目。 本範例不包含群組資料項目的子項目。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Automation.ControlType.DataGrid>
 - [UI 自動化控制項類型概觀](ui-automation-control-types-overview.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 09c3c57f3ac1009416a5c67b37c035fe30cd5b5e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5e8c27d017ed4bf8a7dcc2dda18877c9ed8dba69
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425332"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636337"
 ---
 # <a name="structured-navigation-overview"></a>結構化巡覽概觀
 
@@ -75,7 +75,7 @@ XAML 瀏覽器應用程式（XBAP）、<xref:System.Windows.Controls.Frame>或 <
 [!code-csharp[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](~/samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#calledpagefunctioncodebehind2)]
 [!code-vb[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#calledpagefunctioncodebehind2)]
 
-<xref:System.Windows.Navigation.PageFunction%601> 的宣告類似于 <xref:System.Windows.Controls.Page> 的宣告，並加入了型別引數。 如您在程式碼範例中所見，使用 `x:TypeArguments` 屬性的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記和使用標準泛型型別引數語法的程式碼後置，兩者都指定型別引數。
+<xref:System.Windows.Navigation.PageFunction%601> 的宣告類似于 <xref:System.Windows.Controls.Page> 的宣告，並加入了型別引數。 如您在程式碼範例中所見，使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 屬性的 `x:TypeArguments` 標記和使用標準泛型型別引數語法的程式碼後置，兩者都指定型別引數。
 
 您不需要只使用 .NET Framework 類別做為型別引數。 您可以呼叫 <xref:System.Windows.Navigation.PageFunction%601> 來收集抽象為自訂類型的定義域特定資料。 下列程式碼示範如何使用自訂型別做為 <xref:System.Windows.Navigation.PageFunction%601>的型別引數。
 
@@ -135,7 +135,7 @@ XAML 瀏覽器應用程式（XBAP）、<xref:System.Windows.Controls.Frame>或 <
 
   - 取出並使用儲存在 <xref:System.Windows.Application.Properties%2A>中的參數。
 
-但是，您很快就會發現，您還是需要使用程式碼來具現化並巡覽至呼叫的頁面，才能收集呼叫的頁面所傳回的資料。 基於這個理由，<xref:System.Windows.Navigation.PageFunction%601> 必須保持運作狀態;否則，當您下次流覽至 <xref:System.Windows.Navigation.PageFunction%601>時，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會使用無參數的函式來具現化 <xref:System.Windows.Navigation.PageFunction%601>。
+但是，您很快就會發現，您還是需要使用程式碼來具現化並巡覽至呼叫的頁面，才能收集呼叫的頁面所傳回的資料。 基於這個理由，<xref:System.Windows.Navigation.PageFunction%601> 必須保持運作狀態;否則，當您下次流覽至 <xref:System.Windows.Navigation.PageFunction%601>時，WPF 會使用無參數的函式來具現化 <xref:System.Windows.Navigation.PageFunction%601>。
 
 但在呼叫的頁面傳回之前，它需要傳回呼叫端頁面可擷取的資料。
 
@@ -179,7 +179,7 @@ XAML 瀏覽器應用程式（XBAP）、<xref:System.Windows.Controls.Frame>或 <
 
 在其他情況下，應用程式可能會令相依於結構化巡覽的複雜巡覽拓撲有效運作。 如需詳細資訊，請參閱[巡覽拓撲概觀](navigation-topologies-overview.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>

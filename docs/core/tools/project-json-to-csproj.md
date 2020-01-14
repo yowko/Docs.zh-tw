@@ -3,13 +3,12 @@ title: project.json 與 csproj 比較
 description: 查看 project.json 與 csproj 項目的對應。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.custom: seodec18
-ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: HT
+ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747407"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714126"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
 
@@ -31,7 +30,7 @@ ms.locfileid: "56747407"
 
 ## <a name="common-top-level-properties"></a>常見的最上層屬性
 
-### <a name="name"></a>名稱
+### <a name="name"></a>{2&gt;名稱&lt;2}
 
 ```json
 {
@@ -562,7 +561,7 @@ MSBuild 中的 `owners` 項目沒有對應項。
 </PropertyGroup>
 ```
 
-## <a name="shared"></a>共用
+## <a name="shared"></a>shared
 
 ```json
 {
@@ -674,6 +673,6 @@ MSBuild 中的 `owners` 項目沒有對應項。
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [CLI 中變更的高階概觀](../tools/cli-msbuild-architecture.md)

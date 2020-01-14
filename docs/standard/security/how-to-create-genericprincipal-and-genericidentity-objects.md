@@ -11,14 +11,12 @@ helpviewer_keywords:
 - Creating GenericPrincipal Objects
 - GenericIdentity Objects
 ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 37f5543ceaca83a024132c5d010b6d969876454f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 546b4d20f7b6b7a8c448f704fefd9a39b3ebd1d7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353822"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706145"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>如何：建立 GenericPrincipal 和 GenericIdentity 物件
 
@@ -141,7 +139,7 @@ The IsAuthenticated is: True
 Is this a Manager? True
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Security.Principal.GenericIdentity>
 - <xref:System.Security.Principal.GenericPrincipal>

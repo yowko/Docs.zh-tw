@@ -9,12 +9,12 @@ helpviewer_keywords:
 - elements, finding for list items
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-ms.openlocfilehash: 63181de26f7d8efda99d5b5d71b006cde44823a3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2474edf95bf598ba9284b5f6ac36a9e0af1317a1
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433555"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741749"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>尋找清單項目的 UI 自動化項目
 > [!NOTE]
@@ -25,11 +25,11 @@ ms.locfileid: "74433555"
 ## <a name="example"></a>範例  
  下列範例示範兩種從清單中抓取指定專案的方式，一個使用 <xref:System.Windows.Automation.TreeWalker>，另一個使用 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。  
   
- 第一種方法通常會加快 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控制項的速度，但第二種技巧較適合 Windows Presentation Foundation （WPF）控制項。  
+ 第一個技巧通常會比 Win32 控制項更快，但第二個是更快的 Windows Presentation Foundation （WPF）控制項。  
   
  [!code-csharp[UIAClient_snip#184](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#184)]
  [!code-vb[UIAClient_snip#184](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#184)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Obtaining UI Automation Elements](obtaining-ui-automation-elements.md)
+- [取得 UI 自動化項目](obtaining-ui-automation-elements.md)

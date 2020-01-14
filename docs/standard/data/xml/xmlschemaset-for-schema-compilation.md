@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f0e05b09d5ce788b9a3da262d5890a0694b49375
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 55347de81c65b7390584415dd29044f4ca4ba02a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69969022"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709812"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>用於結構描述編譯的 XmlSchemaSet
 說明 <xref:System.Xml.Schema.XmlSchemaSet>，它是一種可儲存及驗證 XML 結構描述定義語言 (XSD) 結構描述的快取。  
@@ -251,7 +249,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
   
  如需有關使用 <xref:System.Xml.Schema.XmlSchemaSet> 驗證 XML 文件的詳細資訊，請參閱 [使用 XmlSchemaSet 驗證 XML 結構描述 (XSD)](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>

@@ -1,15 +1,14 @@
 ---
 title: 如何選擇 ML.NET 演算法
 description: 了解如何選擇機器學習模型的 ML.NET 演算法
-author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976703"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739989"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>如何選擇 ML.NET 演算法
 
@@ -39,7 +38,7 @@ ms.locfileid: "73976703"
 
 **線性定型器**
 
-|演算法|內容|定型器|
+|演算法|屬性|定型器|
 |---------|----------|--------|
 |平均感知器|最適合文字分類|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
 |隨機對偶座標上升法|好的預設效能不需要微調|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
@@ -62,7 +61,7 @@ ms.locfileid: "73976703"
 
 **決策樹定型器**
 
-|演算法|內容|定型器|
+|演算法|屬性|定型器|
 |---------|----------|--------|
 |輕量型梯度提升機器|最快速且最精確的二元分類樹狀定型器。 微調程度高|<xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>|
 |快速的樹狀結構|用於特徵化影像資料。 復原不對稱的資料。 微調程度高 | <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>|
@@ -71,7 +70,7 @@ ms.locfileid: "73976703"
 
 ## <a name="matrix-factorization"></a>矩陣分解
 
-|內容|定型器|
+|屬性|定型器|
 |----------|--------|
 |最適合大型資料集的分類疏鬆資料|<xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>|
 
@@ -79,31 +78,31 @@ ms.locfileid: "73976703"
 
 這些定型器從二元定型器建立多元定型器。 搭配使用 <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer><xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>、<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>、<xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer><xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>、<xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>。
 
-|演算法|內容|定型器|
+|演算法|屬性|定型器|
 |---------|----------|--------|
 |一對多|此多元分類器每類別定型一個二元分類器，從所有其他類別中區分出該類別。 規模受限於要分類的類別數目|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
 |成對結合|此多元分類器針對每對類別定型二元分類演算法。 規模受限於類別數目，因為必須定型每對類別的組合。|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-Means
 
-|內容|定型器|
+|屬性|定型器|
 |----------|--------|
 |用於叢集|<xref:Microsoft.ML.Trainers.KMeansTrainer>|
 
 ## <a name="principal-component-analysis"></a>主體元件分析
 
-|內容|定型器|
+|屬性|定型器|
 |----------|--------|
 |用於異常偵測|<xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>|
 
 ## <a name="naive-bayes"></a>貝氏機率分類
 
-|內容|定型器|
+|屬性|定型器|
 |----------|--------|
 |當特性獨立存在且定型資料集很小時，請使用此多元分類定型器。|<xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>|
 
 ## <a name="prior-trainer"></a>舊的定型器
 
-|內容|定型器|
+|屬性|定型器|
 |----------|--------|
 |使用此二元分類定型器建立其他定型器的效能基準。 為有效率，其他定型器的計量應該比舊定型器好。 |<xref:Microsoft.ML.Trainers.PriorTrainer>|

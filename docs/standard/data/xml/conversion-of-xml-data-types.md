@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 56b5b51848858b7f1240059ca30eb48474650b73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: b0cdab8861ca50b40ce2b422fcc1acf16e2f2273
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555124"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711086"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML 資料型別轉換
 大多數在 **XmlConvert** 類別中的方法都是用來轉換字串和強型別格式間的資料。 這些方法都和地區設定無關。 也就是說，它們在進行轉換時並不會考慮任何地區設定的設定。  
@@ -66,7 +64,7 @@ Int32 vInt32=-2147483648;
 writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [將字串轉換成 .NET Framework 資料類型](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
 - [將 .NET Framework 類型轉換成字串](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

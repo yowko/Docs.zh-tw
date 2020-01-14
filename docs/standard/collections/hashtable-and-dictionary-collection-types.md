@@ -1,5 +1,5 @@
 ---
-title: Hashtable 和 Dictionary 集合類型
+title: Hashtable 和字典集合類型
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - hash function
 - collections [.NET Framework], Hashtable collection type
 ms.assetid: bfc20837-3d02-4fc7-8a8f-c5215b6b7913
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fefd9f95a669c9c0384cefe41322c7a10a96a3b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: a6f234b6205fd30507b9342d9839db6adcddfc2e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514708"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711372"
 ---
-# <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 和 Dictionary 集合類型
+# <a name="hashtable-and-dictionary-collection-types"></a>Hashtable 和字典集合類型
 <xref:System.Collections.Hashtable?displayProperty=nameWithType> 類別以及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> 泛型類別會實作 <xref:System.Collections.IDictionary?displayProperty=nameWithType> 介面。 <xref:System.Collections.Generic.Dictionary%602> 泛型類別還會實作 <xref:System.Collections.Generic.IDictionary%602> 泛型介面。 因此，這些集合中的每個項目是索引鍵-值組。  
   
  <xref:System.Collections.Hashtable> 物件是由包含集合項目的值區所組成。 值區是 <xref:System.Collections.Hashtable> 中項目的虛擬子群組，比大多數集合的搜尋和擷取更容易且更快速。 每個值區會與一個雜湊碼相關聯，這個雜湊碼是使用雜湊函式並根據項目的索引鍵所產生。  
@@ -36,7 +34,7 @@ ms.locfileid: "54514708"
   
  <xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別的功能與 <xref:System.Collections.Hashtable> 類別相同。 特定類型 (<xref:System.Object> 以外的類型) 的 <xref:System.Collections.Generic.Dictionary%602> 提供比實值類型的 <xref:System.Collections.Hashtable> 更佳的效能。 這是因為 <xref:System.Collections.Hashtable> 的項目屬於 <xref:System.Object> 類型；因此，當您儲存或擷取實值類型時，通常會發生 Boxing 和 Unboxing。 當多個執行緒可能同時存取集合時，應該使用 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Hashtable>
 - <xref:System.Collections.IDictionary>

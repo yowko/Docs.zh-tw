@@ -1,6 +1,5 @@
 ---
 title: void - C# 參考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - void_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
-ms.openlocfilehash: af79d39282ea38811777ea1f23054120afc39d2c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 465aaeadca603f14432478a7e5496a9ef4589ebe
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65632944"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712854"
 ---
 # <a name="void-c-reference"></a>void (C# 參考)
 
@@ -36,7 +35,7 @@ public void SampleMethod()
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

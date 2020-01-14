@@ -3,13 +3,12 @@ title: 利用 NUnit 與 .NET Core 進行 C# 單元測試
 description: 使用 dotnet test 與 NUnit 逐步建置解決方案範例的互動式體驗，了解 C# 與 .NET Core 中的單元測試概念。
 author: rprouse
 ms.date: 08/31/2018
-ms.custom: seodec18
-ms.openlocfilehash: 20f81981458b7e805a917202edce671ced69d89a
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1ea17d9f830d8ac20e2bad79eebab5db767e0af8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117314"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714220"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>利用 NUnit 與 .NET Core 進行 C# 單元測試
 
@@ -17,7 +16,7 @@ ms.locfileid: "71117314"
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 - 您選擇的文字編輯器或程式碼編輯器。
@@ -172,7 +171,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>新增更多功能
 
-現在，您已經讓一個測試順利通過，您可以撰寫更多測試。 還有一些其他適用於下列質數的簡單案例：0、-1。 您可以使用 `[Test]` 屬性來加入新測試，但很快就會單調乏味。 另有其他 NUnit 屬性可供您撰寫類似測試的套件。  `[TestCase]` 屬性可用於建立執行相同程式碼，但輸入引數不同的測試套件。 您可以使用 `[TestCase]` 屬性來指定這些輸入值。
+現在，您已經讓一個測試順利通過，您可以撰寫更多測試。 還有一些其他適用於質數 0、-1 的簡單案例。 您可以使用 `[Test]` 屬性來加入新測試，但很快就會單調乏味。 另有其他 NUnit 屬性可供您撰寫類似測試的套件。  `[TestCase]` 屬性可用於建立執行相同程式碼，但輸入引數不同的測試套件。 您可以使用 `[TestCase]` 屬性來指定這些輸入值。
 
 您不需要建立新的測試，只要套用此屬性來建立單一資料驅動型測試即可。 資料驅動型測試是一種測試方法，其會測試數個低於二 (最小質數) 的值：
 

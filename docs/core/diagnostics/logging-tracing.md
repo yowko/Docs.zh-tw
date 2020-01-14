@@ -1,15 +1,13 @@
 ---
 title: 記錄和追蹤-.NET Core
 description: .NET Core 記錄和追蹤的簡介。
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926356"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714415"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core 記錄和追蹤
 
@@ -29,22 +27,22 @@ ms.locfileid: "70926356"
 
 ### <a name="print-style-apis"></a>列印樣式 Api
 
-<xref:System.Console?displayProperty=nameWithType>、和<xref:System.Diagnostics.Trace?displayProperty=nameWithType>類別各自提供類似的<xref:System.Diagnostics.Debug?displayProperty=nameWithType>列印樣式 api，方便進行記錄。
+<xref:System.Console?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace?displayProperty=nameWithType>和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 類別各自提供類似的列印樣式 Api，方便進行記錄。
 
-選擇要使用的列印樣式 API 是由您決定。 主要的差異如下：
+選擇要使用的列印樣式 API 是由您決定。 主要差異包括：
 
 - <xref:System.Console?displayProperty=nameWithType>
   - 一律啟用並一律寫入主控台。
   - 適用于您的客戶可能需要在版本中看到的資訊。
   - 因為這是最簡單的方法，所以通常用於臨機操作暫存的偵錯工具。 此 debug 程式碼通常不會簽入原始檔控制中。
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - 只有在定義`TRACE`時才啟用。
-  - 預設會寫入<xref:System.Diagnostics.Trace.Listeners>至附加的。 <xref:System.Diagnostics.DefaultTraceListener>
+  - 只有在定義 `TRACE` 時才會啟用。
+  - 預設會寫入至附加的 <xref:System.Diagnostics.Trace.Listeners>，<xref:System.Diagnostics.DefaultTraceListener>。
   - 建立將在大部分組建中啟用的記錄檔時，請使用此 API。
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - 只有在定義`DEBUG`時才啟用。
+  - 只有在定義 `DEBUG` 時才會啟用。
   - 寫入附加的偵錯工具。
-  - `*nix` 當`COMPlus_DebugWriteToStdErr`已設定時，寫入 stderr。
+  - On `*nix` 在 `COMPlus_DebugWriteToStdErr` 已設定時寫入 stderr。
   - 建立只會在 debug 組建中啟用的記錄檔時，請使用此 API。
 
 ### <a name="logging-events"></a>記錄事件
@@ -64,13 +62,13 @@ ms.locfileid: "70926356"
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
   - 包含在 .NET Core 中，以及做為 .NET Framework 的[NuGet 套件](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource)。
   - 允許非可序列化物件的同進程追蹤。
-  - 包含橋接器，可讓所選的已記錄物件欄位寫入<xref:System.Diagnostics.Tracing.EventSource>。
+  - 包含橋接器，可讓所選的已記錄物件欄位寫入 <xref:System.Diagnostics.Tracing.EventSource>。
 
 - <xref:System.Diagnostics.Activity?displayProperty=nameWithType>
   - 提供明確的方式來識別特定活動或交易所產生的記錄檔訊息。 此物件可用來讓不同服務之間的記錄相互關聯。
 
 - <xref:System.Diagnostics.EventLog?displayProperty=nameWithType>
-  - 僅限 Windows。
+  - 僅 Windows。
   - 將訊息寫入 Windows 事件記錄檔。
   - 系統管理員預期 Windows 事件記錄檔中會出現嚴重的應用程式錯誤訊息。
 
@@ -78,9 +76,9 @@ ms.locfileid: "70926356"
 
 低層級 Api 可能不是您記錄需求的正確選擇。 您可能想要考慮使用記錄架構。
 
-<xref:Microsoft.Extensions.Logging.ILogger>介面已用來建立一般記錄介面，可透過相依性插入來插入記錄器。
+<xref:Microsoft.Extensions.Logging.ILogger> 介面已用來建立一般記錄介面，可透過相依性插入來插入記錄器。
 
-比方說，若要讓您為應用程式`ASP.NET`提供最佳選擇，讓您能夠選擇內建和協力廠商架構：
+比方說，若要讓您為應用程式做出最佳選擇，`ASP.NET` 提供內建和協力廠商架構的選取支援：
 
 - [ASP.NET 內建記錄提供者](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
 - [ASP.NET 協力廠商記錄提供者](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
@@ -89,15 +87,15 @@ ms.locfileid: "70926356"
 
 - [如何：使用追蹤和偵錯進行條件式編譯](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 
-- [如何：將追蹤語句新增至應用程式程式碼](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：將追蹤陳述式新增至應用程式碼](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
 - [ASP.NET 記錄](/aspnet/core/fundamentals/logging)提供它所支援的記錄技術的總覽。
 
 - 字串內插補點可簡化撰寫記錄程式碼的程式。 [ C# ](../../csharp/language-reference/tokens/interpolated.md)
 
-- <xref:System.Exception.Message?displayProperty=nameWithType>屬性適用于記錄例外狀況。
+- <xref:System.Exception.Message?displayProperty=nameWithType> 屬性適用于記錄例外狀況。
 
-- 在<xref:System.Diagnostics.StackTrace?displayProperty=nameWithType>您的記錄中提供堆疊資訊時，類別可能會很有用。
+- <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> 類別可在記錄中提供堆疊資訊時很有用。
 
 ## <a name="performance-considerations"></a>效能考量
 

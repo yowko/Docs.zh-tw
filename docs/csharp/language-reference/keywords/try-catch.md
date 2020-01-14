@@ -1,6 +1,5 @@
 ---
 title: try-catch - C# 參考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - try
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: 8f901bd8ab5dcdcf4f5674e3f235267c9f535725
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 5289dbe3aff0a9e1f1024a293ff469df44d34a3b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168726"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713023"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# 參考)
 
@@ -178,7 +177,7 @@ static void Main()
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [try 陳述式](~/_csharplang/spec/statements.md#the-try-statement)一節。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
@@ -186,4 +185,4 @@ static void Main()
 - [try、throw 和 catch 陳述式 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
 - [throw](throw.md)
 - [try-finally](try-finally.md)
-- [如何：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [操作說明：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

@@ -6,34 +6,33 @@ helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-author: KrzysztofCwalina
-ms.openlocfilehash: 6811423258481fcbae24743c9b17f3f20c379c58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: af62658ce728dd480df630cf6162549f33f28b4d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785536"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709539"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>實作抽象的基底類別
-嚴格來說，類別就變得基底類別衍生自此類別的另一個類別。 不過，為了本章節中，基底類別是設計主要是為了提供常見的抽象概念，或重複使用一些其他類別的預設實作透過繼承的類別。 基底類別通常位於繼承階層架構，在階層的根的抽象概念與數個在底部的自訂實作之間的中間。  
+嚴格來說，當另一個類別衍生自它時，類別會變成基類。 不過，就本節的目的而言，基類是主要設計來提供通用抽象概念或其他類別的類別，以便在繼承時重複使用一些預設的執行。 基類通常位於繼承階層的中間，在階層根目錄的抽象概念和底部的數個自訂實體系之間。  
   
- 它們可當做實作協助程式實作抽象的。 例如，其中一個項目的已排序集合的架構的抽象概念是<xref:System.Collections.Generic.IList%601>介面。 實作<xref:System.Collections.Generic.IList%601>並非易事，因此架構可提供數個基底類別，例如<xref:System.Collections.ObjectModel.Collection%601>和<xref:System.Collections.ObjectModel.KeyedCollection%602>，其中實作自訂的集合做為協助程式。  
+ 它們做為執行抽象概念的執行協助程式。 例如，已排序之專案集合的其中一個架構抽象層是 <xref:System.Collections.Generic.IList%601> 介面。 執行 <xref:System.Collections.Generic.IList%601> 並不簡單，因此架構會提供數種基類，例如 <xref:System.Collections.ObjectModel.Collection%601> 和 <xref:System.Collections.ObjectModel.KeyedCollection%602>，做為協助程式來執行自訂集合。  
   
- 基底類別通常不適合作為抽象概念，本身，因為它們通常包含太多的實作。 例如，`Collection<T>`基底類別包含許多相關的事實，它會實作非泛型實作`IList`介面 （若要整合更理想與非泛型集合），並實際上它是一組項目儲存在它的一個欄位中的記憶體。  
+ 基類通常不適合做為抽象概念，因為它們可能包含太多的執行。 例如，`Collection<T>` 基類包含許多與執行非泛型 `IList` 介面的事實相關的實做（以更好的方式與非泛型集合整合），以及它是儲存在其中一個欄位之記憶體中的專案集合。  
   
- 如先前所述，基底類別必須實作的抽象的使用者可以提供寶貴的說明，但同時也很重要的責任。 它們加入介面區和增加的繼承階層架構的深度，以及因此在概念上會讓複雜的架構。 因此，它們提供重大價值架構的使用者時，才應該使用基底類別。 它們應盡可能它們才能 framework 中，應該強烈考慮的內部實作，而不是繼承自基底類別的案例委派的實作，提供值。  
+ 如先前所討論，基類可以為需要執行抽象概念的使用者提供寶貴的協助，但同時也可能會造成嚴重的責任。 他們會加入介面區並增加繼承階層的深度，因此概念上會使架構複雜化。 因此，只有當基類為架構的使用者提供顯著的價值時，才應該使用這些類別。 如果它們只提供值給架構的實作者，就應該避免這些情況，在此情況下，委派到內部執行，而不是從基類繼承。  
   
- **✓ CONSIDER** 讓基底類別的抽象，即使它們不包含任何抽象成員。 如此可清楚的使用者，該類別只可繼承自。  
+ **✓請考慮**將基類設為抽象，即使它們未包含任何抽象成員也一樣。 這會清楚地傳達類別設計為繼承自的使用者。  
   
- **✓ CONSIDER** 置於不同的命名空間從主線情節類型的基底類別。 根據定義，基底類別適用的進階擴充性案例，因此不需要大部分的使用者。  
+ **✓請考慮**將基類放在主線案例類型的個別命名空間中。 根據定義，基類適用于先進的擴充性案例，因此不會對大多數的使用者感興趣。  
   
- **X AVOID** 命名基底類別具有 「 基底"後置詞，如果類別是用於在公用 Api。  
+ **X**如果類別要在公用 api 中使用，請避免以「基底」尾碼命名基類。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

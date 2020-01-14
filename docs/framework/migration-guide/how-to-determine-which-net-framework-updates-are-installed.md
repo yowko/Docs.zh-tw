@@ -9,14 +9,12 @@ helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 498462b2dc5f0e63562cb52699460e0d37fd4a60
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 087519048b412798ef7495d250dc2538ee5c2fd0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342290"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716260"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>如何判斷已安裝的 .NET Framework 安全性更新和修補程式
 

@@ -4,18 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2bed01a74c5b3338df958a3e178c06602bd69866
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 602ee3c88237a902d48339836fbe25f636ae9705
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052109"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716500"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>如何對 CLR 啟用問題進行偵錯
 
-如果以正確的通用語言執行平台 (CLR) 版本執行應用程式時發生問題，您可以檢視並偵錯 CLR 啟用記錄。 當您的應用程式載入不符預期的 CLR 版本，或完全不載入 CLR 時，這些記錄檔對判斷啟動問題的根本原因非常有幫助。 [.NET Framework 初始化錯誤：管理使用者體驗](initialization-errors-managing-the-user-experience.md)會討論應用程式找不到任何 CLR 時的體驗。
+如果以正確的通用語言執行平台 (CLR) 版本執行應用程式時發生問題，您可以檢視並偵錯 CLR 啟用記錄。 當您的應用程式載入不符預期的 CLR 版本，或完全不載入 CLR 時，這些記錄檔對判斷啟動問題的根本原因非常有幫助。 [NET Framework 初始化錯誤：管理使用者經驗](initialization-errors-managing-the-user-experience.md) 會討論應用程式找不到任何 CLR 時的經驗。
 
 使用 HKEY_LOCAL_MACHINE 登錄機碼或系統環境變數可以啟用全系統的 CLR 啟動記錄。 登錄項目或環境變數移除之前會一直產生記錄檔。 或者，您可以使用使用者或處理序本機環境變數，啟用不同範圍和持續時間的記錄。
 
@@ -112,13 +110,13 @@ CLR 啟動記錄檔會提供大量有關 CLR 啟動的資料和裝載 API 的 CL
     532,205950.382,C:\Tests\myapp.exe was built with version: v2.0.50727
     ```
 
-- **功能隨選安裝**指的是在 Windows 8 上啟用 .NET Framework 3.5。 請[參閱 .NET Framework 初始化錯誤：如需此案例](initialization-errors-managing-the-user-experience.md)的詳細資訊，請管理使用者體驗。
+- **功能隨選安裝**指的是在 Windows 8 上啟用 .NET Framework 3.5。 如需此案例的詳細資訊，請參閱 [.NET Framework 初始化錯誤：管理使用者經驗](initialization-errors-managing-the-user-experience.md)。
 
     ```output
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [部署](index.md)
-- [如何：設定應用程式以支援 .NET Framework 4 或更新版本](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [如何：將應用程式設定為支援 .NET Framework 4 或更新版本](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

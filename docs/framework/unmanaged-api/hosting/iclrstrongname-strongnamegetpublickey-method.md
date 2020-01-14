@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a31dcaa9-a404-4c1d-8cc7-081827c52935
 topic_type:
 - apiref
-ms.openlocfilehash: 943251357a91ea9ae3d492fa7bf20eebf948b8b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fd7f95ea01de397509c2a7b5fc08c0ac401a8da9
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135068"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899601"
 ---
 # <a name="iclrstrongnamestrongnamegetpublickey-method"></a>ICLRStrongName::StrongNameGetPublicKey 方法
 從公開/私密金鑰組取得公開金鑰。 金鑰組可以提供為密碼編譯服務提供者（CSP）內的金鑰容器名稱，或做為原始的位元組集合。  
@@ -58,7 +58,7 @@ HRESULT StrongNameGetPublicKey (
  脫銷傳回的公開金鑰 BLOB 的大小。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
  公開金鑰包含在[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)結構中。  

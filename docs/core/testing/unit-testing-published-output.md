@@ -4,13 +4,12 @@ description: 了解如何使用 dotnet vstest 命令在已發行的程式庫 (�
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.custom: seodec18
-ms.openlocfilehash: e4fd25dc9ff30bdfe85cd1167a1dc41ea20a5f80
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 7618d37782de3a16f1963380bbb56945fb73e8eb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771929"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714260"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>使用 dotnet vstest 測試已發行的輸出
 
@@ -34,7 +33,7 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> 注意：如果您的應用程式以 `netcoreapp` 以外的架構為目標，您仍然可以藉由使用架構旗標傳入目標架構，來執行 `dotnet vstest` 命令。 例如，`dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`。 在 Visual Studio 2017 Update 5 和更新版本中，會自動偵測所需的架構。
+> 注意：如果您的應用程式以 `netcoreapp`以外的架構為目標，您仍然可以藉由使用架構旗標傳入目標架構，來執行 `dotnet vstest` 命令。 例如，`dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`。 在 Visual Studio 2017 Update 5 和更新版本中，會自動偵測所需的架構。
 
 ## <a name="see-also"></a>請參閱
 

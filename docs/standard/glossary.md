@@ -3,12 +3,12 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 21b2b0fb606333ace05b6525c9f461e6ee1709d1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338526"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708200"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -58,7 +58,7 @@ Common Language Runtime。
 
 .NET Core 基底類別庫 (BCL)
 
-由 System.* (以及一定範圍內的 Microsoft.*) 命名空間組成的一組程式庫。 BCL 是 ASP.NET Core 等較高層級的應用程式架構建置所在之較低層級的一般目的架構。 .NET Core BCL 的原始程式碼包含在 [CoreFX 存放庫](https://github.com/dotnet/corefx)中。 不過，大多數的 .NET Core API 也適用於 .NET Framework；因此您可以將 CoreFX 視為 .NET Framework BCL 的分支。
+組成系統的一組程式庫。\* （以及限定範圍的 Microsoft.\*）命名空間。 BCL 是 ASP.NET Core 等較高層級的應用程式架構建置所在之較低層級的一般目的架構。 .Net Core BCL 的原始程式碼包含在[.Net core 運行](https://github.com/dotnet/runtime)時間存放庫中。 不過，大多數的 .NET Core API 也適用於 .NET Framework；因此您可以將 CoreFX 視為 .NET Framework BCL 的分支。
 
 ## <a name="corert"></a>CoreRT
 
@@ -66,7 +66,7 @@ Common Language Runtime。
 
 相較於 CLR/CoreCLR，CoreRT 不是虛擬機器，這表示它不會包含即時產生和執行程式碼的功能，因為它不包含 [JIT](#jit)。 不過，它包含 [GC](#gc)，以及執行階段類型識別 (RTTI) 和反映功能。 不過，其型別系統已設計成不需要反映的中繼資料。 這讓 [AOT](#aot) 工具鏈能夠抽離不必要的中繼資料，更重要的是，它能夠識別應用程式未使用的程式碼。 CoreRT 正在開發中。
 
-請參閱 [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) (.NET Native 和 CoreRT 簡介)
+請參閱[.NET Native 和 CoreRT 的簡介](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)。
 
 ## <a name="cross-platform"></a>跨平台
 

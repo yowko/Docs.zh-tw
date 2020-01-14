@@ -1,16 +1,15 @@
 ---
 title: 運算式主體成員 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
-ms.openlocfilehash: 45dcc58b252963e80798ba86ca5c4f461d493fac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120139"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711983"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>運算式主體成員 (C# 程式設計手冊)
 
@@ -57,7 +56,7 @@ PropertyType PropertyName => expression;
 
 如需屬性的詳細資訊，請參閱[屬性 (C# 程式設計手冊)](../classes-and-structs/properties.md)。
 
-## <a name="properties"></a>內容
+## <a name="properties"></a>屬性
 
 從 C# 7.0 開始，您可以使用運算式主體定義來實作屬性 `get` 和 `set` 存取子。 下列範例示範如何進行這項操作：
 

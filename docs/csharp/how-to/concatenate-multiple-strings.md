@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 2e443030445d2817c8f53a044a261edd22eeb26e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9a0640a7ce73fa8454442cd301157bf5c265f9de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973277"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713904"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>如何串連多個字串（C#指南）
 
@@ -41,7 +41,7 @@ ms.locfileid: "73973277"
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
-您可以閱讀更多內容，了解[選擇字串串連或 `StringBuilder` 類別的原因](xref:System.Text.StringBuilder#StringAndSB)
+您可以閱讀更多有關[選擇字串串連或 `StringBuilder` 類別的原因](xref:System.Text.StringBuilder#StringAndSB)。
 
 從集合加入字串的另一個選項是使用 <xref:System.String.Concat%2A?displayProperty=nameWithType> 方法。 如果應該以分隔符號分隔來源字串，請使用 <xref:System.String.Join%2A?displayProperty=nameWithType> 方法。 下列程式碼會使用這兩種方法來結合文字陣列：
 

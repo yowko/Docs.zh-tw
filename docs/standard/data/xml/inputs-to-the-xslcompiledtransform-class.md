@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 043c37a17375bf2dcdad9e4b429cfca7b96ef7cb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 9aae85aa4516dc0555e959358ba1b7db3002145d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966966"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710735"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>XslCompiledTransform 類別的輸入
 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法可接受來源文件的三種輸入型別：實作 <xref:System.Xml.XPath.IXPathNavigable> 介面的物件、讀取來源文件的 <xref:System.Xml.XmlReader> 物件，或是字串 URI。  
@@ -31,7 +29,7 @@ ms.locfileid: "69966966"
 > [!NOTE]
 > 轉換是指套用到整個文件。 換言之，如果您要傳入的節點不是文件的根節點，則不會阻止轉換程序取得已載入文件中的所有節點。 若要轉換節點片段，您必須建立只包含節點片段的物件，並將該物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。 如需詳細資訊，請參閱[如何：轉換節點片段](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md)。  
   
- 下列範例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，透過 transform.xsl 樣式表將 books.xml 檔案轉換為 books.html 檔案。 在下列主題中可以找到 books.xml 與 transform.xsl 檔案：[如何：使用組件執行 XSLT 轉換](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
+ 下列範例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，透過 transform.xsl 樣式表將 books.xml 檔案轉換為 books.html 檔案。 本主題中可找到 books.xml 和 transform.xsl 檔案：[如何：使用組件執行 XSLT 轉換](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
   
  [!code-csharp[XslCompiledTransform.Transform2#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#1)]
  [!code-vb[XslCompiledTransform.Transform2#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#1)]  
@@ -39,7 +37,7 @@ ms.locfileid: "69966966"
 ## <a name="xmlreader-object"></a>XmlReader 物件  
  <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法會從 <xref:System.Xml.XmlReader> 的目前節點載入，並套用至其所有子系節點。 如此您就能夠利用文件中的某些部份做為內容文件。 傳回 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法後，<xref:System.Xml.XmlReader> 便定位於內容文件結尾之後的下一節點。 如果到達文件結尾，則 <xref:System.Xml.XmlReader> 會定位於檔案結尾 (EOF)。  
   
- 下列範例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，透過 transform.xsl 樣式表將 books.xml 檔案轉換為 books.html 檔案。 在下列主題中可以找到 books.xml 與 transform.xsl 檔案：[如何：使用組件執行 XSLT 轉換](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
+ 下列範例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，透過 transform.xsl 樣式表將 books.xml 檔案轉換為 books.html 檔案。 本主題中可找到 books.xml 和 transform.xsl 檔案：[如何：使用組件執行 XSLT 轉換](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
   
  [!code-csharp[XslCompiledTransform.Transform2#2](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#2)]
  [!code-vb[XslCompiledTransform.Transform2#2](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#2)]  
@@ -47,13 +45,13 @@ ms.locfileid: "69966966"
 ## <a name="string-uri"></a>字串 URI  
  您也可以將來源文件 URI 指定為 XSLT 輸入。 <xref:System.Xml.XmlResolver> 可用於解析 URI。 您可以藉由將要使用的 <xref:System.Xml.XmlResolver> 傳遞給 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法，來對其進行指定。 若未指定 <xref:System.Xml.XmlResolver>，則 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法會使用不含認證的預設 <xref:System.Xml.XmlUrlResolver>。  
   
- 下列範例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，透過 transform.xsl 樣式表將 books.xml 檔案轉換為 books.html 檔案。 在下列主題中可以找到 books.xml 與 transform.xsl 檔案：[如何：使用組件執行 XSLT 轉換](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
+ 下列範例使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A?displayProperty=nameWithType> 方法，透過 transform.xsl 樣式表將 books.xml 檔案轉換為 books.html 檔案。 本主題中可找到 books.xml 和 transform.xsl 檔案：[如何：使用組件執行 XSLT 轉換](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)。  
   
  [!code-csharp[XslCompiledTransform.Transform2#3](../../../../samples/snippets/csharp/VS_Snippets_Data/XslCompiledTransform.Transform2/CS/Program.cs#3)]
  [!code-vb[XslCompiledTransform.Transform2#3](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslCompiledTransform.Transform2/VB/Module1.vb#3)]  
   
  如需詳細資訊，請參閱 [XSLT 處理期間解析外部資源](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)

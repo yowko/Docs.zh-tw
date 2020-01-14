@@ -1,15 +1,14 @@
 ---
 title: 機器學習字彙
 description: 對於您在 ML.NET 中建置自訂模型來說，相當實用的重要機器學習詞彙。
-ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977292"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739883"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機器學習詞彙的重要字詞
 
@@ -31,7 +30,7 @@ ms.locfileid: "73977292"
 
 校正是將未經處理分數對應到二元和多元分類類別成員資格的程序。 有一些 ML.NET 定型器有 `NonCalibrated` 尾碼。 這些演算法會產生必須對應至類別機率的未經處理分數。
 
-## <a name="catalog"></a>Catalog
+## <a name="catalog"></a>目錄
 
 在 ML.NET 中，目錄是延伸模組函式集合，依一般用途分組。
 
@@ -41,11 +40,11 @@ ms.locfileid: "73977292"
 
 使用資料來預測分類時，[監督式機器學習](#supervised-machine-learning)工作便稱為分類。 [二元分類](#binary-classification)係指僅預測兩個分類 (例如，將影像分類成「貓」或「狗」的圖片)。 [多元分類](#multiclass-classification)係指預測多個分類 (例如，將影像分類成一種特定狗品種的圖片)。
 
-## <a name="coefficient-of-determination"></a>決定係數
+## <a name="coefficient-of-determination"></a>判斷的係數
 
 在[迴歸](#regression)中，指出資料與模型相符程度的評估計量。 範圍為 0 到 1。 值為 0 時，表示資料為隨機資料，或與模型不相符。 值為 1 時，表示模型與資料完全相符。 這通常稱為r<sup>2</sup>R<sup>2</sup> 或 R 平方。
 
-## <a name="data"></a>資料
+## <a name="data"></a>Data
 
 資料是所有機器學習應用程式的中心。 在 ML.NET 中，資料是由 <xref:Microsoft.ML.IDataView> 物件表示。 資料檢視物件：
 
@@ -57,7 +56,7 @@ ms.locfileid: "73977292"
 
 ML.NET 中實作 <xref:Microsoft.ML.IEstimator%601> 介面的類別。
 
-評估工具是轉換的規格 (資料準備轉換和機器學習模型定型轉換)。 評估工具可以一起鏈結到轉換管線。 評估工具參數或評估工具管線是在呼叫 <xref:Microsoft.ML.IEstimator`1.Fit*> 時學到。 <xref:Microsoft.ML.IEstimator`1.Fit*> 的結果是[轉換器](#transformer)。
+評估工具是轉換的規格 (資料準備轉換和機器學習模型定型轉換)。 評估工具可以一起鏈結到轉換管線。 評估工具參數或評估工具管線是在呼叫 <xref:Microsoft.ML.IEstimator%601.Fit%2A> 時學到。 <xref:Microsoft.ML.IEstimator%601.Fit%2A> 的結果是[轉換器](#transformer)。
 
 ## <a name="extension-method"></a>擴充方法
 
@@ -73,7 +72,7 @@ ML.NET 中實作 <xref:Microsoft.ML.IEstimator%601> 介面的類別。
 
 特徵工程是一個程序，牽涉到定義一組[特徵](#feature)，並開發能從可用現象資料產生特徵向量 (亦即特徵擷取) 的軟體。 如需詳細資訊，請參閱維基百科上的[特徵工程](https://en.wikipedia.org/wiki/Feature_engineering) \(英文\) 一文。
 
-## <a name="f-score"></a>F 分數
+## <a name="f-score"></a>F-score
 
 在[分類](#classification)中，用來平衡[精準率](#precision)和[召回率](#recall)的評估計量。
 
@@ -131,7 +130,7 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
 
 在[分類](#classification)中，類別的召回率係指正確預測為屬於該類別的項目數，除以實際屬於該類別的項目總數後，所得出的值。
 
-## <a name="regularization"></a>正規化
+## <a name="regularization"></a>正則化
 
  正規化不利於太過複雜的線性模型。 正規化有兩種：
 
@@ -146,7 +145,7 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
 
 在[迴歸](#regression)中，此評估計量是所有絕對誤差的總和除以正確[標籤](#label)值與所有正確標籤值之平均值的差距總和後，所得出的值。
 
-## <a name="relative-squared-error"></a>相對平方誤差
+## <a name="relative-squared-error"></a>相對均方差
 
 在[迴歸](#regression)中，此評估計量是所有平方絕對誤差的總和除以正確[標籤](#label)值與所有正確標籤值之平均值的平方差距總和後，所得出的值。
 
@@ -154,7 +153,7 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
 
 在[迴歸](#regression)中，此評估計量是誤差平方值之平均值的平方根。
 
-## <a name="scoring"></a>計分
+## <a name="scoring"></a>評分
 
 評分是將新資料套用至定型機器學習模型並產生預測的流程。 評分也稱為推斷。 根據模型的類型而定，分數可能是原始值、機率或類別。
 

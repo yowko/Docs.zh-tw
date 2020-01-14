@@ -1,6 +1,6 @@
 ---
 title: Visual Studio 的開發人員命令提示字元
-ms.date: 08/14/2018
+ms.date: 01/05/2020
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -10,87 +10,89 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f028281d477284acf3ac4dac63f5ddbbd79f5259
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044732"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715876"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 的開發人員命令提示字元
 
-Visual Studio 的開發人員命令提示字元可讓您更輕鬆地使用 .NET Framework 工具。 它是命令提示字元，可自動設定特定的環境變數。
+Visual Studio 的開發人員命令提示字元可讓您更輕鬆地使用 .NET Framework 工具。 它是自動設定特定環境變數的命令提示字元。 開啟開發人員命令提示字元之後，您可以輸入[.NET Framework 工具](index.md)的命令，例如 `ildasm` 或 `clrver`。
 
-> [!div class="button"]
-> [下載 Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
+## <a name="prerequisites"></a>必要條件：
+
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
 ## <a name="search-for-the-command-prompt-on-your-machine"></a>搜尋您電腦上的命令提示字元
 
-根據您已安裝的 Visual Studio 及任何其他 SDK 版本，您可能會有多個命令提示字元。 例如，Visual Studio 64 位元版本提供 32 位元和 64 位元的命令提示字元 (大多數工具的 32 位元和 64 位元版本完全相同；然而，少數工具會分別變更 32 位元和 64 位元的環境)。如果下列步驟沒有作用，您可以嘗試[以手動方式尋找您電腦上的檔案](#manually-locate-the-files-on-your-machine)或[從 Visual Studio 內部執行命令提示字元](#run-the-command-prompt-from-inside-visual-studio)。
+您可能會有多個命令提示字元，視 Visual Studio 版本以及您已安裝的任何其他 Sdk 和工作負載而定。 如果下列步驟沒有作用，您可以嘗試以[手動方式尋找您電腦上的](#manually-locate-the-files-on-your-machine)檔案，或[從 Visual Studio 內啟動命令提示](#start-the-command-prompt-from-inside-visual-studio)字元。
 
-### <a name="in-windows-10"></a>在 Windows 10
+### <a name="windows-10"></a>Windows 10
 
-1. 在工作列的搜尋方塊中開始鍵入工具名稱，例如 `dev` 或 `developer command prompt`。 這會顯示符合搜尋模式的已安裝應用程式清單。 如果您要尋找不同的命令提示字元，請嘗試輸入不同的搜尋字詞，例如 `prompt`。
+1. 選取鍵盤上的 [**啟動**![Windows 標誌鍵]。](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) 並滾動到字母**V**。
 
-2. 選擇 [Visual Studio 開發人員命令提示字元] (或您想要使用的命令提示字元)。
+1. 展開 [ **Visual Studio 2019** ] 資料夾。
 
-### <a name="in-windows-81"></a>在 Windows 8.1
+1. 選擇 [**適用于 VS 2019 的開發人員命令提示字元**] （或您想要使用的命令提示字元）。
 
-1. 按下 Windows 標誌鍵 ![鍵盤上的 Windows 標誌鍵](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) 前往 [開始] 畫面。 位於您的鍵盤上，作為範例。
+   或者，您可以在工作列的 [搜尋] 方塊中，開始輸入命令提示字元的名稱，然後選擇您想要的結果，因為結果清單會開始顯示搜尋相符專案。
 
-2. 在 [開始] 畫面上，按 **Ctrl** + **Tab** 以開啟 [應用程式] 清單，然後輸入 `V`。 這會顯示包含所有已安裝 Visual Studio 命令提示字元的清單。
+   ![顯示 Windows 10 搜尋行為的動畫 gif](./media/developer-command-prompt-for-vs/windows10-search.gif)
 
-3. 選擇 [開發人員命令提示字元] (或您想要使用的命令提示字元)。
-
-### <a name="in-windows-8"></a>在 Windows 8
+### <a name="windows-81"></a>Windows 8.1
 
 1. 按下 Windows 標誌鍵 ![鍵盤上的 Windows 標誌鍵](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) 前往 [開始] 畫面。 位於您的鍵盤上，作為範例。
 
-2. 在 [開始] 畫面上，按下 Windows 標誌鍵 ![鍵盤上的 Windows 標誌鍵。](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) `+ Z`.
+1. 在 **開始** 畫面上，按**Ctrl**+ 索引標籤以開啟 **應用程式**清單，然後按**V**。這會顯示一份清單，其中包含所有已安裝的 Visual Studio 命令提示字元。
 
-3. 選擇畫面底部的 [應用程式檢視] 圖示，然後輸入 `V`。 這會顯示包含所有已安裝 Visual Studio 命令提示字元的清單。
+1. 選擇 [**適用于 VS 2019 的開發人員命令提示字元**] （或您想要使用的命令提示字元）。
 
-4. 選擇 [開發人員命令提示字元] (或您想要使用的命令提示字元)。
+### <a name="windows-7"></a>Windows 7
 
-### <a name="in-windows-7"></a>在 Windows 7
+1. 選擇 [**開始**]，然後展開 [**所有程式**]。
 
-1. 選擇 [開始]，展開 [所有程式]，然後展開 [Microsoft Visual Studio]。
+1. **針對 VS 2019**選擇**Visual Studio 2019** > **Visual Studio Tools** > 開發人員命令提示字元或您想要使用的命令提示字元。
 
-2. 根據您已安裝的 Visual Studio 版本，請選擇 [Visual Studio Tools]、[Visual Studio 命令提示字元] 或您想要使用的命令提示字元。
+   ![已反白顯示命令提示字元的 Windows 7 [開始] 功能表](./media/developer-command-prompt-for-vs/windows7-menu.png)
 
-如果已安裝 [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) 或[舊版](https://developer.microsoft.com/windows/downloads/sdk-archive)之類的其他 SDK，您可能會看到 ARM、x86 或 x64 架構的其他命令提示字元。 查看個別工具的文件以判斷要使用哪個版本的命令提示字元。
+如果您已安裝其他 Sdk （例如[Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk)或[舊版](https://developer.microsoft.com/windows/downloads/sdk-archive)），您可能會看到其他的命令提示字元。 查看個別工具的文件以判斷要使用哪個版本的命令提示字元。
 
 ## <a name="manually-locate-the-files-on-your-machine"></a>以手動方式尋找您電腦上的檔案
 
-您已安裝之命令提示字元的捷徑通常會位於 Visual Studio 的 [開始功能表] 資料夾中，例如 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools 中。 但如果基於某些原因，搜尋命令提示字元未產生預期的結果，您可以嘗試以手動方式尋找電腦上的捷徑。 嘗試搜尋 *VsDevCmd.bat* 等命令提示字元檔案名稱，或移至 C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools 之類的 Tools 資料夾 (根據您的 Visual Studio 版本和安裝位置，這個路徑會變更)。
+您已安裝之命令提示字元的快捷方式通常會放在 Visual Studio 的 [**開始功能表**] 資料夾中，例如 *%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual Studio 2019 \ Visual Studio Tools*。 但如果基於某些原因，搜尋命令提示字元並不會產生預期的結果，您可以嘗試在您的電腦上手動找出快捷方式。 請嘗試搜尋命令提示字元檔案的名稱（例如*vsdevcmd.bat*），或移至 [工具] 資料夾，例如 *% ProgramFiles （x86）% \ Microsoft Visual Studio\2019\Community\Common7\Tools* （根據您的 Visual Studio 版本、版本和安裝位置的路徑變更）。
 
-## <a name="run-the-command-prompt-from-inside-visual-studio"></a>從 Visual Studio 內部執行命令提示字元
+## <a name="start-the-command-prompt-from-inside-visual-studio"></a>從內部啟動命令提示字元 Visual Studio
 
-為方便存取，您可以將 Visual Studio 開發人員命令提示字元或任何其他命令提示字元新增至 Visual Studio 的 [工具] 功能表。 若要讓工具可供使用，請將它新增至外部工具清單。 其步驟如下：
+為方便存取，您可以將開發人員命令提示字元或任何其他命令提示字元新增至 Visual Studio 中的 [工具] 功能表。 若要讓工具可供使用，請將它新增至外部工具清單。 其步驟如下：
 
 1. 開啟 Visual Studio。
 
-2. 選取 [工具] 功能表，然後選擇 [外部工具]。
+1. 在 [開始] 視窗中，選擇 [不使用程式碼繼續]。
 
-3. 在 [外部工具] 對話方塊中，選擇 [加入] 按鈕。 新項目隨即出現。
+1. 在功能表列上，選擇 [**工具**] > [**外部工具**]。
 
-4. 輸入新功能表項目的 [標題]，例如 `Command Prompt`。
+1. 在 [外部工具] 對話方塊中，選擇 [加入] 按鈕。 新項目隨即出現。
 
-5. 在 [命令] 欄位中，指定您要啟動的檔案，例如 `%comspec%` 或 `C:\Windows\System32\cmd.exe`。
+1. 輸入新功能表項目的 [標題]，例如 `Command Prompt`。
 
-6. 在 [引數] 欄位中，指定尋找所要使用之特定命令提示字元的位置，例如 `/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` (此命令會啟動隨 Visual Studio 2017 Enterprise 一起安裝的開發人員命令提示字元)。 根據您的 Visual Studio 版本和安裝位置變更這個值。
+1. 在 [命令] 欄位中，指定您要啟動的檔案，例如 `%comspec%` 或 `C:\Windows\System32\cmd.exe`。
 
-7. 選擇 [初始目錄] 欄位的值，例如 [專案目錄]。
+1. 在 [**引數**] 欄位中，指定要在哪裡尋找您要使用的特定命令提示字元，例如 `/k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat"`。 此命令會啟動隨 Visual Studio 2019 的社區安裝的開發人員命令提示字元。 根據您的 Visual Studio 版本和安裝位置變更這個值。
 
-8. 選擇 [確定] 按鈕。
+1. 在 [**初始目錄**] 欄位中，指定要在其中啟動命令提示字元的目錄。 選取欄位旁的箭號，以選擇 [**專案目錄**] 之類的值。
 
-   這會新增功能表項目，而且您可以從 [工具] 功能表存取命令提示字元。
+1. 選擇 [ **確定** ] 按鈕。
 
-   ![Visual Studio 中的命令提示字元功能表項目](./media/command-prompt-vs-menu.png)
+   ![填入域值的 [外部工具] 對話方塊。](./media/developer-command-prompt-for-vs/add-external-tool.png)
 
-## <a name="see-also"></a>另請參閱
+   [新增] 功能表項目隨即加入，而且您可以從 [工具] 功能表存取命令提示字元。
 
-- [工具](index.md)
+   ![Visual Studio 中的命令提示字元功能表項目](./media/developer-command-prompt-for-vs/command-prompt-vs-menu.png)
+
+## <a name="see-also"></a>請參閱
+
+- [.NET Framework 工具](index.md)
 - [管理外部工具](/visualstudio/ide/managing-external-tools)
+- [從命令列C++使用 Microsoft 工具組](/cpp/build/building-on-the-command-line)

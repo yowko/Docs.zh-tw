@@ -6,14 +6,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], creating cryptographic schemes
 - cryptography [.NET Framework], creating cryptographic schemes
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ef3741ef5cec720c2fb285c9aa60d610acc0be9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00fff5f346633a9682d75cf6a3be7e8e7d5db7e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909385"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706288"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>建立密碼編譯配置
 .NET Framework 的密碼編譯元件可以結合以建立不同的配置，來加密和解密資料。  
@@ -32,6 +30,6 @@ ms.locfileid: "61909385"
   
  建立密碼編譯配置不是簡單的工作。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [The signature is valid](../../../docs/standard/security/cryptographic-services.md)

@@ -3,13 +3,12 @@ title: 套件、中繼套件和架構 - .NET Core
 description: 了解套件、中繼套件和架構的術語。
 author: richlander
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 7b019686df195a8cebdce126f7a0b2d22548dc0e
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: bd40ca603aaa9685fca9934368895bf7e945d962
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275758"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715512"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>套件、中繼套件和架構
 
@@ -17,7 +16,7 @@ ms.locfileid: "72275758"
 
 每個 .NET Core 套件可支援在多個 .NET 實作 (以架構來代表) 上執行。 這些架構有些是傳統的架構，例如 `net46` 即表示 .NET Framework。 其他還有可以視為「套件型架構」的全新架構，該架構可以建立新的模型來定義架構。 這些套件型架構完全是以套件形式構成與定義，並在套件和架構之間形成強式關聯。
 
-## <a name="packages"></a>Packages
+## <a name="packages"></a>package
 
 .NET Core 分割成各個套件組，以提供基本、較高層級的資料類型、應用程式組合類型與一般公用程式。 其中的每個套件皆代表具有相同名稱的單一組件。 例如，[System.Runtime](https://www.nuget.org/packages/System.Runtime) 包含 System.Runtime.dll。 
 
@@ -107,9 +106,9 @@ ms.locfileid: "72275758"
 - `netstandard`
 - `netcoreapp`
 
-### <a name="net-standard"></a>.NET Standard
+### <a name="net-standard"></a>.NET 標準
 
-.NET Standard ([目標 Framework Moniker](../standard/frameworks.md)：`netstandard`) 架構代表由 [.NET Standard](../standard/net-standard.md) 所定義並建立於其上的 API。 要在多個執行階段上執行的程式庫應以此架構為目標。 任何與 .NET Standard 相容的執行階段皆可支援這類程式庫，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 其中每個執行階段都支援一組 .NET Standard 版本，這取決於它們實作哪些 API 而定。
+.NET Standard ([目標 Framework Moniker](../standard/frameworks.md)：`netstandard`) 架構代表由 [.NET Standard](../standard/net-standard.md) 所定義並建立於其上的 API。 要在多個執行階段上執行的程式庫應以此架構為目標。 任何與 .NET Standard 相容的執行階段皆可支援這類程式庫，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 其中每個執行階段都支援一組 .NET 標準版本，這取決於它們實作哪些 API 而定。
 
 `netstandard` 架構會隱含參考 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) 中繼套件。 例如，下列 MSBuild 專案檔指出專案是以 `netstandard1.6` 為目標，而該版本參考 [`NETStandard.Library` 1.6 版](https://www.nuget.org/packages/NETStandard.Library/1.6.0)的中繼套件。
 

@@ -1,6 +1,5 @@
 ---
 title: Lambda 運算式 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/29/2019
 helpviewer_keywords:
 - lambda expressions [C#]
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: d401c832dd3b29de609e9eaab69ea3334d6591b9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 668bb08526a6eeb1cf640c9ecdac3b8f2c850a99
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417674"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711944"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 運算式 (C# 程式設計指南)
 
@@ -32,7 +31,7 @@ ms.locfileid: "73417674"
   (input-parameters) => { <sequence-of-statements> }
   ```
 
-請使用 [Lambda 宣告運算子 `=>` ](../../language-reference/operators/lambda-operator.md) 來分隔 Lambda 的參數清單及其主體。 若要建立 Lambda 運算式，請在 Lambda 運算子 的左邊指定輸入參數 (如果有的話)，並在另一邊指定運算式或陳述式區塊。
+請使用 [Lambda 宣告運算子 `=>`](../../language-reference/operators/lambda-operator.md) 來分隔 Lambda 的參數清單及其主體。 若要建立 Lambda 運算式，請在 Lambda 運算子 的左邊指定輸入參數 (如果有的話)，並在另一邊指定運算式或陳述式區塊。
 
 任何 Lambda 運算式可轉換成[委派](../../language-reference/builtin-types/reference-types.md#the-delegate-type)型別。 Lambda 運算式可以轉換成的委派型別，是由其參數和傳回值的型別所定義。 如果 Lambda 運算式不會傳回值，則其可轉換成其中一個 `Action` 委派型別；否則可轉換成其中一個 `Func` 委派型別。 例如，具有兩個參數且不會傳回值的 Lambda 運算式，可以轉換成 <xref:System.Action%602> 委派。 具有一個參數且會傳回值的 Lambda 運算式，可以轉換成 <xref:System.Func%602> 委派。 在下列範例中，Lambda 運算式 `x => x * x` 會指定名為 `x` 的參數，並傳回 `x` 平方的值，此運算式已指派給委派型別的變數：
 

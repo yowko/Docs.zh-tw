@@ -3,14 +3,12 @@ title: 使用 XPathNavigator 巡覽節點集
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 44b102cf160dcc4b3f188451d42d3b8dbefa5d1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 91115af03b635d7660721fac5ce8bd749953e4ff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590188"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710566"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>使用 XPathNavigator 巡覽節點集
 您可以使用 <xref:System.Xml.XPath.XPathDocument> 類別的節點集巡覽方法，巡覽 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathNavigator> 物件中的節點。 您可以巡覽所有節點或由 <xref:System.Xml.XPath.XPathNavigator> 類別的其中一個選取方法傳回的選定節點集。  
@@ -20,7 +18,7 @@ ms.locfileid: "64590188"
   
  如需有關選取 <xref:System.Xml.XPath.XPathNavigator> 物件中之節點的詳細資訊，請參閱[使用 XPathNavigator 選取、評估與比對 XML 資料](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)。 如需有關巡覽屬性和命名空間節點的詳細資訊，請參閱[使用 XPathNavigator 巡覽屬性及命名空間節點](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)。  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |<xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>|將 <xref:System.Xml.XPath.XPathNavigator> 移至與指定之 <xref:System.Xml.XPath.XPathNavigator> 相同的位置。|  
 |<xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>|將 <xref:System.Xml.XPath.XPathNavigator> 移至目前節點的子節點。|  
@@ -52,7 +50,7 @@ ms.locfileid: "64590188"
   
 - <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

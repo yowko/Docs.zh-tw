@@ -11,22 +11,21 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-author: KrzysztofCwalina
-ms.openlocfilehash: 4c7f411bdf538762de18873007c839f66911f96a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad98c0f3b02bdc81e6348493b4e0a02f9cb20ed4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757257"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709188"
 ---
 # <a name="naming-guidelines"></a>命名方針
-遵循一組一致的開發架構的命名慣例，可以是主要的投稿內容架構的可用性。 它可讓廣泛分隔的專案上的許多開發人員所使用的架構。 超過表單的一致性，必須容易了解架構元素的名稱，並必須傳達每個項目的函式。  
+在開發架構時遵循一組一致的命名慣例，可能是架構可用性的主要貢獻。 它可讓許多開發人員在廣為分隔的專案上使用架構。 除了表單的一致性之外，架構專案的名稱也必須容易理解，而且必須傳達每個元素的函式。  
   
- 本指南的目標是提供一組一致的命名慣例，產生對開發人員的即時運算的有意義的名稱。  
+ 本章的目標是要提供一組一致的命名慣例，讓開發人員能夠立即瞭解其名稱。  
   
- 雖然因為一般開發指導方針會導致更一致的命名，在整個程式碼，請採用下列命名慣例，您僅需要將它們套用到對外公開的 Api (公用或受保護的類型和成員，以及明確實作介面）。  
+ 雖然將這些命名慣例當做一般程式碼開發指導方針，會在整個程式碼中產生更一致的命名，但您只需要將它們套用至公開公開的 Api （公用或受保護的類型和成員，以及明確實作為介面）。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [大小寫慣例](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
  [一般命名慣例](../../../docs/standard/design-guidelines/general-naming-conventions.md)  
  [組件和 DLL 的名稱](../../../docs/standard/design-guidelines/names-of-assemblies-and-dlls.md)  
@@ -35,10 +34,10 @@ ms.locfileid: "61757257"
  [類型成員名稱](../../../docs/standard/design-guidelines/names-of-type-members.md)  
  [命名參數](../../../docs/standard/design-guidelines/naming-parameters.md)  
  [命名資源](../../../docs/standard/design-guidelines/naming-resources.md)  
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

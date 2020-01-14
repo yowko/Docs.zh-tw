@@ -3,17 +3,15 @@ title: 使用 XPathNavigator 巡覽屬性及命名空間節點
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4188896fb36d8535f86b245c3b1942f5a058da9b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6809a2a47a9ca25a16a9be75a0a8a8b03f98a21d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69936839"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711151"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>使用 XPathNavigator 巡覽屬性及命名空間節點
-<xref:System.Xml.XPath.XPathNavigator> 類別提供兩組巡覽方法，第一組 (可在[使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)主題中找到) 用於巡覽 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的*節點集*。 第二組 (在本主題中說明) 用於巡覽 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的「屬性及命名空間節點」  。  
+<xref:System.Xml.XPath.XPathNavigator> 類別提供兩組巡覽方法，第一組 (可在[使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)主題中找到) 用於巡覽 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的*節點集*。 第二組 (在本主題中說明) 用於巡覽 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的「屬性及命名空間節點」。  
   
 ## <a name="attribute-node-navigation"></a>屬性節點巡覽  
  屬性 (Attribute) 是項目的屬性 (Property)，而不是項目的子系。 這個差別是很重要的，因為這關係到用來巡覽同層級節點、父節點及子節點之 <xref:System.Xml.XPath.XPathNavigator> 類別的方法。  
@@ -96,7 +94,7 @@ ms.locfileid: "69936839"
 > [!NOTE]
 > <xref:System.Xml.XPath.XPathNavigator> 類別會以反向的文件順序傳回命名空間節點。 因此，<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> 實際上會移至目前範圍中的最後一個命名空間節點。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

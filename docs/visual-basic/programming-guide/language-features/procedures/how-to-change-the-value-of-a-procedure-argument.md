@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: e562c0f5ec01380c792b4dc064554171cfb007e7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: deac87ca4690990a4d00f63d0ea9b843c3f9a9c4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74339950"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344483"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>如何：變更程序引數的值 (Visual Basic)
 當您呼叫程式時，您所提供的每個引數都會對應至程式中所定義的其中一個參數。 在某些情況下，程式碼可以變更呼叫程式碼中引數的基礎值。 在其他情況下，程式只會變更其引數的本機複本。  
@@ -69,7 +69,7 @@ ms.locfileid: "74339950"
   
  您可以防止程式在呼叫程式碼中修改變數本身。 請參閱[如何：根據值變更保護程式引數](./how-to-protect-a-procedure-argument-against-value-changes.md)。  
   
-## <a name="compiling-the-code"></a>編譯程式碼  
+## <a name="compile-the-code"></a>編譯程式碼  
  當您以傳址方式傳遞變數時，您必須使用 `ByRef` 關鍵字來指定這項機制。  
   
  Visual Basic 中的預設值是以傳值方式傳遞引數。 不過，在每個宣告的參數中包含[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字是很好的程式設計作法。 這可讓您的程式碼更容易閱讀。  

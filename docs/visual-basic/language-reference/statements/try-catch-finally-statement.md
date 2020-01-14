@@ -20,13 +20,12 @@ helpviewer_keywords:
 - Visual Basic code, handling errors while running
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
-ms.custom: seodec18
-ms.openlocfilehash: eb04b6cff0847009407e38a3696e9be7c700356c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: bb6f17f7ce88caea0b9d30ec880194f2bb71c6a6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337338"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705765"
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally 陳述式 (Visual Basic)
 
@@ -135,7 +134,7 @@ End Try
 
 `Await` 運算式不能在 `Catch` 區塊或 `Finally` 區塊內。
 
-## <a name="iterators"></a>迭代器
+## <a name="iterators"></a>Iterators
 
 Iterator 函數或 `Get` 存取子會在集合上執行自訂反復專案。 反覆運算器會使用[Yield](yield-statement.md)語句，一次傳回集合中的每個元素。 您可以使用[For Each ... 來呼叫 iterator 函數。下一個語句](for-each-next-statement.md)。
 

@@ -3,22 +3,22 @@ title: 新增 WCF Web Service Reference
 description: 新增 .NET Core 和 ASP.NET Core 專案功能的 Microsoft WCF Web Service Reference Provider 工具概觀，與 .NET Framework 專案的「新增服務參考」類似。
 author: dasetser
 ms.date: 10/29/2019
-ms.custom: mvc, seodec18
-ms.openlocfilehash: feecf374e1af48f349495c13ea91b810c6b0a1c3
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.custom: mvc
+ms.openlocfilehash: cdd6b457d289dd7b752c97c5645f0797f24b72aa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191906"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715677"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>使用 WCF Web Service Reference Provider 工具
 
-多年來，許多 Visual Studio 開發人員都享受[**新增服務參考**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)工具在其 .NET Framework 專案需要存取 Web 服務時所提供的生產力。  **WCF Web Service Reference** 工具是 Visual Studio 連線服務延伸模組，以針對 .NET Core 和 ASP.NET Core 專案提供「新增服務參考」功能這類體驗。 此工具可從目前方案中的 Web 服務、網路位置或 WSDL 檔案擷取中繼資料，且能產生與 .NET Core 相容的來源檔案，其中包含的 Windows Communication Foundation (WCF) 用戶端 Proxy 程式碼可讓您用於存取 Web 服務。
+多年來，許多 Visual Studio 開發人員都享受[**新增服務參考**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)工具在其 .NET Framework 專案需要存取 Web 服務時所提供的生產力。  **WCF Web Service Reference** 工具是 Visual Studio 連線服務延伸模組，以針對 .NET Core 和 ASP.NET Core 專案提供「新增服務參考」功能這類體驗。 此工具可從目前解決方案中的 Web 服務、網路位置或 WSDL 檔案擷取中繼資料，且能產生與 .NET Core 相容的來源檔案，其中包含的 Windows Communication Foundation (WCF) 用戶端 Proxy 程式碼可讓您用於存取 Web 服務。
 
 > [!IMPORTANT]
 > 您只應該參考來自信任來源的服務。 新增不信任來源的參考可能會危及安全性。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 - [Visual Studio 2017 15.5 版](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)或更新版本
 

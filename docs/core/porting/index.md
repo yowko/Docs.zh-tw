@@ -3,15 +3,14 @@ title: 從 .NET Framework 到 .NET Core 的埠
 description: 了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。
 author: cartermp
 ms.date: 10/22/2019
-ms.custom: seodec18
-ms.openlocfilehash: 89f00e5c6ce7f3cea7a3135c9b2856c54a70da40
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b5b010acbccf134afe800aa5bb98a0ae6e9ffa25
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038523"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777363"
 ---
-# <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>從 .NET Framework 到 .NET Core 的移植程式總覽
+# <a name="overview-of-porting-from-net-framework-to-net-core"></a>從 .NET Framework 移植到 .NET Core 的總覽
 
 您的程式碼可能目前是在您想要移植到 .NET Core 的 .NET Framework 上執行。 本文提供：
 
@@ -22,7 +21,7 @@ ms.locfileid: "73038523"
 
 將您的專案移植到 .NET Core 時，建議您使用下列進程：
 
-1. 將所有想要移轉到目標 .NET Framework 4.7.2 或更新版本的專案重定為目標。
+1. 將您想要移植到 .NET Framework 目標的所有專案，都設為4.7.2 或更高。
 
    此步驟可確保當 .NET Core 無法支援特定 API 時，您可以使用 .NET Framework 特定目標的 API 替代方案。
 
@@ -44,9 +43,11 @@ ms.locfileid: "73038523"
 
 6. 移植您的測試程式碼。
 
-   因為移轉到 .NET Core 對程式碼基底是巨變，所以強烈建議您移轉測試，以便在移轉您的程式碼時執行測試。 MSTest、xUnit 和 NUnit 全都適用于 .NET Core。
+   由於移植到 .NET Core 是您程式碼基底的重大變更，因此強烈建議您移植測試專案，讓您可以在將程式碼移植到時執行測試。 MSTest、xUnit 和 NUnit 全都適用于 .NET Core。
 
-此外，您可以在單一作業中，使用 [[dotnet try-convert](https://github.com/dotnet/try-convert)] 工具，嘗試將較小的方案或個別專案移植到 .NET Core 專案檔案格式。 `dotnet try-convert` 不保證適用於您的所有專案，而且可能會導致您所依賴之行為發生細微變更。 它應該做為自動化可以自動化之基本事項的「起點」。 它不是可移轉專案的保證解決方案。
+此外，您可以使用 dotnet 的 [[嘗試轉換](https://github.com/dotnet/try-convert)] 工具，嘗試將一項作業中較小的方案或個別專案移植到 .net Core 專案檔案格式。 `dotnet try-convert` 不保證適用于您所有的專案，而且可能會對您所依賴的行為造成細微的變更。 使用它做為自動化可自動化之基本事項的_起點_。 它不是可移轉專案的保證解決方案。
 
->[!div class="step-by-step"]
->[下一步](net-framework-tech-unavailable.md)
+## <a name="next-steps"></a>後續步驟
+
+>[!div class="nextstepaction"]
+>[.NET Core 上的無法使用技術](net-framework-tech-unavailable.md)

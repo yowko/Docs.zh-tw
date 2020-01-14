@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d08399933f37c4110639bf1f4a81f222dd597b4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910313"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709617"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>樣式表參數和擴充物件的 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 類別包含可擴充樣式表語言轉換 (XSLT) 參數和 XSLT 擴充物件。 傳入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法後，就可從樣式表叫用這些參數和擴充物件。  
@@ -40,9 +38,9 @@ ms.locfileid: "69910313"
   
 |W3C 型別|對等的 .NET Framework 類別 (型別)|XPath 型別或 XSLT 型別|  
 |--------------|----------------------------------------------|-----------------------------|  
-|String|System.String|XPath|  
+|字串|System.String|XPath|  
 |Boolean|System.Boolean|XPath|  
-|number|System.Double|XPath|  
+|Number|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
@@ -364,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

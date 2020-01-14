@@ -1,15 +1,13 @@
 ---
 title: 發行 NuGet 套件
 description: 發行 .NET 程式庫到 NuGet 的最佳做法建議。
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 9c8442b52ed2c54d2fb3368a2e886c5fc2b19148
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640780"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706461"
 ---
 # <a name="publishing-a-nuget-package"></a>發行 NuGet 套件
 
@@ -24,7 +22,7 @@ NuGet 套件發行之後可從套件存放庫取用。 雖然 NuGet.org 是最�
 > [!NOTE]
 > 一旦套件上傳，NuGet.org 便[不允許刪除套件](/nuget/policies/deleting-packages)。 您可以將套件取消列出，這樣它在 UI 中就不會被大眾看見，但還原時仍能下載 `*.nupkg`。 此外，nuget.org 也不允許重複的套件版本。 若要修正發生錯誤的 NuGet 套件，您必須取消列出不正確的套件、累加版本號碼，然後發行新版本的套件。
 
-**✔️ 請務必**[發行穩定套件與您想要從社群取得意見反應之發行前版本套件](/nuget/create-packages/publish-a-package) 到 NuGet.org。
+**✔️**要[發佈穩定的套件和發行前版本套件](/nuget/create-packages/publish-a-package)，讓您想要 NuGet.org 的社區意見反應。
 
 **✔️ 考慮**從持續整合組建將發行前版本套件發行到 MyGet 摘要。
 

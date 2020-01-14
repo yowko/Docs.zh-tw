@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: fd0875f09bf3ba7211ede500aa0da45f8b7cd2c7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5035466de4aa17c374824e1b0f02ed594731a9d3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344768"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716803"
 ---
 # <a name="-define-visual-basic"></a>-define （Visual Basic）
 定義條件式編譯器常數。  
@@ -31,23 +31,23 @@ ms.locfileid: "74344768"
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>Arguments  
   
 |詞彙|定義|  
 |---|---|  
-|`symbol`|必要。 要定義的符號。|  
-|`value`|選擇性。 要指派 `symbol` 的值。 如果 `value` 是字串，則必須以反斜線/引號序列（\\"）括住，而不是使用引號。 如果未指定值，則會認為是 True。|  
+|`symbol`|必要項。 要定義的符號。|  
+|`value`|選擇項。 要指派 `symbol` 的值。 如果 `value` 是字串，則必須以反斜線/引號序列（\\"）括住，而不是使用引號。 如果未指定值，則會認為是 True。|  
   
 ## <a name="remarks"></a>備註  
  [`-define`] 選項的效果類似于在原始程式檔中使用 `#Const` 預處理器指示詞，但以 `-define` 定義的常數是公用的，而且會套用至專案中的所有檔案。  
   
  您可以使用此選項建立的符號，搭配 `#If`...`Then`...`#Else` 指示詞，有條件地編譯原始程式檔。  
   
- `-d` 是 `-define`的簡短形式。  
+ `-d` 是 `-define` 的簡短形式。  
   
  您可以使用逗號分隔符號定義，以 `-define` 定義多個符號。  
   
-|在 Visual Studio 整合式開發環境中設定 / 定義|  
+|若要在 Visual Studio 的整合式開發環境中設定-define|  
 |---|  
 |1. 在**方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2. 按一下 [**編譯**] 索引標籤。<br />3. 按一下 [ **Advanced**]。<br />4. 修改 [**自訂常數**] 方塊中的值。|  
   

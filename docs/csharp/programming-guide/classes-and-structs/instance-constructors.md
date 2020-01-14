@@ -1,17 +1,16 @@
 ---
 title: 執行個體建構函式 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: 198f9db1430226343fd3709c66d16b68e975ab3a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ee3cc30334154ef8aae6d7d26286463c537ff3dd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922174"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714805"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>執行個體建構函式 (C# 程式設計手冊)
 
@@ -24,7 +23,7 @@ ms.locfileid: "69922174"
 > [!NOTE]
 > 為了清楚起見，這個類別會包含公用欄位。 我們不建議您在程式設計中使用公用欄位，因為這麼做會允許程式中的任何方法，在不受限制及未經驗證的情況下，存取物件的內部運作。 資料成員一般應為私用，而且只應透過類別方法和屬性來存取。  
   
- 每當建立以 `Coords` 類別為基礎的物件時，即會呼叫這個執行個體建構函式。 像這種不接受任何引數的建構函式，稱為「無參數建構函式」  。 不過，提供額外的建構函式通常很實用。 比方說，我們可以將建構函式新增至 `Coords` 類別，以指定資料成員的起始值：  
+ 每當建立以 `Coords` 類別為基礎的物件時，即會呼叫這個執行個體建構函式。 像這種不接受任何引數的建構函式，稱為「無參數建構函式」。 不過，提供額外的建構函式通常很實用。 比方說，我們可以將建構函式新增至 `Coords` 類別，以指定資料成員的起始值：  
   
  [!code-csharp[csProgGuideObjects#76](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#76)]  
   
@@ -59,7 +58,7 @@ ms.locfileid: "69922174"
   
  如需更多基底類別建構函式的叫用範例，請參閱 [virtual](../../language-reference/keywords/virtual.md)、[override](../../language-reference/keywords/override.md) 和 [base](../../language-reference/keywords/base.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)

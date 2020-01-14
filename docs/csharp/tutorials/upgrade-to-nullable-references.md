@@ -4,12 +4,12 @@ description: 這個 advanced 教學課程示範如何使用可為 null 的參考
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 75bc8d278efb66363212e3e000154ffc70f373bf
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634907"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740461"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教學課程：使用可為 null 的參考型別來遷移現有程式碼
 
@@ -167,4 +167,4 @@ public class NewsStoryViewModel
 
 您已修正您在初始測試編譯中識別的警告，因此現在您可以開啟兩個專案的可為 Null 註釋內容。 重建專案，編譯器不會回報任何警告。 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished) GitHub 存放庫取得完成專案的程式碼。
 
-支援可為 Null 參考型別的新功能，可協助您尋找並修正處理您程式碼中 `null` 值方式中潛在的錯誤。 啟用可為 Null 註釋內容，可讓您表達您的設計意圖：有些變數永遠不該為 Null，其他變數則可以包含 Null 值。 這些功能可讓您更輕易地宣告設計意圖。 同樣的，可為 Null 警告內容會指示編譯器，在您違反該意圖時發出警告。 這些警告會引導您進行更新，讓您的程式碼復原性更佳，並降低在執行期間擲回 `NullReferenceException` 的機率。 您可以控制這些內容的範圍，讓您專注在要遷移的程式碼本機區域，而無須更動剩餘的程式碼基底。 在實務上，您可以將此移轉任務作為您類別一般維護的一部分。 本教學課程示範了遷移應用程式，以使用可為 Null 參考型別的過程。 您可以透過檢查 [Jon Skeet](https://github.com/jskeet) 為了將可為 Null 參考型別併入 [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits) 所製作的 PR，來探索這項程序的更大實際範例。
+支援可為 Null 參考型別的新功能，可協助您尋找並修正處理您程式碼中 `null` 值方式中潛在的錯誤。 啟用可為 Null 註釋內容，可讓您表達您的設計意圖：有些變數永遠不該為 Null，其他變數則可以包含 Null 值。 這些功能可讓您更輕易地宣告設計意圖。 同樣的，可為 Null 警告內容會指示編譯器，在您違反該意圖時發出警告。 這些警告會引導您進行更新，讓您的程式碼復原性更佳，並降低在執行期間擲回 `NullReferenceException` 的機率。 您可以控制這些內容的範圍，讓您專注在要遷移的程式碼本機區域，而無須更動剩餘的程式碼基底。 在實務上，您可以將此移轉任務作為您類別一般維護的一部分。 本教學課程示範了遷移應用程式，以使用可為 Null 參考型別的過程。 您可以透過檢查 [Jon Skeet](https://github.com/jskeet) 為了將可為 Null 參考型別併入 [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits) 所製作的 PR，來探索這項程序的更大實際範例。 或者，您也可以透過[Entity Framework Core-使用可為 null 的參考](/ef/core/miscellaneous/nullable-reference-types)型別，學習使用可為 null 的參考型別搭配 Entity Framework Core 的技術。

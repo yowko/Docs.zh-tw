@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 X.509 憑證加密 XML 元素
+title: HOW TO：使用 X.509 憑證加密 XML 項目
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,16 +14,14 @@ helpviewer_keywords:
 - X.509 certificates
 - certificates, X.509 certificates
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d569d3c020e7329d987e957f181b34c8cfbf941a
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 7f74e4e46ba760b7a943b2e2728e487ee87ae204
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353856"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706067"
 ---
-# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>如何：使用 X.509 憑證加密 XML 元素
+# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>HOW TO：使用 X.509 憑證加密 XML 項目
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密是交換或儲存加密 XML 資料的標準方法，不必擔心資料被輕易讀取。  如需 XML 加密標準的詳細資訊，請參閱 XML 加密的全球資訊網協會（W3C）規格，位於 <https://www.w3.org/TR/xmldsig-core/>。  
   
  您可以使用 XML 加密將任何 XML 元素或文件取代為包含加密 XML 資料的 <`EncryptedData`> 元素。 <`EncryptedData`> 元素可以包含子元素，而子元素會包含有關加密時所使用之金鑰和程序的資訊。  XML 加密可讓文件中包含多個加密的元素，並允許元素加密多次。  這個程序中的程式碼範例將顯示如何建立 <`EncryptedData`> 元素和數個其他子元素，以便稍後在解密時使用。  
@@ -116,7 +114,7 @@ ms.locfileid: "71353856"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  此範例中使用的 X.509 憑證僅供測試使用。  應用程式應該使用由受信任的憑證授權單位所產生的 X.509 憑證，或使用由 Microsoft Windows 憑證伺服器所產生的憑證。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Security.Cryptography.Xml>
-- [如何：使用 X.509 憑證解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)
+- [操作說明：使用 X.509 憑證解密 XML 元素](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)

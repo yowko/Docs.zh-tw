@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568812"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900915"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
 
@@ -39,7 +39,7 @@ ms.locfileid: "74568812"
 
 5. 啟用伺服器上或資料來源中之二進位資源的存取權。
 
-本主題中的範例是以串流相片服務的範例為基礎，這會在 post[資料服務串流提供者系列：執行串流處理提供者（第1部分）](https://go.microsoft.com/fwlink/?LinkID=198989)中深入探討。 此範例服務的原始程式碼可在 MSDN 程式碼庫的[串流相片資料服務範例頁面](https://go.microsoft.com/fwlink/?LinkID=198988)上取得。
+本主題中的範例是以串流相片服務的範例為基礎，這會在 post[資料服務串流提供者系列：執行串流處理提供者（第1部分）](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)中深入探討。 串流相片資料服務範例的原始程式碼可在[GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample)上取得。
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>在資料模型中定義媒體連結項目
 
@@ -53,7 +53,7 @@ ms.locfileid: "74568812"
 
 您也必須將命名空間 `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` 加入至實體或定義資料模型之 .edmx 或 .csdl 檔案的根。
 
-如需使用 Entity Framework 提供者並公開媒體資源之資料服務的範例，請參閱文章[資料服務串流提供者系列：執行串流處理提供者（第1部分）](https://go.microsoft.com/fwlink/?LinkID=198989)。
+如需使用 Entity Framework 提供者並公開媒體資源之資料服務的範例，請參閱文章[資料服務串流提供者系列：執行串流處理提供者（第1部分）](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1)。
 
 **反映提供者**
 

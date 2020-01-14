@@ -1,18 +1,17 @@
 ---
-title: .NET 的核心和開放原始碼
+title: .NET Core 和開放原始碼
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2ad74a70fff9916dc66bb4d2eacbdaf40cb241c3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 4032ba771d917d25473c8de350cc752bd052f94d
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70853957"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75752543"
 ---
-# <a name="net-core-and-open-source"></a>.NET 的核心和開放原始碼
-本主題概要說明什麼是 .NET Core，並說明如何尋找更多資訊。 若要尋找 .NET Core 主題的完整清單，請瀏覽 [.NET Core 指南](../../core/index.md)。
+# <a name="net-core-and-open-source"></a>.NET Core 和開放原始碼
+
+本文簡要介紹 .NET Core 的功能，並說明您可以如何尋找更多資訊。 若要尋找 .NET Core 檔的完整清單，請造訪[.Net core 指南](../../core/index.md)。
   
 <a name="BKMK_WhatisNETCore"></a>   
 ## <a name="what-is-net-core"></a>什麼是 .NET Core？  
@@ -20,7 +19,7 @@ ms.locfileid: "70853957"
   
  若要開始使用 .NET Core，請[在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)流覽 .net 教學課程 Hello World。  
   
- .NET Core 的主要特性如下：  
+.NET Core 的主要特性如下：
   
 - **跨平台：** .NET Core 的主要功能是實作您所需要的應用程式功能，並不分平台地重複使用此程式碼。 它目前支援三個主要作業系統 (OS)：Windows、Linux 和 macOS。 您可以撰寫應用程式和程式庫，未經修改即可在支援的作業系統上執行。 若要查看支援的作業系統清單，請瀏覽 [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md) (.NET Core 藍圖)。
   
@@ -30,23 +29,22 @@ ms.locfileid: "70853957"
 
 - **模組化：** .NET Core 因為是透過 NuGet 以較小型的組件套件發行，所以稱為模組化版本。 不同於大型組件會包含大部分的核心功能，.NET Core 著眼於特定功能，會以較小型的套件提供。 這讓我們有更靈活的開發模型，並可讓您最佳化應用程式，只包含所需的 NuGet 套件。 應用程式介面區較小的優點包括更嚴密的安全性、減少維護工作、提升效能，以及降低依使用內容付費模型的成本。  
   
-## <a name="the-net-core-platform"></a>.NET Core 平台  
- .NET Core 平台是由幾個元件所組成，其中包含 Managed 編譯器、執行階段、基底類別庫，以及許多應用程式模型 (例如 ASP.NET Core)。 您可以前往下列 [GitHub](https://github.com/) 存放庫，以深入了解並使用不同的元件：  
+## <a name="the-net-core-platform"></a>.NET Core 平臺
   
-- [.NET Core](https://github.com/dotnet/core)  
+.NET Core 平臺是由數個元件所組成，包括 managed 編譯器、執行時間、基類庫，以及許多應用程式模型（例如 ASP.NET Core）。 您可以造訪下列[GitHub](https://github.com/)存放庫，以深入瞭解不同的元件並取得參與：  
   
-- [CoreFX - .NET Core 基本程式庫](https://github.com/dotnet/corefx)  
+- [.NET Core 首頁](https://github.com/dotnet/core)  
   
-- [CoreCLR - .NET Core 執行階段](https://github.com/dotnet/coreclr)  
+- [執行時間-.NET Core 平臺和執行時間](https://github.com/dotnet/runtime)  
   
 - [CLI - .NET Core 命令列工具](https://github.com/dotnet/cli)  
   
 - [Roslyn - .NET 編譯器平台](https://github.com/dotnet/roslyn)  
   
-- [ASP.NET Core](https://github.com/aspnet/home)  
+- [ASP.NET Core](https://github.com/dotnet/aspnetcore)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET 教學課程-10 分鐘內 Hello World](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
 - [.NET Core 指南](../../core/index.md)
-- [ASP.NET Core 文件](/aspnet/core/)
+- [ASP.NET Core 檔](/aspnet/core/)

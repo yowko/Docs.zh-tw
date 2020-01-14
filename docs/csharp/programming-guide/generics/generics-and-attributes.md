@@ -1,17 +1,16 @@
 ---
 title: 泛型和屬性 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], attributes
 - attributes [C#], with generics
 ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
-ms.openlocfilehash: 99a24a7069145dfad5ce6c9c91f2a8653eb9a224
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 47bf4e8f07a8b6778db8fa675d745d362dc10d7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589635"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75703022"
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>泛型和屬性 (C# 程式設計手冊)
 屬性可以使用與非泛型型別相同的方式，套用至泛型型別。 如需套用屬性的詳細資訊，請參閱[屬性](../concepts/attributes/index.md)。  
@@ -44,7 +43,7 @@ ms.locfileid: "69589635"
   
  若要取得執行階段的泛型型別或型別參數的相關資訊，您可以使用 <xref:System.Reflection> 的方法。 如需詳細資訊，請參閱[泛型和反映](./generics-and-reflection.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [泛型](./index.md)

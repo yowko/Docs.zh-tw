@@ -1,17 +1,16 @@
 ---
 title: 泛型介面 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 47eba90eba670d2f735c2f5ca24053e23d34e871
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 4cce23da7579e30ecff80b3afb92a5a58795c1bd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659812"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712204"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>泛型介面 (C# 程式設計手冊)
 定義表示集合中項目的泛型集合類別或泛型類別的介面，通常會很有用。 泛型類別的喜好設定會使用泛型介面，例如 <xref:System.IComparable%601> 而不是 <xref:System.IComparable>，以避免實值型別的 boxing 和 unboxing 作業。 .NET Framework 類別庫會定義數個泛型介面，搭配 <xref:System.Collections.Generic> 命名空間中的集合類別使用。  
@@ -44,7 +43,7 @@ ms.locfileid: "69659812"
   
  控制方法多載的規則，和用於泛型類別、泛型結構或泛型介面中的方法的規則一樣。 如需詳細資訊，請參閱[泛型方法](./generic-methods.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [泛型簡介](./index.md)

@@ -1,15 +1,13 @@
 ---
 title: 機器學習工作
 description: 探索 ML.NET 中支援的各種不同機器學習工作與相關的工作。
-ms.custom: seodec18
 ms.date: 12/23/2019
-author: natke
-ms.openlocfilehash: cde4af720fe1ede80cb1bdc6b70f6586293920a4
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636441"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739634"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的機器學習工作
 

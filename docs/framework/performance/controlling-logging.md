@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 924d209cd1177ffc1702ebe958c58bfc29c22c38
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447684"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716113"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 記錄
 
@@ -19,7 +17,7 @@ ms.locfileid: "74447684"
 
 - [Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令列工具，隨附於 Windows 作業系統。
 
-- [Windows 效能工具組](/windows-hardware/test/wpt/xperf-command-line-reference)中的 [Xperf](/windows-hardware/test/wpt/) 工具。 如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)。
+- [Windows 效能工具組](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。 如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)。
 
 若要擷取 CLR 事件資訊，您必須在電腦上安裝 CLR 提供者。 若要確認是否已安裝此提供者，請在命令提示字元中輸入 `logman query providers`。 提供者的清單隨即顯示。 此清單應該會包含 CLR 提供者的項目，如下所示。
 
@@ -55,9 +53,9 @@ Provider                                 GUID
 
     - `-p` 參數會識別提供者 GUID。
 
-    - `0x1CCBD` 指定將引發之事件的類別目錄。
+    - `0x1CCBD` 會指定即將引發之事件的分類。
 
-    - `0x5` 設定記錄層級（在此案例中為 verbose （5））。
+    - `0x5` 會設定記錄的層級 (在本例中，設為詳細資訊 (5))。
 
     - `-ets` 參數會指示 Logman 傳送命令給事件追蹤工作階段。
 
@@ -111,7 +109,7 @@ Provider                                 GUID
 
      這個命令會讓 XPerf 以您可以檢視的逗點分隔值 (CSV) 檔案的形式傾印事件。 因為不同的事件有不同的欄位，所以這個 CSV 檔案中的資料前面會有多行標頭。 每行的第一個欄位都是事件類型，表示應使用哪一行的標頭來判斷其餘的欄位。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Windows 效能工具組](/windows-hardware/test/wpt/)
+- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
 - [Common Language Runtime 中的 ETW 事件](etw-events-in-the-common-language-runtime.md)

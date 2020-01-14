@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用資料保護
+title: 如何：使用資料保護
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,16 +16,14 @@ helpviewer_keywords:
 - decryption
 - data [.NET Framework], encryption
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1dc8c75d3c8c91d974388779528deff16453d852
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0efd677f11189b28b8efc184c04b30a047ab942b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602544"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706028"
 ---
-# <a name="how-to-use-data-protection"></a>HOW TO：使用資料保護
+# <a name="how-to-use-data-protection"></a>如何：使用資料保護
 .NET Framework 提供資料保護 API (DPAPI) 的存取，這可讓您使用目前使用者帳戶或電腦的資訊來加密資料。  當您使用 DPAPI 時，會減少明確產生並儲存密碼編譯金鑰的困難問題。  
   
  使用 <xref:System.Security.Cryptography.ProtectedMemory> 類別來加密記憶體中的位元組陣列。  這項功能提供於 Microsoft Windows XP 和更新版本的作業系統。  您可以指定由目前處理序加密的記憶體只能由目前的處理序解密、可由所有處理序解密，或是可從相同的使用者內容解密。  請參閱 <xref:System.Security.Cryptography.MemoryProtectionScope> 列舉，以取得 <xref:System.Security.Cryptography.ProtectedMemory> 選項的詳細說明。  
@@ -66,7 +64,7 @@ ms.locfileid: "64602544"
   
 - 包含 <xref:System>、<xref:System.IO>、<xref:System.Security.Cryptography> 和 <xref:System.Text> 命名空間。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Security.Cryptography.ProtectedMemory>
 - <xref:System.Security.Cryptography.ProtectedData>

@@ -1,5 +1,5 @@
 ---
-title: 作法：使用具名管道進行網路處理序間通訊
+title: 如何：使用具名管道進行網路處理序間通訊
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,16 +15,14 @@ helpviewer_keywords:
 - impersonation [.NET Framework], named pipes
 - full duplex communication [.NET Framework], named pipes
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ddd862480a5977a4bada17945e10a25753b44de4
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
-ms.translationtype: HT
+ms.openlocfilehash: 71f3a8d38b46993762b2673ea5fe735d8d54d351
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402488"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706630"
 ---
-# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>作法：使用具名管道進行網路處理序間通訊
+# <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>如何：使用具名管道進行網路處理序間通訊
 具名管道可在管道伺服器及一個或多個管道用戶端之間提供處理序間通訊。 它們比在本機電腦上處理流程間通訊的匿名管道提供更多的功能。 具名管道支援在網路及多個伺服器執行個體上進行全雙工通訊、訊息架構通訊及用戶端模擬。用戶端模擬可讓連接處理序在遠端伺服器上使用本身的權限集合。  
   
  若要實作具名管道，請使用 <xref:System.IO.Pipes.NamedPipeServerStream> 和 <xref:System.IO.Pipes.NamedPipeClientStream> 類別。  
@@ -42,12 +40,12 @@ ms.locfileid: "67402488"
  [!code-csharp[System.IO.Pipes.NamedPipeClientStream_ImpersonationSample1#01](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeClientStream_ImpersonationSample1/cs/Program.cs#01)]
  [!code-vb[System.IO.Pipes.NamedPipeClientStream_ImpersonationSample1#01](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Pipes.NamedPipeClientStream_ImpersonationSample1/vb/program.vb#01)]  
   
-## <a name="robust-programming"></a>穩固程式設計  
+## <a name="robust-programming"></a>最佳化程式設計  
  此範例中的用戶端和伺服器處理序要在相同的電腦上執行，因此，提供給 <xref:System.IO.Pipes.NamedPipeClientStream> 物件的伺服器名稱為 `"."`。 如果用戶端和伺服器處理序在不同的電腦上，`"."` 將會取代成執行伺服器處理序之電腦的網路名稱。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>
 - [管道](../../../docs/standard/io/pipe-operations.md)
-- [如何：使用匿名管道進行本機處理序間通訊](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+- [操作說明：使用匿名管道進行本機處理序間通訊](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)

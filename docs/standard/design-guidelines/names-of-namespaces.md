@@ -8,83 +8,82 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-author: KrzysztofCwalina
-ms.openlocfilehash: b8b6ec195fd3f95a4255ea820f2bffcb3e27ba19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0678f695e3ae7c40660031862c9073a21fd72491
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615211"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709227"
 ---
 # <a name="names-of-namespaces"></a>命名空間的名稱
-做為其他命名指導方針，命名的命名空間時的目標建立足夠的清晰度給程式設計人員立即知道命名空間的內容可能是使用架構。 下列範本指定為命名空間進行的一般規則：  
+就像其他命名指導方針一樣，命名命名空間的目標是要讓程式設計人員能夠使用架構來立即知道命名空間的內容有何可能。 下列範本會指定命名空間的一般規則：  
   
  `<Company>.(<Product>|<Technology>)[.<Feature>][.<Subnamespace>]`  
   
- 以下是範例：  
+ 範例如下所示：  
   
  `Fabrikam.Math`  
  `Litware.Security`  
   
- **✓ DO** 命名空間名稱前面加上的公司名稱，以避免不同公司的具有相同名稱的命名空間。  
+ **✓**會在命名空間名稱前面加上公司名稱，以防止來自不同公司的命名空間具有相同的名稱。  
   
- **✓ DO** 第二個層級的命名空間名稱使用的穩定、 版本無關的產品名稱。  
+ **✓**會在命名空間名稱的第二個層級上使用穩定、版本無關的產品名稱。  
   
- **X DO NOT** 使用組織階層做為基礎，名稱在命名空間階層中，因為公司內的群組名稱大多數為暫時性。 組織相關技術的群組周圍的命名空間階層的架構。  
+ **X**不會使用組織階層做為命名空間階層中的名稱基礎，因為公司內的組名通常會短期。 依據相關技術群組來組織命名空間的階層。  
   
- **✓ DO** 期間，使用 PascalCasing，與不同的命名空間的元件 (例如 `Microsoft.Office.PowerPoint`)。 如果您的品牌採用非傳統任務為大小寫，則您應該遵循您的品牌所定義的大小寫，即使它是衍生自標準的命名空間的大小寫。  
+ **✓**會使用 PascalCasing，並以句點（例如 `Microsoft.Office.PowerPoint`）來分隔命名空間元件。 如果您的品牌採用生命的大小寫，則應該遵循您的品牌所定義的大小寫，即使它與一般的命名空間大小寫不一樣。  
   
- **✓ CONSIDER** 適時使用複數命名空間名稱。  
+ **✓請考慮**在適當時使用複數命名空間名稱。  
   
- 例如，使用 `System.Collections` 而不是 `System.Collection`。 品牌名稱與縮寫不過是這項規則的例外狀況。 例如，使用 `System.IO` 而不是 `System.IOs`。  
+ 例如，使用 `System.Collections` 而不是 `System.Collection`。 不過，品牌名稱和縮寫是此規則的例外狀況。 例如，使用 `System.IO` 而不是 `System.IOs`。  
   
- **X DO NOT** 該命名空間中使用相同名稱的命名空間和類型。  
+ **X**在命名空間和該命名空間中的類型不使用相同的名稱。  
   
- 例如，請勿使用`Debug`的命名空間名稱，並也提供類別，名為`Debug`相同的命名空間中。 有好幾種編譯器需要這類的類型是完整名稱。  
+ 例如，請勿使用 `Debug` 做為命名空間名稱，然後在相同的命名空間中提供名為 `Debug` 的類別。 數個編譯器要求這類類型必須是完整的。  
   
 ### <a name="namespaces-and-type-name-conflicts"></a>命名空間和類型名稱衝突  
- **X DO NOT** 引入泛型型別名稱，例如 `Element`， `Node`， `Log`，和 `Message`。  
+ **X 不會**引進泛型型別名稱，例如 `Element`、`Node`、`Log`和 `Message`。  
   
- 沒有極高的可能這樣做會導致輸入名稱衝突在一般案例。 您應該符合資格的泛型型別名稱 (`FormElement`， `XmlNode`， `EventLog`， `SoapMessage`)。  
+ 這麼做的機率很高，會導致常見案例中的型別名稱衝突。 您應該限定泛型型別名稱（`FormElement`、`XmlNode`、`EventLog`、`SoapMessage`）。  
   
- 有避免不同類別的命名空間的型別名稱衝突的特定方針。  
+ 有一些特定的指導方針可避免不同分類命名空間的類型名稱衝突。  
   
 - **應用程式模型命名空間**  
   
-     屬於單一應用程式模型的命名空間會經常一起使用，但幾乎不會搭配其他應用程式模型的命名空間。 例如，<xref:System.Windows.Forms?displayProperty=nameWithType>命名空間很少可搭配使用<xref:System.Web.UI?displayProperty=nameWithType>命名空間。 以下是已知的應用程式模型命名空間群組的清單：  
+     屬於單一應用程式模型的命名空間通常會一起使用，但它們幾乎不會與其他應用程式模型的命名空間搭配使用。 例如，<xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間很少與 <xref:System.Web.UI?displayProperty=nameWithType> 命名空間搭配使用。 以下是知名的應用程式模型命名空間群組清單：  
   
      `System.Windows*`   
      `System.Web.UI*`  
   
-     **X DO NOT** 讓具有相同名稱的單一應用程式模型中的命名空間中的型別。  
+     **X 不會**在單一應用程式模型中，為命名空間中的類型提供相同的名稱。  
   
-     比方說，不會將名為的型別`Page`要<xref:System.Web.UI.Adapters?displayProperty=nameWithType>命名空間，因為<xref:System.Web.UI?displayProperty=nameWithType>命名空間已經包含名為的型別`Page`。  
+     例如，請勿將名為 `Page` 的類型加入 <xref:System.Web.UI.Adapters?displayProperty=nameWithType> 命名空間，因為 <xref:System.Web.UI?displayProperty=nameWithType> 命名空間已經包含名為 `Page`的類型。  
   
 - **基礎結構命名空間**  
   
-     此群組包含很少的常見的應用程式開發期間匯入的命名空間。 比方說，`.Design`命名空間主要是用來開發程式工具。 避免衝突，這些命名空間中的類型並不重要。  
+     此群組包含在開發一般應用程式期間很少匯入的命名空間。 例如，在開發程式設計工具時，主要會使用 `.Design` 命名空間。 避免與這些命名空間中的類型發生衝突並不重要。  
   
 - **核心命名空間**  
   
-     核心命名空間包含所有`System`命名空間，但不包括應用程式模型的命名空間和基礎結構命名空間。 包含核心命名空間，其中， `System`， `System.IO`， `System.Xml`，和`System.Net`。  
+     核心命名空間包含所有 `System` 的命名空間，但不包括應用程式模型的命名空間和基礎結構命名空間。 核心命名空間包括其他 `System`、`System.IO`、`System.Xml`和 `System.Net`。  
   
-     **X DO NOT** 授與類型的核心命名空間中的任何類型，會發生衝突的名稱。  
+     **X**不會提供與核心命名空間中任何類型衝突的類型名稱。  
   
-     比方說，永遠不會使用`Stream`做為型別名稱。 它會和衝突<xref:System.IO.Stream?displayProperty=nameWithType>、 相當常用的型別。  
+     例如，絕對不要使用 `Stream` 做為類型名稱。 它會與 <xref:System.IO.Stream?displayProperty=nameWithType>（非常常用的類型）相衝突。  
   
 - **技術命名空間群組**  
   
-     這個分類包括具有相同的前兩個命名空間節點的所有命名空間`(<Company>.<Technology>*`)，例如`Microsoft.Build.Utilities`和`Microsoft.Build.Tasks`。 很重要，彼此不衝突類型屬於單一技術。  
+     此類別包含前兩個命名空間節點 `(<Company>.<Technology>*`）的所有命名空間，例如 `Microsoft.Build.Utilities` 和 `Microsoft.Build.Tasks`。 屬於單一技術的型別不會互相衝突，這點很重要。  
   
-     **X DO NOT** 指派內單一技術的其他類型的型別名稱，以免造成衝突。  
+     **X**不會指派與單一技術內其他類型衝突的類型名稱。  
   
-     **X DO NOT** （除非該技術不是用於與應用程式模型） 導入技術的命名空間中的型別和應用程式模型命名空間之間的類型名稱衝突。  
+     **X**不會在技術命名空間中的類型與應用程式模型命名空間之間引進類型名稱衝突（除非此技術不適合用于應用程式模型）。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -9,16 +9,16 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 43a67a8dd73931172a6fa729c054ad494b29134e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a07a9c9bf6b0bf1e2f8ce56653a90a3aad3c4b2f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800310"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741384"
 ---
 # <a name="use-the-automationid-property"></a>使用 AutomationID 屬性
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主題包含的案例和範例程式碼，說明如何及何時可以使用 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 找出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構內的項目。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "74800310"
  已識別三個主要的使用者介面自動化用戶端應用程式案例，其在搜尋項目時需要使用 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 才能達到正確且一致的結果。  
   
 > [!NOTE]
-> 所有控制項檢視中的使用者介面自動化項目都支援<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> ，除了最上層的應用程式視窗、衍生自不具識別碼或 x:Uid 之 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控制項的使用者介面自動化項目，以及和使用者介面自動化項目衍生自不具控制項識別碼之 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 控制項的使用者介面自動化項目以外。  
+> 除了最上層應用程式視窗、衍生自沒有 ID 或 X：Uid 之 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 控制項的使用者介面自動化專案，以及衍生自沒有控制項識別碼之 Win32 控制項的 UI 自動化元素之外，控制項視圖中的所有使用者介面自動化專案都支援 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>。  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>使用唯一且可探索的 AutomationID，在使用者介面自動化樹狀結構中找出特定項目  
   

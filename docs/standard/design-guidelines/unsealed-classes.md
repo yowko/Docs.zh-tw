@@ -7,28 +7,27 @@ helpviewer_keywords:
 - unsealed classes
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
-author: KrzysztofCwalina
-ms.openlocfilehash: d7174de7ddf062b829672e04952c1010fcb74058
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8a5f1142674f83b5ef77f9f7e7e3518afd475e7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778790"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709006"
 ---
 # <a name="unsealed-classes"></a>非密封類別
-密封的類別無法被繼承，並循環讓擴充性。 相反地，可以繼承自的類別稱為未密封的類別。  
+密封類別無法繼承自，而且它們會阻止擴充性。 相反地，可以繼承自的類別稱為未密封的類別。  
   
- **✓ CONSIDER** 沒有使用未密封的類別新增虛擬或受保護成員，為提供低成本的好方法卻高價值為架構的擴充性。  
+ **✓請考慮**使用未密封的類別，不加上虛擬或受保護的成員，以提供價格實惠但對架構的擴充性的絕佳方法。  
   
- 開發人員通常會想要繼承自未密封的類別，以便加入方便的成員，例如自訂建構函式、 新的方法或方法多載。 比方說，`System.Messaging.MessageQueue`未密封，因此可讓使用者建立自訂的佇列預設為特定的佇列路徑，或加入自訂的方法，可簡化針對特定案例的 API。  
+ 開發人員通常會想要從未密封的類別繼承，以便加入方便的成員，例如自訂的函數、新方法或方法多載。 例如，`System.Messaging.MessageQueue` 未密封，因此可讓使用者建立預設為特定佇列路徑的自訂佇列，或新增自訂方法來簡化特定案例的 API。  
   
- 根據預設，在多數程式設計語言中，未密封的類別是，這也是在架構中的大部分類別的建議預設值。 非密封類型所提供的擴充性是更令人激賞的 framework 使用者，因為非密封類型相關聯的相對較低的測試成本提供成本很低。  
+ 在大部分的程式設計語言中，類別預設為未密封，在架構中，大部分的類別也是建議使用的預設值。 非密封類型所提供的擴充性非常感謝架構使用者，而且因為與非密封類型相關聯的測試成本相對較低，所以不太需要這麼做。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [擴充性設計](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

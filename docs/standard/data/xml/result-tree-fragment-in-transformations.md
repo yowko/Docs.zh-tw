@@ -3,14 +3,12 @@ title: 轉換中的結果樹狀片段
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 33d66b0a835be8bacab76ef9295ce8158385d8d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170767"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710254"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>轉換中的結果樹狀片段
 
@@ -35,7 +33,7 @@ ms.locfileid: "67170767"
 
 對 `variable` 項目而言，其值也可以透過數種方式來指派。 您可以在 `select` 屬性中傳回 XPath 運算式的內容，或為其指派範本主體的內容，以指派此值。
 
-對於 `parameter` 和 `variable` 這兩個項目，若由 XPath 運算式指派其值，則會傳回四種基本 XPath 類型其中之一：布林、字串、數字或節點集。 當值是由非空白的範本主體提供時，將傳回非 XPath 的資料型別，而它即是結果樹狀片段。
+對於 `parameter` 與 `variable` 這兩個項目，若由 XPath 運算式指派其值，則會傳回四種基本 XPath 型別其中之一：布林值、數字、字串或節點集。 當值是由非空白的範本主體提供時，將傳回非 XPath 的資料型別，而它即是結果樹狀片段。
 
 只有在變數繫結於結果樹狀結構片段而非四種基本 XPath 資料型別的其中一種時，XPath 查詢才會傳回非四種 XPath 物件型別的任何一種。 結果樹狀片段及其行為在[全球資訊網協會 (W3C) 規格](https://www.w3.org/TR/xslt-10/)中的 [11.1 節＜結果樹狀片段＞](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments)至 [11.6 節＜將參數傳遞至範本＞](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates)\(英文\) 中有所討論。 此外，[第 1 節＜簡介＞](https://www.w3.org/TR/xslt-10/#section-Introduction)\(英文) 也討論了範本如何包含來自傳回或建立結果樹狀片段之 XSLT 命名空間的項目。
 
@@ -119,7 +117,7 @@ ms.locfileid: "67170767"
 <first_book xmlns:user="urn:books">Book1</first_book>
 ```
 
-如上所述，`node-set` 函式讓您可以將 result tree fragment 轉換為節點集。 產生的節點集永遠包含單一節點，且為樹狀的根節點。 如果您將 result tree fragment 轉換為節點集，即可將其用於一般節點集所使用之處，例如 for-each 陳述式或 `select` 屬性值之中。 下列程式行顯示，片段被轉換為節點集以及當做節點集使用：
+如上所述，`node-set` 函式讓您可以將 result tree fragment 轉換為節點集。 產生的節點集永遠包含單一節點，且為樹狀結構的根節點。 如果您將 result tree fragment 轉換為節點集，即可將其用於一般節點集所使用之處，例如 for-each 陳述式或 `select` 屬性值之中。 下列程式行顯示，片段被轉換為節點集以及當做節點集使用：
 
 `<xsl:for-each select="msxsl:node-set($node-fragment)">`
 
@@ -192,7 +190,7 @@ ms.locfileid: "67170767"
 <books xmlns:user="urn:books">Book1Book2Book3Book4</books>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [使用 XslTransform 類別進行 XSLT 轉換](xslt-transformations-with-the-xsltransform-class.md)

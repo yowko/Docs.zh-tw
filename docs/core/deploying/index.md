@@ -2,13 +2,12 @@
 title: .NET Core 應用程式部署
 description: 了解部署 .NET Core 應用程式的方式。
 ms.date: 12/03/2018
-ms.custom: seodec18
-ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089187"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740817"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 應用程式部署
 
@@ -44,7 +43,7 @@ ms.locfileid: "73089187"
 
 ## <a name="self-contained-deployments-scd"></a>自封式部署 (SCD)
 
-針對自封式部署，您不僅要部署自己的應用程式和所有協力廠商相依性，還要部署建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台的 [.NET Core 原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)本身 (例如，macOS 上的 OpenSSL)，所以在執行應用程式前要先行安裝。 如需執行階段之版本繫結的詳細資訊，請參閱 [.NET Core 中的版本繫結](../versions/selection.md)上的文章。
+針對自封式部署，您需要部署自己的應用程式和所有需要的協力廠商相依性，以及建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台的 [.NET Core 原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)本身 (例如，macOS 上的 OpenSSL)，所以在執行應用程式前要先行安裝。 如需執行階段之版本繫結的詳細資訊，請參閱 [.NET Core 中的版本繫結](../versions/selection.md)上的文章。
 
 從 NET Core 2.1 SDK (2.1.300 版) 開始，.NET Core 就支援*修補版本向前復原*。 當您建立自封式部署時，.NET Core 工具會自動包括您的應用程式以其為目標的最新 .NET Core 維護執行階段版本 （最新的服務執行時間包含安全性修補程式和其他錯誤修正）。服務執行時間不一定要存在於您的組建系統上;它會自動從 NuGet.org 下載。如需詳細資訊，包括如何退出宣告修補程式版本向前復原的指示，請參閱[獨立部署執行時間向前](runtime-patch-selection.md)復原。
 
@@ -64,7 +63,7 @@ FDD 和 SCD 使用不同的主機可執行檔，因此您可以使用自己的�
 
 - 您的部署套件的大小相當大，因為您必須包含 .NET Core 以及應用程式及其協力廠商相依性。
 
-  從 .NET Core 2.0 開始，您就可以使用 .NET Core [*全球化不變模式*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)來減少 Linux 系統上的部署大小大約 28 MB。 一般而言，Linux 上的 .NET Core 依賴 [ICU 程式庫](http://icu-project.org)來提供全球化支援。 在不區分模式中，您的部署不包含程式庫，而且所有文化特性的行為[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)。
+  從 .NET Core 2.0 開始，您就可以使用 .NET Core [*全球化不變模式*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)來減少 Linux 系統上的部署大小大約 28 MB。 一般而言，Linux 上的 .NET Core 依賴 [ICU 程式庫](http://icu-project.org)來提供全球化支援。 在不區分模式中，您的部署不包含程式庫，而且所有文化特性的行為[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)。
 
 - 將多個自封式 .NET Core 應用程式部署到系統，會消耗大量的磁碟空間，因為每個應用程式都會重複 .NET Core 檔案。
 

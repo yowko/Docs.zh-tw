@@ -5,12 +5,12 @@ author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 6e200b151f3b2d84764dcdb379186d72f560eb22
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 9f08e362ada032e7193d83a73fbbf05259bd2259
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346824"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694552"
 ---
 # <a name="use-attributes-in-c"></a>使用 C\# 中的屬性
 

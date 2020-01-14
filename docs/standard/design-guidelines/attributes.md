@@ -6,50 +6,49 @@ helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-author: KrzysztofCwalina
-ms.openlocfilehash: 6d4cc6615b7f7346e9c8fc2a7264025f318c8a3d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff38cfdc228fd1eae1ace734ed2688c62c66499a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785563"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709552"
 ---
 # <a name="attributes"></a>屬性
-<xref:System.Attribute?displayProperty=nameWithType> 用來定義自訂屬性的基底類別。  
+<xref:System.Attribute?displayProperty=nameWithType> 是用來定義自訂屬性的基類。  
   
- 屬性是可以加入至程式設計項目，例如組件、 類型、 成員和參數的註解。 它們會儲存在組件的中繼資料，而且可以在執行階段使用反映 Api 存取。 比方說，架構會定義<xref:System.ObsoleteAttribute>，它可以套用至類型或成員，表示型別或成員已被取代。  
+ 屬性（attribute）是可以新增至程式設計專案（例如元件、類型、成員和參數）的批註。 它們會儲存在元件的中繼資料中，而且可以在執行時間使用反映 Api 來存取。 例如，架構會定義可以套用至類型或成員的 <xref:System.ObsoleteAttribute>，以指出類型或成員已被取代。  
   
- 屬性可以有一或多個含有與屬性相關的其他資料的屬性。 比方說，`ObsoleteAttribute`無法執行的版本中的其他資訊類型或成員已過時和新的 Api 取代過時的 API 的描述。  
+ 屬性可以有一或多個屬性，其中包含與屬性相關的其他資料。 例如，`ObsoleteAttribute` 可能會包含有關發行的其他資訊，其中的類型或成員已被取代，而新 Api 的描述則取代過時的 API。  
   
- 套用屬性時，就必須指定屬性的某些屬性。 這些稱為必要的屬性或必要的引數，因為它們表示做為位置建構函式參數。 例如，<xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A>屬性<xref:System.Diagnostics.ConditionalAttribute>是必要的屬性。  
+ 套用屬性時，必須指定屬性的某些屬性。 這些稱為必要的屬性或必要的引數，因為它們是以位置函式參數表示。 例如，<xref:System.Diagnostics.ConditionalAttribute> 的 <xref:System.Diagnostics.ConditionalAttribute.ConditionString%2A> 屬性是必要的屬性。  
   
- 選擇性的屬性 （或選擇性引數），會呼叫不一定有套用屬性時指定的屬性。 所表示的可設定的屬性。 編譯器會提供特殊的語法，來設定這些屬性時將套用的屬性。 比方說，<xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType>屬性表示選擇性的引數。  
+ 套用屬性時，不一定要指定的屬性稱為選擇性屬性（或選擇性引數）。 它們是以可設定的屬性來表示。 當套用屬性時，編譯器會提供特殊語法來設定這些屬性。 例如，<xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> 屬性代表一個選擇性引數。  
   
- **✓ DO** 自訂屬性的後置詞的類別命名為 「 屬性 」。  
+ **✓ DO**使用尾碼 "attribute" 命名自訂屬性類別。  
   
- **✓ DO** 套用 <xref:System.AttributeUsageAttribute> 自訂屬性。  
+ **✓ DO**將 <xref:System.AttributeUsageAttribute> 套用至自訂屬性。  
   
- **✓ DO** 提供選擇性引數的可設定的屬性。  
+ **✓**會提供選擇性引數的可設定屬性。  
   
- **✓ DO** 屬性僅提供必要的引數。  
+ **✓ DO**提供必要引數的僅限取得屬性。  
   
- **✓ DO** 提供初始化屬性對應到必要的引數的建構函式參數。 每個參數應為對應的屬性有相同的名稱 （但仍會有不同的大小寫）。  
+ **✓ DO**提供了可初始化對應于必要引數之屬性的函式參數。 每個參數都應該具有相同的名稱（但大小寫不同）做為對應的屬性。  
   
- **X AVOID** 提供初始化屬性對應至選擇性引數的建構函式參數。  
+ **X 避免**提供函數化參數來初始化對應于選擇性引數的屬性。  
   
- 換句話說，不需要可以設定具有一個建構函式和 setter 的屬性。 這項指導方針可非常明確，哪些引數是選擇性的這是必要的並避免有兩種方式執行相同的動作。  
+ 換句話說，沒有可同時使用「函式」和「setter」設定的屬性。 這項指導方針非常明確地說，哪些引數是選擇性的，而且是必要的，而且可以避免有兩種方式來執行相同的動作。  
   
- **X AVOID** 自訂屬性建構函式多載。  
+ **X 避免**多載自訂屬性的函式。  
   
- 只能有一個建構函式明確地溝通使用者哪些引數，且需何者為選擇性。  
+ 只有一個函式會清楚地與使用者通訊，而這些引數是必要的，哪些是選擇性的。  
   
- **✓ DO** 儘可能封裝自訂屬性的類別。 這可讓屬性查閱更快。  
+ 如果可能的話， **✓**會密封自訂屬性類別。 這會讓屬性的查詢速度更快。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [用法方針](../../../docs/standard/design-guidelines/usage-guidelines.md)

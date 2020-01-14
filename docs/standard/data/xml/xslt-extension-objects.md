@@ -3,14 +3,12 @@ title: XSLT 擴充物件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 25c9c1c81db0bb6775aa9226318d7ec726a93e09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6ad5b5140239ad7dc0ad72e65d10af744dfbd784
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924944"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709708"
 ---
 # <a name="xslt-extension-objects"></a>XSLT 擴充物件
 擴充物件可用來擴充樣式表的功能。 <xref:System.Xml.Xsl.XsltArgumentList> 類別會維護擴充物件。  
@@ -38,7 +36,7 @@ ms.locfileid: "69924944"
   
 3. 將 <xref:System.Xml.Xsl.XsltArgumentList> 物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [XSLT 安全性考量](../../../../docs/standard/data/xml/xslt-security-considerations.md)

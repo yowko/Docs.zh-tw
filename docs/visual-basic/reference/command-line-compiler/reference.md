@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: 8b57affa05c77d8ed20bfead7de767a8dd994241
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 35e02d1ad4409e754c2466f7d0ae7e68214772e6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348588"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716697"
 ---
 # <a name="-reference-visual-basic"></a>-reference （Visual Basic）
 讓編譯器將指定元件中的類型資訊提供給您目前編譯的專案。  
@@ -31,11 +31,11 @@ ms.locfileid: "74348588"
 -r:fileList  
 ```  
   
-## <a name="arguments"></a>引數  
+## <a name="arguments"></a>Arguments  
   
 |詞彙|定義|  
 |---|---|  
-|`fileList`|必要。 以逗號分隔的組件檔案名稱清單。 如果檔案名稱包含空格，請用引號括住名稱。|  
+|`fileList`|必要項。 以逗號分隔的組件檔案名稱清單。 如果檔案名稱包含空格，請用引號括住名稱。|  
   
 ## <a name="remarks"></a>備註  
  您匯入的檔案必須包含元件中繼資料。 只有公用類型才會顯示在元件外部。 [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)選項會從模組匯入中繼資料。  
@@ -52,7 +52,7 @@ ms.locfileid: "74348588"
   
  預設會使用用來參考常用 .NET Framework 元件的 Vbc 回應檔。 如果您不想讓編譯器使用 Vbc，請使用 `-noconfig`。  
   
- `-reference` 的簡短形式為 `/r`。  
+ `-reference` 的簡短形式為 `-r`。  
   
 ## <a name="example"></a>範例  
  下列命令會將原始程式檔 `Input.vb` 和參考元件從 `Metad1.dll` 和 `Metad2.dll` 編譯成產生 `Out.exe`。  

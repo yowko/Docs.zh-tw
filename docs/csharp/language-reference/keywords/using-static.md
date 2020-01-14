@@ -1,16 +1,15 @@
 ---
 title: using static 指示詞 - C# 參考
-ms.custom: seodec18
 ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
-ms.openlocfilehash: 1a0e26d8b0a14e0c77b724fc492588e08762e47f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73099987"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712945"
 ---
 # <a name="using-static-directive-c-reference"></a>using static 指示詞 (C# 參考)
 

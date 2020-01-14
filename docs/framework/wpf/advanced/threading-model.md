@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ae120311e7e58b34437de987e9f9a18e917043c0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974080"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740262"
 ---
 # <a name="threading-model"></a>執行緒模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是設計來避免開發人員遇到執行緒的難題。 因此，大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 開發人員都不需要撰寫使用一個以上執行緒的介面。 由於多執行緒的程式非常複雜且很難偵錯，因此，若有單一執行緒解決方案，就應避免使用多執行緒程式。
@@ -203,7 +203,7 @@ ms.locfileid: "73974080"
  `handler2` 可能需要大量時間來處理此事件。 `handler2` 可能會使用 <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> 來開始不會傳回小時的嵌套訊息迴圈。 如果 `handler2` 不會在此訊息迴圈完成時將事件標示為已處理，則會將事件傳遞到樹狀結構中，即使它非常舊也一樣。
 
 ### <a name="reentrancy-and-locking"></a>重新進入和鎖定
- 通用語言執行時間（CLR）的鎖定機制，其行為不會與想像的完全相同;要求鎖定時，可能會預期執行緒完全停止作業。 實際上，執行緒會繼續接收和處理高優先順序的訊息。 這有助於防止發生鎖死，並讓介面進行最低限度的回應，但它也會造成發生輕微 Bug 的可能性。  在大部分的情況下，您不需要知道這方面的任何內容，但在罕見的情況下（通常牽涉到 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗訊息或 COM STA 元件），這很值得了解。
+ 通用語言執行時間（CLR）的鎖定機制，其行為不會與想像的完全相同;要求鎖定時，可能會預期執行緒完全停止作業。 實際上，執行緒會繼續接收和處理高優先順序的訊息。 這有助於防止發生鎖死，並讓介面進行最低限度的回應，但它也會造成發生輕微 Bug 的可能性。  在大部分的情況下，您不需要知道這方面的任何內容，但在罕見的情況下（通常牽涉到 Win32 視窗訊息或 COM STA 元件），這很值得了解。
 
  大部分介面不是以執行緒安全的方式建立的，因為開發人員會在假設沒有一個以上的執行緒存取 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的情況下工作。 在此情況下，該單一執行緒可能會在非預期的時間進行環境變更，而導致 <xref:System.Windows.Threading.DispatcherObject> 相互排除機制應該會解決這些不正確的影響。 請考慮下列虛擬程式碼：
 

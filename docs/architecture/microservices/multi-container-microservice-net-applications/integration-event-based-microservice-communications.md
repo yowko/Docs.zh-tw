@@ -2,12 +2,12 @@
 title: 實作微服務之間的事件通訊 (整合事件)
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解整合事件以實作微服務之間的事件通訊。
 ms.date: 10/02/2018
-ms.openlocfilehash: a355ba9ede4e3390edd858d173dd88548e876202
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711216"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712399"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>實作微服務之間的事件通訊 (整合事件)
 
@@ -27,7 +27,7 @@ ms.locfileid: "74711216"
 
 針對只為您的開發環境實作事件匯流排的概念證明，如同 eShopOnContainers 範例，在執行作為容器的 RabbitMQ 上進行簡單實作可能就足夠了。 但對於需要高延展性的關鍵任務和生產系統，您可能想要評估，並使用 Azure 服務匯流排。
 
-如果您的長時間執行處理序需要高階抽象，以及更豐富的功能，例如 [Sagas](https://docs.particular.net/nservicebus/sagas/)，以便讓分散式開發更容易，則其他商業和開放原始碼的服務匯流排，例如 NServiceBus、MassTransit 和 Brighter 都值得評估。 在此案例中，要使用的抽象和 API 通常會直接由這些高階服務匯流排提供，而不是您自己的抽象 (例如 [eShopOnContainers 所提供的簡單事件匯流排抽象](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs))。 就此而言，您可以研究[使用 NServiceBus 的分支 eShopOnContainers](https://go.particular.net/eShopOnContainers) (Particular Software 所實作的其他衍生範例)
+如果您的長時間執行處理序需要高階抽象，以及更豐富的功能，例如 [Sagas](https://docs.particular.net/nservicebus/sagas/)，以便讓分散式開發更容易，則其他商業和開放原始碼的服務匯流排，例如 NServiceBus、MassTransit 和 Brighter 都值得評估。 在此案例中，要使用的抽象和 API 通常會直接由這些高階服務匯流排提供，而不是您自己的抽象 (例如 [eShopOnContainers 所提供的簡單事件匯流排抽象](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs))。 就這一點而言，您可以[使用 NServiceBus](https://go.particular.net/eShopOnContainers) （特定軟體所執行的其他衍生範例）來研究分支 eShopOnContainers。
 
 當然，您一律可以在較低階技術 (例如 RabbitMQ 和 Docker) 上建置自己的服務匯流排功能，但是「重新發明車輪」所需的工作對於自訂企業應用程式而言可能成本太高。
 

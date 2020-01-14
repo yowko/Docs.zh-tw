@@ -2,12 +2,12 @@
 title: 應用程式效能管理-WCF 開發人員的 gRPC
 description: ASP.NET Core gRPC 應用程式的記錄、計量和追蹤。
 ms.date: 09/02/2019
-ms.openlocfilehash: e8ec701af69e8ced674183ce0afa25547713c647
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 98da6c5391f021011e281a57e8f775709fa128ef
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711554"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740968"
 ---
 # <a name="application-performance-management"></a>應用程式效能管理
 
@@ -51,7 +51,7 @@ public class StockData : Stocks.StocksBase
 
 ## <a name="metrics-in-aspnet-core-grpc"></a>ASP.NET Core gRPC 中的計量
 
-.NET Core 執行時間提供一組元件，用於發出和觀察計量。 這些包括 Api，例如 <xref:System.Diagnostics.Tracing.EventSource> 和 <xref:System.Diagnostics.Tracing.EventCounter> 類別。 這些 Api 可以發出可供外部進程使用的基本數值資料，例如[dotnet 計數器通用工具](../../core/diagnostics/dotnet-counters.md)或 Windows 事件追蹤。 如需在您自己的程式碼中使用 `EventCounter` 的詳細資訊，請參閱[EventCounter 簡介](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)。
+.NET Core 執行時間提供一組元件，用於發出和觀察計量。 這些包括 Api，例如 <xref:System.Diagnostics.Tracing.EventSource> 和 <xref:System.Diagnostics.Tracing.EventCounter> 類別。 這些 Api 可以發出可供外部進程使用的基本數值資料，例如[dotnet 計數器通用工具](../../core/diagnostics/dotnet-counters.md)或 Windows 事件追蹤。 如需在您自己的程式碼中使用 `EventCounter` 的詳細資訊，請參閱[EventCounter 簡介](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)。
 
 如需更先進的計量，以及將度量資料寫入更廣泛的資料存放區，您可以嘗試稱為「[應用程式計量](https://www.app-metrics.io)」的開放原始碼專案。 此程式庫套件提供一組豐富的類型來檢測您的程式碼。 它也提供封裝，以將計量寫入包含時間序列資料庫的不同目標型別，例如 Prometheus 和 InfluxDB，以及[Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview)。 [AspNetCore](https://www.nuget.org/packages/App.Metrics.AspNetCore.Mvc/) NuGet 套件甚至會新增一組完整的基本計量，這些度量會透過與 ASP.NET Core 架構的整合而自動產生。 專案網站提供的[範本](https://www.app-metrics.io/samples/grafana/)可讓您使用[Grafana](https://grafana.com/)視覺效果平臺來顯示這些計量。
 
@@ -62,9 +62,9 @@ public class StockData : Stocks.StocksBase
 | 度量類型 | 描述 |
 | ----------- | ----------- |
 | 計數器     | 追蹤發生事件的頻率，例如要求和錯誤。 |
-| 衡量       | 記錄隨時間變更的單一值，例如使用中的連接。 |
+| 量測計       | 記錄隨時間變更的單一值，例如使用中的連接。 |
 | 長條圖   | 測量跨任意限制的值分佈。 例如，長條圖可以追蹤資料集大小、計算有多少包含 < 10 筆記錄、有多少包含11-100 記錄、有多少包含的101-1000 筆記錄，以及有多少包含的 > 1000 筆記錄。 |
-| 計數器       | 測量事件在各種時間範圍內發生的速率。 |
+| 計量器       | 測量事件在各種時間範圍內發生的速率。 |
 | 計時器       | 追蹤事件的持續時間，以及其發生的速率（儲存為長條圖）。 |
 
 藉由使用*應用程式計量*，您可以透過相依性插入來取得 `IMetrics` 介面，並用來記錄 gRPC 服務的任何這些計量。 下列範例示範如何計算經過一段時間後所提出的 `Get` 要求數目：
@@ -120,7 +120,7 @@ public class StockData : Stocks.StocksBase
 
 ### <a name="distributed-tracing-with-diagnosticsource"></a>使用 `DiagnosticSource` 的分散式追蹤
 
-.NET Core 有一個內部模組，可妥善對應到分散式追蹤和涵蓋範圍： [DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)。 和提供一個簡單的方法來產生和取用程式中的診斷，`DiagnosticSource` 模組具有*活動*的概念。 活動實際上是分散式追蹤的執行，或是追蹤內的範圍。 模組的內部會負責處理父系/子活動，包括配置識別碼。 如需使用 `Activity` 類型的詳細資訊，請參閱[GitHub 上的活動使用者指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)。
+.NET Core 有一個內部模組，可妥善對應到分散式追蹤和涵蓋範圍： [DiagnosticSource](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#diagnosticsource-users-guide)。 和提供一個簡單的方法來產生和取用程式中的診斷，`DiagnosticSource` 模組具有*活動*的概念。 活動實際上是分散式追蹤的執行，或是追蹤內的範圍。 模組的內部會負責處理父系/子活動，包括配置識別碼。 如需使用 `Activity` 類型的詳細資訊，請參閱[GitHub 上的活動使用者指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-user-guide)。
 
 因為 `DiagnosticSource` 是核心架構的一部分，所以有數個核心元件支援。 其中包括 <xref:System.Net.Http.HttpClient>、Entity Framework Core 和 ASP.NET Core，包括 gRPC 架構中的明確支援。 當 ASP.NET Core 收到要求時，它會檢查是否有一對符合[W3C 追蹤內容](https://www.w3.org/TR/trace-context)標準的 HTTP 標頭。 如果找到標頭，則會使用標頭中的識別值和內容來啟動活動。 如果找不到任何標頭，則會啟動活動，並產生符合標準格式的識別值。 在此活動的存留期內，架構或應用程式程式碼所產生的任何診斷，都可以使用追蹤和範圍識別碼來標記。 `HttpClient` 支援會藉由檢查每個要求的目前活動，並自動將追蹤標頭新增至傳出要求，進一步擴充此功能。
 
@@ -131,7 +131,7 @@ ASP.NET Core gRPC 用戶端和伺服器程式庫包括 `DiagnosticSource` 和 `A
 
 ### <a name="add-your-own-diagnosticsource-and-activity"></a>新增您自己的 `DiagnosticSource` 和 `Activity`
 
-若要新增您自己的診斷，或在應用程式程式碼中建立明確的範圍，請參閱[DiagnosticSource 使用者指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener)和[活動使用者指南](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage)。
+若要新增您自己的診斷，或在應用程式程式碼中建立明確的範圍，請參閱[DiagnosticSource 使用者指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md#instrumenting-with-diagnosticsourcediagnosticlistener)和[活動使用者指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/ActivityUserGuide.md#activity-usage)。
 
 ### <a name="store-distributed-trace-data"></a>儲存分散式追蹤資料
 

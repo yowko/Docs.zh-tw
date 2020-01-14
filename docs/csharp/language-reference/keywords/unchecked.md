@@ -1,6 +1,5 @@
 ---
 title: unchecked 關鍵字 - C# 參考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - unchecked_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: c31f1243b1394bfe826b02c14c73faf402640849
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 6dad0dfd508fb390dd0a52d1b48d70b4c5725513
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608423"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712997"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (C# 參考)
 
@@ -39,7 +38,7 @@ ms.locfileid: "69608423"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

@@ -1,6 +1,5 @@
 ---
 title: 類型 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - value types [C#]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 27560449daa18741a53e3affa33e08afa40d006a
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552501"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711879"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 
@@ -39,7 +38,7 @@ C# 是強型別語言。 每個變數和常數都有型別，如同每個會評�
 
 - 允許的作業類型。
 
-編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」的作業。 例如，如果您宣告型別 [int](../../language-reference/builtin-types/integral-numeric-types.md) 的變數，編譯器會允許您使用這個變數去做加減運算。 如果您嘗試針對型別 [bool](../../language-reference/builtin-types/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰
+編譯器會使用型別資訊，來確認在您的程式碼中執行的全部都是「型別安全」的作業。 例如，如果您宣告型別 [int](../../language-reference/builtin-types/integral-numeric-types.md) 的變數，編譯器會允許您使用額外的變數和減法運算。 如果您嘗試針對型別 [bool](../../language-reference/builtin-types/bool.md) 的變數執行相同作業，編譯器會產生錯誤，如下列範例所示︰
 
 [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]
 
@@ -68,13 +67,13 @@ C# 提供一組標準的內建數字型別，代表整數、浮點數值、布�
 
 ## <a name="custom-types"></a>自訂類型
 
-您可使用 [struct](../../language-reference/keywords/struct.md)、[class](../../language-reference/keywords/class.md)、[interface](../../language-reference/keywords/interface.md) 及 [enum](../../language-reference/keywords/enum.md) 建構來建立您自己的自訂型別。 .NET 類別庫本身是 Microsoft 所提供的自訂型別集合，可供您用於自己的應用程式中。 根據預設，類別庫中最常使用的型別可用於任何 C# 程式中。 只有當您明確地將專案參考新增至定義所在的組件時，才能使用其他類型。 編譯器在有該組件的參考之後，您可以針對在原始程式碼的那個組件中宣告的型別宣告變數 (和常數) 。 如需詳細資訊，請參閱 [.NET 類別庫](../../../standard/class-library-overview.md)。
+您可使用 [struct](../../language-reference/keywords/struct.md)、[class](../../language-reference/keywords/class.md)、[interface](../../language-reference/keywords/interface.md) 及 [enum](../../language-reference/builtin-types/enum.md) 建構來建立您自己的自訂型別。 .NET 類別庫本身是 Microsoft 所提供的自訂型別集合，可供您用於自己的應用程式中。 根據預設，類別庫中最常使用的型別可用於任何 C# 程式中。 只有當您明確地將專案參考新增至定義所在的組件時，才能使用其他類型。 編譯器在有該組件的參考之後，您可以針對在原始程式碼的那個組件中宣告的型別宣告變數 (和常數) 。 如需詳細資訊，請參閱 [.NET 類別庫](../../../standard/class-library-overview.md)。
 
 ## <a name="the-common-type-system"></a>一般類型系統
 
 請務必了解 .NET 中有關型別系統的兩個基本概念：
 
-- 它支援繼承原則。 型別可以衍生自稱為「基底型別」的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底類型同樣可以衍生自一些其他類型，衍生類型則會繼承其繼承階層架構中兩個基底類型的成員。 包括 <xref:System.Int32?displayProperty=nameWithType> (C# 關鍵字：[int](../../language-reference/builtin-types/integral-numeric-types.md)) 等內建數字型別在內的所有型別，最終都衍生自單一基底型別，即 <xref:System.Object?displayProperty=nameWithType> (C# 關鍵字：[object](../../language-reference/builtin-types/reference-types.md))。 這種統一型別階層架構稱為[一般型別系統](../../../standard/base-types/common-type-system.md) (CTS)。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](../classes-and-structs/inheritance.md)。
+- 它支援繼承原則。 型別可以衍生自稱為「基底型別」的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底型別同樣可以衍生自一些其他型別，所衍生的型別會繼承其繼承階層架構中兩個基底型別的成員。 包括 <xref:System.Int32?displayProperty=nameWithType> (C# 關鍵字：[int](../../language-reference/builtin-types/integral-numeric-types.md)) 等內建數字型別在內的所有型別，最終都衍生自單一基底型別，即 <xref:System.Object?displayProperty=nameWithType> (C# 關鍵字：[object](../../language-reference/builtin-types/reference-types.md))。 這種統一型別階層架構稱為[一般型別系統](../../../standard/base-types/common-type-system.md) (CTS)。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](../classes-and-structs/inheritance.md)。
 
 - CTS 中的每個型別都會定義為「實值型別」或「參考型別」。 這包括 .NET 類別庫中的所有自訂型別以及您自己的使用者定義型別。 您使用 [struct](../../language-reference/keywords/struct.md) 關鍵字定義的型別為實值型別；所有內建的數字型別都是 `structs`。 您使用 [class](../../language-reference/keywords/class.md) 關鍵字定義的型別為參考型別。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
 
@@ -91,7 +90,7 @@ C# 提供一組標準的內建數字型別，代表整數、浮點數值、布�
 
 實值型別衍生自 <xref:System.ValueType?displayProperty=nameWithType>，該型別又衍生自 <xref:System.Object?displayProperty=nameWithType>。 衍生自 <xref:System.ValueType?displayProperty=nameWithType> 的型別在 CLR 中具有特殊行為。 實值型別變數會直接包含其值，這表示配置的記憶體內嵌在宣告該變數的內容中。 實值型別變數不會有任何個別的堆積配置或記憶體回收額外負荷。
 
-實值型別有兩種類別︰[struct](../../language-reference/keywords/struct.md) 和 [enum](../../language-reference/keywords/enum.md)。
+實值型別有兩種類別︰[struct](../../language-reference/keywords/struct.md) 和 [enum](../../language-reference/builtin-types/enum.md)。
 
 內建的數字型別為結構，而您可以存取其屬性和方法︰
 
@@ -108,7 +107,7 @@ int i = 5;
 char c = 'Z';
 ```
 
-實值型別為 *sealed*，其表示您無法從 <xref:System.Int32?displayProperty=nameWithType> 衍生類型，也無法定義從任何使用者定義的類別或結構繼承的結構，因為結構只能從 <xref:System.ValueType?displayProperty=nameWithType> 繼承。 不過，結構可以實作一或多個介面。 您可以將結構類型轉型為它實作的介面類型；這會導致 *boxing* 作業將結構包裝在受控堆積上的參考型別物件內。 當您將實值型別傳遞至接受 <xref:System.Object?displayProperty=nameWithType> 或任何介面型別做為輸入參數的方法時，就會發生 Boxing 作業。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](./boxing-and-unboxing.md)。
+實值型別為 *sealed*，其表示您無法從 <xref:System.Int32?displayProperty=nameWithType> 衍生類型，也無法定義從任何使用者定義的類別或結構繼承的結構，因為結構只能從 <xref:System.ValueType?displayProperty=nameWithType> 繼承。 不過，結構可以實作一個或多個介面。 您可以將結構類型轉型為它實作的介面類型；這會導致 *boxing* 作業將結構包裝在受控堆積上的參考型別物件內。 當您將實值型別傳遞至接受 <xref:System.Object?displayProperty=nameWithType> 或任何介面型別做為輸入參數的方法時，就會發生 Boxing 作業。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](./boxing-and-unboxing.md)。
 
 您使用 [struct](../../language-reference/keywords/struct.md) 關鍵字來建立您自己自訂的實值型別。 一般來說，會使用結構做為一小組相關變數的容器，如下列範例所示︰
 
@@ -116,13 +115,13 @@ char c = 'Z';
 
 如需結構的詳細資訊，請參閱[結構](../classes-and-structs/structs.md)。 如需 .NET 中實值型別的詳細資訊，請參閱[實值型別](../../language-reference/keywords/value-types.md)。
 
-實值型別的另一種類別是 [enum](../../language-reference/keywords/enum.md)。 列舉會定義一組具名的整數常數。 例如，.NET 類別庫中的 <xref:System.IO.FileMode?displayProperty=nameWithType> 列舉包含一組指定該如何開啟檔案的具名常數整數。 其定義方式如下列範例所示：
+實值型別的另一種類別是 [enum](../../language-reference/builtin-types/enum.md)。 列舉會定義一組具名的整數常數。 例如，.NET 類別庫中的 <xref:System.IO.FileMode?displayProperty=nameWithType> 列舉包含一組指定該如何開啟檔案的具名常數整數。 其定義方式如下列範例所示：
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
 `System.IO.FileMode.Create` 常數的值為 2。 不過，使用者在讀取原始程式碼時，名稱會更有意義，也因此最好使用列舉，而不要使用常數常值數字。 如需詳細資訊，請參閱<xref:System.IO.FileMode?displayProperty=nameWithType>。
 
-所有的列舉都繼承自 <xref:System.Enum?displayProperty=nameWithType>，該列舉又繼承自 <xref:System.ValueType?displayProperty=nameWithType>。 所有適用於結構的規則，也適用於列舉。 如需有關列舉的詳細資訊，請參閱[列舉型別](../enumeration-types.md)。
+所有的委派都繼承自 <xref:System.Enum?displayProperty=nameWithType>，該列舉又繼承自 <xref:System.ValueType?displayProperty=nameWithType>。 所有適用於結構的規則，也適用於列舉。 如需有關列舉的詳細資訊，請參閱[列舉類型](../../language-reference/builtin-types/enum.md)。
 
 ### <a name="reference-types"></a>參考型別
 
@@ -149,7 +148,7 @@ IMyInterface iface = new MyClass();
 
 ## <a name="types-of-literal-values"></a>常值的類型
 
-在 C# 中，常值會接收來自編譯器的型別。 您可以在數字後面附加一個字母，指定應如何輸入數值常值。 例如，若要指定應該將值 4.56 視為浮點數時，請在數字之後附加 "f" 或 "F"︰`4.56f`。 如果未附加任何字母時，編譯器會推斷其型別為常值。 如需您可以使用字母後置字元指定哪些類型的詳細資訊，請參閱參考頁面中個別類型的[實值型別](../../language-reference/keywords/value-types.md)。
+在 C# 中，常值會接收來自編譯器的型別。 您可以在數字後面附加一個字母，指定應如何輸入數值常值。 例如，若要指定應該將值 4.56 視為浮點數時，請在數字之後附加 "f" 或 "F"︰`4.56f`。 如果未附加任何字母時，編譯器會推斷其型別為常值。 如需您可以使用字母後置字元指定哪些型別的詳細資訊，請參閱參考頁面中個別型別的[實值型別](../../language-reference/keywords/value-types.md)。
 
 因為輸入的是常值且所有類型最終都衍生自 <xref:System.Object?displayProperty=nameWithType>，所以您可以如下所示來撰寫和編譯程式碼：
 
@@ -157,7 +156,7 @@ IMyInterface iface = new MyClass();
 
 ## <a name="generic-types"></a>泛型類型
 
-可使用一或多個「型別參數」宣告的型別，做為預留位置 (具象型別)，以供用戶端程式碼在其建立該型別的執行個體時提供實際型別。 這類的類型稱為「泛型型別」。 例如，.NET 型別 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 有一個型別參數，依慣例指定名稱*t*。當您建立類型的實例時，可以指定清單將包含的物件類型，例如 string：
+可使用一或多個「型別參數」宣告的型別，做為預留位置 (具象型別)，以供用戶端程式碼在其建立該型別的執行個體時提供實際型別。 這類的型別稱為「泛型型別」。 例如，.NET 型別 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 有一個型別參數，依慣例指定名稱*t*。當您建立類型的實例時，可以指定清單將包含的物件類型，例如 string：
 
 ```csharp
 List<string> stringList = new List<string>();

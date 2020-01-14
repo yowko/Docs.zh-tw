@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a69fb861f7c2671a5c26245aa544ee99bcbdb56b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111001"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901003"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 方法
 在偵錯工具的控制項底下啟動進程和其主要執行緒。  
@@ -61,7 +61,7 @@ HRESULT CreateProcess (
  在設定為 `true`，表示已啟動的進程會繼承呼叫進程中的每個可繼承控制碼，或 `false` 表示不繼承控制碼。 繼承的控制碼與原始控制碼具有相同的值和存取權限。  
   
  `dwCreationFlags`  
- 在[Win32 進程建立旗標](https://go.microsoft.com/fwlink/?linkid=69981)的位元組合，可控制優先順序類別和已啟動進程的行為。  
+ 在[Win32 進程建立旗標](/windows/win32/procthread/process-creation-flags)的位元組合，可控制優先順序類別和已啟動進程的行為。  
   
  `lpEnvironment`  
  在新進程之環境區塊的指標。  
@@ -97,7 +97,7 @@ HRESULT CreateProcess (
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

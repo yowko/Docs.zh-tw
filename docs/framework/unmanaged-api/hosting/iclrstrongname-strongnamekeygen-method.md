@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ac5c1245-9acf-4271-9c08-3d9b7c670df3
 topic_type:
 - apiref
-ms.openlocfilehash: 4f3574e282d24fa11ffa2f85463f682c42098ae7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e437ee2ab04d3b1126ec2911553e87586e74e54e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135044"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899620"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>ICLRStrongName::StrongNameKeyGen 方法
 建立將供強式名稱使用的新公開/私密金鑰組。  
@@ -54,7 +54,7 @@ HRESULT StrongNameKeyGen (
  脫銷`ppbKeyBlob`的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
  [ICLRStrongName：： StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)方法會建立1024位金鑰。 在取得金鑰之後，您應該呼叫[ICLRStrongName：： StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法來釋放已配置的記憶體。  

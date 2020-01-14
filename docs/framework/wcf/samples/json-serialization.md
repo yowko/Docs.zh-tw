@@ -2,17 +2,17 @@
 title: DataContractJsonSerializer 範例
 ms.date: 03/30/2017
 ms.assetid: 3c2c4747-7510-4bdf-b4fe-64f98428ef4a
-ms.openlocfilehash: 1cc9560f291858e9f94f69201f4dac2ba0ed2c4c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 52e10ee28137b16bd90e6f3f3ac41f839528f334
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715736"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904534"
 ---
 # <a name="datacontractjsonserializer-sample"></a>DataContractJsonSerializer 範例
 
 > [!NOTE]
-> 這個範例適用于 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。 對於涉及序列化和還原序列化 JSON 的大部分案例，我們建議您在 system.string[命名空間](../../../standard/serialization/system-text-json-overview.md)中的工具。 
+> 這個範例適用于 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。 對於涉及序列化和還原序列化 JSON 的大部分案例，我們建議在 system.string[命名空間](../../../standard/serialization/system-text-json-overview.md)中的 api。 
 
 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 與 <xref:System.Runtime.Serialization.DataContractSerializer> 支援相同的型別。 當撰寫 Asynchronous JavaScript and XML (AJAX) 型 Web 應用程式時，JSON 資料格式特別有用。 Windows Communication Foundation （WCF）中的 AJAX 支援已優化，可透過 ScriptManager 控制項與 ASP.NET AJAX 搭配使用。 如需如何搭配使用 Windows Communication Foundation （WCF）與 ASP.NET AJAX 的範例，請參閱[AJAX 範例](ajax.md)。  
   

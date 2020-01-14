@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 28f3aa500014b768bd07723511613a42df8689aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 15fdc9d093bb3efb4ea4cef5d4cdfa8474042f12
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458769"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559741"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource 標記延伸
 
@@ -58,7 +58,7 @@ ms.locfileid: "73458769"
 
 |||
 |-|-|
-|`modeEnumValue`|下列其中一項：<br /><br /> -字串 token `Self`;對應至所建立的 <xref:System.Windows.Data.RelativeSource>，其 <xref:System.Windows.Data.RelativeSource.Mode%2A> 屬性設定為 [<xref:System.Windows.Data.RelativeSourceMode.Self>]。<br />-字串 token `TemplatedParent`;對應至所建立的 <xref:System.Windows.Data.RelativeSource>，其 <xref:System.Windows.Data.RelativeSource.Mode%2A> 屬性設定為 [<xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>]。<br />-字串 token `PreviousData`;對應至所建立的 <xref:System.Windows.Data.RelativeSource>，其 <xref:System.Windows.Data.RelativeSource.Mode%2A> 屬性設定為 [<xref:System.Windows.Data.RelativeSourceMode.PreviousData>]。<br />-如需 `FindAncestor` 模式的相關資訊，請參閱下文。|
+|`modeEnumValue`|發生下列情形之一：<br /><br /> -字串 token `Self`;對應至所建立的 <xref:System.Windows.Data.RelativeSource>，其 <xref:System.Windows.Data.RelativeSource.Mode%2A> 屬性設定為 [<xref:System.Windows.Data.RelativeSourceMode.Self>]。<br />-字串 token `TemplatedParent`;對應至所建立的 <xref:System.Windows.Data.RelativeSource>，其 <xref:System.Windows.Data.RelativeSource.Mode%2A> 屬性設定為 [<xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>]。<br />-字串 token `PreviousData`;對應至所建立的 <xref:System.Windows.Data.RelativeSource>，其 <xref:System.Windows.Data.RelativeSource.Mode%2A> 屬性設定為 [<xref:System.Windows.Data.RelativeSourceMode.PreviousData>]。<br />-如需 `FindAncestor` 模式的相關資訊，請參閱下文。|
 |`FindAncestor`|字串語彙基元 `FindAncestor`。 使用此語彙基元可進入某個模式，讓 `RelativeSource` 指定上階類型以及選擇性指定上階層級。 這相當於 <xref:System.Windows.Data.RelativeSource> 建立時將其 <xref:System.Windows.Data.RelativeSource.Mode%2A> 屬性設為 <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>。|
 |`typeName`|`FindAncestor` 模式的必要項。 類型的名稱，可填入 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 屬性。|
 |`intLevel`|`FindAncestor` 模式的選擇項。 上階層級 (朝邏輯樹狀結構的父項目方向評估)。|
@@ -69,13 +69,13 @@ ms.locfileid: "73458769"
 
 `{RelativeSource FindAncestor}` 主要用於控制項範本或可預測的獨立 UI 組合，適用于控制項一律應位於特定祖系類型的視覺化樹狀結構中的情況。 例如，項目控制項的項目可能會使用 `FindAncestor` 使用方法以繫結至其項目控制項父代的屬性。 或者，樣板中屬於控制項組合的項目也可以使用 `FindAncestor` 繫結至同一個組合結構中的父代項目。
 
-在＜XAML 語法＞章節內顯示之 `FindAncestor` 模式的物件項目語法中，第二種物件項目語法特別適用於 `FindAncestor` 模式。 `FindAncestor` 模式需要 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 值。 您必須使用[X:Type 標記延伸](../../xaml-services/x-type-markup-extension.md)參考，將屬性 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 設定為要尋找的上階類型。 在執行階段處理繫結要求時，會使用 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 值。
+在＜XAML 語法＞章節內顯示之 `FindAncestor` 模式的物件項目語法中，第二種物件項目語法特別適用於 `FindAncestor` 模式。 `FindAncestor` 模式需要 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 值。 您必須使用[X:Type 標記延伸](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)參考，將屬性 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 設定為要尋找的上階類型。 在執行階段處理繫結要求時，會使用 <xref:System.Windows.Data.RelativeSource.AncestorType%2A> 值。
 
 對於 `FindAncestor` 模式來說，當該類型在項目樹狀結構中可能存在一個以上的上階時，選擇性屬性 <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> 將有助於釐清上階查閱。
 
 如需關於如何使用 `FindAncestor` 模式的詳細資訊，請參閱 <xref:System.Windows.Data.RelativeSource>。
 
-`{RelativeSource Self}` 適用于實例的一個屬性應該相依于相同實例之另一個屬性的值，而且這兩個屬性之間已經有一般相依性屬性關聯性（例如強制型轉）的情況。 雖然物件上有兩個屬性很罕見，因此這些值實際上是相同的（且具有相同的類型），您也可以將 `Converter` 參數套用至具有 `{RelativeSource Self}`的系結，並使用轉換器在來源與目標之間進行轉換。各種. `{RelativeSource Self}` 的另一個案例是 <xref:System.Windows.MultiDataTrigger>的一部分。
+`{RelativeSource Self}` 適用于實例的一個屬性應該相依于相同實例之另一個屬性的值，而且這兩個屬性之間已經有一般相依性屬性關聯性（例如強制型轉）的情況。 雖然物件上有兩個屬性是很罕見的，因為這些值實際上是相同的（且具有相同的類型），您也可以將 `Converter` 參數套用至具有 `{RelativeSource Self}`的系結，並使用轉換器在來源和目標型別之間進行轉換。 `{RelativeSource Self}` 的另一個案例是 <xref:System.Windows.MultiDataTrigger>的一部分。
 
 例如，下面 XAML 會定義 <xref:System.Windows.Shapes.Rectangle> 項目，使得無論為 <xref:System.Windows.FrameworkElement.Width%2A> 輸入的值為何，<xref:System.Windows.Shapes.Rectangle> 永遠都是正方形：`<Rectangle Width="200" Height="{Binding RelativeSource={RelativeSource Self}, Path=Width}" .../>`
 
@@ -117,4 +117,4 @@ ms.locfileid: "73458769"
 - [標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)
 - [繫結宣告概觀](../data/binding-declarations-overview.md)
-- [x:Type 標記延伸模組](../../xaml-services/x-type-markup-extension.md)
+- [x:Type 標記延伸模組](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)

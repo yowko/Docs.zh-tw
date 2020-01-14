@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b2fc0846b3f3801d64ee3bf1f1dc4b347034ad38
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 8f4136683f13a52b84ab9e8bfd69f30c8914e029
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939557"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710176"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>使用 XPath 巡覽選取節點
 XML 文件物件模型 (DOM) 包含可讓您在 DOM 中使用 XML 路徑語言 (XPath) 巡覽查詢資訊的方法。 您可以使用 XPath 尋找單一特定節點，或是尋找符合某些準則的所有節點。  
@@ -129,7 +127,7 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 > [!NOTE]
 > 如果 XPath 運算式不包含前置詞，則會假設命名空間統一資源識別元 (URI) 為空白的命名空間。 如果 XML 包含預設命名空間，則仍必須將前置詞及命名空間 URI 加入至 <xref:System.Xml.XmlNamespaceManager>，否則就不會選取任何節點。  
   
-#### <a name="input-file"></a>輸入檔案  
+#### <a name="input-file"></a>輸入檔  
  下列是在本主題的範例中做為輸入檔案的 bookstore.xml 檔案：  
   
 ```xml  
@@ -162,6 +160,6 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 </bookstore>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

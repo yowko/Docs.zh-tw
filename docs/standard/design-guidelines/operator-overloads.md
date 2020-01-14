@@ -8,44 +8,43 @@ helpviewer_keywords:
 - member design guidelines, operators
 - overloaded operators
 ms.assetid: 37585bf2-4c27-4dee-849a-af70e3338cc1
-author: KrzysztofCwalina
-ms.openlocfilehash: 441dc2777cd8d221300c526b6b31a647af60ca71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4cea3c17de40a873d977223f36b6dcef4f2c2d78
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756854"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709136"
 ---
 # <a name="operator-overloads"></a>運算子多載
-運算子多載可讓顯示如同它們是內建語言基本類型的 framework 型別。  
+運算子多載可讓架構類型看起來像是內建的語言基本專案。  
   
- 雖然允許，而且在某些情況下很有用，應該小心使用運算子多載。 有許多的案例中的運算子多載已被濫用，例如架構設計人員何時啟動的作業，應該是簡單的方法中使用運算子。 下列指導方針可協助您決定何時以及如何使用運算子多載。  
+ 雖然在某些情況下允許且有用，但應該謹慎使用運算子多載。 在許多情況下，會濫用運算子多載，例如當架構設計工具開始使用運算子進行應該是簡單方法的作業時。 下列指導方針可協助您決定何時及如何使用運算子多載。  
   
- **X AVOID** 運算子多載，除了定義應該像是基本 （內建） 類型的類型。  
+ **X 避免**定義運算子多載，但不包括在應該像是基本（內建）類型的類型中。  
   
- **✓ CONSIDER** 應該像是基本類型的類型中定義運算子多載。  
+ **✓請考慮**在型別中定義運算子多載，而這種類型應該類似于基本類型。  
   
- 例如，<xref:System.String?displayProperty=nameWithType>已經`operator==`和`operator!=`定義。  
+ 例如，<xref:System.String?displayProperty=nameWithType> 已定義 `operator==` 和 `operator!=`。  
   
- **✓ DO** 運算子多載定義表示數字的結構中 (例如<xref:System.Decimal?displayProperty=nameWithType>)。  
+ **✓ DO**會在代表數位的結構（例如 <xref:System.Decimal?displayProperty=nameWithType>）中定義運算子多載。  
   
- **X DO NOT** 別出心裁時定義運算子多載。  
+ 定義運算子多載時， **X**不是刻意的。  
   
- 運算子多載是在其中顯而易見的是作業的結果將會的很有用。 比方說，是合理能夠減一<xref:System.DateTime>從另一個`DateTime`，並取得<xref:System.TimeSpan>。 不過，它不適合使用聯集的這兩個資料庫查詢的邏輯聯集運算子，或使用 shift 鍵運算子來寫入資料流。  
+ 當運算子多載立即明顯明瞭作業的結果時，它會很有用。 例如，可以從另一個 `DateTime` 減去一個 <xref:System.DateTime> 並取得 <xref:System.TimeSpan>是合理的。 不過，不適合使用邏輯 union 運算子來結合兩個資料庫查詢，或使用 shift 運算子寫入資料流程。  
   
- **X DO NOT** 提供運算子多載，除非其中至少一個運算元是定義多載的型別。  
+ **X**除非至少有一個運算元屬於定義多載的類型，否則不提供運算子多載。  
   
- **✓ DO** 對稱方式多載運算子。  
+ **✓**會以對稱方式執行多載運算子。  
   
- 例如，如果您多載`operator==`，您也應該多載`operator!=`。 同樣地，如果您多載`operator<`，您也應該多載`operator>`，依此類推。  
+ 例如，如果您多載 `operator==`，您也應該多載 `operator!=`。 同樣地，如果您多載 `operator<`，您也應該多載 `operator>`等等。  
   
- **✓ CONSIDER** 提供具有對應的好記名稱的方法與每個多載的運算子。  
+ **✓請考慮**提供具有對應于每個多載運算子之易記名稱的方法。  
   
- 許多語言不支援運算子多載。 基於這個理由，建議您使用多載運算子的類型，包括第二種方法提供對等功能的適當定義域專屬名稱。  
+ 許多語言都不支援運算子多載。 基於這個理由，建議多載運算子的型別包含次要方法，並具有適當的網域特定名稱，以提供對等的功能。  
   
- 下表包含運算子和對應的好記的方法名稱的清單。  
+ 下表包含運算子清單和對應的易記方法名稱。  
   
-|C# 運算子符號|中繼資料名稱|易記名稱|  
+|C#運算子符號|中繼資料名稱|好記的名稱|  
 |-------------------------|-------------------|-------------------|  
 |`N/A`|`op_Implicit`|`To<TypeName>/From<TypeName>`|  
 |`N/A`|`op_Explicit`|`To<TypeName>/From<TypeName>`|  
@@ -87,32 +86,32 @@ ms.locfileid: "61756854"
 |`~`|`op_OnesComplement`|`OnesComplement`|  
   
 ### <a name="overloading-operator-"></a>多載運算子 = =  
- 多載`operator ==`是相當複雜。 運算子的語意需要相容於數個其他的成員，例如<xref:System.Object.Equals%2A?displayProperty=nameWithType>。  
+ 多載 `operator ==` 非常複雜。 運算子的語義必須與數個其他成員相容，例如 <xref:System.Object.Equals%2A?displayProperty=nameWithType>。  
   
 ### <a name="conversion-operators"></a>轉換運算子  
- 轉換運算子是一元 （unary） 運算子，允許從一個類型轉換為另一個。 運算子必須定義為運算元或傳回型別上的靜態成員。 有兩種類型的轉換運算子： 隱含和明確。  
+ 轉換運算子是一元運算子，允許從某種類型轉換成另一種類型。 運算子必須定義為運算元或傳回類型的靜態成員。 轉換運算子有兩種類型：隱含和明確。  
   
- **X DO NOT** 提供轉換運算子，如果這類轉換不清楚所預期的使用者。  
+ 如果使用者不清楚預期這類轉換， **X 就不**會提供轉換運算子。  
   
- **X DO NOT** 定義轉換運算子的型別網域之外。  
+ **X 不會**在類型的網域外部定義轉換運算子。  
   
- 例如， <xref:System.Int32>， <xref:System.Double>，並<xref:System.Decimal>全部都是數值類型，而<xref:System.DateTime>不是。 因此，應該會有任何要轉換的轉換運算子`Double(long)`至`DateTime`。 建構函式是這種情況的慣用物件。  
+ 例如，<xref:System.Int32>、<xref:System.Double>和 <xref:System.Decimal> 都是數數值型別，而 <xref:System.DateTime> 則不是。 因此，不應該有轉換運算子來將 `Double(long)` 轉換成 `DateTime`。 在這種情況下，建議使用「函式」。  
   
- **X DO NOT** 提供隱含轉換運算子，如果轉換可能會失真。  
+ 如果轉換可能有損及， **X 就不**提供隱含轉換運算子。  
   
- 比方說，不應該有的隱含轉換`Double`要`Int32`因為`Double`更廣的範圍，大於`Int32`。 您可以提供明確轉換運算子，即使轉換可能會失真。  
+ 例如，不應該有從 `Double` 到 `Int32` 的隱含轉換，因為 `Double` 的範圍超出 `Int32`。 即使轉換可能有損失真，也可以提供明確轉換運算子。  
   
- **X DO NOT** 擲回例外狀況，從隱含轉換。  
+ **X 不會**擲回隱含轉換的例外狀況。  
   
- 它是很難了解發生什麼動作，因為它們可能不會察覺轉換正在進行中的使用者。  
+ 使用者很難以瞭解發生了什麼事，因為他們可能不知道轉換正在進行中。  
   
- **✓ DO** 擲回 <xref:System.InvalidCastException?displayProperty=nameWithType> 如果轉型運算子的呼叫會導致損失的轉換和運算子的合約不允許轉換損失。  
+ 如果對 cast 運算子的呼叫導致損✓的轉換，而且運算子的合約不允許損失真的轉換，則**DO**會擲回 <xref:System.InvalidCastException?displayProperty=nameWithType>。  
   
- *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- *皮耳森教育，inc.的權限所印製[Framework 設計方針：慣例、 慣用句和可重複使用的.NET 程式庫，第 2 版的模式](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina 和 Brad Abrams，2008 年 10 月 22 日由 Addison-wesley Professional 的 Microsoft Windows 開發系列的一部分發行。*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [成員設計方針](../../../docs/standard/design-guidelines/member.md)
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)

@@ -16,13 +16,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.custom: seodec18
-ms.openlocfilehash: 53f16e65a3cd19cd516756f3a2d036039964e021
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 319aa76754adc852528f35448d9906d4e903693b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971364"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711541"
 ---
 # <a name="anchors-in-regular-expressions"></a>規則運算式中的錨點
 錨點或不可部分完成的無寬度判斷提示會指定字串中必須比對的位置。 當您在搜尋運算式中使用錨點時，規則運算式引擎不會在字串中前進或使用字元；它只會尋找指定位置中的相符項目。 例如， `^` 指定必須從行首或字串的開頭開始比對。 因此，僅當行首出現 "http:" 時，規則運算式 `^http:` 才會與其相符。 下表列出 .NET 中此規則運算式所支援的錨點。  

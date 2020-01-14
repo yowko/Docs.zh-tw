@@ -3,19 +3,17 @@ title: 使用 XPathNavigator 存取 XML 資料
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: c57b46e6-5c77-408f-bc4e-67a5dcc9cc05
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1827d93925b3ff2322d246f3d7d214cb57ac02fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: c8466e78458d344a872aac7cdebc155342b13e0f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707892"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711164"
 ---
 # <a name="accessing-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 存取 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供了一組可以在 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中巡覽節點、擷取 XML 資料及存取強型別 XML 資料的方法。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [使用 XPathNavigator 導覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
  說明 <xref:System.Xml.XPath.XPathNavigator> 類別的節點集巡覽方法，其可用於巡覽 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的節點。  
   
@@ -31,7 +29,7 @@ ms.locfileid: "54707892"
  [使用者定義函式和變數](../../../../docs/standard/data/xml/user-defined-functions-and-variables.md)  
  描述如何實作自訂 <xref:System.Xml.Xsl.XsltContext> 類別以及支援擴充函式和變數的 <xref:System.Xml.Xsl.IXsltContextFunction> 和 <xref:System.Xml.Xsl.IXsltContextVariable> 介面。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

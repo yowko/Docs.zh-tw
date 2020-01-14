@@ -5,13 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.custom: seodec18
-ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037679"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713944"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
@@ -107,13 +106,13 @@ calculateButton.Clicked += async (o, e) =>
 
     如果您的答案為「是」，則工作是 **CPU 繫結**。
 
-如果您的工作是「I/O 繫結」，請使用「沒有」`Task.Run` 的 `async` 和 `await`。  您「不應該」使用 Task Parallel Library。  [深入了解非同步](../standard/async-in-depth.md)一文中描述這個問題的原因。
+如果您的工作是**i/o**系結，請使用 `async`，*而不*`Task.Run``await`。  您「不應該」使用 Task Parallel Library。  [深入了解非同步](../standard/async-in-depth.md)一文中描述這個問題的原因。
 
-如果您的工作是「CPU 繫結」，而且您關心回應性，請使用 `async` 和 `await`，但在「含」`Task.Run` 的其他執行緒上繁衍工作。  如果工作適用於並行和平行處理原則，您應該也考慮使用 [工作平行程式庫](../standard/parallel-programming/task-parallel-library-tpl.md)。
+如果您擁有的工作是**CPU**系結，而且您在意回應能力，請使用 `async` 並 `await`，但在另一個*具有*`Task.Run`的執行緒上產生工作。  如果工作適用於並行和平行處理原則，您應該也考慮使用 [工作平行程式庫](../standard/parallel-programming/task-parallel-library-tpl.md)。
 
 此外，您應該一律測量程式碼的執行。  例如，您可能會發現，在進行多執行緒處理時，與內容切換的負擔相較之下，CPU 繫結工作較不耗費資源。  每個選項都有其取捨，您應該挑選適用於您情況的正確取捨。
 
-## <a name="more-examples"></a>更多範例
+## <a name="more-examples"></a>其他範例
 
 下列範例示範可使用 C# 撰寫非同步程式碼的各種方式。  它們會涵蓋數個您可能會遇到的不同案例。
 
@@ -219,7 +218,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 雖然非同步程式設計相當簡單，但是需要牢記一些詳細資料，以避免非預期的行為。
 
-* `async` **方法需要其主體中有** `await` **關鍵字，或永遠不會產生它們！**
+* `async`**方法**的主體中必須有 `await`**關鍵字，否則永遠不會產生！**
 
 這是需要記住的重要事項。  如果 `await` 未用於 `async` 方法的主體中，C# 編譯器將會產生警告，但程式碼的編譯和執行就像一般方法一樣。  請注意，因為 C# 編譯器針對非同步方法所產生的狀態機器不會完成任何作業，所以這也非常沒有效率。
 
@@ -227,7 +226,7 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 這是 .NET 中所使用的慣例，可更容易區分同步與非同步方法。 請注意，不一定會套用程式碼未明確呼叫的特定方法 (例如事件處理常式或 Web 控制器方法)。 因為您的程式碼未明確呼叫這些方法，則明確命名並不重要。
 
-* `async void` **應該只用於事件處理常式。**
+* `async void`**只應用於事件處理常式。**
 
 因為事件沒有傳回型別 (因此無法利用 `Task` 和 `Task<T>`)，所以 `async void` 是允許非同步事件處理常式運作的唯一方式。 `async void` 的任何其他使用都未遵循 TAP 模型，而且不容易使用，例如：
 

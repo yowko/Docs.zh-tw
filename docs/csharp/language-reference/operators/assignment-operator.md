@@ -1,18 +1,17 @@
 ---
 title: 指派運算子- C#參考
-ms.custom: seodec18
 ms.date: 09/10/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 103bc823ab6a56d53a3f2ec05b8de9295f1de400
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 19f74e6835ae555a3a38aa6ca8679948c7f290dd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039073"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712750"
 ---
 # <a name="assignment-operators-c-reference"></a>指派運算子（C#參考）
 
@@ -62,7 +61,7 @@ x = x op y
 
 ## <a name="null-coalescing-assignment"></a>Null 聯合指派
 
-從C# 8.0 開始，您可以使用 null 聯合指派運算子`??=`，只有在左側運算元評估為`null`時，才將其右運算元的值指派給其左邊的運算元。 如需詳細資訊，請參閱[？？和？= 運算子](null-coalescing-operator.md)一文。
+從C# 8.0 開始，您可以使用 null 聯合指派運算子 `??=`，只有在左側運算元評估為 `null`時，才將其右運算元的值指派給其左邊的運算元。 如需詳細資訊，請參閱[？？和？= 運算子](null-coalescing-operator.md)一文。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 

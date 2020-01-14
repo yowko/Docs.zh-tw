@@ -6,19 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: ecbed7e57628b4e140e0f4dbcd600643617b075a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965885"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710891"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>使用 XmlNodeChangedEventArgs 之 XML 文件中的事件處理
 **XmlNodeChangedEventArgs** 會封裝傳入註冊在處理事件之 **XmlDocument** 物件上的事件處理常式之引數。 下列表格說明事件和引發事件的時機。  
   
-|Event - 事件|引發|  
+|Event|引發|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|當屬於目前文件的節點要插入另一個節點。|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|當屬於目前文件的節點已經插入另一個節點。|  
@@ -206,8 +204,8 @@ public class Sample
 } // End class   
 ```  
   
- 如需詳細資訊，請參閱 <xref:System.Xml.XmlNodeChangedEventArgs> 與 <xref:System.Xml.XmlNodeChangedEventHandler>。  
+ 如需詳細資訊，請參閱<xref:System.Xml.XmlNodeChangedEventArgs>和<xref:System.Xml.XmlNodeChangedEventHandler>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

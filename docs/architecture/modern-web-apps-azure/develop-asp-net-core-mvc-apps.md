@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971591"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899698"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -51,7 +51,7 @@ app.UseMvc(routes =>
 
 在此範例中，已將名為 "default" 的路由新增至路由表。 它會定義具有_控制器_、_動作_和_識別碼_之預留位置的路由範本。控制器和動作預留位置已指定預設值（分別是「Home」和「Index」），而 id 預留位置則是選擇性的（藉由對其套用「？」）。 此處定義的慣例指出要求的第一個部分應該對應至控制器的名稱，第二個部分對應至動作，而第三個部分 (如果需要) 則會代表 id 參數。 慣例路由通常是在應用程式的一個位置定義，例如在啟動類別的 Configure 方法中。
 
-屬性路由會直接套用至控制器和動作，而不是全域指定。 其優點在於當您想要查看特定方法時，會更容易搜尋到這些路由，但也表示路由資訊不會保留在應用程式的一個位置。 透過屬性路由，您可以輕鬆地為一個動作指定多個路由，並合併控制器與動作之間的路由。 例如，
+屬性路由會直接套用至控制器和動作，而不是全域指定。 其優點在於當您想要查看特定方法時，會更容易搜尋到這些路由，但也表示路由資訊不會保留在應用程式的一個位置。 透過屬性路由，您可以輕鬆地為一個動作指定多個路由，並合併控制器與動作之間的路由。 例如：
 
 ```csharp
 [Route("Home")]
@@ -82,7 +82,7 @@ Razor Pages 不會使用屬性路由。 您可以為 Razor 頁面指定其他路
 @page "{id:int}"
 ```
 
-在前一個範例中，問題中的頁面會將路由與整數 `id` 參數比對。 例如，位於 *根的*Products.cshtml`/Pages` 頁面會有下列路由：
+在前一個範例中，問題中的頁面會將路由與整數 `id` 參數比對。 例如，位於 `/Pages` 根的 *Products.cshtml* 頁面會有下列路由：
 
 ```csharp
 "/Products/123"
@@ -297,7 +297,7 @@ public class ValidateModelAttribute : ActionFilterAttribute
 }
 ```
 
-您可以藉由包含 `ValidateModelAttribute`Ardalis.ValidateModel[ 套件，來將 ](https://www.nuget.org/packages/Ardalis.ValidateModel) 新增到您的專案作為 NuGet 相依性。 針對 API，您可以使用 `ApiController` 屬性，在不需要個別 `ValidateModel` 篩選的情況下強制執行此行為。
+您可以藉由包含 [Ardalis.ValidateModel](https://www.nuget.org/packages/Ardalis.ValidateModel) 套件，來將 `ValidateModelAttribute` 新增到您的專案作為 NuGet 相依性。 針對 API，您可以使用 `ApiController` 屬性，在不需要個別 `ValidateModel` 篩選的情況下強制執行此行為。
 
 同樣地，篩選條件可用來檢查記錄是否存在，並先傳回 404 再執行動作，因此不需要在動作中執行這些檢查。 一旦您取出一般慣例並組織方案，將基礎結構程式碼和商務邏輯與 UI 分隔開來之後，您的 MVC 動作方法應該會非常精簡：
 
@@ -328,7 +328,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 
 保護 Web 應用程式是很龐大的主題，其中包含許多考量。 最基本的安全性層級牽涉到確保您知道指定要求的來源，以及確保該要求只具有其應有的資源存取權。 驗證是比較要求隨附的認證與受信任資料存放區中的認證，來查看是否應該將要求視為來自已知實體的程序。 授權是根據使用者身分識別限制特定資源存取權的程序。 第三個安全性考量是防止第三方竊聽要求，您應該至少[確保應用程式使用 SSL](/aspnet/core/security/enforcing-ssl)。
 
-### <a name="authentication"></a>驗證
+### <a name="authentication"></a>驗證  (可能為英文網頁)
 
 ASP.NET Core Identity 是可用來支援應用程式登入功能的會員系統。 它具備本機使用者帳戶支援，以及來自 Microsoft 帳戶、Twitter、Facebook、Google 等提供者的外部登入提供者支援。 除了 ASP.NET Core Identity，您的應用程式也可以使用 Windows 驗證，或 [Identity Server](https://github.com/IdentityServer/IdentityServer4) 等協力廠商身分識別提供者。
 
@@ -500,7 +500,7 @@ public class Program
 > ### <a name="references--client-communication"></a>參考資料 - 用戶端通訊
 >
 > - **ASP.NET Core SignalR**  
->   <https://github.com/aspnet/SignalR>
+>   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
 > - **WebSocket Manager**  
 >   https://github.com/radu-matei/websocket-manager
 

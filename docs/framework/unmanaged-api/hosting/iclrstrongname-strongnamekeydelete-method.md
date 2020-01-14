@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0163412f-f617-4428-89e0-03992fec31e8
 topic_type:
 - apiref
-ms.openlocfilehash: 4e72818be6808c519677192d3744bbc5ec414d0d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 95098cbb060c06d2d5a5a4c04b6fa9017bca66a1
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135087"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899586"
 ---
 # <a name="iclrstrongnamestrongnamekeydelete-method"></a>ICLRStrongName::StrongNameKeyDelete 方法
 刪除指定的金鑰容器。  
@@ -38,7 +38,7 @@ HRESULT StrongNameKeyDelete (
  在要刪除的金鑰容器名稱。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
  使用[ICLRStrongName：： StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)方法，將公開/私密金鑰組匯入容器。  

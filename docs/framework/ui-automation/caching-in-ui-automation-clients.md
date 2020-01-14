@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 8de96aa3877b2ca414c87958dad480503f57ccb7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5c0c92f40ae60785f780cb573bb7faa77a31f273
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433935"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741786"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 自動化用戶端中的快取
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "74433935"
   
  在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，快取表示預先提取資料。 該資料即可供存取，而不需進一步的跨處理序通訊。 使用者介面自動化用戶端應用程式通常會使用快取來大量擷取屬性和控制項模式。 接著，就會視需要從快取中擷取資訊。 應用程式通常會為了回應 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中有項目已變更的事件，而定期更新快取。  
   
- 快取的優點對於具有伺服器端使用者介面自動化提供者的 Windows Presentation Foundation （WPF）控制項和自訂控制項最為明顯。 在存取用戶端提供者 (如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 控制項的預設提供者) 時，優勢較不明顯。  
+ 快取的優點對於具有伺服器端使用者介面自動化提供者的 Windows Presentation Foundation （WPF）控制項和自訂控制項最為明顯。 存取用戶端提供者（例如 Win32 控制項的預設提供者）時，會有較少的好處。  
   
  下列情況會發生快取：當應用程式啟動 <xref:System.Windows.Automation.CacheRequest> ，然後使用任何會傳回 <xref:System.Windows.Automation.AutomationElement>的方法或屬性時；例如 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>、 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。 <xref:System.Windows.Automation.TreeWalker> 類別的方法例外；僅有在指定 <xref:System.Windows.Automation.CacheRequest> 為參數 (例如 <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>) 時會完成快取。  
   
@@ -101,8 +101,8 @@ ms.locfileid: "74433935"
   
  更新快取不會更改任何現有 <xref:System.Windows.Automation.AutomationElement> 參考的屬性。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [用戶端的 UI 自動化事件](ui-automation-events-for-clients.md)
 - [在 UI 自動化中使用快取](use-caching-in-ui-automation.md)
 - [FetchTimer 範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

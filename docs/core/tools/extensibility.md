@@ -2,13 +2,12 @@
 title: .NET Core CLI 擴充性模型
 description: 了解如何擴充命令列介面 (CLI) 工具。
 ms.date: 04/12/2017
-ms.custom: seodec18
-ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
-ms.translationtype: HT
+ms.openlocfilehash: 4f49735fa94b2a7ee32e0d80590f9e680edeff16
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012978"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714186"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具擴充性模型
 

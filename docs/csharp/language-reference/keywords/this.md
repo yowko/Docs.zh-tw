@@ -1,6 +1,5 @@
 ---
 title: this 關鍵字 - C# 參考
-ms.custom: seodec18
 description: this 關鍵字 (C# 參考)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: 4a3342e73fef3effd54f72e68283eb6085eef5b5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 2a2c487ad93e6fc75ecf95c541e859b8b60bb5b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608442"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715112"
 ---
 # <a name="this-c-reference"></a>this (C# 參考)
 
@@ -39,7 +38,7 @@ ms.locfileid: "69608442"
 
   [!code-csharp[csrefKeywordsAccess#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#5)]
 
-靜態成員函式存在於類別層級，而不是物件的一部分，因此沒有 `this` 指標。 在靜態方法中參照 `this` 會產生錯誤。
+靜態成員函式存在於類別層級，而不是物件的一部分，因此沒有 `this` 指標。 參考靜態方法中的 `this` 會產生錯誤。
 
 ## <a name="example"></a>範例
 
@@ -51,7 +50,7 @@ ms.locfileid: "69608442"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

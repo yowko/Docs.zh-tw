@@ -1,6 +1,5 @@
 ---
 title: base 關鍵字 - C# 參考
-ms.custom: seodec18
 description: 了解 base 關鍵字，該關鍵字可用來存取 C# 衍生類別中基底類別的成員。
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: b882a8d1e5979ac184d184be379dd76f7bf3600f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a4686fc5d4245a50de5d77dc0e71c231772f40ef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602265"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713774"
 ---
 # <a name="base-c-reference"></a>base (C# 參考)
 
@@ -49,7 +48,7 @@ ms.locfileid: "69602265"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

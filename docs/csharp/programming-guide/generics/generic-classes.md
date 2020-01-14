@@ -1,17 +1,16 @@
 ---
 title: 泛型類別 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 6eb4df4489f4b377c68c5d49d1bf0bb01b835e85
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 13a1ca2d85be0c61b9d0f09c0c5cb670b49f5625
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589761"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75703217"
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型類別 (C# 程式設計手冊)
 泛型類別會封裝不專屬於特定資料類型的作業。 泛型類別最常搭配類似連結清單、雜湊表、堆疊、佇列、樹狀結構等的集合。 無論儲存的資料類型為何，基本上是以相同的方式執行新增和移除集合項目等作業。  
@@ -66,7 +65,7 @@ ms.locfileid: "69589761"
   
  泛型類別都是非變異值。 換句話說，如果輸入參數指定 `List<BaseClass>`，您會在嘗試提供 `List<DerivedClass>` 時收到編譯時期錯誤。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Collections.Generic>
 - [C# 程式設計指南](../index.md)

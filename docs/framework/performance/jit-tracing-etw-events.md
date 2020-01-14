@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975503"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715999"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 追蹤 ETW 事件
 這些事件會收集 just-in-time (JIT) 內嵌和 JIT tail 呼叫成功或失敗的相關資訊。
@@ -22,13 +20,13 @@ ms.locfileid: "73975503"
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 事件
  下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|詳細資訊 (5)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|JIT 內嵌失敗。|  
   
@@ -52,13 +50,13 @@ ms.locfileid: "73975503"
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded 事件  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|詳細資訊 (5)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|方法內嵌已成功。|  
   
@@ -82,13 +80,13 @@ ms.locfileid: "73975503"
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed 事件  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|詳細資訊 (5)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|方法 tail 呼叫失敗。|  
   
@@ -112,13 +110,13 @@ ms.locfileid: "73975503"
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded 事件  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|詳細資訊 (5)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|方法 tail 呼叫成功。|  
   

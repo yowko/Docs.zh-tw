@@ -1,17 +1,16 @@
 ---
 title: 如何執行介面事件-程式C#設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: cd2192d6146a431559f5cd9dd1a80da577695d66
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: b84b96245310bce557bcd3865e41cf152e7ae9df
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346343"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712334"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>如何執行介面事件（C#程式設計手冊）
 [介面](../../language-reference/keywords/interface.md)可以宣告[事件](../../language-reference/keywords/event.md)。 下列範例示範如何在類別中實作介面事件。 基本上，規則與您在實作任何介面方法或屬性時相同。  

@@ -3,14 +3,12 @@ title: 在 XPath 查詢中辨識的節點型別
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1d33e22d-18e5-43f8-a466-2e3d0a8dd094
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aa004f0def04c7efe2ba7450050a899760b0bbcd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: cc1aa668ccf6fc7f210f48a28cf76b364459c784
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590198"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710540"
 ---
 # <a name="node-types-recognized-with-xpath-queries"></a>在 XPath 查詢中辨識的節點型別
 在 XPath 查詢中辨識的節點型別不同於在文件物件模型 (DOM) 中找到的節點型別。  
@@ -46,7 +44,7 @@ ms.locfileid: "64590198"
   
  如需有關巡覽項目、屬性和命名空間節點的詳細資訊，請參閱[使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)以及[使用 XPathNavigator 巡覽屬性及命名空間節點](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)主題。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

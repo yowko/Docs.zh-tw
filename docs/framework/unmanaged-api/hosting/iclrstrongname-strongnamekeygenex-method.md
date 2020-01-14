@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1f8b59d0-5b72-45b8-ab74-c2b43ffc806e
 topic_type:
 - apiref
-ms.openlocfilehash: 1a5bcfb7a272af694126025f28ca3efe5a881c15
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b09677a45c5d515aacb2cac709599140039a9dd8
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135027"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899547"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>ICLRStrongName::StrongNameKeyGenEx 方法
 產生具有指定金鑰大小的新公開/私密金鑰組，以供強式名稱使用。  
@@ -58,7 +58,7 @@ HRESULT StrongNameKeyGenEx (
  脫銷`ppbKeyBlob`的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
  .NET Framework 版本1.0 和1.1 需要1024位的 `dwKeySize`，才能以強式名稱簽署元件;2.0 版新增了2048位金鑰的支援。  

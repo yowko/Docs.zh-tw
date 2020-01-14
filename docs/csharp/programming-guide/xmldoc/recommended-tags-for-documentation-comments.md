@@ -1,17 +1,16 @@
 ---
 title: 建議使用的文件註解標籤 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], tags
 - XML documentation [C#], tags
 ms.assetid: 6e98f7a9-38f4-4d74-b644-1ff1b23320fd
-ms.openlocfilehash: d17ff0b78d8ae40916447e8e12da7948a21e5717
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 15a183d72a7d3e47f99227cea2cf870ad2f98d18
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523364"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696528"
 ---
 # <a name="recommended-tags-for-documentation-comments-c-programming-guide"></a>建議使用的文件註解標籤 (C# 程式設計手冊)
 C# 編譯器會處理程式碼中的文件註解，並將其在 **/doc** 命令列選項中指定其名稱的檔案中格式化為 XML。 若要依據編譯器產生的檔案來建立最終文件，您可以建立自訂工具，或者是使用 [DocFX](https://dotnet.github.io/docfx/) 或 [Sandcastle](https://github.com/EWSoftware/SHFB)這類工具。  
@@ -30,7 +29,7 @@ C# 編譯器會處理程式碼中的文件註解，並將其在 **/doc** 命令�
 |[\<c>](./code-inline.md)|[\<para>](./para.md)|[\<see>](./see.md)*|  
 |[\<code>](./code.md)|[\<param>](./param.md)*|[\<seealso>](./seealso.md)*|  
 |[\<example>](./example.md)|[\<paramref>](./paramref.md)|[\<summary>](./summary.md)|  
-|[\<exception>](./exception.md)*|[\<permission>](./permission.md)*|[\<typeparam>](./typeparam.md)*|  
+|[\<exception>](./exception.md)*|[\<permission>](./permission.md)*|[\<類型參數>](./typeparam.md)*|  
 |[\<include>](./include.md)*|[\<remarks>](./remarks.md)|[\<typeparamref>](./typeparamref.md)|  
 |[\<list>](./list.md)|[\<returns>](./returns.md)|[\<value>](./value.md)|  
   

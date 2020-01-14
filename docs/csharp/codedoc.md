@@ -4,14 +4,14 @@ description: 了解如何使用 XML 文件註解記錄您的程式碼，並在�
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 92a64a8f7a652f8b957013fc05f426e6b983655d
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710982"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713932"
 ---
-# <a name="documenting-your-code-with-xml-comments"></a>使用 XML 註解記錄您的程式碼
+# <a name="document-your-code-with-xml-comments"></a>使用 XML 批註記錄您的程式碼
 
 XML 文件註解是一種特殊類型的註解，新增於任何使用者定義型別或成員的定義上方。
 XML 文件註解具特殊性，因為編譯器可以處理它們以在編譯時期產生 XML 文件檔案。
@@ -137,7 +137,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 ## <a name="param"></a>\<param>
 
-您可以使用 `<param>` 標記來描述方法的參數。 以下是雙 `Add` 方法的範例：標記所描述的屬性指定於**必要的** `name` 屬性中。
+您可以使用 `<param>` 標記來描述方法的參數。 以下是 double `Add` 方法的範例：標記描述的參數是在**必要**的 `name` 屬性中指定。
 
 [!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -150,7 +150,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 ## <a name="paramref"></a>\<paramref>
 
-您有時可能正在描述方法在 `<summary>` 標記中所執行的作業，而且您可能會想要參考參數。 則 `<paramref>` 標記最適合這麼做。 讓我們更新雙 `Add` 方法的摘要。 與 `<param>` 標記類似，參數名稱指定於**必要的** `name` 屬性中。
+您有時可能正在描述方法在 `<summary>` 標記中所執行的作業，而且您可能會想要參考參數。 則 `<paramref>` 標記最適合這麼做。 讓我們更新雙 `Add` 方法的摘要。 如同 `<param>` 標記，參數名稱是在**必要**的 `name` 屬性中指定。
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -170,7 +170,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 您可以分別將 `type` 屬性變更為 `number` 或 `table`，以建立排序過的清單或表格。
 
-### <a name="putting-it-all-together"></a>全部整合
+### <a name="put-it-all-together"></a>組合在一起
 
 如已遵循本教學課程，並已在必要時將標記套用至程式碼，則程式碼現在看起來應該如下︰
 
@@ -203,10 +203,10 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 可用來取代 `name` 的 `id` 屬性代表位在註解前面之標記的識別碼。
 
-### <a name="user-defined-tags"></a>使用者定義標記
+### <a name="user-defined-tags"></a>使用者定義的標記
 
 以上所述的所有標記都代表 C# 編譯器所辨識的標記。 不過，使用者可以定義自己的標記。
-Sandcastle 這類工具會支援 [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)、[`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) 甚至支援 [documenting namespaces](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm) (記錄命名空間) 這類額外標記。
+Sandcastle 這類之類的工具可支援額外的標記，例如[\<事件 >](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)和[\<附注 >](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)，甚至支援[記錄命名空間](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)。
 自訂或內部文件產生工具也可以與標準標記搭配使用，而且可以支援從 HTML 到 PDF 的多個輸出格式。
 
 ## <a name="recommendations"></a>建議
@@ -218,7 +218,7 @@ Sandcastle 這類工具會支援 [`<event>`](https://ewsoftware.github.io/XMLCom
 - 類型和其成員最少應該具有 `<summary>` 標記，因為 IntelliSense 需要其內容。
 - 應該使用結尾為句號的完整句子來撰寫文件文字。
 - 完全支援部分類別，而且文件資訊將會串連為該類型的單一項目。
-- 編譯器會驗證 `<exception>`、`<include>`、`<param>`、`<see>`、`<seealso>` 和 `<typeparam>` 標記的語法。
+- 編譯器會驗證 `<exception>`、`<include>`、`<param>`、`<see>`、`<seealso>`和 `<typeparam>` 標記的語法。
 - 編譯器會驗證包含程式碼其他部分的檔案路徑和參考的參數。
 
 ## <a name="see-also"></a>請參閱

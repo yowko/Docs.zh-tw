@@ -1,17 +1,16 @@
 ---
 title: 處理 XML 檔案 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: b2b19a2b2c46df5b78b6ebba48955cae55d32121
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846941"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696515"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>處理 XML 檔案 (C# 程式設計手冊)
 
@@ -27,12 +26,12 @@ XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個�
 
     |字元|描述|
     |---------------|-----------------|
-    |N|namespace<br /><br /> 您無法將文件註解新增至命名空間，但可讓 cref 參考它們 (如果支援)。|
+    |N|命名空間<br /><br /> 您無法將文件註解新增至命名空間，但可讓 cref 參考它們 (如果支援)。|
     |T|型別︰類別、介面、建構、列舉、委派|
-    |F|Field - 欄位|
+    |華氏 (F)|Field - 欄位|
     |P|屬性 (包括索引子或其他索引屬性)|
     |M|方法 (包括像是建構函式、運算子之類的特殊方法)|
-    |E|event|
+    |E|事件|
     |!|錯誤字串<br /><br /> 字串的其餘部分提供與錯誤相關的資訊。 C# 編譯器會針對無法解析的連結產生錯誤資訊。|
 
 - 字串的第二個部分是項目的完整名稱 (從命名空間的根開始)。 項目名稱、其封入類型及命名空間會以句號來分隔。 如果項目名稱本身包含句點，則會以雜湊符號 ('#') 來取代它們。 假設沒有項目的名稱中直接含有雜湊符號。 例如，String 建構函式的完整名稱會是 "System.String.#ctor"。
@@ -41,7 +40,7 @@ XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個�
 
   - 基底類型。 一般類型 (ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE) 會表示為類型的完整名稱。
 
-  - 內建類型（例如 ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF 和 ELEMENT_TYPE_VOID）會表示為對應完整類型的完整名稱。 例如，System.Int32 或 System.TypedReference。
+  - 內建類型（例如，ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF 和 ELEMENT_TYPE_VOID）會表示為對應完整類型的完整名稱。 例如，System.Int32 或 System.TypedReference。
 
   - ELEMENT_TYPE_PTR 會表示為 '\*'，緊接在已修改的類型之後。
 
@@ -71,7 +70,7 @@ XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個�
 
 - 僅針對轉換運算子 (op_Implicit 和 op_Explicit)，此方法的傳回值會編碼為 ' ~'，後面接著傳回類型，如上述編碼所示。
 
-- 針對泛型類型，類型的名稱後面會接著反引號，然後是表示泛型類型參數數目的數字。 例如:
+- 針對泛型類型，類型的名稱後面會接著反引號，然後是表示泛型類型參數數目的數字。 例如：
 
      ``<member name="T:SampleClass`2">`` 是類型的標籤，定義為 `public class SampleClass<T, U>`。
 

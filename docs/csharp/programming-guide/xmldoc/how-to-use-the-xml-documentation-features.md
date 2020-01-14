@@ -1,19 +1,18 @@
 ---
-title: 如何：使用 XML 檔功能-程式C#設計指南
-ms.custom: seodec18
+title: 如何使用 XML 檔功能-程式C#設計指南
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 3e59783a7f306d3d2a510fe3337a4c6490dcb3e8
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523459"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696710"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>如何：使用 XML 文件功能
+# <a name="how-to-use-the-xml-documentation-features"></a>如何使用 XML 文件功能
 
 下列範例提供已記載之類型的基本概觀。
 

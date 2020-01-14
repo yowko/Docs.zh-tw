@@ -5,12 +5,12 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: bcf9ea0bb9a8346284c49060786afefa0f77745e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 0968d9db1dbfbdc8c586328ee8e02315f17950b9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341405"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714386"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core 使用者入門
 
@@ -54,9 +54,7 @@ Hello World!
 | ![影片的電影攝影機圖示](./media/video-icon.png "請觀賞影片") | 觀看 Channel 9 上的[如何安裝和使用 Visual Studio Code 和 .Net Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/)影片。 |
 | ![影片的電影攝影機圖示](./media/video-icon.png "請觀賞影片") | 觀看 YouTube 上的[.Net Core 101](https://www.youtube.com/playlist?list=PLdo4fOcmZ0oWoazjhXQzBKMrFuArxpW80)影片。 |
 
-如需支援的 Windows 版本清單，請參閱[.Net Core 相依性和需求](install/dependencies.md?tabs=netcore30&pivots=os-windows)一文。
-
-如需支援的 Windows 版本清單，請參閱[.NET Core SDK 和運行](install/dependencies.md?pivots=os-windows)時間相依性一文。
+如需支援的 Windows 版本清單，請參閱[.Net Core 相依性和需求](install/dependencies.md?pivots=os-windows)一文。
 
 # <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
@@ -68,7 +66,7 @@ Hello World!
 |---|---|
 | ![影片的電影攝影機圖示](./media/video-icon.png "請觀賞影片") | 觀看影片以了解[使用 C# 和 .NET Core 在 Ubuntu 上開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu)。 |
 
-如需支援的 Linux 散發版本和版本清單，請參閱[.NET Core SDK 和運行](install/dependencies.md?pivots=os-linux)時間相依性一文。
+如需支援的 Linux 散發版本和版本清單，請參閱[.Net Core 相依性和需求](install/dependencies.md?pivots=os-linux)一文。
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
@@ -83,6 +81,6 @@ Hello World!
 |---|---|
 | ![影片的電影攝影機圖示](media/video-icon.png "請觀賞影片") | 觀看影片，瞭解[如何在 macOS 上使用C#和 .net Core 來開始使用 Visual Studio Code](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac)。 |
 
-如需支援的 OS X/macOS 版本清單，請參閱[.NET Core SDK 和運行](install/dependencies.md?pivots=os-macos)時間相依性一文。
+如需支援的 OS X/macOS 版本清單，請參閱[.Net Core 相依性和需求](install/dependencies.md?pivots=os-macos)一文。
 
 ---

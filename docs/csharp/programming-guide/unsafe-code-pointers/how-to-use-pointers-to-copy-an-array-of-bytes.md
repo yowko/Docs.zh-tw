@@ -1,19 +1,18 @@
 ---
-title: HOW TO：使用指標複製位元組陣列 - C# 程式設計指南
-ms.custom: seodec18
+title: 如何使用指標來複製位元組陣列-程式C#設計指南
 ms.date: 04/20/2018
 helpviewer_keywords:
 - byte arrays [C#]
 - arrays [C#], byte
 - pointers [C#], to copy bytes
-ms.openlocfilehash: d174f51fa1709a70b98473a4dbbad89b9c62c22a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 4929699c2d1e07b16d4694cff79f9b1394b1de38
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640299"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75698452"
 ---
-# <a name="how-to-use-pointers-to-copy-an-array-of-bytes--c-programming-guide"></a>HOW TO：使用指標複製位元組陣列 (C# 程式設計指南)
+# <a name="how-to-use-pointers-to-copy-an-array-of-bytes-c-programming-guide"></a>如何使用指標來複製位元組陣列（C#程式設計手冊）
 
 下列範例會使用指標，以將位元組從某個陣列複製到另一個陣列。
 
@@ -25,7 +24,7 @@ ms.locfileid: "54640299"
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#8)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [Unsafe 程式碼和指標](index.md)

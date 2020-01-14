@@ -12,13 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-author: KrzysztofCwalina
-ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: a9cd531100057fbad4884a20e6e7db6ef94e7956
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353719"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709214"
 ---
 # <a name="names-of-type-members"></a>類型成員名稱
 類型由成員組成：方法、屬性、事件、建構函式及欄位。 下列各節會描述為類型成員命名的方針。  
@@ -48,9 +47,9 @@ public class String {
   
  此模式通常表示屬性應該真的是方法。  
   
- **✓ DO**以單數片語命名集合屬性，描述集合中的項目而非使用後面接著 "List" 或 "Collection" 的單數片語。  
+ **✓ DO**使用複數片語來命名集合屬性，以描述集合中的專案，而不是使用後面接著 "List" 或 "collection" 的單數片語。  
   
- **✓ DO**以肯定片語 (`CanSeek` 而非 `CantSeek`) 命名布林值屬性。 此外，您也可以使用 "Is,"、"Can," 或 "Has," 作為布林值屬性的首碼，但僅限於新增值的情況。  
+ **✓ DO**以肯定片語 (`CanSeek` 而非 `CantSeek`) 命名布林值屬性。 （選擇性）您也可以使用 "Is"、"Can" 或 "has" 作為布林值屬性的前置詞，但只有其加入值的位置。  
   
  **✓ CONSIDER**為屬性提供與其類型相同的名稱。  
   
@@ -99,9 +98,9 @@ public class Control {
   
  *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*  
   
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 *Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition[ 節錄。](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)*  
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

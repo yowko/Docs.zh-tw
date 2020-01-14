@@ -5,14 +5,12 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7e2add2756106234227c7b2dd62ae107adc58854
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c7b9dcb99e08a1ef2844c5811897aa87ff86f866
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052185"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716559"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>設定組件繫結重新導向
 根據預設，應用程式會使用執行階段版本 (用來編譯應用程式) 隨附的 .NET Framework 組件集。 您可以使用應用程式組態檔中 [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 項目上的 **appliesTo** 屬性，來重新導向組件繫結參考至特定版本的 .NET Framework 組件。 這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它會套用至哪一個版本。 如果未指定 **appliesTo** 屬性，則 **\<assemblyBinding>** 項目會套用至所有的 .NET Framework 版本。  
@@ -57,6 +55,6 @@ ms.locfileid: "71052185"
   
  您可判斷組態檔是否用於決定正在進行組件繫結重新導向。 使用[組件繫結記錄檔檢視器 (Fuslogvw.exe)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) 來查看正在載入哪些組件。 若要查看所有組件繫結，您必須在登錄中設定 **ForceLog** 項目。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [如何：啟用和停用自動繫結重新導向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

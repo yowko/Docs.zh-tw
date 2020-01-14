@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fb6e3677d79f3131432c3daebeee4d166b5450b2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: b4675765849299050eb6cddeaaa497bc6cdc620a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916665"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711099"
 ---
 # <a name="compiled-xpath-expressions"></a>編譯 XPath 運算式
 <xref:System.Xml.XPath.XPathExpression> 物件表示從 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 類別的靜態 <xref:System.Xml.XPath.XPathExpression> 方法或 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator> 方法傳回的編譯 XPath 查詢。  
@@ -37,7 +35,7 @@ ms.locfileid: "69916665"
   
  下表說明每個 W3C XPath 傳回型別、其 Microsoft .NET Framework 對等型別，以及與 <xref:System.Xml.XPath.XPathExpression> 物件搭配使用的方法 (根據其傳回型別)。  
   
-|W3C XPath 傳回型別|.NET Framework 對等型別|說明|方法|  
+|W3C XPath 傳回型別|.NET Framework 對等型別|描述|方法|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|依文件順序建立之不重複節點的未排序集合。|<xref:System.Xml.XPath.XPathNavigator.Select%2A> 或 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`Boolean`|<xref:System.Boolean>|`true` 或 `false` 值。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 或<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
@@ -119,7 +117,7 @@ Console.WriteLine(nodes.Current.Value);
   
  如需 <xref:System.Xml.XPath.XPathNavigator> 類別之節點集巡覽方法的詳細資訊，請參閱[使用 XPathNavigator 巡覽節點集](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

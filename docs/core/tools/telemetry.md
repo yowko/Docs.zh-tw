@@ -3,13 +3,12 @@ title: .NET Core SDK 遙測
 description: 探索收集使用方式資訊以進行分析的 .NET Core SDK 遙測功能，它會收集哪些資料以及如何停用。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.custom: seodec18
-ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281780"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714108"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遙測
 
@@ -19,11 +18,11 @@ ms.locfileid: "74281780"
 
 ## <a name="scope"></a>範圍
 
-`dotnet` 有兩個功能：執行應用程式，以及執行 CLI 命令。 使用  *啟動應用程式時 (格式如下)，「不會收集」* `dotnet`遙測：
+`dotnet` 有兩個功能：執行應用程式，以及執行 CLI 命令。 使用 `dotnet` 啟動應用程式時 (格式如下)，「不會收集」遙測：
 
 - `dotnet [path-to-app].dll`
 
-使用以下任何 *[.NET Core CLI 命令](index.md)* 時，則「會收集」遙測：
+使用以下任何 [.NET Core CLI 命令](index.md) 時，則「會收集」遙測：
 
 - `dotnet build`
 - `dotnet pack`
@@ -95,8 +94,8 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 |-------------------------|------------------------------------------------------------------------------------------------|
 | `--verbosity`           | 所有命令                                                                                   |
 | `--language`            | `dotnet new`                                                                                   |
-| `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
-| `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
+| `--configuration`       | `dotnet build`、 `dotnet clean`、 `dotnet publish`、 `dotnet run`、 `dotnet test`                  |
+| `--framework`           | `dotnet build`、 `dotnet clean`、 `dotnet publish`、 `dotnet run`、 `dotnet test`、 `dotnet vstest` |
 | `--runtime`             | `dotnet build`、`dotnet publish`                                                              |
 | `--platform`            | `dotnet vstest`                                                                                |
 | `--logger`              | `dotnet vstest`                                                                                |
@@ -135,7 +134,7 @@ at Microsoft.DotNet.Cli.Program.Main(String[] args)
 
 因此，.NET Core SDK 自訂組建不應該位於其路徑名稱會公開個人或敏感性資訊的目錄中。 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Core CLI Telemetry - 2019 Q2 Data](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2) (.NET Core CLI 遙測 - 2019 年第 2 季資料)
 - [遙測參考來源 (dotnet/cli 存放庫)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)

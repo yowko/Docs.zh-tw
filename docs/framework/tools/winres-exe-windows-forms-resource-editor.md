@@ -11,14 +11,12 @@ helpviewer_keywords:
 - resx files
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: df7ce0795daabdf34f46e20460bef23e7c486467
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043897"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715699"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows 資源當地語系化編輯器)
 
@@ -33,7 +31,7 @@ winres resourceFile
 winres /?
 ```
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a>Arguments
 
 |引數|描述|
 |--------------|-----------------|
@@ -137,7 +135,7 @@ Winres.exe 具有以下的特性和功能：
 
    工具會使用執行階段所需的當地語系化資源檔命名規範來儲存檔案。 例如，如果您針對德國境內的德國人當地語系化 `TestApp.resources`，則工具會將檔案儲存為 `TestApp.de-DE.resources`。 如果您針對德國境內的德國人當地語系化 `TestApp.resx`，則工具會將檔案儲存為 `TestApp.de-DE.resx`。 如需資源命名慣例的詳細資訊，請參閱[封裝和部署資源](../resources/packaging-and-deploying-resources-in-desktop-apps.md)。 如需執行階段所使用之預先定義的文化特性名稱清單，請參閱 <xref:System.Globalization.CultureInfo> 類別。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ComponentModel.LocalizableAttribute>
 - <xref:System.Globalization.CultureInfo>

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - performance [.NET Framework]
 - reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3f3d035ebf6472788e2c7d6e11cb1a39708367b
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ccff2318355ae2d5b606ee283d45d05afd35310d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800336"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716037"
 ---
 # <a name="net-framework-performance"></a>.NET Framework 效能
 如果您想建立高效能的應用程式，您應該以設計應用程式之其他任何功能的相同方式，來設計及規劃效能。 您可以使用 Microsoft 提供的工具來測量應用程式的效能，並在必要時改進記憶體使用量、程式碼輸送量和回應性。 本主題列出 Microsoft 提供的效能分析工具，並提供涵蓋應用程式開發之特定區域效能的其他主題連結。  

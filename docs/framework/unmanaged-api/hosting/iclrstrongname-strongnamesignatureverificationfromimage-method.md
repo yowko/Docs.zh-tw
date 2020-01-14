@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da91c138-ee30-4fd4-a040-464d97d7e41a
 topic_type:
 - apiref
-ms.openlocfilehash: adb3b4e33edafe6d25c8259e316a9b62e339f896
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1bfc41fdad35a7e0560d251179ea035c96aecab7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092675"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899524"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>ICLRStrongName::StrongNameSignatureVerificationFromImage 方法
 驗證已對應到記憶體的組件對關聯的公開金鑰而言有效。  
@@ -64,7 +64,7 @@ HRESULT StrongNameSignatureVerificationFromImage (
 - `SN_OUTFLAG_WAS_VERIFIED` （0x00000001）-此值設定為 `false`，指定驗證是因為登錄設定而成功。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

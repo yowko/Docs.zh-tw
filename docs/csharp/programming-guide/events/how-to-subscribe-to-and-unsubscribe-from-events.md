@@ -1,18 +1,17 @@
 ---
 title: 如何訂閱和取消訂閱事件-程式C#設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: e194501d7619d4bc04dec6a10d34fb2b01be2c7a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 3df357cb15f7f77cefbf360dd9615ce246afe2ea
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346321"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705323"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>如何訂閱和取消訂閱事件（C#程式設計手冊）
 如果您想要撰寫在引發事件時所呼叫的自訂程式碼，您可以訂閱由其他類別發行的事件。 例如，您可以訂閱某個按鈕的 `click` 事件，讓應用程式在使用者按下該按鈕時執行某項動作。  

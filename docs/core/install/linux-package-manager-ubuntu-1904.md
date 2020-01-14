@@ -4,12 +4,12 @@ description: 使用套件管理員在 Ubuntu 19.04 上安裝 .NET Core SDK 和�
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 69bfc3395f5cd92ed54850e5ea8b76eba7f27d83
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a229369b9252d08fe5fc83add98c694214ce5ba5
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959743"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740603"
 ---
 # <a name="ubuntu-1904-package-manager---install-net-core"></a>Ubuntu 19.04 套件管理員-安裝 .NET Core
 
@@ -17,13 +17,14 @@ ms.locfileid: "74959743"
 
 本文說明如何使用套件管理員在 Ubuntu 19.04 上安裝 .NET Core。 如果您僅要安裝執行階段，我們建議您安裝[ASP.NET Core runtime](#install-the-aspnet-core-runtime)，因為它同時包含 .net Core 和 ASP.NET Core 執行階段。
 
-## <a name="register-microsoft-key-and-feed"></a>註冊 Microsoft 金鑰和摘要
+
+## <a name="register-microsoft-key-and-feed"></a>註冊 Microsoft 金鑰和總結
 
 安裝 .NET 之前，您必須：
 
-- 註冊 Microsoft 金鑰
-- 註冊產品存放庫
-- 安裝必要的相依性
+- 註冊 Microsoft 金鑰。
+- 註冊產品存放庫。
+- 安裝必要的相依性。
 
 每部電腦只需要執行這項作業一次。
 
@@ -62,6 +63,7 @@ sudo apt-get install aspnetcore-runtime-3.1
 > [!IMPORTANT]
 > 如果您收到類似 [**找不到封裝 aspnetcore-runtime-3.1**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
 
+
 ## <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行階段
 
 更新可供安裝的產品，然後安裝 .NET Core 執行階段。 在您的終端機中，執行下列命令。
@@ -75,6 +77,7 @@ sudo apt-get install dotnet-runtime-3.1
 
 > [!IMPORTANT]
 > 如果您收到類似 [**找不到封裝 dotnet-runtime-3.1**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
+
 
 ## <a name="how-to-install-other-versions"></a>如何安裝其他版本
 

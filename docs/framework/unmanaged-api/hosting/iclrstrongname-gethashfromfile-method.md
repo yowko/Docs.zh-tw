@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e50480a-8ada-4044-b2a5-97bb14ed3525
 topic_type:
 - apiref
-ms.openlocfilehash: 798bb0585bfe4cc29afba2fbefae818301704613
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9561d383e7c134230b8664329b59aec23e487124
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135186"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899574"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile 方法
 產生指定檔案內容的雜湊。  
@@ -42,7 +42,7 @@ HRESULT GetHashFromFile (
  在要雜湊的檔案名。  
   
  `piHashAlg`  
- [in、out]產生雜湊時要使用的演算法。 有效的演算法是由 Win32 CryptoAPI 所定義。 如果 `piHashAlg` 設定為0，則會使用預設的演算法 CALG_SHA-1。  
+ [in、out]產生雜湊時要使用的演算法。 有效的演算法是由 Win32 CryptoAPI 所定義。 如果 `piHashAlg` 設定為0，則會使用預設演算法 CALG_SHA-1。  
   
  `pbHash`  
  脫銷包含所產生之雜湊的位元組陣列。  
@@ -54,7 +54,7 @@ HRESULT GetHashFromFile (
  脫銷傳回之 `pbHash`的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
  這個方法與[ICLRStrongName：： GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)方法相同，不同之處在于檔案名規格是 ANSI，而不是 Unicode。  

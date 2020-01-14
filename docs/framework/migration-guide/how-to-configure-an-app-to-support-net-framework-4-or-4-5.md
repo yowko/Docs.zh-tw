@@ -1,20 +1,18 @@
 ---
-title: 作法：設定應用程式以支援 .NET Framework 4 或更新版本
+title: 如何：將應用程式設定為支援 .NET Framework 4 或更新版本
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring apps to support .NET Framework
 - .NET Framework, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cd267de1e632fdc40dc50e8acdeba7d16bf8e61a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 586f39fc9b50dcd45bb959ebd0063e3c38d9c3ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779489"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716239"
 ---
-# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>HOW TO：設定應用程式以支援 .NET Framework 4 或更新版本
+# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>如何：將應用程式設定為支援 .NET Framework 4 或更新版本
 
 所有裝載通用語言執行平台 (CLR) 的應用程式都必須啟動或「啟用」CLR，才能執行 Managed 程式碼。 通常，.NET Framework 應用程式會在本身建置所在的 CLR 版本上執行，但是您可以使用應用程式組態檔 (有時稱為 app.config 檔案) 變更桌面應用程式的這個行為。 不過，您無法使用應用程式組態檔變更 Windows 市集應用程式或 Windows Phone 應用程式的預設啟用行為。 本文說明如何讓您的傳統型應用程式在另一個 .NET Framework 版本上執行，且提供如何鎖定 4 或更新版本作為目標。
 
@@ -45,7 +43,7 @@ ms.locfileid: "70779489"
 
 1. 加入或尋找 .NET Framework 專案的組態檔。 應用程式的組態檔與應用程式位於相同的目錄中且名稱相同，不過其副檔名為 .config。 例如，如果應用程式名為 MyExecutable.exe，則應用程式組態檔會命名為 MyExecutable.exe.config。
 
-     若要加入組態檔，請在 Visual Studio 功能表列上選擇 [專案]、[加入新項目]。 從左窗格選擇 [一般]，然後選擇 [組態檔]。 將組態檔命名為*應用程式名稱*.exe.config。這些功能表選項不適用於 Windows 市集應用程式或 Windows Phone 應用程式專案，因為您無法變更這些平台的啟用原則。
+     若要加入組態檔，請在 Visual Studio 功能表列上選擇 [專案]、[加入新項目]。 從左窗格選擇 [一般]，然後選擇 [組態檔]。 將設定檔命名為*appName*. .exe。這些功能表選項不適用於 Windows Store 應用程式或 Windows phone 應用程式專案，因為您無法在這些平臺上變更啟用原則。
 
 2. 將 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 元素加入至應用程式組態檔，如下所示：
 
@@ -79,9 +77,9 @@ ms.locfileid: "70779489"
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|在 3.5 上執行|在第 4 版或更新版本上執行|在第 4 版或更新版本上執行|
 |`<supportedRuntime version="v4.0"/>`|顯示錯誤訊息，提示使用者安裝正確的版本*|在第 4 版或更新版本上執行|在第 4 版或更新版本上執行|
 
- \* 如需這個錯誤訊息及避免出現這個錯誤訊息的詳細資訊，請參閱 [.NET Framework 初始化錯誤：管理使用者體驗](../deployment/initialization-errors-managing-the-user-experience.md)。
+ \*如需有關這個錯誤訊息及避免出現這個錯誤訊息的詳細資訊，請參閱 [.NET Framework 初始化錯誤：管理使用者經驗](../deployment/initialization-errors-managing-the-user-experience.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [從 .NET Framework 1.1 移轉](migrating-from-the-net-framework-1-1.md)
 - [移轉手冊](index.md)

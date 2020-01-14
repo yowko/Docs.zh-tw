@@ -1,6 +1,5 @@
 ---
 title: <include> - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 26241dab70a3b6a0cf80b374868fa759647cd8d9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 125ab9476507babae9a707a6c42d24adda632267
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588005"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696554"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
@@ -67,7 +66,7 @@ The summary for this other type.
 ```  
   
 ## <a name="program-output"></a>程式輸出  
- 當您使用下列命令列編譯 Test 和 Test2 類別時，會產生下列輸出：`/doc:DocFileName.xml.` 在 Visual Studio 中，您會在 [專案設計工具] 的 [組建] 窗格中指定 XML 文件命令選項。 當 C# 編譯器看到 \<include> 標記時，會搜尋 xml_include_tag.doc 中的文件註解，而不是目前的原始程式檔。 編譯器接著會產生 DocFileName.xml，這是 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類文件工具用來產生最終文件的檔案。  
+ 當您使用下列命令列編譯 Test 和 Test2 類別時，會產生下列輸出：`/doc:DocFileName.xml.`。在 Visual Studio 中，您可以在專案設計工具的 [建置] 窗格中指定 XML 文件註解選項。 當 C# 編譯器看到 \<include> 標記時，會搜尋 xml_include_tag.doc 中的文件註解，而不是目前的原始程式檔。 編譯器接著會產生 DocFileName.xml，這是 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類文件工具用來產生最終文件的檔案。  
   
 ```xml  
 <?xml version="1.0"?>   
@@ -90,7 +89,7 @@ The summary for this other type.
 </doc>   
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

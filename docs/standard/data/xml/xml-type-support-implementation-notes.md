@@ -3,14 +3,12 @@ title: XML 型別支援實作注意事項
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 817d48e15f3a1d370e1953ca9c9aa8e10baa7f29
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 40ab0f746ef82ccd195fc6b873f5c8edb255f868
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916038"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709864"
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML 型別支援實作注意事項
 本主題說明一些您想要知道的實作詳細資料。  
@@ -34,7 +32,7 @@ ms.locfileid: "69916038"
   
  <xref:System.TimeSpan> 類別不支援這種部分排序。 而是會挑選特定的天數來表示 1 年及 1 個月；分別為 365 天及 30 天。  
   
- 如需 `xs:duration` 類型的詳細資訊，請參閱 W3C [XML Schema Part 2:Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/) (XML 結構描述第 2 部分：資料類型建議)。
+ 如需 `xs:duration` 類型的詳細資訊，請參閱 W3C [XML 結構描述第 2 部：資料類型建議事項](https://www.w3.org/TR/xmlschema-2/) \(英文\)。
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time (公曆日期型別) 及 System.DateTime  
  當 `xs:time` 值對應至 <xref:System.DateTime> 物件時，會使用 <xref:System.DateTime.MinValue> 欄位將 <xref:System.DateTime> 物件的日期屬性 (如 <xref:System.DateTime.Year%2A>、<xref:System.DateTime.Month%2A> 及 <xref:System.DateTime.Day%2A>) 初始化為最小的 <xref:System.DateTime> 可能值。  
@@ -47,6 +45,6 @@ ms.locfileid: "69916038"
 ### <a name="xsanyuri-and-systemuri"></a>xs:anyURI 及 System.Uri  
  當表示相對 URI 的 `xs:anyURI` 執行個體對應至 <xref:System.Uri> 時，<xref:System.Uri> 物件就不具有基底 URI。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [System.Xml 類別中的類型支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

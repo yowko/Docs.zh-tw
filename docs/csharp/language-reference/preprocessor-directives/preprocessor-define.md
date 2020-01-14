@@ -1,18 +1,17 @@
 ---
 title: '#define - C# 參考'
-ms.custom: seodec18
 ms.date: 06/30/2018
 f1_keywords:
 - '#define'
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: d207c96621564acd8070c9d5f618f43a6d8f15a4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 7457b05ae827675969398792bcb02f025f3028fb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924594"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712581"
 ---
 # <a name="define-c-reference"></a>#define (C# 參考)
 您可以使用 `#define` 來定義符號。 當您將符號作為運算式傳遞給 [#if](./preprocessor-if.md) 指示詞時，運算式會判斷值為 `true`，如下列範例所示：  
@@ -32,7 +31,7 @@ ms.locfileid: "69924594"
   
  您也可以使用 [-define](../compiler-options/define-compiler-option.md) 編譯器選項來定義符號。 您可以使用 [#undef](./preprocessor-undef.md) 來取消定義符號。  
   
- 透過 `-define` 或 `#define` 所定義的符號不會與相同名稱的變數發生衝突。 也就是說，您不應將變數名稱傳遞給前置處理器指示詞，而且符號僅能由前置處理器指示詞來評估。  
+ 透過 `-define` 或 `#define` 所定義的符號不會與相同名稱的變數發生衝突。 也就是，不應將變數名稱傳遞給前置處理器指示詞，而符號僅能由前置處理器指示詞評估。  
   
  使用 `#define` 所建立的符號範圍即為定義符號的檔案。  
   
@@ -64,7 +63,7 @@ public class TestDefine
   
  如需如何取消定義符號的範例，請參閱 [#undef](./preprocessor-undef.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

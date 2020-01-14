@@ -3,21 +3,19 @@ title: XML 處理選項
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3fc7def48bff71935fce7c6ed914ad20c66e5182
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1707ed10d944a518872132dded40751026a4c8e7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425171"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709916"
 ---
 # <a name="xml-processing-options"></a>XML 處理選項
 請參閱下表，以取得您可以用來處理 XML 資料的 Microsoft 技術清單。  
   
 ## <a name="net-framework-options"></a>.NET Framework 選項  
   
-|**選項**|**處理型別**|**說明**|  
+|**選項**|**處理型別**|**描述**|  
 |----------------|-------------------------|---------------------|  
 |[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) <br/> [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) <br />(<xref:System.Xml.Linq> 命名空間)|記憶體中|-   根據 .NET Framework Language-Integrated Query (LINQ) 技術。<br />-   提供類似於物件、關聯式資料和 XML 資料適用之 SQL 的查詢體驗。<br />-   提供直覺式文件建立和轉換功能。<br />-   如果您要撰寫新程式碼，請使用這個選項。|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|資料流形式|-   提供快速、非快取的順向方式來存取 XML 資料。<br />-   您可以使用 <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> 方法建立物件，並且使用 <xref:System.Xml.XmlReaderSettings> 類別來指定此物件上所要啟用的功能集合。|  
@@ -28,7 +26,7 @@ ms.locfileid: "73425171"
   
 ## <a name="win32-and-com-based-options"></a>Win32 和 COM 架構的選項  
   
-|**選項**|**說明**|  
+|**選項**|**描述**|  
 |----------------|---------------------|  
 |[XmlLite](https://docs.microsoft.com/previous-versions/windows/desktop/ms752872(v=vs.85))|-   一種快速、安全、非快取、順向的 XML 剖析器，可幫助您建置高效能的 XML 應用程式。<br />-   可搭配可使用動態連結程式庫 (DLL) 的任何語言一起使用；我們建議使用 C++。|  
 |[MSXML](https://docs.microsoft.com/previous-versions/windows/desktop/ms763742(v=vs.85))|-   COM 架構的技術，用於處理 Windows 作業系統隨附的 XML。<br />-   提供 DOM 的原始實作 (包含對於 XPath 和 XSLT 的支援)。<br />-   包含 SAX2 事件架構剖析器。|  

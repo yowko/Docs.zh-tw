@@ -3,14 +3,12 @@ title: 保留實體參照
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e512f2077c2e6b9feba5024c4eabc2568357ecab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0fd427388a065bd4c689d087c22fd6d69046b8a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965920"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710917"
 ---
 # <a name="entity-references-are-preserved"></a>保留實體參照
 當實體參照並未擴充但保留下來時，若 XML 文件物件模型 (DOM) 遇到實體參照，就會建置 **XmlEntityReference** 節點。  
@@ -34,6 +32,6 @@ ms.locfileid: "69965920"
   
  根據預設，會保留 `&abc;` 之類的一般實體，且一律會建立 **XmlEntityReference** 節點。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

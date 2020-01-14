@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7e7892289248c9651b529bcc68d7228b8babb28a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: HT
+ms.openlocfilehash: 016032b2b37ced5592edc18934ed183c475f5598
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083815"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710475"
 ---
 # <a name="post-schema-compilation-infoset"></a>後結構描述編譯資訊集
 [全球資訊網協會 (W3C) XML 結構描述建議事項](https://www.w3.org/XML/Schema) (英文) 中討論為了進行前置結構描述驗證和後置結構描述編譯所必須公開的資訊集 (infoset)。 XML 結構描述物件模型 (SOM) 會在呼叫 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 的 <xref:System.Xml.Schema.XmlSchemaSet> 方法之前及之後，檢視此公開資訊集。  
@@ -26,10 +24,10 @@ ms.locfileid: "44083815"
 |類別|屬性|  
 |-----------|--------------|  
 |<xref:System.Xml.Schema.XmlSchemaObject>|<xref:System.Xml.Schema.XmlSchemaObject.Parent%2A>|  
-|<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>, <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>, <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  
+|<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>、 <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>、 <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>、 <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>、 <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  
 |<xref:System.Xml.Schema.XmlSchemaExternal>|<xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A>|  
 |<xref:System.Xml.Schema.XmlSchemaAttributeGroup>|<xref:System.Xml.Schema.XmlSchemaAttributeGroup.AnyAttribute%2A>|  
-|<xref:System.Xml.Schema.XmlSchemaParticle>|<xref:System.Xml.Schema.XmlSchemaParticle.MaxOccurs%2A>, <xref:System.Xml.Schema.XmlSchemaParticle.MinOccurs%2A>|  
+|<xref:System.Xml.Schema.XmlSchemaParticle>|<xref:System.Xml.Schema.XmlSchemaParticle.MaxOccurs%2A>、 <xref:System.Xml.Schema.XmlSchemaParticle.MinOccurs%2A>|  
 |<xref:System.Xml.Schema.XmlSchemaComplexType>|<xref:System.Xml.Schema.XmlSchemaComplexType.AnyAttribute%2A>|  
   
  例如，<xref:System.Xml.Schema.XmlSchemaElement> 及 <xref:System.Xml.Schema.XmlSchemaComplexType> 類別都具有 `BlockResolved` 及 `FinalResolved` 屬性。 在編譯及驗證結構描述之後，這些屬性可用於儲存 `Block` 及 `Final` 屬性的值。 `BlockResolved` 及 `FinalResolved` 是唯讀屬性，其屬於後結構描述編譯資訊集。  
@@ -40,6 +38,6 @@ ms.locfileid: "44083815"
  [!code-csharp[PsciSample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/PsciSample/CS/PsciSample.cs#1)]
  [!code-vb[PsciSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/PsciSample/VB/PsciSample.vb#1)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

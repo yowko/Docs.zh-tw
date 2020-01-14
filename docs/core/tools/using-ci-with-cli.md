@@ -3,13 +3,12 @@ title: 使用 .NET Core SDK 和工具的持續整合（CI）
 description: 瞭解如何透過持續整合，在組建伺服器上使用 .NET Core SDK 和其工具。
 author: mairaw
 ms.date: 05/18/2017
-ms.custom: seodec18
-ms.openlocfilehash: 0f6049d1f2868ff330fd59c4f40e6c02231c6f71
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 65d062fce2f364932ebf8091bd9c6cdef561b633
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343530"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714124"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持續整合 (CI) 中使用 .NET Core SDK 和工具
 

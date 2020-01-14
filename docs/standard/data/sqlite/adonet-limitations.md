@@ -2,12 +2,12 @@
 title: ADO.NET 限制
 ms.date: 12/13/2019
 description: 說明您可能會遇到的一些 ADO.NET 限制。
-ms.openlocfilehash: b58fd3a9ea324e9c17ad21479e53e45f5982db9d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8664b73071fc859ed30080f549b05e7d6ed020f4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447087"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901257"
 ---
 # <a name="adonet-limitations"></a>ADO.NET 限制
 
@@ -25,13 +25,13 @@ ADO.NET 提供許多抽象概念的執行，但有一些限制。
 
 Microsoft. Sqlite 尚未支援 System.object。 請改用 ADO.NET 的交易。 如需詳細資訊，請參閱[交易](transactions.md)。
 
-提供有關缺少系統支援的意見反應[#13825](https://github.com/aspnet/EntityFrameworkCore/issues/13825)的問題。
+提供有關缺少系統支援的意見反應[#13825](https://github.com/dotnet/efcore/issues/13825)的問題。
 
 ## <a name="data-adapters"></a>資料介面卡
 
 `DbDataAdapter` 尚未由 Microsoft. Sqlite 執行。 這表示您只能使用 ADO.NET `DataSet` 和 `DataTable` 來載入資料，而不會進行更新。
 
-使用問題[#13838](https://github.com/aspnet/EntityFrameworkCore/issues/13838) ，提供有關執行 `DbDataAdapter`的意見反應。
+使用問題[#13838](https://github.com/dotnet/efcore/issues/13838) ，提供有關執行 `DbDataAdapter`的意見反應。
 
 ## <a name="output-parameters"></a>輸出參數
 

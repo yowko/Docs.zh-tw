@@ -1,15 +1,13 @@
 ---
 title: dotnet-計數器-.NET Core
 description: 瞭解如何安裝和使用 dotnet-counter 命令列工具。
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: b2fab239713d9d19c580580496e73a91ceafcc52
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 10af451a8b1b4d8b27da1490b99b19a4359c860f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321586"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740798"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -31,7 +29,7 @@ dotnet-counters [-h|--help] [--version] <command>
 
 ## <a name="description"></a>描述
 
-`dotnet-counters` 是一種效能監視工具，可用於臨機操作健全狀況監視和第一層效能調查。 它可以觀察透過 <xref:System.Diagnostics.Tracing.EventCounter> API 發佈的效能計數器值。 例如，您可以快速監視 CPU 使用量，或 .NET Core 應用程式中擲回之例外狀況的速率，以查看使用 `PerfView` 或 `dotnet-trace` 進行更嚴重的效能調查之前是否有任何可疑的問題。
+`dotnet-counters` 是一種效能監視工具，可用於臨機操作健全狀況監視和第一層效能調查。 它可以觀察透過 <xref:System.Diagnostics.Tracing.EventCounter> API 發佈的效能計數器值。 例如，您可以快速監視 CPU 使用量，或 .NET Core 應用程式中擲回之例外狀況的速率，以查看使用 `PerfView` 或 `dotnet-trace`進行更嚴重的效能調查之前是否有任何可疑的問題。
 
 ## <a name="options"></a>選項
 
@@ -98,7 +96,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`counter_list <COUNTERS>`**
 
-  以空格分隔的計數器清單。 @No__t_0 可以指定計數器。 如果在沒有符合資格的 `counter_name` 的情況下使用 `provider_name`，則會顯示所有計數器。 若要探索提供者和計數器名稱，請使用[dotnet-計數器 list](#dotnet-counters-list)命令。
+  以空格分隔的計數器清單。 `provider_name[:counter_name]`可以指定計數器。 如果在沒有符合資格的 `counter_name`的情況下使用 `provider_name`，則會顯示所有計數器。 若要探索提供者和計數器名稱，請使用[dotnet-計數器 list](#dotnet-counters-list)命令。
 
 ### <a name="examples"></a>範例
 
@@ -118,7 +116,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       Number of Exceptions / sec                     4
   ```
 
-- 僅監視 `System.Runtime` 的 CPU 使用量和 GC 堆積大小：
+- 僅監視 `System.Runtime`的 CPU 使用量和 GC 堆積大小：
 
   ```console
   > dotnet-counters monitor --process-id 1902 System.Runtime[cpu-usage,gc-heap-size]
@@ -129,7 +127,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- 從使用者定義的 `EventSource` 監視 `EventCounter` 值。 如需詳細資訊，請參閱[教學課程：如何使用 EventCounters 測量非常頻繁事件的效能](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)。
+- 從使用者定義的 `EventSource`監視 `EventCounter` 值。 如需詳細資訊，請參閱[教學課程：如何使用 EventCounters 測量非常頻繁事件的效能](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)。
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal

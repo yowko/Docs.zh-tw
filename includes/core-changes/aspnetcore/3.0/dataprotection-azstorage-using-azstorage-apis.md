@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: f103c96588bae167216d09a82973a4a7abfb5cc3
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: db70596552ffd699156e1b7a55cb1e944596f077
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394302"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901705"
 ---
 ### <a name="data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis"></a>資料保護： DataProtection. AzureStorage 使用新的 Azure 儲存體 Api
 
 <xref:Microsoft.AspNetCore.DataProtection.AzureStorage?displayProperty=fullName> 取決於[Azure 儲存體程式庫](https://github.com/Azure/azure-storage-net)。 這些程式庫會將其元件、封裝和命名空間重新命名。 從 ASP.NET Core 3.0 開始，`Microsoft.AspNetCore.DataProtection.AzureStorage` 會使用新的 `Microsoft.Azure.Storage.`前面加上的 Api 和套件。
 
-如有 Azure 儲存體 Api 的相關問題，請使用 <https://github.com/Azure/azure-storage-net>。 如需此問題的討論，請參閱[aspnet/AspNetCore # 8472](https://github.com/aspnet/AspNetCore/issues/8472)。
+如有 Azure 儲存體 Api 的相關問題，請使用 <https://github.com/Azure/azure-storage-net>。 如需此問題的討論，請參閱[dotnet/aspnetcore # 8472](https://github.com/dotnet/aspnetcore/issues/8472)。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -41,13 +41,13 @@ ms.locfileid: "72394302"
 + using Microsoft.Azure.Storage.Blob;
 ```
 
-#### <a name="category"></a>類別
+#### <a name="category"></a>分類
 
 ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-無
+None
 
 <!-- 
 

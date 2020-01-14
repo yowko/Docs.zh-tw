@@ -2,21 +2,21 @@
 title: 查詢 XML 樹狀
 ms.date: 07/20/2015
 ms.assetid: 2e35c1ab-08c8-4378-9ca8-8ff344756eda
-ms.openlocfilehash: c8103820a231ba0fb5e8e7c15b7a2b9e7c996e65
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 643b19a0cfcd2a81c6f685de65979f83ca32d918
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346571"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636896"
 ---
 # <a name="querying-xml-trees-visual-basic"></a>查詢 XML 樹狀結構 (Visual Basic)
 本節提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢的範例。  
   
- 如需撰寫 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢的詳細資訊，請參閱[Visual Basic 中的 LINQ 消費者入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)。  
+ 如需撰寫 LINQ 查詢的詳細資訊，請參閱[Visual Basic 中的 linq 消費者入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)。  
   
  具現化 XML 樹狀後，撰寫查詢是從樹狀擷取資料最有效的方式。 同時，結合功能結構的查詢可讓您從原始文件產生具有不同組織結構的新 XML 文件。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
   
 |主題|描述|  
 |-----------|-----------------|  

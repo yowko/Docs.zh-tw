@@ -5,14 +5,12 @@ helpviewer_keywords:
 - security events [.NET Framework]
 - ETW, security events (CLR)
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1dad042595608a805f978673858acaa5c01130f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c443bda8cdc2c6b32760e9dcba8b81a29d81660b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974871"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715945"
 ---
 # <a name="security-etw-events"></a>安全性 ETW 事件
 
@@ -21,13 +19,13 @@ ms.locfileid: "73974871"
 ## <a name="strongnameverificationstart_v1-and-strongnameverificationstop_v1-events"></a>StrongNameVerificationStart_V1 和 StrongNameVerificationStop_V1 事件  
  下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`SecurityKeyword` (0x400)|Informational(4)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`StrongNameVerificationStart_V1`|181|強式名稱驗證的開頭。|  
 |`StrongNameVerificationStop_V1`|182|強式名稱驗證的結尾。|  
@@ -44,13 +42,13 @@ ms.locfileid: "73974871"
 ## <a name="authenticodeverificationstart_v1-and-authenticodeverificationstop_v1-events"></a>AuthenticodeVerificationStart_V1 和 AuthenticodeVerificationStop_V1 事件  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`SecurityKeyword` (0x400)|Informational(4)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`AuthenticodeVerificationStart_V1`|183|Authenticode 驗證的開頭。|  
 |`AuthenticodeVerificationStop_V1`|184|Authenticode 驗證的結尾。|  

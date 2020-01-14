@@ -3,24 +3,24 @@ title: .NET Core 上無法使用的 .NET Framework 技術
 description: 了解無法在 .NET Core 上使用的 .NET Framework 技術
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 6c457812f04b8e6503e5162b9f1f6497e7ef83b1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d474b694b80b2f0e74dd2916106016802f7e0c68
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75343561"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777304"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core 上無法使用的 .NET Framework 技術
 
 .NET Framework 程式庫可用的數種技術無法與 .NET Core 搭配使用，例如 Appdomain、遠端、代碼啟用安全性（CAS）、安全性透明度和 System.enterpriseservices。 如果您的程式庫會依賴一或多個這些技術，請考慮使用下述的替代方法。 如需有關 API 相容性的詳細資訊，請參閱[.Net Core 重大變更](../compatibility/breaking-changes.md)。
 
-目前未實作的 API或技術，並不代表我們是刻意不支援它。 您應該先搜尋適用于 .NET Core 的 GitHub 存放庫，以查看您所遇到的特定問題是否已設計。 如果您找不到這類指標，請在 GitHub 的[dotnet/corefx 存放庫問題](https://github.com/dotnet/corefx/issues)中提出問題，以詢問特定的 api 和技術。 [移植要求的相關問題](https://github.com/dotnet/corefx/labels/port-to-core) \(英文\) 會以 `port-to-core` 標籤標記。
+目前未實作的 API或技術，並不代表我們是刻意不支援它。 搜尋適用于 .NET Core 的 GitHub 存放庫，以查看您所遇到的特定問題是否為設計。 如果您找不到這類指標，請在[dotnet/runtime 存放庫](https://github.com/dotnet/runtime/issues)中提出問題，以要求特定的 api 和技術。 移植要求的問題會以[埠到核心](https://github.com/dotnet/runtime/labels/port-to-core)標籤標示。
 
 ## <a name="appdomains"></a>AppDomain
 
-應用程式定義域 (AppDomain) 可將應用程式互相隔離。 AppDomain 需要執行階段支援，且通常具有較高的成本。 不支援建立額外的應用程式域，而且未來不會有新增這項功能的計畫。 針對程式碼隔離，請使用個別的進程或容器作為替代方案。 如需動態載入元件，請使用 <xref:System.Runtime.Loader.AssemblyLoadContext> 類別。
+應用程式定義域 (AppDomain) 可將應用程式互相隔離。 AppDomain 需要執行階段支援，且通常具有較高的成本。 不支援建立額外的應用程式域，而且未來不會有新增這項功能的計畫。 針對程式碼隔離，請使用個別的進程或容器作為替代方案。 若要以動態方式載入元件，請使用 <xref:System.Runtime.Loader.AssemblyLoadContext> 類別。
 
-為了讓從 .NET Framework 移轉程式碼更加輕鬆，.NET Core 會公開部分 <xref:System.AppDomain> API 介面。 某些 API 會正常運作 (例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>)，某些成員不會執行任何動作 (例如 <xref:System.AppDomain.SetCachePath%2A>)，而其中某些會擲回 <xref:System.PlatformNotSupportedException> (例如 <xref:System.AppDomain.CreateDomain%2A>)。 檢查您在 [dotnet/corefx GitHub repository](https://github.com/dotnet/corefx) (dotnet/corefx GitHub 存放庫) 中，對 [`System.AppDomain` reference source](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/AppDomain.cs) (`System.AppDomain` 參考來源) 使用的類型，確定選取符合您實作版本的分支。
+為了讓從 .NET Framework 移轉程式碼更加輕鬆，.NET Core 會公開部分 <xref:System.AppDomain> API 介面。 某些 API 會正常運作 (例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>)，某些成員不會執行任何動作 (例如 <xref:System.AppDomain.SetCachePath%2A>)，而其中某些會擲回 <xref:System.PlatformNotSupportedException> (例如 <xref:System.AppDomain.CreateDomain%2A>)。 在[dotnet/Runtime GitHub 存放庫](https://github.com/dotnet/runtime)中，檢查您用於[`System.AppDomain` 參考來源](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs)的類型。 請務必選取符合您所執行版本的分支。
 
 ## <a name="remoting"></a>遠端處理
 
@@ -34,17 +34,19 @@ ms.locfileid: "75343561"
 
 依賴執行階段或架構來限制受控應用程式或程式庫可使用或執行之資源的沙箱功能，[在 .NET Framework 上並不受支援](../../framework/misc/code-access-security.md)，因此 .NET Core 也不予支援。 .NET Framework 和執行階段中發生太多提高權限的情況，因而無法繼續將 CAS 視為安全性界限。 此外，CAS 會讓實作更為複雜，且經常會對不需要使用它的應用程式，正確性與效能之間帶來潛在的相互影響。
 
-請使用作業系統提供的安全性界限 (例如虛擬化、容器或使用者帳戶) 以一組最小權限執行處理序。
+使用作業系統所提供的安全性界限（例如虛擬化、容器或使用者帳戶），以最小許可權集執行處理常式。
 
 ## <a name="security-transparency"></a>安全性透明度
 
 與 CAS 類似，安全性透明度會以宣告方式區隔沙箱化程式碼和安全性關鍵程式碼，但已[不再支援作為安全性界限](../../framework/misc/security-transparent-code.md)。 Silverlight 會大量使用這項功能。
 
-使用由作業系統提供的安全性界線 (例如虛擬化、容器或使用者帳戶) 來以最少的權限集合執行處理序。
+使用作業系統所提供的安全性界限（例如虛擬化、容器或使用者帳戶）來執行具有最低許可權集的進程。
 
 ## <a name="systementerpriseservices"></a>System.EnterpriseServices
 
 .NET Core 不支援 System.EnterpriseServices (COM+)。
 
->[!div class="step-by-step"]
->[下一步](third-party-deps.md)
+## <a name="next-steps"></a>後續步驟
+
+>[!div class="nextstepaction"]
+>[分析相關性](third-party-deps.md)

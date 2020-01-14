@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: a306bfe4b794409f7f64359daee7e18d34826921
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e3619214bcd8830e82c827680d08260e95dc2b36
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441440"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741710"
 ---
 # <a name="ui-automation-overview"></a>UI 自動化概觀
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "74441440"
 > [!NOTE]
 > [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 不支援不同使用者透過 **Run as** 命令，來啟動處理序之間通訊的功能。  
   
- 撰寫使用者介面自動化用戶端應用程式時，可以保證應用程式可在多個架構上運作。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心可以降低組成 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]各種元件之架構的任何差異。 例如， `Content` 按鈕的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 屬性、 `Caption` 按鈕的 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 屬性以及 HTML 影像的 `ALT` 屬性，都會對應至 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>檢視中的單一屬性 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。  
+ 撰寫使用者介面自動化用戶端應用程式時，可以保證應用程式可在多個架構上運作。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 核心可以降低組成 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]各種元件之架構的任何差異。 例如，[[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]] 按鈕的 [`Content`] 屬性、[Win32] 按鈕的 [`Caption`] 屬性和 HTML 影像的 [`ALT`] 屬性都會對應到 [<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>] 視圖中的單一屬性（[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]）。  
   
 使用者介面自動化會在執行 .NET Framework 的支援 Windows 作業系統上提供完整的功能（請參閱從 .NET Core 3.0 開始， [.NET Framework 系統需求](../get-started/system-requirements.md)或 .net core 版本。  
   
@@ -45,12 +45,12 @@ ms.locfileid: "74441440"
   
 |區段|主題|對象|  
 |-------------|--------------------|--------------|  
-|[UI 自動化基本](index.md)概念（本節）|概念概觀淺論。|全部。|  
+|[UI 自動化基本](index.md)概念（本節）|概念概觀淺論。|All。|  
 |[Managed 程式碼的使用者介面自動化提供者](ui-automation-providers-for-managed-code.md)|協助您使用提供者 API 的概觀及操作說明主題。|控制項開發人員。|  
 |[Managed 程式碼的使用者介面自動化用戶端](ui-automation-clients-for-managed-code.md)|協助您使用用戶端 API 的概觀及操作說明主題。|用戶端應用程式開發人員。|  
-|[使用者介面自動化控制項模式](ui-automation-control-patterns.md)|提供者應如何實作控制項模式，以及哪些功能可供用戶端使用的相關資訊。|全部。|  
-|[使用者介面自動化文字模式](ui-automation-text-pattern.md)|提供者應如何實作文字控制項模式，以及哪些功能可供用戶端使用的相關資訊。|全部。|  
-|[UI Automation Control Types](ui-automation-control-types.md)|不同控制項類型支援之屬性和控制項模式的相關資訊。|全部。|  
+|[使用者介面自動化控制項模式](ui-automation-control-patterns.md)|提供者應如何實作控制項模式，以及哪些功能可供用戶端使用的相關資訊。|All。|  
+|[使用者介面自動化文字模式](ui-automation-text-pattern.md)|提供者應如何實作文字控制項模式，以及哪些功能可供用戶端使用的相關資訊。|All。|  
+|[UI 自動化控制項類型](ui-automation-control-types.md)|不同控制項類型支援之屬性和控制項模式的相關資訊。|All。|  
   
  下表會列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間、包含這些命名空間的 DLL 以及命名空間的適用對象。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "74441440"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 也可以透過事件，將資訊提供給用戶端應用程式。 不同于 WinEvents，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件不是以廣播機制為基礎。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 用戶端會註冊特定事件通知，且可以要求將特定的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性和控制項模式資訊傳遞至所屬的事件處理常式。 此外， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件也包含引發事件之項目的參考。 提供者可以選擇引發事件來改善效能，取決於是否有任何用戶端接聽。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
 - [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)

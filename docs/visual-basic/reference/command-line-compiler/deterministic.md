@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: 6a83b636dd83534788f3a38971e0fef2919314f5
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 9b611a72656bdd570eccec8a0585bf5ce6fa55f6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005637"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716796"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -44,13 +44,13 @@ ms.locfileid: "72005637"
   - 分析器可能使用的其他檔案
 - 目前文化特性 (Culture) (適用於用來產生診斷和例外狀況訊息的語言)。
 - 如果未指定編碼，則為預設編碼 (或目前字碼頁)。
-- 存在、不存在，以及編譯器搜尋路徑 (例如，透過 `/lib` 或 `/recurse` 指定) 上檔案的內容。
+- 存在、不存在，以及編譯器搜尋路徑 (例如，透過 `-lib` 或 `-recurse` 指定) 上檔案的內容。
 - 在其上執行編譯器的 CLR 平台。
 - `%LIBPATH%` 的值，可能會影響分析器相依性載入。
 
 來源公開可用時，確定性編譯可以用於建立是否從信任的來源編譯二進位檔。 它也可以用於持續建置系統，確定是否需要執行與二進位檔變更相依的建置步驟。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

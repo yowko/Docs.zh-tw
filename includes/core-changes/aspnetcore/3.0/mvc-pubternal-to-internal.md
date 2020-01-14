@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 09fd95ba5f3aee59f2abdfbb4e64eb6202e2b873
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 5741e8cdd51e00d5459c4c1032a56682429aab17
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394422"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75902018"
 ---
 ### <a name="mvc-pubternal-types-changed-to-internal"></a>MVC： "Pubternal" 類型已變更為內部
 
@@ -34,9 +34,9 @@ MVC 中的某些類型已 `public`，但在 `.Internal` 命名空間中。 這�
 
 如果您使用已確實 `public` 的類型，並已移至新的、支援的命名空間，請更新您的參考以符合新的命名空間。
 
-如果您使用已標記為 `internal`的類型，您將需要尋找替代方案。 先前的 "pubternal" 類型絕不支援公開使用。 如果這些命名空間中有特定類型對您的應用程式很重要，請在[aspnet/AspNetCore](https://github.com/aspnet/AspNetCore/issues)提出問題。 您可以考慮 `public`的要求類型。
+如果您使用已標記為 `internal`的類型，您將需要尋找替代方案。 先前的 "pubternal" 類型絕不支援公開使用。 如果這些命名空間中有特定類型對您的應用程式很重要，請在[dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/issues)提出問題。 您可以考慮 `public`的要求類型。
 
-#### <a name="category"></a>類別
+#### <a name="category"></a>分類
 
 ASP.NET Core
 

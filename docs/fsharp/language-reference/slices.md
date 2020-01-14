@@ -2,12 +2,12 @@
 title: 配量
 description: 瞭解如何將配量用於現有F#的資料類型，以及如何為其他資料類型定義您自己的配量。
 ms.date: 12/23/2019
-ms.openlocfilehash: 3911139c7ce656043817eb23d30f3686555b6efe
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 3f16c71b071bab7de5b1fb90a2075e351e83cfb4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545109"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901249"
 ---
 # <a name="slices"></a>配量
 
@@ -119,7 +119,7 @@ open System
 
 type ReadOnlySpan<'T> with
     // Note the 'inline' in the member definition
-    member sp.GetSlice(startIdx, endIdx) =
+    member inline sp.GetSlice(startIdx, endIdx) =
         let s = defaultArg startIdx 0
         let e = defaultArg endIdx sp.Length
         sp.Slice(s, e - s)

@@ -1,17 +1,16 @@
 ---
 title: 存取範圍層級 - C# 參考
-ms.custom: seodec18
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 2d6605a305e5003e19f4fe1dd260746302691215
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602396"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713822"
 ---
 # <a name="accessibility-levels-c-reference"></a>存取範圍層級 (C# 參考)
 
@@ -48,7 +47,7 @@ ms.locfileid: "69602396"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

@@ -5,21 +5,19 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: be15ce0b0bed37da6fe400e98bfdd118c48f7ba0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975560"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716530"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework 系統管理員部署手冊
 
-本文將逐步描述系統管理員如何使用 Microsoft System Center Configuration Manager，在整個網路上部署 .NET Framework 4.5 及其系統相依性。 本文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。 如需安裝 .NET Framework 4.5 的軟體和硬體需求清單，請參閱[系統需求](../get-started/system-requirements.md)。
+此逐步解說文章說明系統管理員如何使用 Microsoft 端點 Configuration Manager，在網路上部署 .NET Framework 4.5 及其系統相依性。 本文章假設所有目標用戶端電腦都符合 .NET Framework 的最低需求。 如需安裝 .NET Framework 4.5 的軟體和硬體需求清單，請參閱[系統需求](../get-started/system-requirements.md)。
 
 > [!NOTE]
-> 在本文件中提到的軟體包括 (但不限於) .NET Framework 4.5、System Center Configuration Manager 和 Active Directory，這些軟體皆受授權條款和條件的限制。 這些指示假定軟體之適當使用人均已檢視並接受該等授權條款和條件。 這些指示不可撤回任何該等授權合約之規定條件。
+> 本檔中所參考的軟體，包括（但不限於） .NET Framework 4.5、Configuration Manager 和 Active Directory 均受授權條款及條件約束。 這些指示假定軟體之適當使用人均已檢視並接受該等授權條款和條件。 這些指示不可撤回任何該等授權合約之規定條件。
 >
 > 如需 .NET Framework 支援的相關資訊，請參閱 Microsoft 支援服務網站上的[.NET Framework 官方支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)。
 
@@ -38,13 +36,13 @@ ms.locfileid: "73975560"
 
 ## <a name="the-deployment-process"></a>部署程序
 
-一旦您備妥提供支援的基礎結構之後，便可以用 System Center 2012 Configuration Manager 將 .NET Framework 可轉散發套件部署到網路上的電腦。 建置基礎結構包括建立和定義五個主要部分：集合、軟體套件和程式、發佈點以及部署。
+當您準備好支援的基礎結構時，您可以使用 Configuration Manager 將 .NET Framework 可轉散發套件部署到網路上的電腦。 建置基礎結構包括建立和定義五個主要部分：集合、軟體套件和程式、發佈點以及部署。
 
-- **集合**：集合是指例如使用者、使用者群組或電腦等 Configuration Manager 資源的群組，也就是 .NET Framework 部署的目標。 如需詳細資訊，請參閱 Configuration Manager 文件庫中的 [System Center Configuration Manager 的集合簡介](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections)。
+- **集合**：集合是指例如使用者、使用者群組或電腦等 Configuration Manager 資源的群組，也就是 .NET Framework 部署的目標。 如需詳細資訊，請參閱 Configuration Manager 文件庫[中 Configuration Manager 的集合簡介](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections)。
 
-- **套件和程式**：通常代表要安裝到用戶端電腦上的軟體應用程式，不過也可能包含個別檔案、更新，甚至個別命令。 如需詳細資訊，請參閱 Configuration Manager 文件庫中的 [System Center Configuration Manager 中的套件與程式](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs)。
+- **套件和程式**：通常代表要安裝到用戶端電腦上的軟體應用程式，不過也可能包含個別檔案、更新，甚至個別命令。 如需詳細資訊，請參閱 Configuration Manager 文件庫[中 Configuration Manager 的封裝和程式](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs)。
 
-- **發佈點**：是指 Configuration Manager 網站系統角色，負責存放軟體在用戶端電腦上執行所需的檔案。 當 Configuration Manager 用戶端接收並處理軟體部署時，就會連絡發佈點，以便下載軟體相關內容並啟動安裝程序。 如需詳細資訊，請參閱 Configuration Manager 文件庫中的 [Configuration Manager 中的內容管理基本概念](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management)。
+- **發佈點**：是指 Configuration Manager 網站系統角色，負責存放軟體在用戶端電腦上執行所需的檔案。 當 Configuration Manager 用戶端接收並處理軟體部署時，就會連絡發佈點，以便下載軟體相關內容並啟動安裝程序。 如需詳細資訊，請參閱 Configuration Manager 文件庫中的 [Configuration Manager 中的內容管理基本概念](https://docs.microsoft.com/configmgr/core/plan-design/hierarchy/fundamental-concepts-for-content-management)。
 
 - **部署**：負責指示所指定目標集合的適當成員安裝軟體套件。
 
@@ -55,7 +53,7 @@ ms.locfileid: "73975560"
 
 ## <a name="deploying-the-net-framework"></a>部署 .NET Framework
 
-您可以使用 System Center 2012 Configuration Manager 部署 .NET Framework 4.5 的無訊息安裝，亦即使用者不需與安裝程序互動。 請依照下列步驟：
+您可以使用 Configuration Manager 來部署 .NET Framework 4.5 的無訊息安裝，其中使用者不會與安裝程式互動。 請依照下列步驟：
 
 1. [建立集合](#creating_a_collection)。
 
@@ -69,7 +67,7 @@ ms.locfileid: "73975560"
 
 ### <a name="create-a-collection"></a>建立集合
 
-在這個步驟中，您將選取部署套件和程式的目標電腦，並將它們組成裝置集合。 若要在 Configuration Manager 中建立集合，您可以使用直接成員資格規則 (也就是手動指定集合成員) 或查詢規則 (也就是 Configuration Manager 根據您指定的準則決定集合成員)。 如需包括查詢和直接規則的成員資格規則詳細資訊，請參閱 Configuration Manager 文件庫中的 [System Center Configuration Manager 的集合簡介](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections)。
+在這個步驟中，您將選取部署套件和程式的目標電腦，並將它們組成裝置集合。 若要在 Configuration Manager 中建立集合，您可以使用直接成員資格規則 (也就是手動指定集合成員) 或查詢規則 (也就是 Configuration Manager 根據您指定的準則決定集合成員)。 如需成員資格規則的詳細資訊，包括查詢和直接規則，請參閱 Configuration Manager 文件庫[中 Configuration Manager 的集合簡介](https://docs.microsoft.com/configmgr/core/clients/manage/collections/introduction-to-collections)。
 
 若要建立集合：
 
@@ -111,7 +109,7 @@ ms.locfileid: "73975560"
 
     - 製造商：`Microsoft`
 
-    - 語言。 `English (US)`
+    - [語言]。 `English (US)`
 
 5. 選擇 [此套件包含來源檔案]，然後選擇 [瀏覽] 以選取包含 .NET Framework 安裝檔案的本機或網路資料夾。 選取資料夾後，選擇 [確定]，然後選擇 [下一步]。
 
@@ -121,7 +119,7 @@ ms.locfileid: "73975560"
 
     1. **名稱：** `.NET Framework 4.5`
 
-    2. **命令列︰** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (這些步驟後的資料表中會說明命令列選項)
+    2. **命令列：** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` （在這些步驟之後的表格中會描述命令列選項）
 
     3. **執行：** 選擇 [隱藏]。
 
@@ -135,7 +133,7 @@ ms.locfileid: "73975560"
 |------------|-----------------|
 |**/q**|設定無訊息模式。 不需要使用者輸入，也不會顯示輸出。|
 |**/norestart**|避免安裝程式自動重新開機。 如果您使用這個選項，Configuration Manager 就必須處理電腦重新啟動。|
-|**/chainingpackage** *PackageName*|指定執行鏈結之封裝的名稱。 這些資訊會向已註冊 Microsoft 客戶經驗改進計畫（CEIP）的使用者報告其他安裝會話資訊。 如果套件名稱包含空格，分隔符號請使用雙引號，例如： **/chainingpackage "Chaining Product"** 。|
+|**/Chainingpackage** *PackageName*|指定執行鏈結之封裝的名稱。 已註冊 Microsoft 客戶經驗改進計劃的人將會收到這項資訊與其他安裝工作階段資訊的報告。 如果套件名稱包含空格，分隔符號請使用雙引號，例如： **/chainingpackage "Chaining Product"** 。|
 
 這些步驟會建立名為 .NET Framework 4.5 的套件。 程式會部署 .NET Framework 4.5 的無訊息安裝。 在無訊息安裝中，使用者不會與安裝程序互動，而鏈結應用程式必須擷取傳回碼並處理重新開機，請參閱[取得安裝套件的進度資訊](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))。
 
@@ -163,7 +161,7 @@ ms.locfileid: "73975560"
 
 8. 完成精靈。
 
-現在套件中將會包含進行 .NET Framework 4.5 無訊息部署所需的全部資訊。 在您部署套件和程式之前，請先確認它已安裝在發佈點上。請參閱 Configuration Manager 文件庫中[監視您已使用 System Center Configuration Manager 發佈的內容](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed)的＜監視內容＞一節。
+現在套件中將會包含進行 .NET Framework 4.5 無訊息部署所需的全部資訊。 在您部署套件和程式之前，請先確認它已安裝在發佈點上;請參閱 Configuration Manager 文件庫中的[監視您發佈的內容與 Configuration Manager](https://docs.microsoft.com/configmgr/core/servers/deploy/configure/monitor-content-you-have-distributed)中的「內容狀態監視」一節。
 
 <a name="deploying_package"></a>
 

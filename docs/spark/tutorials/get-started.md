@@ -4,12 +4,12 @@ description: 探索如何在 Windows 上使用 .NET Core 執行適用於 Apache 
 ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1b736e078eea40e399882c0df020062b6aa758ad
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 934b91a258937a976804109c71df232b8ce6d6d7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740522"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337594"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>教學課程：開始使用適用于 Apache Spark 的 .NET
 
@@ -23,7 +23,7 @@ ms.locfileid: "73740522"
 > * 撰寫 Apache Spark 應用程式的第一個 .NET
 > * 為 Apache Spark 應用程式建立及執行您的簡單 .NET
 
-## <a name="prepare-your-environment"></a>準備您的環境
+## <a name="prepare-your-environment"></a>準備環境
 
 開始撰寫應用程式之前，您必須先設定一些必要的相依性。 如果您可以從命令列環境執行 `dotnet`、`java`、`mvn``spark-shell`，則您的環境已準備就緒，您可以跳到下一節。 如果您無法執行任何或所有的命令，請執行下列步驟。
 
@@ -31,18 +31,18 @@ ms.locfileid: "73740522"
 
 若要開始建立 .NET 應用程式，您必須下載並安裝 .NET SDK （軟體發展工具組）。
 
-下載並安裝 [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)。 安裝 SDK 會將 `dotnet` 工具鏈新增到您的 PATH 之中。 
+下載並安裝 [.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0)。 安裝 SDK 會將 `dotnet` 工具鏈新增到您的 PATH 之中。
 
 安裝 .NET Core SDK 之後，請開啟新的命令提示字元，然後執行 `dotnet`。
 
-如果命令執行並印出有關如何使用 dotnet 的資訊，可以移至下一個步驟。 如果您收到 `'dotnet' is not recognized as an internal or external command` 錯誤，請確定您在執行命令之前，已開啟**新**的命令提示字元。 
+如果命令執行並印出有關如何使用 dotnet 的資訊，可以移至下一個步驟。 如果您收到 `'dotnet' is not recognized as an internal or external command` 錯誤，請確定您在執行命令之前，已開啟**新**的命令提示字元。
 
 ### <a name="2-install-java"></a>2. 安裝 JAVA
 
 安裝[JAVA 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)。
 
 為您的作業系統選取適當版本。 例如，為 Windows x64 電腦選取 **jdk-8u201-windows-x64.exe**。 然後，使用命令 `java` 來確認安裝。
-   
+
 ![JAVA 下載](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
 ### <a name="3-install-7-zip"></a>3. 安裝 7-zip
@@ -52,12 +52,12 @@ Apache Spark 會下載為 tgz 檔案。 使用類似 7-zip 的抽取程式來解
 * 流覽[7-Zip 下載](https://www.7-zip.org/)。
 * 在頁面上的第一個表格中，根據您的作業系統選取32位 x86 或64位 x64 下載。
 * 當下載完成時，執行安裝程式。
-   
+
 ![7Zip 下載](https://dotnet.microsoft.com/static/images/7-zip-downloads.png?v=W6qWtFC1tTMKv3YGXz7lBa9F3M22uWyTvkMmunyroNk)
 
 ### <a name="4-install-apache-spark"></a>4. 安裝 Apache Spark
 
-[下載並安裝 Apache Spark](https://spark.apache.org/downloads.html)。 您必須選取版本 2.3. * 或2.4.0、2.4.1、2.4.3 或2.4.4 （適用于 Apache Spark 的 .NET 與 Apache Spark 的其他版本不相容）。  
+[下載並安裝 Apache Spark](https://spark.apache.org/downloads.html)。 您必須選取版本 2.3. * 或2.4.0、2.4.1、2.4.3 或2.4.4 （適用于 Apache Spark 的 .NET 與 Apache Spark 的其他版本不相容）。
 
 下列步驟中使用的命令假設您已[下載並安裝 Apache Spark 2.4.1](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz)。 如果您想要使用不同的版本，請將**2.4.1**取代為適當的版本號碼。 然後，將**tar**檔案和 Apache Spark 檔案解壓縮。
 
@@ -74,9 +74,9 @@ Apache Spark 會下載為 tgz 檔案。 使用類似 7-zip 的抽取程式來解
 * 取消核**取 [解壓縮至**] 欄位下方的核取方塊。
 * 選取 [確定]。
 * Apache Spark 檔案會解壓縮至 C:\bin\spark-2.4.1-bin-hadoop2.7\
-      
+
 ![安裝 Spark](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
-    
+
 執行下列命令，設定用來尋找 Apache Spark 的環境變數：
 
 ```console
@@ -103,7 +103,7 @@ setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 * 在 [**解壓縮至**] 欄位中，輸入**C:\bin** 。
 * 取消核**取 [解壓縮至**] 欄位下方的核取方塊。
 * 選取 [確定]。
-  
+
 ![安裝 .NET Spark](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
 
 ### <a name="6-install-winutils"></a>6. 安裝 Winutils.exe
@@ -111,7 +111,7 @@ setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 適用于 Apache Spark 的 .NET 需要與 Apache Spark 一起安裝 Winutils.exe。 [下載 winutils.exe](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe)。 然後，將 Winutils.exe 複製到**C:\bin\spark-2.4.1-bin-hadoop2.7\bin**。
 
 > [!NOTE]
-> 如果您使用的是不同版本的 Hadoop （在 Spark 安裝資料夾名稱的結尾加上批註），請選取與您的 Hadoop 版本相容的[winutils.exe 版本](https://github.com/steveloughran/winutils)。 
+> 如果您使用的是不同版本的 Hadoop （在 Spark 安裝資料夾名稱的結尾加上批註），請選取與您的 Hadoop 版本相容的[winutils.exe 版本](https://github.com/steveloughran/winutils)。
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7. 設定 DOTNET_WORKER_DIR 並檢查相依性
 

@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: d9a18876d8a5ba3067aa35c617b1e20fce0411f5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343567"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710774"
 ---
 # <a name="including-or-importing-xml-schemas"></a>併入或匯入 XML 結構描述
 XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />` 項目。 這些結構描述項目會參考其他 XML 結構描述，其可用於補充併入或匯入它們之結構描述的結構。 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 及 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別會對應至結構描述物件模型 (SOM) API 中的這些項目。  
@@ -99,7 +97,7 @@ XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />
   
  如需 `<xs:import />`、`<xs:include />` 及 `<xs:redefine />` 項目與 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別的詳細資訊，請參閱 [W3C XML 結構描述](https://www.w3.org/XML/Schema) (英文) 及 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間類別參考文件。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)

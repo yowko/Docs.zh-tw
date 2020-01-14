@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0fb14f919d0737b9d9c25bcd62a3cfb7228ff432
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 1ab6dec2b99b01db04333c5d47176e40ed033fa7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916082"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709890"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>使用 XmlSchemaCollection 進行 XML 結構描述 (XSD) 驗證
 您可以使用 <xref:System.Xml.Schema.XmlSchemaCollection>，依據 XML 結構描述定義語言 (XSD) 結構描述來驗證 XML 文件。 <xref:System.Xml.Schema.XmlSchemaCollection> 可以提升效能，其方法是將結構描述儲存於集合中，而不用在每次執行驗證時，都要將其載入記憶體。 如果結構描述存在於結構描述集合中，則 `schemaLocation` 屬性可用於查詢集合中的結構描述。  
@@ -208,7 +206,7 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlParserContext>
 - <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>

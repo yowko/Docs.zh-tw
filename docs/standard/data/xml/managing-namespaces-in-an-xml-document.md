@@ -3,14 +3,12 @@ title: 管理 XML 文件中的命名空間
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3befdd0ec96856a62e5c3c603935303498758710
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 64ef9fd4ca3a9a83b9cd3eba9cb952b0f668e9f0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423932"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710696"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>管理 XML 文件中的命名空間
 XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和預定的 URI。 若要建立這些關聯，請為命名空間 URI 定義前置詞，並使用這些前置詞來限定 XML 資料中的元素與屬性名稱。 命名空間可用來避免元素和屬性名稱發生衝突，並讓相同名稱的元素和屬性以不同方式處理和驗證。  
@@ -67,7 +65,7 @@ XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和�
   
  以下是您可以使用 <xref:System.Xml.XmlNamespaceManager> 類別執行的一些管理和查詢工作。 如需詳細資訊和範例，請追蹤每個方法或屬性的參考頁面連結。  
   
-|若要|請使用|  
+|進行|使用|  
 |--------|---------|  
 |加入命名空間|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> 方法|  
 |移除命名空間|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> 方法|  

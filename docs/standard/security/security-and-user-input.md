@@ -8,14 +8,12 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 832ea3c976a0a2e6bb3b4df8a2541248cfc56933
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0d34b06b44241feb7d6e3c8f76447b861563cfdc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663917"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705856"
 ---
 # <a name="security-and-user-input"></a>安全性和使用者輸入
 
@@ -57,8 +55,8 @@ ms.locfileid: "67663917"
 
   - 雙逸出 (%nn 變成 %mmnn，其中 %mm 是 '%' 的逸出)。
 
-- 請小心可能有一個以上標準格式的使用者名稱。 例如，您通常可以使用 MYDOMAIN\\username  形式或 username  @mydomain.example.com 形式。
+- 請小心可能有一個以上標準格式的使用者名稱。 例如，您通常可以使用 MYDOMAIN\\username 形式或 username@mydomain.example.com 形式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

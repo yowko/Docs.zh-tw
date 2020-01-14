@@ -1,17 +1,16 @@
 ---
 title: 如何明確執行兩個介面的成員- C#程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
-ms.openlocfilehash: 720e265cedcf9ad8be00f5e013365129f38749af
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: c7adc08f62a7f8a14b8e10f8b5ecdd6e37db811d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635245"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75701234"
 ---
 # <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>如何明確執行兩個介面的成員（C#程式設計手冊）
 明確的[介面](../../language-reference/keywords/interface.md)實作也可讓程式設計人員實作具有相同成員名稱的兩個介面，並提供每個介面成員不同的實作。 此範例會顯示方塊尺寸的計量和英制單位。 Box [類別](../../language-reference/keywords/class.md)實作 IEnglishDimensions 和 IMetricDimensions 兩個介面，代表不同的量值系統。 這兩個介面具有相同的成員名稱，Length 和 Width。  

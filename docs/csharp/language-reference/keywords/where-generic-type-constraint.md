@@ -1,18 +1,17 @@
 ---
 title: where (泛型類型條件約束) - C# 參考
-ms.custom: seodec18
 ms.date: 04/12/2018
 f1_keywords:
 - whereconstraint
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 24ae6e285b8b4270188462b05f39c6142c6901ae
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972718"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712802"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (泛型類型條件約束) (C# 參考)
 
@@ -44,7 +43,7 @@ ms.locfileid: "73972718"
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-`where` 子句也可能包含建構函式條件約束 `new()`。 該條件約束可讓您使用 `new` 運算子建立型別參數執行個體。 [New （）條件約束](new-constraint.md)可讓編譯器知道提供的任何型別引數都必須具有可存取的無參數函數。 例如:
+`where` 子句也可能包含建構函式條件約束 `new()`。 該條件約束可讓您使用 `new` 運算子建立型別參數執行個體。 [New （）條件約束](new-constraint.md)可讓編譯器知道提供的任何型別引數都必須具有可存取的無參數函數。 例如：
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 

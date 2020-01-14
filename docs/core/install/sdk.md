@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 004ef2a768f4a5415942d405e4a8292928c89f94
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340662"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740561"
 ---
 # <a name="install-the-net-core-sdk"></a>安裝 .NET Core SDK
 
@@ -96,7 +96,7 @@ Visual Studio 可以安裝最新的 .NET Core SDK 和執行時間。
 
 ### <a name="select-a-workload"></a>選取工作負載
 
-安裝或修改 Visual Studio 時，請根據您所建立的應用程式類型，選取下列其中一個工作負載：
+安裝或修改 Visual Studio 時，請根據您所建立的應用程式類型，選取下列其中一個或多個工作負載：
 
 - [**其他工具**組] 區段中的 [ **.net Core 跨平臺開發**] 工作負載。
 - **Web & 雲端**一節中的**ASP.NET 和 網頁程式開發**工作負載。
@@ -133,7 +133,7 @@ Visual Studio Code 是一種功能強大且輕量的原始程式碼編輯器，�
 
 [Dotnet-安裝腳本](../tools/dotnet-install-script.md)會用於 SDK 的自動化和非系統管理員安裝。 您可以從 [ [dotnet-安裝腳本參考] 頁面](../tools/dotnet-install-script.md)下載此腳本。
 
-腳本預設為安裝最新的[長期支援（LTS）](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)版本，也就是 .net Core 2.1。 若要安裝目前版本的 .NET Core，請使用下列參數執行腳本。
+腳本預設為安裝最新的[長期支援（LTS）](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)版本，也就是 .net Core 3.1。 若要安裝目前版本的 .NET Core，請使用下列參數執行腳本。
 
 ```powershell
 dotnet-install.ps1 -Channel Current
@@ -147,7 +147,7 @@ dotnet-install.ps1 -Channel Current
 
 [Dotnet-安裝腳本](../tools/dotnet-install-script.md)會用於 SDK 的自動化和非系統管理員安裝。 您可以從 [ [dotnet-安裝腳本參考] 頁面](../tools/dotnet-install-script.md)下載此腳本。
 
-腳本預設為安裝最新的[長期支援（LTS）](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)版本，也就是 .net Core 2.1。 若要安裝目前版本的 .NET Core，請使用下列參數執行腳本。
+腳本預設為安裝最新的[長期支援（LTS）](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)版本，也就是 .net Core 3.1。 若要安裝目前版本的 .NET Core，請使用下列參數執行腳本。
 
 ```bash
 ./dotnet-install.sh -c Current

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: ad4e953941e189e6ed9baefb6cb07e7955000c7f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283108"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337249"
 ---
 # <a name="c-programming-guide"></a>C# 程式設計手冊
 
@@ -40,15 +40,13 @@ ms.locfileid: "74283108"
   
  [介面](./interfaces/index.md)  
 
- [列舉型別](./enumeration-types.md)  
-  
  [委派](./delegates/index.md)  
 
  [陣列](./arrays/index.md)  
   
  [字串](./strings/index.md)  
   
- [內容](./classes-and-structs/properties.md)  
+ [屬性](./classes-and-structs/properties.md)  
   
  [索引子](./indexers/index.md)  
   
@@ -80,7 +78,7 @@ ms.locfileid: "74283108"
   
  [例外狀況和例外狀況處理](./exceptions/index.md)  
   
- [檔案系統和登錄 (C# 程式設計手冊)](./file-system/index.md)  
+ [檔案系統和登錄 (C# 程式設計指南)](./file-system/index.md)  
   
  [互通性](./interop/index.md)  
   

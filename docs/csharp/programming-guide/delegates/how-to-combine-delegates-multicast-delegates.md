@@ -1,19 +1,18 @@
 ---
 title: 如何合併委派（多播委派）-程式C#設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], combining
 - multicast delegates [C#]
 ms.assetid: 4e689450-6d0c-46de-acfd-f961018ae5dd
-ms.openlocfilehash: 1a552c0203a4307994b80a1d3d37d12f577c02c4
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 7b5b9ba5c9bf70983fac9f869836b4c8c5449eca
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346390"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705375"
 ---
-# <a name="how-to-combine-delegates-multicast-delegates-c-programming-guide"></a>如何合併委派（多播委派）（C#程式設計手冊）
+# <a name="how-to-combine-delegates-multicast-delegates-c-programming-guide"></a>如何合併委派 (多點傳送委派) (C# 程式設計手冊)
 本例示範如何建立多點傳送委派。 [delegate](../../language-reference/builtin-types/reference-types.md) 物件有一個有用的屬性，是可以使用 `+` 運算子將多個物件指派給一個委派執行個體。 多點傳送委派包含指派委派的清單。 呼叫多點傳送委派時，會依序叫用清單中的委派。 只有相同類型的委派可以合併。  
   
  您可使用 `-` 運算子從多點傳送委派移除元件委派。  

@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974924"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716023"
 ---
 # <a name="interop-etw-events"></a>Interop ETW 事件
 Interop 事件會擷取 Microsoft 中繼語言 (MSIL) Stub 之產生和快取的相關資訊。  
@@ -21,13 +19,13 @@ Interop 事件會擷取 Microsoft 中繼語言 (MSIL) Stub 之產生和快取的
 
 下表說明關鍵字和層級。 (如需詳細資訊，請參閱 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md))。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|Informational(4)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|已產生 MSIL 虛設常式。|  
   
@@ -51,13 +49,13 @@ Interop 事件會擷取 Microsoft 中繼語言 (MSIL) Stub 之產生和快取的
 
 下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|層級|  
+|引發事件的關鍵字|Level|  
 |-----------------------------------|-----------|  
 |`InteropKeyword` (0x2000)|Informational(4)|  
   
  下表說明事件資訊。  
   
-|Event - 事件|事件 ID|引發的時機|  
+|Event|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|已存取 MSIL 快取。|  
   

@@ -1,6 +1,5 @@
 ---
 title: 如何從文字檔讀取-程式C#設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - StreamReader.ReadToEnd
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 4e15d82a303c1a92739c72a2ddffd411debf99d4
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: d401a1d1bb2c6fccb203c440f367bd14c80e70e3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635323"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705011"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>如何從文字檔讀取（C#程式設計手冊）
 這個範例會使用 <xref:System.IO.File?displayProperty=nameWithType> 類別中的靜態方法 <xref:System.IO.File.ReadAllText%2A> 和 <xref:System.IO.File.ReadAllLines%2A>，來讀取文字檔的內容。  
@@ -45,4 +44,4 @@ ms.locfileid: "75635323"
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 程式設計指南](../index.md)
-- [檔案系統和登錄 (C# 程式設計手冊)](./index.md)
+- [檔案系統和登錄 (C# 程式設計指南)](./index.md)

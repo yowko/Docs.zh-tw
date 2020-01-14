@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: df3151dfd3628231d84d2d128c61d1c0b6b0d48e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 43cd34ad02f1e2d212ff5e2ff4694591fbed52e5
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800360"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900953"
 ---
 # <a name="quickstart-wcf-data-services"></a>快速入門 (WCF 資料服務)
 
 本快速入門可協助您透過一系列支援[消費者入門](getting-started-with-wcf-data-services.md)主題的工作，熟悉 WCF Data Services 和開放式資料通訊協定（OData）。
 
-## <a name="what-youll-learn"></a>學習內容
+## <a name="what-youll-learn"></a>您將了解
 
 本快速入門中的第一個工作會示範如何建立資料服務，以公開 Northwind 範例資料庫中的 OData 摘要。 在後續的主題中，您將使用網頁瀏覽器來存取 OData 摘要，並使用用戶端程式庫建立使用 OData 摘要的 Windows Presentation Foundation （WPF）用戶端應用程式。
 
@@ -45,7 +45,7 @@ ms.locfileid: "74800360"
  建立 WPF 應用程式來取用 OData 摘要、將資料系結至 Windows 控制項、變更繫結控制項中的資料，然後將變更傳回資料服務。
 
 > [!NOTE]
-> 已完成之快速入門版本中的專案檔案可以從 [WCF Data Services 文件範例](https://go.microsoft.com/fwlink/?LinkId=179994) 頁面下載。
+> 您可以從[GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/WCF%20Data%20Services%20Quickstart%20(OData%20Service%20and%20WPF%20Client))下載已完成之快速入門版本中的專案檔案。
 
 ## <a name="next-steps"></a>後續步驟
 

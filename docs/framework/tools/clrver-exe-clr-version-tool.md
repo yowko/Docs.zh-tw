@@ -5,14 +5,12 @@ helpviewer_keywords:
 - Clrver.exe
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5a94965c106b6ec231e3f80802f82c76dfd5eac6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044751"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715790"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR 版本工具)
 CLR 版本工具 (Clrver.exe) 會報告電腦上已安裝的所有通用語言執行平台 (CLR) 版本。  
@@ -29,7 +27,7 @@ clrver [option]
   
 ## <a name="options"></a>選項  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |`-all`|顯示電腦上所有正在使用 CLR 的處理序。|  
 |*pid*|顯示具有指定處理序 ID (PID) 的處理序所使用的 CLR 版本。|  
@@ -56,7 +54,7 @@ clrver [option]
   
  `Clrver -all`  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [工具](index.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

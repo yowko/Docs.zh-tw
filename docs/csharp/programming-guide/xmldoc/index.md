@@ -1,6 +1,5 @@
 ---
 title: XML 文件註解 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.xml
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 6405b094ccc50499bfeb4db4522f0ec9b01f68ad
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 07daff8b819220fad07e516281b93b24e39cba46
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523477"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711762"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>XML 文件註解 (C# 程式設計手冊)
 在 Visual C# 中，您可以加入程式碼的文件，加入的方法是在原始程式碼中，於註解所參考程式碼區塊之前的特殊註解欄位 (以三個斜線表示) 中加入 XML 項目，例如：  
@@ -44,10 +43,10 @@ public class MyClass {}
   
 - [文件標籤的分隔符號](./delimiters-for-documentation-tags.md)  
   
-- [如何：使用 XML 文件功能](./how-to-use-the-xml-documentation-features.md)  
+- [如何使用 XML 檔功能](./how-to-use-the-xml-documentation-features.md)
   
 ## <a name="related-sections"></a>相關章節  
- 如需詳細資訊，請參閱:  
+ 如需詳細資訊，請參閱＜＞。  
   
 - [-doc （處理檔批註）](../../language-reference/compiler-options/doc-compiler-option.md)  
   

@@ -1,156 +1,138 @@
 ---
-title: 在 Visual Studio 2017 中使用 .NET Core 測試 .NET Standard 類別程式庫
+title: 在 Visual Studio 中使用 .NET Core 測試 .NET Standard 類別庫
 description: 為您的 .NET Core 類別庫建立單元測試專案。 藉由單元測試確認您的 .NET Core 類別庫運作正常。
-author: BillWagner
-ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 12/24/2019
 dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 242234d93bc1b8f9b88749f2e3bcfb37c2bde86d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3a4f25b0d250469102fdac6ee960e42b2d969aed
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037968"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559574"
 ---
-# <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core 測試 .NET Standard 程式庫
+# <a name="test-a-net-standard-library-with-net-core-in-visual-studio"></a>在 Visual Studio 中使用 .NET Core 測試 .NET Standard 程式庫
 
-於[在 Visual Studio 2017 中使用 C# 和 .NET Core 建置 .NET Standard 程式庫](library-with-visual-studio.md)或[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core 建置 .NET Standard 程式庫](vb-library-with-visual-studio.md)中，您建立了一個將擴充方法新增至 <xref:System.String> 類別的簡易類別庫。 現在我們將建立單元測試，確定它如預期般運作。 我們會將我們的單元測試專案加入在上一篇文章中建立的方案。
+在[Visual Studio 中建立 .NET Standard 程式庫](library-with-visual-studio.md)中，您已建立一個簡單的類別庫，將擴充方法新增至 <xref:System.String> 類別。 現在我們將建立單元測試，確定它如預期般運作。 我們會將我們的單元測試專案加入在上一篇文章中建立的方案。
 
-## <a name="creating-a-unit-test-project"></a>建立單元測試專案
+## <a name="create-a-unit-test-project"></a>建立單元測試專案
 
 若要建立單元測試專案，請執行下列作業︰
 
-<!-- markdownlint-disable MD025 -->
+1. 開啟您在[Visual Studio 中建立 .NET Standard 程式庫一](library-with-visual-studio.md)文中所建立的 `ClassLibraryProjects` 解決方案。
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+1. 將名為 "StringLibraryTest" 的新單元測試專案加入至方案。
 
-1. 在方案總管 中，開啟 **ClassLibraryProject** 方案節點的內容功能表，然後選取 [新增] >  [新增專案]。
+   1. 以滑鼠右鍵按一下**方案總管**中的方案，然後選取 [**加入** > **新增專案**]。
 
-1. 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點。 然後選取後面跟著 [MSTest 測試專案 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "StringLibraryTest" 作為專案名稱。 選取 [確定] 以建立單元測試專案。
+   1. 在 [**加入新專案**] 頁面的 [搜尋] 方塊中，輸入**mstest** 。 從**C#** [語言] 清單中選擇或**Visual Basic** ，然後從 [平臺] 清單中選擇 [**所有平臺**]。 選擇 [ **MsTest 測試專案（.Net Core）** ] 範本，然後選擇 **[下一步]** 。
 
-   ![顯示單元測試專案的 [新增專案] 對話方塊 - C#](./media/testing-library-with-visual-studio/create-new-test-project.png)
+   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**StringLibraryTest** 。 然後選擇 [**建立**]。
 
-   > [!NOTE]  
-   > 除了 MSTest 測試專案之外，您也可以使用 Visual Studio 建立適用於 .NET Core 的 xUnit 測試專案。
+   > [!NOTE]
+   > 除了 MSTest 以外，您也可以在 Visual Studio 中建立 .NET Core 的 xUnit 和 nUnit 測試專案。
 
-1. Visual Studio 會建立專案，並在程式碼視窗中開啟 *UnitTest1.cs* 檔案。
+1. Visual Studio 會建立專案，並使用下列程式碼在程式碼視窗中開啟類別檔案：
 
-   ![單元測試專案類別和方法的 Visual Studio 程式碼視窗 - C#](./media/testing-library-with-visual-studio/unit-test-editor-window.png)
+   ```csharp
+   using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-   單元測試範本建立的原始程式碼會執行下列動作︰
+    namespace StringLibraryTest
+    {
+        [TestClass]
+        public class UnitTest1
+        {
+            [TestMethod]
+            public void TestMethod1()
+            {
+            }
+        }
+    }
+    ```
 
-   - 它會匯入 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 命名空間，其中包含用於單元測試的類型。
-
-   - 它會將 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 屬性套用至 `UnitTest1` 類別。 執行單元測試時，在測試類別中標示 \[TestMethod\] 屬性的每個測試方法都將自動執行。
-
-   - 它會套用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 屬性，以將 `TestMethod1` 定義為在執行單元測試時自動執行的測試方法。
-
-1. 在方案總管 中，以滑鼠右鍵按一下 **StringLibraryTest** 專案的 [相依性] 節點，然後從內容功能表中選取 [新增參考]。
-
-   ![StringLibraryTest 相依性的操作功能表 - C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
-
-1. 在 [參考管理員] 對話方塊中，展開 [專案] 節點並核取 [StringLibrary] 旁的方塊。 將參考新增至 `StringLibrary` 組件，可讓編譯器找出 **StringLibrary** 方法。 選取 [確定] 按鈕。 這會在您的類別庫專案 `StringLibrary` 中新增參考。
-
-   ![Visual Studio 新增專案參考對話方塊](./media/testing-library-with-visual-studio/project-reference-manager.png)
-
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
-
-1. 在方案總管 中，開啟 **ClassLibraryProject** 方案節點的內容功能表，然後選取 [新增] >  [新增專案]。
-
-1. 在 [新增專案] 對話方塊中，選取 [Visual Basic] 節點。 然後選取後面跟著 [MSTest 測試專案 (.NET Core)] 專案範本的 [.NET Core] 節點。 在 **[名稱]** 文字方塊中，輸入 "StringLibraryTest" 作為專案名稱。 選取 [確定] 以建立單元測試專案。
-
-   ![顯示單元測試專案的 [新增專案] 對話方塊 - Visual Basic](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
-
-   > [!NOTE]  
-   > 除了 MSTest 測試專案之外，您也可以使用 Visual Studio 建立適用於 .NET Core 的 xUnit 測試專案。
-
-1. Visual Studio 會建立專案，並在程式碼視窗中開啟 *UnitTest1.vb* 檔案。
-
-   ![單元測試專案類別和方法的 Visual Studio 程式碼視窗 - Visual Basic](./media/testing-library-with-visual-studio/vb-unit-test-editor-window.png)
+    ```vb
+    Imports Microsoft.VisualStudio.TestTools.UnitTesting
+    
+    Namespace StringLibraryTest
+        <TestClass>
+        Public Class UnitTest1
+            <TestMethod>
+            Sub TestSub()
+    
+            End Sub
+        End Class
+    End Namespace
+    ```
 
    單元測試範本建立的原始程式碼會執行下列動作︰
 
    - 它會匯入 <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 命名空間，其中包含用於單元測試的類型。
 
-   - 它會將 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 屬性套用至 `UnitTest1` 類別。 執行單元測試時，在測試類別中標示 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 屬性的每個測試方法都將自動執行。
+   - 它會將[TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)屬性套用至 `UnitTest1` 類別。 執行單元測試時，在測試類別中標示 [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) 屬性的每個測試方法都將自動執行。
 
-   - 它會套用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 屬性，以將 `TestMethod1` 定義為在執行單元測試時自動執行的測試方法。
+   - 它會套用[TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute)屬性，將 Visual Basic 中C#的 `TestMethod1` 或 `TestSub` 定義為在執行單元測試時自動執行的測試方法。
 
-1. 在方案總管 中，以滑鼠右鍵按一下 **StringLibraryTest** 專案的 [相依性] 節點，然後從內容功能表中選取 [新增參考]。
+1. 在 **方案總管** 中，以滑鼠右鍵按一下 **StringLibraryTest** 專案的 **[相依性]** 節點，然後從內容功能表中選取 **[新增參考]** 。
 
-   ![StringLibraryTest 相依性的內容功能表](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
+   > [!div class="mx-imgBorder"]
+   > StringLibraryTest 相依性的 ![內容功能表](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
-1. 在 [參考管理員] 對話方塊中，展開 [專案] 節點並核取 [StringLibrary] 旁的方塊。 將參考新增至 `StringLibrary` 組件，可讓編譯器找出 **StringLibrary** 方法。 選取 [確定] 按鈕。 這會在您的類別庫專案 `StringLibrary` 中新增參考。
+1. 在 **[參考管理員]** 對話方塊中，展開 **[專案]** 節點並核取 **[StringLibrary]** 旁的方塊。 將參考新增至 `StringLibrary` 組件，可讓編譯器找出 **StringLibrary** 方法。 選取 [確定] 按鈕。 參考隨即加入至您的類別庫專案，`StringLibrary`。
 
-   ![Visual Studio 新增專案參考對話方塊 - Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
+   ![Visual Studio 中的 [參考管理員] 對話方塊](./media/testing-library-with-visual-studio/project-reference-manager.png)
 
----
+## <a name="add-and-run-unit-test-methods"></a>新增和執行單元測試方法
 
-## <a name="adding-and-running-unit-test-methods"></a>新增和執行單元測試方法
+當 Visual Studio 執行單元測試時，它會執行以單元測試類別中的 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 屬性標記的每個方法，也就是套用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 屬性的類別。 測試方法會在發現第一個失敗或方法中包含的所有測試都成功時結束。
 
-Visual Studio 執行單元測試時，會執行單元測試類別 (即套用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 屬性的類別) 中標示 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 屬性的每個方法。 測試方法會在發生第一次失敗時或方法中包含的所有測試均成功時結束。
+最常見的測試會呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 類別的成員。 許多判斷提示方法都至少包括兩個參數，一個是預期的測試結果，另一個是實際的測試結果。 下表顯示一些 `Assert` 類別最常呼叫的方法：
 
-最常見的測試會呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 類別的成員。 許多判斷提示方法都至少包括兩個參數，一個是預期的測試結果，另一個是實際的測試結果。 下表顯示其中一些最常被呼叫的方法：
+| Assert 方法     | 函數 |
+| ------------------ | -------- |
+| `Assert.AreEqual`  | 驗證兩個值或物件相等。 如果值或物件不相等，判斷提示就會失敗。 |
+| `Assert.AreSame`   | 驗證兩個物件變數參考相同的物件。 如果變數參考不同的物件，判斷提示就會失敗。 |
+| `Assert.IsFalse`   | 驗證條件為 `false`。 如果條件為 `true`，判斷提示就會失敗。 |
+| `Assert.IsNotNull` | 確認物件不 `null`。 如果物件為 `null`，判斷提示就會失敗。 |
 
-Assert 方法 | 功能
---- | ---
-`Assert.AreEqual` | 驗證兩個值或物件相等。 如果值或物件不相等，判斷提示就會失敗。
-`Assert.AreSame` | 驗證兩個物件變數參考相同的物件。 如果變數參考不同的物件，判斷提示就會失敗。
-`Assert.IsFalse` | 驗證條件為 `false`。 如果條件為 `true`，判斷提示就會失敗。
-`Assert.IsNotNull` | 驗證物件不是 `null`。 如果物件為 `null`，判斷提示就會失敗。
-
-您也可以將 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> 屬性套用到測試方法。 指出測試方法預期擲回的例外狀況類型。 如果沒有擲回指定的例外狀況，測試便會失敗。
+您也可以在測試方法中使用 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A> 方法，以指出預期會擲回的例外狀況類型。 如果未擲回指定的例外狀況，測試將會失敗。
 
 在測試 `StringLibrary.StartsWithUpper` 方法時，您想提供幾個以大寫字元開頭的字串。 您預期此方法在這些情況下傳回 `true`，因此您可以呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A> 方法。 同樣地，您想提供幾個開頭不是大寫字元的字串。 您預期此方法在這些情況下傳回 `false`，因此您可以呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A> 方法。
 
-因為您的程式庫方法會處理字串，您也想確定它會成功處理[空字串 (`String.Empty`)](xref:System.String.Empty)，這是不包含任何字元且其 <xref:System.String.Length> 為 0 的有效字串和尚未初始化的 `null` 字串。 如果在 <xref:System.String> 執行個體上呼叫 `StartsWithUpper` 做為擴充方法，它將無法傳遞 `null` 字串。 不過，您也可以將其作為靜態方法來直接呼叫，並傳遞單一 <xref:System.String> 引數。
+由於您的程式庫方法會處理字串，因此您也會想要確定它會成功處理[空字串（`String.Empty`）](xref:System.String.Empty)、沒有任何字元且其 <xref:System.String.Length> 為0的有效字串，以及尚未初始化的 `null` 字串。 如果 `StartsWithUpper` 在 <xref:System.String> 實例上被當做擴充方法呼叫，就無法將 `null` 字串傳遞給它。 不過，您也可以將其作為靜態方法來直接呼叫，並傳遞單一 <xref:System.String> 引數。
 
-您會定義三個方法，每個方法會針對字串陣列中的每個項目重複呼叫其 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 方法。 因為測試方法會在發生第一次失敗時立即失敗，您將呼叫一個方法多載，以便傳遞一個字串來指示在方法呼叫中使用的字串值。
+您會定義三個方法，每個方法會針對字串陣列中的每個專案重複呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 方法。 因為測試方法會在發現第一次失敗時失敗，所以您會呼叫方法多載，讓您傳遞一個字串來表示方法呼叫中所使用的字串值。
 
 建立測試方法：
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
-
-1. 在 *UnitTest1.cs* 程式碼視窗中，以下列程式碼取代程式碼：
+1. 在 [ *UnitTest1.cs* ] 或 [ *unittest1.cpp* ] 程式碼視窗中，將程式碼取代為下列程式碼：
 
    [!code-csharp[Test#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
+   [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
 
-   請注意，您在 `TestStartsWithUpper` 方法中的大寫字元測試包含希臘文大寫字母 alpha (U+0391) 和斯拉夫文大寫字母 EM (U+041C)，`TestDoesNotStartWithUpper` 方法中的小寫字元測試包含希臘文小寫字母 alpha (U+03B1) 和斯拉夫文小寫字母 Ghe (U+0433)。
+   `TestStartsWithUpper` 方法中的大寫字元測試包含希臘文大寫字母 Alpha （U + 0391）和斯拉夫文大寫字母 EM （U + 041C）。 `TestDoesNotStartWithUpper` 方法中的小寫字元測試包含希臘文小寫字母 Alpha （U + 03B1）和斯拉夫文小寫字母 Ghe （U + 0433）。
 
-1. 在功能表列上，選取 [檔案] >  [將 UnitTest1.cs As 另存為]。 在 **[另存新檔]** 對話方塊中，選擇 **[儲存]** 按鈕旁的箭號，然後選擇 **[以編碼方式儲存]** 。
+1. 在功能表列上 **，選取 [** 檔案] > [**將 UnitTest1.cs 另存為** **] 或 [** 檔案] > **將 unittest1.cpp 另存為**。 在 **[另存新檔]** 對話方塊中，選擇 **[儲存]** 按鈕旁的箭號，然後選擇 **[以編碼方式儲存]** 。
 
-   ![Visual Studio [另存新檔] 對話方塊 - C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
-
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
-
-1. 在 *UnitTest1.vb* 程式碼視窗中，以下列程式碼取代程式碼：
-
-    [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
-
-   請注意，您在 `TestStartsWithUpper` 方法中的大寫字元測試包含希臘文大寫字母 alpha (U+0391) 和斯拉夫文大寫字母 EM (U+041C)，`TestDoesNotStartWithUpper` 方法中的小寫字元測試包含希臘文小寫字母 alpha (U+03B1) 和斯拉夫文小寫字母 Ghe (U+0433)。
-
-1. 在功能表列上，選取 [檔案] > [將 UnitTest1.vb 另存為]。 在 **[另存新檔]** 對話方塊中，選擇 **[儲存]** 按鈕旁的箭號，然後選擇 **[以編碼方式儲存]** 。
-
-   ![Visual Studio [另存新檔] 對話方塊 - Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
-
----
+   > [!div class="mx-imgBorder"]
+   > ![Visual Studio [另存新檔] 對話方塊](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 
 1. 在 **[確認另存新檔]** 對話方塊中，選擇 **[是]** 按鈕以儲存檔案。
 
 1. 在 **[進階儲存選項]** 對話方塊的，選取 **[編碼]** 下拉式清單中選擇 **[Unicode (UTF-8 有簽章) - 字碼頁 65001]** ，然後選擇 **[確定]** 。
 
-   ![Visual Studio [進階儲存選項] 對話方塊](./media/testing-library-with-visual-studio/advanced-save-options.png)
+   > [!div class="mx-imgBorder"]
+   > ![Visual Studio 先進的儲存選項對話方塊](./media/testing-library-with-visual-studio/advanced-save-options.png)
 
-   如果您無法將您的原始程式碼儲存為 UTF8 編碼檔案，Visual Studio 可能會將它儲存為 ASCII 檔案。 發生該情況時，執行階段無法正確解碼 ASCII 範圍之外的 UTF8 字元，因此測試結果將不精確。
+   如果您無法將您的原始程式碼儲存為 UTF8 編碼檔案，Visual Studio 可能會將它儲存為 ASCII 檔案。 發生這種情況時，執行時間不會正確地解碼 ASCII 範圍以外的 UTF8 字元，而且測試結果將會不正確。
 
-1. 在功能表列上，選擇 **[測試]**  >  **[執行]**  >  **[所有測試]** 。 **[測試總管]** 視窗隨即開啟並顯示測試成功執行。 這三項測試都會列在 [通過的測試] 區段中，而 [摘要] 區段則報告測試回合的結果。
+1. 在功能表列上，選擇 **[測試]**  >  **[執行]**  >  **[所有測試]** 。 [測試總管] 視窗隨即開啟並顯示測試成功執行。 這三項測試都會列在 [通過的測試] 區段中，而 [摘要] 區段則報告測試回合的結果。
 
-   ![測試總管視窗，其中包含通過的測試](./media/testing-library-with-visual-studio/test-explorer-window.png)
+   > [!div class="mx-imgBorder"]
+   > 具有通過測試的 ![測試瀏覽器視窗](./media/testing-library-with-visual-studio/test-explorer-window.png)
 
-## <a name="handling-test-failures"></a>處理測試失敗
+## <a name="handle-test-failures"></a>處理測試失敗
 
 您的測試回合未失敗，但將它稍微變更，使其中一個測試方法失敗：
 
@@ -167,17 +149,19 @@ Assert 方法 | 功能
 
    ```
 
-1. 從功能表列中，選取 [測試]  >  [執行]  >  [所有測試] 來執行測試。 [測試總管] 視窗表示兩個測試成功，而且有一項失敗。
+1. 從功能表列中，選取 [測試] >  [執行] >  [所有測試] 來執行測試。 [測試總管] 視窗表示兩個測試成功，而且有一項失敗。
 
-   ![測試總管視窗，其中包含失敗的測試](./media/testing-library-with-visual-studio/failed-test-window.png)
+   > [!div class="mx-imgBorder"]
+   > 具有失敗測試的 ![測試瀏覽器視窗](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. 在 **[失敗的測試]** 區段中選擇失敗的測試 `TestDoesNotStartWith`。 **[測試總管]** 下方的窗格會顯示判斷提示產生的訊息：「Assert.IsFalse 失敗。 預期為 'Error': false; 實際為: True」。 因為發生失敗，陣列中 "Error" 之後的所有字串並未經過測試。
+1. 選取失敗的測試，`TestDoesNotStartWith`。 [測試總管] 視窗會顯示判斷提示產生的訊息："Assert.IsFalse failed. Expected for 'Error': false; actual:True" (Assert.IsFalse 失敗。預期為 'Error'：false；實際為：True)。 因為失敗，在「錯誤」之後的陣列中的所有字串都未經過測試。
 
-   ![[測試總管] 視窗顯示「為 False」的判斷提示失敗](./media/testing-library-with-visual-studio/failed-test-detail.png)
+   > [!div class="mx-imgBorder"]
+   > 顯示 IsFalse 判斷提示失敗的 ![Test Explorer 視窗](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
 1. 復原您在步驟 1 中所做的修改，並移除字串 "Error"。 重新執行該測試，測試將會通過。
 
-## <a name="testing-the-release-version-of-the-library"></a>測試程式庫的發行版本
+## <a name="test-the-release-version-of-the-library"></a>測試程式庫的發行版本
 
 您已針對偵錯版本的程式庫執行測試。 既然您的測試全部通過，並已充分測試過您的程式庫，您應針對程式庫的發行組建執行更多時間的測試。 許多因素 (包括編譯器最佳化) 有時會在偵錯和發行組建之間導致不同的行為。
 
@@ -185,12 +169,18 @@ Assert 方法 | 功能
 
 1. 在 Visual Studio 工具列中，將組建組態從 [偵錯] 變更為 [發行]。
 
-   ![醒目提示 [發行] 組建的 Visual Studio 工具列](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
+   > [!div class="mx-imgBorder"]
+   > 已反白顯示發行組建的 ![Visual Studio 工具列](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. 在方案總管 中，以滑鼠右鍵按一下 **StringLibrary** 專案，然後從內容功能表中選取 [組建] 以重新編譯程式庫。
+1. 在 **方案總管** 中，以滑鼠右鍵按一下 **StringLibrary** 專案，然後從內容功能表中選取 **[組建]** 以重新編譯程式庫。
 
-   ![StringLibrary 操作功能表和建置命令](./media/testing-library-with-visual-studio/build-library-context-menu.png)
+   > [!div class="mx-imgBorder"]
+   > 具有 build 命令](./media/testing-library-with-visual-studio/build-library-context-menu.png) 的 ![StringLibrary 內容功能表
 
-1. 從功能表列中，選擇 [測試] >  [執行]  >  [所有測試] 來執行單元測試。 所有測試皆通過。
+1. 從功能表列中，選擇 [測試] >  [執行] >  [所有測試] 來執行單元測試。 所有測試皆通過。
 
-既然您已經完成程式庫測試，下一步是將它提供給呼叫端。 您可以將它與一或多個應用程式搭售，或是將將它發佈為 NuGet 套件。 如需詳細資訊，請參閱[使用 .NET Standard 類別庫](./consuming-library-with-visual-studio.md)。
+既然您已經完成程式庫測試，下一步是將它提供給呼叫端。 您可以將它與一或多個應用程式搭售，或是將將它發佈為 NuGet 套件。 如需詳細資訊，請參閱[使用 .NET Standard 類別庫](consuming-library-with-visual-studio.md)。
+
+## <a name="see-also"></a>另請參閱
+
+- [單元測試基本概念-Visual Studio](/visualstudio/test/unit-test-basics)

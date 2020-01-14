@@ -1,6 +1,5 @@
 ---
 title: try-finally - C# 參考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - finally
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: a8d18a6ae8b3f8f6cde76b1b296ac6a317ca1ed1
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 2c4c69b1e104aed968bc24bac690de83026643a0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168571"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713010"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C# 參考)
 
@@ -42,7 +41,7 @@ C# 也會包含 [using 陳述式](using-statement.md)，以透過方便使用的
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [try 陳述式](~/_csharplang/spec/statements.md#the-try-statement)一節。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
@@ -50,4 +49,4 @@ C# 也會包含 [using 陳述式](using-statement.md)，以透過方便使用的
 - [try、throw 和 catch 陳述式 (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
 - [throw](throw.md)
 - [try-catch](try-catch.md)
-- [如何：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+- [操作說明：明確擲回例外狀況](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
