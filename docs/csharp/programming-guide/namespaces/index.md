@@ -5,51 +5,51 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: e3e9dc22186e5e319c63e34bd85e5e317effde88
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 21452e259596c9ab10b3d653ec1d8fb90fad131d
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712009"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937619"
 ---
-# <a name="namespaces-c-programming-guide"></a><span data-ttu-id="bc76e-102">命名空間 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="bc76e-102">Namespaces (C# Programming Guide)</span></span>
+# <a name="namespaces-c-programming-guide"></a><span data-ttu-id="62ce7-102">命名空間 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="62ce7-102">Namespaces (C# Programming Guide)</span></span>
 
-<span data-ttu-id="bc76e-103">C# 程式設計大量使用命名空間的原因有兩個。</span><span class="sxs-lookup"><span data-stu-id="bc76e-103">Namespaces are heavily used in C# programming in two ways.</span></span> <span data-ttu-id="bc76e-104">首先，.NET Framework 會使用命名空間組織其多種類別，如下所示：</span><span class="sxs-lookup"><span data-stu-id="bc76e-104">First, the .NET Framework uses namespaces to organize its many classes, as follows:</span></span>  
-  
- [!code-csharp[csProgGuide#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#22)]  
-  
-<span data-ttu-id="bc76e-105">`System` 是命名空間，而 `Console` 是該命名空間中的類別。</span><span class="sxs-lookup"><span data-stu-id="bc76e-105">`System` is a namespace and `Console` is a class in that namespace.</span></span> <span data-ttu-id="bc76e-106">您可以使用 `using` 關鍵字，如此就不需要完整名稱，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="bc76e-106">The `using` keyword can be used so that the complete name is not required, as in the following example:</span></span>  
-  
- [!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]  
-  
- [!code-csharp[csProgGuide#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#25)]  
-  
-<span data-ttu-id="bc76e-107">如需詳細資訊，請參閱 [using 指示詞](../../language-reference/keywords/using-directive.md)。</span><span class="sxs-lookup"><span data-stu-id="bc76e-107">For more information, see the [using Directive](../../language-reference/keywords/using-directive.md).</span></span>  
-  
-<span data-ttu-id="bc76e-108">其次，宣告您自己的命名空間，將有助於在較大型的程式設計專案中控制類別和方法名稱的範圍。</span><span class="sxs-lookup"><span data-stu-id="bc76e-108">Second, declaring your own namespaces can help you control the scope of class and method names in larger programming projects.</span></span> <span data-ttu-id="bc76e-109">請使用 [namespace](../../language-reference/keywords/namespace.md) 關鍵字宣告命名空間，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="bc76e-109">Use the [namespace](../../language-reference/keywords/namespace.md) keyword to declare a namespace, as in the following example:</span></span>  
-  
- [!code-csharp[csProgGuideNamespaces#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#6)]
+<span data-ttu-id="62ce7-103">C# 程式設計大量使用命名空間的原因有兩個。</span><span class="sxs-lookup"><span data-stu-id="62ce7-103">Namespaces are heavily used in C# programming in two ways.</span></span> <span data-ttu-id="62ce7-104">首先，.NET 會使用命名空間來組織其許多類別，如下所示：</span><span class="sxs-lookup"><span data-stu-id="62ce7-104">First, .NET uses namespaces to organize its many classes, as follows:</span></span>  
 
-<span data-ttu-id="bc76e-110">命名空間的名稱必須是有效的 C# [識別碼名稱](../inside-a-program/identifier-names.md)。</span><span class="sxs-lookup"><span data-stu-id="bc76e-110">The name of the namespace must be a valid C# [identifier name](../inside-a-program/identifier-names.md).</span></span>
+[!code-csharp[csProgGuide#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#22)]
 
-## <a name="namespaces-overview"></a><span data-ttu-id="bc76e-111">命名空間概觀</span><span class="sxs-lookup"><span data-stu-id="bc76e-111">Namespaces Overview</span></span>  
+<span data-ttu-id="62ce7-105"><xref:System> 是命名空間，而 <xref:System.Console> 是該命名空間中的類別。</span><span class="sxs-lookup"><span data-stu-id="62ce7-105"><xref:System> is a namespace and <xref:System.Console> is a class in that namespace.</span></span> <span data-ttu-id="62ce7-106">您可以使用 `using` 關鍵字，如此就不需要完整名稱，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="62ce7-106">The `using` keyword can be used so that the complete name is not required, as in the following example:</span></span>
 
-<span data-ttu-id="bc76e-112">命名空間具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="bc76e-112">Namespaces have the following properties:</span></span>  
-  
-- <span data-ttu-id="bc76e-113">命名空間可組織大型程式碼專案。</span><span class="sxs-lookup"><span data-stu-id="bc76e-113">They organize large code projects.</span></span>  
-- <span data-ttu-id="bc76e-114">命名空間會使用 `.` 運算子分隔。</span><span class="sxs-lookup"><span data-stu-id="bc76e-114">They are delimited by using the `.` operator.</span></span>  
-- <span data-ttu-id="bc76e-115">`using` 指示詞讓您不需要指定每個類別的命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="bc76e-115">The `using` directive obviates the requirement to specify the name of the namespace for every class.</span></span>  
-- <span data-ttu-id="bc76e-116">`global` 命名空間是「根」命名空間：`global::System` 一律會參考 .NET <xref:System> 命名空間。</span><span class="sxs-lookup"><span data-stu-id="bc76e-116">The `global` namespace is the "root" namespace: `global::System` will always refer to the .NET <xref:System> namespace.</span></span>  
+[!code-csharp[csProgGuide#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/using.cs#1)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="bc76e-117">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="bc76e-117">C# language specification</span></span>
+[!code-csharp[csProgGuide#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#25)]
 
-<span data-ttu-id="bc76e-118">如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[命名空間](~/_csharplang/spec/namespaces.md)一節。</span><span class="sxs-lookup"><span data-stu-id="bc76e-118">For more information, see the [Namespaces](~/_csharplang/spec/namespaces.md) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
-  
-## <a name="see-also"></a><span data-ttu-id="bc76e-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="bc76e-119">See also</span></span>
+<span data-ttu-id="62ce7-107">如需詳細資訊，請參閱 [using 指示詞](../../language-reference/keywords/using-directive.md)。</span><span class="sxs-lookup"><span data-stu-id="62ce7-107">For more information, see the [using Directive](../../language-reference/keywords/using-directive.md).</span></span>
 
-- [<span data-ttu-id="bc76e-120">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="bc76e-120">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="bc76e-121">使用命名空間</span><span class="sxs-lookup"><span data-stu-id="bc76e-121">Using Namespaces</span></span>](using-namespaces.md)
-- [<span data-ttu-id="bc76e-122">如何使用 My 命名空間</span><span class="sxs-lookup"><span data-stu-id="bc76e-122">How to use the My namespace</span></span>](how-to-use-the-my-namespace.md)
-- [<span data-ttu-id="bc76e-123">識別碼名稱</span><span class="sxs-lookup"><span data-stu-id="bc76e-123">Identifier names</span></span>](../inside-a-program/identifier-names.md)
-- [<span data-ttu-id="bc76e-124">using 指示詞</span><span class="sxs-lookup"><span data-stu-id="bc76e-124">using Directive</span></span>](../../language-reference/keywords/using-directive.md)
-- [<span data-ttu-id="bc76e-125">:: 運算子</span><span class="sxs-lookup"><span data-stu-id="bc76e-125">:: Operator</span></span>](../../language-reference/operators/namespace-alias-qualifier.md)
+<span data-ttu-id="62ce7-108">其次，宣告您自己的命名空間，將有助於在較大型的程式設計專案中控制類別和方法名稱的範圍。</span><span class="sxs-lookup"><span data-stu-id="62ce7-108">Second, declaring your own namespaces can help you control the scope of class and method names in larger programming projects.</span></span> <span data-ttu-id="62ce7-109">請使用 [namespace](../../language-reference/keywords/namespace.md) 關鍵字宣告命名空間，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="62ce7-109">Use the [namespace](../../language-reference/keywords/namespace.md) keyword to declare a namespace, as in the following example:</span></span>
+
+[!code-csharp[csProgGuideNamespaces#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#6)]
+
+<span data-ttu-id="62ce7-110">命名空間的名稱必須是有效的 C# [識別碼名稱](../inside-a-program/identifier-names.md)。</span><span class="sxs-lookup"><span data-stu-id="62ce7-110">The name of the namespace must be a valid C# [identifier name](../inside-a-program/identifier-names.md).</span></span>
+
+## <a name="namespaces-overview"></a><span data-ttu-id="62ce7-111">命名空間總覽</span><span class="sxs-lookup"><span data-stu-id="62ce7-111">Namespaces overview</span></span>
+
+<span data-ttu-id="62ce7-112">命名空間具有下列屬性：</span><span class="sxs-lookup"><span data-stu-id="62ce7-112">Namespaces have the following properties:</span></span>
+
+- <span data-ttu-id="62ce7-113">命名空間可組織大型程式碼專案。</span><span class="sxs-lookup"><span data-stu-id="62ce7-113">They organize large code projects.</span></span>
+- <span data-ttu-id="62ce7-114">命名空間會使用 `.` 運算子分隔。</span><span class="sxs-lookup"><span data-stu-id="62ce7-114">They are delimited by using the `.` operator.</span></span>
+- <span data-ttu-id="62ce7-115">`using` 指示詞讓您不需要指定每個類別的命名空間名稱。</span><span class="sxs-lookup"><span data-stu-id="62ce7-115">The `using` directive obviates the requirement to specify the name of the namespace for every class.</span></span>
+- <span data-ttu-id="62ce7-116">`global` 命名空間是「根」命名空間：`global::System` 一律會參考 .NET <xref:System> 命名空間。</span><span class="sxs-lookup"><span data-stu-id="62ce7-116">The `global` namespace is the "root" namespace: `global::System` will always refer to the .NET <xref:System> namespace.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="62ce7-117">C# 語言規格</span><span class="sxs-lookup"><span data-stu-id="62ce7-117">C# language specification</span></span>
+
+<span data-ttu-id="62ce7-118">如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[命名空間](~/_csharplang/spec/namespaces.md)一節。</span><span class="sxs-lookup"><span data-stu-id="62ce7-118">For more information, see the [Namespaces](~/_csharplang/spec/namespaces.md) section of the [C# language specification](~/_csharplang/spec/introduction.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="62ce7-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="62ce7-119">See also</span></span>
+
+- [<span data-ttu-id="62ce7-120">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="62ce7-120">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="62ce7-121">使用命名空間</span><span class="sxs-lookup"><span data-stu-id="62ce7-121">Using Namespaces</span></span>](using-namespaces.md)
+- [<span data-ttu-id="62ce7-122">如何使用 My 命名空間</span><span class="sxs-lookup"><span data-stu-id="62ce7-122">How to use the My namespace</span></span>](how-to-use-the-my-namespace.md)
+- [<span data-ttu-id="62ce7-123">識別碼名稱</span><span class="sxs-lookup"><span data-stu-id="62ce7-123">Identifier names</span></span>](../inside-a-program/identifier-names.md)
+- [<span data-ttu-id="62ce7-124">using 指示詞</span><span class="sxs-lookup"><span data-stu-id="62ce7-124">using Directive</span></span>](../../language-reference/keywords/using-directive.md)
+- [<span data-ttu-id="62ce7-125">:: 運算子</span><span class="sxs-lookup"><span data-stu-id="62ce7-125">:: Operator</span></span>](../../language-reference/operators/namespace-alias-qualifier.md)
