@@ -12,13 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.custom: seodec18
-ms.openlocfilehash: dbfa61077cbfdd7da104dc12f304a4096b3c032d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120605"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711450"
 ---
 # <a name="character-classes-in-regular-expressions"></a>規則運算式中的字元類別
 
@@ -159,7 +158,7 @@ ms.locfileid: "73120605"
 ## <a name="any-character-"></a>任何字元：.  
  句號字元 (.) 會比對 `\n` (新行字元 \u000A) 以外任何具有下列兩項資格的字元：  
   
-- 如果 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項修改了規則運算式模式，或是 `.` 選項修改了模式中包含 `s` 字元類別的部分，`.` 就會符合任何字元。 如需詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。  
+- 如果 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項修改了規則運算式模式，或是 `.` 選項修改了模式中包含 `s` 字元類別的部分，`.` 就會符合任何字元。 如需詳細資訊，請參閱 [Regular Expression Options](../../../docs/standard/base-types/regular-expression-options.md)。  
   
      下列範例將示範 `.` 字元類別的預設行為與使用 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項的行為有何不同。 規則運算式 `^.+` 會從字串開頭開始，比對每一個字元。 根據預設，比對會在第一行結尾結束。規則運算式模式會比對歸位字元 `\r` 或 \u000D，但不會比對 `\n`。 由於 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項會將整個輸入字串解譯為單行，因此它會比對輸入字串中的每個字元，包括 `\n`。  
   
@@ -183,7 +182,7 @@ ms.locfileid: "73120605"
   
  規則運算式建構  
   
- `\p{` *name* `}`  
+ `\p{`*名稱*`}`  
   
  比對屬於 Unicode 一般分類或具名區塊的任何字元，其中 *name* 是分類縮寫或具名區塊名稱。 如需分類縮寫的清單，請參閱本主題稍後的[支援的 Unicode 一般分類](#SupportedUnicodeGeneralCategories)一節。 如需具名區塊清單，請參閱本主題稍後的[支援的具名區塊](#SupportedNamedBlocks)一節。  
   
@@ -212,7 +211,7 @@ ms.locfileid: "73120605"
   
  規則運算式建構  
   
- `\P{` *name* `}`  
+ `\P{`*名稱*`}`  
   
  比對任何不屬於 Unicode 一般分類或具名區塊的字元，其中 *name* 是分類縮寫或是具名區塊名稱。 如需分類縮寫的清單，請參閱本主題稍後的[支援的 Unicode 一般分類](#SupportedUnicodeGeneralCategories)一節。 如需具名區塊清單，請參閱本主題稍後的[支援的具名區塊](#SupportedNamedBlocks)一節。  
   
@@ -227,7 +226,7 @@ ms.locfileid: "73120605"
 ## <a name="word-character-w"></a>文字字元：\w  
  `\w` 會比對任何文字字元。 文字字元是下表中所列的任何 Unicode 分類的成員。  
   
-|Category|描述|  
+|分類|描述|  
 |--------------|-----------------|  
 |Ll|字母、小寫|  
 |Lu|字母、大寫|  
@@ -261,7 +260,7 @@ ms.locfileid: "73120605"
   
  換句話說，它會比對下表所列 Unicode 分類中字元以外的所有字元。  
   
-|Category|描述|  
+|分類|描述|  
 |--------------|-----------------|  
 |Ll|字母、小寫|  
 |Lu|字母、大寫|  
@@ -294,7 +293,7 @@ ms.locfileid: "73120605"
 ## <a name="whitespace-character-s"></a>空白字元：\s  
  `\s` 會比對任何空白字元。 它相當於下表列出的逸出序列和 Unicode 分類。  
   
-|Category|描述|  
+|分類|描述|  
 |--------------|-----------------|  
 |`\f`|換頁字元 \u000C。|  
 |`\n`|新行字元 \u000A。|  
@@ -381,7 +380,7 @@ ms.locfileid: "73120605"
 ## <a name="supported-unicode-general-categories"></a>支援的 Unicode 一般分類  
  Unicode 定義了下表中所列的一般類別。 如需詳細資訊，請參閱 [Unicode Character Database](https://www.unicode.org/reports/tr44/) 中的 "UCD File Format" 和 "General Category Values" 副標題。  
   
-|Category|描述|  
+|分類|描述|  
 |--------------|-----------------|  
 |`Lu`|字母、大寫|  
 |`Ll`|字母、小寫|  
