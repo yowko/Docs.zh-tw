@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30931874-4d0e-4df1-b3d1-e425b50655d1
 topic_type:
 - apiref
-ms.openlocfilehash: 1759ee2ecf08322b745a4f80a62b24596c4504cb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11bb220068e978dc130701e3b28ab3f421be7337
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123256"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937657"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 函式
 載入包含在 .NET Framework 可轉散發套件中的指定 DLL 版本。  
@@ -43,7 +43,7 @@ HRESULT LoadLibraryShim (
  在以零結束的字串，表示要從 .NET Framework 程式庫載入的 DLL 名稱。  
   
  `szVersion`  
- 在以零結束的字串，表示要載入之 DLL 的版本。 如果 `szVersion` 是 null，則選取要載入的版本是最新版本的指定 DLL，其小於第4版。 也就是說，如果 `szVersion` 是 null，則會忽略等於或大於第4版的所有版本，如果未安裝低於第4版的版本，則無法載入 DLL。 這是為了確保 .NET Framework 4 的安裝不會影響既有的應用程式或元件。 請參閱 CLR team blog 中的進入[進程內 SxS 和遷移快速](https://go.microsoft.com/fwlink/?LinkId=200329)入門。  
+ 在以零結束的字串，表示要載入之 DLL 的版本。 如果 `szVersion` 是 null，則選取要載入的版本是最新版本的指定 DLL，其小於第4版。 也就是說，如果 `szVersion` 是 null，則會忽略等於或大於第4版的所有版本，如果未安裝低於第4版的版本，則無法載入 DLL。 這是為了確保 .NET Framework 4 的安裝不會影響既有的應用程式或元件。 請參閱 CLR team blog 中的進入[進程內 SxS 和遷移快速](https://devblogs.microsoft.com/dotnet/in-proc-sxs-and-migration-quick-start/)入門。  
   
  `pvReserved`  
  保留供未來使用。  
@@ -56,7 +56,7 @@ HRESULT LoadLibraryShim (
   
 |傳回碼|描述|  
 |-----------------|-----------------|  
-|S_OK|已成功完成命令。|  
+|S_OK|此方法已順利完成。|  
 |CLR_E_SHIM_RUNTIMELOAD|載入 `szDllName` 需要載入 common language runtime （CLR），而且無法載入必要的 CLR 版本。|  
   
 ## <a name="remarks"></a>備註  

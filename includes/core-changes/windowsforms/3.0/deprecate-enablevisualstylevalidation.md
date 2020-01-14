@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 84b6bfc32f5a73597b227098e5aee1e3450cf85b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 75baa4f23eae838defafd3ce9b3907a187982a18
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74644009"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937049"
 ---
-### <a name="switchsystemwindowsformsenablevisualstylevalidation-compatibility-switch-not-supported"></a>不支援 EnableVisualStyleValidation 相容性參數
+### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>不支援 EnableVisualStyleValidation 相容性切換
 
 .NET Core 3.0 的 Windows Forms 不支援 `Switch.System.Windows.Forms.EnableVisualStyleValidation` 相容性參數。
 
@@ -24,7 +24,7 @@ ms.locfileid: "74644009"
 
 移除參數。 不支援此參數，而且沒有可用的替代功能。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>分類
 
 Windows 表單
 

@@ -9,16 +9,17 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-ms.openlocfilehash: 1852135e9b7f48d6556e27f16819ddd48805af21
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: efd4c596f67d5eabace8ecafb48f2d350df6a18e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138083"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938039"
 ---
 # <a name="destroying-threads"></a>終結執行緒
-<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法可用來永久停止受控執行緒。 當您呼叫 <xref:System.Threading.Thread.Abort%2A> 時，通用語言執行平台會在目標執行緒中擲回 <xref:System.Threading.ThreadAbortException>，而目標執行緒可加以攔截。 如需詳細資訊，請參閱<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。  
-  
+
+若要終止執行緒的執行，您通常會使用[合作式取消模型](cancellation-in-managed-threads.md)。 有時候，無法以合作方式停止執行緒，因為它會執行協力廠商程式碼，而不是針對合作取消所設計。 .NET Framework 中的 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法可以用來強制終止 managed 執行緒。 當您呼叫 <xref:System.Threading.Thread.Abort%2A>時，Common Language Runtime 會在目標執行緒中擲回一個 <xref:System.Threading.ThreadAbortException>，以供目標執行緒攔截。 如需詳細資訊，請參閱<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 .NET Core 不支援 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法。 如果您需要在 .NET Core 中強制終止協力廠商程式碼的執行，請在個別的進程中執行，並使用 <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>。
+
 > [!NOTE]
 > 如果執行緒在其 <xref:System.Threading.Thread.Abort%2A> 方法被呼叫時正在執行非受控碼，執行階段就會將它標示為 <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>。 當執行緒返回受控碼時，會擲回例外狀況。  
   

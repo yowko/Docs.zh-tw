@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfd4133f-a074-4db3-a7ee-4f250fe9ad3a
 topic_type:
 - apiref
-ms.openlocfilehash: cf8d6b7e45c0012d223173c85a92fac4fb044c6c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 81640e8e34335898f4dd7f4f43eafbd3ef191d19
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141407"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938161"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>StrongNameSignatureVerificationEx2 方法
 驗證強式名稱元件的簽章，並提供從 ECMA 金鑰到實際金鑰的對應。  
@@ -53,7 +53,7 @@ HRESULT StrongNameSignatureVerificationEx (
  [out] `true` 是否已驗證強式名稱簽章;否則，`false`。 如果因為登錄設定而驗證成功，此參數也會設定為 `false`。  
   
 ## <a name="return-value"></a>傳回值  
- 如果驗證成功，則 `S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果驗證成功，則 `S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

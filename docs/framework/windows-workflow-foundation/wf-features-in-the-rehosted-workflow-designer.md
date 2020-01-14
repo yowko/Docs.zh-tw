@@ -2,12 +2,12 @@
 title: 針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: bf5c12fe7892bf81fda9714ba02870a9c8ab8b4e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 1c554c60bf2e50a8eb89764a21ad15b95343b182
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837593"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937733"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 .NET Framework 4.5 中的 Windows Workflow Foundation （WF）引進了許多新功能，包括工作流程設計工具體驗的幾項增強功能。 本主題詳細介紹重新裝載的設計工具支援其中哪些功能，以及目前不支援的功能。
@@ -122,7 +122,7 @@ ms.locfileid: "74837593"
  除了流程圖和循序工作流程開發模型外，此版本還包括狀態機器工作流程和合約優先工作流程服務。  
   
 ### <a name="state-machine-workflows"></a>狀態機器工作流程  
- 狀態機器工作流程是在[Microsoft .NET Framework 4 Platform Update 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/)中 .NET Framework 4.0.1 的一部分引進。 此更新包括若干新類別和活動，可讓開發人員建立狀態機器工作流程。 這些類別和活動已針對 .NET Framework 4.5 進行更新。 更新包括：  
+ 狀態機器工作流程是在[Microsoft .NET Framework 4 Platform Update 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1)中 .NET Framework 4.0.1 的一部分引進。 此更新包括若干新類別和活動，可讓開發人員建立狀態機器工作流程。 這些類別和活動已針對 .NET Framework 4.5 進行更新。 這些更新包括：  
   
 1. 可設定狀態中斷點的功能  
   

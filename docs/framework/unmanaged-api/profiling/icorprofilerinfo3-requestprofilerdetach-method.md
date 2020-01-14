@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: 3256f6f64e2ee4678b2627eea81e12cb4a02fd1e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 226f24ad8f1636101b283c3cb6662905cbf7eebe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449617"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938213"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach 方法
 指示該執行階段中斷與分析工具的連結。  
@@ -42,11 +42,11 @@ HRESULT RequestProfilerDetach(
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|中斷連結要求有效，而且現在中斷連結程序會在另一個執行緒上繼續。 中斷連結全部完成時，會發生 `ProfilerDetachSucceeded` 事件。|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|分析工具失敗[ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)介面的[IUnknown：： QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867)嘗試，其必須執行才能支援卸離作業。 未嘗試中斷連結。|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|分析工具失敗[ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)介面的[IUnknown：： QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))嘗試，其必須執行才能支援卸離作業。 未嘗試中斷連結。|  
 |CORPROF_E_IMMUTABLE_FLAGS_SET|因為分析工具在啟動時將旗標設定為不可變，造成無法中斷連結。 未嘗試中斷連結；分析工具仍然完整連結。|  
 |CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|表示中斷連結是不可能的，因為分析工具使用檢測的 Microsoft 中繼語言（MSIL）程式碼，或插入 `enter`/`leave` 的勾點。 未嘗試中斷連結；分析工具仍然完整連結。<br /><br /> **注意**已檢測的 MSIL 是程式碼，由使用[SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)方法的分析工具所提供。|  
 |CORPROF_E_RUNTIME_UNINITIALIZED|在受管理的應用程式中，執行階段尚未初始化。 （也就是說，執行時間尚未完全載入）。在分析工具回呼的[ICorProfilerCallback：： Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)方法內要求表示中斷連結時，可能會傳回這個錯誤碼。|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT|在不支援的時間呼叫 `RequestProfilerDetach`。 如果方法是在 managed 執行緒上呼叫，而不是從[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)方法內，或是在無法容忍垃圾收集的[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)方法內，則會發生這種情況。 如需詳細資訊，請參閱[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)。|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT|`RequestProfilerDetach` 在不支援的時間呼叫。 如果方法是在 managed 執行緒上呼叫，而不是從[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)方法內，或是在無法容忍垃圾收集的[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)方法內，則會發生這種情況。 如需詳細資訊，請參閱[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)。|  
   
 ## <a name="remarks"></a>備註  
  在中斷連結程序中，中斷連結的執行緒 (專為對分析工具中斷連結所建立的執行緒) 偶爾會檢查是否所有執行緒都結束分析工具的程式碼。 分析工具應該透過 `dwExpectedCompletionMilliseconds` 參數提供所需時間的估計。 要使用的理想值是分析工具花在任何指定的 `ICorProfilerCallback*` 方法上所需的典型時間量；此值不應小於分析工具預期所需最大時間量的一半。  
@@ -64,7 +64,7 @@ HRESULT RequestProfilerDetach(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerInfo3 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

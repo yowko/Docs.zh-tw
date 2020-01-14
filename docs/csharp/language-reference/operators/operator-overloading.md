@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 04c8731867e32ce1000a511c9ab36db554664a97
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eb4639b7cede59e6ca1e315f54ce805947f03327
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038943"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937203"
 ---
 # <a name="operator-overloading-c-reference"></a>運算子多載 (C# 參考)
 
@@ -64,4 +64,4 @@ ms.locfileid: "73038943"
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)
 - [使用者定義轉換運算子](user-defined-conversion-operators.md)
-- [Why are overloaded operators always static in C#?](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/) (為什麼多載運算子在 C# 中一律為靜態？)
+- [Why are overloaded operators always static in C#?](https://docs.microsoft.com/archive/blogs/ericlippert/why-are-overloaded-operators-always-static-in-c) (為什麼多載運算子在 C# 中一律為靜態？)

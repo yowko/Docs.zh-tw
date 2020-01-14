@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 8c2d586a444412abd67198ad7f295e81cb3101fb
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 94284a196030d784909c41aae7fef9a5ad3cb52a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567327"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937241"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -520,4 +520,4 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 ## <a name="next-steps"></a>後續步驟
 
 - [檢查 .NET Core 2.2 和3.0 之間的重大變更。](../compatibility/2.2-3.0.md)
-- [查看 Windows Forms 應用程式的 .NET Framework 和 .NET Core 3.0 之間的重大變更。](../porting/winforms-breaking-changes.md)
+- [請參閱 .NET Core 3.0 中適用于 Windows Forms 應用程式的重大變更。](../compatibility/winforms.md#net-core-30)

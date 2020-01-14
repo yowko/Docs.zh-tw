@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 30660c2fb89fd3738abb05122a5daf175677265c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 790543118b18b0422f41c3249512b62aae0cfb03
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711242"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938102"
 ---
 # <a name="thread-safe-collections"></a>安全執行緒集合
 .NET Framework 4 引進了 <xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間，其中包含數個兼具安全執行緒與調整能力的集合類別。 多個執行緒可以安全且有效率地新增或移除這些集合中的項目，而不需要利用使用者程式碼進行額外同步處理。 當您撰寫新的程式碼時，只要多個執行緒將同時寫入集合，就使用並行集合類別。 如果您僅讀取共用集合，則可以使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間中的類別。 除非您需要將目標設為 .NET Framework 1.1 或舊版本的執行階段，否則建議您不要使用 1.0 集合類別。  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>.NET Framework 1.0 和 2.0 集合中的執行緒同步處理  
- 您可以在 <xref:System.Collections?displayProperty=nameWithType> 命名空間中找到 .NET Framework 1.0 中引進的集合。 這些包括常用 <xref:System.Collections.ArrayList> 和 <xref:System.Collections.Hashtable> 的集合透過 `Synchronized` 屬性來提供某種安全執行緒，而這個屬性會傳回集合的安全執行緒包裝函式。 包裝函式的運作方式是針對每個新增或移除作業鎖定整個集合。 因此，嘗試存取集合的每個執行緒都必須等待，直到輪到它取得一個鎖定。 這無法進行擴充，而且可能會造成大型集合的重大效能下降。 此外，設計未完全保護競爭情形。 如需詳細資訊，請參閱[泛型集合中的同步處理](https://blogs.msdn.microsoft.com/bclteam/2005/03/15/synchronization-in-generic-collections-brian-grunkemeyer/)。  
+ 您可以在 <xref:System.Collections?displayProperty=nameWithType> 命名空間中找到 .NET Framework 1.0 中引進的集合。 這些包括常用 <xref:System.Collections.ArrayList> 和 <xref:System.Collections.Hashtable> 的集合透過 `Synchronized` 屬性來提供某種安全執行緒，而這個屬性會傳回集合的安全執行緒包裝函式。 包裝函式的運作方式是針對每個新增或移除作業鎖定整個集合。 因此，嘗試存取集合的每個執行緒都必須等待，直到輪到它取得一個鎖定。 這無法進行擴充，而且可能會造成大型集合的重大效能下降。 此外，設計未完全保護競爭情形。 如需詳細資訊，請參閱[泛型集合中的同步處理](https://docs.microsoft.com/archive/blogs/bclteam/synchronization-in-generic-collections-brian-grunkemeyer)。  
   
  您可以在 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間中找到 .NET Framework 2.0 中引進的集合類別， 包括 <xref:System.Collections.Generic.List%601>、<xref:System.Collections.Generic.Dictionary%602> 等。 這些類別提供相較起 .NET Framework 1.0 類別的改良型別安全和效能。 不過，.NET Framework 2.0 集合類別不會提供任何執行緒同步處理；在多個執行緒上同時新增或移除項目時，使用者程式碼必須提供所有同步處理。  
   

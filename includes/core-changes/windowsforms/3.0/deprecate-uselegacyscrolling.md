@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 459e7e1f0b5543f069682dadf60668e94b472377
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 80fc75d0736e2ae17699073a025e79b52b340613
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643967"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937009"
 ---
-### <a name="switchsystemwindowsformsdomainupdownuselegacyscrolling-compatibility-switch-not-supported"></a>不支援 DomainUpDown. UseLegacyScrolling 相容性參數
+### <a name="domainupdownuselegacyscrolling-compatibility-switch-not-supported"></a>不支援 DomainUpDown. UseLegacyScrolling 相容性參數
 
 在 .NET Framework 4.7.1 中引進的 `Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling` 相容性參數，在 .NET Core 3.0 的 Windows Forms 中不受支援。
 
@@ -24,7 +24,7 @@ ms.locfileid: "74643967"
 
 移除參數。 不支援此參數，而且沒有可用的替代功能。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>分類
 
 Windows 表單
 

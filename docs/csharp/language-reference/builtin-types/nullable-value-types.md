@@ -4,12 +4,12 @@ description: 瞭解C#可為 null 的實值型別，以及如何使用它們
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: b9400cd76eb0430dbe9c278e835a3cec7f9f131e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 661b5e8502cba42588a07d757f056c715c1c82e8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73741162"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936903"
 ---
 # <a name="nullable-value-types-c-reference"></a>可為 null 的C#實數值型別（參考）
 
@@ -24,7 +24,7 @@ ms.locfileid: "73741162"
 
 ## <a name="declaration-and-assignment"></a>宣告與指派
 
-當實值型別可隱含轉換成對應的可為 null 實值型別時，您可以將值指派給可為 null 實值型別的變數，就像它的基礎實值型別一樣。 您也可以指派 `null` 值。 例如:
+當實值型別可隱含轉換成對應的可為 null 實值型別時，您可以將值指派給可為 null 實值型別的變數，就像它的基礎實值型別一樣。 您也可以指派 `null` 值。 例如：
 
 [!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
 
@@ -68,12 +68,12 @@ ms.locfileid: "73741162"
 
 ## <a name="lifted-operators"></a>提升運算子
 
-預先定義的一元和二元運算子，或實值型別所支援的任何多載運算子，也都受到對應的可為 null 實值型別支援 `T?``T`。 如果 `null`一個或兩個運算元，這些運算子（也稱為「*提升運算子*」）就會產生 `null`;否則，運算子會使用其運算元的包含值來計算結果。 例如:
+預先定義的一元和二元運算子，或實值型別所支援的任何多載運算子，也都受到對應的可為 null 實值型別支援 `T?``T`。 如果 `null`一個或兩個運算元，這些運算子（也稱為「*提升運算子*」）就會產生 `null`;否則，運算子會使用其運算元的包含值來計算結果。 例如：
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
 > [!NOTE]
-> 針對 `bool?` 類型，預先定義的 `&` 和 `|` 運算子不會遵循本節所述的規則：即使其中一個運算元已 `null`，運算子評估的結果也可以是非 null。 如需詳細資訊，請參閱[布林值邏輯運算子](../operators/boolean-logical-operators.md)一文的[可為 Null 的布林值邏輯運算子](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
+> 針對 `bool?` 類型，預先定義的 `&` 和 `|` 運算子不會遵循本節所述的規則：即使其中一個運算元已 `null`，運算子評估的結果也可以是非 null。 如需詳細資訊，請參閱[布林邏輯運算子](../operators/boolean-logical-operators.md)一文的[可為 Null 的布林邏輯運算子](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
 
 若為[比較運算子](../operators/comparison-operators.md)`<`、`>`、`<=`和 `>=`，如果其中一個或兩個運算元都 `null`，則結果會是 `false`。否則，會比較運算元的包含值。 請不要因為特定的比較 (例如 `<=`) 傳回 `false`，就假設相反的比較 (`>`) 就會傳回 `true`。 下列範例會顯示 10
 
@@ -133,7 +133,7 @@ ms.locfileid: "73741162"
 ## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
-- [「增益」(Lift) 的真正意義是什麼？(英文)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [「增益」(Lift) 的真正意義是什麼？(英文)](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>

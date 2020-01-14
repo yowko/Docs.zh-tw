@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63d8260c-fb32-4f8f-a357-768afd570f68
 topic_type:
 - apiref
-ms.openlocfilehash: 700bcc5b818c452d3642d325fb6fe19cbb162474
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 834292192aa447a113372bc8807041954b39a115
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141454"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937763"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx 方法
 從公開/私密金鑰組取得公開金鑰，並指定雜湊演算法和簽章演算法。  
@@ -66,7 +66,7 @@ HRESULT StrongNameGetPublicKey (
  在保留供日後使用;預設值為 null。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
  公開金鑰包含在[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)結構中。  
@@ -74,7 +74,7 @@ HRESULT StrongNameGetPublicKey (
 ## <a name="remarks"></a>備註  
  下表顯示 `uHashAlgId` 參數的可接受值集。  
   
-|[屬性]|值|  
+|Name|{2&gt;值&lt;2}|  
 |----------|-----------|  
 |None|0|  
 |SHA-1|0x8004|  

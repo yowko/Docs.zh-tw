@@ -4,12 +4,12 @@ description: 了解如何瀏覽運算式樹狀架構中的每個節點，同時�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 5c55ef2141e63462c91f84efab09828fafbff142
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a4cb40e439726e5fff60fe697da70d61bb24cb68
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036628"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937225"
 ---
 # <a name="translating-expression-trees"></a>轉譯運算式樹狀架構
 
@@ -192,7 +192,7 @@ Computed sum: 10
 
 ## <a name="learning-more"></a>了解詳細資訊
 
-此範例顯示您所建立的一小部分程式碼，該程式碼會用來周遊及解譯由運算式樹狀架構表示的演算法。 如需建立一般用途程式庫，以將運算式樹狀架構轉譯為其他語言之所有必要工作的完整討論，請閱讀 Matt Warren 所撰寫的[這一系列](https://blogs.msdn.microsoft.com/mattwar/2008/11/18/linq-building-an-iqueryable-provider-series/)。 該系列進一步詳細說明如何將您可能在運算式樹狀架構中找到的任何程式碼進行轉譯。
+此範例顯示您所建立的一小部分程式碼，該程式碼會用來周遊及解譯由運算式樹狀架構表示的演算法。 如需建立一般用途程式庫，以將運算式樹狀架構轉譯為其他語言之所有必要工作的完整討論，請閱讀 Matt Warren 所撰寫的[這一系列](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series)。 該系列進一步詳細說明如何將您可能在運算式樹狀架構中找到的任何程式碼進行轉譯。
 
 希望您現在已了解運算式樹狀架構的真正強大之處。
 您可以查看一組程式碼、對該程式碼進行任何想要的變更，然後執行變更後的版本。 因為運算式樹狀架構為不可變，所以您可以使用現有樹狀的元件來建立新的樹狀。 如此即可降低建立修改後的運算式樹狀架構所需的記憶體數量。

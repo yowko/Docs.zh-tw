@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443623"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937953"
 ---
 # <a name="corelementtype-enumeration"></a>CorElementType 列舉
 
@@ -79,7 +79,7 @@ typedef enum CorElementType {
 
 |成員|描述|
 |------------|-----------------|
-|`ELEMENT_TYPE_END`|在內部使用。|
+|`ELEMENT_TYPE_END`|內部使用。|
 |`ELEMENT_TYPE_VOID`|Void 類型。|
 |`ELEMENT_TYPE_BOOLEAN`|布林值類型|
 |`ELEMENT_TYPE_CHAR`|字元類型。|
@@ -110,18 +110,18 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_MVAR`|方法變數類型修飾詞。|
 |`ELEMENT_TYPE_CMOD_REQD`|C 語言所需的修飾詞。|
 |`ELEMENT_TYPE_CMOD_OPT`|C 語言選用修飾詞。|
-|`ELEMENT_TYPE_INTERNAL`|在內部使用。|
+|`ELEMENT_TYPE_INTERNAL`|內部使用。|
 |`ELEMENT_TYPE_MAX`|類型無效。|
-|`ELEMENT_TYPE_MODIFIER`|在內部使用。|
+|`ELEMENT_TYPE_MODIFIER`|內部使用。|
 |`ELEMENT_TYPE_SENTINEL`|類型修飾詞，這是可變數數目之參數清單的 sentinel。|
-|`ELEMENT_TYPE_PINNED`|在內部使用。|
+|`ELEMENT_TYPE_PINNED`|內部使用。|
 
 ## <a name="remarks"></a>備註
 
 類型修飾詞會形成代表更複雜類型的基礎。 `CorElementType` 型別修飾詞值會套用至緊接在型別簽章中的值後面。 在 `CorElementType` 的類型修飾詞值之後的值可以是 `CorElementType` 的簡單類型值、元資料標記或其他值，如下表所指定。
 
 > [!NOTE]
-> 所有數位（*數位*、*引數計數*、*元資料標記*、順*位*、*計數*和系*結）都會*儲存為壓縮整數。 如需詳細資訊，請參閱 ECMA 網站上的[標準 ECMA-335-通用語言基礎結構（CLI）](https://go.microsoft.com/fwlink/?LinkID=116487) 。
+> 所有數位（*數位*、*引數計數*、*元資料標記*、順*位*、*計數*和系*結）都會*儲存為壓縮整數。 如需詳細資訊，請參閱 ECMA 網站上的[標準 ECMA-335-通用語言基礎結構（CLI）](http://www.ecma-international.org/publications/standards/Ecma-335.htm) 。
 
 |類型修飾詞|格式|
 |-------------------|------------|
@@ -146,6 +146,6 @@ typedef enum CorElementType {
 
 **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 648ea90e-5e60-40a0-a56a-3e61bf2fba7c
 topic_type:
 - apiref
-ms.openlocfilehash: 71fda266c22c4beb1e1f9c81c84d6c56a0a6110e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f08006c532d2778de67a4bab09623d248362535c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092578"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937434"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a>ICLRStrongName::StrongNameTokenFromAssemblyEx 方法
 從指定的元件檔案建立強式名稱 token，並傳回權杖所代表的公開金鑰。  
@@ -54,7 +54,7 @@ HRESULT StrongNameTokenFromAssemblyEx (
  脫銷公用金鑰的大小（以位元組為單位）。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)）。  
+ 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
  強式名稱 token 是公用金鑰的縮寫格式。 Token 是從用來簽署元件的公開金鑰所建立的64位雜湊。 Token 是元件強式名稱的一部分，而且可以從元件中繼資料讀取。  

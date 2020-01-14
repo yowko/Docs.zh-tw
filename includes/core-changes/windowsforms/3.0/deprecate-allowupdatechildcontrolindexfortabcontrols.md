@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 1d01de4b978309e05a6036953f2a6909628a2480
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 7e76c32ddeb50eaf1ee93d7cf3cac7469187cc41
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643995"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937031"
 ---
-### <a name="switchsystemwindowsformsallowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>不支援 AllowUpdateChildControlIndexForTabControls 相容性參數
+### <a name="allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>不支援 AllowUpdateChildControlIndexForTabControls 相容性切換
 
 .NET Framework 4.6 和更新版本的 Windows Forms 支援 `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` 相容性參數，但從 .NET Core 3.0 開始 Windows Forms 不支援。
 
@@ -24,7 +24,7 @@ ms.locfileid: "74643995"
 
 移除參數。 不支援此參數，而且沒有可用的替代功能。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>分類
 
 Windows 表單
 

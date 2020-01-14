@@ -3,12 +3,12 @@ title: 從 .NET Framework 到 .NET Core 的埠
 description: 了解移植程序，並探索可協助將 .NET Framework 移植到 .NET Core 的工具。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: b5b010acbccf134afe800aa5bb98a0ae6e9ffa25
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777363"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937331"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>從 .NET Framework 移植到 .NET Core 的總覽
 
@@ -31,7 +31,7 @@ ms.locfileid: "75777363"
 
 3. 將[.NET API 分析器](../../standard/analyzers/api-analyzer.md)安裝到您的專案，以識別在某些平臺上擲回 <xref:System.PlatformNotSupportedException> 的 api，以及一些其他潛在的相容性問題。
 
-   這項工具與可攜性分析器類似，但不會分析是否可以在 .NET Core 上建立，而是會分析您是否以在執行時間擲回 <xref:System.PlatformNotSupportedException> 的方式來使用 API。 雖然這在您從 .NET Framework 4.7.2 或更高版本中移動時並不常見，但仍可進行檢查。
+   這項工具與可攜性分析器類似，但不會分析程式碼是否可以在 .NET Core 上建立，而是會分析您是否使用 API，這種方式會在執行時間擲回 <xref:System.PlatformNotSupportedException>。 雖然這在您從 .NET Framework 4.7.2 或更高版本中移動時並不常見，但仍可進行檢查。 如需有關在 .NET Core 上擲回例外狀況之 Api 的詳細資訊，請參閱[在 .Net core 上一律會擲回例外狀況的 api](../compatibility/unsupported-apis.md)。
 
 4. 使用[Visual Studio 中的轉換工具](/nuget/consume-packages/migrate-packages-config-to-package-reference)，將所有 `packages.config` 相依性轉換為[PackageReference](/nuget/consume-packages/package-references-in-project-files)格式。
 
@@ -50,4 +50,4 @@ ms.locfileid: "75777363"
 ## <a name="next-steps"></a>後續步驟
 
 >[!div class="nextstepaction"]
->[.NET Core 上的無法使用技術](net-framework-tech-unavailable.md)
+>[分析相關性](third-party-deps.md)

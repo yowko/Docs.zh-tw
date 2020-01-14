@@ -4,12 +4,12 @@ description: 教您如何將 .NET Framework Windows Forms 應用程式移植到�
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b1048c2d725a2bcf8398af1d2d53f40efc36c82e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567280"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936961"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何將 Windows Forms 桌面應用程式移植到 .NET Core
 
@@ -106,7 +106,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-您需要使用 Visual Studio 或 **SolutionFolder** 目錄中的 .NET Core CLI，將 **MyFormsCore.csproj** 專案新增到 **MyApps.sln**：
+將**myformscore.csproj. .csproj**專案新增至**MyApps** ，其中包含 Visual Studio 或**SolutionFolder**目錄中的 .NET Core CLI：
 
 ```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -287,7 +287,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.0" />
   </ItemGroup>
 ```
 
@@ -299,6 +299,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ## <a name="next-steps"></a>後續步驟
 
+- 瞭解[從 .NET Framework 到 .Net Core 的重大變更](../compatibility/fx-core.md)。
 - 深入了解 [Windows 相容性套件][compat-pack]。
 - 觀看[有關移植](https://www.youtube.com/watch?v=upVQEUc_KwU) .NET Framework Windows Form 專案到 .NET Core 的影片。
 

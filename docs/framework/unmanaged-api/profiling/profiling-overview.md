@@ -27,12 +27,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: 08015e2e5918ca64f601ec912a906cfb6319ed6c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427099"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937823"
 ---
 # <a name="profiling-overview"></a>程式碼剖析概觀
 
@@ -175,7 +175,7 @@ Common Language Runtime (CLR) 分析 API 為分析 Unmanaged 程式碼提供最�
 
 堆疊快照是執行緒堆疊的即時追蹤。 分析 API 支援追蹤堆疊上的 Managed 函式，但會將 Unmanaged 函式的追蹤交由分析工具本身的堆疊查核器處理。
 
-如需如何編寫分析工具來逐步執行受控堆疊的詳細資訊，請參閱本檔集中的[ICorProfilerInfo2：:D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法和分析工具[堆疊，流覽 .NET Framework 2.0：基本概念和](https://go.microsoft.com/fwlink/?LinkId=73638)其他功能。
+如需如何編寫分析工具來逐步執行受控堆疊的詳細資訊，請參閱本檔集中的[ICorProfilerInfo2：:D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)方法和分析工具[堆疊，流覽 .NET Framework 2.0：基本概念和](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))其他功能。
 
 ### <a name="shadow-stack"></a>陰影堆疊
 

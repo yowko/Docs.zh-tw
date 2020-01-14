@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 功能內容
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: c534575fcf70035bc728642dbb65b05db1fd4686
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 197b2e0d6586e001a4970cf8cb3f8e6b2a372af2
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345111"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936789"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能內容
 
@@ -101,9 +101,9 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 - [標準端點元素](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [.NET Framework 4 中的服務設定改良功能](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
+- [.NET Framework 4 中的服務設定改良功能](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
 
-- [.NET 4 中常見的使用者錯誤： WF/WCF 服務設定名稱不鍵入](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
+- [.NET 4 中常見的使用者錯誤： WF/WCF 服務設定名稱不鍵入](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
 
 ### <a name="simplified-configuration-scenarios"></a>簡化的組態案例
 
@@ -127,7 +127,7 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 - [資料合約解析程式 API 檔](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [資料合約解析程式簡介](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
+- [資料合約解析程式簡介](https://docs.microsoft.com/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
 
 - 範例：
 
@@ -287,7 +287,7 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 2. 範例：[路由服務&#91;WCF 範例&#93; ](../wcf/samples/routing-services.md)
 
-3. Blog：[路由規則！](https://blogs.msdn.microsoft.com/RoutingRules/)
+3. Blog：[路由規則！](https://docs.microsoft.com/archive/blogs/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>路由案例
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 90e57c3d332155d42a38b8a01aba7dbb2c812d62
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c320d004b05e58fc7c239cd8c1f3bcec84ad8f78
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458031"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937915"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>撰寫大型、可回應的 .NET Framework 應用程式
 
@@ -281,7 +281,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
   
  **範例 5：Lambdas、List\<T> 和 IEnumerable\<T>**  
   
- 這個範例會使用 [LINQ 和功能樣式程式碼](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/)來找出編譯器模型中的符號，並指定名稱字串：  
+ 這個範例會使用 [LINQ 和功能樣式程式碼](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming)來找出編譯器模型中的符號，並指定名稱字串：  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- 在第一行中， [lambda 運算式](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)`s => s.Name == name` 會透過區域變數 `name`[關閉](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/)。 這表示除了配置 `predicate` 保存的[委派](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)物件之外，此程式碼還會配置靜態類別，以維持可擷取 `name` 值的環境。 此編譯器產生類似如下的程式碼：  
+ 在第一行中， [lambda 運算式](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)`s => s.Name == name` 會透過區域變數 `name`[關閉](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures)。 這表示除了配置 `predicate` 保存的[委派](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)物件之外，此程式碼還會配置靜態類別，以維持可擷取 `name` 值的環境。 此編譯器產生類似如下的程式碼：  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  

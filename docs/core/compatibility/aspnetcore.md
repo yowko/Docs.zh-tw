@@ -1,15 +1,15 @@
 ---
 title: ASP.NET Core 的重大變更-.NET Core
 description: 列出 ASP.NET Core 中的重大變更。
-ms.date: 12/20/2019
+ms.date: 01/10/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 3eff2e1d292daf9f709b28da0db9d089aeebd464
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 815dfbc217cc486659988dd00840484d6ec03276
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344298"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937306"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 的重大變更
 
@@ -74,6 +74,10 @@ ms.locfileid: "75344298"
 ***
 
 [!INCLUDE[Hosting: Generic host restriction on Startup constructor injection](~/includes/core-changes/aspnetcore/3.0/hosting-generic-host-startup-ctor-restriction.md)]
+
+***
+
+[!INCLUDE[Hosting: HTTPS redirection enabled for IIS OutOfProcess](~/includes/core-changes/aspnetcore/3.0/hosting-https-redirection-iis-outofprocess.md)]
 
 ***
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d3a3539904c5d8b5db23b99ca6128bf5860a1917
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346101"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937451"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開發和部署 WCF Data Services
 
@@ -70,7 +70,7 @@ ms.locfileid: "75346101"
 
 3. **Microsoft Azure 開發環境**
 
-     Windows Azure Tools for Visual Studio 包含一組整合的工具，可讓您在 Visual Studio 中開發 Windows Azure 服務。 您可以使用這些工具開發可以部署到 Microsoft Azure 的資料服務，並在部署之前，先在本機電腦上測試資料服務。 使用 Visual Studio 開發在 Windows Azure 平臺上執行的資料服務時，請使用這些工具。 您可以從[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=201848)下載 Windows Azure Tools for Visual Studio。 如需開發在 Windows Azure 上執行之資料服務的詳細資訊，請參閱文章[在 Windows azure 中部署 OData 服務](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/)。
+     Windows Azure Tools for Visual Studio 包含一組整合的工具，可讓您在 Visual Studio 中開發 Windows Azure 服務。 您可以使用這些工具開發可以部署到 Microsoft Azure 的資料服務，並在部署之前，先在本機電腦上測試資料服務。 使用 Visual Studio 開發在 Windows Azure 平臺上執行的資料服務時，請使用這些工具。 您可以從[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=201848)下載 Windows Azure Tools for Visual Studio。 如需開發在 Windows Azure 上執行之資料服務的詳細資訊，請參閱文章[在 Windows azure 中部署 OData 服務](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)。
 
 ### <a name="development-tips"></a>開發秘訣
 
@@ -115,7 +115,7 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 
 - **Microsoft Azure**
 
-     您可以使用 Windows Azure Tools for Visual Studio，將資料服務部署至 Windows Azure。 您可以從[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=201848)下載 Windows Azure Tools for Visual Studio。 如需將資料服務部署至 Windows Azure 的詳細資訊，請參閱文章[在 Windows azure 中部署 OData 服務](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/)。
+     您可以使用 Windows Azure Tools for Visual Studio，將資料服務部署至 Windows Azure。 您可以從[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=201848)下載 Windows Azure Tools for Visual Studio。 如需將資料服務部署至 Windows Azure 的詳細資訊，請參閱文章[在 Windows azure 中部署 OData 服務](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)。
 
 ### <a name="deployment-considerations"></a>部署考量因素
 
@@ -123,7 +123,7 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 
 - 當您部署使用 Entity Framework 提供者來存取 SQL Server 資料庫的資料服務時，您可能也需要使用資料服務部署來傳播資料結構、資料或兩者。 Visual Studio 可以自動建立腳本（.sql 檔案）在目的地資料庫中執行此動作，而且這些腳本可以包含在 ASP.NET 應用程式的 Web 部署套件中。 如需詳細資訊，請參閱[如何：使用 Web 應用程式專案部署資料庫](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))。 對於 ASP.NET 網站，您可以使用 Visual Studio 中的 [**資料庫發行] Wizard**來執行此動作。 如需詳細資訊，請參閱[發行 SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
 
-- 由於 WCF Data Services 包含基本的 WCF 執行，因此您可以使用 Windows Server AppFabric 監視部署至在 Windows Server 上執行之 IIS 的資料服務。 如需使用 Windows Server AppFabric 監視資料服務的詳細資訊，請參閱[使用 Windows Server appfabric 的文章追蹤 WCF Data Services](https://blogs.msdn.microsoft.com/rjacobs/2010/06/09/tracking-wcf-data-services-with-windows-server-appfabric/)。
+- 由於 WCF Data Services 包含基本的 WCF 執行，因此您可以使用 Windows Server AppFabric 監視部署至在 Windows Server 上執行之 IIS 的資料服務。 如需使用 Windows Server AppFabric 監視資料服務的詳細資訊，請參閱[使用 Windows Server appfabric 的文章追蹤 WCF Data Services](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)。
 
 ## <a name="see-also"></a>請參閱
 

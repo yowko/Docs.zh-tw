@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 2433d8b8563cace4415fb8fcd2d110f75d7d4304
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196377"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937688"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
@@ -46,7 +46,7 @@ ms.locfileid: "73196377"
 
 本文說明如何針對應用程式所執行的.NET Framework 版本，啟用可供使用的最強安全性。 當應用程式明確設定安全性通訊協定及版本時，它將會退出所有其他替代方案，並退出 .NET Framework 及 OS 預設行為。 如果您想讓應用程式能夠交涉 TLS 1.2 連線，明確設定至較低的 TLS 版本將會防止 TLS 1.2 連線。
 
-如果您無法避免採取通訊協定版本的硬式編碼，我們強烈建議您指定 TLS 1.2。 如需識別及移除 TLS 1.0 相依性的指引，請下載[解決 TLS 1.0 問題](https://www.microsoft.com/download/details.aspx?id=55266) \(英文\) 白皮書。
+如果您無法避免採取通訊協定版本的硬式編碼，我們強烈建議您指定 TLS 1.2。 如需識別和移除 TLS 1.0 相依性的指引，請下載[解決 tls 1.0 問題](https://www.microsoft.com/download/details.aspx?id=55266)白皮書。
 
 在 .NET Framework 4.7 中，WCF 預設支援 TLS1.0、1.1 及 1.2。 從 .NET Framework 4.7.1 開始，WCF 預設會使用作業系統所設定的版本。 如果有應用程式是搭配 `SslProtocols.None` 進行明確設定，WCF 在使用 NetTcp 傳輸時，便會使用作業系統的預設設定。
 
@@ -104,7 +104,7 @@ WCF 會使用和其他 .NET Framework 相同的網路堆疊。
 
 ### <a name="for-wcf-message-security-with-certificate-credentials"></a>針對具有憑證認證的 WCF 訊息安全性
 
-.NET Framework 4.7 及更新版本預設會使用於 <xref:System.Net.ServicePointManager.SecurityProtocol> 屬性中指定的通訊協定。 當 [AppContextSwitch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` 設定為 `true` 時，WCF 會選擇最佳的通訊協定 (最高版本為 TLS 1.0)。
+.NET Framework 4.7 及更新版本預設會使用於 <xref:System.Net.ServicePointManager.SecurityProtocol> 屬性中指定的通訊協定。 當[AppCoNtextSwitch](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` 設定為 `true`時，WCF 會選擇最佳通訊協定，最高可達 TLS 1.0。
 
 ## <a name="if-your-app-targets-a-net-framework-version-earlier-than-47"></a>若應用程式是以 .NET Framework 4.7 之前的版本為目標
 
@@ -112,7 +112,7 @@ WCF 會使用和其他 .NET Framework 相同的網路堆疊。
 
 ### <a name="for-net-framework-46---462-and-not-wcf"></a>針對 .NET Framework 4.6 - 4.6.2 且非 WCF
 
-將 `DontEnableSystemDefaultTlsVersions` `AppContext` 參數設定為 `false`。 請參閱[透過 AppContext 參數設定安全性](#configuring-security-via-appcontext-switches)。
+將 `DontEnableSystemDefaultTlsVersions` `AppContext` 切換為 [`false`]。 請參閱[透過 AppContext 參數設定安全性](#configuring-security-via-appcontext-switches)。
 
 ### <a name="for-wcf-using-net-framework-46---462-using-tcp-transport-security-with-certificate-credentials"></a>針對使用搭配憑證認證使用 TCP 傳輸安全性之 .NET Framework 4.6 至 4.6.2 的 WCF
 
@@ -241,7 +241,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="the-sch_use_strong_crypto-flag"></a>The SCH_USE_STRONG_CRYPTO 旗標
 
-啟用 `SCH_USE_STRONG_CRYPTO` 旗標時 (預設會由 `AppContext` 參數或 Windows 登錄啟用)，.NET Framework 會在您的應用程式要求 TLS 安全性通訊協定時使用此旗標。 `SCH_USE_STRONG_CRYPTO` 旗標可以依預設啟用、搭配 `AppContext` 參數啟用，或是搭配登錄啟用。 OS 會將旗標傳遞至 `Schannel`，以指示它停用已知的弱式加密演算法、加密套件，以及 TLS/SSL 通訊協定版本；若不這樣做，系統可能會為了取得更佳的互通性而啟用這些項目。 如需詳細資訊，請參閱:
+啟用 `SCH_USE_STRONG_CRYPTO` 旗標時 (預設會由 `AppContext` 參數或 Windows 登錄啟用)，.NET Framework 會在您的應用程式要求 TLS 安全性通訊協定時使用此旗標。 `SCH_USE_STRONG_CRYPTO` 旗標可以依預設啟用、搭配 `AppContext` 參數啟用，或是搭配登錄啟用。 OS 會將旗標傳遞至 `Schannel`，以指示它停用已知的弱式加密演算法、加密套件，以及 TLS/SSL 通訊協定版本；若不這樣做，系統可能會為了取得更佳的互通性而啟用這些項目。 如需詳細資訊，請參閱＜＞。
 
 - [安全通道](/windows/desktop/SecAuthN/secure-channel) \(英文\)
 - [SCHANNEL_CRED 結構](/windows/win32/api/schannel/ns-schannel-schannel_cred) \(英文\)
@@ -255,9 +255,9 @@ Windows Registry Editor Version 5.00
 若要更新 .NET Framework 以允許作業系統選擇要使用的最佳 TLS 版本，您至少必須安裝：
 
 - [.NET Framework 2017 年 8 月品質彙總套件預覽](https://devblogs.microsoft.com/dotnet/net-framework-august-2017-preview-of-quality-rollup/) \(英文\)。
-- **或者** [.NET Framework 2017 年 9 月安全性與品質彙總套件](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/) \(英文\)。
+- **或者**[.NET Framework 2017 年 9 月安全性與品質彙總套件](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/) \(英文\)。
 
-另請參閱：
+請參閱：
 
 - [.NET Framework 版本和相依性](../migration-guide/versions-and-dependencies.md)
 - [如何：判斷所安裝的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。

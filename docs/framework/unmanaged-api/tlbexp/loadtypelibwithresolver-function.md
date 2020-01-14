@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 82fa0903474ee04b767fd9c68812efe7f0cc4fa0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adbb5eca3b7ffa36d0c963d0dacc3b2afdb664d4
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124165"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935553"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函式
 載入類型程式庫，並使用提供的[ITypeLibResolver 介面](itypelibresolver-interface.md)來解析任何內部參考的類型程式庫。  
@@ -39,7 +39,7 @@ HRESULT LoadTypeLibWithResolver(
  在類型程式庫的檔案路徑。  
   
  `regkind`  
- 在[REGKIND 列舉](https://docs.microsoft.com/windows/win32/api/oleauto/ne-oleauto-regkind)旗標，可控制類型程式庫的註冊方式。 其可能的值為：  
+ 在[REGKIND 列舉](/windows/win32/api/oleauto/ne-oleauto-regkind)旗標，可控制類型程式庫的註冊方式。 其可能的值為：  
   
 - `REGKIND_DEFAULT`：使用預設的註冊行為。  
   

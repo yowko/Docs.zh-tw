@@ -2,12 +2,12 @@
 title: .NET Core 的重大變更
 description: 瞭解每個 .NET Core 版本中的重大變更。
 ms.date: 11/27/2019
-ms.openlocfilehash: 8bd8ebc803a80069530fe1cf6adc66769f7d6c85
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: c03054972a5e1cd427e069c65fa8e8b601af5894
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900148"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937339"
 ---
 # <a name="breaking-change-selectors"></a>重大變更選取器
 
@@ -18,9 +18,6 @@ ms.locfileid: "75900148"
 選取您目前設為目標的 .NET 版本，然後選取您想要遷移至的 .NET Core 版本：
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
-
-> [!TIP]
-> 如果您要將 Windows Forms 應用程式從 .NET Framework 遷移至 .NET Core，請參閱[Windows Forms （.NET Framework 至 .Net core）中的重大變更](../porting/winforms-breaking-changes.md)，而不是使用版本選取器。
 
 ## <a name="by-area"></a>依區域
 

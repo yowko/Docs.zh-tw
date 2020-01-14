@@ -2,12 +2,12 @@
 title: 非同步程式設計
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: ae6153f9613be7723d7e750ed6969ea550ad4af7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 7bf492e45a9ebabdd36caa8e21605739bb410695
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784995"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937583"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
@@ -15,7 +15,7 @@ ms.locfileid: "70784995"
 
 ## <a name="legacy-asynchronous-programming"></a>傳統非同步程式設計
 
-在 .NET Framework 4.5 之前，使用 SqlClient 的非同步程式設計是使用下列方法和`Asynchronous Processing=true`連接屬性來完成：
+在 .NET Framework 4.5 之前，使用 SqlClient 的非同步程式設計是使用下列方法和 `Asynchronous Processing=true` 連接屬性來完成：
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -26,7 +26,7 @@ ms.locfileid: "70784995"
 .NET Framework 4.5 中的這項功能仍會保留在 SqlClient 中。
 
 > [!TIP]
-> 從 .NET Framework 4.5 開始，這些舊版方法不再需要`Asynchronous Processing=true`連接字串。
+> 從 .NET Framework 4.5 開始，這些舊版方法不再需要在連接字串中 `Asynchronous Processing=true`。
 
 ## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>.NET Framework 4.5 中新增的非同步程式設計功能
 
@@ -38,15 +38,15 @@ ms.locfileid: "70784995"
 
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [在 .NET 4.5 中使用 SqlDataReader 的新異步方法（第1部分）](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [在 .NET 4.5 中使用 SqlDataReader 的新異步方法（第1部分）](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5)
 
-- [在 .NET 4.5 中使用 SqlDataReader 的新異步方法（第2部分）](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [在 .NET 4.5 中使用 SqlDataReader 的新異步方法（第2部分）](https://docs.microsoft.com/archive/blogs/adonet/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples)
 
 當您的使用者介面沒有回應或不能擴充伺服器時，您可能就需要使程式碼更加非同步。 傳統的非同步程式碼編寫涉及安裝回呼 (也稱為接續)，以表示非同步作業完成後發生的邏輯。 這會使非同步程式碼的結構比同步程式碼更複雜。
 
 您現在不需使用回呼即可呼叫非同步方法內部，並且不需跨多個方法或 Lambda 運算式分割程式碼。
 
-`async` 修飾詞，指定方法為非同步方法。 呼叫 `async` 方法時會傳回工作。 `await`當運算子套用至工作時，目前的方法會立即結束。 當工作完成時，會以相同的方法繼續執行。
+`async` 修飾詞，指定方法為非同步方法。 呼叫 `async` 方法時會傳回工作。 當 `await` 運算子套用至工作時，目前的方法會立即結束。 當工作完成時，會以相同的方法繼續執行。
 
 > [!WARNING]
 > 如果應用程式也使用 `Context Connection` 連接字串關鍵字，則不支援非同步呼叫。
@@ -92,7 +92,7 @@ ms.locfileid: "70784995"
  已加入其他非同步成員，以支援[SqlClient 串流支援](sqlclient-streaming-support.md)。
 
 > [!TIP]
-> 新的非同步方法不需要`Asynchronous Processing=true`在連接字串中。
+> 新的非同步方法不需要在連接字串中 `Asynchronous Processing=true`。
 
 ### <a name="synchronous-to-asynchronous-connection-open"></a>開啟同步與非同步的連接
 
@@ -643,7 +643,7 @@ namespace SqlBulkCopyAsyncCodeSample {
 此範例會開啟與**AdventureWorks**資料庫的單一連接。 使用 <xref:System.Data.SqlClient.SqlCommand> 物件，會建立 <xref:System.Data.SqlClient.SqlDataReader>。 當使用該讀取器時，會開啟第二個 <xref:System.Data.SqlClient.SqlDataReader>，使用來自第一個 <xref:System.Data.SqlClient.SqlDataReader> 的資料做為第二個讀取器之 WHERE 子句的輸入。
 
 > [!NOTE]
-> 下列範例會使用 SQL Server 隨附的**AdventureWorks**範例資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。
+> 下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。
 
 ```csharp
 using System;
@@ -711,12 +711,12 @@ class Class1 {
 
 ## <a name="asynchronously-reading-and-updating-data-with-mars"></a>使用 MARS 非同步讀取及更新資料
 
-MARS 允許將連接用於讀取作業及資料操作語言 (DML) 作業 (具有多個暫止作業)。 使用此功能，應用程式即無需處理連接繁忙錯誤。 此外，您可以使用 MARS 代替通常會消耗更多資源的伺服器端游標。 最後，因為多個作業可在單一連接上運作，所以它們可以共用相同的交易內容，而不必使用**sp_getbindtoken**和**sp_bindsession**系統預存程式。
+MARS 允許將連接用於讀取作業及資料操作語言 (DML) 作業 (具有多個暫止作業)。 使用此功能，應用程式即無需處理連接繁忙錯誤。 此外，您可以使用 MARS 代替通常會消耗更多資源的伺服器端游標。 最後，因為多個作業可在單一連線上進行操作，所以可共用相同的交易內容，而無需使用 **sp_getbindtoken** 及 **sp_bindsession** 系統預存程序。
 
-下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。 第一個命令物件會擷取信用評等為 5 的廠商清單。 第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。 第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。 執行計算以判斷新的**OnOrderQty**應該是什麼。 然後使用第三個命令物件，以新的值更新**ProductVendor**資料表。 這整個處理序會在單一交易中發生，並在結束時復原。
+下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。 第一個命令物件會擷取信用評等為 5 的廠商清單。 第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。 第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。 將會執行計算，以判斷新的 **OnOrderQty** 應該是什麼。 然後使用第三個命令物件，以新值來更新 **ProductVendor** 資料表。 這整個處理序會在單一交易中發生，並在結束時復原。
 
 > [!NOTE]
-> 下列範例會使用 SQL Server 隨附的**AdventureWorks**範例資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。
+> 下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。
 
 ```csharp
 using System;
@@ -826,6 +826,6 @@ class Program {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)

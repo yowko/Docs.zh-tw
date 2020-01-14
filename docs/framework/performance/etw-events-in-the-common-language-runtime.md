@@ -6,17 +6,17 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
-ms.openlocfilehash: 99fa331a1ad94e85b4a501449b7700d60d8c6f70
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 49d1141540fb00ab7ef462da5af84f02e6d9fc4d
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716116"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937862"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Common Language Runtime 中的 ETW 事件
 Common language runtime (CLR) 透過各式各樣的偵錯和分析事件，提供有用的 Windows 事件追蹤 (ETW) 診斷資訊。 CLR ETW 事件會運用 Windows ETW 追蹤系統，來增強 Common Language Runtime 提供的現有分析和偵錯支援。  
   
- 如需 ETW 的詳細資訊，請參閱[使用 Etw 改善調試和效能微調](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)一文。 您可以在 NTDebugging 部落格的 [Windows 效能工具組 - Xperf](https://blogs.msdn.microsoft.com/ntdebugging/2008/04/03/windows-performance-toolkit-xperf/) 一文中找到 Xperf 的相關資訊。  
+ 如需 ETW 的詳細資訊，請參閱[使用 Etw 改善調試和效能微調](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)一文。 您可以在 NTDebugging 部落格的 [Windows 效能工具組 - Xperf](https://docs.microsoft.com/archive/blogs/ntdebugging/windows-performance-toolkit-xperf) 一文中找到 Xperf 的相關資訊。  
   
  事件主題中所述的所有事件都需要 .NET Framework 4 或更新版本。 Windows Vista 作業系統是支援的最低需求用戶端，而 Windows Server 2008 是支援的最低需求伺服器。  
   

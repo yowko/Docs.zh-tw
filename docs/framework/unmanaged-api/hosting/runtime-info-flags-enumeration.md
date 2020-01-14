@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: adba37be-f775-4cdb-8919-5746ce694f33
 topic_type:
 - apiref
-ms.openlocfilehash: 80643187045e7e96b9c18169c5e71287713d711f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d505b917c343c40c7fa2a7aecf3466578ae0a8d
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73106243"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936632"
 ---
 # <a name="runtime_info_flags-enumeration"></a>RUNTIME_INFO_FLAGS 列舉
 包含值，指出應該傳回的通用語言執行時間（CLR）的相關資訊。  
@@ -48,7 +48,7 @@ typedef enum {
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|表示不應包含目錄資訊。|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|表示不應包含版本資訊。|  
 |`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|表示失敗時不應顯示錯誤對話方塊。|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|表示應該覆寫使用 SEM_FAILCRITICALERRORS 旗標呼叫[SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242)函數的效果。 也就是說，安裝對話方塊應該會在失敗時顯示，而不是隱藏。|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|表示應該覆寫以 SEM_FAILCRITICALERRORS 旗標呼叫[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)函數的效果。 也就是說，安裝對話方塊應該會在失敗時顯示，而不是隱藏。|  
 |`RUNTIME_INFO_REQUEST_AMD64`|表示要求，以取得與 AMD-64 相容版本之執行時間的相關資訊。|  
 |`RUNTIME_INFO_REQUEST_IA64`|表示要求，以取得與 IA-64 相容版本之執行時間的相關資訊。|  
 |`RUNTIME_INFO_REQUEST_X86`|指出與 x86 相容版本的執行時間相關資訊的要求。|  

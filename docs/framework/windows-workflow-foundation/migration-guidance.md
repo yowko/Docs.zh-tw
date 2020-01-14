@@ -2,12 +2,12 @@
 title: 移轉指導方針
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 672ed1a93b4409f491d76ffeeaaac5f67a1c4b6e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f0c21d32b745a51bada9133230dd0c87be9c915e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802605"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937959"
 ---
 # <a name="migration-guidance"></a>移轉指導方針
 
@@ -21,7 +21,8 @@ ms.locfileid: "74802605"
   
  因此，採用 .NET Framework 4 的決策會與您的決策分離，以從 WF3 （\*System.object）移至 WF4 （\*）。 這個主題會提供 WF 移轉指引的連結，此連結中提供使用 WF3 與 WF4 的相關資訊。  
   
-## <a name="wf-migration-whitepapers-and-cookbooks"></a>WF 移轉白皮書與做法指南  
+## <a name="wf-migration-white-papers-and-cookbooks"></a>WF 遷移技術白皮書和操作手冊
+
  [WF 遷移總覽](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))主題提供 WF3 與 WF4 之間的關聯性，以及遷移策略的大致總覽。 附隨的主題會深入查看特定主題。  
   
  [WF 遷移總覽](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  

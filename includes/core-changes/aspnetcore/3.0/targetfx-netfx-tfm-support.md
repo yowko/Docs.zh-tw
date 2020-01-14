@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c676a185ff4a7a825acb059bf0a5842ca3922fc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394481"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937256"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>目標 framework： .NET Framework 支援捨棄
 
@@ -18,9 +18,9 @@ ms.locfileid: "72394481"
 
 如需從 .NET Framework 移植至 .NET Core 的詳細資訊，請參閱[移植至 .Net core](~/docs/core/porting/index.md)。
 
-`Microsoft.Extensions` 的封裝（例如記錄、相依性插入和設定）和 Entity Framework Core 不會受到影響。 它們會繼續支援 .NET Standard。
+`Microsoft.Extensions` 套件（例如記錄、相依性插入和設定）和 Entity Framework Core 不會受到影響。 它們會繼續支援 .NET Standard。
 
-如需這種變更動機的詳細資訊，請參閱[原始的 blog 文章](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0)。
+如需這種變更動機的詳細資訊，請參閱[原始的 blog 文章](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/)。
 
 #### <a name="version-introduced"></a>引進的版本
 
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-無
+None
 
 <!-- 
 

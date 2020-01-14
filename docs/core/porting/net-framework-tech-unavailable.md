@@ -3,18 +3,18 @@ title: .NET Core 上無法使用的 .NET Framework 技術
 description: 了解無法在 .NET Core 上使用的 .NET Framework 技術
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: d474b694b80b2f0e74dd2916106016802f7e0c68
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 89871753fef92a30bf2151a618207a73b40bb402
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777304"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936952"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core 上無法使用的 .NET Framework 技術
 
 .NET Framework 程式庫可用的數種技術無法與 .NET Core 搭配使用，例如 Appdomain、遠端、代碼啟用安全性（CAS）、安全性透明度和 System.enterpriseservices。 如果您的程式庫會依賴一或多個這些技術，請考慮使用下述的替代方法。 如需有關 API 相容性的詳細資訊，請參閱[.Net Core 重大變更](../compatibility/breaking-changes.md)。
 
-目前未實作的 API或技術，並不代表我們是刻意不支援它。 搜尋適用于 .NET Core 的 GitHub 存放庫，以查看您所遇到的特定問題是否為設計。 如果您找不到這類指標，請在[dotnet/runtime 存放庫](https://github.com/dotnet/runtime/issues)中提出問題，以要求特定的 api 和技術。 移植要求的問題會以[埠到核心](https://github.com/dotnet/runtime/labels/port-to-core)標籤標示。
+目前未實作的 API或技術，並不代表我們是刻意不支援它。 搜尋適用于 .NET Core 的 GitHub 存放庫，以查看您所遇到的特定問題是否為設計。 如果找不到這類指標，請在[dotnet/runtime 存放庫](https://github.com/dotnet/runtime/issues)中提出問題，以要求特定的 api 和技術。 移植要求的問題會以[埠到核心](https://github.com/dotnet/runtime/labels/port-to-core)標籤標示。
 
 ## <a name="appdomains"></a>AppDomain
 
@@ -46,7 +46,6 @@ ms.locfileid: "75777304"
 
 .NET Core 不支援 System.EnterpriseServices (COM+)。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="see-also"></a>請參閱
 
->[!div class="nextstepaction"]
->[分析相關性](third-party-deps.md)
+- [從 .NET Framework 移植到 .NET Core 的總覽](../porting/index.md)

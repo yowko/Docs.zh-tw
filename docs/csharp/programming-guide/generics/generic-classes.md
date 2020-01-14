@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-ms.openlocfilehash: 13a1ca2d85be0c61b9d0f09c0c5cb670b49f5625
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75703217"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937511"
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型類別 (C# 程式設計手冊)
 泛型類別會封裝不專屬於特定資料類型的作業。 泛型類別最常搭配類似連結清單、雜湊表、堆疊、佇列、樹狀結構等的集合。 無論儲存的資料類型為何，基本上是以相同的方式執行新增和移除集合項目等作業。  
@@ -70,5 +70,5 @@ ms.locfileid: "75703217"
 - <xref:System.Collections.Generic>
 - [C# 程式設計指南](../index.md)
 - [泛型](./index.md)
-- [Saving the State of Enumerators](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/) (儲存列舉程式狀態)
-- [繼承謎題，第一部](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)
+- [Saving the State of Enumerators](https://docs.microsoft.com/archive/blogs/wesdyer/saving-the-state-of-enumerators) (儲存列舉程式狀態)
+- [繼承謎題，第一部](https://docs.microsoft.com/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)

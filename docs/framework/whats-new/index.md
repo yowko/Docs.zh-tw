@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 4c5c7ffcab118978baf1b2f7602f39291452d1e6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ab14e6cb7d9bd4c1571040280dc35233e9b89d43
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740405"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937972"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 
@@ -1196,7 +1196,7 @@ WCF 有新的應用程式設定，可以在用戶端應用程式上設定，以�
 
 **Re-hosted WF 設計工具中的 C# 運算式和 IntelliSense 支援**
 
-從 .NET Framework 4.5 開始，WF 在 Visual Studio 設計工具和程式碼工作流程中都支援 C# 運算式。 Re-hosted 工作流程設計工具是 WF 的重要功能，可讓工作流程設計工具位於 Visual Studio 以外的應用程式中 (例如 WPF 中)。  Windows Workflow Foundation 提供在 Re-hosted 工作流程設計工具中支援 C# 運算式與 IntelliSense 的功能。 如需詳細資訊，請參閱 [Windows Workflow Foundation 部落格](https://blogs.msdn.microsoft.com/workflowteam/2016/07/20/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer/)。
+從 .NET Framework 4.5 開始，WF 在 Visual Studio 設計工具和程式碼工作流程中都支援 C# 運算式。 Re-hosted 工作流程設計工具是 WF 的重要功能，可讓工作流程設計工具位於 Visual Studio 以外的應用程式中 (例如 WPF 中)。  Windows Workflow Foundation 提供在 Re-hosted 工作流程設計工具中支援 C# 運算式與 IntelliSense 的功能。 如需詳細資訊，請參閱 [Windows Workflow Foundation 部落格](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer)。
 
 `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` 在 .NET Framework 4.6.2 之前的 .NET Framework 版本中，當客戶從 Visual Studio 重建工作流程專案時，WF 設計工具 IntelliSense 會中斷。 雖然專案建置成功，但在設計工具中找不到工作流程類型，來自 IntelliSense 的遺漏工作流程類型警告也會出現在 [錯誤清單] 視窗中。 .NET Framework 4.6.2 解決這個問題，並提供 IntelliSense。
 
@@ -2066,7 +2066,7 @@ ASP.NET 4.5 和 4.5.1 加入了 Web Forms、WebSocket 支援、非同步處理�
 
 在 .NET Framework 4.5 中，Windows Workflow Foundation (WF) 已加入數個新功能，包括：
 
-- 狀態機器工作流程，最初是在 .NET Framework 4.0.1 中引進 ([.NET Framework 4 Platform Update 1](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/))。 這項更新包括數個可讓開發人員建立狀態機器工作流程的新類別和活動。 這些類別和活動已針對 .NET Framework 4.5 進行更新，包含：
+- 狀態機器工作流程，最初是在 .NET Framework 4.0.1 中引進 ([.NET Framework 4 Platform Update 1](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1))。 這項更新包括數個可讓開發人員建立狀態機器工作流程的新類別和活動。 這些類別和活動已針對 .NET Framework 4.5 進行更新，包含：
 
   - 可設定狀態中斷點的功能。
 

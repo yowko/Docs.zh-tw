@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95d2aa0d-8eeb-4a9f-a216-5249f7e2c167
 topic_type:
 - apiref
-ms.openlocfilehash: 46cd8b5c22f48ba45c4da7fa8876d6807a21f2b3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f0f6fe321f4d38129b6d70ce94a7ea8de8fff6c8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124148"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935675"
 ---
 # <a name="resolvetypelib-method"></a>ResolveTypeLib 方法
 藉由傳回完整的路徑，解析類型程式庫的簡單名稱。  
@@ -53,7 +53,7 @@ HRESULT ResolveTypeLib(
  在類型程式庫的次要版本號碼。 例如，針對版本*x. y*，次要版本號碼為*y*。  
   
  `syskind`  
- 在識別操作環境的[SYSKIND](https://docs.microsoft.com/windows/win32/api/oaidl/ne-oaidl-syskind)旗標。 常見的值為 SYS_WIN32 和 SYS_WIN64。  
+ 在識別操作環境的[SYSKIND](/windows/win32/api/oaidl/ne-oaidl-syskind)旗標。 常見的值為 SYS_WIN32 和 SYS_WIN64。  
   
  `pbstrResolvedTlbName`  
  脫銷[BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr)的指標，其中包含在 `bstrSimpleName` 參數中命名之類型程式庫的完整路徑。  

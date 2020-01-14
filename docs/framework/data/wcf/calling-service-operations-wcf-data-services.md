@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: 1b8a00c7716a60daec4e4f6af6ae8e3a7a45e943
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f838cbd0a1884d9fca1f12398b996cde93af453a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346166"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937556"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>呼叫服務作業 (WCF Data Services)
 開放式資料通訊協定（OData）會定義資料服務的服務作業。 WCF Data Services 可讓您將這類作業定義為數據服務上的方法。 就像其他資料服務資源，這些服務作業會使用 URI 來定址。 服務作業可以傳回實體類型集合、單一實體類型執行個體以及整數和字串等基本類型。 服務作業還可以傳回 `null` (在 Visual Basic 中為 `Nothing`)。 WCF Data Services 用戶端程式庫可以用來存取支援 HTTP GET 要求的服務作業。 這些服務作業類型是定義為已套用 <xref:System.ServiceModel.Web.WebGetAttribute> 的方法。 如需詳細資訊，請參閱[服務作業](service-operations-wcf-data-services.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "75346166"
   
 - 您不能使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 來呼叫傳回實體或基本類型單一結果或需要多個輸入參數的 GET 服務作業。 您必須改為呼叫 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法。  
   
-- 如果在工具產生的強型別 <xref:System.Data.Services.Client.DataServiceContext> 部分類別上建立擴充方法，這個方法使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 或 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法來呼叫服務作業。 這可讓您直接從內容中呼叫服務作業。 如需詳細資訊，請參閱 blog 文章[服務作業和 WCF Data Services 用戶端](https://blogs.msdn.microsoft.com/astoriateam/2010/05/26/service-operations-and-the-wcf-data-services-client/)。  
+- 如果在工具產生的強型別 <xref:System.Data.Services.Client.DataServiceContext> 部分類別上建立擴充方法，這個方法使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 或 <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> 方法來呼叫服務作業。 這可讓您直接從內容中呼叫服務作業。 如需詳細資訊，請參閱 blog 文章[服務作業和 WCF Data Services 用戶端](https://docs.microsoft.com/archive/blogs/astoriateam/service-operations-and-the-wcf-data-services-client)。  
   
 - 當您使用 <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> 來呼叫服務作業時，用戶端程式庫會藉由執行保留字元的百分比編碼（例如連字號（&），以及字串中的單引號的轉義），自動將提供給 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 的字元進行轉義。 不過，當您呼叫其中一個*Execute*方法來呼叫服務作業時，您必須記得對任何使用者提供的字串值執行這項轉義。 URI 中的單引號是以一對單引號的形式來逸出。  
   

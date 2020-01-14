@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 48b62990abf85eac4d4ab30c9a4b891de0875cd7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 12e8d9398a1cf76267f4e8441845007da17949cd
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444541"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937904"
 ---
 # <a name="net-performance-tips"></a>.NET 效能秘訣
 「效能」這個詞一般指的是程式的執行速度。 您有時可以遵循原始程式碼中的特定基本規則來增加執行速度。 在某些程式中，請務必仔細檢查程式碼，並使用程式碼剖析工具，確定以最快速度執行。 在其他程式中，您不需要執行這類最佳化，因為程式碼會以撰寫時的可接受速度快速執行。 本文列出效能可能會降低的一些常見區域和其改善祕訣，以及其他效能主題的連結。 如需效能規劃和測量的詳細資訊，請參閱[效能](index.md)。  
@@ -38,11 +38,11 @@ ms.locfileid: "74444541"
   
 - [Performance Tips and Tricks in .NET Applications](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10)) (.NET 應用程式中的效能祕訣和訣竅)  
 
-- [Rico Mariani's Performance Tidbits](https://blogs.msdn.microsoft.com/ricom/) (Rico Mariani 的效能花絮)  
+- [Rico Mariani's Performance Tidbits](https://docs.microsoft.com/archive/blogs/ricom/) (Rico Mariani 的效能花絮)  
 
-- [Vance Morrison 的 Blog](https://blogs.msdn.microsoft.com/vancem/)
+- [Vance Morrison 的 Blog](https://docs.microsoft.com/archive/blogs/vancem/)
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [效能](index.md)
 - [Visual Basic 程式設計指南](../../visual-basic/programming-guide/index.md)

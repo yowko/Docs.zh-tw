@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 64bcf6ee58d743a26e31c49a425f36cc808b5080
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5d90f414a945d346ca7721745ea7d86cb24a085c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426835"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936861"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 方法
 針對指定的執行緒，引導堆疊上的 managed 框架，並透過回呼將資訊傳送至分析工具。  
@@ -71,7 +71,7 @@ HRESULT DoStackSnapshot(
   
  堆疊的進入順序就是將畫面格推送至堆疊的方式反向：分葉（最後推送）框架 first、主要（第一次推送）框架最後。  
   
- 如需如何編寫分析工具來逐步執行 managed 堆疊的詳細資訊，請參閱[.NET Framework 2.0：基本概念和其他專案中的 Profiler 堆疊流覽](https://go.microsoft.com/fwlink/?LinkId=73638)。  
+ 如需如何編寫分析工具來逐步執行 managed 堆疊的詳細資訊，請參閱[.NET Framework 2.0：基本概念和其他專案中的 Profiler 堆疊流覽](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10))。  
   
  堆疊演練可以是同步或非同步，如下列各節所述。  
   
@@ -106,7 +106,7 @@ HRESULT DoStackSnapshot(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

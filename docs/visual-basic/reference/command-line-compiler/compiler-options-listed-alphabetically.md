@@ -4,19 +4,19 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: c529c03fd3856bbd3d3b26371415907c94ca8d30
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 85fb07f46c2d885491db7358f24b3b50836c2ca8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343509"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937751"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>依字母順序列出 Visual Basic 編譯器選項
 提供 Visual Basic 命令列編譯器，做為從 Visual Studio 整合式開發環境（IDE）編譯器的替代方案。 以下是依字母順序排序的 Visual Basic 命令列編譯器選項清單。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-|選項|目的|  
+|選項|用途|  
 |------------|-------------|  
 |[@ (指定回應檔)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|指定回應檔。|  
 |[-?](../../../visual-basic/reference/command-line-compiler/help.md)|顯示編譯器選項。 此命令的效用等同於指定 `-help` 選項。 未執行編譯。|  
@@ -57,7 +57,7 @@ ms.locfileid: "74343509"
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|可讓您在變數宣告中使用區域類型推斷。|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|強制執行嚴格的語意。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|指定輸出檔。|  
-|`-parallel[+&#124;-]`|指定是否要使用並行組建 (+)。|  
+|<code>-parallel[+&#124;-]</code>|指定是否要使用並行組建 (+)。|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|指定編譯器為輸出檔設為目標的處理器平台。|  
 |`-preferreduilang`|指定慣用的輸出語言名稱。|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|防止編譯器顯示語法相關錯誤和警告的程式碼。|  

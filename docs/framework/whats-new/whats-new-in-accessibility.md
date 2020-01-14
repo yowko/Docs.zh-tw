@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 681328af3f3624a8398d5125b952593f2c0510c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6f17cb0fb6e5b0457af745ea0d089f3e51d4706c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427692"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938151"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework 協助工具的新功能
 
@@ -20,9 +20,9 @@ ms.locfileid: "74427692"
 
 ## <a name="accessibility-switches"></a>協助工具參數
 
-如果您的應用程式是以 .NET Framework 4.7 或較早版本為目標，但是在 .NET Framework 4.7.1 或更新版本上執行，您可以將其設定為選擇加入協助工具功能。 如果您的應用程式是以 .NET Framework 4.7.1 或更新版本為目標，您也可以將其設定為使用舊版的功能 (且不利用協助工具功能)。 包含協助工具功能的每個 .NET Framework 版本都有版本特定的協助工具參數，您可以新增到應用程式組態檔 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 區段中的 [`<runtime>` ](../configure-apps/file-schema/runtime/index.md) 項目。 以下是支援的參數：
+如果您的應用程式是以 .NET Framework 4.7 或較早版本為目標，但是在 .NET Framework 4.7.1 或更新版本上執行，您可以將其設定為選擇加入協助工具功能。 如果您的應用程式是以 .NET Framework 4.7.1 或更新版本為目標，您也可以將其設定為使用舊版的功能 (且不利用協助工具功能)。 包含協助工具功能的每個 .NET Framework 版本都有版本特定的協助工具參數，您可以新增到應用程式組態檔 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 區段中的 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目。 以下是支援的參數：
 
-|版本|Switch|
+|{2&gt;版本&lt;2}|參數|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -30,7 +30,7 @@ ms.locfileid: "74427692"
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>利用協助工具增強功能
 
-針對以 .NET Framework 4.7.1 或更新版本為目標的應用程式，預設會啟用新的協助工具功能。 此外，如果應用程式是以舊版 .NET Framework 為目標但在 .NET Framework 4.7.1 或更新版本上執行，您可以新增參數至應用程式組態檔 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 區段中的 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 項目，並將其值設定為 `false`，使其退出舊版協助工具行為 (進而利用協助工具改善)。 下列顯示如何選擇加入 .NET Framework 4.7.1 中引進的協助工具增強功能：
+針對以 .NET Framework 4.7.1 或更新版本為目標的應用程式，預設會啟用新的協助工具功能。 此外，如果應用程式是以舊版 .NET Framework 為目標但在 .NET Framework 4.7.1 或更新版本上執行，您可以新增參數至應用程式組態檔 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 區段中的 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目，並將其值設定為 `false`，使其退出舊版協助工具行為 (進而利用協助工具改善)。 下列顯示如何選擇加入 .NET Framework 4.7.1 中引進的協助工具增強功能：
 
 ```xml
 <runtime>
@@ -59,7 +59,7 @@ ms.locfileid: "74427692"
 
 ### <a name="restoring-legacy-behavior"></a>還原舊版行為
 
-以從 4.7.1 開始的 .NET Framework 版本為目標的應用程式，可以停用協助工具功能，方法是新增參數至應用程式組態檔之 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 區段中的 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 項目，並將其值設定為 `true`。 例如，下列組態會選擇退出 .NET Framework 4.7.2 中引進的協助工具功能：
+以從 4.7.1 開始的 .NET Framework 版本為目標的應用程式，可以停用協助工具功能，方法是新增參數至應用程式組態檔之 [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 區段中的 [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 項目，並將其值設定為 `true`。 例如，下列組態會選擇退出 .NET Framework 4.7.2 中引進的協助工具功能：
 
 ```xml
 <runtime>
@@ -80,7 +80,7 @@ ms.locfileid: "74427692"
 
 <a name="winforms48" />
 
-### <a name="windows-forms"></a>Windows Form
+### <a name="windows-forms"></a>Windows 表單
 
 在 .NET Framework 4.8 中，Windows Forms 已新增對許多常用控制項的 LiveRegions 和通知事件支援。 它也新增當使用者利用鍵盤巡覽至控制項時的工具提示支援。
 
@@ -88,7 +88,7 @@ ms.locfileid: "74427692"
 
 UIA LiveRegions 可讓應用程式開發人員將控制項中的文字變更 (位於使用者正在處理的位置以外) 通知螢幕助讀程式。 例如，對於顯示連線狀態的 <xref:System.Windows.Forms.StatusStrip> 控制項，這非常有用。 當連線中斷且狀態變更時，開發人員可能需要通知螢幕助讀程式。
 
-從 .NET Framework 4.8 開始，Windows Forms 即針對 <xref:System.Windows.Forms.Label> 和 <xref:System.Windows.Forms.StatusStrip> 這兩個控制項實作 UIA LiveRegions。 例如，下列程式碼會在名為 <xref:System.Windows.Forms.Label> 的 `label1` 控制項中使用 LiveRegion：
+從 .NET Framework 4.8 開始，Windows Forms 即針對 <xref:System.Windows.Forms.Label> 和 <xref:System.Windows.Forms.StatusStrip> 這兩個控制項實作 UIA LiveRegions。 例如，下列程式碼會在名為 `label1` 的 <xref:System.Windows.Forms.Label> 控制項中使用 LiveRegion：
 
 ```csharp
 public Form1()
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication
 
 **UIA 通知事件**
 
-Windows 10 Fall Creators Update 中引進了 UIA 通知事件，其可讓您的應用程式引發 UIA 事件，並讓朗讀程式只依據您提供的事件文字來播報，而不需要在 UI 中具備對應的控制項。 在某些情況下，這是大幅改善應用程式協助工具的直接方法。 它也可以用來通知可能需要長時間處理的程序進度。 如需 UIA 通知事件的詳細資訊，請參閱 [Can your desktop app leverage the new UI Notification event?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/) (傳統型應用程式可以利用新的 UI 通知事件嗎？)
+Windows 10 Fall Creators Update 中引進了 UIA 通知事件，其可讓您的應用程式引發 UIA 事件，並讓朗讀程式只依據您提供的事件文字來播報，而不需要在 UI 中具備對應的控制項。 在某些情況下，這是大幅改善應用程式協助工具的直接方法。 它也可以用來通知可能需要長時間處理的程序進度。 如需 UIA 通知事件的詳細資訊，請參閱 [Can your desktop app leverage the new UI Notification event?](https://docs.microsoft.com/archive/blogs/winuiautomation/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need) (傳統型應用程式可以利用新的 UI 通知事件嗎？)
 
 下列範例會引發[通知事件](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A)：
 
@@ -195,7 +195,7 @@ if (raiseMethod != null) {
 
 UIAutomation 的 `ControllerFor` 屬性會傳回自動化項目的陣列，而這些項目是由支援此屬性的自動化項目所操作。 此屬性通常用於自動建議的協助工具。 當自動化項目會影響應用程式 UI 或桌面的一或多個區段時，請使用 `ControllerFor`。 否則，您很難將控制作業的影響與 UI 項目建立關聯。 這項功能讓控制項能夠提供 `ControllerFor` 屬性值。
 
-.NET Framework 4.8 新增新的虛擬方法 <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>。 若要提供 `ControllerFor` 屬性值，只要覆寫這個方法，並傳回控制項 (由此 `List<AutomationPeer>` 操作) 的 <xref:System.Windows.Automation.Peers.AutomationPeer> 即可：
+.NET Framework 4.8 新增新的虛擬方法 <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType>。 若要提供 `ControllerFor` 屬性值，只要覆寫這個方法，並傳回控制項 (由此 <xref:System.Windows.Automation.Peers.AutomationPeer> 操作) 的 `List<AutomationPeer>` 即可：
 
 ```csharp
 public class AutoSuggestTextBox: TextBox
@@ -228,7 +228,7 @@ internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
 
 在 .NET Framework 4.7.2 和更早版本中，只有當使用者將滑鼠游標停留在控制項上方時會顯示工具提示。 在 .NET Framework 4.8 中，工具提示也會在鍵盤焦點上顯示，以及透過鍵盤快速鍵顯示。
 
-若要啟用這項功能，應用程式需要以 .NET Framework 4.8 為目標，或使用 `Switch.UseLegacyAccessibilityFeatures.3` 和 `Switch.UseLegacyToolTipDisplay` [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 參數選擇加入。 下列是範例應用程式組態檔：
+若要啟用此功能，應用程式必須以 .NET Framework 4.8 為目標，或使用 `Switch.UseLegacyAccessibilityFeatures.3` 和 `Switch.UseLegacyToolTipDisplay` [AppCoNtext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)參數來加入宣告。 下列是範例應用程式組態檔：
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -245,7 +245,7 @@ internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
 啟用之後，一旦控制項取得鍵盤焦點時，所有包含工具提示的控制項會都顯示工具提示。 工具提示可能會隨著時間或鍵盤焦點變更而關閉。 使用者也可以使用新的鍵盤快速鍵 Ctrl + Shift + F10，手動關閉工具提示。 工具提示關閉之後，您可以使用相同的鍵盤快速鍵使其再次顯示。
 
 > [!NOTE]
-> [ 控制項上的](xref:System.Windows.Controls.Ribbon.RibbonToolTip)功能區工具提示<xref:System.Windows.Controls.Ribbon.Ribbon>不會顯示在鍵盤焦點上；而只能透過鍵盤快速鍵顯示。
+> <xref:System.Windows.Controls.Ribbon.Ribbon> 控制項上的[功能區工具提示](xref:System.Windows.Controls.Ribbon.RibbonToolTip)不會顯示在鍵盤焦點上；而只能透過鍵盤快速鍵顯示。
 
 **新增支援 SizeOfSet 和 PositionInSet UIAutomation 屬性**
 
@@ -291,7 +291,7 @@ Windows 10 引進 `SizeOfSet` 和 `PositionInSet` 這兩個新的 UIAutomation �
 
 此外，<xref:System.Windows.Controls.ItemsControl> 執行個體中的項目可自動提供這些屬性值，而不需要開發人員的額外動作。 如果 <xref:System.Windows.Controls.ItemsControl> 是分組形式，即會以各組來表示群組的集合，並將每個群組計算為個別的一組，而該群組內每個項目均提供其在該群組內的位置及群組大小。 虛擬化不會影響自動值。 即使某個項目未具現化，系統仍會將其計入集合的總大小，並會影響其同層級項目集合的位置。
 
-只有在應用程式的目標為 .NET Framework 4.8 時，系統才會提供自動值。 若是以舊版 .NET Framework 為目標的應用程式，您可以設定 `Switch.UseLegacyAccessibilityFeatures.3` [AppContext 參數](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)，如下列 App.config 檔案中所示：
+只有在應用程式的目標為 .NET Framework 4.8 時，系統才會提供自動值。 針對以舊版 .NET Framework 為目標的應用程式，您可以設定 `Switch.UseLegacyAccessibilityFeatures.3` [AppCoNtext 參數](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)，如下列 app.config 檔案所示：
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -317,7 +317,7 @@ Windows 10 引進 `SizeOfSet` 和 `PositionInSet` 這兩個新的 UIAutomation �
 
 - 選擇高對比佈景主題之使用者會看到工作流程設計工具和其控制項在可見度方面的改善，例如項目之間的更佳對比比例，以及用於焦點項目的更明顯選取方塊。
 
-如果應用程式是以 .NET Framework 4.7.2 或更早的版本為目標，您可以將應用程式組態檔中的 `Switch.UseLegacyAccessibilityFeatures.3` [AppContext 參數](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 設為 `false` 來選擇加入這些變更。 如需詳細資訊，請參閱本文的[利用協助工具增強功能](#taking-advantage-of-accessibility-enhancements)一節。
+如果您的應用程式以 .NET Framework 4.7.2 或更舊版本為目標，您可以在應用程式佈建檔中將 `Switch.UseLegacyAccessibilityFeatures.3` [AppCoNtext 參數](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md)設定為 `false`，以加入宣告這些變更。 如需詳細資訊，請參閱本文的[利用協助工具增強功能](#taking-advantage-of-accessibility-enhancements)一節。
 
 ## <a name="whats-new-in-accessibility-in-net-framework-472"></a>.NET Framework 4.7.2 協助工具的新功能
 
@@ -329,7 +329,7 @@ Windows 10 引進 `SizeOfSet` 和 `PositionInSet` 這兩個新的 UIAutomation �
 
 <a name="winforms472"></a>
 
-### <a name="windows-forms"></a>Windows Form
+### <a name="windows-forms"></a>Windows 表單
 
 **高對比佈景主題中的作業系統定義色彩**
 
@@ -337,19 +337,19 @@ Windows 10 引進 `SizeOfSet` 和 `PositionInSet` 這兩個新的 UIAutomation �
 
 - <xref:System.Windows.Forms.ToolStripDropDownButton> 控制項的下拉式箭號。
 
-- <xref:System.Windows.Forms.Button> 設成 <xref:System.Windows.Forms.RadioButton> 或 <xref:System.Windows.Forms.CheckBox> 的 <xref:System.Windows.Forms.ButtonBase.FlatStyle>、<xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType>。 以往，選取的文字和背景色彩不會呈現對比，因此難以閱讀。
+- <xref:System.Windows.Forms.ButtonBase.FlatStyle> 設成 <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> 或 <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType> 的 <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.RadioButton> 和 <xref:System.Windows.Forms.CheckBox>。 以往，選取的文字和背景色彩不會呈現對比，因此難以閱讀。
 
 - 包含在 <xref:System.Windows.Forms.GroupBox> 內的控制項，且其 <xref:System.Windows.Forms.Control.Enabled> 屬性設定為 `false`。
 
 - <xref:System.Windows.Forms.ToolStripButton>、<xref:System.Windows.Forms.ToolStripComboBox> 和 <xref:System.Windows.Forms.ToolStripDropDownButton> 控制項，它們在高對比模式下有更高的亮度對比率。
 
-- <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> 的 <xref:System.Windows.Forms.DataGridViewLinkCell> 屬性。
+- <xref:System.Windows.Forms.DataGridViewLinkCell> 的 <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> 屬性。
 
 **朗讀程式增強功能**
 
 從 .NET Framework 4.7.2 開始，朗讀程式支援的增強功能如下：
 
-- 在播報 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> 的文字時，現已會播報 <xref:System.Windows.Forms.ToolStripMenuItem> 屬性的值。
+- 在播報 <xref:System.Windows.Forms.ToolStripMenuItem> 的文字時，現已會播報 <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> 屬性的值。
 
 - 當 <xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Enabled> 屬性設定為 `false` 時，會指明該情況。
 
@@ -365,21 +365,21 @@ Windows 10 引進 `SizeOfSet` 和 `PositionInSet` 這兩個新的 UIAutomation �
 
 - 當 <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType> 設定為 <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType> 時，資料行標頭會變更色彩，以在目前的資料列中指出使用者滑過儲存格時所在的資料行位置。
 
-- <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> 的 <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> 屬性會傳回正確的父控制項。
+- <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> 的 <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> 屬性會傳回正確的父控制項。
 
 **改善的視覺提示**
 
-- <xref:System.Windows.Forms.RadioButton> 屬性為空白的控制項 <xref:System.Windows.Forms.CheckBox> 與 <xref:System.Windows.Forms.ButtonBase.Text>，會於接收到焦點時顯示焦點指標。
+- <xref:System.Windows.Forms.ButtonBase.Text> 屬性為空白的控制項 <xref:System.Windows.Forms.RadioButton> 與 <xref:System.Windows.Forms.CheckBox>，會於接收到焦點時顯示焦點指標。
 
 **已改進屬性方格支援**
 
-- <xref:System.Windows.Forms.PropertyGrid> 控制項子項目現在只有在已啟用 PropertyGrid 項目的情況下，才會傳回 `true` 屬性的 <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>。
+- <xref:System.Windows.Forms.PropertyGrid> 控制項子項目現在只有在已啟用 PropertyGrid 項目的情況下，才會傳回 <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> 屬性的 `true`。
 
-- <xref:System.Windows.Forms.PropertyGrid> 控制項子項目只有在使用者可變更 PropertyGrid 項目的情況下，才會傳回 `false` 屬性的 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>。
+- <xref:System.Windows.Forms.PropertyGrid> 控制項子項目只有在使用者可變更 PropertyGrid 項目的情況下，才會傳回 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> 屬性的 `false`。
 
 **改善的鍵盤導覽**
 
-- <xref:System.Windows.Forms.ToolStripButton> 屬性設定為 <xref:System.Windows.Forms.ToolStripPanel> 的 <xref:System.Windows.Forms.ToolStripPanel.TabStop> 內含焦點時，`true` 控制項允許焦點
+- <xref:System.Windows.Forms.ToolStripPanel.TabStop> 屬性設定為 `true` 的 <xref:System.Windows.Forms.ToolStripPanel> 內含焦點時，<xref:System.Windows.Forms.ToolStripButton> 控制項允許焦點
 
 <a name="wpf472"></a>
 
@@ -445,10 +445,10 @@ Windows 10 引進 `SizeOfSet` 和 `PositionInSet` 這兩個新的 UIAutomation �
 
 - <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 列舉，可以定義下列可能的 **LiveSetting** 值：
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType> 如果即時區域的內容變更，項目不會傳送通知。
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType> 如果即時區域的內容變更，項目會傳送不中斷通知。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>。 如果即時區域的內容變更，項目不會傳送通知。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>。 如果即時區域的內容變更，項目會傳送不中斷通知。
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType> 如果即時區域的內容變更，項目會傳送中斷通知。
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>。 如果即時區域的內容變更，項目會傳送中斷通知。
 
 您可以在感興趣的項目上設定 **AutomationProperties.LiveSetting** 屬性，以建立 LiveRegion，如下列範例所示：
 
@@ -707,6 +707,6 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 選擇高對比佈景主題的使用者會看到工作流程設計工具和其控制項在可見性方面的許多改善，例如項目之間的更佳對比比例以及用於焦點項目的更明顯選取方塊。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [.NET Framework 的新功能](index.md)
