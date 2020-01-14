@@ -9,6 +9,8 @@
           href: system-text-json-how-to.md
         - name: 如何撰寫自訂轉換器
           href: system-text-json-converters-how-to.md
+        - name: 如何從 Newtonsoft.Json 移轉
+          href: system-text-json-migrate-from-newtonsoft-how-to.md
     - name: 二進位序列化
       href: binary-serialization.md
       items:

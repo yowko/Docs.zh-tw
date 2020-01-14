@@ -16,7 +16,11 @@
     - name: 2.0 至 2.1
       href: 2.0-2.1.md
     - name: .NET Framework 至 .NET Core
-      href: fx-core.md
+      items:
+        - name: 重大變更
+          href: fx-core.md
+        - name: 擲回例外狀況的 API
+          href: unsupported-apis.md
 - name: 依區域
   expanded: true
   items:
