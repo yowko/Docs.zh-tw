@@ -1,17 +1,16 @@
 ---
 title: 介面 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120161"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714615"
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 
@@ -54,7 +53,7 @@ ms.locfileid: "73120161"
 - 介面類似只有抽象成員的抽象基底類別。 任何實作介面的類別或結構必須實作它的所有成員。
 - 介面無法直接具現化。 其成員是由實作介面的任何類別或結構實作。
 - 介面可以包含事件、索引子、方法和屬性。
-- 介面不包含方法的實作。
+- 介面不包含方法的執行（在C# 8.0 中，介面可以有[方法的預設實值](../../whats-new/csharp-8.md#default-interface-methods)）。
 - 類別或結構可以實作多個介面。 類別可以繼承基底類別，也會實作一或多個介面。
 
 ## <a name="in-this-section"></a>本節內容
@@ -62,17 +61,17 @@ ms.locfileid: "73120161"
 [明確介面實作](explicit-interface-implementation.md)  
  說明如何建立介面特定的類別成員。  
   
- [如何：明確實作介面成員](how-to-explicitly-implement-interface-members.md)  
+ [如何明確執行介面成員](how-to-explicitly-implement-interface-members.md)  
  提供如何明確實作介面成員的範例。  
   
- [如何：明確實作兩個介面的成員](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [如何明確地執行兩個介面的成員](how-to-explicitly-implement-members-of-two-interfaces.md)  
  提供如何透過繼承明確實作介面成員的範例。  
   
 ## <a name="BKMK_RelatedSections"></a> 相關章節
 
 - [介面屬性](../classes-and-structs/interface-properties.md)  
 - [介面中的索引子](../indexers/indexers-in-interfaces.md)  
-- [如何：實作介面事件](../events/how-to-implement-interface-events.md)  
+- [如何執行介面事件](../events/how-to-implement-interface-events.md)
 - [類別和結構](../classes-and-structs/index.md)  
 - [繼承](../classes-and-structs/inheritance.md)  
 - [方法](../classes-and-structs/methods.md)  
@@ -84,9 +83,9 @@ ms.locfileid: "73120161"
   
 ## <a name="featured-book-chapter"></a>精選書籍章節
 
-[了解 C# 3.0：掌握 C# 3.0 的基本概念中的介面
+[了解 C# 3.0：掌握 C# 3.0 的基本概念 (英文)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29) 中的[介面](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [繼承](../classes-and-structs/inheritance.md)

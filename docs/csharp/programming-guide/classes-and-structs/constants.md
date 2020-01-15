@@ -1,24 +1,23 @@
 ---
 title: 常數 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 7da86a8999f6cc36a7b71f70fd92a363673824b5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0abb728c58d50e3d7709d680dd91794c4be6afef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924537"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705739"
 ---
 # <a name="constants-c-programming-guide"></a>常數 (C# 程式設計手冊)
 常數是在編譯時期已知且不會在程式存留期變更的不可變值。 常數是使用 [const](../../language-reference/keywords/const.md) 修飾詞所宣告。 有 C# 內建型別 (不含 <xref:System.Object?displayProperty=nameWithType>) 才能宣告為 `const`。 如需內建類型的清單，請參閱[內建類型資料表](../../language-reference/keywords/built-in-types-table.md)。 使用者定義型別 (包括類別、結構和陣列) 不能是 `const`。 使用 [readonly](../../language-reference/keywords/readonly.md) 修飾詞來建立在執行階段一次初始化的類別、結構或陣列 (例如在建構函式中)，因而無法進行變更。  
   
  C# 不支援 `const` 方法、屬性或事件。  
   
- enum 類型可讓您定義整數內建類型的具名常數 (例如 `int`、`uint`、`long` 等等)。 如需詳細資訊，請參閱 [enum](../../language-reference/keywords/enum.md)。  
+ enum 類型可讓您定義整數內建類型的具名常數 (例如 `int`、`uint`、`long` 等等)。 如需詳細資訊，請參閱 [enum](../../language-reference/builtin-types/enum.md)。  
   
  常數必須在宣告時進行初始化。 例如：  
   
@@ -46,11 +45,11 @@ ms.locfileid: "69924537"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)
 - [屬性](./properties.md)
 - [型別](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
-- [C# 中的不變性，第一部分：不變性的類型](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability) \(英文\)
+- [Immutability in C# Part One: Kinds of Immutability](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability) (C# 中不變性第一部分：不變性類型)
