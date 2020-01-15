@@ -2,12 +2,12 @@
 title: 部署已裝載網際網路資訊服務的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 36bdd22ec838af8b1a6b3be8c5636beced9b9132
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053306"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964849"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>部署已裝載網際網路資訊服務的 WCF 服務
 
@@ -23,7 +23,7 @@ ms.locfileid: "71053306"
 
 - 設定 WCF 服務。
 
-如需建立 IIS 裝載的 WCF 服務的詳細逐步解說，請[參閱如何：在 IIS](how-to-host-a-wcf-service-in-iis.md)中裝載 WCF 服務。
+如需建立 IIS 裝載的 WCF 服務的詳細逐步解說，請參閱[如何：在 IIS 中裝載 WCF 服務](how-to-host-a-wcf-service-in-iis.md)。
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>確定 IIS、ASP.NET 和 WCF 已正確安裝及註冊
 
@@ -35,31 +35,31 @@ ms.locfileid: "71053306"
 
 如果電腦上已有 IIS，.NET Framework 的安裝程式會自動向 IIS 註冊 WCF。 如果在 .NET Framework 之後安裝 IIS，則需要額外的步驟來向 IIS 和 ASP.NET 註冊 WCF。 請依據您的作業系統，採取下列適當的步驟：
 
-- Windows 7 和 Windows Server 2003：使用 [ [System.servicemodel 註冊工具] （servicemodelreg.exe）](../../../../docs/framework/wcf/servicemodelreg-exe.md)工具向 IIS 註冊 WCF。 若要使用此工具，請在[Visual Studio 的開發人員命令提示字元](../../tools/developer-command-prompt-for-vs.md)中輸入**servicemodelreg.exe/i/x** 。
+- Windows 7 和 Windows Server 2003：使用[System.servicemodel 註冊工具（servicemodelreg.exe）](../../../../docs/framework/wcf/servicemodelreg-exe.md)工具向 IIS 註冊 WCF。 若要使用此工具，請在[Visual Studio 的開發人員命令提示字元](../../tools/developer-command-prompt-for-vs.md)中輸入**servicemodelreg.exe/i/x** 。
 
-- Windows 7：最後，您必須確認 ASP.NET 已設定為使用 .NET Framework 版本4或更新版本。 您可以使用`–i`選項執行 ASPNET_Regiis 工具來完成這項工作。 如需詳細資訊，請參閱[ASP.NET IIS 註冊工具](https://go.microsoft.com/fwlink/?LinkId=201186)。
+- Windows 7：最後，您必須確認 ASP.NET 已設定為使用 .NET Framework 版本4或更新版本。 做法是以 [`–i`] 選項執行 ASPNET_Regiis 工具。 如需詳細資訊，請參閱[ASP.NET IIS 註冊工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90))。
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>建立新的 IIS 應用程式或是重複使用現有的 ASP.NET 應用程式
 
-裝載于 IIS 的 WCF 服務必須位於 IIS 應用程式內。 您可以建立新的 IIS 應用程式，以獨佔方式裝載 WCF 服務。 或者，您可以將 WCF 服務部署到已經裝載 ASP.NET 2.0 內容的現有應用程式中（例如 .aspx pages 和 ASP.NET Web services [.ASMX]）。 如需這些選項的詳細資訊，請參閱[Wcf 服務與 ASP.NET](wcf-services-and-aspnet.md)中的 < 在 ASP.NET 相容性模式中裝載 wcf 與 ASP.NET 一節。
+裝載于 IIS 的 WCF 服務必須位於 IIS 應用程式內。 您可以建立新的 IIS 應用程式，以獨佔方式裝載 WCF 服務。 或者，您可以將 WCF 服務部署到已經裝載 ASP.NET 2.0 內容的現有應用程式中（例如 .aspx pages 和 ASP.NET Web services [.ASMX]）。 如需這些選項的詳細資訊，請參閱[Wcf 服務與 ASP.NET](wcf-services-and-aspnet.md)中的
 
-請注意，IIS 6.0 和更新版本會定期重新開機隔離的物件導向程式設計應用程式。 預設值為 1740 分鐘。 支援的最大值為 71,582 分鐘。 您可以停用這項重新啟動。 如需此屬性的詳細資訊，請參閱[PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)。
+請注意，IIS 6.0 和更新版本會定期重新開機隔離的物件導向程式設計應用程式。 預設值為 1740 分鐘。 支援的最大值為 71,582 分鐘。 您可以停用這項重新啟動。 如需此屬性的詳細資訊，請參閱[PeriodicRestartTime](https://docs.microsoft.com/previous-versions/iis/6.0-sdk/ms525914(v=vs.90))。
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>建立 WCF 服務的 .svc 檔案
 
-裝載于 IIS 的 WCF 服務會在 IIS 應用程式內以特殊內容檔案（.svc 檔案）表示。 這個模型與 IIS 應用程式將 ASMX 頁面表示為 .asmx 檔案的方式很類似。 .Svc 檔案包含 wcf 特定的處理指示詞（[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)），可讓 wcf 裝載基礎結構啟動託管服務，以回應傳入訊息。 以下是 .svc 檔案最常見的語法：
+裝載于 IIS 的 WCF 服務會在 IIS 應用程式內以特殊內容檔案（.svc 檔案）表示。 這個模型與 IIS 應用程式將 ASMX 頁面表示為 .asmx 檔案的方式很類似。 .Svc 檔案包含 WCF 特定的處理指示詞（[\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)），可讓 wcf 裝載基礎結構啟動託管服務，以回應傳入訊息。 以下是 .svc 檔案最常見的語法：
 
 `<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
-它是由[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指示詞和單一屬性`Service`所組成。 `Service` 屬性值就是服務實作的 Common Language Runtime (CLR) 型別名稱。 基本上，使用此指示詞與使用下列程式碼來建立服務主機是一樣的：
+它是由[\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指示詞和單一屬性所組成，`Service`。 `Service` 屬性值就是服務實作的 Common Language Runtime (CLR) 型別名稱。 基本上，使用此指示詞與使用下列程式碼來建立服務主機是一樣的：
 
 ```csharp
 new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 ```
 
-其他的裝載組態，例如建立服務的基底位址清單，也能夠透過此方式來完成。 您也可以使用自訂的 <xref:System.ServiceModel.Activation.ServiceHostFactory> 來延伸指示詞，以便搭配自訂裝載方案來使用。 裝載 WCF 服務的 IIS 應用程式不負責管理<xref:System.ServiceModel.ServiceHost>實例的建立與存留期。 當收到 .svc 檔案的第一個要求<xref:System.ServiceModel.ServiceHost>時，受控 WCF 裝載基礎結構會動態建立必要的實例。 除非程式碼明確地關閉此執行個體，或當應用程式已回收時，才會釋放此執行個體。
+其他的裝載組態，例如建立服務的基底位址清單，也能夠透過此方式來完成。 您也可以使用自訂的 <xref:System.ServiceModel.Activation.ServiceHostFactory> 來延伸指示詞，以便搭配自訂裝載方案來使用。 裝載 WCF 服務的 IIS 應用程式不負責管理 <xref:System.ServiceModel.ServiceHost> 實例的建立與存留期。 當收到 .svc 檔案的第一個要求時，受控 WCF 裝載基礎結構會動態建立必要的 <xref:System.ServiceModel.ServiceHost> 實例。 除非程式碼明確地關閉此執行個體，或當應用程式已回收時，才會釋放此執行個體。
 
-如需 .svc 檔案語法的詳細資訊，請參閱[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)。
+如需 .svc 檔案語法的詳細資訊，請參閱[\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)。
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>將服務實作部署到 IIS 應用程式
 
@@ -67,11 +67,11 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 - 做為預先編譯的 .dll 檔，位於全域組件快取 (GAC) 或應用程式的 \bin 目錄中。 預先編譯的二進位檔會等到部署了新版本的類別庫之後才會更新。
 
-- 做為未編譯的來源檔案，位於應用程式的 \App_Code 目錄中。 位於此目錄的來源檔會在處理應用程式的第一個要求時動態需要。 在收到下一個要求時，對 \App_Code 目錄中檔案的任何變更都會導致整個應用程式的回收與重新編譯。
+- 做為未編譯的來源檔案，位於應用程式的 \ App_Code 目錄中。 位於此目錄的來源檔會在處理應用程式的第一個要求時動態需要。 在收到下一個要求時，對 \App_Code 目錄中檔案的任何變更都會導致整個應用程式的回收與重新編譯。
 
-- 以未編譯的程式碼直接放在 .svc 檔案中。 您也可以在服務的 .svc 檔案中，以內嵌方式，將執行程式\@代碼放在 ServiceHost 指示詞之後。 在收到下一個要求時，對內嵌程式碼的任何變更都會導致整個應用程式的回收與重新編譯。
+- 以未編譯的程式碼直接放在 .svc 檔案中。 您也可以在服務的 .svc 檔案中，以內嵌方式，將執行程式碼放在 \@ServiceHost 指示詞之後。 在收到下一個要求時，對內嵌程式碼的任何變更都會導致整個應用程式的回收與重新編譯。
 
-如需有關 ASP.NET 2.0 編譯模型的詳細資訊，請參閱[ASP.NET 編譯總覽](https://go.microsoft.com/fwlink/?LinkId=94773)。
+如需有關 ASP.NET 2.0 編譯模型的詳細資訊，請參閱[ASP.NET 編譯總覽](https://docs.microsoft.com/previous-versions/aspnet/ms178466(v=vs.100))。
 
 ## <a name="configure-the-wcf-service"></a>設定 WCF 服務
 
@@ -79,25 +79,25 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 - IIS 裝載服務的基底位址。
 
-- 在 IIS 外部裝載 WCF 服務的應用程式可以藉由將一組基底位址 uri 傳遞給此<xref:System.ServiceModel.ServiceHost>函式，或在服務的中[ \<提供主機 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)元素，來控制所裝載之服務的基底位址。配置. IIS 所裝載的服務無法控制自己的基底位址；IIS 裝載服務的基底位址就是所屬 .svc 檔案的位址。
+- 在 IIS 外部裝載 WCF 服務的應用程式可以藉由將一組基底位址 Uri 傳遞給 <xref:System.ServiceModel.ServiceHost> 的函式，或在服務的設定中提供\<的[主機 >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md)元素，來控制所裝載之服務的基底位址。 IIS 所裝載的服務無法控制自己的基底位址；IIS 裝載服務的基底位址就是所屬 .svc 檔案的位址。
 
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>IIS 裝載服務的端點位址
 
-透過 IIS 裝載時，端點位址一律視為相對於 .svc 檔案 (用來代表服務) 的位址。 例如，如果 WCF 服務`http://localhost/Application1/MyService.svc`的基底位址具有下列端點設定：
+透過 IIS 裝載時，端點位址一律視為相對於 .svc 檔案 (用來代表服務) 的位址。 例如，如果 WCF 服務的基底位址與下列端點設定 `http://localhost/Application1/MyService.svc`：
 
 ```xml
 <endpoint address="anotherEndpoint" .../>
 ```
 
-這會提供可在上`http://localhost/Application1/MyService.svc/anotherEndpoint`觸達的端點。
+這會提供可在 `http://localhost/Application1/MyService.svc/anotherEndpoint`達到的端點。
 
-同樣地，使用空字串做為相對位址的端點設定元素會提供可連線的端點`http://localhost/Application1/MyService.svc`，也就是基底位址。
+同樣地，使用空字串做為相對位址的端點設定元素會提供可在 `http://localhost/Application1/MyService.svc`（也就是基底位址）連線的端點。
 
 ```xml
 <endpoint address="" ... />
 ```
 
-請務必針對 IIS 裝載服務端點使用相對端點位址。 如果端點位址並未指向裝載服務的 IIS 應用程式`http://localhost/MyService.svc`來公開端點，則提供完整的端點位址（例如，）可能會導致服務部署中發生錯誤。 針對裝載的服務使用相對端點位址可以避免這些潛在的衝突。
+請務必針對 IIS 裝載服務端點使用相對端點位址。 如果端點位址未指向裝載公開端點之服務的 IIS 應用程式，則提供完整的端點位址（例如，`http://localhost/MyService.svc`）可能會導致服務部署中發生錯誤。 針對裝載的服務使用相對端點位址可以避免這些潛在的衝突。
 
 ### <a name="available-transports"></a>可用的傳輸
 
@@ -109,8 +109,8 @@ IIS 裝載的 WCF 服務可以利用 HTTP 傳輸安全性（例如，HTTPS 和 H
 
 例如，設定為使用 HTTP 摘要式驗證的 WCF 端點必須位於同時設定為允許 HTTP 摘要式驗證的 IIS 虛擬目錄中。 不相符的 IIS 設定和 WCF 端點設定組合會導致服務啟用期間發生錯誤。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在 Internet Information Services 中裝載](hosting-in-internet-information-services.md)
 - [Internet Information Services 裝載最佳做法](internet-information-services-hosting-best-practices.md)
-- [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server AppFabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

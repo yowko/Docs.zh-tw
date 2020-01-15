@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 485741f98c4a120669eafe85d3a3810374f61378
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: bfe6dcfe6850ee17a7bbb59f3a6ccad6c3c3e7d7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347147"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964235"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>HOW TO：取得憑證 (WCF)
 若要使用任何使用 x.509 憑證的 Windows Communication Foundation （WCF）功能，您只需要先取得憑證。  
@@ -20,7 +20,7 @@ ms.locfileid: "75347147"
   
     - 向憑證授權單位 (例如 VeriSign, Inc) 購買憑證。  
   
-    - 設定自己的憑證服務，並且要求憑證授權單位簽署憑證。 Windows Server 2003、Windows 2000 Server、Windows 2000 Server Datacenter 和 Windows 2000 Datacenter Server 全都包含支援公開金鑰基礎結構（PKI）的憑證服務。 在 Windows Server 2008 中，使用 [ [Active Directory 憑證服務](https://go.microsoft.com/fwlink/?LinkID=153483)] 角色來管理憑證授權單位單位。  
+    - 設定自己的憑證服務，並且要求憑證授權單位簽署憑證。 Windows Server 2003、Windows 2000 Server、Windows 2000 Server Datacenter 和 Windows 2000 Datacenter Server 全都包含支援公開金鑰基礎結構（PKI）的憑證服務。 在 Windows Server 2008 中，使用 [ [Active Directory 憑證服務](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731564(v=ws.10))] 角色來管理憑證授權單位單位。  
   
     - 設定自己的憑證服務，而不要簽署憑證。  
   

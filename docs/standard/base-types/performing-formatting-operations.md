@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatting strings [.NET Framework], how-to topics
 - strings [.NET Framework], formatting
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
-ms.openlocfilehash: 63ba008ab7c6f1b7f7466ef60f7597a8df9bd8fc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 70dbb0d8d39abb1252d944e1b3ab9656b9ed6c0a
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084322"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964731"
 ---
 # <a name="performing-formatting-operations"></a>執行格式化作業
 下列主題提供執行特定格式設定作業的逐步指示。  
@@ -24,13 +24,9 @@ ms.locfileid: "73084322"
   
 - [操作說明：定義和使用自訂數值格式提供者](../../../docs/standard/base-types/how-to-define-and-use-custom-numeric-format-providers.md)  
   
-- [操作說明：將使用者輸入 Web 控制項的數值轉換成數字](../../../docs/standard/base-types/how-to-convert-numeric-user-input-in-web-controls-to-numbers.md)  
-  
 - [操作說明：從特定日期擷取一星期的哪一日](../../../docs/standard/base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md)。  
   
 - [操作說明：反覆存取日期和時間值](../../../docs/standard/base-types/how-to-round-trip-date-and-time-values.md)  
-  
-- [操作說明：對 Web 使用者顯示當地語系化的日期和時間資訊](../../../docs/standard/base-types/how-to-display-localized-date-and-time-information-to-web-users.md)  
   
 - [操作說明：在日期與時間值中顯示毫秒](../../../docs/standard/base-types/how-to-display-milliseconds-in-date-and-time-values.md)  
   

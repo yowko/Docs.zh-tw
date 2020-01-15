@@ -4,12 +4,12 @@ description: 瞭解C#可為 null 的實值型別，以及如何使用它們
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 661b5e8502cba42588a07d757f056c715c1c82e8
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936903"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964318"
 ---
 # <a name="nullable-value-types-c-reference"></a>可為 null 的C#實數值型別（參考）
 
@@ -56,7 +56,7 @@ ms.locfileid: "75936903"
 
 [!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
-如果您想要使用基礎數值型別的[預設](../keywords/default-values-table.md)值來取代 `null`，請使用 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 方法。
+如果您想要使用基礎數值型別的[預設](default-values.md)值來取代 `null`，請使用 <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> 方法。
 
 您也可以將可為 null 的實值型別明確轉換成不可為 null 的型別，如下列範例所示：
 

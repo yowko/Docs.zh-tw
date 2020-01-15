@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 4a9f3a3b7e69d33a8707a4bed5b9bc369c75f601
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 55120430a9aaafe7d8bbf2b26f07806e4f1aa44a
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346686"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964429"
 ---
 # <a name="denial-of-service"></a>阻斷服務
 當系統由於無法處理訊息，或者處理訊息的速度極為緩慢而爆滿時，就會發生阻絕服務。  
@@ -44,7 +44,7 @@ ms.locfileid: "75346686"
 ## <a name="auditing-event-log-can-be-filled"></a>稽核事件記錄檔已滿  
  如果惡意使用者發現已啟用稽核，攻擊者就可以傳送無效的訊息，而造成寫入稽核項目。 如果是因為這個方法而填滿稽核記錄檔，稽核系統就會失敗。  
   
- 若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。 如需使用事件檢視器來查看和管理事件記錄檔的詳細資訊，請參閱[事件檢視器](https://go.microsoft.com/fwlink/?LinkId=186123)。 如需詳細資訊，請參閱「[審核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)」。  
+ 若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。 如需使用事件檢視器來查看和管理事件記錄檔的詳細資訊，請參閱[事件檢視器](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc766042(v=ws.11))。 如需詳細資訊，請參閱「[審核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)」。  
   
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>不正確 IAuthorizationPolicy 的執行可能導致服務變成沒有回應  
  在 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 介面的錯誤執行上呼叫 <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> 方法，可能會導致服務沒有回應。  
@@ -52,7 +52,7 @@ ms.locfileid: "75346686"
  避免方法：僅使用信任的程式碼。 也就是說，僅使用您所撰寫並測試過的程式碼，或使用來自可信任提供者的程式碼。 在沒有謹慎的考慮之前，請勿將不受信任的 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 延伸項目外掛至您的程式碼。 這個做法適用於服務實作中使用的所有延伸項目。 WCF 不會區分使用擴充點插入的應用程式代碼和外部程式碼。  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>可能需要調整 Kerberos 權杖的大小上限  
- 如果用戶端是許多群組的成員 (大約 900 個群組，不過實際數目會因群組而有所不同)，當訊息標頭的區塊超過 64 KB 時，可能會發生問題。 在這種情況下，您可以增加最大的 Kerberos 權杖大小，如 Microsoft 支援服務文章：「[Internet Explorer Kerberos 驗證因為連接到 IIS 的緩衝區不足而無法運作](https://go.microsoft.com/fwlink/?LinkId=89176)」中所述。 您也可能需要增加 WCF 訊息大小上限，以容納較大的 Kerberos 權杖。  
+ 如果用戶端是許多群組的成員 (大約 900 個群組，不過實際數目會因群組而有所不同)，當訊息標頭的區塊超過 64 KB 時，可能會發生問題。 在此情況下，您可以增加 Kerberos 權杖大小的上限。 您也可能需要增加 WCF 訊息大小上限，以容納較大的 Kerberos 權杖。  
   
 ## <a name="autoenrollment-results-in-multiple-certificates-with-same-subject-name-for-machine"></a>自動註冊將使電腦中的多個憑證具有相同的主體名稱  
  自動*註冊*是 Windows Server 2003 自動為憑證註冊使用者和電腦的功能。 當電腦在需要啟用功能的需求上開啟時，就會自動建立具有預期用戶端驗證用途的 X.509 憑證，而每當新電腦加入網路時，也會將此憑證插入本機電腦的「個人」憑證存放區。 不過，自動註冊會對在快取中建立的所有憑證，都使用同樣的主體名稱。  
@@ -61,7 +61,7 @@ ms.locfileid: "75346686"
   
  若要減輕此問題，請在[\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)上使用更精確的搜尋準則，以參考要使用的確切憑證。 例如，請使用 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 選項，並依照其唯一指紋 (雜湊) 指定憑證。  
   
- 如需自動註冊功能的詳細資訊，請參閱[Windows Server 2003 中的憑證自動註冊](https://go.microsoft.com/fwlink/?LinkId=95166)。  
+ 如需自動註冊功能的詳細資訊，請參閱[Windows Server 2003 中的憑證自動註冊](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc778954(v%3dws.10))。  
   
 ## <a name="last-of-multiple-alternative-subject-names-used-for-authorization"></a>最後幾個用於授權的多個替代主體名稱  
  在少數情況下，當 X.509 憑證包含多個替代主體名稱，而且您使用替代主體名稱進行授權時，授權可能會失敗。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 804e22c79c328a2ae96d8f1cb817d0aea2b0c25d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544722"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964585"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>設定 WS-不可部分完成的交易支援
 
@@ -59,7 +59,7 @@ WS-AT 通訊協定服務需要系統管理員明確授權個別帳戶，才能�
 
 這個程序需要 MMC 憑證嵌入式管理單元。 依序開啟 [開始]、[執行] 功能表，並在輸入方塊中輸入 "mmc" 然後按下 [確定]，即可存取嵌入式管理單元。 然後，在 [**主控台**1] 視窗中，流覽至 [檔案] **/[新增-移除**] 嵌入式管理單元，按一下 [新增]，然後從 [**可用的獨立嵌入式管理單元**] 清單中選擇 [**憑證**]。 最後，選取 [要管理的**電腦帳戶**]，然後按一下 **[確定]** 。 [**憑證**] 節點會出現在嵌入式管理單元主控台中。
 
-您必須已擁有必要的憑證，才能建立信任。 若要瞭解如何在執行下列步驟之前建立和安裝新憑證，請參閱[如何：在開發期間于 WCF 中建立和安裝暫存用戶端憑證](https://go.microsoft.com/fwlink/?LinkId=158925)。
+您必須已擁有必要的憑證，才能建立信任。 若要瞭解如何在執行下列步驟之前建立和安裝新憑證，請參閱[如何：在開發期間于 WCF 中建立和安裝暫存用戶端憑證](https://docs.microsoft.com/previous-versions/msp-n-p/ff650751(v=pandp.10))。
 
 1. 在電腦 A 上，使用 MMC 憑證嵌入式管理單元將現有的憑證 (certA) 匯入 LocalMachine\MY (個人節點) 和 LocalMachine\ROOT 存放區 (受信任的根憑證授權單位節點)。 若要將憑證匯入特定節點，請以滑鼠右鍵按一下節點，然後選擇 [**所有工作/匯入**]。
 

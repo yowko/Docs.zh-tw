@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 69f2724182f83d507f749a150a8d006a4e0f2192
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bf1bda5f1a2e1f0dfa0cc034c293f448cca2bd32
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838061"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964475"
 ---
 # <a name="choosing-a-transport"></a>選擇傳輸
 本主題討論在 Windows Communication Foundation （WCF）中所包含的三個主要傳輸中選擇的準則： HTTP、TCP 和具名管道。 WCF 也包含訊息佇列（也稱為 MSMQ）傳輸，但本檔並未涵蓋訊息佇列。  
@@ -26,7 +26,7 @@ ms.locfileid: "74838061"
  本節將說明選擇這三種主要傳輸其中之一的主要原因，包括進行選擇的詳細決策圖表。  
   
 ### <a name="when-to-use-http-transport"></a>使用 HTTP 傳輸的時機  
- HTTP 是用戶端和伺服器之間的要求/回應通訊協定。 最常用的應用程式是由使用 Web 伺服器進行通訊的 Web 瀏覽器用戶端所組成的。 用戶端會將要求傳送至伺服器，接聽用戶端要求訊息。 當伺服器收到要求時，會傳回一個回應，其中包含要求的狀態。 如果成功，會傳回選擇性資料 (例如網頁、錯誤訊息或其他資訊)。 如需 HTTP 通訊協定的詳細資訊，請參閱[HTTP-超文字傳輸通訊協定](https://go.microsoft.com/fwlink/?LinkId=94858)。  
+ HTTP 是用戶端和伺服器之間的要求/回應通訊協定。 最常用的應用程式是由使用 Web 伺服器進行通訊的 Web 瀏覽器用戶端所組成的。 用戶端會將要求傳送至伺服器，接聽用戶端要求訊息。 當伺服器收到要求時，會傳回一個回應，其中包含要求的狀態。 如果成功，會傳回選擇性資料 (例如網頁、錯誤訊息或其他資訊)。 如需 HTTP 通訊協定的詳細資訊，請參閱[HTTP-超文字傳輸通訊協定](https://www.w3.org/Protocols/)。  
   
  HTTP 通訊協定不是以連線為基礎，一旦傳送回應，便不會維護狀態。 若要處理多頁異動，應用程式必須持續必要的狀態。  
   

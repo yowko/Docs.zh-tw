@@ -5,12 +5,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 27a7cbb1490f42811c79778382063980f3828395
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714680"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964081"
 ---
 # <a name="static-constructors-c-programming-guide"></a>靜態建構函式 (C# 程式設計手冊)
 靜態建構函式用來初始化任何 [static](../../language-reference/keywords/static.md) 資料，或執行只需要執行一次的特定動作。 在建立第一個執行個體或參考任何靜態成員之前，會自動進行呼叫。  
@@ -32,7 +32,7 @@ ms.locfileid: "75714680"
   
 - 系統會在建立第一個執行個體或參考任何靜態成員之前，自動呼叫靜態建構函式來初始化 [class](../../language-reference/keywords/class.md)。 靜態建構函式會在執行個體建構函式之前執行。 請注意，當靜態方法指派給事件時，會呼叫型別的靜態建構函式；或者指派時會叫用委派。 如果靜態欄位變數初始設定式存在於靜態建構函式的類別中，它們會按照出現的文字順序執行，緊接著執行靜態建構函式。
 
-- 如果您不提供靜態建構函式來初始化靜態欄位，則所有靜態欄位都會初始化為其預設值，如[預設值表格](../../language-reference/keywords/default-values-table.md)中所列。 
+- 如果您未提供靜態的函式來初始化靜態欄位，所有靜態欄位都會初始化為其預設值，如[預設的C#類型值](../../language-reference/builtin-types/default-values.md)中所列。
   
 - 如果靜態建構函式擲回例外狀況，執行階段不會叫用它第二次，而類型會在執行程式的應用程式定義域的存留期內保持未初始化。 在多數情況下，當靜態建構函示無法具現化型別時，或靜態建構函式內出現未處理的例外狀況時，會擲回 <xref:System.TypeInitializationException> 例外狀況。 對於在原始程式碼中未明確定義的隱含靜態建構函式，進行疑難排解可能需要檢查中繼語言 (IL) 程式碼。
 

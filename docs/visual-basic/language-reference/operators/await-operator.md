@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b5943e509bb850abc6c74e1b97ccd5fb0038f1e0
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712355"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964326"
 ---
 # <a name="await-operator-visual-basic"></a>Await 運算子 (Visual Basic)
 
@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 `Await` 運算式或陳述式不會封鎖其執行所在的執行緒。 但是它會造成編譯器將 `Await` 運算式之後的其餘非同步方法註冊為所等候工作的接續。 控制權接著會返回非同步方法的呼叫端。 當工作完成時，它會叫用其接續，並從中斷處繼續執行非同步方法。
 
-`Await` 運算式可能只會在 `Async` 修飾詞所標示之立即封入方法或 Lambda 運算式主體中發生。 *Await*一詞僅作為該內容中的關鍵字。 在其他內容中，它會解譯為識別項。 在非同步方法或 lambda 運算式中，`Await` 運算式不能出現在查詢運算式中、Try 的 `catch` 或 `finally` 區塊中。 [Catch 。Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)語句，在 `For` 或 `For Each` 迴圈的迴圈控制變數運算式中，或在[SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md)語句的主體中。
+`Await` 運算式可能只會在 `Async` 修飾詞所標示之立即封入方法或 Lambda 運算式主體中發生。 *Await*一詞僅作為該內容中的關鍵字。 在其他內容中，它會解譯為識別項。 在 `Async` 方法或 lambda 運算式中，`Await` 運算式不能出現在查詢運算式中、Try 的 `Catch` 或 `Finally` 區塊中。 [Catch 。Finally 語句](../statements/try-catch-finally-statement.md)，在 `For` 或 `For Each` 迴圈的迴圈控制變數運算式中，或在[SyncLock](../statements/synclock-statement.md)語句的主體中。
 
 ## <a name="exceptions"></a>例外狀況
 

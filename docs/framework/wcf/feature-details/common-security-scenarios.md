@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
-ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 578ec2d7d5abe1285007ad22d8bacd69e695b1d3
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857567"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964274"
 ---
 # <a name="common-security-scenarios"></a>常見的安全性案例
 本章節中的主題列出一些可能的用戶端和服務安全性組態。 組態會視一些因素而改變。 例如，服務或用戶端是否在內部網路，或安全性是由 Windows 或傳輸 (例如 HTTPS) 所提供。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [沒有安全保障的網際網路用戶端與服務](../../../../docs/framework/wcf/feature-details/internet-unsecured-client-and-service.md)  
  公開、不安全的用戶端與服務範例。  
   
  [沒有安全保障的內部網路用戶端與服務](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
- 基本 Windows Communication Foundation (WCF) 服務開發提供安全的私人網路，以 WCF 應用程式的相關資訊。  
+ 已開發的基本 Windows Communication Foundation （WCF）服務，可提供安全的私人網路資訊給 WCF 應用程式。  
   
  [使用基本驗證的傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  應用程式允許用戶端使用自訂驗證登入。  
@@ -34,7 +34,7 @@ ms.locfileid: "61857567"
  顯示由憑證保護的用戶端和服務。  
   
  [匿名用戶端的訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- 顯示用戶端與受保護的 WCF 訊息安全性的服務。  
+ 顯示受 WCF 訊息安全性保護的用戶端和服務。  
   
  [使用者名稱用戶端的訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  用戶端是 Windows Forms 應用程式，允許用戶端使用網域使用者名稱和密碼登入。  
@@ -65,11 +65,11 @@ ms.locfileid: "61857567"
   
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
- [安全性](../../../../docs/framework/wcf/feature-details/security.md)  
+ [Security](../../../../docs/framework/wcf/feature-details/security.md)  
   
  [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
   
- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
  [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "61857567"
   
  [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

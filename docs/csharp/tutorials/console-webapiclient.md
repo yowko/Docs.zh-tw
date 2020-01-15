@@ -3,12 +3,12 @@ title: 使用 .NET Core 來建立 REST 用戶端
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 776d0ca65944e943c1c5114f95801c20d31a2b74
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9478966598a9aaa1e9f592b72afce8f878a38abf
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900742"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964413"
 ---
 # <a name="rest-client"></a>REST 用戶端
 
@@ -38,7 +38,7 @@ ms.locfileid: "75900742"
 
 第一個步驟是建立新的應用程式。 請開啟命令提示字元，然後為您的應用程式建立新目錄。 使該目錄成為目前的目錄。 在主控台視窗中輸入下列命令：
 
-```console
+```dotnetcli
 dotnet new console --name WebApiClient
 ```
 

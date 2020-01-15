@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7d027a67e533cb1ed7b2cea38112b4f585bf5fbc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: faab6ac57629db11c60ee5b563ea95ebb90016dd
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714635"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964364"
 ---
 # <a name="using-constructors-c-programming-guide"></a>使用建構函式 (C# 程式設計手冊)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75714635"
   
  如需詳細資訊，請參閱 [私用建構函式](./private-constructors.md)。  
   
- [結構](../../language-reference/keywords/struct.md)型別的建構函式與類別建構函式相似，但 `structs` 無法包含明確的無參數建構函式，因為編譯器會自動提供一個。 此建構函式會將 `struct` 中的每個欄位都初始化為預設值。 如需詳細資訊，請參閱[預設值表](../../language-reference/keywords/default-values-table.md)。 但是，這個無參數建構函式只會在使用 `new` 具現化 `struct` 時叫用。 例如，此程式碼使用 <xref:System.Int32> 的無參數建構函式，因此您可以保證該整數已進行初始化：  
+ [結構](../../language-reference/keywords/struct.md)型別的建構函式與類別建構函式相似，但 `structs` 無法包含明確的無參數建構函式，因為編譯器會自動提供一個。 此函式會將 `struct` 中的每個欄位初始化為[預設值](../../language-reference/builtin-types/default-values.md)。 但是，這個無參數建構函式只會在使用 `new` 具現化 `struct` 時叫用。 例如，此程式碼使用 <xref:System.Int32> 的無參數建構函式，因此您可以保證該整數已進行初始化：  
   
 ```csharp  
 int i = new int();  

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d56da60f174933af789a6abd7d8aa90f3f29d9c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1ea7680d092a4270b8c0969c50db8accf7c23d49
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344620"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963300"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>HOW TO：使用 SSL 憑證設定連接埠
 使用傳輸安全性的 <xref:System.ServiceModel.WSHttpBinding> 類別建立自我裝載的 Windows Communication Foundation （WCF）服務時，您也必須使用 x.509 憑證設定埠。 如果您沒有建立自我裝載的服務，可以將您的服務裝載在 Internet Information Services (IIS) 上。 如需詳細資訊，請參閱[HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
   
  若要設定連接埠，使用的工具取決於電腦上執行的作業系統。  
   
- 如果您執行的是 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，請使用 Httpcfg.exe 工具。 使用 Windows Server 2003 時，會安裝此工具。 有了 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以在[WINDOWS XP Service Pack 2 支援工具](https://go.microsoft.com/fwlink/?LinkId=88606)下載此工具。 如需詳細資訊，請參閱[Httpcfg.exe 總覽](https://go.microsoft.com/fwlink/?LinkId=88605)。 [Windows 支援工具檔](https://go.microsoft.com/fwlink/?LinkId=94840)會說明 HTTPcfg.exe 工具的語法。  
+ 如果您執行的是 Windows Server 2003 或 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，請使用 Httpcfg.exe 工具。 使用 Windows Server 2003 時，會安裝此工具。 有了 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]，您可以在[WINDOWS XP Service Pack 2 支援工具](https://go.microsoft.com/fwlink/?LinkId=88606)下載此工具。 如需詳細資訊，請參閱[Httpcfg.exe 總覽](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10))。 [Windows 支援工具檔](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10))會說明 HTTPcfg.exe 工具的語法。  
   
  如果您執行的是 Windows Vista，請使用已安裝的 dism.exe 工具。  
   

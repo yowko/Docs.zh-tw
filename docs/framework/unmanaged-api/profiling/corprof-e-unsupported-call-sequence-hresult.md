@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: 4d835f749a33d21a13be307e1524671e36496899
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a0b117949190bcaffc334c208fff6e04a6a2c5bf
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440836"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964507"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT 是在 .NET Framework 版本2.0 中引進。 在兩種情況下，.NET Framework 4 會傳回此 HRESULT：  
@@ -67,7 +67,7 @@ CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT 是在 .NET Framework 版本2.0 中�
   
 - [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
   
- 如需詳細資訊，請參閱 CLR 分析 API 中[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://go.microsoft.com/fwlink/?LinkId=169156)的專案。  
+ 如需詳細資訊，請參閱  
   
 ## <a name="triggering-garbage-collections"></a>觸發垃圾收集  
  此案例牽涉到在回呼方法內執行的分析工具（例如，其中一個 `ICorProfilerCallback` 方法），這會禁止垃圾收集。 如果分析工具嘗試呼叫可能會觸發垃圾收集的參考方法（例如，`ICorProfilerInfo` 介面上的方法），則資訊方法會失敗，並產生 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  

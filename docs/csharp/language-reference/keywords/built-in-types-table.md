@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1344b29a8751722e36eae58ece5242a2bcdb8a69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1836458972c453b733287e58e783f32892d27fde
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713739"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964380"
 ---
 # <a name="built-in-types-table-c-reference"></a>內建類型資料表 (C# 參考)
 
@@ -67,5 +67,5 @@ Console.WriteLine(doubleType.FullName);
 - [C# 關鍵字](index.md)
 - [實值型別](value-types.md)
 - [參考型別](reference-types.md)
-- [預設值表](default-values-table.md)
-- [dynamic](../builtin-types/reference-types.md)
+- [類型的C#預設值](../builtin-types/default-values.md)
+- [dynamic](../builtin-types/reference-types.md#the-dynamic-type)

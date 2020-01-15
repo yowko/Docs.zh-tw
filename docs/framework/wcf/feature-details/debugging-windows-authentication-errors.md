@@ -8,17 +8,17 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 52e968706ef4ca703a26e613e681cff3c30ba181
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 45e4926905bbf3b5a24af15de153afc7bd2a4823
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838022"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964561"
 ---
 # <a name="debugging-windows-authentication-errors"></a>偵錯 Windows 驗證錯誤
 當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當 SSPI 層發生安全性錯誤時，它們會由 Windows Communication Foundation （WCF）來呈現。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
   
- 如需 Kerberos 通訊協定的總覽，請參閱[Kerberos 說明](https://go.microsoft.com/fwlink/?LinkID=86946);如需 SSPI 的總覽，請參閱[sspi](https://go.microsoft.com/fwlink/?LinkId=88941)。  
+ 如需 Kerberos 通訊協定的總覽，請參閱[Kerberos 說明](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10));如需 SSPI 的總覽，請參閱[sspi](/windows/win32/secauthn/sspi)。  
   
  對於 Windows 驗證，WCF 通常會使用*Negotiate*安全性支援提供者（SSP），這會在用戶端和服務之間執行 Kerberos 相互驗證。 如果 Kerberos 通訊協定無法使用，依預設，WCF 會回到 NT LAN Manager （NTLM）。 不過，您可以將 WCF 設定為僅使用 Kerberos 通訊協定（並在無法使用 Kerberos 的情況下擲回例外狀況）。 您也可以設定 WCF 使用 Kerberos 通訊協定的受限形式。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "74838022"
   
  在負載平衡的使用案例 (例如 Web 伺服陣列與 Web 處理序區) 中，常見的作法是為每一個應用程式定義一個唯一的帳戶、指派一個 SPN 給該帳戶，並且確保應用程式的所有服務都以該帳戶執行。  
   
- 如果您要取得服務帳戶的 SPN，您必須是 Active Directory 網域的管理員。 如需詳細資訊，請參閱[Windows 的 Kerberos 技術補充](https://go.microsoft.com/fwlink/?LinkID=88330)。  
+ 如果您要取得服務帳戶的 SPN，您必須是 Active Directory 網域的管理員。 如需詳細資訊，請參閱[Windows 的 Kerberos 技術補充](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10))。  
   
 #### <a name="kerberos-protocol-direct-requires-the-service-to-run-under-a-domain-machine-account"></a>Kerberos 通訊協定 Direct 要求使用網域電腦帳戶來執行服務。  
  當 `ClientCredentialType` 屬性設定為 `Windows`，而且 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 屬性設定為 `false` 時，便會發生這種情況，如下列程式碼所示。  

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: ad1fb7d289dea3396b4edb4d3b3e9fb7fb1891e3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 204aa9ce86e8798c1f2d8de664f53ad2a86555de
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972414"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964782"
 ---
-# <a name="how-to-host-a-wcf-service-in-iis"></a>作法：在 IIS 中裝載 WCF 服務
-本主題概述建立裝載于 Internet Information Services （IIS）中的 Windows Communication Foundation （WCF）服務所需的基本步驟。 本主題假設您熟悉 IIS，而且了解如何使用 IIS 管理工具建立與管理 IIS 應用程式。 如需 IIS 的詳細資訊，請參閱[Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449)。 在 IIS 環境中執行的 WCF 服務會充分利用 IIS 的功能，例如進程回收、閒置關機、進程健康狀態監控，以及訊息型啟用。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 IIS 裝載只能和 HTTP 傳輸一起使用。  
+# <a name="how-to-host-a-wcf-service-in-iis"></a>HOW TO：在 IIS 中裝載 WCF 服務
+本主題概述建立裝載于 Internet Information Services （IIS）中的 Windows Communication Foundation （WCF）服務所需的基本步驟。 本主題假設您熟悉 IIS，而且了解如何使用 IIS 管理工具建立與管理 IIS 應用程式。 如需 IIS 的詳細資訊，請參閱[Internet Information Services](https://www.iis.net/)。 在 IIS 環境中執行的 WCF 服務會充分利用 IIS 的功能，例如進程回收、閒置關機、進程健康狀態監控，以及訊息型啟用。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 IIS 裝載只能和 HTTP 傳輸一起使用。  
   
  如需 WCF 和 ASP.NET 如何互動的詳細資訊，請參閱[Wcf 服務和 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。 如需設定安全性的詳細資訊，請參閱[安全性](../../../../docs/framework/wcf/feature-details/security.md)。  
   
@@ -21,11 +21,11 @@ ms.locfileid: "70972414"
   
 ### <a name="to-create-a-service-hosted-by-iis"></a>若要建立 IIS 裝載的服務  
   
-1. 確認您的電腦上已安裝 IIS 且正在執行中。 如需安裝和設定 IIS 的詳細資訊，請參閱[安裝和設定 iis 7.0](https://go.microsoft.com/fwlink/?LinkID=132128)  
+1. 確認您的電腦上已安裝 IIS 且正在執行中。 如需安裝和設定 IIS 的詳細資訊，請參閱[安裝和設定 iis 7.0](https://docs.microsoft.com/iis/install/installing-iis-7/installing-necessary-iis-components-on-windows-vista)  
   
 2. 為您的應用程式檔建立名為 "IISHostedCalcService" 的新資料夾，確認 ASP.NET 可存取資料夾的內容，並使用 IIS 管理工具來建立實際位於此應用程式目錄中的新 IIS 應用程式。 建立應用程式目錄的別名時，請使用 "IISHostedCalc"。  
   
-3. 在應用程式目錄中建立名為 "service.svc" 的新檔案。 新增下列@ServiceHost專案以編輯此檔案。  
+3. 在應用程式目錄中建立名為 "service.svc" 的新檔案。 藉由新增下列 @ServiceHost 元素來編輯此檔案。  
   
    ```
    <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService"%>
@@ -75,10 +75,10 @@ ms.locfileid: "70972414"
  [!code-vb[C_HowTo_HostInIIS#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostiniis/vb/source.vb#1)] 
  [!code-xml[c_HowTo_HostInIIS#100](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostiniis/common/web.config#100)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在 Internet Information Services 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)
 - [裝載服務](../../../../docs/framework/wcf/hosting-services.md)
 - [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [Security](../../../../docs/framework/wcf/feature-details/security.md)
-- [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server AppFabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

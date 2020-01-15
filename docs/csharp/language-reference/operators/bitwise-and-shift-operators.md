@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4e4dbe085b11751416f69c9fa7f790f18a68f5d7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345334"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964366"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位元與移位運算子 (C# 參考)
 
@@ -60,7 +60,7 @@ ms.locfileid: "75345334"
 
 ## <a name="left-shift-operator-"></a>左移運算子 \<\<
 
-`<<` 運算子會將其左邊運算元左移右邊運算元所定義的位元數。
+`<<` 運算子會將其左邊的運算元向[右運算元所定義的位數](#shift-count-of-the-shift-operators)左移。
 
 左移作業會捨棄位於結果型別範圍外的高位位元，並將低位的空位元位置設為零，如下列範例所示：
 
@@ -74,7 +74,7 @@ ms.locfileid: "75345334"
 
 ## <a name="right-shift-operator-"></a>右移運算子 >>
 
-`>>` 運算子會將其右邊運算元左移右邊運算元所定義的位元數。
+`>>` 運算子會將其左邊的運算元向[右運算元所定義的位數](#shift-count-of-the-shift-operators)右移。
 
 右移作業會捨棄低位位元，如下列範例所示：
 
@@ -136,7 +136,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
-由於[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)的緣故，`op` 作業的結果可能不會隱含轉換成 `x` 的 `T` 類型。 在此情況下，如果 `op` 是預先定義的運算子，且作業結果可以明確轉換成 `x` 的 `T` 型別，則形式 `x op= y` 的複合指派運算式相等於 `x = (T)(x op y)`，唯一的不同在於 `x` 只會評估一次。 下列範例示範了該行為：
+由於[數值升階](~/_csharplang/spec/expressions.md#numeric-promotions)的緣故，`op` 作業結果可能無法隱含轉換成 `x` 的 `T` 型別。 在此情況下，如果 `op` 是預先定義的運算子，且作業結果可以明確轉換成 `x` 的 `T` 型別，則形式 `x op= y` 的複合指派運算式相等於 `x = (T)(x op y)`，唯一的不同在於 `x` 只會評估一次。 下列範例示範了該行為：
 
 [!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
@@ -169,6 +169,9 @@ x = x op y
 下列範例示範了該行為：
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+
+> [!NOTE]
+> 如上述範例所示，即使右邊運算元的值大於左邊運算元中的位數，移位作業的結果也可以是非零的。
 
 ## <a name="enumeration-logical-operators"></a>列舉邏輯運算子
 

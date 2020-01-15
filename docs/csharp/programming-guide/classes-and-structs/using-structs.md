@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: d85b11204eb1f1de3a95efc67054cdffc4c219e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714668"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964750"
 ---
 # <a name="using-structs-c-programming-guide"></a>使用結構（C#程式設計手冊）
 
@@ -21,7 +21,7 @@ ms.locfileid: "75714668"
 
 當您使用 [new](../../language-reference/operators/new-operator.md) 運算子建立結構物件時，不僅會建立物件，還會根據[建構函式的簽章](constructors.md#constructor-syntax)呼叫適當的建構函式。 不同於類別，結構不需要使用 `new` 運算子就能具現化。 在此案例下，不會有建構函式呼叫，因此配置會更有效率。 不過，欄位會維持未指派狀態，而且必須等到所有欄位都初始化後才能使用物件。 這包括無法透過屬性取得或設定值。
 
-如果您使用無參數的函式來具現化結構物件，則會根據[預設值](../../language-reference/keywords/default-values-table.md)來指派所有成員。
+如果您使用無參數的函式來具現化結構物件，則會根據[預設值](../../language-reference/builtin-types/default-values.md)來指派所有成員。
 
 撰寫具有結構參數的處理常式時，您必須明確初始化所有成員;否則，一或多個成員會維持未指派狀態，而且無法使用結構，因而產生編譯器錯誤[CS0171](../../misc/cs0171.md)。
 
