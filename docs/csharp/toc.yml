@@ -1358,14 +1358,14 @@
               href: language-reference/keywords/var.md
             - name: 非受控類型
               href: language-reference/builtin-types/unmanaged-types.md
+            - name: 預設值
+              href: language-reference/builtin-types/default-values.md
             - name: 類型的參考表
               items:
                 - name: 內建類型表
                   href: language-reference/keywords/built-in-types-table.md
                 - name: 實值型別表
                   href: language-reference/keywords/value-types-table.md
-                - name: 預設值表
-                  href: language-reference/keywords/default-values-table.md
                 - name: 格式化數值結果表
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: 修飾詞
