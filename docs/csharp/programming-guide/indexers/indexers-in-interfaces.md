@@ -1,17 +1,16 @@
 ---
 title: 介面中的索引子 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: 7f52df0283cf057c1cd6cc4fa87c0086da7e61d2
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 4ac51589ed1680f8484fde797c045d15beed3af9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253009"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712113"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>介面中的索引子 (C# 程式設計手冊)
 索引子可以宣告於 [interface](../../language-reference/keywords/interface.md) 上。 介面索引子的存取子在下列方面與[類別](../../language-reference/keywords/class.md)索引子的存取子不同：  
@@ -59,7 +58,7 @@ string ICitizen.this[int index]
   
  在 `ICitizen` 介面上實作索引子。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [索引子](./index.md)

@@ -1,24 +1,23 @@
 ---
 title: 多型 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: be075c358d9ca2c36b6d173fca983c16f6b0d78c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4f65082ad5094eb0aab28edeb06790a9af4019c6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970346"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714735"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多型 (C# 程式設計手冊)
 多型通常是指物件導向程式設計的第三個重要部分，其重要性僅次於封裝和繼承。 多型在希臘文中表示「多種形狀」，可分成下列兩方面：  
   
 - 在執行階段，衍生類別物件可視為方法參數和集合或陣列等位置中的基底類別物件。 發生此情況時，物件的宣告類型與其執行階段類型將不再相同。  
   
-- 基底類別可以定義和實作 [virtual](../../language-reference/keywords/virtual.md)「方法」，而衍生類別可以[覆寫](../../language-reference/keywords/override.md)這些方法，換句話說，衍生類別會提供自己的定義和實作。 在執行階段，當用戶端程式碼呼叫方法時，CLR 會查詢物件的執行階段類型，然後叫用虛擬方法的覆寫。 因此，在您的原始程式碼中，您可以在基底類別上呼叫方法，然後執行衍生類別版本的方法。  
+- 基類可能會定義和實作為[虛擬](../../language-reference/keywords/virtual.md)*方法*，而衍生類別可以覆[寫](../../language-reference/keywords/override.md)它們，這表示它們會提供自己的定義和執行。 在執行階段，當用戶端程式碼呼叫方法時，CLR 會查詢物件的執行階段類型，然後叫用虛擬方法的覆寫。 因此，在您的原始程式碼中，您可以在基底類別上呼叫方法，然後執行衍生類別版本的方法。  
   
  虛擬方法可讓您以一致的方式來使用相關物件群組。 例如，假設您有一個繪圖應用程式，可讓使用者在繪圖介面上建立各種圖形。 您不知道使用者將在編譯時期建立哪一種圖形。 但是，應用程式必須追蹤所建立的所有不同圖形類型，並且必須根據使用者滑鼠動作來更新圖形。 您可以使用多型，分兩個基本步驟來解決這個問題：  
   
@@ -58,7 +57,7 @@ ms.locfileid: "73970346"
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
- 您仍然可以透過將衍生類別執行個體轉換成基底類別執行個體，從用戶端程式碼存取隱藏的基底類別成員。 例如:  
+ 您仍然可以透過將衍生類別執行個體轉換成基底類別執行個體，從用戶端程式碼存取隱藏的基底類別成員。 例如：  
   
  [!code-csharp[csProgGuideInheritance#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#19)]  
   
@@ -87,7 +86,7 @@ ms.locfileid: "73970346"
 > [!NOTE]
 > 建議虛擬成員使用 `base`，在其所擁有的實作中呼叫其基底類別實作。 允許發生基底類別行為，可讓衍生類別集中實作衍生類別的特定行為。 如果不呼叫基底類別實作，則衍生類別可自行決定是否要讓其行為與基底類別的行為相容。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
   
 - [使用 Override 和 New 關鍵字進行版本控制](./versioning-with-the-override-and-new-keywords.md)  
   
@@ -95,7 +94,7 @@ ms.locfileid: "73970346"
   
 - [如何覆寫 ToString 方法](./how-to-override-the-tostring-method.md)
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [繼承](./inheritance.md)

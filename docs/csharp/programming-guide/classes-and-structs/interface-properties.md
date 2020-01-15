@@ -1,17 +1,16 @@
 ---
 title: 介面屬性 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: fad674c6d56011afcccbe9ce2a88e7af411fe0a2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: ff892a35f4be6600c00bc0c72c2f789ef6eb4408
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579146"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705531"
 ---
 # <a name="interface-properties-c-programming-guide"></a>介面屬性 (C# 程式設計手冊)
 
@@ -53,7 +52,7 @@ Employee number: 211
 Employee name: Hazem Abolrous
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [屬性](./properties.md)

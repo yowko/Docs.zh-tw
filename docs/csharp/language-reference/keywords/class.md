@@ -1,6 +1,5 @@
 ---
 title: class 關鍵字 - C# 參考
-ms.custom: seodec18
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 0c4fc9645e43f23e340804b46bbe8a5faa19525d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922395"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713684"
 ---
 # <a name="class-c-reference"></a>類別 (C# 參考)
 
@@ -74,7 +73,7 @@ class TestClass
 
 - [結構](../../programming-guide/classes-and-structs/structs.md)
 
-- [列舉](../../programming-guide/enumeration-types.md)
+- [列舉](../builtin-types/enum.md)
 
 ## <a name="example"></a>範例
 
@@ -100,7 +99,7 @@ Console.Write(child1.name);   // Error
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

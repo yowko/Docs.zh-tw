@@ -1,17 +1,16 @@
 ---
 title: 成員 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: acd992cba67a79f2a63c28c1d9d9ac70e4f4d029
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 09802431d0a5954b67687e9878f572541eeaac79
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922150"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705505"
 ---
 # <a name="members-c-programming-guide"></a>成員 (C# 程式設計手冊)
 
@@ -19,7 +18,7 @@ ms.locfileid: "69922150"
   
  下表列出類別或結構可以包含的成員類型：  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |[欄位](./fields.md)|欄位是在類別範圍中宣告的變數。 欄位可以是內建的數字類型或其他類別的執行個體。 例如，行事曆類別可能包含目前日期的欄位。|  
 |[常數](./constants.md)|常數是其值在編譯階段設定且無法變更的欄位。|  
@@ -32,7 +31,7 @@ ms.locfileid: "69922150"
 |[完成項](./destructors.md)|在 C# 中很少使用完成項。 完成項是即將從記憶體中移除物件時，由執行階段執行引擎所呼叫的方法。 它們通常用來確保任何必須發行的資源有受到妥善處理。|  
 |[巢狀型別](./nested-types.md)|巢狀型別是在其他類型中宣告的類型。 如果某些類型包含物件，巢狀型別通常用於描述僅供該類型使用的這些物件。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別](./classes.md)

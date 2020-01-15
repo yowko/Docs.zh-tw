@@ -1,6 +1,5 @@
 ---
 title: 類別和結構 - C# 程式設計手冊
-ms.custom: seodec18
 description: 說明類別和結構 (structs) 在 C# 中的用途。
 ms.date: 01/17/2016
 helpviewer_keywords:
@@ -11,15 +10,15 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: c0b7e52cbbf0b49dee3598239f96e113ba929a80
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 301ba292010470208e92a225c1014bcb50497106
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922262"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714826"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>類別和結構 (C# 程式設計手冊)
-類別和結構是 .NET Framework 中一般型別系統的兩個基本建構。 每一個基本上都是封裝一組屬於相同邏輯單元之資料和行為的資料結構。 資料和行為是類別或結構的「成員」  ，它們包含類別或結構的方法、屬性和事件等，如本主題稍後所列。  
+類別和結構是 .NET Framework 中一般型別系統的兩個基本建構。 每一個基本上都是封裝一組屬於相同邏輯單元之資料和行為的資料結構。 資料和行為是類別或結構的「成員」，它們包含類別或結構的方法、屬性和事件等，如本主題稍後所列。  
   
  類別或結構宣告就像是用來在執行階段建立執行個體或物件的藍圖。 如果您定義稱為 `Person` 的類別或結構，`Person` 將會是型別的名稱。 如果您宣告並初始化型別 `Person` 的變數 `p`，`p` 即為 `Person` 的物件或執行個體。 您可以建立多個相同 `Person` 型別的執行個體，且每個執行個體在其屬性與欄位中都可以有不同的值。  
   
@@ -37,12 +36,12 @@ ms.locfileid: "69922262"
  [!code-csharp[csProgGuideObjects#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/class1.cs#1)]  
   
 ## <a name="encapsulation"></a>封裝  
- 「封裝」  有時被稱為物件導向程式設計的第一大支柱或原則。 根據封裝原則，類別或結構可以指定其各個成員針對類別或結構外部之程式碼的存取程度。 不應該在類別或組件之外使用的方法和變數，可隱藏以限制程式碼錯誤或惡意攻擊的可能性。  
+ 「封裝」有時被稱為物件導向程式設計的第一大支柱或原則。 根據封裝原則，類別或結構可以指定其各個成員針對類別或結構外部之程式碼的存取程度。 不應該在類別或組件之外使用的方法和變數，可隱藏以限制程式碼錯誤或惡意攻擊的可能性。  
   
  如需有關類別的詳細資訊，請參閱[類別](./classes.md)和[物件](./objects.md)。  
   
-### <a name="members"></a>成員  
- 所有的方法、欄位、常數、屬性和事件都必須在型別內宣告。這些便是該型別的「成員」  。 和部分其他語言不同，在 C# 中並沒有全域變數或方法。 即使是程式的進入點 (`Main` 方法)，也必須在類別或結構內宣告。 下列清單包含所有可能在類別或結構中宣告的各種成員。  
+### <a name="members"></a>Members  
+ 所有的方法、欄位、常數、屬性和事件都必須在型別內宣告。這些便是該型別的「成員」。 和部分其他語言不同，在 C# 中並沒有全域變數或方法。 即使是程式的進入點 (`Main` 方法)，也必須在類別或結構內宣告。 下列清單包含所有可能在類別或結構中宣告的各種成員。  
   
 - [欄位](./fields.md)  
   
@@ -64,11 +63,11 @@ ms.locfileid: "69922262"
   
 - [巢狀型別](./nested-types.md)  
   
-### <a name="accessibility"></a>協助工具選項  
- 有些方法和屬性必須從類別或結構以外的程式碼呼叫或存取，它們稱為「用戶端程式碼」  。 其他方法和屬性可能只會在類別或結構本身中使用。 請務必限制程式碼的可存取性，以確保只有目標用戶端程式碼可以存取。 您可以使用存取修飾詞 [public](../../language-reference/keywords/public.md)、[protected](../../language-reference/keywords/protected.md)、[internal](../../language-reference/keywords/internal.md)、[protected internal](../../language-reference/keywords/protected-internal.md)、[private](../../language-reference/keywords/private.md) 和 [private protected](../../language-reference/keywords/private-protected.md)，來指定用戶端程式碼可以存取您的類型和其成員的程度。 預設可存取性為 `private`。 如需詳細資訊，請參閱[存取修飾詞](./access-modifiers.md)。  
+### <a name="accessibility"></a>協助工具  
+ 有些方法和屬性必須從類別或結構以外的程式碼呼叫或存取，它們稱為「用戶端程式碼」。 其他方法和屬性可能只會在類別或結構本身中使用。 請務必限制程式碼的可存取性，以確保只有目標用戶端程式碼可以存取。 您可以使用存取修飾詞 [public](../../language-reference/keywords/public.md)、[protected](../../language-reference/keywords/protected.md)、[internal](../../language-reference/keywords/internal.md)、[protected internal](../../language-reference/keywords/protected-internal.md)、[private](../../language-reference/keywords/private.md) 和 [private protected](../../language-reference/keywords/private-protected.md)，來指定用戶端程式碼可以存取您的類型和其成員的程度。 預設可存取性為 `private`。 如需詳細資訊，請參閱[存取修飾詞](./access-modifiers.md)。  
   
 ### <a name="inheritance"></a>繼承  
- 類別 (而不是結構) 支援繼承的概念。 衍生自另一個類別 (「基底類別」  ) 的類別，會自動包含基底類別的所有 public、protected 和 internal 成員 (其建構函式和完成項除外)。 如需詳細資訊，請參閱[繼承](./inheritance.md)和[多型](./polymorphism.md)。  
+ 類別 (而不是結構) 支援繼承的概念。 衍生自另一個類別 (「基底類別」) 的類別，會自動包含基底類別的所有 public、protected 和 internal 成員 (其建構函式和完成項除外)。 如需詳細資訊，請參閱[繼承](./inheritance.md)和[多型](./polymorphism.md)。  
   
  類別可宣告為[抽象](../../language-reference/keywords/abstract.md)，這表示其一或多個方法沒有任何實作。 雖然抽象類別無法直接具現化，但是它們可以做為其他能提供遺失實作之類別的基底類別。 類別也可以宣告為[密封](../../language-reference/keywords/sealed.md)，以防止其他類別繼承它們。 如需詳細資訊，請參閱[抽象和密封類別以及類別成員](./abstract-and-sealed-classes-and-class-members.md)。  
   
@@ -97,11 +96,11 @@ ms.locfileid: "69922262"
  您可以透過建立其方法能以該方法屬於原始型別之方式呼叫的個別型別，在不必建立衍生類別的情況下「擴充」類別。 如需詳細資訊，請參閱[擴充方法](./extension-methods.md)。  
   
 ### <a name="implicitly-typed-local-variables"></a>隱含類型區域變數  
- 在類別或結構方法內，您可以使用隱含型別來指示編譯器在編譯時間判斷正確的型別。 如需詳細資訊，請參閱[隱含類型區域變數](./implicitly-typed-local-variables.md)。  
+ 在類別或結構方法內，您可以使用隱含型別來指示編譯器在編譯時間判斷正確的型別。 如需詳細資訊，請參閱[隱含型別區域變數](./implicitly-typed-local-variables.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)

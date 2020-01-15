@@ -1,6 +1,5 @@
 ---
 title: 索引子 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 02dc8c21b86438c801fb151d9f02a223b60d6197
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c00f506a682ec5d9805537b80159fd41d2174b67
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423225"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75702944"
 ---
 # <a name="indexers-c-programming-guide"></a>索引子 (C# 程式設計手冊)
 
@@ -46,7 +45,7 @@ ms.locfileid: "73423225"
   
 - [this](../../language-reference/keywords/this.md) 關鍵字是用來定義索引子。  
   
-- [value](../../language-reference/keywords/value.md) 關鍵字是用來定義 `set` 索引子要指派的值。  
+- [value`set` 關鍵字是用來定義 ](../../language-reference/keywords/value.md) 索引子要指派的值。  
   
 - 索引子不一定要由整數值編製索引。您可自行決定如何定義特定的查詢機制。  
   
@@ -66,9 +65,9 @@ ms.locfileid: "73423225"
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/classes.md#indexers)中的[索引子](/dotnet/csharp/language-reference/language-specification/introduction)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的[索引子](~/_csharplang/spec/classes.md#indexers)。 語言規格是 C# 語法及用法的限定來源。
   
 ## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
-- [內容](../classes-and-structs/properties.md)
+- [屬性](../classes-and-structs/properties.md)

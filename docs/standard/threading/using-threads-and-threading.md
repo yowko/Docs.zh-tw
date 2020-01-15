@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131503"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936848"
 ---
 # <a name="using-threads-and-threading"></a>使用執行緒和執行緒處理
 
@@ -28,11 +28,13 @@ ms.locfileid: "73131503"
 
 ## <a name="how-to-stop-a-thread"></a>如何：停止執行緒
 
-若要終止執行緒的執行，請使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法。 該方法會在叫用該方法的執行緒上引發 <xref:System.Threading.ThreadAbortException>。 如需詳細資訊，請參閱[終結執行緒](destroying-threads.md)。
+若要終止執行緒的執行，請使用 <xref:System.Threading.CancellationToken?displayProperty=nameWithType>。 它提供統一的方式來停止執行緒的合作。 如需詳細資訊，請參閱[受控執行緒中的取消作業](cancellation-in-managed-threads.md)。
 
-從 .NET Framework 4 開始，您可以使用 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 來合作取消執行緒。 如需詳細資訊，請參閱[受控執行緒中的取消作業](cancellation-in-managed-threads.md)。
+有時候，無法以合作方式停止執行緒，因為它會執行協力廠商程式碼，而不是針對合作取消所設計。 在此情況下，您可能會想要強制終止其執行。 若要強制終止執行執行緒，您可以在 .NET Framework 中使用 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法。 該方法會在叫用該方法的執行緒上引發 <xref:System.Threading.ThreadAbortException>。 如需詳細資訊，請參閱[終結執行緒](destroying-threads.md)。 .NET Core 不支援 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法。 如果您需要在 .NET Core 中強制終止協力廠商程式碼的執行，請在個別的進程中執行，並使用 <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>。
 
-使用 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> 方法讓呼叫的執行緒等待叫用該方法的執行緒終結。
+<xref:System.Threading.CancellationToken?displayProperty=nameWithType> 在 .NET Framework 4 之前無法使用。 若要停止舊版 .NET Framework 版本中的執行緒，您應該使用執行緒同步處理技術來手動執行合作取消。 例如，您可以 `shouldStop` 建立 volatile 布林值欄位，並使用它來要求要停止的執行緒所執行的程式碼。 如需詳細資訊， [volatile](../../csharp/language-reference/keywords/volatile.md)請參閱C# volatile in Reference 和 <xref:System.Threading.Volatile?displayProperty=nameWithType>。
+
+使用 <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> 方法，讓呼叫執行緒等候停止的執行緒終止。
 
 ## <a name="how-to-pause-or-interrupt-a-thread"></a>如何：暫停或插斷執行緒
 

@@ -2,23 +2,23 @@
 title: 使用 DataContractJsonSerializer 的獨立 JSON 序列化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 412da71617a8627c47e877a75770271d9a3cf180
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 39d3c0acd75ffd9a54c5e62a15487a2cd8c465cb
+ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976079"
+ms.lasthandoff: 01/12/2020
+ms.locfileid: "75904610"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>使用 DataContractJsonSerializer 的獨立 JSON 序列化
 
 > [!NOTE]
-> 本文是關於 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。 對於涉及序列化和還原序列化 JSON 的大部分案例，我們建議您在 system.string[命名空間](../../../standard/serialization/system-text-json-overview.md)中的工具。 
+> 本文是關於 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。 對於涉及序列化和還原序列化 JSON 的大部分案例，我們建議在 system.string[命名空間](../../../standard/serialization/system-text-json-overview.md)中的 api。 
 
 JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 JavaScript 程式碼而設計的資料格式。 這是在 Windows Communication Foundation （WCF）中建立的 ASP.NET AJAX 服務所使用的預設資料格式。
 
 此外，在未與 ASP.NET 整合的情況下建立 AJAX 服務時，也可以使用這個格式，在這種情況中，XML 是預設值，不過您也可以選擇 JSON。
 
-最後，如果您需要 JSON 支援但不想建立 AJAX 服務，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 可讓您直接將 .NET 物件序列化為 JSON 資料，以及將這類資料還原序列化為 .NET 型別的執行個體。 如需如何執行這項操作的說明，請參閱 [如何：序列化和還原序列化 JSON 資料](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)。
+最後，如果您需要 JSON 支援但不想建立 AJAX 服務，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 可讓您直接將 .NET 物件序列化為 JSON 資料，以及將這類資料還原序列化為 .NET 型別的執行個體。 如需如何執行這項操作的說明，請參閱[如何：序列化和還原序列化 JSON 資料](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)。
 
 使用 JSON 時，相同的 .NET 型別會受到支援，不過有少數的例外情形，如同 <xref:System.Runtime.Serialization.DataContractSerializer> 所支援的一樣。 如需支援的類型清單，請參閱[資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)。 其中包括大部分的基本型別、大部分的陣列和集合型別，以及使用 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute> 的複雜型別。
 
@@ -26,18 +26,18 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
 
 下表說明由序列化和還原序列化程序對應時，.NET 型別和 JSON/JavaScript 型別之間的對應關係。
 
-|.NET 型別|JSON/JavaScript|注意|
+|.NET 型別|JSON/JavaScript|注意事項|
 |----------------|----------------------|-----------|
-|所有數字型別，例如 <xref:System.Int32>、<xref:System.Decimal> 或 <xref:System.Double>|number|`Double.NaN`、`Double.PositiveInfinity` 和 `Double.NegativeInfinity` 等特殊值不受支援，並且會造成無效的 JSON。|
-|<xref:System.Enum>|number|請參閱本主題稍後的＜列舉與 JSON＞。|
+|所有數字型別，例如 <xref:System.Int32>、<xref:System.Decimal> 或 <xref:System.Double>|Number|`Double.NaN`、`Double.PositiveInfinity` 和 `Double.NegativeInfinity` 等特殊值不受支援，並且會造成無效的 JSON。|
+|<xref:System.Enum>|Number|請參閱本主題稍後的＜列舉與 JSON＞。|
 |<xref:System.Boolean>|Boolean|--|
-|<xref:System.String>、 <xref:System.Char>|String|--|
-|<xref:System.TimeSpan>、<xref:System.Guid>、<xref:System.Uri>|String|這些類型在 JSON 中的格式與 XML 相同（基本上是以 ISO 8601 持續時間格式的 TimeSpan，"12345678-ABCD-abcd-ABCD-1234567890AB" 格式和 URI 的 GUID 在其自然字串形式，例如 "http://www.example.com"）。 如需精確的資訊，請參閱[資料合約架構參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|
-|<xref:System.Xml.XmlQualifiedName>|String|格式為 "name:namespace" (第一個冒號前面的就是名稱)。 名稱或命名空間可能會遺失。 如果沒有命名空間，冒號也可以省略。|
+|<xref:System.String>、 <xref:System.Char>|字串|--|
+|<xref:System.TimeSpan>中， <xref:System.Guid>中， <xref:System.Uri>|字串|這些類型在 JSON 中的格式與 XML 相同（基本上是以 ISO 8601 持續時間格式的 TimeSpan，"12345678-ABCD-abcd-ABCD-1234567890AB" 格式和 URI 的 GUID 在其自然字串形式，例如 "http://www.example.com"）。 如需精確的資訊，請參閱[資料合約架構參考](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)。|
+|<xref:System.Xml.XmlQualifiedName>|字串|格式為 "name:namespace" (第一個冒號前面的就是名稱)。 名稱或命名空間可能會遺失。 如果沒有命名空間，冒號也可以省略。|
 |型別 <xref:System.Array> 的 <xref:System.Byte>|數字陣列|每個數字代表一個位元組值。|
 |<xref:System.DateTime>|DateTime 或字串|請參閱本主題稍後的＜日期/時間與 JSON＞。|
 |<xref:System.DateTimeOffset>|複雜類型|請參閱本主題稍後的＜日期/時間與 JSON＞。|
-|XML 和 ADO.NET 型別 (<xref:System.Xml.XmlElement>、<br /><br /> <xref:System.Xml.Linq.XElement>. <xref:System.Xml.XmlNode> 的陣列、<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>)。|String|請參閱本主題的＜XML 型別與 JSON＞一節。|
+|XML 和 ADO.NET 型別 (<xref:System.Xml.XmlElement>、<br /><br /> <xref:System.Xml.Linq.XElement>。 <xref:System.Xml.XmlNode> 的陣列、<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>)。|字串|請參閱本主題的＜XML 型別與 JSON＞一節。|
 |<xref:System.DBNull>|空的複雜型別|--|
 |集合、字典與陣列|陣列|請參閱本主題的＜集合、字典與陣列＞一節。|
 |複雜型別 (已套用 <xref:System.Runtime.Serialization.DataContractAttribute> 或 <xref:System.SerializableAttribute>)|複雜類型|資料成員成為 JavaScript 複雜類型的成員。|
@@ -75,7 +75,7 @@ XML 型別成為 JSON 字串。
 
 - 還有一些指定如何包裝 XML 的特殊規則。如需詳細資訊，請參閱本主題稍後的「進階資訊」一節。
 
-- 如果您要使用 ASP.NET AJAX 且不想在 JavaScript 中使用字串，希望改用 XML DOM，請在 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A><xref:System.ServiceModel.Web.WebGetAttribute>上將 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 屬性設定為 XML，或在 <xref:System.ServiceModel.Web.WebInvokeAttribute> 上將  屬性設定為 XML。
+- 如果您要使用 ASP.NET AJAX 且不想在 JavaScript 中使用字串，希望改用 XML DOM，請在 <xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A><xref:System.ServiceModel.Web.WebGetAttribute>上將 <xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> 屬性設定為 XML，或在 <xref:System.ServiceModel.Web.WebInvokeAttribute> 上將 屬性設定為 XML。
 
 ### <a name="collections-dictionaries-and-arrays"></a>集合、字典與陣列
 
@@ -293,6 +293,6 @@ WCF 和 ASP.NET AJAX 用戶端頁面所使用的 <xref:System.Runtime.Serializat
 
 序列化程式 XML 會編碼不是有效的 XML 名稱的索引鍵名稱。 例如，名稱為 "123" 的資料成員會有編碼的名稱，例如 "\_x0031\_\_x0032\_\_x0033\_"，因為 "123" 是不正確 XML 元素名稱（以數位開頭）。 有些在 XML 名稱中無效的國際字元集可能會引起類似的情況。 如需 JSON 處理之 XML 效果的說明，請參閱[json 與 XML 之間的對應](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [JSON 和其他資料傳輸格式的支援](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

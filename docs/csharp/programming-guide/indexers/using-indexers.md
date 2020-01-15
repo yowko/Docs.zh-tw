@@ -1,16 +1,15 @@
 ---
 title: 使用索引子 - C# 程式設計指南
-ms.custom: seodec18
 ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 4411fe0ffe7dc136b4e74adeba3e5596af3aa1db
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: bf290681395460bec10be45c4eaa1f165e453caf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589435"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75702892"
 ---
 # <a name="using-indexers-c-programming-guide"></a>使用索引子 (C# 程式設計手冊)
 
@@ -73,7 +72,7 @@ C# 不會將索引子參數類型限制為整數。 例如，搭配使用字串�
   
 - 將 [get](../../language-reference/keywords/get.md) 與 [set](../../language-reference/keywords/set.md) 存取子的存取範圍設定為合理限制。 這對 `set` 存取子特別重要。 如需詳細資訊，請參閱[限制存取子的存取範圍](../classes-and-structs/restricting-accessor-accessibility.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [索引子](./index.md)

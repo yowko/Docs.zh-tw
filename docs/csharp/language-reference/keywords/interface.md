@@ -1,18 +1,17 @@
 ---
 title: interface - C# 參考
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - interface_CSharpKeyword
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 058d6b96e96a3237ebac2ca079807fd154715d68
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 19ca4b8a490dc85de0d0e2be6d3ca8fa7982fc14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608658"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713443"
 ---
 # <a name="interface-c-reference"></a>interface (C# 參考)
 
@@ -52,7 +51,7 @@ ms.locfileid: "69608658"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
@@ -61,6 +60,6 @@ ms.locfileid: "69608658"
 - [介面](../../programming-guide/interfaces/index.md)
 - [使用屬性](../../programming-guide/classes-and-structs/using-properties.md)
 - [使用索引子](../../programming-guide/indexers/using-indexers.md)
-- [class](class.md)
+- [Class - 類別](class.md)
 - [struct](struct.md)
 - [介面](../../programming-guide/interfaces/index.md)

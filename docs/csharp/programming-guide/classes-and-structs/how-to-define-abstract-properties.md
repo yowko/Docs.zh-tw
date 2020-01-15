@@ -1,17 +1,16 @@
 ---
 title: 如何定義抽象屬性-程式C#設計指南
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], abstract
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
-ms.openlocfilehash: 1b6dc1dfe932ffff161b0eef667bd35a75b66cf9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c46f36133b68a550a17cf882844fd2481eee8851
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970996"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705609"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>如何定義抽象屬性（C#程式設計手冊）
 下例示範如何定義[抽象](../../language-reference/keywords/abstract.md)屬性。 抽象屬性宣告不提供屬性存取子實作 -- 它會宣告類別支援屬性，但保留衍生類別的存取子實作。 下例示範如何實作繼承自基底類別的抽象屬性。  
@@ -35,7 +34,7 @@ ms.locfileid: "73970996"
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   
-- 屬性的修飾詞是放在屬性宣告中。 例如:  
+- 屬性的修飾詞是放在屬性宣告中。 例如：  
   
     ```csharp  
     public abstract double Area  
@@ -53,7 +52,7 @@ ms.locfileid: "73970996"
   
  [!code-csharp[csProgGuideInheritance#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#3)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)

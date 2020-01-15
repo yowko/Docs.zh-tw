@@ -1,22 +1,21 @@
 ---
 title: 使用屬性 - C# 程式設計手冊
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 3b10c24645dad842f498fb49c60b3272829cce29
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579167"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705401"
 ---
 # <a name="using-properties-c-programming-guide"></a>使用屬性 (C# 程式設計手冊)
 
-屬性會合併欄位和方法的各個層面。 對物件的使用者而言，屬性會呈現為欄位，而存取屬性需要相同的語法。 對於類別的實作器而言，屬性是一或兩個程式碼區塊，代表 [get](../../language-reference/keywords/get.md) 存取子和 (或) [set](../../language-reference/keywords/set.md) 存取子。 讀取屬性時，會執行 `get` 存取子的程式碼區塊；指派屬性的新值時，會執行 `set` 存取子的程式碼區塊。 沒有 `set` 存取子的屬性會視為唯讀。 沒有 `get` 存取子的屬性則視為唯寫。 具有這兩個存取子的屬性是讀寫。
+屬性會合併欄位和方法的各個層面。 對物件的使用者而言，屬性會呈現為欄位，而存取屬性需要相同的語法。 對於類別的實作器而言，屬性是一或兩個程式碼區塊，代表 [get](../../language-reference/keywords/get.md) 存取子和 (或) [set](../../language-reference/keywords/set.md) 存取子。 讀取屬性時，會執行 `get` 存取子的程式碼區塊；指派屬性的新值時，會執行 `set` 存取子的程式碼區塊。 沒有 `set` 存取子的屬性會視為唯寫。 沒有 `get` 存取子的屬性則視為唯寫。 具有這兩個存取子的屬性是讀寫。
 
 與欄位不同，屬性不會分類為變數。 因此，您無法將屬性傳遞為 [ref](../../language-reference/keywords/ref.md) 或 [out](../../language-reference/keywords/out-parameter-modifier.md) 參數。
 
@@ -50,7 +49,7 @@ ms.locfileid: "72579167"
 
 [!code-csharp[csProgGuideProperties#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#11)]
 
-在先前的程式碼區段中，如果您未將值指派給 `Name` 屬性，它會傳回 `NA` 的值。
+在先前的程式碼區段中，如果您未將值指派給 `Name` 屬性，它會傳回 `NA`的值。
 
 ## <a name="the-set-accessor"></a>set 存取子
 
@@ -107,7 +106,7 @@ ms.locfileid: "72579167"
 
 [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
 - [屬性](properties.md)

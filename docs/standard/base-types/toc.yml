@@ -38,10 +38,6 @@
               href: how-to-define-and-use-custom-numeric-format-providers.md
             - name: 作法：反覆存取日期和時間值
               href: how-to-round-trip-date-and-time-values.md
-            - name: 作法：將使用者輸入 Web 控制項的數值轉換成數字
-              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-            - name: 作法：對 Web 使用者顯示當地語系化的日期和時間資訊
-              href: how-to-display-localized-date-and-time-information-to-web-users.md
             - name: 作法：在日期與時間值中顯示毫秒
               href: how-to-display-milliseconds-in-date-and-time-values.md
             - name: 作法：在非西曆中顯示日期

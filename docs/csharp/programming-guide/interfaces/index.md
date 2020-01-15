@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: HT
+ms.openlocfilehash: 43e37dc4b0977542add05c8cc13e2d7fa47b19bf
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714615"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937496"
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 
@@ -22,7 +22,7 @@ ms.locfileid: "75714615"
   
  [!code-csharp[csProgGuideInheritance#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#47)]  
 
-結構的名稱必須是有效的 C# [識別碼名稱](../inside-a-program/identifier-names.md)。 依慣例，介面名稱的開頭是大寫的|capital `I`。
+介面的名稱必須是有效C#的[識別碼名稱](../inside-a-program/identifier-names.md)。 依慣例，介面名稱的開頭是大寫的|capital `I`。
 
 任何實作 <xref:System.IEquatable%601> 介面的類別或結構，必須包含 <xref:System.IEquatable%601.Equals%2A> 方法的定義，該方法符合介面指定的簽章。 如此一來，您可以倚賴實作 `IEquatable<T>` 的類別，以包含 `Equals` 方法，類別的執行個體可以使用該方法判斷它是否等於相同類別的另一個執行個體。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "75714615"
 - [方法](../classes-and-structs/methods.md)  
 - [多型](../classes-and-structs/polymorphism.md)  
 - [抽象和密封類別以及類別成員](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
-- [屬性](../classes-and-structs/properties.md)  
+- [Properties](../classes-and-structs/properties.md)  
 - [事件](../events/index.md)  
 - [索引子](../indexers/index.md)  
   

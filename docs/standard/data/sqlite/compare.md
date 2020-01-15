@@ -2,12 +2,12 @@
 title: 與 System.object 的比較
 ms.date: 12/13/2019
 description: 描述 Microsoft. Data Sqlite 和 system.string 程式庫之間的一些差異。
-ms.openlocfilehash: dee90c132b108f2c876c0d8becc1b02035a47b61
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 076bbc6f746cf9296c96ec73047397a21a3b2558
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447017"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900704"
 ---
 # <a name="comparison-to-systemdatasqlite"></a>與 System.object 的比較
 
@@ -38,7 +38,7 @@ connection.CreateFunction(
 
 ## <a name="data-types"></a>資料類型
 
-Microsoft. Sqlite 和 System.object 的最大差異在於資料類型的處理方式。 如[資料類型](types.md)中所述，Microsoft data sqlite 不會嘗試隱藏 Sqlite 的基礎 quirkiness，這可讓任何任一字元串指定為數據行類型，而且只有四種基本類型：整數、實數、文字及 BLOB。
+Microsoft. Sqlite 和 System.object 的最大差異在於資料類型的處理方式。 如[資料類型](types.md)中所述，Microsoft. Sqlite 不會嘗試隱藏 Sqlite 的基礎 quirkiness，這可讓任何任一字元串指定為數據行類型，而且只有四種基本類型：整數、實數、文字和 BLOB。
 
 SQLite 會將其他的語義套用至資料行類型，將它們直接對應至 .NET 類型。 這讓提供者具有更強型別風格，但有一些粗略的邊緣。 例如，他們必須引進新的 SQL 語句（類型），以在 SELECT 語句中指定運算式的資料行類型。
 
@@ -46,34 +46,34 @@ SQLite 會將其他的語義套用至資料行類型，將它們直接對應至 
 
 Sqlite 的[連接字串](connection-strings.md)關鍵字較少。 下表顯示可以改為使用的替代方案。
 
-| 關鍵字          | 替代函式                                         |
+| 關鍵字          | 選項                                         |
 | ---------------- | --------------------------------------------------- |
 | 快取大小       | 傳送 `PRAGMA cache_size = <pages>`                  |
-| 預設超時  | 在 SqliteConnection 上使用 DefaultTimeout 屬性 |
-| FailIfMissing    | 使用 `Mode=ReadWrite`                                |
+| 預設逾時  | 在 SqliteConnection 上使用 DefaultTimeout 屬性 |
+| FailIfMissing    | 使用`Mode=ReadWrite`                                |
 | FullUri          | 使用資料來源關鍵字                         |
 | 記錄模式     | 傳送 `PRAGMA journal_mode = <mode>`                 |
 | 舊版格式    | 傳送 `PRAGMA legacy_file_format = 1`                |
 | 最大頁面計數   | 傳送 `PRAGMA max_page_count = <pages>`              |
 | 頁面大小        | 傳送 `PRAGMA page_size = <bytes>`                   |
-| 唯讀        | 使用 `Mode=ReadOnly`                                 |
+| 唯讀        | 使用`Mode=ReadOnly`                                 |
 | 同步      | 傳送 `PRAGMA synchronous = <mode>`                  |
 | URI              | 使用資料來源關鍵字                         |
 | UseUTF16Encoding | 傳送 `PRAGMA encoding = 'UTF-16'`                   |
 
-## <a name="authorization"></a>Authorization
+## <a name="authorization"></a>授權
 
-Microsoft. Sqlite 沒有任何 API 公開 SQLite 的授權回呼。 使用 [問題[#13835](https://github.com/aspnet/EntityFrameworkCore/issues/13835) ] 來提供有關此功能的意見反應。
+Microsoft. Sqlite 沒有任何 API 公開 SQLite 的授權回呼。 使用 [問題[#13835](https://github.com/dotnet/efcore/issues/13835) ] 來提供有關此功能的意見反應。
 
 ## <a name="data-change-notifications"></a>資料變更通知
 
-Microsoft. Sqlite 沒有任何 API 公開 SQLite 的資料變更通知。 使用 [問題[#13827](https://github.com/aspnet/EntityFrameworkCore/issues/13827) ] 來提供有關此功能的意見反應。
+Microsoft. Sqlite 沒有任何 API 公開 SQLite 的資料變更通知。 使用 [問題[#13827](https://github.com/dotnet/efcore/issues/13827) ] 來提供有關此功能的意見反應。
 
 ## <a name="virtual-table-modules"></a>虛擬資料表模組
 
-在建立虛擬資料表模組時，Sqlite 沒有任何 API。 使用 [問題[#13823](https://github.com/aspnet/EntityFrameworkCore/issues/13823) ] 來提供有關此功能的意見反應。
+在建立虛擬資料表模組時，Sqlite 沒有任何 API。 使用 [問題[#13823](https://github.com/dotnet/efcore/issues/13823) ] 來提供有關此功能的意見反應。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 * [資料類型](types.md)
 * [連接字串](connection-strings.md)
