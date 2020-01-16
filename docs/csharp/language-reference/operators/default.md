@@ -4,16 +4,16 @@ description: 使用 default 運算子產生類型的預設值
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712711"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964612"
 ---
 # <a name="default-operator-c-reference"></a>預設運算子 (C# 參考)
 
-`default` 運算子會產生型別的[預設值](../keywords/default-values-table.md)。 `default` 運算子的引數必須是型別或或型別參數的名稱。
+`default` 運算子會產生型別的[預設值](../builtin-types/default-values.md)。 `default` 運算子的引數必須是型別或或型別參數的名稱。
 
 下列範例會示範 `default` 運算子的使用方式：
 
@@ -44,5 +44,5 @@ ms.locfileid: "75712711"
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)
-- [預設值表](../keywords/default-values-table.md)
+- [類型的C#預設值](../builtin-types/default-values.md)
 - [.NET 的泛型](../../../standard/generics/index.md)
