@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 0ab9b6e089f5add9963ffae73e196643ad999763
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cfa92923ff5c7d5e7e4e2a9a965dc1562c183b74
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712906"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964641"
 ---
 # <a name="value-types-c-reference"></a>實值型別 (C# 參考)
 
@@ -33,7 +33,7 @@ ms.locfileid: "75712906"
 
 實值型別預設不可為 `null`。 不過，可以 `null`對應的[可為 null 實數值型別](../builtin-types/nullable-value-types.md)的變數。
 
-每種實值型別都具有初始化該型別預設值的隱含無參數建構函式。 如需有關實值型別預設值的資訊，請參閱[預設值表](default-values-table.md)。
+每種實值型別都具有初始化該型別預設值的隱含無參數建構函式。 如需實值型別預設值的相關資訊，請參閱[ C#類型的預設值](../builtin-types/default-values.md)。
 
 ## <a name="simple-types"></a>簡單型別
 
@@ -87,7 +87,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-使用 [new](../operators/new-operator.md) 運算子會呼叫特定型別的無參數建構函式，並將預設值指派給變數。 在上述範例中，無參數建構函式已將 `0` 值指派給 `myInt`。 如需有關透過呼叫無參數建構函式來指派的值之詳細資訊，請參閱[預設值表](default-values-table.md)。
+使用 [new](../operators/new-operator.md) 運算子會呼叫特定型別的無參數建構函式，並將預設值指派給變數。 在上述範例中，無參數建構函式已將 `0` 值指派給 `myInt`。 如需呼叫無參數的函式所指派之值的詳細資訊，請參閱[類型的C#預設值](../builtin-types/default-values.md)。
 
 如果要使用使用者定義型別，請使用 [new](../operators/new-operator.md) 來叫用無參數建構函式。 例如，下列陳述式會叫用 `Point` 結構的無參數建構函式：
 

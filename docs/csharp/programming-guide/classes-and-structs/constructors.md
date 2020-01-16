@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: f435c149f7ec2768ee6c954c1f0ae12a95cc326f
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 465dbb9120e6e81e5ef216c34dc6a92283956033
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937529"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964666"
 ---
 # <a name="constructors-c-programming-guide"></a>建構函式 (C# 程式設計手冊)
 
@@ -19,7 +19,7 @@ ms.locfileid: "75937529"
 
 ## <a name="parameterless-constructors"></a>無參數建構函式
   
-如不提供類別的建構函式，C# 預設會建立一個可具現化物件的建構函式，並將成員變數設定為預設值，如[預設值表](../../language-reference/keywords/default-values-table.md)中所列。 若未提供結構的建構函式，C# 會依賴「隱含無參數建構函式」 來自動將實值型別的每個欄位初始化為其預設值，如[預設值表](../../language-reference/keywords/default-values-table.md)中所列。 如需詳細資訊及範例，請參閱[執行個體建構函式](./instance-constructors.md)。  
+如果您未提供類別的函式， C#則預設會建立一個，以具現化物件，並將成員變數設定為預設值，如 [ [ C#類型] 的預設值](../../language-reference/builtin-types/default-values.md)中所列。 如果您未提供結構的函式，則C#會依賴*隱含的無參數的函數*，將每個欄位自動初始化為其預設值。 如需詳細資訊和範例，請參閱[實例構造](instance-constructors.md)函式。  
 
 ## <a name="constructor-syntax"></a>建構函式語法
 
@@ -33,13 +33,13 @@ ms.locfileid: "75937529"
 
 ## <a name="static-constructors"></a>靜態建構函式
 
-前例都已顯示建立新物件的執行個體建構函式。 類別或結構也可以有靜態建構函式，用來初始化類型的靜態成員。  靜態建構函式無參數。 若您未提供靜態建構函式來初始化靜態欄位，C# 編譯器會將靜態欄位初始化為其預設值，如[預設值表](../../language-reference/keywords/default-values-table.md)中所列。
+前例都已顯示建立新物件的執行個體建構函式。 類別或結構也可以有靜態建構函式，用來初始化類型的靜態成員。  靜態建構函式無參數。 如果您未提供靜態的函式來初始化靜態欄位， C#編譯器會將靜態欄位初始化為其預設值，如 [ [ C#類型] 的預設值](../../language-reference/builtin-types/default-values.md)中所列。
 
 下列範例會使用靜態建構函式來初始化靜態欄位。
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-您也可以使用運算式主體定義來定義靜態建構函式，如下例所示。 
+您也可以使用運算式主體定義來定義靜態建構函式，如下例所示。
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 
