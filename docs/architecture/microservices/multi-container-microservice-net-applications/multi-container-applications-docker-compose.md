@@ -2,12 +2,12 @@
 title: 使用 docker-compose.yml 定義多容器應用程式
 description: 如何使用 docker-compose.yml 指定多容器應用程式的微服務組合。
 ms.date: 10/02/2018
-ms.openlocfilehash: fa863495c785d89a0b244162e58948ff622e139a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937157"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116549"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式
 
@@ -82,7 +82,7 @@ services:
     image: redis
 ```
 
-此檔案中的根金鑰就是服務。 在該金鑰下，您定義想要在執行 `docker-compose up` 命令或是使用此 docker-compose.yml 檔案從 Visual Studio 部署時所部署和執行的服務。 在此情況下，docker-compose.yml 檔案已定義多個服務，如下表所述。
+此檔案中的根金鑰就是服務。 在該金鑰下，您會定義您想要部署的服務，並在執行 `docker-compose up` 命令時或從 Visual Studio 使用此 docker-compose.dev.debug.yml. yml 檔案進行部署時加以執行。 在此情況下，docker-compose.yml 檔案已定義多個服務，如下表所述。
 
 | 服務名稱 | 描述 |
 |--------------|-------------|
@@ -129,7 +129,7 @@ catalog.api container-microservice 聚焦於單一容器，因此具有簡單易
 
 - 它會將 Web 服務連結至 sql.data 服務 (適用於容器中所執行 Linux 資料庫的 SQL Server 執行個體)。 當您指定此相依性時，除非已啟動 sql.data 容器，否則不會啟動 catalog.api 容器；這十分重要，因為 catalog.api 需要先啟動並執行 SQL Server 資料庫。 不過，在許多情況下，這種容器相依性不足，因為 Docker 只會在容器層級進行檢查。 服務 (在此情況下是 SQL Server) 有時可能仍然未準備就緒，因此建議您在用戶端微服務中實作含指數輪詢的重試邏輯。 這樣一來，如果相依性容器短時間內無法準備好，則應用程式仍會具有恢復功能。
 
-- 它是設定為允許存取外部伺服器：extra\_hosts 設定可讓您存取外部伺服器或 Docker 主機外部的電腦 (亦即，本身為開發 Docker 本機的預設 Linux VM 外部)，例如開發電腦上的本機 SQL Server 執行個體。
+- 它設定為允許存取外部伺服器： [額外的\_主機] 設定可讓您存取 Docker 主機外部的外部伺服器或電腦（也就是在預設的 Linux VM （也就是開發 Docker 主機）之外），例如開發電腦上的本機 SQL Server 實例。
 
 另外還有其他更進階的 docker-compose.yml 設定，我們將在下列各節進行討論。
 
@@ -141,7 +141,7 @@ docker-compose.yml 檔案是定義檔，而且可以供了解該格式的多個�
 
 #### <a name="development-environments"></a>開發環境
 
-當您開發應用程式時，務必要能夠在隔離開發環境中執行應用程式。 您可以使用 docker-compose CLI 命令來建立該環境，或使用在幕後使用 docker-compose 的 Visual Studio。
+當您開發應用程式時，務必要能夠在隔離開發環境中執行應用程式。 您可以使用 docker 撰寫的 CLI 命令來建立該環境或 Visual Studio，這會在幕後使用 docker 撰寫。
 
 docker-compose.yml 檔案可讓您設定和記載所有應用程式的服務相依性 (其他服務、快取、資料庫、佇列等等)。 使用 docker-compose CLI 命令，您可以使用單一命令 (docker-compose up) 來建立和啟動每個相依性的一或多個容器。
 
@@ -151,7 +151,7 @@ docker-compose.yml 檔案不只是 Docker 引擎所解譯的組態檔，也是�
 
 任何持續部署 (CD) 或持續整合 (CI) 程序的重要部分都是單元測試和整合測試。 這些自動化測試需要隔離環境，因此它們不受使用者或應用程式資料中的任何其他變更所影響。
 
-使用 Docker Compose，您可以從命令提示字元或指令碼，使用幾個命令非常輕鬆地建立和終結該隔離環境，例如下列命令：
+使用 Docker Compose，您可以在命令提示字元或腳本的幾個命令中，輕鬆地建立和終結該隔離的環境，如下列命令所示：
 
 ```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
@@ -201,7 +201,7 @@ docker-compose.override.yml 檔案，如其名所示，包含可覆寫基底組�
 
 **圖 6-12**。 覆寫基底 docker-compose.yml 檔案中值的多個 docker-compose 檔案
 
-您可以結合多個 docker-compose* yml 檔案來處理不同的環境。 您可以開始使用基底 docker-compose.yml 檔案。 此基底檔案必須包含不會根據環境而變更的基底或靜態組態設定。 例如，eShopOnContainers 具有下列與基底檔案相同的 docker-compose.yml (簡化為具有較少服務) 檔案。
+您可以結合多個 docker-compose* yml 檔案來處理不同的環境。 您可以開始使用基底 docker-compose.yml 檔案。 此基底檔案必須包含不會根據環境而變更的基底或靜態組態設定。 例如，eShopOnContainers 具有下列 docker-compose.dev.debug.yml. yml 檔案（以較少的服務簡化）作為基底檔案。
 
 ```yml
 #docker-compose.yml (Base)
@@ -390,7 +390,7 @@ services:
 
 當您執行 `docker-compose up` (或從 Visual Studio 啟動它) 時，此命令會自動讀取覆寫，就像它要合併兩個檔案一樣。
 
-假設您想要將另一個 Compose 檔案用於生產環境，但具有不同的組態值、連接埠或連接字串。 您可以建立另一個覆寫檔案，例如名為 `docker-compose.prod.yml` 且具有不同設定和環境變數的檔案。 該檔案可能儲存在不同的 Git 存放庫中，或是由不同的小組進行管理和保護。
+假設您想要在生產環境中使用不同的設定值、埠或連接字串的另一個撰寫檔案。 您可以建立另一個覆寫檔案，例如名為 `docker-compose.prod.yml` 且具有不同設定和環境變數的檔案。 該檔案可能儲存在不同的 Git 存放庫中，或是由不同的小組進行管理和保護。
 
 #### <a name="how-to-deploy-with-a-specific-override-file"></a>如何使用特定覆寫檔案進行部署
 
@@ -422,7 +422,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 Docker-compose 預期 .env 檔案中每行的格式都是 \<變數\>=\<值\>。
 
-請注意，在執行階段環境中所設定的值會一律會覆寫 .env 檔案內所定義的值。 使用類似的方式，透過命令列命令引數所傳遞的值也會覆寫 .env 檔案中所設定的預設值。
+在執行時間環境中設定的值一律會覆寫在 env 檔案內定義的值。 以類似的方式，透過命令列引數傳遞的值也會覆寫在 env 檔案中設定的預設值。
 
 #### <a name="additional-resources"></a>其他資源
 

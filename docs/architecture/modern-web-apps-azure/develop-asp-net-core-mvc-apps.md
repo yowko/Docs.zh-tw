@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899698"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116537"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -26,15 +26,15 @@ ASP.NET Core MVC 提供許多實用功能，可用來建置 Web API 及應用程
 
 ### <a name="why-razor-pages"></a>為什麼要使用 Razor Pages？
 
-Razor Pages 在 Visual Studio 中是新 Web 應用程式的預設方法。 Razor Pages 提供較簡易的方法來建置以頁面為基礎的應用程式功能，像是非 SPA 表單。 使用控制器及檢視，應用程式常會有非常大型的控制器與許多不同的相依性及檢視模型搭配運作，並傳回許多不同的檢視。 這會導致許多複雜情況，而且經常造成控制器無法有效遵循單一職責原則或開放封閉原則。 Razor Pages 透過使用其 Razor 標記，封裝 Web 應用程式中指定邏輯「頁面」的伺服器端邏輯，解決了這個問題。 沒有伺服器端邏輯的 Razor 頁面可以只由 Razor 檔案 (例如 "Index.cshtml") 構成。 然而，多數非一般的 Razor Pages 會有相關的頁面模型類別，命名方式照慣例與 Razor 檔案相同，副檔名為 ".cs" (例如 "Index.cshtml.cs")。
+Razor Pages 在 Visual Studio 中是新 Web 應用程式的預設方法。 Razor Pages 提供較簡易的方法來建置以頁面為基礎的應用程式功能，像是非 SPA 表單。 使用控制器及檢視，應用程式常會有非常大型的控制器與許多不同的相依性及檢視模型搭配運作，並傳回許多不同的檢視。 這會造成很複雜的情況，而且通常會導致控制器無法有效遵循單一責任原則或開放/關閉原則。 Razor Pages 透過使用其 Razor 標記，封裝 Web 應用程式中指定邏輯「頁面」的伺服器端邏輯，解決了這個問題。 沒有伺服器端邏輯的 Razor 頁面可以只由 Razor 檔案 (例如 "Index.cshtml") 構成。 然而，多數非一般的 Razor Pages 會有相關的頁面模型類別，命名方式照慣例與 Razor 檔案相同，副檔名為 ".cs" (例如 "Index.cshtml.cs")。
 
 Razor 頁面的頁面模型會合併 MVC 控制器及檢視模型的責任。 不會使用控制器動作方法來處理要求，而是執行像是 "OnGet()" 這類的頁面模型處理常式，並根據預設轉譯其相關頁面。 Razor Pages 簡化了在 ASP.NET Core 應用程式中建置個別頁面的程序，同時仍提供 ASP.NET Core MVC 的所有架構功能。 對以頁面為基礎的新功能來說，它們是相當好的預設選擇。
 
 ### <a name="when-to-use-mvc"></a>MVC 的使用時機
 
-如果您在建置 Web API，MVC 模式會比嘗試使用 Razor Pages 更適合。 如果您的專案只會公開 Web API 端點，理想情況下您應該從 Web API 專案範本開始，但在其他情況下，將控制器及相關 API 端點新增到任何 ASP.NET Core 應用程式相當容易。 如果您想以最輕鬆的方式，將現有的應用程式從 ASP.NET MVC 5 或更舊版本移轉至 ASP.NET Core MVC，您也應該使用以檢視為基礎的 MVC 方法。 當您進行了首次移轉後，便可以評估是否適合使用 Razor Pages 進行新功能或甚至大規模的移轉。
+如果您在建置 Web API，MVC 模式會比嘗試使用 Razor Pages 更適合。 如果您的專案只會公開 Web API 端點，則最好是從 Web API 專案範本開始。 否則，您可以輕鬆地將控制器和相關聯的 API 端點新增至任何 ASP.NET Core 應用程式。 如果您要將現有的應用程式從 ASP.NET MVC 5 或更早版本遷移到 ASP.NET Core MVC，而且想要以最少的工作量執行此動作，請使用以視圖為基礎的 MVC 方法。 當您進行了首次移轉後，便可以評估是否適合使用 Razor Pages 進行新功能或甚至大規模的移轉。
 
-不論您選擇使用 Razor Pages 或 MVC 檢視來建置 Web 應用程式，您的應用程式都會有相似的效能，而且將內含針對相依性插入、篩選、模型繫結及驗證等的支援。
+無論您選擇使用 Razor Pages 或 MVC views 來建立 web 應用程式，您的應用程式都有類似的效能，而且將包含對相依性插入、篩選、模型系結、驗證等的支援。
 
 ## <a name="mapping-requests-to-responses"></a>將要求對應至回應
 
@@ -420,7 +420,7 @@ public void ConfigureServices(IServiceCollection services)
 
 **圖 7-4**： Web API 的權杖型驗證
 
-您可以使用像 [IdentityServer](https://github.com/IdentityServer) 這類開放原始碼工具，來建立自己的驗證服務、與 Azure AD 及 OAuth 整合，或實作服務。
+您可以建立自己的驗證服務、與 Azure AD 和 OAuth 整合，或使用開放原始碼工具（例如[IdentityServer](https://github.com/IdentityServer)）來執行服務。
 
 #### <a name="custom-security"></a>自訂安全性
 
@@ -540,7 +540,7 @@ DDD 也建議使用上述的全新架構，允許鬆散結合、封裝，以及�
 
 ### <a name="when-should-you-apply-ddd"></a>何時應該套用 DDD
 
-DDD 相當適合商務 (不只是技術) 複雜度明顯很高的大型應用程式。 該應用程式需要有領域專家的知識。 領域模型本身應該有代表商務規則和互動的明顯行為，而不只是在資料存放區中儲存及擷取各種記錄的目前狀態。
+DDD 非常適合具有明顯企業（而不只是技術）複雜度的大型應用程式。 該應用程式需要有領域專家的知識。 領域模型本身應該有代表商務規則和互動的明顯行為，而不只是在資料存放區中儲存及擷取各種記錄的目前狀態。
 
 ### <a name="when-shouldnt-you-apply-ddd"></a>何時不應該套用 DDD
 

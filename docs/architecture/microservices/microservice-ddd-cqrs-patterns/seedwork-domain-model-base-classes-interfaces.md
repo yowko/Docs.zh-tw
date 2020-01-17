@@ -2,16 +2,16 @@
 title: Seedwork (網域模型的可重複使用基底類別和介面)
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用 seedwork 概念作為起點，開始實作 DDD 導向的領域模型。
 ms.date: 10/08/2018
-ms.openlocfilehash: 491ff39f493a8f5ab192dc4a8376f560a8a7624b
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937166"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116577"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (網域模型的可重複使用基底類別和介面)
 
-方案資料夾中包含了一個 *SeedWork* 資料夾。 此資料夾包含自訂基底類別，您可以使用它們作為您領域實體和值物件的基底。 藉由使用這些基底類別，您的每個領域物件類別中便不會有冗餘的程式碼。 這些類別類型的資料夾名為 *SeedWork*，而非 *Framework*。 它之所以名為 *SeedWork*，是因為資料夾僅包含了可重複使用類別的小型子集，而無法視為架構。 *SeedWork* 是一個由 [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) 引入的字詞，並由 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) 進一步推廣，但您也可以將資料夾命名為 Common、SharedKernel 或其他相似名稱。
+方案資料夾中包含了一個 *SeedWork* 資料夾。 此資料夾包含自訂基底類別，您可以使用它們作為您領域實體和值物件的基底。 使用這些基類，讓您在每個網域的物件類別中都沒有多餘的程式碼。 這些類別類型的資料夾名為 *SeedWork*，而非 *Framework*。 這稱為*SeedWork* ，因為該資料夾只包含一小部分可重複使用的類別，無法真正被視為架構。 *SeedWork* 是一個由 [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) 引入的字詞，並由 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) 進一步推廣，但您也可以將資料夾命名為 Common、SharedKernel 或其他相似名稱。
 
 圖 7-12 顯示了組成 Ordering 微服務中領域模型 seedwork 的類別。 它有幾個自訂的基底類別，像是 Entity、ValueObject 及 Enumeration，以及其他幾個介面。 這些介面 (IRepository 和 IUnitOfWork) 會通知基礎結構層需要實作的內容。 這些介面也會透過來自應用程式層的相依性插入使用。
 
@@ -21,7 +21,7 @@ SeedWork 資料夾的詳細內容，其中包含基類和介面： Entity.cs、E
 
 **圖 7-12**。 領域模型 “seedwork" 基底類別與介面的範例組
 
-這是一種許多開發人員在物件之間共用的複製及貼上重複使用內容，而非正式的架構。 您可以在任何層或程式庫中具有 seedwork。 然而，若類別和介面的組合變得更大，便建議您建立單一類別庫。
+這是一種許多開發人員在物件之間共用的複製及貼上重複使用內容，而非正式的架構。 您可以在任何層或程式庫中具有 seedwork。 不過，如果類別和介面的集合夠大，您可能會想要建立單一類別庫。
 
 ## <a name="the-custom-entity-base-class"></a>自訂 Entity 基底類別
 
