@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 4e4dbe085b11751416f69c9fa7f790f18a68f5d7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: a9f507ecdfced5b044b9d6338f723f53b1b4c4b7
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964366"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115824"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>位元與移位運算子 (C# 參考)
 
@@ -171,13 +171,13 @@ x = x op y
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
 
 > [!NOTE]
-> 如上述範例所示，即使右邊運算元的值大於左邊運算元中的位數，移位作業的結果也可以是非零的。
+> 如上述範例所示，即使右邊運算元的值大於左邊運算元中的位數，移位作業的結果也可以是非零，而是。
 
 ## <a name="enumeration-logical-operators"></a>列舉邏輯運算子
 
 任何[列舉](../builtin-types/enum.md)類型也支援 `~`、`&`、`|`和 `^` 運算子。 對於相同列舉類型的運算元，會在基礎整數類型的對應值上執行邏輯運算。 例如，針對任何基礎型別為 `U` 列舉型別 `T` 的 `x` 和 `y`，`x & y` 運算式會產生與 `(T)((U)x & (U)y)` 運算式相同結果。
 
-您通常會搭配使用 [Flags](xref:System.FlagsAttribute) 屬性定義的列舉型別使用位元邏輯運算子。 如需詳細資訊，請參閱[列舉型別](../builtin-types/enum.md)文章中的[作為位元旗標的列舉型別](../builtin-types/enum.md#enumeration-types-as-bit-flags)一節。
+您通常會使用位邏輯運算子搭配使用[Flags](xref:System.FlagsAttribute)屬性所定義的列舉類型。 如需詳細資訊，請參閱[列舉型別](../builtin-types/enum.md)文章中的[作為位元旗標的列舉型別](../builtin-types/enum.md#enumeration-types-as-bit-flags)一節。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 

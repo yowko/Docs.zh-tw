@@ -6,30 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: a0b117949190bcaffc334c208fff6e04a6a2c5bf
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 0cf3e05a0353a17541ee890f0871d694acac09fd
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964507"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116552"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
-CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT 是在 .NET Framework 版本2.0 中引進。 在兩種情況下，.NET Framework 4 會傳回此 HRESULT：  
+
+CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT 是在 .NET Framework 版本2.0 中引進。 .NET Framework 4 會在兩種情況下傳回此 HRESULT：  
   
 - 當劫持分析工具在任意時間強制重設執行緒的暫存器內容時，執行緒會嘗試存取處於不一致狀態的結構。  
   
 - 當分析工具嘗試呼叫從禁止垃圾收集的回呼方法觸發垃圾收集的資訊方法時。  
   
- 下列各節將討論這兩個案例。  
+下列各節將討論這兩個案例。  
   
 ## <a name="hijacking-profilers"></a>劫持分析工具  
- （此案例主要是劫持分析工具的問題，但在某些情況下，非劫持分析工具可以看到此 HRESULT）。  
+
+  （此案例主要是劫持分析工具的問題，但在某些情況下，非劫持分析工具可以看到此 HRESULT）。  
   
- 在此案例中，劫持分析工具會強制隨時重設執行緒的暫存器內容，讓執行緒可以輸入 profiler 程式碼，或透過[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)方法重新進入 common language RUNTIME （CLR）。  
+ 在此案例中，劫持分析工具會強制隨時重設執行緒的暫存器內容，讓執行緒可以輸入 profiler 程式碼，或透過[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)方法重新輸入 common language RUNTIME （CLR）。  
   
  分析 API 在 CLR 中提供指向資料結構的許多識別碼。 許多 `ICorProfilerInfo` 呼叫只會讀取這些資料結構的資訊，並將其傳回。 不過，CLR 可能會在執行時變更這些結構中的專案，而且可能會使用鎖定來執行此動作。 假設 CLR 已經保留（或嘗試取得）分析工具劫持執行緒時的鎖定。 如果執行緒重新進入 CLR，並嘗試取得更多鎖定或檢查正在修改的結構，這些結構可能會處於不一致的狀態。 鎖死和存取違規在這種情況下很容易發生。  
   
- 一般而言，當非劫持分析工具在[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)方法內執行程式碼，並使用有效的參數呼叫 `ICorProfilerInfo` 方法時，它應該不會鎖死或收到存取違規。 例如，在[ICorProfilerCallback：： ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)方法內執行的 profiler 程式碼，可以藉由呼叫[ICorProfilerInfo2：： GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)方法，來要求類別的相關資訊。 程式碼可能會收到 CORPROF_E_DATAINCOMPLETE HRESULT，以指出資訊無法使用;不過，它不會鎖死或收到存取違規。 這個呼叫 `ICorProfilerInfo` 的類別稱為同步，因為是從 `ICorProfilerCallback` 方法進行。  
+ 一般而言，當非劫持分析工具在[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)方法內執行程式碼，並使用有效的參數呼叫 `ICorProfilerInfo` 方法時，它應該不會鎖死或收到存取違規。 例如，在[ICorProfilerCallback：： ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)方法內執行的 profiler 程式碼，可以藉由呼叫[ICorProfilerInfo2：： GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)方法，來要求類別的相關資訊。 此程式碼可能會收到 CORPROF_E_DATAINCOMPLETE HRESULT，以指出資訊無法使用。 不過，它不會鎖死或收到存取違規。 這些對 `ICorProfilerInfo` 的呼叫會視為同步，因為是從 `ICorProfilerCallback` 方法進行。  
   
  不過，執行不在 `ICorProfilerCallback` 方法中之程式碼的 managed 執行緒會被視為進行非同步呼叫。 在 .NET Framework 版本1中，很難以判斷非同步呼叫中可能發生的狀況。 呼叫可能會鎖死、當機，或提供不正確答案。 .NET Framework 版本2.0 引進了一些簡單的檢查，可協助您避免這個問題。 在 .NET Framework 2.0 中，如果您以非同步方式呼叫不安全的 `ICorProfilerInfo` 函式，它會失敗並產生 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT。  
   

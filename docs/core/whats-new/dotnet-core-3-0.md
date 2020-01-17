@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 94284a196030d784909c41aae7fef9a5ad3cb52a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937241"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115778"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -497,9 +497,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>快速的內建 JSON 支援
 
-.NET 使用者大幅倚賴 [**Json.NET**](https://www.newtonsoft.com/json) 及其他熱門的 JSON 程式庫 (這些仍持續是絕佳的選擇)。 **Json.NET** 使用 .NET 字串作為其基底資料類型，實際上就是 UTF-16。
+.NET 使用者大多依賴[Newtonsoft](https://www.newtonsoft.com/json)和其他熱門的 json 程式庫，這會繼續是不錯的選擇。 `Newtonsoft.Json` 使用 .NET 字串作為其基底資料類型，其本質上為 UTF-16。
 
-新的內建 JSON 支援是高效能、低配置，並以 `Span<byte>` 為基礎。 如需 <xref:System.Text.Json> 命名空間和類型的詳細資訊，請參閱[.net 中的 JSON 序列化-總覽](../../standard/serialization/system-text-json-overview.md)。 如需常見 JSON 序列化案例的教學課程，請參閱[如何在 .net 中序列化和還原序列化 JSON](../../standard/serialization/system-text-json-how-to.md)。
+新的內建 JSON 支援是高效能、低配置，並可搭配 UTF-8 編碼的 JSON 文字使用。 如需 <xref:System.Text.Json> 命名空間和類型的詳細資訊，請參閱下列文章：
+
+* [.NET 中的 JSON 序列化-總覽](../../standard/serialization/system-text-json-overview.md)
+* [如何在 .net 中序列化和還原序列化 JSON](../../standard/serialization/system-text-json-how-to.md)。
+* [如何從 Newtonsoft 遷移至 System.web. Json](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>HTTP/2 支援
 

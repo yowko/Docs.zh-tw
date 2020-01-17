@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c47b95e98aca727d9f0eda54a167a71fd53afb9
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 7f528510e4158dad71280a7b1f269a231b8c60f2
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567419"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116370"
 ---
 ### <a name="types-in-microsoftvisualbasicdevices-namespace-not-available"></a>Microsoft 中的類型命名空間無法使用
 
@@ -24,7 +24,7 @@ ms.locfileid: "74567419"
 
 如果您的程式碼相依于 <xref:Microsoft.VisualBasic.Devices> 類型及其成員的使用，您可以在 .NET 類別庫中使用對應的類型或成員。 例如，<xref:Microsoft.VisualBasic.Devices.Clock?displayProperty=nameWithType> 類別的對等功能是由 <xref:System.DateTime?displayProperty=nameWithType> 和 <xref:System.Environment?displayProperty=nameWithType> 類型提供，而 <xref:Microsoft.VisualBasic.Devices.Ports?displayProperty=nameWithType> 類別的對等功能則是由 <xref:System.IO.Ports?displayProperty=nameWithType> 命名空間中的類型所提供。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>分類
 
 Visual Basic
 
@@ -38,5 +38,4 @@ Visual Basic
 
 - `N:Microsoft.VisualBasic.Devices`
 
--- >
-
+-->

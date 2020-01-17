@@ -4,12 +4,12 @@ description: 教您如何將 .NET Framework Windows Forms 應用程式移植到�
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: b1048c2d725a2bcf8398af1d2d53f40efc36c82e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936961"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116019"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何將 Windows Forms 桌面應用程式移植到 .NET Core
 
@@ -261,7 +261,7 @@ SolutionFolder
 
 如您所見，`<OutputType>` 節點已被刪除，編譯器預設會產生程式庫，而不是可執行檔。 `<AssemblyName>` 和 `<RootNamespace>` 已變更。 具體來說，`<RootNamespace>` 應符合您正在移植的 Windows Forms 控制項程式庫的命名空間。 最後，調整 `<Compile>` 和 `<EmbeddedResource>` 節點以指向要移植的 Windows Forms 控制項程式庫的資料夾。
 
-接下來，在主要的 .NET Core **MyFormsCore.csproj** 專案中新增對新的 .NET Core Windows Forms 控制項程式庫的參考。 使用 Visual Studio 或 **SolutionFolder** 目錄中的 .NET Core CLI 新增參考：
+接下來，在主要的 .NET Core **myformscore.csproj**專案中，加入新的 .net Core Windows Forms 控制項程式庫的參考。 使用 Visual Studio 或 **SolutionFolder** 目錄中的 .NET Core CLI 新增參考：
 
 ```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj

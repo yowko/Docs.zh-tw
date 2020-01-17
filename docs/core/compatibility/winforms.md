@@ -2,16 +2,34 @@
 title: Windows Forms 的重大變更-.NET Core
 description: 列出 .NET Core Windows Forms 中的重大變更。
 ms.date: 01/08/2020
-ms.openlocfilehash: cde76369bcb65a87fde1437c8bf8fd3b3c19a0c7
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 44bcde60f9e08d2e06a69c55e4ebe904bf5c449b
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936998"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116452"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows Forms 中的重大變更
 
-版本3.0 中的 .NET Core 已加入 Windows Forms 支援。 這篇文章列出其引進的 .NET Core 版本 Windows Forms 的重大變更。 如果您要從 .NET Framework 或舊版 .NET Core （3.0 或更新版本）升級 Windows Forms 應用程式，本文適用于您。
+版本3.0 中的 .NET Core 已加入 Windows Forms 支援。 本文列出其引進的 .NET Core 版本 Windows Forms 的重大變更。 如果您要從 .NET Framework 或舊版 .NET Core （3.0 或更新版本）升級 Windows Forms 應用程式，本文適用于您。
+
+下列重大變更記載于此頁面：
+
+- [移除的控制項](#removed-controls)
+- [如果顯示工具提示，則不會引發 CellFormatting 事件](#cellformatting-event-not-raised-if-tooltip-is-shown)
+- [DefaultFont 已變更為 Segoe UI 9 pt](#default-control-font-changed-to-segoe-ui-9-pt)
+- [FolderBrowserDialog 的現代化](#modernization-of-the-folderbrowserdialog)
+- [已從某些 Windows Forms 類型中移除 SerializableAttribute](#serializableattribute-removed-from-some-windows-forms-types)
+- [不支援 AllowUpdateChildControlIndexForTabControls 相容性切換](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
+- [不支援 DomainUpDown. UseLegacyScrolling 相容性參數](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [不支援 DoNotLoadLatestRichEditControl 相容性切換](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
+- [不支援 DoNotSupportSelectAllShortcutInMultilineTextBox 相容性切換](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
+- [不支援 DontSupportReentrantFilterMessage 相容性切換](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
+- [不支援 EnableVisualStyleValidation 相容性切換](#enablevisualstylevalidation-compatibility-switch-not-supported)
+- [不支援 UseLegacyCoNtextMenuStripSourceControlValue 相容性切換](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
+- [不支援 UseLegacyImages 相容性切換](#uselegacyimages-compatibility-switch-not-supported)
+- [變更 AccessibleObject 的存取權。 RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem)
+- [已從 Windows Forms 移除重複的 Api](#duplicated-apis-removed-from-windows-forms)
 
 ## <a name="net-core-31"></a>.NET Core 3.1
 
@@ -20,6 +38,8 @@ ms.locfileid: "75936998"
 ***
 
 [!INCLUDE[CellFormatting event](~/includes/core-changes/windowsforms/3.1/cellformatting-event-not-raised.md)]
+
+***
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
@@ -72,6 +92,8 @@ ms.locfileid: "75936998"
 ***
 
 [!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
+
+***
 
 ## <a name="see-also"></a>請參閱
 

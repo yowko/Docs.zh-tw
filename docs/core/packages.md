@@ -1,14 +1,14 @@
 ---
-title: 套件、中繼套件和架構 - .NET Core
+title: 套件、中繼套件和架構-.NET Core
 description: 了解套件、中繼套件和架構的術語。
 author: richlander
 ms.date: 06/20/2016
-ms.openlocfilehash: bd40ca603aaa9685fca9934368895bf7e945d962
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a8e257ebf493365518dd9663fbd2a9cadc83875
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715512"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116061"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>套件、中繼套件和架構
 
@@ -18,7 +18,7 @@ ms.locfileid: "75715512"
 
 ## <a name="packages"></a>package
 
-.NET Core 分割成各個套件組，以提供基本、較高層級的資料類型、應用程式組合類型與一般公用程式。 其中的每個套件皆代表具有相同名稱的單一組件。 例如，[System.Runtime](https://www.nuget.org/packages/System.Runtime) 包含 System.Runtime.dll。 
+.NET Core 會分割成一組封裝，以提供基本、較高層級的資料類型、應用程式組合類型，以及常用的公用程式。 每個封裝都代表相同名稱的單一元件。 例如， [system.object 封裝](https://www.nuget.org/packages/System.Runtime)包含 system.web。」 
 
 以細部方式定義的套件有下列許多優點：
 
@@ -108,7 +108,7 @@ ms.locfileid: "75715512"
 
 ### <a name="net-standard"></a>.NET 標準
 
-.NET Standard ([目標 Framework Moniker](../standard/frameworks.md)：`netstandard`) 架構代表由 [.NET Standard](../standard/net-standard.md) 所定義並建立於其上的 API。 要在多個執行階段上執行的程式庫應以此架構為目標。 任何與 .NET Standard 相容的執行階段皆可支援這類程式庫，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 其中每個執行階段都支援一組 .NET 標準版本，這取決於它們實作哪些 API 而定。
+.NET Standard ([目標 Framework Moniker](../standard/frameworks.md)：`netstandard`) 架構代表由 [.NET Standard](../standard/net-standard.md) 所定義並建立於其上的 API。 要在多個執行階段上執行的程式庫應以此架構為目標。 它們會在任何 .NET Standard 相容的執行時間上受到支援，例如 .NET Core、.NET Framework 和 Mono/Xamarin。 其中每個執行階段都支援一組 .NET 標準版本，這取決於它們實作哪些 API 而定。
 
 `netstandard` 架構會隱含參考 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library) 中繼套件。 例如，下列 MSBuild 專案檔指出專案是以 `netstandard1.6` 為目標，而該版本參考 [`NETStandard.Library` 1.6 版](https://www.nuget.org/packages/NETStandard.Library/1.6.0)的中繼套件。
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 8a2af76ca64359c12fafce6678def14d11d9f029
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 0f8b89ec7d7b1677de085631958b888e154aa4fa
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904559"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116717"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何在 .NET 中撰寫 JSON 序列化（封送處理）的自訂轉換器
 
@@ -280,6 +280,8 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
   }
 ]
 ```
+
+前述範例中的轉換器程式碼會以手動方式讀取和寫入每個屬性。 另一種方法是呼叫 `Deserialize` 或 `Serialize` 來執行一些工作。 如需範例，請參閱[這 StackOverflow 文章](https://stackoverflow.com/a/59744873/12509023)。
 
 ## <a name="other-custom-converter-samples"></a>其他自訂轉換器範例
 

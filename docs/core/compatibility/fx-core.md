@@ -2,12 +2,12 @@
 title: 重大變更-.NET Framework 至 .NET Core
 description: 列出從 .NET Framework 到 .NET Core 的重大變更。
 ms.date: 12/18/2019
-ms.openlocfilehash: 9f4ecc8a9de7279bb4b222b3df77e1eb17b33f0a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 6959bffab62cabc524062231db989de45c8c1498
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937398"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116497"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>從 .NET Framework 遷移至 .NET Core 的突破性變更
 
@@ -18,11 +18,7 @@ ms.locfileid: "75937398"
 
 ## <a name="corefx"></a>CoreFx
 
-重大變更：
-
 - [預設值為 UseShellExecute 的變更](#change-in-default-value-of-useshellexecute)
-
-***
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -33,8 +29,6 @@ ms.locfileid: "75937398"
 ## <a name="windows-forms"></a>Windows 表單
 
 版本3.0 中的 .NET Core 已加入 Windows Forms 支援。 如果您要將 Windows Forms 應用程式從 .NET Framework 遷移至 .NET Core，此處所列的重大變更可能會影響您的應用程式。
-
-重大變更：
 
 - [移除的控制項](#removed-controls)
 - [如果顯示工具提示，則不會引發 CellFormatting 事件](#cellformatting-event-not-raised-if-tooltip-is-shown)

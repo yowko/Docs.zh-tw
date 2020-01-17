@@ -10,18 +10,18 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 83f28c50c53281692e1c3c6d55cc55e8d9304ad9
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900915"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116595"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
 
 資料服務可以公開大型物件二進位資料。 這項二進位資料可能代表視訊和音訊資料流、影像、文件檔案，或其他類型的二進位媒體。 當資料模型中的實體包含一個或多個二進位屬性時，資料服務會在回應摘要的項目內，傳回這個 base-64 編碼形式的二進位資料。 因為以這種方式載入和序列化大型二進位資料會影響效能，所以開放式資料通訊協定（OData）會定義一種機制，用來抓取與它所屬的實體無關的二進位資料。 只要將實體中的二進位資料分成一個或多個資料流就可以完成這項處理。
 
-- 媒體資源 - 屬於實體的二進位資料，例如視訊、音訊、影像或其他類型的媒體資源資料流。
+- 媒體資源-屬於實體的二進位資料，例如影片、音訊、影像或其他類型的媒體資源串流。
 
 - 媒體連結項目 - 具有相關媒體資源資料流之參考的實體。
 
@@ -88,14 +88,14 @@ ms.locfileid: "75900915"
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>在裝載環境中啟用大型二進位資料流
 
-當您在 ASP.NET Web 應用程式中建立資料服務時，會使用 Windows Communication Foundation （WCF）來提供 HTTP 通訊協定的執行。 根據預設，WCF 會將 HTTP 訊息大小限制為只有 65K 位元組。 為了要能夠與資料服務之間來回進行大型二進位資料的資料流處理，您也必須設定 Web 應用程式啟用大型二進位檔案及使用資料流進行傳輸。 若要這樣做，請在應用程式 Web.config 檔案的 `<configuration />` 項目中加入下列程式碼：
+當您在 ASP.NET Web 應用程式中建立資料服務時，會使用 Windows Communication Foundation （WCF）來提供 HTTP 通訊協定的執行。 根據預設，WCF 會將 HTTP 訊息的大小限制為只有 65 KB。 為了要能夠與資料服務之間來回進行大型二進位資料的資料流處理，您也必須設定 Web 應用程式啟用大型二進位檔案及使用資料流進行傳輸。 若要這樣做，請在應用程式 Web.config 檔案的 `<configuration />` 項目中加入下列程式碼：
 
 > [!NOTE]
 > 您必須使用 <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> 傳輸模式，以確保要求和回應訊息中的二進位資料會進行資料流程處理，而且不會由 WCF 進行緩衝處理。
 
 如需詳細資訊，請參閱[串流訊息傳輸](../../wcf/feature-details/streaming-message-transfer.md)和[傳輸配額](../../wcf/feature-details/transport-quotas.md)。
 
-根據預設，Internet Information Services (IIS) 也會將要求的大小限制為 4MB。 若要在 IIS 上執行時讓資料服務接收大於4MB 的資料流程，您也必須在 [`<system.web />` 設定] 區段中設定[HttpRuntime 元素（ASP.NET 設定架構）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))的 `maxRequestLength` 屬性，如下列範例所示：
+根據預設，Internet Information Services （IIS）也會將要求的大小限制為 4 MB。 若要在 IIS 上執行時讓資料服務接收大於 4 MB 的資料流程，您也必須在 [`<system.web />` 設定] 區段中，設定[HttpRuntime 元素（ASP.NET 設定架構）](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))的 `maxRequestLength` 屬性，如下列範例所示：
 
 ## <a name="using-data-streams-in-a-client-application"></a>在用戶端應用程式中使用資料流
 
@@ -117,7 +117,7 @@ WCF Data Services 用戶端程式庫可讓您在用戶端上以二進位資料�
 
   - 屬於媒體資源的二進位屬性不應該包含在資料模型中。 資料模型中公開的所有屬性都會在回應摘要的項目中傳回。
 
-  - 為了改良大型二進位資料流的效能，我們建議您最好建立自訂資料流類別，將二進位資料儲存在資料庫中。 這個類別是由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 實作所傳回，而且會以區塊傳送二進位資料給資料庫。 對於 SQL Server 資料庫，我們建議您使用 FILESTREAM，在二進位資料大於1MB 時，將資料串流到資料庫中。
+  - 為了改良大型二進位資料流的效能，我們建議您最好建立自訂資料流類別，將二進位資料儲存在資料庫中。 這個類別是由 <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> 實作所傳回，而且會以區塊傳送二進位資料給資料庫。 對於 SQL Server 資料庫，我們建議您使用 FILESTREAM，在二進位資料超過 1 MB 時，將資料串流到資料庫中。
 
   - 請確定資料庫設計為可儲存二進位大型資料流，而且您的資料服務將會收到這些資料流。
 

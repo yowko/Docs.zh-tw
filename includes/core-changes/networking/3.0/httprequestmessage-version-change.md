@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ff156afb3da4b921517fd841c5de2295265a8d7b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9aff20e35469f9e786f0f790fda4ffaa04e76e64
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567741"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116430"
 ---
 ### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage 的預設值。版本已變更為1.1
 
@@ -24,7 +24,7 @@ ms.locfileid: "74567741"
 
 更新您的程式碼（如果它相依于傳回預設值2.0 的 <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 屬性）。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>分類
 
 網路
 
@@ -38,5 +38,4 @@ a def
 
 - `P:System.Net.Http.HttpRequestMessage.Version`
 
--- >
-
+-->

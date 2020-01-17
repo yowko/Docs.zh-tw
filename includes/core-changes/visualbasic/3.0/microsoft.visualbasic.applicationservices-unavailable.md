@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d888aba597cb6981828ca67fba04912cbcf7935f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: d8cc506d60f3c24087ebde8ead345656fea0f484
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567454"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116381"
 ---
 ### <a name="types-in-microsoftvisualbasicapplicationservices-namespace-not-available"></a>Microsoft.visualbasic.applicationservices.cantstartsingleinstanceexception 命名空間中的類型無法使用
 
@@ -24,7 +24,7 @@ ms.locfileid: "74567454"
 
 如果您的程式碼相依于 <xref:Microsoft.VisualBasic.ApplicationServices> 類型及其成員的使用，您可以在 .NET 類別庫中使用對應的類型或成員。 例如，某些 <xref:System.Environment?displayProperty=nameWithType> 和 <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> 成員會將對等的功能提供給 <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType> 類別的屬性。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>分類
 
 Visual Basic
 
@@ -38,5 +38,4 @@ Visual Basic
 
 - `N:Microsoft.VisualBasic.ApplicationServices`
 
--- >
-
+-->
