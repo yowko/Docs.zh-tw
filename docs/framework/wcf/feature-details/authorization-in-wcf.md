@@ -5,28 +5,28 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: 8c605b310f19a05f994296d8f4268b91b408fb18
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 0097adc3d9677d9ce5595a3ac632b51d94d53f6f
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881200"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964677"
 ---
 # <a name="authorization-in-wcf"></a>WCF 的授權
-授權是控制資源 (例如服務或檔案) 存取與權限的程序。 在本節中的主題會示範如何在 Windows Communication Foundation (WCF) 的各種不同的方式執行此基本工作。  
+授權是控制資源 (例如服務或檔案) 存取與權限的程序。 本節中的主題說明如何以各種方式在 Windows Communication Foundation （WCF）中執行這項基本工作。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [存取控制機制](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
- 提供 WCF，並且建議的使用的驗證機制的簡介。  
+ 提供 WCF 中授權機制的簡要概述，以及建議的用法。  
   
- [如何：以 PrincipalPermissionAttribute 類別限制存取](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [如何：利用 PrincipalPermissionAttribute 類別限制存取](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  示範限制存取具有 <xref:System.Security.Permissions.PrincipalPermissionAttribute>之服務的程序。  
   
  [如何：使用 ASP.NET 角色提供者搭配服務](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- 逐步解說設定讓它能夠使用 ASP.NET 角色提供者功能的服務。  
+ 逐步解說服務的設定，讓它能夠使用 ASP.NET 的角色提供者功能。  
   
  [如何：使用 ASP.NET 授權管理員角色提供者搭配服務](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- ASP.NET 可以使用授權管理員來管理網站的授權。 同樣地，WCF 可以利用 ASP.NET/Authorization 管理員的組合進行授權的用戶端。  
+ ASP.NET 可以使用 [授權管理員] 來管理網站的授權。 WCF 也可以利用 ASP.NET/Authorization Manager 組合來授權用戶端。  
   
  [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  解釋對宣告型授權使用「識別模型」基礎結構的基本概念。  
@@ -46,7 +46,7 @@ ms.locfileid: "65881200"
 ## <a name="related-sections"></a>相關章節  
  [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
