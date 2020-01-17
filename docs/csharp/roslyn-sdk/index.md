@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK (Roslyn API)
 description: 了解如何使用.NET 編譯器平台 SDK (亦稱為 Roslyn API) 來了解 .NET 程式碼、找出錯誤，並修正那些錯誤。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3a202d977237ce716e3f8c0cf906894efd02196d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 98984edad3a25daa8b0ea13b903c4e6447b8a22a
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346947"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163133"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET 編譯器平台 SDK
 
@@ -21,7 +21,7 @@ ms.locfileid: "75346947"
 
 .NET 編譯器平台 SDK 可讓您建置「分析器」和「程式碼修正」，以尋找並更正程式碼錯誤。 「分析器」了解程式碼的語法和結構，並會偵測應該修正的做法。 「程式碼修正」提供一或多個建議的修正，以解決分析器所發現的程式碼錯誤。 一般而言，分析器和相關聯的程式碼修正會一起封裝在單一專案中。
 
-分析器和程式碼修正會使用靜態分析來了解程式碼。 它們不會執行程式碼或提供其他測試優點。 不過，它們可以指出通常會導致錯誤、無法維護的程式碼，或標準指導方針驗證的做法。
+分析器和程式碼修正會使用靜態分析來了解程式碼。 它們不會執行程式碼或提供其他測試優點。 不過，它們可以指出通常會導致 bug、撰寫無法維護程式碼或標準指導方針違規的實務。
 
 .NET 編譯器平台 SDK 提供一組 API，可讓您檢查並了解 C# 或 Visual Basic 程式碼基底。 因為您可以使用這個單一程式碼基底，所以您可以更輕鬆地撰寫分析器和程式碼修正，方法是使用 .NET 編譯器平台 SDK 所提供的語法和語意分析 API。 擺脫由編譯器完成的大型複寫工作，您可以專注於更需要關注的工作，像是尋找並更正您的專案或程式庫的常見程式碼錯誤。
 

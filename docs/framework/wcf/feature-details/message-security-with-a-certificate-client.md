@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: fb68487746a7dc9cec1d1473b445bccc7b2b23c2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 4b282062040ccfc18534ad88effc4c0f1972c5a6
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424882"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212059"
 ---
 # <a name="message-security-with-a-certificate-client"></a>憑證用戶端的訊息安全性
-下列案例示範 Windows Communication Foundation (WCF) 用戶端和服務使用訊息安全性模式保護。 用戶端與服務皆以憑證驗證。 如需詳細資訊，請參閱 <<c0> [ 分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。
+下列案例顯示使用訊息安全性模式保護的 Windows Communication Foundation （WCF）用戶端和服務。 用戶端與服務皆以憑證驗證。 如需詳細資訊，請參閱[分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)。
 
- ![如果螢幕擷取畫面顯示具有憑證的用戶端。](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
+ ![顯示具有憑證之用戶端的螢幕擷取畫面。](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
- 範例應用程式，請參閱[訊息安全性憑證](../../../../docs/framework/wcf/samples/message-security-certificate.md)。  
+ 如需範例應用程式，請參閱[訊息安全性憑證](../../../../docs/framework/wcf/samples/message-security-certificate.md)。  
 
 |特性|描述|  
 |--------------------|-----------------|  
-|安全性模式|Message|  
-|互通性|WCF 只|  
+|安全性模式|訊息|  
+|互通性|僅限 WCF|  
 |驗證 (伺服器)|使用服務憑證|  
 |驗證 (用戶端)|使用用戶端憑證|  
 |完整性|是|  
@@ -31,7 +31,7 @@ ms.locfileid: "67424882"
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
@@ -84,12 +84,12 @@ ms.locfileid: "67424882"
 </configuration>  
 ```  
   
-## <a name="client"></a>用戶端  
- 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
+## <a name="client"></a>Client  
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
-- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如:  
+- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如：  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -101,7 +101,7 @@ ms.locfileid: "67424882"
  [!code-vb[C_SecurityScenarios#17](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#17)]  
   
 ### <a name="configuration"></a>組態  
- 下列組態指定使用端點行為的用戶端憑證。 如需憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 程式碼也會使用 <`identity`> 項目來指定預期的伺服器識別網域名稱系統 (DNS)。 如需身分識別的詳細資訊，請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
+ 下列組態指定使用端點行為的用戶端憑證。 如需憑證的詳細資訊，請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。 程式碼也會使用 <`identity`> 專案來指定預期伺服器識別的網域名稱系統（DNS）。 如需有關身分識別的詳細資訊，請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -143,9 +143,9 @@ ms.locfileid: "67424882"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
 - [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

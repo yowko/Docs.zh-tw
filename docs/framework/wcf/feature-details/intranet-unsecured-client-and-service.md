@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 65b8597727da256e832351792b9d5d9bd016eb28
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1ffd0421195b0339ad966b661c229e5a5ebb94ec
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587015"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212091"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>沒有安全保障的內部網路用戶端與服務
-下圖說明簡單的 Windows Communication Foundation (WCF) 服務，開發 WCF 應用程式的安全私人網路上提供的資訊。 因為資料重要性低、 預期是原本就是安全的網路，或安全性由 WCF 基礎結構下一層提供，則不需要安全性。  
+下圖說明一個簡單的 Windows Communication Foundation （WCF）服務，其開發目的是要將安全的私人網路資訊提供給 WCF 應用程式。 安全性不是必要的，因為資料的重要性較低、網路應原本就安全，或由 WCF 基礎結構底下的一層提供安全性。  
   
  ![內部網路不安全的用戶端和服務案例。](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
@@ -22,13 +22,13 @@ ms.locfileid: "64587015"
 |安全性模式|None|  
 |Transport|TCP|  
 |繫結|<xref:System.ServiceModel.NetTcpBinding>|  
-|互通性|WCF 只|  
-|驗證|None|  
+|互通性|僅限 WCF|  
+|驗證  (可能為英文網頁)|None|  
 |完整性|None|  
 |機密性|None|  
   
 ## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
@@ -70,18 +70,18 @@ ms.locfileid: "64587015"
 </configuration>  
 ```  
   
-## <a name="client"></a>用戶端  
- 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
+## <a name="client"></a>Client  
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
-- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如:   
+- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如：  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>程式碼  
- 下列程式碼會顯示基本的 WCF 用戶端存取使用 TCP 通訊協定的不安全的端點。  
+ 下列程式碼顯示使用 TCP 通訊協定來存取不安全端點的基本 WCF 用戶端。  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
@@ -112,8 +112,8 @@ ms.locfileid: "64587015"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -1,17 +1,20 @@
 ---
 title: 如何使用C# -.net 序列化和還原序列化 JSON
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 047d5b5c6fa339089d2054eb6bfe8b3066c1d00c
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904650"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163198"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化（封送處理和 unmarshal） JSON
 
@@ -563,7 +566,7 @@ JSON 屬性命名原則：
 }
 ```
 
-如需多型**序列化**的詳細資訊，以及還原序列化**的相關資訊**，請參閱[如何從 Newtonsoft 遷移至 system.object](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)。
+如需多型**序列化**的詳細資訊，以及還原序列化**的相關資訊**，請參閱[如何從 Newtonsoft.Json 遷移至 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)。
 
 ## <a name="allow-comments-and-trailing-commas"></a>允許批註和尾端逗號
 
@@ -777,9 +780,9 @@ JSON 中的 Null 值只有在有效時才會被忽略。 不可為 null 的實�
 
 ## <a name="additional-resources"></a>其他資源
 
-* [System.web. Text. Json 總覽](system-text-json-overview.md)
+* [System.Text.Json 總覽](system-text-json-overview.md)
 * [如何撰寫自訂轉換器](system-text-json-converters-how-to.md)
-* [如何從 Newtonsoft 遷移](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [System.web 中的 DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
-* [System.web API 參考](xref:System.Text.Json)
+* [如何從 Newtonsoft.Json 遷移](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [System.Text.Json 中的 DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)
+* [System.Text.Json API 參考](xref:System.Text.Json)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

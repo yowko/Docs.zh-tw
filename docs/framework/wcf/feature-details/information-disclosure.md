@@ -2,12 +2,12 @@
 title: 資訊洩露
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 0e45a71855ecb172f36aae8139f89d4b8c8ffd0d
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 0bcf1aa04d7ba7477a6c3f1559a77bbda1f974af
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425300"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211949"
 ---
 # <a name="information-disclosure"></a>資訊洩露
 
@@ -19,11 +19,11 @@ ms.locfileid: "67425300"
 
 ## <a name="policy-information"></a>原則資訊
 
-維持原則的安全相當重要，特別是在原則中公開敏感的發行權杖需求或權杖簽發者資訊的聯合案例中。 在這些情況中，建議保護聯合服務的原則端點，以避免攻擊者取得與服務有關的資訊，例如放在發行權杖中的宣告類型，或將用戶端重新導向至惡意的權杖簽發者。 例如，攻擊者可以透過重新設定聯合信任鏈結來找出使用者名組/密碼組，以終止執行中間人攻擊的簽發者。 同時，也建議透過原則擷取來取得繫結的同盟用戶端，確認他們信任所取得之同盟信任鏈結中的簽發者。 如需聯合案例的詳細資訊，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。
+維持原則的安全相當重要，特別是在原則中公開敏感的發行權杖需求或權杖簽發者資訊的聯合案例中。 在這些情況中，建議保護聯合服務的原則端點，以避免攻擊者取得與服務有關的資訊，例如放在發行權杖中的宣告類型，或將用戶端重新導向至惡意的權杖簽發者。 例如，攻擊者可以透過重新設定聯合信任鏈結來找出使用者名組/密碼組，以終止執行中間人攻擊的簽發者。 同時，也建議透過原則擷取來取得繫結的同盟用戶端，確認他們信任所取得之同盟信任鏈結中的簽發者。 如需同盟案例的詳細資訊，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。
 
 ## <a name="memory-dumps-can-reveal-claim-information"></a>記憶體傾印會洩漏宣告資訊
 
-應用程式失敗時，Dr.Watson 等產生的記錄檔會包含宣告資訊。 這項資訊不應該匯出到其他實體，例如支援團隊等，否則可能會一併匯出包含私人資料的宣告資訊。 只要不將記錄檔傳送給未知的實體，即可減少這種情況。 如需詳細資訊，請參閱 < [Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=89160)。
+應用程式失敗時，Dr. Watson 等產生的記錄檔會包含宣告資訊。 這項資訊不應該匯出到其他實體，例如支援團隊等，否則可能會一併匯出包含私人資料的宣告資訊。 只要不將記錄檔傳送給未知的實體，即可減少這種情況。
 
 ## <a name="endpoint-addresses"></a>端點位址
 
@@ -35,13 +35,13 @@ ms.locfileid: "67425300"
 
 ## <a name="service-references"></a>服務參考
 
-服務參考是其他服務的參考。 例如，服務可能傳遞服務參考到運作中的用戶端。 服務參考也可搭配*信任身分識別驗證器*，內部元件，以確保目標主體的身分識別之前洩漏資訊，例如應用程式資料或目標的認證。 如果遠端信任識別無法確認或不正確，傳送者應確保不會洩漏可能危害到自己、應用程式或使用者的資料。
+服務參考是其他服務的參考。 例如，服務可能傳遞服務參考到運作中的用戶端。 服務參考也會與*信任身分識別驗證*器搭配使用，這是一個內部元件，可確保目標主體的身分識別，再將資訊（例如應用程式資料或認證）公開給目標。 如果遠端信任識別無法確認或不正確，傳送者應確保不會洩漏可能危害到自己、應用程式或使用者的資料。
 
 安全防護包括下列：
 
 - 服務參考假設為可以信任。 每次傳送服務參考執行個體時，小心確保它們不會遭到竄改。
 
-- 有些應用程式會提供使用者體驗，可根據服務參考中的資料以及經由遠端主機證實的信任資料，互相建立信任。 WCF 提供的這類機能的擴充點，但使用者必須實作它們。
+- 有些應用程式會提供使用者體驗，可根據服務參考中的資料以及經由遠端主機證實的信任資料，互相建立信任。 WCF 為這類設施提供了擴充點，但使用者必須加以執行。
 
 ## <a name="ntlm"></a>NTLM
 
@@ -55,7 +55,7 @@ ms.locfileid: "67425300"
 
 當建立用戶端、指定沒有網域名稱的用戶端認證或指定無效的伺服器識別時，會導致使用 NTLM 取代 Kerberos 通訊協定 (如果 `AllowNtlm` 屬性設定為 `true`)。 由於 NTLM 不會驗證伺服器，因此資訊可能會遭到洩漏。
 
-比方說，就可以指定 Windows 用戶端認證沒有網域名稱，如下列 Visual C# 程式碼所示。
+例如，您可以指定沒有功能變數名稱的 Windows 用戶端認證，如下列視覺效果C#程式碼所示。
 
 ```csharp
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");
@@ -63,9 +63,9 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
 
 程式碼沒有指定網域名稱，因此將會使用 NTLM。
 
-如果有指定網域，但使用端點識別功能來指定無效的服務主體名稱，則會使用 NTLM。 如需有關如何指定端點識別的詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。
+如果有指定網域，但使用端點識別功能來指定無效的服務主體名稱，則會使用 NTLM。 如需如何指定端點身分識別的詳細資訊，請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)

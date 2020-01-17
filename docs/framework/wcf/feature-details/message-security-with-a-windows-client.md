@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 36193090349f5b8ddb07ee7c3c6c663621cc6d06
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c1661acf4d4aa2de8b6eca7015c74ba7f80af1
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637856"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212020"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 用戶端的訊息安全性
-這個案例示範 Windows Communication Foundation (WCF) 用戶端與受保護的訊息安全性模式的伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  
+此案例顯示由訊息安全性模式保護的 Windows Communication Foundation （WCF）用戶端和伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  
   
- ![訊息安全性的 Windows 用戶端](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Windows 用戶端的訊息安全性](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |特性|描述|  
 |--------------------|-----------------|  
 |安全性模式|訊息|  
-|互通性|WCF 只|  
+|互通性|僅限 WCF|  
 |驗證 (伺服器)|交互驗證伺服器和用戶端|  
 |驗證 (用戶端)|交互驗證伺服器和用戶端|  
 |完整性|是，使用共用安全性內容|  
@@ -29,7 +29,7 @@ ms.locfileid: "64637856"
 |繫結|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
@@ -72,12 +72,12 @@ ms.locfileid: "64637856"
 </configuration>  
 ```  
   
-## <a name="client"></a>用戶端  
- 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
+## <a name="client"></a>Client  
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
-- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如:   
+- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如：  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -116,7 +116,7 @@ ms.locfileid: "64637856"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

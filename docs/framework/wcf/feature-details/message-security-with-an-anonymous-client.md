@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fccdd021e392e6c37615a9091ce13f0e94167246
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038580"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212011"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>匿名用戶端的訊息安全性
 
-下列案例示範用戶端與受保護的 Windows Communication Foundation (WCF) 訊息安全性的服務。 這樣的設計目的是使用訊息安全性而非傳輸安全性，如此未來可以支援更豐富的宣告型模型。 如需使用各種宣告進行授權的詳細資訊，請參閱 <<c0> [ 管理宣告與授權身分識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。
+下列案例顯示 Windows Communication Foundation （WCF）訊息安全性所保護的用戶端和服務。 這樣的設計目的是使用訊息安全性而非傳輸安全性，如此未來可以支援更豐富的宣告型模型。 如需有關使用豐富宣告進行授權的詳細資訊，請參閱使用身分[識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)。
 
-範例應用程式，請參閱[訊息安全性匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)。
+如需範例應用程式，請參閱[訊息安全性匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)。
 
-![訊息安全性與匿名用戶端](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
+![匿名用戶端的訊息安全性](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
 
 |特性|描述|
 |--------------------|-----------------|
 |安全性模式|訊息|
-|互通性|WCF 只|
+|互通性|僅限 WCF|
 |驗證 (伺服器)|初始交涉需要伺服器驗證，而不需要用戶端驗證|
 |驗證 (用戶端)|None|
 |完整性|是，使用共用安全性內容|
@@ -32,7 +32,7 @@ ms.locfileid: "62038580"
 
 ## <a name="service"></a>服務
 
-下列程式碼和組態要獨立執行。 執行下列任一步驟：
+下列程式碼和組態要獨立執行。 請執行下列其中一項動作：
 
 - 使用不含組態的程式碼建立獨立服務。
 
@@ -88,9 +88,9 @@ ms.locfileid: "62038580"
 </configuration>
 ```
 
-## <a name="client"></a>用戶端
+## <a name="client"></a>Client
 
-下列程式碼和組態要獨立執行。 執行下列任一步驟：
+下列程式碼和組態要獨立執行。 請執行下列其中一項動作：
 
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。
 
@@ -138,10 +138,10 @@ ms.locfileid: "62038580"
 </configuration>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [訊息安全性匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)
 - [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

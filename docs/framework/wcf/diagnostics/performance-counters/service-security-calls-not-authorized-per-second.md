@@ -2,12 +2,12 @@
 title: 服務：每秒未授權的安全性呼叫數
 ms.date: 03/30/2017
 ms.assetid: 1eeade5a-ea62-4757-b1f9-1b1b1746abd1
-ms.openlocfilehash: 523e5182ca661e170e5cba01d5221b5c38251959
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 964eff97a58ab7d5a68dbc1891473ae8d04a50ad
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773318"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163874"
 ---
 # <a name="service-security-calls-not-authorized-per-second"></a>服務：每秒未授權的安全性呼叫數
 計數器名稱：每秒未授權的安全性呼叫數  
@@ -17,6 +17,6 @@ ms.locfileid: "61773318"
   
  當 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccess%2A> 方法傳回 `false` 時，此計數器就會遞增。  
   
- 這個計數器的效能計數器型別是[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkId=94649)，使用下列公式來計算其值。  
+ 此計數器是效能計數器類型[PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))，其值是使用下列公式來計算。  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)

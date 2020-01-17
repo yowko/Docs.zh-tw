@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: a73f6333a91cd8018fe8e0c34d44db87938b8058
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: c68ca0f7c95515a0552b7003454dd87804176d3d
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347101"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212207"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>HOW TO：註冊和設定服務 Moniker
 在具有具型別合約的 COM 應用程式中使用 Windows Communication Foundation （WCF）服務標記之前，您必須使用 COM 註冊必要的屬性化型別，並以必要的系結設定 COM 應用程式和名字標記配置.  
@@ -25,7 +25,7 @@ ms.locfileid: "75347101"
     [assembly: ComVisible(true)]  
     ```  
   
-3. 將 managed WCF 用戶端編譯為強式名稱的元件。 這樣做將需要以密碼金鑰組 (Key Pairs) 進行簽署。 如需詳細資訊，請參閱《 .NET 開發人員手冊》中的[使用強式名稱簽署元件](https://go.microsoft.com/fwlink/?LinkId=94874)。  
+3. 將 managed WCF 用戶端編譯為強式名稱的元件。 這樣做將需要以密碼金鑰組 (Key Pairs) 進行簽署。 如需詳細資訊，請參閱[以強式名稱簽署組件](../../../standard/assembly/sign-strong-name.md)。  
   
 4. 使用組件註冊 (Regasm.exe) 工具並搭配 `/tlb` 選項，以使用 COM 註冊組件中的型別。  
   

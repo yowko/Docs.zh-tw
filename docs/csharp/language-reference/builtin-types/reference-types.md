@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973006"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163094"
 ---
 # <a name="built-in-reference-types-c-reference"></a>內建參考型別 (C# 參考)
 
@@ -33,13 +33,13 @@ C# 有數種內建參考型別。 它們具有關鍵字或運算子，是 .NET �
 
 ## <a name="the-object-type"></a>物件型別
 
-`object` 類型是 <xref:System.Object?displayProperty=nameWithType> 在 .NET 中的別名。 在 C# 的統一型別系統中，所有類型 (預先定義和使用者定義的、參考型別和實值型別) 都會直接或間接繼承自 <xref:System.Object?displayProperty=nameWithType>。 您可以將任何型別的值指派給 `object` 型別的變數。 任何 `object` 變數都可以使用常值 `null` 指派給其預設值。 當實值型別的變數轉換成物件時，即稱之為 *Boxed*。 當型別物件的變數轉換成實值型別時，即稱之為 *Unboxed*。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../programming-guide/types/boxing-and-unboxing.md)。 
+`object` 類型是 <xref:System.Object?displayProperty=nameWithType> 在 .NET 中的別名。 在 C# 的統一型別系統中，所有類型 (預先定義和使用者定義的、參考型別和實值型別) 都會直接或間接繼承自 <xref:System.Object?displayProperty=nameWithType>。 您可以將任何型別的值指派給 `object` 型別的變數。 任何 `object` 變數都可以使用常值 `null` 指派給其預設值。 當實值型別的變數轉換成物件時，即稱之為 *Boxed*。 當類型 `object` 的變數轉換成實數值型別時，就表示它是取消*裝箱*。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../programming-guide/types/boxing-and-unboxing.md)。 
 
 ## <a name="the-string-type"></a>字串型別
 
 `string` 類型代表零或多個 Unicode 字元序列。 `string` 是 <xref:System.String?displayProperty=nameWithType> 在 .NET 中的別名。
 
-雖然 `string` 是參考型別，但是會定義[等號比較運算子 `==` 和 `!=`](../operators/equality-operators.md#string-equality) 來比較 `string` 物件的值，而不是參考。 這樣會以更直覺的方式來測試字串是否相等。 例如:
+雖然 `string` 是參考型別，但是會定義[等號比較運算子 `==` 和 `!=`](../operators/equality-operators.md#string-equality) 來比較 `string` 物件的值，而不是參考。 這樣會以更直覺的方式來測試字串是否相等。 例如：
 
 ```csharp-interactive
 string a = "hello";
@@ -67,14 +67,14 @@ string b = "h";
 b += "ello";
 ```
 
-`[]` [運算子](../operators/member-access-operators.md#indexer-operator-)可以用於唯讀存取 `string` 的個別字元。 有效的值從 `0` 開始，且必須小於 `string` 的長度：
+`[]`[運算子](../operators/member-access-operators.md#indexer-operator-)可用於唯讀存取字串中的個別字元。 有效的索引值從 `0` 開始，而且必須小於字串的長度：
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-類似地，`[]` 運算子也可以用來逐一查看 `string` 中的每個字元：
+以類似的方式，`[]` 運算子也可以用來逐一查看字串中的每個字元：
 
 ```csharp-interactive
 string str = "test";
@@ -105,7 +105,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > 逸出代碼 `\udddd` (其中 `dddd` 是四位數字) 代表 Unicode 字元 U+`dddd`。 也會辨識八位數 Unicode 逸出代碼︰`\Udddddddd`。
 
-[逐字字串常值](../tokens/verbatim.md)的開頭為 `@`，也會用雙引號括住。 例如:
+[逐字字串常值](../tokens/verbatim.md)的開頭為 `@`，也會用雙引號括住。 例如：
 
 ```csharp
 @"good morning"  // a string literal

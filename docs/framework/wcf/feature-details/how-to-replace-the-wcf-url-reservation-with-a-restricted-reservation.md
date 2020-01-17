@@ -2,15 +2,16 @@
 title: HOW TO：若要以受限的保留項目取代 WCF URL URL 保留項目
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: fc50a0e31a0c323b695ada6565743fa19c1d4c2a
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544644"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212182"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>HOW TO：若要以受限的保留項目取代 WCF URL URL 保留項目
-URL 保留項目可讓您限制誰可以接收來自某個 URL 或一組 URL 的訊息。 保留項目是由一個 URL 範本、一個存取控制清單 (ACL)，以及一組旗標所組成。 URL 範本會定義保留項目所影響的 URL。 如需如何處理 URL 範本的詳細資訊，請參閱[路由傳入要求](https://go.microsoft.com/fwlink/?LinkId=136764)。 ACL 會控制允許從指定之 URL 接收訊息的使用者或使用者群組。 旗標會指出保留項目是要提供使用者或群組直接在 URL 上接聽的權限，還是要委派接聽其他特定處理序的權限。  
+
+URL 保留項目可讓您限制誰可以接收來自某個 URL 或一組 URL 的訊息。 保留項目是由一個 URL 範本、一個存取控制清單 (ACL)，以及一組旗標所組成。 URL 範本會定義保留項目所影響的 URL。 如需如何處理 URL 範本的詳細資訊，請參閱[路由傳入要求](/windows/win32/http/routing-incoming-requests)。 ACL 會控制允許從指定之 URL 接收訊息的使用者或使用者群組。 旗標會指出保留項目是要提供使用者或群組直接在 URL 上接聽的權限，還是要委派接聽其他特定處理序的權限。  
   
  作為預設作業系統設定的一部分，Windows Communication Foundation （WCF）會為埠80建立可全域存取的保留專案，讓所有使用者執行使用雙重 HTTP 系結進行雙工通訊的應用程式。 此保留項目的 ACL 是攻所有人使用，因此，系統管理員無法明確地允許或不允許在一個 URL 或一組 URL 上接聽的權限。 本主題說明如何刪除此保留項目，以及如何使用受限的 ACL 重新建立保留項目。  
   
@@ -24,7 +25,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
             SDDL: D:(A;;GX;;;WD)  
 ```
 
- 保留專案是由 WCF 應用程式使用 HTTP 雙重系結進行雙工通訊時所使用的 URL 範本所組成。 在透過 HTTP 雙重系結進行通訊時，WCF 服務會使用此表單的 Url，將訊息傳回給 WCF 用戶端。 所有人都會得到在 URL 上接聽的權限，但沒有委派接聽其他處理序的權限。 最後，ACL 會以 Security Descriptor Definition Language (SSDL) 描述。 如需 SSDL 的詳細資訊，請參閱[ssdl](https://go.microsoft.com/fwlink/?LinkId=136789)  
+ 保留專案是由 WCF 應用程式使用 HTTP 雙重系結進行雙工通訊時所使用的 URL 範本所組成。 在透過 HTTP 雙重系結進行通訊時，WCF 服務會使用此表單的 Url，將訊息傳回給 WCF 用戶端。 所有人都會得到在 URL 上接聽的權限，但沒有委派接聽其他處理序的權限。 最後，ACL 會以 Security Descriptor Definition Language (SSDL) 描述。 如需 SSDL 的詳細資訊，請參閱[ssdl](/windows/win32/secauthz/security-descriptor-definition-language)  
   
 ## <a name="to-delete-the-wcf-url-reservation"></a>若要刪除 WCF URL 保留項目  
   

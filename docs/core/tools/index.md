@@ -2,16 +2,16 @@
 title: .NET Core 命令列介面 (Command-Line Interface, CLI) 工具
 description: .NET Core 命令列介面 (CLI) 工具與功能概觀。
 ms.date: 08/14/2017
-ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714142"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163211"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
 
-.NET Core 命令列介面 (CLI) 是新的跨平台工具鏈，適用於開發 .NET 應用程式。 CLI 是整合式開發環境 (IDE)、編輯器和建置 Orchestrator 等高層級工具所依靠的基礎。
+.NET Core 命令列介面（CLI）是用於開發 .NET 應用程式的跨平臺工具鏈。 CLI 是可讓您使用的高階工具（例如，整合式開發環境（Ide）、編輯器和組建協調器）的基礎。
 
 ## <a name="installation"></a>安裝
 

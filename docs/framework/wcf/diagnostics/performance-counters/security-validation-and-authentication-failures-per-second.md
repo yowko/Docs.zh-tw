@@ -2,15 +2,15 @@
 title: 每秒的安全性驗證和驗證失敗數
 ms.date: 03/30/2017
 ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
-ms.openlocfilehash: 5db8b656b626ea16f89ce432bf4cf1030b87a0b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 546d81b73e912915d265fb194de4ad9e45d55cea
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664986"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163913"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>每秒的安全性驗證和驗證失敗數
-計數器名稱：安全性驗證和每秒的驗證失敗。  
+計數器名稱：每秒的安全性驗證和驗證失敗。  
   
 ## <a name="description"></a>描述  
  每當因為「未授權的安全性呼叫數」計數器所未涵蓋的安全性問題而拒絕訊息時，這個計數器就會遞增。 這類問題包括：  
@@ -29,6 +29,6 @@ ms.locfileid: "64664986"
   
 - 在 TLSNEGO/SPNEGO 交換期間發生錯誤。  
   
- 這個計數器的效能計數器型別是[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)，其值會計算公式如下：  
+ 此計數器是效能計數器類型[PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))，其值是使用下列公式來計算：  
   
  (N1-N0)/((D1-D0)/F)

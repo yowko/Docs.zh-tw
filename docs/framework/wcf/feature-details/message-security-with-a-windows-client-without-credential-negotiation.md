@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 724e7792e09bea23d95d32f86c2241de473d3876
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d3b05a1786131a119d516edeba0d6e8e24289f87
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045877"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212033"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>未使用認證交涉的 Windows 用戶端訊息安全性
 
-下列案例顯示由 Kerberos 通訊協定保護的 Windows Communication Foundation (WCF) 用戶端和服務。
+下列案例顯示由 Kerberos 通訊協定保護的 Windows Communication Foundation （WCF）用戶端和服務。
 
 服務和用戶端都是在相同的網域或受信任網域中。
 
 > [!NOTE]
-> 此案例與[Windows 用戶端的訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)之間的差異在於, 此案例不會在傳送應用程式訊息之前, 與服務協商服務認證。 此外，因為這必須使用 Kerberos 通訊協定，所以此案例還需要 Windows 網域環境。
+> 此案例與[Windows 用戶端的訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)之間的差異在於，此案例不會在傳送應用程式訊息之前，與服務協商服務認證。 此外，因為這必須使用 Kerberos 通訊協定，所以此案例還需要 Windows 網域環境。
 
 ![沒有認證協商的訊息安全性](../../../../docs/framework/wcf/feature-details/media/0c9f9baa-2439-4ef9-92f4-43c242d85d0d.gif "0c9f9baa-2439-4ef9-92f4-43c242d85d0d")
 
@@ -36,7 +36,7 @@ ms.locfileid: "70045877"
 
 ## <a name="service"></a>服務
 
-下列程式碼和組態要獨立執行。 執行下列任一步驟：
+下列程式碼和組態要獨立執行。 請執行下列其中一項動作：
 
 - 使用不含組態的程式碼建立獨立服務。
 
@@ -47,13 +47,13 @@ ms.locfileid: "70045877"
 下列程式碼會建立使用訊息安全性的服務端點。 程式碼會停用服務認證交涉以及安全性內容權杖 (SCT) 的建立。
 
 > [!NOTE]
-> 若要在沒有交涉的情況下使用 Windows 認證類型，服務的使用者帳戶必須可以存取已在 Active Directory 網域中註冊的服務主要名稱 (SPN)。 執行這項作業的方法有兩種：
+> 若要在沒有交涉的情況下使用 Windows 認證類型，服務的使用者帳戶必須可以存取已在 Active Directory 網域中註冊的服務主要名稱 (SPN)。 您可以透過下列兩種方式來執行這項作業：
 
-1. 使用 `NetworkService` 或 `LocalSystem` 帳戶來執行服務。 因為這些帳戶可以存取電腦加入 Active Directory 網域時所建立的電腦 SPN, 所以 WCF 會自動在服務的中繼資料 (Web 服務描述) 中的服務端點內產生適當的 SPN 元素。Language 或 WSDL)。
+1. 使用 `NetworkService` 或 `LocalSystem` 帳戶來執行服務。 因為這些帳戶可以存取電腦加入 Active Directory 網域時所建立的電腦 SPN，所以 WCF 會自動在服務的中繼資料（Web 服務描述）中的服務端點內產生適當的 SPN 元素。Language 或 WSDL）。
 
-2. 使用任意的 Active Directory 網域帳戶來執行服務。 在這種情況下，您必須建立該網域帳戶的 SPN。 使用 Setspn.exe 公用程式工具來建立，是其中一種方法。 建立服務帳戶的 SPN 之後, 請將 WCF 設定為透過其中繼資料 (WSDL) 將該 SPN 發行至服務的用戶端。 不論是透過應用程式組態檔或程式碼，都可以設定公開端點的端點身分識別來完成此作業。 下列範例會以程式設計方式發行身分識別。
+2. 使用任意的 Active Directory 網域帳戶來執行服務。 在這種情況下，您必須建立該網域帳戶的 SPN。 使用 Setspn.exe 公用程式工具來建立，是其中一種方法。 建立服務帳戶的 SPN 之後，請將 WCF 設定為透過其中繼資料（WSDL）將該 SPN 發行至服務的用戶端。 不論是透過應用程式組態檔或程式碼，都可以設定公開端點的端點身分識別來完成此作業。 下列範例會以程式設計方式發行身分識別。
 
-如需 Spn、Kerberos 通訊協定和 Active Directory 的詳細資訊, 請參閱[Windows 的 Kerberos 技術補充](https://go.microsoft.com/fwlink/?LinkId=88330)。 如需端點身分識別的詳細資訊, 請參閱[SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。
+如需 Spn、Kerberos 通訊協定和 Active Directory 的詳細資訊，請參閱[Windows 的 Kerberos 技術補充](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10))。 如需端點身分識別的詳細資訊，請參閱[SecurityBindingElement 驗證模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)。
 
 [!code-csharp[C_SecurityScenarios#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#12)]
 [!code-vb[C_SecurityScenarios#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#12)]
@@ -96,9 +96,9 @@ ms.locfileid: "70045877"
 </configuration>
 ```
 
-## <a name="client"></a>用戶端
+## <a name="client"></a>Client
 
-下列程式碼和組態要獨立執行。 執行下列任一步驟：
+下列程式碼和組態要獨立執行。 請執行下列其中一項動作：
 
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。
 
@@ -112,16 +112,16 @@ ms.locfileid: "70045877"
 下列程式碼會設定用戶端。 安全性模式設定為 Message，而用戶端認證類型設定為 Windows。 請注意，<xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 和 <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> 屬性會設定為 `false`。
 
 > [!NOTE]
-> 若要在沒有交涉的情況下使用 Windows 認證類型，就必須先使用服務的帳戶 SPN 設定用戶端，再開始與服務進行通訊。 用戶端會使用 SPN 取得 Kerberos 權杖，以驗證並保護與服務進行的通訊。 下列範例示範如何使用服務的 SPN 來設定用戶端。 如果您使用[System.servicemodel 中繼資料公用程式工具 (Svcutil)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端, 服務的 SPN 將會自動從服務的中繼資料 (WSDL) 傳播至用戶端 (如果服務的中繼資料包含該資訊)。 如需如何設定服務以在服務的中繼資料中包含其 SPN 的詳細資訊, 請參閱本主題稍後的「服務」一節。
+> 若要在沒有交涉的情況下使用 Windows 認證類型，就必須先使用服務的帳戶 SPN 設定用戶端，再開始與服務進行通訊。 用戶端會使用 SPN 取得 Kerberos 權杖，以驗證並保護與服務進行的通訊。 下列範例示範如何使用服務的 SPN 來設定用戶端。 如果您使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端，服務的 SPN 將會自動從服務的中繼資料（WSDL）傳播至用戶端（如果服務的中繼資料包含該資訊）。 如需如何設定服務以在服務的中繼資料中包含其 SPN 的詳細資訊，請參閱本主題稍後的「服務」一節。
 >
-> 如需 Spn、Kerberos 和 Active Directory 的詳細資訊, 請參閱[Windows 的 Kerberos 技術補充](https://go.microsoft.com/fwlink/?LinkId=88330)。 如需有關端點身分識別的詳細資訊, 請參閱[SecurityBindingElement Authentication 模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)主題。
+> 如需 Spn、Kerberos 和 Active Directory 的詳細資訊，請參閱[Windows 的 Kerberos 技術補充](https://docs.microsoft.com/previous-versions/msp-n-p/ff649429(v=pandp.10))。 如需有關端點身分識別的詳細資訊，請參閱[SecurityBindingElement Authentication 模式](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)主題。
 
 [!code-csharp[C_SecurityScenarios#19](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#19)]
 [!code-vb[C_SecurityScenarios#19](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#19)]
 
 ### <a name="configuration"></a>組態
 
-下列程式碼會設定用戶端。 請注意, [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素必須設定為符合服務的 SPN, 如在 Active Directory 網域中為服務的帳戶註冊。
+下列程式碼會設定用戶端。 請注意， [\<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md)元素必須設定為符合服務的 SPN，如在 Active Directory 網域中註冊服務的帳戶。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -153,8 +153,8 @@ ms.locfileid: "70045877"
 </configuration>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

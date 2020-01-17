@@ -2,20 +2,21 @@
 title: 大型資料與資料流
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 70e43eaf4dc77e07af8ec65faf9cf0fa9a7a0fe4
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 5719f941c71867699960c6029f9cc512021986f3
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991524"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212198"
 ---
 # <a name="large-data-and-streaming"></a>大型資料與資料流
-Windows Communication Foundation （WCF）是以 XML 為基礎的通訊基礎結構。 由於 XML 資料通常是以[xml 1.0 規格](https://go.microsoft.com/fwlink/?LinkId=94838)中定義的標準文字格式來編碼，因此連線的系統開發人員和架構師通常會關心網路上傳送之訊息的線路使用量（或大小），以及以文字為基礎的 XML 編碼會對二進位資料的有效率傳輸造成特殊挑戰。  
+
+Windows Communication Foundation （WCF）是以 XML 為基礎的通訊基礎結構。 因為 XML 資料通常是以[xml 1.0 規格](https://www.w3.org/TR/REC-xml/)中所定義的標準文字格式來編碼，所以連線的系統開發人員和架構師通常會關心網路上所傳送之訊息的線路使用量（或大小），而 xml 的文字編碼則會對二進位資料的有效率傳輸造成特殊挑戰。  
   
 ## <a name="basic-considerations"></a>基本考量  
  為了提供有關 WCF 的下列資訊的背景資訊，本節特別針對一般適用于連線系統基礎結構的編碼、二進位資料和串流，強調一些一般考慮和考慮。  
   
-### <a name="encoding-data-text-vs-binary"></a>編碼資料：文字與二元  
+### <a name="encoding-data-text-vs-binary"></a>資料編碼：文字與二進位的比較  
  常見的開發人員問題包括：由於開始標記和結束標記的重複性質，因此與二進位格式相比，XML 的額外負荷相當大；一般認為數值的編碼會龐大很多，因為它們是以文字值來表示；而二進位資料無法有效地表示，因為它必須進行特殊編碼才能內嵌在文字格式中。  
   
  雖然上述許多問題和類似問題的確存在，但是 XML Web Service 環境中的 XML 文字編碼訊息和舊版遠端程序呼叫 (RPC) 環境中的二進位編碼訊息之間的實際差異常常不如最初所想的那麼顯著。  
@@ -56,10 +57,10 @@ Windows Communication Foundation （WCF）是以 XML 為基礎的通訊基礎結
   
  對於沒有這些條件約束的資料，通常比一個大型訊息更能夠在一個工作階段的範圍內傳送訊息的序列。 如需詳細資訊，請參閱本主題稍後的「資料流程資料」一節。  
   
- 傳送大量資料時，您將需要設定`maxAllowedContentLength` iis 設定（如需詳細資訊，請參閱設定[iis 要求限制](https://go.microsoft.com/fwlink/?LinkId=253165)）和`maxReceivedMessageSize`系結設定（例如[System.servicemodel. BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A)或<xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>）。 屬性預設為 28.6 M `maxReceivedMessageSize` ，而屬性預設為64kb。 `maxAllowedContentLength`  
+ 傳送大量資料時，您必須設定 `maxAllowedContentLength` IIS 設定（如需詳細資訊，請參閱設定[Iis 要求限制](https://docs.microsoft.com/iis/configuration/system.webServer/security/requestFiltering/requestLimits/)）和 `maxReceivedMessageSize` 系結設定（例如[BasicHttpBinding. MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A)或 <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>）。 `maxAllowedContentLength` 屬性預設為 28.6 MB，而 `maxReceivedMessageSize` 屬性預設為64KB。  
   
 ## <a name="encodings"></a>編碼方式  
- *編碼*會定義一組關於如何在網路上呈現訊息的規則。 *編碼器*會在傳送端執行這種編碼方式，並負責將記憶體<xref:System.ServiceModel.Channels.Message>中的轉換成位元組資料流程或位元組緩衝區，以便在網路上傳送。 在接收者端，編碼器會將位元組序列變成記憶體中的訊息。  
+ *編碼*會定義一組關於如何在網路上呈現訊息的規則。 *編碼器*會在寄件者端執行這種編碼方式，並負責將記憶體中的 <xref:System.ServiceModel.Channels.Message> 轉換成可在網路上傳送的位元組資料流程或位元組緩衝區。 在接收者端，編碼器會將位元組序列變成記憶體中的訊息。  
   
  WCF 包含三個編碼器，並可讓您視需要撰寫和插入自己的編碼器。  
   
@@ -67,7 +68,7 @@ Windows Communication Foundation （WCF）是以 XML 為基礎的通訊基礎結
   
 |編碼器繫結項目|描述|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|文字訊息編碼器是所有 HTTP 繫結的預設編碼器，以及所有優先考量互通性之自訂繫結的適當選擇。 此編碼器不需特別處理二進位資料，即可讀取及撰寫標準 SOAP 1.1/SOAP 1.2 文字訊息。 如果訊息<xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>的屬性設定為<xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>，則會省略輸出中的 SOAP 封套包裝函式，而且只會序列化訊息主體內容。|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|文字訊息編碼器是所有 HTTP 繫結的預設編碼器，以及所有優先考量互通性之自訂繫結的適當選擇。 此編碼器不需特別處理二進位資料，即可讀取及撰寫標準 SOAP 1.1/SOAP 1.2 文字訊息。 如果訊息的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>，則會省略輸出中的 SOAP 封套包裝函式，而且只會序列化訊息主體內容。|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM 訊息編碼器是實作二進位資料特殊處理的文字編碼器，根據預設，它並非用於任何標準繫結中，因為它完全是依個案執行的最佳化公用程式。 如果訊息包含達到 MTOM 編碼可產生功效之臨界值的二進位資料，資料便會在訊息封套之後外顯化為 MIME 部分。 請參閱本節稍後的「啟用 MTOM」。|  
 |<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|二進位訊息編碼器是 Net * 系結的預設編碼器，而當兩個通訊方都是以 WCF 為基礎時，會提供適當的選擇。 二進位訊息編碼器是使用 .NET 二進位 XML 格式，這是 XML 資訊設定 (Infoset) 的 Microsoft 特定二進位表示法，通常會產生比同等的 XML 1.0 表示法更小的使用量，並將二進位資料編碼為位元組資料流。|  
   
@@ -152,7 +153,7 @@ class MyData
  當使用對等通道傳輸時，資料流也無法使用，因此無法用於 <xref:System.ServiceModel.NetPeerTcpBinding>。  
   
 #### <a name="streaming-and-sessions"></a>資料流與工作階段  
- 使用工作階段架構繫結對呼叫進行資料流處理時，可能會遇到未預期的行為。 即使使用的繫結已設定為使用工作階段，所有資料流處理呼叫還是會透過不支援工作階段的單一通道 (資料包通道) 來進行。 如果多個用戶端透過工作階段架構繫結對同一個服務物件進行資料流處理呼叫，而且服務物件的並行模式已設為單一且其執行個體內容模式已設為 PerSession，則所有呼叫必須經過資料包通道，所以一次只能處理一個呼叫。 一或多個用戶端可能會因此逾時。您可以將服務物件的執行個體內容模式設為 PerCall 或是將並行模式設為 Multiple 來解決這個問題。  
+ 使用工作階段架構繫結對呼叫進行資料流處理時，可能會遇到未預期的行為。 即使使用的繫結已設定為使用工作階段，所有資料流處理呼叫還是會透過不支援工作階段的單一通道 (資料包通道) 來進行。 如果多個用戶端透過工作階段架構繫結對同一個服務物件進行資料流處理呼叫，而且服務物件的並行模式已設為單一且其執行個體內容模式已設為 PerSession，則所有呼叫必須經過資料包通道，所以一次只能處理一個呼叫。 一或多個用戶端可能會超時。若要解決這個問題，您可以將服務物件的實例內容模式設定為 PerCall 或平行存取多個。  
   
 > [!NOTE]
 > 此時 MaxConcurrentSessions 沒有作用，因為只有一個可用的「工作階段」。  
@@ -220,24 +221,24 @@ public class UploadStreamMessage
 }   
 ```  
   
- 當資料流到達檔案結尾 (EOF) 時，資料流傳輸會結束且訊息會關閉。 當傳送訊息（傳回值或叫用作業）時，您可以傳遞<xref:System.IO.FileStream> ，而 WCF 基礎結構接著會從該資料流程提取所有資料，直到資料流程已完全讀取並到達 EOF 為止。 如果要傳輸來源中沒有此類預先建立之 <xref:System.IO.Stream> 衍生類別的資料流資料，請建構此類別，將該類別覆疊在您的資料流來源上，然後用來做為引數或傳回值。  
+ 當資料流到達檔案結尾 (EOF) 時，資料流傳輸會結束且訊息會關閉。 當傳送訊息（傳回值或叫用作業）時，您可以傳遞 <xref:System.IO.FileStream>，然後 WCF 基礎結構會從該資料流程提取所有資料，直到資料流程已完全讀取並到達 EOF 為止。 如果要傳輸來源中沒有此類預先建立之 <xref:System.IO.Stream> 衍生類別的資料流資料，請建構此類別，將該類別覆疊在您的資料流來源上，然後用來做為引數或傳回值。  
   
  接收訊息時，WCF 會透過 Base64 編碼的訊息內文內容（或個別的 MIME 部分（如果使用 MTOM）來建立資料流程，而當讀取內容時，資料流程會到達 EOF。  
   
  雖然傳輸層的資料流也會使用任何其他的訊息合約類型 (參數清單、資料合約引數和明確的訊息合約)，但是由於此類型別訊息的序列化和還原序列化需要序列化程式的緩衝處理，因此並不建議使用此類合約變數。  
   
 ### <a name="special-security-considerations-for-large-data"></a>大型資料的特殊安全性考量  
- 所有的繫結都可讓您限制傳入訊息的大小，以防止阻絕服務攻擊。 例如，會公開 BasicHttpBinding MaxReceivedMessageSize 屬性，它會限定傳入訊息的大小，因此也會限制處理時所存取的記憶體數量上限[。](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) <xref:System.ServiceModel.BasicHttpBinding>消息。 這個單位的設定是位元組，預設值是 65,536 位元組。  
+ 所有的繫結都可讓您限制傳入訊息的大小，以防止阻絕服務攻擊。 例如，<xref:System.ServiceModel.BasicHttpBinding>會公開[MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A)屬性，它會限定傳入訊息的大小，因此也會限制處理訊息時所存取的記憶體數量上限。 這個單位的設定是位元組，預設值是 65,536 位元組。  
   
  大型資料流案例特定的安全性威脅會造成資料在接收者預期進行資料流處理時，進行緩衝處理，引起阻絕服務。 例如，WCF 一律會緩衝處理訊息的 SOAP 標頭，因此攻擊者可能會建立完全由標頭組成的大型惡意訊息，以強制緩衝處理資料。 當啟用資料流時，`MaxReceivedMessageSize` 可能會設定為極大值，因為接收者絕對不會預期在記憶體中一次緩衝處理整個訊息。 如果強制 WCF 會緩衝訊息，則會發生記憶體溢位。  
   
- 因此，在這種情況中，限制傳入訊息大小上限是不夠的。 需要`MaxBufferSize`屬性來限制 WCF 緩衝區的記憶體。 重要的是在資料流處理時，將它設定為安全值 (或保留為預設值)。 例如，假設您的服務必須接收大小高達 4 GB 的檔案，然後儲存在本機磁碟上。 也請假設您的記憶體受到一次只能緩衝處理 64 KB 資料的限制。 然後您會將 `MaxReceivedMessageSize` 設定為 4 GB，而將 `MaxBufferSize` 設定為 64 KB。 同時，在您的服務實作中，必須確保您只從 64 KB 區塊的傳入資料流讀取，而且在前一個區塊寫入磁碟並從記憶體捨棄之前，不會讀取下一個區塊。  
+ 因此，在這種情況中，限制傳入訊息大小上限是不夠的。 需要 `MaxBufferSize` 屬性來限制 WCF 緩衝區的記憶體。 重要的是在資料流處理時，將它設定為安全值 (或保留為預設值)。 例如，假設您的服務必須接收大小高達 4 GB 的檔案，然後儲存在本機磁碟上。 也請假設您的記憶體受到一次只能緩衝處理 64 KB 資料的限制。 然後您會將 `MaxReceivedMessageSize` 設定為 4 GB，而將 `MaxBufferSize` 設定為 64 KB。 同時，在您的服務實作中，必須確保您只從 64 KB 區塊的傳入資料流讀取，而且在前一個區塊寫入磁碟並從記憶體捨棄之前，不會讀取下一個區塊。  
   
  也請務必瞭解，此配額只會限制 WCF 完成的緩衝，而且無法保護您在自己的服務或用戶端執行中所做的任何緩衝。 如需其他安全性考慮的詳細資訊，請參閱[資料的安全性考慮](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)。  
   
 > [!NOTE]
 > 使用緩衝或資料流傳輸是由端點處決定。 如果是 HTTP 傳輸，傳輸模式不會在連線上傳播，或是在 Proxy 伺服器與其他媒介之間進行傳播。 設定傳輸模式不會反映在服務介面的描述中。 將 WCF 用戶端產生到服務之後，您必須針對要搭配資料流程傳輸使用的服務編輯設定檔，以設定模式。 如果是 TCP 和具名管道傳輸，會傳播傳輸模式做為原則判斷提示。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [如何：啟用串流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [如何：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
