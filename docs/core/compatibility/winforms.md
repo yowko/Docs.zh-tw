@@ -2,18 +2,36 @@
 title: Windows Forms 的重大變更-.NET Core
 description: 列出 .NET Core Windows Forms 中的重大變更。
 ms.date: 01/08/2020
-ms.openlocfilehash: cde76369bcb65a87fde1437c8bf8fd3b3c19a0c7
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 44bcde60f9e08d2e06a69c55e4ebe904bf5c449b
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936998"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116452"
 ---
-# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="f4151-103">Windows Forms 中的重大變更</span><span class="sxs-lookup"><span data-stu-id="f4151-103">Breaking changes in Windows Forms</span></span>
+# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="a2aa9-103">Windows Forms 中的重大變更</span><span class="sxs-lookup"><span data-stu-id="a2aa9-103">Breaking changes in Windows Forms</span></span>
 
-<span data-ttu-id="f4151-104">版本3.0 中的 .NET Core 已加入 Windows Forms 支援。</span><span class="sxs-lookup"><span data-stu-id="f4151-104">Windows Forms support was added to .NET Core in version 3.0.</span></span> <span data-ttu-id="f4151-105">這篇文章列出其引進的 .NET Core 版本 Windows Forms 的重大變更。</span><span class="sxs-lookup"><span data-stu-id="f4151-105">This articles lists breaking changes for Windows Forms by the .NET Core version in which they were introduced.</span></span> <span data-ttu-id="f4151-106">如果您要從 .NET Framework 或舊版 .NET Core （3.0 或更新版本）升級 Windows Forms 應用程式，本文適用于您。</span><span class="sxs-lookup"><span data-stu-id="f4151-106">If you're upgrading a Windows Forms app from .NET Framework or from a previous version of .NET Core (3.0 or later), this article is applicable to you.</span></span>
+<span data-ttu-id="a2aa9-104">版本3.0 中的 .NET Core 已加入 Windows Forms 支援。</span><span class="sxs-lookup"><span data-stu-id="a2aa9-104">Windows Forms support was added to .NET Core in version 3.0.</span></span> <span data-ttu-id="a2aa9-105">本文列出其引進的 .NET Core 版本 Windows Forms 的重大變更。</span><span class="sxs-lookup"><span data-stu-id="a2aa9-105">This article lists breaking changes for Windows Forms by the .NET Core version in which they were introduced.</span></span> <span data-ttu-id="a2aa9-106">如果您要從 .NET Framework 或舊版 .NET Core （3.0 或更新版本）升級 Windows Forms 應用程式，本文適用于您。</span><span class="sxs-lookup"><span data-stu-id="a2aa9-106">If you're upgrading a Windows Forms app from .NET Framework or from a previous version of .NET Core (3.0 or later), this article is applicable to you.</span></span>
 
-## <a name="net-core-31"></a><span data-ttu-id="f4151-107">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="f4151-107">.NET Core 3.1</span></span>
+<span data-ttu-id="a2aa9-107">下列重大變更記載于此頁面：</span><span class="sxs-lookup"><span data-stu-id="a2aa9-107">The following breaking changes are documented on this page:</span></span>
+
+- [<span data-ttu-id="a2aa9-108">移除的控制項</span><span class="sxs-lookup"><span data-stu-id="a2aa9-108">Removed controls</span></span>](#removed-controls)
+- [<span data-ttu-id="a2aa9-109">如果顯示工具提示，則不會引發 CellFormatting 事件</span><span class="sxs-lookup"><span data-stu-id="a2aa9-109">CellFormatting event not raised if tooltip is shown</span></span>](#cellformatting-event-not-raised-if-tooltip-is-shown)
+- [<span data-ttu-id="a2aa9-110">DefaultFont 已變更為 Segoe UI 9 pt</span><span class="sxs-lookup"><span data-stu-id="a2aa9-110">Control.DefaultFont changed to Segoe UI 9 pt</span></span>](#default-control-font-changed-to-segoe-ui-9-pt)
+- [<span data-ttu-id="a2aa9-111">FolderBrowserDialog 的現代化</span><span class="sxs-lookup"><span data-stu-id="a2aa9-111">Modernization of the FolderBrowserDialog</span></span>](#modernization-of-the-folderbrowserdialog)
+- [<span data-ttu-id="a2aa9-112">已從某些 Windows Forms 類型中移除 SerializableAttribute</span><span class="sxs-lookup"><span data-stu-id="a2aa9-112">SerializableAttribute removed from some Windows Forms types</span></span>](#serializableattribute-removed-from-some-windows-forms-types)
+- [<span data-ttu-id="a2aa9-113">不支援 AllowUpdateChildControlIndexForTabControls 相容性切換</span><span class="sxs-lookup"><span data-stu-id="a2aa9-113">AllowUpdateChildControlIndexForTabControls compatibility switch not supported</span></span>](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
+- [<span data-ttu-id="a2aa9-114">不支援 DomainUpDown. UseLegacyScrolling 相容性參數</span><span class="sxs-lookup"><span data-stu-id="a2aa9-114">DomainUpDown.UseLegacyScrolling compatibility switch not supported</span></span>](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
+- [<span data-ttu-id="a2aa9-115">不支援 DoNotLoadLatestRichEditControl 相容性切換</span><span class="sxs-lookup"><span data-stu-id="a2aa9-115">DoNotLoadLatestRichEditControl compatibility switch not supported</span></span>](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
+- [<span data-ttu-id="a2aa9-116">不支援 DoNotSupportSelectAllShortcutInMultilineTextBox 相容性切換</span><span class="sxs-lookup"><span data-stu-id="a2aa9-116">DoNotSupportSelectAllShortcutInMultilineTextBox compatibility switch not supported</span></span>](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
+- [<span data-ttu-id="a2aa9-117">不支援 DontSupportReentrantFilterMessage 相容性切換</span><span class="sxs-lookup"><span data-stu-id="a2aa9-117">DontSupportReentrantFilterMessage compatibility switch not supported</span></span>](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
+- [<span data-ttu-id="a2aa9-118">不支援 EnableVisualStyleValidation 相容性切換</span><span class="sxs-lookup"><span data-stu-id="a2aa9-118">EnableVisualStyleValidation compatibility switch not supported</span></span>](#enablevisualstylevalidation-compatibility-switch-not-supported)
+- [<span data-ttu-id="a2aa9-119">不支援 UseLegacyCoNtextMenuStripSourceControlValue 相容性切換</span><span class="sxs-lookup"><span data-stu-id="a2aa9-119">UseLegacyContextMenuStripSourceControlValue compatibility switch not supported</span></span>](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
+- [<span data-ttu-id="a2aa9-120">不支援 UseLegacyImages 相容性切換</span><span class="sxs-lookup"><span data-stu-id="a2aa9-120">UseLegacyImages compatibility switch not supported</span></span>](#uselegacyimages-compatibility-switch-not-supported)
+- [<span data-ttu-id="a2aa9-121">變更 AccessibleObject 的存取權。 RuntimeIDFirstItem</span><span class="sxs-lookup"><span data-stu-id="a2aa9-121">Change of access for AccessibleObject.RuntimeIDFirstItem</span></span>](#change-of-access-for-accessibleobjectruntimeidfirstitem)
+- [<span data-ttu-id="a2aa9-122">已從 Windows Forms 移除重複的 Api</span><span class="sxs-lookup"><span data-stu-id="a2aa9-122">Duplicated APIs removed from Windows Forms</span></span>](#duplicated-apis-removed-from-windows-forms)
+
+## <a name="net-core-31"></a><span data-ttu-id="a2aa9-123">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="a2aa9-123">.NET Core 3.1</span></span>
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 
@@ -21,7 +39,9 @@ ms.locfileid: "75936998"
 
 [!INCLUDE[CellFormatting event](~/includes/core-changes/windowsforms/3.1/cellformatting-event-not-raised.md)]
 
-## <a name="net-core-30"></a><span data-ttu-id="f4151-108">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="f4151-108">.NET Core 3.0</span></span>
+***
+
+## <a name="net-core-30"></a><span data-ttu-id="a2aa9-124">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="a2aa9-124">.NET Core 3.0</span></span>
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/3.0/control-defaultfont-changed.md)]
 
@@ -73,6 +93,8 @@ ms.locfileid: "75936998"
 
 [!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/3.0/remove-duplicated-apis.md)]
 
-## <a name="see-also"></a><span data-ttu-id="f4151-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="f4151-109">See also</span></span>
+***
 
-- [<span data-ttu-id="f4151-110">將 Windows Forms 應用程式移植到 .NET Core</span><span class="sxs-lookup"><span data-stu-id="f4151-110">Port a Windows Forms app to .NET Core</span></span>](../porting/winforms.md)
+## <a name="see-also"></a><span data-ttu-id="a2aa9-125">請參閱</span><span class="sxs-lookup"><span data-stu-id="a2aa9-125">See also</span></span>
+
+- [<span data-ttu-id="a2aa9-126">將 Windows Forms 應用程式移植到 .NET Core</span><span class="sxs-lookup"><span data-stu-id="a2aa9-126">Port a Windows Forms app to .NET Core</span></span>](../porting/winforms.md)

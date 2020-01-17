@@ -1,34 +1,34 @@
 ---
-ms.openlocfilehash: ff156afb3da4b921517fd841c5de2295265a8d7b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9aff20e35469f9e786f0f790fda4ffaa04e76e64
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567741"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116430"
 ---
-### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a><span data-ttu-id="f3492-101">HttpRequestMessage 的預設值。版本已變更為1.1</span><span class="sxs-lookup"><span data-stu-id="f3492-101">Default value of HttpRequestMessage.Version changed to 1.1</span></span>
+### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a><span data-ttu-id="4f6c0-101">HttpRequestMessage 的預設值。版本已變更為1.1</span><span class="sxs-lookup"><span data-stu-id="4f6c0-101">Default value of HttpRequestMessage.Version changed to 1.1</span></span>
 
-<span data-ttu-id="f3492-102"><xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 屬性的預設值已從2.0 變更為1.1。</span><span class="sxs-lookup"><span data-stu-id="f3492-102">The default value of the <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> property has changed from 2.0 to 1.1.</span></span>
+<span data-ttu-id="4f6c0-102"><xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 屬性的預設值已從2.0 變更為1.1。</span><span class="sxs-lookup"><span data-stu-id="4f6c0-102">The default value of the <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> property has changed from 2.0 to 1.1.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="f3492-103">引進的版本</span><span class="sxs-lookup"><span data-stu-id="f3492-103">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="4f6c0-103">引進的版本</span><span class="sxs-lookup"><span data-stu-id="4f6c0-103">Version introduced</span></span>
 
-<span data-ttu-id="f3492-104">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="f3492-104">.NET Core 3.0</span></span>
+<span data-ttu-id="4f6c0-104">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="4f6c0-104">.NET Core 3.0</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="f3492-105">變更描述</span><span class="sxs-lookup"><span data-stu-id="f3492-105">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="4f6c0-105">變更描述</span><span class="sxs-lookup"><span data-stu-id="4f6c0-105">Change description</span></span>
 
-<span data-ttu-id="f3492-106">在 .NET Core 1.0 到2.0 中，<xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 屬性的預設值是1.1。</span><span class="sxs-lookup"><span data-stu-id="f3492-106">In .NET Core 1.0 through 2.0, the default value of the <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> property is 1.1.</span></span> <span data-ttu-id="f3492-107">從 .NET Core 2.1 開始，它已變更為2.1。</span><span class="sxs-lookup"><span data-stu-id="f3492-107">Starting with .NET Core 2.1, it was changed to 2.1.</span></span>
+<span data-ttu-id="4f6c0-106">在 .NET Core 1.0 到2.0 中，<xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 屬性的預設值是1.1。</span><span class="sxs-lookup"><span data-stu-id="4f6c0-106">In .NET Core 1.0 through 2.0, the default value of the <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> property is 1.1.</span></span> <span data-ttu-id="4f6c0-107">從 .NET Core 2.1 開始，它已變更為2.1。</span><span class="sxs-lookup"><span data-stu-id="4f6c0-107">Starting with .NET Core 2.1, it was changed to 2.1.</span></span>
 
-<span data-ttu-id="f3492-108">從 .NET Core 3.0 開始，<xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 屬性傳回的預設版本號碼再次為1.1。</span><span class="sxs-lookup"><span data-stu-id="f3492-108">Starting with .NET Core 3.0, the default version number returned by the <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> property is once again 1.1.</span></span>
+<span data-ttu-id="4f6c0-108">從 .NET Core 3.0 開始，<xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 屬性傳回的預設版本號碼再次為1.1。</span><span class="sxs-lookup"><span data-stu-id="4f6c0-108">Starting with .NET Core 3.0, the default version number returned by the <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> property is once again 1.1.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="f3492-109">建議的動作</span><span class="sxs-lookup"><span data-stu-id="f3492-109">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="4f6c0-109">建議的動作</span><span class="sxs-lookup"><span data-stu-id="4f6c0-109">Recommended action</span></span>
 
-<span data-ttu-id="f3492-110">更新您的程式碼（如果它相依于傳回預設值2.0 的 <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 屬性）。</span><span class="sxs-lookup"><span data-stu-id="f3492-110">Update your code if it depends on the <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> property returning a default value of 2.0.</span></span>
+<span data-ttu-id="4f6c0-110">更新您的程式碼（如果它相依于傳回預設值2.0 的 <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 屬性）。</span><span class="sxs-lookup"><span data-stu-id="4f6c0-110">Update your code if it depends on the <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> property returning a default value of 2.0.</span></span>
 
-#### <a name="category"></a><span data-ttu-id="f3492-111">Category</span><span class="sxs-lookup"><span data-stu-id="f3492-111">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="4f6c0-111">分類</span><span class="sxs-lookup"><span data-stu-id="4f6c0-111">Category</span></span>
 
-<span data-ttu-id="f3492-112">網路</span><span class="sxs-lookup"><span data-stu-id="f3492-112">Networking</span></span>
+<span data-ttu-id="4f6c0-112">網路</span><span class="sxs-lookup"><span data-stu-id="4f6c0-112">Networking</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="f3492-113">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="f3492-113">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="4f6c0-113">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="4f6c0-113">Affected APIs</span></span>
 
 - <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName>
 
@@ -38,5 +38,4 @@ a def
 
 - `P:System.Net.Http.HttpRequestMessage.Version`
 
--- >
-
+-->
