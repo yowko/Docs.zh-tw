@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Windows Forms DataGrid 控制項驗證輸入
+title: 使用 DataGrid 控制項驗證輸入
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3958089007401d2e977c9c96f07c9196e6216596
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796470"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728293"
 ---
-# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a><span data-ttu-id="f9806-102">HOW TO：使用 Windows Forms DataGrid 控制項驗證輸入</span><span class="sxs-lookup"><span data-stu-id="f9806-102">How to: Validate Input with the Windows Forms DataGrid Control</span></span>
+# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a><span data-ttu-id="9022a-102">如何：使用 Windows Form DataGrid 控制項驗證輸入</span><span class="sxs-lookup"><span data-stu-id="9022a-102">How to: Validate Input with the Windows Forms DataGrid Control</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f9806-103"><xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="f9806-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="f9806-104">如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="f9806-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>
+> <span data-ttu-id="9022a-103"><xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="9022a-103">The <xref:System.Windows.Forms.DataGridView> control replaces and adds functionality to the <xref:System.Windows.Forms.DataGrid> control; however, the <xref:System.Windows.Forms.DataGrid> control is retained for both backward compatibility and future use, if you choose.</span></span> <span data-ttu-id="9022a-104">如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。</span><span class="sxs-lookup"><span data-stu-id="9022a-104">For more information, see [Differences Between the Windows Forms DataGridView and DataGrid Controls](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).</span></span>
 
-<span data-ttu-id="f9806-105">有兩種類型的輸入驗證適用於 Windows Forms<xref:System.Windows.Forms.DataGrid>控制項。</span><span class="sxs-lookup"><span data-stu-id="f9806-105">There are two types of input validation available for the Windows Forms <xref:System.Windows.Forms.DataGrid> control.</span></span> <span data-ttu-id="f9806-106">如果使用者嘗試輸入的值，是無法接受的資料類型的資料格，例如整數，將字串的新無效的值會取代舊值。</span><span class="sxs-lookup"><span data-stu-id="f9806-106">If the user attempts to enter a value that is of an unacceptable data type for the cell, for example a string into an integer, the new invalid value is replaced with the old value.</span></span> <span data-ttu-id="f9806-107">這種輸入驗證會自動完成，且無法自訂。</span><span class="sxs-lookup"><span data-stu-id="f9806-107">This kind of input validation is done automatically and cannot be customized.</span></span>
+<span data-ttu-id="9022a-105">有兩種類型的輸入驗證可用於 Windows Forms <xref:System.Windows.Forms.DataGrid> 控制項。</span><span class="sxs-lookup"><span data-stu-id="9022a-105">There are two types of input validation available for the Windows Forms <xref:System.Windows.Forms.DataGrid> control.</span></span> <span data-ttu-id="9022a-106">如果使用者嘗試輸入的值不是資料格可接受的資料類型，例如字串為整數，則新的無效值會取代為舊的值。</span><span class="sxs-lookup"><span data-stu-id="9022a-106">If the user attempts to enter a value that is of an unacceptable data type for the cell, for example a string into an integer, the new invalid value is replaced with the old value.</span></span> <span data-ttu-id="9022a-107">這種輸入驗證會自動完成，無法自訂。</span><span class="sxs-lookup"><span data-stu-id="9022a-107">This kind of input validation is done automatically and cannot be customized.</span></span>
 
-<span data-ttu-id="f9806-108">其他類型的輸入驗證可用來拒絕任何無法接受的資料，例如必須大於或等於 1 或不適當的字串欄位中的 0 值。</span><span class="sxs-lookup"><span data-stu-id="f9806-108">The other type of input validation can be used to reject any unacceptable data, for example a 0 value in a field that must be greater than or equal to 1, or an inappropriate string.</span></span> <span data-ttu-id="f9806-109">這由資料集內撰寫的事件處理常式<xref:System.Data.DataTable.ColumnChanging>或<xref:System.Data.DataTable.RowChanging>事件。</span><span class="sxs-lookup"><span data-stu-id="f9806-109">This is done in the dataset by writing an event handler for the <xref:System.Data.DataTable.ColumnChanging> or <xref:System.Data.DataTable.RowChanging> event.</span></span> <span data-ttu-id="f9806-110">以下範例使用<xref:System.Data.DataTable.ColumnChanging>事件因為無法接受的值特別允許"Product"資料行。</span><span class="sxs-lookup"><span data-stu-id="f9806-110">The example below uses the <xref:System.Data.DataTable.ColumnChanging> event because the unacceptable value is disallowed for the "Product" column in particular.</span></span> <span data-ttu-id="f9806-111">您可以使用<xref:System.Data.DataTable.RowChanging>檢查 [結束日期] 資料行的值晚於相同的資料列中的"Start Date"資料行的事件。</span><span class="sxs-lookup"><span data-stu-id="f9806-111">You might use the <xref:System.Data.DataTable.RowChanging> event for checking that the value of an "End Date" column is later than the "Start Date" column in the same row.</span></span>
+<span data-ttu-id="9022a-108">另一種輸入驗證可用於拒絕任何無法接受的資料，例如，欄位中必須大於或等於1的0值，或不適當的字串。</span><span class="sxs-lookup"><span data-stu-id="9022a-108">The other type of input validation can be used to reject any unacceptable data, for example a 0 value in a field that must be greater than or equal to 1, or an inappropriate string.</span></span> <span data-ttu-id="9022a-109">這會藉由撰寫 <xref:System.Data.DataTable.ColumnChanging> 或 <xref:System.Data.DataTable.RowChanging> 事件的事件處理常式，在資料集中完成。</span><span class="sxs-lookup"><span data-stu-id="9022a-109">This is done in the dataset by writing an event handler for the <xref:System.Data.DataTable.ColumnChanging> or <xref:System.Data.DataTable.RowChanging> event.</span></span> <span data-ttu-id="9022a-110">下列範例會使用 <xref:System.Data.DataTable.ColumnChanging> 事件，因為特定的「產品」資料行不允許接受的值。</span><span class="sxs-lookup"><span data-stu-id="9022a-110">The example below uses the <xref:System.Data.DataTable.ColumnChanging> event because the unacceptable value is disallowed for the "Product" column in particular.</span></span> <span data-ttu-id="9022a-111">您可以使用 <xref:System.Data.DataTable.RowChanging> 事件來檢查「結束日期」資料行的值是否晚于相同資料列中的「開始日期」資料行。</span><span class="sxs-lookup"><span data-stu-id="9022a-111">You might use the <xref:System.Data.DataTable.RowChanging> event for checking that the value of an "End Date" column is later than the "Start Date" column in the same row.</span></span>
 
-## <a name="to-validate-user-input"></a><span data-ttu-id="f9806-112">若要驗證使用者輸入</span><span class="sxs-lookup"><span data-stu-id="f9806-112">To validate user input</span></span>
+## <a name="to-validate-user-input"></a><span data-ttu-id="9022a-112">驗證使用者輸入</span><span class="sxs-lookup"><span data-stu-id="9022a-112">To validate user input</span></span>
 
-1. <span data-ttu-id="f9806-113">撰寫程式碼來處理<xref:System.Data.DataTable.ColumnChanging>適當的資料表事件。</span><span class="sxs-lookup"><span data-stu-id="f9806-113">Write code to handle the <xref:System.Data.DataTable.ColumnChanging> event for the appropriate table.</span></span> <span data-ttu-id="f9806-114">偵測到不適當的輸入時，呼叫<xref:System.Data.DataRow.SetColumnError%2A>方法的<xref:System.Data.DataRow>物件。</span><span class="sxs-lookup"><span data-stu-id="f9806-114">When inappropriate input is detected, call the <xref:System.Data.DataRow.SetColumnError%2A> method of the <xref:System.Data.DataRow> object.</span></span>
+1. <span data-ttu-id="9022a-113">撰寫程式碼以處理適當資料表的 <xref:System.Data.DataTable.ColumnChanging> 事件。</span><span class="sxs-lookup"><span data-stu-id="9022a-113">Write code to handle the <xref:System.Data.DataTable.ColumnChanging> event for the appropriate table.</span></span> <span data-ttu-id="9022a-114">當偵測到不適當的輸入時，請呼叫 <xref:System.Data.DataRow> 物件的 <xref:System.Data.DataRow.SetColumnError%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="9022a-114">When inappropriate input is detected, call the <xref:System.Data.DataRow.SetColumnError%2A> method of the <xref:System.Data.DataRow> object.</span></span>
 
     ```vb
     Private Sub Customers_ColumnChanging(ByVal sender As Object, _
@@ -66,9 +66,9 @@ ms.locfileid: "61796470"
     }
     ```
 
-2. <span data-ttu-id="f9806-115">連接到事件的事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="f9806-115">Connect the event handler to the event.</span></span>
+2. <span data-ttu-id="9022a-115">將事件處理常式連接到事件。</span><span class="sxs-lookup"><span data-stu-id="9022a-115">Connect the event handler to the event.</span></span>
 
-    <span data-ttu-id="f9806-116">下列位置的程式碼內的形式<xref:System.Windows.Forms.Form.Load>事件或其建構函式。</span><span class="sxs-lookup"><span data-stu-id="f9806-116">Place the following code within either the form's <xref:System.Windows.Forms.Form.Load> event or its constructor.</span></span>
+    <span data-ttu-id="9022a-116">將下列程式碼放在表單的 <xref:System.Windows.Forms.Form.Load> 事件或其函式中。</span><span class="sxs-lookup"><span data-stu-id="9022a-116">Place the following code within either the form's <xref:System.Windows.Forms.Form.Load> event or its constructor.</span></span>
 
     ```vb
     ' Assumes the grid is bound to a dataset called customersDataSet1
@@ -84,9 +84,9 @@ ms.locfileid: "61796470"
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);
     ```
 
-## <a name="see-also"></a><span data-ttu-id="f9806-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f9806-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9022a-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="9022a-117">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>
 - <xref:System.Data.DataRow.SetColumnError%2A>
-- [<span data-ttu-id="f9806-118">DataGrid 控制項</span><span class="sxs-lookup"><span data-stu-id="f9806-118">DataGrid Control</span></span>](datagrid-control-windows-forms.md)
+- [<span data-ttu-id="9022a-118">DataGrid 控制項</span><span class="sxs-lookup"><span data-stu-id="9022a-118">DataGrid Control</span></span>](datagrid-control-windows-forms.md)

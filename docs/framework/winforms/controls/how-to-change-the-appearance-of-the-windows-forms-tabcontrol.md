@@ -1,5 +1,5 @@
 ---
-title: HOW TO：變更 Windows Forms TabControl 的外觀
+title: 變更 TabControl 的外觀
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,43 +11,43 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: e8ab97c545577dd393fd7d9844b396973621e6a7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 056070177e6bbaba0c93c7b94f5adfd7887be6a8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650863"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746606"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a><span data-ttu-id="480f3-102">HOW TO：變更 Windows Forms TabControl 的外觀</span><span class="sxs-lookup"><span data-stu-id="480f3-102">How to: Change the Appearance of the Windows Forms TabControl</span></span>
-<span data-ttu-id="480f3-103">您可以使用的屬性來變更 Windows Form 中的索引標籤的外觀<xref:System.Windows.Forms.TabControl>而<xref:System.Windows.Forms.TabPage>組成控制項的個別索引標籤的物件。</span><span class="sxs-lookup"><span data-stu-id="480f3-103">You can change the appearance of tabs in Windows Forms by using properties of the <xref:System.Windows.Forms.TabControl> and the <xref:System.Windows.Forms.TabPage> objects that make up the individual tabs on the control.</span></span> <span data-ttu-id="480f3-104">藉由設定這些屬性，，您可以索引標籤上顯示的映像、 顯示垂直方式而非水平索引標籤，顯示多個資料列的索引標籤，並啟用或以程式設計方式停用索引標籤。</span><span class="sxs-lookup"><span data-stu-id="480f3-104">By setting these properties, you can display images on tabs, display tabs vertically instead of horizontally, display multiple rows of tabs, and enable or disable tabs programmatically.</span></span>  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a><span data-ttu-id="77356-102">如何：變更 Windows Form TabControl 的外觀</span><span class="sxs-lookup"><span data-stu-id="77356-102">How to: Change the Appearance of the Windows Forms TabControl</span></span>
+<span data-ttu-id="77356-103">您可以使用 <xref:System.Windows.Forms.TabControl> 的屬性，以及組成控制項上個別索引標籤的 <xref:System.Windows.Forms.TabPage> 物件，來變更 Windows Forms 中索引標籤的外觀。</span><span class="sxs-lookup"><span data-stu-id="77356-103">You can change the appearance of tabs in Windows Forms by using properties of the <xref:System.Windows.Forms.TabControl> and the <xref:System.Windows.Forms.TabPage> objects that make up the individual tabs on the control.</span></span> <span data-ttu-id="77356-104">藉由設定這些屬性，您可以在索引標籤上顯示影像、以垂直方式顯示索引標籤，而不是水準地顯示索引標籤，以及啟用或停用 tab 鍵。</span><span class="sxs-lookup"><span data-stu-id="77356-104">By setting these properties, you can display images on tabs, display tabs vertically instead of horizontally, display multiple rows of tabs, and enable or disable tabs programmatically.</span></span>  
   
-### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a><span data-ttu-id="480f3-105">標籤組件的索引標籤上顯示圖示</span><span class="sxs-lookup"><span data-stu-id="480f3-105">To display an icon on the label part of a tab</span></span>  
+### <a name="to-display-an-icon-on-the-label-part-of-a-tab"></a><span data-ttu-id="77356-105">若要在索引標籤的 label 部分顯示圖示</span><span class="sxs-lookup"><span data-stu-id="77356-105">To display an icon on the label part of a tab</span></span>  
   
-1. <span data-ttu-id="480f3-106">新增<xref:System.Windows.Forms.ImageList>控制項加入表單。</span><span class="sxs-lookup"><span data-stu-id="480f3-106">Add an <xref:System.Windows.Forms.ImageList> control to the form.</span></span>  
+1. <span data-ttu-id="77356-106">將 <xref:System.Windows.Forms.ImageList> 控制項新增至表單。</span><span class="sxs-lookup"><span data-stu-id="77356-106">Add an <xref:System.Windows.Forms.ImageList> control to the form.</span></span>  
   
-2. <span data-ttu-id="480f3-107">將影像新增至映像清單中。</span><span class="sxs-lookup"><span data-stu-id="480f3-107">Add images to the image list.</span></span>  
+2. <span data-ttu-id="77356-107">將影像新增至影像清單。</span><span class="sxs-lookup"><span data-stu-id="77356-107">Add images to the image list.</span></span>  
   
-     <span data-ttu-id="480f3-108">如需有關影像清單的詳細資訊，請參閱[ImageList 元件](imagelist-component-windows-forms.md)和[How to:新增或移除映像的 Windows Form ImageList 元件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。</span><span class="sxs-lookup"><span data-stu-id="480f3-108">For more information about image lists, see [ImageList Component](imagelist-component-windows-forms.md) and [How to: Add or Remove Images with the Windows Forms ImageList Component](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span></span>  
+     <span data-ttu-id="77356-108">如需影像清單的詳細資訊，請參閱[ImageList 元件](imagelist-component-windows-forms.md)和[如何：使用 Windows Forms ImageList 元件來新增或移除影像](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。</span><span class="sxs-lookup"><span data-stu-id="77356-108">For more information about image lists, see [ImageList Component](imagelist-component-windows-forms.md) and [How to: Add or Remove Images with the Windows Forms ImageList Component](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).</span></span>  
   
-3. <span data-ttu-id="480f3-109">設定<xref:System.Windows.Forms.TabControl.ImageList%2A>的屬性<xref:System.Windows.Forms.TabControl>到<xref:System.Windows.Forms.ImageList>控制項。</span><span class="sxs-lookup"><span data-stu-id="480f3-109">Set the <xref:System.Windows.Forms.TabControl.ImageList%2A> property of the <xref:System.Windows.Forms.TabControl> to the <xref:System.Windows.Forms.ImageList> control.</span></span>  
+3. <span data-ttu-id="77356-109">將 <xref:System.Windows.Forms.TabControl> 的 [<xref:System.Windows.Forms.TabControl.ImageList%2A>] 屬性設定為 [<xref:System.Windows.Forms.ImageList>] 控制項。</span><span class="sxs-lookup"><span data-stu-id="77356-109">Set the <xref:System.Windows.Forms.TabControl.ImageList%2A> property of the <xref:System.Windows.Forms.TabControl> to the <xref:System.Windows.Forms.ImageList> control.</span></span>  
   
-4. <span data-ttu-id="480f3-110">設定<xref:System.Windows.Forms.TabPage.ImageIndex%2A>屬性<xref:System.Windows.Forms.TabPage>至適當的映像清單中的索引。</span><span class="sxs-lookup"><span data-stu-id="480f3-110">Set the <xref:System.Windows.Forms.TabPage.ImageIndex%2A> property of the <xref:System.Windows.Forms.TabPage> to the index of an appropriate image in the list.</span></span>  
+4. <span data-ttu-id="77356-110">將 <xref:System.Windows.Forms.TabPage> 的 <xref:System.Windows.Forms.TabPage.ImageIndex%2A> 屬性設定為清單中適當影像的索引。</span><span class="sxs-lookup"><span data-stu-id="77356-110">Set the <xref:System.Windows.Forms.TabPage.ImageIndex%2A> property of the <xref:System.Windows.Forms.TabPage> to the index of an appropriate image in the list.</span></span>  
   
-### <a name="to-create-multiple-rows-of-tabs"></a><span data-ttu-id="480f3-111">若要建立多個資料列的索引標籤</span><span class="sxs-lookup"><span data-stu-id="480f3-111">To create multiple rows of tabs</span></span>  
+### <a name="to-create-multiple-rows-of-tabs"></a><span data-ttu-id="77356-111">若要建立多個資料列的索引標籤</span><span class="sxs-lookup"><span data-stu-id="77356-111">To create multiple rows of tabs</span></span>  
   
-1. <span data-ttu-id="480f3-112">新增您想要的索引標籤頁的數目。</span><span class="sxs-lookup"><span data-stu-id="480f3-112">Add the number of tab pages you want.</span></span>  
+1. <span data-ttu-id="77356-112">新增您想要的索引標籤頁面數目。</span><span class="sxs-lookup"><span data-stu-id="77356-112">Add the number of tab pages you want.</span></span>  
   
-2. <span data-ttu-id="480f3-113">設定<xref:System.Windows.Forms.TabControl.Multiline%2A>的屬性<xref:System.Windows.Forms.TabControl>至`true`。</span><span class="sxs-lookup"><span data-stu-id="480f3-113">Set the <xref:System.Windows.Forms.TabControl.Multiline%2A> property of the <xref:System.Windows.Forms.TabControl> to `true`.</span></span>  
+2. <span data-ttu-id="77356-113">將 <xref:System.Windows.Forms.TabControl> 的 <xref:System.Windows.Forms.TabControl.Multiline%2A> 屬性設定為 [`true`]。</span><span class="sxs-lookup"><span data-stu-id="77356-113">Set the <xref:System.Windows.Forms.TabControl.Multiline%2A> property of the <xref:System.Windows.Forms.TabControl> to `true`.</span></span>  
   
-3. <span data-ttu-id="480f3-114">如果索引標籤已經不在多個資料列，設定<xref:System.Windows.Forms.Control.Width%2A>屬性<xref:System.Windows.Forms.TabControl>要比所有索引標籤還窄。</span><span class="sxs-lookup"><span data-stu-id="480f3-114">If the tabs do not already appear in multiple rows, set the <xref:System.Windows.Forms.Control.Width%2A> property of the <xref:System.Windows.Forms.TabControl> to be narrower than all the tabs.</span></span>  
+3. <span data-ttu-id="77356-114">如果索引標籤尚未出現在多個資料列中，請將 <xref:System.Windows.Forms.TabControl> 的 [<xref:System.Windows.Forms.Control.Width%2A>] 屬性設定為比所有索引標籤更窄。</span><span class="sxs-lookup"><span data-stu-id="77356-114">If the tabs do not already appear in multiple rows, set the <xref:System.Windows.Forms.Control.Width%2A> property of the <xref:System.Windows.Forms.TabControl> to be narrower than all the tabs.</span></span>  
   
-### <a name="to-arrange-tabs-on-the-side-of-the-control"></a><span data-ttu-id="480f3-115">若要排列控制項旁邊的索引標籤</span><span class="sxs-lookup"><span data-stu-id="480f3-115">To arrange tabs on the side of the control</span></span>  
+### <a name="to-arrange-tabs-on-the-side-of-the-control"></a><span data-ttu-id="77356-115">排列控制項側邊的索引標籤</span><span class="sxs-lookup"><span data-stu-id="77356-115">To arrange tabs on the side of the control</span></span>  
   
-- <span data-ttu-id="480f3-116">設定<xref:System.Windows.Forms.TabControl.Alignment%2A>的屬性<xref:System.Windows.Forms.TabControl>要<xref:System.Windows.Forms.TabAlignment.Left>或<xref:System.Windows.Forms.TabAlignment.Right>。</span><span class="sxs-lookup"><span data-stu-id="480f3-116">Set the <xref:System.Windows.Forms.TabControl.Alignment%2A> property of the <xref:System.Windows.Forms.TabControl> to <xref:System.Windows.Forms.TabAlignment.Left> or <xref:System.Windows.Forms.TabAlignment.Right>.</span></span>  
+- <span data-ttu-id="77356-116">將 <xref:System.Windows.Forms.TabControl> 的 [<xref:System.Windows.Forms.TabControl.Alignment%2A>] 屬性設定為 [<xref:System.Windows.Forms.TabAlignment.Left>] 或 [<xref:System.Windows.Forms.TabAlignment.Right>]。</span><span class="sxs-lookup"><span data-stu-id="77356-116">Set the <xref:System.Windows.Forms.TabControl.Alignment%2A> property of the <xref:System.Windows.Forms.TabControl> to <xref:System.Windows.Forms.TabAlignment.Left> or <xref:System.Windows.Forms.TabAlignment.Right>.</span></span>  
   
-### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a><span data-ttu-id="480f3-117">以程式設計方式啟用或停用的索引標籤上的所有控制項</span><span class="sxs-lookup"><span data-stu-id="480f3-117">To programmatically enable or disable all controls on a tab</span></span>  
+### <a name="to-programmatically-enable-or-disable-all-controls-on-a-tab"></a><span data-ttu-id="77356-117">以程式設計方式啟用或停用索引標籤上的所有控制項</span><span class="sxs-lookup"><span data-stu-id="77356-117">To programmatically enable or disable all controls on a tab</span></span>  
   
-1. <span data-ttu-id="480f3-118">設定<xref:System.Windows.Forms.TabPage.Enabled%2A>的屬性<xref:System.Windows.Forms.TabPage>要`true`或`false`。</span><span class="sxs-lookup"><span data-stu-id="480f3-118">Set the <xref:System.Windows.Forms.TabPage.Enabled%2A> property of the <xref:System.Windows.Forms.TabPage> to `true` or `false`.</span></span>  
+1. <span data-ttu-id="77356-118">將 <xref:System.Windows.Forms.TabPage> 的 [<xref:System.Windows.Forms.TabPage.Enabled%2A>] 屬性設定為 [`true`] 或 [`false`]。</span><span class="sxs-lookup"><span data-stu-id="77356-118">Set the <xref:System.Windows.Forms.TabPage.Enabled%2A> property of the <xref:System.Windows.Forms.TabPage> to `true` or `false`.</span></span>  
   
     ```vb  
     TabPage1.Enabled = False  
@@ -61,14 +61,14 @@ ms.locfileid: "64650863"
     tabPage1->Enabled = false;  
     ```  
   
-### <a name="to-display-tabs-as-buttons"></a><span data-ttu-id="480f3-119">若要顯示為按鈕的索引標籤</span><span class="sxs-lookup"><span data-stu-id="480f3-119">To display tabs as buttons</span></span>  
+### <a name="to-display-tabs-as-buttons"></a><span data-ttu-id="77356-119">將索引標籤顯示為按鈕</span><span class="sxs-lookup"><span data-stu-id="77356-119">To display tabs as buttons</span></span>  
   
-- <span data-ttu-id="480f3-120">設定<xref:System.Windows.Forms.TabControl.Appearance%2A>的屬性<xref:System.Windows.Forms.TabControl>要<xref:System.Windows.Forms.TabAppearance.Buttons>或<xref:System.Windows.Forms.TabAppearance.FlatButtons>。</span><span class="sxs-lookup"><span data-stu-id="480f3-120">Set the <xref:System.Windows.Forms.TabControl.Appearance%2A> property of the <xref:System.Windows.Forms.TabControl> to <xref:System.Windows.Forms.TabAppearance.Buttons> or <xref:System.Windows.Forms.TabAppearance.FlatButtons>.</span></span>  
+- <span data-ttu-id="77356-120">將 <xref:System.Windows.Forms.TabControl> 的 [<xref:System.Windows.Forms.TabControl.Appearance%2A>] 屬性設定為 [<xref:System.Windows.Forms.TabAppearance.Buttons>] 或 [<xref:System.Windows.Forms.TabAppearance.FlatButtons>]。</span><span class="sxs-lookup"><span data-stu-id="77356-120">Set the <xref:System.Windows.Forms.TabControl.Appearance%2A> property of the <xref:System.Windows.Forms.TabControl> to <xref:System.Windows.Forms.TabAppearance.Buttons> or <xref:System.Windows.Forms.TabAppearance.FlatButtons>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="480f3-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="480f3-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="77356-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="77356-121">See also</span></span>
 
-- [<span data-ttu-id="480f3-122">TabControl 控制項</span><span class="sxs-lookup"><span data-stu-id="480f3-122">TabControl Control</span></span>](tabcontrol-control-windows-forms.md)
-- [<span data-ttu-id="480f3-123">TabControl 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="480f3-123">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
-- [<span data-ttu-id="480f3-124">如何：將控制項加入索引標籤頁</span><span class="sxs-lookup"><span data-stu-id="480f3-124">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
-- [<span data-ttu-id="480f3-125">如何：停用索引標籤頁</span><span class="sxs-lookup"><span data-stu-id="480f3-125">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
-- [<span data-ttu-id="480f3-126">如何：新增和移除使用 Windows Form TabControl 的索引標籤</span><span class="sxs-lookup"><span data-stu-id="480f3-126">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [<span data-ttu-id="77356-122">TabControl 控制項</span><span class="sxs-lookup"><span data-stu-id="77356-122">TabControl Control</span></span>](tabcontrol-control-windows-forms.md)
+- [<span data-ttu-id="77356-123">TabControl 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="77356-123">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
+- [<span data-ttu-id="77356-124">操作說明：將控制項加入至索引標籤頁</span><span class="sxs-lookup"><span data-stu-id="77356-124">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
+- [<span data-ttu-id="77356-125">操作說明：停用索引標籤頁</span><span class="sxs-lookup"><span data-stu-id="77356-125">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
+- [<span data-ttu-id="77356-126">操作說明：使用 Windows Forms TabControl 加入和移除索引標籤</span><span class="sxs-lookup"><span data-stu-id="77356-126">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
