@@ -1,5 +1,5 @@
 ---
-title: 選取範圍和剪貼簿與 Windows Form DataGridView 控制項搭配使用
+title: 選取範圍和剪貼簿與 DataGridView 控制項搭配使用
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], Clipboard use
@@ -9,49 +9,49 @@ helpviewer_keywords:
 - data grids [Windows Forms], selecting cells
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
-ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6993f77e8ce532d8df1bdc7e6b6abc1cc3268e49
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902248"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743058"
 ---
-# <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a><span data-ttu-id="a8d01-102">選取範圍和剪貼簿與 Windows Form DataGridView 控制項搭配使用</span><span class="sxs-lookup"><span data-stu-id="a8d01-102">Selection and Clipboard Use with the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="a8d01-103">`DataGridView`控制項可為您提供各種不同的設定方式的使用者可以選取資料格、 資料列和資料行的選項。</span><span class="sxs-lookup"><span data-stu-id="a8d01-103">The `DataGridView` control provides you with a variety of options for configuring how users can select cells, rows, and columns.</span></span> <span data-ttu-id="a8d01-104">例如，您可以啟用單一或多個選取項目、 選取整個資料列或資料行，當使用者按一下資料格或選取整個資料列或資料行只有在使用者按一下其標頭時，才可讓儲存格選取範圍。</span><span class="sxs-lookup"><span data-stu-id="a8d01-104">For example, you can enable single or multiple selection, selection of whole rows or columns when users click cells, or selection of whole rows or columns only when users click their headers, which enables cell selection as well.</span></span> <span data-ttu-id="a8d01-105">如果您想要提供您自己的使用者介面選取項目，您可以停用一般的選取項目，並以程式設計方式處理所有選取項目。</span><span class="sxs-lookup"><span data-stu-id="a8d01-105">If you want to provide your own user interface for selection, you can disable ordinary selection and handle all selection programmatically.</span></span> <span data-ttu-id="a8d01-106">此外，您可以讓使用者選取的值複製到剪貼簿。</span><span class="sxs-lookup"><span data-stu-id="a8d01-106">Additionally, you can enable users to copy the selected values to the Clipboard.</span></span>  
+# <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a><span data-ttu-id="67bd4-102">選取和剪貼簿與 Windows Form DataGridView 控制項搭配使用</span><span class="sxs-lookup"><span data-stu-id="67bd4-102">Selection and Clipboard Use with the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="67bd4-103">`DataGridView` 控制項提供各種選項，讓您設定使用者可以如何選取資料格、資料列和資料行。</span><span class="sxs-lookup"><span data-stu-id="67bd4-103">The `DataGridView` control provides you with a variety of options for configuring how users can select cells, rows, and columns.</span></span> <span data-ttu-id="67bd4-104">例如，您可以啟用單一或多個選取範圍、當使用者按一下資料格時選取整個資料列或資料行，或是只有在使用者按一下標題時才選取整個資料列或資料行，這也會啟用資料格選取。</span><span class="sxs-lookup"><span data-stu-id="67bd4-104">For example, you can enable single or multiple selection, selection of whole rows or columns when users click cells, or selection of whole rows or columns only when users click their headers, which enables cell selection as well.</span></span> <span data-ttu-id="67bd4-105">如果您想要提供您自己的使用者介面來進行選取，您可以停用一般選取專案，並以程式設計方式處理所有選取專案。</span><span class="sxs-lookup"><span data-stu-id="67bd4-105">If you want to provide your own user interface for selection, you can disable ordinary selection and handle all selection programmatically.</span></span> <span data-ttu-id="67bd4-106">此外，您可以讓使用者將選取的值複製到剪貼簿。</span><span class="sxs-lookup"><span data-stu-id="67bd4-106">Additionally, you can enable users to copy the selected values to the Clipboard.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a8d01-107">本節內容</span><span class="sxs-lookup"><span data-stu-id="a8d01-107">In This Section</span></span>  
- [<span data-ttu-id="a8d01-108">Windows Forms DataGridView 控制項中的選取模式</span><span class="sxs-lookup"><span data-stu-id="a8d01-108">Selection Modes in the Windows Forms DataGridView Control</span></span>](selection-modes-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="a8d01-109">說明使用者和以程式設計方式在控制項中的選取的選項。</span><span class="sxs-lookup"><span data-stu-id="a8d01-109">Describes the options for user and programmatic selection in the control.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="67bd4-107">本章節內容</span><span class="sxs-lookup"><span data-stu-id="67bd4-107">In This Section</span></span>  
+ [<span data-ttu-id="67bd4-108">Windows Forms DataGridView 控制項中的選取模式</span><span class="sxs-lookup"><span data-stu-id="67bd4-108">Selection Modes in the Windows Forms DataGridView Control</span></span>](selection-modes-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="67bd4-109">描述控制項中使用者和以程式設計方式選取的選項。</span><span class="sxs-lookup"><span data-stu-id="67bd4-109">Describes the options for user and programmatic selection in the control.</span></span>  
   
- [<span data-ttu-id="a8d01-110">如何：設定 Windows Forms DataGridView 控制項的選取模式</span><span class="sxs-lookup"><span data-stu-id="a8d01-110">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="a8d01-111">描述如何設定適用於單一資料列選取範圍的控制項，當使用者按一下資料格。</span><span class="sxs-lookup"><span data-stu-id="a8d01-111">Describes how to configure the control for single-row selection when a user clicks a cell.</span></span>  
+ [<span data-ttu-id="67bd4-110">操作說明：設定 Windows Forms DataGridView 控制項的選取模式</span><span class="sxs-lookup"><span data-stu-id="67bd4-110">How to: Set the Selection Mode of the Windows Forms DataGridView Control</span></span>](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="67bd4-111">描述如何設定當使用者按一下資料格時，單一資料列選取範圍的控制項。</span><span class="sxs-lookup"><span data-stu-id="67bd4-111">Describes how to configure the control for single-row selection when a user clicks a cell.</span></span>  
   
- [<span data-ttu-id="a8d01-112">如何：取得 Windows Form DataGridView 控制項中的 選取的資料格、 資料列和資料行</span><span class="sxs-lookup"><span data-stu-id="a8d01-112">How to: Get the Selected Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](selected-cells-rows-and-columns-datagridview.md)  
- <span data-ttu-id="a8d01-113">描述如何使用選取的資料格、 資料列和資料行集合。</span><span class="sxs-lookup"><span data-stu-id="a8d01-113">Describes how to work with the selected cell, row, and column collections.</span></span>  
+ [<span data-ttu-id="67bd4-112">操作說明：取得 Windows Forms DataGridView 控制項中選取的儲存格、資料列和資料行</span><span class="sxs-lookup"><span data-stu-id="67bd4-112">How to: Get the Selected Cells, Rows, and Columns in the Windows Forms DataGridView Control</span></span>](selected-cells-rows-and-columns-datagridview.md)  
+ <span data-ttu-id="67bd4-113">描述如何使用選取的儲存格、資料列和資料行集合。</span><span class="sxs-lookup"><span data-stu-id="67bd4-113">Describes how to work with the selected cell, row, and column collections.</span></span>  
   
- [<span data-ttu-id="a8d01-114">如何：讓使用者能夠將多個儲存格複製到剪貼簿中，從 Windows Form DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="a8d01-114">How to: Enable Users to Copy Multiple Cells to the Clipboard from the Windows Forms DataGridView Control</span></span>](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
- <span data-ttu-id="a8d01-115">描述如何啟用控制項中的剪貼簿支援。</span><span class="sxs-lookup"><span data-stu-id="a8d01-115">Describes how to enable Clipboard support in the control.</span></span>  
+ [<span data-ttu-id="67bd4-114">操作說明：讓使用者從 Windows Forms DataGridView 控制項將多個儲存格複製到剪貼簿</span><span class="sxs-lookup"><span data-stu-id="67bd4-114">How to: Enable Users to Copy Multiple Cells to the Clipboard from the Windows Forms DataGridView Control</span></span>](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ <span data-ttu-id="67bd4-115">說明如何在控制項中啟用剪貼簿支援。</span><span class="sxs-lookup"><span data-stu-id="67bd4-115">Describes how to enable Clipboard support in the control.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="a8d01-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="a8d01-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="67bd4-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="67bd4-116">Reference</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- <span data-ttu-id="a8d01-117">提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。</span><span class="sxs-lookup"><span data-stu-id="a8d01-117">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
+ <span data-ttu-id="67bd4-117">提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。</span><span class="sxs-lookup"><span data-stu-id="67bd4-117">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
  <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType>  
- <span data-ttu-id="a8d01-118">提供參考文件<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="a8d01-118">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> property.</span></span>  
+ <span data-ttu-id="67bd4-118">提供 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 屬性的參考檔。</span><span class="sxs-lookup"><span data-stu-id="67bd4-118">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> property.</span></span>  
   
  <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A>  
- <span data-ttu-id="a8d01-119">提供參考文件<xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="a8d01-119">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A> property.</span></span>  
+ <span data-ttu-id="67bd4-119">提供 <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A> 屬性的參考檔。</span><span class="sxs-lookup"><span data-stu-id="67bd4-119">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A> property.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewSelectedCellCollection>  
- <span data-ttu-id="a8d01-120">提供參考文件<xref:System.Windows.Forms.DataGridViewSelectedCellCollection>類別。</span><span class="sxs-lookup"><span data-stu-id="a8d01-120">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewSelectedCellCollection> class.</span></span>  
+ <span data-ttu-id="67bd4-120">提供 <xref:System.Windows.Forms.DataGridViewSelectedCellCollection> 類別的參考檔。</span><span class="sxs-lookup"><span data-stu-id="67bd4-120">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewSelectedCellCollection> class.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewSelectedRowCollection>  
- <span data-ttu-id="a8d01-121">提供參考文件<xref:System.Windows.Forms.DataGridViewSelectedRowCollection>類別。</span><span class="sxs-lookup"><span data-stu-id="a8d01-121">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewSelectedRowCollection> class.</span></span>  
+ <span data-ttu-id="67bd4-121">提供 <xref:System.Windows.Forms.DataGridViewSelectedRowCollection> 類別的參考檔。</span><span class="sxs-lookup"><span data-stu-id="67bd4-121">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewSelectedRowCollection> class.</span></span>  
   
  <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>  
- <span data-ttu-id="a8d01-122">提供參考文件<xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>類別。</span><span class="sxs-lookup"><span data-stu-id="a8d01-122">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> class.</span></span>  
+ <span data-ttu-id="67bd4-122">提供 <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> 類別的參考檔。</span><span class="sxs-lookup"><span data-stu-id="67bd4-122">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> class.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a8d01-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a8d01-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="67bd4-123">請參閱</span><span class="sxs-lookup"><span data-stu-id="67bd4-123">See also</span></span>
 
-- [<span data-ttu-id="a8d01-124">DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="a8d01-124">DataGridView Control</span></span>](datagridview-control-windows-forms.md)
-- [<span data-ttu-id="a8d01-125">Windows Forms DataGridView 控制項中的預設鍵盤和滑鼠處理</span><span class="sxs-lookup"><span data-stu-id="a8d01-125">Default Keyboard and Mouse Handling in the Windows Forms DataGridView Control</span></span>](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="67bd4-124">DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="67bd4-124">DataGridView Control</span></span>](datagridview-control-windows-forms.md)
+- [<span data-ttu-id="67bd4-125">Windows Forms DataGridView 控制項中的預設鍵盤和滑鼠處理</span><span class="sxs-lookup"><span data-stu-id="67bd4-125">Default Keyboard and Mouse Handling in the Windows Forms DataGridView Control</span></span>](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

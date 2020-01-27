@@ -1,5 +1,6 @@
 ---
-title: CreateIDispatchSTAForwarder 函式 (WPF Unmanaged API 參考)
+title: CreateIDispatchSTAForwarder 函式-WPF 非受控 API 參考
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,19 +9,19 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 57a02dfa-f091-4ace-9c06-1f4ab52b3527
-ms.openlocfilehash: a89b29cd459060c93d5ca77bb2154e1a10b02d03
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 67f2542733fb9c6af197c99ede2bd097ce876b5d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926447"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738038"
 ---
-# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="f5196-102">CreateIDispatchSTAForwarder 函式 (WPF Unmanaged API 參考)</span><span class="sxs-lookup"><span data-stu-id="f5196-102">CreateIDispatchSTAForwarder Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="f5196-103">此 API 支援 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="f5196-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="createidispatchstaforwarder-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="3c661-102">CreateIDispatchSTAForwarder 函式（WPF 非受控 API 參考）</span><span class="sxs-lookup"><span data-stu-id="3c661-102">CreateIDispatchSTAForwarder Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="3c661-103">這個 API 支援 Windows Presentation Foundation （WPF）基礎結構，但不適合直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="3c661-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="f5196-104">Windows Presentation Foundation (WPF) 基礎結構用於執行緒和 windows 的管理。</span><span class="sxs-lookup"><span data-stu-id="f5196-104">Used by the Windows Presentation Foundation (WPF) infrastructure for thread and windows management.</span></span>  
+ <span data-ttu-id="3c661-104">供執行緒和 Windows 管理的 Windows Presentation Foundation （WPF）基礎結構使用。</span><span class="sxs-lookup"><span data-stu-id="3c661-104">Used by the Windows Presentation Foundation (WPF) infrastructure for thread and windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f5196-105">語法</span><span class="sxs-lookup"><span data-stu-id="f5196-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3c661-105">語法</span><span class="sxs-lookup"><span data-stu-id="3c661-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT CreateIDispatchSTAForwarder(  
@@ -29,26 +30,26 @@ HRESULT CreateIDispatchSTAForwarder(
 )  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f5196-106">參數</span><span class="sxs-lookup"><span data-stu-id="f5196-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3c661-106">參數</span><span class="sxs-lookup"><span data-stu-id="3c661-106">Parameters</span></span>  
   
-## <a name="property-valuereturn-value"></a><span data-ttu-id="f5196-107">屬性值/傳回值</span><span class="sxs-lookup"><span data-stu-id="f5196-107">Property Value/Return Value</span></span>  
- <span data-ttu-id="f5196-108">pDispatchDelegate</span><span class="sxs-lookup"><span data-stu-id="f5196-108">pDispatchDelegate</span></span>  
- <span data-ttu-id="f5196-109">指標`IDispatch`介面。</span><span class="sxs-lookup"><span data-stu-id="f5196-109">A pointer to an `IDispatch` interface.</span></span>  
+## <a name="property-valuereturn-value"></a><span data-ttu-id="3c661-107">屬性值/傳回值</span><span class="sxs-lookup"><span data-stu-id="3c661-107">Property Value/Return Value</span></span>  
+ <span data-ttu-id="3c661-108">pDispatchDelegate</span><span class="sxs-lookup"><span data-stu-id="3c661-108">pDispatchDelegate</span></span>  
+ <span data-ttu-id="3c661-109">`IDispatch` 介面的指標。</span><span class="sxs-lookup"><span data-stu-id="3c661-109">A pointer to an `IDispatch` interface.</span></span>  
   
- <span data-ttu-id="f5196-110">ppForwarder</span><span class="sxs-lookup"><span data-stu-id="f5196-110">ppForwarder</span></span>  
- <span data-ttu-id="f5196-111">位址指標`IDispatch`介面。</span><span class="sxs-lookup"><span data-stu-id="f5196-111">A pointer to the address of an `IDispatch` interface.</span></span>  
+ <span data-ttu-id="3c661-110">ppForwarder</span><span class="sxs-lookup"><span data-stu-id="3c661-110">ppForwarder</span></span>  
+ <span data-ttu-id="3c661-111">`IDispatch` 介面之位址的指標。</span><span class="sxs-lookup"><span data-stu-id="3c661-111">A pointer to the address of an `IDispatch` interface.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f5196-112">需求</span><span class="sxs-lookup"><span data-stu-id="f5196-112">Requirements</span></span>  
- <span data-ttu-id="f5196-113">**平台：** 請參閱[.NET Framework 系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f5196-113">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3c661-112">需求</span><span class="sxs-lookup"><span data-stu-id="3c661-112">Requirements</span></span>  
+ <span data-ttu-id="3c661-113">**平臺：** 請參閱[.NET Framework 系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3c661-113">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f5196-114">**DLL:**</span><span class="sxs-lookup"><span data-stu-id="f5196-114">**DLL:**</span></span>  
+ <span data-ttu-id="3c661-114">**URLMON.DLL**</span><span class="sxs-lookup"><span data-stu-id="3c661-114">**DLL:**</span></span>  
   
- <span data-ttu-id="f5196-115">在.NET Framework 3.0 和 3.5:PresentationHostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="f5196-115">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="3c661-115">在 .NET Framework 3.0 和3.5： PresentationHostDLL 中</span><span class="sxs-lookup"><span data-stu-id="3c661-115">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="f5196-116">在.NET Framework 4 及更新版本：PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="f5196-116">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="3c661-116">在 .NET Framework 4 和更新版本中： PresentationHost_v0400 .dll</span><span class="sxs-lookup"><span data-stu-id="3c661-116">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="f5196-117">**.NET framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f5196-117">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="3c661-117">**.NET Framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3c661-117">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5196-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f5196-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3c661-118">請參閱</span><span class="sxs-lookup"><span data-stu-id="3c661-118">See also</span></span>
 
-- [<span data-ttu-id="f5196-119">WPF Unmanaged API 參考</span><span class="sxs-lookup"><span data-stu-id="f5196-119">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+- [<span data-ttu-id="3c661-119">WPF Unmanaged API 參考</span><span class="sxs-lookup"><span data-stu-id="3c661-119">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
