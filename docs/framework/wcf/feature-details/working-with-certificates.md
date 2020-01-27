@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: e38ead0d378092af086218277fd2e85b4a6396c3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938057"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746882"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 
@@ -164,9 +164,9 @@ PowerShell SelfSignedCertificate 指令碼會建立 x.509 憑證和私密金鑰/
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>將憑證對應至使用者帳戶
 
-IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 Windows 使用者帳戶。 如需功能的詳細資訊，請參閱[將憑證對應至使用者帳戶](https://go.microsoft.com/fwlink/?LinkId=88917)。
+IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 Windows 使用者帳戶。 如需功能的詳細資訊，請參閱[將憑證對應至使用者帳戶](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736706(v=ws.10))。
 
-如需使用 Active Directory 對應的詳細資訊，請參閱[將用戶端憑證與目錄服務進行對應](https://go.microsoft.com/fwlink/?LinkId=88918)。
+如需使用 Active Directory 對應的詳細資訊，請參閱[將用戶端憑證與目錄服務進行對應](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10))。
 
 一旦您啟用這項功能，就可以將 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 類別的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 屬性設為 `true`。 在組態中，您可以將 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 元素的 `mapClientCertificateToWindowsAccount` 屬性設為 `true`，如下列程式碼所示。
 

@@ -1,5 +1,5 @@
 ---
-title: 建置 WPF 應用程式 (WPF)
+title: 編譯應用程式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 00c76dfcdcedc7ceaefaaae785368f8b343457a7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636311"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744760"
 ---
-# <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
+# <a name="compile-a-wpf-application"></a>編譯 WPF 應用程式
 
 Windows Presentation Foundation （WPF）應用程式可以建立為 .NET Framework 可執行檔（.exe）、程式庫（.dll），或這兩種元件類型的組合。 本主題將介紹如何建立 WPF 應用程式，並說明組建流程中的主要步驟。
 

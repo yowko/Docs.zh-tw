@@ -1,5 +1,5 @@
 ---
-title: 對 Windows Forms 應用程式的雙向支援
+title: 雙向支援
 ms.date: 09/30/2017
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8b2e842fc08be78b74cede85927352fafca7bc8f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197486"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742073"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>對 Windows Forms 應用程式的雙向支援
 您可以使用 Visual Studio 來建立支援雙向（由右至左）語言（例如阿拉伯文和希伯來文）的 Windows 應用程式。 這包括標準表單、對話方塊、MDI 表單，以及您可以在這些表單中使用的所有控制項，也就是 <xref:System.Windows.Forms.Control> 命名空間中的所有物件。
@@ -35,48 +35,48 @@ ms.locfileid: "73197486"
 |<xref:System.Windows.Forms.ContextMenu>|靠右對齊顯示，且讀取順序為 RTL (由右至左)|無效果|否|
 |<xref:System.Windows.Forms.DataGrid>|靠右對齊顯示，且讀取順序為 RTL (由右至左)|無效果|否|
 |<xref:System.Windows.Forms.DataGridView>|會影響 RTL (由右至左) 讀取順序和控制項配置|無效果|否|
-|<xref:System.Windows.Forms.DateTimePicker>|不受影響；視作業系統的語言而定|將控制項鏡像處理|[是]|
+|<xref:System.Windows.Forms.DateTimePicker>|不受影響；視作業系統的語言而定|將控制項鏡像處理|是|
 |<xref:System.Windows.Forms.DomainUpDown>|將向上和向下按鈕靠左對齊|無效果|否|
 |<xref:System.Windows.Forms.ErrorProvider>|不支援|無效果|否|
 |<xref:System.Windows.Forms.FontDialog>|視作業系統的語言而定|無效果|否|
-|<xref:System.Windows.Forms.Form>|設定 RTL (由右至左) 讀取順序，並將捲軸反轉|鏡像處理表單|[是]|
+|<xref:System.Windows.Forms.Form>|設定 RTL (由右至左) 讀取順序，並將捲軸反轉|鏡像處理表單|是|
 |<xref:System.Windows.Forms.GroupBox>|標題靠右對齊顯示。 子控制項可能會繼承這個屬性。|在控制項中使用 <xref:System.Windows.Forms.TableLayoutPanel>，以提供由右至左鏡像支援。|否|
 |<xref:System.Windows.Forms.HScrollBar>|開頭為靠右對齊的捲動方塊|無效果|否|
 |<xref:System.Windows.Forms.ImageList>|非必要|無效果|否|
 |<xref:System.Windows.Forms.Label>|靠右對齊顯示。 反轉 <xref:System.Windows.Forms.Label.TextAlign%2A> 和 <xref:System.Windows.Forms.Label.ImageAlign%2A>|無效果|否|
 |<xref:System.Windows.Forms.LinkLabel>|靠右對齊顯示。 反轉 <xref:System.Windows.Forms.Label.TextAlign%2A> 和 <xref:System.Windows.Forms.Label.ImageAlign%2A>|無效果|否|
 |<xref:System.Windows.Forms.ListBox>|項目靠右對齊|無效果|否|
-|<xref:System.Windows.Forms.ListView>|將讀取順序設定為 RTL (由右至左)；項目保持靠左對齊|將控制項鏡像處理|[是]|
+|<xref:System.Windows.Forms.ListView>|將讀取順序設定為 RTL (由右至左)；項目保持靠左對齊|將控制項鏡像處理|是|
 |<xref:System.Windows.Forms.MainMenu>|執行階段 (非設計階段) 為靠右對齊顯示，且讀取順序為 RTL (由右至左)|無效果|否|
 |<xref:System.Windows.Forms.MaskedTextBox>|由右至左顯示文字。|無效果|否|
-|<xref:System.Windows.Forms.MonthCalendar>|不受影響；視作業系統的語言而定|將控制項鏡像處理|[是]|
+|<xref:System.Windows.Forms.MonthCalendar>|不受影響；視作業系統的語言而定|將控制項鏡像處理|是|
 |<xref:System.Windows.Forms.NotifyIcon>|不支援|不支援|否|
 |<xref:System.Windows.Forms.NumericUpDown>|向上和向下按鈕靠左對齊|無效果|否|
 |<xref:System.Windows.Forms.OpenFileDialog>|在由右至左的作業系統上，將包含表單的 <xref:System.Windows.Forms.Control.RightToLeft> 屬性設定為 <xref:System.Windows.Forms.RightToLeft.Yes?displayProperty=nameWithType> 當地語系化對話方塊 |無效果|否|
 |<xref:System.Windows.Forms.PageSetupDialog>|不受影響；視作業系統的語言而定|無效果|否|
-|<xref:System.Windows.Forms.Panel>|子控制項可能會繼承這個屬性|在控制項中使用 <xref:System.Windows.Forms.TableLayoutPanel>，以提供由右至左支援|[是]|
+|<xref:System.Windows.Forms.Panel>|子控制項可能會繼承這個屬性|在控制項中使用 <xref:System.Windows.Forms.TableLayoutPanel>，以提供由右至左支援|是|
 |<xref:System.Windows.Forms.PictureBox>|不支援|無效果|否|
 |<xref:System.Windows.Forms.PrintDialog>|不受影響；視作業系統的語言而定|無效果|否|
 |<xref:System.Drawing.Printing.PrintDocument>|垂直捲軸變成靠左對齊，而水平捲軸從左邊開始|無效果|否|
 |<xref:System.Windows.Forms.PrintPreviewDialog>|不支援|不支援|否|
-|<xref:System.Windows.Forms.ProgressBar>|不受這個屬性影響|將控制項鏡像處理|[是]|
+|<xref:System.Windows.Forms.ProgressBar>|不受這個屬性影響|將控制項鏡像處理|是|
 |<xref:System.Windows.Forms.RadioButton>|選項按鈕顯示在文字右側|無效果|否|
 |<xref:System.Windows.Forms.RichTextBox>|包含文字的控制項項目會由右至左顯示，且讀取順序為 RTL (由右至左)|無效果|否|
 |<xref:System.Windows.Forms.SaveFileDialog>|不受影響；視作業系統的語言而定|無效果|否|
 |<xref:System.Windows.Forms.SplitContainer>|面板配置反轉；垂直捲軸出現在左側；水平捲軸從右邊開始|使用 <xref:System.Windows.Forms.TableLayoutPanel> 來鏡像處理子控制項的順序|否|
 |<xref:System.Windows.Forms.Splitter>|不支援|無效果|否|
 |<xref:System.Windows.Forms.StatusBar>|不支援；請改用 <xref:System.Windows.Forms.StatusStrip>|無效果；請改用 <xref:System.Windows.Forms.StatusStrip>|否|
-|<xref:System.Windows.Forms.TabControl>|不受這個屬性影響|將控制項鏡像處理|[是]|
+|<xref:System.Windows.Forms.TabControl>|不受這個屬性影響|將控制項鏡像處理|是|
 |<xref:System.Windows.Forms.TextBox>|文字由右至左顯示，且讀取順序為 RTL (由右至左)|無效果|否|
 |<xref:System.Windows.Forms.Timer>|非必要|非必要|否|
-|<xref:System.Windows.Forms.ToolBar>|不受這個屬性影響；請改用 <xref:System.Windows.Forms.ToolStrip>|無效果；請改用 <xref:System.Windows.Forms.ToolStrip>|[是]|
+|<xref:System.Windows.Forms.ToolBar>|不受這個屬性影響；請改用 <xref:System.Windows.Forms.ToolStrip>|無效果；請改用 <xref:System.Windows.Forms.ToolStrip>|是|
 |<xref:System.Windows.Forms.ToolTip>|設定 RTL (由右至左) 讀取順序|無效果|否|
 |<xref:System.Windows.Forms.TrackBar>|捲軸或追蹤從右邊開始；當 <xref:System.Windows.Forms.TrackBar.Orientation%2A> 垂直時，刻度從右邊出現|無效果|否|
-|<xref:System.Windows.Forms.TreeView>|只設定 RTL (由右至左) 讀取順序|將控制項鏡像處理|[是]|
+|<xref:System.Windows.Forms.TreeView>|只設定 RTL (由右至左) 讀取順序|將控制項鏡像處理|是|
 |<xref:System.Windows.Forms.UserControl>|垂直捲軸出現在左邊；水平捲軸右邊有捲動方塊|不直接支援；使用 <xref:System.Windows.Forms.TableLayoutPanel>|否|
 |<xref:System.Windows.Forms.VScrollBar>|顯示在可捲動的控制項右邊，而不是左邊|無效果|否|
 
-## <a name="encoding"></a>編碼
+## <a name="encoding"></a>Encoding
  Windows Form 支援 Unicode，因此當您建立雙向應用程式時，可以包含任何字元集。 不過，並非所有 Windows Form 控制項在所有平台上都支援 Unicode。
 
 ## <a name="gdi"></a>GDI+

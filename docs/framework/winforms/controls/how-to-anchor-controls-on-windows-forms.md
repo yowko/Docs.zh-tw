@@ -1,5 +1,5 @@
 ---
-title: 如何：錨定 Windows Form 上的控制項
+title: 錨點控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Anchor property [Windows Forms], enabling resizable forms
@@ -15,12 +15,12 @@ ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 15f12cb0d389344351c4ddf97ee9db37882de460
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7c307d8c5b3bc32e15e6de048c434854ef1bbc65
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459675"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747190"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>如何：錨定 Windows Forms 上的控制項
 
@@ -58,7 +58,7 @@ ms.locfileid: "73459675"
 
 - [Windows Forms 控制項](index.md)
 - [AutoSize 屬性概觀](autosize-property-overview.md)
-- [操作說明：將控制項停駐在 Windows Forms 上](how-to-dock-controls-on-windows-forms.md)
+- [如何：將控制項停駐在 Windows Forms 上](how-to-dock-controls-on-windows-forms.md)
 - [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Forms 控制項](windows-forms-controls-padding-autosize.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：從 Windows Forms LinkLabel 控制項顯示網頁 (Visual Basic)
+title: 從 LinkLabel 控制項顯示網頁（Visual Basic）
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: f36f5bbaaf28963fc95440a4f3a174b8b48f6276
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 75373d55b7bc5ef11e39d5b9546996cb1c4f6f7c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651805"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745923"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>HOW TO：從 Windows Forms LinkLabel 控制項顯示網頁 (Visual Basic)
-此範例會顯示在預設瀏覽器網頁當使用者按一下 Windows Form<xref:System.Windows.Forms.LinkLabel>控制項。  
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>如何：從 Windows Form LinkLabel 控制項顯示 Web 網頁 (Visual Basic)
+這個範例會在使用者按一下 Windows Forms <xref:System.Windows.Forms.LinkLabel> 控制項時，在預設瀏覽器中顯示網頁。  
   
 ## <a name="example"></a>範例  
   
@@ -40,16 +40,16 @@ End Sub
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- Windows 表單名為`Form1`。  
+- 名為 `Form1`的 Windows Form。  
   
 - 名為 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控制項。  
   
-- 作用中的網際網路連線。  
+- 作用中的網際網路連接。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 若要呼叫<xref:System.Diagnostics.Process.Start%2A>方法需要完全信任。 如需詳細資訊，請參閱 <xref:System.Security.SecurityException>。  
+ 呼叫 <xref:System.Diagnostics.Process.Start%2A> 方法需要完全信任。 如需詳細資訊，請參閱<xref:System.Security.SecurityException>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [LinkLabel 控制項](linklabel-control-windows-forms.md)

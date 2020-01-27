@@ -1,19 +1,19 @@
 ---
 title: dotnet 命令
-description: 了解 dotnet 命令 (.NET Core CLI 工具的通用驅動器) 和其用法。
+description: 了解 dotnet 命令 (.NET Core CLI 工具的泛型驅動程式) 和其用法。
 ms.date: 06/04/2018
-ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117508"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734061"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet` - 管理 .NET 原始程式碼和二進位檔的工具。
 
@@ -67,7 +67,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 *deps.json* 檔案的路徑。
 
-*deps.json* 檔案包含相依性、編譯相依性及用來解決組件衝突的版本資訊清單。 如需此檔案的詳細資訊，請參閱 GitHub 上的 [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)。
+*.Deps.json json*檔案包含相依性、編譯相依性和用來解決元件衝突的版本資訊的清單。 如需此檔案的詳細資訊，請參閱 GitHub 上的 [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)。
 
 `-d|--diagnostics`
 
@@ -107,7 +107,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 *runtimeconfig.json* 檔案的路徑。
 
-*runtimeconfig.json* 檔案是包含執行階段組態設定的組態檔。 如需詳細資訊，請參閱 GitHub 上的 [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)。
+*.Runtimeconfig.json json*檔案是包含執行時間設定的設定檔。 如需詳細資訊，請參閱[.Net Core 執行時間設定](../run-time-config/index.md#runtimeconfigjson)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -157,7 +157,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 *runtimeconfig.json* 檔案的路徑。
 
-*runtimeconfig.json* 檔案是包含執行階段組態設定的組態檔。 如需詳細資料，請參閱 GitHub 上的 [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)。
+*.Runtimeconfig.json json*檔案是包含執行時間設定的設定檔。 如需詳細資訊，請參閱[.Net Core 執行時間設定](../run-time-config/index.md#runtimeconfigjson)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -199,7 +199,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 *runtimeconfig.json* 檔案的路徑。
 
-*runtimeconfig.json* 檔案是包含執行階段組態設定的組態檔。 如需詳細資料，請參閱 GitHub 上的 [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)。
+*.Runtimeconfig.json json*檔案是包含執行時間設定的設定檔。 如需詳細資訊，請參閱[.Net Core 執行時間設定](../run-time-config/index.md#runtimeconfigjson)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -217,7 +217,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-| 命令                                       | 功能                                                            |
+| 命令                                       | 函數                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)               | 建置 .NET Core 應用程式。                                     |
 | [dotnet build-server](dotnet-build-server.md) | 與組建所啟動的伺服器互動。                          |
@@ -236,7 +236,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-| 命令                             | 功能                                                            |
+| 命令                             | 函數                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | 建置 .NET Core 應用程式。                                     |
 | [dotnet clean](dotnet-clean.md)     | 清除組建輸出。                                              |
@@ -254,7 +254,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-| 命令                             | 功能                                                            |
+| 命令                             | 函數                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | 建置 .NET Core 應用程式。                                     |
 | [dotnet clean](dotnet-clean.md)     | 清除組建輸出。                                              |
@@ -272,7 +272,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ### <a name="project-references"></a>專案參考
 
-命令 | 功能
+命令 | 函數
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | 新增專案參考。
 [dotnet list reference](dotnet-list-reference.md) | 列出專案參考。
@@ -280,14 +280,14 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ### <a name="nuget-packages"></a>NuGet 套件
 
-命令 | 功能
+命令 | 函數
 --- | ---
 [dotnet add package](dotnet-add-package.md) | 新增 NuGet 套件。
 [dotnet remove package](dotnet-remove-package.md) | 移除 NuGet 套件。
 
 ### <a name="nuget-commands"></a>NuGet 命令
 
-命令 | 功能
+命令 | 函數
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | 從伺服器刪除或取消列出套件。
 [dotnet nuget locals](dotnet-nuget-locals.md) | 清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。
@@ -297,7 +297,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 [.NET Core 通用工具](global-tools.md)將從 .NET Core SDK 2.1.300 開始提供使用：
 
-命令 | 功能
+命令 | 函數
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | 在您的電腦上安裝通用工具。
 [dotnet tool list](dotnet-tool-list.md) | 列出在您電腦上的預設目錄或在指定路徑中目前已安裝的所有通用工具。
@@ -308,7 +308,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 從 .NET Core SDK 2.1.300 開始，先前僅能透過 `DotnetCliToolReference` 於個別專案上使用的數個工具，現在皆已做為 .NET Core SDK 的一部分提供。 這些工具列於下列資料表中：
 
-| 工具                                              | 功能                                                     |
+| 工具                                              | 函數                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
 | dev-certs                                         | 建立及管理開發憑證。                |
 | [ef](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core 命令列工具。                    |
@@ -396,6 +396,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ---
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)
+- [.NET Core 執行時間設定](../run-time-config/index.md)

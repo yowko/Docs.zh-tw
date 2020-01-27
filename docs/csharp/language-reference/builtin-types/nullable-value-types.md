@@ -4,16 +4,16 @@ description: 瞭解C#可為 null 的實值型別，以及如何使用它們
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964318"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740942"
 ---
 # <a name="nullable-value-types-c-reference"></a>可為 null 的C#實數值型別（參考）
 
-可為 null 的實數值型別 `T?` 代表其基礎[數值型別](../keywords/value-types.md)的所有值，`T` 和額外的[null](../keywords/null.md)值。 例如，您可以將下列三個值的任何一個指派給 `bool?` 變數： `true`、`false`或 `null`。 基礎數值型別 `T` 不能是可為 null 的實數值型別本身。
+可為 null 的實數值型別 `T?` 代表其基礎[數值型別](value-types.md)的所有值，`T` 和額外的[null](../keywords/null.md)值。 例如，您可以將下列三個值的任何一個指派給 `bool?` 變數： `true`、`false`或 `null`。 基礎數值型別 `T` 不能是可為 null 的實數值型別本身。
 
 > [!NOTE]
 > C#8.0 引進了可為 null 的參考型別功能。 如需詳細資訊，請參閱[可為 null 的參考型別](../../nullable-references.md)。 開頭為C# 2 的可為 null 的實數值型別。

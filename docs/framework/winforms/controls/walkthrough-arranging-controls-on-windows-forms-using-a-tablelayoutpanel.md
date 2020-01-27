@@ -1,17 +1,17 @@
 ---
-title: 逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項
+title: 使用 TableLayoutPanel 排列控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with TableLayoutPanel
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 7b7380690d8668f46b98272e1d42640f23679b19
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 803a56f6416cf3b718890e96cf9f36ae6c4ee471
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799123"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740326"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>逐步解說：使用 TableLayoutPanel 排列 Windows Form 上的控制項
 
@@ -51,7 +51,7 @@ ms.locfileid: "72799123"
 
 第一個步驟是建立專案並設定表單。
 
-#### <a name="to-create-the-project"></a>若要建立專案
+#### <a name="to-create-the-project"></a>建立專案
 
 1. 建立名為 "TableLayoutPanelExample" 的 Windows 應用程式專案。 如需詳細資訊，請參閱[如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)。
 
@@ -187,7 +187,7 @@ ms.locfileid: "72799123"
 
 - 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項停駐在父表單。 調整表單的大小，並注意配置的效果。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
@@ -197,6 +197,6 @@ ms.locfileid: "72799123"
 - [逐步解說：建立可當地語系化的 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [TableLayoutPanel 控制項的最佳作法](best-practices-for-the-tablelayoutpanel-control.md)
 - [AutoSize 屬性概觀](autosize-property-overview.md)
-- [操作說明：將控制項停駐在 Windows Forms 上](how-to-dock-controls-on-windows-forms.md)
-- [操作說明：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
+- [如何：將控制項停駐在 Windows Forms 上](how-to-dock-controls-on-windows-forms.md)
+- [如何：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
 - [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Forms 控制項](windows-forms-controls-padding-autosize.md)

@@ -4,12 +4,12 @@ description: 支援及延伸 .NET Core 功能之其他工具的簡介。
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 1f066523a24d4e1fd7aaaa5a19e8d6c9d72d35af
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714540"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740716"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 其他工具概觀
 
@@ -17,7 +17,7 @@ ms.locfileid: "75714540"
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[.NET Core 卸載工具](uninstall-tool.md)
 
-[.Net Core 卸載工具](https://dotnet.microsoft.com/download/dotnet-core/uninstall-tool)（`dotnet-core-uninstall`）可讓您在系統上清除 .Net core Sdk 和執行時間，只保留指定的版本。 有一組選項可用來指定要卸載的版本。
+[.Net Core 卸載工具](https://github.com/dotnet/cli-lab/releases)（`dotnet-core-uninstall`）可讓您在系統上清除 .Net core Sdk 和執行時間，只保留指定的版本。 有一組選項可用來指定要卸載的版本。
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web Service Reference 工具](wcf-web-service-reference-guide.md)
 

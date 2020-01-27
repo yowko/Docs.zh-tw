@@ -1,38 +1,38 @@
 ---
-title: Windows Form DataGridView 和 DataGrid 控制項之間的差異
+title: DataGridView 和 DataGrid 控制項之間的差異
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data grids [Windows Forms
 - DataGrid control [Windows Forms], DataGridView control compared
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
-ms.openlocfilehash: 6802ef375d8d15826725e68f5065317192523178
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3552abe55d8e2c1cb4ae372ca64c7ca21f1fed0e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972207"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745965"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Windows Form DataGridView 和 DataGrid 控制項之間的差異
-<xref:System.Windows.Forms.DataGridView>控制項是新的控制項，它會取代<xref:System.Windows.Forms.DataGrid>控制項。 <xref:System.Windows.Forms.DataGridView>控制項提供許多基本和進階功能中遺漏<xref:System.Windows.Forms.DataGrid>控制項。 此外，架構<xref:System.Windows.Forms.DataGridView>控制項讓它更容易擴充和自訂比<xref:System.Windows.Forms.DataGrid>控制項。  
+<xref:System.Windows.Forms.DataGridView> 控制項是取代 <xref:System.Windows.Forms.DataGrid> 控制項的新控制項。 <xref:System.Windows.Forms.DataGridView> 控制項提供了許多在 <xref:System.Windows.Forms.DataGrid> 控制項中遺漏的基本和先進功能。 此外，<xref:System.Windows.Forms.DataGridView> 控制項的架構可讓您更輕鬆地擴充和自訂，而不是 <xref:System.Windows.Forms.DataGrid> 控制項。  
   
- 下表描述可用的主要功能一些<xref:System.Windows.Forms.DataGridView>缺少的控制項<xref:System.Windows.Forms.DataGrid>控制項。  
+ 下表描述 <xref:System.Windows.Forms.DataGrid> 控制項中遺漏的 <xref:System.Windows.Forms.DataGridView> 控制項中的一些主要功能。  
   
-|DataGridView 控制項的功能|描述|  
+|DataGridView 控制項功能|描述|  
 |----------------------------------|-----------------|  
-|多個資料行類型|<xref:System.Windows.Forms.DataGridView>控制項提供更多內建的資料行類型，比<xref:System.Windows.Forms.DataGrid>控制項。 這些資料行類型的最常見的案例需求，但也是您更輕鬆地擴充或取代中的資料行類型比<xref:System.Windows.Forms.DataGrid>控制項。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)。|  
-|多個方式來顯示資料|<xref:System.Windows.Forms.DataGrid>控制受限於從外部資料來源顯示資料。 <xref:System.Windows.Forms.DataGridView>控制項，不過，可以顯示未繫結的資料一起儲存在控制項、 資料繫結的資料來源或繫結和解除繫結的資料。 您也可以實作虛擬模式中的<xref:System.Windows.Forms.DataGridView>控制項來提供自訂的資料管理。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的資料顯示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)。|  
-|多個自訂資料的顯示方式|<xref:System.Windows.Forms.DataGridView>控制項提供許多屬性和事件，讓您指定如何格式化和顯示資料。 比方說，您可以變更資料格、 資料列和資料行，根據及其包含的資料外觀，或您可以使用另一種類型的對等的資料來取代一個資料類型的資料。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的資料格式](data-formatting-in-the-windows-forms-datagridview-control.md)。|  
-|多個變更資料格、 資料列、 資料行和標頭的外觀和行為的選項|<xref:System.Windows.Forms.DataGridView>控制項可讓您使用個別的方格元件有許多種。 例如，您可以凍結資料列和資料行，以防止捲動;隱藏資料列、 資料行和標頭;變更資料列、 資料行和標頭的大小會調整; 的方式變更使用者進行選擇; 的方式並提供個別的資料格、 資料列和資料行的工具提示和捷徑功能表。|  
+|多個資料行類型|<xref:System.Windows.Forms.DataGridView> 控制項提供比 <xref:System.Windows.Forms.DataGrid> 控制項更多的內建資料行類型。 這些資料行類型符合最常見案例的需求，但也比 <xref:System.Windows.Forms.DataGrid> 控制項中的資料行類型更容易擴充或取代。 如需詳細資訊，請參閱[Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)。|  
+|顯示資料的多種方式|<xref:System.Windows.Forms.DataGrid> 控制項僅限於顯示來自外部資料源的資料。 不過，<xref:System.Windows.Forms.DataGridView> 控制項可以顯示儲存在控制項中的未系結資料、來自系結資料來源的資料，或一起系結和未系結的資料。 您也可以在 <xref:System.Windows.Forms.DataGridView> 控制項中執行虛擬模式，以提供自訂資料管理。 如需詳細資訊，請參閱[Windows Forms DataGridView 控制項中的資料顯示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)。|  
+|有多種方式可自訂資料的顯示|<xref:System.Windows.Forms.DataGridView> 控制項提供許多屬性和事件，可讓您指定如何格式化和顯示資料。 例如，您可以變更資料格、資料列和資料行的外觀（視其所包含的資料而定），或者，您可以使用另一種類型的相等資料來取代其中一個資料類型的資料。 如需詳細資訊，請參閱[Windows Forms DataGridView 控制項中的資料格式](data-formatting-in-the-windows-forms-datagridview-control.md)。|  
+|變更儲存格、資料列、資料行和標題外觀和行為的多個選項|<xref:System.Windows.Forms.DataGridView> 控制項可讓您以多種方式使用個別的方格元件。 例如，您可以凍結資料列和資料行，以防止它們進行滾動;隱藏資料列、資料行和標頭;變更資料列、資料行和標頭大小的調整方式;變更使用者進行選取的方式;和提供個別資料格、資料列和資料行的工具提示和快捷方式功能表。|  
   
- <xref:System.Windows.Forms.DataGrid>保留回溯相容性以及特殊的需求。 對於幾乎所有的目的，您應該使用<xref:System.Windows.Forms.DataGridView>控制項。 唯一的功能，可用於<xref:System.Windows.Forms.DataGrid>控制項，就無法用於<xref:System.Windows.Forms.DataGridView>控制項是階層式顯示的兩個相關資料表中的單一控制項的資訊。 您必須使用兩個<xref:System.Windows.Forms.DataGridView>控制項以顯示具有一對多關聯性的兩個資料表的資訊。  
+ 針對回溯相容性和特殊需求，會保留 <xref:System.Windows.Forms.DataGrid> 控制項。 就幾乎所有的用途而言，您都應該使用 <xref:System.Windows.Forms.DataGridView> 控制項。 在 <xref:System.Windows.Forms.DataGridView> 控制項中無法使用的 <xref:System.Windows.Forms.DataGrid> 控制項中唯一可用的功能，是從單一控制項中的兩個相關資料表的階層式顯示資訊。 您必須使用兩個 <xref:System.Windows.Forms.DataGridView> 控制項來顯示主要/詳細資料關聯性中兩個數據表的資訊。  
   
 ## <a name="upgrading-to-the-datagridview-control"></a>升級至 DataGridView 控制項  
- 如果您有現有的應用程式使用<xref:System.Windows.Forms.DataGrid>控制項在簡單資料繫結案例中不含自訂項目，您可以直接將舊的控制項的新控制項。 這兩個控制項使用標準 Windows Form 資料繫結的架構，因此<xref:System.Windows.Forms.DataGridView>控制項會顯示您繫結的資料，不需要的其他設定。 您可能要考慮使用資料繫結的改進，不過，藉由繫結至資料<xref:System.Windows.Forms.BindingSource>元件，您可以再繫結至<xref:System.Windows.Forms.DataGridView>控制項。 如需詳細資訊，請參閱 < [BindingSource 元件](bindingsource-component.md)。  
+ 如果您現有的應用程式在簡單的資料系結案例中使用 <xref:System.Windows.Forms.DataGrid> 控制項，但沒有自訂，則只要以新的控制項取代舊的控制項即可。 這兩個控制項都使用標準 Windows Forms 資料系結架構，因此 <xref:System.Windows.Forms.DataGridView> 控制項將會顯示您系結的資料，而不需要額外的設定。 不過，您可能會想要利用資料系結改進功能，方法是將您的資料系結至 <xref:System.Windows.Forms.BindingSource> 元件，然後您就可以將它系結至 <xref:System.Windows.Forms.DataGridView> 控制項。 如需詳細資訊，請參閱[BindingSource Component](bindingsource-component.md)。  
   
- 因為<xref:System.Windows.Forms.DataGridView>控制項的全新架構，沒有簡單的轉換路徑，可讓您使用<xref:System.Windows.Forms.DataGrid>使用自訂<xref:System.Windows.Forms.DataGridView>控制項。 許多<xref:System.Windows.Forms.DataGrid>自訂項目不需要使用<xref:System.Windows.Forms.DataGridView>控制，不過，因為新的控制項中的可用內建的功能。 如果您已建立的自訂資料行類型<xref:System.Windows.Forms.DataGrid>您想要使用的控制項<xref:System.Windows.Forms.DataGridView>控制項，您必須實作它們一次使用新的架構。 如需詳細資訊，請參閱 <<c0> [ 自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)。  
+ 由於 <xref:System.Windows.Forms.DataGridView> 控制項有全新的架構，因此沒有直接的轉換路徑可讓您使用 <xref:System.Windows.Forms.DataGrid> 自訂與 <xref:System.Windows.Forms.DataGridView> 控制項。 不過，<xref:System.Windows.Forms.DataGridView> 控制項不需要許多 <xref:System.Windows.Forms.DataGrid> 自訂，因為新控制項中提供了內建的功能。 如果您已針對要與 <xref:System.Windows.Forms.DataGridView> 控制項搭配使用的 <xref:System.Windows.Forms.DataGrid> 控制項建立自訂資料行類型，您必須使用新的架構再次執行這些專案。 如需詳細資訊，請參閱[自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>

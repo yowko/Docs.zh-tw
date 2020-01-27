@@ -2,15 +2,15 @@
 title: 使用訊息安全性來保護訊息的安全
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 1098057042c0842161258fd081d3ee63e82b4c5f
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395708"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746441"
 ---
 # <a name="securing-messages-using-message-security"></a>使用訊息安全性來保護訊息的安全
-本節將討論使用 <xref:System.ServiceModel.NetMsmqBinding> 時的 WCF 訊息安全性。  
+本節將討論使用 <xref:System.ServiceModel.NetMsmqBinding>時的 WCF 訊息安全性。  
   
 > [!NOTE]
 > 閱讀本主題之前，建議您先閱讀[安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)。  
@@ -41,7 +41,7 @@ ms.locfileid: "72395708"
   
  由於佇列中斷的關係，用戶端和服務可能不會在同時位於線上。 因此，用戶端和服務必須超出範圍地交換憑證。 尤其是用戶端因為有在其信任的存放區中保存服務的憑證 (該憑證可以鏈結至憑證授權單位)，所以它必定會信任自己是與正確的服務進行通訊。 為了驗證用戶端，服務會使用訊息附加的 X.509 憑證來比對在其存放區中的憑證，以便確認該用戶端的真實性。 同樣的，該憑證一定會鏈結至憑證授權單位。  
   
- 在執行 Windows 的電腦上，憑證會保存在幾種存放區中。 如需不同存放區的詳細資訊，請參閱[憑證存放區](https://go.microsoft.com/fwlink/?LinkId=87787)。  
+ 在執行 Windows 的電腦上，憑證會保存在幾種存放區中。 如需不同存放區的詳細資訊，請參閱[憑證存放區](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10))。  
   
 ### <a name="windows"></a>Windows  
  Windows 訊息認證類型會使用 Kerberos 通訊協定。  
@@ -68,4 +68,4 @@ ms.locfileid: "72395708"
 - [使用傳輸安全性來保護訊息的安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

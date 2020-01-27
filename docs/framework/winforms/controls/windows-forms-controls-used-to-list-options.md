@@ -1,38 +1,38 @@
 ---
-title: 用來列出選項的 Windows Form 控制項
+title: 用來列出選項的控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, listing options
 - option lists in Windows Forms
 ms.assetid: 5bc064c7-bc1f-4b62-8f4b-252f864b118e
-ms.openlocfilehash: 92d5f330fbd5269e15bf52dc11ad998939aa18e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52e8f2fcae3cbb4dae495cad3b29b647732ad5b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009067"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742347"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>用來列出選項的 Windows Form 控制項
-如果您想要為使用者提供一份可從中選擇選項您可以加入 Windows Form 的各種控制項。 根據多少您想要限制您的使用者輸入，您可以新增<xref:System.Windows.Forms.ListBox>控制項中，<xref:System.Windows.Forms.ComboBox>控制項，或<xref:System.Windows.Forms.CheckedListBox>控制項。 使用下列連結，以判斷最佳的控制項符合需求。  
+如果您想要為使用者提供可供選擇的選項清單，可以將各種控制項新增至 Windows Form。 視您想要限制使用者輸入的數量而定，您可以加入 <xref:System.Windows.Forms.ListBox> 控制項、<xref:System.Windows.Forms.ComboBox> 控制項或 <xref:System.Windows.Forms.CheckedListBox> 控制項。 使用下列連結來判斷最符合您需求的控制項。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [何時使用 Windows Forms ComboBox 取代 ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
- 建議您根據需求和限制您的 Windows Form 的適當清單為基礎控制項。  
+ 根據 Windows Form 的需求和限制，建議適當的清單型控制項。  
   
- [如何：存取特定項目中的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
- 說明如何以程式設計方式判斷哪一個項目在清單中的會出現在指定的位置。  
+ [操作說明：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定的項目](access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md)  
+ 提供以程式設計方式判斷清單中的哪一個專案出現在指定位置的指示。  
   
- [如何：新增和移除項目從 Windows Form 的 ComboBox、 ListBox 或 CheckedListBox 控制項](add-and-remove-items-from-a-wf-combobox.md)  
- 說明如何新增或移除的項目控制項的清單中的項目。  
+ [操作說明：從 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目](add-and-remove-items-from-a-wf-combobox.md)  
+ 提供從控制項的專案清單中新增或移除專案的指示。  
   
- [如何：Windows form 的 ComboBox、 ListBox 或 CheckedListBox 控制項建立查閱資料表](create-a-lookup-table-for-a-wf-combobox-listbox.md)  
- 說明如何顯示及儲存表單資料中有用的格式。  
+ [操作說明：為 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項建立查閱資料表](create-a-lookup-table-for-a-wf-combobox-listbox.md)  
+ 說明如何以有用的格式顯示和儲存表單資料。  
   
- [如何：將 Windows Form ComboBox 或 ListBox 控制項繫結至資料](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
- 說明如何以清單為基礎的控制項繫結至資料來源。  
+ [操作說明：將 Windows Forms ComboBox 或 ListBox 控制項繫結至資料](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)  
+ 提供將清單型控制項系結至資料來源的指示。  
   
- [如何：排序內容的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
- 說明如何排序清單在其資料來源的資料。  
+ [操作說明：排序 Windows Forms 中 ComboBox、ListBox 或 CheckedListBox 控制項的內容](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
+ 說明如何排序資料來源中的清單資料。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.CheckedListBox>  

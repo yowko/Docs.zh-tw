@@ -1,5 +1,6 @@
 ---
-title: 教學課程：在 Visual Studio 2019 中建立您的第一個 WPF 應用程式-.NET Framework
+title: 在 Visual Studio 2019 中建立您的第一個 WPF 應用程式-.NET Framework
+titleSuffix: ''
 ms.date: 09/06/2019
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336815"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746970"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>教學課程：在 Visual Studio 2019 中建立您的第一個 WPF 應用程式
 
@@ -83,7 +84,7 @@ ms.locfileid: "75336815"
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. 開啟 *MainWindow.xaml*。
+3. 開啟*mainwindow.xaml*。
 
     此 XAML 檔案是應用程式的主視窗，會顯示在頁面中建立的內容。 <xref:System.Windows.Window> 類別會定義視窗的屬性，例如其標題、大小或圖示，以及處理事件（例如關閉或隱藏）。
 
@@ -151,7 +152,7 @@ ms.locfileid: "75336815"
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. 開啟 *MainWindow.xaml*。
+1. 開啟*mainwindow.xaml*。
 
 1. 將 <xref:System.Windows.Navigation.NavigationWindow.Source%2A> 屬性加入 <xref:System.Windows.Navigation.NavigationWindow> 元素，並將它設定為 "`ExpenseItHome.xaml`"。
 
@@ -263,7 +264,7 @@ ms.locfileid: "75336815"
 
     [!code-xaml[ExpenseIt#9](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#9)]
 
-## <a name="add-controls"></a>新增控制項
+## <a name="add-controls"></a>加入控制項
 
 在本節中，您將更新首頁 UI 以顯示人員清單，您可以在其中選取一個人員來顯示其費用報表。 控制項是可讓使用者與您應用程式互動的 UI 物件。 如需詳細資訊，請參閱 [控制項](../controls/index.md)。
 

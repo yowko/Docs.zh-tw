@@ -2,12 +2,12 @@
 title: 自訂 SQLite 版本
 ms.date: 12/13/2019
 description: 瞭解如何使用自訂版本的原生 SQLite 程式庫。
-ms.openlocfilehash: 8a2646138ea9dbecf412a2e8e0e347e2d71a5b0b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dd27278c1dbe17b12e5067d04d19043bf259b1e8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447143"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746986"
 ---
 # <a name="custom-sqlite-versions"></a>自訂 SQLite 版本
 
@@ -21,9 +21,9 @@ SQLitePCLRaw 提供配套套件，可讓您輕鬆地在不同的平臺上帶入�
 
 若要使用不同的配套，請改為安裝 `Microsoft.Data.Sqlite.Core` 套件，以及您要使用的配套套件。 套件組合會由 Microsoft 自動初始化。
 
-| 配套 | 描述 |
+| 束 | 描述 |
 | --- | --- |
-| SQLitePCLRaw。 bundle_e_sqlite3 | 在所有平臺上提供一致版本的 SQLite。 包含 FTS4、FTS5、JSON1 和 | R * 樹狀目錄延伸模組。 這是預設設定。 |
+| SQLitePCLRaw。 bundle_e_sqlite3 | 在所有平臺上提供一致版本的 SQLite。 包含 FTS4、FTS5、JSON1 和 R * 樹狀目錄延伸模組。 這是預設設定。 |
 | SQLitePCLRaw。 bundle_green | 與 bundle_e_sqlite3 相同，除非在 iOS 上使用系統 SQLite 程式庫。 |
 | SQLitePCLRaw。 bundle_zetetic | 使用來自 Zetetic 的官方 SQLCipher 組建（不包含）。 |
 | SQLitePCLRaw。 bundle_winsqlite3 | 會使用 winsqlite3，也就是 Windows 10 上的系統 SQLite 程式庫。 |

@@ -1,5 +1,5 @@
 ---
-title: 如何：對齊 Windows Form 上的多個控制項
+title: 對齊多個控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
@@ -10,12 +10,12 @@ ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 48441fe7c7c2745638a8aa95fd899d7e55697e85
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5593c20e0e00e646949bf7357ecd126cbd1271f4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459477"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747203"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>如何：對齊 Windows Form 上的多個控制項
 
@@ -32,10 +32,10 @@ ms.locfileid: "73459477"
 ## <a name="see-also"></a>請參閱
 
 - [Windows Forms 控制項](index.md)
-- [操作說明：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
 - [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)
 - [逐步解說：使用對齊線排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [操作說明：將現有控制項重新指派至不同的父代](how-to-reassign-existing-controls-to-a-different-parent.md)
+- [如何：將現有控制項重新指派至不同的父代](how-to-reassign-existing-controls-to-a-different-parent.md)

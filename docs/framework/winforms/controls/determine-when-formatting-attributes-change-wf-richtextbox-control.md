@@ -1,5 +1,5 @@
 ---
-title: HOW TO：決定何時變更 Windows Forms RichTextBox 控制項的格式屬性
+title: 判斷在 RichTextBox 控制項中格式化屬性何時變更
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9b2a1028f79059ec7d4d6bf3683100455bb5dea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972285"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746044"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>HOW TO：決定何時變更 Windows Forms RichTextBox 控制項的格式屬性
-Windows Form 的常見用法<xref:System.Windows.Forms.RichTextBox>控制項正在格式化文字的字型選項或段落樣式等屬性。 您的應用程式可能需要追蹤的文字格式設定用來顯示工具列，就像許多文書處理應用程式中的任何變更。  
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>如何：判斷 Windows Form RichTextBox 控制項中的格式屬性何時變更
+Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項的常見用法是使用字型選項或段落樣式等屬性來格式化文字。 您的應用程式可能需要追蹤文字格式的任何變更，以顯示工具列，如同許多文字處理應用程式一樣。  
   
-### <a name="to-respond-to-changes-in-formatting-attributes"></a>若要回應的格式屬性變更  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a>若要回應格式化屬性的變更  
   
-1. 在撰寫程式碼<xref:System.Windows.Forms.RichTextBox.SelectionChanged>事件處理常式來執行屬性的值而定的適當動作。 下列範例會變更的值而定的工具列按鈕的外觀<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>屬性。 當插入點移入控制項時，才會更新工具列按鈕。  
+1. 在 <xref:System.Windows.Forms.RichTextBox.SelectionChanged> 事件處理常式中撰寫程式碼，以根據屬性的值執行適當的動作。 下列範例會根據 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 屬性的值來變更工具列按鈕的外觀。 只有當插入點在控制項中移動時，工具列按鈕才會更新。  
   
-     下列範例假設使用的表單<xref:System.Windows.Forms.RichTextBox>控制項和<xref:System.Windows.Forms.ToolBar>控制項，其中包含工具列按鈕。 如需有關工具列和工具列按鈕的詳細資訊，請參閱[How to:將按鈕加入至 ToolBar 控制項](how-to-add-buttons-to-a-toolbar-control.md)。  
+     下列範例假設有一個表單具有 <xref:System.Windows.Forms.RichTextBox> 控制項，以及一個包含工具列按鈕的 <xref:System.Windows.Forms.ToolBar> 控制項。 如需工具列和工具列按鈕的詳細資訊，請參閱[如何：將按鈕加入至工具列控制項](how-to-add-buttons-to-a-toolbar-control.md)。  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -80,7 +80,7 @@ Windows Form 的常見用法<xref:System.Windows.Forms.RichTextBox>控制項正�
        }  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>

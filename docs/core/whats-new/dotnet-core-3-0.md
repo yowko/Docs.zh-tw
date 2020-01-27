@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115778"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742597"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -112,20 +112,20 @@ dotnet publish -r <rid> -c Release
 
 ### <a name="tiered-compilation"></a>階層式編譯
 
-.NET Core 3.0 預設會開啟[階層式編譯](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC)。 這項功能可讓執行階段更彈性地使用 Just-In-Time (JIT) 編譯器來獲得更佳的效能。
+.NET Core 3.0 預設會開啟[階層式編譯](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC)。 這項功能可讓執行時間更方便地使用即時（JIT）編譯器，以達到更佳的效能。
 
-TC 的主要優點是能夠啟用較慢品質但較快層級，或較高品質但較慢層級的 JIT (重新) 編譯方法。 由於行經各種執行階段 (從啟動到穩定狀態)，因此有助於提升應用程式的效能。 這與非 TC 方法相反，在非 TC 方法中，所有方法都是以單一方式 (與高品質層相同) 進行編譯，這會偏重穩定狀態而非啟動效能。
+階層式編譯的主要優點是提供兩種方式來 jitting 方法：以較低品質但更快速的層級，或較高品質但較慢的階層。 品質是指方法的優化程度。 TC 有助於改善應用程式的效能，因為它會經歷各種執行階段，從啟動到穩定的狀態。 停用階層式編譯時，每個方法都會以單一方式編譯，而非啟動效能的穩定狀態效能。
 
-當 TC 已啟用時，在啟動時，會呼叫下列方法：
+當啟用 TC 時，下列行為適用于應用程式啟動時的方法編譯：
 
-- 如果方法具有 AOT 編譯器代碼（ReadyToRun），則會使用預先產生程式碼。
-- 否則，此方法將會進行 jit 編譯。 一般而言，這些方法是泛型而不是實數值型別。
-  - 快速 JIT 會更快速地產生較低品質的程式碼。 .NET Core 3.0 中的快速 JIT 預設會針對不包含迴圈且在啟動時慣用的方法啟用。
-  - 完全優化 JIT 產生較高品質的程式碼會更慢。 針對不使用快速 JIT 的方法（例如，如果方法是使用 `[MethodImpl(MethodImplOptions.AggressiveOptimization)]`進行屬性化），則會使用完全優化的 JIT。
+- 如果方法有預先編譯的程式碼或[ReadyToRun](#readytorun-images)，則會使用預先產生程式碼。
+- 否則，方法會進行 jit 編譯。 一般而言，這些方法都是實數值型別的泛型。
+  - *快速 JIT*會更快速地產生較低品質（或較不優化的）程式碼。 在 .NET Core 3.0 中，預設會針對不包含迴圈且在啟動時慣用的方法，啟用快速 JIT。
+  - 完全優化 JIT 會產生較高品質（或更優化的）程式碼，速度更慢。 針對不使用快速 JIT 的方法（例如，如果方法是使用 <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>進行屬性化），則會使用完全優化的 JIT。
 
-最後，當方法被呼叫數次之後，就會在背景中使用完全優化的 JIT 來重新編譯它們。
+對於經常被呼叫的方法，即時編譯器最後會在背景中建立完全優化的程式碼。 然後，優化的程式碼會取代該方法的預先編譯器代碼。
 
-快速 JIT 產生的程式碼可能會以較慢的速度執行、配置更多記憶體，或使用更多堆疊空間。 如果有問題，可能會在您的專案檔中使用此設定來停用快速 JIT：
+快速 JIT 產生的程式碼可能會以較慢的速度執行、配置更多記憶體，或使用更多堆疊空間。 如果有問題，您可以在專案檔中使用此 MSBuild 屬性來停用快速 JIT：
 
 ```xml
 <PropertyGroup>
@@ -133,7 +133,7 @@ TC 的主要優點是能夠啟用較慢品質但較快層級，或較高品質�
 </PropertyGroup>
 ```
 
-若要完全停用 TC，請在您的專案檔中使用此設定：
+若要完全停用 TC，請在專案檔中使用此 MSBuild 屬性：
 
 ```xml
 <PropertyGroup>
@@ -141,7 +141,10 @@ TC 的主要優點是能夠啟用較慢品質但較快層級，或較高品質�
 </PropertyGroup>
 ```
 
-對專案檔中上述設定所做的任何變更，都可能需要反映乾淨的組建（刪除 `obj` 並 `bin` 目錄並重建）。
+> [!TIP]
+> 如果您在專案檔中變更這些設定，可能需要執行全新的組建，才會反映新的設定（刪除 `obj` 並 `bin` 目錄並重建）。
+
+如需在執行時間設定編譯的詳細資訊，請參閱[編譯的執行時間設定選項](../run-time-config/compilation.md)。
 
 ### <a name="readytorun-images"></a>ReadyToRun 映像
 
@@ -182,7 +185,7 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 .NET Core 3.0 引進選擇性功能，可讓您的應用程式向前復原到 .NET Core 最新主要版本。 此外，也已新增設定來控制如何將向前復原套用至您的應用程式。 這可透過下列方式進行設定：
 
 - 專案檔屬性：`RollForward`
-- 執行階段組態檔屬性：`rollForward`
+- 執行時間配置檔案屬性： `rollForward`
 - 環境變數：`DOTNET_ROLL_FORWARD`
 - 命令列引數：`--roll-forward`
 

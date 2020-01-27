@@ -1,5 +1,5 @@
 ---
-title: HOW TO：變更 Windows Forms ColorDialog 元件的外觀
+title: 變更 ColorDialog 元件的外觀
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: d2bb9e06d9d84a9b61c67510e9c012066f69d55e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0402d7f3c03a0771512a03ac54e1b093c9fe6e9b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61595448"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746644"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>HOW TO：變更 Windows Forms ColorDialog 元件的外觀
-您可以設定 Windows Form 的外觀<xref:System.Windows.Forms.ColorDialog>元件使用之一些屬性。 對話方塊中有兩個區段，其中顯示基本色彩，允許使用者定義自訂色彩。  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>如何：變更 Windows Form ColorDialog 元件的外觀
+您可以使用多個屬性來設定 Windows Forms <xref:System.Windows.Forms.ColorDialog> 元件的外觀。 對話方塊有兩個區段：一個顯示基本色彩，另一個則可讓使用者定義自訂色彩。  
   
- 大部分的屬性會限制哪些使用者可以從對話方塊中選取的色彩。 如果<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>屬性設定為`true`，使用者可以定義自訂色彩。 <xref:System.Windows.Forms.ColorDialog.FullOpen%2A>屬性是`true`如果對話方塊已展開來定義自訂色彩; 否則，使用者必須按一下 「 定義自訂色彩 」 按鈕。 當<xref:System.Windows.Forms.ColorDialog.AnyColor%2A>屬性設定為`true`，對話方塊顯示基本色彩集中的所有可用色彩。 如果<xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>屬性設定為`true`，使用者無法選取遞色的色彩; 只有純色可選取。  
+ 大部分的屬性會限制使用者可以從對話方塊中選取的色彩。 如果 [<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>] 屬性設定為 [`true`]，則允許使用者定義自訂色彩。 如果對話方塊已展開以定義自訂色彩，則會 `true` [<xref:System.Windows.Forms.ColorDialog.FullOpen%2A>] 屬性;否則，使用者必須按一下 [定義自訂色彩] 按鈕。 當 [<xref:System.Windows.Forms.ColorDialog.AnyColor%2A>] 屬性設定為 [`true`] 時，對話方塊會顯示一組基本色彩中的所有可用色彩。 如果 [<xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>] 屬性設為 [`true`]，使用者就無法選取遞色色彩;只有純色可供選取。  
   
- 如果<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>屬性設定為`true`，說明 按鈕會出現在對話方塊中。 當使用者按一下 [說明] 按鈕<xref:System.Windows.Forms.ColorDialog>元件的<xref:System.Windows.Forms.CommonDialog.HelpRequest>就會引發事件。  
+ 如果 [<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>] 屬性設定為 [`true`]，則對話方塊上會出現 [說明] 按鈕。 當使用者按一下 [說明] 按鈕時，就會引發 <xref:System.Windows.Forms.ColorDialog> 元件的 <xref:System.Windows.Forms.CommonDialog.HelpRequest> 事件。  
   
-### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>若要設定 [色彩] 對話方塊的外觀  
+### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>設定 [色彩] 對話方塊的外觀  
   
-1. 設定<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>， <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>， <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>，和<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>想要的值的屬性。  
+1. 將 [<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>]、[<xref:System.Windows.Forms.ColorDialog.AnyColor%2A>]、[<xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>] 和 [<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>] 屬性設為所需的值。  
   
     ```vb  
     ColorDialog1.AllowFullOpen = True  
@@ -49,7 +49,7 @@ ms.locfileid: "61595448"
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog 元件](colordialog-component-windows-forms.md)

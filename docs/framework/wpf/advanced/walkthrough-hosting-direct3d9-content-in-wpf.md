@@ -1,16 +1,17 @@
 ---
-title: 逐步解說：在 WPF 中裝載 Direct3D9 內容
+title: 在 WPF 中裝載 Direct3D9 內容
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 03c93ea3813d3572abd7ca60519478c9bf54cf7d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e65b0c59268b44abed289e54181bf0bda9355664
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976512"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742602"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>逐步解說：在 WPF 中裝載 Direct3D9 內容
 
@@ -26,11 +27,11 @@ ms.locfileid: "73976512"
 
  當您完成時，您會知道如何在 WPF 應用程式中裝載 Direct3D9 內容。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 您需要下列元件才能完成此逐步解說：
 
-- Visual Studio。
+- Visual Studio.
 
 - DirectX SDK 9 或更新版本。
 

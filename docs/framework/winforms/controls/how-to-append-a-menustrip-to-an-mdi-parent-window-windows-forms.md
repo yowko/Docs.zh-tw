@@ -1,5 +1,5 @@
 ---
-title: 作法：將 MenuStrip 附加至 MDI 父視窗 (Windows Form)
+title: 如何：將 MenuStrip 附加至 MDI 父視窗
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: fdd5a24d444e494caedeed56402658399e97b90a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 06e5c9daab8b7eb72024fff27d661c0eb3bf84c6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457504"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747152"
 ---
-# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>作法：將 MenuStrip 附加至 MDI 父視窗 (Windows Form)
+# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>如何：將 MenuStrip 附加至 MDI 父視窗 (Windows Form)
 在某些應用程式中，多重文件介面 (MDI) 子視窗的類型可能與 MDI 父視窗不同。 例如，MDI 父視窗可能是試算表，而 MDI 子視窗可能是圖表。 在這種情況下，由於已啟動各種不同類型的 MDI 子視窗，因此您需要以 MDI 子視窗功能表的內容更新 MDI 父視窗功能表的內容。  
   
  下列程序使用 <xref:System.Windows.Forms.Form.IsMdiContainer%2A>、<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>、<xref:System.Windows.Forms.MergeAction> 和 <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 屬性，將 MDI 子功能表附加至 MDI 父功能表。 關閉 MDI 子視窗會將附加的功能表從 MDI 父視窗中移除。  
   
- 另請參閱[多重文件介面 (MDI) 應用程式](../advanced/multiple-document-interface-mdi-applications.md)。  
+ 另請參閱[多重文件介面（MDI）應用程式](../advanced/multiple-document-interface-mdi-applications.md)。  
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>將功能表項目附加至 MDI 父視窗  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66457504"
   
 9. 將 `&Special`、`Command&1` 和 `Command&2` 功能表項目的 <xref:System.Windows.Forms.MergeAction> 屬性設定為 <xref:System.Windows.Forms.MergeAction.Append>。  
   
-10. 建立事件處理常式<xref:System.Windows.Forms.Control.Click>事件的`&Open` <xref:System.Windows.Forms.ToolStripMenuItem>。  
+10. 為 `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>的 <xref:System.Windows.Forms.Control.Click> 事件建立事件處理常式。  
   
 11. 在事件處理常式中，插入類似下列程式碼範例的程式碼，以建立和顯示 `Form2` 的新執行個體，做為 `Form1` 的 MDI 子視窗。  
   

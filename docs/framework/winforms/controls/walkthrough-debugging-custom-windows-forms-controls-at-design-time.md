@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：在設計階段偵錯自訂的 Windows Form 控制項
+title: 在設計階段時調試自訂控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8572c1e70e36faf3a179de7a69e88e9cf1e781b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d9e292a1219c24571bcb35db2fe357b0197c8812
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460623"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740193"
 ---
 # <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>逐步解說：在設計階段時，對自訂 Windows Forms 控制項進行調試
 
@@ -111,7 +111,7 @@ ms.locfileid: "73460623"
 
 2. 在 [ **DebugControlLibrary** ] 屬性工作表中，選取 [ **Debug** ] 索引標籤。
 
-     在 [**起始動作**] 區段中，選取 [**啟動外部程式**]。 您將會 Visual Studio 的個別實例進行偵錯工具，因此，請按一下省略號（![[Visual Studio](./media/visual-studio-ellipsis-button.png)）] 按鈕屬性視窗中的省略號按鈕（...），以流覽 Visual Studio IDE。 可執行檔的名稱為**devenv**，如果您安裝到預設位置，其路徑為 *% ProgramFiles （x86）% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE*。
+     在 [**起始動作**] 區段中，選取 [**啟動外部程式**]。 您將會 Visual Studio 的個別實例進行偵錯工具, 因此請按一下省略號![Visual Studio](./media/visual-studio-ellipsis-button.png)屬性視窗中的省略號按鈕 (...) 按鈕, 以流覽 Visual Studio 的 IDE。 可執行檔的名稱為**devenv**，如果您安裝到預設位置，其路徑為 *% ProgramFiles （x86）% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE*。
 
 3. 選取 [確定] 關閉對話方塊。
 
@@ -143,7 +143,7 @@ ms.locfileid: "73460623"
 
 現在您可以在設計階段進行自訂控制項的偵錯工具，展開控制項與 Visual Studio IDE 的互動有許多可能性。
 
-- 您可以使用 <xref:System.ComponentModel.Component> 類別的 <xref:System.ComponentModel.Component.DesignMode%2A> 屬性來撰寫只在設計階段執行的程式碼。 如需詳細資訊，請參閱 <xref:System.ComponentModel.Component.DesignMode%2A>。
+- 您可以使用 <xref:System.ComponentModel.Component> 類別的 <xref:System.ComponentModel.Component.DesignMode%2A> 屬性來撰寫只在設計階段執行的程式碼。 如需詳細資訊，請參閱＜<xref:System.ComponentModel.Component.DesignMode%2A>＞。
 
 - 您可以將數個屬性套用至控制項的屬性，以操作自訂控制項與設計工具的互動。 您可以在 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空間中找到這些屬性。
 

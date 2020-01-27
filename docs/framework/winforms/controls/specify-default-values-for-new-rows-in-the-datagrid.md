@@ -1,5 +1,5 @@
 ---
-title: HOW TO：指定 Windows Form DataGridView 控制項的新資料列預設值
+title: 指定 DataGridView 控制項中新資料列的預設值
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: 879c035366c4686ceff3250a63c6ae8d8d3cfec4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 364f922aefc10e57f2ed7f3a0c2a5b25c922d87a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651953"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742939"
 ---
-# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>HOW TO：指定 Windows Form DataGridView 控制項的新資料列預設值
-當應用程式的預設填新加入的資料列的值時，您可以讓資料輸入更方便。 具有<xref:System.Windows.Forms.DataGridView>類別，您可以填入預設值取代<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。 當使用者輸入新資料錄的資料列時，會引發這個事件。 當您的程式碼會處理此事件時，您可以填入所需的資料格，以您選擇的值。  
+# <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>如何：指定 Windows Form DataGridView 控制項新資料列的預設值
+當應用程式在新加入的資料列中填入預設值時，您可以更方便地進行資料輸入。 使用 <xref:System.Windows.Forms.DataGridView> 類別，您可以使用 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 事件填入預設值。 當使用者輸入新記錄的資料列時，就會引發這個事件。 當您的程式碼處理這個事件時，您可以使用您選擇的值填入所需的儲存格。  
   
- 下列程式碼範例示範如何指定預設值的新資料列，使用<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。  
+ 下列程式碼範例示範如何使用 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 事件來指定新資料列的預設值。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#120)]
@@ -31,11 +31,11 @@ ms.locfileid: "64651953"
   
 - 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
   
-- A`NewCustomerId`函式來產生唯一`CustomerID`值。  
+- 用來產生唯一 `CustomerID` 值的 `NewCustomerId` 函數。  
   
 - <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
