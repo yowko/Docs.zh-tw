@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：建立 Direct3D9 內容以裝載在 WPF 中
+title: 建立用於裝載的 Direct3D9 內容
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 462220b526db90d3acfa90a28f9bfd56dbe813e2
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 847ee74da5b295c2c9d3824b3df74f94bc98a4db
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991402"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727912"
 ---
-# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>逐步解說：建立 Direct3D9 內容以裝載在 WPF 中
+# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>逐步解說：建立裝載於 WPF 中的 Direct3D9 內容
 本逐步解說示範如何建立適用于在 Windows Presentation Foundation （WPF）應用程式中裝載的 Direct3D9 內容。 如需有關在 WPF 應用程式中裝載 Direct3D9 內容的詳細資訊，請參閱[wpf 和 Direct3D9](wpf-and-direct3d9-interoperation.md)互通。
 
  在這個逐步解說中，您將執行下列工作：
@@ -25,7 +25,7 @@ ms.locfileid: "70991402"
 
  當您完成時，您將會有一個 DLL，其中包含 WPF 應用程式中使用的 Direct3D9 內容。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
  您需要下列元件才能完成此逐步解說：
 
 - Visual Studio 2010。
@@ -37,7 +37,7 @@ ms.locfileid: "70991402"
 
 #### <a name="to-create-the-direct3d9-project"></a>若要建立 Direct3D9 專案
 
-1. 在中C++建立名為`D3DContent`的新 Win32 專案。
+1. 在命名 `D3DContent`中C++建立新的 Win32 專案。
 
      [Win32 應用程式精靈] 隨即開啟，並顯示 [歡迎使用] 畫面。
 
@@ -65,9 +65,9 @@ ms.locfileid: "70991402"
 
 10. 選取 [**輸入**] 節點。
 
-11. 在 [**其他**相依性] 欄位中`d3d9.lib` ， `d3dx9.lib`新增和檔案。
+11. 在 [**其他**相依性] 欄位中，加入 `d3d9.lib` 和 `d3dx9.lib` 檔案。
 
-12. 在方案總管中，將名`D3DContent.def`為的新模組定義檔案（.def）新增至專案。
+12. 在方案總管中，將名為 `D3DContent.def` 的新模組定義檔案（.def）加入至專案。
 
 ## <a name="creating-the-direct3d9-content"></a>建立 Direct3D9 內容
  若要獲得最佳效能，您的 Direct3D9 內容必須使用特定設定。 下列程式碼顯示如何建立具有最佳效能特性的 Direct3D9 介面。 如需詳細資訊，請參閱[Direct3D9 和 WPF 互通性的效能考慮](performance-considerations-for-direct3d9-and-wpf-interoperability.md)。
@@ -76,7 +76,7 @@ ms.locfileid: "70991402"
 
 1. 使用方案總管，將三C++個類別新增至名為的專案，如下所示。
 
-     `CRenderer`（使用虛擬的析構函式）
+     `CRenderer` （使用虛擬的析構函式）
 
      `CRendererManager`
 
@@ -137,9 +137,9 @@ ms.locfileid: "70991402"
 
 ## <a name="next-steps"></a>後續步驟
 
-- 將 Direct3D9 內容裝載于 WPF 應用程式中。 如需詳細資訊，請參閱[逐步解說：在 WPF](walkthrough-hosting-direct3d9-content-in-wpf.md)中裝載 Direct3D9 內容。
+- 將 Direct3D9 內容裝載于 WPF 應用程式中。 如需詳細資訊，請參閱[逐步解說：在 WPF 中裝載 Direct3D9 內容](walkthrough-hosting-direct3d9-content-in-wpf.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 和 WPF 互通性的效能考量](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

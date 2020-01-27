@@ -1,5 +1,5 @@
 ---
-title: 標記個別 Windows Form 控制項並提供其捷徑
+title: 標籤控制項並提供快捷方式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], access keys
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: e06fe547e867ec368369fbe4f320be903ed11bc6
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: b3e2bd691ed9652ef484dd67da994f474ce4420b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373675"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745254"
 ---
 # <a name="label-individual-windows-forms-controls-and-provide-shortcuts"></a>標記個別 Windows Forms 控制項並提供快捷方式
 

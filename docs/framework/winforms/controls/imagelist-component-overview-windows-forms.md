@@ -1,5 +1,5 @@
 ---
-title: ImageList 元件概觀 (Windows Form)
+title: ImageList 元件概觀
 ms.date: 03/30/2017
 f1_keywords:
 - ImageList
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: d4513439594c9bceac3463a5b878f9059a16046e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b46204375cb046d637f4c9e1d888f37d10ea1f57
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645691"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728097"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList 元件概觀 (Windows Form)
 
@@ -27,7 +27,7 @@ Windows Form <xref:System.Windows.Forms.ImageList> 元件可用來儲存影像�
 
 <xref:System.Windows.Forms.ImageList> 元件的索引鍵屬性是 <xref:System.Windows.Forms.ImageList.Images%2A>，其中包含要供相關聯控制項使用的圖片。 每個個別影像都可以依其索引值或索引鍵來存取。 <xref:System.Windows.Forms.ImageList.ColorDepth%2A> 屬性可決定要用來呈現影像的色彩數目。 所有影像都會以 <xref:System.Windows.Forms.ImageList.ImageSize%2A> 屬性設定的相同大小來顯示。 較大的影像會調整為符合此大小。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.ImageList>
-- [如何：新增或移除映像使用 Windows Form ImageList 元件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [操作說明：使用 Windows Forms ImageList 元件加入或移除影像](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：以程式設計的方式將項目新增至 Windows Forms DomainUpDown 控制項
+title: 以程式設計方式將項目新增至 DomainUpDown 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - spin button control [Windows Forms], adding items
 - DomainUpDown control [Windows Forms], adding items to
 ms.assetid: fd31d314-33eb-4181-90f8-d32ed0c4e072
-ms.openlocfilehash: ef44a9e68b8007d57fc7442a178ae98322747c99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 2e9f51fa051bf9b62e95f289db97bffd83450036
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343671"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745588"
 ---
-# <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>HOW TO：以程式設計的方式將項目新增至 Windows Forms DomainUpDown 控制項
-您可以加入 Windows Form 中的項目<xref:System.Windows.Forms.DomainUpDown>在程式碼中的控制項。 呼叫<xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A>或是<xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A>方法<xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection>類別，以將項目加入至控制項的<xref:System.Windows.Forms.DomainUpDown.Items%2A>屬性。 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A>方法會將項目加入至集合中的結尾時<xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A>方法會將項目加入指定的位置。  
+# <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>如何：以程式設計的方式將項目加入至 Windows Form DomainUpDown 控制項
+您可以在程式碼中將專案新增至 Windows Forms <xref:System.Windows.Forms.DomainUpDown> 控制項。 呼叫 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> 類別的 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> 或 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> 方法，將專案加入至控制項的 <xref:System.Windows.Forms.DomainUpDown.Items%2A> 屬性。 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> 方法會將專案新增至集合結尾，而 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> 方法會在指定的位置加入專案。  
   
-### <a name="to-add-a-new-item"></a>若要加入新項目  
+### <a name="to-add-a-new-item"></a>若要加入新專案  
   
-1. 使用<xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A>方法將項目加入至項目清單的結尾。  
+1. 使用 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A> 方法，將專案加入至專案清單的結尾。  
   
     ```vb  
     DomainUpDown1.Items.Add("noodles")  
@@ -37,7 +37,7 @@ ms.locfileid: "59343671"
   
      -或-  
   
-2. 使用<xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A>方法，以將項目插入位於指定位置的清單。  
+2. 使用 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> 方法，將專案插入清單中指定的位置。  
   
     ```vb  
     ' Inserts an item at the third position in the list  
@@ -54,7 +54,7 @@ ms.locfileid: "59343671"
     domainUpDown1->Items->Insert(2, "rice");  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>

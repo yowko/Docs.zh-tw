@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Forms 中選擇附加至使用者電腦的印表機
+title: 如何：選擇附加至使用者電腦的印表機
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: e81ef8b563afff6dd57a9fbb7674d17c0eb80916
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 7fc2427468540ac0a1480f6140cbb34c3a0f1ab3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053065"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746505"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>HOW TO：在 Windows Forms 中選擇附加至使用者電腦的印表機
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>如何：在 Windows Form 中選擇附加至使用者電腦的印表機
 通常，使用者會想要選擇列印到非預設的印表機。 使用 <xref:System.Windows.Forms.PrintDialog> 元件，即可讓使用者從目前安裝的印表機中選擇印表機。 透過 <xref:System.Windows.Forms.PrintDialog> 元件，擷取 <xref:System.Windows.Forms.DialogResult> 元件的 <xref:System.Windows.Forms.PrintDialog> 並將其用來選取印表機。  
   
  在下列程序中，選取要列印至預設印表機的文字檔案。 然後具現化 <xref:System.Windows.Forms.PrintDialog> 類別。  
   
 ### <a name="to-choose-a-printer-and-then-print-a-file"></a>選擇印表機，然後列印檔案  
   
-1. 選取要供使用的印表機<xref:System.Windows.Forms.PrintDialog>元件。  
+1. 選取要使用 <xref:System.Windows.Forms.PrintDialog> 元件的印表機。  
   
-     在下列程式碼範例中，有兩個要處理的事件。 在第一個<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件，<xref:System.Windows.Forms.PrintDialog>具現化類別和使用者所選取的印表機會擷取在<xref:System.Windows.Forms.DialogResult>屬性。  
+     在下列程式碼範例中，有兩個要處理的事件。 在第一個 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Click> 事件中，會具現化 <xref:System.Windows.Forms.PrintDialog> 類別，並在 <xref:System.Windows.Forms.DialogResult> 屬性中捕捉使用者所選取的印表機。  
   
-     在第二個事件中，<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件的<xref:System.Drawing.Printing.PrintDocument>元件，以指定的印表機列印範例文件。  
+     在第二個事件中，<xref:System.Drawing.Printing.PrintDocument> 元件的 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件，會將範例檔列印到指定的印表機。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -89,7 +89,7 @@ ms.locfileid: "66053065"
        }  
     ```  
   
-     (VisualC#和 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     （視覺C#效果和C++視覺效果）將下列程式碼放在表單的函式中，以註冊事件處理常式。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  
@@ -106,6 +106,6 @@ ms.locfileid: "66053065"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Windows Forms 列印支援](windows-forms-print-support.md)

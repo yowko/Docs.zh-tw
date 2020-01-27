@@ -2,15 +2,15 @@
 title: System.Web.Routing 整合
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 85137689a31573dc10e8f7384007830ab40d31df
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: fdc355d4560294a16f3e9c488fdaf142d2982c0d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976028"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745336"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 整合
-在 Internet Information Service （IIS）中裝載 Windows Communication Foundation （WCF）服務時，您會在虛擬目錄中放置 .svc 檔案。 此 .svc 檔案會指定要使用的服務主機處理站，以及實作服務的類別。 對服務提出要求時，您可以在 URI 中指定 .svc 檔案，例如： `http://contoso.com/EmployeeServce.svc`。 對於撰寫 REST 服務的程式設計人員而言，此類型的 URI 不是最佳的方法。 REST 服務的 URI 會指定特定資源，且一般來說沒有任何擴充。 <xref:System.Web.Routing> 整合功能可讓您裝載 WCF REST 服務，以回應沒有延伸模組的 Uri。 如需路由的詳細資訊，請參閱[ASP.NET 路由](https://go.microsoft.com/fwlink/?LinkId=184660)。  
+在 Internet Information Service （IIS）中裝載 Windows Communication Foundation （WCF）服務時，您會在虛擬目錄中放置 .svc 檔案。 此 .svc 檔案會指定要使用的服務主機處理站，以及實作服務的類別。 對服務提出要求時，您可以在 URI 中指定 .svc 檔案，例如： `http://contoso.com/EmployeeServce.svc`。 對於撰寫 REST 服務的程式設計人員而言，此類型的 URI 不是最佳的方法。 REST 服務的 URI 會指定特定資源，且一般來說沒有任何擴充。 <xref:System.Web.Routing> 整合功能可讓您裝載 WCF REST 服務，以回應沒有延伸模組的 Uri。 如需路由的詳細資訊，請參閱[ASP.NET 路由](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))。  
   
 ## <a name="using-systemwebrouting-integration"></a>使用 System.Web.Routing 整合  
  若要使用 <xref:System.Web.Routing> 整合功能，請使用 <xref:System.ServiceModel.Activation.ServiceRoute> 類別建立一個或多個路由，並且將路由加入至 Global.asax 檔案中的 <xref:System.Web.Routing.RouteTable>。 這些路由會指定服務回應的相對 URI。 下列範例顯示如何執行這項工作。  
@@ -72,4 +72,4 @@ ms.locfileid: "73976028"
 ## <a name="see-also"></a>請參閱
 
 - [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [ASP.NET 路由](https://go.microsoft.com/fwlink/?LinkId=184660)
+- [ASP.NET 路由](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))

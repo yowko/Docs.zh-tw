@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d384aa2daea17581402dc45dc3104a0d97f77f3a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fe99a2ac81b54ae6aa3cb64af9b5995a548c0c2b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035439"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727881"
 ---
 # <a name="net-docs"></a>.NET Docs
 
@@ -20,9 +20,7 @@ ms.locfileid: "73035439"
 
 若要參與，請參閱 [.NET 社群參與者專案](https://github.com/dotnet/docs/projects/35)進行了解。 [參與指南](CONTRIBUTING.md)包含所用程序的指示。 
 
-如果您有興趣協助將目標為 .NET Framework 的現有程式碼從 [Code Gallery](https://code.msdn.microsoft.com) 移轉到儲存在[範例存放庫](https://github.com/dotnet/samples)並可從[範例瀏覽器](https://docs.microsoft.com/samples/browse)下載的 .NET Core 應用程式，請參閱 [Code Gallery 移轉](https://github.com/dotnet/docs/projects/88)專案。 
-
-我們期望 [Xamarin](https://docs.microsoft.com/xamarin)、[Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) 及 [Unity](https://docs.unity3d.com/Manual/index.html) 也能使用此文件。
+如果您有興趣協助將目標為 .NET Framework 的現有程式碼從已[淘汰的程式碼庫](https://docs.microsoft.com/teamblog/msdn-code-gallery-retired)網站遷移至儲存在[範例存放庫](https://github.com/dotnet/samples)中的 .net Core 應用程式，並從[範例瀏覽器](https://docs.microsoft.com/samples/browse)下載，請參閱程式[代碼庫遷移](https://github.com/dotnet/docs/projects/88)專案。 程式碼庫範例已移至[Microsoft Archive](https://github.com/microsoftarchive?q=msdn-code-gallery)組織。
 
 此專案採納了 Contributor Covenant 定義的行為守則來規範社群中的行為。
 如需詳細資訊，請參閱 [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct) (.NET Foundation 行為守則)。

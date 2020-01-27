@@ -2,12 +2,12 @@
 title: 機器學習工作
 description: 探索 ML.NET 中支援的各種不同機器學習工作與相關的工作。
 ms.date: 12/23/2019
-ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739634"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745109"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的機器學習工作
 
@@ -85,6 +85,7 @@ ms.locfileid: "75739634"
 * <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Vision.ImageClassificationTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>多類別分類的輸入和輸出
 
@@ -219,3 +220,13 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 您可以使用下列演算法訓練建議模型：
 
 * <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
+
+## <a name="forecasting"></a>針對
+
+預測工作會使用過去的時間序列資料來預測未來的行為。 適用于預測的案例包括氣象預測、季節性銷售預測和預測性維護。
+
+### <a name="forecasting-trainers"></a>預測講師
+
+您可以使用下列演算法來定型預測模型：
+
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>

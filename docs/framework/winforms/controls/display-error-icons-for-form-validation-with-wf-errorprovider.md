@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示
+title: 使用 ErrorProvider 元件顯示表單驗證的錯誤圖示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 2af8d3b9ea97b678c493de8a58d439b62f448387
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: a1e346e332db489351f59c9a0c03ae731baf3dc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053704"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745905"
 ---
-# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>HOW TO：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示
-您可以使用 Windows Form<xref:System.Windows.Forms.ErrorProvider>元件，以在使用者輸入無效的資料時顯示錯誤圖示。 您必須擁有至少兩個控制項其間索引標籤，並藉此叫用的驗證程式碼以在表單上。  
+# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>如何：使用 Windows Form ErrorProvider 元件顯示表單驗證的錯誤圖示
+當使用者輸入不正確資料時，您可以使用 Windows Forms <xref:System.Windows.Forms.ErrorProvider> 元件來顯示錯誤圖示。 您在表單上必須至少有兩個控制項，才能在兩者之間定位，並藉此叫用驗證程式代碼。  
   
-### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>控制項的值無效時顯示錯誤圖示  
+### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>當控制項的值無效時顯示錯誤圖示  
   
-1. 新增兩個控制項 — 例如，文字方塊中，Windows 表單。  
+1. 將兩個控制項（例如文字方塊）新增至 Windows Form。  
   
-2. 新增<xref:System.Windows.Forms.ErrorProvider>元件至表單。  
+2. 將 <xref:System.Windows.Forms.ErrorProvider> 元件新增至表單。  
   
-3. 選取第一個控制項，然後將程式碼加入其<xref:System.Windows.Forms.Control.Validating>事件處理常式。 為了讓此程式碼才能正常執行，程序必須連接到事件。 如需詳細資訊，請參閱[如何：在執行階段建立 Windows Forms 事件處理常式](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
+3. 選取第一個控制項，並將程式碼加入其 <xref:System.Windows.Forms.Control.Validating> 事件處理常式。 為了讓此程式碼能夠正常執行，必須連接到事件。 如需詳細資訊，請參閱[如何：在執行時間建立事件處理常式以進行 Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
   
-     下列程式碼測試使用者輸入; 的資料的有效性如果資料無效，<xref:System.Windows.Forms.ErrorProvider.SetError%2A>呼叫方法。 第一個引數<xref:System.Windows.Forms.ErrorProvider.SetError%2A>方法會指定哪一個控制項旁邊顯示圖示。 第二個引數是要顯示的錯誤文字。  
+     下列程式碼會測試使用者所輸入資料的有效性;如果資料無效，則會呼叫 <xref:System.Windows.Forms.ErrorProvider.SetError%2A> 方法。 <xref:System.Windows.Forms.ErrorProvider.SetError%2A> 方法的第一個引數會指定要在其旁邊顯示圖示的控制項。 第二個引數是要顯示的錯誤文字。  
   
     ```vb  
     Private Sub TextBox1_Validating(ByVal Sender As Object, _  
@@ -77,7 +77,7 @@ ms.locfileid: "66053704"
        }  
     ```  
   
-     (Visual C#、 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     （視覺C#效果， C++視覺效果）將下列程式碼放在表單的函式中，以註冊事件處理常式。  
   
     ```csharp  
     this.textBox1.Validating += new  
@@ -90,10 +90,10 @@ ms.locfileid: "66053704"
        (this, &Form1::textBox1_Validating);  
     ```  
   
-4. 執行專案。 在第一個控制項，然後第二個索引標籤中輸入無效 （在此範例中，非數字） 的資料。 顯示錯誤圖示時，請指向它以查看錯誤文字的滑鼠指標。  
+4. 執行專案。 將不正確（在此範例中為非數值）資料輸入到第一個控制項，然後按 tab 鍵前往第二個控制項。 當錯誤圖示顯示時，請使用滑鼠指標指向它，以查看錯誤文字。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [ErrorProvider 元件概觀](errorprovider-component-overview-windows-forms.md)
-- [如何：資料集使用 Windows Forms ErrorProvider 元件檢視錯誤](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [操作說明：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：在 WPF 應用程式中快取應用程式資料
+title: 快取應用程式資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b7d999f94e2f2ae410a16e537d51c0f890def4e1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715894"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728067"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>逐步解說：在 WPF 應用程式中快取應用程式資料
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 重新存取資料時，應用程式可以從快取中取得資料，而不是從原始來源進行擷取。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。
@@ -73,7 +73,7 @@ ms.locfileid: "74715894"
 
 6. 選取 [為解決方案建立目錄] 核取方塊。
 
-7. 按一下 [確定]。
+7. 按一下 [ **確定**]。
 
      WPF 設計工具會在**設計**視圖中開啟，並顯示 mainwindow.xaml。 Visual Studio 會建立 [**我的專案**] 資料夾、應用程式 .xaml 檔案和 mainwindow.xaml。
 
@@ -99,7 +99,7 @@ ms.locfileid: "74715894"
 
 4. 在 [**目標 framework （所有設定）** ] 清單中，選取 [.NET Framework 4]。 （請勿選取 [.NET Framework 4 用戶端設定檔]）。
 
-5. 按一下 [確定]。
+5. 按一下 [ **確定**]。
 
      [目標 Framework 變更] 對話方塊隨即出現。
 

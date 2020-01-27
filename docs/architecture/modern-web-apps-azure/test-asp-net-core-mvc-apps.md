@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 6096bd3aa35a27c97862089d09d537bdc5b1fff0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 82c9815abdd5140340f9a8ea39be23496d433889
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971534"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738388"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
@@ -94,7 +94,7 @@ Martin Fowler 撰寫了測試金字塔相關事項，其中的一個範例如圖
 
 - `CatalogControllerGetImage`**Should**`.`**Log**`WarningGivenImageMissingException`
 
-有些小組會認為第二種命名方法更清楚，只是略為冗長。 無論如何，請嘗試使用能深入了解測試行為的命名慣例；如此，當一或多項測試失敗時，從其名稱即可明顯看出是哪些案例失敗。 請避免含糊不清地命名您的測試，例如 ControllerTests.Test1，因為在測試結果中看到時並不會提供任何價值。
+有些小組會認為第二種命名方法更清楚，只是略為冗長。 無論如何，請嘗試使用能深入了解測試行為的命名慣例；如此，當一或多項測試失敗時，從其名稱即可明顯看出是哪些案例失敗。 避免命名您的測試模糊（例如 ControllerTests），因為當您在測試結果中看到這些專案時，不會提供任何值。
 
 如果您遵循如上所述會產生許多小型測試類別的命名慣例，建議使用資料夾和命名空間來進一步組織測試。 圖 9-4 顯示在幾個測試專案中按資料夾組織測試的一種方法。
 
@@ -153,7 +153,7 @@ public IActionResult GetImage(int id)
 
 ## <a name="functional-testing-aspnet-core-apps"></a>對 ASP.NET Core 應用程式進行功能測試
 
-對 ASP.NET Core 應用程式來說，`TestServer` 類別使功能測試變得相當易於撰寫。 您可以直接使用 `TestServer` 來設定 `WebHostBuilder` (如同您平常對應用程式進行的設定)，也可使用 `WebApplicationFactory` 類型來設定 (自版本 2.1 開始可使用)。 您應該盡可能讓測試主機幾乎與生產主機完全一樣，以便測試的執行行為與應用程式在生產環境中的執行行為類似。 `WebApplicationFactory` 類別有助於設定 TestServer 的 ContentRoot，ASP.NET Core 用它來尋找靜態資源 (如檢視)。
+對 ASP.NET Core 應用程式來說，`TestServer` 類別使功能測試變得相當易於撰寫。 您可以直接使用 `WebHostBuilder` 來設定 `TestServer` (如同您平常對應用程式進行的設定)，也可使用 `WebApplicationFactory` 類型來設定 (自版本 2.1 開始可使用)。 您應該盡可能讓測試主機幾乎與生產主機完全一樣，以便測試的執行行為與應用程式在生產環境中的執行行為類似。 `WebApplicationFactory` 類別有助於設定 TestServer 的 ContentRoot，ASP.NET Core 用它來尋找靜態資源 (如檢視)。
 
 建立簡單功能測試的方法是，建立實作 IClassFixture\<WebApplicationFactory\<TEntry>> 的測試類別，其中 TEntry 是 Web 應用程式的啟動類別。 準備好測試類別之後，測試固件可以使用處理站的 CreateClient 方法來建立用戶端：
 

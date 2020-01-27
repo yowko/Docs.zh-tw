@@ -1,5 +1,5 @@
 ---
-title: 標記延伸和 WPF XAML
+title: 標記延伸和 XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - brace character [WPF]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: a9e0657aa9f9dd4de0ff3f8788c686bf1535b1ad
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: f4134e9d0b26135d1bd6058ac9ed8941a9c6be34
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559790"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727891"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>標記延伸和 WPF XAML
 本主題介紹 XAML 標記延伸模組概念，包括其語法規則、用途，以及其根據的類別物件模型。 標記延伸模組是 XAML 語言的一般功能，以及 XAML 服務之 .NET 實作的一般功能。 本主題會具體詳述 WPF XAML 中所使用的標記延伸模組。  

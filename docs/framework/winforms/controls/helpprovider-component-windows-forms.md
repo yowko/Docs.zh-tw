@@ -1,22 +1,22 @@
 ---
-title: HelpProvider 元件 (Windows Form)
+title: HelpProvider 元件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], Help
 - Help [Windows Forms], displaying on Windows Forms
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
-ms.openlocfilehash: b5da5895b39412052f83cb0a89c3852d28f264bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 058a90a6d868d051e36523ae93bb1f3f810fc3b2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011303"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745592"
 ---
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider 元件 (Windows Form)
 Windows Form `HelpProvider` 元件用來將 HTML 說明 1.x 說明檔 (以 HTML Help Workshop 產生的 .chm 檔案，或 .htm 檔) 與 Windows 架構應用程式產生關聯。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [HelpProvider 元件概觀](helpprovider-component-overview-windows-forms.md)  
  導入 `HelpProvider` 元件的一般概念，可讓您將 HTML 說明檔與 Windows 架構應用程式產生關聯。  
   

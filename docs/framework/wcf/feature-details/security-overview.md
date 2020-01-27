@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1e551572fa6d94e9fd1170eb7e3b258f2e8fb926
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344697"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728899"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Windows Communication Foundation 安全性總覽
 Windows Communication Foundation （WCF）是以 SOAP 訊息為基礎的分散式程式設計平臺，而保護用戶端與服務之間的訊息是保護資料的必要條件。 WCF 提供了一種多樣又互通的平臺，可根據現有的安全性基礎結構和 SOAP 訊息的可辨識安全性標準來交換安全訊息。  
   
 > [!NOTE]
-> 如需 WCF 安全性的完整指南，請參閱[Wcf 安全性指引](https://go.microsoft.com/fwlink/?LinkID=158912)。  
+> 如需 WCF 安全性的完整指南，請參閱[Wcf 安全性指引](https://archive.codeplex.com/?p=WCFSecurity)。  
   
  如果您已經使用現有技術（例如 HTTPS、Windows 整合式安全性），或使用者名稱和密碼來驗證使用者，則 WCF 會使用熟悉的概念。 WCF 不僅與現有的安全性基礎結構整合，還會使用安全的 SOAP 訊息，將分散式安全性延伸到僅限 Windows 網域。 除了現有的通訊協定之外，也請考慮使用 SOAP 做為通訊協定的主要優點，將現有的安全性機制執行。 例如，識別用戶端或服務的認證 (如使用者名稱和密碼，或 X.509 憑證) 有互通的 XML 架構 SOAP 設定檔。 使用這些設定檔，訊息可以利用像 XML 數位簽章和 XML 加密的開放規格，來安全交換。 如需規格的清單，請參閱[系統提供的互通性系結所支援的 Web 服務通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)。  
   
@@ -113,4 +113,4 @@ Windows Communication Foundation （WCF）是以 SOAP 訊息為基礎的分散�
 - [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [擴充安全性](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

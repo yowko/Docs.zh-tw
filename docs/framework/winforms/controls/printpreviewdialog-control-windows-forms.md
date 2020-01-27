@@ -1,5 +1,5 @@
 ---
-title: PrintPreviewDialog 控制項 (Windows Form)
+title: PrintPreviewDialog 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PrintPreviewDialog control (using designer)
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview (using designer)
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
-ms.openlocfilehash: 6d763b51e1ac0ba0e07b986be701e86f5bd60df2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 459ff62c5645704d5cbf688af37302500f47e54a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012577"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741362"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog 控制項 (Windows Form)
 Windows Form `PrintPreviewDialog` 控制項是預先設定的對話方塊，可用來顯示文件列印出來的外觀。 只要在 Windows 應用程式中使用這個控制項，便不需要設定自己的對話方塊。 這個控制項包含列印、放大、顯示一或多頁及關閉對話方塊等按鈕。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [PrintPreviewDialog 控制項概觀](printpreviewdialog-control-overview-windows-forms.md)  
  介紹 `PrintPreviewDialog` 控制項的一般概念，這個控制項可讓您顯示一個預先設定的對話方塊，使用者可以在這個對話方塊中查看文件列印後的結果。  
   
- [如何：顯示預覽列印在 Windows Forms 應用程式](how-to-display-print-preview-in-windows-forms-applications.md)  
+ [操作說明：在 Windows Forms 應用程式中顯示預覽列印](how-to-display-print-preview-in-windows-forms-applications.md)  
  說明如何在執行階段使用 `PrintPreviewDialog` 控制項來檢視要列印的頁面。  
   
 ## <a name="reference"></a>參考資料  

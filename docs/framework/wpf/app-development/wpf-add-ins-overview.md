@@ -1,5 +1,5 @@
 ---
-title: WPF 增益集概觀
+title: 增益集總覽
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 93904e308932ea41c736ca849ce0efb200502a7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421092"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738937"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
 
@@ -25,7 +25,7 @@ ms.locfileid: "73421092"
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 必須熟悉 .NET Framework 增益集模型。 如需詳細資訊，請參閱[增益集和擴充性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。
 
@@ -252,7 +252,7 @@ Xbap 會下載至 ClickOnce 部署快取中的安全資料夾並從中執行。 
 
 ## <a name="wpf-add-in-benefits"></a>WPF 增益集的優點
 
-由於 WPF 增益集使用者介面是從使用衍生自 <xref:System.Windows.Interop.HwndHost>之內部類別的主應用程式顯示，因此這些使用者介面會受到與 WPF UI 服務（例如版面配置、轉譯、資料）相關 <xref:System.Windows.Interop.HwndHost> 的功能所限制。系結、樣式、範本和資源。 不過，WPF 會以包含下列的其他功能來增強其內部 <xref:System.Windows.Interop.HwndHost> 子類別：
+由於 WPF 增益集使用者介面是從使用衍生自 <xref:System.Windows.Interop.HwndHost>之內部類別的主應用程式中顯示，因此這些使用者介面會受到與 WPF UI 服務（例如版面配置、轉譯、資料系結、樣式、範本和資源）相關的 <xref:System.Windows.Interop.HwndHost> 功能所限制。 不過，WPF 會以包含下列的其他功能來增強其內部 <xref:System.Windows.Interop.HwndHost> 子類別：
 
 - 在主應用程式的 UI 與增益集的 UI 之間切換。 請注意，「增益集是 UI」程式設計模型需要增益集端介面卡覆寫 <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> 以啟用 tab 鍵，不論增益集是完全信任還是部分信任。
 

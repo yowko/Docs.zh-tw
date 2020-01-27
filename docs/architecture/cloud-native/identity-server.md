@@ -2,12 +2,12 @@
 title: 雲端原生應用程式的 IdentityServer
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |IdentityServer
 ms.date: 06/30/2019
-ms.openlocfilehash: e96395766d1a4b63815c10c2c90e35a8f7f9159d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 48d0b95a40682f3127127851781b4d0e26e44630
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568473"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728586"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>雲端原生應用程式的 IdentityServer
 
@@ -96,13 +96,13 @@ IdentityServer 也會裝載公用示範網站，可用來測試各種通訊協�
 
 ## <a name="javascript-clients"></a>JavaScript 用戶端
 
-許多雲端原生應用程式會利用前端的伺服器端 Api 和豐富型用戶端單頁應用程式（Spa）。 IdentityServer 透過可新增至 Spa 的 NPM 提供[JavaScript 用戶端](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html)（`oidc-client.js`），讓他們能夠使用 IdentityServer 進行登入、登出，以及 web api 的權杖型驗證。
+許多雲端原生應用程式會利用前端的伺服器端 Api 和豐富型用戶端單頁應用程式（Spa）。 IdentityServer 透過可新增至 Spa 的 NPM 提供[JavaScript 用戶端](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)（`oidc-client.js`），讓他們能夠使用 IdentityServer 進行登入、登出，以及 web api 的權杖型驗證。
 
 ## <a name="references"></a>參考
 
 - [IdentityServer 檔](http://docs.identityserver.io/en/latest/)
 - [應用程式類型](https://docs.microsoft.com/azure/active-directory/develop/app-types)
-- [JavaScript OIDC 用戶端](http://docs.identityserver.io/en/latest/quickstarts/6_javascript_client.html)
+- [JavaScript OIDC 用戶端](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)
 
 >[!div class="step-by-step"]
 >[上一頁](azure-active-directory.md)

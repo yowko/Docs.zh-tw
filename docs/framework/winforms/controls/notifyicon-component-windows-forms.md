@@ -1,5 +1,5 @@
 ---
-title: NotifyIcon 元件 (Windows Form)
+title: NotifyIcon 元件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application icons [Windows Forms], background processes
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - NotifyIcon component
 - SysTray icons
 ms.assetid: 20312268-1d67-494a-8601-5c43b7f1b513
-ms.openlocfilehash: b1237a1280142cf65002ca307179b054a8fb7dd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 61fc4a53a16c3e7df8e0141cecb497a6a85fc5cb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61627807"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744942"
 ---
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon 元件 (Windows Form)
-Windows Form`NotifyIcon`元件會顯示在工作列的狀態通知區域圖示處理程序在背景執行，否則不會有使用者介面。 防毒保護程式即為一例，您可以在工作列的狀態通知區域中，按一下圖示來存取這個程式。  
+Windows Forms `NotifyIcon` 元件會在工作列的狀態通知區域中顯示圖示，針對在背景中執行且不會有使用者介面的進程。 防毒保護程式即為一例，您可以在工作列的狀態通知區域中，按一下圖示來存取這個程式。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [NotifyIcon 元件概觀](notifyicon-component-overview-windows-forms.md)  
- 導入的一般概念`NotifyIcon`元件，可讓使用者看到的處理序在背景執行，並沒有使用者介面的圖示。  
+ 介紹 `NotifyIcon` 元件的一般概念，可讓使用者查看在背景中執行且沒有使用者介面之進程的圖示。  
   
- [如何：應用程式圖示加入工作列使用 Windows Forms NotifyIcon 元件](app-icons-to-the-taskbar-with-wf-notifyicon.md)  
- 逐步說明如何設定所顯示的圖示`NotifyIcon`元件。  
+ [操作說明：使用 Windows Forms NotifyIcon 元件將應用程式圖示加入至 TaskBar](app-icons-to-the-taskbar-with-wf-notifyicon.md)  
+ 提供設定 `NotifyIcon` 元件所顯示之圖示的步驟。  
   
- [如何：使用 Windows Forms NotifyIcon 元件關聯的捷徑功能表](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
- 提供的步驟加入至捷徑功能表`NotifyIcon`元件。  
+ [操作說明：將捷徑功能表與 Windows Forms NotifyIcon 元件關聯](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
+ 提供將快捷方式功能表新增至 `NotifyIcon` 元件的步驟。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.NotifyIcon>  

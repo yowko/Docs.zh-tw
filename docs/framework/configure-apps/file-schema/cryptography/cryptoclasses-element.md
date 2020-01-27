@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: 89f1d89ea397794e366b53205ac23b94d7892869
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 6601417f0b80f623b7698c4b072c35eca44343b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699760"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732885"
 ---
 # <a name="cryptoclasses-element"></a>\<cryptoClasses > 元素
 包含密碼編譯類別清單，其具有 [\<nameEntry>](nameentry-element.md) 項目中易記名稱的對應。  
@@ -35,9 +35,9 @@ ms.locfileid: "71699760"
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
- None。  
+ 無。  
   
-### <a name="child-elements"></a>子元素  
+### <a name="child-elements"></a>子項目  
   
 |項目|描述|  
 |-------------|-----------------|  
@@ -76,11 +76,11 @@ ms.locfileid: "71699760"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Security.Cryptography>
 - [組態檔結構描述](../index.md)
 - [密碼編譯設定結構描述](index.md)
-- [密碼編譯服務](../../../../standard/security/cryptographic-services.md)
-- [Cryptoconfig.createfromname. CreateFromName。](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
+- [The signature is valid](../../../../standard/security/cryptographic-services.md)
+- [Cryptoconfig.createfromname. CreateFromName。](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [設定密碼編譯類別](../../configure-cryptography-classes.md)

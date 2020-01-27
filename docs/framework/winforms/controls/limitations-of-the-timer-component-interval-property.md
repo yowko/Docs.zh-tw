@@ -1,5 +1,5 @@
 ---
-title: Windows Form Timer 元件的 Interval 屬性限制
+title: 計時器元件間隔屬性的限制
 ms.date: 03/30/2017
 helpviewer_keywords:
 - timers [Windows Forms], event intervals
@@ -7,28 +7,28 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: a9c4fda179e45ad2cf2ee2183e5881e97b763cdc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 15626a53f0541ff79e2098377d9dfdb4626ac155
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644936"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745240"
 ---
 # <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Windows Form Timer 元件的 Interval 屬性限制
-Windows Forms<xref:System.Windows.Forms.Timer>元件有<xref:System.Windows.Forms.Timer.Interval%2A>屬性，指定一個計時器事件和下一步 之間傳遞的毫秒數。 除非已停用元件，計時器會繼續接收<xref:System.Windows.Forms.Timer.Tick>大致相等間隔的時間的事件。  
+Windows Forms <xref:System.Windows.Forms.Timer> 元件具有 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性，可指定在一個計時器事件和下一次之間傳遞的毫秒數。 除非停用此元件，否則計時器會繼續以大約相等的時間間隔接收 <xref:System.Windows.Forms.Timer.Tick> 事件。  
   
  這個元件是專為 Windows Form 環境所設計。 如果您需要適用於伺服器環境的計時器，請參閱[伺服器架構的計時器簡介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))。  
   
-## <a name="the-interval-property"></a>[間隔] 屬性  
- <xref:System.Windows.Forms.Timer.Interval%2A>屬性有幾項限制來進行程式設計時，請考慮<xref:System.Windows.Forms.Timer>元件：  
+## <a name="the-interval-property"></a>Interval 屬性  
+ 當您進行 <xref:System.Windows.Forms.Timer> 元件的程式設計時，<xref:System.Windows.Forms.Timer.Interval%2A> 屬性有幾個需要考慮的限制：  
   
-- 如果您的應用程式或其他應用程式正在大量耗用系統上 — 例如長迴圈、 需要大量計算，或磁碟機、 網路或連接埠存取 — 您的應用程式可能不會取得計時器事件，通常為<xref:System.Windows.Forms.Timer.Interval%2A>屬性指定。  
+- 如果您的應用程式或其他應用程式在系統上進行繁重的需求（例如長迴圈、密集計算，或磁片磁碟機、網路或埠存取），您的應用程式可能不會在 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性指定的情況下，經常取得計時器事件。  
   
-- 不保證經過完全在時間間隔。 若要確保精確度，計時器應該檢查系統時鐘，如有需要而嘗試追蹤的累積的時間在內部。  
+- 此間隔不保證會剛好準時經過。 為確保正確性，計時器應該視需要檢查系統時鐘，而不是嘗試在內部追蹤累積的時間。  
   
-- 有效位數<xref:System.Windows.Forms.Timer.Interval%2A>屬性是以毫秒為單位。 某些電腦提供的高解析度計數器高於微秒的解析度。 這種計數器的可用性取決於您的電腦的處理器硬體。
+- <xref:System.Windows.Forms.Timer.Interval%2A> 屬性的有效位數（以毫秒為單位）。 有些電腦提供高解析度的計數器，其解析度高於毫秒。 這類計數器的可用性取決於您電腦的處理器硬體。
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer 元件](timer-component-windows-forms.md)

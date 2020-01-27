@@ -1,5 +1,5 @@
 ---
-title: LinkLabel 控制項 (Windows Form)
+title: LinkLabel 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Label control [Windows Forms]
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - Web page link control
 - LinkLabel control [Windows Forms]
 ms.assetid: af1fd04e-e126-4fd7-9a4e-13b49010c5ca
-ms.openlocfilehash: 4a67f127adf94829202f02056c64e2951891998e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef5161e2de7cb4cbcf69ab7d72ea079e950bd3ff
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012902"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745200"
 ---
 # <a name="linklabel-control-windows-forms"></a>LinkLabel 控制項 (Windows Form)
-Windows Form`LinkLabel`控制項可讓您將 Web 樣式連結新增至 Windows Forms 應用程式。 您可以使用`LinkLabel`控制項，您可以使用的所有項目<xref:System.Windows.Forms.Label>控制; 您也可以設定文字的一部分為物件或 Web 網頁的連結。  
+Windows Forms `LinkLabel` 控制項可讓您將 Web 樣式的連結新增至 Windows Forms 應用程式。 您可以針對可以使用 <xref:System.Windows.Forms.Label> 控制項的所有專案使用 `LinkLabel` 控制項;您也可以將部分文字設定為物件或網頁的連結。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [LinkLabel 控制項概觀](linklabel-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
- [如何：變更 Windows Forms LinkLabel 控制項的外觀](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
- 列出連結標籤中指定的色彩和加上底線的 Web 樣式連結的方式。  
+ [操作說明：變更 Windows Forms LinkLabel 控制項的外觀](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)  
+ 列出在連結標籤中指定 Web 樣式連結之色彩和底線的方式。  
   
- [如何：連結的物件，或使用 Windows Forms LinkLabel 控制項的網頁](link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
- 提供 how-to 指示開啟表單或網頁上，按一下連結時。  
+ [操作說明：使用 Windows Forms LinkLabel 控制項連結至物件或網頁](link-to-an-object-or-web-page-with-wf-linklabel-control.md)  
+ 提供在按一下連結時開啟表單或網頁的操作指示。  
   
- [如何：顯示網頁，自 Windows Forms LinkLabel 控制項 (Visual Basic)](display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
- 示範如何在預設瀏覽器中顯示網頁上，當使用者按一下 Windows Form`LinkLabel`控制項。  
+ [操作說明：從 Windows Forms LinkLabel 控制項顯示網頁 (Visual Basic)](display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
+ 顯示當使用者按一下 Windows Forms `LinkLabel` 控制項時，如何在預設瀏覽器中顯示網頁。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.LinkLabel> 類別  
@@ -37,4 +37,4 @@ Windows Form`LinkLabel`控制項可讓您將 Web 樣式連結新增至 Windows F
   
 ## <a name="related-sections"></a>相關章節  
  [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單及其用法的相關資訊的連結。
+ 提供 Windows Forms 控制項的完整清單，以及其使用方式的相關資訊連結。

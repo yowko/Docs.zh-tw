@@ -1,17 +1,17 @@
 ---
-title: Windows Form 控制項
+title: Controls
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls
 - controls [Windows Forms]
 - Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
-ms.openlocfilehash: 1088781a7780df71773b01a3816f024562abfcaf
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: e36efb8b653f528be6f68f77ced26de262cbc6ad
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69986990"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745293"
 ---
 # <a name="windows-forms-controls"></a>Windows Forms 控制項
 
@@ -22,13 +22,13 @@ ms.locfileid: "69986990"
 [將控制項加入 Windows Forms](putting-controls-on-windows-forms.md)\
 提供將控制項加入表單的相關連結。
 
-[排列 Windows Forms 上的控制項](how-to-align-multiple-controls-on-windows-forms.md)\
+[排列 Windows Forms\ 上的控制項](how-to-align-multiple-controls-on-windows-forms.md)
 在表單上排列控制項的相關文章。
 
 [標記個別 Windows Forms 控制項並提供其快捷方式](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)\
 描述控制項上的鍵盤快速鍵、文字標籤的用法以及輔助按鍵。
 
-[要在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)\
+[要在 Windows Forms\ 上使用的控制項](controls-to-use-on-windows-forms.md)
 列出搭配 Windows Forms 使用的控制項，以及您可以使用每個控制項完成的基本作業。
 
 [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)\

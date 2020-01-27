@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Forms MonthCalendar 控制項中顯示多個月份
+title: 在 MonthCalendar 控制項中顯示超過一個月
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - calendars [Windows Forms], multiple months
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d197caa2-38a5-4cb4-acc3-562130c2ace3
-ms.openlocfilehash: c2252ccf1c8fec0dcaba634e6da093ab976ce1f6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d3925bc19ddcd67742f0ab8b5b2e45530820f38
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614756"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745894"
 ---
-# <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a>HOW TO：在 Windows Forms MonthCalendar 控制項中顯示多個月份
-Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可以顯示最多 12 個月一次。 根據預設，控制項會顯示一個月，但是您可以指定幾個月會顯示，而且在控制項內的排列方式。 當您變更行事曆維度時，控制項調整大小時，因此請務必針對新的維度在表單上沒有足夠的空間。  
+# <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a>如何：在 Windows Form MonthCalendar 控制項中顯示多個月份
+Windows Forms <xref:System.Windows.Forms.MonthCalendar> 控制項一次最多可以顯示12個月。 根據預設，控制項只會顯示一個月，但是您可以指定要顯示的月份數，以及它們在控制項內的相片順序。 當您變更行事曆維度時，控制項會調整大小，因此請確定表單上有足夠的空間來容納新的維度。  
   
-### <a name="to-display-multiple-months"></a>若要顯示多個月份  
+### <a name="to-display-multiple-months"></a>顯示多個月份  
   
-- 設定<xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>要顯示水平和垂直的月數的屬性。  
+- 將 [<xref:System.Windows.Forms.MonthCalendar.CalendarDimensions%2A>] 屬性設定為水準和垂直顯示的月數。  
   
     ```vb  
     MonthCalendar1.CalendarDimensions = New System.Drawing.Size (3,2)  
@@ -37,8 +37,8 @@ Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可以顯示最多
     monthCalendar1->CalendarDimensions = System::Drawing::Size (3,2);  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [MonthCalendar 控制項](monthcalendar-control-windows-forms.md)
-- [如何：在 Windows Form MonthCalendar 控制項中選取一個日期範圍](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [如何：變更 Windows Form MonthCalendar 控制項的外觀](how-to-change-monthcalendar-control-appearance.md)
+- [操作說明：在 Windows Forms 的 MonthCalendar 控制項中選取一個日期範圍](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [操作說明：變更 Windows Forms MonthCalendar 控制項的外觀](how-to-change-monthcalendar-control-appearance.md)

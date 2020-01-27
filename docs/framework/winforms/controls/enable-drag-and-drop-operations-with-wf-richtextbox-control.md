@@ -1,5 +1,5 @@
 ---
-title: HOW TO：啟用 Windows Forms RichTextBox 控制項的拖放作業
+title: 使用 RichTextBox 控制項啟用拖放作業
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: d1b8f3e1d0ef7d0f83db4a742ab76a05e42f761b
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 3c17560dee012912aea2938654f1dc4dc56e0725
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053687"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745817"
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>作法：啟用 Windows Forms RichTextBox 控制項的拖放作業
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>如何：啟用 Windows Form RichTextBox 控制項的拖放作業
 使用 Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項的拖放作業，可藉由處理 <xref:System.Windows.Forms.RichTextBox.DragEnter> 和 <xref:System.Windows.Forms.RichTextBox.DragDrop> 事件來完成。 因此，使用 <xref:System.Windows.Forms.RichTextBox> 控制項進行拖放作業相當簡單。  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>在 RichTextBox 控制項中啟用拖曳作業  
@@ -62,7 +62,7 @@ ms.locfileid: "66053687"
        }  
     ```  
   
-     (VisualC#和 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     （視覺C#效果和C++視覺效果）將下列程式碼放在表單的函式中，以註冊事件處理常式。  
   
     ```csharp  
     this.richTextBox1.DragEnter += new  
@@ -138,7 +138,7 @@ ms.locfileid: "66053687"
        }  
     ```  
   
-     (VisualC#和 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     （視覺C#效果和C++視覺效果）將下列程式碼放在表單的函式中，以註冊事件處理常式。  
   
     ```csharp  
     this.richTextBox1.DragDrop += new  
@@ -156,7 +156,7 @@ ms.locfileid: "66053687"
   
 1. 儲存並建置您的應用程式。 在執行時，執行 WordPad。  
   
-     WordPad 是由允許拖放作業之 Windows 所安裝的文字編輯器。 存取方式是按一下 [開始]  按鈕、選取 [執行] ，然後在 [執行] `WordPad`**對話方塊中的文字方塊中輸入** 並按一下 [確定] 。  
+     WordPad 是由允許拖放作業之 Windows 所安裝的文字編輯器。 存取方式是按一下 [開始] 按鈕、選取 [執行]，然後在 [執行] `WordPad`**對話方塊中的文字方塊中輸入** 並按一下 [確定]。  
   
 2. 一旦開啟 WordPad，請於其中輸入文字的字串。 使用滑鼠、選取文字，然後再將選取的文字拖曳到 Windows 應用程式中的 <xref:System.Windows.Forms.RichTextBox> 控制項。  
   
@@ -164,9 +164,9 @@ ms.locfileid: "66053687"
   
      當您放開滑鼠按鈕時，會放下選取的文字 (也就是，會引發 <xref:System.Windows.Forms.RichTextBox.DragDrop> 事件)，並插入 <xref:System.Windows.Forms.RichTextBox> 控制項內。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.RichTextBox>
-- [如何：執行應用程式之間的拖放作業](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [操作說明：在應用程式間執行拖放作業](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox 控制項](richtextbox-control-windows-forms.md)
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

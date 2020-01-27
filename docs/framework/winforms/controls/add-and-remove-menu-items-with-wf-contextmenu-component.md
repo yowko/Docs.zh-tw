@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 Windows Forms ContextMenu 元件新增和移除功能表項目
+title: 使用 CoNtextMenu 元件新增和移除功能表項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,26 +16,26 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 5d1862b1fc1398f0f8c2217b51c4efb93db639af
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 989ab6d47ec761930a32f542b5fa1136e831f73d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957025"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746277"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>HOW TO：使用 Windows Forms ContextMenu 元件新增和移除功能表項目
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>如何：使用 Windows Form ContextMenu 元件加入和移除功能表項目
 說明如何新增和移除 Windows Forms 中的快捷方式功能表項目。  
   
- [Windows Forms <xref:System.Windows.Forms.ContextMenu> ] 元件會提供與所選物件相關之常用命令的功能表。 您可以藉由將<xref:System.Windows.Forms.MenuItem>物件加入<xref:System.Windows.Forms.Menu.MenuItems%2A>至集合, 將專案新增至快捷方式功能表。  
+ Windows Forms <xref:System.Windows.Forms.ContextMenu> 元件會提供與所選物件相關之常用命令的功能表。 您可以藉由將 <xref:System.Windows.Forms.MenuItem> 物件加入至 <xref:System.Windows.Forms.Menu.MenuItems%2A> 集合，將專案新增至快捷方式功能表。  
   
- 您可以永久移除快捷方式功能表中的專案;不過, 在執行時間, 可能更適合改為隱藏或停用專案。  
+ 您可以永久移除快捷方式功能表中的專案;不過，在執行時間，可能更適合改為隱藏或停用專案。  
   
 > [!IMPORTANT]
-> 雖然<xref:System.Windows.Forms.MenuStrip> <xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu> <xref:System.Windows.Forms.ContextMenu>會取代並將功能加入舊版的和控制項, 但<xref:System.Windows.Forms.MainMenu>如果您選擇, 則會保留以供回溯相容性和未來使用。 <xref:System.Windows.Forms.ContextMenuStrip>  
+> 雖然 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.ContextMenuStrip> 將功能取代並加入舊版的 <xref:System.Windows.Forms.MainMenu> 和 <xref:System.Windows.Forms.ContextMenu> 控制項，但如果您選擇，<xref:System.Windows.Forms.MainMenu> 和 <xref:System.Windows.Forms.ContextMenu> 會保留供回溯相容性及未來使用。  
   
 ### <a name="to-remove-items-from-a-shortcut-menu"></a>若要從快捷方式功能表移除專案  
   
-1. 使用元件集合的或<xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A>方法 <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> <xref:System.Windows.Forms.Menu.MenuItems%2A> , 移除特定的功能表項目。 <xref:System.Windows.Forms.ContextMenu>  
+1. 使用 <xref:System.Windows.Forms.ContextMenu> 元件之 <xref:System.Windows.Forms.Menu.MenuItems%2A> 集合的 <xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A> 或 <xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A> 方法，以移除特定的功能表項目。  
   
     ```vb  
     ' Removes the first item in the shortcut menu.  
@@ -60,7 +60,7 @@ ms.locfileid: "69957025"
   
      -或-  
   
-2. `MenuItems`使用元件集合的方法, 移除功能表中的所有專案。 `Clear` <xref:System.Windows.Forms.ContextMenu>  
+2. 使用 <xref:System.Windows.Forms.ContextMenu> 元件之 `MenuItems` 集合的 `Clear` 方法，從功能表中移除所有專案。  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  
@@ -74,7 +74,7 @@ ms.locfileid: "69957025"
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.ContextMenu>
 - [ContextMenu 元件](contextmenu-component-windows-forms.md)

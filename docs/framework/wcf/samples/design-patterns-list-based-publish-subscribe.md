@@ -2,12 +2,12 @@
 title: 設計模式：以清單為基礎的發行訂閱
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 831e6947c0919e8112627ff0a0697592f598561b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3a62b09a29ec0b7e241bf2fdc09df6eaba5420c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716346"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728837"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>設計模式：以清單為基礎的發行訂閱
 這個範例說明實作為 Windows Communication Foundation （WCF）程式之以清單為基礎的發行訂閱模式。  
@@ -15,7 +15,7 @@ ms.locfileid: "74716346"
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 以清單為基礎的發行訂閱設計模式在 Microsoft 模式 & 實務發行集、[整合模式](https://go.microsoft.com/fwlink/?LinkId=95894)中有所描述。 發行訂閱模式會傳遞資訊給已訂閱某個資訊主題的收件者集合。 以清單為基礎的發行訂閱會維護訂閱者的清單。 當有要分享的資訊時，清單上的每個訂閱者都會接獲一份複本。 這個範例示範動態的清單架構發行訂閱模式，用戶端可以視需要在這裡訂閱或取消訂閱。  
+ 以清單為基礎的發行訂閱設計模式在 Microsoft 模式 & 實務發行集、[整合模式](https://docs.microsoft.com/previous-versions/msp-n-p/ff647309(v=pandp.10))中有所描述。 發行訂閱模式會傳遞資訊給已訂閱某個資訊主題的收件者集合。 以清單為基礎的發行訂閱會維護訂閱者的清單。 當有要分享的資訊時，清單上的每個訂閱者都會接獲一份複本。 這個範例示範動態的清單架構發行訂閱模式，用戶端可以視需要在這裡訂閱或取消訂閱。  
   
  以清單為基礎的發行訂閱範例是由用戶端、服務和資料來源程式所組成。 可以有一個以上的用戶端和一個以上的資料來源程式在其中執行。 用戶端會訂閱服務、接收通知和取消訂閱。 資料來源程式會將資訊傳送至服務，以供目前所有訂閱者分享。  
   

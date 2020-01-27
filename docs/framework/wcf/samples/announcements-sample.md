@@ -2,12 +2,12 @@
 title: 公告範例
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 57b61dbd82338aafd248285c9cb11ecdf58d25bb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c3824fb0dc7ab4169c309d1a5154127d6bc3b78f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716155"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747008"
 ---
 # <a name="announcements-sample"></a>公告範例
 
@@ -71,7 +71,7 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1. 這個範例使用 HTTP 端點，若要執行此範例，必須新增適當的 URL Acl，請參閱設定[HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)以取得詳細資料。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
+1. 這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 如需詳細資訊，請參閱設定[HTTP 和 HTTPS](../feature-details/configuring-http-and-https.md)。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`
 
 2. 建置方案。
 

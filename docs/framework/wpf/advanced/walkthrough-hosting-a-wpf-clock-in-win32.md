@@ -1,19 +1,20 @@
 ---
 title: 逐步解說：在 Win32 中裝載 WPF 時鐘
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 8d1f376a2c5b3f31407af0100d9a4417f7cff34e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 79f79e42652ca51c409fabb12a572485ad734b35
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740246"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744894"
 ---
-# <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>逐步解說：在 Win32 中裝載 WPF 時鐘
+# <a name="walkthrough-host-a-wpf-clock-in-win32"></a>逐步解說：在 Win32 中裝載 WPF 時鐘
 
 若要將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 放在 Win32 應用程式中，請使用 <xref:System.Windows.Interop.HwndSource>，它會提供包含 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的 HWND。 首先，您會建立 <xref:System.Windows.Interop.HwndSource>，並提供類似于 CreateWindow 的參數。 接著，您會告訴 <xref:System.Windows.Interop.HwndSource> 您要在其中的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容。 最後，您可以從 <xref:System.Windows.Interop.HwndSource>取得 HWND。 本逐步解說說明如何在實作作業系統**日期和時間屬性**對話方塊的 Win32 應用程式內建立混合 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。
 

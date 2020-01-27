@@ -1,45 +1,45 @@
 ---
-title: HOW TO：在 Windows Forms RichTextBox 控制項中顯示捲軸
+title: 在 RichTextBox 控制項中顯示捲軸
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes [Windows Forms], displaying scroll bars
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 152706cee511e4bca1dd324a652e8077b1f8548a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2185b572ef20765043d3df3dbfd8bf5b21cfac28
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650475"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745559"
 ---
-# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>HOW TO：在 Windows Forms RichTextBox 控制項中顯示捲軸
-根據預設，Windows Forms<xref:System.Windows.Forms.RichTextBox>控制項會視需要顯示水平和垂直捲軸。 有七個可能的值，如<xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>屬性<xref:System.Windows.Forms.RichTextBox>控制項，如下表所述。  
+# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>如何：在 Windows Form RichTextBox 控制項中顯示捲軸
+根據預設，Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項會視需要顯示水準和垂直捲動條。 <xref:System.Windows.Forms.RichTextBox> 控制項的 <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> 屬性有七個可能的值，如下表所述。  
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>在 RichTextBox 控制項中顯示捲軸  
   
-1. 將 <xref:System.Windows.Forms.RichTextBox.Multiline%2A> 屬性設定為 `true`。 沒有類型的捲軸，包含水平的會顯示如果<xref:System.Windows.Forms.RichTextBox.Multiline%2A>屬性設定為`false`。  
+1. 將 <xref:System.Windows.Forms.RichTextBox.Multiline%2A> 屬性設定為 `true`。 如果 [<xref:System.Windows.Forms.RichTextBox.Multiline%2A>] 屬性設定為 [`false`]，則不會顯示任何類型的捲軸（包括水準）。  
   
-2. 設定<xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>屬性設為適當值的<xref:System.Windows.Forms.RichTextBoxScrollBars>列舉型別。  
+2. 將 <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> 屬性設定為 <xref:System.Windows.Forms.RichTextBoxScrollBars> 列舉的適當值。  
   
-    |值|描述|  
+    |{2&gt;值&lt;2}|描述|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (預設)|只會顯示水平或垂直捲軸或兩者，文字超過寬度或控制項的長度。|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|永遠不會顯示任何捲軸的類型。|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|顯示水平捲軸僅當文字超過控制項的寬度。 (這種情形，如<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>屬性必須設為`false`。)|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|顯示垂直捲軸僅當文字超過控制項的高度。|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal>|顯示水平捲軸的時機<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>屬性設定為`false`。 當文字超過控制項的寬度時，捲軸會呈現暗灰色。|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|永遠顯示垂直捲軸。 當文字超過控制項的長度時，捲軸會呈現暗灰色。|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|永遠顯示垂直捲軸。 顯示水平捲軸的時機<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>屬性設定為`false`。 寬度或控制項的長度不超過文字時，會出現灰色的捲軸。|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (預設值)|只有當文字超過控制項的寬度或長度時，才會顯示水準或垂直捲動條或兩者。|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|永遠不會顯示任何類型的捲軸。|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|只有當文字超過控制項的寬度時，才會顯示水準捲軸。 （若要進行這種情況，<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 屬性必須設定為 `false`）。|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|只有當文字超過控制項的高度時，才會顯示垂直捲動條。|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedHorizontal>|當 [<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>] 屬性設定為 [`false`] 時，會顯示水準捲軸。 當文字不超過控制項的寬度時，捲軸就會呈現暗灰色。|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical>|一律顯示垂直捲動條。 當文字不超過控制項的長度時，捲軸就會呈現暗灰色。|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth>|一律顯示垂直捲動條。 當 [<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>] 屬性設定為 [`false`] 時，會顯示水準捲軸。 當文字不超過控制項的寬度或長度時，捲軸會呈現灰色。|  
   
 3. 將 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 屬性設定為適當值。  
   
-    |值|描述|  
+    |{2&gt;值&lt;2}|描述|  
     |-----------|-----------------|  
-    |`false`|控制項中的文字不會自動調整以符合控制項的寬度，因此它會向右捲動，直到達到分行符號。 如果您選擇上述的水平捲軸或兩者，請使用此值。|  
-    |`true` (預設)|控制項中的文字會自動調整以配合控制項的寬度。 不會出現水平捲軸。 如果您選擇垂直捲軸或 none、 上方，顯示一或多個段落，請使用此值。|  
+    |`false`|控制項中的文字不會自動調整以符合控制項的寬度，因此它會向右滾動，直到到達分行符號為止。 如果您選擇上方的水準捲軸或兩者，請使用此值。|  
+    |`true` (預設值)|控制項中的文字會自動調整以符合控制項的寬度。 水準捲軸不會出現。 如果您選擇 [垂直捲動條] 或 [無]，請使用此值來顯示一或多個段落。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>

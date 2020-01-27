@@ -1,5 +1,6 @@
 ---
-title: 逐步解說：在 WPF 中裝載 Windows Form 複合控制項
+title: 在 WPF 中裝載 Windows Forms 複合控制項
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: e42737b9fccd3b91dee2c446dfb0653e57f9dd1b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 16c09b4bb393fa830412385b4b405dd1fae9878b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197945"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745003"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>逐步解說：在 WPF 中裝載 Windows Form 複合控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，當您對 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 程式碼進行大量投資時，在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中至少重複使用其中一些程式碼，而不是從頭重新撰寫它，可能會更有效率。 最常見的情況是當您有現有的 Windows Forms 控制項時。 在某些情況下，您甚至可能無法存取這些控制項的原始程式碼。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中裝載這類控制項的簡單程式。 例如，您可以在大部分的程式設計中使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，同時裝載特製化的 <xref:System.Windows.Forms.DataGridView> 控制項。  
@@ -30,7 +31,7 @@ ms.locfileid: "73197945"
   
  如需本逐步解說中所述工作的完整程式代碼清單，請參閱[在 WPF 中裝載 Windows Forms 複合控制項範例](https://go.microsoft.com/fwlink/?LinkID=159999)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件：  
 
 若要完成這個逐步解說，您必須具有 Visual Studio。
   
@@ -58,7 +59,7 @@ ms.locfileid: "73197945"
   
  您的專案應該有下列系統 DLL 的參考。 如果預設未包括所有這些 DLL，則請將它們新增至專案。  
   
-- 系統  
+- System  
   
 - System.Data  
   

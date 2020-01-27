@@ -1,5 +1,5 @@
 ---
-title: WPF 圖形轉譯概觀
+title: 圖形轉譯總覽
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: 09f5f026ed320aaa253d8cdf6e0b271235aff604
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 103d086857bce8ae0960452bb92a69b68dc49dfa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004176"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744803"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 圖形轉譯概觀
 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視覺圖層的概觀。 它著重于 <xref:System.Windows.Media.Visual> 類別的角色，以在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 模型中呈現支援。  
@@ -51,7 +51,7 @@ ms.locfileid: "72004176"
  ![衍生自 Visual 物件之類別的圖表](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>DrawingVisual 類別  
- <xref:System.Windows.Media.DrawingVisual> 是輕量繪圖類別，可用來呈現圖形、影像或文字。 此類別之所以被視為輕量型，是因為它不提供版面配置或事件處理，而這會改善其執行階段效能。 基於此原因，繪圖適合背景或美工圖案。 <xref:System.Windows.Media.DrawingVisual> 可以用來建立自訂視覺物件。 如需詳細資訊，請參閱[使用 DrawingVisual 物件](using-drawingvisual-objects.md)。  
+ <xref:System.Windows.Media.DrawingVisual> 是輕量繪圖類別，可用來呈現圖形、影像或文字。 此類別之所以被視為輕量型，是因為它不提供版面配置或事件處理，而這會改善其執行階段效能。 基於此原因，它適合用於背景或美工圖案繪圖。 <xref:System.Windows.Media.DrawingVisual> 可以用來建立自訂視覺物件。 如需詳細資訊，請參閱[使用 DrawingVisual 物件](using-drawingvisual-objects.md)。  
   
 ### <a name="viewport3dvisual-class"></a>Viewport3DVisual 類別  
  <xref:System.Windows.Media.Media3D.Viewport3DVisual> 提供 2D <xref:System.Windows.Media.Visual> 與 <xref:System.Windows.Media.Media3D.Visual3D> 物件之間的橋樑。 <xref:System.Windows.Media.Media3D.Visual3D> 類別是所有3D 視覺元素的基類。 <xref:System.Windows.Media.Media3D.Viewport3DVisual> 需要您定義 <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> 值和 <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> 值。 相機可讓您檢視場景。 檢視區會建立投影到 2D 平面上的對應位置。 如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 3D 的詳細資訊，請參閱 [3D 圖形概觀](3-d-graphics-overview.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "72004176"
 |繪圖內容類型|描述|  
 |--------------------------|-----------------|  
 |向量圖形|表示向量圖形資料，以及任何相關聯的 <xref:System.Windows.Media.Brush> 和 <xref:System.Windows.Media.Pen> 資訊。|  
-|影像|代表 <xref:System.Windows.Rect>所定義的區域內的影像。|  
+|Image|代表 <xref:System.Windows.Rect>所定義的區域內的影像。|  
 |圖像|表示轉譯 <xref:System.Windows.Media.GlyphRun>的繪圖，這是來自指定之字型資源的一系列字元。 這是文字的表現方式。|  
 |視訊|代表轉譯視訊的繪圖。|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "72004176"
   
  下圖顯示在轉譯順序期間套用 <xref:System.Windows.Media.DrawingGroup> 作業的順序。  
   
- ![作業 graphcismm_drawinggroup_order 的 DrawingGroup 順序](./media/graphcismm-drawinggroup-order.png " ")  
+ ![DrawingGroup 作業的順序](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
 DrawingGroup 作業的順序  
   
  如需詳細資訊，請參閱[繪製物件概觀](drawing-objects-overview.md)。  
@@ -162,7 +162,7 @@ DrawingGroup 作業的順序
   
  如果您要列舉標記範例中組成 <xref:System.Windows.Controls.DockPanel> 元素的邏輯物件，您會找到邏輯物件的階層，如下所示：  
   
- ![樹狀圖表](./media/tree1-wcp.gif "Tree1_wcp")  
+ ![樹狀結構圖表](./media/tree1-wcp.gif "Tree1_wcp")  
 邏輯樹狀結構的圖表  
   
  視覺化樹狀結構和邏輯樹狀結構會與目前的應用程式元素集合同步處理，以反映元素的任何新增、刪除或修改。 不過，樹狀結構會呈現不同的應用程式檢視。 與視覺化樹狀結構不同的是，邏輯樹狀結構並不會展開控制項的 <xref:System.Windows.Controls.ContentPresenter> 元素。 這表示針對相同的物件集合，邏輯樹狀結構和視覺化樹狀結構之間沒有直接的一對一對應。 事實上，使用與參數相同的專案叫用**system.windows.logicaltreehelper>** 物件的 <xref:System.Windows.LogicalTreeHelper.GetChildren%2A> 方法和**VisualTreeHelper**物件的 <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A> 方法，會產生不同的結果。  
@@ -220,7 +220,7 @@ Visual Profiler 顯示輸出
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援自動縮放，方法是使用裝置獨立像素作為其主要度量單位，而非硬體像素；圖形和文字會適當地縮放，應用程式開發人員不需要執行任何額外工作。 下圖顯示以不同 DPI 設定顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文字和圖形之方式的範例。  
   
- ![不同 DPI 設定 graphicsmm_DPI_setting_examples 的圖形和文字](./media/graphicsmm-dpi-setting-examples.png " ")  
+ ![不同 DPI 設定時的圖形和文字](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_DPI_setting_examples")  
 不同 DPI 設定時的圖形和文字  
   
 <a name="visualtreehelper_class"></a>   
@@ -247,7 +247,7 @@ Visual Profiler 顯示輸出
  [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>

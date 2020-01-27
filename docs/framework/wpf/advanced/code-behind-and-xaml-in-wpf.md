@@ -1,16 +1,16 @@
 ---
-title: WPF 中的程式碼後置和 XAML
+title: 程式碼後置和 XAML
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 00427004448997aa234b335b397390f9fabe1bd5
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 212a37fb7fbcb7e66a669d96671333be793956df
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559907"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738100"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的程式碼後置和 XAML
 <a name="introduction"></a>程式碼後置是一個詞彙，用來描述以標記定義的物件聯結的程式碼（當 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面已進行標記編譯時）。 本主題描述程式碼後置的需求，以及 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中程式碼的替代內嵌程式碼機制。  

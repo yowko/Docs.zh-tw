@@ -2,15 +2,16 @@
 title: 探索安全性範例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: cfee226f52bc5f001b2952b76b40ce0eb8aebceb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712060"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728848"
 ---
 # <a name="discovery-security-sample"></a>探索安全性範例
-探索規格不會要求參與探索程序的端點是安全的。 增強探索訊息的安全性會減少各種攻擊 (訊息變更、阻斷服務、重新執行、詐騙)。 此範例使用精簡簽章格式 (如 WS-Discovery 規格的第 8.2 節所述) 實作計算與驗證訊息簽章的自訂通道。 此範例同時支援[2005 探索規格](https://go.microsoft.com/fwlink/?LinkId=177912)和[1.1 版本](https://go.microsoft.com/fwlink/?LinkId=179677)。  
+
+探索規格不會要求參與探索程序的端點是安全的。 增強探索訊息的安全性會減少各種攻擊 (訊息變更、阻斷服務、重新執行、詐騙)。 此範例使用精簡簽章格式 (如 WS-Discovery 規格的第 8.2 節所述) 實作計算與驗證訊息簽章的自訂通道。 此範例同時支援[2005 探索規格](http://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)和[1.1 版本](http://docs.oasis-open.org/ws-dd/discovery/1.1/cs-01/wsdd-discovery-1.1-spec-cs-01.pdf)。  
   
  自訂通道會針對探索和公告端點，套用到現有通道堆疊的頂端。 如此一來，每個傳送的訊息都會套用簽章標頭。 系統會驗證收到之訊息上的簽章，而且當該簽章不符或訊息沒有簽章時，就會捨棄訊息。 為簽署與驗證訊息，此範例使用憑證。  
   

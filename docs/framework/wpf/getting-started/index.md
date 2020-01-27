@@ -1,17 +1,17 @@
 ---
-title: 使用者入門 (WPF)
+title: 使用者入門
 ms.date: 01/26/2018
 helpviewer_keywords:
 - getting started [WPF]
 - introduction [WPF]
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
-ms.openlocfilehash: 8744f5d18e3c05d19c455754921fd16a8b88ae3d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0c23fd3c2e0af53005e1c2c1cec6b44c09158bd6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459623"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733753"
 ---
 # <a name="getting-started-wpf"></a>使用者入門 (WPF)
 Windows Presentation Foundation (WPF) 是建立桌面用戶端應用程式的 UI 架構。 WPF 開發平台支援一組廣泛的應用程式開發功能，包含應用程式模型、資源、控制項、圖形、版面配置、資料繫結、文件和安全性。 它是 .NET Framework 的子集，所以若您先前已使用 ASP.NET 或 Windows Form 以 .NET Framework 建置過應用程式，應該會對此程式設計體驗感到熟悉。 WPF 使用可延伸應用程式標記語言 (XAML) 來提供應用程式設計的宣告式模型。 本章節的主題將介紹及幫助您開始使用 WPF。  

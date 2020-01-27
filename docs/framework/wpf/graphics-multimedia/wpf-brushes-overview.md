@@ -1,5 +1,5 @@
 ---
-title: WPF 筆刷概觀
+title: 筆刷總覽
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 8a1d05ad48ce75ce67d21d5a4d508015fea879b2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 18ca9b79a6ee801638a54fcb227c44e9aea21fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458633"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746203"
 ---
 # <a name="wpf-brushes-overview"></a>WPF 筆刷概觀
 螢幕上顯示的所有專案都是可見的，因為它是由筆刷繪製。 例如，筆刷是用來描述按鈕的背景、文字的前景，以及圖形的填滿。 本主題介紹使用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 筆刷繪製的概念，並提供範例。 筆刷可讓您以任何項目 (從簡單的純色到複雜的圖樣和影像集) 繪製 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 物件。  
@@ -26,7 +26,7 @@ ms.locfileid: "73458633"
   
  大部分的視覺物件都可讓您指定其繪製方式。 下表列出一些常用的物件和屬性，您可以使用 <xref:System.Windows.Media.Brush>。  
   
-|執行個體|筆刷屬性|  
+|類別|筆刷屬性|  
 |-----------|----------------------|  
 |<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>、 <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>、 <xref:System.Windows.Controls.Control.Foreground%2A>|  
