@@ -2,12 +2,12 @@
 title: NuGet 與 .NET 程式庫
 description: 針對 .NET 程式庫搭配 NuGet 進行封裝的最佳做法建議。
 ms.date: 01/15/2019
-ms.openlocfilehash: 71c380f6062c09a8951769009b29b567fddfddfc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706474"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731382"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -34,7 +34,7 @@ NuGet 套件 (`*.nupkg`) 是包含 .NET 組件與相關聯中繼資料的 Zip �
 
 較舊的 NuGet 套件建立方式，是使用 `*.nuspec` 檔案與 `nuget.exe` 命令列工具來建立。 nuspec 檔案可讓您做出大幅度的控制，但您必須仔細地指定要在最終的 NuGet 套件中包含哪些組件與目標。 這是一件很容易出錯的工作，也很容易在未來做出變更後忘記更新 nuspec 檔案。 nuspec 的優點在於您可以用它來針對尚未支援 SDK 樣式專案檔的架構建立 NuGet 套件。
 
-**✔️ 請考慮**使用 SDK 樣式專案檔來建立 NuGet 套件。
+✔️考慮使用 SDK 樣式專案檔來建立 NuGet 套件。
 
 ## <a name="package-dependencies"></a>套件相依性
 
@@ -59,15 +59,15 @@ NuGet 套件能支援許多[中繼資料屬性](/nuget/reference/nuspec)。 下�
 > [!IMPORTANT]
 > 沒有授權的專案預設會具有[專屬著作權](https://choosealicense.com/no-permission/)，這會使其他人無法合法使用它。
 
-**✔️ 請考慮**選擇具有符合 NuGet 的前置詞保留[準則](/nuget/reference/id-prefix-reservation)之前置詞的 NuGet 套件名稱。
+✔️請考慮選擇具有前置詞的 NuGet 套件名稱，以符合 NuGet 的前置詞保留[準則](/nuget/reference/id-prefix-reservation)。
 
-**✔️ 請務必**為您的套件圖示使用 HTTPS href。
+✔️請將 HTTPS href 用於您的套件圖示。
 
 > NuGet.org 等網站會在啟用 HTTPS 的情況下執行，因此顯示非 HTTPS 影像將會產生混合內容警告。
 
-**✔️ 請務必**使用大小為 64x64 且具有透明背景的套件圖示影像，以取得最佳檢視效果。
+✔️使用64x64 的套件圖示影像，並具有透明的背景以取得最佳的流覽結果。
 
-**✔️ 請考慮**設定[來源連結](./sourcelink.md)以將原始程式碼控制中繼資料新增到您的組件與 NuGet 套件。
+✔️考慮設定[來源連結](./sourcelink.md)，將原始檔控制中繼資料新增至您的元件和 NuGet 套件。
 
 > 來源連結會自動將 `RepositoryUrl` 和 `RepositoryType` 中繼資料新增到 NuGet 套件。 來源連結也會新增套件建置所根據確切原始碼的相關資訊。 例如，從 Git 存放庫建立的套件將會新增認可雜湊作為中繼資料。
 
@@ -84,9 +84,9 @@ NuGet 套件能支援許多[中繼資料屬性](/nuget/reference/nuspec)。 下�
 
 ![NuGet 發行前套件相依性](./media/nuget/nuget-prerelease-package.png "NuGet 發行前套件相依性")
 
-**✔️ 請務必**在進行測試、預覽或實驗時發佈發行前套件。
+✔️在測試、預覽或試驗時發行發行前版本套件。
 
-**✔️ 請務必**在套件準備好時發佈穩定版本，使其他穩定套件可以參考它。
+✔️在其就緒時發佈穩定套件，讓其他穩定套件可以參考它。
 
 ## <a name="symbol-packages"></a>符號套件
 
@@ -112,7 +112,7 @@ NuGet.org 裝載自己的[符號伺服器存放庫](/nuget/create-packages/symbo
 
 內嵌符號檔缺點是它們會讓使用 SDK 樣式專案編譯的 .NET 程式庫套件大小增加約 30%。 如果套件大小是個問題，您應該改為將符號發佈在符號套件中。
 
-**✔️ 請考慮**將符號以符號套件 (`*.snupkg`) 形式發佈至 NuGet.org
+✔️考慮將符號當做符號套件（`*.snupkg`）發行至 NuGet.org
 
 > 符號套件 (`*.snupkg`) 提供開發人員良好的隨選偵錯體驗，不會讓主要套件大小過大，而對不想要偵錯 NuGet 套件的人在還原效能方面造成影響。
 >

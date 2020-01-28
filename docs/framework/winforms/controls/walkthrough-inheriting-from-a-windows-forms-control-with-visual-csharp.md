@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：使用 Visual C# 繼承自 Windows Form 控制項
+title: 從控制項繼承
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -11,16 +11,16 @@ ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 713ccf97a73ce9684b9124a121369f22751861d0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460589"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740133"
 ---
 # <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>逐步解說：使用 C\# 繼承自 Windows Forms 控制項
 
-使用視覺C#效果，您可以透過*繼承*來建立功能強大的自訂控制項。 您可以透過繼承建立控制項，不僅保留標準 Windows Forms 控制項的所有固有功能，同時也納入自訂功能。 在本逐步解說中，您將會建立簡單的繼承控制項，名為 `ValueButton`。 此按鈕將繼承標準 Windows Forms <xref:System.Windows.Forms.Button> 控制項的功能，並會公開名為 `ButtonValue`的自訂屬性。
+有C#了，您就可以透過*繼承*來建立功能強大的自訂控制項。 您可以透過繼承建立控制項，不僅保留標準 Windows Forms 控制項的所有固有功能，同時也納入自訂功能。 在本逐步解說中，您將會建立簡單的繼承控制項，名為 `ValueButton`。 此按鈕將繼承標準 Windows Forms <xref:System.Windows.Forms.Button> 控制項的功能，並會公開名為 `ButtonValue`的自訂屬性。
 
 ## <a name="create-the-project"></a>建立專案
 

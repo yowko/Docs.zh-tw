@@ -1,16 +1,16 @@
 ---
-title: ToolBar 控制項 (Windows Form)
+title: ToolBar 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
-ms.openlocfilehash: 13a56af0e52897a6fd4e11516fbf4c0b8f6d6b5d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 027c96bb49e9446244e4b08ba93c551ef043b3c0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929572"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735462"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar 控制項 (Windows Form)
 > [!NOTE]
@@ -21,20 +21,20 @@ ms.locfileid: "69929572"
 > [!NOTE]
 > `ToolBar` 控制項的 <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> 屬性會將 <xref:System.Windows.Forms.ContextMenu> 類別的執行個體當做參考。 請仔細考慮在應用程式中實作工具列上這類按鈕時所傳遞的參考，因為這個屬性會接受任何繼承自 <xref:System.Windows.Forms.Menu> 類別的物件。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [工具列控制項概觀](toolbar-control-overview-windows-forms.md)  
  介紹 `ToolBar` 控制項的一般概念，讓您能夠設計自訂工具列以供使用者利用。  
   
- [如何：將按鈕加入至工具列控制項](how-to-add-buttons-to-a-toolbar-control.md)  
+ [操作說明：將按鈕新增至工具列控制項](how-to-add-buttons-to-a-toolbar-control.md)  
  描述如何將按鈕加入 `ToolBar` 控制項。  
   
- [如何：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)  
+ [操作說明：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)  
  描述如何在 `ToolBar` 控制項的按鈕內顯示圖示。  
   
  [如何：觸發工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)  
  指示如何撰寫程式碼，來解譯使用者在 `ToolBar` 控制項中按的是哪一個按鈕。  
   
- 另請[參閱如何:使用設計](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)工具定義工具列按鈕的圖示, [如何:使用設計](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)工具在工具列控制項中加入按鈕。  
+ 另請參閱[如何：使用設計工具定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)，[如何：使用設計工具將按鈕加入工具列控制項](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ToolBar> 類別  

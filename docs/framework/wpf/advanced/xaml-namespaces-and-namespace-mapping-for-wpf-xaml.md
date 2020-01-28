@@ -1,5 +1,5 @@
 ---
-title: WPF XAML 的 XAML 命名空間和命名空間對應
+title: XAML 命名空間和命名空間對應
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 85f35c29cdd1d9e4ea9776b756245a75af58e912
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976770"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741832"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML 的 XAML 命名空間和命名空間對應
 本主題會進一步說明 WPF XAML 檔案根標記中常見的兩個 XAML 命名空間對應之現況與目的。 本文也會說明如何產生類似的對應，以使用自己的程式碼中所定義的項目和 (或) 個別組件內的項目。  
@@ -107,7 +107,7 @@ End Namespace
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>將 CLR 命名空間對應至組件中的 XML 命名空間  
  WPF 定義的 CLR 屬性是由 XAML 處理器使用，以便將多個 CLR 命名空間對應至單一的 XAML 命名空間。 這個屬性 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>會放在產生元件之原始程式碼中的元件層級。 WPF 元件原始程式碼會使用這個屬性，將各種常見的命名空間（例如 <xref:System.Windows> 和 <xref:System.Windows.Controls>）對應到 `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 的命名空間。  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 接受兩個參數： XML/XAML 命名空間名稱和 CLR 命名空間名稱。 有一個以上的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 可以將多個 CLR 命名空間對應至相同的 XML 命名空間。 一旦對應之後，即可在部分類別程式碼後置頁面中提供適當的 `using` 陳述式，視需要參考這些命名空間的成員，而不使用完整限定性條件。 如需詳細資訊，請參閱 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>。  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 接受兩個參數： XML/XAML 命名空間名稱和 CLR 命名空間名稱。 有一個以上的 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 可以將多個 CLR 命名空間對應至相同的 XML 命名空間。 一旦對應之後，即可在部分類別程式碼後置頁面中提供適當的 `using` 陳述式，視需要參考這些命名空間的成員，而不使用完整限定性條件。 如需詳細資訊，請參閱<xref:System.Windows.Markup.XmlnsDefinitionAttribute>。  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>設計工具命名空間和其他來自 XAML 範本的前置詞  
  如果您是使用 WPF XAML 的開發環境及/或設計工具，您可能會注意到 XAML 標記內含有其他已定義的 XAML 命名空間/前置詞。  

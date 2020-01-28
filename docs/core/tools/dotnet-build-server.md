@@ -2,22 +2,22 @@
 title: dotnet build-server 命令
 description: dotnet build-server 命令會與組建所啟動的伺服器互動。
 ms.date: 04/24/2019
-ms.openlocfilehash: 1c6c6dcdb53d779426daf5daa470d2ad0470a7a1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: e77a4d9f49f555ac847bb13380380599eef881b1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523009"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734385"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
-**本文適用於：✓** .NET Core 2.1 SDK 及更新版本
+**本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-21plus](../../../includes/topic-appliesto-net-core-21plus.md)]
 -->
 
-## <a name="name"></a>[屬性]
+## <a name="name"></a>Name
 
 `dotnet build-server` - 與組建所啟動的伺服器互動。
 

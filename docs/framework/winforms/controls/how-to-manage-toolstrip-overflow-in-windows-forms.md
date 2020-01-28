@@ -1,5 +1,5 @@
 ---
-title: HOW TO：管理 Windows Form 中的 ToolStrip 溢位
+title: 如何：管理 ToolStrip 溢位
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - CanOverflow property
 ms.assetid: fa10e0ad-4cbf-4c0d-9082-359c2f855d4e
-ms.openlocfilehash: 53f610a728925d454a8833a49e705818f027aec5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52cc02e626bee2d2457355028ecddc17e462d8fa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913753"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736141"
 ---
-# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>HOW TO：管理 Windows Form 中的 ToolStrip 溢位
+# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>如何：管理 Windows Form 中的 ToolStrip 溢位
 
-當上的所有項目<xref:System.Windows.Forms.ToolStrip>控制項無法放入配置的空間，您可以在啟用溢位功能<xref:System.Windows.Forms.ToolStrip>，並判斷特定的溢位行為<xref:System.Windows.Forms.ToolStripItem>s。
+當 <xref:System.Windows.Forms.ToolStrip> 控制項上的所有專案都無法納入配置的空間時，您可以在 <xref:System.Windows.Forms.ToolStrip> 上啟用溢位功能，並判斷特定 <xref:System.Windows.Forms.ToolStripItem>的溢位行為。
 
-當您將加入<xref:System.Windows.Forms.ToolStripItem>需要更多的空間比分配給<xref:System.Windows.Forms.ToolStrip>指定表單的目前大小，<xref:System.Windows.Forms.ToolStripOverflowButton>會自動出現在<xref:System.Windows.Forms.ToolStrip>。 <xref:System.Windows.Forms.ToolStripOverflowButton>隨即出現，並啟用溢位的項目會變成下拉式溢位功能表。 這可讓您自訂並排定優先順序如何您<xref:System.Windows.Forms.ToolStrip>正確調整中的項目，以不同的表單大小。 您也可以變更項目的外觀，當他們使用屬於溢位<xref:System.Windows.Forms.ToolStripItem.Placement%2A>並<xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType>屬性和<xref:System.Windows.Forms.ToolStrip.LayoutCompleted>事件。 如果您放大表單，在設計階段或執行的階段，更<xref:System.Windows.Forms.ToolStripItem>s 可以顯示在主要<xref:System.Windows.Forms.ToolStrip>而<xref:System.Windows.Forms.ToolStripOverflowButton>直到您在表單的大小縮小，甚至可能會消失。
+當您加入的 <xref:System.Windows.Forms.ToolStripItem>需要比配置給 <xref:System.Windows.Forms.ToolStrip> 的空間，並指定表單的目前大小，<xref:System.Windows.Forms.ToolStripOverflowButton> 會自動出現在 <xref:System.Windows.Forms.ToolStrip>上。 此時會出現 <xref:System.Windows.Forms.ToolStripOverflowButton>，而且已啟用溢位的專案會移至下拉式 溢位 功能表中。 這可讓您自訂 <xref:System.Windows.Forms.ToolStrip> 專案適當調整成不同表單大小的方式，並設定其優先順序。 您也可以使用 [<xref:System.Windows.Forms.ToolStripItem.Placement%2A>] 和 [<xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType> 屬性] 和 [<xref:System.Windows.Forms.ToolStrip.LayoutCompleted>] 事件，在專案落入溢位時變更其外觀。 如果您在設計階段或執行時間放大表單，主要 <xref:System.Windows.Forms.ToolStrip> 上可以顯示更多 <xref:System.Windows.Forms.ToolStripItem>，而 <xref:System.Windows.Forms.ToolStripOverflowButton> 甚至可能會消失，直到您減少表單的大小。
 
-## <a name="to-enable-overflow-on-a-toolstrip-control"></a>若要啟用溢位在 ToolStrip 控制項
+## <a name="to-enable-overflow-on-a-toolstrip-control"></a>啟用 ToolStrip 控制項的溢位
 
-- 請確認<xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>屬性未設定為`false`如<xref:System.Windows.Forms.ToolStrip>。 預設為 `True`。
+- 確定 <xref:System.Windows.Forms.ToolStrip>的 [<xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>] 屬性未設定為 [`false`]。 預設為 `True`。
 
-     當<xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>是`True`（預設值），<xref:System.Windows.Forms.ToolStripItem>傳送至下拉式溢位功能表時的內容<xref:System.Windows.Forms.ToolStripItem>超過的水平寬度<xref:System.Windows.Forms.ToolStrip>或高度的垂直<xref:System.Windows.Forms.ToolStrip>。
+     當 <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> `True` （預設值）時，當 <xref:System.Windows.Forms.ToolStripItem> 的內容超過水準 <xref:System.Windows.Forms.ToolStrip> 的寬度或垂直 <xref:System.Windows.Forms.ToolStrip>的高度時，<xref:System.Windows.Forms.ToolStripItem> 就會傳送至下拉式溢位功能表。
 
-## <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>若要指定特定的 prvku ToolStripItem 溢位行為
+## <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>若要指定特定 ToolStripItem 的溢位行為
 
-- 設定<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>屬性<xref:System.Windows.Forms.ToolStripItem>所要的值。 您可以徹底`Always`， `Never`，和`AsNeeded`。 預設為 `AsNeeded`。
+- 將 <xref:System.Windows.Forms.ToolStripItem> 的 <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> 屬性設為所需的值。 可能的情況包括 `Always`、`Never`和 `AsNeeded`。 預設為 `AsNeeded`。
 
     ```vb
     toolStripTextBox1.Overflow = _
@@ -43,7 +43,7 @@ ms.locfileid: "61913753"
     System.Windows.Forms.ToolStripItemOverflow.Never;
     ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripOverflowButton>

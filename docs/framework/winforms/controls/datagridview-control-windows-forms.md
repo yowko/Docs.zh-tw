@@ -1,5 +1,5 @@
 ---
-title: DataGridView 控制項 (Windows Form)
+title: DataGridView 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tables [Windows Forms]
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - datasets [Windows Forms], displaying in DataGridView control
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
-ms.openlocfilehash: 86e96045b7de580b7cefd0262369ce860d00e234
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc40c0f08c0c11fa9acc94ce12caab8766658f1e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909190"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746944"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView 控制項 (Windows Form)
 `DataGridView` 控制項以表格式顯示資料，是一項功能強大、有彈性的方式。 您可以使用 `DataGridView` 控制來顯示少量資料的唯讀檢視，或者您可以調整它的大小，以顯示非常大的資料集之可編輯檢視。  
@@ -27,7 +27,7 @@ ms.locfileid: "61909190"
   
  本節中的主題說明您可以用來將 `DataGridView` 功能建置在應用程式中的概念和技術。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [DataGridView 控制項概觀](datagridview-control-overview-windows-forms.md)  
  提供描述 Windows Form `DataGridView` 控制項架構和核心概念的主題。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "61909190"
  [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
  描述 `DataGridView` 控制項如何改良並取代 <xref:System.Windows.Forms.DataGrid> 控制項。  
   
- 另請參閱[使用設計工具搭配 Windows Form DataGridView 控制項](using-the-designer-with-the-windows-forms-datagridview-control.md)。  
+ 另請參閱搭配[使用設計工具和 Windows Forms DataGridView 控制項](using-the-designer-with-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.DataGridView>  
@@ -82,6 +82,6 @@ ms.locfileid: "61909190"
  <xref:System.Windows.Forms.BindingSource>  
  提供 <xref:System.Windows.Forms.BindingSource> 元件的參考文件。 <xref:System.Windows.Forms.DataGridView> 控制項和 <xref:System.Windows.Forms.BindingSource> 元件設計為可密切合作。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

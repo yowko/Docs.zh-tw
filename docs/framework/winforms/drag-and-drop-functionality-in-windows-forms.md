@@ -1,16 +1,16 @@
 ---
-title: Windows Form 中的拖放功能
+title: 拖放功能
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 437b632706b27cd487d60c2ad23db3f9a3c96c09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 603dc158719c0b11def4386eb24a33f235cf3a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966853"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732753"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows Form 中的拖放功能
 Windows Form 包含一組實作拖放行為的方法、事件和類別。 本主題提供 Windows Form 中的拖放功能支援概觀。  另請參閱[拖放作業和剪貼簿支援](./advanced/drag-and-drop-operations-and-clipboard-support.md)。  
@@ -43,6 +43,6 @@ Windows Form 包含一組實作拖放行為的方法、事件和類別。 本主
   
  <xref:System.Windows.Forms.QueryContinueDragEventArgs> 類別提供滑鼠按鈕和鍵盤輔助按鍵的目前狀態、指定是否已按下 ESC 鍵的值，以及可設定以指定是否應該繼續拖放作業的 <xref:System.Windows.Forms.DragAction> 值。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Windows Forms 應用程式中的滑鼠輸入](mouse-input-in-a-windows-forms-application.md)
