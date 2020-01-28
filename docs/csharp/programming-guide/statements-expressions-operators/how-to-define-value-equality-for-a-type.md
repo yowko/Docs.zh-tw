@@ -8,16 +8,18 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 5eb1aaf96097d2c00cb04e24e65e01464f5f00c6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c911dc1d0aa36ab8e57fb8a77a52d9cec20743c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711970"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745388"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>如何定義類型的實值相等（C#程式設計手冊）
 
-當您定義類別或結構時，需判斷是否有必要為類型建立實值相等 (或等價) 的自訂定義。 通常，當該類型的物件必須新增至某種集合，或物件的主要目的是為了儲存一組欄位或屬性時，就會實作實值相等。 您可以根據對該類型中所有欄位和屬性的比較來定義實值相等，也可以根據子集來進行定義。 不論使用哪種方法，在類別和結構中，您的實作都必須遵循下列五項等價保證：  
+當您定義類別或結構時，需判斷是否有必要為類型建立實值相等 (或等價) 的自訂定義。 通常，當該類型的物件必須新增至某種集合，或物件的主要目的是為了儲存一組欄位或屬性時，就會實作實值相等。 您可以根據對該類型中所有欄位和屬性的比較來定義實值相等，也可以根據子集來進行定義。 
+
+不論是哪一種情況，以及在類別和結構中，您的執行都應該遵循等價的五項保證（針對下列規則，假設 `x`、`y` 和 `z` 都不是 null）：  
   
 1. `x.Equals(x)` 會傳回 `true`。 這稱為自反屬性。  
   
@@ -27,8 +29,8 @@ ms.locfileid: "75711970"
   
 4. 只要 x 和 y 所參考的物件沒有經過修改，後續叫用 `x.Equals(y)` 就會傳回相同的值。  
   
-5. `x.Equals(null)` 會傳回 `false`。 不過，`null.Equals(null)` 會擲回例外狀況，而不會遵守上述第二項規則。  
-  
+5. 任何非 null 值都不等於 null。 不過，CLR 會在所有方法呼叫上檢查是否有 null，如果 `this` 參考會是 null，則會擲回 `NullReferenceException`。 因此，當 `x` 為 null 時，`x.Equals(y)` 會擲回例外狀況。 這會中斷規則1或2，視 `Equals`的引數而定。
+ 
  任何您已定義的結構，皆有繼承自 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法的 <xref:System.ValueType?displayProperty=nameWithType> 覆寫的預設實作實值相等。 此實作使用反映來檢查類型中的所有欄位和屬性。 雖然此實作會產生正確的結果，但相較於您針對該類型特別撰寫的自訂實作卻慢得多。  
   
  對類別和結構而言，實值相等的實作細節並不同。 不過，類別和結構都需要相同的基本步驟來實作相等：  

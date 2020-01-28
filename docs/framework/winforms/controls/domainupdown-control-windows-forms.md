@@ -1,5 +1,5 @@
 ---
-title: DomainUpDown 控制項 (Windows Form)
+title: DomainUpDown 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DomainUpDown control [Windows Forms]
@@ -8,36 +8,36 @@ helpviewer_keywords:
 - spin button control
 - up-down controls [Windows Forms], spin button controls
 ms.assetid: fb7cf017-e931-4a95-9d21-8caee4ee122a
-ms.openlocfilehash: 83d674e3fb7ff7e715b75c635b891cd4e9703a21
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b538350a84e341d6b2759a7db28f8799f3777a86
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972051"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745835"
 ---
 # <a name="domainupdown-control-windows-forms"></a>DomainUpDown 控制項 (Windows Form)
-Windows Form<xref:System.Windows.Forms.DomainUpDown>控制項看起來像組合的文字方塊和按鈕的清單中向上或向下移動。 控制項顯示，並從清單中選擇設定文字字串。 按一下向上和向下按鈕移動清單、 按下向上鍵和向下鍵，或輸入字串符合清單中的項目，使用者可以選取字串。 這個控制項的可能用法之一是從名稱依字母順序排序清單中選取項目。 (若要排序的清單，請設定<xref:System.Windows.Forms.DomainUpDown.Sorted%2A>屬性設`true`。)這個控制項的函式的清單方塊或下拉式方塊中，非常類似，但是它會佔用很少的空間。  
+Windows Forms <xref:System.Windows.Forms.DomainUpDown> 控制項看起來像是文字方塊和一對按鈕的組合，可在清單中向上或向下移動。 控制項會顯示並設定挑選清單中的文字字串。 使用者可以選取字串，方法是按一下向上和向下按鈕以移動清單、按向上鍵和向下鍵，或輸入符合清單中專案的字串。 此控制項的其中一個可能用途是從依字母順序排序的名稱清單中選取專案。 （若要排序清單，請將 [<xref:System.Windows.Forms.DomainUpDown.Sorted%2A>] 屬性設定為 [`true`]）。此控制項的功能與清單方塊或下拉式方塊非常類似，但佔用的空間非常少。  
   
- 控制項的索引鍵屬性是<xref:System.Windows.Forms.DomainUpDown.Items%2A>， <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>，和<xref:System.Windows.Forms.DomainUpDown.Wrap%2A>。 <xref:System.Windows.Forms.DomainUpDown.Items%2A>屬性包含的控制項中所顯示的文字值的物件清單。 如果<xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>設為`false`，控制項自動完成文字的使用者類型，並比對清單中的值。 如果<xref:System.Windows.Forms.DomainUpDown.Wrap%2A>設為`true`，過去的最後一個項目捲動會帶您前往第一個項目清單中，反之亦然。 控制項的主要方法會<xref:System.Windows.Forms.DomainUpDown.UpButton%2A>和<xref:System.Windows.Forms.DomainUpDown.DownButton%2A>。  
+ 控制項的索引鍵屬性為 <xref:System.Windows.Forms.DomainUpDown.Items%2A>、<xref:System.Windows.Forms.UpDownBase.ReadOnly%2A>和 <xref:System.Windows.Forms.DomainUpDown.Wrap%2A>。 <xref:System.Windows.Forms.DomainUpDown.Items%2A> 屬性包含其文字值顯示在控制項中的物件清單。 如果 <xref:System.Windows.Forms.UpDownBase.ReadOnly%2A> 設定為 [`false`]，控制項會自動完成使用者輸入的文字，並將其與清單中的值比對。 如果 <xref:System.Windows.Forms.DomainUpDown.Wrap%2A> 設定為 `true`，則在最後一個專案之後的滾動會帶您前往清單中的第一個專案，反之亦然。 控制項的主要方法是 <xref:System.Windows.Forms.DomainUpDown.UpButton%2A> 和 <xref:System.Windows.Forms.DomainUpDown.DownButton%2A>。  
   
- 此控制項會顯示只是文字字串。 如果您想要顯示數值的控制項，使用<xref:System.Windows.Forms.NumericUpDown>控制項。 如需詳細資訊，請參閱 < [NumericUpDown 控制項](numericupdown-control-windows-forms.md)。  
+ 此控制項只會顯示文字字串。 如果您想要顯示數值的控制項，請使用 <xref:System.Windows.Forms.NumericUpDown> 控制項。 如需詳細資訊，請參閱[NumericUpDown Control](numericupdown-control-windows-forms.md) 。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [DomainUpDown 控制項概觀](domainupdown-control-overview-windows-forms.md)  
- 導入的一般概念<xref:System.Windows.Forms.DomainUpDown>控制項，可讓使用者瀏覽和選取從文字字串的清單。  
+ 介紹 <xref:System.Windows.Forms.DomainUpDown> 控制項的一般概念，可讓使用者流覽並從文字字串清單中選取。  
   
- [如何：以程式設計方式將項目加入 Windows Form DomainUpDown 控制項](how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
- 描述如何指定文字字串<xref:System.Windows.Forms.DomainUpDown>控制項應顯示。  
+ [操作說明：以程式設計的方式將項目加入至 Windows Forms DomainUpDown 控制項](how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
+ 描述如何指定 <xref:System.Windows.Forms.DomainUpDown> 控制項應顯示的文字字串。  
   
- [如何：移除 Windows Form DomainUpDown 控制項中的項目](how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
- 描述如何刪除項目從<xref:System.Windows.Forms.DomainUpDown>在程式碼中的控制項。  
+ [操作說明：從 Windows Forms DomainUpDown 控制項中移除項目](how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
+ 描述如何在程式碼中刪除 <xref:System.Windows.Forms.DomainUpDown> 控制項的專案。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.DomainUpDown>  
  說明這個類別，並且提供其所有成員的連結。  
   
  <xref:System.Windows.Forms.NumericUpDown>  
- 描述這個類別並且連結到其所有成員...  
+ 描述這個類別，並具有其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
  [可以在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)  

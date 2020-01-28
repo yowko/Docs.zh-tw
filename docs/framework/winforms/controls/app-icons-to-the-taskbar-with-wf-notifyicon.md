@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 Windows Forms NotifyIcon 元件將應用程式圖示新增至工作列
+title: 使用 NotifyIcon 元件將應用程式圖示新增至工作列
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,29 +13,29 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 05b6f300afea4671c1a847b116b378514ecb8b56
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 46b50ecaabe75dba08fea922d7b5639031692269
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65959511"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746242"
 ---
-# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>HOW TO：使用 Windows Forms NotifyIcon 元件將應用程式圖示新增至工作列
+# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>如何：使用 Windows Form NotifyIcon 元件將應用程式圖示加入至 TaskBar
 
-Windows Form<xref:System.Windows.Forms.NotifyIcon>元件會顯示單一圖示在工作列的狀態通知區域中。 若要顯示多個圖示，狀態 區域中，您必須有多個<xref:System.Windows.Forms.NotifyIcon>您的表單上的元件。 若要設定控制項所顯示的圖示，使用<xref:System.Windows.Forms.NotifyIcon.Icon%2A>屬性。 您也可以撰寫程式碼<xref:System.Windows.Forms.NotifyIcon.DoubleClick>事件處理常式，因此當使用者按兩下的圖示時，會有發生的情況。 例如，您可以進行使用者設定圖示所代表的背景處理序出現的對話方塊。
+Windows Forms <xref:System.Windows.Forms.NotifyIcon> 元件會在工作列的狀態通知區域中顯示單一圖示。 若要在 [狀態] 區域中顯示多個圖示，您的表單上必須有多個 <xref:System.Windows.Forms.NotifyIcon> 元件。 若要設定控制項的顯示圖示，請使用 [<xref:System.Windows.Forms.NotifyIcon.Icon%2A>] 屬性。 您也可以在 <xref:System.Windows.Forms.NotifyIcon.DoubleClick> 事件處理常式中撰寫程式碼，如此一來，當使用者按兩下圖示時，就會發生問題。 例如，您可以讓使用者看到對話方塊，以設定圖示所代表的背景進程。
 
 > [!NOTE]
-> <xref:System.Windows.Forms.NotifyIcon>元件用以通知僅供，某個動作或事件已發生的警示使用者，或已有某種形式的狀態變更。 您應該使用標準互動的應用程式的功能表、 工具列和其他使用者介面項目。
+> <xref:System.Windows.Forms.NotifyIcon> 元件僅供通知之用，用來警示使用者發生動作或事件，或某個排序狀態有變更。 您應該使用功能表、工具列和其他使用者介面元素，來與應用程式進行標準互動。
 
 ### <a name="to-set-the-icon"></a>若要設定圖示
 
-1. 指派值給<xref:System.Windows.Forms.NotifyIcon.Icon%2A>屬性。 值必須是型別`System.Drawing.Icon`和從.ico 檔可以載入。 在程式碼，或按一下省略符號按鈕，您可以指定的圖示檔 (![的 Visual Studio 的 [屬性] 視窗中的省略符號按鈕 （...）](./media/visual-studio-ellipsis-button.png)) 旁邊<xref:System.Windows.Forms.NotifyIcon.Icon%2A>中的屬性**屬性**視窗中，，然後選取 檔案中的**開啟**出現的對話方塊。
+1. 將值指派給 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 屬性。 此值必須是 `System.Drawing.Icon` 類型，而且可以從 .ico 檔案載入。 您可以在程式碼中指定圖示檔，或按一下省略號按鈕（![**屬性**] 視窗中 [<xref:System.Windows.Forms.NotifyIcon.Icon%2A>] 屬性旁邊的 [](./media/visual-studio-ellipsis-button.png)Visual Studio 屬性視窗中的省略號按鈕（...），然後在出現的 [**開啟**] 對話方塊中選取檔案。
 
 2. 將 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 屬性設定為 `true`。
 
-3. 設定<xref:System.Windows.Forms.NotifyIcon.Text%2A>屬性設為適當的工具提示字串。
+3. 將 [<xref:System.Windows.Forms.NotifyIcon.Text%2A>] 屬性設定為適當的工具提示字串。
 
-     在下列程式碼範例中，將路徑設為圖示的位置**我的文件**資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦將會包含此資料夾，會使用此位置。 選擇此位置也可讓具有最少的系統存取層級的使用者安全地執行應用程式。 下列範例需要表單<xref:System.Windows.Forms.NotifyIcon>已經加入的控制項。 它也需要圖示檔名為`Icon.ico`。
+     在下列程式碼範例中，為圖示的位置設定的路徑是 [**我的文件**] 資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦都包含此資料夾，所以會使用這個位置。 選擇此位置也可讓具有最低系統存取層級的使用者安全地執行應用程式。 下列範例需要已經加入 <xref:System.Windows.Forms.NotifyIcon> 控制項的表單。 它也需要名為 `Icon.ico`的圖示檔。
 
     ```vb
     ' You should replace the bold icon in the sample below
@@ -72,10 +72,10 @@ Windows Form<xref:System.Windows.Forms.NotifyIcon>元件會顯示單一圖示在
     notifyIcon1->Text = "Antivirus program";
     ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [如何：使用 Windows Forms NotifyIcon 元件關聯的捷徑功能表](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [操作說明：將捷徑功能表與 Windows Forms NotifyIcon 元件關聯](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
 - [NotifyIcon 元件](notifyicon-component-windows-forms.md)
 - [NotifyIcon 元件概觀](notifyicon-component-overview-windows-forms.md)

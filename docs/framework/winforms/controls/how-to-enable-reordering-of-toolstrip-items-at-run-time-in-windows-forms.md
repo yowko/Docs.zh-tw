@@ -1,5 +1,5 @@
 ---
-title: HOW TO：啟用在 Windows Form 在執行階段重新排列 ToolStrip 項目
+title: 如何：啟用 Windows Form 在執行階段時重新排列 ToolStrip 項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - toolbars [Windows Forms], rearranging controls
 - ToolStrip control [Windows Forms], reordering items
 ms.assetid: 8480b69a-379f-4dc2-8dcf-365ed93692b2
-ms.openlocfilehash: 46a5a70206e7620341a484912c7fada82d64747a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 44b52bf997819f090569d08eb395d8af18f61370
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609842"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745484"
 ---
-# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>HOW TO：啟用在 Windows Form 在執行階段重新排列 ToolStrip 項目
-您可以讓使用者能夠重新安排<xref:System.Windows.Forms.ToolStripItem>上控制項的<xref:System.Windows.Forms.ToolStrip>。  
+# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a>如何：啟用 Windows Form 在執行階段時重新排列 ToolStrip 項目
+您可以讓使用者重新排列 <xref:System.Windows.Forms.ToolStrip>上的 <xref:System.Windows.Forms.ToolStripItem> 控制項。  
   
-### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>若要啟用在執行階段的 prvku ToolStripItem 重新排列  
+### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>在執行時間啟用 ToolStripItem 重新排列  
   
-- 將 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 屬性設定為 `true`。 根據預設，<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>是`false`。  
+- 將 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 屬性設定為 `true`。 預設會 `false`<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>。  
   
-     在執行階段，而按住 ALT 鍵並拖曳滑鼠左鍵<xref:System.Windows.Forms.ToolStripItem>上的不同位置<xref:System.Windows.Forms.ToolStrip>。  
+     在執行時間，使用者按住 ALT 鍵並按滑鼠左鍵，將 <xref:System.Windows.Forms.ToolStripItem> 拖曳至 <xref:System.Windows.Forms.ToolStrip>上的不同位置。  
   
     ```vb  
     toolStrip1.AllowItemReorder = True  
@@ -34,7 +34,7 @@ ms.locfileid: "64609842"
     toolStrip1.AllowItemReorder = true;  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>

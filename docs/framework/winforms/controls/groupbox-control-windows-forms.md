@@ -1,27 +1,27 @@
 ---
-title: GroupBox 控制項 (Windows Form)
+title: GroupBox 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms]
 - grouping controls [Windows Forms]
 ms.assetid: ee7fb3ed-2fae-4df3-bdeb-15d42e5d7d75
-ms.openlocfilehash: b808a76f4aa9d2c28c838d0c6cfd7bc28d589061
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2f243b6d0a54c283a4649b7e75fcf9e5af999ae0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971258"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745628"
 ---
 # <a name="groupbox-control-windows-forms"></a>GroupBox 控制項 (Windows Form)
-Windows Form<xref:System.Windows.Forms.GroupBox>控制項可用來提供其他控制項的可識別分組。 一般而言，您可以使用群組方塊細分函式的表單。 例如，您可能會指定郵寄的選項，例如要使用哪一個隔夜承運商的訂單表單。 將群組方塊中的所有選項，可讓使用者邏輯的視覺提示。 <xref:System.Windows.Forms.GroupBox>控制項是類似於<xref:System.Windows.Forms.Panel>控制; 不過，只有<xref:System.Windows.Forms.GroupBox>控制項顯示標題，並只<xref:System.Windows.Forms.Panel>控制項有捲軸。  
+Windows Forms <xref:System.Windows.Forms.GroupBox> 控制項是用來為其他控制項提供可識別的群組。 一般來說，您會使用群組方塊來依函式細分表單。 例如，您的訂單表單可能會指定郵寄選項，例如要使用的貨運公司。 將群組方塊中的所有選項分組，可提供使用者一個邏輯視覺提示。 <xref:System.Windows.Forms.GroupBox> 控制項類似于 <xref:System.Windows.Forms.Panel> 控制項;不過，只有 [<xref:System.Windows.Forms.GroupBox>] 控制項會顯示標題，而且只有 [<xref:System.Windows.Forms.Panel>] 控制項才可以有捲軸。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [GroupBox 控制項概觀](groupbox-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
- [如何：使用 Windows Forms GroupBox 控制項的群組控制項](how-to-group-controls-with-the-windows-forms-groupbox-control.md)  
- 描述如何使用此群組控制項的控制項。  
+ [操作說明：以 Windows Forms GroupBox 控制項來群組控制項](how-to-group-controls-with-the-windows-forms-groupbox-control.md)  
+ 描述如何使用此控制項來分組控制項。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.GroupBox>  

@@ -1,17 +1,17 @@
 ---
-title: 優化效能：控制項-WPF
+title: 優化控制效能
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], improving performance
 - container recycling [WPF]
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
-ms.openlocfilehash: 595a4865e1d422f460aab18fc541326a4557476b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d02fde7076cd6a24fdfb171ed54161b20f3d465e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458534"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746724"
 ---
 # <a name="optimizing-performance-controls"></a>優化效能：控制項
 
@@ -66,8 +66,8 @@ UI 虛擬化是清單控制項的重要層面。 請不要將 UI 虛擬化和資
 |<xref:System.Windows.Controls.ComboBox>|可以啟用|可以啟用|可以啟用|
 |<xref:System.Windows.Controls.ContextMenu>|可以啟用|可以啟用|可以啟用|
 |<xref:System.Windows.Controls.DocumentViewer>|無法使用|無法使用|可以啟用|
-|<xref:System.Windows.Controls.ListBox>|Default|可以啟用|可以啟用|
-|<xref:System.Windows.Controls.ListView>|Default|可以啟用|可以啟用|
+|<xref:System.Windows.Controls.ListBox>|預設值|可以啟用|可以啟用|
+|<xref:System.Windows.Controls.ListView>|預設值|可以啟用|可以啟用|
 |<xref:System.Windows.Controls.TreeView>|可以啟用|可以啟用|可以啟用|
 |<xref:System.Windows.Controls.ToolBar>|無法使用|無法使用|可以啟用|
 

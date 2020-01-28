@@ -1,5 +1,5 @@
 ---
-title: FolderBrowserDialog 元件 (Windows Form)
+title: FolderBrowserDialog 元件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - folders [Windows Forms], browsing
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - browsing folders
 - directories [Windows Forms], browsing
 ms.assetid: d71a0c5e-898a-4eea-be74-93bdf50d1852
-ms.openlocfilehash: 6359ea9683b9a418b7fe92dacc6140865dd01a11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c218edb639edb9b630527c2e77125358400cf3e7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011329"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745718"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog 元件 (Windows Form)
-Windows Form`FolderBrowserDialog`元件會顯示與使用者可以瀏覽和選取的資料夾或建立一個新的介面。 它是一個補充[OpenFileDialog 元件](openfiledialog-component-windows-forms.md)元件，可用於瀏覽並選取檔案。  
+[Windows Forms `FolderBrowserDialog`] 元件會顯示介面，使用者可以在其中流覽並選取資料夾或建立一個新的資料夾。 這是[OpenFileDialog 元件](openfiledialog-component-windows-forms.md)元件的補充，用於流覽和選取檔案。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [FolderBrowserDialog 元件概觀 (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
- [如何：選擇使用 Windows Forms FolderBrowserDialog 元件的資料夾](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
- 說明如何以程式設計方式從對話方塊中，擷取選取的資料夾，以及使用一些其他的選用元件的屬性。  
+ [操作說明：使用 Windows Forms FolderBrowserDialog 元件選擇資料夾](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
+ 說明如何以程式設計方式從對話方塊中將選取的資料夾解壓縮，以及如何使用該元件的其他選擇性屬性。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
