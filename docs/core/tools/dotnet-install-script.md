@@ -1,205 +1,222 @@
 ---
 title: dotnet-install 指令碼
-description: 了解如何使用 dotnet-install 指令碼來安裝 .NET Core CLI 工具和共用執行階段。
-ms.date: 01/16/2019
-ms.openlocfilehash: 765141ae92645db448ac7c9c3448a79b895faac6
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+description: 瞭解安裝 .NET Core SDK 和共用執行時間的 dotnet-安裝腳本。
+ms.date: 01/23/2020
+ms.openlocfilehash: 169991ac4cd24ccab90634ff265c3ae5b603f8e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964340"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734212"
 ---
-# <a name="dotnet-install-scripts-reference"></a><span data-ttu-id="a57ff-103">dotnet-install 指令碼參考</span><span class="sxs-lookup"><span data-stu-id="a57ff-103">dotnet-install scripts reference</span></span>
+# <a name="dotnet-install-scripts-reference"></a><span data-ttu-id="0f1b5-103">dotnet-install 指令碼參考</span><span class="sxs-lookup"><span data-stu-id="0f1b5-103">dotnet-install scripts reference</span></span>
 
-## <a name="name"></a><span data-ttu-id="a57ff-104">Name</span><span class="sxs-lookup"><span data-stu-id="a57ff-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="0f1b5-104">Name</span><span class="sxs-lookup"><span data-stu-id="0f1b5-104">Name</span></span>
 
-<span data-ttu-id="a57ff-105">`dotnet-install.ps1` | `dotnet-install.sh` - 用來安裝 .NET Core CLI 工具和共用執行階段的指令碼。</span><span class="sxs-lookup"><span data-stu-id="a57ff-105">`dotnet-install.ps1` | `dotnet-install.sh` - Script used to install the .NET Core CLI tools and the shared runtime.</span></span>
+<span data-ttu-id="0f1b5-105">`dotnet-install.ps1` | `dotnet-install.sh`-用來安裝 .NET Core SDK 和共用執行時間的腳本。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-105">`dotnet-install.ps1` | `dotnet-install.sh` - Script used to install the .NET Core SDK and the shared runtime.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="a57ff-106">概要</span><span class="sxs-lookup"><span data-stu-id="a57ff-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="0f1b5-106">概要</span><span class="sxs-lookup"><span data-stu-id="0f1b5-106">Synopsis</span></span>
 
-<span data-ttu-id="a57ff-107">Windows：</span><span class="sxs-lookup"><span data-stu-id="a57ff-107">Windows:</span></span>
+<span data-ttu-id="0f1b5-107">Windows：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-107">Windows:</span></span>
 
-`dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture] [-SharedRuntime] [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential] [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]`
+```powershell
+dotnet-install.ps1 [-Channel] [-Version] [-JSonFile] [-InstallDir] [-Architecture]
+    [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential]
+    [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]
+```
 
-<span data-ttu-id="a57ff-108">macOS/Linux：</span><span class="sxs-lookup"><span data-stu-id="a57ff-108">macOS/Linux:</span></span>
+<span data-ttu-id="0f1b5-108">Linux/macOs：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-108">Linux/macOs:</span></span>
 
-`dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential] [--runtime-id] [--skip-non-versioned-files] [--help]`
+```bash
+dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--architecture]
+    [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential]
+    [--runtime-id] [--skip-non-versioned-files] [--help]
+```
 
-## <a name="description"></a><span data-ttu-id="a57ff-109">描述</span><span class="sxs-lookup"><span data-stu-id="a57ff-109">Description</span></span>
+## <a name="description"></a><span data-ttu-id="0f1b5-109">描述</span><span class="sxs-lookup"><span data-stu-id="0f1b5-109">Description</span></span>
 
-<span data-ttu-id="a57ff-110">`dotnet-install` 指令碼可用來執行 .NET Core SDK 的非系統管理安裝，其中包含了 .NET Core CLI 工具和共用執行階段。</span><span class="sxs-lookup"><span data-stu-id="a57ff-110">The `dotnet-install` scripts are used to perform a non-admin installation of the .NET Core SDK, which includes the .NET Core CLI tools and the shared runtime.</span></span>
+<span data-ttu-id="0f1b5-110">`dotnet-install` 指令碼可用來執行 .NET Core SDK 的非系統管理安裝，其中包含了 .NET Core CLI 工具和共用執行階段。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-110">The `dotnet-install` scripts are used to perform a non-admin installation of the .NET Core SDK, which includes the .NET Core CLI tools and the shared runtime.</span></span>
 
-<span data-ttu-id="a57ff-111">建議您使用 [.NET Core 主網站](https://dot.net) \(英文\) 所提供的穩定版本。</span><span class="sxs-lookup"><span data-stu-id="a57ff-111">We recommend that you use the stable version that is hosted on [.NET Core main website](https://dot.net).</span></span> <span data-ttu-id="a57ff-112">指令碼的直接路徑如下：</span><span class="sxs-lookup"><span data-stu-id="a57ff-112">The direct paths to the scripts are:</span></span>
+<span data-ttu-id="0f1b5-111">建議您使用穩定版本的腳本：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-111">We recommend that you use the stable version of the scripts:</span></span>
 
-- <span data-ttu-id="a57ff-113"><https://dot.net/v1/dotnet-install.sh> (bash、UNIX)</span><span class="sxs-lookup"><span data-stu-id="a57ff-113"><https://dot.net/v1/dotnet-install.sh> (bash, UNIX)</span></span>
-- <span data-ttu-id="a57ff-114"><https://dot.net/v1/dotnet-install.ps1> (Powershell、Windows)</span><span class="sxs-lookup"><span data-stu-id="a57ff-114"><https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows)</span></span>
+- <span data-ttu-id="0f1b5-112">Bash （Linux/macOS）： <https://dot.net/v1/dotnet-install.sh></span><span class="sxs-lookup"><span data-stu-id="0f1b5-112">Bash (Linux/macOS): <https://dot.net/v1/dotnet-install.sh></span></span>
+- <span data-ttu-id="0f1b5-113">PowerShell （Windows）： <https://dot.net/v1/dotnet-install.ps1></span><span class="sxs-lookup"><span data-stu-id="0f1b5-113">PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1></span></span>
 
-<span data-ttu-id="a57ff-115">這些指令碼對於自動化案例和非系統管理員安裝非常有幫助。</span><span class="sxs-lookup"><span data-stu-id="a57ff-115">The main usefulness of these scripts is in automation scenarios and non-admin installations.</span></span> <span data-ttu-id="a57ff-116">有兩個指令碼：一個是在 Windows 上運作的 PowerShell 指令碼，另一個是在 Linux/macOS 上運作的 Bash 指令碼。</span><span class="sxs-lookup"><span data-stu-id="a57ff-116">There are two scripts: one is a PowerShell script that works on Windows, and the other is a bash script that works on Linux/macOS.</span></span> <span data-ttu-id="a57ff-117">這兩個指令碼有相同的行為。</span><span class="sxs-lookup"><span data-stu-id="a57ff-117">Both scripts have the same behavior.</span></span> <span data-ttu-id="a57ff-118">Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。</span><span class="sxs-lookup"><span data-stu-id="a57ff-118">The bash script also reads PowerShell switches, so you can use PowerShell switches with the script on Linux/macOS systems.</span></span>
+<span data-ttu-id="0f1b5-114">這些指令碼對於自動化案例和非系統管理員安裝非常有幫助。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-114">The main usefulness of these scripts is in automation scenarios and non-admin installations.</span></span> <span data-ttu-id="0f1b5-115">有兩個指令碼：一個是在 Windows 上運作的 PowerShell 指令碼，另一個是在 Linux/macOS 上運作的 Bash 指令碼。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-115">There are two scripts: one is a PowerShell script that works on Windows, and the other is a bash script that works on Linux/macOS.</span></span> <span data-ttu-id="0f1b5-116">這兩個指令碼有相同的行為。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-116">Both scripts have the same behavior.</span></span> <span data-ttu-id="0f1b5-117">Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-117">The bash script also reads PowerShell switches, so you can use PowerShell switches with the script on Linux/macOS systems.</span></span>
 
-<span data-ttu-id="a57ff-119">安裝指令碼會從 CLI 組建放置區下載 ZIP/tarball 檔案，並且繼續將它安裝在預設位置或 `-InstallDir|--install-dir` 所指定的位置。</span><span class="sxs-lookup"><span data-stu-id="a57ff-119">The installation scripts download the ZIP/tarball file from the CLI build drops and proceed to install it in either the default location or in a location specified by `-InstallDir|--install-dir`.</span></span> <span data-ttu-id="a57ff-120">根據預設，安裝指令碼會下載並安裝 SDK。</span><span class="sxs-lookup"><span data-stu-id="a57ff-120">By default, the installation scripts download the SDK and install it.</span></span> <span data-ttu-id="a57ff-121">如果您想要只取得共用執行階段，請指定 `--runtime` 引數。</span><span class="sxs-lookup"><span data-stu-id="a57ff-121">If you wish to only obtain the shared runtime, specify the `--runtime` argument.</span></span>
+<span data-ttu-id="0f1b5-118">安裝指令碼會從 CLI 組建放置區下載 ZIP/tarball 檔案，並且繼續將它安裝在預設位置或 `-InstallDir|--install-dir` 所指定的位置。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-118">The installation scripts download the ZIP/tarball file from the CLI build drops and proceed to install it in either the default location or in a location specified by `-InstallDir|--install-dir`.</span></span> <span data-ttu-id="0f1b5-119">根據預設，安裝指令碼會下載並安裝 SDK。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-119">By default, the installation scripts download the SDK and install it.</span></span> <span data-ttu-id="0f1b5-120">如果您想要只取得共用執行階段，請指定 `-Runtime|--runtime` 引數。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-120">If you wish to only obtain the shared runtime, specify the `-Runtime|--runtime` argument.</span></span>
 
-<span data-ttu-id="a57ff-122">根據預設，指令碼會將安裝位置新增到目前工作階段的 $PATH。</span><span class="sxs-lookup"><span data-stu-id="a57ff-122">By default, the script adds the install location to the $PATH for the current session.</span></span> <span data-ttu-id="a57ff-123">指定 `--no-path` 引數可以覆寫此預設行為。</span><span class="sxs-lookup"><span data-stu-id="a57ff-123">Override this default behavior by specifying the `--no-path` argument.</span></span>
+<span data-ttu-id="0f1b5-121">根據預設，指令碼會將安裝位置新增到目前工作階段的 $PATH。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-121">By default, the script adds the install location to the $PATH for the current session.</span></span> <span data-ttu-id="0f1b5-122">指定 `-NoPath|--no-path` 引數可以覆寫此預設行為。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-122">Override this default behavior by specifying the `-NoPath|--no-path` argument.</span></span>
 
-<span data-ttu-id="a57ff-124">執行指令碼之前，請安裝所有必要的[相依性 (英文)](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)。</span><span class="sxs-lookup"><span data-stu-id="a57ff-124">Before running the script, install the required [dependencies](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md).</span></span>
+<span data-ttu-id="0f1b5-123">執行指令碼之前，請安裝所有必要的[相依性 (英文)](../install/dependencies.md)。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-123">Before running the script, install the required [dependencies](../install/dependencies.md).</span></span>
 
-<span data-ttu-id="a57ff-125">您可以使用 `--version` 引數安裝特定版本。</span><span class="sxs-lookup"><span data-stu-id="a57ff-125">You can install a specific version using the `--version` argument.</span></span> <span data-ttu-id="a57ff-126">指定版本時，必須以三段式版本格式指定 (例如 1.0.0-13232)。</span><span class="sxs-lookup"><span data-stu-id="a57ff-126">The version must be specified as a three-part version (for example, 1.0.0-13232).</span></span> <span data-ttu-id="a57ff-127">如果未提供，就會使用 `latest` 版本。</span><span class="sxs-lookup"><span data-stu-id="a57ff-127">If not provided, it uses the `latest` version.</span></span>
+<span data-ttu-id="0f1b5-124">您可以使用 `-Version|--version` 引數安裝特定版本。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-124">You can install a specific version using the `-Version|--version` argument.</span></span> <span data-ttu-id="0f1b5-125">版本必須指定為三部分版本（例如 `2.1.0`）。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-125">The version must be specified as a three-part version (for example, `2.1.0`).</span></span> <span data-ttu-id="0f1b5-126">如果未提供，就會使用 `latest` 版本。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-126">If not provided, it uses the `latest` version.</span></span>
 
-## <a name="options"></a><span data-ttu-id="a57ff-128">選項</span><span class="sxs-lookup"><span data-stu-id="a57ff-128">Options</span></span>
+## <a name="options"></a><span data-ttu-id="0f1b5-127">選項</span><span class="sxs-lookup"><span data-stu-id="0f1b5-127">Options</span></span>
 
-- **`-Channel <CHANNEL>`**
+- **`-Channel|--channel <CHANNEL>`**
 
-  <span data-ttu-id="a57ff-129">指定安裝的來源通道。</span><span class="sxs-lookup"><span data-stu-id="a57ff-129">Specifies the source channel for the installation.</span></span> <span data-ttu-id="a57ff-130">可能值為：</span><span class="sxs-lookup"><span data-stu-id="a57ff-130">The possible values are:</span></span>
+  <span data-ttu-id="0f1b5-128">指定安裝的來源通道。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-128">Specifies the source channel for the installation.</span></span> <span data-ttu-id="0f1b5-129">可能值為：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-129">The possible values are:</span></span>
 
-  - <span data-ttu-id="a57ff-131">`Current` - 最新版本。</span><span class="sxs-lookup"><span data-stu-id="a57ff-131">`Current` - Most current release.</span></span>
-  - <span data-ttu-id="a57ff-132">`LTS` - 長期支援通道 (最新的支援版本)。</span><span class="sxs-lookup"><span data-stu-id="a57ff-132">`LTS` - Long-Term Support channel (most current supported release).</span></span>
-  - <span data-ttu-id="a57ff-133">代表特定版本的 X.Y 格式兩段式版本 (例如 `2.0` 或 `1.0`)。</span><span class="sxs-lookup"><span data-stu-id="a57ff-133">Two-part version in X.Y format representing a specific release (for example, `2.0` or `1.0`).</span></span>
-  - <span data-ttu-id="a57ff-134">分支名稱。</span><span class="sxs-lookup"><span data-stu-id="a57ff-134">Branch name.</span></span> <span data-ttu-id="a57ff-135">例如 `release/2.0.0`、`release/2.0.0-preview2` 或 `master` (適用於夜間版本)。</span><span class="sxs-lookup"><span data-stu-id="a57ff-135">For example, `release/2.0.0`, `release/2.0.0-preview2`, or `master` (for nightly releases).</span></span>
+  - <span data-ttu-id="0f1b5-130">`Current` - 最新版本。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-130">`Current` - Most current release.</span></span>
+  - <span data-ttu-id="0f1b5-131">`LTS` - 長期支援通道 (最新的支援版本)。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-131">`LTS` - Long-Term Support channel (most current supported release).</span></span>
+  - <span data-ttu-id="0f1b5-132">代表特定版本的 X.Y 格式兩段式版本 (例如 `2.1` 或 `3.0`)。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-132">Two-part version in X.Y format representing a specific release (for example, `2.1` or `3.0`).</span></span>
+  - <span data-ttu-id="0f1b5-133">分支名稱：例如，`release/3.1.1xx` 或 `master` （適用于夜間發行）。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-133">Branch name: for example, `release/3.1.1xx` or `master` (for nightly releases).</span></span> <span data-ttu-id="0f1b5-134">使用此選項可從預覽頻道安裝版本。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-134">Use this option to install a version from a preview channel.</span></span> <span data-ttu-id="0f1b5-135">使用[安裝程式和二進位](https://github.com/dotnet/core-sdk#installers-and-binaries)檔中列出的通道名稱。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-135">Use the name of the channel as listed in [Installers and Binaries](https://github.com/dotnet/core-sdk#installers-and-binaries).</span></span>
 
-  <span data-ttu-id="a57ff-136">預設值為 `LTS`。</span><span class="sxs-lookup"><span data-stu-id="a57ff-136">The default value is `LTS`.</span></span> <span data-ttu-id="a57ff-137">如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) \(英文\) 頁面。</span><span class="sxs-lookup"><span data-stu-id="a57ff-137">For more information on .NET support channels, see the [.NET Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) page.</span></span>
+  <span data-ttu-id="0f1b5-136">預設值為 `LTS`。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-136">The default value is `LTS`.</span></span> <span data-ttu-id="0f1b5-137">如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) \(英文\) 頁面。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-137">For more information on .NET support channels, see the [.NET Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) page.</span></span>
 
-- **`-Version <VERSION>`**
+- **`-Version|--version <VERSION>`**
 
-  <span data-ttu-id="a57ff-138">代表特定的組建版本。</span><span class="sxs-lookup"><span data-stu-id="a57ff-138">Represents a specific build version.</span></span> <span data-ttu-id="a57ff-139">可能值為：</span><span class="sxs-lookup"><span data-stu-id="a57ff-139">The possible values are:</span></span>
+  <span data-ttu-id="0f1b5-138">代表特定的組建版本。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-138">Represents a specific build version.</span></span> <span data-ttu-id="0f1b5-139">可能值為：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-139">The possible values are:</span></span>
 
-  - <span data-ttu-id="a57ff-140">`latest` - 通道上的最新組建 (與 `-Channel` 選項搭配使用)。</span><span class="sxs-lookup"><span data-stu-id="a57ff-140">`latest` - Latest build on the channel (used with the `-Channel` option).</span></span>
-  - <span data-ttu-id="a57ff-141">`coherent` - 通道上的最新一致性組建；使用最新的穩定套件組合 (與分支名稱 `-Channel` 選項搭配使用)。</span><span class="sxs-lookup"><span data-stu-id="a57ff-141">`coherent` - Latest coherent build on the channel; uses the latest stable package combination (used with Branch name `-Channel` options).</span></span>
-  - <span data-ttu-id="a57ff-142">代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。</span><span class="sxs-lookup"><span data-stu-id="a57ff-142">Three-part version in X.Y.Z format representing a specific build version; supersedes the `-Channel` option.</span></span> <span data-ttu-id="a57ff-143">例如：`2.0.0-preview2-006120`。</span><span class="sxs-lookup"><span data-stu-id="a57ff-143">For example: `2.0.0-preview2-006120`.</span></span>
+  - <span data-ttu-id="0f1b5-140">`latest` - 通道上的最新組建 (與 `-Channel` 選項搭配使用)。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-140">`latest` - Latest build on the channel (used with the `-Channel` option).</span></span>
+  - <span data-ttu-id="0f1b5-141">`coherent` - 通道上的最新一致性組建；使用最新的穩定套件組合 (與分支名稱 `-Channel` 選項搭配使用)。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-141">`coherent` - Latest coherent build on the channel; uses the latest stable package combination (used with Branch name `-Channel` options).</span></span>
+  - <span data-ttu-id="0f1b5-142">代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-142">Three-part version in X.Y.Z format representing a specific build version; supersedes the `-Channel` option.</span></span> <span data-ttu-id="0f1b5-143">例如：`2.0.0-preview2-006120`。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-143">For example: `2.0.0-preview2-006120`.</span></span>
 
-  <span data-ttu-id="a57ff-144">如果未指定，`-Version` 會預設為 `latest`。</span><span class="sxs-lookup"><span data-stu-id="a57ff-144">If not specified, `-Version` defaults to `latest`.</span></span>
+  <span data-ttu-id="0f1b5-144">如果未指定，`-Version` 會預設為 `latest`。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-144">If not specified, `-Version` defaults to `latest`.</span></span>
 
-- **`-InstallDir <DIRECTORY>`**
+- **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  <span data-ttu-id="a57ff-145">指定安裝路徑。</span><span class="sxs-lookup"><span data-stu-id="a57ff-145">Specifies the installation path.</span></span> <span data-ttu-id="a57ff-146">如果目錄不存在，則會建立它。</span><span class="sxs-lookup"><span data-stu-id="a57ff-146">The directory is created if it doesn't exist.</span></span> <span data-ttu-id="a57ff-147">預設值是 *%LocalAppData%\Microsoft\dotnet*。</span><span class="sxs-lookup"><span data-stu-id="a57ff-147">The default value is *%LocalAppData%\Microsoft\dotnet*.</span></span> <span data-ttu-id="a57ff-148">二進位檔會直接放在此目錄中。</span><span class="sxs-lookup"><span data-stu-id="a57ff-148">Binaries are placed directly in this directory.</span></span>
+  <span data-ttu-id="0f1b5-145">指定將用來判斷 SDK 版本之[global json](global-json.md)檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-145">Specifies a path to a [global.json](global-json.md) file that will be used to determine the SDK version.</span></span> <span data-ttu-id="0f1b5-146">*Global. json*檔案必須有 `sdk:version`的值。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-146">The *global.json* file must have a value for `sdk:version`.</span></span>
 
-- **`-Architecture <ARCHITECTURE>`**
+- **`-InstallDir|--install-dir <DIRECTORY>`**
 
-  <span data-ttu-id="a57ff-149">要安裝的 .NET Core 二進位檔的架構。</span><span class="sxs-lookup"><span data-stu-id="a57ff-149">Architecture of the .NET Core binaries to install.</span></span> <span data-ttu-id="a57ff-150">可能的值為 `<auto>`、`amd64`、`x64`、`x86`、`arm64` 和 `arm`。</span><span class="sxs-lookup"><span data-stu-id="a57ff-150">Possible values are `<auto>`, `amd64`, `x64`, `x86`, `arm64`, and `arm`.</span></span> <span data-ttu-id="a57ff-151">預設值為 `<auto>`，代表目前正在執行的 OS 架構。</span><span class="sxs-lookup"><span data-stu-id="a57ff-151">The default value is `<auto>`, which represents the currently running OS architecture.</span></span>
+  <span data-ttu-id="0f1b5-147">指定安裝路徑。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-147">Specifies the installation path.</span></span> <span data-ttu-id="0f1b5-148">如果目錄不存在，則會建立它。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-148">The directory is created if it doesn't exist.</span></span> <span data-ttu-id="0f1b5-149">預設值是 *%LocalAppData%\Microsoft\dotnet*。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-149">The default value is *%LocalAppData%\Microsoft\dotnet*.</span></span> <span data-ttu-id="0f1b5-150">二進位檔會直接放在此目錄中。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-150">Binaries are placed directly in this directory.</span></span>
 
-- **`-SharedRuntime`**
+- **`-Architecture|--architecture <ARCHITECTURE>`**
+
+  <span data-ttu-id="0f1b5-151">要安裝的 .NET Core 二進位檔的架構。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-151">Architecture of the .NET Core binaries to install.</span></span> <span data-ttu-id="0f1b5-152">可能的值為 `<auto>`、`amd64`、`x64`、`x86`、`arm64` 和 `arm`。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-152">Possible values are `<auto>`, `amd64`, `x64`, `x86`, `arm64`, and `arm`.</span></span> <span data-ttu-id="0f1b5-153">預設值為 `<auto>`，代表目前正在執行的 OS 架構。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-153">The default value is `<auto>`, which represents the currently running OS architecture.</span></span>
+
+- **`-SharedRuntime|--shared-runtime`**
 
   > [!NOTE]
-  > <span data-ttu-id="a57ff-152">此參數已被淘汰，在未來的指令碼版本中可能會將其移除。</span><span class="sxs-lookup"><span data-stu-id="a57ff-152">This parameter is obsolete and may be removed in a future version of the script.</span></span> <span data-ttu-id="a57ff-153">建議的替代方案是 `Runtime` 選項。</span><span class="sxs-lookup"><span data-stu-id="a57ff-153">The recommended alternative is the `Runtime` option.</span></span>
+  > <span data-ttu-id="0f1b5-154">此參數已被淘汰，在未來的指令碼版本中可能會將其移除。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-154">This parameter is obsolete and may be removed in a future version of the script.</span></span> <span data-ttu-id="0f1b5-155">建議的替代方案是 `-Runtime|--runtime` 選項。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-155">The recommended alternative is the `-Runtime|--runtime` option.</span></span>
 
-  <span data-ttu-id="a57ff-154">只安裝共用執行階段位元，而不是整個 SDK。</span><span class="sxs-lookup"><span data-stu-id="a57ff-154">Installs just the shared runtime bits, not the entire SDK.</span></span> <span data-ttu-id="a57ff-155">這相當於指定 `-Runtime dotnet`。</span><span class="sxs-lookup"><span data-stu-id="a57ff-155">This is equivalent to specifying `-Runtime dotnet`.</span></span>
+  <span data-ttu-id="0f1b5-156">只安裝共用執行階段位元，而不是整個 SDK。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-156">Installs just the shared runtime bits, not the entire SDK.</span></span> <span data-ttu-id="0f1b5-157">此選項相當於指定 `-Runtime|--runtime dotnet`。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-157">This option is equivalent to specifying `-Runtime|--runtime dotnet`.</span></span>
 
-- **`-Runtime <RUNTIME>`**
+- **`-Runtime|--runtime <RUNTIME>`**
 
-  <span data-ttu-id="a57ff-156">只安裝共用執行階段，而不是整個 SDK。</span><span class="sxs-lookup"><span data-stu-id="a57ff-156">Installs just the shared runtime, not the entire SDK.</span></span> <span data-ttu-id="a57ff-157">可能值為：</span><span class="sxs-lookup"><span data-stu-id="a57ff-157">The possible values are:</span></span>
+  <span data-ttu-id="0f1b5-158">只安裝共用執行階段，而不是整個 SDK。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-158">Installs just the shared runtime, not the entire SDK.</span></span> <span data-ttu-id="0f1b5-159">可能值為：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-159">The possible values are:</span></span>
 
-  - <span data-ttu-id="a57ff-158">`dotnet` - `Microsoft.NETCore.App` 共用執行階段。</span><span class="sxs-lookup"><span data-stu-id="a57ff-158">`dotnet` - the `Microsoft.NETCore.App` shared runtime.</span></span>
-  - <span data-ttu-id="a57ff-159">`aspnetcore` - `Microsoft.AspNetCore.App` 共用執行階段。</span><span class="sxs-lookup"><span data-stu-id="a57ff-159">`aspnetcore` - the `Microsoft.AspNetCore.App` shared runtime.</span></span>
+  - <span data-ttu-id="0f1b5-160">`dotnet` - `Microsoft.NETCore.App` 共用執行階段。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-160">`dotnet` - the `Microsoft.NETCore.App` shared runtime.</span></span>
+  - <span data-ttu-id="0f1b5-161">`aspnetcore` - `Microsoft.AspNetCore.App` 共用執行階段。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-161">`aspnetcore` - the `Microsoft.AspNetCore.App` shared runtime.</span></span>
+  - <span data-ttu-id="0f1b5-162">`windowsdesktop` - `Microsoft.WindowsDesktop.App` 共用執行階段。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-162">`windowsdesktop` - the `Microsoft.WindowsDesktop.App` shared runtime.</span></span>
 
-- **`-DryRun`**
+- **`-DryRun|--dry-run`**
 
-  <span data-ttu-id="a57ff-160">如果設定，指令碼將不會執行安裝。</span><span class="sxs-lookup"><span data-stu-id="a57ff-160">If set, the script won't perform the installation.</span></span> <span data-ttu-id="a57ff-161">取而代之的是，會顯示以一致方式安裝目前所要求的 .NET Core CLI 版本時，所要使用的命令列。</span><span class="sxs-lookup"><span data-stu-id="a57ff-161">Instead, it displays what command line to use to consistently install the currently requested version of the .NET Core CLI.</span></span> <span data-ttu-id="a57ff-162">例如，如果您指定 `latest` 版本，就會顯示特定版本的連結，以便在建置指令碼中以決定性方式使用此命令。</span><span class="sxs-lookup"><span data-stu-id="a57ff-162">For example, if you specify version `latest`, it displays a link with the specific version so that this command can be used deterministically in a build script.</span></span> <span data-ttu-id="a57ff-163">如果您想要自行進行安裝或下載，它也會顯示二進位檔位置。</span><span class="sxs-lookup"><span data-stu-id="a57ff-163">It also displays the binary's location if you prefer to install or download it yourself.</span></span>
+  <span data-ttu-id="0f1b5-163">如果設定，指令碼將不會執行安裝。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-163">If set, the script won't perform the installation.</span></span> <span data-ttu-id="0f1b5-164">取而代之的是，會顯示以一致方式安裝目前所要求的 .NET Core CLI 版本時，所要使用的命令列。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-164">Instead, it displays what command line to use to consistently install the currently requested version of the .NET Core CLI.</span></span> <span data-ttu-id="0f1b5-165">例如，如果您指定 `latest` 版本，就會顯示特定版本的連結，以便在建置指令碼中以決定性方式使用此命令。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-165">For example, if you specify version `latest`, it displays a link with the specific version so that this command can be used deterministically in a build script.</span></span> <span data-ttu-id="0f1b5-166">如果您想要自行進行安裝或下載，它也會顯示二進位檔位置。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-166">It also displays the binary's location if you prefer to install or download it yourself.</span></span>
 
-- **`-NoPath`**
+- **`-NoPath|--no-path`**
 
-  <span data-ttu-id="a57ff-164">如果設定，就不會將安裝資料夾匯出至目前工作階段的路徑。</span><span class="sxs-lookup"><span data-stu-id="a57ff-164">If set, the installation folder isn't exported to the path for the current session.</span></span> <span data-ttu-id="a57ff-165">指令碼預設會修改此路徑，以讓 CLI 工具在安裝後立即可供使用。</span><span class="sxs-lookup"><span data-stu-id="a57ff-165">By default, the script modifies the PATH, which makes the CLI tools available immediately after install.</span></span>
+  <span data-ttu-id="0f1b5-167">如果設定，就不會將安裝資料夾匯出至目前工作階段的路徑。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-167">If set, the installation folder isn't exported to the path for the current session.</span></span> <span data-ttu-id="0f1b5-168">指令碼預設會修改此路徑，以讓 CLI 工具在安裝後立即可供使用。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-168">By default, the script modifies the PATH, which makes the CLI tools available immediately after install.</span></span>
 
-- **`-Verbose`**
+- **`-Verbose|--verbose`**
 
-  <span data-ttu-id="a57ff-166">顯示診斷資訊。</span><span class="sxs-lookup"><span data-stu-id="a57ff-166">Displays diagnostics information.</span></span>
+  <span data-ttu-id="0f1b5-169">顯示診斷資訊。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-169">Displays diagnostics information.</span></span>
 
-- **`-AzureFeed`**
+- **`-AzureFeed|--azure-feed`**
 
-  <span data-ttu-id="a57ff-167">指定給安裝程式的 Azure 摘要 URL。</span><span class="sxs-lookup"><span data-stu-id="a57ff-167">Specifies the URL for the Azure feed to the installer.</span></span> <span data-ttu-id="a57ff-168">建議您不要變更這個值。</span><span class="sxs-lookup"><span data-stu-id="a57ff-168">We recommended that you don't change this value.</span></span> <span data-ttu-id="a57ff-169">預設值為 `https://dotnetcli.azureedge.net/dotnet`。</span><span class="sxs-lookup"><span data-stu-id="a57ff-169">The default value is `https://dotnetcli.azureedge.net/dotnet`.</span></span>
+  <span data-ttu-id="0f1b5-170">指定給安裝程式的 Azure 摘要 URL。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-170">Specifies the URL for the Azure feed to the installer.</span></span> <span data-ttu-id="0f1b5-171">建議您不要變更這個值。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-171">We recommended that you don't change this value.</span></span> <span data-ttu-id="0f1b5-172">預設值為 `https://dotnetcli.azureedge.net/dotnet`。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-172">The default value is `https://dotnetcli.azureedge.net/dotnet`.</span></span>
 
-- **`-UncachedFeed`**
+- **`-UncachedFeed|--uncached-feed`**
 
-  <span data-ttu-id="a57ff-170">允許變更此安裝程式所使用之未快取摘要的 URL。</span><span class="sxs-lookup"><span data-stu-id="a57ff-170">Allows changing the URL for the uncached feed used by this installer.</span></span> <span data-ttu-id="a57ff-171">建議您不要變更這個值。</span><span class="sxs-lookup"><span data-stu-id="a57ff-171">We recommended that you don't change this value.</span></span>
+  <span data-ttu-id="0f1b5-173">允許變更此安裝程式所使用之未快取摘要的 URL。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-173">Allows changing the URL for the uncached feed used by this installer.</span></span> <span data-ttu-id="0f1b5-174">建議您不要變更這個值。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-174">We recommended that you don't change this value.</span></span>
 
-- **`-NoCdn`**
+- **`-NoCdn|--no-cdn`**
 
-  <span data-ttu-id="a57ff-172">不允許從 [Azure 內容傳遞網路 (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) 下載，而直接使用未快取的摘要。</span><span class="sxs-lookup"><span data-stu-id="a57ff-172">Disables downloading from the [Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) and uses the uncached feed directly.</span></span>
+  <span data-ttu-id="0f1b5-175">不允許從 [Azure 內容傳遞網路 (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) 下載，而直接使用未快取的摘要。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-175">Disables downloading from the [Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) and uses the uncached feed directly.</span></span>
 
-- **`-FeedCredential`**
+- **`-FeedCredential|--feed-credential`**
 
-  <span data-ttu-id="a57ff-173">用來作為要附加至 Azure 摘要的查詢字串。</span><span class="sxs-lookup"><span data-stu-id="a57ff-173">Used as a query string to append to the Azure feed.</span></span> <span data-ttu-id="a57ff-174">這可允許變更 URL 以使用非公用 Blob 儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="a57ff-174">It allows changing the URL to use non-public blob storage accounts.</span></span>
+  <span data-ttu-id="0f1b5-176">用來作為要附加至 Azure 摘要的查詢字串。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-176">Used as a query string to append to the Azure feed.</span></span> <span data-ttu-id="0f1b5-177">這可允許變更 URL 以使用非公用 Blob 儲存體帳戶。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-177">It allows changing the URL to use non-public blob storage accounts.</span></span>
+
+- **`--runtime-id`**
+
+  <span data-ttu-id="0f1b5-178">指定要安裝工具的[執行時間識別碼](../rid-catalog.md)。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-178">Specifies the [runtime identifier](../rid-catalog.md) for which the tools are being installed.</span></span> <span data-ttu-id="0f1b5-179">使用適用于便攜 Linux 的 `linux-x64`。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-179">Use `linux-x64` for portable Linux.</span></span> <span data-ttu-id="0f1b5-180">（僅適用于 Linux/macOS）</span><span class="sxs-lookup"><span data-stu-id="0f1b5-180">(Only valid for Linux/macOS)</span></span>
 
 - **`-ProxyAddress`**
 
-  <span data-ttu-id="a57ff-175">如果設定，安裝程式會使用此 Proxy 進行 Web 要求。</span><span class="sxs-lookup"><span data-stu-id="a57ff-175">If set, the installer uses the proxy when making web requests.</span></span> <span data-ttu-id="a57ff-176">(只適用於 Windows)</span><span class="sxs-lookup"><span data-stu-id="a57ff-176">(Only valid for Windows)</span></span>
+  <span data-ttu-id="0f1b5-181">如果設定，安裝程式會使用此 Proxy 進行 Web 要求。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-181">If set, the installer uses the proxy when making web requests.</span></span> <span data-ttu-id="0f1b5-182">(只適用於 Windows)</span><span class="sxs-lookup"><span data-stu-id="0f1b5-182">(Only valid for Windows)</span></span>
 
 - **`ProxyUseDefaultCredentials`**
 
-  <span data-ttu-id="a57ff-177">如果設定，當使用 Proxy 位址時，安裝程式會使用目前使用者的認證。</span><span class="sxs-lookup"><span data-stu-id="a57ff-177">If set, the installer uses the credentials of the current user when using proxy address.</span></span> <span data-ttu-id="a57ff-178">(只適用於 Windows)</span><span class="sxs-lookup"><span data-stu-id="a57ff-178">(Only valid for Windows)</span></span>
+  <span data-ttu-id="0f1b5-183">如果設定，當使用 Proxy 位址時，安裝程式會使用目前使用者的認證。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-183">If set, the installer uses the credentials of the current user when using proxy address.</span></span> <span data-ttu-id="0f1b5-184">(只適用於 Windows)</span><span class="sxs-lookup"><span data-stu-id="0f1b5-184">(Only valid for Windows)</span></span>
 
-- **`-SkipNonVersionedFiles`**
+- **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
-  <span data-ttu-id="a57ff-179">如果已經有非版本控制的檔案 (例如 *dotnet.exe*) 存在，便略過其安裝。</span><span class="sxs-lookup"><span data-stu-id="a57ff-179">Skips installing non-versioned files, such as *dotnet.exe*, if they already exist.</span></span>
+  <span data-ttu-id="0f1b5-185">如果已經有非版本控制的檔案 (例如 *dotnet.exe*) 存在，便略過其安裝。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-185">Skips installing non-versioned files, such as *dotnet.exe*, if they already exist.</span></span>
 
-- **`-Help`**
+- **`-Help|--help`**
 
-  <span data-ttu-id="a57ff-180">印出指令碼的說明。</span><span class="sxs-lookup"><span data-stu-id="a57ff-180">Prints out help for the script.</span></span>
+  <span data-ttu-id="0f1b5-186">印出指令碼的說明。</span><span class="sxs-lookup"><span data-stu-id="0f1b5-186">Prints out help for the script.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="a57ff-181">範例</span><span class="sxs-lookup"><span data-stu-id="a57ff-181">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="0f1b5-187">範例</span><span class="sxs-lookup"><span data-stu-id="0f1b5-187">Examples</span></span>
 
-- <span data-ttu-id="a57ff-182">將最新的長期支援 (LTS) 版本安裝至預設位置︰</span><span class="sxs-lookup"><span data-stu-id="a57ff-182">Install the latest long-term supported (LTS) version to the default location:</span></span>
+- <span data-ttu-id="0f1b5-188">將最新的長期支援 (LTS) 版本安裝至預設位置︰</span><span class="sxs-lookup"><span data-stu-id="0f1b5-188">Install the latest long-term supported (LTS) version to the default location:</span></span>
 
-  <span data-ttu-id="a57ff-183">Windows：</span><span class="sxs-lookup"><span data-stu-id="a57ff-183">Windows:</span></span>
+  <span data-ttu-id="0f1b5-189">Windows：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-189">Windows:</span></span>
 
   ```powershell
   ./dotnet-install.ps1 -Channel LTS
   ```
 
-  <span data-ttu-id="a57ff-184">macOS/Linux：</span><span class="sxs-lookup"><span data-stu-id="a57ff-184">macOS/Linux:</span></span>
+  <span data-ttu-id="0f1b5-190">macOS/Linux：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-190">macOS/Linux:</span></span>
 
   ```bash
   ./dotnet-install.sh --channel LTS
   ```
 
-- <span data-ttu-id="a57ff-185">將來自 2.0 通道的最新版本安裝至指定的位置︰</span><span class="sxs-lookup"><span data-stu-id="a57ff-185">Install the latest version from 2.0 channel to the specified location:</span></span>
+- <span data-ttu-id="0f1b5-191">將3.1 通道的最新版本安裝至指定的位置：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-191">Install the latest version from 3.1 channel to the specified location:</span></span>
 
-  <span data-ttu-id="a57ff-186">Windows：</span><span class="sxs-lookup"><span data-stu-id="a57ff-186">Windows:</span></span>
-
-  ```powershell
-  ./dotnet-install.ps1 -Channel 2.0 -InstallDir C:\cli
-  ```
-
-  <span data-ttu-id="a57ff-187">macOS/Linux：</span><span class="sxs-lookup"><span data-stu-id="a57ff-187">macOS/Linux:</span></span>
-
-  ```bash
-  ./dotnet-install.sh --channel 2.0 --install-dir ~/cli
-  ```
-
-- <span data-ttu-id="a57ff-188">安裝共用執行階段 1.1.0 版本：</span><span class="sxs-lookup"><span data-stu-id="a57ff-188">Install the 1.1.0 version of the shared runtime:</span></span>
-
-  <span data-ttu-id="a57ff-189">Windows：</span><span class="sxs-lookup"><span data-stu-id="a57ff-189">Windows:</span></span>
+  <span data-ttu-id="0f1b5-192">Windows：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-192">Windows:</span></span>
 
   ```powershell
-  ./dotnet-install.ps1 -Runtime dotnet -Version 1.1.0
+  ./dotnet-install.ps1 -Channel 3.1 -InstallDir C:\cli
   ```
 
-  <span data-ttu-id="a57ff-190">macOS/Linux：</span><span class="sxs-lookup"><span data-stu-id="a57ff-190">macOS/Linux:</span></span>
+  <span data-ttu-id="0f1b5-193">macOS/Linux：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-193">macOS/Linux:</span></span>
 
   ```bash
-  ./dotnet-install.sh --runtime dotnet --version 1.1.0
+  ./dotnet-install.sh --channel 3.1 --install-dir ~/cli
   ```
 
-- <span data-ttu-id="a57ff-191">取得指令碼並在公司 Proxy 後方安裝 2.1.2 版本 (僅適用於 Windows)：</span><span class="sxs-lookup"><span data-stu-id="a57ff-191">Obtain script and install the 2.1.2 version behind a corporate proxy (Windows only):</span></span>
+- <span data-ttu-id="0f1b5-194">安裝共用執行時間的3.0.0 版本：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-194">Install the 3.0.0 version of the shared runtime:</span></span>
+
+  <span data-ttu-id="0f1b5-195">Windows：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-195">Windows:</span></span>
+
+  ```powershell
+  ./dotnet-install.ps1 -Runtime dotnet -Version 3.0.0
+  ```
+
+  <span data-ttu-id="0f1b5-196">macOS/Linux：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-196">macOS/Linux:</span></span>
+
+  ```bash
+  ./dotnet-install.sh --runtime dotnet --version 3.0.0
+  ```
+
+- <span data-ttu-id="0f1b5-197">取得指令碼並在公司 Proxy 後方安裝 2.1.2 版本 (僅適用於 Windows)：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-197">Obtain script and install the 2.1.2 version behind a corporate proxy (Windows only):</span></span>
 
   ```powershell
   Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -Proxy $env:HTTP_PROXY -ProxyUseDefaultCredentials -OutFile 'dotnet-install.ps1';
   ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
   ```
 
-- <span data-ttu-id="a57ff-192">取得指令碼並安裝 .NET Core CLI 單行範例：</span><span class="sxs-lookup"><span data-stu-id="a57ff-192">Obtain script and install .NET Core CLI one-liner examples:</span></span>
+- <span data-ttu-id="0f1b5-198">取得指令碼並安裝 .NET Core CLI 單行範例：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-198">Obtain script and install .NET Core CLI one-liner examples:</span></span>
 
-  <span data-ttu-id="a57ff-193">Windows：</span><span class="sxs-lookup"><span data-stu-id="a57ff-193">Windows:</span></span>
+  <span data-ttu-id="0f1b5-199">Windows：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-199">Windows:</span></span>
 
   ```powershell
   # Run a separate PowerShell process because the script calls exit, so it will end the current PowerShell session.
   &powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -UseBasicParsing 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
   ```
 
-  <span data-ttu-id="a57ff-194">macOS/Linux：</span><span class="sxs-lookup"><span data-stu-id="a57ff-194">macOS/Linux:</span></span>
+  <span data-ttu-id="0f1b5-200">macOS/Linux：</span><span class="sxs-lookup"><span data-stu-id="0f1b5-200">macOS/Linux:</span></span>
 
   ```bash
   curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a><span data-ttu-id="a57ff-195">請參閱</span><span class="sxs-lookup"><span data-stu-id="a57ff-195">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0f1b5-201">請參閱</span><span class="sxs-lookup"><span data-stu-id="0f1b5-201">See also</span></span>
 
-- [<span data-ttu-id="a57ff-196">.NET Core 版本</span><span class="sxs-lookup"><span data-stu-id="a57ff-196">.NET Core releases</span></span>](https://github.com/dotnet/core/releases)
-- [<span data-ttu-id="a57ff-197">.NET Core 執行階段和 SDK 下載封存</span><span class="sxs-lookup"><span data-stu-id="a57ff-197">.NET Core Runtime and SDK download archive</span></span>](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [<span data-ttu-id="0f1b5-202">.NET Core 版本</span><span class="sxs-lookup"><span data-stu-id="0f1b5-202">.NET Core releases</span></span>](https://github.com/dotnet/core/releases)
+- [<span data-ttu-id="0f1b5-203">.NET Core 執行階段和 SDK 下載封存</span><span class="sxs-lookup"><span data-stu-id="0f1b5-203">.NET Core Runtime and SDK download archive</span></span>](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

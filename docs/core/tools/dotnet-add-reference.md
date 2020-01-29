@@ -2,32 +2,32 @@
 title: dotnet 新增參考命令
 description: dotnet add reference 命令提供方便的選項，以新增專案對專案參考。
 ms.date: 06/26/2019
-ms.openlocfilehash: c97975e11410cfaad18ca68832957d75a4a2fd09
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc8bc01a2bff4f2cf3a8af9efb233448d7de337f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100809"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733279"
 ---
-# <a name="dotnet-add-reference"></a><span data-ttu-id="2973a-103">dotnet add reference</span><span class="sxs-lookup"><span data-stu-id="2973a-103">dotnet add reference</span></span>
+# <a name="dotnet-add-reference"></a><span data-ttu-id="43f2e-103">dotnet add reference</span><span class="sxs-lookup"><span data-stu-id="43f2e-103">dotnet add reference</span></span>
 
-<span data-ttu-id="2973a-104">**本文適用於：✓** .NET Core 1.x SDK 和更新版本</span><span class="sxs-lookup"><span data-stu-id="2973a-104">**This article applies to: ✓** .NET Core 1.x SDK and later versions</span></span>
+<span data-ttu-id="43f2e-104">**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本</span><span class="sxs-lookup"><span data-stu-id="43f2e-104">**This article applies to:** ✔️ .NET Core 1.x SDK and later versions</span></span>
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a><span data-ttu-id="2973a-105">[屬性]</span><span class="sxs-lookup"><span data-stu-id="2973a-105">Name</span></span>
+## <a name="name"></a><span data-ttu-id="43f2e-105">Name</span><span class="sxs-lookup"><span data-stu-id="43f2e-105">Name</span></span>
 
-<span data-ttu-id="2973a-106">`dotnet add reference` - 新增專案對專案 (P2P) 參考。</span><span class="sxs-lookup"><span data-stu-id="2973a-106">`dotnet add reference` - Adds project-to-project (P2P) references.</span></span>
+<span data-ttu-id="43f2e-106">`dotnet add reference` - 新增專案對專案 (P2P) 參考。</span><span class="sxs-lookup"><span data-stu-id="43f2e-106">`dotnet add reference` - Adds project-to-project (P2P) references.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="2973a-107">概要</span><span class="sxs-lookup"><span data-stu-id="2973a-107">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="43f2e-107">概要</span><span class="sxs-lookup"><span data-stu-id="43f2e-107">Synopsis</span></span>
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
 
-## <a name="description"></a><span data-ttu-id="2973a-108">描述</span><span class="sxs-lookup"><span data-stu-id="2973a-108">Description</span></span>
+## <a name="description"></a><span data-ttu-id="43f2e-108">描述</span><span class="sxs-lookup"><span data-stu-id="43f2e-108">Description</span></span>
 
-<span data-ttu-id="2973a-109">`dotnet add reference` 命令提供方便的選項，將專案參考新增至專案。</span><span class="sxs-lookup"><span data-stu-id="2973a-109">The `dotnet add reference` command provides a convenient option to add project references to a project.</span></span> <span data-ttu-id="2973a-110">執行命令之後，`<ProjectReference>` 元素會加入至專案檔。</span><span class="sxs-lookup"><span data-stu-id="2973a-110">After running the command, the `<ProjectReference>` elements are added to the project file.</span></span>
+<span data-ttu-id="43f2e-109">`dotnet add reference` 命令提供方便的選項，將專案參考新增至專案。</span><span class="sxs-lookup"><span data-stu-id="43f2e-109">The `dotnet add reference` command provides a convenient option to add project references to a project.</span></span> <span data-ttu-id="43f2e-110">執行命令之後，`<ProjectReference>` 元素會加入至專案檔。</span><span class="sxs-lookup"><span data-stu-id="43f2e-110">After running the command, the `<ProjectReference>` elements are added to the project file.</span></span>
 
 ```xml
 <ItemGroup>
@@ -37,45 +37,45 @@ ms.locfileid: "73100809"
 </ItemGroup>
 ```
 
-## <a name="arguments"></a><span data-ttu-id="2973a-111">引數</span><span class="sxs-lookup"><span data-stu-id="2973a-111">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="43f2e-111">Arguments</span><span class="sxs-lookup"><span data-stu-id="43f2e-111">Arguments</span></span>
 
 - **`PROJECT`**
 
-  <span data-ttu-id="2973a-112">指定專案檔。</span><span class="sxs-lookup"><span data-stu-id="2973a-112">Specifies the project file.</span></span> <span data-ttu-id="2973a-113">如果未指定，命令會在目前的目錄中搜尋一個專案檔。</span><span class="sxs-lookup"><span data-stu-id="2973a-113">If not specified, the command searches the current directory for one.</span></span>
+  <span data-ttu-id="43f2e-112">指定專案檔。</span><span class="sxs-lookup"><span data-stu-id="43f2e-112">Specifies the project file.</span></span> <span data-ttu-id="43f2e-113">如果未指定，命令會在目前的目錄中搜尋一個專案檔。</span><span class="sxs-lookup"><span data-stu-id="43f2e-113">If not specified, the command searches the current directory for one.</span></span>
 
 - **`PROJECT_REFERENCES`**
 
-  <span data-ttu-id="2973a-114">要新增的專案對專案 (P2P) 參考。</span><span class="sxs-lookup"><span data-stu-id="2973a-114">Project-to-project (P2P) references to add.</span></span> <span data-ttu-id="2973a-115">指定一個或多個專案。</span><span class="sxs-lookup"><span data-stu-id="2973a-115">Specify one or more projects.</span></span> <span data-ttu-id="2973a-116">Unix/Linux 系統支援 [Glob 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。</span><span class="sxs-lookup"><span data-stu-id="2973a-116">[Glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux-based systems.</span></span>
+  <span data-ttu-id="43f2e-114">要新增的專案對專案 (P2P) 參考。</span><span class="sxs-lookup"><span data-stu-id="43f2e-114">Project-to-project (P2P) references to add.</span></span> <span data-ttu-id="43f2e-115">指定一個或多個專案。</span><span class="sxs-lookup"><span data-stu-id="43f2e-115">Specify one or more projects.</span></span> <span data-ttu-id="43f2e-116">Unix/Linux 系統支援 [Glob 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。</span><span class="sxs-lookup"><span data-stu-id="43f2e-116">[Glob patterns](https://en.wikipedia.org/wiki/Glob_(programming)) are supported on Unix/Linux-based systems.</span></span>
 
-## <a name="options"></a><span data-ttu-id="2973a-117">選項</span><span class="sxs-lookup"><span data-stu-id="2973a-117">Options</span></span>
+## <a name="options"></a><span data-ttu-id="43f2e-117">選項</span><span class="sxs-lookup"><span data-stu-id="43f2e-117">Options</span></span>
 
 - **`-h|--help`**
 
-  <span data-ttu-id="2973a-118">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="2973a-118">Prints out a short help for the command.</span></span>
+  <span data-ttu-id="43f2e-118">印出命令的簡短說明。</span><span class="sxs-lookup"><span data-stu-id="43f2e-118">Prints out a short help for the command.</span></span>
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  <span data-ttu-id="2973a-119">只有在以特定[架構](../../standard/frameworks.md)為目標時，才能新增專案參考。</span><span class="sxs-lookup"><span data-stu-id="2973a-119">Adds project references only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
+  <span data-ttu-id="43f2e-119">只有在以特定[架構](../../standard/frameworks.md)為目標時，才能新增專案參考。</span><span class="sxs-lookup"><span data-stu-id="43f2e-119">Adds project references only when targeting a specific [framework](../../standard/frameworks.md).</span></span>
 
 - **`--interactive`**
 
-  <span data-ttu-id="2973a-120">允許命令停止並等候使用者輸入或動作 (例如完成驗證)。</span><span class="sxs-lookup"><span data-stu-id="2973a-120">Allows the command to stop and wait for user input or action (for example, to complete authentication).</span></span> <span data-ttu-id="2973a-121">自 .NET Core 3.0 SDK 起提供。</span><span class="sxs-lookup"><span data-stu-id="2973a-121">Available since .NET Core 3.0 SDK.</span></span>
+  <span data-ttu-id="43f2e-120">允許命令停止並等候使用者輸入或動作 (例如完成驗證)。</span><span class="sxs-lookup"><span data-stu-id="43f2e-120">Allows the command to stop and wait for user input or action (for example, to complete authentication).</span></span> <span data-ttu-id="43f2e-121">自 .NET Core 3.0 SDK 起提供。</span><span class="sxs-lookup"><span data-stu-id="43f2e-121">Available since .NET Core 3.0 SDK.</span></span>
 
-## <a name="examples"></a><span data-ttu-id="2973a-122">範例</span><span class="sxs-lookup"><span data-stu-id="2973a-122">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="43f2e-122">範例</span><span class="sxs-lookup"><span data-stu-id="43f2e-122">Examples</span></span>
 
-- <span data-ttu-id="2973a-123">新增專案參考：</span><span class="sxs-lookup"><span data-stu-id="2973a-123">Add a project reference:</span></span>
+- <span data-ttu-id="43f2e-123">新增專案參考：</span><span class="sxs-lookup"><span data-stu-id="43f2e-123">Add a project reference:</span></span>
 
   ```dotnetcli
   dotnet add app/app.csproj reference lib/lib.csproj
   ```
 
-- <span data-ttu-id="2973a-124">新增目前目錄中專案的多個專案參考：</span><span class="sxs-lookup"><span data-stu-id="2973a-124">Add multiple project references to the project in the current directory:</span></span>
+- <span data-ttu-id="43f2e-124">新增目前目錄中專案的多個專案參考：</span><span class="sxs-lookup"><span data-stu-id="43f2e-124">Add multiple project references to the project in the current directory:</span></span>
 
   ```dotnetcli
   dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
   ```
 
-- <span data-ttu-id="2973a-125">在 Linux/Unix 上使用 Glob 模式新增多個專案參考：</span><span class="sxs-lookup"><span data-stu-id="2973a-125">Add multiple project references using a globbing pattern on Linux/Unix:</span></span>
+- <span data-ttu-id="43f2e-125">在 Linux/Unix 上使用 Glob 模式新增多個專案參考：</span><span class="sxs-lookup"><span data-stu-id="43f2e-125">Add multiple project references using a globbing pattern on Linux/Unix:</span></span>
 
   ```dotnetcli
   dotnet add app/app.csproj reference **/*.csproj
