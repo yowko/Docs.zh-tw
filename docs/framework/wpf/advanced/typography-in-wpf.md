@@ -1,15 +1,15 @@
 ---
-title: WPF 中的印刷樣式
+title: 印刷樣式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3d94873931e3ee6df780df214f508258aa07a791
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740283"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735542"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的印刷樣式
 本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。 這些功能包括改善文字轉譯的品質和效能、OpenType 印刷樣式支援、增強的國際文字、增強的字型支援，以及新的文字應用程式開發介面（Api）。  
@@ -103,7 +103,7 @@ ms.locfileid: "75740283"
   
  ![使用 ScaleTransform 縮放的文字](./media/typography-in-wpf/scaled-text-scaletransform.jpg) 
   
- 下列範例示範沿著 X 軸傾斜的文字。  
+ 下列範例顯示沿著 X 軸扭曲的文字。  
   
  ![使用 SkewTransform 傾斜的文字](./media/typography-in-wpf/skewed-transformed-text.jpg)
   

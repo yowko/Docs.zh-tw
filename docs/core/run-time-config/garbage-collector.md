@@ -3,12 +3,12 @@ title: 垃圾收集行程 config 設定
 description: 瞭解用來設定垃圾收集行程如何管理 .NET Core 應用程式記憶體的執行時間設定。
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900101"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733526"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>用於垃圾收集的執行時間設定選項
 
@@ -38,10 +38,13 @@ ms.locfileid: "75900101"
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
 | **.runtimeconfig.json json** | `System.GC.Server` | `false`-工作站<br/>`true`-伺服器 | .NET Core 1.0 |
+| **MSBuild 屬性** | `ServerGarbageCollection` | `false`-工作站<br/>`true`-伺服器 | .NET Core 1.0 |
 | **環境變數** | `COMPlus_gcServer` | `0`-工作站<br/>`1`-伺服器 | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-工作站<br/>`true`-伺服器 |  |
 
-範例：
+### <a name="examples"></a>範例
+
+*.runtimeconfig.json json*檔案：
 
 ```json
 {
@@ -53,6 +56,18 @@ ms.locfileid: "75900101"
 }
 ```
 
+專案檔：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+
+</Project>
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.web/COMPlus_gcConcurrent
 
 - 設定是否啟用背景（並行）垃圾收集。
@@ -62,10 +77,13 @@ ms.locfileid: "75900101"
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
 | **.runtimeconfig.json json** | `System.GC.Concurrent` | `true`-背景 GC<br/>`false`-非並行 GC | .NET Core 1.0 |
+| **MSBuild 屬性** | `ConcurrentGarbageCollection` | `true`-背景 GC<br/>`false`-非並行 GC | .NET Core 1.0 |
 | **環境變數** | `COMPlus_gcConcurrent` | `true`-背景 GC<br/>`false`-非並行 GC | .NET Core 1.0 |
 | **.NET Framework 的 app.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true`-背景 GC<br/>`false`-非並行 GC |  |
 
-範例：
+### <a name="examples"></a>範例
+
+*.runtimeconfig.json json*檔案：
 
 ```json
 {
@@ -75,6 +93,18 @@ ms.locfileid: "75900101"
       }
    }
 }
+```
+
+專案檔：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="manage-resource-usage"></a>管理資源使用量
@@ -261,10 +291,13 @@ ms.locfileid: "75900101"
 
 | | 設定名稱 | 值 | 引進的版本 |
 | - | - | - | - |
-| **.runtimeconfig.json json** | `System.GC.RetainVM` | `false`-發行至 OS<br/>`true`-put 待命| .NET Core 1.0 |
+| **.runtimeconfig.json json** | `System.GC.RetainVM` | `false`-發行至 OS<br/>`true`-put 待命 | .NET Core 1.0 |
+| **MSBuild 屬性** | `RetainVMGarbageCollection` | `false`-發行至 OS<br/>`true`-put 待命 | .NET Core 1.0 |
 | **環境變數** | `COMPlus_GCRetainVM` | `0`-發行至 OS<br/>`1`-put 待命 | .NET Core 1.0 |
 
-範例：
+### <a name="examples"></a>範例
+
+*.runtimeconfig.json json*檔案：
 
 ```json
 {
@@ -274,6 +307,18 @@ ms.locfileid: "75900101"
       }
    }
 }
+```
+
+專案檔：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="large-pages"></a>大型頁面

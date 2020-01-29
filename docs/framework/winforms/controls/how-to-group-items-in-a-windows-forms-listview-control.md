@@ -1,5 +1,5 @@
 ---
-title: 如何：在 Windows Form ListView 控制項中群組項目
+title: ListView 控制項中的群組專案
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: 1b716498ec5a45fbde499a1f53b2bdccd28a7176
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 45846751780f433c29b186fe8b9a908f5d295ab3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960170"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736622"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>如何：在 Windows Form ListView 控制項中群組項目
 有了 <xref:System.Windows.Forms.ListView> 控制項的群組功能，您就可以在群組中顯示相關的專案集合。 這些群組會以包含群組標題的水準群組標頭分隔在畫面上。 您可以使用 <xref:System.Windows.Forms.ListView> 群組，讓您更輕鬆地流覽大型清單，方法是依字母順序、依日期或任何其他邏輯群組來分組專案。 下圖顯示一些群組的專案。  

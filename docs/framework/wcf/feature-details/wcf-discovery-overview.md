@@ -2,12 +2,12 @@
 title: WCF 探索概觀
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 56d19aa72cc5e7217a2135ef919d611c8b2c2f27
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 46092c3bce87d426f4d465367e99a9ebb6dc37fa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424526"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737484"
 ---
 # <a name="wcf-discovery-overview"></a>WCF 探索概觀
 探索 API 為使用 WS-Discovery 通訊協定動態發行和探索 Web 服務的作業，提供了統一的程式設計模型。 這些 API 可讓服務自行發行，並且讓用戶端尋找發行的服務。 一旦服務變成可探索，就能夠傳送公告訊息，以及接聽和回應探索要求。 可探索的服務可以傳送 Hello 訊息，公告服務抵達網路，以及傳送 Bye 訊息，公告服務離開網路。 若要尋找服務，用戶端可傳送包含特定準則的 `Probe` 要求，例如服務合約型別、關鍵字以及在網路上的範圍。 服務會接收 `Probe` 要求並判斷是否符合準則。 如果服務符合準則，則會將 `ProbeMatch` 訊息傳回至用戶端做為回應，其中包含連絡服務所需的資訊。 用戶端也可以傳送 `Resolve` 要求，以尋找可能已變更其端點位址的服務。 相符的服務會透過將 `Resolve` 訊息傳回用戶端的方式回應 `ResolveMatch` 要求。  
@@ -153,7 +153,7 @@ class Client
   
 2. 使用探索 Proxy 來代表服務通訊  
   
- Windows Server AppFabric 具有自動啟動功能，可讓服務在接收任何訊息之前啟動。 設定這項自動啟動功能之後，即可將 IIS/WAS 裝載的服務設定為可探索。 如需有關自動啟動功能的詳細資訊，請參閱[Windows Server AppFabric 自動啟動功能](https://go.microsoft.com/fwlink/?LinkId=205545)。 除了開啟自動啟動功能以外，您也必須針對探索設定服務。 如需詳細資訊，請參閱[如何：以程式設計方式將探索能力新增至 WCF 服務和用戶端](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[在設定檔中設定探索](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)。  
+ Windows Server AppFabric 具有自動啟動功能，可讓服務在接收任何訊息之前啟動。 設定這項自動啟動功能之後，即可將 IIS/WAS 裝載的服務設定為可探索。 如需有關自動啟動功能的詳細資訊，請參閱[Windows Server AppFabric 自動啟動功能](https://docs.microsoft.com/previous-versions/appfabric/ee677260(v=azure.10))。 除了開啟自動啟動功能以外，您也必須針對探索設定服務。 如需詳細資訊，請參閱[如何：以程式設計方式將探索能力新增至 WCF 服務和用戶端](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[在設定檔中設定探索](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md)。  
   
  當 WCF 服務並未執行時，探索 Proxy 可用來代表服務通訊。 此 Proxy 可接聽探查或解析訊息並回應用戶端。 然後，用戶端就可以將訊息直接傳送至服務。 當用戶端將訊息傳送至服務時，服務將具現化以回應訊息。 如需有關如何執行探索 proxy 的詳細資訊，請參閱[執行探索 proxy](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md)。  
   

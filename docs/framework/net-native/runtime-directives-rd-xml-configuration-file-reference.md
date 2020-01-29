@@ -2,12 +2,12 @@
 title: 執行階段指示詞 (rd.xml) 組態檔參考
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-ms.openlocfilehash: f4c51dc269775d14d395cb464b3787cc987e086d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128134"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738403"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>執行階段指示詞 (rd.xml) 組態檔參考
 
@@ -39,27 +39,69 @@ ms.locfileid: "73128134"
 
 如需參考資訊，請從下列結構中選擇項目，或參閱[執行階段指示詞項目](runtime-directive-elements.md)。 在下列階層中，省略符號標記了遞迴結構。 方括號中的資訊指出該元素是選用或必要元素，以及如果使用該元素，可允許多少執行個體 (一個或多個)。
 
-指示[詞 [1:1](directives-element-net-native.md) ][應用程式](application-element-net-native.md)[0:1][元件](assembly-element-net-native.md)[0： M] [Namespace](namespace-element-net-native.md) [0： m]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[輸入](type-element-net-native.md)[0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[Namespace](namespace-element-net-native.md) [0： m] [namespace](namespace-element-net-native.md) [0： m]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[輸入](type-element-net-native.md)[0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[輸入](type-element-net-native.md)[0： m][子](subtypes-element-net-native.md)類型（包含類型的子類別） [O:1][類型](type-element-net-native.md)[0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[AttributeImplies](attributeimplies-element-net-native.md) （包含類型是屬性） [O:1] [GenericParameter](genericparameter-element-net-native.md) [0： m][方法](method-element-net-native.md)[0： M][參數](parameter-element-net-native.md)[0： m] [TypeParameter](typeparameter-element-net-native.md) [0： m] [GenericParameter](genericparameter-element-net-native.md) [0： m] [MethodInstantiation](methodinstantiation-element-net-native.md) （結構化泛型方法） [0： M][屬性](property-element-net-native.md)[0： m][欄位](field-element-net-native.md)[0： m][事件](event-element-net-native.md)[0： m] [TypeInstantiation](typeinstantiation-element-net-native.md) （結構化的泛型型別） [0： m][類型](type-element-net-native.md)[0： m]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[方法](method-element-net-native.md)[0： m][參數](parameter-element-net-native.md)[0： m] [TypeParameter](typeparameter-element-net-native.md) [0： M] [GenericParameter](genericparameter-element-net-native.md) [0： m] [MethodInstantiation](methodinstantiation-element-net-native.md) （結構化的泛型方法） [0： m][屬性](property-element-net-native.md)[0： M][欄位](field-element-net-native.md)[0： M][事件](event-element-net-native.md)[0： m] [程式庫](library-element-net-native.md)[0： m][元件](assembly-element-net-native.md)[0： M] [Namespace](namespace-element-net-native.md) [0： m]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[輸入](type-element-net-native.md)[0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[Namespace](namespace-element-net-native.md) [0： m] [namespace](namespace-element-net-native.md) [0： m]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[輸入](type-element-net-native.md)[0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[輸入](type-element-net-native.md)[0： m][子](subtypes-element-net-native.md)類型（包含類型的子類別） [O:1][類型](type-element-net-native.md)[0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[AttributeImplies](attributeimplies-element-net-native.md) （包含類型是屬性） [O:1] [GenericParameter](genericparameter-element-net-native.md) [0： m][方法](method-element-net-native.md)[0： m] [MethodInstantiation](methodinstantiation-element-net-native.md) （已結構化的泛型方法） [0： m][屬性](property-element-net-native.md)[0： M][欄位](field-element-net-native.md)[0： m][事件](event-element-net-native.md)[0： M] [TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： m][類型](type-element-net-native.md)[0： m]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 執行個體時提供 SQL Server 登入。 執行個體時提供 SQL Server 登入。
-[方法](method-element-net-native.md)[0： m] [MethodInstantiation](methodinstantiation-element-net-native.md) （結構化的泛型方法） [0： m][屬性](property-element-net-native.md)[0： M][欄位](field-element-net-native.md)[0： M][事件](event-element-net-native.md)[0： m]
+- [Directives](directives-element-net-native.md) [1:1]
+  - [Application](application-element-net-native.md) [0:1]
+    - [Assembly](assembly-element-net-native.md) [0:M]
+      - [命名空間](namespace-element-net-native.md)[0： M]。 。 。
+      - [輸入](type-element-net-native.md)[0： M]。 。 。
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 。 。
+    - [Namespace](namespace-element-net-native.md) [0:M]
+      - [命名空間](namespace-element-net-native.md)[0： M]。 。 。
+      - [輸入](type-element-net-native.md)[0： M]。 。 。
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 。 。
+    - [Type](type-element-net-native.md) [0:M]
+      - [Subtypes](subtypes-element-net-native.md) (包含類型的子類別) [O:1]
+      - [輸入](type-element-net-native.md)[0： M]。 。 。
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 。 。
+      - [AttributeImplies](attributeimplies-element-net-native.md) (包含類型是屬性) [O:1]
+      - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [Method](method-element-net-native.md) [0:M]
+        - [Parameter](parameter-element-net-native.md) [0:M]
+        - [TypeParameter](typeparameter-element-net-native.md) [0:M]
+        - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (建構的泛型方法) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+    - [TypeInstantiation](typeinstantiation-element-net-native.md) (建構的泛型型別) [0:M]
+      - [輸入](type-element-net-native.md)[0： M]。 。 。
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 。 。
+      - [Method](method-element-net-native.md) [0:M]
+        - [Parameter](parameter-element-net-native.md) [0:M]
+        - [TypeParameter](typeparameter-element-net-native.md) [0:M]
+        - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (建構的泛型方法) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+  - [Library](library-element-net-native.md) [0:M]
+    - [Assembly](assembly-element-net-native.md) [0:M]
+      - [命名空間](namespace-element-net-native.md)[0： M]。 。 。
+      - [輸入](type-element-net-native.md)[0： M]。 。 。
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 。 。
+    - [Namespace](namespace-element-net-native.md) [0:M]
+      - [命名空間](namespace-element-net-native.md)[0： M]。 。 。
+      - [輸入](type-element-net-native.md)[0： M]。 。 。
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 。 。
+    - [Type](type-element-net-native.md) [0:M]
+      - [Subtypes](subtypes-element-net-native.md) (包含類型的子類別) [O:1]
+      - [輸入](type-element-net-native.md)[0： M]。 。 。
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 。 。
+      - [AttributeImplies](attributeimplies-element-net-native.md) (包含類型是屬性) [O:1]
+      - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [Method](method-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (建構的泛型方法) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+    - [TypeInstantiation](typeinstantiation-element-net-native.md) (建構的泛型型別) [0:M]
+      - [輸入](type-element-net-native.md)[0： M]。 。 。
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) （結構化泛型型別） [0： M]。 。 。
+      - [Method](method-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (建構的泛型方法) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
 
 [Application](application-element-net-native.md) 項目可以沒有任何屬性，或者可以有[執行階段指示詞和原則](#Directives)一節中所描述的原則屬性。
 
@@ -90,43 +132,43 @@ ms.locfileid: "73128134"
 
 [Application](application-element-net-native.md)、[Assembly](assembly-element-net-native.md)、[AttributeImplies](attributeimplies-element-net-native.md)、[Namespace](namespace-element-net-native.md)、[Subtypes](subtypes-element-net-native.md) 和 [Type](type-element-net-native.md) 項目支援下列原則類型：
 
-- `Activate` 控制建構函式的執行階段存取，以便啟動執行個體。
+- `Activate`。 控制建構函式的執行階段存取，以便啟動執行個體。
 
-- `Browse` 控制程式項目相關資訊的查詢，但不會啟用任何執行階段存取。
+- `Browse`。 控制程式項目相關資訊的查詢，但不會啟用任何執行階段存取。
 
-- `Dynamic` 控制對所有類型成員 (包括建構函式、方法、欄位、屬性和事件) 的執行階段存取，以啟用動態程式設計。
+- `Dynamic`。 控制對所有類型成員 (包括建構函式、方法、欄位、屬性和事件) 的執行階段存取，以啟用動態程式設計。
 
-- `Serialize` 控制對建構函式、欄位和屬性的執行階段存取，讓類型執行個體能夠以 Newtonsoft JSON 序列化程式之類的協力廠商程式庫來序列化和還原序列化。
+- `Serialize`。 控制對建構函式、欄位和屬性的執行階段存取，讓類型執行個體能夠以 Newtonsoft JSON 序列化程式之類的協力廠商程式庫來序列化和還原序列化。
 
-- `DataContractSerializer` 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 類別的序列化原則。
+- `DataContractSerializer`。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 類別的序列化原則。
 
-- `DataContractJsonSerializer` 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 類別的 JSON 序列化原則。
+- `DataContractJsonSerializer`。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 類別的 JSON 序列化原則。
 
-- `XmlSerializer` 控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 類別的 XML 序列化原則。
+- `XmlSerializer`。 控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 類別的 XML 序列化原則。
 
-- `MarshalObject` 控制將參考類型封送處理至 WinRT 及 COM 的原則。
+- `MarshalObject`。 控制將參考類型封送處理至 WinRT 及 COM 的原則。
 
-- `MarshalDelegate` 控制將委派類型當作函式指標封送處理至機器碼的原則。
+- `MarshalDelegate`。 控制將委派類型當作函式指標封送處理至機器碼的原則。
 
 - `MarshalStructure` . 控制將結構封送處理至機器碼的原則。
 
 與這些原則類型相關聯的設定如下：
 
-- `All` 針對工具鏈未移除的所有類型和成員，啟用原則。
+- `All`。 針對工具鏈未移除的所有類型和成員，啟用原則。
 
-- `Auto` 使用預設行為。 (除非原則被 (例如父元素) 覆寫，否則，不指定原則相當於將該原則設定為 `Auto`。)
+- `Auto`。 使用預設行為。 (除非原則被 (例如父元素) 覆寫，否則，不指定原則相當於將該原則設定為 `Auto`。)
 
-- `Excluded` 為程式元素停用原則。
+- `Excluded`。 為程式元素停用原則。
 
-- `Public` 為公用類型或成員啟用原則，除非工具鏈判斷該成員是不必要的，並因此將它移除。 (在後者的情況下，您必須使用 `Required Public` 以確保該成員會保留，而且具有反映功能。)
+- `Public`。 為公用類型或成員啟用原則，除非工具鏈判斷該成員是不必要的，並因此將它移除。 (在後者的情況下，您必須使用 `Required Public` 以確保該成員會保留，而且具有反映功能。)
 
-- `PublicAndInternal` 如果公用和內部類型或成員沒有被工具鏈移除，則為其啟用原則。
+- `PublicAndInternal`。 如果公用和內部類型或成員沒有被工具鏈移除，則為其啟用原則。
 
-- `Required Public` 需要工具鏈保留公用類型和成員 (無論是否使用)，並為其啟用原則。
+- `Required Public`。 需要工具鏈保留公用類型和成員 (無論是否使用)，並為其啟用原則。
 
-- `Required PublicAndInternal` 需要工具鏈同時保留公用和內部類型和成員 (無論是否使用)，並為其啟用原則。
+- `Required PublicAndInternal`。 需要工具鏈同時保留公用和內部類型和成員 (無論是否使用)，並為其啟用原則。
 
-- `Required All` 需要工具鏈保留所有類型和成員 (無論是否使用)，並為其啟用原則。
+- `Required All`。 需要工具鏈保留所有類型和成員 (無論是否使用)，並為其啟用原則。
 
 例如，下列執行階段指示詞檔案會為組件 DataClasses.dll 中的所有類型和成員定義原則。 它會為所有公用屬性 (property) 的序列化啟用反映功能，為所有類型和類型成員啟用瀏覽功能，為所有類型啟用啟動功能 (因為 `Dynamic` 屬性 (attribute))，並為所有公用類型和成員啟用反映功能。
 

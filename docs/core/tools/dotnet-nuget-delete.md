@@ -3,22 +3,22 @@ title: dotnet nuget delete 命令
 description: dotnet-nuget-delete 命令會從伺服器刪除或取消列出套件。
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 79634baa9d6d7ff1f388f6a794ffd816687be105
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0950f03c0986bde17ae3e2e7170d402ea8222853
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117638"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733129"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
-**本主題適用於：✓** .NET Core 1.x SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet nuget delete` - 從伺服器刪除或取消列出套件。
 
@@ -34,7 +34,7 @@ dotnet nuget delete [-h|--help]
 
 `dotnet nuget delete` 命令會從伺服器刪除或取消列出套件。 對於 [nuget.org](https://www.nuget.org/)，該動作是取消列出套件。
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a>Arguments
 
 * **`PACKAGE_NAME`**
 

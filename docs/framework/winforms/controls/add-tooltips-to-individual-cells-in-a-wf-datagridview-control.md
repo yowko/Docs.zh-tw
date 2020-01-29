@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將工具提示新增至 Windows Forms DataGridView 控制項的個別儲存格
+title: 將工具提示加入至 DataGridView 控制項中的個別儲存格
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-ms.openlocfilehash: d0e9b3ad742633b135a2fe1c00af3fa72af7b44a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac86db5fa27a95adb20888cd59b5e236941d9177
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663461"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732188"
 ---
-# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>HOW TO：將工具提示新增至 Windows Forms DataGridView 控制項的個別儲存格
-根據預設，工具提示用來顯示值<xref:System.Windows.Forms.DataGridView>太小，無法顯示其完整內容的儲存格。 您可以覆寫這個行為，不過，設定個別資料格的工具提示文字值。 這是要顯示給使用者的其他資訊的資料格，或為使用者提供的儲存格內容的其他說明很有用。 比方說，如果您有顯示狀態圖示的資料列時，您可能想要提供使用工具提示的文字說明。  
+# <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>如何：將工具提示加入至 Windows Form DataGridView 控制項中的個別儲存格
+根據預設，工具提示是用來顯示太小而無法顯示其全部內容的 <xref:System.Windows.Forms.DataGridView> 資料格的值。 不過，您可以覆寫此行為，以設定個別資料格的工具提示文字值。 這適用于向使用者顯示資料格的其他相關資訊，或為使用者提供資料格內容的替代描述。 例如，如果您有一個顯示狀態圖示的資料列，您可能會想要使用工具提示來提供文字說明。  
   
- 您也可以停用的資料格層級的工具提示顯示設定<xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>屬性設`false`。  
+ 您也可以將 [<xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>] 屬性設定為 [`false`]，以停用資料格層級工具提示的顯示。  
   
-### <a name="to-add-a-tooltip-to-a-cell"></a>若要加入儲存格的工具提示  
+### <a name="to-add-a-tooltip-to-a-cell"></a>若要將工具提示加入至資料格  
   
 - 設定 <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType> 屬性。  
   
@@ -34,14 +34,14 @@ ms.locfileid: "64663461"
   
 - 這個範例需要：  
   
-- A<xref:System.Windows.Forms.DataGridView>控制項，名為`dataGridView1`，其中包含資料行，名為`Rating`顯示透過四個星號的字串值 ("*") 符號。 <xref:System.Windows.Forms.DataGridView.CellFormatting>控制項事件的範例所示的事件處理常式方法必須有關聯。  
+- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項，其中包含名為 `Rating` 的資料行，可顯示一到四個星號（"*"）符號的字串值。 控制項的 <xref:System.Windows.Forms.DataGridView.CellFormatting> 事件必須與範例中所示的事件處理常式方法相關聯。  
   
 - <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
-## <a name="robust-programming"></a>穩固程式設計  
- 當您繫結<xref:System.Windows.Forms.DataGridView>控制權傳輸至外部資料來源或提供您自己的資料來源，藉由實作虛擬模式，您可能會遇到效能問題。 若要使用的大量資料時，請避免對效能帶來負面影響，處理<xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded>事件，而不是設定<xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>的多個資料格的屬性。 當您處理這個事件，取得儲存格的值<xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A>屬性引發事件，並傳回值<xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType>屬性做為事件中指定處理常式。  
+## <a name="robust-programming"></a>最佳化程式設計  
+ 當您將 <xref:System.Windows.Forms.DataGridView> 控制項系結到外部資料源，或藉由執行虛擬模式來提供自己的資料來源時，可能會遇到效能問題。 若要避免使用大量資料時的效能損失，請處理 <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> 事件，而不是設定多個儲存格的 <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> 屬性。 當您處理這個事件時，取得資料格的值 <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> 屬性會引發事件，並傳回事件處理常式中所指定 <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> 屬性的值。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>

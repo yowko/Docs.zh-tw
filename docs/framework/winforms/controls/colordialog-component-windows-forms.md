@@ -1,30 +1,30 @@
 ---
-title: ColorDialog 元件 (Windows Form)
+title: ColorDialog 元件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ColorDialog component
 - colors [Windows Forms], dialog box
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-ms.openlocfilehash: d04794df6bce82573ff8f53b282a4d945933b1bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b44774fcace82f7e209440bc15705ad632bc223
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956308"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736930"
 ---
 # <a name="colordialog-component-windows-forms"></a>ColorDialog 元件 (Windows Form)
-Windows Form<xref:System.Windows.Forms.ColorDialog>元件是預先設定的對話方塊，可讓使用者從調色盤選取色彩，並將自訂色彩新增至該調色盤。 這是您在其他 Windows 應用程式中看到可選取色彩的相同對話方塊。 只要在 Windows 應用程式中使用這個控制項，便不需要設定自己的對話方塊。  
+Windows Forms <xref:System.Windows.Forms.ColorDialog> 元件是預先設定的對話方塊，可讓使用者從調色板選取色彩，並將自訂色彩新增至該色板。 這是您在其他 Windows 應用程式中看到可選取色彩的相同對話方塊。 只要在 Windows 應用程式中使用這個控制項，便不需要設定自己的對話方塊。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [ColorDialog 元件概觀](colordialog-component-overview-windows-forms.md)  
- 導入的一般概念<xref:System.Windows.Forms.ColorDialog>元件，可讓您顯示預先設定的對話方塊，讓使用者可以使用從調色盤選取色彩。  
+ 介紹 <xref:System.Windows.Forms.ColorDialog> 元件的一般概念，可讓您顯示預先設定的對話方塊，使用者可以使用此對話方塊來選取調色板中的色彩。  
   
- [如何：變更 Windows Form ColorDialog 元件的外觀](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  
+ [如何：變更 Windows Forms ColorDialog 元件的外觀](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  
  描述如何變更使用者可用的色彩和其他屬性。  
   
- [如何：顯示色彩調色盤使用 ColorDialog 元件](how-to-show-a-color-palette-with-the-colordialog-component.md)  
- 說明如何在執行階段選取色彩的執行個體透過<xref:System.Windows.Forms.ColorDialog>元件。  
+ [如何：使用 ColorDialog 元件顯示色板](how-to-show-a-color-palette-with-the-colordialog-component.md)  
+ 說明如何透過 <xref:System.Windows.Forms.ColorDialog> 元件的實例，在執行時間選取色彩。  
   
 ## <a name="related-sections"></a>相關章節  
  [可以在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)  

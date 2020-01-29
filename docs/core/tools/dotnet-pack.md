@@ -2,42 +2,42 @@
 title: dotnet pack 命令
 description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
 ms.date: 08/08/2019
-ms.openlocfilehash: 99dd8e35601f82adf2a3101121028f191a4c3da4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117654"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734117"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**本主題適用於：✓** .NET Core 1.x SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet pack` - 將程式碼封裝到 NuGet 套件。
 
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive]
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable]
     [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
 ## <a name="description"></a>描述
 
-`dotnet pack` 命令會建置專案，並建立 NuGet 套件。 此命令的結果是 NuGet 套件（也就是*nupkg*檔案）。 
+`dotnet pack` 命令會建置專案，並建立 NuGet 套件。 此命令的結果是 NuGet 套件（也就是*nupkg*檔案）。
 
 如果您想要產生包含 debug 符號的封裝，您有兩個可用的選項：
 
 - `--include-symbols`-它會建立符號套件。
-- `--include-source`-它會建立符號套件，並`src`在其中包含來源檔案的資料夾。
+- `--include-source`-它會在包含來源檔案的 `src` 資料夾中建立符號套件。
 
 封裝專案的 NuGet 相依性會新增至 *.nuspec* 檔案，因此在安裝套件時可以正確地解析它們。 專案對專案參考不會封裝到專案內。 目前，如果您有專案對專案相依性，則必須一個專案各一個套件。
 
@@ -55,7 +55,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a>Arguments
 
 `PROJECT | SOLUTION`
 
@@ -77,7 +77,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 - **`--include-source`**
 
-  除了輸出目錄中的一般 NuGet 套件外，還包含 debug 符號 NuGet 套件。 來源檔案會包含在符號封裝`src`內的資料夾中。
+  除了輸出目錄中的一般 NuGet 套件外，還包含 debug 符號 NuGet 套件。 來源檔案會包含在符號套件的 [`src`] 資料夾中。
 
 - **`--include-symbols`**
 
@@ -85,7 +85,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 - **`--interactive`**
 
-  允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供使用。
+  允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供。
 
 - **`--no-build`**
 
@@ -101,7 +101,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 - **`--nologo`**
 
-  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供使用。
+  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供。
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 

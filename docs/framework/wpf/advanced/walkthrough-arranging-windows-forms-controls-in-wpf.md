@@ -1,5 +1,6 @@
 ---
-title: 逐步解說：在 WPF 中排列 Windows Form 控制項
+title: 在 WPF 中排列 Windows Forms 控制項
+titleSuffix: ''
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197837"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735294"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>逐步解說：在 WPF 中排列 Windows Form 控制項
 
@@ -31,7 +32,7 @@ ms.locfileid: "73197837"
 - 停駐。
 - 設定可見度。
 - 裝載不會自動縮放的控制項。
-- 縮放。
+- 調整。
 - 旋轉。
 - 設定邊框距離及邊界。
 - 使用動態版面配置容器。
@@ -40,7 +41,7 @@ ms.locfileid: "73197837"
 
 當您完成時，您將瞭解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]型應用程式中 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 的版面配置功能。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 若要完成這個逐步解說，您必須具有 Visual Studio。
 
@@ -149,7 +150,7 @@ ms.locfileid: "73197837"
 
 2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會在 label 元素上繪製。
 
-## <a name="docking"></a>停駐
+## <a name="docking"></a>Docking
 
 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素支援 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 銜接。 設定 <xref:System.Windows.Controls.DockPanel.Dock%2A> 附加屬性，將裝載的控制項停駐在 <xref:System.Windows.Controls.DockPanel> 元素中。
 

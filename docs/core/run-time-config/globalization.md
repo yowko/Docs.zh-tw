@@ -3,12 +3,12 @@ title: 全球化 config 設定
 description: 瞭解設定 .NET Core 應用程式全球化層面的執行時間設定，例如，它如何剖析日文日期。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 76cd4a0a0f93f4df3ff243c6024b952576e8e6cb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3764d0eb714c094b44ae843a1e626073ff8d82e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740536"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733461"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>全球化的執行時間設定選項
 
@@ -21,7 +21,34 @@ ms.locfileid: "75740536"
 | | 設定名稱 | 值 |
 | - | - | - |
 | **.runtimeconfig.json json** | `System.Globalization.Invariant` | `false`-文化特性資料的存取權<br/>`true`-在不變模式下執行 |
+| **MSBuild 屬性** | `InvariantGlobalization` | `false`-文化特性資料的存取權<br/>`true`-在不變模式下執行 |
 | **環境變數** | `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` | `0`-文化特性資料的存取權<br/>`1`-在不變模式下執行 |
+
+### <a name="examples"></a>範例
+
+*.runtimeconfig.json json*檔案：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Globalization.Invariant": true
+      }
+   }
+}
+```
+
+專案檔：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+</Project>
+```
 
 ## <a name="era-year-ranges"></a>紀元年份範圍
 

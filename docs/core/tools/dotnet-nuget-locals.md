@@ -3,22 +3,22 @@ title: dotnet nuget locals 命令
 description: dotnet nuget locals 命令會清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: cb5747636aa9d04f1ef6a6ff9309ba29c0630dd6
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: b57c127650555e412af08df6656fb62d75c8ed7c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087398"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734075"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**本主題適用於：✓** .NET Core 1.x SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>[屬性]
+## <a name="name"></a>Name
 
 `dotnet nuget locals` - 清除或列出本機 NuGet 資源。
 
@@ -33,7 +33,7 @@ dotnet nuget locals [-h|--help]
 
 `dotnet nuget locals` 命令會清除或列出 http-request 快取、暫時快取，或整部電腦全域套件資料夾中的本機 NuGet 資源。
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a>Arguments
 
 * **`CACHE_LOCATION`**
 

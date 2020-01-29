@@ -2,16 +2,16 @@
 title: dotnet-計數器-.NET Core
 description: 瞭解如何安裝和使用 dotnet-counter 命令列工具。
 ms.date: 10/14/2019
-ms.openlocfilehash: 10af451a8b1b4d8b27da1490b99b19a4359c860f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 399d5908e8ac52bcd4a20c1a819fc6c99f4de2f4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740798"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737701"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
-**本文適用于：✓** .net CORE 3.0 SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
 ## <a name="install-dotnet-counters"></a>安裝 dotnet-計數器
 

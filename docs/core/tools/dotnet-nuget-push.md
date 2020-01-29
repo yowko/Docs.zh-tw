@@ -3,16 +3,16 @@ title: dotnet nuget push 命令
 description: dotnet nuget push 命令會將套件推送至伺服器並發行。
 author: karann-msft
 ms.date: 12/04/2019
-ms.openlocfilehash: 5e80295a570adc30a06d86b6735cb0387e39d5a3
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
-ms.translationtype: MT
+ms.openlocfilehash: a483c559dee8b4a82cc2c792f5c2c5e4a8ff3f87
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835515"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733103"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**本主題適用於：✓** .NET Core 1.x SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -77,7 +77,7 @@ dotnet nuget push [-h|--help]
 * **`--skip-duplicate`**
 
   將多個封裝推送至 HTTP （S）伺服器時，會將任何409衝突回應視為警告，讓推送可以繼續進行。 自 .NET Core 3.1 SDK 起提供。
-                                 
+
 * **`-sk|--symbol-api-key <API_KEY>`**
 
   符號伺服器的 API 金鑰。
@@ -127,11 +127,11 @@ dotnet nuget push [-h|--help]
   ```dotnetcli
   dotnet nuget push *.nupkg
   ```
-  
+
   > [!NOTE]
   > 如果此命令無法運作，可能是舊版 SDK (.NET Core 2.1 SDK 及更舊版本) 中有 Bug 所致。
   > 若要修正此問題，請升級您的 SDK 版本，或改為執行下列命令：`dotnet nuget push **/*.nupkg`
-  
+
 * 會推送所有*的 nupkg*檔案，即使 HTTP （S）伺服器傳回409衝突回應也一樣：
 
   ```dotnetcli

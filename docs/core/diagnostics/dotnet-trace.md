@@ -2,16 +2,16 @@
 title: dotnet-追蹤工具-.NET Core
 description: 安裝和使用 dotnet 追蹤命令列工具。
 ms.date: 11/21/2019
-ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b19b159636fbf57fa2d461b398fcf9234aab491c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714426"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737655"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-追蹤效能分析公用程式
 
-**本文適用于：** ✓ .net CORE 3.0 SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
 ## <a name="install-dotnet-trace"></a>安裝 dotnet-追蹤
 
@@ -38,7 +38,7 @@ dotnet-trace [-h, --help] [--version] <command>
 
 ## <a name="options"></a>選項
 
-- **`--version`**  
+- **`--version`**
 
   顯示 dotnet 計數器公用程式的版本。
 

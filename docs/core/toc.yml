@@ -386,10 +386,7 @@
           href: tutorials/creating-app-with-plugin-support.md
         - name: 如何使用 .NET Core 中的組件卸載功能及對其進行偵錯
           href: ../standard/assembly/unloadability-howto.md
-- name: 從原始檔建置 .NET Core
-  href: build/index.md
+- name: .NET Core 發佈封裝
   items:
-    - name: .NET Core 發佈封裝
-      href: build/distribution-packaging.md
-- name: VS 2015/project.json 文件
-  href: ../project-json.md
+    - name: 總覽
+      href: distribution-packaging.md

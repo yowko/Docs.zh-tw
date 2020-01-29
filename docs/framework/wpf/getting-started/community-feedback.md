@@ -1,5 +1,5 @@
 ---
-title: WPF 社區意見反應
+title: 社群資源
 ms.date: 03/01/2018
 helpviewer_keywords:
 - community resources [WPF]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ebeae3e51cedd3add2de4062c8914693ac94f7b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a9e903045195d6f464659876334f7fedc5c695e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197002"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733804"
 ---
 # <a name="wpf-community-feedback"></a>WPF 社區意見反應
 
@@ -22,7 +22,7 @@ Microsoft 會公開各種不同的社區資源，讓您瞭解、討論和提供�
 > [!NOTE]
 > 請勿使用位於每個頁面底部的 [意見反應] 區段來傳送產品意見反應。 這些連結僅適用於對文件的意見反應。
 
-## <a name="forums"></a>論壇
+## <a name="forums"></a>Forums
 
 [WPF 論壇](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf)是討論和解決問題的主要「社區」資源。 論壇提供了一組完整的支援功能以進行討論及解決問題，包括：
 

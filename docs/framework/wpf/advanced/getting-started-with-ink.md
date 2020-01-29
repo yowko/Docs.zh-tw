@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio 的 WPF 應用程式中建立 InkCanvas
+title: 在 Visual Studio 中建立 InkCanvas
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: b8087d6db04f7024b9ee48f28002bee04045a14b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920244"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737883"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>開始使用 WPF 中的筆跡
 
 Windows Presentation Foundation （WPF）有一項筆墨功能，可讓您輕鬆地將數位筆跡併入應用程式中。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 若要使用下列範例，請先安裝[Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 它也有助於知道如何撰寫基本的 WPF 應用程式。 如需 WPF 入門的說明，請參閱[逐步解說：我的第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 

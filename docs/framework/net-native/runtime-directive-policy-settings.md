@@ -2,12 +2,12 @@
 title: 執行階段指示詞原則設定
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
-ms.openlocfilehash: 6001e3855610e7da5262c46413b775da3bea305c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a8933decaec45e8000f3f3d1717847f333deddd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128156"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738499"
 ---
 # <a name="runtime-directive-policy-settings"></a>執行階段指示詞原則設定
 
@@ -32,24 +32,24 @@ ms.locfileid: "73128156"
 
   下表列出反映原則類型，以及可與其搭配使用的程式元素。
 
-  |項目|啟動|瀏覽|動態|
+  |項目|啟用|瀏覽|動態|
   |-------------|--------------|------------|-------------|
-  |[\<Application>](application-element-net-native.md)|✓|✓|✓|
-  |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|
-  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✓|✓|✓|
-  |[\<Event>](event-element-net-native.md)||✓|✓|
-  |[\<Field>](field-element-net-native.md)||✓|✓|
-  |[\<GenericParameter>](genericparameter-element-net-native.md)|✓|✓|✓|
-  |[\<ImpliesType>](impliestype-element-net-native.md)|✓|✓|✓|
-  |[\<Method>](method-element-net-native.md)||✓|✓|
-  |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)||✓|✓|
-  |[\<Namespace>](namespace-element-net-native.md)|✓|✓|✓|
-  |[\<Parameter>](parameter-element-net-native.md)|✓|✓|✓|
-  |[\<Property>](property-element-net-native.md)||✓|✓|
-  |[\<Subtypes>](subtypes-element-net-native.md)|✓|✓|✓|
-  |[\<Type>](type-element-net-native.md)|✓|✓|✓|
-  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✓|✓|✓|
-  |[\<TypeParameter>](typeparameter-element-net-native.md)|✓|✓|✓|
+  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
+  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Event>](event-element-net-native.md)||✔️|✔️|
+  |[\<Field>](field-element-net-native.md)||✔️|✔️|
+  |[\<GenericParameter>](genericparameter-element-net-native.md)|✔️|✔️|✔️|
+  |[\<ImpliesType>](impliestype-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Method>](method-element-net-native.md)||✔️|✔️|
+  |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)||✔️|✔️|
+  |[\<Namespace>](namespace-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Parameter>](parameter-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Property>](property-element-net-native.md)||✔️|✔️|
+  |[\<Subtypes>](subtypes-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Type>](type-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|
 
 - 序列化原則類型可決定哪些中繼資料可在執行階段供序列化和還原序列化使用：
 
@@ -65,22 +65,22 @@ ms.locfileid: "73128156"
 
   |項目|序列化|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
   |-------------|---------------|----------------------------|--------------------------------|-------------------|
-  |[\<Application>](application-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|✓|
-  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)|||||
-  |[\<Field>](field-element-net-native.md)|✓||||
-  |[\<GenericParameter>](genericparameter-element-net-native.md)|✓|✓|✓|✓|
-  |[\<ImpliesType>](impliestype-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Field>](field-element-net-native.md)|✔️||||
+  |[\<GenericParameter>](genericparameter-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<ImpliesType>](impliestype-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Method>](method-element-net-native.md)|||||
   |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)|||||
-  |[\<Namespace>](namespace-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Parameter>](parameter-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Property>](property-element-net-native.md)|✓||||
-  |[\<Subtypes>](subtypes-element-net-native.md)|✓|✓|✓|✓|
-  |[\<Type>](type-element-net-native.md)|✓|✓|✓|✓|
-  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✓|✓|✓|✓|
-  |[\<TypeParameter>](typeparameter-element-net-native.md)|✓|✓|✓|✓|
+  |[\<Namespace>](namespace-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Parameter>](parameter-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Property>](property-element-net-native.md)|✔️||||
+  |[\<Subtypes>](subtypes-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<Type>](type-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|✔️|
 
 - Interop 原則類型可決定哪些中繼資料在執行階段可供使用，以將參考類型、值類型和函式指標傳遞至 COM 和 Windows 執行階段：
 
@@ -94,22 +94,22 @@ ms.locfileid: "73128156"
 
   |項目|MarshalObject|MarshalDelegate|MarshalStructure|
   |-------------|-------------------|---------------------|----------------------|
-  |[\<Application>](application-element-net-native.md)|✓|✓|✓|
-  |[\<Assembly>](assembly-element-net-native.md)|✓|✓|✓|
-  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✓|✓|✓|
+  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
+  |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)||||
   |[\<Field>](field-element-net-native.md)||||
-  |[\<GenericParameter>](genericparameter-element-net-native.md)|✓|✓|✓|
-  |[\<ImpliesType>](impliestype-element-net-native.md)|✓|✓|✓|
+  |[\<GenericParameter>](genericparameter-element-net-native.md)|✔️|✔️|✔️|
+  |[\<ImpliesType>](impliestype-element-net-native.md)|✔️|✔️|✔️|
   |[\<Method>](method-element-net-native.md)||||
   |[\<MethodInstantiation>](methodinstantiation-element-net-native.md)||||
-  |[\<Namespace>](namespace-element-net-native.md)|✓|✓|✓|
-  |[\<Parameter>](parameter-element-net-native.md)|✓|✓|✓|
+  |[\<Namespace>](namespace-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Parameter>](parameter-element-net-native.md)|✔️|✔️|✔️|
   |[\<Property>](property-element-net-native.md)||||
-  |[\<Subtypes>](subtypes-element-net-native.md)|✓|✓|✓|
-  |[\<Type>](type-element-net-native.md)|✓|✓|✓|
-  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✓|✓|✓|
-  |[\<TypeParameter>](typeparameter-element-net-native.md)|✓|✓|✓|
+  |[\<Subtypes>](subtypes-element-net-native.md)|✔️|✔️|✔️|
+  |[\<Type>](type-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
+  |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|
 
 ## <a name="policy-settings"></a>原則設定
 
@@ -117,16 +117,16 @@ ms.locfileid: "73128156"
 
 |原則設定|描述|`Assembly`、`Namespace`、`Type` 和 `TypeInstantiation` 元素|`Event`、`Field`、`Method`、`MethodInstantiation` 和 `Property` 元素|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
-|`All`|針對 .NET Native 工具鏈未移除的所有類型和成員啟用原則。|✓||
-|`Auto`|指定應將預設原則用於該程式元素的原則類型。 此設定如同省略該原則類型的原則。 `Auto` 通常是用來指示從父元素繼承原則。|✓|✓|
-|`Excluded`|指定為特定程式元素停用原則。 例如，執行階段指示詞：<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> 指定 `BusinessClasses.Person` 類別的中繼資料不能用來瀏覽，或是動態具現化及修改 `Person` 物件。|✓|✓|
-|`Included`|如果父類型的中繼資料可用，則啟用原則。||✓|
-|`Public`|為公用類型或成員啟用原則，除非工具鏈判斷該類型或成員是不必要的，並因此將它移除。 此設定不同於 `Required Public`，後者可確保公用類型和成員的中繼資料一律可供使用，即使工具鏈判斷為不必要也一樣。|✓||
-|`PublicAndInternal`|為公用和內部類型或成員啟用原則，除非工具鏈判斷該類型或成員是不必要的，並因此將它移除。 此設定不同於 `Required PublicAndInternal`，後者可確保公用和內部類型和成員的中繼資料一律可供使用，即使工具鏈判斷為不必要也一樣。|✓||
-|`Required`|指定成員的原則已啟用，而且即使可能會使用該成員，中繼資料還是可供使用。||✓|
-|`Required Public`|啟用公用類型或成員的原則，並確保公用類型和成員的中繼資料一律可供使用。 此設定不同於 `Public`，後者只會在工具鏈判斷為必要時，才會讓公用類型和成員的中繼資料可供使用。|✓||
-|`Required PublicAndInternal`|啟用公用及內部類型或成員的原則，並確保公用及內部類型和成員的中繼資料一律可供使用。 此設定不同於 `PublicAndInternal`，後者只會在工具鏈判斷為必要時，才會讓公用及內部類型和成員的中繼資料可供使用。|✓||
-|`Required All`|需要工具鏈保留所有類型和成員 (無論是否使用)，並為其啟用原則。|✓||
+|`All`|針對 .NET Native 工具鏈未移除的所有類型和成員啟用原則。|✔️||
+|`Auto`|指定應將預設原則用於該程式元素的原則類型。 此設定如同省略該原則類型的原則。 `Auto` 通常是用來指示從父元素繼承原則。|✔️|✔️|
+|`Excluded`|指定為特定程式元素停用原則。 例如，執行階段指示詞：<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> 指定 `BusinessClasses.Person` 類別的中繼資料不能用來瀏覽，或是動態具現化及修改 `Person` 物件。|✔️|✔️|
+|`Included`|如果父類型的中繼資料可用，則啟用原則。||✔️|
+|`Public`|為公用類型或成員啟用原則，除非工具鏈判斷該類型或成員是不必要的，並因此將它移除。 此設定不同於 `Required Public`，後者可確保公用類型和成員的中繼資料一律可供使用，即使工具鏈判斷為不必要也一樣。|✔️||
+|`PublicAndInternal`|為公用和內部類型或成員啟用原則，除非工具鏈判斷該類型或成員是不必要的，並因此將它移除。 此設定不同於 `Required PublicAndInternal`，後者可確保公用和內部類型和成員的中繼資料一律可供使用，即使工具鏈判斷為不必要也一樣。|✔️||
+|`Required`|指定成員的原則已啟用，而且即使可能會使用該成員，中繼資料還是可供使用。||✔️|
+|`Required Public`|啟用公用類型或成員的原則，並確保公用類型和成員的中繼資料一律可供使用。 此設定不同於 `Public`，後者只會在工具鏈判斷為必要時，才會讓公用類型和成員的中繼資料可供使用。|✔️||
+|`Required PublicAndInternal`|啟用公用及內部類型或成員的原則，並確保公用及內部類型和成員的中繼資料一律可供使用。 此設定不同於 `PublicAndInternal`，後者只會在工具鏈判斷為必要時，才會讓公用及內部類型和成員的中繼資料可供使用。|✔️||
+|`Required All`|需要工具鏈保留所有類型和成員 (無論是否使用)，並為其啟用原則。|✔️||
 
 ## <a name="see-also"></a>請參閱
 

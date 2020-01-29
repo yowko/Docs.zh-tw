@@ -1,5 +1,5 @@
 ---
-title: TableLayoutPanel 控制項 (Windows Form)
+title: TableLayoutPanel 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms]
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
-ms.openlocfilehash: b51d3bd8e9d8816dfae6c10fc752adb0b3cea59c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12b40d4ce47770b3ffe9bfdebca74eca4afd3dd1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932492"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735516"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel 控制項 (Windows Form)
 <xref:System.Windows.Forms.TableLayoutPanel> 控制項會在格線中排列其內容。 由於配置會在設計階段和執行階段執行，因此當應用程式環境變更時，配置也會隨著動態變更。 這可讓面板中的控制項按比例調整大小，以便回應變更 (例如，由於當地語系化所造成的父控制項調整大小或文字長度變更)。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [TableLayoutPanel 控制項概觀](tablelayoutpanel-control-overview.md)  
  介紹 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的一般概念，這個控制項可讓您建立具有資料列和資料行的配置。  
   
@@ -29,22 +29,22 @@ ms.locfileid: "61932492"
  [AutoSize 在 TableLayoutPanel 控制項中的行為](autosize-behavior-in-the-tablelayoutpanel-control.md)  
  說明 <xref:System.Windows.Forms.TableLayoutPanel> 控制項支援自動調整大小行為的方式。  
   
- [如何：錨定和停駐 TableLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [操作說明：錨定和停駐 TableLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
  示範如何錨定和停駐 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中的子控制項。  
   
- [如何：設計可適當回應當地語系化的 Windows Forms 配置](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ [操作說明：設計可適當回應當地語系化的 Windows Forms 配置](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
  示範如何使用 <xref:System.Windows.Forms.TableLayoutPanel> 控制項來建立適當回應當地語系化的表單。  
   
- [如何：建立適用於資料輸入且可調整大小的 Windows Form](how-to-create-a-resizable-windows-form-for-data-entry.md)  
+ [操作說明：建立適用於資料輸入且可調整大小的 Windows Forms](how-to-create-a-resizable-windows-form-for-data-entry.md)  
  示範如何使用 <xref:System.Windows.Forms.TableLayoutPanel> 控制項來建立可適當回應調整大小的表單。  
   
-1. [如何：對齊和縮放 TableLayoutPanel 控制項中的控制項](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [操作說明：在 TableLayoutPanel 控制項中對齊和縮放控制項](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2. [如何：合併資料列和 TableLayoutPanel 控制項中的資料行](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+2. [如何：擴展 TableLayoutPanel 控制項中的資料列和資料行](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3. [如何：編輯資料行和 TableLayoutPanel 控制項中的資料列](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+3. [如何：編輯 TableLayoutPanel 控制項中的資料行和資料列](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4. [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+4. [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.TableLayoutPanel>  
@@ -60,4 +60,4 @@ ms.locfileid: "61932492"
  [當地語系化](../../../standard/globalization-localization/localization.md)  
  提供當地語系化相關主題的概觀。  
   
- 另請參閱[Localizing Applications](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/z68135h5(v=vs.120))。
+ 另請參閱[當地語系化應用程式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/z68135h5(v=vs.120))。

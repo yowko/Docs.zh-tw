@@ -2,12 +2,12 @@
 title: .NET Core 執行階段識別項 (RID) 目錄
 description: 了解執行階段識別碼 (RID) 以及 RID 在 .NET Core 中的使用方式。
 ms.date: 02/22/2019
-ms.openlocfilehash: d401cf3a8a147a16c1aea0ba7d5e799cf182583e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
-ms.translationtype: MT
+ms.openlocfilehash: b4e0226afa3f68d7c0d17b19e66489d70b759cf8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740585"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733548"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 
@@ -39,7 +39,7 @@ RID 是*執行階段識別項*的縮寫。 RID 值是用來識別應用程式執
 
 ## <a name="rid-graph"></a>RID 圖表
 
-RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是在 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 套件中定義。 您可以在 [*runtime.json*](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案 (位於 CoreFX 存放庫) 中看到支援的 RID 清單與 RID 圖形。 在此檔案中，您可以看到所有 RID (基底項目除外) 都包含 `"#import"` 陳述式。 這些陳述式指出相容的 RID。
+RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是在 [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/) 套件中定義。 您可以在位於 `dotnet/runtime` 存放庫的[*執行時間. json*](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)檔案中，看到支援的 RID 和 rid 圖表清單。 在此檔案中，您可以看到所有 RID (基底項目除外) 都包含 `"#import"` 陳述式。 這些陳述式指出相容的 RID。
 
 當 NuGet 還原套件時，它會嘗試尋找與所指定執行階段完全相符的項目。
 若找不到完全相符的項目，NuGet 會返回到圖形，直到它根據 RID 圖形找到最接近的相容系統。
@@ -80,7 +80,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 ## <a name="using-rids"></a>使用 RID
 
 若要使用 RID，必須先了解有哪些 RID 存在。 新的值會定期新增至平台。
-如需最新的完整版本，請查看 CoreFX 存放庫上的 [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案。
+如需最新且完整的版本，請參閱 `dotnet/runtime` 儲存機制上的[執行時間. json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)檔案。
 
 .NET Core 2.0 SDK 引進可攜式 RID 的概念。 它們是新增到 RID 圖形且未繫結到特定版本或 OS 發行版本的新值，適用於 .NET Core 2.0 和更新版本。 由於大部分發行版本的 RID 都會對應至可攜式 RID，因此在處理多個 Linux 發行版本時特別有用。
 
@@ -88,7 +88,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="windows-rids"></a>Windows RID
 
-僅列出常見值。 如需最新的完整版本，請查看 CoreFX 存放庫上的 [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案。
+僅列出常見值。 如需最新且完整的版本，請參閱 `dotnet/runtime` 儲存機制上的[執行時間. json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)檔案。
 
 - 可攜式 (.NET Core 2.0 或更新版本)
   - `win-x64`
@@ -112,7 +112,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="linux-rids"></a>Linux RID
 
-僅列出常見值。 如需最新的完整版本，請查看 CoreFX 存放庫上的 [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案。 如果下方未列出裝置執行的發行版本，裝置可能可以使用其中一個可攜式 RID。 例如，如果 Raspberry Pi 裝置執行未列出的 Linux 發行版本，則可以 `linux-arm` 為目標。
+僅列出常見值。 如需最新且完整的版本，請參閱 `dotnet/runtime` 儲存機制上的[執行時間. json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)檔案。 如果下方未列出裝置執行的發行版本，裝置可能可以使用其中一個可攜式 RID。 例如，如果 Raspberry Pi 裝置執行未列出的 Linux 發行版本，則可以 `linux-arm` 為目標。
 
 - 可攜式 (.NET Core 2.0 或更新版本)
   - `linux-x64` (大部分的桌面發行版本，如 CentOS、Debian、Fedora、Ubuntu 和衍生版)
@@ -130,7 +130,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新的完整版本，請查看 CoreFX 存放庫上的 [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) 檔案。
+macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新且完整的版本，請參閱 `dotnet/runtime` 儲存機制上的[執行時間. json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)檔案。
 
 - 可攜式 (.NET Core 2.0 或更新版本)
   - `osx-x64` (最低 OS 版本為 macOS 10.12 Sierra)

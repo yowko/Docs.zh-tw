@@ -1,5 +1,5 @@
 ---
-title: WPF 中的文件
+title: 文件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: eccb333b8e9a71ea30454f8bdf9fd2bf6dc90b9b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974677"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737965"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供廣泛的檔功能，可讓您建立更容易存取和讀取的高精確度內容，而不是在舊版的 Windows 中。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
@@ -46,7 +46,7 @@ ms.locfileid: "73974677"
  顯示非固定格式檔內容是由三個控制項所支援： <xref:System.Windows.Controls.FlowDocumentReader>、<xref:System.Windows.Controls.FlowDocumentPageViewer>和 <xref:System.Windows.Controls.FlowDocumentScrollViewer>。  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader> 所包含的功能可讓使用者在各種不同的瀏覽模式之間進行動態選擇，包括單頁（一次一頁）的瀏覽模式、兩頁的一次性（書籍閱讀格式）觀賞模式，以及連續滾動（無底邊）瀏覽模式。  如需這些查看模式的詳細資訊，請參閱 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。  如果您不需要在不同的視圖模式之間進行動態切換，<xref:System.Windows.Controls.FlowDocumentPageViewer> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 提供在特定的瀏覽模式中固定的較輕量流程內容檢視器。  
+ <xref:System.Windows.Controls.FlowDocumentReader> 所包含的功能可讓使用者在各種不同的視圖模式之間進行動態選擇，包括單頁（一次一頁）的瀏覽模式、兩頁的一次性（書籍閱讀格式）觀賞模式，以及連續滾動（無底邊）查看模式。  如需這些查看模式的詳細資訊，請參閱 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>。  如果您不需要在不同的視圖模式之間進行動態切換，<xref:System.Windows.Controls.FlowDocumentPageViewer> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 提供在特定的瀏覽模式中固定的較輕量流程內容檢視器。  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer 和 FlowDocumentScrollViewer  
  <xref:System.Windows.Controls.FlowDocumentPageViewer> 會在一段時間的查看模式中顯示內容，而 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 會以連續滾動模式顯示內容。  <xref:System.Windows.Controls.FlowDocumentPageViewer> 和 <xref:System.Windows.Controls.FlowDocumentScrollViewer> 都固定在特定的瀏覽模式。 相較于 <xref:System.Windows.Controls.FlowDocumentReader>，其中包含的功能可讓使用者在各種不同的瀏覽模式（由 <xref:System.Windows.Controls.FlowDocumentReaderViewingMode> 列舉所提供）之間進行動態選擇，代價是比 <xref:System.Windows.Controls.FlowDocumentPageViewer> 或 <xref:System.Windows.Controls.FlowDocumentScrollViewer>更耗費資源的成本。  
@@ -55,7 +55,7 @@ ms.locfileid: "73974677"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>使用者介面中的文字  
- 除了將文字新增至文件，您顯然也能在表單等應用程式 UI 中使用文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是針對不同案例，而且有自己的功能與限制清單。 一般而言，需要有限的文字支援時（例如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]中的簡短句子），應該使用 <xref:System.Windows.Controls.TextBlock> 元素。 當需要最少的文字支援時，可以使用 <xref:System.Windows.Controls.Label>。 如需詳細資訊，請參閱 [TextBlock 概觀](../controls/textblock-overview.md)。  
+ 除了將文字新增至文件，您顯然也能在表單等應用程式 UI 中使用文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般而言，需要有限的文字支援時（例如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]中的簡短句子），應該使用 <xref:System.Windows.Controls.TextBlock> 元素。 當需要最少的文字支援時，可以使用 <xref:System.Windows.Controls.Label>。 如需詳細資訊，請參閱 [TextBlock 概觀](../controls/textblock-overview.md)。  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>文件封裝  
@@ -144,7 +144,7 @@ ms.locfileid: "73974677"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Text](optimizing-performance-text.md)
+- [文字](optimizing-performance-text.md)
 - [非固定格式文件概觀](flow-document-overview.md)
 - [列印概觀](printing-overview.md)
 - [文件序列化與儲存](document-serialization-and-storage.md)

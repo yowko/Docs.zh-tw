@@ -2,12 +2,12 @@
 title: WordprocessingML 文件的組織結構 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 84d893267c37ecf99a457ebb683d0451e2b4b68f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 58c028fed465f45fdcf8f63f2119eb8e8b201e32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591052"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732682"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML 文件的組織結構 (C#)
 這個主題說明 WordprocessingML 文件的 XML 組織結構。  
@@ -87,13 +87,13 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 }  
 ```  
   
-## <a name="external-resources"></a>外部資源  
- [Introducing the Office (2007) Open XML File Formats](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29) (Office (2007) Open XML 檔案格式簡介)  
- [Overview of WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29) (WordprocessingML 概觀)  
- [WordProcessingML 檔案的結構](http://officeopenxml.com/anatomyofOOXML.php) \(英文\)  
- [WordprocessingML 簡介](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/) \(英文\)  
- [Office 2003：XML 參考結構描述下載頁面](https://www.microsoft.com/download/details.aspx?id=101)  
-  
-## <a name="see-also"></a>另請參閱
+## <a name="external-resources"></a>外部資源
+
+- [Introducing the Office (2007) Open XML File Formats](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29) (Office (2007) Open XML 檔案格式簡介)
+- [Overview of WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29) (WordprocessingML 概觀)
+- [WordProcessingML 檔案的結構](http://officeopenxml.com/anatomyofOOXML.php) \(英文\)
+- [WordprocessingML 簡介](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/) \(英文\)
+
+## <a name="see-also"></a>請參閱
 
 - [教學課程：管理 WordprocessingML 文件中的內容 (C#)](./shape-of-wordprocessingml-documents.md)

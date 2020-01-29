@@ -3,12 +3,12 @@ title: C# 型別和變數 - C# 語言教學課程
 description: 了解如何在 C# 中定義類型和宣告變數
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 02840169730e53875baccfa012ae9653e32a35c9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 28ba01f7d3f9c71e99945a5d5e813d95389b3b79
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346853"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737629"
 ---
 # <a name="types-and-variables"></a>型別與變數
 
@@ -44,8 +44,8 @@ C# 的實值型別可進一步細分為*簡單型別*、*列舉型別*、*結構
   - [委派型別][DelegateTypes]
     - 使用者定義型別，格式為 `delegate int D(...)`
 
-[ValueTypes]: ../language-reference/keywords/value-types-table.md
-[SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
+[ValueTypes]: ../language-reference/builtin-types/value-types.md
+[SimpleTypes]: ../language-reference/builtin-types/value-types.md#built-in-value-types
 [EnumTypes]: ../language-reference/builtin-types/enum.md
 [StructTypes]: ../language-reference/keywords/struct.md
 [NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md

@@ -1,13 +1,13 @@
 ---
 title: F# 編碼慣例
 description: 瞭解撰寫F#程式碼時的一般方針和慣用語。
-ms.date: 11/04/2019
-ms.openlocfilehash: 60eff6392d71caa54eeb438f2f6ba9db910f1bc1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 01/15/2020
+ms.openlocfilehash: ca86bcf714d2fb4ee5f173ee54ba12c317f9abe7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978231"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737819"
 ---
 # <a name="f-coding-conventions"></a>F# 編碼慣例
 
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-當只從F#呼叫時，使用最上層模組可能不會出現不同，但C#對於取用者，必須使用`MyCode`模組限定`MyClass`，可能會讓呼叫端感到驚訝。
+當只從F#呼叫時，使用最上層模組可能不會出現不同，但C#對於取用者，必須使用 `MyCode` 模組限定 `MyClass`，可能會讓呼叫端感到驚訝。
 
 ```fsharp
 // Bad!
@@ -48,7 +48,7 @@ type MyClass() =
 
 ### <a name="carefully-apply-autoopen"></a>小心套用 `[<AutoOpen>]`
 
-`[<AutoOpen>]` 結構可以會污染可供呼叫端使用的範圍，而有問題的答案則是「魔術」。 這通常不是件好事。 此規則的F#例外狀況是核心程式庫本身（但此事實也是有爭議的）。
+`[<AutoOpen>]` 結構可以會污染可供呼叫端使用的範圍，而有問題的答案則是「魔術」。 這不是件好事。 此規則的F#例外狀況是核心程式庫本身（但此事實也是有爭議的）。
 
 不過，如果您有想要與公用 API 分開組織之公用 API 的協助程式功能，這是很方便的。
 
@@ -89,9 +89,9 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>排序 `open` 語句拓撲
 
-在F#中，宣告的順序很重要，包括 `open`語句。 這與不同C#之處在于，`using`和`using static`的效果與檔案中這些語句的順序無關。
+在F#中，宣告的順序很重要，包括 `open` 語句。 這與不同C#之處在于，`using` 和 `using static` 的效果與檔案中這些語句的順序無關。
 
-在F#中，開啟範圍中的專案可能會遮蔽其他已存在的專案。 這表示重新排列 `open` 語句可能會改變程式碼的意義。 因此，通常不建議所有 `open` 語句的任意排序（例如排序），以免您會產生可能預期的不同行為。
+在F#中，開啟範圍中的專案可能會遮蔽其他已存在的專案。 這表示重新排列 `open` 語句可能會改變程式碼的意義。 因此，不建議所有 `open` 語句的任意排序（例如排序），以免您會產生可能預期的不同行為。
 
 相反地，我們建議您將它們排序[拓撲](https://en.wikipedia.org/wiki/Topological_sorting);也就是，依照您的系統_層_級的定義順序來排序您的 `open` 語句。 您也可以考慮在不同的拓撲層中進行英數位元排序。
 
@@ -189,7 +189,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>表示在您的網域內建類型中的錯誤案例和不合法的狀態
 
-使用[區分](../language-reference/discriminated-unions.md)聯集F# ，可讓您在類型系統中代表有問題的程式狀態。 例如:
+使用[區分](../language-reference/discriminated-unions.md)聯集F# ，可讓您在類型系統中代表有問題的程式狀態。 例如：
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -224,7 +224,7 @@ let handleWithdrawal amount =
 
 中F#可用來引發例外狀況的主要結構，應依照下列喜好設定順序來考慮：
 
-| 功能 | 語法 | 用途 |
+| 函數 | 語法 | 用途 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 使用指定的引數名稱引發 `System.ArgumentNullException`。 |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 使用指定的引數名稱和訊息，引發 `System.ArgumentException`。 |
@@ -239,7 +239,7 @@ let handleWithdrawal amount =
 
 ### <a name="using-exception-handling-syntax"></a>使用例外狀況處理語法
 
-F#支援透過`try...with`語法的例外狀況模式：
+F#支援透過 `try...with` 語法的例外狀況模式：
 
 ```fsharp
 try
@@ -320,7 +320,7 @@ let tryReadAllTextIfPresent (path : string) =
 
 ## <a name="partial-application-and-point-free-programming"></a>部分應用程式和無點程式設計
 
-F#支援部分應用程式，因此可以用各種不同的方式，以無點的風格進行程式設計。 這對於在模組內重複使用程式碼或執行某個專案很有説明，但通常並不是公開公開的東西。 一般來說，無點程式設計並不是本身的本身，而且可以為未可以沉浸樣式的人員加入重要的認知屏障。
+F#支援部分應用程式，因此可以用各種不同的方式，以無點的風格進行程式設計。 這對於在模組內重複使用程式碼或執行某個專案很有説明，但並不是要公開公開的東西。 一般來說，無點程式設計並不是本身的本身，而且可以為未可以沉浸樣式的人員加入重要的認知屏障。
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>請勿在公用 Api 中使用部分應用程式和 currying
 
@@ -443,11 +443,118 @@ F#有多個[存取控制](../language-reference/access-control.md)選項，繼�
 
 ## <a name="performance"></a>效能
 
-F#值預設為不可變，可讓您避免特定類別的錯誤（特別是涉及並行處理和平行處理原則的問題）。 不過，在某些情況下，為了達到執行時間或記憶體配置的最佳（或甚至合理）效率，可以使用就地的狀態變動來執行工作範圍。 您可以使用F#搭配`mutable`關鍵字的選擇來進行這項工作。
+### <a name="prefer-structs-for-small-data-types"></a>針對小型資料類型偏好結構
 
-不過，在中F#使用 `mutable` 可能會有功能純度的機率。 如果您調整從純度到[引用透明度](https://en.wikipedia.org/wiki/Referential_transparency)的期望，這就沒問題。 參考透明度-不是純度-這是撰寫F#函式時的最終目標。 這可讓您針對效能關鍵程式碼，透過以變化為基礎的執行來撰寫功能介面。
+使用結構（也稱為實數值型別）通常會導致某些程式碼的效能更高，因為它通常會避免設定物件。 不過，結構不一定是「更快速」的按鈕：如果結構中的資料大小超過16個位元組，複製資料通常會導致比使用參考型別更多的 CPU 時間。
 
-### <a name="wrap-mutable-code-in-immutable-interfaces"></a>在不可變的介面中包裝可變的程式碼
+若要判斷您是否應該使用結構，請考慮下列條件：
+
+- 如果您的資料大小是16個位元組或更小。
+- 如果您可能在執行中的程式中有許多這些資料類型是常駐在記憶體中。
+
+如果第一個條件適用，您通常應該使用結構。 如果兩者都適用，您應該幾乎一律使用結構。 在某些情況下，可能會套用先前的條件，但使用結構不會比使用參考型別更好或更糟，但可能很罕見。 不過，一定要測量進行這類變更的時機，而不是在假設或直覺上操作。
+
+#### <a name="prefer-struct-tuples-when-grouping-small-value-types"></a>群組小型數值型別時偏好使用結構元組
+
+請考慮下列兩個功能：
+
+```fsharp
+let rec runWithTuple t offset times =
+    let offsetValues x y z offset =
+        (x + offset, y + offset, z + offset)
+
+    if times <= 0 then
+        t
+    else
+        let (x, y, z) = t
+        let r = offsetValues x y z offset
+        runWithTuple r offset (times - 1)
+
+let rec runWithStructTuple t offset times =
+    let offsetValues x y z offset =
+        struct(x + offset, y + offset, z + offset)
+
+    if times <= 0 then
+        t
+    else
+        let struct(x, y, z) = t
+        let r = offsetValues x y z offset
+        runWithStructTuple r offset (times - 1)
+```
+
+當您使用[BenchmarkDotNet](https://benchmarkdotnet.org/)之類的統計效能評定工具來評估這些函式時，您會發現使用結構元組的 `runWithStructTuple` 函式會以更快的速度執行40%，且不會配置記憶體。
+
+不過，在您自己的程式碼中，這些結果不一定會是這種情況。 如果您將函式標示為 `inline`，使用參考元組的程式碼可能會取得一些額外的優化，或配置的程式碼只會優化掉。 當效能考慮時，您應該一律測量結果，而且永遠不會根據假設或直覺來操作。
+
+#### <a name="prefer-struct-records-when-the-data-type-is-small"></a>當資料類型很少時，偏好使用結構記錄
+
+稍早所述的經驗法則也適用于[ F#記錄類型](../language-reference/records.md)。 請考慮下列處理它們的資料類型和函數：
+
+```fsharp
+type Point = { X: float; Y: float; Z: float }
+
+[<Struct>]
+type SPoint = { X: float; Y: float; Z: float }
+
+let rec processPoint (p: Point) offset times =
+    let inline offsetValues (p: Point) offset =
+        { p with X = p.X + offset; Y = p.Y + offset; Z = p.Z + offset }
+
+    if times <= 0 then
+        p
+    else
+        let r = offsetValues p offset
+        processPoint r offset (times - 1)
+
+let rec processStructPoint (p: SPoint) offset times =
+    let inline offsetValues (p: SPoint) offset =
+        { p with X = p.X + offset; Y = p.Y + offset; Z = p.Z + offset }
+
+    if times <= 0 then
+        p
+    else
+        let r = offsetValues p offset
+        processStructPoint r offset (times - 1)
+```
+
+這類似先前的元組程式碼，但這次範例會使用記錄和內嵌的內建函式。
+
+當您使用[BenchmarkDotNet](https://benchmarkdotnet.org/)之類的統計效能評定工具來評估這些函式時，會發現 `processStructPoint` 的執行速度幾乎60%，而且不會在受控堆積上配置任何內容。
+
+#### <a name="prefer-struct-discriminated-unions-when-the-data-type-is-small"></a>當資料類型很小時，偏好使用結構區分等位
+
+先前的關於結構元組和記錄的效能，也適用于[ F#區分](../language-reference/discriminated-unions.md)等位。 請考慮下列程式碼：
+
+```fsharp
+    type Name = Name of string
+    
+    [<Struct>]
+    type SName = SName of string
+
+    let reverseName (Name s) =
+        s.ToCharArray()
+        |> Array.rev
+        |> string
+        |> Name
+
+    let structReverseName (SName s) =
+        s.ToCharArray()
+        |> Array.rev
+        |> string
+        |> SName
+```
+
+定義單一案例的區分等位通常是為了進行領域模型化。 當您使用[BenchmarkDotNet](https://benchmarkdotnet.org/)之類的統計效能評定工具來評估這些函式時，您會發現 `structReverseName` 的執行速度比小型字串 `reverseName` 快25%。 對於大型字串，兩者都有相同的執行。 因此，在此情況下，最好是使用結構。 如先前所述，一律測量並不會在假設或直覺上運作。
+
+雖然先前的範例顯示結構區分聯集產生較佳的效能，但在模型化定義域時，通常會有更大的區分等位。 較大的資料類型（例如，如果它們是結構而定）可能也不會執行，因為可能會涉及更多的複製作業。
+
+### <a name="functional-programming-and-mutation"></a>功能性程式設計和變化
+
+F#值預設為不可變，可讓您避免特定類別的錯誤（特別是涉及並行處理和平行處理原則的問題）。 不過，在某些情況下，為了達到執行時間或記憶體配置的最佳（或甚至合理）效率，可以使用就地的狀態變動來執行工作範圍。 您可以使用F#搭配 `mutable` 關鍵字的選擇來進行這項工作。
+
+使用中F#的 `mutable` 可能會有功能純度的機率。 這是可理解的，但功能純度可能會有效能目標的機率。 入侵是要封裝變動，讓呼叫端不必在意呼叫函式時所發生的情況。 這可讓您針對效能關鍵程式碼，透過以變化為基礎的執行來撰寫功能介面。
+
+#### <a name="wrap-mutable-code-in-immutable-interfaces"></a>在不可變的介面中包裝可變的程式碼
 
 透過參考透明度作為目標，撰寫程式碼不會公開效能關鍵函式的可變動 underbelly，是很重要的。 例如，下列程式碼會實作用於F#核心程式庫中的 `Array.contains` 函式：
 
@@ -465,7 +572,7 @@ let inline contains value (array:'T[]) =
 
 多次呼叫此函式並不會變更基礎陣列，也不需要維護任何使用它的可變狀態。 它參考上透明，即使其中幾乎每一行程式碼都使用變化。
 
-### <a name="consider-encapsulating-mutable-data-in-classes"></a>考慮在類別中封裝可變數據
+#### <a name="consider-encapsulating-mutable-data-in-classes"></a>考慮在類別中封裝可變數據
 
 先前的範例使用單一函式來封裝使用可變動資料的作業。 對於更複雜的資料集，這不一定是足夠的。 請考慮下列函數集：
 
@@ -511,9 +618,9 @@ type Closure1Table() =
 
 `Closure1Table` 封裝基礎的變動式資料結構，因此不會強制呼叫端維護基礎資料結構。 類別是一種強大的方式，可封裝以變化為基礎的資料和常式，而不會向呼叫端公開細節。
 
-### <a name="prefer-let-mutable-to-reference-cells"></a>偏好 `let mutable` 參考資料格
+#### <a name="prefer-let-mutable-to-reference-cells"></a>偏好 `let mutable` 參考資料格
 
-參考儲存格是一種方式，代表值的參考，而不是值本身。 雖然它們可以用於效能關鍵程式碼，但通常不建議使用。 參考下列範例：
+參考儲存格是一種方式，代表值的參考，而不是值本身。 雖然它們可以用於效能關鍵程式碼，但不建議您這麼做。 參考下列範例：
 
 ```fsharp
 let kernels =

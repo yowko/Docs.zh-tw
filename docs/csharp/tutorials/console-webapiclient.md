@@ -3,12 +3,12 @@ title: 使用 .NET Core 來建立 REST 用戶端
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 85a3c8e17e14db86786950380ba745ae286dccca
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
-ms.translationtype: MT
+ms.openlocfilehash: 09eda08f82490070c66d0b290359872c1043b0c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115867"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737571"
 ---
 # <a name="rest-client"></a>REST 用戶端
 
@@ -71,7 +71,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-您將必須在 `Main` 方法上面新增 `using` 陳述式，如此 C# 編譯器才能夠辨識 <xref:System.Threading.Tasks.Task> 型別：
+您將需要在 `Main` 方法的頂端加入 `using` 指示詞，讓C#編譯器能夠辨識 <xref:System.Threading.Tasks.Task> 的類型：
 
 ```csharp
 using System.Threading.Tasks;
@@ -81,10 +81,10 @@ using System.Threading.Tasks;
 
 接著，請將 `namespace` 陳述式中定義的命名空間從其預設值 `ConsoleApp` 重新命名為 `WebAPIClient`。 我們稍後將會在此命名空間中定義 `repo` 類別。
 
-接著，請將 `Main` 方法更新成呼叫此方法。 `ProcessRepositories` 方法會傳回一個工作，而在該工作完成之前，您不應該結束程式。 因此，您必須變更 `Main`的簽章。 新增 `async` 修飾詞，並將傳回類型變更為 `Task`。 然後，在方法的主體中，新增對 `ProcessRepositories`的呼叫。 將 `await` 關鍵字新增至該方法呼叫：
+接著，請將 `Main` 方法更新成呼叫此方法。 `ProcessRepositories` 方法會傳回工作，而且您不應該在該工作完成之前結束程式。 因此，您必須變更 `Main`的簽章。 新增 `async` 修飾詞，並將傳回類型變更為 `Task`。 然後，在方法的主體中，新增對 `ProcessRepositories`的呼叫。 將 `await` 關鍵字新增至該方法呼叫：
 
 ```csharp
-static Task Main(string[] args)
+static async Task Main(string[] args)
 {
     await ProcessRepositories();
 }
@@ -92,7 +92,7 @@ static Task Main(string[] args)
 
 現在，您擁有一個不會執行任何動作但會以非同步方式執行的程式。 來加以改善吧。
 
-首先，您需要一個能夠從網路擷取資料的物件；使用 <xref:System.Net.Http.HttpClient> 即可達成。 此物件會處理要求和回應。 在 Program.cs 檔案內，將 `Program` 類別中該類型的單一執行個體具現化。
+首先，您需要一個能夠從網路擷取資料的物件；使用 <xref:System.Net.Http.HttpClient> 即可達成。 此物件會處理要求和回應。 在*Program.cs*檔案內的 `Program` 類別中，具現化該類型的單一實例。
 
 ```csharp
 namespace WebAPIClient
@@ -101,7 +101,7 @@ namespace WebAPIClient
     {
         private static readonly HttpClient client = new HttpClient();
 
-        static Task Main(string[] args)
+        static async Task Main(string[] args)
         {
             //...
         }
@@ -126,7 +126,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-您將必須在檔案開頭一併新增兩個新的 using 陳述式以讓此檔案進行編譯：
+您也必須在檔案頂端加入兩個新的 `using` 指示詞，以進行編譯：
 
 ```csharp
 using System.Net.Http;
@@ -206,6 +206,12 @@ foreach (var repo in repositories)
 public string Name { get; set; }
 ```
 
+若要使用 `[JsonPropertyName]` 屬性，您必須將 <xref:System.Text.Json.Serialization> 命名空間新增至 `using` 指示詞：
+
+```csharp
+using System.Text.Json.Serialization;
+```
+
 這項變更意謂著您必須變更 program.cs 中寫入每個儲存機制名稱的程式碼：
 
 ```csharp
@@ -233,7 +239,7 @@ return repositories;
 接著，讓我們來修改 `Main` 方法，使它擷取那些結果並將每個儲存機制名稱寫入到主控台。 您的 `Main` 方法現在看起來會像這樣：
 
 ```csharp
-public static Task Main(string[] args)
+public static async Task Main(string[] args)
 {
     var repositories = await ProcessRepositories();
 
@@ -296,7 +302,7 @@ public DateTime LastPush =>
 
 讓我們來看一下我們剛才定義的新結構。 `LastPush` 屬性是使用 `get` 存取子的*運算式主體成員*所定義。 沒有 `set` 存取子。 省略 `set` 存取子是您在中C#定義*唯讀*屬性的方式。 （是的，您可以在中C#建立*僅限寫入的*屬性，但其值有限）。<xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> 方法會剖析字串並使用提供的日期格式來建立 <xref:System.DateTime> 物件，並使用 `CultureInfo` 物件將額外的中繼資料新增至 `DateTime`。 如果剖析作業失敗，屬性存取子就會擲回例外狀況。
 
-若要使用 <xref:System.Globalization.CultureInfo.InvariantCulture> ，您將必須把 <xref:System.Globalization> 命名空間新增到 `repo.cs` 中的 `using` 陳述式：
+若要使用 <xref:System.Globalization.CultureInfo.InvariantCulture>，您必須將 <xref:System.Globalization> 命名空間新增至 `repo.cs`中的 `using` 指示詞：
 
 ```csharp
 using System.Globalization;

@@ -1,38 +1,38 @@
 ---
-title: HOW TO：使用 Windows Forms GroupBox 控制項分組控制項
+title: 具有分組控制項的群組控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: f5b8c5ef47063663d5f8fcd2f80317e6cf6c91e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb7476c410d2802b5d32cc9842a778f290765e32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609486"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736660"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>HOW TO：使用 Windows Forms GroupBox 控制項分組控制項
-Windows Form<xref:System.Windows.Forms.GroupBox>控制項用來分組其他控制項。 有三個群組控制項的原因：  
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>如何：以 Windows Form GroupBox 控制項來群組控制項
+Windows Forms <xref:System.Windows.Forms.GroupBox> 控制項用來分組其他控制項。 群組控制項的原因有三個：  
   
-- 若要建立明確的使用者介面的相關的表單項目的視覺化群組。  
+- 為明確的使用者介面建立相關表單元素的視覺化群組。  
   
-- 若要建立以程式設計方式 （選項按鈕群組，例如）。  
+- 建立程式設計群組（例如選項按鈕）。  
   
-- 在設計階段，做為一個單位移動控制項。  
+- 用於在設計階段將控制項移動為一個單位。  
   
-### <a name="to-create-a-group-of-controls"></a>若要建立的控制項群組  
+### <a name="to-create-a-group-of-controls"></a>若要建立控制項群組  
   
-1. 繪製<xref:System.Windows.Forms.GroupBox>表單上的控制項。  
+1. 在表單上繪製 <xref:System.Windows.Forms.GroupBox> 控制項。  
   
-2. 加入群組方塊中，繪製群組方塊內的每個其他控制項。  
+2. 將其他控制項新增至 [群組] 方塊，並在 [群組方塊] 內繪製每個控制項。  
   
-     如果您有想要的群組方塊括住的現有控制項，您可以選取所有的控制項，它們剪到 剪貼簿上，選取<xref:System.Windows.Forms.GroupBox>控制項，然後再將它們貼入 群組 方塊。 您也可以將它們拖曳至 [群組] 方塊。  
+     如果您有想要放在群組方塊中的現有控制項，您可以選取所有控制項、將其剪下至剪貼簿、選取 [<xref:System.Windows.Forms.GroupBox>] 控制項，然後將它們貼到 [群組] 方塊中。 您也可以將它們拖曳到 [群組] 方塊中。  
   
-3. 設定<xref:System.Windows.Forms.GroupBox.Text%2A>群組方塊中，為適當的 caption 屬性。  
+3. 將 [群組方塊] 的 [<xref:System.Windows.Forms.GroupBox.Text%2A>] 屬性設定為適當的標題。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.GroupBox>
 - [GroupBox 控制項](groupbox-control-windows-forms.md)

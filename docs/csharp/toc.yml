@@ -1317,14 +1317,15 @@
           items:
             - name: 值類型
               items:
-                - name: 實質型別的功能
-                  href: language-reference/keywords/value-types.md
+                - name: 總覽
+                  href: language-reference/builtin-types/value-types.md
+                  displayName: 'value types, simple types'
                 - name: 整數數值類型
-                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                   href: language-reference/builtin-types/integral-numeric-types.md
+                  displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer, literal'
                 - name: 浮點數值類型
-                  displayName: 'float, decimal, double, rational, real, literal'
                   href: language-reference/builtin-types/floating-point-numeric-types.md
+                  displayName: 'float, decimal, double, rational, real, literal'
                 - name: 內建數值轉換
                   href: language-reference/builtin-types/numeric-conversions.md
                 - name: bool
@@ -1364,8 +1365,6 @@
               items:
                 - name: 內建類型表
                   href: language-reference/keywords/built-in-types-table.md
-                - name: 實值型別表
-                  href: language-reference/keywords/value-types-table.md
                 - name: 格式化數值結果表
                   href: language-reference/keywords/formatting-numeric-results-table.md
         - name: 修飾詞
@@ -1415,11 +1414,11 @@
               href: language-reference/keywords/readonly.md
             - name: sealed
               href: language-reference/keywords/sealed.md
-            - name: 靜態
+            - name: static
               href: language-reference/keywords/static.md
             - name: unsafe
               href: language-reference/keywords/unsafe.md
-            - name: 虛擬
+            - name: virtual
               href: language-reference/keywords/virtual.md
             - name: volatile
               href: language-reference/keywords/volatile.md

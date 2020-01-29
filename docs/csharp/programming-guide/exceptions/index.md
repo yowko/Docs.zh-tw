@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: f5d709a35e160a8b03ac59e52f7bcb46196a3ce4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b883012cf8f72247ff4e0b47a46eee1854e2d534
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705284"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735656"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外狀況和例外處理 (C# 程式設計手冊)
 
@@ -25,7 +25,7 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
 
 ## <a name="exceptions-overview"></a>例外狀況概觀
 
-例外狀況具有下列屬性：  
+例外狀況具有下列屬性：
 
 - 例外狀況是最終全都衍生自 `System.Exception` 的型別。
 - 在可能擲回例外狀況的陳述式前後使用 `try` 區塊。
@@ -36,7 +36,7 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
 - 例外狀況可以透過程式使用 `throw` 關鍵字明確地產生。
 - 例外狀況物件包含錯誤的詳細資訊，例如呼叫堆疊的狀態和錯誤狀態的文字描述。
 - 即使擲回例外狀況，`finally` 區塊中的程式碼也會執行。 使用 `finally` 區塊來釋放資源，例如，關閉已在 `try` 區塊中開啟的任何資料流或檔案。
-- .NET Framework 中的 Managed 例外狀況是在 Win32 結構化例外狀況處理機制上實作的。 如需詳細資訊，請參閱[結構化例外狀況處理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) 和[深入探究 Win32 結構化例外狀況處理的毀損課程 (英文)](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm)。
+- .NET Framework 中的 Managed 例外狀況是在 Win32 結構化例外狀況處理機制上實作的。 如需詳細資訊，請參閱[結構化例外狀況處理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) 和[深入探究 Win32 結構化例外狀況處理的毀損課程 (英文)](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm)。
 
 ## <a name="related-sections"></a>相關章節
 

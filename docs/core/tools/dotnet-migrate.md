@@ -2,16 +2,16 @@
 title: dotnet migrate 命令
 description: dotnet migrate 命令會移轉專案及其所有相依性。
 ms.date: 01/07/2020
-ms.openlocfilehash: d746069b897a7458e0262663e96cc8743a586aa9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: b81669d3e4cffeaf10bea39639410d5f06579d84
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740521"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734149"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**本文適用于：✓** .net CORE 1.x sdk **✓** .net core 2.x sdk
+**本文適用于：** ✔️ .net CORE 1.x sdk ✔️ .net CORE 2.x sdk
 
 ## <a name="name"></a>Name
 

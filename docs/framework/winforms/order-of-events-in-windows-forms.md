@@ -1,5 +1,5 @@
 ---
-title: Windows Form 中事件的順序
+title: 事件的順序
 ms.date: 03/30/2017
 helpviewer_keywords:
 - events [Windows Forms], order of
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 28eb451c7edd740664f80f8ec35c60192764043c
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 618ac5a6a6a32ae1a53fc60ac80700d7648c81a7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949869"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734855"
 ---
-# <a name="order-of-events-in-windows-forms"></a>Windows Form 中事件的順序
-關於 Windows Form 應用程式中被引發的事件，程式開發人員會特別關注他們的順序，並且盡力依次處理每個事件。 當遇到需要謹慎處理事件的狀況，例如當您重新繪製部分表單時，對於在執行階段時被引發的事件，感知其精確的順序是必需的。 本主題提供一些有關在應用程式以及控制項存留期中，幾個重要階段裡事件順序的詳細資料。 如需滑鼠輸入事件順序的特定詳細資料, 請參閱[Windows Forms 中的滑鼠事件](mouse-events-in-windows-forms.md)。 如需 Windows Forms 中事件的總覽, 請參閱[事件總覽](events-overview-windows-forms.md)。 如需事件處理常式的相關詳細資訊, 請參閱[事件處理常式總覽](event-handlers-overview-windows-forms.md)。  
+# <a name="order-of-events-in-windows-forms"></a>Windows Form 中的事件順序
+關於 Windows Form 應用程式中被引發的事件，程式開發人員會特別關注他們的順序，並且盡力依次處理每個事件。 當遇到需要謹慎處理事件的狀況，例如當您重新繪製部分表單時，對於在執行階段時被引發的事件，感知其精確的順序是必需的。 本主題提供一些有關在應用程式以及控制項存留期中，幾個重要階段裡事件順序的詳細資料。 如需滑鼠輸入事件順序的特定詳細資料，請參閱[Windows Forms 中的滑鼠事件](mouse-events-in-windows-forms.md)。 如需 Windows Forms 中事件的總覽，請參閱[事件總覽](events-overview-windows-forms.md)。 如需事件處理常式的相關詳細資訊，請參閱[事件處理常式總覽](event-handlers-overview-windows-forms.md)。  
   
 ## <a name="application-startup-and-shutdown-events"></a>應用程式啟動和關閉事件  
  <xref:System.Windows.Forms.Form> 和 <xref:System.Windows.Forms.Control> 類別會公開一組關於應用程式啟動和關閉的事件。 當 Windows Form 應用程式啟動時，主要表單的啟動事件會依照下列順序引發：  
@@ -80,6 +80,6 @@ ms.locfileid: "69949869"
   
 - <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)

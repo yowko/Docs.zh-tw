@@ -3,12 +3,12 @@ title: 執行緒配置設定
 description: 瞭解設定 .NET Core 應用程式之執行緒的執行時間設定。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 6a920dbc301830e3f4c95bf637ff3de6d4f464ff
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
-ms.translationtype: MT
+ms.openlocfilehash: ed7688d4d8f7178440fe59afc6e2f5e0a11b2a5c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802761"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733428"
 ---
 # <a name="run-time-configuration-options-for-threading"></a>執行緒的執行時間設定選項
 
@@ -30,7 +30,34 @@ ms.locfileid: "74802761"
 | | 設定名稱 | 值 |
 | - | - | - |
 | **.runtimeconfig.json json** | `System.Threading.ThreadPool.MinThreads` | 整數，表示執行緒的最小數目 |
+| **MSBuild 屬性** | `ThreadPoolMinThreads` | 整數，表示執行緒的最小數目 |
 | **環境變數** | N/A | N/A |
+
+### <a name="examples"></a>範例
+
+*.runtimeconfig.json json*檔案：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Threading.ThreadPool.MinThreads": 4
+      }
+   }
+}
+```
+
+專案檔：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+  </PropertyGroup>
+
+</Project>
+```
 
 ## <a name="maximum-threads"></a>最大執行緒數
 
@@ -40,4 +67,31 @@ ms.locfileid: "74802761"
 | | 設定名稱 | 值 |
 | - | - | - |
 | **.runtimeconfig.json json** | `System.Threading.ThreadPool.MaxThreads` | 表示執行緒數目上限的整數。 |
+| **MSBuild 屬性** | `ThreadPoolMaxThreads` | 表示執行緒數目上限的整數。 |
 | **環境變數** | N/A | N/A |
+
+### <a name="examples"></a>範例
+
+*.runtimeconfig.json json*檔案：
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Threading.ThreadPool.MaxThreads": 20
+      }
+   }
+}
+```
+
+專案檔：
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
+  </PropertyGroup>
+
+</Project>
+```

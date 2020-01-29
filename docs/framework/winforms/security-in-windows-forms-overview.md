@@ -1,5 +1,5 @@
 ---
-title: Windows Form 中的安全性概觀
+title: 安全性總覽
 ms.date: 03/30/2017
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 08c80eccee395d9141978a7d4594205af1a51ed9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9010b45383f856079661359fdf82180526d96dde
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972138"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734850"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Form 中的安全性概觀
 
@@ -77,19 +77,19 @@ ClickOnce 有兩種技術可在用戶端電腦上要求較高的許可權。 這
 
 您要選擇哪一種技術，將取決於您的部署環境。 如需詳細資訊，請參閱[選擇 ClickOnce 部署策略](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)。
 
-根據預設，使用 Visual Studio 或 .NET Framework SDK 工具（Mage.exe 和 Mageui.exe）部署的 ClickOnce 應用程式會設定為在具有完全信任的用戶端電腦上執行。 如果您在部署應用程式時，是使用部分信任，或是只有使用某些額外的權限，則必須變更這個預設值。 當您設定部署時，可以使用 Visual Studio 或 .NET Framework SDK 工具 Mageui.exe 來執行這項操作。 如需如何使用 mageui.exe 的詳細資訊，請參閱[逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)。  另請[參閱如何:設定 ClickOnce 應用程式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))的自訂許可權，或[如何：設定 ClickOnce 應用程式](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)的自訂許可權。
+根據預設，使用 Visual Studio 或 .NET Framework SDK 工具（Mage.exe 和 Mageui.exe）部署的 ClickOnce 應用程式會設定為在具有完全信任的用戶端電腦上執行。 如果您在部署應用程式時，是使用部分信任，或是只有使用某些額外的權限，則必須變更這個預設值。 當您設定部署時，可以使用 Visual Studio 或 .NET Framework SDK 工具 Mageui.exe 來執行這項操作。 如需如何使用 Mageui.exe 的詳細資訊，請參閱[逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)。  另請參閱[如何：設定 ClickOnce 應用程式的自訂權限](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))或[如何：設定 ClickOnce 應用程式的自訂權限](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)。
 
 如需 ClickOnce 安全性層面和許可權提升的詳細資訊，請參閱[保護 Clickonce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。 如需有關受信任的應用程式部署的詳細資訊，請參閱[受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)。
 
 ### <a name="testing-the-application"></a>測試應用程式
 
-如果您已使用 Visual Studio 部署 Windows Forms 應用程式，您可以在部分信任中啟用偵測，或從開發環境啟用限制許可權集合。  另請[參閱如何:以受限制的權限對 ClickOnce 應用程式進行偵錯](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)。
+如果您已使用 Visual Studio 部署 Windows Forms 應用程式，您可以在部分信任中啟用偵測，或從開發環境啟用限制許可權集合。  另請參閱[如何：以限制的許可權對 ClickOnce 應用程式進行 Debug](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Windows Forms 安全性](windows-forms-security.md)
 - [程式碼存取安全性的基本概念](../misc/code-access-security-basics.md)
 - [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
 - [受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)
 - [Mage.exe (資訊清單產生和編輯工具)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [MageUI.exe (資訊清單產生和編輯工具、圖形用戶端)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

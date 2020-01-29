@@ -1,5 +1,5 @@
 ---
-title: 如何：繼承自現有的 Windows Forms 控制項
+title: 從現有控制項繼承
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,12 +11,12 @@ ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 063f5bb87b6348ee83573cf1506c9fabdaf651ee
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d0025ba136698c0a74a73e64a83fa4f526e44843
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460561"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736479"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>如何：繼承自現有的 Windows Forms 控制項
 

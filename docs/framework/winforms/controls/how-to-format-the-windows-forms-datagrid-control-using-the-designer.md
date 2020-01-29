@@ -1,5 +1,5 @@
 ---
-title: 作法：使用設計工具格式化 Windows Forms DataGrid 控制項
+title: 使用設計工具格式化 DataGrid 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 548acac0fc7724490bfe89927ec0662b3488c230
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "69666165"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736791"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>作法：使用設計工具格式化 Windows Forms DataGrid 控制項
 
@@ -23,7 +23,7 @@ ms.locfileid: "69666165"
 
 將不同的色彩套用至 <xref:System.Windows.Forms.DataGrid> 控制項的各個部分，可協助您更輕鬆地讀取和解讀中的資訊。 色彩可以套用至資料列和資料行。 您也可以自行隱藏或顯示資料列和資料行。
 
-@No__t_0 控制項的格式有三個基本層面：
+<xref:System.Windows.Forms.DataGrid> 控制項的格式有三個基本層面：
 
 - 您可以設定屬性，以建立顯示資料的預設樣式。
 
@@ -33,7 +33,7 @@ ms.locfileid: "69666165"
 
 在格式化資料方格的初始步驟中，您可以設定 <xref:System.Windows.Forms.DataGrid> 本身的屬性。 這些色彩和格式選擇會形成一個基底，您可以根據顯示的資料表和資料行進行變更。
 
-下列程式需要具有包含 <xref:System.Windows.Forms.DataGrid> 控制項之表單的**Windows 應用程式**專案。 如需設定這類專案的相關資訊，請參閱 [How to：建立 Windows Forms 應用程式專案 ](/visualstudio/ide/step-1-create-a-windows-forms-application-project)，並 [How 到：將控制項新增至 Windows Forms ](how-to-add-controls-to-windows-forms.md)。 在 Visual Studio 2005 中，預設不會在 [**工具箱**] 中使用 <xref:System.Windows.Forms.DataGrid> 控制項。 如需詳細資訊，請參閱[如何：將專案新增至 [工具箱] ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))。
+下列程式需要具有包含 <xref:System.Windows.Forms.DataGrid> 控制項之表單的**Windows 應用程式**專案。 如需設定這類專案的相關資訊，請參閱 [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 並 [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)。 在 Visual Studio 2005 中，預設不會在 [**工具箱**] 中使用 <xref:System.Windows.Forms.DataGrid> 控制項。 如需詳細資訊，請參閱[如何：將專案新增至 [工具箱]](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))。
 
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>若要建立 DataGrid 控制項的預設樣式
 
@@ -43,9 +43,9 @@ ms.locfileid: "69666165"
 
     |屬性|描述|
     |--------------|-----------------|
-    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|@No__t_0 屬性會定義方格中偶數資料列的色彩。 當您將 [<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>] 屬性設定為不同的色彩時，每個其他資料列都會設定為這個新的色彩（資料列1、3、5等等）。|
+    |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|`BackColor` 屬性會定義方格中偶數資料列的色彩。 當您將 [<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>] 屬性設定為不同的色彩時，每個其他資料列都會設定為這個新的色彩（資料列1、3、5等等）。|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|方格中偶數資料列的背景色彩（資料列0、2、4、6等等）。|
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|[@No__t_0] 和 [<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>] 屬性會決定方格中的資料列色彩，而 [<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>] 屬性會決定資料欄區域外的區域色彩，只有在格線滾動到底部，或是只有少數資料列包含在格.|
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|[<xref:System.Windows.Forms.DataGrid.BackColor%2A>] 和 [<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>] 屬性會決定方格中的資料列色彩，[<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>] 屬性會決定資料欄區域外的區域色彩，只有在格線滾動到底部，或是方格中只包含幾個資料列時，才會顯示。|
     |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|方格的框線樣式，其中一個 <xref:System.Windows.Forms.BorderStyle> 的列舉值。|
     |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|方格視窗標題的背景色彩，出現在方格的正上方。|
     |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|方格頂端標題的字型。|
@@ -70,7 +70,7 @@ ms.locfileid: "69666165"
     > [!NOTE]
     > 當您自訂控制項的色彩時，可以讓控制項無法存取，因為色彩選擇不佳（例如，紅色和綠色）。 使用 [**系統色彩**] 調色板上可用的色彩來避免此問題。
 
-    下列程式需要系結至資料表的 <xref:System.Windows.Forms.DataGrid> 控制項。 如需詳細資訊，請參閱[如何：將 Windows Forms DataGrid 控制項系結至資料來源 ](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。
+    下列程式需要系結至資料表的 <xref:System.Windows.Forms.DataGrid> 控制項。 如需詳細資訊，請參閱[如何：將 Windows Forms DataGrid 控制項系結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。
 
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>在設計階段設定資料表的資料表和資料行樣式
 
@@ -100,5 +100,5 @@ ms.locfileid: "69666165"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行 ](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [DataGrid 控制項](datagrid-control-windows-forms.md)

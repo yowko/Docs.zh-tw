@@ -2,12 +2,12 @@
 title: WAS 啟動架構
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 063c5e43abf4ddda3edb1de1d9d983bfe8e05706
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 01c30db1182ece6dd968b69cc4efcaa2d9fabd79
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637404"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737510"
 ---
 # <a name="was-activation-architecture"></a>WAS 啟動架構
 本主題將條列說明並討論 Windows Process Activation Service (亦稱為 WAS) 的元件。  
@@ -27,17 +27,17 @@ ms.locfileid: "64637404"
   
  當 WAS 啟動背景工作處理序執行個體時，會將所需的處理序通訊協定處理常式載入背景工作處理序，然後透過應用程式管理員建立可裝載應用程式的應用程式定義域。 應用程式定義域會依據應用程式需求，同時載入應用程式的程式碼與使用的 AppDomain 通訊協定處理常式。  
   
- ![如果螢幕擷取畫面顯示 WAS 架構。](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
+ ![顯示 WAS 架構的螢幕擷取畫面。](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>接聽項配接器  
- 接聽項配接器是個別的 Windows 服務，可實作網路通訊邏輯以透過所接聽的網路通訊協定來接收訊息。 下表列出 Windows Communication Foundation (WCF) 通訊協定的接聽程式配接器。  
+ 接聽項配接器是個別的 Windows 服務，可實作網路通訊邏輯以透過所接聽的網路通訊協定來接收訊息。 下表列出 Windows Communication Foundation （WCF）通訊協定的接聽程式介面卡。  
   
-|接聽項配接器服務名稱|通訊協定|注意|  
+|接聽項配接器服務名稱|通訊協定|注意事項|  
 |-----------------------------------|--------------|-----------|  
-|W3SVC|http|常見的元件，提供 IIS 7.0 和 WCF HTTP 啟用。|  
+|W3SVC|http|提供 IIS 7.0 和 WCF HTTP 啟用的萬用群組件。|  
 |NetTcpActivator|net.tcp|取決於 NetTcpPortSharing 服務。|  
 |NetPipeActivator|net.pipe||  
-|NetMsmqActivator|net.msmq|以 WCF 為基礎的訊息佇列應用程式搭配使用。|  
+|NetMsmqActivator|net.msmq|用於以 WCF 為基礎的訊息佇列應用程式。|  
 |NetMsmqActivator|msmq.formatname|提供與現有的訊息佇列應用程式的回溯相容性 (Backward Compatibility)。|  
   
  特定通訊協定的接聽項配接器會在安裝期間於 applicationHost.config 檔案中註冊，如下列 XML 範例所示。  
@@ -85,7 +85,7 @@ ms.locfileid: "64637404"
 </system.web>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [設定用於 WCF 的 WAS](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Windows Server AppFabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

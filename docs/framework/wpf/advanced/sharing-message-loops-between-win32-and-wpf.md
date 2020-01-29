@@ -1,5 +1,6 @@
 ---
 title: 在 Win32 和 WPF 之間共用訊息迴圈
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Win32 code [WPF], sharing message loops
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 5c1d75ab9598196e9cffc78a2f116993e722fd38
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: e1b96284d69645876d3e383beb03a2cc540d8b7b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740324"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731717"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>在 Win32 和 WPF 之間共用訊息迴圈
 本主題描述如何使用 <xref:System.Windows.Threading.Dispatcher> 中的現有訊息迴圈公開，或在交互操作程式碼的 Win32 端上建立個別的訊息迴圈，來執行與 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]交互操作的訊息迴圈。  

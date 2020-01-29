@@ -2,22 +2,22 @@
 title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
 ms.date: 10/14/2019
-ms.openlocfilehash: b85ef06aa445e4708487deed9ec6bfeffeab3657
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454224"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734308"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**本文適用於：✓** .NET Core 1.x SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>[屬性]
+## <a name="name"></a>Name
 
 `dotnet build` - 建置專案和其所有相依性。
 
@@ -25,7 +25,7 @@ ms.locfileid: "73454224"
 
 ```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force]
-    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo] 
+    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
@@ -45,7 +45,7 @@ dotnet build [-h|--help]
 
 針對以 .NET Core 3.0 和更新版本為目標的可執行專案，會將程式庫相依性複製到輸出檔案夾。 這表示，如果沒有任何其他發佈特定邏輯（例如 Web 專案），則組建輸出應該是可部署的。
 
-建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 檔案會在 [`dotnet restore`](dotnet-restore.md) 執行時建立。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。 使用 .NET Core 1.x SDK 時，您必須在執行 `dotnet build` 之前明確地執行 `dotnet restore`。 自 .NET Core 2.0 SDK 開始，`dotnet restore` 會在您執行 `dotnet build` 時以隱含方式執行。 如果您想要在執行 build 命令時停用隱含還原，您可以跳過 `--no-restore` 選項。
+建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 檔案會在 [`dotnet restore`](dotnet-restore.md) 執行時建立。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。 使用 .NET Core 1.x SDK 時，您必須在執行 `dotnet build`之前明確地執行 `dotnet restore`。 自 .NET Core 2.0 SDK 開始，`dotnet restore` 會在您執行 `dotnet build` 時以隱含方式執行。 如果您想要在執行 build 命令時停用隱含還原，您可以跳過 `--no-restore` 選項。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -67,7 +67,7 @@ dotnet build [-h|--help]
 
 執行 `dotnet build` 相當於執行 `dotnet msbuild -restore`;不過，輸出的預設詳細資訊是不同的。
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a>Arguments
 
 `PROJECT | SOLUTION`
 
@@ -153,7 +153,7 @@ dotnet build [-h|--help]
   dotnet build --source c:\packages\mypackages
   ```
 
-- 建置專案並使用 `-p` [MSBuild 選項](#msbuild) 將 1.2.3.4 版設定為組建參數：
+- 使用 `-p` [MSBuild 選項](#msbuild)，建立專案並將版本1.2.3.4 設定為組建參數：
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

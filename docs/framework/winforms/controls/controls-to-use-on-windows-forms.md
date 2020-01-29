@@ -1,16 +1,16 @@
 ---
-title: 在 Windows Form 上使用的控制項
+title: 要使用的控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: bedfaef9a3d0cc81641006d254926f7bf9861c10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2bcefd2ee2c9533d9f0afa2d12cd2e7437fc3d37
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930200"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737453"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>在 Windows Form 上使用的控制項
 以下是可在 Windows Forms 上使用的控制項和元件清單，依字母順序列出。 除了本節涵蓋的 Windows Forms 控制項之外，您還可以將 ActiveX 和自訂控制項新增至 Windows Forms。 如果您在這裡列出的控制項中找不到所需的控制項，則也可以建立自己的控制項。 如需詳細資訊，請參閱[在設計階段開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)。 如需選擇所需控制項的詳細資訊，請參閱[依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)。  
@@ -18,7 +18,7 @@ ms.locfileid: "69930200"
 > [!NOTE]
 > Visual Basic 控制項是以 .NET Framework 所提供的類別為基礎。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)  
  列出並描述以 .NET Framework 為基礎的 Windows Forms 控制項。  
   
@@ -50,10 +50,10 @@ ms.locfileid: "69930200"
  在下拉式方塊中顯示資料。  
   
  [ContextMenu 元件](contextmenu-component-windows-forms.md)  
- 將與所選取物件建立關聯之常用命令的易存取功能表提供給使用者。 雖然<xref:System.Windows.Forms.ContextMenuStrip>會取代並新增舊版<xref:System.Windows.Forms.ContextMenu>控制項的功能, 但如果<xref:System.Windows.Forms.ContextMenu>需要, 也會保留以提供回溯相容性及未來使用。  
+ 將與所選取物件建立關聯之常用命令的易存取功能表提供給使用者。 雖然 <xref:System.Windows.Forms.ContextMenuStrip> 會取代並新增舊版 <xref:System.Windows.Forms.ContextMenu> 控制項的功能，但如果需要，<xref:System.Windows.Forms.ContextMenu> 會保留以提供回溯相容性及未來使用。  
   
  [ContextMenuStrip 控制項](contextmenustrip-control.md)  
- 代表捷徑功能表。 雖然<xref:System.Windows.Forms.ContextMenuStrip>會取代並新增舊版<xref:System.Windows.Forms.ContextMenu>控制項的功能, 但如果<xref:System.Windows.Forms.ContextMenu>需要, 也會保留以提供回溯相容性及未來使用。  
+ 代表捷徑功能表。 雖然 <xref:System.Windows.Forms.ContextMenuStrip> 會取代並新增舊版 <xref:System.Windows.Forms.ContextMenu> 控制項的功能，但如果需要，<xref:System.Windows.Forms.ContextMenu> 會保留以提供回溯相容性及未來使用。  
   
  [DataGrid 控制項](datagrid-control-windows-forms.md)  
  顯示資料集中的表格式資料，並允許更新資料來源。  
@@ -109,13 +109,13 @@ ms.locfileid: "69930200"
  透過 Windows 檔案總管顯示具有圖示的項目清單。  
   
  [MainMenu 元件](mainmenu-component-windows-forms.md)  
- 在執行階段顯示功能表。 雖然<xref:System.Windows.Forms.MenuStrip>會取代並加入舊版的<xref:System.Windows.Forms.MainMenu>控制項功能, 但如果<xref:System.Windows.Forms.MainMenu>您選擇, 則會保留以提供回溯相容性及未來使用。  
+ 在執行階段顯示功能表。 雖然 <xref:System.Windows.Forms.MenuStrip> 會取代並新增舊版 <xref:System.Windows.Forms.MainMenu> 控制項的功能，但如果您選擇，<xref:System.Windows.Forms.MainMenu> 會保留以供回溯相容性及未來使用。  
   
  [MaskedTextBox 控制項](maskedtextbox-control-windows-forms.md)  
  限制表單中使用者輸入的格式。  
   
  [MenuStrip 控制項](menustrip-control-windows-forms.md)  
- 提供功能表系統給表單。 雖然<xref:System.Windows.Forms.MenuStrip>會取代並加入舊版的<xref:System.Windows.Forms.MainMenu>控制項功能, 但如果<xref:System.Windows.Forms.MainMenu>您選擇, 則會保留以提供回溯相容性及未來使用。  
+ 提供功能表系統給表單。 雖然 <xref:System.Windows.Forms.MenuStrip> 會取代並新增舊版 <xref:System.Windows.Forms.MainMenu> 控制項的功能，但如果您選擇，<xref:System.Windows.Forms.MainMenu> 會保留以供回溯相容性及未來使用。  
   
  [MonthCalendar 控制項](monthcalendar-control-windows-forms.md)  
  提供直覺式圖形介面，以讓使用者檢視和設定日期資訊。  
@@ -129,7 +129,7 @@ ms.locfileid: "69930200"
  [OpenFileDialog 元件](openfiledialog-component-windows-forms.md)  
  讓使用者使用預先設定的對話方塊來開啟檔案。  
   
- [PageSetupDialog 元件](pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)  
  設定要透過預先設定之對話方塊進行列印的頁面詳細資料。  
   
  [Panel 控制項](panel-control-windows-forms.md)  
@@ -168,7 +168,7 @@ ms.locfileid: "69930200"
  允許使用者調整停駐的控制項大小。  
   
  [Splitter 控制項](splitter-control-windows-forms.md)  
- 允許使用者調整停駐的控制項 (.NET Framework 1.x 版)。  
+ 允許使用者調整停駐的控制項（.NET Framework 1.x 版）。  
   
  [StatusBar 控制項](statusbar-control-windows-forms.md)  
  顯示具有焦點之控制項的相關狀態資訊。 雖然 <xref:System.Windows.Forms.StatusStrip> 會取代及擴充舊版的 <xref:System.Windows.Forms.StatusBar> 控制項，但是您也可以選擇保留 <xref:System.Windows.Forms.StatusBar>，以提供回溯相容性及供未來使用。  
@@ -189,19 +189,19 @@ ms.locfileid: "69930200"
  會定期引發事件。  
   
  [ToolBar 控制項](toolbar-control-windows-forms.md)  
- 顯示可啟動命令的功能表和點陣圖按鈕。 您可以擴充控制項的功能，並修改其外觀和行為。 雖然<xref:System.Windows.Forms.ToolStrip>會取代並加入舊版的<xref:System.Windows.Forms.ToolBar>控制項功能, 但如果<xref:System.Windows.Forms.ToolBar>您選擇, 則會保留以提供回溯相容性及未來使用。  
+ 顯示可啟動命令的功能表和點陣圖按鈕。 您可以擴充控制項的功能，並修改其外觀和行為。 雖然 <xref:System.Windows.Forms.ToolStrip> 會取代並新增舊版 <xref:System.Windows.Forms.ToolBar> 控制項的功能，但如果您選擇，<xref:System.Windows.Forms.ToolBar> 會保留以供回溯相容性及未來使用。  
   
  [ToolStrip 控制項](toolstrip-control-windows-forms.md)  
- 在 Windows Forms 應用程式中建立自訂工具列和功能表。 雖然<xref:System.Windows.Forms.ToolStrip>會取代並加入舊版的<xref:System.Windows.Forms.ToolBar>控制項功能, 但如果<xref:System.Windows.Forms.ToolBar>您選擇, 則會保留以提供回溯相容性及未來使用。  
+ 在 Windows Forms 應用程式中建立自訂工具列和功能表。 雖然 <xref:System.Windows.Forms.ToolStrip> 會取代並新增舊版 <xref:System.Windows.Forms.ToolBar> 控制項的功能，但如果您選擇，<xref:System.Windows.Forms.ToolBar> 會保留以供回溯相容性及未來使用。  
   
  [ToolStripContainer 控制項](toolstripcontainer-control.md)  
- 在表單的每一端提供面板, 以停駐、浮動和<xref:System.Windows.Forms.ToolStrip>排列控制項, 以及傳統<xref:System.Windows.Forms.ToolStripContentPanel>控制項的中央。  
+ 提供表單兩側的面板，以停駐、浮動和排列 <xref:System.Windows.Forms.ToolStrip> 控制項，以及傳統控制項的中央 <xref:System.Windows.Forms.ToolStripContentPanel>。  
   
  [ToolStripPanel 控制項](toolstrippanel-control.md)  
- 提供一個面板來停駐、浮動和<xref:System.Windows.Forms.ToolStrip>排列控制項。  
+ 提供一個面板來停駐、浮動和排列 <xref:System.Windows.Forms.ToolStrip> 控制項。  
   
  [ToolStripProgressBar 控制項概觀](toolstripprogressbar-control-overview.md)  
- 以圖形方式表示完成動作的進度。 <xref:System.Windows.Forms.ToolStripProgressBar>通常包含在中<xref:System.Windows.Forms.StatusStrip>。  
+ 以圖形方式表示完成動作的進度。 <xref:System.Windows.Forms.ToolStripProgressBar> 通常包含在 <xref:System.Windows.Forms.StatusStrip>中。  
   
  [ToolStripStatusLabel 控制項](toolstripstatuslabel-control.md)  
  代表 <xref:System.Windows.Forms.StatusStrip> 控制項中的面板。  
@@ -229,7 +229,7 @@ ms.locfileid: "69930200"
  提供下列項目的連結：逐步執行主題、要建立之控制項類型的建議，以及建立您自己的控制項的其他資訊。  
   
  [比較各種語言和程式庫的控制項與可以透過程式設計的物件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- 提供的資料表會將 Visual Basic 6.0 中的控制項對應至 Visual Basic .NET 中的對應控制項。 請注意, 控制項現在是 .NET Framework 中的類別。  
+ 提供的資料表會將 Visual Basic 6.0 中的控制項對應至 Visual Basic .NET 中的對應控制項。 請注意，控制項現在是 .NET Framework 中的類別。  
   
- [如何：將 ActiveX 控制項新增至 Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
+ [操作說明：將 ActiveX 控制項新增至 Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
  描述如何在 Windows Forms 上使用 ActiveX 控制項。

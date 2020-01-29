@@ -2,16 +2,16 @@
 title: dotnet-傾印-.NET Core
 description: 安裝和使用 dotnet-傾印命令列工具。
 ms.date: 10/14/2019
-ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3c0e28d4efc96ae53ec7dfae243725ab400e6b8f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740769"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737666"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>傾印集合和分析公用程式（`dotnet-dump`）
 
-**本文適用于：✓** .net CORE 3.0 SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
 > [!NOTE]
 > macOS 不支援 `dotnet-dump`。
@@ -73,7 +73,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`--type <Heap|Mini>`**
 
-  指定傾印類型，它會決定從進程收集的資訊種類。 它有兩種類型：
+  指定傾印類型，它會決定從進程收集的資訊種類。 有兩種類型：
 
   - `Heap`-包含模組清單、執行緒清單、所有堆疊、例外狀況資訊、處理資訊和所有記憶體（對應的影像除外）的大型且較完整的傾印。
   - `Mini`-包含模組清單、執行緒清單、例外狀況資訊和所有堆疊的小型傾印。

@@ -3,16 +3,16 @@ title: 調試記憶體流失教學課程
 description: 瞭解如何在 .NET Core 中偵測記憶體流失。
 ms.topic: tutorial
 ms.date: 12/17/2019
-ms.openlocfilehash: cb137503cbc81f5ab9438dadcf1dc1c6750a1ca8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715597"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737739"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>教學課程：在 .NET Core 中偵測記憶體流失
 
-**本文適用于：✓** .net CORE 3.0 SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
 本教學課程示範用來分析 .NET Core 記憶體流失的工具。
 
@@ -28,7 +28,7 @@ ms.locfileid: "75715597"
 
 ## <a name="prerequisites"></a>必要條件：
 
-教學課程會使用：
+本教學課程會使用：
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 或更新版本。
 - [dotnet-](dotnet-trace.md)用來列出進程的追蹤。
@@ -54,7 +54,7 @@ dotnet run
 dotnet-trace ps
 ```
 
-輸出應該會類似：
+輸出應該類似：
 
 ```console
 4807 DiagnosticScena /home/user/git/samples/core/diagnostics/DiagnosticScenarios/bin/Debug/netcoreapp3.0/DiagnosticScenarios

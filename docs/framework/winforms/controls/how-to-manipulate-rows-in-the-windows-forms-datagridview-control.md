@@ -1,5 +1,5 @@
 ---
-title: 作法：管理 Windows Forms DataGridView 控制項中的資料列
+title: 操作 DataGridView 控制項中的資料列
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], manipulating rows
 - rows [Windows Forms], manipulating on Windows Forms
 ms.assetid: 522d8944-e073-4488-9673-923f0a8d7214
-ms.openlocfilehash: ebf434b7ab813c729b48075107cdd3b2a20fcd24
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f6942c4d74269348e7758b335a6fd93bed3ffa53
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592324"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736040"
 ---
-# <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>作法：管理 Windows Forms DataGridView 控制項中的資料列
+# <a name="how-to-manipulate-rows-in-the-windows-forms-datagridview-control"></a>如何：管理 Windows Form DataGridView 控制項中的資料列
 下列程式碼範例顯示使用 <xref:System.Windows.Forms.DataGridViewRow> 類別屬性操作 <xref:System.Windows.Forms.DataGridView> 資料列的各種方式。  
   
 ## <a name="example"></a>範例  
@@ -30,7 +30,7 @@ ms.locfileid: "65592324"
   
 - System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>

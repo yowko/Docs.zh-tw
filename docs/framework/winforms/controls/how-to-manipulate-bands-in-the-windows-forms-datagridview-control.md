@@ -1,5 +1,5 @@
 ---
-title: 作法：管理 Windows Forms DataGridView 控制項中的寬線
+title: 操作 DataGridView 控制項中的頻帶
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - bands [Windows Forms], manipulating in Windows Forms
 - DataGridView control [Windows Forms], manipulating bands
 ms.assetid: 1ea3470e-480f-4edc-bcbd-51373eca3856
-ms.openlocfilehash: 5e62f5d31b9d24469455ab31f9771ebc81f74967
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 89fdf41a592ef241935f1f71157588a392320df3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592351"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736124"
 ---
-# <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>作法：管理 Windows Forms DataGridView 控制項中的寬線
+# <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>如何：管理 Windows Forms DataGridView 控制項中的寬線
 下列程式碼範例示範使用 <xref:System.Windows.Forms.DataGridViewBand> 類別的屬性來管理 <xref:System.Windows.Forms.DataGridView> 資料列和資料行的各種方式，<xref:System.Windows.Forms.DataGridViewRow> 和 <xref:System.Windows.Forms.DataGridViewColumn> 類別便是衍生自這個類別。  
   
 ## <a name="example"></a>範例  
@@ -30,7 +30,7 @@ ms.locfileid: "65592351"
   
 - System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>

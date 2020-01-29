@@ -2,12 +2,12 @@
 title: 相依性與 .NET 程式庫
 description: 在 .NET 程式庫中管理 NuGet 相依性的最佳做法建議。
 ms.date: 10/02/2018
-ms.openlocfilehash: b5742bf4724c4aff4beb4ca40a543bd096528a00
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706500"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731474"
 ---
 # <a name="dependencies"></a>相依性
 
@@ -29,7 +29,7 @@ ms.locfileid: "75706500"
 
 您不可能得知其他人會將您的套件搭配哪些套件使用。 一個降低菱形相依性中斷您程式庫之機會的良好方式，便是將您所相依之套件的數目降到最低。
 
-**✔️ 請務必**檢閱您的 .NET 程式庫，以找出非必要的相依性。
+✔️確實檢查您的 .NET 程式庫是否有不必要的相依性。
 
 ## <a name="nuget-dependency-version-ranges"></a>NuGet 相依性版本範圍
 
@@ -56,11 +56,11 @@ NuGet 用來解決相依性的規則非常[複雜](/nuget/consume-packages/depen
 
 ![菱形相依性衝突](./media/dependencies/diamond-dependency-conflict.png "菱形相依性衝突")
 
-**❌** 沒有最低版本的 NuGet 套件參考。
+❌ 沒有最低版本的 NuGet 套件參考。
 
-**❌ 避免**需要確切版本的 NuGet 套件參考。
+❌ 避免需要確切版本的 NuGet 套件參考。
 
-**❌ 避免**具有版本上限的 NuGet 套件參考。
+❌ 避免使用版本上限的 NuGet 套件參考。
 
 ## <a name="nuget-shared-source-packages"></a>NuGet 共用的來源套件
 
@@ -78,19 +78,19 @@ NuGet 用來解決相依性的規則非常[複雜](/nuget/consume-packages/depen
 
 共用的來源套件有一些限制。 它們只能由 `PackageReference` 參考，因此會排除較舊的 `packages.config` 專案。 此外，共用的來源套件只適用於具有相同語言類型的專案。 因為這些限制，共用的來源套件最適合在開放原始碼專案內共用功能時使用。
 
-**✔️ 請考慮**針對較小的內部功能片段使用共用的來源套件。
+✔️考慮針對小型、內部的功能參考共用的來源套件。
 
-**✔️ 請考慮**在套件提供的是較小的內部功能片段的情況下，使它成為共用的來源套件。
+✔️如果您的套件提供小型的內部功能，請考慮將它設為共用的來源套件。
 
-**✔️ 請務必**搭配 `PrivateAssets="All"` 參考共用的來源套件。
+✔️請參考 `PrivateAssets="All"`的共用來源套件。
 
 > 此設定能告訴 NuGet 該套件僅適用於開發階段，且不應該公開為公用相依性。
 
-**❌** 在公用 API 中沒有共用的來源套件類型。
+❌ 在公用 API 中沒有共用的來源套件類型。
 
 > 共用來源類型會編譯為參考組件，且不能跨越組件界線進行交換。 例如，某個專案中的共用來源 `IRepository` 類型，與另一個專案中相同的共用來源 `IRepository` 將會是完全不同的類型。 共用來源套件中的類型應該僅具有 `internal` 可見性。
 
-**❌ 不要**將共用的來源套件發佈至 NuGet.org。
+❌ 不要將共用的來源套件發佈至 NuGet.org。
 
 > 共用的來源套件包含原始程式碼，而且只能用於具有相同語言類型的專案。 例如，以 F# 撰寫的應用程式將無法使用以 C# 撰寫的共用來源套件。
 >

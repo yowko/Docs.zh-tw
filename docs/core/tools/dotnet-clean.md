@@ -2,29 +2,29 @@
 title: dotnet clean 命令
 description: dotnet clean 命令會清除目前的目錄。
 ms.date: 06/26/2019
-ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117740"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734247"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**本主題適用於：✓** .NET Core 1.x SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet clean` - 清除專案的輸出。
 
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive]
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
@@ -33,7 +33,7 @@ dotnet clean [-h|--help]
 
 `dotnet clean` 命令會清除前一個組建的輸出。 它會實作為 [MSBuild 目標](/visualstudio/msbuild/msbuild-targets)，因此命令在執行的時候會評估專案。 只會清除在建置期間建立的輸出。 中繼 (*obj*) 和最後輸出 (*bin*) 這兩個資料夾都會清除。
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a>Arguments
 
 `PROJECT | SOLUTION`
 
@@ -55,11 +55,11 @@ dotnet clean [-h|--help]
 
 * **`--interactive`**
 
-  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供使用。
+  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供。
 
 * **`--nologo`**
 
-  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供使用。
+  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供。
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

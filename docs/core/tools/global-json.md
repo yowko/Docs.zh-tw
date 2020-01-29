@@ -3,18 +3,18 @@ title: global.json 概觀
 description: 了解如何使用 global.json 檔案來設定執行.NET Core CLI 命令時的 NET Core SDK 版本。
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: fedfe168e2c1a0555c2d4499ba02d270033e0d1a
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: f02c9129a707ddddb2c5e1975b75cc35abc5cd55
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115808"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733971"
 ---
 # <a name="globaljson-overview"></a>global.json 概觀
 
-**本文適用于：✓** .net CORE 2.0 SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 2.0 SDK 和更新版本
 
-*global.json* 檔案可讓您定義執行.NET Core CLI 命令時所使用的 .NET Core SDK 版本。 選取 .NET Core SDK 與指定專案所針對的執行階段沒有關係。 .NET Core SDK 版本會指出使用哪個版本的.NET Core CLI 工具。 
+*global.json* 檔案可讓您定義執行.NET Core CLI 命令時所使用的 .NET Core SDK 版本。 選取 .NET Core SDK 與指定專案所針對的執行階段沒有關係。 .NET Core SDK 版本會指出使用哪個版本的.NET Core CLI 工具。
 
 一般來說，您會想要使用最新版的 SDK 工具，因此不需要*global. json*檔案。 在某些先進的案例中，您可能會想要控制 SDK 工具的版本，這篇文章會說明如何執行這項操作。
 
@@ -62,7 +62,7 @@ ms.locfileid: "76115808"
 
 - 自： .NET Core 3.0 SDK 起提供。
 
-選取 SDK 版本時要使用的向前復原原則，可以在特定 SDK 版本遺失時做為回溯，或做為使用較高版本的指示詞。 除非您將其設定為 `latestMajor`，否則必須使用 `rollForward` 值來指定[版本](#version)。 
+選取 SDK 版本時要使用的向前復原原則，可以在特定 SDK 版本遺失時做為回溯，或做為使用較高版本的指示詞。 除非您將其設定為 `latestMajor`，否則必須使用 `rollForward` 值來指定[版本](#version)。
 
 若要瞭解可用的原則及其行為，請考慮下列 `x.y.znn`格式的 SDK 版本定義：
 
@@ -147,7 +147,7 @@ dotnet new globaljson --sdk-version 3.0.100
 > [!NOTE]
 > 比對規則是由 `dotnet.exe` 進入點所控制，這在所有已安裝的 .NET Core 安裝的執行時間中都是通用的。 當您有多個並行安裝的執行時間時，會使用 .NET Core 執行時間最新安裝版本的比對規則。
 
-## <a name="net-core-3xtabnetcore3x"></a>[.NET Core 3.x](#tab/netcore3x)
+## <a name="net-core-3xtabnetcore3x"></a>[.NET Core 3。x](#tab/netcore3x)
 
 從 .NET Core 3.0 開始，判斷要使用的 SDK 版本時，適用下列規則：
 

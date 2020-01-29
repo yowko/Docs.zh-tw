@@ -2,16 +2,16 @@
 title: 實作具復原功能的 Entity Framework Core SQL 連接
 description: 了解如何實作具復原功能的 Entity Framework Core SQL 連線。 在雲端中使用 Azure SQL Database 時，此技術特別重要。
 ms.date: 10/16/2018
-ms.openlocfilehash: 3128cf1be7f2dc8804a002556db232f4e0fc8c33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: 7899fc263ab3cde6ac2410ca614a7e5fa285576b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094055"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732734"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>實作具復原功能的 Entity Framework Core SQL 連接
 
-針對 Azure SQL DB，Entity Framework (EF) Core 已提供內部資料庫連線恢復功能和重試邏輯。 如果您想要使用<xref:Microsoft.EntityFrameworkCore.DbContext>具復原功能的 EF Core 連線[，則必須為每個 ](/ef/core/miscellaneous/connection-resiliency) 連線啟用 Entity Framework 執行策略。
+針對 Azure SQL DB，Entity Framework (EF) Core 已提供內部資料庫連線恢復功能和重試邏輯。 如果您想要使用[具復原功能的 EF Core 連線](/ef/core/miscellaneous/connection-resiliency)，則必須為每個 <xref:Microsoft.EntityFrameworkCore.DbContext> 連線啟用 Entity Framework 執行策略。
 
 例如，EF Core 連接層級的下列程式碼可在連接失敗時重試具有恢復功能的 SQL 連接。
 
@@ -88,7 +88,7 @@ public async Task<IActionResult> UpdateProduct(
 }
 ```
 
-第一個 <xref:Microsoft.EntityFrameworkCore.DbContext> 為 `_catalogContext`，第二個 `DbContext` 則是在 `_integrationEventLogService` 物件內。 系統會使用 EF 執行策略跨所有 `DbContext` 物件執行認可動作。
+第一個 <xref:Microsoft.EntityFrameworkCore.DbContext> 為 `_catalogContext`，第二個 `DbContext` 則是在 `_catalogIntegrationEventService` 物件內。 系統會使用 EF 執行策略跨所有 `DbContext` 物件執行認可動作。
 
 為達成此多個 `DbContext` 認可，`SaveEventAndCatalogContextChangesAsync` 會使用 `ResilientTransaction` 類別，如以下程式碼所示：
 

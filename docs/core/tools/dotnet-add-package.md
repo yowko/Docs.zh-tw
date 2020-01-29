@@ -2,22 +2,22 @@
 title: dotnet add package 命令
 description: "'dotnet add package' 命令提供方便的選項，將 NuGet 套件參考新增至專案。"
 ms.date: 06/26/2019
-ms.openlocfilehash: 9445cf686ec1733f5a8b3403b7efea3a544fbc99
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 210dcf0efe06672264ebfa297589bdb387591a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117791"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733324"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**本文適用於：✓** .NET Core 1.x SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet add package` - 將套件參考新增至專案檔。
 
@@ -52,7 +52,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a>Arguments
 
 - **`PROJECT`**
 
@@ -112,7 +112,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [在 NuGet 中管理全域套件、快取和暫存資料夾](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
 - [NuGet 套件版本控制](https://docs.microsoft.com/nuget/reference/package-versioning)

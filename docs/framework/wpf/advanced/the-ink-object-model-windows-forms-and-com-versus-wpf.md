@@ -1,5 +1,6 @@
 ---
-title: Ink 物件模型：Windows Forms 和 COM 與 WPF 的比較
+title: 數位筆跡-Windows Forms 和 COM 與 WPF 的比較
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-ms.openlocfilehash: 2c0d155d320bab2f0114280e962c8f2f0b559681
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 4a183bba2c5cfb2d12a9cf435ae1f92b4cf63948
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636415"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737293"
 ---
-# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Ink 物件模型：Windows Forms 和 COM 與 WPF 的比較
+# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>Ink 物件模型：Windows Form 和 COM 與 WPF 的比較
 
 基本上有三種平臺支援數位筆跡： Tablet PC Windows Forms 平臺、Tablet PC COM 平臺，以及 Windows Presentation Foundation （WPF）平臺。  Windows Forms 和 COM 平臺共用類似的物件模型，但 WPF 平臺的物件模型卻截然不同。  本主題將討論高階的差異，讓已處理一個物件模型的開發人員可以更瞭解另一個物件模型。  
   

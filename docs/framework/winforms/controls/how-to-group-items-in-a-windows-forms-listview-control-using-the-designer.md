@@ -1,17 +1,17 @@
 ---
-title: 如何：使用設計工具群組 Windows Form ListView 控制項中的項目
+title: 使用設計工具在 ListView 控制項中群組專案
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView control [Windows Forms], grouping items
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 03958109d4daa3fc369660de66973bb659e29c60
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 935d8d75517e1028e686ca229f6ada656f58b01e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960175"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736678"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>如何：使用設計工具群組 Windows Form ListView 控制項中的項目
 

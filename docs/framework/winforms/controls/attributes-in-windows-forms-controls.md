@@ -1,5 +1,5 @@
 ---
-title: Windows Form 控制項中的屬性
+title: 控制項中的屬性
 ms.date: 03/30/2017
 helpviewer_keywords:
 - attributes [Windows Forms]
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 9dd4c2aabe1517b66d8e499de3cf2671bb94e0d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b32e4f87e953438a3bb11569445a9270e11c7922
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954371"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732136"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows Form 控制項中的屬性
 .NET Framework 提供各種不同的屬性，供您套用至自訂控制項和元件的成員。 其中一些屬性會影響類別的執行階段行為，有些則會影響設計階段行為。  
   
 ## <a name="attributes-for-control-and-component-properties"></a>控制項和元件屬性 (Property) 的屬性 (Attribute)  
- 下表描述的屬性 (Attribute) 可套用至自訂控制項和元件的屬性 (Property) 或其他成員。 如需使用許多這些屬性的範例，請參閱[How to:在 Windows Form 控制項中套用屬性](how-to-apply-attributes-in-windows-forms-controls.md)。  
+ 下表描述的屬性 (Attribute) 可套用至自訂控制項和元件的屬性 (Property) 或其他成員。 如需有關使用許多這些屬性的範例，請參閱[如何：在 Windows Forms 控制項中套用屬性](how-to-apply-attributes-in-windows-forms-controls.md)。  
   
 |屬性|描述|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|指定要傳遞至屬性的值，讓屬性從其他來源取得其值。 這稱為「環境」。|  
 |<xref:System.ComponentModel.BrowsableAttribute>|指定是否應該在 [屬性] 視窗中顯示屬性或事件。|  
-|<xref:System.ComponentModel.CategoryAttribute>|指定用來分組的屬性或事件時顯示在類別目錄的名稱<xref:System.Windows.Forms.PropertyGrid>控制項設定為<xref:System.Windows.Forms.PropertySort.Categorized>模式。|  
+|<xref:System.ComponentModel.CategoryAttribute>|指定在 <xref:System.Windows.Forms.PropertyGrid> 控制項中顯示設定為 <xref:System.Windows.Forms.PropertySort.Categorized> 模式時，要將屬性或事件分組的類別目錄名稱。|  
 |<xref:System.ComponentModel.DefaultValueAttribute>|指定屬性的預設值。|  
 |<xref:System.ComponentModel.DescriptionAttribute>|指定屬性或事件的描述。|  
 |<xref:System.ComponentModel.DisplayNameAttribute>|指定不接受引數的屬性、事件或 `public void` 方法的顯示名稱。|  
@@ -60,9 +60,9 @@ ms.locfileid: "61954371"
 |<xref:System.ComponentModel.ToolboxItemAttribute>|代表工具箱項目的屬性。|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|指定用於工具箱項目的篩選字串和篩選類型。|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Attribute>
-- [如何：在 Windows Form 控制項中套用屬性](how-to-apply-attributes-in-windows-forms-controls.md)
+- [操作說明：在 Windows Forms 控制項中套用屬性](how-to-apply-attributes-in-windows-forms-controls.md)
 - [擴充設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)

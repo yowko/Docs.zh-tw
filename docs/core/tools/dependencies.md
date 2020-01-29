@@ -2,12 +2,12 @@
 title: 管理 .NET Core 工具中的相依性
 description: 說明如何利用 .NET Core 工具來管理相依性。
 ms.date: 03/06/2017
-ms.openlocfilehash: 9c088829ce3d5197198b7ff22a1331b8baba41d7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.openlocfilehash: e14fa42534d807e2a0fcce1dabe747c18c5166b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714216"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733384"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>使用 .NET Core SDK 1.0 管理相依性
 
@@ -33,7 +33,7 @@ ms.locfileid: "75714216"
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-上面的內容表示只有當建置是針對該給定目標產生時，相依性才有效。 條件中的 `$(TargetFramework)` 是要在專案中設定的 MSBuild 屬性。 針對最常見的 .NET Core 應用程式，您將不需要執行此動作。 
+上面的內容表示只有當建置是針對該給定目標產生時，相依性才有效。 條件中的 `$(TargetFramework)` 是在專案中設定的 MSBuild 屬性。 針對最常見的 .NET Core 應用程式，您將不需要執行此動作。 
 
 ## <a name="adding-a-dependency-to-your-project"></a>新增相依性至您的專案
 新增相依性至您的專案相當直覺化。 以下是如何將 Json.NET `9.0.1` 版新增至您專案的方式。 當然，這適用於任何其他的 NuGet 相依性。 

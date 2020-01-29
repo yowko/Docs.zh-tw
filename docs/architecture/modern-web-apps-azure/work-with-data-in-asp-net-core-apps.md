@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 7e84da784d34be1646df982fa2594764d43d99dd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: fa30deb16be323f059aa0ec12df08793598a6da2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966878"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738355"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
@@ -385,10 +385,9 @@ Azure Cosmos DB 查詢語言是一種簡單但功能強大的介面，可用於�
 ASP.NET Core 支援兩個層級的快取回應。 第一個層級不會快取伺服器上的任何項目，但會新增 HTTP 標頭以指示用戶端和 Proxy 伺服器來快取回應。 上述作業的實作方式為將 ResponseCache 屬性新增至個別的控制器或動作：
 
 ```csharp
-    [ResponseCache(Duration = 60)]
-    public IActionResult Contact()
-    { }
-
+[ResponseCache(Duration = 60)]
+public IActionResult Contact()
+{
     ViewData["Message"] = "Your contact page.";
     return View();
 }

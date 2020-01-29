@@ -2,12 +2,12 @@
 title: 中斷性變更與 .NET 程式庫
 description: 建立 .NET 程式庫時巡覽中斷性變更的最佳做法建議。
 ms.date: 10/02/2018
-ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740977"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731473"
 ---
 # <a name="breaking-changes"></a>重大變更
 
@@ -25,11 +25,11 @@ ms.locfileid: "75740977"
 
   終端使用者應用程式中會直接參考高層級程式庫。 若發生中斷性變更，開發人員可以選擇更新到最新版本，或是修改他們的應用程式來配合中斷性變更。
 
-**✔️ 請**思考您程式庫的使用方式。 中斷性變更可能會對使用它的應用程式和程式庫帶來什麼影響？
+✔️請考慮您的程式庫的使用方式。 中斷性變更可能會對使用它的應用程式和程式庫帶來什麼影響？
 
-**✔️ 請**在開發低層級 .NET 程式庫時，盡量避免中斷性變更。
+✔️在開發低層級的 .NET 程式庫時，將重大變更降至最低。
 
-**✔️ 請考慮**將大幅重寫的程式庫作為新的 NuGet 套件發佈。
+✔️考慮發佈程式庫的主要重寫做為新的 NuGet 套件。
 
 ## <a name="types-of-breaking-changes"></a>中斷性變更的類型
 
@@ -56,7 +56,7 @@ public class Task
 
 例如，ASP.NET Core MVC 具有[相容性版本](/aspnet/core/mvc/compatibility-version)的概念，可修改在 `MvcOptions` 上啟用或停用的功能。
 
-**✔️ 請考慮**在新功能可能影響現有使用者的情況下，根據預設將其維持在關閉狀態，並讓開發人員透過設定加入功能。
+✔️如果新功能會影響現有使用者，請考慮將其保留為關閉，並讓開發人員使用設定加入宣告此功能。
 
 ### <a name="binary-breaking-change"></a>二進位中斷性變更
 
@@ -64,15 +64,15 @@ public class Task
 
 二進位中斷性變更也可能會中斷**整個組件**。 使用 `AssemblyName` 重新命名組件，或是新增、移除或變更組件的強式命名金鑰，則會變更組件的身分識別。 變更組件的身分識別會中斷所有使用它的編譯程式碼。
 
-**❌** 不變更元件名稱。
+❌ 不變更元件名稱。
 
-**❌ 不要**加入、移除或變更強式命名金鑰。
+❌ 不要加入、移除或變更強式命名金鑰。
 
-**✔️ 請考慮**使用抽象基底類別，而非介面。
+✔️考慮使用抽象基類，而不是介面。
 
 > 將任何項目新增到介面都會造成實作它的現有類型失敗。 基底類別則允許您新增預設虛擬實作。
 
-**✔️ 請考慮**將 <xref:System.ObsoleteAttribute> 放置在您打算移除的類型和成員上。 屬性應具備指示，說明如何更新程式碼以避免使用已淘汰的 API。
+✔️考慮將 <xref:System.ObsoleteAttribute> 放在您想要移除的類型和成員上。 屬性應具備指示，說明如何更新程式碼以避免使用已淘汰的 API。
 
 > 呼叫具有 <xref:System.ObsoleteAttribute> 類型和方法的程式碼會產生建置警告，並附帶提供給該屬性的訊息。 警告可讓使用已淘汰 API 的人員進行遷移，以在移除已淘汰的 API 時，大多數的人員已不再使用它。
 
@@ -92,7 +92,7 @@ public class Document
 }
 ```
 
-**✔️ 請考慮**在低層級與中層級程式庫中無限期維持具有 <xref:System.ObsoleteAttribute> 的類型和方法。
+✔️請考慮將類型和方法與 <xref:System.ObsoleteAttribute> 無限期地保留在低層級和中層程式庫中。
 
 > 移除 API 是一項二進位中斷性變更。 若維持已淘汰類型和方法的成本低廉，也不會為您的程式庫增加技術債務，則請考慮維持已淘汰的類型和方法。 避免移除類型和方法，可協助避免上述提到的最差情況。
 

@@ -1,5 +1,5 @@
 ---
-title: Windows Form 資料繫結
+title: 資料繫結
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data [Windows Forms]
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: ed456807137e8cf7594bc50eb0eebb67b88e6b40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 68871db848ab46b88865e668f27f09972e8debcf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800109"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734618"
 ---
 # <a name="windows-forms-data-binding"></a>Windows Form 資料繫結
 在 Windows Form 中的資料繫結會提供方法，讓您在表單上的控制項顯示及變更來自資料來源的資訊。 您不只可以繫結至傳統的資料來源，也能繫結至幾乎任何包含資料的結構。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [資料繫結和 Windows Forms](data-binding-and-windows-forms.md)  
  提供在 Windows Form 中的資料繫結概觀。  
   
@@ -27,31 +27,31 @@ ms.locfileid: "61800109"
  [與資料繫結相關的介面](interfaces-related-to-data-binding.md)  
  描述數個與 Windows Form 資料繫結搭配使用的介面。  
   
- [如何：瀏覽 Windows Form 中的資料](how-to-navigate-data-in-windows-forms.md)  
+ [操作說明：巡覽 Windows Forms 中的資料](how-to-navigate-data-in-windows-forms.md)  
  示範如何瀏覽資料來源中的項目。  
   
  [Windows Forms 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)  
  說明不同類型的 Windows Form 資料繫結變更通知。  
   
- [如何：實作 INotifyPropertyChanged 介面](how-to-implement-the-inotifypropertychanged-interface.md)  
+ [操作說明：實作 INotifyPropertyChanged 介面](how-to-implement-the-inotifypropertychanged-interface.md)  
  示範如何實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面。 介面會與繫結的控制項溝通商務物件的屬性變更  
   
- [如何：套用 PropertyNameChanged 模式](how-to-apply-the-propertynamechanged-pattern.md)  
- 示範如何套用*PropertyName*模式的 Windows Forms 使用者控制項的屬性。  
+ [操作說明：套用 PropertyNameChanged 模式](how-to-apply-the-propertynamechanged-pattern.md)  
+ 示範如何將*PropertyName*已變更模式套用至 Windows Forms 使用者控制項的屬性。  
   
- [如何：實作 ITypedList 介面](how-to-implement-the-itypedlist-interface.md)  
+ [操作說明：實作 ITypedList 介面](how-to-implement-the-itypedlist-interface.md)  
  示範如何藉由實作 <xref:System.ComponentModel.ITypedList> 介面，讓您探索可繫結清單的結構描述。  
   
- [如何：實作 IListSource 介面](how-to-implement-the-ilistsource-interface.md)  
+ [操作說明：實作 IListSource 介面](how-to-implement-the-ilistsource-interface.md)  
  示範如何實作 <xref:System.ComponentModel.IListSource> 介面來建立可繫結的類別，它不會實作 <xref:System.Collections.IList>，而是從另一個位置提供清單。  
   
- [如何：請確定多個控制項繫結至相同的資料來源都能保持同步](multiple-controls-bound-to-data-source-synchronized.md)  
+ [操作說明：確保繫結至相同資料來源的多個控制項都能保持同步](multiple-controls-bound-to-data-source-synchronized.md)  
  示範如何處理 <xref:System.Windows.Forms.BindingSource.BindingComplete> 事件以確保繫結至資料來源的所有控制項都能保持同步。  
   
- [如何：確認子資料表中選取的資料列保持在正確的位置](ensure-the-selected-row-in-a-child-table-correct.md)  
+ [操作說明：確認子資料表中選取的資料列保持在正確位置](ensure-the-selected-row-in-a-child-table-correct.md)  
  示範在變更父資料表的欄位時，如何確定子資料表的所選取資料列不會變更。  
   
- 另請參閱[介面與相關的資料繫結](interfaces-related-to-data-binding.md)， [How to:瀏覽 Windows Form 中的資料](how-to-navigate-data-in-windows-forms.md)，和[How to:建立簡單繫結控制項在 Windows Form 上的](how-to-create-a-simple-bound-control-on-a-windows-form.md)。  
+ 另請參閱與資料系結[相關的介面](interfaces-related-to-data-binding.md)、[如何：導覽 Windows Forms 中的資料](how-to-navigate-data-in-windows-forms.md)，以及[如何：在 Windows Form 上建立簡單繫結控制項](how-to-create-a-simple-bound-control-on-a-windows-form.md)。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
@@ -67,4 +67,4 @@ ms.locfileid: "61800109"
  [DataGridView 控制項](./controls/datagridview-control-windows-forms.md)  
  提供主題的清單，這些主題會示範如何使用可繫結 datagrid 控制項。  
   
- 另請參閱[Accessing Data in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)。
+ 另請參閱[存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)。

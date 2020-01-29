@@ -1,5 +1,5 @@
 ---
-title: 作法：回應 Windows Forms DataGrid 控制項的按一下動作
+title: 在 DataGrid 控制項中回應按下的動作
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 54e41c6960c24f68cb27a6f6fb859b4b9223ed27
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9aa1331116cd3f2f8050ff9f8cc8cc52d25726d1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69914987"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735760"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>HOW TO：回應 Windows Forms DataGrid 控制項的按一下動作
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>如何：回應 Windows Form DataGrid 控制項中的按選動作
 > [!NOTE]
 > <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- Windows Forms <xref:System.Windows.Forms.DataGrid>連接到資料庫之後, 您可以監視使用者所按的資料格。  
+ 在 Windows Forms <xref:System.Windows.Forms.DataGrid> 連接到資料庫之後，您可以監視使用者按一下的資料格。  
   
 ### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>若要偵測 DataGrid 的使用者何時選取不同的資料格  
   
-- <xref:System.Windows.Forms.DataGrid.CurrentCellChanged>在事件處理常式中, 撰寫程式碼以適當地回應。  
+- 在 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 事件處理常式中，撰寫程式碼以適當地回應。  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -47,7 +47,7 @@ ms.locfileid: "69914987"
     }  
     ```  
   
-     (視覺C#效果)將下列程式碼放在表單的函式中, 以註冊事件處理常式。  
+     （視覺C#效果）將下列程式碼放在表單的函式中，以註冊事件處理常式。  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
@@ -56,9 +56,9 @@ ms.locfileid: "69914987"
   
 ### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>判斷使用者按下的 DataGrid 部分  
   
-- 在適當的事件處理常式 (例如<xref:System.Windows.Forms.Control.MouseDown>或<xref:System.Windows.Forms.Control.Click>事件) 中呼叫方法。<xref:System.Windows.Forms.DataGrid.HitTest%2A>  
+- 在適當的事件處理常式（例如 <xref:System.Windows.Forms.Control.MouseDown> 或 <xref:System.Windows.Forms.Control.Click> 事件）中呼叫 <xref:System.Windows.Forms.DataGrid.HitTest%2A> 方法。  
   
-     <xref:System.Windows.Forms.DataGrid.HitTest%2A>方法會傳回物件,其中包含已按下區域的資料<xref:System.Windows.Forms.DataGrid.HitTestInfo>列和資料行。  
+     <xref:System.Windows.Forms.DataGrid.HitTest%2A> 方法會傳回 <xref:System.Windows.Forms.DataGrid.HitTestInfo> 物件，其中包含已按一下區域的資料列和資料行。  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -132,7 +132,7 @@ ms.locfileid: "69914987"
     }  
     ```  
   
-     (視覺C#效果)將下列程式碼放在表單的函式中, 以註冊事件處理常式。  
+     （視覺C#效果）將下列程式碼放在表單的函式中，以註冊事件處理常式。  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -140,7 +140,7 @@ ms.locfileid: "69914987"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
-- [如何：在 Windows Forms DataGrid 控制項中, 于執行時間變更顯示的資料](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [如何：在執行階段時變更 Windows Forms DataGrid 控制項中顯示的資料](change-displayed-data-at-run-time-wf-datagrid-control.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Windows Forms BindingSource 元件建立查閱資料表
+title: 使用 BindingSource 元件建立查閱資料表
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: 33b9e4e98a8a3f8c0d5dd6433ebbf15c049b608e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ccf2bfa6cf3f56a38b55f8c87004c42a46172891
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643066"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736808"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>HOW TO：使用 Windows Forms BindingSource 元件建立查閱資料表
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>如何：使用 Windows Forms BindingSource 元件建立查閱資料表
 查閱資料表是具有資料行的資料表，而此資料行會從相關資料表的記錄中顯示資料。 在下列程序中，會使用 <xref:System.Windows.Forms.ComboBox> 控制項顯示從父資料表到子資料表具有外部索引鍵關聯性的欄位。  
   
  為了協助您設想這兩個資料表與此種關聯性，以下是父資料表和子資料表的範例：  
@@ -49,7 +49,7 @@ ms.locfileid: "64643066"
   
 ### <a name="to-create-the-user-interface"></a>若要建立使用者介面  
   
-1. 從**工具箱**，拖曳<xref:System.Windows.Forms.ComboBox>控制項拖曳至表單。  
+1. 將 [<xref:System.Windows.Forms.ComboBox>] 控制項從 [**工具箱**] 拖曳至表單上。  
   
      此控制項會從父資料表顯示資料行。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "64643066"
   
 8. 從子資料表的 <xref:System.Windows.Forms.ComboBox> (例如 <xref:System.Windows.Forms.BindingNavigator>)，將 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 以外的控制項繫結程序至您想要顯示的詳細資料欄位。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource 元件](bindingsource-component.md)
