@@ -12,17 +12,17 @@ api_type:
 ms.assetid: 05dbbe2b-049c-4a60-be69-2ad7a949405e
 topic_type:
 - apiref
-ms.openlocfilehash: 1e1779c0f4f36b2d7b81832bc90cf5aee0b8a7df
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 10e84b729c8af607165009a8591a69dbc1afcb1e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130388"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868378"
 ---
 # <a name="icorprofilerinfo5seteventmask2-method"></a>ICorProfilerInfo5::SetEventMask2 方法
 [.NET Framework 4.5.2 與更新版本提供支援]  
   
- 設定值，以指定分析工具要從通用語言執行時期 (CLR) 接收事件通知之來源事件的類型。 它提供的功能比[ICorProfilerInfo：： SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法更多。  
+ 設定值，以指定分析工具要從通用語言執行時期 (CLR) 接收事件通知之來源事件的類型。 它提供的功能比[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法更多。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,15 +33,15 @@ HRESULT SetEventMask2(        [in] DWORD dwEventsLow,        [in] DWORD dwEvents
   
 ## <a name="parameters"></a>參數  
  `dwEventsLow`  
- [in] 4 個位元組的值，可指定事件的分類。 每個位元各控制事件的不同功能、行為或類型。 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列舉中會說明此位。  
+ [in] 4 個位元組的值，可指定事件的分類。 每個位元各控制事件的不同功能、行為或類型。 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)列舉中會描述位。  
   
  `dwEventsHigh`  
- [in] 4 個位元組的值，可指定事件的分類。  每個位元各控制事件的不同功能、行為或類型。 [COR_PRF_HIGH_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)列舉中會說明此位。  
+ [in] 4 個位元組的值，可指定事件的分類。  每個位元各控制事件的不同功能、行為或類型。 [COR_PRF_HIGH_MONITOR](cor-prf-high-monitor-enumeration.md)列舉中會描述位。  
   
 ## <a name="remarks"></a>備註  
- `SetEventMask2` 方法可用於設定分析工具所訂閱的回呼。 一般來說，您會呼叫[GetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)方法來判斷已設定的位、執行其 `pdwEventsLow` 的邏輯 OR，以及 `pdwEventsHigh` 值和任何您想要設定的新位，然後再呼叫 `SetEventMask2` 方法。  
+ `SetEventMask2` 方法可用於設定分析工具所訂閱的回呼。 一般來說，您會呼叫[GetEventMask2](icorprofilerinfo5-geteventmask2-method.md)方法來判斷已設定的位、執行其 `pdwEventsLow` 的邏輯 OR，以及 `pdwEventsHigh` 值和任何您想要設定的新位，然後再呼叫 `SetEventMask2` 方法。  
   
- 這是[SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法的建議替代方法。  
+ 這是[SetEventMask](icorprofilerinfo-seteventmask-method.md)方法的建議替代方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -54,5 +54,5 @@ HRESULT SetEventMask2(        [in] DWORD dwEventsLow,        [in] DWORD dwEvents
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo5 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md)
-- [GetEventMask2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
+- [ICorProfilerInfo5 介面](icorprofilerinfo5-interface.md)
+- [GetEventMask2 方法](icorprofilerinfo5-geteventmask2-method.md)

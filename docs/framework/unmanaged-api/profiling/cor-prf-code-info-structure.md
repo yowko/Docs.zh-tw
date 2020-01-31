@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf30e27c-1f7e-43a2-ba1e-01e4137301db
 topic_type:
 - apiref
-ms.openlocfilehash: 643c9d7104c374d9141a604083f3fdcd540156c4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eaab5b7faeac3dd0fb64f0a387f437af44e7bc12
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428383"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867304"
 ---
 # <a name="cor_prf_code_info-structure"></a>COR_PRF_CODE_INFO 結構
 代表儲存在記憶體中的一個機器碼連續區塊。  
@@ -49,6 +49,6 @@ typedef struct _COR_PRF_CODE_INFO {
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [分析結構](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [分析結構](profiling-structures.md)

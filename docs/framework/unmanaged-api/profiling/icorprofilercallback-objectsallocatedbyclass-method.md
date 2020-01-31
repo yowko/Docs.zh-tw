@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91d688f3-a80e-419d-9755-ff94bc04188a
 topic_type:
 - apiref
-ms.openlocfilehash: 9ba021ec223d00e57081567b76f70f59768e6b9a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 028207486f43e35086ed2e515eb3ae6bca304491
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445864"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866068"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass 方法
 通知分析工具關於最近一次垃圾收集之後所建立之每個指定類別的實例數目。  
@@ -47,7 +47,7 @@ HRESULT ObjectsAllocatedByClass(
 ## <a name="remarks"></a>備註  
  `classIds` 和 `cObjects` 陣列是平行陣列。 例如，`classIds[i]` 和 `cObjects[i]` 參考相同的類別。 如果自從上一次垃圾收集之後，尚未建立類別的實例，則會省略類別。 `ObjectsAllocatedByClass` 回呼不會報告在大型物件堆積中所配置的物件。  
   
- `ObjectsAllocatedByClass` 回報的數位僅供估計。 如需確切計數，請使用[ICorProfilerCallback：： ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)。  
+ `ObjectsAllocatedByClass` 回報的數位僅供估計。 如需確切計數，請使用[ICorProfilerCallback：： ObjectAllocated](icorprofilercallback-objectallocated-method.md)。  
   
  如果對應的 `cObjects` 陣列具有正在卸載的類型，`classIds` 陣列可能會包含一或多個 null 專案。  
   
@@ -60,6 +60,6 @@ HRESULT ObjectsAllocatedByClass(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)

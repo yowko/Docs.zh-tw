@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3a1ce48-9bb9-4ed6-a5fe-5e1819a6333f
 topic_type:
 - apiref
-ms.openlocfilehash: 5826297d8151cf05e1ec08acbf5c9cd381d2452b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d85885d750f3c98e46b3e44418564da18850d3ec
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137797"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794491"
 ---
 # <a name="icordebugfunction2getversionnumber-method"></a>ICorDebugFunction2::GetVersionNumber 方法
 取得此函式的編輯後繼續版本。  
@@ -38,13 +38,13 @@ HRESULT GetVersionNumber (
  脫銷整數的指標，這是這個 ICorDebugFunction2 物件所表示之函式的版本號碼。  
   
 ## <a name="remarks"></a>備註  
- 執行時間會持續追蹤在「偵錯工具」會話期間，每個模組所進行的編輯次數。 函式的版本號碼比引進函數的編輯次數還要多。 函式的原始版本為第1版。 每次在該模組上呼叫[ICorDebugModule2：： ApplyChanges](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)時，模組的數目就會遞增。 因此，如果第一個和第三個呼叫中已取代函式的主體 `ICorDebugModule2::ApplyChanges`，`GetVersionNumber` 可能會傳回該函式的版本1、2或4，但不會傳回第3版。 （該函數不會有第3版）。  
+ 執行時間會持續追蹤在「偵錯工具」會話期間，每個模組所進行的編輯次數。 函式的版本號碼比引進函數的編輯次數還要多。 函式的原始版本為第1版。 每次在該模組上呼叫[ICorDebugModule2：： ApplyChanges](icordebugmodule2-applychanges-method.md)時，模組的數目就會遞增。 因此，如果第一個和第三個呼叫中已取代函式的主體 `ICorDebugModule2::ApplyChanges`，`GetVersionNumber` 可能會傳回該函式的版本1、2或4，但不會傳回第3版。 （該函數不會有第3版）。  
   
  針對每個模組分別追蹤版本號碼。 因此，如果您在模組1上執行四項編輯，而在模組2上執行了 [無]，則下一次編輯模組1將會為模組1中所有編輯的函式指派6的版本號碼。 如果相同的編輯觸及模組2，則模組2中的函式會取得版本號碼2。  
   
- `GetVersionNumber` 方法所取得的版本號碼可能低於[ICorDebugFunction：： GetCurrentVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction-getcurrentversionnumber-method.md)所取得的版本編號。  
+ `GetVersionNumber` 方法所取得的版本號碼可能低於[ICorDebugFunction：： GetCurrentVersionNumber](icordebugfunction-getcurrentversionnumber-method.md)所取得的版本編號。  
   
- [ICorDebugCode：： GetVersionNumber](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getversionnumber-method.md)方法會執行與 `ICorDebugFunction2::GetVersionNumber`相同的作業。  
+ [ICorDebugCode：： GetVersionNumber](icordebugcode-getversionnumber-method.md)方法會執行與 `ICorDebugFunction2::GetVersionNumber`相同的作業。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-ms.openlocfilehash: d2d9ca77e764fe439753f1174a42af5ef80faa59
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1036ecbdb735b95c0ad6897c1545e3bd8cb6c3a9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447714"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867070"
 ---
 # <a name="cor_prf_suspend_reason-enumeration"></a>COR_PRF_SUSPEND_REASON 列舉
 指出執行時間暫止的原因。  
@@ -43,7 +43,7 @@ typedef enum {
 |成員|描述|  
 |------------|-----------------|  
 |`COR_PRF_FIELD_SUSPEND_OTHER`|執行時間因未指定的原因而暫止。|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|執行時間已暫止，以服務垃圾收集要求。<br /><br /> 垃圾收集相關的回呼會在[ICorProfilerCallback：： RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)和[ICorProfilerCallback：： RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)回呼之間發生。|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|執行時間已暫止，以服務垃圾收集要求。<br /><br /> 垃圾收集相關的回呼會在[ICorProfilerCallback：： RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md)和[ICorProfilerCallback：： RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md)回呼之間發生。|  
 |`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|執行時間已暫停，因此可以關閉 `AppDomain`。<br /><br /> 當執行時間暫止時，執行時間會判斷哪些執行緒位於正在關閉的 `AppDomain` 中，並將它們設定為在繼續執行時中止。 在此暫止期間，沒有任何 `AppDomain`特定的回呼。|  
 |`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|執行時間已暫止，因此可以進行程式碼推銷。<br /><br /> 只有在已啟用程式碼推銷的即時（JIT）編譯器處於作用中狀態時，才會進行程式碼推銷接踵而來。 程式碼推銷回呼會在 `ICorProfilerCallback::RuntimeSuspendFinished` 和 `ICorProfilerCallback::RuntimeResumeStarted` 回呼之間發生。 **注意：** CLR JIT 不會在 .NET Framework 版本2.0 中使用函式，因此此值不會用於2.0。|  
 |`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|執行時間已暫止，使其可以關閉。 它必須暫停所有線程才能完成作業。|  
@@ -65,4 +65,4 @@ typedef enum {
   
 ## <a name="see-also"></a>請參閱
 
-- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [分析列舉](profiling-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1f6b8f3-dcfc-49e8-be76-ea50ea90d5a7
 topic_type:
 - apiref
-ms.openlocfilehash: e2a4df262e076c960640977bea0d22be19802140
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 96cde35c7151bb7ce58715f2826feaa59b30efab
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449677"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862304"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2 Method
 提供模組 ID，傳回該模組的檔案名稱、此模組父代組件的 ID 和描述模組屬性的位元遮罩。  
@@ -59,16 +59,16 @@ HRESULT GetModuleInfo2(
  [out] 模組父組件之 ID 的指標。  
   
  `pdwModuleFlags`  
- 脫銷從指定模組屬性的[COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md)列舉中，值的位元遮罩。  
+ 脫銷從指定模組屬性的[COR_PRF_MODULE_FLAGS](cor-prf-module-flags-enumeration.md)列舉中，值的位元遮罩。  
   
 ## <a name="remarks"></a>備註  
  若為動態模組，則 `szName` 參數為模組之中繼資料名稱，且基底位址為 0 (零)。 中繼資料名稱是中繼資料內的模組資料表之「名稱」欄中的值。 這也會公開為 managed 程式碼的 <xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> 屬性，並做為非受控中繼資料用戶端程式代碼的[IMetaDataImport：： GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md)方法的 `szName` 參數。  
   
- 雖然可以在模組的識別碼存在的情況下呼叫 `GetModuleInfo2` 方法，但在分析工具收到[ICorProfilerCallback：： ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md)回呼之前，父元件的識別碼將無法使用。  
+ 雖然可以在模組的識別碼存在的情況下呼叫 `GetModuleInfo2` 方法，但在分析工具收到[ICorProfilerCallback：： ModuleAttachedToAssembly](icorprofilercallback-moduleattachedtoassembly-method.md)回呼之前，父元件的識別碼將無法使用。  
   
  當 `GetModuleInfo2` 傳回時，您必須確認 `szName` 緩衝區的大小足以包含模組的完整檔案名稱。 若要這樣做，請比對 `pcchName` 指向的值和 `cchName` 參數。 如果 `pcchName` 指向大於 `cchName` 的值，請配置較大的 `szName` 緩衝區，並以較大的大小來更新 `cchName`，然後再次呼叫 `GetModuleInfo2`。  
   
- 或者，您也可以先使用長度為零的 `GetModuleInfo2` 緩衝區來呼叫 `szName`，以取得正確的緩衝區大小。 接著您就可以將緩衝區大小設定為 `pcchName` 中傳回的值，並再次呼叫 `GetModuleInfo2`。  
+ 或者，您也可以先使用長度為零的 `szName` 緩衝區來呼叫 `GetModuleInfo2`，以取得正確的緩衝區大小。 接著您就可以將緩衝區大小設定為 `pcchName` 中傳回的值，並再次呼叫 `GetModuleInfo2`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -79,8 +79,8 @@ HRESULT GetModuleInfo2(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [程式碼剖析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)
+- [分析介面](profiling-interfaces.md)
+- [程式碼剖析](index.md)

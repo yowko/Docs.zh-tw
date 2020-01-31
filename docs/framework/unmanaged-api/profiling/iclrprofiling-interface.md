@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 8b53ccc6-1b5e-4b30-a100-c9683d553f5a
 topic_type:
 - apiref
-ms.openlocfilehash: 63974df83462dd5959a9c6f509e1825eb8064877
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 18cbaab08d5e3a5c36bec88ca5d5e48d1367444d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448720"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866737"
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling 介面
-提供[ICLRProfiling：： AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)方法，可讓 profiler 附加至執行中的進程。  
+提供[ICLRProfiling：： AttachProfiler](iclrprofiling-attachprofiler-method.md)方法，可讓 profiler 附加至執行中的進程。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[AttachProfiler 方法](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|將指定的程式碼剖析工具附加至指定的處理序。|  
+|[AttachProfiler 方法](iclrprofiling-attachprofiler-method.md)|將指定的程式碼剖析工具附加至指定的處理序。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -41,7 +41,7 @@ ms.locfileid: "74448720"
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [分析介面](profiling-interfaces.md)
+- [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)

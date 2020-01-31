@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-ms.openlocfilehash: 2655151d34275b1b0fdc5d0903dd57fcea646014
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6596689af6533bb00f41b0d03805b3383ae8c3cc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137308"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792946"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols 方法
 建立動態模組的偵錯工具符號讀取器。  
@@ -54,11 +54,11 @@ HRESULT CreateReaderForInMemorySymbols (
  無法建立讀取器。  
   
 ## <a name="remarks"></a>備註  
- 這個方法也可以用來建立記憶體內部（非動態）模組的符號讀取器物件，但只能在第一次使用符號之後（以[UpdateModuleSymbols 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-updatemodulesymbols-method.md)回呼表示）。  
+ 這個方法也可以用來建立記憶體內部（非動態）模組的符號讀取器物件，但只能在第一次使用符號之後（以[UpdateModuleSymbols 方法](icordebugmanagedcallback-updatemodulesymbols-method.md)回呼表示）。  
   
- 這個方法會在每次呼叫時傳回新的讀取器實例（例如[CComPtrBase：： CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)）。 因此，只有在基礎資料可能已變更（亦即，收到[LoadClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)回呼時）時，偵錯工具才應該快取結果，並要求新的實例。  
+ 這個方法會在每次呼叫時傳回新的讀取器實例（例如[CComPtrBase：： CoCreateInstance](/cpp/atl/reference/ccomptrbase-class#cocreateinstance)）。 因此，只有在基礎資料可能已變更（亦即，收到[LoadClass 方法](icordebugmanagedcallback-loadclass-method.md)回呼時）時，偵錯工具才應該快取結果，並要求新的實例。  
   
- 動態模組在載入第一個類型（如[LoadClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)回呼所指示）之前，不會有任何可用的符號。  
+ 動態模組在載入第一個類型（如[LoadClass 方法](icordebugmanagedcallback-loadclass-method.md)回呼所指示）之前，不會有任何可用的符號。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -71,7 +71,7 @@ HRESULT CreateReaderForInMemorySymbols (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemoteTarget 介面](icordebugremotetarget-interface.md)
+- [ICorDebug 介面](icordebug-interface.md)
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 619bb5de-e309-48b6-a3af-32d935a0ff46
 topic_type:
 - apiref
-ms.openlocfilehash: 8105ba34ca400771fbc4273630f20941a4a9557d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fe27c0fca6d38b4cff6cac2b9778cf2be68903a3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432271"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867122"
 ---
 # <a name="cor_prf_misc-enumeration"></a>COR_PRF_MISC 列舉
 包含指定特定識別項的常數值。  
@@ -38,7 +38,7 @@ typedef enum {
   
 |成員|描述|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|尚未附加至元件之模組的[ICorProfilerInfo：： GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md)所使用的預設識別碼。|  
+|`PROFILER_PARENT_UNKNOWN`|尚未附加至元件之模組的[ICorProfilerInfo：： GetModuleInfo](icorprofilerinfo-getmoduleinfo-method.md)所使用的預設識別碼。|  
 |`PROFILER_GLOBAL_CLASS`|不屬於類別之全域常數的預設類別識別碼。|  
 |`PROFILER_GLOBAL_MODULE`|不屬於模組之全域物件的預設模組識別碼。|  
   
@@ -53,4 +53,4 @@ typedef enum {
   
 ## <a name="see-also"></a>請參閱
 
-- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [分析列舉](profiling-enumerations.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5eefe716-5025-4a4c-970c-c823cdc7bb87
 topic_type:
 - apiref
-ms.openlocfilehash: 5774b40178ce0d7c2ef5d063a37b9011fc2630df
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 45b1d0c0a3199227ab644ba8732198dd14b1cb4c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127955"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793001"
 ---
 # <a name="icordebugmoduleisdynamic-method"></a>ICorDebugModule::IsDynamic 方法
 取得值，指出此模組是否為動態。  
@@ -38,7 +38,7 @@ HRESULT IsDynamic(
  [out] `true` 如果這個模組是動態的，否則，`false`。  
   
 ## <a name="remarks"></a>備註  
- 即使在載入模組之後，動態模組也可以加入新的類別，並刪除現有的類別。 [ICorDebugManagedCallback：： LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)和[ICorDebugManagedCallback：： UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)回呼會在新增或刪除類別時，通知偵錯工具。  
+ 即使在載入模組之後，動態模組也可以加入新的類別，並刪除現有的類別。 [ICorDebugManagedCallback：： LoadClass](icordebugmanagedcallback-loadclass-method.md)和[ICorDebugManagedCallback：： UnloadClass](icordebugmanagedcallback-unloadclass-method.md)回呼會在新增或刪除類別時，通知偵錯工具。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

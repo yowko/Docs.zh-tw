@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-ms.openlocfilehash: df2750f082ddc40bbeee121116c3e877d037da84
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f2e644340a2ec7fe807830422b927ce811ddcf9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140426"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790568"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName 方法
-取得此[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)所參考之進程的可執行檔完整路徑。  
+取得此[ICorPublishProcess](icorpublishprocess-interface.md)所參考之進程的可執行檔完整路徑。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,4 +57,4 @@ HRESULT GetDisplayName (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorPublishProcess 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+- [ICorPublishProcess 介面](icorpublishprocess-interface.md)

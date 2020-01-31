@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 0c262d8b5460f236ef0429154ae337c7adf96714
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e9e85729b10d1c992a22f6c0bea65dfd1e21e7e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338707"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742562"
 ---
 # <a name="impersonating-the-client"></a>模擬用戶端
 此模擬範例會示範如何在服務端模擬呼叫者應用程式，以便讓服務能夠代表該呼叫者存取系統資源。  
@@ -102,7 +102,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  當您執行範例時，作業要求和回應會顯示在服務與用戶端主控台視窗中。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。  
   
 > [!NOTE]
-> 服務必須在系統管理帳戶下執行，或是在其下執行的帳戶必須被授與許可權，才能向 HTTP 層註冊 `http://localhost:8000/ServiceModelSamples` URI。 您可以使用[HTTPcfg.exe](https://go.microsoft.com/fwlink/?LinkId=95010)來設定[命名空間保留](https://go.microsoft.com/fwlink/?LinkId=95012)區，以授與這類許可權。  
+> 服務必須在系統管理帳戶下執行，或是在其下執行的帳戶必須被授與許可權，才能向 HTTP 層註冊 `http://localhost:8000/ServiceModelSamples` URI。 您可以使用[HTTPcfg.exe](/windows/win32/http/httpcfg-exe)來設定[命名空間保留](/windows/win32/http/namespace-reservations-registrations-and-routing)區，以授與這類許可權。  
   
 > [!NOTE]
 > 在執行 Windows Server 2003 的電腦上，只有當 setup.exe 應用程式具有模擬許可權時，才支援模擬。 （根據預設，只有系統管理員具有此許可權）。若要將此許可權新增至服務執行身分的帳戶，請移至 [系統**管理工具**]，開啟 [**本機安全性原則**]，開啟 [**本機原則**]，按一下 [**使用者權限指派**]，然後選取 [**在驗證後模擬用戶端**]，**再按兩下 [內容] 以新增**使用者或群組。  

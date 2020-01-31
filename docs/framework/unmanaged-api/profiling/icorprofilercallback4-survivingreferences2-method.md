@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02b51888-5d89-4e50-a915-45b7e329aad9
 topic_type:
 - apiref
-ms.openlocfilehash: 3178d099db96d52f0238cfcf7e055e761687ce30
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bec50183e6a8690cb02f3dc06d32b7449e055cea
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430090"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865164"
 ---
 # <a name="icorprofilercallback4survivingreferences2-method"></a>ICorProfilerCallback4::SurvivingReferences2 方法
-報告非壓縮記憶體回收造成的堆積中物件配置。 如果分析工具已實[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)介面，則會呼叫這個方法。 此回呼會取代[ICorProfilerCallback2：： SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)方法，因為它可以報告較大範圍的物件，其長度超過可在 ULONG 中表示的數目。  
+報告非壓縮記憶體回收造成的堆積中物件配置。 如果分析工具已實[ICorProfilerCallback4](icorprofilercallback4-interface.md)介面，則會呼叫這個方法。 此回呼會取代[ICorProfilerCallback2：： SurvivingReferences](icorprofilercallback2-survivingreferences-method.md)方法，因為它可以報告較大範圍的物件，其長度超過可在 ULONG 中表示的數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,11 +61,11 @@ HRESULT SurvivingReferences2(
   
  非壓縮記憶體回收會回收「無作用」物件所佔用的記憶體，但是不會壓縮該釋放的空間。 因此，記憶體會傳回到堆積，但沒有移動「即時」物件。  
   
- 針對非壓縮記憶體回收，Common Language Runtime (CLR) 會呼叫 `SurvivingReferences2`。 針對壓縮垃圾收集，會改為呼叫[MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md) 。 單一記憶體回收可以為了某個層代而壓縮，但另一個則不壓縮。 針對任何特定層代的垃圾收集，分析工具將會收到 `SurvivingReferences2` 回呼或[MovedReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-movedreferences2-method.md)回呼，但不會同時接收兩者。  
+ 針對非壓縮記憶體回收，Common Language Runtime (CLR) 會呼叫 `SurvivingReferences2`。 針對壓縮垃圾收集，會改為呼叫[MovedReferences2](icorprofilercallback4-movedreferences2-method.md) 。 單一記憶體回收可以為了某個層代而壓縮，但另一個則不壓縮。 針對任何特定層代的垃圾收集，分析工具將會收到 `SurvivingReferences2` 回呼或[MovedReferences2](icorprofilercallback4-movedreferences2-method.md)回呼，但不會同時接收兩者。  
   
  因為有限的內部緩衝區、伺服器記憶體回收期間的多重回呼和其他原因，在特定記憶體回收期間可能接收多重 `SurvivingReferences2` 回呼。 在記憶體回收期間多個回呼的情況下，資訊是累計的；在任何 `SurvivingReferences2` 回呼中被報告的所有參考不會被記憶體回收。  
   
- 如果分析工具同時執行[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)和[ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)介面，則會在[ICorProfilerCallback2：： SurvivingReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)方法之前呼叫 `SurvivingReferences2` 方法，但只有在 `SurvivingReferences2` 成功傳回時才會呼叫。 分析工具可傳回 HRESULT，表示 `SurvivingReferences2` 方法中的失敗，以避免呼叫第二個方法。  
+ 如果分析工具同時執行[ICorProfilerCallback](icorprofilercallback-interface.md)和[ICorProfilerCallback4](icorprofilercallback4-interface.md)介面，則會在[ICorProfilerCallback2：： SurvivingReferences](icorprofilercallback2-survivingreferences-method.md)方法之前呼叫 `SurvivingReferences2` 方法，但只有在 `SurvivingReferences2` 成功傳回時才會呼叫。 分析工具可傳回 HRESULT，表示 `SurvivingReferences2` 方法中的失敗，以避免呼叫第二個方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -76,8 +76,8 @@ HRESULT SurvivingReferences2(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
-- [ICorProfilerCallback4 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 介面](icorprofilercallback2-interface.md)
+- [ICorProfilerCallback4 介面](icorprofilercallback4-interface.md)

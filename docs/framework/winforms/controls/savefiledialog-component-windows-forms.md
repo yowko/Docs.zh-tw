@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-ms.openlocfilehash: 920816c648f5dbdd50f869e58769655e8be8e1a1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 8490261068684385678ccb830ee179015a0644f4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743088"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867395"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog 元件 (Windows Form)
 Windows Form <xref:System.Windows.Forms.SaveFileDialog> 元件是預先設定的對話方塊。 與 Windows 所使用的標準 [儲存檔案] 對話方塊相同。 這個元件繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。  
@@ -31,7 +31,4 @@ Windows Form <xref:System.Windows.Forms.SaveFileDialog> 元件是預先設定的
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
   
  [對話方塊控制項和元件](dialog-box-controls-and-components-windows-forms.md)  
- 描述可讓使用者與應用程式或系統進行標準互動的一組控制項和元件。  
-  
- [Essential Code for Windows Forms Dialog Boxes](https://go.microsoft.com/fwlink/?LinkID=102575) (Windows Forms 對話方塊的基本程式碼)  
- 討論 Windows Form 對話方塊控制項和元件，以及執行其基本功能所需的程式碼。 (MSDN Online Library 技術文件)
+ 描述可讓使用者與應用程式或系統進行標準互動的一組控制項和元件。

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - colors [Windows Forms], dialog box
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-ms.openlocfilehash: 0b44774fcace82f7e209440bc15705ad632bc223
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3ac758c353d235183041b6442d4472f863f7ca75
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736930"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870800"
 ---
 # <a name="colordialog-component-windows-forms"></a>ColorDialog 元件 (Windows Form)
 Windows Forms <xref:System.Windows.Forms.ColorDialog> 元件是預先設定的對話方塊，可讓使用者從調色板選取色彩，並將自訂色彩新增至該色板。 這是您在其他 Windows 應用程式中看到可選取色彩的相同對話方塊。 只要在 Windows 應用程式中使用這個控制項，便不需要設定自己的對話方塊。  
@@ -32,9 +32,6 @@ Windows Forms <xref:System.Windows.Forms.ColorDialog> 元件是預先設定的�
   
  <xref:System.Windows.Forms.ColorDialog>  
  提供這個 <xref:System.Windows.Forms.ColorDialog> 類別及其成員的參考資訊。  
-  
- [Essential Code for Windows Forms Dialog Boxes](assetId:///VS|dv_vstechart|~\html\vbtchessentialcodeforwindowsformsdialogboxes.htm) (Windows Forms 對話方塊的基本程式碼)  
- 討論 Windows Form 對話方塊控制項和元件，以及執行其基本功能所需的程式碼。  
-  
+ 
  [對話方塊控制項和元件](dialog-box-controls-and-components-windows-forms.md)  
  列出可讓使用者與應用程式或系統執行標準互動的一組控制項。

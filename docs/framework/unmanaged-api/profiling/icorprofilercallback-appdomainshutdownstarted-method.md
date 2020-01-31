@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-ms.openlocfilehash: 6bbb41f8fd3ac37f1c21fe8b4f6159e3d303777c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d280b008b34befce04159d02dfbb3de37b262c3c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445190"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866659"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted 方法
 通知分析工具，應用程式域正在從進程中卸載。  
@@ -32,10 +32,12 @@ HRESULT AppDomainShutdownStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a>參數  
- `appDomainId`  
- 在識別用來儲存應用程式元件的網域。  
-  
+## <a name="parameters"></a>參數
+
+- `appDomainId`
+
+  中的 \[] 可識別用來儲存應用程式元件的網域。
+
 ## <a name="remarks"></a>備註  
  `AppDomainShutdownStarted` 方法傳回之後，`appDomainId` 的值對任何資訊要求而言都是不正確，這是分析工具的最後機會取得此應用程式域的相關資訊。  
   
@@ -48,6 +50,6 @@ HRESULT AppDomainShutdownStarted(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)

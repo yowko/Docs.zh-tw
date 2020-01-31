@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: eaf0ae2a1b86234495c1804cff8b74331b3e8021
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1cf3f2b62b388b6c2d6fcd75b1b07a67d5b2e49f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445283"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866698"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished 方法
 通知分析工具已建立應用程式域。  
@@ -33,13 +33,16 @@ HRESULT AppDomainCreationFinished(
     [in] HRESULT     hrStatus);   
 ```  
   
-## <a name="parameters"></a>參數  
- `appDomainId`  
- 在識別已建立的網域。  
-  
- `hrStatus`  
- 在HRESULT，指出是否已順利完成建立應用程式網域。  
-  
+## <a name="parameters"></a>參數
+
+- `appDomainId`
+
+  中的 \[] 可識別已建立的網域。
+
+- `hrStatus`
+
+  \[in]） HRESULT，指出應用程式域的建立是否已順利完成。
+
 ## <a name="remarks"></a>備註  
  在呼叫 `AppDomainCreationFinished` 方法之前，應用程式識別碼對任何資訊要求而言都是不正確。  
   
@@ -54,6 +57,6 @@ HRESULT AppDomainCreationFinished(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)

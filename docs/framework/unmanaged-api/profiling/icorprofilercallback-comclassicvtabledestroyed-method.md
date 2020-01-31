@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-ms.openlocfilehash: 0b0683d43778c4733b476e9feef459207b9d1ee6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 98d5dcf3b691f16f63390851e207f518bf26ab11
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445024"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866516"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed 方法
 通知分析工具，COM Interop 的 vtable 已終結。  
@@ -37,16 +37,20 @@ HRESULT COMClassicVTableDestroyed(
     [in] void    *pVTable);  
 ```  
   
-## <a name="parameters"></a>參數  
- `wrappedClassId`  
- 在建立此 vtable 之類別的識別碼。  
-  
- `implementedIID`  
- 在類別所實作為介面的識別碼。 如果介面僅供內部用，這個值可能會是 Null。  
-  
- `pVTable`  
- 在Vtable 開頭的指標。  
-  
+## <a name="parameters"></a>參數
+
+- `wrappedClassId`
+
+  \[在] 中，為其建立此 vtable 的類別識別碼。
+
+- `implementedIID`
+
+  \[in] 類別所實作為介面的識別碼。 如果介面僅供內部用，這個值可能會是 Null。
+
+- `pVTable`
+
+  \[in] vtable 開頭的指標。
+
 ## <a name="remarks"></a>備註  
  分析工具不應在此方法的執行中封鎖，因為堆疊可能不是處於允許垃圾收集的狀態，因此無法啟用「搶先垃圾收集」。 如果分析工具在此處封鎖並嘗試垃圾收集，執行時間將會封鎖，直到這個回呼傳回為止。  
   
@@ -61,7 +65,7 @@ HRESULT COMClassicVTableDestroyed(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [COMClassicVTableCreated 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
+- [COMClassicVTableCreated 方法](icorprofilercallback-comclassicvtablecreated-method.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: c0bf92c9b6046d531e75771a9205e6dffe0fd367
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9f61a5a60b2ba1305158d1ab570079fe6aac19ac
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458490"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870736"
 ---
 # <a name="weak-event-patterns"></a>弱式事件模式
 在應用程式中，附加到事件來源的處理常式可能不會在與附加處理常式至來源的接聽程式物件協調時遭到破壞。 這種情況可能會導致記憶體流失。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 引進了一個設計模式，可以用來解決這個問題，方法是提供特定事件的專用管理員類別，並在該事件的接聽程式上執行介面。 這個設計模式就是所謂的「*弱式事件模式*」。  
@@ -36,7 +36,7 @@ ms.locfileid: "73458490"
 |使用現有的弱式事件管理員類別|如果您想要訂閱的事件具有對應的 <xref:System.Windows.WeakEventManager>，請使用現有的弱式事件管理員。 如需 WPF 隨附之弱式事件管理員的清單，請參閱 <xref:System.Windows.WeakEventManager> 類別中的繼承階層架構。 由於內含的弱式事件管理員受到限制，因此您可能需要選擇其中一種方法。|  
 |使用一般弱式事件管理員類別|當現有 <xref:System.Windows.WeakEventManager> 無法使用、您想要執行簡單的方法，而且不在意效率時，請使用一般 <xref:System.Windows.WeakEventManager%602>。 一般 <xref:System.Windows.WeakEventManager%602> 比現有或自訂的弱式事件管理員更有效率。 例如，泛型類別會執行更多反映，以便在指定事件名稱的情況下探索事件。 此外，使用泛型 <xref:System.Windows.WeakEventManager%602> 來註冊事件的程式碼，比使用現有或自訂的 <xref:System.Windows.WeakEventManager>更詳細。|  
 |建立自訂弱式事件管理員類別|當現有 <xref:System.Windows.WeakEventManager> 無法使用，而您想要獲得最佳效率時，請建立自訂 <xref:System.Windows.WeakEventManager>。 使用自訂 <xref:System.Windows.WeakEventManager> 來訂閱事件將會更有效率，但您在一開始就會產生撰寫更多程式碼的成本。|  
-|使用協力廠商弱式事件管理員|NuGet 有[數個弱式事件管理員](https://www.nuget.org/packages?q=weak+event+manager&prerel=false)，而許多 WPF 架構也支援模式（例如，請參閱[Prism 的檔，以取得鬆散結合的事件訂](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)用帳戶）。|
+|使用協力廠商弱式事件管理員|NuGet 有[數個弱式事件管理員](https://www.nuget.org/packages?q=weak+event+manager&prerel=false)，而許多 WPF 架構也支援模式（例如，請參閱[Prism 的檔，以取得鬆散結合的事件訂](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/legacy/Communication.md#subscribing-to-events)用帳戶）。|
 
  下列各節說明如何執行弱式事件模式。  基於此討論的目的，訂閱的事件具有下列特性。  
   

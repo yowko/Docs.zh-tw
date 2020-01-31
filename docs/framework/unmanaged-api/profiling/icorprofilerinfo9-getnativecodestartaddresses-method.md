@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8412020fb98fde245b873a2f0c6a355f6436f712
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444723"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868274"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9：： GetNativeCodeStartAddresses 方法
 
@@ -32,22 +32,27 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
                                      [out] UINT_PTR codeStartAddresses[]);
 ```
 
-#### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
-`functionId` \
-在應傳回其原生程式碼起始位址的函式識別碼。
+- `functionId`
 
-`reJitId` \
-[in] 經過 JIT 重新編譯的函式識別。
+  中的 \[] 應傳回其機器碼起始位址的函式識別碼。
 
-`cCodeStartAddresses` \
-[in] `codeStartAddresses` 陣列的大小上限。
+- `reJitId`
 
-`pcCodeStartAddresses` \
-脫銷可用的位址數目。
+  \[in] JIT 重新編譯函式的身分識別。
 
-`codeStartAddresses` \
-脫銷`UINT_PTR`的陣列，其中每一個都是所指定函式的原生主體的起始位址。
+- `cCodeStartAddresses`
+
+  \[in] `codeStartAddresses` 陣列的大小上限。
+
+- `pcCodeStartAddresses`
+
+  \[out] 可用的位址數目。
+
+- `codeStartAddresses`
+
+  \[out] `UINT_PTR`的陣列，其中每一個都是所指定函式的原生主體的起始位址。
 
 ## <a name="remarks"></a>備註
 
@@ -63,6 +68,6 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 **.Net 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo9 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 介面](icorprofilerinfo9-interface.md)

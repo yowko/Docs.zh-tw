@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: b4f228d55c9ffd6b85ebd0b430a7f5db404320f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 25cd3e05bc80dd39d2ca558bb4dd5fb77d255f5a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124339"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791402"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames 方法
-傳回堆疊上的內部框架（[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)物件）陣列。  
+傳回堆疊上的內部框架（[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)物件）陣列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +52,7 @@ HRESULT GetActiveInternalFrames
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功建立[ICorDebugInternalFrame2](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)物件。|  
+|S_OK|已成功建立[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)物件。|  
 |E_INVALIDARG|`cInternalFrames` 不是零，而且 `ppInternalFrames` `null`，或 `pcInternalFrames` 是 `null`。|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` 小於內部框架的計數。|  
   
@@ -65,7 +65,7 @@ HRESULT GetActiveInternalFrames
   
  接著，應該再次呼叫 `GetActiveInternalFrames`。 您應該在 `cInternalFrames` 參數中傳遞適當的計數（`pcInternalFrames`），並在 `ppInternalFrames`中指定適當大小陣列的指標。  
   
- 請使用[ICorDebugStackWalk：： GetFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)方法來傳回實際的堆疊框架。  
+ 請使用[ICorDebugStackWalk：： GetFrame](icordebugthread3-getactiveinternalframes-method.md)方法來傳回實際的堆疊框架。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -78,5 +78,5 @@ HRESULT GetActiveInternalFrames
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

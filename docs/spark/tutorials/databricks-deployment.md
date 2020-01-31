@@ -1,15 +1,15 @@
 ---
 title: 將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks
 description: 探索如何將適用於 Apache Spark 的 .NET 應用程式部署到 Databricks。
-ms.date: 05/17/2019
+ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: dfd33e83c04428b7a6a72e4992c40f00982b1958
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a117d85ab911b380598c93417f6ff95661ab864c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960471"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868027"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>教學課程：將適用于 Apache Spark 應用程式的 .NET 部署至 Databricks
 
@@ -35,27 +35,27 @@ ms.locfileid: "74960471"
 ## <a name="create-an-azure-databricks-workspace"></a>建立 Azure Databricks 工作區
 
 > [!Note]
-> 本教學課程不適用 **Azure 免費試用版的訂用帳戶**。
-> 如果您有免費帳戶，請移至您的設定檔，並將訂用帳戶變更為**隨用隨付**。 如需詳細資訊，請參閱 [Azure 免費帳戶](https://azure.microsoft.com/free/)。 然後，為您所在區域的 vCPU [移除消費限制](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)並[要求增加配額](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request)。 當您建立 Azure Databricks 工作區時，您可以選取 [試用版 (進階 - 14 天的免費 DBU)] 定價層，讓工作區可免費存取進階 Azure Databricks DBU 14 天。
+> 本教學課程無法使用**Azure 免費試用訂**用帳戶來執行。
+> 如果您有免費帳戶，請移至您的設定檔，並將您的訂用帳戶變更為**隨用隨付**。 如需詳細資訊，請參閱[Azure 免費帳戶](https://azure.microsoft.com/free/)。 然後，[移除消費限制](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)，並為您的區域中的個 vcpu[要求增加配額](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request)。 當您建立 Azure Databricks 工作區時，您可以選取 [**試用（Premium-14 天免費 dbu）** ] 定價層，讓工作區能夠存取免費的 Premium Azure Databricks dbu 14 天。
 
 在本節中，您會使用 Azure 入口網站建立 Azure Databricks 工作區。
 
-1. 在 Azure 入口網站中，選取 [建立資源] > [分析] > [Azure Databricks]。
+1. 在 [Azure 入口網站中，選取 [**建立資源**] > **分析** > **Azure Databricks**]。
 
    ![在 Azure 入口網站中建立 Azure Databricks 資源](./media/databricks-deployment/create-databricks-resource.png)
 
-2. 在 [Azure Databricks 服務] 底下，提供值以建立 Databricks 工作區。
+2. 在 [ **Azure Databricks 服務**] 底下，提供值以建立 Databricks 工作區。
 
     |屬性  |描述  |
     |---------|---------|
-    |**工作區名稱**     | 提供您 Databricks 工作區的名稱。        |
-    |**訂用帳戶**     | 從下拉式清單中選取您的 Azure 訂用帳戶。        |
-    |**資源群組**     | 指定您是要建立新的資源群組，還是使用現有資源群組。 資源群組是存放 Azure 解決方案相關資源的容器。 如需詳細資訊，請參閱 [Azure 資源群組概觀](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)。 |
-    |**位置**     | 選取您的慣用區域。 如需可用區域的詳細資訊，請參閱[依區域提供的 Azure 服務](https://azure.microsoft.com/regions/services/)。        |
-    |定價層     |  選擇 [標準]、[進階] 或 [試用]。 如需這些定價層的詳細資訊，請參閱 [Databricks 定價頁面](https://azure.microsoft.com/pricing/details/databricks/)。       |
+    |**工作區名稱**     | 為您的 Databricks 工作區提供名稱。        |
+    |**訂用帳戶**     | 從下拉式選單中，選取您的 Azure 訂用帳戶。        |
+    |**資源群組**     | 指定您要建立新的資源群組，還是使用現有的。 資源群組是保存 Azure 解決方案相關資源的容器。 如需詳細資訊，請參閱[Azure 資源群組總覽](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview)。 |
+    |**位置**     | 選取您慣用的區域。 如需可用區域的詳細資訊，請參閱[依區域提供的 Azure 服務](https://azure.microsoft.com/regions/services/)。        |
+    |**定價層**     |  選擇 [**標準**]、[ **Premium**] 或 [**試用**]。 如需這些層級的詳細資訊，請參閱[Databricks 定價頁面](https://azure.microsoft.com/pricing/details/databricks/)。       |
     |**虛擬網路**     |   否       |
 
-3. 選取 [建立]。 工作區建立需要幾分鐘的時間。 在工作區建立期間，您可以在 [通知] 中檢視部署狀態。
+3. 選取 [建立]。 建立工作區需要幾分鐘的時間。 建立工作區期間，您可以在 [**通知**] 中查看部署狀態。
 
 ## <a name="install-azure-databricks-tools"></a>安裝 Azure Databricks 工具
 
@@ -190,7 +190,7 @@ ms.locfileid: "74960471"
 3. 在作業設定中貼上下列參數。 然後選取 [**確認**]。
 
    ```
-   ["--class","org.apache.spark.deploy.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ["--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
    ```
 
 ## <a name="create-a-cluster"></a>建立叢集
@@ -219,7 +219,7 @@ ms.locfileid: "74960471"
 
 ## <a name="clean-up-resources"></a>清除資源
 
-如果您不再需要 Databricks 工作區，您可以在 Azure 入口網站中刪除您的 Azure Databricks 資源。 您也可以選取資源群組名稱來開啟資源群組頁面，然後選取 [刪除資源群組]。
+如果您不再需要 Databricks 工作區，您可以在 Azure 入口網站中刪除您的 Azure Databricks 資源。 您也可以選取資源組名來開啟 [資源群組] 頁面，然後選取 [**刪除資源群組**]。
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-ms.openlocfilehash: ef6b69a90a048caf7924b00ddd0b79a0a7efaeb9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1f831297ec9d34cbf0c3c55390abd8be0f5013ee
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744357"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868092"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog 元件 (Windows Form)
 Windows Form <xref:System.Windows.Forms.OpenFileDialog> 元件是預先設定的對話方塊。 這是 Windows 作業系統所公開的相同 [**開啟**檔案] 對話方塊。 這個元件繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。  
@@ -31,7 +31,4 @@ Windows Form <xref:System.Windows.Forms.OpenFileDialog> 元件是預先設定的
  描述可讓使用者與應用程式或系統進行標準互動的一組控制項和元件。  
   
  [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)  
- 提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
-  
- [Essential Code for Windows Forms Dialog Boxes](https://go.microsoft.com/fwlink/?LinkID=102575) (Windows Forms 對話方塊的基本程式碼)  
- 討論 Windows Form 對話方塊控制項和元件，以及執行其基本功能所需的程式碼。 (MSDN Online Library 技術文件)
+ 提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。

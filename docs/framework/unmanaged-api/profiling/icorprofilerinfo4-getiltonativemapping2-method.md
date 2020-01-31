@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 756c1c25-08a7-4060-9798-dbeaa2f3bee5
 topic_type:
 - apiref
-ms.openlocfilehash: dfce86e95ba41a65e72524546072244a47f8360c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4fccee3b94efd65312206afb22c87f30609f9e6b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442918"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868456"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 方法
 針對指定函式的 JIT 重新編譯版本中所包含的程式碼，取得從 Microsoft Intermediate Language (MSIL) 位移到原生位移的對應。  
@@ -54,16 +54,16 @@ HRESULT GetILToNativeMapping(
  [out] `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的陣列，每個結構都有指定位移。 `GetILToNativeMapping2` 方法傳回之後，`map` 將會包含部分或所有 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構。  
   
 ## <a name="remarks"></a>備註  
- `GetILToNativeMapping2` 類似于[ICorProfilerInfo：： GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)方法，不同之處在于它可讓分析工具在未來的版本中指定重新編譯函式的識別碼。  
+ `GetILToNativeMapping2` 類似于[ICorProfilerInfo：： GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md)方法，不同之處在于它可讓分析工具在未來的版本中指定重新編譯函式的識別碼。  
   
 > [!NOTE]
-> [ICorProfilerFunctionControl：： SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md)方法不會在 .NET Framework 4.5 中執行，因此已進行 JIT 重新編譯的函式不能有與原始編譯函式不同的 IL 與原生對應。 因此，在 .NET Framework 4.5 中，無法以非零的 JIT 重新編譯識別碼來呼叫 `GetILToNativeMapping2`。  
+> [ICorProfilerFunctionControl：： SetILInstrumentedCodeMap](icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md)方法不會在 .NET Framework 4.5 中執行，因此已進行 JIT 重新編譯的函式不能有與原始編譯函式不同的 IL 與原生對應。 因此，在 .NET Framework 4.5 中，無法以非零的 JIT 重新編譯識別碼來呼叫 `GetILToNativeMapping2`。  
   
  `GetILToNativeMapping2` 方法會傳回 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的陣列。 為了傳達原生指令的特定範圍對應至程式碼的特殊區域（例如初構），陣列中的專案可以將其 `ilOffset` 欄位設定為[CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md)列舉的值。  
   
  `GetILToNativeMapping2` 傳回之後，您必須確認 `map` 緩衝區夠大，可以包含所有 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構。 若要這樣做，請比較 `cMap` 的值與 `pcMap` 參數的值。 如果 `pcMap` 值乘以 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構的大小之後大於 `cMap`，請配置較大的 `map` 緩衝區，以新的較大大小更新 `cMap`，然後重新呼叫 `GetILToNativeMapping2`。  
   
- 或者，您也可以先使用長度為零的 `GetILToNativeMapping2` 緩衝區來呼叫 `map`，以取得正確的緩衝區大小。 接著您就可以將緩衝區大小設定為 `pcMap` 中傳回的值，並再次呼叫 `GetILToNativeMapping2`。  
+ 或者，您也可以先使用長度為零的 `map` 緩衝區來呼叫 `GetILToNativeMapping2`，以取得正確的緩衝區大小。 接著您就可以將緩衝區大小設定為 `pcMap` 中傳回的值，並再次呼叫 `GetILToNativeMapping2`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -76,7 +76,7 @@ HRESULT GetILToNativeMapping(
   
 ## <a name="see-also"></a>請參閱
 
-- [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
-- [ICorProfilerInfo4 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [程式碼剖析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [GetILToNativeMapping 方法](icorprofilerinfo-getiltonativemapping-method.md)
+- [ICorProfilerInfo4 介面](icorprofilerinfo4-interface.md)
+- [分析介面](profiling-interfaces.md)
+- [程式碼剖析](index.md)

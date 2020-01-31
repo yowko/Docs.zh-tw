@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7a38ee4ae74ca5b96dd082e752fc733eb85fca3f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 95473a8ce8d5fd7540228ecd9767448e51b5b326
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427029"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868980"
 ---
 # <a name="icorprofilerinfo10getlohobjectsizethreshold-method"></a>ICorProfilerInfo10：： GetLOHObjectSizeThreshold 方法
 
@@ -28,10 +28,11 @@ ms.locfileid: "74427029"
 HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 ```
 
-#### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
-`pThreshold` \
-脫銷大型物件堆積閾值（以位元組為單位）。
+- `pThreshold`
+
+  \[out] 大型物件堆積閾值（以位元組為單位）。
 
 ## <a name="remarks"></a>備註
 
@@ -47,6 +48,6 @@ HRESULT GetLOHObjectSizeThreshold( [out] DWORD *pThreshold );
 
 **.Net 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo10 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 介面](icorprofilerinfo10-interface.md)

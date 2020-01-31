@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07cf3bab-e193-4991-8205-3f41cf2d67b3
 topic_type:
 - apiref
-ms.openlocfilehash: 2b01acbd617b13a64ef3dca6c8661f1e6bb067ac
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c92ee580caed9f1fb87a31b676747769ad31a0e2
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447378"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867243"
 ---
 # <a name="cor_prf_function_argument_info-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO 結構
 代表函式的引數，順序由左至右。  
@@ -38,7 +38,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |成員|描述|  
 |------------|-----------------|  
-|`numRanges`|引數的區塊數目。 也就是說，此值是 `ranges` 陣列中[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)結構的數目。|  
+|`numRanges`|引數的區塊數目。 也就是說，此值是 `ranges` 陣列中[COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md)結構的數目。|  
 |`totalArgumentSize`|所有引數的總大小。 換句話說，此值是引數長度的總和。|  
 |`ranges`|`COR_PRF_FUNCTION_ARGUMENT_RANGE` 結構的陣列，其中每一個都代表一個函式引數的區塊。|  
   
@@ -58,6 +58,6 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [分析結構](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [分析結構](profiling-structures.md)

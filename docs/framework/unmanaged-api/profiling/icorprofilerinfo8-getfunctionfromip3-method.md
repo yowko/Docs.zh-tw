@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: df9ecc9bc355c12f993763820eb5065ba8bcc36b
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 6d50a5d74eccff6fe39aca111f768bac4d8f2e2e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855911"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868326"
 ---
 # <a name="icorprofilerinfo8getfunctionfromip3-method"></a>ICorProfilerInfo8：： GetFunctionFromIP3 方法
 
@@ -30,16 +30,19 @@ HRESULT GetFunctionFromIP3([in] LPCBYTE ip,
                            [out] ReJITID * pReJitId);
 ```
 
-#### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
-`ip` \
-在Managed 程式碼中的指令指標。
+- `ip`
 
-`pFunctionId` \
-脫銷函數識別碼。
+  中的 \[] managed 程式碼中的指令指標。
 
-`pReJitId` \
-脫銷函式之 JIT 重新編譯版本的識別。
+- `pFunctionId`
+
+  \[out] 函數識別碼。
+
+- `pReJitId`
+
+  \[out] 函式之 JIT 重新編譯版本的識別。
 
 ## <a name="remarks"></a>備註
 
@@ -49,12 +52,12 @@ HRESULT GetFunctionFromIP3([in] LPCBYTE ip,
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
-**標頭：** Corprof.idl .idl，Corprof.idl。h
+**標頭：** CorProf.idl、CorProf.h
 
-**LIBRARY:** CorGuids.lib
+**程式庫：** CorGuids.lib
 
 **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo8 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+- [ICorProfilerInfo8 介面](icorprofilerinfo8-interface.md)

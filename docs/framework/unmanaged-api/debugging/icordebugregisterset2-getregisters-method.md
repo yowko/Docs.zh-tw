@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: 8e5583acfe338c185200c0b8e41b7d6e051fa146
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 54a5fb50a0177fe9886582c112f16ce871ea9df4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131361"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792068"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters 方法
 取得給定位元遮罩所指定之每個暫存器的值（適用于目前執行程式碼的平臺）。  
@@ -56,7 +56,7 @@ HRESULT GetRegisters (
   
  若平臺具有64以上的暫存器，則需要 `ICorDebugRegisterSet2::GetRegisters` 方法。 例如，IA64 具有128一般用途暫存器和128浮點暫存器，因此您在位元遮罩中需要超過64位。  
   
- 如果您沒有超過64暫存器（如 x86 之類的平臺），`GetRegisters` 方法實際上只會將 `mask` 位元組陣列中的位元組轉譯成 `ULONG64`，然後呼叫[ICorDebugRegisterSet：： GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md)方法，它會採用 `ULONG64` mask。  
+ 如果您沒有超過64暫存器（例如 x86 之類的平臺），`GetRegisters` 方法實際上只會將 `mask` 位元組陣列中的位元組轉譯成 `ULONG64`，然後呼叫[ICorDebugRegisterSet：： GetRegisters](icordebugregisterset-getregisters-method.md)方法，這會採用 `ULONG64` 遮罩。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -69,5 +69,5 @@ HRESULT GetRegisters (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugRegisterSet2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
-- [ICorDebugRegisterSet 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 介面](icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet 介面](icordebugregisterset-interface.md)

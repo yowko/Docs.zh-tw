@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c33f0f7-75b2-4c19-b2c7-c94b54997576
 topic_type:
 - apiref
-ms.openlocfilehash: f6e2cfe47bdd212e39549544b06bf5b11033a956
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bebc0cf6ac7912ea3a6641e0c729b759e865dac3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429879"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864657"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>ICorProfilerFunctionControl::SetILFunctionBody 方法
 取代方法的 Common Intermediate Language (CIL) 主體。  
@@ -48,7 +48,7 @@ HRESULT SetILFunctionBody(
 |S_OK|取代成功。|  
   
 ## <a name="remarks"></a>備註  
- 不同于[ICorProfilerInfo：： SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)方法，`SetILFunctionBody` 方法會管理新的 CIL 主體所需的記憶體。 這表示分析工具所提供的 CIL 主體不需要使用[IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)介面來配置，或在特定範圍內配置。 它可以配置於任何堆積上。 分析工具可以在 `SetILFunctionBody` 傳回之後釋放用於其 CIL 主體的記憶體。  
+ 不同于[ICorProfilerInfo：： SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md)方法，`SetILFunctionBody` 方法會管理新的 CIL 主體所需的記憶體。 這表示分析工具所提供的 CIL 主體不需要使用[IMethodMalloc](imethodmalloc-interface.md)介面來配置，或在特定範圍內配置。 它可以配置於任何堆積上。 分析工具可以在 `SetILFunctionBody` 傳回之後釋放用於其 CIL 主體的記憶體。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -61,4 +61,4 @@ HRESULT SetILFunctionBody(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerFunctionControl 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
+- [ICorProfilerFunctionControl 介面](icorprofilerfunctioncontrol-interface.md)

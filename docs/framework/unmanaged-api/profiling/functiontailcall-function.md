@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 66347e03-9a97-41e8-8f9d-89b80803f7b5
 topic_type:
 - apiref
-ms.openlocfilehash: c83a55a74542d94559b50b89ef784de0bd55d0db
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bd03eccc923049c4a49062d18bd11659f3316e8a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427341"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866819"
 ---
 # <a name="functiontailcall-function"></a>FunctionTailcall 函式
 通知分析工具，目前正在執行的函式即將對另一個函式執行 tail 呼叫。  
   
 > [!NOTE]
-> .NET Framework 版本2.0 中的 `FunctionTailcall` 函數已被取代。 它會繼續工作，但會造成效能上的負面影響。 請改用[FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)函數。  
+> .NET Framework 版本2.0 中的 `FunctionTailcall` 函數已被取代。 它會繼續工作，但會造成效能上的負面影響。 請改用[FunctionTailcall2](functiontailcall2-function.md)函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,12 +35,14 @@ void __stdcall FunctionTailcall (
 );  
 ```  
   
-## <a name="parameters"></a>參數  
- `funcID`  
- 在即將進行 tail 呼叫之目前正在執行之函式的識別碼。  
-  
+## <a name="parameters"></a>參數
+
+- `funcID`
+
+  \[in]）目前正在執行之函式的識別碼，即將進行 tail 呼叫。
+
 ## <a name="remarks"></a>備註  
- Tail 呼叫的目標函式會使用目前的堆疊框架，並會直接傳回呼叫端呼叫之函式的呼叫端。 這表示不會針對做為 tail 呼叫目標的函式發出[FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)回呼。  
+ Tail 呼叫的目標函式會使用目前的堆疊框架，並會直接傳回呼叫端呼叫之函式的呼叫端。 這表示不會針對做為 tail 呼叫目標的函式發出[FunctionLeave](functionleave-function.md)回呼。  
   
  `FunctionTailcall` 函數是回呼;您必須加以執行。 此執行必須使用 `__declspec`（`naked`）儲存類別屬性。  
   
@@ -63,9 +65,9 @@ void __stdcall FunctionTailcall (
   
  **.NET Framework 版本：** 1.1、1.0  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [FunctionEnter2 函式](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 函式](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [SetEnterLeaveFunctionHooks2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [分析全域靜態函式](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 函式](functionenter2-function.md)
+- [FunctionLeave2 函式](functionleave2-function.md)
+- [SetEnterLeaveFunctionHooks2 方法](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [分析全域靜態函式](profiling-global-static-functions.md)

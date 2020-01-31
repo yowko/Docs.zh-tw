@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc93bead-f3a9-415c-b919-ddd3ca80facc
 topic_type:
 - apiref
-ms.openlocfilehash: 3b729d3be84571a48cc9a770d7f06b99723c0d1f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 75fb92be078c40f49ddcdc6662535b2a0be7a6ad
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445074"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866555"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>ICorProfilerCallback::ClassUnloadStarted 方法
 通知分析工具，類別正在卸載。  
@@ -32,10 +32,12 @@ HRESULT ClassUnloadStarted(
     [in] ClassID classId);  
 ```  
   
-## <a name="parameters"></a>參數  
- `classId`  
- 在識別要卸載的類別。  
-  
+## <a name="parameters"></a>參數
+
+- `classId`
+
+  中的 \[] 可識別正在卸載的類別。
+
 ## <a name="remarks"></a>備註  
  `ClassUnloadStarted` 方法傳回之後，`classId` 的值對資訊要求無效，這是分析工具的最後機會取得此類別的相關資訊。  
   
@@ -50,5 +52,5 @@ HRESULT ClassUnloadStarted(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ClassUnloadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
+- [ClassUnloadFinished 方法](icorprofilercallback-classunloadfinished-method.md)

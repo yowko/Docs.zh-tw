@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c2f45801-dd38-4b78-b6b7-64397dc73f83
 topic_type:
 - apiref
-ms.openlocfilehash: 62035d623d56f7521e0a599a13bc20778e3f18d1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3e13b17fb03530730a78f6889309f1993419574b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449910"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866205"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining 方法
 通知分析工具，及時（JIT）編譯器即將以另一個函式插入函數。  
@@ -45,7 +45,7 @@ HRESULT JITInlining(
  [out] 允許進行插入的 `true`;否則，`false`。  
   
 ## <a name="remarks"></a>備註  
- 分析工具可以將 `pfShouldInline` 設定為 `false`，以防止 `calleeId` 函式插入 `callerId` 函數中。 此外，分析工具也可以使用[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列舉的 COR_PRF_DISABLE_INLINING 值，全域停用內嵌插入。  
+ 分析工具可以將 `pfShouldInline` 設定為 `false`，以防止 `calleeId` 函式插入 `callerId` 函數中。 此外，分析工具也可以使用[COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)列舉的 COR_PRF_DISABLE_INLINING 值，全域停用內嵌插入。  
   
  插入的函式不會引發輸入或離開的事件。 因此，分析工具必須將 `pfShouldInline` 設定為 `false`，才能產生精確的 callgraph。 將 `pfShouldInline` 設定為 `false` 會影響效能，因為內嵌插入通常會增加速度並減少所插入方法的個別 JIT 編譯事件數。  
   
@@ -58,6 +58,6 @@ HRESULT JITInlining(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)

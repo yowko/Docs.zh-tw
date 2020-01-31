@@ -1,5 +1,5 @@
 ---
-title: HOW TO：判斷 Windows Forms CheckedListBox 控制項中的已核取項目
+title: 判斷 CheckedListBox 控制項中的已核取專案
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 10793053934dce0bb83113004a79f1c265f5f267
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5854f7e6be759daeb604458ea8554d3c98ed39c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010913"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743248"
 ---
-# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>HOW TO：判斷 Windows Forms CheckedListBox 控制項中的已核取項目
-呈現 Windows Forms 中的資料時<xref:System.Windows.Forms.CheckedListBox>控制項，您可以請逐一查看集合中儲存<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>屬性或逐步執行清單使用<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法，以判斷選取的項目。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法會將項目索引編號，做為其引數並傳回`true`或`false`。 相對於您預期，<xref:System.Windows.Forms.ListBox.SelectedItems%2A>和<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>屬性不會決定選取哪一個項目，它們會判斷哪些項目會反白顯示。  
+# <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>如何：判斷 Windows Form CheckedListBox 控制項中的已核取項目
+在 Windows Forms <xref:System.Windows.Forms.CheckedListBox> 控制項中呈現資料時，您可以逐一查看儲存在 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> 屬性中的集合，或使用 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 方法來逐步執行清單，以判斷要檢查哪些專案。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 方法會接受專案索引編號做為其引數，並傳回 `true` 或 `false`。 與您預期的相反，<xref:System.Windows.Forms.ListBox.SelectedItems%2A> 和 <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> 屬性不會決定要檢查哪些專案;它們會決定要反白顯示哪些專案。  
   
-### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>若要判斷 CheckedListBox 控制項中選取的項目  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>若要判斷 CheckedListBox 控制項中的已核取專案  
   
-1. 逐一查看<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>開始 0，因為集合是以零為起始的集合。 請注意，這個方法會提供您的項目編號的清單中選取項目，不是整個清單。 所以如果在清單中的第一個項目不會檢查第二個項目已選取，下列程式碼會顯示類似的文字 」 已檢查的項目 1 = MyListItem2"。  
+1. 逐一查看 <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> 的集合，從0開始，因為集合是以零為基底。 請注意，這個方法會提供已核取專案清單中的專案編號，而不是整體清單。 因此，如果未核取清單中的第一個專案，而第二個專案已核取，則下列程式碼會顯示像是「已檢查的專案 1 = MyListItem2」的文字。  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -68,7 +68,7 @@ ms.locfileid: "62010913"
   
      - 或 -  
   
-2. 您可以逐步<xref:System.Windows.Forms.CheckedListBox.Items%2A>集合，從 0 開始因為集合是以零起始，並呼叫<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法，每個項目。 請注意，這個方法會提供您的項目編號在整體的清單中，因此如果中的第一個項目不會檢查清單和第二個項目已選取，它會顯示類似 「 項目 2 = MyListItem2"。  
+2. 逐步執行 <xref:System.Windows.Forms.CheckedListBox.Items%2A> 集合，從0開始，因為集合是以零為基底，並針對每個專案呼叫 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> 方法。 請注意，這個方法會提供您 [整體] 清單中的專案編號，因此，如果未核取清單中的第一個專案，而第二個專案已核取，則會顯示類似 "Item 2 = MyListItem2" 的內容。  
   
     ```vb  
     Dim i As Integer  
@@ -111,6 +111,6 @@ ms.locfileid: "62010913"
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)

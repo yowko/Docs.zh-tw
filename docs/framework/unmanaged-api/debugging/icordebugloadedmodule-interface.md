@@ -2,12 +2,12 @@
 title: ICorDebugLoadedModule 介面
 ms.date: 03/30/2017
 ms.assetid: 34be6369-2e75-4a95-a538-3b29ac97cf6d
-ms.openlocfilehash: 9fe36497844b9c33cefcf8c63711941196847525
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d3bdcec9e90dab337b595294d114de4bd3d531f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122608"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781993"
 ---
 # <a name="icordebugloadedmodule-interface"></a>ICorDebugLoadedModule 介面
 提供載入模組的相關資訊。  
@@ -16,9 +16,9 @@ ms.locfileid: "73122608"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetBaseAddress 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getbaseaddress-method.md)|取得載入模組的基底位址。|  
-|[GetName 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getname-method.md)|取得載入模組的名稱。|  
-|[GetSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-getsize-method.md)|取得載入模組的大小 (以位元組為單位)。|  
+|[GetBaseAddress 方法](icordebugloadedmodule-getbaseaddress-method.md)|取得載入模組的基底位址。|  
+|[GetName 方法](icordebugloadedmodule-getname-method.md)|取得載入模組的名稱。|  
+|[GetSize 方法](icordebugloadedmodule-getsize-method.md)|取得載入模組的大小 (以位元組為單位)。|  
   
 ## <a name="remarks"></a>備註  
  `ICorDebugLoadedModule` 介面是由偵錯工具實作，並由 CLR 偵錯介面用以從偵錯工具取得載入模組的相關資訊。  
@@ -37,5 +37,5 @@ ms.locfileid: "73122608"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

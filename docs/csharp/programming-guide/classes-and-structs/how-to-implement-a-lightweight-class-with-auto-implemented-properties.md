@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: 170a36e2a10896d9e4d29af602694700fa122e69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c2d4fbd2f9e8a343a81d88bacc54a53335e170ec
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714917"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867382"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>如何使用自動執行的屬性來執行輕量類別（C#程式設計手冊）
 
@@ -21,7 +21,30 @@ ms.locfileid: "75714917"
 - 您可以將 [set](../../language-reference/keywords/set.md) 存取子宣告為 [private](../../language-reference/keywords/private.md)。  屬性只有在類型內才可設定，但是它對於使用者而言是不可變的。
 
   當您宣告私用 `set` 存取子時，則無法使用物件初始設定式來初始化屬性。 您必須使用建構函式或 Factory 方法。
-- 您可以只宣告 [get](../../language-reference/keywords/get.md) 存取子，讓屬性在該型別建構函式外的任何位置皆為固定。
+- 您只能宣告[get](../../language-reference/keywords/get.md)存取子，讓屬性在類型的函式以外的地方變成不可變。
+
+下列範例顯示只有 get 存取子的屬性與 get 和 private set 不同。
+
+```csharp
+class Contact
+{
+    public string Name { get; }
+    public string Address { get; private set; }
+
+    public Contact(string contactName, string contactAddress)
+    {
+        // Both properties are accessible in the constructor.
+        Name = contactName;
+        Address = contactAddress;
+    }
+
+    // Name isn't assignable here. This will generate a compile error.
+    //public void ChangeName(string newName) => Name = newName; 
+
+    // Address is assignable here.
+    public void ChangeAddress(string newAddress) => Address = newAddress
+}
+```
 
 ## <a name="example"></a>範例
 
@@ -33,8 +56,10 @@ ms.locfileid: "75714917"
 // constructor to initialize its properties.
 class Contact
 {
-    // Read-only properties.
+    // Read-only property.
     public string Name { get; }
+
+    // Read-write property with a private set accessor.
     public string Address { get; private set; }
 
     // Public constructor.
@@ -50,8 +75,10 @@ class Contact
 // static method and private constructor to initialize its properties.
 public class Contact2
 {
-    // Read-only properties.
+    // Read-write property with a private set accessor.
     public string Name { get; private set; }
+
+    // Read-only property.
     public string Address { get; }
 
     // Private constructor.
@@ -120,6 +147,6 @@ public class Program
 
 ## <a name="see-also"></a>請參閱
 
-- [屬性](./properties.md)
+- [Properties](./properties.md)
 - [struct](../../language-reference/keywords/struct.md)
 - [物件和集合初始設定式](./object-and-collection-initializers.md)

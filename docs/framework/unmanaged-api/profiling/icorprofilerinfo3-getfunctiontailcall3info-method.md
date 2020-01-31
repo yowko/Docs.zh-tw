@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-ms.openlocfilehash: e7a25fce945504cff0d07f499ae4bb79378e9f3a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: add89fe81fccbd5e6f5ad5d27f0ab3ace489963e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449698"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868521"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info 方法
-提供[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)函式向分析工具報告之函式的堆疊框架。 只能在 `FunctionTailcall3WithInfo` 回呼期間呼叫這個方法。  
+提供[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)函式向分析工具報告之函式的堆疊框架。 只能在 `FunctionTailcall3WithInfo` 回呼期間呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -42,7 +42,7 @@ HRESULT GetFunctionTailcall3Info(
  [in] 代表特定堆疊框架之資訊的不透明控制代碼。 分析工具應該提供由 `FunctionTailcall3WithInfo` 函式指定給 profiler 的相同 `eltInfo`。  
   
  `pFrameInfo`  
- [out] 代表特定堆疊框架之泛型資訊的不透明控制代碼。 此控制代碼只有在程式碼剖析工具呼叫 `FunctionTailcall3WithInfo` 方法的 `GetFunctionTailcall3Info` 回呼中有效。  
+ [out] 代表特定堆疊框架之泛型資訊的不透明控制代碼。 此控制代碼只有在程式碼剖析工具呼叫 `GetFunctionTailcall3Info` 方法的 `FunctionTailcall3WithInfo` 回呼中有效。  
   
 ## <a name="remarks"></a>備註  
   
@@ -55,11 +55,11 @@ HRESULT GetFunctionTailcall3Info(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [ICorProfilerInfo3 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [程式碼剖析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
+- [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
+- [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)
+- [ICorProfilerInfo3 介面](icorprofilerinfo3-interface.md)
+- [分析介面](profiling-interfaces.md)
+- [程式碼剖析](index.md)

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: f4deec3e2b49b5cd6a924af8024e775c5c549f97
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6cd35c180b8a322b3402b050c6d6840073010b1f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440855"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866979"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 函式
-通知分析工具控制項正傳遞至函式，並提供堆疊框架和函式引數的相關資訊。 此函式會取代[FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)函數。  
+通知分析工具控制項正傳遞至函式，並提供堆疊框架和函式引數的相關資訊。 此函式會取代[FunctionEnter](functionenter-function.md)函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,23 +35,28 @@ void __stdcall FunctionEnter2 (
 );  
 ```  
   
-## <a name="parameters"></a>參數  
- `funcId`  
- 在傳遞控制項的函式識別碼。  
+## <a name="parameters"></a>參數
+
+- `funcId`
+
+  中的 \[]）傳遞控制項的函式識別碼。
+
+- `clientData`
+
+  \[in]）重新對應的函式識別碼，也就是先前使用[FunctionIDMapper](functionidmapper-function.md)函數指定的 profiler。
   
- `clientData`  
- 在重新對應的函式識別碼，也就是先前使用[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)函數指定的 profiler。  
+- `func`
+
+  \[in]） `COR_PRF_FRAME_INFO` 值，指向堆疊框架的相關資訊。
   
- `func`  
- 在`COR_PRF_FRAME_INFO` 值，指向堆疊框架的相關資訊。  
+  分析工具應該將此視為不透明的控制碼，以便在[ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)方法中傳回給執行引擎。  
   
- 分析工具應該將此視為不透明的控制碼，以便在[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法中傳回給執行引擎。  
-  
- `argumentInfo`  
- 在[COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)結構的指標，指定函數引數的記憶體位置。  
-  
- 若要存取引數資訊，必須設定 `COR_PRF_ENABLE_FUNCTION_ARGS` 旗標。 分析工具可以使用[ICorProfilerInfo：： SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法來設定事件旗標。  
-  
+- `argumentInfo`
+
+  \[in]） [COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md)結構的指標，指定函數引數的記憶體位置。
+
+  若要存取引數資訊，必須設定 `COR_PRF_ENABLE_FUNCTION_ARGS` 旗標。 分析工具可以使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法來設定事件旗標。
+
 ## <a name="remarks"></a>備註  
  `FunctionEnter2` 函數傳回之後，`func` 和 `argumentInfo` 參數的值無效，因為這些值可能會變更或終結。  
   
@@ -76,9 +81,9 @@ void __stdcall FunctionEnter2 (
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [FunctionLeave2 函式](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2 函式](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [分析全域靜態函式](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionLeave2 函式](functionleave2-function.md)
+- [FunctionTailcall2 函式](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 方法](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [分析全域靜態函式](profiling-global-static-functions.md)

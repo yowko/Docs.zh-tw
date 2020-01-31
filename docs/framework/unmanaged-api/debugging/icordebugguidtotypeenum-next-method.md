@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-ms.openlocfilehash: f6f190cd5b2f208df5a4ed88b650af671f2e6c5c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 76cab0b8b5f16f24c62e31be2707c95c7e557034
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138523"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777634"
 ---
 # <a name="icordebugguidtotypeenumnext-method"></a>ICorDebugGuidToTypeEnum::Next 方法
-取得將 Guid 對應至類型資訊的指定[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)實例數目。  
+取得將 Guid 對應至類型資訊的指定[CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md)實例數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,10 +40,10 @@ HRESULT Next(
  在要抓取的 GUID 型別對應物件的數目。  
   
  `values`  
- 脫銷指標的陣列，其中每一個都會指向[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)物件，它會將 Windows 執行階段 GUID 對應至其相對應的 ICorDebugType 物件。  
+ 脫銷指標的陣列，其中每一個都會指向[CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md)物件，它會將 Windows 執行階段 GUID 對應至其相對應的 ICorDebugType 物件。  
   
  `pceltFetched`  
- 脫銷`values`中實際傳回之[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)物件數目的指標。  
+ 脫銷`values`中實際傳回之[CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md)物件數目的指標。  
   
 ## <a name="remarks"></a>備註  
   
@@ -58,5 +58,5 @@ HRESULT Next(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugGuidToTypeEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugGuidToTypeEnum 介面](icordebugguidtotypeenum-interface.md)
+- [偵錯介面](debugging-interfaces.md)
