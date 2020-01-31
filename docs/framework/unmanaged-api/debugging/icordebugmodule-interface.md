@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-ms.openlocfilehash: 971d6a6a2157c48dcb9105e9f523b1f077098479
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c573e6b768aee1e8b681dcf2e828dc24d409025b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129479"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793006"
 ---
 # <a name="icordebugmodule-interface"></a>ICorDebugModule 介面
 
@@ -29,23 +29,23 @@ ms.locfileid: "73129479"
   
 |方法|描述|  
 |------------|-----------------|  
-|[CreateBreakpoint 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-createbreakpoint-method.md)|未實作。|  
-|[EnableClassLoadCallbacks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enableclassloadcallbacks-method.md)|判斷是否針對此模組呼叫[ICorDebugManagedCallback：： LoadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)和[ICorDebugManagedCallback：： UnloadClass](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)回呼。|  
-|[EnableJITDebugging 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-enablejitdebugging-method.md)|判斷即時（JIT）編譯器是否保留此模組中之方法的偵錯工具資訊。|  
-|[GetAssembly 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getassembly-method.md)|取得此模組的包含元件。|  
-|[GetBaseAddress 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getbaseaddress-method.md)|取得模組的基底位址。|  
-|[GetClassFromToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getclassfromtoken-method.md)|從中繼資料取得 ICorDebugClass。|  
-|[GetEditAndContinueSnapshot 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-geteditandcontinuesnapshot-method.md)|已取代。|  
-|[GetFunctionFromRVA 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getfunctionfromrva-method.md)|未實作。|  
-|[GetFunctionFromToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getfunctionfromtoken-method.md)|取得元資料標記所指定的函式。|  
-|[GetGlobalVariableValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getglobalvariablevalue-method.md)|取得指定之全域變數的值物件。|  
-|[GetMetaDataInterface 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getmetadatainterface-method.md)|取得中繼資料介面指標，可用於檢查模組的中繼資料。|  
-|[GetName 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getname-method.md)|取得模組的檔案名。|  
-|[GetProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getprocess-method.md)|取得此模組的包含進程。|  
-|[GetSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-getsize-method.md)|取得模組的大小（以位元組為單位）。|  
-|[GetToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-gettoken-method.md)|取得此模組之資料表專案的 token。|  
-|[IsDynamic 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-isdynamic-method.md)|指出模組是否為動態。|  
-|[IsInMemory 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule-isinmemory-method.md)|指出此模組是否只存在於記憶體中。|  
+|[CreateBreakpoint 方法](icordebugmodule-createbreakpoint-method.md)|未實作。|  
+|[EnableClassLoadCallbacks 方法](icordebugmodule-enableclassloadcallbacks-method.md)|判斷是否針對此模組呼叫[ICorDebugManagedCallback：： LoadClass](icordebugmanagedcallback-loadclass-method.md)和[ICorDebugManagedCallback：： UnloadClass](icordebugmanagedcallback-unloadclass-method.md)回呼。|  
+|[EnableJITDebugging 方法](icordebugmodule-enablejitdebugging-method.md)|判斷即時（JIT）編譯器是否保留此模組中之方法的偵錯工具資訊。|  
+|[GetAssembly 方法](icordebugmodule-getassembly-method.md)|取得此模組的包含元件。|  
+|[GetBaseAddress 方法](icordebugmodule-getbaseaddress-method.md)|取得模組的基底位址。|  
+|[GetClassFromToken 方法](icordebugmodule-getclassfromtoken-method.md)|從中繼資料取得 ICorDebugClass。|  
+|[GetEditAndContinueSnapshot 方法](icordebugmodule-geteditandcontinuesnapshot-method.md)|已取代。|  
+|[GetFunctionFromRVA 方法](icordebugmodule-getfunctionfromrva-method.md)|未實作。|  
+|[GetFunctionFromToken 方法](icordebugmodule-getfunctionfromtoken-method.md)|取得元資料標記所指定的函式。|  
+|[GetGlobalVariableValue 方法](icordebugmodule-getglobalvariablevalue-method.md)|取得指定之全域變數的值物件。|  
+|[GetMetaDataInterface 方法](icordebugmodule-getmetadatainterface-method.md)|取得中繼資料介面指標，可用於檢查模組的中繼資料。|  
+|[GetName 方法](icordebugmodule-getname-method.md)|取得模組的檔案名。|  
+|[GetProcess 方法](icordebugmodule-getprocess-method.md)|取得此模組的包含進程。|  
+|[GetSize 方法](icordebugmodule-getsize-method.md)|取得模組的大小（以位元組為單位）。|  
+|[GetToken 方法](icordebugmodule-gettoken-method.md)|取得此模組之資料表專案的 token。|  
+|[IsDynamic 方法](icordebugmodule-isdynamic-method.md)|指出模組是否為動態。|  
+|[IsInMemory 方法](icordebugmodule-isinmemory-method.md)|指出此模組是否只存在於記憶體中。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -63,5 +63,5 @@ ms.locfileid: "73129479"
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebug 介面](icordebug-interface.md)
+- [偵錯介面](debugging-interfaces.md)

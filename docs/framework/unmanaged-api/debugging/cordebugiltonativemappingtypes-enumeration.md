@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c35e2919-42c3-4ba0-ae28-443c35f66f93
 topic_type:
 - apiref
-ms.openlocfilehash: 949d04fe8d9ce492fb320fb4732677ffb35302ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ddb5af486ab6fb1c8c4fabf3ccf7b43d037e1eeb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132818"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789325"
 ---
 # <a name="cordebugiltonativemappingtypes-enumeration"></a>CorDebugIlToNativeMappingTypes 列舉
-指出特定範圍的原生指令（由 COR_DEBUG_IL_TO_NATIVE_MAP 結構的實例所代表）是否對應到特殊的程式碼區域。  
+指出特定的原生指令範圍（由 COR_DEBUG_IL_TO_NATIVE_MAP 結構的實例所表示）是否對應到特殊的程式碼區域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,5 +53,5 @@ typedef enum CorDebugIlToNativeMappingTypes {
   
 ## <a name="see-also"></a>請參閱
 
-- [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
-- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [GetILToNativeMapping 方法](icordebugcode-getiltonativemapping-method.md)
+- [偵錯列舉](debugging-enumerations.md)

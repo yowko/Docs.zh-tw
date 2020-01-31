@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b25c88f0-71b9-443b-8eea-1c94db0a44b9
 topic_type:
 - apiref
-ms.openlocfilehash: 5b6c0159b432d2a70f583357bbcf714b27399633
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e0663ff122397ba639a0a219e513be2f3f0cbbef
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447179"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862759"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetClassFromTokenAndTypeArgs 方法
 使用指定的元資料標記和任何類型引數的 `ClassID` 值，取得類型的 `ClassID`。  
@@ -57,7 +57,7 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
  如果尚未載入類型，呼叫 `GetClassFromTokenAndTypeArgs` 將會觸發載入，這在許多內容中是危險的作業。 例如，在載入模組或其他類型期間呼叫這個方法，可能會導致無限迴圈，因為執行時間會嘗試迴圈載入專案。  
   
- 一般而言，不建議使用 `GetClassFromTokenAndTypeArgs`。 如果分析工具對特定類型的事件有興趣，則應該儲存該類型的 `ModuleID` 和 `mdTypeDef`，並使用[ICorProfilerInfo2：： GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md)來檢查給定的 `ClassID` 是否為所需類型的。  
+ 一般而言，不建議使用 `GetClassFromTokenAndTypeArgs`。 如果分析工具對特定類型的事件有興趣，則應該儲存該類型的 `ModuleID` 和 `mdTypeDef`，並使用[ICorProfilerInfo2：： GetClassIDInfo2](icorprofilerinfo2-getclassidinfo2-method.md)來檢查給定的 `ClassID` 是否為所需類型的。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -68,7 +68,7 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 介面](icorprofilerinfo2-interface.md)

@@ -1,5 +1,5 @@
 ---
-title: 設定程式碼剖析環境
+title: 設定分析環境
 ms.date: 03/30/2017
 helpviewer_keywords:
 - environment variables, profiling API
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - COR_ENABLE_PROFILING environment variable
 - profiling API [.NET Framework], enabling
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
-ms.openlocfilehash: 86720cb1739e3f193cd1d5081577d69bca1cf0f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04b9abd8ffe04a24c08ad89ff48b037c9b003359
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427060"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860975"
 ---
-# <a name="setting-up-a-profiling-environment"></a>設定程式碼剖析環境
+# <a name="setting-up-a-profiling-environment"></a>設定分析環境
 > [!NOTE]
 > .NET Framework 4 中的分析有大幅的變更。  
   
@@ -55,23 +55,23 @@ ms.locfileid: "74427060"
   
 ## <a name="additional-considerations"></a>其他考量  
   
-- Profiler 類別會實行[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)和[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)介面。 在 .NET Framework 2.0 版中，程式碼剖析工具必須實作 `ICorProfilerCallback2`。 如果沒有實作，就不會載入 `ICorProfilerCallback2`。  
+- Profiler 類別會實行[ICorProfilerCallback](icorprofilercallback-interface.md)和[ICorProfilerCallback2](icorprofilercallback2-interface.md)介面。 在 .NET Framework 2.0 版中，程式碼剖析工具必須實作 `ICorProfilerCallback2`。 如果沒有實作，就不會載入 `ICorProfilerCallback2`。  
   
 - 在指定環境中一次只能使用一個程式碼剖析工具來分析處理序。 您可以在不同環境中註冊兩個不同的程式碼剖析工具，但這兩個工具必須分析不同的處理序。 程式碼剖析工具必須實作為同處理序 COM 伺服器 DLL (其與剖析中之處理序的相同位址空間對應)。 這表示程式碼剖析工具執行同處理序。 .NET Framework 不支援任何其他類型的 COM 伺服器。 例如，如果程式碼剖析工具想要從遠端電腦監視應用程式，就必須在每一部電腦上實作收集器代理程式。 這些代理程式將會批次結果，並讓結果與中央資料收集電腦通訊。  
   
 - 由於程式碼剖析工具是可具現化同處理序的 COM 物件，所以每個經剖析的應用程式會有自己的程式碼剖析工具複本。 因此，單一程式碼剖析工具執行個體不須處理來自多個應用程式的資料。 不過，您必須將邏輯加入程式碼剖析工具的記錄程式碼，以防止記錄檔從其他經剖析的應用程式覆寫。  
   
 ## <a name="initializing-the-profiler"></a>初始化程式碼剖析工具  
- 當這兩個環境變數都檢查通過時，CLR 會以與 COM `CoCreateInstance` 函式類似的方式建立程式碼剖析工具的執行個體。 程式碼剖析工具不會透過直接呼叫載入至 `CoCreateInstance`。 因此會避免呼叫必須設定執行緒模型的 `CoInitialize`。 然後，CLR 會在分析工具中呼叫[ICorProfilerCallback：： Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)方法。 這個方法的簽章如下所示。  
+ 當這兩個環境變數都檢查通過時，CLR 會以與 COM `CoCreateInstance` 函式類似的方式建立程式碼剖析工具的執行個體。 程式碼剖析工具不會透過直接呼叫載入至 `CoCreateInstance`。 因此會避免呼叫必須設定執行緒模型的 `CoInitialize`。 然後，CLR 會在分析工具中呼叫[ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md)方法。 這個方法的簽章如下所示。  
   
 ```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
- 分析工具必須查詢[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)或[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)介面指標的 `pICorProfilerInfoUnk`，並加以儲存，以便稍後可在程式碼剖析期間要求更多的資訊。  
+ 分析工具必須查詢[ICorProfilerInfo](icorprofilerinfo-interface.md)或[ICorProfilerInfo2](icorprofilerinfo2-interface.md)介面指標的 `pICorProfilerInfoUnk`，並加以儲存，以便稍後可在程式碼剖析期間要求更多的資訊。  
   
 ## <a name="setting-event-notifications"></a>設定事件通知  
- 分析工具接著會呼叫[ICorProfilerInfo：： SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法，以指定其感興趣的通知類別。 例如，如果程式碼剖析工具只對函式進入及離開通知和記憶體回收通知感興趣，會指定下列項目。  
+ 分析工具接著會呼叫[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法，以指定其感興趣的通知類別。 例如，如果程式碼剖析工具只對函式進入及離開通知和記憶體回收通知感興趣，會指定下列項目。  
   
 ```cpp  
 ICorProfilerInfo* pInfo;  
@@ -91,8 +91,8 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
   
  請注意這些變更將會啟用以系統範圍為基礎的程式碼剖析。 若要防止進行後續執行之所有 Managed 應用程式的程式碼剖析，您應該在重新啟動目標電腦之後刪除系統環境變數。  
   
- 這項技術也會使每個 CLR 程序進行程式碼剖析。 分析工具應該將邏輯新增至其[ICorProfilerCallback：： Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)回呼，以偵測目前的處理常式是否相關。 如果不是，程式碼剖析工具可以使回呼失敗，而不需執行初始化。  
+ 這項技術也會使每個 CLR 程序進行程式碼剖析。 分析工具應該將邏輯新增至其[ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md)回呼，以偵測目前的處理常式是否相關。 如果不是，程式碼剖析工具可以使回呼失敗，而不需執行初始化。  
   
 ## <a name="see-also"></a>請參閱
 
-- [分析概觀](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)
+- [分析概觀](profiling-overview.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 441d7809-5b65-41a5-ba64-2910a8008315
 topic_type:
 - apiref
-ms.openlocfilehash: 40efe81f72a2043503bf521e3e47dad1a7f4530c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 880c9bd186d6cb2acb277e9cc55d3063fb8d51d8
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448446"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867029"
 ---
 # <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE 列舉
 指出欄位是否為靜態，若是靜態，則欄位套用的是靜態品質。 這些值可以使用位 OR 運算來結合，表示該欄位有多個不同的靜態品質。  
@@ -57,4 +57,4 @@ typedef enum {
   
 ## <a name="see-also"></a>請參閱
 
-- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [分析列舉](profiling-enumerations.md)

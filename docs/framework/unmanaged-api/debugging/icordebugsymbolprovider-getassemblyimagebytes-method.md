@@ -1,15 +1,15 @@
 ---
-title: ICorDebugSymbolProvider：： GetAssemblyImageBytes 方法
+title: ICorDebugSymbolProvider::GetAssemblyImageBytes 方法
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-ms.openlocfilehash: 3184ba116704df8945b53766e62435a4252eaa11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7a8f942d493b7b775a31dce5ab4d351a77cfe5f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138927"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791667"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider：： GetAssemblyImageBytes 方法
+# <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes 方法
 如果合併組件中有相對虛擬位址 (RVA)，則會從合併組件讀取資料。  
   
 ## <a name="syntax"></a>語法  
@@ -30,7 +30,7 @@ HRESULT GetAssemblyImageBytes(
  要從合併組件讀取的位元組數目。  
   
  `ppMemoryBuffer`  
- [ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)物件位址的指標，其中包含具有合併元件中繼資料之記憶體緩衝區的相關資訊。  
+ [ICorDebugMemoryBuffer](icordebugmemorybuffer-interface.md)物件位址的指標，其中包含具有合併元件中繼資料之記憶體緩衝區的相關資訊。  
   
 ## <a name="remarks"></a>備註  
   
@@ -48,5 +48,5 @@ HRESULT GetAssemblyImageBytes(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugSymbolProvider 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider 介面](icordebugsymbolprovider-interface.md)
+- [偵錯介面](debugging-interfaces.md)

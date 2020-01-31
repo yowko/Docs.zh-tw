@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 94d175ec58f35b7e807786c221437d05c605c0bc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c076937d6431adf1750793d47ece88dc82edf95c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974218"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794106"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>逐步解說：使用 WindowsFormsHost 項目對應屬性
 
-本逐步解說將示範如何使用 <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> 屬性，將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性對應至裝載之 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項的對應屬性。
+本逐步解說將示範如何使用 <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> 屬性，將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性對應至裝載之 Windows Forms 控制項的對應屬性。
 
 這個逐步解說中所述的工作包括：
 
@@ -35,9 +35,9 @@ ms.locfileid: "73974218"
 
 如需本逐步解說中所述工作的完整程式代碼清單，請參閱[使用 WindowsFormsHost 元素範例對應屬性](https://go.microsoft.com/fwlink/?LinkID=160019)。
 
-當您完成時，您可以將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性對應至託管 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項上的對應屬性。
+當您完成時，您可以將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性對應至託管 Windows Forms 控制項上的對應屬性。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 您需要下列元件才能完成此逐步解說：
 
@@ -53,7 +53,7 @@ ms.locfileid: "73974218"
 
 ## <a name="defining-the-application-layout"></a>定義應用程式版面配置
 
-以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為基礎的應用程式會使用 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素來裝載 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。
+以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為基礎的應用程式會使用 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素來裝載 Windows Forms 控制項。
 
 ### <a name="to-define-the-application-layout"></a>定義應用程式版面配置
 
@@ -83,7 +83,7 @@ ms.locfileid: "73974218"
 
      `AddClipMapping` 方法會加入 <xref:System.Windows.UIElement.Clip%2A> 屬性的新對應。
 
-     `OnClipChange` 方法會將 <xref:System.Windows.UIElement.Clip%2A> 屬性轉譯為 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的 <xref:System.Windows.Forms.Control.Region%2A> 屬性。
+     `OnClipChange` 方法會將 <xref:System.Windows.UIElement.Clip%2A> 屬性轉譯為 Windows Forms 的<xref:System.Windows.Forms.Control.Region%2A> 屬性。
 
      `Window1_SizeChanged` 方法會處理視窗的 <xref:System.Windows.FrameworkElement.SizeChanged> 事件，並調整裁剪區域的大小以符合應用程式視窗。
 
@@ -113,7 +113,7 @@ ms.locfileid: "73974218"
 
      `ReplaceFlowDirectionMapping` 方法會取代 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 屬性的預設對應。
 
-     `OnFlowDirectionChange` 方法會將 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 屬性轉譯為 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的 <xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性。
+     `OnFlowDirectionChange` 方法會將 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 屬性轉譯為 Windows Forms 的<xref:System.Windows.Forms.Control.RightToLeft%2A> 屬性。
 
      `cb_CheckedChanged` 方法會處理 <xref:System.Windows.Forms.CheckBox> 控制項上的 <xref:System.Windows.Forms.CheckBox.CheckedChanged> 事件。 它會根據 <xref:System.Windows.Forms.CheckBox.CheckState%2A> 屬性的值來指派 <xref:System.Windows.FrameworkElement.FlowDirection%2A> 屬性
 
@@ -145,7 +145,7 @@ ms.locfileid: "73974218"
 
      `WindowLoaded` 方法會處理 <xref:System.Windows.FrameworkElement.Loaded> 事件，並執行下列初始化。
 
-    - 建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox> 控制項。
+    - 建立 Windows Forms<xref:System.Windows.Forms.CheckBox> 控制項。
 
     - 呼叫您稍早在本逐步解說中所定義的方法來設定屬性對應。
 

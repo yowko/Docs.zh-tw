@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87360a52-90b1-4ada-80c0-589a556116d8
 topic_type:
 - apiref
-ms.openlocfilehash: 8ae788094def566b4dc3a17d0a08d657cc27468f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d7126222bd23548ec7013ba234c3f3eebbc8e374
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138369"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788637"
 ---
 # <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2 介面
 
@@ -29,7 +29,7 @@ ICorDebugHeapValue 的延伸模組，可提供 common language runtime （CLR）
   
 |方法|描述|  
 |------------|-----------------|  
-|[CreateHandle 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|建立這個 `ICorDebugHeapValue2` 物件之指定類型的控制碼。|  
+|[CreateHandle 方法](icordebugheapvalue2-createhandle-method.md)|建立這個 `ICorDebugHeapValue2` 物件之指定類型的控制碼。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -47,4 +47,4 @@ ICorDebugHeapValue 的延伸模組，可提供 common language runtime （CLR）
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

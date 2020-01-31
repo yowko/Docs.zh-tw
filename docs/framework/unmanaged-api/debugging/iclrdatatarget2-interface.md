@@ -14,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 94249397-861b-4294-a538-cf01466a66d3
 topic_type:
 - apiref
-ms.openlocfilehash: 1f0f4331302e56a90b4aefd657e07981994022ec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bdc8378a129dd5bb1d9fdcb080c7b5cd53d34091
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73112305"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789067"
 ---
 # <a name="iclrdatatarget2-interface"></a>ICLRDataTarget2 介面
-資料存取服務層用來操作目標進程中虛擬記憶體區域的[ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)子類別。  
+資料存取服務層用來操作目標進程中虛擬記憶體區域的[ICLRDataTarget](iclrdatatarget-interface.md)子類別。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[AllocVirtual 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-allocvirtual-method.md)|在目標進程的位址空間中配置記憶體。|  
-|[FreeVirtual 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)|釋放先前在目標進程的位址空間中配置的記憶體。|  
+|[AllocVirtual 方法](iclrdatatarget2-allocvirtual-method.md)|在目標進程的位址空間中配置記憶體。|  
+|[FreeVirtual 方法](iclrdatatarget2-freevirtual-method.md)|釋放先前在目標進程的位址空間中配置的記憶體。|  
   
 ## <a name="remarks"></a>備註  
  API 用戶端 (也就是偵錯工具) 必須針對適合的特定目標處理序實作這個介面。 例如，即時處理序的實作與記憶體傾印的實作不同。 目標可能不支援修改其記憶體區域。  
@@ -45,5 +45,5 @@ ms.locfileid: "73112305"
   
 ## <a name="see-also"></a>請參閱
 
-- [ICLRDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICLRDataTarget 介面](iclrdatatarget-interface.md)
+- [偵錯介面](debugging-interfaces.md)

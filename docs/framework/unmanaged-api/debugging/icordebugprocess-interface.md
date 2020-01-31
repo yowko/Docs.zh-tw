@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-ms.openlocfilehash: 393ac8c119f111b645e7ccdb6ea94efee7207fa4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b2429052173a187297b67c756213e5d27a79298b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128799"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792597"
 ---
 # <a name="icordebugprocess-interface"></a>ICorDebugProcess 介面
 表示執行 Managed 程式碼的處理序。 這個介面是 ICorDebugController 的子類別。  
@@ -28,23 +28,23 @@ ms.locfileid: "73128799"
   
 |方法|描述|  
 |------------|-----------------|  
-|[ClearCurrentException 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md)|清除指定執行緒上目前的非受控例外狀況。|  
-|[EnableLogMessages 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enablelogmessages-method.md)|啟用和停用將記錄訊息傳送至偵錯工具的功能。|  
-|[EnumerateAppDomains 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateappdomains-method.md)|列舉進程中的所有應用程式域。|  
-|[EnumerateObjects 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateobjects-method.md)|未實作。|  
-|[GetHandle 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethandle-method.md)|取得進程的控制碼。|  
-|[GetHelperThreadID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethelperthreadid-method.md)|取得偵錯工具內部 helper 執行緒的作業系統（OS）執行緒識別碼。|  
-|[GetID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md)|取得進程的作業系統（OS）識別碼。|  
-|[GetObject 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getobject-method.md)|未實作。|  
-|[GetThread 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthread-method.md)|取得具有指定之 OS 執行緒識別碼的 ICorDebugThread 實例。|  
-|[GetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md)|取得給定執行緒的內容。|  
-|[IsOSSuspended 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-isossuspended-method.md)|判斷線程是否因偵錯工具停止進程而暫停。|  
-|[IsTransitionStub 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-istransitionstub-method.md)|判斷位址是否在將導致轉換成 managed 程式碼的存根內部。|  
-|[ModifyLogSwitch 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-modifylogswitch-method.md)|設定指定之記錄參數的嚴重性層級。|  
-|[ReadMemory 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-readmemory-method.md)|從進程讀取記憶體。|  
-|[SetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)|設定指定執行緒的內容。|  
-|[ThreadForFiberCookie 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-threadforfibercookie-method.md)|已取代。|  
-|[WriteMemory 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-writememory-method.md)|將資料寫入進程中的記憶體區域。|  
+|[ClearCurrentException 方法](icordebugprocess-clearcurrentexception-method.md)|清除指定執行緒上目前的非受控例外狀況。|  
+|[EnableLogMessages 方法](icordebugprocess-enablelogmessages-method.md)|啟用和停用將記錄訊息傳送至偵錯工具的功能。|  
+|[EnumerateAppDomains 方法](icordebugprocess-enumerateappdomains-method.md)|列舉進程中的所有應用程式域。|  
+|[EnumerateObjects 方法](icordebugprocess-enumerateobjects-method.md)|未實作。|  
+|[GetHandle 方法](icordebugprocess-gethandle-method.md)|取得進程的控制碼。|  
+|[GetHelperThreadID 方法](icordebugprocess-gethelperthreadid-method.md)|取得偵錯工具內部 helper 執行緒的作業系統（OS）執行緒識別碼。|  
+|[GetID 方法](icordebugprocess-getid-method.md)|取得進程的作業系統（OS）識別碼。|  
+|[GetObject 方法](icordebugprocess-getobject-method.md)|未實作。|  
+|[GetThread 方法](icordebugprocess-getthread-method.md)|取得具有指定之 OS 執行緒識別碼的 ICorDebugThread 實例。|  
+|[GetThreadContext 方法](icordebugprocess-getthreadcontext-method.md)|取得給定執行緒的內容。|  
+|[IsOSSuspended 方法](icordebugprocess-isossuspended-method.md)|判斷線程是否因偵錯工具停止進程而暫停。|  
+|[IsTransitionStub 方法](icordebugprocess-istransitionstub-method.md)|判斷位址是否在將導致轉換成 managed 程式碼的存根內部。|  
+|[ModifyLogSwitch 方法](icordebugprocess-modifylogswitch-method.md)|設定指定之記錄參數的嚴重性層級。|  
+|[ReadMemory 方法](icordebugprocess-readmemory-method.md)|從進程讀取記憶體。|  
+|[SetThreadContext 方法](icordebugprocess-setthreadcontext-method.md)|設定指定執行緒的內容。|  
+|[ThreadForFiberCookie 方法](icordebugprocess-threadforfibercookie-method.md)|已取代。|  
+|[WriteMemory 方法](icordebugprocess-writememory-method.md)|將資料寫入進程中的記憶體區域。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -62,5 +62,5 @@ ms.locfileid: "73128799"
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebug 介面](icordebug-interface.md)
+- [偵錯介面](debugging-interfaces.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cdac941-8b94-4497-b874-4e571785f3fe
 topic_type:
 - apiref
-ms.openlocfilehash: e40687f7f843dc563801bb01b503d2ae94a094fc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0b1ecd1266528f8a08ef114de2f111dd0f71ca8b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446024"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866927"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 函式
 通知分析工具，函式即將傳回給呼叫端，並提供堆疊框架和函數傳回值的相關資訊。  
@@ -35,23 +35,28 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-## <a name="parameters"></a>參數  
- `funcId`  
- 在傳回之函式的識別碼。  
+## <a name="parameters"></a>參數
+
+- `funcId`
+
+  中的 \[] 所傳回之函式的識別碼。
+
+- `clientData`
+
+  \[in]）重新對應的函式識別碼，這是先前透過[FunctionIDMapper](functionidmapper-function.md)函數指定的 profiler。
+
+- `func`
+
+  \[in]） `COR_PRF_FRAME_INFO` 值，指向堆疊框架的相關資訊。
+
+  分析工具應該將此視為不透明的控制碼，以便在[ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)方法中傳回給執行引擎。  
   
- `clientData`  
- 在重新對應的函式識別碼，分析工具先前透過[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)函數指定。  
-  
- `func`  
- 在`COR_PRF_FRAME_INFO` 值，指向堆疊框架的相關資訊。  
-  
- 分析工具應該將此視為不透明的控制碼，以便在[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法中傳回給執行引擎。  
-  
- `retvalRange`  
- 在[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)結構的指標，指定函式傳回值的記憶體位置。  
-  
- 為了存取傳回值資訊，必須設定 `COR_PRF_ENABLE_FUNCTION_RETVAL` 旗標。 分析工具可以使用[ICorProfilerInfo：： SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法來設定事件旗標。  
-  
+- `retvalRange`
+
+  \[in]） [COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md)結構的指標，指定函式傳回值的記憶體位置。
+
+  為了存取傳回值資訊，必須設定 `COR_PRF_ENABLE_FUNCTION_RETVAL` 旗標。 分析工具可以使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法來設定事件旗標。
+
 ## <a name="remarks"></a>備註  
  `FunctionLeave2` 函數傳回之後，`func` 和 `retvalRange` 參數的值無效，因為這些值可能會變更或終結。  
   
@@ -76,9 +81,9 @@ void __stdcall FunctionLeave2 (
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [FunctionEnter2 函式](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionTailcall2 函式](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [分析全域靜態函式](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 函式](functionenter2-function.md)
+- [FunctionTailcall2 函式](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 方法](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [分析全域靜態函式](profiling-global-static-functions.md)

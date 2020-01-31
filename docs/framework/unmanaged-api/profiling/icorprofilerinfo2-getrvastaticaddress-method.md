@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a25a8f8b-5cfa-440d-9376-a1a1c3a9fc11
 topic_type:
 - apiref
-ms.openlocfilehash: db768c97a2d1a0fd5ee42ecfb121fb96d3092e79
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ca64d4f5932fb4a0c0486fee5ca1017a6d3adaf2
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433016"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868625"
 ---
 # <a name="icorprofilerinfo2getrvastaticaddress-method"></a>ICorProfilerInfo2::GetRVAStaticAddress 方法
 取得指定的相對虛擬位址（RVA）靜態欄位的位址。  
@@ -64,5 +64,5 @@ HRESULT GetRVAStaticAddress(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 介面](icorprofilerinfo2-interface.md)

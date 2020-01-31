@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca7723db-7c07-4cdd-bd92-fba34928b623
 topic_type:
 - apiref
-ms.openlocfilehash: 805f9a5d1f2590a06bfa929c152bdfd13900531a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 28b9fb5a25981e5e37a5f1bbb797baeac45e0028
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134275"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793567"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach 方法
 傳回 HRESULT，指出目前的電腦和執行時間設定的內容中，是否可以啟動新進程或附加至指定的現有進程。  
@@ -42,7 +42,7 @@ HRESULT CanLaunchOrAttach (
  在傳入 `true` 如果您打算在啟用 Win32 偵測功能的情況下啟動，或附加至啟用 Win32 偵測，則為。否則，請傳遞 `false`。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK，如果偵錯工具會判斷目前的電腦和執行時間設定的相關資訊，則可能會啟動新的進程或附加至給定的進程。 可能的 HRESULT 值如下：  
+ S_OK 偵錯工具是否可以判斷啟動新進程或附加至給定的進程，並提供目前電腦和執行時間設定的相關資訊。 可能的 HRESULT 值如下：  
   
 - S_OK  
   
@@ -68,4 +68,4 @@ HRESULT CanLaunchOrAttach (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug 介面](icordebug-interface.md)

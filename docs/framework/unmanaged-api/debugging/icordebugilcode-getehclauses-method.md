@@ -12,12 +12,12 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-ms.openlocfilehash: df9859f33b4146486a046253cf4705cd19c66adf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ac9a4e4b54b302afeae4ede1dd574c15ded3ff12
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131101"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788607"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::GetEHClauses 方法
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -41,7 +41,7 @@ HRESULT GetEHClauses(
  [out] 其資訊寫入至 `clauses` 陣列的子句數。  
   
  子句  
- 脫銷[CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)物件的陣列，其中包含針對此 IL 所定義之例外狀況處理子句的相關資訊。  
+ 脫銷[CorDebugEHClause](cordebugehclause-structure.md)物件的陣列，其中包含針對此 IL 所定義之例外狀況處理子句的相關資訊。  
   
 ## <a name="remarks"></a>備註  
  如果 `cClauses` 為0，而 `pcClauses` 為非**null**，則 `pcClauses` 會設定為可用的例外狀況處理子句數目。 如果 `cClauses` 不是零，則代表 `clauses` 陣列的儲存體容量。 傳回方法時，`clauses` 會包含 `cClauses` 項目的最大值，且 `pcClauses` 會設為實際寫入至 `clauses` 陣列的子句數。  
@@ -57,6 +57,6 @@ HRESULT GetEHClauses(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugILCode 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
-- [CorDebugEHClause 結構](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugILCode 介面](icordebugilcode-interface.md)
+- [CorDebugEHClause 結構](cordebugehclause-structure.md)
+- [偵錯介面](debugging-interfaces.md)

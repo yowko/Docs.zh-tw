@@ -1,15 +1,15 @@
 ---
-title: ICorDebugSymbolProvider：： GetTypeProps 方法
+title: ICorDebugSymbolProvider::GetTypeProps 方法
 ms.date: 03/30/2017
 ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
-ms.openlocfilehash: c87d9f6d0a719dae5e532e9c0369a7f9fc03748a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5fa091eaf2cf93b0c645effeec3c959d42665fc9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133672"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791537"
 ---
-# <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider：： GetTypeProps 方法
+# <a name="icordebugsymbolprovidergettypeprops-method"></a>ICorDebugSymbolProvider::GetTypeProps 方法
 根據 vtable 中指定的相對虛擬位址 (RVA)，傳回類型之屬性的相關資訊，例如其泛型參數的簽章數目。  
   
 ## <a name="syntax"></a>語法  
@@ -53,6 +53,6 @@ HRESULT GetTypeProps(
   
 ## <a name="see-also"></a>請參閱
 
-- [GetMethodProps 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)
-- [ICorDebugSymbolProvider 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetMethodProps 方法](icordebugsymbolprovider-getmethodprops-method.md)
+- [ICorDebugSymbolProvider 介面](icordebugsymbolprovider-interface.md)
+- [偵錯介面](debugging-interfaces.md)

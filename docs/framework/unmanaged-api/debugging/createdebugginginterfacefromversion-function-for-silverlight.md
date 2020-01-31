@@ -8,15 +8,15 @@ helpviewer_keywords:
 - debugging API [Silverlight]
 - Silverlight, debugging
 ms.assetid: 35c7a18f-133a-4584-bd25-bb338568b0c6
-ms.openlocfilehash: 438af9f191f48a86207c3b343ba428eef2c1fabc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 85b5a5a630f399d0e036de434365e2e4f8f02dea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132195"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793832"
 ---
 # <a name="createdebugginginterfacefromversion-function-for-silverlight"></a>適用於 Silverlight 的 CreateDebuggingInterfaceFromVersion 函式
-接受從[CreateVersionStringFromModule](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)函式傳回的 common language RUNTIME （CLR）版本字串，並傳回對應的偵錯工具介面（通常是[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)）。  
+接受從[CreateVersionStringFromModule](createversionstringfrommodule-function.md)函式傳回的 common language RUNTIME （CLR）版本字串，並傳回對應的偵錯工具介面（通常是[ICorDebug](icordebug-interface.md)）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -29,14 +29,14 @@ HRESULT CreateDebuggingInterfaceFromVersion (
   
 ## <a name="parameters"></a>參數  
  `szDebuggeeVersion`  
- 在目標偵錯工具中 CLR 的版本字串（由[CreateVersionStringFromModule 函數](../../../../docs/framework/unmanaged-api/debugging/createversionstringfrommodule-function.md)傳回）。  
+ 在目標偵錯工具中 CLR 的版本字串（由[CreateVersionStringFromModule 函數](createversionstringfrommodule-function.md)傳回）。  
   
  `ppCordb`  
- [out] COM 物件 (`IUnknown`) 指標的指標。 這個物件會在傳回之前轉換成[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)物件。  
+ [out] COM 物件 (`IUnknown`) 指標的指標。 這個物件會在傳回之前轉換成[ICorDebug](icordebug-interface.md)物件。  
   
 ## <a name="return-value"></a>傳回值  
  S_OK  
- `ppCordb` 會參考實[ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)介面的有效物件。  
+ `ppCordb` 會參考實[ICorDebug 介面](icordebug-interface.md)介面的有效物件。  
   
  E_INVALIDARG  
  `szDebuggeeVersion` 或 `ppCordb` 為 null。  
@@ -48,7 +48,7 @@ HRESULT CreateDebuggingInterfaceFromVersion (
  mscordbi.dll 或 mscordaccore.dll 的版本與目標 CoreCLR.dll 的版本不同。  
   
  E_FAIL (或其他 E_ 傳回碼)  
- 無法傳回[ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)。  
+ 無法傳回[ICorDebug 介面](icordebug-interface.md)。  
   
 ## <a name="remarks"></a>備註  
  傳回的介面提供了附加至目標處理序中的 CLR，以及對 CLR 正在執行之 Managed 程式碼進行偵錯的功能。  

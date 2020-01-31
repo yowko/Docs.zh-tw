@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09daac08-005a-46b2-beab-408d0820c5e5
 topic_type:
 - apiref
-ms.openlocfilehash: 01e1eafd9955a0876f77e34eb73c2a3fc6d815c2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1677798abdb8994d34c82a71e97a2c858209c18e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139209"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790381"
 ---
 # <a name="logginglevelenum-enumeration"></a>LoggingLevelEnum 列舉
 指出當 Managed 執行緒記錄事件時，寫入至事件記錄檔之描述性訊息的嚴重性層級。  
@@ -63,7 +63,7 @@ typedef enum LoggingLevelEnum {
 |`LPanicLevel`|訊息是一個驚慌層級。|  
   
 ## <a name="remarks"></a>備註  
- Common language runtime （CLR）會呼叫[ICorDebugManagedCallback：： LogMessage](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-logmessage-method.md)方法，以通知偵錯工具 managed 執行緒已記錄事件。 CLR 會傳遞 `LoggingLevelEnum` 列舉的值，指出 managed 執行緒寫入事件記錄檔之訊息的嚴重性層級。  
+ Common language runtime （CLR）會呼叫[ICorDebugManagedCallback：： LogMessage](icordebugmanagedcallback-logmessage-method.md)方法，以通知偵錯工具 managed 執行緒已記錄事件。 CLR 會傳遞 `LoggingLevelEnum` 列舉的值，指出 managed 執行緒寫入事件記錄檔之訊息的嚴重性層級。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -77,4 +77,4 @@ typedef enum LoggingLevelEnum {
 ## <a name="see-also"></a>請參閱
 
 - <xref:System.Diagnostics.EventLog>
-- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [偵錯列舉](debugging-enumerations.md)

@@ -2,12 +2,12 @@
 title: ICorDebugStaticFieldSymbol 介面
 ms.date: 03/30/2017
 ms.assetid: c0b93609-631e-4b15-878a-189ede922631
-ms.openlocfilehash: 0891df1fc0528ff485605b2c4168fcff0adff990
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b50b9c8435f19e1a77229f01dc85514f5f75c9f5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131711"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791808"
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a>ICorDebugStaticFieldSymbol 介面
 代表靜態欄位的偵錯符號資訊。  
@@ -16,9 +16,9 @@ ms.locfileid: "73131711"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetAddress 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getaddress-method.md)|取得靜態欄位的位址。|  
-|[GetName 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getname-method.md)|取得靜態欄位的名稱。|  
-|[GetSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-getsize-method.md)|取得靜態欄位的大小 (以位元組為單位)。|  
+|[GetAddress 方法](icordebugstaticfieldsymbol-getaddress-method.md)|取得靜態欄位的位址。|  
+|[GetName 方法](icordebugstaticfieldsymbol-getname-method.md)|取得靜態欄位的名稱。|  
+|[GetSize 方法](icordebugstaticfieldsymbol-getsize-method.md)|取得靜態欄位的大小 (以位元組為單位)。|  
   
 ## <a name="remarks"></a>備註  
  `ICorDebugStaticFieldSymbol` 介面可用來擷取靜態欄位的偵錯符號資訊。  
@@ -37,6 +37,6 @@ ms.locfileid: "73131711"
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugInstanceFieldSymbol 介面](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugInstanceFieldSymbol 介面](icordebuginstancefieldsymbol-interface.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

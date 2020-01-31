@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-ms.openlocfilehash: 5f98c35f77fdb200be2e96364c9ac06c386faa62
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 500cf74c320438fc1b78f0aac737b418716e1a11
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436015"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862824"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>ICorProfilerInfo2::GetBoxClassLayout 方法
 取得當指定的實值型別已被裝箱時，其所在位置的相關資訊。  
@@ -52,7 +52,7 @@ HRESULT GetBoxClassLayout(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 介面](icorprofilerinfo2-interface.md)

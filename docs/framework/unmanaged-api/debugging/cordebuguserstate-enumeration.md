@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f6c2bcd-8102-4e3b-abc5-86ab0bd62def
 topic_type:
 - apiref
-ms.openlocfilehash: d0394d511197c8d0aaa366ce7b791216a3d226bc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c142b9656af2031b10de239645da76835c435655
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120196"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789231"
 ---
 # <a name="cordebuguserstate-enumeration"></a>CorDebugUserState 列舉
 指出執行緒的使用者狀態。  
@@ -42,7 +42,7 @@ typedef enum CorDebugUserState {
   
 ## <a name="members"></a>Members  
   
-|值|描述|  
+|{2&gt;值&lt;2}|描述|  
 |-----------|-----------------|  
 |`USER_STOP_REQUESTED`|已要求執行緒終止。|  
 |`USER_SUSPEND_REQUESTED`|已要求暫停執行緒。|  
@@ -57,7 +57,7 @@ typedef enum CorDebugUserState {
 ## <a name="remarks"></a>備註  
  執行緒的使用者狀態就是執行緒在偵錯工具檢查時所擁有的狀態。 執行緒可以有使用者狀態的組合。  
   
- 使用[ICorDebugThread：： GetUserState](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md)方法來取出執行緒的使用者狀態。  
+ 使用[ICorDebugThread：： GetUserState](icordebugthread-getuserstate-method.md)方法來取出執行緒的使用者狀態。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -70,4 +70,4 @@ typedef enum CorDebugUserState {
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [偵錯列舉](debugging-enumerations.md)

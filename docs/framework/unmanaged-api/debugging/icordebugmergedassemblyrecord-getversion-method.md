@@ -1,15 +1,15 @@
 ---
-title: ICorDebugMergedAssemblyRecord：： GetVersion 方法
+title: ICorDebugMergedAssemblyRecord::GetVersion 方法
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-ms.openlocfilehash: 0c89d0749281da412bbf71400d51bee1ed651fbe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8b5995183be7f1c992cf3230e16456cb248eff0c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129775"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793071"
 ---
-# <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord：： GetVersion 方法
+# <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord::GetVersion 方法
 取得組件的版本資訊。  
   
 ## <a name="syntax"></a>語法  
@@ -53,5 +53,5 @@ HRESULT GetVersion(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugMergedAssemblyRecord 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugMergedAssemblyRecord 介面](icordebugmergedassemblyrecord-interface.md)
+- [偵錯介面](debugging-interfaces.md)

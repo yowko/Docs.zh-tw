@@ -1,15 +1,15 @@
 ---
-title: ICorDebugVariableSymbol：： GetSlotIndex 方法
+title: ICorDebugVariableSymbol::GetSlotIndex Method
 ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
-ms.openlocfilehash: a7a7ecf7d3e3d0d2125b03d3604c44138a2be0cc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3510daffb55bdb22aa5f835bf27157e7c8428509
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120978"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790898"
 ---
-# <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol：： GetSlotIndex 方法
+# <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSlotIndex Method
 取得區域變數的 Managed 位置索引。  
   
 ## <a name="syntax"></a>語法  
@@ -44,5 +44,5 @@ HRESULT GetSlotIndex(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugVariableSymbol 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugVariableSymbol 介面](icordebugvariablesymbol-interface.md)
+- [偵錯介面](debugging-interfaces.md)

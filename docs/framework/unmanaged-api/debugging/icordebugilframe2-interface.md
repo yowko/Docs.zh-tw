@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-ms.openlocfilehash: 08c2946a9bd6251f377ea594c0c3ca5d1bd98c67
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5fa0a67309e23c02393b70d849af3884dfd0adf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095096"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788546"
 ---
 # <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2 介面
 
@@ -29,8 +29,8 @@ ICorDebugILFrame 介面的邏輯擴充。
   
 |方法|描述|  
 |------------|-----------------|  
-|[EnumerateTypeParameters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|取得 ICorDebugTypeEnum 物件，其中包含此框架中的 <xref:System.Type> 參數。|  
-|[RemapFunction 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|藉由指定新的 MSIL 位移來重新對應已編輯的函式。|  
+|[EnumerateTypeParameters 方法](icordebugilframe2-enumeratetypeparameters-method.md)|取得 ICorDebugTypeEnum 物件，其中包含此框架中的 <xref:System.Type> 參數。|  
+|[RemapFunction 方法](icordebugilframe2-remapfunction-method.md)|藉由指定新的 MSIL 位移來重新對應已編輯的函式。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -48,4 +48,4 @@ ICorDebugILFrame 介面的邏輯擴充。
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

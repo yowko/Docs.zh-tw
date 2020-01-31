@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ba08ffa-55a2-4662-9d6d-4738f1db60c9
 topic_type:
 - apiref
-ms.openlocfilehash: 9d8bd6ab13fa408fd7390aaeb76baee274742f48
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b137b956e06a2b2954918e4024860f9b234e7583
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137695"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792100"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>ICorDebugRegisterSet::GetRegistersAvailable 方法
-取得位元遮罩，指出目前可使用此[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)中的哪些暫存器。  
+取得位元遮罩，指出目前可使用此[ICorDebugRegisterSet](icordebugregisterset-interface.md)中的哪些暫存器。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,5 +53,5 @@ HRESULT GetRegistersAvailable (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugRegisterSet 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [ICorDebugRegisterSet2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet 介面](icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 介面](icordebugregisterset2-interface.md)

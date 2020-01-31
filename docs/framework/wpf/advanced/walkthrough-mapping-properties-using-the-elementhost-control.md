@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 7d1cf353f7e6c4b87c13598e7e6029960cd0f715
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7ff4ff607ab70b55cda1e2c4736ff773d4907a22
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197811"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794122"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>逐步解說：使用 ElementHost 控制項對應屬性
 
-本逐步解說將示範如何使用 <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> 屬性，將 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 屬性對應至 hosted [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 專案上的對應屬性。
+本逐步解說將示範如何使用 <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A> 屬性，將 Windows Forms 屬性對應至 hosted [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 專案上的對應屬性。
 
 這個逐步解說中所述的工作包括：
 
@@ -31,9 +31,9 @@ ms.locfileid: "73197811"
 
 如需本逐步解說中所述工作的完整程式代碼清單，請參閱[使用 ElementHost 控制項範例對應屬性](https://go.microsoft.com/fwlink/?LinkID=160018)。
 
-當您完成時，您將能夠將 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 屬性對應至裝載專案上相對應的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性。
+當您完成時，您將能夠將 Windows Forms 屬性對應至裝載專案上相對應的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 您需要下列元件才能完成此逐步解說：
 
@@ -138,7 +138,7 @@ ms.locfileid: "73197811"
 
     - 將初始值指派給對應的屬性。
 
-2. 按 F5 鍵建置並執行應用程式。
+2. 按 F5 建置並執行應用程式。
 
 ## <a name="see-also"></a>請參閱
 

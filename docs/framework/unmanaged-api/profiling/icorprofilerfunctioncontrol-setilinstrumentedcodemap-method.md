@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecf56646-7e5f-46c4-8340-f3a04e88920f
 topic_type:
 - apiref
-ms.openlocfilehash: 11ce2fdccbf24fd688376cc3256f6db79a7cc352
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b2fca16b3b859df8bd7409149eb5a3cf7b011c5c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447851"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864579"
 ---
 # <a name="icorprofilerfunctioncontrolsetilinstrumentedcodemap-method"></a>ICorProfilerFunctionControl::SetILInstrumentedCodeMap 方法
 使用指定的通用中間語言 (CIL) 對應項目，為所指定的函式設定程式碼對應。  
@@ -38,7 +38,7 @@ HRESULT SetILInstrumentedCodeMap(
  [in] 對應中的項目數。  
   
  `rgILMapEntries`  
- [in] COR_IL_MAP 項目的呼叫端配置的陣列。 這些專案的解讀與[ICorProfilerInfo：： SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)方法的轉譯相同。  
+ [in] COR_IL_MAP 項目的呼叫端配置的陣列。 這些專案的解讀與[ICorProfilerInfo：： SetILInstrumentedCodeMap](icorprofilerinfo-setilinstrumentedcodemap-method.md)方法的轉譯相同。  
   
 ## <a name="remarks"></a>備註  
  藉由呼叫這個方法來設定對應，可讓偵錯工具藉由呼叫[ICorDebugILCode2：： GetInstrumentedILMap](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)來抓取對應。 這也可以讓偵錯工具在計算堆疊追蹤及變數存留期的 IL 位移時於內部使用對應。  
@@ -52,6 +52,6 @@ HRESULT SetILInstrumentedCodeMap(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)

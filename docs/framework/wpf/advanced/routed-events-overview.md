@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: ecd340d00e7f02655dfdcd8eee548309d424a5ea
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f47eccac4e960bd6869da0da139803cd4e433393
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458750"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794295"
 ---
 # <a name="routed-events-overview"></a>路由事件概觀
 
@@ -28,7 +28,7 @@ ms.locfileid: "73458750"
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 本主題假設您具備 common language runtime （CLR）和麵向物件程式設計的基本知識，以及如何將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素之間的關聯性概念化為樹狀結構的概念。 若要遵循本主題中的範例，您也應該了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，並知道如何撰寫非常基本的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式或頁面。 如需詳細資訊，請參閱[逐步解說：我的第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)和[XAML 總覽（WPF）](../../../desktop-wpf/fundamentals/xaml.md)。
 
@@ -64,7 +64,7 @@ Button-->StackPanel-->Border-->...
 
 **控制項組合和封裝︰** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的各種控制項具有豐富的內容模型。 例如，您可以將影像放在 <xref:System.Windows.Controls.Button>內，這樣會有效擴充按鈕的視覺化樹狀結構。 不過，新增的映射不能中斷導致按鈕回應其內容 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 的點擊測試行為，即使使用者按一下影像中技術上的圖元。
 
-**單一處理常式附加點︰** 在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 中，您必須多次附加相同的處理常式，以處理可從多個元素引發的事件。 路由事件可讓您只需附加該處理常式一次 (如上一個範例中所示)，然後就能視需要使用處理常式邏輯判斷此事件來自何處。 例如，這可能是先前所示之 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的處理常式：
+**單數處理常式附加點：** 在 Windows Forms 中，您必須多次附加相同的處理常式，以處理可從多個元素引發的事件。 路由事件可讓您只需附加該處理常式一次 (如上一個範例中所示)，然後就能視需要使用處理常式邏輯判斷此事件來自何處。 例如，這可能是先前所示之 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的處理常式：
 
 [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
 [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]
@@ -98,7 +98,7 @@ Button-->StackPanel-->Border-->...
 
 - **事件反昇︰** 會叫用事件來源上的事件處理常式。 路由事件接著會路由傳送到後續的父元素，直到其到達元素樹狀結構的根元素為止。 大部分的路由事件會使用事件反昇路由傳送策略。 事件反昇的路由事件通常是用來報告來自不同控制項或其他 UI 元素的輸入或狀態變更。
 
-- **直接︰** 只有來源元素本身有機會叫用處理常式來回應。 這類似於 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 針對事件所使用的「路由傳送」。 不過，與標準 CLR 事件不同的是，直接路由事件支援類別處理（下一節會說明類別處理），而且可由 <xref:System.Windows.EventSetter> 和 <xref:System.Windows.EventTrigger>使用。
+- **直接︰** 只有來源元素本身有機會叫用處理常式來回應。 這類似于 Windows Forms 針對事件使用的「路由」。 不過，與標準 CLR 事件不同的是，直接路由事件支援類別處理（下一節會說明類別處理），而且可由 <xref:System.Windows.EventSetter> 和 <xref:System.Windows.EventTrigger>使用。
 
 - **通道︰** 一開始會叫用元素樹狀結構根元素上的事件處理常式。 路由事件接著會在路由中朝向屬於路由事件來源的節點元素 (會引發路由事件的元素) 移動，以透過後續的子元素周遊該路由。 通道路由事件時常會做為複合控制項的一部分來使用或處理，這類來自複合組件的事件可利用專用於該完整控制項的事件來刻意隱藏或取代。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中提供的輸入事件通常會實作為成對的通道/事件反昇組合。 由於用於配對的命名慣例，通道事件有時也稱為預覽事件。
 
@@ -179,7 +179,7 @@ Button-->StackPanel-->Border-->...
 
   - 執行程式碼以回應事件。 在傳遞至處理常式的事件資料中將事件標示為已處理，因為已將所採取的動作視為後續不足以保證會標示為已處理。 事件仍會路由傳送到下一個接聽程式，但 <xref:System.Windows.RoutedEventArgs.Handled%2A>=在其事件資料中 `true`，因此只有 `handledEventsToo` 接聽項有機會叫用進一步的處理常式。
 
-這種概念設計是由先前所述的路由行為加強的：較不容易（雖然程式碼或樣式中仍然可行）附加路由事件的處理常式，即使已經設定了路由的先前處理常式，也會叫用它 <xref:System.Windows.RoutedEventArgs.Handled%2A>`true`。
+這個概念設計是由先前所述的路由行為加強的：更難以（雖然在程式碼或樣式中仍然可行）附加路由事件的處理常式，即使在路由中先前的處理常式已經設定 <xref:System.Windows.RoutedEventArgs.Handled%2A> 為 `true`也一樣。
 
 如需有關 <xref:System.Windows.RoutedEventArgs.Handled%2A>的詳細資訊、路由事件的類別處理，以及有關將路由事件標示為 <xref:System.Windows.RoutedEventArgs.Handled%2A>的建議，請參閱將[路由事件標示為已處理，以及類別處理](marking-routed-events-as-handled-and-class-handling.md)。
 
@@ -257,7 +257,7 @@ Button-->StackPanel-->Border-->...
 
 ## <a name="eventsetters-and-eventtriggers"></a>EventSetters 和 EventTriggers
 
-在樣式中，您可以使用 <xref:System.Windows.EventSetter>，在標記中包含一些預先宣告的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 事件處理語法。 套用樣式時，會將參考的處理常式加入至樣式執行個體。 您只能針對路由事件宣告 <xref:System.Windows.EventSetter>。 下列為範例。 請注意，此處參考的 `b1SetColor` 方法位於程式碼後置檔案中。
+在樣式中，您可以使用 <xref:System.Windows.EventSetter>，在標記中包含一些預先宣告的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 事件處理語法。 套用樣式時，會將參考的處理常式加入至樣式執行個體。 您只能針對路由事件宣告 <xref:System.Windows.EventSetter>。 範例如下。 請注意，此處參考的 `b1SetColor` 方法位於程式碼後置檔案中。
 
 [!code-xaml[EventOvwSupport#XAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/page2.xaml#xaml2)]
 

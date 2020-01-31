@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c55e35d9-f9aa-4268-94b5-dce44c61acf2
 topic_type:
 - apiref
-ms.openlocfilehash: ca5db8c8570cedd9b0412b71058d453112a1831c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64f6bc9abb8105cdfa942c2aaca71994e8a91765
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140124"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791408"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>ICorDebugThread3::CreateStackWalk 方法
-為您要回溯其堆疊的執行緒建立[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)物件。  
+為您要回溯其堆疊的執行緒建立[ICorDebugStackWalk](icordebugstackwalk-interface.md)物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +33,7 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
   
 ## <a name="parameters"></a>參數  
  `ppStackWalk`  
- 脫銷要回溯其堆疊的執行緒之[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)物件位址的指標。  
+ 脫銷要回溯其堆疊的執行緒之[ICorDebugStackWalk](icordebugstackwalk-interface.md)物件位址的指標。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
@@ -59,5 +59,5 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

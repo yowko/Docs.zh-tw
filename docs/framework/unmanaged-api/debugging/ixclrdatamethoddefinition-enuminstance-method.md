@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataMethodDefinition::EnumInstance 方法
+title: IXCLRDataMethodDefinition：： EnumInstance 方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::EnumInstance Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 7ad1a9957e9bffd7b28aa241723dedba1d11f4cd
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b6393d7fa4853c230203521e665bbe89d7b228e2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775877"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790435"
 ---
-# <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition::EnumInstance 方法
+# <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition：： EnumInstance 方法
 
-列舉的執行個體，這個方法定義。
+列舉這個方法定義的實例。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,25 +40,25 @@ HRESULT EnumInstance(
 ## <a name="parameters"></a>參數
 
 `handle`\
-[in、 out]列舉的執行個體控制代碼。
+[in、out]列舉實例的控制碼。
 
 `instance`\
-[out]列舉的執行個體。
+脫銷列舉的實例。
 
 ## <a name="remarks"></a>備註
 
-提供的方法是一部分`IXCLRDataMethodDefinition`介面，而對應的虛擬方法表的第四個插槽。
+提供的方法是 `IXCLRDataMethodDefinition` 介面的一部分，而且會對應至虛擬方法資料表的第四個插槽。
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
 **標頭：** 無  
-**LIBRARY:** None  
+連結**庫：** 無  
 **.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [CLRDataSourceType 列舉](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataMethodDefinition 介面](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
-- [IXCLRDataMethodInstance 介面](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [CLRDataSourceType 列舉](clrdatasourcetype-enumeration.md)
+- [偵錯](index.md)
+- [IXCLRDataMethodDefinition 介面](ixclrdatamethoddefinition-interface.md)
+- [IXCLRDataMethodInstance 介面](ixclrdatamethodinstance-interface.md)

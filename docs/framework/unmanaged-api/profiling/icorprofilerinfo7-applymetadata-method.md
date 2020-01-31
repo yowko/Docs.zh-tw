@@ -10,12 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
-ms.openlocfilehash: 00d9bef1e2b59a2d2207d1e343380e0e81bee848
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b9e488a512ad506a8975bfff44ae02cd84c29f74
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130356"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861693"
 ---
 # <a name="icorprofilerinfo7applymetadata-method"></a>ICorProfilerInfo7：： ApplyMetaData 方法
 [在 .NET Framework 4.6.1 及更新版本中支援]  
@@ -35,7 +35,7 @@ HRESULT ApplyMetaData(
  在已變更其中繼資料之模組的識別碼。  
   
 ## <a name="remarks"></a>備註  
- 如果在[ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)回呼之後進行中繼資料變更，您必須先呼叫這個方法，然後再使用新的中繼資料。  
+ 如果在[ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md)回呼之後進行中繼資料變更，您必須先呼叫這個方法，然後再使用新的中繼資料。  
   
  `ApplyMetaData` 只支援新增下列類型的中繼資料：  
   
@@ -55,7 +55,7 @@ HRESULT ApplyMetaData(
 
 - `TypeDef` 記錄，您可以藉由呼叫[IMetaDataEmit：:D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)方法來建立。
 
-- `MethodDef` 記錄，您可以藉由呼叫[IMetaDataEmit：:D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)方法來建立。 不過，不支援將虛擬方法加入至現有的類型。 虛擬方法必須在[ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)回呼之前加入。
+- `MethodDef` 記錄，您可以藉由呼叫[IMetaDataEmit：:D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)方法來建立。 不過，不支援將虛擬方法加入至現有的類型。 虛擬方法必須在[ModuleLoadFinished](icorprofilercallback-moduleloadfinished-method.md)回呼之前加入。
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -68,4 +68,4 @@ HRESULT ApplyMetaData(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo7 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+- [ICorProfilerInfo7 介面](icorprofilerinfo7-interface.md)

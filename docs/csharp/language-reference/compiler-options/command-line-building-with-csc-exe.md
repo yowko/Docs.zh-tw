@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: c2b674ba17360c6ee9d2b21683560e840063f17d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: f692e66672b1804a309c6ac04c158af948a1b1ab
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636051"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789863"
 ---
 # <a name="command-line-build-with-cscexe"></a>使用 csc.exe 建置命令列
 
@@ -59,41 +59,42 @@ C# 編譯器會在解譯作業系統命令列所指定的引數時使用下列�
 
 - 編譯可產生 *File.exe* 的 *File.cs*：
 
-```console
-csc File.cs
-```
+  ```console
+  csc File.cs
+  ```
 
 - 編譯可產生 *File.dll* 的 *File.cs*：
 
-```console
-csc -target:library File.cs
-```
+  ```console
+  csc -target:library File.cs
+  ```
 
 - 編譯 *File.cs* 並建立 *My.exe*：
 
-```console
-csc -out:My.exe File.cs
-```
+  ```console
+  csc -out:My.exe File.cs
+  ```
 
 - 在啟用最佳化的情況下編譯目前目錄中的所有 C# 檔案，並定義 DEBUG 符號。 輸出為 *File2.exe*：
 
-```console
-csc -define:DEBUG -optimize -out:File2.exe *.cs
-```
+  ```console
+  csc -define:DEBUG -optimize -out:File2.exe *.cs
+  ```
 
 - 編譯產生 *File2.dll* 偵錯版本之目前目錄中的所有 C# 檔案。 不會顯示標誌和警告：
 
-```console
-csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
-```
+  ```console
+  csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
+  ```
 
 - 將目前目錄中的所有 C# 檔案都編譯為 *Something.xyz* (DLL)：
 
-```console
-csc -target:library -out:Something.xyz *.cs
-```
+  ```console
+  csc -target:library -out:Something.xyz *.cs
+  ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>C# 編譯器與 C++ 編譯器輸出的差異
+
 叫用 C# 編譯器時並不會建立目的檔 ( *.obj*)，而是直接建立輸出檔。 因此，C# 編譯器不需要連結器。
 
 ## <a name="see-also"></a>請參閱

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22d2e339-f174-40b5-a478-0b744501566f
 topic_type:
 - apiref
-ms.openlocfilehash: 693ec07176f80711709cd9b85c6886bea8be74b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2b2bbe8bcecf71f6d3016fb35dfbf5ba1353aea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122959"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785630"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a>ICLRDataEnumMemoryRegions::EnumMemoryRegions 方法
 列舉指定的記憶體區域。  
@@ -37,7 +37,7 @@ HRESULT EnumMemoryRegions (
   
 ## <a name="parameters"></a>參數  
  `callback`  
- 在[ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)實例的指標，此方法會針對每個列舉的記憶體區域呼叫，以通知偵錯工具結果。  
+ 在[ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md)實例的指標，此方法會針對每個列舉的記憶體區域呼叫，以通知偵錯工具結果。  
   
  即使回呼表示失敗，記憶體區域的列舉仍會繼續。  
   
@@ -45,10 +45,10 @@ HRESULT EnumMemoryRegions (
  在未使用。  
   
  `clrFlags`  
- 在[CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)列舉的值，指定要列舉的記憶體區域。  
+ 在[CLRDataEnumMemoryFlags](clrdataenummemoryflags-enumeration.md)列舉的值，指定要列舉的記憶體區域。  
   
 ## <a name="remarks"></a>備註  
- 這個方法會使用指定的[ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)實例來通知呼叫者結果。  
+ 這個方法會使用指定的[ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md)實例來通知呼叫者結果。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -61,4 +61,4 @@ HRESULT EnumMemoryRegions (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICLRDataEnumMemoryRegions 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-interface.md)
+- [ICLRDataEnumMemoryRegions 介面](iclrdataenummemoryregions-interface.md)

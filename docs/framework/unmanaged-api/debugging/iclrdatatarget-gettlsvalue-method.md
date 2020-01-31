@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-ms.openlocfilehash: 205ad3af81fb6fabda5cbe291536f8858999f831
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d4e7c055480ea611357d5d3e18ac4306acf4d0b0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113707"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785411"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue 方法
 從目標進程中指定之執行緒的執行緒區域儲存區（TLS）取得值。 這個方法是由 common language runtime （CLR）資料存取服務呼叫。  
@@ -59,4 +59,4 @@ HRESULT GetTLSValue (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICLRDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget 介面](iclrdatatarget-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb4772ca-0d54-4185-b738-7a6ffe9ea85a
 topic_type:
 - apiref
-ms.openlocfilehash: b1ee5a155afa4e33340108e7295adef2309986cf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6bc24450cdda2e3ed324256b53b2d137d1eb90e4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122698"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788490"
 ---
 # <a name="icordebuginternalframe-interface"></a>ICorDebugInternalFrame 介面
 
@@ -29,7 +29,7 @@ ms.locfileid: "73122698"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetFrameType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|取得此內部框架的類型。|  
+|[GetFrameType 方法](icordebuginternalframe-getframetype-method.md)|取得此內部框架的類型。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -47,4 +47,4 @@ ms.locfileid: "73122698"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

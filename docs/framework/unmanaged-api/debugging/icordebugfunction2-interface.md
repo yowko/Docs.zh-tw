@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b936bef-9b75-48bf-859f-42e419c65f1c
 topic_type:
 - apiref
-ms.openlocfilehash: da440b7d2da57511545d3b63700662eb544660fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5364e39f7e0a9b6c9cd10cd8f17bab4a03a4b7af
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137770"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794486"
 ---
 # <a name="icordebugfunction2-interface"></a>ICorDebugFunction2 介面
 
@@ -29,10 +29,10 @@ ms.locfileid: "73137770"
   
 |方法|描述|  
 |------------|-----------------|  
-|[EnumerateNativeCode 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-enumeratenativecode-method.md)|（尚未執行）。取得 ICorDebugCodeEnum 的介面指標，其中包含這個 ICorDebugFunction2 物件所參考之函式中的機器碼語句。|  
-|[GetJMCStatus 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getjmcstatus-method.md)|取得值，指出此函式是否標示為使用者程式碼。|  
-|[GetVersionNumber 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-getversionnumber-method.md)|取得此函式的編輯後繼續版本。|  
-|[SetJMCStatus 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction2-setjmcstatus-method.md)|將此函數標示為 Just My Code 逐步執行。|  
+|[EnumerateNativeCode 方法](icordebugfunction2-enumeratenativecode-method.md)|（尚未執行）。取得 ICorDebugCodeEnum 的介面指標，其中包含這個 ICorDebugFunction2 物件所參考之函式中的機器碼語句。|  
+|[GetJMCStatus 方法](icordebugfunction2-getjmcstatus-method.md)|取得值，指出此函式是否標示為使用者程式碼。|  
+|[GetVersionNumber 方法](icordebugfunction2-getversionnumber-method.md)|取得此函式的編輯後繼續版本。|  
+|[SetJMCStatus 方法](icordebugfunction2-setjmcstatus-method.md)|將此函數標示為 Just My Code 逐步執行。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -50,4 +50,4 @@ ms.locfileid: "73137770"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

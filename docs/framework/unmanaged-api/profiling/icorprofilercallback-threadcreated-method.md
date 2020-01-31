@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-ms.openlocfilehash: 1d8aa231f65bad88806ee9b1d3c5df978c9740a2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6514606290bf006443d7011c1a428bebb4cca0f6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446934"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865825"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated 方法
 通知分析工具已建立執行緒。  
@@ -48,7 +48,7 @@ HRESULT ThreadCreated(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ThreadDestroyed 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
+- [ThreadDestroyed 方法](icorprofilercallback-threaddestroyed-method.md)

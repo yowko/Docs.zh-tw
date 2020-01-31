@@ -1,15 +1,15 @@
 ---
-title: ICorDebugVariableSymbol：： GetName 方法
+title: ICorDebugVariableSymbol::GetName Method
 ms.date: 03/30/2017
 ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
-ms.openlocfilehash: 9bc32d3372710b4c4e92aa89df5e6e7839ad3078
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 172eea452442aa94ea010e2c434908ab8d040a93
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121020"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790915"
 ---
-# <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol：： GetName 方法
+# <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol::GetName Method
 取得變數的名稱。  
   
 ## <a name="syntax"></a>語法  
@@ -48,5 +48,5 @@ HRESULT GetName(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugVariableSymbol 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugVariableSymbol 介面](icordebugvariablesymbol-interface.md)
+- [偵錯介面](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 66195ea9df4c8e9ce847b38f7d020a3bebffcd37
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430103"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865177"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>ICorProfilerCallback4::ReJITError 方法
 通知分析工具，及時（JIT）編譯器在重新編譯程式中發生錯誤。  
@@ -71,7 +71,7 @@ HRESULT ReJITError(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback4 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
+- [ICorProfilerCallback4 介面](icorprofilercallback4-interface.md)

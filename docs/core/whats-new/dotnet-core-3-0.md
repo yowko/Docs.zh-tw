@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b8aa19a1d422fe7d6accd2b095f15843446599cd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742597"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789894"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -458,7 +458,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 對應至 `log2` IEEE 作業，它會傳回 2 為底數的對數。 它會將捨入錯誤減至最少。
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-對應至 `fma` IEEE 作業，它會執行融合的乘積和。 亦即，它會將 `(x * y) + z` 當作單一作業來執行，藉此將捨入錯誤減至最少。 範例將是傳回 `1e308` 的 `FusedMultiplyAdd(1e308, 2.0, -1e308)`。 一般 `(1e308 * 2.0) - 1e308` 會傳回 `double.PositiveInfinity`。
+對應至 `fma` IEEE 作業，它會執行融合的乘積和。 亦即，它會將 `(x * y) + z` 當作單一作業來執行，藉此將捨入錯誤減至最少。 `FusedMultiplyAdd(1e308, 2.0, -1e308)`會傳回 `1e308`的範例。 一般 `(1e308 * 2.0) - 1e308` 會傳回 `double.PositiveInfinity`。
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
 對應至 `copySign` IEEE 作業，它會傳回 `x` 的值，但具有 `y` 的符號。

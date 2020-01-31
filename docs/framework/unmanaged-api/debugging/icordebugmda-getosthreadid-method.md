@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ca7c364-ade4-4219-b434-9f6ae2359be6
 topic_type:
 - apiref
-ms.openlocfilehash: e9846234f8217b822860c2400a54a91a651a0a56
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d9efefb26ee175fa60e7cc4516ff3f8444968f31
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129821"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793214"
 ---
 # <a name="icordebugmdagetosthreadid-method"></a>ICorDebugMDA::GetOSThreadId 方法
-取得[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)所代表的 managed 偵錯工具（MDA）執行時所使用的作業系統（OS）執行緒識別碼。  
+取得[ICorDebugMDA](icordebugmda-interface.md)所代表的 managed 偵錯工具（MDA）執行時所使用的作業系統（OS）執行緒識別碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,5 +51,5 @@ HRESULT GetOSThreadId (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugMDA 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [診斷 Managed 偵錯助理的錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [ICorDebugMDA 介面](icordebugmda-interface.md)
+- [使用 Managed 偵錯助理診斷錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

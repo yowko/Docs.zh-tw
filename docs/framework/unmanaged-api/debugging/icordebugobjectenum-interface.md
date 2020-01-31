@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9ffb4498-7719-49d3-8890-df2c22248a0c
 topic_type:
 - apiref
-ms.openlocfilehash: b77d5859986c90d6ef61c02547014d0bec354106
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0526c050bcf1316eccf2c756a404fbb971e6d7d0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096147"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792734"
 ---
 # <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum 介面
 
@@ -29,7 +29,7 @@ ms.locfileid: "73096147"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|從目前的位置開始，取得列舉中指定數目之物件的 Rva。|  
+|[Next 方法](icordebugobjectenum-next-method.md)|從目前的位置開始，取得列舉中指定數目之物件的 Rva。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -47,4 +47,4 @@ ms.locfileid: "73096147"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

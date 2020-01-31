@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-ms.openlocfilehash: ee6bcbc9f3377735ed289d52afddb6efa755b16d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ca66f001d04bc86b64e0fe2d1cd37559e4fc633
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134067"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785109"
 ---
 # <a name="icordebug-interface"></a>ICorDebug 介面
 提供可讓開發人員在 common language runtime （CLR）環境中，對應用程式進行 debug 的方法。  
@@ -31,18 +31,18 @@ ms.locfileid: "73134067"
   
 |方法|描述|  
 |------------|-----------------|  
-|[CanLaunchOrAttach 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-canlaunchorattach-method.md)|判斷是否可以在目前的電腦和執行時間設定的內容中，啟動新的進程或附加至指定的進程。|  
-|[CreateProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)|在偵錯工具的控制項底下啟動進程和其主要執行緒。|  
-|[DebugActiveProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-debugactiveprocess-method.md)|將偵錯工具附加至現有的進程。|  
-|[EnumerateProcesses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-enumerateprocesses-method.md)|取得正在進行調試之進程的列舉值。|  
-|[GetProcess 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-getprocess-method.md)|傳回具有指定處理序識別碼的 "ICorDebugProcess" 物件。|  
-|[Initialize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-initialize-method.md)|初始化 `ICorDebug` 物件。|  
-|[SetManagedHandler 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-setmanagedhandler-method.md)|指定 managed 事件的事件處理常式物件。|  
-|[SetUnmanagedHandler 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-setunmanagedhandler-method.md)|指定非受控事件的事件處理常式物件。|  
-|[Terminate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)|終止 `ICorDebug` 物件。|  
+|[CanLaunchOrAttach 方法](icordebug-canlaunchorattach-method.md)|判斷是否可以在目前的電腦和執行時間設定的內容中，啟動新的進程或附加至指定的進程。|  
+|[CreateProcess 方法](icordebug-createprocess-method.md)|在偵錯工具的控制項底下啟動進程和其主要執行緒。|  
+|[DebugActiveProcess 方法](icordebug-debugactiveprocess-method.md)|將偵錯工具附加至現有的進程。|  
+|[EnumerateProcesses 方法](icordebug-enumerateprocesses-method.md)|取得正在進行調試之進程的列舉值。|  
+|[GetProcess 方法](icordebug-getprocess-method.md)|傳回具有指定處理序識別碼的 "ICorDebugProcess" 物件。|  
+|[Initialize 方法](icordebug-initialize-method.md)|初始化 `ICorDebug` 物件。|  
+|[SetManagedHandler 方法](icordebug-setmanagedhandler-method.md)|指定 managed 事件的事件處理常式物件。|  
+|[SetUnmanagedHandler 方法](icordebug-setunmanagedhandler-method.md)|指定非受控事件的事件處理常式物件。|  
+|[Terminate 方法](icordebug-terminate-method.md)|終止 `ICorDebug` 物件。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebug` 代表偵錯工具進程的事件處理迴圈。 偵錯工具必須等到所有進程中的[ICorDebugManagedCallback：： ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)回呼，才會釋放此介面。  
+ `ICorDebug` 代表偵錯工具進程的事件處理迴圈。 偵錯工具必須等到所有進程中的[ICorDebugManagedCallback：： ExitProcess](icordebugmanagedcallback-exitprocess-method.md)回呼，才會釋放此介面。  
   
  `ICorDebug` 物件是用來控制所有進一步 managed 調試的初始物件。 在 .NET Framework 版本1.0 和1.1 中，此物件是從 COM 建立的 `CoClass` 物件。 在 .NET Framework 版本2.0 中，此物件不再是 `CoClass` 物件。 它必須由[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函式所建立，這是更容易感知版本的功能。 這項新的建立功能可讓用戶端取得 `ICorDebug`的特定執行，這也會模擬特定版本的調試 API。  
   
@@ -60,4 +60,4 @@ ms.locfileid: "73134067"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

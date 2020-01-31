@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ce3025e8-defa-4c5e-8298-f49d71fa5736
 topic_type:
 - apiref
-ms.openlocfilehash: 68a7e911c2bd1798ea8f34f6a6e24299fe68775d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 38cc98f1bfd966d1f764e43b30003a2bae66297d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137615"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793462"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject 方法
 配置新的物件實例，並呼叫指定的函式方法。  
   
- 這個方法在 .NET Framework 版本2.0 中已過時。 請改用[ICorDebugEval2：： NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) 。  
+ 這個方法在 .NET Framework 版本2.0 中已過時。 請改用[ICorDebugEval2：： NewParameterizedObject](icordebugeval2-newparameterizedobject-method.md) 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,4 +58,4 @@ HRESULT NewObject (
   
 ## <a name="see-also"></a>請參閱
 
-- [NewParameterizedObject 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)
+- [NewParameterizedObject 方法](icordebugeval2-newparameterizedobject-method.md)

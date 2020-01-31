@@ -14,23 +14,23 @@ helpviewer_keywords:
 ms.assetid: d7fbccbf-3b6b-4db8-a96d-768e1cb6b1a6
 topic_type:
 - apiref
-ms.openlocfilehash: 47beba867cd2246c98cb02c3a563b948c15f5154
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 161358fab9a4601e7b718321273d493bd84a3228
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131319"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792017"
 ---
 # <a name="icordebugregisterset2-interface"></a>ICorDebugRegisterSet2 介面
-針對具有64以上暫存器的硬體平臺，擴充[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)介面的功能。  
+針對具有64以上暫存器的硬體平臺，擴充[ICorDebugRegisterSet](icordebugregisterset-interface.md)介面的功能。  
   
 ## <a name="methods"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetRegisters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-getregisters-method.md)|取得位元遮罩所指定之每個暫存器（目前執行程式碼的電腦）的值。|  
-|[GetRegistersAvailable 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-getregistersavailable-method.md)|取得提供可用暫存器之點陣圖的位元組陣列。|  
-|[SetRegisters 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-setregisters-method.md)|未在 .NET Framework 版本2.0 中執行。|  
+|[GetRegisters 方法](icordebugregisterset2-getregisters-method.md)|取得位元遮罩所指定之每個暫存器（目前執行程式碼的電腦）的值。|  
+|[GetRegistersAvailable 方法](icordebugregisterset2-getregistersavailable-method.md)|取得提供可用暫存器之點陣圖的位元組陣列。|  
+|[SetRegisters 方法](icordebugregisterset2-setregisters-method.md)|未在 .NET Framework 版本2.0 中執行。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -48,5 +48,5 @@ ms.locfileid: "73131319"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [ICorDebugRegisterSet 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [偵錯介面](debugging-interfaces.md)
+- [ICorDebugRegisterSet 介面](icordebugregisterset-interface.md)

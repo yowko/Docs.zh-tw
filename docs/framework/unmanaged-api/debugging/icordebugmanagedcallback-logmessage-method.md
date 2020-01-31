@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d218554a-bf42-4d88-833d-ede30de67a53
 topic_type:
 - apiref
-ms.openlocfilehash: d95662167dbc8fcda049fb6a7b3e6ff1dfb6e736
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4306c4ae44b0ae1ade2bf374981492fa1a4df76f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130711"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788373"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a>ICorDebugManagedCallback::LogMessage 方法
 通知偵錯工具，common language runtime （CLR） managed 執行緒已在 <xref:System.Diagnostics.EventLog> 類別中呼叫方法來記錄事件。  
@@ -45,7 +45,7 @@ HRESULT LogMessage (
  在代表 managed 執行緒之 ICorDebugThread 物件的指標。  
   
  `lLevel`  
- 在[LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)列舉的值，指出寫入事件記錄檔之描述性訊息的嚴重性層級。  
+ 在[LoggingLevelEnum](logginglevelenum-enumeration.md)列舉的值，指出寫入事件記錄檔之描述性訊息的嚴重性層級。  
   
  `pLogSwitchName`  
  在追蹤參數名稱的指標。  
@@ -64,4 +64,4 @@ HRESULT LogMessage (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

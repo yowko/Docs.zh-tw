@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 190f424d-5e37-4163-a191-0895686e9476
 topic_type:
 - apiref
-ms.openlocfilehash: 080777b656e1c3df1cc4170fe1dff6de6ddb41fc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8f5997dddf78dd75d482bc45d2ee730b20d9ab16
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445400"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866465"
 ---
 # <a name="icorprofilercallbackexceptionsearchcatcherfound-method"></a>ICorProfilerCallback::ExceptionSearchCatcherFound 方法
 通知分析工具，例外狀況處理的搜尋階段已找出擲回之例外狀況的處理常式。  
@@ -32,10 +32,12 @@ RESULT ExceptionSearchCatcherFound(
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a>參數  
- `functionId`  
- 在包含例外狀況處理常式之函式的識別碼。  
-  
+## <a name="parameters"></a>參數
+
+- `functionId`
+
+  \[in] 包含例外狀況處理常式之函式的識別碼。
+
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
@@ -45,6 +47,6 @@ RESULT ExceptionSearchCatcherFound(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)

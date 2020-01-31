@@ -13,12 +13,12 @@ api_type:
 ms.assetid: 06522727-5f64-4391-9331-11386883c352
 topic_type:
 - apiref
-ms.openlocfilehash: c7419e5c3677b5679a0ca5c234463ae6e205b7d1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a96385ccc6e7f9089365c19bb8f150015bba81c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090368"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788521"
 ---
 # <a name="icordebugilframe3getreturnvalueforiloffset-method"></a>ICorDebugILFrame3::GetReturnValueForILOffset 方法
 取得 "ICorDebugValue" 物件，它會封裝函式的傳回值。  
@@ -40,7 +40,7 @@ HRESULT GetReturnValueForILOffset(
  「ICorDebugValue」介面物件位址的指標，提供函式呼叫傳回值的相關資訊。  
   
 ## <a name="remarks"></a>備註  
- 這個方法會與[ICorDebugCode3：： GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法搭配使用，以取得方法的傳回值。 這在忽略傳回值的方法中特別有用，如下列兩個程式碼範例所示。 第一個範例會呼叫 <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> 方法，但會忽略方法的傳回值。  
+ 這個方法會與[ICorDebugCode3：： GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md)方法搭配使用，以取得方法的傳回值。 這在忽略傳回值的方法中特別有用，如下列兩個程式碼範例所示。 第一個範例會呼叫 <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> 方法，但會忽略方法的傳回值。  
   
  [!code-csharp[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv1.cs#1)]
  [!code-vb[Unmanaged.Debugging.MRV#1](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv1.vb#1)]  
@@ -50,12 +50,12 @@ HRESULT GetReturnValueForILOffset(
  [!code-csharp[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/csharp/VS_Snippets_CLR/unmanaged.debugging.mrv/cs/mrv2.cs#2)]
  [!code-vb[Unmanaged.Debugging.MRV#2](../../../../samples/snippets/visualbasic/VS_Snippets_CLR/unmanaged.debugging.mrv/vb/mrv2.vb#2)]  
   
- 如果您將[ICorDebugCode3：： GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法傳遞至函式呼叫網站的 IL 位移，它會傳回一或多個原生位移。 然後偵錯工具可以在函式中的這些原生位移上設定中斷點。 當偵錯工具到達其中一個中斷點時，您就可以傳遞傳遞給這個方法的相同 IL 位移，以取得傳回值。 偵錯工具應該會清除它所設定的所有中斷點。  
+ 如果您將[ICorDebugCode3：： GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md)方法傳遞至函式呼叫網站的 IL 位移，它會傳回一或多個原生位移。 然後偵錯工具可以在函式中的這些原生位移上設定中斷點。 當偵錯工具到達其中一個中斷點時，您就可以傳遞傳遞給這個方法的相同 IL 位移，以取得傳回值。 偵錯工具應該會清除它所設定的所有中斷點。  
   
 > [!WARNING]
-> [ICorDebugCode3：： GetReturnValueLiveOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)和 `ICorDebugILFrame3::GetReturnValueForILOffset` 方法可讓您只取得參考型別的傳回值資訊。 不支援從實數值型別（也就是衍生自 <xref:System.ValueType>的所有類型）中抓取傳回值資訊。  
+> [ICorDebugCode3：： GetReturnValueLiveOffset 方法](icordebugcode3-getreturnvalueliveoffset-method.md)和 `ICorDebugILFrame3::GetReturnValueForILOffset` 方法可讓您只取得參考型別的傳回值資訊。 不支援從實數值型別（也就是衍生自 <xref:System.ValueType>的所有類型）中抓取傳回值資訊。  
   
- `ILOffset` 參數所指定的 IL 位移應該位於函式呼叫位置，而且偵錯工具應該在針對相同 IL 位移的[ICorDebugCode3：： GetReturnValueLiveOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)方法所傳回的原生位移上設定的中斷點停止。 如果偵錯工具未在指定 IL 位移的正確位置停止，API 將會失敗。  
+ `ILOffset` 參數所指定的 IL 位移應該位於函式呼叫位置，而且偵錯工具應該在針對相同 IL 位移的[ICorDebugCode3：： GetReturnValueLiveOffset](icordebugcode3-getreturnvalueliveoffset-method.md)方法所傳回的原生位移上設定的中斷點停止。 如果偵錯工具未在指定 IL 位移的正確位置停止，API 將會失敗。  
   
  如果函式呼叫未傳回值，API 將會失敗。  
   
@@ -72,5 +72,5 @@ HRESULT GetReturnValueForILOffset(
   
 ## <a name="see-also"></a>請參閱
 
-- [GetReturnValueLiveOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)
-- [ICorDebugILFrame3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
+- [GetReturnValueLiveOffset 方法](icordebugcode3-getreturnvalueliveoffset-method.md)
+- [ICorDebugILFrame3 介面](icordebugilframe3-interface.md)

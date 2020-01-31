@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8635ee3a-c84b-4626-876c-416bee54f787
 topic_type:
 - apiref
-ms.openlocfilehash: 861d5daa481132d3d6527e8d5fbccfab6436c5fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1aa59ee559abff8006f0ac63a812e4315aa48154
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139110"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790302"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType 列舉
 表示變數的原生位置類型。  
@@ -44,7 +44,7 @@ typedef enum VariableLocationType
 |`VLT_INVALID`|此變數不會儲存在暫存器或登錄相對的記憶體位置。|  
   
 ## <a name="remarks"></a>備註  
- [ICorDebugVariableHome：： GetLocationType](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-getlocationtype-method.md)方法會傳回 `VariableLocationType` 列舉的成員。  
+ [ICorDebugVariableHome：： GetLocationType](icordebugvariablehome-getlocationtype-method.md)方法會傳回 `VariableLocationType` 列舉的成員。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -57,4 +57,4 @@ typedef enum VariableLocationType
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [偵錯列舉](debugging-enumerations.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c02338fe-da6c-467f-9567-70ebb387e901
 topic_type:
 - apiref
-ms.openlocfilehash: cee421ef7d7c856ba90dc21f4e9dc25ae6fe1a9b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1bb5a6fd0550f7c25d46fa31ca11a10cec54986
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140197"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791080"
 ---
 # <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint Interface
 擴充 ICorDebugBreakpoint 介面，以提供特定值的存取權。  
@@ -28,7 +28,7 @@ ms.locfileid: "73140197"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|取得 ICorDebugValue 物件的介面指標，表示設定中斷點所在物件的值。|  
+|[GetValue 方法](icordebugvaluebreakpoint-getvalue-method.md)|取得 ICorDebugValue 物件的介面指標，表示設定中斷點所在物件的值。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -46,4 +46,4 @@ ms.locfileid: "73140197"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

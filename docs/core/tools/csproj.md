@@ -2,12 +2,12 @@
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d6a7a388cb51bf08996adc654db5722a5ef1303
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733334"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787871"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -15,7 +15,7 @@ ms.locfileid: "76733334"
 
 ## <a name="implicit-package-references"></a>隱含套件參考
 
-會根據您專案檔之 `<TargetFramework>` 或 `<TargetFrameworks>` 屬性中指定的目標架構來隱含參考中繼套件。 如果指定了 `<TargetFramework>`，則會忽略 `<TargetFrameworks>`，與順序無關。 如需詳細資訊，請參閱[套件、中繼套件和](../packages.md)架構。 
+會根據您專案檔之 `<TargetFramework>` 或 `<TargetFrameworks>` 屬性中指定的目標架構來隱含參考中繼套件。 如果指定了 `<TargetFramework>`，則會忽略 `<TargetFrameworks>`，與順序無關。 如需詳細資訊，請參閱[套件、中繼套件和](../packages.md)架構。
 
 ```xml
  <PropertyGroup>
@@ -248,7 +248,7 @@ RID 允許發行獨立部署。
 ```
 
 > [!NOTE]
->您可以針對 MSBuild 目標使用任何名稱，但 Visual Studio IDE 會辨識 `PreBuild` 和 `PostBuild` 目標，因此建議使用這些名稱，讓您可以編輯 Visual Studio IDE 中的命令。 
+>您可以針對 MSBuild 目標使用任何名稱，但 Visual Studio IDE 會辨識 `PreBuild` 和 `PostBuild` 目標，因此建議使用這些名稱，讓您可以編輯 Visual Studio IDE 中的命令。
 
 ## <a name="nuget-metadata-properties"></a>NuGet 中繼資料屬性
 
@@ -321,7 +321,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 若您使用未獲指派 SPDX 識別碼的授權，或其為自訂授權，則這會是套件內授權檔案的路徑 (否則，會優先使用 `PackageLicenseExpression`)
 
-這會取代 `PackageLicenseUrl`，不能與 `PackageLicenseExpression` 合併，並需要 Visual Studio 15.9.4、.NET SDK 2.1.502 或 2.2.101 或更新版本。
+取代 `PackageLicenseUrl`、無法與 `PackageLicenseExpression`合併，而且需要 Visual Studio 版本15.9.4 和 .NET SDK 2.1.502 或2.2.101 或更新版本。
 
 您必須明確地將授權檔案新增到專案，以確保其封裝妥當，使用範例：
 
@@ -427,7 +427,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="properties-per-attribute"></a>每個屬性 (Attribute) 的屬性 (Property)
 
-每個屬性 (Attribute) 有一個屬性 (Property)，控制其內容，另一個則是停用其產生，如下表所示：
+如下表所示，每個屬性都有一個屬性，可控制其內容，另一個則停用其層代：
 
 | 屬性                                                      | 屬性               | 要停用的屬性                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|

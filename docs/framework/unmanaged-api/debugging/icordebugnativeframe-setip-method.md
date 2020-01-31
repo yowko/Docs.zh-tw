@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57784a51-c76d-48f8-9392-584d0e1946d9
 topic_type:
 - apiref
-ms.openlocfilehash: 1d978cab0817af68356d95d635f8d2bfa3fd546a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bc33768e4155a0e272d3374d4c586c79ef2ff3fb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096745"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792772"
 ---
 # <a name="icordebugnativeframesetip-method"></a>ICorDebugNativeFrame::SetIP 方法
 將指令指標設定為原生程式碼中指定的位移位置。  
@@ -40,7 +40,7 @@ HRESULT SetIP (
 ## <a name="remarks"></a>備註  
  `SetIP` 的呼叫會立即使目前線程的所有框架和鏈失效。 如果偵錯工具在呼叫 `SetIP`之後需要框架資訊，則必須執行新的堆疊追蹤。  
   
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)會嘗試將堆疊框架保持在有效的狀態。 不過，即使畫面格處於有效的狀態，只要執行時間關心，仍然可能會有問題，例如未初始化的區域變數等等。 呼叫端負責確保執行中程式的一致性。  
+ [ICorDebug](icordebug-interface.md)會嘗試將堆疊框架保持在有效的狀態。 不過，即使畫面格處於有效的狀態，只要執行時間關心，仍然可能會有問題，例如未初始化的區域變數等等。 呼叫端負責確保執行中程式的一致性。  
   
  在64位平臺上，無法將指令指標移出 `catch` 或 `finally` 區塊。 如果呼叫 `SetIP` 以在64位平臺上進行這類移動，則會傳回表示失敗的 HRESULT。  
   

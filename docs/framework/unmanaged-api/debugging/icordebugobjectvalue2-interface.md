@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-ms.openlocfilehash: 34886b8f99715abe1f1abaa062d465002fbf98a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 566d4323bfd76a2189e1a8280465eb2dcde2a03a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129726"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792668"
 ---
 # <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2 介面
 
@@ -29,7 +29,7 @@ ms.locfileid: "73129726"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetVirtualMethodAndType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue2-getvirtualmethodandtype-method.md)|尚未執行 `GetVirtualMethodAndType`。|  
+|[GetVirtualMethodAndType 方法](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|尚未執行 `GetVirtualMethodAndType`。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -47,4 +47,4 @@ ms.locfileid: "73129726"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)
