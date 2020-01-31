@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: db3c3d38e0200f9849c84d7605a436816d56b813
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2d99c6d8bd2af02456c6a90143b524c337483868
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427432"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866891"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 函式
 通知分析工具，目前正在執行的函式即將執行另一個函式的尾呼叫，並提供堆疊框架的相關資訊。  
@@ -34,20 +34,24 @@ void __stdcall FunctionTailcall2 (
 );  
 ```  
   
-## <a name="parameters"></a>參數  
- `funcId`  
- 在即將進行 tail 呼叫之目前正在執行之函式的識別碼。  
+## <a name="parameters"></a>參數
+
+- `funcId`
+
+  \[in]）目前正在執行之函式的識別碼，即將進行 tail 呼叫。
+
+- `clientData`
+
+  \[中的）重新對應的函式識別碼，這是程式碼剖析工具先前透過[FunctionIDMapper](functionidmapper-function.md)指定的程式碼剖析工具，這是目前正在執行的函式，即將進行 tail 呼叫。
   
- `clientData`  
- 在程式碼剖析工具先前透過[FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)指定的重新對應函式識別碼，這是即將進行 tail 呼叫的目前正在執行之函式。  
-  
- `func`  
- 在`COR_PRF_FRAME_INFO` 值，指向堆疊框架的相關資訊。  
-  
- 分析工具應該將此視為不透明的控制碼，以便在[ICorProfilerInfo2：： GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法中傳回給執行引擎。  
-  
+- `func`
+
+  \[in]） `COR_PRF_FRAME_INFO` 值，指向堆疊框架的相關資訊。
+
+  分析工具應該將此視為不透明的控制碼，以便在[ICorProfilerInfo2：： GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)方法中傳回給執行引擎。
+
 ## <a name="remarks"></a>備註  
- Tail 呼叫的目標函式會使用目前的堆疊框架，並會直接傳回呼叫端呼叫之函式的呼叫端。 這表示不會針對做為 tail 呼叫目標的函式發出[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)回呼。  
+ Tail 呼叫的目標函式會使用目前的堆疊框架，並會直接傳回呼叫端呼叫之函式的呼叫端。 這表示不會針對做為 tail 呼叫目標的函式發出[FunctionLeave2](functionleave2-function.md)回呼。  
   
  `FunctionTailcall2` 函數傳回之後，`func` 參數的值無效，因為此值可能會變更或終結。  
   
@@ -74,7 +78,7 @@ void __stdcall FunctionTailcall2 (
   
 ## <a name="see-also"></a>請參閱
 
-- [FunctionEnter2 函式](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 函式](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [SetEnterLeaveFunctionHooks2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [分析全域靜態函式](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 函式](functionenter2-function.md)
+- [FunctionLeave2 函式](functionleave2-function.md)
+- [SetEnterLeaveFunctionHooks2 方法](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [分析全域靜態函式](profiling-global-static-functions.md)

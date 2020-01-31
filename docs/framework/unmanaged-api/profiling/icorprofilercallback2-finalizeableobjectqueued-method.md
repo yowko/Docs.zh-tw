@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-ms.openlocfilehash: ade0ba0517e47e9500683836b87d7a8ac1dfcfdb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b9093f920a8c14247bc51471da3682c7e500afa4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439854"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865801"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>ICorProfilerCallback2::FinalizeableObjectQueued 方法
 通知程式碼分析工具，已將具有完成項的物件排入等候執行緒，以執行其 `Finalize` 方法。  
@@ -35,7 +35,7 @@ HRESULT FinalizeableObjectQueued(
   
 ## <a name="parameters"></a>參數  
  `finalizerFlags`  
- 在描述完成項各個層面之[COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md)列舉的值。  
+ 在描述完成項各個層面之[COR_PRF_FINALIZER_FLAGS](cor-prf-finalizer-flags-enumeration.md)列舉的值。  
   
  `objectID`  
  在已排入佇列之物件的識別碼。  
@@ -49,7 +49,7 @@ HRESULT FinalizeableObjectQueued(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 介面](icorprofilercallback2-interface.md)

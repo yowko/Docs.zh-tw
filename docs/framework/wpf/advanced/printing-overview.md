@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 3f99b0e93e6b16ac66f6869c284c1119ddfc3751
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: de9f4b5c0a817d010c7510395b4e5c09ed0a9865
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740312"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794286"
 ---
 # <a name="printing-overview"></a>列印概觀
-透過 Microsoft .NET Framework，使用 Windows Presentation Foundation （WPF）的應用程式開發人員有一組豐富的列印和列印系統管理 Api。 在 Windows Vista 中，這些列印系統的一些增強功能也適用于使用非受控碼建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式和開發人員的開發人員。 這項新功能的核心是新的 XML 論文規格（XPS）檔案格式和 XPS 列印路徑。  
+透過 Microsoft .NET Framework，使用 Windows Presentation Foundation （WPF）的應用程式開發人員有一組豐富的列印和列印系統管理 Api。 在 Windows Vista 中，這些列印系統的一些增強功能也適用于使用非受控碼建立 Windows Forms 應用程式和開發人員的開發人員。 這項新功能的核心是新的 XML 論文規格（XPS）檔案格式和 XPS 列印路徑。  
   
  此主題包括下列各節。  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1a23f3b-ac21-4905-8abf-8ea59f15af53
 topic_type:
 - apiref
-ms.openlocfilehash: 4ecbe0ef3c3021c5633b9380da2eb31cf22aa4b1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b1799472c4923aaccfabeae459ad72f6ae94c80d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445334"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866373"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>ICorProfilerCallback::ExceptionThrown 方法
 通知分析工具已擲回例外狀況。  
@@ -35,9 +35,11 @@ HRESULT ExceptionThrown(
     [in] ObjectID thrownObjectId);  
 ```  
   
-## <a name="parameters"></a>參數  
- `thrownObjectId`  
- 在導致擲回例外狀況之物件的識別碼。  
+## <a name="parameters"></a>參數
+
+- `thrownObjectId`
+
+  \[in] 會導致擲回例外狀況的物件識別碼。
   
 ## <a name="remarks"></a>備註  
  分析工具不應在此方法的執行中封鎖，因為堆疊可能不是處於允許垃圾收集的狀態，因此無法啟用「搶先垃圾收集」。 如果分析工具在此處封鎖並嘗試垃圾收集，執行時間將會封鎖，直到這個回呼傳回為止。  
@@ -53,6 +55,6 @@ HRESULT ExceptionThrown(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)

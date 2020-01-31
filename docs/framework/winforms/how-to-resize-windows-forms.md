@@ -1,5 +1,5 @@
 ---
-title: HOW TO：調整 Windows Forms 大小
+title: 調整表單大小
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: aa7ee2bbbf6983a371ea71edc0dfd0cc12cd0c9d
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8d4ce46ada505f952fc3090d10c5d893338d19f2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211658"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739311"
 ---
-# <a name="how-to-resize-windows-forms"></a>HOW TO：調整 Windows Forms 大小
+# <a name="how-to-resize-windows-forms"></a>如何：調整 Windows Form 的大小
 
-您可以使用幾種方式來指定 Windows Form 的大小。 您可以為 <xref:System.Windows.Forms.Form.Size%2A> 屬性設定新值，或個別調整 <xref:System.Windows.Forms.Control.Height%2A> 或 <xref:System.Windows.Forms.Control.Width%2A> 屬性，以程式設計方式來變更表單的高度和寬度。 如果您使用 Visual Studio，您可以變更使用 Windows Form 設計工具的大小。 另請參閱[How to:調整 Windows Form 使用設計工具的大小](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))。
+您可以使用幾種方式來指定 Windows Form 的大小。 您可以為 <xref:System.Windows.Forms.Form.Size%2A> 屬性設定新值，或個別調整 <xref:System.Windows.Forms.Control.Height%2A> 或 <xref:System.Windows.Forms.Control.Width%2A> 屬性，以程式設計方式來變更表單的高度和寬度。 如果您使用 Visual Studio，您可以使用 Windows Form 設計工具變更大小。 另請參閱[如何：使用設計工具調整 Windows Forms 大小](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))。
 
-## <a name="resize-a-form-programmatically"></a>以程式設計方式調整表單的大小
+## <a name="resize-a-form-programmatically"></a>以程式設計方式調整表單大小
 
 設定表單的 <xref:System.Windows.Forms.Form.Size%2A> 屬性，在執行階段定義表單的大小。
 
@@ -74,7 +74,7 @@ Form1.Size = new Size(300, Form1.Size.Height);
 Form1->Size = System::Drawing::Size(300, Form1->Size.Height);
 ```
 
-## <a name="change-form-size-by-increments-programmatically"></a>以程式設計方式遞增變更表單大小
+## <a name="change-form-size-by-increments-programmatically"></a>以程式設計方式變更表單大小
 
 若要遞增表單的大小，請設定 <xref:System.Drawing.Size.Width%2A> 和 <xref:System.Drawing.Size.Height%2A> 屬性。
 
@@ -113,7 +113,7 @@ Form^ f = gcnew Form();
 f->Size->X += 100;
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Windows Forms 使用者入門](getting-started-with-windows-forms.md)
 - [增強 Windows Forms 應用程式](./advanced/index.md)

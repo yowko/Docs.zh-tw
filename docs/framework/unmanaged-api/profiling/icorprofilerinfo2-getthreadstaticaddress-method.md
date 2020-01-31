@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e7dbf14-98a2-4384-a950-58a7640e59df
 topic_type:
 - apiref
-ms.openlocfilehash: d44eae4da70418e2d4f398b2bacee1fb53d55b60
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2c98f67e20ea36d7fbbb31be2e3761594b674c36
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443048"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868599"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress 方法
 取得指定的執行緒靜態欄位的位址，該欄位位於指定之執行緒的範圍內。  
@@ -66,7 +66,7 @@ HRESULT GetThreadStaticAddress(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 介面](icorprofilerinfo2-interface.md)

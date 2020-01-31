@@ -1,15 +1,15 @@
 ---
-title: ICorDebugVariableSymbol：： GetValue 方法
+title: ICorDebugVariableSymbol::GetValue Method
 ms.date: 03/30/2017
 ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
-ms.openlocfilehash: 5ef7e67efb2bafd9b9f52203246fd7d1590e6107
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2dc074384d209d0740a1fb0a9a16d96ff355f02b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120956"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790874"
 ---
-# <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol：： GetValue 方法
+# <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol::GetValue Method
 取得變數的值做為位元組陣列。  
   
 ## <a name="syntax"></a>語法  
@@ -60,5 +60,5 @@ HRESULT GetValue(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugVariableSymbol 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugVariableSymbol 介面](icordebugvariablesymbol-interface.md)
+- [偵錯介面](debugging-interfaces.md)

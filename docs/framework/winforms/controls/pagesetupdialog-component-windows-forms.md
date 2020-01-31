@@ -1,5 +1,5 @@
 ---
-title: PageSetupDialog 元件 (Windows Form)
+title: PageSetupDialog 元件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - printing [Windows Forms], page setup
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-ms.openlocfilehash: 93d5466c1f528ea3c8fa360222f046b0c2672fa6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59c5599aa5d36e61b89e1a67ac3064d2c8358206
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012694"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868066"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog 元件 (Windows Form)
-Windows Form<xref:System.Windows.Forms.PageSetupDialog>元件是預先設定的對話方塊，用於以 Windows 為基礎的應用程式中設定列印的頁面詳細資料。 它用於應用程式內以 Windows 為基礎的簡單解決方案，為使用者設定頁面的喜好設定，不需設定您自己的對話方塊。 您可以讓使用者設定框線和邊界調整、 標頭和頁尾和直向與橫向列印。 藉由標準 Windows 對話方塊，建立使用者可立即熟悉基本功能的應用程式。  
+Windows Forms <xref:System.Windows.Forms.PageSetupDialog> 元件是預先設定的對話方塊，用來設定以 Windows 為基礎的應用程式中列印的頁面詳細資料。 在以 Windows 為基礎的應用程式中使用它作為簡單的解決方案，讓使用者可以設定頁面喜好設定，而不需要設定您自己的對話方塊。 您可以讓使用者設定框線和邊界調整、頁首和頁尾，以及直向與橫向方向。 藉由標準 Windows 對話方塊，建立使用者可立即熟悉基本功能的應用程式。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [PageSetupDialog 元件概觀](pagesetupdialog-component-overview-windows-forms.md)  
- 導入的一般概念<xref:System.Windows.Forms.PageSetupDialog>元件，可用來顯示預先設定的對話方塊，使用者可用來操作的頁面設定。  
+ 介紹 <xref:System.Windows.Forms.PageSetupDialog> 元件的一般概念，您可以用它來顯示預先設定的對話方塊，使用者可以用來動作頁面設定。  
   
- [如何：使用 PageSetupDialog 元件決定頁面屬性](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
- 說明如何設定網頁內容所使用的執行個體<xref:System.Windows.Forms.PageSetupDialog>在執行階段元件。  
+ [操作說明：使用 PageSetupDialog 元件決定頁面屬性](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
+ 說明如何在執行時間使用 <xref:System.Windows.Forms.PageSetupDialog> 元件的實例來設定頁面屬性。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.PageSetupDialog>  
@@ -45,7 +45,5 @@ Windows Form<xref:System.Windows.Forms.PageSetupDialog>元件是預先設定的�
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
   
  [對話方塊控制項和元件](dialog-box-controls-and-components-windows-forms.md)  
- 描述可讓使用者與應用程式或系統進行標準互動的一組控制項和元件。  
-  
- [Essential Code for Windows Forms Dialog Boxes](https://go.microsoft.com/fwlink/?LinkID=102575) (Windows Forms 對話方塊的基本程式碼)  
- 討論 Windows Form 對話方塊控制項和元件，以及執行其基本功能所需的程式碼。 (MSDN Online Library 技術文件)
+ 描述可讓使用者與應用程式或系統進行標準互動的一組控制項和元件。
+ 

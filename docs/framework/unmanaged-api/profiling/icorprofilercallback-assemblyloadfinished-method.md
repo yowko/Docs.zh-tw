@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-ms.openlocfilehash: 33b72c8d089e5b335069fe465987086dfa1243bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 15ce195af0c0e8f8777f6e5d02043e17e32308da
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445179"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866640"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished 方法
 通知分析工具元件已完成載入。  
@@ -33,13 +33,16 @@ HRESULT AssemblyLoadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a>參數  
- `assemblyId`  
- 在識別已載入的元件。  
-  
- `hrStatus`  
- 在HRESULT，指出元件是否已成功載入。  
-  
+## <a name="parameters"></a>參數
+
+- `assemblyId`
+
+  中的 \[] 識別已載入的元件。
+
+- `hrStatus`
+
+  \[in]） HRESULT，指出元件是否已成功載入。
+
 ## <a name="remarks"></a>備註  
  在呼叫 `AssemblyLoadFinished` 方法之前，`assemblyId` 的值對資訊要求而言是不正確。  
   
@@ -56,4 +59,4 @@ HRESULT AssemblyLoadFinished(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)

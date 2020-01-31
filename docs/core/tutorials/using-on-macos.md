@@ -2,12 +2,12 @@
 title: 教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
 description: 本文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。
 ms.date: 12/19/2019
-ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715308"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741537"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
 
@@ -28,7 +28,7 @@ ms.locfileid: "75715308"
 
 在本教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 上的 dotnet/samples 存放庫中，[查看或下載](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)本文的來源。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-啟動 Visual Studio Code。 按<kbd>Ctrl</kbd>+<kbd>\`</kbd> （倒或倒引號字元），或從功能表中選取 [ **View > Terminal** ]，以在 Visual Studio Code 中開啟內嵌的終端機。 如果您想要在 Visual Studio Code 外部工作，則仍然可以使用總管 [在命令提示字元中開啟] 命令 (Mac 或 Linux 上的 [在終端機中開啟]) 來開啟外部殼層。
+啟動 Visual Studio Code。 按<kbd>Ctrl</kbd> <kbd>\`</kbd> （倒或倒引號字元），或從功能表中選取 [ **View** > **Terminal** ]，以在 Visual Studio Code 中開啟內嵌終端機。 如果您想要在 Visual Studio Code 外部工作，您仍然可以使用 Explorer [**在命令提示字元中**開啟] 命令來開啟外部 shell （在 MacOS 或 Linux 上的**終端機中開啟**）。
 
 請從建立方案檔開始，而方案檔是作為一或多個 .NET Core 專案的容器。 在終端機中，執行[`dotnet new`](../tools/dotnet-new.md)命令，以在名為*黃金*的新資料夾內建立新的方案*黃金*：
 
@@ -142,7 +142,8 @@ namespace TestApp
     public class LibraryTests
     {
         [Fact]
-        public void TestThing() {
+        public void TestThing()
+        {
             Assert.NotEqual(42, new Thing().Get(19, 23));
         }
     }
@@ -211,7 +212,7 @@ dotnet run -p app/app.csproj
 
 在 `Main` 方法中的 `WriteLine` 陳述式設定中斷點。 若要這麼做，請在游標停留在 `WriteLine` 行上時按下<kbd>Fn</kbd>+<kbd>F9</kbd>鍵，或在您要設定中斷點的那一行的左邊界按一下滑鼠。 紅色圓圈會出現在程式碼行旁邊的邊界。 到達中斷點時，會在執行中斷點行「之前」停止執行程式碼。
 
-開啟 [偵錯工具] 索引標籤，方法是選取 [Visual Studio Code] 工具列中的 [Debug] 圖示，從功能表列選取 [ **View > debug** ]，或使用鍵盤快速鍵<kbd>命令</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>：
+開啟 [偵錯工具] 索引標籤，方法是選取 [Visual Studio Code] 工具列中的 [debug] 圖示，從功能表列選取 [ <kbd>&#8679;</kbd> <kbd>&#8984;</kbd> **View** > debug]，或使用鍵盤快速鍵<kbd>D</kbd>：
 
 ![Visual Studio Code 偵錯工具](./media/using-on-macos/visual-studio-code-debugger.png)
 

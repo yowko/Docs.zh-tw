@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0aa60f24-8bbd-4c83-83c5-86ad191b1d82
 topic_type:
 - apiref
-ms.openlocfilehash: 11f9a186f5ec5e3b9e718a3ccd43b35b66d28078
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dcd162aec12dc75585f1828cffdd4cdbedcf9988
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433186"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868656"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 方法
 取得函式的父類別、中繼資料語彙基元和每個類型引數的 `ClassID` (如果有的話)。  
@@ -65,19 +65,19 @@ HRESULT GetFunctionInfo2(
  [out] 一組 `ClassID`  值的陣列，其中每一項為該函式型別引數的 ID。 方法傳回時， `typeArgs` 將包含部分或所有的 `ClassID` 值。  
   
 ## <a name="remarks"></a>備註  
- 分析工具程式碼可以呼叫[ICorProfilerInfo：： GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)來取得給定模組的[中繼資料](../../../../docs/framework/unmanaged-api/metadata/index.md)介面。 然後，傳回至 `pToken` 所參考位置的中繼資料語彙基元可以用來存取此函式的中繼資料。  
+ 分析工具程式碼可以呼叫[ICorProfilerInfo：： GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)來取得給定模組的[中繼資料](../../../../docs/framework/unmanaged-api/metadata/index.md)介面。 然後，傳回至 `pToken` 所參考位置的中繼資料語彙基元可以用來存取此函式的中繼資料。  
   
  透過 `pClassId` 和 `typeArgs` 參數傳回的類別 ID 與類型引數取決於在 `frameInfo` 參數中傳遞的值，如下表所示。  
   
 |`frameInfo` 參數的值|結果|  
 |----------------------------------------|------------|  
-|從 `COR_PRF_FRAME_INFO` 回呼取得的 `FunctionEnter2` 值|在 `ClassID` 所參考位置中傳回的 `pClassId` 和 `typeArgs` 陣列傳回的所有類型引數，都會是精確的。|  
-|從 `COR_PRF_FRAME_INFO` 回呼以外來源取得的 `FunctionEnter2`。|無法決定精確的 `ClassID` 和類型引數。 也就是說，`ClassID` 可能是 null，而且可能會傳回某些類型引數做為 <xref:System.Object>。|  
+|從 `COR_PRF_FRAME_INFO` 回呼取得的 `FunctionEnter2` 值|在 `pClassId` 所參考位置中傳回的 `ClassID` 和 `typeArgs` 陣列傳回的所有類型引數，都會是精確的。|  
+|從 `FunctionEnter2` 回呼以外來源取得的 `COR_PRF_FRAME_INFO`。|無法決定精確的 `ClassID` 和類型引數。 也就是說，`ClassID` 可能是 null，而且可能會傳回某些類型引數做為 <xref:System.Object>。|  
 |零|無法決定精確的 `ClassID` 和類型引數。 也就是說，`ClassID` 可能是 null，而且可能會傳回某些類型引數做為 <xref:System.Object>。|  
   
  `GetFunctionInfo2` 傳回之後，您必須確認 `typeArgs` 緩衝區夠大，以包含所有 `ClassID` 的值。 若要這樣做，請比對 `pcTypeArgs` 指向的值和 `cTypeArgs` 參數。 如果 `pcTypeArgs` 指向一個值，該值大於 `cTypeArgs` 除以 `ClassID` 值的大小，請配置較大的 `pcTypeArgs` 緩衝區，以新的、較大的大小來更新 `cTypeArgs`，然後再呼叫 `GetFunctionInfo2` 一次。  
   
- 或者，您也可以先使用長度為零的 `GetFunctionInfo2` 緩衝區來呼叫 `pcTypeArgs`，以取得正確的緩衝區大小。 您可以將緩衝區大小設定為 `pcTypeArgs` 傳回的值除以 `ClassID` 值的大小，然後再呼叫 `GetFunctionInfo2` 一次。  
+ 或者，您也可以先使用長度為零的 `pcTypeArgs` 緩衝區來呼叫 `GetFunctionInfo2`，以取得正確的緩衝區大小。 您可以將緩衝區大小設定為 `pcTypeArgs` 傳回的值除以 `ClassID` 值的大小，然後再呼叫 `GetFunctionInfo2` 一次。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -90,7 +90,7 @@ HRESULT GetFunctionInfo2(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [程式碼剖析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 介面](icorprofilerinfo2-interface.md)
+- [分析介面](profiling-interfaces.md)
+- [程式碼剖析](index.md)

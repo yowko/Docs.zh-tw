@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d6471bc-ad9b-4b1d-a307-c10443918863
 topic_type:
 - apiref
-ms.openlocfilehash: c6c361113a441df050a8e7cd5219819cc8332581
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bc6543b46200dd611e13bdf55aabfabd8302e70a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131485"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793339"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity 方法
 通知偵錯工具程式碼執行已到達較舊版本的已編輯函式中的序列點。  
@@ -54,9 +54,9 @@ HRESULT FunctionRemapOpportunity (
  在舊版函式中的指令指標之 Microsoft 中繼語言（MSIL）位移。  
   
 ## <a name="remarks"></a>備註  
- 這個回呼會藉由呼叫[ICorDebugILFrame2：： RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)方法，讓偵錯工具有機會將指令指標重新對應至指定函式的新版本中的適當位置。 如果偵錯工具在呼叫[ICorDebugController：： Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法之前不會呼叫 `RemapFunction`，執行時間將會繼續執行舊的程式碼，並會在下一個序列點引發另一個 `FunctionRemapOpportunity` 回呼。  
+ 這個回呼會藉由呼叫[ICorDebugILFrame2：： RemapFunction](icordebugilframe2-remapfunction-method.md)方法，讓偵錯工具有機會將指令指標重新對應至指定函式的新版本中的適當位置。 如果偵錯工具在呼叫[ICorDebugController：： Continue](icordebugcontroller-continue-method.md)方法之前不會呼叫 `RemapFunction`，執行時間將會繼續執行舊的程式碼，並會在下一個序列點引發另一個 `FunctionRemapOpportunity` 回呼。  
   
- 針對執行舊版指定函式的每個框架，會叫用此回呼，直到偵錯工具傳回 S_OK 為止。  
+ 在偵錯工具傳回 S_OK 之前，每個執行舊版指定函式的框架都會叫用此回呼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -69,5 +69,5 @@ HRESULT FunctionRemapOpportunity (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugManagedCallback2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 介面](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

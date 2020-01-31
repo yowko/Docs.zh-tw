@@ -2,12 +2,12 @@
 title: 支援的部署案例
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 6898ec33564a526d0e444502ebb6ed7f142f1856
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5be9ab3d300da2095a45846d334512382b4067f6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347974"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743459"
 ---
 # <a name="supported-deployment-scenarios"></a>支援的部署案例
 
@@ -35,7 +35,7 @@ WCF 支援應用程式中以下列任一標準命名許可權集合執行的功�
 
 工作流程服務需要完全信任使用權限，而且無法用在部分信任應用程式中。
 
-如需詳細資訊，請參閱[如何：在 ASP.NET 2.0 中使用中度信任](https://go.microsoft.com/fwlink/?LinkId=84603)。
+如需詳細資訊，請參閱[如何：在 ASP.NET 2.0 中使用中度信任](https://docs.microsoft.com/previous-versions/msp-n-p/ff648344(v=pandp.10))。
 
 ## <a name="partial-trust-on-the-client"></a>用戶端上的部分信任
 

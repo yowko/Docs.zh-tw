@@ -3,12 +3,12 @@ title: 使用 .NET Core 來建立 REST 用戶端
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 09eda08f82490070c66d0b290359872c1043b0c2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 1b85a03919ea057cda4526ac1c873bf058c9a825
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737571"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867356"
 ---
 # <a name="rest-client"></a>REST 用戶端
 
@@ -154,7 +154,7 @@ namespace WebAPIClient
 {
     public class Repository
     {
-        public string name { get; set; };
+        public string name { get; set; }
     }
 }
 ```
@@ -170,7 +170,6 @@ JSON 序列化程式將會忽略未包含在所要使用之類別型別中的資
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
 var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
-return repositories;
 ```
 
 您使用的是新的命名空間，因此您也必須將它新增至檔案頂端：
@@ -231,7 +230,8 @@ private static async Task<List<Repository>> ProcessRepositories()
 接著，在處理 JSON 回應後，直接傳回儲存機制：
 
 ```csharp
-var repositories = serializer.ReadObject(await streamTask) as List<Repository>;
+var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
+var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
 return repositories;
 ```
 
@@ -255,16 +255,16 @@ public static async Task Main(string[] args)
 讓我們從再多將幾個簡單型別新增到 `Repository` 類別定義著手。 請將下列屬性新增到該類別：
 
 ```csharp
-[JsonPropertyName(Name="description")]
+[JsonPropertyName("description")]
 public string Description { get; set; }
 
-[JsonPropertyName(Name="html_url")]
+[JsonPropertyName("html_url")]
 public Uri GitHubHomeUrl { get; set; }
 
-[JsonPropertyName(Name="homepage")]
+[JsonPropertyName("homepage")]
 public Uri Homepage { get; set; }
 
-[JsonPropertyName(Name="watchers")]
+[JsonPropertyName("watchers")]
 public int Watchers { get; set; }
 ```
 
@@ -293,7 +293,7 @@ foreach (var repo in repositories)
 該格式並不符合任何標準 .NET <xref:System.DateTime> 格式。 因此，您將需要撰寫一個自訂的轉換方法。 您可能也不會想要對 `Repository` 類別的使用者公開原始字串。 屬性也可以幫助控制該行為。 首先，定義一個 `public` 屬性，以保存您 `Repository` 類別中日期和時間的字串表示，以及一個會傳回格式字串的 `LastPush` `readonly` 屬性，該字串代表所傳回的日期：
 
 ```csharp
-[JsonPropertyName(Name="pushed_at")]
+[JsonPropertyName("pushed_at")]
 public string JsonDate { get; set; }
 
 public DateTime LastPush =>

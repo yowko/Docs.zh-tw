@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: 84b5da043f9bd437ee9099135ba865c1ab23bb9d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 81993f108ae9b59300b5d29402d7a423c3657757
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129662"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792439"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences 方法
 取得要在進程中進行垃圾收集之所有物件的列舉值。  
@@ -39,7 +39,7 @@ HRESULT EnumerateGCReferences(
  在布林值，指出是否也要列舉弱式參考。 如果 `true``enumerateWeakReferences`，則 `ppEnum` 列舉值同時包含強式參考和弱式參考。 如果 `false``enumerateWeakReferences`，列舉值只會包含強式參考。  
   
  `ppEnum`  
- 脫銷[ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)位址的指標，這是要進行垃圾收集之物件的列舉值。  
+ 脫銷[ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md)位址的指標，這是要進行垃圾收集之物件的列舉值。  
   
 ## <a name="remarks"></a>備註  
  這個方法可讓您判斷進程中任何 managed 物件的完整根鏈，並可用來判斷物件為何仍然處於作用中狀態。  
@@ -55,5 +55,5 @@ HRESULT EnumerateGCReferences(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugProcess5 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5 介面](icordebugprocess5-interface.md)
+- [偵錯介面](debugging-interfaces.md)

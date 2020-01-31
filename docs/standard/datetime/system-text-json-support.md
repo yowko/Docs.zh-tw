@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JSON Serializer, JSON Reader, JSON Writer
 - Converter, JSON Converter, DateTime Converter
 - ISO, ISO 8601, ISO 8601-1:2019
-ms.openlocfilehash: 8198359e2c54c4ed098703fbcc070f7469b3362a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fb8836d9c556b317c50b6b34a9dde4e42c6486b5
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344645"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867343"
 ---
 # <a name="datetime-and-datetimeoffset-support-in-systemtextjson"></a>System.Text.Json 中的 DateTime 和 DateTimeOffset 支援
 
@@ -199,4 +199,12 @@ ms.locfileid: "75344645"
 
         用來格式化 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> （小數秒）和本地位移。
 
-如果存在，則會寫入最多7個小數位數。 這會與 <xref:System.DateTime> 執行一致，這僅限於此解析度。
+如果 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 實例的[來回行程格式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表示在其小數秒的結尾為零，則 <xref:System.Text.Json.JsonSerializer> 和 <xref:System.Text.Json.Utf8JsonWriter> 會將實例的標記法格式化，而不會有尾端零。
+例如，如果 <xref:System.DateTime> 實例的反復存取[格式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表示為 `2019-04-24T14:50:17.1010000Z`，則 <xref:System.Text.Json.JsonSerializer> 和 <xref:System.Text.Json.Utf8JsonWriter>會將其格式化為 `2019-04-24T14:50:17.101Z`。
+
+如果 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 實例的[來回行程格式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表示在其小數秒內全部為零，則 <xref:System.Text.Json.JsonSerializer> 和 <xref:System.Text.Json.Utf8JsonWriter> 會將實例的標記法格式化，而不含小數秒數。
+例如，如果 <xref:System.DateTime> 實例的反復存取[格式](../base-types/standard-date-and-time-format-strings.md#the-round-trip-o-o-format-specifier)表示為 `2019-04-24T14:50:17.0000000+02:00`，則 <xref:System.Text.Json.JsonSerializer> 和 <xref:System.Text.Json.Utf8JsonWriter>會將其格式化為 `2019-04-24T14:50:17+02:00`。
+
+以小數秒數來截斷零會允許最小的輸出，以便在要寫入的來回行程上保留資訊。
+
+最多可寫入7個小數秒數位。 這會與 <xref:System.DateTime> 執行一致，這僅限於此解析度。

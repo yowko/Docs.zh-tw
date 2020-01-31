@@ -2,12 +2,12 @@
 title: 使用工作流程的 OData 摘要-WF
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: c9780200d9b7c7bc89797b3c16b22bc38440fccc
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ceac2c2d07351fcb79e2345068f07fa22f356411
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802657"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743789"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>使用工作流程中的 OData 摘要
 
@@ -15,7 +15,7 @@ WCF Data Services 是 .NET Framework 的元件，可讓您建立使用開放式�
 
 ## <a name="using-the-sample-northwind-odata-service"></a>使用範例 Northwind OData 服務
 
-本主題中的範例使用位於 <https://services.odata.org/Northwind/Northwind.svc/>的範例 Northwind 資料服務。 這項服務是 [OData SDK](https://www.odata.org/wp-content/uploads/sites/21/odatasdkcodesamples.zip) 的一部分，而且會提供範例 Northwind 資料庫的唯讀存取。 如果需要寫入存取或者需要本機 WCF 資料服務，您可以遵循 [WCF 資料服務快速入門](../data/wcf/quickstart-wcf-data-services.md) 的步驟，建立本機 OData 服務來提供 Northwind 資料庫的存取。 如果您遵循快速入門的步驟，請使用本機 URI 來替代本主題的範例程式碼所提供的 URI。
+本主題中的範例使用位於 <https://services.odata.org/Northwind/Northwind.svc/>的範例 Northwind 資料服務。 這項服務是 [OData SDK](https://www.odata.org/ecosystem/#sdk) 的一部分，而且會提供範例 Northwind 資料庫的唯讀存取。 如果需要寫入存取或者需要本機 WCF 資料服務，您可以遵循 [WCF 資料服務快速入門](../data/wcf/quickstart-wcf-data-services.md) 的步驟，建立本機 OData 服務來提供 Northwind 資料庫的存取。 如果您遵循快速入門的步驟，請使用本機 URI 來替代本主題的範例程式碼所提供的 URI。
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>使用用戶端程式庫取用 OData 摘要
 
@@ -41,9 +41,9 @@ WCF Data Services 包含用戶端程式庫，可讓您更輕鬆地從 .NET Frame
 
 ### <a name="using-client-library-asynchronous-methods"></a>使用用戶端程式庫非同步方法
 
-<xref:System.Data.Services.Client.DataServiceQuery%601> 類別會提供 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 和 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法，以非同步方式查詢 OData 服務。 這些方法可以從 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 衍生類別的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity> 覆寫來呼叫。 當 <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 覆寫傳回時，工作流程可以進入閒置狀態 (但不會持久)，而且當非同步工作完成時，執行階段會叫用 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 。
+<xref:System.Data.Services.Client.DataServiceQuery%601> 類別會提供 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 和 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法，以非同步方式查詢 OData 服務。 這些方法可以從 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 衍生類別的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity> 覆寫來呼叫。 當 <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 覆寫傳回時，工作流程可以進入閒置狀態（但不會保存），而當非同步工作完成時，則會由執行時間叫用 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>。
 
-下列範例會定義具有兩個輸入引數的 `OrdersByCustomer` 活動。 `CustomerId` 引數代表可識別要傳回哪些訂單的客戶，而 `ServiceUri` 引數則代表要查詢之 OData 服務的 URI。 因為此活動衍生自 `AsyncCodeActivity<IEnumerable<Order>>` ，所以也會有一個 <xref:System.Activities.Activity%601.Result%2A> 輸出引數用來傳回查詢的結果。 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 覆寫會建立一個 LINQ 查詢，此查詢會選取指定之客戶的所有訂單。 這個查詢會指定為傳遞之 <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> 的 <xref:System.Activities.AsyncCodeActivityContext>，然後會呼叫此查詢的 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 方法。 請注意，傳入查詢之 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 中的回呼和狀態為傳入活動之 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 方法中的回呼和狀態。 當查詢執行完之後，就會叫用此活動的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 方法。 此查詢擷取自 <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>，然後會呼叫此查詢的 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法。 這個方法會傳回指定之實體型別的 <xref:System.Collections.Generic.IEnumerable%601> ，也就是此案例中的 `Order`。 因為 `IEnumerable<Order>` 是 <xref:System.Activities.AsyncCodeActivity%601>的泛型型別，所以這個 <xref:System.Collections.IEnumerable> 會設定為活動的 <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601> 。
+下列範例會定義具有兩個輸入引數的 `OrdersByCustomer` 活動。 `CustomerId` 引數代表可識別要傳回哪些訂單的客戶，而 `ServiceUri` 引數則代表要查詢之 OData 服務的 URI。 因為此活動衍生自 `AsyncCodeActivity<IEnumerable<Order>>` ，所以也會有一個 <xref:System.Activities.Activity%601.Result%2A> 輸出引數用來傳回查詢的結果。 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 覆寫會建立一個 LINQ 查詢，此查詢會選取指定之客戶的所有訂單。 這個查詢會指定為傳遞之 <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> 的 <xref:System.Activities.AsyncCodeActivityContext>，然後會呼叫此查詢的 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 方法。 請注意，傳入查詢之 <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> 中的回呼和狀態為傳入活動之 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 方法中的回呼和狀態。 當查詢執行完之後，就會叫用此活動的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 方法。 此查詢擷取自 <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>，然後會呼叫此查詢的 <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> 方法。 這個方法會傳回指定之實體型別的 <xref:System.Collections.Generic.IEnumerable%601> ，也就是此案例中的 `Order`。 由於 `IEnumerable<Order>` 是 <xref:System.Activities.AsyncCodeActivity%601>的泛型型別，因此會將此 <xref:System.Collections.IEnumerable> 設定為活動的 <xref:System.Activities.Activity%601.Result%2A> <xref:System.Activities.OutArgument%601>。
 
 [!code-csharp[CFX_WCFDataServicesActivityExample#100](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#100)]
 

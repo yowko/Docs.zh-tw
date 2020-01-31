@@ -1,15 +1,15 @@
 ---
-title: ICorDebugSymbolProvider：： GetMethodLocalSymbols 方法
+title: ICorDebugSymbolProvider::GetMethodLocalSymbols 方法
 ms.date: 03/30/2017
 ms.assetid: 8b989e38-e779-49d1-9e90-f1f920484b08
-ms.openlocfilehash: 6cd04ea7f83fb7ae96d9ffd1beba39530511ec25
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41fc8e94ec8a5c8794674bebb32494bb3806e69d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138897"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791610"
 ---
-# <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>ICorDebugSymbolProvider：： GetMethodLocalSymbols 方法
+# <a name="icordebugsymbolprovidergetmethodlocalsymbols-method"></a>ICorDebugSymbolProvider::GetMethodLocalSymbols 方法
 提供方法的相對虛擬位址 (RVA)，取得該方法的本機符號。  
   
 ## <a name="syntax"></a>語法  
@@ -34,7 +34,7 @@ HRESULT GetMethodLocalSymbols(
  [out] 方法所擷取之符號數的指標。  
   
  `pcFetchedSymbols`  
- 脫銷[ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)陣列的指標，其中包含方法的本機符號。  
+ 脫銷[ICorDebugVariableSymbol](icordebugvariablesymbol-interface.md)陣列的指標，其中包含方法的本機符號。  
   
 ## <a name="remarks"></a>備註  
   
@@ -52,6 +52,6 @@ HRESULT GetMethodLocalSymbols(
   
 ## <a name="see-also"></a>請參閱
 
-- [GetMethodParameterSymbols 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodparametersymbols-method.md)
-- [ICorDebugSymbolProvider 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetMethodParameterSymbols 方法](icordebugsymbolprovider-getmethodparametersymbols-method.md)
+- [ICorDebugSymbolProvider 介面](icordebugsymbolprovider-interface.md)
+- [偵錯介面](debugging-interfaces.md)

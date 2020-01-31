@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35449514-333f-4918-9c60-7aa198d655d2
 topic_type:
 - apiref
-ms.openlocfilehash: 26948261c571dbe963811e8e9631551685a63bdb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c1767e718e597918ef59b72a4b7acc3589421de0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450378"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867051"
 ---
 # <a name="cor_prf_runtime_type-enumeration"></a>COR_PRF_RUNTIME_TYPE 列舉
 包含值，指出在 Silverlight 中使用的 common language runtime （CLR）版本： desktop 或 CoreCLR。  
@@ -52,6 +52,6 @@ typedef enum
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [分析列舉](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [分析列舉](profiling-enumerations.md)

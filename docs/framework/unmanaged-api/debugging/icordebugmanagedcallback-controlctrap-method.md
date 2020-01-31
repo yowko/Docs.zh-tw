@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-ms.openlocfilehash: da35db8a943fda5fb3fbf4126684bb9cb7243001
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 63f7bf8c09480b9ce2cfb8eb8dc66e4a6133ef8f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137419"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777478"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap 方法
 通知偵錯工具在正在進行調試的進程中，已攔截 CTRL + C。  
@@ -58,4 +58,4 @@ HRESULT ControlCTrap (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

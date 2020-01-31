@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41462329-a648-46f0-ae6d-728b94c31aa9
 topic_type:
 - apiref
-ms.openlocfilehash: 9c9cd0b042dc22f35c38e349ab8881dafc602731
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 534e0672820cc2509f32765274ad970fda69ec5d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445012"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866503"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter 方法
 通知分析工具，控制項正傳遞至適當的 `catch` 區塊。  
@@ -33,13 +33,16 @@ HRESULT ExceptionCatcherEnter(
     [in] ObjectID   objectId);  
 ```  
   
-## <a name="parameters"></a>參數  
- `functionId`  
- 在包含 `catch` 區塊之函式的識別碼。  
+## <a name="parameters"></a>參數
+
+- `functionId`
+
+  \[in] 包含 `catch` 區塊之函式的識別碼。
   
- `objectId`  
- 在所處理之例外狀況的識別碼。  
-  
+- `objectId`
+
+  中的 \[] 所處理之例外狀況的識別碼。
+
 ## <a name="remarks"></a>備註  
  只有當 catch 點位於以即時（JIT）編譯器編譯的程式碼中時，才會呼叫 `ExceptionCatcherEnter` 方法。 在非受控碼或執行時間的內部程式碼中攔截到的例外狀況不會呼叫此通知。 因為 `ExceptionThrown` 通知之後，垃圾收集可能已經移動物件，所以會再次傳遞 `objectId` 值。  
   
@@ -58,5 +61,5 @@ HRESULT ExceptionCatcherEnter(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionCatcherLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
+- [ExceptionCatcherLeave 方法](icorprofilercallback-exceptioncatcherleave-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6bbb7786-7c38-490f-9834-91aa2795c355
 topic_type:
 - apiref
-ms.openlocfilehash: 594d970dbe0a176a5ec49015e105f89ff64bdfac
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0c25a5cad01ef0eb268e90c38bd24d638b6f8cc4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439768"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865762"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>ICorProfilerCallback2::HandleCreated 方法
 通知程式碼分析工具，已建立垃圾收集控制碼。  
@@ -51,5 +51,5 @@ HRESULT HandleCreated(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 介面](icorprofilercallback2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: ef9e339c74b2d2785d758ed9c4adfc1901073253
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dca2a4e5ee869346108137a8ba01ab8855756725
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139368"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792563"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory 方法
 讀取這個進程的指定記憶體區域。  
@@ -51,7 +51,7 @@ HRESULT ReadMemory(
 ## <a name="remarks"></a>備註  
  `ReadMemory` 方法主要是供 interop 偵錯工具用來檢查偵錯工具的非受控部分所使用的記憶體區域。 這個方法也可以用來讀取 Microsoft 中繼語言（MSIL）程式碼和原生 JIT 編譯程式碼。  
   
- 任何受控中斷點都會從 `buffer` 參數傳回的資料中移除。 [ICorDebugProcess2：： SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)所設定的原生中斷點不會進行任何調整。  
+ 任何受控中斷點都會從 `buffer` 參數傳回的資料中移除。 [ICorDebugProcess2：： SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)所設定的原生中斷點不會進行任何調整。  
   
  不會執行進程記憶體的快取。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3ff2ad2a-da5a-461b-8627-1a8eba49df9c
 topic_type:
 - apiref
-ms.openlocfilehash: ab5adabe868c245ed7a773d9b4206b25d9e9a4f0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6f20b0f7927d79ee56b5b6962137d668dc048d1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140240"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791109"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2 介面
 擴充 "ICorDebugValue" 介面，以提供對 "ICorDebugType" 物件的支援。  
@@ -28,7 +28,7 @@ ms.locfileid: "73140240"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetExactType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|取得 `ICorDebugType` 物件的介面指標，表示這個值的 <xref:System.Type>。|  
+|[GetExactType 方法](icordebugvalue2-getexacttype-method.md)|取得 `ICorDebugType` 物件的介面指標，表示這個值的 <xref:System.Type>。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -46,6 +46,6 @@ ms.locfileid: "73140240"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)
 
-- [ICorDebugValue3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+- [ICorDebugValue3 介面](icordebugvalue3-interface.md)

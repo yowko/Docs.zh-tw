@@ -5,12 +5,12 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 07c6061bfc66b1640d0eacca217302feff1a390a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8f093d22da789c6df750475e47a3b4e4685c5651
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715035"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744205"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>一維陣列 (C# 程式設計手冊)
 
@@ -54,7 +54,7 @@ ms.locfileid: "75715035"
   
  此陳述式的結果取決於 `SomeType` 是實值型別還是參考型別。 如果它是實值型別，陳述式會建立 10 個項目的陣列，且每個都具有 `SomeType` 類型。 如果 `SomeType` 是參考型別，陳述式會建立 10 個項目的陣列，且每個都會初始化為 Null 參考。  
   
-如需實數值型別和參考型別的詳細資訊，請參閱實[數值型別](../../language-reference/keywords/value-types.md)和[參考型別](../../language-reference/keywords/reference-types.md)。
+如需實數值型別和參考型別的詳細資訊，請參閱實[數值型別](../../language-reference/builtin-types/value-types.md)和[參考型別](../../language-reference/keywords/reference-types.md)。
   
 ## <a name="see-also"></a>請參閱
 

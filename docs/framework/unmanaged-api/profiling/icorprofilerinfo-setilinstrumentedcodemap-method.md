@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-ms.openlocfilehash: 32e63a6d2b6f739025d4c5558c16fe2d74fde73c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 99e473268fd0d5bb8ce120b97576277949b86508
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449860"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868993"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap 方法
 
@@ -55,7 +55,7 @@ HRESULT SetILInstrumentedCodeMap(
 
 ## <a name="remarks"></a>備註
 
-分析工具通常會在方法的原始程式碼中插入語句，以檢測該方法（例如，在到達指定的原始程式列時通知）。 `SetILInstrumentedCodeMap` 可讓分析工具將原始 MSIL 指令對應至其新位置。 分析工具可以使用[ICorProfilerInfo：： GetILToNativeMapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)方法來取得給定原生位移的原始 MSIL 位移。
+分析工具通常會在方法的原始程式碼中插入語句，以檢測該方法（例如，在到達指定的原始程式列時通知）。 `SetILInstrumentedCodeMap` 可讓分析工具將原始 MSIL 指令對應至其新位置。 分析工具可以使用[ICorProfilerInfo：： GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md)方法來取得給定原生位移的原始 MSIL 位移。
 
 偵錯工具會假設每個舊的位移都是指原始、未修改的 MSIL 程式碼內的 MSIL 位移，而且每個新的位移都會參考新檢測的程式碼內的 MSIL 位移。 對應應該以遞增順序排序。 若要讓逐步執行正常運作，請遵循下列指導方針：
 
@@ -95,6 +95,6 @@ HRESULT SetILInstrumentedCodeMap(
 
 **.NET framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)

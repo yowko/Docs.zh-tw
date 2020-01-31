@@ -1,15 +1,15 @@
 ---
-title: ICorDebugSymbolProvider：： GetCodeRange 方法
+title: ICorDebugSymbolProvider::GetCodeRange 方法
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
-ms.openlocfilehash: 84bf545fedf3a6c7915d94fd0c2630268585b6eb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dbe042641cadae182efac30502a70631be359bbe
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138925"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791645"
 ---
-# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider：： GetCodeRange 方法
+# <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange 方法
 提供方法中的相對虛擬位址 (RVA)，以取得方法起始位址和大小。  
   
 ## <a name="syntax"></a>語法  
@@ -48,5 +48,5 @@ HRESULT GetCodeRange(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugSymbolProvider 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider 介面](icordebugsymbolprovider-interface.md)
+- [偵錯介面](debugging-interfaces.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47dbaea4-8857-462e-93ba-fff880fc9e50
 topic_type:
 - apiref
-ms.openlocfilehash: 6c159780b9019127d166e8437ea4ed214284011f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9153503fc114b0e4052265fca7c9399510d687ef
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121256"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792326"
 ---
 # <a name="icordebugprocess5gettypeid-method"></a>ICorDebugProcess5::GetTypeID 方法
-將物件位址轉換成[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)識別碼。  
+將物件位址轉換成[COR_TYPEID](cor-typeid-structure.md)識別碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ HRESULT GetTypeID(
  在物件位址。  
   
  `pId`  
- 識別物件之[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)值的指標。  
+ 識別物件之[COR_TYPEID](cor-typeid-structure.md)值的指標。  
   
 ## <a name="remarks"></a>備註  
   
@@ -56,5 +56,5 @@ HRESULT GetTypeID(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugProcess5 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5 介面](icordebugprocess5-interface.md)
+- [偵錯介面](debugging-interfaces.md)

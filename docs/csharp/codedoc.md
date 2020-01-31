@@ -1,15 +1,15 @@
 ---
 title: 使用 XML 註解記錄您的程式碼
 description: 了解如何使用 XML 文件註解記錄您的程式碼，並在編譯時期產生 XML 文件檔案。
-ms.date: 02/14/2017
+ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ef0d22e0ee7faa3ba51da6b44cf1827f19baf4f1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713932"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787827"
 ---
 # <a name="document-your-code-with-xml-comments"></a>使用 XML 批註記錄您的程式碼
 
@@ -170,7 +170,13 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 您可以分別將 `type` 屬性變更為 `number` 或 `table`，以建立排序過的清單或表格。
 
-### <a name="put-it-all-together"></a>組合在一起
+## <a name="inheritdoc"></a>\<inheritdoc >
+
+您可以使用 `<inheritdoc>` 標記，從基類、介面和類似的方法繼承 XML 批註。 這可避免不必要的複製和貼上重複的 XML 批註，並自動保持 XML 批註的同步處理。
+
+[!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
+
+### <a name="put-it-all-together"></a>將它全部放在一起
 
 如已遵循本教學課程，並已在必要時將標記套用至程式碼，則程式碼現在看起來應該如下︰
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c37185f-d1e0-4a6e-8b99-707f7df61d88
 topic_type:
 - apiref
-ms.openlocfilehash: 11157bca2d0f0be2b9b9bc36c382188a43db22a9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3cdc185408576f5679daacef4dde438d66e490ff
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433123"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862746"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>ICorProfilerInfo2::GetGenerationBounds 方法
 取得記憶體區域，也就是堆積的區段，會組成各種記憶體回收層代。  
@@ -42,7 +42,7 @@ HRESULT GetGenerationBounds(
  [out] 指定範圍總數的整數指標，其中某些或全部都將在 `ranges` 陣列傳回。  
   
  `ranges`  
- 脫銷[COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)結構的陣列，其中每一個都會在正在進行垃圾收集的層代中描述記憶體的範圍（也就是區塊）。  
+ 脫銷[COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md)結構的陣列，其中每一個都會在正在進行垃圾收集的層代中描述記憶體的範圍（也就是區塊）。  
   
 ## <a name="remarks"></a>備註  
  `GetGenerationBounds` 方法可以從任何分析工具回呼中呼叫，前提是尚未進行記憶體回收。
@@ -64,7 +64,7 @@ HRESULT GetGenerationBounds(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [程式碼剖析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 介面](icorprofilerinfo2-interface.md)
+- [分析介面](profiling-interfaces.md)
+- [程式碼剖析](index.md)

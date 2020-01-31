@@ -1,5 +1,6 @@
 ---
-title: 逐步解說：在設計階段指派 Windows Form 的 WPF 內容
+title: 選取 Windows Forms 的 WPF 控制項
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF content [Windows Forms], assigning at design time
@@ -11,18 +12,18 @@ ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0c1e0c91b7ab8bded677a86b597b02b9cb442d98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 19f1dfec282b025f5a1fa367ec5fa9a52472c691
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460667"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746806"
 ---
 # <a name="walkthrough-assign-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段指派 Windows Forms 的 WPF 內容
 
 本文說明如何選取您要在表單上顯示的 Windows Presentation Foundation （WPF）控制項類型。 您可以選取包含在專案中的任何 WPF 控制項類型。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 若要完成這個逐步解說，您必須具有 Visual Studio。
 

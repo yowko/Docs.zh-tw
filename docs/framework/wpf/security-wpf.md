@@ -1,5 +1,5 @@
 ---
-title: 安全性 (WPF)
+title: 安全性
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: a49634fd955b0dc1f4cac5c785d49c24d16bbc60
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636766"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868040"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a>開發 Windows Presentation Foundation （WPF）獨立和瀏覽器裝載的應用程式時，您必須考慮安全性模型。 WPF 獨立應用程式會以不受限制的許可權（CAS**FullTrust**許可權集合）執行，不論是使用 Windows Installer （.msi）、XCopy 或 ClickOnce 部署。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過，完全信任的主應用程式可以使用 .NET Framework 增益集模型，建立部分信任的 <xref:System.AppDomain>。 如需詳細資訊，請參閱[WPF 增益集總覽](./app-development/wpf-add-ins-overview.md)。  
@@ -103,7 +103,7 @@ ms.locfileid: "75636766"
   
  以這種方式受到保護的功能集合，是針對網際網路、**內部** **網路**、**信任的網站**和**受限制的網站**區域，以每個區域為基礎進行設定。 下列步驟描述如何設定安全性設定：  
   
-1. 開啟 [控制台]。  
+1. 開啟 [**控制台**]。  
   
 2. 按一下 [**網路和網際網路**]，然後按一下 [**網際網路選項**]。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "75636766"
  功能控制項是由具現化 WebBrowser ActiveX 物件的進程所套用。 因此，如果您要建立的獨立應用程式會巡覽到不受信任的內容，則應該認真考慮啟用其他功能控制項。  
   
 > [!NOTE]
-> 這項建議根據 MSHTML 和 SHDOCVW 主機安全性的一般建議。 如需詳細資訊，請參閱[MSHTML 主機安全性常見問題：第 I 部](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx)和[MSHTML 主機安全性常見問題： II 的第二部分](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx)。  
+> 這項建議根據 MSHTML 和 SHDOCVW 主機安全性的一般建議。 如需詳細資訊，請參閱[MSHTML 主機安全性常見問題：第 I 部](https://msrc-blog.microsoft.com/2009/04/02/the-mshtml-host-security-faq-part-i-of-ii/)和[MSHTML 主機安全性常見問題： II 的第二部分](https://msrc-blog.microsoft.com/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii/)。  
   
  針對可執行檔，請考慮將登錄值設定為 1 來啟用下列功能控制項。  
   

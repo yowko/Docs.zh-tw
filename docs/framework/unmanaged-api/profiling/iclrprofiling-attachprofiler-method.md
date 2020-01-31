@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-ms.openlocfilehash: 25c208c98802be540bde7532c53798e6f7b35446
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 29aecd530d18b931420467e9127bcbf96d3a4a5f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445958"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866760"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 方法
 將指定的程式碼剖析工具附加至指定的處理序。  
@@ -37,25 +37,32 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-## <a name="parameters"></a>參數  
- `dwProfileeProcessID`  
- [in] 程式碼剖析工具應該附加到處理序的處理序識別碼。 在 64 位元電腦上，已剖析程式碼的處理序的位元必須符合正在呼叫 `AttachProfiler` 的觸發處理序的位元。 如果呼叫 `AttachProfiler` 用的使用者帳戶具有系統管理權限，則目標處理序可以是系統上的任何處理序。 否則目標處理序必須由相同的使用者帳戶所擁有。  
+## <a name="parameters"></a>參數
+
+- `dwProfileeProcessID`
+
+  \[] 中的程式碼剖析工具應附加至進程的處理序識別碼。 在 64 位元電腦上，已剖析程式碼的處理序的位元必須符合正在呼叫 `AttachProfiler` 的觸發處理序的位元。 如果呼叫 `AttachProfiler` 用的使用者帳戶具有系統管理權限，則目標處理序可以是系統上的任何處理序。 否則目標處理序必須由相同的使用者帳戶所擁有。
+
+- `dwMillisecondsMax`
+
+  \[in] `AttachProfiler` 完成的持續時間（以毫秒為單位）。 觸發處理序應該傳遞已知足以讓特定程式碼剖析工具完成初始化的逾時值。
   
- `dwMillisecondsMax`  
- [in] 讓 `AttachProfiler` 完成的持續時間，以毫秒為單位。 觸發處理序應該傳遞已知足以讓特定程式碼剖析工具完成初始化的逾時值。  
-  
- `pClsidProfiler`  
- [in] 要載入程式碼剖析工具的 CLSID 指標。 `AttachProfiler` 傳回之後，觸發處理序可以重複使用此記憶體。  
-  
- `wszProfilerPath`  
- [in] 要載入之程式碼剖析工具 DLL 檔的完整路徑。 此字串應該包含不超過 260 個字元，包括 null 結束字元。 如果 `wszProfilerPath` 是 null 或空字串，Common Language Runtime (CLR) 會嘗試在登錄中尋找 `pClsidProfiler` 指向的 CLSID，以尋找程式碼剖析工具 DLL 檔的位置。  
-  
- `pvClientData`  
- 在要由[ICorProfilerCallback3：： InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法傳遞至分析工具的資料指標。 `AttachProfiler` 傳回之後，觸發處理序可以重複使用此記憶體。 如果 `pvClientData` 為 null，則 `cbClientData` 必須是 0 (零)。  
-  
- `cbClientData`  
- [in] `pvClientData` 指向的資料大小 (以位元組為單位)。  
-  
+- `pClsidProfiler`
+
+  \[in]）要載入之 profiler 的 CLSID 指標。 `AttachProfiler` 傳回之後，觸發處理序可以重複使用此記憶體。
+
+- `wszProfilerPath`
+
+  \[in]）要載入之分析工具 DLL 檔案的完整路徑。 此字串應該包含不超過 260 個字元，包括 null 結束字元。 如果 `wszProfilerPath` 是 null 或空字串，Common Language Runtime (CLR) 會嘗試在登錄中尋找 `pClsidProfiler` 指向的 CLSID，以尋找程式碼剖析工具 DLL 檔的位置。
+
+- `pvClientData`
+
+  \[in]） [ICorProfilerCallback3：： InitializeForAttach](icorprofilercallback3-initializeforattach-method.md)方法傳遞至分析工具的資料指標。 `AttachProfiler` 傳回之後，觸發處理序可以重複使用此記憶體。 如果 `pvClientData` 為 null，則 `cbClientData` 必須是 0 (零)。
+
+- `cbClientData`
+
+  \[in] `pvClientData` 指向的資料大小（以位元組為單位）。
+
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列 HRESULT。  
   
@@ -72,7 +79,7 @@ HRESULT AttachProfiler(
 |HRESULT_FROM_WIN32(ERROR_TIMEOUT)|逾時已過期但未開始載入程式碼剖析工具。 您可以重試附加作業。 目標處理序中的完成項執行時間超過逾時值時，就會發生逾時。|  
 |E_INVALIDARG|一或多個參數具有無效的值。|  
 |E_FAIL|發生某個其他未指定的失敗。|  
-|其他錯誤碼|如果 profiler 的[ICorProfilerCallback3：： InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法傳回表示失敗的 HRESULT，`AttachProfiler` 會傳回相同的 hresult。 在此情況下，E_NOTIMPL 會轉換成 CORPROF_E_PROFILER_NOT_ATTACHABLE。|  
+|其他錯誤碼|如果 profiler 的[ICorProfilerCallback3：： InitializeForAttach](icorprofilercallback3-initializeforattach-method.md)方法傳回表示失敗的 HRESULT，`AttachProfiler` 會傳回相同的 hresult。 在此情況下，E_NOTIMPL 會轉換成 CORPROF_E_PROFILER_NOT_ATTACHABLE。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -90,7 +97,7 @@ HRESULT AttachProfiler(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerInfo3 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [程式碼剖析](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
+- [ICorProfilerInfo3 介面](icorprofilerinfo3-interface.md)
+- [分析介面](profiling-interfaces.md)
+- [程式碼剖析](index.md)

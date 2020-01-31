@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 774a5d4e48f00ea8c28977f3f685dcd5a8da3199
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9ab8c81c995bbec41db217c904e03dd70351aee
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440582"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866880"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 函式
 通知分析工具，函式即將傳回給呼叫者。  
   
 > [!NOTE]
-> .NET Framework 2.0 中的 `FunctionLeave` 函數已被取代。 它會繼續工作，但會造成效能上的負面影響。 請改用[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)函數。  
+> .NET Framework 2.0 中的 `FunctionLeave` 函數已被取代。 它會繼續工作，但會造成效能上的負面影響。 請改用[FunctionLeave2](functionleave2-function.md)函數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,10 +35,12 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-## <a name="parameters"></a>參數  
- `funcID`  
- 在傳回之函式的識別碼。  
-  
+## <a name="parameters"></a>參數
+
+- `funcID`
+
+  中的 \[] 所傳回之函式的識別碼。
+
 ## <a name="remarks"></a>備註  
  `FunctionLeave` 函數是回呼;您必須加以執行。 此執行必須使用 `__declspec`（`naked`）儲存類別屬性。  
   
@@ -63,8 +65,8 @@ void __stdcall FunctionLeave (
   
 ## <a name="see-also"></a>請參閱
 
-- [FunctionEnter2 函式](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 函式](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2 函式](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [分析全域靜態函式](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 函式](functionenter2-function.md)
+- [FunctionLeave2 函式](functionleave2-function.md)
+- [FunctionTailcall2 函式](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 方法](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [分析全域靜態函式](profiling-global-static-functions.md)

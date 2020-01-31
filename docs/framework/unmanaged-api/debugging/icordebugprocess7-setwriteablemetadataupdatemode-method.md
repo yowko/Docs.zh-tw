@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 8589bba7-7304-45ba-9e31-7bf43dfd5c19
 topic_type:
 - apiref
-ms.openlocfilehash: 453486c9e3d98ffd6f0dcfa08e7a0a9a1c1d3342
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35767529d9433764b7eed0b3b4acdd806f399962
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123396"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792186"
 ---
 # <a name="icordebugprocess7setwriteablemetadataupdatemode-method"></a>ICorDebugProcess7::SetWriteableMetadataUpdateMode 方法
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -34,7 +34,7 @@ HRESULT SetWriteableMetadataUpdateMode(
   
 ## <a name="parameters"></a>參數  
  `flags`  
- [WriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)列舉值，指定目標進程中的中繼資料的記憶體中更新是否可見（`WriteableMetadataUpdateMode::AlwaysShowUpdates`），或不會對偵錯工具顯示（`WriteableMetadataUpdateMode::LegacyCompatPolicy`）。  
+ [WriteableMetadataUpdateMode](writeablemetadataupdatemode-enumeration.md)列舉值，指定目標進程中的中繼資料的記憶體中更新是否可見（`WriteableMetadataUpdateMode::AlwaysShowUpdates`），或不會對偵錯工具顯示（`WriteableMetadataUpdateMode::LegacyCompatPolicy`）。  
   
 ## <a name="remarks"></a>備註  
  對目標處理序之中繼資料的更新可能是透過 [編輯後繼續]、分析工具或 <xref:System.Reflection.Emit?displayProperty=nameWithType>。  
@@ -50,5 +50,5 @@ HRESULT SetWriteableMetadataUpdateMode(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugProcess7 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess7 介面](icordebugprocess7-interface.md)
+- [偵錯介面](debugging-interfaces.md)

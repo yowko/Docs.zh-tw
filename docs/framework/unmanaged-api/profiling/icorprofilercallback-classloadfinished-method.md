@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: ef2c518f8f3f3069e93f06de89add1385cb4e45e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e0ff90f99c1127b5a4626f47514ba7099b5d48af
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445127"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866594"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished 方法
 通知 profiler，類別已完成載入。  
@@ -33,13 +33,16 @@ HRESULT ClassLoadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-## <a name="parameters"></a>參數  
- `classId`  
- 在識別已載入的類別。  
-  
- `hrStatus`  
- 在HRESULT，指出類別是否已成功載入。  
-  
+## <a name="parameters"></a>參數
+
+- `classId`
+
+  中的 \[] 識別已載入的類別。
+
+- `hrStatus`
+
+  \[in]） HRESULT，指出類別是否已成功載入。
+
 ## <a name="remarks"></a>備註  
  在呼叫 `ClassLoadFinished` 方法之前，`classId` 的值對資訊要求而言是不正確。  
   
@@ -54,7 +57,7 @@ HRESULT ClassLoadFinished(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ClassLoadStarted 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
+- [ClassLoadStarted 方法](icorprofilercallback-classloadstarted-method.md)

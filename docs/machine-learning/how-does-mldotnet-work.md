@@ -4,16 +4,16 @@ description: 不論是在線上或是離線，ML.NET 都能讓您將機器學習
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740089"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794567"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
-不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用這項功能，您可以使用應用程式可用的資料來建立自動預測。
+不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用這項功能，您可以使用應用程式可用的資料來建立自動預測。 機器學習應用程式會利用資料中的模式來進行預測，而不需要明確地進行程式設計。
 
 ML.NET 的核心是機器學習**模型**。 模型會指定將輸入資料轉換成預測所需的步驟。 透過 ML.NET，您可以藉由指定演算法來定型自訂模型，或者您也可以匯入預先定型的 TensorFlow 和 ONNX 模型。
 
@@ -178,7 +178,7 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
 ||多元分類|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||異常偵測|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
 ||群集|<xref:Microsoft.ML.ClusteringCatalog>||
-||正在預測|<xref:Microsoft.ML.ForecastingCatalog>||
+||針對|<xref:Microsoft.ML.ForecastingCatalog>||
 ||排名|<xref:Microsoft.ML.RankingCatalog>||
 ||回復|<xref:Microsoft.ML.RegressionCatalog>||
 ||建議|<xref:Microsoft.ML.RecommendationCatalog>|新增 `Microsoft.ML.Recommender` NuGet 套件|

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 376fb03f-f1ef-4107-baa4-4d9d55884862
 topic_type:
 - apiref
-ms.openlocfilehash: 7b56f0f3ba62efb48ac8d79aad4480b5f22771ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e90952a92c408762a98a2bfcb91b6aeb72052df1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110220"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791224"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 介面
 擴充 ICorDebugType 介面，以取得基底類型或複雜（使用者定義）類型的類型識別碼。  
@@ -28,7 +28,7 @@ ms.locfileid: "73110220"
   
 |方法||  
 |------------|-|  
-|[GetTypeID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)|取得此類型的[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 。|  
+|[GetTypeID 方法](icordebugtype2-gettypeid-method.md)|取得這個類型的[COR_TYPEID](cor-typeid-structure.md) 。|  
   
 ## <a name="remarks"></a>備註  
  這個介面是 ICorDebugType 介面的邏輯擴充。  
@@ -37,7 +37,7 @@ ms.locfileid: "73110220"
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="example"></a>範例  
- 下列程式碼片段說明如何使用[ICorDebugType2：： GetTypeID](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-gettypeid-method.md)方法。  
+ 下列程式碼片段說明如何使用[ICorDebugType2：： GetTypeID](icordebugtype2-gettypeid-method.md)方法。  
   
 ```cpp  
 // (error checking omitted for brevity)  
@@ -63,4 +63,4 @@ pType2->GetTypeID(&id);
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 1e739183-3e05-49e5-846f-4075256e41de
 topic_type:
 - apiref
-ms.openlocfilehash: 010d73309ae21f9a593f72533691bdd95fbd4132
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7f1c5d7a6fdae3e4c5a66c9aa4a82911105f4597
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130843"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788497"
 ---
 # <a name="icordebugilframe4-interface"></a>ICorDebugILFrame4 介面
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -26,12 +26,12 @@ ms.locfileid: "73130843"
   
 |方法|描述|  
 |------------|-----------------|  
-|[EnumerateLocalVariablesEx 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)|傳回目前框架中可用的區域變數清單。|  
-|[GetCodeEx 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)|傳回此堆疊框架正在執行的程式碼。|  
-|[GetLocalVariableEx 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)|傳回 IL 框架中的區域變數值。|  
+|[EnumerateLocalVariablesEx 方法](icordebugilframe4-enumeratelocalvariablesex-method.md)|傳回目前框架中可用的區域變數清單。|  
+|[GetCodeEx 方法](icordebugilframe4-getcodeex-method.md)|傳回此堆疊框架正在執行的程式碼。|  
+|[GetLocalVariableEx 方法](icordebugilframe4-getlocalvariableex-method.md)|傳回 IL 框架中的區域變數值。|  
   
 ## <a name="remarks"></a>備註  
- 除了[EnumerateLocalVariables](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md)、 [GetCode](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-getcode-method.md)和[GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)方法所提供的功能之外，這些方法還提供了功能。 每個方法都包含 `flags` 參數，可指定是否顯示分析工具 ReJIT 要求所定義的區域變數或程式碼。  
+ 除了[EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md)、 [GetCode](icordebugframe-getcode-method.md)和[GetLocalVariable](icordebugilframe-getlocalvariable-method.md)方法所提供的功能之外，這些方法還提供了功能。 每個方法都包含 `flags` 參數，可指定是否顯示分析工具 ReJIT 要求所定義的區域變數或程式碼。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -40,9 +40,9 @@ ms.locfileid: "73130843"
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

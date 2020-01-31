@@ -5,16 +5,16 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340162"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787843"
 ---
 # <a name="tutorial-create-a-template-pack"></a>教學課程：建立範本套件
 
-透過 .NET Core，您可以建立及部署能產生專案、檔案，甚至是資源的範本。 此教學課程是指導您如何建立、安裝及解除安裝能搭配 `dotnet new` 命令使用之範的本系列文章第三部分。
+透過 .NET Core，您可以建立及部署能產生專案、檔案，甚至是資源的範本。 本教學課程是系列中的第三部分，會教您如何建立、安裝和卸載範本，以搭配 `dotnet new` 命令使用。
 
 在這部分的系列文章中，您將了解如何：
 
@@ -49,7 +49,7 @@ ms.locfileid: "75340162"
 dotnet new console -n templatepack -o .
 ```
 
-`-n` 參數會將 _.csproj_ 檔案名稱設定為 _templatepack.csproj_，而 `-o` 參數則會在目前的目錄中建立檔案。 您應該會看到類似以下輸出的結果。
+`-n` 參數會將 _.csproj_檔案名設定為_templatepack_。 `-o` 參數會在目前的目錄中建立檔案。 您應該會看到類似以下輸出的結果。
 
 ```console
 C:\working> dotnet new console -n templatepack -o .
@@ -91,7 +91,7 @@ Restore succeeded.
 </Project>
 ```
 
-上面 XML 中的 `<PropertyGroup>` 設定會被分成三個群組。 第一個群組會處理 NuGet 套件的必要屬性。 三個 `<Package` 設定和用來在 NuGet 摘要上識別您套件的 NuGet 套件屬性有關。 特別是 `<PacakgeId>` 值，其是用來透過單一名稱 (而非目錄路徑) 將範本套件解除安裝。 它也可以用來從 NuGet 摘要安裝範本套件。 其餘的設定 (例如 `<Title>` 和 `<Tags>`) 都與顯示在 NuGet 摘要上的中繼資料有關。 如需 NuGet 設定的詳細資訊，請參閱 [NuGet 和 MSBuild 屬性](/nuget/reference/msbuild-targets)。
+上面 XML 中的 `<PropertyGroup>` 設定會被分成三個群組。 第一個群組會處理 NuGet 套件的必要屬性。 三個 `<Package` 設定和用來在 NuGet 摘要上識別您套件的 NuGet 套件屬性有關。 特別是 `<PackageId>` 值，其是用來透過單一名稱 (而非目錄路徑) 將範本套件解除安裝。 它也可以用來從 NuGet 摘要安裝範本套件。 其餘的設定 (例如 `<Title>` 和 `<PackageTags>`) 都與顯示在 NuGet 摘要上的中繼資料有關。 如需 NuGet 設定的詳細資訊，請參閱 [NuGet 和 MSBuild 屬性](/nuget/reference/msbuild-targets)。
 
 必須設定 `<TargetFramework>` 設定，來使 MSBuild 能在您執行封裝命令以編譯及封裝專案時能夠正常執行。
 
@@ -178,7 +178,7 @@ Currently installed items:
 
 執行 `dotnet new -u AdatumCorporation.Utility.Templates` 來將範本解除安裝。 `dotnet new` 命令將會輸出說明資訊，其應該會省略您先前所安裝的範本。
 
-恭喜您！ 您已安裝並解除安裝範本套件。 
+恭喜您！ 您已安裝並解除安裝範本套件。
 
 ## <a name="next-steps"></a>後續步驟
 

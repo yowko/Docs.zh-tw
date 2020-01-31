@@ -2,21 +2,21 @@
 title: ICorDebugDataTarget3 介面
 ms.date: 03/30/2017
 ms.assetid: f477af85-994f-4df0-ae78-404ed252bf49
-ms.openlocfilehash: 5f91db291396589a916933bdc7c2a2390dd61a5d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04e7b9a064d4a06a06b8a1518f06092ba79a3561
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136673"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783496"
 ---
 # <a name="icordebugdatatarget3-interface"></a>ICorDebugDataTarget3 介面
-以邏輯方式擴充[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)介面，以提供已載入模組的相關資訊。  
+以邏輯方式擴充[ICorDebugDataTarget](icordebugdatatarget-interface.md)介面，以提供已載入模組的相關資訊。  
   
 ## <a name="method"></a>方法  
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetLoadedModules 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-getloadedmodules-method.md)|取得到目前為止已載入的模組清單。|  
+|[GetLoadedModules 方法](icordebugdatatarget3-getloadedmodules-method.md)|取得到目前為止已載入的模組清單。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -34,5 +34,5 @@ ms.locfileid: "73136673"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

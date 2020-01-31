@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-ms.openlocfilehash: 34744132442440ef160841db5a50bf75355f2410
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b83be5e79c533e7e5a2468a12a0793d300700428
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445154"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866633"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>ICorProfilerCallback::AssemblyLoadStarted 方法
 通知分析工具已載入元件。  
@@ -32,12 +32,14 @@ HRESULT AssemblyLoadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a>參數  
- `assemblyId`  
- 在識別要載入的元件。  
-  
+## <a name="parameters"></a>參數
+
+- `assemblyId`
+
+  中的 \[] 可識別正在載入的元件。
+
 ## <a name="remarks"></a>備註  
- 在呼叫[ICorProfilerCallback：： AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md)方法之前，`assemblyId` 的值對資訊要求而言是不正確。  
+ 在呼叫[ICorProfilerCallback：： AssemblyLoadFinished](icorprofilercallback-assemblyloadfinished-method.md)方法之前，`assemblyId` 的值對資訊要求而言是不正確。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -48,6 +50,6 @@ HRESULT AssemblyLoadStarted(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)

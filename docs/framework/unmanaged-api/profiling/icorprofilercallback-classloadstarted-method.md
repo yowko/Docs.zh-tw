@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f728de8-45c2-45a5-ac4a-45660bd36ecf
 topic_type:
 - apiref
-ms.openlocfilehash: c9faff2d616d03d823c80fb2d9cd71d5fd5759ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5b465216da39e8cf207f0614519720453c384ae9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445076"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866581"
 ---
 # <a name="icorprofilercallbackclassloadstarted-method"></a>ICorProfilerCallback::ClassLoadStarted 方法
 通知分析工具，正在載入類別。  
@@ -32,12 +32,14 @@ HRESULT ClassLoadStarted(
     [in] ClassID classId);  
 ```  
   
-## <a name="parameters"></a>參數  
- `classId`  
- 在識別要載入的類別。  
-  
+## <a name="parameters"></a>參數
+
+- `classId`
+
+  中的 \[] 可識別正在載入的類別。
+
 ## <a name="remarks"></a>備註  
- 在呼叫[ICorProfilerCallback：： ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)方法之前，`classId` 的值對資訊要求而言是不正確。  
+ 在呼叫[ICorProfilerCallback：： ClassLoadFinished](icorprofilercallback-classloadfinished-method.md)方法之前，`classId` 的值對資訊要求而言是不正確。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -48,6 +50,6 @@ HRESULT ClassLoadStarted(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)

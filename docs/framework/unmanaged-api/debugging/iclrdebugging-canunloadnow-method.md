@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 62e0630c-8cb7-45d2-b622-5a472abfd8cf
 topic_type:
 - apiref
-ms.openlocfilehash: 4eb6682ac5a8b7788d97f752f249d85886fba0b6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41b2e009f8f017a72147232015ea2357ae922ca1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111643"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793644"
 ---
 # <a name="iclrdebuggingcanunloadnow-method"></a>ICLRDebugging::CanUnloadNow 方法
-判斷[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)介面所提供的程式庫是否仍在使用中，或是否可以卸載。  
+判斷[ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md)介面所提供的程式庫是否仍在使用中，或是否可以卸載。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ HRESULT CanUnloadNow(HMODULE hModule);
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- 這個方法會檢查是否已釋放 `ICorDebug*` 介面的所有實例，而且目前沒有任何執行緒在[ICLRDebugging：： OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法的呼叫中。  
+ 這個方法會檢查是否已釋放 `ICorDebug*` 介面的所有實例，而且目前沒有任何執行緒在[ICLRDebugging：： OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md)方法的呼叫中。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -56,9 +56,9 @@ HRESULT CanUnloadNow(HMODULE hModule);
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

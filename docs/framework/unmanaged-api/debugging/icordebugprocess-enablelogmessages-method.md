@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 14a4e5a3-3eaf-4f53-9dd1-762726963a23
 topic_type:
 - apiref
-ms.openlocfilehash: 4134062be93a2fc5e76949d465a7b5822556b408
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6b1ccffa4f24122e643a64270f44945afdbc8fff
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128896"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792642"
 ---
 # <a name="icordebugprocessenablelogmessages-method"></a>ICorDebugProcess::EnableLogMessages 方法
 啟用和停用將記錄訊息傳送至偵錯工具的功能。  
@@ -36,7 +36,7 @@ HRESULT EnableLogMessages([in]BOOL fOnOff);
  [in] `true` 啟用記錄訊息的傳輸;`false` 會停用傳輸。  
   
 ## <a name="remarks"></a>備註  
- 只有在發生[ICorDebugManagedCallback：： CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)回呼之後，這個方法才有效。  
+ 只有在發生[ICorDebugManagedCallback：： CreateProcess](icordebugmanagedcallback-createprocess-method.md)回呼之後，這個方法才有效。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
