@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ca8ea534-e441-47b8-be85-466410988c0a
 topic_type:
 - apiref
-ms.openlocfilehash: b17ab9382e5195881e5629d482e4327fc67562f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4fe18b4f07e6f282571b13faff5ce51b66ce416b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449598"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868482"
 ---
-# <a name="icorprofilerinfo3setenterleavefunctionhooks3withinfo-method"></a><span data-ttu-id="430d4-102">ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo 方法</span><span class="sxs-lookup"><span data-stu-id="430d4-102">ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo Method</span></span>
-<span data-ttu-id="430d4-103">指定將在 managed 函式的[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)和[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)勾點上呼叫的分析工具所執行的函數。</span><span class="sxs-lookup"><span data-stu-id="430d4-103">Specifies the profiler-implemented functions that will be called on the [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) hooks of managed functions.</span></span>  
+# <a name="icorprofilerinfo3setenterleavefunctionhooks3withinfo-method"></a><span data-ttu-id="098e5-102">ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo 方法</span><span class="sxs-lookup"><span data-stu-id="098e5-102">ICorProfilerInfo3::SetEnterLeaveFunctionHooks3WithInfo Method</span></span>
+<span data-ttu-id="098e5-103">指定將在 managed 函式的[FunctionEnter3WithInfo](functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](functionleave3withinfo-function.md)和[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)勾點上呼叫的分析工具所執行的函數。</span><span class="sxs-lookup"><span data-stu-id="098e5-103">Specifies the profiler-implemented functions that will be called on the [FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) hooks of managed functions.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="430d4-104">語法</span><span class="sxs-lookup"><span data-stu-id="430d4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="098e5-104">語法</span><span class="sxs-lookup"><span data-stu-id="098e5-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT SetEnterLeaveFunctionHooks3WithInfo(  
@@ -34,42 +34,42 @@ HRESULT SetEnterLeaveFunctionHooks3WithInfo(
             [in] FunctionTailcall3WithInfo *pFuncTailcall3);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="430d4-105">參數</span><span class="sxs-lookup"><span data-stu-id="430d4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="098e5-105">參數</span><span class="sxs-lookup"><span data-stu-id="098e5-105">Parameters</span></span>  
  `pFuncEnter3`  
- <span data-ttu-id="430d4-106">在要當做 `FunctionEnter3WithInfo` 回呼使用的實作為指標。</span><span class="sxs-lookup"><span data-stu-id="430d4-106">[in] A pointer to the implementation to be used as the `FunctionEnter3WithInfo` callback.</span></span>  
+ <span data-ttu-id="098e5-106">在要當做 `FunctionEnter3WithInfo` 回呼使用的實作為指標。</span><span class="sxs-lookup"><span data-stu-id="098e5-106">[in] A pointer to the implementation to be used as the `FunctionEnter3WithInfo` callback.</span></span>  
   
  `pFuncLeave3`  
- <span data-ttu-id="430d4-107">在要當做 `FunctionLeave3WithInfo` 回呼使用的實作為指標。</span><span class="sxs-lookup"><span data-stu-id="430d4-107">[in] A pointer to the implementation to be used as the `FunctionLeave3WithInfo` callback.</span></span>  
+ <span data-ttu-id="098e5-107">在要當做 `FunctionLeave3WithInfo` 回呼使用的實作為指標。</span><span class="sxs-lookup"><span data-stu-id="098e5-107">[in] A pointer to the implementation to be used as the `FunctionLeave3WithInfo` callback.</span></span>  
   
  `pFuncTailcall3`  
- <span data-ttu-id="430d4-108">在要當做 `FunctionTailcall3WithInfo` 回呼使用的實作為指標。</span><span class="sxs-lookup"><span data-stu-id="430d4-108">[in] A pointer to the implementation to be used as the `FunctionTailcall3WithInfo` callback.</span></span>  
+ <span data-ttu-id="098e5-108">在要當做 `FunctionTailcall3WithInfo` 回呼使用的實作為指標。</span><span class="sxs-lookup"><span data-stu-id="098e5-108">[in] A pointer to the implementation to be used as the `FunctionTailcall3WithInfo` callback.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="430d4-109">備註</span><span class="sxs-lookup"><span data-stu-id="430d4-109">Remarks</span></span>  
- <span data-ttu-id="430d4-110">[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)和[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)勾點提供了堆疊框架和引數檢查。</span><span class="sxs-lookup"><span data-stu-id="430d4-110">The [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md), [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md) hooks provide stack frame and argument inspection.</span></span> <span data-ttu-id="430d4-111">若要存取該資訊，必須設定 `COR_PRF_ENABLE_FUNCTION_ARGS`、`COR_PRF_ENABLE_FUNCTION_RETVAL`和/或 `COR_PRF_ENABLE_FRAME_INFO` 旗標。</span><span class="sxs-lookup"><span data-stu-id="430d4-111">To access that information, the `COR_PRF_ENABLE_FUNCTION_ARGS`, `COR_PRF_ENABLE_FUNCTION_RETVAL`, and/or `COR_PRF_ENABLE_FRAME_INFO` flags have to be set.</span></span> <span data-ttu-id="430d4-112">分析工具可以使用[ICorProfilerInfo：： SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)方法來設定事件旗標，然後使用 `SetEnterLeaveFunctionHooks3WithInfo` 方法來註冊此函式的實作為。</span><span class="sxs-lookup"><span data-stu-id="430d4-112">The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags, and then use the `SetEnterLeaveFunctionHooks3WithInfo` method to register your implementation of this function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="098e5-109">備註</span><span class="sxs-lookup"><span data-stu-id="098e5-109">Remarks</span></span>  
+ <span data-ttu-id="098e5-110">[FunctionEnter3WithInfo](functionenter3withinfo-function.md)、 [FunctionLeave3WithInfo](functionleave3withinfo-function.md)和[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)勾點提供了堆疊框架和引數檢查。</span><span class="sxs-lookup"><span data-stu-id="098e5-110">The [FunctionEnter3WithInfo](functionenter3withinfo-function.md), [FunctionLeave3WithInfo](functionleave3withinfo-function.md), and [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md) hooks provide stack frame and argument inspection.</span></span> <span data-ttu-id="098e5-111">若要存取該資訊，必須設定 `COR_PRF_ENABLE_FUNCTION_ARGS`、`COR_PRF_ENABLE_FUNCTION_RETVAL`和/或 `COR_PRF_ENABLE_FRAME_INFO` 旗標。</span><span class="sxs-lookup"><span data-stu-id="098e5-111">To access that information, the `COR_PRF_ENABLE_FUNCTION_ARGS`, `COR_PRF_ENABLE_FUNCTION_RETVAL`, and/or `COR_PRF_ENABLE_FRAME_INFO` flags have to be set.</span></span> <span data-ttu-id="098e5-112">分析工具可以使用[ICorProfilerInfo：： SetEventMask](icorprofilerinfo-seteventmask-method.md)方法來設定事件旗標，然後使用 `SetEnterLeaveFunctionHooks3WithInfo` 方法來註冊此函式的實作為。</span><span class="sxs-lookup"><span data-stu-id="098e5-112">The profiler can use the [ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md) method to set the event flags, and then use the `SetEnterLeaveFunctionHooks3WithInfo` method to register your implementation of this function.</span></span>  
   
- <span data-ttu-id="430d4-113">一次只能有一組回呼處於作用中狀態，而最新的版本會優先使用。</span><span class="sxs-lookup"><span data-stu-id="430d4-113">Only one set of callbacks may be active at a time, and the newest version takes precedence.</span></span> <span data-ttu-id="430d4-114">因此，如果 profiler 同時呼叫[SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)和 `SetEnterLeaveFunctionHooks3WithInfo`，就會使用 `SetEnterLeaveFunctionHooks3WithInfo`。</span><span class="sxs-lookup"><span data-stu-id="430d4-114">Therefore, if a profiler calls both [SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md) and `SetEnterLeaveFunctionHooks3WithInfo`, `SetEnterLeaveFunctionHooks3WithInfo` is used.</span></span>  
+ <span data-ttu-id="098e5-113">一次只能有一組回呼處於作用中狀態，而最新的版本會優先使用。</span><span class="sxs-lookup"><span data-stu-id="098e5-113">Only one set of callbacks may be active at a time, and the newest version takes precedence.</span></span> <span data-ttu-id="098e5-114">因此，如果 profiler 同時呼叫[SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)和 `SetEnterLeaveFunctionHooks3WithInfo`，就會使用 `SetEnterLeaveFunctionHooks3WithInfo`。</span><span class="sxs-lookup"><span data-stu-id="098e5-114">Therefore, if a profiler calls both [SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md) and `SetEnterLeaveFunctionHooks3WithInfo`, `SetEnterLeaveFunctionHooks3WithInfo` is used.</span></span>  
   
- <span data-ttu-id="430d4-115">只能從分析工具的[ICorProfilerCallback：： Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)回呼呼叫 `SetEnterLeaveFunctionHooks3WithInfo` 方法。</span><span class="sxs-lookup"><span data-stu-id="430d4-115">The `SetEnterLeaveFunctionHooks3WithInfo` method may be called only from the profiler's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) callback.</span></span>  
+ <span data-ttu-id="098e5-115">只能從分析工具的[ICorProfilerCallback：： Initialize](icorprofilercallback-initialize-method.md)回呼呼叫 `SetEnterLeaveFunctionHooks3WithInfo` 方法。</span><span class="sxs-lookup"><span data-stu-id="098e5-115">The `SetEnterLeaveFunctionHooks3WithInfo` method may be called only from the profiler's [ICorProfilerCallback::Initialize](icorprofilercallback-initialize-method.md) callback.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="430d4-116">需求</span><span class="sxs-lookup"><span data-stu-id="430d4-116">Requirements</span></span>  
- <span data-ttu-id="430d4-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="430d4-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="098e5-116">需求</span><span class="sxs-lookup"><span data-stu-id="098e5-116">Requirements</span></span>  
+ <span data-ttu-id="098e5-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="098e5-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="430d4-118">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="430d4-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="098e5-118">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="098e5-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="430d4-119">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="430d4-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="098e5-119">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="098e5-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="430d4-120">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="430d4-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="098e5-120">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="098e5-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="430d4-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="430d4-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="098e5-121">請參閱</span><span class="sxs-lookup"><span data-stu-id="098e5-121">See also</span></span>
 
-- [<span data-ttu-id="430d4-122">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="430d4-122">SetEnterLeaveFunctionHooks3</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
-- [<span data-ttu-id="430d4-123">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="430d4-123">FunctionEnter3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
-- [<span data-ttu-id="430d4-124">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="430d4-124">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
-- [<span data-ttu-id="430d4-125">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="430d4-125">FunctionTailcall3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [<span data-ttu-id="430d4-126">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="430d4-126">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [<span data-ttu-id="430d4-127">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="430d4-127">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [<span data-ttu-id="430d4-128">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="430d4-128">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [<span data-ttu-id="430d4-129">分析全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="430d4-129">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
-- [<span data-ttu-id="430d4-130">ICorProfilerInfo3 介面</span><span class="sxs-lookup"><span data-stu-id="430d4-130">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="430d4-131">分析介面</span><span class="sxs-lookup"><span data-stu-id="430d4-131">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="430d4-132">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="430d4-132">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="098e5-122">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="098e5-122">SetEnterLeaveFunctionHooks3</span></span>](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
+- [<span data-ttu-id="098e5-123">FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="098e5-123">FunctionEnter3</span></span>](functionenter3-function.md)
+- [<span data-ttu-id="098e5-124">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="098e5-124">FunctionLeave3</span></span>](functionleave3-function.md)
+- [<span data-ttu-id="098e5-125">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="098e5-125">FunctionTailcall3</span></span>](functiontailcall3-function.md)
+- [<span data-ttu-id="098e5-126">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="098e5-126">FunctionEnter3WithInfo</span></span>](functionenter3withinfo-function.md)
+- [<span data-ttu-id="098e5-127">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="098e5-127">FunctionLeave3WithInfo</span></span>](functionleave3withinfo-function.md)
+- [<span data-ttu-id="098e5-128">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="098e5-128">FunctionTailcall3WithInfo</span></span>](functiontailcall3withinfo-function.md)
+- [<span data-ttu-id="098e5-129">分析全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="098e5-129">Profiling Global Static Functions</span></span>](profiling-global-static-functions.md)
+- [<span data-ttu-id="098e5-130">ICorProfilerInfo3 介面</span><span class="sxs-lookup"><span data-stu-id="098e5-130">ICorProfilerInfo3 Interface</span></span>](icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="098e5-131">分析介面</span><span class="sxs-lookup"><span data-stu-id="098e5-131">Profiling Interfaces</span></span>](profiling-interfaces.md)
+- [<span data-ttu-id="098e5-132">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="098e5-132">Profiling</span></span>](index.md)

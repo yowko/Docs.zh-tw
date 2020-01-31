@@ -130,8 +130,6 @@
               href: how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md
             - name: 設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務
               href: configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md
-            - name: 判斷安裝的 WPF 版本
-              href: how-to-determine-the-installed-version-of-wpf.md
             - name: 偵測有無安裝 .NET Framework 3.0
               href: how-to-detect-whether-the-net-framework-3-0-is-installed.md
             - name: 偵測有無安裝 .NET Framework 3.5
