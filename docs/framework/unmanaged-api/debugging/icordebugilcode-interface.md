@@ -10,34 +10,34 @@ api_type:
 ms.assetid: 51c4de0c-3813-4142-be25-a85bb84efb90
 topic_type:
 - apiref
-ms.openlocfilehash: 8ca47f071288ce50cf6008aa28f66d0b7dbcbcf8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d96b747bccebe36cce2377d325a678c280c8e693
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138630"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782469"
 ---
-# <a name="icordebugilcode-interface"></a><span data-ttu-id="0a648-102">ICorDebugILCode 介面</span><span class="sxs-lookup"><span data-stu-id="0a648-102">ICorDebugILCode Interface</span></span>
-<span data-ttu-id="0a648-103">[.NET Framework 4.5.2 與更新版本提供支援]</span><span class="sxs-lookup"><span data-stu-id="0a648-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="icordebugilcode-interface"></a><span data-ttu-id="da52b-102">ICorDebugILCode 介面</span><span class="sxs-lookup"><span data-stu-id="da52b-102">ICorDebugILCode Interface</span></span>
+<span data-ttu-id="da52b-103">[.NET Framework 4.5.2 與更新版本提供支援]</span><span class="sxs-lookup"><span data-stu-id="da52b-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="0a648-104">代表中繼語言 (IL) 程式碼的區段。</span><span class="sxs-lookup"><span data-stu-id="0a648-104">Represents a segment of intermediate language (IL) code.</span></span>  
+ <span data-ttu-id="da52b-104">代表中繼語言 (IL) 程式碼的區段。</span><span class="sxs-lookup"><span data-stu-id="da52b-104">Represents a segment of intermediate language (IL) code.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0a648-105">方法</span><span class="sxs-lookup"><span data-stu-id="0a648-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="da52b-105">方法</span><span class="sxs-lookup"><span data-stu-id="da52b-105">Methods</span></span>  
   
-|<span data-ttu-id="0a648-106">方法</span><span class="sxs-lookup"><span data-stu-id="0a648-106">Method</span></span>|<span data-ttu-id="0a648-107">描述</span><span class="sxs-lookup"><span data-stu-id="0a648-107">Description</span></span>|  
+|<span data-ttu-id="da52b-106">方法</span><span class="sxs-lookup"><span data-stu-id="da52b-106">Method</span></span>|<span data-ttu-id="da52b-107">描述</span><span class="sxs-lookup"><span data-stu-id="da52b-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0a648-108">GetEHClauses 方法</span><span class="sxs-lookup"><span data-stu-id="0a648-108">GetEHClauses Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)|<span data-ttu-id="0a648-109">傳回針對此 IL 定義之例外狀況處理 (EH) 子句清單的指標。</span><span class="sxs-lookup"><span data-stu-id="0a648-109">Returns a pointer to a list of exception handling (EH) clauses that are defined for this IL.</span></span>|  
+|[<span data-ttu-id="da52b-108">GetEHClauses 方法</span><span class="sxs-lookup"><span data-stu-id="da52b-108">GetEHClauses Method</span></span>](icordebugilcode-getehclauses-method.md)|<span data-ttu-id="da52b-109">傳回針對此 IL 定義之例外狀況處理 (EH) 子句清單的指標。</span><span class="sxs-lookup"><span data-stu-id="da52b-109">Returns a pointer to a list of exception handling (EH) clauses that are defined for this IL.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0a648-110">需求</span><span class="sxs-lookup"><span data-stu-id="0a648-110">Requirements</span></span>  
- <span data-ttu-id="0a648-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0a648-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da52b-110">需求</span><span class="sxs-lookup"><span data-stu-id="da52b-110">Requirements</span></span>  
+ <span data-ttu-id="da52b-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="da52b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0a648-112">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0a648-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="da52b-112">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="da52b-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0a648-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0a648-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="da52b-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="da52b-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0a648-114">**.NET framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a648-114">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="da52b-114">**.NET framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da52b-114">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a648-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="0a648-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da52b-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="da52b-115">See also</span></span>
 
-- [<span data-ttu-id="0a648-116">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="0a648-116">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="0a648-117">偵錯</span><span class="sxs-lookup"><span data-stu-id="0a648-117">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="da52b-116">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="da52b-116">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="da52b-117">偵錯</span><span class="sxs-lookup"><span data-stu-id="da52b-117">Debugging</span></span>](index.md)
