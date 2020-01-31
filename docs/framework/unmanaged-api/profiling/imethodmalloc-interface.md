@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c8ab5dc-557c-473a-82f2-6e403eca7dac
 topic_type:
 - apiref
-ms.openlocfilehash: 3f840154d472dbcea7dfef7ba93e38c80b836734
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e9cbf4551c2f8b183e9e6c37a74b13aff3a19ec1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447556"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860952"
 ---
 # <a name="imethodmalloc-interface"></a>IMethodMalloc 介面
 提供方法來為新的 Microsoft 中繼語言（MSIL）函數主體配置記憶體。  
@@ -31,7 +31,7 @@ ms.locfileid: "74447556"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Alloc 方法](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|嘗試為新的 MSIL 函數主體配置指定的記憶體數量。|  
+|[Alloc 方法](imethodmalloc-alloc-method.md)|嘗試為新的 MSIL 函數主體配置指定的記憶體數量。|  
   
 ## <a name="remarks"></a>備註  
  每個配置器都是模組特有的，並可確保函式主體會位於模組基底的正位移。 高於模組基底的記憶體可能非常寶貴，因此應該使用配置器只為函式主體配置記憶體。  
@@ -47,4 +47,4 @@ ms.locfileid: "74447556"
   
 ## <a name="see-also"></a>請參閱
 
-- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [分析介面](profiling-interfaces.md)

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eb61ad85580310c7becc2a1a2237efe188fbecf0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348169"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794585"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>教學課程：搭配 ML.NET 影像分類 API 使用傳輸學習的自動化視覺效果檢查
 
@@ -140,10 +140,10 @@ SDNET2018 是影像資料集，其中包含已破裂和未破裂之實體結構�
 
         `ModelInput` 包含下列屬性：
 
-        - `ImagePath` 是儲存映射的完整路徑。
-        - `Label` 是影像所屬的類別目錄。 這是要預測的值。
         - `Image` 是影像的 `byte[]` 標記法。 此模型預期影像資料屬於這種定型類型。
         - `LabelAsKey` 是 `Label`的數值標記法。
+        - `ImagePath` 是儲存映射的完整路徑。
+        - `Label` 是影像所屬的類別目錄。 這是要預測的值。
 
         只有 `Image` 和 `LabelAsKey` 會用來定型模型並進行預測。 為了方便存取原始的影像檔案名稱和類別，會保留 [`ImagePath`] 和 [`Label`] 屬性。
 
@@ -171,7 +171,7 @@ SDNET2018 是影像資料集，其中包含已破裂和未破裂之實體結構�
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
-1. 然後，使用[MLCoNtext](xref:Microsoft.ML.MLContext)的新實例來初始化 `mlContext` 變數。
+1. 以[MLCoNtext](xref:Microsoft.ML.MLContext)的新實例初始化 `mlContext` 變數。
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: 07222809d62b207730ddad3c87b8fb60e1602bc3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: aaa726ac90fd75a12054c18be6ec08a1372c1128
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744460"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794203"
 ---
 # <a name="walkthrough-host-a-3d-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Forms 中裝載 3D WPF 複合控制項
 
-本逐步解說將示範如何建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項，並使用 <xref:System.Windows.Forms.Integration.ElementHost> 控制項將它裝載在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項和表單中。
+本逐步解說將示範如何建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項，並使用 <xref:System.Windows.Forms.Integration.ElementHost> 控制項將它裝載在 Windows Forms 控制項和表單中。
 
-在此逐步解說中，您將會執行包含兩個子控制項的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>。 <xref:System.Windows.Controls.UserControl> 會顯示三維（3D）圓錐圖。 與 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]相比，轉譯3D 物件比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 更容易。 因此，裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 類別以在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中建立3D 圖形是合理的。
+在此逐步解說中，您將會執行包含兩個子控制項的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl>。 <xref:System.Windows.Controls.UserControl> 會顯示三維（3D）圓錐圖。 與 Windows Forms 相比，轉譯3D 物件比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 更容易。 因此，裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.UserControl> 類別以在 Windows Forms 中建立3D 圖形是合理的。
 
 這個逐步解說中所述的工作包括：
 

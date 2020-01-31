@@ -12,12 +12,12 @@ api_type:
 ms.assetid: b91765e4-82db-46f9-a6dc-6b80610276af
 topic_type:
 - apiref
-ms.openlocfilehash: 553a92812f009ca1033f1bdcda0ea3722c5f01e3
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 20e2e3f177b12221832786f4fab86635098d1989
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937828"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790496"
 ---
 # <a name="ilcodekind-enumeration"></a>ILCodeKind 列舉
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -41,7 +41,7 @@ typedef enum ILCodeKind {
 |`ILCODE_REJIT_IL`|偵錯工具有權存取 ReJIT 檢測的資訊。|  
   
 ## <a name="remarks"></a>備註  
- `ILCodeKind` 列舉的成員可以傳遞至[EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)和[GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)方法，以判斷偵錯工具是否可以存取在 profiler ReJIT 檢測中加入的變數，以及[GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)方法來判斷偵錯工具是否可以存取已檢測的 IL。  
+ `ILCodeKind` 列舉的成員可以傳遞至[EnumerateLocalVariablesEx](icordebugilframe4-enumeratelocalvariablesex-method.md)和[GetLocalVariableEx](icordebugilframe4-getlocalvariableex-method.md)方法，以判斷偵錯工具是否可以存取在 profiler ReJIT 檢測中加入的變數，以及[GetCodeEx](icordebugilframe4-getcodeex-method.md)方法來判斷偵錯工具是否可以存取已檢測的 IL。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -54,6 +54,6 @@ typedef enum ILCodeKind {
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
-- [ICorDebugILFrame4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
+- [偵錯列舉](debugging-enumerations.md)
+- [ICorDebugILFrame4 介面](icordebugilframe4-interface.md)
 - [ReJIT：使用說明指南](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

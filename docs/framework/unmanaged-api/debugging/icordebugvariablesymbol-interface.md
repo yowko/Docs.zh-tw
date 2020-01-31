@@ -2,12 +2,12 @@
 title: ICorDebugVariableSymbol 介面
 ms.date: 03/30/2017
 ms.assetid: 0e58b85e-69bd-41ff-bedb-8cdc8be6a7a2
-ms.openlocfilehash: 25ffa55eeeb82d6feaf5696ea96dae81774e3d70
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d17bc92dcae9e906dfe18d7665fbf489d278234
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121905"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790864"
 ---
 # <a name="icordebugvariablesymbol-interface"></a>ICorDebugVariableSymbol 介面
 擷取變數的偵錯符號資訊。  
@@ -16,11 +16,11 @@ ms.locfileid: "73121905"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetName 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getname-method.md)|取得變數的名稱。|  
-|[GetSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getsize-method.md)|取得變數的大小 (以位元組為單位)。|  
-|[GetSlotIndex 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getslotindex-method.md)|取得區域變數的 Managed 位置索引。|  
-|[GetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-getvalue-method.md)|取得變數的值做為位元組陣列。|  
-|[SetValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-setvalue-method.md)|指派位元組陣列的值給變數。|  
+|[GetName 方法](icordebugvariablesymbol-getname-method.md)|取得變數的名稱。|  
+|[GetSize 方法](icordebugvariablesymbol-getsize-method.md)|取得變數的大小 (以位元組為單位)。|  
+|[GetSlotIndex 方法](icordebugvariablesymbol-getslotindex-method.md)|取得區域變數的 Managed 位置索引。|  
+|[GetValue 方法](icordebugvariablesymbol-getvalue-method.md)|取得變數的值做為位元組陣列。|  
+|[SetValue 方法](icordebugvariablesymbol-setvalue-method.md)|指派位元組陣列的值給變數。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -38,5 +38,5 @@ ms.locfileid: "73121905"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

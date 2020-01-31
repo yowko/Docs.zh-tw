@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd9936a6-cc24-4869-8761-0988664464e6
 topic_type:
 - apiref
-ms.openlocfilehash: 97c4e6d3c9de7dcb8d399a956a4a58c49ca6e3b9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bab6b7f683b5563cf362366dfb007f83caeee12d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131878"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791928"
 ---
 # <a name="icordebugremotetarget-interface"></a>ICorDebugRemoteTarget 介面
 提供可讓開發人員對通用語言執行平台 (CLR) 環境中的 Silverlight 應用程式進行偵錯的方法。  
@@ -43,7 +43,7 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 |方法|描述|  
 |------------|-----------------|  
-|[ICorDebugRemoteTarget::GetHostName 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-gethostname-method.md)|傳回遠端電腦的主機名稱或 IP 位址。|  
+|[ICorDebugRemoteTarget::GetHostName 方法](icordebugremotetarget-gethostname-method.md)|傳回遠端電腦的主機名稱或 IP 位址。|  
   
 ## <a name="remarks"></a>備註  
  Windows 95、Windows 98、Windows ME 或非 x86 的平台 (例如 IA-64 和 AMD64) 不支援混合模式 (也就是 Managed 和機器碼) 偵錯。  
@@ -59,6 +59,6 @@ interface ICorDebugRemoteTarget  : IUnknown
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugRemote 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugRemote 介面](icordebugremote-interface.md)
+- [ICorDebug 介面](icordebug-interface.md)
+- [偵錯介面](debugging-interfaces.md)

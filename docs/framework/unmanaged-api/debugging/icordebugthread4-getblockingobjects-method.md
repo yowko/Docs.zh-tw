@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7e6c54e-7be9-4e52-bbb4-95f52458e8e4
 topic_type:
 - apiref
-ms.openlocfilehash: e4d5582b7a3df16db58ea0ed001dcbffcdcaab79
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 39833b689f28437b4241d9cb15fb4a92b2f9bcc3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122454"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791380"
 ---
 # <a name="icordebugthread4getblockingobjects-method"></a>ICorDebugThread4::GetBlockingObjects 方法
-提供[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構的已排序列舉，以提供執行緒封鎖資訊。  
+提供[CorDebugBlockingObject](cordebugblockingobject-structure.md)結構的已排序列舉，以提供執行緒封鎖資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,7 +34,7 @@ HRESULT GetBlockingObjects (
   
 ## <a name="parameters"></a>參數  
  `ppBlockingObjectEnum`  
- 脫銷[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構之已排序列舉的指標。  
+ 脫銷[CorDebugBlockingObject](cordebugblockingobject-structure.md)結構之已排序列舉的指標。  
   
 ## <a name="remarks"></a>備註  
  傳回之列舉中的第一個專案會對應至封鎖執行緒的第一個結構。 第二個元素對應至在執行非同步程序呼叫（APC）時，在第一個專案上被封鎖時所遇到的封鎖專案，依此類推。  
@@ -58,6 +58,6 @@ HRESULT GetBlockingObjects (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugThread4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugThread4 介面](icordebugthread4-interface.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

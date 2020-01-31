@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-ms.openlocfilehash: 8fc2abd0728115edbbfae42958d8013029523ed1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0c283232ff8eca1af9f3ff4448fb7f4c81d554f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111368"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789040"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary 方法
 
@@ -56,13 +56,13 @@ HRESULT ProvideLibrary(
 
 |HRESULT|描述|
 |-------------|-----------------|
-|S_OK|已成功完成命令。|
+|S_OK|此方法已順利完成。|
 
 ## <a name="exceptions"></a>例外狀況
 
 ## <a name="remarks"></a>備註
 
-`ProvideLibrary` 可讓偵錯工具提供用來偵測特定 CLR 檔案（例如 mscordbi.dll 和 mscordacwks）所需的模組。 模組控制碼必須保持有效，直到呼叫[ICLRDebugging：： CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)方法指出它們可能被釋放為止，此時呼叫端會負責釋放控制碼。
+`ProvideLibrary` 可讓偵錯工具提供用來偵測特定 CLR 檔案（例如 mscordbi.dll 和 mscordacwks）所需的模組。 模組控制碼必須保持有效，直到呼叫[ICLRDebugging：： CanUnloadNow](iclrdebugging-canunloadnow-method.md)方法指出它們可能被釋放為止，此時呼叫端會負責釋放控制碼。
 
 偵錯工具可能會使用任何可用的方法來尋找或購買偵錯工具模組。
 
@@ -83,5 +83,5 @@ HRESULT ProvideLibrary(
 
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

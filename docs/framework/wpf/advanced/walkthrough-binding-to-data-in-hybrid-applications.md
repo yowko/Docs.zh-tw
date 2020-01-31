@@ -8,16 +8,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976586"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794215"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>逐步解說：繫結至混合應用程式中的資料
 
-將資料來源系結至控制項，對於提供使用者存取基礎資料（不論是使用 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 還是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]）而言，是不可或缺的。 本逐步解說會示範如何在包含 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項的混合式應用程式中使用資料系結。
+將資料來源系結至控制項，對於提供使用者存取基礎資料（不論是使用 Windows Forms 還是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]）而言，是不可或缺的。 本逐步解說會示範如何在包含 Windows Forms 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項的混合式應用程式中使用資料系結。
 
 這個逐步解說中所述的工作包括：
 
@@ -39,11 +39,11 @@ ms.locfileid: "73976586"
 
 完成後，您就會了解混合應用程式中的資料繫結功能。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 您需要下列元件才能完成此逐步解說：
 
-- Visual Studio。
+- Visual Studio.
 
 - 在 Microsoft SQL Server 上執行之 Northwind 範例資料庫的存取權。
 
@@ -53,7 +53,7 @@ ms.locfileid: "73976586"
 
 1. 建立名為 `WPFWithWFAndDatabinding`的 WPF 應用程式專案。
 
-2. 在方案總管中，新增下列組件的參考。
+2. 在 [方案總管] 中，加入下列組件的參考。
 
     - WindowsFormsIntegration
 
@@ -61,7 +61,7 @@ ms.locfileid: "73976586"
 
 3. 在 WPF 設計工具中開啟 Mainwindow.xaml。
 
-4. 在 <xref:System.Windows.Window> 元素中，新增下列 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 命名空間對應。
+4. 在 <xref:System.Windows.Window> 元素中，新增下列 Windows Forms 命名空間對應。
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -113,7 +113,7 @@ ms.locfileid: "73976586"
 
 ## <a name="displaying-data-by-using-interoperation"></a>使用交互操作來顯示資料
 
-對應至所選客戶的訂單會顯示在名為 `dataGridView1`的 <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> 控制項中。 `dataGridView1` 控制項系結至程式碼後置檔案中的資料來源。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控制項是這個 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項的父系。
+對應至所選客戶的訂單會顯示在名為 `dataGridView1`的 <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> 控制項中。 `dataGridView1` 控制項系結至程式碼後置檔案中的資料來源。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 控制項是這個 Windows Forms 控制項的父系。
 
 ### <a name="to-display-data-in-the-datagridview-control"></a>在 DataGridView 控制項中顯示資料
 
@@ -179,7 +179,7 @@ ms.locfileid: "73976586"
      [!code-csharp[WPFWithWFAndDatabinding#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]
 
-10. 按 F5 鍵建置並執行應用程式。
+10. 按 F5 建置並執行應用程式。
 
 ## <a name="see-also"></a>請參閱
 

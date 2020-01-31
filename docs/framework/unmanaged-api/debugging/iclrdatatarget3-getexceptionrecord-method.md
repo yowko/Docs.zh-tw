@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 6643c2af-2ee6-4789-aa25-1d8eaf500c94
 topic_type:
 - apiref
-ms.openlocfilehash: d5e7841844c8fa500935eb9cba06f4e2fe95d2d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 037e216cb93e3aa6fce28966fc724498024abd52
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111988"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789062"
 ---
 # <a name="iclrdatatarget3getexceptionrecord-method"></a>ICLRDataTarget3::GetExceptionRecord 方法
 由通用語言執行平台 (CLR) 資料存取服務呼叫，用於擷取與目標處理序相關聯的例外狀況記錄。 例如，針對傾印目標，這相當於透過 `ExceptionParam` 引數傳入至 Windows Debug Help Library （DbgHelp）中[MiniDumpWriteDump](/windows/desktop/api/minidumpapiset/nf-minidumpapiset-minidumpwritedump)函式的例外狀況記錄。  
@@ -52,7 +52,7 @@ HRESULT GetExceptionRecord(
 |`HRESULT_FROM_WIN32(ERROR_BAD_LENGTH)`|輸入緩衝區大小等於 `sizeof(MINIDUMP_EXCEPTION)`。|  
   
 ## <a name="remarks"></a>備註  
- [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception)是在 Windows SDK 的 dbghelp 和 imagehlp.dll 中定義的結構。  
+ [MINIDUMP_EXCEPTION](/windows/win32/api/minidumpapiset/ns-minidumpapiset-minidump_exception)是在 Windows SDK 中定義于 dbghelp 和 imagehlp.dll 中的結構。  
   
  此方法是由偵錯應用程式的作者來實作。  
   
@@ -67,6 +67,6 @@ HRESULT GetExceptionRecord(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICLRDataTarget3 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)
-- [GetExceptionContextRecord 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptioncontextrecord-method.md)
-- [GetExceptionThreadID 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-getexceptionthreadid-method.md)
+- [ICLRDataTarget3 介面](iclrdatatarget3-interface.md)
+- [GetExceptionContextRecord 方法](iclrdatatarget3-getexceptioncontextrecord-method.md)
+- [GetExceptionThreadID 方法](iclrdatatarget3-getexceptionthreadid-method.md)

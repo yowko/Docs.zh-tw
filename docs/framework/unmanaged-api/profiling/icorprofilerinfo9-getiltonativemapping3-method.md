@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 1a5a259e6604d906e55166b3fcb770bc37d346c5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5c49d75432980d2f3af77ee040bc6eb20886b027
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444729"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861667"
 ---
 # <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9：： GetILToNativeMapping3 方法
 
@@ -31,23 +31,27 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
                                [out] COR_DEBUG_IL_TO_NATIVE_MAP map[]);
 ```
 
-#### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
-`pNativeCodeStartAddress` \
-在原生函式開頭的指標。
+- `pNativeCodeStartAddress`
 
-`cMap` \
-[in] `map` 陣列的大小上限。
+  中的 \[]：原生函式開頭的指標。
 
-`pcMap` \
-[out] 可用的 COR_DEBUG_IL_TO_NATIVE_MAP 結構總數。
+- `cMap`
 
-`map` \
-脫銷[COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md)結構的陣列，其中每一個都會指定位移。 `GetILToNativeMapping3` 方法傳回之後，`map` 將會包含部分或所有 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構。
+  \[in] `map` 陣列的大小上限。
+
+- `pcMap`
+
+  \[out] 可用 COR_DEBUG_IL_TO_NATIVE_MAP 結構的總數。
+
+- `map`
+
+  \[out] [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md)結構的陣列，其中每一個都會指定位移。 `GetILToNativeMapping3` 方法傳回之後，`map` 將會包含部分或所有 `COR_DEBUG_IL_TO_NATIVE_MAP` 結構。
 
 ## <a name="remarks"></a>備註
 
-啟用階層式編譯時，方法可能會有一個以上的機器碼主體。 [ICorProfilerInfo9：： GetNativeCodeStartAddresses](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-getnativecodestartaddresses-method.md)會傳回所有機器碼主體的起始位址。
+啟用階層式編譯時，方法可能會有一個以上的機器碼主體。 [ICorProfilerInfo9：： GetNativeCodeStartAddresses](icorprofilerinfo9-getnativecodestartaddresses-method.md)會傳回所有機器碼主體的起始位址。
 
 ## <a name="requirements"></a>需求
 
@@ -59,6 +63,6 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 **.NET framework 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo9 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 介面](icorprofilerinfo9-interface.md)

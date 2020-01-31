@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52a80838-af36-4399-bc97-d8a4c6d76df2
 topic_type:
 - apiref
-ms.openlocfilehash: bff6dea0e870cf62734fa583eefa481c594481b1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22a3f39bc1f9b4e6cad1db4fd0a6480b7c04e8fa
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096527"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792748"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 介面
 提供測試父子框架關聯的方法。  
@@ -28,9 +28,9 @@ ms.locfileid: "73096527"
   
 |方法|描述|  
 |------------|-----------------|  
-|[IsChild 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|判斷目前的框架是否為子框架。|  
-|[IsMatchingParentFrame 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|判斷指定的框架是否為目前框架的父系。|  
-|[GetStackParameterSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|傳回 x86 作業系統上堆疊上的參數累計大小。|  
+|[IsChild 方法](icordebugnativeframe2-ischild-method.md)|判斷目前的框架是否為子框架。|  
+|[IsMatchingParentFrame 方法](icordebugnativeframe2-ismatchingparentframe-method.md)|判斷指定的框架是否為目前框架的父系。|  
+|[GetStackParameterSize 方法](icordebugnativeframe2-getstackparametersize-method.md)|傳回 x86 作業系統上堆疊上的參數累計大小。|  
   
 ## <a name="remarks"></a>備註  
  此介面會以邏輯方式擴充 "ICorDebugNativeFrame" 介面。  
@@ -49,5 +49,5 @@ ms.locfileid: "73096527"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

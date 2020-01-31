@@ -2,12 +2,12 @@
 title: ICorDebugProcess6::GetExportStepInfo 方法
 ms.date: 03/30/2017
 ms.assetid: a927e0ac-f110-426d-bbec-9377a29c8f17
-ms.openlocfilehash: d92b05e3d84a230e87901378f34ed27ac38286b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 118f52db63464b4c9355ba9ee7f330b996c5bf71
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123452"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792240"
 ---
 # <a name="icordebugprocess6getexportstepinfo-method"></a>ICorDebugProcess6::GetExportStepInfo 方法
 提供執行階段匯出函式的相關資訊，以協助逐步執行 Managed 程式碼。  
@@ -26,10 +26,10 @@ HRESULT GetExportStepInfo(
  [in] 執行階段匯出函式寫入 PE 匯出資料表時所使用的名稱。  
   
  invokeKind  
- 脫銷描述匯出函式如何叫用 managed 程式碼之[CorDebugCodeInvokeKind](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokekind-enumeration.md)列舉的成員指標。  
+ 脫銷描述匯出函式如何叫用 managed 程式碼之[CorDebugCodeInvokeKind](cordebugcodeinvokekind-enumeration.md)列舉的成員指標。  
   
  invokePurpose  
- 脫銷[CorDebugCodeInvokePurpose](../../../../docs/framework/unmanaged-api/debugging/cordebugcodeinvokepurpose-enumeration.md)列舉的成員指標，描述匯出的函式將呼叫 managed 程式碼的原因。  
+ 脫銷[CorDebugCodeInvokePurpose](cordebugcodeinvokepurpose-enumeration.md)列舉的成員指標，描述匯出的函式將呼叫 managed 程式碼的原因。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下表所列的值。  
@@ -56,5 +56,5 @@ HRESULT GetExportStepInfo(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugProcess6 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess6 介面](icordebugprocess6-interface.md)
+- [偵錯介面](debugging-interfaces.md)

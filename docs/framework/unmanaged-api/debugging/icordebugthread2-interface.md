@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 678f89f9-cce7-46d1-af87-5e989abaa93c
 topic_type:
 - apiref
-ms.openlocfilehash: 49d0015e9d8390a47aae7ce497dd431dfe743c36
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fdaad46b739721ff95b712d4b6461a793ae0a480
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138672"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791424"
 ---
 # <a name="icordebugthread2-interface"></a>ICorDebugThread2 介面
 作為 ICorDebugThread 介面的邏輯擴充。  
@@ -28,11 +28,11 @@ ms.locfileid: "73138672"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetActiveFunctions 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)|取得 COR_ACTIVE_FUNCTION 實例的陣列，其中包含執行緒框架中作用中函式的相關資料。|  
-|[GetConnectionID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getconnectionid-method.md)|取得此 `ICorDebugThread2`的連接識別碼。|  
-|[GetTaskID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-gettaskid-method.md)|取得此 `ICorDebugThread2`的工作識別碼。|  
-|[GetVolatileOSThreadID 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getvolatileosthreadid-method.md)|取得此 `ICorDebugThread2`的作業系統執行緒識別碼。|  
-|[InterceptCurrentException 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)|允許偵錯工具攔截執行緒上目前的例外狀況。|  
+|[GetActiveFunctions 方法](icordebugthread2-getactivefunctions-method.md)|取得 COR_ACTIVE_FUNCTION 實例的陣列，其中包含執行緒框架中作用中函式的相關資料。|  
+|[GetConnectionID 方法](icordebugthread2-getconnectionid-method.md)|取得此 `ICorDebugThread2`的連接識別碼。|  
+|[GetTaskID 方法](icordebugthread2-gettaskid-method.md)|取得此 `ICorDebugThread2`的工作識別碼。|  
+|[GetVolatileOSThreadID 方法](icordebugthread2-getvolatileosthreadid-method.md)|取得此 `ICorDebugThread2`的作業系統執行緒識別碼。|  
+|[InterceptCurrentException 方法](icordebugthread2-interceptcurrentexception-method.md)|允許偵錯工具攔截執行緒上目前的例外狀況。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -50,4 +50,4 @@ ms.locfileid: "73138672"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

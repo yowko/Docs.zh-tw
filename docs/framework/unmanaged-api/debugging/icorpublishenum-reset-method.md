@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8a4d9c86-b5ef-460a-9731-1d8c91b93a0b
 topic_type:
 - apiref
-ms.openlocfilehash: f12ff1486d39fe3d7d33f6afc061e5d0e610750c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e7c60355d4c0e0f34f591a48270e388d0ff53a29
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140473"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790601"
 ---
 # <a name="icorpublishenumreset-method"></a>ICorPublishEnum::Reset 方法
 將的資料指標移至列舉的開頭。  
@@ -45,4 +45,4 @@ HRESULT Reset ();
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorPublishEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+- [ICorPublishEnum 介面](icorpublishenum-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: 2f91891164f1f80617cab10347eb4a7a08762c10
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4325d61d12a66b17f88e5e368cbbc7806d0a3ec5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140348"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790712"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName 方法
-取得此[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)所表示之應用程式域的名稱。  
+取得此[ICorPublishAppDomain](icorpublishappdomain-interface.md)所表示之應用程式域的名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,4 +62,4 @@ HRESULT GetName (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorPublishAppDomain 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+- [ICorPublishAppDomain 介面](icorpublishappdomain-interface.md)

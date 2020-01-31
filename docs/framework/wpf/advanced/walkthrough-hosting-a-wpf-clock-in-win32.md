@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 79f79e42652ca51c409fabb12a572485ad734b35
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1fdc0c9ccf1464d7519a4c5935520de1206ca9bb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744894"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794150"
 ---
 # <a name="walkthrough-host-a-wpf-clock-in-win32"></a>逐步解說：在 Win32 中裝載 WPF 時鐘
 
@@ -86,7 +86,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)
 ```
 
-這個屬性會告知 common language runtime （CLR），當它初始化元件物件模型（COM）時，它應該使用單一執行緒單元模型（STA），這是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] （和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]）的必要動作。
+這個屬性會告知 common language runtime （CLR），當它初始化元件物件模型（COM）時，它應該使用單一執行緒單元模型（STA），這是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] （和 Windows Forms）的必要動作。
 
 ## <a name="create-a-windows-presentation-framework-page"></a>建立 Windows Presentation Framework 頁面
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5da1bf3d-dddf-4892-b266-578ee54d570b
 topic_type:
 - apiref
-ms.openlocfilehash: 8af2b6834ac8655c64a7738c65550b515a4b6675
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5fe472c4a0053ec9e37d7d61ffde5cf21d65dd2f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439056"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863461"
 ---
 # <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a>ICorProfilerInfo::GetILFunctionBodyAllocator 方法
 取得介面，它會提供方法來配置記憶體，以用於交換 Microsoft 中繼語言（MSIL）程式碼中方法的主體。  
@@ -38,7 +38,7 @@ HRESULT GetILFunctionBodyAllocator(
  在方法所在模組的識別碼。  
   
  `ppMalloc`  
- 脫銷提供方法來配置記憶體的[IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)介面指標。  
+ 脫銷提供方法來配置記憶體的[IMethodMalloc](imethodmalloc-interface.md)介面指標。  
   
 ## <a name="remarks"></a>備註  
  MSIL 程式碼中的方法主體必須位於相對於已載入模組的相對虛擬位址（RVA），這表示它會遵循 4 GB 內的模組。 為了讓工具能夠更輕鬆地交換方法的主體，`GetILFunctionBodyAllocator` 方法可確保記憶體會在該範圍內配置。  
@@ -52,6 +52,6 @@ HRESULT GetILFunctionBodyAllocator(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)

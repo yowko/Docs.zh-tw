@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-ms.openlocfilehash: 1b19ce5e9f795fd9ff4dd15e10256a150063a314
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 522ac2fd448abaaba48d4d5c20551e8029b35fd4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128034"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793236"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName 方法
-取得字串，其中包含[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)所代表的 managed 偵錯工具（MDA）名稱。  
+取得字串，其中包含[ICorDebugMDA](icordebugmda-interface.md)所代表的 managed 偵錯工具（MDA）名稱。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,5 +60,5 @@ HRESULT GetName (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugMDA 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [診斷 Managed 偵錯助理的錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [ICorDebugMDA 介面](icordebugmda-interface.md)
+- [使用 Managed 偵錯助理診斷錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7fd62e0d3d9173f3b75882131e57126075c0677f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449847"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863305"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10：： EnumerateObjectReferences 方法
 
@@ -30,20 +30,23 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-#### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
-`objectId` \
-在要列舉參考的物件。
+- `objectId`
 
-`callback` \
-在將使用物件的參考所呼叫的函式。
+  \[in] 要列舉參考的物件。
 
-`clientData` \
-在分析工具提供的資料，以傳遞至 `callback` 函數。
+- `callback`
+
+  中的 \[] 使用物件的參考所呼叫的函式。
+
+- `clientData`
+
+  中的 \[] Profiler 提供的資料，以傳遞至 `callback` 函數。
 
 ## <a name="remarks"></a>備註
 
-`EnumerateObjectReferences` 方法類似于[ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)，不同之處在于它會針對分析工具依照需求來進行參考，而不是預先配置陣列來儲存參考。
+`EnumerateObjectReferences`方法類似于 [ObjectReferences](icorprofilercallback-objectreferences-method.md), 不同之處在于它會針對分析工具依照需求來進行參考, 而不是預先配置陣列來儲存參考。
 
 ## <a name="requirements"></a>需求
 
@@ -55,6 +58,6 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 **.Net 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo10 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 介面](icorprofilerinfo10-interface.md)

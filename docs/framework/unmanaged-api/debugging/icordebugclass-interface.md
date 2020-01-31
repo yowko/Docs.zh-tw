@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: 5714597b5e5ca2936aad53217ae934684e75585c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ac588591222a1abbc7b99ec7e973284c055f95e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125741"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784161"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass 介面
 
@@ -29,9 +29,9 @@ ms.locfileid: "73125741"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetModule 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|取得定義此類別的模組。|  
-|[GetStaticFieldValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|取得指定靜態欄位的值。|  
-|[GetToken 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|取得這個類別的 `TypeDef` 中繼資料 token。|  
+|[GetModule 方法](icordebugclass-getmodule-method.md)|取得定義此類別的模組。|  
+|[GetStaticFieldValue 方法](icordebugclass-getstaticfieldvalue-method.md)|取得指定靜態欄位的值。|  
+|[GetToken 方法](icordebugclass-gettoken-method.md)|取得這個類別的 `TypeDef` 中繼資料 token。|  
   
 ## <a name="remarks"></a>備註  
  `ICorDebugClass` 介面代表未具現化的泛型型別。 ICorDebugType 介面代表具現化的泛型型別。 例如，`Hashtable<K, V>` 會以 `ICorDebugClass`表示，而 `Hashtable<Int32, String>` 則會以 `ICorDebugType`表示。  
@@ -52,4 +52,4 @@ ms.locfileid: "73125741"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

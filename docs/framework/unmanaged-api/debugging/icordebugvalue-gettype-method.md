@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41e2d503-e1f1-407b-abe0-6a29adb3e0d1
 topic_type:
 - apiref
-ms.openlocfilehash: 284a74823b01305f8c6e025f70bb9209c8607b7b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7def2bd2c0f3ab501fdb918a0e9a7ee154159b78
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137080"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791147"
 ---
 # <a name="icordebugvaluegettype-method"></a>ICorDebugValue::GetType 方法
 取得這個 "ICorDebugValue" 物件的基本類型。  
@@ -40,7 +40,7 @@ HRESULT GetType (
 ## <a name="remarks"></a>備註  
  如果物件是複雜的執行時間類型，則可以透過 `ICorDebugValue` 介面的適當子類別來檢查該類型。 例如，"ICorDebugObjectValue" （繼承自 `ICorDebugValue`）代表複雜類型。  
   
- `GetType` 和[ICorDebugObjectValue：： GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)方法都會傳回數值型別的相關資訊。 兩者都被泛型感知[ICorDebugValue2：： GetExactType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)方法所取代。  
+ `GetType` 和[ICorDebugObjectValue：： GetClass](icordebugobjectvalue-getclass-method.md)方法都會傳回數值型別的相關資訊。 兩者都被泛型感知[ICorDebugValue2：： GetExactType](icordebugvalue2-getexacttype-method.md)方法所取代。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

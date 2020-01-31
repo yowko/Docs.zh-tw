@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-ms.openlocfilehash: 8b9ec94184945c19b77247175e51bd5e8dc1ceee
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5dd93dcc29ace6573e313f732c45af0dfbb900e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122670"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782218"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf 方法
 檢查 `this` 的內部框架是否比指定的 ICorDebugFrame 物件更接近分葉。  
@@ -62,6 +62,6 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugInternalFrame2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugInternalFrame2 介面](icordebuginternalframe2-interface.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

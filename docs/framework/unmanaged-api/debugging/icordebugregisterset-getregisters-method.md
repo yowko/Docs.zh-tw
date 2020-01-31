@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 112d530c765fc74ab4ea767cb3168977d1b45f47
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 737993ac80b26d490915af3e97fd6a9552246aee
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138356"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792112"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters 方法
 取得位元遮罩所指定之每個暫存器（目前執行程式碼的電腦）的值。  
@@ -62,5 +62,5 @@ HRESULT GetRegisters (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugRegisterSet 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [ICorDebugRegisterSet2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet 介面](icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 介面](icordebugregisterset2-interface.md)

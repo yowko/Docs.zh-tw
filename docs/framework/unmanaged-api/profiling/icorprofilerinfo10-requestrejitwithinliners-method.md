@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: c33a868b643cb3e3fd5dfaf436e3078bc590705c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5822136eb1a7f582bcfae901a99775950e586198
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449813"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863175"
 ---
 # <a name="icorprofilerinfo10requestrejitwithinliners-method"></a>ICorProfilerInfo10：： RequestReJITWithInliners 方法
 
@@ -31,23 +31,27 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
                                   [in, size_is(cFunctions)]  mdMethodDef methodIds[]);
 ```
 
-#### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
-`dwRejitFlags` \
-在[COR_PRF_REJIT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-rejit-flags-enumeration.md)的位元遮罩。
+- `dwRejitFlags`
 
-`cFunctions` \
-[in] 要重新編譯的函式數目。
+  \[in] [COR_PRF_REJIT_FLAGS](cor-prf-rejit-flags-enumeration.md)的位元遮罩。
 
-`moduleIds` \
-[in] 指定 (`moduleId`, `module`) 組的 `methodDef` 部分，這個部分可識別所要重新編譯的函式。
+- `cFunctions`
 
-`methodIds` \
-[in] 指定 (`methodId`, `module`) 組的 `methodDef` 部分，這個部分可識別所要重新編譯的函式。
+  \[in] 要重新編譯的函式數目。
+
+- `moduleIds`
+
+  中的 \[] 指定（`module`，`methodDef`）配對的 `moduleId` 部分，識別要重新編譯的函式。
+
+- `methodIds`
+
+  中的 \[] 指定（`module`，`methodDef`）配對的 `methodId` 部分，識別要重新編譯的函式。
 
 ## <a name="remarks"></a>備註
 
-[RequestReJIT](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-requestrejit-method.md)不會對內嵌的方法進行任何追蹤。 分析工具預期會封鎖內嵌或追蹤內嵌，並為所有 inliners 呼叫 `RequestReJIT`，以確保內嵌方法的每個實例都已 ReJITted。 這會造成 ReJIT on attach 的問題，因為分析工具不存在來監視內嵌。 您可以呼叫這個方法，以確保一組完整的 inliners 也會 ReJITted。
+[RequestReJIT](icorprofilerinfo4-requestrejit-method.md)不會對內嵌的方法進行任何追蹤。 分析工具預期會封鎖內嵌或追蹤內嵌，並為所有 inliners 呼叫 `RequestReJIT`，以確保內嵌方法的每個實例都已 ReJITted。 這會造成 ReJIT on attach 的問題，因為分析工具不存在來監視內嵌。 您可以呼叫這個方法，以確保一組完整的 inliners 也會 ReJITted。
 
 ## <a name="requirements"></a>需求
 
@@ -59,6 +63,6 @@ HRESULT RequestReJITWithInliners( [in]                       DWORD       dwRejit
 
 **.Net 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo10 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 介面](icorprofilerinfo10-interface.md)

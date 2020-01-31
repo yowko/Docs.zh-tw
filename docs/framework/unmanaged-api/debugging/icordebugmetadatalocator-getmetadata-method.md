@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-ms.openlocfilehash: 6e4f11de423d1ab6b66aca40e671607a383a4413
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 43f3c1dd866b98bff51b375a11e28727e41d3ead
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136636"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793057"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData 方法
 要求偵錯工具傳回完整路徑到模組，其需要中繼資料以完成偵錯工具的要求。  
@@ -67,7 +67,7 @@ HRESULT GetMetaData(
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功完成命令。 `wszPathBuffer` 包含檔案的完整路徑，而且是以 null 結束。|  
+|S_OK|此方法已順利完成。 `wszPathBuffer` 包含檔案的完整路徑，而且是以 null 結束。|  
 |E_NOT_SUFFICIENT_BUFFER|目前的大小 `wszPathBuffer` 不足以保存完整路徑。 在此情況下， `pcchPathBuffer` 包含所需的 `WCHAR` 計數，包括結束的 null 字元且 `GetMetaData` 被稱為第二次的要求緩衝區大小。|  
   
 ## <a name="remarks"></a>備註  
@@ -84,6 +84,6 @@ HRESULT GetMetaData(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugThread4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugThread4 介面](icordebugthread4-interface.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

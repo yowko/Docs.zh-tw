@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a191c2a-95ea-4d47-83b0-44de2b632d63
 topic_type:
 - apiref
-ms.openlocfilehash: 28ec18864158641a337ebdea189080ba4247a7c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d154cf10e60935d12653c70875323079f92ae288
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120526"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791736"
 ---
 # <a name="icordebugstepper2-interface"></a>ICorDebugStepper2 介面
 僅提供 my code （JMC）偵錯工具的支援。  
@@ -28,7 +28,7 @@ ms.locfileid: "73120526"
   
 |方法|描述|  
 |------------|-----------------|  
-|[SetJMC 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|設定值，指定此 ICorDebugStepper 步驟是否只透過應用程式開發人員所撰寫的程式碼進行。|  
+|[SetJMC 方法](icordebugstepper2-setjmc-method.md)|設定值，指定此 ICorDebugStepper 步驟是否只透過應用程式開發人員所撰寫的程式碼進行。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -46,4 +46,4 @@ ms.locfileid: "73120526"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

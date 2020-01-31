@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: 3abf944df3619256791882bf61dfc4072b642c54
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0a677e33950f178b916a5e9e9cbb7bd918c1349b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445136"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866607"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted 方法
 通知分析工具元件正在卸載。  
@@ -32,10 +32,12 @@ HRESULT AssemblyUnloadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a>參數  
- `assemblyId`  
- 在識別正在卸載的元件。  
-  
+## <a name="parameters"></a>參數
+
+- `assemblyId`
+
+  中的 \[] 可識別正在卸載的元件。
+
 ## <a name="remarks"></a>備註  
  `AssemblyUnloadStarted` 方法傳回之後，`assemblyId` 的值對資訊要求無效，這是分析工具的最後機會取得此元件的相關資訊。  
   
@@ -48,7 +50,7 @@ HRESULT AssemblyUnloadStarted(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [AssemblyUnloadFinished 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadfinished-method.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
+- [AssemblyUnloadFinished 方法](icorprofilercallback-assemblyunloadfinished-method.md)

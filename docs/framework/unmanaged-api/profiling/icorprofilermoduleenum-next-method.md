@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-ms.openlocfilehash: 361f08f8c787ad4c1288c56fb1bdb4d5136933e7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 695a4386d9399a079df41f11f52a3185083784ed
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442684"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861381"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>ICorProfilerModuleEnum::Next 方法
 從循序模組集合中取得指定的連續模組數目，從序列中列舉值的目前位置開始。  
@@ -49,7 +49,7 @@ HRESULT Next([in]  ULONG      celt,
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|傳回 `celt` 元素。|  
+|S_OK|已傳回 `celt` 項目。|  
 |S_FALSE|傳回少於 `celt` 的項目數，表示列舉已完成。|  
   
 ## <a name="requirements"></a>需求  
@@ -61,7 +61,7 @@ HRESULT Next([in]  ULONG      celt,
   
  **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerModuleEnum 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)
-- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerModuleEnum 介面](icorprofilermoduleenum-interface.md)
+- [分析介面](profiling-interfaces.md)

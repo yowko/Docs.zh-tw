@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8be7c0e32f6183deb354d8b3936ef55c2520fe9f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127496"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788613"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock 方法
 傳回擁有這個物件之監視器鎖定的 managed 執行緒。  
@@ -46,7 +46,7 @@ HRESULT GetThreadOwningMonitorLock (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功完成命令。|  
+|S_OK|此方法已順利完成。|  
 |S_FALSE|沒有受控執行緒擁有此物件上的監視鎖定。|  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -75,5 +75,5 @@ HRESULT GetThreadOwningMonitorLock (
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

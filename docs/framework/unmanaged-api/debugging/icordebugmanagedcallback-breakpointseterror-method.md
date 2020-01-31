@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2b773a4-c4d0-429c-9717-51d6e2ed86af
 topic_type:
 - apiref
-ms.openlocfilehash: dae04e1809c1bb3260461086a4953b8b4e5cce52
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 67d4972ee38a54d43b4a096847cc61fa3402b042
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122576"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788442"
 ---
 # <a name="icordebugmanagedcallbackbreakpointseterror-method"></a>ICorDebugManagedCallback::BreakpointSetError 方法
 通知偵錯工具，common language runtime 無法正確地系結在函式為即時（JIT）編譯之前所設定的中斷點。  
@@ -63,4 +63,4 @@ HRESULT BreakpointSetError (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

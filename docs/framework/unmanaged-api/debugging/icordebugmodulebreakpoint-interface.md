@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 34667162-f314-475f-ae1b-ce9cb0fcbb83
 topic_type:
 - apiref
-ms.openlocfilehash: 2bc5c21d2e1256d0e79390bea10aafcdefbed0d3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: df3ad3fa4ef4eeee7e23ca1629da7a8b8ce09711
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110329"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792917"
 ---
 # <a name="icordebugmodulebreakpoint-interface"></a>ICorDebugModuleBreakpoint Interface
 
@@ -29,7 +29,7 @@ ms.locfileid: "73110329"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetModule 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|取得參考已設定此中斷點之模組的 ICorDebugModule 介面指標。|  
+|[GetModule 方法](icordebugmodulebreakpoint-getmodule-method.md)|取得參考已設定此中斷點之模組的 ICorDebugModule 介面指標。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -47,4 +47,4 @@ ms.locfileid: "73110329"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

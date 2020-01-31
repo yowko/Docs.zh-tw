@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24d0fcfa-1601-4fba-868f-da8c97303467
 topic_type:
 - apiref
-ms.openlocfilehash: 5c4efff46c2460ee77f5a8011dc80796ac62a69e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2713fa90240cb0bf41f455b6ed65d76c568a2cf8
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442703"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868261"
 ---
 # <a name="icorprofilermoduleenum-interface"></a>ICorProfilerModuleEnum 介面
 提供方法，以循序逐一查看由應用程式或分析工具所載入的模組集合。  
@@ -28,11 +28,11 @@ ms.locfileid: "74442703"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Clone 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-clone-method.md)|取得這個 `ICorProfilerModuleEnum` 介面複本的介面指標。|  
-|[GetCount 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-getcount-method.md)|取得已載入至應用程式之 Managed 模組的數目。|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-next-method.md)|從循序物件集合中取得指定的連續模組數目，從序列中列舉值的目前位置開始。|  
-|[Reset 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-reset-method.md)|將列舉值的資料指標移至序列的開始位置。|  
-|[Skip 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-skip-method.md)|將列舉值的資料指標位置前移，以略過指定數目的項目。|  
+|[Clone 方法](icorprofilermoduleenum-clone-method.md)|取得這個 `ICorProfilerModuleEnum` 介面複本的介面指標。|  
+|[GetCount 方法](icorprofilermoduleenum-getcount-method.md)|取得已載入至應用程式之 Managed 模組的數目。|  
+|[Next 方法](icorprofilermoduleenum-next-method.md)|從循序物件集合中取得指定的連續模組數目，從序列中列舉值的目前位置開始。|  
+|[Reset 方法](icorprofilermoduleenum-reset-method.md)|將列舉值的資料指標移至序列的開始位置。|  
+|[Skip 方法](icorprofilermoduleenum-skip-method.md)|將列舉值的資料指標位置前移，以略過指定數目的項目。|  
   
 ## <a name="remarks"></a>備註  
  `ICorProfilerModuleEnum` 介面是列舉值。 它可讓陣列的接收端以適合接收端的速率，從傳送端提取項目。 換句話說，接收端能夠明確控制陣列項目的流程，因此可避免與傳遞大型陣列做為方法參數相關的問題發生。  
@@ -48,6 +48,6 @@ ms.locfileid: "74442703"
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [EnumModules 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md)
+- [ICorProfilerInfo 介面](icorprofilerinfo-interface.md)
+- [分析介面](profiling-interfaces.md)
+- [EnumModules 方法](icorprofilerinfo3-enummodules-method.md)

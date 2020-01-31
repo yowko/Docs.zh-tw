@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c7276f7-7e54-470c-808c-e13745ac07a1
 topic_type:
 - apiref
-ms.openlocfilehash: a9a6ca9ae3cdb1c6a7398d08c9f99e3cde125cf6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f177d441da3bd967750781e487d9fed42bc132f5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131903"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791952"
 ---
 # <a name="icordebugremotetargetgethostname-method"></a>ICorDebugRemoteTarget::GetHostName 方法
 傳回遠端偵錯目標電腦的完整網域名稱或 IPv4 位址。 目前不支援 IPV6。  
@@ -40,7 +40,7 @@ HRESULT GetHostName (
  在`szHostName` 緩衝區的大小（以字元為單位）。 如果這個參數是 0 (零)，則 `szHostName` 必須是 null。  
   
  `pcchHostName`  
- [out] 在主機名稱或 IP 位址中的字元數，包括 null 結束字元。 此參數可以是 null。  
+ [out] 在主機名稱或 IP 位址中的字元數，包括 null 結束字元。 這個參數可以是 null。  
   
  `szHostName`  
  [out] 包含主機名稱或 IP 位址的緩衝區。  
@@ -66,5 +66,5 @@ HRESULT GetHostName (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemoteTarget 介面](icordebugremotetarget-interface.md)
+- [ICorDebug 介面](icordebug-interface.md)

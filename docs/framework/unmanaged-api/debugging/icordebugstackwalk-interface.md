@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16d695e8-975d-431b-8421-e9e6c3e3f476
 topic_type:
 - apiref
-ms.openlocfilehash: 48f1b485b6dfa8fd898f6ea00eee2d7b397deba6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a6283d699263dc9b79e457010f31923f77443129
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131862"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791883"
 ---
 # <a name="icordebugstackwalk-interface"></a>ICorDebugStackWalk 介面
 提供用來在執行緒堆疊上取得 Managed 方法或框架的方法。  
@@ -28,10 +28,10 @@ ms.locfileid: "73131862"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|傳回 `ICorDebugStackWalk` 物件中目前框架的內容。|  
-|[SetContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|將 `ICorDebugStackWalk` 物件的目前內容設定為執行緒的有效內容。|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|將 `ICorDebugStackWalk` 物件移至下一個畫面格。|  
-|[GetFrame 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|取得 `ICorDebugStackWalk` 物件中的目前框架。|  
+|[GetContext 方法](icordebugstackwalk-getcontext-method.md)|傳回 `ICorDebugStackWalk` 物件中目前框架的內容。|  
+|[SetContext 方法](icordebugstackwalk-setcontext-method.md)|將 `ICorDebugStackWalk` 物件的目前內容設定為執行緒的有效內容。|  
+|[Next 方法](icordebugstackwalk-next-method.md)|將 `ICorDebugStackWalk` 物件移至下一個畫面格。|  
+|[GetFrame 方法](icordebugstackwalk-getframe-method.md)|取得 `ICorDebugStackWalk` 物件中的目前框架。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -49,5 +49,5 @@ ms.locfileid: "73131862"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54d9a5a5-3877-49c1-a503-ce7c7943bc2a
 topic_type:
 - apiref
-ms.openlocfilehash: ae9cb089ad6c0b0422063d3db413b97eb6ff1405
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8ae58344a7a17637bf08b9b5179abdba7e7060d6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445796"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866022"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage 方法
 通知分析工具用戶端正在將要求傳送至伺服器。  
@@ -35,7 +35,7 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>參數  
  `pCookie`  
- 在在下列情況下，對應于[ICorProfilerCallback：： RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md)中所提供之值的值：  
+ 在在下列情況下，對應于[ICorProfilerCallback：： RemotingServerReceivingMessage](icorprofilercallback-remotingserverreceivingmessage-method.md)中所提供之值的值：  
   
 - 遠端 GUID cookie 為作用中。  
   
@@ -57,6 +57,6 @@ HRESULT RemotingClientSendingMessage(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)

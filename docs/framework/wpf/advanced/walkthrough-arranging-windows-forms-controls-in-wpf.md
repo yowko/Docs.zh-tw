@@ -9,16 +9,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735294"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794253"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>逐步解說：在 WPF 中排列 Windows Form 控制項
 
-本逐步解說將示範如何使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的版面配置功能，在混合式應用程式中排列 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。
+本逐步解說將示範如何使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的版面配置功能，在混合式應用程式中排列 Windows Forms 控制項。
 
 這個逐步解說中所述的工作包括：
 
@@ -39,7 +39,7 @@ ms.locfileid: "76735294"
 
 如需本逐步解說中所述工作的完整程式代碼清單，請參閱[在 WPF 中排列 Windows Forms 控制項範例](https://go.microsoft.com/fwlink/?LinkID=159971)。
 
-當您完成時，您將瞭解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]型應用程式中 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 的版面配置功能。
+當您完成時，您將瞭解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]型應用程式中 Windows Forms 的版面配置功能。
 
 ## <a name="prerequisites"></a>必要條件：
 
@@ -59,7 +59,7 @@ ms.locfileid: "76735294"
 
 3. 按兩下 [ *mainwindow.xaml* ]，以 xaml 視圖開啟它。
 
-4. 在 <xref:System.Windows.Window> 元素中，新增下列 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 命名空間對應。
+4. 在 <xref:System.Windows.Window> 元素中，新增下列 Windows Forms 命名空間對應。
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -71,7 +71,7 @@ ms.locfileid: "76735294"
 
 ## <a name="using-default-layout-settings"></a>使用預設的版面配置設定
 
-根據預設，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會處理主控 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項的配置。
+根據預設，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會處理主控 Windows Forms 控制項的配置。
 
 若要使用預設的版面配置設定，請遵循下列步驟：
 
@@ -79,7 +79,7 @@ ms.locfileid: "76735294"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> 控制項會出現在 <xref:System.Windows.Controls.Canvas>中。 裝載的控制項會根據其內容調整大小，而 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 專案則會調整大小以容納裝載的控制項。
+2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 Windows Forms <xref:System.Windows.Forms.Button?displayProperty=nameWithType> 控制項會出現在 <xref:System.Windows.Controls.Canvas>中。 裝載的控制項會根據其內容調整大小，而 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 專案則會調整大小以容納裝載的控制項。
 
 ## <a name="sizing-to-content"></a>依內容調整大小
 
@@ -115,7 +115,7 @@ ms.locfileid: "76735294"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會設定為50圖元寬乘以70圖元高的大小，小於預設的版面配置設定。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項的內容會據以重新排列。
+2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會設定為50圖元寬乘以70圖元高的大小，小於預設的版面配置設定。 Windows Forms 控制項的內容會據以重新排列。
 
 ## <a name="setting-layout-properties"></a>設定版面配置屬性
 
@@ -164,7 +164,7 @@ ms.locfileid: "76735294"
 
 ## <a name="setting-visibility"></a>設定可見度
 
-您可以在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素上設定 <xref:System.Windows.UIElement.Visibility%2A> 屬性，讓您的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項不可見或折迭。 當控制項隱藏時，它不會顯示，但會佔據版面配置空間。 當控制項摺疊時，它不會顯示，也不會佔據配置空間。
+您可以在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素上設定 <xref:System.Windows.UIElement.Visibility%2A> 屬性，讓您的 Windows Forms 控制項不可見或折迭。 當控制項隱藏時，它不會顯示，但會佔據版面配置空間。 當控制項摺疊時，它不會顯示，也不會佔據配置空間。
 
 若要設定裝載控制項的可見度，請遵循下列步驟：
 
@@ -181,11 +181,11 @@ ms.locfileid: "76735294"
 
 4. 按一下 [**按一下以讓隱藏**專案] 按鈕，讓 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素不可見。
 
-5. 按一下 [**按一下以**折迭] 按鈕，以完全隱藏配置中的 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素。 當 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項折迭時，周圍的元素會重新排列以佔用其空間。
+5. 按一下 [**按一下以**折迭] 按鈕，以完全隱藏配置中的 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素。 當 Windows Forms 控制項折迭時，周圍的元素會重新排列以佔用其空間。
 
 ## <a name="hosting-a-control-that-does-not-stretch"></a>裝載不會自動縮放的控制項
 
-有些 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項具有固定的大小，而且不會伸展以填滿配置中的可用空間。 例如，<xref:System.Windows.Forms.MonthCalendar> 控制項會在固定空間顯示一個月。
+有些 Windows Forms 控制項具有固定的大小，而且不會伸展以填滿配置中的可用空間。 例如，<xref:System.Windows.Forms.MonthCalendar> 控制項會在固定空間顯示一個月。
 
 若要裝載不會延展的控制項，請遵循下列步驟：
 
@@ -223,7 +223,7 @@ ms.locfileid: "76735294"
 
 ## <a name="setting-padding-and-margins"></a>設定邊框距離及邊界
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 配置中的填補和邊界，類似于 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]中的填補和邊界。 只要設定 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素的 <xref:System.Windows.Controls.Control.Padding%2A> 和 <xref:System.Windows.FrameworkElement.Margin%2A> 屬性即可。
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 配置中的填補和邊界，類似于 Windows Forms 中的填補和邊界。 只要設定 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素的 <xref:System.Windows.Controls.Control.Padding%2A> 和 <xref:System.Windows.FrameworkElement.Margin%2A> 屬性即可。
 
 若要設定主控控制項的填補和邊界，請遵循下列步驟：
 
@@ -232,11 +232,11 @@ ms.locfileid: "76735294"
      [!code-xaml[WpfLayoutHostingWfWithXaml#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
     [!code-xaml[WpfLayoutHostingWfWithXaml#15](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 填補和邊界設定會以它們套用至 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]的相同方式套用至裝載的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。
+2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 填補和邊界設定會以它們套用至 Windows Forms 的相同方式套用至裝載的 Windows Forms 控制項。
 
 ## <a name="using-dynamic-layout-containers"></a>使用動態版面配置容器
 
-[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 提供兩個動態版面配置容器，<xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>。 您也可以在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 版面配置中使用這些容器。
+Windows Forms 提供兩個動態版面配置容器，<xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel>。 您也可以在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 版面配置中使用這些容器。
 
 若要使用動態版面配置容器，請遵循下列步驟：
 

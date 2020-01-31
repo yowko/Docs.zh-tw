@@ -1,15 +1,15 @@
 ---
-title: ICorDebugStaticFieldSymbol：： GetSize 方法
+title: ICorDebugStaticFieldSymbol::GetSize 方法
 ms.date: 03/30/2017
 ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
-ms.openlocfilehash: 0fa9c519a40624dd8c5471231263d2430738af87
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: deeb887dad38417e3ebb980f5ef2f89392388d65
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131773"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791813"
 ---
-# <a name="icordebugstaticfieldsymbolgetsize-method"></a>ICorDebugStaticFieldSymbol：： GetSize 方法
+# <a name="icordebugstaticfieldsymbolgetsize-method"></a>ICorDebugStaticFieldSymbol::GetSize 方法
 取得靜態欄位的大小 (以位元組為單位)。  
   
 ## <a name="syntax"></a>語法  
@@ -40,5 +40,5 @@ HRESULT GetSize(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugStaticFieldSymbol 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugStaticFieldSymbol 介面](icordebugstaticfieldsymbol-interface.md)
+- [偵錯介面](debugging-interfaces.md)

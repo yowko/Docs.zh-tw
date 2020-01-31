@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 0eeb358ba38836ba6302f98f9e3e0314b83510f0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d288cc1f2991a8f504dc9f1b206bba76fa378b75
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352126"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794556"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>如何：非同步呼叫 Web 服務 (Visual Basic)
 
@@ -23,11 +23,11 @@ Proxy 類別允許您同步呼叫 Web 服務方法，您的應用程式會在該
 > [!NOTE]
 > 這個程式碼在 Web 應用程式中無效，因為 ASP.NET 不支援 `My.WebServices` 物件。
 
-### <a name="to-call-a-web-service-asynchronously"></a>非同步地呼叫 Web 服務
+## <a name="call-a-web-service-asynchronously"></a>以非同步方式呼叫 Web 服務
 
 1. 參考 DemoTemperatureService Web 服務，網址為 `http://www.xmethods.net`。 位址是
 
-    ```
+    ```http
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl
     ```
 
@@ -68,5 +68,5 @@ Proxy 類別允許您同步呼叫 Web 服務方法，您的應用程式會在該
 
 ## <a name="see-also"></a>請參閱
 
-- [存取應用程式 Web 服務](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
-- [My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [存取應用程式 Web 服務](accessing-application-web-services.md)
+- [My.WebServices 物件](../../language-reference/objects/my-webservices-object.md)

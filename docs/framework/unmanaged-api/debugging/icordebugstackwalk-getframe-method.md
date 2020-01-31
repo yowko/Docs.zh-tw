@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-ms.openlocfilehash: 77210edfdc954f38ff06bc43a8b41a6abe8dc3d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 89576e2b3d5fb4df0cccfdd28c80a5cb67331597
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131831"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791891"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame 方法
-取得[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)物件中的目前框架。  
+取得[ICorDebugStackWalk](icordebugstackwalk-interface.md)物件中的目前框架。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugStackWalk` 只會傳回實際的堆疊框架。 請使用[ICorDebugThread3：： GetActiveInternalFrames](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)方法來傳回內部框架。 （內部畫面是由執行時間推送至堆疊的資料結構，用來儲存暫存資料）。  
+ `ICorDebugStackWalk` 只會傳回實際的堆疊框架。 請使用[ICorDebugThread3：： GetActiveInternalFrames](icordebugthread3-getactiveinternalframes-method.md)方法來傳回內部框架。 （內部畫面是由執行時間推送至堆疊的資料結構，用來儲存暫存資料）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -62,6 +62,6 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugStackWalk 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugStackWalk 介面](icordebugstackwalk-interface.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

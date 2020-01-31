@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: fffe5616-0896-4426-ab5e-21869b514883
 topic_type:
 - apiref
-ms.openlocfilehash: 78838e9002cb3f5263395af9de255c54de47b6ae
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2d3f8360a1fb1164fd4e26f85246251409bee376
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134022"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788954"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate 方法
 終止 `ICorDebug` 物件。  
   
 > [!NOTE]
-> 在針對所有正在進行調試的進程收到[ICorDebugManagedCallback：： ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)回呼之前，不應呼叫 `Terminate`。  
+> 在針對所有正在進行調試的進程收到[ICorDebugManagedCallback：： ExitProcess](icordebugmanagedcallback-exitprocess-method.md)回呼之前，不應呼叫 `Terminate`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,4 +48,4 @@ HRESULT Terminate ();
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug 介面](icordebug-interface.md)

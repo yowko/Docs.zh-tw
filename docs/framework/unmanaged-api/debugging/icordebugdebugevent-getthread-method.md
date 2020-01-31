@@ -2,12 +2,12 @@
 title: ICorDebugDebugEvent::GetThread 方法
 ms.date: 03/30/2017
 ms.assetid: 4f2e9a2c-8369-4a07-a881-ad5422626353
-ms.openlocfilehash: 66b4abc4bebfbbde2e6a6b25d2bc0e88839a363f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0900ac2ae5bcf2141e720dad6efdf68d4fafaccc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136639"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793527"
 ---
 # <a name="icordebugdebugeventgetthread-method"></a>ICorDebugDebugEvent::GetThread 方法
 取得發生事件的執行緒。  
@@ -22,7 +22,7 @@ HRESULT GetThread(
   
 ## <a name="parameters"></a>參數  
  ppThread  
- 脫銷ICorDebugThread 物件位址的指標，表示發生事件的執行緒。  
+ [out] 代表發生事件的執行緒之 ICorDebugThread 物件的位址指標。  
   
 ## <a name="remarks"></a>備註  
   
@@ -40,5 +40,5 @@ HRESULT GetThread(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugDebugEvent 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDebugEvent 介面](icordebugdebugevent-interface.md)
+- [偵錯介面](debugging-interfaces.md)

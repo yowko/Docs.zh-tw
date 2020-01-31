@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 314d29f3-feb0-4a92-9530-b569c280cc31
 topic_type:
 - apiref
-ms.openlocfilehash: bff270ff774692d058a36c7f47ab474b08bceb35
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f9bcec66ff613d19c1198ac9849ca28c978f537
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088965"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788948"
 ---
 # <a name="icordebugappdomain2-interface"></a>ICorDebugAppDomain2 介面
 
@@ -29,8 +29,8 @@ ms.locfileid: "73088965"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetArrayOrPointerType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|取得指定類型的陣列，或指定之類型的指標或參考。|  
-|[GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|取得具有指定簽章之函式的指標。|  
+|[GetArrayOrPointerType 方法](icordebugappdomain2-getarrayorpointertype-method.md)|取得指定類型的陣列，或指定之類型的指標或參考。|  
+|[GetFunctionPointerType](icordebugappdomain2-getfunctionpointertype-method.md)|取得具有指定簽章之函式的指標。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -48,4 +48,4 @@ ms.locfileid: "73088965"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

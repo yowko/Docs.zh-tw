@@ -1,18 +1,18 @@
 ---
-title: 處理 XML 檔案 - C# 程式設計指南
+title: 處理 XML 檔案程式C#設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696515"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793384"
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>處理 XML 檔案 (C# 程式設計手冊)
+# <a name="processing-the-xml-file-c-programming-guide"></a>處理 XML 檔案（C#程式設計手冊）
 
 編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 （如需如何標記程式碼的相關資訊，請參閱[建議的檔註解標記](./recommended-tags-for-documentation-comments.md)）。識別碼字串可唯一識別結構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應該識別碼且適用於該文件的 .NET Framework 中繼資料/反映項目。
 
@@ -27,7 +27,7 @@ XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個�
     |字元|描述|
     |---------------|-----------------|
     |N|命名空間<br /><br /> 您無法將文件註解新增至命名空間，但可讓 cref 參考它們 (如果支援)。|
-    |T|型別︰類別、介面、建構、列舉、委派|
+    |T|類型：類別、介面、結構、列舉或委派|
     |華氏 (F)|Field - 欄位|
     |P|屬性 (包括索引子或其他索引屬性)|
     |M|方法 (包括像是建構函式、運算子之類的特殊方法)|
@@ -85,5 +85,5 @@ XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個�
 ## <a name="see-also"></a>請參閱
 
 - [C# 程式設計指南](../index.md)
-- [-doc (C# 編譯器選項)](../../language-reference/compiler-options/doc-compiler-option.md)
-- [XML 文件註解](./index.md)
+- [-doc （C#編譯器選項）](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML 檔批註](./index.md)

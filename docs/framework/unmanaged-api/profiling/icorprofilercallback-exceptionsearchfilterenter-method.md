@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: acc239ce-3eef-418c-b1df-c5a6dd8e8a4c
 topic_type:
 - apiref
-ms.openlocfilehash: 65765795c13948175a7eb5bd78843968d55953d8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 710dbe70b0a2498a3d521cdc813c4ead7ba6442e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445378"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866425"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>ICorProfilerCallback::ExceptionSearchFilterEnter 方法
 通知分析工具，例外狀況處理的搜尋階段已開始執行使用者定義的例外狀況篩選準則。  
@@ -32,10 +32,12 @@ HRESULT ExceptionSearchFilterEnter(
     [in] FunctionID functionId);  
 ```  
   
-## <a name="parameters"></a>參數  
- `functionId`  
- 在包含篩選準則之函數的識別碼。  
-  
+## <a name="parameters"></a>參數
+
+- `functionId`
+
+  \[in] 包含篩選準則的函式識別碼。
+
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
@@ -47,5 +49,5 @@ HRESULT ExceptionSearchFilterEnter(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionSearchFilterLeave 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfilterleave-method.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
+- [ExceptionSearchFilterLeave 方法](icorprofilercallback-exceptionsearchfilterleave-method.md)

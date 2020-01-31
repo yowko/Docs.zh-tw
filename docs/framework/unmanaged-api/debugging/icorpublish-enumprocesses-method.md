@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4ae765f0-93b2-4b6f-aea1-7b0cf44e04a7
 topic_type:
 - apiref
-ms.openlocfilehash: 5f0dd814ad5adfa1b0dd7199530a3f993634a548
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5f785b22a3fbda6403c124ec70757b16f5335907
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121789"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790760"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses 方法
-Gets an enumerator for the managed processes running on this computer.  
+取得在這部電腦上執行之 managed 進程的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,20 +36,20 @@ HRESULT EnumProcesses (
   
 ## <a name="parameters"></a>參數  
  `Type`  
- A value of the [COR_PUB_ENUMPROCESS](../../../../docs/framework/unmanaged-api/debugging/cor-pub-enumprocess-enumeration.md) enumeration that specifies the type of process to be retrieved. In the current version, only COR_PUB_MANAGEDONLY is valid.  
+ [COR_PUB_ENUMPROCESS](cor-pub-enumprocess-enumeration.md)列舉的值，指定要抓取的進程類型。 在目前的版本中，只有 COR_PUB_MANAGEDONLY 有效。  
   
  `ppIEnum`  
- A pointer to the address of an [ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md) instance that is the enumerator of the processes.  
+ [ICorPublishProcessEnum](icorpublishprocessenum-interface.md)實例位址的指標，這是進程的列舉值。  
   
 ## <a name="remarks"></a>備註  
- The enumerator's collection of processes is based on a snapshot of the processes that are running when the `EnumProcesses` method is called. The enumerator will not include any processes that terminate before or start after `EnumProcesses` is called.  
+ 列舉值的進程集合是以呼叫 `EnumProcesses` 方法時正在執行之進程的快照集為基礎。 列舉值不會包含呼叫 `EnumProcesses` 之後終止或啟動的任何進程。  
   
- The `EnumProcesses` method may be called more than once on this [ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md) instance to create a new up-to-date collection of processes. Existing collections will not be affected by subsequent calls of the `EnumProcesses` method.  
+ 可以在這個[ICorPublish](icorpublish-interface.md)實例上多次呼叫 `EnumProcesses` 方法，以建立最新的進程集合。 `EnumProcesses` 方法的後續呼叫將不會影響現有的集合。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **Header:** CorPub.idl, CorPub.h  
+ **標頭：** CorPub .idl，CorPub。h  
   
  **程式庫：** CorGuids.lib  
   
@@ -57,4 +57,4 @@ HRESULT EnumProcesses (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorPublish 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)
+- [ICorPublish 介面](icorpublish-interface.md)

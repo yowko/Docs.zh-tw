@@ -4,12 +4,12 @@ description: 了解如何建立支援外掛程式的 .NET Core 應用程式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 32205a507bc95b2f8a2f75368aab3fde710249ee
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739695"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787845"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>建立具有外掛程式的 .NET Core 應用程式
 
@@ -20,7 +20,7 @@ ms.locfileid: "73739695"
 - 使用 <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> 類型以允許外掛程式具有相依性。
 - 撰寫只要複製組建成品即可輕鬆部署的外掛程式。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 - 安裝[.Net Core 3.0 SDK](https://dotnet.microsoft.com/download)或更新版本。
 
@@ -217,7 +217,7 @@ static Assembly LoadPlugin(string relativePath)
 
 回到根資料夾，執行下列動作：
 
-1. 執行下列命令，以建立名為 `HelloPlugin` 的新類別庫專案：
+1. 執行下列命令，以建立名為 `HelloPlugin`的新類別庫專案：
     
     ```dotnetcli
     dotnet new classlib -o HelloPlugin
@@ -250,15 +250,18 @@ static Assembly LoadPlugin(string relativePath)
 
 ```xml
 <ItemGroup>
-<ProjectReference Include="..\PluginBase\PluginBase.csproj">
-    <Private>false</Private>
-</ProjectReference>
+    <ProjectReference Include="..\PluginBase\PluginBase.csproj">
+        <Private>false</Private>
+        <ExcludeAssets>runtime</ExcludeAssets>
+    </ProjectReference>
 </ItemGroup>
 ```
 
 `<Private>false</Private>` 元素很重要。 這會指示 MSBuild 不要將 *PluginBase.dll* 複製到 HelloPlugin 的輸出目錄。 如果 *PluginBase.dll* 組件存在於輸出目錄中，`PluginLoadContext` 會在其中尋找組件，並在載入 *HelloPlugin.dll* 組件時將它載入。 此時，`HelloPlugin.HelloCommand` 類型會從 `HelloPlugin` 專案輸出目錄中的 *PluginBase.dll* 實作 `ICommand` 介面，而不是實作預設載入內容中所載入的 `ICommand` 介面。 由於執行時間會將這兩個型別視為不同的元件，因此 `AppWithPlugin.Program.CreateCommands` 的方法將找不到命令。 因此，需要 `<Private>false</Private>` 中繼資料才能參考含有外掛程式介面的組件。
 
-現在 `HelloPlugin` 專案已完成，我們應該更新 `AppWithPlugin` 專案以了解何處可以找到 `HelloPlugin` 外掛程式。 在 `// Paths to plugins to load` 註解後面，新增 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` 作為 `pluginPaths` 陣列的項目。
+同樣地，如果 `PluginBase` 參考其他封裝，`<ExcludeAssets>runtime</ExcludeAssets>` 元素也很重要。 此設定與 `<Private>false</Private>` 具有相同的效果，但適用于 `PluginBase` 專案或其相依性之一可能包含的套件參考。
+
+現在 `HelloPlugin` 專案已完成，您應該更新 `AppWithPlugin` 專案，以瞭解可以在何處找到 `HelloPlugin` 外掛程式。 在 `// Paths to plugins to load` 註解後面，新增 `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` 作為 `pluginPaths` 陣列的項目。
 
 ## <a name="plugin-with-library-dependencies"></a>具有程式庫相依性的外掛程式
 
@@ -268,7 +271,7 @@ static Assembly LoadPlugin(string relativePath)
 
 在 [the dotnet/samples 存放庫](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)中可以找到此教學課程的完整原始程式碼。 完整的範例包含 `AssemblyDependencyResolver` 行為的一些其他範例。 例如，`AssemblyDependencyResolver` 物件也可以解析 NuGet 套件隨附的原生程式庫，以及當地語系化附屬組件。 範例存放庫中的 `UVPlugin` 和 `FrenchPlugin` 示範了這些案例。
 
-## <a name="reference-a-plugin-from-a-nuget-package"></a>從 NuGet 套件參考外掛程式
+## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>從 NuGet 套件參考外掛程式介面
 
 假設應用程式 A 在 NuGet 套件中定義了名為 `A.PluginBase` 的外掛程式介面。 如何在您的外掛程式專案中正確地參考套件？ 針對專案參考，在專案檔中的 `ProjectReference` 項目上使用 `<Private>false</Private>` 中繼資料可防止將 DLL 複製到輸出。
 

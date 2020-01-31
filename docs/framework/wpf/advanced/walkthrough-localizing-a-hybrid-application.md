@@ -5,20 +5,20 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 281afad0c0de856ca67abc74c65aff0e7afc3e01
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b406d539f2446824027e9462c8ecbe20c18cfb27
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976507"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794133"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>逐步解說：當地語系化混合應用程式
 
-本逐步解說將示範如何在 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]型混合式應用程式中，將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素當地語系化。
+本逐步解說將示範如何在 Windows Forms 型混合式應用程式中，將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素當地語系化。
 
 這個逐步解說中所述的工作包括：
 
-- 建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 主專案。
+- 建立 Windows Forms 主專案。
 
 - 新增可當地語系化的內容。
 
@@ -32,7 +32,7 @@ ms.locfileid: "73976507"
 
 完成之後，就會有當地語系化的混合應用程式。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 您需要下列元件才能完成此逐步解說：
 
@@ -40,7 +40,7 @@ ms.locfileid: "73976507"
 
 ## <a name="creating-the-windows-forms-host-project"></a>建立 Windows Forms 主專案
 
-第一個步驟是建立 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式專案，並新增包含您要當地語系化之內容的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素。
+第一個步驟是建立 Windows Forms 應用程式專案，並新增包含您要當地語系化之內容的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素。
 
 ### <a name="to-create-the-host-project"></a>建立主專案
 
@@ -52,7 +52,7 @@ ms.locfileid: "73976507"
 
 ## <a name="adding-localizable-content"></a>新增可當地語系化的內容
 
-接下來，您將加入 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 標籤控制項，並將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素的內容設定為可當地語系化的字串。
+接下來，您將加入 Windows Forms 標籤控制項，並將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元素的內容設定為可當地語系化的字串。
 
 ### <a name="to-add-localizable-content"></a>新增可當地語系化的內容
 

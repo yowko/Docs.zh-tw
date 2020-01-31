@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 15212cb5-93d4-4025-bec9-d4b9919eb1fe
 topic_type:
 - apiref
-ms.openlocfilehash: b3094eb6e3006be49cf17c1ca2a220b8ec58b673
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 739c648173d45a9c147ea2a4e469a3a4b518e893
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139065"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794341"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 介面
 提供封裝函式傳回值的方法。 `ICorDebugILFrame3` 是 ICorDebugILFrame 和 ICorDebugILFrame2 介面的邏輯擴充。  
@@ -24,7 +24,7 @@ ms.locfileid: "73139065"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetReturnValueForILOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|取得 ICorDebugValue 物件，它會封裝函式的傳回值。|  
+|[GetReturnValueForILOffset 方法](icordebugilframe3-getreturnvalueforiloffset-method.md)|取得 ICorDebugValue 物件，它會封裝函式的傳回值。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -42,5 +42,5 @@ ms.locfileid: "73139065"
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugCode3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugCode3 介面](icordebugcode3-interface.md)
+- [偵錯介面](debugging-interfaces.md)

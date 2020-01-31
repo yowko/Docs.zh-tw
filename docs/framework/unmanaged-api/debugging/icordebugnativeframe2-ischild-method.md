@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-ms.openlocfilehash: 539fa612234c4cc37bed5a8fd4b1e727a35b1d6f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22722e4d602bdb9df9877b2199b4d4271a4d3105
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096397"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792723"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild 方法
 判斷目前的框架是否為子框架。  
@@ -47,7 +47,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- 如果您呼叫方法的框架物件是另一個框架的子系，則 `IsChild` 方法會傳回 `true`。 如果是這種情況，請使用[IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)方法來檢查框架是否為其父系。  
+ 如果您呼叫方法的框架物件是另一個框架的子系，則 `IsChild` 方法會傳回 `true`。 如果是這種情況，請使用[IsMatchingParentFrame](icordebugnativeframe2-ismatchingparentframe-method.md)方法來檢查框架是否為其父系。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -60,6 +60,6 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugNativeFrame2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugNativeFrame2 介面](icordebugnativeframe2-interface.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

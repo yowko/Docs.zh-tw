@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-ms.openlocfilehash: 7edf0065fa7eb39dada167a682f2b634a438f1f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7685d1b6d5458a4405fc5a4abdb2f3134618f01c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138405"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794408"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>ICorDebugHeapValue::IsValid 方法
 取得值，指出此 ICorDebugHeapValue 所表示的物件是否有效。  
@@ -42,7 +42,7 @@ HRESULT IsValid (
 ## <a name="remarks"></a>備註  
  如果垃圾收集行程已回收值，則該值無效。  
   
- 這個方法已被取代。 在 .NET Framework 2.0 中，所有值都是有效的，直到呼叫[ICorDebugController：： Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)為止，此時值會無效。  
+ 這個方法已被取代。 在 .NET Framework 2.0 中，所有值都是有效的，直到呼叫[ICorDebugController：： Continue](icordebugcontroller-continue-method.md)為止，此時值會無效。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

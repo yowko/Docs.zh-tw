@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41af93c7-e448-4251-8d4d-413d38c635f2
 topic_type:
 - apiref
-ms.openlocfilehash: 9e1a5ba65da09c90f33e5e8108c3bd91f3aee4a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cfec84483d387630623f77c176c668171303dd0f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131286"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791982"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx 方法
 在偵錯工具下的遠端電腦上啟動進程。  
@@ -47,7 +47,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="parameters"></a>參數  
  `pRemoteTarget`  
- 在[ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)的指標。 用來判斷將在其上啟動進程的遠端電腦。  
+ 在[ICorDebugRemoteTarget 介面](icordebugremotetarget-interface.md)的指標。 用來判斷將在其上啟動進程的遠端電腦。  
   
  `lpApplicationName`  
  在以 null 結束的字串指標，指定啟動的進程所要執行的模組。 模組會在呼叫進程的安全性內容中執行。  
@@ -106,7 +106,7 @@ HRESULT CreateProcessEx (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugRemote 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugRemote 介面](icordebugremote-interface.md)
+- [ICorDebug 介面](icordebug-interface.md)
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdab0ade-7f56-4fa2-b3ef-f7a1d2852bba
 topic_type:
 - apiref
-ms.openlocfilehash: 5b988b110100cd159b8e262573df409847d635c6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2d71cebb77ed3ca586e857710667c0077f4f76ed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134130"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793589"
 ---
 # <a name="icordebugdebugactiveprocess-method"></a>ICorDebug::DebugActiveProcess 方法
 將偵錯工具附加至現有的進程。  
@@ -59,4 +59,4 @@ HRESULT DebugActiveProcess (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug 介面](icordebug-interface.md)

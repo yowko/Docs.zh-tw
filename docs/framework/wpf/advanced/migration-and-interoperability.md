@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WPF [WPF], interoperability
 - migration [WPF]
 ms.assetid: d655de05-bf63-4814-bc64-6b3be01c70a2
-ms.openlocfilehash: 3e7b838bddef535572afaaaf962cdda4b0272a62
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 76641d8bd6061e3b234aaa16efbb77b0a32e3a3f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740338"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794318"
 ---
 # <a name="migration-and-interoperability"></a>移轉和互通性
 此頁面包含的檔連結，會討論如何在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式與其他類型的 Microsoft Windows 應用程式之間執行互通性。  
@@ -32,8 +32,8 @@ ms.locfileid: "75740338"
   
 |詞彙|定義|  
 |----------|----------------|  
-|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|專案，可讓您將 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項裝載為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面的元素。|  
-|<xref:System.Windows.Forms.Integration.ElementHost>|您可以用來裝載 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控制項的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。|  
+|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|專案，可讓您將 Windows Forms 控制項裝載為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面的元素。|  
+|<xref:System.Windows.Forms.Integration.ElementHost>|您可以用來裝載 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控制項的 Windows Forms 控制項。|  
 |<xref:System.Windows.Interop.HwndSource>|在 Win32 應用程式中裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 區域。|  
 |<xref:System.Windows.Interop.HwndHost>|<xref:System.Windows.Forms.Integration.WindowsFormsHost>的基類，會定義一些以 HWND 為基礎的技術在由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式裝載時所使用的基本功能。 將此設為子類別，以在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中裝載 Win32 視窗。|  
 |<xref:System.Windows.Interop.BrowserInteropHelper>|協助程式類別，用於針對瀏覽器所裝載的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式，報告瀏覽器環境的條件。|  

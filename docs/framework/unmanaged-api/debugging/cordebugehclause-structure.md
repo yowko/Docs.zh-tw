@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: f35e979a5107064d2987a385a989075ef71283ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 197c33511a474eb8291e4361ebb3c21fb3720cae
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73098865"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789418"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 結構
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -51,13 +51,13 @@ typedef struct _CorDebugEHClause {
 |`FilterOffset`|以篩選器為基礎之例外狀況處理常式自方法主體開頭位移的位元組數。|  
   
 ## <a name="remarks"></a>備註  
- [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)方法會傳回 `CoreDebugEHClause` 值的陣列。  
+ [GetEHClauses](icordebugilcode-getehclauses-method.md)方法會傳回 `CoreDebugEHClause` 值的陣列。  
   
  EH 子句資訊以 CLI 規格定義。 如需詳細資訊，請參閱[標準 ECMA-355：通用語言基礎結構（CLI）、第6版](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。  
   
  `flags` 欄位可以包含下列旗標。 請注意，CorDebug.idl 或 CorDebug.h 中並未定義這些旗標。  
   
-|旗標|值|描述|  
+|旗標|{2&gt;值&lt;2}|描述|  
 |----------|-----------|-----------------|  
 |`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|宣告類型的例外狀況子句。|  
 |`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|例外狀況篩選器與處理常式子句。|  
@@ -75,5 +75,5 @@ typedef struct _CorDebugEHClause {
   
 ## <a name="see-also"></a>請參閱
 
-- [GetEHClauses 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [GetEHClauses 方法](icordebugilcode-getehclauses-method.md)
+- [偵錯結構](debugging-structures.md)
