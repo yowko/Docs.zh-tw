@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9bb93fab-57e8-4f9a-9ef3-1794504fa896
 topic_type:
 - apiref
-ms.openlocfilehash: 2ebe7ef37fb072e3688cc4dcfa5ed89832e886e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8313b7c97eb5d94424259dc91459f62e13368fb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122940"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785598"
 ---
-# <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a><span data-ttu-id="77f21-102">ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion 方法</span><span class="sxs-lookup"><span data-stu-id="77f21-102">ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion Method</span></span>
-<span data-ttu-id="77f21-103">由[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)呼叫，以向偵錯工具報告嘗試列舉指定的記憶體區域的結果。</span><span class="sxs-lookup"><span data-stu-id="77f21-103">Called by [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) to report to the debugger the result of an attempt to enumerate a specified region of memory.</span></span>  
+# <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a><span data-ttu-id="c3e4c-102">ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion 方法</span><span class="sxs-lookup"><span data-stu-id="c3e4c-102">ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion Method</span></span>
+<span data-ttu-id="c3e4c-103">由[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)呼叫，以向偵錯工具報告嘗試列舉指定的記憶體區域的結果。</span><span class="sxs-lookup"><span data-stu-id="c3e4c-103">Called by [ICLRDataEnumMemoryRegions::EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md) to report to the debugger the result of an attempt to enumerate a specified region of memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="77f21-104">語法</span><span class="sxs-lookup"><span data-stu-id="77f21-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3e4c-104">語法</span><span class="sxs-lookup"><span data-stu-id="c3e4c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumMemoryRegion (  
@@ -34,27 +34,27 @@ HRESULT EnumMemoryRegion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="77f21-105">參數</span><span class="sxs-lookup"><span data-stu-id="77f21-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c3e4c-105">參數</span><span class="sxs-lookup"><span data-stu-id="c3e4c-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="77f21-106">在要列舉之記憶體區域的起始位址。</span><span class="sxs-lookup"><span data-stu-id="77f21-106">[in] The starting address of the memory region that was to be enumerated.</span></span>  
+ <span data-ttu-id="c3e4c-106">在要列舉之記憶體區域的起始位址。</span><span class="sxs-lookup"><span data-stu-id="c3e4c-106">[in] The starting address of the memory region that was to be enumerated.</span></span>  
   
  `size`  
- <span data-ttu-id="77f21-107">在記憶體區域的大小（以位元組為單位）。</span><span class="sxs-lookup"><span data-stu-id="77f21-107">[in] The size, in bytes, of the memory region.</span></span>  
+ <span data-ttu-id="c3e4c-107">在記憶體區域的大小（以位元組為單位）。</span><span class="sxs-lookup"><span data-stu-id="c3e4c-107">[in] The size, in bytes, of the memory region.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="77f21-108">備註</span><span class="sxs-lookup"><span data-stu-id="77f21-108">Remarks</span></span>  
- <span data-ttu-id="77f21-109">`ICLRDataEnumMemoryRegions::EnumMemoryRegions` 方法會在每次嘗試列舉記憶體區域之後，呼叫此回呼方法。</span><span class="sxs-lookup"><span data-stu-id="77f21-109">The `ICLRDataEnumMemoryRegions::EnumMemoryRegions` method will call this callback method after each attempt to enumerate a memory region.</span></span> <span data-ttu-id="77f21-110">即使這個方法會傳回表示失敗的 HRESULT，列舉仍會繼續。</span><span class="sxs-lookup"><span data-stu-id="77f21-110">The enumeration will continue even if this method returns an HRESULT indicating failure.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c3e4c-108">備註</span><span class="sxs-lookup"><span data-stu-id="c3e4c-108">Remarks</span></span>  
+ <span data-ttu-id="c3e4c-109">`ICLRDataEnumMemoryRegions::EnumMemoryRegions` 方法會在每次嘗試列舉記憶體區域之後，呼叫此回呼方法。</span><span class="sxs-lookup"><span data-stu-id="c3e4c-109">The `ICLRDataEnumMemoryRegions::EnumMemoryRegions` method will call this callback method after each attempt to enumerate a memory region.</span></span> <span data-ttu-id="c3e4c-110">即使這個方法會傳回表示失敗的 HRESULT，列舉仍會繼續。</span><span class="sxs-lookup"><span data-stu-id="c3e4c-110">The enumeration will continue even if this method returns an HRESULT indicating failure.</span></span>  
   
- <span data-ttu-id="77f21-111">此回呼所報告的區域可能是重複或重迭的區域。</span><span class="sxs-lookup"><span data-stu-id="77f21-111">Regions reported by this callback may be duplicates or overlapping regions.</span></span>  
+ <span data-ttu-id="c3e4c-111">此回呼所報告的區域可能是重複或重迭的區域。</span><span class="sxs-lookup"><span data-stu-id="c3e4c-111">Regions reported by this callback may be duplicates or overlapping regions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="77f21-112">需求</span><span class="sxs-lookup"><span data-stu-id="77f21-112">Requirements</span></span>  
- <span data-ttu-id="77f21-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="77f21-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c3e4c-112">需求</span><span class="sxs-lookup"><span data-stu-id="c3e4c-112">Requirements</span></span>  
+ <span data-ttu-id="c3e4c-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c3e4c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="77f21-114">**標頭：** ClrData .idl，ClrData。h</span><span class="sxs-lookup"><span data-stu-id="77f21-114">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="c3e4c-114">**標頭：** ClrData .idl，ClrData。h</span><span class="sxs-lookup"><span data-stu-id="c3e4c-114">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="77f21-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="77f21-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c3e4c-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c3e4c-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="77f21-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="77f21-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c3e4c-116">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c3e4c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="77f21-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="77f21-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c3e4c-117">請參閱</span><span class="sxs-lookup"><span data-stu-id="c3e4c-117">See also</span></span>
 
-- [<span data-ttu-id="77f21-118">ICLRDataEnumMemoryRegionsCallback 介面</span><span class="sxs-lookup"><span data-stu-id="77f21-118">ICLRDataEnumMemoryRegionsCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)
+- [<span data-ttu-id="c3e4c-118">ICLRDataEnumMemoryRegionsCallback 介面</span><span class="sxs-lookup"><span data-stu-id="c3e4c-118">ICLRDataEnumMemoryRegionsCallback Interface</span></span>](iclrdataenummemoryregionscallback-interface.md)

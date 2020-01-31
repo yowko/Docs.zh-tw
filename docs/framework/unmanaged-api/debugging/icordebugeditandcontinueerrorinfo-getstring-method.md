@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 85e2108b-ff03-4a15-ac5c-1eb5d84f38ca
 topic_type:
 - apiref
-ms.openlocfilehash: 5a6c7d6075a114cc6e621108ce217dfdb0d75dc8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 542b33c82834ccd30c79c78bdcc759cf0c34d36c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137057"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783340"
 ---
-# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="9df8e-102">ICorDebugEditAndContinueErrorInfo::GetString 方法</span><span class="sxs-lookup"><span data-stu-id="9df8e-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
-<span data-ttu-id="9df8e-103">`GetString` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="9df8e-103">`GetString` is obsolete.</span></span> <span data-ttu-id="9df8e-104">請勿呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="9df8e-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="cfa62-102">ICorDebugEditAndContinueErrorInfo::GetString 方法</span><span class="sxs-lookup"><span data-stu-id="cfa62-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
+<span data-ttu-id="cfa62-103">`GetString` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="cfa62-103">`GetString` is obsolete.</span></span> <span data-ttu-id="cfa62-104">請勿呼叫此方法。</span><span class="sxs-lookup"><span data-stu-id="cfa62-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9df8e-105">請參閱</span><span class="sxs-lookup"><span data-stu-id="9df8e-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cfa62-105">請參閱</span><span class="sxs-lookup"><span data-stu-id="cfa62-105">See also</span></span>
 
-- [<span data-ttu-id="9df8e-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="9df8e-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="cfa62-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="cfa62-106">Debugging Interfaces</span></span>](debugging-interfaces.md)
