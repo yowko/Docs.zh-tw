@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Form 控制項
+title: 配置具有填補、邊界和 AutoSize 屬性的控制項
 ms.date: 03/30/2017
 f1_keywords:
 - Margin.Bottom
@@ -18,12 +18,12 @@ ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 76c880c208355b01d0fbaf46cf58091ad147846b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ca7942c04434592f2541252c47ac3dd17e03dbac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460606"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742380"
 ---
 # <a name="walkthrough-lay-out-controls-with-padding-margins-and-the-autosize-property"></a>逐步解說：使用填補、邊界和 AutoSize 屬性配置控制項
 
@@ -39,7 +39,7 @@ ms.locfileid: "73460606"
 
 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性會告知控制項自動將本身的大小調整為其內容。 它不會將其大小調整為小於其原始 <xref:System.Windows.Forms.Control.Size%2A> 屬性的值，而且將會考慮其 <xref:System.Windows.Forms.Control.Padding%2A> 屬性的值。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 您將需要 Visual Studio 才能完成此逐步解說。
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc437751-7093-44e2-bfdc-191d9ce3c192
 topic_type:
 - apiref
-ms.openlocfilehash: e41bb5ca0fdd999692395239304f50a6f745a4f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0944f3379c18cba56ab65fe40a5b94a64d8a8991
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088275"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778194"
 ---
 # <a name="icordebugarrayvalue-interface"></a>ICorDebugArrayValue 介面
 
@@ -29,14 +29,14 @@ ICorDebugHeapValue 的子類別，表示一維或多維陣列。
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetBaseIndicies 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getbaseindicies-method.md)|取得陣列中每個維度的基底索引。|  
-|[GetCount 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getcount-method.md)|取得陣列中的元素總數。|  
-|[GetDimensions 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getdimensions-method.md)|取得陣列的維度。|  
-|[GetElement 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelement-method.md)|取得值，表示陣列中的指定元素。|  
-|[GetElementAtPosition 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelementatposition-method.md)|取得位於指定位置的專案，將陣列視為以零為基底的一維陣列。|  
-|[GetElementType 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getelementtype-method.md)|取得陣列中元素的簡單類型。|  
-|[GetRank 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-getrank-method.md)|取得陣列的維度數目。|  
-|[HasBaseIndicies 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugarrayvalue-hasbaseindicies-method.md)|判斷陣列是否有基底索引。|  
+|[GetBaseIndicies 方法](icordebugarrayvalue-getbaseindicies-method.md)|取得陣列中每個維度的基底索引。|  
+|[GetCount 方法](icordebugarrayvalue-getcount-method.md)|取得陣列中的元素總數。|  
+|[GetDimensions 方法](icordebugarrayvalue-getdimensions-method.md)|取得陣列的維度。|  
+|[GetElement 方法](icordebugarrayvalue-getelement-method.md)|取得值，表示陣列中的指定元素。|  
+|[GetElementAtPosition 方法](icordebugarrayvalue-getelementatposition-method.md)|取得位於指定位置的專案，將陣列視為以零為基底的一維陣列。|  
+|[GetElementType 方法](icordebugarrayvalue-getelementtype-method.md)|取得陣列中元素的簡單類型。|  
+|[GetRank 方法](icordebugarrayvalue-getrank-method.md)|取得陣列的維度數目。|  
+|[HasBaseIndicies 方法](icordebugarrayvalue-hasbaseindicies-method.md)|判斷陣列是否有基底索引。|  
   
 ## <a name="remarks"></a>備註  
  `ICorDebugArrayValue` 支援一維和多維度陣列。  
@@ -55,4 +55,4 @@ ICorDebugHeapValue 的子類別，表示一維或多維陣列。
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

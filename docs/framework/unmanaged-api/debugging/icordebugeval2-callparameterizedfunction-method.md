@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72f54a45-dbe6-4bb4-8c99-e879a27368e5
 topic_type:
 - apiref
-ms.openlocfilehash: b521c96d26202119dad6fedb61cbd9da8b3c2e52
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ab31ab8f83a71372c8e12b460458a26996f65ff5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137631"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782980"
 ---
 # <a name="icordebugeval2callparameterizedfunction-method"></a>ICorDebugEval2::CallParameterizedFunction 方法
 設定對指定 ICorDebugFunction 的呼叫，其可以嵌套在類別中，其會使用 <xref:System.Type> 參數，或者自己可以接受 <xref:System.Type> 參數。  
@@ -54,7 +54,7 @@ HRESULT CallParameterizedFunction (
  在指標的陣列，其中每一個都會指向 ICorDebugValue 物件，代表在函數引數中傳遞的值。  
   
 ## <a name="remarks"></a>備註  
- `CallParameterizedFunction` 類似[ICorDebugEval：： CallFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md) ，但函式可能位於具有型別參數的類別中，本身可能會採用型別參數，或兩者都是。 應該先為類別指定類型引數，然後為函式提供。  
+ `CallParameterizedFunction` 類似[ICorDebugEval：： CallFunction](icordebugeval-callfunction-method.md) ，但函式可能位於具有型別參數的類別中，本身可能會採用型別參數，或兩者都是。 應該先為類別指定類型引數，然後為函式提供。  
   
  如果函式在不同的應用程式域中，將會發生轉換。 不過，所有類型和值引數都必須在目標應用程式域中。  
   

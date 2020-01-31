@@ -1,17 +1,17 @@
 ---
-title: WPF 的 XAML 和自訂類別
+title: XAML 和自訂類別
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom classes in XAML [WPF]
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: aa2dd7a5c30894f85ed1d4aae0228b76ece3c005
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 8dab7310826357d7fbe434002298032b8722e5b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559868"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744434"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF 的 XAML 和自訂類別
 通用語言執行平臺（CLR）架構中所實做的 XAML 支援以任何 common language runtime （CLR）語言定義自訂類別或結構，然後使用 XAML 標記存取該類別的功能。 您可以在相同的標記檔案內混用 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定義的類型與您的自訂類型，方法一般是透過將自訂類型對應至 XAML 命名空間前置詞。 本主題討論自訂類別必須滿足才能用作 XAML 項目的需求。  
@@ -81,7 +81,7 @@ ms.locfileid: "75559868"
   
  .NET Framework XAML 服務實作，因此 WPF XAML 處理器會使用下列構成集合屬性的定義。 屬性的屬性類型必須實作下列其中一項：  
   
-- 實作 <xref:System.Collections.IList>。  
+- 執行 <xref:System.Collections.IList>。  
   
 - 執行 <xref:System.Collections.IDictionary> 或泛型對等（<xref:System.Collections.Generic.IDictionary%602>）。  
   

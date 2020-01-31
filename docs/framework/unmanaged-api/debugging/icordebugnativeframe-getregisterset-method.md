@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f309b5f-5556-4f1e-b1dd-4fe97fc81d01
 topic_type:
 - apiref
-ms.openlocfilehash: ac7601f89c125cecbfbd212118420a800f495742
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: affab7ae99dbdf85e7eadc89bfd24c42408626ac
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096804"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792813"
 ---
 # <a name="icordebugnativeframegetregisterset-method"></a>ICorDebugNativeFrame::GetRegisterSet 方法
 取得這個堆疊框架的暫存器集。  
@@ -35,7 +35,7 @@ HRESULT GetRegisterSet (
   
 ## <a name="parameters"></a>參數  
  `ppRegisters`  
- 脫銷[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)物件位址的指標，代表此堆疊框架的緩存集。  
+ 脫銷[ICorDebugRegisterSet](icordebugregisterset-interface.md)物件位址的指標，代表此堆疊框架的緩存集。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

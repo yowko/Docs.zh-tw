@@ -2,12 +2,12 @@
 title: 來源連結與 .NET 程式庫
 description: 使用來源連結改善 .NET 程式庫偵錯的最佳做法建議。
 ms.date: 01/15/2019
-ms.openlocfilehash: 0ebc7601f1ad92b0fc6ab4c7599b010cb42feb5d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706435"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744547"
 ---
 # <a name="source-link"></a>來源連結
 
@@ -25,7 +25,7 @@ ms.locfileid: "75706435"
 
 ![NuGet 封裝瀏覽器中的來源連結](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet 封裝瀏覽器中的來源連結")
 
-**✔️ 請考慮**使用來源連結以將原始程式碼控制中繼資料新增到您的組件與 NuGet 套件。
+✔️考慮使用來源連結，將原始檔控制中繼資料新增至您的元件和 NuGet 套件。
 
 > [!TIP]
 > 您可以將偵錯工具屬性新增至您的類型，進一步加強開發人員的偵錯體驗。
@@ -34,7 +34,7 @@ ms.locfileid: "75706435"
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> 指示偵錯工具逐步執行程式碼，而不要進入程式碼。
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> 控制成員是否要顯示在偵錯工具變數視窗中。
 
-**✔️ CONSIDER**發行符號檔 (`*.pdb`)。
+✔️考慮發佈符號檔（`*.pdb`）。
 
 > 如需最佳偵錯體驗，您的程式庫應該發佈符號檔，以及使用來源連結。 如需有關符號檔和符號套件的詳細資訊，請參閱[符號套件](./nuget.md#symbol-packages)。
 

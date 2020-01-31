@@ -7,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 74e9909fda83c781b5a15727f79ff755e7682b0f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 8d9a23a0813423571c894758257b284ad67a72e2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963129"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744654"
 ---
 # <a name="struct-c-reference"></a>struct (C# 參考)
 
@@ -48,11 +48,9 @@ public struct Book
 ## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [內建型別表](built-in-types-table.md)
-- [型別](/dotnet/csharp/language-reference/keywords)
-- [實值型別](value-types.md)
+- [實值型別](../builtin-types/value-types.md)
 - [Class - 類別](class.md)
 - [interface](interface.md)
 - [類別和結構](../../programming-guide/classes-and-structs/index.md)

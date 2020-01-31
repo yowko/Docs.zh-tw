@@ -1,5 +1,5 @@
 ---
-title: WPF 視窗概觀
+title: Windows 總覽
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 17582192fabf85777bba250f6f53047a84f264b9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636402"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742367"
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
 使用者透過 Windows 與 Windows Presentation Foundation （WPF）獨立應用程式互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立 WPF 應用程式會使用 <xref:System.Windows.Window> 類別來提供自己的視窗。 本主題介紹在獨立應用程式中建立和管理 windows 的基本概念之前的 <xref:System.Windows.Window>。  

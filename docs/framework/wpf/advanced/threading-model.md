@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740262"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794278"
 ---
 # <a name="threading-model"></a>執行緒模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是設計來避免開發人員遇到執行緒的難題。 因此，大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 開發人員都不需要撰寫使用一個以上執行緒的介面。 由於多執行緒的程式非常複雜且很難偵錯，因此，若有單一執行緒解決方案，就應避免使用多執行緒程式。
@@ -177,7 +177,7 @@ ms.locfileid: "75740262"
 
  `GetWeatherAsync` 會使用上述其中一種技術 (例如建立背景執行緒)，以非同步方式執行工作，而不需封鎖呼叫執行緒。
 
- 此模式最重要的部分之一，就是在呼叫*方法`Async`* 方法的相同執行緒上呼叫*方法`Completed` 方法*，以開始使用。 您可以透過儲存 <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>，輕鬆地使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，但 nongraphical 元件只能用在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中，而不能用於 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 或 ASP.NET 程式中。
+ 此模式最重要的部分之一，就是在呼叫*方法`Async`* 方法的相同執行緒上呼叫*方法`Completed` 方法*，以開始使用。 您可以透過儲存 <xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>，輕鬆地使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，但 nongraphical 元件只能用在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中，而不能用於 Windows Forms 或 ASP.NET 程式中。
 
  <xref:System.Windows.Threading.DispatcherSynchronizationContext> 類別可以滿足這項需求，也就是可與其他 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 架構搭配使用的簡化版 <xref:System.Windows.Threading.Dispatcher>。
 

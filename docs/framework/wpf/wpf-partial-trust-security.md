@@ -1,5 +1,5 @@
 ---
-title: WPF 部分信任安全性
+title: 部分信任安全性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 0d9bbcc32eea49afc6ecc713b0cf005b4434a67d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636545"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743337"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全性
 <a name="introduction"></a> 一般而言，網際網路應用程式應該限制不得直接存取重要的系統資源，以防止惡意損害。 根據預設，HTML 和用戶端指令碼語言無法存取重要的系統資源。 因為 Windows Presentation Foundation （WPF）瀏覽器裝載的應用程式可以從瀏覽器啟動，所以它們應該符合一組類似的限制。 為了強制執行這些限制，WPF 同時依賴代碼啟用安全性（CAS）和 ClickOnce （請參閱[Wpf 安全性策略-平臺安全性](wpf-security-strategy-platform-security.md)）。 根據預設，瀏覽器裝載的應用程式會要求網際網路區域 CA 的許可權集，而不論它們是從網際網路、近端內部網路或本機電腦啟動。 使用少於完整權限集執行的應用程式便是以部分信任執行。  

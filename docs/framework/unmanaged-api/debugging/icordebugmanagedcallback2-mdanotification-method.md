@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93f79627-bd31-4f4f-b95d-46a032a52fe4
 topic_type:
 - apiref
-ms.openlocfilehash: ab3819d5c33f090fda1ca9c3dccb5d08ab8f84cc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bf9ea40cc81be37499e6729006e7177a8000c000
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131465"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793304"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a>ICorDebugManagedCallback2::MDANotification 方法
 提供通知，指出程式碼執行在正在進行調試的應用程式中遇到受管理的調試助理（MDA）。  
@@ -49,10 +49,10 @@ HRESULT MDANotification(
  您必須從 MDA 物件本身取得作業系統（OS）執行緒識別碼。  
   
  `pMDA`  
- 在公開 MDA 資訊之[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)介面的指標。  
+ 在公開 MDA 資訊之[ICorDebugMDA](icordebugmda-interface.md)介面的指標。  
   
 ## <a name="remarks"></a>備註  
- MDA 是啟發式警告，而且不需要任何明確的偵錯工具動作，除非呼叫[ICorDebugController：： Continue 繼續](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)執行正在進行調試的應用程式。  
+ MDA 是啟發式警告，而且不需要任何明確的偵錯工具動作，除非呼叫[ICorDebugController：： Continue 繼續](icordebugcontroller-continue-method.md)執行正在進行調試的應用程式。  
   
  Common language runtime （CLR）可以判斷哪些 Mda 會引發，而哪些資料會在任何指定的 MDA 中。 因此，偵錯工具不應建立任何需要特定 MDA 模式的功能。  
   
@@ -71,6 +71,6 @@ HRESULT MDANotification(
   
 ## <a name="see-also"></a>請參閱
 
-- [診斷 Managed 偵錯助理的錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [ICorDebugManagedCallback2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [使用 Managed 偵錯助理診斷錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [ICorDebugManagedCallback2 介面](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

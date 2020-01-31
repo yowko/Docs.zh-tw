@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c6f4f6e-52cc-402e-881b-7b8526544c90
 topic_type:
 - apiref
-ms.openlocfilehash: 5fb4a8a508cde4455bbee8c08432d3549e3fac43
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22ae1d24040a8ee5000e0ff2fbeb2b45e08050df
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122761"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784347"
 ---
 # <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum 介面
 
@@ -29,7 +29,7 @@ ms.locfileid: "73122761"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|從列舉中取得指定數目的 `ICorDebugBreakpoint` 實例，從目前位置開始。|  
+|[Next 方法](icordebugbreakpointenum-next-method.md)|從列舉中取得指定數目的 `ICorDebugBreakpoint` 實例，從目前位置開始。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -47,4 +47,4 @@ ms.locfileid: "73122761"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

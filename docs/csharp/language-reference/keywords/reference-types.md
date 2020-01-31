@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: 16e7cdc624979f9a35e287ea5274bd9398c83132
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2d6cc94c11ca6305a75e9ee489af53ad957201e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715169"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744524"
 ---
 # <a name="reference-types-c-reference"></a>參考型別 (C# 參考)
 
@@ -38,7 +38,6 @@ C# 中有兩種類型：參考類型和實值類型。 參考類型的變數會�
 ## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [指標型別](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [實值型別](value-types.md)
+- [實值型別](../builtin-types/value-types.md)

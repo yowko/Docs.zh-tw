@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66a59b18-ce9a-41f4-b23b-4dd6753d6d36
 topic_type:
 - apiref
-ms.openlocfilehash: e2550320494b9ba43947c3176788042f5c2e6ad5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2f19987d22502acbe06bd5e5c14b0d6c17cbe24
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130624"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781576"
 ---
 # <a name="icordebugmanagedcallbackunloadclass-method"></a>ICorDebugManagedCallback::UnloadClass 方法
 通知偵錯工具正在卸載類別。  
@@ -55,5 +55,5 @@ HRESULT UnloadClass (
   
 ## <a name="see-also"></a>請參閱
 
-- [LoadClass 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md)
-- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [LoadClass 方法](icordebugmanagedcallback-loadclass-method.md)
+- [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

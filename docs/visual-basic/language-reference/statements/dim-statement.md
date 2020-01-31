@@ -29,14 +29,14 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: ac66ffdba622673ef42017d147c05b2a2733dede
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1b0c3089c366c417af926c8c0703cea021674432
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343760"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744733"
 ---
-# <a name="dim-statement-visual-basic"></a>Dim 陳述式 (Visual Basic)
+# <a name="dim-statement-visual-basic"></a>Dim 語句（Visual Basic）
 
 宣告並配置一或多個變數的儲存空間。
 
@@ -51,49 +51,49 @@ Dim [ WithEvents ] variablelist
 
 - `attributelist`
 
-  選擇性。 請參閱[屬性清單](../../../visual-basic/language-reference/statements/attribute-list.md)。
+  選擇項。 請參閱[屬性清單](attribute-list.md)。
 
 - `accessmodifier`
 
-  選擇性。 可以是下列其中一項：
+  選擇項。 可以是下列其中一項：
 
-  - [Public](../../../visual-basic/language-reference/modifiers/public.md)
+  - [Public](../modifiers/public.md)
 
-  - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+  - [Protected](../modifiers/protected.md)
 
-  - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
+  - [Friend](../modifiers/friend.md)
 
-  - [Private](../../../visual-basic/language-reference/modifiers/private.md)
+  - [Private](../modifiers/private.md)
 
-  - [Protected Friend](../../language-reference/modifiers/protected-friend.md)
+  - [Protected Friend](../modifiers/protected-friend.md)
 
-  - [Private Protected](../../language-reference/modifiers/private-protected.md)
+  - [Private Protected](../modifiers/private-protected.md)
 
-  請參閱 [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
+  請參閱 [Access levels in Visual Basic](../../programming-guide/language-features/declared-elements/access-levels.md)。
 
 - `Shared`
 
-  選擇性。 請參閱[共用](../../../visual-basic/language-reference/modifiers/shared.md)。
+  選擇項。 請參閱[共用](../modifiers/shared.md)。
 
 - `Shadows`
 
-  選擇性。 請參閱[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)。
+  選擇項。 請參閱[Shadows](../modifiers/shadows.md)。
 
 - `Static`
 
-  選擇性。 請參閱[靜態](../../../visual-basic/language-reference/modifiers/static.md)。
+  選擇項。 請參閱[靜態](../modifiers/static.md)。
 
 - `ReadOnly`
 
-  選擇性。 請參閱[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)。
+  選擇項。 請參閱[ReadOnly](../modifiers/readonly.md)。
 
 - `WithEvents`
 
-選擇性。 指定這些是參考可引發事件之類別實例的物件變數。 請參閱[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)。
+  選擇項。 指定這些是參考可引發事件之類別實例的物件變數。 請參閱[WithEvents](../modifiers/withevents.md)。
 
 - `variablelist`
 
-  必要。 在此語句中宣告的變數清單。
+  必要項。 在此語句中宣告的變數清單。
 
   `variable [ , variable ... ]`
 
@@ -103,12 +103,12 @@ Dim [ WithEvents ] variablelist
 
   |組件|描述|
   |---|---|
-  |`variablename`|必要。 變數的名稱。 請參閱 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。|
-  |`boundslist`|選擇性。 陣列變數的每個維度的界限清單。|
-  |`New`|選擇性。 當 `Dim` 語句執行時，建立類別的新實例。|
-  |`datatype`|選擇性。 變數的資料類型。|
-  |`With`|選擇性。 引進物件初始化運算式清單。|
-  |`propertyname`|選擇性。 您要做為實例之類別中的屬性名稱。|
+  |`variablename`|必要項。 變數的名稱。 請參閱 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
+  |`boundslist`|選擇項。 陣列變數的每個維度的界限清單。|
+  |`New`|選擇項。 當 `Dim` 語句執行時，建立類別的新實例。|
+  |`datatype`|選擇項。 變數的資料類型。|
+  |`With`|選擇項。 引進物件初始化運算式清單。|
+  |`propertyname`|選擇項。 您要做為實例之類別中的屬性名稱。|
   |`propinitializer`|`propertyname` = 之後才需要。 評估並指派給屬性名稱的運算式。|
   |`initializer`|如果未指定 `New`，則為選擇性。 建立時，評估並指派給變數的運算式。|
 
@@ -133,11 +133,11 @@ Dim monitorBox As System.Windows.Forms.Form
 Dim bottomLabel As New System.Windows.Forms.Label
 ```
 
-您可以在程式、區塊、類別、結構或模組中宣告變數。 您無法在原始檔、命名空間或介面中宣告變數。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。
+您可以在程式、區塊、類別、結構或模組中宣告變數。 您無法在原始檔、命名空間或介面中宣告變數。 如需詳細資訊，請參閱[宣告內容和預設存取層級](declaration-contexts-and-default-access-levels.md)。
 
 在任何程式之外，于模組層級宣告的變數是*成員變數*或*欄位*。 成員變數在其類別、結構或模組的範圍內。 在程式層級宣告的變數是*本機變數*。 區域變數僅限於其程式或區塊內的範圍。
 
-下列存取修飾詞是用來在程式之外宣告變數： `Public`、`Protected`、`Friend`、`Protected Friend`和 `Private`。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)。
+下列存取修飾詞是用來在程式之外宣告變數： `Public`、`Protected`、`Friend`、`Protected Friend`和 `Private`。 如需詳細資訊，請參閱[Visual Basic 中的存取層級](../../programming-guide/language-features/declared-elements/access-levels.md)。
 
 `Dim` 關鍵字是選擇性的，而且如果您指定下列任何修飾詞，通常會省略： `Public`、`Protected`、`Friend`、`Protected Friend`、`Private`、`Shared`、`Shadows`、`Static`、`ReadOnly`或 `WithEvents`。
 
@@ -148,7 +148,7 @@ Private salary As Decimal
 Static runningTotal As Integer
 ```
 
-如果 `Option Explicit` 是 on （預設值），則編譯器需要您所使用之每個變數的宣告。 如需詳細資訊，請參閱[Option Explicit 語句](../../../visual-basic/language-reference/statements/option-explicit-statement.md)。
+如果 `Option Explicit` 是 on （預設值），則編譯器需要您所使用之每個變數的宣告。 如需詳細資訊，請參閱[Option Explicit 語句](option-explicit-statement.md)。
 
 ## <a name="specifying-an-initial-value"></a>指定初始值
 
@@ -169,9 +169,9 @@ Dim num1 As Integer = 3
 Dim num2 = 3
 ```
 
-型別推斷適用于程式層級。 不適用於類別、結構、模組或介面中的程式之外。 如需型別推斷的詳細資訊，請參閱[Option 推斷語句](../../../visual-basic/language-reference/statements/option-infer-statement.md)和[區欄位型別推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。
+型別推斷適用于程式層級。 不適用於類別、結構、模組或介面中的程式之外。 如需型別推斷的詳細資訊，請參閱[Option 推斷語句](option-infer-statement.md)和[區欄位型別推斷](../../programming-guide/language-features/variables/local-type-inference.md)。
 
-如需未指定資料類型或初始化運算式時，會發生什麼情況的詳細資訊，請參閱本主題稍後的[預設資料類型和值](../../../visual-basic/language-reference/statements/dim-statement.md#default)。
+如需未指定資料類型或初始化運算式時，會發生什麼情況的詳細資訊，請參閱本主題稍後的[預設資料類型和值](dim-statement.md#default)。
 
 您可以使用*物件初始化運算式*，宣告名為和匿名型別的實例。 下列程式碼會建立 `Student` 類別的實例，並使用物件初始化運算式來初始化屬性。
 
@@ -180,7 +180,7 @@ Dim student1 As New Student With {.First = "Michael",
                                   .Last = "Tucker"}
 ```
 
-如需物件初始化運算式的詳細資訊，請參閱[如何：使用物件初始化運算式宣告物件](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)、[物件初始化運算式：命名和匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)和[匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
+如需物件初始化運算式的詳細資訊，請參閱[如何：使用物件初始化運算式宣告物件](../../programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)、[物件初始化運算式：命名和匿名型別](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)和[匿名型別](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)。
 
 ## <a name="declaring-multiple-variables"></a>宣告多個變數
 
@@ -201,7 +201,7 @@ Dim a, b, c As Single, x, y As Double, i As Integer
 
 ## <a name="arrays"></a>陣列
 
-您可以宣告變數來保存*陣列*，其中可以保留多個值。 若要指定變數保存陣列，請在其後面加上括弧的 `variablename`。 如需陣列的詳細資訊，請參閱[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。
+您可以宣告變數來保存*陣列*，其中可以保留多個值。 若要指定變數保存陣列，請在其後面加上括弧的 `variablename`。 如需陣列的詳細資訊，請參閱[陣列](../../programming-guide/language-features/arrays/index.md)。
 
 您可以指定陣列的每個維度的下限和上限。 若要這麼做，請在括弧內包含 `boundslist`。 `boundslist` 指定每個維度的上限和下限。 下限一律為零，不論您是否指定。 每個索引的上限值可能會從零開始。
 
@@ -235,7 +235,7 @@ ReDim messages(4)
 Dim oneDimension(), twoDimensions(,), threeDimensions(,,) As Byte
 ```
 
-您可以宣告陣列的其中一個維度為-1，以宣告*長度為零的陣列*。 持有長度為零之陣列的變數沒有值 `Nothing`。 特定的 common language runtime 函式需要長度為零的陣列。 如果您嘗試存取這類陣列，就會發生執行時間例外狀況。 如需詳細資訊，請參閱[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。
+您可以宣告陣列的其中一個維度為-1，以宣告*長度為零的陣列*。 持有長度為零之陣列的變數沒有值 `Nothing`。 特定的 common language runtime 函式需要長度為零的陣列。 如果您嘗試存取這類陣列，就會發生執行時間例外狀況。 如需詳細資訊，請參閱[陣列](../../programming-guide/language-features/arrays/index.md)。
 
 您可以使用陣列常值來初始化陣列的值。 若要這麼做，請使用大括弧（`{}`）來括住初始化值。
 
@@ -249,7 +249,7 @@ Dim longArray() As Long = {0, 1, 2, 3}
 Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 ```
 
-如需陣列常值的詳細資訊，請參閱[陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。
+如需陣列常值的詳細資訊，請參閱[陣列](../../programming-guide/language-features/arrays/index.md)。
 
 ## <a name="default"></a>預設資料類型和值
 
@@ -257,8 +257,8 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 |指定了資料類型？|指定了初始設定式？|範例|結果|
 |---|---|---|---|
-|否|否|`Dim qty`|如果[Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)為 off （預設值），則變數會設定為 `Nothing`。<br /><br /> 如果 `Option Strict` 已開啟，就會發生編譯時間錯誤。|
-|否|是|`Dim qty = 5`|如果[Option 推斷](../../../visual-basic/language-reference/statements/option-infer-statement.md)為 on （預設值），則變數會採用初始化運算式的資料類型。 請參閱[區欄位型別推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 已關閉，且 `Option Strict` 也已關閉，此變數會採用 `Object` 的資料類型。<br /><br /> 如果 `Option Infer` 已關閉，但是 `Option Strict` 已開啟，就會發生編譯時間錯誤。|
+|否|否|`Dim qty`|如果[Option Strict](option-strict-statement.md)為 off （預設值），則變數會設定為 `Nothing`。<br /><br /> 如果 `Option Strict` 已開啟，就會發生編譯時間錯誤。|
+|否|是|`Dim qty = 5`|如果[Option 推斷](option-infer-statement.md)為 on （預設值），則變數會採用初始化運算式的資料類型。 請參閱[區欄位型別推斷](../../programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 已關閉，且 `Option Strict` 也已關閉，此變數會採用 `Object` 的資料類型。<br /><br /> 如果 `Option Infer` 已關閉，但是 `Option Strict` 已開啟，就會發生編譯時間錯誤。|
 |是|否|`Dim qty As Integer`|變數會初始化為資料類型的預設值。 請參閱本節稍後的表格。|
 |是|是|`Dim qty  As Integer = 5`|如果初始設定式的資料類型無法轉換成指定的資料類型，就會發生編譯時期錯誤。|
 
@@ -292,7 +292,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 您可以藉由提供 `accessmodifier`，指定可以存取變數的程式碼。 類別和模組成員變數（在任何程式之外）預設為私用存取，而結構成員變數預設為公用存取。 您可以使用存取修飾詞來調整其存取層級。 您不能在本機變數上使用存取修飾詞（在程式內）。
 
-您只能在成員變數上指定 `WithEvents`，而不是在程式內的區域變數上指定。 如果您指定 `WithEvents`，變數的資料類型必須是特定的類別類型，而不是 `Object`。 您無法使用 `WithEvents`宣告陣列。 如需事件的詳細資訊，請參閱[事件](../../../visual-basic/programming-guide/language-features/events/index.md)。
+您只能在成員變數上指定 `WithEvents`，而不是在程式內的區域變數上指定。 如果您指定 `WithEvents`，變數的資料類型必須是特定的類別類型，而不是 `Object`。 您無法使用 `WithEvents`宣告陣列。 如需事件的詳細資訊，請參閱[事件](../../programming-guide/language-features/events/index.md)。
 
 > [!NOTE]
 > 類別、結構或模組之外的程式碼必須使用該類別、結構或模組的名稱來限定成員變數的名稱。 程式或區塊外的程式碼無法參考該程式或區塊中的任何區域變數。
@@ -303,7 +303,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 如果類別持有特別寶貴的資源（例如資料庫連接或檔案控制代碼），您可能不想要等到下一次垃圾收集，就能清除不再使用的類別實例。 類別可以執行 <xref:System.IDisposable> 介面，以提供在垃圾收集之前釋放資源的方式。 實作為介面的類別會公開可呼叫的 `Dispose` 方法，以強制立即釋放寶貴的資源。
 
-`Using` 語句會自動化取得資源、執行一組語句，然後處置資源的程式。 不過，資源必須執行 <xref:System.IDisposable> 介面。 如需詳細資訊，請參閱 [Using 陳述式](../../../visual-basic/language-reference/statements/using-statement.md)。
+`Using` 語句會自動化取得資源、執行一組語句，然後處置資源的程式。 不過，資源必須執行 <xref:System.IDisposable> 介面。 如需詳細資訊，請參閱 [Using 陳述式](using-statement.md)。
 
 ## <a name="example"></a>範例
 
@@ -325,18 +325,18 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)
-- [ReDim 陳述式](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [Option Explicit 陳述式](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Option Infer 陳述式](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Const 陳述式](const-statement.md)
+- [ReDim 陳述式](redim-statement.md)
+- [Option Explicit 陳述式](option-explicit-statement.md)
+- [Option Infer 陳述式](option-infer-statement.md)
+- [Option Strict 陳述式](option-strict-statement.md)
 - [專案設計工具、編譯頁 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
-- [變數宣告](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [物件初始設定式：具名和匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [物件初始設定式：具名和匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [如何：使用物件初始設定式宣告物件](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
-- [區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [變數宣告](../../programming-guide/language-features/variables/variable-declaration.md)
+- [陣列](../../programming-guide/language-features/arrays/index.md)
+- [物件初始設定式：具名和匿名類型](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [匿名類型](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [物件初始設定式：具名和匿名類型](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [如何：使用物件初始設定式宣告物件](../../programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [區域類型推斷](../../programming-guide/language-features/variables/local-type-inference.md)

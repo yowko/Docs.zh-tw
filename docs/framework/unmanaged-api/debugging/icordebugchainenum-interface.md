@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6639335c-48e1-4e74-a4f3-70a6a0f54af1
 topic_type:
 - apiref
-ms.openlocfilehash: 63588a3d33577ff58c99e796e8e5453d2a6a9381
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1f94e2e1f6b376a1998ba4fbcc940147eb16272a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123805"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784199"
 ---
 # <a name="icordebugchainenum-interface"></a>ICorDebugChainEnum 介面
 
@@ -29,7 +29,7 @@ ms.locfileid: "73123805"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugchainenum-next-method.md)|從列舉中取得指定數目的 `ICorDebugChain` 實例，從目前位置開始。|  
+|[Next 方法](icordebugchainenum-next-method.md)|從列舉中取得指定數目的 `ICorDebugChain` 實例，從目前位置開始。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -47,4 +47,4 @@ ms.locfileid: "73123805"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

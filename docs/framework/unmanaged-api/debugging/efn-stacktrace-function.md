@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: caea7754-867c-4360-a65c-5ced4408fd9d
 topic_type:
 - apiref
-ms.openlocfilehash: 272856c7eedbdc577158edcc463535a7946bb060
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc5093a5ba0afcccaf960e9b8776f93a061cc2f5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122996"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785673"
 ---
 # <a name="_efn_stacktrace-function"></a>\_EFN\_StackTrace 函式
 提供 Managed 堆疊追蹤以及 `CONTEXT` 記錄之陣列的文字表示，再各提供一個文字表示給 Unmanaged 和 Managed 程式碼之間的每個轉換。  
@@ -58,7 +58,7 @@ HRESULT CALLBACK _EFN_StackTrace(
  在內容結構的大小。  
   
  `Flags`  
- 在設定為0或 SOS_STACKTRACE_SHOWADDRESSES （0x01）以顯示 EBP 暫存器，以及每個 `module!functionname` 行前面的輸入堆疊指標（ESP）。  
+ 在設定為0或 SOS_STACKTRACE_SHOWADDRESSES （0x01），以顯示每個 `module!functionname` 行前面的 EBP 暫存器和 enter 堆疊指標（ESP）。  
   
 ## <a name="remarks"></a>備註  
  您可以從 WinDbg 程式設計介面呼叫 `_EFN_StackTrace` 結構。 參數的使用方式如下：  
@@ -71,7 +71,7 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 - 如果 `pTransitionContexts` 是 null，而且 `puiTransitionContextCount` 不是 null，則函式會傳回 `puiTransitionContextCount`中的必要內容專案數目。  
   
-- 如果 `pTransitionContexts` 不是 null，函式會將它視為長度 `puiTransitionContextCount`的結構陣列。 結構大小是由 `uiSizeOfContext`所提供，而且必須是架構的[SimpleCoNtext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)或 `CONTEXT` 大小。  
+- 如果 `pTransitionContexts` 不是 null，函式會將它視為長度 `puiTransitionContextCount`的結構陣列。 結構大小是由 `uiSizeOfContext`所提供，而且必須是架構的[SimpleCoNtext](stacktrace-simplecontext-structure.md)或 `CONTEXT` 大小。  
   
 - `wszTextOut` 是以下列格式寫入：  
   
@@ -84,9 +84,9 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 - 如果 hex 中的位移是0x0，則不會寫入位移。  
   
-- 如果目前在內容中的執行緒上沒有 managed 程式碼，則函式會傳回 SOS_E_NOMANAGEDCODE。  
+- 如果目前在內容中的執行緒上沒有 managed 程式碼，此函數會傳回 SOS_E_NOMANAGEDCODE。  
   
-- `Flags` 參數可以是0或 SOS_STACKTRACE_SHOWADDRESSES，以查看每個 `module!functionname` 行前面的 EBP 和 ESP。 根據預設，它是0。  
+- `Flags` 參數可以是0或 SOS_STACKTRACE_SHOWADDRESSES，以查看每個 `module!functionname` 行前方的 EBP 和 ESP。 根據預設，它是0。  
   
     ```cpp  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  
@@ -101,4 +101,4 @@ HRESULT CALLBACK _EFN_StackTrace(
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯全域靜態函式](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [偵錯全域靜態函式](debugging-global-static-functions.md)

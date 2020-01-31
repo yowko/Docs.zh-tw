@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d680c1c0-16ab-4ccc-9444-39cf8e0e05ee
 topic_type:
 - apiref
-ms.openlocfilehash: 239b1a9f258f435e6dcca6e00cc20df5b5c01188
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 99fc89d1aee6c9f0fbffc193e12ce563e820f268
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097446"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789275"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>CorDebugRecordFormat 列舉
 描述包含原生例外狀況偵錯事件相關資訊之位元組陣列中的資料格式。  
@@ -37,7 +37,7 @@ typedef enum CorDebugRecordFormat {
 |`FORMAT_WINDOWS_EXCEPTIONRECORD64`|這份資料是 64 位元 Windows 例外狀況記錄。|  
   
 ## <a name="remarks"></a>備註  
- `CorDebugRecordFormat` 列舉的成員會傳遞至[DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法，以指出其 `pRecord` 引數中的位元組陣列格式。  
+ `CorDebugRecordFormat` 列舉的成員會傳遞至[DecodeEvent](icordebugprocess6-decodeevent-method.md)方法，以指出其 `pRecord` 引數中的位元組陣列格式。  
   
 > [!NOTE]
 > 這個列舉僅適用於 .NET Native 偵錯案例。  
@@ -53,4 +53,4 @@ typedef enum CorDebugRecordFormat {
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [偵錯列舉](debugging-enumerations.md)

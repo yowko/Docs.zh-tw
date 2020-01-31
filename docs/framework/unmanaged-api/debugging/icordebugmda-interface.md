@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ecbb854-295c-4dd4-b9fc-01ebeac46e06
 topic_type:
 - apiref
-ms.openlocfilehash: 4201fe23bf54388510088e21471edce91809e94c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a147aee1ebba57b86dbbf8a7648456b8d7494936
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129792"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793190"
 ---
 # <a name="icordebugmda-interface"></a>ICorDebugMDA 介面
 表示 Managed 偵錯助理 (MDA) 訊息。  
@@ -28,11 +28,11 @@ ms.locfileid: "73129792"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetDescription 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|取得包含此 MDA 描述的字串。|  
-|[GetFlags 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|取得與此 MDA 相關聯的旗標。|  
-|[GetName 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|取得包含此 MDA 名稱的字串。|  
-|[GetOSThreadId 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|取得此 MDA 執行時所用的作業系統執行緒識別碼。|  
-|[GetXML 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|取得與此 MDA 相關聯的完整 XML 資料流程。|  
+|[GetDescription 方法](icordebugmda-getdescription-method.md)|取得包含此 MDA 描述的字串。|  
+|[GetFlags 方法](icordebugmda-getflags-method.md)|取得與此 MDA 相關聯的旗標。|  
+|[GetName 方法](icordebugmda-getname-method.md)|取得包含此 MDA 名稱的字串。|  
+|[GetOSThreadId 方法](icordebugmda-getosthreadid-method.md)|取得此 MDA 執行時所用的作業系統執行緒識別碼。|  
+|[GetXML 方法](icordebugmda-getxml-method.md)|取得與此 MDA 相關聯的完整 XML 資料流程。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -50,5 +50,5 @@ ms.locfileid: "73129792"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [診斷 Managed 偵錯助理的錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [偵錯介面](debugging-interfaces.md)
+- [使用 Managed 偵錯助理診斷錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

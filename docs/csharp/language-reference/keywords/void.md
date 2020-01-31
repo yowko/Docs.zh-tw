@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - void keyword [C#]
 ms.assetid: 0d2d8a95-fe20-4fbd-bf5d-c1e54bce71d4
-ms.openlocfilehash: 465aaeadca603f14432478a7e5496a9ef4589ebe
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0624b547ee2586334ac35d366ae3c8dfd14963ee
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712854"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742768"
 ---
 # <a name="void-c-reference"></a>void (C# 參考)
 
@@ -38,9 +38,8 @@ public void SampleMethod()
 ## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [參考型別](reference-types.md)
-- [實值型別](value-types.md)
+- [實值型別](../builtin-types/value-types.md)
 - [方法](../../programming-guide/classes-and-structs/methods.md)
 - [Unsafe 程式碼和指標](../../programming-guide/unsafe-code-pointers/index.md)

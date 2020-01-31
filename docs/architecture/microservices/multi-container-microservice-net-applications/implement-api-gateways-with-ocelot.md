@@ -2,12 +2,12 @@
 title: 使用 Ocelot 實作 API 閘道
 description: 了解如何使用 Ocelot 實作 API 閘道，並了解如何在以容器為基礎的環境中使用 Ocelot。
 ms.date: 10/02/2018
-ms.openlocfilehash: 1ade05cc6935ce6a1bc74e6d6e4cdd5ef9fc6873
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: c0bcd240b6bd190dd02266c7faaf9fd668eb23bb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734604"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777299"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>使用 Ocelot 實作 API 閘道
 
@@ -414,7 +414,7 @@ webmarketingapigw:
 
 **圖 6-40**。 Ocelot 的驗證
 
-如上圖所示，當身分識別微服務位於 API 閘道（AG）底下時：1） AG 會向身分識別微服務要求驗證權杖，2） identity 微服務會使用驗證 token，將權杖傳回給 AG，3-4） AG 來自微服務的要求。 由於 eShopOnContainers 應用程式已將 API 閘道分割成多個 BFF (前端的後端) 和業務領域 API 閘道，因此另一個選擇是為跨領域考量建立其他 API 閘道。 該選擇相當適合具有多個跨領域考量微服務的更複雜微服務型架構。 因為在 eShopOnContainers 中只有一個跨領域考慮，所以已決定只是為了簡單起見，只會處理 API 閘道領域的安全性服務。
+如上圖所示，當身分識別微服務位於 API 閘道（AG）底下時：1） AG 會向身分識別微服務要求驗證權杖，2） identity 微服務會使用驗證 token，將權杖傳回給 AG，3-4） AG 來自微服務的要求。 由於 eShopOnContainers 應用程式已將 API 閘道分割為多個 BFF （前端的後端）和業務領域 API 閘道，因此另一個選擇是建立額外的 API 閘道來進行跨領域考慮。 該選擇相當適合具有多個跨領域考量微服務的更複雜微服務型架構。 因為在 eShopOnContainers 中只有一個跨領域考慮，所以已決定只是為了簡單起見，只會處理 API 閘道領域的安全性服務。
 
 在任何情況下，如果在 API 閘道層級保護應用程式，當嘗試使用任何受保護的微服務時，會先瀏覽 Ocelot API 閘道的驗證模組。 這會將 HTTP 要求重新導向至身分識別或驗證微服務，以取得存取權杖，讓您可以流覽受保護的服務與 access_token。
 

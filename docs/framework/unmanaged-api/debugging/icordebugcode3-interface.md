@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70f07c9e-0614-4bee-ac34-09fe6c51c5a9
 topic_type:
 - apiref
-ms.openlocfilehash: f3ae25f7d16600a1b09f30f96a191d7ecf76713e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2f75c3c54c0fa2d55dc0179c05e4edea6e36738
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121068"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777820"
 ---
 # <a name="icordebugcode3-interface"></a>ICorDebugCode3 介面
 提供擴充 "ICorDebugCode" 和 "ICorDebugCode2" 的方法，以提供受控傳回值的相關資訊。  
@@ -28,7 +28,7 @@ ms.locfileid: "73121068"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetReturnValueLiveOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-getreturnvalueliveoffset-method.md)|針對指定的 IL 位移，取得應放置中斷點的原生位移，讓偵錯工具可以從函數取得傳回值。|  
+|[GetReturnValueLiveOffset 方法](icordebugcode3-getreturnvalueliveoffset-method.md)|針對指定的 IL 位移，取得應放置中斷點的原生位移，讓偵錯工具可以從函數取得傳回值。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -46,5 +46,5 @@ ms.locfileid: "73121068"
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugILFrame3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugILFrame3 介面](icordebugilframe3-interface.md)
+- [偵錯介面](debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: 實作具復原功能的 Entity Framework Core SQL 連接
 description: 了解如何實作具復原功能的 Entity Framework Core SQL 連線。 在雲端中使用 Azure SQL Database 時，此技術特別重要。
 ms.date: 10/16/2018
-ms.openlocfilehash: 7899fc263ab3cde6ac2410ca614a7e5fa285576b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 0ded30469bb4985fed7b60938756046531c8feea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732734"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777053"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>實作具復原功能的 Entity Framework Core SQL 連接
 

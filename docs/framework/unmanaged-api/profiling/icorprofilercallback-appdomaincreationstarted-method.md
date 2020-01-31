@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2a8240b-07fe-4859-bb2b-7d3adbfa0a9f
 topic_type:
 - apiref
-ms.openlocfilehash: 6a0f6dc9d2559bafed416d409063088d2f51c27d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 49c3ab4901537805a1ae1be79097c55cc331d29d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445211"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866711"
 ---
 # <a name="icorprofilercallbackappdomaincreationstarted-method"></a>ICorProfilerCallback::AppDomainCreationStarted 方法
 通知分析工具，正在建立應用程式域。  
@@ -32,12 +32,14 @@ HRESULT AppDomainCreationStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a>參數  
- `appDomainId`  
- 在識別正在建立的網域。  
+## <a name="parameters"></a>參數
+
+- `appDomainId`
+
+  中的 \[] 可識別正在建立的網域。
   
 ## <a name="remarks"></a>備註  
- 在呼叫[ICorProfilerCallback：： AppDomainCreationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomaincreationfinished-method.md)方法之前，所有資訊要求的識別碼都是不正確。  
+ 在呼叫[ICorProfilerCallback：： AppDomainCreationFinished](icorprofilercallback-appdomaincreationfinished-method.md)方法之前，所有資訊要求的識別碼都是不正確。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -48,6 +50,6 @@ HRESULT AppDomainCreationStarted(
   
  **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback 介面](icorprofilercallback-interface.md)

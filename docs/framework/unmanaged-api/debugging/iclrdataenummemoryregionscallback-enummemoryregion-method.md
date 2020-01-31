@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bb93fab-57e8-4f9a-9ef3-1794504fa896
 topic_type:
 - apiref
-ms.openlocfilehash: 2ebe7ef37fb072e3688cc4dcfa5ed89832e886e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8313b7c97eb5d94424259dc91459f62e13368fb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122940"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785598"
 ---
 # <a name="iclrdataenummemoryregionscallbackenummemoryregion-method"></a>ICLRDataEnumMemoryRegionsCallback::EnumMemoryRegion 方法
-由[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)呼叫，以向偵錯工具報告嘗試列舉指定的記憶體區域的結果。  
+由[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)呼叫，以向偵錯工具報告嘗試列舉指定的記憶體區域的結果。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,4 +57,4 @@ HRESULT EnumMemoryRegion (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICLRDataEnumMemoryRegionsCallback 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)
+- [ICLRDataEnumMemoryRegionsCallback 介面](iclrdataenummemoryregionscallback-interface.md)

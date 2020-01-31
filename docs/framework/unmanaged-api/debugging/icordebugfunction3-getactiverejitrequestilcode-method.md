@@ -12,17 +12,17 @@ api_type:
 ms.assetid: 88584574-ade5-45b2-9778-489ed5c4dd7f
 topic_type:
 - apiref
-ms.openlocfilehash: 53fedde028c7551e929cb583d38a4ec6937f2a8c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 70a55b833acb7fa946c694a63e1e8b51562938bc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938100"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777733"
 ---
 # <a name="icordebugfunction3getactiverejitrequestilcode-method"></a>ICorDebugFunction3::GetActiveReJitRequestILCode 方法
 [.NET Framework 4.5.2 與更新版本提供支援]  
   
- 取得[ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)的介面指標，其中包含來自作用中 ReJIT 要求的 IL。  
+ 取得[ICorDebugILCode](icordebugilcode-interface.md)的介面指標，其中包含來自作用中 ReJIT 要求的 IL。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,6 +52,6 @@ HRESULT GetActiveReJitRequestILCode(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugFunction3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugFunction3 介面](icordebugfunction3-interface.md)
+- [偵錯介面](debugging-interfaces.md)
 - [ReJIT：使用說明指南](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

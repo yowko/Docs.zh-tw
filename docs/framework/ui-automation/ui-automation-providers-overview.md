@@ -5,22 +5,22 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: f41fc102dfbe24d47e194da7477791a46f8d712d
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 98208f1e1fa1b540bf3880e33478854128505233
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741743"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778778"
 ---
 # <a name="ui-automation-providers-overview"></a>UI 自動化提供者概觀
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  使用者介面自動化提供者可以讓控制項與使用者介面自動化用戶端應用程式進行通訊。 一般而言， [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 中的每個控制項或其他不同項目都是由提供者表示。 提供者會公開項目的相關資訊並選擇性地實作控制項模式，讓用戶端應用程式與控制項互動。  
   
- 用戶端應用程式通常不會直接與提供者搭配使用。 使用 Win32、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]或 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 架構之應用程式中的大部分標準控制項都會自動公開至 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 系統。 實作自訂控制項的應用程式也會實作那些控制項的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者；因此，用戶端應用程式不需要採取任何特殊步驟，即可加以存取。  
+ 用戶端應用程式通常不會直接與提供者搭配使用。 使用 Win32、Windows Forms 或 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] 架構之應用程式中的大部分標準控制項都會自動公開至 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 系統。 實作自訂控制項的應用程式也會實作那些控制項的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者；因此，用戶端應用程式不需要採取任何特殊步驟，即可加以存取。  
   
- 本主題概要說明控制項開發人員如何執行 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者，特別是 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 和 Win32 視窗中的控制項。  
+ 本主題概要說明控制項開發人員如何執行 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者，特別是 Windows Forms 和 Win32 視窗中的控制項。  
   
 <a name="Types_of_Providers"></a>   
 ## <a name="types-of-providers"></a>提供者類型  

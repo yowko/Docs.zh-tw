@@ -2,12 +2,12 @@
 title: WCF Web HTTP 程式設計模型概觀
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 4862ae0e5151177e74da0f94d06b5b39205ed4c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8a4b4ff6c0482ed8a09fe30b7d03afc1f84db581
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283297"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739909"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 程式設計模型概觀
 Windows Communication Foundation （WCF） WEB HTTP 程式設計模型提供使用 WCF 建立 WEB HTTP 服務所需的基本元素。 WCF WEB HTTP 服務的設計可供最廣泛的可能用戶端存取，包括網頁瀏覽器，並具有下列獨特的需求：  
@@ -43,15 +43,15 @@ Windows Communication Foundation （WCF） WEB HTTP 程式設計模型提供使�
   
  在此範本中，大括號標記法 ("{segment}") 表示變數區段，而不是常值。  
   
- .NET Framework 提供可以使用 <xref:System.UriTemplate> 這種 URI 範本的應用程式開發介面。 `UriTemplates` 可讓您執行下列動作：  
+ .NET Framework 提供可以使用 <xref:System.UriTemplate> 這種 URI 範本的應用程式開發介面。 `UriTemplates` 可讓您執行下列作業：  
   
 - 您可以使用一組參數來呼叫其中一個 `Bind` 方法，以產生符合範本的*完整關閉 URI* 。 意思就是，URI 範本中的所有變數都會以實際值來取代。  
   
 - 您可以使用候選 URI 來呼叫 `Match`()，以便透過範本將候選 URI 切割為自身的構成部分，並傳回包含不同的 URI (已依據範本中的變數加上標籤) 部分的字典。  
   
-- `Bind`（）和 `Match`（）都是反轉的，因此您可以呼叫 `Match`（`Bind`（x）），然後再以您開始使用的相同環境來傳回。  
+- `Bind`() 和 `Match`() 都是反向值，因此您可以呼叫 `Match`( `Bind`( x ) ) 並從一開始的相同環境重新開始。  
   
- 在許多情況下 (特別是在伺服器上，需要根據 URI 將要求分派到服務作業時) 您都想要追蹤資料結構中可以獨立處理每一個包含的範本的 <xref:System.UriTemplate> 物件集合。 <xref:System.UriTemplateTable> 代表一組 URI 範本，並會在指定一組範本和候選 URI 時，選取最符合的項。 這不會與任何特定的網路堆疊（包括 WCF）相關聯，因此您可以在必要時使用它。  
+ 在許多情況下 (特別是在伺服器上，需要根據 URI 將要求分派到服務作業時) 您都想要追蹤資料結構中可以獨立處理每一個包含的範本的 <xref:System.UriTemplate> 物件集合。 <xref:System.UriTemplateTable> 表示一組 URI 範本，並且依據一組指定的範本及候選 URI 選取最佳對象。 這不會與任何特定的網路堆疊（包括 WCF）相關聯，因此您可以在必要時使用它。  
   
  WCF 服務模型會透過 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 將服務作業與 <xref:System.UriTemplate> 所描述的 URI 集合關聯在一起。 服務作業會透過 <xref:System.UriTemplate> 或 <xref:System.ServiceModel.Web.WebGetAttribute>，與 <xref:System.ServiceModel.Web.WebInvokeAttribute> 產生關聯。 如需 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable>的詳細資訊，請參閱[UriTemplate 和 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
   
@@ -80,7 +80,7 @@ interface ICustomer
   
  `POST /UpdateCustomerName`  
   
- <xref:System.ServiceModel.Web.WebInvokeAttribute> 預設為 POST，但您也可以將它用於其他動詞。  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute> 會預設為 POST，但是您還是可以用它來控制其他動詞。  
   
 ```csharp
 [ServiceContract]  
@@ -121,7 +121,7 @@ interface ICustomer
 |<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> 其中 DD = 天數，HH = 小時，MM = 分鐘，SS = 秒數|  
 |<xref:System.Guid>|GUID，例如：<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|MM/DD/YYYY HH:MM:SS MM:SS<br /><br /> 其中 DD = 天數，HH = 小時，MM = 分鐘，SS = 秒數|  
-|列舉|列舉值，依下列程式碼示範的方式定義列舉。<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> 任何個別的列舉值 (或其對應的整數值) 都可以在查詢字串中指定。|  
+|列舉型別|列舉值，依下列程式碼示範的方式定義列舉。<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> 任何個別的列舉值 (或其對應的整數值) 都可以在查詢字串中指定。|  
 |具有可以在型別和字串表示之間相互轉換之 `TypeConverterAttribute` 的型別。|取決於型別轉換子。|  
   
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>格式與 WCF WEB HTTP 程式設計模型  
@@ -138,12 +138,13 @@ interface ICustomer
  .NET Framework 3.5 提供 JSON 資料（AJAX）以及新聞訂閱摘要（包括 ATOM 和 RSS）的支援。 如需這些功能的詳細資訊，請參閱[Wcf WEB HTTP 格式化](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[Wcf 摘要整合總覽](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)和[AJAX 整合和 JSON 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP 程式設計模型和安全性  
- 因為 WCF WEB HTTP 程式設計模型不支援 WS-* 通訊協定，保護 WCF WEB HTTP 服務安全的唯一方法，就是使用 SSL 透過 HTTPS 公開服務。 如需使用 IIS 7.0 設定 SSL 的詳細資訊，請參閱[如何在 iis 中執行 ssl](https://go.microsoft.com/fwlink/?LinkId=131613)  
+
+因為 WCF WEB HTTP 程式設計模型不支援 WS-* 通訊協定，保護 WCF WEB HTTP 服務安全的唯一方法，就是使用 SSL 透過 HTTPS 公開服務。 如需使用 IIS 7.0 設定 SSL 的詳細資訊，請參閱[如何在 iis 中執行 ssl](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis)。
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 程式設計模型疑難排解  
  當呼叫 WCF WEB HTTP 服務以使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 建立通道時，<xref:System.ServiceModel.Description.WebHttpBehavior> 會使用組態檔中設定的 <xref:System.ServiceModel.EndpointAddress>，即便傳遞至 <xref:System.ServiceModel.EndpointAddress> 的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 是另一個值亦然。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [WCF 摘要整合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

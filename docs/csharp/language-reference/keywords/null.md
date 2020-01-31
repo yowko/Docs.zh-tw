@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: d3387bdcb5140a6c738b243606326ec451d74870
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 17e7386571e8c74d411204ade0d56ffe8a710ee8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964196"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742001"
 ---
 # <a name="null-c-reference"></a>null (C# 參考)
 
 `null` 關鍵字是表示 Null 參考的常值，不參考任何物件的值。 `null` 是參考型別變數的預設值。 一般實數值型別不能是 null，但可為 null 的實[數值型別](../builtin-types/nullable-value-types.md)除外。
 
-下例會示範 Null 關鍵字的一些行為︰
+下列範例示範 `null` 關鍵字的一些行為：
 
 [!code-csharp[csrefKeywordsLiteral#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsLiteral/CS/csrefKeywordsLiteral.cs#1)]
 

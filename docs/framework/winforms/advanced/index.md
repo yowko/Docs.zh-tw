@@ -1,21 +1,21 @@
 ---
-title: 增強 Windows Forms 應用程式
+title: 增強應用程式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, enhancing
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
-ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6c9287870d0a3852cf8dda21c4bd249eca09c114
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942905"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744835"
 ---
 # <a name="enhancing-windows-forms-applications"></a>增強 Windows Forms 應用程式
 Windows Form 包含許多功能，可用來增強您的 Windows 應用程式，以符合您的使用者的特定需求。 下列主題將描述這些功能及其用法。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)  
  其中包含主題的連結，說明並示範如何使用 Windows Form 中的圖形介面。  
   
@@ -34,7 +34,7 @@ Windows Form 包含許多功能，可用來增強您的 Windows 應用程式，�
  [全球化 Windows Forms 應用程式](globalizing-windows-forms.md)  
  其中包含主題的連結，示範如何全球化 Windows Forms 應用程式。  
   
- [Windows Forms 和 Unmanaged 應用程式](windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)  
  其中包含主題的連結，說明並示範如何從 Windows Form 應用程式存取 COM 元件。  
   
  [系統資訊和 Windows Forms](system-information-and-windows-forms.md)  
