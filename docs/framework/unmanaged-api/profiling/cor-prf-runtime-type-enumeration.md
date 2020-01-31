@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 35449514-333f-4918-9c60-7aa198d655d2
 topic_type:
 - apiref
-ms.openlocfilehash: 26948261c571dbe963811e8e9631551685a63bdb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c1767e718e597918ef59b72a4b7acc3589421de0
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450378"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867051"
 ---
-# <a name="cor_prf_runtime_type-enumeration"></a><span data-ttu-id="6155e-102">COR_PRF_RUNTIME_TYPE 列舉</span><span class="sxs-lookup"><span data-stu-id="6155e-102">COR_PRF_RUNTIME_TYPE Enumeration</span></span>
-<span data-ttu-id="6155e-103">包含值，指出在 Silverlight 中使用的 common language runtime （CLR）版本： desktop 或 CoreCLR。</span><span class="sxs-lookup"><span data-stu-id="6155e-103">Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.</span></span>  
+# <a name="cor_prf_runtime_type-enumeration"></a><span data-ttu-id="dbde1-102">COR_PRF_RUNTIME_TYPE 列舉</span><span class="sxs-lookup"><span data-stu-id="dbde1-102">COR_PRF_RUNTIME_TYPE Enumeration</span></span>
+<span data-ttu-id="dbde1-103">包含值，指出在 Silverlight 中使用的 common language runtime （CLR）版本： desktop 或 CoreCLR。</span><span class="sxs-lookup"><span data-stu-id="dbde1-103">Contains values that indicate the version of the common language runtime (CLR): desktop or CoreCLR, which is used in Silverlight.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6155e-104">語法</span><span class="sxs-lookup"><span data-stu-id="6155e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dbde1-104">語法</span><span class="sxs-lookup"><span data-stu-id="dbde1-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum  
@@ -34,24 +34,24 @@ typedef enum
 } COR_PRF_RUNTIME_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="6155e-105">Members</span><span class="sxs-lookup"><span data-stu-id="6155e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="dbde1-105">Members</span><span class="sxs-lookup"><span data-stu-id="dbde1-105">Members</span></span>  
   
-|<span data-ttu-id="6155e-106">成員</span><span class="sxs-lookup"><span data-stu-id="6155e-106">Member</span></span>|<span data-ttu-id="6155e-107">描述</span><span class="sxs-lookup"><span data-stu-id="6155e-107">Description</span></span>|  
+|<span data-ttu-id="dbde1-106">成員</span><span class="sxs-lookup"><span data-stu-id="dbde1-106">Member</span></span>|<span data-ttu-id="dbde1-107">描述</span><span class="sxs-lookup"><span data-stu-id="dbde1-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_DESKTOP_CLR`|<span data-ttu-id="6155e-108">CLR 的桌上出版本。</span><span class="sxs-lookup"><span data-stu-id="6155e-108">The desktop version of the CLR.</span></span>|  
-|`COR_PRF_CORE_CLR`|<span data-ttu-id="6155e-109">CLR 的核心版本，用於 Silverlight。</span><span class="sxs-lookup"><span data-stu-id="6155e-109">The core version of the CLR, used in Silverlight.</span></span>|  
+|`COR_PRF_DESKTOP_CLR`|<span data-ttu-id="dbde1-108">CLR 的桌上出版本。</span><span class="sxs-lookup"><span data-stu-id="dbde1-108">The desktop version of the CLR.</span></span>|  
+|`COR_PRF_CORE_CLR`|<span data-ttu-id="dbde1-109">CLR 的核心版本，用於 Silverlight。</span><span class="sxs-lookup"><span data-stu-id="dbde1-109">The core version of the CLR, used in Silverlight.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6155e-110">備註</span><span class="sxs-lookup"><span data-stu-id="6155e-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dbde1-110">備註</span><span class="sxs-lookup"><span data-stu-id="dbde1-110">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6155e-111">需求</span><span class="sxs-lookup"><span data-stu-id="6155e-111">Requirements</span></span>  
- <span data-ttu-id="6155e-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6155e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dbde1-111">需求</span><span class="sxs-lookup"><span data-stu-id="dbde1-111">Requirements</span></span>  
+ <span data-ttu-id="dbde1-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dbde1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6155e-113">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="6155e-113">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="dbde1-113">**標頭：** CorProf.idl、CorProf.h</span><span class="sxs-lookup"><span data-stu-id="dbde1-113">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="6155e-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6155e-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="dbde1-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dbde1-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6155e-115">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6155e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="dbde1-115">**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dbde1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6155e-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6155e-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dbde1-116">請參閱</span><span class="sxs-lookup"><span data-stu-id="dbde1-116">See also</span></span>
 
-- [<span data-ttu-id="6155e-117">分析列舉</span><span class="sxs-lookup"><span data-stu-id="6155e-117">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="dbde1-117">分析列舉</span><span class="sxs-lookup"><span data-stu-id="dbde1-117">Profiling Enumerations</span></span>](profiling-enumerations.md)
