@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8c2ff5d8-8c04-4423-b1e1-e1c8764b36d3
 topic_type:
 - apiref
-ms.openlocfilehash: 77cda2c3d30b5926da219a38b762295818ca54a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dc03365b72a5f3613402faf1aed44b5683e9892c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121202"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777830"
 ---
 # <a name="icordebugcode3getreturnvalueliveoffset-method"></a>ICorDebugCode3::GetReturnValueLiveOffset 方法
 針對指定的 IL 位移，取得應放置中斷點的原生位移，讓偵錯工具可以從函數取得傳回值。  
@@ -52,10 +52,10 @@ HRESULT GetReturnValueLiveOffset(
  原生位移的陣列。 一般來說，`pOffsets` 包含單一位移，雖然單一 IL 指令可以對應至多個對應至多個 `CALL` 元件指令。  
   
 ## <a name="remarks"></a>備註  
- 這個方法會與[ICorDebugILFrame3：： GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法搭配使用，以取得傳回參考型別之方法的傳回值。 將 IL 位移傳遞給這個方法的函式呼叫網站，會傳回一或多個原生位移。 然後偵錯工具可以在函式中的這些原生位移上設定中斷點。 當偵錯工具到達其中一個中斷點時，您就可以將傳遞給這個方法的相同 IL 位移傳遞給[ICorDebugILFrame3：： GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法，以取得傳回值。 偵錯工具應該會清除它所設定的所有中斷點。  
+ 這個方法會與[ICorDebugILFrame3：： GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md)方法搭配使用，以取得傳回參考型別之方法的傳回值。 將 IL 位移傳遞給這個方法的函式呼叫網站，會傳回一或多個原生位移。 然後偵錯工具可以在函式中的這些原生位移上設定中斷點。 當偵錯工具到達其中一個中斷點時，您就可以將傳遞給這個方法的相同 IL 位移傳遞給[ICorDebugILFrame3：： GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md)方法，以取得傳回值。 偵錯工具應該會清除它所設定的所有中斷點。  
   
 > [!WARNING]
-> `ICorDebugCode3::GetReturnValueLiveOffset` 和[ICorDebugILFrame3：： GetReturnValueForILOffset](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)方法可讓您只取得參考型別的傳回值資訊。 不支援從實數值型別（也就是衍生自 <xref:System.ValueType>的所有類型）中抓取傳回值資訊。  
+> `ICorDebugCode3::GetReturnValueLiveOffset` 和[ICorDebugILFrame3：： GetReturnValueForILOffset](icordebugilframe3-getreturnvalueforiloffset-method.md)方法可讓您只取得參考型別的傳回值資訊。 不支援從實數值型別（也就是衍生自 <xref:System.ValueType>的所有類型）中抓取傳回值資訊。  
   
  函數會傳回下表所示的 `HRESULT` 值。  
   
@@ -78,5 +78,5 @@ HRESULT GetReturnValueLiveOffset(
   
 ## <a name="see-also"></a>請參閱
 
-- [GetReturnValueForILOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)
-- [ICorDebugCode3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
+- [GetReturnValueForILOffset 方法](icordebugilframe3-getreturnvalueforiloffset-method.md)
+- [ICorDebugCode3 介面](icordebugcode3-interface.md)

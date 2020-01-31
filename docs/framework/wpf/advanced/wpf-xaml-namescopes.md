@@ -1,5 +1,5 @@
 ---
-title: WPF XAML 名稱範圍
+title: XAML 名稱範圍
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namescopes [WPF]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: 97889b302aac06e118c93f2d000b0eeeed8b71bb
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 4383492157191f61cf04a2fdd6ce27e9183bda8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559933"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744413"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 名稱範圍
 XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍中的名稱可以用來建立物件的 XAML 定義名稱與其在物件樹狀結構中的執行個體對等項目之間的關聯性。 一般而言，載入 XAML 應用程式的個別 XAML 頁面根時，會建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Managed 程式碼中的 XAML 名稱範圍。 做為程式設計物件的 XAML 名稱範圍是由 <xref:System.Windows.Markup.INameScope> 介面所定義，而且也會由實體類別 <xref:System.Windows.NameScope>來執行。  

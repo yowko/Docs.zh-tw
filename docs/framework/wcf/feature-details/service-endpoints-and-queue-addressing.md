@@ -2,12 +2,12 @@
 title: 服務端點與佇列定址
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 6bdd3b0966f85ff456e0e2ed0b6da773046201dc
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ec932e83a2b37330f54be545a45358a5ab055423
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837983"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744626"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服務端點與佇列定址
 本主題將討論用戶端如何針對從佇列讀取的服務進行定址，以及服務端點如何對應至佇列。 提醒您，下圖顯示傳統 Windows Communication Foundation （WCF）佇列的應用程式部署。  
@@ -21,7 +21,7 @@ ms.locfileid: "74837983"
   
  路徑名稱會對應至 "FormatNames"，以判斷位址的其他層面，包括路由和佇列管理員傳輸通訊協定。 佇列管理員支援兩種傳輸通訊協定：原生 MSMQ 通訊協定與 SOAP Reliable Messaging Protocol (SRMP)。  
   
- 如需 MSMQ 路徑和格式名稱的詳細資訊，請參閱[關於訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94837)。  
+ 如需 MSMQ 路徑和格式名稱的詳細資訊，請參閱[關於訊息佇列](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85))。  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding 與服務定址  
  針對傳送給服務的訊息進行定址時，URI 裡的配置是依據通訊時使用的傳輸所選定的。 WCF 中的每個傳輸都有一個獨特的配置。 配置必須反映通訊時使用的傳輸本質。 例如，net.tcp、net.pipe、HTTP 等等。  
@@ -96,7 +96,7 @@ ms.locfileid: "74837983"
   
  msmq.formatname：\<*msmq-格式名稱*>>  
   
- MSMQ 格式名稱是[關於訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94837)中 msmq 指定的格式。  
+ MSMQ 格式名稱是[關於訊息佇列](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85))中 msmq 指定的格式。  
   
  請注意，當您使用 `MsmqIntegrationBinding` 從佇列接收訊息時，只能使用直接格式名稱，與公用與私用格式名稱 (需要 Active Directory 整合)。 然而，我們建議您使用直接格式名稱。 例如，在 Windows Vista 上，使用任何其他格式名稱會造成錯誤，因為系統會嘗試開啟子佇列，這只能使用直接格式名稱來開啟。  
   

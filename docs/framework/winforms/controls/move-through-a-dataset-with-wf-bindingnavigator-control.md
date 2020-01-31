@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 Windows Forms BindingNavigator 控制項在資料集中移動
+title: 使用 BindingNavigator 控制項在資料集中移動
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], moving through datasets
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
-ms.openlocfilehash: d33cad4d0a60aa29d8c9f5e2217532963e8358c4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 73a102da74a3a2a00b5042331cffcaf3d858ea5b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69952687"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742148"
 ---
-# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>HOW TO：使用 Windows Forms BindingNavigator 控制項在資料集中移動
+# <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>如何：使用 Windows Form BindingNavigator 控制項在資料集中移動
 當您建立資料驅動應用程式時，通常需要向使用者顯示資料集合。 <xref:System.Windows.Forms.BindingNavigator> 控制項搭配 <xref:System.Windows.Forms.BindingSource> 元件提供方便且可擴充的方案，可在集合中移動並循序顯示項目。  
   
 ## <a name="example"></a>範例  
@@ -33,11 +33,11 @@ ms.locfileid: "69952687"
   
 - System、System.Data、System.Drawing、System.Windows.Forms 和 System.Xml 組件的參考。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingNavigator 控制項](bindingnavigator-control-windows-forms.md)
 - [BindingSource 元件](bindingsource-component.md)
-- [如何：將 Windows Forms 控制項系結至類型](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [如何：將 Windows Forms 控制項繫結至型別](how-to-bind-a-windows-forms-control-to-a-type.md)

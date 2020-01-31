@@ -1,5 +1,5 @@
 ---
-title: 作法：設定 Windows Forms ProgressBar 控制項顯示的值
+title: 設定 ProgressBar 控制項顯示的值
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 2e0134206ba3ebdce35f5374cbad575e34483d58
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 79ce1e576652d00b323d31dfc6551e168ea0a9a0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956086"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743810"
 ---
-# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>作法：設定 Windows Forms ProgressBar 控制項顯示的值
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>如何：設定 Windows Form ProgressBar 控制項顯示的值
 > [!IMPORTANT]
 > <xref:System.Windows.Forms.ToolStripProgressBar> 控制項會取代 <xref:System.Windows.Forms.ProgressBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ProgressBar> 控制項，以提供回溯相容性及未來使用。  
   
- .NET Framework 提供幾種不同的<xref:System.Windows.Forms.ProgressBar>方式, 讓您在控制項中顯示指定的值。 您選擇的方法取決於手邊的工作或您要解決的問題。 下表顯示您可以選擇的方法。  
+ .NET Framework 提供您幾種不同的方式，在 <xref:System.Windows.Forms.ProgressBar> 控制項中顯示指定的值。 您選擇的方法取決於手邊的工作或您要解決的問題。 下表顯示您可以選擇的方法。  
   
 |方法|描述|  
 |--------------|-----------------|  
-|直接設定<xref:System.Windows.Forms.ProgressBar>控制項的值。|如果您知道將牽涉到的專案總數 (例如從資料來源讀取記錄), 這種方法就很有用。 此外, 如果您只需要設定一次或兩次的值, 這就是簡單的方法。 最後, 如果您需要減少進度列所顯示的值, 請使用此程式。|  
-|以固定值增加顯示。<xref:System.Windows.Forms.ProgressBar>|當您要顯示介於最小值和最大值之間的簡單計數 (例如已耗用時間或已從已知總計處理的檔案數目) 時, 這個方法很有用。|  
-|以不同的值來增加顯示。<xref:System.Windows.Forms.ProgressBar>|當您需要將顯示的值變更為不同數量的次數時, 這個方法很有用。 其中一個範例會顯示將一系列檔案寫入磁片時所耗用的硬碟空間量。|  
+|直接設定 <xref:System.Windows.Forms.ProgressBar> 控制項的值。|如果您知道將牽涉到的專案總數（例如從資料來源讀取記錄），這種方法就很有用。 此外，如果您只需要設定一次或兩次的值，這就是簡單的方法。 最後，如果您需要減少進度列所顯示的值，請使用此程式。|  
+|以固定值增加 <xref:System.Windows.Forms.ProgressBar> 顯示。|當您要顯示介於最小值和最大值之間的簡單計數（例如已耗用時間或已從已知總計處理的檔案數目）時，這個方法很有用。|  
+|以不同的值來增加 <xref:System.Windows.Forms.ProgressBar> 顯示。|當您需要將顯示的值變更為不同數量的次數時，這個方法很有用。 其中一個範例會顯示將一系列檔案寫入磁片時所耗用的硬碟空間量。|  
   
- 若要設定進度列所顯示的值, 最直接的方式是設定<xref:System.Windows.Forms.ProgressBar.Value%2A>屬性。 這可以在設計階段或執行時間執行。  
+ 若要設定進度列所顯示的值，最直接的方式就是設定 [<xref:System.Windows.Forms.ProgressBar.Value%2A>] 屬性。 這可以在設計階段或執行時間執行。  
   
 ### <a name="to-set-the-progressbar-value-directly"></a>若要直接設定 ProgressBar 值  
   
-1. 設定控制項的<xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。 <xref:System.Windows.Forms.ProgressBar>  
+1. 設定 <xref:System.Windows.Forms.ProgressBar> 控制項的 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 值。  
   
-2. 在程式碼中, 將控制項<xref:System.Windows.Forms.ProgressBar.Value%2A>的屬性設定為您所建立之最小值和最大值之間的整數值。  
+2. 在程式碼中，將控制項的 <xref:System.Windows.Forms.ProgressBar.Value%2A> 屬性設定為您所建立之最小值和最大值之間的整數值。  
   
     > [!NOTE]
-    > 如果您將<xref:System.Windows.Forms.ProgressBar.Value%2A>屬性設定在<xref:System.Windows.Forms.ProgressBar.Minimum%2A>和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>屬性所建立的界限之外, 控制項<xref:System.ArgumentException>就會擲回例外狀況。  
+    > 如果您在 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 屬性所建立的界限外設定 <xref:System.Windows.Forms.ProgressBar.Value%2A> 屬性，控制項就會擲回 <xref:System.ArgumentException> 例外狀況。  
   
-     下列程式碼範例說明如何直接設定<xref:System.Windows.Forms.ProgressBar>值。 程式碼會從資料來源讀取記錄, 並在每次讀取資料記錄時更新進度列和標籤。 這個範例要求您的表單具有<xref:System.Windows.Forms.Label>控制項<xref:System.Windows.Forms.ProgressBar> 、控制項, 以及具有`FirstName`和`LastName`欄位的資料列`CustomerRow`的資料表。  
+     下列程式碼範例說明如何直接設定 <xref:System.Windows.Forms.ProgressBar> 值。 程式碼會從資料來源讀取記錄，並在每次讀取資料記錄時更新進度列和標籤。 此範例要求您的表單具有 <xref:System.Windows.Forms.Label> 控制項、<xref:System.Windows.Forms.ProgressBar> 控制項，以及具有 `FirstName` 和 `LastName` 欄位的資料列 `CustomerRow` 的資料表。  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -83,19 +83,19 @@ ms.locfileid: "69956086"
     }  
     ```  
   
-     如果您要顯示以固定間隔繼續進行的進度, 您可以設定值, 然後呼叫方法, 依該間隔增加<xref:System.Windows.Forms.ProgressBar>控制項的值。 這適用于不是以整體百分比測量進度的計時器和其他案例。  
+     如果您要顯示以固定間隔繼續進行的進度，您可以設定值，然後呼叫方法，依該間隔增加 <xref:System.Windows.Forms.ProgressBar> 控制項的值。 這適用于不是以整體百分比測量進度的計時器和其他案例。  
   
 ### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>以固定值增加進度列  
   
-1. 設定控制項的<xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。 <xref:System.Windows.Forms.ProgressBar>  
+1. 設定 <xref:System.Windows.Forms.ProgressBar> 控制項的 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 值。  
   
-2. 將控制項的<xref:System.Windows.Forms.ProgressBar.Step%2A>屬性設定為整數, 代表要增加進度列顯示值的數量。  
+2. 將控制項的 <xref:System.Windows.Forms.ProgressBar.Step%2A> 屬性設定為整數，代表要增加進度列顯示值的數量。  
   
-3. 呼叫方法, 以變更<xref:System.Windows.Forms.ProgressBar.Step%2A>屬性中設定的數量所顯示的值。 <xref:System.Windows.Forms.ProgressBar.PerformStep%2A>  
+3. 呼叫 <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> 方法，以變更 <xref:System.Windows.Forms.ProgressBar.Step%2A> 屬性中設定的數量所顯示的值。  
   
      下列程式碼範例說明進度列可以如何在複製作業中維護檔案的計數。  
   
-     在下列範例中, 當每個檔案讀入記憶體時, 進度列和標籤會更新, 以反映讀取的檔案總數。 此範例會要求您的表單<xref:System.Windows.Forms.Label>具有控制項<xref:System.Windows.Forms.ProgressBar>和控制項。  
+     在下列範例中，當每個檔案讀入記憶體時，進度列和標籤會更新，以反映讀取的檔案總數。 此範例會要求您的表單具有 <xref:System.Windows.Forms.Label> 控制項和 <xref:System.Windows.Forms.ProgressBar> 控制項。  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -149,17 +149,17 @@ ms.locfileid: "69956086"
     }  
     ```  
   
-     最後, 您可以增加進度列所顯示的值, 讓每個增加都是唯一的金額。 當您要追蹤一系列獨特的作業 (例如將不同大小的檔案寫入硬碟), 或以整體百分比測量進度時, 這會很有用。  
+     最後，您可以增加進度列所顯示的值，讓每個增加都是唯一的金額。 當您要追蹤一系列獨特的作業（例如將不同大小的檔案寫入硬碟），或以整體百分比測量進度時，這會很有用。  
   
 ### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>以動態值增加進度列  
   
-1. 設定控制項的<xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和<xref:System.Windows.Forms.ProgressBar.Maximum%2A>值。 <xref:System.Windows.Forms.ProgressBar>  
+1. 設定 <xref:System.Windows.Forms.ProgressBar> 控制項的 <xref:System.Windows.Forms.ProgressBar.Minimum%2A> 和 <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 值。  
   
-2. <xref:System.Windows.Forms.ProgressBar.Increment%2A>呼叫方法, 以變更您指定的整數所顯示的值。  
+2. 呼叫 <xref:System.Windows.Forms.ProgressBar.Increment%2A> 方法，以變更您指定的整數所顯示的值。  
   
-     下列程式碼範例說明在複製作業期間, 進度列可以如何計算已使用的磁碟空間量。  
+     下列程式碼範例說明在複製作業期間，進度列可以如何計算已使用的磁碟空間量。  
   
-     在下列範例中, 當每個檔案寫入硬碟時, 會更新進度列和標籤以反映可用的硬碟空間量。 此範例會要求您的表單<xref:System.Windows.Forms.Label>具有控制項<xref:System.Windows.Forms.ProgressBar>和控制項。  
+     在下列範例中，當每個檔案寫入硬碟時，會更新進度列和標籤以反映可用的硬碟空間量。 此範例會要求您的表單具有 <xref:System.Windows.Forms.Label> 控制項和 <xref:System.Windows.Forms.ProgressBar> 控制項。  
   
     ```vb  
     Public Sub ReadFiles()  
@@ -224,7 +224,7 @@ ms.locfileid: "69956086"
     }  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>

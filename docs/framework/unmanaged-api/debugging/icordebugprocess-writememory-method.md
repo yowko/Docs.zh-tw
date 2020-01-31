@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5c07d86-045d-4391-893b-0bcd2959f90e
 topic_type:
 - apiref
-ms.openlocfilehash: eaf5b9980d55b0efb473b4631a8c052b013d0796
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb3e0ccb57cf3b056bd25e643706e49b8bc75531
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137261"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792546"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory 方法
 將資料寫入此進程中的記憶體區域。  
@@ -49,7 +49,7 @@ HRESULT WriteMemory(
  脫銷變數的指標，這個變數會接收寫入此進程中記憶體區域的位元組數目。 如果 `written` 為 Null，則會忽略這個參數。  
   
 ## <a name="remarks"></a>備註  
- 資料會在任何中斷點之後自動寫入。 在 .NET Framework 版本2.0 中，原生偵錯工具不應該使用這個方法將中斷點插入指令資料流程中。 請改用[ICorDebugProcess2：： SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md) 。  
+ 資料會在任何中斷點之後自動寫入。 在 .NET Framework 版本2.0 中，原生偵錯工具不應該使用這個方法將中斷點插入指令資料流程中。 請改用[ICorDebugProcess2：： SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md) 。  
   
  `WriteMemory` 方法只能在 managed 程式碼外部使用。 如果未正確使用，這個方法可能會損毀執行時間。  
   

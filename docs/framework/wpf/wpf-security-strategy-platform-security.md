@@ -1,5 +1,5 @@
 ---
-title: WPF 安全性策略 – 平台安全性
+title: 平臺安全性策略
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: b2fd923de165c0926e6f812764c71127b7c27691
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636233"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741848"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全性策略 – 平台安全性
 雖然 Windows Presentation Foundation （WPF）提供各種安全性服務，但它也會利用基礎平臺的安全性功能，其中包括作業系統、CLR 和 Internet Explorer。 這些層級結合，為 WPF 提供強式深度防禦安全性模型，以嘗試避免任何單一失敗點，如下圖所示：  

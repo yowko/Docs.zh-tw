@@ -3,12 +3,12 @@ title: 服務網格通訊基礎結構
 description: 瞭解服務網格技術如何簡化雲端原生微服務通訊
 author: robvet
 ms.date: 09/10/2019
-ms.openlocfilehash: a9192bf9f5827d05b2453c796c72e11782f9f911
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 66bc69580cc56efe725683c16a047aeb07e7e840
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771024"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76780925"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>服務網格通訊基礎結構
 
@@ -36,7 +36,7 @@ ms.locfileid: "72771024"
 
 在第6章中，我們深入探討服務網格技術，包括對其架構和可用開放原始碼的整合進行討論。
 
-## <a name="summary"></a>摘要
+## <a name="summary"></a>總結
 
 在本章中，我們討論了雲端原生通訊模式。 我們一開始先檢查前端用戶端如何與後端微服務通訊。 在過程中，我們討論了 API 閘道平臺和即時通訊。 接著，我們探討了微服務如何與其他後端服務通訊。 我們探討了同步 HTTP 通訊，以及跨服務的非同步訊息。 我們涵蓋了 gRPC，這是雲端原生世界中即將推出的技術。 最後，我們引進了一項新的、快速發展的技術，其服務網格可簡化微服務通訊。
 
@@ -74,4 +74,4 @@ ms.locfileid: "72771024"
 
 >[!div class="step-by-step"]
 >[上一頁](rest-grpc.md)
->[下一頁](distributed-data.md)
+>[下一頁](Database-per-microservice.md)

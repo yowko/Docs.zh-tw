@@ -1,5 +1,5 @@
 ---
-title: Windows Form 應用程式中的說明系統
+title: 說明系統
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], adding to Windows applications
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c97a22dbdbdcc0eb282b52e16c4ef40914b1d9e7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937939"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742242"
 ---
-# <a name="help-systems-in-windows-forms-applications"></a>Windows Form 應用程式中的說明系統
-其中一個最重要的優待的您的應用程式，開發人員可以提供您的使用者是裁判的 [說明] 系統。 這是他們將會在其中開啟時使用者感到混淆、 求助對象。 提供以 Windows 為基礎的應用程式中的 [說明] 系統很容易，利用[HelpProvider 元件](../controls/helpprovider-component-windows-forms.md)。  
+# <a name="help-systems-in-windows-forms-applications"></a>Windows Forms 應用程式中的說明系統
+身為應用程式開發人員的其中一項最重要的禮物，可以為您的使用者提供有能力的協助系統。 這是他們在混淆或 disoriented 時將會變成的地方。 使用[HelpProvider 元件](../controls/helpprovider-component-windows-forms.md)可輕鬆地在 Windows 應用程式中提供說明系統。  
   
 ## <a name="different-types-of-help"></a>不同類型的說明  
- Windows Form <xref:System.Windows.Forms.HelpProvider> 元件用來將 HTML 說明 1.x 說明檔 (以 HTML Help Workshop 產生的 .chm 檔案，或 .htm 檔) 與 Windows 架構應用程式產生關聯。 <xref:System.Windows.Forms.HelpProvider>元件可用來提供即時線上說明 Windows Forms 上的控制項或特定的控制項。 此外，<xref:System.Windows.Forms.HelpProvider>元件可以開啟至特定的區域，例如內容、 索引或搜尋函式的資料表的主頁面的說明檔。 如需一般資訊<xref:System.Windows.Forms.HelpProvider>元件，請參閱 < [HelpProvider 元件概觀](../controls/helpprovider-component-overview-windows-forms.md)。 如需有關如何使用資訊<xref:System.Windows.Forms.HelpProvider>元件，以在 Windows Form 上顯示快顯說明請參閱[How to:顯示快顯說明](how-to-display-pop-up-help.md)。 如需使用<xref:System.Windows.Forms.ToolTip>元件，以顯示特定控制項的說明，請參閱[控制項協助使用工具提示](control-help-using-tooltips.md)。  
+ Windows Form <xref:System.Windows.Forms.HelpProvider> 元件用來將 HTML 說明 1.x 說明檔 (以 HTML Help Workshop 產生的 .chm 檔案，或 .htm 檔) 與 Windows 架構應用程式產生關聯。 <xref:System.Windows.Forms.HelpProvider> 元件可以用來提供 Windows Forms 或特定控制項上控制項的即時線上說明。 此外，<xref:System.Windows.Forms.HelpProvider> 元件可以開啟說明檔到特定區域，例如目錄的主頁面、索引或搜尋函數。 如需 <xref:System.Windows.Forms.HelpProvider> 元件的一般資訊，請參閱[HelpProvider 元件總覽](../controls/helpprovider-component-overview-windows-forms.md)。 如需如何使用 <xref:System.Windows.Forms.HelpProvider> 元件在 Windows Forms 上顯示快顯說明的詳細資訊，請參閱[如何：顯示](how-to-display-pop-up-help.md)快顯說明。 如需使用 <xref:System.Windows.Forms.ToolTip> 元件來顯示控制項特定協助的詳細資訊，請參閱[使用工具提示控制](control-help-using-tooltips.md)說明。  
   
- 您可以產生 HTML Help Workshop HTML 說明 1.x 檔案。 如需有關 HTML 說明檔的詳細資訊，請參閱 「 HTML Help Workshop 」 或在 MSDN 中的其他 [HTML 說明] 主題。  
+ 您可以使用 HTML Help 研討會產生 HTML Help 1.x 檔案。 如需 HTML 說明的詳細資訊，請參閱 MSDN 中的「HTML 協助研討會」或其他「HTML 說明」主題。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [整合 Windows Forms 中的使用者說明](integrating-user-help-in-windows-forms.md)
 - [HelpProvider 元件](../controls/helpprovider-component-windows-forms.md)

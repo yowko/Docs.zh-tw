@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Windows Forms 中列印多頁文字檔
+title: 如何：列印多頁文字檔
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: bd858279a4d8a3509a91bcd1c62fb1f61d6d2bb9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 51e30706bb7693988d611701d013792c82dccd0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931795"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740656"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>作法：在 Windows Forms 中列印多頁文字檔
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>如何：在 Windows Forms 中列印多頁文字檔
 Windows 應用程式列印文字的情況極為常見。 <xref:System.Drawing.Graphics> 類別提供將物件 (圖形或文字) 繪製到螢幕或印表機等裝置的方法。  
   
 > [!NOTE]
@@ -58,9 +58,9 @@ Windows 應用程式列印文字的情況極為常見。 <xref:System.Drawing.Gr
   
 - System、System.Windows.Forms、System.Drawing 組件的參考。  
   
-- 如需從 Visual Basic 或視覺效果C#的命令列建立此範例的詳細資訊, 請參閱[從命令列建立](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc 建立命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以藉由將程式碼貼入新的專案中, 在 Visual Studio 中建立此範例。  
+- 如需從 Visual Basic 或視覺效果C#的命令列建立此範例的詳細資訊，請參閱[從命令列建立](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或[使用 csc 建立命令列](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以藉由將程式碼貼入新的專案中，在 Visual Studio 中建立此範例。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>

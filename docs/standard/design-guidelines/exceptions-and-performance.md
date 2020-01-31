@@ -9,17 +9,17 @@ helpviewer_keywords:
 - exceptions, performance
 - throwing exceptions, performance
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
-ms.openlocfilehash: e3a7fa0f284ebf028a18cae37c050d7ceda9bb79
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: afa4e748599781a5979823320d8913ff5357d415
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709383"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741652"
 ---
 # <a name="exceptions-and-performance"></a>例外狀況和效能
 例外狀況的其中一個常見問題是，如果例外狀況是用於經常失敗的程式碼，則無法接受執行的效能。 這是有效的考慮。 當成員擲回例外狀況時，其效能可能是速度較慢的順序。 不過，您可以達成良好的效能，同時嚴格遵守不允許使用錯誤碼的例外狀況指導方針。 本節所述的兩種模式會建議執行這項操作的方式。
 
- **X**不會使用錯誤碼，因為例外狀況可能會對效能造成負面影響。
+ ❌ 不使用錯誤碼，因為例外狀況可能會對效能造成負面影響。
 
  若要改善效能，您可以使用惡人之手模式或 Try-Parse 模式，如下兩節所述。
 
@@ -44,7 +44,7 @@ if (!numbers.IsReadOnly)
 
  用來測試條件的成員（在我們的範例中是 `IsReadOnly`的屬性，稱為「測試者」）。 用來執行可能擲回作業的成員（在我們的範例中為 `Add` 方法）稱為惡人之手。
 
- **✓請考慮**在常見案例中可能會擲回例外狀況之成員的測試人員-惡人之手模式，以避免與例外狀況相關的效能問題。
+ ✔️針對可能會在常見案例中擲回例外狀況的成員，請考慮測試人員惡人之手模式，以避免與例外狀況相關的效能問題。
 
 ## <a name="try-parse-pattern"></a>Try-剖析模式
  對於非常效能敏感的 Api，應使用比上一節中所述的測試人員惡人之手模式更快的模式。 模式會呼叫來調整成員名稱，讓定義完善的測試案例成為成員語義的一部分。 例如，如果字串的剖析失敗，<xref:System.DateTime> 會定義會擲回例外狀況的 <xref:System.DateTime.Parse%2A> 方法。 它也會定義嘗試剖析的對應 <xref:System.DateTime.TryParse%2A> 方法，但如果剖析不成功，則會傳回 false，並使用 `out` 參數傳回成功剖析的結果。
@@ -65,11 +65,11 @@ public struct DateTime
 
  使用此模式時，請務必以嚴格的條款定義 try 功能。 如果成員因為任何不是妥善定義的嘗試而失敗，則成員仍然必須擲回對應的例外狀況。
 
- **✓請考慮**可能會在常見案例中擲回例外狀況的成員的 Try 剖析模式，以避免與例外狀況相關的效能問題。
+ ✔️考慮可能會在常見案例中擲回例外狀況的成員的 Try 剖析模式，以避免與例外狀況相關的效能問題。
 
- **✓ DO**會針對實作為此模式的方法，使用前置詞「Try」和布林傳回型別。
+ ✔️對於實作為此模式的方法，請使用前置詞「Try」和布林傳回型別。
 
- **✓**會使用嘗試剖析模式，為每個成員提供例外狀況擲回的成員。
+ ✔️確實使用 Try-catch 模式，為每個成員提供例外狀況擲回的成員。
 
  *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*
 

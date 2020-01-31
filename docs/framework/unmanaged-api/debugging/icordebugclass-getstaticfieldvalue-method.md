@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 56e718b4-fabd-418b-a5b3-3cc33c745683
 topic_type:
 - apiref
-ms.openlocfilehash: 867db3325f9b18b31f66429d01ea02be3603c0f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 873dd5a1eb2c9356049d2d0c0cb495b963c2ae46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125753"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784196"
 ---
 # <a name="icordebugclassgetstaticfieldvalue-method"></a>ICorDebugClass::GetStaticFieldValue 方法
 取得指定靜態欄位的值。  
@@ -48,7 +48,7 @@ HRESULT GetStaticFieldValue (
  脫銷ICorDebugValue 物件位址的指標，表示靜態欄位的值。  
   
 ## <a name="remarks"></a>備註  
- 針對參數化型別，靜態欄位的值是相對於特定具現化。 因此，如果類別的函式接受 <xref:System.Type>類型的參數，請呼叫[ICorDebugType：： GetStaticFieldValue](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md) ，而不是 `ICorDebugClass::GetStaticFieldValue`。  
+ 針對參數化型別，靜態欄位的值是相對於特定具現化。 因此，如果類別的函式接受 <xref:System.Type>類型的參數，請呼叫[ICorDebugType：： GetStaticFieldValue](icordebugtype-getstaticfieldvalue-method.md) ，而不是 `ICorDebugClass::GetStaticFieldValue`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

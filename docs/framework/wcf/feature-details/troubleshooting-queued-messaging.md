@@ -2,12 +2,12 @@
 title: 佇列訊息的疑難排解
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: ed114cc9a37fff549e8bfc874765252fd18893a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345583"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742678"
 ---
 # <a name="troubleshooting-queued-messaging"></a>佇列訊息的疑難排解
 
@@ -113,10 +113,6 @@ ms.locfileid: "75345583"
 
 **答：** 在對應至會話中最後一則訊息的作業上設定 [自動完成] =`true`，然後在所有剩餘的服務作業上設定 [自動完成] = [`false`]。
 
-**問：** 哪裡可以找到有關 MSMQ 常見問題的解答？
-
-**答：** 如需 MSMQ 的詳細資訊，請參閱[Microsoft Message Queuing](https://go.microsoft.com/fwlink/?LinkId=87810)。
-
 **問：** 為什麼當我從包含佇列會話訊息和佇列資料包訊息的佇列讀取時，我的服務會擲回 `ProtocolException`？
 
 **答：** 佇列會話訊息和佇列資料包訊息的組成方式有基本差異。 因此，預期要讀取佇列工作階段訊息的服務無法接收佇列資料包訊息，而預期要讀取佇列資料包訊息的服務無法接收工作階段訊息。 嘗試從相同佇列同時讀取這兩種訊息類型時，便會擲回下列例外狀況：
@@ -174,7 +170,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 6. 接下來，使用先前的步驟新增第二個憑證嵌入式管理單元，但這次請選取 [**電腦帳戶**]，然後按 **[下一步]** 。
 
-7. 選取 [本機電腦]，再按一下 [完成]。 現在，您可以從電腦憑證存放區將憑證拖放到目前使用者存放區。
+7. 選取 [**本機電腦**]，然後按一下 **[完成]** 。 現在，您可以從電腦憑證存放區將憑證拖放到目前使用者存放區。
 
 **問：** 當我的服務在工作組模式中從另一部電腦上的佇列讀取時，出現「拒絕存取」例外狀況。
 
@@ -186,7 +182,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ### <a name="remote-transacted-receives"></a>遠端交易接收
 
-**問：** 當我在電腦 A 上有佇列，而 WCF 服務從電腦 B 上的佇列讀取訊息時（遠端交易接收案例），則不會從佇列讀取訊息。 追蹤資訊表示接收失敗，訊息為「無法匯入交易」。 可以做什麼來修正這個問題？
+**問：** 當我在電腦 A 上有佇列，而 WCF 服務從電腦 B 上的佇列讀取訊息時（遠端交易接收案例），則不會從佇列讀取訊息。 追蹤資訊表示接收失敗，訊息為「無法匯入交易」。 我可以做什麼來修正這個問題？
 
 **答：** 有三個可能的原因：
 

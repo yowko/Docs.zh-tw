@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a453f75a-c37b-4013-8f0e-35771fa5d792
 topic_type:
 - apiref
-ms.openlocfilehash: 7d8b3151c8effcf16b2a371010b84d06ce60a703
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cea5439dc5ad50a2d833fcda103488d5a0f8b517
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122930"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789093"
 ---
 # <a name="iclrdataenummemoryregions-interface"></a>ICLRDataEnumMemoryRegions 介面
 提供方法來列舉呼叫端所指定的記憶體區域。  
@@ -28,7 +28,7 @@ ms.locfileid: "73122930"
   
 |方法|描述|  
 |------------|-----------------|  
-|[EnumMemoryRegions 方法](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|列舉指定的記憶體區域。|  
+|[EnumMemoryRegions 方法](iclrdataenummemoryregions-enummemoryregions-method.md)|列舉指定的記憶體區域。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -41,4 +41,4 @@ ms.locfileid: "73122930"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

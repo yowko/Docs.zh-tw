@@ -1,25 +1,25 @@
 ---
-title: SaveFileDialog 元件 (Windows Form)
+title: SaveFileDialog 元件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-ms.openlocfilehash: 552e6cae64ab3b30279e04512a87b18c2f2b068a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 920816c648f5dbdd50f869e58769655e8be8e1a1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947975"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743088"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog 元件 (Windows Form)
 Windows Form <xref:System.Windows.Forms.SaveFileDialog> 元件是預先設定的對話方塊。 與 Windows 所使用的標準 [儲存檔案] 對話方塊相同。 這個元件繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [SaveFileDialog 元件概觀](savefiledialog-component-overview-windows-forms.md)  
  介紹 <xref:System.Windows.Forms.SaveFileDialog> 元件的一般概念，這個元件可讓您顯示一個預先設定的對話方塊，使用者可以在這個對話方塊中將檔案儲存至指定位置。  
   
- [如何：使用 SaveFileDialog 元件儲存檔案](how-to-save-files-using-the-savefiledialog-component.md)  
+ [操作說明：使用 SaveFileDialog 元件儲存檔案](how-to-save-files-using-the-savefiledialog-component.md)  
  說明如何在執行階段透過 <xref:System.Windows.Forms.SaveFileDialog> 元件的執行個體儲存檔案。  
   
 ## <a name="reference"></a>參考資料  

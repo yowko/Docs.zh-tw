@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-ms.openlocfilehash: 87316b20c5835d9b887355a1f9374fa5f2156e5c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 20cea94961a250c3981d892910da1dcee20a060b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122177"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783732"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual 方法
 從指定的位址開始，取得連續記憶體的區塊，並將它傳回給提供的緩衝區。  
@@ -63,6 +63,6 @@ HRESULT ReadVirtual(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugDataTarget 介面](icordebugdatatarget-interface.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: df5f05be-bed7-4f3c-bc89-dbb435d79a0b
 topic_type:
 - apiref
-ms.openlocfilehash: f8b216d370f7278f6d2a4beed5bab88afa666200
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9029d53872108bc1953fd22c584b6e01a6f3c7ab
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122207"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788861"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget 介面
 提供回呼介面，該介面可供存取特定的目標處理序。  
@@ -28,9 +28,9 @@ ms.locfileid: "73122207"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetPlatform 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|提供目標進程執行所在平臺的相關資訊，包括處理器架構和作業系統。|  
-|[ReadVirtual 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|從指定的位址開始，取得連續記憶體的區塊，並將它傳回給提供的緩衝區。|  
-|[GetThreadContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|要求指定之執行緒的目前線程內容。|  
+|[GetPlatform 方法](icordebugdatatarget-getplatform-method.md)|提供目標進程執行所在平臺的相關資訊，包括處理器架構和作業系統。|  
+|[ReadVirtual 方法](icordebugdatatarget-readvirtual-method.md)|從指定的位址開始，取得連續記憶體的區塊，並將它傳回給提供的緩衝區。|  
+|[GetThreadContext 方法](icordebugdatatarget-getthreadcontext-method.md)|要求指定之執行緒的目前線程內容。|  
   
 ## <a name="remarks"></a>備註  
  `ICorDebugDataTarget` 和其方法具有下列特性：  
@@ -43,7 +43,7 @@ ms.locfileid: "73122207"
   
 - `ICorDebugDataTarget` 的執行必須一律傳回有關目標的最新資訊。  
   
- 在呼叫 `ICorDebug*` 介面（因此 `ICorDebugDataTarget` 方法）時，目標進程應該停止且不會變更。 如果目標是即時進程且其狀態變更，必須再次呼叫[ICLRDebugging：： OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)方法，以提供取代 ICorDebugProcess 實例。  
+ 在呼叫 `ICorDebug*` 介面（因此 `ICorDebugDataTarget` 方法）時，目標進程應該停止且不會變更。 如果目標是即時進程且其狀態變更，必須再次呼叫[ICLRDebugging：： OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md)方法，以提供取代 ICorDebugProcess 實例。  
   
 > [!NOTE]
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
@@ -59,5 +59,5 @@ ms.locfileid: "73122207"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

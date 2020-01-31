@@ -1,5 +1,5 @@
 ---
-title: 作法：使用預覽列印在 Windows Forms 中進行列印
+title: 使用預覽列印進行列印
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], with print preview
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
-ms.openlocfilehash: 07137d03dd9a20d8eab564757618e48e25b45353
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 1975c902fdb56326c763f2e2fc11e381ffc7fbd3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69931759"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740601"
 ---
-# <a name="how-to-print-in-windows-forms-using-print-preview"></a>HOW TO：使用預覽列印在 Windows Forms 中進行列印
+# <a name="how-to-print-in-windows-forms-using-print-preview"></a>如何：使用預覽列印在 Windows Forms 中進行列印
 這在 Windows Forms 程式設計中很常見，除了列印服務，還提供預覽列印。 若要將預覽列印服務加入您的應用程式，有一個簡單的方法，那就是使用 <xref:System.Windows.Forms.PrintPreviewDialog> 控制項結合 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件處理邏輯來列印檔案。  
   
 ### <a name="to-preview-a-text-document-with-a-printpreviewdialog-control"></a>使用 PrintPreviewDialog 控制項來預覽文字文件  
@@ -62,7 +62,7 @@ ms.locfileid: "69931759"
   
 - System、System.Windows.Forms、System.Drawing 組件的參考。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [如何：在 Windows Forms 中列印多頁文字檔](how-to-print-a-multi-page-text-file-in-windows-forms.md)
 - [Windows Forms 列印支援](windows-forms-print-support.md)

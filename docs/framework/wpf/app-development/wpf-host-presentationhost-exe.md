@@ -1,16 +1,17 @@
 ---
 title: WPF 主應用程式 (PresentationHost.exe)
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Host application [WPF]
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
-ms.openlocfilehash: 64ba1261134184f22e9faf157ca70e3471e3b3cb
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: bda7efbb1b7a4760199215bdb58c12b3063e290c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636246"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743395"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF 主應用程式 (PresentationHost.exe)
 Windows Presentation Foundation （WPF）主機（Presentationhost.exe）是應用程式，可讓 WPF 應用程式裝載在相容的瀏覽器中（包括 Microsoft Internet Explorer 6 和更新版本）。 根據預設，Windows Presentation Foundation （WPF）主機會註冊為瀏覽器裝載 WPF 內容的 shell 和 MIME 處理常式，其中包括：  

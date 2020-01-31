@@ -1,5 +1,5 @@
 ---
-title: HOW TO：繼承 Windows Forms
+title: 表單繼承
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 402386e16687162e25e16e5c30c787f7e721fbba
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: cc3a4cc75fd13e8f193a6920ed5b4a9bc8fd5d74
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306366"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743318"
 ---
-# <a name="how-to-inherit-windows-forms"></a>HOW TO：繼承 Windows Forms
+# <a name="how-to-inherit-windows-forms"></a>如何：繼承 Windows Form
 
 藉由繼承自基底表單建立新的 Windows Form，可以很快地複製您的最佳成果，而無須在每次需要它時都要完成重建表單的程序。
 
-如需在設計階段使用 [**繼承選取器**] 對話方塊繼承表單的詳細資訊，以及如何以視覺化方式區分繼承控制項的[安全性層級，請參閱如何：使用 [繼承選取器] 對話方塊](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)繼承表單。
+如需在設計階段使用 [繼承選取器] 對話方塊繼承表單的詳細資訊，以及如何以視覺化方式區分繼承控制項的安全性層級，請參閱[如何：使用繼承選取器對話方塊繼承表單](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)。
 
 > [!NOTE]
 > 為了繼承自表單，包含該表單的檔案或命名空間必須已內建至可執行檔或 DLL。 若要建置專案，請從 [建置] 功能表中選擇 [建置]。 此外，命名空間的參考也必須加入至繼承表單的類別。
@@ -42,7 +42,7 @@ ms.locfileid: "71306366"
 
  繼承表單時，請記住，呼叫兩次事件處理常式可能會發生問題，因為每個事件都會由基底類別和繼承的類別處理。 如需如何避免這個問題的詳細資訊，請參閱[針對 Visual Basic 中的繼承事件處理常式進行疑難排解](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports 陳述式 (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

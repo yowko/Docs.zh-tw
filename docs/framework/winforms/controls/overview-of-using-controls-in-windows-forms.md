@@ -1,5 +1,5 @@
 ---
-title: 在 Windows Form 中使用控制項的概觀
+title: 使用控制項的總覽
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
-ms.openlocfilehash: 16a28db6477ea86a8bc853fbf506cf6d6d4fa5e0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ca8b9fab3c53e256792faf0969b5066d5e35f6c7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654594"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744355"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>在 Windows Form 中使用控制項的概觀
-本主題說明在 Windows Forms 應用程式的基本項目，並提供簡單的範例會使用控制項和處理 Windows Forms 應用程式中的事件。  
+本主題描述 Windows Forms 應用程式的基本元素，並提供使用控制項和處理 Windows Forms 應用程式中事件的簡單範例。  
   
-## <a name="simple-windows-forms-applications"></a>簡單的 Windows Forms 應用程式  
- 至少在 Windows Forms 應用程式包含下列項目：  
+## <a name="simple-windows-forms-applications"></a>簡單 Windows Forms 應用程式  
+ Windows Forms 的應用程式至少會包含下列元素：  
   
-- 一或多個類別衍生自<xref:System.Windows.Forms.Form?displayProperty=nameWithType>。  
+- 衍生自 <xref:System.Windows.Forms.Form?displayProperty=nameWithType>的一或多個類別。  
   
-- A`Main`叫用方法`static`(`shared`在 Visual Basic 中)<xref:System.Windows.Forms.Application.Run%2A>方法，並傳遞<xref:System.Windows.Forms.Form>給它的執行個體。 <xref:System.Windows.Forms.Application.Run%2A>方法會處理從作業系統到應用程式的訊息。  
+- `Main` 方法，可叫用 `static` （`shared` 在 Visual Basic） <xref:System.Windows.Forms.Application.Run%2A> 方法，並將 <xref:System.Windows.Forms.Form> 實例傳遞給它。 <xref:System.Windows.Forms.Application.Run%2A> 方法會處理從作業系統到應用程式的訊息。  
   
- 下列程式碼範例會顯示在 Windows Forms 應用程式的基本項目。  
+ 下列程式碼範例顯示 Windows Forms 應用程式的基本元素。  
   
 ```vb  
 Option Explicit  
@@ -75,7 +75,7 @@ public class MyForm : Form {
 ```  
   
 ## <a name="using-controls-in-a-windows-forms-application"></a>在 Windows Forms 應用程式中使用控制項  
- 下列程式碼範例顯示簡單的應用程式，說明 Windows Forms 應用程式使用的控制項和處理事件的方式。 此範例包含三個表單; 上的按鈕每個按鈕變更時按下的背景色彩。  
+ 下列程式碼範例示範一個簡單的應用程式，說明 Windows Forms 應用程式如何使用控制項和處理事件。 此範例是由表單上的三個按鈕所組成。按一下時，每個按鈕都會變更背景色彩。  
   
 ```vb  
 Option Explicit  
@@ -223,7 +223,7 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
 - [Windows Forms 控制項開發的基本概念](windows-forms-control-development-basics.md)

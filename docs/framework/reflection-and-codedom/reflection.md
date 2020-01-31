@@ -21,16 +21,16 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 42944d8267d2e99fd9eb1a2cb28c0c81d3e9af75
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130057"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744577"
 ---
 # <a name="reflection-in-net"></a>.NET 中的反映
 
-<xref:System.Reflection> 命名空間中的類別，連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[組件](../../standard/assembly/index.md)和其中所定義類型的資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和[實值型別](../../csharp/language-reference/keywords/value-types.md)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
+<xref:System.Reflection> 命名空間中的類別連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[元件](../../standard/assembly/index.md)和其中所定義類型的相關資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和實數值型別（也就是[結構](../../standard/base-types/common-type-system.md#structures) [ 和列舉）](../../standard/base-types/common-type-system.md#enumerations)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
   
 [Common Language Runtime](../../standard/clr.md) 載入器會管理[應用程式定義域](../app-domains/application-domains.md)，這會在有相同應用程式範圍的物件周圍構成定義的界限。 這個管理包含載入每個組件至適當的應用程式定義域和控制每個組件內類型階層的記憶體配置。  
   

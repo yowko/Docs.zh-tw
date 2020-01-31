@@ -2,12 +2,12 @@
 title: ICorDebugDebugEvent::GetEventKind 方法
 ms.date: 03/30/2017
 ms.assetid: c37aaceb-c948-46bd-a943-08be4cbb76f4
-ms.openlocfilehash: 92606d7bd0a277dd327ce4fd430ce963a260206d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0c67f8bdce49b4e9200b501aaf00ae293cced7d7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136663"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783406"
 ---
 # <a name="icordebugdebugeventgeteventkind-method"></a>ICorDebugDebugEvent::GetEventKind 方法
 指出這個 `ICorDebugDebugEvent` 物件所代表的事件類型。  
@@ -22,7 +22,7 @@ HRESULT GetEventKind(
   
 ## <a name="parameters"></a>參數  
  pDebugEventKind  
- 表示事件種類之[CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)列舉成員的指標。  
+ 表示事件種類之[CorDebugDebugEventKind](cordebugdebugeventkind-enumeration.md)列舉成員的指標。  
   
 ## <a name="remarks"></a>備註  
  根據 `pDebugEventKind` 的值，您可以呼叫 `QueryInterface` 以取得包含其他資料的更精確偵錯事件介面。  
@@ -41,5 +41,5 @@ HRESULT GetEventKind(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugDebugEvent 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDebugEvent 介面](icordebugdebugevent-interface.md)
+- [偵錯介面](debugging-interfaces.md)

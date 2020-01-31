@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-ms.openlocfilehash: 3c57021061c1566b369cdd43847e3994cf54e2da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 66d544bbc0511ea76565376c8f10294f1758026b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139668"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792564"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext 方法
 設定這個進程中指定執行緒的內容。  
@@ -48,7 +48,7 @@ HRESULT SetThreadContext(
  內容會指定執行緒在其上執行的處理器架構。  
   
 ## <a name="remarks"></a>備註  
- 偵錯工具應該呼叫這個方法，而不是 Win32 `SetThreadContext` 函式，因為執行緒實際上可能處於「遭劫持」狀態，而其內容已暫時變更。 只有線上程是機器碼時，才應該使用這個方法。 針對 managed 程式碼中的執行緒使用[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) 。 您應該永遠不需要在頻外（OOB） debug 事件期間修改執行緒的內容。  
+ 偵錯工具應該呼叫這個方法，而不是 Win32 `SetThreadContext` 函式，因為執行緒實際上可能處於「遭劫持」狀態，而其內容已暫時變更。 只有線上程是機器碼時，才應該使用這個方法。 針對 managed 程式碼中的執行緒使用[ICorDebugRegisterSet](icordebugregisterset-interface.md) 。 您應該永遠不需要在頻外（OOB） debug 事件期間修改執行緒的內容。  
   
  傳遞的資料必須是目前平臺的內容結構。  
   

@@ -2,12 +2,12 @@
 title: 雲端原生復原
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |雲端原生復原
 ms.date: 06/30/2019
-ms.openlocfilehash: 680542abc5d8c43c577321d5ae834f0a13290da3
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 427405d95534c4467ab519c2188fe88e2f18e2b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71184838"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781090"
 ---
 # <a name="cloud-native-resiliency"></a>雲端原生復原
 
@@ -41,5 +41,5 @@ ms.locfileid: "71184838"
 因此，您的應用程式和基礎結構必須具備復原能力。 在下列各節中，我們將探索您可以加入應用程式的防禦技術，以及您可以利用的內建雲端功能，協助您的使用者體驗。
 
 >[!div class="step-by-step"]
->[上一頁](azure-data-storage.md)
+>[上一頁](elastic-search-in-azure.md)
 >[下一頁](application-resiliency-patterns.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-ms.openlocfilehash: 86b2815c6f95c674c49bba7455e8497192bd8bac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12d4e63480f03bfad613f30362ddaeaf12b57a88
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125145"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791055"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>ICorDebugVariableHome：： GetArgumentIndex 方法
 
@@ -43,10 +43,10 @@ HRESULT GetArgumentIndex(
 
 方法會傳回下列值。
 
-|值|描述|
+|{2&gt;值&lt;2}|描述|
 |-----------|-----------------|
 |`S_OK`|方法呼叫傳回有效的引數索引。|
-|`E_FAIL`|目前的[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)實例代表本機變數。|
+|`E_FAIL`|目前的[ICorDebugVariableHome](icordebugvariablehome-interface.md)實例代表本機變數。|
 
 ## <a name="remarks"></a>備註
 
@@ -64,4 +64,4 @@ HRESULT GetArgumentIndex(
 
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugVariableHome 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [ICorDebugVariableHome 介面](icordebugvariablehome-interface.md)

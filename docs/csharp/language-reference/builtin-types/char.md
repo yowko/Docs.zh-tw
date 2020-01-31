@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: ab49b8cbddac2569d6063a5f312105bef3033e84
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 3952e9e30706a8cd362ef248955918de5dacf4a3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552306"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787813"
 ---
 # <a name="char-c-reference"></a>char （C#參考）
 
@@ -58,3 +58,4 @@ ms.locfileid: "74552306"
 - [C# 參考](../index.md)
 - [內建型別表](../keywords/built-in-types-table.md)
 - [字串](../../programming-guide/strings/index.md)
+- <xref:System.Text.Rune?displayProperty=nameWithType>

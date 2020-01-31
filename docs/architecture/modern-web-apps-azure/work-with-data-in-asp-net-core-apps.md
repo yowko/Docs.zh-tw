@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: fa30deb16be323f059aa0ec12df08793598a6da2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738355"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777123"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
@@ -55,7 +55,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-您的 DbContext 必須具備可接受 DbContextOptions 的建構函式，並將此引數傳遞給基底 DbContext 建構函式。 請注意，如果您的應用程式中只有一個 DbContext，即可傳遞 DbContextOptions 的執行個體，但如果不只一個，您就必須使用泛型 DbContextOptions\<T> 類型，並將其作為泛型參數傳遞至 DbContext 類型中。
+您的 DbContext 必須具備可接受 DbContextOptions 的建構函式，並將此引數傳遞給基底 DbContext 建構函式。 如果您的應用程式中只有一個 DbCoNtext，您可以傳遞 DbCoNtextOptions 的實例，但如果您有一個以上的，就必須使用泛型 DbCoNtextOptions\<T > 類型，傳入您的 DbCoNtext 類型做為泛型參數。
 
 ### <a name="configuring-ef-core"></a>設定 EF Core
 
@@ -127,7 +127,7 @@ var brandsWithItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-您可以包含多個關聯性，也可以使用 ThenInclude 來包含子關聯性。 EF Core 會執行單一查詢來擷取產生的實體集。 或者您可以藉由將以 '.' 分隔的字串傳遞至 `.Include()` 擴充方法，來包含導覽屬性的導覽屬性，如下所示：
+您可以包含多個關聯性，也可以使用 ThenInclude 包含 subrelationships。 EF Core 會執行單一查詢來擷取產生的實體集。 或者您可以藉由將以 '.' 分隔的字串傳遞至 `.Include()` 擴充方法，來包含導覽屬性的導覽屬性，如下所示：
 
 ```csharp
     .Include(“Items.Products”)
@@ -180,7 +180,7 @@ public class Basket : BaseEntity
 }
 ```
 
-請注意，這個實體類型不會公開公開的 `List` 或 `ICollection` 屬性，但是會公開包裝基礎 List 類型的 `IReadOnlyCollection` 類型。 在使用這個模式時，您可以透過 Entity Framework Core 來使用支援欄位，如下所示：
+此實體類型不會公開公用 `List` 或 `ICollection` 屬性，而是會公開包裝基礎清單類型的 `IReadOnlyCollection` 類型。 在使用這個模式時，您可以透過 Entity Framework Core 來使用支援欄位，如下所示：
 
 ```csharp
 private void ConfigureBasket(EntityTypeBuilder<Basket> builder)
@@ -240,7 +240,7 @@ public class Startup
 
 不過，如果您的程式碼使用 BeginTransaction 來起始異動，您將定義需視為一個單位的專屬作業群組；如果失敗，則必須復原異動內的所有項目。 如果您在使用 EF 執行策略 (重試原則) 時嘗試執行該交易，並在交易中包含來自多個 DbContext 的數個 SaveChanges，則會看到類似如下的例外狀況。
 
-System.InvalidOperationException：已設定的執行策略 'SqlServerRetryingExecutionStrategy' 不支援使用者起始的異動。 使用 'DbContext.Database.CreateExecutionStrategy()' 所傳回的執行策略，將異動中的所有作業當做一個可重試的單位來執行。
+System.InvalidOperationException：已設定的執行策略 'SqlServerRetryingExecutionStrategy' 不支援使用者起始的異動。 使用 ' DbCoNtext. CreateExecutionStrategy （） ' 傳回的執行策略，將交易中的所有作業當做可重試的單位來執行。
 
 解決方法是使用代表必須執行之所有項目的委派，來手動叫用 EF 執行策略。 如果發生暫時性失敗，執行策略會再叫用委派一次。 下列程式碼會示範如何實作這個方法：
 
@@ -271,16 +271,16 @@ await strategy.ExecuteAsync(async () =>
 
 > ### <a name="references--entity-framework-core"></a>參考資料 – Entity Framework Core
 >
-> - **EF Core 文件**  
+> - **EF Core**檔
 >   <https://docs.microsoft.com/ef/>
-> - **EF Core：相關資料**  
+> - **EF Core：相關資料**
 >   <https://docs.microsoft.com/ef/core/querying/related-data>
-> - **避免在 ASPNET 應用程式中消極載入實體**  
+> - **避免在 ASPNET 應用程式中延遲載入實體**
 >   <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>該使用 EF Core 或微型 ORM？
 
-雖然 EF Core 是管理持續性的絕佳選擇，甚至能封裝應用程式開發人員提供的資料庫詳細資料，但它並不是唯一的選擇。 另一個熱門的開放原始碼替代方法是 [Dapper](https://github.com/StackExchange/Dapper)，也就是所謂的微型 ORM。 微型 ORM 是一種功能較簡單的輕量型工具，可將物件對應至資料結構。 舉 Dapper 為例，其設計目標著重在效能，而非完整封裝用來擷取和更新資料的基礎查詢。 因為 Dapper 不需要開發人員完全抽離 SQL，所以是比較單純的「試用版」，可讓開發人員撰寫想用於指定資料存取作業的確切查詢。
+雖然 EF Core 是管理持續性的絕佳選擇，但在大部分的情況下，會封裝應用程式開發人員的資料庫詳細資料，但它並不是唯一的選擇。 另一個熱門的開放原始碼替代方案是[Dapper](https://github.com/StackExchange/Dapper)，也就是所謂的微 ORM。 微型 ORM 是一種功能較簡單的輕量型工具，可將物件對應至資料結構。 舉 Dapper 為例，其設計目標著重在效能，而非完整封裝用來擷取和更新資料的基礎查詢。 因為 Dapper 不需要開發人員完全抽離 SQL，所以是比較單純的「試用版」，可讓開發人員撰寫想用於指定資料存取作業的確切查詢。
 
 EF Core 與 Dapper 的主要差異是前者提供下列兩個重要的功能，但這也會對效能產生額外負荷。 第一個是它會將 LINQ 運算式轉譯為 SQL。 雖然系統會快取這些轉譯，第一次執行時仍會產生額外負荷。 第二個是追蹤實體的變更 (以便產生有效的 UPDATE 陳述式)。 您可以使用 AsNotTracking 延伸模組，將特定查詢的這項行為關閉。 EF Core 也會產生非常有效率的 SQL 查詢，而且在任何情況下，效能都是完全可以接受的等級；但如果您需要妥善控制要執行的精確查詢，您也可以使用 EF Core 傳入自訂的 SQL (或執行預存程序)。 在這種情況下，Dapper 就略勝於 EF Core。 Julie Lerman 在 2016 年 5 月的 [Dapper, Entity Framework, and Hybrid Apps](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps) (Dapper、Entity Framework 和混合式應用程式) MSDN 文章中提供了一些效能資料。 如需各種不同資料存取方法的其他效能基準測試資料，請參閱 [Dapper 網站](https://github.com/StackExchange/Dapper)。
 
@@ -326,13 +326,13 @@ var data = connection.Query<Post, User, Post>(sql,
 (post, user) => { post.Owner = user; return post;});
 ```
 
-因為 Dapper 提供較少的封裝，所以開發人員必須進一步了解如何儲存資料、如何有效率地查詢資料，並撰寫更多程式碼來擷取資料。 當模型變更時，您不只要建立新的移轉 (另一個 EF Core 功能)，及/或逐一更新 DbContext 中每個位置的對應資訊，還要更新會受到影響的每一個查詢。 這些查詢的編譯時間無法保證，因此為了回應模型或資料庫的變更，查詢可能會在執行階段中斷，導致更難快速偵測錯誤。 Dapper 折衷了上述情況，以提供極快速的效能。
+因為 Dapper 提供較少的封裝，所以開發人員必須進一步了解如何儲存資料、如何有效率地查詢資料，並撰寫更多程式碼來擷取資料。 當模型變更時，您不只要建立新的移轉 (另一個 EF Core 功能)，及/或逐一更新 DbContext 中每個位置的對應資訊，還要更新會受到影響的每一個查詢。 這些查詢沒有編譯時間保證，因此可能會在執行時間中斷，以回應模型或資料庫的變更，使錯誤更難以快速偵測。 Dapper 折衷了上述情況，以提供極快速的效能。
 
 對於大部分應用程式以及幾乎所有主要的應用程式來說，EF Core 可提供還不錯的效能。 因此，其開發人員的生產力優勢可能遠大於它的效能負擔。 如果查詢可受益於快取，實際的查詢可能只會執行很短的時間，這時查詢效能之間的微小差異就無傷大雅了。
 
 ## <a name="sql-or-nosql"></a>SQL 或 NoSQL
 
-傳統上來看，SQL Server 這類關聯式資料庫主導了永續性資料儲存的市場，但它們並不是唯一可用的解決方案。 [MongoDB](https://www.mongodb.com/what-is-mongodb) 這類 NoSQL 資料庫提供儲存物件的不同方式。 這個選項不會將物件對應至資料表和資料列，而是序列化整個物件圖形，並且將結果儲存。 初步來講，這個方法的優點是簡潔和效能。 比起將物件分解成許多關聯性資料表，並更新自上次從資料庫擷取物件之後可能已變更的資料列，使用索引鍵儲存單一序列化的物件，當然更加簡單。 同樣地，相較於從關聯式資料庫完整撰寫相同物件所需的複雜聯結或多個資料庫查詢，從以索引鍵為基礎的存放區中擷取和還原序列化單一物件通常更為快速、簡單。 NoSQL 資料庫不具鎖定、異動或固定結構描述的特質，也非常適合跨多部機器調整規模，同時支援大型資料集。
+傳統上來看，SQL Server 這類關聯式資料庫主導了永續性資料儲存的市場，但它們並不是唯一可用的解決方案。 [MongoDB](https://www.mongodb.com/what-is-mongodb) 這類 NoSQL 資料庫提供儲存物件的不同方式。 這個選項不會將物件對應至資料表和資料列，而是序列化整個物件圖形，並且將結果儲存。 初步來講，這個方法的優點是簡潔和效能。 儲存具有索引鍵的單一序列化物件比將物件分解成許多具有關聯性和更新的資料表，以及從上次從資料庫取得物件之後可能已變更的資料列，會比較簡單。 同樣地，相較於從關聯式資料庫完整撰寫相同物件所需的複雜聯結或多個資料庫查詢，從以索引鍵為基礎的存放區中擷取和還原序列化單一物件通常更為快速、簡單。 缺少鎖定或交易或固定架構也會讓 NoSQL 資料庫適合在多部電腦上進行調整，以支援非常大型的資料集。
 
 另一方面來看，NoSQL 資料庫 (如字面通稱) 也有其缺點。 關聯式資料庫使用正規化功能，強制執行一致性並避免出現重複的資料。 這可減少資料庫的大小總計，並確保對共用資料所做的更新可在整個資料庫中立即生效。 在關聯式資料庫中，假設「地址」資料表參考「國家/地區」資料表中的識別碼，則當國家/地區的名稱變更時，地址記錄也會隨之更新，因此您不需要另行更新地址記錄。 不過，在 NoSQL 資料庫中，「地址」和其相關聯的「國家/地區」可能會序列化為許多預存物件的一部分。 更新國家/地區名稱時，也必須更新所有相關物件，而不是單一資料列。 關聯式資料庫也可以強制執行規則 (例如外部索引鍵)，以確保關聯的完整性。 NoSQL 資料庫通常不會對其資料提供這類條件約束。
 
@@ -340,7 +340,7 @@ NoSQL 資料庫還有一個必須處理的複雜問題是版本設定。 當物�
 
 您可以在 NoSQL 資料庫中儲存物件的多個版本，而固定結構描述的關聯式資料庫通常不支援這項功能。 不過，在這種情況下，應用程式的程式碼必須找出存在的舊版本物件，這增加了其額外的複雜性。
 
-NoSQL 資料庫通常不會強制執行 [ACID](https://en.wikipedia.org/wiki/ACID)，因此在效能和延展性方面比關聯式資料庫更有優勢。 因此針對不適用於正規化資料表結構儲存區的極大型資料集以及物件，就非常適合使用這種資料庫。 單一應用程式也可以同時利用關聯式和 NoSQL 資料庫，只要依據最適合的情況來選擇即可。
+NoSQL 資料庫通常不會強制執行 [ACID](https://en.wikipedia.org/wiki/ACID)，因此在效能和延展性方面比關聯式資料庫更有優勢。 它們非常適合非常大型的資料集和物件，不適合用于正規化資料表結構中的儲存體。 單一應用程式也可以同時利用關聯式和 NoSQL 資料庫，只要依據最適合的情況來選擇即可。
 
 ## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
@@ -354,8 +354,7 @@ Azure Cosmos DB 查詢語言是一種簡單但功能強大的介面，可用於�
 
 **參考– Azure Cosmos DB**
 
-- Azure Cosmos DB 簡介  
-  <https://docs.microsoft.com/azure/cosmos-db/introduction>
+- Azure Cosmos DB 簡介 <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>其他持續性選項
 
@@ -371,8 +370,7 @@ Azure Cosmos DB 查詢語言是一種簡單但功能強大的介面，可用於�
 
 **參考資料 – Azure 儲存體**
 
-- Azure 儲存體簡介  
-  <https://docs.microsoft.com/azure/storage/storage-introduction>
+- Azure 儲存體簡介 <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>快取
 
@@ -484,9 +482,9 @@ services.AddScoped<ICatalogService, CachedCatalogService>();
 services.AddScoped<CatalogService>();
 ```
 
-完成上述作業時，系統只會每分鐘呼叫一次資料庫以擷取目錄資料，而不會在每次要求時都呼叫。 根據網站的流量而定，這可能會大幅影響資料庫的查詢數目以及首頁 (目前相依於此服務所公開的所有三個查詢) 的平均頁面載入時間。
+完成上述作業時，系統只會每分鐘呼叫一次資料庫以擷取目錄資料，而不會在每次要求時都呼叫。 視網站的流量而定，這可能會對資料庫的查詢數目產生顯著的影響，以及目前相依于此服務所公開的所有三個查詢之首頁的平均頁面載入時間。
 
-實作快取時會引發「過時資料」的問題 – 亦即，來源的資料已變更，但快取中仍保留過期的版本。 若要緩和這個問題，一個簡單的方式是將快取持續時間縮短，因為對忙碌的應用程式來說，延長快取資料的時間長度意義不大。 例如，假設某個頁面會進行單一資料庫查詢，且每秒要求 10 次。 如果將這個頁面快取一分鐘，則資料庫每分鐘查詢的數目可從 600 降到 1，減少了 99.8%。 如果快取持續時間設為一小時，整體可以減少 99.997%；不過，這樣一來，過時資料的可能性和存在時間都會大幅增加。
+執行快取時所發生的問題是_過時的資料_，也就是在來源變更的資料，但過期的版本會保留在快取中。 若要緩和這個問題，一個簡單的方式是將快取持續時間縮短，因為對忙碌的應用程式來說，延長快取資料的時間長度意義不大。 例如，假設某個頁面會進行單一資料庫查詢，且每秒要求 10 次。 如果將這個頁面快取一分鐘，則資料庫每分鐘查詢的數目可從 600 降到 1，減少了 99.8%。 如果快取持續時間設為一小時，整體可以減少 99.997%；不過，這樣一來，過時資料的可能性和存在時間都會大幅增加。
 
 另一個方法是當快取項目包含的資料有所更新時，就主動移除快取項目。 只要知道索引鍵，就可以移除任何個別的項目：
 
@@ -494,7 +492,7 @@ services.AddScoped<CatalogService>();
 _cache.Remove(cacheKey);
 ```
 
-如果應用程式會公開功能以更新它的快取項目，您可以在執行更新的程式碼中移除對應的快取項目。 有時候，可能會有許多不同的項目相依於特定的資料集。 在此情況下，您可以使用 CancellationChangeToken 來建立快取項目之間的相依性。 使用 CancellationChangeToken 時，您只要取消權杖即可一次讓多個快取項目到期。
+如果應用程式會公開功能以更新它的快取項目，您可以在執行更新的程式碼中移除對應的快取項目。 有時候，可能會有許多不同的項目相依於特定的資料集。 在此情況下，您可以使用 CancellationChangeToken 來建立快取項目之間的相依性。 透過 Cancellationchangetoken 時，您可以藉由解除標記，一次將多個快取專案過期。
 
 ```csharp
 // configure CancellationToken and add entry to cache

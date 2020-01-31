@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 38f425e50b7981c17a96a78e1e28bafb2cf258fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6392ea0f17596406a8671a039bd78777d9e11e42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635128"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742641"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows 驗證的傳輸安全性
-下列案例示範 Windows Communication Foundation (WCF) 用戶端和服務由 Windows 安全性保護。 如需程式設計的詳細資訊，請參閱[How to:使用 Windows 認證的服務安全](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
+下列案例顯示由 Windows 安全性保護的 Windows Communication Foundation （WCF）用戶端和服務。 如需程式設計的詳細資訊，請參閱[如何：使用 Windows 認證保護服務](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
   
  內部網路 Web 服務顯示人力資源資訊。 用戶端為 Windows Form 應用程式。 應用程式部署於由 Kerberos 控制站負責網域安全的網域內。  
   
- ![使用 Windows 驗證的傳輸安全性](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
+ ![Windows 驗證的傳輸安全性](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
 |特性|描述|  
 |--------------------|-----------------|  
 |安全性模式|Transport|  
-|互通性|WCF 只|  
+|互通性|僅限 WCF|  
 |驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是 (使用 Windows 整合式驗證)<br /><br /> 是 (使用 Windows 整合式驗證)|  
 |完整性|是|  
 |機密性|是|  
@@ -30,7 +30,7 @@ ms.locfileid: "64635128"
 |繫結|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
@@ -73,12 +73,12 @@ ms.locfileid: "64635128"
 </configuration>  
 ```  
   
-## <a name="client"></a>用戶端  
- 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
+## <a name="client"></a>Client  
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
-- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如:   
+- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如：  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -117,8 +117,8 @@ ms.locfileid: "64635128"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [如何：使用 Windows 認證的服務安全](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [如何：利用 Windows 認證保護服務的安全](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

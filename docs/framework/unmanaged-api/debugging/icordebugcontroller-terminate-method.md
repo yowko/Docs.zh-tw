@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4275af0c-b5a7-4e4c-97c9-7e41f36b2dd8
 topic_type:
 - apiref
-ms.openlocfilehash: fb8cfb2d1c5902ecd0d5858ef21ba48b65b12506
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 851a127c117b826c271dd021c41cfdb36045a1ff
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125325"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783747"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate 方法
 使用指定的結束代碼終止進程。  
@@ -41,7 +41,7 @@ HRESULT Terminate (
  在表示結束代碼的數值。 有效的數值定義于 Winbase 中。  
   
 ## <a name="remarks"></a>備註  
- 如果在呼叫 `Terminate` 時停止進程，則應該使用[ICorDebugController：： Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)方法繼續處理，讓偵錯工具能夠透過 ICorDebugManagedCallback 來接收終止確認[：：ExitProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)或[ICorDebugManagedCallback：： ExitAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)回呼。  
+ 如果在呼叫 `Terminate` 時停止進程，則應該使用[ICorDebugController：： Continue](icordebugcontroller-continue-method.md)方法繼續處理，讓偵錯工具透過[ICorDebugManagedCallback：： ExitProcess](icordebugmanagedcallback-exitprocess-method.md)或[ICorDebugManagedCallback：： ExitAppDomain](icordebugmanagedcallback-exitappdomain-method.md)回呼接收終止的確認。  
   
 > [!NOTE]
 > 這個方法不是由應用程式域所執行。 也就是說，它不會在 <xref:System.AppDomain> 層級執行。  

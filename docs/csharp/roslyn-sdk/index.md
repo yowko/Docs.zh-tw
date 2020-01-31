@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK (Roslyn API)
 description: 了解如何使用.NET 編譯器平台 SDK (亦稱為 Roslyn API) 來了解 .NET 程式碼、找出錯誤，並修正那些錯誤。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 98984edad3a25daa8b0ea13b903c4e6447b8a22a
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: a1ceb1d11cf846e67be2c6558978e01133e591da
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163133"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742733"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET 編譯器平台 SDK
 
@@ -43,7 +43,7 @@ ms.locfileid: "76163133"
 
 ## <a name="provide-guidance-with-library-packages"></a>提供程式庫套件指導方針
 
-針對 NuGet 上的 .NET 開發人員，有豐富的程式庫可以使用。
+NuGet 上有豐富的 .NET 開發人員可用的程式庫。
 部分的程式庫來自 Microsoft，部分則來自協力廠商，還有一些來自社群成員和志工。 當開發人員成功使用那些程式庫時，這些程式庫就會得到更多的採用與更高的評價。
 
 除了提供文件以外，您還可以提供分析器和程式碼修正，來尋找並更正您的程式庫的常見錯誤用法。 這些立即更正可協助開發人員更快速地成功。
@@ -58,7 +58,7 @@ ms.locfileid: "76163133"
 
 ## <a name="next-steps"></a>後續步驟
 
-.NET 編譯器平台 SDK 包含了用於程式碼產生、分析和重構的最新語言物件模型。 本節提供 .NET 編譯器平台 SDK 的概念性概觀。 如需詳細資訊，請參閱快速入門、範例和教學課程等節。
+.NET 編譯器平台 SDK 包含了用於程式碼產生、分析和重構的最新語言物件模型。 本節提供 .NET 編譯器平台 SDK 的概念性概觀。 您可以在快速入門、範例和教學課程區段中找到進一步的詳細資料。
 
 您可以在下列五個主題中深入了解 .NET 編譯器平台 SDK 中的概念：
 

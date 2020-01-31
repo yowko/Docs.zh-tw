@@ -5,12 +5,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706344"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741527"
 ---
 # <a name="customizing-structure-marshaling"></a>自訂結構封送處理
 
@@ -20,11 +20,11 @@ ms.locfileid: "75706344"
 
 .NET 提供 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 屬性與 <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> 列舉，讓您可以自訂欄位在記憶體中的放置方式。 下列指導方針將可協助您避免常見問題。
 
-**✔️ 考慮**使用 `LayoutKind.Sequential` (若可行)。
+✔️請盡可能考慮使用 `LayoutKind.Sequential`。
 
-**✔️ 務必**只在封送處理中使用 `LayoutKind.Explicit` (當您的原生結構也有明確的配置 (例如聯集) 時)。
+當您的原生結構也有明確的配置（例如等位）時，✔️只在封送處理中使用 `LayoutKind.Explicit`。
 
-如果您需要以 .NET Core 3.0 之前的執行時間為目標，請 **❌ 避免**在非 Windows 平臺上封送處理結構時使用 `LayoutKind.Explicit`。 3\.0 之前的 .NET Core 執行時間不支援在 Intel 或 AMD 64 位非 Windows 系統上，以傳值方式將明確結構傳遞至原生函式。 不過，執行階段支援在所有平台上以傳參考方式傳遞明確結構。
+如果您需要以 .NET Core 3.0 之前的執行時間為目標，請 ❌ 避免在非 Windows 平臺上封送處理結構時使用 `LayoutKind.Explicit`。 3\.0 之前的 .NET Core 執行時間不支援在 Intel 或 AMD 64 位非 Windows 系統上，以傳值方式將明確結構傳遞至原生函式。 不過，執行階段支援在所有平台上以傳參考方式傳遞明確結構。
 
 ## <a name="customizing-boolean-field-marshaling"></a>自訂布林值欄位封送處理
 

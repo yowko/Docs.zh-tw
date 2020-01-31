@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項
+title: 建立利用 Visual Studio 設計階段功能的控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64f637b232cf21701185e7b87d86f63fdece5127
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7166b4203c54ab31f1d929c85cf1e6481ff120f8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459530"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744072"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>逐步解說：建立利用設計階段功能的控制項
 
@@ -36,7 +36,7 @@ ms.locfileid: "73459530"
 
 如需完整的程式代碼清單，請參閱[如何：建立利用設計階段功能的 Windows Forms 控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 為了完成此逐步解說，您需要 Visual Studio。
 
@@ -136,7 +136,7 @@ ms.locfileid: "73459530"
 
 2. 在 [ **MarqueeControlLibrary 屬性頁**] 對話方塊中，選取 [ **Debug** ] 頁面。
 
-3. 在 [**起始動作**] 區段中，選取 [**啟動外部程式**]。 您將會 Visual Studio 的個別實例進行偵錯工具，因此，請按一下省略號（![[Visual Studio](./media/visual-studio-ellipsis-button.png)）] 按鈕屬性視窗中的省略號按鈕（...），以流覽 Visual Studio IDE。 可執行檔的名稱為 devenv，如果您安裝到預設位置，其路徑為 *% ProgramFiles （x86）% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE\devenv.exe*。
+3. 在 [**起始動作**] 區段中，選取 [**啟動外部程式**]。 您將會 Visual Studio 的個別實例進行偵錯工具, 因此請按一下省略號![Visual Studio](./media/visual-studio-ellipsis-button.png)屬性視窗中的省略號按鈕 (...) 按鈕, 以流覽 Visual Studio 的 IDE。 可執行檔的名稱為 devenv，如果您安裝到預設位置，其路徑為 *% ProgramFiles （x86）% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE\devenv.exe*。
 
 4. 選取 [確定] 關閉對話方塊。
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5cf5056-da4d-4629-914d-afe42a5393df
 topic_type:
 - apiref
-ms.openlocfilehash: 01c247f838f66d1a77831755126a5a1f56870c1e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7a27b8ec512498c7bf817aca36267c37d8070a4c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73095138"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788574"
 ---
 # <a name="icordebugilframe-interface"></a>ICorDebugILFrame 介面
 
@@ -29,15 +29,15 @@ ms.locfileid: "73095138"
   
 |方法|描述|  
 |------------|-----------------|  
-|[CanSetIP 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-cansetip-method.md)|取得值，指出是否可以安全地將指令指標設定為指定的位移位置。|  
-|[EnumerateArguments 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratearguments-method.md)|取得此框架中引數的列舉值。|  
-|[EnumerateLocalVariables 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-enumeratelocalvariables-method.md)|取得此框架中區域變數的列舉值。|  
-|[GetArgument 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getargument-method.md)|取得這個 MSIL 堆疊框架中指定之引數的值。|  
-|[GetIP 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md)|取得指令指標的值，以及描述如何取得指令指標值的位組合值。|  
-|[GetLocalVariable 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)|取得這個 MSIL 堆疊框架中指定之區域變數的值。|  
-|[GetStackDepth 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getstackdepth-method.md)|未實作。|  
-|[GetStackValue 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getstackvalue-method.md)|未實作。|  
-|[SetIP 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)|將指令指標設定為 MSIL 程式碼中指定的位移位置。|  
+|[CanSetIP 方法](icordebugilframe-cansetip-method.md)|取得值，指出是否可以安全地將指令指標設定為指定的位移位置。|  
+|[EnumerateArguments 方法](icordebugilframe-enumeratearguments-method.md)|取得此框架中引數的列舉值。|  
+|[EnumerateLocalVariables 方法](icordebugilframe-enumeratelocalvariables-method.md)|取得此框架中區域變數的列舉值。|  
+|[GetArgument 方法](icordebugilframe-getargument-method.md)|取得這個 MSIL 堆疊框架中指定之引數的值。|  
+|[GetIP 方法](icordebugilframe-getip-method.md)|取得指令指標的值，以及描述如何取得指令指標值的位組合值。|  
+|[GetLocalVariable 方法](icordebugilframe-getlocalvariable-method.md)|取得這個 MSIL 堆疊框架中指定之區域變數的值。|  
+|[GetStackDepth 方法](icordebugilframe-getstackdepth-method.md)|未實作。|  
+|[GetStackValue 方法](icordebugilframe-getstackvalue-method.md)|未實作。|  
+|[SetIP 方法](icordebugilframe-setip-method.md)|將指令指標設定為 MSIL 程式碼中指定的位移位置。|  
   
 ## <a name="remarks"></a>備註  
  `ICorDebugILFrame` 介面是特製化的 ICorDebugFrame 介面。 它可用於 MSIL 程式碼框架或即時（JIT）編譯的框架。 JIT 編譯的框架會同時執行 `ICorDebugILFrame` 介面和 ICorDebugNativeFrame 介面。  
@@ -56,4 +56,4 @@ ms.locfileid: "73095138"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

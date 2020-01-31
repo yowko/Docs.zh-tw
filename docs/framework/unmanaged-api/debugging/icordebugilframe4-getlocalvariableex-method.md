@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 0c8676f8-ca0d-4998-b64d-fefac7e38912
 topic_type:
 - apiref
-ms.openlocfilehash: 89a8aa1f789ad71b04bc5fed8885f55ee25c4609
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 017c14e9170087f3c3c9de64f50d165fc91aa297
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937662"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782408"
 ---
 # <a name="icordebugilframe4getlocalvariableex-method"></a>ICorDebugILFrame4::GetLocalVariableEx 方法
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -36,7 +36,7 @@ HRESULT GetLocalVariableEx(
   
 ## <a name="parameters"></a>參數  
  `flags`  
- 在[ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)列舉成員，指定在 profiler ReJIT 檢測中加入的變數是否包含在框架中。  
+ 在[ILCodeKind](ilcodekind-enumeration.md)列舉成員，指定在 profiler ReJIT 檢測中加入的變數是否包含在框架中。  
   
  `dwIndex`  
  [in] IL 堆疊框架中之區域變數的索引。  
@@ -45,7 +45,7 @@ HRESULT GetLocalVariableEx(
  脫銷代表所抓取值之 "ICorDebugValue" 物件位址的指標。  
   
 ## <a name="remarks"></a>備註  
- 這個方法類似于[GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md)方法，不同之處在于它會選擇性地存取在 profiler ReJIT 檢測中加入的變數。 使用 `ILCODE_ORIGINAL_IL` 的 `flags` 值呼叫此方法相當於呼叫[GetLocalVariable](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getlocalvariable-method.md);如果使用其他區域變數檢測方法，就無法存取這些變數。 `ILCODE_REJIT_IL` 允許偵錯程式存取加入分析工具 ReJIT 測試設備中的區域變數。 若測試設備不是 IL，此方法會傳回 `E_INVALIDARG`。  
+ 這個方法類似于[GetLocalVariable](icordebugilframe-getlocalvariable-method.md)方法，不同之處在于它會選擇性地存取在 profiler ReJIT 檢測中加入的變數。 使用 `ILCODE_ORIGINAL_IL` 的 `flags` 值呼叫此方法相當於呼叫[GetLocalVariable](icordebugilframe-getlocalvariable-method.md);如果使用其他區域變數檢測方法，就無法存取這些變數。 `ILCODE_REJIT_IL` 允許偵錯程式存取加入分析工具 ReJIT 測試設備中的區域變數。 若測試設備不是 IL，此方法會傳回 `E_INVALIDARG`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -58,6 +58,6 @@ HRESULT GetLocalVariableEx(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugILFrame4 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugILFrame4 介面](icordebugilframe4-interface.md)
+- [偵錯介面](debugging-interfaces.md)
 - [ReJIT：使用說明指南](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

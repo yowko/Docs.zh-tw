@@ -1,15 +1,16 @@
 ---
-title: 逐步解說：在 Windows Form 中裝載 WPF 複合控制項
+title: 在 Windows Forms 中裝載 WPF 複合控制項
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: 59243e1810757ff0ff58a60ac3eb007bbc227be0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458929"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742692"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Form 中裝載 WPF 複合控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，當您對 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 程式碼進行大量投資時，使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 擴充現有的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 應用程式，而不是從頭重新撰寫，可能會更有效率。 常見的案例是當您想要在 Windows Forms 應用程式中內嵌一個或多個使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所執行的控制項。 如需自訂 WPF 控制項的詳細資訊，請參閱[控制項自訂](../controls/control-customization.md)。  
@@ -26,7 +27,7 @@ ms.locfileid: "73458929"
   
  如需本逐步解說中所述工作的完整程式代碼清單，請參閱[在 Windows Forms 範例中裝載 WPF 複合控制項](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl)。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必要條件：  
 
 若要完成這個逐步解說，您必須具有 Visual Studio。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "73458929"
   
 - PresentationFramework  
   
-- 系統  
+- System  
   
 - WindowsBase  
   
@@ -230,7 +231,7 @@ namespace MyControls
   
 4. 將下列 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 控制項新增至表單。  
   
-    |[屬性]|Text|  
+    |Name|文字|  
     |----------|----------|  
     |groupBox1|背景色彩|  
     |groupBox2|前景色彩|  
@@ -242,7 +243,7 @@ namespace MyControls
   
 5. 將下列 <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> 控制項加入至 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 控制項。  
   
-    |GroupBox|[屬性]|Text|  
+    |GroupBox|Name|文字|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|原始|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -257,18 +258,18 @@ namespace MyControls
     |groupBox4|radioFamilyTimes|Tw Cen MT Condensed|  
     |groupBox4|radioFamilyWingDings|WingDings|  
     |groupBox5|radioStyleOriginal|一般|  
-    |groupBox5|radioStyleItalic|斜體|  
+    |groupBox5|radioStyleItalic|Italic|  
     |groupBox6|radioWeightOriginal|原始|  
     |groupBox6|radioWeightBold|粗體|  
   
 6. 將下列 <xref:System.Windows.Forms.Label?displayProperty=nameWithType> 控制項加入至最後一個 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。 這些控制項會顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項所傳回的資料。  
   
-    |GroupBox|[屬性]|Text|  
+    |GroupBox|Name|文字|  
     |--------------|----------|----------|  
     |groupBox7|lblName|名稱：|  
     |groupBox7|lblAddress|街道地址：|  
-    |groupBox7|lblCity|城市：|  
-    |groupBox7|lblState|狀態:|  
+    |groupBox7|lblCity|鄉鎮市區：|  
+    |groupBox7|lblState|狀態：|  
     |groupBox7|lblZip|郵遞區號︰|  
   
 ### <a name="initializing-the-form"></a>初始化表單  

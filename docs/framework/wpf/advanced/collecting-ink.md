@@ -1,5 +1,5 @@
 ---
-title: 在 WPF 應用程式中收集筆跡
+title: 收集數位筆跡
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 8109e0d6a746d6ca23c25643c510014c1a1e656c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 813a5313a6fbf83c36cdbed1f64ce69a217ad788
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740881"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747022"
 ---
 # <a name="collect-ink"></a>收集筆跡
 
 [Windows Presentation Foundation](../index.md) 平台收集數位筆跡當成其功能的核心部分。 本主題討論在 Windows Presentation Foundation （WPF）中收集筆跡的方法。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 若要使用下列範例，您必須先安裝 Visual Studio 和 Windows SDK。 您也應該瞭解如何撰寫 WPF 的應用程式。 如需 WPF 使用者入門的詳細資訊，請參閱[逐步解說：我的第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 

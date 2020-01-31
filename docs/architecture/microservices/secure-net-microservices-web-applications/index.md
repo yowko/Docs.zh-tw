@@ -4,12 +4,12 @@ description: .NET 微服務和 Web 應用程式中的安全性 - 了解 ASP.NET 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736931"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777205"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>製作安全的 .NET 微服務和 Web 應用程式
 
@@ -76,7 +76,7 @@ ASP.NET Core 也支援使用[外部驗證提供者](/aspnet/core/security/authen
 | **Facebook**  | **Microsoft.AspNetCore.Authentication.Facebook**         |
 | **Twitter**   | **Microsoft.AspNetCore.Authentication.Twitter**          |
 
-不論是何種情況，都會透過呼叫類似 `app.Use{ExternalProvider}Authentication`中 `Startup.Configure` 的註冊方法來註冊中介軟體。 視提供者需要，這些註冊方法會接受選項物件，其中包含應用程式識別碼和秘密資訊 (例如密碼)。 外部驗證提供者需要註冊應用程式 (如 [ASP.NET Core 文件](/aspnet/core/security/authentication/social/)中所述)，才能通知使用者哪個應用程式要求存取其身分識別。
+不論是何種情況，都會透過呼叫類似 `Startup.Configure`中 `app.Use{ExternalProvider}Authentication` 的註冊方法來註冊中介軟體。 視提供者需要，這些註冊方法會接受選項物件，其中包含應用程式識別碼和秘密資訊 (例如密碼)。 外部驗證提供者需要註冊應用程式 (如 [ASP.NET Core 文件](/aspnet/core/security/authentication/social/)中所述)，才能通知使用者哪個應用程式要求存取其身分識別。
 
 在 `Startup.Configure` 中註冊中介軟體之後，您可以提示使用者透過任何控制器動作登入。 若要這樣做，您可以建立 `AuthenticationProperties` 物件，其中包含驗證提供者的名稱和重新導向 URL。 然後，您需要傳回傳遞 `AuthenticationProperties` 物件的挑戰回應。 下列程式碼將示範這項作業。
 
@@ -121,7 +121,7 @@ else
 }
 ```
 
-如果當您在 Visual Studio 中建立 ASP.NET Code Web 應用程式專案時，選擇 [Individual User Account] \(個別使用者帳戶\) 驗證選項，專案中已有使用外部提供者登入所需的所有程式碼，如圖 9-3 所示。
+如果您在 Visual Studio 中建立 ASP.NET Core web 應用程式專案時，選擇 [**個別使用者帳戶**] 驗證選項，則專案中已經有使用外部提供者登入所需的所有程式碼，如圖9-3 所示。
 
 ![[新增 ASP.NET Core Web 應用程式] 對話方塊的螢幕擷取畫面。](./media/index/select-external-authentication-option.png)
 
@@ -274,7 +274,7 @@ public void ConfigureServices(IServiceCollection services)
 
 準備好此中介軟體之後，就會從授權標頭自動擷取 JWT 權杖。 這些權杖會接著還原序列化、驗證 (使用 `Audience` 和 `Authority` 參數中的值) 並儲存為使用者資訊，以供 MVC 動作或授權篩選稍後參考。
 
-JWT 持有人驗證中介軟體也可以支援更進階的案例；例如，在沒有授權單位的情況下，使用本機憑證來驗證權杖。 在此案例中，您可以在 `TokenValidationParameters`物件中指定 `JwtBearerOptions` 物件。
+JWT 持有人驗證中介軟體也可以支援更進階的案例；例如，在沒有授權單位的情況下，使用本機憑證來驗證權杖。 在此案例中，您可以在 `JwtBearerOptions`物件中指定 `TokenValidationParameters` 物件。
 
 ## <a name="additional-resources"></a>其他資源
 

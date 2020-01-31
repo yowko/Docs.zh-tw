@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e89d5ee-e4e3-4738-8302-0b7d1cf4846e
 topic_type:
 - apiref
-ms.openlocfilehash: d773368c85fd42fd169109cf1c7e6635705ebb7e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0c3059697014cea33081f6cb81b9d93c7d028c2e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090232"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777474"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>ICorDebugManagedCallback::CreateProcess 方法
 第一次附加或啟動進程時，會通知偵錯工具。  
@@ -38,7 +38,7 @@ HRESULT CreateProcess (
  在ICorDebugProcess 物件的指標，表示已附加或已啟動的進程。  
   
 ## <a name="remarks"></a>備註  
- 在通用語言執行時間初始化之前，不會呼叫這個方法。 大部分的[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)方法會在 `CreateProcess` 回呼之前傳回 CORDBG_E_NOTREADY。  
+ 在通用語言執行時間初始化之前，不會呼叫這個方法。 大部分的[ICorDebug](icordebug-interface.md)方法會在 `CreateProcess` 回呼之前傳回 CORDBG_E_NOTREADY。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -51,4 +51,4 @@ HRESULT CreateProcess (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

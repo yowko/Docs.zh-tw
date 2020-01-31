@@ -2,12 +2,12 @@
 title: 路由服務的 Hello World
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 7a41a1b552e220dcb6367ae59876da4570bab909
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ae0615c8cf2fa33f3bb363f77c0d06440b6afc13
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716922"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743717"
 ---
 # <a name="hello-world-with-the-routing-service"></a>路由服務的 Hello World
 這個範例會示範 Windows Communication Foundation （WCF）路由服務。 路由服務是一個 WCF 元件，可讓您輕鬆地在應用程式中包含以內容為基礎的路由器。 這個範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。 在此範例中，計算機用戶端設定為傳送訊息到路由器所公開的端點。 路由服務會設定為接受傳送給它的所有訊息，並將其轉送到對應於計算機服務的端點。 因此，傳送自用戶端的訊息會由路由器接收，然後再重新路由至實際的計算機服務。 來自計算機服務的訊息會傳送回路由器，接著再將其傳遞回計算機用戶端。
@@ -59,4 +59,4 @@ ms.locfileid: "74716922"
   
 ## <a name="see-also"></a>請參閱
 
-- [AppFabric 裝載和持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 裝載和持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

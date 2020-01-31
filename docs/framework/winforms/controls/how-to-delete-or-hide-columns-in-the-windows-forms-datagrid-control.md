@@ -1,5 +1,5 @@
 ---
-title: 作法：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行
+title: 刪除或隱藏 DataGrid 控制項中的資料行
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,33 +12,33 @@ helpviewer_keywords:
 - columns [Windows Forms], deleting in data grids
 - DataGrid control [Windows Forms], hiding columns
 ms.assetid: bcd0dd96-6687-4c48-b0e1-d5287b93ac91
-ms.openlocfilehash: 70229abddb831788f521f85747db1093c941ba8a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c730be934e9b978bdaf09bc7e668b4318077fba5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69967380"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743292"
 ---
-# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>HOW TO：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行
+# <a name="how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control"></a>如何：刪除或隱藏 Windows Form DataGrid 控制項中的資料行
 > [!NOTE]
 > <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
- 您<xref:System.Windows.Forms.DataGrid>可以使用<xref:System.Windows.Forms.GridColumnStylesCollection>和<xref:System.Windows.Forms.DataGridColumnStyle>物件的屬性和方法 (也就是<xref:System.Windows.Forms.DataGridTableStyle>類別的成員), 以程式設計方式刪除或隱藏 Windows Forms 控制項中的資料行。  
+ 您可以使用 <xref:System.Windows.Forms.GridColumnStylesCollection> 和 <xref:System.Windows.Forms.DataGridColumnStyle> 物件（其為 <xref:System.Windows.Forms.DataGridTableStyle> 類別的成員）的屬性和方法，以程式設計方式刪除或隱藏 Windows Forms <xref:System.Windows.Forms.DataGrid> 控制項中的資料行。  
   
- 已刪除或隱藏的資料行仍然存在於方格所系結的資料來源中, 而且仍然可以透過程式設計方式存取。 它們就不會再顯示在 datagrid 中。  
+ 已刪除或隱藏的資料行仍然存在於方格所系結的資料來源中，而且仍然可以透過程式設計方式存取。 它們就不會再顯示在 datagrid 中。  
   
 > [!NOTE]
-> 如果您的應用程式不會存取某些資料行, 而且您不想要在 datagrid 中顯示它們, 則可能不需要先將它們包含在資料來源中。  
+> 如果您的應用程式不會存取某些資料行，而且您不想要在 datagrid 中顯示它們，則可能不需要先將它們包含在資料來源中。  
   
 ### <a name="to-delete-a-column-from-the-datagrid-programmatically"></a>以程式設計方式刪除 DataGrid 中的資料行  
   
-1. 在表單的宣告區域中, 宣告<xref:System.Windows.Forms.DataGridTableStyle>類別的新實例。  
+1. 在表單的宣告區域中，宣告 <xref:System.Windows.Forms.DataGridTableStyle> 類別的新實例。  
   
-2. <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType>將屬性設定為您要套用樣式之資料來源中的資料表。 下列範例會使用<xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>屬性, 其假設已設定。  
+2. 將 [<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A?displayProperty=nameWithType>] 屬性設定為您要套用樣式之資料來源中的資料表。 下列範例會使用其假設已設定的 <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> 屬性。  
   
-3. 將新<xref:System.Windows.Forms.DataGridTableStyle>的物件加入至 datagrid 的資料表樣式集合。  
+3. 將新的 <xref:System.Windows.Forms.DataGridTableStyle> 物件加入至 datagrid 的資料表樣式集合。  
   
-4. <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A>呼叫之<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>集合的方法, 並指定要刪除之資料行的資料行索引。 <xref:System.Windows.Forms.DataGrid>  
+4. 呼叫 <xref:System.Windows.Forms.DataGrid>的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 集合的 <xref:System.Windows.Forms.GridColumnStylesCollection.RemoveAt%2A> 方法，並指定要刪除之資料行的資料行索引。  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -79,13 +79,13 @@ ms.locfileid: "69967380"
   
 ### <a name="to-hide-a-column-in-the-datagrid-programmatically"></a>以程式設計方式隱藏 DataGrid 中的資料行  
   
-1. 在表單的宣告區域中, 宣告<xref:System.Windows.Forms.DataGridTableStyle>類別的新實例。  
+1. 在表單的宣告區域中，宣告 <xref:System.Windows.Forms.DataGridTableStyle> 類別的新實例。  
   
-2. 將的<xref:System.Windows.Forms.DataGridTableStyle>屬性設定為您要套用樣式之資料來源中的資料表。 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 下列程式碼範例會使用<xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType>屬性, 其假設已設定。  
+2. 將 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> 屬性設定為您要套用樣式之資料來源中的資料表。 下列程式碼範例會使用其假設已設定的 <xref:System.Windows.Forms.DataGrid.DataMember%2A?displayProperty=nameWithType> 屬性。  
   
-3. 將新<xref:System.Windows.Forms.DataGridTableStyle>的物件加入至 datagrid 的資料表樣式集合。  
+3. 將新的 <xref:System.Windows.Forms.DataGridTableStyle> 物件加入至 datagrid 的資料表樣式集合。  
   
-4. 將資料行的`Width`屬性設為 0, 並指定要隱藏之資料行的資料行索引, 以隱藏該資料行。  
+4. 將資料行的 `Width` 屬性設為0，並指定要隱藏之資料行的資料行索引，藉以隱藏資料行。  
   
     ```vb  
     ' Declare a new DataGridTableStyle in the  
@@ -124,7 +124,7 @@ ms.locfileid: "69967380"
     }  
     ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [如何：在 Windows Forms DataGrid 控制項中, 于執行時間變更顯示的資料](change-displayed-data-at-run-time-wf-datagrid-control.md)
-- [如何：將資料表和資料行加入至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [如何：在執行階段時變更 Windows Forms DataGrid 控制項中顯示的資料](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [如何：將資料表和資料行新增至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

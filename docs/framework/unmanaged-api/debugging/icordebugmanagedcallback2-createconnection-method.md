@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: d83ad530c8a61c2bfc38fb46ad2a33ef8d5077d3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e98748b523b948dc002f2ebc4e2e79fc7d659918
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130594"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781597"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection 方法
 通知偵錯工具已建立新的連接。  
@@ -48,7 +48,7 @@ HRESULT CreateConnection (
 ## <a name="remarks"></a>備註  
  在下列任一情況下，將會引發 `CreateConnection` 回呼：  
   
-- 當偵錯工具附加至包含連接的進程時。 在此情況下，執行時間會針對進程中的每個連接產生並分派 `CreateConnection` 事件和[ICorDebugManagedCallback2：： ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md)事件。  
+- 當偵錯工具附加至包含連接的進程時。 在此情況下，執行時間會針對進程中的每個連接產生並分派 `CreateConnection` 事件和[ICorDebugManagedCallback2：： ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md)事件。  
   
 - 當主機在[裝載 API](../../../../docs/framework/unmanaged-api/hosting/index.md)中呼叫[ICLRDebugManager：： BeginConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)時。  
   
@@ -63,5 +63,5 @@ HRESULT CreateConnection (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugManagedCallback2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 介面](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

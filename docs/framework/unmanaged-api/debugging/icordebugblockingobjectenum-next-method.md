@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-ms.openlocfilehash: 3a1c4a931a61186c4737aada47ceb861e7848e7b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c25f26bb0f1f34e3799bab4bec7e697d393cccb4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122836"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784520"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next 方法
-從列舉中取得指定數目的[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)物件，從目前位置開始。  
+從列舉中取得指定數目的[CorDebugBlockingObject](cordebugblockingobject-structure.md)物件，從目前位置開始。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ HRESULT Next([in] ULONG  celt,
  在要取得的物件數目。  
   
  `values`  
- 脫銷[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)物件的指標陣列。  
+ 脫銷[CorDebugBlockingObject](cordebugblockingobject-structure.md)物件的指標陣列。  
   
  `pceltFetched`  
  脫銷已抓取物件數目的指標。  
@@ -49,7 +49,7 @@ HRESULT Next([in] ULONG  celt,
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功完成命令。|  
+|S_OK|此方法已順利完成。|  
 |S_FALSE|`pceltFetched` 不等於 `celt`。|  
   
 ## <a name="remarks"></a>備註  
@@ -58,7 +58,7 @@ HRESULT Next([in] ULONG  celt,
  輸入陣列值的大小至少必須為 `celt`。 陣列將會填入列舉中的下一個 `celt` 值，或使用所有剩餘的值（如果少於 `celt` 保留）。 當這個方法傳回時，`pceltFetched` 將會填入已抓取的值數目。 如果 `values` 包含不正確指標或指向小於 `celt`的緩衝區，或如果 `pceltFetched` 是不正確指標，則結果會是未定義的。  
   
 > [!NOTE]
-> 雖然不需要釋放[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構，但它裡面的 "ICorDebugValue" 介面必須釋放。  
+> 雖然不需要釋放[CorDebugBlockingObject](cordebugblockingobject-structure.md)結構，但它裡面的 "ICorDebugValue" 介面必須釋放。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -71,6 +71,6 @@ HRESULT Next([in] ULONG  celt,
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugDataTarget 介面](icordebugdatatarget-interface.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

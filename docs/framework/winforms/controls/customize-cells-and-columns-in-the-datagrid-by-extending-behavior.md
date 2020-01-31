@@ -1,5 +1,5 @@
 ---
-title: 作法：擴充 Windows Forms DataGridView 控制項之儲存格和資料行的行為和外觀，以自訂儲存格和資料行
+title: 藉由擴充其行為和外觀，自訂 DataGridView 控制項中的儲存格和資料行
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 0976a0e07aead1bbaf951c6db8266c5de1a31cd8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: be01e085d4fa74c0c49f0a0494183482875c6a09
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929707"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744068"
 ---
-# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>作法：擴充 Windows Forms DataGridView 控制項之儲存格和資料行的行為和外觀，以自訂儲存格和資料行
+# <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>如何：擴充儲存格和資料行的行為和外觀以自訂 Windows Form DataGridView 控制項中的儲存格和資料行
 <xref:System.Windows.Forms.DataGridView> 控制項提供數種方法使用屬性、事件和附屬類別來自訂其外觀和行為。 有時候除了這些功能可提供的以外，您可能有對於儲存格的更多需求。 您可以建立自己的自訂 <xref:System.Windows.Forms.DataGridViewCell> 類別來提供擴充功能。  
   
  藉由衍生自 <xref:System.Windows.Forms.DataGridViewCell> 基底類別或其中一個衍生的類別，您可建立自訂的 <xref:System.Windows.Forms.DataGridViewCell> 類別。 雖然您可以在任何類型的資料行中顯示任何類型的儲存格，您通常也會建立自訂的 <xref:System.Windows.Forms.DataGridViewColumn> 類別，專門用於顯示儲存格類型。 資料行類別衍生自 <xref:System.Windows.Forms.DataGridViewColumn> 或其衍生類型之一。  
@@ -28,7 +28,7 @@ ms.locfileid: "69929707"
 > [!NOTE]
 > 如果您加入空白資料列，此範例將無法正確運作。 例如當您藉由設定 <xref:System.Windows.Forms.DataGridView.RowCount%2A> 屬性加入資料列至控制項時，會建立空白資料列。 這是因為在此情況下加入的資料列會自動共用，這表示 `DataGridViewRolloverCell` 物件不會具現化，直到您按一下個別的儲存格，因而導致相關的資料列變成非共用的。  
   
- 因為自訂這種類型的儲存格需要非共用的資料列，所以它並不適用於大型資料集的使用。 如需有關資料列共用的詳細資訊, 請參閱[縮放 Windows Forms DataGridView 控制項的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
+ 因為自訂這種類型的儲存格需要非共用的資料列，所以它並不適用於大型資料集的使用。 如需有關資料列共用的詳細資訊，請參閱[縮放 Windows Forms DataGridView 控制項的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
 > [!NOTE]
 > 當您自 <xref:System.Windows.Forms.DataGridViewCell> 或 <xref:System.Windows.Forms.DataGridViewColumn> 中衍生時，以及在衍生類別中加入新的屬性時，請務必覆寫 `Clone` 方法，在複製作業期間複製新的屬性。 您也應該呼叫基底類別的 `Clone` 方法，以便將基底類別的屬性複製到新的儲存格或資料行。  
@@ -68,7 +68,7 @@ ms.locfileid: "69929707"
   
 - System、System.Windows.Forms 和 System.Drawing 組件的參考。  
  
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCell>

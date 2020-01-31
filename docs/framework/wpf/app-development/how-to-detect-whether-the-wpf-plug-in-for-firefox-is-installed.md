@@ -1,5 +1,6 @@
 ---
-title: 如何：偵測有無安裝 Firefox 的 WPF 外掛程式
+title: 偵測是否已安裝 Firefox 的 WPF 外掛程式
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - plug-in for Firefox [WPF]
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Firefox [WPF], detecting installation
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
-ms.openlocfilehash: fdc7b516c316c7efc7056b549baf43191a5aedd1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 91680859c1742e5d5443d626c81273a80504f4a8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423753"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740392"
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>如何：偵測有無安裝 Firefox 的 WPF 外掛程式
 

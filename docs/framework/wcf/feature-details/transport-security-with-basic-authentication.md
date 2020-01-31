@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 3340a0f455646357035b0999a12e78acb08c2572
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: eace5ce9a84d99cb2526896cca36a9e2a13fd5f2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962635"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742705"
 ---
 # <a name="transport-security-with-basic-authentication"></a>基本驗證的傳輸安全性
-下圖顯示 Windows Communication Foundation (WCF) 服務和用戶端。 伺服器需要可用於 Secure Sockets Layer (SSL) 的有效 X.509 憑證，而用戶端必須信任伺服器的憑證。 此外，Web 服務已經有可以使用的 SSL 實作。 如需在 Internet Information Services (IIS) 上啟用基本驗證的詳細<https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>資訊, 請參閱。  
+下圖顯示 Windows Communication Foundation （WCF）服務和用戶端。 伺服器需要可用於 Secure Sockets Layer (SSL) 的有效 X.509 憑證，而用戶端必須信任伺服器的憑證。 此外，Web 服務已經有可以使用的 SSL 實作。 如需在 Internet Information Services （IIS）上啟用基本驗證的詳細資訊，請參閱 <https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/basicauthentication>。  
   
  ![顯示使用基本驗證之傳輸安全性的螢幕擷取畫面。](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |安全性模式|Transport|  
 |互通性|使用現有的 Web 服務用戶端和服務|  
@@ -28,14 +28,14 @@ ms.locfileid: "69962635"
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
+ 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
 - 使用提供的組態建立服務，但不要定義任何端點。  
   
 ### <a name="code"></a>程式碼  
- 下列程式碼顯示如何為傳輸安全性建立使用 Windows 網域使用者名稱和密碼的服務端點。 請注意，服務需要 X.509 憑證來驗證用戶端。 如需詳細資訊, 請參閱[使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何:使用 SSL 憑證](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)設定埠。  
+ 下列程式碼顯示如何為傳輸安全性建立使用 Windows 網域使用者名稱和密碼的服務端點。 請注意，服務需要 X.509 憑證來驗證用戶端。 如需詳細資訊，請參閱使用[憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何：使用 SSL 憑證設定埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
@@ -69,7 +69,7 @@ ms.locfileid: "69962635"
 </configuration>  
 ```  
   
-## <a name="client"></a>用戶端  
+## <a name="client"></a>Client  
   
 ### <a name="code"></a>程式碼  
  下列程式碼顯示包含使用者名稱和密碼的用戶端程式碼。 請注意，使用者必須提供有效的 Windows 使用者名稱和密碼。 此處未顯示傳回使用者名稱和密碼的程式碼。 請使用對話方塊或其他介面向使用者查詢資訊。  
@@ -110,12 +110,12 @@ ms.locfileid: "69962635"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [如何：使用 SSL 憑證設定埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

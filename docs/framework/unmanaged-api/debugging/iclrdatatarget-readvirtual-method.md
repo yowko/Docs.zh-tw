@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-ms.openlocfilehash: 0c26a2df3f73af5ebd1f8b735d7662bb23ba4228
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 83e2d1231b85086c2e65813cf427df3de36405b7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134169"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785304"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual 方法
 將資料從指定的虛擬記憶體位址讀入指定的緩衝區。  
@@ -61,4 +61,4 @@ HRESULT ReadVirtual (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICLRDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget 介面](iclrdatatarget-interface.md)

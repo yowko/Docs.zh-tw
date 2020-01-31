@@ -1,33 +1,33 @@
 ---
-title: PictureBox 控制項 (Windows Form)
+title: PictureBox 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - PictureBox control [Windows Forms]
 - image controls [Windows Forms]
 - images [Windows Forms], adding to PictureBox control
 ms.assetid: f900eb93-25d5-40e5-b5df-b3cea0e831b6
-ms.openlocfilehash: 06633583bf99d9888ec7f9180b503a46f2451691
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34e6e7a58e8a022d1359281ddfbe1a90a7ab5593
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903210"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744228"
 ---
 # <a name="picturebox-control-windows-forms"></a>PictureBox 控制項 (Windows Form)
-Windows Form`PictureBox`控制項用來顯示點陣圖、 GIF、 JPEG、 中繼檔或圖示格式的圖形。  
+Windows Forms `PictureBox` 控制項是用來顯示點陣圖、GIF、JPEG、中繼檔或圖示格式的圖形。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [PictureBox 控制項概觀](picturebox-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
- [如何：在執行階段修改的大小或位置的圖片](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
- 說明何謂<xref:System.Windows.Forms.PictureBox.SizeMode%2A>屬性運作以及如何設定它。  
+ [操作說明：於執行階段修改圖片的大小或位置](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)  
+ 說明 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> 屬性的作用和設定方式。  
   
- [如何：在執行階段設定圖案](how-to-set-pictures-at-run-time-windows-forms.md)  
- 描述如何顯示及清除圖片，在執行階段。  
+ [操作說明：在執行階段設定圖案](how-to-set-pictures-at-run-time-windows-forms.md)  
+ 描述如何在執行時間顯示和清除圖片。  
   
- [如何：使用設計工具載入圖片](how-to-load-a-picture-using-the-designer-windows-forms.md)  
- 描述如何載入，並在設計階段將圖片顯示在表單上。  
+ [操作說明：使用設計工具載入圖片](how-to-load-a-picture-using-the-designer-windows-forms.md)  
+ 描述如何在設計階段載入和顯示表單上的圖片。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.PictureBox>  

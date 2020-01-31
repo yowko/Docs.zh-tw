@@ -1,19 +1,20 @@
 ---
-title: 部署 WPF 應用程式 (WPF)
+title: 部署應用程式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 9d4b7dd0464960441410d8ff2a196f0912354e5f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636298"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741939"
 ---
-# <a name="deploying-a-wpf-application-wpf"></a>部署 WPF 應用程式 (WPF)
-建立 Windows Presentation Foundation （WPF）應用程式之後，就必須部署它們。 Windows 和 .NET Framework 包含數種部署技術。 用來部署 WPF 應用程式的部署技術取決於應用程式類型。 本主題提供每個部署技術的簡要總覽，以及如何與每個 WPF 應用程式類型的部署需求搭配使用。  
+# <a name="deploy-a-wpf-application"></a>部署 WPF 應用程式
+
+建立 Windows Presentation Foundation （WPF）應用程式之後，就必須部署它們。 Windows 和 .NET Framework 包含數種部署技術。 用來部署 WPF 應用程式的部署技術取決於應用程式類型。 本主題提供每個部署技術的簡要總覽，以及如何與每個 WPF 應用程式類型的部署需求搭配使用。
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>部署技術  

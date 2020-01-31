@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-ms.openlocfilehash: 3af8c925b80b9fd4ed0a46d2bd50fe37a6f3154a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a6f93ec3c7ffe415c41dcf094dbde2f0a08969f6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125102"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790993"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome：： GetOffset 方法
 取得變數基底暫存器的位移。  
@@ -40,7 +40,7 @@ HRESULT GetOffset(
 ## <a name="return-value"></a>傳回值  
  方法會傳回下列值：  
   
-|值|描述|  
+|{2&gt;值&lt;2}|描述|  
 |-----------|-----------------|  
 |`S_OK`|變數位於暫存器相對的記憶體位置。|  
 |`E_FAIL`|變數不在暫存器相對的記憶體位置。|  
@@ -56,4 +56,4 @@ HRESULT GetOffset(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugVariableHome 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [ICorDebugVariableHome 介面](icordebugvariablehome-interface.md)

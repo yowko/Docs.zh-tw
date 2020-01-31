@@ -11,32 +11,32 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: d84b6d16d529914c87d42bf12ce17dc7093fe9ee
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 588a36c70d31883f79a4449d69cb4ba3b4239b9f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211960"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741560"
 ---
-# <a name="how-to-migrate-from-opno-locnewtonsoftjson-to-opno-locsystemtextjson"></a>如何從 Newtonsoft.Json 遷移至 System.Text.Json
+# <a name="how-to-migrate-from-opno-locnewtonsoftjson-to-opno-locsystemtextjson"></a>如何從 [!OP.NO-LOC(Newtonsoft.Json)] 遷移至 [!OP.NO-LOC(System.Text.Json)]
 
-本文說明如何從[Newtonsoft.Json](https://www.newtonsoft.com/json)遷移至 <xref:System.Text.Json>。
+本文說明如何從[[!OP.NO-LOC(Newtonsoft.Json)]](https://www.newtonsoft.com/json)遷移至 <xref:[!OP.NO-LOC(System.Text.Json)]>。
 
-`System.Text.Json` 主要著重于效能、安全性和標準合規性。 它在預設行為上有一些主要差異，並不是要與 `Newtonsoft.Json`的功能同位。 在某些情況下，`System.Text.Json` 沒有內建功能，但有建議的因應措施。 針對其他案例，因應措施並不實用。 如果您的應用程式相依于遺失的功能，請考慮提出[問題](https://github.com/dotnet/runtime/issues/new)，以瞭解是否可以新增您案例的支援。
+`[!OP.NO-LOC(System.Text.Json)]` 主要著重于效能、安全性和標準合規性。 它在預設行為上有一些主要差異，並不是要與 `[!OP.NO-LOC(Newtonsoft.Json)]`的功能同位。 在某些情況下，`[!OP.NO-LOC(System.Text.Json)]` 沒有內建功能，但有建議的因應措施。 針對其他案例，因應措施並不實用。 如果您的應用程式相依于遺失的功能，請考慮提出[問題](https://github.com/dotnet/runtime/issues/new)，以瞭解是否可以新增您案例的支援。
 
-<!-- For information about which features might be added in future releases, see the [Roadmap](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md). [Restore this when the roadmap is updated.]-->
+<!-- For information about which features might be added in future releases, see the [Roadmap](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/roadmap/README.md). [Restore this when the roadmap is updated.]-->
 
-本文大部分是關於如何使用 <xref:System.Text.Json.JsonSerializer> API，但它也包含如何使用 <xref:System.Text.Json.JsonDocument> （代表檔物件模型或 DOM）、<xref:System.Text.Json.Utf8JsonReader>和 <xref:System.Text.Json.Utf8JsonWriter> 類型的指引。
+本文大部分是關於如何使用 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializer> API，但它也包含如何使用 <xref:[!OP.NO-LOC(System.Text.Json)].JsonDocument> （代表檔物件模型或 DOM）、<xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonReader>和 <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonWriter> 類型的指引。
 
-## <a name="table-of-differences-between-opno-locnewtonsoftjson-and-opno-locsystemtextjson"></a>Newtonsoft.Json 和 System.Text.Json 之間的差異資料表
+## <a name="table-of-differences-between-opno-locnewtonsoftjson-and-opno-locsystemtextjson"></a>[!OP.NO-LOC(Newtonsoft.Json)] 和 [!OP.NO-LOC(System.Text.Json)] 之間的差異資料表
 
-下表列出 `Newtonsoft.Json` 功能和 `System.Text.Json` 對應項。 對等專案屬於下列類別：
+下表列出 `[!OP.NO-LOC(Newtonsoft.Json)]` 功能和 `[!OP.NO-LOC(System.Text.Json)]` 對應項。 對等專案屬於下列類別：
 
-* 受到內建功能的支援。 從 `System.Text.Json` 取得類似的行為，可能需要使用屬性或全域選項。
-* 不支援，可能的解決方法。 因應措施是[自訂轉換器](system-text-json-converters-how-to.md)，可能不會提供與 `Newtonsoft.Json` 功能完全同位檢查。 其中一些範例程式碼會以範例的形式提供。 如果您依賴這些 `Newtonsoft.Json` 功能，則必須修改您的 .NET 物件模型或其他程式碼變更，才能進行遷移。
-* 不支援，因應措施不可行或無法解決。 如果您依賴這些 `Newtonsoft.Json` 功能，則不會有重大變更，因此無法進行遷移。
+* 受到內建功能的支援。 從 `[!OP.NO-LOC(System.Text.Json)]` 取得類似的行為，可能需要使用屬性或全域選項。
+* 不支援，可能的解決方法。 因應措施是[自訂轉換器](system-text-json-converters-how-to.md)，可能不會提供與 `[!OP.NO-LOC(Newtonsoft.Json)]` 功能完全同位檢查。 其中一些範例程式碼會以範例的形式提供。 如果您依賴這些 `[!OP.NO-LOC(Newtonsoft.Json)]` 功能，則必須修改您的 .NET 物件模型或其他程式碼變更，才能進行遷移。
+* 不支援，因應措施不可行或無法解決。 如果您依賴這些 `[!OP.NO-LOC(Newtonsoft.Json)]` 功能，則不會有重大變更，因此無法進行遷移。
 
-| Newtonsoft.Json 功能                               | System.Text.Json 對等 |
+| [!OP.NO-LOC(Newtonsoft.Json)] 功能                               | [!OP.NO-LOC(System.Text.Json)] 對等 |
 |-------------------------------------------------------|-----------------------------|
 | 預設不區分大小寫的還原序列化           | ✔️ [PropertyNameCaseInsensitive 全域設定](#case-insensitive-deserialization) |
 | Camel 大小寫屬性名稱                             | ✔️ [PropertyNamingPolicy 全域設定](system-text-json-how-to.md#use-camel-case-for-all-json-property-names) |
@@ -75,33 +75,33 @@ ms.locfileid: "76211960"
 | 允許字串值前後加上單引號              | [不支援](#json-strings-property-names-and-string-values)❌ |
 | 允許字串屬性的非字串 JSON 值    | [不支援](#non-string-values-for-string-properties)❌ |
 
-這不是 `Newtonsoft.Json` 功能的詳盡清單。 此清單包含[GitHub 問題](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)或[StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json)文章中所要求的許多案例。 如果您針對此處所列的其中一個案例（不含範例程式碼）實行因應措施，而且如果您想要共用您的方案，請選取頁面底部的 [**此頁面**] 按鈕。 這會建立 GitHub 問題，並將其新增至頁面底部所列的問題。
+這不是 `[!OP.NO-LOC(Newtonsoft.Json)]` 功能的詳盡清單。 此清單包含[GitHub 問題](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-[!OP.NO-LOC(System.Text.Json)])或[StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json)文章中所要求的許多案例。 如果您針對此處所列的其中一個案例執行因應措施，但目前沒有範例程式碼，而且您想要共用您的方案，請在此頁面的 [意見反應][區段](/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to#feedback)中選取**此頁面**。 這會建立 GitHub 問題，並將其列在此頁面底部。
 
-## <a name="differences-in-default-jsonserializer-behavior-compared-to-opno-locnewtonsoftjson"></a>相較于 Newtonsoft.Json，預設 JsonSerializer 行為的差異
+## <a name="differences-in-default-jsonserializer-behavior-compared-to-opno-locnewtonsoftjson"></a>相較于 [!OP.NO-LOC(Newtonsoft.Json)]，預設 JsonSerializer 行為的差異
 
-<xref:System.Text.Json> 預設為嚴格，並可避免代表呼叫端的任何猜測或解讀，強調決定性的行為。 此程式庫是故意以這種方式設計來實現效能和安全性。 `Newtonsoft.Json` 預設為彈性。 這項設計的基本差異在於預設行為的下列許多特定差異背後。
+<xref:[!OP.NO-LOC(System.Text.Json)]> 預設為嚴格，並可避免代表呼叫端的任何猜測或解讀，強調決定性的行為。 此程式庫是故意以這種方式設計來實現效能和安全性。 `[!OP.NO-LOC(Newtonsoft.Json)]` 預設為彈性。 這項設計的基本差異在於預設行為的下列許多特定差異背後。
 
 ### <a name="case-insensitive-deserialization"></a>不區分大小寫的還原序列化 
 
-在還原序列化期間，`Newtonsoft.Json` 預設會執行不區分大小寫的屬性名稱比對。 <xref:System.Text.Json> 預設值區分大小寫，這可提供較佳的效能，因為它會執行完全相符的作業。 如需如何執行不區分大小寫比對的相關資訊，請參閱不[區分大小寫的屬性](system-text-json-how-to.md#case-insensitive-property-matching)比對。
+在還原序列化期間，`[!OP.NO-LOC(Newtonsoft.Json)]` 預設會執行不區分大小寫的屬性名稱比對。 <xref:[!OP.NO-LOC(System.Text.Json)]> 預設值區分大小寫，這可提供較佳的效能，因為它會執行完全相符的作業。 如需如何執行不區分大小寫比對的相關資訊，請參閱不[區分大小寫的屬性](system-text-json-how-to.md#case-insensitive-property-matching)比對。
 
-如果您使用 ASP.NET Core 間接使用 `System.Text.Json`，就不需要採取任何動作來取得 `Newtonsoft.Json`之類的行為。 ASP.NET Core 指定使用 `System.Text.Json`時， [camel 大小寫屬性名稱](system-text-json-how-to.md#use-camel-case-for-all-json-property-names)和不區分大小寫比對的設定。
+如果您使用 ASP.NET Core 間接使用 `[!OP.NO-LOC(System.Text.Json)]`，就不需要採取任何動作來取得 `[!OP.NO-LOC(Newtonsoft.Json)]`之類的行為。 ASP.NET Core 指定使用 `[!OP.NO-LOC(System.Text.Json)]`時， [camel 大小寫屬性名稱](system-text-json-how-to.md#use-camel-case-for-all-json-property-names)和不區分大小寫比對的設定。
 
 ### <a name="minimal-character-escaping"></a>最少字元的轉義
 
-在序列化期間，`Newtonsoft.Json` 相對於讓字元通過，而不將它們進行轉義，是相當寬鬆的。 也就是說，它不會將它們取代為 `\uxxxx`，其中 `xxxx` 是字元的程式碼點。 它會在其中進行 escape，而是在字元之前發出 `\` （例如，`"` 變成 `\"`）。 <xref:System.Text.Json> 預設會將更多字元加上轉義，以針對跨網站腳本（XSS）或資訊洩漏攻擊提供深度防禦保護，並使用六個字元的順序來執行。 `System.Text.Json` 預設會將所有非 ASCII 字元加上轉義，因此如果您在 `Newtonsoft.Json`中使用 `StringEscapeHandling.EscapeNonAscii`，就不需要執行任何動作。 根據預設，`System.Text.Json` 也會對 HTML 敏感字元進行轉義。 如需如何覆寫預設 `System.Text.Json` 行為的詳細資訊，請參閱[自訂字元編碼](system-text-json-how-to.md#customize-character-encoding)。
+在序列化期間，`[!OP.NO-LOC(Newtonsoft.Json)]` 相對於讓字元通過，而不將它們進行轉義，是相當寬鬆的。 也就是說，它不會將它們取代為 `\uxxxx`，其中 `xxxx` 是字元的程式碼點。 它會在其中進行 escape，而是在字元之前發出 `\` （例如，`"` 變成 `\"`）。 <xref:[!OP.NO-LOC(System.Text.Json)]> 預設會將更多字元加上轉義，以針對跨網站腳本（XSS）或資訊洩漏攻擊提供深度防禦保護，並使用六個字元的順序來執行。 `[!OP.NO-LOC(System.Text.Json)]` 預設會將所有非 ASCII 字元加上轉義，因此如果您在 `[!OP.NO-LOC(Newtonsoft.Json)]`中使用 `StringEscapeHandling.EscapeNonAscii`，就不需要執行任何動作。 根據預設，`[!OP.NO-LOC(System.Text.Json)]` 也會對 HTML 敏感字元進行轉義。 如需如何覆寫預設 `[!OP.NO-LOC(System.Text.Json)]` 行為的詳細資訊，請參閱[自訂字元編碼](system-text-json-how-to.md#customize-character-encoding)。
 
 ### <a name="comments"></a>註解
 
-在還原序列化期間，`Newtonsoft.Json` 預設會忽略 JSON 中的批註。 <xref:System.Text.Json> 預設為會擲回批註的例外狀況，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格不會包含它們。 如需如何允許批註的相關資訊，請參閱[允許批註和尾端逗號](system-text-json-how-to.md#allow-comments-and-trailing-commas)。
+在還原序列化期間，`[!OP.NO-LOC(Newtonsoft.Json)]` 預設會忽略 JSON 中的批註。 <xref:[!OP.NO-LOC(System.Text.Json)]> 預設為會擲回批註的例外狀況，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格不會包含它們。 如需如何允許批註的相關資訊，請參閱[允許批註和尾端逗號](system-text-json-how-to.md#allow-comments-and-trailing-commas)。
 
 ### <a name="trailing-commas"></a>尾端逗號
 
-在還原序列化期間，`Newtonsoft.Json` 預設會忽略尾端的逗號。 它也會忽略多個尾端逗號（例如 `[{"Color":"Red"},{"Color":"Green"},,]`）。 <xref:System.Text.Json> 預設值是擲回尾端逗號的例外狀況，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格不允許它們。 如需如何讓 `System.Text.Json` 接受它們的相關資訊，請參閱[允許批註和尾端逗號](system-text-json-how-to.md#allow-comments-and-trailing-commas)。 沒有任何方法可以允許多個尾端逗號。
+在還原序列化期間，`[!OP.NO-LOC(Newtonsoft.Json)]` 預設會忽略尾端的逗號。 它也會忽略多個尾端逗號（例如 `[{"Color":"Red"},{"Color":"Green"},,]`）。 <xref:[!OP.NO-LOC(System.Text.Json)]> 預設值是擲回尾端逗號的例外狀況，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格不允許它們。 如需如何讓 `[!OP.NO-LOC(System.Text.Json)]` 接受它們的相關資訊，請參閱[允許批註和尾端逗號](system-text-json-how-to.md#allow-comments-and-trailing-commas)。 沒有任何方法可以允許多個尾端逗號。
 
 ### <a name="converter-registration-precedence"></a>轉換器註冊優先順序
 
-自訂轉換器的 `Newtonsoft.Json` 註冊優先順序如下所示：
+自訂轉換器的 `[!OP.NO-LOC(Newtonsoft.Json)]` 註冊優先順序如下所示：
 
 * 屬性上的屬性
 * 類型上的屬性
@@ -109,10 +109,10 @@ ms.locfileid: "76211960"
 
 此順序表示 `Converters` 集合中的自訂轉換器會由在類型層級套用屬性所註冊的轉換器覆寫。 這兩種註冊都是由屬性層級的屬性所覆寫。
 
-自訂轉換器的 <xref:System.Text.Json> 註冊優先順序不同：
+自訂轉換器的 <xref:[!OP.NO-LOC(System.Text.Json)]> 註冊優先順序不同：
 
 * 屬性上的屬性
-* <xref:System.Text.Json.JsonSerializerOptions.Converters> 集合
+* <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 集合
 * 類型上的屬性
 
 此處的差異在於，`Converters` 集合中的自訂轉換器會覆寫類型層級的屬性。 此優先順序的目的是要讓執行時間變更覆寫設計階段的選擇。 沒有任何方法可以變更優先順序。
@@ -121,11 +121,11 @@ ms.locfileid: "76211960"
 
 ### <a name="maximum-depth"></a>最大深度
 
-`Newtonsoft.Json` 預設不具有最大深度限制。 針對 <xref:System.Text.Json>，預設限制為64，且可透過設定 <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>加以設定。
+`[!OP.NO-LOC(Newtonsoft.Json)]` 預設不具有最大深度限制。 針對 <xref:[!OP.NO-LOC(System.Text.Json)]>，預設限制為64，且可透過設定 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>加以設定。
 
 ### <a name="json-strings-property-names-and-string-values"></a>JSON 字串（屬性名稱和字串值）
 
-在還原序列化期間，`Newtonsoft.Json` 接受以雙引號、單引號或不含引號括住的屬性名稱。 它接受以雙引號或單引號括住的字串值。 例如，`Newtonsoft.Json` 接受下列 JSON：
+在還原序列化期間，`[!OP.NO-LOC(Newtonsoft.Json)]` 接受以雙引號、單引號或不含引號括住的屬性名稱。 它接受以雙引號或單引號括住的字串值。 例如，`[!OP.NO-LOC(Newtonsoft.Json)]` 接受下列 JSON：
 
 ```json
 {
@@ -135,9 +135,9 @@ ms.locfileid: "76211960"
 }
 ```
 
-`System.Text.Json` 只接受以雙引號括住的屬性名稱和字串值，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格需要該格式，而且是唯一視為有效 JSON 的格式。
+`[!OP.NO-LOC(System.Text.Json)]` 只接受以雙引號括住的屬性名稱和字串值，因為[RFC 8259](https://tools.ietf.org/html/rfc8259)規格需要該格式，而且是唯一視為有效 JSON 的格式。
 
-以單引號括住的值會產生含有下列訊息的[JsonException](xref:System.Text.Json.JsonException) ：
+以單引號括住的值會產生含有下列訊息的[JsonException](xref:[!OP.NO-LOC(System.Text.Json)].JsonException) ：
 
 ```
 ''' is an invalid start of a value.
@@ -145,7 +145,7 @@ ms.locfileid: "76211960"
 
 ### <a name="non-string-values-for-string-properties"></a>字串屬性的非字串值
 
-`Newtonsoft.Json` 接受非字串值，例如數位或常值 `true` 和 `false`，以還原序列化為 string 類型的屬性。 以下是 `Newtonsoft.Json` 成功還原序列化為下列類別的 JSON 範例：
+`[!OP.NO-LOC(Newtonsoft.Json)]` 接受非字串值，例如數位或常值 `true` 和 `false`，以還原序列化為 string 類型的屬性。 以下是 `[!OP.NO-LOC(Newtonsoft.Json)]` 成功還原序列化為下列類別的 JSON 範例：
 
 ```json
 {
@@ -164,7 +164,7 @@ public class ExampleClass
 }
 ```
 
-`System.Text.Json` 不會將非字串值還原序列化為字串屬性。 針對字串欄位接收的非字串值會導致[JsonException](xref:System.Text.Json.JsonException) ，並出現下列訊息：
+`[!OP.NO-LOC(System.Text.Json)]` 不會將非字串值還原序列化為字串屬性。 針對字串欄位接收的非字串值會導致[JsonException](xref:[!OP.NO-LOC(System.Text.Json)].JsonException) ，並出現下列訊息：
 
 ```
 The JSON value could not be converted to System.String.
@@ -172,11 +172,11 @@ The JSON value could not be converted to System.String.
 
 ## <a name="scenarios-using-jsonserializer-that-require-workarounds"></a>使用需要因應措施之 JsonSerializer 的案例
 
-內建功能不支援下列案例，但可能的因應措施。 因應措施是[自訂轉換器](system-text-json-converters-how-to.md)，可能不會提供與 `Newtonsoft.Json` 功能完全同位檢查。 其中一些範例程式碼會以範例的形式提供。 如果您依賴這些 `Newtonsoft.Json` 功能，則必須修改您的 .NET 物件模型或其他程式碼變更，才能進行遷移。
+內建功能不支援下列案例，但可能的因應措施。 因應措施是[自訂轉換器](system-text-json-converters-how-to.md)，可能不會提供與 `[!OP.NO-LOC(Newtonsoft.Json)]` 功能完全同位檢查。 其中一些範例程式碼會以範例的形式提供。 如果您依賴這些 `[!OP.NO-LOC(Newtonsoft.Json)]` 功能，則必須修改您的 .NET 物件模型或其他程式碼變更，才能進行遷移。
 
 ### <a name="types-without-built-in-support"></a>沒有內建支援的類型
 
-<xref:System.Text.Json> 不會提供下列類型的內建支援：
+<xref:[!OP.NO-LOC(System.Text.Json)]> 不會提供下列類型的內建支援：
 
 * <xref:System.Data.DataTable> 和相關類型
 * F#類型，例如[區分](../../fsharp/language-reference/discriminated-unions.md)等位、[記錄類型](../../fsharp/language-reference/records.md)和[匿名記錄類型](../../fsharp/language-reference/anonymous-records.md)。
@@ -192,53 +192,53 @@ The JSON value could not be converted to System.String.
 
 ### <a name="quoted-numbers"></a>加上引號的數位
 
-`Newtonsoft.Json` 可以序列化或還原序列化 JSON 字串所代表的數位（以引號括住）。 例如，它可以接受： `{"DegreesCelsius":"23"}`，而不是 `{"DegreesCelsius":23}`。 若要在 <xref:System.Text.Json>中啟用該行為，請執行如下列範例所示的自訂轉換子。 轉換器會處理定義為 `long`的屬性：
+`[!OP.NO-LOC(Newtonsoft.Json)]` 可以序列化或還原序列化 JSON 字串所代表的數位（以引號括住）。 例如，它可以接受： `{"DegreesCelsius":"23"}`，而不是 `{"DegreesCelsius":23}`。 若要在 <xref:[!OP.NO-LOC(System.Text.Json)]>中啟用該行為，請執行如下列範例所示的自訂轉換子。 轉換器會處理定義為 `long`的屬性：
 
 * 它會將它們序列化為 JSON 字串。 
 * 它會在還原序列化時，接受引號內的 JSON 數位和數位。
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/LongToStringConverter.cs)]
 
-使用個別 `long` 屬性上的[屬性](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property)，或[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)至 <xref:System.Text.Json.JsonSerializerOptions.Converters> 集合，以註冊此自訂轉換器。
+使用個別 `long` 屬性上的[屬性](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property)，或[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)至 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 集合，以註冊此自訂轉換器。
 
 ### <a name="dictionary-with-non-string-key"></a>具有非字串索引鍵的字典
 
-`Newtonsoft.Json` 支援 `Dictionary<TKey, TValue>`類型的集合。 <xref:System.Text.Json> 中的字典集合內建支援僅限於 `Dictionary<string, TValue>`。 也就是，索引鍵必須是字串。
+`[!OP.NO-LOC(Newtonsoft.Json)]` 支援 `Dictionary<TKey, TValue>`類型的集合。 <xref:[!OP.NO-LOC(System.Text.Json)]> 中的字典集合內建支援僅限於 `Dictionary<string, TValue>`。 也就是，索引鍵必須是字串。
 
 若要支援具有整數或其他類型做為索引鍵的字典，請建立如[如何撰寫自訂轉換器](system-text-json-converters-how-to.md#support-dictionary-with-non-string-key)中的範例所示的轉換器。
 
 ### <a name="polymorphic-serialization"></a>多型序列化
 
-`Newtonsoft.Json` 會自動進行多型序列化。 如需 <xref:System.Text.Json>的有限多型序列化功能的相關資訊，請參閱[序列化衍生類別的屬性](system-text-json-how-to.md#serialize-properties-of-derived-classes)。
+`[!OP.NO-LOC(Newtonsoft.Json)]` 會自動進行多型序列化。 如需 <xref:[!OP.NO-LOC(System.Text.Json)]>的有限多型序列化功能的相關資訊，請參閱[序列化衍生類別的屬性](system-text-json-how-to.md#serialize-properties-of-derived-classes)。
 
 此處所述的因應措施，是定義可能包含衍生類別的屬性，做為 `object`的型別。 如果無法這樣做，另一個選項是使用整個繼承類型階層的 `Write` 方法建立轉換器，如[如何撰寫自訂轉換器](system-text-json-converters-how-to.md#support-polymorphic-deserialization)中的範例所示。
 
 ### <a name="polymorphic-deserialization"></a>多型還原序列化
 
-`Newtonsoft.Json` 具有 `TypeNameHandling` 設定，會在序列化時將類型名稱中繼資料新增至 JSON。 它會在還原序列化時使用中繼資料來執行多型還原序列化。 <xref:System.Text.Json> 可以執行有限範圍的多型序列化，但不能進行多型的還原[序列化](system-text-json-how-to.md#serialize-properties-of-derived-classes)。
+`[!OP.NO-LOC(Newtonsoft.Json)]` 具有 `TypeNameHandling` 設定，會在序列化時將類型名稱中繼資料新增至 JSON。 它會在還原序列化時使用中繼資料來執行多型還原序列化。 <xref:[!OP.NO-LOC(System.Text.Json)]> 可以執行有限範圍的多型序列化，但不能進行多型的還原[序列化](system-text-json-how-to.md#serialize-properties-of-derived-classes)。
 
 若要支援多型還原序列化，請建立如[如何撰寫自訂轉換器](system-text-json-converters-how-to.md#support-polymorphic-deserialization)中的範例所示的轉換器。
 
 ### <a name="deserialization-of-object-properties"></a>物件屬性的還原序列化
 
-當 `Newtonsoft.Json` 還原序列化為 Poco 中的 `object` 屬性或類型 `Dictionary<string, object>`的字典中，它會：
+當 `[!OP.NO-LOC(Newtonsoft.Json)]` 還原序列化為 Poco 中的 `object` 屬性或類型 `Dictionary<string, object>`的字典中，它會：
 
 * 推斷 JSON 承載中基本值的類型（不是 `null`），並傳回儲存的 `string`、`long`、`double`、`boolean`或 `DateTime` 做為已封裝的物件。 *基本值*是單一 json 值，例如 json 數位、字串、`true`、`false`或 `null`。
 * 傳回 JSON 承載中複雜值的 `JObject` 或 `JArray`。 *複雜值*是以括弧（`{}`）括住的 JSON 索引鍵/值組集合，或是以方括弧（`[]`）括住的值清單。 大括弧或括弧內的屬性和值可以有額外的屬性或值。
 * 當裝載具有 `null` 的 JSON 常值時，會傳回 null 參考。
 
-<xref:System.Text.Json> 會在 `System.Object` 屬性或字典值中，儲存基本和複雜值的已裝箱 `JsonElement`。 不過，它會將 `null` 視為 `Newtonsoft.Json`，並在裝載具有 `null` 的 JSON 常值時傳回 null 參考。
+<xref:[!OP.NO-LOC(System.Text.Json)]> 會在 `System.Object` 屬性或字典值中，儲存基本和複雜值的已裝箱 `JsonElement`。 不過，它會將 `null` 視為 `[!OP.NO-LOC(Newtonsoft.Json)]`，並在裝載具有 `null` 的 JSON 常值時傳回 null 參考。
 
 若要執行 `object` 屬性的型別推斷，請建立如[如何撰寫自訂轉換器](system-text-json-converters-how-to.md#deserialize-inferred-types-to-object-properties)中的範例所示的轉換器。
 
 ### <a name="deserialize-null-to-non-nullable-type"></a>將 null 還原序列化為不可為 null 的類型 
 
-`Newtonsoft.Json` 在下列案例中不會擲回例外狀況：
+`[!OP.NO-LOC(Newtonsoft.Json)]` 在下列案例中不會擲回例外狀況：
 
 * `NullValueHandling` 設定為 `Ignore`，而
 * 在還原序列化期間，JSON 會針對不可為 null 的型別包含 null 值。
 
-在相同的案例中，<xref:System.Text.Json> 會擲回例外狀況。 （對應的 null 處理設定為 <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>）。
+在相同的案例中，<xref:[!OP.NO-LOC(System.Text.Json)]> 會擲回例外狀況。 （對應的 null 處理設定為 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType>）。
 
 如果您擁有目標型別，最佳的解決方法是讓屬性成為可為 null （例如，將 `int` 變更為 `int?`）。
 
@@ -246,9 +246,9 @@ The JSON value could not be converted to System.String.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DateTimeOffsetNullHandlingConverter.cs)]
 
-藉由[使用屬性上的屬性](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property)，或[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)至 <xref:System.Text.Json.JsonSerializerOptions.Converters> 集合，來註冊此自訂轉換子。
+藉由[使用屬性上的屬性](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-property)，或[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)至 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 集合，來註冊此自訂轉換子。
 
-**注意：** 前面的轉換子**處理 null 值的方式**，與指定預設值的 poco 不同 `Newtonsoft.Json`。 例如，假設下列程式碼代表您的目標物件：
+**注意：** 前面的轉換子**處理 null 值的方式**，與指定預設值的 poco 不同 `[!OP.NO-LOC(Newtonsoft.Json)]`。 例如，假設下列程式碼代表您的目標物件：
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithDefault)]
 
@@ -262,11 +262,11 @@ The JSON value could not be converted to System.String.
 }
 ```
 
-還原序列化之後，`Date` 屬性具有1/1/0001 （`default(DateTimeOffset)`），也就是會覆寫在此函式中設定的值。 假設有相同的 POCO 和 JSON，`Newtonsoft.Json` 還原序列化會在 `Date` 屬性中留下1/1/2001。
+還原序列化之後，`Date` 屬性具有1/1/0001 （`default(DateTimeOffset)`），也就是會覆寫在此函式中設定的值。 假設有相同的 POCO 和 JSON，`[!OP.NO-LOC(Newtonsoft.Json)]` 還原序列化會在 `Date` 屬性中留下1/1/2001。
 
 ### <a name="deserialize-to-immutable-classes-and-structs"></a>還原序列化為不可變的類別和結構
 
-`Newtonsoft.Json` 可以還原序列化為不可變的類別和結構，因為它可以使用具有參數的函數。 <xref:System.Text.Json> 僅支援公用無參數的函式。 因應措施是，您可以在自訂轉換子中呼叫具有參數的函式。
+`[!OP.NO-LOC(Newtonsoft.Json)]` 可以還原序列化為不可變的類別和結構，因為它可以使用具有參數的函數。 <xref:[!OP.NO-LOC(System.Text.Json)]> 僅支援公用無參數的函式。 因應措施是，您可以在自訂轉換子中呼叫具有參數的函式。
 
 以下是具有多個函數參數的不可變結構：
 
@@ -276,19 +276,19 @@ The JSON value could not be converted to System.String.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/ImmutablePointConverter.cs)]
 
-[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)至 <xref:System.Text.Json.JsonSerializerOptions.Converters> 集合，以註冊此自訂轉換子。
+[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)至 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 集合，以註冊此自訂轉換子。
 
-如需處理開放式泛型屬性之類似轉換器的範例，請參閱索引[鍵/值組的內建轉換器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/JsonValueConverterKeyValuePair.cs)。
+如需處理開放式泛型屬性之類似轉換器的範例，請參閱索引[鍵/值組的內建轉換器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/src/[!OP.NO-LOC(System/Text/Json)]/Serialization/Converters/JsonValueConverterKeyValuePair.cs)。
 
 ### <a name="specify-constructor-to-use"></a>指定要使用的構造函式
 
-`Newtonsoft.Json` `[JsonConstructor]` 屬性可讓您指定在還原序列化為 POCO 時要呼叫的函式。 <xref:System.Text.Json> 僅支援無參數的函式。 因應措施是，您可以在自訂轉換器中呼叫所需的任何一個方法。 請參閱還原序列化[為不可變類別和結構](#deserialize-to-immutable-classes-and-structs)的範例。
+`[!OP.NO-LOC(Newtonsoft.Json)]` `[JsonConstructor]` 屬性可讓您指定在還原序列化為 POCO 時要呼叫的函式。 <xref:[!OP.NO-LOC(System.Text.Json)]> 僅支援無參數的函式。 因應措施是，您可以在自訂轉換器中呼叫所需的任何一個方法。 請參閱還原序列化[為不可變類別和結構](#deserialize-to-immutable-classes-and-structs)的範例。
 
 ### <a name="required-properties"></a>必要屬性
 
-在 `Newtonsoft.Json`中，您可以在 `[JsonProperty]` 屬性上設定 `Required`，以指定需要屬性。 如果針對標示為必要的屬性，JSON 中未收到任何值，`Newtonsoft.Json` 會擲回例外狀況。
+在 `[!OP.NO-LOC(Newtonsoft.Json)]`中，您可以在 `[JsonProperty]` 屬性上設定 `Required`，以指定需要屬性。 如果針對標示為必要的屬性，JSON 中未收到任何值，`[!OP.NO-LOC(Newtonsoft.Json)]` 會擲回例外狀況。
 
-如果目標型別的其中一個屬性未收到任何值，<xref:System.Text.Json> 不會擲回例外狀況。 例如，如果您有 `WeatherForecast` 類別：
+如果目標型別的其中一個屬性未收到任何值，<xref:[!OP.NO-LOC(System.Text.Json)]> 不會擲回例外狀況。 例如，如果您有 `WeatherForecast` 類別：
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -305,11 +305,11 @@ The JSON value could not be converted to System.String.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRequiredPropertyConverter.cs)]
 
-藉由[使用 POCO 類別上的屬性](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)，或[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)<xref:System.Text.Json.JsonSerializerOptions.Converters> 集合，來註冊此自訂轉換子。
+藉由[使用 POCO 類別上的屬性](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)，或[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)<xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 集合，來註冊此自訂轉換子。
 
-如果您遵循此模式，請不要在以遞迴方式呼叫 <xref:System.Text.Json.JsonSerializer.Serialize%2A> 或 <xref:System.Text.Json.JsonSerializer.Deserialize%2A>時傳入 options 物件。 Options 物件包含 <xref:System.Text.Json.JsonSerializerOptions.Converters%2A> 集合。 如果您將它傳遞給 `Serialize` 或 `Deserialize`，則自訂轉換器會呼叫自己的，因此會產生無限迴圈，導致堆疊溢位例外狀況。 如果預設選項不可行，請使用您所需的設定來建立選項的新實例。 這個方法將會變慢，因為每個新的實例會獨立快取。
+如果您遵循此模式，請不要在以遞迴方式呼叫 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializer.Serialize%2A> 或 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializer.Deserialize%2A>時傳入 options 物件。 Options 物件包含 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters%2A> 集合。 如果您將它傳遞給 `Serialize` 或 `Deserialize`，則自訂轉換器會呼叫自己的，因此會產生無限迴圈，導致堆疊溢位例外狀況。 如果預設選項不可行，請使用您所需的設定來建立選項的新實例。 這個方法將會變慢，因為每個新的實例會獨立快取。
 
-上述的轉換器程式碼是簡化的範例。 如果您需要處理屬性（例如[[JsonIgnore]](xref:System.Text.Json.Serialization.JsonIgnoreAttribute)或不同的選項（例如自訂編碼器），則需要額外的邏輯。 此外，範例程式碼不會處理在此函式中設定預設值的屬性。 而這種方法不會區分下列案例：
+上述的轉換器程式碼是簡化的範例。 如果您需要處理屬性（例如[[JsonIgnore]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonIgnoreAttribute)或不同的選項（例如自訂編碼器），則需要額外的邏輯。 此外，範例程式碼不會處理在此函式中設定預設值的屬性。 而這種方法不會區分下列案例：
 
 * JSON 中遺漏了屬性。
 * JSON 中有不可為 null 類型的屬性，但此值是類型的預設值，例如零代表 `int`。
@@ -317,13 +317,13 @@ The JSON value could not be converted to System.String.
 
 ### <a name="conditionally-ignore-a-property"></a>有條件地忽略屬性
 
-`Newtonsoft.Json` 有數種方式可以有條件地忽略序列化或還原序列化上的屬性：
+`[!OP.NO-LOC(Newtonsoft.Json)]` 有數種方式可以有條件地忽略序列化或還原序列化上的屬性：
 
 * `DefaultContractResolver` 可讓您根據任意條件，選取要包含或排除的屬性。 
 * `JsonSerializerSettings` 上的 `NullValueHandling` 和 `DefaultValueHandling` 設定，可讓您指定應該忽略所有的 null 值或預設值屬性。
 * [`[JsonProperty]`] 屬性上的 [`NullValueHandling`] 和 [`DefaultValueHandling`] 設定可讓您指定在設定為 null 或預設值時，應該忽略的個別屬性。
 
-<xref:System.Text.Json> 提供下列方法來在序列化時省略屬性：
+<xref:[!OP.NO-LOC(System.Text.Json)]> 提供下列方法來在序列化時省略屬性：
 
 * 屬性[（property）上的 [JsonIgnore] 屬性（attribute）](system-text-json-how-to.md#exclude-individual-properties)會在序列化期間，從 JSON 中省略屬性（property）。
 * [IgnoreNullValues](system-text-json-how-to.md#exclude-all-null-value-properties) global 選項可讓您排除所有 null 值屬性。
@@ -344,7 +344,7 @@ The JSON value could not be converted to System.String.
 
 如果參數的值為 null、空字串或 "N/A"，則轉換器會從序列化中省略 `Summary` 屬性。 
 
-藉由[使用類別上的屬性](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)，或[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)至 <xref:System.Text.Json.JsonSerializerOptions.Converters> 集合，來註冊此自訂轉換子。
+藉由[使用類別上的屬性](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)，或[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)至 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters> 集合，來註冊此自訂轉換子。
 
 這種方法需要額外的邏輯，如下所示：
 
@@ -353,23 +353,23 @@ The JSON value could not be converted to System.String.
 
 ### <a name="specify-date-format"></a>指定日期格式
 
-`Newtonsoft.Json` 提供數種方式來控制 `DateTime` 和 `DateTimeOffset` 類型的屬性如何序列化和還原序列化：
+`[!OP.NO-LOC(Newtonsoft.Json)]` 提供數種方式來控制 `DateTime` 和 `DateTimeOffset` 類型的屬性如何序列化和還原序列化：
 
 * `DateTimeZoneHandling` 設定可以用來將所有 `DateTime` 值序列化為 UTC 日期。
 * `DateFormatString` 設定和 `DateTime` 轉換器可以用來自訂日期字串的格式。
 
-在 <xref:System.Text.Json>中，具有內建支援的唯一格式是 ISO 8601-1:2019，因為它廣泛採用、明確，並會精確地進行往返。 若要使用任何其他格式，請建立自訂轉換器。 如需詳細資訊，請參閱[System.Text.Json中的 DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)。
+在 <xref:[!OP.NO-LOC(System.Text.Json)]>中，具有內建支援的唯一格式是 ISO 8601-1:2019，因為它廣泛採用、明確，並會精確地進行往返。 若要使用任何其他格式，請建立自訂轉換器。 如需詳細資訊，請參閱[[!OP.NO-LOC(System.Text.Json)]中的 DateTime 和 DateTimeOffset 支援](../datetime/system-text-json-support.md)。
 
 ### <a name="callbacks"></a>叫
 
-`Newtonsoft.Json` 可讓您在序列化或還原序列化程式的數個點執行自訂程式碼：
+`[!OP.NO-LOC(Newtonsoft.Json)]` 可讓您在序列化或還原序列化程式的數個點執行自訂程式碼：
 
 * OnDeserializing （開始還原序列化物件時）
 * OnDeserialized （完成還原序列化物件時）
 * OnSerializing （開始序列化物件時）
 * OnSerialized （完成序列化物件時）
 
-在 <xref:System.Text.Json>中，您可以藉由撰寫自訂的轉換器來模擬回呼。 下列範例顯示 POCO 的自訂轉換子。 轉換器包含的程式碼會在每個對應至 `Newtonsoft.Json` 回呼的時間點顯示訊息。
+在 <xref:[!OP.NO-LOC(System.Text.Json)]>中，您可以藉由撰寫自訂的轉換器來模擬回呼。 下列範例顯示 POCO 的自訂轉換子。 轉換器包含的程式碼會在每個對應至 `[!OP.NO-LOC(Newtonsoft.Json)]` 回呼的時間點顯示訊息。
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastCallbacksConverter.cs)]
 

@@ -1,5 +1,6 @@
 ---
-title: 逐步解說：在 WPF 中裝載 Win32 控制項
+title: 在 WPF 中裝載 Win32 控制項
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 56f096dd7ba4feb677394cd26be9858a33842018
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eb497a88c119dece85d61d6a32e7b86fb03b44b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040809"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744940"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>逐步解說：在 WPF 中裝載 Win32 控制項
+# <a name="walkthrough-host-a-win32-control-in-wpf"></a>逐步解說：在 WPF 中裝載 Win32 控制項
 Windows Presentation Foundation （WPF）提供豐富的環境來建立應用程式。 不過，當您在 Win32 程式碼中投入大量投資時，在 WPF 應用程式中至少重複使用其中一些程式碼，而不是完全重新撰寫，可能會更有效率。 WPF 在 WPF 頁面上提供了直接裝載 Win32 視窗的機制。  
   
  本主題將逐步引導您在裝載 Win32 清單方塊控制項的[WPF 範例中，裝載 Win32 ListBox 控制項](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)。 這個一般程式可以擴充為裝載任何 Win32 視窗。  
@@ -45,7 +46,7 @@ Windows Presentation Foundation （WPF）提供豐富的環境來建立應用程
   
 5. 建立主視窗之後，即會傳回裝載之視窗的 HWND。 如果您想要裝載一或多個 Win32 控制項，通常會將主機視窗建立為 HWND 的子系，並將控制項的子系設為該主控視窗。 將控制項包裝在主機視窗中，可讓您從控制項接收通知的方式很簡單，這會處理跨 HWND 界限的通知特定 Win32 問題。  
   
-6. 處理傳送至主視窗的已選取訊息，例如來自子控制項的通知。 執行這項作業的方法有兩種。  
+6. 處理傳送至主視窗的已選取訊息，例如來自子控制項的通知。 有兩種方式可以達成這個目的，  
   
     - 如果您想要處理裝載類別中的訊息，請覆寫 <xref:System.Windows.Interop.HwndHost> 類別的 <xref:System.Windows.Interop.HwndHost.WndProc%2A> 方法。  
   
@@ -61,7 +62,7 @@ Windows Presentation Foundation （WPF）提供豐富的環境來建立應用程
 ## <a name="implement-the-page-layout"></a>實作版面配置  
  主控 ListBox 控制項的 WPF 頁面版面配置包含兩個區域。 頁面的左邊裝載數個 WPF 控制項，提供可讓您操作 Win32 控制項的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 頁面的右上角具有 ListBox 託管控制項的方形區域。  
   
- 執行此版面配置的程式碼相當簡單。 根項目是具有兩個子項目的 <xref:System.Windows.Controls.DockPanel>。 第一個是主控 ListBox 控制項的 <xref:System.Windows.Controls.Border> 元素。 它會佔用頁面右上角的 200x200 方形。 第二個是 <xref:System.Windows.Controls.StackPanel> 專案，其中包含一組顯示資訊的 WPF 控制項，並可讓您藉由設定公開的互通性屬性來操作 ListBox 控制項。 針對每個屬於 <xref:System.Windows.Controls.StackPanel>子系的專案，請參閱各種元素的參考資料，這些專案是用來詳細說明這些元素為何或其用途，這些專案會列在下面的範例程式碼中，但不會在此處說明（基本互通模型不需要其中任何一項，而是為了在範例中新增一些互動性而提供。  
+ 執行此版面配置的程式碼相當簡單。 根項目是具有兩個子項目的 <xref:System.Windows.Controls.DockPanel>。 第一個是主控 ListBox 控制項的 <xref:System.Windows.Controls.Border> 元素。 它會佔用頁面右上角的 200x200 方形。 第二個是 <xref:System.Windows.Controls.StackPanel> 專案，其中包含一組顯示資訊的 WPF 控制項，並可讓您藉由設定公開的互通性屬性來操作 ListBox 控制項。 針對每個屬於 <xref:System.Windows.Controls.StackPanel>子系的專案，請參閱各種元素的參考資料，這些專案是用來詳細說明這些元素為何或其用途，這些專案會列在下列範例程式碼中，但不會在此處說明（基本互通模型不需要任何這些專案，而是提供這些專案來為範例新增一些互動）。  
   
  [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   

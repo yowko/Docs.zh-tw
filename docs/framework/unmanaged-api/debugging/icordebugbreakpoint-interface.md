@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-ms.openlocfilehash: 29bb84341c2cb4177c43f798d25a1a6d50099aa5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 53d8d219a13f2dade16a338efccf0837f8de0158
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122783"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784380"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint 介面
 
@@ -29,8 +29,8 @@ ms.locfileid: "73122783"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Activate 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-activate-method.md)|設定此 `ICorDebugBreakpoint`的作用中狀態。|  
-|[IsActive 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpoint-isactive-method.md)|取得值，指出此 `ICorDebugBreakpoint` 是否為使用中。|  
+|[Activate 方法](icordebugbreakpoint-activate-method.md)|設定此 `ICorDebugBreakpoint`的作用中狀態。|  
+|[IsActive 方法](icordebugbreakpoint-isactive-method.md)|取得值，指出此 `ICorDebugBreakpoint` 是否為使用中。|  
   
 ## <a name="remarks"></a>備註  
  中斷點不直接支援條件運算式。 如果需要這類功能，偵錯工具必須在 `ICorDebugBreakpoint`上執行。  
@@ -51,4 +51,4 @@ ms.locfileid: "73122783"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

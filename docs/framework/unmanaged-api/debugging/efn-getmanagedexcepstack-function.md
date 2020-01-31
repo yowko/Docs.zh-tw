@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 824be4a401d265575b48f66045dd944d521e64a4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134134"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789156"
 ---
 # <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack 函式
 給予 Managed 例外狀況物件位址後，會傳回內部包含堆疊追蹤版本的字串。  
@@ -49,7 +49,7 @@ HRESULT _EFN_GetManagedExcepStack(
  脫銷字串緩衝區中可用的字元數。  
   
 ## <a name="remarks"></a>備註  
- 如果目前在內容中的執行緒上沒有 managed 程式碼，則函式會傳回具有設備值0xa0 的 HRESULT SOS_E_NOMANAGEDCODE，以及錯誤碼為0x1000。  
+ 如果目前在內容中的執行緒上沒有 managed 程式碼，此函式會傳回 HRESULT SOS_E_NOMANAGEDCODE，並將0xa0 的設備值和錯誤碼為0x1000。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -60,4 +60,4 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯全域靜態函式](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [偵錯全域靜態函式](debugging-global-static-functions.md)

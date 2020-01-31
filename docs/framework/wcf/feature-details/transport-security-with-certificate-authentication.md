@@ -4,21 +4,22 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: f94be530fb680320813a93e256e8e411234f2e40
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 9ac563ad237749665e9cc53c15aec35f461abfc0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69968654"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742659"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>憑證驗證的傳輸安全性
-本主題討論使用傳輸安全性時，如何使用 X.509 憑證進行伺服器和用戶端驗證。 如需 X.509 憑證的詳細資訊，請參閱 [X.509 公用金鑰憑證](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)。 憑證必須由憑證授權單位單位發行, 這通常是憑證的協力廠商簽發者。 在 Windows Server 網域中，可以使用 Active Directory 憑證服務對網域中的用戶端電腦發行憑證。 如需詳細資訊, 請參閱[Windows 2008 R2 憑證服務](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409)。 在此案例中，服務是在使用安全通訊端層 (SSL) 設定的 Internet Information Services (IIS) 之下裝載。 此服務使用 SSL (X.509) 憑證設定，以允許使用者驗證伺服器的身分識別。 用戶端也使用 X.509 憑證設定，以允許服務驗證用戶端的身分識別。 伺服器的憑證必須受到用戶端的信任，而用戶端的憑證則必須受到伺服器的信任。 服務和用戶端如何驗證彼此的身分識別的實際機制，不在本主題的範圍之內。 如需詳細資訊, 請參閱[維琪百科上的數位簽章](https://go.microsoft.com/fwlink/?LinkId=253157)。  
+
+本文討論如何在使用傳輸安全性時，針對伺服器和用戶端驗證使用 x.509 憑證。 如需 X.509 憑證的詳細資訊，請參閱 [X.509 公用金鑰憑證](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)。 憑證必須由憑證授權單位單位發行，這通常是憑證的協力廠商簽發者。 在 Windows Server 網域中，可以使用 Active Directory 憑證服務對網域中的用戶端電腦發行憑證。 在此案例中，服務是在使用安全通訊端層 (SSL) 設定的 Internet Information Services (IIS) 之下裝載。 此服務使用 SSL (X.509) 憑證設定，以允許使用者驗證伺服器的身分識別。 用戶端也使用 X.509 憑證設定，以允許服務驗證用戶端的身分識別。 伺服器的憑證必須受到用戶端的信任，而用戶端的憑證則必須受到伺服器的信任。 服務和用戶端驗證彼此身分識別的實際機制，已超出本文的範圍。 如需詳細資訊，請參閱維琪百科上的[數位簽章](https://en.wikipedia.org/wiki/Digital_signature)。
   
  此案例會實作要求/回覆訊息模式，如下列圖表所示。  
   
  ![使用憑證的安全傳輸](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- 如需搭配服務使用憑證的詳細資訊, 請參閱使用[憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何:使用 SSL 憑證](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)設定埠。 下表描述此案例的各種特性。  
+ 如需搭配服務使用憑證的詳細資訊，請參閱使用[憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)和[如何：使用 SSL 憑證設定埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。 下表描述此案例的各種特性。  
   
 |特性|描述|  
 |--------------------|-----------------|  
@@ -137,7 +138,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

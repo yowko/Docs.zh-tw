@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 47a1da4982d22c63cb762a27313590c8ec0c5dd4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964750"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743971"
 ---
 # <a name="using-structs-c-programming-guide"></a>使用結構（C#程式設計手冊）
 
@@ -27,7 +27,7 @@ ms.locfileid: "75964750"
 
 不同於類別，結構沒有繼承。 結構無法繼承自另一個結構或類別，而且不能作為類別的基底。 不過，結構可以繼承自基底類別 <xref:System.Object>。 結構可以實作介面，而且其作法就跟類別一樣。
 
-您無法使用關鍵字 `struct`宣告類別。 在 C# 中，類別和結構在語意上是不同的。 結構是實值類型，而類別是參考類型。 如需詳細資訊，請參閱實[數值型別](../../language-reference/keywords/value-types.md)和[參考型別](../../language-reference/keywords/reference-types.md)。
+您無法使用關鍵字 `struct`宣告類別。 在 C# 中，類別和結構在語意上是不同的。 結構是實值類型，而類別是參考類型。 如需詳細資訊，請參閱實[數值型別](../../language-reference/builtin-types/value-types.md)和[參考型別](../../language-reference/keywords/reference-types.md)。
 
 除非您需要參考類型語意，否則系統處理小型類別可能會更有效率 (如果您改為將其宣告為結構)。
 

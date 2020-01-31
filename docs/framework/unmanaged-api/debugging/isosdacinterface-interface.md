@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: ccaf479fc4fb90007b4999e95ee03bdd0529321e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 94349a3f7b18c8ce29bb3a71cb9d10ee4eac8036
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922144"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790472"
 ---
 # <a name="isosdacinterface-interface"></a>ISOSDacInterface 介面
 
-提供 helper 方法來存取資料，從`SOS`。
+提供 helper 方法，以從 `SOS`存取資料。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -32,22 +32,22 @@ ms.locfileid: "61922144"
 
 | 方法                                                                                                               | 描述                                                                                                                   |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| [GetMethodDescData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescdata-method.md) | 取得指定 MethodDesc 指標的資料。 |
-| [GetMethodDescPtrFromIP](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmethoddescptrfromip-method.md) | 擷取 MethodDesc 對應包含指定的原生指令位址之方法的指標。 |
-| [GetModuleData](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-getmoduledata-method.md)| 擷取對應至指定的位址在載入模組的資料。 |
+| [GetMethodDescData](isosdacinterface-getmethoddescdata-method.md) | 取得給定 MethodDesc 指標的資料。 |
+| [GetMethodDescPtrFromIP](isosdacinterface-getmethoddescptrfromip-method.md) | 抓取 MethodDesc 的指標，其對應的方法包含指定的原生指令位址。 |
+| [GetModuleData](isosdacinterface-getmoduledata-method.md)| 提取對應至在指定位址載入之模組的資料。 |
 
 ## <a name="remarks"></a>備註
 
-此介面的執行階段內，而且不會公開透過任何標頭或程式庫檔案。 不過，它是 COM 介面衍生自`IUnknown`含有 GUID `436f00f2-b42a-4b9f-870c-e73db66ae930` ，可以透過一般的 COM 機制取得。
+這個介面存在於執行時間內，而且不會透過任何標頭或程式庫檔案公開。 不過，它是衍生自 `IUnknown` 的 COM 介面，而 GUID `436f00f2-b42a-4b9f-870c-e73db66ae930` 可透過一般的 COM 機制取得。
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** None  
-**LIBRARY:** None  
-**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**標頭：** 無  
+連結**庫：** 無  
+**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯](index.md)
+- [偵錯介面](debugging-interfaces.md)

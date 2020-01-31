@@ -2,12 +2,12 @@
 title: ICorDebugInstanceFieldSymbol 介面
 ms.date: 03/30/2017
 ms.assetid: a4a8f259-b83a-4425-ae8b-72b067dbc0d9
-ms.openlocfilehash: 2ed1d70f554ca0a4a49639fe53a2ddbb0497c0a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41258b0eeed5fbf8ab86546f74073f8eeaa3085c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122726"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777518"
 ---
 # <a name="icordebuginstancefieldsymbol-interface"></a>ICorDebugInstanceFieldSymbol 介面
 代表執行個體欄位的偵錯符號資訊。  
@@ -16,9 +16,9 @@ ms.locfileid: "73122726"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetName 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-getname-method.md)|取得執行個體欄位的名稱。|  
-|[GetOffset 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-getoffset-method.md)|取得在父類別中此執行個體欄位之位元組的位移。|  
-|[GetSize 方法](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-getsize-method.md)|取得執行個體欄位的大小 (以位元組為單位)。|  
+|[GetName 方法](icordebuginstancefieldsymbol-getname-method.md)|取得執行個體欄位的名稱。|  
+|[GetOffset 方法](icordebuginstancefieldsymbol-getoffset-method.md)|取得在父類別中此執行個體欄位之位元組的位移。|  
+|[GetSize 方法](icordebuginstancefieldsymbol-getsize-method.md)|取得執行個體欄位的大小 (以位元組為單位)。|  
   
 ## <a name="remarks"></a>備註  
  `ICorDebugInstanceFieldSymbol` 介面用來擷取執行個體欄位的偵錯符號資訊。  
@@ -37,6 +37,6 @@ ms.locfileid: "73122726"
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugStaticFieldSymbol 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugStaticFieldSymbol 介面](icordebugstaticfieldsymbol-interface.md)
+- [偵錯介面](debugging-interfaces.md)
+- [偵錯](index.md)

@@ -2,12 +2,12 @@
 title: 原生互通性最佳做法 - .NET
 description: 了解在 .NET 中與原生元件建立介面的最佳做法。
 ms.date: 01/18/2019
-ms.openlocfilehash: 7fe0dd0545f8ba800174f8be18bb2f11f39463f9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9486256b815856c0c283f5fe231be3d35d6e8f00
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706396"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742745"
 ---
 # <a name="native-interoperability-best-practices"></a>原生互通性最佳做法
 
@@ -17,17 +17,17 @@ ms.locfileid: "75706396"
 
 本節中的指導方針適用於所有互通案例。
 
-- **✔️ 請這樣做** 為您的方法和參數使用與要呼叫之原生方法相同的命名和大小寫。
-- **✔️ 請考慮** 為常數值使用相同的命名和大小寫。
-- **✔️ 請這樣做** 使用與原生類型對應相近的 .NET 類型。 例如在 C# 中，當原生類型是 `unsigned int` 時就使用 `uint`。
-- **✔️ 請這樣做** 當您想要的行為與預設行為不同時，才使用 `[In]` 和 `[Out]` 屬性。
-- **✔️ 請考慮** 使用 <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> 來建立您的原生陣列緩衝區集區。
-- **✔️ 請考慮** 將您的 P/Invoke 委派包裝在與您的原生程式庫有相同名稱和大小寫的類型中。
+- ✔️對您的方法和參數使用相同的命名和大小寫，做為您要呼叫的原生方法。
+- ✔️請考慮針對常數值使用相同的命名和大小寫。
+- ✔️使用最接近原生類型的 .NET 類型。 例如在 C# 中，當原生類型是 `unsigned int` 時就使用 `uint`。
+- ✔️只有在您想要的行為與預設行為不同時，才使用 `[In]` 和 `[Out]` 屬性。
+- ✔️考慮使用 <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> 來集區您的原生陣列緩衝區。
+- ✔️考慮將 P/Invoke 宣告包裝在具有與原生程式庫相同名稱和大小寫的類別中。
   - 這樣可讓您的 `[DllImport]` 屬性使用 C# `nameof` 語言功能來傳入原生程式庫名稱，並確保您不會拼錯原生程式庫的名稱。
 
 ## <a name="dllimport-attribute-settings"></a>DllImport 屬性設定
 
-| 設定 | Default | 建議 | 詳細資料 |
+| 設定 | 預設值 | 建議 | 詳細資料 |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  保留預設值  | 當此項目明確設為 False 時，失敗的 HRESULT 傳回值會轉換成例外狀況 (結果為定義中的傳回值會變成 Null)。|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | 取決於 API  | 如果 API 使用 GetLastError 並使用 Marshal.GetLastWin32Error 來取得值，請將此項目設為 True。 如果 API 設定的條件指出有錯誤，請先取得該錯誤再進行其他呼叫，以避免不小心複寫它。|
@@ -40,15 +40,15 @@ ms.locfileid: "75706396"
 
 請記得將 `[DllImport]` 標示為 `Charset.Unicode`，除非您明確地想要對字串進行 ANSI 處理。
 
-**❌ 不**使用 `[Out] string` 參數。 使用 `[Out]` 屬性以傳值方式傳遞的字串參數，可能會使執行階段不穩定 (如果該字串是暫留字串)。 請在 <xref:System.String.Intern%2A?displayProperty=nameWithType> 的文件中查看字串暫留的詳細資訊。
+❌ 不使用 `[Out] string` 參數。 使用 `[Out]` 屬性以傳值方式傳遞的字串參數，可能會使執行階段不穩定 (如果該字串是暫留字串)。 請在 <xref:System.String.Intern%2A?displayProperty=nameWithType> 的文件中查看字串暫留的詳細資訊。
 
-**❌ 避免**`StringBuilder` 參數。 `StringBuilder` 封送處理「一律」會建立原生緩衝區複本。 因此，這麼做可能非常沒有效率。 請考慮呼叫接受字串之 Windows API 的典型案例：
+❌ 避免 `StringBuilder` 參數。 `StringBuilder` 封送處理「一律」會建立原生緩衝區複本。 因此，這麼做可能非常沒有效率。 請考慮呼叫接受字串之 Windows API 的典型案例：
 
 1. 建立所需容量的 SB (配置受控容量) **{1}**
 2. 叫用
-   1. 配置原生緩衝區 **{2}**  
-   2. 如果 `[In]` _（`StringBuilder` 參數的預設值）_ ，則複製內容  
-   3. 如果 `[Out]` **{3}** _（也是 `StringBuilder`的預設值）_ ，將原生緩衝區複製到新配置的受控陣列  
+   1. 配置原生緩衝區 **{2}**
+   2. 如果 `[In]` _（`StringBuilder` 參數的預設值）_ ，則複製內容
+   3. 如果 `[Out]` **{3}** _（也是 `StringBuilder`的預設值）_ ，將原生緩衝區複製到新配置的受控陣列
 3. `ToString()` 配置另一個受控陣列 **{4}**
 
 這樣是由 *{4}* 配置從機器碼取得字串。 要限制此情況最好的方式是在其他呼叫中重複使用 `StringBuilder`，但這樣仍然只儲存 *1* 配置。 這樣比較好使用及從 `ArrayPool` 快取字元緩衝區，而且在後續的呼叫您可以直接取得 `ToString()` 的配置。
@@ -57,17 +57,15 @@ ms.locfileid: "75706396"
 
 如果您「確實」使用 `StringBuilder`，最後一個陷阱是該容量**不**包含隱藏的 Null (封送一律會計算)。 這經常被誤解，因為大部分 API 都想要緩衝區「包含」Null。 這會導致浪費/不必要的配置。 此外，此陷阱會防止執行階段最佳化 `StringBuilder` 封送處理以減少複本。
 
-**✔️ 請考慮** 使用來自 `ArrayPool`的 `char[]`。
+✔️考慮使用 `ArrayPool`的 `char[]`。
 
 如需字串封送處理的詳細資訊，請參閱[字串的預設封送處理](../../framework/interop/default-marshaling-for-strings.md)和[自訂字串封送處理](customize-parameter-marshaling.md#customizing-string-parameters)。
 
-> __Windows 特定__  
-> 針對 `[Out]` 字串，CLR 預設會使用 `CoTaskMemFree` 來釋放字串，或是針對標示為 `UnmanagedType.BSTR` 的字串使用 `SysStringFree`。  
-**對於有輸出字串緩衝區的 API**：  
-> 傳入的字元計數必須包含 Null。 如果傳回值小於呼叫接收的傳入字元計數，則該值是「不含」尾端 Null 的字元數目。 否則，該計數為緩衝區「包含」Null 字元所需的大小。  
+> __Windows 特定__針對 `[Out]` 字串，CLR 預設會使用 `CoTaskMemFree` 來釋放字串，或針對標示為 `UnmanagedType.BSTR`的字串 `SysStringFree`。
+> **針對具有輸出字串緩衝區的大部分 api：** 傳入的字元計數必須包含 null。 如果傳回值小於呼叫接收的傳入字元計數，則該值是「不含」尾端 Null 的字元數目。 否則，該計數為緩衝區「包含」Null 字元所需的大小。
 >
 > - 傳入5，取得4：字串長度為4個字元，結尾為 null。
-> - 傳入5，get 6：字串長度為5個字元，需要6個字元的緩衝區來保存 null。  
+> - 傳入5，get 6：字串長度為5個字元，需要6個字元的緩衝區來保存 null。
 > [字串的 Windows 資料類型](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>布林值參數和欄位
@@ -82,7 +80,7 @@ GUID 可直接在特徵標記中使用。 許多 Windows API 都接受 `GUID&` �
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-**❌ 不要**針對 `ref` GUID 參數以外的任何專案使用 `[MarshalAs(UnmanagedType.LPStruct)]`。
+❌ 不會針對 `ref` GUID 參數以外的任何專案使用 `[MarshalAs(UnmanagedType.LPStruct)]`。
 
 ## <a name="blittable-types"></a>Blittable 類型
 
@@ -120,11 +118,11 @@ public struct UnicodeCharStruct
 
 您可以藉由嘗試建立固定的 `GCHandle`，以查看某個類型是否為 Blittable 的。 如果該類型不是字串或被視為 Blittable，則 `GCHandle.Alloc` 會擲回 `ArgumentException`。
 
-**✔️ 請這樣做** 盡可能讓您的結構是 Blittable 的。
+✔️在可能的情況下，將您的結構設為可執行程式。
 
 如需詳細資訊，請參閱＜＞。
 
-- [Blittable 和非 Blittable 類型](../../framework/interop/blittable-and-non-blittable-types.md)  
+- [Blittable 和非 Blittable 類型](../../framework/interop/blittable-and-non-blittable-types.md)
 - [類型封送處理](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>讓受控物件保持運作
@@ -133,7 +131,7 @@ public struct UnicodeCharStruct
 
 [`HandleRef`](xref:System.Runtime.InteropServices.HandleRef) 可讓封送處理器使物件在 P/Invoke 期間保持運作。 可以使用它，而不使用方法特徵標記中的 `IntPtr`。 應改為使用 `SafeHandle`，它可有效地取代此類別。
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) 允許固定受控物件，並取得指向它的原生指標。 基本模式為：  
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) 允許固定受控物件，並取得指向它的原生指標。 基本模式為：
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -215,9 +213,9 @@ Blittable 結構效能更好，因為封送處理層可以直接使用它們。 
 
 在定義中，結構的指標必須以 `ref` 傳遞，或者使用 `unsafe` 和 `*`。
 
-**✔️ 請這樣做** 盡可能近似地對應受控結構與官方平台文件或標頭中所使用的圖形和名稱。
+✔️確實比對受控結構，使其盡可能符合官方平臺檔或標頭中所使用的圖形和名稱。
 
-**✔️ 請這樣做** 針對 Blittable 結構使用 C# `sizeof()`，而不使用 `Marshal.SizeOf<MyStruct>()`，以改善效能。
+✔️確實使用C# `sizeof()`，而不是對可直接執行的結構進行 `Marshal.SizeOf<MyStruct>()`，以改善效能。
 
 `INT_PTR Reserved1[2]` 之類的陣列必須封送至兩個 `IntPtr` 欄位：`Reserved1a` 和 `Reserved1b`。 當原生陣列是基本類型時，我們可以使用 `fixed` 關鍵字來將它撰寫得更簡潔一點。 例如，在原生標頭中 `SYSTEM_PROCESS_INFORMATION` 看起來像這樣：
 
