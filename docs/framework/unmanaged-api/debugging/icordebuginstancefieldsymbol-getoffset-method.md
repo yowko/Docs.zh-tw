@@ -1,15 +1,15 @@
 ---
-title: ICorDebugInstanceFieldSymbol：： GetOffset 方法
+title: ICorDebugInstanceFieldSymbol::GetOffset 方法
 ms.date: 03/30/2017
 ms.assetid: 7e470150-2b92-4425-989c-315f48964fd2
-ms.openlocfilehash: 3886e29a1c2fd44fbe50d1eef722f99da7abdbe5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f7c13d397b39698bdf1a22f14820680e1fd0a25f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139007"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782295"
 ---
-# <a name="icordebuginstancefieldsymbolgetoffset-method"></a>ICorDebugInstanceFieldSymbol：： GetOffset 方法
+# <a name="icordebuginstancefieldsymbolgetoffset-method"></a>ICorDebugInstanceFieldSymbol::GetOffset 方法
 取得在父類別中此執行個體欄位之位元組的位移。  
   
 ## <a name="syntax"></a>語法  
@@ -40,5 +40,5 @@ HRESULT GetOffset(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugInstanceFieldSymbol 介面](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugInstanceFieldSymbol 介面](icordebuginstancefieldsymbol-interface.md)
+- [偵錯介面](debugging-interfaces.md)

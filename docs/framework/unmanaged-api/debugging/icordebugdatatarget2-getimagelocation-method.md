@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget2::GetImageLocation 方法
 ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
-ms.openlocfilehash: 8b873e28bfab31ea18924f471f916475efd345d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba1cc8c91c53547c6ed4025ee67a69e253f3596d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122130"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783587"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a>ICorDebugDataTarget2::GetImageLocation 方法
 從模組的基底位址傳回模組的路徑。  
@@ -24,7 +24,7 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
   
 ## <a name="parameters"></a>參數  
  `baseAddress`  
- 在代表模組基底位址的[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值。  
+ 在[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值，表示模組的基底位址。  
   
  `cchName`  
  [in] 要接收模組路徑之緩衝區中的字元數。  
@@ -51,5 +51,5 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugDataTarget2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDataTarget2 介面](icordebugdatatarget2-interface.md)
+- [偵錯介面](debugging-interfaces.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9321903b-7dea-40d8-ba32-99016c00cc46
 topic_type:
 - apiref
-ms.openlocfilehash: 7f0570b668cc33ca509c8522d1ba35ebcfca2453
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a9ce778cfa1aed4dcf6117c4fe2eca23ccda37a3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125579"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777955"
 ---
 # <a name="icordebugcode2-interface"></a>ICorDebugCode2 介面
 
@@ -29,8 +29,8 @@ ms.locfileid: "73125579"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)|取得此程式碼物件所組成的程式碼區塊。|  
-|[GetCompilerFlags 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcompilerflags-method.md)|取得指定條件的旗標，此程式碼物件是使用原生映射產生器（Ngen.exe）編譯或產生的即時（JIT）。|  
+|[GetCodeChunks 方法](icordebugcode2-getcodechunks-method.md)|取得此程式碼物件所組成的程式碼區塊。|  
+|[GetCompilerFlags 方法](icordebugcode2-getcompilerflags-method.md)|取得指定條件的旗標，此程式碼物件是使用原生映射產生器（Ngen.exe）編譯或產生的即時（JIT）。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -48,5 +48,5 @@ ms.locfileid: "73125579"
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugCode3 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugCode3 介面](icordebugcode3-interface.md)
+- [偵錯介面](debugging-interfaces.md)

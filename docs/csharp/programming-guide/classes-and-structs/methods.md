@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714774"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743912"
 ---
 # <a name="methods-c-programming-guide"></a>方法 (C# 程式設計手冊)
 
@@ -44,7 +44,7 @@ ms.locfileid: "75714774"
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>以傳址方式傳遞與以傳值方式傳遞
 
-根據預設，傳遞實值類型至方法時，會傳遞複本，而不是物件本身。 因此，對引數的變更對於呼叫方法中的原始複本不會有影響。 您可以使用 ref 關鍵字依參考傳遞實值類型。 如需詳細資訊，請參閱[傳遞實值型別參數](./passing-value-type-parameters.md)。 如需內建實值型別的清單，請參閱[實值型別表](../../language-reference/keywords/value-types-table.md)。
+根據預設，當實[數值型別](../../language-reference/builtin-types/value-types.md)的實例傳遞至方法時，會傳遞其複本，而不是實例本身。 因此，對引數所做的變更不會影響呼叫方法中的原始實例。 若要以傳址方式傳遞實數值型別的實例，請使用 `ref` 關鍵字。 如需詳細資訊，請參閱[傳遞實值型別參數](./passing-value-type-parameters.md)。
 
 傳遞參考類型的物件至方法時，會傳遞物件的參考。 也就是說，此方法接收的不是物件本身，而是指出物件位置的引數。 如果您使用此參考變更物件的成員，變更會反映在呼叫方法的引數中，即使以傳值方式傳遞物件。
 
@@ -151,13 +151,13 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 如果方法會傳回 `void` 或非同步方法，則方法的主體必須是陳述式運算式 (如同 lambda)。 若為屬性和索引子，它們必須是唯讀，因此您不應使用 `get` 存取子關鍵字。
 
-## <a name="iterators"></a>Iterators
+## <a name="iterators"></a>迭代器
 
-迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](../../language-reference/keywords/yield.md) 陳述式來一次傳回一個項目。 當 [yield return](../../language-reference/keywords/yield.md) 到達陳述式時，會記住在程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。
+迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](../../language-reference/keywords/yield.md) 陳述式一次傳回一個項目。 當 [yield return](../../language-reference/keywords/yield.md) 到達陳述式時，會記住在程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。
 
 您會使用 [foreach](../../language-reference/keywords/foreach-in.md) 陳述式，透過用戶端程式碼呼叫迭代器。
 
-迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。
+迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。
 
 如需詳細資訊，請參閱[迭代器](../concepts/iterators.md)。
 

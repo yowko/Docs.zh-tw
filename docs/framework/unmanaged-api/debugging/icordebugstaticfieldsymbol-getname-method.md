@@ -1,15 +1,15 @@
 ---
-title: ICorDebugStaticFieldSymbol：： GetName 方法
+title: ICorDebugStaticFieldSymbol::GetName 方法
 ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
-ms.openlocfilehash: e961ae064bd5bb2c97175b4506ddd8c0f17d3b32
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0e4c52ff1ae6113ee2c3990a9d91682e10141902
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131786"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791835"
 ---
-# <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol：： GetName 方法
+# <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol::GetName 方法
 取得靜態欄位的名稱。  
   
 ## <a name="syntax"></a>語法  
@@ -48,5 +48,5 @@ HRESULT GetName(
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugStaticFieldSymbol 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugStaticFieldSymbol 介面](icordebugstaticfieldsymbol-interface.md)
+- [偵錯介面](debugging-interfaces.md)

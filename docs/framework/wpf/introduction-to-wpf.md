@@ -1,17 +1,18 @@
 ---
 title: WPF 簡介
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: d8ea49bbe400c5ec478a94ad7c1adb759af28abb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ecdd3b3c24b71917efb0d982d1f23737673622f9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454190"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744717"
 ---
 # <a name="wpf-overview"></a>WPF 概觀
 
@@ -134,13 +135,13 @@ Namespace SDKSample
 End Namespace
 ```
 
-在這個範例中，程式碼後置會實作一個衍生自 <xref:System.Windows.Window> 類別的類別。 它使用 `x:Class` 屬性來建立標記與程式碼後置類別的關聯， 並從程式碼後置類別的建構函式呼叫 `InitializeComponent`，以合併標記中定義的 UI 與程式碼後置類別 （當您建立應用程式時，系統會為您產生 `InitializeComponent`，這就是您不需要手動執行的原因）。`x:Class` 和 `InitializeComponent` 的組合，可確保您的執行會在建立時正確地初始化。 程式碼後置類別也會針對按鈕的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件實作事件處理常式。 當您按一下按鈕時，事件處理常式會呼叫 <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> 方法來顯示訊息方塊。
+在這個範例中，程式碼後置會實作一個衍生自 <xref:System.Windows.Window> 類別的類別。 它使用 `x:Class` 屬性來建立標記與程式碼後置類別的關聯， 並從程式碼後置類別的建構函式呼叫`InitializeComponent` ，以合併標記中定義的 UI 與程式碼後置類別 （當您建立應用程式時，系統會為您產生`InitializeComponent`，這就是您不需要手動執行的原因）。`x:Class` 和 `InitializeComponent` 的組合，可確保您的執行會在建立時正確地初始化。 程式碼後置類別也會針對按鈕的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件實作事件處理常式。 當您按一下按鈕時，事件處理常式會呼叫 <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> 方法來顯示訊息方塊。
 
 下圖顯示按一下按鈕時的結果：
 
 ![MessageBox](media/introduction-to-wpf/wpfintrofigure25.png)
 
-## <a name="controls"></a>控制項
+## <a name="controls"></a>Controls
 
 應用程式模型所傳遞的使用者體驗是已建構的控制項。 在 WPF 中，「控制項」是一個籠統的名詞，泛指裝載於視窗或頁面上之具有使用者介面並實作一些行為的某種 WPF 類別。
 
@@ -421,7 +422,7 @@ WPF 動畫支援可讓您將控制項設為放大、搖晃、旋轉和淡出，�
 
 如需各種控制項所支援之內容類型的詳細資訊，請參閱 [WPF 內容模型](controls/wpf-content-model.md)。
 
-### <a name="triggers"></a>「觸發程序」
+### <a name="triggers"></a>觸發程序
 
 雖然 XAML 標記的主要目的是要實作應用程式的外觀，您也可以使用 XAML 來實作某些方面的應用程式行為。 其中一個範例是使用觸發程序，根據使用者互動來變更應用程式的外觀。 如需詳細資訊，請參閱[樣式和範本](../../desktop-wpf/fundamentals/styles-templates-overview.md)。
 
@@ -616,7 +617,7 @@ WPF 控制項的預設使用者介面通常是從其他控制項和圖案建構�
 
 ### <a name="custom-controls"></a>自訂控制項
 
-雖然 WPF 提供許多自訂支援，但是您可能還是會遇到現有 WPF 控制項不符合應用程式或其使用者需求的情況。 這種情況的發生原因包括：
+雖然 WPF 提供許多自訂支援，但是您可能還是會遇到現有 WPF 控制項不符合應用程式或其使用者需求的情況。 可能發生的原因有：
 
 - 您無法藉由自訂現有 WPF 實作的外觀和風格，來建立所需的使用者介面。
 
@@ -649,7 +650,7 @@ WPF 控制項的預設使用者介面通常是從其他控制項和圖案建構�
 
 ## <a name="wpf-best-practices"></a>WPF 最佳做法
 
-如同任何開發平台，您可以透過各種方式來使用 WPF，以取得想要的結果。 為了確保您的 WPF 應用程式提供所需的使用者體驗，並符合一般大眾的需求，已針對協助工具、全球化和當地語系化，以及效能提供了建議的最佳作法。 如需詳細資訊，請參閱:
+如同任何開發平台，您可以透過各種方式來使用 WPF，以取得想要的結果。 為了確保您的 WPF 應用程式提供所需的使用者體驗，並符合一般大眾的需求，已針對協助工具、全球化和當地語系化，以及效能提供了建議的最佳作法。 如需詳細資訊，請參閱＜＞。
 
 - [協助工具選項](../ui-automation/accessibility-best-practices.md)
 - [WPF 全球化和當地語系化](advanced/wpf-globalization-and-localization-overview.md)

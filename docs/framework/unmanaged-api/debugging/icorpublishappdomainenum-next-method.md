@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: 0553d8b07e3a16dc31474b5470ba2dd8ba365cb2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8866e98be0dd064138acdf5e0f6fb9c339fb3d2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140510"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790640"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next 方法
 從目前的位置開始，取得目前存在於進程中的指定應用程式域數目。  
@@ -41,10 +41,10 @@ HRESULT Next (
  在要抓取的元素數目。  
   
  `objects`  
- 脫銷已抓取[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)物件之陣列的指標，每個物件都代表一個應用程式域。  
+ 脫銷已抓取[ICorPublishAppDomain](icorpublishappdomain-interface.md)物件之陣列的指標，每個物件都代表一個應用程式域。  
   
  `pceltFetched`  
- 脫銷實際傳回的應用程式域數的指標。 如果 `celt` 是一個，這個值可能會是 null。  
+ 脫銷實際傳回的應用程式域數的指標。 如果 `celt` 為 null，這個值可能會是 null。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -57,4 +57,4 @@ HRESULT Next (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorPublishAppDomainEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)
+- [ICorPublishAppDomainEnum 介面](icorpublishappdomainenum-interface.md)

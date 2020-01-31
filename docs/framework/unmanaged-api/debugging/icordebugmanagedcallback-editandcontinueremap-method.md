@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24a8fcce-317e-48ff-aefc-d86123ada935
 topic_type:
 - apiref
-ms.openlocfilehash: 3fd1686eb268b9d4e347fe28e067a5321327dbd3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9cb956c0262fdcdb5971d049ea7b057aa4d952c0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137381"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781898"
 ---
 # <a name="icordebugmanagedcallbackeditandcontinueremap-method"></a>ICorDebugManagedCallback::EditAndContinueRemap 方法
 這個方法已被取代。 它會通知偵錯工具已將重新對應事件傳送至整合式開發環境（IDE）。  
@@ -50,4 +50,4 @@ HRESULT EditAndContinueRemap (
   
 ## <a name="see-also"></a>請參閱
 
-- [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

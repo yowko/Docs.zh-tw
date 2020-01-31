@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea38ae20-7e0a-427a-be77-d78fae719d82
 topic_type:
 - apiref
-ms.openlocfilehash: 20315dfc426b63f2d526f3481756e165b388b41e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8632799b68ae8f92835d1774472bc1432d886f3b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137603"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793477"
 ---
 # <a name="icordebugeval2createvaluefortype-method"></a>ICorDebugEval2::CreateValueForType 方法
 取得指定類型之新 ICorDebugValue 的指標，其初始值為零或 null。  
@@ -42,7 +42,7 @@ HRESULT CreateValueForType (
  脫銷表示值之 `ICorDebugValue` 物件的位址指標。  
   
 ## <a name="remarks"></a>備註  
- `CreateValueForType` 一般化[ICorDebugEval：： CreateValue](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md) ，可讓您指定任意物件類型，包括如 `List<int>`的結構化類型。 此方法的唯一目的是產生可傳遞至函數評估的值。  
+ `CreateValueForType` 一般化[ICorDebugEval：： CreateValue](icordebugeval-createvalue-method.md) ，可讓您指定任意物件類型，包括如 `List<int>`的結構化類型。 此方法的唯一目的是產生可傳遞至函數評估的值。  
   
  型別必須是類別或實值型別。 您不能使用這個方法來建立陣列值或字串值。  
   

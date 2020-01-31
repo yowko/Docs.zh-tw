@@ -2,12 +2,12 @@
 title: .NET Core 執行階段識別項 (RID) 目錄
 description: 了解執行階段識別碼 (RID) 以及 RID 在 .NET Core 中的使用方式。
 ms.date: 02/22/2019
-ms.openlocfilehash: b4e0226afa3f68d7c0d17b19e66489d70b759cf8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 4369e263f1f46c73f04c65e4124f63c68d133520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733548"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789900"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 
@@ -115,7 +115,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
 僅列出常見值。 如需最新且完整的版本，請參閱 `dotnet/runtime` 儲存機制上的[執行時間. json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json)檔案。 如果下方未列出裝置執行的發行版本，裝置可能可以使用其中一個可攜式 RID。 例如，如果 Raspberry Pi 裝置執行未列出的 Linux 發行版本，則可以 `linux-arm` 為目標。
 
 - 可攜式 (.NET Core 2.0 或更新版本)
-  - `linux-x64` (大部分的桌面發行版本，如 CentOS、Debian、Fedora、Ubuntu 和衍生版)
+  - `linux-x64` （大部分的桌面散發套件，例如 CentOS、Debian、Fedora、Ubuntu 和衍生版本）
   - `linux-musl-x64` (使用 [musl](https://wiki.musl-libc.org/projects-using-musl.html) 的輕量發行版本，如 Alpine Linux)
   - `linux-arm` (在 ARM 上執行的 Linux 發行版本，如 Raspberry Pi)
 - Red Hat Enterprise Linux

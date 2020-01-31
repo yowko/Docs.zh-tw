@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa32b12b-05fc-4ea8-a904-adae25034269
 topic_type:
 - apiref
-ms.openlocfilehash: da921644c4d967efb0d88060ada0332c5eb63965
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2663e5604cdd55472cc148b2d2b38599df81f11e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138536"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794444"
 ---
 # <a name="icordebugguidtotypeenum-interface"></a>ICorDebugGuidToTypeEnum 介面
 提供的列舉值會定義一組 Guid 與其對應類型（由 ICorDebugType 實例表示）之間的對應。 這個介面會繼承 ICorDebugEnum 介面中的方法。  
@@ -28,10 +28,10 @@ ms.locfileid: "73138536"
   
 |方法|描述|  
 |------------|-----------------|  
-|[ICorDebugGuidToTypeEnum：： Next](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-next-method.md)|取得將 Guid 對應至類型資訊的指定[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)實例數目。|  
+|[ICorDebugGuidToTypeEnum：： Next](icordebugguidtotypeenum-next-method.md)|取得將 Guid 對應至類型資訊的指定[CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md)實例數目。|  
   
 ## <a name="remarks"></a>備註  
- 藉由呼叫[ICorDebugAppDomain3：： GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)方法，可以抓取 `ICorDebugGuidToTypeEnum` 介面物件。 偵錯工具可以呼叫這個介面的[下一個](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-next-method.md)方法，來抓取[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)物件，以代表在用於呼叫[之應用程式域中載入的 Windows 執行階段類型的 managed 標記法對應ICorDebugAppDomain3：： GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)方法。  
+ 藉由呼叫[ICorDebugAppDomain3：： GetCachedWinRTTypes](icordebugappdomain3-getcachedwinrttypes-method.md)方法，可以抓取 `ICorDebugGuidToTypeEnum` 介面物件。 偵錯工具可以呼叫這個介面的[下一個](icordebugguidtotypeenum-next-method.md)方法，來抓取[CorDebugGuidToTypeMapping](cordebugguidtotypemapping-structure.md)物件，以代表載入在用於呼叫[ICorDebugAppDomain3：： GetCachedWinRTTypes](icordebugappdomain3-getcachedwinrttypes-method.md)方法之應用程式域中的 Windows 執行階段類型的 managed 標記法。  
   
 ## <a name="requirements"></a>需求  
  **平臺：** Windows 執行階段  
@@ -44,4 +44,4 @@ ms.locfileid: "73138536"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

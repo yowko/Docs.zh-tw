@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc71cbca-7d73-40e5-84dd-2109fade3c2a
 topic_type:
 - apiref
-ms.openlocfilehash: 6de440d10f02f177e62ca3d2bd29fd5e98ea9388
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fdd2fee11e9353c3aa3faee2b137597e4ba47801
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137136"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791173"
 ---
 # <a name="icordebugunmanagedcallback-interface"></a>ICorDebugUnmanagedCallback 介面
 提供與 common language runtime （CLR）不直接相關之原生事件的通知。  
@@ -28,7 +28,7 @@ ms.locfileid: "73137136"
   
 |方法|描述|  
 |------------|-----------------|  
-|[DebugEvent 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-debugevent-method.md)|通知偵錯工具已引發原生事件。|  
+|[DebugEvent 方法](icordebugunmanagedcallback-debugevent-method.md)|通知偵錯工具已引發原生事件。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -46,4 +46,4 @@ ms.locfileid: "73137136"
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [偵錯介面](debugging-interfaces.md)

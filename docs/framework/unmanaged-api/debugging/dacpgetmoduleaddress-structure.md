@@ -1,5 +1,5 @@
 ---
-title: DacpGetModuleAddress Structure
+title: DacpGetModuleAddress 結構
 ms.date: 01/16/2019
 api.name:
 - DacpGetModuleAddress Structure
@@ -15,14 +15,14 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 145b06f89b45b165b9d6329a4c16ac5739406113
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1e3a62de3259c012438c64ece26e696682ec96e6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739189"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789197"
 ---
-# <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress Structure
+# <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress 結構
 
 定義模組位址要求的容器。
 
@@ -37,29 +37,29 @@ struct DacpGetModuleAddress
 };
 ```
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 | 成員      | 描述                |
 | ----------- | -------------------------- |
-| `ModulePtr` | 要模組的指標。 |
+| `ModulePtr` | 模組的指標。 |
 
 ## <a name="methods"></a>方法
 
 | 方法                                                                                               | 描述                                                                    |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [要求](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-request-method.md) | 會執行要求，以填入指定的執行階段結構中的結構。 |
+| [要求](dacpgetmoduleaddress-request-method.md) | 執行要求，以從指定的執行時間結構填入結構。 |
 
 ## <a name="remarks"></a>備註
 
-此結構內執行階段，而且不會公開透過任何標頭或程式庫檔案。 若要使用它，將結構定義成指定上述其中`CLRDATA_ADDRESS`是 64 位元不帶正負號的整數。
+這個結構存在於執行時間中，而且不會透過任何標頭或程式庫檔案來公開。 若要使用它，請定義如上所指定的結構，其中 `CLRDATA_ADDRESS` 是64位不帶正負號的整數。
 
 ## <a name="requirements"></a>需求
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
 **標頭：** 無  
-**LIBRARY:** 無  
+連結**庫：** 無  
 **.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [偵錯](index.md)
+- [偵錯結構](debugging-structures.md)

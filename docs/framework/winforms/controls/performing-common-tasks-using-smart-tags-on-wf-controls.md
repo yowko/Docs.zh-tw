@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作
+title: Performi 在控制項上使用智慧標籤的一般工作
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DesignerAction object model
@@ -9,12 +9,12 @@ ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 07fb43a711ae8b1e2e375b17b136c07f35b1cf39
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 826313d0a89410f62c034a5fba4dee32e90a1750
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459582"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744253"
 ---
 # <a name="walkthrough-perform-common-tasks-using-smart-tags"></a>逐步解說：使用智慧標籤執行一般工作
 
