@@ -4,12 +4,12 @@ description: Azure 函式提供跨多種語言（C#、JavaScript、JAVA）和平
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522875"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920971"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -37,10 +37,10 @@ Azure Functions 執行時間有兩個版本：1.x 和2.x。 1\.x 版正式推出
 
 |語言      |1.x         |2.x      |
 |--------------|------------|---------|
-|**C#**        |GA          |預覽  |
-|**JavaScript**|GA          |預覽  |
+|**C#**        |GA          |Preview  |
+|**JavaScript**|GA          |Preview  |
 |**F#**        |GA          |         |
-|**Java**      |            |預覽  |
+|**Java**      |            |Preview  |
 |**Python**    |實驗|         |
 |**PHP**       |實驗|         |
 |**TypeScript**|實驗|         |
@@ -61,7 +61,7 @@ Azure Functions 執行時間有兩個版本：1.x 和2.x。 1\.x 版正式推出
 有三種常見的方式可供您建立函數應用程式。
 
 - 在入口網站中編寫函式的腳本。
-- 使用 Azure 命令列介面（CLI）來建立必要的資源。
+- 使用 Azure CLI 建立必要的資源。
 - 使用您最愛的 IDE 在本機建立函式，並將其發佈至 Azure。
 
 如需在入口網站中建立腳本函式的詳細資訊，請參閱在[Azure 入口網站中建立您的第一個函數](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)。

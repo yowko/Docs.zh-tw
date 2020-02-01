@@ -2,12 +2,12 @@
 title: Docker 應用程式的開發工作流程
 description: 了解開發 Docker 應用程式的工作流程詳細資料。 一開始會逐步了解一些用以最佳化 Dockerfile 的詳細資料，最後將取得使用 Visual Studio 時可用的簡化工作流程。
 ms.date: 01/07/2019
-ms.openlocfilehash: 0c2789377bc388b8ac7373ee7fa46e3141f1b518
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5df646ffaba67a016d2b18959b9873b52c3d5e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "73740247"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920331"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -409,7 +409,7 @@ docker-compose.yml 檔案指定的不只是使用何種容器，還會指定它�
 
 ### <a name="working-with-docker-composeyml-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 docker-compose.yml
 
-除了將 Dockerfile 新增至專案 (如前所述)，Visual Studio 2017 (15.8 以後) 也可將 Docker Compose 的協調器支援新增至方案。
+除了在專案中新增 Dockerfile，如先前所述，Visual Studio 2017 （從15.8 版）可以將 Docker Compose 的協調器支援新增至解決方案。
 
 當您第一次新增容器協調器支援時 (如圖 5-7 所示)，Visual Studio 會為專案建立 Dockerfile，並在包含數個全域 `docker-compose*.yml` 檔案的方案中建立新的 (服務區段) 專案，然後將專案新增至這些檔案。 然後您可以開啟 docker-compose.yml 檔案，更新它們增加其他功能。
 

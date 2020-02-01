@@ -2,12 +2,12 @@
 title: 為 WCF 開發人員建立新的 ASP.NET Core gRPC 專案 gRPC
 description: 瞭解如何使用 Visual Studio 或命令列來建立 gRPC 專案。
 ms.date: 09/02/2019
-ms.openlocfilehash: ea6d7658404f61fedb25d7de7ddedb7c51437383
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: fbcc598cf503a5baeca941803ff8fa0d5fc99671
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711440"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919404"
 ---
 # <a name="create-a-new-aspnet-core-grpc-project"></a>建立新的 ASP.NET Core gRPC 專案
 
@@ -16,13 +16,13 @@ ms.locfileid: "74711440"
 ## <a name="create-the-project-by-using-visual-studio"></a>使用 Visual Studio 建立專案
 
 > [!IMPORTANT]
-> 若要開發任何 ASP.NET Core 3.0 應用程式，您需要有已安裝**ASP.NET 和 網頁程式開發**工作負載的 Visual Studio 2019 16.3 或更新版本。
+> 若要開發任何 ASP.NET Core 3.0 應用程式，您需要已安裝**ASP.NET 和 網頁程式開發**工作負載的 Visual Studio 2019 16.3 或更新版本。
 
 從*空白解決方案*範本建立名為**TraderSys**的空白解決方案。 新增名為 `src`的方案資料夾。 然後，在資料夾上按一下滑鼠右鍵，然後選擇 [**加入**] > [**新增專案**]。 在 [範本搜尋] 方塊中輸入 `grpc`，您應該會看到名為 `gRPC Service`的專案範本。
 
 ![[新增專案] 對話方塊的螢幕擷取畫面](media/create-project/new-grpc-project.png)
 
-選取 **[下一步**] 以繼續前往 [**設定您的新專案**] 對話方塊。 將專案命名為 `TraderSys.Portfolios`，並將 `src` 子目錄新增至該**位置**。
+選取 **[下一步**] 以繼續前往 [**設定您的新專案**] 對話方塊。 將專案命名為 `TraderSys.Portfolios` 並將 `src` 子目錄新增至該**位置**。
 
 ![[設定您的新專案] 對話方塊的螢幕擷取畫面](media/create-project/configure-project.png)
 

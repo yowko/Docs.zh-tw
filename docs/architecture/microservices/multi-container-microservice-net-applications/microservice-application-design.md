@@ -2,12 +2,12 @@
 title: 設計微服務導向應用程式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解微服務導向應用程式的優點和缺點，讓您能夠採取明智的決策。
 ms.date: 10/02/2018
-ms.openlocfilehash: a783d582f39d25be0123f410553a54af970a4f67
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 63c93f237172d80704c00472ef2d4cbf7c787ab0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739519"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921027"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>設計微服務導向應用程式
 
@@ -83,7 +83,7 @@ ms.locfileid: "73739519"
 
 ### <a name="data-sovereignty-per-microservice"></a>每個微服務的資料自主性
 
-在範例應用程式中，雖然所有 SQL Server 資料庫會部署為單一容器，但每個微服務都擁有自己的資料庫或資料來源。 此設計決策的制定只是為了方便開發人員從 GitHub 取得程式碼、將它複製，並在 Visual Studio 或 Visual Studio Code 中將它開啟。 或者，您可以輕鬆地使用 .NET Core CLI 和 the Docker CLI 來編譯自訂 Docker 映像，然後在 Docker 開發環境中部署及執行映像。 不論使用哪種方法，針對資料來源使用容器可讓開發人員在幾分鐘內建置及部署，而不需要佈建外部資料庫或在基礎結構 (雲端或內部部署) 上有硬式相依性的任何其他資料來源。
+在範例應用程式中，雖然所有 SQL Server 資料庫會部署為單一容器，但每個微服務都擁有自己的資料庫或資料來源。 此設計決策的制定只是為了方便開發人員從 GitHub 取得程式碼、將它複製，並在 Visual Studio 或 Visual Studio Code 中將它開啟。 或者，它也可讓您輕鬆地使用 .NET Core CLI 和 Docker CLI 來編譯自訂 Docker 映射，然後在 Docker 開發環境中部署和執行它們。 不論使用哪種方法，針對資料來源使用容器可讓開發人員在幾分鐘內建置及部署，而不需要佈建外部資料庫或在基礎結構 (雲端或內部部署) 上有硬式相依性的任何其他資料來源。
 
 在實際生產環境中，若要取得高可用性和延展性，資料庫應該以雲端或內部部署 (而不是容器) 中的資料庫伺服器為基礎。
 

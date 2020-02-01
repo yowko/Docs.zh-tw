@@ -2,12 +2,12 @@
 title: 協調微服務和多容器應用程式的高延展性和可用性
 description: 您必須使用協調器來部署和管理實際生產應用程式，以便處理所有容器的健康狀態、工作負載和生命週期。
 ms.date: 02/15/2019
-ms.openlocfilehash: eb02a89a58b7df449edc05461e11fbeeec86b4a1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e548e6b3816dec1e56c273c53c9fd052443eb09b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771094"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919533"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
@@ -21,7 +21,7 @@ ms.locfileid: "72771094"
 
 看起來像邏輯方法。 不過，您該如何處理這些組成應用程式的負載平衡、路由及協調作業？
 
-Docker 命令列介面 (CLI) 滿足一部主機上一個容器的管理需求，但若是更複雜的分散式應用程式，它就無法滿足部署於多部主機上多個容器的管理需求。 在大部分情況下，您需要的管理平台應能自動啟動容器、向外延展容器 (其中每個映像具有多個執行個體)、請視需要暫停或關閉它們，最好也能控制資源 (例如網路和資料儲存體) 的存取方式。
+Docker CLI 符合在一部主機上管理一個容器的需求，但在管理多部主機上部署的多個容器以進行更複雜的分散式應用程式時，它會變得很短暫。 在大部分情況下，您需要的管理平台應能自動啟動容器、向外延展容器 (其中每個映像具有多個執行個體)、請視需要暫停或關閉它們，最好也能控制資源 (例如網路和資料儲存體) 的存取方式。
 
 如果您不只要管理個別容器或組成簡單的應用程式，而是要進展到具有微服務的大型企業應用程式，就必須採用協調流程和叢集平台。
 
@@ -35,7 +35,7 @@ Docker 命令列介面 (CLI) 滿足一部主機上一個容器的管理需求，
 
 ## <a name="software-platforms-for-container-clustering-orchestration-and-scheduling"></a>用於容器叢集、協調流程和排程的軟體平台
 
-| 平台 | 註解 |
+| Platform | 註解 |
 |:---:|:---|
 | **Kubernetes** <br/> ![Kubernetes 標誌的影像。](./media/orchestrate-high-scalability-availability/kubernetes-container-orchestration-system-logo.png) | [*Kubernetes*](https://kubernetes.io/) 是開放原始碼產品，可提供叢集基礎結構、容器排程到容器協調等功能。 它可讓您跨主機叢集自動化部署、規模調整及應用程式容器的作業。 <br/> <br/> *Kubernetes* 提供以容器為中心的基礎結構，讓您將應用程式容器分組為邏輯單元，以便於管理及探索。 <br/> <br/> 比起 Windows，*Kubernetes* 在 Linux 中相對成熟穩定。 |
 | **Azure Kubernetes Service (AKS)** <br/> ![Azure Kubernetes Service 標誌的影像。](./media/orchestrate-high-scalability-availability/azure-kubernetes-service-logo.png) | [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/) 是 Azure 中的受控 Kubernetes 容器協調流程服務，可簡化 Kubernetes 叢集的管理、部署和作業。 |
@@ -78,7 +78,7 @@ Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放�
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>使用 Helm 圖表部署到 Kubernetes 叢集中
 
-將應用程式部署到 Kubernetes 叢集時，您可以搭配採用原生格式的部署檔案 (`kubectl.exe` 檔案) 來使用原始 `.yaml` CLI 工具，如上一節中所述。 不過，對於更複雜的 Kubernetes 應用程式 (例如部署複雜的微服務應用程式時)，則建議使用 [Helm](https://helm.sh/)。
+將應用程式部署到 Kubernetes 叢集時，您可以搭配採用原生格式的部署檔案 (`.yaml` 檔案) 來使用原始 `kubectl.exe` CLI 工具，如上一節中所述。 不過，對於更複雜的 Kubernetes 應用程式 (例如部署複雜的微服務應用程式時)，則建議使用 [Helm](https://helm.sh/)。
 
 即便是最複雜的 Kubernetes 應用程式，Helm 圖表也能協助您定義、設定版本、安裝、共用、升級或復原。
 
@@ -145,7 +145,7 @@ Service Fabric 不在乎您用什麼方法來建置服務，所以您可以使�
 
 如需 Azure Service Fabric 容器支援的最新資訊，請參閱 [Service Fabric 和容器](https://docs.microsoft.com/azure/service-fabric/service-fabric-containers-overview)。
 
-Service Fabric 是良好的平台範例，您可在此定義與實體實作不同的邏輯架構 (商務微服務或繫結的內容)。 例如，如果您實作 [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) 的[具狀態可靠服務](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) (下一節＜[無狀態與具狀態的微服務](#stateless-versus-stateful-microservices)＞中會介紹)，您會擁有具備多項實體服務的商務微服務概念。
+Service Fabric 是良好的平台範例，您可在此定義與實體實作不同的邏輯架構 (商務微服務或繫結的內容)。 例如，如果您實作 [Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) 的[具狀態可靠服務](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) (下一節＜[無狀態與具狀態的微服務](#stateless-versus-stateful-microservices)＞中會介紹)，您會擁有具備多項實體服務的商務微服務概念。
 
 如圖 4-10 所示，就邏輯/商務微服務的觀點而言，實作 Service Fabric 具狀態可靠服務時，您通常需要實作兩層服務。 第一項是後端具狀態可靠服務，處理多個分割 (每個分割都是一項具狀態服務)。 第二項是前端服務，或稱閘道服務，負責跨多個分割或具狀態服務執行個體的路由及資料彙總。 閘道服務也會使用存取後端服務的重試迴圈來處理用戶端通訊。 如果您實作您的自訂服務，它就稱為閘道服務；或者您也可以使用現成可用的 Service Fabric [反向 Proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)。
 
