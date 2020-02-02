@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134182"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921199"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>如何：撰寫簡單的 Parallel ForEach 迴圈
 
@@ -47,7 +47,7 @@ ms.locfileid: "73134182"
 
 在 Visual Studio 中，有 Windows Desktop 及 .NET Core 的 Visual Basic 及 C# 主控台應用程式範本。
 
-從命令列中，您可使用 .NET Core 及其 CLI 工具 (例如 `dotnet new console` 或 `dotnet new console -lang vb`)，或者可建立檔案，然後使用 .NET Framework 應用程式的命令列編譯器。
+您可以從命令列使用 .NET Core CLI 命令（例如，`dotnet new console` 或 `dotnet new console -lang vb`），也可以建立檔案，並針對 .NET Framework 應用程式使用命令列編譯器。
 
 對於 .NET Core 專案，您必須參考 **System.Drawing.Common** NuGet 套件。 在 Visual Studio 中，使用 NuGet 套件管理員來安裝套件。 或者，您可將參考新增至 \*.csproj 或 \*.vbproj 檔案中的套件：
  

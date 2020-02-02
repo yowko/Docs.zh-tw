@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 45b710c3b2d1647e1bf7e57b30a96192abb9d788
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7101719f77a03909d9a38dca93100ec90c1add13
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345054"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921379"
 ---
 # <a name="tcptransport"></a>\<tcpTransport >
 定義 TCP 傳輸，通道可使用此傳輸來傳輸自訂繫結的訊息。  
@@ -62,7 +62,7 @@ ms.locfileid: "75345054"
 |maxPendingConnections|取得或設定服務上等待分派之連線的數目上限。|  
 |maxReceivedMessageSize|取得及設定可接收之可允許的訊息大小上限。|  
 |portSharingEnabled|布林值，指定是否啟用這個連線的 TCP 連接埠共用功能。 如果這是 `false`，則每個繫結將使用它自己的獨佔連接埠。 預設為 `false`。<br /><br /> 這個設定只與服務有關。 用戶端不受影響。<br /><br /> 使用這個設定必須將 [啟動類型] 改為 [手動] 或 [自動]，以啟用 Windows Communication Foundation (WCF) TCP Port Sharing Service。|  
-|teredoEnabled|布林值，指定是否啟用 Teredo (對防火牆後的用戶端進行定址的技術)。 預設為 `false`。<br /><br /> 這個屬性會針對基礎 TCP 通訊端啟用 Teredo。 如需詳細資訊，請參閱[Teredo 總覽](https://go.microsoft.com/fwlink/?LinkId=95339)。<br /><br /> 此屬性僅適用于 [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] 和 Windows Server 2003。 Windows Vista 有適用于 Teredo 的全電腦設定選項，因此在執行 Vista 時，會忽略這個屬性。 Teredo 需要用戶端和服務電腦都已安裝 Microsoft IPv6 堆疊並正確設定，才能使用 Teredo。 如需設定 Teredo 的詳細資訊，請參閱[Teredo 總覽](https://go.microsoft.com/fwlink/?LinkId=95339)。 如需詳細資訊，請參閱[Windows Server 2003 技術中心](https://go.microsoft.com/fwlink/?LinkId=49888)。|  
+|teredoEnabled|布林值，指定是否啟用 Teredo (對防火牆後的用戶端進行定址的技術)。 預設為 `false`。<br /><br /> 這個屬性會針對基礎 TCP 通訊端啟用 Teredo。 如需詳細資訊，請參閱[Teredo 總覽](https://go.microsoft.com/fwlink/?LinkId=95339)。<br /><br /> 此屬性僅適用于 Windows XP SP2 和 Windows Server 2003。 Windows Vista 有適用于 Teredo 的全電腦設定選項，因此在執行 Vista 時，會忽略這個屬性。 Teredo 需要用戶端和服務電腦都已安裝 Microsoft IPv6 堆疊並正確設定，才能使用 Teredo。 如需設定 Teredo 的詳細資訊，請參閱[Teredo 總覽](https://go.microsoft.com/fwlink/?LinkId=95339)。 如需詳細資訊，請參閱[Windows Server 2003 技術中心](https://go.microsoft.com/fwlink/?LinkId=49888)。|  
 |transferMode|取得或設定值，這個值表示訊息是否使用連線導向傳輸進行緩衝或資料流處理。|  
 |connectionPoolSettings|為具名管道繫結指定其他連線集區設定。|  
   

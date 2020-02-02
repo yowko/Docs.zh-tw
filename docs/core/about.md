@@ -2,12 +2,12 @@
 title: 關於 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900623"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920963"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -58,14 +58,14 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 
 - [.Net Core 運行](https://github.com/dotnet/runtime/tree/master/src/coreclr)時間，提供類型系統、元件載入、垃圾收集行程、原生 interop 及其他基本服務。 [.Net Core framework 程式庫](https://github.com/dotnet/runtime/tree/master/src/libraries)提供基本資料類型、應用程式組合類型，以及基礎公用程式。
 - [ASP.NET Core 運行](https://github.com/dotnet/aspnetcore)時間，它會提供用來建立新式雲端式網際網路連線應用程式的架構，例如 web Apps、IoT app 和 mobile 後端。
-- [.NET Core CLI 工具](https://github.com/dotnet/sdk)及語言編譯器 ([Roslyn](https://github.com/dotnet/roslyn) 和 [F#](https://github.com/microsoft/visualfsharp)) 可提供 .NET Core 開發人員體驗。
-- [dotnet 工具](https://github.com/dotnet/core-setup)用於啟動 .NET Core 應用程式和 CLI 工具。 它會選取執行時間並裝載執行時間、提供元件載入原則，以及啟動應用程式和工具。
+- 可啟用 .NET Core 開發人員體驗的[F#](https://github.com/microsoft/visualfsharp) [.NET Core SDK](https://github.com/dotnet/sdk)和語言編譯器（[Roslyn](https://github.com/dotnet/roslyn)和）。
+- [Dotnet 命令](./tools/dotnet.md)，用來啟動 .net Core 應用程式和 CLI 命令。 它會選取執行時間並裝載執行時間、提供元件載入原則，以及啟動應用程式和工具。
 
 這些元件的散發方式如下：
 
 - [.NET Core 執行階段](https://dotnet.microsoft.com/download) -- 包括 .NET Core 執行階段及架構程式庫。
 - [ASP.NET Core 執行階段](https://dotnet.microsoft.com/download) -- 包括 ASP.NET Core 和 .NET Core 執行階段及架構程式庫。
-- [.NET Core SDK](https://dotnet.microsoft.com/download) -- 包括 .NET CLI 工具、ASP.NET Core 執行階段、.NET Core 執行階段和架構。
+- [.NET Core SDK](https://dotnet.microsoft.com/download) --包括 .NET Core CLI、ASP.NET Core 執行時間，以及 .net Core 執行時間和架構。
 
 ### <a name="open-source"></a>開啟原始檔
 

@@ -1,16 +1,16 @@
 ---
-title: 使用 .NET Core 命令列組織和測試專案
+title: 使用 .NET Core CLI 組織和測試專案
 description: 本教學課程說明如何從命令列組織和測試 .NET Core 專案。
 author: cartermp
 ms.date: 09/10/2018
-ms.openlocfilehash: fdaa42be4d3b8872a3119f97f253ce277564339e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 11d13ad1d74c69cdfe0626bda8823dd0609da85f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715346"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920411"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>使用 .NET Core 命令列組織和測試專案
+# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>使用 .NET Core CLI 組織和測試專案
 
 此教學課程遵循[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core](cli-create-console-app.md)，讓您超越建立簡單主控台應用程式來開發進階且井然有序的應用程式。 此教學課程在示範如何使用資料夾來組織您的程式碼之後，會示範如何使用 [xUnit](https://xunit.github.io/) 測試架構來擴充主控台應用程式。
 

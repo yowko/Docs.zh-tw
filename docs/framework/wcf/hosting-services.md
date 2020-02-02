@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 7a77f7d11bbd2b685bdcf53a3992b4e04b3691b8
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9608f9cc55bbba29686440be529659c6606b0eb8
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901235"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921042"
 ---
 # <a name="hosting-services"></a>裝載服務
 
@@ -19,7 +19,7 @@ WCF 提供統一的程式設計模型，用來建立服務導向的應用程式�
 
 這些裝載選項的範圍從在主控台應用程式中執行到伺服器環境 (例如，在由網際網路資訊服務 (IIS) 或 Windows Process Activation Service (WAS) 管理的背景工作處理序中執行的 Windows 服務) 不一而足。 開發人員可選擇滿足服務部署需求的裝載環境。 這些需求可能源自部署了應用程式的平台、應用程式必須賴以傳送與接收訊息的傳輸，或是用來確保足夠可用性所需的處理序回收類型與其他處理序管理，或是其他一些管理或可靠性需求。 下節將提供有關裝載選項的資訊與指引。
 
-## <a name="hosting-options"></a>主機選項
+## <a name="hosting-options"></a>裝載選項
 
 ### <a name="self-host-in-a-managed-application"></a>受控應用程式中的自我裝載
  WCF 服務可以裝載于任何 managed 應用程式中。 這是最彈性的選項，因為它只需要最少的基礎結構就可部署。 您可以將服務的程式碼嵌入 Managed 應用程式程式碼中，然後建立並開啟 <xref:System.ServiceModel.ServiceHost> 的執行個體以便提供服務。 如需詳細資訊，請參閱[如何：在 Managed 應用程式中裝載 WCF 服務](how-to-host-a-wcf-service-in-a-managed-application.md)。
@@ -32,9 +32,9 @@ WCF 提供統一的程式設計模型，用來建立服務導向的應用程式�
 
 ### <a name="internet-information-services-iis"></a>Internet Information Services (IIS)
 
-IIS 裝載選項會與 ASP.NET 整合，並使用這些技術所提供的功能，例如進程回收、閒置關機、進程健康狀態監控，以及訊息型啟用。 在 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 和 Windows Server 2003 作業系統上，這是裝載 Web 服務應用程式的慣用解決方案，必須具備高可用性且可高度擴充性。 IIS 同時提供整合式管理功能，而這也是客戶希望從企業級伺服器產品中所得到的功能。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 如需如何設定 WCF 服務之 IIS 裝載的詳細資訊，請參閱[如何：在 iis 中裝載 Wcf 服務](./feature-details/how-to-host-a-wcf-service-in-iis.md)。
+IIS 裝載選項會與 ASP.NET 整合，並使用這些技術所提供的功能，例如進程回收、閒置關機、進程健康狀態監控，以及訊息型啟用。 在 Windows XP 和 Windows Server 2003 作業系統上，這是裝載 Web 服務應用程式的慣用解決方案，其必須具備高度可用性且可高度擴充性。 IIS 同時提供整合式管理功能，而這也是客戶希望從企業級伺服器產品中所得到的功能。 這個裝載選項要求必須正確設定 IIS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 如需如何設定 WCF 服務之 IIS 裝載的詳細資訊，請參閱[如何：在 iis 中裝載 Wcf 服務](./feature-details/how-to-host-a-wcf-service-in-iis.md)。
 
- IIS 託管的服務只能使用 HTTP 傳輸。 它在 IIS 5.1 版的實作方式已經為 [!INCLUDE[wxp](../../../includes/wxp-md.md)]帶來一些限制。 IIS 5.1 針對 WCF 服務所提供的訊息型啟用 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 會封鎖同一部電腦上任何其他自我裝載的 WCF 服務，使其無法使用埠80進行通訊。 WCF 服務可以在與其他應用程式相同的 AppDomain/應用程式集區/背景工作進程中執行，在 Windows Server 2003 上由 IIS 6.0 裝載。 但因為 WCF 和 IIS 6.0 都使用核心模式 HTTP 堆疊（HTTP.SYS），所以 IIS 6.0 可以與在同一部電腦上執行的其他自我裝載 WCF 服務共用埠80，而不像 IIS 5.1。
+ IIS 託管的服務只能使用 HTTP 傳輸。 它在 IIS 5.1 中的執行功能在 Windows XP 中引進了一些限制。 Windows XP 上的 IIS 5.1 針對 WCF 服務所提供的訊息型啟用，會封鎖同一部電腦上任何其他自我裝載的 WCF 服務，使其無法使用埠80進行通訊。 WCF 服務可以在與其他應用程式相同的 AppDomain/應用程式集區/背景工作進程中執行，在 Windows Server 2003 上由 IIS 6.0 裝載。 但因為 WCF 和 IIS 6.0 都使用核心模式 HTTP 堆疊（HTTP.SYS），所以 IIS 6.0 可以與在同一部電腦上執行的其他自我裝載 WCF 服務共用埠80，而不像 IIS 5.1。
 
 ### <a name="windows-process-activation-service-was"></a>Windows Process Activation Service (WAS)
 
@@ -57,9 +57,9 @@ Windows 進程啟用服務（WAS）是 windows Server 2008 的新進程啟用機
 
 |裝載環境|平台可用性|支援的傳輸|處理序和 AppDomain 回收|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|Managed 應用程式 (「自我裝載」)|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|
-|Windows 服務 (之前稱為 NT 服務)|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|
-|IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|是|
+|Managed 應用程式 (「自我裝載」)|Windows XP、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|
+|Windows 服務 (之前稱為 NT 服務)|Windows XP、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|
+|IIS 5.1|Windows XP|HTTP|是|
 |IIS 6.0|Windows Server 2003|HTTP|是|
 |Windows Process Activation Service (WAS)|Windows Vista、Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|是|
 

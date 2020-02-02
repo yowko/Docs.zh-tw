@@ -2,12 +2,12 @@
 title: 從 DNX 移轉到 .NET Core CLI
 description: 從使用 DNX 工具移轉為 .NET Core CLI 工具。
 ms.date: 06/20/2016
-ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715518"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920631"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>從 DNX 移轉到 .NET Core CLI (project.json)
 
@@ -30,9 +30,9 @@ ms.locfileid: "75715518"
 ### <a name="no-more-dnvm"></a>不再有 DNVM
 DNVM 是「DotNet 版本管理員」的簡稱，其為一種可用來在電腦上安裝 DNX 的 Bash/PowerShell 指令碼。 它可幫助使用者從其指定的摘要 (或預設摘要) 取得所需的 DNX，並將特定 DNX 標示為「作用中」，以將它放在指定工作階段的 $PATH 中。 這樣一來，您就可以使用各種工具。
 
-DNVM 已停用，因為其功能集與 .NET Core CLI 工具引入的變更重複。
+DNVM 已中止，因為 .NET Core CLI 中的變更將其功能集設為多餘的。
 
-CLI 工具已透過兩種主要方式進行封裝：
+CLI 以兩種主要方式封裝：
 
 1. 適用於指定平台的原生安裝程式
 2. 適用於其他情況的安裝指令碼 (例如 CI 伺服器)
@@ -69,7 +69,7 @@ DNU 具有「全域命令」的概念。 基本上，這當中包括封裝為 Nu
 CLI 不支援此概念。 不過，它支援新增個別專案命令的概念；您可使用熟悉的 `dotnet <command>` 語法叫用這些命令。
 
 ### <a name="installing-dependencies"></a>安裝相依性
-截至 v1 為止，.NET Core CLI 工具都沒有可安裝相依性的 `install` 命令。 若要從 NuGet 安裝套件，您必須將它以相依性形式新增至 `project.json` 檔案，然後執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note))。
+從 v1 起，.NET Core CLI 沒有用於安裝相依性的 `install` 命令。 若要從 NuGet 安裝套件，您必須將它以相依性形式新增至 `project.json` 檔案，然後執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note))。
 
 ### <a name="running-your-code"></a>執行您的程式碼
 有以下兩種執行程式碼的主要方式。 一個是使用 `dotnet run`，從來源執行。 不同於 `dnx run`，這麼做並不會執行任何記憶體中編譯。 實際上，它會叫用 `dotnet build` 以建置您的程式碼，然後執行建置的二進位檔。
@@ -84,7 +84,7 @@ CLI 不支援此概念。 不過，它支援新增個別專案命令的概念；
 3. 將任何 DNX API 移轉至其 BCL 對應項目。
 
 ### <a name="changing-the-globaljson-file"></a>變更 global.json 檔案
-`global.json` 檔案的作用如同 RC1 和 RC2 (或更新版本) 專案的方案檔。 為了讓 CLI 工具 (以及 Visual Studio) 區分 RC1 與更新版本的差異，該工具會使用 `"sdk": { "version" }` 屬性來區分哪些專案是 RC1 或更新版本。 如果 `global.json` 完全沒有這個節點，就會假設其為最新版本。
+`global.json` 檔案的作用如同 RC1 和 RC2 (或更新版本) 專案的方案檔。 為了讓 .NET Core CLI （以及 Visual Studio）區分 RC1 和更新版本，它們會使用 `"sdk": { "version" }` 屬性來區分 RC1 或更新版本的專案。 如果 `global.json` 完全沒有這個節點，就會假設其為最新版本。
 
 若要更新 `global.json` 檔案，可移除該屬性或將它設為您想要使用之工具的正確版本，在此案例中為 **1.0.0-preview2-003121**：
 

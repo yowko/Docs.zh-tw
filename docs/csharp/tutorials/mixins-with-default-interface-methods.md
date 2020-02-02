@@ -3,12 +3,12 @@ title: 使用預設介面方法建立 mixin 類型
 description: 使用預設介面成員，您可以使用實作者的選擇性預設實作為擴充介面。
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140854"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921451"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>教學課程：使用具有預設介面方法的介面建立類別時，混合中的功能
 
@@ -22,9 +22,9 @@ ms.locfileid: "74140854"
 > * 建立使用預設實現的類別。
 > * 建立會覆寫部分或全部預設實作為的類別。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
-您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 C# 8.0 編譯器從[Visual Studio 2019、16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) （含）以後版本開始提供。
+您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) （含）以後版本開始提供8.0 編譯器。
 
 ## <a name="limitations-of-extension-methods"></a>擴充方法的限制
 
@@ -45,7 +45,7 @@ ms.locfileid: "74140854"
 
 其中一些擴充功能可以在支援最小設定的裝置上進行模擬。 ，表示提供預設的執行。 對於內建更多功能的裝置，裝置軟體會使用原生功能。 針對其他光源，他們可以選擇執行介面，並使用預設的實作為。
 
-在此案例中，預設介面成員是比擴充方法更好的解決方案。 類別作者可以控制他們選擇要執行的介面。 它們所選擇的介面可以做為方法。 此外，因為預設介面方法是虛擬的，所以方法分派一律會選擇類別中的實值。 
+在此案例中，預設介面成員是比擴充方法更好的解決方案。 類別作者可以控制他們選擇要執行的介面。 它們所選擇的介面可以做為方法。 此外，因為預設介面方法是虛擬的，所以方法分派一律會選擇類別中的實值。
 
 讓我們建立程式碼來示範這些差異。
 
@@ -75,11 +75,11 @@ ms.locfileid: "74140854"
 public class OverheadLight : ITimerLight { }
 ```
 
-不同的光源類型可能會支援更複雜的通訊協定。 它可以為 `TurnOnFor` 提供自己的執行，如下列程式碼所示：
+不同的光源類型可能會支援更複雜的通訊協定。 它可以為 `TurnOnFor`提供自己的執行，如下列程式碼所示：
 
 [!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
-不同于覆寫虛擬類別方法，`HalogenLight` 類別中的 `TurnOnFor` 宣告不會使用 `override` 關鍵字。 
+不同于覆寫虛擬類別方法，`HalogenLight` 類別中的 `TurnOnFor` 宣告不會使用 `override` 關鍵字。
 
 ## <a name="mix-and-match-capabilities"></a>混合和比對功能
 
@@ -123,6 +123,6 @@ public class OverheadLight : ITimerLight { }
 
 這些變更會完全編譯，即使 `ExtraFancyLight` 宣告 `ILight` 介面和衍生介面的支援，`ITimerLight` 和 `IBlinkingLight`。 在 `ILight` 介面中，只會宣告一個「最接近」的實作為。 任何宣告覆寫的類別都會變成一個「最接近」的執行。 您在上述類別中看到的範例會已覆寫其他衍生介面的成員。
 
-避免在多個衍生介面中覆寫相同的方法。 如此一來，每當類別同時執行兩個衍生介面時，就會建立不明確的方法呼叫。 編譯器無法挑選一個更好的方法，因此它會發出錯誤。 例如，如果 `IBlinkingLight` 和 `ITimerLight` 都實作為 `PowerStatus` 的覆寫，`OverheadLight` 就必須提供更明確的覆寫。 否則，編譯器就無法在兩個衍生介面中的執行之間進行選擇。 您通常可以藉由讓介面定義更小且專注于一項功能，來避免這種情況。 在此案例中，每個光線的功能都是它自己的介面;只有類別會繼承多個介面。
+避免在多個衍生介面中覆寫相同的方法。 如此一來，每當類別同時執行兩個衍生介面時，就會建立不明確的方法呼叫。 編譯器無法挑選一個更好的方法，因此它會發出錯誤。 例如，如果 `IBlinkingLight` 和 `ITimerLight` 都實作為 `PowerStatus`的覆寫，`OverheadLight` 就必須提供更明確的覆寫。 否則，編譯器就無法在兩個衍生介面中的執行之間進行選擇。 您通常可以藉由讓介面定義更小且專注于一項功能，來避免這種情況。 在此案例中，每個光線的功能都是它自己的介面;只有類別會繼承多個介面。
 
 這個範例會示範一個案例，您可以在其中定義可以混合成類別的離散功能。 您可以宣告類別支援的介面，以宣告任何一組支援的功能。 使用虛擬預設介面方法，可讓類別針對任何或所有介面方法使用或定義不同的執行。 此語言功能提供新的方法，讓您建立您所打造的真實世界系統模型。 預設介面方法提供更清楚的方式來表達相關的類別，這些類別可能會使用這些功能的虛擬實現來混合和比對不同的功能。

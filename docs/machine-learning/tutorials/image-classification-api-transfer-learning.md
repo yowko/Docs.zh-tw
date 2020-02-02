@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: eb61ad85580310c7becc2a1a2237efe188fbecf0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2dfa3cdab9de47b55f7a3f73f0d6e9460390700c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794585"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920093"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>教學課程：搭配 ML.NET 影像分類 API 使用傳輸學習的自動化視覺效果檢查
 
@@ -28,7 +28,7 @@ ms.locfileid: "76794585"
 
 ## <a name="prerequisites"></a>必要條件：
 
-- 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+- 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)版本。
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>影像分類傳輸學習範例總覽
 
@@ -253,7 +253,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 模型訓練包含幾個步驟。 首先，使用影像分類 API 來定型模型。 然後，`PredictedLabel` 資料行中的編碼標籤會使用 `MapKeyToValue` 轉換，轉換回其原始類別值。
 
-1. 建立新的變數來儲存 `ImageClassificationTrainer`的一組必要和選擇性參數。 
+1. 建立新的變數來儲存 `ImageClassificationTrainer`的一組必要和選擇性參數。
 
     [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L57)]
 

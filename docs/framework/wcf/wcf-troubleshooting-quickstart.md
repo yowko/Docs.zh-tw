@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: dfbf5a9b437d0acea16a75236fd3d2861c0f2e06
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 2fef4c7b00fd6a1ed8f85a8bfa01ef9cfffa1bbb
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802363"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919944"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑難排解快速入門
 本主題列出客戶在開發 WCF 用戶端和服務時會碰到的幾個已知問題。 如果您遇到的問題不在此清單中，建議您為您的服務設定追蹤。 這會產生一個追蹤檔案，您可以使用追蹤檔案檢視器檢視這個檔案，並取得服務中可能會發生之例外狀況的詳細資訊。 如需設定追蹤的詳細資訊，請參閱： [Configuring Tracing](./diagnostics/tracing/configuring-tracing.md)。 如需追蹤檔案檢視器的詳細資訊，請參閱： [Service Trace Viewer Tool (SvcTraceViewer.exe)](service-trace-viewer-tool-svctraceviewer-exe.md)。  
@@ -158,7 +158,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>我使用 X.509 憑證搭配我的服務，然後得到 System.Security.Cryptography.CryptographicException。 這是為什麼？  
- 這常常發生在變更用來執行 IIS 背景工作處理序的使用者帳戶之後。 例如，在 [!INCLUDE[wxp](../../../includes/wxp-md.md)]中，如果您將用於執行 Aspnet_wp.exe 的預設使用者帳戶從 ASPNET 變更為自訂使用者帳戶，您可能會看到這個錯誤。 如果使用私密金鑰，使用它的處理序將會需要有權限才能存取儲存該金鑰的檔案。  
+ 這常常發生在變更用來執行 IIS 背景工作處理序的使用者帳戶之後。 例如，在 Windows XP 中，如果您將 Aspnet_wp 執行的預設使用者帳戶從 ASPNET 變更為自訂使用者帳戶，您可能會看到此錯誤。 如果使用私密金鑰，使用它的處理序將會需要有權限才能存取儲存該金鑰的檔案。  
   
  如果是這種情況，您必須提供存取權限給處理序的帳戶，檔案才能包含私密金鑰。 例如，如果 IIS 背景工作處理序正在 Bob 帳戶下執行，則您會需要為 Bob 提供含有私密金鑰的檔案的讀取權。  
   

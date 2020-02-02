@@ -3,12 +3,12 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708200"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921116"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -167,7 +167,7 @@ Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS �
 
 用於開發 .NET Core 應用程式的跨平台工具鏈。
 
-請參閱 [.NET Core 命令列介面 (CLI) 工具](../core/tools/index.md)。
+請參閱[.NET Core CLI](../core/tools/index.md)。
 
 ## <a name="net-core-sdk"></a>.NET Core SDK
 

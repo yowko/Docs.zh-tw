@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6116b2322ed2071b78bcd77de7c38ad07c327aa6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740834"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920898"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
@@ -28,7 +28,7 @@ ms.locfileid: "75740834"
 
 ## <a name="framework-dependent-deployment"></a>與 Framework 相依的部署
 
-部署無任何協力廠商相依性的 Framework 相依部署，只涉及建置、測試和發行應用程式。 以 C# 撰寫的簡單範例會說明此程序。  
+部署無任何協力廠商相依性的 Framework 相依部署，只涉及建置、測試和發行應用程式。 以 C# 撰寫的簡單範例會說明此程序。
 
 1. 建立專案。
 
@@ -92,11 +92,11 @@ ms.locfileid: "75740834"
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
-1. 決定您是否想使用全域無差異模式。
+1. 決定您是否想使用全球不區分模式。
 
    尤其當您的應用程式以 Linux 為目標時，使用全域無差異模式[能減少您部署的總大小](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)。 全域無差異模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有不因文化特性而異的[排列次序](xref:System.Globalization.CultureInfo.InvariantCulture)。
 
-   在您的專案 (而非解決方案) 點擊右鍵，進入 [方案總管]，然後選取 [Edit SCD.csproj] \(編輯 SCD.csproj\) 或 [Edit SCD.vbproj] \(編輯 SCD.vbproj\) 啟用非變異模式。 接著，將下列反白的幾行新增至檔案：
+   在您的專案 (而非解決方案) 點擊右鍵，進入 [方案總管]，然後選取 [Edit SCD.csproj] \(編輯 SCD.csproj\) 或 [Edit SCD.vbproj] \(編輯 SCD.vbproj\) 啟用非變異模式。 接著，將反白處新增至檔案中：
 
    [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj?highlight=6-8)]
 
@@ -189,7 +189,7 @@ ms.locfileid: "75740834"
    如果您已建立設定檔，請以滑鼠右鍵按一下專案，以開啟 [發行] 對話方塊 (如尚未開啟)。 然後選取 [新增設定檔]。
 
    [挑選發行目標] 對話方塊隨即開啟。
-  
+
 1. 選取 Visual Studio 發行您應用程式的位置。
 
    如果您只是要發行到單一平臺，可以接受 [**選擇資料夾**] 文字方塊中的預設值;這會將應用程式的架構相依部署發佈至 *\<專案目錄 > \bin\Release\netcoreapp2.1\publish*目錄。
@@ -244,7 +244,7 @@ ms.locfileid: "75740834"
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-https://go.microsoft.com/fwlink/?LinkID=208121. 
+https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>

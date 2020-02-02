@@ -2,12 +2,12 @@
 title: 服務身分識別範例
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 375246127b6b39440360f48fc7b24bd0388a35e5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 868bd6e0ac7429224462c973c1c48132ec3860ba
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347930"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919370"
 ---
 # <a name="service-identity-sample"></a>服務身分識別範例
 這個服務身分識別範例示範如何設定服務的身分識別。 在設計階段，用戶端可以使用服務的中繼資料擷取身分識別，然後在執行階段，用戶端就可以驗證服務的身分識別。 服務身分識別的概念主要是允許用戶端在呼叫任何作業之前驗證服務，從而保護用戶端以免遭到未經驗證的呼叫。 在安全連線上，服務還會在允許用戶端存取之前驗證其認證，但這不是本範例的重點。 請參閱[用戶端](../../../../docs/framework/wcf/samples/client.md)中顯示伺服器驗證的範例。
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例
 
-1. 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 Windows Vista 上，使用 MMC 嵌入式管理單元工具將身分識別解決方案資料夾中的身分識別 .pfx 憑證檔案匯入至 LocalMachine/My （Personal）憑證存放區。 這個檔案有密碼保護。 它會在匯入時要求您提供密碼。 在 [密碼] 方塊中輸入 `xyz`。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元來查看憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主題。 完成後，請以系統管理員許可權在 Visual Studio 的開發人員命令提示字元中執行安裝程式，這會將此憑證複製到 CurrentUser/Trusted 人脈存放區，以供用戶端使用。
+1. 在 Windows XP 或 Windows Vista 上，使用 MMC 嵌入式管理單元工具，將身分識別解決方案資料夾中的身分識別 .pfx 憑證檔案匯入至 LocalMachine/My （Personal）憑證存放區。 這個檔案有密碼保護。 它會在匯入時要求您提供密碼。 在 [密碼] 方塊中輸入 `xyz`。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元來查看憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)主題。 完成後，請以系統管理員許可權在 Visual Studio 的開發人員命令提示字元中執行安裝程式，這會將此憑證複製到 CurrentUser/Trusted 人脈存放區，以供用戶端使用。
 
 2. 在 Windows Server 2003 上，使用系統管理員許可權在 Visual Studio 2012 命令提示字元內的範例安裝資料夾中執行安裝程式 .bat。 這會安裝執行範例所需的所有憑證。
 

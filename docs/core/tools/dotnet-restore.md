@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 ms.date: 05/29/2018
-ms.openlocfilehash: 82dd85e340a4cb520f781d977b0798b0f532a088
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dc73b7b2482d25872be922e68103fb86067146f7
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340441"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920565"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -45,7 +45,7 @@ dotnet restore [-h|--help]
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-若要還原相依性，NuGet 需要套件所在的摘要。 摘要通常透過 *nuget.config* 組態檔提供。 安裝 CLI 工具時，會提供預設組態檔。 您可以在專案目錄中建立自己的 *nuget.config* 檔案，以指定其他摘要。 您可以使用 `-s` 選項來覆寫*nuget.exe*摘要。
+若要還原相依性，NuGet 需要套件所在的摘要。 摘要通常透過 *nuget.config* 組態檔提供。 安裝 .NET Core SDK 時，會提供預設的設定檔案。 您可以在專案目錄中建立自己的 *nuget.config* 檔案，以指定其他摘要。 您可以使用 `-s` 選項來覆寫*nuget.exe*摘要。
 
 針對相依性，您可以使用 `--packages` 引數指定已還原套件在還原作業期間的放置位置。 如果未指定，則會使用預設的 NuGet 套件快取，它位於所有作業系統上使用者主目錄的 `.nuget/packages` 目錄中。 例如，Linux 上的 */home/user1* 或 Windows 上的 *C:\Users\user1*。
 

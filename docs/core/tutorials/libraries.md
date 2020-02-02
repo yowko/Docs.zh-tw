@@ -1,18 +1,18 @@
 ---
-title: 使用跨平台工具開發程式庫
-description: 了解如何使用 .NET Core CLI 工具來建立 .NET Core 程式庫。 您將建立支援多個架構的程式庫。
+title: 使用 .NET Core CLI 開發程式庫
+description: 瞭解如何使用 .NET Core CLI 建立 .NET Core 程式庫。 您將建立支援多個架構的程式庫。
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714033"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920437"
 ---
-# <a name="develop-libraries-with-cross-platform-tools"></a>使用跨平台工具開發程式庫
+# <a name="develop-libraries-with-the-net-core-cli"></a>使用 .NET Core CLI 開發程式庫
 
-本文涵蓋如何使用跨平台 CLI 工具撰寫 .NET 的程式庫。 CLI 提供可在所有支援的作業系統上運作的有效率且低階體驗。 您仍然可以使用 Visual Studio 來建置程式庫，而且，如果那是您偏好的體驗，[請參閱 Visual Studio 指南](library-with-visual-studio.md)。
+本文說明如何使用 .NET Core CLI 撰寫適用于 .NET 的程式庫。 CLI 提供可在所有支援的作業系統上運作的有效率且低階體驗。 您仍然可以使用 Visual Studio 來建置程式庫，而且，如果那是您偏好的體驗，[請參閱 Visual Studio 指南](library-with-visual-studio.md)。
 
 ## <a name="prerequisites"></a>必要條件：
 
@@ -216,7 +216,7 @@ netstandard1.4/
 重要的是一定要可以跨平台進行測試。 您可以使用現成的 [xUnit](https://xunit.github.io/) 或 MSTest。 兩者都完全適用於在 .NET Core 上對程式庫進行單元測試。 如何設定具有測試專案的方案，將取決於[方案結構](#structuring-a-solution)。 下列範例假設測試及來源目錄位於相同的最上層目錄中。
 
 > [!NOTE]
-> 這會使用某些 [.NET Core CLI 命令](../tools/index.md)。 如需詳細資訊，請參閱 [dotnet new](../tools/dotnet-new.md) 及 [dotnet sln](../tools/dotnet-sln.md)。
+> 這會使用一些[.NET Core CLI](../tools/index.md)命令。 如需詳細資訊，請參閱 [dotnet new](../tools/dotnet-new.md) 及 [dotnet sln](../tools/dotnet-sln.md)。
 
 1. 設定方案。 您可以使用下列命令：
 

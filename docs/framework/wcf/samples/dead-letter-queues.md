@@ -2,12 +2,12 @@
 title: 寄不出的信件佇列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: d493aba9a3f7a51824243fe8d06441ab563b2261
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5025aa784817d1189f23918eacfef275abf968e1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344531"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921441"
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
 這個範例示範如何處理已傳遞失敗的訊息。 它是以交易式[MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)系結範例為基礎。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
@@ -16,7 +16,7 @@ ms.locfileid: "75344531"
 > 此範例的安裝程序與建置指示位於本主題的結尾。
 
 > [!NOTE]
-> 這個範例會示範每個僅適用于 Windows Vista 的應用程式無效信件佇列。 您可以修改此範例，以在 Windows Server 2003 上使用 MSMQ 3.0 的預設全系統佇列，並 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。
+> 這個範例會示範每個僅適用于 Windows Vista 的應用程式無效信件佇列。 您可以修改此範例，以在 Windows Server 2003 和 Windows XP 上使用 MSMQ 3.0 的預設全系統佇列。
 
  在佇列通訊中，用戶端會使用佇列與服務通訊。 更精確地說，用戶端會傳送訊息至佇列。 服務會接收來自佇列的訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。
 

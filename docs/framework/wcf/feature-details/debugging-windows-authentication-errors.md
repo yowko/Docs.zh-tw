@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 45e4926905bbf3b5a24af15de153afc7bd2a4823
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 9dbf9eee6e4222f899d77a4457bc78132ec7f092
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964561"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920223"
 ---
 # <a name="debugging-windows-authentication-errors"></a>偵錯 Windows 驗證錯誤
 當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當 SSPI 層發生安全性錯誤時，它們會由 Windows Communication Foundation （WCF）來呈現。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
@@ -139,7 +139,7 @@ ms.locfileid: "75964561"
  [!code-vb[C_DebuggingWindowsAuth#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#3)]  
   
 #### <a name="sspi-is-not-available"></a>無法使用 SSPI  
- 下列作業系統不支援做為伺服器使用的 Windows 驗證： [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition 和 Windows Vista Home edition。  
+ 下列作業系統不支援做為伺服器使用的 Windows 驗證： Windows XP Home Edition、Windows XP Media Center Edition 和 Windows Vista Home edition。  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>以不同的身分進行開發及部署  
  如果您在某一台電腦上開發應用程式，然後又在另一台電腦上進行部署，而且在每一台電腦上都使用不同的帳戶類型進行驗證，您可能會產生不同的行為。 例如，假設您是使用 `SSPI Negotiated`驗證模式，在 Windows XP Pro 機器上開發應用程式。 您又使用本機使用者帳戶進行身分驗證，然後又使用了 NTLM 通訊協定。 應用程式開發完成後，您以網域帳戶先在 Windows Server 2003 機器上部署服務而後執行。 此時，用戶端將無法驗證該服務，因為用戶端使用的是 Kerberos 及網域控制站。  

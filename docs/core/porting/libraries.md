@@ -3,12 +3,12 @@ title: 將程式庫移植到 .NET Core
 description: 了解如何將程式庫專案從 .NET Framework 移植到 .NET Core。
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 6ff38647f77bbe1d25dd1d0065c4b32c60f87fcd
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777340"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920614"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>將 .NET Framework 程式庫移植到 .NET Core
 
@@ -31,7 +31,7 @@ ms.locfileid: "75777340"
 本文討論 .NET Core 如何定義及使用套件，以及套件如何支援在多個 .NET 實作上執行的程式碼。
 
 [使用跨平台工具開發程式庫](../tutorials/libraries.md)\
-本文說明如何使用跨平臺 CLI 工具撰寫適用于 .NET 的程式庫。
+本文說明如何使用 .NET Core CLI 來撰寫程式庫。
 
 [適用於 .NET Core 之 *csproj* 格式的新增項目](../tools/csproj.md)\
 本文概述從改為使用 *csproj* 和 MSBuild 時，新增至專案檔的變更。

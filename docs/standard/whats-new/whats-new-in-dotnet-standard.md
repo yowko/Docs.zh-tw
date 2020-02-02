@@ -4,12 +4,12 @@ description: 本文摘要說明 .NET Standard 的每個新版本中的新功能�
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ebf656c4a5499fff54cb5a70a93c4e8cc9c82d0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101761"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921063"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard 的新功能
 
@@ -63,7 +63,7 @@ ms.locfileid: "73101761"
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard 程式庫的工具支援
 
-隨 .NET Core 2.0 和 .NET Standard 2.0 的發行，Visual Studio 2017 和 [.NET Core 命令列介面 (CLI)](../../core/tools/index.md) 也都包含建立 .NET Standard 程式庫的工具支援。
+隨著 .NET Core 2.0 和 .NET Standard 2.0 的發行，Visual Studio 2017 和[.NET Core CLI](../../core/tools/index.md)都包含建立 .NET Standard 程式庫的工具支援。
 
 如果您安裝包含 **.NET Core 跨平台開發**工作負載的 Visual Studio，就可以使用專案範本來建立 .NET Standard 2.0 程式庫專案，如下圖所示：
 

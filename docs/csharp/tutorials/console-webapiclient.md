@@ -3,20 +3,18 @@ title: 使用 .NET Core 來建立 REST 用戶端
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 1b85a03919ea057cda4526ac1c873bf058c9a825
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: eb7946d669de60c3469ca8098e40b159082ea270
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867356"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921093"
 ---
 # <a name="rest-client"></a>REST 用戶端
 
-## <a name="introduction"></a>簡介
-
 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。 您將了解：
 
-* 「.NET Core 命令列介面」(CLI) 的基本概念。
+* .NET Core CLI 的基本概念。
 * 「C# 語言」功能的概觀。
 * 使用 NuGet 來管理相依性
 * HTTP 通訊

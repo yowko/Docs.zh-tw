@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 2482709abfadad0505a40f4c37fd58cee4a2634c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978193"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921247"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>教學課程：使用時間序列分析和 ML.NET 預測自行車出租服務需求
 
@@ -27,9 +27,9 @@ ms.locfileid: "73978193"
 > * 儲存預測模型
 > * 使用預測模型
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
-- 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。
+- 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)版本。
 
 ## <a name="time-series-forecasting-sample-overview"></a>時間序列預測範例總覽
 
@@ -80,7 +80,7 @@ CREATE TABLE [Rentals] (
 
 以下是資料的範例：
 
-| RentalDate | Year | TotalRentals |
+| RentalDate | 年 | TotalRentals |
 | --- | --- | --- |
 |1/1/2011|0|985|
 |1/2/2011|0|801|

@@ -3,12 +3,12 @@ title: .NET Core 通用工具
 description: 說明何為 .NET Core 通用工具以及它們可用之 .NET Core CLI 命令的概觀。
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1531df48b7ca9c816b897d06e725ec375f6cae31
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899871"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920497"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core 通用工具概觀
 
@@ -30,7 +30,7 @@ ms.locfileid: "75899871"
 
 ## <a name="find-a-net-core-global-tool"></a>尋找 .NET Core 通用工具
 
-目前，.NET Core 命令列介面 (CLI) 中沒有通用工具搜尋功能。 以下是如何尋找工具的一些建議：
+目前，.NET Core CLI 中沒有全域工具搜尋功能。 以下是如何尋找工具的一些建議：
 
 * 您可以在 [NuGet](https://www.nuget.org) 上找到 .NET Core 通用工具。 不過，NuGet 尚未允許您專門搜尋 .NET Core 通用工具。
 * 您可以在 blog 文章或[natemcmaster/dotnet 工具](https://github.com/natemcmaster/dotnet-tools)GitHub 存放庫中找到工具建議。

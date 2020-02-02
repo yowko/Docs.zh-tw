@@ -5,13 +5,13 @@ dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
-ms.date: 10/22/2019
-ms.openlocfilehash: b8aa19a1d422fe7d6accd2b095f15843446599cd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/27/2020
+ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789894"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920384"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -180,7 +180,7 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 
 ## <a name="runtimesdk"></a>執行時間/SDK
 
-### <a name="major-version-roll-forward"></a>主要版本向前復原
+### <a name="major-version-runtime-roll-forward"></a>主要版本執行時間向前復原
 
 .NET Core 3.0 引進選擇性功能，可讓您的應用程式向前復原到 .NET Core 最新主要版本。 此外，也已新增設定來控制如何將向前復原套用至您的應用程式。 這可透過下列方式進行設定：
 
@@ -226,6 +226,15 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 本機工具會倚賴您目前目錄中名為 `dotnet-tools.json` 的資訊清單檔。 此資訊清單檔定義可在該資料夾和以下資料夾提供的工具。 您可以隨程式碼散發資訊清單檔，確保使用您程式碼的任何人都能進行還原並使用相同工具。
 
 不論是全域工具還是區域工具，都需要一個相容的執行階段版本。 NuGet.org 上目前許多工具都以 .NET Core 執行階段 2.1 為目標。 若要在全域或本機安裝這些工具，您仍然需要安裝 [.NET Core 2.1 執行階段](https://dotnet.microsoft.com/download/dotnet-core/2.1)。
+
+### <a name="new-globaljson-options"></a>新的 global. json 選項
+
+當您嘗試定義所使用的 .NET Core SDK 版本時， *global.asax*檔案有新的選項可提供更大的彈性。 新的選項包括：
+
+- `allowPrerelease`：指出 SDK 解析程式在選取要使用的 SDK 版本時，是否應考慮發行前版本。
+- `rollForward`：表示選取 SDK 版本時要使用的向前復原原則，可以在特定 SDK 版本遺失時做為回溯，或做為使用較高版本的指示詞。
+
+如需有關變更的詳細資訊，包括預設值、支援的值和新的比對規則，請參閱[global.asax 總覽](../tools/global-json.md)。
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>較小的記憶體回收堆積大小
 

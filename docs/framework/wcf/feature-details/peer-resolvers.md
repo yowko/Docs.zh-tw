@@ -2,12 +2,12 @@
 title: 對等解析程式
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: 33afffcbf11d757dfd003d1fd2bc9a17a3047a69
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3bcdeffac3673c1c464a35d8b6e089efd7394907
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837372"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919246"
 ---
 # <a name="peer-resolvers"></a>對等解析程式
 為了連線至網狀結構，對等節點會需要其他節點的 IP 位址。 IP 位址是透過連絡解析程式服務取得，解析程式服務會取得網狀結構識別碼，並傳回其中位址會對應至以該特定網狀結構識別碼登錄之節點的位址清單。 解析程式會保留已登錄位址的清單，而透過服務登錄網狀結構中的每個節點就可建立此清單。  
@@ -20,7 +20,7 @@ ms.locfileid: "74837372"
  根據預設，對等通道會使用 PNRP 對等解析程式服務探索網狀結構中的對等和鄰接項目。 對於無法使用或可行的情況，Windows Communication Foundation （WCF）會提供替代的伺服器探索服務，也就是 <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>。 您也可以透過撰寫實作 <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> 介面的類別，明確定義自訂的解析程式服務。  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>對等名稱解析通訊協定 (PNRP)  
- PNRP 是 Windows Vista 的預設解析程式，是一個分散式的無伺服器名稱解析程式服務。 只要安裝進階網路套件，也可以在 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 上使用 PNRP。 如果執行相同版本 PNRP 的兩個用戶端符合特定條件 (例如沒有中介的公司防火牆)，就可以使用此通訊協定找到彼此。 請注意，Windows Vista 隨附的 PNRP 版本比 Advanced 網路套件中包含的版本還新。 請檢查 Microsoft 下載中心，以取得適用於 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 的 PNRP 升級。  
+ PNRP 是 Windows Vista 的預設解析程式，是一個分散式的無伺服器名稱解析程式服務。 藉由安裝 Advanced 網路套件，也可以在 Windows XP SP2 上使用 PNRP。 如果執行相同版本 PNRP 的兩個用戶端符合特定條件 (例如沒有中介的公司防火牆)，就可以使用此通訊協定找到彼此。 請注意，Windows Vista 隨附的 PNRP 版本比 Advanced 網路套件中包含的版本還新。 請查看 Microsoft 下載中心，以取得適用于 Windows XP SP2 的 PNRP 更新。  
   
 ### <a name="custom-resolver-services"></a>自訂解析程式服務  
  當 PNRP 服務無法使用，或您想要完整控制網狀結構成型時，您可以使用自訂的伺服器解析程式服務。 您可以透過撰寫實作 <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> 介面的解析程式類別，或是使用產品所提供的預設實作 <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>，明確定義這項服務。  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e1c3e3d7697bf9a85cf0ab7df35a4755939d1df0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964706"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921403"
 ---
 # <a name="auditing-security-events"></a>稽核安全性事件
 使用 Windows Communication Foundation （WCF）建立的應用程式可以使用「審核功能」來記錄安全性事件（不論是成功、失敗或兩者）。 事件會寫入至 Windows 系統事件記錄檔，並且可以使用 [事件檢視器] 加以檢查。  
@@ -32,7 +32,7 @@ ms.locfileid: "75964706"
   
  若要寫入安全性記錄檔，您必須具備 `SeAuditPrivilege`。 根據預設，只有本機系統帳戶和網路服務帳戶具有此權限。 若要管理安全性記錄函式 `read` 和 `delete`，您必須具備 `SeSecurityPrivilege`。 根據預設，只有系統管理員具有此權限。  
   
- 相反地，通過驗證的使用者可以讀取及寫入應用程式記錄檔。 根據預設，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 會將稽核事件寫入應用程式記錄檔。 記錄檔也可以包含個人資訊，所有通過驗證的使用者都可以檢視這些資訊。  
+ 相反地，通過驗證的使用者可以讀取及寫入應用程式記錄檔。 根據預設，Windows XP 會將 audit 事件寫入應用程式記錄檔。 記錄檔也可以包含個人資訊，所有通過驗證的使用者都可以檢視這些資訊。  
   
 ## <a name="suppressing-audit-failures"></a>隱藏稽核失敗  
  稽核期間可以使用的另一個選項為是否要隱藏任何稽核失敗。 根據預設，稽核失敗不會影響到應用程式。 不過，如果需要的話，您可以將選項設定為 `false`，如此便會擲回例外狀況。  
@@ -78,7 +78,7 @@ ms.locfileid: "75964706"
 ## <a name="security-considerations"></a>安全性考量  
  如果惡意使用者得知已啟用稽核，攻擊者就可以傳送無效的訊息，而造成寫入稽核項目。 如果是因為這個方法而填滿稽核記錄檔，稽核系統就會失敗。 若要減輕這個威脅，請將 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> 屬性設定為 `true`，並使用 [事件檢視器] 的屬性來控制稽核行為。  
   
- 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上，任何通過驗證的使用者都可以檢視寫入 [應用程式記錄檔] 的稽核事件。  
+ 所有已驗證的使用者都可以看到寫入 Windows XP 應用程式記錄檔的 Audit 事件。  
   
 ## <a name="choosing-between-application-and-security-event-logs"></a>在應用程式和安全性事件記錄檔之間選擇  
  下表提供可協助您選擇要記錄至應用程式或安全性事件記錄檔的詳細資訊。  
@@ -87,7 +87,7 @@ ms.locfileid: "75964706"
   
 |System|應用程式記錄檔|安全性記錄檔|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] (含) 以後版本|已支援|不支援|  
+|Windows XP SP2 或更新版本|已支援|不支援|  
 |Windows Server 2003 SP1 和 Windows Vista|已支援|執行緒內容必須擁有 `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>其他因素  

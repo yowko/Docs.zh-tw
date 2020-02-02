@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: ec9c6f992bcd4a76e2f70018f3facca42b7b660c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4eb75f23359334ea483cba1498f1804c4b24c80c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714061"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920462"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio"></a>在 Visual Studio 中取用 .NET Standard 程式庫
 
@@ -86,4 +86,4 @@ ms.locfileid: "75714061"
    > [!TIP]
    > 如果包含 *dotnet.exe* 的目錄不在您的 PATH 中，則您可以在主控台視窗中輸入 `where dotnet.exe` 來尋找其位置。
 
-如需有關建立 NuGet 套件的詳細資訊，請參閱[如何使用跨平台工具建立 NuGet 套件](../deploying/creating-nuget-packages.md)。
+如需建立 NuGet 套件的詳細資訊，請參閱[如何使用 .NET Core CLI 建立 nuget 套件](../deploying/creating-nuget-packages.md)。

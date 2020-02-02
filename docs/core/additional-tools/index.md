@@ -1,19 +1,19 @@
 ---
-title: 其他 CLI 工具
+title: 其他工具
 description: 支援及延伸 .NET Core 功能之其他工具的簡介。
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 23b94ceef729cdc3d83032e3897312eb1d1afd79
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740716"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920936"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core 其他工具概觀
 
-本節編製了一份清單，內容涵蓋支援和延伸 .NET Core 功能的工具，以及 [.NET Core 命令列介面 (CLI)](../tools/index.md) 工具。
+本節會編譯除了 .NET Core CLI 以外，支援和擴充 .NET Core 功能的工具清單。
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[.NET Core 卸載工具](uninstall-tool.md)
 
@@ -25,9 +25,9 @@ WCF (Windows Communication Foundation) Web Service Reference 是與 Visual Studi
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF dotnet-svcutil 工具](dotnet-svcutil-guide.md)
 
-WCF （Windows Communication Foundation） dotnet-svcutil 工具是一種 .NET Core CLI 工具，可從網路位置或 WSDL 檔案中的 web 服務抓取中繼資料。 它會產生與 .NET Core 相容的原始程式檔，並使用可供您用來存取 web 服務作業的方法來定義 WCF proxy 類別。
+WCF （Windows Communication Foundation） dotnet-svcutil 工具是一種 .NET 工具，可從網路位置或 WSDL 檔案中的 web 服務抓取中繼資料。 它會產生與 .NET Core 相容的原始程式檔，並使用可供您用來存取 web 服務作業的方法來定義 WCF proxy 類別。
 
-**Dotnet-svcutil**工具是[**WCF Web 服務參考**](wcf-web-service-reference-guide.md)Visual Studio 連線服務提供者的替代選項，第一次隨附于 Visual Studio 2017 15.5 版。 **Dotnet-svcutil** tool 是 .NET Core CLI 工具，在 Linux、MacOS 和 Windows 上跨平臺提供。
+**Dotnet-svcutil**工具是[**WCF Web 服務參考**](wcf-web-service-reference-guide.md)Visual Studio 連線服務提供者的替代選項，第一次隨附于 Visual Studio 2017 15.5 版。 **Dotnet-svcutil** tool 是 .net 工具，在 Linux、MacOS 和 Windows 上跨平臺提供。
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[WCF dotnet-svcutil.xmlserializer 工具](dotnet-svcutil.xmlserializer-guide.md)
 

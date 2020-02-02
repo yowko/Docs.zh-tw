@@ -2,16 +2,16 @@
 title: 不支援的案例
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: a963b46d22f2103cddcc8fd080feefc39070690c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: b643e6df8a877860ce36fc6ee34c4e4ca08ec748
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901269"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921164"
 ---
 # <a name="unsupported-scenarios"></a>不支援的案例
 
-基於各種原因，Windows Communication Foundation （WCF）並不支援某些特定的安全性案例。 例如，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 並不會實行 SSPI 或 Kerberos 驗證通訊協定，因此 WCF 不支援在該平臺上使用 Windows 驗證來執行服務。 在 Windows XP Home Edition 下執行 WCF 時，支援其他驗證機制，例如使用者名稱/密碼與 HTTP/HTTPS 整合式驗證。
+基於各種原因，Windows Communication Foundation （WCF）並不支援某些特定的安全性案例。 例如，Windows XP Home Edition 並不會實行 SSPI 或 Kerberos 驗證通訊協定，因此 WCF 不支援在該平臺上使用 Windows 驗證來執行服務。 在 Windows XP Home Edition 下執行 WCF 時，支援其他驗證機制，例如使用者名稱/密碼與 HTTP/HTTPS 整合式驗證。
 
 ## <a name="impersonation-scenarios"></a>模擬案例
 
@@ -22,7 +22,7 @@ ms.locfileid: "75901269"
 
 WCF 不支援模擬，而且當下列條件存在時，就會擲回 <xref:System.InvalidOperationException>：
 
-- 作業系統是 [!INCLUDE[wxp](../../../../includes/wxp-md.md)]。
+- 作業系統是 Windows XP。
 
 - 驗證模式變成 Windows 識別。
 
@@ -35,7 +35,7 @@ WCF 不支援模擬，而且當下列條件存在時，就會擲回 <xref:System
  或者，在設定中，您可以建立 <`customBinding`>，然後新增 <`security`> 專案，並將 `authenticationMode` 屬性設為 SecureConversation，並將 `requireSecurityContextCancellation` 屬性設定為 `true`，藉此啟用權杖。
 
 > [!NOTE]
-> 執行作業之前有一些特定需求： 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 將建立會變成 Windows 識別的繫結項目，但是不會建立 SCT。 因此，您可以將其與 `Required` 上的 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 選項搭配使用。
+> 執行作業之前有一些特定需求： 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 將建立會變成 Windows 識別的繫結項目，但是不會建立 SCT。 因此，您可以將它與 Windows XP 上的 [`Required`] 選項搭配使用。
 
 ### <a name="possible-aspnet-conflict"></a>可能的 ASP.NET 衝突
 

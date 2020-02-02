@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900587"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921375"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的組件
 
@@ -63,7 +63,7 @@ ms.locfileid: "75900587"
 
 您可以使用幾種方式建立組件。 您可以使用可建立 *.dll*或 *.exe*檔案的開發工具（例如 Visual Studio）。 您可以使用 Windows SDK 中的工具，利用其他開發環境中的模組來建立元件。 您也可以使用 Common Language Runtime API (例如 <xref:System.Reflection.Emit?displayProperty=nameWithType>) 來建立動態組件。
 
-藉由使用 .NET Core 命令列介面工具建立元件，或使用命令列編譯器建立 .NET Framework 元件，藉 Visual Studio 以編譯元件。 如需使用 .NET Core 命令列介面工具來建立元件的詳細資訊，請參閱[.Net core 命令列介面工具](../../core/tools/index.md)。 如需使用命令列編譯器來建立元件，請參閱的[命令列組建，其](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)適用于C#的 csc，或[從命令列建立](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)以進行 Visual Basic。
+藉由使用 .NET Core 命令列介面工具建立元件，或使用命令列編譯器建立 .NET Framework 元件，藉 Visual Studio 以編譯元件。 如需使用 .NET Core CLI 建立元件的詳細資訊，請參閱[.NET Core CLI 總覽](../../core/tools/index.md)。 如需使用命令列編譯器來建立元件，請參閱的[命令列組建，其](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)適用于C#的 csc，或[從命令列建立](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)以進行 Visual Basic。
 
 > [!NOTE]
 > 若要在 Visual Studio 中建立元件，請在 [**建立**] 功能表上，選取 [**建立**]。

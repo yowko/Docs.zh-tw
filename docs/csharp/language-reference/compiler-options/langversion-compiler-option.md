@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 9588ec73250e8745426f6f6020c8d555a174d627
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 007b10f6f27233c43caad4c1910e3d1158682950
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422964"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920359"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# 編譯器選項)
 
@@ -25,10 +25,11 @@ ms.locfileid: "73422964"
 -langversion:option
 ```
 
-## <a name="arguments"></a>引數
+## <a name="arguments"></a>Arguments
 
- `option`  
- 下列是有效值：
+`option`
+
+下列是有效值：
 
 |選項|意義|
 |------------|-------------|
@@ -52,12 +53,12 @@ ms.locfileid: "73422964"
 ## <a name="remarks"></a>備註
 
 C# 應用程式所參考的中繼資料不限於 **-langversion** 編譯器選項。
-  
+
 因為每個版本的 C# 編譯器都包含語言規格的延伸模組，所以 **-langversion** 不會提供舊版編譯器的相等功能。
 
 此外，雖然 C# 版本更新通常會與主要 .NET Framework 版本一致，但是新語法和功能不需要繫結至該特定架構版本。 雖然新功能一定需要也要與 C# 修訂一起發行的新編譯器更新，但是每個特定功能都有自己的最低 .NET API 或通用語言執行平台需求，可讓它包含 NuGet 套件或其他程式庫以在舊版架構上執行。
 
-不論使用的 **-langversion** 設定為何，您都會使用目前版本的通用語言執行平台來建立 .exe 或 .dll。 其中一個例外狀況是 Friend 組件和 [-moduleassemblyname (C# 編譯器選項)](./moduleassemblyname-compiler-option.md)，這些都是在 **-langversion:ISO-1** 下運作。  
+不論您使用的是哪一種**langversion**設定，請使用目前版本的 common language runtime 來建立 .exe 或 .dll。 其中一個例外狀況是 Friend 組件和 [-moduleassemblyname (C# 編譯器選項)](./moduleassemblyname-compiler-option.md)，這些都是在 **-langversion:ISO-1** 下運作。
 
 如需指定C#語言版本的其他方式，請參閱[ C#選取語言版本](../configure-language-version.md)一文。
 
@@ -65,7 +66,7 @@ C# 應用程式所參考的中繼資料不限於 **-langversion** 編譯器選�
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-|版本|連結|描述|
+|{2&gt;版本&lt;2}|連結|描述|
 |-------|----|-----------|
 |C# 7.0 與更新版本||目前無法使用|
 |C# 6.0|[連結](/dotnet/csharp/language-reference/language-specification/introduction)|C# 語言規格版本 6 - 非官方草稿：.NET Foundation|

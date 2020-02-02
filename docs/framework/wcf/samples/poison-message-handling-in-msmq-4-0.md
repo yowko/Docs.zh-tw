@@ -2,12 +2,12 @@
 title: MSMQ 4.0 中的有害訊息處理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 71ce6d3df69164aa0d565539bad5e843a7ed6a47
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337506"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919389"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的有害訊息處理
 這個範例會示範如何在服務中執行有害訊息處理。 這個範例是以交易式[MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)系結範例為基礎。 這個範例會使用 `netMsmqBinding`。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
@@ -18,7 +18,7 @@ ms.locfileid: "75337506"
 
  根據 MSMQ 的版本，NetMsmqBinding 支援有害訊息的有限到完整偵測。 訊息已偵測為有害之後，有多種方法可以處理此訊息。 同樣地，根據 MSMQ 的版本，NetMsmqBinding 會支援完整處理有害訊息的有限處理功能。
 
- 這個範例說明 Windows Server 2003 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 平臺上提供的有限有害設施，以及 Windows Vista 上提供的完整有害功能。 這兩個範例的目標都是要將有害訊息從佇列移出至其他佇列，以便有害訊息服務可以接著處理這些有害訊息。
+ 這個範例說明 Windows Server 2003 和 Windows XP 平臺上提供的有限有害設施，以及 Windows Vista 上提供的完整有害功能。 這兩個範例的目標都是要將有害訊息從佇列移出至其他佇列，以便有害訊息服務可以接著處理這些有害訊息。
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 有害訊息處理範例
  在 Windows Vista 中，MSMQ 提供有害的子佇列設備，可用來儲存有害訊息。 這個範例示範使用 Windows Vista 處理有害訊息的最佳作法。

@@ -4,20 +4,20 @@ description: 本文描述如何為適用於 PowerShell、Bash 和 zsh 的 .NET C
 author: thraka
 ms.author: adegeo
 ms.date: 11/03/2019
-ms.openlocfilehash: 8c5d6a254db5ba21417ba45122ed0d7cb093c7c3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 649b723c2abfa74443a16914594284a77e0eafc0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739308"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920540"
 ---
-# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>如何為 .NET Core CLI 啟用 TAB 鍵自動完成
+# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>如何為 .NET Core CLI 啟用 TAB 鍵自動完成
 
 從 .NET Core 2.0 SDK 開始，.NET Core CLI 支援 tab 鍵自動完成。 本文描述如何為 PowerShell、Bash 和 zsh 等三種殼層設定 tab 鍵自動完成。 其他殼層可能支援自動完成。 請參閱其文件以了解如何設定自動完成，其中的步驟應該會類似於本文中所述的步驟。
 
 [!INCLUDE [topic-appliesto-net-core-2plus](~/includes/topic-appliesto-net-core-2plus.md)]
 
-設定後，只要在殼層中輸入 `dotnet` 命令，然後按 TAB 鍵，即會觸發 .NET Core CLI 的 Tab 鍵自動完成。 目前的命令列會傳送至 `dotnet complete` 命令，並由您的殼層處理結果。 您可以直接傳送某些內容至 `dotnet complete` 命令來測試結果，而不啟用 tab 鍵自動完成。 例如:
+設定後，只要在殼層中輸入 `dotnet` 命令，然後按 TAB 鍵，即會觸發 .NET Core CLI 的 Tab 鍵自動完成。 目前的命令列會傳送至 `dotnet complete` 命令，並由您的殼層處理結果。 您可以直接傳送某些內容至 `dotnet complete` 命令來測試結果，而不啟用 tab 鍵自動完成。 例如：
 
 ```console
 > dotnet complete "dotnet a"
@@ -34,7 +34,7 @@ pack
 
 以下是 tab 鍵自動完成所提供的一些範例：
 
-輸入                                | 變成                                                                     | 因為
+輸入                                | 會變成                                                                     | 因為
 :------------------------------------|:----------------------------------------------------------------------------|:--------------------------------
 `dotnet a⇥`                          | `dotnet add`                                                                 | `add` 依字母順序是第一個子命令。
 `dotnet add p⇥`                      | `dotnet add --help`                                                          | Tab 鍵自動完成會比對子字串，且依字母順序首先會出現 `--help`。
@@ -58,7 +58,7 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
  }
 ```
 
-## <a name="bash"></a>狂歡
+## <a name="bash"></a>反斜線
 
 若要將 tab 鍵自動完成新增至 .NET Core CLI 的 **bash** 殼層，請將下列程式碼新增至您的 `.bashrc` 檔案：
 

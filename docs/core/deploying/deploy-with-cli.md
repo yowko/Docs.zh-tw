@@ -1,20 +1,20 @@
 ---
-title: 使用 CLI 發佈 .NET Core 應用程式
-description: 了解如何使用 .NET Core SDK 命令列介面 (CLI) 工具發佈 .NET Core 應用程式。
+title: 使用 .NET Core CLI 發佈應用程式
+description: 瞭解如何使用 .NET Core CLI 命令發佈 .NET Core 應用程式。
 author: thraka
 ms.author: adegeo
 ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740850"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920902"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>使用 CLI 發佈 .NET Core 應用程式
+# <a name="publish-net-core-apps-with-the-net-core-cli"></a>使用 .NET Core CLI 發佈 .NET Core 應用程式
 
 本文示範如何從命令列發佈 .NET Core 應用程式。 .NET Core 提供三種發佈應用程式的方式。 Framework 相依部署會產生跨平台的 .dll 檔案，以使用本機安裝的 .NET Core 執行階段。 Framework 相依可執行檔會產生平台特定的可執行檔，來使用本機安裝的 .NET Core 執行階段。 獨立式可執行檔則會產生平台特定的可執行檔，並包含 .NET Core 執行階段的本機複本。
 

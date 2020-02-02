@@ -1,23 +1,23 @@
 ---
-title: 使用 CLI 開始使用 .NET Core-.NET Core CLI
-description: 本逐步教學課程說明如何使用 .NET Core 命令列介面 (CLI) 在 Windows、Linux 或 macOS 上開始使用 .NET Core。
+title: 使用 CLI 開始使用 .NET Core
+description: 逐步教學課程示範如何使用 .NET Core CLI 在 Windows、Linux 或 macOS 上開始使用 .NET Core。
 author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 4285ed3c0488ea615ca89b0b771bf09c8c29b318
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739122"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920471"
 ---
-# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令列開始在 Windows/Linux/macOS 上使用 .NET Core
+# <a name="get-started-with-net-core-using-the-net-core-cli"></a>使用 .NET Core CLI 開始使用 .NET Core
 
-本文將說明如何使用 .NET Core CLI 工具，開始在您的電腦中開發跨平臺應用程式。
+本文將說明如何開始開發使用 .NET Core CLI 在 Windows、Linux 和 macOS 上工作的 .NET Core 應用程式。
 
-如果您不熟悉 .NET Core CLI 工具組，請參閱 [.NET Core SDK 概觀](../tools/index.md)。
+如果您不熟悉 .NET Core CLI，請參閱[.NET Core CLI 總覽](../tools/index.md)。
 
 ## <a name="prerequisites"></a>必要條件：
 
@@ -194,6 +194,6 @@ Hello World!
 
 ## <a name="see-also"></a>請參閱
 
-- [使用 .NET Core CLI 工具組織和測試專案](testing-with-cli.md)
-- [使用 CLI 發佈 .NET Core 應用程式](../deploying/deploy-with-cli.md)
-- [深入了解應用程式部署](../deploying/index.md)
+- [使用 .NET Core CLI 組織和測試專案](testing-with-cli.md)
+- [使用 .NET Core CLI 發佈 .NET Core 應用程式](../deploying/deploy-with-cli.md)
+- [.NET Core 應用程式部署](../deploying/index.md)

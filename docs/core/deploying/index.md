@@ -2,12 +2,12 @@
 title: .NET Core 應用程式部署
 description: 了解部署 .NET Core 應用程式的方式。
 ms.date: 12/03/2018
-ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 425f0d5bf11fd0572825d2025005aacf65d7d2cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740817"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920881"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core 應用程式部署
 
@@ -91,11 +91,11 @@ FDD 和 SCD 使用不同的主機可執行檔，因此您可以使用自己的�
 
 ## <a name="step-by-step-examples"></a>逐步說明範例
 
-如需使用 CLI 工具部署 .NET Core 應用程式的逐步說明範例，請參閱[使用 CLI 工具部署 .NET Core 應用程式](deploy-with-cli.md)。 如需使用 Visual Studio 部署 .NET Core 應用程式的逐步說明範例，請參閱[使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)。 
+如需使用 .NET Core CLI 部署 .NET Core 應用程式的逐步範例，請參閱[使用 .NET Core CLI 發佈 .Net core 應用程式](deploy-with-cli.md)。 如需使用 Visual Studio 部署 .NET Core 應用程式的逐步說明範例，請參閱[使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)。 
 
 ## <a name="see-also"></a>請參閱
 
-- [使用 CLI 工具部署 .NET Core 應用程式](deploy-with-cli.md)
+- [使用 .NET Core CLI 發佈 .NET Core 應用程式](deploy-with-cli.md)
 - [使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)
 - [套件、中繼套件和架構](../packages.md)
 - [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)

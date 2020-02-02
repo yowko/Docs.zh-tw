@@ -1,26 +1,20 @@
 ---
-title: .NET Core 命令列介面 (Command-Line Interface, CLI) 工具
-description: .NET Core 命令列介面 (CLI) 工具與功能概觀。
+title: .NET Core CLI
+titleSuffix: ''
+description: .NET Core CLI 及其功能的總覽。
 ms.date: 08/14/2017
-ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b0a8e0dd8cf77bb6f7567c27e9972f62515ec0f2
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163211"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920487"
 ---
-# <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
+# <a name="net-core-cli-overview"></a>.NET Core CLI 總覽
 
-.NET Core 命令列介面（CLI）是用於開發 .NET 應用程式的跨平臺工具鏈。 CLI 是可讓您使用的高階工具（例如，整合式開發環境（Ide）、編輯器和組建協調器）的基礎。
+.NET Core 命令列介面（CLI）是用於開發、建立、執行和發佈 .NET Core 應用程式的跨平臺工具鏈。
 
-## <a name="installation"></a>安裝
-
-使用原生安裝程式或使用安裝殼層指令碼：
-
-- 原生安裝程式主要用於開發人員的電腦，並且使用每個受支援平台的原生安裝機制，例如 Ubuntu 上的 DEB 套件，或 Windows 上的 MSI 套件組合。 這些安裝程式安裝及設定的環境可供開發人員立即使用，但他們會需要電腦的系統管理權限。 您可以檢視 [.NET Core 安裝指南 (英文)](https://aka.ms/dotnetcoregs) 上的安裝指示。
-- 殼層指令碼主要用於設定組建伺服器，或者當您想要安裝工具，但沒有系統管理權限時也可以使用。 安裝指令碼不會在電腦上安裝必要的項目，所以您必須手動安裝這些項目。 如需詳細資訊，請參閱[安裝指令碼參考主題](dotnet-install-script.md)。 如需如何在持續整合 (CI) 組建伺服器上設定 CLI 的詳細資訊，請參閱[在持續整合 (CI) 中使用 .NET Core SDK 和工具](using-ci-with-cli.md)。
-
-根據預設，CLI 會以並存 (Side-By-Side, SxS) 的形式安裝，因此一部電腦上可以同時存在多個版本的 CLI 工具。 [驅動器](#driver)一節詳細說明如何在已安裝多個版本的電腦上判斷所使用的版本。
+.NET Core CLI 包含在[.NET Core SDK](../sdk.md)中。 若要瞭解如何安裝 .NET Core SDK，請參閱[安裝 .NET Core SDK](../install/sdk.md)。
 
 ## <a name="cli-commands"></a>CLI 命令
 
@@ -153,5 +147,5 @@ dotnet build
 
 ## <a name="see-also"></a>請參閱
 
-- [dotnet/CLI GitHub 存放庫 (英文)](https://github.com/dotnet/cli/)
+- [dotnet/sdk GitHub 存放庫](https://github.com/dotnet/sdk/)
 - [.NET core 安裝指南 (英文)](https://aka.ms/dotnetcoregs)

@@ -2,18 +2,18 @@
 title: 安裝訊息佇列 (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: e6d6a3a2e1bc0a0c936e4b8594eab836b559e5a7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 8ecbd07adfb6bfb4e9898f9b8508809480d17e16
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344741"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921095"
 ---
 # <a name="installing-message-queuing-msmq"></a>安裝訊息佇列 (MSMQ)
 下列程序示範如何安裝 Message Queuing 4.0 和 Message Queuing 3.0。  
   
 > [!NOTE]
-> [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 Windows Server 2003 中無法使用訊息佇列4.0。  
+> Windows XP 和 Windows Server 2003 無法使用訊息佇列4.0。  
   
 #### <a name="to-install-message-queuing-40-on-windows-server-2008-or-windows-server-2008-r2"></a>若要在 Windows Server 2008 或 Windows Server 2008 R2 上安裝 Message Queuing 4.0  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75344741"
   
 #### <a name="to-install-message-queuing-40-on-windows-7-or-windows-vista"></a>若要在 Windows 7 或 Windows Vista 上安裝 Message Queuing 4.0  
   
-1. 開啟 [控制台]。  
+1. 開啟 [**控制台**]。  
   
 2. 按一下 [**程式**]，然後按一下 [**程式和功能**] 下**的 [開啟或關閉 Windows 功能**]。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75344741"
   
 #### <a name="to-install-message-queuing-30-on-windows-xp-and-windows-server-2003"></a>若要在 Windows XP 和 Windows Server 2003 上安裝 Message Queuing 3.0  
   
-1. 開啟 [控制台]。  
+1. 開啟 [**控制台**]。  
   
 2. 按一下 [新增] [**移除程式**]，然後按一下 [**新增 Windows 元件**]。  
   

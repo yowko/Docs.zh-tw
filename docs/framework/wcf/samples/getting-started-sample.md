@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 12568b2bb86257ed7075f2dc83b8077714a1318e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7bfef2c3fa5d0d3c6dafad5a6015eb9f5ca2b5c6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347045"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921324"
 ---
 # <a name="getting-started-sample"></a>使用者入門範例
 
@@ -34,7 +34,7 @@ ms.locfileid: "75347045"
 
 用戶端包含服務合約的定義，以及用來存取服務的 Proxy 類別。 使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)，從服務中繼資料產生 proxy 程式碼。
 
-在 Windows Vista 上，服務裝載于 Windows 啟用服務（WAS）中。 在 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 和 Windows Server 2003 上，它是由 Internet Information Services （IIS）和 ASP.NET 所主控。 使用 IIS 或 WAS 裝載服務，便可以讓服務在第一次存取時就自動啟動。
+在 Windows Vista 上，服務裝載于 Windows 啟用服務（WAS）中。 在 Windows XP 和 Windows Server 2003 上，它是由 Internet Information Services （IIS）和 ASP.NET 所主控。 使用 IIS 或 WAS 裝載服務，便可以讓服務在第一次存取時就自動啟動。
 
 > [!NOTE]
 > 如果您想要開始使用在主控台應用程式（而不是 IIS）中裝載服務的範例，請參閱[自我裝載](../../../../docs/framework/wcf/samples/self-host.md)範例。

@@ -3,12 +3,12 @@ title: Docker 簡介
 description: 本文在 .NET Core 應用程式內容中提供了 Docker 的簡介及概觀。
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 278c921de83282d61b25f4d44e91535981285e83
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 40c8a3c8d81d23c621ccb83a283f49aa34a58ac1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715555"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920814"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
@@ -18,7 +18,7 @@ ms.locfileid: "75715555"
 
 ## <a name="docker-basics"></a>Docker 基本知識
 
-有幾個概念您應該很熟悉。 Docker 用戶端有命令列介面方案，可讓您用來管理映像和容器。 如先前所述，您應該仔細閱讀 [Docker 概觀](https://docs.docker.com/engine/docker-overview/) \(英文\) 文件。 
+有幾個概念您應該很熟悉。 Docker 用戶端具有可用來管理映射和容器的 CLI。 如先前所述，您應該仔細閱讀 [Docker 概觀](https://docs.docker.com/engine/docker-overview/) \(英文\) 文件。 
 
 ### <a name="images"></a>影像
 

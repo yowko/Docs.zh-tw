@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 47e8e15a64236d8ade2febb1add81fa4e5c030d9
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: ef3e4f9f8145677732b9d2e66d416be277697f55
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116171"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920650"
 ---
 
 新增至套件管理員摘要的封裝會以 hackable 格式命名： `{product}-{type}-{version}`。
@@ -34,6 +34,6 @@ ms.locfileid: "76116171"
 - 安裝 ASP.NET Core 3.1 執行時間： `aspnetcore-runtime-3.1`
 - 安裝 .NET Core 2.1 執行時間： `dotnet-runtime-2.1`
 
-### <a name="troubleshoot"></a>疑難排解
+### <a name="package-missing"></a>套件遺失
 
-如果封裝組合無法運作，就無法使用。 例如，沒有 ASP.NET Core SDK，SDK 元件會包含在 .NET Core SDK 中。 `aspnetcore-sdk-2.2` 的值不正確，應為 `dotnet-sdk-2.2`
+如果封裝版本組合無效，則無法使用。 例如，沒有 ASP.NET Core SDK，SDK 元件會包含在 .NET Core SDK 中。 `aspnetcore-sdk-2.2` 的值不正確，應為 `dotnet-sdk-2.2`。

@@ -3,12 +3,12 @@ title: .NET Core 發佈封裝
 description: 了解如何封裝、命名以及建立 .NET Core 版本以進行發佈。
 author: tmds
 ms.date: 10/09/2019
-ms.openlocfilehash: 1b5adf761a51e006f8309e1f326fc0a9c12aab7a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a345aeded29b3058c6c56abbff439ea26cbc7afb
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748500"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920866"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core 發佈封裝
 
@@ -69,7 +69,7 @@ ms.locfileid: "76748500"
 
 - (2) **host/fxr/\<fxr 版本>** 包含主機所使用的架構解析邏輯。 主機會使用已安裝的最新 hostfxr。 hostfxr 負責在執行 .NET Core 應用程式時選取適當的執行階段。 例如，針對 .NET Core 2.0.0 建置的應用程式會在可用時使用 2.0.5 執行階段。 同樣地，hostfxr 會在開發期間選取適當的 SDK。
 
-- (3) **sdk/\< 版本>** SDK (也稱為「工具」) 是一組受控工具，用於撰寫和建置 .NET Core 程式庫和應用程式。 SDK 包含 .NET Core 命令列介面 (CLI)、受控語言編譯器、MSBuild 以及相關聯的建置工作和目標、NuGet、新專案範本等。
+- (3) **sdk/\< 版本>** SDK (也稱為「工具」) 是一組受控工具，用於撰寫和建置 .NET Core 程式庫和應用程式。 SDK 包括 .NET Core CLI、managed 語言編譯器、MSBuild，以及相關聯的組建工作與目標、NuGet、新的專案範本等。
 
 - (4) **sdk/NuGetFallbackFolder** 包含 SDK 在還原作業期間使用的 NuGet 套件快取，例如在執行 `dotnet restore` 或 `dotnet build` 時。 此資料夾只會在 .NET Core 3.0 之前使用。 它無法從來源建立，因為它包含從 `nuget.org`預建的二進位資產。
 

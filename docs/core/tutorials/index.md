@@ -4,12 +4,12 @@ description: 遵循這些教學課程來了解 .NET Core，以便在 Mac、Linux
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 7039d5877ecbd4477d64991321a7fc46cadc2848
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714035"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920433"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>藉由探索這些教學課程來瞭解 .NET Core 和 .NET Core SDK 工具
 
@@ -35,10 +35,10 @@ ms.locfileid: "75714035"
 - [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](using-on-mac-vs.md)
 - [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 方案](using-on-mac-vs-full-solution.md)
 
-## <a name="build-applications-with-the-net-core-cli-tools"></a>使用 .NET Core CLI 工具建立應用程式
+## <a name="build-applications-with-the-net-core-cli"></a>使用 .NET Core CLI 建立應用程式
 
-- [使用 .NET Core CLI 工具在 Windows/Linux/macOS 上開始使用 .NET Core](cli-create-console-app.md)
-- [使用 .NET Core CLI 工具組織和測試專案](testing-with-cli.md)
+- [使用 .NET Core CLI 在 Windows/Linux/macOS 上開始使用 .NET Core](cli-create-console-app.md)
+- [使用 .NET Core CLI 組織和測試專案](testing-with-cli.md)
 - [開始使用 F#](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>其他

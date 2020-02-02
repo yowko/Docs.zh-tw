@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 6399d64746db158ba0569eaf0137127603973513
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964585"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919337"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>設定 WS-不可部分完成的交易支援
 
@@ -25,7 +25,7 @@ WS-AT 組態公用程式 (wsatConfig.exe) 可用來進行 WS-AT 設定。 若要
 
 如需命令列工具的詳細資訊，請參閱[ws-atomictransaction 設定公用程式（wsatconfig.exe .exe）](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)。
 
-如果您執行 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 或 Windows Server 2003，您可以流覽至 [控制台]/[系統**管理工具]/[元件服務**]，以滑鼠右鍵按一下 [**我的電腦**]，然後選取 [內容]，以存取 MMC 嵌入式管理**單元。** 這個位置和您設定 Microsoft Distributed Transaction Coordinator (MSDTC) 的位置一樣。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。如果您執行的是 Windows Vista 或 Windows Server 2008，可以按一下 [**開始**] 按鈕，然後在 [**搜尋**] 方塊中輸入 `dcomcnfg.exe`，即可找到 MMC 嵌入式管理單元。 開啟 MMC 時，流覽至**My 電腦 \ 分散式 Transaction COORDINATOR\LOCAL DTC**節點，按一下滑鼠右鍵並選取 [**屬性**]。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。
+如果您執行的是 Windows XP 或 Windows Server 2003，您可以流覽至 [控制台]/[系統**管理工具]/[元件服務**]，以滑鼠右鍵按一下 [**我的電腦**]，**然後選取 [** 內容]，以存取 MMC 嵌入式管理單元。 這個位置和您設定 Microsoft Distributed Transaction Coordinator (MSDTC) 的位置一樣。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。如果您執行的是 Windows Vista 或 Windows Server 2008，可以按一下 [**開始**] 按鈕，然後在 [**搜尋**] 方塊中輸入 `dcomcnfg.exe`，即可找到 MMC 嵌入式管理單元。 開啟 MMC 時，流覽至**My 電腦 \ 分散式 Transaction COORDINATOR\LOCAL DTC**節點，按一下滑鼠右鍵並選取 [**屬性**]。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。
 
 如需嵌入式管理單元的詳細資訊，請參閱[ws-atomictransaction 設定 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)。
 

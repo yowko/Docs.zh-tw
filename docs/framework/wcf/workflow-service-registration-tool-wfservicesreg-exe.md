@@ -2,12 +2,12 @@
 title: WorkFlow 服務登錄工具 (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 182bef75bff1785905d77d3bc497e0701e297912
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5e7d39062a8ad016eebf949daa625a5ba7848328
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346582"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921223"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>WorkFlow 服務登錄工具 (WFServicesReg.exe)
 Workflow 服務登錄工具 (WFServicesReg.exe) 是一個獨立工具，可用於新增、移除或修復 Windows Workflow Foundation (WF) 服務的組態項目。  
@@ -56,7 +56,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  工具也會在 IIS Metabase 中註冊 .xoml 和 .rules Scriptmap 與處理常式。  
   
- 在 Windows Server 2003 和 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 機（IIS 5.1 和 IIS 6.0）上，會註冊一組 xoml 和. 規則腳本。  
+ 在 Windows Server 2003 和 Windows XP 電腦（IIS 5.1 和 IIS 6.0）上，會註冊一組 xoml 和. 規則腳本。  
   
  在 64 位元電腦上，如果已啟用 `Enable32BitAppOnWin64` 參數，此工具就會註冊 WOW 模式 Scriptmap，如果已停用 `Enable32BitAppOnWin64` 參數，則會註冊原生 64 位元 Scriptmap。  
   

@@ -1,21 +1,21 @@
 ---
 title: .NET Core CLI 擴充性模型
-description: 了解如何擴充命令列介面 (CLI) 工具。
+description: 瞭解您可以如何擴充 .NET Core CLI。
 ms.date: 04/12/2017
-ms.openlocfilehash: 4f49735fa94b2a7ee32e0d80590f9e680edeff16
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714186"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920520"
 ---
-# <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI 工具擴充性模型
+# <a name="net-core-cli-extensibility-model"></a>.NET Core CLI 擴充性模型
 
-本文件涵蓋不同的方式可擴充 .NET Core 命令列介面 (CLI) 工具，並說明可驅動其中所有項目的案例。
+本文涵蓋可以擴充 .NET Core CLI 的不同方式，並說明每一種方法的驅動案例。
 您會看到如何使用這些工具，以及如何建置不同類型的工具。
 
-## <a name="how-to-extend-cli-tools"></a>如何擴充 CLI 工具
-CLI 工具可以透過三種主要方式進行擴充：
+## <a name="how-to-extend-the-cli"></a>如何擴充 CLI
+CLI 可以用三種主要方式擴充：
 
 1. [透過個別專案的 NuGet 套件](#per-project-based-extensibility)
 
@@ -79,7 +79,7 @@ CLI 工具可以透過三種主要方式進行擴充：
 
 ## <a name="custom-targets"></a>自訂目標
 
-NuGet 可以[封裝自訂 MSBuild 目標及屬性檔案](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)。 隨著 .NET Core CLI 改為使用 MSBuild，相同的擴充機制現在也適用於 .NET Core 專案。 如果您想要擴充建置程序，或想要在建置程序中存取任何成品 (例如產生的檔案或檢查叫用建置的組態等)，可以使用這種類型的擴充性。
+NuGet 可以[封裝自訂 MSBuild 目標及屬性檔案](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)。 隨著 .NET Core 的移動使用 MSBuild，相同的擴充機制現在也適用于 .NET Core 專案。 如果您想要擴充建置程序，或想要在建置程序中存取任何成品 (例如產生的檔案或檢查叫用建置的組態等)，可以使用這種類型的擴充性。
 
 在下列範例中，您可以使用 `csproj` 語法看到目標的專案檔。 這會指示 [`dotnet pack`](dotnet-pack.md) 命令要封裝的內容，並將目標檔案及組件放入套件內的 *build* 資料夾。 請注意，`<ItemGroup>` 項目的 `Label` 屬性設定為 `dotnet pack instructions`，並具有其下定義的 [目標]。
 

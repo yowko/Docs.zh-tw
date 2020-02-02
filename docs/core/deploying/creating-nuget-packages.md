@@ -1,17 +1,17 @@
 ---
-title: 建立具有 .NET Core CLI 的 NuGet 套件
+title: 建立包含 .NET Core CLI 的 NuGet 套件
 description: 了解如何使用 'dotnet pack' 命令建立 NuGet 套件。
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: ddc19faa7547637036686146f8600f40713541a8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3f8e75a501cfc48e1c416f71e91290cab1a4ffae
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740872"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920912"
 ---
-# <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>如何使用 .NET Core 命令列介面 (CLI) 工具建立 NuGet 套件
+# <a name="how-to-create-a-nuget-package-with-the-net-core-cli"></a>如何使用 .NET Core CLI 建立 NuGet 套件
 
 > [!NOTE]
 > 下圖顯示使用 Unix 的命令列範例。 此處顯示的 `dotnet pack` 命令，運作運作方式與在 Windows 上如出一轍。

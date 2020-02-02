@@ -4,18 +4,18 @@ description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功�
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 921c8fc7824bdb48f08e4d9f5a276bf2284f8a17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714594"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921126"
 ---
 # <a name="console-app"></a>主控台應用程式
 
 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。 您將瞭解：
 
-- 「.NET Core 命令列介面」(CLI) 的基本概念
+- .NET Core CLI 的基本概念
 - 「C# 主控台應用程式」的結構
 - 主控台 I/O
 - .NET 中檔案 I/O API 的基本概念
@@ -311,6 +311,6 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>結論
 
-本教學課程示範一些與在主控台應用程式中工作有關的 C# 語言和 .NET Core 程式庫相關功能。 您可以利用這項知識作為基礎，進一步探索這裡介紹的語言和類別。 您已經瞭解檔案和主控台 i/o 的基本概念、封鎖和非封鎖使用以工作為基礎的非同步程式設計、 C#語言的導覽，以及程式的組織方式C# ，以及 .Net Core 命令列介面和工具。
+本教學課程示範一些與在主控台應用程式中工作有關的 C# 語言和 .NET Core 程式庫相關功能。 您可以利用這項知識作為基礎，進一步探索這裡介紹的語言和類別。 您已經瞭解檔案和主控台 i/o 的基本概念、封鎖和非封鎖使用以工作為基礎的非同步程式設計、 C#語言導覽和程式的組織方式C# ，以及 .NET Core CLI。
 
 如需檔案 I/O 的詳細資訊，請參閱[檔案和資料流 I/O](../../standard/io/index.md) 主題。 如需本教學課程中所使用非同步程式設計模型的詳細資訊，請參閱[以工作為基礎的非同步程式設計](../..//standard/parallel-programming/task-based-asynchronous-programming.md)主題和[非同步程式設計](../async.md)主題。

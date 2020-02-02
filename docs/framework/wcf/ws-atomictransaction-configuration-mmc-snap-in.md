@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction 組態 MMC 嵌入式管理單元
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 9b6c7ecf112309b6c10414bfe506559e153911c2
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 0bcd08f9a3450c850ead941df6313526d076df2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900718"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921340"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Ws-atomictransaction 設定 MMC 嵌入式管理單元
 
@@ -15,11 +15,11 @@ WS-ATOMICTRANSACTION 設定 MMC 嵌入式管理單元可用來設定本機和遠
 
 ## <a name="remarks"></a>備註
 
-如果您執行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 Windows Server 2003，請流覽至 [控制台]/[系統**管理工具]/[元件服務/** ]，以滑鼠右鍵按一下 [**我的電腦**]，**然後選取 [** 內容]，即可找到 MMC 嵌入式管理單元。 這個位置與您設定 MSDTC 的位置相同。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。
+如果您執行的是 Windows XP 或 Windows Server 2003，流覽至 [控制台]/[系統**管理工具]/[元件服務/** ]，以滑鼠右鍵按一下 [**我的電腦**]，然後選取 [內容]，即可找到 MMC 嵌入式管理**單元。** 這個位置與您設定 MSDTC 的位置相同。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。
 
  如果您執行的是 Windows Vista 或 Windows Server 2008，請按一下 [**開始**] 按鈕，然後在 [**搜尋**] 方塊中輸入 `dcomcnfg.exe`，即可找到 MMC 嵌入式管理單元。 開啟 MMC 時，流覽至**My 電腦 \ 分散式 Transaction COORDINATOR\LOCAL DTC**節點，按一下滑鼠右鍵並選取 [**屬性**]。 適用于設定的選項會群組在 [ **ws-at** ] 索引標籤底下。
 
- 上述的步驟用於啟動設定本機電腦的嵌入式管理單元。 如果您想要設定遠端電腦，您應該在 [**控制台/系統管理工具/元件服務/** ] 中找出遠端電腦的名稱，然後執行 [!INCLUDE[wxp](../../../includes/wxp-md.md)] 或 Windows Server 2003 中的類似步驟。 如果您執行的是 Windows Vista 或 Windows Server 2008，請遵循 Vista 和 Windows Server 2008 先前的步驟，但使用遠端電腦節點下的**Distributed Transaction COORDINATOR\LOCAL DTC**節點。
+ 上述的步驟用於啟動設定本機電腦的嵌入式管理單元。 如果您想要設定遠端電腦，您應該在 [**控制台/系統管理工具/元件服務/** ] 中找出遠端電腦的名稱，如果您執行的是 windows XP 或 Windows Server 2003，請執行類似的步驟。 如果您執行的是 Windows Vista 或 Windows Server 2008，請遵循 Vista 和 Windows Server 2008 先前的步驟，但使用遠端電腦節點下的**Distributed Transaction COORDINATOR\LOCAL DTC**節點。
 
  若要使用此工具提供的使用者介面，您必須註冊 WsatUI.dll 檔，此檔位於以下路徑，
 

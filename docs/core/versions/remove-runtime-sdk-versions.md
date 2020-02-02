@@ -5,12 +5,12 @@ ms.date: 12/17/2019
 author: billwagner
 ms.author: wiwagn
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8f8dbf7a8730712dc546643a6ef86425a3e19794
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 82fbccdec0323b54d313960279fcbfeeb6033319
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713991"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920404"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>如何移除 .NET Core 執行階段和 SDK
 
@@ -136,7 +136,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ---
 
-## <a name="uninstalling-net-core"></a>解除安裝 .NET Core
+## <a name="uninstall-net-core"></a>卸載 .NET Core
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -206,7 +206,7 @@ SDK 和執行階段的父目錄會列於 `dotnet --list-sdks` 和 `dotnet --list
 
 ## <a name="net-core-uninstall-tool"></a>.NET Core 解除安裝工具
 
-[.Net Core 卸載工具](../additional-tools/uninstall-tool.md)（`dotnet-core-uninstall`）可讓您從系統中移除 .Net Core Sdk 和執行時間。 有一組選項可用來指定應該卸載的版本。
+[.Net Core 卸載工具](../additional-tools/uninstall-tool.md)（`dotnet-core-uninstall`）可讓您從系統中移除 .Net Core sdk 和執行時間。 有一組選項可用來指定應該卸載的版本。
 
 ## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>Visual Studio .NET Core SDK 版本的相依性
 
@@ -220,7 +220,7 @@ SDK 和執行階段的父目錄會列於 `dotnet --list-sdks` 和 `dotnet --list
 | Visual Studio 2017 15.9 版 | .NET Core SDK 2.2.1 xx，2.1.5 xx |
 | Visual Studio 2017 15.8 版 | .NET Core SDK 2.1.4 xx |
 
-從 Visual Studio 2019 16.3 開始，Visual Studio 會負責自己的 .NET Core SDK 複本。 基於這個理由，您不會再于 [**新增/移除程式**] 對話方塊中看到這些 SDK 版本。
+從 Visual Studio 2019 16.3 版開始，Visual Studio 會負責自己的 .NET Core SDK 複本。 基於這個理由，您不會再于 [**新增/移除程式**] 對話方塊中看到這些 SDK 版本。
 
 ## <a name="remove-the-nuget-fallback-folder"></a>移除 NuGet fallback 資料夾
 
