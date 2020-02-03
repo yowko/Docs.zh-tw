@@ -18,22 +18,22 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736517"
 ---
-# <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="cb253-102">如何：在 Windows Forms DataGridView 控制項中實作虛擬模式</span><span class="sxs-lookup"><span data-stu-id="cb253-102">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="cb253-103">下列程式碼範例示範如何使用 <xref:System.Windows.Forms.DataGridView> 控制項 (其 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 屬性設定為 `true`) 來管理大量的資料。</span><span class="sxs-lookup"><span data-stu-id="cb253-103">The following code example demonstrates how to manage large sets of data using a <xref:System.Windows.Forms.DataGridView> control with its <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property set to `true`.</span></span>  
+# <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="4d432-102">如何：在 Windows Forms DataGridView 控制項中實作虛擬模式</span><span class="sxs-lookup"><span data-stu-id="4d432-102">How to: Implement Virtual Mode in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="4d432-103">下列程式碼範例示範如何使用 <xref:System.Windows.Forms.DataGridView> 控制項 (其 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 屬性設定為 `true`) 來管理大量的資料。</span><span class="sxs-lookup"><span data-stu-id="4d432-103">The following code example demonstrates how to manage large sets of data using a <xref:System.Windows.Forms.DataGridView> control with its <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> property set to `true`.</span></span>  
   
- <span data-ttu-id="cb253-104">如需此程式碼範例的完整說明，請參閱[逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式](implementing-virtual-mode-wf-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="cb253-104">For a complete explanation of this code example, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
+ <span data-ttu-id="4d432-104">如需此程式碼範例的完整說明，請參閱[逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式](implementing-virtual-mode-wf-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="4d432-104">For a complete explanation of this code example, see [Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control](implementing-virtual-mode-wf-datagridview-control.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cb253-105">範例</span><span class="sxs-lookup"><span data-stu-id="cb253-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="4d432-105">範例</span><span class="sxs-lookup"><span data-stu-id="4d432-105">Example</span></span>  
  [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#000)]
  [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#000)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="cb253-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="cb253-106">Compiling the Code</span></span>  
- <span data-ttu-id="cb253-107">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="cb253-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="4d432-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="4d432-106">Compiling the Code</span></span>  
+ <span data-ttu-id="4d432-107">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="4d432-107">This example requires:</span></span>  
   
-- <span data-ttu-id="cb253-108">本系統和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="cb253-108">References to the System and System.Windows.Forms assemblies.</span></span>  
+- <span data-ttu-id="4d432-108">System 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="4d432-108">References to the System and System.Windows.Forms assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb253-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="cb253-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d432-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4d432-109">See also</span></span>
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
@@ -44,6 +44,6 @@ ms.locfileid: "76736517"
 - <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>
 - <xref:System.Windows.Forms.DataGridView.CancelRowEdit>
 - <xref:System.Windows.Forms.DataGridView.UserDeletingRow>
-- [<span data-ttu-id="cb253-110">逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式</span><span class="sxs-lookup"><span data-stu-id="cb253-110">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-wf-datagridview-control.md)
-- [<span data-ttu-id="cb253-111">Windows Forms DataGridView 控制項中的效能微調</span><span class="sxs-lookup"><span data-stu-id="cb253-111">Performance Tuning in the Windows Forms DataGridView Control</span></span>](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="cb253-112">Windows Forms DataGridView 控制項中的虛擬模式</span><span class="sxs-lookup"><span data-stu-id="cb253-112">Virtual Mode in the Windows Forms DataGridView Control</span></span>](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="4d432-110">逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式</span><span class="sxs-lookup"><span data-stu-id="4d432-110">Walkthrough: Implementing Virtual Mode in the Windows Forms DataGridView Control</span></span>](implementing-virtual-mode-wf-datagridview-control.md)
+- [<span data-ttu-id="4d432-111">Windows Forms DataGridView 控制項中的效能微調</span><span class="sxs-lookup"><span data-stu-id="4d432-111">Performance Tuning in the Windows Forms DataGridView Control</span></span>](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="4d432-112">Windows Forms DataGridView 控制項中的虛擬模式</span><span class="sxs-lookup"><span data-stu-id="4d432-112">Virtual Mode in the Windows Forms DataGridView Control</span></span>](virtual-mode-in-the-windows-forms-datagridview-control.md)
