@@ -44,12 +44,16 @@
         - name: 服務網格通訊基礎結構
           href: service-mesh-communication-infrastructure.md
     - name: 分散式資料
-      href: distributed-data.md
+      href: null
       items:
-        - name: 雲端原生資料模式
-          href: data-patterns.md
-        - name: Azure 中的資料儲存體
-          href: azure-data-storage.md
+        - name: 具各微服務特性的資料庫
+          href: database-per-microservice.md
+        - name: 關聯式與NoSQL 資料
+          href: relational-vs-nosql-data.md
+        - name: 在雲端原生應用程式中快取
+          href: azure-caching.md
+        - name: Azure 中的 Elasticsearch
+          href: elastic-search-in-azure.md
     - name: 雲端原生復原
       href: resiliency.md
       items:
