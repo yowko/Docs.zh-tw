@@ -21,16 +21,16 @@ ms.locfileid: "76742641"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|安全性模式|Transport|  
+|安全性模式|傳輸|  
 |互通性|僅限 WCF|  
 |驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是 (使用 Windows 整合式驗證)<br /><br /> 是 (使用 Windows 整合式驗證)|  
 |完整性|是|  
-|機密性|是|  
-|Transport|NET.TCP|  
+|保密|是|  
+|傳輸|NET.TCP|  
 |繫結|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
+## <a name="service"></a>Service  
+ 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
@@ -73,12 +73,12 @@ ms.locfileid: "76742641"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
- 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
+## <a name="client"></a>用戶端  
+ 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
-- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如：  
+- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如，  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -117,7 +117,7 @@ ms.locfileid: "76742641"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [如何：利用 Windows 認證保護服務的安全](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)

@@ -19,16 +19,16 @@ ms.locfileid: "76742705"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|安全性模式|Transport|  
+|安全性模式|傳輸|  
 |互通性|使用現有的 Web 服務用戶端和服務|  
 |驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是 (使用 HTTPS)<br /><br /> 是 (透過使用者名稱/密碼)|  
 |完整性|是|  
-|機密性|是|  
-|Transport|HTTPS|  
+|保密|是|  
+|傳輸|HTTPS|  
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
-## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
+## <a name="service"></a>Service  
+ 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "76742705"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>用戶端  
   
 ### <a name="code"></a>程式碼  
  下列程式碼顯示包含使用者名稱和密碼的用戶端程式碼。 請注意，使用者必須提供有效的 Windows 使用者名稱和密碼。 此處未顯示傳回使用者名稱和密碼的程式碼。 請使用對話方塊或其他介面向使用者查詢資訊。  
@@ -110,7 +110,7 @@ ms.locfileid: "76742705"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>

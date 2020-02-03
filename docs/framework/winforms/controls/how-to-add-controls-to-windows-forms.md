@@ -87,9 +87,9 @@ ms.locfileid: "76743963"
     > [!IMPORTANT]
     > 藉由參考惡意的 `UserControl`，您可能會透過網路讓本機電腦暴露于安全性風險中。 這只是在惡意人士建立損毀的自訂控制項，然後誤將它新增至專案時的問題。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
-- [如何：重新調整 Windows Forms 上控制項的大小](how-to-resize-controls-on-windows-forms.md)
+- [操作說明：重新調整 Windows Forms 上控制項的大小](how-to-resize-controls-on-windows-forms.md)
 - [操作說明：設定由 Windows Forms 控制項所顯示的文字](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

@@ -106,6 +106,6 @@ ms.locfileid: "76746505"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 列印支援](windows-forms-print-support.md)

@@ -47,17 +47,17 @@ ms.locfileid: "76741766"
 
  下表描述不同識別碼類型的大小寫規則。
 
-|識別碼|寫|範例|
+|識別碼|大小寫|範例|
 |----------------|------------|-------------|
 |命名空間|Pascal|`namespace System.Security { ... }`|
 |類型|Pascal|`public class StreamReader { ... }`|
 |介面|Pascal|`public interface IEnumerable { ... }`|
 |方法|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
 |屬性|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|Event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|事件|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |欄位|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |列舉值|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
-|參數|格式|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
+|參數|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>將複合字和共同詞彙大寫
  大部分的複合詞匯會視為大寫用途的單一單字。
@@ -66,7 +66,7 @@ ms.locfileid: "76741766"
 
  這些是以單一單字撰寫的複合字組，例如端點。 基於大小寫方針的目的，請將封閉形式的複合字視為單一單字。 使用目前的字典來判斷複合字是否以已關閉的形式寫入。
 
-|Pascal|格式|否|
+|Pascal|Camel|Not|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|
@@ -101,9 +101,9 @@ ms.locfileid: "76741766"
 
  *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*
 
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 *Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition[ 節錄。](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

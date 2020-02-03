@@ -65,7 +65,7 @@ ms.locfileid: "76746606"
   
 - 將 <xref:System.Windows.Forms.TabControl> 的 [<xref:System.Windows.Forms.TabControl.Appearance%2A>] 屬性設定為 [<xref:System.Windows.Forms.TabAppearance.Buttons>] 或 [<xref:System.Windows.Forms.TabAppearance.FlatButtons>]。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [TabControl 控制項](tabcontrol-control-windows-forms.md)
 - [TabControl 控制項概觀](tabcontrol-control-overview-windows-forms.md)

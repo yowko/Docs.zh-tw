@@ -49,7 +49,7 @@ ms.locfileid: "76743393"
 
     2. 從 [<xref:System.Windows.Forms.DataGrid.DataMember%2A>] 屬性的下拉式清單中，選取 master 和 detail 資料表之間的關聯性（例如，"Customers. CustOrd"）。 若要查看關聯性，請在下拉式清單中按一下主表旁邊的加號（ **+** ），展開節點。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
 - [DataGrid 控制項概觀](datagrid-control-overview-windows-forms.md)

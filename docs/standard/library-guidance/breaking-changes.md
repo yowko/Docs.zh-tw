@@ -96,11 +96,11 @@ public class Document
 
 > 移除 API 是一項二進位中斷性變更。 若維持已淘汰類型和方法的成本低廉，也不會為您的程式庫增加技術債務，則請考慮維持已淘汰的類型和方法。 避免移除類型和方法，可協助避免上述提到的最差情況。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [適用於 C# 開發人員的版本和更新考量](../../csharp/whats-new/version-update-considerations.md)
 - [A definitive guide to API-breaking changes in .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net) (.NET 中 API 中斷性變更的完整指南)
 - [.NET 重大變更規則](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
->[上一步](versioning.md)
+>[[上一步]](versioning.md)

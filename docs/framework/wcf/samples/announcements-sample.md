@@ -13,7 +13,7 @@ ms.locfileid: "76747008"
 
 此範例示範如何使用探索功能的公告功能。 公告功能可讓服務送出包含服務相關中繼資料的公告訊息。 當服務啟動時，預設會傳送一個 Hello 公告，而當服務關閉時，則會傳送一個 Bye 公告。 這些公告可以多點傳送，也可以點對點傳送。 這個範例包含兩個專案，也就是服務和用戶端。
 
-## <a name="service"></a>服務
+## <a name="service"></a>Service
 
 此專案包含自我裝載的計算機服務。 在 `Main` 方法中會建立一個服務主機，並在其中加入一個服務端點。 接著，建立 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>。 若要啟用公告，公告端點必須加入至 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>。 在此情況下，標準端點會使用 UDP 多點傳送，當做公告端點加入。 這樣會透過已知的 UDP 位址廣播公告。
 
@@ -38,7 +38,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }
 ```
 
-## <a name="client"></a>Client
+## <a name="client"></a>用戶端
 
 請注意，此專案中的用戶端會裝載 <xref:System.ServiceModel.Discovery.AnnouncementService>。 此外，系統會向事件註冊兩個委派。 這些事件會控制收到線上和離線公告時的用戶端作法。
 

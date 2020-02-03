@@ -29,7 +29,7 @@ ms.locfileid: "76745473"
   
 ### <a name="to-set-tile-view-programmatically"></a>以程式設計方式設定並排顯示檢視  
   
-1. 使用 <xref:System.Windows.Forms.ListView> 控制項的 <xref:System.Windows.Forms.View> 的列舉。  
+1. 使用 <xref:System.Windows.Forms.View> 控制項的 <xref:System.Windows.Forms.ListView> 的列舉。  
   
     ```vb  
     ListView1.View = View.Tile  
@@ -49,11 +49,11 @@ ms.locfileid: "76745473"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- 本系統和 System.Windows.Forms 組件的參考。  
+- System 和 System.Windows.Forms 組件的參考。  
   
 - 名為 book.ico 的圖示檔，位於與可執行檔相同的目錄中。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.TileSize%2A>

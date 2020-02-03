@@ -17,7 +17,7 @@ ms.locfileid: "76734618"
 # <a name="windows-forms-data-binding"></a>Windows Form 資料繫結
 在 Windows Form 中的資料繫結會提供方法，讓您在表單上的控制項顯示及變更來自資料來源的資訊。 您不只可以繫結至傳統的資料來源，也能繫結至幾乎任何包含資料的結構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [資料繫結和 Windows Forms](data-binding-and-windows-forms.md)  
  提供在 Windows Form 中的資料繫結概觀。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "76734618"
   
  另請參閱與資料系結[相關的介面](interfaces-related-to-data-binding.md)、[如何：導覽 Windows Forms 中的資料](how-to-navigate-data-in-windows-forms.md)，以及[如何：在 Windows Form 上建立簡單繫結控制項](how-to-create-a-simple-bound-control-on-a-windows-form.md)。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
  描述代表可繫結元件和資料來源之間繫結的類別。  
   

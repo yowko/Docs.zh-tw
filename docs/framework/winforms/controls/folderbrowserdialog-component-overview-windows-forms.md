@@ -26,7 +26,7 @@ Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> 元件是用來流
 
 當它新增至表單時，<xref:System.Windows.Forms.FolderBrowserDialog> 元件會出現在 Visual Studio Windows Form 設計工具底部的紙匣中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
 - [操作說明：使用 Windows Forms FolderBrowserDialog 元件選擇資料夾](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)

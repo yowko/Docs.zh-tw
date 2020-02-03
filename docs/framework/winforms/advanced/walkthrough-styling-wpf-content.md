@@ -20,7 +20,7 @@ ms.locfileid: "76732552"
 
 本文說明如何將樣式套用至裝載于 Windows Form 的 Windows Presentation Foundation （WPF）控制項。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 若要完成這個逐步解說，您必須具有 Visual Studio。
 
@@ -55,7 +55,7 @@ ms.locfileid: "76732552"
 
 1. 在 [**工具箱**] 中，按兩下 [`UserControl1`]，在表單上建立 `UserControl1` 的實例。
 
-   `UserControl1` 的執行個體裝載於名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。
+   `UserControl1` 的執行個體裝載於名為 <xref:System.Windows.Forms.Integration.ElementHost> 的新 `elementHost1` 控制項中。
 
 1. 在 `elementHost1`的智慧標籤面板中，按一下下拉式清單中的 [**編輯主控內容**]。
 
@@ -134,7 +134,7 @@ ms.locfileid: "76732552"
 
 1. 按一下 [**確定]** 和 [**取消**] 按鈕，並查看差異。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
@@ -142,4 +142,4 @@ ms.locfileid: "76732552"
 - [使用 WPF 控制項](using-wpf-controls.md)
 - [在 Visual Studio 中設計 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [XAML 概觀 (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
-- [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [樣式設定和範本化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

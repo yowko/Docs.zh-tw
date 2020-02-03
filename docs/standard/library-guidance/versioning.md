@@ -29,7 +29,7 @@ ms.locfileid: "76745023"
 <PackageVersion>1.0.0-alpha1</PackageVersion>
 ```
 
-NuGet 套件識別碼與 NuGet 套件版本結合，可用來識別 NuGet 中的套件。 例如，`Newtonsoft.Json` + `11.0.2`。 帶有後置詞的套件是發行前版本套件，且具有特殊的行為，很適合用於測試。 如需詳細資訊，請參閱[發行前版本套件](./nuget.md#pre-release-packages)。
+NuGet 套件識別碼與 NuGet 套件版本結合，可用來識別 NuGet 中的套件。 例如：`Newtonsoft.Json` + `11.0.2`。 帶有後置詞的套件是發行前版本套件，且具有特殊的行為，很適合用於測試。 如需詳細資訊，請參閱[發行前版本套件](./nuget.md#pre-release-packages)。
 
 因為 NuGet 套件版本是開發人員最明顯的版本，所以使用[語意版本控制 (SemVer)](https://semver.org/) 更新它是個不錯的主意。 SemVer 指出版本之間變更的重要性，並可協助開發人員在選擇要使用哪一個版本時，做出明智的決定。 例如，從 `1.0` 到 `2.0` 表示可能有潛在的中斷性變更。
 
@@ -51,7 +51,7 @@ NuGet 套件識別碼與 NuGet 套件版本結合，可用來識別 NuGet 中的
 
 Windows.NET Framework CLR 會要求完全相符，以載入強式名稱組件。 例如，`Libary1, Version=1.0.0.0` 編譯時參考了 `Newtonsoft.Json, Version=11.0.0.0`。 .NET Framework 將只會載入該確切版本 `11.0.0.0`。 若要在執行階段載入不同的版本，必須將繫結重新導向新增至 .NET 應用程式的設定檔中。
 
-強式命名與組件版本相結合，可啟用[嚴格的組件版本載入](../assembly/versioning.md)。 雖然為程式庫進行強式命名有很多好處，但它通常會導致無法找到組件的執行階段例外狀況，而且[要求修復 `app.config`/`web.config` 中的繫結重新導向](../../framework/configure-apps/redirect-assembly-versions.md)。 .NET Core 組件載入已經放寬，.NET Core CLR 將在更高版本的執行階段自動載入組件。
+強式命名與組件版本相結合，可啟用[嚴格的組件版本載入](../assembly/versioning.md)。 雖然為程式庫進行強式命名有很多好處，但它通常會導致無法找到組件的執行階段例外狀況，而且[要求修復 ](../../framework/configure-apps/redirect-assembly-versions.md)`app.config`/ 中的繫結重新導向`web.config`。 .NET Core 組件載入已經放寬，.NET Core CLR 將在更高版本的執行階段自動載入組件。
 
 ✔️考慮只在 AssemblyVersion 中包含主要版本。
 

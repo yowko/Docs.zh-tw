@@ -45,7 +45,7 @@ ms.locfileid: "76738399"
  [!code-csharp[System.Windows.Forms.DataGridViewSizingScenarios#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/CS/sizingscenarios.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewSizingScenarios#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSizingScenarios/vb/sizingscenarios.vb#00)]  
   
- 若要使用這個示範應用程式：  
+ 使用本示範應用程式：  
   
 - 變更表單的大小 觀察填滿模式資料行在由 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 屬性值指定並保留比例時如何變更其寬度。 觀察資料行的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 如何在表單太小時防止其變更。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "76738399"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- 本系統和 System.Windows.Forms 組件的參考。  
+- System 和 System.Windows.Forms 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>

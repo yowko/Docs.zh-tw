@@ -25,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> 控制項的設計目的�
   
 2. 在 <xref:System.Windows.Forms.GroupBox> 或 <xref:System.Windows.Forms.Panel> 控制項上繪製 <xref:System.Windows.Forms.RadioButton> 控制項。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.RadioButton>
 - [RadioButton 控制項概觀](radiobutton-control-overview-windows-forms.md)

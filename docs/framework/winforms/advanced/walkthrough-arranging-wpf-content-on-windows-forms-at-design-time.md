@@ -24,7 +24,7 @@ ms.locfileid: "76746825"
 
 本文說明如何使用 Windows Forms 的版面配置功能（例如錨定和對齊線）來排列 Windows Presentation Foundation （WPF）控制項。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 若要完成這個逐步解說，您必須具有 Visual Studio。
 
@@ -63,7 +63,7 @@ ms.locfileid: "76746825"
 
 5. 在 **工具箱** 中，按兩下 `UserControl1`，在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的第一個資料格中建立 `UserControl1` 的實例。
 
-   `UserControl1` 的執行個體會裝載到名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。
+   `UserControl1` 的執行個體會裝載到名為 <xref:System.Windows.Forms.Integration.ElementHost> 的新 `elementHost1` 控制項中。
 
 6. 在 **工具箱** 中，按兩下 `UserControl1`，在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的第二個儲存格中建立另一個實例。
 
@@ -79,7 +79,7 @@ ms.locfileid: "76746825"
 
 1. 從 [**工具箱**] 中，將 `UserControl1` 的實例拖曳至表單上，並將它放在 [<xref:System.Windows.Forms.TableLayoutPanel>] 控制項底下的空間中。
 
-   `UserControl1` 的執行個體會裝載到名為 `elementHost3` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。
+   `UserControl1` 的執行個體會裝載到名為 <xref:System.Windows.Forms.Integration.ElementHost> 的新 `elementHost3` 控制項中。
 
 2. 使用對齊線，將 `elementHost3` 的左邊緣與 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的左邊緣對齊。
 
@@ -129,12 +129,12 @@ ms.locfileid: "76746825"
 
     如需詳細資訊，請參閱[如何：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [操作說明：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [操作說明：在設計階段將控制項對齊表單邊緣](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [如何：在設計階段將控制項對齊表單邊緣](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
 - [逐步解說：使用對齊線排列 Windows Forms 上的控制項](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [移轉和互通性](../../wpf/advanced/migration-and-interoperability.md)
 - [使用 WPF 控制項](using-wpf-controls.md)

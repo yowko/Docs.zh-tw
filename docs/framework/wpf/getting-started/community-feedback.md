@@ -109,7 +109,7 @@ Bug 可能與您用來開發和建置應用程式的工具，以及您所建置�
   - 解決方案
   - 單一專案
   - 具有多個相依專案的方案
-- 您的應用程式是否有特定語言或非語言相關的資源。 例如，您是否指定了 `Application`、`Page` 和 `Resource` 等類型的 `UICulture` 專案屬性或可當地語系化的中繼資料？
+- 您的應用程式是否有特定語言或非語言相關的資源。 例如，您是否指定了 `UICulture`、`Application` 和 `Page` 等類型的 `Resource` 專案屬性或可當地語系化的中繼資料？
 - 您是否在 AssemblyInfo.cs 或 AssemblyInfo.vb 檔案中使用了非語言相關的設定。
 
 #### <a name="provide-scenario-and-impact-information"></a>提供案例和影響資訊
@@ -118,6 +118,6 @@ Bug 可能與您用來開發和建置應用程式的工具，以及您所建置�
 
 一般來說，當機和資料遺失案例的影響較大，因此也最容易設定優先權。 不過，某些 Bug 僅會在罕見的案例中出現，而這些案例可能是某些情況的主線案例。 提供案例和影響的內容，可協助 WPF 小組做出正確的決策。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何回報 Visual Studio 的問題](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)

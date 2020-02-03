@@ -15,7 +15,7 @@ ms.locfileid: "76738026"
 # <a name="button-control-windows-forms"></a>Button 控制項 (Windows Form)
 Windows Form `Button` 控制項可讓使用者按一下以執行動作。 `Button` 控制項可以顯示文字和影像。 按一下按鈕時，按鈕看起來就像被推入又釋放。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Button 控制項概觀](button-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -33,7 +33,7 @@ Windows Form `Button` 控制項可讓使用者按一下以執行動作。 `Butto
   
  另請參閱[如何：使用設計工具將 Windows Forms 按鈕指定為 [接受] 按鈕](designate-a-wf-button-as-the-accept-button-using-the-designer.md)，以及[如何：使用設計工具將 Windows Forms 按鈕指定為 [取消](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)] 按鈕。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.Button> 類別  
  說明這個類別，並且提供其所有成員的連結。  
   

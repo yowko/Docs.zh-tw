@@ -52,7 +52,7 @@ ms.locfileid: "76739631"
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollDelta%2A>|取得單一滑鼠滾輪旋轉增量的差異值數量。|  
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|取得轉動滑鼠滾輪時要捲動的行數。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 應用程式中的滑鼠輸入](mouse-input-in-a-windows-forms-application.md)
 - [Windows Forms 中的滑鼠捕捉](mouse-capture-in-windows-forms.md)

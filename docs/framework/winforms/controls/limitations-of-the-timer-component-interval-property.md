@@ -28,7 +28,7 @@ Windows Forms <xref:System.Windows.Forms.Timer> 元件具有 <xref:System.Window
   
 - <xref:System.Windows.Forms.Timer.Interval%2A> 屬性的有效位數（以毫秒為單位）。 有些電腦提供高解析度的計數器，其解析度高於毫秒。 這類計數器的可用性取決於您電腦的處理器硬體。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer 元件](timer-component-windows-forms.md)

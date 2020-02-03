@@ -16,7 +16,7 @@ ms.locfileid: "76732753"
 Windows Form 包含一組實作拖放行為的方法、事件和類別。 本主題提供 Windows Form 中的拖放功能支援概觀。  另請參閱[拖放作業和剪貼簿支援](./advanced/drag-and-drop-operations-and-clipboard-support.md)。  
   
 ## <a name="performing-drag-and-drop-operations"></a>執行拖放作業  
- 若要執行拖放作業時，請使用 <xref:System.Windows.Forms.Control> 類別的 <xref:System.Windows.Forms.Control.DoDragDrop%2A> 方法。 如需如何執行拖放作業的詳細資訊，請參閱 <xref:System.Windows.Forms.Control.DoDragDrop%2A>。 若要取得必須在開始拖放作業前先將滑鼠指標拖曳到其上的矩形，請使用 <xref:System.Windows.Forms.SystemInformation> 類別的 <xref:System.Windows.Forms.SystemInformation.DragSize%2A> 屬性。  
+ 若要執行拖放作業時，請使用 <xref:System.Windows.Forms.Control.DoDragDrop%2A> 類別的 <xref:System.Windows.Forms.Control> 方法。 如需如何執行拖放作業的詳細資訊，請參閱 <xref:System.Windows.Forms.Control.DoDragDrop%2A>。 若要取得必須在開始拖放作業前先將滑鼠指標拖曳到其上的矩形，請使用 <xref:System.Windows.Forms.SystemInformation.DragSize%2A> 類別的 <xref:System.Windows.Forms.SystemInformation> 屬性。  
   
 ## <a name="events-related-to-drag-and-drop-operations"></a>與拖放作業相關的事件  
  拖放作業包含兩類事件：拖放作業的目前目標所發生的事件，以及拖放作業的來源所發生的事件。  
@@ -43,6 +43,6 @@ Windows Form 包含一組實作拖放行為的方法、事件和類別。 本主
   
  <xref:System.Windows.Forms.QueryContinueDragEventArgs> 類別提供滑鼠按鈕和鍵盤輔助按鍵的目前狀態、指定是否已按下 ESC 鍵的值，以及可設定以指定是否應該繼續拖放作業的 <xref:System.Windows.Forms.DragAction> 值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 應用程式中的滑鼠輸入](mouse-input-in-a-windows-forms-application.md)

@@ -46,7 +46,7 @@ ms.locfileid: "76734855"
   
 - <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
- <xref:System.Windows.Forms.Application> 類別的 <xref:System.Windows.Forms.Application.ApplicationExit> 事件會在主要表單的關閉事件之後引發。  
+ <xref:System.Windows.Forms.Application.ApplicationExit> 類別的 <xref:System.Windows.Forms.Application> 事件會在主要表單的關閉事件之後引發。  
   
 > [!NOTE]
 > Visual Basic 2005 包含其他應用程式事件，例如 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> 和 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType>。  
@@ -80,6 +80,6 @@ ms.locfileid: "76734855"
   
 - <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
+- [在 Windows Form 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)

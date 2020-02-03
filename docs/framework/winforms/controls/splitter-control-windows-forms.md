@@ -17,13 +17,13 @@ ms.locfileid: "76742875"
 Windows Forms `Splitter` 控制項用來在執行時間調整停駐的控制項大小。 `Splitter` 控制項通常用於具有不同資料長度之控制項的表單，例如 Windows Explorer，其資料窗格包含不同時間的差異寬度資訊。  
   
 > [!NOTE]
-> 雖然 <xref:System.Windows.Forms.SplitContainer> 會取代並新增舊版 `Splitter` 控制項的功能，但如果您選擇，`Splitter` 會保留以供回溯相容性及未來使用。  
+> 雖然 <xref:System.Windows.Forms.SplitContainer> 會取代並且將功能加入至之前版本的 `Splitter` 控制項；不過，也可以選擇保留 `Splitter`，以提供回溯相容性 (Backward Compatibility) 以及供未來使用。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Splitter 控制項概觀](splitter-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.Splitter> 類別  
  說明這個類別，並且提供其所有成員的連結。  
   

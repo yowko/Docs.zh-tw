@@ -54,11 +54,11 @@ ms.locfileid: "76747190"
 
 繼承的控制項必須 `Protected` 才能夠錨定。 若要變更控制項的存取層級，請在 [**屬性**] 視窗中設定其 [`Modifiers`] 屬性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
 - [AutoSize 屬性概觀](autosize-property-overview.md)
-- [如何：將控制項停駐在 Windows Forms 上](how-to-dock-controls-on-windows-forms.md)
+- [操作說明：將控制項停駐在 Windows Forms 上](how-to-dock-controls-on-windows-forms.md)
 - [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Forms 控制項](windows-forms-controls-padding-autosize.md)

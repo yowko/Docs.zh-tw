@@ -28,7 +28,7 @@ ms.locfileid: "76744687"
 介面可以是命名空間或類別的成員。 介面宣告可以包含下列成員的宣告（不含任何執行的簽章）：
 
 - [方法](../../programming-guide/classes-and-structs/methods.md)
-- [Properties](../../programming-guide/classes-and-structs/using-properties.md)
+- [屬性](../../programming-guide/classes-and-structs/using-properties.md)
 - [索引子](../../programming-guide/indexers/using-indexers.md)
 - [事件](event.md)
 
@@ -69,7 +69,7 @@ public interface INamed
 
 如需詳細資訊，請參閱[ C#語言規格](~/_csharplang/spec/introduction.md)的[介面](~/_csharplang/spec/interfaces.md)一節和[預設介面成員的功能規格- C# 8.0](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
@@ -78,6 +78,6 @@ public interface INamed
 - [介面](../../programming-guide/interfaces/index.md)
 - [使用屬性](../../programming-guide/classes-and-structs/using-properties.md)
 - [使用索引子](../../programming-guide/indexers/using-indexers.md)
-- [Class - 類別](class.md)
+- [class](class.md)
 - [struct](struct.md)
 - [介面](../../programming-guide/interfaces/index.md)

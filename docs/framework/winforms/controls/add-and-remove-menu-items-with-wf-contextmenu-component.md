@@ -74,7 +74,7 @@ ms.locfileid: "76746277"
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ContextMenu>
 - [ContextMenu 元件](contextmenu-component-windows-forms.md)

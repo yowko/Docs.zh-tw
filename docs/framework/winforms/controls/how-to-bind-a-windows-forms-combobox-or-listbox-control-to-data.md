@@ -31,7 +31,7 @@ ms.locfileid: "76742042"
   
 2. 如果您要系結至資料表，請將 `DisplayMember` 屬性設定為數據源中的資料行名稱。  
   
-     \-或-  
+     \- 或 -  
   
      如果您要系結至 <xref:System.Collections.IList>，請將 [顯示成員] 設定為清單中類型的公用屬性。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "76742042"
     > [!NOTE]
     > 如果您系結至不會執行 <xref:System.ComponentModel.IBindingList> 介面的資料來源（例如 <xref:System.Collections.ArrayList>），當資料來源更新時，將不會更新繫結控制項的資料。 例如，如果您有一個下拉式方塊系結至 <xref:System.Collections.ArrayList> 並將資料加入至 <xref:System.Collections.ArrayList>，這些新的專案就不會出現在下拉式方塊中。 不過，您可以在控制項所系結的 <xref:System.Windows.Forms.BindingContext> 類別實例上呼叫 <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> 和 <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> 方法，強制更新下拉式方塊。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

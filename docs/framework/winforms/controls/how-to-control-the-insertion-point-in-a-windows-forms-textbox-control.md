@@ -61,7 +61,7 @@ ms.locfileid: "76742199"
   
 - 將 <xref:System.Windows.Forms.TextBox> 控制項的 <xref:System.Windows.Forms.Control.TabIndex%2A> 屬性設定為 [`0`]。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox 控制項概觀](textbox-control-overview-windows-forms.md)

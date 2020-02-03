@@ -17,7 +17,7 @@ ms.locfileid: "76733324"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet add package` - 將套件參考新增至專案檔。
 
@@ -52,7 +52,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>引數
 
 - **`PROJECT`**
 
@@ -112,7 +112,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 NuGet 中管理全域套件、快取和暫存資料夾](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
 - [NuGet 套件版本控制](https://docs.microsoft.com/nuget/reference/package-versioning)

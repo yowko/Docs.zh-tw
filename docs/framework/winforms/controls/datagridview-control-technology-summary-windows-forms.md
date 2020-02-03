@@ -60,7 +60,7 @@ ms.locfileid: "76742472"
   
  <xref:System.Windows.Forms.DataGridView> 控制項可以與 <xref:System.Windows.Forms.BindingSource> 元件緊密搭配使用。 此元件設計成表單的主要資料來源。 無論資料來源類型為何，它都可以管理 <xref:System.Windows.Forms.DataGridView> 控制項與其資料來源之間的互動。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGridView 控制項概觀](datagridview-control-overview-windows-forms.md)
 - [DataGridView 控制項架構](datagridview-control-architecture-windows-forms.md)

@@ -16,7 +16,7 @@ ms.locfileid: "76744228"
 # <a name="picturebox-control-windows-forms"></a>PictureBox 控制項 (Windows Form)
 Windows Forms `PictureBox` 控制項是用來顯示點陣圖、GIF、JPEG、中繼檔或圖示格式的圖形。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [PictureBox 控制項概觀](picturebox-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -29,7 +29,7 @@ Windows Forms `PictureBox` 控制項是用來顯示點陣圖、GIF、JPEG、中�
  [操作說明：使用設計工具載入圖片](how-to-load-a-picture-using-the-designer-windows-forms.md)  
  描述如何在設計階段載入和顯示表單上的圖片。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.PictureBox>  
  說明這個類別，並且提供其所有成員的連結。  
   

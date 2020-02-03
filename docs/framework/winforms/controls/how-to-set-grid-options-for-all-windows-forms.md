@@ -30,6 +30,6 @@ ms.locfileid: "76744838"
 
    在右窗格的 [**版面配置設定**] 標題下，您可以針對您所建立的所有新表單設定預設方格設定。 這些設定包括格線大小、控制項是否貼齊其中，以及是否預設為開啟。 此外，您可以在**對齊**和**對齊線**版面配置模式之間進行選取。 如需對齊線的詳細資訊，請參閱[逐步解說：使用對齊線排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [選項： Windows Form 設計工具](/visualstudio/ide/reference/options-windows-forms-designer)

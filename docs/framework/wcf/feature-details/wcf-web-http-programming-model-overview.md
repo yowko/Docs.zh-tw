@@ -20,7 +20,7 @@ Windows Communication Foundation （WCF） WEB HTTP 程式設計模型提供使�
   
  WCF WEB HTTP 程式設計模型延伸 WCF 的範圍，以涵蓋包含 web HTTP 服務、AJAX 和 JSON 服務，以及新聞訂閱（ATOM/RSS）摘要的 Web 樣式案例。 如需 AJAX 和 JSON 服務的詳細資訊，請參閱[Ajax 整合和 Json 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。 如需有關新聞訂閱的詳細資訊，請參閱[WCF 摘要整合總覽](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。  
   
- 可從 WEB HTTP 服務傳回的資料型別沒有額外的限制。 WEB HTTP 服務作業可傳回任何可序列化型別。 因為 WEB HTTP 服務作業可由 Web 瀏覽器叫用，所以可在 URL 中指定的資料型別具有一項限制。 如需預設支援哪些類型的詳細資訊，請參閱下面的**UriTemplate 查詢字串參數和 url**一節。 您可以提供自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 實作來變更預設行為，其中指定如何將 URL 中指定的參數轉換成實際的參數型別。 如需詳細資訊，請參閱<xref:System.ServiceModel.Dispatcher.QueryStringConverter>。  
+ 可從 WEB HTTP 服務傳回的資料型別沒有額外的限制。 WEB HTTP 服務作業可傳回任何可序列化型別。 因為 WEB HTTP 服務作業可由 Web 瀏覽器叫用，所以可在 URL 中指定的資料型別具有一項限制。 如需預設支援哪些類型的詳細資訊，請參閱下面的**UriTemplate 查詢字串參數和 url**一節。 您可以提供自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 實作來變更預設行為，其中指定如何將 URL 中指定的參數轉換成實際的參數型別。 如需詳細資訊，請參閱＜<xref:System.ServiceModel.Dispatcher.QueryStringConverter>＞  
   
 > [!CAUTION]
 > 使用 WCF WEB HTTP 程式設計模型所撰寫的服務不會使用 SOAP 訊息。 因為未使用 SOAP，所以無法使用 WCF 所提供的安全性功能。 不過，您可透過以 HTTPS 裝載服務的方式來使用傳輸型安全性。 如需 WCF 安全性的詳細資訊，請參閱[安全性總覽](../../../../docs/framework/wcf/feature-details/security-overview.md)  
@@ -39,7 +39,7 @@ Windows Communication Foundation （WCF） WEB HTTP 程式設計模型提供使�
   
 - a/z/c  
   
-- 等等。  
+- 依此類推。  
   
  在此範本中，大括號標記法 ("{segment}") 表示變數區段，而不是常值。  
   
@@ -101,7 +101,7 @@ interface ICustomer
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate 查詢字串參數和 URL  
  您可以輸入與服務作業關聯的 URL，透過網頁瀏覽器呼叫 Web 樣式服務。 這些服務作業可接受的查詢字串參數，必須在 URL 中以字串格式指定。 下表說明可由 URL 傳遞的型別及採用的格式。  
   
-|類型|格式|  
+|類型|[格式]|  
 |----------|------------|  
 |<xref:System.Byte>|0 - 255|  
 |<xref:System.SByte>|-128 - 127|  
@@ -121,7 +121,7 @@ interface ICustomer
 |<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> 其中 DD = 天數，HH = 小時，MM = 分鐘，SS = 秒數|  
 |<xref:System.Guid>|GUID，例如：<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|MM/DD/YYYY HH:MM:SS MM:SS<br /><br /> 其中 DD = 天數，HH = 小時，MM = 分鐘，SS = 秒數|  
-|列舉型別|列舉值，依下列程式碼示範的方式定義列舉。<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> 任何個別的列舉值 (或其對應的整數值) 都可以在查詢字串中指定。|  
+|列舉|列舉值，依下列程式碼示範的方式定義列舉。<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> 任何個別的列舉值 (或其對應的整數值) 都可以在查詢字串中指定。|  
 |具有可以在型別和字串表示之間相互轉換之 `TypeConverterAttribute` 的型別。|取決於型別轉換子。|  
   
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>格式與 WCF WEB HTTP 程式設計模型  
@@ -144,7 +144,7 @@ interface ICustomer
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP 程式設計模型疑難排解  
  當呼叫 WCF WEB HTTP 服務以使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 建立通道時，<xref:System.ServiceModel.Description.WebHttpBehavior> 會使用組態檔中設定的 <xref:System.ServiceModel.EndpointAddress>，即便傳遞至 <xref:System.ServiceModel.EndpointAddress> 的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 是另一個值亦然。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF 摘要整合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

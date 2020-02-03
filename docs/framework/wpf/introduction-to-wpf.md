@@ -135,7 +135,7 @@ Namespace SDKSample
 End Namespace
 ```
 
-在這個範例中，程式碼後置會實作一個衍生自 <xref:System.Windows.Window> 類別的類別。 它使用 `x:Class` 屬性來建立標記與程式碼後置類別的關聯， 並從程式碼後置類別的建構函式呼叫`InitializeComponent` ，以合併標記中定義的 UI 與程式碼後置類別 （當您建立應用程式時，系統會為您產生`InitializeComponent`，這就是您不需要手動執行的原因）。`x:Class` 和 `InitializeComponent` 的組合，可確保您的執行會在建立時正確地初始化。 程式碼後置類別也會針對按鈕的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件實作事件處理常式。 當您按一下按鈕時，事件處理常式會呼叫 <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> 方法來顯示訊息方塊。
+在這個範例中，程式碼後置會實作一個衍生自 <xref:System.Windows.Window> 類別的類別。 它使用 `x:Class` 屬性來建立標記與程式碼後置類別的關聯， 並從程式碼後置類別的建構函式呼叫 `InitializeComponent`，以合併標記中定義的 UI 與程式碼後置類別 （當您建立應用程式時，系統會為您產生`InitializeComponent`，這就是您不需要手動執行的原因）。`x:Class` 和 `InitializeComponent` 的組合，可確保您的執行會在建立時正確地初始化。 程式碼後置類別也會針對按鈕的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件實作事件處理常式。 當您按一下按鈕時，事件處理常式會呼叫 <xref:System.Windows.MessageBox.Show%2A?displayProperty=fullName> 方法來顯示訊息方塊。
 
 下圖顯示按一下按鈕時的結果：
 
@@ -650,7 +650,7 @@ WPF 控制項的預設使用者介面通常是從其他控制項和圖案建構�
 
 ## <a name="wpf-best-practices"></a>WPF 最佳做法
 
-如同任何開發平台，您可以透過各種方式來使用 WPF，以取得想要的結果。 為了確保您的 WPF 應用程式提供所需的使用者體驗，並符合一般大眾的需求，已針對協助工具、全球化和當地語系化，以及效能提供了建議的最佳作法。 如需詳細資訊，請參閱＜＞。
+如同任何開發平台，您可以透過各種方式來使用 WPF，以取得想要的結果。 為了確保您的 WPF 應用程式提供所需的使用者體驗，並符合一般大眾的需求，已針對協助工具、全球化和當地語系化，以及效能提供了建議的最佳作法。 如需詳細資訊，請參閱
 
 - [協助工具選項](../ui-automation/accessibility-best-practices.md)
 - [WPF 全球化和當地語系化](advanced/wpf-globalization-and-localization-overview.md)
@@ -664,7 +664,7 @@ WPF 控制項的預設使用者介面通常是從其他控制項和圖案建構�
 > [!div class="nextstepaction"]
 > [逐步解說：我的第一個 WPF 桌面應用程式](getting-started/walkthrough-my-first-wpf-desktop-application.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [開始使用 WPF](getting-started/index.md)
 - [Windows Presentation Foundation](index.md)

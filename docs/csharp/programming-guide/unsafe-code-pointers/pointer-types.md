@@ -24,7 +24,7 @@ void* identifier; //allowed but not recommended
 
 指標型別不會從 [object](../../language-reference/builtin-types/reference-types.md) 繼承，而且指標型別與 `object` 之間無法進行轉換。 此外，boxing 和 unboxing 不支援指標。 不過，不同的指標類型之間以及指標類型與整數類資料類型之間可以進行轉換。
 
-當您在相同的宣告中宣告多個指標時，星號 (*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如：
+當您在相同的宣告中宣告多個指標時，星號 (\*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如，
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -63,7 +63,7 @@ int* myVariable;
 
 下表所列出的運算子和陳述式可以用於 unsafe 內容中的指標：
 
-|運算子/陳述式|使用|
+|運算子/陳述式|用法|
 |-------------------------|---------|
 |`*`|執行指標間接取值。|
 |`->`|透過指標存取結構的成員。|
@@ -79,13 +79,13 @@ int* myVariable;
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[指標型別](~/_csharplang/spec/unsafe-code.md#pointer-types)。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/unsafe-code.md#pointer-types)的[指標型別](~/_csharplang/spec/introduction.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [Unsafe 程式碼和指標](index.md)
 - [指標轉換](pointer-conversions.md)
 - [參考型別](../../language-reference/keywords/reference-types.md)
-- [實值型別](../../language-reference/builtin-types/value-types.md)
-- [Unsafe.DangerousAPI](../../language-reference/keywords/unsafe.md)
+- [值類型](../../language-reference/builtin-types/value-types.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)

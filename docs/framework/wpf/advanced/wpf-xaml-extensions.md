@@ -16,7 +16,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744404"
 ---
 # <a name="wpf-xaml-extensions"></a>WPF XAML 擴充功能
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Binding 標記延伸](binding-markup-extension.md)  
   [ColorConvertedBitmap 標記延伸](colorconvertedbitmap-markup-extension.md)  
   [ComponentResourceKey 標記延伸](componentresourcekey-markup-extension.md)  

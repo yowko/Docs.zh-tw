@@ -27,21 +27,21 @@ ms.locfileid: "76747152"
   
 1. 建立表單，並將其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 屬性設定為 `true`。  
   
-2. 將 <xref:System.Windows.Forms.MenuStrip> 加入 `Form1`，並將 <xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性設定為 `true`。  
+2. 將 <xref:System.Windows.Forms.MenuStrip> 加入 `Form1`，並將 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 的 <xref:System.Windows.Forms.MenuStrip> 屬性設定為 `true`。  
   
-3. 將 `Form1`<xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 屬性設定為 `false`。  
+3. 將 <xref:System.Windows.Forms.ToolStripItem.Visible%2A>`Form1` 的 <xref:System.Windows.Forms.MenuStrip> 屬性設定為 `false`。  
   
 4. 將最上層功能表項目加入 `Form1`<xref:System.Windows.Forms.MenuStrip>，並將其 <xref:System.Windows.Forms.Control.Text%2A> 屬性設定為 `&File`。  
   
 5. 將子功能表項目加入 `&File` 功能表項目，並將其 <xref:System.Windows.Forms.Form.Text%2A> 屬性設定為 `&Open`。  
   
-6. 將表單加入專案，將 <xref:System.Windows.Forms.MenuStrip> 加入表單，並將 `Form2`<xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性設定為 `true`。  
+6. 將表單加入專案，將 <xref:System.Windows.Forms.MenuStrip> 加入表單，並將 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>`Form2` 的 <xref:System.Windows.Forms.MenuStrip> 屬性設定為 `true`。  
   
 7. 將最上層功能表項目加入 `Form2`<xref:System.Windows.Forms.MenuStrip>，並將其 <xref:System.Windows.Forms.Form.Text%2A> 屬性設定為 `&Special`。  
   
 8. 將兩個子功能表項目加入 `&Special` 功能表項目，並將其 <xref:System.Windows.Forms.Form.Text%2A> 屬性分別設定為 `Command&1` 和 `Command&2`。  
   
-9. 將 `&Special`、`Command&1` 和 `Command&2` 功能表項目的 <xref:System.Windows.Forms.MergeAction> 屬性設定為 <xref:System.Windows.Forms.MergeAction.Append>。  
+9. 將 <xref:System.Windows.Forms.MergeAction>、`&Special` 和 `Command&1` 功能表項目的 `Command&2` 屬性設定為 <xref:System.Windows.Forms.MergeAction.Append>。  
   
 10. 為 `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>的 <xref:System.Windows.Forms.Control.Click> 事件建立事件處理常式。  
   
@@ -82,8 +82,8 @@ ms.locfileid: "76747152"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- 名為 `Form1` 和 `Form2` 的兩個 <xref:System.Windows.Forms.Form> 控制項。  
+- 名為 <xref:System.Windows.Forms.Form> 和 `Form1` 的兩個 `Form2` 控制項。  
   
-- `Form1` 上名為 `menuStrip1` 的 <xref:System.Windows.Forms.MenuStrip> 控制項，以及 `Form2` 上名為 `menuStrip2` 的 <xref:System.Windows.Forms.MenuStrip> 控制項。  
+- <xref:System.Windows.Forms.MenuStrip> 上名為 `Form1` 的 `menuStrip1` 控制項，以及 <xref:System.Windows.Forms.MenuStrip> 上名為 `Form2` 的 `menuStrip2` 控制項。  
   
 - <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。

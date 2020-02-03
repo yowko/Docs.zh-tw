@@ -70,7 +70,7 @@ ms.locfileid: "76744132"
 
 <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 集合無法有效率地進行大量選取。 <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> 和 <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> 集合也可能沒有效率，雖然較低的程度，因為資料列數比一般 <xref:System.Windows.Forms.DataGridView> 控制項中的資料格少許多，而且資料行比資料列少許多。 若要避免使用這些集合時的效能受到影響，請使用下列指導方針：
 
-- 若要判斷是否已選取 <xref:System.Windows.Forms.DataGridView> 中的所有資料格，再存取 <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 集合的內容，請檢查 <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> 方法的傳回值。 不過要注意的是，這個方法可能會造成資料列成為不共用的。 如需詳細資訊，請參閱下一章節。
+- 若要判斷是否已選取 <xref:System.Windows.Forms.DataGridView> 中的所有資料格，再存取 <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> 集合的內容，請檢查 <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> 方法的傳回值。 不過要注意的是，這個方法可能會造成資料列成為不共用的。 如需詳細資訊，請參閱下一節。
 
 - 請避免使用 <xref:System.Windows.Forms.DataGridViewSelectedCellCollection?displayProperty=nameWithType> 的 <xref:System.Collections.ICollection.Count%2A> 屬性來判斷選取的儲存格數目。 請改用 <xref:System.Windows.Forms.DataGridView.GetCellCount%2A?displayProperty=nameWithType> 方法，並傳入 <xref:System.Windows.Forms.DataGridViewElementStates.Selected?displayProperty=nameWithType> 值。 同樣地，您可以使用 <xref:System.Windows.Forms.DataGridViewRowCollection.GetRowCount%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.DataGridViewColumnCollection.GetColumnCount%2A?displayProperty=nameWithType> 方法來判斷選取的元素數目，而不是存取選取的資料列和資料行集合。
 
@@ -142,7 +142,7 @@ ms.locfileid: "76744132"
 
 - 請勿呼叫 <xref:System.Windows.Forms.DataGridView.Sort%2A> 方法的 `Sort(IComparer)` 多載。 使用自訂比較子進行排序會使所有資料列變成非共用。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows Forms DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)

@@ -14,10 +14,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746225"
 ---
-# <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中的基本資料行、 資料列和資料格功能
+# <a name="basic-column-row-and-cell-features-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能
 您可以藉由設定單一屬性來修改 `DataGridView` 資料格、資料列和資料行的許多基本行為。 本節中的主題將說明這些功能最常使用的幾個。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：隱藏 Windows Forms DataGridView 控制項中的資料行](how-to-hide-columns-in-the-windows-forms-datagridview-control.md)  
  描述如何防止特定資料行出現在控制項中。  
   
@@ -39,10 +39,10 @@ ms.locfileid: "76746225"
  [操作說明：取得和設定 Windows Forms DataGridView 控制項中目前的儲存格](get-and-set-the-current-cell-wf-datagridview-control.md)  
  描述如何存取目前焦點在控制項中的儲存格。  
   
- [如何：顯示 Windows Form DataGridView 控制項的儲存格影像](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+ [操作說明：顯示 Windows Form DataGridView 控制項的儲存格影像](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
  描述如何建立在每個資料格中顯示圖示的影像資料行。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.DataGridView>  
  提供控制項的參考檔。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "76746225"
  [在 Windows Forms DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  提供主題描述如何使用儲存格、資料列和資料行物件進行程式設計。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGridView 控制項](datagridview-control-windows-forms.md)
 - [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)

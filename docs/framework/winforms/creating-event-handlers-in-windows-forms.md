@@ -19,7 +19,7 @@ ms.locfileid: "76742329"
 
 事件處理常式是程式碼中的一項程序，可以決定發生事件時 (例如當使用者按一下按鈕，或訊息佇列收到訊息時) 所應執行的動作。 當事件引發時，收到事件的事件處理常式或處理常式會隨即執行。 事件可以指派給多個處理常式，而處理特定事件的方法也可隨機變更。 您也可以使用 Visual Studio 中的 Windows Form 設計工具來建立事件處理常式。
 
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
 
  [事件總覽](events-overview-windows-forms.md)\
  說明事件模型與委派的角色。

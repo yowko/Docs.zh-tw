@@ -19,11 +19,11 @@ ms.locfileid: "76745171"
 # <a name="listbox-control-windows-forms"></a>ListBox 控制項 (Windows Form)
 Windows Forms `ListBox` 控制項會顯示使用者可以從中選取一或多個專案的清單。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ListBox 控制項概觀](listbox-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.ListBox> 類別  
  說明這個類別，並且提供其所有成員的連結。  
   

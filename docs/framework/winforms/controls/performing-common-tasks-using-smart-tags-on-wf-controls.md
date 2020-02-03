@@ -54,7 +54,7 @@ ms.locfileid: "76744253"
 
 6. 按一下智慧標籤圖像。 在顯示于圖像旁邊的快捷方式功能表中，選取**水準分隔器方向**專案。 請注意，<xref:System.Windows.Forms.SplitContainer> 控制項的分隔器列現在是水準方向。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:System.Windows.Forms.TabControl>

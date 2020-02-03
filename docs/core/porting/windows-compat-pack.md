@@ -16,7 +16,7 @@ ms.locfileid: "76733618"
 
 相容性套件是[.NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)的邏輯延伸模組，可大幅增加 API 集。 現有的程式碼會進行編譯，幾乎不會進行任何修改。 為了維持「所有 .NET 部署所提供的一組 Api」的承諾，.NET Standard 不包含無法在所有平臺（例如登錄、Windows Management Instrumentation （WMI）或反映發出 Api）上工作的技術。 Windows 相容性套件位於 .NET Standard 之上，並可讓您存取這些僅限 Windows 的技術。 它特別適用于想要移至 .NET Core 但打算保留在 Windows 上的客戶，至少是第一個步驟。 在這種情況下，能夠使用僅限 Windows 的技術會移除遷移障礙。
 
-## <a name="package-contents"></a>套件內容
+## <a name="package-contents"></a>封裝內容
 
 Windows 相容性套件是透過[Microsoft. Windows 相容性 NuGet 套件](https://www.nuget.org/packages/Microsoft.Windows.Compatibility)提供，而且可以從以 .net Core 或 .NET Standard 為目標的專案中參考。
 

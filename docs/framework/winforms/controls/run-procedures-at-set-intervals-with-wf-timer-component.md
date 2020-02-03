@@ -242,7 +242,7 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer 元件](timer-component-windows-forms.md)

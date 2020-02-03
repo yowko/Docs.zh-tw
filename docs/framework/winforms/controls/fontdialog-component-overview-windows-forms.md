@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.FontDialog> 元件是預先設定的對
 ## <a name="key-properties"></a>索引鍵內容  
  元件有數個屬性可設定其外觀。 設定對話方塊選項的屬性會 <xref:System.Windows.Forms.FontDialog.Font%2A> 並 <xref:System.Windows.Forms.FontDialog.Color%2A>。 <xref:System.Windows.Forms.FontDialog.Font%2A> 屬性會設定字型、樣式、大小、腳本和效果;例如，`Arial, 10pt, style=Italic, Strikeout`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.FontDialog>
 - [FontDialog 元件](fontdialog-component-windows-forms.md)

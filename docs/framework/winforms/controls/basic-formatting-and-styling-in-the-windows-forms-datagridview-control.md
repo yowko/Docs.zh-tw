@@ -15,7 +15,7 @@ ms.locfileid: "76732005"
 # <a name="basic-formatting-and-styling-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的基本格式化和樣式設定
 `DataGridView` 控制項可讓您輕鬆地定義資料格的基本外觀，以及儲存格值的顯示格式。 您可以針對特定資料行和資料列中的儲存格，或是針對控制項中的所有資料格，藉由設定透過各種 `DataGridView` 控制項屬性存取之 `DataGridViewCellStyle` 物件的屬性，來定義其外觀和格式設定樣式。 此外，您可以藉由處理 `CellFormatting` 事件，以動態方式根據因素（例如資料格值）來修改這些樣式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：變更 Windows Forms DataGridView 控制項中的框線和格線樣式](change-the-border-and-gridline-styles-in-the-datagrid.md)  
  描述如何設定 `DataGridView` 屬性，以定義控制項框線的外觀和儲存格之間的邊界線。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "76732005"
  [操作說明：在 Windows Forms DataGridView 控制項中使用資料列範本自訂資料列](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
  描述如何使用 `RowTemplate` 屬性來設定將用於控制項中所有資料列的資料列屬性。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.DataGridView>  
  提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。  
   
@@ -57,6 +57,6 @@ ms.locfileid: "76732005"
  [Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)  
  提供描述常用資料格、資料列和資料行屬性的主題。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGridView 控制項](datagridview-control-windows-forms.md)

@@ -22,7 +22,7 @@ Windows Form <xref:System.Windows.Forms.TabControl> 顯示多個索引標籤，�
 ## <a name="working-with-tabcontrol"></a>使用 TabControl  
  <xref:System.Windows.Forms.TabControl> 的最重要屬性是 <xref:System.Windows.Forms.TabControl.TabPages%2A>，其中包含個別的索引標籤。 每個個別的索引標籤都是 <xref:System.Windows.Forms.TabPage> 物件。 當您按一下索引標籤時，它會引發該 <xref:System.Windows.Forms.TabPage> 物件的 <xref:System.Windows.Forms.Control.Click> 事件。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.TabControl>
 - [TabControl 控制項](tabcontrol-control-windows-forms.md)

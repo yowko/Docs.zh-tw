@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.Label> 控制項是用來顯示使用�
   
  標籤中顯示的標題會包含在 [<xref:System.Windows.Forms.Label.Text%2A>] 屬性中。 <xref:System.Windows.Forms.Label.TextAlign%2A> 屬性可讓您設定標籤中文字的對齊方式。 如需詳細資訊，請參閱[如何：設定 Windows Forms 控制項所顯示的文字](how-to-set-the-text-displayed-by-a-windows-forms-control.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Label>
 - [操作說明：調整 Windows Forms Label 控制項大小以適合其內容](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)

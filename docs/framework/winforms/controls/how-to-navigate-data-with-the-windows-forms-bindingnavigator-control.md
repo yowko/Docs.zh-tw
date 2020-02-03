@@ -22,20 +22,20 @@ ms.locfileid: "76736007"
   
  <xref:System.Windows.Forms.BindingNavigator> 控制項是一種 <xref:System.Windows.Forms.ToolStrip> 控制項，具有預先設定的按鈕，用來巡覽資料集中的第一筆、最後一筆、下一筆和上一筆記錄，以及新增和刪除記錄。 新增按鈕到 <xref:System.Windows.Forms.BindingNavigator> 控制項很容易，因為它是 <xref:System.Windows.Forms.ToolStrip> 控制項。 如需範例，請參閱[如何：將載入、儲存和取消按鈕加入至 Windows Forms BindingNavigator 控制項](load-save-and-cancel-bindingnavigator.md)。  
   
- 對於每個 <xref:System.Windows.Forms.BindingNavigator> 控制項上的按鈕，並沒有對應於可以程式設計的方式進行相同功能的 <xref:System.Windows.Forms.BindingSource> 元件成員。 例如，<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> 按鈕對應至 <xref:System.Windows.Forms.BindingSource> 元件的 <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> 方法，<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> 按鈕對應至 <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> 方法等。 因此，啟用 <xref:System.Windows.Forms.BindingNavigator> 控制項來巡覽資料記錄相當簡單，如同在表單上設定其 <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> 屬性為適當的 <xref:System.Windows.Forms.BindingSource> 元件。  
+ 對於每個 <xref:System.Windows.Forms.BindingNavigator> 控制項上的按鈕，並沒有對應於可以程式設計的方式進行相同功能的 <xref:System.Windows.Forms.BindingSource> 元件成員。 例如，<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> 按鈕對應至 <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> 元件的 <xref:System.Windows.Forms.BindingSource> 方法，<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> 按鈕對應至 <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> 方法等。 因此，啟用 <xref:System.Windows.Forms.BindingNavigator> 控制項來巡覽資料記錄相當簡單，如同在表單上設定其 <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> 屬性為適當的 <xref:System.Windows.Forms.BindingSource> 元件。  
   
 ### <a name="to-set-up-the-bindingnavigator-control"></a>若要設定 BindingNavigator 控制項  
   
-1. 新增命名為 `bindingSource1` 的 <xref:System.Windows.Forms.BindingSource> 元件和名為 `textBox1` 和 `textBox2` 的兩個 <xref:System.Windows.Forms.TextBox> 控制項。  
+1. 新增命名為 <xref:System.Windows.Forms.BindingSource> 的 `bindingSource1` 元件和名為 <xref:System.Windows.Forms.TextBox> 和 `textBox1` 的兩個 `textBox2` 控制項。  
   
-2. 將 `bindingSource1` 繫結至資料，並將文字方塊控制項繫結至 `bindingSource1`。 若要執行此工作，請將下列程式碼貼到您的表單並從表單的建構函式或 <xref:System.Windows.Forms.Form.Load> 事件處理方法呼叫 `LoadData`。  
+2. 將 `bindingSource1` 繫結至資料，並將文字方塊控制項繫結至 `bindingSource1`。 若要執行此工作，請將下列程式碼貼到您的表單並從表單的建構函式或 `LoadData` 事件處理方法呼叫 <xref:System.Windows.Forms.Form.Load>。  
   
      [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#2)]  
   
-3. 新增名為 `bindingNavigator1` 的 <xref:System.Windows.Forms.BindingNavigator> 控制項至您的表單。  
+3. 新增名為 <xref:System.Windows.Forms.BindingNavigator> 的 `bindingNavigator1` 控制項至您的表單。  
   
-4. 將 `bindingNavigator1` 的 <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> 屬性設定為 `bindingSource1`。 您可以用設計工具或在程式碼中執行這項操作。  
+4. 將 <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> 的 `bindingNavigator1` 屬性設定為 `bindingSource1`。 您可以用設計工具或在程式碼中執行這項操作。  
   
      [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#3)]  
@@ -51,7 +51,7 @@ ms.locfileid: "76736007"
   
 - System、System.Data、System.Drawing、System.Windows.Forms 和 System.Xml 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - [BindingNavigator 控制項](bindingnavigator-control-windows-forms.md)

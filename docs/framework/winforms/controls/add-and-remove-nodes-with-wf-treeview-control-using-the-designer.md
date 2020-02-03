@@ -24,7 +24,7 @@ ms.locfileid: "76732248"
 
 1. 選取 <xref:System.Windows.Forms.TreeView> 控制項。
 
-2. 在 **屬性** 視窗中<xref:System.Windows.Forms.TreeView.Nodes%2A> ，按一下屬性 (![旁邊的**省略號**Visual Studio](./media/visual-studio-ellipsis-button.png)) 的屬性視窗中的省略號按鈕（...） 按鈕。
+2. 在 [**屬性**] 視窗中，按一下 [<xref:System.Windows.Forms.TreeView.Nodes%2A>] 屬性旁邊的**省略號**（![[屬性視窗的 Visual Studio.](./media/visual-studio-ellipsis-button.png)）] 按鈕中的省略號按鈕（...）。
 
      [ **TreeNode 編輯器**] 隨即出現。
 
@@ -32,7 +32,7 @@ ms.locfileid: "76732248"
 
 4. 若要刪除節點，請選取要刪除的節點，然後按一下 [**刪除**] 按鈕。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [TreeView 控制項](treeview-control-windows-forms.md)
 - [TreeView 控制項概觀](treeview-control-overview-windows-forms.md)

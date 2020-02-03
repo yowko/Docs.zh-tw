@@ -15,7 +15,7 @@ ms.locfileid: "76728914"
 
 本節中的文章提供建立安全 Windows Communication Foundation （WCF）應用程式時要考慮的和專案的指引。 如需 Windows Server AppFabric 和安全性的詳細資訊，請參閱[Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [安全性的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
  協助您保護應用程式安全的一些建議。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "76728914"
  [效能考量](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
  包含與效能及安全性相關的項目。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

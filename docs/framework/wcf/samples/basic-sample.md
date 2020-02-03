@@ -16,7 +16,7 @@ ms.locfileid: "76738177"
 > [!NOTE]
 > 這個範例會在程式碼中實作探索。  如需在設定中執行探索的範例，請參閱[configuration](../../../../docs/framework/wcf/samples/configuration-sample.md)。
 
-## <a name="service"></a>服務
+## <a name="service"></a>Service
 
 這是簡單的計算機服務實作。 與探索相關的程式碼位於 `Main` 中，其中 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 會加入至服務主機，並且加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，如下列程式碼所示。
 
@@ -35,7 +35,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }
 ```
 
-## <a name="client"></a>Client
+## <a name="client"></a>用戶端
 
 用戶端會使用 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 尋找服務。 <xref:System.ServiceModel.Discovery.DynamicEndpoint> 是標準端點，會在用戶端開啟時解析服務的端點。 在此案例中，<xref:System.ServiceModel.Discovery.DynamicEndpoint> 會根據服務合約尋找服務。 根據預設，<xref:System.ServiceModel.Discovery.DynamicEndpoint> 會透過 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 進行搜尋。 一旦找到服務端點，用戶端就會透過指定的繫結連線到該服務。
 

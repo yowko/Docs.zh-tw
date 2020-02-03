@@ -62,7 +62,7 @@ private void Form1_Paint(System.Object sender,
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述程式碼會在表單的 <xref:System.Windows.Forms.Control.Paint> 事件處理常式中執行，以便在重新繪製表單時保存圖形。 因此，請勿在 <xref:System.Windows.Forms.Form.Load> 事件處理常式中呼叫與圖形相關的方法，因為如果表單調整大小或遮蔽另一個表單，則不會重新繪製所繪製的內容。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>

@@ -26,7 +26,7 @@ ms.locfileid: "76736374"
   
 1. 建立用以測試每個節點的遞迴程序 (採用 C# 和 C++ 的遞迴方法)。  
   
-2. 呼叫此程序。  
+2. 呼叫程序。  
   
      下列範例顯示如何列印每個 <xref:System.Windows.Forms.TreeNode> 物件的 <xref:System.Windows.Forms.TreeNode.Text%2A> 屬性：  
   
@@ -123,7 +123,7 @@ ms.locfileid: "76736374"
        }  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [TreeView 控制項](treeview-control-windows-forms.md)
 - [遞迴程序](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

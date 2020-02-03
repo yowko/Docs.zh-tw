@@ -74,7 +74,7 @@ ms.locfileid: "76732712"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [TabControl 控制項概觀](tabcontrol-control-overview-windows-forms.md)
 - [操作說明：將控制項加入至索引標籤頁](how-to-add-a-control-to-a-tab-page.md)

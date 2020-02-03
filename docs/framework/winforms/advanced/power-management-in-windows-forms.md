@@ -32,7 +32,7 @@ ms.locfileid: "76746861"
  [!code-csharp[PowerMode#2](~/samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#2)]
  [!code-vb[PowerMode#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#2)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.Win32.SystemEvents.PowerModeChanged>
 - <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>

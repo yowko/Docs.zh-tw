@@ -34,12 +34,12 @@ Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的
 |<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> 方法|<xref:System.Windows.Forms.View.Details>|  
 |<xref:System.Windows.Forms.ListView.Columns%2A> 屬性|<xref:System.Windows.Forms.View.Details> 或 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.DrawSubItem> 事件|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> 方法|<xref:System.Windows.Forms.View.Details>、 <xref:System.Windows.Forms.View.List>或 <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> 方法|<xref:System.Windows.Forms.View.Details>、<xref:System.Windows.Forms.View.List> 或 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.FindNearestItem%2A> 方法|<xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.GetItemAt%2A> 方法|<xref:System.Windows.Forms.View.Details> 或 <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.Groups%2A> 屬性|<xref:System.Windows.Forms.View.List> 以外的所有視圖|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> 屬性|<xref:System.Windows.Forms.View.Details>。|  
-|<xref:System.Windows.Forms.ListView.InsertionMark%2A> 屬性|<xref:System.Windows.Forms.View.LargeIcon>、 <xref:System.Windows.Forms.View.SmallIcon>或 <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> 屬性|<xref:System.Windows.Forms.View.Details>第 1 課：建立 Windows Azure 儲存體物件{2}。|  
+|<xref:System.Windows.Forms.ListView.InsertionMark%2A> 屬性|<xref:System.Windows.Forms.View.LargeIcon>、<xref:System.Windows.Forms.View.SmallIcon> 或 <xref:System.Windows.Forms.View.Tile>|  
   
  <xref:System.Windows.Forms.ListView> 控制項的索引鍵屬性是 <xref:System.Windows.Forms.ListView.Items%2A>，其中包含控制項所顯示的專案。 <xref:System.Windows.Forms.ListView.SelectedItems%2A> 屬性包含控制項中目前選取之專案的集合。 使用者可以選取多個專案，例如，如果 <xref:System.Windows.Forms.ListView.MultiSelect%2A> 屬性設定為 `true`，則會一次將數個專案拖放到另一個控制項。 如果 [<xref:System.Windows.Forms.ListView.CheckBoxes%2A>] 屬性設定為 [`true`]，<xref:System.Windows.Forms.ListView> 控制項可以顯示專案旁的核取方塊。  
   
@@ -47,7 +47,7 @@ Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的
   
  <xref:System.Windows.Forms.ListView> 控制項也支援 Windows XP 平臺上可用的視覺化樣式和其他功能，包括群組、磚視圖和插入標記。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ListView>
 - [ListView 控制項](listview-control-windows-forms.md)

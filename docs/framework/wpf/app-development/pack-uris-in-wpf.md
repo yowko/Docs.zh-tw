@@ -297,7 +297,7 @@ URI 解析不適用於參考下列各項的 Uri：
 
 ### <a name="using-pack-uris-in-markup"></a>透過標記使用套件 URI
 
-在標記中指定的 pack URI，是藉由設定具有 pack URI 之屬性的元素。 例如：
+在標記中指定的 pack URI，是藉由設定具有 pack URI 之屬性的元素。 例如，
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
@@ -305,7 +305,7 @@ URI 解析不適用於參考下列各項的 Uri：
 
 表 1：使用標記的絕對套件 URI
 
-|File|絕對套件 URI|
+|檔案|絕對套件 URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |資源檔 - 本機組件|`"pack://application:,,,/ResourceFile.xaml"`|
 |子資料夾中的資源檔 - 本機組件|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
@@ -321,7 +321,7 @@ URI 解析不適用於參考下列各項的 Uri：
 
 表 2：使用標記的相對套件 URI
 
-|File|相對套件 URI|
+|檔案|相對套件 URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |本機組件中的資源檔|`"/ResourceFile.xaml"`|
 |本機組件子資料夾中的資源檔|`"/Subfolder/ResourceFile.xaml"`|
@@ -334,7 +334,7 @@ URI 解析不適用於參考下列各項的 Uri：
 
 ### <a name="using-pack-uris-in-code"></a>透過程式碼使用套件 URI
 
-您可以將 <xref:System.Uri> 類別具現化，並將 pack URI 當做參數傳遞至函式，以在程式碼中指定 pack URI。 這點在下列範例中示範。
+您可以將 <xref:System.Uri> 類別具現化，並將 pack URI 當做參數傳遞至函式，以在程式碼中指定 pack URI。 下列範例就將此進行示範。
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");
@@ -368,7 +368,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 表 3：使用程式碼的絕對套件 URI
 
-|File|絕對套件 URI|
+|檔案|絕對套件 URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |資源檔 - 本機組件|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
 |子資料夾中的資源檔 - 本機組件|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
@@ -384,7 +384,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 表 4：使用程式碼的相對套件 URI
 
-|File|相對套件 URI|
+|檔案|相對套件 URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |資源檔 - 本機組件|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
 |子資料夾中的資源檔 - 本機組件|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
@@ -433,7 +433,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]
 
-如需詳細資訊，請參閱<xref:System.Windows.Window.Icon%2A>。
+如需詳細資訊，請參閱 <xref:System.Windows.Window.Icon%2A>。
 
 <a name="Loading_Image__Audio__and_Video_Files"></a>
 
@@ -459,6 +459,6 @@ WPF 可讓應用程式使用各種不同的媒體類型，這些都可以用 pac
 
 如需 WPF 主題的總覽，請參閱設定[樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WPF 應用程式資源、內容和資料檔案](wpf-application-resource-content-and-data-files.md)

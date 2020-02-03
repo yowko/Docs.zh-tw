@@ -24,7 +24,7 @@ ms.locfileid: "76740942"
 
 ## <a name="declaration-and-assignment"></a>宣告與指派
 
-當實值型別可隱含轉換成對應的可為 null 實值型別時，您可以將值指派給可為 null 實值型別的變數，就像它的基礎實值型別一樣。 您也可以指派 `null` 值。 例如：
+當實值型別可隱含轉換成對應的可為 null 實值型別時，您可以將值指派給可為 null 實值型別的變數，就像它的基礎實值型別一樣。 您也可以指派 `null` 值。 例如，
 
 [!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
 
@@ -40,7 +40,7 @@ ms.locfileid: "76740942"
 
 - <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> 指出可為 null 的實數值型別的實例是否具有其基礎類型的值。
 
-- 若 <xref:System.Nullable%601.HasValue%2A> 為 `true`，則 <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 會取得基礎型別的值。 若 <xref:System.Nullable%601.HasValue%2A> 為 `false`，則 <xref:System.Nullable%601.Value%2A> 屬性會擲回 <xref:System.InvalidOperationException>。
+- 若 <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> 為 <xref:System.Nullable%601.HasValue%2A>，則 `true` 會取得基礎型別的值。 若 <xref:System.Nullable%601.HasValue%2A> 為 `false`，則 <xref:System.Nullable%601.Value%2A> 屬性會擲回 <xref:System.InvalidOperationException>。
 
 下列範例會使用 `HasValue` 屬性來測試變數是否包含值，然後才顯示它：
 
@@ -68,12 +68,12 @@ ms.locfileid: "76740942"
 
 ## <a name="lifted-operators"></a>提升運算子
 
-預先定義的一元和二元運算子，或實值型別所支援的任何多載運算子，也都受到對應的可為 null 實值型別支援 `T?``T`。 如果 `null`一個或兩個運算元，這些運算子（也稱為「*提升運算子*」）就會產生 `null`;否則，運算子會使用其運算元的包含值來計算結果。 例如：
+預先定義的一元和二元運算子，或實值型別所支援的任何多載運算子，也都受到對應的可為 null 實值型別支援 `T?``T`。 如果 `null`一個或兩個運算元，這些運算子（也稱為「*提升運算子*」）就會產生 `null`;否則，運算子會使用其運算元的包含值來計算結果。 例如，
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
 > [!NOTE]
-> 針對 `bool?` 類型，預先定義的 `&` 和 `|` 運算子不會遵循本節所述的規則：即使其中一個運算元已 `null`，運算子評估的結果也可以是非 null。 如需詳細資訊，請參閱[布林邏輯運算子](../operators/boolean-logical-operators.md)一文的[可為 Null 的布林邏輯運算子](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
+> 針對 `bool?` 類型，預先定義的 `&` 和 `|` 運算子不會遵循本節所述的規則：即使其中一個運算元已 `null`，運算子評估的結果也可以是非 null。 如需詳細資訊，請參閱[布林值邏輯運算子](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一文的[可為 Null 的布林值邏輯運算子](../operators/boolean-logical-operators.md)一節。
 
 若為[比較運算子](../operators/comparison-operators.md)`<`、`>`、`<=`和 `>=`，如果其中一個或兩個運算元都 `null`，則結果會是 `false`。否則，會比較運算元的包含值。 請不要因為特定的比較 (例如 `<=`) 傳回 `false`，就假設相反的比較 (`>`) 就會傳回 `true`。 下列範例會顯示 10
 
@@ -130,7 +130,7 @@ ms.locfileid: "76740942"
 - [明確可為 null 的轉換](~/_csharplang/spec/conversions.md#explicit-nullable-conversions)
 - [提升的轉換運算子](~/_csharplang/spec/conversions.md#lifted-conversion-operators)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [「增益」(Lift) 的真正意義是什麼？(英文)](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)

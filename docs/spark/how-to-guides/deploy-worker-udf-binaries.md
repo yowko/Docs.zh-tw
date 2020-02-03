@@ -34,12 +34,12 @@ ms.locfileid: "76748528"
 | :---------------------| :---------- 
 | --class               | 應用程式的進入點。</br>_例如，dotnet. DotnetRunner。_
 | --master              | 叢集的<a href="https://spark.apache.org/docs/latest/submitting-applications.html#master-urls">主要 URL</a> 。</br>_例如 yarn_
-| --部署模式         | 是否要將您的驅動程式部署在背景工作角色節點（<code>cluster</code>）或本機上做為外部用戶端（<code>client</code>）。</br>預設值：<code>client</code>
+| --部署模式         | 是否要將您的驅動程式部署在背景工作角色節點（<code>cluster</code>）或本機上做為外部用戶端（<code>client</code>）。</br>預設：<code>client</code>
 | --會議                | <code>key=value</code> 格式的任意 Spark 設定屬性。</br>_例如，yarn. appMasterEnv. DOTNET_WORKER_DIR = .\worker\Microsoft.Spark.Worker_
 | --files               | 要放入每個執行程式之工作目錄中的檔案清單（以逗號分隔）。<br/><ul><li>請注意，此選項僅適用于 yarn 模式。</li><li>它支援使用與 Hadoop 相似的 # 來指定檔案名。</br></ul>_例如 <code>myLocalSparkApp.dll#appSeen.dll</code>。在 YARN 上執行時，您的應用程式應該使用名稱做為 <code>appSeen.dll</code> 來參考 <code>myLocalSparkApp.dll</code>。_</li>
 | --封存          | 要解壓縮到每個執行程式工作目錄的封存清單（以逗號分隔）。</br><ul><li>請注意，此選項僅適用于 yarn 模式。</li><li>它支援使用與 Hadoop 相似的 # 來指定檔案名。</br></ul>_例如 <code>hdfs://&lt;path to your worker file&gt;/Microsoft.Spark.Worker.zip#worker</code>。這會將 zip 檔案複製並解壓縮至 <code>worker</code> 資料夾。_</li>
 | 應用程式-jar       | 配套的 jar 路徑，包括您的應用程式和所有相依性。</br>_例如，hdfs://&lt;您的 jar&gt;/microsoft-spark-&lt;版本&gt;.jar 的路徑_
-| 應用程式引數 | 傳遞至主要類別之 main 方法的引數（如果有的話）。</br>_例如，hdfs://應用程式&lt;路徑&gt;/&lt;您的應用程式&gt;應用程式名稱 &lt;&gt; 應用程式引數 &lt;_
+| 應用程式引數 | 傳遞至主要類別之 main 方法的引數（如果有的話）。</br>_例如，hdfs://應用程式&lt;路徑&gt;/&lt;您的應用程式&gt;應用程式名稱 &lt;&gt; 應用程式引數 &lt;_ &gt;
 
 > [!NOTE]
 > 使用 `spark-submit`啟動應用程式之前，請 `application-jar` 先指定所有的 `--options`，否則會予以忽略。 如需詳細資訊，請參閱[`spark-submit` 選項](https://spark.apache.org/docs/latest/submitting-applications.html)和[在 YARN 上執行 spark 詳細資料](https://spark.apache.org/docs/latest/running-on-yarn.html)。
@@ -78,5 +78,5 @@ hdfs://<path to your files>/mySparkApp.zip mySparkApp
 
 ## <a name="next-steps"></a>後續步驟
 
-* [開始使用 .NET for Apache Spark](../tutorials/get-started.md)
+* [開始使用適用於 Apache Spark 的 .NET](../tutorials/get-started.md)
 * [在 Windows 上針對 Apache Spark 應用程式的 .NET 進行 Debug](../how-to-guides/debug.md)

@@ -1,5 +1,5 @@
 ---
-title: 相
+title: 座標
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms coordinates
@@ -28,7 +28,7 @@ Windows Form 的座標系統是以裝置座標為基礎，而在 Windows Forms �
 ## <a name="mapping-from-one-type-of-coordinate-to-another"></a>從一個座標類型對應到另一個  
  有時候，您可能需要從螢幕座標組應到用戶端座標。 您可以使用 <xref:System.Windows.Forms.Control> 類別提供的 <xref:System.Windows.Forms.Control.PointToClient%2A> 和 <xref:System.Windows.Forms.Control.PointToScreen%2A> 方法，輕鬆完成這項操作。 例如，<xref:System.Windows.Forms.Control> 的 <xref:System.Windows.Forms.Control.MousePosition%2A> 屬性會以螢幕座標回報，但您可能會想要將這些內容轉換成用戶端座標。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

@@ -12,10 +12,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744835"
 ---
-# <a name="enhancing-windows-forms-applications"></a>增強 Windows Forms 應用程式
+# <a name="enhancing-windows-forms-applications"></a>增強 Windows Form 應用程式
 Windows Form 包含許多功能，可用來增強您的 Windows 應用程式，以符合您的使用者的特定需求。 下列主題將描述這些功能及其用法。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)  
  其中包含主題的連結，說明並示範如何使用 Windows Form 中的圖形介面。  
   
@@ -34,7 +34,7 @@ Windows Form 包含許多功能，可用來增強您的 Windows 應用程式，�
  [全球化 Windows Forms 應用程式](globalizing-windows-forms.md)  
  其中包含主題的連結，示範如何全球化 Windows Forms 應用程式。  
   
- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms 和 Unmanaged 應用程式](windows-forms-and-unmanaged-applications.md)  
  其中包含主題的連結，說明並示範如何從 Windows Form 應用程式存取 COM 元件。  
   
  [系統資訊和 Windows Forms](system-information-and-windows-forms.md)  

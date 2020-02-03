@@ -35,7 +35,7 @@ ms.locfileid: "76741287"
 > [!IMPORTANT]
 > <xref:System.Windows.Forms.StatusStrip> 和 <xref:System.Windows.Forms.ToolStripStatusLabel> 控制項會取代 <xref:System.Windows.Forms.StatusBar> 和 <xref:System.Windows.Forms.StatusBarPanel> 控制項的功能，並將其加入。不過，如果您選擇，<xref:System.Windows.Forms.StatusBar> 和 <xref:System.Windows.Forms.StatusBarPanel> 控制項都會保留，以提供回溯相容性及未來使用。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ProgressBar>
 - [ProgressBar 控制項](progressbar-control-windows-forms.md)

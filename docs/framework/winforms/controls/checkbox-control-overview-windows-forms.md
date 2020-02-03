@@ -24,7 +24,7 @@ Windows Form <xref:System.Windows.Forms.CheckBox> 控制項表示特定的條件
   
  <xref:System.Windows.Forms.CheckBox> 控制項有兩個重要的屬性： <xref:System.Windows.Forms.CheckBox.Checked%2A> 和 <xref:System.Windows.Forms.CheckBox.CheckState%2A>。 <xref:System.Windows.Forms.CheckBox.Checked%2A> 屬性會傳回 `true` 或 `false`。 <xref:System.Windows.Forms.CheckBox.CheckState%2A> 屬性會傳回 <xref:System.Windows.Forms.CheckState.Checked> 或 <xref:System.Windows.Forms.CheckState.Unchecked>;或者，如果 <xref:System.Windows.Forms.CheckBox.ThreeState%2A> 屬性設為 `true`，<xref:System.Windows.Forms.CheckBox.CheckState%2A> 也會傳回 <xref:System.Windows.Forms.CheckState.Indeterminate>。 在 [不定] 狀態中，方塊會以暗灰色的外觀顯示，表示無法使用此選項。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.CheckBox>
 - [操作說明：使用 Windows Forms CheckBox 控制項設定選項](how-to-set-options-with-windows-forms-checkbox-controls.md)

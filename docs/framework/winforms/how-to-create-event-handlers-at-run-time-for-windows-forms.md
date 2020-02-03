@@ -73,8 +73,8 @@ ms.locfileid: "76739504"
 
      上述 Visual Basic 程式碼中所示範的 <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> 方法，會建立按鈕的 click 事件處理常式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
+- [在 Windows Form 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
 - [事件處理常式概觀](event-handlers-overview-windows-forms.md)
 - [Visual Basic 中的繼承事件處理常式疑難排解](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

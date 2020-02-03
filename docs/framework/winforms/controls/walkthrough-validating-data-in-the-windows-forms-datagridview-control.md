@@ -27,9 +27,9 @@ ms.locfileid: "76740098"
 
 若要將本主題中的程式碼複製成單一清單，請參閱[如何：驗證 Windows Forms DataGridView 控制項中的資料](how-to-validate-data-in-the-windows-forms-datagridview-control.md)。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
-若要完成這個逐步解說，您將需要：
+為了完成這個逐步解說，您需要：
 
 - 具有 Northwind SQL Server 範例資料庫之伺服器的存取權。
 
@@ -92,7 +92,7 @@ ms.locfileid: "76740098"
 
 - 自訂儲存格的外觀。 如需詳細資訊，請參閱[如何：在 Windows Forms Datagridview 控制項中自訂儲存格的外觀](customize-the-appearance-of-cells-in-the-datagrid.md)和[如何：設定 Windows Forms datagridview 控制項中的字型和色彩樣式](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

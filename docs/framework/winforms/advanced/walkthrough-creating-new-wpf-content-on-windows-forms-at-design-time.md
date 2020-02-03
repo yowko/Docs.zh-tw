@@ -23,7 +23,7 @@ ms.locfileid: "76746397"
 
 本文說明如何建立 Windows Presentation Foundation （WPF）控制項，以便在您的 Windows Forms 架構應用程式中使用。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 若要完成這個逐步解說，您必須具有 Visual Studio。
 
@@ -90,7 +90,7 @@ ms.locfileid: "76746397"
 
 4. 在 [ **ElementHost Tasks** ] 智慧標籤面板中，選取 [停**駐于父容器中**]。
 
-5. 按 **F5** 鍵建置並執行應用程式。
+5. 按 **F5** 鍵以建置並執行應用程式。
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -102,7 +102,7 @@ Windows Form 和 WPF 是不同的技術，不過可以藉由設計密切地相�
 
 - 變更 WPF 內容的樣式。 如需詳細資訊，請參閱[逐步解說：設定 WPF 內容的樣式](walkthrough-styling-wpf-content.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

@@ -22,7 +22,7 @@ Windows Forms <xref:System.Windows.Forms.ListBox> 控制項會顯示使用者可
   
  若要加入或刪除 <xref:System.Windows.Forms.ListBox> 控制項中的專案，請使用 <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>、<xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>、<xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> 或 <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> 方法。 或者，您也可以在設計階段使用 <xref:System.Windows.Forms.ListBox.Items%2A> 屬性，將專案加入至清單。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ListBox>
 - [操作說明：從 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項加入或移除項目](add-and-remove-items-from-a-wf-combobox.md)

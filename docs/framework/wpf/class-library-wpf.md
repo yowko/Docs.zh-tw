@@ -15,9 +15,9 @@ ms.locfileid: "76742301"
 # <a name="class-library-wpf"></a>類別庫 (WPF)
 下列連結會參考包含 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Api 的命名空間。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   

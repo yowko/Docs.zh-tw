@@ -19,7 +19,7 @@ ms.locfileid: "76745276"
   
  Windows Forms <xref:System.Windows.Forms.Label> 控制項是用來顯示使用者無法編輯的文字或影像。 它們可用來識別表單上的物件，以提供特定控制項在按一下時會執行的動作，例如，或顯示資訊以回應應用程式中的運行時間事件或進程。 因為 <xref:System.Windows.Forms.Label> 控制項無法接收焦點，所以也可以用來建立其他控制項的存取金鑰。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Label 控制項概觀](label-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "76745276"
  [操作說明：調整 Windows Forms Label 控制項大小以適合其內容](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
  說明如何調整標籤控制項的標題大小。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.Label>  
  說明這個類別，並且提供其所有成員的連結。  
   

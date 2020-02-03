@@ -66,7 +66,7 @@ MSBuild 搜尋元件的第一個位置是參考元件目錄（%ProgramFiles%\Ref
 
 在此步驟中，會剖析並編譯 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的檔案，讓執行時間不會花費時間剖析 XML 和驗證屬性值。 已編譯的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案會預先語彙基元化，因此在執行階段將它載入時，應該會比載入 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案更快。
 
-在此步驟期間，以 `Page` 組建項目表示的每個 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案會發生下列活動：
+在此步驟期間，以 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 組建項目表示的每個 `Page` 檔案會發生下列活動：
 
 1. 標記編譯器會剖析 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案。
 
@@ -186,7 +186,7 @@ WPF 組建系統提供累加式組建的支援。 該系統對於偵測標記或
 
 - 不重新編譯任何項目 (如果專案中沒有任何變更)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [部署 WPF 應用程式](deploying-a-wpf-application-wpf.md)
 - [WPF MSBuild 參考](/visualstudio/msbuild/wpf-msbuild-reference)

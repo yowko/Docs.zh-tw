@@ -16,7 +16,7 @@ ms.locfileid: "76744293"
 # <a name="panel-control-windows-forms"></a>Panel 控制項 (Windows Form)
 Windows Forms `Panel` 控制項是用來為其他控制項提供可識別的群組。 一般而言，您可以使用面板依函式細分表單。 `Panel` 控制項類似于 <xref:System.Windows.Forms.GroupBox> 控制項;不過，只有 `Panel` 控制項可以有捲軸，而且只有 <xref:System.Windows.Forms.GroupBox> 控制項才會顯示標題。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Panel 控制項概觀](panel-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -29,7 +29,7 @@ Windows Forms `Panel` 控制項是用來為其他控制項提供可識別的群�
  [操作說明：設定面板背景](how-to-set-the-background-of-a-windows-forms-panel.md)  
  描述如何在面板上顯示背景色彩和背景影像。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.Panel>  
  說明這個類別，並且提供其所有成員的連結。  
   

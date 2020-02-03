@@ -75,7 +75,7 @@ ms.locfileid: "76738581"
 
 - ❓**需要判斷：從一組衍生的介面中移除基類或介面的類別**
 
-  介面移除規則有一個例外：您可以新增衍生自已移除之介面的介面實作。 例如，如果型別或介面現在實作 <xref:System.ComponentModel.IComponent> (它會實作 <xref:System.IDisposable>)，則可以移除 <xref:System.IDisposable>。
+  介面移除規則有一個例外：您可以新增衍生自已移除之介面的介面實作。 例如，如果型別或介面現在實作 <xref:System.IDisposable> (它會實作 <xref:System.ComponentModel.IComponent>)，則可以移除 <xref:System.IDisposable>。
 
 - 不**允許 ❌：將 `readonly struct` 型別變更為[結構](../../csharp/language-reference/keywords/struct.md)型**別
 
@@ -87,7 +87,7 @@ ms.locfileid: "76738581"
 
    但是，允許增加型別的可見性。
 
-### <a name="members"></a>Members
+### <a name="members"></a>成員
 
 - **允許✔️：展開非[虛擬](../../csharp/language-reference/keywords/sealed.md)成員的可見度**
 
@@ -141,7 +141,7 @@ ms.locfileid: "76738581"
 
   - 它中斷了晚期繫結的案例，例如 Visual Basic 中的晚期繫結功能和 C# 中的 [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type)。
 
-  - 當開發人員使用[具名引數](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)時，它會中斷[來源相容性](categories.md#source-compatibility)。
+  - 當開發人員使用[具名引數](categories.md#source-compatibility)時，它會中斷[來源相容性](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments)。
 
 - 不**允許 ❌：從 `ref` 傳回值變更為 `ref readonly` 傳回值**
 
@@ -154,7 +154,7 @@ ms.locfileid: "76738581"
   雖然這通常不是一個中斷性變更，因為 C# 編譯器傾向於發出 [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) 中繼語言 (IL) 指令以呼叫非虛擬方法 (`callvirt` 會執行 Null 檢查，而正常呼叫不會)，由於以下幾個原因，此行為並不是不變的：
   - C# 不是 .NET 以其為目標的唯一語言。
 
-  - 只要目標方法為非虛擬且可能不是 Null 時 (例如透過 [?. null 傳播運算子](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)存取的方法)，C# 編譯器就會漸漸地嘗試將 `callvirt` 最佳化為正常呼叫。
+  - 只要目標方法為非虛擬且可能不是 Null 時 (例如透過 `callvirt`?. null 傳播運算子[存取的方法)，C# 編譯器就會漸漸地嘗試將 ](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-) 最佳化為正常呼叫。
 
   使方法成為虛擬表示取用者程式碼通常最後會以非虛擬方式呼叫它。
 
@@ -250,7 +250,7 @@ ms.locfileid: "76738581"
 
 - **允許✔️：移除例外狀況以啟用更健全的行為或新案例**
 
-  例如，之前只處理正值並擲回 <xref:System.ArgumentOutOfRangeException> 的 `Divide` 方法可以變更為支援負值和正值，而不擲回例外狀況。
+  例如，之前只處理正值並擲回 `Divide` 的 <xref:System.ArgumentOutOfRangeException> 方法可以變更為支援負值和正值，而不擲回例外狀況。
 
 - **允許✔️：變更錯誤訊息的文字**
 

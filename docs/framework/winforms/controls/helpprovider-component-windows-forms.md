@@ -16,13 +16,13 @@ ms.locfileid: "76745592"
 # <a name="helpprovider-component-windows-forms"></a>HelpProvider 元件 (Windows Form)
 Windows Form `HelpProvider` 元件用來將 HTML 說明 1.x 說明檔 (以 HTML Help Workshop 產生的 .chm 檔案，或 .htm 檔) 與 Windows 架構應用程式產生關聯。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [HelpProvider 元件概觀](helpprovider-component-overview-windows-forms.md)  
  導入 `HelpProvider` 元件的一般概念，可讓您將 HTML 說明檔與 Windows 架構應用程式產生關聯。  
   
  請參閱[Windows Forms 應用程式中的說明系統](../advanced/help-systems-in-windows-forms-applications.md)。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.HelpProvider>  
  說明這個類別，並且提供其所有成員的連結。  
   

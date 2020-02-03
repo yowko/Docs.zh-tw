@@ -52,9 +52,9 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的[例外狀況](~/_csharplang/spec/exceptions.md)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/exceptions.md)中的[例外狀況](/dotnet/csharp/language-reference/language-specification/introduction)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.SystemException>
 - [C# 程式設計指南](../index.md)

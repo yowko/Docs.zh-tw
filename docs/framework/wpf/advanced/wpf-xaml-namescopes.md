@@ -27,7 +27,7 @@ XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍
  在 WPF XAML 中，屬於一般根項目的元素（例如 <xref:System.Windows.Controls.Page>和 <xref:System.Windows.Window>）一律會控制 XAML 名稱範圍。 如果 <xref:System.Windows.FrameworkElement> 或 <xref:System.Windows.FrameworkContentElement> 之類的專案是標記中頁面的根項目，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器會隱含地加入 <xref:System.Windows.Controls.Page> 根，讓 <xref:System.Windows.Controls.Page> 可以提供可運作的 XAML 名稱範圍。  
   
 > [!NOTE]
-> WPF 建置動作會針對 XAML 生產來建立 XAML 名稱範圍，即使未在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記的任何項目上定義 `Name` 或 `x:Name` 屬性也是一樣。  
+> WPF 建置動作會針對 XAML 生產來建立 XAML 名稱範圍，即使未在 `Name` 標記的任何項目上定義 `x:Name` 或 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 屬性也是一樣。  
   
  如果您嘗試在任何 XAML 名稱範圍中使用相同的名稱兩次，則會引發例外狀況。 針對具有程式碼後置且為已編譯應用程式一部分的 WPF XAML，在初始標記編譯期間建立頁面的已產生類別時，WPF 建置動作會在建置期間引發例外狀況。 針對未透過任何建置動作進行標記編譯的 XAML，在載入 XAML 時，可能會引發 XAML 名稱範圍問題的相關例外狀況。 XAML 設計工具也可能預期會在設計階段發生 XAML 名稱範圍問題。  
   
@@ -53,7 +53,7 @@ XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>樣式和範本中的 XAML 名稱範圍  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的樣式和範本可以用更簡單的方式重複使用和重新套用內容。 不過，樣式和範本可能也包括具有範本層級所定義之 XAML 名稱的項目。 可能會在頁面中多次使用這個相同的範本。 因此，樣式和範本都會定義其專屬 XAML 名稱範圍，這與物件樹狀結構中套用樣式或範本的位置無關。  
   
- 參考下列範例：  
+ 請考慮下列範例：  
   
  [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
@@ -94,7 +94,7 @@ XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍
   
 - <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WPF XAML 的 XAML 命名空間和命名空間對應](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
 - [x:Name 指示詞](../../../desktop-wpf/xaml-services/xname-directive.md)

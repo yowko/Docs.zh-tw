@@ -40,7 +40,7 @@ ms.locfileid: "76742025"
       > [!NOTE]
       > 如果您想要繫結至架構或 Microsoft 組件中的類型，請清除 [隱藏以 Microsoft 或 System 開頭的組件] 核取方塊。
 
-7. 按 [下一步]，然後按一下 [完成]。
+7. 按 **[下一步]** ，再按一下 **[完成]** 。
 
 ### <a name="to-bind-the-control-to-the-bindingsource"></a>將控制項繫結至 BindingSource
 
@@ -52,7 +52,7 @@ ms.locfileid: "76742025"
 
 4. 在 [ **DATASOURCE UI 類型編輯器**] 中，展開先前加入之 <xref:System.Windows.Forms.BindingSource> 的節點，然後選取您想要系結至 <xref:System.Windows.Forms.TextBox>之 [<xref:System.Windows.Forms.TextBox.Text%2A>] 屬性的系結型別屬性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [BindingSource 元件](bindingsource-component.md)
 - [如何：將 Windows Forms 控制項繫結至型別](how-to-bind-a-windows-forms-control-to-a-type.md)

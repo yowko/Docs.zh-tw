@@ -26,7 +26,7 @@ ms.locfileid: "76744591"
 |<xref:System.Windows.Media.Media3D.GeometryModel3D>|只有在需要不同的材質或轉換時，才建立不同的模型。  否則，請嘗試結合許多具有相同資料的 <xref:System.Windows.Media.Media3D.GeometryModel3D> 實例，並轉換成較大的 <xref:System.Windows.Media.Media3D.GeometryModel3D> 和 <xref:System.Windows.Media.Media3D.MeshGeometry3D> 實例。|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|網格動畫：變更每個畫面格的網格個別頂點，在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]中不一定有效。  若要將每個頂點修改時變更通知的效能影響降至最低，請在執行每個頂點修改之前，先從視覺化樹狀結構卸離網格。  一旦網格已修改，請將其重新附加至視覺化樹狀結構。  此外，請嘗試將以這種方式繪製動畫的網格大小降到最低。|  
 |3D 消除鋸齒|若要增加轉譯速度，請在 <xref:System.Windows.Controls.Viewport3D> 上停用取樣，方法是將附加屬性 <xref:System.Windows.Media.RenderOptions.EdgeMode%2A> 設定為 [`Aliased`]。  根據預設，Windows 上會啟用3D 消除鋸齒功能，每圖元4個樣本。|  
-|文字|3D 場景中的即時文字（即時，因為它是在 <xref:System.Windows.Media.DrawingBrush> 或 <xref:System.Windows.Media.VisualBrush>中）可能會變慢。 除非文字會變更，否則請嘗試改用文字的影像（透過 <xref:System.Windows.Media.Imaging.RenderTargetBitmap>）。|  
+|Text|3D 場景中的即時文字（即時，因為它是在 <xref:System.Windows.Media.DrawingBrush> 或 <xref:System.Windows.Media.VisualBrush>中）可能會變慢。 除非文字會變更，否則請嘗試改用文字的影像（透過 <xref:System.Windows.Media.Imaging.RenderTargetBitmap>）。|  
 |<xref:System.Windows.Media.TileBrush>|如果您必須使用 <xref:System.Windows.Media.VisualBrush> 或3D 場景中的 <xref:System.Windows.Media.DrawingBrush>，因為筆刷的內容不是靜態的，請嘗試快取筆刷（將附加 <xref:System.Windows.Media.RenderOptions.CachingHint%2A> 屬性設定為 `Cache`）。  設定最小和最大刻度失效閾值（使用附加屬性 <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> 和 <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>），如此一來，快取的筆刷就不會太頻繁地重新產生，同時仍維持您所需的品質等級。  根據預設，<xref:System.Windows.Media.DrawingBrush> 和 <xref:System.Windows.Media.VisualBrush> 不會進行快取，這表示每次與筆刷一併繪製的內容都必須重新轉譯時，筆刷的整個內容必須先重新轉譯成中繼表面。|  
 |<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect> 強制轉譯所有受影響的內容，而不需要硬體加速。  為了達到最佳效能，請不要使用 <xref:System.Windows.Media.Effects.BitmapEffect>。|  
   
@@ -56,9 +56,9 @@ ms.locfileid: "76744591"
 |<xref:System.Windows.Media.Media3D.Light>|將場景中的燈數目降至最低。 場景中有太多光源會強制 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 切換回軟體轉譯。  限制大約是 110 <xref:System.Windows.Media.Media3D.DirectionalLight> 物件、70 <xref:System.Windows.Media.Media3D.PointLight> 物件或 40 <xref:System.Windows.Media.Media3D.SpotLight> 物件。|  
 |<xref:System.Windows.Media.Media3D.ModelVisual3D>|將物件放在不同的 <xref:System.Windows.Media.Media3D.ModelVisual3D> 實例中，藉以區分其與靜態物件的移動。  ModelVisual3D 比 <xref:System.Windows.Media.Media3D.GeometryModel3D> 「粗」，因為它會快取已轉換的界限。  GeometryModel3D 已優化為模型;ModelVisual3D 已優化為場景節點。  使用 ModelVisual3D 將 GeometryModel3D 的共用實例放入場景中。|  
 |<xref:System.Windows.Media.Media3D.Light>|將變更場景中光源數的次數減至最少。  光線計數的每項變更都會強制執行著色器重新產生和重新編譯，除非先前已有該設定（因此已快取其著色器）。|  
-|Light|黑色光源不會顯示出來，但會加入轉譯時間;請考慮將它們省略。|  
+|淺色|黑色光源不會顯示出來，但會加入轉譯時間;請考慮將它們省略。|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|若要將 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]中大型集合的結構時間最小化，例如 MeshGeometry3D's <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>、<xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>、<xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>和 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>，請在值擴展之前預先調整集合的大小。 可能的話，請傳遞集合的函式預先填入資料結構（例如陣列或清單）。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [立體圖形概觀](3-d-graphics-overview.md)

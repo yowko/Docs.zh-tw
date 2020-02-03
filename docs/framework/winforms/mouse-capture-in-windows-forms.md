@@ -21,6 +21,6 @@ ms.locfileid: "76741027"
   
  只有前景視窗可以捕捉滑鼠。 當背景視窗嘗試捕獲滑鼠時，只有當滑鼠指標位於視窗的可見部分內時，視窗才會收到滑鼠事件的訊息。 此外，即使前景視窗已捕捉過滑鼠，使用者仍然可以按一下另一個視窗，將其移至前景。 當您捕捉到滑鼠時，快速鍵無法正常執行。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 應用程式中的滑鼠輸入](mouse-input-in-a-windows-forms-application.md)

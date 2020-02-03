@@ -25,7 +25,7 @@ ms.locfileid: "76742873"
   
  您可以將 [<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>] 屬性設定為 [`false`] （預設值），並將狀態列的 [<xref:System.Windows.Forms.StatusBar.Text%2A>] 屬性設定為您要顯示在狀態列中的文字，以在狀態列上顯示單一訊息。 您可以將 [<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>] 屬性設定為 [`true`]，然後使用 <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>的 <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> 方法，將狀態列分割成面板，以顯示一種以上的資訊。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>

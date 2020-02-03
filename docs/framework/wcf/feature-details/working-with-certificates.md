@@ -26,7 +26,7 @@ ms.locfileid: "76746882"
 
 ## <a name="viewing-certificates"></a>檢視憑證
 
-使用憑證時，通常需要檢視並檢查其內容。 您可以透過 Microsoft Management Console (MMC) 嵌入式管理單元工具輕鬆達到這個目的。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元來檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)。
+使用憑證時，通常需要檢視並檢查其內容。 您可以透過 Microsoft Management Console (MMC) 嵌入式管理單元工具輕鬆達到這個目的。 如需詳細資訊，請參閱 [做法：使用 MMC 嵌入式管理單元檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)。
 
 ## <a name="certificate-stores"></a>憑證存放區
 
@@ -121,7 +121,7 @@ PowerShell SelfSignedCertificate 指令碼會建立 x.509 憑證和私密金鑰/
 
 ### <a name="client-certificates"></a>用戶端憑證
 
-用戶端憑證通常不是由協力廠商憑證授權單位所發行。 反之，目前使用者位置上的 [個人] 存放區通常包含了由根授權所放置、帶有 [用戶端驗證] 使用目的之憑證。 需要雙向驗證時，用戶端可以使用此類憑證。
+用戶端憑證通常不是由協力廠商憑證授權單位所發行。 反之，目前使用者位置上的 [個人] 存放區通常包含了由根授權所放置、帶有 [用戶端驗證] 使用目的之憑證。 用戶端可以在需要相互驗證時使用這類憑證。
 
 ## <a name="online-revocation-and-offline-revocation"></a>線上撤銷與離線撤銷
 
@@ -135,7 +135,7 @@ PowerShell SelfSignedCertificate 指令碼會建立 x.509 憑證和私密金鑰/
 
 一旦發生這種情況，任何來自已撤銷憑證的鏈結會同時失效，而且在驗證程序期間將不會受到信任。 為了找出已撤銷的憑證，每個簽發者會發佈一個包含時間與日期戳記的「憑證撤銷清單」(CRL)。 您也可以透過將下列類別的 `RevocationMode` 或 `DefaultRevocationMode` 屬性設為其中一個 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 列舉值的方式，使用線上撤銷或離線撤銷來檢查此清單：<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>、<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>、<xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> 與 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 類別。 所有屬性的預設值為 `Online`。
 
-您也可以在組態中同時使用 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (屬於 [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)) 和 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) (屬於 [\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)) `revocationMode` 屬性來設定模式。
+您也可以在組態中同時使用 `revocationMode`[authentication>\< (屬於 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[serviceBehaviors>\<) 和 ](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)[authentication>\< (屬於 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[endpointBehaviors>\<) ](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 屬性來設定模式。
 
 ## <a name="the-setcertificate-method"></a>SetCertificate 方法
 
@@ -168,7 +168,7 @@ IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 
 
 如需使用 Active Directory 對應的詳細資訊，請參閱[將用戶端憑證與目錄服務進行對應](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10))。
 
-一旦您啟用這項功能，就可以將 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 類別的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 屬性設為 `true`。 在組態中，您可以將 [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 元素的 `mapClientCertificateToWindowsAccount` 屬性設為 `true`，如下列程式碼所示。
+一旦您啟用這項功能，就可以將 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> 類別的 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 屬性設為 `true`。 在組態中，您可以將 `mapClientCertificateToWindowsAccount`[authentication>\< 元素的 ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 屬性設為 `true`，如下列程式碼所示。
 
 ```xml
 <serviceBehaviors>
@@ -188,10 +188,10 @@ IIS 與 Active Directory 的其中一項功能，就是能夠將憑證對應至 
 
 在第一版的 WCF 中，您不需要諮詢網域原則便可進行對應。 因此，當啟用對應功能且 X.509 憑證無法滿足網域原則要求時，以往在第一版中能夠順利執行的舊版應用程式可能會無法執行。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

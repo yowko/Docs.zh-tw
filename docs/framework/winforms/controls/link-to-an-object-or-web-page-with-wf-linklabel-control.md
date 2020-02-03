@@ -180,7 +180,7 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 控制項可讓您在表單�
        }
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [LinkLabel 控制項概觀](linklabel-control-overview-windows-forms.md)

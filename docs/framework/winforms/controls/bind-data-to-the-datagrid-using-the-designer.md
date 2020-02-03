@@ -30,7 +30,7 @@ ms.locfileid: "76744110"
 
 3. 如果您的專案還沒有資料來源，請按一下 [新增專案資料來源] 並遵循精靈所指示的步驟。
 
-     如需詳細資訊，請參閱[資料來源設定精靈](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120))。 新的資料來源會出現在 [選擇資料來源] 下拉式視窗中。 如果新的資料來源只包含一個成員，例如單一資料庫資料表，則控制項會自動繫結至該成員。 否則請繼續下一個步驟。
+     如需詳細資訊，請參閱[資料來源設定精靈](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120))。 新的資料來源會出現在 [選擇資料來源] 下拉式視窗中。 如果新的資料來源只包含一個成員，例如單一資料庫資料表，則控制項會自動繫結至該成員。 否則，請繼續下一個步驟。
 
 4. 如果 [其他資料來源] 和 [專案資料來源] 節點尚未展開，請加以展開，然後選取控制項所要繫結的資料來源。
 
@@ -41,7 +41,7 @@ ms.locfileid: "76744110"
     > [!NOTE]
     > 如果專案已經有資料來源，您也可以使用 [資料來源] 視窗建立資料表單。 如需詳細資訊，請參閱[資料來源視窗](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
@@ -55,6 +55,6 @@ ms.locfileid: "76744110"
 - [操作說明：使用設計工具隱藏 Windows Forms DataGridView 控制項中的資料行](hide-columns-in-the-datagrid-using-the-designer.md)
 - [操作說明：使用設計工具將 Windows Forms DataGridView 控制項中的資料行設為唯讀](make-columns-read-only-in-the-datagrid-using-the-designer.md)
 - [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [操作說明：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [[資料來源] 視窗](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [如何：在 Windows Forms 應用程式中顯示相關的資料](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

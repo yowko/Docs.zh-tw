@@ -96,7 +96,7 @@ button1->Left += 200;
 > [!NOTE]
 > 使用 [<xref:System.Windows.Forms.Control.Location%2A>] 屬性，同時設定控制項的 X 和 Y 位置。 若要個別設定位置，請使用控制項的 [<xref:System.Windows.Forms.Control.Left%2A> （**X**）] 或 [<xref:System.Windows.Forms.Control.Top%2A> （**Y**）] 子屬性。 請勿嘗試隱含地設定代表按鈕位置之 <xref:System.Drawing.Point> 結構的 X 和 Y 座標，因為此結構包含按鈕座標的複本。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
 - [逐步解說：使用對齊線排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

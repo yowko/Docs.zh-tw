@@ -49,7 +49,7 @@ Windows Communication Foundation （WCF）中的傳輸安全性機制取決於�
 #### <a name="basic"></a>Basic  
  這種類型會對應至 IIS 中的基本驗證方法。 在使用此模式時，IIS 伺服器必須透過 Windows 使用者帳戶和適當的 NTFS 檔案系統權限進行設定。 如需 IIS 6.0 的詳細資訊，請參閱[啟用基本驗證和設定領域名稱](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc785293(v=ws.10))。 如需 IIS 7.0 的詳細資訊，請參閱[設定基本驗證（iis 7）](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10))。  
   
-#### <a name="certificate"></a>憑證  
+#### <a name="certificate"></a>Certificate  
  IIS 有一個會要求用戶端使用憑證登入的選項。 該功能也能讓 IIS 將用戶端憑證對應至 Windows 帳戶。 如需 IIS 6.0 的詳細資訊，請參閱[在 iis 6.0 中啟用用戶端憑證](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc727994(v=ws.10))。 如需 IIS 7.0 的詳細資訊，請參閱[在 iis 7 中設定伺服器憑證](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))。  
   
 #### <a name="digest"></a>Digest  
@@ -59,7 +59,7 @@ Windows Communication Foundation （WCF）中的傳輸安全性機制取決於�
  這個類型會對應至 IIS 中的整合式 Windows 驗證。 當設定為這個值時，該伺服器必須出現在以 Kerberos 通訊協定做為網域控制站的 Windows 網域上。 如果伺服器未存在以 Kerberos 為基礎的網域中，或是如果 Kerberos 系統失敗，您可以使用下一節所介紹的 NT LAN Manager (NTLM) 值。 如需 IIS 6.0 的詳細資訊，請參閱[iis 6.0 中的整合式 Windows 驗證](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738016(v=ws.10))。 如需 IIS 7.0 的詳細資訊，請參閱[在 iis 7 中設定伺服器憑證](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))。
   
 #### <a name="ntlm"></a>NTLM  
- 這個類型可讓伺服器在 Kerberos 通訊協定失敗時，使用 NTLM 進行驗證。 如需在 IIS 6.0 中設定 IIS 的詳細資訊，請參閱[強制 NTLM 驗證](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10))。 針對 IIS 7.0，Windows 驗證封裝含 NTLM 驗證。 如需詳細資訊，請參閱[在 IIS 7 中設定伺服器憑證](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))。
+ 這個類型可讓伺服器在 Kerberos 通訊協定失敗時，使用 NTLM 進行驗證。 如需在 IIS 6.0 中設定 IIS 的詳細資訊，請參閱[強制 NTLM 驗證](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10))。 針對 IIS 7.0，Windows 驗證封裝含 NTLM 驗證。 如需詳細資訊，請參閱 [在 IIS 7 中設定伺服器憑證](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))。
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
  <xref:System.ServiceModel.WSHttpBinding> 類別主要是用來與實作 WS-* 規格的服務進行交互操作。 此繫結的傳輸安全性為使用 HTTP 或 HTTPS 的安全通訊端層 (SSL)。 若要建立使用 SSL 的 WCF 應用程式，請使用 IIS 來裝載應用程式。 或者，如果您要建立自我裝載的應用程式，請使用 HttpCfg.exe 工具將 X.509 憑證繫結至電腦上的特定連接埠。 埠號碼會指定為 WCF 應用程式的一部分，做為端點位址。 當使用傳輸模式時，端點位址必須包含 HTTPS 通訊協定，否則會在執行階段擲回例外狀況。 如需詳細資訊，請參閱[HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
@@ -82,7 +82,7 @@ Windows Communication Foundation （WCF）中的傳輸安全性機制取決於�
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
-#### <a name="client"></a>Client  
+#### <a name="client"></a>用戶端  
  若是使用用戶端類型，您必須指定使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 類別之 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 方法的憑證。  
   
 > [!NOTE]
@@ -120,6 +120,6 @@ Windows Communication Foundation （WCF）中的傳輸安全性機制取決於�
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding 和 NetMsmqBinding  
  如需使用訊息佇列（先前稱為 MSMQ）傳輸安全性的完整討論，請參閱[使用傳輸安全性保護訊息](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF 安全性程式設計](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

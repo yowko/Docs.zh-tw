@@ -53,7 +53,7 @@ Windows Forms <xref:System.Windows.Forms.PrintPreviewDialog> 控制項是預先�
 
 如果您使用 <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> 事件來修改印表機設定，即使已設定優化設定參數，<xref:System.Windows.Forms.PrintPreviewDialog> 控制項的效能也不會改善。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [PrintPreviewControl 控制項概觀](printpreviewcontrol-control-overview-windows-forms.md)

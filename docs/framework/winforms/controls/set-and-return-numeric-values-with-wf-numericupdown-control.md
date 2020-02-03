@@ -89,7 +89,7 @@ Windows Forms <xref:System.Windows.Forms.NumericUpDown> 控制項的數值是由
     }  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>

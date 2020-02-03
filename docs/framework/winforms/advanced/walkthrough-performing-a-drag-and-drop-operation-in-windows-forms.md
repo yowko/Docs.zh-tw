@@ -59,7 +59,7 @@ ms.locfileid: "76746788"
   
 1. 將 [<xref:System.Windows.Forms.Control.AllowDrop%2A>] 屬性設定為 [true]。  
   
-2. 在將發生卸載之控制項的 `DragEnter` 事件中，請確定所拖曳的資料屬於可接受的類型（在此案例中為 <xref:System.Windows.Forms.Control.Text%2A>）。 然後，程式碼會設定當 <xref:System.Windows.Forms.DragDropEffects> 列舉中的值發生卸載時，將會發生的效果。 如需詳細資訊，請參閱<xref:System.Windows.Forms.DragEventArgs.Effect%2A>。  
+2. 在將發生卸載之控制項的 `DragEnter` 事件中，請確定所拖曳的資料屬於可接受的類型（在此案例中為 <xref:System.Windows.Forms.Control.Text%2A>）。 然後，程式碼會設定當 <xref:System.Windows.Forms.DragDropEffects> 列舉中的值發生卸載時，將會發生的效果。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.DragEventArgs.Effect%2A>。  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -83,9 +83,9 @@ ms.locfileid: "76746788"
     ```  
   
     > [!NOTE]
-    > 您可以指定自己的物件做為 <xref:System.Windows.Forms.DataObject.SetData%2A> 方法的 <xref:System.Object> 參數，以定義您自己的 <xref:System.Windows.Forms.DataFormats>。 這麼做時，請確定可序列化所指定的物件。 如需詳細資訊，請參閱<xref:System.Runtime.Serialization.ISerializable>。  
+    > 您可以指定自己的物件做為 <xref:System.Windows.Forms.DataObject.SetData%2A> 方法的 <xref:System.Object> 參數，以定義您自己的 <xref:System.Windows.Forms.DataFormats>。 這麼做時，請確定可序列化所指定的物件。 如需詳細資訊，請參閱 <xref:System.Runtime.Serialization.ISerializable>。  
   
-3. 在將發生卸載之控制項的 <xref:System.Windows.Forms.Control.DragDrop> 事件中，使用 <xref:System.Windows.Forms.DataObject.GetData%2A> 方法來抓取要拖曳的資料。 如需詳細資訊，請參閱<xref:System.Security.Cryptography.Xml.DataObject.Data%2A>。  
+3. 在將發生卸載之控制項的 <xref:System.Windows.Forms.Control.DragDrop> 事件中，使用 <xref:System.Windows.Forms.DataObject.GetData%2A> 方法來抓取要拖曳的資料。 如需詳細資訊，請參閱 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>。  
   
      在下列範例中，<xref:System.Windows.Forms.TextBox> 控制項是要拖曳至的控制項（將會在其中進行卸載）。 程式碼會將 <xref:System.Windows.Forms.TextBox> 控制項的 <xref:System.Windows.Forms.Control.Text%2A> 屬性設定為等於所拖曳的資料。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "76746788"
     > [!NOTE]
     > 此外，您可以使用 [<xref:System.Windows.Forms.DragEventArgs.KeyState%2A>] 屬性，如此一來，根據拖放作業期間所按下的按鍵，就會發生某些效果（例如，在按 CTRL 鍵時複製拖曳的資料）。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [操作說明：將資料新增至剪貼簿](how-to-add-data-to-the-clipboard.md)
 - [操作說明：從剪貼簿擷取資料](how-to-retrieve-data-from-the-clipboard.md)

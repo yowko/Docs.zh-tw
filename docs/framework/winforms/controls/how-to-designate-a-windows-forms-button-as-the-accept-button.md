@@ -49,7 +49,7 @@ ms.locfileid: "76743277"
        }  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Button 控制項概觀](button-control-overview-windows-forms.md)

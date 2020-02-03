@@ -17,7 +17,7 @@ ms.locfileid: "76742602"
 
 本逐步解說說明如何在 Windows Presentation Foundation （WPF）應用程式中裝載 Direct3D9 內容。
 
-在這個逐步解說中，您將執行下列工作：
+在本逐步解說中，您將會執行下列工作：
 
 - 建立 WPF 專案來裝載 Direct3D9 內容。
 
@@ -27,9 +27,9 @@ ms.locfileid: "76742602"
 
  當您完成時，您會知道如何在 WPF 應用程式中裝載 Direct3D9 內容。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
-您需要下列元件才能完成此逐步解說：
+您需要下列元件才能完成這個逐步解說：
 
 - Visual Studio.
 
@@ -77,7 +77,7 @@ Mainwindow.xaml 會在 WPF 設計工具中開啟。
 
     Direct3D9 內容會出現在 WPF 應用程式中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 和 WPF 互通性的效能考量](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

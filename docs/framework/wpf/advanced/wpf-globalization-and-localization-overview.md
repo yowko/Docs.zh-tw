@@ -178,29 +178,29 @@ ms.locfileid: "76744484"
 
 使用支援 Unicode 的慣用 CSV 編輯器，才能編輯這個檔案。 篩選出當地語系化分類為 "None" 的所有項目。 您應該會看到下列項目：
 
-|資源索引鍵|當地語系化分類|{2&gt;值&lt;2}|
+|資源索引鍵|當地語系化分類|值|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|按鈕|確定|
 |Button_2:System.Windows.Controls.Button.$Content|按鈕|取消|
 |Button_3:System.Windows.Controls.Button.$Content|按鈕|瀏覽...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|文字|輸入程式、資料夾、文件或網際網路資源的名稱，Windows 會自動開啟。|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|文字|開啟：|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|輸入程式、資料夾、文件或網際網路資源的名稱，Windows 會自動開啟。|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|未處理：|
 |Window_1:System.Windows.Window.Title|標題|執行|
 
 將應用程式當地語系化為德文需要下列翻譯︰
 
-|資源索引鍵|當地語系化分類|{2&gt;值&lt;2}|
+|資源索引鍵|當地語系化分類|值|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|按鈕|確定|
 |Button_2:System.Windows.Controls.Button.$Content|按鈕|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|按鈕|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|文字|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|文字|開啟：|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|開啟：|
 |Window_1:System.Windows.Window.Title|標題|執行|
 
-**產生**
+**Generate**
 
 當地語系化的最後一個步驟包括建立新的當地語系化附屬組件。 使用下列 LocBaml 命令，即可完成這項作業：
 
@@ -267,9 +267,9 @@ ms.locfileid: "76744484"
 
 此批註會與 TextBlock_1 的內容相關聯，而且在 LocBaml 工具的情況下（請參閱[當地語系化應用程式](how-to-localize-an-application.md)），它可以在輸出 .csv 檔案中 TextBlock_1 資料列的第6個數據行中看到：
 
-|資源索引鍵|分類|可讀取|可修改|註解|{2&gt;值&lt;2}|
+|資源索引鍵|類別|可讀取|可修改|註解|值|
 |-|-|-|-|-|-|
-|TextBlock_1:System.Windows.Controls.TextBlock.$Content|文字|true|true|此字元是當成裝飾規則使用。|&#124;|
+|TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|TRUE|TRUE|此字元是當成裝飾規則使用。|&#124;|
 
 使用下列語法，可以放入任何項目之內容或屬性的註解︰
 
@@ -277,7 +277,7 @@ ms.locfileid: "76744484"
 
 **當地語系化屬性**
 
-開發人員或當地語系化管理員通常需要控制當地語系化人員可以讀取和修改的內容。 例如，您可能不想要當地語系化人員翻譯公司名稱或法律用語。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供屬性，可讓您設定項目內容或屬性的可讀性、可修改性和分類，而當地語系化工具可以使用此內容或屬性來鎖定、隱藏或排序項目。 如需詳細資訊，請參閱<xref:System.Windows.Localization.Attributes%2A>。 基於此範例的目的，LocBaml 工具只會輸出這些屬性的值。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項都會有這些屬性的預設值，但您可以覆寫它們。 例如，下列範例會覆寫 `TextBlock_1` 的預設當地語系化屬性，並將內容設定為可讀取但無法修改的當地語系化。
+開發人員或當地語系化管理員通常需要控制當地語系化人員可以讀取和修改的內容。 例如，您可能不想要當地語系化人員翻譯公司名稱或法律用語。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供屬性，可讓您設定項目內容或屬性的可讀性、可修改性和分類，而當地語系化工具可以使用此內容或屬性來鎖定、隱藏或排序項目。 如需詳細資訊，請參閱 <xref:System.Windows.Localization.Attributes%2A>。 基於此範例的目的，LocBaml 工具只會輸出這些屬性的值。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項都會有這些屬性的預設值，但您可以覆寫它們。 例如，下列範例會覆寫 `TextBlock_1` 的預設當地語系化屬性，並將內容設定為可讀取但無法修改的當地語系化。
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 
@@ -285,7 +285,7 @@ ms.locfileid: "76744484"
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的預設當地語系化屬性也可以透過程式碼覆寫，因此您可以正確地為自訂控制項設定正確的預設值。 例如：
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的預設當地語系化屬性也可以透過程式碼覆寫，因此您可以正確地為自訂控制項設定正確的預設值。 例如，
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

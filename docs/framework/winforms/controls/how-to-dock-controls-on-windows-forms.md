@@ -40,7 +40,7 @@ ms.locfileid: "76745517"
    > [!NOTE]
    > 繼承的控制項必須 `Protected`，才能夠停駐。 若要變更控制項的存取層級，請在 [**屬性**] 視窗中設定其 [**修飾**詞] 屬性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
 - [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
@@ -49,4 +49,4 @@ ms.locfileid: "76745517"
 - [操作說明：錨定和停駐 FlowLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [操作說明：錨定和停駐 TableLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [AutoSize 屬性概觀](autosize-property-overview.md)
-- [如何：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
+- [操作說明：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)

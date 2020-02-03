@@ -51,7 +51,7 @@ ms.locfileid: "76740326"
 
 第一個步驟是建立專案並設定表單。
 
-#### <a name="to-create-the-project"></a>建立專案
+#### <a name="to-create-the-project"></a>若要建立專案
 
 1. 建立名為 "TableLayoutPanelExample" 的 Windows 應用程式專案。 如需詳細資訊，請參閱[如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)。
 
@@ -97,13 +97,13 @@ ms.locfileid: "76740326"
 
 1. 選取**Windows Form 設計工具**中的 [<xref:System.Windows.Forms.TableLayoutPanel>] 控制項。
 
-2. 在 [**屬性**] 視窗中，按一下 [資料**行**] 專案旁邊的省略號（![](./media/visual-studio-ellipsis-button.png)Visual Studio 中的屬性視窗中的省略號按鈕（...） 按鈕，開啟 [<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>] 集合。
+2. 在 [**屬性**] 視窗中，按一下 [資料**行**] 專案旁邊的省略號（![[](./media/visual-studio-ellipsis-button.png)Visual Studio 中的屬性視窗中的省略號按鈕（...）] 按鈕，開啟 [<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>] 集合。
 
-3. 選取第一個資料行，並將其 [<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>] 屬性的值變更為 [<xref:System.Windows.Forms.SizeType.AutoSize>]。 按一下 **[確定]** 以接受變更。 請注意，第一個資料行的寬度會縮小，以符合 <xref:System.Windows.Forms.Button> 控制項。 另請注意，資料行的寬度無法調整大小。
+3. 選取第一個資料行，並將其 [<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>] 屬性的值變更為 [<xref:System.Windows.Forms.SizeType.AutoSize>]。 按一下 **[確定]** 接受變更。 請注意，第一個資料行的寬度會縮小，以符合 <xref:System.Windows.Forms.Button> 控制項。 另請注意，資料行的寬度無法調整大小。
 
-4. 在 [**屬性**] 視窗中，開啟 [<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>] 集合，然後選取第一個資料行。 將其 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 屬性的值變更為 <xref:System.Windows.Forms.SizeType.Percent>。 按一下 **[確定]** 以接受變更。 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的大小調整為較大的寬度，並注意第一個資料行的寬度會展開。 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的大小調整為較小的寬度，並請注意，第一個資料行中的按鈕會調整大小以符合儲存格。 另請注意，資料行的寬度是可調整大小的。
+4. 在 [**屬性**] 視窗中，開啟 [<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>] 集合，然後選取第一個資料行。 將其 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 屬性的值變更為 <xref:System.Windows.Forms.SizeType.Percent>。 按一下 **[確定]** 接受變更。 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的大小調整為較大的寬度，並注意第一個資料行的寬度會展開。 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的大小調整為較小的寬度，並請注意，第一個資料行中的按鈕會調整大小以符合儲存格。 另請注意，資料行的寬度是可調整大小的。
 
-5. 在 [**屬性**] 視窗中，開啟 [<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>] 集合，然後選取所有列出的資料行。 將每個 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 屬性的值設定為 <xref:System.Windows.Forms.SizeType.Percent>。 按一下 **[確定]** 以接受變更。 重複使用 <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> 集合。
+5. 在 [**屬性**] 視窗中，開啟 [<xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A>] 集合，然後選取所有列出的資料行。 將每個 <xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A> 屬性的值設定為 <xref:System.Windows.Forms.SizeType.Percent>。 按一下 **[確定]** 接受變更。 重複使用 <xref:System.Windows.Forms.TableLayoutPanel.RowStyles%2A> 集合。
 
 6. 抓取其中一個角落調整大小控點，並調整 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的寬度和高度。 請注意，當 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的大小變更時，會調整資料列和資料行的大小。 另請注意，資料列和資料行可使用水準和垂直調整大小控點來調整大小。
 
@@ -177,7 +177,7 @@ ms.locfileid: "76740326"
 
 ## <a name="next-steps"></a>後續步驟
 
-您可以組合配置面板和控制項，完成複雜的配置。 進一步的探索建議包括：
+您可以組合配置面板和控制項，完成複雜的配置。 建議您進一步研究的部分包括：
 
 - 嘗試將其中一個 <xref:System.Windows.Forms.Button> 控制項調整為較大的大小，並記下對配置的影響。
 
@@ -187,7 +187,7 @@ ms.locfileid: "76740326"
 
 - 將 <xref:System.Windows.Forms.TableLayoutPanel> 控制項停駐在父表單。 調整表單的大小，並注意配置的效果。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
@@ -197,6 +197,6 @@ ms.locfileid: "76740326"
 - [逐步解說：建立可當地語系化的 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [TableLayoutPanel 控制項的最佳作法](best-practices-for-the-tablelayoutpanel-control.md)
 - [AutoSize 屬性概觀](autosize-property-overview.md)
-- [如何：將控制項停駐在 Windows Forms 上](how-to-dock-controls-on-windows-forms.md)
-- [如何：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
+- [操作說明：將控制項停駐在 Windows Forms 上](how-to-dock-controls-on-windows-forms.md)
+- [操作說明：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
 - [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Forms 控制項](windows-forms-controls-padding-autosize.md)

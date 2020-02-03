@@ -22,7 +22,7 @@ Windows Forms <xref:System.Windows.Forms.DomainUpDown> 控制項看起來像是�
   
  此控制項只會顯示文字字串。 如果您想要顯示數值的控制項，請使用 <xref:System.Windows.Forms.NumericUpDown> 控制項。 如需詳細資訊，請參閱[NumericUpDown Control](numericupdown-control-windows-forms.md) 。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [DomainUpDown 控制項概觀](domainupdown-control-overview-windows-forms.md)  
  介紹 <xref:System.Windows.Forms.DomainUpDown> 控制項的一般概念，可讓使用者流覽並從文字字串清單中選取。  
   
@@ -32,7 +32,7 @@ Windows Forms <xref:System.Windows.Forms.DomainUpDown> 控制項看起來像是�
  [操作說明：從 Windows Forms DomainUpDown 控制項中移除項目](how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
  描述如何在程式碼中刪除 <xref:System.Windows.Forms.DomainUpDown> 控制項的專案。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.DomainUpDown>  
  說明這個類別，並且提供其所有成員的連結。  
   

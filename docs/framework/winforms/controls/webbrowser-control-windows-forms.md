@@ -16,7 +16,7 @@ ms.locfileid: "76739989"
 # <a name="webbrowser-control-windows-forms"></a>WebBrowser 控制項 (Windows Form)
 Windows Forms `WebBrowser` 控制項裝載網頁，並提供 Web 流覽功能給您的應用程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [WebBrowser 控制項概觀](webbrowser-control-overview.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -41,7 +41,7 @@ Windows Forms `WebBrowser` 控制項裝載網頁，並提供 Web 流覽功能給
  [使用 Managed HTML 文件物件模型](using-the-managed-html-document-object-model.md)  
  提供主題，說明如何操作或建立由 <xref:System.Windows.Forms.WebBrowser> 控制項所裝載的 HTML 頁面。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.WebBrowser> 類別  
  說明這個類別，並且提供其所有成員的連結。  
   
@@ -78,6 +78,6 @@ Windows Forms `WebBrowser` 控制項裝載網頁，並提供 Web 流覽功能給
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
  描述這個列舉及其所有值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

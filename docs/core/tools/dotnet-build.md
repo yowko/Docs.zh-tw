@@ -17,7 +17,7 @@ ms.locfileid: "76734308"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet build` - 建置專案和其所有相依性。
 
@@ -67,7 +67,7 @@ dotnet build [-h|--help]
 
 執行 `dotnet build` 相當於執行 `dotnet msbuild -restore`;不過，輸出的預設詳細資訊是不同的。
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>引數
 
 `PROJECT | SOLUTION`
 
@@ -93,7 +93,7 @@ dotnet build [-h|--help]
 
 - **`--interactive`**
 
-  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供。
+  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供使用。
 
 - **`--no-dependencies`**
 
@@ -109,7 +109,7 @@ dotnet build [-h|--help]
 
 - **`--nologo`**
 
-  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供。
+  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供使用。
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -121,7 +121,7 @@ dotnet build [-h|--help]
 
 - **`-v|--verbosity <LEVEL>`**
 
-  設定 MSBuild 詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設為 `minimal`。
+  設定 MSBuild 詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 

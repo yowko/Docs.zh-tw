@@ -21,7 +21,7 @@ ms.locfileid: "76746398"
   
  如果您想要參與並立即開始，請參閱[圖形程式設計入門](getting-started-with-graphics-programming.md)。 它包含如何使用程式碼在 Windows 表單上繪製線條、圖形、文字和其他項目的主題。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [圖形概觀](graphics-overview-windows-forms.md)  
  介紹與圖形相關的 Managed 類別。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "76746398"
  [使用 Managed 圖形類別](using-managed-graphics-classes.md)  
  示範如何使用 GDI + managed 類別完成各種工作。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Drawing>  
  提供對 GDI + 基本圖形功能的存取。  
   

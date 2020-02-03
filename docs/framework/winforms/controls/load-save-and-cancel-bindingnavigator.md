@@ -110,7 +110,7 @@ ms.locfileid: "76745135"
     > [!NOTE]
     > <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> 方法的範圍是資料列。 在流覽至下一個記錄之前，請先儲存您在查看該個別記錄時所做的任何變更。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>

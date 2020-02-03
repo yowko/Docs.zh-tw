@@ -32,7 +32,7 @@ ms.locfileid: "76745965"
   
  由於 <xref:System.Windows.Forms.DataGridView> 控制項有全新的架構，因此沒有直接的轉換路徑可讓您使用 <xref:System.Windows.Forms.DataGrid> 自訂與 <xref:System.Windows.Forms.DataGridView> 控制項。 不過，<xref:System.Windows.Forms.DataGridView> 控制項不需要許多 <xref:System.Windows.Forms.DataGrid> 自訂，因為新控制項中提供了內建的功能。 如果您已針對要與 <xref:System.Windows.Forms.DataGridView> 控制項搭配使用的 <xref:System.Windows.Forms.DataGrid> 控制項建立自訂資料行類型，您必須使用新的架構再次執行這些專案。 如需詳細資訊，請參閱[自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>

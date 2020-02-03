@@ -18,19 +18,19 @@ ms.locfileid: "76744379"
   
  本節中的主題提供 `BindingNavigator` 控制項的概觀，並提供如何使用控制項巡覽資料並在 <xref:System.Data.DataSet> 中移動的逐步指示。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [BindingNavigator 控制項概觀](bindingnavigator-control-overview-windows-forms.md)  
  介紹 `BindingNavigator` 控制項的一般概念，讓使用者在資料來源的項目中移動。  
   
- [如何：使用 Windows Forms BindingNavigator 控制項巡覽資料](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
+ [操作說明：使用 Windows Forms BindingNavigator 控制項巡覽資料](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
  提供將 `BindingNavigator` 控制項繫結至資料來源的步驟。  
   
- [如何：使用 Windows Forms BindingNavigator 控制項在資料集中移動](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
+ [操作說明：使用 Windows Forms BindingNavigator 控制項在資料集中移動](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
  示範如何使用 `BindingNavigator` 控制項在 <xref:System.Data.DataSet> 的記錄中移動。  
   
  另請參閱[如何：將載入、儲存和取消按鈕新增至 Windows Forms BindingNavigator 控制項](load-save-and-cancel-bindingnavigator.md)。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.BindingNavigator>  
  提供 <xref:System.Windows.Forms.BindingNavigator> 控制項的參考文件。  
   

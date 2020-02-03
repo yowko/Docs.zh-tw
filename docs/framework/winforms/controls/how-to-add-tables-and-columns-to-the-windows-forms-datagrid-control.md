@@ -96,7 +96,7 @@ ms.locfileid: "76747215"
     dataGrid1->TableStyles->Add(ts1);
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
-- [操作說明：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

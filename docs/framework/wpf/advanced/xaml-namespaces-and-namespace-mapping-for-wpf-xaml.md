@@ -99,7 +99,7 @@ End Namespace
 ```  
   
 ### <a name="mapping-to-current-assemblies"></a>對應至目前的組件  
- 如果參考的 `clr-namespace` 其定義組件位置與參考自訂類別的應用程式程式碼相同，您就可以省略 `assembly`。 或者，此案例的對等語法是指定 `assembly=`，且等號後面不用字串語彙基元。  
+ 如果參考的 `assembly` 其定義組件位置與參考自訂類別的應用程式程式碼相同，您就可以省略 `clr-namespace`。 或者，此案例的對等語法是指定 `assembly=`，且等號後面不用字串語彙基元。  
   
  如果自訂類別是在相同的組件中定義，就不能作為頁面的根項目。 部分類別不需要對應；如果您想要將部分類別作為 XAML 中的參考項目，則僅需要針對不屬於應用程式頁面之部分類別的類別，進行對應。  
   
@@ -135,7 +135,7 @@ End Namespace
   
  雖然 BAML 也不應包含非限定的組件名稱，但編譯的 BAML (透過 PresentationBuildTask 產生) 仍會使用所有的步驟。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [瞭解 XML 命名空間](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

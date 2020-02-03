@@ -36,7 +36,7 @@ ms.locfileid: "76744072"
 
 如需完整的程式代碼清單，請參閱[如何：建立利用設計階段功能的 Windows Forms 控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 為了完成此逐步解說，您需要 Visual Studio。
 
@@ -136,7 +136,7 @@ ms.locfileid: "76744072"
 
 2. 在 [ **MarqueeControlLibrary 屬性頁**] 對話方塊中，選取 [ **Debug** ] 頁面。
 
-3. 在 [**起始動作**] 區段中，選取 [**啟動外部程式**]。 您將會 Visual Studio 的個別實例進行偵錯工具, 因此請按一下省略號![Visual Studio](./media/visual-studio-ellipsis-button.png)屬性視窗中的省略號按鈕 (...) 按鈕, 以流覽 Visual Studio 的 IDE。 可執行檔的名稱為 devenv，如果您安裝到預設位置，其路徑為 *% ProgramFiles （x86）% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE\devenv.exe*。
+3. 在 [**起始動作**] 區段中，選取 [**啟動外部程式**]。 您將會 Visual Studio 的個別實例進行偵錯工具，因此，請按一下省略號（![[Visual Studio](./media/visual-studio-ellipsis-button.png)）] 按鈕屬性視窗中的省略號按鈕（...），以流覽 Visual Studio IDE。 可執行檔的名稱為 devenv，如果您安裝到預設位置，其路徑為 *% ProgramFiles （x86）% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE\devenv.exe*。
 
 4. 選取 [確定] 關閉對話方塊。
 
@@ -261,7 +261,7 @@ ms.locfileid: "76744072"
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#170)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#170)]
 
-14. 按**F6**以建立方案。
+14. 按 **F6** 以建立方案。
 
 ## <a name="create-the-marqueeborder-child-control"></a>建立 MarqueeBorder 子控制項
 
@@ -430,7 +430,7 @@ ms.locfileid: "76744072"
 
 ## <a name="add-designer-verbs-to-your-custom-designer"></a>將設計工具動詞新增至您的自訂設計工具
 
-設計工具動詞是連結至事件處理常式的功能表命令。 設計工具動詞會在設計階段加入至元件的快捷方式功能表。 如需詳細資訊，請參閱<xref:System.ComponentModel.Design.DesignerVerb>。
+設計工具動詞命令是連結至事件處理常式的功能表命令。 設計工具動詞會在設計階段加入至元件的快捷方式功能表。 如需詳細資訊，請參閱 <xref:System.ComponentModel.Design.DesignerVerb>。
 
 您會在設計工具中加入兩個設計工具動詞：**執行測試**和**停止測試**。 這些動詞可讓您在設計階段查看 `MarqueeControl` 的執行時間行為。 這些動詞將會新增至 `MarqueeControlRootDesigner`。
 
@@ -608,7 +608,7 @@ ms.locfileid: "76744072"
 
 - 控制控制項的序列化方式，以及如何為其產生程式碼。 如需詳細資訊，請參閱[動態來來源程式代碼產生和編譯](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>

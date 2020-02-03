@@ -80,7 +80,7 @@ ms.locfileid: "76743862"
   
  <xref:System.Windows.Forms.DataGridViewLinkColumn> 類別提供數個屬性，可在按一下連結之前、期間和之後修改其外觀。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
@@ -91,6 +91,6 @@ ms.locfileid: "76743862"
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
 - [DataGridView 控制項](datagridview-control-windows-forms.md)
-- [如何：顯示 Windows Form DataGridView 控制項的儲存格影像](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [操作說明：顯示 Windows Form DataGridView 控制項的儲存格影像](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
 - [操作說明：使用 Windows Forms DataGridView 控制項中的影像資料行](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
 - [自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)

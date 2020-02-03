@@ -32,7 +32,7 @@ ms.locfileid: "76742537"
   
      您必須確定表單會匯入 <xref:System.IO> 命名空間。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [影像、點陣圖和中繼檔](images-bitmaps-and-metafiles.md)
 - [ListView 控制項](../controls/listview-control-windows-forms.md)

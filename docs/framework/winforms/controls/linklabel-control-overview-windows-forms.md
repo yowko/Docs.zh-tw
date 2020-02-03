@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.LinkLabel> 控制項可讓您將 Web �
   
  <xref:System.Windows.Forms.LinkLabel> 控制項最簡單的用法是使用 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 屬性來顯示單一連結，但您也可以使用 <xref:System.Windows.Forms.LinkLabel.Links%2A> 屬性來顯示多個超連結。 <xref:System.Windows.Forms.LinkLabel.Links%2A> 屬性可讓您存取連結的集合。 您也可以在每個個別 <xref:System.Windows.Forms.LinkLabel.Link> 物件的 <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> 屬性中指定資料。 <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> 屬性的值可以用來儲存要顯示的檔案位置或網站的位址。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [Label 控制項概觀](label-control-overview-windows-forms.md)

@@ -38,7 +38,7 @@ ms.locfileid: "76743912"
 
 ## <a name="method-parameters-vs-arguments"></a>方法參數與引數的比較
 
-方法定義會指定所需的任何參數的名稱和類型。 在呼叫程式碼呼叫此方法時，它會提供對每個參數呼叫的引數的具體值。 引數必須與參數類型相容，但是在呼叫程式碼中使用的引數名稱（如果有的話）不需要與方法中所定義的參數相同。 例如：
+方法定義會指定所需的任何參數的名稱和類型。 在呼叫程式碼呼叫此方法時，它會提供對每個參數呼叫的引數的具體值。 引數必須與參數類型相容，但是在呼叫程式碼中使用的引數名稱（如果有的話）不需要與方法中所定義的參數相同。 例如，
 
 [!code-csharp[csProgGuideObjects#74](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#74)]
 
@@ -119,7 +119,7 @@ public static void FillMatrix(int[,] matrix)
 
 使用非同步功能，您就可以呼叫非同步方法，而不需要使用明確回呼或手動將您的程式碼分散到多種方法或 lambda 運算式上。
 
-如果您使用 [async](../../language-reference/keywords/async.md) 修飾詞來標示方法，可以在方法中使用 [await](../../language-reference/operators/await.md) 運算子。 當控制項到達 async 方法的 await 運算式時，控制項會傳回給呼叫者，方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。
+如果您使用 [async](../../language-reference/keywords/async.md) 修飾詞來標示方法，則可以在方法中使用 [await](../../language-reference/operators/await.md) 運算子。 當控制項到達 async 方法的 await 運算式時，控制項會傳回給呼叫者，方法中的進度會暫停，直到等候的工作完成。 當工作完成時，方法中的執行可以繼續。
 
 > [!NOTE]
 > 非同步方法會在遇到第一個未完成的等候物件或是到達非同步方法的結尾時 (以先發生者為準)，傳回呼叫者
@@ -155,17 +155,17 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](../../language-reference/keywords/yield.md) 陳述式一次傳回一個項目。 當 [yield return](../../language-reference/keywords/yield.md) 到達陳述式時，會記住在程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。
 
-您會使用 [foreach](../../language-reference/keywords/foreach-in.md) 陳述式，透過用戶端程式碼呼叫迭代器。
+您會使用 [foreach](../../language-reference/keywords/foreach-in.md) 陳述式透過用戶端程式碼呼叫迭代器。
 
-迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。
+迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。
 
-如需詳細資訊，請參閱[迭代器](../concepts/iterators.md)。
+如需詳細資訊，請參閱 [Iterator](../concepts/iterators.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](index.md)

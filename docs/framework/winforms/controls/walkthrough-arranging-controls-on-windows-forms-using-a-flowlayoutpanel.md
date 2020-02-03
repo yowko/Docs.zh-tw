@@ -172,7 +172,7 @@ ms.locfileid: "76745397"
 6. 放開滑鼠按鈕。 請注意，三個 <xref:System.Windows.Forms.Button> 控制項都已插入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中。
 
 ## <a name="next-steps"></a>後續步驟
- 您可以組合配置面板和控制項，完成複雜的配置。 進一步的探索建議包括：
+ 您可以組合配置面板和控制項，完成複雜的配置。 建議您進一步研究的部分包括：
 
 - 放大其中一個 <xref:System.Windows.Forms.Button> 控制項的大小，注意配置的效果。
 
@@ -182,13 +182,13 @@ ms.locfileid: "76745397"
 
 - 將其中一個控制項的 <xref:System.Windows.Forms.Control.Visible%2A> 屬性設為 `false` ，注意 <xref:System.Windows.Forms.FlowLayoutPanel> 如何回應重訂方向。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [逐步解說：使用對齊線排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [AutoSize 屬性概觀](autosize-property-overview.md)
-- [如何：將控制項停駐在 Windows Forms 上](how-to-dock-controls-on-windows-forms.md)
-- [如何：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
+- [操作說明：將控制項停駐在 Windows Forms 上](how-to-dock-controls-on-windows-forms.md)
+- [操作說明：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
 - [逐步解說：使用邊框距離、邊界和 AutoSize 屬性配置 Windows Forms 控制項](windows-forms-controls-padding-autosize.md)

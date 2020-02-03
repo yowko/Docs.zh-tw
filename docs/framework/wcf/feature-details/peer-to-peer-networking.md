@@ -16,7 +16,7 @@ ms.locfileid: "76744681"
   
  下列各節包含有關對等網路的資訊，並且說明如何使用對等通道類別，建立已啟用對等之網路應用程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [對等通道案例](../../../../docs/framework/wcf/feature-details/peer-channel-scenarios.md)：說明對等通道 api 支援的開發案例，例如發行/訂閱訊息、共同作業、分散式處理和遊戲。  
   
  [對等通道概念](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)：描述對等網格、對等節點、對等通道安全性和對等解析程式。  

@@ -12,7 +12,7 @@ ms.locfileid: "76742723"
 # <a name="transaction-protocols"></a>交易通訊協定
 Windows Communication Foundation （WCF）會執行 WS-不可部分完成的交易和 WS 協調通訊協定。  
   
-|規格/文件|{2&gt;版本&lt;2}|連結|  
+|規格/文件|版本|連結|  
 |-----------------------------|-------------|----------|  
 |WS-Coordination|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wscoor/><br /><br /> <https://docs.oasis-open.org/ws-tx/wscoor/2006/06>|  
 |WS-AtomicTransaction|1.0<br /><br /> 1.1|<http://schemas.xmlsoap.org/ws/2004/10/wsat/><br /><br /> <https://docs.oasis-open.org/ws-tx/wsat/2006/06>|  
@@ -57,7 +57,7 @@ Windows Communication Foundation （WCF）會執行 WS-不可部分完成的交�
   
  下列 XML 命名空間與關聯的前置詞會使用在整份文件中。  
   
-|前置詞|{2&gt;版本&lt;2}|命名空間 URI|  
+|前置詞|版本|命名空間 URI|  
 |------------|-------------|-------------------|  
 |s11||<https://schemas.xmlsoap.org/soap/envelope/>|  
 |wsa|1\.0 前<br /><br /> 1.0|`http://www.w3.org/2004/08/addressing`<br /><br /> <https://www.w3.org/2005/08/addressing/>|  

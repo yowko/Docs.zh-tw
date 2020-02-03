@@ -46,7 +46,7 @@ ms.locfileid: "76743035"
 > [!TIP]
 > 您可以在 <xref:System.Windows.Forms.DataGridView> 類別總覽中找到示範如何以程式設計方式使用所選儲存格的範例程式碼。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>

@@ -27,7 +27,7 @@ Windows Forms <xref:System.Windows.Forms.DomainUpDown> 控制項基本上是文�
   
  此控制項只會顯示文字字串。 如果您想要顯示數值的控制項，請使用 <xref:System.Windows.Forms.NumericUpDown> 控制項。 如需詳細資訊，請參閱[NumericUpDown 控制項總覽](numericupdown-control-overview-windows-forms.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - [DomainUpDown 控制項](domainupdown-control-windows-forms.md)

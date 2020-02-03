@@ -15,7 +15,7 @@ ms.locfileid: "76743640"
 
  .NET Framework 提供三個針對各種序列化案例優化的主要序列化技術。 下表列出這些技術以及與這些技術相關的主要 Framework 型別。
 
-|**技術名稱**|**主要類型**|**場景**|
+|**技術名稱**|**主要類型**|**案例**|
 |-------------------------|--------------------|-------------------|
 |**資料合約序列化**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|一般持續性<br />Web 服務<br />JSON|
 |**XML 序列化**|<xref:System.Xml.Serialization.XmlSerializer>|具有 XML 圖形完整控制權的 XML 格式|
@@ -100,9 +100,9 @@ public class Person : ISerializable
 
  *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*
 
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 *Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition[ 節錄。](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [用法方針](../../../docs/standard/design-guidelines/usage-guidelines.md)

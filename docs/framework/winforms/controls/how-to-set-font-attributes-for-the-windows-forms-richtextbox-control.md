@@ -53,7 +53,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項有許多選項�
     > [!NOTE]
     > 這些屬性只會影響選取的文字；或者，如果未選取文字，則是在目前插入點位置中輸入的文字。 如需以程式設計方式選取文字的詳細資訊，請參閱 <xref:System.Windows.Forms.TextBoxBase.Select%2A>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 控制項](richtextbox-control-windows-forms.md)

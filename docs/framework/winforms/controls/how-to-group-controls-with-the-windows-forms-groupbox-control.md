@@ -32,7 +32,7 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> 控制項用來分組其他�
   
 3. 將 [群組方塊] 的 [<xref:System.Windows.Forms.GroupBox.Text%2A>] 屬性設定為適當的標題。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.GroupBox>
 - [GroupBox 控制項](groupbox-control-windows-forms.md)

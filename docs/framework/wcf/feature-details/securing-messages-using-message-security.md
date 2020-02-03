@@ -34,7 +34,7 @@ ms.locfileid: "76746441"
   
  本章節會說明不同的認證類型，以及如何搭配佇列使用這些認證。  
   
-### <a name="certificate"></a>憑證  
+### <a name="certificate"></a>Certificate  
  憑證認證類型會使用 X.509 憑證來識別服務和用戶端。  
   
  在一般案例中，用戶端和服務都會由受信任的憑證授權單位發行有效的憑證。 接著在連線建立之後，用戶端會使用服務的憑證來驗證該服務的有效性，以決定是否能夠信任該服務。 同樣地，服務會使用該用戶端的憑證來驗證用戶端託管。  
@@ -63,9 +63,9 @@ ms.locfileid: "76746441"
 ## <a name="using-transport-and-message-security"></a>使用傳輸和訊息安全性  
  當同時使用傳輸安全性和訊息安全性時，在傳輸層級和 SOAP 訊息層級中用來保護訊息安全的必須是相同的憑證。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用傳輸安全性來保護訊息的安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [訊息佇列上的訊息安全性](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

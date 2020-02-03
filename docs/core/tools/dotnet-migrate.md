@@ -13,7 +13,7 @@ ms.locfileid: "76734149"
 
 **本文適用于：** ✔️ .net CORE 1.x sdk ✔️ .net CORE 2.x sdk
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet migrate` - 將 Preview 2 .NET Core 專案移轉至 .NET Core SDK 型專案。
 
@@ -37,13 +37,13 @@ dotnet migrate [-h|--help]
 * *solution.sln* 檔案，移轉方案參考的專案。
 * 指定之目錄的所有子目錄，以遞迴方式進行。
 
-`dotnet migrate` 命令會在 `backup` 目錄 (若目錄不存在則會建立) 中保留移轉的 *project.json* 檔案。 使用 `--skip-backup` 選項會覆寫此行為。
+`dotnet migrate` 命令會在 *目錄 (若目錄不存在則會建立) 中保留移轉的*project.json`backup` 檔案。 使用 `--skip-backup` 選項會覆寫此行為。
 
 根據預設，移轉作業會將移轉程序的狀態輸出到標準輸出 (STDOUT)。 如果使用 `--report-file <REPORT_FILE>` 選項，則輸出會儲存到指定的檔案。
 
 `dotnet migrate` 命令只支援有效的 Preview 2 *project.json* 型專案。 這表示您無法使用它將 DNX 或 Preview 1 *project.json* 型專案直接移轉到 MSBuild/csproj 專案。 您必須先手動將專案移轉到 Preview 2 *project.json* 型專案，然後再使用 `dotnet migrate` 命令移轉該專案。
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>引數
 
 `PROJECT_JSON/GLOBAL_JSON/SOLUTION_FILE/PROJECT_DIR`
 

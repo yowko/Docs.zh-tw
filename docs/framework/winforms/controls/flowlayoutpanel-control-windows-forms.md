@@ -18,7 +18,7 @@ ms.locfileid: "76745746"
   
  本節中的主題描述可讓您將 `FlowLayoutPanel` 功能建置在應用程式中的概念和技術。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [FlowLayoutPanel 控制項概觀](flowlayoutpanel-control-overview.md)  
  介紹 `FlowLayoutPanel` 控制項的一般概念，這個控制項可讓您建立水平或垂直流動的配置。  
   
@@ -27,6 +27,6 @@ ms.locfileid: "76745746"
   
  另請參閱[逐步解說：使用 FlowLayoutPanel 排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  提供 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的參考文件。

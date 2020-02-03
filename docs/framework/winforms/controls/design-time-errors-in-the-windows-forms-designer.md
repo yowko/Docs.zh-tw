@@ -406,7 +406,7 @@ Visual Studio 已載入類別，但無法載入該類別的設計工具。 Visua
 
 Visual Studio 已載入類別，但無法設計類別。 相反地，請在程式碼視圖中編輯類別，方法是以滑鼠右鍵按一下類別，然後選擇 [ **View Code**]。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用設計工具開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)
 - [Windows Form 設計工具論壇](https://social.msdn.microsoft.com/Forums/windows/home?forum=winformsdesigner)

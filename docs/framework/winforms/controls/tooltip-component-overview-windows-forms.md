@@ -22,7 +22,7 @@ ms.locfileid: "76741911"
   
  <xref:System.Windows.Forms.ToolTip> 元件的主要方法是 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 和 <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>。 您可以使用 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> 方法來設定針對控制項顯示的工具提示。 如需詳細資訊，請參閱[如何：在設計階段設定 Windows Form 上控制項的工具提示](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)。 索引鍵屬性是 <xref:System.Windows.Forms.ToolTip.Active%2A>的，其必須設定為 `true`，工具提示才會出現，而 <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>則會設定顯示工具提示字串的時間長度、使用者必須指向控制項以顯示工具提示，以及後續工具提示視窗出現的時間長短。 如需詳細資訊，請參閱[如何：變更 Windows Forms 工具提示元件的延遲](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolTip>
 - [操作說明：在設計階段設定 Windows Forms 上控制項的工具提示](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

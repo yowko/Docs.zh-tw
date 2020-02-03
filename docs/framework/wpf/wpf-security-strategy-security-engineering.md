@@ -89,9 +89,9 @@ ms.locfileid: "76741844"
 ### <a name="critical-code-management"></a>重要程式碼管理  
  對於 XAML 瀏覽器應用程式（Xbap），[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 會使用 .NET Framework 支援來建立安全性沙箱，以標示和追蹤提升許可權的安全性關鍵程式碼（請參閱[WPF 安全性策略-平臺安全性](wpf-security-strategy-platform-security.md)中的**安全性關鍵方法**）。 假設在安全性關鍵程式碼上的安全性需求很高，這類程式碼會接收額外層級的來源管理控制和安全性稽核。 大約 5% 到 10%的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 由經過專門的檢閱小組檢閱的安全性關鍵程式碼所組成。 原始程式碼和簽入程序是由追蹤安全性關鍵程式碼來管理，以及對應每個重要的實體 (也就是一個包含關鍵程式碼的方法) 至其登出狀態。 登出狀態包含一或多個檢閱者的名稱。 每個 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 的每日建置會比較該關鍵程式碼和前一個建置的關鍵程式碼，以檢查未經核准的變更。 如果工程師修改未經檢閱小組核准的關鍵程式碼，它會被識別並被立即修正。 此程序能在 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 沙箱程式碼上套用和維護特別高層級的監督。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Security](security-wpf.md)
+- [安全性](security-wpf.md)
 - [WPF 部分信任安全性](wpf-partial-trust-security.md)
 - [WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md)
 - [高可信度電腦運算](https://www.microsoft.com/mscorp/twc/default.mspx)

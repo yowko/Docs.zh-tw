@@ -18,12 +18,12 @@ ms.locfileid: "76739005"
 # <a name="windows-in-wpf-applications"></a>WPF 應用程式中的視窗
 使用者透過 windows 與應用程式互動。 視窗的基本用途是裝載和顯示內容。 視窗裝載的內容類型取決於應用程式操作的資料類型，其中可以包含媒體、Extensible Application Markup Language （XAML）頁面、網頁、檔、資料庫資料表和記錄，以及系統資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [WPF 視窗概觀](wpf-windows-overview.md)  
  [對話方塊概觀](dialog-boxes-overview.md)  
- [「如何」主題](window-management-how-to-topics.md)  
+ [操作說明主題](window-management-how-to-topics.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  

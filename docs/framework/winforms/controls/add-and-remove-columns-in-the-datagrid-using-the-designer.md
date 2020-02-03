@@ -38,8 +38,8 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> 控制項必須包含資�
 
 3. 按一下 [**移除**] 按鈕以刪除資料行，使其從設計工具中消失。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [操作說明：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)

@@ -97,13 +97,13 @@ Windows Communication Foundation （WCF）是以 SOAP 訊息為基礎的分散�
 ### <a name="auditing"></a>稽核  
  「*審核*」是將安全性事件記錄到 Windows 事件記錄檔中。 您可以記錄安全性相關的事件，例如驗證失敗 (或成功)。 如需詳細資訊，請參閱「[審核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)」。 如需程式設計的詳細資訊，請參閱[如何： Audit Security Events](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [保護服務安全](../../../../docs/framework/wcf/securing-services.md)
 - [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [同盟與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

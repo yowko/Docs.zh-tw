@@ -153,7 +153,7 @@ Windows Presentation Foundation （WPF）提供豐富的環境來建立應用程
   
  最後，將 `handled` 設定為 `true` 以指出訊息已處理。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Interop.HwndHost>
 - [WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)

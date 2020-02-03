@@ -17,7 +17,7 @@ ms.locfileid: "76731968"
 # <a name="datetimepicker-control-windows-forms"></a>DateTimePicker 控制項 (Windows Form)
 Windows Forms `DateTimePicker` 控制項可讓使用者從日期或時間清單中選取單一專案。 用來表示日期時，它會出現在兩個部分：含有文字表示之日期的下拉式清單，以及當您按一下清單旁邊的向下箭號時，所顯示的方格。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [DateTimePicker 控制項概觀](datetimepicker-control-overview-windows-forms.md)  
  介紹 `DateTimePicker` 控制項的一般概念，可讓使用者從日期或時間清單中選取單一專案。  
   
@@ -30,7 +30,7 @@ Windows Forms `DateTimePicker` 控制項可讓使用者從日期或時間清單�
  [操作說明：使用 DateTimePicker 控制項顯示時間](how-to-display-time-with-the-datetimepicker-control.md)  
  顯示 `DateTimePicker` 只顯示時間的步驟。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.DateTimePicker>  
  說明這個類別，並且提供其所有成員的連結。  
   

@@ -21,7 +21,7 @@ ms.locfileid: "76744942"
 # <a name="notifyicon-component-windows-forms"></a>NotifyIcon 元件 (Windows Form)
 Windows Forms `NotifyIcon` 元件會在工作列的狀態通知區域中顯示圖示，針對在背景中執行且不會有使用者介面的進程。 防毒保護程式即為一例，您可以在工作列的狀態通知區域中，按一下圖示來存取這個程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [NotifyIcon 元件概觀](notifyicon-component-overview-windows-forms.md)  
  介紹 `NotifyIcon` 元件的一般概念，可讓使用者查看在背景中執行且沒有使用者介面之進程的圖示。  
   
@@ -31,7 +31,7 @@ Windows Forms `NotifyIcon` 元件會在工作列的狀態通知區域中顯示�
  [操作說明：將捷徑功能表與 Windows Forms NotifyIcon 元件關聯](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
  提供將快捷方式功能表新增至 `NotifyIcon` 元件的步驟。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.NotifyIcon>  
  提供這個類別及其成員的相關參考資訊。  
   

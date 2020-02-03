@@ -17,7 +17,7 @@ ms.locfileid: "76734477"
 
 下表顯示內C#建類型的關鍵字，這些是 <xref:System> 命名空間中預先定義類型的別名：
 
-|C# 類型|.NET 型別|  
+|C# 類型|.NET 類型|  
 |--------------|-------------------------|  
 |[bool](../builtin-types/bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
 |[byte](../builtin-types/integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|  
@@ -60,11 +60,11 @@ Console.WriteLine(doubleType.FullName);
 // System.Double
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)
-- [實值型別](../builtin-types/value-types.md)
+- [值類型](../builtin-types/value-types.md)
 - [參考型別](reference-types.md)
 - [類型的C#預設值](../builtin-types/default-values.md)
 - [dynamic](../builtin-types/reference-types.md#the-dynamic-type)

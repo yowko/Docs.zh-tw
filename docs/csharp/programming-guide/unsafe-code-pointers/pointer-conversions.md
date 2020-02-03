@@ -38,12 +38,12 @@ ms.locfileid: "76745358"
   
  [!code-csharp[csProgGuidePointers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#4)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [指標型別](pointer-types.md)
 - [參考型別](../../language-reference/keywords/reference-types.md)
-- [實值型別](../../language-reference/builtin-types/value-types.md)
-- [Unsafe.DangerousAPI](../../language-reference/keywords/unsafe.md)
+- [值類型](../../language-reference/builtin-types/value-types.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)
 - [fixed 陳述式](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

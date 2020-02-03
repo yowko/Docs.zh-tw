@@ -53,7 +53,7 @@ txtFirstName->BringToFront();
 > [!NOTE]
 > Windows Forms 支援*控制項*內含專案。 控制項內含專案牽涉到將一些控制項放在包含控制項內，例如 <xref:System.Windows.Forms.GroupBox> 控制項內的一些 <xref:System.Windows.Forms.RadioButton> 控制項。 然後，您可以在包含控制項內分層控制項。 移動 [群組方塊] 也會移動控制項，因為它們包含在其中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
 - [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

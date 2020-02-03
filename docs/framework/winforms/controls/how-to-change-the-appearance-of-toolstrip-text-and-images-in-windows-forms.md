@@ -25,7 +25,7 @@ ms.locfileid: "76746604"
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>定義 ToolStripItem 上顯示的內容  
   
-- 將 [<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>] 屬性設為所需的值。 可能的情況包括 `Image`、`ImageAndText`、`None`和 `Text`。 預設為 `ImageAndText`。  
+- 將 [<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>] 屬性設為所需的值。 可能的情況包括 `Image`、`ImageAndText`、`None`和 `Text`。 預設值為 `ImageAndText`。  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -38,7 +38,7 @@ ms.locfileid: "76746604"
   
 ### <a name="to-align-text-on-a-toolstripitem"></a>對齊 ToolStripItem 上的文字  
   
-- 將 [<xref:System.Windows.Forms.ToolStripItem.TextAlign%2A>] 屬性設為所需的值。 這些可能是靠左、置中和靠右的任意組合。 預設為 `MiddleCenter`。  
+- 將 [<xref:System.Windows.Forms.ToolStripItem.TextAlign%2A>] 屬性設為所需的值。 這些可能是靠左、置中和靠右的任意組合。 預設值為 `MiddleCenter`。  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -51,7 +51,7 @@ ms.locfileid: "76746604"
   
 ### <a name="to-align-an-image-on-a-toolstripitem"></a>在 ToolStripItem 上對齊影像  
   
-- 將 [<xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>] 屬性設為所需的值。 這些可能是靠左、置中和靠右的任意組合。 預設為 `MiddleLeft`。  
+- 將 [<xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>] 屬性設為所需的值。 這些可能是靠左、置中和靠右的任意組合。 預設值為 `MiddleLeft`。  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -64,7 +64,7 @@ ms.locfileid: "76746604"
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>若要定義 ToolStripItem 文字和影像彼此之間的顯示方式  
   
-- 將 [<xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>] 屬性設為所需的值。 可能的情況包括 `ImageAboveText`、`ImageBeforeText`、`Overlay`、`TextAboveImage`和 `TextBeforeImage`。 預設為 `ImageBeforeText`。  
+- 將 [<xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>] 屬性設為所需的值。 可能值為 `ImageAboveText`、`ImageBeforeText`、`Overlay`、`TextAboveImage` 和 `TextBeforeImage`。 預設值為 `ImageBeforeText`。  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  
@@ -75,7 +75,7 @@ ms.locfileid: "76746604"
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)

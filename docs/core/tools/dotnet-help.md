@@ -17,7 +17,7 @@ ms.locfileid: "76734241"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet help` - 顯示指定命令更詳細的線上文件。
 
@@ -29,7 +29,7 @@ ms.locfileid: "76734241"
 
 `dotnet help` 命令會在 docs.microsoft.com 開啟參考頁面，提供指定命令的更詳細資訊。
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>引數
 
 * **`COMMAND_NAME`**
 

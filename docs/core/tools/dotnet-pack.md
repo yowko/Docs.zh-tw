@@ -17,7 +17,7 @@ ms.locfileid: "76734117"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet pack` - 將程式碼封裝到 NuGet 套件。
 
@@ -55,7 +55,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>引數
 
 `PROJECT | SOLUTION`
 
@@ -65,7 +65,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 - **`-c|--configuration {Debug|Release}`**
 
-  定義組建組態。 預設值為 `Debug`。
+  定義組建組態。 預設值是 `Debug`。
 
 - **`--force`**
 
@@ -85,7 +85,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 - **`--interactive`**
 
-  允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供。
+  允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供使用。
 
 - **`--no-build`**
 
@@ -97,11 +97,11 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 - **`--no-restore`**
 
-  執行命令時，不會執行隱含還原。 自 .NET Core 2.0 SDK 起可用的選項。
+  執行命令時，不會執行隱含的還原。 自 .NET Core 2.0 SDK 起可用的選項。
 
 - **`--nologo`**
 
-  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供。
+  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供使用。
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -149,13 +149,13 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
   dotnet pack --no-build --output nupkgs
   ```
 
-- 在 *.csproj* 檔案中將專案的版本尾碼設定為 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`，封裝目前的專案並使用指定尾碼更新產生的套件版本︰
+- 在 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`.csproj*檔案中將專案的版本尾碼設定為*，封裝目前的專案並使用指定尾碼更新產生的套件版本︰
 
   ```dotnetcli
   dotnet pack --version-suffix "ci-1234"
   ```
 
-- 使用 `PackageVersion` MSBuild 屬性將封裝版本設定為 `2.1.0`：
+- 使用 `2.1.0` MSBuild 屬性將封裝版本設定為 `PackageVersion`：
 
   ```dotnetcli
   dotnet pack -p:PackageVersion=2.1.0

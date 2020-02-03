@@ -117,7 +117,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以將網頁�
     }
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>

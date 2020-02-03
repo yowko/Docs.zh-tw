@@ -42,7 +42,7 @@ ms.locfileid: "76743717"
 ## <a name="configurable-via-code-or-appconfig"></a>可透過程式碼或 App.Config 設定
  此範例預設為使用 App.config 檔案定義路由器的行為。 您也可以將 App.config 檔案的名稱變更為其他任何名稱，讓其無法辨識，而且可以取消註解對 ConfigureRouterViaCode() 的方法呼叫。 任一種方法都會在路由器中導致相同的行為。
 
-### <a name="scenario"></a>情節
+### <a name="scenario"></a>狀況
  此範例示範當做基本訊息幫浦的路由器。 路由服務會當做傳輸 Proxy 節點，而此節點設定為將訊息直接傳遞到一組預先設定的目的地端點。
 
 ### <a name="real-world-scenario"></a>真實情節
@@ -57,6 +57,6 @@ ms.locfileid: "76743717"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [AppFabric 裝載和持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

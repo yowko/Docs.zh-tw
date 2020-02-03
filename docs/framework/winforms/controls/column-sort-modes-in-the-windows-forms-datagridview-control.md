@@ -58,7 +58,7 @@ ms.locfileid: "76744188"
 > [!NOTE]
 > 當設定 <xref:System.Windows.Forms.DataGridView.DataSource%2A> 屬性或 `true`<xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 屬性值時，不會發生 <xref:System.Windows.Forms.DataGridView.SortCompare> 事件。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>
@@ -67,5 +67,5 @@ ms.locfileid: "76744188"
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
 - [在 Windows Forms DataGridView 控制項中排序資料](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [如何：設定 Windows Forms DataGridView 控制項中的資料行排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [操作說明：設定 Windows Forms DataGridView 控制項中的資料行排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)
 - [操作說明：自訂 Windows Forms DataGridView 控制項中的排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

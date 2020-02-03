@@ -22,11 +22,11 @@ Windows Forms 控制項不會在資料系結時排序。 若要顯示已排序�
   
 ### <a name="to-sort-the-list"></a>排序清單  
   
-1. 將 `Sorted` 屬性設定為 `true`。  
+1. 將 `Sorted` 屬性設為 `true`。  
   
      此設定會重新置放所有現有清單專案的排序次序。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

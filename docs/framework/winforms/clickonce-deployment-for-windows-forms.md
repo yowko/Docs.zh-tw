@@ -59,10 +59,10 @@ ms.locfileid: "76746342"
  [在 ClickOnce 應用程式中存取本機和遠端資料](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
  描述如何從 ClickOnce 應用程式存取本機資料檔案和遠端資料源。  
   
- [如何：在 ClickOnce 應用程式中納入資料檔案](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
+ [How to: Include a Data File in a ClickOnce Application](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  示範如何標記檔案，使其可在 ClickOnce 資料目錄中使用。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [應用程式設定概觀](./advanced/application-settings-overview.md)
 - [發行 ClickOnce 應用程式](/visualstudio/deployment/publishing-clickonce-applications)

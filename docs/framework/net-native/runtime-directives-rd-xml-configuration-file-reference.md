@@ -132,43 +132,43 @@ ms.locfileid: "76738403"
 
 [Application](application-element-net-native.md)、[Assembly](assembly-element-net-native.md)、[AttributeImplies](attributeimplies-element-net-native.md)、[Namespace](namespace-element-net-native.md)、[Subtypes](subtypes-element-net-native.md) 和 [Type](type-element-net-native.md) 項目支援下列原則類型：
 
-- `Activate`。 控制建構函式的執行階段存取，以便啟動執行個體。
+- `Activate`第 1 課：建立 Windows Azure 儲存體物件{2}。 控制建構函式的執行階段存取，以便啟動執行個體。
 
-- `Browse`。 控制程式項目相關資訊的查詢，但不會啟用任何執行階段存取。
+- `Browse`第 1 課：建立 Windows Azure 儲存體物件{2}。 控制程式項目相關資訊的查詢，但不會啟用任何執行階段存取。
 
-- `Dynamic`。 控制對所有類型成員 (包括建構函式、方法、欄位、屬性和事件) 的執行階段存取，以啟用動態程式設計。
+- `Dynamic`第 1 課：建立 Windows Azure 儲存體物件{2}。 控制對所有類型成員 (包括建構函式、方法、欄位、屬性和事件) 的執行階段存取，以啟用動態程式設計。
 
-- `Serialize`。 控制對建構函式、欄位和屬性的執行階段存取，讓類型執行個體能夠以 Newtonsoft JSON 序列化程式之類的協力廠商程式庫來序列化和還原序列化。
+- `Serialize`第 1 課：建立 Windows Azure 儲存體物件{2}。 控制對建構函式、欄位和屬性的執行階段存取，讓類型執行個體能夠以 Newtonsoft JSON 序列化程式之類的協力廠商程式庫來序列化和還原序列化。
 
-- `DataContractSerializer`。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 類別的序列化原則。
+- `DataContractSerializer`第 1 課：建立 Windows Azure 儲存體物件{2}。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 類別的序列化原則。
 
-- `DataContractJsonSerializer`。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 類別的 JSON 序列化原則。
+- `DataContractJsonSerializer`第 1 課：建立 Windows Azure 儲存體物件{2}。 控制使用 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 類別的 JSON 序列化原則。
 
-- `XmlSerializer`。 控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 類別的 XML 序列化原則。
+- `XmlSerializer`第 1 課：建立 Windows Azure 儲存體物件{2}。 控制使用 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 類別的 XML 序列化原則。
 
-- `MarshalObject`。 控制將參考類型封送處理至 WinRT 及 COM 的原則。
+- `MarshalObject`第 1 課：建立 Windows Azure 儲存體物件{2}。 控制將參考類型封送處理至 WinRT 及 COM 的原則。
 
-- `MarshalDelegate`。 控制將委派類型當作函式指標封送處理至機器碼的原則。
+- `MarshalDelegate`第 1 課：建立 Windows Azure 儲存體物件{2}。 控制將委派類型當作函式指標封送處理至機器碼的原則。
 
-- `MarshalStructure` . 控制將結構封送處理至機器碼的原則。
+- `MarshalStructure`。 控制將結構封送處理至機器碼的原則。
 
 與這些原則類型相關聯的設定如下：
 
-- `All`。 針對工具鏈未移除的所有類型和成員，啟用原則。
+- `All`第 1 課：建立 Windows Azure 儲存體物件{2}。 針對工具鏈未移除的所有類型和成員，啟用原則。
 
-- `Auto`。 使用預設行為。 (除非原則被 (例如父元素) 覆寫，否則，不指定原則相當於將該原則設定為 `Auto`。)
+- `Auto`第 1 課：建立 Windows Azure 儲存體物件{2}。 使用預設行為。 (除非原則被 (例如父元素) 覆寫，否則，不指定原則相當於將該原則設定為 `Auto`。)
 
-- `Excluded`。 為程式元素停用原則。
+- `Excluded`第 1 課：建立 Windows Azure 儲存體物件{2}。 為程式元素停用原則。
 
-- `Public`。 為公用類型或成員啟用原則，除非工具鏈判斷該成員是不必要的，並因此將它移除。 (在後者的情況下，您必須使用 `Required Public` 以確保該成員會保留，而且具有反映功能。)
+- `Public`第 1 課：建立 Windows Azure 儲存體物件{2}。 為公用類型或成員啟用原則，除非工具鏈判斷該成員是不必要的，並因此將它移除。 (在後者的情況下，您必須使用 `Required Public` 以確保該成員會保留，而且具有反映功能。)
 
-- `PublicAndInternal`。 如果公用和內部類型或成員沒有被工具鏈移除，則為其啟用原則。
+- `PublicAndInternal`第 1 課：建立 Windows Azure 儲存體物件{2}。 如果公用和內部類型或成員沒有被工具鏈移除，則為其啟用原則。
 
-- `Required Public`。 需要工具鏈保留公用類型和成員 (無論是否使用)，並為其啟用原則。
+- `Required Public`第 1 課：建立 Windows Azure 儲存體物件{2}。 需要工具鏈保留公用類型和成員 (無論是否使用)，並為其啟用原則。
 
-- `Required PublicAndInternal`。 需要工具鏈同時保留公用和內部類型和成員 (無論是否使用)，並為其啟用原則。
+- `Required PublicAndInternal`第 1 課：建立 Windows Azure 儲存體物件{2}。 需要工具鏈同時保留公用和內部類型和成員 (無論是否使用)，並為其啟用原則。
 
-- `Required All`。 需要工具鏈保留所有類型和成員 (無論是否使用)，並為其啟用原則。
+- `Required All`第 1 課：建立 Windows Azure 儲存體物件{2}。 需要工具鏈保留所有類型和成員 (無論是否使用)，並為其啟用原則。
 
 例如，下列執行階段指示詞檔案會為組件 DataClasses.dll 中的所有類型和成員定義原則。 它會為所有公用屬性 (property) 的序列化啟用反映功能，為所有類型和類型成員啟用瀏覽功能，為所有類型啟用啟動功能 (因為 `Dynamic` 屬性 (attribute))，並為所有公用類型和成員啟用反映功能。
 
@@ -453,7 +453,7 @@ ms.locfileid: "76738403"
 
 如需詳細資訊，請參閱[將您的 Windows 市集應用程式移轉至 .NET Native](migrating-your-windows-store-app-to-net-native.md)中的＜序列化程式的差異＞一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段指示詞項目](runtime-directive-elements.md)
 - [反映和 .NET Native](reflection-and-net-native.md)

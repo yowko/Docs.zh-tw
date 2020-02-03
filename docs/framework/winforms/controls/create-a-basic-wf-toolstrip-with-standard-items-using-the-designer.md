@@ -25,7 +25,7 @@ ms.locfileid: "76737385"
 
 3. 在 [ **ToolStrip**工作] 窗格中，選擇 [**插入標準專案**]。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)

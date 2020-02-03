@@ -24,7 +24,7 @@ ms.locfileid: "76745123"
 ## <a name="key-properties"></a>索引鍵內容  
  將 [<xref:System.Windows.Forms.MenuItem.DefaultItem%2A>] 屬性設定為 [`true`]，即可將功能表項目指定為預設專案。 按一下功能表時，預設專案會以粗體文字顯示。 功能表項目的 [<xref:System.Windows.Forms.MenuItem.Checked%2A>] 屬性為 [`true`] 或 [`false`]，並指出是否已選取功能表項目。 功能表項目的 <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> 屬性會自訂所選項目的外觀：如果 <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> 設定為 [`true`]，則會在專案旁顯示選項按鈕;如果 <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> 設定為 `false`，則專案旁邊會出現核取記號。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.MainMenu>
 - <xref:System.Windows.Forms.Menu>

@@ -31,6 +31,6 @@ enum PresentationHostCommands {
   
  PHCMDID_TABINTO 指示 Presentationhost.exe 根據 Shift 鍵的狀態，將焦點切換到其內容中的第一個或最後一個可設定的元素。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)  
  [IWpfHostSupport](iwpfhostsupport.md)

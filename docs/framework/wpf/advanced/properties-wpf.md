@@ -19,7 +19,7 @@ ms.locfileid: "76731845"
 # <a name="properties-wpf"></a>屬性 (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組服務，可用於擴充 common language runtime （CLR）屬性的功能。 整體而言，這些服務通常稱為 WPF 屬性系統。 受到 WPF 屬性系統支援的屬性則稱為相依性屬性。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
 - [相依性屬性概觀](dependency-properties-overview.md)
 - [附加屬性概觀](attached-properties-overview.md)
@@ -34,9 +34,9 @@ ms.locfileid: "76731845"
 - [DependencyObject 的安全建構函式模式](safe-constructor-patterns-for-dependencyobjects.md)
 - [集合類型的相依性屬性](collection-type-dependency-properties.md)
 - [XAML 載入和相依性屬性](xaml-loading-and-dependency-properties.md)
-- [「如何」主題](properties-how-to-topics.md)
+- [操作說明主題](properties-how-to-topics.md)
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.DependencyProperty>  
   
  <xref:System.Windows.PropertyMetadata>  
@@ -49,7 +49,7 @@ ms.locfileid: "76731845"
  [WPF 架構](wpf-architecture.md)  
   [WPF 中的 XAML](xaml-in-wpf.md)  
   [基底項目](base-elements.md)  
-  [項目樹狀結構和序列化](element-tree-and-serialization.md)  
+  [元素樹狀結構和序列化](element-tree-and-serialization.md)  
   [事件](events-wpf.md)  
   [輸入](input-wpf.md)  
   [資源](resources-wpf.md)  

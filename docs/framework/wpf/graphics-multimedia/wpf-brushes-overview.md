@@ -28,11 +28,11 @@ ms.locfileid: "76746203"
   
 |類別|筆刷屬性|  
 |-----------|----------------------|  
-|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>、 <xref:System.Windows.Controls.Border.Background%2A>|  
-|<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>、 <xref:System.Windows.Controls.Control.Foreground%2A>|  
+|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
+|<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  
 |<xref:System.Windows.Controls.Panel>|<xref:System.Windows.Controls.Panel.Background%2A>|  
 |<xref:System.Windows.Media.Pen>|<xref:System.Windows.Media.Pen.Brush%2A>|  
-|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>、 <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
+|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
 |<xref:System.Windows.Controls.TextBlock>|<xref:System.Windows.Controls.TextBlock.Background%2A>|  
   
  下列各節說明不同的 <xref:System.Windows.Media.Brush> 型別，並提供每個類型的範例。  
@@ -160,7 +160,7 @@ ms.locfileid: "76746203"
   
  如需為何無法凍結 <xref:System.Windows.Media.VisualBrush> 物件的詳細資訊，請參閱 <xref:System.Windows.Media.VisualBrush> 類型 頁面。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
@@ -170,5 +170,5 @@ ms.locfileid: "76746203"
 - [筆刷範例](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [ImageBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [「如何」主題](brushes-how-to-topics.md)
+- [操作說明主題](brushes-how-to-topics.md)
 - [其他效能建議](../advanced/optimizing-performance-other-recommendations.md)

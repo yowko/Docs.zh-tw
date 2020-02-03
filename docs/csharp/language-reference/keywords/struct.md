@@ -45,12 +45,12 @@ public struct Book
 
 如需範例，請參閱[使用結構](../../programming-guide/classes-and-structs/using-structs.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)
 - [內建型別表](built-in-types-table.md)
-- [實值型別](../builtin-types/value-types.md)
-- [Class - 類別](class.md)
+- [值類型](../builtin-types/value-types.md)
+- [class](class.md)
 - [interface](interface.md)
 - [類別和結構](../../programming-guide/classes-and-structs/index.md)

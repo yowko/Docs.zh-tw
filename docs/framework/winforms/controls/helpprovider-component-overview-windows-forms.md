@@ -36,6 +36,6 @@ Windows Forms [HelpProvider](helpprovider-component-windows-forms.md)元件是�
 > [!NOTE]
 > 在 <xref:System.Windows.Forms.Help.ShowHelp%2A> 方法或 <xref:System.Windows.Forms.HelpProvider> 控制項的 <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> 屬性中指定說明檔的路徑時，您可能會遇到使用相對路徑的問題。 因此，請務必使用絕對檔案路徑來指定說明檔。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 應用程式中的說明系統](../advanced/help-systems-in-windows-forms-applications.md)

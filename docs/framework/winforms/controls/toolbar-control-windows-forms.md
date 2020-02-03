@@ -21,7 +21,7 @@ ms.locfileid: "76735462"
 > [!NOTE]
 > `ToolBar` 控制項的 <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> 屬性會將 <xref:System.Windows.Forms.ContextMenu> 類別的執行個體當做參考。 請仔細考慮在應用程式中實作工具列上這類按鈕時所傳遞的參考，因為這個屬性會接受任何繼承自 <xref:System.Windows.Forms.Menu> 類別的物件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [工具列控制項概觀](toolbar-control-overview-windows-forms.md)  
  介紹 `ToolBar` 控制項的一般概念，讓您能夠設計自訂工具列以供使用者利用。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "76735462"
   
  另請參閱[如何：使用設計工具定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)，[如何：使用設計工具將按鈕加入工具列控制項](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.ToolBar> 類別  
  提供這個類別及其成員的相關參考資訊。  
   

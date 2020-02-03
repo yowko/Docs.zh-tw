@@ -16,7 +16,7 @@ ms.locfileid: "76744003"
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的資料輸入
 `DataGridView` 控制項提供數項功能，可讓您變更使用者在控制項中加入或修改資料的方式。 例如，您可以藉由提供新資料列的預設值，並在發生錯誤時警示使用者，讓資料項目更有效率。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：指定 Windows Forms DataGridView 控制項的編輯模式](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
  描述如何變更使用者開始編輯資料格的方式。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "76744003"
  [逐步解說：處理 Windows Forms DataGridView 控制項中的資料輸入期間所發生的錯誤](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
  描述當使用者嘗試認可新的值時，如何處理來自資料來源的資料輸入錯誤。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.DataGridView>  
  提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "76744003"
  [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)  
  提供主題，說明如何以手動方式或從外部資料源，將資料填入控制項。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGridView 控制項](datagridview-control-windows-forms.md)
 - [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)

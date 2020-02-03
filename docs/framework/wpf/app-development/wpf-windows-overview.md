@@ -167,7 +167,7 @@ ms.locfileid: "76742367"
   
 - 最小化、最大化和還原而不會影響對方。  
   
- 某些視窗需要與開啟它們的視窗有關聯性。 例如，整合式開發環境（IDE）應用程式可能會開啟屬性視窗和工具視窗，其一般行為是涵蓋建立它們的視窗。 此外，這類視窗應該一律與建立它們的視窗一致地關閉、最小化、最大化和還原。 這種關聯性可以藉由*將一個視窗設為另一個*來建立，並藉由將擁有的*視窗*的 [<xref:System.Windows.Window.Owner%2A>] 屬性設定為 [擁有者 *] 視窗*的參考來達成。 這在下列範例中顯示。  
+ 某些視窗需要與開啟它們的視窗有關聯性。 例如，整合式開發環境（IDE）應用程式可能會開啟屬性視窗和工具視窗，其一般行為是涵蓋建立它們的視窗。 此外，這類視窗應該一律與建立它們的視窗一致地關閉、最小化、最大化和還原。 這種關聯性可以藉由*將一個視窗設為另一個*來建立，並藉由將擁有的*視窗*的 [<xref:System.Windows.Window.Owner%2A>] 屬性設定為 [擁有者 *] 視窗*的參考來達成。 下列範例會顯示這一點。  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -325,13 +325,13 @@ ms.locfileid: "76742367"
   
  如果您想要讓視窗的寬度和高度符合視窗內容的大小，您可以使用 [<xref:System.Windows.Window.SizeToContent%2A>] 屬性，其中包含下列值：  
   
-- <xref:System.Windows.SizeToContent.Manual>。 無效果 (預設值)。  
+- <xref:System.Windows.SizeToContent.Manual>第 1 課：建立 Windows Azure 儲存體物件{2}。 無效果 (預設值)。  
   
-- <xref:System.Windows.SizeToContent.Width>。 符合內容寬度，其效果與將 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 設定為內容的寬度相同。  
+- <xref:System.Windows.SizeToContent.Width>第 1 課：建立 Windows Azure 儲存體物件{2}。 符合內容寬度，其效果與將 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 設定為內容的寬度相同。  
   
-- <xref:System.Windows.SizeToContent.Height>。 符合內容高度，其效果等同于將 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 設定為內容的高度。  
+- <xref:System.Windows.SizeToContent.Height>第 1 課：建立 Windows Azure 儲存體物件{2}。 符合內容高度，其效果等同于將 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 設定為內容的高度。  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>。 符合內容寬度和高度，其效果與將 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 設定為內容的高度相同，並將 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 設定為內容的寬度。  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>第 1 課：建立 Windows Azure 儲存體物件{2}。 符合內容寬度和高度，其效果與將 <xref:System.Windows.FrameworkElement.MinHeight%2A> 和 <xref:System.Windows.FrameworkElement.MaxHeight%2A> 設定為內容的高度相同，並將 <xref:System.Windows.FrameworkElement.MinWidth%2A> 和 <xref:System.Windows.FrameworkElement.MaxWidth%2A> 設定為內容的寬度。  
   
  下列範例顯示自動調整垂直和水平大小以符合其內容的視窗，第一次顯示時的樣子。  
   
@@ -479,7 +479,7 @@ ms.locfileid: "76742367"
   
  對話方塊是經常用來從使用者收集資訊以完成一項功能的視窗。 例如，當使用者想要開啟檔案時，應用程式通常會顯示 [**開啟**檔案] 對話方塊，以取得使用者的檔案名。 如需詳細資訊，請參閱[對話方塊概觀](dialog-boxes-overview.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>

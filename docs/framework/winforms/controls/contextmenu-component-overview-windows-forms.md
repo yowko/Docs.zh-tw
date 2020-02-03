@@ -26,7 +26,7 @@ ms.locfileid: "76746194"
   
  <xref:System.Windows.Forms.ContextMenu> 元件的索引鍵屬性是 <xref:System.Windows.Forms.Menu.MenuItems%2A> 屬性。 您可以新增功能表項目，方法是以程式設計方式建立 <xref:System.Windows.Forms.MenuItem> 物件，並將它們加入快捷方式功能表的 [<xref:System.Windows.Forms.Menu.MenuItemCollection>]。 因為快捷方式功能表中的專案通常是從其他功能表繪製，所以您最常將專案複製到快捷方式功能表中。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>

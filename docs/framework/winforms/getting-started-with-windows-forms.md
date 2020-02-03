@@ -18,14 +18,14 @@ ms.locfileid: "76743478"
 # <a name="getting-started-with-windows-forms"></a>Windows Form 使用者入門
 有了 Windows Forms，您就可以建立功能強大的 Windows 應用程式。 下列主題將深入說明如何利用 Windows Forms 的功能來顯示資料、處理使用者輸入，以及透過增強的安全性輕鬆部署您的應用程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Forms 概觀](windows-forms-overview.md)  
  包含 Windows Forms 和智慧型用戶端應用程式的總覽。  
   
  [建立新的 Windows Forms](creating-a-new-windows-form.md)  
  包含主題的連結，說明建立 Windows Forms 應用程式的基本概念。  
   
- [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)  
+ [在 Windows Form 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)  
  包含主題連結，說明如何建立 Windows Forms 事件處理常式。  
   
  [調整 Windows Forms 的大小和比例](adjusting-the-size-and-scale-of-windows-forms.md)  

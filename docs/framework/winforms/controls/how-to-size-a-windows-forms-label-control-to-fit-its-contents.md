@@ -24,7 +24,7 @@ Windows Forms <xref:System.Windows.Forms.Label> 控制項可以是單行或多�
   
  如果 <xref:System.Windows.Forms.Label.AutoSize%2A> 設定為 `false`，則在 <xref:System.Windows.Forms.Label.Text%2A> 屬性中指定的單字會盡可能換行到下一行，但控制項不會成長。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [操作說明：使用 Windows Forms Label 控制項建立便捷鍵](how-to-create-access-keys-with-windows-forms-label-controls.md)
 - [Label 控制項概觀](label-control-overview-windows-forms.md)

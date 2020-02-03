@@ -18,14 +18,14 @@ ms.locfileid: "76741106"
 # <a name="radiobutton-control-windows-forms"></a>RadioButton 控制項 (Windows Form)
 Windows Forms `RadioButton` 控制項會向使用者呈現兩個或多個互斥選項的集合。 雖然選項按鈕和核取方塊的功能可能類似，但有一項重要的差異：當使用者選取選項按鈕時，也無法選取相同群組中的其他選項按鈕。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [RadioButton 控制項概觀](radiobutton-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
- [如何：將 Windows Forms RadioButton 控制項群組成集合使用](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ [操作說明：將 Windows Forms RadioButton 控制項群組成集合使用](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
  說明如何將選項按鈕分組為一組，其中只有一個可以選取。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.RadioButton> 類別  
  說明這個類別，並且提供其所有成員的連結。  
   

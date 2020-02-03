@@ -36,11 +36,11 @@ ms.locfileid: "76743056"
     > [!NOTE]
     > 儲存格會使用繼承自多個屬性的樣式來顯示。 如需樣式繼承的詳細資訊，請參閱[Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Windows Forms DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [使用設計工具搭配 Windows Forms DataGridView 控制項](using-the-designer-with-the-windows-forms-datagridview-control.md)
 - [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [操作說明：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)

@@ -26,7 +26,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> 控制項用來分組其他控�
 
 3. 選擇性如果您想要將框線新增至面板，請設定其 [<xref:System.Windows.Forms.BorderStyle>] 屬性。 有三個選擇： [<xref:System.Windows.Forms.BorderStyle.Fixed3D>]、[<xref:System.Windows.Forms.BorderStyle.FixedSingle>] 和 [<xref:System.Windows.Forms.BorderStyle.None>]。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Panel 控制項](panel-control-windows-forms.md)
 - [Panel 控制項概觀](panel-control-overview-windows-forms.md)

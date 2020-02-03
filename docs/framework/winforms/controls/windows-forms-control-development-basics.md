@@ -30,7 +30,7 @@ Windows Forms 控制項是直接或間接衍生自 <xref:System.Windows.Forms.Co
   
  Windows Forms 控制項 <xref:System.Windows.Forms.Control>的基類，可提供在用戶端 Windows 應用程式中顯示視覺效果所需的管道。 <xref:System.Windows.Forms.Control> 提供視窗控制碼、處理訊息路由，並提供滑鼠和鍵盤事件，以及其他許多使用者介面事件。 它提供了「先進的版面配置」，並具有視覺顯示特有的屬性，例如 <xref:System.Windows.Forms.Control.ForeColor%2A>、<xref:System.Windows.Forms.Control.BackColor%2A>、<xref:System.Windows.Forms.Control.Height%2A>、<xref:System.Windows.Forms.Control.Width%2A>及其他許多專案。 此外，它還提供與 ActiveX 控制項的安全性、執行緒支援和互通性。 因為基底類別提供了非常多的基礎結構，所以開發您自己的 Windows Forms 控制項相對容易。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [操作說明：開發簡單的 Windows Forms 控制項](how-to-develop-a-simple-windows-forms-control.md)
 - [開發複合 Windows Forms 控制項](developing-a-composite-windows-forms-control.md)

@@ -35,11 +35,11 @@ public void SampleMethod()
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)
 - [參考型別](reference-types.md)
-- [實值型別](../builtin-types/value-types.md)
+- [值類型](../builtin-types/value-types.md)
 - [方法](../../programming-guide/classes-and-structs/methods.md)
 - [Unsafe 程式碼和指標](../../programming-guide/unsafe-code-pointers/index.md)

@@ -66,10 +66,10 @@ ms.locfileid: "76744096"
 
 3. 撰寫程式碼以填滿資料集。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGrid 控制項概觀](datagrid-control-overview-windows-forms.md)
-- [如何：將資料表和資料行新增至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [操作說明：將資料表和資料行新增至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
 - [Windows Forms 資料繫結](../windows-forms-data-binding.md)
 - [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)

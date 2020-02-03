@@ -47,7 +47,7 @@ ms.locfileid: "76736243"
 
 在 [**屬性**] 視窗中，選取 [已**鎖定**] 屬性，然後選取 [ **false**]。 （按兩下名稱即可切換屬性設定）。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
 - [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

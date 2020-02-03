@@ -16,7 +16,7 @@ ms.locfileid: "76739785"
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>調整 Windows Forms 的大小和規模
 本主題提供有關調整 Windows Form 大小的資訊連結。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：調整 Windows Forms 的大小](how-to-resize-windows-forms.md)  
  提供指定 Windows Form 大小的指示。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "76739785"
  [Windows Forms   中的高 DPI 支援](high-dpi-support-in-windows-forms.md)  
  討論 Windows Forms 的高 DPI 和動態調整的支援。 
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Drawing.Size>  
  描述這個類別，並且提供其所有成員的連結。  
   

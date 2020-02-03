@@ -51,7 +51,7 @@ ms.locfileid: "76744803"
  ![衍生自 Visual 物件之類別的圖表](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>DrawingVisual 類別  
- <xref:System.Windows.Media.DrawingVisual> 是輕量繪圖類別，可用來呈現圖形、影像或文字。 此類別之所以被視為輕量型，是因為它不提供版面配置或事件處理，而這會改善其執行階段效能。 基於此原因，它適合用於背景或美工圖案繪圖。 <xref:System.Windows.Media.DrawingVisual> 可以用來建立自訂視覺物件。 如需詳細資訊，請參閱[使用 DrawingVisual 物件](using-drawingvisual-objects.md)。  
+ <xref:System.Windows.Media.DrawingVisual> 是輕量繪圖類別，可用來呈現圖形、影像或文字。 此類別之所以被視為輕量型，是因為它不提供版面配置或事件處理，而這會改善其執行階段效能。 基於此原因，繪圖適合背景或美工圖案。 <xref:System.Windows.Media.DrawingVisual> 可以用來建立自訂視覺物件。 如需詳細資訊，請參閱[使用 DrawingVisual 物件](using-drawingvisual-objects.md)。  
   
 ### <a name="viewport3dvisual-class"></a>Viewport3DVisual 類別  
  <xref:System.Windows.Media.Media3D.Viewport3DVisual> 提供 2D <xref:System.Windows.Media.Visual> 與 <xref:System.Windows.Media.Media3D.Visual3D> 物件之間的橋樑。 <xref:System.Windows.Media.Media3D.Visual3D> 類別是所有3D 視覺元素的基類。 <xref:System.Windows.Media.Media3D.Viewport3DVisual> 需要您定義 <xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> 值和 <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> 值。 相機可讓您檢視場景。 檢視區會建立投影到 2D 平面上的對應位置。 如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 3D 的詳細資訊，請參閱 [3D 圖形概觀](3-d-graphics-overview.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "76744803"
 |繪圖內容類型|描述|  
 |--------------------------|-----------------|  
 |向量圖形|表示向量圖形資料，以及任何相關聯的 <xref:System.Windows.Media.Brush> 和 <xref:System.Windows.Media.Pen> 資訊。|  
-|Image|代表 <xref:System.Windows.Rect>所定義的區域內的影像。|  
+|影像|代表 <xref:System.Windows.Rect>所定義的區域內的影像。|  
 |圖像|表示轉譯 <xref:System.Windows.Media.GlyphRun>的繪圖，這是來自指定之字型資源的一系列字元。 這是文字的表現方式。|  
 |視訊|代表轉譯視訊的繪圖。|  
   
@@ -247,7 +247,7 @@ Visual Profiler 顯示輸出
  [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>

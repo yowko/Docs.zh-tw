@@ -82,7 +82,7 @@ ms.locfileid: "76736032"
        }  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.PictureBox>
 - [操作說明：使用設計工具載入圖片](how-to-load-a-picture-using-the-designer-windows-forms.md)

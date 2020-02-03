@@ -16,9 +16,9 @@ ms.locfileid: "76741574"
 
 在[Visual Studio 中使用 .Net Core 建立 Hello World 應用程式](with-visual-studio.md)時，您已建立 Hello World 主控台應用程式。 在[使用 Visual Studio 來進行 Hello World 應用程式](debugging-with-visual-studio.md)的「偵測」時，您會使用 Visual Studio 偵錯工具進行測試。 現在，您確定它會如預期般地運作，您可以發行，讓其他使用者也可以執行它。 發行會建立一組執行您的應用程式所需的檔案。 若要部署檔案，請將檔案複製到目的電腦。
 
-## <a name="publish-the-app"></a>發行應用程式
+## <a name="publish-the-app"></a>發佈應用程式
 
-1. 請確定 Visual Studio 正在組置您應用程式的發行版本。 如有必要，請將工具列上的組建組態設定從 [偵錯] 變更為 [發行]。
+1. 請確定 Visual Studio 正在組置您應用程式的發行版本。 如有必要，請將工具列上的組建組態設定從 **[偵錯]** 變更為 **[發行]** 。
 
    ![選取 [發行] 組建的 Visual Studio 工具列](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 

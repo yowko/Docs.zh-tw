@@ -30,7 +30,7 @@ ms.locfileid: "76745812"
 
 2. 在 [**屬性**] 視窗中，選取 [<xref:System.Windows.Forms.ListView.View%2A>] 屬性，然後選擇 [**磚**]。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [ListView 控制項概觀](listview-control-overview-windows-forms.md)

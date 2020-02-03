@@ -25,23 +25,23 @@ ms.locfileid: "76746147"
   
 |設定|描述|  
 |-------------|-----------------|  
-|None|指定用戶端不需要提出任何認證。 這會轉譯成匿名用戶端。|  
+|無|指定用戶端不需要提出任何認證。 這會轉譯成匿名用戶端。|  
 |Basic|為用戶端指定基本驗證。 如需其他資訊，請參閱 RFC2617-[HTTP 驗證：基本和摘要式驗證](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt)。|  
 |Digest|為用戶端指定摘要式驗證。 如需其他資訊，請參閱 RFC2617-[HTTP 驗證：基本和摘要式驗證](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt)。|  
 |Ntlm|指定 NT LAN 管理員 (NTLM) 驗證。 這是用於當您因故無法使用 Kerberos 驗證時。 您也可以將 [<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>] 屬性設定為 [`false`]，讓 WCF 在使用 NTLM 時能夠盡力擲回例外狀況，藉此停用其做為回復。 請注意，將此屬性設為 `false`，不一定能夠禁止 NTLM 認證透過網路傳送。|  
 |Windows|指定 Windows 驗證。 如果在 Windows 網域上只要指定 Kerberos 通訊協定，請將 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> 屬性設定為 `false` (預設為 `true`)。|  
-|憑證|使用 X.509 憑證執行用戶端驗證。|  
-|密碼|使用者必須提供使用者名稱和密碼。 請使用 Windows 驗證或其他自訂方案來驗證使用者名稱/密碼組。|  
+|Certificate|使用 X.509 憑證執行用戶端驗證。|  
+|Password|使用者必須提供使用者名稱和密碼。 請使用 Windows 驗證或其他自訂方案來驗證使用者名稱/密碼組。|  
   
 ### <a name="message-client-credential-types"></a>訊息用戶端認證類型  
  下表顯示在建立使用訊息安全性的應用程式時，您可以使用的可能認證類型。 您可以在程式碼或組態檔中使用這些值。  
   
 |設定|描述|  
 |-------------|-----------------|  
-|None|指定用戶端不需要出示認證。 這會轉譯成匿名用戶端。|  
+|無|指定用戶端不需要出示認證。 這會轉譯成匿名用戶端。|  
 |Windows|允許在使用 Windows 認證建立的安全性內容下發生 SOAP 訊息交換。|  
 |使用者名稱|允許服務要求用戶端必須使用使用者名稱認證進行驗證。 請注意，WCF 不允許任何具有使用者名稱的密碼編譯作業，例如產生簽章或加密資料。 WCF 可確保在使用使用者名稱認證時，傳輸會受到保護。|  
-|憑證|允許服務要求用戶端使用 X.509 憑證進行驗證。|  
+|Certificate|允許服務要求用戶端使用 X.509 憑證進行驗證。|  
 |發行的權杖|根據安全性原則設定的自訂權杖類型。 預設的權杖類型為 Security Assertions Markup Language (SAML)。 權杖是由安全的權杖服務所發行。 如需詳細資訊，請參閱[同盟和發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>服務認證的交涉模型  
@@ -97,7 +97,7 @@ ms.locfileid: "76746147"
   
  如需認證和安全會話的詳細資訊，請參閱安全[會話的安全性考慮](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
@@ -111,6 +111,6 @@ ms.locfileid: "76746147"
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [WCF 安全性程式設計](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

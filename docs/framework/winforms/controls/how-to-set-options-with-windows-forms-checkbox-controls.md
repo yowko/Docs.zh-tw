@@ -65,7 +65,7 @@ Windows Forms 的 <xref:System.Windows.Forms.CheckBox> 控制項可用來為使�
        }  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox 控制項概觀](checkbox-control-overview-windows-forms.md)

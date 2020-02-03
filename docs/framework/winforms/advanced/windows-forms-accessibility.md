@@ -1,5 +1,5 @@
 ---
-title: 協助工具
+title: Accessibility
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, accessibility
@@ -15,11 +15,11 @@ ms.locfileid: "76746383"
 # <a name="windows-forms-accessibility"></a>Windows Form 協助工具
 Windows Forms 的協助工具功能可讓您將應用程式提供給各式各樣的使用者。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [逐步解說：建立 Windows 架構的協助工具應用程式](walkthrough-creating-an-accessible-windows-based-application.md)  
  描述為了提高可及性應支援的所有功能。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:Accessibility>  
  此命名空間包含一些與協助工具相關的類別。  
   

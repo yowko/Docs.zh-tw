@@ -25,7 +25,7 @@ ms.locfileid: "76736678"
 
 ## <a name="to-add-or-remove-groups-in-the-designer"></a>若要在設計工具中新增或移除群組
 
-1. 在 **屬性** 視窗中<xref:System.Windows.Forms.ListView.Groups%2A> ，按一下屬性 (![旁邊的**省略號**Visual Studio](./media/visual-studio-ellipsis-button.png)) 的屬性視窗中的省略號按鈕（...） 按鈕。
+1. 在 [**屬性**] 視窗中，按一下 [<xref:System.Windows.Forms.ListView.Groups%2A>] 屬性旁邊的**省略號**（![[屬性視窗的 Visual Studio.](./media/visual-studio-ellipsis-button.png)）] 按鈕中的省略號按鈕（...）。
 
      [ **ListViewGroup 集合編輯器**] 隨即出現。
 
@@ -33,7 +33,7 @@ ms.locfileid: "76736678"
 
 ## <a name="to-assign-items-to-groups-in-the-designer"></a>若要在設計工具中將專案指派給群組
 
-1. 在 **屬性** 視窗中<xref:System.Windows.Forms.ListView.Items%2A> ，按一下屬性 (![旁邊的**省略號**Visual Studio](./media/visual-studio-ellipsis-button.png)) 的屬性視窗中的省略號按鈕（...） 按鈕。
+1. 在 [**屬性**] 視窗中，按一下 [<xref:System.Windows.Forms.ListView.Items%2A>] 屬性旁邊的**省略號**（![[屬性視窗的 Visual Studio.](./media/visual-studio-ellipsis-button.png)）] 按鈕中的省略號按鈕（...）。
 
      [ **ListViewItem 集合編輯器**] 隨即出現。
 
@@ -41,7 +41,7 @@ ms.locfileid: "76736678"
 
 3. 選取 [<xref:System.Windows.Forms.ListViewItem.Group%2A>] 屬性，並從下拉式清單中選擇一個群組。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>

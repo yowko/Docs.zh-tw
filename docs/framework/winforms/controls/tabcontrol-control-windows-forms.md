@@ -20,7 +20,7 @@ ms.locfileid: "76742822"
 # <a name="tabcontrol-control-windows-forms"></a>TabControl 控制項 (Windows Form)
 Windows Form `TabControl` 顯示多個索引標籤，像是在筆記本中的分隔線或在檔案櫃中一組資料夾的標籤。 索引標籤可以包含圖片和其他控制項。 使用 `TabControl` 建立屬性頁。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [TabControl 控制項概觀](tabcontrol-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -38,7 +38,7 @@ Windows Form `TabControl` 顯示多個索引標籤，像是在筆記本中的分
   
  另請參閱[如何：使用設計工具加入和移除 Windows Forms TabControl](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md)的索引標籤，[如何：使用設計工具將控制項加入至](how-to-add-a-control-to-a-tab-page-using-the-designer.md)索引標籤頁  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.TabControl> 類別  
  說明這個類別，並且提供其所有成員的連結。  
   

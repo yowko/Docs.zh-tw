@@ -51,19 +51,19 @@ Dim [ WithEvents ] variablelist
 
 - `attributelist`
 
-  選擇項。 請參閱[屬性清單](attribute-list.md)。
+  選擇性。 請參閱[屬性清單](attribute-list.md)。
 
 - `accessmodifier`
 
-  選擇項。 可以是下列其中一項：
+  選擇性。 可以是下列其中一項：
 
-  - [Public](../modifiers/public.md)
+  - [公開](../modifiers/public.md)
 
   - [Protected](../modifiers/protected.md)
 
   - [Friend](../modifiers/friend.md)
 
-  - [Private](../modifiers/private.md)
+  - [私用](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
@@ -73,27 +73,27 @@ Dim [ WithEvents ] variablelist
 
 - `Shared`
 
-  選擇項。 請參閱[共用](../modifiers/shared.md)。
+  選擇性。 請參閱[共用](../modifiers/shared.md)。
 
 - `Shadows`
 
-  選擇項。 請參閱[Shadows](../modifiers/shadows.md)。
+  選擇性。 請參閱[Shadows](../modifiers/shadows.md)。
 
 - `Static`
 
-  選擇項。 請參閱[靜態](../modifiers/static.md)。
+  選擇性。 請參閱[靜態](../modifiers/static.md)。
 
 - `ReadOnly`
 
-  選擇項。 請參閱[ReadOnly](../modifiers/readonly.md)。
+  選擇性。 請參閱[ReadOnly](../modifiers/readonly.md)。
 
 - `WithEvents`
 
-  選擇項。 指定這些是參考可引發事件之類別實例的物件變數。 請參閱[WithEvents](../modifiers/withevents.md)。
+  選擇性。 指定這些是參考可引發事件之類別實例的物件變數。 請參閱[WithEvents](../modifiers/withevents.md)。
 
 - `variablelist`
 
-  必要項。 在此語句中宣告的變數清單。
+  必要。 在此語句中宣告的變數清單。
 
   `variable [ , variable ... ]`
 
@@ -101,14 +101,14 @@ Dim [ WithEvents ] variablelist
 
   `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
 
-  |組件|描述|
+  |部分|描述|
   |---|---|
-  |`variablename`|必要項。 變數的名稱。 請參閱 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
-  |`boundslist`|選擇項。 陣列變數的每個維度的界限清單。|
-  |`New`|選擇項。 當 `Dim` 語句執行時，建立類別的新實例。|
-  |`datatype`|選擇項。 變數的資料類型。|
-  |`With`|選擇項。 引進物件初始化運算式清單。|
-  |`propertyname`|選擇項。 您要做為實例之類別中的屬性名稱。|
+  |`variablename`|必要。 變數的名稱。 請參閱 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)。|
+  |`boundslist`|選擇性。 陣列變數的每個維度的界限清單。|
+  |`New`|選擇性。 當 `Dim` 語句執行時，建立類別的新實例。|
+  |`datatype`|選擇性。 變數的資料類型。|
+  |`With`|選擇性。 引進物件初始化運算式清單。|
+  |`propertyname`|選擇性。 您要做為實例之類別中的屬性名稱。|
   |`propinitializer`|`propertyname` = 之後才需要。 評估並指派給屬性名稱的運算式。|
   |`initializer`|如果未指定 `New`，則為選擇性。 建立時，評估並指派給變數的運算式。|
 
@@ -325,14 +325,14 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Const 陳述式](const-statement.md)
 - [ReDim 陳述式](redim-statement.md)
 - [Option Explicit 陳述式](option-explicit-statement.md)
 - [Option Infer 陳述式](option-infer-statement.md)
 - [Option Strict 陳述式](option-strict-statement.md)
-- [專案設計工具、編譯頁 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [專案設計工具、編譯頁面 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [變數宣告](../../programming-guide/language-features/variables/variable-declaration.md)
 - [陣列](../../programming-guide/language-features/arrays/index.md)
 - [物件初始設定式：具名和匿名類型](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)

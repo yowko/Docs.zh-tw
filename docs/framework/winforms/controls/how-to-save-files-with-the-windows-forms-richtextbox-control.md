@@ -36,7 +36,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以用數種�
 
 - 純文字，具有 OLE 物件的文字標記法
 
-若要儲存檔案，請呼叫 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 方法。 您也可以使用**SaveFile**方法，將資料儲存至資料流程。 如需詳細資訊，請參閱<xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。
+若要儲存檔案，請呼叫 <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> 方法。 您也可以使用**SaveFile**方法，將資料儲存至資料流程。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。
 
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>將控制項的內容儲存至檔案
 
@@ -88,7 +88,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以用數種�
     > [!IMPORTANT]
     > 如果檔案不存在，此範例就會建立新的檔案。 如果應用程式需要建立檔案，該應用程式需要建立該資料夾的存取權。 您可以使用存取控制清單來設定權限。 如果檔案已經存在，則應用程式只需要寫入權限，這是較小的許可權。 可能的話，在部署期間建立檔案會比較安全，而且只會授與單一檔案的讀取權限，而不是建立資料夾的存取權。 此外，將資料寫入使用者資料夾，而不是根資料夾或 Program Files 資料夾，也更加安全。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>

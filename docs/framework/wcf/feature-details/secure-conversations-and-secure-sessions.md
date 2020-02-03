@@ -16,7 +16,7 @@ Windows Communication Foundation （WCF）的一項功能是能夠在兩個端�
   
  如需有關會話的詳細資訊，請參閱[使用會話](../../../../docs/framework/wcf/using-sessions.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [工作階段、執行個體與並行](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
 - [如何：建立需要工作階段的服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

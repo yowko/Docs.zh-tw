@@ -18,7 +18,7 @@ ms.locfileid: "76742858"
   
  Windows Form <xref:System.Windows.Forms.StatusBar> 控制項在表單裡被當做區域來使用，通常會顯示在視窗底部，在其中應用程式可以顯示各種狀態資訊。 <xref:System.Windows.Forms.StatusBar> 控制項可以有狀態列面板，顯示圖示以指示狀態，或是動畫中表示進程正在運作的一系列圖示。例如，表示正在儲存檔的 Microsoft Word。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [StatusBar 控制項概觀](statusbar-control-overview-windows-forms.md)  
  介紹 <xref:System.Windows.Forms.StatusBar> 控制項的一般概念，可讓使用者查看具有焦點之控制項的相關資訊。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76742858"
  [逐步解說：在執行階段更新狀態列資訊](walkthrough-updating-status-bar-information-at-run-time.md)  
  說明如何以程式設計方式控制狀態列面板中的資料。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.StatusBar>  
  提供這個類別及其成員的相關參考資訊。  
   

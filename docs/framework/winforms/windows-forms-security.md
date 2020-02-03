@@ -19,7 +19,7 @@ ms.locfileid: "76734498"
 # <a name="windows-forms-security"></a>Windows Form 安全性
 Windows Forms 是以程式碼為基礎的安全性模型（無論執行程式碼的使用者為何，都會為程式碼設定安全性層級）。 這是除了您的電腦系統上可能已存在的任何安全性架構。 這些可能會包含在瀏覽器中（例如 Internet Explorer 中可用的區域型安全性）或作業系統（例如 Windows NT 的認證安全性）。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Forms 中的安全性概觀](security-in-windows-forms-overview.md)  
  簡要說明 .NET Framework 安全性模型，以及確保應用程式中的 Windows Forms 安全所需的基本步驟。  
   

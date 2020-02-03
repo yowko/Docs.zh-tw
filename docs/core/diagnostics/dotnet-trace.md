@@ -96,7 +96,7 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
 
 - **`--format {NetTrace|Speedscope}`**
 
-  設定追蹤檔案轉換的輸出格式。 預設為 `NetTrace`。
+  設定追蹤檔案轉換的輸出格式。 預設值為 `NetTrace`。
 
 ## <a name="dotnet-trace-convert"></a>dotnet-追蹤轉換
 
@@ -108,7 +108,7 @@ dotnet-trace collect [-h|--help] [-p|--process-id] [--buffersize <size>] [-o|--o
 dotnet-trace convert [<input-filename>] [-h|--help] [--format] [-o|--output]
 ```
 
-### <a name="arguments"></a>Arguments
+### <a name="arguments"></a>引數
 
 - **`<input-filename>`**
 
@@ -154,7 +154,7 @@ dotnet-trace list-profiles [-h|--help]
   - 例如，在 Linux 上，`ps` 命令。
   - [dotnet-追蹤 ps](#dotnet-trace-ps)
 
-- 執行下列命令：
+- 執行以下命令：
 
   ```console
   dotnet-trace collect --process-id <PID>

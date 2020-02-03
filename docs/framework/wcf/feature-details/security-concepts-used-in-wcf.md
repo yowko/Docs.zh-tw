@@ -48,7 +48,7 @@ Microsoft 模式和實務小組撰寫了稱為「 [WCF 安全性指南](https://
   
  如需有關這些主題的詳細資訊，請參閱[存取控制機制](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

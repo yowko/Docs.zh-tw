@@ -23,12 +23,12 @@ ms.locfileid: "76742659"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|安全性模式|Transport|  
+|安全性模式|傳輸|  
 |互通性|使用現有 Web 服務用戶端和服務。|  
 |驗證 (伺服器)<br /><br /> 驗證 (用戶端)|是 (使用 SSL 憑證)<br /><br /> 是 (使用 X.509 憑證)|  
 |資料完整性|是|  
 |資料機密性|是|  
-|Transport|HTTPS|  
+|傳輸|HTTPS|  
 |繫結|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>設定服務  
@@ -138,7 +138,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

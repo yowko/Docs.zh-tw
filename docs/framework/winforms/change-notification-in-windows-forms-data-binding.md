@@ -32,7 +32,7 @@ Windows Forms 資料系結的其中一個最重要概念是*變更通知*。 若
 ## <a name="change-notification-for-custom-controls"></a>變更自訂控制項的通知  
  最後，您必須從控制項端公開每個設計要系結至資料之屬性的*PropertyName*已變更事件。 控制項屬性的變更就會傳播到系結的資料來源。 如需詳細資訊，請參閱[如何：套用 PropertyNameChanged 模式](how-to-apply-the-propertynamechanged-pattern.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.ComponentModel.INotifyPropertyChanged>

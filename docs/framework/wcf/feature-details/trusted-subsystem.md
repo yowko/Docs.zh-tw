@@ -36,8 +36,8 @@ ms.locfileid: "76742631"
 |驗證 (服務)|安全性權杖服務會驗證並授權用戶端。|  
 |驗證 (用戶端)|受信任的子系統會驗證用戶端，而資源會驗證受信任的子系統服務。|  
 |完整性|是|  
-|機密性|是|  
-|Transport|用戶端與受信任子系統服務之間的 HTTP。<br /><br /> 受信任子系統服務與資源 (後端服務) 之間的 NET.TCP。|  
+|保密|是|  
+|傳輸|用戶端與受信任子系統服務之間的 HTTP。<br /><br /> 受信任子系統服務與資源 (後端服務) 之間的 NET.TCP。|  
 |繫結|<xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>資源 (後端服務)  
@@ -163,7 +163,7 @@ ms.locfileid: "76742631"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>用戶端  
   
 ### <a name="code"></a>程式碼  
  下列程式碼示範如何建立用戶端，這個用戶端會透過 HTTP 通訊協定使用訊息安全性，並且使用使用者名稱和密碼進行驗證，藉此與受信任的子系統進行通訊。  
@@ -210,7 +210,7 @@ ms.locfileid: "76742631"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

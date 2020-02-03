@@ -18,7 +18,7 @@ ms.locfileid: "76741875"
 
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 是宣告式應用程式設計的標記語言。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 會實行 XAML 處理器的實作為，並提供 XAML 語言支援。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 型別會實作為，讓它們可以為 XAML 標記法提供必要的型別支援。 一般來說，您可以在 XAML 標記中建立大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式 UI。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
 [XAML 概觀 (WPF)](xaml-overview-wpf.md)  
 [XAML 語法詳細資料](xaml-syntax-in-detail.md)  
@@ -39,10 +39,10 @@ ms.locfileid: "76741875"
 
 [WPF 架構](wpf-architecture.md)  
 [基底項目](base-elements.md)  
-[項目樹狀結構和序列化](element-tree-and-serialization.md)  
-[Properties](properties-wpf.md)  
+[元素樹狀結構和序列化](element-tree-and-serialization.md)  
+[屬性](properties-wpf.md)  
 [事件](events-wpf.md)  
 [輸入](input-wpf.md)  
 [資源](resources-wpf.md)  
-[設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+[樣式設定和範本化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
 [執行緒模型](threading-model.md)

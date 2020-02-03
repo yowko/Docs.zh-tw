@@ -15,7 +15,7 @@ ms.locfileid: "76728053"
 # <a name="imagelist-component-windows-forms"></a>ImageList 元件 (Windows Form)
 Windows Form `ImageList` 元件可用來儲存影像，然後可以用控制項來顯示這些影像。 影像清單可讓您針對單一且一致的影像目錄來撰寫程式碼。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ImageList 元件概觀](imagelist-component-overview-windows-forms.md)  
  說明此元件是什麼，並說明其主要功能與屬性。  
   
@@ -24,7 +24,7 @@ Windows Form `ImageList` 元件可用來儲存影像，然後可以用控制項�
   
  另請參閱[如何：使用設計工具加入或移除 ImageList 影像](how-to-add-or-remove-imagelist-images-with-the-designer.md)。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.ImageList>  
  說明這個類別，並且提供其所有成員的連結。  
   

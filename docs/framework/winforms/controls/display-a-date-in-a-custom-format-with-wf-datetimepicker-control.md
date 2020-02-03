@@ -22,7 +22,7 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> 控制項可讓您彈�
   
 ### <a name="to-display-a-custom-format"></a>若要顯示自訂格式  
   
-1. 將 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 屬性設定為 `DateTimePickerFormat.Custom`。  
+1. 將 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 屬性設為 `DateTimePickerFormat.Custom`。  
   
 2. 將 <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> 屬性設定為格式字串。  
   
@@ -63,7 +63,7 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> 控制項可讓您彈�
   
      根據文化特性設定，未以單引號括住的任何字元可能會變更。 例如，上方的格式字串會以英文（美國）文化特性的格式顯示目前的日期，其格式為「今日為：05:30:31，2012年3月2日星期五」。 請注意，第一個冒號是以單引號括住，因為它不適合做為 "hh： mm： ss" 中的分隔字元。 在另一種文化特性中，格式可能會顯示為「今天是：05.30.31 星期五，2012」。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DateTimePicker 控制項](datetimepicker-control-windows-forms.md)
 - [操作說明：使用 Windows Forms DateTimePicker 控制項設定和傳回日期](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

@@ -32,9 +32,9 @@ ms.locfileid: "76738499"
 
   下表列出反映原則類型，以及可與其搭配使用的程式元素。
 
-  |項目|啟用|瀏覽|動態|
+  |元素|啟用|瀏覽|動態|
   |-------------|--------------|------------|-------------|
-  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
+  |[\<應用程式>](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
   |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)||✔️|✔️|
@@ -63,9 +63,9 @@ ms.locfileid: "76738499"
 
   下表列出序列化原則類型，以及可與其搭配使用的程式元素。
 
-  |項目|序列化|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
+  |元素|序列化|DataContractSerializer|DataContractJsonSerializer|XmlSerializer|
   |-------------|---------------|----------------------------|--------------------------------|-------------------|
-  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|✔️|
+  |[\<應用程式>](application-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)|||||
@@ -92,9 +92,9 @@ ms.locfileid: "76738499"
 
   下表列出 interop 原則類型，以及可與其搭配使用的程式元素。
 
-  |項目|MarshalObject|MarshalDelegate|MarshalStructure|
+  |元素|MarshalObject|MarshalDelegate|MarshalStructure|
   |-------------|-------------------|---------------------|----------------------|
-  |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
+  |[\<應用程式>](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
   |[\<AttributeImplies>](attributeimplies-element-net-native.md)|✔️|✔️|✔️|
   |[\<Event>](event-element-net-native.md)||||
@@ -128,7 +128,7 @@ ms.locfileid: "76738499"
 |`Required PublicAndInternal`|啟用公用及內部類型或成員的原則，並確保公用及內部類型和成員的中繼資料一律可供使用。 此設定不同於 `PublicAndInternal`，後者只會在工具鏈判斷為必要時，才會讓公用及內部類型和成員的中繼資料可供使用。|✔️||
 |`Required All`|需要工具鏈保留所有類型和成員 (無論是否使用)，並為其啟用原則。|✔️||
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)

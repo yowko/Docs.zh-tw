@@ -43,7 +43,7 @@ ms.locfileid: "76743460"
 
  委派會隨機使用繫結機制，其可能在執行時繫結到任何簽章符合事件處理程式簽章的方法。 您可以利用此功能視條件設定或變更繫結方法，以及隨機將事件處理常式連結至控制項。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
+- [在 Windows Form 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
 - [事件處理常式概觀](event-handlers-overview-windows-forms.md)

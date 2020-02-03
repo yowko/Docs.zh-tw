@@ -66,7 +66,7 @@ ms.locfileid: "76740651"
        (this, &Form1::printDocument1_PrintPage);  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>

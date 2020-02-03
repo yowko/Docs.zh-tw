@@ -55,7 +55,7 @@ ms.locfileid: "76737965"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>使用者介面中的文字  
- 除了將文字新增至文件，您顯然也能在表單等應用程式 UI 中使用文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般而言，需要有限的文字支援時（例如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]中的簡短句子），應該使用 <xref:System.Windows.Controls.TextBlock> 元素。 當需要最少的文字支援時，可以使用 <xref:System.Windows.Controls.Label>。 如需詳細資訊，請參閱 [TextBlock 概觀](../controls/textblock-overview.md)。  
+ 除了將文字新增至文件，您顯然也能在表單等應用程式 UI 中使用文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是針對不同案例，而且有自己的功能與限制清單。 一般而言，需要有限的文字支援時（例如 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]中的簡短句子），應該使用 <xref:System.Windows.Controls.TextBlock> 元素。 當需要最少的文字支援時，可以使用 <xref:System.Windows.Controls.Label>。 如需詳細資訊，請參閱 [TextBlock 概觀](../controls/textblock-overview.md)。  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>文件封裝  
@@ -135,7 +135,7 @@ ms.locfileid: "76737965"
   
 - 將檔直接路由傳送到與 XPS 相容的印表機。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>
@@ -144,7 +144,7 @@ ms.locfileid: "76737965"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [文字](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [非固定格式文件概觀](flow-document-overview.md)
 - [列印概觀](printing-overview.md)
 - [文件序列化與儲存](document-serialization-and-storage.md)

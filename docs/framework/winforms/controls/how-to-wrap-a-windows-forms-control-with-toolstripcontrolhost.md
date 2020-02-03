@@ -61,9 +61,9 @@ ms.locfileid: "76728172"
   
 這個範例需要：
   
-- 本系統和 System.Windows.Forms 組件的參考。  
+- System 和 System.Windows.Forms 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolStripControlHost>
 - [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)

@@ -48,7 +48,7 @@ ms.locfileid: "76730784"
 * [記憶體回收](garbage-collection/index.md)
 * [.NET 中的基底類型](base-types/index.md)
 * [集合](collections/index.md)
-* [日期、時間和時區](datetime/index.md)
+* [日期、時間及時區](datetime/index.md)
 * [非同步程式設計](async.md)
 
 如需這三種主要 .NET 語言的相關資訊，請參閱：
@@ -57,6 +57,6 @@ ms.locfileid: "76730784"
 * [F#輥](../fsharp/index.yml)
 * [Visual Basic 指南](../visual-basic/index.yml)
 
-## <a name="api-reference"></a>應用程式開發介面參考
+## <a name="api-reference"></a>API 參考
 
 如需 .NET 中所有可用 Api 的詳細資訊，請參閱[.NET API 參考](../../api/index.md)。

@@ -18,14 +18,14 @@ ms.locfileid: "76741223"
   
  Windows Forms <xref:System.Windows.Forms.ProgressBar> 控制項會藉由顯示在水準列中排列的適當矩形數目，來指出動作的進度。 當動作完成時，會填滿橫條。 進度列通常用來提供使用者等候 protracted 動作完成所需時間的指示，例如，載入大型檔案時。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ProgressBar 控制項概觀](progressbar-control-overview-windows-forms.md)  
  介紹 <xref:System.Windows.Forms.ProgressBar> 控制項的一般概念，可讓您以圖形方式顯示作業的進度。  
   
  [操作說明：設定 Windows Forms ProgressBar 控制項顯示的值](how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
  討論數種不同的方式，以增加 <xref:System.Windows.Forms.ProgressBar> 控制項所顯示的值。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.ProgressBar>  
  提供這個類別及其成員的相關參考資訊。  
   

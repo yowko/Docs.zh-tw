@@ -41,13 +41,13 @@ ms.locfileid: "76743971"
 
 ## <a name="example-2"></a>範例 2
 
-此範例示範結構特有的功能。 其無須使用 `new` 運算子就能建立 Coords 物件。 如果您以 `class` 一字取代 `struct` 一字，將不會編譯程式。
+此範例示範結構特有的功能。 其無須使用 `new` 運算子就能建立 Coords 物件。 如果您以 `struct` 一字取代 `class` 一字，將不會編譯程式。
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
 [!code-csharp[csProgGuideObjects#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#3)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](index.md)

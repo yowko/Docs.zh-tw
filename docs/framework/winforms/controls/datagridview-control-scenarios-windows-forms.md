@@ -86,7 +86,7 @@ ms.locfileid: "76742468"
   
 - 除了內建資料行類型所提供的控制項外，您還可以將自己的儲存格和資料行類別實作為裝載控制項。 如需詳細資訊，請參閱[如何： Windows Forms DataGridView 儲存格中的主控制項](how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView 控制項概觀](datagridview-control-overview-windows-forms.md)

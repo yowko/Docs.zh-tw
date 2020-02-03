@@ -32,7 +32,7 @@ ms.locfileid: "76745676"
     > [!NOTE]
     > 您也可以選取 [**加入資料行**] 對話方塊中的 [**凍結**] 方塊來加入資料行。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
@@ -40,4 +40,4 @@ ms.locfileid: "76745676"
 - [操作說明：使用設計工具在 Windows Forms DataGridView 控制項中啟用資料行重新調整順序](enable-column-reordering-in-the-datagrid-using-the-designer.md)
 - [如何：在全球化的 Windows Forms 中顯示由右至左的文字](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))
 - [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [操作說明：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)

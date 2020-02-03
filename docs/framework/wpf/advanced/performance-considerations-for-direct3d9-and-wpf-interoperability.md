@@ -60,7 +60,7 @@ ms.locfileid: "76743940"
 |D3DFMT_A8R8G8B8 （不可鎖定）|**硬體更新**|軟體更新|軟體更新|軟體更新|  
 |D3DFMT_A8R8G8B8 （鎖定）|**硬體更新**|軟體更新|**硬體更新**|軟體更新|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Interop.D3DImage>
 - [WPF 和 Direct3D9 互通](wpf-and-direct3d9-interoperation.md)

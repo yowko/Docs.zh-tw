@@ -40,7 +40,7 @@ ms.locfileid: "76745440"
   
  只有當 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 屬性設定為 `true`時，才會發生下列事件。  
   
-|Event|描述|  
+|事件|描述|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|由控制項用來抓取資料快取中的儲存格值，以供顯示。 只有未系結資料行中的儲存格才會發生這個事件。|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|由控制項用來將儲存格的使用者輸入認可至資料快取。 只有未系結資料行中的儲存格才會發生這個事件。<br /><br /> 在 <xref:System.Windows.Forms.DataGridView.CellValuePushed> 事件處理常式之外變更快取的值，以確保目前的值會顯示在控制項中，並套用目前作用中的任何自動調整大小模式時，請呼叫 <xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> 方法。|  
@@ -50,7 +50,7 @@ ms.locfileid: "76745440"
   
  下列事件在虛擬模式中很有用，但不論 <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> 屬性設定為何，都可以使用。  
   
-|「事件」|描述|  
+|事件|描述|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|由控制項用來表示刪除或加入資料列的時間，讓您據以更新資料快取。|  
 |<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|由控制項用來格式化要顯示的資料格值，以及用來剖析和驗證使用者輸入。|  
@@ -62,7 +62,7 @@ ms.locfileid: "76745440"
 ## <a name="best-practices-in-virtual-mode"></a>虛擬模式中的最佳作法  
  如果您要執行虛擬模式以有效率地處理大量資料，您也會想要確保您能以 <xref:System.Windows.Forms.DataGridView> 控制項本身有效率地工作。 如需有效率地使用儲存格樣式、自動調整大小、選取和資料列共用的詳細資訊，請參閱[縮放 Windows Forms DataGridView 控制項的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

@@ -31,13 +31,13 @@ ms.locfileid: "76745388"
   
 5. 任何非 null 值都不等於 null。 不過，CLR 會在所有方法呼叫上檢查是否有 null，如果 `this` 參考會是 null，則會擲回 `NullReferenceException`。 因此，當 `x` 為 null 時，`x.Equals(y)` 會擲回例外狀況。 這會中斷規則1或2，視 `Equals`的引數而定。
  
- 任何您已定義的結構，皆有繼承自 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法的 <xref:System.ValueType?displayProperty=nameWithType> 覆寫的預設實作實值相等。 此實作使用反映來檢查類型中的所有欄位和屬性。 雖然此實作會產生正確的結果，但相較於您針對該類型特別撰寫的自訂實作卻慢得多。  
+ 任何您已定義的結構，皆有繼承自 <xref:System.ValueType?displayProperty=nameWithType> 方法的 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 覆寫的預設實作實值相等。 此實作使用反映來檢查類型中的所有欄位和屬性。 雖然此實作會產生正確的結果，但相較於您針對該類型特別撰寫的自訂實作卻慢得多。  
   
  對類別和結構而言，實值相等的實作細節並不同。 不過，類別和結構都需要相同的基本步驟來實作相等：  
   
 1. 覆寫[虛擬](../../language-reference/keywords/virtual.md)<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 方法。 在大部分情況下，實作 `bool Equals( object obj )` 應該只會呼叫特定類型的 `Equals` 方法，這是 <xref:System.IEquatable%601?displayProperty=nameWithType> 介面的實作。 (請參閱步驟 2)。  
   
-2. 透過提供類型專屬的 `Equals` 方法實作 <xref:System.IEquatable%601?displayProperty=nameWithType> 介面。 實際的等價比較是在這裡執行。 例如，您可能決定只比較類型中的一個或兩個欄位，以定義相等。 不會從 `Equals` 擲回例外狀況。 僅適用於類別：此方法只會檢查在類別中宣告的欄位。 它應該呼叫 `base.Equals` 以檢查基底類別中的欄位 (如果類型直接繼承自 <xref:System.Object>，請不要這樣做，因為 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 的 <xref:System.Object> 實作會執行參考相等檢查。)  
+2. 透過提供類型專屬的 <xref:System.IEquatable%601?displayProperty=nameWithType> 方法實作 `Equals` 介面。 實際的等價比較是在這裡執行。 例如，您可能決定只比較類型中的一個或兩個欄位，以定義相等。 不會從 `Equals` 擲回例外狀況。 僅適用於類別：此方法只會檢查在類別中宣告的欄位。 它應該呼叫 `base.Equals` 以檢查基底類別中的欄位 (如果類型直接繼承自 <xref:System.Object>，請不要這樣做，因為 <xref:System.Object> 的 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 實作會執行參考相等檢查。)  
   
 3. 選用但為建議動作︰多載 [==](../../language-reference/operators/equality-operators.md#equality-operator-) 和 [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 運算子。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "76745388"
   
  除非結構明確多載 [==](../../language-reference/operators/equality-operators.md#equality-operator-) 和 [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 運算子，否則這些運算子無法用於結構。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [相等比較](equality-comparisons.md)
 - [C# 程式設計指南](../index.md)

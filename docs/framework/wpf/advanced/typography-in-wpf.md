@@ -35,7 +35,7 @@ ms.locfileid: "76735542"
   
  ![使用 OpenType 文體替代字符的文字](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "使用 OpenType 文體替代圖像的文字")  
   
- 花飾字是裝飾性字符，使用精心設計且通常與書寫體相關聯的裝飾。 下列文字顯示 Pescadero 字型的標準和花飾字字符。  
+ 花飾字是裝飾性字符，會使用精心設計且通常與書寫體相關聯的裝飾。 下列文字顯示 Pescadero 字型的標準和花飾字字符。  
   
  ![使用 OpenType 標準和花飾字字符的文字](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "使用 OpenType 標準和勾耳圖像的文字")  
   
@@ -148,7 +148,7 @@ ms.locfileid: "76735542"
   
  如需如何建立自訂文字版面配置的詳細資訊，請參閱[進階文字格式化](advanced-text-formatting.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>
@@ -156,5 +156,5 @@ ms.locfileid: "76735542"
 - [OpenType 字型功能](opentype-font-features.md)
 - [繪製格式化的文字](drawing-formatted-text.md)
 - [進階文字格式化](advanced-text-formatting.md)
-- [文字](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Microsoft 印刷樣式](https://docs.microsoft.com/typography/)

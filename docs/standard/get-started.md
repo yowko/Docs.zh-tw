@@ -1,5 +1,5 @@
 ---
-title: .NET 快速入門
+title: 開始使用 .NET
 description: 從語言與平台觀點，列出各種開始使用 .NET 的文章。
 author: cartermp
 ms.author: mairaw

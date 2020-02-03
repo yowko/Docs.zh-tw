@@ -82,7 +82,7 @@ ms.locfileid: "76730950"
   
 - 將 URI 加入此集合，以指定有效的 URI 集合。 若要這麼做，請為每個 URI 插入[\<新增 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)  
   
- 如需詳細資訊，請參閱<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>。  
+ 如需詳細資訊，請參閱 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>。  
   
  如需使用此設定元素的詳細資訊，請參閱[如何：在同盟服務上設定認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
@@ -217,7 +217,7 @@ ms.locfileid: "76730950"
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -30,7 +30,7 @@ ms.locfileid: "76732136"
 |<xref:System.ComponentModel.DisplayNameAttribute>|指定不接受引數的屬性、事件或 `public void` 方法的顯示名稱。|  
 |<xref:System.ComponentModel.EditorAttribute>|指定用來變更屬性的編輯器。|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|指定在編輯器中可檢視的屬性或方法。|  
-|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|指定類別或成員的內容關鍵字。|  
+|<xref:System.ComponentModel.Design.HelpKeywordAttribute>|為類別或成員指定內容關鍵字。|  
 |<xref:System.ComponentModel.LocalizableAttribute>|指定是否應該當地語系化屬性。|  
 |<xref:System.ComponentModel.PasswordPropertyTextAttribute>|指出以星號之類的字元來遮蔽物件的文字表示。|  
 |<xref:System.ComponentModel.ReadOnlyAttribute>|指定這個屬性 (Attribute) 所繫結的屬性 (Property) 在設計階段是唯讀或讀寫。|  
@@ -60,7 +60,7 @@ ms.locfileid: "76732136"
 |<xref:System.ComponentModel.ToolboxItemAttribute>|代表工具箱項目的屬性。|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|指定用於工具箱項目的篩選字串和篩選類型。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Attribute>
 - [操作說明：在 Windows Forms 控制項中套用屬性](how-to-apply-attributes-in-windows-forms-controls.md)

@@ -23,7 +23,7 @@ ms.locfileid: "76746866"
 
 數個 Windows Forms 控制項可以顯示影像。 這些影像可以是用來闡明控制項用途的圖示，例如代表儲存命令的按鈕上的磁片圖示。 或者，圖示可以是背景影像，為控制項提供您想要的外觀和行為。
 
-## <a name="programmatic"></a>化
+## <a name="programmatic"></a>程式設計
 
 將控制項的 `Image` 或 `BackgroundImage` 屬性設定為 <xref:System.Drawing.Image>類型的物件。 一般來說，您會使用 <xref:System.Drawing.Image.FromFile%2A> 方法，從檔案載入影像。
 
@@ -54,13 +54,13 @@ pictureBox1->Image = Image::FromFile(String::Concat
    "\\Image.gif"));
 ```
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>設計師
 
 1. 在 Visual Studio 的 [**屬性**] 視窗中，選取控制項的 [**影像**] 或 [ **BackgroundImage** ] 屬性，然後選取 [Visual Studio](./media/visual-studio-ellipsis-button.png)中的省略號] \ （![省略號按鈕）以顯示 [**選取資源**] 對話方塊。
 
 2. 選取您想要顯示的影像。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>

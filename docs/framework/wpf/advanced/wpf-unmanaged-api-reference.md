@@ -12,7 +12,7 @@ ms.locfileid: "76744446"
 # <a name="wpf-unmanaged-api-reference"></a>WPF 非受控 API 參考
 Windows Presentation Foundation （WPF）程式庫會公開一些僅供內部使用的非受控函式。 不應該從使用者程式碼呼叫它們。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [啟用函式](activate-function-wpf-unmanaged-api-reference.md)  
  [CreateIDispatchSTAForwarder 函式](createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md)  
  [停用函式](deactivate-function-wpf-unmanaged-api-reference.md)  
@@ -22,6 +22,6 @@ Windows Presentation Foundation （WPF）程式庫會公開一些僅供內部使
  [SaveToHistory 函式](savetohistory-function-wpf-unmanaged-api-reference.md)  
  [SetFakeActiveWindow 函式](setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [進階](index.md)

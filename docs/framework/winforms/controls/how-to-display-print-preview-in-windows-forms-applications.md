@@ -18,7 +18,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745577"
 ---
-# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>如何：在 Windows Forms 應用程式中顯示預覽列印
+# <a name="how-to-display-print-preview-in-windows-forms-applications"></a>如何：在 Windows Form 應用程式中顯示預覽列印
 您可以使用 <xref:System.Windows.Forms.PrintPreviewDialog> 控制項，讓使用者在列印前經常顯示檔。  
   
  若要這樣做，您必須指定 <xref:System.Drawing.Printing.PrintDocument> 類別的實例;這是要列印的檔。 如需有關使用 [預覽列印] 搭配 <xref:System.Drawing.Printing.PrintDocument> 元件的詳細資訊，請參閱[如何：使用預覽列印在 Windows Forms 中列印](../advanced/how-to-print-in-windows-forms-using-print-preview.md)。  
@@ -82,9 +82,9 @@ ms.locfileid: "76745577"
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [PrintDocument 元件](printdocument-component-windows-forms.md)
 - [PrintPreviewDialog 控制項](printpreviewdialog-control-windows-forms.md)
 - [Windows Forms 列印支援](../advanced/windows-forms-print-support.md)
-- [Windows Forms](../index.md)
+- [Windows Forms](../index.md) \(英文\)

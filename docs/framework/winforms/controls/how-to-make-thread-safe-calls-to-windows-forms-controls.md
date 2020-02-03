@@ -90,7 +90,7 @@ Visual Studio 偵錯工具會藉由引發包含訊息的 <xref:System.InvalidOpe
  [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - [如何：在背景中執行作業](how-to-run-an-operation-in-the-background.md)

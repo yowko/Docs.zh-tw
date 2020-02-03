@@ -52,7 +52,7 @@ ms.locfileid: "76742489"
   
  <xref:System.Windows.Forms.DataGridView> 控制項可高度設定和擴充，並提供許多屬性、方法和事件來自訂其外觀和行為。 當您想要 Windows Forms 應用程式顯示表格式資料時，請考慮在其他人之前使用 <xref:System.Windows.Forms.DataGridView> 控制項（例如，<xref:System.Windows.Forms.DataGrid>）。 如果您要顯示唯讀值的小型方格，或如果您要讓使用者編輯含有數百萬筆記錄的資料表，<xref:System.Windows.Forms.DataGridView> 控制項將提供您容易程式化、記憶體有效率的解決方案。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [DataGridView 控制項技術摘要](datagridview-control-technology-summary-windows-forms.md)  
  摘要說明 <xref:System.Windows.Forms.DataGridView> 控制項概念和相關類別的使用。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "76742489"
  [Windows Forms DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  提供主題描述處理大量資料時，如何有效率地使用控制項來避免發生效能問題。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

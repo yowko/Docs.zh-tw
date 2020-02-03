@@ -15,7 +15,7 @@ ms.locfileid: "76747021"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>在 WPF 中裝載 Win32 內容
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 請參閱[WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)。
 
@@ -368,6 +368,6 @@ public partial class Window1 : Window {
 
 ![執行之 WPF 應用程式的螢幕擷取畫面。](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)

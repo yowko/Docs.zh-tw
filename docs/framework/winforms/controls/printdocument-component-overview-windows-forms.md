@@ -28,7 +28,7 @@ Windows Forms [PrintDocument](printdocument-component-windows-forms.md) 元件�
 
 當它新增至表單時，<xref:System.Drawing.Printing.PrintDocument> 元件會出現在 Visual Studio Windows Form 設計工具底部的紙匣中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Printing.PrintDocument>

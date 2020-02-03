@@ -81,7 +81,7 @@ ms.locfileid: "76744434"
   
  .NET Framework XAML 服務實作，因此 WPF XAML 處理器會使用下列構成集合屬性的定義。 屬性的屬性類型必須實作下列其中一項：  
   
-- 執行 <xref:System.Collections.IList>。  
+- 實作 <xref:System.Collections.IList>。  
   
 - 執行 <xref:System.Collections.IDictionary> 或泛型對等（<xref:System.Collections.Generic.IDictionary%602>）。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "76744434"
 ## <a name="serializing-xaml"></a>序列化 XAML  
  在特定情況下，例如，如果您是控制項作者，則可能也要確保可在 XAML 中具現化的任何物件表示也都可以序列化回對等的 XAML 標記。 本主題未描述序列化需求。 請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)和[項目樹狀結構和序列化](element-tree-and-serialization.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [自訂相依性屬性](custom-dependency-properties.md)

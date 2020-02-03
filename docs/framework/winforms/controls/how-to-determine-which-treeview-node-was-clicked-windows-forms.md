@@ -58,6 +58,6 @@ ms.locfileid: "76742008"
     > [!NOTE]
     > 或者，您可以使用 <xref:System.Windows.Forms.Control.MouseDown> 或 <xref:System.Windows.Forms.Control.MouseUp> 事件的 <xref:System.Windows.Forms.MouseEventArgs> 來取得 <xref:System.Drawing.Point.X%2A> 和 <xref:System.Drawing.Point.Y%2A> 座標值，這是發生點擊的 <xref:System.Drawing.Point>。 然後，使用 <xref:System.Windows.Forms.TreeView> 控制項的 <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> 方法來判斷按一下的節點。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [TreeView 控制項](treeview-control-windows-forms.md)

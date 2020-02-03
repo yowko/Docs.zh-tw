@@ -70,7 +70,7 @@ ms.locfileid: "76745063"
   
  若要改善應用程式的滾動效能，您可以增加儲存在本機的資料量。 不過，若要改善啟動時間，您必須避免一開始載入太多資料。 您可能想要修改 `Cache` 類別，以增加可儲存的資料頁數目。 使用更多資料頁可以改善滾動效率，但是您必須根據可用的頻寬和伺服器延遲，判斷資料頁中的理想資料列數目。 使用較小的頁面，將會更頻繁地存取伺服器，但會花較少的時間來傳回要求的資料。 如果延遲大於頻寬的問題，您可能會想要使用較大的資料頁。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

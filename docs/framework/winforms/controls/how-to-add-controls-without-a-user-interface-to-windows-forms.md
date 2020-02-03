@@ -77,11 +77,11 @@ ms.locfileid: "76744751"
     > [!IMPORTANT]
     > 藉由參考惡意的 UserControl，您可能會透過網路來公開本機電腦的安全性風險。 這只是在惡意人士建立損毀的自訂控制項，然後誤將它新增至專案時的問題。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [操作說明：將 ActiveX 控制項新增至 Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
+- [操作說明：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [如何：將 ActiveX 控制項新增至 Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
 - [將控制項加入 Windows Forms](putting-controls-on-windows-forms.md)
 - [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

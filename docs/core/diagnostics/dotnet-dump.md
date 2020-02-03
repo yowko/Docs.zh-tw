@@ -105,7 +105,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 ```
 
-### <a name="arguments"></a>Arguments
+### <a name="arguments"></a>引數
 
 - **`<dump_path>`**
 

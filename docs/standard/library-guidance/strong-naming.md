@@ -64,7 +64,7 @@ ms.locfileid: "76744530"
 
 > 修改組件的強式命名金鑰會變更組件的身分識別，並且中斷使用它的編譯程式碼。 如需詳細資訊，請參閱[二進位中斷性變更](./breaking-changes.md#binary-breaking-change)。
 
-❌ 不要發佈程式庫的強式名稱和非強式名稱版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
+❌ 不要發佈程式庫的強式名稱和非強式名稱版本。 例如 `Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 > 發佈兩個套件會派生您的開發人員生態系統。 此外，如果應用程式最後根據這兩個套件，開發人員可能會遇到類型名稱衝突。 就 .NET 而言，它們在不同的組件中是不同的類型。
 

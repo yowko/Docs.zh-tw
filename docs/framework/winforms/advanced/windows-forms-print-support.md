@@ -22,7 +22,7 @@ ms.locfileid: "76732500"
   
  在從 Windows 應用程式進行列印的過程中，<xref:System.Drawing.Printing.PrintDocument> 元件將會顯示 [中止列印] 對話方塊，以提醒使用者發生列印的情況，並允許取消列印工作。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：建立標準的 Windows Forms 列印工作](how-to-create-standard-windows-forms-print-jobs.md)  
  說明如何使用 <xref:System.Drawing.Printing.PrintDocument> 元件從 Windows Form 進行列印。  
   
@@ -32,10 +32,10 @@ ms.locfileid: "76732500"
  [操作說明：在 Windows Forms 中選擇附加至使用者電腦的印表機](how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
  描述如何在執行時間使用 <xref:System.Windows.Forms.PrintDialog> 元件，將印表機變更為列印。  
   
- [如何：列印 Windows Forms 中的圖形](how-to-print-graphics-in-windows-forms.md)  
+ [操作說明：列印 Windows Forms 中的圖形](how-to-print-graphics-in-windows-forms.md)  
  說明如何將圖形傳送至印表機。  
   
- [如何：在 Windows Forms 中列印多頁文字檔](how-to-print-a-multi-page-text-file-in-windows-forms.md)  
+ [操作說明：在 Windows Forms 中列印多頁文字檔](how-to-print-a-multi-page-text-file-in-windows-forms.md)  
  說明如何將文字傳送至印表機。  
   
  [操作說明：完成 Windows Forms 列印工作](how-to-complete-windows-forms-print-jobs.md)  
@@ -57,7 +57,7 @@ ms.locfileid: "76732500"
  [PrintPreviewDialog 控制項](../controls/printpreviewdialog-control-windows-forms.md)  
  說明 <xref:System.Windows.Forms.PrintPreviewDialog> 控制項的使用方式。  
   
- [PageSetupDialog Component](../controls/pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog 元件](../controls/pagesetupdialog-component-windows-forms.md)  
  說明 <xref:System.Windows.Forms.PageSetupDialog> 元件的使用方式。  
   
  <xref:System.Drawing.Printing>  

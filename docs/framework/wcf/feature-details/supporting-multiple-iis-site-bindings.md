@@ -10,7 +10,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743437"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>支援多重 IIS 網站繫結
-在 Internet Information Services （IIS）7.0 下裝載 Windows Communication Foundation （WCF）服務時，您可能會想要在相同的網站上提供多個使用相同通訊協定的基底位址。 這樣可讓相同的服務回應數個不同的 URI。 當您想要裝載接聽 `http://www.contoso.com` 和 `http://contoso.com`的服務時，這會很有用。 當您所建立的服務具有內部使用者基底位址，同時具有外部使用者個別基底位址時，也適用此方式。 例如： `http://internal.contoso.com` 和 `http://www.contoso.com`。  
+在 Internet Information Services （IIS）7.0 下裝載 Windows Communication Foundation （WCF）服務時，您可能會想要在相同的網站上提供多個使用相同通訊協定的基底位址。 這樣可讓相同的服務回應數個不同的 URI。 當您想要裝載接聽 `http://www.contoso.com` 和 `http://contoso.com`的服務時，這會很有用。 當您所建立的服務具有內部使用者基底位址，同時具有外部使用者個別基底位址時，也適用此方式。 例如：`http://internal.contoso.com` 和 `http://www.contoso.com`。  
   
 > [!NOTE]
 > 不過這個功能僅適用於 HTTP 通訊協定。  

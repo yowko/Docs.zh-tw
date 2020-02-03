@@ -28,7 +28,7 @@ ms.locfileid: "76746281"
 
      在 [**屬性**] 視窗中，按一下 [<xref:System.Windows.Forms.TabControl.TabPages%2A>] 屬性旁邊的**省略號**按鈕（![[](./media/visual-studio-ellipsis-button.png)Visual Studio 屬性視窗] 中的省略號按鈕（...），以開啟 [ **TabPage 集合編輯器**]。 按一下 [**新增**] 或 [**移除**] 按鈕。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [TabControl 控制項](tabcontrol-control-windows-forms.md)
 - [TabControl 控制項概觀](tabcontrol-control-overview-windows-forms.md)

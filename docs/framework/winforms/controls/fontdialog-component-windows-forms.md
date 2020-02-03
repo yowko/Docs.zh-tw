@@ -16,14 +16,14 @@ ms.locfileid: "76745695"
 # <a name="fontdialog-component-windows-forms"></a>FontDialog 元件 (Windows Form)
 Windows Form <xref:System.Windows.Forms.FontDialog> 元件是預先設定的對話方塊。 這是 Windows 作業系統所公開的相同 [**字型**] 對話方塊。 元件繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [FontDialog 元件概觀](fontdialog-component-overview-windows-forms.md)  
  介紹 <xref:System.Windows.Forms.FontDialog> 元件的一般概念，您可以用來顯示預先設定的對話方塊。 使用者可以使用對話方塊來操作字型和其設定。  
   
  [操作說明：使用 FontDialog 元件顯示字型清單](how-to-show-a-font-list-with-the-fontdialog-component.md)  
  說明如何透過 <xref:System.Windows.Forms.FontDialog> 元件的實例，在執行時間選擇字型。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.FontDialog>  
  提供 <xref:System.Windows.Forms.FontDialog> 類別及其成員的相關參考資訊。  
   

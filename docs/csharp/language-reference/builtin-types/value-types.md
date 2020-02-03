@@ -62,11 +62,11 @@ C#提供下列內建實數值型別，也稱為*簡單類型*：
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的下列幾節：
 
-- [實值型別](~/_csharplang/spec/types.md#value-types)
+- [值類型](~/_csharplang/spec/types.md#value-types)
 - [簡單型別](~/_csharplang/spec/types.md#simple-types)
 - [變數](~/_csharplang/spec/variables.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - <xref:System.ValueType?displayProperty=nameWithType>

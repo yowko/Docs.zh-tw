@@ -17,7 +17,7 @@ ms.locfileid: "76733279"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet add reference` - 新增專案對專案 (P2P) 參考。
 
@@ -37,7 +37,7 @@ ms.locfileid: "76733279"
 </ItemGroup>
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>引數
 
 - **`PROJECT`**
 
@@ -59,7 +59,7 @@ ms.locfileid: "76733279"
 
 - **`--interactive`**
 
-  允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供。
+  允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供使用。
 
 ## <a name="examples"></a>範例
 

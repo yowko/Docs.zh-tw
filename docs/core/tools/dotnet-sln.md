@@ -17,7 +17,7 @@ ms.locfileid: "76733079"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet sln` - 修改.NET Core 方案檔。
 
@@ -37,7 +37,7 @@ dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 dotnet new sln
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>引數
 
 - **`SOLUTION_FILE`**
 
@@ -62,7 +62,7 @@ dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PAT
 dotnet sln add [-h|--help]
 ```
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>引數
 
 - **`SOLUTION_FILE`**
 
@@ -80,11 +80,11 @@ dotnet sln add [-h|--help]
 
 - **`--in-root`**
 
-  將專案放在方案的根目錄中，而不是建立方案資料夾。 自 .NET Core 3.0 SDK 起提供。
+  將專案放在方案的根目錄中，而不是建立方案資料夾。 自 .NET Core 3.0 SDK 起提供使用。
 
 - **`-s|--solution-folder`**
 
-  要加入專案的目的地解決方案資料夾路徑。 自 .NET Core 3.0 SDK 起提供。
+  要加入專案的目的地解決方案資料夾路徑。 自 .NET Core 3.0 SDK 起提供使用。
 
 ### `remove`
 
@@ -97,7 +97,7 @@ dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH>
 dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 ```
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>引數
 
 - **`SOLUTION_FILE`**
 
@@ -123,7 +123,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 dotnet sln list [-h|--help]
 ```
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>引數
 
 - **`SOLUTION_FILE`**
 

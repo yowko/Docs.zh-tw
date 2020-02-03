@@ -32,7 +32,7 @@ ms.locfileid: "76744049"
   
 - System、System.Windows.Forms 和 System.Drawing 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CellPainting>

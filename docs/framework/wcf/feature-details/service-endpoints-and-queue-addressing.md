@@ -51,7 +51,7 @@ ms.locfileid: "76744626"
 ### <a name="multiple-contracts-in-a-queue"></a>佇列中多個合約  
  佇列中的訊息可以實作不同的合約。 在此情況下，下列任何一項必須為真，以順利讀取並處理所有訊息：  
   
-- 指定可實作所有合約的服務端點。 這是建議的處理方式。  
+- 指定可實作所有合約的服務端點。 這是建議的方法。  
   
 - 指定多個端點使用不同的合約，但是確保所有端點都使用相同的 `NetMsmqBinding` 物件。 ServiceModel 的分派邏輯使用訊息幫浦從分派的傳輸通道中讀取訊息，最後再依據合約將訊息信號分離到不同的端點上。 訊息幫浦會針對接聽 URI/繫結對來建立。 佇列接聽項會使用接聽項位址做為接聽 URI。 讓所有端點都使用相同的繫結物件可確保使用單一訊息幫浦來讀取訊息，並依據合約將訊息信號分離到相關的端點上。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "76744626"
 |以 WCF URI 為基礎的佇列位址|使用 Active Directory 屬性|佇列傳輸通訊協定屬性|最後的 MSMQ 格式名稱|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |Net.tcp：//\<電腦名稱稱 >/private/abc|False (預設值)|Native (預設)|DIRECT=OS:machine-name\private$\abc|  
-|Net.tcp：//\<電腦名稱稱 >/private/abc|False|SRMP|DIRECT =http://machine/msmq/private $/abc|  
+|Net.tcp：//\<電腦名稱稱 >/private/abc|False|SRMP|DIRECT =http://machine/msmq/private$/abc|  
 |Net.tcp：//\<電腦名稱稱 >/private/abc|True|原生|PUBLIC=some-guid (佇列的 GUID)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>從寄不出的信件佇列或有害訊息佇列讀取訊息  
@@ -100,10 +100,10 @@ ms.locfileid: "76744626"
   
  請注意，當您使用 `MsmqIntegrationBinding` 從佇列接收訊息時，只能使用直接格式名稱，與公用與私用格式名稱 (需要 Active Directory 整合)。 然而，我們建議您使用直接格式名稱。 例如，在 Windows Vista 上，使用任何其他格式名稱會造成錯誤，因為系統會嘗試開啟子佇列，這只能使用直接格式名稱來開啟。  
   
- 當您使用 `MsmqIntegrationBinding` 為 SRMP 定址時，不需要在直接格式名稱中新增 /msmq/ 以協助網際網路資訊服務 (IIS) 進行分派作業。 例如：使用 SRMP 通訊協定定址佇列 abc 時，您應該使用 DIRECT =http://adatum.com/private $/abc.，而不是 DIRECT =http://adatum.com/msmq/private $/abc  
+ 當您使用 `MsmqIntegrationBinding` 為 SRMP 定址時，不需要在直接格式名稱中新增 /msmq/ 以協助網際網路資訊服務 (IIS) 進行分派作業。 例如：使用 SRMP 通訊協定定址佇列 abc 時，您應該使用 DIRECT =http://adatum.com/private$/abc.，而不是 DIRECT =http://adatum.com/msmq/private$/abc  
   
  請注意，您無法使用包含 `MsmqIntegrationBinding` 的 net.msmq:// 定址。 由於 `MsmqIntegrationBinding` 支援自由格式的 MSMQ 格式名稱定址，因此您可以使用使用此系結的 WCF 服務來使用 MSMQ 中的多播和通訊群組清單功能。 當您使用 `CustomDeadLetterQueue` 時，需指定 `MsmqIntegrationBinding` 則是一個例外。 它必須是 net.msmq:// 的格式，與使用 `NetMsmqBinding` 來指定的方式很類似。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [以 Web 裝載佇列應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

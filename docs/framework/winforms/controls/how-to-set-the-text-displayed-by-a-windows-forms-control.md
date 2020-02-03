@@ -34,7 +34,7 @@ Windows Forms 控制項通常會顯示一些與控制項主要功能相關的文
 
 您也可以使用[設計](#designer)工具來設定文字。
 
-## <a name="programmatic"></a>化
+## <a name="programmatic"></a>程式設計
 
 1. 將 <xref:System.Windows.Forms.Control.Text%2A> 屬性設為字串。
 
@@ -72,17 +72,17 @@ Windows Forms 控制項通常會顯示一些與控制項主要功能相關的文
     mpMenuItem->Text = "&& Now For Something Completely Different";
     ```
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>設計師
 
 1. 在 Visual Studio 的 [**屬性**] 視窗中，將控制項的 [ **Text** ] 屬性設定為適當的字串。
 
    若要建立加底線的快速鍵，請在將做為快速鍵的字母之前包含連字號（&）。
 
-2. 在 [**屬性**] 視窗中, 選取 ![**字型** 屬性旁邊的省略號按鈕 (Visual Studio](./media/visual-studio-ellipsis-button.png)的屬性視窗中的省略號按鈕 (...))。
+2. 在 **屬性**] 視窗中，選取 [**字型**] 屬性旁邊的 [Visual Studio](./media/visual-studio-ellipsis-button.png)的屬性視窗中的省略號按鈕（![省略號按鈕（...）。
 
    在 [標準字型] 對話方塊中，選取字型、字型樣式、大小、效果（例如刪除線或底線），以及您想要的腳本。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
 - [操作說明：建立 Windows Forms 控制項的便捷鍵](how-to-create-access-keys-for-windows-forms-controls.md)

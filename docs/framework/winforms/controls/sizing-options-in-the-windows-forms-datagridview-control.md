@@ -31,11 +31,11 @@ ms.locfileid: "76742990"
   
  下表顯示可用來調整預設行為，或使用特定調整大小選項來達到特定效果的案例。  
   
-|情節|實作|  
+|狀況|實作|  
 |--------------|--------------------|  
-|使用 [資料行填滿模式]，在不顯示水準捲軸的情況下，于相對較少的資料行中顯示類似大小的資料。|將 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 屬性設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>。|  
-|使用 [資料行填滿] 模式與 [不同大小] 的顯示值。|將 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 屬性設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>。 藉由設定資料行 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 屬性，或在填滿控制項的資料之後呼叫控制項 <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> 方法，來初始化相對資料行寬度。|  
-|使用具有不同重要性值的資料行填滿模式。|將 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 屬性設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>。 針對必須一律顯示部分資料，或針對特定資料行使用 [填滿模式] 以外的 [調整大小] 選項的資料行，設定大型的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值。|  
+|使用 [資料行填滿模式]，在不顯示水準捲軸的情況下，于相對較少的資料行中顯示類似大小的資料。|將 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 屬性設為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>。|  
+|使用 [資料行填滿] 模式與 [不同大小] 的顯示值。|將 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 屬性設為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>。 藉由設定資料行 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 屬性，或在填滿控制項的資料之後呼叫控制項 <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> 方法，來初始化相對資料行寬度。|  
+|使用具有不同重要性值的資料行填滿模式。|將 <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> 屬性設為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>。 針對必須一律顯示部分資料，或針對特定資料行使用 [填滿模式] 以外的 [調整大小] 選項的資料行，設定大型的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值。|  
 |使用資料行填滿模式來避免顯示控制項背景。|將最後一個資料行的 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 屬性設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>，並使用其他資料行的其他調整大小選項。 如果其他資料行使用太多可用空間，請設定最後一個資料行的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 屬性。|  
 |顯示固定寬度的資料行，例如 [圖示] 或 [ID] 資料行。|將 <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 設定為 <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None>，並 <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> 資料行 <xref:System.Windows.Forms.DataGridViewTriState.False>。 藉由設定 <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 屬性，或在以資料填滿控制項後呼叫控制項 <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A> 方法，初始化其寬度。|  
 |在資料格內容變更時自動調整大小，以避免裁剪並優化空間的使用。|將 [自動調整大小] 屬性設定為代表以內容為基礎之大小調整模式的值。 若要避免在使用大量資料時造成效能上的負面影響，請使用調整大小模式，只計算顯示的列數。|  
@@ -127,7 +127,7 @@ ms.locfileid: "76742990"
 ## <a name="content-based-sizing-options"></a>以內容為基礎的調整大小選項  
  調整大小屬性和方法所使用的列舉與以內容為基礎的大小調整有類似的值。 使用這些值，您可以限制用來計算慣用大小的儲存格。 針對所有大小的列舉，名稱參考所顯示資料格的值，會將其計算限制為顯示之資料列中的儲存格。 排除資料列有助於避免在使用大量資料列時造成效能上的負面影響。 您也可以將計算限制為標頭或 nonheader 儲存格中的資料格值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>

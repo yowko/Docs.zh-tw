@@ -27,7 +27,7 @@ ms.locfileid: "76746102"
     > [!NOTE]
     > 如果型別轉換器或 UI 類型編輯器不適用於您的自訂屬性，您可以如[擴充設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))所述自行實作。  
   
- 下列程式碼片段示範如何定義自訂控制項 `FlashTrackBar` 的自訂事件 `EndColor`。  
+ 下列程式碼片段示範如何定義自訂控制項 `EndColor` 的自訂事件 `FlashTrackBar`。  
   
 ```vb  
 Public Class FlashTrackBar  
@@ -120,7 +120,7 @@ public int Value {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項中的屬性](properties-in-windows-forms-controls.md)
 - [使用 ShouldSerialize 和 Reset 方法定義預設值](defining-default-values-with-the-shouldserialize-and-reset-methods.md)

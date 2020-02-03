@@ -46,7 +46,7 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> 控制項提供大量的�
   
 - 當使用者按一下資料行標頭時，會自動根據基礎資料排序資料列。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView 控制項](datagridview-control-windows-forms.md)

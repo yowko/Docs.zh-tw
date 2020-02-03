@@ -18,7 +18,7 @@ Windows Forms 控制項繼承了許多屬性，形成基類 <xref:System.Windows
   
  您可以在控制項中覆寫繼承的屬性，以及定義新的屬性。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [定義屬性](defining-a-property-in-windows-forms-controls.md)  
  示範如何實作自訂控制項或元件的屬性，並且示範如何將屬性整合至設計環境。  
   
@@ -28,13 +28,13 @@ Windows Forms 控制項繼承了許多屬性，形成基類 <xref:System.Windows
  [屬性變更事件](property-changed-events.md)  
  描述如何在屬性值變更時，啟用屬性變更通知。  
   
- [操作說明：公開組成控制項的屬性](how-to-expose-properties-of-constituent-controls.md)  
+ [如何：公開組成控制項的屬性](how-to-expose-properties-of-constituent-controls.md)  
  示範如何在自訂複合控制項中公開組成控制項的屬性。  
   
  [自訂控制項中的方法實作](method-implementation-in-custom-controls.md)  
  描述如何在自訂控制項和元件中實作方法。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.UserControl>  
  記錄基底類別以實作複合控制項。  
   

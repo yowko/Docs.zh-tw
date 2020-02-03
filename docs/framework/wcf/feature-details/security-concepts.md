@@ -12,7 +12,7 @@ ms.locfileid: "76730828"
 # <a name="security-concepts"></a>安全性概念
 本節簡短說明與 Windows Communication Foundation （WCF）安全性相關的概念。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [用於 WCF 的安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  用於安全性實作的概念的高階概觀。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "76730828"
  [安全性用語](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
  討論 WCF 安全性時所使用的詞彙詞彙。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -36,8 +36,8 @@ ms.locfileid: "76730828"
 ## <a name="related-sections"></a>相關章節  
  [擴充安全性](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Security](../../../../docs/framework/wcf/feature-details/security.md)
+- [安全性](../../../../docs/framework/wcf/feature-details/security.md)
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -21,7 +21,7 @@ Windows Forms <xref:System.Windows.Forms.PictureBox> 控制項是用來顯示點
 ## <a name="key-properties-and-methods"></a>索引鍵屬性和方法  
  所顯示的圖片取決於 [<xref:System.Windows.Forms.PictureBox.Image%2A>] 屬性，可在執行時間或設計階段設定。 您也可以藉由設定 <xref:System.Windows.Forms.PictureBox.ImageLocation%2A> 屬性來指定影像，然後使用 <xref:System.Windows.Forms.PictureBox.Load%2A> 方法或使用 <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> 方法以非同步方式載入影像。 [<xref:System.Windows.Forms.PictureBox.SizeMode%2A>] 屬性會控制影像和控制項如何彼此配合。 如需詳細資訊，請參閱[如何：在執行時間修改圖片的大小或位置](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.PictureBox>
 - [操作說明：使用設計工具載入圖片](how-to-load-a-picture-using-the-designer-windows-forms.md)

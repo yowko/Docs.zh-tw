@@ -48,7 +48,7 @@ private:
   
  您也可以使用相同的事件處理常式，針對不同的控制項處理相同的事件。 例如，如果您在表單上有一組 <xref:System.Windows.Forms.RadioButton> 控制項，您可以為 <xref:System.Windows.Forms.Control.Click> 事件建立單一事件處理常式，並讓每個控制項的 <xref:System.Windows.Forms.Control.Click> 事件系結至單一事件處理常式。 如需詳細資訊，請參閱[如何：將多個事件連接到 Windows Forms 中的單一事件處理常式](how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
+- [在 Windows Form 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
 - [事件概觀](events-overview-windows-forms.md)

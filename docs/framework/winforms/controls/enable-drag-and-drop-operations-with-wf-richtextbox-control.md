@@ -164,7 +164,7 @@ ms.locfileid: "76745817"
   
      當您放開滑鼠按鈕時，會放下選取的文字 (也就是，會引發 <xref:System.Windows.Forms.RichTextBox.DragDrop> 事件)，並插入 <xref:System.Windows.Forms.RichTextBox> 控制項內。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [操作說明：在應用程式間執行拖放作業](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)

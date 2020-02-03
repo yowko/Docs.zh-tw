@@ -24,7 +24,7 @@ ms.locfileid: "76741939"
   
 - Windows Installer 部署。  
   
-- ClickOnce 佈署。  
+- ClickOnce 部署。  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>XCopy 部署  
@@ -99,7 +99,7 @@ ms.locfileid: "76741939"
 > [!NOTE]
 > 如需部署和應用程式資訊清單的詳細資訊，請參閱[建置 WPF 應用程式](building-a-wpf-application-wpf.md)。  
   
- 建立 XBAP 時，會產生這些檔案。 如需詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。 如同僅限標記的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面，Xbap 通常會發行至 Web 服務器，並使用 Internet Explorer 來查看。  
+ 建立 XBAP 時，會產生這些檔案。 如需更多詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。 如同僅限標記的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面，Xbap 通常會發行至 Web 服務器，並使用 Internet Explorer 來查看。  
   
  Xbap 可以使用任何部署技術部署到用戶端。 不過，建議使用 ClickOnce，因為它提供下列功能：  
   
@@ -121,7 +121,7 @@ ms.locfileid: "76741939"
   
  如需詳細資訊，請參閱[部署 .NET Framework 和應用程式](../../deployment/index.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [建置 WPF 應用程式](building-a-wpf-application-wpf.md)
-- [Security](../security-wpf.md)
+- [安全性](../security-wpf.md)

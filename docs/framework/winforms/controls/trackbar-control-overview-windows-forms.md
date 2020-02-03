@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.TrackBar> 控制項（有時也稱為�
   
  另外還有兩個重要的屬性 <xref:System.Windows.Forms.TrackBar.SmallChange%2A> 和 <xref:System.Windows.Forms.TrackBar.LargeChange%2A>。 <xref:System.Windows.Forms.TrackBar.SmallChange%2A> 屬性的值是捲動方塊的位置數目，以回應按下向左鍵或向右鍵。 [<xref:System.Windows.Forms.TrackBar.LargeChange%2A>] 屬性的值是捲動方塊的位置數，以回應按下 PAGE UP 或 PAGE DOWN 鍵，或在捲軸兩側的追蹤列上按一下滑鼠右鍵。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.TrackBar>
 - [TrackBar 控制項](trackbar-control-windows-forms.md)

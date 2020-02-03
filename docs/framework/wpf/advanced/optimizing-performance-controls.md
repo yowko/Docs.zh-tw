@@ -66,19 +66,19 @@ UI 虛擬化是清單控制項的重要層面。 請不要將 UI 虛擬化和資
 |<xref:System.Windows.Controls.ComboBox>|可以啟用|可以啟用|可以啟用|
 |<xref:System.Windows.Controls.ContextMenu>|可以啟用|可以啟用|可以啟用|
 |<xref:System.Windows.Controls.DocumentViewer>|無法使用|無法使用|可以啟用|
-|<xref:System.Windows.Controls.ListBox>|預設值|可以啟用|可以啟用|
-|<xref:System.Windows.Controls.ListView>|預設值|可以啟用|可以啟用|
+|<xref:System.Windows.Controls.ListBox>|預設|可以啟用|可以啟用|
+|<xref:System.Windows.Controls.ListView>|預設|可以啟用|可以啟用|
 |<xref:System.Windows.Controls.TreeView>|可以啟用|可以啟用|可以啟用|
 |<xref:System.Windows.Controls.ToolBar>|無法使用|無法使用|可以啟用|
 
 > [!NOTE]
 > 如需如何在 <xref:System.Windows.Controls.TreeView>上啟用虛擬化和容器回收的範例，請參閱[改善 TreeView 的效能](../controls/how-to-improve-the-performance-of-a-treeview.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [版面配置](layout.md)
 - [版面配置與設計](optimizing-performance-layout-and-design.md)
 - [資料繫結](optimizing-performance-data-binding.md)
 - [控制項](../controls/index.md)
-- [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [樣式設定和範本化](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [逐步解說：在 WPF 應用程式中快取應用程式資料](walkthrough-caching-application-data-in-a-wpf-application.md)

@@ -111,7 +111,7 @@ ms.locfileid: "76740193"
 
 2. 在 [ **DebugControlLibrary** ] 屬性工作表中，選取 [ **Debug** ] 索引標籤。
 
-     在 [**起始動作**] 區段中，選取 [**啟動外部程式**]。 您將會 Visual Studio 的個別實例進行偵錯工具, 因此請按一下省略號![Visual Studio](./media/visual-studio-ellipsis-button.png)屬性視窗中的省略號按鈕 (...) 按鈕, 以流覽 Visual Studio 的 IDE。 可執行檔的名稱為**devenv**，如果您安裝到預設位置，其路徑為 *% ProgramFiles （x86）% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE*。
+     在 [**起始動作**] 區段中，選取 [**啟動外部程式**]。 您將會 Visual Studio 的個別實例進行偵錯工具，因此，請按一下省略號（![[Visual Studio](./media/visual-studio-ellipsis-button.png)）] 按鈕屬性視窗中的省略號按鈕（...），以流覽 Visual Studio IDE。 可執行檔的名稱為**devenv**，如果您安裝到預設位置，其路徑為 *% ProgramFiles （x86）% \ Microsoft Visual Studio\2019\\\<edition > \Common7\IDE*。
 
 3. 選取 [確定] 關閉對話方塊。
 
@@ -149,6 +149,6 @@ ms.locfileid: "76740193"
 
 - 您可以撰寫自訂控制項的自訂設計工具。 這可讓您使用 Visual Studio 所公開的可擴充設計工具基礎結構，完全掌控設計經驗。 如需詳細資訊，請參閱[逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](creating-a-wf-control-design-time-features.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](creating-a-wf-control-design-time-features.md)

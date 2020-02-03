@@ -47,17 +47,17 @@ ms.locfileid: "76742307"
  ADO.NET 資料物件  
  ADO.NET 提供了一些適用于系結至的資料結構。 每個都有其複雜和複雜度的差異。  
   
-- <xref:System.Data.DataColumn>。 <xref:System.Data.DataColumn> 是 <xref:System.Data.DataTable>的基本建立區塊，其中有一些資料行組成資料表。 每個 <xref:System.Data.DataColumn> 都有一個 <xref:System.Data.DataColumn.DataType%2A> 屬性，可決定資料行所保留的資料類型（例如，在描述汽車的資料表中建立汽車）。 您可以簡單地將控制項（例如 <xref:System.Windows.Forms.TextBox> 控制項的 <xref:System.Windows.Forms.Control.Text%2A> 屬性）系結至資料表中的資料行。  
+- <xref:System.Data.DataColumn>第 1 課：建立 Windows Azure 儲存體物件{2}。 <xref:System.Data.DataColumn> 是 <xref:System.Data.DataTable>的基本建立區塊，其中有一些資料行組成資料表。 每個 <xref:System.Data.DataColumn> 都有一個 <xref:System.Data.DataColumn.DataType%2A> 屬性，可決定資料行所保留的資料類型（例如，在描述汽車的資料表中建立汽車）。 您可以簡單地將控制項（例如 <xref:System.Windows.Forms.TextBox> 控制項的 <xref:System.Windows.Forms.Control.Text%2A> 屬性）系結至資料表中的資料行。  
   
-- <xref:System.Data.DataTable>。 <xref:System.Data.DataTable> 是資料表的表示，其中包含資料列和資料行，在 ADO.NET 中。 資料表包含兩個集合： <xref:System.Data.DataColumn>，代表給定資料表中的資料行（最終會決定可以輸入該資料表的資料類型），並 <xref:System.Data.DataRow>，代表給定資料表中的資料列。 您可以將控制項複雜地系結至資料表中包含的資訊（例如，將 <xref:System.Windows.Forms.DataGridView> 控制項系結至資料表）。 不過，當您系結至 <xref:System.Data.DataTable>時，您實際上就是系結至資料表的預設 view。  
+- <xref:System.Data.DataTable>第 1 課：建立 Windows Azure 儲存體物件{2}。 <xref:System.Data.DataTable> 是資料表的表示，其中包含資料列和資料行，在 ADO.NET 中。 資料表包含兩個集合： <xref:System.Data.DataColumn>，代表給定資料表中的資料行（最終會決定可以輸入該資料表的資料類型），並 <xref:System.Data.DataRow>，代表給定資料表中的資料列。 您可以將控制項複雜地系結至資料表中包含的資訊（例如，將 <xref:System.Windows.Forms.DataGridView> 控制項系結至資料表）。 不過，當您系結至 <xref:System.Data.DataTable>時，您實際上就是系結至資料表的預設 view。  
   
-- <xref:System.Data.DataView>。 <xref:System.Data.DataView> 是單一資料表的自訂視圖，可以篩選或排序。 資料檢視是複雜繫結控制項所使用的「快照集」資料。 您可以簡單地系結或複雜系結至資料檢視內的資料，但請注意，您會系結至資料的固定「圖片」，而不是「清除」的「更新資料來源」。  
+- <xref:System.Data.DataView>第 1 課：建立 Windows Azure 儲存體物件{2}。 <xref:System.Data.DataView> 是單一資料表的自訂視圖，可以篩選或排序。 資料檢視是複雜繫結控制項所使用的「快照集」資料。 您可以簡單地系結或複雜系結至資料檢視內的資料，但請注意，您會系結至資料的固定「圖片」，而不是「清除」的「更新資料來源」。  
   
-- <xref:System.Data.DataSet>。 <xref:System.Data.DataSet> 是資料庫中資料的資料表、關聯性和條件約束的集合。 您可以簡單地系結或複雜系結至資料集內的資料，但請注意，您會系結至 <xref:System.Data.DataSet> 的預設 <xref:System.Data.DataViewManager> （請參閱下一個專案符號點）。  
+- <xref:System.Data.DataSet>第 1 課：建立 Windows Azure 儲存體物件{2}。 <xref:System.Data.DataSet> 是資料庫中資料的資料表、關聯性和條件約束的集合。 您可以簡單地系結或複雜系結至資料集內的資料，但請注意，您會系結至 <xref:System.Data.DataSet> 的預設 <xref:System.Data.DataViewManager> （請參閱下一個專案符號點）。  
   
-- <xref:System.Data.DataViewManager>。 <xref:System.Data.DataViewManager> 是整個 <xref:System.Data.DataSet>的自訂視圖，類似于 <xref:System.Data.DataView>，但包含關聯性。 有了 <xref:System.Data.DataViewManager.DataViewSettings%2A> 集合，您可以針對 <xref:System.Data.DataViewManager> 對指定資料表具有的任何視圖，設定預設的篩選準則和排序選項。  
+- <xref:System.Data.DataViewManager>第 1 課：建立 Windows Azure 儲存體物件{2}。 <xref:System.Data.DataViewManager> 是整個 <xref:System.Data.DataSet>的自訂視圖，類似于 <xref:System.Data.DataView>，但包含關聯性。 有了 <xref:System.Data.DataViewManager.DataViewSettings%2A> 集合，您可以針對 <xref:System.Data.DataViewManager> 對指定資料表具有的任何視圖，設定預設的篩選準則和排序選項。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
 - [資料繫結和 Windows Forms](data-binding-and-windows-forms.md)

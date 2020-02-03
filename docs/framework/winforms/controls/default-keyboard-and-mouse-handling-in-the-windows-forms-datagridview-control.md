@@ -30,11 +30,11 @@ ms.locfileid: "76746112"
   
 |按鍵或按鍵組合|描述|  
 |----------------------------|-----------------|  
-|向下鍵|將焦點移至目前儲存格正下方的資料格。 如果焦點是在最後一個資料列中，則不會執行任何操作。|  
+|DOWN ARROW|將焦點移至目前儲存格正下方的資料格。 如果焦點是在最後一個資料列中，則不會執行任何操作。|  
 |向左鍵|將焦點移到資料列中的上一個儲存格。 如果焦點是在資料列的第一個資料格中，則不會執行任何操作。|  
 |向右鍵|將焦點移到資料列中的下一個儲存格。 如果焦點是在資料列的最後一個資料格中，則不會執行任何操作。|  
 |向上鍵|將焦點移至目前儲存格正上方的資料格。 如果焦點是在第一個資料列中，則不會執行任何操作。|  
-|首頁|將焦點移至目前資料列中的第一個資料格。|  
+|HOME|將焦點移至目前資料列中的第一個資料格。|  
 |END|將焦點移至目前資料列中的最後一個資料格。|  
 |PAGE DOWN|將控制項向下滾動到完全顯示的資料列數目。 將焦點移至最後一個完整顯示的資料列，而不變更資料行。|  
 |PAGE UP|以完整顯示的資料列數目向上滾動控制項。 將焦點移至第一個顯示的資料列，而不變更資料行。|  
@@ -43,8 +43,8 @@ ms.locfileid: "76746112"
 |CTRL+TAB|如果 `false`[<xref:System.Windows.Forms.DataGridView.StandardTab%2A>] 屬性值，則會將焦點移至父容器的定位順序中的下一個控制項。<br /><br /> 如果 `true`<xref:System.Windows.Forms.DataGridView.StandardTab%2A> 屬性值，則會將焦點移至目前資料列中的下一個儲存格。 如果焦點已經在資料列的最後一個資料格中，則會將焦點移至下一個資料列中的第一個資料格。 如果焦點是在控制項的最後一個資料格中，則會將焦點移至父容器的定位順序中的下一個控制項。|  
 |CTRL+SHIFT+TAB|如果 `false`[<xref:System.Windows.Forms.DataGridView.StandardTab%2A>] 屬性值，則會將焦點移至父容器的定位順序中的上一個控制項。<br /><br /> 如果 `true`<xref:System.Windows.Forms.DataGridView.StandardTab%2A> 屬性值，則會將焦點移至目前資料列中的上一個儲存格。 如果焦點已經在資料列的第一個資料格中，則會將焦點移至前一個資料列中的最後一個資料格。 如果焦點是在控制項中的第一個資料格，則會將焦點移至父容器的定位順序中的上一個控制項。|  
 |CTRL + 箭號|將焦點移至箭號方向的最左邊儲存格。|  
-|CTRL + HOME|將焦點移至控制項中的第一個資料格。|  
-|CTRL + END|將焦點移至控制項中的最後一個儲存格。|  
+|CTRL+HOME|將焦點移至控制項中的第一個資料格。|  
+|CTRL+END|將焦點移至控制項中的最後一個儲存格。|  
 |CTRL + PAGE DOWN/UP|與 PAGE DOWN 或 PAGE UP 相同。|  
 |F2|如果 <xref:System.Windows.Forms.DataGridView.EditMode%2A> 屬性值 <xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2> 或 <xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>，則將目前儲存格置於資料格編輯模式。|
 |F3|如果 <xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic><xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> 屬性值，則排序目前的資料行。 這與按一下目前的資料行標頭相同。 從 .NET Framework 4.7.2 開始提供。 若要啟用這項功能，應用程式必須以 .NET Framework 4.7.2 或更新版本為目標，或使用 AppCoNtext 參數明確加入宣告協助工具改善。|  
@@ -53,8 +53,8 @@ ms.locfileid: "76746112"
 |空白鍵|如果目前儲存格是 <xref:System.Windows.Forms.DataGridViewButtonCell>、<xref:System.Windows.Forms.DataGridViewLinkCell>或 <xref:System.Windows.Forms.DataGridViewCheckBoxCell>，會引發 <xref:System.Windows.Forms.DataGridView.CellClick> 和 <xref:System.Windows.Forms.DataGridView.CellContentClick> 事件。 如果目前儲存格為 <xref:System.Windows.Forms.DataGridViewButtonCell>，也請按下按鈕。 如果目前儲存格是 <xref:System.Windows.Forms.DataGridViewCheckBoxCell>，也會變更檢查狀態。|  
 |ENTER|認可對目前儲存格和資料列所做的任何變更，並將焦點移至目前儲存格正下方的資料格。 如果焦點是在最後一個資料列中，則會認可任何變更，而不移動焦點。|  
 |ESC|如果控制項處於編輯模式，則會取消編輯。 如果控制項不是在編輯模式中，則會在控制項系結至支援編輯或虛擬模式的資料來源已使用資料列層級認可範圍來執行時，還原對目前資料列所做的任何變更。|  
-|倒退鍵|在編輯儲存格時，刪除插入點之前的字元。|  
-|Delete|在編輯儲存格時，刪除插入點之後的字元。|  
+|退格鍵|在編輯儲存格時，刪除插入點之前的字元。|  
+|DELETE|在編輯儲存格時，刪除插入點之後的字元。|  
 |CTRL+ENTER|認可對目前資料格所做的任何變更，而不移動焦點。 如果控制項系結至支援編輯或虛擬模式的資料來源已實作為資料列層級的認可範圍，也會認可對目前資料列所做的任何變更。|  
 |CTRL+0|如果可以編輯資料格，則在目前儲存格中輸入 <xref:System.DBNull.Value?displayProperty=nameWithType> 值。 根據預設，<xref:System.DBNull> 資料格值的顯示值是目前儲存格生效之 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> 屬性值。|  
   
@@ -114,7 +114,7 @@ ms.locfileid: "76746112"
   
  如果 <xref:System.Windows.Forms.DataGridView.MultiSelect%2A> 設定為 `true` 而且 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A> 設定為 <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> 或 <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>，則按下 SHIFT 或 CTRL 鍵時，按一下資料格的行為會相同，不同之處在于只會影響完整的資料列和資料行。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView 控制項](datagridview-control-windows-forms.md)

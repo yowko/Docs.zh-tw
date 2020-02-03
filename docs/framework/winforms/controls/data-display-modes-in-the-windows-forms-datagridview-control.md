@@ -32,7 +32,7 @@ ms.locfileid: "76744015"
   
  不支援以系結模式的未系結資料行排序。 如果您在系結模式中建立包含使用者可編輯值的未系結資料行，當控制項依系結的資料行排序時，您必須執行虛擬模式來維護這些值。  
   
-## <a name="virtual"></a>Virtual  
+## <a name="virtual"></a>虛擬  
  透過虛擬模式，您可以執行自己的資料管理作業。 當控制項依系結的資料行排序時，必須使用這項功能來維護系結模式中未系結之資料行的值。 不過，虛擬模式的主要用途是在與大量資料互動時，將效能優化。  
   
  您會將 <xref:System.Windows.Forms.DataGridView> 控制項附加至您所管理的快取，而您的程式碼會控制何時推送和提取資料列。 為了讓記憶體耗用量變小，快取的大小應該與目前顯示的資料列數目相似。 當使用者將新的資料列滾動到 view 時，您的程式碼會向快取要求新資料，並選擇性地從記憶體中清除舊資料。  
@@ -41,7 +41,7 @@ ms.locfileid: "76744015"
   
  如需虛擬模式的詳細資訊，請參閱[Windows Forms DataGridView 控制項中的虛擬模式](virtual-mode-in-the-windows-forms-datagridview-control.md)。 如需顯示如何使用虛擬模式事件的範例，請參閱[逐步解說：在 Windows Forms DataGridView 控制項中執行虛擬模式](implementing-virtual-mode-wf-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>

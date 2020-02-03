@@ -17,7 +17,7 @@ ms.locfileid: "76745972"
 # <a name="dialog-box-controls-and-components-windows-forms"></a>對話方塊控制項和元件 (Windows Form)
 下列 Windows Form 控制項和元件提供標準的對話方塊。 如需每個對話方塊所提供之功能的詳細資訊，請參閱下列連結。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.ColorDialog>  
  提供 <xref:System.Windows.Forms.ColorDialog> 類別及其成員的相關參考資訊。  
   

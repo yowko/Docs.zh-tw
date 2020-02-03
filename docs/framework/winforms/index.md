@@ -1,5 +1,5 @@
 ---
-title: Windows 表單
+title: Windows Form
 titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -14,10 +14,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739191"
 ---
-# <a name="windows-forms"></a>Windows 表單
+# <a name="windows-forms"></a>Windows Form
 由於表單是應用程式的基礎單位，因此在表單的功能和設計方面需要多加考量。 表單基本上就像是一個空白面板，身為開發人員的您可使用控制項建立使用者介面，並使用程式碼管理資料，來增強表單。 為此，Visual Studio 提供整合式開發環境（IDE），協助您撰寫程式碼，以及使用 .NET Framework 撰寫的豐富控制項集。 您可以利用程式碼來補充這些控制項的功能，進而輕鬆快速地開發所需的方案。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Forms 使用者入門](getting-started-with-windows-forms.md)  
  提供如何控制 Windows Form 的能力，以更強固的安全性輕鬆地顯示資料、處理使用者輸入和部署應用程式的相關主題連結。  
   

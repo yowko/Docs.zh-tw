@@ -24,12 +24,12 @@ ms.locfileid: "76742095"
   
 - ClickOnce 部署： .NET 發行和部署系統。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [建置 WPF 應用程式](building-a-wpf-application-wpf.md)  
  [部署 WPF 應用程式](deploying-a-wpf-application-wpf.md)  
- [「如何」主題](build-and-deploy-how-to-topics.md)  
+ [操作說明主題](build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  MSBuild  
   
 ## <a name="related-sections"></a>相關章節  

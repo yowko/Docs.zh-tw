@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.ComboBox> 控制項是用來在下拉�
   
  若要加入或刪除 <xref:System.Windows.Forms.ComboBox> 控制項中的專案，請使用 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Add%2A>、<xref:System.Windows.Forms.ComboBox.ObjectCollection.Insert%2A>、<xref:System.Windows.Forms.ComboBox.ObjectCollection.Clear%2A> 或 <xref:System.Windows.Forms.ComboBox.ObjectCollection.Remove%2A> 方法。 或者，您可以使用設計工具中的 [<xref:System.Windows.Forms.ComboBox.Items%2A>] 屬性，將專案加入至清單中。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ComboBox>
 - [ListBox 控制項概觀](listbox-control-overview-windows-forms.md)

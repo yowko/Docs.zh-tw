@@ -65,7 +65,7 @@ ms.locfileid: "76739222"
   
  這個程式碼範例中的函式包含 `InitializeComponent`的呼叫，這是在 Visual Studio 中建立新的 Windows Forms 專案時所定義。 如果您要在命令列上建立應用程式，請移除這行程式碼。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Windows Forms 中的自動縮放比例](automatic-scaling-in-windows-forms.md)

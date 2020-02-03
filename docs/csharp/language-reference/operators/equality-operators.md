@@ -43,7 +43,7 @@ ms.locfileid: "76743739"
 
 使用者定義[結構](../keywords/struct.md)型別預設不支援 `==` 運算子。 若要支援 `==` 運算子，使用者定義結構必須[多載](operator-overloading.md)它。
 
-從 C# 7.3 開始，`==` 及 `!=` 運算子是由 C# [tuples](../../tuples.md) 所支援。 如需詳細資訊，請參閱 [C# Tuple 類型](../../tuples.md)一文中的[相等與 Tuple](../../tuples.md#equality-and-tuples)一節。
+從 C# 7.3 開始，`==` 及 `!=` 運算子是由 C# [tuples](../../tuples.md) 所支援。 如需詳細資訊，請參閱 [C# Tuple 類型](../../tuples.md#equality-and-tuples)一文中的[相等與 Tuple](../../tuples.md)一節。
 
 ### <a name="reference-types-equality"></a>參考型別相等
 
@@ -67,7 +67,7 @@ ms.locfileid: "76743739"
 
 [!code-csharp-interactive[delegate equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#DelegateEquality)]
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[委派相等運算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)一節。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/expressions.md#delegate-equality-operators)的[委派相等運算子](~/_csharplang/spec/introduction.md)一節。
 
 從語意相同之 [lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)之評估產生的委派不相等，如下列範例所示：
 
@@ -87,9 +87,9 @@ ms.locfileid: "76743739"
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[關係及類型測試運算子](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators)一節。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators)的[關係及類型測試運算子](~/_csharplang/spec/introduction.md)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)

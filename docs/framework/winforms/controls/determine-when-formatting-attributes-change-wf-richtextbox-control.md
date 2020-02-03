@@ -80,7 +80,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項的常見用法�
        }  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>

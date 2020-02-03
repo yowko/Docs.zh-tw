@@ -20,34 +20,34 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76727794"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>類別、結構和介面的名稱
-The naming guidelines that follow apply to general type naming.
+後面的命名指導方針適用于一般類型命名。
 
- ✔️ DO name classes and structs with nouns or noun phrases, using PascalCasing.
+ ✔️使用 PascalCasing 來命名具有名詞或名詞片語的類別和結構。
 
- This distinguishes type names from methods, which are named with verb phrases.
+ 這會區分方法中的型別名稱，其以動詞片語命名。
 
- ✔️ DO name interfaces with adjective phrases, or occasionally with nouns or noun phrases.
+ ✔️使用形容詞片語，或偶爾使用名詞或名詞片語來命名介面。
 
- Nouns and noun phrases should be used rarely and they might indicate that the type should be an abstract class, and not an interface.
+ 名詞和名詞片語應該很少使用，而且可能表示該類型應該是抽象類別，而不是介面。
 
- ❌ DO NOT give class names a prefix (e.g., "C").
+ ❌ 不要為類別名稱提供前置詞（例如 "C"）。
 
- ✔️ CONSIDER ending the name of derived classes with the name of the base class.
+ ✔️考慮使用基類的名稱來結束衍生類別的名稱。
 
- This is very readable and explains the relationship clearly. Some examples of this in code are: `ArgumentOutOfRangeException`, which is a kind of `Exception`, and `SerializableAttribute`, which is a kind of `Attribute`. However, it is important to use reasonable judgment in applying this guideline; for example, the `Button` class is a kind of `Control` event, although `Control` doesn’t appear in its name.
+ 這是非常容易閱讀的，並且清楚地說明關聯性。 程式碼中的一些範例如下： `ArgumentOutOfRangeException`，這是一種 `Exception`，而 `SerializableAttribute`則是一種 `Attribute`。 不過，請務必在套用此指導方針時使用合理的判斷。例如，`Button` 類別是一種 `Control` 事件，不過 `Control` 不會出現在其名稱中。
 
- ✔️ DO prefix interface names with the letter I, to indicate that the type is an interface.
+ ✔️在介面名稱前面加上字母 I，表示該類型為介面。
 
- For example, `IComponent` (descriptive noun), `ICustomAttributeProvider` (noun phrase), and `IPersistable` (adjective) are appropriate interface names. As with other type names, avoid abbreviations.
+ 例如，`IComponent` （描述性名詞）、`ICustomAttributeProvider` （名詞片語）和 `IPersistable` （形容詞）都是適當的介面名稱。 如同其他類型名稱，請避免使用縮寫。
 
- ✔️ DO ensure that the names differ only by the "I" prefix on the interface name when you are defining a class–interface pair where the class is a standard implementation of the interface.
+ 當您定義類別–介面組（其中類別是介面的標準執行）時，✔️確實會確保介面名稱上的 "I" 前置詞只有名稱不同。
 
-## <a name="names-of-generic-type-parameters"></a>Names of Generic Type Parameters
- Generics were added to .NET Framework 2.0. The feature introduced a new kind of identifier called *type parameter*.
+## <a name="names-of-generic-type-parameters"></a>泛型型別參數的名稱
+ 泛型已加入至 .NET Framework 2.0。 此功能引進了一種稱為「*型別參數*」的新識別碼。
 
- ✔️ DO name generic type parameters with descriptive names unless a single-letter name is completely self-explanatory and a descriptive name would not add value.
+ 除非單一字母名稱完全一目了然，而且描述性名稱不會加上值，否則✔️ DO 名稱具有描述性名稱的泛型型別參數。
 
- ✔️ CONSIDER using `T` as the type parameter name for types with one single-letter type parameter.
+ ✔️請考慮使用 `T` 作為具有一個單字母類型參數之類型的類型參數名稱。
 
 ```csharp
 public int IComparer<T> { ... }
@@ -55,7 +55,7 @@ public delegate bool Predicate<T>(T item);
 public struct Nullable<T> where T:struct { ... }
 ```
 
- ✔️ DO prefix descriptive type parameter names with `T`.
+ ✔️在描述性類型參數名稱前面加上 `T`。
 
 ```csharp
 public interface ISessionChannel<TSession> where TSession : ISession {
@@ -63,43 +63,43 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 }
 ```
 
- ✔️ CONSIDER indicating constraints placed on a type parameter in the name of the parameter.
+ ✔️，請考慮在參數名稱中指出在類型參數上放置的條件約束。
 
- For example, a parameter constrained to `ISession` might be called `TSession`.
+ 例如，限制為 `ISession` 的參數可能會被呼叫 `TSession`。
 
-## <a name="names-of-common-types"></a>Names of Common Types
- ✔️ DO follow the guidelines described in the following table when naming types derived from or implementing certain .NET Framework types.
+## <a name="names-of-common-types"></a>一般類型的名稱
+ ✔️請遵循下表中所述的指導方針來命名衍生自的型別，或執行特定的 .NET Framework 類型。
 
-|基底類型|Derived/Implementing Type Guideline|
+|基底型別|衍生/執行類型指導方針|
 |---------------|------------------------------------------|
-|`System.Attribute`|✔️ DO add the suffix "Attribute" to names of custom attribute classes.|
-|`System.Delegate`|✔️ DO add the suffix "EventHandler" to names of delegates that are used in events.<br /><br /> ✔️ DO add the suffix "Callback" to names of delegates other than those used as event handlers.<br /><br /> ❌ DO NOT add the suffix "Delegate" to a delegate.|
-|`System.EventArgs`|✔️ DO add the suffix "EventArgs."|
-|`System.Enum`|❌ DO NOT derive from this class; use the keyword supported by your language instead; for example, in C#, use the `enum` keyword.<br /><br /> ❌ DO NOT add the suffix "Enum" or "Flag."|
-|`System.Exception`|✔️ DO add the suffix "Exception."|
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|✔️ DO add the suffix "Dictionary." Note that `IDictionary` is a specific type of collection, but this guideline takes precedence over the more general collections guideline that follows.|
-|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|✔️ DO add the suffix "Collection."|
-|`System.IO.Stream`|✔️ DO add the suffix "Stream."|
-|`CodeAccessPermission IPermission`|✔️ DO add the suffix "Permission."|
+|`System.Attribute`|✔️請將尾碼 "Attribute" 新增至自訂屬性類別的名稱。|
+|`System.Delegate`|✔️請將後置詞 "EventHandler" 新增至事件中所使用的委派名稱。<br /><br /> ✔️請將後置詞「回呼」新增至委派的名稱，而非當做事件處理常式使用。<br /><br /> ❌ 不要將後置詞「委派」新增至委派。|
+|`System.EventArgs`|✔️新增尾碼 "EventArgs"。|
+|`System.Enum`|❌ 不是衍生自這個類別;請改用您的語言支援的關鍵字;例如，在中C#，使用 `enum` 關鍵字。<br /><br /> ❌ 不要新增尾碼「列舉」或「旗標」。|
+|`System.Exception`|✔️新增尾碼 "Exception"。|
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|✔️新增尾碼「字典」。 請注意，`IDictionary` 是特定類型的集合，但這項指導方針優先于後面的較一般集合指導方針。|
+|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|✔️新增尾碼「集合」。|
+|`System.IO.Stream`|✔️新增尾碼「串流」。|
+|`CodeAccessPermission IPermission`|✔️新增尾碼「許可權」。|
 
-## <a name="naming-enumerations"></a>Naming Enumerations
- Names of enumeration types (also called enums) in general should follow the standard type-naming rules (PascalCasing, etc.). However, there are additional guidelines that apply specifically to enums.
+## <a name="naming-enumerations"></a>命名列舉
+ 列舉類型的名稱（也稱為列舉）通常應該遵循標準類型命名規則（PascalCasing 等等）。 不過，還有其他適用于列舉的指導方針。
 
- ✔️ DO use a singular type name for an enumeration unless its values are bit fields.
+ ✔️請將單數類型名稱用於列舉，除非其值為位欄位。
 
- ✔️ DO use a plural type name for an enumeration with bit fields as values, also called flags enum.
+ ✔️確實將複數型別名稱用於具有位欄位做為值（也稱為 flags 列舉）的列舉。
 
- ❌ DO NOT use an "Enum" suffix in enum type names.
+ ❌ 不要在列舉型別名稱中使用 "Enum" 尾碼。
 
- ❌ DO NOT use "Flag" or "Flags" suffixes in enum type names.
+ ❌ 不要在列舉型別名稱中使用「旗標」或「旗標」尾碼。
 
- ❌ DO NOT use a prefix on enumeration value names (e.g., "ad" for ADO enums, "rtf" for rich text enums, etc.).
+ ❌ 不要在列舉值名稱上使用前置詞（例如，"ad" 代表 ADO enum，"rtf" 用於豐富文字列舉等等）。
 
- *Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*
+ *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*
 
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 *Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition[ 節錄。](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [命名方針](../../../docs/standard/design-guidelines/naming-guidelines.md)

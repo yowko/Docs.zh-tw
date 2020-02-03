@@ -16,13 +16,13 @@ ms.locfileid: "76737918"
 # <a name="fonts-wpf"></a>字型 (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 包括使用 OpenType 字型支援豐富的文字呈現。 Windows SDK 包含 OpenType 字型的範例套件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [OpenType 字型功能](opentype-font-features.md)  
  [將字型與應用程式一起封裝](packaging-fonts-with-applications.md)  
  [範例 OpenType 字型套件](sample-opentype-font-pack.md)  
- [「如何」主題](fonts-how-to-topics.md)  
+ [操作說明主題](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>

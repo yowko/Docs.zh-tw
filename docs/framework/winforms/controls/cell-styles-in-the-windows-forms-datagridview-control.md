@@ -144,7 +144,7 @@ ms.locfileid: "76746163"
 > [!NOTE]
 > 無論是否已設定特定的樣式值，快取儲存在儲存格 <xref:System.Windows.Forms.DataGridViewCell.Style%2A> 屬性中的值都很重要。 如果您暫時取代樣式設定，將它還原成其原始的「未設定」狀態，可確保資料格會回到繼承較高層級的樣式設定。 如果您需要判斷資料格的實際有效樣式（不論該樣式是否已繼承），請使用資料格的 <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> 屬性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

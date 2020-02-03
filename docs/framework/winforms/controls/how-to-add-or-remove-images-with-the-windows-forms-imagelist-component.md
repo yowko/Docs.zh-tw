@@ -141,7 +141,7 @@ imageList1.Images.Clear();
 imageList1.Images.RemoveByKey("myPhoto");  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ImageList 元件](imagelist-component-windows-forms.md)
 - [ImageList 元件概觀](imagelist-component-overview-windows-forms.md)

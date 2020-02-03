@@ -24,7 +24,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項用於顯示、�
   
  您可以藉由呼叫 <xref:System.Windows.Forms.TextBoxBase.Undo%2A> 和 <xref:System.Windows.Forms.RichTextBox.Redo%2A> 方法，來復原和重做 <xref:System.Windows.Forms.RichTextBox> 控制項中大部分的編輯作業。 <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> 方法可讓您判斷使用者已復原的最後一個作業是否可以重新套用至控制項。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 控制項](richtextbox-control-windows-forms.md)

@@ -19,14 +19,14 @@ ms.locfileid: "76744967"
 # <a name="maskedtextbox-control-windows-forms"></a>MaskedTextBox 控制項 (Windows Form)
 本主題會連結至其他關於 `MaskedTextBox` 控制項的內容。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [逐步解說：使用 MaskedTextBox 控制項](walkthrough-working-with-the-maskedtextbox-control.md)  
  示範 `MaskedTextBox` 控制項的主要功能。  
   
  [操作說明：將資料繫結至 MaskedTextBox 控制項](how-to-bind-data-to-the-maskedtextbox-control.md)  
  示範當資料庫中的資料不符合您的遮罩定義所預期的格式時，如何重新格式化資料。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.MaskedTextBox>  
  用於執行遮罩文字方塊控制項的主要類別。  
   

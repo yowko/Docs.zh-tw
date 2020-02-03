@@ -16,7 +16,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739561"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>如何：變更 Windows Form 的框線
-在決定 Windows Form 的外觀和行為時，您有幾種框線樣式可以選擇。 藉由變更 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 屬性，您可以控制表單的調整大小行為。 此外，設定 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 也會影響標題列的顯示方式，以及所出現在標題列上的按鈕。 如需詳細資訊，請參閱<xref:System.Windows.Forms.FormBorderStyle>。  
+在決定 Windows Form 的外觀和行為時，您有幾種框線樣式可以選擇。 藉由變更 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 屬性，您可以控制表單的調整大小行為。 此外，設定 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 也會影響標題列的顯示方式，以及所出現在標題列上的按鈕。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.FormBorderStyle>。  
   
  在 Visual Studio 中對於本工作有更詳盡的支援。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "76739561"
   
      此外，如果您已選擇提供選擇性**最小化**和**最大化**按鈕之表單的框線樣式，您可以指定是否要讓這兩個按鈕或兩者都正常運作。 當您想要密切控制使用者經驗時，這些按鈕會很有用。 預設會啟用 [**最小化**] 和 [**最大化**] 按鈕，而且其功能會透過 [**屬性**] 視窗來操作。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>

@@ -35,7 +35,7 @@ Windows Forms <xref:System.Windows.Forms.ScrollBar> 控制項是用來透過在�
   
  當使用者按下其中一個方向鍵或按一下其中一個捲軸按鈕時，<xref:System.Windows.Forms.ScrollBar.Value%2A> 屬性會根據 <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> 屬性中設定的值而變更。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>

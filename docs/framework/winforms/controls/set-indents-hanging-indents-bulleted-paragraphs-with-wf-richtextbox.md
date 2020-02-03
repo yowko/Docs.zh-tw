@@ -25,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項有許多選項�
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>將段落格式化為項目符號清單  
   
-1. 將 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 屬性設定為 `true`。  
+1. 將 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 屬性設為 `true`。  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -68,7 +68,7 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項有許多選項�
     > [!NOTE]
     > 所有這些屬性都會影響任何包含所選取文字的段落，也會影響在目前插入點後面所輸入的文字。 例如，如果使用者選取段落中的文字，然後調整縮排，則新的設定會套用到包含該文字的整個段落，也會套用到任何在選取的段落之後後續輸入的段落。 如需以程式設計方式選取文字的相關資訊，請參閱 <xref:System.Windows.Forms.TextBoxBase.Select%2A>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 控制項](richtextbox-control-windows-forms.md)

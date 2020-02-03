@@ -52,7 +52,7 @@ ms.locfileid: "76740414"
 
 您必須註冊數個 MIME 類型和副檔名，才能讓用戶端系統上的瀏覽器載入正確的處理常式。 您需要新增下列類型：
 
-|副檔名|MIME 類型|
+|分機|MIME 類型|
 |---------------|---------------|
 |.manifest|application/manifest|
 |.xaml|application/xaml+xml|

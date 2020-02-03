@@ -30,7 +30,7 @@ ms.locfileid: "76740952"
   
  變更滑鼠指標的主要方式是將控制項的 [<xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType>] 或 [<xref:System.Windows.Forms.Control.DefaultCursor%2A>] 屬性設定為新的 <xref:System.Windows.Forms.Cursor>。 如需變更滑鼠指標的範例，請參閱 <xref:System.Windows.Forms.Cursor> 類別中的程式碼範例。 此外，<xref:System.Windows.Forms.Cursors> 類別會針對許多不同類型的指標公開一組 <xref:System.Windows.Forms.Cursor> 物件，例如類似手形的指標。 當滑鼠指標位於控制項上時，若要顯示類似沙漏的等候指標，請使用 <xref:System.Windows.Forms.Control> 類別的 <xref:System.Windows.Forms.Control.UseWaitCursor%2A> 屬性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Cursor>
 - [Windows Forms 應用程式中的滑鼠輸入](mouse-input-in-a-windows-forms-application.md)

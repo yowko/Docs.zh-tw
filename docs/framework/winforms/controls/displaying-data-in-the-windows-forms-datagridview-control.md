@@ -21,7 +21,7 @@ ms.locfileid: "76745876"
   
  此外，您可以使用標準格式（例如貨幣格式）來顯示資料，也可以自訂顯示格式來呈現您的資料，不過您需要（例如變更負數的背景色彩，或取代字串值）。含對應的影像）。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Forms DataGridView 控制項的資料顯示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)  
  描述以資料填入控制項的選項。  
   
@@ -46,10 +46,10 @@ ms.locfileid: "76745876"
  [操作說明：將未繫結的資料行加入至已資料繫結的 Windows Forms DataGridView 控制項](unbound-column-to-a-data-bound-datagridview.md)  
  描述如何藉由顯示其他未系結的資料行，來補充系結資料來源中的資料。  
   
- [操作說明：將物件繫結至 Windows Forms DataGridView 控制項](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
+ [如何：將物件繫結至 Windows Forms DataGridView 控制項](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
  描述如何將控制項系結至任意物件的集合，讓每個物件顯示在它自己的資料列中。  
   
- [如何：存取物件繫結至 Windows Forms DataGridView 資料列](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+ [操作說明：存取物件繫結至 Windows Forms DataGridView 資料列](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
  描述如何抓取系結至控制項之特定資料列的物件。  
   
  [逐步解說：使用兩個 Windows Forms DataGridView 控制項建立主從式表單](creating-a-master-detail-form-using-two-datagridviews.md)  
@@ -58,7 +58,7 @@ ms.locfileid: "76745876"
  [操作說明：自訂 Windows Forms DataGridView 控制項中的資料格式](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
  描述如何處理 <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> 事件，以根據其值來變更儲存格的外觀。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.DataGridView>  
  提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "76745876"
  [Windows Forms DataGridView 控制項中的資料輸入](data-entry-in-the-windows-forms-datagridview-control.md)  
  提供主題描述如何變更使用者加入和修改控制項資料的方式。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGridView 控制項](datagridview-control-windows-forms.md)
 - [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)

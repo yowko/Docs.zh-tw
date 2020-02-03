@@ -112,8 +112,8 @@ int j = (int) o;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [參考型別](../../language-reference/keywords/reference-types.md)
-- [實值型別](../../language-reference/builtin-types/value-types.md)
+- [值類型](../../language-reference/builtin-types/value-types.md)

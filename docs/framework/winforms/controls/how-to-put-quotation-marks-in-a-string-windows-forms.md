@@ -18,7 +18,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76735905"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>如何：將引號放入字串中 (Windows Forms)
-您有時可能想要將引號 (" ") 放入文字字串中。 例如：  
+您有時可能想要將引號 (" ") 放入文字字串中。 例如，  
   
  She said, "You deserve a treat!"  
   
@@ -88,7 +88,7 @@ ms.locfileid: "76735905"
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>

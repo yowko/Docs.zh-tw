@@ -21,7 +21,7 @@ ms.locfileid: "76736323"
 
 |類型|副檔名|
 |---|---|
-|Bitmap|.bmp|
+|點陣圖|.bmp|
 |圖示|.ico|
 |GIF|.gif|
 |中繼檔|.wmf|
@@ -41,7 +41,7 @@ ms.locfileid: "76736323"
 
 1. 在 [**屬性**] 視窗中，選取 [<xref:System.Windows.Forms.PictureBox.Image%2A>] 屬性。 以滑鼠右鍵按一下影像物件名稱左側的小型縮圖影像，然後選擇 [**重設**]。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.PictureBox>
 - [PictureBox 控制項概觀](picturebox-control-overview-windows-forms.md)

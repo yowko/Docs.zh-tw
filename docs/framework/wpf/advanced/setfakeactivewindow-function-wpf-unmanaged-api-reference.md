@@ -31,7 +31,7 @@ void __stdcall SetFakeActiveWindow(
   
 ## <a name="parameters"></a>參數  
  hwnd  
- 視窗控制碼。  
+ 視窗控制代碼。  
   
 ## <a name="requirements"></a>需求  
  **平臺：** 請參閱[.NET Framework 系統需求](../../get-started/system-requirements.md)。  
@@ -40,6 +40,6 @@ void __stdcall SetFakeActiveWindow(
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WPF Unmanaged API 參考](wpf-unmanaged-api-reference.md)

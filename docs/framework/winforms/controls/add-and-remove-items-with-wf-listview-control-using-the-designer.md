@@ -22,7 +22,7 @@ ms.locfileid: "76732304"
 
 1. 選取 <xref:System.Windows.Forms.ListView> 控制項。
 
-2. 在 **屬性** 視窗中<xref:System.Windows.Forms.ListView.Items%2A> ，按一下屬性 (![旁邊的**省略號**Visual Studio](./media/visual-studio-ellipsis-button.png)) 的屬性視窗中的省略號按鈕（...） 按鈕。
+2. 在 [**屬性**] 視窗中，按一下 [<xref:System.Windows.Forms.ListView.Items%2A>] 屬性旁邊的**省略號**（![[屬性視窗的 Visual Studio.](./media/visual-studio-ellipsis-button.png)）] 按鈕中的省略號按鈕（...）。
 
      [ **ListViewItem 集合編輯器**] 隨即出現。
 
@@ -30,7 +30,7 @@ ms.locfileid: "76732304"
 
 4. 若要移除專案，請選取它，然後按一下 [**移除**] 按鈕。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ListView 控制項概觀](listview-control-overview-windows-forms.md)
 - [操作說明：將資料行加入至 Windows Forms ListView 控制項](how-to-add-columns-to-the-windows-forms-listview-control.md)

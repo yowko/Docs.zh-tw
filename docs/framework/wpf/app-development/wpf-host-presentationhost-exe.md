@@ -30,7 +30,7 @@ Windows Presentation Foundation （WPF）主機（Presentationhost.exe）是應�
   
  本主題說明可以搭配使用 PresentationHost.exe 的命令列參數。  
   
-## <a name="usage"></a>使用  
+## <a name="usage"></a>使用方式  
  `PresentationHost.exe [parameters] uri|filename`  
   
 ## <a name="parameters"></a>參數  
@@ -58,6 +58,6 @@ Windows Presentation Foundation （WPF）主機（Presentationhost.exe）是應�
 ### <a name="visual-studio-debugging-in-zone"></a>Visual Studio 區域中偵錯  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Security](../security-wpf.md)
+- [安全性](../security-wpf.md)

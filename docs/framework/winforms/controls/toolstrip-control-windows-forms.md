@@ -12,10 +12,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76733878"
 ---
-# <a name="toolstrip-control-windows-forms"></a>{7&gt;ToolStrip 控制項 (Windows Form)&lt;7}
+# <a name="toolstrip-control-windows-forms"></a>ToolStrip 控制項 (Windows Form)
 <xref:System.Windows.Forms.ToolStrip> 控制項可以在 Windows Forms 應用程式中裝載功能表、控制項和使用者控制項的工具列。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -29,18 +29,18 @@ ms.locfileid: "76733878"
  示範在 <xref:System.Windows.Forms.ToolStripComboBox> 中的自動完成功能。  
   
  [操作說明：變更 Windows Forms 中 ToolStrip 項目的間距和對齊方式](how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms.md)  
- 描述在 <xref:System.Windows.Forms.ToolStrip> 上排列 <xref:System.Windows.Forms.ToolStripItem> 的各種方式。  
+ 描述在 <xref:System.Windows.Forms.ToolStripItem> 上排列 <xref:System.Windows.Forms.ToolStrip> 的各種方式。  
   
  [操作說明：變更 Windows Forms 中 ToolStrip 文字和影像的外觀](how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms.md)  
  描述如何在 <xref:System.Windows.Forms.ToolStripItem> 控制項上定義及修改文字和影像的排列方式。  
   
  [操作說明：使用 ToolStripControlHost 為 Windows Forms 控制項換行](how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)  
- 示範在 <xref:System.Windows.Forms.ToolStripControlHost> 中裝載 <xref:System.Windows.Forms.MonthCalendar> 控制項。  
+ 示範在 <xref:System.Windows.Forms.MonthCalendar> 中裝載 <xref:System.Windows.Forms.ToolStripControlHost> 控制項。  
   
- [操作說明：建立和設定 Windows Forms 中的 ToolStrip 控制項自訂產生器](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+ [如何：建立和設定 Windows Forms 中的 ToolStrip 控制項自訂產生器](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
  描述如何在 <xref:System.Windows.Forms.ToolStrip> 控制項中達到標準和自訂繪製。  
   
- [操作說明：自訂繪製 ToolStrip 控制項](how-to-custom-draw-a-toolstrip-control.md)  
+ [如何：自訂繪製 ToolStrip 控制項](how-to-custom-draw-a-toolstrip-control.md)  
  描述在 <xref:System.Windows.Forms.ToolStrip> 控制項中自訂 (擁有者) 繪製的各個層面。  
   
  [操作說明：在 ToolStrip 控制項中建立切換按鈕](how-to-create-toggle-buttons-in-toolstrip-controls.md)  
@@ -71,7 +71,7 @@ ms.locfileid: "76733878"
  描述如何使用 <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 類別來建立複合控制項，以模擬 Microsoft® Outlook®所提供的**流覽窗格**。  
   
  [操作說明：實作自訂的 ToolStripRenderer](how-to-implement-a-custom-toolstriprenderer.md)  
- 描述如何實作衍生自 <xref:System.Windows.Forms.ToolStripRenderer> 的類別，自訂 <xref:System.Windows.Forms.ToolStrip> 控制項的外觀。  
+ 描述如何實作衍生自 <xref:System.Windows.Forms.ToolStrip> 的類別，自訂 <xref:System.Windows.Forms.ToolStripRenderer> 控制項的外觀。  
   
 - [如何：使用設計工具建立具有標準專案的基本 Windows Forms ToolStrip](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "76733878"
   
 - [逐步解說：使用功能表合併和 ToolStrip 控制項建立 MDI 表單](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.ToolStrip> 類別  
  說明這個類別，並且提供其所有成員的連結。  
   

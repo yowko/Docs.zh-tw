@@ -33,7 +33,7 @@ ms.locfileid: "76731166"
 
 無法接收焦點的控制項不能有存取金鑰。
 
-## <a name="programmatic"></a>化
+## <a name="programmatic"></a>程式設計
 
 將 `Text` 屬性設定為字串，其中在將做為快捷方式的字母前面包含連字號（&）。
 
@@ -55,11 +55,11 @@ button1->Text = "&Print";
 > [!NOTE]
 > 若要在標題中使用連字號而不建立存取金鑰，請包含兩個 & （& &）。 標題中會顯示單一符號，而且不會有任何字元加上底線。
 
-## <a name="designer"></a>Designer
+## <a name="designer"></a>設計師
 
 在 Visual Studio 的 [**屬性**] 視窗中，將 [ **Text** ] 屬性設定為包含連字號（' & '）的字串，並在將成為存取金鑰的字母前面。 例如，若要將字母 "P" 設定為存取金鑰，請輸入 **& Print**。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Button>
 - [操作說明：回應 Windows Forms Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)

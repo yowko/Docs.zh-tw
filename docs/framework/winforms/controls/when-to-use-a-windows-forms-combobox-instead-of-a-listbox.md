@@ -25,7 +25,7 @@ ms.locfileid: "76739936"
   
  此外，下拉式方塊會在表單上儲存空間。 因為在使用者按一下向下箭號之前，不會顯示完整清單，所以下拉式方塊可以輕鬆地放入清單方塊無法容納的小型空間中。 當 [<xref:System.Windows.Forms.ComboBox.DropDownStyle%2A>] 屬性設定為 [<xref:System.Windows.Forms.ComboBoxStyle.Simple>] 時，就會發生例外狀況：顯示完整清單，而下拉式方塊所佔用的空間比清單方塊還多。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

@@ -182,13 +182,13 @@ ms.locfileid: "76740214"
 
 ## <a name="next-steps"></a>後續步驟
 
-對齊線提供直覺的方式來對齊表單上的控制項。 進一步的探索建議包括：
+對齊線提供直覺的方式來對齊表單上的控制項。 建議您進一步研究的部分包括：
 
 - 嘗試在另一個 <xref:System.Windows.Forms.GroupBox> 控制項內嵌套 <xref:System.Windows.Forms.GroupBox> 控制項。 將 <xref:System.Windows.Forms.Button> 控制項放在子 <xref:System.Windows.Forms.GroupBox> 控制項內，另一個在父 <xref:System.Windows.Forms.GroupBox> 控制項內。 四處移動 <xref:System.Windows.Forms.Button> 控制項，以查看對齊線如何跨容器界限。
 
 - 建立 <xref:System.Windows.Forms.TextBox> 控制項的資料行，以及 <xref:System.Windows.Forms.Label> 控制項的對應資料行。 將 [<xref:System.Windows.Forms.Label> 控制項] 的 [<xref:System.Windows.Forms.Control.AutoSize%2A>] 屬性值設定為 [`true`]。 使用對齊線來移動 <xref:System.Windows.Forms.Label> 控制項，使其顯示的文字與 <xref:System.Windows.Forms.TextBox> 控制項中的文字對齊。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)

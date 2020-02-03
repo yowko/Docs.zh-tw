@@ -27,7 +27,7 @@ Windows Form <xref:System.Windows.Forms.ImageList> 元件可用來儲存影像�
 
 <xref:System.Windows.Forms.ImageList> 元件的索引鍵屬性是 <xref:System.Windows.Forms.ImageList.Images%2A>，其中包含要供相關聯控制項使用的圖片。 每個個別影像都可以依其索引值或索引鍵來存取。 <xref:System.Windows.Forms.ImageList.ColorDepth%2A> 屬性可決定要用來呈現影像的色彩數目。 所有影像都會以 <xref:System.Windows.Forms.ImageList.ImageSize%2A> 屬性設定的相同大小來顯示。 較大的影像會調整為符合此大小。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ImageList>
 - [操作說明：使用 Windows Forms ImageList 元件加入或移除影像](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

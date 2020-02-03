@@ -62,7 +62,7 @@ ms.locfileid: "76731717"
   
  如果您使用 <xref:System.Windows.Interop.HwndSource.AddHook%2A> 方法來新增該訊息的勾點，則傳送至鍵盤接收的訊息可能不會傳送至 HWND。 訊息可能已直接在訊息抽取層級處理，而未提交至 `DispatchMessage` 函數。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>

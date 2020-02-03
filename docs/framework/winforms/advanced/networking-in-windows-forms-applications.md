@@ -1,5 +1,5 @@
 ---
-title: 網路
+title: 網路功能
 ms.date: 03/30/2017
 helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
@@ -12,10 +12,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745018"
 ---
-# <a name="networking-in-windows-forms-applications"></a>Windows Forms 應用程式中的網路
+# <a name="networking-in-windows-forms-applications"></a>Windows Form 應用程式中的網路
 .NET Framework 提供顯示網頁、下載 Web 內容、與檔案傳輸協定（FTP）網站互動，以及使用 Web 服務的類別，讓您輕鬆地在應用程式中建立網路功能。 下列資源可協助您瞭解 .NET Framework 的網路技術，以及如何將它們整合到 Windows Forms。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Net>  
  .NET Framework 中用來處理網路連接的類別的根命名空間。  
   

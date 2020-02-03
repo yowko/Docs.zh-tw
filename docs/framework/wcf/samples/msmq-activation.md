@@ -269,9 +269,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
 
         此命令可讓您使用 `http://localhost/servicemodelsamples` 和 `net.msmq://localhost/servicemodelsamples`來存取/servicemodelsamples 應用程式。
 
-7. 如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 在 [**開始**] 功能表中，按一下 [**執行**]，然後輸入 `Services.msc`。 搜尋 [Net.tcp 接聽程式**介面卡]** 的服務清單。 以滑鼠右鍵按一下並選取 [**屬性**]。 將 [**啟動類型**] 設定為 [**自動**]，按一下 [套用] **，然後按一下**[**開始**] 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。
+7. 如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 在 [**開始**] 功能表中，按一下 [**執行**]，然後輸入 `Services.msc`。 搜尋 [Net.tcp 接聽程式**介面卡]** 的服務清單。 按一下滑鼠右鍵並選取 [內容]。 將 [**啟動類型**] 設定為 [**自動**]，按一下 [套用] **，然後按一下**[**開始**] 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。
 
-8. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。 此外，還要在發送採購單的用戶端上變更程式碼，以便在送出採購單時將電腦名稱反映於佇列的 URI。 請使用下列程式碼：
+8. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。 此外，還要在發送採購單的用戶端上變更程式碼，以便在送出採購單時將電腦名稱反映於佇列的 URI。 使用下列程式碼：
 
     ```csharp
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");
@@ -347,6 +347,6 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     sc sidtype netmsmqactivator unrestricted
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [AppFabric 裝載和持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

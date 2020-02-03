@@ -67,7 +67,7 @@ ms.locfileid: "76742236"
 
 如需如何儲存檔案的資訊，請參閱[如何：使用 SaveFileDialog 元件儲存檔案](how-to-save-files-using-the-savefiledialog-component.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
 - [FolderBrowserDialog 元件概觀 (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)

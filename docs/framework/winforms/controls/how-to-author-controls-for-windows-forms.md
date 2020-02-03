@@ -50,10 +50,10 @@ ms.locfileid: "76746714"
 
 10. 封裝並部署您的控制項。 如需詳細資訊，請參閱[Visual Studio 中的部署的第一次](/visualstudio/deployment/deploying-applications-services-and-components)查看。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [操作說明：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
+- [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
 - [操作說明：繼承自 Control 類別](how-to-inherit-from-the-control-class.md)
-- [操作說明：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
-- [操作說明：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [如何：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
+- [如何：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [各種自訂控制項](varieties-of-custom-controls.md)

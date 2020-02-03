@@ -53,7 +53,7 @@ ms.locfileid: "76739049"
   
  您可以藉由啟用 MDI 來源上的 <xref:System.Windows.Forms.MenuStrip>，來觸發自動合併。 啟用時，會將來源 <xref:System.Windows.Forms.MenuStrip> 合併至 MDI 目標。 新表單變成作用中時，會在最後一個表單上還原合併，並在新表單上觸發。 您可以視需要在每個 <xref:System.Windows.Forms.ToolStripItem>上設定 <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> 屬性，以及在每個 <xref:System.Windows.Forms.MenuStrip>上設定 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性來控制此行為。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>

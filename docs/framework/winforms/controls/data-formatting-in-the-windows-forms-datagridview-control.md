@@ -31,7 +31,7 @@ ms.locfileid: "76743991"
   
  如果使用者指定值的預設剖析不符合您的需求，您可以處理 <xref:System.Windows.Forms.DataGridView> 控制項的 <xref:System.Windows.Forms.DataGridView.CellParsing> 事件，以提供自訂剖析。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

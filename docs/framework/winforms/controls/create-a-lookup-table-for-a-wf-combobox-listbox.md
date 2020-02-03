@@ -26,14 +26,14 @@ ms.locfileid: "76737364"
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
   
-|OrderID|ItemID|Quantity|  
+|OrderID|ItemID|數量|  
 |-------------|------------|--------------|  
 |4085|12|1|  
 |4086|13|3|  
   
 ### <a name="itemtable"></a>ItemTable  
   
-|識別碼|Name|  
+|ID|名稱|  
 |--------|----------|  
 |12|馬鈴薯|  
 |13|雞肉|  
@@ -60,7 +60,7 @@ ms.locfileid: "76737364"
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|想要在控制項中顯示的資料來源資料表之資料行。 在先前的案例中，這是 `"Name"` （在程式碼中設定，請使用引號）。|  
     |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|包含儲存資訊的資料來源資料表之資料行。 在先前的案例中，這是 `"ID"` （在程式碼中設定，請使用引號）。|  
   
-5. 在程序中，呼叫 <xref:System.Windows.Forms.ControlBindingsCollection> 類別的 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 方法，藉此將控制項的 <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 屬性繫結至記錄表單輸入的資料表。 您也可以在設計工具中執行這項操作，而不是在程式碼中，存取 [**屬性**] 視窗中的控制項的 [<xref:System.Windows.Forms.Control.DataBindings%2A>] 屬性。 在前一個案例中，這是 `OrderDetailsTable`，而資料行是 `"ItemID"`。  
+5. 在程序中，呼叫 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 類別的 <xref:System.Windows.Forms.ControlBindingsCollection> 方法，藉此將控制項的 <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 屬性繫結至記錄表單輸入的資料表。 您也可以在設計工具中執行這項操作，而不是在程式碼中，存取 [**屬性**] 視窗中的控制項的 [<xref:System.Windows.Forms.Control.DataBindings%2A>] 屬性。 在前一個案例中，這是 `OrderDetailsTable`，而資料行是 `"ItemID"`。  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  
@@ -70,7 +70,7 @@ ms.locfileid: "76737364"
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料繫結和 Windows Forms](../data-binding-and-windows-forms.md)
 - [ListBox 控制項概觀](listbox-control-overview-windows-forms.md)

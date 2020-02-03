@@ -18,7 +18,7 @@ ms.locfileid: "76742274"
 # <a name="graphics-overview-windows-forms"></a>圖形概觀 (Windows Form)
 GDI + 是一種圖形裝置介面，可讓程式設計人員撰寫與裝置無關的應用程式。 GDI + 的服務是透過一組 managed 類別公開。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [圖形概觀](overview-of-graphics.md)  
  提供 GDI + 的一般簡介。  
   
@@ -28,7 +28,7 @@ GDI + 是一種圖形裝置介面，可讓程式設計人員撰寫與裝置無�
  [圖形介面的結構](structure-of-the-graphics-interface.md)  
  描述 GDI + 的 managed 類別介面。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Drawing>  
  提供對 GDI + 基本圖形功能的存取。  
   

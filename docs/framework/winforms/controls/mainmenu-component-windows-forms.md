@@ -17,15 +17,15 @@ ms.locfileid: "76747149"
   
  Windows Forms `MainMenu` 元件會在執行時間顯示功能表。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [MainMenu 元件概觀](mainmenu-component-overview-windows-forms.md)  
  說明此元件的內容及其主要功能與屬性。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.MainMenu>  
  說明這個類別，並且提供其所有成員的連結。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

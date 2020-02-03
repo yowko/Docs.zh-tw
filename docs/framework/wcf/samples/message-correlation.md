@@ -313,7 +313,7 @@ static void DisplayOrderStatus()
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [訊息佇列](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))
