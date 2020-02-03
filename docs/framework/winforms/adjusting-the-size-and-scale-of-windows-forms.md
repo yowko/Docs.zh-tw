@@ -13,29 +13,29 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739785"
 ---
-# <a name="adjusting-the-size-and-scale-of-windows-forms"></a><span data-ttu-id="2e29f-102">調整 Windows Forms 的大小和規模</span><span class="sxs-lookup"><span data-stu-id="2e29f-102">Adjusting the size and scale of Windows Forms</span></span>
-<span data-ttu-id="2e29f-103">本主題提供有關調整 Windows Form 大小的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="2e29f-103">This topic provides links to information about resizing Windows Forms.</span></span>  
+# <a name="adjusting-the-size-and-scale-of-windows-forms"></a><span data-ttu-id="8bd80-102">調整 Windows Forms 的大小和規模</span><span class="sxs-lookup"><span data-stu-id="8bd80-102">Adjusting the size and scale of Windows Forms</span></span>
+<span data-ttu-id="8bd80-103">本主題提供有關調整 Windows Form 大小的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="8bd80-103">This topic provides links to information about resizing Windows Forms.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2e29f-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="2e29f-104">In This Section</span></span>  
- [<span data-ttu-id="2e29f-105">操作說明：調整 Windows Forms 的大小</span><span class="sxs-lookup"><span data-stu-id="2e29f-105">How to: Resize Windows Forms</span></span>](how-to-resize-windows-forms.md)  
- <span data-ttu-id="2e29f-106">提供指定 Windows Form 大小的指示。</span><span class="sxs-lookup"><span data-stu-id="2e29f-106">Provides instructions for specifying the size of Windows Forms.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="8bd80-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="8bd80-104">In This Section</span></span>  
+ [<span data-ttu-id="8bd80-105">操作說明：調整 Windows Forms 的大小</span><span class="sxs-lookup"><span data-stu-id="8bd80-105">How to: Resize Windows Forms</span></span>](how-to-resize-windows-forms.md)  
+ <span data-ttu-id="8bd80-106">提供指定 Windows Form 大小的指示。</span><span class="sxs-lookup"><span data-stu-id="8bd80-106">Provides instructions for specifying the size of Windows Forms.</span></span>  
   
- [<span data-ttu-id="2e29f-107">Windows Forms 中的自動縮放比例</span><span class="sxs-lookup"><span data-stu-id="2e29f-107">Automatic Scaling in Windows Forms</span></span>](automatic-scaling-in-windows-forms.md)  
- <span data-ttu-id="2e29f-108">討論如何自動縮放比例，讓表單和它的控制項適當地顯示於電腦之間。</span><span class="sxs-lookup"><span data-stu-id="2e29f-108">Discusses how automatic scaling enables a form and its controls to be displayed appropriately between machines.</span></span>  
+ [<span data-ttu-id="8bd80-107">Windows Forms 中的自動縮放比例</span><span class="sxs-lookup"><span data-stu-id="8bd80-107">Automatic Scaling in Windows Forms</span></span>](automatic-scaling-in-windows-forms.md)  
+ <span data-ttu-id="8bd80-108">討論如何自動縮放比例，讓表單和它的控制項適當地顯示於電腦之間。</span><span class="sxs-lookup"><span data-stu-id="8bd80-108">Discusses how automatic scaling enables a form and its controls to be displayed appropriately between machines.</span></span>  
   
- <span data-ttu-id="2e29f-109">[Windows Forms   中的高 DPI 支援](high-dpi-support-in-windows-forms.md)</span><span class="sxs-lookup"><span data-stu-id="2e29f-109">[High DPI Support in Windows Forms](high-dpi-support-in-windows-forms.md)  </span></span>  
- <span data-ttu-id="2e29f-110">討論 Windows Forms 的高 DPI 和動態調整的支援。</span><span class="sxs-lookup"><span data-stu-id="2e29f-110">Discusses Windows Forms' support for High DPI and dynamic scaling.</span></span> 
+ <span data-ttu-id="8bd80-109">[Windows Forms   中的高 DPI 支援](high-dpi-support-in-windows-forms.md)</span><span class="sxs-lookup"><span data-stu-id="8bd80-109">[High DPI Support in Windows Forms](high-dpi-support-in-windows-forms.md)  </span></span>  
+ <span data-ttu-id="8bd80-110">討論 Windows Forms 的高 DPI 和動態調整的支援。</span><span class="sxs-lookup"><span data-stu-id="8bd80-110">Discusses Windows Forms' support for High DPI and dynamic scaling.</span></span> 
   
-## <a name="reference"></a><span data-ttu-id="2e29f-111">參考資料</span><span class="sxs-lookup"><span data-stu-id="2e29f-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8bd80-111">參考</span><span class="sxs-lookup"><span data-stu-id="8bd80-111">Reference</span></span>  
  <xref:System.Drawing.Size>  
- <span data-ttu-id="2e29f-112">描述這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="2e29f-112">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="8bd80-112">描述這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="8bd80-112">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.TableLayoutPanel>  
- <span data-ttu-id="2e29f-113">描述這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="2e29f-113">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="8bd80-113">描述這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="8bd80-113">Describes this class and has links to all of its members.</span></span>  
   
  <xref:System.Windows.Forms.FlowLayoutPanel>  
- <span data-ttu-id="2e29f-114">描述這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="2e29f-114">Describes this class and has links to all of its members.</span></span>  
+ <span data-ttu-id="8bd80-114">描述這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="8bd80-114">Describes this class and has links to all of its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="2e29f-115">相關章節</span><span class="sxs-lookup"><span data-stu-id="2e29f-115">Related sections</span></span>  
- [<span data-ttu-id="2e29f-116">變更 Windows Forms 的外觀</span><span class="sxs-lookup"><span data-stu-id="2e29f-116">Changing the appearance of Windows Forms</span></span>](changing-the-appearance-of-windows-forms.md)  
- <span data-ttu-id="2e29f-117">提供描述變更 Windows Form 外觀的其他方式之主題連結。</span><span class="sxs-lookup"><span data-stu-id="2e29f-117">Provides links to topics describing other ways to change the appearance of Windows Forms.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="8bd80-115">相關章節</span><span class="sxs-lookup"><span data-stu-id="8bd80-115">Related sections</span></span>  
+ [<span data-ttu-id="8bd80-116">變更 Windows Forms 的外觀</span><span class="sxs-lookup"><span data-stu-id="8bd80-116">Changing the appearance of Windows Forms</span></span>](changing-the-appearance-of-windows-forms.md)  
+ <span data-ttu-id="8bd80-117">提供描述變更 Windows Form 外觀的其他方式之主題連結。</span><span class="sxs-lookup"><span data-stu-id="8bd80-117">Provides links to topics describing other ways to change the appearance of Windows Forms.</span></span>

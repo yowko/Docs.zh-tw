@@ -16,12 +16,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76731732"
 ---
-# <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="8f8bb-102">SetFakeActiveWindow 函式（WPF 非受控 API 參考）</span><span class="sxs-lookup"><span data-stu-id="8f8bb-102">SetFakeActiveWindow Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="8f8bb-103">這個 API 支援 Windows Presentation Foundation （WPF）基礎結構，但不適合直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="8f8bb-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="setfakeactivewindow-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="6bbba-102">SetFakeActiveWindow 函式（WPF 非受控 API 參考）</span><span class="sxs-lookup"><span data-stu-id="6bbba-102">SetFakeActiveWindow Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="6bbba-103">這個 API 支援 Windows Presentation Foundation （WPF）基礎結構，但不適合直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="6bbba-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="8f8bb-104">由適用于 Windows 管理的 Windows Presentation Foundation （WPF）基礎結構使用。</span><span class="sxs-lookup"><span data-stu-id="8f8bb-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="6bbba-104">由適用于 Windows 管理的 Windows Presentation Foundation （WPF）基礎結構使用。</span><span class="sxs-lookup"><span data-stu-id="6bbba-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8f8bb-105">語法</span><span class="sxs-lookup"><span data-stu-id="8f8bb-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6bbba-105">語法</span><span class="sxs-lookup"><span data-stu-id="6bbba-105">Syntax</span></span>  
   
 ```cpp  
 void __stdcall SetFakeActiveWindow(  
@@ -29,17 +29,17 @@ void __stdcall SetFakeActiveWindow(
 )  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8f8bb-106">參數</span><span class="sxs-lookup"><span data-stu-id="8f8bb-106">Parameters</span></span>  
- <span data-ttu-id="8f8bb-107">hwnd</span><span class="sxs-lookup"><span data-stu-id="8f8bb-107">hwnd</span></span>  
- <span data-ttu-id="8f8bb-108">視窗控制碼。</span><span class="sxs-lookup"><span data-stu-id="8f8bb-108">A window handle.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6bbba-106">參數</span><span class="sxs-lookup"><span data-stu-id="6bbba-106">Parameters</span></span>  
+ <span data-ttu-id="6bbba-107">hwnd</span><span class="sxs-lookup"><span data-stu-id="6bbba-107">hwnd</span></span>  
+ <span data-ttu-id="6bbba-108">視窗控制代碼。</span><span class="sxs-lookup"><span data-stu-id="6bbba-108">A window handle.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8f8bb-109">需求</span><span class="sxs-lookup"><span data-stu-id="8f8bb-109">Requirements</span></span>  
- <span data-ttu-id="8f8bb-110">**平臺：** 請參閱[.NET Framework 系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8f8bb-110">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6bbba-109">需求</span><span class="sxs-lookup"><span data-stu-id="6bbba-109">Requirements</span></span>  
+ <span data-ttu-id="6bbba-110">**平臺：** 請參閱[.NET Framework 系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6bbba-110">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8f8bb-111">**DLL：** PresentationHost_v0400 .dll</span><span class="sxs-lookup"><span data-stu-id="8f8bb-111">**DLL:** PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="6bbba-111">**DLL：** PresentationHost_v0400 .dll</span><span class="sxs-lookup"><span data-stu-id="6bbba-111">**DLL:** PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="8f8bb-112">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8f8bb-112">**.NET Framework Version:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="6bbba-112">**.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6bbba-112">**.NET Framework Version:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8f8bb-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="8f8bb-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6bbba-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6bbba-113">See also</span></span>
 
-- [<span data-ttu-id="8f8bb-114">WPF Unmanaged API 參考</span><span class="sxs-lookup"><span data-stu-id="8f8bb-114">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+- [<span data-ttu-id="6bbba-114">WPF Unmanaged API 參考</span><span class="sxs-lookup"><span data-stu-id="6bbba-114">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)

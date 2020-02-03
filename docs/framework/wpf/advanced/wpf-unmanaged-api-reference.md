@@ -9,19 +9,19 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76744446"
 ---
-# <a name="wpf-unmanaged-api-reference"></a><span data-ttu-id="95013-102">WPF 非受控 API 參考</span><span class="sxs-lookup"><span data-stu-id="95013-102">WPF Unmanaged API Reference</span></span>
-<span data-ttu-id="95013-103">Windows Presentation Foundation （WPF）程式庫會公開一些僅供內部使用的非受控函式。</span><span class="sxs-lookup"><span data-stu-id="95013-103">Windows Presentation Foundation (WPF) libraries expose a number of unmanaged functions that are intended for internal use only.</span></span> <span data-ttu-id="95013-104">不應該從使用者程式碼呼叫它們。</span><span class="sxs-lookup"><span data-stu-id="95013-104">They should not be called from user code.</span></span>  
+# <a name="wpf-unmanaged-api-reference"></a><span data-ttu-id="c81ca-102">WPF 非受控 API 參考</span><span class="sxs-lookup"><span data-stu-id="c81ca-102">WPF Unmanaged API Reference</span></span>
+<span data-ttu-id="c81ca-103">Windows Presentation Foundation （WPF）程式庫會公開一些僅供內部使用的非受控函式。</span><span class="sxs-lookup"><span data-stu-id="c81ca-103">Windows Presentation Foundation (WPF) libraries expose a number of unmanaged functions that are intended for internal use only.</span></span> <span data-ttu-id="c81ca-104">不應該從使用者程式碼呼叫它們。</span><span class="sxs-lookup"><span data-stu-id="c81ca-104">They should not be called from user code.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="95013-105">本章節內容</span><span class="sxs-lookup"><span data-stu-id="95013-105">In This Section</span></span>  
- [<span data-ttu-id="95013-106">啟用函式</span><span class="sxs-lookup"><span data-stu-id="95013-106">Activate Function</span></span>](activate-function-wpf-unmanaged-api-reference.md)  
- [<span data-ttu-id="95013-107">CreateIDispatchSTAForwarder 函式</span><span class="sxs-lookup"><span data-stu-id="95013-107">CreateIDispatchSTAForwarder Function</span></span>](createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md)  
- [<span data-ttu-id="95013-108">停用函式</span><span class="sxs-lookup"><span data-stu-id="95013-108">Deactivate Function</span></span>](deactivate-function-wpf-unmanaged-api-reference.md)  
- [<span data-ttu-id="95013-109">ForwardTranslateAccelerator 函式</span><span class="sxs-lookup"><span data-stu-id="95013-109">ForwardTranslateAccelerator Function</span></span>](forwardtranslateaccelerator-function-wpf-unmanaged-api-reference.md)  
- [<span data-ttu-id="95013-110">LoadFromHistory 函式</span><span class="sxs-lookup"><span data-stu-id="95013-110">LoadFromHistory Function</span></span>](loadfromhistory-function-wpf-unmanaged-api-reference.md)  
- [<span data-ttu-id="95013-111">ProcessUnhandledException 函式</span><span class="sxs-lookup"><span data-stu-id="95013-111">ProcessUnhandledException Function</span></span>](processunhandledexception-function-wpf-unmanaged-api-reference.md)  
- [<span data-ttu-id="95013-112">SaveToHistory 函式</span><span class="sxs-lookup"><span data-stu-id="95013-112">SaveToHistory Function</span></span>](savetohistory-function-wpf-unmanaged-api-reference.md)  
- [<span data-ttu-id="95013-113">SetFakeActiveWindow 函式</span><span class="sxs-lookup"><span data-stu-id="95013-113">SetFakeActiveWindow Function</span></span>](setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c81ca-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="c81ca-105">In This Section</span></span>  
+ [<span data-ttu-id="c81ca-106">啟用函式</span><span class="sxs-lookup"><span data-stu-id="c81ca-106">Activate Function</span></span>](activate-function-wpf-unmanaged-api-reference.md)  
+ [<span data-ttu-id="c81ca-107">CreateIDispatchSTAForwarder 函式</span><span class="sxs-lookup"><span data-stu-id="c81ca-107">CreateIDispatchSTAForwarder Function</span></span>](createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md)  
+ [<span data-ttu-id="c81ca-108">停用函式</span><span class="sxs-lookup"><span data-stu-id="c81ca-108">Deactivate Function</span></span>](deactivate-function-wpf-unmanaged-api-reference.md)  
+ [<span data-ttu-id="c81ca-109">ForwardTranslateAccelerator 函式</span><span class="sxs-lookup"><span data-stu-id="c81ca-109">ForwardTranslateAccelerator Function</span></span>](forwardtranslateaccelerator-function-wpf-unmanaged-api-reference.md)  
+ [<span data-ttu-id="c81ca-110">LoadFromHistory 函式</span><span class="sxs-lookup"><span data-stu-id="c81ca-110">LoadFromHistory Function</span></span>](loadfromhistory-function-wpf-unmanaged-api-reference.md)  
+ [<span data-ttu-id="c81ca-111">ProcessUnhandledException 函式</span><span class="sxs-lookup"><span data-stu-id="c81ca-111">ProcessUnhandledException Function</span></span>](processunhandledexception-function-wpf-unmanaged-api-reference.md)  
+ [<span data-ttu-id="c81ca-112">SaveToHistory 函式</span><span class="sxs-lookup"><span data-stu-id="c81ca-112">SaveToHistory Function</span></span>](savetohistory-function-wpf-unmanaged-api-reference.md)  
+ [<span data-ttu-id="c81ca-113">SetFakeActiveWindow 函式</span><span class="sxs-lookup"><span data-stu-id="c81ca-113">SetFakeActiveWindow Function</span></span>](setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
   
-## <a name="see-also"></a><span data-ttu-id="95013-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="95013-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c81ca-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c81ca-114">See also</span></span>
 
-- [<span data-ttu-id="95013-115">進階</span><span class="sxs-lookup"><span data-stu-id="95013-115">Advanced</span></span>](index.md)
+- [<span data-ttu-id="c81ca-115">進階</span><span class="sxs-lookup"><span data-stu-id="c81ca-115">Advanced</span></span>](index.md)
