@@ -36,7 +36,7 @@ ms.locfileid: "76728344"
 ## <a name="visual-customization-of-the-row-for-new-records"></a>新記錄之資料列的視覺自訂  
  當新記錄的資料列建立時，它會根據 <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> 屬性所指定的資料列。 未為此資料列指定的任何儲存格樣式，都是繼承自其他屬性。 如需有關儲存格樣式繼承的詳細資訊，請參閱[Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。  
   
- 新記錄之資料列中的儲存格所顯示的初始值，會從每一個資料格的 <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> 屬性中抓取。 對於 <xref:System.Windows.Forms.DataGridViewImageCell>類型的資料格，此屬性會傳回預留位置影像。 否則，這個屬性會傳回 `null`。 您可以覆寫這個屬性來傳回自訂值。 不過，當焦點進入新記錄的資料列時，這些初始值可以由 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 事件處理常式取代。  
+ 新記錄之資料列中的儲存格所顯示的初始值，會從每一個資料格的 <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> 屬性中抓取。 對於 <xref:System.Windows.Forms.DataGridViewImageCell>類型的資料格，此屬性會傳回預留位置影像。 否則，這個函式會傳回 `null`。 您可以覆寫這個屬性來傳回自訂值。 不過，當焦點進入新記錄的資料列時，這些初始值可以由 <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> 事件處理常式取代。  
   
  此資料列標頭的標準圖示（也就是箭號或星號）不會公開公開。 如果您想要自訂圖示，您將需要建立自訂的 <xref:System.Windows.Forms.DataGridViewRowHeaderCell> 類別。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "76728344"
 ## <a name="virtual-mode"></a>虛擬模式  
  如果您要執行虛擬模式，您必須追蹤資料模型中何時需要新記錄的資料列，以及何時要回復加入的資料列。 這項功能的確切執行取決於資料模型的執行及其交易語義，例如，認可範圍是在儲存格或資料列層級。 如需詳細資訊，請參閱[Windows Forms DataGridView 控制項中的虛擬模式](virtual-mode-in-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>

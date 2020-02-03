@@ -24,7 +24,7 @@ ms.locfileid: "76731266"
     > [!NOTE]
     > <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> 屬性只會影響執行時間的使用者互動。 您仍然可以藉由變更文字方塊的 [<xref:System.Windows.Forms.TextBox.Text%2A>] 屬性，在執行時間以程式設計方式變更文字方塊內容。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox 控制項概觀](textbox-control-overview-windows-forms.md)

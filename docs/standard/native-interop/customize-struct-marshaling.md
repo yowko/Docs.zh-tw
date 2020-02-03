@@ -163,7 +163,7 @@ struct InPlaceArray
 
 .NET 也為封送處理字串欄位提供各種自訂。
 
-根據預設，.NET 會將字串封送處理為指向結尾為 Null 之字串的指標。 編碼取決於 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 中 <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> 欄位的值。 若未指定任何屬性，編碼會預設為 ANSI 編碼。
+根據預設，.NET 會將字串封送處理為指向結尾為 Null 之字串的指標。 編碼取決於 <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> 中 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 欄位的值。 若未指定任何屬性，編碼會預設為 ANSI 編碼。
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -195,7 +195,7 @@ struct DefaultString
 };
 ```
 
-若需要為不同的藍未使用不同的編碼或只是想要在您的結構定義中更為明確，您可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 屬性上的 <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> 或 <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> 值。
+若需要為不同的藍未使用不同的編碼或只是想要在您的結構定義中更為明確，您可以使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> 屬性上的 <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> 或 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 值。
 
 ```csharp
 public struct AnsiString
@@ -227,7 +227,7 @@ struct UnicodeString
 };
 ```
 
-若想要使用 UTF-8 編碼來封送處理您的字串，您可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 中的 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 值。
+若想要使用 UTF-8 編碼來封送處理您的字串，您可以使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 中的 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 值。
 
 ```csharp
 public struct UTF8String
@@ -247,7 +247,7 @@ struct UTF8String
 > [!NOTE]
 > 使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 需要 .NET Framework 4.7 (或更新版本) 或 .NET Core 1.1 (或更新版本)。 它在 .NET Standard 2.0 中不提供。
 
-若您要處理 COM API，您可能必須將字串封送處理為 `BSTR`。 使用 <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> 值，您可以將字串封送處理為 `BSTR`。
+若您要處理 COM API，您可能必須將字串封送處理為 `BSTR`。 使用 <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> 值時，您可以將字串封送處理為 `BSTR`。
 
 ```csharp
 public struct BString
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-使用 WinRT 型 API 時，您可能需要將字串封送處理為 `HSTRING`。  使用 <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> 值，您可以將字串封送處理為 `HSTRING`。
+使用 WinRT 型 API 時，您可能需要將字串封送處理為 `HSTRING`。  使用 <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> 值時，您可以將字串封送處理為 `HSTRING`。
 
 ```csharp
 public struct HString
@@ -358,7 +358,7 @@ struct ObjectDefault
 };
 ```
 
-若要將物件欄位封送處理為 `IDispatch*`，請新增具有 <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> 值的 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。
+若要將物件欄位封送處理為 `IDispatch*`，請新增具有 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 值的 <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType>。
 
 ```csharp
 public struct ObjectDispatch
@@ -375,7 +375,7 @@ struct ObjectDispatch
 };
 ```
 
-若要將它封送處理為 `VARIANT`，請新增具有 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 值的 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。
+若要將它封送處理為 `VARIANT`，請新增具有 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 值的 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>。
 
 ```csharp
 public struct ObjectVariant
@@ -394,7 +394,7 @@ struct ObjectVariant
 
 下表說明 `obj` 的不同執行階段型別如何對應到 `VARIANT` 中儲存的各種型別：
 
-| .NET 型別 | VARIANT 型別 | | .NET 型別 | VARIANT 型別 |
+| .NET 類型 | VARIANT 型別 | | .NET 類型 | VARIANT 型別 |
 |------------|--------------|-|----------|--------------|
 |  `byte`  | `VT_UI1` |     | `System.Runtime.InteropServices.BStrWrapper` | `VT_BSTR` |
 | `sbyte`  | `VT_I1`  |     | `object`  | `VT_DISPATCH` |

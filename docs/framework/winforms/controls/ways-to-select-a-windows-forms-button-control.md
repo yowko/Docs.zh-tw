@@ -28,7 +28,7 @@ ms.locfileid: "76740012"
   
 - 呼叫 <xref:System.Windows.Forms.Button.PerformClick%2A> 方法，以程式設計方式選取按鈕。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Button 控制項概觀](button-control-overview-windows-forms.md)
 - [操作說明：回應 Windows Forms Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)

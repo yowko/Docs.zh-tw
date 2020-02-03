@@ -189,7 +189,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>表示在您的網域內建類型中的錯誤案例和不合法的狀態
 
-使用[區分](../language-reference/discriminated-unions.md)聯集F# ，可讓您在類型系統中代表有問題的程式狀態。 例如：
+使用[區分](../language-reference/discriminated-unions.md)聯集F# ，可讓您在類型系統中代表有問題的程式狀態。 例如，
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -224,7 +224,7 @@ let handleWithdrawal amount =
 
 中F#可用來引發例外狀況的主要結構，應依照下列喜好設定順序來考慮：
 
-| 函數 | 語法 | 用途 |
+| 函數 | 語法 | 目的 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 使用指定的引數名稱引發 `System.ArgumentNullException`。 |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 使用指定的引數名稱和訊息，引發 `System.ArgumentException`。 |
@@ -620,7 +620,7 @@ type Closure1Table() =
 
 #### <a name="prefer-let-mutable-to-reference-cells"></a>偏好 `let mutable` 參考資料格
 
-參考儲存格是一種方式，代表值的參考，而不是值本身。 雖然它們可以用於效能關鍵程式碼，但不建議您這麼做。 參考下列範例：
+參考儲存格是一種方式，代表值的參考，而不是值本身。 雖然它們可以用於效能關鍵程式碼，但不建議您這麼做。 請考慮下列範例：
 
 ```fsharp
 let kernels =
@@ -672,7 +672,7 @@ F#具有物件和麵向物件（OO）概念的完整支援。 雖然許多 OO �
 * 自動屬性
 * 執行 `IDisposable` 和 `IEnumerable`
 * 類型延伸模組
-* 「事件」
+* 事件
 * 結構
 * 委派
 * 列舉

@@ -26,7 +26,7 @@ Windows Form <xref:System.Windows.Forms.SaveFileDialog> 元件是預先設定的
 
 當它新增至表單時，<xref:System.Windows.Forms.SaveFileDialog> 元件會出現在 Visual Studio Windows Form 設計工具底部的紙匣中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [SaveFileDialog 元件](savefiledialog-component-windows-forms.md)

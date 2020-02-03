@@ -14,11 +14,11 @@ ms.locfileid: "76732358"
 # <a name="changing-the-appearance-of-windows-forms"></a>變更 Windows Form 的外觀
 您可以使用許多不同的方式，來自訂 Windows Forms 應用程式的外觀，例如變更框線、不透明度、形狀、樣式，或設定 Windows Forms 應用程式的背景影像。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：變更 Windows Forms 的框線](how-to-change-the-borders-of-windows-forms.md)  
  示範如何變更表單的框線樣式。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.Form>  
  描述這個類別，並且提供其所有成員的連結。  
   

@@ -17,7 +17,7 @@ ms.locfileid: "76734247"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet clean` - 清除專案的輸出。
 
@@ -33,7 +33,7 @@ dotnet clean [-h|--help]
 
 `dotnet clean` 命令會清除前一個組建的輸出。 它會實作為 [MSBuild 目標](/visualstudio/msbuild/msbuild-targets)，因此命令在執行的時候會評估專案。 只會清除在建置期間建立的輸出。 中繼 (*obj*) 和最後輸出 (*bin*) 這兩個資料夾都會清除。
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>引數
 
 `PROJECT | SOLUTION`
 
@@ -43,7 +43,7 @@ dotnet clean [-h|--help]
 
 * **`-c|--configuration {Debug|Release}`**
 
-  定義組建組態。 預設值為 `Debug`。 如果在建置階段指定此選項，清除時才需要使用它。
+  定義組建組態。 預設值是 `Debug`。 如果在建置階段指定此選項，清除時才需要使用它。
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -55,11 +55,11 @@ dotnet clean [-h|--help]
 
 * **`--interactive`**
 
-  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供。
+  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供使用。
 
 * **`--nologo`**
 
-  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供。
+  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供使用。
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -71,7 +71,7 @@ dotnet clean [-h|--help]
 
 * **`-v|--verbosity <LEVEL>`**
 
-  設定 MSBuild 詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設為 `normal`。
+  設定 MSBuild 詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `normal`。
 
 ## <a name="examples"></a>範例
 

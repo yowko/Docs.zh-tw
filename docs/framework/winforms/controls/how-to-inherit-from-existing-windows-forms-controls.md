@@ -28,7 +28,7 @@ ms.locfileid: "76736479"
 
 1. 從 [專案] 功能表選擇 [新增項目]。
 
-    [新增項目] 對話方塊隨即出現。
+    [加入新項目] 對話方塊隨即出現。
 
 1. 在 [新增項目] 對話方塊中，連按兩下 [自訂控制項]。
 
@@ -85,11 +85,11 @@ ms.locfileid: "76736479"
 
 1. 儲存並測試您的控制項。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [各種自訂控制項](varieties-of-custom-controls.md)
 - [操作說明：繼承自 Control 類別](how-to-inherit-from-the-control-class.md)
-- [操作說明：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
+- [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
 - [操作說明：撰寫 Windows Forms 的控制項](how-to-author-controls-for-windows-forms.md)
 - [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [逐步解說：繼承自 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

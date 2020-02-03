@@ -130,7 +130,7 @@ ms.locfileid: "76732225"
        }  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [TreeView 控制項](treeview-control-windows-forms.md)
 - [ListView 控制項](listview-control-windows-forms.md)

@@ -41,7 +41,7 @@ ms.locfileid: "76732188"
 ## <a name="robust-programming"></a>最佳化程式設計  
  當您將 <xref:System.Windows.Forms.DataGridView> 控制項系結到外部資料源，或藉由執行虛擬模式來提供自己的資料來源時，可能會遇到效能問題。 若要避免使用大量資料時的效能損失，請處理 <xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> 事件，而不是設定多個儲存格的 <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> 屬性。 當您處理這個事件時，取得資料格的值 <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> 屬性會引發事件，並傳回事件處理常式中所指定 <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> 屬性的值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>

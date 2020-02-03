@@ -29,11 +29,11 @@ ms.locfileid: "76728280"
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>若要在 TextBox 控制項中查看多行  
   
-1. 將 <xref:System.Windows.Forms.TextBox.Multiline%2A> 屬性設定為 `true`。 如果 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 是 `true` （預設值），則控制項中的文字會顯示為一或多個段落;否則，它會顯示為清單，其中某些行可能會在控制項的邊緣裁剪。  
+1. 將 <xref:System.Windows.Forms.TextBox.Multiline%2A> 屬性設為 `true`。 如果 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 是 `true` （預設值），則控制項中的文字會顯示為一或多個段落;否則，它會顯示為清單，其中某些行可能會在控制項的邊緣裁剪。  
   
 2. 將 <xref:System.Windows.Forms.TextBox.ScrollBars%2A> 屬性設定為適當值。  
   
-    |{2&gt;值&lt;2}|描述|  
+    |值|描述|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.ScrollBars.None>|如果文字將會是幾乎一律符合控制項的段落，請使用此值。 如果文字太長而無法全部顯示時，使用者可以使用滑鼠指標在控制項內四處移動。|  
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|如果您想要顯示行清單，其中有些可能會比 <xref:System.Windows.Forms.TextBox> 控制項的寬度還長，請使用此值。|  
@@ -41,12 +41,12 @@ ms.locfileid: "76728280"
   
 3. 將 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> 屬性設定為適當值。  
   
-    |{2&gt;值&lt;2}|描述|  
+    |值|描述|  
     |-----------|-----------------|  
     |`false`|控制項中的文字不會自動換行，因此它會向右滾動，直到到達分行符號為止。 如果您選擇上方的 [<xref:System.Windows.Forms.ScrollBars.Horizontal> 捲軸] 或 [<xref:System.Windows.Forms.ScrollBars.Both>]，請使用此值。|  
     |`true` (預設值)|水準捲軸不會出現。 如果您選擇 [<xref:System.Windows.Forms.ScrollBars.Vertical> 捲軸] 或 [<xref:System.Windows.Forms.ScrollBars.None>上方]，以顯示一或多個段落，請使用此值。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox 控制項概觀](textbox-control-overview-windows-forms.md)

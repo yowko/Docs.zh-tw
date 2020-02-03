@@ -11,17 +11,17 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76727909"
 ---
-# <a name="mouse-input-in-a-windows-forms-application"></a>Windows Forms 應用程式中的滑鼠輸入
+# <a name="mouse-input-in-a-windows-forms-application"></a>Windows Form 應用程式中的滑鼠輸入
 Windows Forms 包含各種滑鼠事件，並另外支援自訂的滑鼠游標、滑鼠捕捉和拖放行為。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [滑鼠輸入在 Windows Form 中的運作方式](how-mouse-input-works-in-windows-forms.md)  
  提供有關滑鼠事件和如何取得滑鼠最新資訊與系統設定的資訊。  
   
  [Windows Forms 中的滑鼠事件](mouse-events-in-windows-forms.md)  
  提供有關滑鼠事件發生順序以及特定控制項中是如何引發滑鼠事件的資訊。  
   
- [如何：區分按一下和按兩下](how-to-distinguish-between-clicks-and-double-clicks.md)  
+ [操作說明：區分按一下和按兩下](how-to-distinguish-between-clicks-and-double-clicks.md)  
  示範如何使用單擊和雙擊來啟始不相容的動作。  
   
  [Windows Forms 中的滑鼠指標](mouse-pointers-in-windows-forms.md)  

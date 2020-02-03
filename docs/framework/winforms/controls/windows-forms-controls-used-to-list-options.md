@@ -15,7 +15,7 @@ ms.locfileid: "76742347"
 # <a name="windows-forms-controls-used-to-list-options"></a>用來列出選項的 Windows Form 控制項
 如果您想要為使用者提供可供選擇的選項清單，可以將各種控制項新增至 Windows Form。 視您想要限制使用者輸入的數量而定，您可以加入 <xref:System.Windows.Forms.ListBox> 控制項、<xref:System.Windows.Forms.ComboBox> 控制項或 <xref:System.Windows.Forms.CheckedListBox> 控制項。 使用下列連結來判斷最符合您需求的控制項。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [何時使用 Windows Forms ComboBox 取代 ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)  
  根據 Windows Form 的需求和限制，建議適當的清單型控制項。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76742347"
  [操作說明：排序 Windows Forms 中 ComboBox、ListBox 或 CheckedListBox 控制項的內容](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
  說明如何排序資料來源中的清單資料。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.CheckedListBox>  
  說明這個類別，並且提供其所有成員的連結。  
   

@@ -42,19 +42,19 @@ ms.locfileid: "76734476"
 |<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|取得或設定值，指出表單是否為 MDI 子表單的容器。|  
 |<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|取得或設定值，指出是否會顯示 <xref:System.Windows.Forms.MenuStrip>的工具提示。|  
 |<xref:System.Windows.Forms.MenuStrip.CanOverflow%2A>|取得或設定值，表示 <xref:System.Windows.Forms.MenuStrip> 是否支援溢位功能。|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|取得或設定與 <xref:System.Windows.Forms.ToolStripMenuItem>相關聯的快速鍵。|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|取得或設定值，指出與 <xref:System.Windows.Forms.ToolStripMenuItem> 相關聯的快速鍵是否會顯示在 <xref:System.Windows.Forms.ToolStripMenuItem>旁。|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|取得或設定與 <xref:System.Windows.Forms.ToolStripMenuItem> 關聯的快速鍵。|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|取得或設定值，指出 <xref:System.Windows.Forms.ToolStripMenuItem> 的旁邊是否顯示與 <xref:System.Windows.Forms.ToolStripMenuItem> 關聯的快速鍵。|  
   
  下表顯示重要的 <xref:System.Windows.Forms.MenuStrip> 附屬類別。  
   
 |類別|描述|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|表示 <xref:System.Windows.Forms.MenuStrip> 或 <xref:System.Windows.Forms.ContextMenuStrip>上顯示的可選取選項。|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|表示顯示在 <xref:System.Windows.Forms.MenuStrip> 或 <xref:System.Windows.Forms.ContextMenuStrip> 上的可選取選項。|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|代表捷徑功能表。|  
 |<xref:System.Windows.Forms.ToolStripDropDown>|表示可讓使用者從清單中選取單一專案的控制項，當使用者按一下 <xref:System.Windows.Forms.ToolStripDropDownButton> 或更高層級的功能表項目時，就會顯示此清單。|  
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|為衍生自 <xref:System.Windows.Forms.ToolStripItem> 的控制項提供基本功能，而這些控制項會在按一下時顯示下拉式專案。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>

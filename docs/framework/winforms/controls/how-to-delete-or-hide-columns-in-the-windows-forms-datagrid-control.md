@@ -124,7 +124,7 @@ ms.locfileid: "76743292"
     }  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [如何：在執行階段時變更 Windows Forms DataGrid 控制項中顯示的資料](change-displayed-data-at-run-time-wf-datagrid-control.md)
-- [如何：將資料表和資料行新增至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [操作說明：在執行階段時變更 Windows Forms DataGrid 控制項中顯示的資料](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [操作說明：將資料表和資料行新增至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

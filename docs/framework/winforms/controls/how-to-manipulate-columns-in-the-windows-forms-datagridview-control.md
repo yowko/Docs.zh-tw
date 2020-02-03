@@ -19,7 +19,7 @@ ms.locfileid: "76736090"
 ---
 # <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>如何：管理 Windows Forms DataGridView 控制項中的資料行
 
-下列程式碼範例顯示使用 <xref:System.Windows.Forms.DataGridViewColumn> 類別屬性操作 <xref:System.Windows.Forms.DataGridView> 資料行的各種方式。
+下列程式碼範例顯示使用 <xref:System.Windows.Forms.DataGridView> 類別屬性操作 <xref:System.Windows.Forms.DataGridViewColumn> 資料行的各種方式。
 
 ## <a name="example"></a>範例
 
@@ -33,7 +33,7 @@ ms.locfileid: "76736090"
 
 - System、System.Drawing 和 System.Windows.Forms 組件的參考。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewBand>

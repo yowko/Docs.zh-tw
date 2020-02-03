@@ -30,7 +30,7 @@ ms.locfileid: "76740444"
 
 5. 從下拉式清單中選取 [ **SplashScreen** ]。
 
-6. 按 **F5** 鍵建置並執行應用程式。
+6. 按 **F5** 鍵以建置並執行應用程式。
 
      啟動顯示畫面影像會出現在螢幕的中央，然後在主應用程式視窗出現時淡化。
 
@@ -44,7 +44,7 @@ ms.locfileid: "76740444"
 
 在**方案總管**中，刪除啟動顯示畫面影像。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.SplashScreen>
 - [如何：將現有的專案加入至專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

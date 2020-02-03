@@ -11,7 +11,7 @@ ms.locfileid: "76733814"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>使用 LINQ to XML 的 WPF 資料系結總覽
 
-本文介紹 <xref:System.Xml.Linq> 命名空間中的動態資料系結功能。 這些功能在 Windows Presentation Foundation (WPF) 應用程式中可以當作使用者介面 (UI) 項目的資料來源使用。 這個案例是以 <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> 和 <xref:System.Xml.Linq.XElement?displayProperty=fullName> 的「動態屬性」為基礎。
+本文介紹 <xref:System.Xml.Linq> 命名空間中的動態資料系結功能。 這些功能在 Windows Presentation Foundation (WPF) 應用程式中可以當作使用者介面 (UI) 項目的資料來源使用。 這個案例是以 *和* 的「動態屬性」<xref:System.Xml.Linq.XAttribute?displayProperty=fullName><xref:System.Xml.Linq.XElement?displayProperty=fullName>為基礎。
 
 ## <a name="xaml-and-linq-to-xml"></a>XAML 和 LINQ to XML
 
@@ -85,7 +85,7 @@ WPF 資料繫結可讓 UI 項目將其屬性中的一個屬性與資料來源產
 
 若要實作 WPF 動態繫結，動態屬性將搭配 <xref:System.Windows.Data> 命名空間 (特別是 <xref:System.Windows.Data.Binding> 類別) 所提供的功能使用。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WPF 資料繫結與 LINQ to XML](wpf-data-binding-with-linq-to-xml-overview.md)
 - [LINQ to XML 動態屬性](linq-to-xml-dynamic-properties.md)

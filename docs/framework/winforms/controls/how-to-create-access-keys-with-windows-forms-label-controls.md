@@ -63,7 +63,7 @@ Windows Forms <xref:System.Windows.Forms.Label> 控制項可以用來定義其�
     label2->Text = "&Copy && Paste";  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [操作說明：調整 Windows Forms Label 控制項大小以適合其內容](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Label 控制項概觀](label-control-overview-windows-forms.md)

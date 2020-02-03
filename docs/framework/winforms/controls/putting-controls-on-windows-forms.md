@@ -16,8 +16,8 @@ ms.locfileid: "76741159"
 # <a name="putting-controls-on-windows-forms"></a>將控制項加入 Windows Form
 根據應用程式的需求，您可以將各種控制項放在 Windows Forms 上。  
   
-## <a name="in-this-section"></a>本章節內容  
- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)  
+## <a name="in-this-section"></a>本節內容  
+ [操作說明：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)  
  提供將控制項附加至表單的指示。  
   
  [操作說明：將沒有使用者介面的控制項加入至 Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "76741159"
  [逐步解說：自動將自訂元件填入工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
  示範在建立元件之後，您可以如何讓自訂群組件自動出現在**工具箱**中。  
   
- [操作說明：將 ActiveX 控制項新增至 Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
+ [如何：將 ActiveX 控制項新增至 Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
  提供使用舊版 ActiveX 控制項的指示。  
   
  [在 Windows Forms 上裝載 ActiveX 控制項的考慮因素](considerations-when-hosting-an-activex-control-on-a-windows-form.md)  

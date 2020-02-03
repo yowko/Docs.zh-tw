@@ -20,7 +20,7 @@ Windows Forms <xref:System.Windows.Forms.PrintPreviewControl> 會用來顯示[Pr
 ## <a name="key-properties"></a>索引鍵內容  
  控制項的索引鍵屬性是 <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>，它會設定要預覽的檔。 檔必須是 <xref:System.Drawing.Printing.PrintDocument> 物件。 如需建立檔以進行列印的總覽，請參閱[PrintDocument 元件總覽](printdocument-component-overview-windows-forms.md)和[Windows Forms 列印支援](../advanced/windows-forms-print-support.md)。 [<xref:System.Windows.Forms.PrintPreviewControl.Columns%2A>] 和 [<xref:System.Windows.Forms.PrintPreviewControl.Rows%2A>] 屬性會決定在控制項上水準和垂直顯示的頁面數目。 消除鋸齒可以讓文字看起來更平滑，但也可以讓顯示器變慢;若要使用它，請將 <xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> 屬性設定為 [`true`]。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.PrintPreviewControl>
 - [PrintPreviewDialog 控制項概觀](printpreviewdialog-control-overview-windows-forms.md)

@@ -40,8 +40,8 @@ ms.locfileid: "76728067"
 
 - 監視快取檔案的路徑，並通知快取實例有關受監視專案的變更。
 
-## <a name="prerequisites"></a>必要條件：
- 若要完成這個逐步解說，您將需要：
+## <a name="prerequisites"></a>必要條件
+ 為了完成這個逐步解說，您需要：
 
 - Visual Studio 2010。
 
@@ -60,7 +60,7 @@ ms.locfileid: "76728067"
 
 2. **在 [檔案**] 功能表中，按一下 [**新增**]，然後按一下 [**新增專案**]。
 
-     [新增專案] 對話方塊隨即出現。
+     [**新增專案**] 對話方塊隨即出現。
 
 3. 在 [**已安裝的範本**] 底下，選取您想要使用的程式設計語言（**Visual Basic**或**視覺效果C#** ）。
 
@@ -73,7 +73,7 @@ ms.locfileid: "76728067"
 
 6. 選取 [為解決方案建立目錄] 核取方塊。
 
-7. 按一下 [ **確定**]。
+7. 按一下 [確定]。
 
      WPF 設計工具會在**設計**視圖中開啟，並顯示 mainwindow.xaml。 Visual Studio 會建立 [**我的專案**] 資料夾、應用程式 .xaml 檔案和 mainwindow.xaml。
 
@@ -99,7 +99,7 @@ ms.locfileid: "76728067"
 
 4. 在 [**目標 framework （所有設定）** ] 清單中，選取 [.NET Framework 4]。 （請勿選取 [.NET Framework 4 用戶端設定檔]）。
 
-5. 按一下 [ **確定**]。
+5. 按一下 [確定]。
 
      [目標 Framework 變更] 對話方塊隨即出現。
 
@@ -325,7 +325,7 @@ ms.locfileid: "76728067"
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>

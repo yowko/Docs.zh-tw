@@ -15,7 +15,7 @@ ms.locfileid: "76743210"
 
 本教學課程將指導您如何在 Windows 上使用 .NET Core，執行適用於 Apache Spark 的 .NET 應用程式。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 
 > [!div class="checklist"]
 >
@@ -72,7 +72,7 @@ Apache Spark 會下載為 tgz 檔案。 使用類似 7-zip 的抽取程式來解
 * 以滑鼠右鍵按一下 [ **spark-2.4.1-bin-hadoop 2.7. tar** ]，然後選取 [ **7-Zip-> 解壓縮檔**案 ...]
 * 在 [**解壓縮至**] 欄位中，輸入**C:\bin** 。
 * 取消核**取 [解壓縮至**] 欄位下方的核取方塊。
-* 選取 [確定]。
+* 選取 **[確定]** 。
 * Apache Spark 檔案會解壓縮至 C:\bin\spark-2.4.1-bin-hadoop2.7\
 
 ![安裝 Spark](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
@@ -102,7 +102,7 @@ setx SPARK_HOME C:\bin\spark-2.4.1-bin-hadoop2.7\
 * 按一下滑鼠右鍵，然後選取 [ **7-Zip-> 解壓縮檔**案 ...]。
 * 在 [**解壓縮至**] 欄位中，輸入**C:\bin** 。
 * 取消核**取 [解壓縮至**] 欄位下方的核取方塊。
-* 選取 [確定]。
+* 選取 **[確定]** 。
 
 ![安裝 .NET Spark](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
 
@@ -207,11 +207,11 @@ This .NET app counts words with Apache Spark
 
 3. 當您的應用程式執行時，會將*輸入 .txt*檔案的字數統計資料寫入主控台。
 
-恭喜您！ 您已成功撰寫及執行適用於 Apache Spark 的 .NET 應用程式。
+恭喜！ 您已成功撰寫及執行適用於 Apache Spark 的 .NET 應用程式。
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您已了解如何：
 > [!div class="checklist"]
 >
 > * 為適用於 Apache Spark 的 .NET 準備您的 Windows 環境

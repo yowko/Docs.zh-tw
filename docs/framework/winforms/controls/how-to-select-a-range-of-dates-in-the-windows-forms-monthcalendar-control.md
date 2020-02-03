@@ -57,7 +57,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 控制項的一項重要
   
      -或-  
   
-     設定 <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> 和 <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> 屬性。  
+     請設定 <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> 和 <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> 屬性。  
   
     ```vb  
     MonthCalendar1.SelectionStart = projectStart  
@@ -74,7 +74,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 控制項的一項重要
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [MonthCalendar 控制項](monthcalendar-control-windows-forms.md)
 - [操作說明：變更 Windows Forms MonthCalendar 控制項的外觀](how-to-change-monthcalendar-control-appearance.md)

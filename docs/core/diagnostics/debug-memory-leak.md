@@ -18,7 +18,7 @@ ms.locfileid: "76737739"
 
 本教學課程使用範例應用程式，其設計目的是刻意流失記憶體。 範例是以練習的形式提供。 您也可以分析意外流失記憶體的應用程式。
 
-在本教學課程中，您將進行下列作業：
+在本教學課程中，您將：
 
 > [!div class="checklist"]
 >
@@ -26,9 +26,9 @@ ms.locfileid: "76737739"
 > - 產生傾印檔案。
 > - 使用傾印檔案來分析記憶體使用量。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
-本教學課程會使用：
+教學課程會使用：
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 或更新版本。
 - [dotnet-](dotnet-trace.md)用來列出進程的追蹤。
@@ -54,7 +54,7 @@ dotnet run
 dotnet-trace ps
 ```
 
-輸出應該類似：
+輸出應該會類似：
 
 ```console
 4807 DiagnosticScena /home/user/git/samples/core/diagnostics/DiagnosticScenarios/bin/Debug/netcoreapp3.0/DiagnosticScenarios

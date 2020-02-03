@@ -25,7 +25,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 控制項呈現直覺的
   
  <xref:System.Windows.Forms.MonthCalendar> 控制項的索引鍵屬性會 <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>，也就是在控制項中選取的日期範圍。 <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 值不能超過可選取的最多天數，請在 <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> 屬性中設定。 使用者可以選取的最早和最晚日期取決於 [<xref:System.Windows.Forms.MonthCalendar.MaxDate%2A>] 和 [<xref:System.Windows.Forms.MonthCalendar.MinDate%2A>] 屬性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.MonthCalendar>
 - [MonthCalendar 控制項](monthcalendar-control-windows-forms.md)

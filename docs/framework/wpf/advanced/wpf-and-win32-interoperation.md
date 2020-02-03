@@ -93,7 +93,7 @@ HWND 最後會支援畫面上的所有 [!INCLUDE[TLA2#tla_winclient](../../../..
 8. 使用儲存在靜態欄位中的參考來設定屬性及呼叫方法等等，以與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容物件通訊。
 
 > [!NOTE]
-> 如果您產生不同的組件，然後參考它，則可以針對使用內容類別之預設部分類別的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的步驟一，執行部分或所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容類別定義。 雖然您通常會在將 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 編譯成元件時包含 <xref:System.Windows.Application> 物件，但您最後不會使用該 <xref:System.Windows.Application> 做為交互操作的一部分，而只是針對應用程式所參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案使用一或多個根類別，並參考其部分類別。 此程序的其餘部分基本上與上述類似。
+> 如果您產生不同的組件，然後參考它，則可以針對使用內容類別之預設部分類別的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的步驟一，執行部分或所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 內容類別定義。 雖然您通常會在將 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 編譯成元件時包含 <xref:System.Windows.Application> 物件，但您最後不會使用該 <xref:System.Windows.Application> 做為交互操作的一部分，而只是針對應用程式所參考的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案使用一或多個根類別，並參考其部分類別。 此程序的其餘部分基本上與上述類似。
 >
 > 所有這些步驟都是透過[逐步解說：在 Win32 中裝載 WPF 內容](walkthrough-hosting-wpf-content-in-win32.md)主題中的程式碼予以說明。
 
@@ -169,7 +169,7 @@ HWND 最後會支援畫面上的所有 [!INCLUDE[TLA2#tla_winclient](../../../..
 
 介面僅支援在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 Win32 區域之間轉換時所發生的情況。 在 Win32 區域內，tab 鍵行為完全是由 Win32 實作為 tab 的邏輯所控制（如果有的話）。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>

@@ -16,7 +16,7 @@ ms.locfileid: "76733646"
 - 如何安裝這些檔案的當地語系化版本。
 - 如何修改 Visual Studio 安裝以使用不同語言。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 或更新版本。
 - [Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更新版本。
@@ -35,13 +35,13 @@ ms.locfileid: "76733646"
 1. 流覽至 [.NET Core Intellisense] 資料夾。
 
    1. 巡覽至 .NET Core 安裝資料夾。 根據預設，其位於 *%ProgramFiles%\dotnet\packs*。
-   1. 選擇要為其安裝 IntelliSense 的 SDK，然後巡覽至相關聯的路徑。 下列選項可供您選擇：
+   1. 選擇要為其安裝 IntelliSense 的 SDK，然後巡覽至相關聯的路徑。 您有下列選擇：
 
-      | SDK 類型        | {2&gt;路徑&lt;2}                               |
+      | SDK 類型        | 路徑                               |
       | --------------- | ---------------------------------- |
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
       | Windows 桌惎 | *Microsoft.WindowsDesktop.App.Ref* |
-      | .NET 標準   | *NETStandard.Library.Ref*          |
+      | .NET Standard   | *NETStandard.Library.Ref*          |
    
    1. 巡覽至要為其安裝當地語系化 IntelliSense 的版本。 例如，*3.1.0*。
    1. 開啟 *ref* 資料夾。
@@ -54,8 +54,8 @@ ms.locfileid: "76733646"
    | 語言              | 資料夾名稱 |
    | --------------------- | ----------- |
    | 葡萄牙文(巴西)  | *pt-br*     |
-   | 中文（簡體）  | *zh-hans*   |
-   | 中文（繁體） | *zh-hant*   |
+   | 中文 (簡體)  | *zh-hans*   |
+   | 中文 (繁體) | *zh-hant*   |
    | 法文                | *fr*        |
    | 德文                | *de*        |
    | 義大利文               | *it*        |
@@ -102,7 +102,7 @@ ms.locfileid: "76733646"
 
    ![Visual Studio [語言套件] 索引標籤](./media/localized-intellisense/vs-modify-language-packs.png)
 
-1. 選擇 [修改]。 更新便會開始。
+1. 選擇 [修改]。 更新會開始進行。
 
 ### <a name="modify-language-settings-in-visual-studio"></a>修改 Visual Studio 中的語言設定
 
@@ -116,14 +116,14 @@ ms.locfileid: "76733646"
 
 1. 在 [**環境**] 節點底下，選擇 [**國際設定**]。
 
-1. 在 [語言] 下拉式清單中，選取所需要的語言。 選擇 [ **確定**]。 
+1. 在 [語言] 下拉式清單中，選取所需要的語言。 選擇 [確定]。 
 
-1. 對話方塊會通知您必須重新啟動 Visual Studio，才能使變更生效。 選擇 [ **確定**]。
+1. 對話方塊會通知您必須重新啟動 Visual Studio，才能使變更生效。 選擇 [確定]。
 
 1. 重新啟動 Visual Studio。
 
 之後在開啟以您剛安裝 IntelliSense 檔案版本為目標的 .NET Core 專案時，IntelliSense 應該就會如預期般運作。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Studio 中的 IntelliSense](/visualstudio/ide/using-intellisense)

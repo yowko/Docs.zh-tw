@@ -18,7 +18,7 @@ ms.locfileid: "76734075"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet nuget locals` - 清除或列出本機 NuGet 資源。
 
@@ -33,7 +33,7 @@ dotnet nuget locals [-h|--help]
 
 `dotnet nuget locals` 命令會清除或列出 http-request 快取、暫時快取，或整部電腦全域套件資料夾中的本機 NuGet 資源。
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>引數
 
 * **`CACHE_LOCATION`**
 

@@ -12,10 +12,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76732798"
 ---
-# <a name="menustrip-control-windows-forms"></a>{4&gt;MenuStrip 控制項 (Windows Form)&lt;4}
+# <a name="menustrip-control-windows-forms"></a>MenuStrip 控制項 (Windows Form)
 此控制項會將應用程式的命令分組，並使其容易存取。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [MenuStrip 控制項概觀](menustrip-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "76732798"
  [操作說明：設定 MenuStrip 核取邊界和影像邊界](how-to-configure-menustrip-check-margins-and-image-margins.md)  
  說明如何以各種方式設定核取和影像邊界屬性，以自訂 <xref:System.Windows.Forms.MenuStrip>。  
   
- [操作說明：對表單提供標準功能表項目](how-to-provide-standard-menu-items-to-a-form.md)  
+ [如何：對表單提供標準功能表項目](how-to-provide-standard-menu-items-to-a-form.md)  
  描述如何使用 <xref:System.Windows.Forms.MenuStrip> 控制項來建立具有標準功能表的表單。  
   
  [操作說明：在 MenuStrip 中顯示選項按鈕](how-to-display-option-buttons-in-a-menustrip-windows-forms.md)  
@@ -69,7 +69,7 @@ ms.locfileid: "76732798"
   
 - [MenuStrip 工作對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.MenuStrip>  
  描述 <xref:System.Windows.Forms.MenuStrip> 類別的功能，可提供功能表系統給表單。  
   

@@ -34,7 +34,7 @@ ms.locfileid: "76731016"
   
 6. 將表單新增至專案，並新增您想要的控制項，例如另一個 <xref:System.Windows.Forms.MenuStrip>。  
   
-7. 為 `&New`<xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Click> 事件建立事件處理常式。  
+7. 為 <xref:System.Windows.Forms.Control.Click>`&New` 的 <xref:System.Windows.Forms.ToolStripMenuItem> 事件建立事件處理常式。  
   
 8. 在事件處理常式中，插入與下列類似的程式碼，以建立和顯示 `Form2` 的新實例，做為 `Form1`的 MDI 子系。  
   
@@ -75,13 +75,13 @@ ms.locfileid: "76731016"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- 名為 `Form1` 和 `Form2` 的兩個 <xref:System.Windows.Forms.Form> 控制項。  
+- 名為 <xref:System.Windows.Forms.Form> 和 `Form1` 的兩個 `Form2` 控制項。  
   
-- `Form1` 上名為 `menuStrip1` 的 <xref:System.Windows.Forms.MenuStrip> 控制項，以及 `Form2` 上名為 `menuStrip2` 的 <xref:System.Windows.Forms.MenuStrip> 控制項。  
+- <xref:System.Windows.Forms.MenuStrip> 上名為 `Form1` 的 `menuStrip1` 控制項，以及 <xref:System.Windows.Forms.MenuStrip> 上名為 `Form2` 的 `menuStrip2` 控制項。  
   
 - <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [操作說明：建立 MDI 父表單](../advanced/how-to-create-mdi-parent-forms.md)
 - [操作說明：建立 MDI 子表單](../advanced/how-to-create-mdi-child-forms.md)

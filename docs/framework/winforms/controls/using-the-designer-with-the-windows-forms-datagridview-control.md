@@ -16,7 +16,7 @@ ms.locfileid: "76728363"
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>使用設計工具搭配 Windows Form DataGridView 控制項
 Visual Studio 提供 `DataGridView` 控制項的設計工具支援，讓您不需要撰寫程式碼，就能執行許多設定工作。 這些工作包括將控制項系結至資料來源、修改用來顯示資料的資料行，以及調整控制項的外觀和基本行為。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：使用設計工具在 Windows Forms DataGridView 控制項中新增和移除資料行](add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
  描述如何使用 [**加入資料行**] 和 [**編輯資料行**] 對話方塊來填入和修改資料行集合。  
   
@@ -50,10 +50,10 @@ Visual Studio 提供 `DataGridView` 控制項的設計工具支援，讓您不�
  [操作說明：使用設計工具設定 Windows Forms DataGridView 控制項的預設儲存格樣式和資料格式](default-cell-styles-datagridview.md)  
  描述如何使用 [ **CellStyle**產生器] 對話方塊來設定控制項的基本外觀和資料顯示格式。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.DataGridView>  
  提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGridView 控制項](datagridview-control-windows-forms.md)

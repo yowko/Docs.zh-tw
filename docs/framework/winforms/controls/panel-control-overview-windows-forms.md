@@ -23,7 +23,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> 控制項是用來為其他控�
 ## <a name="key-properties"></a>索引鍵內容  
  若要顯示捲軸，請將 [<xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A>] 屬性設定為 [`true`]。 您也可以藉由設定 [<xref:System.Windows.Forms.Control.BackColor%2A>]、[<xref:System.Windows.Forms.Control.BackgroundImage%2A>] 和 [<xref:System.Windows.Forms.Panel.BorderStyle%2A>] 屬性來自訂面板的外觀。 如需 <xref:System.Windows.Forms.Control.BackColor%2A> 和 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 屬性的詳細資訊，請參閱[如何：設定面板的背景](how-to-set-the-background-of-a-windows-forms-panel.md)。 [<xref:System.Windows.Forms.Panel.BorderStyle%2A>] 屬性會決定面板是否以沒有可見框線（<xref:System.Windows.Forms.BorderStyle.None>）、純文字線（<xref:System.Windows.Forms.BorderStyle.FixedSingle>）或陰影線條（<xref:System.Windows.Forms.BorderStyle.Fixed3D>）來勾勒。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Panel>
 - [GroupBox 控制項](groupbox-control-windows-forms.md)

@@ -57,7 +57,7 @@ ms.locfileid: "76742183"
     > [!NOTE]
     > 即使此值在表單上顯示為十六進位，任何您在 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 屬性上執行的測試都會測試其十進位值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [NumericUpDown 控制項](numericupdown-control-windows-forms.md)

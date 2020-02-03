@@ -30,7 +30,7 @@ ms.locfileid: "76735478"
   
  <xref:System.Windows.Forms.ToolBar> 控制項可讓您藉由將 <xref:System.Windows.Forms.Button> 物件新增至 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 集合來建立工具列。 您可以使用 [集合編輯器]，將按鈕新增至 <xref:System.Windows.Forms.ToolBar> 控制項;每個 <xref:System.Windows.Forms.Button> 物件都應該指派文字或影像，雖然您可以同時指派兩者。 相關聯 [ImageList](imagelist-component-windows-forms.md) 元件所提供的影像。 在執行時間，您可以使用 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> 和 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> 方法，在 <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> 中新增或移除按鈕。 若要為 <xref:System.Windows.Forms.ToolBar>的按鈕編寫程式碼，請使用 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> 類別的 <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> 屬性，來判斷已按下哪一個按鈕，將程式碼加入 <xref:System.Windows.Forms.ToolBar>的 <xref:System.Windows.Forms.ToolBar.ButtonClick> 事件中。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolBar>
 - [ToolBar 控制項](toolbar-control-windows-forms.md)

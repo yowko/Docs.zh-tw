@@ -17,7 +17,7 @@ ms.locfileid: "76734385"
 [!INCLUDE [topic-appliesto-net-core-21plus](../../../includes/topic-appliesto-net-core-21plus.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet build-server` - 與組建所啟動的伺服器互動。
 

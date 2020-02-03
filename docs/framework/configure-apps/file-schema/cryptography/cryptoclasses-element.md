@@ -32,20 +32,20 @@ ms.locfileid: "76732885"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和元素  
- 下列章節說明屬性、子元素和父元素。  
+ 下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- 無。  
+ None。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<cryptoClass >](cryptoclass-element.md)|包含密碼編譯類別，其具有 **\<nameEntry>** 項目中易記名稱的對應。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`cryptographySettings`|包含密碼編譯設定。|  
@@ -76,11 +76,11 @@ ms.locfileid: "76732885"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Cryptography>
 - [組態檔結構描述](../index.md)
 - [密碼編譯設定結構描述](index.md)
-- [The signature is valid](../../../../standard/security/cryptographic-services.md)
+- [密碼編譯服務](../../../../standard/security/cryptographic-services.md)
 - [Cryptoconfig.createfromname. CreateFromName。](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [設定密碼編譯類別](../../configure-cryptography-classes.md)

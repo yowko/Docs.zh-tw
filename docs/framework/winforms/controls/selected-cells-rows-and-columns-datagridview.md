@@ -48,14 +48,14 @@ ms.locfileid: "76743078"
   
 - <xref:System.Windows.Forms.Button> 名為 `selectedCellsButton`、`selectedRowsButton`和 `selectedColumnsButton`的控制項，每個都有附加 <xref:System.Windows.Forms.Control.Click> 事件的處理常式。  
   
-- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
+- 名為 <xref:System.Windows.Forms.DataGridView> 的 `dataGridView1` 控制項。  
   
 - <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Text?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="robust-programming"></a>最佳化程式設計  
  選取大量的資料格、資料列或資料行時，本主題中所述的集合不會有效率地執行。 如需有關使用這些具有大量資料之集合的詳細資訊，請參閱[縮放 Windows Forms DataGridView 控制項的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>

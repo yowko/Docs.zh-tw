@@ -24,7 +24,7 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> 控制項會向使用者�
   
  如已選取 [<xref:System.Windows.Forms.RadioButton.Appearance%2A>] 屬性設為 [<xref:System.Windows.Forms.Appearance.Button>]，<xref:System.Windows.Forms.RadioButton> 控制項可以像命令按鈕一樣出現。 選項按鈕也可以使用 [<xref:System.Windows.Forms.ButtonBase.Image%2A>] 和 [<xref:System.Windows.Forms.ButtonBase.ImageList%2A> 屬性] 來顯示影像。 如需詳細資訊，請參閱[如何：設定 Windows Forms 控制項所顯示的影像](how-to-set-the-image-displayed-by-a-windows-forms-control.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.RadioButton>
 - [Panel 控制項概觀](panel-control-overview-windows-forms.md)
@@ -32,5 +32,5 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> 控制項會向使用者�
 - [CheckBox 控制項概觀](checkbox-control-overview-windows-forms.md)
 - [操作說明：建立 Windows Forms 控制項的便捷鍵](how-to-create-access-keys-for-windows-forms-controls.md)
 - [操作說明：設定由 Windows Forms 控制項所顯示的文字](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [如何：將 Windows Forms RadioButton 控制項群組成集合使用](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [操作說明：將 Windows Forms RadioButton 控制項群組成集合使用](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [RadioButton 控制項](radiobutton-control-windows-forms.md)

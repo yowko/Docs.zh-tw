@@ -134,7 +134,7 @@ XAML 元素可以包含 XML 屬性（`xml:lang`），以定義每個元素的語
 
 在少數情況下，<xref:System.Windows.FlowDirection> 的行為不會如預期般運作。 本節涵蓋其中的兩個例外狀況。
 
-**影像**
+**映像**
 
 <xref:System.Windows.Controls.Image> 代表顯示影像的控制項。 在 XAML 中，它可以搭配 <xref:System.Windows.Controls.Image.Source%2A> 屬性使用，以定義要顯示之 <xref:System.Windows.Controls.Image> 的統一資源識別項（URI）。
 
@@ -154,7 +154,7 @@ XAML 元素可以包含 XML 屬性（`xml:lang`），以定義每個元素的語
 > [!NOTE]
 > 下載檔案中包含的是**ms_logo .jpg**檔案。 這個程式碼假設 .jpg 檔案不在您的專案內，而是在 C:\ 磁碟機的某個位置。 您必須將 .jpg 從專案檔複製至 C:\ 磁碟機，或變更程式碼來尋找專案內的檔案。 若要執行這種變更 `Source="file://c:/ms_logo.jpg"` `Source="ms_logo.jpg"`。
 
-**路徑**
+**Paths**
 
 除了 <xref:System.Windows.Controls.Image>以外，還有另一個有趣的元素 <xref:System.Windows.Shapes.Path>。 路徑是物件，可繪製一系列連接的線條和曲線。 其運作方式類似于其 <xref:System.Windows.FlowDirection>的 <xref:System.Windows.Controls.Image>;例如，其 <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> 是其 <xref:System.Windows.FlowDirection.LeftToRight> 一的水準鏡像。 不過，不同于 <xref:System.Windows.Controls.Image>，<xref:System.Windows.Shapes.Path> 會從容器繼承其 <xref:System.Windows.FlowDirection>，而其中一項不需要明確指定。
 
@@ -198,7 +198,7 @@ XAML 元素可以包含 XML 屬性（`xml:lang`），以定義每個元素的語
 
 這個屬性指定要執行的數字替代類型。 它會採用下列其中一個 <xref:System.Windows.Media.NumberSubstitutionMethod> 列舉值：
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>：替代方法是根據數位文化特性的 <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> 屬性來決定。 這是預設設定。
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>：替代方法是根據數位文化特性的 <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> 屬性來決定。 這是預設值。
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Context>：如果數位文化特性是阿拉伯文或波斯文化特性，則會指定數位取決於內容。
 
@@ -226,7 +226,7 @@ XAML 元素可以包含 XML 屬性（`xml:lang`），以定義每個元素的語
 
 首先，設定應用程式元件的 `NumberSubstitution.CultureSource="Text"`。 使用此設定可確保設定不會來自具有 "User" 做為預設值的文字元素 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，例如 <xref:System.Windows.Controls.TextBlock>。
 
-例如：
+例如，
 
 ```xaml
 <TextBlock

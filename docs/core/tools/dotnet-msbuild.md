@@ -13,7 +13,7 @@ ms.locfileid: "76733191"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet msbuild` - 建置專案和其所有相依性。
 

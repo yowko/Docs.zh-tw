@@ -140,7 +140,7 @@ ms.locfileid: "76735760"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
-- [如何：在執行階段時變更 Windows Forms DataGrid 控制項中顯示的資料](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [操作說明：在執行階段時變更 Windows Forms DataGrid 控制項中顯示的資料](change-displayed-data-at-run-time-wf-datagrid-control.md)

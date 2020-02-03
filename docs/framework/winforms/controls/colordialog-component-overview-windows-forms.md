@@ -19,9 +19,9 @@ Windows Forms <xref:System.Windows.Forms.ColorDialog> 元件是預先設定的�
   
  在對話方塊中選取的色彩會在 <xref:System.Windows.Forms.ColorDialog.Color%2A> 屬性中傳回。 如果 [<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>] 屬性設定為 [`false`]，則會停用 [定義自訂色彩] 按鈕，並將使用者限制為調色板中預先定義的色彩。 如果 [<xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>] 屬性設定為 [`true`]，使用者就無法選取遞色。 若要顯示對話方塊，您必須呼叫其 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog 元件](colordialog-component-windows-forms.md)
 - [對話方塊控制項和元件](dialog-box-controls-and-components-windows-forms.md)
-- [如何：變更 Windows Forms ColorDialog 元件的外觀](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)
+- [操作說明：變更 Windows Forms ColorDialog 元件的外觀](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)

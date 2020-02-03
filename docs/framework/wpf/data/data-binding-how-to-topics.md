@@ -56,7 +56,7 @@ ms.locfileid: "76733848"
 - [尋找 DataTemplate 產生的元素](how-to-find-datatemplate-generated-elements.md)
 - [繫結至 Web 服務](how-to-bind-to-a-web-service.md)
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 - <xref:System.Windows.Data>
 - <xref:System.Windows.Data.Binding>

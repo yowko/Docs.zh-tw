@@ -26,7 +26,7 @@ Windows Form <xref:System.Windows.Forms.OpenFileDialog> 元件是預先設定的
 
 當它新增至表單時，<xref:System.Windows.Forms.OpenFileDialog> 元件會出現在 Visual Studio Windows Form 設計工具底部的紙匣中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.OpenFileDialog>
 - [OpenFileDialog 元件](openfiledialog-component-windows-forms.md)

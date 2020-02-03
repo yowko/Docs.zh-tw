@@ -32,7 +32,7 @@ ms.locfileid: "76732371"
 
 1. 在設計階段，<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 屬性 (現在已被取代) 會設定為開發人員電腦上預設系統字型的高度和寬度。
 
-2. 在執行階段，使用者電腦的預設系統字型會用來初始化 <xref:System.Windows.Forms.Form> 類別的 <xref:System.Windows.Forms.Control.Font%2A> 屬性。
+2. 在執行階段，使用者電腦的預設系統字型會用來初始化 <xref:System.Windows.Forms.Control.Font%2A> 類別的 <xref:System.Windows.Forms.Form> 屬性。
 
 3. 在顯示表單之前，會呼叫 <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> 方法來縮放表單。 這個方法會從 <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> 和 <xref:System.Windows.Forms.Control.Font%2A> 計算相對縮放比例，然後呼叫 <xref:System.Windows.Forms.Control.Scale%2A> 方法實際縮放表單和其子系。
 
@@ -84,7 +84,7 @@ Windows Form 現在使用下列邏輯來自動縮放表單和其內容：
 
 4. 在下列情況下，也會自動叫用 <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>：
 
-    - 為了在縮放模式為 <xref:System.Windows.Forms.AutoScaleMode.Font> 時回應 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 事件。
+    - 為了在縮放模式為 <xref:System.Windows.Forms.Control.OnFontChanged%2A> 時回應 <xref:System.Windows.Forms.AutoScaleMode.Font> 事件。
 
     - 當繼續容器控制項的配置，並在 <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> 或 <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> 屬性中偵測到變更時。
 
@@ -98,11 +98,11 @@ Windows Form 現在使用下列邏輯來自動縮放表單和其內容：
 
     - 可以覆寫 <xref:System.Windows.Forms.Control.ScaleControl%2A> 方法，以變更目前控制項的縮放邏輯。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>
 - <xref:System.Windows.Forms.Control.Scale%2A>
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [使用視覺化樣式呈現控制項](./controls/rendering-controls-with-visual-styles.md)
-- [如何：避免自動縮放以提高效能](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [操作說明：避免自動縮放以提高效能](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

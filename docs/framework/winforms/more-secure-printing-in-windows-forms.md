@@ -24,9 +24,9 @@ Windows Forms 的應用程式經常會包含列印能力。 .NET Framework 使�
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|提供所有已安裝印表機的完整存取權。|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|可讓您以程式設計方式列印到預設印表機，並透過 [限制列印] 對話方塊，更安全地列印。 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting> 的子集。|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|只會從更受限制的對話方塊中提供列印。 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> 的子集。|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|防止存取印表機。 <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 的子集。|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|防止印表機的存取。 <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 的子集。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 中更安全的檔案和資料存取](more-secure-file-and-data-access-in-windows-forms.md)
 - [Windows Forms 中的其他安全性考量](additional-security-considerations-in-windows-forms.md)

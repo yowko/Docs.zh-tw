@@ -62,7 +62,7 @@ Windows Forms 提供可執行多項功能的控制項和元件。 下表列出�
 ||<xref:System.Windows.Forms.LinkLabel> 控制項|將文字顯示為 Web 樣式連結，並在使用者按一下特殊文字時觸發事件。 文字通常是另一個視窗或網站的連結。|  
 ||<xref:System.Windows.Forms.NotifyIcon> 控制項|在工作列的狀態通知區域中顯示圖示，代表在背景中執行的應用程式。|  
 ||<xref:System.Windows.Forms.ToolStrip> 控制項|建立可擁有 Microsoft Windows XP、Microsoft Office、Microsoft Internet Explorer 或自訂外觀與風格的工具列，包括或不使用主題，以及支援溢位和執行時間專案重新排列。 **注意：** <xref:System.Windows.Forms.ToolStrip> 控制項是設計來取代 <xref:System.Windows.Forms.ToolBar> 控制項。|  
-|使用者說明|<xref:System.Windows.Forms.HelpProvider> 元件|提供控制項的快顯或線上說明。|  
+|使用者說明|<xref:System.Windows.Forms.HelpProvider> 元件|提供控制項的快顯畫面或線上說明。|  
 ||<xref:System.Windows.Forms.ToolTip> 元件|提供一個快顯視窗，在使用者將指標放在控制項上時，顯示控制項用途的簡短描述。|  
 |群組其他控制項|<xref:System.Windows.Forms.Panel> 控制項|在未標記的可滾動框架上，將一組控制群組成群組。|  
 ||<xref:System.Windows.Forms.GroupBox> 控制項|將一組控制項（例如選項按鈕）組成已加上標籤的資料框架。|  
@@ -70,7 +70,7 @@ Windows Forms 提供可執行多項功能的控制項和元件。 下表列出�
 ||<xref:System.Windows.Forms.SplitContainer> 控制項|提供兩個以可移動的橫條分隔的面板。 **注意：** <xref:System.Windows.Forms.SplitContainer> 控制項是設計來取代 <xref:System.Windows.Forms.Splitter> 控制項。|  
 ||<xref:System.Windows.Forms.TableLayoutPanel> 控制項|代表會在資料列和資料行所組成的方格中動態配置其內容的面板。|  
 ||<xref:System.Windows.Forms.FlowLayoutPanel> 控制項|代表透過水平或垂直方式動態配置其內容的面板。|  
-|音效|<xref:System.Media.SoundPlayer> 控制項|以 .wav 格式播放音效檔。 可以用非同步方式載入或播放聲音。|  
+|音訊|<xref:System.Media.SoundPlayer> 控制項|以 .wav 格式播放音效檔。 可以用非同步方式載入或播放聲音。|  
   
 ## <a name="superseded-controls-and-components-by-function"></a>依函式取代的控制項和元件  
   
@@ -84,7 +84,7 @@ Windows Forms 提供可執行多項功能的控制項和元件。 下表列出�
 ||<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
 |表單配置|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
 - [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)

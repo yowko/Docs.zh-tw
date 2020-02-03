@@ -116,7 +116,7 @@ dotnet publish --manifest manifest.xml
 </PropertyGroup>
 ```
 
-只有當應用程式的目標環境為已知時，例如 .NET Core 專案，才在專案檔中指定目標資訊清單。 這不是開放原始碼專案的情況。 開放原始碼專案的使用者通常會將它部署到不同的生產環境中。 這些生產環境通常會有不同的預先安裝的套件集。 您不能對這類環境中的目標資訊清單進行假設，因此您應該使用 [`dotnet publish`](../tools/dotnet-publish.md) 的 `--manifest` 選項。
+只有當應用程式的目標環境為已知時，例如 .NET Core 專案，才在專案檔中指定目標資訊清單。 這不是開放原始碼專案的情況。 開放原始碼專案的使用者通常會將它部署到不同的生產環境中。 這些生產環境通常會有不同的預先安裝的套件集。 您不能對這類環境中的目標資訊清單進行假設，因此您應該使用 `--manifest`[`dotnet publish` 的 ](../tools/dotnet-publish.md) 選項。
 
 ## <a name="aspnet-core-implicit-store"></a>ASP.NET Core 隱含存放區
 
@@ -126,7 +126,7 @@ ASP.NET Core 隱含存放區只適用於 ASP.NET Core 2.0。 強烈建議應用�
 
 安裝 .NET Core SDK 時，執行階段套件存放區會安裝在主機上。 其他的安裝程式可能會提供執行階段套件存放區，包括 .NET Core SDK 的 Zip/tarball 安裝、`apt-get`、Red Hat Yum、.NET Core Windows Server 裝載組合，以及手動的執行階段套件存放區安裝。
 
-部署[與 Framework 相依的部署 (FDD)](index.md#framework-dependent-deployments-fdd) 應用程式時，請確定目標環境已安裝 .NET Core SDK。 如果應用程式部署到不包含 ASP.NET Core 的環境，您可以像下例一樣在專案檔指定設為 `false` 的 **\<PublishWithAspNetCoreTargetManifest>** ，從隱含的存放區選擇：
+部署[與 Framework 相依的部署 (FDD)](index.md#framework-dependent-deployments-fdd) 應用程式時，請確定目標環境已安裝 .NET Core SDK。 如果應用程式部署到不包含 ASP.NET Core 的環境，您可以像下例一樣在專案檔指定設為  **的 \<** PublishWithAspNetCoreTargetManifest>`false`，從隱含的存放區選擇：
 
 ```xml
 <PropertyGroup>
@@ -143,7 +143,7 @@ ASP.NET Core 隱含存放區只適用於 ASP.NET Core 2.0。 強烈建議應用�
 
 於發行時「修剪」部署，已發行的輸出只保留您指定的資訊清單套件特定版本。 主機必須要有指定版本的套件，應用程式才能啟動。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [dotnet-publish](../tools/dotnet-publish.md)
 - [dotnet-store](../tools/dotnet-store.md)

@@ -148,7 +148,7 @@ ms.locfileid: "76735190"
 > [!NOTE]
 > 如果 WPF 完全呈現在軟體中，則不會顯示 <xref:System.Windows.Interop.D3DImage>，因為 WPF 沒有前端緩衝區。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 和 WPF 互通性的效能考量](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

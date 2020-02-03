@@ -15,7 +15,7 @@ ms.locfileid: "76738100"
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF 中的程式碼後置和 XAML
 <a name="introduction"></a>程式碼後置是一個詞彙，用來描述以標記定義的物件聯結的程式碼（當 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面已進行標記編譯時）。 本主題描述程式碼後置的需求，以及 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]中程式碼的替代內嵌程式碼機制。  
   
- 此主題包括下列章節：  
+ 本主題包含下列幾節：  
   
 - [必要條件](#Prerequisites)  
   
@@ -28,7 +28,7 @@ ms.locfileid: "76738100"
 - [內嵌程式碼限制](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>必要條件：  
+## <a name="prerequisites"></a>必要條件  
  本主題假設您已閱讀[XAML 總覽（WPF）](../../../desktop-wpf/fundamentals/xaml.md) ，並有一些 CLR 和麵向物件程式設計的基本知識。  
   
 <a name="codebehind_and_the_xaml_language"></a>   
@@ -58,7 +58,7 @@ ms.locfileid: "76738100"
 ## <a name="inline-code-limitations"></a>內嵌程式碼限制  
  您應該考慮避免或限制使用內嵌程式碼。 就架構和編碼原理而言，維護標記和程式碼後置之間的分隔可讓設計工具和開發人員角色更為獨特。 在更技術性的層級上，您為內嵌程式碼撰寫的程式碼可能很難撰寫，因為您一律會寫入 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 產生的部分類別，而且只能使用預設的 XML 命名空間對應。 因為您無法新增 `using` 語句，所以您必須完全符合您所做的許多 API 呼叫。 預設的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 對應包括所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 元件中都不存在的 CLR 命名空間;您必須完整限定呼叫包含在其他 CLR 命名空間內的類型和成員。 您也不能在內嵌程式碼中定義部分類別以外的任何專案，而且您參考的所有使用者程式碼實體都必須以成員或變數的形式存在於所產生的部分類別內。 其他語言特定的程式設計功能，例如宏或 `#ifdef` 針對全域變數或組建變數，也無法使用。 如需詳細資訊，請參閱 X:Code 內建[XAML 類型](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [x:Code 內建 XAML 類型](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)

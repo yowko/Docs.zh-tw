@@ -1,5 +1,5 @@
 ---
-title: '[系統資訊]'
+title: 系統資訊
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -42,7 +42,7 @@ MessageBox.Show("Good morning " + User + ". You are connected to "
   
  <xref:System.Windows.Forms.SystemInformation> 類別的一些更有用的成員包括 <xref:System.Windows.Forms.SystemInformation.ComputerName%2A>、<xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>、<xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>和 <xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.SystemInformation>
 - [Windows Forms 中的電源管理](power-management-in-windows-forms.md)

@@ -17,16 +17,16 @@ ms.locfileid: "76727851"
 # <a name="input-wpf"></a>輸入（WPF）
 Windows Presentation Foundation （WPF）包含數種輸入類型的支援。 此輸入包含文字、觸控、滑鼠、命令、焦點、觸控、拖放和數位筆跡。 本節描述與 WPF 中的輸入相關的主題。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [輸入概觀](input-overview.md)  
  [命令概觀](commanding-overview.md)  
  [焦點概觀](focus-overview.md)  
  [設定控制項中焦點的樣式和 FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
  [逐步解說：建立您的第一個觸控應用程式](walkthrough-creating-your-first-touch-application.md)  
- [「如何」主題](input-and-commands-how-to-topics.md)  
+ [操作說明主題](input-and-commands-how-to-topics.md)  
  [數位筆跡](digital-ink.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  

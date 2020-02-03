@@ -34,7 +34,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> 控制項可以同時顯示背�
 
 6. 在 [**開啟**] 對話方塊中，選取您要顯示的檔案。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

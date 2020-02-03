@@ -18,14 +18,14 @@ ms.locfileid: "76742138"
 > [!NOTE]
 > `BackgroundWorker` 元件會取代 <xref:System.Threading> 命名空間和 <xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType> 方法，並將其加入功能;不過，如果您選擇，這些會保留給回溯相容性及未來使用。 如需詳細資訊，請參閱[BackgroundWorker 元件總覽](backgroundworker-component-overview.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：進行對 Windows Forms 控制項的安全執行緒呼叫](how-to-make-thread-safe-calls-to-windows-forms-controls.md)  
  顯示如何對 Windows Forms 控制項進行安全線程呼叫。  
   
  [操作說明：使用背景執行緒搜尋檔案](how-to-use-a-background-thread-to-search-for-files.md)  
  示範如何使用 <xref:System.Threading> 命名空間和 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 方法，以非同步方式搜尋檔案。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.ComponentModel.BackgroundWorker>  
  記載封裝背景工作執行緒以進行非同步作業的元件。  
   

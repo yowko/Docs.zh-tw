@@ -16,7 +16,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76736791"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>作法：使用設計工具格式化 Windows Forms DataGrid 控制項
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>如何：使用設計工具格式化 Windows Form DataGrid 控制項
 
 > [!NOTE]
 > <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。
@@ -33,7 +33,7 @@ ms.locfileid: "76736791"
 
 在格式化資料方格的初始步驟中，您可以設定 <xref:System.Windows.Forms.DataGrid> 本身的屬性。 這些色彩和格式選擇會形成一個基底，您可以根據顯示的資料表和資料行進行變更。
 
-下列程式需要具有包含 <xref:System.Windows.Forms.DataGrid> 控制項之表單的**Windows 應用程式**專案。 如需設定這類專案的相關資訊，請參閱 [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project) 並 [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)。 在 Visual Studio 2005 中，預設不會在 [**工具箱**] 中使用 <xref:System.Windows.Forms.DataGrid> 控制項。 如需詳細資訊，請參閱[如何：將專案新增至 [工具箱]](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))。
+下列程式需要具有包含 <xref:System.Windows.Forms.DataGrid> 控制項之表單的**Windows 應用程式**專案。 如需設定這類專案的相關資訊，請參閱[如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[如何：將控制項加入至 Windows Forms](how-to-add-controls-to-windows-forms.md)。 在 Visual Studio 2005 中，預設不會在 [**工具箱**] 中使用 <xref:System.Windows.Forms.DataGrid> 控制項。 如需詳細資訊，請參閱[如何：將專案加入 [工具箱](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))]。
 
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>若要建立 DataGrid 控制項的預設樣式
 
@@ -76,7 +76,7 @@ ms.locfileid: "76736791"
 
 1. 選取表單上的 [<xref:System.Windows.Forms.DataGrid>] 控制項。
 
-2. 在 [**屬性**] 視窗中, <xref:System.Windows.Forms.DataGrid.TableStyles%2A>按一下屬性來選取它, **然後**按一下省略號![屬性視窗中 Visual Studio](./media/visual-studio-ellipsis-button.png) 按鈕的省略號按鈕 (...), 以開啟ToolBarButton集合編輯器。
+2. 在 [**屬性**] 視窗中，選取 [<xref:System.Windows.Forms.DataGrid.TableStyles%2A>] 屬性，然後按一下**省略號**（![[屬性視窗中](./media/visual-studio-ellipsis-button.png)Visual Studio 的省略號按鈕（...）] 按鈕。
 
 3. 在 [ **DataGridTableStyle 集合編輯器**] 對話方塊中，按一下 [**加入**]，將資料表樣式加入至集合。
 
@@ -86,7 +86,7 @@ ms.locfileid: "76736791"
 
      對應名稱是用來指定應該搭配哪一個資料表使用哪一個資料表樣式。
 
-5. 在 **DataGridTableStyle 集合編輯器** 中， <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 選取屬性，然後按一下省略號按鈕 (![Visual Studio 的屬性視窗中的省略號按鈕](./media/visual-studio-ellipsis-button.png)）。
+5. 在 [ **DataGridTableStyle 集合編輯器**] 中，選取 [<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>] 屬性，然後按一下省略號按鈕（![](./media/visual-studio-ellipsis-button.png)Visual Studio 屬性視窗中的省略號按鈕（...）。
 
 6. 在 [ **System.windows.forms.datagridcolumnstyle> 集合編輯器**] 對話方塊中，將資料行樣式加入至您所建立的資料表樣式。
 

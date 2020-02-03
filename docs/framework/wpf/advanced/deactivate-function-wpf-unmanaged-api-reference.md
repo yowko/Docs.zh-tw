@@ -38,6 +38,6 @@ void Deactivate()
   
  **.NET Framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WPF Unmanaged API 參考](wpf-unmanaged-api-reference.md)

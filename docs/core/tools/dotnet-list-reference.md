@@ -17,7 +17,7 @@ ms.locfileid: "76733217"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet list reference` - 列出專案對專案參考。
 
@@ -29,7 +29,7 @@ ms.locfileid: "76733217"
 
 `dotnet list reference` 命令提供一個列出指定專案或解決方案之專案參考的便利選項。
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>引數
 
 * **`PROJECT | SOLUTION`**
 

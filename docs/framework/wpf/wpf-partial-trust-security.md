@@ -27,7 +27,7 @@ ms.locfileid: "76743337"
   
  WPF 提供各種不同的支援，以確保能夠在部分信任的情況下安全地使用最多的功能，以及使用 CAS，為部分信任程式設計提供額外的支援。  
   
- 此主題包括下列章節：  
+ 本主題包含下列幾節：  
   
 - [WPF 功能部分信任支援](#WPF_Feature_Partial_Trust_Support)  
   
@@ -41,10 +41,10 @@ ms.locfileid: "76743337"
   
  表 1：在部分信任中安全的 WPF 功能  
   
-|功能區|特殊功能|  
+|功能區|功能|  
 |------------------|-------------|  
 |一般|瀏覽器視窗<br /><br /> 原始站台存取<br /><br /> IsolatedStorage (512 KB 限制)<br /><br /> UIAutomation 提供者<br /><br /> 命令<br /><br /> 輸入法 (IME)<br /><br /> 平板電腦手寫筆和筆跡<br /><br /> 使用滑鼠捕捉和移動事件模擬拖放<br /><br /> OpenFileDialog<br /><br /> XAML 還原序列化 (透過 XamlReader.Load)|  
-|Web 整合|瀏覽器下載對話方塊<br /><br /> 最上層使用者啟始的瀏覽<br /><br /> mailto:links<br /><br /> 統一資源識別項參數<br /><br /> HTTPWebRequest<br /><br /> 在 IFRAME 中裝載的 WPF 內容<br /><br /> 使用框架裝載相同站台的 HTML 頁面<br /><br /> 使用網頁瀏覽器裝載相同站台的 HTML 頁面<br /><br /> Web 服務 (ASMX)<br /><br /> Web 服務 (使用 Windows Communication Foundation)<br /><br /> 正在處理指令碼<br /><br /> 文件物件模型|  
+|Web 整合|瀏覽器下載對話方塊<br /><br /> 最上層使用者啟始的瀏覽<br /><br /> mailto:links<br /><br /> 統一資源識別項參數<br /><br /> HTTPWebRequest<br /><br /> 在 IFRAME 中裝載的 WPF 內容<br /><br /> 使用框架裝載相同站台的 HTML 頁面<br /><br /> 使用網頁瀏覽器裝載相同站台的 HTML 頁面<br /><br /> Web 服務 (ASMX)<br /><br /> Web 服務 (使用 Windows Communication Foundation)<br /><br /> 指令碼<br /><br /> 文件物件模型|  
 |視覺效果|2D 和 3D<br /><br /> 動畫<br /><br /> 媒體 (原始站台和跨網域)<br /><br /> 影像處理/音訊/視訊|  
 |讀取|FlowDocuments<br /><br /> XPS 文件<br /><br /> 內嵌與系統字型<br /><br /> CFF 與 TrueType 字型|  
 |使用|拼字檢查<br /><br /> RichTextBox<br /><br /> 純文字和筆跡剪貼簿支援<br /><br /> 使用者啟始的貼上<br /><br /> 複製選取的內容|  
@@ -70,7 +70,7 @@ ms.locfileid: "76743337"
   
  表 2：在部分信任中不安全的 WPF 功能  
   
-|功能區|特殊功能|  
+|功能區|功能|  
 |------------------|-------------|  
 |一般|視窗 (應用程式定義的視窗和對話方塊)<br /><br /> SaveFileDialog<br /><br /> 檔案系統<br /><br /> 登錄存取<br /><br /> 拖放<br /><br /> XAML 序列化 (透過 XamlWriter.Save)<br /><br /> UIAutomation 用戶端<br /><br /> 來源視窗存取 (HwndHost)<br /><br /> 完整的語音支援<br /><br /> Windows Forms 互通性|  
 |視覺效果|點陣圖效果<br /><br /> 影像編碼|  
@@ -133,17 +133,17 @@ ms.locfileid: "76743337"
 |DNS|存取 DNS 伺服器|是|否|  
 |環境變數|讀取|是|否|  
 |檔案對話方塊|開啟|是|是|  
-|檔案對話方塊|無限制的|是|否|  
+|檔案對話方塊|不受限制|是|否|  
 |隔離儲存區|依據使用者隔離組件|是|否|  
 |隔離儲存區|未知的隔離|是|是|  
 |隔離儲存區|無限制的使用者配額|是|否|  
 |媒體|安全的音訊、視訊和影像|是|是|  
 |列印|預設列印|是|否|  
 |列印|安全列印|是|是|  
-|反射|發出|是|否|  
+|反映|發出|是|否|  
 |安全性|Managed 程式碼執行|是|是|  
 |安全性|判斷提示授與權限|是|否|  
-|使用者介面|無限制的|是|否|  
+|使用者介面|不受限制|是|否|  
 |使用者介面|安全的最上層視窗|是|是|  
 |使用者介面|擁有剪貼簿|是|是|  
 |Web 瀏覽器|HTML 框架安全瀏覽|是|是|  
@@ -163,8 +163,8 @@ ms.locfileid: "76743337"
   
  或者，您可以使用 ClickOnce 受信任部署模型，以從任何安全性區域進行完全信任部署。 如需詳細資訊，請參閱[受信任的應用程式部署總覽](/visualstudio/deployment/trusted-application-deployment-overview)和[安全性](security-wpf.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Security](security-wpf.md)
+- [安全性](security-wpf.md)
 - [WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md)
 - [WPF 安全性策略 – 安全性工程](wpf-security-strategy-security-engineering.md)

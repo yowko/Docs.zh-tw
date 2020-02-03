@@ -13,10 +13,10 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739155"
 ---
-# <a name="keyboard-input-in-a-windows-forms-application"></a>Windows Forms 應用程式中的鍵盤輸入
+# <a name="keyboard-input-in-a-windows-forms-application"></a>Windows Form 應用程式中的鍵盤輸入
 Windows Forms 包括可讓您回應特定按鍵的標準鍵盤事件，同時也提供一些方法，讓您在應用程式、表單和控制項層級中，按下、修改和取用按鍵。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [鍵盤輸入的運作方式](how-keyboard-input-works.md)  
  描述如何處理鍵盤訊息，並將其轉換成鍵盤事件。  
   

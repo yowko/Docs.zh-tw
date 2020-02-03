@@ -20,11 +20,11 @@ ms.locfileid: "76737883"
 
 Windows Presentation Foundation （WPF）有一項筆墨功能，可讓您輕鬆地將數位筆跡併入應用程式中。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 若要使用下列範例，請先安裝[Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 它也有助於知道如何撰寫基本的 WPF 應用程式。 如需 WPF 入門的說明，請參閱[逐步解說：我的第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 
-## <a name="quick-start"></a>快速入門
+## <a name="quick-start"></a>快速啟動
 
 本節可協助您撰寫可收集筆跡的簡單 WPF 應用程式。
 
@@ -108,7 +108,7 @@ Windows Presentation Foundation （WPF）有一項筆墨功能，可讓您輕鬆
 
 1. 按**F5**來建立應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [數位筆跡](digital-ink.md)
 - [收集筆墨](collecting-ink.md)

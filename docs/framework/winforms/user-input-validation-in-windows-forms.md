@@ -90,7 +90,7 @@ ms.locfileid: "76734686"
 > [!NOTE]
 > 如果您強制表單以這種方式關閉，表單控制項中尚未儲存的任何資料都會遺失。 此外，強制回應表單在關閉時，不會驗證控制項的內容。 您仍然可以使用控制項驗證來鎖定控制項的焦點，但不需要擔心與關閉表單相關聯的行為。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>

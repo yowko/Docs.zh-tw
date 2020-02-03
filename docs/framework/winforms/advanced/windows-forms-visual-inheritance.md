@@ -22,7 +22,7 @@ ms.locfileid: "76732487"
   
  您可以程式設計方式或使用視覺繼承選取器，建立衍生類別表單。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [如何：繼承 Windows Forms](how-to-inherit-windows-forms.md)  
  說明如何使用程式碼建立繼承的表單。  
   
@@ -35,14 +35,14 @@ ms.locfileid: "76732487"
  [逐步解說：示範視覺化繼承](walkthrough-demonstrating-visual-inheritance.md)  
  描述如何建立基底 Windows Form，並且將其編譯至類別庫。 您將匯入此類別庫至另一個專案，並建立繼承自基底表單的新表單。  
   
- [如何：使用修飾詞和 GenerateMember 屬性](how-to-use-the-modifiers-and-generatemember-properties.md)  
+ [操作說明：使用修飾詞和 GenerateMember 屬性](how-to-use-the-modifiers-and-generatemember-properties.md)  
  說明如何使用 `GenerateMember` 和 `Modifiers` 屬性，當 Windows Form 設計工具產生元件的成員變數時，它們是相關的。  
   
 ## <a name="related-sections"></a>相關章節  
  [繼承基本概念 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  描述如何定義做為其他類別基礎的 Visual Basic 類別。  
   
- [Class - 類別](../../../csharp/language-reference/keywords/class.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  描述類別的 C# 方法，其中允許單一繼承。  
   
  [Visual Basic 中的繼承事件處理常式疑難排解](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  

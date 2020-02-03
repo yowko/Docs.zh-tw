@@ -18,7 +18,7 @@ ms.locfileid: "76741341"
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計
 本節提供的主題會示範涉及資料格、資料列和資料行物件的各種程式設計工作。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：將工具提示加入至 Windows Forms DataGridView 控制項中的個別儲存格](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  描述如何處理 <xref:System.Windows.Forms.DataGridView.CellFormatting> 事件，為個別的資料格提供不同的工具提示。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "76741341"
  [操作說明：使用 Windows Forms DataGridView 控制項中的影像資料行](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
  描述如何使用 `DataGridViewImageColumn` 類別進行程式設計。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.DataGridView>  
  提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "76741341"
  [Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)  
  提供描述常用資料格、資料列和資料行屬性的主題。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGridView 控制項](datagridview-control-windows-forms.md)
 - [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)

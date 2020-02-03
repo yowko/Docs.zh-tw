@@ -43,7 +43,7 @@ ms.locfileid: "76731366"
 
 2. 從 [選取的資料**行**] 清單中選取資料行。
 
-3. 在 [資料**行屬性**] 方格中, 按一下![<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>屬性旁邊的省略號按鈕 (Visual Studio 的](./media/visual-studio-ellipsis-button.png)屬性視窗中的省略號按鈕 (...))。 [ **CellStyle**產生器] 對話方塊隨即出現。
+3. 在 [資料**行屬性**] 方格中, 按一下![](./media/visual-studio-ellipsis-button.png)屬性旁邊的省略號按鈕 (Visual Studio 的<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>屬性視窗中的省略號按鈕 (...))。 [ **CellStyle**產生器] 對話方塊隨即出現。
 
 4. 藉由設定屬性來定義樣式，使用**預覽**窗格來確認您的選擇。
 
@@ -57,7 +57,7 @@ ms.locfileid: "76731366"
 
 4. 如果您要將 <xref:System.Windows.Forms.DataGridView> 控制項系結至可能包含 null 值的資料來源，請在 [ **Null 值**] 文字方塊中填入。 當資料格值等於 null 參考（Visual Basic 中`Nothing`）或 <xref:System.DBNull.Value?displayProperty=nameWithType>時，就會顯示這個值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
@@ -68,4 +68,4 @@ ms.locfileid: "76731366"
 - [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [操作說明：使用設計工具設定 Windows Forms DataGridView 控制項的替代資料列樣式](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
 - [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [操作說明：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)

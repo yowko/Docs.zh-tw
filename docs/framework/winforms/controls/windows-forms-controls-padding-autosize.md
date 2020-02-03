@@ -39,7 +39,7 @@ ms.locfileid: "76742380"
 
 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性會告知控制項自動將本身的大小調整為其內容。 它不會將其大小調整為小於其原始 <xref:System.Windows.Forms.Control.Size%2A> 屬性的值，而且將會考慮其 <xref:System.Windows.Forms.Control.Padding%2A> 屬性的值。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 您將需要 Visual Studio 才能完成此逐步解說。
 
@@ -174,7 +174,7 @@ ms.locfileid: "76742380"
 
 - 實驗在 <xref:System.Windows.Forms.Panel> 控制項中停駐子控制項。 <xref:System.Windows.Forms.Control.Padding%2A> 屬性是 <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A> 屬性的一般實現，而且您可以藉由將子控制項放在 <xref:System.Windows.Forms.Panel> 控制項中，並將子控制項的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 [<xref:System.Windows.Forms.DockStyle.Fill>]，來滿足這種情況。 將 <xref:System.Windows.Forms.Panel> 控制項的 <xref:System.Windows.Forms.Control.Padding%2A> 屬性設定為不同的值，並記下效果。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>

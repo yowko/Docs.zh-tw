@@ -29,6 +29,6 @@ ms.locfileid: "76739428"
   
 - System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 中的使用者輸入](user-input-in-windows-forms.md)

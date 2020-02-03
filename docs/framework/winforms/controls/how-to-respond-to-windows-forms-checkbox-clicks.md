@@ -135,7 +135,7 @@ ms.locfileid: "76735671"
     > [!NOTE]
     > 當 <xref:System.Windows.Forms.CheckBox.ThreeState%2A> 屬性設定為 `true`時，<xref:System.Windows.Forms.CheckBox.Checked%2A> 屬性會同時傳回 <xref:System.Windows.Forms.CheckState.Checked> 和 <xref:System.Windows.Forms.CheckState.Indeterminate>的 `true`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox 控制項概觀](checkbox-control-overview-windows-forms.md)

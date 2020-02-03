@@ -55,7 +55,7 @@ Windows Forms <xref:System.Windows.Forms.Button> 控制項的最基本用法，�
        }  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Button 控制項概觀](button-control-overview-windows-forms.md)
 - [選取 Windows Forms Button 控制項的方法](ways-to-select-a-windows-forms-button-control.md)

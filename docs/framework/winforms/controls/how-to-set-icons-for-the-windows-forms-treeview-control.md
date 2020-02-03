@@ -68,7 +68,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 控制項可以顯示每個�
     treeView1->SelectedNode->SelectedImageIndex = 1;  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [TreeView 控制項概觀](treeview-control-overview-windows-forms.md)
 - [操作說明：使用 Windows Forms TreeView 控制項加入和移除節點](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)

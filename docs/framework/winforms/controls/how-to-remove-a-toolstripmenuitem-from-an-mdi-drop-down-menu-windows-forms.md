@@ -26,7 +26,7 @@ ms.locfileid: "76735847"
   
 1. 建立表單，並將其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 屬性設定為 `true`。  
   
-2. 將 <xref:System.Windows.Forms.MenuStrip> 加入 `Form1`，並將 <xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性設定為 `true`。  
+2. 將 <xref:System.Windows.Forms.MenuStrip> 加入 `Form1`，並將 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 的 <xref:System.Windows.Forms.MenuStrip> 屬性設定為 `true`。  
   
 3. 將最上層功能表項目加入 `Form1`<xref:System.Windows.Forms.MenuStrip>，並將其 <xref:System.Windows.Forms.Control.Text%2A> 屬性設定為 `&File`。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76735847"
   
 5. 將兩個子功能表項目目新增至 [`&Import from`] 子功能表專案，並將其 [<xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性] 設定為 `&Word` 和 `&Excel`。  
   
-6. 將表單加入專案，將 <xref:System.Windows.Forms.MenuStrip> 加入表單，並將 `Form2`<xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性設定為 `true`。  
+6. 將表單加入專案，將 <xref:System.Windows.Forms.MenuStrip> 加入表單，並將 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>`Form2` 的 <xref:System.Windows.Forms.MenuStrip> 屬性設定為 `true`。  
   
 7. 將最上層功能表項目加入 `Form2`<xref:System.Windows.Forms.MenuStrip>，並將其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設定為 `&File`。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "76735847"
   
     |Form2 功能表項目|MergeAction 值|MergeIndex 值|  
     |---------------------|-----------------------|----------------------|  
-    |File|MatchOnly|-1|  
-    |從  匯入|MatchOnly|-1|  
-    |Word|Remove|-1|  
+    |檔案|MatchOnly|-1|  
+    |匯入自|MatchOnly|-1|  
+    |Word|移除|-1|  
   
 10. 在 `Form1`中，為 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem>的 <xref:System.Windows.Forms.Control.Click> 事件建立事件處理常式。  
   
@@ -88,13 +88,13 @@ ms.locfileid: "76735847"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- 名為 `Form1` 和 `Form2` 的兩個 <xref:System.Windows.Forms.Form> 控制項。  
+- 名為 <xref:System.Windows.Forms.Form> 和 `Form1` 的兩個 `Form2` 控制項。  
   
-- `Form1` 上名為 `menuStrip1` 的 <xref:System.Windows.Forms.MenuStrip> 控制項，以及 `Form2` 上名為 `menuStrip2` 的 <xref:System.Windows.Forms.MenuStrip> 控制項。  
+- <xref:System.Windows.Forms.MenuStrip> 上名為 `Form1` 的 `menuStrip1` 控制項，以及 <xref:System.Windows.Forms.MenuStrip> 上名為 `Form2` 的 `menuStrip2` 控制項。  
   
 - <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [操作說明：建立 MDI 父表單](../advanced/how-to-create-mdi-parent-forms.md)
 - [操作說明：建立 MDI 子表單](../advanced/how-to-create-mdi-child-forms.md)

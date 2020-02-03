@@ -18,7 +18,7 @@ ms.locfileid: "76733129"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet nuget delete` - 從伺服器刪除或取消列出套件。
 
@@ -34,7 +34,7 @@ dotnet nuget delete [-h|--help]
 
 `dotnet nuget delete` 命令會從伺服器刪除或取消列出套件。 對於 [nuget.org](https://www.nuget.org/)，該動作是取消列出套件。
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>引數
 
 * **`PACKAGE_NAME`**
 

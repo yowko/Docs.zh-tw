@@ -79,7 +79,7 @@ ms.locfileid: "76736808"
   
     7. 您可以視需要更換預設資料集名稱。  
   
-    8. 按一下 [ **完成**]。  
+    8. 按一下 **[完成]** 。  
   
 4. 在 [顯示成員] 下拉式方塊中，選取要顯示在下拉式方塊中的資料行名稱 (例如 ContactName)。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "76736808"
   
 8. 從子資料表的 <xref:System.Windows.Forms.ComboBox> (例如 <xref:System.Windows.Forms.BindingNavigator>)，將 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 以外的控制項繫結程序至您想要顯示的詳細資料欄位。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource 元件](bindingsource-component.md)

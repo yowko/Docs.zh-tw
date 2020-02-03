@@ -17,7 +17,7 @@ ms.locfileid: "76734733"
 # <a name="user-input-in-windows-forms"></a>Windows Form 中的使用者輸入
 Windows Form 包含一種使用者輸入模型，這種模型是以在處理相關 Windows 訊息時所引發的事件為基礎。 本節中的主題提供滑鼠和鍵盤使用者輸入的相關資訊，包括示範如何執行特定工作的程式碼範例。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Windows Forms 應用程式中的使用者輸入](user-input-in-a-windows-forms-application.md)  
  提供使用者輸入事件的概觀和處理 Windows 訊息的方法。  
   

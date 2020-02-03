@@ -21,7 +21,7 @@ ms.locfileid: "76731573"
   
  此外，[工具提示元件](../controls/tooltip-component-windows-forms.md)可以用來為 Windows Forms 上的控制項提供個別的協助。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [操作說明：在 Windows 應用程式中提供說明](how-to-provide-help-in-a-windows-application.md)  
  說明如何使用 `HelpProvider` 元件，將控制項連結至說明系統中的檔案。  
   
@@ -41,5 +41,5 @@ ms.locfileid: "76731573"
  [Windows Forms 概觀](../windows-forms-overview.md)  
  說明 Windows Forms 的基本概念。  
   
- [Windows Forms](../index.md)  
+ [Windows Forms](../index.md) \(英文\)  
  提供 Windows Forms 的總覽。

@@ -101,7 +101,7 @@ ms.locfileid: "76741475"
  [!code-csharp[c_TcpClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpclient/cs/source.cs#1)]
  [!code-vb[c_TcpClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpclient/vb/source.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)

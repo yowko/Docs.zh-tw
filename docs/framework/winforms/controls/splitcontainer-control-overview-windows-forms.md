@@ -38,7 +38,7 @@ Windows Form <xref:System.Windows.Forms.SplitContainer> 控制項可視為一個
   
 ## <a name="commonly-used-properties-methods-and-events"></a>常用屬性、方法和事件  
   
-|Name|描述|  
+|名稱|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> 屬性|決定 <xref:System.Windows.Forms.SplitContainer> 控制項調整大小時，哪一個面板會保持相同的大小。|  
 |<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> 屬性|決定是否可以使用鍵盤或滑鼠移動分隔器。|  
@@ -49,7 +49,7 @@ Windows Form <xref:System.Windows.Forms.SplitContainer> 控制項可視為一個
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoving> 事件|當分隔器移動時發生。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoved> 事件|發生于分隔器移動時。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 控制項](splitcontainer-control-windows-forms.md)

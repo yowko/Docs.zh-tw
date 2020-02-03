@@ -17,7 +17,7 @@ ms.locfileid: "76727912"
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>逐步解說：建立裝載於 WPF 中的 Direct3D9 內容
 本逐步解說示範如何建立適用于在 Windows Presentation Foundation （WPF）應用程式中裝載的 Direct3D9 內容。 如需有關在 WPF 應用程式中裝載 Direct3D9 內容的詳細資訊，請參閱[wpf 和 Direct3D9](wpf-and-direct3d9-interoperation.md)互通。
 
- 在這個逐步解說中，您將執行下列工作：
+ 在本逐步解說中，您將會執行下列工作：
 
 - 建立 Direct3D9 專案。
 
@@ -25,8 +25,8 @@ ms.locfileid: "76727912"
 
  當您完成時，您將會有一個 DLL，其中包含 WPF 應用程式中使用的 Direct3D9 內容。
 
-## <a name="prerequisites"></a>必要條件：
- 您需要下列元件才能完成此逐步解說：
+## <a name="prerequisites"></a>必要條件
+ 您需要下列元件才能完成這個逐步解說：
 
 - Visual Studio 2010。
 
@@ -41,13 +41,13 @@ ms.locfileid: "76727912"
 
      [Win32 應用程式精靈] 隨即開啟，並顯示 [歡迎使用] 畫面。
 
-2. 按 [ **下一步**]。
+2. 按 [下一步]。
 
      [應用程式設定] 畫面隨即出現。
 
 3. 在 [**應用程式類型：** ] 區段中，選取 [ **DLL** ] 選項。
 
-4. 按一下 [ **完成**]。
+4. 按一下 **[完成]** 。
 
      會產生 D3DContent 專案。
 
@@ -139,7 +139,7 @@ ms.locfileid: "76727912"
 
 - 將 Direct3D9 內容裝載于 WPF 應用程式中。 如需詳細資訊，請參閱[逐步解說：在 WPF 中裝載 Direct3D9 內容](walkthrough-hosting-direct3d9-content-in-wpf.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 和 WPF 互通性的效能考量](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

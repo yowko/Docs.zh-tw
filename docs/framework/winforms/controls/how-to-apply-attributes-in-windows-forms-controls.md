@@ -77,7 +77,7 @@ ms.locfileid: "76741487"
   
 - 裝載 `AttributesDemoControl` 的表單需要 `AttributesDemoControl` 元件的參考，才能建立。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>

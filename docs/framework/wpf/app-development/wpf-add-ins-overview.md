@@ -25,7 +25,7 @@ ms.locfileid: "76738937"
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 必須熟悉 .NET Framework 增益集模型。 如需詳細資訊，請參閱[增益集和擴充性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。
 
@@ -308,11 +308,11 @@ Xbap 會下載至 ClickOnce 部署快取中的安全資料夾並從中執行。 
 
 根據預設，當使用多個應用程式域時，每個應用程式所需的各種 .NET Framework 元件都會載入至該應用程式的網域。 如此一來，建立新應用程式定義域以及從其中啟動應用程式所需的時間，可能會影響效能。 不過，.NET Framework 可讓您藉由指示應用程式跨應用程式域共用元件（如果已載入的話），來縮短開始時間。 若要這麼做，您可以使用 <xref:System.LoaderOptimizationAttribute> 屬性，這必須套用至進入點方法（`Main`）。 在此情況下，您必須只使用程式碼實作您的應用程式定義 (請參閱[應用程式管理概觀](application-management-overview.md))。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.LoaderOptimizationAttribute>
 - [增益集和擴充性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [應用程式定義域](../../app-domains/application-domains.md)
 - [.NET Framework 遠端處理總覽](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [使物件可遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [「如何」主題](how-to-topics.md)
+- [操作說明主題](how-to-topics.md)

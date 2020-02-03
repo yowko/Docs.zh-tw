@@ -36,7 +36,7 @@ ms.locfileid: "76735725"
 
 2. 在 [**格式**] 功能表上，選擇 [**設成相同大小**]，然後選取四個選項的其中一個。 前三個命令會變更控制項的維度，以符合第一個選取的控制項。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
 - [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

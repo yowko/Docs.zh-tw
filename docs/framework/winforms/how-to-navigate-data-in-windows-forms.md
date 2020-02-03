@@ -50,7 +50,7 @@ ms.locfileid: "76739395"
      [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 支援的資料來源](data-sources-supported-by-windows-forms.md)
 - [Windows Forms 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)

@@ -28,11 +28,11 @@ ms.locfileid: "76728261"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- 本系統和 System.Windows.Forms 組件的參考。  
+- System 和 System.Windows.Forms 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - [在 Windows Forms DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計](programming-with-cells-rows-and-columns-in-the-datagrid.md)
-- [如何：顯示 Windows Form DataGridView 控制項的儲存格影像](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [操作說明：顯示 Windows Form DataGridView 控制項的儲存格影像](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)

@@ -100,7 +100,7 @@ WCF WEB HTTP 程式設計模型可讓開發人員透過基本 HTTP 要求公開 
 
 由於 WCF WEB HTTP 程式設計模型不支援 WS-* 通訊協定，因此以 WCF WEB HTTP 程式設計模型為基礎來保護 Web 服務安全的唯一方法，就是使用 SSL 公開您的服務。 如需使用 IIS 7.0 設定 SSL 的詳細資訊，請參閱[如何在 iis 中執行 ssl](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis)。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

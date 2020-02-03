@@ -65,7 +65,7 @@ ms.locfileid: "76739532"
   
     - 如果您使用 Visual Basic，請輸入： `vbc form1.vb`  
   
-3. 在命令提示字元中，輸入： `Form1.exe`  
+3. 在命令提示字元中，輸入：`Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>加入控制項和處理事件
 
@@ -111,7 +111,7 @@ ms.locfileid: "76739532"
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>

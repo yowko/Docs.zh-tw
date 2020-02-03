@@ -13,11 +13,11 @@ ms.locfileid: "76731454"
 
 新式 .NET 支援多種作業系統與裝置。 .NET 開放原始碼程式庫要儘可能支援許多開發人員，無論是建置裝載於 Azure 的 ASP.NET 網站，還是 Unity 中的 .NET 遊戲，這一點非常重要。
 
-## <a name="net-standard"></a>.NET 標準
+## <a name="net-standard"></a>.NET Standard
 
 .NET Standard 是為 .NET 程式庫新增跨平台支援的最佳方式。 [.NET Standard](../net-standard.md) 是在所有 .NET 實作都可以使用的 .NET API 規格。 將目標設為 .NET Standard，您可以產生限制為使用給定 .NET Standard 版本中之 API 的程式庫，這表示它可以被實作該 .NET 版本的所有平台使用。
 
-![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET 標準")
+![.NET Standard](./media/cross-platform-targeting/platforms-netstandard.png ".NET Standard")
 
 將目標設為 .NET Standard 並成功地編譯您的專案，並不保證程式庫將可在所有平台上順利執行：
 
@@ -117,7 +117,7 @@ public static class GpsLocation
 
 .NET 支援長期不支援的 .NET Framework 的目標版本，以及不再常用的平台。 雖然使您的程式庫在儘可能多的目標上運作是有價值的，但是必須針對 API 遺漏問題找出因應措施會增加重大額外負荷。 考慮到其範圍與限制，我們認為特定架構已不再值得設為目標。
 
-❌ 不包含可移植的類別庫（PCL）目標。 例如，`portable-net45+win8+wpa81+wp8`。
+❌ 不包含可移植的類別庫（PCL）目標。 例如： `portable-net45+win8+wpa81+wp8` 。
 
 > .NET Standard 是支援跨平台 .NET 程式庫並取代 PCL 的新式方法。
 

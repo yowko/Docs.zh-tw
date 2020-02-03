@@ -104,7 +104,7 @@ ms.locfileid: "76741873"
 
  ❌ 避免在具有與集合概念無關之複雜 Api 的類型上，執行集合介面。
 
- ❌ 不會繼承自非泛型基底集合，例如 `CollectionBase`。 請改用 `Collection<T>`、`ReadOnlyCollection<T>`和 `KeyedCollection<TKey,TItem>`。
+ ❌ 不會繼承自非泛型基底集合，例如 `CollectionBase`。 請改用 `Collection<T>`、`ReadOnlyCollection<T>` 和 `KeyedCollection<TKey,TItem>`。
 
 ### <a name="naming-custom-collections"></a>命名自訂集合
  集合（實 `IEnumerable`的型別）主要是為了兩個原因而建立：（1）建立具有結構特定作業的新資料結構，以及通常與現有資料結構（例如，<xref:System.Collections.Generic.List%601>、<xref:System.Collections.Generic.LinkedList%601>、<xref:System.Collections.Generic.Stack%601>）和（2）不同的效能特性，以建立用於保存特定專案集（例如 <xref:System.Collections.Specialized.StringCollection>）的特殊集合。 資料結構最常用於應用程式和程式庫的內部執行。 專門的集合主要是在 Api 中公開（作為屬性和參數類型）。
@@ -125,9 +125,9 @@ ms.locfileid: "76741873"
 
  *部分©2005、2009 Microsoft Corporation。已保留擁有權限。*
 
- 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 節錄。
+ 獲 Pearson Education, Inc. 的授權再版，從 Krzysztof Cwalina 和 Brad Abrams 撰寫，並在 2008 年 10 月 22 日由 Addison-Wesley Professional 出版，作為 Microsoft Windows Development Series 一部份的 *Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition[ 節錄。](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Framework 設計方針](../../../docs/standard/design-guidelines/index.md)
 - [用法方針](../../../docs/standard/design-guidelines/usage-guidelines.md)

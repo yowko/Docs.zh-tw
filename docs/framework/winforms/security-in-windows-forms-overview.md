@@ -1,5 +1,5 @@
 ---
-title: 安全性總覽
+title: 安全性概觀
 ms.date: 03/30/2017
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -85,11 +85,11 @@ ClickOnce 有兩種技術可在用戶端電腦上要求較高的許可權。 這
 
 如果您已使用 Visual Studio 部署 Windows Forms 應用程式，您可以在部分信任中啟用偵測，或從開發環境啟用限制許可權集合。  另請參閱[如何：以限制的許可權對 ClickOnce 應用程式進行 Debug](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 安全性](windows-forms-security.md)
 - [程式碼存取安全性的基本概念](../misc/code-access-security-basics.md)
 - [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
 - [受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)
 - [Mage.exe (資訊清單產生和編輯工具)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (資訊清單產生和編輯工具、圖形用戶端)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

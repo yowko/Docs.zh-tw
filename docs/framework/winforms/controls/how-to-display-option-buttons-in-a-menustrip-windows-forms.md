@@ -83,7 +83,7 @@ ms.locfileid: "76735521"
 
 - System、System.Drawing 和 System.Windows.Forms 組件的參考。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>

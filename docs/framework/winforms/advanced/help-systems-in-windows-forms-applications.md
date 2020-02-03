@@ -15,7 +15,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742242"
 ---
-# <a name="help-systems-in-windows-forms-applications"></a>Windows Forms 應用程式中的說明系統
+# <a name="help-systems-in-windows-forms-applications"></a>Windows Form 應用程式中的說明系統
 身為應用程式開發人員的其中一項最重要的禮物，可以為您的使用者提供有能力的協助系統。 這是他們在混淆或 disoriented 時將會變成的地方。 使用[HelpProvider 元件](../controls/helpprovider-component-windows-forms.md)可輕鬆地在 Windows 應用程式中提供說明系統。  
   
 ## <a name="different-types-of-help"></a>不同類型的說明  
@@ -23,10 +23,10 @@ ms.locfileid: "76742242"
   
  您可以使用 HTML Help 研討會產生 HTML Help 1.x 檔案。 如需 HTML 說明的詳細資訊，請參閱 MSDN 中的「HTML 協助研討會」或其他「HTML 說明」主題。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [整合 Windows Forms 中的使用者說明](integrating-user-help-in-windows-forms.md)
 - [HelpProvider 元件](../controls/helpprovider-component-windows-forms.md)
 - [ToolTip 元件](../controls/tooltip-component-windows-forms.md)
 - [Windows Forms 概觀](../windows-forms-overview.md)
-- [Windows Forms](../index.md)
+- [Windows Forms](../index.md) \(英文\)

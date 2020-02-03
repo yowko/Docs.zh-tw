@@ -247,6 +247,6 @@ ms.locfileid: "76738277"
 ## <a name="classes-that-format-your-text"></a>格式化文字的類別  
  <xref:System.Windows.Documents.TextElement> 及其相關的類別可讓您將文字格式化。 <xref:System.Windows.Documents.TextElement> 物件包含和格式化 <xref:System.Windows.Controls.TextBlock> 和 <xref:System.Windows.Documents.FlowDocument> 物件中的文字。 <xref:System.Windows.Documents.TextElement> 物件的兩個主要類型是 <xref:System.Windows.Documents.Block> 元素和 <xref:System.Windows.Documents.Inline> 元素。 <xref:System.Windows.Documents.Block> 元素代表一段文字，例如段落或清單。 <xref:System.Windows.Documents.Inline> 元素代表區塊中的部分文字。 許多 <xref:System.Windows.Documents.Inline> 類別會針對要套用的文字指定格式。 每個 <xref:System.Windows.Documents.TextElement> 都有自己的內容模型。 如需詳細資訊，請參閱 [TextElement 內容模型概觀](../advanced/textelement-content-model-overview.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [進階](../advanced/index.md)

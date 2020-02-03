@@ -12,7 +12,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76734802"
 ---
-# <a name="user-input-in-a-windows-forms-application"></a>Windows Forms 應用程式中的使用者輸入
+# <a name="user-input-in-a-windows-forms-application"></a>Windows Form 應用程式中的使用者輸入
 在 Windows Forms 中，使用者輸入會以 Windows 訊息的形式傳送至應用程式。 一系列可覆寫的方法會在應用程式、表單和控制項層級處理這些訊息。 當這些方法收到滑鼠和鍵盤訊息時，它們會引發可處理的事件，以取得滑鼠或鍵盤輸入的相關資訊。 在許多情況下，Windows Forms 應用程式只要處理這些事件，就能夠處理所有使用者輸入。 在其他情況下，應用程式可能需要覆寫處理訊息的其中一個方法，以便在應用程式、表單或控制項收到特定訊息之前加以攔截。  
   
 ## <a name="mouse-and-keyboard-events"></a>滑鼠和鍵盤事件  
@@ -31,7 +31,7 @@ ms.locfileid: "76734802"
   
  鍵盤和滑鼠訊息也是由一組額外的可覆寫方法所處理，這是一種特定類型的訊息。 如需詳細資訊，請參閱[鍵盤輸入的運作方式](how-keyboard-input-works.md)和[滑鼠輸入在 Windows Forms 中的運作](how-mouse-input-works-in-windows-forms.md)方式。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 中的使用者輸入](user-input-in-windows-forms.md)
 - [Windows Forms 應用程式中的鍵盤輸入](keyboard-input-in-a-windows-forms-application.md)
