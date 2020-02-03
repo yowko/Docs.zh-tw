@@ -17,14 +17,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76745484"
 ---
-# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a><span data-ttu-id="2bb6e-102">如何：啟用 Windows Form 在執行階段時重新排列 ToolStrip 項目</span><span class="sxs-lookup"><span data-stu-id="2bb6e-102">How to: Enable Reordering of ToolStrip Items at Run Time in Windows Forms</span></span>
-<span data-ttu-id="2bb6e-103">您可以讓使用者重新排列 <xref:System.Windows.Forms.ToolStrip>上的 <xref:System.Windows.Forms.ToolStripItem> 控制項。</span><span class="sxs-lookup"><span data-stu-id="2bb6e-103">You can enable the user to rearrange <xref:System.Windows.Forms.ToolStripItem> controls on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+# <a name="how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms"></a><span data-ttu-id="fbd5a-102">如何：啟用 Windows Form 在執行階段時重新排列 ToolStrip 項目</span><span class="sxs-lookup"><span data-stu-id="fbd5a-102">How to: Enable Reordering of ToolStrip Items at Run Time in Windows Forms</span></span>
+<span data-ttu-id="fbd5a-103">您可以讓使用者重新排列 <xref:System.Windows.Forms.ToolStrip>上的 <xref:System.Windows.Forms.ToolStripItem> 控制項。</span><span class="sxs-lookup"><span data-stu-id="fbd5a-103">You can enable the user to rearrange <xref:System.Windows.Forms.ToolStripItem> controls on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
-### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a><span data-ttu-id="2bb6e-104">在執行時間啟用 ToolStripItem 重新排列</span><span class="sxs-lookup"><span data-stu-id="2bb6e-104">To enable ToolStripItem rearrangement at run time</span></span>  
+### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a><span data-ttu-id="fbd5a-104">在執行時間啟用 ToolStripItem 重新排列</span><span class="sxs-lookup"><span data-stu-id="fbd5a-104">To enable ToolStripItem rearrangement at run time</span></span>  
   
-- <span data-ttu-id="2bb6e-105">將 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 屬性設定為 `true`。</span><span class="sxs-lookup"><span data-stu-id="2bb6e-105">Set the <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> property to `true`.</span></span> <span data-ttu-id="2bb6e-106">預設會 `false`<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>。</span><span class="sxs-lookup"><span data-stu-id="2bb6e-106">By default, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> is `false`.</span></span>  
+- <span data-ttu-id="fbd5a-105">將 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 屬性設為 `true`。</span><span class="sxs-lookup"><span data-stu-id="fbd5a-105">Set the <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> property to `true`.</span></span> <span data-ttu-id="fbd5a-106">預設會 `false`<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>。</span><span class="sxs-lookup"><span data-stu-id="fbd5a-106">By default, <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> is `false`.</span></span>  
   
-     <span data-ttu-id="2bb6e-107">在執行時間，使用者按住 ALT 鍵並按滑鼠左鍵，將 <xref:System.Windows.Forms.ToolStripItem> 拖曳至 <xref:System.Windows.Forms.ToolStrip>上的不同位置。</span><span class="sxs-lookup"><span data-stu-id="2bb6e-107">At run time, the user holds down the ALT key and the left mouse button to drag a <xref:System.Windows.Forms.ToolStripItem> to a different location on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+     <span data-ttu-id="fbd5a-107">在執行時間，使用者按住 ALT 鍵並按滑鼠左鍵，將 <xref:System.Windows.Forms.ToolStripItem> 拖曳至 <xref:System.Windows.Forms.ToolStrip>上的不同位置。</span><span class="sxs-lookup"><span data-stu-id="fbd5a-107">At run time, the user holds down the ALT key and the left mouse button to drag a <xref:System.Windows.Forms.ToolStripItem> to a different location on the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
     ```vb  
     toolStrip1.AllowItemReorder = True  
@@ -34,10 +34,10 @@ ms.locfileid: "76745484"
     toolStrip1.AllowItemReorder = true;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="2bb6e-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="2bb6e-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fbd5a-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fbd5a-108">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>
-- [<span data-ttu-id="2bb6e-109">ToolStrip 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="2bb6e-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="2bb6e-110">ToolStrip 控制項架構</span><span class="sxs-lookup"><span data-stu-id="2bb6e-110">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
-- [<span data-ttu-id="2bb6e-111">ToolStrip 技術摘要</span><span class="sxs-lookup"><span data-stu-id="2bb6e-111">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
+- [<span data-ttu-id="fbd5a-109">ToolStrip 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="fbd5a-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="fbd5a-110">ToolStrip 控制項架構</span><span class="sxs-lookup"><span data-stu-id="fbd5a-110">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="fbd5a-111">ToolStrip 技術摘要</span><span class="sxs-lookup"><span data-stu-id="fbd5a-111">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
