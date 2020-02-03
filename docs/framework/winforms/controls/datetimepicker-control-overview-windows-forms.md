@@ -24,7 +24,7 @@ Windows Forms <xref:System.Windows.Forms.DateTimePicker> 控制項可讓使用�
   
  控制項的 <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> 和 <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> 屬性會決定日期和時間的範圍。 <xref:System.Windows.Forms.DateTimePicker.Value%2A> 屬性包含控制項設定的目前日期和時間。 如需詳細資訊，請參閱[如何：使用 Windows Forms DateTimePicker 控制項來設定和傳回日期](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)。 這些值可以用四種格式顯示，由 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 屬性設定： <xref:System.Windows.Forms.DateTimePickerFormat.Long>、<xref:System.Windows.Forms.DateTimePickerFormat.Short>、<xref:System.Windows.Forms.DateTimePickerFormat.Time>或 <xref:System.Windows.Forms.DateTimePickerFormat.Custom>。 如果選取了自訂格式，您必須將 <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> 屬性設定為適當的字串。 如需詳細資訊，請參閱[如何：使用 Windows Forms DateTimePicker 控制項，以自訂格式顯示日期](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [操作說明：使用 Windows Forms DateTimePicker 控制項顯示自訂格式的日期](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
 - [操作說明：使用 Windows Forms DateTimePicker 控制項設定和傳回日期](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

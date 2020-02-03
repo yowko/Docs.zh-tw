@@ -41,7 +41,7 @@ IdentityServer 提供在 ASP.NET Core 應用程式中執行的中介軟體，並
 - 撤銷（權杖撤銷）
 - 結束會話（在所有應用程式中觸發單一登出）
 
-## <a name="getting-started"></a>入門
+## <a name="getting-started"></a>開始使用
 
 IdentityServer4 是開放原始碼且可免費使用。 您可以使用 NuGet 套件，將它新增至您的應用程式。 主要套件是已下載超過4000000次的[IdentityServer4](https://www.nuget.org/packages/IdentityServer4/) 。 基底套件不包含任何使用者介面程式碼，而且只支援記憶體設定。 若要將它與資料庫搭配使用，您也會想要使用 Entity Framework Core 來儲存 IdentityServer 之設定和運算元據的資料提供者，例如[IdentityServer4. EntityFramework](https://www.nuget.org/packages/IdentityServer4.EntityFramework) 。 針對使用者介面，您可以將[檔案從快速入門 UI 存放庫](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI)複製到 ASP.NET Core MVC 應用程式中，以新增使用 IdentityServer 中介軟體進行登入和登出的支援。
 

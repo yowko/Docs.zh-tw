@@ -150,7 +150,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 
 ![螢幕擷取畫面：顯示擴充至 WPF 應用程式的玻璃框架。](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [桌面視窗管理員總覽](/windows/desktop/dwm/dwm-overview)
 - [桌面視窗管理員模糊總覽](/windows/desktop/dwm/blur-ovw)

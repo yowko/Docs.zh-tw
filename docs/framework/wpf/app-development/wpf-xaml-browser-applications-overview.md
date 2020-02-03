@@ -20,7 +20,7 @@ ms.locfileid: "76742289"
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>XAML 瀏覽器應用程式（Xbap）結合了 Web 應用程式和豐富型用戶端應用程式的功能。 如同 Web 應用程式，XBAP 可以部署至 Web 伺服器，並且從 Internet Explorer 或 Firefox 啟動。 如同豐富型用戶端應用程式，Xbap 可以利用 WPF 的功能。 開發 XBAP 也類似於豐富型用戶端開發。 本主題提供 XBAP 開發的簡單、高階介紹，並且描述 XBAP 開發與標準豐富型用戶端開發的不同之處。
 
- 此主題包括下列章節：
+ 本主題包含下列幾節：
 
 - [建立新的 XAML 瀏覽器應用程式 (XBAP)](#creating_a_new_xaml_browser_application_xbap)
 
@@ -34,7 +34,7 @@ ms.locfileid: "76742289"
 
 <a name="creating_a_new_xaml_browser_application_xbap"></a>
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>建立新的 XAML 瀏覽器應用程式 (XBAP)
- 建立新的 XBAP 專案最簡單的方式是使用 Visual Studio。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]。 如需詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。
+ 建立新的 XBAP 專案最簡單的方式是使用 Visual Studio。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]。 如需更多詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。
 
  當您執行 XBAP 專案時，它會在瀏覽器視窗中開啟，而不是在獨立視窗中開啟。 當您從 Visual Studio 來對 XBAP 進行偵錯工具時，應用程式會以網際網路區域許可權執行，因此如果超過這些許可權，將會擲回安全性例外狀況。 如需詳細資訊，請參閱[安全性](../security-wpf.md)和 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
 
@@ -45,7 +45,7 @@ ms.locfileid: "76742289"
 ## <a name="deploying-an-xbap"></a>部署 XBAP
  當您建置 XBAP 時，輸出會包含下列三個檔案︰
 
-|File|描述|
+|檔案|描述|
 |----------|-----------------|
 |可執行檔 (.exe)|它包含已編譯的程式碼，副檔名為 .exe。|
 |應用程式資訊清單 (.manifest)|它包含與應用程式相關聯的中繼資料，副檔名為 .manifest。|
@@ -113,11 +113,11 @@ ms.locfileid: "76742289"
 
      [網際網路選項] 對話方塊隨即出現。
 
-6. 按一下 [進階] 按鈕。
+6. 按一下 [**進階**] 索引標籤。
 
 7. 在 [安全性] 底下的 [設定]清單中，勾選 [允許檔案中的主動式內容在我的電腦上執行] 核取方塊。
 
-8. 按一下 [ **確定**]。
+8. 按一下 [確定]。
 
      變更在重新啟動 Internet Explorer 之後才會生效。
 
@@ -185,7 +185,7 @@ ms.locfileid: "76742289"
 
  此外，改善 ClickOnce 下載順序的並行處理可改善最多10% 的開始時間。 ClickOnce 下載並驗證資訊清單之後，應用程式下載隨即啟動，且進度列會開始更新。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [部署 WPF 應用程式](deploying-a-wpf-application-wpf.md)

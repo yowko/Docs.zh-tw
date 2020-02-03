@@ -40,7 +40,7 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
  本主題描述何設定及使用應用程式資料檔案。  
 
 <a name="Resource_Files"></a>   
-## <a name="resource-files"></a>資源檔案  
+## <a name="resource-files"></a>資源檔  
  若應用程式資料檔案必須一律可供應用程式使用，確保可用性的唯一方法是將檔案編譯成應用程式的主要可執行檔組件或是應用程式的其中一個參考組件。 這種類型的應用程式資料檔案稱為「*資源檔*」。  
   
  應該使用資源檔的時機包括：  
@@ -237,6 +237,6 @@ Microsoft Windows 應用程式通常取決於包含非可執行資料的檔案�
 ## <a name="rebuilding-after-changing-build-type"></a>在變更組建類型之後重建  
  在變更應用程式資料檔案的組建類型之後，您必須重建整個應用程式，以確認套用這些變更。 若您只建置應用程式，則不會套用變更。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WPF 中的 Pack URI](pack-uris-in-wpf.md)

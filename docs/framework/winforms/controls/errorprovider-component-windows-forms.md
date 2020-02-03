@@ -16,7 +16,7 @@ ms.locfileid: "76745764"
 # <a name="errorprovider-component-windows-forms"></a>ErrorProvider 元件 (Windows Form)
 Windows Forms `ErrorProvider` 元件是用來以非干擾性的方式來顯示使用者，但發生問題。 它通常會與驗證表單上的使用者輸入，或在資料集內顯示錯誤一起使用。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ErrorProvider 元件概觀](errorprovider-component-overview-windows-forms.md)  
  說明此元件的內容及其主要功能與屬性。  
   
@@ -26,7 +26,7 @@ Windows Forms `ErrorProvider` 元件是用來以非干擾性的方式來顯示�
  [操作說明：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤](view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
  提供使用錯誤提供者元件來顯示資料錯誤的指示。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.ErrorProvider>  
  說明這個類別，並且提供其所有成員的連結。  
   

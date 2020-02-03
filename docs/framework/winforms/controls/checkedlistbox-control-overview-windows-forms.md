@@ -20,7 +20,7 @@ Windows Forms <xref:System.Windows.Forms.CheckedListBox> 控制項會擴充 <xre
   
  已選取的清單方塊可以在設計階段使用 [**字串集合編輯器**] 加入專案，或是在執行時間使用 [<xref:System.Windows.Forms.CheckedListBox.Items%2A>] 屬性，以動態方式新增其專案。 如需詳細資訊，請參閱[如何：在 Windows Forms ComboBox、ListBox 或 CheckedListBox 控制項中新增和移除專案](add-and-remove-items-from-a-wf-combobox.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.CheckedListBox>
 - <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>

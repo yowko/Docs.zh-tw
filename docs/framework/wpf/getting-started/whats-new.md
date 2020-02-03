@@ -16,7 +16,7 @@ ms.locfileid: "76746927"
 # <a name="whats-new-in-wpf-version-45"></a>WPF 4.5 版的新功能
 <a name="introduction"></a>本主題包含 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 版本4.5 中新增和增強功能的相關資訊。  
   
- 此主題包括下列章節：  
+ 本主題包含下列幾節：  
   
 - [功能區控制項](#ribbon_control)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "76746927"
   
 <a name="INotifyDataErrorInfo"></a>   
 ## <a name="synchronously-and-asynchronously-validating-data"></a>同步和非同步驗證資料  
- <xref:System.ComponentModel.INotifyDataErrorInfo> 介面可讓資料實體類別執行自訂驗證規則，並以非同步方式公開驗證結果。 此介面也支援自訂錯誤物件、每個屬性多個錯誤、跨屬性錯誤，以及實體層級錯誤。  如需詳細資訊，請參閱<xref:System.ComponentModel.INotifyDataErrorInfo>。  
+ <xref:System.ComponentModel.INotifyDataErrorInfo> 介面可讓資料實體類別執行自訂驗證規則，並以非同步方式公開驗證結果。 此介面也支援自訂錯誤物件、每個屬性多個錯誤、跨屬性錯誤，以及實體層級錯誤。  如需詳細資訊，請參閱 <xref:System.ComponentModel.INotifyDataErrorInfo>。  
   
 <a name="delay"></a>   
 ## <a name="automatically-updating-the-source-of-a-data-binding"></a>自動更新資料繫結的來源  
@@ -126,6 +126,6 @@ ms.locfileid: "76746927"
 ## <a name="markup-extensions-for-events"></a>事件的標記延伸  
  WPF 4.5 支援事件的標記延伸。  WPF 不會定義要用於事件的標記延伸，協力廠商可以建立可與事件一起使用的標記延伸。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 的新功能](../../whats-new/index.md)

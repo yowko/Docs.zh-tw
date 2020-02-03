@@ -2,12 +2,12 @@
 title: Docker 應用程式的開發工作流程
 description: 了解開發 Docker 應用程式的工作流程詳細資料。 一開始會逐步了解一些用以最佳化 Dockerfile 的詳細資料，最後將取得使用 Visual Studio 時可用的簡化工作流程。
 ms.date: 01/07/2019
-ms.openlocfilehash: 5df646ffaba67a016d2b18959b9873b52c3d5e4c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 53675bf974069e9052d6d03b2743314af6f13cf9
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920331"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965785"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -442,10 +442,10 @@ docker-compose.yml 檔案指定的不只是使用何種容器，還會指定它�
 您可以使用 `docker run` 命令來執行 Docker 容器，如圖 5-9 所示：
 
 ```console
-  docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
+docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
-上述命令會在每次執行時，從指定的映像建立新的容器執行個體。 您可以使用 `--name` 參數來指定容器的名稱，然後使用 `docker start {name}` (或是使用容器識別碼或自動名稱) 來執行現有的容器執行個體。
+上述命令會在每次執行時，從指定的映像建立新的容器執行個體。 您可以使用 `--name` 參數來提供容器的名稱，然後使用 `docker start {name}` （或使用容器識別碼或自動名稱）來執行現有的容器實例。
 
 ![使用 docker run 命令執行 Docker 容器的螢幕擷取畫面。](./media/docker-app-development-workflow/use-docker-run-command.png)
 
@@ -453,7 +453,7 @@ docker-compose.yml 檔案指定的不只是使用何種容器，還會指定它�
 
 在本列中，命令會將容器的內部通訊埠 5000 繫結到主機電腦的通訊埠 80。 這表示主機會接聽通訊埠 80 並轉送至容器的通訊埠 5000。
 
-顯示的雜湊是容器識別碼，若未使用 `--name` 選項，也會隨機指派可讀的名稱。
+顯示的雜湊是容器識別碼，如果未使用 `--name` 選項，它也會被指派隨機的可讀取名稱。
 
 #### <a name="using-visual-studio"></a>使用 Visual Studio
 
@@ -500,7 +500,7 @@ docker-compose.yml 檔案指定的不只是使用何種容器，還會指定它�
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>測試與部署協調器的注意事項
 
-docker-compose up 和 docker run 命令 (在 Visual Studio 中執行和偵錯容器) 適合在開發環境中測試容器。 但您不應該針對生產環境部署使用這種方法，在此部署中，您應該以 [Kubernetes](https://kubernetes.io/) 或 [Service Fabric](https://azure.microsoft.com/services/service-fabric/) 等協調器為目標。 如果您使用 Kubernetes，您必須使用 [Pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/) 來組織容器，並使用[服務](https://kubernetes.io/docs/concepts/services-networking/service/)來為其建立網路。 您也必須使用[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)來組織 Pod 建立和修改作業。
+docker-compose up 和 docker run 命令 (在 Visual Studio 中執行和偵錯容器) 適合在開發環境中測試容器。 但您不應該針對生產環境部署使用這種方法，在此部署中，您應該以 [Kubernetes](https://kubernetes.io/) 或 [Service Fabric](https://azure.microsoft.com/services/service-fabric/) 等協調器為目標。 如果您使用 Kubernetes，則[必須使用 pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/)來組織容器和[服務](https://kubernetes.io/docs/concepts/services-networking/service/)以進行網路。 您也必須使用[部署](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)來組織 Pod 建立和修改作業。
 
 ![步驟6的影像。](./media/docker-app-development-workflow/step-6-test-app-microservices.png)
 

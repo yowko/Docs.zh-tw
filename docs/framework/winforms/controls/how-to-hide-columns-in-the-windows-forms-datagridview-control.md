@@ -25,7 +25,7 @@ ms.locfileid: "76736568"
   
 ### <a name="to-hide-a-column-programmatically"></a>以程式設計方式隱藏資料行  
   
-- 將 <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> 屬性設定為 `false`。 若要隱藏在資料繫結期間自動產生的 `CustomerID` 資料行，請將下列程式碼範例放在 <xref:System.Windows.Forms.DataGridView.DataBindingComplete> 事件處理常式中。  
+- 將 <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType> 屬性設為 `false`。 若要隱藏在資料繫結期間自動產生的 `CustomerID` 資料行，請將下列程式碼範例放在 <xref:System.Windows.Forms.DataGridView.DataBindingComplete> 事件處理常式中。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#063)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#063](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#063)]  
@@ -33,11 +33,11 @@ ms.locfileid: "76736568"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項 ，包含名為 `CustomerID` 的資料行。  
+- 名為 <xref:System.Windows.Forms.DataGridView> 的 `dataGridView1` 控制項 ，包含名為 `CustomerID` 的資料行。  
   
 - <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>

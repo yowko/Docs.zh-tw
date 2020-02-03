@@ -53,7 +53,7 @@ ms.locfileid: "76742970"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要執行此範例，請將程式碼貼入包含名為 `BindingSource1` 之 <xref:System.Windows.Forms.BindingSource> 的表單中，以及名為 `dataGridView1`的 <xref:System.Windows.Forms.DataGridView>。 處理表單的 <xref:System.Windows.Forms.Form.Load> 事件，並在 load 事件處理常式方法中呼叫 `InitializeSortedFilteredBindingSource`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>

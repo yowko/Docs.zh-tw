@@ -13,7 +13,7 @@ ms.locfileid: "76733047"
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet store` - 會在[執行階段套件存放區](../deploying/runtime-store.md)中儲存指定的組件。
 
@@ -33,7 +33,7 @@ ms.locfileid: "76733047"
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-「套件存放區資訊清單檔」是 XML 檔，包含要儲存的套件清單。 資訊清單檔的格式相容於 SDK 樣式專案格式。 因此，參考所需套件的專案檔可以搭配 `-m|--manifest` 選項，將組件儲存在執行階段套件存放區中。 若要指定多個資訊清單檔，請為每個檔案重複選項和路徑。 例如：`--manifest packages1.csproj --manifest packages2.csproj`。
+「套件存放區資訊清單檔」是 XML 檔，包含要儲存的套件清單。 資訊清單檔的格式相容於 SDK 樣式專案格式。 因此，參考所需套件的專案檔可以搭配 `-m|--manifest` 選項，將組件儲存在執行階段套件存放區中。 若要指定多個資訊清單檔，請為每個檔案重複選項和路徑。 例如： `--manifest packages1.csproj --manifest packages2.csproj` 。
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -79,6 +79,6 @@ ms.locfileid: "76733047"
 
 `dotnet store --manifest packages.csproj --skip-optimization`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段套件存放區](../deploying/runtime-store.md)

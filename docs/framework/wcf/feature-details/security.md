@@ -18,7 +18,7 @@ ms.locfileid: "76744630"
   
  如需 Windows Server AppFabric 和安全性的詳細資訊，請參閱[Windows Server appfabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  描述 WCF 中的安全性功能。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76744630"
  [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  安全性導向的繫結檢視，包括示範如何建立自訂安全性繫結的各個主題。  
   
- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  描述如何使用 WCF 安全性功能來保護訊息的安全。  
   
  [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
@@ -55,7 +55,7 @@ ms.locfileid: "76744630"
  [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  建立安全 WCF 應用程式的指導方針。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
@@ -65,10 +65,10 @@ ms.locfileid: "76744630"
   
  [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [快速入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
  [概念性概觀](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [設定應用程式](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

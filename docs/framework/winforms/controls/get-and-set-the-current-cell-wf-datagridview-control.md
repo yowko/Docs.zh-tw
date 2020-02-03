@@ -43,11 +43,11 @@ ms.locfileid: "76745657"
   
 - <xref:System.Windows.Forms.Button> 名為 `getCurrentCellButton` 和 `setCurrentCellButton`的控制項。 在 Visual C#中，您必須將每個按鈕的 <xref:System.Windows.Forms.Control.Click> 事件附加至範例程式碼中相關聯的事件處理常式。  
   
-- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
+- 名為 <xref:System.Windows.Forms.DataGridView> 的 `dataGridView1` 控制項。  
   
 - <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CurrentCell%2A?displayProperty=nameWithType>

@@ -1,5 +1,5 @@
 ---
-title: 樹狀
+title: 樹木
 ms.date: 03/30/2017
 helpviewer_keywords:
 - logical tree [WPF]
@@ -84,7 +84,7 @@ ms.locfileid: "76746572"
   
  不過，資源查閱也可以延伸至目前邏輯樹狀結構以外的地方。 對於應用程式標記，資源查閱可接著繼續前進到應用程式層級的資源字典，然後到做為靜態屬性或索引鍵加以參考的佈景主題支援和系統值。 如果資源參考是動態的，則佈景主題本身也可以參考佈景主題邏輯樹狀結構以外的系統值。 如需資源字典和查閱邏輯的詳細資訊，請參閱 [XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [輸入概觀](input-overview.md)
 - [WPF 圖形轉譯概觀](../graphics-multimedia/wpf-graphics-rendering-overview.md)

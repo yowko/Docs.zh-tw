@@ -46,7 +46,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 控制項可讓您以許
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>若要在控制項底部顯示目前的日期  
   
-- 將 <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 屬性設定為 `true`。 下列範例會在按兩下表單時，切換顯示和省略今天的日期。  
+- 將 <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> 屬性設為 `true`。 下列範例會在按兩下表單時，切換顯示和省略今天的日期。  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 控制項可讓您以許
   
 ### <a name="to-display-week-numbers"></a>若要顯示周數  
   
-- 將 <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 屬性設定為 `true`。 您可以在程式碼或屬性視窗中設定此屬性。  
+- 將 <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> 屬性設為 `true`。 您可以在程式碼或屬性視窗中設定此屬性。  
   
      周數會出現在一周第一天左邊的個別資料行中。  
   
@@ -103,7 +103,7 @@ Windows Forms <xref:System.Windows.Forms.MonthCalendar> 控制項可讓您以許
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [MonthCalendar 控制項](monthcalendar-control-windows-forms.md)
 - [操作說明：在 Windows Forms 的 MonthCalendar 控制項中選取一個日期範圍](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

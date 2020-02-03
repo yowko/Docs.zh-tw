@@ -31,11 +31,11 @@ Visual Studio 會將所有參考加入至專案中的控制項。 如需在 Wind
 > [!NOTE]
 > 在匯入 ActiveX 動態連結程式庫時，Windows Forms ActiveX 控制項匯入工具（Aximp.exe）會建立與預期不同類型的事件引數。 Aximp.exe 所建立的引數與下列類似： `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`，`Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` 是預期的情況。 請注意，此 irregularity 不會防止程式碼正常運作。 如需詳細資訊，請參閱[Windows Forms ActiveX 控制項匯入工具（aximp.exe .exe）](../../tools/aximp-exe-windows-forms-activex-control-importer.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
 - [比較各種語言和程式庫的控制項與可以透過程式設計的物件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [操作說明：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
 - [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)

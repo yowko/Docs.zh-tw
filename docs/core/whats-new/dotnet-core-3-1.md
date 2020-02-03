@@ -29,7 +29,7 @@ Visual Studio for Mac 也支援並包含 Visual Studio for Mac 8.4 中的 .NET C
 
 .NET Core 3.1 是 LTS 版本，在接下來的三年來提供 Microsoft 支援。 強烈建議您將應用程式移至 .NET Core 3.1。 其他主要版本的目前生命週期如下所示：
 
-| Release | 注意 |
+| 發行 | 附註 |
 | ------- | ---- |
 | .NET Core 3.0 | 2020年3月3日結束生命週期。     |
 | .NET Core 2.2 | 2019年12月23日結束生命週期。 |
@@ -37,7 +37,7 @@ Visual Studio for Mac 也支援並包含 Visual Studio for Mac 8.4 中的 .NET C
 
 如需詳細資訊，請參閱[.Net Core 支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。
 
-## <a name="windows-forms"></a>Windows 表單
+## <a name="windows-forms"></a>Windows Form
 
 *僅限 Windows*
 

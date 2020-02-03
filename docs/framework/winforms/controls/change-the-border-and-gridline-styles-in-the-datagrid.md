@@ -40,7 +40,7 @@ ms.locfileid: "76744706"
   
 ### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>以程式設計方式變更 DataGridView 儲存格的框線樣式  
   
-- 設定 [<xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>]、[<xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>] 和 [<xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A>] 屬性。  
+- 設定 <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>、 <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>和 <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> 屬性。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  
@@ -52,11 +52,11 @@ ms.locfileid: "76744706"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
+- 名為 <xref:System.Windows.Forms.DataGridView> 的 `dataGridView1` 控制項。  
   
 - <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.BorderStyle>
 - <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>

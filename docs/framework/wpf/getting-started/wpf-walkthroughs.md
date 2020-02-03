@@ -42,7 +42,7 @@ ms.locfileid: "76746906"
 |-----------|-----------------|
 |[逐步解說：在 WPF 中裝載 Windows Forms 控制項](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|示範如何在 WPF 應用程式中裝載 Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> 控制項。|
 |[逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|示範如何在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式中裝載 Windows Forms 的資料輸入複合控制項。|
-|[逐步解說：在 Windows Form 中裝載 WPF 複合控制項](../advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|示範如何在 Windows Forms 應用程式中裝載 WPF 資料輸入複合控制項。|
+|[逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](../advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|示範如何在 Windows Forms 應用程式中裝載 WPF 資料輸入複合控制項。|
 |[逐步解說：在 WPF 中排列 Windows Forms 控制項](../advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|示範如何使用 WPF 版面配置功能，在混合式應用程式中排列 Windows Forms 控制項。|
 |[逐步解說：繫結至混合應用程式中的資料](../advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|示範如何在包含 Windows Forms 和 WPF 控制項的混合式應用程式中使用資料系結。|
 

@@ -30,7 +30,7 @@ ms.locfileid: "76730999"
   
 - System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - [逐步解說：建立未繫結的 Windows Forms DataGridView 控制項](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)

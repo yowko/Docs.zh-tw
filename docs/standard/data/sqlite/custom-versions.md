@@ -21,9 +21,9 @@ SQLitePCLRaw 提供配套套件，可讓您輕鬆地在不同的平臺上帶入�
 
 若要使用不同的配套，請改為安裝 `Microsoft.Data.Sqlite.Core` 套件，以及您要使用的配套套件。 套件組合會由 Microsoft 自動初始化。
 
-| 束 | 描述 |
+| 組合 | 描述 |
 | --- | --- |
-| SQLitePCLRaw。 bundle_e_sqlite3 | 在所有平臺上提供一致版本的 SQLite。 包含 FTS4、FTS5、JSON1 和 R * 樹狀目錄延伸模組。 這是預設設定。 |
+| SQLitePCLRaw。 bundle_e_sqlite3 | 在所有平臺上提供一致版本的 SQLite。 包含 FTS4、FTS5、JSON1 和 R * 樹狀目錄延伸模組。 這是預設值。 |
 | SQLitePCLRaw。 bundle_green | 與 bundle_e_sqlite3 相同，除非在 iOS 上使用系統 SQLite 程式庫。 |
 | SQLitePCLRaw。 bundle_zetetic | 使用來自 Zetetic 的官方 SQLCipher 組建（不包含）。 |
 | SQLitePCLRaw。 bundle_winsqlite3 | 會使用 winsqlite3，也就是 Windows 10 上的系統 SQLite 程式庫。 |

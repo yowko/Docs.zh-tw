@@ -19,9 +19,9 @@ ms.locfileid: "76743217"
 
 ## <a name="key-properties"></a>索引鍵內容
 
-<xref:System.Windows.Forms.TreeView> 控制項的索引鍵屬性為 <xref:System.Windows.Forms.TreeView.Nodes%2A> 和 <xref:System.Windows.Forms.TreeView.SelectedNode%2A>。 <xref:System.Windows.Forms.TreeView.Nodes%2A> 屬性包含樹狀檢閱中最上層節點的清單。 <xref:System.Windows.Forms.TreeView.SelectedNode%2A> 屬性會設定目前選取的節點。 您可以在節點旁邊顯示圖示。 此控制項會使用來自樹狀檢視的 <xref:System.Windows.Forms.TreeView.ImageList%2A> 屬性中命名的 <xref:System.Windows.Forms.ImageList> 影像。 <xref:System.Windows.Forms.TreeView.ImageIndex%2A> 屬性會設定樹狀檢閱節點中的預設影像。 如需有關顯示影像的詳細資訊，請參閱[如何：設定 Windows Forms TreeView 控制項的圖示](how-to-set-icons-for-the-windows-forms-treeview-control.md)。 如果您使用 Visual Studio 2005，您可以存取可搭配 <xref:System.Windows.Forms.TreeView> 控制項使用的大型標準影像程式庫。
+<xref:System.Windows.Forms.TreeView> 控制項的索引鍵屬性為 <xref:System.Windows.Forms.TreeView.Nodes%2A> 和 <xref:System.Windows.Forms.TreeView.SelectedNode%2A>。 <xref:System.Windows.Forms.TreeView.Nodes%2A> 屬性包含樹狀檢閱中最上層節點的清單。 <xref:System.Windows.Forms.TreeView.SelectedNode%2A> 屬性會設定目前選取的節點。 您可以在節點旁邊顯示圖示。 此控制項會使用來自樹狀檢視的 <xref:System.Windows.Forms.ImageList> 屬性中命名的 <xref:System.Windows.Forms.TreeView.ImageList%2A> 影像。 <xref:System.Windows.Forms.TreeView.ImageIndex%2A> 屬性會設定樹狀檢閱節點中的預設影像。 如需有關顯示影像的詳細資訊，請參閱[如何：設定 Windows Forms TreeView 控制項的圖示](how-to-set-icons-for-the-windows-forms-treeview-control.md)。 如果您使用 Visual Studio 2005，您可以存取可搭配 <xref:System.Windows.Forms.TreeView> 控制項使用的大型標準影像程式庫。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.TreeView>
 - [TreeView 控制項](treeview-control-windows-forms.md)

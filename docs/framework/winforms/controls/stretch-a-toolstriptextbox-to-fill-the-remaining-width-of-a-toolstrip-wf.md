@@ -29,7 +29,7 @@ ms.locfileid: "76742836"
   
 - System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>

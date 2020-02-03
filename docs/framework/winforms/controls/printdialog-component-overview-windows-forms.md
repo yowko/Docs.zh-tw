@@ -24,7 +24,7 @@ Windows Forms [PrintDialog](printdialog-component-windows-forms.md)元件是預�
 
 當它新增至表單時，<xref:System.Windows.Forms.PrintDialog> 元件會出現在 Visual Studio Windows Form 設計工具底部的紙匣中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.PrintDialog>
 - [PrintDialog 元件](printdialog-component-windows-forms.md)

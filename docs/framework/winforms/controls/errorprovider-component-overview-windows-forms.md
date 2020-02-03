@@ -26,7 +26,7 @@ Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md)元件是
 > [!NOTE]
 > <xref:System.Windows.Forms.ErrorProvider> 元件並未提供協助工具用戶端的內建支援。 若要讓您的應用程式在使用此元件時可供存取，您必須提供其他可存取的意見反應機制。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ErrorProvider>
 - [操作說明：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

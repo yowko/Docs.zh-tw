@@ -22,7 +22,7 @@ ms.locfileid: "76745484"
   
 ### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>在執行時間啟用 ToolStripItem 重新排列  
   
-- 將 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 屬性設定為 `true`。 預設會 `false`<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>。  
+- 將 <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> 屬性設為 `true`。 預設會 `false`<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>。  
   
      在執行時間，使用者按住 ALT 鍵並按滑鼠左鍵，將 <xref:System.Windows.Forms.ToolStripItem> 拖曳至 <xref:System.Windows.Forms.ToolStrip>上的不同位置。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76745484"
     toolStrip1.AllowItemReorder = true;  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>

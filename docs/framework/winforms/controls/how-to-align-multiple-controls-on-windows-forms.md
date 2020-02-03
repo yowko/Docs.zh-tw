@@ -29,13 +29,13 @@ ms.locfileid: "76747203"
 
 3. 在 [**格式**] 功能表上，選取 [**對齊**]，然後選取可用的七個選項之一。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [操作說明：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
 - [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)
 - [逐步解說：使用對齊線排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [如何：將現有控制項重新指派至不同的父代](how-to-reassign-existing-controls-to-a-different-parent.md)
+- [操作說明：將現有控制項重新指派至不同的父代](how-to-reassign-existing-controls-to-a-different-parent.md)

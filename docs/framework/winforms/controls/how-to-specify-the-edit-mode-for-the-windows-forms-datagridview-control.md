@@ -22,7 +22,7 @@ ms.locfileid: "76743759"
   
 - <xref:System.Windows.Forms.DataGridView> 控制項已啟用。  
   
-- 不 <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically><xref:System.Windows.Forms.DataGridView.EditMode%2A> 屬性值。  
+- <xref:System.Windows.Forms.DataGridView.EditMode%2A> 屬性值不是 <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>。  
   
 - 資料格、資料列、資料行和控制項的 `ReadOnly` 屬性全都設定為 `false`。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "76743759"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
+- 名為 <xref:System.Windows.Forms.DataGridView> 的 `dataGridView1` 控制項。  
   
 - <xref:System> 和 <xref:System.Windows.Forms> 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>

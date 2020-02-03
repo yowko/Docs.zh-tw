@@ -103,9 +103,9 @@ ms.locfileid: "76746695"
   
 3. 選擇性在方格中加入適當的資料表樣式和資料行樣式。 如果沒有資料表樣式，您會看到資料表，但最小的格式和所有資料行都是可見的。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGrid 控制項概觀](datagrid-control-overview-windows-forms.md)
-- [如何：將資料表和資料行新增至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [操作說明：將資料表和資料行新增至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
 - [Windows Forms 資料繫結](../windows-forms-data-binding.md)

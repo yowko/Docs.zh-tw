@@ -92,7 +92,7 @@ ms.locfileid: "76745905"
   
 4. 執行專案。 將不正確（在此範例中為非數值）資料輸入到第一個控制項，然後按 tab 鍵前往第二個控制項。 當錯誤圖示顯示時，請使用滑鼠指標指向它，以查看錯誤文字。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [ErrorProvider 元件概觀](errorprovider-component-overview-windows-forms.md)

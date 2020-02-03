@@ -81,7 +81,7 @@ ms.locfileid: "76745992"
 [針對控制項和元件撰寫進行疑難排解](troubleshooting-control-and-component-authoring.md)\
 示範如何診斷和修正在您撰寫自訂元件或控制項時可能發生的常見問題。
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 - <xref:System.Windows.Forms.Control?displayProperty=nameWithType>
 
@@ -92,7 +92,7 @@ ms.locfileid: "76745992"
 [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)\
 討論如何使用 .NET Framework 建立您自己的自訂控制項。
 
-[Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\
+[語言獨立性以及與語言無關的元件](../../../standard/language-independence-and-language-independent-components.md)\
 介紹設計目的是要簡化元件建立和使用的 Common Language Runtime。 這個簡化的重要層面是使用不同程式設計語言所撰寫之元件之間增強的互通性。 Common Language Specification (CLS) 可讓您建立可處理多種程式設計語言的工具和元件。
 
 [逐步解說：自動將自訂元件填入工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\

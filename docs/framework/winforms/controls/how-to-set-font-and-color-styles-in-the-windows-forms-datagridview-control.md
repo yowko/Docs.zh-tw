@@ -18,7 +18,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746753"
 ---
 # <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>如何：設定 Windows Form DataGridView 控制項的字型和色彩樣式
-您可以設定 <xref:System.Windows.Forms.DataGridViewCellStyle> 類別的屬性，在 <xref:System.Windows.Forms.DataGridView> 控制項內指定儲存格的視覺外觀。 您可以從 <xref:System.Windows.Forms.DataGridView> 類別和其附屬類別的各種屬性擷取此類別的執行個體，或者您可以具現化 <xref:System.Windows.Forms.DataGridViewCellStyle> 物件以便指派給這些屬性。  
+您可以設定 <xref:System.Windows.Forms.DataGridView> 類別的屬性，在 <xref:System.Windows.Forms.DataGridViewCellStyle> 控制項內指定儲存格的視覺外觀。 您可以從 <xref:System.Windows.Forms.DataGridView> 類別和其附屬類別的各種屬性擷取此類別的執行個體，或者您可以具現化 <xref:System.Windows.Forms.DataGridViewCellStyle> 物件以便指派給這些屬性。  
   
  下列程序將示範使用 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> 屬性進行儲存格外觀的基本自訂。 控制項中的每個儲存格會透過這個屬性繼承指定的樣式，除非它們在資料行、資料列，或儲存格層級遭到覆寫。 如需樣式繼承的範例，請參閱[如何：設定 Windows Forms DataGridView 控制項的預設儲存格樣式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。 如需 <xref:System.Windows.Forms.DataGridViewCellStyle> 類別其他用法的相關資訊，請參閱＜另請參閱＞一節中所列的主題。  
   
@@ -26,21 +26,21 @@ ms.locfileid: "76746753"
   
 ### <a name="to-specify-the-font-used-by-datagridview-cells"></a>指定 DataGridView 儲存格所使用的字型  
   
-- 設定 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> 屬性。 下列程式碼範例使用 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> 屬性來設定整個控制項的字型。  
+- 設定 <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A> 的 <xref:System.Windows.Forms.DataGridViewCellStyle> 屬性。 下列程式碼範例使用 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> 屬性來設定整個控制項的字型。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#101](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#101)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#101](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#101)]  
   
 ### <a name="to-specify-the-foreground-and-background-colors-of-datagridview-cells"></a>指定 DataGridView 儲存格的前景和背景色彩  
   
-- 設定 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> 屬性。 下列程式碼範例使用 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> 屬性來設定整個控制項的字型。  
+- 設定 <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle> 屬性。 下列程式碼範例使用 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> 屬性來設定整個控制項的字型。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#102](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#102)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#102](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#102)]  
   
 ### <a name="to-specify-the-foreground-and-background-colors-of-selected-datagridview-cells"></a>指定所選取 DataGridView 儲存格的前景和背景色彩  
   
-- 設定 <xref:System.Windows.Forms.DataGridViewCellStyle> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> 屬性。 下列程式碼範例使用 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> 屬性來設定整個控制項的字型。  
+- 設定 <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A> 的 <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> 和 <xref:System.Windows.Forms.DataGridViewCellStyle> 屬性。 下列程式碼範例使用 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> 屬性來設定整個控制項的字型。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#103](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#103)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#103](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#103)]  
@@ -52,14 +52,14 @@ ms.locfileid: "76746753"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- 名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
+- 名為 <xref:System.Windows.Forms.DataGridView> 的 `dataGridView1` 控制項。  
   
 - <xref:System?displayProperty=nameWithType>、<xref:System.Drawing?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="robust-programming"></a>最佳化程式設計  
- 若要達到最大延展性，您應該在使用相同樣式的多個資料列、資料行或儲存格之間共用 <xref:System.Windows.Forms.DataGridViewCellStyle> 物件，而不是分別設定每個項目的樣式屬性。 如需詳細資訊，請參閱[縮放 Windows Forms DataGridView 控制項的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
+ 若要達到最大延展性，您應該在使用相同樣式的多個資料列、資料行或儲存格之間共用 <xref:System.Windows.Forms.DataGridViewCellStyle> 物件，而不是分別設定每個項目的樣式屬性。 如需詳細資訊，請參閱 [縮放 Windows Form DataGridView 控制項的最佳做法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

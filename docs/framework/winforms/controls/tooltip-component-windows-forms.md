@@ -15,7 +15,7 @@ ms.locfileid: "76747255"
 # <a name="tooltip-component-windows-forms"></a>ToolTip 元件 (Windows Form)
 當使用者指向控制項時，Windows Form <xref:System.Windows.Forms.ToolTip> 元件會顯示文字。 工具提示可以與任何控制項產生關聯。 使用此控制項的範例：為了節省表單空間，您可以在按鈕上顯示小圖示，並使用工具提示來說明按鈕的功能。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ToolTip 元件概觀](tooltip-component-overview-windows-forms.md)  
  介紹 <xref:System.Windows.Forms.ToolTip> 元件的一般概念，可讓使用者將滑鼠指向控制項時，就會看到文字。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "76747255"
  [操作說明：變更 Windows Forms ToolTip 元件的延遲時間](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
  說明如何設定值，以控制工具提示花多少時間出現，以及其顯示的時間長度。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.ToolTip> 類別  
  提供這個類別及其成員的相關參考資訊。  
   

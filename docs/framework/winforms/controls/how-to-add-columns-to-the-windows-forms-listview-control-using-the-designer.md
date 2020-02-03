@@ -28,7 +28,7 @@ ms.locfileid: "76744613"
 
 3. 使用 [**加入**] 按鈕來加入新的資料行。 然後，您可以選取資料行標頭，並設定其文字（欄的標題）、文字對齊和寬度。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ListView 控制項概觀](listview-control-overview-windows-forms.md)
 - [操作說明：使用 Windows Forms ListView 控制項加入和移除項目](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

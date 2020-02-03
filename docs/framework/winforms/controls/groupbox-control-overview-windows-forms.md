@@ -22,6 +22,6 @@ Windows Forms <xref:System.Windows.Forms.GroupBox> 控制項是用來為其他�
 ## <a name="groupbox-and-panel"></a>分組和麵板  
  <xref:System.Windows.Forms.GroupBox> 控制項類似于 <xref:System.Windows.Forms.Panel> 控制項;不過，只有 [<xref:System.Windows.Forms.GroupBox>] 控制項會顯示標題，而且只有 [<xref:System.Windows.Forms.Panel>] 控制項才可以有捲軸。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [GroupBox 控制項](groupbox-control-windows-forms.md)

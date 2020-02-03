@@ -16,11 +16,11 @@ ms.locfileid: "76741537"
 > [!NOTE]
 > 這篇文章會在 macOS 上使用 [Visual Studio Code](https://code.visualstudio.com)。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
-安裝 [.NET Core SDK (英文)](https://dotnet.microsoft.com/download)。 .NET Core SDK 包含 .NET Core 架構和執行階段的最新版本。
+安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。 .NET Core SDK 包含 .NET Core 架構和執行階段的最新版本。
 
-安裝 [Visual Studio Code (英文)](https://code.visualstudio.com)。 在這篇文章的過程中，您也將安裝能改善 .NET Core 開發體驗的 Visual Studio Code 延伸模組。
+安裝 [Visual Studio Code](https://code.visualstudio.com)。 在這篇文章的過程中，您也將安裝能改善 .NET Core 開發體驗的 Visual Studio Code 延伸模組。
 
 開啟 Visual Studio Code 並C#按<kbd>Fn</kbd>+<kbd>F1</kbd>來開啟 [Visual Studio Code] 調色板，以安裝 Visual Studio Code 擴充功能。 鍵入 **ext install** 來查看延伸模組的清單。 選取 C# 延伸模組。 重新啟動 Visual Studio Code 以啟動延伸模組。 如需詳細資訊，請參閱 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
@@ -80,7 +80,7 @@ dotnet add library package Newtonsoft.Json
 dotnet restore
 ```
 
-在 *library* 資料夾中，將檔案 *Class1.cs* 重新命名為 *Thing.cs*。 使用下列內容取代程式碼：
+在 *library* 資料夾中，將檔案 *Class1.cs* 重新命名為 *Thing.cs*。 使用下列程式碼來取代此程式碼：
 
 ```csharp
 using static Newtonsoft.Json.JsonConvert;
@@ -202,15 +202,15 @@ using static System.Console;
 using Library;
 ```
 
-執行下列 `dotnet run` 命令來執行可執行檔，而 `dotnet run` 的 `-p` 選項指定主要應用程式的專案。 應用程式會產生 "The answer is 42" 字串。
+執行下列 `dotnet run` 命令來執行可執行檔，而 `-p` 的 `dotnet run` 選項指定主要應用程式的專案。 應用程式會產生 "The answer is 42" 字串。
 
 ```dotnetcli
 dotnet run -p app/app.csproj
 ```
 
-## <a name="debug-the-application"></a>進行應用程式偵錯
+## <a name="debug-the-application"></a>偵錯應用程式
 
-在 `Main` 方法中的 `WriteLine` 陳述式設定中斷點。 若要這麼做，請在游標停留在 `WriteLine` 行上時按下<kbd>Fn</kbd>+<kbd>F9</kbd>鍵，或在您要設定中斷點的那一行的左邊界按一下滑鼠。 紅色圓圈會出現在程式碼行旁邊的邊界。 到達中斷點時，會在執行中斷點行「之前」停止執行程式碼。
+在 `WriteLine` 方法中的 `Main` 陳述式設定中斷點。 若要這麼做，請在游標停留在 `WriteLine` 行上時按下<kbd>Fn</kbd>+<kbd>F9</kbd>鍵，或在您要設定中斷點的那一行的左邊界按一下滑鼠。 紅色圓圈會出現在程式碼行旁邊的邊界。 到達中斷點時，會在執行中斷點行「之前」停止執行程式碼。
 
 開啟 [偵錯工具] 索引標籤，方法是選取 [Visual Studio Code] 工具列中的 [debug] 圖示，從功能表列選取 [ <kbd>&#8679;</kbd> <kbd>&#8984;</kbd> **View** > debug]，或使用鍵盤快速鍵<kbd>D</kbd>：
 

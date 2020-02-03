@@ -76,7 +76,7 @@ Windows Forms 中列印的基礎是 <xref:System.Drawing.Printing.PrintDocument>
   
      如需 Windows Forms 列印工作細節的詳細資訊，包括如何以程式設計方式建立列印工作，請參閱 <xref:System.Drawing.Printing.PrintPageEventArgs>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Windows Forms 列印支援](windows-forms-print-support.md)

@@ -46,7 +46,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> 控制項和其相關聯的�
   
 ### <a name="important-toolstrip-members"></a>重要的 ToolStrip 成員  
   
-|Name|描述|  
+|名稱|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|取得或設定停駐 <xref:System.Windows.Forms.ToolStrip> 父容器的邊緣。|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|取得或設定值，表示拖放動作和項目的重新排序是否由 <xref:System.Windows.Forms.ToolStrip> 類別私下處理。|  
@@ -55,14 +55,14 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> 控制項和其相關聯的�
 |<xref:System.Windows.Forms.ToolStrip.IsDropDown%2A>|取得值，指出當按一下 <xref:System.Windows.Forms.ToolStripItem> 時，<xref:System.Windows.Forms.ToolStripItem> 是否會在下拉式清單中顯示其他專案。|  
 |<xref:System.Windows.Forms.ToolStrip.OverflowButton%2A>|取得 <xref:System.Windows.Forms.ToolStripItem>，它會在啟用溢位時做為 <xref:System.Windows.Forms.ToolStrip> 的溢位按鈕。|  
 |<xref:System.Windows.Forms.ToolStrip.Renderer%2A>|取得或設定用來自訂 <xref:System.Windows.Forms.ToolStrip>之外觀和行為（外觀與風格）的 <xref:System.Windows.Forms.ToolStripRenderer>。|  
-|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|取得或設定要套用至 <xref:System.Windows.Forms.ToolStrip>的繪製樣式。|  
+|<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>|取得或設定套用至 <xref:System.Windows.Forms.ToolStrip> 的繪製樣式。|  
 |<xref:System.Windows.Forms.ToolStrip.RendererChanged>|在 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 屬性變更時引發。|  
   
  透過使用一些附屬類別，就能達到 <xref:System.Windows.Forms.ToolStrip> 控制項的彈性。 以下是一些最值得注意的部分：  
   
 ### <a name="important-toolstrip-companion-classes"></a>重要的 ToolStrip 附屬類別  
   
-|Name|描述|  
+|名稱|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|取代並加入 <xref:System.Windows.Forms.MainMenu> 類別的功能。|  
 |<xref:System.Windows.Forms.StatusStrip>|取代並加入 <xref:System.Windows.Forms.StatusBar> 類別的功能。|  
@@ -71,7 +71,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> 控制項和其相關聯的�
 |<xref:System.Windows.Forms.ToolStripContainer>|會在表單的每一端提供一個面板，其中控制項可透過各種方式排列。|  
 |<xref:System.Windows.Forms.ToolStripRenderer>|處理 <xref:System.Windows.Forms.ToolStrip> 物件的繪製功能。|  
 |<xref:System.Windows.Forms.ToolStripProfessionalRenderer>|提供 Microsoft Office 樣式的外觀。|  
-|<xref:System.Windows.Forms.ToolStripManager>|控制 <xref:System.Windows.Forms.ToolStrip> 轉譯和浮動浮動，以及合併 <xref:System.Windows.Forms.MenuStrip>、<xref:System.Windows.Forms.ToolStripDropDownMenu>和 <xref:System.Windows.Forms.ToolStripMenuItem> 物件。|  
+|<xref:System.Windows.Forms.ToolStripManager>|控制 <xref:System.Windows.Forms.ToolStrip> 的呈現和浮動定位，以及 <xref:System.Windows.Forms.MenuStrip>、<xref:System.Windows.Forms.ToolStripDropDownMenu> 和 <xref:System.Windows.Forms.ToolStripMenuItem> 物件的合併。|  
 |<xref:System.Windows.Forms.ToolStripManagerRenderMode>|指定套用至包含在表單中之多個 <xref:System.Windows.Forms.ToolStrip> 物件的繪製樣式（自訂、Windows XP 或 Microsoft Office Professional）。|  
 |<xref:System.Windows.Forms.ToolStripRenderMode>|指定套用至表單所包含之一個 <xref:System.Windows.Forms.ToolStrip> 物件的繪製樣式（自訂、Windows XP 或 Microsoft Office Professional）。|  
 |<xref:System.Windows.Forms.ToolStripControlHost>|裝載其他不是特別 <xref:System.Windows.Forms.ToolStrip> 控制項，但您想要 <xref:System.Windows.Forms.ToolStrip> 功能的控制項。|  
@@ -79,7 +79,7 @@ Windows Forms <xref:System.Windows.Forms.ToolStrip> 控制項和其相關聯的�
   
  如需詳細資訊，請參閱[Toolstrip 技術摘要](toolstrip-technology-summary.md)和[toolstrip 控制項架構](toolstrip-control-architecture.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>

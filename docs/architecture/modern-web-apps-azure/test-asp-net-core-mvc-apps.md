@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0cb5c5c604d4a82798d4af736ff278b096621588
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5f63e350e2f1ba8699bb002a54492cbf9501948e
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777101"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965772"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
@@ -78,7 +78,7 @@ Martin Fowler 撰寫了測試金字塔相關事項，其中的一個範例如圖
 
 ### <a name="test-naming"></a>命名測試
 
-您應該以統一的方式來為測試命名，並以名稱來指出每項測試的用途。 取得巨大成功的一種方法，是根據其正在測試的類別和方法來命名測試類別。 這會導致許多小測試類別，但可以非常清楚劃分每項測試的職責。 藉由設定測試類別名稱來識別要測試的類別和方法，測試方法名稱可用於指定要測試的行為。 這應該包含預期的行為，以及任何應該產生這種行為的輸入或假設。 測試名稱的一些範例：
+以一致的方式為您的測試命名，並以名稱指出每個測試的用途。 取得巨大成功的一種方法，是根據其正在測試的類別和方法來命名測試類別。 這會導致許多小測試類別，但可以非常清楚劃分每項測試的職責。 藉由設定測試類別名稱來識別要測試的類別和方法，測試方法名稱可用於指定要測試的行為。 這應該包含預期的行為，以及任何應該產生這種行為的輸入或假設。 測試名稱的一些範例：
 
 - `CatalogControllerGetImage.CallsImageServiceWithId`
 
@@ -143,7 +143,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-\_記錄器和 \_imageService 會同時插入作為相依性。 現在您可以測試將傳遞給操作方法的相同識別碼傳遞給 \_imageService，且產生之位元組會作為 FileResult 的一部分傳回。 您也可以測試錯誤記錄是否按預期進行；假設這是重要的應用程式行為 (意即，不僅僅是開發人員用於診斷問題的臨時程式碼)，如果影像遺失，則傳回 NotFound 結果。 實際的檔案邏輯已移至另一個實作服務中，並且已擴大為針對遺失檔案情況來傳回應用程式特定的例外狀況。 您可以使用整合測試來獨立測試此實作。
+`_logger` 和 `_imageService` 都已插入為相依性。 現在您可以測試傳遞至動作方法的相同識別碼是否會傳遞給 `_imageService`，並將產生的位元組當做 FileResult 的一部分傳回。 您也可以測試錯誤記錄是否如預期般發生，如果影像遺失，則會傳回 `NotFound` 的結果，假設這是重要的應用程式行為（也就是開發人員為了診斷問題而新增的暫時性程式碼）。 實際的檔案邏輯已移至另一個實作服務中，並且已擴大為針對遺失檔案情況來傳回應用程式特定的例外狀況。 您可以使用整合測試來獨立測試此實作。
 
 在多數情況下，建議您在控制器中使用全域例外處理常式，以便其使用最少邏輯數量，而可能用不著進行單元測試。 您應該使用功能測試及下方說明的 `TestServer` 類別來進行大部分的控制器動作測試。
 
@@ -153,7 +153,7 @@ public IActionResult GetImage(int id)
 
 ## <a name="functional-testing-aspnet-core-apps"></a>對 ASP.NET Core 應用程式進行功能測試
 
-對 ASP.NET Core 應用程式來說，`TestServer` 類別使功能測試變得相當易於撰寫。 您可以直接使用 `WebHostBuilder` 來設定 `TestServer` (如同您平常對應用程式進行的設定)，也可使用 `WebApplicationFactory` 類型來設定 (自版本 2.1 開始可使用)。 您應該盡可能讓測試主機幾乎與生產主機完全一樣，以便測試的執行行為與應用程式在生產環境中的執行行為類似。 `WebApplicationFactory` 類別有助於設定 TestServer 的 ContentRoot，ASP.NET Core 用它來尋找靜態資源 (如檢視)。
+對 ASP.NET Core 應用程式來說，`TestServer` 類別使功能測試變得相當易於撰寫。 您可以直接使用 `WebHostBuilder` （如同您的應用程式一般）或 `WebApplicationFactory` 類型（自2.1 版起提供）來設定 `TestServer`。 盡可能儘量將您的測試主機與生產主機進行比對，因此您的測試將會執行與應用程式在生產環境中的作用類似的行為。 `WebApplicationFactory` 類別有助於設定 TestServer 的 ContentRoot，ASP.NET Core 用它來尋找靜態資源 (如檢視)。
 
 建立簡單功能測試的方法是，建立實作 IClassFixture\<WebApplicationFactory\<TEntry>> 的測試類別，其中 TEntry 是 Web 應用程式的啟動類別。 準備好測試類別之後，測試固件可以使用處理站的 CreateClient 方法來建立用戶端：
 

@@ -18,12 +18,12 @@ ms.locfileid: "76731773"
 # <a name="resources-wpf"></a>資源 (WPF)
 資源是可在應用程式中不同位置重複使用的物件。 WPF 支援不同類型的資源。 這些資源主要是兩種類型的資源： XAML 資源和資源資料檔。 XAML 資源的範例包括筆刷和樣式。 資源資料檔是應用程式所需的無法執行資料檔案。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
  [WPF 應用程式資源、內容和資料檔案](../app-development/wpf-application-resource-content-and-data-files.md)  
  [WPF 中的 Pack URI](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.ResourceDictionary>  
   
  [StaticResource 標記延伸](staticresource-markup-extension.md)  

@@ -42,14 +42,14 @@ End Sub
   
 - 名為 `Form1`的 Windows Form。  
   
-- 名為 `LinkLabel1` 的 <xref:System.Windows.Forms.LinkLabel> 控制項。  
+- 名為 <xref:System.Windows.Forms.LinkLabel> 的 `LinkLabel1` 控制項。  
   
 - 作用中的網際網路連接。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
- 呼叫 <xref:System.Diagnostics.Process.Start%2A> 方法需要完全信任。 如需詳細資訊，請參閱<xref:System.Security.SecurityException>。  
+ 呼叫 <xref:System.Diagnostics.Process.Start%2A> 方法需要完全信任。 如需詳細資訊，請參閱 <xref:System.Security.SecurityException>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [LinkLabel 控制項](linklabel-control-windows-forms.md)

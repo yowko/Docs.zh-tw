@@ -20,7 +20,7 @@ Windows Form <xref:System.Windows.Forms.Timer> 是定期引發事件的元件。
 ## <a name="key-properties-methods-and-events"></a>索引鍵屬性、方法和事件  
  間隔的長度是由 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性所定義，其值以毫秒為單位。 啟用元件時，會在每個間隔引發 <xref:System.Windows.Forms.Timer.Tick> 事件。 這是您要在其中加入要執行之程式碼的位置。 如需詳細資訊，請參閱 how [to：使用 Windows Forms 計時器元件以設定的間隔執行程式](run-procedures-at-set-intervals-with-wf-timer-component.md)。 <xref:System.Windows.Forms.Timer> 元件的主要方法是 <xref:System.Windows.Forms.Timer.Start%2A> 和 <xref:System.Windows.Forms.Timer.Stop%2A>，這會開啟和關閉計時器。 當計時器切換為關閉時，它會重設;沒有任何方法可以暫停 <xref:System.Windows.Forms.Timer> 元件。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer 元件](timer-component-windows-forms.md)

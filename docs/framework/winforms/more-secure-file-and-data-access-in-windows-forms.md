@@ -135,7 +135,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 > [!NOTE]
 > 在 Visual C#中，請確定您加入程式碼以啟用事件處理常式。 藉由使用前一個範例的程式碼，下列程式碼會示範如何啟用事件處理常式。`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
-### <a name="other-files"></a>其他檔案  
+### <a name="other-files"></a>Other Files  
  有時候，您必須讀取或寫入使用者未指定的檔案，例如當您必須保存應用程式設定。 在近端內部網路和網際網路區域中，您的應用程式將不會有把資料儲存在本機檔案的權限。 但是您的應用程式可以將資料儲存在隔離儲存區。 隔離儲存區是抽象的資料區間 (不是特定的儲存位置)，其中包含一或多個稱為存放區的隔離儲存區，存放區包含儲存資料的實際目錄位置。 檔案存取權限，例如 <xref:System.Security.Permissions.FileIOPermission> 並非必要項；相反地， <xref:System.Security.Permissions.IsolatedStoragePermission> 類別控制隔離儲存區的權限。 根據預設，在近端內部網路和網際網路區域執行的應用程式可以使用隔離儲存區來儲存資料。不過，像是磁碟配額之類的設定可能會有所不同。 如需有關隔離儲存區的詳細資訊，請參閱[隔離儲存區](../../standard/io/isolated-storage.md)。  
   
  下列範例會使用隔離儲存區，將資料寫入存放區中的檔案。 這個範例需要 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 以及  <xref:System.Security.Permissions.IsolatedStorageContainment.DomainIsolationByUser>  列舉值。 此範例示範讀取和寫入 <xref:System.Windows.Forms.Button> 控制項的特定屬性值到隔離儲存區中的檔案。 應用程式啟動之後就會呼叫  `Read` 函式，並且會在結束前呼叫 `Write` 函式。 此範例要求 `Read` 和 `Write` 函式必須以包含名為 `MainButton`之 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Form> 成員身分存在。  
@@ -358,11 +358,11 @@ public void Write()
   
  因為您無法在部分信任下存取登錄，您可能需要尋找儲存資料的其他方法。 當您儲存應用程式設定時，使用隔離儲存區，而不是登錄。 隔離儲存區也可以用來儲存其他應用程式特定的檔案。 您也可以儲存與伺服器或來源網站相關的全域應用程式資訊，因為根據預設，應用程式被授與存取其來源網站的權限。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 中更安全的列印](more-secure-printing-in-windows-forms.md)
 - [Windows Forms 中的其他安全性考量](additional-security-considerations-in-windows-forms.md)
 - [Windows Forms 中的安全性概觀](security-in-windows-forms-overview.md)
 - [Windows Forms 安全性](windows-forms-security.md)
 - [Mage.exe (資訊清單產生和編輯工具)](../tools/mage-exe-manifest-generation-and-editing-tool.md)
-- [MageUI.exe (資訊清單產生和編輯工具、圖形用戶端)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+- [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

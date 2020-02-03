@@ -75,15 +75,15 @@ ms.locfileid: "76747049"
 
 - 梵文字母
 
-- 斯拉夫文
+- 古斯拉夫文
 
 - 希臘文
 
 - 古吉拉特文
 
-- 果魯穆奇文
+- 古木基文
 
-- 希伯來文
+- Hebrew
 
 - 表意指令碼
 
@@ -103,7 +103,7 @@ ms.locfileid: "76747049"
 
 - 坦米爾文
 
-- 特拉古文
+- 泰盧固文
 
 - 塔安那文
 
@@ -119,7 +119,7 @@ ms.locfileid: "76747049"
 
 - 古韓文
 
-- 緬甸文
+- 緬甸
 
 - 錫蘭文
 
@@ -178,6 +178,6 @@ ms.locfileid: "76747049"
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WPF 全球化和當地語系化概觀](wpf-globalization-and-localization-overview.md)

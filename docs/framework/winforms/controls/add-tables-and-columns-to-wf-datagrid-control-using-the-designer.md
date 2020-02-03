@@ -26,7 +26,7 @@ ms.locfileid: "76746259"
 
 1. 若要在資料表中顯示資料，您必須先將 <xref:System.Windows.Forms.DataGrid> 控制項系結至資料集。 如需詳細資訊，請參閱[如何：使用設計工具將 Windows Forms DataGrid 控制項系結至資料來源](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)。
 
-2. 選取屬性視窗中的 <xref:System.Windows.Forms.DataGrid>] 控制項的 [<xref:System.Windows.Forms.DataGrid.TableStyles%2A>] 屬性，然後按一下屬性旁邊的省略號按鈕（![屬性視窗）中的省略號按鈕（...），以顯示 [ **DataGridTableStyle 集合編輯器**]。
+2. 選取屬性視窗中的 [<xref:System.Windows.Forms.DataGrid>] 控制項的 [<xref:System.Windows.Forms.DataGrid.TableStyles%2A>] 屬性，然後按一下屬性旁邊的省略號按鈕（![屬性視窗）中的省略號按鈕（...），以顯示 [ **DataGridTableStyle 集合編輯器**]。](./media/visual-studio-ellipsis-button.png)
 
 3. 在 [集合編輯器] 中，按一下 [**加入**] 以插入資料表樣式。
 
@@ -54,7 +54,7 @@ ms.locfileid: "76746259"
 
 5. 在 [集合編輯器] 的 [**屬性**] 方塊中，選取您想要顯示之資料行的 <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
-- [操作說明：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

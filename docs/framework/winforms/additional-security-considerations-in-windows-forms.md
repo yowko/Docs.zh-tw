@@ -88,7 +88,7 @@ ms.locfileid: "76739816"
   
  呼叫 Unmanaged 程式碼的權限可讓應用程式執行大部分的動作。 因此，呼叫 Unmanaged 程式碼的權限應該只授與來自受信任來源的應用程式。 另外，視應用程式而定，應用程式功能中會呼叫 Unmanaged 程式碼的部分可以是選擇性，或只在完全信任環境中啟用。 如需危險性權限的詳細資訊，請參閱[危險性權限和原則管理](../misc/dangerous-permissions-and-policy-administration.md)。 如需提高權限的詳細資訊，請參閱[一般安全性原則管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 中更安全的檔案和資料存取](more-secure-file-and-data-access-in-windows-forms.md)
 - [Windows Forms 中更安全的列印](more-secure-printing-in-windows-forms.md)

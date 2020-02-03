@@ -43,7 +43,7 @@ WCF 支援應用程式中以下列任一標準命名許可權集合執行的功�
 
 您可以使用 WCF，從[ClickOnce 部署](/visualstudio/deployment/clickonce-security-and-deployment)或 XBAP 所部署的部分信任應用程式中，與遠端伺服器通訊。 網際網路區域許可權集合包含來源主機的 <xref:System.Net.WebPermission>，可讓這些應用程式使用[部分信任功能相容性](partial-trust-feature-compatibility.md)中所述的任何支援的 WCF 系結，與源伺服器進行通訊。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [程式碼存取安全性](../../misc/code-access-security.md)
 - [Windows Presentation Foundation 瀏覽器裝載的應用程式總覽](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)

@@ -37,7 +37,7 @@ ms.locfileid: "76734545"
  最後，如果您必須建立自己的自訂 UI 項目，<xref:System.Drawing> 命名空間包含許多類別選項，可直接在表單上呈現線條、圓形和其他形狀。
 
 > [!NOTE]
-> Windows Form 控制項的設計並不能跨應用程式定義域來封送處理。 基於這個理由，Microsoft 不支援跨 <xref:System.AppDomain> 界限傳遞 Windows Form 控制項，即使 <xref:System.MarshalByRefObject> 的 <xref:System.Windows.Controls.Control> 基底類型似乎表示這是可行的。 只要沒有 Windows Form 控制項跨應用程式定義域界限傳遞，即可支援具有多個應用程式定義域的 Windows Forms 應用程式。
+> Windows Form 控制項的設計並不能跨應用程式定義域來封送處理。 基於這個理由，Microsoft 不支援跨 <xref:System.AppDomain> 界限傳遞 Windows Form 控制項，即使 <xref:System.Windows.Controls.Control> 的 <xref:System.MarshalByRefObject> 基底類型似乎表示這是可行的。 只要沒有 Windows Form 控制項跨應用程式定義域界限傳遞，即可支援具有多個應用程式定義域的 Windows Forms 應用程式。
 
 #### <a name="create-forms-and-controls"></a>建立表單和控制項
 
@@ -45,10 +45,10 @@ ms.locfileid: "76734545"
 
 |描述|說明主題|
 |-----------------|----------------|
-|在表單上使用控制項|[如何：將控制項新增至 Windows Forms](./controls/how-to-add-controls-to-windows-forms.md)|
-|使用 <xref:System.Windows.Forms.ToolStrip> 控制項|[如何：使用設計工具建立具有標準項目的基本 ToolStrip](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|在表單上使用控制項|[操作說明：將控制項新增至 Windows Forms](./controls/how-to-add-controls-to-windows-forms.md)|
+|使用 <xref:System.Windows.Forms.ToolStrip> 控制項|[操作說明：使用設計工具建立具有標準項目的基本 ToolStrip](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
 |使用 <xref:System.Drawing> 建立圖形|[圖形程式設計入門](./advanced/getting-started-with-graphics-programming.md)|
-|建立自訂控制項|[操作說明：繼承自 UserControl 類別](./controls/how-to-inherit-from-the-usercontrol-class.md)|
+|建立自訂控制項|[如何：繼承自 UserControl 類別](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>顯示和運算元據
  許多應用程式必須顯示來自資料庫、XML 檔案、XML Web 服務或其他資料來源的資料。 Windows Form 提供名為 <xref:System.Windows.Forms.DataGridView> 控制項的彈性控制項，以傳統的資料列和資料行格式，來顯示這類表格式資料，讓每項資料佔有自己的儲存格。 當您使用 <xref:System.Windows.Forms.DataGridView> 時，您可以自訂個別儲存格的外觀、將任意資料列和資料行鎖定位置，以及顯示儲存格中的複雜控制項，還有其他功能。
@@ -65,10 +65,10 @@ ms.locfileid: "76734545"
 
 |描述|說明主題|
 |-----------------|----------------|
-|使用 <xref:System.Windows.Forms.BindingSource> 元件|[如何：使用設計工具將 Windows Forms 控制項和 BindingSource 元件加以繫結](./controls/bind-wf-controls-with-the-bindingsource.md)|
+|使用 <xref:System.Windows.Forms.BindingSource> 元件|[操作說明：使用設計工具將 Windows Forms 控制項和 BindingSource 元件加以繫結](./controls/bind-wf-controls-with-the-bindingsource.md)|
 |使用 ADO.NET 資料來源|[如何：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |使用資料來源視窗|[將 Windows Forms 控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
-|使用應用程式設定|[如何：建立應用程式設定](./advanced/how-to-create-application-settings.md)|
+|使用應用程式設定|[操作說明：建立應用程式設定](./advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>將應用程式部署至用戶端電腦
 
@@ -98,10 +98,10 @@ Windows Form 中還有許多其他功能，可讓您快速、輕鬆地實作一�
 
 |描述|說明主題|
 |-----------------|----------------|
-|列印表單的內容|[如何：列印 Windows Forms 中的圖形](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：在 Windows Forms 中列印多頁文字檔](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|列印表單的內容|[操作說明：列印 Windows Forms 中的圖形](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [操作說明：在 Windows Forms 中列印多頁文字檔](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |深入了解 Windows Form 安全性|[Windows Forms 中的安全性概觀](security-in-windows-forms-overview.md)|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 使用者入門](getting-started-with-windows-forms.md)
 - [建立新的 Windows Forms](creating-a-new-windows-form.md)

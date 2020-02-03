@@ -20,7 +20,7 @@ ms.locfileid: "76743941"
 > [!NOTE]
 > 本節所提供的效能資料是以在 2.8 GHz 電腦上執行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式為基礎，其中包含 512 RAM 和一個 ATI Radeon 9700 圖形配接器。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [應用程式效能規劃](planning-for-application-performance.md)  
   
  [運用硬體](optimizing-performance-taking-advantage-of-hardware.md)  
@@ -33,7 +33,7 @@ ms.locfileid: "76743941"
   
  [應用程式資源](optimizing-performance-application-resources.md)  
   
- [文字](optimizing-performance-text.md)  
+ [Text](optimizing-performance-text.md)  
   
  [資料繫結](optimizing-performance-data-binding.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "76743941"
   
  [應用程式啟動時間](application-startup-time.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>

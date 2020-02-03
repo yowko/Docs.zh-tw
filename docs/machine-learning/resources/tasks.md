@@ -56,7 +56,7 @@ ms.locfileid: "76745109"
 
 這些訓練人員會輸出下列資料行：
 
-| 輸出資料行名稱 | 資料行型別 | 描述|
+| 輸出資料行名稱 | 資料行類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由模型計算的原始分數|
 | `PredictedLabel` | <xref:System.Boolean> | 預測標籤 (根據分數的正負號)。 負值分數會對應到 `false`，正值分數則會對應到 `true`。|
@@ -72,7 +72,7 @@ ms.locfileid: "76745109"
 如需詳細資訊，請參閱維基百科上的[多元分類](https://en.wikipedia.org/wiki/Multiclass_classification) \(英文\) 一文。
 
 >[!NOTE]
->One-Vs-All 將任何[二元分類學習工具](#binary-classification)升級，以在多元分類資料集上運作。 如需詳細資訊，請參閱 [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest) 。
+>One-Vs-All 將任何[二元分類學習工具](#binary-classification)升級，以在多元分類資料集上運作。 如需詳細資訊，請參閱 [Wikipedia] (https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest)。
 
 ### <a name="multiclass-classification-trainers"></a>多類別分類學習工具
 
@@ -99,7 +99,7 @@ ms.locfileid: "76745109"
 | `Score` | <xref:System.Single> 的向量 | 所有類別的分數。 較高值表示落入相關聯類別的機率較高。 若第 i 個項目具有最大值，則預測標籤索引將會是 i。 請注意，i 是以零為基礎的索引。 |
 | `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型 | 預測標籤的索引。 若其值是 i，則實際標籤可能會是索引鍵/值輸入標籤類型中的第 i 個類別。 |
 
-## <a name="regression"></a>回復
+## <a name="regression"></a>迴歸
 
 這是一個[監督式機器學習](glossary.md#supervised-machine-learning)工作，可用來從一組相關的特徵預測標籤的值。 標籤可以有任何實際值，而不像在分類工作中那樣來自一組有限的值。 迴歸演算法會根據標籤的相關特徵建立標籤的相依性模型，以決定標籤會隨著特徵值的變化如何變更。 迴歸演算法的輸入是一組標籤為已知值的範例。 迴歸演算法的輸出是一個函式，可供您用來預測任何一組新輸入特徵的標籤值。 迴歸案例的範例包括：
 
@@ -131,7 +131,7 @@ ms.locfileid: "76745109"
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由模型預測的原始分數 |
 
-## <a name="clustering"></a>群集
+## <a name="clustering"></a>叢集
 
 這是一個[非監督式機器學習](glossary.md#unsupervised-machine-learning)工作，可用來將資料執行個體組成包含類似特性的群集。 群集也可用來在資料集內，識別您無法藉由瀏覽或簡單觀察以邏輯方式導出的關係。 群集演算法的輸入和輸出取決於所選擇的方法。 您可以採用以分佈、距心、連線或密度為基礎的方法。 ML.NET 目前支援使用 K 平均 (K-Means) 群集的距心型方法。 群集案例的範例包括：
 
@@ -188,7 +188,7 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 | `Score` | <xref:System.Single> | 由異常偵測模型所計算之非負數且沒有限制的分數 |
 | `PredictedLabel` | <xref:System.Boolean> | True/false 值，表示輸入是否為異常（PredictedLabel = true）或不是（PredictedLabel = false） |
 
-## <a name="ranking"></a>排名
+## <a name="ranking"></a>次序
 
 排名工作會從一組已加上標籤的範例建構排名工具。 此範例集包含能夠以指定條件評分的執行個體群組。 每個執行個體的排名標籤是 { 0, 1, 2, 3, 4 }。  排名工具已定型為使用每個執行個體的未知分數排名新的執行個體群組。 ML.NET 排名學習工具是以[機器學習排名](https://en.wikipedia.org/wiki/Learning_to_rank) \(英文\) 為基礎。
 
@@ -221,7 +221,7 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 
 * <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
 
-## <a name="forecasting"></a>針對
+## <a name="forecasting"></a>預測
 
 預測工作會使用過去的時間序列資料來預測未來的行為。 適用于預測的案例包括氣象預測、季節性銷售預測和預測性維護。
 

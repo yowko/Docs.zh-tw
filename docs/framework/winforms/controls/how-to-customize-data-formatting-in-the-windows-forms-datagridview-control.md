@@ -28,7 +28,7 @@ ms.locfileid: "76746785"
   
  包含負數之資料行中的 `Balance` 儲存格已指定為紅色背景。 您也可以格式化這些儲存格為貨幣，在負值周圍顯示括號。 如需詳細資訊，請參閱[如何：格式化 Windows Forms DataGridView 控制項中的資料](how-to-format-data-in-the-windows-forms-datagridview-control.md)。  
   
- `Priority` 資料行中的儲存格會顯示影像取代對應的文字儲存格的值。 <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> 的 <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> 屬性用來取得文字儲存格的值，並設定對應的影像顯示值。  
+ `Priority` 資料行中的儲存格會顯示影像取代對應的文字儲存格的值。 <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> 的 <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> 屬性用來取得文字儲存格的值，並設定對應的影像顯示值。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/cs/customFormatting.cs#00)]
@@ -39,9 +39,9 @@ ms.locfileid: "76746785"
   
 - System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
-- 名為 `highPri.bmp`、`mediumPri.bmp` 和 `lowPri.bmp` 的 <xref:System.Drawing.Bitmap> 影像位於與可執行檔相同的目錄中。  
+- 名為 <xref:System.Drawing.Bitmap>、`highPri.bmp` 和 `mediumPri.bmp` 的 `lowPri.bmp` 影像位於與可執行檔相同的目錄中。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>

@@ -50,13 +50,13 @@ ms.locfileid: "76744386"
 
 9. 您可以視需要更換預設資料集名稱。
 
-10. 按一下 [ **完成**]。
+10. 按一下 **[完成]** 。
 
 11. 在 [**屬性**] 視窗中，再次按一下 [<xref:System.Windows.Forms.TextBox.Text%2A>] 屬性旁的箭號。 在 [ **DataSource** UI 類型編輯器] 中，選取要系結 <xref:System.Windows.Forms.TextBox> 的功能變數名稱。
 
      [ **DataSource** UI 類型編輯器] 隨即關閉，並將該資料連線特定的資料集、<xref:System.Windows.Forms.BindingSource> 和資料表介面卡新增至您的表單。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>

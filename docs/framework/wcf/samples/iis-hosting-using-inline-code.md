@@ -94,6 +94,6 @@ Press <ENTER> to terminate client.
 
 4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。 如需如何建立可呼叫此服務之用戶端應用程式的範例，請參閱[如何：建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [AppFabric 裝載和持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

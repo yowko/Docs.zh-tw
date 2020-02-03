@@ -97,7 +97,7 @@ ms.locfileid: "76746744"
   
      即使在設計階段將圖形載入至控制項，此程式碼也會清除影像。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>

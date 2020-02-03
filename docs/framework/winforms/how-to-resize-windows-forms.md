@@ -58,7 +58,7 @@ Form1->Width = 300;
 
 -或-
 
-設定 <xref:System.Windows.Forms.Form.Size%2A> 屬性來變更 <xref:System.Drawing.Size.Width%2A> 或 <xref:System.Drawing.Size.Height%2A>。
+設定 <xref:System.Drawing.Size.Width%2A> 屬性來變更 <xref:System.Drawing.Size.Height%2A> 或 <xref:System.Windows.Forms.Form.Size%2A>。
 
 不過，如下列程式碼範例所示，這種方法比直接設定 <xref:System.Windows.Forms.Control.Width%2A> 或 <xref:System.Windows.Forms.Control.Height%2A> 屬性更困難。
 
@@ -93,7 +93,7 @@ Form1->Width += 200;
 ```
 
 > [!CAUTION]
-> 除非您透過將 <xref:System.Windows.Forms.Form.Size%2A> 屬性設定為新的 <xref:System.Drawing.Size> 結構，來同時設定高度和寬度維度，否則請一律使用 <xref:System.Drawing.Size.Height%2A> 或 <xref:System.Drawing.Size.Width%2A> 屬性來變更表單的維度。 <xref:System.Windows.Forms.Form.Size%2A> 屬性會傳回實值類型的 <xref:System.Drawing.Size> 結構。 您無法指派新值給實值類型的屬性。 因此，下列程式碼範例將無法進行編譯。
+> 除非您透過將 <xref:System.Drawing.Size.Height%2A> 屬性設定為新的 <xref:System.Drawing.Size.Width%2A> 結構，來同時設定高度和寬度維度，否則請一律使用 <xref:System.Windows.Forms.Form.Size%2A> 或 <xref:System.Drawing.Size> 屬性來變更表單的維度。 <xref:System.Windows.Forms.Form.Size%2A> 屬性會傳回實值類型的 <xref:System.Drawing.Size> 結構。 您無法指派新值給實值類型的屬性。 因此，下列程式碼範例將無法進行編譯。
 
 ```vb
 ' NOTE: CODE WILL NOT COMPILE
@@ -113,7 +113,7 @@ Form^ f = gcnew Form();
 f->Size->X += 100;
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 使用者入門](getting-started-with-windows-forms.md)
 - [增強 Windows Forms 應用程式](./advanced/index.md)

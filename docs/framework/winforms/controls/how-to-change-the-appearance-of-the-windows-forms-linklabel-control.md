@@ -121,7 +121,7 @@ ms.locfileid: "76746627"
        }  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>

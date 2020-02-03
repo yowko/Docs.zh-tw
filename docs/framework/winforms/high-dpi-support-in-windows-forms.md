@@ -16,7 +16,7 @@ ms.locfileid: "76741893"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows Forms 中的高 DPI 支援
 
-從 .NET Framework 4.7 開始，Windows Forms 包含常見高 DPI 和動態 DPI 案例的增強功能。 它們包括：
+從 .NET Framework 4.7 開始，Windows Forms 包含常見高 DPI 和動態 DPI 案例的增強功能。 其中包括：
 
 - 改善數個 Windows Forms 控制項的縮放和版面配置，例如 <xref:System.Windows.Forms.MonthCalendar> 控制項和 <xref:System.Windows.Forms.CheckedListBox> 控制項。
 
@@ -60,7 +60,7 @@ ms.locfileid: "76741893"
 
 - 呼叫靜態 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> 方法。
 
-  這應該是應用程式進入點中的第一個方法呼叫。 例如：
+  這應該是應用程式進入點中的第一個方法呼叫。 例如，
 
   ```csharp
   static void Main()
@@ -94,7 +94,7 @@ ms.locfileid: "76741893"
 
 ## <a name="new-helper-methods-and-properties"></a>新的 helper 方法和屬性
 
-.NET Framework 4.7 也會新增一些新的 helper 方法和屬性，以提供 DPI 縮放比例的相關資訊，並可讓您執行 DPI 縮放比例。 它們包括：
+.NET Framework 4.7 也會新增一些新的 helper 方法和屬性，以提供 DPI 縮放比例的相關資訊，並可讓您執行 DPI 縮放比例。 其中包括：
 
 - <xref:System.Windows.Forms.Control.LogicalToDeviceUnits%2A>，會將值從邏輯轉換為裝置圖元。
 
@@ -128,7 +128,7 @@ Console.WriteLine(Environment.OSVersion.Version.CompareTo(OsMinVersion));
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 新增 Configuration 元素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
 - [調整 Windows Forms 的大小和比例](adjusting-the-size-and-scale-of-windows-forms.md)

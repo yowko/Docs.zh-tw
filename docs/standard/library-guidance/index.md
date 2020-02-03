@@ -9,7 +9,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76731433"
 ---
-# <a name="open-source-library-guidance"></a>開放原始碼程式庫指導方針
+# <a name="open-source-library-guidance"></a>開放原始碼程式庫指導
 
 這份指導提供協助開發人員建立高品質 .NET 程式庫的最佳做法建議。 本文件的重點在於建置 .NET 程式庫時的「內容」與「原因」，而不是「方法」。
 
@@ -30,7 +30,7 @@ ms.locfileid: "76731433"
 
 每篇文章都呈現四種類型的建議：**優先**、**考慮**、**避免**與**禁止**。 建議類型指出應遵循的程度。
 
-您應該一律遵循**優先**類型的建議。 例如：
+您應該一律遵循**優先**類型的建議。 例如，
 
 ✔️使用 NuGet 套件來散發您的程式庫。
 
@@ -44,7 +44,7 @@ ms.locfileid: "76731433"
 
 最後，**禁止**類型的建議表示在多數情況下都不應採取的動作：
 
-❌ 不要發佈程式庫的強式名稱和非強式名稱版本。 例如，`Contoso.Api` 和 `Contoso.Api.StrongNamed`。
+❌ 不要發佈程式庫的強式名稱和非強式名稱版本。 例如 `Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 >[!div class="step-by-step"]
->[下一步](get-started.md)
+>[下一個](get-started.md)

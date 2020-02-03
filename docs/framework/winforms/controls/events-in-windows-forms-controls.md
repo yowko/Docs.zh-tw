@@ -17,7 +17,7 @@ Windows Forms 控制項從 <xref:System.Windows.Forms.Control?displayProperty=na
   
  如果您的自訂控制項需要覆寫繼承的事件功能，請覆寫繼承的 `On`*EventName* 方法，而不要附加委派。 如果您不熟悉 .NET Framework 中的事件模型，請參閱[從元件引發事件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120))。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [覆寫 OnPaint 方法](overriding-the-onpaint-method.md)
 - [處理使用者輸入](handling-user-input.md)

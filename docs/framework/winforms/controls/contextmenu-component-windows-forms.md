@@ -23,14 +23,14 @@ ms.locfileid: "76746175"
   
  Windows Forms `ContextMenu` 元件可讓使用者輕鬆存取與所選物件相關聯的常用命令快捷方式功能表。 快捷方式功能表中的專案通常是主功能表中出現在應用程式其他位置之專案的子集。 快捷方式功能表通常是透過以滑鼠右鍵按一下滑鼠來提供。 在 Windows Forms 它們會與其他控制項相關聯。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ContextMenu 元件概觀](contextmenu-component-overview-windows-forms.md)  
  介紹 `ContextMenu` 元件的一般概念，可讓使用者建立與所選物件相關聯之常用命令的功能表。  
   
  [操作說明：使用 Windows Forms ContextMenu 元件加入和移除功能表項目](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  說明如何新增和移除 Windows Forms 中的快捷方式功能表項目。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.ContextMenu>  
  提供這個 <xref:System.Windows.Forms.ContextMenu> 類別及其成員的參考資訊。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "76746175"
  [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)  
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

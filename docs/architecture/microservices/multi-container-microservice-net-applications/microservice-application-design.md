@@ -2,14 +2,14 @@
 title: 設計微服務導向應用程式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解微服務導向應用程式的優點和缺點，讓您能夠採取明智的決策。
 ms.date: 10/02/2018
-ms.openlocfilehash: 63c93f237172d80704c00472ef2d4cbf7c787ab0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 619440c02c1a82e05adb2cec9ddba933cd3e0a65
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921027"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965759"
 ---
-# <a name="designing-a-microservice-oriented-application"></a>設計微服務導向應用程式
+# <a name="design-a-microservice-oriented-application"></a>設計微服務導向的應用程式
 
 本節旨在開發假設的伺服器端企業應用程式。
 
@@ -96,7 +96,7 @@ ms.locfileid: "76921027"
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>微服務架構解決方案的優點
 
-這類微服務架構解決方案具有許多優點：
+這類以微服務為基礎的解決方案有許多優點：
 
 **每個微服務相對較小，因此管理和開發都很容易**。 尤其是：
 
@@ -118,7 +118,7 @@ ms.locfileid: "76921027"
 
 ## <a name="downsides-of-a-microservice-based-solution"></a>微服務架構解決方案的缺點
 
-這類微服務架構解決方案也有一些缺點：
+這類以微服務為基礎的解決方案也有一些缺點：
 
 **分散式應用程式**。 散發應用程式會增加開發人員設計和建置服務時的複雜度。 例如，開發人員必須使用 HTTP 或 AMPQ 等通訊協定來執行服務間通訊，這會增加測試和例外狀況處理的複雜性。 也會增加系統的延遲。
 
@@ -180,7 +180,7 @@ ms.locfileid: "76921027"
 
 例如，在簡易 CRUD 維護應用程式中，設計和實作 DDD 模式可能沒有任何意義。 但針對您的核心領域或核心商務，您可能需要套用更進階的模式，來處理不斷改變之商務規則的商務複雜度。
 
-特別是當您處理由多個子系統所組成的大型應用程式時，您不應該根據單一架構模式來套用單一頂層架構。 例如，您不應該將 CQRS 套用為整個應用程式的頂層架構，但對特定一組服務而言可能有很用。
+特別是當您處理多個子系統所組成的大型應用程式時，您不應該根據單一架構模式套用單一的最上層架構。 例如，您不應該將 CQRS 套用為整個應用程式的頂層架構，但對特定一組服務而言可能有很用。
 
 沒有適用於所有給定案例的靈丹或正確的架構模式。 您不可能會有「一個適用於所有案例的架構模式」。 根據每個微服務的優先順序，您必須針對每個微服務選擇不同的方法，如下列各節中所述。
 

@@ -34,7 +34,7 @@ ms.locfileid: "76747221"
   
 - `System`、`System.Drawing` 和 `System.Windows.Forms` 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.WebBrowser>
 - [WebBrowser 控制項](webbrowser-control-windows-forms.md)

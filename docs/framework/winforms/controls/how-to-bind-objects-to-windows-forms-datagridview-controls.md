@@ -26,10 +26,10 @@ ms.locfileid: "76746709"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
-- 本系統和 System.Windows.Forms 組件的參考。  
+- System 和 System.Windows.Forms 組件的參考。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [如何：存取物件繫結至 Windows Forms DataGridView 資料列](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)
+- [操作說明：存取物件繫結至 Windows Forms DataGridView 資料列](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)

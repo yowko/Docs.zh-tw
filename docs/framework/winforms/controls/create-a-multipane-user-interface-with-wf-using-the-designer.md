@@ -43,7 +43,7 @@ ms.locfileid: "76737283"
 
 在應用程式開發的這個階段中，您已經製作了複雜的使用者介面。 下一步是繼續應用程式本身的設計，也許是將 <xref:System.Windows.Forms.TreeView> 控制項和 <xref:System.Windows.Forms.ListView> 控制項連接到某種類型的資料來源。 如需將控制項連接至資料的詳細資訊，請參閱資料系結[和 Windows Forms](../data-binding-and-windows-forms.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 控制項](splitcontainer-control-windows-forms.md)

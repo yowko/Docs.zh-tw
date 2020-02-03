@@ -23,7 +23,7 @@ ms.locfileid: "76740796"
 ## <a name="key-properties-and-methods"></a>索引鍵屬性和方法  
  顯示在控制項文字方塊中的數位可以使用各種格式，包括十六進位。 如需詳細資訊，請參閱[如何：設定 Windows Forms NumericUpDown 控制項的格式](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)。 控制項的索引鍵屬性為 <xref:System.Windows.Forms.NumericUpDown.Value%2A>、<xref:System.Windows.Forms.NumericUpDown.Maximum%2A> （預設值100）、<xref:System.Windows.Forms.NumericUpDown.Minimum%2A> （預設值0）和 <xref:System.Windows.Forms.NumericUpDown.Increment%2A> （預設值為1）。 <xref:System.Windows.Forms.NumericUpDown.Value%2A> 屬性會設定在控制項中選取的目前數位。 <xref:System.Windows.Forms.NumericUpDown.Increment%2A> 屬性會設定當使用者按一下向上或向下箭號時，數位的調整量。 當焦點移開控制項時，任何類型的輸入都會根據最小值和最大數值進行驗證。 當使用者連續按下向上或向下箭號時，您可以使用 [<xref:System.Windows.Forms.NumericUpDown.Accelerations%2A>] 屬性來增加控制項在數位之間移動的速度。 控制項的主要方法是 <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> 和 <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [NumericUpDown 控制項](numericupdown-control-windows-forms.md)

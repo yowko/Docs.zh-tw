@@ -23,14 +23,14 @@ ms.locfileid: "76736990"
 # <a name="checkedlistbox-control-windows-forms"></a>CheckedListBox 控制項 (Windows Form)
 Windows Forms `CheckedListBox` 控制項會顯示專案清單（例如 <xref:System.Windows.Forms.ListBox> 控制項），而且也可以在清單中的專案旁顯示核取記號。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [CheckedListBox 控制項概觀](checkedlistbox-control-overview-windows-forms.md)  
  說明此控制項是什麼，並說明其重要功能與屬性。  
   
  [操作說明：判斷 Windows Forms CheckedListBox 控制項中的已核取項目](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
  描述如何逐步執行清單，以判斷要檢查哪些專案。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.CheckedListBox> 類別  
  說明這個類別，並且提供其所有成員的連結。  
   

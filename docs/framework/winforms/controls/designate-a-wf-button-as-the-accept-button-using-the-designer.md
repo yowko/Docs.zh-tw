@@ -23,11 +23,11 @@ ms.locfileid: "76746072"
 
 2. 在 [**屬性**] 視窗中，將表單的 [<xref:System.Windows.Forms.Form.AcceptButton%2A>] 屬性設定為 <xref:System.Windows.Forms.Button> 控制項的名稱。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
 - [Button 控制項概觀](button-control-overview-windows-forms.md)
 - [選取 Windows Forms Button 控制項的方法](ways-to-select-a-windows-forms-button-control.md)
 - [操作說明：回應 Windows Forms Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
-- [如何：使用設計工具將 Windows Forms 按鈕指定為取消按鈕](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [操作說明：使用設計工具將 Windows Forms 按鈕指定為取消按鈕](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Button 控制項](button-control-windows-forms.md)

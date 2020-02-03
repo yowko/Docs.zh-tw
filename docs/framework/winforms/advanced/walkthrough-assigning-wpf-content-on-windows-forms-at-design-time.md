@@ -23,7 +23,7 @@ ms.locfileid: "76746806"
 
 本文說明如何選取您要在表單上顯示的 Windows Presentation Foundation （WPF）控制項類型。 您可以選取包含在專案中的任何 WPF 控制項類型。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 若要完成這個逐步解說，您必須具有 Visual Studio。
 
@@ -65,7 +65,7 @@ ms.locfileid: "76746806"
 
 2. 在 [**工具箱**] 中，按兩下 [`UserControl1`]，在表單上建立 `UserControl1` 的實例。
 
-   `UserControl1` 的執行個體裝載於名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。
+   `UserControl1` 的執行個體裝載於名為 <xref:System.Windows.Forms.Integration.ElementHost> 的新 `elementHost1` 控制項中。
 
 3. 在 `elementHost1`的智慧標籤面板中，開啟 [**選取主控內容**] 下拉式清單。
 
@@ -85,7 +85,7 @@ ms.locfileid: "76746806"
 
 9. `elementHost2` 控制項現在會裝載 `UserControl1` 類型的執行個體。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

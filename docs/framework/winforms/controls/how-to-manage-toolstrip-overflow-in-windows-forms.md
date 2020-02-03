@@ -25,13 +25,13 @@ ms.locfileid: "76736141"
 
 ## <a name="to-enable-overflow-on-a-toolstrip-control"></a>啟用 ToolStrip 控制項的溢位
 
-- 確定 <xref:System.Windows.Forms.ToolStrip>的 [<xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>] 屬性未設定為 [`false`]。 預設為 `True`。
+- 確定 <xref:System.Windows.Forms.ToolStrip>的 [<xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>] 屬性未設定為 [`false`]。 預設值為 `True`。
 
      當 <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> `True` （預設值）時，當 <xref:System.Windows.Forms.ToolStripItem> 的內容超過水準 <xref:System.Windows.Forms.ToolStrip> 的寬度或垂直 <xref:System.Windows.Forms.ToolStrip>的高度時，<xref:System.Windows.Forms.ToolStripItem> 就會傳送至下拉式溢位功能表。
 
 ## <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>若要指定特定 ToolStripItem 的溢位行為
 
-- 將 <xref:System.Windows.Forms.ToolStripItem> 的 <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> 屬性設為所需的值。 可能的情況包括 `Always`、`Never`和 `AsNeeded`。 預設為 `AsNeeded`。
+- 將 <xref:System.Windows.Forms.ToolStripItem> 的 <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> 屬性設為所需的值。 可能的情況包括 `Always`、`Never`和 `AsNeeded`。 預設值為 `AsNeeded`。
 
     ```vb
     toolStripTextBox1.Overflow = _
@@ -43,7 +43,7 @@ ms.locfileid: "76736141"
     System.Windows.Forms.ToolStripItemOverflow.Never;
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripOverflowButton>

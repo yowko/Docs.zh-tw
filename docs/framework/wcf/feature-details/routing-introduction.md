@@ -413,7 +413,7 @@ WCF 路由服務可以搭配模擬使用以傳送和接收訊息。 平常對模
 
 若要搭配路由服務使用 Windows 認證模擬，您必須同時設定認證與服務。 用戶端認證物件 (<xref:System.ServiceModel.Security.WindowsClientCredential>，可從 <xref:System.ServiceModel.ChannelFactory> 中存取) 定義允許模擬所必須設定的 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 屬性來存取。 最後，您必須在服務上設定 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 行為，才能將 `ImpersonateCallerForAllOperations` 設定為 `true`。 路由服務會使用這個旗標決定是否要建立用戶端，用來轉送已啟用模擬的訊息。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [訊息篩選](message-filters.md)
 - [路由合約](routing-contracts.md)

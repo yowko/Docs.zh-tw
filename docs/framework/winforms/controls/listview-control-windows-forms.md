@@ -21,7 +21,7 @@ ms.locfileid: "76745140"
 # <a name="listview-control-windows-forms"></a>ListView 控制項 (Windows Form)
 Windows Form `ListView` 控制項顯示具有圖示的項目清單。 若要建立像 Windows 檔案總管右窗格的使用者介面，您可以使用清單檢視。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ListView 控制項概觀](listview-control-overview-windows-forms.md)  
  描述此控制項及其重要功能與屬性。  
   
@@ -62,7 +62,7 @@ Windows Form `ListView` 控制項顯示具有圖示的項目清單。 若要建�
   
 - [逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.ListView> 類別  
  說明這個類別，並且提供其所有成員的連結。  
   
@@ -76,6 +76,6 @@ Windows Form `ListView` 控制項顯示具有圖示的項目清單。 若要建�
  [逐步解說：利用 Windows Forms 建立多窗格使用者介面](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  提供配置具有多個窗格的 Windows Form 的指示。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

@@ -21,11 +21,11 @@ Windows Form <xref:System.Windows.Forms.Button> 控制項可讓使用者按一�
   
  <xref:System.Windows.Forms.Button> 控制項也可以使用 <xref:System.Windows.Forms.ButtonBase.Image%2A> 和 <xref:System.Windows.Forms.ButtonBase.ImageList%2A> 屬性來顯示影像。 如需詳細資訊，請參閱[如何：設定 Windows Forms 控制項所顯示的影像](how-to-set-the-image-displayed-by-a-windows-forms-control.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Button>
 - [操作說明：回應 Windows Forms Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
 - [選取 Windows Forms Button 控制項的方法](ways-to-select-a-windows-forms-button-control.md)
-- [如何：使用設計工具將 Windows Forms 按鈕指定為接受按鈕](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
-- [如何：使用設計工具將 Windows Forms 按鈕指定為取消按鈕](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [操作說明：使用設計工具將 Windows Forms 按鈕指定為接受按鈕](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [操作說明：使用設計工具將 Windows Forms 按鈕指定為取消按鈕](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Button 控制項](button-control-windows-forms.md)

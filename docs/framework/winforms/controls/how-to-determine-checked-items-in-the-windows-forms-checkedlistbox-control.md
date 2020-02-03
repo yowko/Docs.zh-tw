@@ -111,6 +111,6 @@ ms.locfileid: "76743248"
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)

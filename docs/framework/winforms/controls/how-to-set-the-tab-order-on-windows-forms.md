@@ -55,7 +55,7 @@ ms.locfileid: "76746837"
 > [!NOTE]
 > 選項按鈕群組在執行時間會有一個定位停駐點。 選取的按鈕（也就是其 <xref:System.Windows.Forms.RadioButton.Checked%2A> 屬性設定為 [`true`] 的按鈕）會自動將其 <xref:System.Windows.Forms.Control.TabStop%2A> 屬性設定為 [`true`]，而另一個按鈕的 [<xref:System.Windows.Forms.Control.TabStop%2A>] 屬性會設定為 [`false`]。 如需將 <xref:System.Windows.Forms.RadioButton> 控制項分組的詳細資訊，請參閱將[Windows Forms 選項按鈕控制項分組以做為集合](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Forms 控制項](index.md)
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

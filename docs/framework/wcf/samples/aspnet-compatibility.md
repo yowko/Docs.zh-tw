@@ -20,7 +20,7 @@ ms.locfileid: "76728016"
 
 此範例需要 .NET Framework 4 應用程式集區，才能執行。 若要建立應用程式集區，或是修改預設的應用程式集區，請遵循下列步驟。
 
-1. 開啟 [**控制台**]。  開啟 [**系統及安全性**] 標題下的 [系統**管理工具**] 小程式。 開啟 [ **Internet Information Services （IIS）管理員**] 小程式。
+1. 開啟 [控制台]。  開啟 [**系統及安全性**] 標題下的 [系統**管理工具**] 小程式。 開啟 [ **Internet Information Services （IIS）管理員**] 小程式。
 
 2. 展開 [**連接**] 窗格中的 treeview。 選取 [**應用程式**集區] 節點。
 
@@ -128,6 +128,6 @@ Press <ENTER> to terminate client.
 
 4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [AppFabric 裝載和持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

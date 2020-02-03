@@ -213,7 +213,7 @@ myPolygon.StrokeThickness = 2;
   
  在上一個範例中，已將單一轉換套用至每個圖形物件。 若要將多個轉換套用至圖形（或任何其他 UI 元素），請使用 <xref:System.Windows.Media.TransformGroup>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [2D 圖形和影像處理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [使用純色和漸層繪製的概觀](painting-with-solid-colors-and-gradients-overview.md)

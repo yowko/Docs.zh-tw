@@ -22,13 +22,13 @@ ms.locfileid: "76742941"
 [Windows Forms DataGridView 控制項中的資料行排序模式](column-sort-modes-in-the-windows-forms-datagridview-control.md)  
 描述在控制項中排序資料的選項。
 
-[如何：設定 Windows Forms DataGridView 控制項中的資料行排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+[操作說明：設定 Windows Forms DataGridView 控制項中的資料行排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)  
 描述如何讓使用者依預設不可排序的資料行排序。
 
 [操作說明：自訂 Windows Forms DataGridView 控制項中的排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
 描述如何以程式設計方式排序資料，以及如何使用 <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> 事件或藉由執行 <xref:System.Collections.IComparer> 介面來自訂排序。
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 <xref:System.Windows.Forms.DataGridView>  
 提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。  
@@ -42,7 +42,7 @@ ms.locfileid: "76742941"
 <xref:System.Windows.Forms.DataGridViewColumnSortMode>  
 提供 <xref:System.Windows.Forms.DataGridViewColumnSortMode> 列舉的參考檔。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataGridView 控制項](datagridview-control-windows-forms.md)
 - [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)

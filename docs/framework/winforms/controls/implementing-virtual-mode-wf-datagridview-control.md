@@ -125,7 +125,7 @@ ms.locfileid: "76746524"
   
  如需從外部資料庫快取值的詳細資訊，請參閱 how [to：在 Windows Forms DataGridView 控制項中使用即時資料載入來執行虛擬模式](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

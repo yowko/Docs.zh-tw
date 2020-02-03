@@ -30,9 +30,9 @@ ms.locfileid: "76740133"
 
 1. 在 Visual Studio 中，建立新的**Windows Forms 控制項程式庫**專案，並將其命名為**ValueButtonLib**。
 
-     專案名稱，`ValueButtonLib`，預設也會指派給根命名空間。 根命名空間是用來限定組件中的元件名稱。 例如，如果兩個組件提供元件，名為 `ValueButton`，您可以使用 `ValueButtonLib.ValueButton` 指定您的 `ValueButton` 元件。 如需詳細資訊，請參閱[命名空間](../../../csharp/programming-guide/namespaces/index.md)。
+     專案名稱，`ValueButtonLib`，預設也會指派給根命名空間。 根命名空間是用來限定組件中的元件名稱。 例如，如果兩個組件提供元件，名為 `ValueButton`，您可以使用 `ValueButton` 指定您的 `ValueButtonLib.ValueButton` 元件。 如需詳細資訊，請參閱[命名空間](../../../csharp/programming-guide/namespaces/index.md)。
 
-2. 在 [方案總管] 中，以滑鼠右鍵按一下 [UserControl1.cs]，然後從捷徑功能表選擇 [重新命名]。 將檔案名變更為**ValueButton.cs**。 當系統詢問您是否要重新命名程式碼元素 '`UserControl1`' 的所有參考時，按一下 [是]按鈕。
+2. 在 [方案總管] 中，以滑鼠右鍵按一下 [UserControl1.cs]，然後從捷徑功能表選擇 [重新命名]。 將檔案名變更為**ValueButton.cs**。 當系統詢問您是否要重新命名程式碼元素 ' **' 的所有參考時，按一下 [是]** `UserControl1`按鈕。
 
 3. 在 [方案總管] 中，以滑鼠右鍵按一下 [ValueButton.cs]，然後選取 [檢視程式碼]。
 
@@ -87,7 +87,7 @@ ms.locfileid: "76740133"
 
 ### <a name="to-build-your-control"></a>若要建置您的控制項
 
-在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。 建置應該會成功，沒有編譯器錯誤或警告。
+在 [建置] 功能表上，按一下 [建置方案]。 建置應該會成功，沒有編譯器錯誤或警告。
 
 ### <a name="to-create-a-test-project"></a>若要建立測試專案
 
@@ -137,11 +137,11 @@ ms.locfileid: "76740133"
 
      `Form1` 隨即出現。
 
-12. 按一下 `valueButton1`。
+12. 按一下 [ `valueButton1`]。
 
-     數字 '5' 會顯示在 `label1` 中，示範繼承的控制項之 `ButtonValue` 屬性已透過 `valueButton1_Click` 方法傳遞至 `label1`。 因此，`ValueButton` 控制項會繼承標準 Windows Forms 按鈕的所有功能，但是會公開額外的自訂屬性。
+     數字 '5' 會顯示在 `label1` 中，示範繼承的控制項之 `ButtonValue` 屬性已透過 `label1` 方法傳遞至 `valueButton1_Click`。 因此，`ValueButton` 控制項會繼承標準 Windows Forms 按鈕的所有功能，但是會公開額外的自訂屬性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [操作說明：在選擇工具箱項目對話方塊中顯示控制項](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [如何：在選擇工具箱項目對話方塊中顯示控制項](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [逐步解說：使用 Visual C# 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

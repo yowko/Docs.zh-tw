@@ -27,7 +27,7 @@ ms.locfileid: "76746944"
   
  本節中的主題說明您可以用來將 `DataGridView` 功能建置在應用程式中的概念和技術。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [DataGridView 控制項概觀](datagridview-control-overview-windows-forms.md)  
  提供描述 Windows Form `DataGridView` 控制項架構和核心概念的主題。  
   
@@ -75,13 +75,13 @@ ms.locfileid: "76746944"
   
  另請參閱搭配[使用設計工具和 Windows Forms DataGridView 控制項](using-the-designer-with-the-windows-forms-datagridview-control.md)。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Forms.DataGridView>  
  提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。  
   
  <xref:System.Windows.Forms.BindingSource>  
  提供 <xref:System.Windows.Forms.BindingSource> 元件的參考文件。 <xref:System.Windows.Forms.DataGridView> 控制項和 <xref:System.Windows.Forms.BindingSource> 元件設計為可密切合作。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

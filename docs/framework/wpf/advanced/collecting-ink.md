@@ -24,7 +24,7 @@ ms.locfileid: "76747022"
 
 [Windows Presentation Foundation](../index.md) 平台收集數位筆跡當成其功能的核心部分。 本主題討論在 Windows Presentation Foundation （WPF）中收集筆跡的方法。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 若要使用下列範例，您必須先安裝 Visual Studio 和 Windows SDK。 您也應該瞭解如何撰寫 WPF 的應用程式。 如需 WPF 使用者入門的詳細資訊，請參閱[逐步解說：我的第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 
@@ -52,7 +52,7 @@ ms.locfileid: "76747022"
 
 <xref:System.Windows.Controls.InkCanvas> 提供許多筆跡編輯作業的支援。 例如，<xref:System.Windows.Controls.InkCanvas> 支援反向畫筆清除，而且不需要額外的程式碼就可以將功能加入至專案。
 
-#### <a name="selection"></a>選取
+#### <a name="selection"></a>選取項目
 
 設定選取模式就像將 [<xref:System.Windows.Controls.InkCanvasEditingMode>] 屬性設為 [**選取**] 一樣簡單。
 
@@ -88,7 +88,7 @@ ms.locfileid: "76747022"
 
 請注意，<xref:System.Windows.Controls.StackPanel> 如何將按鈕放在 <xref:System.Windows.Controls.InkCanvas>的頂端。 如果您嘗試將筆跡放在按鈕上方，則 <xref:System.Windows.Controls.InkCanvas> 會收集並轉譯按鈕後方的筆墨。 這是因為按鈕是 <xref:System.Windows.Controls.InkCanvas> 的同級，而不是子系。 而且按鈕的級別高於疊置順序，所以筆跡轉譯在其後。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Ink.DrawingAttributes>
 - <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>

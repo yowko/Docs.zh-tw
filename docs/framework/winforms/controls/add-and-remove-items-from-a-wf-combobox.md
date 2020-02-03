@@ -136,7 +136,7 @@ ms.locfileid: "76746300"
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

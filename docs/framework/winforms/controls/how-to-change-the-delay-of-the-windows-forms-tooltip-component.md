@@ -42,7 +42,7 @@ ms.locfileid: "76746584"
     toolTip1->AutoPopDelay = 5000;  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ToolTip 元件概觀](tooltip-component-overview-windows-forms.md)
 - [操作說明：在設計階段設定 Windows Forms 上控制項的工具提示](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

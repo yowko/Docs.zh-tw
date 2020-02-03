@@ -24,7 +24,7 @@ ms.locfileid: "76746970"
 
 本文說明如何開發 Windows Presentation Foundation （WPF）桌面應用程式，其中包含大部分 WPF 應用程式通用的元素： Extensible Application Markup Language （XAML）標記、程式碼後置、應用程式定義、控制項、版面配置、資料系結和樣式。 若要開發應用程式，您將使用 Visual Studio。 
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 > [!div class="checklist"]
 >
 > - 建立 WPF 專案。
@@ -42,7 +42,7 @@ ms.locfileid: "76746970"
 >
 > 您可以使用此頁面頂端的 [語言選取器C# ]，切換和 Visual Basic 之間的範例程式碼語言。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 - 已安裝 **.net 桌面開發**工作負載的[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 。
 
@@ -215,7 +215,7 @@ ms.locfileid: "76746970"
 
     2. 在 [**加入現有專案**] 對話方塊中，將檔案篩選器設為 [**所有**檔案] 或 [**影像檔**]，流覽至您要使用的影像檔案，然後選取 [**新增**]。
 
-## <a name="build-and-run-the-application"></a>建立和執行應用程式
+## <a name="build-and-run-the-application"></a>建置並執行應用程式
 
 1. 若要建立並執行應用程式，請按**F5**或從 [**調試**程式] 功能表中選取 [**開始調試**]。
 
@@ -474,7 +474,7 @@ ms.locfileid: "76746970"
 > 這個範例會示範 WPF 的特定功能，並不會遵循安全性、當地語系化和協助工具等專案的所有最佳作法。 如需 WPF 和 .NET 應用程式開發最佳作法的完整涵蓋範圍，請參閱下列主題：
 >
 > - [協助工具選項](../../ui-automation/accessibility-best-practices.md)
-> - [Security](../security-wpf.md)
+> - [安全性](../security-wpf.md)
 > - [WPF 全球化和當地語系化](../advanced/wpf-globalization-and-localization-overview.md)
 > - [WPF 效能](../advanced/optimizing-wpf-application-performance.md)
 
@@ -484,7 +484,7 @@ ms.locfileid: "76746970"
 
 - [WPF 架構](../advanced/wpf-architecture.md)
 - [XAML 概觀 (WPF)](../advanced/xaml-overview-wpf.md)
-- [相依性屬性概觀](../advanced/dependency-properties-overview.md)
+- [相依性屬性總覽](../advanced/dependency-properties-overview.md)
 - [版面配置](../advanced/layout.md)
 
 如需建立應用程式的詳細資訊，請參閱下列主題：
@@ -495,7 +495,7 @@ ms.locfileid: "76746970"
 - [圖形和多媒體](../graphics-multimedia/index.md)
 - [WPF 中的文件](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [面板總覽](../controls/panels-overview.md)
 - [資料範本化總覽](../data/data-templating-overview.md)
