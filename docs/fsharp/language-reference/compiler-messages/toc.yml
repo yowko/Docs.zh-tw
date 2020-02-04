@@ -1,0 +1,15 @@
+- name: 編譯器錯誤與警告
+  href: index.md
+  items:
+    - name: FS0001 - 加入類型方程式時發生錯誤
+      href: ./fs0001.md
+    - name: FS0002 - 非預期的函式
+      href: ./fs0002.md
+    - name: FS0003 - 此值不是函式，無法套用
+      href: ./fs0003.md
+    - name: FS0005 - 這個欄位不是可變動的欄位
+      href: ./fs0005.md
+    - name: FS0008 - 不定執行階段強制型轉
+      href: ./fs0008.md
+    - name: FS0009 - 可能無法驗證的程式碼
+      href: ./fs0009.md
