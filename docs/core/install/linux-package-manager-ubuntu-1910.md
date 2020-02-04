@@ -4,18 +4,18 @@ description: 使用套件管理員在 Ubuntu 19.10 上安裝 .NET Core SDK 和�
 author: thraka
 ms.author: adegeo
 ms.date: 01/16/2020
-ms.openlocfilehash: afba761e2237ed84528157841e538a9b44d9a966
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b8fec2afa6f03e3dabbf1ff449431759087163ba
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76164081"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920669"
 ---
 # <a name="ubuntu-1910-package-manager---install-net-core"></a>Ubuntu 19.10 套件管理員-安裝 .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-本文說明如何使用套件管理員在 Ubuntu 19.10 上安裝 .NET Core。 如果您要安裝執行時間，我們建議您安裝[ASP.NET Core 運行](#install-the-aspnet-core-runtime)時間，因為它同時包含 .net Core 和 ASP.NET Core 執行時間。
+本文說明如何使用套件管理員在 Ubuntu 19.10 上安裝 .NET Core。 如果您要安裝執行階段，我們建議您安裝 [ASP.NET Core runtime](#install-the-aspnet-core-runtime)，因為它同時包含 .net Core 和 ASP.NET Core 執行階段。
 
 ## <a name="register-microsoft-key-and-feed"></a>註冊 Microsoft 金鑰和總結
 
@@ -48,9 +48,9 @@ sudo apt-get install dotnet-sdk-3.1
 > [!IMPORTANT]
 > 如果您收到類似 [**找不到封裝 dotnet-sdk-3.1**] 的錯誤訊息，請參閱[疑難排解套件管理員](#troubleshoot-the-package-manager)一節。
 
-## <a name="install-the-aspnet-core-runtime"></a>安裝 ASP.NET Core 執行時間
+## <a name="install-the-aspnet-core-runtime"></a>安裝 ASP.NET Core 執行階段
 
-更新可供安裝的產品，然後安裝 ASP.NET Core 執行時間。 在您的終端機中，執行下列命令。
+更新可供安裝的產品，然後安裝 ASP.NET Core 執行階段。 在您的終端機中，執行下列命令。
 
 ```bash
 sudo apt-get update
@@ -60,11 +60,11 @@ sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> 如果您收到類似 [**找不到封裝 aspnetcore-執行時間-3.1**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
+> 如果您收到類似「找不到套件 aspnetcore-runtime-3.1」的錯誤訊息，請參閱**針對套件管理員進行疑難排解**一節。
 
-## <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行時間
+## <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行階段
 
-更新可供安裝的產品，然後安裝 .NET Core 執行時間。 在您的終端機中，執行下列命令。
+更新可供安裝的產品，然後安裝 .NET Core 執行階段。 在您的終端機中，執行下列命令。
 
 ```bash
 sudo apt-get update
@@ -74,13 +74,17 @@ sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> 如果您收到類似 [**找不到封裝 dotnet-執行時間-3.1**] 的錯誤訊息，請參閱[疑難排解封裝管理員](#troubleshoot-the-package-manager)一節。
+> 如果您收到類似「找不到套件 dotnet-runtime-3.1」的錯誤訊息，請參閱**針對套件管理員進行疑難排解**一節。
 
 ## <a name="how-to-install-other-versions"></a>如何安裝其他版本
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
 ## <a name="troubleshoot-the-package-manager"></a>針對套件管理員進行疑難排解
+
+本節提供使用封裝管理員安裝 .NET Core 時，可能會收到的常見錯誤資訊。
+
+### <a name="unable-to-locate"></a>找不到
 
 如果您收到類似「**找不到封裝 {.Net Core 封裝}** 」的錯誤訊息，請執行下列命令。
 
@@ -104,3 +108,7 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
+
+### <a name="failed-to-fetch"></a>無法提取
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

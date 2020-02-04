@@ -31,7 +31,7 @@ Windows Forms <xref:System.Windows.Forms.NotifyIcon> 元件會在工作列的狀
 
 1. 將值指派給 <xref:System.Windows.Forms.NotifyIcon.Icon%2A> 屬性。 此值必須是 `System.Drawing.Icon` 類型，而且可以從 .ico 檔案載入。 您可以在程式碼中指定圖示檔，或按一下省略號按鈕（![**屬性**] 視窗中 [<xref:System.Windows.Forms.NotifyIcon.Icon%2A>] 屬性旁邊的 [](./media/visual-studio-ellipsis-button.png)Visual Studio 屬性視窗中的省略號按鈕（...），然後在出現的 [**開啟**] 對話方塊中選取檔案。
 
-2. 將 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 屬性設定為 `true`。
+2. 將 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 屬性設為 `true`。
 
 3. 將 [<xref:System.Windows.Forms.NotifyIcon.Text%2A>] 屬性設定為適當的工具提示字串。
 
@@ -72,7 +72,7 @@ Windows Forms <xref:System.Windows.Forms.NotifyIcon> 元件會在工作列的狀
     notifyIcon1->Text = "Antivirus program";
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>

@@ -17,7 +17,7 @@ ms.locfileid: "76734111"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet run` - 執行原始程式碼，而不需要有任何明確的編譯或啟動命令。
 
@@ -74,7 +74,7 @@ dotnet myapp.dll
 
 如需 `dotnet` 驅動程式的詳細資訊，請參閱 [.NET Core 命令列工具 (CLI)](index.md) 主題。
 
-為了執行應用程式，`dotnet run` 命令會從 NuGet 快取解析共用執行階段之外的應用程式相依性。 因為它會使用快取相依性，不建議您在生產環境中使用 `dotnet run` 執行應用程式。 相反地，使用 [`dotnet publish`](dotnet-publish.md) 命令[建立部署](../deploying/index.md)，並部署已發佈的輸出。
+為了執行應用程式，`dotnet run` 命令會從 NuGet 快取解析共用執行階段之外的應用程式相依性。 因為它會使用快取相依性，不建議您在生產環境中使用 `dotnet run` 執行應用程式。 相反地，使用 [create a deployment](../deploying/index.md)[ 命令`dotnet publish`建立部署](dotnet-publish.md)，並部署已發佈的輸出。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -124,7 +124,7 @@ dotnet myapp.dll
 
 `--no-restore`
 
-執行命令時，不會執行隱含還原。
+執行命令時，不會執行隱含的還原。
 
 `-p|--project <PATH>`
 
@@ -178,7 +178,7 @@ dotnet myapp.dll
 
 `--no-restore`
 
-執行命令時，不會執行隱含還原。
+執行命令時，不會執行隱含的還原。
 
 `-p|--project <PATH>`
 
@@ -232,7 +232,7 @@ dotnet myapp.dll
 
 `--no-restore`
 
-執行命令時，不會執行隱含還原。
+執行命令時，不會執行隱含的還原。
 
 `-p|--project <PATH>`
 
@@ -279,7 +279,7 @@ dotnet myapp.dll
 
 `dotnet run --project ./projects/proj1/proj1.csproj`
 
-執行目前目錄中的專案 (因為已使用空白的 `--` 選項，所以這個範例中的 `--help` 引數會傳遞給應用程式)：
+執行目前目錄中的專案 (因為已使用空白的 `--help` 選項，所以這個範例中的 `--` 引數會傳遞給應用程式)：
 
 `dotnet run --configuration Release -- --help`
 

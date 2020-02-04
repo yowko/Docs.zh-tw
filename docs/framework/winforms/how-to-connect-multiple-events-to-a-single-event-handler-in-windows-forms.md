@@ -50,7 +50,7 @@ ms.locfileid: "76739602"
   
 1. 選取您要連接事件處理常式的控制項。  
   
-2. 在 屬性視窗中，按一下 **事件** 按鈕（![[事件] 按鈕](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")）。  
+2. 在 屬性視窗中，按一下 **事件** 按鈕（[![事件] 按鈕](./media/vxeventsbutton-propertieswindow.png "vxEventsButton_PropertiesWindow")）。  
   
 3. 按一下您要處理的事件名稱。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "76739602"
   
      系統會將程式碼加入至表單，以將事件系結至現有的事件處理常式。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
+- [在 Windows Form 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
 - [事件處理常式概觀](event-handlers-overview-windows-forms.md)

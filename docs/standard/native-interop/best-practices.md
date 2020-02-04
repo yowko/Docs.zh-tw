@@ -13,13 +13,13 @@ ms.locfileid: "76742745"
 
 .NET 提供您各種自訂原生互通性程式碼的方式。 本文包含 Microsoft 的 .NET 小組在原生互通性上遵循的指導方針。
 
-## <a name="general-guidance"></a>一般指引
+## <a name="general-guidance"></a>一般方針
 
 本節中的指導方針適用於所有互通案例。
 
 - ✔️對您的方法和參數使用相同的命名和大小寫，做為您要呼叫的原生方法。
 - ✔️請考慮針對常數值使用相同的命名和大小寫。
-- ✔️使用最接近原生類型的 .NET 類型。 例如在 C# 中，當原生類型是 `unsigned int` 時就使用 `uint`。
+- ✔️使用最接近原生類型的 .NET 類型。 例如在 C# 中，當原生類型是 `uint` 時就使用 `unsigned int`。
 - ✔️只有在您想要的行為與預設行為不同時，才使用 `[In]` 和 `[Out]` 屬性。
 - ✔️考慮使用 <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> 來集區您的原生陣列緩衝區。
 - ✔️考慮將 P/Invoke 宣告包裝在具有與原生程式庫相同名稱和大小寫的類別中。
@@ -27,11 +27,11 @@ ms.locfileid: "76742745"
 
 ## <a name="dllimport-attribute-settings"></a>DllImport 屬性設定
 
-| 設定 | 預設值 | 建議 | 詳細資料 |
+| 設定 | 預設 | 建議 | 詳細資料 |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  保留預設值  | 當此項目明確設為 False 時，失敗的 HRESULT 傳回值會轉換成例外狀況 (結果為定義中的傳回值會變成 Null)。|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | 取決於 API  | 如果 API 使用 GetLastError 並使用 Marshal.GetLastWin32Error 來取得值，請將此項目設為 True。 如果 API 設定的條件指出有錯誤，請先取得該錯誤再進行其他呼叫，以避免不小心複寫它。|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`，會退而使用 `CharSet.Ansi` 行為  | 當定義中出現字串或字元時，請明確地使用 `CharSet.Unicode` 或 `CharSet.Ansi` | 此項目指定值為 `false` 時，字串的封送處理行為及 `ExactSpelling` 的作用。 請留意到，`CharSet.Ansi` 在 Unix 上實際是 UTF8。 Windows「多數」時候是使用 Unicode，而 Unix 是使用 UTF8。 請在[字元集相關文件](./charset.md)查看詳細資訊。 |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`，會退而使用 `CharSet.Ansi` 行為  | 當定義中出現字串或字元時，請明確地使用 `CharSet.Unicode` 或 `CharSet.Ansi` | 此項目指定值為 `ExactSpelling` 時，字串的封送處理行為及 `false` 的作用。 請留意到，`CharSet.Ansi` 在 Unix 上實際是 UTF8。 Windows「多數」時候是使用 Unicode，而 Unix 是使用 UTF8。 請在[字元集相關文件](./charset.md)查看詳細資訊。 |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | 將此項目設為 True 可獲得些微效能好處，因為執行階段不會根據 `CharSet` 的設定，查看名稱尾碼是 "A" 或 "W" 的替代函式 ("A" 是 `CharSet.Ansi` 而 "W" 是 `CharSet.Unicode`)。 |
 
 ## <a name="string-parameters"></a>字串參數
@@ -49,7 +49,7 @@ ms.locfileid: "76742745"
    1. 配置原生緩衝區 **{2}**
    2. 如果 `[In]` _（`StringBuilder` 參數的預設值）_ ，則複製內容
    3. 如果 `[Out]` **{3}** _（也是 `StringBuilder`的預設值）_ ，將原生緩衝區複製到新配置的受控陣列
-3. `ToString()` 配置另一個受控陣列 **{4}**
+3. `ToString()` 配置另一個受控陣列 **** **
 
 這樣是由 *{4}* 配置從機器碼取得字串。 要限制此情況最好的方式是在其他呼叫中重複使用 `StringBuilder`，但這樣仍然只儲存 *1* 配置。 這樣比較好使用及從 `ArrayPool` 快取字元緩衝區，而且在後續的呼叫您可以直接取得 `ToString()` 的配置。
 
@@ -100,11 +100,11 @@ Blittable 類型是受控碼和機器碼有相同位元層級表示的類型。 
 
 **有時 Blittable：**
 
-- `char`、 `string`
+- `char`, `string`
 
 以傳址方式傳遞 Blittable 類型時，封送處理器會將它們固定，而不會複製到中繼緩衝區。 (類別會以傳址的方式繼承地傳遞，結構搭配使用 `ref` 或 `out` 時，會以傳址的方式傳遞。)
 
-當 `char` 在一維陣列中時，**或**當它所屬的類型明確地以 `CharSet = CharSet.Unicode` 標示為 `[StructLayout]` 時，它是 Blittable 的。
+當 `char` 在一維陣列中時，**或**當它所屬的類型明確地以 `[StructLayout]` 標示為 `CharSet = CharSet.Unicode` 時，它是 Blittable 的。
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
@@ -114,13 +114,13 @@ public struct UnicodeCharStruct
 }
 ```
 
-當 `string` 不是包含在其他類型中，且它是當作引數傳遞並標示 `[MarshalAs(UnmanagedType.LPWStr)]` 或已設定`CharSet = CharSet.Unicode`的 `[DllImport]`。
+當 `string` 不是包含在其他類型中，且它是當作引數傳遞並標示 `[MarshalAs(UnmanagedType.LPWStr)]` 或已設定`[DllImport]`的 `CharSet = CharSet.Unicode`。
 
 您可以藉由嘗試建立固定的 `GCHandle`，以查看某個類型是否為 Blittable 的。 如果該類型不是字串或被視為 Blittable，則 `GCHandle.Alloc` 會擲回 `ArgumentException`。
 
 ✔️在可能的情況下，將您的結構設為可執行程式。
 
-如需詳細資訊，請參閱＜＞。
+如需詳細資訊，請參閱
 
 - [Blittable 和非 Blittable 類型](../../framework/interop/blittable-and-non-blittable-types.md)
 - [類型封送處理](type-marshaling.md)
