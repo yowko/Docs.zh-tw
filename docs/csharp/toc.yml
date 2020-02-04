@@ -1505,13 +1505,13 @@
               href: language-reference/keywords/extern-alias.md
         - name: 類型測試關鍵字
           items:
-            - name: 是
+            - name: is
               href: language-reference/keywords/is.md
         - name: 泛型型別條件約束關鍵字
           items:
             - name: new 條件約束
               href: language-reference/keywords/new-constraint.md
-            - name: 其中
+            - name: where
               href: language-reference/keywords/where-generic-type-constraint.md
         - name: 存取關鍵字
           items:
@@ -1525,7 +1525,7 @@
               href: language-reference/keywords/null.md
             - name: true 與 false
               href: language-reference/builtin-types/bool.md
-            - name: 預設
+            - name: default
               href: language-reference/keywords/default.md
         - name: 內容關鍵字
           items:
@@ -1542,7 +1542,7 @@
               href: language-reference/keywords/partial-method.md
             - name: remove
               href: language-reference/keywords/remove.md
-            - name: 設定
+            - name: set
               href: language-reference/keywords/set.md
             - name: when (篩選條件)
               href: language-reference/keywords/when.md
@@ -1575,13 +1575,13 @@
               href: language-reference/keywords/ascending.md
             - name: descending
               href: language-reference/keywords/descending.md
-            - name: 於
+            - name: 'on'
               href: language-reference/keywords/on.md
             - name: equals
               href: language-reference/keywords/equals.md
             - name: by
               href: language-reference/keywords/by.md
-            - name: 中的
+            - name: in
               href: language-reference/keywords/in.md
     - name: 'C# 運算子'
       items:
@@ -1642,10 +1642,10 @@
         - name: await 運算子
           href: language-reference/operators/await.md
           displayName: async
-        - name: 預設運算子
+        - name: default 運算子
           href: language-reference/operators/default.md
           displayName: 'default value, default literal, type default'
-        - name: 委派運算子
+        - name: delegate 運算子
           href: language-reference/operators/delegate-operator.md
           displayName: anonymous
         - name: nameof 運算子
