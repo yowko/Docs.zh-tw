@@ -31,6 +31,10 @@
       href: how-to-guides/databricks-deploy-methods.md
     - name: 部署背景工作角色和 UDF 二進位檔
       href: how-to-guides/deploy-worker-udf-binaries.md
+    - name: 在 Ubuntu 上建置應用程式
+      href: how-to-guides/ubuntu-instructions.md
+    - name: 在 Windows 上建置應用程式
+      href: how-to-guides/windows-instructions.md
 - name: 參考資料
   items:
     - name: 應用程式開發介面參考
