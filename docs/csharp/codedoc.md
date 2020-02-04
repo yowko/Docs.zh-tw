@@ -4,18 +4,18 @@ description: 了解如何使用 XML 文件註解記錄您的程式碼，並在�
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: ef0d22e0ee7faa3ba51da6b44cf1827f19baf4f1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787827"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965928"
 ---
 # <a name="document-your-code-with-xml-comments"></a>使用 XML 批註記錄您的程式碼
 
 XML 文件註解是一種特殊類型的註解，新增於任何使用者定義型別或成員的定義上方。
 XML 文件註解具特殊性，因為編譯器可以處理它們以在編譯時期產生 XML 文件檔案。
-編譯器所產生的 XML 檔案可以隨著 .NET 組件一起散發，因此 Visual Studio 和其他 IDE 可以使用 IntelliSense 來顯示類型或成員的快速資訊。 此外，可以透過 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類工具執行 XML 檔案來產生 API 參考網站。
+編譯器產生的 XML 檔案可以與您的 .NET 元件一起散發，讓 Visual Studio 和其他 Ide 可以使用 IntelliSense 來顯示類型或成員的快速資訊。 此外，可以透過 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類工具執行 XML 檔案來產生 API 參考網站。
 
 編譯器會忽略 XML 文件註解 (例如所有其他註解)。
 
@@ -49,7 +49,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-範例程式庫支援 `int` 和 `double` 資料型別上的四個主要算術運算 `add`、`subtract`、`multiply` 和 `divide`。
+範例程式庫支援 `int` 和 `double` 資料類型上的四個主要算數運算（`add`、`subtract`、`multiply`和 `divide`）。
 
 現在您想要能夠使用您的程式庫但無法存取原始程式碼的協力廠商開發人員，從您的程式碼建立 API 參考檔。
 如先前所述，XML 文件標籤可以用來達到此目的。 現在將向您介紹 C# 編譯器支援的標準 XML 標籤。
@@ -61,7 +61,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-`<summary>` 標記十分重要，因為它的內容是 IntelliSense 或 API 參考文件中類型或成員資訊的主要來源，所以建議您包含它。
+`<summary>` 標記很重要，建議您將其納入，因為它的內容是 IntelliSense 或 API 參考檔中類型或成員資訊的主要來源。
 
 ## <a name="remarks"></a>\<remarks>
 
@@ -163,8 +163,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 ## <a name="list"></a>\<list>
 
-您可以使用 `<list>` 標記，將文件資訊格式化為已排序清單、未排序清單或資料表。
-建立 `Math` 程式庫所支援的未排序數學運算清單。
+您可以使用 `<list>` 標記，將檔資訊格式化為已排序的清單、未排序清單或資料表。 建立 `Math` 程式庫所支援的未排序數學運算清單。
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
@@ -207,7 +206,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 `name` 屬性代表標記中位在註解前面的名稱規範。
 
-可用來取代 `name` 的 `id` 屬性代表位在註解前面之標記的識別碼。
+可以用來取代 `name`的 `id` 屬性，代表批註前面標記的識別碼。
 
 ### <a name="user-defined-tags"></a>使用者定義的標記
 

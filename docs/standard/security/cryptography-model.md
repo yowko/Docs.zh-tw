@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706223"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965954"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework 密碼編譯模型
 
@@ -33,15 +33,11 @@ ms.locfileid: "75706223"
 
 做為可供演算法使用的不同實作方式範例，請考慮對稱演算法。 所有對稱演算法的基礎是 <xref:System.Security.Cryptography.SymmetricAlgorithm>，它由下列演算法所繼承：
 
-1. <xref:System.Security.Cryptography.Aes>
-
-2. <xref:System.Security.Cryptography.DES>
-
-3. <xref:System.Security.Cryptography.RC2>
-
-4. <xref:System.Security.Cryptography.Rijndael>
-
-5. <xref:System.Security.Cryptography.TripleDES>
+* <xref:System.Security.Cryptography.Aes>
+* <xref:System.Security.Cryptography.DES>
+* <xref:System.Security.Cryptography.RC2>
+* <xref:System.Security.Cryptography.Rijndael>
+* <xref:System.Security.Cryptography.TripleDES>
 
 <xref:System.Security.Cryptography.Aes> 會由兩個類別繼承：<xref:System.Security.Cryptography.AesCryptoServiceProvider> 和 <xref:System.Security.Cryptography.AesManaged>。 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 類別是 Aes 的 Windows 密碼編譯 API (CAPI) 實作的包裝函式，而 <xref:System.Security.Cryptography.AesManaged> 類別完全以 managed 程式碼撰寫。 除了 Managed 和 CAPI 實作，另外還有第三種類型的實作，Cryptography Next Generation (CNG)。 CNG 演算法的範例是 <xref:System.Security.Cryptography.ECDiffieHellmanCng>。 CNG 演算法可用於 Windows Vista 和更新版本。
 
@@ -62,35 +58,22 @@ Common Language Runtime 使用資料流為導向的設計來實作對稱演算�
 以下是依應用程式的建議演算法清單：
 
 - 資料隱私權：
-
   - <xref:System.Security.Cryptography.Aes>
-
 - 資料完整性：
-
   - <xref:System.Security.Cryptography.HMACSHA256>
-
   - <xref:System.Security.Cryptography.HMACSHA512>
-
 - 數位簽章：
-
   - <xref:System.Security.Cryptography.ECDsa>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - 金鑰交換：
-
   - <xref:System.Security.Cryptography.ECDiffieHellman>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - 亂數產生：
-
   - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
-
 - 從密碼產生金鑰：
-
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
 ## <a name="see-also"></a>請參閱
 
 - [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+- [透過 Bruce Schneier，在 C 中套用了密碼編譯通訊協定、演算法和原始程式碼](https://www.schneier.com/books/applied_cryptography/)

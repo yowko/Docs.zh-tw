@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: df7eaf971f3a54057758dc7d974ae00cd4797ad7
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: edc471ad2c389a37a2ffbf739a74d4d5d0e9696f
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960020"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965980"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>針對 .NET Framework 安裝和解除安裝遭封鎖的問題進行疑難排解
 
@@ -34,7 +34,7 @@ ms.locfileid: "74960020"
 |無法安裝 .NET Framework 4.5.x/4.6.x/4.7.x/4.8。 電腦上的其他應用程式與這個程式不相容。<br /><br /> -或-<br /><br /> 電腦上的其他應用程式與這個程式不相容。|這個訊息最可能的原因是安裝了 .NET Framework 的預覽或 RC 版本。 解除安裝預覽版本或 RC 版本，並重新執行安裝程式。|  
 |無法使用這個套件解除安裝 .NET Framework 4.5.x/4.6.x/4.7.x/4.8。 若要從電腦將 .NET Framework 4.5.x/4.6.x/4.7.x/4.8 解除安裝，請移至 [控制台]，依序選擇 [程式和功能]、[檢視已安裝的更新]、[Microsoft Windows (KB2828152) 更新]，然後選擇 [解除安裝]。|您要安裝的套件無法解除安裝 .NET Framework 的預覽版本或 RC 版本。<br /><br /> 請從 [控制台] 解除安裝預覽版本或 RC 版本。|  
 |無法解除安裝 .NET Framework 4.5.x/4.6.x/4.7.x/4.8。 電腦上的其他應用程式依存於這個程式。|一般而言，您不應該解除安裝電腦上的任何 .NET Framework 版本，因為您使用的應用程式可能相依於特定的 .NET Framework 版本。 如需詳細資訊，請參閱*使用者入門*指南中的[適用於使用者的 .NET Framework](../get-started/index.md#ForUsers)。|  
-|.NET Framework 4.5.x/4.6.x/4.7.x/4.8 可轉散發套件不適用於這個作業系統。 請從 Microsoft 下載中心下載適用於作業系統的 .NET Framework 4.5.x/4.6.x/4.7.x/4.8。|您可能嘗試在不支援的平台上安裝 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8，或您選擇的安裝套件未包含所支援的全部作業系統所需的元件。 請使用離線安裝程式 ([4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=309493)、[4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)、[4.6](https://go.microsoft.com/fwlink/p/?LinkId=528233)、[4.6.1](https://go.microsoft.com/fwlink/p/?LinkId=671744)、[4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604)、[4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)、[4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090) 或 [4.7.2](https://go.microsoft.com/fwlink/p/?LinkId=863265) 或 [4.8](https://go.microsoft.com/fwlink/?linkid=2088631)) 來重新執行安裝。 如需詳細資訊，請參閱[安裝指南](guide-for-developers.md)和[系統需求](../get-started/system-requirements.md)以了解支援的作業系統。|  
+|.NET Framework 4.5.x/4.6.x/4.7.x/4.8 可轉散發套件不適用於這個作業系統。 請從 .NET Framework 下載頁面下載適用于您作業系統的 .NET Framework 4.5. x/4.6. x/4.8。|您可能嘗試在不支援的平台上安裝 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8，或您選擇的安裝套件未包含所支援的全部作業系統所需的元件。 請使用離線安裝程式 ([4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=309493)、[4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)、[4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)、[4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)、[4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604)、[4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)、[4.7.1](https://go.microsoft.com/fwlink/p/?LinkId=852090) 或 [4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472) 或 [4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)) 來重新執行安裝。 如需詳細資訊，請參閱[安裝指南](guide-for-developers.md)和[系統需求](../get-started/system-requirements.md)以了解支援的作業系統。|  
 |您必須先安裝對應至 KB\<號碼> 的更新，才能安裝此產品。|.NET Framework 的安裝需要先安裝 KB 更新，才能安裝 .NET Framework。 請安裝更新，再重新開始 .NET Framework 安裝。<br /><br /> 例如，若要在 Windows 8.1、Windows RT 8.1 和 Windows Server 2012 R2 上安裝 .NET Framework 的更新版本，需要安裝對應至 [KB 2919355](https://support.microsoft.com/kb/2919355) 的更新。|  
 |您的電腦目前執行的是 Windows Server 2008 作業系統的 Server Core 安裝。 .NET Framework 4.5.x 需要較新版本的作業系統。 請安裝 Windows Server 2008 R2 SP1 (含) 以上版本並重新執行 .NET Framework 4.5.x 安裝程式。|Windows Server 2008 R2 SP1 (含) 以後版本的 Server Core 角色才支援 .NET Framework 4.5.1 和 4.5.2。 請參閱[系統需求](../get-started/system-requirements.md)。|  
 |您沒有足夠權限為此電腦的所有使用者完成這項作業。 請以系統管理員身分登入，然後重新執行**安裝程式**。|您必須是此電腦的系統管理員，才能安裝 .NET Framework。|  

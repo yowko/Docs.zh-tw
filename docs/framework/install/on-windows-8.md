@@ -3,16 +3,16 @@ title: 在 Windows 8 上安裝 .NET Framework
 ms.custom: updateeachrelease
 description: 了解如何在 Windows 8 上安裝 .NET Framework
 ms.date: 04/18/2019
-ms.openlocfilehash: 0d9afb30088256b6c5c1fd8c0b2c99e3a9760b89
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1db8ac9837821eb7111b9d0015787509bc27b398
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716720"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965993"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>在 Windows 8 和 Windows Server 2012 上安裝 .NET Framework
 
-在 Windows 上執行許多應用程式時需要 .NET Framework。 您可以使用下列指令來安裝它。 嘗試執行應用程式並在電腦上看到下列對話方塊之後，可能會進入此頁面。
+在 Windows 上執行許多應用程式時需要 .NET Framework。 您可以使用下列指示來安裝它。 嘗試執行應用程式並在電腦上看到下列對話方塊之後，可能會進入此頁面。
 
 ![無法啟動這個應用程式](./media/this-application-could-not-be-started.png)
 
@@ -29,7 +29,7 @@ Windows Server 2012 支援 .NET Framework 4.8。 Windows 8 不予支援。
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130) 是 Windows 8 支援的最新版 .NET Framework。
+[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46) 是 Windows 8 支援的最新版 .NET Framework。
 
 .NET Framework 4.6 支援針對 .NET Framework 4.0 到 4.6 建置的應用程式。
 

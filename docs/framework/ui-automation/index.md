@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7dff42d612d740fa9d05f303721cef45e1a03c32
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901024"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965863"
 ---
 # <a name="microsoft-ui-automation"></a>Microsoft UI 自動化
 
@@ -30,8 +30,7 @@ ms.locfileid: "75901024"
 - [Managed 程式碼的使用者介面自動化用戶端](ui-automation-clients-for-managed-code.md)
 - [使用者介面自動化控制項模式](ui-automation-control-patterns.md)
 - [使用者介面自動化文字模式](ui-automation-text-pattern.md)
-- [UI 自動化控制項類型](ui-automation-control-types.md)
-- [使用者介面自動化規格和社群承諾](ui-automation-specification-and-community-promise.md)
+- [UI Automation Control Types](ui-automation-control-types.md)
 
 ## <a name="related-sections"></a>相關章節
 

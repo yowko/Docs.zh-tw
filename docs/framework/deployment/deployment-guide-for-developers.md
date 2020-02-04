@@ -1,63 +1,51 @@
 ---
 title: .NET Framework 開發人員部署手冊
 ms.custom: updateeachrelease
-ms.date: 04/18/2019
+ms.date: 01/17/2020
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 1b7fccc673f82986a53dcb3dfcb68e8575b99dfd
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a346a19400c1d2c536fff56ed7fb6dc27570df29
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959995"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965824"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
 
-如需下載連結，請參閱[可轉散發套件](#redistributable-packages)一節。 您也可以從下列 Microsoft 下載中心頁面下載可轉散發套件和語言套件：
+您可以從下載頁面下載 .NET Framework 的可轉散發套件和語言套件：
 
-- 適用於所有作業系統的 .NET Framework 4.8 ([Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=2085155)或[離線安裝程式](https://go.microsoft.com/fwlink/?linkid=2088631))
-
-- 適用於所有作業系統的 .NET Framework 4.7.2 ([Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=863262)或[離線安裝程式](https://go.microsoft.com/fwlink/p/?LinkId=863265))
-
-- 適用於所有作業系統的 .NET Framework 4.7.1 ([Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=852095) 或 [離線安裝程式](https://go.microsoft.com/fwlink/p/?LinkId=852107))
-
-- 適用於所有作業系統的 .NET Framework 4.7 ([Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=825299) 或 [離線安裝程式](https://go.microsoft.com/fwlink/p/?LinkId=825303))
-
-- 適用於所有作業系統的 .NET Framework 4.6.2 ([Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=780597)或[離線安裝程式](https://go.microsoft.com/fwlink/p/?LinkId=780601))
-
-- 適用於所有作業系統的 .NET Framework 4.6.1 ([Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=671729)或[離線安裝程式](https://go.microsoft.com/fwlink/p/?LinkId=671744))
-
-- 適用於所有作業系統的 .NET Framework 4.6 ([Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=528222)或[離線安裝程式](https://go.microsoft.com/fwlink/p/?LinkId=528232))
-
-- 適用於所有作業系統的 .NET Framework 4.5.2 ([Web 安裝程式](https://go.microsoft.com/fwlink/p/?LinkId=397703) 或 [離線安裝程式](https://go.microsoft.com/fwlink/p/?LinkId=397706))
-
-- 適用於所有作業系統的 .NET Framework 4.5.1 ([Web 安裝程式](https://go.microsoft.com/fwlink/p/?LinkId=310158) 或 [離線安裝程式](https://go.microsoft.com/fwlink/p/?LinkId=310159))
-
-- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+- [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
+- [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
+- [.NET Framework 4。6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
+- [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
+- [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
 
  重要注意事項：
 
-> [!NOTE]
-> 片語「.NET Framework 4.5 和其小數點版本」指的是 .NET Framework 4.5 及所有更新版本。
-
 - 從 .NET Framework 4.5.1 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的 .NET Framework 版本是 .NET Framework 4.5 的就地更新；亦即，它們會使用相同的執行階段版本，但組件版本會更新並包含新的型別和成員。
 
-- .NET Framework 4.5 及其小數點版本是以 .NET Framework 4 為基礎累加建置。 當您在已安裝 .NET Framework 4 的系統上安裝 .NET Framework 4.5 或其小數點版本時，第 4 版組件就會被新版本取代。
+- .NET Framework 4.5 和更新版本是在 .NET Framework 4 上以累加方式建立。 當您在已安裝 .NET Framework 4 的系統上安裝 .NET Framework 4.5 或更新版本時，第4版元件會取代為較新的版本。
 
 - 如果您參考應用程式中的 Microsoft [Out-of-Band 封裝](../get-started/the-net-framework-and-out-of-band-releases.md) ，應用程式封裝中就會包含該組件。
 
-- 您必須具有系統管理員權限才能安裝 .NET Framework 4.5 及其小數點版本。
+- 您必須具有系統管理員許可權，才能安裝 .NET Framework 4.5 或更新版本。
 
 - .NET Framework 4.5 隨附于 Windows 8 和 Windows Server 2012，所以您不需要在這些作業系統上使用應用程式部署它。 同樣地，.NET Framework 4.5.1 包含在 Windows 8.1 和 Windows Server 2012 R2 中。 所有作業系統中都不包含 .NET Framework 4.5.2。 .NET Framework 4.6 隨附於 Windows 10 中，.NET Framework 4.6.1 隨附於 Windows 10 年 11 月更新中，而 .NET Framework 4.6.2 則隨附於 Windows 10 年度更新版中。  .NET Framework 4.7 隨附於 Windows 10 Creators Update 中，.NET Framework 4.7.1 隨附於 Windows 10 Fall Creators Update 中，.NET Framework 4.7.2 則隨附於 Windows 10 2018 年 10 月更新與 Windows 10 2018 年 4 月更新中。 .NET Framework 4.8 已隨附於 Windows 10 2019 年 5 月更新中。 如需硬體和軟體需求的完整清單，請參閱[系統需求](../get-started/system-requirements.md)。
 
 - 從 .NET Framework 4.5 開始，您的使用者可以在安裝過程中檢視執行中的 .NET Framework 應用程式清單，並輕鬆地將它們關閉。 這有助於避免系統因安裝 .NET Framework 而重新啟動。 請參閱 [減少系統重新啟動](reducing-system-restarts.md)。
 
-- 解除安裝 .NET Framework 4.5 或其小數點版本的其中一個，也會移除已存在的 .NET Framework 4 檔案。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 請參閱[安裝 .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))。
+- 卸載 .NET Framework 4.5 或更新版本時，也會移除已存在的 .NET Framework 4 檔案。 如果您想要回到 .NET Framework 4，則必須重新安裝它及其所有更新。 請參閱[安裝 .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))。
 
-- .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您先前安裝了日期為 2012 年 8 月 16 日的 .NET Framework 4.5 可轉散發套件，我們建議您使用 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkId=245484)最新的可轉散發套件進行更新。 如需這個問題的詳細資訊，請參閱 [Microsoft 安全性摘要報告 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)。
+- .NET Framework 4.5 可轉散發套件已於 2012 年 10 月 9 日更新，更正了與數位憑證時間戳記錯誤相關的問題，這個問題會造成 Microsoft 所產生和簽署之檔案中的數位簽章提前過期。 如果您先前安裝了日期為2012年8月16日的 .NET Framework 4.5 可轉散發套件，我們建議您使用[.NET Framework 下載頁面](https://dotnet.microsoft.com/download/dotnet-framework/net45)中的最新可轉散發套件來更新您的複本。 如需這個問題的詳細資訊，請參閱 [Microsoft 安全性摘要報告 2749655](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)。
 
 如需系統管理員如何在網路上部署 .NET Framework 及其系統相依性的詳細資訊，請參閱[系統管理員部署手冊](guide-for-administrators.md)。
 
@@ -67,22 +55,20 @@ ms.locfileid: "74959995"
 
 |應用程式的部署策略|可用的部署方法|可供使用的 .NET Framework 可轉散發套件|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|從 Web 安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Web 安裝程式](#redistributable-packages)|
-|從光碟安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[離線安裝程式](#redistributable-packages)|
+|從 Web 安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Web installer](#redistributable-packages)|
+|從光碟安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Offline installer](#redistributable-packages)|
 |從區域網路安裝 (適用於企業應用程式)|- [ClickOnce](#clickonce-deployment)|[Web 安裝程式](#redistributable-packages) (如需相關限制，請參閱 [ClickOnce](#clickonce-deployment) ) 或 [離線安裝程式](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>可轉散發套件
 
-.NET Framework 可透過兩種可轉散發套件提供：Web 安裝程式 (啟動載入器) 和離線安裝程式 (獨立可轉散發套件)。 下表將比較這兩種套件。
+.NET Framework 可透過兩種可轉散發套件提供：Web 安裝程式 (啟動載入器) 和離線安裝程式 (獨立可轉散發套件)。 所有 .NET Framework 下載都裝載在 [[下載 .NET Framework] 頁面](https://dotnet.microsoft.com/download/dotnet-framework/)上。 下表比較這兩個套件：
 
 ||Web 安裝程式|離線安裝程式|
 |-|-------------------|-----------------------|
-|下載檔案|.NET Framework 4.8： <br/>[ndp48-web.exe](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>.NET Framework 4.7.2： <br/>[NDP472-KB4054531-Web.exe](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1： <br/>[NDP471-KB4033344-Web.exe](https://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7： <br />[NDP47-KB3186500-Web.exe](https://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />.NET Framework 4.6.2： <br />[NDP462-KB3151802-Web.exe](https://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> .NET Framework 4.6.1：<br />[NDP461-KB3102438-Web.exe](https://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> .NET Framework 4.6：<br />[NDP46-KB3045560-Web.exe](https://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901954-Web.exe](https://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> .NET Framework 4.5.1： <br />[NDP451-KB2859818-Web.exe](https://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> .NET Framework 4.5： <br />[dotNetFx45_Full_setup.exe](https://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.8： <br/>[NDP48-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?linkid=2088631)<br/><br/>.NET Framework 4.7.2： <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1： <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7： <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />.NET Framework 4.6.2： <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> .NET Framework 4.6.1： <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> .NET Framework 4.6： <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2： <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> .NET Framework 4.5.1： <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> .NET Framework 4.5： <br />[dotNetFx45_Full_x86_x64.exe](https://go.microsoft.com/fwlink/?LinkId=225702)|
 |是否需要網際網路連線？|是|否|
 |下載大小|較小 (僅包含目標平台的安裝程式)*|較大*|
 |語言套件|包含**|除非您使用以所有作業系統為目標的套件，否則必須 [單獨安裝](#chain_langpack)。|
 |部署方法|支援所有方法：<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|支援所有方法：<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [手動安裝](#installing_manually)<br />- [自訂安裝 (鏈結)](#chaining)|
-|下載 ClickOnce 部署的位置|Microsoft 下載中心：<br /><br /> - [.NET Framework 4.8](https://go.microsoft.com/fwlink/?LinkId=2085155) <br/> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|您的伺服器或 Microsoft 下載中心：<br /><br /> - [.NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631)<br /> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
 \* 離線安裝程式比較大，因為其中包含適用所有目標平台的元件。 當您完成執行安裝程式後，Windows 作業系統只會快取所使用的安裝程式。 如果在安裝完成之後刪除離線安裝程式，則使用的磁碟空間與 Web 安裝程式所使用的磁碟空間相同。 如果用來建立應用程式安裝程式的工具 (例如，[InstallAware](#installaware-deployment) 或 [InstallShield](#installshield-deployment)) 提供了安裝程式檔案資料夾，而這個資料夾會在安裝完成後移除，則將離線安裝程式放在安裝程式資料夾中，便可自動刪除離線安裝程式。
 
@@ -136,7 +122,7 @@ ClickOnce 部署適用於以 Visual Basic 和 Visual C# 建立的專案，但不
 
 7. 選擇選項以指定必要條件的來源位置，然後選擇 [ **確定**]。
 
-     如果您提供 .NET Framework 下載位置的 URL，就可以指定 Microsoft 下載中心網站或是您自己的網站。 如果您要將可轉散發套件放在自己的伺服器上，該套件必須是離線安裝程式，而不是 Web 安裝程式。 您只能連結至 Microsoft 下載中心上的 Web 安裝程式。 URL 也可以指定要用來散發您的應用程式的光碟。
+     如果您提供 .NET Framework 下載位置的 URL，您可以指定 [.NET Framework 下載] 頁面或您自己的網站。 如果您要將可轉散發套件放在自己的伺服器上，該套件必須是離線安裝程式，而不是 Web 安裝程式。 您只能在 .NET Framework 下載頁面上連結到 web 安裝程式。 URL 也可以指定要用來散發您的應用程式的光碟。
 
 8. 在 [ **屬性頁** ] 對話方塊中，選擇 [ **確定**]。
 
@@ -150,7 +136,7 @@ InstallAware 可以從單一來源來建立 Windows 應用程式 (APPX)、Window
 
 在 Visual Studio 中，選擇 InstallShield 部署並加入 .NET Framework 的相依性：
 
-1. 在 Visual Studio 功能表列上，選擇 [ **檔案**]、[ **新增**]、[ **專案**]。
+1. 在 Visual Studio 功能表列上，依序選擇 [檔案]、[新增]、[專案]。
 
 2. 在 [ **新增專案** ] 對話方塊的左窗格中，依序選擇 [ **其他專案類型**]、[ **安裝和部署**]、[ **InstallShield LE**]。
 
@@ -277,7 +263,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |安裝在 Windows 10 以外的所有 OS 版本上的 .NET Framework 4.6|393297|
 |.NET Framework 4.5.2|379893|
 |隨 Windows 8.1 或 Windows Server 2012 R2 安裝的 .NET Framework 4.5.1|378675|
-|在 Windows 8、Windows 7 上安裝 .NET Framework 4.5。1|378758|
+|在 Windows 8、Windows 7 上安裝 .NET Framework 4.5.1|378758|
 |.NET Framework 4.5|378389|
 
 ### <a name="detecting-the-language-packs"></a>刪除語言套件
@@ -298,27 +284,18 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 ### <a name="chaining-the-language-packs-to-your-app-setup"></a>將語言套件鏈結至您的應用程式安裝
 
-.NET Framework 提供了一組獨立的語言套件可執行檔，其中包含特定文化特性的當地語系化資源。 語言套件可從 Microsoft 下載中心取得：
+.NET Framework 提供了一組獨立的語言套件可執行檔，其中包含特定文化特性的當地語系化資源。 您可以從 [下載 .NET Framework] 頁面取得語言套件：
 
-- [.NET Framework 4.8 語言套件](https://go.microsoft.com/fwlink/p/?LinkId=2086170)
-
-- [.NET Framework 4.7.2 語言套件](https://go.microsoft.com/fwlink/?LinkId=863275)
-
-- [.NET Framework 4.7.1 語言套件](https://go.microsoft.com/fwlink/p/?LinkId=852090)
-
-- [.NET Framework 4.7 語言套件](https://go.microsoft.com/fwlink/p/?LinkId=825306)
-
-- [.NET Framework 4.6.2 語言套件](https://go.microsoft.com/fwlink/p/?LinkId=780604)
-
-- [.NET Framework 4.6.1 語言套件](https://go.microsoft.com/fwlink/p/?LinkId=671747)
-
-- [.NET Framework 4.6 語言套件](https://go.microsoft.com/fwlink/p/?LinkId=528314)
-
-- [.NET Framework 4.5.2 語言套件](https://go.microsoft.com/fwlink/p/?LinkId=397701)
-
-- [.NET Framework 4.5.1 語言套件](https://go.microsoft.com/fwlink/p/?LinkId=322101)
-
-- [.NET Framework 4.5 語言套件](https://go.microsoft.com/fwlink/p/?LinkId=245451)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+- [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
+- [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
+- [.NET Framework 4。6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
+- [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
+- [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
 
 > [!IMPORTANT]
 > 語言套件並不包含執行應用程式所需的 .NET Framework 元件，因此在安裝語言套件之前，必須先使用 Web 或離線安裝程式安裝 .NET Framework。
@@ -368,7 +345,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 ## <a name="uninstalling-the-net-framework"></a>解除安裝 .NET Framework
 
-從 Windows 8 開始，您可以使用 [控制台] 中的 [開啟**或關閉 Windows 功能**]，將 .NET Framework 4.5 或其中一個點發行版卸載。 在舊版 Windows 中，您可以使用 [控制台] 中的 [新增或移除程式]，將 .NET Framework 4.5 或其小數點版本解除安裝。
+從 Windows 8 開始，您可以使用 [控制台] 中的 [開啟**或關閉 Windows 功能**]，卸載 .NET Framework 4.5 或更新版本。 在舊版 Windows 中，您可以使用 [控制台] 中的 [**新增或移除程式**] 來卸載 .NET Framework 4.5 或更新版本。
 
 > [!IMPORTANT]
 > 針對 Windows 7 和舊版作業系統，解除安裝 .NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2, 或 4.8 不會還原 .NET Framework 4.5 檔案，而解除安裝 .NET Framework 4.5 不會還原 .NET Framework 4 檔案。 如果您想要還原為舊版，則必須重新安裝舊版及其所有更新。
@@ -383,7 +360,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |------------|-----------------|
 |**/CEIPConsent**|覆寫預設的行為並傳送匿名意見給 Microsoft 以協助改善未來的部署經驗。 只有當安裝程式提示同意，同時使用者授與權限傳送匿名意見給 Microsoft 時，才能使用此選項。|
 |**/chainingpackage** `packageName`|指定執行鏈結之可執行檔的名稱。 此資訊會以匿名意見的形式傳送給 Microsoft 以協助改善未來的部署經驗。<br /><br /> 如果封裝名稱包含空格，請使用雙引號做為分隔符號，例如： **/chainingpackage "Lucerne Publishing"** 。 如需鏈結套件的範例，請參閱 MSDN Library 中的 [從安裝套件取得進度資訊](https://go.microsoft.com/fwlink/?LinkId=181926) 。|
-|**/LCID**  `LCID`<br /><br /> 其中， `LCID` 可指定地區設定識別碼 (請參閱 [支援的語言](#supported-languages))。|安裝 `LCID` 指定的語言套件並強制以該語言顯示 UI (除非已設定無訊息模式)。<br /><br /> 對於 Web 安裝程式，此選項會從 Web 鏈結安裝語言套件。 **注意：** 此選項只適用於 Web 安裝程式。|
+|**/LCID**`LCID`<br /><br /> 其中， `LCID` 可指定地區設定識別碼 (請參閱 [支援的語言](#supported-languages))。|安裝 `LCID` 指定的語言套件並強制以該語言顯示 UI (除非已設定無訊息模式)。<br /><br /> 對於 Web 安裝程式，此選項會從 Web 鏈結安裝語言套件。 **注意：** 此選項只適用於 Web 安裝程式。|
 |**/log** `file` &#124; `folder`|指定記錄檔的位置。 預設為程序的暫存資料夾，而預設檔案名稱將會根據套件。 如果副檔名是 .txt，則會產生文字記錄檔。 如果您指定其他副檔名或未指定副檔名，則會建立 HTML 記錄檔。|
 |**/msioptions**|指定針對 .msi 和 .msp 項目傳遞的選項，例如： `/msioptions "PROPERTY1='Value'"`。|
 |**/norestart**|避免安裝程式自動重新開機。 如果您使用此選項，則鏈結應用程式必須擷取傳回碼並處理重新開機 (請參閱 MSDN Library 中的 [從安裝套件取得進度資訊](https://go.microsoft.com/fwlink/?LinkId=179606) )。|
@@ -399,7 +376,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 ### <a name="supported-languages"></a>支援的語言
 
-下表列出可供 .NET Framework 4.5 及其小數點版本使用的 .NET Framework 語言套件。
+下表列出適用于 .NET Framework 4.5 和更新版本的 .NET Framework 語言套件。
 
 |LCID|語言 – 國家/地區|Culture|
 |----------|--------------------------------|-------------|
@@ -417,7 +394,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |1041|日文|ja|
 |1042|韓文|ko|
 |1043|荷蘭文 – 荷蘭|nl|
-|1044|挪威文 (巴克摩)|否|
+|1044|挪威文 (巴克摩)|no|
 |1045|波蘭文|pl|
 |1046|葡萄牙文 – 巴西|pt-BR|
 |1049|俄文|ru|

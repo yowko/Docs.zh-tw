@@ -2,12 +2,12 @@
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.date: 04/08/2019
-ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 202c1867ae6404db074e6196b28ffe5f453ef5bf
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787871"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965603"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -145,7 +145,7 @@ ms.locfileid: "76787871"
 
 #### <a name="version"></a>{2&gt;版本&lt;2}
 
-必要的 `Version` 屬性會指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
+必要的 `Version` 屬性會指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)配置的規則。 預設行為是最小版本（內含相符）。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3, )` 並且表示已解析的封裝會有版本1.2.3 （如果有的話）或更高版本。
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets 和 PrivateAssets
 
@@ -184,7 +184,7 @@ ms.locfileid: "76787871"
 
 #### <a name="version"></a>{2&gt;版本&lt;2}
 
-`Version` 指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)配置的規則。 預設行為是確切的版本相符。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3]`，表示確切的套件版本 1.2.3。
+`Version` 指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)配置的規則。 預設行為是最小版本（內含相符）。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3, )` 並且表示已解析的封裝會有版本1.2.3 （如果有的話）或更高版本。
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 

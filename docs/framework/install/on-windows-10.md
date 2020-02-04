@@ -3,12 +3,12 @@ title: 在 Windows 10 上安裝 .NET Framework
 description: 了解如何在 Windows 10 或 Windows Server 2016 上安裝 .NET Framework。
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: c2b274bb85b6d4c496e7b6b6b62f05aa932202dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eed15b9088d6ba46d8f5bc6d16ba779dd6115b0d
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716372"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965967"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>在 Windows 10 和 Windows Server 2016 以及更新版本上安裝 .NET Framework
 
@@ -50,7 +50,7 @@ ms.locfileid: "75716372"
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) 是 Windows 10 1507 和 1511 支援之最新版 .NET Framework。
+[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) 是 Windows 10 1507 和 1511 支援之最新版 .NET Framework。
 
 .NET Framework 4.6.2 支援專為 .NET Framework 4.0 到 4.6.2 建置的應用程式。
 

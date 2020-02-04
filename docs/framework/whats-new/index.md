@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860955"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76966006"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 
@@ -46,9 +46,9 @@ ms.locfileid: "76860955"
 
 您可以從下列位置下載 .NET Framework 4.8：
 
-- [.NET Framework 4.8 Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=2085155)
+- [.NET Framework 4.8 Web 安裝程式](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-- [NET Framework 4.8 離線安裝程式](https://go.microsoft.com/fwlink/?linkid=2088631)
+- [NET Framework 4.8 離線安裝程式](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 .NET Framework 4.8 可以安裝在 Windows 10、Windows 8.1、Windows 7 SP1，以及自 Windows Server 2008 R2 SP1 起的相對應伺服器平台上。 您可以使用 Web 安裝程式或離線安裝程式來安裝 .NET Framework 4.8。 大部分的使用者，我們建議使用 Web 安裝程式。
 
@@ -2132,3 +2132,4 @@ Windows 8.x 市集應用程式是專為特定版型規格所設計，而且會�
 - [2019 Visual Studio 的新功能](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio 中 C++ 的新功能](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+ 

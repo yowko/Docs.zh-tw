@@ -2,12 +2,12 @@
 title: 關於 .NET Core
 description: 了解 .NET Core。
 ms.date: 09/17/2019
-ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7908cf70e91dcd68668008c2c3082dc293330ec1
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920963"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965837"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -18,7 +18,7 @@ ms.locfileid: "76920963"
 - **命令列工具：** 包含易用的命令列工具，可用於本機開發及持續整合案例。
 - **彈性的部署：** 可以包含在您的應用程式中，或並存安裝（全使用者或全系統安裝）。 可搭配 [Docker 容器](docker/introduction.md)使用。
 - **相容：** .net Core 可透過[.NET Standard](../standard/net-standard.md)與 .NET Framework、Xamarin 和 Mono 相容。
-- **開放原始碼︰** NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
+- **開放原始碼︰** .NET Core 平台是開放原始碼，使用 MIT 和 Apache 2 授權。 .NET core 是 [.NET Foundation](https://dotnetfoundation.org/) 專案。
 - **受 Microsoft 支援：** .NET Core 根據 [.NET Core 支援](https://dotnet.microsoft.com/platform/support/policy)受 Microsoft 支援。
 
 ## <a name="languages"></a>程式語言
@@ -73,7 +73,7 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 
 ### <a name="designed-for-adaptability"></a>可適性設計
 
-相較于其他 .NET 產品，.NET Core 已建立成非常類似但獨特的產品。 其設計目的是要為新平臺和工作負載提供廣泛的適應性，而且有數個可用的 OS 和 CPU 埠（也可能會移植到更多）。
+相較于其他 .NET 產品，.NET Core 已建立為類似但獨特的產品。 其設計目的是要為新平臺和工作負載提供廣泛的適應性，而且有數個可用的 OS 和 CPU 埠（也可能會移植到更多）。
 
 該產品分成幾個部分，讓不同的部分可在不同時間適用於新的平台。 執行階段和特定平台基本程式庫必須移轉為一個單位。 無特定平台程式庫在所有平台都應該按建構照原樣運作。 有個專案的偏差可減少平臺特定的執行，以提高開發人員的效率，並C#在演算法或 API 以該方式完全或部分完成時，偏好平臺中立的程式碼。
 

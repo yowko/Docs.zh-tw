@@ -2,16 +2,20 @@
 title: 在 Windows 10、8.1、8上安裝 .NET Framework 3。5
 description: 了解如何在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5。
 ms.date: 07/16/2018
-ms.openlocfilehash: 208016e22eed324a3996552284072c6ad29637a5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cfe21c0821b8f3223301dcc802533e1aaf024a79
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716383"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965941"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5
 
 您可能需要 .NET Framework 3.5，才能在 Windows 10、Windows 8.1 及 Windows 8 上執行應用程式。 這些指示也適用於較舊的 Windows 版本。
+
+## <a name="download-the-offline-installer"></a>下載離線安裝程式
+
+.NET Framework 3.5 SP1 離線安裝程式可在[.NET Framework 3.5 Sp1 下載頁面](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1)上取得，適用于 windows 10 之前的 windows 版本。
 
 ## <a name="install-the-net-framework-35-on-demand"></a>視需要安裝 .NET Framework 3.5
 

@@ -2,12 +2,12 @@
 title: 疑難排解「無法啟動此應用程式」
 description: 如果您看到 [無法啟動此應用程式] 對話方塊，請瞭解該怎麼辦。
 ms.date: 09/05/2019
-ms.openlocfilehash: 2140ab38c29d610634f71305c4337c324e0550d8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092043"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965902"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>疑難排解「此應用程式無法啟動」錯誤訊息
 
@@ -44,11 +44,11 @@ ms.locfileid: "73092043"
    |Windows 版本|.NET Framework 安裝|
    |---|---|
    |Windows 10 年度更新版和更新版本|[.NET Framework 4.8 執行時間](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows 10，Windows 10 11 月更新|[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345)|
+   |Windows 10，Windows 10 11 月更新|[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)|
    |Windows 8.1|[.NET Framework 4.8 執行時間](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows 8|[.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981)|
+   |Windows 8|[.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)|
    |Windows 7 SP1|[.NET Framework 4.8 執行時間](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows Vista SP2|[.NET Framework 4。6](https://www.microsoft.com/download/details.aspx?id=48130)|
+   |Windows Vista SP2|[.NET Framework 4。6](https://dotnet.microsoft.com/download/dotnet-framework/net46)|
 
    > [!NOTE]
    > .NET Framework 4.8 已預先安裝在 Windows 10 5 月2019更新。

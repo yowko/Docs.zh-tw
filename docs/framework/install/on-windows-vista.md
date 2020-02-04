@@ -3,16 +3,16 @@ title: 在 Windows Vista 上安裝 .NET Framework
 description: 了解如何在 Windows Vista 上安裝 .NET Framework。
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
-ms.openlocfilehash: 95a536ea201844461d60bda0da2654e76de04787
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 02f57aee139621ba277731f9b76c3c48fc6abc57
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716326"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965876"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>在 Windows Vista 和 Windows Server 2008 上安裝 .NET Framework
 
-在 Windows 上執行許多應用程式時需要 .NET Framework。 您可以使用下列指令來安裝它。 嘗試執行應用程式並在電腦上看到下列對話方塊之後，可能會進入此頁面。
+在 Windows 上執行許多應用程式時需要 .NET Framework。 您可以使用下列指示來安裝它。 嘗試執行應用程式並在電腦上看到下列對話方塊之後，可能會進入此頁面。
 
 ![無法啟動這個應用程式](./media/this-application-could-not-be-started.png)
 
@@ -20,9 +20,9 @@ ms.locfileid: "75716326"
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) 是 Windows Vista 和 Windows Server 2008 上支援的最新 .NET Framework 版本。
+[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46) 是 Windows Vista 和 Windows Server 2008 上支援的最新 .NET Framework 版本。
 
-[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) 支援專為 .NET Framework 4.0 到 4.6 建置的應用程式。
+[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46&e6b34bbe-475b-1abd-2c51-b5034bcdd6d2=True) 支援專為 .NET Framework 4.0 到 4.6 建置的應用程式。
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
