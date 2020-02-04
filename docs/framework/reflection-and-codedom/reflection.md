@@ -30,7 +30,7 @@ ms.locfileid: "76744577"
 ---
 # <a name="reflection-in-net"></a>.NET 中的反映
 
-<xref:System.Reflection> 命名空間中的類別連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[元件](../../standard/assembly/index.md)和其中所定義類型的相關資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和實數值型別（也就是[結構](../../standard/base-types/common-type-system.md#structures) [ 和列舉）](../../standard/base-types/common-type-system.md#enumerations)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
+<xref:System.Reflection> 命名空間中的類別連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[元件](../../standard/assembly/index.md)和其中所定義類型的相關資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和實數值型別（也就是[結構](../../standard/base-types/common-type-system.md#structures)和列舉） [enumerations](../../standard/base-types/common-type-system.md#enumerations)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
   
 [Common Language Runtime](../../standard/clr.md) 載入器會管理[應用程式定義域](../app-domains/application-domains.md)，這會在有相同應用程式範圍的物件周圍構成定義的界限。 這個管理包含載入每個組件至適當的應用程式定義域和控制每個組件內類型階層的記憶體配置。  
   
@@ -40,9 +40,9 @@ ms.locfileid: "76744577"
   
 - 使用 <xref:System.Reflection.Module> 來探索資訊，例如包含模組的組件以及模組中的類別。 您也可以取得所有全域方法，或在模組上所定義的其他特定非全域方法。  
   
-- 使用 <xref:System.Reflection.ConstructorInfo> 來探索資訊，例如名稱、參數、存取修飾詞 (例如 `public` 或 `private`)，以及建構函式的實作詳細資料 (例如 `abstract` 或 `virtual`)。 使用 <xref:System.Type> 的 <xref:System.Type.GetConstructors%2A> 或 <xref:System.Type.GetConstructor%2A> 方法來叫用特定的建構函式。  
+- 使用 <xref:System.Reflection.ConstructorInfo> 來探索資訊，例如名稱、參數、存取修飾詞 (例如 `public` 或 `private`)，以及建構函式的實作詳細資料 (例如 `abstract` 或 `virtual`)。 使用 <xref:System.Type.GetConstructors%2A> 的 <xref:System.Type.GetConstructor%2A> 或 <xref:System.Type> 方法來叫用特定的建構函式。  
   
-- 使用 <xref:System.Reflection.MethodInfo> 來探索資訊，例如名稱、傳回類型、參數、存取修飾詞 (例如 `public` 或 `private`)，以及方法的實作詳細資料 (例如 `abstract` 或 `virtual`)。 使用 <xref:System.Type> 的 <xref:System.Type.GetMethods%2A> 或 <xref:System.Type.GetMethod%2A> 方法來叫用特定的方法。  
+- 使用 <xref:System.Reflection.MethodInfo> 來探索資訊，例如名稱、傳回類型、參數、存取修飾詞 (例如 `public` 或 `private`)，以及方法的實作詳細資料 (例如 `abstract` 或 `virtual`)。 使用 <xref:System.Type.GetMethods%2A> 的 <xref:System.Type.GetMethod%2A> 或 <xref:System.Type> 方法來叫用特定的方法。  
   
 - 使用 <xref:System.Reflection.FieldInfo> 來探索資訊，例如名稱、存取修飾詞 (例如 `public` 或 `private`)，以及欄位的實作詳細資料 (例如 `static`)，並取得或設定欄位值。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "76744577"
 |[如何：使用反映連結委派](how-to-hook-up-a-delegate-using-reflection.md)|說明如何建立方法的委派，以及連結委派到事件。 說明如何在執行階段使用 <xref:System.Reflection.Emit.DynamicMethod> 建立事件處理方法。|  
 |[發出動態方法和組件](emitting-dynamic-methods-and-assemblies.md)|說明如何產生動態組件和動態方法。|  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
 
 <xref:System.Type?displayProperty=nameWithType>  
   
