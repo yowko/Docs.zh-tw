@@ -2,24 +2,24 @@
 title: C# 語言版本控制 - C# 指南
 description: 了解如何根據您的專案決定 C# 語言版本，以及您可以手動調整的不同值。
 ms.date: 07/10/2019
-ms.openlocfilehash: 90624816a68de694cacd0017c6d3162f6a89431c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3c1035d983660ea0a945e4d4b7b72c69736c90cb
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713866"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980128"
 ---
 # <a name="c-language-versioning"></a>C# 語言版本控制
 
 最新 C# 編譯器會根據您專案的目標 Framework 判斷預設語言版本。 這是因為 C# 語言可能具有依賴於型別或執行階段元件的功能，而並非每個 .NET 實作都提供。 這也可確保建置專案的任何目標，您可以根據預設獲得最相容的語言版本。
 
-本文中規則適用於 Visual Studio 2019 或 .NET Core 3.0 SDK 隨附的編譯器。 屬於 Visual Studio 2017 安裝或舊版 .NET Core SDK 一部分的 C# 編譯器預設會以 C# 7.0 為目標。 
+The rules in this article apply to the compiler delivered with Visual Studio 2019 or the .NET Core 3.0 SDK. 屬於 Visual Studio 2017 安裝或舊版 .NET Core SDK 一部分的 C# 編譯器預設會以 C# 7.0 為目標。 
 
 ## <a name="defaults"></a>預設值
 
 編譯器會根據下列規則決定預設值：
 
-|目標架構|版本|C# 語言版本預設值|
+|目標 Framework|版本|C# 語言版本預設值|
 |----------------|-------|---------------------------|
 |.NET Core|3.x|C# 8.0|
 |.NET Core|2.x|C# 7.3|
@@ -54,7 +54,7 @@ ms.locfileid: "75713866"
 
 ### <a name="configure-multiple-projects"></a>設定多個專案
 
-您可以建立 **Directory.Build.props** 檔案，其中包含 `<LangVersion>` 元素來設定多個目錄。 您通常會在解決方案目錄中進行。 將下列內容新增到解決方案目錄中的 **Directory.Build.props** 檔案：
+To configure multiple projects, you can create a **Directory.Build.props** file that contains the `<LangVersion>` element. 您通常會在解決方案目錄中進行。 將下列內容新增到解決方案目錄中的 **Directory.Build.props** 檔案：
 
 ```xml
 <Project>
@@ -84,5 +84,5 @@ ms.locfileid: "75713866"
 |5|編譯器只會接受 C# 5.0 或更低版本中所含的語法。|
 |4|編譯器只會接受 C# 4.0 或更低版本中所含的語法。|
 |3|編譯器只會接受 C# 3.0 或更低版本中所含的語法。|
-|ISO-2|編譯器只會接受 ISO/IEC 23270:2006 C# (2.0) 中所含的語法 |
-|ISO-1|編譯器只會接受 ISO/IEC 23270:2003 C# (1.0/1.2) 中所含的語法 |
+|ISO-2|The compiler accepts only syntax that is included in ISO/IEC 23270:2006 C# (2.0). |
+|ISO-1|The compiler accepts only syntax that is included in ISO/IEC 23270:2003 C# (1.0/1.2). |

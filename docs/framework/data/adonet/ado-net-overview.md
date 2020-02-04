@@ -1,13 +1,13 @@
 ---
-title: ADO.NET 概觀
+title: 概觀
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 2d21e5b73757280b679a9c5cd04a56339e7e967e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d5dc9cf7081c6876118914a0b95853a5a7ca5e57
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785104"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980336"
 ---
 # <a name="adonet-overview"></a>ADO.NET 概觀
 ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML)，以及透過 OLE DB 和 ODBC 所公開的資料來源。 資料共用的消費者應用程式可使用 ADO.NET 來連接至這些資料來源，並且擷取、處理及更新其中所含的資料。  
@@ -20,9 +20,9 @@ ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML
   
  ADO.NET 會提供最直接的方法，讓您在 .NET Framework 中進行資料存取。 如需可讓應用程式針對概念模型（而不是基礎儲存體模型）進行處理的較高層級抽象，請參閱[ADO.NET Entity Framework](./ef/index.md)。  
   
- **隱私權聲明**：System.Data.dll、System.Data.Design.dll、System.Data.OracleClient.dll、System.Data.SqlXml.dll、System.Data.Linq.dll、System.Data.SqlServerCe.dll 和 System.Data.DataSetExtensions.dll 組件無法區分使用者的私用資料與非私用資料。  這些組件不會收集、儲存或傳輸任何使用者的私用資料。 不過，協力廠商應用程式可能會使用這些組件來收集、儲存或傳輸使用者的私用資料。  
+ **隱私權聲明**： System.string、OracleClient、system.web、System.web、System.data.sqlserverce 和 system.data.datasetextensions.dll .dll 元件不會區分使用者的私用資料和非私用資料之間的區別，而是不會有任何差異的人來辨識，這就是不能分辨出來的，而是不會。  這些組件不會收集、儲存或傳輸任何使用者的私用資料。 不過，協力廠商應用程式可能會使用這些組件來收集、儲存或傳輸使用者的私用資料。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [ADO.NET 架構](ado-net-architecture.md)  
  提供 ADO.NET 架構和元件的概觀。  
   
@@ -57,7 +57,7 @@ ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML
  [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)  
  說明如何連接至資料來源、擷取資料和修改資料。 這包括 `DataReaders` 和 `DataAdapters`。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ADO.NET](index.md)
 - [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)

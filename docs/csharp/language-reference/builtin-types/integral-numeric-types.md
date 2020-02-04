@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 058e75c81c18f0ec73140f6fc13a91f4e0012a61
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2fb4d7185ac85b29f2cc2d2e7a29e192f91a0868
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036364"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980141"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整數的數字型別 (C# 參考)
 
-**整數數字型別**是**簡單型別**的子集，且可使用[*常值*](#integer-literals)初始化。 所有的整數型別也都是實值型別。 所有整數數數值型別都支援[算術](../operators/arithmetic-operators.md)、[位邏輯](../operators/bitwise-and-shift-operators.md)、比較和[等號](../operators/equality-operators.md)[比較](../operators/comparison-operators.md)運算子。
+**整數數字型別**是**簡單型別**的子集，且可使用[*常值*](#integer-literals)初始化。 所有的整數型別也都是實值型別。 All integral numeric types support [arithmetic](../operators/arithmetic-operators.md), [bitwise logical](../operators/bitwise-and-shift-operators.md), [comparison](../operators/comparison-operators.md), and [equality](../operators/equality-operators.md) operators.
 
 ## <a name="characteristics-of-the-integral-types"></a>整數型別的特性
 
@@ -71,11 +71,11 @@ System.Int32 b = 123;
 
 ## <a name="integer-literals"></a>整數常值
 
-整數常值可以是
+Integer literals can be
 
-- *decimal*：不含任何前置詞
-- *十六進位*：使用 `0x` 或 `0X` 前置詞
-- *binary*：具有 `0b` 或 `0B` 前置詞（可在C# 7.0 和更新版本中取得）
+- *decimal*: without any prefix
+- *hexadecimal*: with the `0x` or `0X` prefix
+- *binary*: with the `0b` or `0B` prefix (available in C# 7.0 and later)
 
 下列程式碼示範每個的範例：
 
@@ -87,20 +87,20 @@ var binaryLiteral = 0b_0010_1010;
 
 上述範例也會示範如何使用 `_` 做為*數位分隔符號*，從C# 7.0 開始支援。 您可以使用數位分隔符號搭配所有類型的數值常值。
 
-整數常值的類型是由其後綴決定，如下所示：
+The type of an integer literal is determined by its suffix as follows:
 
-- 如果常值沒有後置詞，其類型會是下列類型中可表示其值的第一個型別： `int`、`uint`、`long`、`ulong`。
-- 如果常值是以 `U` 或 `u` 為後置字元，則其類型會是下列類型中可表示其值的第一個型別： `uint`、`ulong`。
-- 如果常值是以 `L` 或 `l` 為後置字元，則其類型會是下列類型中可表示其值的第一個型別： `long`、`ulong`。
+- If the literal has no suffix, its type is the first of the following types in which its value can be represented: `int`, `uint`, `long`, `ulong`.
+- If the literal is suffixed by `U` or `u`, its type is the first of the following types in which its value can be represented: `uint`, `ulong`.
+- If the literal is suffixed by `L` or `l`, its type is the first of the following types in which its value can be represented: `long`, `ulong`.
 
   > [!NOTE]
-  > 您可以使用小寫字母 `l` 做為尾碼。 不過，這會產生編譯器警告，因為字母 `l` 可以與數位 `1` 混淆。 為了清楚起見，請使用 `L`。
+  > You can use the lowercase letter `l` as a suffix. However, this generates a compiler warning because the letter `l` can be confused with the digit `1`. Use `L` for clarity.
 
-- 如果常值是以 `UL`、`Ul`、`uL`、`ul`、`LU`、`Lu`、`lU` 或 `lu` 為尾碼，則其類型為 `ulong`。
+- 如果常值是以 `UL`、`Ul`、`uL`、`ul`、`LU`、`Lu`、`lU`或 `lu`為尾碼，則其類型為 `ulong`。
 
 如果整數常值所代表的值超出 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，就會發生編譯錯誤 [CS1021](../../misc/cs1021.md)。
 
-如果整數常值的判斷型別是 `int`，而常值所代表的值是在目的地類型的範圍內，則該值可以隱含地轉換成 `sbyte`、`byte`、`short`、`ushort`、`uint`或 `ulong`：
+如果 `int` 整數常值的判斷類型，而且常值所代表的值是在目的地類型的範圍內，則可以隱含地將該值轉換成 `sbyte`、`byte`、`short`、`ushort`、`uint`或 `ulong`：
 
 ```csharp
 byte a = 17;
@@ -132,5 +132,5 @@ var longVariable = (long)42;
 - [C# 參考](../index.md)
 - [內建型別表](../keywords/built-in-types-table.md)
 - [浮點類型](floating-point-numeric-types.md)
-- [格式化數值結果表](../keywords/formatting-numeric-results-table.md)
+- [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET 中的數值](../../../standard/numerics.md)

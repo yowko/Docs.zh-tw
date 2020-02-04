@@ -2,12 +2,12 @@
 title: 開始在 Visual Studio Code 中使用 F#
 description: 瞭解如何搭配 Visual Studio Code F#和 Ionide 外掛程式套件使用。
 ms.date: 12/23/2018
-ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 2aa62bb1afc220348f884865e55c4d7de4359b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559660"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980349"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>開始在 Visual Studio Code 中使用 F#
 
@@ -42,7 +42,7 @@ code .
 
 這目前是必要的，因為 .NET Framework 型腳本中的一些舊版行為不適用於 .NET Core 腳本，而 Ionide 目前致力於回溯相容性。 未來，.NET Core 腳本會成為預設值。
 
-### <a name="write-your-first-script"></a>撰寫您的第一個指令碼
+### <a name="write-your-first-script"></a>撰寫您的第一個腳本
 
 設定 Visual Studio Code 以使用 .NET Core 腳本之後，請流覽至 Visual Studio Code 中的 Explorer 視圖，並建立新的檔案。 將它命名為*MyFirstScript. run.fsx*。
 
@@ -121,7 +121,7 @@ val toPigLatin : word:string -> string
 
 檢查輸入字的第一個字元是否為母音。 如果是，請將 "好耶" 附加至單字的結尾。 否則，請將該第一個字元移到單字的結尾，並在其中加上 "ay"。
 
-有一件最後要注意的事項：從函式傳回的明確指示，與其他許多語言不同。 這是因為F#是以運算式為基礎，而函數主體中的最後一個運算式是傳回值。 因為 `if..then..else` 本身就是運算式，所以會根據輸入值傳回 `then` 區塊的主體或 `else` 區塊的主體。
+有一個最後要注意的事項：在中F#，沒有明確的指示可從函式傳回。 這是因為F#是以運算式為基礎，而在函式主體中評估的最後一個運算式會決定該函數的傳回值。 因為 `if..then..else` 本身就是運算式，所以 `then` 區塊主體的評估或 `else` 區塊的主體會決定 `toPigLatin` 函數所傳回的值。
 
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>將主控台應用程式轉換成 Pig 的拉丁產生器
 

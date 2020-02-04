@@ -1,13 +1,13 @@
 ---
-title: ADO.NET 中的並存執行
+title: 並存執行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 0355f375de678b2a74f8fdf58e2c58cc0bdf10ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a624aac2ed1f3ab124973c84bc74e39297600c8b
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347999"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980011"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET 中的並存執行
 .NET Framework 中的並存執行是在已安裝多個版本之 .NET Framework 的電腦上執行應用程式的能力，以獨佔方式使用已編譯應用程式的版本。 如需設定並存執行的詳細資訊，請參閱[並存執行](../../deployment/side-by-side-execution.md)。  

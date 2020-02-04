@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 7bd56d44eeb6af70b94cdde77d48e917ef8afb9a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347786"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919324"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隱私權資訊
 Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Communication Foundation （WCF）3.0 版來建立應用程式時，您的應用程式可能會影響使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 WCF 不會從您的應用程式將任何資訊傳送至 Microsoft，除非您或使用者選擇將它傳送給我們。  
@@ -28,7 +28,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  WCF 訊息層不會將任何個人資訊寫入本機電腦。 不過，如果服務開發人員建立了會公開這類資訊的服務 (例如，在端點名稱中使用某個人的名稱，或者在端點的 Web 服務描述語言中加入個人資訊，可是沒有要求用戶端使用 https 來存取 WSDL)，則該訊息層可能在網路層級中傳播個人資訊。 此外，如果開發人員針對公開個人資訊的端點執行[System.servicemodel 中繼資料公用程式工具（Svcutil）](servicemodel-metadata-utility-tool-svcutil-exe.md)工具，則工具的輸出可能會包含該資訊，而輸出檔案則會寫入至本機硬碟。  
   
-## <a name="hosting"></a>裝載  
+## <a name="hosting"></a>主控  
  WCF 中的裝載功能可讓應用程式視需要啟動，或在多個應用程式之間啟用埠共用。 WCF 應用程式可以裝載在 Internet Information Services （IIS）中，類似于 ASP.NET。  
   
  裝載時並不會在網路上公開任何特定資訊，而且也不會保存電腦上的資料。  
@@ -44,7 +44,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  執行驗證之後，會在進行通訊的端點之間建立安全工作階段。 這個工作階段是由會在安全性工作階段的存留期間持續活動的 GUID 所識別。 下表會顯示所保留的項目的位置。  
   
-|資料|儲存體|  
+|Data|儲存體|  
 |----------|-------------|  
 |展示認證，例如使用者名稱、X.509 憑證、Kerberos 語彙基元和認證的各種參照。|標準 Windows 認證管理機制，例如 Windows 憑證存放庫。|  
 |使用者成員資格資訊，例如使用者名稱和密碼。|ASP.NET 成員資格提供者。|  
@@ -54,7 +54,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
 ## <a name="auditing"></a>稽核  
  稽核會記錄驗證和授權事件的成功與失敗。 稽核記錄中則包含下列資料：服務 URI、動作 URI 和呼叫端的識別。  
   
- 稽核也會記錄系統管理員修改訊息記錄組態 (開啟或關閉) 的時間，這是因為訊息記錄可能會在標頭和本文中記錄應用程式特定的資料。 若為 [!INCLUDE[wxp](../../../includes/wxp-md.md)]，則會在應用程式事件日誌中記載一筆記錄。 對於 Windows Vista 和 Windows Server 2003，記錄會記錄在安全性事件記錄檔中。  
+ 稽核也會記錄系統管理員修改訊息記錄組態 (開啟或關閉) 的時間，這是因為訊息記錄可能會在標頭和本文中記錄應用程式特定的資料。 若是 Windows XP，記錄會記錄在應用程式事件記錄檔中。 對於 Windows Vista 和 Windows Server 2003，記錄會記錄在安全性事件記錄檔中。  
   
 ## <a name="transactions"></a>異動  
  交易功能可為 WCF 應用程式提供交易服務。  
@@ -95,7 +95,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
 ### <a name="tracing"></a>追蹤  
  WCF 基礎結構的診斷功能會記錄透過傳輸和服務模型層所傳遞的訊息，以及與這些訊息相關聯的活動和事件。 根據預設，這個功能是關閉的。 它是使用應用程式的設定檔來啟用，而且追蹤行為可能會在執行時間使用 WCF WMI 提供者來修改。 啟用此功能時，追蹤基礎結構會將包含訊息、活動和處理事件的診斷追蹤，發送至已設定的接聽項。 輸出的格式和位置是由系統管理員的接聽程式組態選項來決定，不過通常會是 XML 格式的檔案。 系統管理員要負責設定追蹤檔上的存取控制清單 (ACL)。 由 Windows Activation System (WAS) 裝載時，系統管理員更應該確定在非必須的情況下，不是從公開的虛擬根目錄使用檔案。  
   
- 有兩種類型的追蹤：訊息記錄和服務模型診斷追蹤，如下一節所述。 這兩個類型的追蹤也可透過本身的追蹤來源進行設定：<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 和 <xref:System.ServiceModel>。 這些記錄追蹤來源都會擷取對應用程式而言為本機的資料。  
+ 追蹤的類型有兩種：訊息記錄和服務模型診斷追蹤，分別會在下節中描述。 這兩個類型的追蹤也可透過本身的追蹤來源進行設定：<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 和 <xref:System.ServiceModel>。 這些記錄追蹤來源都會擷取對應用程式而言為本機的資料。  
   
 ### <a name="message-logging"></a>訊息記錄  
  訊息記錄追蹤來源 (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) 可讓系統管理員記錄在系統來回傳送的訊息。 透過組態，使用者可以決定要記錄整個訊息或僅記錄訊息標頭、是否要在傳輸層及 (或) 服務模型層記錄，以及是否包含格式不正確的訊息。 此外，使用者也可以設定篩選以限制要記錄的訊息。  
@@ -127,13 +127,13 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  移除的金鑰：  
   
- xmlns： wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns： wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" 的 \-  
+ xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" 的 \-  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- xmlns： wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns： wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
+ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
   
  wsse:Password  
   
@@ -141,7 +141,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  移除的可能個人資訊：  
   
- xmlns： wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns： wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
+ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
   
  wsse:Username  
   
@@ -304,7 +304,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  若為下列命名空間：  
   
- xmlns： wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns： wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" （例如，如果沒有可用的動作）  
+ xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" （例如，如果沒有可用的動作）  
   
  將移除這些本文項目的資訊，而這些本文項目牽涉到金鑰交換：  
   
@@ -401,7 +401,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  Web 服務描述語言 (WSDL) 中包含了連接埠定義。 每個連接埠都有端點位址，以及表示應用程式所使用服務的繫結。 您可以透過組態決定是否公開 WSDL。 在電腦上不會保留任何資訊。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [Windows Communication Foundation](index.md)
-- [安全性](./feature-details/security.md)
+- [Security](./feature-details/security.md)

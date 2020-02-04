@@ -1,5 +1,5 @@
 ---
-title: $-字串內插C#補點-參考
+title: $ - string interpolation - C# reference
 description: 字串內插補點提供比傳統字串複合格式化更容易讀取且方便的語法來格式化字串輸出。
 ms.date: 09/02/2019
 f1_keywords:
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715075"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980115"
 ---
-# <a name="---string-interpolation-c-reference"></a>$-字串插補C# （參考）
+# <a name="---string-interpolation-c-reference"></a>$ - string interpolation (C# reference)
 
-`$` 特殊字元會將字串常值識別為「字串內插補點」。 插入字串是可能包含「內插補點運算式」的字串常值。 將插入字串解析為結果字串時，會將具有內插補點運算式之項目取代為運算式結果的字串表示。 從C# 6 開始就提供這項功能。
+`$` 特殊字元會將字串常值識別為「字串內插補點」。 插入字串是可能包含「內插補點運算式」的字串常值。 將插入字串解析為結果字串時，會將具有內插補點運算式之項目取代為運算式結果的字串表示。 This feature is available starting with C# 6.
 
 字串插補在建立格式化字串時，是比[字串複合格式化](../../../standard/base-types/composite-formatting.md)功能更容易理解且方便的語法。 下列範例會使用這兩項功能，產生相同的輸出：
 
@@ -39,8 +39,8 @@ ms.locfileid: "75715075"
 
 |項目|描述|
 |-------------|-----------------|
-|`interpolationExpression`|產生要格式化之結果的運算式。 `null` 的字串表示 <xref:System.String.Empty?displayProperty=nameWithType>。|
-|`alignment`|常數運算式，其值會定義運算式結果的字串表示中的最小字元數。 如果是正數，則字串表示是靠右對齊；如果是負數，它是靠左對齊。 如需詳細資訊，請參閱[對齊元件](../../../standard/base-types/composite-formatting.md#alignment-component)。|
+|`interpolationExpression`|產生要格式化之結果的運算式。 String representation of `null` is <xref:System.String.Empty?displayProperty=nameWithType>.|
+|`alignment`|The constant expression whose value defines the minimum number of characters in the string representation of the expression result. 如果是正數，則字串表示是靠右對齊；如果是負數，它是靠左對齊。 如需詳細資訊，請參閱[對齊元件](../../../standard/base-types/composite-formatting.md#alignment-component)。|
 |`formatString`|運算式結果的類型所支援的格式字串。 如需詳細資訊，請參閱[格式字串元件](../../../standard/base-types/composite-formatting.md#format-string-component)。|
 
 下列範例會使用上述的選擇性格式化元件：
@@ -57,24 +57,24 @@ ms.locfileid: "75715075"
 
 [!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
-內插逐字字串是以 `$` 字元開頭，後面接著 `@` 字元。 如需逐字字串的詳細資訊，請參閱[字串](../builtin-types/reference-types.md)和[逐字識別碼](verbatim.md)主題。
+An interpolated verbatim string starts with the `$` character followed by the `@` character. 如需逐字字串的詳細資訊，請參閱[字串](../builtin-types/reference-types.md)和[逐字識別碼](verbatim.md)主題。
 
 > [!NOTE]
-> 從C# 8.0 開始，您可以使用 `$`，並以任何順序 `@` 權杖： `$@"..."` 和 `@$"..."` 都是有效的內插逐字字串。 在舊版C#中，`$` token 必須出現在 `@` token 前面。
+> Starting with C# 8.0, you can use the `$` and `@` tokens in any order: both `$@"..."` and `@$"..."` are valid interpolated verbatim strings. In earlier C# versions, the `$` token must appear before the `@` token.
 
-## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>隱含轉換和如何指定 `IFormatProvider` 的執行
+## <a name="implicit-conversions-and-how-to-specify-iformatprovider-implementation"></a>Implicit conversions and how to specify `IFormatProvider` implementation
 
 有三個來自插入字串的隱含轉換：
 
-1. 將插入字串轉換成插入字串解析結果的 <xref:System.String> 執行個體，且內插補點運算式項目取代為其結果的格式正確字串表示。 這種轉換會使用 <xref:System.Globalization.CultureInfo.CurrentCulture> 來格式化運算式結果。
+1. 將插入字串轉換成插入字串解析結果的 <xref:System.String> 執行個體，且內插補點運算式項目取代為其結果的格式正確字串表示。 This conversion uses the <xref:System.Globalization.CultureInfo.CurrentCulture> to format expression results.
 
-1. 將插入字串轉換成 <xref:System.FormattableString> 執行個體，以代表複合格式字串，並將運算式結果格式化。 那可讓您從單一 <xref:System.FormattableString> 執行個體建立多個具有特定文化特性內容的結果字串。 若要這麼做，請呼叫下列其中一個方法：
+1. 將插入字串轉換成 <xref:System.FormattableString> 執行個體，以代表複合格式字串，並將運算式結果格式化。 那可讓您從單一 <xref:System.FormattableString> 執行個體建立多個具有特定文化特性內容的結果字串。 To do that, call one of the following methods:
 
       - 產生 <xref:System.Globalization.CultureInfo.CurrentCulture> 的結果字串的 <xref:System.FormattableString.ToString> 多載。
       - 產生 <xref:System.Globalization.CultureInfo.InvariantCulture> 的結果字串的 <xref:System.FormattableString.Invariant%2A> 方法。
       - 產生指定文化特性的結果字串的 <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法。
 
-    您也可以使用 <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法，提供 <xref:System.IFormatProvider> 介面的使用者定義實作以支援自訂格式。 如需詳細資訊，請參閱在[.net 中格式化類型](../../../standard/base-types/formatting-types.md)一文中的[使用 ICustomFormatter 自訂格式](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter)一節。
+    您也可以使用 <xref:System.FormattableString.ToString(System.IFormatProvider)> 方法，提供 <xref:System.IFormatProvider> 介面的使用者定義實作以支援自訂格式。 For more information, see the [Custom formatting with ICustomFormatter](../../../standard/base-types/formatting-types.md#custom-formatting-with-icustomformatter) section of the [Formatting types in .NET](../../../standard/base-types/formatting-types.md) article.
 
 1. 將插入字串轉換成 <xref:System.IFormattable> 執行個體，也可讓您從單一 <xref:System.IFormattable> 執行個體建立多個具有特定文化特性內容的結果字串。
 
@@ -101,6 +101,6 @@ ms.locfileid: "75715075"
 - [C# 參考](../index.md)
 - [C# 特殊字元](index.md)
 - [字串](../../programming-guide/strings/index.md)
-- [格式化數值結果表](../keywords/formatting-numeric-results-table.md)
+- [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
 - [複合格式](../../../standard/base-types/composite-formatting.md)
 - <xref:System.String.Format%2A?displayProperty=nameWithType>

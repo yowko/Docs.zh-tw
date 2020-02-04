@@ -1,19 +1,19 @@
 ---
-title: 列舉 SQL Server 執行個體 (ADO.NET)
+title: 列舉 SQL Server 的實例
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: c464762e82a24aab399a23ecb26420b5dce61f55
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c59db5869ed848071611cdbf985b45dc59790d69
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782384"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979985"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>列舉 SQL Server 執行個體 (ADO.NET)
-SQL Server 允許應用程式在目前網路內尋找 SQL Server 實例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 類別會將此資訊公開至應用程式開發人員，並提供包含所有可見伺服器之相關資訊的 <xref:System.Data.DataTable>。 這個傳回的資料表包含網路上可用的伺服器實例清單，此清單會符合使用者嘗試建立新連接時所提供的清單，並展開包含連接屬性上所有可用伺服器的下拉式清單對話方塊。 顯示的結果不一定是完整的。  
+SQL Server 允許應用程式在目前網路內尋找 SQL Server 實例。 <xref:System.Data.Sql.SqlDataSourceEnumerator> 類別會將此資訊公開至應用程式開發人員，並提供包含所有可見伺服器之相關資訊的 <xref:System.Data.DataTable>。 這個傳回的資料表包含網路上可用的伺服器實例清單，這些專案符合使用者嘗試建立新連接時所提供的清單，並展開包含 [**連接屬性**] 對話方塊上所有可用伺服器的下拉式清單。 顯示的結果不一定是完整的。  
   
 > [!NOTE]
 > 與大部分的 Windows 服務一樣，最好使用儘可能少的權限來執行 SQL Browser 服務。 如需 SQL Browser 服務及如何管理其行為的詳細資訊，請參閱《SQL Server 線上叢書》。  
@@ -43,7 +43,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
   
  從方法呼叫傳回的資料表包含下列資料行 (其中都包含 `string` 值)：  
   
-|「資料行」|描述|  
+|資料行|描述|  
 |------------|-----------------|  
 |**ServerName**|伺服器名稱。|  
 |**InstanceName**|伺服器執行個體的名稱。 如果伺服器做為預設執行個體執行，則此處為空白。|  
@@ -58,7 +58,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 > [!NOTE]
 > 只有在完全信任下執行時，伺服器列舉型別才可使用。 執行在部分信任環境中的組件即使具有 <xref:System.Data.SqlClient.SqlClientPermission> 程式碼存取安全性 (CAS) 使用權限，也無法使用伺服器列舉型別。  
   
- SQL Server 透過使用名為<xref:System.Data.Sql.SqlDataSourceEnumerator> SQL Browser 的外部 Windows 服務，提供的資訊。 依預設會啟用此服務，但系統管理員可能會關閉或停用服務，讓此類別看不到伺服器執行個體。  
+ SQL Server 透過使用名為 SQL Browser 的外部 Windows 服務，提供 <xref:System.Data.Sql.SqlDataSourceEnumerator> 的資訊。 依預設會啟用此服務，但系統管理員可能會關閉或停用服務，讓此類別看不到伺服器執行個體。  
   
 ## <a name="example"></a>範例  
  下列主控台應用程式會擷取所有可見 SQL Server 執行個體的相關資訊，並在主控台視窗中顯示資訊。  
@@ -124,7 +124,7 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [SQL Server 和 ADO.NET](index.md)
 - [ADO.NET 概觀](../ado-net-overview.md)

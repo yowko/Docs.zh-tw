@@ -1,13 +1,13 @@
 ---
-title: ADO.NET 資料集
+title: 資料集
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 85c0df88d7e919649eae8d2b4e551b26cc684dd8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 86c14f516ff82e4d9acf7cc3078e04590971a8a1
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634933"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980297"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 資料集
 <xref:System.Data.DataSet> 物件是支援已中斷連線之分散式資料案例與 ADO.NET 的核心。 **DataSet**是記憶體常駐的資料表示，可提供一致的關聯式程式設計模型，不論資料來源為何。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 資料**集**代表一組完整的資料，包括相關資料表、條件約束和資料表之間的關聯性。 下圖顯示**資料集**物件模型。  

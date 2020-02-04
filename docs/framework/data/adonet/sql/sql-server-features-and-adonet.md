@@ -1,13 +1,14 @@
 ---
 title: SQL Server 功能和 ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: f2f0d0327e2b66f97f9cf5ffe797ee153d4fb9ca
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a4420799a94b5fa5f37b1e25cf6eb37c130de471
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791636"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979790"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 功能和 ADO.NET
 本節中的主題將討論使用 ADO.NET 來開發資料庫應用程式的 SQL Server 功能。  
@@ -18,7 +19,7 @@ ms.locfileid: "70791636"
   
 1. [開發（資料庫引擎）](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [列舉 SQL Server 執行個體 (ADO.NET)](enumerating-instances-of-sql-server.md)  
  說明如何列舉 SQL Server 的作用中執行個體。  
   
@@ -46,7 +47,7 @@ ms.locfileid: "70791636"
  [LocalDB 的 SqlClient 支援](sqlclient-support-for-localdb.md)  
  說明 SqlClient 對 LocalDB 資料庫的支援。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ADO.NET 中的 SQL Server 資料作業](sql-server-data-operations.md)
 - [在 ADO.NET 中擷取和修改資料](../retrieving-and-modifying-data.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1ef705fcf046af1f4136ddcf1b29f417c0d72c83
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 4fa01922c5c3097adb124d67272b9f449b70ada3
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741848"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979868"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF 安全性策略 – 平台安全性
 雖然 Windows Presentation Foundation （WPF）提供各種安全性服務，但它也會利用基礎平臺的安全性功能，其中包括作業系統、CLR 和 Internet Explorer。 這些層級結合，為 WPF 提供強式深度防禦安全性模型，以嘗試避免任何單一失敗點，如下圖所示：  
@@ -35,14 +35,14 @@ ms.locfileid: "76741848"
 Windows 的核心提供數項安全性功能，可構成所有 Windows 應用程式的安全性基礎，包括 WPF 所建立的。 本主題將討論這些對 WPF 而言很重要的安全性功能，以及 WPF 如何與它們整合以提供進一步的深度防禦。  
   
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
- 除了一般的審查和強化的 Windows，我們還會在本主題中討論 [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 的三項主要功能：  
+ 除了 Windows 的一般審查和加強功能之外，我們還會在本主題中討論 Windows XP SP2 的三項主要功能：  
   
 - /GS 編譯  
   
 - Microsoft Windows Update。  
   
 #### <a name="gs-compilation"></a>/GS 編譯  
- [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] 藉由重新編譯許多核心系統程式庫（包括所有 WPF 相依性，例如 CLR）來提供保護，以協助減輕緩衝區溢位。 搭配 C/C++ 命令列編譯器使用 /GS 參數即可達成這個目的。 雖然這樣做應該能夠明確避免發生緩衝區滿溢的情況，但是 /GS 編譯還提供一個深入防禦範例，可防止無意中或惡意利用緩衝區滿溢所造成的潛在弱點遭到攻擊。  
+ Windows XP SP2 藉由重新編譯許多核心系統程式庫（包括所有 WPF 相依性，例如 CLR）來提供保護，以協助減輕緩衝區溢位。 搭配 C/C++ 命令列編譯器使用 /GS 參數即可達成這個目的。 雖然這樣做應該能夠明確避免發生緩衝區滿溢的情況，但是 /GS 編譯還提供一個深入防禦範例，可防止無意中或惡意利用緩衝區滿溢所造成的潛在弱點遭到攻擊。  
   
  在過去，緩衝區滿溢一直是造成許多重大安全性攻擊的原因。 當攻擊者利用程式碼弱點，插入將緩衝區寫爆的惡意程式碼時，就會發生緩衝區滿溢的情況。 這會讓攻擊者有機會透過覆寫函式的傳回位址，來劫持執行該程式碼的處理序，以執行攻擊者的程式碼。 結果是，惡意程式碼可以利用與被劫持的處理序相同的權限來執行任意程式碼。  
   
@@ -103,19 +103,19 @@ Windows Vista 上的 WPF 使用者將受益于作業系統的其他安全性增�
   
 - **近端內部網路**。 從內部網路啟動的應用程式 (部分受信任)。  
   
-- **網際網路**。 從網際網路啟動的應用程式 (最不受信任)。  
+- **Internet**。 從網際網路啟動的應用程式 (最不受信任)。  
   
 - **信任的網站**。 使用者指定要信任的應用程式 (最不受信任)。  
   
 - **限制的網站**。 使用者指定不要信任的應用程式 (未受信任)。  
   
- CA 會針對每個區域提供預先定義的許可權集合，其中包含符合與每個相關聯之信任層級的許可權。 其中包括：  
+ CA 會針對每個區域提供預先定義的許可權集合，其中包含符合與每個相關聯之信任層級的許可權。 它們包括：  
   
 - **FullTrust**。 針對從**我的電腦**區域啟動的應用程式。 會授與所有可能的權限。  
   
 - **LocalIntranet**。 適用于從近端**內部**網路區域啟動的應用程式。 會授與權限的子集，以提供對用戶端電腦資源的中度存取權，包括隔離儲存區、無限制的 UI 存取權、無限制的檔案對話方塊、有限的反映、對環境變數的有限存取權。 不會提供重要資源 (例如登錄) 的權限。  
   
-- **網際網路**。 適用于從**網際網路**或信任的**網站**區域啟動的應用程式。 會授與權限的子集，以提供對用戶端電腦資源的有限存取權，包括隔離儲存區、限檔案開啟，以及有限的 UI。 基本上，此許可權集合會將應用程式與用戶端電腦隔離。  
+- **Internet**。 適用于從**網際網路**或信任的**網站**區域啟動的應用程式。 會授與權限的子集，以提供對用戶端電腦資源的有限存取權，包括隔離儲存區、限檔案開啟，以及有限的 UI。 基本上，此許可權集合會將應用程式與用戶端電腦隔離。  
   
  識別為來自**不受信任的網站**區域的應用程式完全不會被 ca 授與任何許可權。 因此，這些應用程式沒有預先定義的權限集合。  
   
@@ -186,9 +186,9 @@ Windows Vista 上的 WPF 使用者將受益于作業系統的其他安全性增�
   
  Internet Explorer 7 納入並擴充 IE6 SP2 的安全性功能，以做為安全性承諾的一部分。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [程式碼存取安全性](../misc/code-access-security.md)
-- [安全性](security-wpf.md)
+- [Security](security-wpf.md)
 - [WPF 部分信任安全性](wpf-partial-trust-security.md)
 - [WPF 安全性策略 – 安全性工程](wpf-security-strategy-security-engineering.md)

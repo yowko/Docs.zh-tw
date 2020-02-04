@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 9fde2b28288b58d7da3a4d003ec50af7d7e7a965
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552284"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980167"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮點數值型別 (C# 參考)
 
@@ -120,7 +120,6 @@ Console.WriteLine(m);  // output: 1500000
 - [C# 參考](../index.md)
 - [內建型別表](../keywords/built-in-types-table.md)
 - [整數型別](integral-numeric-types.md)
-- [格式化數值結果表](../keywords/formatting-numeric-results-table.md)
 - [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET 中的數值](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>

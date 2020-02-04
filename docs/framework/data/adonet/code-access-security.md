@@ -1,16 +1,16 @@
 ---
-title: 程式碼存取安全性和 ADO.NET
+title: 程式碼存取安全性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: e83c10d6d7b66723d8347f98c1f7b118d7a2f963
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c2b6be79855955887988378b9fcffe1891520d68
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040171"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980258"
 ---
 # <a name="code-access-security-and-adonet"></a>程式碼存取安全性和 ADO.NET
 .NET Framework 會提供以角色為基礎的安全性和程式碼存取安全性 (CAS)，而這兩種安全性都是使用 Common Language Runtime (CLR) 所提供的通用基礎結構所實作的。 在 Unmanaged 程式碼的作用範圍內，大多數應用程式都是以使用者或主體的權限執行。 因此，當擁有更高權限的使用者執行惡意或充滿錯誤的軟體時，就可能損害電腦系統和竊取私人資料。  
@@ -136,7 +136,7 @@ ms.locfileid: "73040171"
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>以自訂的使用權限集啟用部份信任  
- 若要啟用特定區域的 <xref:System.Data.SqlClient> 使用權限，系統管理員必須建立自訂的使用權限集合，並將其設定為特定區域的使用權限集合。 不可修改預設的使用權限集合 (例如 `LocalIntranet`)。 例如，若要包含具有 <xref:System.Security.Policy.Zone> `LocalIntranet`之程式碼的 <xref:System.Data.SqlClient> 許可權，系統管理員可以複製 `LocalIntranet`的許可權集合，將它重新命名為 "CustomLocalIntranet"，新增 <xref:System.Data.SqlClient> 許可權，匯入 CustomLocalIntranet使用[caspol.exe （代碼啟用安全性原則工具）](../../tools/caspol-exe-code-access-security-policy-tool.md)設定的許可權，並將 `LocalIntranet_Zone` 的許可權集合設定為 CustomLocalIntranet。  
+ 若要啟用特定區域的 <xref:System.Data.SqlClient> 使用權限，系統管理員必須建立自訂的使用權限集合，並將其設定為特定區域的使用權限集合。 不可修改預設的使用權限集合 (例如 `LocalIntranet`)。 例如，若要包含具有 <xref:System.Security.Policy.Zone> `LocalIntranet`之程式碼的 <xref:System.Data.SqlClient> 許可權，系統管理員可以複製 `LocalIntranet`的許可權集合，將它重新命名為 "CustomLocalIntranet"，加入 <xref:System.Data.SqlClient> 許可權，使用[caspol.exe （代碼啟用安全性原則工具）](../../tools/caspol-exe-code-access-security-policy-tool.md)匯入 CustomLocalIntranet 許可權集合，並將 `LocalIntranet_Zone` 的許可權集合設定為 CustomLocalIntranet。  
   
 ### <a name="sample-permission-set"></a>使用權限集合範例  
  下列是部分受信任案例中的「SQL Server 的 .NET Framework 資料提供者」使用權限集合範例。 如需建立自訂許可權集合的相關資訊，請參閱[使用 Caspol.exe 設定許可權集合](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))。  

@@ -1,13 +1,14 @@
 ---
 title: SQL Server 和 ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: b54725fa8dbff7db82ed197f4961e773a06895e4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6e88c35936de72f0d426c23493bbe5a08e707ee1
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782325"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979972"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server 和 ADO.NET
 本節說明 .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 特有的功能與行為。  
@@ -17,7 +18,7 @@ ms.locfileid: "70782325"
 > [!NOTE]
 > 若要使用 SQL Server 的 .NET Framework 資料提供者，應用程式必須參考 <xref:System.Data.SqlClient> 命名空間。  
   
-## <a name="in-this-section"></a>本節內容  
+## <a name="in-this-section"></a>本章節內容  
  [SQL Server 安全性](sql-server-security.md)  
  提供 SQL Server 安全性功能的概觀，以及可用於建立以 SQL Server 為目標之安全 ADO.NET 應用程式的應用程式案例。  
   
@@ -40,7 +41,7 @@ ms.locfileid: "70782325"
   
  [SQL Server 線上叢書](/sql/sql-server/sql-server-technical-documentation)  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
 - [ADO.NET 中的資料類型對應](../data-type-mappings-in-ado-net.md)

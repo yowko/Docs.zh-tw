@@ -1,13 +1,13 @@
 ---
-title: ADO.NET 中的連接字串
+title: 連接字串
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: bf053c7c26435bea5b2368c81c89b73e8949b74a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: cb0b2831a22f3fe51dd7c5bfbe51e72f266a0003
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040140"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980232"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET 中的連接字串
 
@@ -23,7 +23,7 @@ keyword1=value; keyword2=value;
 
 關鍵字不區分大小寫。 不過，值可能會區分大小寫，視資料來源而定。 關鍵字和值都可以包含[空白字元](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)。 關鍵字和不具引號的值會忽略開頭和尾端空白字元。
 
-如果值包含分號、 [Unicode 控制字元](https://en.wikipedia.org/wiki/Unicode_control_characters)或開頭或尾端空白字元，則必須以單引號或雙引號括住。 例如:
+如果值包含分號、 [Unicode 控制字元](https://en.wikipedia.org/wiki/Unicode_control_characters)或開頭或尾端空白字元，則必須以單引號或雙引號括住。 例如：
 
 ```csharp
 Keyword=" whitespace  ";

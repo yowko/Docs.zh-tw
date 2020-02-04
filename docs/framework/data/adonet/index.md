@@ -1,13 +1,14 @@
 ---
 title: ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 5b7246350478bbc8907bb9f52e425821402f8806
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a803c0592cd44801c55a699b56a9a498781a6593
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346220"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980102"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取服務一組類別 (Class)。 ADO.NET 提供一組豐富的元件，用於建立分散式資料共用應用程式。 其為 .NET Framework 的一個完整的部分，提供關聯式、XML 及應用程式資料的存取。 ADO.NET 支援各種開發需要，包括建立應用程式、工具、語言或網際網路瀏覽器使用的前端資料庫用戶端及中介層商務物件。  
@@ -45,19 +46,19 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
   
 ## <a name="related-sections"></a>相關章節  
  [Language-Integrated Query (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
- 提供使用C#之 LINQ 主題和範例的連結。  
+ Provides links to LINQ topics and samples using C#.  
   
  [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
- 提供使用 Visual Basic 的 LINQ 主題和範例的連結。  
+ Provides links to LINQ topics and samples using Visual Basic.  
   
  [WCF Data Services 4.5](../wcf/index.md)  
- 描述如何使用 WCF Data Services 在 Web 或內部網路上部署資料服務，以執行開放式資料通訊協定（OData）。  
+ Describes how to use WCF Data Services to deploy data services on the Web or an intranet that implement the Open Data Protocol (OData).  
   
  [.NET Framework 開發指南](../../development-guide.md)  
  提供 .NET Framework 中標準開發工作之相關資訊的連結。  
   
  [範例與教學課程](../../../samples-and-tutorials/index.md)  
- 提供 .NET 範例和教學課程的清單。
+ Provides a list of .NET samples and tutorials.
   
 ## <a name="see-also"></a>請參閱
 

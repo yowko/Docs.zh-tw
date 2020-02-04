@@ -1,16 +1,16 @@
 ---
-title: ADO.NET 程式碼範例
+title: 程式碼範例
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: a66ae2b2b8bed95fd38b71a39682a2a7f42be218
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4f0cbc06c03c0d122fc69b8a396570919ac14970
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430813"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980284"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 程式碼範例
 本主題的程式碼清單示範如何使用下列 ADO.NET 技術來擷取資料庫中的資料：
@@ -339,7 +339,7 @@ Class LinqSqlSample
 End Class
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ADO.NET 概觀](ado-net-overview.md)
 - [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)
