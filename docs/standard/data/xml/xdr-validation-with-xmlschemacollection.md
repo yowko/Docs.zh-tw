@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce0777ba71e5433b42b51ef1530e7a1a46905b25
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957021"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709994"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>使用 XmlSchemaCollection 的 XDR 驗證
 
@@ -156,7 +154,7 @@ namespace ValidationSample
 </Schema>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlValidatingReader.ValidationType%2A>
 - [XmlSchemaCollection 結構描述編譯](xmlschemacollection-schema-compilation.md)
