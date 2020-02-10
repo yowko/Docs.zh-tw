@@ -4,16 +4,16 @@ description: 這個 advanced 教學課程示範如何使用可為 null 的參考
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 4edeab7b2a4211d50c424f567ad7df6ced0bf4ce
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740461"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093301"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教學課程：使用可為 null 的參考型別來遷移現有程式碼
 
-C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實值類型補充實值類型的相同方式來補充參考類型。 您可以藉由將 `?` 附加至類型，來將變數宣告為**可為 Null 的參考類型**。 例如，`string?` 代表可為 Null 的 `string`。 您可以使用這些新類型更清楚地表達設計意圖：部分變數「永遠都必須有值」，而其他變數「可能會遺漏值」。 任何參考型別的現有變數都會解譯成不可為 Null 的參考型別。 
+C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實值類型補充實值類型的相同方式來補充參考類型。 您可以藉由將  **附加至類型，來將變數宣告為**可為 Null 的參考類型`?`。 例如，`string?` 代表可為 Null 的 `string`。 您可以使用這些新類型更清楚地表達設計意圖：部分變數「永遠都必須有值」，而其他變數「可能會遺漏值」。 任何參考型別的現有變數都會解譯成不可為 Null 的參考型別。 
 
 在本教學課程中，您將了解如何：
 
@@ -24,7 +24,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 > - 管理啟用可為 Null 內容及停用可為 Null 內容之間的介面。
 > - 控制可為 Null 的註釋內容。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用8個編譯器。
 
@@ -40,7 +40,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 
 ## <a name="upgrade-the-projects-to-c-8"></a>將專案升級至 C# 8
 
-良好的第一個步驟，便是判斷移轉任務的範圍。 請從將專案升級至 C# 8.0 (或更新版本) 開始。 將 `LangVersion` 項目新增到 Web 專案及單元測試專案的 csproj 檔案：
+良好的第一個步驟，便是判斷移轉任務的範圍。 請從將專案升級至 C# 8.0 (或更新版本) 開始。 將 `LangVersion` 元素加入至 Web 專案和單元測試專案之 .csproj 檔案中的 PropertyGroup：
 
 ```xml
 <LangVersion>8.0</LangVersion>
@@ -79,7 +79,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[InitialViewModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#StarterViewModel)]
 
-這兩個屬性會造成 `CS8618`，「不可為 Null 屬性尚未初始化」。 這已相當清楚：兩個 `string` 屬性在建構 `NewsStoryViewModel` 時都具備了 `null` 預設值。 重要的是探索 `NewsStoryViewModel` 物件的建構方式。 查看此類別，您無法辨識 `null` 值究竟是設計的一部分，還是這些物件會在建立其中一個時設為非 Null 值。 `NewsService` 類別的 `GetNews` 方法中建立了新的故事：
+這兩個屬性會造成 `CS8618`，「不可為 Null 屬性尚未初始化」。 這已相當清楚：兩個 `string` 屬性在建構 `null` 時都具備了 `NewsStoryViewModel` 預設值。 重要的是探索 `NewsStoryViewModel` 物件的建構方式。 查看此類別，您無法辨識 `null` 值究竟是設計的一部分，還是這些物件會在建立其中一個時設為非 Null 值。 `GetNews` 類別的 `NewsService` 方法中建立了新的故事：
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
@@ -94,7 +94,7 @@ public class NewsStoryViewModel
 }
 ```
 
-將 `Title` 和 `Uri` 指派為 `default` (針對 `string` 型別為 `null`) 不會變更程式的執行階段行為。 `NewsStoryViewModel` 仍然會使用 Null 值建構，但現在編譯器不會再回報警告。 **Null 寬恕運算子** (即跟隨在 `default` 後方的 `!` 字元) 會告知編譯器先前的運算式並非 Null。 當其他變更對程式碼基底強制執行較大的變更時，這項技術可能會很方便，但在此應用程式中，有一個相對快速且更好的解決方案：使 `NewsStoryViewModel` 成為不變的型別，其中所有屬性都是在此函式中設定。 對 `NewsStoryViewModel` 進行下列變更：
+將 `Title` 和 `Uri` 指派為 `default` (針對 `null` 型別為 `string`) 不會變更程式的執行階段行為。 `NewsStoryViewModel` 仍然會使用 Null 值建構，但現在編譯器不會再回報警告。 **Null 寬恕運算子** (即跟隨在 `!` 後方的 `default` 字元) 會告知編譯器先前的運算式並非 Null。 當其他變更對程式碼基底強制執行較大的變更時，這項技術可能會很方便，但在此應用程式中，有一個相對快速且更好的解決方案：使 `NewsStoryViewModel` 成為不變的型別，其中所有屬性都是在此函式中設定。 對 `NewsStoryViewModel` 進行下列變更：
 
 [!code-csharp[FinishedViewModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
 
@@ -114,7 +114,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Error.cshtml.cs#StartErrorModel)]
 
-將 `#nullable enable` 新增到類別宣告之前，並將 `#nullable restore` 指示詞新增到該宣告之後。 您會收到一個警告，告知您 `RequestId` 並未初始化。 藉由查看類別，您應判斷該 `RequestId` 屬性在某些情況下應為 Null。 `ShowRequestId` 屬性的存在指出可能遺失值。 因為 `null` 是有效的，請在 `string` 型別上新增 `?` 來指出 `RequestId` 屬性是「可為 Null 的參考型別」。 最終類別看起來會和下列範例相似：
+將 `#nullable enable` 新增到類別宣告之前，並將 `#nullable restore` 指示詞新增到該宣告之後。 您會收到一個警告，告知您 `RequestId` 並未初始化。 藉由查看類別，您應判斷該 `RequestId` 屬性在某些情況下應為 Null。 `ShowRequestId` 屬性的存在指出可能遺失值。 因為 `null` 是有效的，請在 `?` 型別上新增 `string` 來指出 `RequestId` 屬性是「可為 Null 的參考型別」。 最終類別看起來會和下列範例相似：
 
 [!code-csharp[FinishedErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Error.cshtml.cs#ErrorModel)]
 
@@ -126,7 +126,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterIndexModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Index.cshtml.cs#IndexModelStart)]
 
-新增 `#nullable enable` 指示詞，您便會看到兩個警告。 `ErrorText` 屬性或 `NewsItems` 屬性都並未初始化。 檢查這個類別會導致您認為這兩個屬性都應該是可為 null 的參考型別：兩者都有私用 setter。 其中剛好有一個已在 `OnGet` 方法中指派。 在進行變更前，請先觀察兩個屬性的消費者。 在頁面本身中，會在為任何錯誤產生標記前再度檢查 `ErrorText` 是否為 Null。 `NewsItems` 集合也會受到檢查是否為 `null`，以及檢查其是否具有項目。 一種快速修正的方式，便是將兩個屬性設為可為 Null 的參考型別。 更佳修正方式是將集合設為不可為 Null 的參考型別，並在擷取新聞時將項目新增到現有集合。 第一個修正是將 `?` 新增到 `ErrorText` 的 `string` 型別：
+新增 `#nullable enable` 指示詞，您便會看到兩個警告。 `ErrorText` 屬性或 `NewsItems` 屬性都並未初始化。 檢查這個類別會導致您認為這兩個屬性都應該是可為 null 的參考型別：兩者都有私用 setter。 其中剛好有一個已在 `OnGet` 方法中指派。 在進行變更前，請先觀察兩個屬性的消費者。 在頁面本身中，會在為任何錯誤產生標記前再度檢查 `ErrorText` 是否為 Null。 `NewsItems` 集合也會受到檢查是否為 `null`，以及檢查其是否具有項目。 一種快速修正的方式，便是將兩個屬性設為可為 Null 的參考型別。 更佳修正方式是將集合設為不可為 Null 的參考型別，並在擷取新聞時將項目新增到現有集合。 第一個修正是將 `?` 新增到 `string` 的 `ErrorText` 型別：
 
 [!code-csharp[UpdateErrorText](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#UpdateErrorText)]
 
@@ -142,7 +142,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[GetNews](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#GetNewsFinished)]
 
-變更簽章也會中斷其中一項測試。 開啟 `SimpleFeedReader.Tests` 專案 `Services` 資料夾中的 `NewsServiceTests.cs` 檔案。 巡覽至 `Returns_News_Stories_Given_Valid_Uri` 測試，並將 `result` 變數的型別變更為 `IEnumerable<NewsItem>`。 變更型別表示 `Count` 屬性不再開放使用，因此請將 `Assert` 中的 `Count` 屬性取代為對 `Any()` 的呼叫：
+變更簽章也會中斷其中一項測試。 開啟 `NewsServiceTests.cs` 專案 `Services` 資料夾中的 `SimpleFeedReader.Tests` 檔案。 巡覽至 `Returns_News_Stories_Given_Valid_Uri` 測試，並將 `result` 變數的型別變更為 `IEnumerable<NewsItem>`。 變更型別表示 `Count` 屬性不再開放使用，因此請將 `Count` 中的 `Assert` 屬性取代為對 `Any()` 的呼叫：
 
 [!code-csharp[FixTests](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader.Tests/Services/NewsServiceTests.cs#FixTestSignature)]
 

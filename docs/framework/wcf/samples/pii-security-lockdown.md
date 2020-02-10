@@ -2,12 +2,12 @@
 title: PII 安全性鎖定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 63410ecc19e94e57f943e5d7dc13a6098bd91d51
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 56c8acbe53f1e0243f7c679da6ef04f7135bcd3a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714632"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094965"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全性鎖定
 這個範例會示範如何藉由下列方式，控制 Windows Communication Foundation （WCF）服務的數個安全性相關功能：  
@@ -27,7 +27,7 @@ ms.locfileid: "74714632"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
-## <a name="discussion"></a>討論  
+## <a name="discussion"></a>討論區  
  您可以單獨或一起使用這些功能，以控制服務安全性的各個方面。 這不是保護 WCF 服務的最終指引。  
   
  .NET Framework 組態檔中包含敏感性資訊，例如連接至資料庫的連線字串。 在共用的 Web 裝載案例中，可能需要針對服務在組態檔中加密此資訊，因此組態檔所含的資料便不會任意讓人檢視。 .NET Framework 2.0 和更新版本可以使用 Windows Data Protection 應用程式開發介面 (DPAPI) 或 RSA 密碼編譯提供者，加密組態檔的各個部分。 使用 DPAPI 或 RSA 的 aspnet_regiis.exe 可以加密組態檔的選取部分。  
@@ -47,7 +47,7 @@ ms.locfileid: "74714632"
   
 3. 發出下列命令，加密 Web.config 資料夾中的 appSettings 組態設定：`aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`。  
   
- 如需加密設定檔區段的詳細資訊，請參閱 ASP.NET 設定中的 DPAPI （[建立安全 ASP.NET 應用程式：驗證、授權和安全通訊](https://go.microsoft.com/fwlink/?LinkId=95137)）和 ASP.NET 設定中的 RSA 作法（[如何：使用 RSA 加密 ASP.NET 2.0 中](https://go.microsoft.com/fwlink/?LinkId=95138)的設定區段）。  
+ 如需加密設定檔區段的詳細資訊，請參閱 ASP.NET 設定中的 DPAPI （[建立安全 ASP.NET 應用程式：驗證、授權和安全通訊](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))）和 ASP.NET 設定中的 RSA 作法（[如何：使用 RSA 加密 ASP.NET 2.0 中](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))的設定區段）。  
   
 ## <a name="locking-configuration-file-elements"></a>鎖定組態檔項目  
  在 Web 裝載的案例中，可能在服務的子目錄中還有服務。 在這些情況中，便會計算子目錄中服務的組態值，方法則是先檢查 Machine.config 中的值，接著合併上層目錄到下層目錄樹狀結構中的 Web.config 檔，最後合併其中包含服務之目錄中的 Web.config 檔。 大多數組態項目的預設行為是允許子目錄中的組態檔覆寫上層目錄中的值組。 在特定情況中，可能會防止子目錄中的組態檔覆寫上層目錄組態的值組。  
@@ -124,9 +124,9 @@ ms.locfileid: "74714632"
   
  也可能使用 DPAPI 和 RSA 加密組態檔項目。 如需詳細資訊，請參閱下列連結：  
   
-- [建立安全的 ASP.NET 應用程式：驗證、授權和安全通訊](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [建立安全的 ASP.NET 應用程式：驗證、授權和安全通訊](https://docs.microsoft.com/previous-versions/msp-n-p/ff649248(v=pandp.10))  
   
-- [How To：使用 RSA 加密 ASP.NET 2.0 中的設定區段](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [How To：使用 RSA 加密 ASP.NET 2.0 中的設定區段](https://docs.microsoft.com/previous-versions/msp-n-p/ff650304(v=pandp.10))  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要設定、建置及執行範例  
   
@@ -142,6 +142,6 @@ ms.locfileid: "74714632"
   
 1. 編輯 Machine.config 以將 `enableLoggingKnownPii` 屬性設定為 `false`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [AppFabric 監視範例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 監視範例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

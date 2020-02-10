@@ -2,12 +2,12 @@
 title: Byrefs
 description: 深入瞭解中F#的 byref 和 byref 型別，其適用于低層級的程式設計。
 ms.date: 11/04/2019
-ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965811"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092784"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -188,7 +188,7 @@ let squareAndPrint (data : byref<int>) =
 ```
 
 若要傳回值 byref，包含值的變數必須比目前的範圍長。
-此外，若要傳回 byref，請使用 & 值（其中 value 是存留時間超過目前範圍的變數）。
+此外，若要傳回 byref，請使用 `&value` （其中 value 是存留時間超過目前範圍的變數）。
 
 ```fsharp
 let mutable sum = 0
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-這會根據您是否使用優化開啟或關閉來進行編譯，而無法取得不同的結果。
+這會根據您是否使用優化進行編譯，而無法取得不同的結果。

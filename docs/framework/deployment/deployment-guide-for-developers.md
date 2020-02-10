@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: a346a19400c1d2c536fff56ed7fb6dc27570df29
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965824"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094133"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
@@ -24,12 +24,12 @@ ms.locfileid: "76965824"
 - [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
-- [.NET Framework 4。6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
 - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
 - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
 - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
 
- 重要注意事項：
+ 重要事項：
 
 - 從 .NET Framework 4.5.1 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的 .NET Framework 版本是 .NET Framework 4.5 的就地更新；亦即，它們會使用相同的執行階段版本，但組件版本會更新並包含新的型別和成員。
 
@@ -55,8 +55,8 @@ ms.locfileid: "76965824"
 
 |應用程式的部署策略|可用的部署方法|可供使用的 .NET Framework 可轉散發套件|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|從 Web 安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Web installer](#redistributable-packages)|
-|從光碟安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Offline installer](#redistributable-packages)|
+|從 Web 安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Web 安裝程式](#redistributable-packages)|
+|從光碟安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[離線安裝程式](#redistributable-packages)|
 |從區域網路安裝 (適用於企業應用程式)|- [ClickOnce](#clickonce-deployment)|[Web 安裝程式](#redistributable-packages) (如需相關限制，請參閱 [ClickOnce](#clickonce-deployment) ) 或 [離線安裝程式](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>可轉散發套件
@@ -136,7 +136,7 @@ InstallAware 可以從單一來源來建立 Windows 應用程式 (APPX)、Window
 
 在 Visual Studio 中，選擇 InstallShield 部署並加入 .NET Framework 的相依性：
 
-1. 在 Visual Studio 功能表列上，依序選擇 [檔案]、[新增]、[專案]。
+1. 在 Visual Studio 功能表列上，選擇 [ **檔案**]、[ **新增**]、[ **專案**]。
 
 2. 在 [ **新增專案** ] 對話方塊的左窗格中，依序選擇 [ **其他專案類型**]、[ **安裝和部署**]、[ **InstallShield LE**]。
 
@@ -238,14 +238,14 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 ### <a name="detecting-the-net-framework"></a>偵測 .NET Framework
 
-.NET Framework 安裝程式會在安裝成功時寫入登錄機碼。 您可以測試是否已安裝 .NET Framework 4.5 或更新版本，方法是檢查登錄中的 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 資料夾是否有名為 `Release` 的 `DWORD` 值。 （請注意，"NET Framework Setup" 不是以句號開頭）。此機碼是否存在，表示該電腦上已安裝 .NET Framework 4.5 或更新版本。 `Release` 的值會指出所安裝的 .NET Framework 版本。
+.NET Framework 安裝程式會在安裝成功時寫入登錄機碼。 您可以測試是否已安裝 .NET Framework 4.5 或更新版本，方法是檢查登錄中的 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 資料夾是否有名為 `DWORD` 的 `Release` 值。 （請注意，"NET Framework Setup" 不是以句號開頭）。此機碼是否存在，表示該電腦上已安裝 .NET Framework 4.5 或更新版本。 `Release` 的值會指出所安裝的 .NET Framework 版本。
 
 > [!IMPORTANT]
 > 當您嘗試偵測是否有特定版本時，您應該檢查是否有值  **大於或等於** 版本關鍵字值。
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
-|{2&gt;版本&lt;2}|Release DWORD 的值|
+|版本|Release DWORD 的值|
 |-------------|--------------------------------|
 |安裝在 Windows 10 2019 年 5 月更新上的 .NET Framework 4.8|528040|
 |安裝在 Windows 10 2019 年 5 月更新以外的所有 OS 版本上的 .NET Framework 4.8|528049|
@@ -274,8 +274,8 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 | | |
 |-|-|
-| 索引鍵 | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| Name | Release |
+| Key | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| 名稱 | 版本 |
 | 類型 | DWORD |
 
 若要判斷是否已針對 .NET Framework 從 4.5 到 4.7.2 的特定版本安裝語言套件的最終發行版本，請檢查 RELEASE 機碼 DWORD 的值，如前一節[偵測 .NET Framework](#detect_net) 中所述。
@@ -292,7 +292,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 - [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
 - [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
 - [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
-- [.NET Framework 4。6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
 - [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
 - [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
 - [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
@@ -359,11 +359,11 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |選項|描述|
 |------------|-----------------|
 |**/CEIPConsent**|覆寫預設的行為並傳送匿名意見給 Microsoft 以協助改善未來的部署經驗。 只有當安裝程式提示同意，同時使用者授與權限傳送匿名意見給 Microsoft 時，才能使用此選項。|
-|**/chainingpackage** `packageName`|指定執行鏈結之可執行檔的名稱。 此資訊會以匿名意見的形式傳送給 Microsoft 以協助改善未來的部署經驗。<br /><br /> 如果封裝名稱包含空格，請使用雙引號做為分隔符號，例如： **/chainingpackage "Lucerne Publishing"** 。 如需鏈結套件的範例，請參閱 MSDN Library 中的 [從安裝套件取得進度資訊](https://go.microsoft.com/fwlink/?LinkId=181926) 。|
+|**/chainingpackage** `packageName`|指定執行鏈結之可執行檔的名稱。 此資訊會以匿名意見的形式傳送給 Microsoft 以協助改善未來的部署經驗。<br /><br /> 如果封裝名稱包含空格，請使用雙引號做為分隔符號，例如： **/chainingpackage "Lucerne Publishing"** 。 如需連結套件的範例，請參閱[從安裝套件取得進度資訊](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))。|
 |**/LCID**`LCID`<br /><br /> 其中， `LCID` 可指定地區設定識別碼 (請參閱 [支援的語言](#supported-languages))。|安裝 `LCID` 指定的語言套件並強制以該語言顯示 UI (除非已設定無訊息模式)。<br /><br /> 對於 Web 安裝程式，此選項會從 Web 鏈結安裝語言套件。 **注意：** 此選項只適用於 Web 安裝程式。|
 |**/log** `file` &#124; `folder`|指定記錄檔的位置。 預設為程序的暫存資料夾，而預設檔案名稱將會根據套件。 如果副檔名是 .txt，則會產生文字記錄檔。 如果您指定其他副檔名或未指定副檔名，則會建立 HTML 記錄檔。|
 |**/msioptions**|指定針對 .msi 和 .msp 項目傳遞的選項，例如： `/msioptions "PROPERTY1='Value'"`。|
-|**/norestart**|避免安裝程式自動重新開機。 如果您使用此選項，則鏈結應用程式必須擷取傳回碼並處理重新開機 (請參閱 MSDN Library 中的 [從安裝套件取得進度資訊](https://go.microsoft.com/fwlink/?LinkId=179606) )。|
+|**/norestart**|避免安裝程式自動重新開機。 如果您使用此選項，則連結應用程式必須捕獲傳回碼並處理重新開機（請參閱[從安裝套件取得進度資訊](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100))）。|
 |**/passive**|設定被動模式。 顯示進度列，表示安裝正在進行，但不會對使用者顯示任何提示或錯誤訊息。 在此模式中，當安裝程式進行鏈結時，鏈結套件必須處理 [傳回碼](#return-codes)。|
 |**/pipe**|建立通訊通道，讓鏈結套件能夠取得進度。|
 |**/promptrestart**|(僅限被動模式) 如果安裝程式需要重新啟動，則會提示使用者。 如果需要重新啟動，此選項會需要使用者互動。|
@@ -378,7 +378,7 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 
 下表列出適用于 .NET Framework 4.5 和更新版本的 .NET Framework 語言套件。
 
-|LCID|語言 – 國家/地區|Culture|
+|LCID|語言 – 國家/地區|文化特性|
 |----------|--------------------------------|-------------|
 |1025|阿拉伯文 - 沙烏地阿拉伯|ar|
 |1028|中文 – 繁體|zh-Hant|
@@ -388,13 +388,13 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |1032|希臘文|el|
 |1035|芬蘭文|fi|
 |1036|法文 – 法國|fr|
-|1037|希伯來文|he|
+|1037|Hebrew|he|
 |1038|匈牙利文|hu|
 |1040|義大利文 – 義大利|it|
 |1041|日文|ja|
 |1042|韓文|ko|
 |1043|荷蘭文 – 荷蘭|nl|
-|1044|挪威文 (巴克摩)|no|
+|1044|挪威文 (巴克摩)|否|
 |1045|波蘭文|pl|
 |1046|葡萄牙文 – 巴西|pt-BR|
 |1049|俄文|ru|
@@ -404,11 +404,11 @@ Windows Installer XML (WiX) 工具組會從 XML 原始程式碼建置 Windows �
 |2070|葡萄牙文 (葡萄牙)|pt-PT|
 |3082|西班牙文 - 西班牙 (現代排序)|es|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [系統管理員部署手冊](guide-for-administrators.md)
 - [系統需求](../get-started/system-requirements.md)
 - [安裝適用於開發人員的 .NET Framework](../install/guide-for-developers.md)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](../install/troubleshoot-blocked-installations-and-uninstallations.md)
 - [在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](reducing-system-restarts.md)
-- [如何：取得 .NET Framework 4.5 安裝程式的進度](how-to-get-progress-from-the-dotnet-installer.md)
+- [How to: Get Progress from the .NET Framework 4.5 Installer](how-to-get-progress-from-the-dotnet-installer.md)

@@ -1,13 +1,13 @@
 ---
-title: 中斷性變更的類型-.NET Core
+title: 中斷性變更的類型
 description: 瞭解 .NET Core 如何嘗試維護跨 .NET 版本開發人員的相容性，以及將哪種變更視為重大變更。
 ms.date: 06/10/2019
-ms.openlocfilehash: 76d04504c4476f0f7517a633cfbf1c0aa9d5797e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76738581"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092976"
 ---
 # <a name="changes-that-affect-compatibility"></a>影響相容性的變更
 
@@ -33,7 +33,7 @@ ms.locfileid: "76738581"
 
 此類別目錄中的變更會修改類型的公用介面區。 此類別中的大多數變更都是不允許的，因為它們違反了回溯相容性 (可讓使用舊版 API 開發的應用程式能夠在更新版本上執行而不必重新編譯的能力)。
 
-### <a name="types"></a>型別
+### <a name="types"></a>類型
 
 - **允許✔️：當基底類型已經實作為介面時，從類型移除介面實**
 

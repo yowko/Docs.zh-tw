@@ -2,12 +2,12 @@
 title: LINQ 訊息查詢相互關聯
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: a4b0ed058cfe8d3d487342c9feefdf1b1efe07c8
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: cd91a171f3242cfd7e8ac0404e24ac065919bcce
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715591"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094614"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ 訊息查詢相互關聯
 這個範例示範如何使用自訂 <xref:System.ServiceModel.Dispatcher.MessageQuery> 實作 (而不是系統提供的 <xref:System.ServiceModel.XPathMessageQuery>) 來執行以內容為主的相互關聯。  
@@ -15,12 +15,12 @@ ms.locfileid: "74715591"
 ## <a name="demonstrates"></a>示範  
  自訂 <xref:System.ServiceModel.Dispatcher.MessageQuery>、以內容為主的相互關聯。  
   
-## <a name="discussion"></a>討論  
+## <a name="discussion"></a>討論區  
  這個範例示範如何為了相互關聯，從 <xref:System.ServiceModel.Dispatcher.MessageQuery> 基底類別延伸。 `LinqMessageQuery` 自訂實作可讓使用者提供 XName，以使用 XLinq 在訊息中尋找。 查詢所擷取的資料是用來形成相互關聯索引鍵，以便將訊息分派至適當的工作流程執行個體。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 這個範例使用 HTTP 端點公開工作流程服務。 若要執行此範例，必須新增適當的 URL Acl （如需詳細資訊，請參閱設定[HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) ），方法是以系統管理員身分執行 Visual Studio，或在已提升許可權的提示字元中執行下列命令，以新增適當的 acl。 請確定您的網域和使用者名稱已用來取代。  
+1. 這個範例使用 HTTP 端點公開工作流程服務。 若要執行此範例，必須新增適當的 URL Acl （如需詳細資訊，請參閱設定[HTTP 和 HTTPS](../../wcf/feature-details/configuring-http-and-https.md) ），方法是以系統管理員身分執行 Visual Studio，或在已提升許可權的提示字元中執行下列命令，以新增適當的 acl。 請確定您的網域和使用者名稱已用來取代。  
   
     ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  

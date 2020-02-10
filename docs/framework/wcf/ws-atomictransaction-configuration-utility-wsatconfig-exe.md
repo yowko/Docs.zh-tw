@@ -2,14 +2,15 @@
 title: WS-AtomicTransaction 組態公用程式 (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 3b37c271afa20de120682d093e40c0f30f4730de
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 009be8d4c25fd9db5b2f2df6e75fb046e92f389a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921337"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094718"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction 組態公用程式 (wsatConfig.exe)
+
 WS-AtomicTransaction 組態公用程式用於設定基本的 WS-AtomicTransaction 支援設定。  
   
 ## <a name="syntax"></a>語法  
@@ -19,9 +20,9 @@ wsatConfig [Options]
 ```  
   
 ## <a name="remarks"></a>備註  
- 這個命令列工具僅用於在本機電腦上設定基本 WS-AT 設定。 如果您必須在本機和遠端電腦上進行設定，應使用 MMC 嵌入式管理單元，如設定 WS-不可部分完成的[交易支援](./feature-details/configuring-ws-atomic-transaction-support.md)中所述。  
+ 此命令列工具只能用來設定本機電腦中的基本 WS-AT 設定。 如果您必須在本機和遠端電腦上進行設定，應使用 MMC 嵌入式管理單元，如設定 WS-不可部分完成的[交易支援](./feature-details/configuring-ws-atomic-transaction-support.md)中所述。  
   
- 命令列工具位於 Windows SDK 安裝位置中，具體而言就是  
+ 命令列工具可以在 Windows SDK 安裝位置找到，具體來說，  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
@@ -32,7 +33,7 @@ wsatConfig [Options]
 > [!NOTE]
 > 為選取的連接埠設定 SSL 憑證時，如果與該連接埠關聯的原始 SSL 憑證存在的話，將會覆寫該憑證。  
   
-|選項|描述|  
+|選項。|描述|  
 |-------------|-----------------|  
 |-account：\<帳戶，>|指定可以參與 WS-AtomicTransaction 的帳戶逗號分隔清單。 這些帳戶的有效性並未經過檢查。|  
 |-accountsCerts：\<thumb >&#124;"Issuer\SubjectName"，>|指定可以參與 WS-AtomicTransaction 的憑證逗號分隔清單。 憑證由指紋或 Issuer\SubjectName 配對所指定。 如果主體名稱為空白，請使用 {EMPTY} 做為主體名稱。|  
@@ -49,7 +50,7 @@ wsatConfig [Options]
 |-show|顯示目前的 WS-AtomicTransaction 通訊協定設定。|  
 |-virtualServer：\<virtualServer >|指定 DTC 資源叢集名稱。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 WS-AtomicTransaction](./feature-details/using-ws-atomictransaction.md)
 - [設定 WS-Atomic 異動支援](./feature-details/configuring-ws-atomic-transaction-support.md)

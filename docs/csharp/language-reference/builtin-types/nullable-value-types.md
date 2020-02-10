@@ -4,16 +4,16 @@ description: 瞭解C#可為 null 的實值型別，以及如何使用它們
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740942"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093184"
 ---
 # <a name="nullable-value-types-c-reference"></a>可為 null 的C#實數值型別（參考）
 
-可為 null 的實數值型別 `T?` 代表其基礎[數值型別](value-types.md)的所有值，`T` 和額外的[null](../keywords/null.md)值。 例如，您可以將下列三個值的任何一個指派給 `bool?` 變數： `true`、`false`或 `null`。 基礎數值型別 `T` 不能是可為 null 的實數值型別本身。
+*可為 null 的實數值型別*`T?` 代表其基礎[數值型別](value-types.md)的所有值，`T` 和額外的[null](../keywords/null.md)值。 例如，您可以將下列三個值的任何一個指派給 `bool?` 變數： `true`、`false`或 `null`。 基礎數值型別 `T` 不能是可為 null 的實數值型別本身。
 
 > [!NOTE]
 > C#8.0 引進了可為 null 的參考型別功能。 如需詳細資訊，請參閱[可為 null 的參考型別](../../nullable-references.md)。 開頭為C# 2 的可為 null 的實數值型別。
@@ -24,7 +24,7 @@ ms.locfileid: "76740942"
 
 ## <a name="declaration-and-assignment"></a>宣告與指派
 
-當實值型別可隱含轉換成對應的可為 null 實值型別時，您可以將值指派給可為 null 實值型別的變數，就像它的基礎實值型別一樣。 您也可以指派 `null` 值。 例如，
+當實值型別可隱含轉換成對應的可為 null 實值型別時，您可以將值指派給可為 null 實值型別的變數，就像它的基礎實值型別一樣。 您也可以指派 `null` 值。 例如：
 
 [!code-csharp[declare and assign](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#Declaration)]
 
@@ -68,7 +68,7 @@ ms.locfileid: "76740942"
 
 ## <a name="lifted-operators"></a>提升運算子
 
-預先定義的一元和二元運算子，或實值型別所支援的任何多載運算子，也都受到對應的可為 null 實值型別支援 `T?``T`。 如果 `null`一個或兩個運算元，這些運算子（也稱為「*提升運算子*」）就會產生 `null`;否則，運算子會使用其運算元的包含值來計算結果。 例如，
+預先定義的一元和二元[運算子](../operators/index.md)，或實值型別所支援的任何多載運算子，也都受到對應的可為 null 實值型別支援 `T?``T`。 如果 `null`一個或兩個運算元，這些運算子（也稱為「*提升運算子*」）就會產生 `null`;否則，運算子會使用其運算元的包含值來計算結果。 例如：
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -82,7 +82,9 @@ ms.locfileid: "76740942"
 
 [!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
-上述範例也顯示兩個可為 null 的實值型別實例的相等比較，兩者都 `null` 評估為 `true`。
+針對[等號比較運算子](../operators/equality-operators.md#equality-operator-)`==`，如果兩個運算元都 `null`，則結果會是 `true`，如果只 `null`其中一個運算元，則結果會是 `false`。否則，會比較運算元的包含值。
+
+針對不[等比較運算子](../operators/equality-operators.md#inequality-operator-)`!=`，如果兩個運算元都 `null`，則結果會是 `false`，如果只 `null`其中一個運算元，則結果會是 `true`。否則，會比較運算元的包含值。
 
 如果兩個實數值型別之間有[使用者定義的轉換](../operators/user-defined-conversion-operators.md)，也可以在對應的可為 null 實數值型別之間使用相同的轉換。
 

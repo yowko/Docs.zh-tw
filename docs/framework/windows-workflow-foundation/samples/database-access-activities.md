@@ -2,16 +2,16 @@
 title: 資料庫存取活動
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: eec368803eeacb2bab729bcd6d57cc7fc6107256
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ed3f0ad3f2fd19f622c9cb0faf7d5cd864b81995
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710852"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094640"
 ---
 # <a name="database-access-activities"></a>資料庫存取活動
 
-資料庫存取活動可讓您存取工作流程內的資料庫。 這些活動可讓您存取資料庫來抓取或修改資訊，並使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)來存取資料庫。
+資料庫存取活動可讓您存取工作流程內的資料庫。 這些活動可讓您存取資料庫來抓取或修改資訊，並使用[ADO.NET](../../data/adonet/index.md)來存取資料庫。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
@@ -320,7 +320,7 @@ Setup.cmd 指令碼會叫用 CreateDb.sql 指令碼檔，該檔案中包含的 S
 
 1. 在命令提示字元中從相同資料夾執行 Cleanup.cmd。
 
-##### <a name="to-run-the-sample"></a>若要執行範例
+##### <a name="to-run-the-sample"></a>執行範例
 
 1. 在 Visual Studio 2010 中開啟方案
 

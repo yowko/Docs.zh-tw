@@ -3,24 +3,24 @@ title: 使用 F# 開始使用 Azure Blob 儲存體
 description: 使用 Azure Blob 儲存體，將非結構化資料儲存在雲端。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 90ec0d63b11ad00c53a1740211e9a6509582e863
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 79f6a559ac603b0544916764126a988d3f3f43d7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935510"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092625"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>使用 F\# 開始使用 Azure Blob 儲存體
 
-Azure Blob 儲存體是可將非結構化的資料儲存在雲端作為物件/Blob 的服務。 Blob 儲存體可以儲存任何類型的文字或二進位資料，例如文件、媒體檔案或應用程式安裝程式。 Blob 儲存體也稱為物件儲存體。
+Azure Blob 儲存體是可將非結構化的資料儲存在雲端作為物件/blob 的服務。 Blob 儲存體可以儲存任何類型的文字或二進位資料，例如文件、媒體檔案或應用程式安裝程式。 Blob 儲存體也稱為物件儲存體。
 
 本文說明如何使用 Blob 儲存體執行一般工作。 這些範例是使用F#適用于 .net 的 Azure 儲存體用戶端程式庫來撰寫。 涵蓋的工作包括如何上傳、列出、下載和刪除 blob。
 
-如需 blob 儲存體的概念總覽，請參閱[blob 儲存體的 .net 指南](/azure/storage/storage-dotnet-how-to-use-blobs)。
+如需 blob 儲存體的概念總覽，請參閱[blob 儲存體的 .net 指南](/azure/storage/blobs/storage-quickstart-blobs-dotnet)。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
-若要使用本指南，您必須先[建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)。 您也需要此帳戶的儲存體存取金鑰。
+若要使用本指南，您必須先[建立 Azure 儲存體帳戶](/azure/storage/common/storage-account-create)。 您也需要此帳戶的儲存體存取金鑰。
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>建立F#腳本並啟動F#互動式
 
@@ -28,9 +28,9 @@ Azure Blob 儲存體是可將非結構化的資料儲存在雲端作為物件/Bl
 
 接下來，使用[套件管理員](package-management.md)（例如[Paket](https://fsprojects.github.io/Paket/)或[NuGet](https://www.nuget.org/) ）來安裝 `WindowsAzure.Storage` 和 `Microsoft.WindowsAzure.ConfigurationManager` 套件，並使用 `#r` 指示詞在腳本中參考 `WindowsAzure.Storage.dll` 和 `Microsoft.WindowsAzure.Configuration.dll`。
 
-### <a name="add-namespace-declarations"></a>加入命名空間宣告
+### <a name="add-namespace-declarations"></a>新增命名空間宣告
 
-在 `blobs.fsx` 檔案頂端新增下列 `open` 陳述式：
+在 `open` 檔案頂端新增下列 `blobs.fsx` 陳述式：
 
 [!code-fsharp[BlobStorage](~/samples/snippets/fsharp/azure/blob-storage.fsx#L1-L5)]
 
@@ -196,8 +196,8 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 
 儲存體 Blob 中的每個 Blob 必須位於一個容器中。 此容器會組成 blob 名稱的一部分。 例如， `mydata` 是這些範例 blob URI 中容器的名稱：
 
-- https://storagesample.blob.core.windows.net/mydata/blob1.txt
-- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- `https://storagesample.blob.core.windows.net/mydata/blob1.txt`
+- `https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg`
 
 容器名稱必須是有效的 DNS 名稱，且符合下列命名規則：
 
@@ -237,14 +237,13 @@ Microsoft 提供的免費獨立應用程式，可讓您在 Windows、OS X 和 Li
 
 ### <a name="blob-storage-reference"></a>Blob 儲存體參考
 
-- [適用於 .NET 的 Azure 儲存體 API](/dotnet/api/overview/azure/storage)
-- [Azure 儲存體服務 REST API 參考](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
+- [適用于 .NET 的 Azure 儲存體 Api](/dotnet/api/overview/azure/storage)
+- [Azure 儲存體服務 REST API 參考](/rest/api/storageservices/)
 
 ### <a name="related-guides"></a>相關指南
 
-- [使用 Azure Blob 儲存體的消費者入門C#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
-- [在 Windows 上使用 AzCopy 命令列公用程式傳輸資料](/azure/storage/common/storage-use-azcopy)
-- [使用 Linux 上的 AzCopy 命令列公用程式傳輸資料](/azure/storage/common/storage-use-azcopy-linux)
+- [適用於 .NET 的 Azure Blob 儲存體範例](https://docs.microsoft.com/samples/azure-samples/storage-blob-dotnet-getting-started/storage-blob-dotnet-getting-started/)
+- [開始使用 AzCopy](/azure/storage/common/storage-use-azcopy-v10)
 - [設定 Azure 儲存體連接字串](/azure/storage/common/storage-configure-connection-string)
 - [Azure 儲存體團隊部落格](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
 - [快速入門：使用 .NET 在物件儲存體中建立 blob](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

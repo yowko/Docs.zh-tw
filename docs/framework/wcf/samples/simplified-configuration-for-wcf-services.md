@@ -2,12 +2,12 @@
 title: WCF 服務的簡化組態
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: a1188ad9ed56ebb24754785546b6a5b54cd2b840
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: d303d298ca45504968b4b37bd2835381b7e2eee5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715436"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094900"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服務的簡化組態
 這個範例會示範如何使用 Windows Communication Foundation （WCF）來執行和設定一般服務和用戶端。 這個範例是所有其他基本技術範例的基礎。  
@@ -78,7 +78,7 @@ ms.locfileid: "74715436"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [AppFabric 管理範例](https://go.microsoft.com/fwlink/?LinkId=193960)
+- [AppFabric 管理範例](https://docs.microsoft.com/previous-versions/appfabric/ff383405(v=azure.10))
 - [簡化設定](../../../../docs/framework/wcf/simplified-configuration.md)

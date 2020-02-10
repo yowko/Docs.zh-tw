@@ -9,16 +9,16 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: da8f3e592e47c9482d4395b81627c1582e2354f7
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65ecfc4269ff894d45c9b4ee15e349b1a7ddbb73
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72005246"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094510"
 ---
 # <a name="opentype-font-features"></a>OpenType 字型功能
 
-本主題提供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中 OpenType 字型技術的一些主要功能總覽。  
+本主題提供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]中 OpenType 字型技術的一些主要功能總覽。  
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType 字型格式  
@@ -39,7 +39,7 @@ ms.locfileid: "72005246"
 > [!NOTE]
 > Windows SDK 包含一組您可以搭配 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式使用的範例 OpenType 字型。 本主題後文會說明這些字型提供的大部分功能。 如需詳細資訊，請參閱[範例 OpenType 字型套件](sample-opentype-font-pack.md)。  
   
- 如需 OpenType 字型格式的詳細資訊，請參閱[Opentype 規格](https://go.microsoft.com/fwlink/?LinkId=96731)。  
+如需 OpenType 字型格式的詳細資訊，請參閱[opentype 規格](https://docs.microsoft.com/typography/opentype/spec/)。  
   
 ### <a name="advanced-typographic-extensions"></a>進階的印刷樣式延伸模組  
  先進的印刷樣式資料表（OpenType 版面配置資料表）可利用 TrueType 或 CFF 外框來擴充字型的功能。 OpenType 版面配置字型包含額外的資訊，可延伸字型的功能，以支援高品質的國際印刷樣式。 大部分的 OpenType 字型只會公開可用的全部 OpenType 功能子集。 OpenType 字型提供下列功能。  
@@ -55,11 +55,11 @@ ms.locfileid: "72005246"
  本總覽的其餘部分會介紹一些視覺上有趣的 OpenType 功能的廣度和彈性，這些是由 <xref:System.Windows.Documents.Typography> 物件的屬性所公開。 如需此物件的詳細資訊，請參閱[印刷樣式類別](#typography_class)。  
   
 <a name="variants"></a>   
-## <a name="variants"></a>變異  
+## <a name="variants"></a>衍生產品  
  用來轉譯不同印刷樣式的變數，例如上標和下標。  
   
 ### <a name="superscripts-and-subscripts"></a>上標和下標  
- @No__t_0 屬性可讓您設定 OpenType 字型的上標和下標值。  
+ <xref:System.Windows.Documents.Typography.Variants%2A> 屬性可讓您設定 OpenType 字型的上標和下標值。  
   
  下列文字顯示上標 Palatino Linotype 字型。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "72005246"
   
 <a name="swashes"></a>   
 ## <a name="swashes"></a>花飾字  
- 花飾字是裝飾性字符，使用精心設計且通常與書寫體相關聯的裝飾。 下列文字顯示 Pescadero 字型的標準和花飾字字符。  
+ 花飾字是裝飾性字符，會使用精心設計且通常與書寫體相關聯的裝飾。 下列文字顯示 Pescadero 字型的標準和花飾字字符。  
   
  ![使用 OpenType 標準和花飾字字符的文字](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "使用 OpenType 標準和勾耳圖像的文字")  
 
@@ -271,7 +271,7 @@ ms.locfileid: "72005246"
   
 <a name="typography_class"></a>   
 ## <a name="typography-class"></a>印刷樣式類別  
- @No__t_0 物件會公開 OpenType 字型支援的一組功能。 藉由在標記中設定 <xref:System.Windows.Documents.Typography> 的屬性，您可以輕鬆地撰寫利用 OpenType 功能的檔。  
+ <xref:System.Windows.Documents.Typography> 物件會公開 OpenType 字型支援的一組功能。 藉由在標記中設定 <xref:System.Windows.Documents.Typography> 的屬性，您可以輕鬆地撰寫利用 OpenType 功能的檔。  
   
  下列文字顯示 Pescadero 字型的標準大寫字母，後面接著樣式設定為 "SmallCaps" 和 "AllSmallCaps" 的字母。 在此情況下，三個單字全都使用相同的字型大小。  
   
@@ -292,7 +292,7 @@ ms.locfileid: "72005246"
 |屬性|值|預設值|  
 |--------------|----------------|-------------------|  
 |<xref:System.Windows.Documents.Typography.AnnotationAlternates%2A>|數值 - 位元組|0|  
-|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; &#124; 0 2|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Capitals%2A>|<xref:System.Windows.FontCapitals.AllPetiteCaps> &#124; <xref:System.Windows.FontCapitals.AllSmallCaps> &#124; <xref:System.Windows.FontCapitals.Normal> &#124; <xref:System.Windows.FontCapitals.PetiteCaps> &#124; <xref:System.Windows.FontCapitals.SmallCaps> &#124; &#124; <xref:System.Windows.FontCapitals.Titling> <xref:System.Windows.FontCapitals.Unicase>|<xref:System.Windows.FontCapitals.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.CapitalSpacing%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.CaseSensitiveForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.ContextualAlternates%2A>|<xref:System.Boolean>|`true`|  
@@ -300,8 +300,8 @@ ms.locfileid: "72005246"
 |<xref:System.Windows.Documents.Typography.ContextualSwashes%2A>|數值 - 位元組|0|  
 |<xref:System.Windows.Documents.Typography.DiscretionaryLigatures%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.EastAsianExpertForms%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; &#124; &#124; 0 &#124; 4 &#124; 6 8|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
-|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; 0|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianLanguage%2A>|<xref:System.Windows.FontEastAsianLanguage.HojoKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis04> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis78> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis83> &#124; <xref:System.Windows.FontEastAsianLanguage.Jis90> &#124; &#124; &#124; <xref:System.Windows.FontEastAsianLanguage.NlcKanji> &#124; <xref:System.Windows.FontEastAsianLanguage.Simplified> &#124; <xref:System.Windows.FontEastAsianLanguage.Traditional> <xref:System.Windows.FontEastAsianLanguage.TraditionalNames><xref:System.Windows.FontEastAsianLanguage.Normal>|<xref:System.Windows.FontEastAsianLanguage.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.EastAsianWidths%2A>|<xref:System.Windows.FontEastAsianWidths.Full> &#124; <xref:System.Windows.FontEastAsianWidths.Half> &#124; <xref:System.Windows.FontEastAsianWidths.Normal> &#124; <xref:System.Windows.FontEastAsianWidths.Proportional> &#124; <xref:System.Windows.FontEastAsianWidths.Quarter> &#124; <xref:System.Windows.FontEastAsianWidths.Third>|<xref:System.Windows.FontEastAsianWidths.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.Fraction%2A>|<xref:System.Windows.FontFraction.Normal> &#124; <xref:System.Windows.FontFraction.Slashed> &#124; <xref:System.Windows.FontFraction.Stacked>|<xref:System.Windows.FontFraction.Normal?displayProperty=nameWithType>|  
 |<xref:System.Windows.Documents.Typography.HistoricalForms%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.HistoricalLigatures%2A>|<xref:System.Boolean>|`false`|  
@@ -333,12 +333,12 @@ ms.locfileid: "72005246"
 |<xref:System.Windows.Documents.Typography.StylisticSet18%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet19%2A>|<xref:System.Boolean>|`false`|  
 |<xref:System.Windows.Documents.Typography.StylisticSet20%2A>|<xref:System.Boolean>|`false`|  
-|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; 0|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
+|<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Documents.Typography>
-- [OpenType 規格](https://go.microsoft.com/fwlink/?LinkId=96731)
+- [OpenType 規格](https://docs.microsoft.com/typography/opentype/spec/)
 - [WPF 中的印刷樣式](typography-in-wpf.md)
 - [範例 OpenType 字型套件](sample-opentype-font-pack.md)
 - [將字型與應用程式一起封裝](packaging-fonts-with-applications.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7e034e92e1ff2b9bec0eaf8e0f3330f7a832a7e5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460833"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095160"
 ---
 # <a name="how-to-localize-an-application"></a>如何：將應用程式當地語系化
 本教學課程說明如何使用 LocBaml 工具來建立當地語系化的應用程式。  
@@ -23,7 +23,7 @@ ms.locfileid: "73460833"
 > LocBaml 工具不是可實際執行的應用程式。 這只是個範例，示範如何使用一些當地語系化的 API，並說明如何撰寫當地語系化工具。  
   
 <a name="Introduction"></a>   
-## <a name="overview"></a>總覽  
+## <a name="overview"></a>概觀  
  此討論提供將應用程式當地語系化的逐步方法。 首先，您要準備您的應用程式，以便從中擷取要轉譯的文字。 轉譯文字之後，您要轉譯的文字合併至原始應用程式的新複本中。  
   
 <a name="Requirements"></a>   
@@ -81,7 +81,7 @@ ms.locfileid: "73460833"
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>建置 LocBaml 工具  
   
-1. 建置 LocBaml 時所需的所有檔案都位在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 範例中。 從C# [LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)下載檔案。  
+1. 建置 LocBaml 時所需的所有檔案都位在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 範例中。 從C# [LocBaml 工具範例](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)下載檔案。  
   
 2. 從命令列執行專案檔 (locbaml.csproj)，以建置工具：  
   
@@ -137,11 +137,11 @@ ms.locfileid: "73460833"
   
    2. **資源索引鍵**。 當地語系化的資源識別碼。  
   
-   3. **分類**. 值型別。 請參閱[當地語系化屬性和批註](localization-attributes-and-comments.md)。  
+   3. **分類**。 值型別。 請參閱[當地語系化屬性和批註](localization-attributes-and-comments.md)。  
   
-   4. **可讀性**. 當地語系化工具是否能夠讀取該值。 請參閱[當地語系化屬性和批註](localization-attributes-and-comments.md)。  
+   4. **可讀性**。 當地語系化工具是否能夠讀取該值。 請參閱[當地語系化屬性和批註](localization-attributes-and-comments.md)。  
   
-   5. **可修改性**. 當地語系化工具是否能夠修改該值。 請參閱[當地語系化屬性和批註](localization-attributes-and-comments.md)。  
+   5. **可修改性**。 當地語系化工具是否能夠修改該值。 請參閱[當地語系化屬性和批註](localization-attributes-and-comments.md)。  
   
    6. **註解**。 該值的其他說明，有助於判斷某值當地語系化的方式。 請參閱[當地語系化屬性和批註](localization-attributes-and-comments.md)。  
   
@@ -149,11 +149,11 @@ ms.locfileid: "73460833"
   
    下表顯示這些欄位如何對應至 .csv 檔案的分隔值：  
   
-   |BAML 名稱|資源索引鍵|Category|可讀性|可修改性|註解|值|  
+   |BAML 名稱|資源索引鍵|類別|易於閱讀|可修改性|註解|值|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|false|false||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|true|true||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|None|true|true||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|略過|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|None|TRUE|TRUE||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|None|TRUE|TRUE||Goodbye World|
   
    請注意，[**批註**] 欄位的所有值都不包含任何值。如果欄位沒有值，則會是空的。 另請注意，第一個資料列中的專案既不是可讀取也不能修改，而且具有「忽略」做為它的**分類**值，全都表示此值無法當地語系化。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "73460833"
   
 6. 將所產生的附屬組件複製到新的資料夾。  
   
-7. 若要測試新的附屬組件，您需要變更您的應用程式用來執行的文化特性。 您可以使用下列其中一種做法：  
+7. 若要測試新的附屬組件，您需要變更您的應用程式用來執行的文化特性。 您可以使用下列其中一種作法：  
   
     - 變更作業系統的地區設定（[**開始** &#124; ] [**控制台** &#124; ] [**地區及語言選項**]）。  
   
@@ -206,10 +206,10 @@ ms.locfileid: "73460833"
 - 當地語系化資源 DLL 的版本必須與主要組件同步處理。  
   
 <a name="Whats_Next"></a>   
-## <a name="whats-next"></a>後續步驟  
+## <a name="whats-next"></a>接下來  
  您現在對於如何使用 LocBaml 工具，應該有基本的了解。  您應該能夠建立包含 UID 的檔案。 藉由使用 LocBaml 工具，您應該能夠剖析檔案來擷取可當地語系化的內容，而在內容轉譯之後，您應該能夠產生將轉譯內容合併的 .resources.dll 檔案。 本主題可能無法顧及所有細節，但是您現在已經有了使用 LocBaml 將應用程式當地語系化所需的知識。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WPF 的全球化](globalization-for-wpf.md)
 - [使用自動配置概觀](use-automatic-layout-overview.md)

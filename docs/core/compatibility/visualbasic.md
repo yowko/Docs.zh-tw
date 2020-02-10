@@ -1,13 +1,13 @@
 ---
-title: Visual Basic 的重大變更-.NET Core
+title: Visual Basic 的重大變更
 description: 列出 Visual Basic 與 .NET Core 搭配使用的重大變更。
 ms.date: 09/20/2019
-ms.openlocfilehash: e5a8070bdcf69df3aab8efa45968e226dc8054d6
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 00c88b4d6609f26ad6f2c3f90c8145e4d2eabaa9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116360"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092950"
 ---
 # <a name="visual-basic-breaking-changes"></a>Visual Basic 的重大變更
 

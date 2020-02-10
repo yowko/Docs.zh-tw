@@ -3,19 +3,19 @@ title: 編譯 config 設定
 description: 瞭解執行時間設定，其可設定 JIT 編譯程式適用于 .NET Core 應用程式的方式。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 0dab3b7b7726a232cf293e338308cf898b370759
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: adf1f01dba7387b89ee56784e33653d6a132c0e3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733531"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092885"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>編譯的執行時間設定選項
 
 ## <a name="tiered-compilation"></a>階層式編譯
 
 - 設定即時（JIT）編譯器是否使用[分層式編譯](../whats-new/dotnet-core-3-0.md#tiered-compilation)。 階層式編譯會透過兩個層級轉換方法：
-  - 第一層會更快速地產生程式碼（[快速 JIT](#quick-jit)），或載入預先編譯的程式碼（[ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)）。
+  - 第一層會更快速地產生程式碼（[快速 JIT](#quick-jit)），或載入預先編譯的程式碼（[ReadyToRun](#readytorun)）。
   - 第二層會在背景產生優化的程式碼（「優化 JIT」）。
 - 在 .NET Core 3.0 和更新版本中，預設會啟用階層式編譯。
 - 在 .NET Core 2.1 和2.2 中，階層式編譯預設為停用。
@@ -57,7 +57,7 @@ ms.locfileid: "76733531"
 
 - 設定 JIT 編譯程式是否使用*快速 jit*。 對於不包含迴圈的方法，以及無法使用預先編譯的程式碼，快速 JIT 會更快速地編譯它們，但不會進行優化。
 - 啟用快速 JIT 可減少啟動時間，但可能會產生效能特性降低的程式碼。 例如，程式碼可能會使用更多堆疊空間、配置更多記憶體，且執行速度較慢。
-- 如果已停用快速 JIT，但已啟用[分層編譯](#tiered-compilation)，則只有預先編譯的程式碼會參與階層式編譯。 如果未使用[ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)預先編譯方法，則 JIT 行為會與已停用階層式[編譯](#tiered-compilation)相同。
+- 如果已停用快速 JIT，但已啟用[分層編譯](#tiered-compilation)，則只有預先編譯的程式碼會參與階層式編譯。 如果未使用[ReadyToRun](#readytorun)預先編譯方法，則 JIT 行為會與已停用階層式[編譯](#tiered-compilation)相同。
 - 在 .NET Core 3.0 和更新版本中，預設會啟用 [快速 JIT]。
 - 在 .NET Core 2.1 和2.2 中，預設會停用 [快速 JIT]。
 
@@ -131,3 +131,13 @@ ms.locfileid: "76733531"
 
 </Project>
 ```
+
+## <a name="readytorun"></a>ReadyToRun
+
+- 設定 .NET Core 執行時間是否針對具有可用 ReadyToRun 資料的影像使用預先編譯的程式碼。 停用這個選項會強制執行時間執行 JIT 編譯架構程式碼。
+- 如需詳細資訊，請參閱[ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)。
+- 預設：啟用（`1`）。
+
+| | 設定名稱 | 值 |
+| - | - | - |
+| **環境變數** | `COMPlus_ReadyToRun` | 已啟用 `1`<br/>`0`-已停用 |

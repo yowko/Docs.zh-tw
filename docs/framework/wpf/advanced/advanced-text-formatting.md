@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: d509de02cd1b3f645ee439c0b0eb33fd1ddbdb07
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 26ee3c2b8a431200c3dc04130deb2247b6c1446d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636103"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095238"
 ---
 # <a name="advanced-text-formatting"></a>進階文字格式化
 Windows Presentation Foundation （WPF）提供一組健全的 Api，以便在您的應用程式中包含文字。 版面配置和 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Api （例如 <xref:System.Windows.Controls.TextBlock>）提供最常見且常用的文字呈現方式元素。 繪製 Api （例如 <xref:System.Windows.Media.GlyphRunDrawing> 和 <xref:System.Windows.Media.FormattedText>）提供了在繪圖中包含格式化文字的方法。 WPF 在最先進的層級提供可擴充的文字格式設定引擎，以控制文字呈現的每個層面，例如文字存放區管理、文字執行格式管理和内嵌物件管理。  
@@ -22,10 +22,10 @@ Windows Presentation Foundation （WPF）提供一組健全的 Api，以便在�
  本主題提供 WPF 文字格式的簡介。 它著重于用戶端的執行和使用 WPF 文字格式設定引擎。  
   
 > [!NOTE]
-> 本檔中的所有程式碼範例都可以在「[先進文字格式」範例](https://go.microsoft.com/fwlink/?LinkID=159965)中找到。  
+> 本檔中的所有程式碼範例都可以在「[先進文字格式」範例](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI/TextFormatting)中找到。  
 
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>必要條件：  
+## <a name="prerequisites"></a>Prerequisites  
  本主題假設您熟悉用於文字呈現的較高層級 Api。 大部分的使用者案例都不需要本主題中討論的先進文字格式 Api。 如需不同文字 Api 的簡介，請參閱[WPF 中的檔](documents-in-wpf.md)。  
   
 <a name="section1"></a>   
@@ -67,7 +67,7 @@ Windows Presentation Foundation （WPF）提供一組健全的 Api，以便在�
   
  下表顯示一些預先定義的 <xref:System.Windows.Media.TextFormatting.TextRun> 物件。  
   
-|TextRun 類型|使用|  
+|TextRun 類型|使用量|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|用來將字元圖像 (glyph) 的表示法傳回文字格式子的特殊文字執行。|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|用來提供內容的特殊文字執行，在這些內容中會整體進行測量、點擊測試和繪製，例如文字內的按鈕或影像。|  
@@ -91,7 +91,7 @@ Windows Presentation Foundation （WPF）提供一組健全的 Api，以便在�
 ## <a name="specifying-formatting-properties"></a>指定格式設定屬性  
  <xref:System.Windows.Media.TextFormatting.TextRun> 物件是使用文字存放區所提供的屬性來格式化。 這些屬性有兩種類型： <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 和 <xref:System.Windows.Media.TextFormatting.TextRunProperties>。 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 處理段落內含屬性，例如 <xref:System.Windows.TextAlignment> 和 <xref:System.Windows.FlowDirection>。 <xref:System.Windows.Media.TextFormatting.TextRunProperties> 是段落內每個文字執行的不同屬性，例如前景筆刷、<xref:System.Windows.Media.Typeface>和字型大小。 若要執行自訂段落和自訂文字執行屬性類型，您的應用程式必須分別建立衍生自 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 和 <xref:System.Windows.Media.TextFormatting.TextRunProperties> 的類別。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WPF 中的印刷樣式](typography-in-wpf.md)
 - [WPF 中的文件](documents-in-wpf.md)

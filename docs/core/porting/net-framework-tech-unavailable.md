@@ -1,14 +1,15 @@
 ---
 title: .NET Core 上無法使用的 .NET Framework 技術
+titleSuffix: ''
 description: 了解無法在 .NET Core 上使用的 .NET Framework 技術
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 89871753fef92a30bf2151a618207a73b40bb402
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bd2488de653ecdfed261100b4c9019bea58fcab3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936952"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092937"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core 上無法使用的 .NET Framework 技術
 
@@ -22,7 +23,7 @@ ms.locfileid: "75936952"
 
 為了讓從 .NET Framework 移轉程式碼更加輕鬆，.NET Core 會公開部分 <xref:System.AppDomain> API 介面。 某些 API 會正常運作 (例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>)，某些成員不會執行任何動作 (例如 <xref:System.AppDomain.SetCachePath%2A>)，而其中某些會擲回 <xref:System.PlatformNotSupportedException> (例如 <xref:System.AppDomain.CreateDomain%2A>)。 在[dotnet/Runtime GitHub 存放庫](https://github.com/dotnet/runtime)中，檢查您用於[`System.AppDomain` 參考來源](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs)的類型。 請務必選取符合您所執行版本的分支。
 
-## <a name="remoting"></a>遠端處理
+## <a name="remoting"></a>遠端
 
 .NET 遠端處理已被識別為有問題的架構。 該功能是用於目前已不支援的跨 AppDomain 通訊。 此外，遠端處理需要執行階段支援，因此維護成本相當高昂。 基於這些原因，.NET Core 上並不支援 .NET 遠端處理，且我們也未計畫於未來支援該功能。
 
@@ -46,6 +47,6 @@ ms.locfileid: "75936952"
 
 .NET Core 不支援 System.EnterpriseServices (COM+)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [從 .NET Framework 移植到 .NET Core 的總覽](../porting/index.md)

@@ -2,12 +2,12 @@
 title: .NET Core 命令列工具架構
 description: 深入了解 .NET Core 工具層級，以及最新版本中已變更的內容。
 ms.date: 03/06/2017
-ms.openlocfilehash: 0064e7354f073be618bcf6a79962ab495927fadd
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980206"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092911"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中變更的高階概觀
 
@@ -24,13 +24,13 @@ ms.locfileid: "76980206"
 
 ## <a name="the-tooling-layers"></a>工具分層
 
-離開現有的專案系統以及轉換建置引擎，接下來很自然的問題就是這些變更是否會變更完整 .NET Core 工具生態系統的整體「分層」呢？ 有新的項目和元件嗎？
+隨著組建引擎的變更，以及從現有的專案系統移開，自然會有一些問題。 其中任何一項變更都會變更 .NET Core 工具生態系統的整體「分層」功能嗎？ 有新的項目和元件嗎？
 
 讓我們開始快速複習 Preview 2 分層，如下列圖片所示︰
 
 ![Preview 2 工具高階架構](media/cli-msbuild-architecture/p2-arch.png)
 
-這些工具的分層相當簡單。 在底部，基礎是 .NET Core CLI。 所有其他較高層級的工具，例如 Visual Studio 或 Visual Studio Code，取決於並依賴 CLI 來建立專案、還原相依性等。 例如，如果 Visual Studio 想要執行還原作業，它會呼叫 CLI 中的 `dotnet restore` （[請參閱 note](#dotnet-restore-note)）命令。
+Preview 2 中的工具分層是直接的。 在底部，基礎是 .NET Core CLI。 所有其他較高層級的工具，例如 Visual Studio 或 Visual Studio Code，取決於並依賴 CLI 來建立專案、還原相依性等。 例如，如果 Visual Studio 想要執行還原作業，它會呼叫 CLI 中的 `dotnet restore` （[請參閱 note](#dotnet-restore-note)）命令。
 
 隨著移動到新的專案系統，之前的圖表有所變更：
 
@@ -45,7 +45,7 @@ ms.locfileid: "76980206"
 
 ### <a name="cli-commands"></a>CLI 命令
 
-共用的 SDK 元件表示大部分現有的 CLI 命令已經重新實作為 MSBuild 工作和目標。 這對 CLI 命令和您的工具組的使用方式有什麼意義？
+共用的 SDK 元件表示大部分現有的 CLI 命令都已根據重新實作為 MSBuild 工作和目標。 這對 CLI 命令和您的工具組的使用方式有什麼意義？
 
 從使用觀點來看，它不會變更您使用 CLI 的方式。 CLI 仍然具有 .NET Core 1.0 Preview 2 版本中存在的核心命令：
 

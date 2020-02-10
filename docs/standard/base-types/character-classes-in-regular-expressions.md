@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 047d0ea7b3783f8cf45afde2a15470adda94cd6e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711450"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095043"
 ---
 # <a name="character-classes-in-regular-expressions"></a>規則運算式中的字元類別
 
@@ -127,7 +127,7 @@ ms.locfileid: "75711450"
   
  可以串連兩個或多個字元範圍。 例如，若要指定從 "0" 到 "9" 的十進位數字範圍、從 "a" 到 "f" 的小寫字母範圍，以及從 "A" 到 "F" 的大寫字母範圍，可以使用 `[0-9a-fA-F]`。  
   
- 負字元群組中的前置 `^` 字元是必要的，它表示字元群組是負字元群組而非正字元群組。  
+ 負字元群組中的前置插入號字元（`^`）是強制性的，表示字元群組是負字元群組，而不是正字元群組。  
   
 > [!IMPORTANT]
 > 較大規則運算式模式中的負字元群組不是零寬度的判斷提示。 也就是說，在評估負字元群組之後，規則運算式引擎會在輸入字串中前進一個字元。  
@@ -226,10 +226,10 @@ ms.locfileid: "75711450"
 ## <a name="word-character-w"></a>文字字元：\w  
  `\w` 會比對任何文字字元。 文字字元是下表中所列的任何 Unicode 分類的成員。  
   
-|分類|描述|  
+|類別|描述|  
 |--------------|-----------------|  
 |Ll|字母、小寫|  
-|Lu|字母、大寫|  
+|盧巴卡丹加文|字母、大寫|  
 |Lt|字母、字首大寫|  
 |Lo|字母、其他|  
 |Lm|字母、修飾詞|  
@@ -244,7 +244,7 @@ ms.locfileid: "75711450"
   
  下列範例會使用 `\w` 語言項目比對文字中重複的字元。 這個範例會定義規則運算式模式 `(\w)\1`，該模式解譯如下。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |(\w)|比對文字字元。 這是第一個擷取群組。|  
 |\1|比對第一個擷取的值。|  
@@ -260,10 +260,10 @@ ms.locfileid: "75711450"
   
  換句話說，它會比對下表所列 Unicode 分類中字元以外的所有字元。  
   
-|分類|描述|  
+|類別|描述|  
 |--------------|-----------------|  
 |Ll|字母、小寫|  
-|Lu|字母、大寫|  
+|盧巴卡丹加文|字母、大寫|  
 |Lt|字母、字首大寫|  
 |Lo|字母、其他|  
 |Lm|字母、修飾詞|  
@@ -278,7 +278,7 @@ ms.locfileid: "75711450"
   
  以下範例將說明 `\W` 字元類別。  它會定義規則運算式模式 `\b(\w+)(\W){1,2}`，該模式會比對後面接一個或多個非文字字元的文字，例如空白字元或標點符號。 規則運算式的解譯方式如下表所示。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |\b|開始字緣比對。|  
 |(\w+)|比對一個或多個文字字元。 這是第一個擷取群組。|  
@@ -293,7 +293,7 @@ ms.locfileid: "75711450"
 ## <a name="whitespace-character-s"></a>空白字元：\s  
  `\s` 會比對任何空白字元。 它相當於下表列出的逸出序列和 Unicode 分類。  
   
-|分類|描述|  
+|類別|描述|  
 |--------------|-----------------|  
 |`\f`|換頁字元 \u000C。|  
 |`\n`|新行字元 \u000A。|  
@@ -307,12 +307,12 @@ ms.locfileid: "75711450"
   
  以下範例將說明 `\s` 字元類別。 它會定義規則運算式模式 `\b\w+(e)?s(\s|$)`，該模式會比對結尾為 "s" 或 "es" 且後面加上空白字元或是輸入字串結尾的文字。 規則運算式的解譯方式如下表所示。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |\b|開始字緣比對。|  
 |\w+|比對一個或多個文字字元。|  
 |(e)?|比對 "e" 零次或一次。|  
-|秒|比對 "s"。|  
+|s|比對 "s"。|  
 |(\s&#124;$)|比對空白字元或輸入字串的結尾。|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
@@ -326,7 +326,7 @@ ms.locfileid: "75711450"
   
  下列範例將說明 `\S` 語言項目。 規則運算式模式 `\b(\S+)\s?` 會比對以空白字元分隔的字串。 在比對之 <xref:System.Text.RegularExpressions.GroupCollection> 物件中的第二個項目包含相符的字串。 規則運算式的解譯方式如下表所示。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`\b`|開始字緣比對。|  
 |`(\S+)`|比對一個或多個非空白字元。 這是第一個擷取群組。|  
@@ -343,7 +343,7 @@ ms.locfileid: "75711450"
   
  下列範例將說明 `\d` 語言項目。 它會測試輸入字串是否表示美國和加拿大的有效電話號碼。 規則運算式模式 `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` 的定義如下表所示。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`^`|在輸入字串的開頭開始比對。|  
 |`\(?`|比對零個或一個常值 "(" 字元。|  
@@ -365,7 +365,7 @@ ms.locfileid: "75711450"
   
  下列範例將說明 \D 語言項目。 它會測試像是組件編號這類字串，是否由十進位和非十進位字元的適當組合所構成。 規則運算式模式 `^\D\d{1,5}\D*$` 的定義如下表所示。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`^`|在輸入字串的開頭開始比對。|  
 |`\D`|比對非數字字元。|  
@@ -380,7 +380,7 @@ ms.locfileid: "75711450"
 ## <a name="supported-unicode-general-categories"></a>支援的 Unicode 一般分類  
  Unicode 定義了下表中所列的一般類別。 如需詳細資訊，請參閱 [Unicode Character Database](https://www.unicode.org/reports/tr44/) 中的 "UCD File Format" 和 "General Category Values" 副標題。  
   
-|分類|描述|  
+|類別|描述|  
 |--------------|-----------------|  
 |`Lu`|字母、大寫|  
 |`Ll`|字母、小寫|  
@@ -558,7 +558,7 @@ ms.locfileid: "75711450"
   
  下列範例會定義規則運算式 (`^[0-9-[2468]]+$`)，該運算式會比對輸入字串中的零和奇數數字。  規則運算式的解譯方式如下表所示。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |^|從輸入字串開頭開始比對。|  
 |`[0-9-[2468]]+`|比對 0 到 9 中不包括 2、4、6 和 8 的任何出現一次或多次的字元。 換句話說，就是比對出現一次或多次的零或奇數。|  
@@ -567,7 +567,7 @@ ms.locfileid: "75711450"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Char.GetUnicodeCategory%2A>
 - [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

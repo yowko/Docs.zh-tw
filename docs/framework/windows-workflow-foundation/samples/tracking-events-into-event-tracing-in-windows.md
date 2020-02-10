@@ -2,12 +2,12 @@
 title: 在 Windows 事件追蹤中追蹤事件
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: fe50476eedef505258c2e6818e75a32c06ed6fa6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2c397bcfa809a1306e9c31bf3f652b055d997f38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715934"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094575"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件追蹤中追蹤事件
 
@@ -47,7 +47,7 @@ Windows Workflow Foundation 提供追蹤基礎結構，以追蹤工作流程實�
 
 3. 若要執行此方案，請按 F5。
 
-    根據預設，服務會接聽埠53797（ http://localhost:53797/SampleWorkflowService.xamlx) 。
+    根據預設，服務會接聽埠53797（ http://localhost:53797/SampleWorkflowService.xamlx)。
 
 4. 使用 [檔案瀏覽器] 開啟 WCF 測試用戶端。
 
@@ -57,7 +57,7 @@ Windows Workflow Foundation 提供追蹤基礎結構，以追蹤工作流程實�
 
 5. 在 WCF 測試用戶端**中，從 [檔案**] 功能表選取 [**新增服務**]。
 
-    在輸入方塊中加入端點位址。 預設為 `http://localhost:53797/SampleWorkflowService.xamlx`。
+    在輸入方塊中加入端點位址。 預設值為 `http://localhost:53797/SampleWorkflowService.xamlx`。
 
 6. 開啟 [事件檢視器] 應用程式。
 
@@ -138,7 +138,7 @@ Windows Workflow Foundation 提供追蹤基礎結構，以追蹤工作流程實�
 > [!NOTE]
 > 在 [事件檢視器] 中有一個可能無法為 ETW 事件解碼的已知問題。 您可能會看到類似下面的錯誤訊息。
 >
-> 找不到來源 Microsoft-Windows-應用程式伺服器-應用程式中的事件識別碼 \<識別碼 > 的描述。 本機電腦可能並未安裝引發此事件的元件，或安裝已損毀。 您可以在本機電腦上安裝或修復該元件。
+> 找不到來源 Microsoft-Windows-應用程式伺服器-應用程式中的事件識別碼 \<識別碼 > 的描述。 可能是引發此事件的元件未安裝在您的本機電腦上，或安裝已損毀。 您可以在本機電腦上安裝或修復該元件。
 >
 > 如果您遇到這個錯誤，請按一下執行窗格中的 [重新整理]。 現在，此事件應該就會正確解碼。
 
@@ -151,6 +151,6 @@ Windows Workflow Foundation 提供追蹤基礎結構，以追蹤工作流程實�
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [AppFabric 監視範例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 監視範例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

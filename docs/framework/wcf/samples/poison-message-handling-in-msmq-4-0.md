@@ -2,26 +2,26 @@
 title: MSMQ 4.0 中的有害訊息處理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: cc4da0deea0de2cd8b3bb8e8f2ba9b8a17e3cc60
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 0a9d4ec9657bacdbcb1273791dc7a593a9565c25
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919389"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094952"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的有害訊息處理
 這個範例會示範如何在服務中執行有害訊息處理。 這個範例是以交易式[MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)系結範例為基礎。 這個範例會使用 `netMsmqBinding`。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
 
  在佇列通訊中，用戶端會使用佇列與服務通訊。 更精確地說，用戶端會傳送訊息至佇列。 服務會接收來自佇列的訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。
 
- 有害訊息是指會從佇列反覆讀取的訊息，此時讀取該訊息的服務無法處理訊息，因而終止訊息讀取時所位於的異動。 此時，服務會重試訊息。 如果訊息有問題，理論上這種情形會不斷發生。 請注意，只有當您使用交易來讀取佇列並叫用服務作業時，才會發生這個情況。
+ 有害訊息是指會從佇列反覆讀取的訊息，此時讀取該訊息的服務無法處理訊息，因而終止訊息讀取時所位於的異動。 此時，服務會重試訊息。 如果訊息有問題，理論上這種情形會不斷發生。 只有當您使用交易從佇列讀取並叫用服務作業時，才會發生這種情況。
 
  根據 MSMQ 的版本，NetMsmqBinding 支援有害訊息的有限到完整偵測。 訊息已偵測為有害之後，有多種方法可以處理此訊息。 同樣地，根據 MSMQ 的版本，NetMsmqBinding 會支援完整處理有害訊息的有限處理功能。
 
- 這個範例說明 Windows Server 2003 和 Windows XP 平臺上提供的有限有害設施，以及 Windows Vista 上提供的完整有害功能。 這兩個範例的目標都是要將有害訊息從佇列移出至其他佇列，以便有害訊息服務可以接著處理這些有害訊息。
+ 這個範例說明 Windows Server 2003 和 Windows XP 平臺上提供的有限有害設施，以及 Windows Vista 上提供的完整有害功能。 在這兩個範例中，目標是要將有害訊息從佇列移出至另一個佇列。 然後，該佇列就可以由有害訊息服務來提供服務。
 
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 有害訊息處理範例
- 在 Windows Vista 中，MSMQ 提供有害的子佇列設備，可用來儲存有害訊息。 這個範例示範使用 Windows Vista 處理有害訊息的最佳作法。
+ 在 Windows Vista 中，MSMQ 提供有害子佇列設備，可用來儲存有害訊息。 這個範例示範使用 Windows Vista 處理有害訊息的最佳作法。
 
  Windows Vista 中的有害訊息偵測功能非常複雜。 有三個屬性能夠協助偵測。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 是從佇列重新讀取指定訊息、並接著分派至應用程式以便進行處理的次數。 因為訊息無法分派至應用程式，或應用程式在服務作業中回復交易而使訊息放回佇列時，該訊息就會從佇列重新讀取。 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> 是將訊息移至重試佇列的次數。 當達到 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 時，訊息就會移至重試佇列。 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 屬性是指時間延遲，在經過此段時間之後，訊息就會從重試佇列移回主要佇列。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 會重設為 0。 這時訊息會再試一次。 如果讀取訊息的所有嘗試都失敗，該訊息就會被標記為有害。
 
@@ -31,7 +31,7 @@ ms.locfileid: "76919389"
 
 - Drop：捨棄訊息。
 
-- Move：將訊息移至有害訊息子佇列。 此值僅適用于 Windows Vista。
+- 移動：將訊息移至有害訊息子佇列。 此值僅適用于 Windows Vista。
 
 - Reject：拒絕訊息，並將訊息傳回至傳送者之寄不出的信件佇列。 此值僅適用于 Windows Vista。
 
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- 服務作業會顯示訊息，指出正在處理訂單。 為了示範有害訊息功能，`SubmitPurchaseOrder` 服務作業會擲回例外狀況，以復原在隨機叫用服務時的異動。 這樣會導致訊息必須放回佇列中。 最後，訊息會標示為有害。 組態會設定成將有害訊息移至有害訊息子佇列。
+ 服務作業會顯示訊息，指出正在處理訂單。 為了示範有害訊息功能，`SubmitPurchaseOrder` 服務作業會擲回例外狀況，以便在服務的隨機調用上回複交易。 這樣會導致訊息必須放回佇列中。 最後，訊息會標示為有害。 設定是將有害訊息移至有害子佇列。
 
 ```csharp
 // Service class that implements the service contract.
@@ -206,7 +206,7 @@ public class OrderProcessorService : IOrderProcessor
     }
 ```
 
- 與從訂單佇列中讀取訊息的訂單處理服務不同，有害訊息服務會從有害子佇列中讀取訊息。 有害佇列是主要佇列的子佇列，名為 "poison" 且由 MSMQ 自動產生。 若要存取有害佇列，請提供後面加上 ";" 的主要佇列名稱和子佇列名稱 (在此範例中為 -"poison")，如下列範例組態所示。
+ 不同于從訂單佇列讀取訊息的訂單處理服務，有害訊息服務會從有害子佇列讀取訊息。 有害佇列是主要佇列的子佇列，其名稱為「有害」，而且是由 MSMQ 自動產生。 若要存取它，請提供主要佇列名稱，後面接著 ";" 和子佇列名稱（在此案例中為 "有害"），如下列範例設定所示。
 
 > [!NOTE]
 > 在 MSMQ v3.0 的範例中，有害佇列名稱不是子佇列，而是我們將訊息移至其中的佇列。
@@ -309,7 +309,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
      請透過設定端點的 bindingConfiguration 屬性，確定端點與繫結相關聯。
 
-2. 請務必先變更 PoisonMessageServer、伺服器和用戶端上的組態，再執行範例。
+2. 執行範例之前，請確定您已變更 PoisonMessageServer、伺服器和用戶端上的設定。
 
     > [!NOTE]
     > 將 `security mode` 設定為 `None`，相當於將 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全性設定為 `None`。  

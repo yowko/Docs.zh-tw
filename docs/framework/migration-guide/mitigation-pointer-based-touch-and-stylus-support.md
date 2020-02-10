@@ -7,16 +7,16 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-ms.openlocfilehash: 6b3e8068be2f5ed82c483b760fe100ea0a751588
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457866"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094471"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>風險降低︰以指標為基礎的觸控及手寫筆支援
 
-以 .NET Framework 4.7 為目標並在從 Windows 10 Creators Update 開始的 Windows 系統上執行的 WPF 應用程式，可啟用選擇性的 `WM_POINTER` 式 WPF 觸控/手寫筆堆疊。
+以 .NET Framework 4.7 為目標，且從 Windows 10 建立者更新開始在 Windows 上執行的 WPF 應用程式，可以啟用選擇性的 `WM_POINTER`為基礎的 WPF 觸控/手寫筆堆疊。
 
 ## <a name="impact"></a>影響
 
@@ -40,7 +40,7 @@ ms.locfileid: "73457866"
 
 ## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>選擇加入 WM_POINTER 式觸控/手寫筆支援
 
-想要啟用此堆疊的開發人員可以將以下內容加入至他們應用程式的 app.config 檔案︰
+想要啟用此堆疊的開發人員可以將下列新增至其應用*程式的 app.config 檔案。*
 
 ```xml
 <configuration>
@@ -52,6 +52,6 @@ ms.locfileid: "73457866"
 
 移除此項目或將其值設為 `false` 可關閉這個選擇性的堆疊。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [應用程式相容性](application-compatibility.md)

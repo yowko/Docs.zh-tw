@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 72bc867bf0a789279da9a01f97c85d96b78684ed
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ac4dafef92bbc900d291a5b653c55ba295f1a6d6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75444344"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093223"
 ---
 # <a name="enumeration-types-c-reference"></a>列舉類型（C#參考）
 
-列舉型別（或列舉型別）是由基礎[整數數值](integral-numeric-types.md)類型的一組命名常數所定義的實值型別。 若要定義列舉類型，請使用 `enum` 關鍵字，並指定*列舉成員*的名稱：
+*列舉型*別（或*列舉型*別）是由基礎[整數數值](integral-numeric-types.md)類型的一組命名常數所定義的實[值型](value-types.md)別。 若要定義列舉類型，請使用 `enum` 關鍵字，並指定*列舉成員*的名稱：
 
 ```csharp
 enum Season
@@ -85,9 +85,9 @@ enum ErrorCode : ushort
 - [明確列舉轉換](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
 - [隱含列舉轉換](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [列舉類型格式字串](../../../standard/base-types/enumeration-format-strings.md)
+- [列舉格式字串](../../../standard/base-types/enumeration-format-strings.md)
 - [列舉命名慣例](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
 - [switch 陳述式](../keywords/switch.md)

@@ -1,20 +1,20 @@
 ---
-title: 使用 Permutation Feature Importance 說明模型預測
+title: 使用排列功能重要性來解讀 ML.NET 模型
 description: 在 ML.NET 中使用 Permutation Feature Importance 了解模型的功能重要性
-ms.date: 08/29/2019
+ms.date: 01/30/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4bad8b0ed17a34ba290bf9c00d65cc3f000a2acf
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976679"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092612"
 ---
-# <a name="explain-model-predictions-using-permutation-feature-importance"></a>使用 Permutation Feature Importance 說明模型預測
+# <a name="interpret-model-predictions-using-permutation-feature-importance"></a>使用排列功能重要性來解讀模型預測
 
-透過了解使用 Permutation Feature Importance (PFI) 之預測的貢獻功能，了解如何解釋 ML.NET 機器學習模型預測。
+使用排列功能重要性（PFI），瞭解如何解讀 ML.NET 機器學習模型預測。 PFI 會提供每項功能對預測的相對比重。
 
 機器學習模型常被視為接受輸入和產生輸出的黑箱。 很少有人了解影響輸出之功能間的中繼步驟或互動。 隨著更多日常生活層面引入機器學習 (例如醫療保健)，了解機器學習模型所做決策的原因至關重要。 例如，如果診斷經由機器學習模型確立，醫護專業人員需要能夠查看確立該診斷的因素。 提供正確的診斷可能會對病患能否快速復原造成極大差異。 因此，模型的可解釋性層級愈高，醫護專業人員接受或拒絕模型決策的信賴度就愈高。
 
@@ -26,7 +26,7 @@ ms.locfileid: "73976679"
 
 資料集用於此範例的特性位在 1-12 行。 目標是預測 `Price`。
 
-| Column | 特殊功能 | 描述
+| 資料行 | 功能 | 描述
 | --- | --- | --- |
 | 1 | CrimeRate | 人均犯罪率
 | 2 | ResidentialZones | 城市住宅區
@@ -137,7 +137,7 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
 ```
 
-對定型資料集使用 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) 的結果是 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) 物件的 [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray)。 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) 提供的摘要統計資料，例如 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 多個觀察值的平均值和標準差，等於 `permutationCount` 參數指定的排列數目。
+對定型資料集使用 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) 的結果是 [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) 物件的 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics)。 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) 提供的摘要統計資料，例如 [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 多個觀察值的平均值和標準差，等於 `permutationCount` 參數指定的排列數目。
 
 重要性，或在本例中為 [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) 所計算 R 平方計量的絕對平均下降，可以從最重要排至最不重要。
 
@@ -158,7 +158,7 @@ foreach (var feature in featureImportanceMetrics)
 
 列印 `featureImportanceMetrics` 中每個特性的值會產生類似以下輸出。 請記住，您應該預期會看到不同的結果，因為這些值會隨著指定的資料而變化。
 
-| 特殊功能 | 變更為 R 平方 |
+| 功能 | 變更為 R 平方 |
 |:--|:--:|
 HighwayAccess       |   -0.042731
 StudentTeacherRatio |   -0.012730

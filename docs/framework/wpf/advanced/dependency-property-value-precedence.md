@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a9ff3a4f6ac08a0f7ec6dd9fc26bf190f43f3584
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740844"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095199"
 ---
 # <a name="dependency-property-value-precedence"></a>相依性屬性值優先順序
 <a name="introduction"></a> 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的運作方式如何影響相依性屬性的值，並描述屬性系統套用到屬性有效值的優先順序。  
@@ -71,7 +71,7 @@ ms.locfileid: "73740844"
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
- 作為優先順序項目的 TemplatedParent 不會套用到您直接在標準應用程式標記中宣告之項目的任何屬性。 TemplatedParent 概念只對視覺化樹狀結構內因套用範本而產生的子項目有效。 當屬性系統在 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 範本中搜尋值時，它會搜尋建立該元素的範本。 來自 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 範本的屬性值通常會像是在子專案上設定為區域值一樣，但這個較低的優先順序與本機值存在，因為範本可能會共用。 如需詳細資訊，請參閱 <xref:System.Windows.FrameworkElement.TemplatedParent%2A>。  
+ 作為優先順序項目的 TemplatedParent 不會套用到您直接在標準應用程式標記中宣告之項目的任何屬性。 TemplatedParent 概念只對視覺化樹狀結構內因套用範本而產生的子項目有效。 當屬性系統在 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 範本中搜尋值時，它會搜尋建立該元素的範本。 來自 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> 範本的屬性值通常會像是在子專案上設定為區域值一樣，但這個較低的優先順序與本機值存在，因為範本可能會共用。 如需詳細資訊，請參閱<xref:System.Windows.FrameworkElement.TemplatedParent%2A>。  
   
 <a name="style_property"></a>   
 ## <a name="the-style-property"></a>Style 屬性  
@@ -93,7 +93,7 @@ ms.locfileid: "73740844"
   
  <xref:System.Windows.Controls.Primitives.Thumb> 有一些可自訂的屬性。 <xref:System.Windows.Controls.Primitives.Thumb> 的預設範本會建立含有數個嵌套 <xref:System.Windows.Controls.Border> 元件的基本結構/視覺化樹狀目錄，以建立斜面外觀。 如果範本中的屬性是要公開供 <xref:System.Windows.Controls.Primitives.Thumb> 類別自訂，則該屬性必須由範本內的[TemplateBinding](templatebinding-markup-extension.md)公開。 在 <xref:System.Windows.Controls.Primitives.Thumb>的情況下，這些框線的各種屬性會共用範本系結至屬性（例如 <xref:System.Windows.Controls.Border.Background%2A> 或 <xref:System.Windows.Controls.Border.BorderThickness%2A>）。 但特定其他屬性或視覺化排列方式是用硬式編碼加入控制項範本，或繫結至直接來自於主題的值，除了取代整個範本之外，無法以其他方式變更。 一般而言，如果屬性來自於樣板化父項目且不由範本繫結公開，就無法使用樣式調整，因為沒有簡單的方式可將它設為目標。 但該屬性仍會受到所套用範本中的屬性值繼承所影響，或受到預設值所影響。  
   
- 主題樣式在其定義中使用類型作為索引鍵。 不過，將主題套用至指定的專案實例時，會藉由檢查控制項上的 [<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>] 屬性來執行這個類型的主題查閱。 這與隱含樣式使用常值 Type 的方式相反。 即使實施者並未變更衍生的類別，<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 的值也會繼承出來（變更屬性的預期方式是不要在屬性層級覆寫它，而是改為變更屬性中繼資料中的預設值）。 這種間接方式可讓基底類別為沒有樣式 (或者更重要的是，在該樣式內沒有範本，因此完全沒有預設視覺外觀) 的衍生項目定義主題樣式。 因此，您可以從 <xref:System.Windows.Controls.Button> 衍生 `MyButton`，而且仍然會取得 <xref:System.Windows.Controls.Button> 預設範本。 如果您是 `MyButton` 的控制項作者，而您想要不同的行為，您可以覆寫 `MyButton` 上 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 的相依性屬性中繼資料，以傳回不同的索引鍵，然後定義相關主題樣式，包括 `MyButton` 的範本。您必須使用 `MyButton` 控制項來封裝。 如需主題、樣式和控制項撰寫的詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。  
+ 主題樣式在其定義中使用類型作為索引鍵。 不過，將主題套用至指定的專案實例時，會藉由檢查控制項上的 [<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>] 屬性來執行這個類型的主題查閱。 這與隱含樣式使用常值 Type 的方式相反。 即使實施者並未變更衍生的類別，<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 的值也會繼承出來（變更屬性的預期方式是不要在屬性層級覆寫它，而是改為變更屬性中繼資料中的預設值）。 這種間接方式可讓基底類別為沒有樣式 (或者更重要的是，在該樣式內沒有範本，因此完全沒有預設視覺外觀) 的衍生項目定義主題樣式。 因此，您可以從 <xref:System.Windows.Controls.Button> 衍生 `MyButton`，而且仍然會取得 <xref:System.Windows.Controls.Button> 預設範本。 如果您是 `MyButton` 的控制項作者，而您想要不同的行為，您可以覆寫 `MyButton` 上 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 的相依性屬性中繼資料，以傳回不同的索引鍵，然後定義相關主題樣式，包括您的 `MyButton` 控制項必須封裝的 `MyButton` 範本。 如需主題、樣式和控制項撰寫的詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。  
   
 <a name="resources"></a>   
 ## <a name="dynamic-resource-references-and-binding"></a>動態資源參考和繫結  
@@ -111,7 +111,7 @@ ms.locfileid: "73740844"
 ## <a name="coercion-animations-and-base-value"></a>強制型轉、動畫和基底值  
  強制型轉和動畫都會針對在整個 SDK 中稱為「基底值」的值採取動作。 因此，基底值是透過在項目中往上評估，直到達到第 2 個項目來決定的值。  
   
- 對動畫而言，如果動畫未同時指定特定行為的 "From" 和 "To"，或是動畫刻意在完成後還原成基底值，則基底值可能會對動畫值造成影響。 若要了解實際的情形，請執行 [From、To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)。 請試著設定此範例中矩形高度的區域數值，讓初始區域數值與動畫中的任何 "From" 不同。 您會發現，動畫會立即使用 "From" 值啟動，並在啟動後取代基底值。 動畫可能會指定在動畫完成後，藉由指定 [停止 <xref:System.Windows.Media.Animation.FillBehavior>] 來返回所找到的值。 在此之後，就會使用正常優先順序來決定基底值。  
+ 對動畫而言，如果動畫未同時指定特定行為的 "From" 和 "To"，或是動畫刻意在完成後還原成基底值，則基底值可能會對動畫值造成影響。 若要了解實際的情形，請執行 [From、To 和 By 動畫目標值範例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)。 請試著設定此範例中矩形高度的區域數值，讓初始區域數值與動畫中的任何 "From" 不同。 您會發現，動畫會立即使用 "From" 值啟動，並在啟動後取代基底值。 動畫可能會指定在動畫完成後，藉由指定 [停止 <xref:System.Windows.Media.Animation.FillBehavior>] 來返回所找到的值。 在此之後，就會使用正常優先順序來決定基底值。  
   
  您可將多個動畫套用到單一屬性，每個動畫可能已透過值優先順序的不同點定義。 不過，這些動畫可能會將值結合起來，而不是只從較高的優先順序套用動畫。 這完全取決於動畫的定義方式，以及要顯示為動畫之值的類型。 如需將屬性顯示為動畫的詳細資訊，請參閱[動畫概觀](../graphics-multimedia/animation-overview.md)。  
   
@@ -123,9 +123,9 @@ ms.locfileid: "73740844"
   
 <a name="clearvalue"></a>   
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue 和值優先順序  
- <xref:System.Windows.DependencyObject.ClearValue%2A> 方法提供一個便利的方式，從在專案上設定的相依性屬性中清除任何本機套用的值。 不過，呼叫 <xref:System.Windows.DependencyObject.ClearValue%2A> 並不保證在屬性註冊期間，在中繼資料中建立的預設值就是新的有效值。 值優先順序中的所有其他參與者仍在作用中。 只有在本機設定的值會從優先順序移除。 例如，如果您在屬性上呼叫 <xref:System.Windows.DependencyObject.ClearValue%2A>，而該屬性也是由主題樣式所設定，則主題值會套用為新的值，而不是以中繼資料為基礎的預設。 如果您想要讓所有屬性值參與者跳出進程，並將值設定為已註冊的中繼資料預設值，您可以藉由查詢相依性屬性中繼資料來明確取得該預設值，然後您就可以在本機使用預設值使用 <xref:System.Windows.DependencyObject.SetValue%2A>的呼叫來設定屬性。  
+ <xref:System.Windows.DependencyObject.ClearValue%2A> 方法提供一個便利的方式，從在專案上設定的相依性屬性中清除任何本機套用的值。 不過，呼叫 <xref:System.Windows.DependencyObject.ClearValue%2A> 並不保證在屬性註冊期間，在中繼資料中建立的預設值就是新的有效值。 值優先順序中的所有其他參與者仍在作用中。 只有在本機設定的值會從優先順序移除。 例如，如果您在屬性上呼叫 <xref:System.Windows.DependencyObject.ClearValue%2A>，而該屬性也是由主題樣式所設定，則主題值會套用為新的值，而不是以中繼資料為基礎的預設。 如果您想要讓所有屬性值參與者跳出進程，並將值設定為已註冊的中繼資料預設值，您可以藉由查詢相依性屬性中繼資料來明確取得該預設值，然後您就可以使用預設值，透過呼叫 <xref:System.Windows.DependencyObject.SetValue%2A>來設定屬性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>

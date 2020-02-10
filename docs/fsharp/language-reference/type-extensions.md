@@ -1,13 +1,13 @@
 ---
 title: 類型擴充
 description: 瞭解類型F#擴充功能如何讓您將新成員加入至先前定義的物件類型。
-ms.date: 11/04/2019
-ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 02/05/2020
+ms.openlocfilehash: 9ab3a007783f67fd8d80cff840ac3085fdcd60f7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341576"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092677"
 ---
 # <a name="type-extensions"></a>類型延伸模組
 
@@ -33,7 +33,8 @@ open System.Runtime.CompilerServices
 
 [<Extension>]
 type Extensions() =
-    [static] member self-identifier.extension-name (ty: typename, [args]) =
+    [<Extension>]
+    static member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
 ```
@@ -136,12 +137,21 @@ namespace Extensions
 open System.Runtime.CompilerServices
 
 [<Extension>]
-type IEnumerableExtensions() =
+type IEnumerableExtensions =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
 使用時，此程式碼會使其看起來像是在 <xref:System.Collections.Generic.IEnumerable%601>上定義 `Sum`，只要 `Extensions` 已開啟或在範圍內即可。
+
+若要讓擴充功能可用於 VB.NET 程式碼，元件層級需要額外的 `ExtensionAttribute`：
+
+```fsharp
+module AssemblyInfo
+open System.Runtime.CompilerServices
+[<assembly:Extension>]
+do ()
+```
 
 ## <a name="other-remarks"></a>其他備註
 
@@ -149,7 +159,7 @@ type IEnumerableExtensions() =
 
 - 可存取的任何類型都可以擴充。
 - 內建和選擇性類型延伸模組可以定義_任何_成員類型，而不只是方法。 例如，也可以提供延伸模組屬性。
-- [語法](type-extensions.md#syntax)`self-identifier`中的標記代表所叫用之類型的實例, 就像一般成員一樣。
+- [語法](type-extensions.md#syntax)中的 `self-identifier` token 代表所叫用之型別的實例，就像一般成員一樣。
 - 擴充成員可以是靜態或實例成員。
 - 類型擴充功能上的類型變數必須符合宣告類型的條件約束。
 
@@ -166,7 +176,7 @@ type IEnumerableExtensions() =
 
 最後，如果一個類型有多個內建類型延伸模組，則所有成員都必須是唯一的。 對於選擇性的類型擴充，不同類型延伸模組中相同類型的成員可以具有相同的名稱。 只有當用戶端程式代碼開啟兩個不同的範圍來定義相同的成員名稱時，才會發生模糊錯誤。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [F# 語言參考](index.md)
 - [成員](./members/index.md)

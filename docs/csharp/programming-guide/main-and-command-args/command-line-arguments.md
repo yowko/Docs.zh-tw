@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: e73eeeeb0e613d45b2ce31e744803bb75ba2a3c2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d6775263e6f1afb227aa263b01d60f5181da74f3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75700636"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093506"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>命令列引數 (C# 程式設計手冊)
 
@@ -26,13 +26,13 @@ ms.locfileid: "75700636"
 
 [!code-csharp[csProgGuideMain#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#4)]
 
-您也可以使用 <xref:System.Convert> 類別或 `Parse` 方法，將字串引數轉換為數字類型。 例如，下列陳述式將使用 <xref:System.Int64.Parse%2A> 方法，以將 `string` 轉換為 `long` 數字：
+您也可以使用 <xref:System.Convert> 類別或 `Parse` 方法，將字串引數轉換為數字類型。 例如，下列陳述式將使用 `string` 方法，以將 `long` 轉換為 <xref:System.Int64.Parse%2A> 數字：
 
 ```csharp
 long num = Int64.Parse(args[0]);
 ```
 
-也可能使用別名為 `Int64` 的 C# 類型 `long`：
+也可能使用別名為 `long` 的 C# 類型 `Int64`：
 
 ```csharp
 long num = long.Parse(args[0]);
@@ -44,7 +44,7 @@ long num = long.Parse(args[0]);
 long num = Convert.ToInt64(s);
 ```
 
-如需詳細資訊，請參閱<xref:System.Int64.Parse%2A>和<xref:System.Convert>。
+如需詳細資訊，請參閱 <xref:System.Int64.Parse%2A> 和 <xref:System.Convert>。
 
 ## <a name="example"></a>範例
 
@@ -71,13 +71,13 @@ long num = Convert.ToInt64(s);
 5. 命令會產生以下輸出：`The factorial of 3 is 6.`
 
 > [!NOTE]
-> 在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁面](/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。
+> 在 Visual Studio 中執行應用程式時，您可以在[專案設計工具、偵錯頁](/visualstudio/ide/reference/debug-page-project-designer)中指定命令列引數。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Environment?displayProperty=nameWithType>
 - [C# 程式設計指南](../index.md)
 - [Main() 和命令列引數](index.md)
-- [如何 dsplay 命令列引數](how-to-display-command-line-arguments.md)
+- [如何顯示命令列引數](how-to-display-command-line-arguments.md)
 - [Main() 傳回值](main-return-values.md)
 - [類別](../classes-and-structs/classes.md)

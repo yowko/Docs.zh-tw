@@ -6,29 +6,29 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: b724ff1ce85442f64980fdc972188705992d5a4f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919324"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094978"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隱私權資訊
-Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Communication Foundation （WCF）3.0 版來建立應用程式時，您的應用程式可能會影響使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 WCF 不會從您的應用程式將任何資訊傳送至 Microsoft，除非您或使用者選擇將它傳送給我們。  
+Microsoft 致力於保護使用者隱私權。 當您使用 Windows Communication Foundation （WCF）3.0 版來建立應用程式時，您的應用程式可能會影響使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 WCF 不會從您的應用程式將任何資訊傳送至 Microsoft，除非您或使用者選擇將它傳送給我們。  
   
 ## <a name="wcf-in-brief"></a>WCF 簡介  
  WCF 是使用 Microsoft .NET Framework 的分散式訊息架構，可讓開發人員建立分散式應用程式。 而在兩個應用程式之間通訊的訊息則包含標頭和本文資訊。  
   
  根據應用程式使用的服務而定，標頭可能包含訊息路由、安全性資訊、異動及其他項目。 根據預設，訊息通常會經過加密。 唯一的例外為使用 `BasicHttpBinding` 時，此項原本就設計用於不受安全保護的舊式 Web 服務。 身為應用程式設計師，您要負責做好最後的設計。 SOAP 主體中的訊息包含應用程式特定的資料;不過，這項資料（例如應用程式定義的個人資訊）可以使用 WCF 加密或機密性功能來加以保護。 下列章節將描述可能影響隱私權的功能。  
   
-## <a name="messaging"></a>訊息  
+## <a name="messaging"></a>Messaging (傳訊)  
  每個 WCF 訊息都有一個位址標頭，指定訊息目的地和回復的位置。  
   
  端點位址的位址元件則是可識別端點的統一資源識別元 (URI)。 此位址可以是網路位址或邏輯位址。 位址也可能包含電腦名稱 (主機名稱，完整網域名稱) 和 IP 位址。 端點位址也可能包含全域唯一識別元 (GUID)，或者包含可用於分辨每個位址之暫存定址的 GUID 集合。 每則訊息中都包含屬於 GUID 的訊息識別碼。 另外，此功能會遵循 WS-Addressing 參照標準。  
   
  WCF 訊息層不會將任何個人資訊寫入本機電腦。 不過，如果服務開發人員建立了會公開這類資訊的服務 (例如，在端點名稱中使用某個人的名稱，或者在端點的 Web 服務描述語言中加入個人資訊，可是沒有要求用戶端使用 https 來存取 WSDL)，則該訊息層可能在網路層級中傳播個人資訊。 此外，如果開發人員針對公開個人資訊的端點執行[System.servicemodel 中繼資料公用程式工具（Svcutil）](servicemodel-metadata-utility-tool-svcutil-exe.md)工具，則工具的輸出可能會包含該資訊，而輸出檔案則會寫入至本機硬碟。  
   
-## <a name="hosting"></a>主控  
+## <a name="hosting"></a>裝載  
  WCF 中的裝載功能可讓應用程式視需要啟動，或在多個應用程式之間啟用埠共用。 WCF 應用程式可以裝載在 Internet Information Services （IIS）中，類似于 ASP.NET。  
   
  裝載時並不會在網路上公開任何特定資訊，而且也不會保存電腦上的資料。  
@@ -44,7 +44,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  執行驗證之後，會在進行通訊的端點之間建立安全工作階段。 這個工作階段是由會在安全性工作階段的存留期間持續活動的 GUID 所識別。 下表會顯示所保留的項目的位置。  
   
-|Data|儲存體|  
+|資料|儲存體|  
 |----------|-------------|  
 |展示認證，例如使用者名稱、X.509 憑證、Kerberos 語彙基元和認證的各種參照。|標準 Windows 認證管理機制，例如 Windows 憑證存放庫。|  
 |使用者成員資格資訊，例如使用者名稱和密碼。|ASP.NET 成員資格提供者。|  
@@ -56,7 +56,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  稽核也會記錄系統管理員修改訊息記錄組態 (開啟或關閉) 的時間，這是因為訊息記錄可能會在標頭和本文中記錄應用程式特定的資料。 若是 Windows XP，記錄會記錄在應用程式事件記錄檔中。 對於 Windows Vista 和 Windows Server 2003，記錄會記錄在安全性事件記錄檔中。  
   
-## <a name="transactions"></a>異動  
+## <a name="transactions"></a>交易  
  交易功能可為 WCF 應用程式提供交易服務。  
   
  交易傳播中使用的交易標頭可能包含屬於 GUID 的交易識別碼或登記識別碼。  
@@ -70,17 +70,17 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  您可以使用 WS-ReliableMessaging (WS-RM) 通訊協定來實作可靠的工作階段。 這些工作階段會新增其中包含工作階段資訊的 WS-RM 標頭，而您可以使用此資訊來識別與特定可靠的工作階段相關聯的所有訊息。 每個 WS-RM 工作階段都有識別碼，也就是 GUID。  
   
- 使用者電腦上不會保留任何個人資訊。  
+ 終端使用者的電腦上不會保留任何個人資訊。  
   
 ## <a name="queued-channels"></a>佇列通道  
  佇列可代表接收應用程式，存放來自傳送應用程式的訊息，並在稍後將這些訊息轉寄至接收應用程式。 例如，接收應用程式為暫時性時，使用佇列將協助確保訊息的傳輸，從傳送應用程式至接收應用程式。 WCF 藉由使用 Microsoft Message Queuing （MSMQ）做為傳輸，提供佇列的支援。  
   
  佇列通道功能不會將標頭新增至訊息。 該功能會以適當的 [訊息佇列] 訊息屬性設定，來建立 [訊息佇列] 的訊息，並叫用 [訊息佇列] 方法以將訊息放置在 [訊息佇列] 的佇列中。 [訊息佇列] 是隨附於 Windows 的選用元件。  
   
- 佇列通道功能並不會在終端使用者電腦上保留任何資訊，而這都歸功於使用 [訊息佇列] 做為佇列基礎結構。  
+ 佇列通道功能不會在終端使用者的電腦上保留任何資訊，因為它會使用訊息佇列做為佇列基礎結構。  
   
 ## <a name="com-integration"></a>COM+ 整合  
- 這項功能會包裝現有的 COM 和 COM + 功能，以建立與 WCF 服務相容的服務。 這項功能不會使用特定標頭，也不會在終端使用者的電腦上保留任何資料。  
+ 這項功能會包裝現有的 COM 和 COM + 功能，以建立與 WCF 服務相容的服務。 這項功能不會使用特定標頭，也不會在終端使用者的電腦上保留資料。  
   
 ## <a name="com-service-moniker"></a>COM 服務 Moniker  
  這會提供標準 WCF 用戶端的非受控包裝函式。 這項功能在網路上沒有特定的標頭，也不會在電腦上保留任何資料。  
@@ -88,7 +88,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
 ## <a name="peer-channel"></a>對等通道  
  對等通道可讓您使用 WCF 開發多方應用程式。 多方通訊會以網狀結構的脈絡發生。 [網狀結構] 是依照各節點可加入的名稱所識別。 對等通道中的每個節點都會在使用者指定的連接埠上建立 TCP 接聽項，並與網狀結構中的其他節點建立連線以確保擁有回復性。 若要連線至網狀結構中的其他節點，節點也必須與網狀結構中的其他節點交換資料，包括接聽項位址和電腦的 IP 位址。 在網狀結構中來回傳送的訊息會包含專屬於傳送者的安全性資訊，因此可防止發生訊息詐騙和竄改。  
   
- 使用者電腦上不會存放任何個人資訊。  
+ 終端使用者的電腦上不會儲存任何個人資訊。  
   
 ## <a name="it-professional-experience"></a>IT 專業人員的體驗  
   
@@ -127,13 +127,13 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  移除的金鑰：  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" 的 \-  
+ xmlns： wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns： wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" 的 \-  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
+ xmlns： wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns： wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
   
  wsse:Password  
   
@@ -141,7 +141,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  移除的可能個人資訊：  
   
- xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
+ xmlns： wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" 和 xmlns： wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" 的 \-  
   
  wsse:Username  
   
@@ -304,7 +304,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  若為下列命名空間：  
   
- xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" （例如，如果沒有可用的動作）  
+ xmlns： wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" 和 xmlns： wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" （例如，如果沒有可用的動作）  
   
  將移除這些本文項目的資訊，而這些本文項目牽涉到金鑰交換：  
   
@@ -359,17 +359,17 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>不會從應用程式特定標頭和本文資料中移除資訊  
  WCF 不會追蹤應用程式特定標頭中的個人資訊（例如，查詢字串）或主體資料（例如信用卡號碼）。  
   
- 訊息記錄啟用時，也許可以在記錄中看見應用程式特定標頭和本文資訊中的個人資訊。 因此，應用程式部署者應負責設定組態和記錄檔的 ACL。 如果不希望可以看見此資訊，則部署者也可以關閉記錄功能，或者可以在記錄之後從記錄檔中篩選掉此資訊。  
+ 訊息記錄啟用時，也許可以在記錄中看見應用程式特定標頭和本文資訊中的個人資訊。 因此，應用程式部署者應負責設定組態和記錄檔的 ACL。 它們也可以關閉記錄功能（如果它們不想讓這種資訊可見），或是在記錄檔之後從記錄檔中篩選掉此資訊。  
   
 ### <a name="service-model-tracing"></a>服務模型追蹤  
  服務模型追蹤來源 (<xref:System.ServiceModel>) 會啟用與訊息處理相關的活動和事件追蹤。 這個功能會從 <xref:System.Diagnostics> 使用 .NET Framework 的診斷功能。 在搭配 <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> 屬性時，使用者可以使用 .NET Framework 應用程式組態檔來設定位置和 ACL。 使用訊息記錄時，只要系統管理員啟用追蹤就一定會設定檔案位置，這表示系統管理員控制了 ACL。  
   
- 當訊息在範圍內時，追蹤就包含訊息標頭。 有關上一節所提及之隱藏訊息標頭中的潛在個人資訊，其對應的相同規則也適用：預設會從追蹤中的標頭移除先前所識別的個人資訊。 電腦系統管理員和應用程式部署者都必須修改組態，才能記錄可能的個人資訊。 不過，應用程式特定標頭所含的個人資訊則會記錄在追蹤中。 應用程式部署者應負責設定組態和追蹤檔的 ACL。 如果不希望可以看見此資訊，則部署者也可以關閉追蹤功能，或者可以在記錄之後從追蹤檔中篩選掉此資訊。  
+ 當訊息在範圍內時，追蹤就包含訊息標頭。 有關上一節所提及之隱藏訊息標頭中的潛在個人資訊，其對應的相同規則也適用：預設會從追蹤中的標頭移除先前所識別的個人資訊。 電腦系統管理員和應用程式部署者都必須修改組態，才能記錄可能的個人資訊。 不過，應用程式特定標頭所含的個人資訊則會記錄在追蹤中。 應用程式部署者應負責設定組態和追蹤檔的 ACL。 它們也可以關閉追蹤功能，以隱藏此資訊，或在記錄檔之後從追蹤檔案中篩選掉此資訊。  
   
  在進行 ServiceModel 追蹤時，當訊息在基礎結構的不同部分傳遞時，唯一識別碼 (又稱為活動識別碼，而且通常為 GUID) 就會將不同的活動連結起來。  
   
 #### <a name="custom-trace-listeners"></a>自訂追蹤接聽項  
- 您可以對訊息記錄和追蹤設定自訂追蹤接聽項，這樣就可在網路上傳送追蹤和訊息 (例如，傳送至遠端資料庫)。 應用程式部署者負責設定自訂接聽項或讓使用者進行自訂。 部署者也負責遠端位置公開的個人資訊，以及適當套用 ACL 至此位置。  
+ 您可以對訊息記錄和追蹤設定自訂追蹤接聽項，這樣就可在網路上傳送追蹤和訊息 (例如，傳送至遠端資料庫)。 應用程式部署者負責設定自訂接聽項或讓使用者進行自訂。 它們也負責在遠端位置公開的任何個人資訊，以及正確地將 Acl 套用至這個位置。  
   
 ### <a name="other-features-for-it-professionals"></a>IT 專業人員可用的其他功能  
  WCF 有一個 WMI 提供者，可透過 WMI （隨附于 Windows）公開 WCF 基礎結構設定資訊。 根據預設，系統管理員將可使用 WMI 介面。  
@@ -401,7 +401,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您使用 Windows Com
   
  Web 服務描述語言 (WSDL) 中包含了連接埠定義。 每個連接埠都有端點位址，以及表示應用程式所使用服務的繫結。 您可以透過組態決定是否公開 WSDL。 在電腦上不會保留任何資訊。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Communication Foundation](index.md)
-- [Security](./feature-details/security.md)
+- [安全性](./feature-details/security.md)

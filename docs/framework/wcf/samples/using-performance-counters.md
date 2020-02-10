@@ -2,12 +2,12 @@
 title: 使用效能計數器
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 3e0a0199e93abe1218f7d9c052807cb94e911140
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6c125ecd0f6cef10b62e7e451eb37bba1ce89b65
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716705"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094835"
 ---
 # <a name="using-performance-counters"></a>使用效能計數器
 這個範例會示範如何存取 Windows Communication Foundation （WCF）效能計數器，以及如何建立使用者定義的效能計數器。 這個範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。  
@@ -76,6 +76,6 @@ ms.locfileid: "74716705"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [AppFabric 監視範例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 監視範例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

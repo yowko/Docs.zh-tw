@@ -2,12 +2,12 @@
 title: 佇列訊息的疑難排解
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 5c039c34983647884561f33645f26e4a89280248
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7990d4b9847ee2f35b9fe6269bb211763c4c80b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921260"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095004"
 ---
 # <a name="troubleshooting-queued-messaging"></a>佇列訊息的疑難排解
 
@@ -17,7 +17,7 @@ ms.locfileid: "76921260"
 
 **問：** 我使用了 WCF Beta 1，而我安裝了 MSMQ 的修補程式。 我是否需要移除這個 Hotfix？
 
-**答：** 可以。 不再支援這個 Hotfix。 WCF 現在可以在沒有修補程式需求的 MSMQ 上運作。
+**答：** 是。 不再支援這個 Hotfix。 WCF 現在可以在沒有修補程式需求的 MSMQ 上運作。
 
 **問：** MSMQ 有兩個系結： <xref:System.ServiceModel.NetMsmqBinding> 和 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 我應該在什麼狀況下使用它們？
 
@@ -41,7 +41,7 @@ ms.locfileid: "76921260"
 
 **問：** 我可以在佇列通訊的一端使用 MSMQ 3.0，而在另一端使用 MSMQ 4.0 嗎？
 
-**答：** 可以。
+**答：** 是。
 
 **問：** 我想要將現有的 MSMQ 應用程式與新的 WCF 用戶端或伺服器整合。 我是否需要為 MSMQ 基礎結構的兩端同時升級？
 
@@ -53,13 +53,13 @@ ms.locfileid: "76921260"
 
 **問：** 我嘗試使用私用佇列，但收到下列例外狀況： `System.InvalidOperationException`： URL 無效。 佇列的 URL 不可包含 '$' 字元。 請使用 net.msmq://machine/private/queueName 中的語法，來定址私用佇列。
 
-**答：** 請檢查您設定和程式碼中的佇列統一資源識別項（URI）。 請勿在 URI 中使用 "$" 字元。 例如，若要定址名為 OrdersQueue 的私用佇列，請將 URI 指定為 net.msmq://localhost/private/ordersQueue。
+**答：** 檢查設定和程式碼中的佇列統一資源識別項（URI）。 請勿在 URI 中使用 "$" 字元。 例如，若要定址名為 OrdersQueue 的私用佇列，請將 URI 指定為 `net.msmq://localhost/private/ordersQueue`。
 
-**問：** 在佇列應用程式上呼叫 `ServiceHost.Open()` 會擲回下列例外狀況： `System.ArgumentException`：基底位址不能包含 URI 查詢字串。 為什麼？
+**問：** 在佇列應用程式上呼叫 `ServiceHost.Open()` 會擲回下列例外狀況： `System.ArgumentException`：基底位址不能包含 URI 查詢字串。 原因為何？
 
 **答：** 檢查您的設定檔和程式碼中的佇列 URI。 雖然 MSMQ 佇列支援使用 '?' 字元，但 URI 會將這個字元解譯為字串查詢的開頭。 為了避免這個問題，請使用不含 '?' 字元的佇列名稱。
 
-**問：** 我的傳送成功，但在接收者上未叫用服務作業。 為什麼？
+**問：** 我的傳送成功，但在接收者上未叫用服務作業。 原因為何？
 
 **答：** 若要判斷答案，請完成下列檢查清單：
 
@@ -77,7 +77,7 @@ ms.locfileid: "76921260"
 
 - 檢查傳出佇列是否有連接或定址問題。
 
-**問：** 我已經指定自訂的寄不出的信件佇列，但是當我啟動傳送者應用程式時，收到的例外狀況是找不到寄不出的信件佇列，或是傳送應用程式沒有寄不出的信件佇列的許可權。 為什麼會發生這種問題？
+**問：** 我已經指定自訂的寄不出的信件佇列，但是當我啟動傳送者應用程式時，收到的例外狀況是找不到寄不出的信件佇列，或是傳送應用程式沒有寄不出的信件佇列的許可權。 為什麼會發生這種情形？
 
 **答：** 自訂寄不出的信件佇列 URI 必須在第一個區段中包含 "localhost" 或電腦名稱稱，例如 net.tcp：//localhost/private/myAppdead-letter queue。
 
@@ -87,15 +87,15 @@ ms.locfileid: "76921260"
 
 如果保證為 none （<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`），則預設為沒有寄不出的信件佇列功能。
 
-**問：** 我的服務在 SvcHost 上擲回。請開啟並顯示「ListenerFactory 無法符合 EndpointListener 需求」訊息。 為什麼？
+**問：** 我的服務在 SvcHost 上擲回。請開啟並顯示「ListenerFactory 無法符合 EndpointListener 需求」訊息。 原因為何？
 
-答： 請檢查您的服務合約。 您可能忘了將 "IsOneWay =`true`" 放在所有服務作業上。 佇列只會支援單向服務作業。
+A. 請檢查您的服務合約。 您可能忘了將 "IsOneWay =`true`" 放在所有服務作業上。 佇列只會支援單向服務作業。
 
-**問：** 佇列中有訊息，但未叫用服務作業。 問題出在哪裡？
+**問：** 佇列中有訊息，但未叫用服務作業。 發生什麼問題？
 
 **答：** 判斷您的服務主機是否發生錯誤。 您可以查看追蹤，或是實作 `IErrorHandler` 以檢查這點。 根據預設，如果偵測到有害訊息，便會發生服務主機錯誤。
 
-**問：** 佇列中有訊息，但我的 Web 主控佇列服務並未啟動。 為什麼？
+**問：** 佇列中有訊息，但我的 Web 主控佇列服務並未啟動。 原因為何？
 
 **答：** 最常見的原因是許可權。
 
@@ -126,15 +126,15 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ### <a name="msmq-integration-specific-troubleshooting"></a>MSMQ 整合：特定疑難排解
 
-**問：** 當我傳送訊息時，或當我開啟服務主機時，會收到指出配置錯誤的錯誤。 為什麼？
+**問：** 當我傳送訊息時，或當我開啟服務主機時，會收到指出配置錯誤的錯誤。 原因為何？
 
 **答：** 當您使用 MSMQ 整合系結時，您必須使用 msmq.formatname 配置。 例如，msmq.formatname:DIRECT=OS:.\private$\OrdersQueue。 不過當指定自訂的寄不出的信件佇列時，您必須使用 net.msmq 配置。
 
-**問：** 當我使用公用或私用格式名稱，並在 Windows Vista 上開啟服務主機時，會收到錯誤。 為什麼？
+**問：** 當我使用公用或私用格式名稱，並在 Windows Vista 上開啟服務主機時，會收到錯誤。 原因為何？
 
-**答：** Windows Vista 上的 WCF 整合通道會檢查是否可以開啟主要應用程式佇列的子佇列來處理有害訊息。 子佇列的名稱衍生自傳遞至接聽項的 msmq.formatname URI。 但是 MSMQ 中的子佇列名稱只能是直接格式名稱。 所以您會看到錯誤。 請將佇列 URI 變更為直接格式名稱。
+**答：** Windows Vista 上的 WCF 整合通道會檢查是否可以針對主應用程式佇列開啟子佇列來處理有害訊息。 子佇列名稱衍生自傳遞給接聽程式的 msmq.formatname URI。 MSMQ 中的子佇列名稱只能是直接格式名稱。 所以您會看到錯誤。 請將佇列 URI 變更為直接格式名稱。
 
-**問：** 從 MSMQ 應用程式接收訊息時，訊息位於佇列中，而且不會由接收 WCF 應用程式讀取。 為什麼？
+**問：** 從 MSMQ 應用程式接收訊息時，訊息位於佇列中，而且不會由接收 WCF 應用程式讀取。 原因為何？
 
 **答：** 請檢查訊息是否有主體。 如果訊息沒有本文，MSMQ 整合通道便會忽略該訊息。 實作 `IErrorHandler`，即可獲得例外狀況的通知和檢查追蹤。
 
@@ -170,7 +170,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 6. 接下來，使用先前的步驟新增第二個憑證嵌入式管理單元，但這次請選取 [**電腦帳戶**]，然後按 **[下一步]** 。
 
-7. 選取 [**本機電腦**]，然後按一下 **[完成]** 。 現在，您可以從電腦憑證存放區將憑證拖放到目前使用者存放區。
+7. 選取 [本機電腦]，再按一下 [完成]。 現在，您可以從電腦憑證存放區將憑證拖放到目前使用者存放區。
 
 **問：** 當我的服務在工作組模式中從另一部電腦上的佇列讀取時，出現「拒絕存取」例外狀況。
 
@@ -182,7 +182,7 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 ### <a name="remote-transacted-receives"></a>遠端交易接收
 
-**問：** 當我在電腦 A 上有佇列，而 WCF 服務從電腦 B 上的佇列讀取訊息時（遠端交易接收案例），則不會從佇列讀取訊息。 追蹤資訊表示接收失敗，訊息為「無法匯入交易」。 我可以做什麼來修正這個問題？
+**問：** 當我在電腦 A 上有佇列，而 WCF 服務從電腦 B 上的佇列讀取訊息時（遠端交易接收案例），則不會從佇列讀取訊息。 追蹤資訊表示接收失敗，訊息為「無法匯入交易」。 可以做什麼來修正這個問題？
 
 **答：** 有三個可能的原因：
 
@@ -204,8 +204,8 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
 
 **問：** 我是否可以使用 MSMQ 啟用服務，根據遠端電腦上佇列中的訊息來啟動應用程式？
 
-**答：** 可以。 若要這樣做，您必須將 MSMQ 啟動服務設定成當做網路服務執行，並新增在遠端電腦上佇列的網路服務存取。
+**答：** 是。 若要這樣做，您必須將 MSMQ 啟動服務設定成當做網路服務執行，並新增在遠端電腦上佇列的網路服務存取。
 
 ## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>使用自訂 MSMQ 繫結並啟用 ReceiveContext
 
-使用自訂 MSMQ 繫結並啟用 <xref:System.ServiceModel.Channels.ReceiveContext> 時，傳入訊息的處理就會使用執行緒集區執行緒，因為原生 MSMQ 不支援非同步 <xref:System.ServiceModel.Channels.ReceiveContext> 接收的 I/O 完成。 這是因為處理這類訊息會使用 <xref:System.ServiceModel.Channels.ReceiveContext> 的內部交易，而且 MSMQ 不支援非同步處理。 若要解決這個問題，您可以將 <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> 加入至端點，以便強制執行同步處理，或將 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> 設定為 1。
+使用已啟用 <xref:System.ServiceModel.Channels.ReceiveContext> 的自訂 MSMQ 系結時，處理內送訊息會使用執行緒集區執行緒，因為原生 MSMQ 不支援非同步 <xref:System.ServiceModel.Channels.ReceiveContext> 接收的 i/o 完成。 這是因為處理這類訊息會使用 <xref:System.ServiceModel.Channels.ReceiveContext> 的內部交易，而 MSMQ 不支援非同步處理。 若要解決這個問題，您可以將 <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> 新增至端點，以強制執行同步處理，或將 <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> 設定為1。

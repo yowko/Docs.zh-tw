@@ -5,15 +5,15 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: fc3dc534756c462fdc368d997da40277e5dc2869
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 85f6684617b893bdd85eb5b530aa2481941fbc5d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937571"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093548"
 ---
 # <a name="constants-c-programming-guide"></a>常數 (C# 程式設計手冊)
-常數是在編譯時期已知且不會在程式存留期變更的不可變值。 常數是使用 [const](../../language-reference/keywords/const.md) 修飾詞所宣告。 有 C# 內建型別 (不含 <xref:System.Object?displayProperty=nameWithType>) 才能宣告為 `const`。 如需內建類型的清單，請參閱[內建類型資料表](../../language-reference/keywords/built-in-types-table.md)。 使用者定義型別 (包括類別、結構和陣列) 不能是 `const`。 使用 [readonly](../../language-reference/keywords/readonly.md) 修飾詞來建立在執行階段一次初始化的類別、結構或陣列 (例如在建構函式中)，因而無法進行變更。  
+常數是在編譯時期已知且不會在程式存留期變更的不可變值。 常數是使用 [const](../../language-reference/keywords/const.md) 修飾詞所宣告。 C#只有[內建類型](../../language-reference/builtin-types/built-in-types.md)（<xref:System.Object?displayProperty=nameWithType>除外）可以宣告為 `const`。 使用者定義型別 (包括類別、結構和陣列) 不能是 `const`。 使用 [readonly](../../language-reference/keywords/readonly.md) 修飾詞來建立在執行階段一次初始化的類別、結構或陣列 (例如在建構函式中)，因而無法進行變更。  
   
  C# 不支援 `const` 方法、屬性或事件。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "75937571"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)
-- [Properties](./properties.md)
-- [型別](../types/index.md)
+- [屬性](./properties.md)
+- [類型](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
 - [Immutability in C# Part One: Kinds of Immutability](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability) (C# 中不變性第一部分：不變性類型)

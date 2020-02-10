@@ -2,33 +2,33 @@
 title: SendMail 自訂活動
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: b1e2d58a09362569d4d408f6e1c9e589aa6bda76
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 90b3192d931b216345b50ba49465455427e43a64
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715573"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094601"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自訂活動
 此範例示範如何建立衍生自 <xref:System.Activities.AsyncCodeActivity> 的自訂活動，以便使用 SMTP 傳送郵件供工作流程應用程式使用。 自訂活動會使用 <xref:System.Net.Mail.SmtpClient> 的功能，以非同步方式傳送電子郵件，以及傳送具有驗證的郵件。 也會提供一些終端使用者功能，例如測試模式、語彙基元替換、檔案範本和測試置放路徑。  
   
  下表詳細說明 `SendMail` 活動的引數。  
   
-|Name|類型|描述|  
+|名稱|類型|描述|  
 |-|-|-|  
-|主機|String|SMTP 伺服器主機的位址。|  
-|Port|String|SMTP 服務在主機中的連接埠。|  
+|Host|String|SMTP 伺服器主機的位址。|  
+|連接埠|String|SMTP 服務在主機中的連接埠。|  
 |EnableSsl|bool|指定 <xref:System.Net.Mail.SmtpClient> 是否使用 Secure Sockets Layer (SSL) 加密連接。|  
-|使用者名稱|String|設定認證來驗證寄件者 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 屬性的使用者名稱。|  
+|UserName|String|設定認證來驗證寄件者 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 屬性的使用者名稱。|  
 |密碼|String|設定認證來驗證寄件者 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 屬性的密碼。|  
-|Subject|<xref:System.Activities.InArgument%601>\<字串 >|訊息的主旨。|  
-|本文|<xref:System.Activities.InArgument%601>\<字串 >|訊息的本文。|  
+|主體|<xref:System.Activities.InArgument%601>\<字串 >|訊息的主旨。|  
+|body|<xref:System.Activities.InArgument%601>\<字串 >|訊息的本文。|  
 |附件|<xref:System.Activities.InArgument%601>\<字串 >|用來儲存附加到此電子郵件訊息之資料的附件集合。|  
 |從|<xref:System.Net.Mail.MailAddress>|此電子郵件訊息的 [寄件者位址]。|  
-|進行|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此電子郵件訊息收件者的位址集合。|  
-|副本|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此電子郵件訊息之副本（CC）收件者的位址集合。|  
+|至|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此電子郵件訊息收件者的位址集合。|  
+|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此電子郵件訊息之副本（CC）收件者的位址集合。|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|包含此電子郵件訊息之密件副本（BCC）收件者的位址集合。|  
-|語彙基元|<xref:System.Activities.InArgument%601>< IDictionary\<字串，字串 > >|本文內所要取代的語彙基元。 此功能可讓使用者在本文中指定某些值，而之後可由使用這個屬性所提供的語彙基元所取代。|  
+|權杖|<xref:System.Activities.InArgument%601>< IDictionary\<字串，字串 > >|本文內所要取代的語彙基元。 此功能可讓使用者在本文中指定某些值，而之後可由使用這個屬性所提供的語彙基元所取代。|  
 |BodyTemplateFilePath|String|本文的範本路徑。 `SendMail` 活動會將這個檔案的內容複製到它的本文屬性。<br /><br /> 此範本包含的語彙基元可由語彙基元屬性的內容所取代。|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|設定此屬性時，會將所有電子郵件傳送至其中所指定的位址。<br /><br /> 當測試工作流程時，並不適合使用這個屬性。 例如，當您想要確保所有的電子郵件都已傳送，而不將它們傳送給實際的收件者。|  
 |TestDropPath|String|設定此屬性時，所有電子郵件也會儲存在指定的檔案中。<br /><br /> 此屬性是在測試或偵錯工具工作流程時使用，以確定外寄電子郵件的格式和內容是適當的。|  
@@ -36,7 +36,7 @@ ms.locfileid: "74715573"
 ## <a name="solution-contents"></a>方案內容  
  此方案包含兩個專案。  
   
-|專案|描述|重要檔案|  
+|隨附此逐步解說的專案|描述|重要檔案|  
 |-------------|-----------------|---------------------|  
 |SendMail|SendMail 活動|1. SendMail.cs：主要活動的執行<br />SendMailDesigner. xaml 和 SendMailDesigner.xaml.cs： SendMail 活動的設計工具<br />3. MailTemplateBody .htm：要送出之電子郵件的範本。|  
 |SendMailTestClient|測試 SendMail 活動的用戶端。  此專案會示範兩個方式來叫用 SendMail 活動：宣告方式和程式設計方式。|1. Sequence1. xaml：叫用 SendMail 活動的工作流程。<br />2. Program.cs：叫用 Sequence1，並以程式設計方式建立使用 SendMail 的工作流程。|  
@@ -107,17 +107,15 @@ new SendMail
   
  如需設定 SMTP 伺服器的詳細資訊，請參閱下列連結。  
   
-- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [設定 SMTP 服務（IIS 6.0）](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784968(v=ws.10))  
   
-- [設定 SMTP 服務（IIS 6.0）](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [IIS 7.0：設定 SMTP 電子郵件](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772058(v=ws.10))  
   
-- [IIS 7.0：設定 SMTP 電子郵件](https://go.microsoft.com/fwlink/?LinkId=150457)  
-  
-- [如何安裝 SMTP 服務](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [如何安裝 SMTP 服務](https://docs.microsoft.com/previous-versions/tn-archive/aa997480(v=exchg.65))  
   
  協力廠商提供的 SMTP 模擬器可供您下載。  
   
-##### <a name="to-run-this-sample"></a>若要執行這個範例  
+##### <a name="to-run-this-sample"></a>執行此範例  
   
 1. 使用 Visual Studio 2010，開啟 SendMail 方案檔。  
   

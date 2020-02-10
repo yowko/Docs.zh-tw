@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965954"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095264"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework 密碼編譯模型
 
@@ -41,7 +41,7 @@ ms.locfileid: "76965954"
 
 <xref:System.Security.Cryptography.Aes> 會由兩個類別繼承：<xref:System.Security.Cryptography.AesCryptoServiceProvider> 和 <xref:System.Security.Cryptography.AesManaged>。 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 類別是 Aes 的 Windows 密碼編譯 API (CAPI) 實作的包裝函式，而 <xref:System.Security.Cryptography.AesManaged> 類別完全以 managed 程式碼撰寫。 除了 Managed 和 CAPI 實作，另外還有第三種類型的實作，Cryptography Next Generation (CNG)。 CNG 演算法的範例是 <xref:System.Security.Cryptography.ECDiffieHellmanCng>。 CNG 演算法可用於 Windows Vista 和更新版本。
 
-您可以選擇哪一個實作最適合您。  可支援 .NET Framework 的所有平台上都可使用 Managed 實作。  CAPI 實作可用於較舊的作業系統，並且不會再開發。 CNG 是最新的實作，將在這裡進行新的開發工作。 不過，Manged 實作未經美國聯邦資訊處理標準 (FIPS) 認證，而且可能比包裝函式類別慢。
+您可以選擇哪一個實作最適合您。 受控的執行功能可在支援 .NET Framework 的所有平臺上使用。 CAPI 執行是在較舊的作業系統上提供，而且不再進行開發。 CNG 是進行新開發的最新實施。 不過，Manged 實作未經美國聯邦資訊處理標準 (FIPS) 認證，而且可能比包裝函式類別慢。
 
 ## <a name="stream-design"></a>資料流設計
 
@@ -73,7 +73,7 @@ Common Language Runtime 使用資料流為導向的設計來實作對稱演算�
 - 從密碼產生金鑰：
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+- [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)
 - [透過 Bruce Schneier，在 C 中套用了密碼編譯通訊協定、演算法和原始程式碼](https://www.schneier.com/books/applied_cryptography/)

@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 至訊息佇列
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 2e37a6efac6b979645b2dbb338b64f698b3b97e0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: beb4382d61804e9b9ea12e1d191f3e96a637f871
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344618"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094796"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 至訊息佇列
 
@@ -131,7 +131,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
  當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 例如，您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。
 
 > [!NOTE]
-> 這個範例需要安裝訊息佇列 (本頁面可能為英文)。 請參閱[訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94968)中的安裝指示。
+> 這個範例需要安裝訊息佇列 (本頁面可能為英文)。 請參閱[訊息佇列](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))中的安裝指示。
 
 ## <a name="set-up-build-and-run-the-sample"></a>設定、建立和執行範例
 
@@ -174,7 +174,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [訊息佇列](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

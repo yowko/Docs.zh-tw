@@ -2,12 +2,12 @@
 title: SQL 追蹤
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: c1bb4492695df3ff803dff893de24453d7c03dfb
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 88f44e5362684f755695aab154842fad2274134d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715558"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094588"
 ---
 # <a name="sql-tracking"></a>SQL 追蹤
 這個範例會示範如何撰寫自訂的 SQL 追蹤參與者，將追蹤記錄寫入至 SQL 資料庫。 Windows Workflow Foundation （WF）提供工作流程追蹤，以深入瞭解工作流程實例的執行。 追蹤執行階段會在工作流程執行期間發出工作流程追蹤記錄。 如需工作流程追蹤的詳細資訊，請參閱[工作流程追蹤和追蹤](../workflow-tracking-and-tracing.md)。
@@ -23,7 +23,7 @@ ms.locfileid: "74715558"
 
 3. 在 Visual Studio 2010 中開啟 SqlTrackingSample。
 
-4. 按下 CTRL+SHIFT+B 以建置方案。
+4. 按 CTRL+SHIFT+B 建置解決方案。
 
 5. 按 F5 執行應用程式。
 
@@ -37,11 +37,11 @@ ms.locfileid: "74715558"
 
 8. 使用 [檔案瀏覽器] 執行 WCF 測試用戶端（WcfTestClient .exe）。 它是位於 Microsoft Visual Studio 10.0\Common7\IDE 目錄中。
 
-9. 在 WCF 測試用戶端**中，按一下**[檔案] 功能表，然後選取 [**新增服務**]。 將本機服務位址貼至文字方塊。 按一下 **[確定**] 以關閉對話方塊。
+9. 在 WCF 測試用戶端**中，按一下**[檔案] 功能表，然後選取 [**新增服務**]。 將本機服務位址貼至文字方塊。 按一下 **[確定]** 關閉對話方塊。
 
 10. 在 WCF 測試用戶端中，按兩下 [ **GetStockPrice**]。 這會開啟接受一個參數的 `GetStockPrice` 作業，輸入 `Contoso` 值，**然後按一下 [** 叫用]。
 
-11. 發出的追蹤記錄會寫入至 SQL 資料庫。 若要檢視追蹤記錄，請在 SQL Management Studio 中開啟 TrackingSample 資料庫並巡覽至資料表。 如需 SQL Server Management Studio 的詳細資訊，請參閱[SQL Server Management Studio 簡介](https://go.microsoft.com/fwlink/?LinkId=165645)。 您可以在[這裡](https://go.microsoft.com/fwlink/?LinkId=180520)下載 SQL Server 2008 Management Studio Express。 在資料表上執行 Select 查詢，會顯示個別資料表中所儲存的追蹤記錄資料。
+11. 發出的追蹤記錄會寫入至 SQL 資料庫。 若要檢視追蹤記錄，請在 SQL Management Studio 中開啟 TrackingSample 資料庫並巡覽至資料表。 如需 SQL Server Management Studio 的詳細資訊，請參閱[SQL Server Management Studio 簡介](/sql/ssms/sql-server-management-studio-ssms)。 您可以在[這裡](https://www.microsoft.com/download/details.aspx?id=7593)下載 SQL Server 2008 Management Studio Express。 在資料表上執行 Select 查詢，會顯示個別資料表中所儲存的追蹤記錄資料。
 
 #### <a name="to-uninstall-the-sample"></a>若要解除安裝範例
 
@@ -59,6 +59,6 @@ ms.locfileid: "74715558"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [AppFabric 監視範例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 監視範例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

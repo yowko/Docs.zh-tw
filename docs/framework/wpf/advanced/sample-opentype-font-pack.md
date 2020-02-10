@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: a5b49e2a1f7536fb9d8e8f4dbfc53494dcd1f1ac
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: be9bc6e0cddc0581b9acb319f7d1fc1c81dae268
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740778"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095108"
 ---
 # <a name="sample-opentype-font-pack"></a>範例 OpenType 字型套件
 本主題概要說明隨 Windows SDK 散發的範例 OpenType 字型。 範例字型支援 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式可使用的擴充 OpenType 功能。  
@@ -35,7 +35,7 @@ ms.locfileid: "73740778"
   
  ![列出範例字型套件中的字型名稱](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
- 範例字型是根據 Ascender Corporation 的授權來提供。 Ascender 是進階字型產品的供應商。 若要授權範例字型的延伸或自訂版本，請參閱 [Ascender Corporation 網站 (英文)](https://go.microsoft.com/fwlink/?LinkId=182627)。  
+ 範例字型是根據 Ascender Corporation 的授權來提供。 Ascender 是進階字型產品的供應商。 若要授權範例字型的延伸或自訂版本，請參閱 [Ascender Corporation 網站 (英文)](https://www.monotype.com/)。  
   
 > [!NOTE]
 > 身為開發人員，您的職責是確保對於您內嵌在應用程式中或是以其他方式轉散發的任何字型，您必須有必要的授權權限。  
@@ -51,7 +51,7 @@ ms.locfileid: "73740778"
 ## <a name="using-the-fonts"></a>使用字型  
  有兩種方式可讓您在應用程式中使用字型。 您可將字型新增到您的應用程式以做為專案內容項目，此項目並未內嵌為組件中的資源。 或者，您可以將字型新增到您的應用程式，以做為內嵌於您應用程式組件檔中的專案資源項目。 如需詳細資訊，請參閱[將字型與應用程式一起封裝](packaging-fonts-with-applications.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Documents.Typography>
 - [OpenType 字型功能](opentype-font-features.md)

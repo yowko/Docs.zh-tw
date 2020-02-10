@@ -1,21 +1,21 @@
 ---
 title: 教學課程：分類支援問題-多元分類
 description: 了解如何在多類別分類案例中使用 ML.NET 來分類 GitHub 問題，以將它們指派至特定區域。
-ms.date: 11/15/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 44e6234a56ae1890a7f485ffaca827945c1a33ff
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: d5d397cfa6475574b6d6cc6d8cbb48b51c2d0af1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739639"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092521"
 ---
-# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>教學課程：使用多元分類搭配 ML .NET 來分類支援問題
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>教學課程：使用多元分類搭配 ML.NET 來分類支援問題
 
 此範例教學課程會示範使用 ML.NET，透過使用 Visual Studio 中 C# 的 .NET Core 主控台應用程式，建立 GitHub 問題分類器，來定型分類及預測 GitHub 問題 Area 標籤的模型。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 > [!div class="checklist"]
 >
 > * 準備您的資料
@@ -27,7 +27,7 @@ ms.locfileid: "75739639"
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 * 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)版本。
 
@@ -60,7 +60,7 @@ ms.locfileid: "75739639"
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
-在 *Program.cs* 檔案頂端新增下列額外的 `using` 陳述式：
+在 `using`Program.cs*檔案頂端新增下列額外的* 陳述式：
 
 [!code-csharp[AddUsings](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddUsings)]
 
@@ -79,7 +79,7 @@ ms.locfileid: "75739639"
 
 為輸入資料和預測建立一些類別。 將新類別新增至專案：
 
-1. 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
+1. 在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新項目]。
 
 1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *GitHubIssueData.cs*。 接著，選取 [新增] 按鈕。
 
@@ -99,22 +99,22 @@ ms.locfileid: "75739639"
 
 * 第一個資料行 `ID`(GitHub 問題識別碼)
 * 第二個資料行 `Area`(用於定型的預測)
-* 第三個資料行 `Title` (GitHub 問題標題) 是第一個用來預測 `Area` 的 `feature`
-* 第四個資料行 `Description` 是第二個用來預測 `Area` 的 `feature`
+* 第三個資料行 `Title` (GitHub 問題標題) 是第一個用來預測 `feature` 的 `Area`
+* 第四個資料行 `Description` 是第二個用來預測 `feature` 的 `Area`
 
 `IssuePrediction` 是在模型定型後，用來進行預測的類別。 它具有單一 `string` （`Area`）和 `PredictedLabel` `ColumnName` 屬性。  `PredictedLabel` 的使用時機是在進行預測和評估的期間。 就評估而言，會使用含有定型資料、預設值及模型的輸入。
 
-所有 ML.NET 作業都是從 [MLContext](xref:Microsoft.ML.MLContext) 類別開始。 將 `mlContext` 初始化會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，它與 `Entity Framework` 中的 `DBContext` 相似。
+所有 ML.NET 作業都是從 [MLContext](xref:Microsoft.ML.MLContext) 類別開始。 初始化 `mlContext` 會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，它與 `DBContext` 中的 `Entity Framework` 相似。
 
 ### <a name="initialize-variables-in-main"></a>在 Main 中初始化變數
 
-將具有包含隨機種子 (`seed: 0`) 之新 `MLContext` 執行個體的 `_mlContext` 全域變數初始化，以讓多個定型間的結果可重複/具有確定性。  在 `Main` 方法中，以下列程式碼取代 `Console.WriteLine("Hello World!")`：
+將具有包含隨機種子 (`_mlContext`) 之新 `MLContext` 執行個體的 `seed: 0` 全域變數初始化，以讓多個定型間的結果可重複/具有確定性。  在 `Console.WriteLine("Hello World!")` 方法中，以下列程式碼取代 `Main`：
 
 [!code-csharp[CreateMLContext](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateMLContext)]
 
 ## <a name="load-the-data"></a>載入資料
 
-ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字或文字表格式資料彈性且有效率的方式。 `IDataView` 可載入文字檔案或即時進行 (例如 SQL 資料庫或記錄檔)。
+ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字或文字表格式資料彈性且有效率的方式。 `IDataView` 可載入文字檔案或即時資料 (例如 SQL 資料庫或記錄檔)。
 
 若要初始化並載入 `_trainingDataView` 全域變數以將其用於管線，請在 `mlContext` 初始化後，新增下列程式碼：
 
@@ -131,7 +131,7 @@ ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字�
 * 擷取並轉換資料。
 * 傳回處理管線。
 
-請使用下列程式碼，在緊接著 `Main` 方法之後，建立 `ProcessData` 方法：
+請使用下列程式碼，在緊接著 `ProcessData` 方法之後，建立 `Main` 方法：
 
 ```csharp
 public static IEstimator<ITransformer> ProcessData()
@@ -146,11 +146,11 @@ public static IEstimator<ITransformer> ProcessData()
 
 [!code-csharp[MapValueToKey](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#MapValueToKey)]
 
-接下來，請呼叫 `mlContext.Transforms.Text.FeaturizeText`，針對每個呼叫的 `TitleFeaturized` 和 `DescriptionFeaturized`，將文字 (`Title` 和 `Description`) 資料行轉換成數值向量。 將這兩個資料行的特徵轉換附加至管線，使用的程式碼如下：
+接下來，請呼叫 `mlContext.Transforms.Text.FeaturizeText`，針對每個呼叫的 `Title` 和 `Description`，將文字 (`TitleFeaturized` 和 `DescriptionFeaturized`) 資料行轉換成數值向量。 將這兩個資料行的特徵轉換附加至管線，使用的程式碼如下：
 
 [!code-csharp[FeaturizeText](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#FeaturizeText)]
 
-資料準備的最後一個步驟是使用 [Concatenate()](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) 方法，將所有特徵資料行合併到 **Features** (特徵) 資料行。 根據預設，學習演算法只會處理來自 **Features** 資料行的特徵。 將這此轉換附加至管線，使用的程式碼如下：
+資料準備的最後一個步驟是使用 **Concatenate()** 方法，將所有特徵資料行合併到 [Features](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A) (特徵) 資料行。 根據預設，學習演算法只會處理來自 **Features** 資料行的特徵。 將這此轉換附加至管線，使用的程式碼如下：
 
 [!code-csharp[Concatenate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Concatenate)]
 
@@ -180,7 +180,7 @@ public static IEstimator<ITransformer> ProcessData()
 * 根據定型資料預測區域。
 * 傳回模型。
 
-請使用下列程式碼，在緊接著 `Main` 方法之後，建立 `BuildAndTrainModel` 方法：
+請使用下列程式碼，在緊接著 `BuildAndTrainModel` 方法之後，建立 `Main` 方法：
 
 ```csharp
 public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingDataView, IEstimator<ITransformer> pipeline)
@@ -206,7 +206,7 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 
 ### <a name="train-the-model"></a>將模型定型
 
-將下列內容新增為 `BuildAndTrainModel()` 方法中的下一行程式碼，調整模型為合適於 `splitTrainSet` 資料並傳回已定型模型：
+將下列內容新增為 `splitTrainSet` 方法中的下一行程式碼，調整模型為合適於 `BuildAndTrainModel()` 資料並傳回已定型模型：
 
 [!code-csharp[TrainModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#TrainModel)]
 
@@ -218,7 +218,7 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 
 ### <a name="predict-with-the-trained-model"></a>使用訓練過的模型預測
 
-透過建立 `GitHubIssue` 的執行個體，在 `Predict` 方法中新增 GitHub 問題，以測試所定型模型的預測：
+透過建立 `Predict` 的執行個體，在 `GitHubIssue` 方法中新增 GitHub 問題，以測試所定型模型的預測：
 
 [!code-csharp[CreateTestIssue1](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreateTestIssue1)]
 
@@ -240,7 +240,7 @@ public static IEstimator<ITransformer> BuildAndTrainModel(IDataView trainingData
 
 ## <a name="evaluate-the-model"></a>評估模型
 
-建立並定型模型之後，現在必須使用不同的資料集來評估它，以確保和驗證品質。 在 `Evaluate` 方法中，會傳入在 `BuildAndTrainModel` 中建立的模型以供評估。 在緊接著 `BuildAndTrainModel` 之後，建立 `Evaluate` 方法，如以下程式碼所示：
+建立並定型模型之後，現在必須使用不同的資料集來評估它，以確保和驗證品質。 在 `Evaluate` 方法中，會傳入在 `BuildAndTrainModel` 中建立的模型以供評估。 在緊接著 `Evaluate` 之後，建立 `BuildAndTrainModel` 方法，如以下程式碼所示：
 
 ```csharp
 public static void Evaluate(DataViewSchema trainingDataViewSchema)
@@ -256,7 +256,7 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 * 評估模型並建立計量。
 * 顯示計量。
 
-請使用下列程式碼，在緊接著 `BuildAndTrainModel` 方法呼叫底下，從 `Main` 方法新增對新方法的呼叫：
+請使用下列程式碼，在緊接著 `Main` 方法呼叫底下，從 `BuildAndTrainModel` 方法新增對新方法的呼叫：
 
 [!code-csharp[CallEvaluate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallEvaluate)]
 
@@ -266,7 +266,7 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 [Evaluate()](xref:Microsoft.ML.MulticlassClassificationCatalog.Evaluate%2A) 方法會使用指定的資料集，計算模型的品質計量。 它傳回的 <xref:Microsoft.ML.Data.MulticlassClassificationMetrics> 物件包含多類別分類評估工具所計算的整體計量。
 若要顯示計量以判斷模型的品質，您必須先取得計量。
-請注意我們在此處使用機器學習服務 `_trainedModel` 全域變數 (一個 [ITransformer](xref:Microsoft.ML.ITransformer)) 的 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) 方法來輸入特徵並傳回預測。 將下列程式碼加入為 `Evaluate` 方法中的下一行：
+請注意我們在此處使用機器學習服務 [ 全域變數 (一個 ](xref:Microsoft.ML.ITransformer.Transform%2A)ITransformer`_trainedModel`) 的 [Transform()](xref:Microsoft.ML.ITransformer) 方法來輸入特徵並傳回預測。 將下列程式碼加入 `Evaluate` 方法中作為下一行：
 
 [!code-csharp[Evaluate](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#Evaluate)]
 
@@ -288,11 +288,11 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 ### <a name="save-the-model-to-a-file"></a>將模型儲存至檔案
 
-滿意您的模型之後，請將它儲存至檔案，以便稍後或在另一個應用程式中進行預測。 將下列程式碼加入至 `Evaluate` 方法。
+滿意您的模型之後，請將它儲存至檔案，以便稍後或在另一個應用程式中進行預測。 將下列程式碼新增至 `Evaluate` 方法。
 
 [!code-csharp[SnippetCallSaveModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetCallSaveModel)]
 
-在您的 `Evaluate`方法下方建立 `SaveModelAsFile` 方法。
+在您的 `SaveModelAsFile`方法下方建立 `Evaluate` 方法。
 
 ```csharp
 private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingDataViewSchema, ITransformer model)
@@ -307,11 +307,11 @@ private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingD
 
 ## <a name="deploy-and-predict-with-a-model"></a>部署及使用模型進行預測
 
-請使用下列程式碼，在緊接著 `Evaluate` 方法呼叫底下，從 `Main` 方法新增對新方法的呼叫：
+請使用下列程式碼，在緊接著 `Main` 方法呼叫底下，從 `Evaluate` 方法新增對新方法的呼叫：
 
 [!code-csharp[CallPredictIssue](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CallPredictIssue)]
 
-請使用下列程式碼，緊接在 `Evaluate` 方法之後 (並緊接在 `SaveModelAsFile` 方法之前)，建立 `PredictIssue` 方法：
+請使用下列程式碼，緊接在 `PredictIssue` 方法之後 (並緊接在 `Evaluate` 方法之前)，建立 `SaveModelAsFile` 方法：
 
 ```csharp
 private static void PredictIssue()
@@ -332,7 +332,7 @@ private static void PredictIssue()
 
 [!code-csharp[SnippetLoadModel](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#SnippetLoadModel)]
 
-透過建立 `GitHubIssue` 的執行個體，在 `Predict` 方法中新增 GitHub 問題，以測試所定型模型的預測：
+透過建立 `Predict` 的執行個體，在 `GitHubIssue` 方法中新增 GitHub 問題，以測試所定型模型的預測：
 
 [!code-csharp[AddTestIssue](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#AddTestIssue)]
 
@@ -372,11 +372,11 @@ private static void PredictIssue()
 =============== Single Prediction - Result: area-System.Data ===============
 ```
 
-恭喜您！ 您現在已成功建置可對 GitHub 問題分類和預測 Area 標籤的機器學習模型。 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) 存放庫中找到本教學課程的原始程式碼。
+恭喜！ 您現在已成功建置可對 GitHub 問題分類和預測 Area 標籤的機器學習模型。 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) 存放庫中找到本教學課程的原始程式碼。
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您已了解如何：
 > [!div class="checklist"]
 >
 > * 準備您的資料

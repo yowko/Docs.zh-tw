@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Self hosted service
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
-ms.openlocfilehash: 9077f2b00c97ae2a2106a50780cfd2cd9596c1ec
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 5a94eff021074a24df5b8891fe7b418b1fcf3c35
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716313"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094913"
 ---
 # <a name="self-host"></a>自我裝載
 這個範例會示範如何在主控台應用程式中實作自我裝載的服務。 這個範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。 服務的組態檔已經從 Web.config 重新命名為 App.config，並且修改為設定主機使用的基底位址。 服務的原始程式碼已經修改為實作靜態 `Main` 函式，這個函式會建立和開啟提供已設定之基底位址的服務主機。 服務實作已經修改為將每個作業的輸出寫入至主控台。 除了設定服務的正確端點位址外，用戶端未經過修改。  
@@ -75,6 +75,6 @@ public static void Main()
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\SelfHost`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [AppFabric 裝載和持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 裝載和持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

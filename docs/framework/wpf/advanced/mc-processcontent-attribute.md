@@ -5,12 +5,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-ms.openlocfilehash: dde304cc2b9db9cb01f9264ca1359b8979512cfa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bcf55668bdc70902e346c401549a88f6ccb9072e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458788"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095121"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent 屬性
 指定哪些 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 專案應該仍有相關的父項目處理的內容，即使 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的處理器因為指定[mc：](mc-ignorable-attribute.md)可忽略的屬性，可能會忽略直屬父項目也一樣。 `mc:ProcessContent` 屬性支援自訂命名空間對應和 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 版本設定的標記相容性。  
@@ -44,9 +44,9 @@ ms.locfileid: "73458788"
   
  在屬性中，您可以使用空格分隔符號來指定多個前置詞，例如： `mc:ProcessContent="ignore:Element1 ignore:Element2"`。  
   
- `http://schemas.openxmlformats.org/markup-compatibility/2006` 命名空間會定義在 SDK 的這個區域中未記載的其他元素和屬性。 如需詳細資訊，請參閱[XML 標記相容性規格](https://go.microsoft.com/fwlink/?LinkId=73824)。  
+ `http://schemas.openxmlformats.org/markup-compatibility/2006` 命名空間會定義在 SDK 的這個區域中未記載的其他元素和屬性。 如需詳細資訊，請參閱[XML 標記相容性規格](https://docs.microsoft.com/office/open-xml/introduction-to-markup-compatibility#markup-compatibility-in-the-open-xml-file-formats-specification)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [mc:Ignorable 屬性](mc-ignorable-attribute.md)
 - [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

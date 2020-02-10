@@ -18,22 +18,22 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9fde2b28288b58d7da3a4d003ec50af7d7e7a965
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980167"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093210"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮點數值型別 (C# 參考)
 
-**浮點數型別**是**簡單型別**的子集，並可使用[*常值*](#real-literals)初始化。 所有浮點數型別也是實值型別。 所有浮點數數值型別都支援[算術](../operators/arithmetic-operators.md)、比較和[等號](../operators/equality-operators.md)[比較](../operators/comparison-operators.md)運算子。
+*浮點數數值型別*代表實數。 所有浮點數數值型別都是實[數值型別](value-types.md)。 它們也是[簡單類型](value-types.md#built-in-value-types)，而且可以使用[常](#real-literals)值進行初始化。 所有浮點數數值型別都支援[算術](../operators/arithmetic-operators.md)、比較和[等號](../operators/equality-operators.md)[比較](../operators/comparison-operators.md)運算子。
 
 ## <a name="characteristics-of-the-floating-point-types"></a>浮點數型別的特性
 
 C# 支援下列預先定義的浮點數型別：
   
-|C# 型別/關鍵字|大概範圍|精確度|大小|.NET 型別|
+|C# 型別/關鍵字|大概範圍|Precision|大小|.NET 類型|
 |----------|-----------------------|---------------|--------------|--------------|
 |`float`|±1.5 x 10<sup>−45</sup> 到 ±3.4 x 10<sup>38</sup>|~6-9 位數|4 個位元組|<xref:System.Single?displayProperty=nameWithType>|
 |`double`|±5.0 × 10<sup>−324</sup> 至 ±1.7 × 10<sup>308</sup>|~15-17 位數|8 個位元組|<xref:System.Double?displayProperty=nameWithType>|
@@ -48,7 +48,7 @@ System.Double b = 12.3;
 
 每個浮點數型別的預設值都是零 (`0`)。 每個浮點數型別都有 `MinValue` 與 `MaxValue` 常數，提供該型別的最小與最大有限值。 `float` 與 `double` 型別也提供表示不是數字和無限值的常數。 例如，`double` 型別提供下列常數：<xref:System.Double.NaN?displayProperty=nameWithType>、<xref:System.Double.NegativeInfinity?displayProperty=nameWithType> 與 <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>。
 
-相較於 `float` 與 `double`，因為 `decimal` 型別的精確度較高且範圍較小，所以非常適合財務與金融計算。
+相較於 `decimal` 與 `float`，因為 `double` 型別的精確度較高且範圍較小，所以非常適合財務與金融計算。
 
 您可以在運算式中混合使用[整數](integral-numeric-types.md)型別與浮點數型別。 在此情況下，整數型別會轉換成浮點類型。 運算式的評估會根據下列規則來執行：
 
@@ -115,10 +115,10 @@ Console.WriteLine(m);  // output: 1500000
 - [Decimal 類型](~/_csharplang/spec/types.md#the-decimal-type)
 - [實際常值](~/_csharplang/spec/lexical-structure.md#real-literals)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [內建型別表](../keywords/built-in-types-table.md)
+- [值類型](value-types.md)
 - [整數型別](integral-numeric-types.md)
 - [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET 中的數值](../../../standard/numerics.md)

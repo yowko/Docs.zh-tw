@@ -5,12 +5,12 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 4d5e29f51ab49c142beb97060b719f26b050e767
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ab1effe93a1572f5d4ce5296bba99dad24f9cbca
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715021"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094783"
 ---
 # <a name="windows-service-host"></a>Windows 服務主機
 這個範例會示範裝載于 managed Windows 服務中的 Windows Communication Foundation （WCF）服務。 Windows 服務是使用 [**控制台**] 中的 [服務] 小程式來控制，而且可以設定為在系統重新開機後自動啟動。 範例是由用戶端程式與 Windows 服務程式所組成。 服務會實作為 .exe 程式並包含專屬的裝載程式碼。 在其他裝載環境中，例如 Windows 處理序啟用服務 (WAS) 或 Internet Information Services (IIS)，就不需要撰寫裝載程式碼。
@@ -63,6 +63,6 @@ ms.locfileid: "74715021"
   
 4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [AppFabric 裝載和持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 裝載和持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

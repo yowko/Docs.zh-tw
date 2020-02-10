@@ -1,13 +1,13 @@
 ---
-title: .NET Core 的重大變更
+title: 重大變更
 description: 瞭解每個 .NET Core 版本中的重大變更。
 ms.date: 11/27/2019
-ms.openlocfilehash: c03054972a5e1cd427e069c65fa8e8b601af5894
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 664d83f5bfa455764de8823c4bbdb4a2018e1875
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937339"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093067"
 ---
 # <a name="breaking-change-selectors"></a>重大變更選取器
 
@@ -33,6 +33,6 @@ ms.locfileid: "75937339"
 - 若為 ASP.NET Core，則為[aspnet/公告](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0)存放庫。
 - 若為 Entity Framework Core，則為[dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change)存放庫。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [從 .NET Framework 遷移至 .NET Core](../porting/index.md)

@@ -2,40 +2,40 @@
 title: 有害訊息處理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 389d0651438036cd23d30cf7dd866956ac8e5dae
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 378849815617f6556a7d9cc7e89c6697bfdd895d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921217"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094991"
 ---
 # <a name="poison-message-handling"></a>有害訊息處理
 *有害訊息*是已超過應用程式傳遞嘗試次數上限的訊息。 這種情形可能會在佇列架構的應用程式因為錯誤而無法處理訊息時發生。 為了符合可靠性的需求，佇列的應用程式會在交易中接收訊息。 若中止了接收佇列訊息的異動，則會讓訊息留在佇列中，而訊息將會在新的異動中重試。 如果造成異動中止的問題未予以更正，則接收的應用程式可能會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數的上限為止，因而形成有害訊息。  
   
- 訊息變成有害訊息的原因有許多種。 最常見的原因是在應用程式中所發生的特定原因。 例如，如果應用程式從佇列讀取訊息，並且執行某些資料庫處理，應用程式可能因為無法在該資料庫上取得鎖定，而造成中止交易。 由於資料庫交易中止，訊息會留在佇列中，造成應用程式再次讀取該訊息，並重新嘗試取得資料庫鎖定。 如果訊息包含無效的資訊，則也可能變成有害的。 例如，採購單可能包含無效的客戶編號。 在這些情況下，應用程式可能自動中止異動，而迫使訊息成為有害訊息。  
+ 訊息變成有害訊息的原因有許多種。 最常見的原因是應用程式特有的。 例如，如果應用程式從佇列讀取訊息，並且執行某些資料庫處理，應用程式可能因為無法在該資料庫上取得鎖定，而造成中止交易。 由於資料庫交易中止，訊息會留在佇列中，造成應用程式再次讀取該訊息，並重新嘗試取得資料庫鎖定。 如果訊息包含無效的資訊，則也可能變成有害的。 例如，採購單可能包含無效的客戶編號。 在這些情況下，應用程式可能自動中止異動，而迫使訊息成為有害訊息。  
   
  在鮮少的情況下，訊息可能會無法分派至應用程式。 Windows Communication Foundation （WCF）層可能會發現訊息有問題，例如，訊息的框架錯誤、附加的訊息認證無效，或是不正確動作標頭。 在這些情況中，應用程式絕不會接收該訊息，不過，訊息仍然可能會變成有害訊息，並且以手動方式處理。  
   
 ## <a name="handling-poison-messages"></a>處理有害訊息  
- 在 WCF 中，有害訊息處理提供一個機制，讓接收的應用程式處理無法分派至應用程式的訊息，或是分派至應用程式但因為應用程式特定而無法處理的訊息描述. 有害訊息處理是由每個可用佇列繫結中的以下屬性所設定：  
+ 在 WCF 中，有害訊息處理會提供一種機制，讓接收應用程式處理無法分派至應用程式的訊息，或是因應用程式特定而無法處理的訊息描述. 在每個可用的佇列系結中，使用下列屬性來設定有害訊息處理：  
   
-- `ReceiveRetryCount`。 整數值，表示從應用程式佇列傳遞至應用程式的訊息重試次數上限。 預設值為 5。 這個值對於立即重試即可修正問題的情況來說就已足夠，例如資料庫上發生暫時死結時。  
+- `ReceiveRetryCount`第 1 課：建立 Windows Azure 儲存體物件{2}。 整數值，表示從應用程式佇列傳遞至應用程式的訊息重試次數上限。 預設值為 5。 這個值對於立即重試即可修正問題的情況來說就已足夠，例如資料庫上發生暫時死結時。  
   
-- `MaxRetryCycles`。 整數值，表示重試週期的上限。 重試週期包含從應用程式佇列將訊息傳輸至重試子佇列，然後在經過一段可設定的延遲之後，再從重試子佇列傳回應用程式佇列，重新嘗試傳遞。 預設值為 2。 在 Windows Vista 上，訊息最多會嘗試（`ReceiveRetryCount` + 1） * （`MaxRetryCycles` + 1）次。 Windows Server 2003 和 Windows XP 上會忽略 `MaxRetryCycles`。  
+- `MaxRetryCycles`第 1 課：建立 Windows Azure 儲存體物件{2}。 整數值，表示重試週期的上限。 重試週期包含從應用程式佇列將訊息傳輸至重試子佇列，然後在經過一段可設定的延遲之後，再從重試子佇列傳回應用程式佇列，重新嘗試傳遞。 預設值為 2。 在 Windows Vista 上，訊息最多會嘗試（`ReceiveRetryCount` + 1） * （`MaxRetryCycles` + 1）次。 Windows Server 2003 和 Windows XP 上會忽略 `MaxRetryCycles`。  
   
-- `RetryCycleDelay`。 重試週期之間的時間延遲。 預設值為 30 分鐘。 `MaxRetryCycles` 和 `RetryCycleDelay` 會一起提供解決問題的機制，透過定期延遲之後的重試，進行問題的修正。 例如，這個機制會處理 SQL Server 中所設定等待異動認可的鎖定資料列。  
+- `RetryCycleDelay`第 1 課：建立 Windows Azure 儲存體物件{2}。 重試週期之間的時間延遲。 預設值為 30 分鐘。 `MaxRetryCycles` 和 `RetryCycleDelay` 會一起提供解決問題的機制，透過定期延遲之後的重試，進行問題的修正。 例如，這個機制會處理 SQL Server 中所設定等待異動認可的鎖定資料列。  
   
-- `ReceiveErrorHandling`。 列舉型別，指出要針對達到重試次數上限之後，而導致傳遞失敗的訊息所採取的動作。 這個值可以是 Fault、Drop、Reject 和 Move。 預設選項為 Fault。  
+- `ReceiveErrorHandling`第 1 課：建立 Windows Azure 儲存體物件{2}。 列舉型別，指出要針對達到重試次數上限之後，而導致傳遞失敗的訊息所採取的動作。 這個值可以是 Fault、Drop、Reject 和 Move。 預設選項為 Fault。  
   
 - Fault： 這個選項會將錯誤傳送至造成 `ServiceHost` 失敗的接聽項。 訊息必須藉由某種外部機制從應用程式佇列中移除，應用程式才能繼續處理佇列中的訊息。  
   
 - 卸除： 這個選項會捨棄有害訊息，而且該訊息永遠不會傳遞至應用程式。 如果訊息的 `TimeToLive` 屬性此時已過期，那麼訊息便可能會出現在傳送者寄不出的信件佇列中。 如果未過期的話，訊息不會出現在任何位置。 這個選項表示，使用者尚未指定訊息遺失時的做法。  
   
-- Reject： 此選項僅適用于 Windows Vista。 這個選項會指示 Message Queuing (MSMQ) 將負值通知傳回傳送的佇列管理員，說明應用程式無法接收訊息。 訊息會放在傳送的佇列管理員寄不出的信件佇列中。  
+- Reject： 此選項僅適用于 Windows Vista。 這會指示訊息佇列（MSMQ）將否定的認可傳回給傳送端佇列管理員，讓應用程式無法接收訊息。 訊息會放在傳送的佇列管理員寄不出的信件佇列中。  
   
 - Move： 此選項僅適用于 Windows Vista。 這個選項會將有害訊息移到有害訊息佇列，以便之後讓有害訊息處理應用程式進行處理。 有害訊息佇列是應用程式佇列的子佇列。 有害訊息處理應用程式可以是從有害佇列讀取訊息的 WCF 服務。 有害佇列是應用程式佇列的子佇列，可以定址為 net. msmq：//\<*電腦名稱稱*>/*applicationQueue*;p oison，其中*電腦名稱稱*是佇列所在的電腦名稱稱，而*applicationQueue*是應用程式特定佇列的名稱。  
   
- 以下為訊息的嘗試傳遞次數上限：  
+以下為訊息的嘗試傳遞次數上限：  
   
 - （（ReceiveRetryCount + 1） * （MaxRetryCycles + 1））在 Windows Vista 上。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "76921217"
   
  WCF 提供兩個標準的佇列系結：  
   
-- <xref:System.ServiceModel.NetMsmqBinding>。 .NET Framework 系結，適合用來與其他 WCF 端點執行以佇列為基礎的通訊。  
+- <xref:System.ServiceModel.NetMsmqBinding>第 1 課：建立 Windows Azure 儲存體物件{2}。 .NET Framework 系結，適合用來與其他 WCF 端點執行以佇列為基礎的通訊。  
   
-- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 此繫結適合用來與現有的訊息佇列應用程式進行通訊。  
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>第 1 課：建立 Windows Azure 儲存體物件{2}。 此繫結適合用來與現有的訊息佇列應用程式進行通訊。  
   
 > [!NOTE]
 > 您可以根據 WCF 服務的需求來改變這些系結中的屬性。 對於接收應用程式而言，整個有害訊息處理機制是在本機上進行的。 傳送應用程式看不到這個程序，除非接收應用程式最後停止並且將負值通知傳回至傳送者。 在這種情況下，訊息會移到傳送者寄不出的信件佇列中。  
@@ -68,7 +68,7 @@ ms.locfileid: "76921217"
   
 1. 請確認您的有害設定能反映您應用程式的需求。 使用設定時，請確定您瞭解 Windows Vista、Windows Server 2003 和 Windows XP 上訊息佇列功能之間的差異。  
   
-2. 如有需要，請實作 `IErrorHandler` 來處理有害訊息錯誤。 由於將 `ReceiveErrorHandling` 設為 `Fault` 時需要使用手動機制將有害訊息從佇列中移出，或更正外部相關的問題，因此通常的使用方式是在 `IErrorHandler` 設為 `ReceiveErrorHandling` 時實作 `Fault`，如下列程式碼中所示。  
+2. 如有必要，請執行 `IErrorHandler` 來處理有害訊息錯誤。 由於將 `ReceiveErrorHandling` 設為 `Fault` 時需要使用手動機制將有害訊息從佇列中移出，或更正外部相關的問題，因此通常的使用方式是在 `IErrorHandler` 設為 `ReceiveErrorHandling` 時實作 `Fault`，如下列程式碼中所示。  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
@@ -103,7 +103,7 @@ ms.locfileid: "76921217"
   
 - Windows Vista 中的訊息佇列支援訊息屬性，它會保留嘗試傳遞訊息的次數計數。 Windows Server 2003 和 Windows XP 上無法使用此 [中止計數] 屬性。 WCF 會在記憶體中維護中止計數，因此當伺服陣列中的多個 WCF 服務讀取相同的訊息時，這個屬性可能不會包含正確的值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Windows Vista、Windows Server 2003 和 Windows XP 之間的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)

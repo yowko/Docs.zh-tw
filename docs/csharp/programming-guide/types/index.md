@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: be2af77f9680ab3285720525638bba8ef2041999
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d277869809b7148a2c3d568c91fce15f9a83baa1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745372"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093561"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 
@@ -63,7 +63,7 @@ C# 是強型別語言。 每個變數和常數都有型別，如同每個會評�
 
 ## <a name="built-in-types"></a>內建類型
 
-C# 提供一組標準內建數字類型，代表整數、浮點數值、布林運算式、文字字元、十進位值及其他資料型別。 另外還有內建的 `string` 和 `object` 型別。 這些都可供您在任何 C# 程式中使用。 如需內建類型的詳細資訊，請參閱[內建類型的參考資料表](../../language-reference/keywords/built-in-types-table.md)。
+C# 提供一組標準內建數字類型，代表整數、浮點數值、布林運算式、文字字元、十進位值及其他資料型別。 另外還有內建的 `string` 和 `object` 型別。 這些都可供您在任何 C# 程式中使用。 如需內建類型的完整清單，請參閱[內建類型](../../language-reference/builtin-types/built-in-types.md)。
 
 ## <a name="custom-types"></a>自訂類型
 

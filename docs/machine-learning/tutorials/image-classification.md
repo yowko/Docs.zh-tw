@@ -1,15 +1,15 @@
 ---
-title: 教學課程：從預先定型的 TensorFlow 模型產生 ML.NET 影像分類模型
+title: 教學課程：從 TensorFlow ML.NET 影像分類模型
 description: 瞭解如何將現有 TensorFlow 模型的知識，轉移到新的 ML.NET 影像分類模型。 TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模型利用轉移學習，將影像分類成較少的類別。
-ms.date: 11/15/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: 5fe47c42d0cf24ebfdc33a937e1afbd11a976680
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f5ec31f8bfdc089d275588b228c8ce6f28a44201
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738960"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092547"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>教學課程：從預先定型的 TensorFlow 模型產生 ML.NET 影像分類模型
 
@@ -19,7 +19,7 @@ TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模�
 
 若要從頭對[影像分類](https://en.wikipedia.org/wiki/Outline_of_object_recognition) \(英文\) 模型進行定型，將會需要設定數以百萬計的參數、眾多已標籤的定型資料，以及大量的計算資源 (數以百計的 GPU 小時)。 遷移學習的效能雖然不如從頭對自訂模型進行定型來得有效，但它能讓您透過僅需處理數以千計的影像 (而非數以百萬計的已標籤影像) 來縮短此程序，並以較為快速的方式建置自訂模型 (在不具備 GPU 的電腦上於一小時內便能完成)。 本教學課程會更進一步調整該程式，只使用數十個訓練影像。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 > [!div class="checklist"]
 >
 > * 了解問題
@@ -35,7 +35,7 @@ TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模�
 
 在本教學課程中，您會使用已定型的部分 TensorFlow 模型，將影像分類成一千個類別-在 ML.NET 模型中，將影像分類成3個類別。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 * 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)版本。
 * [教學課程資產目錄 .ZIP 檔案](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
@@ -43,7 +43,7 @@ TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模�
 
 ## <a name="select-the-right-machine-learning-task"></a>選取適當的機器學習工作
 
-### <a name="deep-learning"></a>深度學習
+### <a name="deep-learning"></a>深入學習
 
 [深度學習](https://en.wikipedia.org/wiki/Deep_learning)是機器學習的子集，其正為電腦視覺及語音辨識等領域帶來革命性的影響。
 
@@ -70,9 +70,9 @@ TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模�
 > * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" 攝影者：[Jonik](https://commons.wikimedia.org/wiki/User:Jonik) \(英文\) - 自行拍攝，CC BY-SA 2.0， https://commons.wikimedia.org/w/index.php?curid=48166 \(英文\)。
 > * "193px-Broodrooster.jpg" 攝影者：[M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) \(英文\) - 自行創作，CC BY-SA 3.0， https://commons.wikimedia.org/w/index.php?curid=27403 \(英文\)
 
-`Inception model` 經過訓練，可將影像分類為一千個類別，但在本教學課程中，您需要將影像分類為較小的類別集，而僅限於那些類別。 這就是 `transfer learning` (遷移學習) 名稱中 `transfer` (遷移) 這部分派上用場的時候。 您可以將 `Inception model` 辨識及分類影像的能力遷移至您自訂影像分類器新的受限類別之中。
+`Inception model` 經過訓練，可將影像分類為一千個類別，但在本教學課程中，您需要將影像分類為較小的類別集，而僅限於那些類別。 這就是 `transfer` (遷移學習) 名稱中 `transfer learning` (遷移) 這部分派上用場的時候。 您可以將 `Inception model` 辨識及分類影像的能力遷移至您自訂影像分類器新的受限類別之中。
 
-* Food (食物)
+* Food
 * Toy (玩具)
 * Appliance (設備)
 
@@ -92,7 +92,7 @@ TensorFlow 模型已定型，可將影像分類為一千個類別。 ML.NET 模�
 
 這個定型者所實行的演算法會在大量功能的問題上順利執行，這是在影像資料上操作的深度學習模型的情況。
 
-### <a name="data"></a>Data
+### <a name="data"></a>資料
 
 有兩個資料來源：`.tsv` 檔案，以及影像檔案。  `tags.tsv` 檔案包含兩個資料行：第一個會被定義為 `ImagePath`，而第二個則是對應至影像的 `Label`。 下列範例檔案沒有標頭資料列，且看起來像這樣：
 
@@ -143,7 +143,7 @@ toaster2.png    appliance
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
-1. 在 *Program.cs* 檔案頂端新增下列額外的 `using` 陳述式：
+1. 在 `using`Program.cs*檔案頂端新增下列額外的* 陳述式：
 
     [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddUsings)]
 
@@ -173,7 +173,7 @@ toaster2.png    appliance
 
 ### <a name="initialize-variables-in-main"></a>在 Main 中初始化變數
 
-1. 搭配 `MLContext` 的新執行個體來初始化 `mlContext` 變數。  在 `Main` 方法中，以下列程式碼取代 `Console.WriteLine("Hello World!")`：
+1. 搭配 `mlContext` 的新執行個體來初始化 `MLContext` 變數。  在 `Console.WriteLine("Hello World!")` 方法中，以下列程式碼取代 `Main`：
 
     [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CreateMLContext)]
 
@@ -189,7 +189,7 @@ toaster2.png    appliance
 
 因為您將會不只一次顯示影像資料和相關預測，所以請建立顯示公用程式方法來處理顯示影像和預測結果。
 
-1. 使用下列程式碼，在緊接著 `InceptionSettings` 結構之後，建立 `DisplayResults()` 方法：
+1. 使用下列程式碼，在緊接著 `DisplayResults()` 結構之後，建立 `InceptionSettings` 方法：
 
     ```csharp
     private static void DisplayResults(IEnumerable<ImagePrediction> imagePredictionData)
@@ -204,7 +204,7 @@ toaster2.png    appliance
 
 ### <a name="create-a-tsv-file-utility-method"></a>建立 .tsv 檔案公用程式方法
 
-1. 請使用下列程式碼，在緊接著 `DisplayResults()` 方法之後，建立 `ReadFromTsv()` 方法：
+1. 請使用下列程式碼，在緊接著 `ReadFromTsv()` 方法之後，建立 `DisplayResults()` 方法：
 
     ```csharp
     public static IEnumerable<ImageData> ReadFromTsv(string file, string folder)
@@ -221,7 +221,7 @@ toaster2.png    appliance
 
 ### <a name="create-a-method-to-make-a-prediction"></a>建立方法以進行預測
 
-1. 請使用下列程式碼，緊接在 `DisplayResults()` 方法之前，建立 `ClassifySingleImage()` 方法：
+1. 請使用下列程式碼，緊接在 `ClassifySingleImage()` 方法之前，建立 `DisplayResults()` 方法：
 
     ```csharp
     public static void ClassifySingleImage(MLContext mlContext, ITransformer model)
@@ -255,7 +255,7 @@ ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行
 
     這個方法是教學課程的核心。 它會建立模型的管線，並訓練管線以產生 ML.NET 模型。 它也會針對某些先前看不見的測試資料評估模型。
 
-    使用下列程式碼，緊接在 `InceptionSettings` 結構之後及 `DisplayResults()` 方法之前，建立 `GenerateModel()` 方法：
+    使用下列程式碼，緊接在 `GenerateModel()` 結構之後及 `InceptionSettings` 方法之前，建立 `DisplayResults()` 方法：
 
     ```csharp
     public static ITransformer GenerateModel(MLContext mlContext)
@@ -334,7 +334,7 @@ ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行
     下列計量會針對影像分類進行評估：
 
     * `Log-loss`：請參閱[記錄檔遺失](../resources/glossary.md#log-loss)。 建議讓記錄檔遺失盡量接近零。
-    * `Per class Log-loss`。 建議讓每個類別的記錄檔遺失盡量接近零。
+    * `Per class Log-loss`第 1 課：建立 Windows Azure 儲存體物件{2}。 建議讓每個類別的記錄檔遺失盡量接近零。
 
 1. 新增下列程式碼來將定型後的模型作為下一行傳回：
 
@@ -364,11 +364,11 @@ ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行
     Image: toaster3.jpg predicted as: appliance with score: 0.9646884
     ```
 
-恭喜您！ 您現在已成功地為影像分類建立機器學習模型，其方式是在 ML.NET 中將轉移學習套用至 `TensorFlow` 模型。
+恭喜！ 您現在已成功地為影像分類建立機器學習模型，其方式是在 ML.NET 中將轉移學習套用至 `TensorFlow` 模型。
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TransferLearningTF) 存放庫中找到本教學課程的原始程式碼。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您已了解如何：
 > [!div class="checklist"]
 >
 > * 了解問題

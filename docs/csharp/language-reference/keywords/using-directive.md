@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: a2028ccce47de54b59323194a0ffab3a643d878c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712971"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093145"
 ---
 # <a name="using-directive-c-reference"></a>using 指示詞 (C# 參考)
 
@@ -68,7 +68,7 @@ class Program
 
 ```csharp
 using s = System.Text;
-using s.RegularExpressions;
+using s.RegularExpressions; // Generates a compiler error.
 ```
 
 建立 `using` 指示詞，以在命名空間中使用類型，而無需指定命名空間。 `using` 指示詞不會授予巢狀於您指定的命名空間中的任何命名空間的存取權。
@@ -91,9 +91,9 @@ using alias 指示詞的右邊不能有開放式的泛型類型。 例如，您�
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的 [Using 指示詞](~/_csharplang/spec/namespaces.md#using-directives)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/namespaces.md#using-directives)的 [Using 指示詞](/dotnet/csharp/language-reference/language-specification/introduction)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

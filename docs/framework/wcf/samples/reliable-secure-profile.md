@@ -2,15 +2,16 @@
 title: 可靠的安全設定檔
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ef4680673f37655603a42f6da8aaf7eceaa01f56
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716496"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094939"
 ---
 # <a name="reliable-secure-profile"></a>可靠的安全設定檔
-這個範例會示範如何撰寫 WCF 和[可靠的安全設定檔](https://go.microsoft.com/fwlink/?LinkId=178140)（.rsp）。 這個範例會示範如何執行「[建立連接](https://go.microsoft.com/fwlink/?LinkId=178141)通道」，它可以與可靠的訊息結合在一起，並選擇性地建立安全的通道，以根據 RSP 規格建立可靠的安全系結。  
+
+這個範例會示範如何撰寫 WCF 和[可靠的安全設定檔（.rsp）](http://www.ws-i.org/Profiles/ReliableSecureProfile-1.0.html)。 這個範例會示範如何執行「[建立連接](http://docs.oasis-open.org/ws-rx/wsmc/200702/wsmc-1.0-spec-cs-01.pdf)通道」，它可以與可靠的訊息結合，並選擇性地使用安全的通道來建立以 RSP 規格為基礎的可靠安全系結。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
@@ -21,7 +22,7 @@ ms.locfileid: "74716496"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
-## <a name="discussion"></a>討論  
+## <a name="discussion"></a>討論區  
  此範例示範可靠的非同步雙向訊息交換案例。 此服務擁有雙工合約，而且用戶端會實作雙工回呼合約。 用戶端會向服務起始一個要求，這個要求預期在不同的連線上得到回應。 要求訊息是以可靠的方式傳送。 用戶端不想在其結尾開啟接聽端點。 因此，它會利用服務的「建立連線」要求輪詢服務，以便在這個「建立連線」要求的返回通道傳回回應。 此範例示範如何透過 HTTP 進行安全可靠的雙工通訊，而不讓用戶端公開接聽端點 (以及建立防火牆例外狀況)。  
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  

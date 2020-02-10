@@ -2,12 +2,12 @@
 title: SystemWebRouting 整合範例
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 8be76fa97752680700f1c0eb56c1803fc69155d6
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: a91763e7dacb04a68cfea1079d55bbc1eda01668
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716634"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094887"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting 整合範例
 這個範例示範裝載層與 <xref:System.Web.Routing> 命名空間中的類別整合。 <xref:System.Web.Routing> 命名空間中的類別可讓應用程式使用不會直接回應實體資源的 URL。 使用 Web 路由可讓開發人員建立 HTTP 的虛擬位址，然後再對應回到實際的 WCF 服務。 當 WCF 服務必須在不需要實體檔案或資源的情況下裝載，或是服務必須使用不包含 .html 或 .aspx 等檔案的 URL 存取時，這種方式會相當實用。 這個範例將示範如何使用 <xref:System.Web.Routing.RouteTable> 類別來建立虛擬 URI，以便對應至 global.asax 中所定義的執行中服務。 
@@ -83,6 +83,6 @@ ms.locfileid: "74716634"
 > [!NOTE]
 > 如果預設應用程式集區版本設定為第2版，則必須將其更新為 .NET Framework 4。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [AppFabric 裝載和持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric 裝載和持續性範例](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 6771edcca8159b0805018c16167b25c287d3152c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 14bb8227a4a6c8beff6ab04c58d8e1a43db69856
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743739"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093132"
 ---
 # <a name="equality-operators-c-reference"></a>等號比較運算子 (C# 參考)
 
@@ -75,7 +75,7 @@ ms.locfileid: "76743739"
 
 ## <a name="inequality-operator-"></a>不等比較運算子 !=
 
-不等比較運算子 `!=` 會在其運算元不相等時傳回 `true`，否則傳回 `false`。 對於[內建類型](../keywords/built-in-types-table.md)的運算元，運算式 `x != y` 會產生與運算式 `!(x == y)` 相同的結果。 如需有關型別等號的詳細資訊，請參閱[等號比較運算子](#equality-operator-)一節。
+不等比較運算子 `!=` 會在其運算元不相等時傳回 `true`，否則傳回 `false`。 對於[內建類型](../builtin-types/built-in-types.md)的運算元，運算式 `x != y` 會產生與運算式 `!(x == y)` 相同的結果。 如需有關型別等號的詳細資訊，請參閱[等號比較運算子](#equality-operator-)一節。
 
 下列範例示範 `!=` 運算子的用法：
 

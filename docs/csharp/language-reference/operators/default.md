@@ -40,7 +40,7 @@ ms.locfileid: "75964612"
 
 如需有關 `default` 常值的詳細資訊，請參閱[功能提案注意事項](~/_csharplang/proposals/csharp-7.1/target-typed-default.md) \(英文\)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)

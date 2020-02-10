@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 |一
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 0e5f3578edc723e2e2a32b9b3a1d8a7dcabd2909
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965746"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093119"
 ---
 # <a name="common-client-side-web-technologies"></a>一般用戶端 web 技術
 
@@ -18,7 +18,7 @@ ms.locfileid: "76965746"
 
 ASP.NET Core 應用程式是 Web 應用程式，通常依賴於如 HTML、CSS 和 JavaScript 等用戶端 Web 技術。 藉由將頁面 (HTML) 的內容與其版面配置和樣式 (CSS) 分離開來，以及其行為 (透過 JavaScript)，複雜的 Web 應用程式可以利用關注點分離原則。 當這些問題並非密不可分時，未來對應用程式結構、設計或行為的變更，可以更容易進行。
 
-雖然 HTML 和 CSS 相對穩定，但 JavaScript 透過開發人員使用應用程式架構和公用程式來建置 Web 型應用程式，正以驚人的速度發展。 本章將探討 網頁程式開發人員在開發應用程式時使用 JavaScript 的幾種方式，如提供角度和回應用戶端程式庫的高階總覽。
+雖然 HTML 和 CSS 相對穩定，但 JavaScript 透過開發人員使用應用程式架構和公用程式來建置 Web 型應用程式，正以驚人的速度發展。 本章探討 網頁程式開發人員使用 JavaScript 的幾種方式，並提供角度和回應用戶端程式庫的高階總覽。
 
 ## <a name="html"></a>HTML
 
@@ -68,14 +68,14 @@ JavaScript 是一種動態、解譯的程式設計語言，已在 ECMAScript 語
 |--------------------------|------------|-------------|
 | 提取 DOM | **是** | **是** |
 | AJAX 支援 | **是** | **是** |
-| 宣告式資料繫結 | **No** | **是** |
-| MVC 樣式路由 | **No** | **是** |
-| 範本化 | **No** | **是** |
-| 深層連結路由 | **No** | **是** |
+| 宣告式資料繫結 | **否** | **是** |
+| MVC 樣式路由 | **否** | **是** |
+| 範本化 | **否** | **是** |
+| 深層連結路由 | **否** | **是** |
 
 jQuery 本身缺少的大部分功能，都可以藉由新增其他程式庫來新增。 然而，像 Angular 這樣的 SPA 架構能以更加整合的方式提供這些功能，因為從一開始就是為這些功能而設計的。 此外，jQuery 是命令式程式庫，這表示您必須呼叫 jQuery 函式，才能使用 jQuery 執行任何動作。 SPA 框架提供的大部分工作和功能都可以透過宣告方式完成，而不需要撰寫實際的程式碼。
 
-資料繫結是一個很好的範例。 在 jQuery 中，通常只需要一行程式碼就可以取得 DOM 項目的值，或設定項目的值。 但是，每當您需要更改項目的值，都必須撰寫此程式碼；有時會在頁面上的多個函式中發生。 另一個常見範例是項目可見性。 在 jQuery 中，可能會有許多不同地方需要您撰寫程式碼來決定特定項目是否可見。 在這些情況下，使用資料繫結時，不需要撰寫程式碼。 您只需將討論中的項目值或可見性繫結至頁面上的 *viewmodel*，對該 viewmodel 所做的變更即會自動反映在繫結項目中。
+資料繫結是一個很好的範例。 在 jQuery 中，通常只會使用一行程式碼來取得 DOM 元素的值，或設定元素的值。 不過，每當您需要變更元素的值時，都必須撰寫此程式碼，有時這會發生在頁面上的多個函式中。 另一個常見範例是項目可見性。 在 jQuery 中，您可能會有許多不同的位置，讓您撰寫程式碼來控制是否顯示特定元素。 在這些情況下，使用資料繫結時，不需要撰寫程式碼。 您只要將有問題的元素值或可見度系結至頁面上的*viewmodel* ，該 viewmodel 的變更就會自動反映在繫結項目中。
 
 ### <a name="angular-spas"></a>Angular SPA
 
@@ -108,7 +108,7 @@ Microsoft 開發了一個參考應用程式 [eShopOnContainers](https://aka.ms/M
 
 React 最重要的功能之一是使用虛擬 DOM。 虛擬 DOM 為 React 提供了幾項優勢，包括效能 (虛擬 DOM 可最佳化實際 DOM 的哪些部分需要更新) 和可測試性 (無需使用瀏覽器測試 React 及其與虛擬 DOM 的互動)。
 
-React 在 HTML 的工作方式上也很獨特。 在程式碼和標記之間沒有嚴格的分隔 (或許是出現於 HTML 屬性中的 JavaScript 參考)，React 直接在 JavaScript 程式碼中新增 HTML 作為 JSX。 JSX 是 HTML 的類似語法，可以編譯成純 JavaScript。 例如：
+React 在 HTML 的工作方式上也很獨特。 在程式碼和標記之間沒有嚴格的分隔 (或許是出現於 HTML 屬性中的 JavaScript 參考)，React 直接在 JavaScript 程式碼中新增 HTML 作為 JSX。 JSX 是 HTML 的類似語法，可以編譯成純 JavaScript。 例如，
 
 ```js
 <ul>

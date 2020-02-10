@@ -1,13 +1,14 @@
 ---
 title: 重大變更-.NET Framework 至 .NET Core
+titleSuffix: ''
 description: 列出從 .NET Framework 到 .NET Core 的重大變更。
 ms.date: 12/18/2019
-ms.openlocfilehash: 6959bffab62cabc524062231db989de45c8c1498
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 407f99adf5d400fce659ef71cda32ceac1e54491
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116497"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093054"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>從 .NET Framework 遷移至 .NET Core 的突破性變更
 
@@ -26,7 +27,7 @@ ms.locfileid: "76116497"
 
 ***
 
-## <a name="windows-forms"></a>Windows 表單
+## <a name="windows-forms"></a>Windows Form
 
 版本3.0 中的 .NET Core 已加入 Windows Forms 支援。 如果您要將 Windows Forms 應用程式從 .NET Framework 遷移至 .NET Core，此處所列的重大變更可能會影響您的應用程式。
 
@@ -110,7 +111,7 @@ ms.locfileid: "76116497"
 
 ***
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 .NET Core 上一律會擲回例外狀況的 Api](unsupported-apis.md)
 - [.NET Core 上無法使用的 .NET Framework 技術](../porting/net-framework-tech-unavailable.md)

@@ -8,14 +8,15 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 9dbf9eee6e4222f899d77a4457bc78132ec7f092
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 4a5e56f6b7f33a4c6f29aa384635737eeee37ddd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920223"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095030"
 ---
-# <a name="debugging-windows-authentication-errors"></a>偵錯 Windows 驗證錯誤
+# <a name="debug-windows-authentication-errors"></a>Debug Windows 驗證錯誤
+
 當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當 SSPI 層發生安全性錯誤時，它們會由 Windows Communication Foundation （WCF）來呈現。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
   
  如需 Kerberos 通訊協定的總覽，請參閱[Kerberos 說明](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v=technet.10));如需 SSPI 的總覽，請參閱[sspi](/windows/win32/secauthn/sspi)。  
@@ -36,10 +37,10 @@ ms.locfileid: "76920223"
   
  表格標頭會顯示伺服器可能使用的帳戶類型。 左欄則顯示用戶端可能使用的帳戶類型。  
   
-||本機使用者|Local System (本機系統)|網域使用者|網域電腦|  
+||本機使用者|[本機系統]|網域使用者|網域電腦|  
 |-|----------------|------------------|-----------------|--------------------|  
 |本機使用者|NTLM|NTLM|NTLM|NTLM|  
-|Local System (本機系統)|匿名 NTLM|匿名 NTLM|匿名 NTLM|匿名 NTLM|  
+|[本機系統]|匿名 NTLM|匿名 NTLM|匿名 NTLM|匿名 NTLM|  
 |網域使用者|NTLM|NTLM|Kerberos|Kerberos|  
 |網域電腦|NTLM|NTLM|Kerberos|Kerberos|  
   
@@ -49,9 +50,9 @@ ms.locfileid: "76920223"
   
 - 本機系統：未加入網域之電腦上的內建帳戶 SYSTEM。  
   
-- 網域使用者：Windows 網域上的使用者帳戶。 例如：`DomainName\ProfileName`。  
+- 網域使用者：Windows 網域上的使用者帳戶。 例如： `DomainName\ProfileName` 。  
   
-- 網域電腦：處理序，其具有執行於已加入 Windows 網域之電腦的電腦身分識別。 例如：`MachineName\Network Service`。  
+- 網域電腦：處理序，其具有執行於已加入 Windows 網域之電腦的電腦身分識別。 例如： `MachineName\Network Service` 。  
   
 > [!NOTE]
 > 當呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 類別的 <xref:System.ServiceModel.ServiceHost> 方法時，便會擷取服務認證。 每當用戶端傳送訊息時就會讀取此用戶端認證。  
@@ -98,7 +99,7 @@ ms.locfileid: "76920223"
 ### <a name="ntlm-protocol"></a>NTLM 通訊協定  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>交涉 SSP 退而使用 NTLM，但是 NTLM 已停用  
- [<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>] 屬性會設定為 [`false`]，這會導致 Windows Communication Foundation （WCF）在使用 NTLM 時，盡力擲回例外狀況。 請注意，將此屬性設為 `false`，不一定能夠禁止 NTLM 認證透過網路傳送。  
+ [<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>] 屬性會設定為 [`false`]，這會導致 Windows Communication Foundation （WCF）在使用 NTLM 時，盡力擲回例外狀況。 將此屬性設定為 `false` 可能無法防止 NTLM 認證透過網路傳送。  
   
  下列程式碼示範如何停用退回使用 NTLM。  
   
@@ -142,13 +143,13 @@ ms.locfileid: "76920223"
  下列作業系統不支援做為伺服器使用的 Windows 驗證： Windows XP Home Edition、Windows XP Media Center Edition 和 Windows Vista Home edition。  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>以不同的身分進行開發及部署  
- 如果您在某一台電腦上開發應用程式，然後又在另一台電腦上進行部署，而且在每一台電腦上都使用不同的帳戶類型進行驗證，您可能會產生不同的行為。 例如，假設您是使用 `SSPI Negotiated`驗證模式，在 Windows XP Pro 機器上開發應用程式。 您又使用本機使用者帳戶進行身分驗證，然後又使用了 NTLM 通訊協定。 應用程式開發完成後，您以網域帳戶先在 Windows Server 2003 機器上部署服務而後執行。 此時，用戶端將無法驗證該服務，因為用戶端使用的是 Kerberos 及網域控制站。  
+ 如果您在某一台電腦上開發應用程式，然後又在另一台電腦上進行部署，而且在每一台電腦上都使用不同的帳戶類型進行驗證，您可能會產生不同的行為。 例如，假設您是使用 `SSPI Negotiated`驗證模式，在 Windows XP Pro 機器上開發應用程式。 您又使用本機使用者帳戶進行身分驗證，然後又使用了 NTLM 通訊協定。 應用程式開發完成後，您以網域帳戶先在 Windows Server 2003 機器上部署服務而後執行。 此時，用戶端將無法驗證服務，因為它會使用 Kerberos 和網域控制站。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ClientBase%601>
 - [委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
-- [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [不支援的情節](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

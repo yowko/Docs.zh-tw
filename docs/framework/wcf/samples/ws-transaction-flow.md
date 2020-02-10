@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: db23c250014006655fa51ee5a2e5b54e15e4f964
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 781934e9ab27f761e71841c2edc509f9b8022aa7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714592"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094744"
 ---
 # <a name="ws-transaction-flow"></a>WS 交易流程
 這個範例會示範用戶端協調異動的用法，以及使用 WS-Atomic 異動或 OleTransactions 通訊協定之異動流程的用戶端和伺服器選項。 這個範例是以實作為計算機服務的[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎，但是作業的屬性是為了示範如何使用 `TransactionFlowAttribute` 搭配**TransactionFlowOption**列舉，來判斷啟用的交易流程程度。 在流動的異動範圍內，會將所要求作業的記錄檔寫入資料庫，並在完成用戶端協調異動之前都會保存該記錄檔。如果用戶端異動未完成，Web 服務異動一定不會認可對資料庫進行適當的更新。  
@@ -230,7 +230,7 @@ Press <ENTER> to terminate the service.
 3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
   
     > [!NOTE]
-    > 若為跨電腦組態，請使用下列指示來啟用分散式異動協調器，然後使用 Windows SDK 中的 WsatConfig.exe 工具來啟用 WCF 異動網路支援。 如需設定 Wsatconfig.exe 的相關資訊，請參閱設定 WS-不可部分完成[交易支援](https://go.microsoft.com/fwlink/?LinkId=190370)。  
+    > 若為跨電腦組態，請使用下列指示來啟用分散式異動協調器，然後使用 Windows SDK 中的 WsatConfig.exe 工具來啟用 WCF 異動網路支援。 如需設定 Wsatconfig.exe 的相關資訊，請參閱設定 WS-不可部分完成的[交易支援](../feature-details/configuring-ws-atomic-transaction-support.md)。  
   
  無論您是在同一部電腦或不同電腦上執行範例，都必須設定 Microsoft 分散式交易協調器（MSDTC）以啟用網路交易流程，並使用 Wsatconfig.exe 工具來啟用 WCF 交易網路支援。  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate the service.
   
     6. 按一下 **[確定]** ，然後按一下 [**是**] 重新開機 MSDTC 服務。  
   
-    7. 按一下 [確定] 關閉對話方塊。  
+    7. 按一下 **[確定]** ，關閉對話方塊。  
   
 2. 在執行 Windows Server 2008 或 Windows Vista 的服務電腦上，請遵循下列指示設定 MSDTC 以允許傳入網路異動。  
   
@@ -264,7 +264,7 @@ Press <ENTER> to terminate the service.
   
     5. 按一下 **[確定]** ，然後按一下 [**是**] 重新開機 MSDTC 服務。  
   
-    6. 按一下 [確定] 關閉對話方塊。  
+    6. 按一下 **[確定]** ，關閉對話方塊。  
   
 3. 在用戶端電腦上，設定 MSDTC 以允許傳出網路交易：  
   
@@ -278,7 +278,7 @@ Press <ENTER> to terminate the service.
   
     5. 按一下 **[確定]** ，然後按一下 [**是**] 重新開機 MSDTC 服務。  
   
-    6. 按一下 [確定] 關閉對話方塊。  
+    6. 按一下 **[確定]** ，關閉對話方塊。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

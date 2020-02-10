@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 87dcfa22bcce730c5a9b61721c3a846a08146475
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794278"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094497"
 ---
 # <a name="threading-model"></a>執行緒模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是設計來避免開發人員遇到執行緒的難題。 因此，大部分的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 開發人員都不需要撰寫使用一個以上執行緒的介面。 由於多執行緒的程式非常複雜且很難偵錯，因此，若有單一執行緒解決方案，就應避免使用多執行緒程式。
@@ -58,7 +58,7 @@ ms.locfileid: "76794278"
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>單一執行緒應用程式與長時間執行的計算
  大部分的圖形化使用者介面（Gui）都會在等候使用者互動時所產生的事件時，花費大量時間閒置的部分。 有了謹慎的程式設計，就可以建設性使用此閒置時間，而不會影響 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的回應能力。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 執行緒模型不允許輸入中斷 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 執行緒中發生的作業。 這表示您必須務必定期返回 <xref:System.Windows.Threading.Dispatcher>，以處理擱置中的輸入事件，然後才會過時。
 
- 參考下列範例：
+ 請考慮下列範例：
 
  ![顯示質數執行緒的螢幕擷取畫面。](./media/threading-model/threading-prime-numbers.png)
 
@@ -99,7 +99,7 @@ ms.locfileid: "76794278"
 
  這個方法會檢查下一個奇數是否為質數。 如果是質數，方法會直接更新 `bigPrime`<xref:System.Windows.Controls.TextBlock> 以反映其探索。 由於計算會發生在用來建立元件的相同執行緒中，因此我們可以執行這項操作。 我們已選擇使用個別的執行緒來進行計算，我們必須使用更複雜的同步處理機制，並在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 執行緒中執行更新。 接下來我們將示範這種情況。
 
- 如需此範例的完整原始程式碼，請參閱[具有長時間執行計算範例的單一執行緒應用程式](https://go.microsoft.com/fwlink/?LinkID=160038)
+ 如需此範例的完整原始程式碼，請參閱[具有長時間執行計算範例的單一執行緒應用程式](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication)
 
 <a name="weather_sim"></a>
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>利用背景執行緒處理封鎖作業
@@ -215,6 +215,6 @@ ms.locfileid: "76794278"
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的工作是避免非預期的重新進入，而不重新介紹基於記憶體流失，這就是為什麼我們不會封鎖任何地方的重新進入。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [單一執行緒應用程式與長期執行的計算範例](https://go.microsoft.com/fwlink/?LinkID=160038)
+- [單一執行緒應用程式與長期執行的計算範例](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication)

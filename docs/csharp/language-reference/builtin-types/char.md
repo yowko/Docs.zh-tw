@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 3952e9e30706a8cd362ef248955918de5dacf4a3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b7ea52eaccda4599969a5d1e3b683d2d842b0d82
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787813"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093236"
 ---
 # <a name="char-c-reference"></a>char （C#參考）
 
 `char` 類型關鍵字是代表 Unicode UTF-16 字元之 .NET <xref:System.Char?displayProperty=nameWithType> 結構類型的別名。
 
-|類型|Range|大小|.NET 型別|
+|類型|範圍|大小|.NET 類型|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 到 U+FFFF|16位|<xref:System.Char?displayProperty=nameWithType>|
 
@@ -53,9 +53,9 @@ ms.locfileid: "76787813"
 
 如需詳細資訊，請參閱[ C#語言規格](~/_csharplang/spec/introduction.md)的[整數類資料類型](~/_csharplang/spec/types.md#integral-types)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [內建型別表](../keywords/built-in-types-table.md)
+- [值類型](value-types.md)
 - [字串](../../programming-guide/strings/index.md)
 - <xref:System.Text.Rune?displayProperty=nameWithType>

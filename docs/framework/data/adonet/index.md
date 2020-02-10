@@ -3,17 +3,18 @@ title: ADO.NET
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: a803c0592cd44801c55a699b56a9a498781a6593
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: cca3075a73a7bb45fd6154f760adfcda9064345c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980102"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094393"
 ---
 # <a name="adonet"></a>ADO.NET
+
 ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取服務一組類別 (Class)。 ADO.NET 提供一組豐富的元件，用於建立分散式資料共用應用程式。 其為 .NET Framework 的一個完整的部分，提供關聯式、XML 及應用程式資料的存取。 ADO.NET 支援各種開發需要，包括建立應用程式、工具、語言或網際網路瀏覽器使用的前端資料庫用戶端及中介層商務物件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ADO.NET 的新功能](whats-new.md)  
  簡介 ADO.NET 的新功能。  
   
@@ -36,9 +37,9 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  提供 LINQ to DataSet 的相關資訊，包括程式設計範例。  
   
  [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)  
- 說明如何連接至資料來源以及如何使用 `Commands`、`DataReaders` 和 `DataAdapters` 來擷取及修改資料。  
+ 描述如何連接至資料來源，以及如何使用 `Commands`、`DataReaders`和 `DataAdapters`來抓取和修改資料。  
   
- [SQL Server 和 ADO.NET](./sql/index.md)  
+ [SQL Server and ADO.NET](./sql/index.md) (SQL Server 和 ADO.NET)  
  說明如何使用 SQL Server 特有的特性和功能。  
   
  [Oracle 和 ADO.NET](oracle-and-adonet.md)  
@@ -46,21 +47,21 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
   
 ## <a name="related-sections"></a>相關章節  
  [Language-Integrated Query (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
- Provides links to LINQ topics and samples using C#.  
+ 提供使用C#之 LINQ 主題和範例的連結。  
   
  [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
- Provides links to LINQ topics and samples using Visual Basic.  
+ 提供使用 Visual Basic 的 LINQ 主題和範例的連結。  
   
  [WCF Data Services 4.5](../wcf/index.md)  
- Describes how to use WCF Data Services to deploy data services on the Web or an intranet that implement the Open Data Protocol (OData).  
+ 描述如何使用 WCF Data Services 在 Web 或內部網路上部署資料服務，以執行開放式資料通訊協定（OData）。  
   
  [.NET Framework 開發指南](../../development-guide.md)  
  提供 .NET Framework 中標準開發工作之相關資訊的連結。  
   
  [範例與教學課程](../../../samples-and-tutorials/index.md)  
- Provides a list of .NET samples and tutorials.
+ 提供 .NET 範例和教學課程的清單。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET 概觀](ado-net-overview.md)

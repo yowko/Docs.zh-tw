@@ -2,16 +2,16 @@
 title: .NET Framework 4.5 中的外顯化原則活動
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8fd08c9c29f7a268170aaa101a9bdb85250157dc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710919"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094627"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外顯化原則活動
 
-這個範例會示範 ExternalizedPolicy4 活動如何使用 WF 3.5 中隨附的規則引擎，直接執行 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation （WF 4.5）中現有的 .NET Framework 3.5 Windows Workflow Foundation （WF 3.5） <xref:System.Workflow.Activities.Rules.RuleSet> 物件。 您可以使用這個活動來開啟及執行任何現有的 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 如需有關 WF 3.5 規則引擎在 Windows Workflow Foundation 中隨附的詳細資訊，請參閱[Windows Workflow Foundation 規則引擎簡介](https://go.microsoft.com/fwlink/?LinkId=166079)。 如需將規則遷移至 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]中 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 的詳細資訊，請參閱[遷移指引](../migration-guidance.md)。
+這個範例會示範 ExternalizedPolicy4 活動如何使用 WF 3.5 中隨附的規則引擎，直接執行 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation （WF 4.5）中現有的 .NET Framework 3.5 Windows Workflow Foundation （WF 3.5） <xref:System.Workflow.Activities.Rules.RuleSet> 物件。 您可以使用這個活動來開啟及執行任何現有的 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 如需有關 WF 3.5 規則引擎在 Windows Workflow Foundation 中隨附的詳細資訊，請參閱[Windows Workflow Foundation 規則引擎簡介](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480193(v=msdn.10))。 如需將規則遷移至 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]中 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 的詳細資訊，請參閱[遷移指引](../migration-guidance.md)。
 
 ## <a name="projects-in-this-sample"></a>這個範例中的專案
 

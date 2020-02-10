@@ -2,16 +2,16 @@
 title: dotnet-install 指令碼
 description: 瞭解安裝 .NET Core SDK 和共用執行時間的 dotnet-安裝腳本。
 ms.date: 01/23/2020
-ms.openlocfilehash: 76055627c6b2016396209c9594dba36e56eb841c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920568"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092859"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet-install.ps1` | `dotnet-install.sh`-用來安裝 .NET Core SDK 和共用執行時間的腳本。
 
@@ -52,26 +52,26 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 您可以使用 `-Version|--version` 引數安裝特定版本。 版本必須指定為三部分版本（例如 `2.1.0`）。 如果未提供，就會使用 `latest` 版本。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`-Channel|--channel <CHANNEL>`**
 
-  指定安裝的來源通道。 可能值為：
+  指定安裝的來源通道。 可能的值包括：
 
   - `Current` - 最新版本。
   - `LTS` - 長期支援通道 (最新的支援版本)。
   - 代表特定版本的 X.Y 格式兩段式版本 (例如 `2.1` 或 `3.0`)。
   - 分支名稱：例如，`release/3.1.1xx` 或 `master` （適用于夜間發行）。 使用此選項可從預覽頻道安裝版本。 使用[安裝程式和二進位](https://github.com/dotnet/core-sdk#installers-and-binaries)檔中列出的通道名稱。
 
-  預設值為 `LTS`。 如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) \(英文\) 頁面。
+  預設值是 `LTS`。 如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) \(英文\) 頁面。
 
 - **`-Version|--version <VERSION>`**
 
-  代表特定的組建版本。 可能值為：
+  代表特定的組建版本。 可能的值包括：
 
   - `latest` - 通道上的最新組建 (與 `-Channel` 選項搭配使用)。
   - `coherent` - 通道上的最新一致性組建；使用最新的穩定套件組合 (與分支名稱 `-Channel` 選項搭配使用)。
-  - 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如：`2.0.0-preview2-006120`。
+  - 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如： `2.0.0-preview2-006120` 。
 
   如果未指定，`-Version` 會預設為 `latest`。
 
@@ -96,7 +96,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-Runtime|--runtime <RUNTIME>`**
 
-  只安裝共用執行階段，而不是整個 SDK。 可能值為：
+  只安裝共用執行階段，而不是整個 SDK。 可能的值包括：
 
   - `dotnet` - `Microsoft.NETCore.App` 共用執行階段。
   - `aspnetcore` - `Microsoft.AspNetCore.App` 共用執行階段。
@@ -116,7 +116,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-AzureFeed|--azure-feed`**
 
-  指定給安裝程式的 Azure 摘要 URL。 建議您不要變更這個值。 預設值為 `https://dotnetcli.azureedge.net/dotnet`。
+  指定給安裝程式的 Azure 摘要 URL。 建議您不要變更這個值。 預設值是 `https://dotnetcli.azureedge.net/dotnet`。
 
 - **`-UncachedFeed|--uncached-feed`**
 
@@ -213,10 +213,10 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
   macOS/Linux：
 
   ```bash
-  curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core 版本](https://github.com/dotnet/core/releases)
 - [.NET Core 執行階段和 SDK 下載封存](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

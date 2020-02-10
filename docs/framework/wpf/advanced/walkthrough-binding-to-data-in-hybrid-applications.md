@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0d1e66a1277e6a04d2f49ac91691160f70fb56e4
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794215"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095069"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>逐步解說：繫結至混合應用程式中的資料
 
@@ -35,15 +35,15 @@ ms.locfileid: "76794215"
 
 - 繫結至資料來源。
 
-如需本逐步解說中所述工作的完整程式代碼清單，請參閱[混合式應用程式中的資料](https://go.microsoft.com/fwlink/?LinkID=159983)系結範例。
+如需本逐步解說中所述工作的完整程式代碼清單，請參閱[混合式應用程式中的資料](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding)系結範例。
 
 完成後，您就會了解混合應用程式中的資料繫結功能。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
-您需要下列元件才能完成此逐步解說：
+您需要下列元件才能完成這個逐步解說：
 
-- Visual Studio.
+- Visual Studio。
 
 - 在 Microsoft SQL Server 上執行之 Northwind 範例資料庫的存取權。
 
@@ -179,13 +179,13 @@ ms.locfileid: "76794215"
      [!code-csharp[WPFWithWFAndDatabinding#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]
 
-10. 按 F5 建置並執行應用程式。
+10. 按 F5 以建置並執行應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中設計 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
-- [混合式應用程式中的資料系結範例](https://go.microsoft.com/fwlink/?LinkID=159983)
+- [混合式應用程式中的資料系結範例](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding)
 - [逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [逐步解說：在 Windows Form 中裝載 WPF 複合控制項](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

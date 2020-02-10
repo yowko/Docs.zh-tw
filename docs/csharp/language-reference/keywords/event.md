@@ -16,7 +16,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75713563"
 ---
-# <a name="event-c-reference"></a>事件（C#參考）
+# <a name="event-c-reference"></a>event（C#參考）
 
 `event` 關鍵字用來在發行者類別中宣告事件。
 

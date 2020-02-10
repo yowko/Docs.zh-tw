@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5cf48b347be2d0ca6a9b55f3e19affb8b471aa2b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794253"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095095"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>逐步解說：在 WPF 中排列 Windows Form 控制項
 
@@ -37,11 +37,11 @@ ms.locfileid: "76794253"
 - 設定邊框距離及邊界。
 - 使用動態版面配置容器。
 
-如需本逐步解說中所述工作的完整程式代碼清單，請參閱[在 WPF 中排列 Windows Forms 控制項範例](https://go.microsoft.com/fwlink/?LinkID=159971)。
+如需本逐步解說中所述工作的完整程式代碼清單，請參閱[在 WPF 中排列 Windows Forms 控制項範例](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)。
 
 當您完成時，您將瞭解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]型應用程式中 Windows Forms 的版面配置功能。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 若要完成這個逐步解說，您必須具有 Visual Studio。
 
@@ -79,7 +79,7 @@ ms.locfileid: "76794253"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 Windows Forms <xref:System.Windows.Forms.Button?displayProperty=nameWithType> 控制項會出現在 <xref:System.Windows.Controls.Canvas>中。 裝載的控制項會根據其內容調整大小，而 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 專案則會調整大小以容納裝載的控制項。
+2. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。 Windows Forms <xref:System.Windows.Forms.Button?displayProperty=nameWithType> 控制項會出現在 <xref:System.Windows.Controls.Canvas>中。 裝載的控制項會根據其內容調整大小，而 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 專案則會調整大小以容納裝載的控制項。
 
 ## <a name="sizing-to-content"></a>依內容調整大小
 
@@ -91,7 +91,7 @@ ms.locfileid: "76794253"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#4)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 這兩個新的按鈕控制項會調整大小，以適當地顯示較長的文字字串和較大的字型大小，而 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 專案會調整大小以容納裝載的控制項。
+2. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。 這兩個新的按鈕控制項會調整大小，以適當地顯示較長的文字字串和較大的字型大小，而 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 專案會調整大小以容納裝載的控制項。
 
 ## <a name="using-absolute-positioning"></a>使用絕對位置
 
@@ -103,7 +103,7 @@ ms.locfileid: "76794253"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#5)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會從方格資料格的頂端放置20個圖元，而從左邊起算20個圖元。
+2. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會從方格資料格的頂端放置20個圖元，而從左邊起算20個圖元。
 
 ## <a name="specifying-size-explicitly"></a>明確指定大小
 
@@ -115,7 +115,7 @@ ms.locfileid: "76794253"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會設定為50圖元寬乘以70圖元高的大小，小於預設的版面配置設定。 Windows Forms 控制項的內容會據以重新排列。
+2. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會設定為50圖元寬乘以70圖元高的大小，小於預設的版面配置設定。 Windows Forms 控制項的內容會據以重新排列。
 
 ## <a name="setting-layout-properties"></a>設定版面配置屬性
 
@@ -136,7 +136,7 @@ ms.locfileid: "76794253"
      [!code-csharp[WpfLayoutHostingWfWithXaml#101](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#101)]
      [!code-vb[WpfLayoutHostingWfWithXaml#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#101)]
 
-4. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。
+4. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。
 
 5. 按一下 [**按一下我**] 按鈕。 `button1_Click` 事件處理常式會在裝載的控制項上設定 <xref:System.Windows.Forms.Control.Top%2A> 和 <xref:System.Windows.Forms.Control.Left%2A> 屬性。 這會導致裝載的控制項重新置放在 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素中。 主機會維持相同的螢幕區域，但會裁剪裝載的控制項。 相反地，裝載的控制項應一律填滿 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素。
 
@@ -148,7 +148,7 @@ ms.locfileid: "76794253"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#8)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會在 label 元素上繪製。
+2. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會在 label 元素上繪製。
 
 ## <a name="docking"></a>Docking
 
@@ -160,7 +160,7 @@ ms.locfileid: "76794253"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#9](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#9)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會停駐在 <xref:System.Windows.Controls.DockPanel> 元素的右邊。
+2. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會停駐在 <xref:System.Windows.Controls.DockPanel> 元素的右邊。
 
 ## <a name="setting-visibility"></a>設定可見度
 
@@ -177,7 +177,7 @@ ms.locfileid: "76794253"
      [!code-csharp[WpfLayoutHostingWfWithXaml#102](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#102)]
      [!code-vb[WpfLayoutHostingWfWithXaml#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#102)]
 
-3. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。
+3. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。
 
 4. 按一下 [**按一下以讓隱藏**專案] 按鈕，讓 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素不可見。
 
@@ -193,9 +193,9 @@ ms.locfileid: "76794253"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#11)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會置中在方格資料列中，但不會伸展以填滿可用空間。 如果視窗夠大，您可能會看到兩個或多個月由主控的 <xref:System.Windows.Forms.MonthCalendar> 控制項顯示，但這些會在資料列中置中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 版面配置引擎會將無法調整大小的元素置中，以填滿可用空間。
+2. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會置中在方格資料列中，但不會伸展以填滿可用空間。 如果視窗夠大，您可能會看到兩個或多個月由主控的 <xref:System.Windows.Forms.MonthCalendar> 控制項顯示，但這些會在資料列中置中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 版面配置引擎會將無法調整大小的元素置中，以填滿可用空間。
 
-## <a name="scaling"></a>縮放
+## <a name="scaling"></a>調整大小
 
 與 WPF 元素不同的是，大部分的 Windows Forms 控制項都不會持續擴充。 若要提供自訂調整，請覆寫 <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A?displayProperty=nameWithType> 方法。
 
@@ -205,7 +205,7 @@ ms.locfileid: "76794253"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#12)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 裝載的控制項及其周圍元素會縮放 0.5 倍。 不過，裝載控制項的字型不會進行縮放。
+2. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。 裝載的控制項及其周圍元素會縮放 0.5 倍。 不過，裝載控制項的字型不會進行縮放。
 
 <!-- This could use an example of custom scaling. -->
 
@@ -219,7 +219,7 @@ ms.locfileid: "76794253"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#13)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 裝載的控制項不會旋轉，但其周圍元素會旋轉 180 度。 您可能必須調整視窗大小來查看元素。
+2. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。 裝載的控制項不會旋轉，但其周圍元素會旋轉 180 度。 您可能必須調整視窗大小來查看元素。
 
 ## <a name="setting-padding-and-margins"></a>設定邊框距離及邊界
 
@@ -232,7 +232,7 @@ ms.locfileid: "76794253"
      [!code-xaml[WpfLayoutHostingWfWithXaml#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
     [!code-xaml[WpfLayoutHostingWfWithXaml#15](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
 
-2. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 填補和邊界設定會以它們套用至 Windows Forms 的相同方式套用至裝載的 Windows Forms 控制項。
+2. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。 填補和邊界設定會以它們套用至 Windows Forms 的相同方式套用至裝載的 Windows Forms 控制項。
 
 ## <a name="using-dynamic-layout-containers"></a>使用動態版面配置容器
 
@@ -254,14 +254,14 @@ Windows Forms 提供兩個動態版面配置容器，<xref:System.Windows.Forms.
      [!code-csharp[WpfLayoutHostingWfWithXaml#104](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml.cs#104)]
      [!code-vb[WpfLayoutHostingWfWithXaml#104](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/VisualBasic/Window1.xaml.vb#104)]
 
-4. 按 <kbd>F5</kbd> 鍵建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會填滿 <xref:System.Windows.Controls.DockPanel>，<xref:System.Windows.Forms.FlowLayoutPanel> 會在預設的 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>中排列其子控制項。
+4. 按 <kbd>F5</kbd> 鍵以建置並執行應用程式。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素會填滿 <xref:System.Windows.Controls.DockPanel>，<xref:System.Windows.Forms.FlowLayoutPanel> 會在預設的 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>中排列其子控制項。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中設計 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [WindowsFormsHost 元素的配置考量](layout-considerations-for-the-windowsformshost-element.md)
-- [在 WPF 範例中排列 Windows Forms 控制項](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [在 WPF 範例中排列 Windows Forms 控制項](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [逐步解說：在 Windows Form 中裝載 WPF 複合控制項](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

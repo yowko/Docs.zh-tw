@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 9f97639447284b792d52cf4aa25b81f584d7291a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 89ed57a787b93a1326b4accd3bb1bc5ff9a825fd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787897"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095147"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 項目的配置考量
 本主題描述 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素如何與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 版面配置系統互動。  
@@ -31,8 +31,8 @@ ms.locfileid: "76787897"
 |版面配置功能|描述|  
 |--------------------|-----------------|  
 |自動調整大小|有些 Windows Forms 控制項會調整自己的大小，以適當地顯示其內容。 如需詳細資訊，請參閱[AutoSize 屬性總覽](../../winforms/controls/autosize-property-overview.md)。|  
-|錨定和停駐|Windows Forms 控制項支援根據父容器的定位和調整大小。 如需詳細資訊，請參閱<xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>和<xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>。|  
-|自動調整規模|容器控制項會根據輸出裝置的解析度或預設容器字型的大小（以圖元為單位），來調整自己及其子系的大小。 如需詳細資訊，請參閱[Windows Forms 中的自動縮放](../../winforms/automatic-scaling-in-windows-forms.md)。|  
+|錨定和停駐|Windows Forms 控制項支援根據父容器的定位和調整大小。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> 和 <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>。|  
+|自動調整|容器控制項會根據輸出裝置的解析度或預設容器字型的大小（以圖元為單位），來調整自己及其子系的大小。 如需詳細資訊，請參閱[Windows Forms 中的自動縮放](../../winforms/automatic-scaling-in-windows-forms.md)。|  
 |版面配置容器|<xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.TableLayoutPanel> 控制項會根據其內容，排列其子控制項和本身的大小。|  
   
 ## <a name="layout-limitations"></a>版面配置限制  
@@ -73,7 +73,7 @@ ms.locfileid: "76787897"
 |溢位|當 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素從 `double` 值轉換成 `int` 值時，可能會發生溢位。 大於 <xref:System.Int32.MaxValue> 的值會設定為 <xref:System.Int32.MaxValue>。|  
   
 ### <a name="layout-related-properties"></a>版面配置相關屬性  
- 控制 Windows Forms 控制項和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 專案之配置行為的屬性會由 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素適當地對應。 如需詳細資訊，請參閱 [Windows Form 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)。  
+ 控制 Windows Forms 控制項和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 專案之配置行為的屬性會由 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 元素適當地對應。 如需詳細資訊，請參閱 [Windows Forms 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)。  
   
 ### <a name="layout-changes-in-the-hosted-control"></a>裝載控制項中的版面配置變更  
  主控的 Windows Forms 控制項中的配置變更會傳播至 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 以觸發版面配置更新。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 上的 <xref:System.Windows.UIElement.InvalidateMeasure%2A> 方法可確保主控控制項中的版面配置變更會導致 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 配置引擎執行。  
@@ -98,11 +98,11 @@ ms.locfileid: "76787897"
   
 - 如果 <xref:System.Windows.Forms.Control.Size%2A> 屬性傳回的大小小於指定的條件約束，<xref:System.Windows.Forms.Integration.WindowsFormsHost> 會接受此大小值，並將值傳回至 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 配置系統。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [逐步解說：在 WPF 中排列 Windows Forms 控制項](walkthrough-arranging-windows-forms-controls-in-wpf.md)
-- [在 WPF 範例中排列 Windows Forms 控制項](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [在 WPF 範例中排列 Windows Forms 控制項](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Windows Forms 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
 - [移轉和互通性](migration-and-interoperability.md)

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 15e328729886e0f1efc3b47705fcb4ce13013137
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: bd7f399555b343a52ec6f36aa3b8c706747d8b06
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035580"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094523"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>如何：驗證和合併 PrintTickets
-Microsoft Windows[列印架構](https://go.microsoft.com/fwlink/?LinkId=186397)包含彈性且可擴充的 <xref:System.Printing.PrintCapabilities> 和 <xref:System.Printing.PrintTicket> 元素。 前者會逐項列出列印裝置的功能，後者會指定裝置應如何使用這些功能，以及特定的檔、個別檔或個別頁面的順序。  
+Microsoft Windows[列印架構](/windows/win32/printdocs/printschema)包含彈性且可擴充的 <xref:System.Printing.PrintCapabilities> 和 <xref:System.Printing.PrintTicket> 元素。 前者會逐項列出列印裝置的功能，後者會指定裝置應如何使用這些功能，以及特定的檔、個別檔或個別頁面的順序。  
   
  支援列印之應用程式的一般工作順序如下所示。  
   
@@ -56,7 +56,7 @@ Microsoft Windows[列印架構](https://go.microsoft.com/fwlink/?LinkId=186397)�
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintTicket>
@@ -67,4 +67,4 @@ Microsoft Windows[列印架構](https://go.microsoft.com/fwlink/?LinkId=186397)�
 - <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>
 - [WPF 中的文件](documents-in-wpf.md)
 - [列印概觀](printing-overview.md)
-- [列印架構](https://go.microsoft.com/fwlink/?LinkId=186397)
+- [列印架構](/windows/win32/printdocs/printschema)

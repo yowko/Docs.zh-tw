@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 577ccd3bb9a20964dcdfc79ef2028854e4a55dc6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 720ece2f7f47961e0ab6ebf03c8afeb5fa3a6271
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342703"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093262"
 ---
 # <a name="bool-c-reference"></a>bool （C#參考）
 
@@ -31,7 +31,7 @@ ms.locfileid: "75342703"
 
 ## <a name="three-valued-boolean-logic"></a>三值布林邏輯
 
-如果您需要支援三值邏輯（例如，當您使用支援三值布林值類型的資料庫時），請使用可為 null 的 `bool?` 類型。 針對 `bool?` 運算元，預先定義的 `&` 和 `|` 運算子支援三值邏輯。 如需詳細資訊，請參閱[布林邏輯運算子](../operators/boolean-logical-operators.md)一文的[可為 Null 的布林邏輯運算子](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
+如果您需要支援三值邏輯（例如，當您使用支援三值布林值類型的資料庫時），請使用可為 null 的 `bool?` 類型。 針對 `bool?` 運算元，預先定義的 `&` 和 `|` 運算子支援三值邏輯。 如需詳細資訊，請參閱[布林值邏輯運算子](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一文的[可為 Null 的布林值邏輯運算子](../operators/boolean-logical-operators.md)一節。
 
 如需可為 null 的實數值型別的詳細資訊，請參閱[nullable 實數值型別](nullable-value-types.md)。
 
@@ -43,8 +43,8 @@ C#只提供兩個牽涉到 `bool` 類型的轉換。 這些是對應的可為 nu
 
 如需詳細資訊，請參閱[ C#語言規格](~/_csharplang/spec/introduction.md)[的 bool 類型](~/_csharplang/spec/types.md#the-bool-type)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [內建型別表](../keywords/built-in-types-table.md)
+- [值類型](value-types.md)
 - [true 和 false 運算子](../operators/true-false-operators.md)

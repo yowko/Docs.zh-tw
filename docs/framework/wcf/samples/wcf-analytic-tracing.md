@@ -2,22 +2,22 @@
 title: WCF 分析追蹤
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 52a6787f6c7d309b1ae3a932780e4dbcb2ec0792
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3ed9c5f08e89d978f8290dcda5ab1ecfd8b9c56c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715310"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094822"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析追蹤
 這個範例會示範如何將您自己的追蹤事件加入至 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]中 Windows Communication Foundation （WCF）寫入 ETW 的分析追蹤資料流程。 分析追蹤的用意在於輕鬆取得服務的可視性，而不必付出高效能的代價。 這個範例示範如何使用 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api 來撰寫與 WCF 服務整合的事件。  
   
  如需 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api 的詳細資訊，請參閱 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>。  
   
- 若要深入瞭解 Windows 中的事件追蹤，請參閱[使用 ETW 改善調試和效能微調](https://go.microsoft.com/fwlink/?LinkId=166488)。  
+ 若要深入瞭解 Windows 中的事件追蹤，請參閱[使用 ETW 改善調試和效能微調](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw)。  
   
 ## <a name="disposing-eventprovider"></a>處置 EventProvider  
- 此範例使用實作 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> 的 <xref:System.IDisposable?displayProperty=nameWithType> 類別。 在執行 WCF 服務的追蹤時，您可能會在服務的存留期間，使用 <xref:System.Diagnostics.Eventing.EventProvider>的資源。 因此，為了便於讀取，此範例絕不會處置已包裝的 <xref:System.Diagnostics.Eventing.EventProvider>。 如果您的服務因為任何原因而有不同的追蹤需求，而且您必須處置這個資源，則應根據處置 Unmanaged 資源的最佳作法修改此範例。 如需處置非受控資源的詳細資訊，請參閱[執行 Dispose 方法](https://go.microsoft.com/fwlink/?LinkId=166436)。  
+ 此範例使用實作 <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> 的 <xref:System.IDisposable?displayProperty=nameWithType> 類別。 在執行 WCF 服務的追蹤時，您可能會在服務的存留期間，使用 <xref:System.Diagnostics.Eventing.EventProvider>的資源。 因此，為了便於讀取，此範例絕不會處置已包裝的 <xref:System.Diagnostics.Eventing.EventProvider>。 如果您的服務因為任何原因而有不同的追蹤需求，而且您必須處置這個資源，則應根據處置 Unmanaged 資源的最佳作法修改此範例。 如需處置非受控資源的詳細資訊，請參閱[執行 Dispose 方法](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose)。  
   
 ## <a name="self-hosting-vs-web-hosting"></a>自我裝載與 Web 裝載的比較  
  若是 Web 裝載的服務，WCF 的分析追蹤會提供稱為 "HostReference" 的欄位，用來識別發出追蹤的服務。 可延伸的使用者追蹤可以參與這個模型，而且此範例會示範其最佳作法。 當管道 '&#124;' 字元實際出現在產生的字串中時，Web 主機參考的格式可以是下列任何一項：  
@@ -35,7 +35,7 @@ ms.locfileid: "74715310"
 ## <a name="custom-event-details"></a>自訂事件詳細資料  
  WCF 的 ETW 事件提供者資訊清單會定義三個設計成由 WCF 服務作者從服務程式代碼中發出的事件。 下表為顯示這三個事件的分解。  
   
-|Event|描述|事件 ID|  
+|事件|描述|事件識別碼|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|在服務中發生需要注意但不是問題的事件，發出此事件。 例如，您可能會在成功呼叫資料庫之後發出事件。|301|  
 |UserDefinedWarningOccurred|發生未來可能導致失敗的問題時，發出此事件。 例如，當資料庫的呼叫失敗，但您能夠透過恢復成多餘的資料存放區來復原時，您可能會發出警告事件。|302|  
@@ -59,7 +59,7 @@ ms.locfileid: "74715310"
   
      在輸入方塊中加入端點位址。  
   
-6. 按一下 **[確定**] 以關閉對話方塊。  
+6. 按一下 **[確定]** 關閉對話方塊。  
   
      ICalculator 服務會加入至 [**我的服務專案**] 底下的左窗格中。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "74715310"
   
 #### <a name="to-clean-up-optional"></a>若要清除 (選擇性)  
   
-1. 開啟**事件檢視器**。  
+1. 開啟 [事件檢視器]。  
   
 2. 流覽至**事件檢視器**、**應用程式和服務記錄**檔、 **Microsoft**、 **Windows**和**應用程式伺服器應用程式**。 以滑鼠右鍵按一下 [**分析**]，然後選取 [**停用記錄**]。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "74715310"
 4. 按一下 [**清除**] 以清除事件。  
   
 ## <a name="known-issue"></a>已知問題  
- **事件檢視器**中有一個已知的問題，可能無法將 ETW 事件解碼。 您可能會看到錯誤訊息，指出：「來源 Microsoft-Windows-應用程式伺服器的事件識別碼 \<識別碼 > 的描述，但找不到應用程式。 本機電腦可能並未安裝引發此事件的元件，或安裝已損毀。 您可以在本機電腦上安裝或修復元件。」 如果您遇到這個錯誤，請從 [**動作**] 功能表**中選取 [** 重新整理]。 接著，事件應該就會正確解碼。  
+ **事件檢視器**中有一個已知的問題，可能無法將 ETW 事件解碼。 您可能會看到錯誤訊息，指出：「來源 Microsoft-Windows-應用程式伺服器的事件識別碼 \<識別碼 > 的描述，但找不到應用程式。 可能是引發此事件的元件未安裝在您的本機電腦上，或安裝已損毀。 您可以在本機電腦上安裝或修復元件。」 如果您遇到這個錯誤，請從 [**動作**] 功能表**中選取 [** 重新整理]。 接著，事件應該就會正確解碼。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
@@ -117,6 +117,6 @@ ms.locfileid: "74715310"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [AppFabric 監視範例](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [AppFabric 監視範例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
