@@ -1313,7 +1313,7 @@
         - name: 總覽
           displayName: keywords
           href: language-reference/keywords/index.md
-        - name: 內建類型
+        - name: 型別
           items:
             - name: 值類型
               items:
@@ -1357,14 +1357,12 @@
               href: language-reference/keywords/void.md
             - name: var
               href: language-reference/keywords/var.md
+            - name: 內建類型
+              href: language-reference/builtin-types/built-in-types.md
             - name: 非受控類型
               href: language-reference/builtin-types/unmanaged-types.md
             - name: 預設值
               href: language-reference/builtin-types/default-values.md
-            - name: 類型的參考表
-              items:
-                - name: 內建類型表
-                  href: language-reference/keywords/built-in-types-table.md
         - name: 修飾詞
           items:
             - name: 存取修飾詞
