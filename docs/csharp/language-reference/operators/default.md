@@ -1,5 +1,5 @@
 ---
-title: 預設運算子 - C# 參考
+title: default 运算符 - C# 參考
 description: 使用 default 運算子產生類型的預設值
 ms.date: 08/01/2019
 helpviewer_keywords:
@@ -11,7 +11,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/15/2020
 ms.locfileid: "75964612"
 ---
-# <a name="default-operator-c-reference"></a>預設運算子 (C# 參考)
+# <a name="default-operator-c-reference"></a>default 运算符 (C# 參考)
 
 `default` 運算子會產生型別的[預設值](../builtin-types/default-values.md)。 `default` 運算子的引數必須是型別或或型別參數的名稱。
 
