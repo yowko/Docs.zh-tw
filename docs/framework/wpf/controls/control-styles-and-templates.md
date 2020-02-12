@@ -10,69 +10,69 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 01b8dc50860757b0eddee477219db1e19d27f40f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460407"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124399"
 ---
-# <a name="control-styles-and-templates"></a><span data-ttu-id="09dee-102">控制項的樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-102">Control Styles and Templates</span></span>
-<span data-ttu-id="09dee-103">Windows Presentation Foundation （WPF）中的控制項具有 <xref:System.Windows.Controls.ControlTemplate>，其中包含該控制項的視覺化樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="09dee-103">Controls in Windows Presentation Foundation (WPF) have a <xref:System.Windows.Controls.ControlTemplate> that contains the visual tree of that control.</span></span> <span data-ttu-id="09dee-104">您可以藉由修改控制項的 <xref:System.Windows.Controls.ControlTemplate>，來變更其結構和外觀。</span><span class="sxs-lookup"><span data-stu-id="09dee-104">You can change the structure and appearance of a control by modifying the <xref:System.Windows.Controls.ControlTemplate> of that control.</span></span> <span data-ttu-id="09dee-105">沒有任何方法可以只取代控制項的部分視覺化樹狀結構;若要變更控制項的視覺化樹狀結構，您必須將控制項的 <xref:System.Windows.Controls.Control.Template%2A> 屬性設定為新的 完整 <xref:System.Windows.Controls.ControlTemplate>。</span><span class="sxs-lookup"><span data-stu-id="09dee-105">There is no way to replace only part of the visual tree of a control; to change the visual tree of a control you must set the <xref:System.Windows.Controls.Control.Template%2A> property of the control to its new and complete <xref:System.Windows.Controls.ControlTemplate>.</span></span>  
+# <a name="control-styles-and-templates"></a><span data-ttu-id="830d5-102">控制項的樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-102">Control Styles and Templates</span></span>
+<span data-ttu-id="830d5-103">Windows Presentation Foundation （WPF）中的控制項具有 <xref:System.Windows.Controls.ControlTemplate>，其中包含該控制項的視覺化樹狀結構。</span><span class="sxs-lookup"><span data-stu-id="830d5-103">Controls in Windows Presentation Foundation (WPF) have a <xref:System.Windows.Controls.ControlTemplate> that contains the visual tree of that control.</span></span> <span data-ttu-id="830d5-104">您可以藉由修改控制項的 <xref:System.Windows.Controls.ControlTemplate>，來變更其結構和外觀。</span><span class="sxs-lookup"><span data-stu-id="830d5-104">You can change the structure and appearance of a control by modifying the <xref:System.Windows.Controls.ControlTemplate> of that control.</span></span> <span data-ttu-id="830d5-105">沒有任何方法可以只取代控制項的部分視覺化樹狀結構;若要變更控制項的視覺化樹狀結構，您必須將控制項的 <xref:System.Windows.Controls.Control.Template%2A> 屬性設定為新的 完整 <xref:System.Windows.Controls.ControlTemplate>。</span><span class="sxs-lookup"><span data-stu-id="830d5-105">There is no way to replace only part of the visual tree of a control; to change the visual tree of a control you must set the <xref:System.Windows.Controls.Control.Template%2A> property of the control to its new and complete <xref:System.Windows.Controls.ControlTemplate>.</span></span>  
   
- <span data-ttu-id="09dee-106">桌面佈景主題決定所使用的資源字典。</span><span class="sxs-lookup"><span data-stu-id="09dee-106">The desktop themes determine which resource dictionary is used.</span></span> <span data-ttu-id="09dee-107">若要取得桌面佈景主題的資源字典，請參閱[預設 WPF 佈景主題](https://go.microsoft.com/fwlink/?LinkID=158252)。</span><span class="sxs-lookup"><span data-stu-id="09dee-107">To get the resource dictionaries for the desktop themes, see [Default WPF Themes](https://go.microsoft.com/fwlink/?LinkID=158252).</span></span>  
+ <span data-ttu-id="830d5-106">桌面佈景主題決定所使用的資源字典。</span><span class="sxs-lookup"><span data-stu-id="830d5-106">The desktop themes determine which resource dictionary is used.</span></span> <span data-ttu-id="830d5-107">若要取得桌面佈景主題的資源字典，請參閱[預設 WPF 佈景主題](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。</span><span class="sxs-lookup"><span data-stu-id="830d5-107">To get the resource dictionaries for the desktop themes, see [Default WPF Themes](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms).</span></span>  
   
- <span data-ttu-id="09dee-108">下表說明資源字典檔案名稱及其對應的桌面佈景主題。</span><span class="sxs-lookup"><span data-stu-id="09dee-108">The following table describes the resource dictionary file names and their corresponding desktop themes.</span></span>  
+ <span data-ttu-id="830d5-108">下表說明資源字典檔案名稱及其對應的桌面佈景主題。</span><span class="sxs-lookup"><span data-stu-id="830d5-108">The following table describes the resource dictionary file names and their corresponding desktop themes.</span></span>  
   
-|<span data-ttu-id="09dee-109">佈景主題檔案</span><span class="sxs-lookup"><span data-stu-id="09dee-109">Theme file</span></span>|<span data-ttu-id="09dee-110">桌面佈景主題</span><span class="sxs-lookup"><span data-stu-id="09dee-110">Desktop theme</span></span>|  
+|<span data-ttu-id="830d5-109">佈景主題檔案</span><span class="sxs-lookup"><span data-stu-id="830d5-109">Theme file</span></span>|<span data-ttu-id="830d5-110">桌面佈景主題</span><span class="sxs-lookup"><span data-stu-id="830d5-110">Desktop theme</span></span>|  
 |----------------|-------------------|  
-|<span data-ttu-id="09dee-111">Classic.xaml</span><span class="sxs-lookup"><span data-stu-id="09dee-111">Classic.xaml</span></span>|<span data-ttu-id="09dee-112">Windows XP 作業系統上的傳統 Windows 外觀 (源自 Windows 95、Windows 98 和 Windows 2000)。</span><span class="sxs-lookup"><span data-stu-id="09dee-112">Classic Windows look (from Windows 95, Windows 98, and Windows 2000) on the Windows XP operating system..</span></span>|  
-|<span data-ttu-id="09dee-113">Luna.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="09dee-113">Luna.NormalColor.xaml</span></span>|<span data-ttu-id="09dee-114">Windows XP 上的預設藍色佈景主題。</span><span class="sxs-lookup"><span data-stu-id="09dee-114">Default blue theme on Windows XP.</span></span>|  
-|<span data-ttu-id="09dee-115">Luna.Homestead.xaml</span><span class="sxs-lookup"><span data-stu-id="09dee-115">Luna.Homestead.xaml</span></span>|<span data-ttu-id="09dee-116">Windows XP 上的橄欖色佈景主題。</span><span class="sxs-lookup"><span data-stu-id="09dee-116">Olive theme on Windows XP.</span></span>|  
-|<span data-ttu-id="09dee-117">Luna.Metallic.xaml</span><span class="sxs-lookup"><span data-stu-id="09dee-117">Luna.Metallic.xaml</span></span>|<span data-ttu-id="09dee-118">Windows XP 上的銀色佈景主題。</span><span class="sxs-lookup"><span data-stu-id="09dee-118">Silver theme on Windows XP.</span></span>|  
-|<span data-ttu-id="09dee-119">Royale.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="09dee-119">Royale.NormalColor.xaml</span></span>|<span data-ttu-id="09dee-120">Windows XP Media Center Edition 作業系統上的預設佈景主題。</span><span class="sxs-lookup"><span data-stu-id="09dee-120">Default theme on the Windows XP Media Center Edition operating system.</span></span>|  
-|<span data-ttu-id="09dee-121">Aero.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="09dee-121">Aero.NormalColor.xaml</span></span>|<span data-ttu-id="09dee-122">Windows Vista 作業系統上的預設佈景主題。</span><span class="sxs-lookup"><span data-stu-id="09dee-122">Default theme on the Windows Vista operating system.</span></span>|  
+|<span data-ttu-id="830d5-111">Classic.xaml</span><span class="sxs-lookup"><span data-stu-id="830d5-111">Classic.xaml</span></span>|<span data-ttu-id="830d5-112">Windows XP 作業系統上的傳統 Windows 外觀 (源自 Windows 95、Windows 98 和 Windows 2000)。</span><span class="sxs-lookup"><span data-stu-id="830d5-112">Classic Windows look (from Windows 95, Windows 98, and Windows 2000) on the Windows XP operating system..</span></span>|  
+|<span data-ttu-id="830d5-113">Luna.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="830d5-113">Luna.NormalColor.xaml</span></span>|<span data-ttu-id="830d5-114">Windows XP 上的預設藍色佈景主題。</span><span class="sxs-lookup"><span data-stu-id="830d5-114">Default blue theme on Windows XP.</span></span>|  
+|<span data-ttu-id="830d5-115">Luna.Homestead.xaml</span><span class="sxs-lookup"><span data-stu-id="830d5-115">Luna.Homestead.xaml</span></span>|<span data-ttu-id="830d5-116">Windows XP 上的橄欖色佈景主題。</span><span class="sxs-lookup"><span data-stu-id="830d5-116">Olive theme on Windows XP.</span></span>|  
+|<span data-ttu-id="830d5-117">Luna.Metallic.xaml</span><span class="sxs-lookup"><span data-stu-id="830d5-117">Luna.Metallic.xaml</span></span>|<span data-ttu-id="830d5-118">Windows XP 上的銀色佈景主題。</span><span class="sxs-lookup"><span data-stu-id="830d5-118">Silver theme on Windows XP.</span></span>|  
+|<span data-ttu-id="830d5-119">Royale.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="830d5-119">Royale.NormalColor.xaml</span></span>|<span data-ttu-id="830d5-120">Windows XP Media Center Edition 作業系統上的預設佈景主題。</span><span class="sxs-lookup"><span data-stu-id="830d5-120">Default theme on the Windows XP Media Center Edition operating system.</span></span>|  
+|<span data-ttu-id="830d5-121">Aero.NormalColor.xaml</span><span class="sxs-lookup"><span data-stu-id="830d5-121">Aero.NormalColor.xaml</span></span>|<span data-ttu-id="830d5-122">Windows Vista 作業系統上的預設佈景主題。</span><span class="sxs-lookup"><span data-stu-id="830d5-122">Default theme on the Windows Vista operating system.</span></span>|  
   
-## <a name="in-this-section"></a><span data-ttu-id="09dee-123">本章節內容</span><span class="sxs-lookup"><span data-stu-id="09dee-123">In This Section</span></span>  
- [<span data-ttu-id="09dee-124">Button 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-124">Button Styles and Templates</span></span>](button-styles-and-templates.md)  
- [<span data-ttu-id="09dee-125">Calendar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-125">Calendar Styles and Templates</span></span>](calendar-styles-and-templates.md)  
- [<span data-ttu-id="09dee-126">CheckBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-126">CheckBox Styles and Templates</span></span>](checkbox-styles-and-templates.md)  
- [<span data-ttu-id="09dee-127">ComboBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-127">ComboBox Styles and Templates</span></span>](combobox-styles-and-templates.md)  
- [<span data-ttu-id="09dee-128">ContextMenu 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-128">ContextMenu Styles and Templates</span></span>](contextmenu-styles-and-templates.md)  
- [<span data-ttu-id="09dee-129">DataGrid 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-129">DataGrid Styles and Templates</span></span>](datagrid-styles-and-templates.md)  
- [<span data-ttu-id="09dee-130">DatePicker 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-130">DatePicker Styles and Templates</span></span>](datepicker-styles-and-templates.md)  
- [<span data-ttu-id="09dee-131">DocumentViewer 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-131">DocumentViewer Styles and Templates</span></span>](documentviewer-styles-and-templates.md)  
- [<span data-ttu-id="09dee-132">Expander 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-132">Expander Styles and Templates</span></span>](expander-styles-and-templates.md)  
- [<span data-ttu-id="09dee-133">Frame 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-133">Frame Styles and Templates</span></span>](frame-styles-and-templates.md)  
- [<span data-ttu-id="09dee-134">GroupBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-134">GroupBox Styles and Templates</span></span>](groupbox-styles-and-templates.md)  
- [<span data-ttu-id="09dee-135">Label 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-135">Label Styles and Templates</span></span>](label-styles-and-templates.md)  
- [<span data-ttu-id="09dee-136">ListBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-136">ListBox Styles and Templates</span></span>](listbox-styles-and-templates.md)  
- [<span data-ttu-id="09dee-137">ListView 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-137">ListView Styles and Templates</span></span>](listview-styles-and-templates.md)  
- [<span data-ttu-id="09dee-138">Menu 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-138">Menu Styles and Templates</span></span>](menu-styles-and-templates.md)  
- [<span data-ttu-id="09dee-139">NavigationWindow 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-139">NavigationWindow Styles and Templates</span></span>](navigationwindow-styles-and-templates.md)  
- [<span data-ttu-id="09dee-140">PasswordBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-140">PasswordBox Styles and Templates</span></span>](passwordbox-styles-and-templates.md)  
- [<span data-ttu-id="09dee-141">ProgressBar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-141">ProgressBar Styles and Templates</span></span>](progressbar-styles-and-templates.md)  
- [<span data-ttu-id="09dee-142">RadioButton 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-142">RadioButton Styles and Templates</span></span>](radiobutton-styles-and-templates.md)  
- [<span data-ttu-id="09dee-143">RepeatButton 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-143">RepeatButton Styles and Templates</span></span>](repeatbutton-styles-and-templates.md)  
- [<span data-ttu-id="09dee-144">ScrollBar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-144">ScrollBar Styles and Templates</span></span>](scrollbar-styles-and-templates.md)  
- [<span data-ttu-id="09dee-145">ScrollViewer 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-145">ScrollViewer Styles and Templates</span></span>](scrollviewer-styles-and-templates.md)  
- [<span data-ttu-id="09dee-146">Slider 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-146">Slider Styles and Templates</span></span>](slider-styles-and-templates.md)  
- [<span data-ttu-id="09dee-147">StatusBar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-147">StatusBar Styles and Templates</span></span>](statusbar-styles-and-templates.md)  
- [<span data-ttu-id="09dee-148">TabControl 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-148">TabControl Styles and Templates</span></span>](tabcontrol-styles-and-templates.md)  
- [<span data-ttu-id="09dee-149">TextBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-149">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)  
- [<span data-ttu-id="09dee-150">Thumb 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-150">Thumb Styles and Templates</span></span>](thumb-styles-and-templates.md)  
- [<span data-ttu-id="09dee-151">切換按鈕樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-151">ToggleButton Styles and Templates</span></span>](togglebutton-styles-and-templates.md)  
- [<span data-ttu-id="09dee-152">ToolBar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-152">ToolBar Styles and Templates</span></span>](toolbar-styles-and-templates.md)  
- [<span data-ttu-id="09dee-153">ToolTip 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-153">ToolTip Styles and Templates</span></span>](tooltip-styles-and-templates.md)  
- [<span data-ttu-id="09dee-154">TreeView 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-154">TreeView Styles and Templates</span></span>](treeview-styles-and-templates.md)  
- [<span data-ttu-id="09dee-155">Window 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-155">Window Styles and Templates</span></span>](window-styles-and-templates.md)  
+## <a name="in-this-section"></a><span data-ttu-id="830d5-123">本節內容</span><span class="sxs-lookup"><span data-stu-id="830d5-123">In This Section</span></span>  
+ [<span data-ttu-id="830d5-124">Button 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-124">Button Styles and Templates</span></span>](button-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-125">Calendar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-125">Calendar Styles and Templates</span></span>](calendar-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-126">CheckBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-126">CheckBox Styles and Templates</span></span>](checkbox-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-127">ComboBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-127">ComboBox Styles and Templates</span></span>](combobox-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-128">ContextMenu 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-128">ContextMenu Styles and Templates</span></span>](contextmenu-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-129">DataGrid 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-129">DataGrid Styles and Templates</span></span>](datagrid-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-130">DatePicker 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-130">DatePicker Styles and Templates</span></span>](datepicker-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-131">DocumentViewer 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-131">DocumentViewer Styles and Templates</span></span>](documentviewer-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-132">Expander 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-132">Expander Styles and Templates</span></span>](expander-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-133">Frame 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-133">Frame Styles and Templates</span></span>](frame-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-134">GroupBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-134">GroupBox Styles and Templates</span></span>](groupbox-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-135">Label 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-135">Label Styles and Templates</span></span>](label-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-136">ListBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-136">ListBox Styles and Templates</span></span>](listbox-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-137">ListView 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-137">ListView Styles and Templates</span></span>](listview-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-138">Menu 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-138">Menu Styles and Templates</span></span>](menu-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-139">NavigationWindow 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-139">NavigationWindow Styles and Templates</span></span>](navigationwindow-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-140">PasswordBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-140">PasswordBox Styles and Templates</span></span>](passwordbox-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-141">ProgressBar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-141">ProgressBar Styles and Templates</span></span>](progressbar-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-142">RadioButton 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-142">RadioButton Styles and Templates</span></span>](radiobutton-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-143">RepeatButton 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-143">RepeatButton Styles and Templates</span></span>](repeatbutton-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-144">ScrollBar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-144">ScrollBar Styles and Templates</span></span>](scrollbar-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-145">ScrollViewer 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-145">ScrollViewer Styles and Templates</span></span>](scrollviewer-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-146">Slider 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-146">Slider Styles and Templates</span></span>](slider-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-147">StatusBar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-147">StatusBar Styles and Templates</span></span>](statusbar-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-148">TabControl 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-148">TabControl Styles and Templates</span></span>](tabcontrol-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-149">TextBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-149">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-150">Thumb 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-150">Thumb Styles and Templates</span></span>](thumb-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-151">切換按鈕樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-151">ToggleButton Styles and Templates</span></span>](togglebutton-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-152">ToolBar 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-152">ToolBar Styles and Templates</span></span>](toolbar-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-153">ToolTip 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-153">ToolTip Styles and Templates</span></span>](tooltip-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-154">TreeView 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-154">TreeView Styles and Templates</span></span>](treeview-styles-and-templates.md)  
+ [<span data-ttu-id="830d5-155">Window 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-155">Window Styles and Templates</span></span>](window-styles-and-templates.md)  
   
-## <a name="reference"></a><span data-ttu-id="09dee-156">參考資料</span><span class="sxs-lookup"><span data-stu-id="09dee-156">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="830d5-156">參考</span><span class="sxs-lookup"><span data-stu-id="830d5-156">Reference</span></span>  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  
   
-## <a name="related-sections"></a><span data-ttu-id="09dee-157">相關章節</span><span class="sxs-lookup"><span data-stu-id="09dee-157">Related Sections</span></span>  
- [<span data-ttu-id="09dee-158">控制項撰寫概觀</span><span class="sxs-lookup"><span data-stu-id="09dee-158">Control Authoring Overview</span></span>](control-authoring-overview.md)  
+## <a name="related-sections"></a><span data-ttu-id="830d5-157">相關章節</span><span class="sxs-lookup"><span data-stu-id="830d5-157">Related Sections</span></span>  
+ [<span data-ttu-id="830d5-158">控制項撰寫概觀</span><span class="sxs-lookup"><span data-stu-id="830d5-158">Control Authoring Overview</span></span>](control-authoring-overview.md)  
   
- [<span data-ttu-id="09dee-159">設定樣式和範本</span><span class="sxs-lookup"><span data-stu-id="09dee-159">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+ [<span data-ttu-id="830d5-159">設定樣式和範本</span><span class="sxs-lookup"><span data-stu-id="830d5-159">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
