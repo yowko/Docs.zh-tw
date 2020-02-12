@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 85f35c29cdd1d9e4ea9776b756245a75af58e912
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ac9e028d8804c4fdadf4e6be8d7650afa1406969
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741832"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124464"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML 的 XAML 命名空間和命名空間對應
 本主題會進一步說明 WPF XAML 檔案根標記中常見的兩個 XAML 命名空間對應之現況與目的。 本文也會說明如何產生類似的對應，以使用自己的程式碼中所定義的項目和 (或) 個別組件內的項目。  
@@ -137,5 +137,5 @@ End Namespace
   
 ## <a name="see-also"></a>另請參閱
 
-- [瞭解 XML 命名空間](https://go.microsoft.com/fwlink/?LinkId=98069)
+- [瞭解 XML 命名空間](https://docs.microsoft.com/previous-versions/aa468565(v=msdn.10))
 - [XAML 概觀 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

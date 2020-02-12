@@ -5,20 +5,20 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 9be6245d7429466490d9dac93c5b94d70bde30bd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744484"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124553"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 
-當您限制只有一種語言可以使用您的產品時，就是將潛在客戶群限制為全世界 65 億人口的一小部分。 如果您想要全球對象都可以使用應用程式，則具成本效益的產品當地語系化是更多客戶可以使用的一種最佳且最經濟的方法。
+當您將產品的可用性限制為只有一種語言時，您可以將潛在客戶基座限制為全球7500000000擴展的一小部分。 如果您想要全球對象都可以使用應用程式，則具成本效益的產品當地語系化是更多客戶可以使用的一種最佳且最經濟的方法。
 
 本總覽介紹 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]中的全球化和當地語系化。 全球化是在多個位置執行之應用程式的設計和開發。 例如，全球化支援不同文化特性中使用者的當地語系化使用者介面和地區資料。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供全球化的設計功能，包括自動版面配置、附屬元件，以及當地語系化屬性和批註。
 
-當地語系化會將應用程式資源翻譯為應用程式所支援之特定文化特性的當地語系化版本。 當您在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中進行當地語系化時，會使用 <xref:System.Windows.Markup.Localizer> 命名空間中的 Api。 這些 Api 會增強[LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)命令列工具。 如需如何建立和使用 LocBaml 的相關資訊，請參閱[將應用程式當地語系化](how-to-localize-an-application.md)。
+當地語系化會將應用程式資源翻譯為應用程式所支援之特定文化特性的當地語系化版本。 當您在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中進行當地語系化時，會使用 <xref:System.Windows.Markup.Localizer> 命名空間中的 Api。 這些 Api 會增強[LocBaml 工具範例](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)命令列工具。 如需如何建立和使用 LocBaml 的相關資訊，請參閱[將應用程式當地語系化](how-to-localize-an-application.md)。
 
 ## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>WPF 中的全球化和當地語系化最佳做法
 
@@ -48,7 +48,7 @@ ms.locfileid: "76744484"
 
 - 當您建立的導覽應用程式可能會以由右至左格式呈現文字的文化特性中進行當地語系化時，請明確設定每個頁面的 <xref:System.Windows.FlowDirection>，確保該頁面不會繼承 <xref:System.Windows.Navigation.NavigationWindow>的 <xref:System.Windows.FlowDirection>。
 
-- 當您建立裝載于瀏覽器外部的獨立導覽應用程式時，請將初始應用程式的 <xref:System.Windows.Application.StartupUri%2A> 設定為 <xref:System.Windows.Navigation.NavigationWindow>，而不是頁面（例如，`<Application StartupUri="NavigationWindow.xaml">`）。 這項設計可讓您變更視窗和導覽列的 <xref:System.Windows.FlowDirection>。 如需詳細資訊和範例，請參閱[全球化首頁範例](https://go.microsoft.com/fwlink/?LinkID=159990)。
+- 當您建立裝載于瀏覽器外部的獨立導覽應用程式時，請將初始應用程式的 <xref:System.Windows.Application.StartupUri%2A> 設定為 <xref:System.Windows.Navigation.NavigationWindow>，而不是頁面（例如，`<Application StartupUri="NavigationWindow.xaml">`）。 這項設計可讓您變更視窗和導覽列的 <xref:System.Windows.FlowDirection>。 如需詳細資訊和範例，請參閱[全球化首頁範例](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage)。
 
 ### <a name="best-practices-for-wpf-localization"></a>WPF 當地語系化最佳做法
 
@@ -64,7 +64,7 @@ ms.locfileid: "76744484"
 
   - 請勿使用重複的 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> 屬性（當您使用複製並貼上命令時，請記住此提示）。
 
-  - 將 AssemblyInfo 中的 `UltimateResourceFallback` 位置設定為指定適當的回溯語言（例如，`[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`）。
+  - 在 AssemblyInfo 中設定 `UltimateResourceFallback` 位置。\* 指定適當的回溯語言（例如，`[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`）。
 
     如果您決定在專案檔中省略 `<UICulture>` 標記，將來源語言包含在主要元件中，請將 `UltimateResourceFallback` 位置設定為主要元件，而不是附屬元件（例如，`[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`）。
 
@@ -102,7 +102,7 @@ ms.locfileid: "76744484"
 
 本節包含當地語系化應用程式的範例，可協助您瞭解如何建立和當地語系化 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。
 
-#### <a name="run-dialog-box-example"></a>執行對話方塊範例
+### <a name="run-dialog-box-example"></a>執行對話方塊範例
 
 下列圖形顯示 [**執行**] 對話方塊範例的輸出。
 
@@ -172,7 +172,7 @@ ms.locfileid: "76744484"
 
 **剖析**
 
-建置應用程式之後，將它當地語系化的第一個步驟是剖析附屬組件的可當地語系化資源。 基於本主題的目的，請使用可在[LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)中找到的範例 LocBaml 工具。 請注意，LocBaml 只是一種範例工具，旨在協助您開始建置符合當地語系化程序的當地語系化工具。 使用 LocBaml，執行下列動作來剖析： **LocBaml/Parse rundialog.csproj .resources/out：** 產生 "rundialog.csproj. .resources .DLL. .csv" 檔案。
+建置應用程式之後，將它當地語系化的第一個步驟是剖析附屬組件的可當地語系化資源。 基於本主題的目的，請使用可在[LocBaml 工具範例](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)中找到的範例 LocBaml 工具。 請注意，LocBaml 只是一種範例工具，旨在協助您開始建置符合當地語系化程序的當地語系化工具。 使用 LocBaml，執行下列動作來剖析： **LocBaml/Parse rundialog.csproj .resources/out：** 產生 "rundialog.csproj. .resources .DLL. .csv" 檔案。
 
 **當地語系化**
 
@@ -215,7 +215,7 @@ ms.locfileid: "76744484"
 |程式碼|附屬資源 BAML|當地語系化 BAML|
 |文化特性中性資源|英文的其他資源|當地語系化為德文的其他資源|
 
-.NET framework 會根據應用程式的 `Thread.CurrentThread.CurrentUICulture`，自動選擇要載入的附屬資源元件。 這會預設為 Windows 作業系統的文化特性。 因此，如果您使用德文視窗，de-DE\MyDialog.resources.dll 會載入，如果您使用的是英文視窗，en-US\MyDialog.resources.dll 會載入。 您可以在專案的 AssemblyInfo.* 中指定 NeutralResourcesLanguage，以設定應用程式的最終後援資源。 例如，如果您指定：
+.NET framework 會根據應用程式的 `Thread.CurrentThread.CurrentUICulture`，自動選擇要載入的附屬資源元件。 這會預設為 Windows 作業系統的文化特性。 因此，如果您使用德文視窗，de-DE\MyDialog.resources.dll 會載入，如果您使用的是英文視窗，en-US\MyDialog.resources.dll 會載入。 您可以藉由在專案的 AssemblyInfo 中指定 NeutralResourcesLanguage，為您的應用程式設定終極的 fallback 資源。\* 例如，如果您指定：
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
@@ -223,7 +223,7 @@ ms.locfileid: "76744484"
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Microsoft Saudi Arabia 首頁
 
-下圖顯示英文和阿拉伯文首頁。 如需產生這些圖形的完整範例，請參閱[全球化首頁範例](https://go.microsoft.com/fwlink/?LinkID=159990)。
+下圖顯示英文和阿拉伯文首頁。 如需產生這些圖形的完整範例，請參閱[全球化首頁範例](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage)。
 
 **英文：**
 
@@ -261,7 +261,7 @@ ms.locfileid: "76744484"
 
 **當地語系化註解**
 
-在許多情況下，內容可能會模稜兩可，而不容易翻譯。 開發人員或設計人員可以透過當地語系化註解來提供額外內容和註解。 例如，下面的 Localization.Comments 釐清字元 ‘&#124;’ 的使用。
+在許多情況下，內容可能會模稜兩可，而不容易翻譯。 開發人員或設計人員可以透過當地語系化註解來提供額外內容和註解。 例如當地語系化。下列批註說明字元 '&#124;' 的用法。
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
@@ -277,7 +277,7 @@ ms.locfileid: "76744484"
 
 **當地語系化屬性**
 
-開發人員或當地語系化管理員通常需要控制當地語系化人員可以讀取和修改的內容。 例如，您可能不想要當地語系化人員翻譯公司名稱或法律用語。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供屬性，可讓您設定項目內容或屬性的可讀性、可修改性和分類，而當地語系化工具可以使用此內容或屬性來鎖定、隱藏或排序項目。 如需詳細資訊，請參閱 <xref:System.Windows.Localization.Attributes%2A>。 基於此範例的目的，LocBaml 工具只會輸出這些屬性的值。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項都會有這些屬性的預設值，但您可以覆寫它們。 例如，下列範例會覆寫 `TextBlock_1` 的預設當地語系化屬性，並將內容設定為可讀取但無法修改的當地語系化。
+開發人員或當地語系化管理員通常需要控制當地語系化人員可以讀取和修改的內容。 例如，您可能不想要當地語系化人員翻譯公司名稱或法律用語。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供屬性，可讓您設定專案內容或屬性的可讀性、可修改性和分類，而您的當地語系化工具可用來鎖定、隱藏或排序元素。 如需詳細資訊，請參閱 <xref:System.Windows.Localization.Attributes%2A>。 基於此範例的目的，LocBaml 工具只會輸出這些屬性的值。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項都會有這些屬性的預設值，但您可以覆寫它們。 例如，下列範例會覆寫 `TextBlock_1` 的預設當地語系化屬性，並將內容設定為可讀取但無法修改的當地語系化。
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 
@@ -305,4 +305,4 @@ public class CorporateLogo : TextBlock
 
 **將 Microsoft 首頁當地語系化**
 
-您可以遵循「執行對話方塊」範例中的相同步驟，將此應用程式當地語系化。 您可以在[全球化首頁範例](https://go.microsoft.com/fwlink/?LinkID=159990)中，取得適用于阿拉伯文的當地語系化 .csv 檔案。
+您可以遵循「執行對話方塊」範例中的相同步驟，將此應用程式當地語系化。 您可以在[全球化首頁範例](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage)中，取得適用于阿拉伯文的當地語系化 .csv 檔案。

@@ -5,23 +5,23 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-ms.openlocfilehash: a3250cfd3fd651cb4ed3c4fd6975f5b5c89195f9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d5cfba0734e684349f7d73b7242f4b69089b94d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942151"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124646"
 ---
 # <a name="menu-overview"></a>功能表概觀
-<xref:System.Windows.Controls.Menu>類別可讓您組織與命令和事件處理常式，以階層順序相關聯的項目。 每個<xref:System.Windows.Controls.Menu>項目包含集合<xref:System.Windows.Controls.MenuItem>項目。  
+<xref:System.Windows.Controls.Menu> 類別可讓您以階層順序組織與命令和事件處理常式相關聯的元素。 每個 <xref:System.Windows.Controls.Menu> 元素都包含 <xref:System.Windows.Controls.MenuItem> 元素的集合。  
 
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>功能表控制項  
- <xref:System.Windows.Controls.Menu>控制項顯示的清單，這些項目指定命令或應用程式的選項。 一般而言，按一下<xref:System.Windows.Controls.MenuItem>開啟子功能表，或讓應用程式執行命令。  
+ [<xref:System.Windows.Controls.Menu>] 控制項會顯示指定應用程式之命令或選項的專案清單。 一般來說，按一下 <xref:System.Windows.Controls.MenuItem> 會開啟子功能表，或讓應用程式執行命令。  
   
 <a name="creating_menus"></a>   
 ## <a name="creating-menus"></a>建立功能表  
- 下列範例會建立<xref:System.Windows.Controls.Menu>中的文字操作<xref:System.Windows.Controls.TextBox>。 <xref:System.Windows.Controls.Menu>包含<xref:System.Windows.Controls.MenuItem>物件，使用<xref:System.Windows.Controls.MenuItem.Command%2A>， <xref:System.Windows.Controls.MenuItem.IsCheckable%2A>，並<xref:System.Windows.Controls.HeaderedItemsControl.Header%2A>屬性和<xref:System.Windows.Controls.MenuItem.Checked>， <xref:System.Windows.Controls.MenuItem.Unchecked>，以及<xref:System.Windows.Controls.MenuItem.Click>事件。  
+ 下列範例會建立 <xref:System.Windows.Controls.Menu> 來操作 <xref:System.Windows.Controls.TextBox>中的文字。 <xref:System.Windows.Controls.Menu> 包含使用 <xref:System.Windows.Controls.MenuItem.Command%2A>、<xref:System.Windows.Controls.MenuItem.IsCheckable%2A>和 <xref:System.Windows.Controls.HeaderedItemsControl.Header%2A> 屬性以及 <xref:System.Windows.Controls.MenuItem.Checked>、<xref:System.Windows.Controls.MenuItem.Unchecked>和 <xref:System.Windows.Controls.MenuItem.Click> 事件的 <xref:System.Windows.Controls.MenuItem> 物件。  
   
  [!code-xaml[MenuItemCommandsAndEvents#1](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuItemCommandsAndEvents/CSharp/Window1.xaml#1)]  
   
@@ -30,34 +30,34 @@ ms.locfileid: "61942151"
   
 <a name="menus_with_shortcutkeys"></a>   
 ## <a name="menuitems-with-keyboard-shortcuts"></a>具有鍵盤快速鍵的 MenuItem  
- 鍵盤快速鍵是字元組合，可以透過叫用鍵盤輸入<xref:System.Windows.Controls.Menu>命令。 例如，「複製」的快速鍵是 CTRL+C。 鍵盤快速鍵和功能表項目可以使用兩個屬性 —<xref:System.Windows.Controls.MenuItem.InputGestureText%2A>或<xref:System.Windows.Controls.MenuItem.Command%2A>。  
+ 鍵盤快速鍵是可以使用鍵盤輸入的字元組合，以叫用 <xref:System.Windows.Controls.Menu> 命令。 例如，「複製」的快速鍵是 CTRL+C。 有兩個屬性可用於鍵盤快速鍵和功能表項目，<xref:System.Windows.Controls.MenuItem.InputGestureText%2A> 或 <xref:System.Windows.Controls.MenuItem.Command%2A>。  
   
 <a name="menus_inputgesturetext"></a>   
 ### <a name="inputgesturetext"></a>InputGestureText  
- 下列範例示範如何使用<xref:System.Windows.Controls.MenuItem.InputGestureText%2A>要指派到的鍵盤快速鍵文字內容<xref:System.Windows.Controls.MenuItem>控制項。 這只會將鍵盤快速鍵放在功能表項目中。  它不會將關聯的命令與<xref:System.Windows.Controls.MenuItem>。 應用程式必須處理使用者的輸入，才能執行動作。  
+ 下列範例顯示如何使用 <xref:System.Windows.Controls.MenuItem.InputGestureText%2A> 屬性，將鍵盤快速鍵文字指派給 <xref:System.Windows.Controls.MenuItem> 控制項。 這只會將鍵盤快速鍵放在功能表項目中。  它不會將命令與 <xref:System.Windows.Controls.MenuItem>產生關聯。 應用程式必須處理使用者的輸入，才能執行動作。  
   
  [!code-xaml[MenuEvent#6](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#6)]  
   
 <a name="menus_commands"></a>   
 ### <a name="command"></a>命令  
- 下列範例示範如何使用<xref:System.Windows.Controls.MenuItem.Command%2A>產生關聯的屬性**開放**並**儲存**命令搭配<xref:System.Windows.Controls.MenuItem>控制項。 命令屬性不僅關聯的命令<xref:System.Windows.Controls.MenuItem>，還會提供要用來作為快速鍵的輸入的手勢文字。  
+ 下列範例示範如何使用 [<xref:System.Windows.Controls.MenuItem.Command%2A>] 屬性，將 [**開啟**] 和 [**儲存**] 命令與 <xref:System.Windows.Controls.MenuItem> 控制項產生關聯。 命令屬性不僅會將命令與 <xref:System.Windows.Controls.MenuItem>產生關聯，還會提供輸入手勢文字做為快捷方式使用。  
   
  [!code-xaml[MenuEvent#8](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  
   
- <xref:System.Windows.Controls.MenuItem>類別也有<xref:System.Windows.Controls.MenuItem.CommandTarget%2A>屬性，指定命令發生所在的項目。 如果<xref:System.Windows.Controls.MenuItem.CommandTarget%2A>未設定，具有鍵盤焦點的項目會在接收命令。 如需有關命令的詳細資訊，請參閱[命令概觀](../advanced/commanding-overview.md)。  
+ <xref:System.Windows.Controls.MenuItem> 類別也具有 <xref:System.Windows.Controls.MenuItem.CommandTarget%2A> 屬性，它會指定命令發生所在的元素。 如果未設定 <xref:System.Windows.Controls.MenuItem.CommandTarget%2A>，則具有鍵盤焦點的元素會接收命令。 如需有關命令的詳細資訊，請參閱[命令概觀](../advanced/commanding-overview.md)。  
   
 <a name="menu_styling"></a>   
 ## <a name="menu-styling"></a>功能表樣式設定  
- 使用控制項樣式設定，您可以大幅變更的外觀和行為<xref:System.Windows.Controls.Menu>而不需要撰寫自訂控制項的控制項。 除了設定視覺屬性，您也可以套用<xref:System.Windows.Style>的控制項的個別組件，變更屬性，透過控制項的組件的行為或新增其他組件或變更控制項的配置。 下列範例示範數種方式可以新增<xref:System.Windows.Style>至<xref:System.Windows.Controls.Menu>控制項。  
+ 使用控制項樣式，您可以大幅變更 <xref:System.Windows.Controls.Menu> 控制項的外觀和行為，而不需要撰寫自訂控制項。 除了設定視覺屬性之外，您也可以將 <xref:System.Windows.Style> 套用至控制項的個別部分、透過屬性變更控制項部分的行為，或加入其他元件或變更控制項的版面配置。 下列範例示範數種將 <xref:System.Windows.Style> 新增至 <xref:System.Windows.Controls.Menu> 控制項的方式。  
   
- 第一個程式碼範例會定義<xref:System.Windows.Style>稱為`Simple`示範如何使用目前的系統設定，以您的樣式。 此程式碼指派 `MenuHighlightBrush` 的色彩作為功能表的背景色彩，以及 `MenuTextBrush` 作為功能表的前景色彩。 請注意，您需使用資源索引鍵來指派筆刷。  
+ 第一個程式碼範例會定義稱為 `Simple` 的 <xref:System.Windows.Style>，以示範如何在樣式中使用目前的系統設定。 此程式碼指派 `MenuHighlightBrush` 的色彩作為功能表的背景色彩，以及 `MenuTextBrush` 作為功能表的前景色彩。 請注意，您需使用資源索引鍵來指派筆刷。  
   
  [!code-xaml[MenuStylesSnippet#1](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#1)]  
   
- 下列範例會使用<xref:System.Windows.Trigger>可讓您變更外觀的項目<xref:System.Windows.Controls.MenuItem>中所發生的事件回應<xref:System.Windows.Controls.Menu>。 當您將滑鼠指標移<xref:System.Windows.Controls.Menu>，前景色彩和字型特性功能表項目的變更。  
+ 下列範例會使用 <xref:System.Windows.Trigger> 元素，讓您變更 <xref:System.Windows.Controls.MenuItem> 的外觀，以回應發生在 <xref:System.Windows.Controls.Menu>上的事件。 當您將滑鼠游標移到 [<xref:System.Windows.Controls.Menu>] 上方時，功能表項目的前景色彩和字型特性也會變更。  
   
  [!code-xaml[MenuStylesSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [WPF 控制項陳列庫範例](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF 控制項陳列庫範例](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)

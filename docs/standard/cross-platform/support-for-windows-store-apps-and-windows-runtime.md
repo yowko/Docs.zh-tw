@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 56c9cb60ab46a583c34f898d20abf85f5ff0fe4c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802748"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123697"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援
 
@@ -98,9 +96,9 @@ Windows 執行階段和 .NET Framework 檔集是分開的。 如果您按下 F1 
 
 - 針對 Windows 執行階段基本 `Int32`、`Int64`、`Single`、`Double`、`Boolean`、`String` （Unicode 字元的不可變集合）、`Enum`、`UInt32`、`UInt64`和 `Guid`，請在 `System` 命名空間中使用相同名稱的類型。
 
-- 對於 `UInt8`，請使用 `System.Byte`。
+- 如需 `UInt8`，請使用 `System.Byte`。
 
-- 對於 `Char16`，請使用 `System.Char`。
+- 如需 `Char16`，請使用 `System.Char`。
 
 - 對於 `IInspectable` 介面，請使用 `System.Object`。
 
@@ -112,7 +110,7 @@ Windows 執行階段和 .NET Framework 檔集是分開的。 如果您按下 F1 
 
 ### <a name="other-differences"></a>其他差異
 
-在少數情況下，.NET Framework 類型會出現在您的程式碼中，而不是 Windows 執行階段類型需要您採取動作。 例如，<xref:Windows.Foundation.Uri?displayProperty=nameWithType> 類別在 .NET Framework 程式碼中會顯示為 <xref:System.Uri?displayProperty=nameWithType>。 <xref:System.Uri?displayProperty=nameWithType> 允許相對 URI，但 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 需要絕對 URI。 因此，當您將 URI 傳遞至 Windows 執行階段方法時，您必須確定它是絕對的。 請參閱[將 URI 傳送到 Windows 執行階段](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)。
+在少數情況下，.NET Framework 類型會出現在您的程式碼中，而不是 Windows 執行階段類型需要您採取動作。 例如，<xref:Windows.Foundation.Uri?displayProperty=nameWithType> 類別在 .NET Framework 程式碼中會顯示為 <xref:System.Uri?displayProperty=nameWithType>。 <xref:System.Uri?displayProperty=nameWithType> 允許相對 URI，但 <xref:Windows.Foundation.Uri?displayProperty=nameWithType> 需要絕對 URI。 因此，當您將 URI 傳遞至 Windows 執行階段方法時，您必須確定它是絕對的。 請參閱將[URI 傳遞給 Windows 執行階段](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)。
 
 <a name="WindowsRuntimeComponents"></a>
 

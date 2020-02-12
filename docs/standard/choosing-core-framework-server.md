@@ -2,14 +2,13 @@
 title: 針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 description: 本指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 實作。
 author: cartermp
-ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: c280e22341a45260a816a36c1148dc8c4f76db09
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c202e42a46c4a72bdceca1fb250170d381603a8d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921424"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124620"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -101,7 +100,7 @@ ms.locfileid: "76921424"
 
 某些 Microsoft 或協力廠商平台不支援 .NET Core。 部分 Azure 服務提供尚無法在 .NET Core 上使用的 SDK。 這是過渡期，因為所有的 Azure 服務都會使用 .NET Core。 在此同時，您永遠都能使用對等的 REST API，而非用戶端 SDK。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework)
 - [將目標指向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)

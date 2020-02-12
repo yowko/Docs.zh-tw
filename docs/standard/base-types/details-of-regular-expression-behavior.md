@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: af812e1e42d57c349e94b5992b768636857d2a0c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348273"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124347"
 ---
 # <a name="details-of-regular-expression-behavior"></a>規則運算式行為的詳細資訊
 
@@ -106,7 +106,7 @@ ms.locfileid: "75348273"
 
 - 平衡群組定義： `(?<`*name1*`-`*name2*`>`*子運算式*`)`。 此功能可讓規則運算式引擎追蹤巢狀建構，例如括號或左右中括弧。 如需範例，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
-- 非回溯子運算式 (也稱為 Greedy (窮盡) 子運算式)：`(?>`*subexpression*`)`。 此功能可讓回溯引擎保證子運算式只比對為該子運算式找到的第一個相符項目，就好像運算式的執行不受其包含運算式的影響。 如果不使用此建構，較大型運算式中的回溯搜尋可以變更子運算式的行為。 例如，規則運算式 `(a+)\w` 會比對一或多個 "a" 字元，以及緊接在 "a" 字元序列後面的單字字元，並將 "a" 字元序列指派給第一個擷取群組。但是，如果輸入字串的最後一個字元也是 "a"，則以 `\w` language 元素比對，且不包含在擷取的群組中。
+- 不可部分完成的群組： `(?>`*子運算式*`)`。 此功能可讓回溯引擎保證子運算式只比對為該子運算式找到的第一個相符項目，就好像運算式的執行不受其包含運算式的影響。 如果不使用此建構，較大型運算式中的回溯搜尋可以變更子運算式的行為。 例如，正則運算式 `(a+)\w` 會比對一或多個 "a" 字元，連同 "a" 字元序列後面的文字字元，並將 "a" 字元的序列指派給第一個捕獲群組。 不過，如果輸入字串的最後一個字元也是 "a"，它就會由 `\w` language 元素進行比對，而不會包含在已捕獲的群組中。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]
@@ -116,7 +116,7 @@ ms.locfileid: "75348273"
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]
 
-     如需非回溯子運算式的詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
+     如需不可部分完成群組的詳細資訊，請參閱[群組結構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
 - 從右至左比對，將 <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 選項提供給 <xref:System.Text.RegularExpressions.Regex> 類別建構函式或靜態執行個體比對方法，即可指定此種比對。 當從右至左搜尋取代從左至右搜尋時，或在從右邊部分 (而非自左邊) 開始比對模式較有效率的情況中，這項功能很有用處。 如下例所示，使用由右至左比對會變更 Greedy (窮盡) 數量詞的行為。 此範例會搜尋兩次以數字結尾的句子。 使用 Greedy (窮盡) 數量詞 `+` 的由左至右搜尋，會比對句子中的六個數字其中一個，而由右至左搜尋會比對全部六個數字。 如需正則運算式模式的說明，請參閱本章節稍早的說明延遲數量詞的範例。
 
@@ -125,7 +125,7 @@ ms.locfileid: "75348273"
 
      如需從右至左比對的詳細資訊，請參閱[規則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。
 
-- 左合樣和左不合樣：`(?<=`*subexpression*`)` 適用於左合樣，而 `(?<!`*subexpression*`)` 適用於左不合樣。 此功能類似於本主題前文中所討論的向右合樣。 因為規則運算式引擎允許完整的由右至左比對，規則運算式允許無限制的向左合樣。 當巢狀子運算式為外部運算式的超集時，左合樣和左不合樣也可以用來避免產生巢狀數量詞。 具有此種巢狀數量詞的規則運算式通常效能不佳。 例如，下例會驗證字串是否以英數字元開頭和結尾，以及字串中的任何其他字元是否為較大子集之一。 其會構成用來驗證電子郵件地址之規則運算式的一部分；如需詳細資訊，請參閱[如何：確認字串是否為有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。
+- 左合樣和左不合樣：`(?<=`*subexpression*`)` 適用於左合樣，而 `(?<!`*subexpression*`)` 適用於左不合樣。 此功能類似於本主題前文中所討論的向右合樣。 因為規則運算式引擎允許完整的由右至左比對，規則運算式允許無限制的向左合樣。 當巢狀子運算式為外部運算式的超集時，左合樣和左不合樣也可以用來避免產生巢狀數量詞。 具有此種巢狀數量詞的規則運算式通常效能不佳。 例如，下例會驗證字串是否以英數字元開頭和結尾，以及字串中的任何其他字元是否為較大子集之一。 它會構成用來驗證電子郵件地址之規則運算式的一部分；如需詳細資訊，請參閱[如何：確認字串是否為有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]
@@ -154,6 +154,6 @@ ms.locfileid: "75348273"
 |[規則運算式範例](../../../docs/standard/base-types/regular-expression-examples.md)|包含程式碼範例，說明規則運算式在常見應用程式中的使用方式。|
 |[規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|提供您可以用來定義規則運算式之字元、運算子和建構組合的資訊。|
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>

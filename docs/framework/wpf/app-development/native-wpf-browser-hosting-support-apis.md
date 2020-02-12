@@ -7,20 +7,20 @@ helpviewer_keywords:
 - browser hosting support [WPF]
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
-ms.openlocfilehash: 7e285b916b076fdf0fc0d6477fba47d946b95726
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 68981f30918b5fff346daa2fce94bbf4601ea2e9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744214"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124503"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>裝載支援 API 的原生 WPF 瀏覽器
 在網頁瀏覽器中裝載 WPF 應用程式是由從 WPF 主機註冊的活動文檔伺服器（也稱為 DocObject）所促成。 Internet Explorer 可以直接啟用並與使用中的檔整合。 為了在 Mozilla 瀏覽器中裝載 Xbap 和鬆散的 XAML 檔，WPF 提供了 NPAPI 外掛程式，可提供與 Internet Explorer 相同的主控環境給 WPF Active Document server。 不過，在其他瀏覽器和獨立應用程式中裝載 Xbap 和 XAML 檔最簡單的方式，是透過 Internet Explorer 網頁瀏覽器控制項。 網頁瀏覽器控制項提供複雜的活動文檔伺服器裝載環境，但它可讓自己的主機自訂和擴充該環境，並直接與目前的活動文檔物件通訊。  
   
- WPF 活動文檔伺服器會執行數個常見的裝載介面，包括[IOleObject](https://go.microsoft.com/fwlink/?LinkId=162049)、 [IOleDocument](https://go.microsoft.com/fwlink/?LinkId=162050)、 [IOleInPlaceActiveObject](https://go.microsoft.com/fwlink/?LinkId=162051)、 [IPersistMoniker](https://go.microsoft.com/fwlink/?LinkId=162045)、 [IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)。 在 Web 瀏覽器控制項中裝載時，這些介面可以是從[IWebBrowser2：:D 檔頁尾](https://go.microsoft.com/fwlink/?LinkId=162048)屬性所傳回之物件的查詢。  
+ WPF 活動文檔伺服器會執行數個常見的裝載介面，包括[IOleObject](/windows/win32/api/oleidl/nn-oleidl-ioleobject)、 [IOleDocument](/windows/win32/api/docobj/nn-docobj-ioledocument)、 [IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject)、 [IPersistMoniker](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775042(v=vs.85))、 [IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget)。 在 Web 瀏覽器控制項中裝載時，這些介面可以是從[IWebBrowser2：:D 檔頁尾](https://docs.microsoft.com/previous-versions/aa752116(v=vs.85))屬性所傳回之物件的查詢。  
   
 ## <a name="iolecommandtarget"></a>IOleCommandTarget  
- WPF 活動文檔伺服器的[IOleCommandTarget](https://go.microsoft.com/fwlink/?LinkId=162047)的執行，支援標準 OLE 命令群組的多種導覽相關和瀏覽器特定命令（使用 null 命令群組 GUID）。 此外，它也會辨識稱為 CGID_PresentationHost 的自訂命令群組。 目前，此群組中只有一個已定義的命令。  
+ WPF 活動文檔伺服器的[IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget)的執行，支援標準 OLE 命令群組的多種導覽相關和瀏覽器特定命令（使用 null 命令群組 GUID）。 此外，它也會辨識稱為 CGID_PresentationHost 的自訂命令群組。 目前，此群組中只有一個已定義的命令。  
   
 ```cpp  
 DEFINE_GUID(CGID_PresentationHost, 0xd0288c55, 0xd6, 0x4f5e, 0xa8, 0x51, 0x79, 0xde, 0xc5, 0x1b, 0x10, 0xec);  

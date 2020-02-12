@@ -1,17 +1,15 @@
 ---
 title: SDK 樣式專案中的目標 framework-.NET
 description: 了解 .NET Core 應用程式和程式庫的目標 Framework。
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 957671644ae333180b0c1ba4aae6d6e17ae6478b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838207"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124594"
 ---
 # <a name="target-frameworks-in-sdk-style-projects"></a>SDK 樣式專案中的目標 framework
 
@@ -29,9 +27,9 @@ ms.locfileid: "74838207"
 
 下表定義最常用的目標 Framework、其參考方式，以及它們所實作的 [.NET Standard](net-standard.md) 版本。 這些目標 Framework 版本是最新穩定版本。 不顯示發行前版本。 目標 Framework Moniker (TFM) 是用於指定 .NET 應用程式或程式庫之目標 Framework 的標準化語彙基元格式。
 
-| 目標 Framework      | Latest <br/> 穩定版本 | Target Framework Moniker (TFM) | 已實作 <br/> .NET Standard 版本 |
+| 目標 Framework      | 最新 <br/> 穩定版 | Target Framework Moniker (TFM) | 已實作 <br/> .NET Standard 版本 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET 標準         | 2.1                         | netstandard 2.1                 | N/A                                     |
+| .NET Standard         | 2.1                         | netstandard 2.1                 | N/A                                     |
 | .NET Core             | 3.1                         | netcoreapp 3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
@@ -41,12 +39,12 @@ ms.locfileid: "74838207"
 
 | 目標 Framework           | TFM |
 | -------------------------- | --- |
-| .NET 標準              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard 2.1 |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard 2.1 |
 | .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp 3.0<br>netcoreapp 3.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows 市集              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
-| Silverlight                | sl4<br>sl5 |
+| [Silverlight]                | sl4<br>sl5 |
 | Windows Phone              | wp [wp7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
 | 通用 Windows 平台 | uap [uap10.0]<br>uap10.0 [win10] [netcore50] |
 
@@ -118,7 +116,7 @@ public class MyClass
 
 下列目標 Framework 已被取代。 以這些目標 Framework 為目標的套件應該移轉至所指出的取代項目。
 
-| 已被取代的 TFM                                                                             | Replacement |
+| 已被取代的 TFM                                                                             | 取代 |
 | ------------------------------------------------------------------------------------------ | ----------- |
 | aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
 | dotnet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | netstandard |
@@ -129,7 +127,7 @@ public class MyClass
 | win10                                                                                      | uap10.0     |
 | winrt                                                                                      | netcore45   |
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [套件、中繼套件和架構](../core/packages.md)
 - [使用跨平台工具開發程式庫](../core/tutorials/libraries.md)

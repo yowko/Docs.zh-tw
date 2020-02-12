@@ -2,16 +2,15 @@
 title: .NET 類別庫
 description: 了解 .NET 類別庫如何讓您將有用的功能分組成可供多個應用程式使用的模組。
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664594"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124581"
 ---
 # <a name="net-class-libraries"></a>.NET 類別庫
 

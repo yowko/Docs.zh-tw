@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 9ec6716fefdc8de75d7e523c56ae0b3a02c8cf02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bce2eed5f0e78c16b85b399e588c3d0d68ce7cb7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424635"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123710"
 ---
 # <a name="dialog-boxes-overview"></a>對話方塊總覽
 獨立應用程式通常會有一個主視窗，它會顯示應用程式運作的主要資料，並透過像是功能表列、工具列和狀態列等 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 機制來公開處理該資料的功能。 重要的應用程式還可能顯示其他視窗來執行下列動作：  
@@ -32,7 +32,7 @@ ms.locfileid: "73424635"
   
  另一方面，非*模式*對話方塊則不會防止使用者在開啟其他視窗時加以啟用。 例如，如果使用者想要尋找出現在文件中的特定字組，主視窗通常會開啟對話方塊，詢問使用者要尋找哪個字組。 不過，由於尋找字組並不會防止使用者編輯文件，因此對話方塊不需要是強制回應。 [非模式] 對話方塊至少會提供關閉對話方塊的 [**關閉**] 按鈕，而且可能會提供其他按鈕來執行特定函式，例如 **[尋找下一個]** 按鈕，以尋找符合文字搜尋搜尋準則的下一個單字。  
   
- Windows Presentation Foundation （WPF）可讓您建立數種類型的對話方塊，包括訊息方塊、通用對話方塊和自訂對話方塊。 本主題將討論每個，而[對話方塊範例](https://go.microsoft.com/fwlink/?LinkID=159984)會提供相符的範例。  
+ Windows Presentation Foundation （WPF）可讓您建立數種類型的對話方塊，包括訊息方塊、通用對話方塊和自訂對話方塊。 本主題將討論每個，而[對話方塊範例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)會提供相符的範例。  
 
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>訊息方塊  
@@ -55,9 +55,9 @@ ms.locfileid: "73424635"
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- 如需使用訊息方塊的詳細資訊，請參閱 <xref:System.Windows.MessageBox>、 [MessageBox 範例](https://go.microsoft.com/fwlink/?LinkID=160023)和[對話方塊範例](https://go.microsoft.com/fwlink/?LinkID=159984)。  
+ 如需使用訊息方塊的詳細資訊，請參閱 <xref:System.Windows.MessageBox>、 [MessageBox 範例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/MessageBox)和[對話方塊範例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)。  
   
- 雖然 <xref:System.Windows.MessageBox> 可能提供簡單的對話方塊使用者經驗，但使用 <xref:System.Windows.MessageBox> 的優點是，在部分信任安全性沙箱（請參閱[安全性](../security-wpf.md)）中執行的應用程式（例如 XAML 瀏覽器）可以顯示的唯一視窗類型應用程式（Xbap）。  
+ 雖然 <xref:System.Windows.MessageBox> 可能會提供簡單的對話方塊使用者經驗，但使用 <xref:System.Windows.MessageBox> 的優點是在部分信任安全性沙箱（請參閱[安全性](../security-wpf.md)）中執行的應用程式（例如 XAML 瀏覽器應用程式（xbap））可以顯示的唯一視窗類型。  
   
  大多數對話方塊所顯示及收集的資料會比訊息方塊的結果更複雜，包括文字、選取範圍 (核取方塊)、互斥選取範圍 (選項按鈕)，以及清單選取範圍 (清單方塊、下拉式方塊、下拉式清單方塊)。 在這些情況下，Windows Presentation Foundation （WPF）提供數個常見的對話方塊，並可讓您建立自己的對話方塊，雖然僅限於以完全信任執行的應用程式。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "73424635"
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>建立模式自訂對話方塊
 
-本主題說明如何使用 <xref:System.Windows.Window> 來建立典型的強制回應對話方塊實作為範例，使用 [`Margins`] 對話方塊（請參閱[對話方塊範例](https://go.microsoft.com/fwlink/?LinkID=159984)）。 下圖顯示 [`Margins`] 對話方塊。  
+本主題說明如何使用 <xref:System.Windows.Window> 來建立典型的強制回應對話方塊實作為範例，使用 [`Margins`] 對話方塊（請參閱[對話方塊範例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)）。 下圖顯示 [`Margins`] 對話方塊。  
   
  ![[邊界] 對話方塊，其中包含用來定義左邊界、上邊界、右邊界和下邊界的欄位。](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
@@ -304,7 +304,7 @@ WPF 在輸入有效的資料之前，不會將使用者限制為不正確控制�
 [!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
 [!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [快顯功能表概觀](../controls/popup-overview.md)
-- [對話方塊範例](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [對話方塊範例](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)

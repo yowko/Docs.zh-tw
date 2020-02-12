@@ -1,16 +1,14 @@
 ---
 title: 歡迎使用 .NET
 description: 開始使用 .NET 系列的技術。
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838126"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124217"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -40,7 +38,7 @@ ms.locfileid: "74838126"
 - [C# 的新功能](csharp/whats-new/index.md)
 - [Visual Basic 的新功能](visual-basic/getting-started/whats-new.md)
 
-## <a name="documentation"></a>Documentation
+## <a name="documentation"></a>文件
 
 這份文件涵蓋各種平台和語言的 .NET 範圍。 您可以在下列任何各節中開始使用 .NET 和其語言：
 
@@ -62,7 +60,7 @@ ms.locfileid: "74838126"
 
 [.NET 101 影片系列](https://dotnet.microsoft.com/learn/videos)
 
-## <a name="open-source"></a>開啟原始檔
+## <a name="open-source"></a>開放原始碼
 
 這份文件是完全[開放原始檔](https://github.com/dotnet/docs)。 您可以透過任何想要的方式參與，包括建立文件撰寫問題。 此外，.NET 的大多部分本身也是開放原始碼。 下列清單顯示主要的 .NET GitHub 存放庫：
 
@@ -71,7 +69,7 @@ ms.locfileid: "74838126"
 - [.NET Core SDK](https://github.com/dotnet/sdk)
 - [Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools](https://github.com/dotnet/roslyn) (Roslyn (C# 和 Visual Basic) 編譯器平台和 IDE 工具)
 - [F# Compiler and IDE Tools](https://github.com/dotnet/fsharp) (F# 編譯器和 IDE 工具)
-- [Windows Forms](https://github.com/dotnet/winforms)
+- [Windows Forms](https://github.com/dotnet/winforms) \(英文\)
 - [WPF](https://github.com/dotnet/wpf)
 
 您可以加入已活躍於 [.NET 社群 (英文)](https://dotnet.microsoft.com/platform/community) 的其他人，了解最新消息或尋求協助。

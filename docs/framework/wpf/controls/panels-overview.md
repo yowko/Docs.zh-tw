@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: d77ce78fe914bf300c5b33019d7cf67aa4ad74c3
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d0962793854a6066112eb987fbdb3f703617787f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291455"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124412"
 ---
 # <a name="panels-overview"></a>面板概觀
 <xref:System.Windows.Controls.Panel> 專案是控制專案轉譯的元件—其大小和尺寸、位置，以及其子內容的相片順序。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供許多預先定義的 <xref:System.Windows.Controls.Panel> 元素，以及能夠建立自訂的 <xref:System.Windows.Controls.Panel> 元素。  
@@ -65,7 +65,7 @@ ms.locfileid: "72291455"
 |元素名稱|UI 面板？|描述|  
 |------------------|---------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|是|定義一個區域，您可以在其中以相對於 <xref:System.Windows.Controls.Canvas> 區域的座標，明確地定位子專案。|  
-|<xref:System.Windows.Controls.DockPanel>|是|定義一個區域，可供您在其中以子項目彼此間相對的水平或垂直方式排列子項目。|  
+|<xref:System.Windows.Controls.DockPanel>|是|定義一個區域，可供您在其中以子元素彼此間相對的水平或垂直方式排列子元素。|  
 |<xref:System.Windows.Controls.Grid>|是|定義由資料行與資料列組成的彈性方格區域。 <xref:System.Windows.Controls.Grid> 的子項目可以使用 <xref:System.Windows.FrameworkElement.Margin%2A> 屬性精確地定位。|  
 |<xref:System.Windows.Controls.StackPanel>|是|將子元素排成單一行，以水平或垂直方式排列。|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|否|處理 <xref:System.Windows.Controls.TabControl>中索引標籤按鈕的版面配置。|  
@@ -101,7 +101,7 @@ ms.locfileid: "72291455"
 #### <a name="cliptobounds-within-a-canvas"></a>畫布內的 ClipToBounds  
  <xref:System.Windows.Controls.Canvas> 可以將子專案放在螢幕上的任何位置，即使是在其本身定義的 <xref:System.Windows.FrameworkElement.Height%2A> 和 <xref:System.Windows.FrameworkElement.Width%2A>以外的座標。 此外，<xref:System.Windows.Controls.Canvas> 不會受到其子系的大小影響。 因此，子項目可能會過度繪製父 <xref:System.Windows.Controls.Canvas>的周框以外的其他專案。 <xref:System.Windows.Controls.Canvas> 的預設行為是允許子系在父 <xref:System.Windows.Controls.Canvas>的範圍外繪製。 如果不想要此行為，可以將 <xref:System.Windows.UIElement.ClipToBounds%2A> 屬性設定為 `true`。 這會導致 <xref:System.Windows.Controls.Canvas> 裁剪成自己的大小。 <xref:System.Windows.Controls.Canvas> 是唯一允許子系在其範圍外繪製的版面配置元素。  
   
- 在[寬度屬性比較範例](https://go.microsoft.com/fwlink/?LinkID=160050)中有此行為的圖例解說。  
+ 在[寬度屬性比較範例](https://github.com/Microsoft/WPF-Samples/tree/master/Elements/WidthProperties)中有此行為的圖例解說。  
   
 #### <a name="defining-and-using-a-canvas"></a>定義和使用 Canvas  
  <xref:System.Windows.Controls.Canvas> 可以使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 或程式碼直接具現化。 下列範例示範如何使用 <xref:System.Windows.Controls.Canvas> 來絕對位置內容。 此程式碼會產生三個 100 像素的方形。 第一個方形為紅色，其左上角 (*x, y*) 位置是指定為 (0, 0)。 第二個方形為綠色，其左上角位置是 (100, 100)，正好是在第一個方形的右下方。 第三個方形為藍色，其左上角位置是 (50, 50)，因此包含第一個方形的右下象限，以及第二個方形的左上象限。 由於第三個方形是最後放置的，因此它會顯示在另外兩個方形上方，也就是說，重疊部分會呈現第三個方塊的顏色。  
@@ -112,7 +112,7 @@ ms.locfileid: "72291455"
   
  編譯後的應用程式會產生一個看起來如下的新 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
   
- ![典型的 Canvas 元素。](./media/panel-intro-canvas.PNG "panel_intro_canvas")  
+ ![典型的畫布元素。](./media/panel-intro-canvas.PNG "panel_intro_canvas")  
   
 <a name="Panels_overview_DockPanel_subsection"></a>   
 ### <a name="dockpanel"></a>DockPanel  
@@ -143,7 +143,7 @@ ms.locfileid: "72291455"
  <xref:System.Windows.Controls.Grid> 元素會合並絕對位置和表格式資料控制項的功能。 <xref:System.Windows.Controls.Grid> 可讓您輕鬆地定位和樣式元素。 <xref:System.Windows.Controls.Grid> 可讓您定義彈性的資料列和資料行群組，甚至提供在多個 <xref:System.Windows.Controls.Grid> 元素之間共用調整大小資訊的機制。  
   
 #### <a name="how-is-grid-different-from-table"></a>Grid 和 Table 有何不同？  
- <xref:System.Windows.Documents.Table> 和 <xref:System.Windows.Controls.Grid> 共用一些常見的功能，但每個都適用于不同的案例。 <xref:System.Windows.Documents.Table> 是針對在非固定格式內容中使用而設計的（如需有關流量內容的詳細資訊，請參閱非固定格式[檔總覽](../advanced/flow-document-overview.md)）。 方格最適合在表單內部使用 (基本上，是在非固定格式內容以外的任何地方)。 在 <xref:System.Windows.Documents.FlowDocument>中，<xref:System.Windows.Documents.Table> 支援在 <xref:System.Windows.Controls.Grid> 不進行分頁、資料行重新排列和內容選取等非固定格式內容行為。 另一方面，<xref:System.Windows.Controls.Grid> 是在 <xref:System.Windows.Documents.FlowDocument> 外使用，原因很多，包括 <xref:System.Windows.Controls.Grid> 根據資料列和資料行索引來加入元素，<xref:System.Windows.Documents.Table> 則不會。 <xref:System.Windows.Controls.Grid> 專案允許子內容的分層，讓一個以上的元素可存在於單一「資料格」內。 <xref:System.Windows.Documents.Table> 不支援分層。 <xref:System.Windows.Controls.Grid> 的子項目可以相對於其「儲存格」界限的區域進行絕對位置。 <xref:System.Windows.Documents.Table> 不支援這項功能。 最後，<xref:System.Windows.Controls.Grid> 比 <xref:System.Windows.Documents.Table>更輕量。  
+ <xref:System.Windows.Documents.Table> 和 <xref:System.Windows.Controls.Grid> 共用一些常見的功能，但每個都適用于不同的案例。 <xref:System.Windows.Documents.Table> 是針對在非固定格式內容中使用而設計的（如需有關流量內容的詳細資訊，請參閱非固定格式[檔總覽](../advanced/flow-document-overview.md)）。 方格最適合在表單內 (基本上，是在非固定格式內容以外的任何地方) 使用。 在 <xref:System.Windows.Documents.FlowDocument>中，<xref:System.Windows.Documents.Table> 支援在 <xref:System.Windows.Controls.Grid> 不進行分頁、資料行重新排列和內容選取等非固定格式內容行為。 另一方面，<xref:System.Windows.Controls.Grid> 是在 <xref:System.Windows.Documents.FlowDocument> 外使用，原因很多，包括 <xref:System.Windows.Controls.Grid> 根據資料列和資料行索引來加入元素，<xref:System.Windows.Documents.Table> 則不會。 <xref:System.Windows.Controls.Grid> 專案允許子內容的分層，讓一個以上的元素可存在於單一「資料格」內。 <xref:System.Windows.Documents.Table> 不支援分層。 <xref:System.Windows.Controls.Grid> 的子項目可以相對於其「儲存格」界限的區域進行絕對位置。 <xref:System.Windows.Documents.Table> 不支援這項功能。 最後，<xref:System.Windows.Controls.Grid> 比 <xref:System.Windows.Documents.Table>更輕量。  
   
 #### <a name="sizing-behavior-of-columns-and-rows"></a>資料行和資料列的調整大小行為  
  在 <xref:System.Windows.Controls.Grid> 中定義的資料行和資料列可以利用 <xref:System.Windows.GridUnitType.Star> 調整大小，以便按比例分配剩餘的空間。 當您選取 <xref:System.Windows.GridUnitType.Star> 做為資料列或資料行的高度或寬度時，該資料行或資料列會收到剩餘可用空間的加權比例。 這與 <xref:System.Windows.GridUnitType.Auto>相反，它會根據資料行或資料列內的內容大小，將空間平均分散。 使用 `*` 時，這個值是以 `2*` 或 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 表示。 在第一個案例中，資料列或資料行會獲得一倍的可用空間，在第二個案例中，則會獲得兩倍的可用空間，依此類推。 藉由結合這項技術來按比例分配空間與 <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>，並 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> 值 `Stretch`，可以依螢幕空間百分比分割版面配置空間。 <xref:System.Windows.Controls.Grid> 是可以用這種方式散佈空間的唯一版面配置面板。  
@@ -188,7 +188,7 @@ ms.locfileid: "72291455"
   
 <a name="Panels_overview_VirtualizingStackPanel_subsection"></a>   
 #### <a name="virtualizingstackpanel"></a>VirtualizingStackPanel  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也會提供 <xref:System.Windows.Controls.StackPanel> 元素的變化，自動「虛擬化」資料系結的子內容。 在此內容中，「虛擬化」一字係指一種技術，藉由這種技術，將可從較大量的資料項目，根據畫面上可見的項目來產生元素子集。 當在指定的時間內畫面上只能有幾個 UI 項目時，不論是就記憶體還是處理器而言，產生大量 UI 項目都會相當耗費資源。 <xref:System.Windows.Controls.VirtualizingStackPanel> （透過 <xref:System.Windows.Controls.VirtualizingPanel>提供的功能）會計算可見專案，並使用 <xref:System.Windows.Controls.ItemsControl> （例如 <xref:System.Windows.Controls.ListBox> 或 <xref:System.Windows.Controls.ListView>）中的 <xref:System.Windows.Controls.ItemContainerGenerator>，來建立可見專案的元素。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也會提供 <xref:System.Windows.Controls.StackPanel> 元素的變化，自動「虛擬化」資料系結的子內容。 在此內容中，「虛擬化」一字係指一種技術，藉由這種技術，將可從較大量的資料項目，根據畫面上可見的項目來產生元素子集。 當在指定的時間內畫面上只能有幾個 UI 元素時，不論是就記憶體還是處理器而言，產生大量 UI 元素都會相當耗費資源。 <xref:System.Windows.Controls.VirtualizingStackPanel> （透過 <xref:System.Windows.Controls.VirtualizingPanel>提供的功能）會計算可見專案，並使用 <xref:System.Windows.Controls.ItemsControl> （例如 <xref:System.Windows.Controls.ListBox> 或 <xref:System.Windows.Controls.ListView>）中的 <xref:System.Windows.Controls.ItemContainerGenerator>，來建立可見專案的元素。  
   
  <xref:System.Windows.Controls.VirtualizingStackPanel> 元素會自動設定為控制項的專案主機，例如 <xref:System.Windows.Controls.ListBox>。 裝載資料系結集合時，只要內容在 <xref:System.Windows.Controls.ScrollViewer>的範圍內，內容就會自動虛擬化。 當裝載許多子項目時，這可大幅改善效能。  
   
@@ -224,7 +224,7 @@ ms.locfileid: "72291455"
   
  編譯後的應用程式會產生一個看起來如下的新 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
   
- ![會利用巢狀面板的 UI。](./media/nested-panels.PNG "nested_panels")  
+ ![利用嵌套面板的 UI。](./media/nested-panels.PNG "nested_panels")  
   
 <a name="Panels_custom_panel_elements"></a>   
 ## <a name="custom-panel-elements"></a>自訂面板元素  
@@ -257,7 +257,7 @@ ms.locfileid: "72291455"
 - [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [WPF 版面配置庫範例](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [版面配置](../advanced/layout.md)
-- [WPF 控制項陳列庫範例](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF 控制項陳列庫範例](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [對齊、邊界和填補概觀](../advanced/alignment-margins-and-padding-overview.md)
 - [建立自訂的內容包裝面板範例](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [附加屬性概觀](../advanced/attached-properties-overview.md)

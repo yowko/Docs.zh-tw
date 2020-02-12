@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 87e756445255f1bd2417a06dfa611eba23208575
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: f5312177b9f437d9b5474d38fca80db6fc45245b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716749"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123671"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>搭配 Model-View-View 模型使用可攜式類別庫
 您可以使用 .NET Framework 的[可移植類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)來執行模型視圖視圖模型（MVVM）模式，並跨多個平臺共用元件。
@@ -59,7 +57,7 @@ ms.locfileid: "74716749"
 
  在您編譯模型和視圖模型專案之後，您會參考應用程式中包含此視圖的元件。 如果此視圖只與視圖模型互動，您只需要參考包含視圖模型的元件。
 
-### <a name="model"></a>型號
+### <a name="model"></a>模型
  下列範例顯示可能位於可移植類別庫專案中的簡化模型類別。
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
@@ -91,6 +89,6 @@ ms.locfileid: "74716749"
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [可攜式類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

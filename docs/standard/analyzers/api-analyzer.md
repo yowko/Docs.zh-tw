@@ -2,15 +2,14 @@
 title: .NET API 分析器
 description: 了解「.NET API 分析器」如何協助偵測已被取代的 API 及平台相容性問題。
 author: oliag
-ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929356"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124243"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -45,22 +44,22 @@ ms.locfileid: "70929356"
 
 [錯誤清單] 視窗會包含警告，其中每個已被取代的 API 都會有一個唯一識別碼 ，如以下範例所示 (`DE004`)： 
 
-![「顯示警告之識別碼和描述的 [錯誤清單] 視窗螢幕擷取畫面」](media/api-analyzer/warnings-id-and-descriptions.jpg "包含警告的 [錯誤清單] 視窗。")
+![「錯誤清單視窗的螢幕擷取畫面，其中顯示警告的識別碼和描述」](media/api-analyzer/warnings-id-and-descriptions.jpg "包含警告的錯誤清單視窗。")
 
 藉由按一下識別碼，您便可以前往含有詳細資訊的網頁，當中會說明 API 被取代的原因，並提供有關可使用之替代 API 的建議。
 
-若要隱藏任何警告，只要在已醒目標示的成員上按一下滑鼠右鍵，然後選取 [隱藏 \<診斷識別碼>] 即可。 有兩種隱藏警告的方式： 
+若要隱藏任何警告，只要在已醒目標示的成員上按一下滑鼠右鍵，然後選取 [隱藏 **診斷識別碼>]\<** 即可。 有兩種隱藏警告的方式： 
 
 - [本機 (在原始程式檔中)](#suppressing-warnings-locally)
 - [全域 (在隱藏項目檔中)](#suppressing-warnings-globally) - 建議使用
 
 ### <a name="suppressing-warnings-locally"></a>在本機隱藏警告
 
-若要在本機隱藏警告，請在您想要隱藏警告的成員上按一下滑鼠右鍵，然後選取 [快速動作與重構] > [隱藏診斷識別碼 \<診斷識別碼>] > [在原始程式檔中]。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告前置處理器指示詞會新增到您所定義範圍中的原始程式碼：![「以 #pragma warning disable 括住之程式碼的螢幕擷取畫面」](media/api-analyzer/suppress-in-source.jpg)
+若要在本機隱藏警告，請在您想要隱藏警告的成員上按一下滑鼠右鍵，然後選取 [快速動作與重構] > [隱藏診斷識別碼 **診斷識別碼>]\<**  > [在原始程式檔中]。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告前置處理器指示詞會新增到您原始程式碼的已定義範圍中：![「以 #pragma warning disable 為框架之程式碼的螢幕擷取畫面」](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>在全域隱藏警告
 
-若要在全域隱藏警告，請在您想要隱藏警告的成員上按一下滑鼠右鍵，然後選取 [快速動作與重構] > [隱藏診斷識別碼 \<診斷識別碼>] > [在隱藏項目檔中]。
+若要在全域隱藏警告，請在您想要隱藏警告的成員上按一下滑鼠右鍵，然後選取 [快速動作與重構] > [隱藏診斷識別碼 **診斷識別碼>]\<**  > [在隱藏項目檔中]。
 
 ![「帶有綠色曲線的 WebClient API 及左邊有燈泡圖示的螢幕擷取畫面」](media/api-analyzer/suppress-in-sup-file.jpg)
 

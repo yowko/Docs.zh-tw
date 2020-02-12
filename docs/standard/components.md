@@ -2,21 +2,20 @@
 title: .NET 架構元件
 description: 描述 .NET 架構元件，例如 .NET Standard、.NET 實作、.NET 執行階段和工具。
 author: cartermp
-ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4f52a89179e241dcfce5c888e03518d878009175
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: af28863ac98ff5ffb5a8133fb98f2f1e7036985d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348051"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124386"
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
 .NET 應用程式是針對一或多個「.NET 實作」所開發並在其中執行。  .NET 實作包括 .NET Framework、.NET Core 和 Mono。 所有 .NET 實作有一個通用的 API 規格，稱為 .NET Standard。 本文提供上述每個概念的簡介。
 
-## <a name="net-standard"></a>.NET 標準
+## <a name="net-standard"></a>.NET Standard
 
 .NET Standard 是一組 API，由 .NET 實作的基底類別庫所實作。 正式地說，它是構成制式協定的 .NET API 規格，讓您據以編譯程式碼。 各個 .NET 實作中都會實作這些協定。 這會跨不同的 .NET 實作啟用可攜性，以有效地讓您的程式碼在任何地方執行。
 
@@ -28,9 +27,9 @@ ms.locfileid: "75348051"
 
 .NET 的每項實作包括下列元件：
 
-- 一或多個執行階段。 例如：適用於 .NET Framework 的 CLR、適用於 .NET Core 的 CoreCLR 和 CoreRT。
+- 一或多個執行階段。 範例：適用於 .NET Framework 的 CLR、適用於 .NET Core 的 CoreCLR 和 CoreRT。
 - 實作 .NET Standard 並可能實作其他 API 的類別庫。 範例：.NET Framework 基底類別庫、.NET Core 基底類別庫。
-- (選擇性) 一或多個應用程式架構。 例如：[ASP.NET](https://www.asp.net/)、[Windows Forms](../framework/winforms/windows-forms-overview.md) 和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 會包含在 .NET Framework 和 .NET Core 中。
+- (選擇性) 一或多個應用程式架構。 範例： [ASP.NET](https://www.asp.net/)、 [Windows Forms](../framework/winforms/windows-forms-overview.md)和[Windows Presentation Foundation （WPF）](../framework/wpf/index.md)會包含在 .NET Framework 和 .net Core 中。
 - (選擇性) 開發工具。 某些開發工具可在多個實作之間共用。
 
 Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.NET Framework、Mono 和 UWP。
@@ -94,15 +93,15 @@ C#語言和通用語言基礎結構（CLI）規格會透過[ECMA International®
 
 下列正式的 Ecma 檔適用于[C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm)和[CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) （[TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)）：
 
-- **語言標準（版本5.0）： C#** [ECMA-334 .pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **通用語言基礎結構**：這適用于[pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf)格式和[zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip)格式。
+- **語言標準（版本5.0）： ECMA-334 .pdf C#**  [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
+- **通用語言基礎結構**：這是以[pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf)格式和[zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip)格式提供。
 - **衍生自資料分割 IV XML 檔案的資訊**：這適用于[pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf)和[zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip)格式。
  
 正式的 ISO/IEC 檔可從 ISO/IEC[公開使用標準](https://standards.iso.org/ittf/PubliclyAvailableStandards/)頁面取得。 這些連結直接來自該頁面：
 
-- **資訊技術-程式設計語言C#-** ：[ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
-- **資訊技術-通用語言基礎結構（CLI）磁碟分割 I 到 VI**：[ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
-- **資訊技術-通用語言基礎結構（CLI）-衍生自資料分割 IV XML 檔案之資訊的技術報告**：[ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
+- **資訊技術-程式設計語言C#-** ： [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
+- **資訊技術-通用語言基礎結構（CLI）磁碟分割 I 到 VI**： [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **資訊技術-通用語言基礎結構（CLI）-衍生自資料分割 IV XML 檔案之資訊的技術報告**： [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
 ## <a name="see-also"></a>另請參閱
 

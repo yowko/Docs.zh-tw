@@ -1,13 +1,13 @@
 ---
 title: F# 的教學課程
 description: 在本教學課程中使用程式碼F#範例，檢查程式設計語言的一些重要功能。
-ms.date: 11/06/2018
-ms.openlocfilehash: cfea2827dcec65f9e3606e8528179029e1f2db84
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 02/09/2020
+ms.openlocfilehash: ac2eef40e2dbc494e41a9760f0a70edb0f7ce399
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423811"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124568"
 ---
 # <a name="tour-of-f"></a>F\# 的教學課程
 
@@ -51,7 +51,7 @@ ms.locfileid: "73423811"
 
 [!code-fsharp[Tuples](~/samples/snippets/fsharp/tour.fs#L186-L203)]
 
-從F# 4.1，您也可以建立 `struct` 元組。  這些也會與 c # 7/Visual Basic 15 元組完全互通，這也是 `struct` 元組：
+您也可以建立 `struct` 元組。  這些也會與 c # 7/Visual Basic 15 元組完全互通，這也是 `struct` 元組：
 
 [!code-fsharp[Tuples](~/samples/snippets/fsharp/tour.fs#L205-L218)]
 
@@ -100,7 +100,7 @@ F#也具有 Tail 呼叫優化的完整支援，這種方式可將遞迴呼叫優
 
 [!code-fsharp[Records](~/samples/snippets/fsharp/tour.fs#L507-L559)]
 
-從F# 4.1，您也可以將記錄表示為 `struct`s。  這會透過 `[<Struct>]` 屬性來完成：
+您也可以將記錄表示為結構。 這會透過 `[<Struct>]` 屬性來完成：
 
 [!code-fsharp[Records](~/samples/snippets/fsharp/tour.fs#L561-L568)]
 
@@ -138,6 +138,10 @@ F#也具有 Tail 呼叫優化的完整支援，這種方式可將遞迴呼叫優
 [!code-fsharp[PatternMatching](~/samples/snippets/fsharp/tour.fs#L705-L742)]
 
 您可能已經注意到，使用 `_` 模式。  這就是所謂的[萬用字元模式](./language-reference/pattern-matching.md#wildcard-pattern)，這是一個指出「我不在意什麼東西」的方法。  雖然方便，但如果您不小心使用 `_`，您可以不小心略過完整的模式比對，而不再受益于編譯時期實行原則。  在模式比對時，如果您不在意分解類型的特定片段，或當您在模式比對運算式中列舉了所有有意義的案例時，最好使用此方式。
+
+在下列範例中，當剖析作業失敗時，會使用 `_` 案例。
+
+[!code-fsharp[PatternMatching](~/samples/snippets/fsharp/tour.fs#L744-L762)]
 
 [現用模式](./language-reference/active-patterns.md)是另一個搭配模式比對使用的強大結構。  它們可讓您將輸入資料分割成自訂表單，並在模式比對呼叫位置分解它們。  它們也可以參數化，因此可讓將資料分割定義為函數。  展開先前的範例以支援現用模式看起來像這樣：
 

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立 BorderThickness 值的動畫
+title: 如何：建立 BorderThickness 值的動畫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - border thickness [WPF], animating changes to
 - animation [WPF], changes to border thickness
 ms.assetid: fd021978-f74b-4e7b-a7f7-3987dcad9e0f
-ms.openlocfilehash: 10e177d1f6d6add4638ce14af900e75d7e363890
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4533ce6f2a1fe7243267ee8d638e2ad0a4f9cf3a
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911234"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124659"
 ---
-# <a name="how-to-animate-a-borderthickness-value"></a>HOW TO：建立 BorderThickness 值的動畫
-此範例示範如何建立變更框線粗細的動畫使用<xref:System.Windows.Media.Animation.ThicknessAnimation>類別。  
+# <a name="how-to-animate-a-borderthickness-value"></a>如何：建立 BorderThickness 值的動畫
+這個範例示範如何使用 <xref:System.Windows.Media.Animation.ThicknessAnimation> 類別，以動畫顯示框線粗細的變更。  
   
 ## <a name="example"></a>範例  
- 下列範例會建立框線粗細的動畫使用<xref:System.Windows.Media.Animation.ThicknessAnimation>。 此範例會使用<xref:System.Windows.Controls.Border.BorderThickness%2A>屬性<xref:System.Windows.Controls.Border>。  
+ 下列範例會使用 <xref:System.Windows.Media.Animation.ThicknessAnimation>以動畫呈現框線的粗細。 此範例使用 <xref:System.Windows.Controls.Border>的 <xref:System.Windows.Controls.Border.BorderThickness%2A> 屬性。  
   
  [!code-csharp[BasicAnimations_snip#ThicknessAnimationWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/ThicknessAnimationExample.cs#thicknessanimationwholepage)]
  [!code-vb[BasicAnimations_snip#ThicknessAnimationWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/ThicknessAnimationExample.vb#thicknessanimationwholepage)]  
   
- 如需完整的範例，請參閱[動畫範例圖庫](https://go.microsoft.com/fwlink/?LinkID=159969)。  
+ 如需完整範例，請參閱[動畫範例庫](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationExamples)。  
   
 ## <a name="see-also"></a>另請參閱
 

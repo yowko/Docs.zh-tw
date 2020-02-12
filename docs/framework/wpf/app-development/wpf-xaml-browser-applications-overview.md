@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742289"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124204"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>XAML 瀏覽器應用程式（Xbap）結合了 Web 應用程式和豐富型用戶端應用程式的功能。 如同 Web 應用程式，XBAP 可以部署至 Web 伺服器，並且從 Internet Explorer 或 Firefox 啟動。 如同豐富型用戶端應用程式，Xbap 可以利用 WPF 的功能。 開發 XBAP 也類似於豐富型用戶端開發。 本主題提供 XBAP 開發的簡單、高階介紹，並且描述 XBAP 開發與標準豐富型用戶端開發的不同之處。
@@ -34,7 +34,7 @@ ms.locfileid: "76742289"
 
 <a name="creating_a_new_xaml_browser_application_xbap"></a>
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>建立新的 XAML 瀏覽器應用程式 (XBAP)
- 建立新的 XBAP 專案最簡單的方式是使用 Visual Studio。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]。 如需更多詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。
+ 建立新的 XBAP 專案最簡單的方式是使用 Visual Studio。 建立新專案時，從範本清單選取 [WPF 瀏覽器應用程式]。 如需詳細資訊，請參閱[如何：建立新的 WPF 瀏覽器應用程式專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))。
 
  當您執行 XBAP 專案時，它會在瀏覽器視窗中開啟，而不是在獨立視窗中開啟。 當您從 Visual Studio 來對 XBAP 進行偵錯工具時，應用程式會以網際網路區域許可權執行，因此如果超過這些許可權，將會擲回安全性例外狀況。 如需詳細資訊，請參閱[安全性](../security-wpf.md)和 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。
 
@@ -91,7 +91,7 @@ ms.locfileid: "76742289"
 
 <a name="communicating_with_the_host_web_page"></a>
 ## <a name="communicating-with-the-host-web-page"></a>與主機網頁通訊
- 當應用程式裝載在 HTML 框架中時，您可以與包含 XBAP 的網頁進行通訊。 您可以藉由抓取 <xref:System.Windows.Interop.BrowserInteropHelper>的 <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> 屬性來達到此目的。 這個屬性會傳回代表 HTML 視窗的指令碼物件。 您接著可以使用一般 dot 語法，在[視窗物件](https://go.microsoft.com/fwlink/?LinkId=160274)上存取屬性、方法和事件。 您也可以存取指令碼方法和全域變數。 下列範例示範如何擷取指令碼物件，並且關閉瀏覽器。
+ 當應用程式裝載在 HTML 框架中時，您可以與包含 XBAP 的網頁進行通訊。 您可以藉由抓取 <xref:System.Windows.Interop.BrowserInteropHelper>的 <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> 屬性來達到此目的。 這個屬性會傳回代表 HTML 視窗的指令碼物件。 您接著可以使用一般 dot 語法，在[視窗物件](https://developer.mozilla.org/en-US/docs/Web/API/Window)上存取屬性、方法和事件。 您也可以存取指令碼方法和全域變數。 下列範例示範如何擷取指令碼物件，並且關閉瀏覽器。
 
  [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]
@@ -175,7 +175,7 @@ ms.locfileid: "76742289"
 > [!NOTE]
 > 上表中描述的行為是針對未遵循 ClickOnce 受信任部署模型的完全信任 XBAP。
 
- 建議您使用 ClickOnce 受信任部署模型來部署完全信任 XBAP。 此模型可讓您的 XBAP 自動授與完全信任，無論安全性區域為何，因此系統不會提示使用者。 做為此模型的一部分，您必須使用受信任發行者的憑證來簽署應用程式。 如需詳細資訊，請參閱[受信任應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)和[程式碼簽署簡介](https://go.microsoft.com/fwlink/?LinkId=166327)。
+ 建議您使用 ClickOnce 受信任部署模型來部署完全信任 XBAP。 此模型可讓您的 XBAP 自動授與完全信任，無論安全性區域為何，因此系統不會提示使用者。 做為此模型的一部分，您必須使用受信任發行者的憑證來簽署應用程式。 如需詳細資訊，請參閱[受信任應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)和[程式碼簽署簡介](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))。
 
 <a name="xbap_start_time_performance_considerations"></a>
 ## <a name="xbap-start-time-performance-considerations"></a>XBAP 開始時間效能考量

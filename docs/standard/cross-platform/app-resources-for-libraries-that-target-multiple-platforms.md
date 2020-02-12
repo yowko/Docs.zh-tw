@@ -12,14 +12,12 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3bf475117a85c2fced260dcc9460d55cd7007277
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204746"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123658"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>以多平台為目標之函式庫的應用程式資源
 您可以使用 .NET Framework 的[可移植類別庫](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)專案類型，以確保您的類別庫中的資源可從多個平臺存取。 此專案類型在 Visual Studio 2012 中提供，並以 .NET Framework Class Library 的可移植子集為目標。 使用可移植的類別庫，可確保您的程式庫可以從桌面應用程式、Silverlight 應用程式、Windows Phone 應用程式和 Windows 8.x 存放區應用程式存取。

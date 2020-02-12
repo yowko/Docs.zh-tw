@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: 5e994f65c0665a5726c4c8c19141da5ea3f5e6f6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2ed4e153a2513dc99d22a1538399156c138eb9e5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794188"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123827"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>逐步解說：在 WPF 中裝載 Windows Form 控制項
 
@@ -21,9 +21,9 @@ ms.locfileid: "76794188"
 
 本逐步解說將示範如何使用程式碼，在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 頁面上裝載 Windows Forms <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> 控制項。
 
-如需本逐步解說中所示工作的完整程式代碼清單，請參閱[在 WPF 中裝載 Windows Forms 控制項範例](https://go.microsoft.com/fwlink/?LinkID=160057)。
+如需本逐步解說中所示工作的完整程式代碼清單，請參閱[在 WPF 中裝載 Windows Forms 控制項範例](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/HostingWfInWPF)。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 若要完成這個逐步解說，您必須具有 Visual Studio。
 
@@ -61,15 +61,15 @@ ms.locfileid: "76794188"
      [!code-csharp[HostingWfInWPF#11](~/samples/snippets/csharp/VS_Snippets_Wpf/HostingWfInWPF/CSharp/HostingWfInWPF/Window1.xaml.cs#11)]
      [!code-vb[HostingWfInWPF#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HostingWfInWPF/VisualBasic/HostingWfInWpf/Window1.xaml.vb#11)]
 
-10. 按 **F5** 鍵建置並執行應用程式。
+10. 按 **F5** 鍵以建置並執行應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中設計 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [逐步解說：使用 XAML 在 WPF 中裝載 Windows Forms 控制項](walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md)
 - [逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [逐步解說：在 Windows Form 中裝載 WPF 複合控制項](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [Windows Forms 控制項和對等 WPF 控制項](windows-forms-controls-and-equivalent-wpf-controls.md)
-- [Hosting a Windows Forms Control in WPF Sample](https://go.microsoft.com/fwlink/?LinkID=160057) (在 WPF 中裝載 Windows Forms 控制項的範例)
+- [逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Windows Form 控制項和對等 WPF 控制項](windows-forms-controls-and-equivalent-wpf-controls.md)
+- [Hosting a Windows Forms Control in WPF Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/HostingWfInWPF) (在 WPF 中裝載 Windows Forms 控制項的範例)

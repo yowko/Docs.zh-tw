@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82da07620135224b5f7353f2acce087d939c1855
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790880"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124230"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox HOW TO 主題
-本節提供範例，示範如何完成一般工作，使用<xref:System.Windows.Controls.TextBox>控制項。  
+本節提供的範例示範如何使用 <xref:System.Windows.Controls.TextBox> 控制項來完成一般工作。  
   
 ## <a name="in-this-section"></a>本節內容  
  [建立多行 TextBox 控制項](how-to-create-a-multiline-textbox-control.md)  
@@ -32,7 +32,7 @@ ms.locfileid: "61790880"
  [使用內容功能表的拼字檢查](how-to-use-spell-checking-with-a-context-menu.md)  
  [將浮水印加入至 TextBox](how-to-add-a-watermark-to-a-textbox.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -43,5 +43,5 @@ ms.locfileid: "61790880"
   
 ## <a name="see-also"></a>另請參閱
 
-- [WPF 控制項陳列庫範例](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF 控制項陳列庫範例](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [TextBox 樣式和範本](textbox-styles-and-templates.md)

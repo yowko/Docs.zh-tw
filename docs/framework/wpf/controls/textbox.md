@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b1b15739b1ba1787ba160a9a4d829d83fb10db1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790828"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123633"
 ---
 # <a name="textbox"></a>TextBox
-<xref:System.Windows.Controls.TextBox> WPF 應用程式中的基本的文字輸入控制項提供支援。  
+<xref:System.Windows.Controls.TextBox> 控制項可支援 WPF 應用程式中的基本文字輸入。  
   
 ## <a name="in-this-section"></a>本節內容  
  [TextBox 概觀](textbox-overview.md)  
- [HOW-TO 主題](textbox-how-to-topics.md)  
+ [操作說明主題](textbox-how-to-topics.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -32,5 +32,5 @@ ms.locfileid: "61790828"
   
 ## <a name="see-also"></a>另請參閱
 
-- [WPF 控制項陳列庫範例](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF 控制項陳列庫範例](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [TextBox 樣式和範本](textbox-styles-and-templates.md)

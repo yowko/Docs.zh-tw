@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 0fec72bdedbcc2c84d8bc65e72391366e42d82be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739168"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124477"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 
@@ -44,7 +44,7 @@ ms.locfileid: "76739168"
 
 ## <a name="the-pack-uri-scheme"></a>套件 URI 配置
 
-套件 URI 配置是由[開放封裝慣例](https://go.microsoft.com/fwlink/?LinkID=71255)（OPC）規格所使用，其描述用於組織和識別內容的模型。 此模型的主要元素是封裝和元件，其中*封裝*是一或多個邏輯*元件*的邏輯容器。 下圖說明這個概念。
+套件 URI 配置是由[開放封裝慣例](https://www.ecma-international.org/publications/standards/Ecma-376.htm)（OPC）規格所使用，其描述用於組織和識別內容的模型。 此模型的主要元素是封裝和元件，其中*封裝*是一或多個邏輯*元件*的邏輯容器。 下圖說明這個概念。
 
 ![套件和部分圖表](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
 

@@ -7,44 +7,42 @@ helpviewer_keywords:
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5b6a32aa465700fb316bf2269c4d057ff823443
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd5e5612de15a499c0dce34dc30faa6fd5731c17
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590340"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124529"
 ---
-# <a name="cross-platform-development-with-the-portable-class-library"></a>使用可攜式類別庫的跨平台開發
+# <a name="cross-platform-development-with-the-portable-class-library"></a>使用可移植的類別庫進行跨平臺開發
 
-在 Visual Studio 中的可攜式類別庫專案類型可協助您快速且輕鬆地建置跨平台應用程式和程式庫，針對 Microsoft 平台。
+Visual Studio 中的可移植類別庫專案類型，可協助您快速且輕鬆地建立適用于 Microsoft 平臺的跨平臺應用程式和程式庫。
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
-可攜式類別庫可幫助您減少開發及測試程式碼的時間和成本。 撰寫及建置可攜式.NET Framework 組件，使用這種專案類型，並接著從.NET Framework、 iOS 或 mac 等的多個平台為目標的應用程式中參考這些組件
+可攜式類別庫可幫助您減少開發及測試程式碼的時間和成本。 使用此專案類型來撰寫及建立可移植的 .NET Framework 元件，然後從以多個平臺（例如 .NET Framework、iOS 或 Mac）為目標的應用程式參考這些元件。
 
-即使在 Visual Studio 中建立可攜式類別庫專案並開始開發之後，您還是可以變更目標平台。 Visual Studio 會編譯您的程式庫的新的組件，可協助您識別您需要在程式碼中進行的變更。
+即使在 Visual Studio 中建立可攜式類別庫專案並開始開發之後，您還是可以變更目標平台。 Visual Studio 使用新的元件來編譯您的程式庫，以協助您識別需要在程式碼中進行的變更。
 
-## <a name="create-a-portable-class-library-project"></a>建立可攜式類別庫專案
+## <a name="create-a-portable-class-library-project"></a>建立可移植的類別庫專案
 
-若要建立可攜式類別庫，請使用 Visual Studio 中提供的範本。 建立新的專案 (**檔案** > **新專案**)，然後在**新專案**對話方塊方塊中，選取您的程式語言 （Visual C# 或 Visual Basic）。 然後，選取**類別庫 （舊版可攜式）** 範本。 輸入您專案的名稱，然後選擇**確定**。
+若要建立可移植的類別庫，請使用 Visual Studio 中提供的範本。 建立新**專案（檔案** > **新專案**），然後在 [**新增專案**] 對話方塊中，選取您的程式設計語言C# （[視覺效果] 或 [Visual Basic]）。 然後，選取 [**類別庫（舊版可移植）** ] 範本。 輸入專案的 [名稱]，然後選擇 **[確定]** 。
 
-**加入可攜式類別庫** 對話方塊隨即出現。 選擇兩個或多個目標，然後選擇**確定**。
+[**新增可移植的類別庫**] 對話方塊隨即出現。 選擇兩個或多個目標，然後選擇 **[確定]** 。
 
-![Visual Studio 中加入可攜式類別程式庫的目標](media/add-portable-class-library.png)
+![在 Visual Studio 中新增可移植的類別庫目標](media/add-portable-class-library.png)
 
 ## <a name="change-targets"></a>變更目標
 
-當您在建立時，或您已經開始開發之後，您可以變更目標平台的可攜式類別庫專案。 如果您想要建立您的專案，在之後變更目標**方案總管**，開啟您的可攜式類別庫專案 （而非方案），捷徑功能表，然後選擇**屬性**. 在專案屬性頁面上，**程式庫** 索引標籤上顯示的平台專案的目前目標。
+當您建立時，或在開始開發之後，可以變更可移植類別庫專案的目標平臺。 如果您想要在建立專案之後變更目標，請在 **方案總管**中，開啟您的可移植類別庫專案（而非方案）的快捷方式功能表，然後選擇 **屬性**。 在 [專案屬性] 頁面上，[連結**庫**] 索引標籤會顯示您的專案目前的目標平臺。
 
-![在 Visual Studio 中的可攜式類別庫的專案屬性](media/pcl-project-properties.png)
+![Visual Studio 中可移植類別庫的專案屬性](media/pcl-project-properties.png)
 
-若要新增或移除目標，選擇**變更**按鈕，然後選取及清除適當的核取方塊。
+若要新增或移除目標，請選擇 [**變更**] 按鈕，然後選取並清除適當的核取方塊。
 
 當您變更目標時，可供您用來開發專案的 API 會變更，以配合您的選項。 Visual Studio 會提報因為目標變更而可能發生的錯誤和警告。
 
-如果您想要評估的可攜性的組件之前，請在 Visual Studio 中進行變更，您可以使用[.NET Portability Analyzer](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)。
+如果您想要先評估元件的可攜性，再于 Visual Studio 中進行變更，您可以使用[.net 可攜性分析器](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)。
 
 ## <a name="supported-types-and-members"></a>支援的類型和成員
 
@@ -64,30 +62,30 @@ ms.locfileid: "64590340"
 
 為了讓可攜式類別庫組件在所有支援的平台上都相容，可攜式類別庫中有部分成員已稍微變更。
 
-## <a name="use-the-portable-class-library"></a>使用可攜式類別庫
+## <a name="use-the-portable-class-library"></a>使用可移植的類別庫
 
 建立可攜式類別庫專案之後，即可從其他專案參考該專案。 您可以參考此專案，或是包含您想要存取之類別的特定組件。
 
 若要執行參考可攜式類別庫組件的應用程式，電腦上必須安裝目標平台所需的版本 (或以後版本)。 Visual Studio 包含所有必要架構，因此不需要進一步修改用來開發應用程式的電腦，即可執行該應用程式。
 
-### <a name="deploy-a-universal-windows-app"></a>將通用 Windows 應用程式部署
+### <a name="deploy-a-universal-windows-app"></a>部署通用 Windows 應用程式
 
-當您建立通用 Windows 應用程式參考可攜式類別庫組件，您要部署應用程式的所有一切皆內含在應用程式套件中，並不需要任何進一步的步驟。
+當您建立參考可移植類別庫元件的通用 Windows 應用程式時，您部署應用程式所需的所有專案都會包含在應用程式套件中，而且不需要進一步的步驟。
 
-### <a name="deploy-a-net-framework-app"></a>部署.NET Framework 應用程式
+### <a name="deploy-a-net-framework-app"></a>部署 .NET Framework 應用程式
 
 當您部署參考可攜式類別庫組件的 .NET Framework 應用程式時，必須指定正確 .NET Framework 版本的相依性。 藉由指定此相依性，您就可以確保所需的版本會隨著您的應用程式一起安裝。
 
-- 若要建立與 ClickOnce 部署的相依性：在 [**方案總管] 中**，選擇您想要發佈專案的專案節點。 (這是參考可攜式類別庫專案的專案。)在功能表列上選擇 **專案** > **屬性**，然後選擇**發佈** 索引標籤。在 **發佈**頁面上，選擇**必要條件**。 選取所需的 .NET Framework 版本做為必要條件。
+- 若要建立與 ClickOnce 部署的相依性：在**方案總管**中，選擇您要發行之專案的專案節點。 （這是參考可移植類別庫專案的專案）。在功能表列上，選擇 [**專案**] [ > **屬性**]，然後選擇 [**發行**] 索引標籤。在 [**發行**] 頁面上，選擇 [**必要條件**]。 選取所需的 .NET Framework 版本做為必要條件。
 
-- 若要建立安裝專案的相依性：在 **方案總管 中**，選擇 安裝專案。 在功能表列上選擇 **專案** > **屬性** > **必要條件**。 選取所需的 .NET Framework 版本做為必要條件。
+- 若要建立與安裝專案的相依性：在**方案總管**中，選擇安裝專案。 在功能表列上，選擇 **專案** > **屬性**  > **必要條件**。 選取所需的 .NET Framework 版本做為必要條件。
 
-如需部署.NET Framework 應用程式的詳細資訊，請參閱 <<c0> [ 開發人員部署手冊](../../../docs/framework/deployment/deployment-guide-for-developers.md)。
+如需部署 .NET Framework 應用程式的詳細資訊，請參閱[開發人員部署指南](../../../docs/framework/deployment/deployment-guide-for-developers.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 - [搭配 MVVM 使用可攜式類別庫](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)
 - [以多平台為目標之程式庫的應用程式資源](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)
-- [.NET portability Analyzer](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)
+- [.NET Portability Analyzer](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)
 - [Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [部署](../../../docs/framework/deployment/net-framework-applications.md)

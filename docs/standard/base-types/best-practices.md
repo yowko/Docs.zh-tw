@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938005"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124418"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中的正則運算式最佳做法
 
@@ -176,7 +176,7 @@ ms.locfileid: "75938005"
 
 由於字緣與文字字元不同，也不是文字字元的子集，因此規則運算式引擎不可能在比對文字字元時跨越字緣。 這表示對於這個規則運算式來說，回溯不會使任何比對完全成功，只會造成效能降低，因為規則運算式引擎會被迫儲存每一個成功的初始文字字元比對的狀態。
 
-如果您判定不需回溯，則可使用 `(?>subexpression)` 語言元素來停用它。 下列範例會使用兩個規則運算式剖析輸入字串。 首先，`\b\p{Lu}\w*\b` 會仰賴回溯。 第二，`\b\p{Lu}(?>\w*)\b` 會停用回溯。 如範例的輸出所示，兩者會產生相同的結果。
+如果您判斷不需要回溯，可以使用 `(?>subexpression)` 語言專案（稱為不可部分完成的群組）來停用它。 下列範例會使用兩個規則運算式剖析輸入字串。 首先，`\b\p{Lu}\w*\b` 會仰賴回溯。 第二，`\b\p{Lu}(?>\w*)\b` 會停用回溯。 如範例的輸出所示，兩者會產生相同的結果。
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]
@@ -204,7 +204,7 @@ ms.locfileid: "75938005"
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]
 
-.NET 中的規則運算式語言包括下列語言項目，可讓您用來消除巢狀數量詞。 如需詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
+.NET 中的規則運算式語言包括下列語言項目，可讓您用來消除巢狀數量詞。 如需詳細資訊，請參閱[分組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
 |語言項目|描述|
 |----------------------|-----------------|

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 1c6d6b7beba03aaa5c978b5cb72c09ce625e0d7e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 01b8dc50860757b0eddee477219db1e19d27f40f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460407"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124399"
 ---
 # <a name="control-styles-and-templates"></a>控制項的樣式和範本
 Windows Presentation Foundation （WPF）中的控制項具有 <xref:System.Windows.Controls.ControlTemplate>，其中包含該控制項的視覺化樹狀結構。 您可以藉由修改控制項的 <xref:System.Windows.Controls.ControlTemplate>，來變更其結構和外觀。 沒有任何方法可以只取代控制項的部分視覺化樹狀結構;若要變更控制項的視覺化樹狀結構，您必須將控制項的 <xref:System.Windows.Controls.Control.Template%2A> 屬性設定為新的 完整 <xref:System.Windows.Controls.ControlTemplate>。  
   
- 桌面佈景主題決定所使用的資源字典。 若要取得桌面佈景主題的資源字典，請參閱[預設 WPF 佈景主題](https://go.microsoft.com/fwlink/?LinkID=158252)。  
+ 桌面佈景主題決定所使用的資源字典。 若要取得桌面佈景主題的資源字典，請參閱[預設 WPF 佈景主題](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
   
  下表說明資源字典檔案名稱及其對應的桌面佈景主題。  
   
@@ -33,7 +33,7 @@ Windows Presentation Foundation （WPF）中的控制項具有 <xref:System.Wind
 |Royale.NormalColor.xaml|Windows XP Media Center Edition 作業系統上的預設佈景主題。|  
 |Aero.NormalColor.xaml|Windows Vista 作業系統上的預設佈景主題。|  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Button 樣式和範本](button-styles-and-templates.md)  
  [Calendar 樣式和範本](calendar-styles-and-templates.md)  
  [CheckBox 樣式和範本](checkbox-styles-and-templates.md)  
@@ -67,7 +67,7 @@ Windows Presentation Foundation （WPF）中的控制項具有 <xref:System.Wind
  [TreeView 樣式和範本](treeview-styles-and-templates.md)  
  [Window 樣式和範本](window-styles-and-templates.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  

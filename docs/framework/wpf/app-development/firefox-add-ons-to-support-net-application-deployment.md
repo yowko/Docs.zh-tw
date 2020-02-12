@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 687f61bd3ec7d10c6aa66c20cd5eb58fcc56f18a
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 56f5f633092d8aa0bfabdb0570ec26f14221838d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636363"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124607"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>支援 .NET 應用程式部署的 Firefox 附加元件
 適用于 Firefox 的 Windows Presentation Foundation （WPF）外掛程式和 Firefox 的 .NET Framework 小幫手可讓 XAML 瀏覽器應用程式（Xbap）、鬆散 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]和 ClickOnce 應用程式與 Mozilla Firefox 瀏覽器搭配使用。  
@@ -31,9 +31,9 @@ ms.locfileid: "75636363"
   
 - 報告所有已安裝的 .NET Framework 版本或僅限最新版本。  
   
- 適用于 Firefox 的 [.NET Framework 助理] 隨附于 .NET Framework 3.5 SP1。 如需移除 Firefox 的 [.NET Framework 助理] 的相關資訊，請參閱[如何移除 firefox 的 .NET Framework 助理](https://go.microsoft.com/fwlink/?LinkId=177944)。  
+ 適用于 Firefox 的 [.NET Framework 助理] 隨附于 .NET Framework 3.5 SP1。 如需移除 Firefox 的 [.NET Framework 助理] 的相關資訊，請參閱[如何移除 firefox 的 .NET Framework 助理](https://support.microsoft.com/help/963707/how-to-remove-the-net-framework-assistant-for-firefox)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [部署 WPF 應用程式](deploying-a-wpf-application-wpf.md)
 - [WPF XAML 瀏覽器應用程式概觀](wpf-xaml-browser-applications-overview.md)
