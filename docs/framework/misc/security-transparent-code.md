@@ -5,14 +5,12 @@ helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975522"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215813"
 ---
 # <a name="security-transparent-code"></a>安全性透明的程式碼
 
@@ -96,7 +94,7 @@ ms.locfileid: "73975522"
 
 透明度規則會等到計算出透明度之後才會強制執行。 此時，如果違反了透明度規則，就會擲回 <xref:System.InvalidOperationException>。 計算透明度的時間取決於多個因素，而且無法預測。 透明度的計算會盡可能延後。 在 .NET Framework 4 中，元件層級的透明度計算會比在 .NET Framework 2.0 中更早發生。 唯一能保證的是透明度計算會在需要時發生。 這與 Just-In-Time (JIT) 編譯器如何變更進行方法之編譯的時間點很類似，也和其如何變更偵測該方法中任何錯誤的時間點很類似。 如果您的程式碼沒有任何透明度錯誤，透明度計算就會是不可見的。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全性透明的程式碼，層級1](security-transparent-code-level-1.md)
 - [安全性透明的程式碼，層級2](security-transparent-code-level-2.md)

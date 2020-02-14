@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 TraceSource 和含有追蹤接聽項的篩選條件
+title: 如何：使用 TraceSource 和含有追蹤接聽項的篩選條件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -14,19 +14,17 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a1e214266b66f390fecffe802270a4181a6d7a7f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 53cdce767d437c47aab94e883381954f8cf70653
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052687"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215926"
 ---
-# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>作法：使用 TraceSource 和含有追蹤接聽項的篩選條件
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>如何：使用 TraceSource 和含有追蹤接聽項的篩選條件
 .NET Framework 2.0 版的其中一個新功能是增強型追蹤系統。 基本的前提不變：追蹤訊息透過接聽項的參數來傳送，將資料報告給關聯的輸出媒體。 2\.0 版的主要不同之處是可以透過 <xref:System.Diagnostics.TraceSource> 類別的執行個體來起始追蹤。 <xref:System.Diagnostics.TraceSource> 類別預期作為增強型追蹤系統，並可用來取代較舊之 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 追蹤類別的靜態方法。 熟悉的 <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 類別仍然存在，但建議的做法是使用 <xref:System.Diagnostics.TraceSource> 類別進行追蹤。  
   
- 本主題描述如何將 <xref:System.Diagnostics.TraceSource> 與應用程式組態檔搭配使用。  雖然可以在不使用組態檔的情況下利用 <xref:System.Diagnostics.TraceSource> 來進行追蹤，但不建議這麼做。 如需不使用設定檔進行追蹤的相關[資訊，請參閱如何：建立並初始化追蹤來源](how-to-create-and-initialize-trace-sources.md)。  
+ 本主題描述如何將 <xref:System.Diagnostics.TraceSource> 與應用程式組態檔搭配使用。  雖然可以在不使用組態檔的情況下利用 <xref:System.Diagnostics.TraceSource> 來進行追蹤，但不建議這麼做。 如需不使用組態檔進行追蹤的資訊，請參閱[何：建立和初始化追蹤來源](how-to-create-and-initialize-trace-sources.md)。  
   
 ### <a name="to-create-and-initialize-your-trace-source"></a>建立和初始化追蹤來源  
   
@@ -170,4 +168,4 @@ ms.locfileid: "71052687"
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
 - [如何：建立和初始化追蹤來源](how-to-create-and-initialize-trace-sources.md)
-- [追蹤接聽項](trace-listeners.md)
+- [追蹤接聽程式](trace-listeners.md)

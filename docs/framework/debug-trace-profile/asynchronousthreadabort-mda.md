@@ -8,19 +8,17 @@ helpviewer_keywords:
 - threading [.NET Framework], managed debugging assistants
 - MDAs (managed debugging assistants), asynchronous thread aborts
 ms.assetid: 9ebe40b2-d703-421e-8660-984acc42bfe0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9bde6f6e625476712c5af516491ab9dd29b7dea3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d0c78e6d52ae4a5b3a24e0bb4278b2e8a1b98751
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052966"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217585"
 ---
 # <a name="asynchronousthreadabort-mda"></a>asynchronousThreadAbort MDA
 當執行緒嘗試在另一個執行緒中在引入非同步中止時，就會啟用 `asynchronousThreadAbort` Managed 偵錯助理 (MDA)。 同步執行緒中止不會啟動 `asynchronousThreadAbort` MDA。
 
-## <a name="symptoms"></a>徵兆
+## <a name="symptoms"></a>徵狀
  當主應用程式執行緒中止時，應用程式會當機，並出現未處理的 <xref:System.Threading.ThreadAbortException>。 如果繼續執行應用程式，可能會出現比應用程式當機更糟的結果，甚至還會造成資料損毀。
 
  原本該自動進行的作業，很可能在部分完成後遭到中斷，使得應用程式資料處於無法預期的狀態。 <xref:System.Threading.ThreadAbortException> 可以從程式碼執行中似乎是隨機點的位置產生，這些通常預期不會引發例外狀況。 程式碼可能無法處理這類例外狀況，因而導致損毀狀態。
@@ -36,13 +34,13 @@ ms.locfileid: "71052966"
 
  由於本問題原有的隨機性，可能會難以判定原因。
 
-## <a name="resolution"></a>解決方式
+## <a name="resolution"></a>解決方案
  避免需要使用非同步執行緒中止的程式碼設計。 有數種方法更適合用來中斷不需要呼叫 <xref:System.Threading.Thread.Abort%2A> 的目標執行緒。 最安全的方法就是採用一種機制，例如通用的屬性，對目標執行緒發出信號以要求中斷。 目標執行緒會在特定的安全檢查點上檢查信號。 如果注意到已經要求中斷，目標執行緒就會順利地關閉。
 
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響
  此 MDA 對 CLR 沒有影響。 它只會報告有關非同步執行緒中止的資料。
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
  此 MDA 會報告執行中止之執行緒的 ID，以及作為中止目標之執行緒的 ID。 由於僅限於非同步中止，因此這兩者絕對不會相同。
 
 ## <a name="configuration"></a>組態
@@ -73,4 +71,4 @@ void FireMda()
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Thread>
-- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)

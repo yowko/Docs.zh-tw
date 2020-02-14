@@ -7,14 +7,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 77f1d761-ff45-4001-8f36-3a3e5c41fa63
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a45572d0dcb2737558e11f5c38ac2ccc338c754a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8c9b0479bba839a74dff300f0766838b5d99c8d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119089"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214843"
 ---
 # <a name="clear-element-for-configsections"></a>\<清除 \<configSections 的 > 元素 >
 
@@ -36,7 +34,7 @@ ms.locfileid: "73119089"
 | --------- | ----------- |
 | **name**  | 必要屬性。<br><br>指定要移除之區段或區段群組的名稱。 |
 
-## <a name="parent-element"></a>父項目
+## <a name="parent-element"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
@@ -44,11 +42,11 @@ ms.locfileid: "73119089"
 
 ## <a name="child-elements"></a>子元素
 
-無
+None
 
 ## <a name="remarks"></a>備註
 
-**\<清除>** 項目會從您先前已定義在目前的組態檔中或在組態檔階層架構中較高層級的應用程式移除所有區段和區段群組。
+**\<clear >** 元素會從您的應用程式移除先前在目前設定檔或設定檔階層中較高層級定義的所有區段和區段群組。
 
 ## <a name="example"></a>範例
 

@@ -1,7 +1,5 @@
 ---
 title: XmlReader. CreateSqlReader 方法（system.string）
-author: mairaw
-ms.author: mairaw
 ms.date: 10/17/2019
 topic_type:
 - apiref
@@ -11,14 +9,14 @@ api_location:
 - system.xml.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 302be4eff32d2c96a1571d291e0b289e77694db8
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c65ef7c073175488c11c5e912a44d46fd4319209
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72584131"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215455"
 ---
-# <a name="xmlreadercreatesqlreader-method"></a>XmlReader. CreateSqlReader 方法
+# <a name="xmlreadercreatesqlreader-method"></a>XmlReader.CreateSqlReader 方法
 
 使用剖析用的指定資料流、設定和內容資訊，建立新的 <xref:System.Xml.XmlReader> 執行個體。
 
@@ -33,12 +31,12 @@ internal static XmlReader CreateSqlReader(Stream input,
   包含 XML 資料的資料流。
 
 - `settings` <xref:System.Xml.XmlReaderSettings>  
-  新 <xref:System.Xml.XmlReader> 執行個體的設定。 這個值可以是 `null`。
+  新 <xref:System.Xml.XmlReader> 執行個體的設定。 此值可以是 `null`。
 
 - `inputContext` <xref:System.Xml.XmlParserContext>  
-  剖析 XML 片段所需的內容資訊。 這個值可以是 `null`。
+  剖析 XML 片段所需的內容資訊。 此值可以是 `null`。
 
-## <a name="returns"></a>Returns
+## <a name="returns"></a>傳回值
 
 <xref:System.Xml.XmlReader>  
 用以在資料流中讀取 XML 資料的物件。
@@ -46,13 +44,13 @@ internal static XmlReader CreateSqlReader(Stream input,
 ## <a name="remarks"></a>備註
 
 > [!WARNING]
-> @No__t_0 方法是內部的，而且不適合直接在程式碼中使用。
+> `XmlReader.CreateSqlReader` 方法是內部的，而且不適合直接在程式碼中使用。
 >
 > 在任何情況下，Microsoft 不支援在生產應用程式中使用此方法。
 
 ## <a name="requirements"></a>需求
 
-**命名空間︰** <xref:System.Xml>
+**命名空間：** <xref:System.Xml>
 
 **元件：** .Xml .dll
 

@@ -2,14 +2,12 @@
 title: 如何：將 Managed 程式碼 DCOM 移轉至 WCF
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6fdd5c9b285bdc948af876c72e85590500dd41c8
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 4d814d9c2e62af9aa5cc2a8d1f84738b69e36ad1
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039599"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217183"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>如何：將 Managed 程式碼 DCOM 移轉至 WCF
 對於分散式環境中伺服器與用戶端之間的 Managed 程式碼呼叫，Windows Communication Foundation (WCF) 是比分散式元件物件模型 (DCOM) 更建議使用的安全選擇。 本文將說明如何在下列情節中將程式碼從 DCOM 移轉至 WCF。  
@@ -422,7 +420,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [基本 WCF 程式設計](../wcf/basic-wcf-programming.md)
 - [設計與實作服務](../wcf/designing-and-implementing-services.md)

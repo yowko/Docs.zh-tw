@@ -1,5 +1,5 @@
 ---
-title: ConnectionGroup. m_ConnectionList 欄位
+title: ConnectionGroup。 m_ConnectionList 欄位
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,14 +10,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a06e535c554f765161d619d97f2e70072fbd0d5c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d53eeb54d212adb011dae138e103ea5b30f7fb99
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120010"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215527"
 ---
 # <a name="connectiongroupm_connectionlist-field"></a>ConnectionGroup\_ConnectionList 欄位
 
@@ -36,7 +34,7 @@ private ArrayList m_ConnectionList
 
 ## <a name="requirements"></a>需求
 
-**命名空間︰** <xref:System.Net>
+**命名空間：** <xref:System.Net>
 
 **元件：** 系統（在 System .dll 中）
 

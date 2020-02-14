@@ -1,5 +1,5 @@
 ---
-title: 作法：將追蹤陳述式新增至應用程式程式碼
+title: 如何：將追蹤陳述式加入至應用程式程式碼
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,17 +13,15 @@ helpviewer_keywords:
 - trace switches, conditional writes based on switches
 - WriteIf method
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4517da87603dcdd398d536cd9bf9e441430be375
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 21df0e8129505e50e6b7f29c4f4f5aea94f380e3
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052744"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217473"
 ---
-# <a name="how-to-add-trace-statements-to-application-code"></a>HOW TO：將追蹤陳述式新增至應用程式程式碼
-最常用於追蹤的方法，是將輸出寫入接聽程式的方法：**Write**、 **WriteIf**、 **WriteLine**、 **WriteLineIf**、 **Assert**和**Fail**。 這些方法可以分成兩個類別：**Write**、 **WriteLine**和 Fail 都會以無條件的形式發出輸出，而**WriteIf**、 **WriteLineIf**和**Assert**則**會**測試布林條件，並根據條件的值寫入或不寫入。 如果條件為 `true`，**WriteIf** 與 **WriteLineIf** 會發出輸出，而如果條件為 `false`，則 **Assert** 會發出輸出。  
+# <a name="how-to-add-trace-statements-to-application-code"></a>如何：將追蹤陳述式加入至應用程式程式碼
+追蹤最常使用的方法就是將輸出寫入接聽程式的方法：**Write**、**WriteIf**、**WriteLine**、**WriteLineIf**、**Assert** 和 **Fail**。 這些方法可以分成兩種類別：**Write**、**WriteLine** 與 **Fail** 都會無條件地發出輸出，而 **WriteIf**、**WriteLineIf** 與 **Assert** 則會測試布林條件，並根據條件的值寫入或不寫入。 如果條件為 **，** WriteIf**與**WriteLineIf`true` 會發出輸出，而如果條件為 **，則** Assert`false` 會發出輸出。  
   
  設計追蹤和偵錯策略時，應該思考該輸出的內容為何。 若在多個 **Write** 陳述式中填入不相關的資訊，將會建立一個不易閱讀的記錄檔。 相反地，若使用 **WriteLine** 將相關的陳述式置於不同行，可能難以區別哪些資訊有所關聯。 一般而言，當您想要將多個來源的資訊結合成單一的告知性訊息時，請使用多個 **Write** 陳述式，而當您想要建立單一且完整的訊息時，則請使用 **WriteLine** 陳述式。  
   
@@ -93,4 +91,4 @@ ms.locfileid: "71052744"
 - [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md)
 - [如何：建立、初始化和設定追蹤參數](how-to-create-initialize-and-configure-trace-switches.md)
 - [追蹤參數](trace-switches.md)
-- [追蹤接聽項](trace-listeners.md)
+- [追蹤接聽程式](trace-listeners.md)

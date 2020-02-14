@@ -2,14 +2,13 @@
 title: 用於移植到 .NET Core 的工具
 description: 了解一些您可用來移植到 .NET Core 的工具
 author: cartermp
-ms.author: mairaw
 ms.date: 12/07/2018
-ms.openlocfilehash: 101a110dec643d307e1c7cd807d9ed9fcfa7d845
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3b71c31b4f26b278b2bd1088adc8e9f64d28ab7b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714311"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215186"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>協助移植到 .NET Core 的工具
 

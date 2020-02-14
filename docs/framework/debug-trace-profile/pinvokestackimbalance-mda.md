@@ -10,14 +10,12 @@ helpviewer_keywords:
 - PInvokeStackImbalance MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 117e0838f78d43bf9ffa555947bf8749830c9840
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: c789e8cb409bd4c59c91d6b646efe428afe7c86d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802004"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217248"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
@@ -28,7 +26,7 @@ ms.locfileid: "74802004"
 > [!NOTE]
 > `PInvokeStackImbalance` MDA 預設為停用。 在 Visual Studio 2017 和更新版本中，`PInvokeStackImbalance` MDA 會出現在 [**例外狀況設定**] 對話方塊的 [**受管理的調試助理**] 清單中（當您選取 [ **Debug** ] > **Windows** > [**例外狀況設定**]）時，就會顯示。 不過，選取或清除 [擲回**時中斷**] 核取方塊並不會啟用或停用 MDA。它只會控制 Visual Studio 在啟動 MDA 時是否擲回例外狀況。
 
-## <a name="symptoms"></a>徵兆
+## <a name="symptoms"></a>徵狀
 
 應用程式在進行平台叫用呼叫期間或之後發生存取違規或記憶體損毀。
 
@@ -36,7 +34,7 @@ ms.locfileid: "74802004"
 
 平台叫用呼叫的 Managed 簽章可能與所呼叫之方法的 Unmanaged 簽章不符。  當 Managed 簽章未宣告正確的參數數目，或未指定適當的參數大小時，便會造成這種不相符狀況。  MDA 也可能由於呼叫慣例 (可能由 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性指定) 與 Unmanaged 呼叫慣例不符而啟動。
 
-## <a name="resolution"></a>解決方式
+## <a name="resolution"></a>解決方案
 
 檢閱 Managed 平台叫用簽章和呼叫慣例，確認其與原生目標的簽章和呼叫慣例相符。  嘗試明確指定 Managed 和 Unmanaged 端的呼叫慣例。 Unmanaged 函式也可能 (雖然可能性不高) 因其他一些原因而使堆疊失去平衡，例如 Unmanaged 編譯器中的 Bug。
 
@@ -44,7 +42,7 @@ ms.locfileid: "74802004"
 
 強制所有平台叫用呼叫採用 CLR 中未最佳化的路徑。
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 MDA 訊息會提供使堆疊失去平衡之平台叫用方法呼叫的名稱。 `SampleMethod` 方法之平台叫用呼叫的範例訊息為：
 
@@ -60,8 +58,8 @@ MDA 訊息會提供使堆疊失去平衡之平台叫用方法呼叫的名稱。 
 </mdaConfig>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../interop/interop-marshaling.md)

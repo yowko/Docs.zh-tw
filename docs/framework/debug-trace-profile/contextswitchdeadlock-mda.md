@@ -12,20 +12,18 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7bcdb235ff2a73514c5bb3ad7abc3f4c3fc8e441
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e3fc4a2cb35cdcc713ba0ef362071083af08a27b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052918"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217563"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
 試圖進行 COM 內容轉換期間，偵測到死結時，會啟用 `contextSwitchDeadlock` Managed 偵錯助理 (MDA)。
 
-## <a name="symptoms"></a>徵兆
+## <a name="symptoms"></a>徵狀
 
 最常見的徵兆是，在 Unmanaged COM 元件上從 Managed 程式碼進行的呼叫未傳回。  另一個徵兆是記憶體使用量隨著時間增加。
 
@@ -50,7 +48,7 @@ ms.locfileid: "71052918"
 > [!NOTE]
 > 此 MDA 位於 Visual Studio 的預設集合中。 如需如何停用 Mda 的詳細資訊，請參閱[診斷 Managed 偵錯工具的錯誤](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)。
 
-## <a name="resolution"></a>解決方式
+## <a name="resolution"></a>解決方案
 
 遵循有關 STA 訊息幫浦的 COM 規則。
 
@@ -58,7 +56,7 @@ ms.locfileid: "71052918"
 
 此 MDA 對 CLR 沒有影響。 它只會提報 COM 內容的相關資料。
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 描述目前內容和目標內容的訊息。
 
@@ -75,5 +73,5 @@ ms.locfileid: "71052918"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../interop/interop-marshaling.md)

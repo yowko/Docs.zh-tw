@@ -29,14 +29,12 @@ helpviewer_keywords:
 - output, managed debugging assistants
 - errors [.NET Framework], managed debugging assistants
 ms.assetid: 76994ee6-9fa9-4059-b813-26578d24427c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6cb2a240a2e7e82b7015eb7a6d99c2117fa63045
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 712fbbe9e0ad291385e8eef321c5e8a2fa092a5d
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052893"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216563"
 ---
 # <a name="diagnose-errors-with-managed-debugging-assistants"></a>使用受管理的調試助理診斷錯誤
 
@@ -70,7 +68,7 @@ Managed 偵錯助理 (MDA) 是偵錯輔助程式，可與通用語言執行平�
 |[releaseHandleFailed](releasehandlefailed-mda.md)|[reportAvOnComRelease](reportavoncomrelease-mda.md)|
 |[streamWriterBufferedDataLost](streamwriterbuffereddatalost-mda.md)|[virtualCERCall](virtualcercall-mda.md)|
 
-根據預設，.NET Framework 會啟用所有 Managed 偵錯工具的 MDA 子集。 您可以在 [**調試**程式] 功能表上選擇 [ **Windows**  > **例外狀況設定**]，然後展開 [ **Managed 調試**程式] 清單，以在 Visual Studio 中查看預設集合。
+根據預設，.NET Framework 會啟用所有 Managed 偵錯工具的 MDA 子集。 選擇 [**調試**程式] 功能表上的 [ **Windows** > **例外狀況設定**]，然後展開 [ **Managed 調試**程式] 清單，即可在 Visual Studio 中查看預設集合。
 
 ![Visual Studio 中的 [例外狀況設定] 視窗](./media/diagnosing-errors-with-managed-debugging-assistants/exception-settings-mdas.png)
 
@@ -79,11 +77,11 @@ Managed 偵錯助理 (MDA) 是偵錯輔助程式，可與通用語言執行平�
 若要啟用和停用 MDA，您可以使用登錄機碼、環境變數和應用程式組態設定。 您必須啟用登錄機碼或環境變數，才能使用應用程式組態設定。
 
 > [!TIP]
-> 您不需要停用 Mda，只要收到 MDA 通知，您就可以防止 Visual Studio 顯示 MDA 對話方塊。 若要這麼做，請選擇 [**調試**程式] 功能表上的 [ **Windows**  > **例外狀況設定**]，展開 [ **Managed 調試**程式] 清單，然後選取或清除個別 MDA 的 [擲回**時中斷**] 核取方塊。
+> 您不需要停用 Mda，只要收到 MDA 通知，您就可以防止 Visual Studio 顯示 MDA 對話方塊。 若要這麼做，請選擇 [**調試**程式] 功能表上的 [ **Windows** > **例外狀況設定**]，展開 [ **Managed 調試**程式] 清單，然後選取或清除個別 MDA 的 [擲回**時中斷**] 核取方塊。
 
-### <a name="registry-key"></a>登錄機碼
+### <a name="registry-key"></a>登錄金鑰
 
-若要啟用 Mda，請**新增\\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft。** Windows 登錄中的 NETFramework\MDA 子機碼（類型 REG_SZ，值1）。 將下列範例複製到名為*mdaenable.reg*的文字檔中。開啟 Windows 登錄編輯程式（Regedit.exe），然後從 [檔案 **] 功能表選擇 [** 匯**入**]。 選取 [ *mdaenable.reg* ] 檔案，以啟用該電腦上的 mda。 將子機碼設為字串值**1** （不是 DWORD 值**1**），可以從*ApplicationName*檔案讀取 mda 設定。 例如，「記事本」的 MDA 設定檔案會命名為 notepad.exe. config.xml。
+若要啟用 Mda，請新增**HKEY_LOCAL_MACHINE \software\microsoft\\。** Windows 登錄中的 NETFramework\MDA 子機碼（類型 REG_SZ，值1）。 將下列範例複製到名為*mdaenable.reg*的文字檔中。開啟 Windows 登錄編輯程式（Regedit.exe），然後從 [檔案 **] 功能表選擇 [** 匯**入**]。 選取 [ *mdaenable.reg* ] 檔案，以啟用該電腦上的 mda。 將子機碼設為字串值**1** （不是 DWORD 值**1**），可以從*ApplicationName*檔案讀取 mda 設定。 例如，「記事本」的 MDA 設定檔案會命名為 notepad.exe. config.xml。
 
 ```text
 Windows Registry Editor Version 5.00
@@ -129,7 +127,7 @@ MDA 的啟用也可以由環境變數 COMPLUS_MDA 來控制，它會覆寫登錄
 
 ### <a name="application-specific-configuration-settings"></a>應用程式特定的設定
 
-您可以針對該應用程式，在 MDA 組態檔中個別啟用、停用及設定某些助理。 若要啟用用來設定 MDA 的應用程式組態檔，必須設定 MDA 登錄機碼或 COMPLUS_MDA 環境變數。 應用程式組態檔通常位在與應用程式可執行檔 (.exe) 相同的目錄中。 檔名採用 *ApplicationName*.mda.config 格式；例如，notepad.exe.mda.config。應用程式組態檔中啟用的助理可能會有為了控制該助理行為而特別設計的屬性或項目。
+您可以針對該應用程式，在 MDA 組態檔中個別啟用、停用及設定某些助理。 若要啟用用來設定 MDA 的應用程式組態檔，必須設定 MDA 登錄機碼或 COMPLUS_MDA 環境變數。 應用程式組態檔通常位在與應用程式可執行檔 (.exe) 相同的目錄中。 檔案名的格式為*ApplicationName*. mda。例如，notepad.exe. config.xml。應用程式佈建檔中啟用的助理可能會有特別設計來控制該小幫手行為的屬性或元素。
 
 下列範例顯示如何啟用和設定[封送處理](marshaling-mda.md)：
 
@@ -148,7 +146,7 @@ MDA 的啟用也可以由環境變數 COMPLUS_MDA 來控制，它會覆寫登錄
 </mdaConfig>
 ```
 
-`Marshaling` MDA 會針對應用程式中每個 Managed 轉換至 Unmanaged 的作業，發出封送處理至 Unmanaged 類型之 Managed 類型的詳細資訊。 MDA 也可以分別篩選 methodFilter 和**fieldFilter**子項目中提供的方法和結構欄位的名稱。 `Marshaling`
+`Marshaling` MDA 會針對應用程式中每個 Managed 轉換至 Unmanaged 的作業，發出封送處理至 Unmanaged 類型之 Managed 類型的詳細資訊。 `Marshaling` MDA 也可以分別篩選**methodFilter**和**fieldFilter**子項目中提供的方法和結構欄位的名稱。
 
 下列範例顯示如何使用預設設定來啟用多個 Mda：
 
@@ -170,11 +168,11 @@ MDA 的啟用也可以由環境變數 COMPLUS_MDA 來控制，它會覆寫登錄
 
 當 MDA 啟用時，即使您的程式碼不是在偵錯工具下執行，它仍是作用中狀態。 如果在偵錯工具不存在的情況下，發生 MDA 事件，則會在未處理的例外狀況對話方塊中顯示事件訊息，雖然 MDA 事件並不是未處理的例外狀況。 若要避免此對話方塊，請在程式碼不是在偵錯環境中執行時，移除啟用 MDA 的設定。
 
-當您的程式碼在 Visual Studio 的整合式開發環境（IDE）中執行時，您可以避免出現特定 MDA 事件的例外狀況對話方塊。 若要這麼做，請在 [**調試**程式] 功能表上，選擇 [ **Windows**  > **例外狀況設定**]。 在 [**例外狀況設定**] 視窗中，展開 [ **Managed 偵錯工具助理**] 清單，然後清除個別 MDA 的 [擲回**時中斷**] 核取方塊。 您也可以使用此對話方塊來*啟用*[MDA 例外狀況] 對話方塊的顯示。
+當您的程式碼在 Visual Studio 的整合式開發環境（IDE）中執行時，您可以避免出現特定 MDA 事件的例外狀況對話方塊。 若要這麼做，請在 [**調試**程式] 功能表上，選擇 [ **Windows** > **例外狀況設定**]。 在 [**例外狀況設定**] 視窗中，展開 [ **Managed 偵錯工具助理**] 清單，然後清除個別 MDA 的 [擲回**時中斷**] 核取方塊。 您也可以使用此對話方塊來*啟用*[MDA 例外狀況] 對話方塊的顯示。
 
 ## <a name="mda-output"></a>MDA 輸出
 
-Mda 輸出類似于下列範例，其會顯示來自`PInvokeStackImbalance` MDA 的輸出：
+MDA 輸出類似于下列範例，其顯示 `PInvokeStackImbalance` MDA 的輸出：
 
 **呼叫 PInvoke 函數 ' MDATest！MDATest 程式：： StdCall ' 的堆疊不對稱。這很可能是因為受控 PInvoke 簽章與非受控目標籤章不相符。檢查 PInvoke 簽章的呼叫慣例和參數是否符合目標非受控簽章。**
 

@@ -13,19 +13,17 @@ helpviewer_keywords:
 - managed code, debugging
 - native debugging, MDAs
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d14ba8724659172711da44e7bb249e9d20768dbc
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8f1621090079c030e3c055a417ed9bcad882bf78
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052331"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217228"
 ---
 # <a name="reentrancy-mda"></a>重新進入 MDA
 如果未透過循序轉換執行先前從 Managed 程式碼到機器碼的切換時嘗試從機器碼轉換成 Managed 程式碼，啟用 `reentrancy` Managed 偵錯助理 (MDA)。  
   
-## <a name="symptoms"></a>徵兆  
+## <a name="symptoms"></a>徵狀  
  物件堆積損毀，或從機器碼轉換成 Managed 程式碼時發生其他嚴重錯誤。  
   
  在機器碼與 Managed 程式碼之間依任一方向切換的執行緒，必須執行循序轉換。 不過，作業系統中的特定低階擴充點 (例如向量化例外狀況處理常式) 允許從 Managed 程式碼切換成機器碼，而不需要執行循序轉換。  這些參數是受作業系統控制，而不是受 Common Language Runtime (CLR) 控制。  任何在這些擴充點內執行的機器碼都必須避免回呼 Managed 程式碼。  
@@ -35,7 +33,7 @@ ms.locfileid: "71052331"
   
  這個問題一律是由應用程式碼所造成。  
   
-## <a name="resolution"></a>解決方式  
+## <a name="resolution"></a>解決方案  
  檢查已啟用此 MDA 的執行緒堆疊追蹤。  執行緒將會嘗試不合法地呼叫 Managed 程式碼。  堆疊追蹤應該顯示使用此擴充點的應用程式碼、提供此擴充點的作業系統程式碼，以及擴充點已中斷的 Managed 程式碼。  
   
  例如，您會看到 MDA 已在嘗試從向量化例外狀況處理常式呼叫 Managed 程式碼時啟用。  在堆疊上，您會看到作業系統例外狀況處理程式碼，以及觸發例外狀況的某個 Managed 程式碼 (例如 <xref:System.DivideByZeroException> 或 <xref:System.AccessViolationException>)。  
@@ -45,7 +43,7 @@ ms.locfileid: "71052331"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對 CLR 沒有影響。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>輸出  
  MDA 報告正在嘗試不合法的重新進入。  檢查執行緒的堆疊，以判斷發生此問題的原因和其更正方式。 以下是範例輸出。  
   
 ```output
@@ -106,4 +104,4 @@ public class Reenter
   
 ## <a name="see-also"></a>另請參閱
 
-- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)

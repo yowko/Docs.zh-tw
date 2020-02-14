@@ -1,14 +1,13 @@
 ---
 title: dotnet vstest 命令
 description: dotnet vstest 命令會建置專案和其所有相依性。
-author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: ffe3807be2c35fb4d6b46b83ed84200433f551d8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c3838617ed539cf56f2840b826e9de58833820fd
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117516"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215304"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -59,7 +58,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 從指定的組件執行測試。 以空格分隔多個測試組件名稱。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
@@ -77,7 +76,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Platform|/Platform:<Platform type>`
 
-用於測試執行的目標平台架構。 有效值為 `x86`、`x64` 及 `ARM`。
+用於測試執行的目標平台架構。 有效值是 `x86`、`x64` 和 `ARM`。
 
 `--Framework|/Framework:<Framework Version>`
 
@@ -165,7 +164,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Platform|/Platform:<Platform type>`
 
-用於測試執行的目標平台架構。 有效值為 `x86`、`x64` 及 `ARM`。
+用於測試執行的目標平台架構。 有效值是 `x86`、`x64` 和 `ARM`。
 
 `--Framework|/Framework:<Framework Version>`
 
@@ -241,7 +240,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Platform|/Platform:<Platform type>`
 
-用於測試執行的目標平台架構。 有效值為 `x86`、`x64` 及 `ARM`。
+用於測試執行的目標平台架構。 有效值是 `x86`、`x64` 和 `ARM`。
 
 `--Framework|/Framework:<Framework Version>`
 

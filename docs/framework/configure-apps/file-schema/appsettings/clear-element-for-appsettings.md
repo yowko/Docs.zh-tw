@@ -1,5 +1,5 @@
 ---
-title: <appSettings> 的 <clear> 項目
+title: <clear> 的 <appSettings> 項目
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/clear
@@ -7,14 +7,12 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d321f3169344e9aa40d65b1722a533549de5315a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088741"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214786"
 ---
 # <a name="clear-element-for-appsettings"></a>\<清除 \<appSettings 的 > 元素 >
 
@@ -36,7 +34,7 @@ ms.locfileid: "74088741"
 
 None
 
-## <a name="parent-element"></a>父項目
+## <a name="parent-element"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
@@ -56,6 +54,6 @@ None
 </appSettings>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 的設定檔架構](../index.md)

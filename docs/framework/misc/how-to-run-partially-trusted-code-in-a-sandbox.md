@@ -1,5 +1,5 @@
 ---
-title: 作法：在沙箱中執行部分信任的程式碼
+title: HOW TO：在沙箱中執行部分信任的程式碼
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -8,16 +8,14 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e8b1db291fbaf19ae9086fe1e2b76a475d198e19
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 0191846f5589b0162ba342161fb5919ff20099d4
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894556"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215851"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>作法：在沙箱中執行部分信任的程式碼
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>HOW TO：在沙箱中執行部分信任的程式碼
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  沙箱是指在受限制的安全性環境中執行程式碼的做法，這會限制授與程式碼的存取權限。 例如，如果您有來自不完全信任來源的 Managed 程式庫，則不應該以完全信任的方式執行。 相反地，您應該將程式碼放在沙箱，限制其權限為您所預期它會需要的權限 (例如，<xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 權限)。  
@@ -65,7 +63,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 方法會根據在辨識項中的區域傳回 `Internet` 權限集合或 `LocalIntranet` 權限集合。 對於某些做為參考傳遞的辨識項物件，<xref:System.Security.SecurityManager.GetStandardSandbox%2A> 也會建構其識別權限。  
   
-2. 簽署包含裝載類別 (在此範例中名為 `Sandboxer`) 的組件，該類別會呼叫不受信任的程式碼。 加入 <xref:System.Security.Policy.StrongName>，這會用來簽署組件給 <xref:System.AppDomain.CreateDomain%2A> 呼叫的 `fullTrustAssemblies` 參數之 <xref:System.Security.Policy.StrongName> 陣列。 裝載的類別必須以完全信任方式執行，以啟用部分信任程式碼的執行，或提供服務給部分信任應用程式。 這就是您讀取組件 <xref:System.Security.Policy.StrongName> 的方式。  
+2. 簽署包含裝載類別 (在此範例中名為 `Sandboxer`) 的組件，該類別會呼叫不受信任的程式碼。 加入 <xref:System.Security.Policy.StrongName>，這會用來簽署組件給 <xref:System.Security.Policy.StrongName> 呼叫的 `fullTrustAssemblies` 參數之 <xref:System.AppDomain.CreateDomain%2A> 陣列。 裝載的類別必須以完全信任方式執行，以啟用部分信任程式碼的執行，或提供服務給部分信任應用程式。 這就是您讀取組件 <xref:System.Security.Policy.StrongName> 的方式。  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -73,7 +71,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      .NET Framework 組件，例如 mscorlib 和 System.dll 就不必加入完全信任清單，因為它們會以完全信任方式從全域組件快取中載入。  
   
-3. 初始化 <xref:System.AppDomain.CreateDomain%2A> 方法的 <xref:System.AppDomainSetup> 參數。 使用這個參數，您可以控制許多新的 <xref:System.AppDomain> 設定。 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性是重要的設定，而且應該不同於裝載應用程式的 <xref:System.AppDomain> 之 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性。 如果 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定相同，則部分信任應用程式可取得裝載的應用程式，以載入 (以完全信任方式) 它所定義的例外狀況，因而加以利用。 這是為什麼不建議使用 catch (例外狀況) 的另一個原因。 將主機的應用程式基底設定為不同於沙箱應用程式的應用程式基底，可減少惡意探索的風險。  
+3. 初始化 <xref:System.AppDomainSetup> 方法的 <xref:System.AppDomain.CreateDomain%2A> 參數。 使用這個參數，您可以控制許多新的 <xref:System.AppDomain> 設定。 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性是重要的設定，而且應該不同於裝載應用程式的 <xref:System.AppDomainSetup.ApplicationBase%2A> 之 <xref:System.AppDomain> 屬性。 如果 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定相同，則部分信任應用程式可取得裝載的應用程式，以載入 (以完全信任方式) 它所定義的例外狀況，因而加以利用。 這是為什麼不建議使用 catch (例外狀況) 的另一個原因。 將主機的應用程式基底設定為不同於沙箱應用程式的應用程式基底，可減少惡意探索的風險。  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
@@ -92,11 +90,11 @@ AppDomain.CreateDomain( string friendlyName,
   
      其他資訊：  
   
-    - 這是採用 <xref:System.Security.PermissionSet> 做為參數的 <xref:System.AppDomain.CreateDomain%2A> 方法之唯一多載，因此也是讓您在部分信任設定中載入應用程式的唯一多載。  
+    - 這是採用 <xref:System.AppDomain.CreateDomain%2A> 做為參數的 <xref:System.Security.PermissionSet> 方法之唯一多載，因此也是讓您在部分信任設定中載入應用程式的唯一多載。  
   
     - `evidence` 參數不用來計算權限集合；它由 .NET Framework 的其他功能用來進行識別。  
   
-    - 設定 `info` 參數的 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性對於這個多載而言是強制的。  
+    - 設定 <xref:System.AppDomainSetup.ApplicationBase%2A> 參數的 `info` 屬性對於這個多載而言是強制的。  
   
     - `fullTrustAssemblies` 參數具有 `params` 關鍵字，這表示不需要建立 <xref:System.Security.Policy.StrongName> 陣列。 允許將 0、1 或更多的強式名稱當做參數傳遞。  
   
@@ -106,17 +104,17 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5. 將程式碼載入您所建立的沙箱 <xref:System.AppDomain> 中。 有兩種方法可以達到這個目的：  
+5. 將程式碼載入您所建立的沙箱 <xref:System.AppDomain> 中。 這有兩種方式可以完成：  
   
     - 呼叫組件的 <xref:System.AppDomain.ExecuteAssembly%2A> 方法。  
   
-    - 使用 <xref:System.Activator.CreateInstanceFrom%2A> 方法在新的 <xref:System.AppDomain> 建立衍生自 <xref:System.MarshalByRefObject> 類別的執行個體。  
+    - 使用 <xref:System.Activator.CreateInstanceFrom%2A> 方法在新的 <xref:System.MarshalByRefObject> 建立衍生自 <xref:System.AppDomain> 類別的執行個體。  
   
      第二種方法更合適，因為它讓您更輕鬆地將參數傳遞給新的 <xref:System.AppDomain> 執行個體。 <xref:System.Activator.CreateInstanceFrom%2A> 方法提供兩個重要功能：  
   
     - 您可使用會指向不包含組件位置的程式碼基底。  
   
-    - 您可以在 <xref:System.Security.CodeAccessPermission.Assert%2A> 之下建立完全信任 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)，這可讓您建立關鍵類別的執行個體。 (每當您的組件不具有透明度標記，且以完全信任方式載入時就會發生)。因此您應特別小心，只能建立您信任此函式的程式碼，我們建議您在新的應用程式定義域中只建立完全信任類別的執行個體。  
+    - 您可以在 <xref:System.Security.CodeAccessPermission.Assert%2A> 之下建立完全信任 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>)，這可讓您建立關鍵類別的執行個體。 （當您的元件沒有透明度標記並載入為完全信任時，就會發生這種情況）。因此，您必須謹慎地只建立您信任此函式的程式碼，而且我們建議您只在新的應用程式域中建立完全信任類別的實例。  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -136,7 +134,7 @@ AppDomain.CreateDomain( string friendlyName,
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7. 請在您剛建立的 `Sandboxer` 類別之執行個體中呼叫 `ExecuteUntrustedCode` 方法。  
+7. 請在您剛建立的 `ExecuteUntrustedCode` 類別之執行個體中呼叫 `Sandboxer` 方法。  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
@@ -175,7 +173,7 @@ AppDomain.CreateDomain( string friendlyName,
     new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
-     完全信任的判斷提示用來從 <xref:System.Security.SecurityException> 取得擴充的資訊。 在沒有 <xref:System.Security.PermissionSet.Assert%2A> 的情況下，<xref:System.Security.SecurityException> 的 <xref:System.Security.SecurityException.ToString%2A> 方法會在堆疊上探索部分信任程式碼，並且限制傳回的資訊。 如果部分信任程式碼可能讀取該資訊，則這可能會造成安全性問題，但不授與 <xref:System.Security.Permissions.UIPermission> 可降低風險。 應該謹慎使用完全信任的判斷提示，而且僅當您確定不允許部分信任程式碼提升為完全信任時才能使用。 在相同的函式中，以及為了完全信任而呼叫判斷提示之後，通常請不要呼叫您不信任的程式碼。 當您使用完畢後，一律將判斷提示還原會是最佳的做法。  
+     完全信任的判斷提示用來從 <xref:System.Security.SecurityException> 取得擴充的資訊。 在沒有 <xref:System.Security.PermissionSet.Assert%2A> 的情況下，<xref:System.Security.SecurityException.ToString%2A> 的 <xref:System.Security.SecurityException> 方法會在堆疊上探索部分信任程式碼，並且限制傳回的資訊。 如果部分信任程式碼可能讀取該資訊，則這可能會造成安全性問題，但不授與 <xref:System.Security.Permissions.UIPermission> 可降低風險。 應該謹慎使用完全信任的判斷提示，而且僅當您確定不允許部分信任程式碼提升為完全信任時才能使用。 在相同的函式中，以及為了完全信任而呼叫判斷提示之後，通常請不要呼叫您不信任的程式碼。 當您使用完畢後，一律將判斷提示還原會是最佳的做法。  
   
 ## <a name="example"></a>範例  
  下列範例會實作上一節中的程序。 在此範例中，Visual Studio 方案裡名為 `Sandboxer` 的專案還包含一個名為 `UntrustedCode` 的專案，這會實作 `UntrustedClass` 類別。 此案例假定您已下載包含方法的程式庫組件，該方法預期會傳回 `true` 或 `false` 來指出您提供的數字是否為費式數列。 相反地，該方法會嘗試從您的電腦讀取檔案。 下列範例顯示未受信任的程式碼。  

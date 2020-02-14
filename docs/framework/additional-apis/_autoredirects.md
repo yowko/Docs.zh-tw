@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest. _AutoRedirects 欄位
+title: HttpWebRequest。 _AutoRedirects 欄位
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,14 +10,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 82acb409f09826d70f8f050c932ab4aebc4fd172
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: da7acdd890d0bff267fb592e81ceb6553421323f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120088"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215705"
 ---
 # <a name="httpwebrequest_autoredirects-field"></a>HttpWebRequest.\_AutoRedirects 欄位
 
@@ -36,7 +34,7 @@ private int _AutoRedirects
 
 ## <a name="requirements"></a>需求
 
-**命名空間︰** <xref:System.Net>
+**命名空間：** <xref:System.Net>
 
 **元件：** 系統（在 System .dll 中）
 

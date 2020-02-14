@@ -4,12 +4,12 @@ description: 遵循這些教學課程來了解 .NET Core，以便在 Mac、Linux
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e9fc5544904fc5a1304dcce135e01b1895d3446b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920433"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215175"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>藉由探索這些教學課程來瞭解 .NET Core 和 .NET Core SDK 工具
 
@@ -47,6 +47,6 @@ ms.locfileid: "76920433"
 - [使用 MSTest 和 .NET Core 執行單元測試](../testing/unit-testing-with-mstest.md)
 - [使用跨平台工具開發程式庫](libraries.md)
 - [從機器碼裝載 .NET Core](netcore-hosting.md)
-- [建立適用於 dotnet new 的自訂範本](cli-templates-create-item-template.md)
+- [建立適用于 CLI 的範本](cli-templates-create-item-template.md)
 
 如需開發 ASP.NET Core Web 應用程式的教學課程，請參閱 [ASP.NET Core 文件](/aspnet/core/)。

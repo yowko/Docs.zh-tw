@@ -7,14 +7,12 @@ helpviewer_keywords:
 - executable image for debugging
 - debugging [.NET Framework], executable images for
 ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1b64bd1e112932f394bb473a21642d37e28e39d3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 44d512a8ebec0e21e33f51c07428331e5e22b7bf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052507"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217334"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>讓映射在 .NET 中更容易進行偵錯工具
 
@@ -42,7 +40,7 @@ AllowOptimize=0
 
 每個選項的值可以設成 0 或 1，任何不存在的選項預設值皆為 0。 將 `GenerateTrackingInfo` 設為 1、`AllowOptimize` 設為 0，會提供最簡單的偵錯。
 
-從 .NET Framework 版本2.0 開始，JIT 編譯程式一律會產生追蹤資訊，而不論的值`GenerateTrackingInfo`為何; 不過，此`AllowOptimize`值仍然會有作用。 當使用 [Ngen.exe (原生映像產生器)](../tools/ngen-exe-native-image-generator.md) 先行編譯未最佳化的原生映像時，在執行 Ngen.exe 時，.ini 檔案中必須位在目標資料夾中且附有 `AllowOptimize=0`。 如果您已先行編譯不含優化的元件，則必須先使用 Ngen.exe **/uninstall**選項移除先行編譯的程式碼，然後再重新執行 ngen.exe，以將程式碼先行編譯為優化。 如果 .ini 檔案不存在於資料夾中，則 Ngen.exe 預設會將程式碼預先編譯為優化。
+從 .NET Framework 版本2.0 開始，JIT 編譯程式一律會產生追蹤資訊，而不論 `GenerateTrackingInfo`的值為何;不過，`AllowOptimize` 值仍有作用。 當使用 [Ngen.exe (原生映像產生器)](../tools/ngen-exe-native-image-generator.md) 先行編譯未最佳化的原生映像時，在執行 Ngen.exe 時，.ini 檔案中必須位在目標資料夾中且附有 `AllowOptimize=0`。 如果您已先行編譯不含優化的元件，則必須先使用 Ngen.exe **/uninstall**選項移除先行編譯的程式碼，然後再重新執行 ngen.exe，以將程式碼先行編譯為優化。 如果 .ini 檔案不存在於資料夾中，則 Ngen.exe 預設會將程式碼預先編譯為優化。
 
 <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> 控制組件的設定。 **DebuggableAttribute**包含兩個欄位，可控制 JIT 編譯程式是否應該優化和（或）產生追蹤資訊。 從 .NET Framework 版本2.0 開始，JIT 編譯程式一律會產生追蹤資訊。
 

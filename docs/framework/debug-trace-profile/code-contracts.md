@@ -7,14 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 103d668dd7a7436fd1acdccdc0afc2431ed8372a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b60f992cf9d934ed622c89a49c491a80377fb6fe
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975001"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216707"
 ---
 # <a name="code-contracts"></a>程式碼合約
 
@@ -38,7 +36,7 @@ ms.locfileid: "73975001"
 
 如需使用程式碼合約的工具和詳細指示，請參閱 Visual Studio marketplace 網站上的程式[代碼合約](https://marketplace.visualstudio.com/items?itemName=RiSEResearchinSoftwareEngineering.CodeContractsforNET)。
 
-## <a name="preconditions"></a>前置條件
+## <a name="preconditions"></a>先決條件
 
 您可以使用 <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> 方法來表示前置條件。 前置條件可指定叫用方法時的狀態。 其通常是用來指定有效的參數值。 前置條件中提及之所有成員的可存取性，必須至少與方法本身相同，否則可能無法讓方法的所有呼叫端都了解該前置條件。 該條件必須沒有副作用。 失敗前置條件的執行階段行為，取決於執行階段分析器。
 
@@ -93,9 +91,9 @@ Contract.Ensures(this.F > 0);
 Contract.EnsuresOnThrow<T>(this.F > 0);
 ```
 
-此引數是每當擲回的例外狀況是 `T` 的子類型時，必須為 `true` 的條件。
+此引數是每當擲回的例外狀況是 `true` 的子類型時，必須為 `T` 的條件。
 
-有些例外狀況類型很難用在例外後置條件中。 例如，將類型 <xref:System.Exception> 用於 `T` 時，無論擲回的例外狀況類型為何，即使是堆疊溢位或其他無法控制的例外狀況，該方法都必須保證此條件。 例外後置條件應該只限用於呼叫成員時，可能會擲回的特定例外狀況；例如，針對 <xref:System.TimeZoneInfo> 方法呼叫擲回 <xref:System.InvalidTimeZoneException> 時。
+有些例外狀況類型很難用在例外後置條件中。 例如，將類型 <xref:System.Exception> 用於 `T` 時，無論擲回的例外狀況類型為何，即使是堆疊溢位或其他無法控制的例外狀況，該方法都必須保證此條件。 例外後置條件應該只限用於呼叫成員時，可能會擲回的特定例外狀況；例如，針對 <xref:System.InvalidTimeZoneException> 方法呼叫擲回 <xref:System.TimeZoneInfo> 時。
 
 ### <a name="special-postconditions"></a>特殊後置條件
 
@@ -147,7 +145,7 @@ Contract.EnsuresOnThrow<T>(this.F > 0);
       如同 <xref:System.Diagnostics.Contracts.Contract.OldValue%2A> 方法，只要編譯器能夠推斷其類型，您就可以省略泛型型別引數。 合約重寫器會將方法呼叫取代為 `out` 參數的值。 <xref:System.Diagnostics.Contracts.Contract.ValueAtReturn%2A> 方法只會出現在後置條件中。 方法的引數必須是 `out` 參數，或是結構 `out` 參數的欄位。 參考結構建構函式後置條件中的欄位時，後者也很有用。
 
       > [!NOTE]
-      > 目前，程式碼合約分析工具不會檢查 `out` 參數是否正確初始化，並忽略其於後置條件中的相關記錄。 因此，在上述範例中，如果合約之後的字行使用 `x` 的值，而不是指派整數給它，則編譯器不會發出正確的錯誤。 不過，在未定義 CONTRACTS_FULL 前置處理器符號的組建 (例如 asa 發行組建) 上，編譯器會發出錯誤。
+      > 目前，程式碼合約分析工具不會檢查 `out` 參數是否正確初始化，並忽略其於後置條件中的相關記錄。 因此，在上述範例中，如果合約之後的字行使用 `x` 的值，而不是指派整數給它，則編譯器不會發出正確的錯誤。 不過，在未定義 CONTRACTS_FULL 前置處理器符號的組建 (例如 發行組建) 上，編譯器會發出錯誤。
 
 ## <a name="invariants"></a>非變異值
 
@@ -169,7 +167,7 @@ CONTRACTS_FULL 前置處理器符號會有條件地定義非變異值。 在執�
 
 <a name="usage_guidelines"></a>
 
-## <a name="usage-guidelines"></a>用法方針
+## <a name="usage-guidelines"></a>使用方針
 
 ### <a name="contract-ordering"></a>合約排序
 

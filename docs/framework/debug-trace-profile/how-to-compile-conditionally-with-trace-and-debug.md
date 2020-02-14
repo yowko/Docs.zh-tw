@@ -10,14 +10,12 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2c3ec54535319f4c7507563a5976038ca40d20aa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975576"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217459"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>如何：使用追蹤和偵錯進行條件式編譯
 當您於開發期間偵錯應用程式時，追蹤及偵錯輸出都會移至 Visual Studio 中的 [輸出] 視窗。 然而，若要在已部署的應用程式中包含追蹤功能，您必須在啟用 **TRACE** 編譯器指示詞的情況下編譯已經過檢測的應用程式。 這可將追蹤程式碼編譯成應用程式的發行版本。 如果您沒有啟用 **TRACE** 指示詞，則在編譯期間會忽略所有的追蹤程式碼，並且不會在您將部署的可執行程式碼中包含追蹤程式碼。  
@@ -59,7 +57,7 @@ ms.locfileid: "73975576"
   
      上述範例中使用的條件式編譯指示詞的意義如下：  
   
-    |指示詞|意義|  
+    |Directive|意義|  
     |---------------|-------------|  
     |`vbc`|Visual Basic 編譯器|  
     |`csc`|C# 編譯器|  
@@ -73,7 +71,7 @@ ms.locfileid: "73975576"
   
 1. 請在原始程式碼檔案上方輸入適用於您的程式語言之陳述式。  
   
-    |語言|陳述式|結果|  
+    |語言|帳單明細|結果|  
     |--------------|---------------|------------|  
     |**Visual Basic**|**#CONST TRACE = true**|啟用追蹤|  
     ||**#CONST TRACE = false**|停用追蹤|  
@@ -88,19 +86,19 @@ ms.locfileid: "73975576"
   
 請刪除原始程式碼中的編譯器指示詞。  
   
-\-或-  
+\- 或 -  
   
 將編譯器指示詞標為註解。  
   
 > [!NOTE]
 > 當您準備編譯時，可從 [建置] 功能表中選取 [建置]，或使用命令列方法 (但不輸入 **d:** ) 來定義條件式編譯的符號。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md)
 - [如何：建立、初始化和設定追蹤參數](how-to-create-initialize-and-configure-trace-switches.md)
 - [追蹤參數](trace-switches.md)
-- [追蹤接聽項](trace-listeners.md)
+- [追蹤接聽程式](trace-listeners.md)
 - [如何：將追蹤陳述式新增至應用程式碼](how-to-add-trace-statements-to-application-code.md)
 - [如何設定 Visual Studio 命令列的環境變數](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [操作說明：叫用命令列編譯器](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

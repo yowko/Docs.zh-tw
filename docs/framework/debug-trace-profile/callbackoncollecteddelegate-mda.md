@@ -14,19 +14,17 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f7f5a6ef2d4e8d4a987ed74a6a04e31f87cc46f3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: eb14e0df5396d92eb223dde2e562684c4c318295
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052940"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217573"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 如果委派以函式指標形式從 Managed 程式碼封送處理至 Unmanaged 程式碼，而在對委派進行記憶體回收之後，將回呼放在該函式指標上，`callbackOnCollectedDelegate` Managed 偵錯助理 (MDA) 就會啟動。  
   
-## <a name="symptoms"></a>徵兆  
+## <a name="symptoms"></a>徵狀  
  嘗試透過從 Managed 委派取得的函式指標，呼叫至 Managed 程式碼中時，就會發生存取違規。 這些失敗雖然不是 Common Language Runtime (CLR) 錯誤，但看起來可能很像，因為 CLR 程式碼中發生存取違規。  
   
  失敗情況不一致，有時在函式指標上呼叫成功，有時則失敗。 只有在負載過重，或嘗試不定次數時，可能會發生失敗。  
@@ -38,13 +36,13 @@ ms.locfileid: "71052940"
   
  失敗的機率取決於將委派封送處理與在函式指標上回呼之間的時間，以及記憶體回收的頻率。 如果將委派封送處理與後續回呼之間的時間很短，則偶爾會失敗。 如果接收函式指標的 Unmanaged 方法沒有儲存函式指標以供稍後使用，而是立即在函式指標上回呼，完成其作業後再返回，通常都會發生這種情況。 同樣地，當系統負載過重時，會發生更多記憶體回收，這樣更有可能會在回呼之前發生記憶體回收。  
   
-## <a name="resolution"></a>解決方式  
+## <a name="resolution"></a>解決方案  
  一旦將委派封送處理出去成為 Unmanaged 函式指標，記憶體回收行程即無法追蹤其存留期。 相反地，您的程式碼必須保留委派的參考，以供 Unmanaged 函式指標的存留期使用。 但是，您必須先識別已回收哪個委派，才能這麼做。 當啟用 MDA 時，它會提供委派的類型名稱。 使用此名稱，在您的程式碼中搜尋平台叫用，或是將該委派傳出至 Unmanaged 程式碼的 COM 簽章。 違規的委派會透過其中一個呼叫位置傳遞出去。 您也可以啟用 `gcUnmanagedToManaged` MDA，以在每次回呼至執行階段中之前，強制進行記憶體回收。 如此可以確保在回呼之前，一律會發生記憶體回收，進而消除因記憶體回收而產生的不確定性。 您知道哪些委派已回收之後，立即變更程式碼，以在已封送處理之 Unmanaged 函式指標的存留期間，將該委派的參考保留在 Managed 端。  
   
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  當委派被封送處理為函式指標時，執行階段會配置從 Unmanaged 轉換到 Managed 的 Thunk。 這個 Thunk 是最後叫用 Managed 委派之前，Unmanaged 程式碼實際呼叫的項目。 若未啟用 `callbackOnCollectedDelegate` MDA，當委派被回收時，會刪除 Unmanaged 封送處理程式碼。 若已啟用 `callbackOnCollectedDelegate` MDA，當委派被回收時，就不會立即刪除 Unmanaged 封送處理程式碼。 相反地，最後 1,000 個執行個體會依預設保持運作，並且在被呼叫時，變更為啟用 MDA。 在回收超過 1,001 個封送處理的委派之後，最後會刪除 Thunk。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>輸出  
  MDA 會報告在其 Unmanaged 函式指標上嘗試回呼之前，所回收之委派的類型名稱。  
   
 ## <a name="configuration"></a>組態  
@@ -114,6 +112,6 @@ public class Entry
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../interop/interop-marshaling.md)
 - [gcUnmanagedToManaged](gcunmanagedtomanaged-mda.md)

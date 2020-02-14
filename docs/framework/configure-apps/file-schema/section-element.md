@@ -1,5 +1,5 @@
 ---
-title: <section> 項目
+title: <section> element
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/section
@@ -8,14 +8,12 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c1675540df6844f98572c11cfb140bff23b31a8
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 8785523d664294e3ca3792fb0f84d739d1f1a376
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089024"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215722"
 ---
 # <a name="section-element"></a>\<區段 > 元素
 
@@ -39,7 +37,7 @@ ms.locfileid: "74089024"
          allowLocation="true|false" />
 ```
 
-## <a name="required-attributes"></a>必要屬性
+## <a name="required-attributes"></a>必要的屬性
 
 |           | 描述 |
 | --------- | ----------- |
@@ -52,8 +50,8 @@ ms.locfileid: "74089024"
 
 |                     | 描述 |
 | ------------------- | ----------- |
-| **allowDefinition** | 指定區段可以用於哪一個設定檔。 使用下列其中一個值：<br><br>**位置**<br>允許在任何設定檔案中使用區段。 這是預設值。<br>**MachineOnly**<br>允許區段僅用於電腦設定檔（*machine.config*）。<br>**MachineToApplication**<br>允許在電腦設定檔或應用程式佈建檔中使用區段。 |
-| **allowLocation**   | 判斷區段是否可以在 **\<位置 >** 元素中使用。 使用下列其中一個值：<br><br>**true**<br>允許在 **\<位置 >** 元素中使用區段。 這是預設值。<br>**false**<br>不允許在 **\<位置 >** 元素中使用區段。 |
+| **allowDefinition** | 指定區段可以用於哪一個設定檔。 請使用下列其中一個值：<br><br>**位置**<br>允許在任何設定檔案中使用區段。 這是預設值。<br>**MachineOnly**<br>允許區段僅用於電腦設定檔（*machine.config*）。<br>**MachineToApplication**<br>允許在電腦設定檔或應用程式佈建檔中使用區段。 |
+| **allowLocation**   | 判斷區段是否可以在 **\<位置 >** 元素中使用。 請使用下列其中一個值：<br><br>**true**<br>允許在 **\<位置 >** 元素中使用區段。 這是預設值。<br>**false**<br>不允許在 **\<位置 >** 元素中使用區段。 |
 
 ## <a name="parent-elements"></a>父元素
 
@@ -67,7 +65,7 @@ ms.locfileid: "74089024"
 
 ## <a name="child-elements"></a>子元素
 
-None
+無
 
 ## <a name="remarks"></a>備註
 
@@ -96,6 +94,6 @@ None
 
 此元素可用於應用程式佈建檔案 *、電腦設定檔案（machine.config*），以及不在應用程式目錄層級*的 web.config 檔案*。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 的設定檔架構](index.md)

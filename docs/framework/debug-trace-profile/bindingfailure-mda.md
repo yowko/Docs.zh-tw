@@ -9,20 +9,18 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), binding failures
 - BindingFailure MDA
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 93c426cce792c8f30a3551e2d4626736dd67278f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e3a9a915d25cbe5f052f039055167cf3ae4bf424
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052948"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216922"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 
 無法載入組件時，會啟用 `bindingFailure` Managed 偵錯助理 (MDA)。
 
-## <a name="symptoms"></a>徵兆
+## <a name="symptoms"></a>徵狀
 
 程式碼已嘗試使用靜態參考或其中一個載入器方法 (例如 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>) 載入組件。 未載入組件，並擲回 <xref:System.IO.FileNotFoundException> 或 <xref:System.IO.FileLoadException> 例外狀況。
 
@@ -40,7 +38,7 @@ ms.locfileid: "71052948"
 
 - 使用者認證未提供讀取檔案的必要權限。
 
-## <a name="resolution"></a>解決方式
+## <a name="resolution"></a>解決方案
 
 第一個步驟是判斷 CLR 為什麼無法繫結至所要求的組件。 有許多原因會找不到執行階段或無法載入所要求的組件，例如 [原因] 區段中列出的案例。 若要消除繫結失敗的原因，建議使用下列動作：
 
@@ -64,7 +62,7 @@ ms.locfileid: "71052948"
 
 此 MDA 對 CLR 沒有影響。 它只會回報繫結失敗的資料。
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 MDA 回報無法載入的組件，包含要求的路徑和 (或) 顯示名稱、繫結內容、在其中要求載入的應用程式定義域，以及失敗原因。
 
@@ -107,4 +105,4 @@ namespace ConsoleApplication1
 
 ## <a name="see-also"></a>另請參閱
 
-- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)

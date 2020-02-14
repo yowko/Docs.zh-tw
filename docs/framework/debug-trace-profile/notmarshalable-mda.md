@@ -11,31 +11,29 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), marshaling
 - notMarshalable MDA
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ddb6b0b5c2248d215245e0f881c8e7c91b13e480
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 45db0e70b2446fa6e3175409bcc3844042f0acc0
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052421"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217291"
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable MDA
-在跨內容封送處理介面時，當 Common Language Runtime (CLR) 遇到 COM 介面指標，卻無有效已登錄的 Proxy/Stub 或 `IMarshal` 界面實作不正確，則會啟動 `notMarshalable` Managed 偵錯助理 (MDA)。  
+在跨內容封送處理介面時，當 Common Language Runtime (CLR) 遇到 COM 介面指標，卻無有效已登錄的 Proxy/Stub 或 `notMarshalable` 界面實作不正確，則會啟動 `IMarshal` Managed 偵錯助理 (MDA)。  
   
-## <a name="symptoms"></a>徵兆  
+## <a name="symptoms"></a>徵狀  
  未服務呼叫，或呼叫在錯誤的 COM 介面指標的內容中發生。  
   
 ## <a name="cause"></a>原因  
  嘗試跨內容封送處理介面時，沒有有效的已登錄 Proxy/Stub 或 `IMarshal` 不正確。  
   
-## <a name="resolution"></a>解決方式  
+## <a name="resolution"></a>解決方案  
  請確定您已註冊 Proxy 虛設常式，並確定 `IMarshal` 實作是否有效。  
   
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對執行階段沒有影響。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>輸出  
  描述問題的訊息。  
   
 ## <a name="configuration"></a>組態  
@@ -51,5 +49,5 @@ ms.locfileid: "71052421"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../interop/interop-marshaling.md)

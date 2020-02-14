@@ -1,7 +1,5 @@
 ---
 title: BodyToString 方法（System.servicemodel. 通道）
-author: mairaw
-ms.author: mairaw
 ms.date: 11/01/2019
 topic_type:
 - apiref
@@ -11,12 +9,12 @@ api_location:
 - system.servicemodel.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7b0b56bfda1c0c37f43f95e9684d3b4042c1b97c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9f1f852c0bd82299fd40afe66a5f90cd7c0335cf
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451203"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215498"
 ---
 # <a name="messagebodytostring-method"></a>BodyToString 方法
 
@@ -40,7 +38,7 @@ internal void BodyToString(XmlDictionaryWriter writer);
 
 ## <a name="requirements"></a>需求
 
-**命名空間︰** <xref:System.ServiceModel.Channels>
+**命名空間：** <xref:System.ServiceModel.Channels>
 
 **元件：** System.servicemodel .dll
 

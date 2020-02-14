@@ -7,14 +7,12 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 8d8af7f5-26c9-4db9-bbe4-b2a4e6949568
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6cdd5833e14da1ab5185e56dce1190adfee4a2bf
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: d1e4f3478f6afd6a20c01c6b57a137020ee88f5f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089032"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214761"
 ---
 # <a name="remove-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<移除 NameValueSectionHandler 和 DictionarySectionHandler 的 > 元素
 
@@ -36,9 +34,9 @@ ms.locfileid: "74089032"
 | --------- | ----------- |
 | **key**   | 必要屬性。<br><br>指定要移除之設定的名稱。 |
 
-## <a name="parent-element"></a>父項目
+## <a name="parent-element"></a>父元素
 
-| 項目 | 描述 |
+| 元素 | 描述 |
 | ------- | ------------|
 | [ **\<sectionName >** 元素](custom-element-2.md) | 定義使用 <xref:System.Configuration.NameValueSectionHandler> 和 <xref:System.Configuration.DictionarySectionHandler> 類別之自訂設定區段的設定。 |
 
@@ -84,6 +82,6 @@ None
 
 此元素可用於應用程式佈建檔案 *、電腦設定檔案（machine.config*），以及不在應用程式目錄層級*的 web.config 檔案*。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 的設定檔架構](index.md)

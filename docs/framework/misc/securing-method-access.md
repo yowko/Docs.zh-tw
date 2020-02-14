@@ -10,19 +10,17 @@ helpviewer_keywords:
 - security [.NET Framework], method access
 - method access security
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 74327e10e57c2f63519a3336ab2a600ad2b0a6b8
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 5d083af6abc91121ebbc9554d03c635cabe2bbd9
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971048"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217131"
 ---
 # <a name="securing-method-access"></a>設定方法存取的安全性
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- 有些方法可能不適合讓未受信任的任意程式碼呼叫。 這類方法會帶來幾項風險：方法可能會提供一些受限制的資訊;它可能會相信傳遞給它的任何資訊;它可能不會對參數進行錯誤檢查;或使用錯誤的參數，它可能會故障，或造成有害的問題。 您應該留意這些情況，並採取動作來協助保護方法。  
+ 有些方法可能不適合讓未受信任的任意程式碼呼叫。 這類方法會造成一些風險：方法可能會提供一些受限制的資訊；它可能會認定傳遞給它的任何資訊；它可能不會對參數執行錯誤檢查；它可能會因錯誤的參數發生問題或執行有害的動作。 您應該留意這些情況，並採取動作來協助保護方法。  
   
  在某些情況下，您可能需要限制不提供公用用途但仍必須是公用的方法。 例如，您可能會需要有跨您自己的 Dll 呼叫的介面，因此它必須是公用的，但為了防止客戶使用它，或惡意程式碼利用進入點進入您的元件，所以您不想將它公開。 另一個限制不提供公用用途 (但必須是公用) 方法的常見原因，是為了避免記錄和支援可能非常內部的介面。  
   
@@ -40,7 +38,7 @@ ms.locfileid: "70971048"
   
 - 需要覆寫指定方法的衍生類別以具有指定身分識別或權限。  
   
- 下列範例示範如何以要求呼叫端使用特定強勢名稱，來協助保護限制存取的公用類別。 這個範例會使用<xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute>具有強式名稱**要求**的。 如需如何使用強式名稱簽署元件的工作型資訊，請參閱[建立和使用強式名稱的元件](../../standard/assembly/create-use-strong-named.md)。  
+ 下列範例示範如何以要求呼叫端使用特定強勢名稱，來協助保護限制存取的公用類別。 這個範例會使用具有強式名稱**需求**的 <xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute>。 如需如何使用強式名稱簽署元件的工作型資訊，請參閱[建立和使用強式名稱的元件](../../standard/assembly/create-use-strong-named.md)。  
   
 ```vb  
 <StrongNameIdentityPermissionAttribute(SecurityAction.Demand, PublicKey := "…hex…", Name := "App1", Version := "0.0.0.0")>  _  
@@ -60,7 +58,7 @@ public class Class1
  使用這一節中所示的宣告，來防止部分信任程式碼使用特定類別和方法，以及屬性和事件。 您可以藉由將這些宣告套用至類別，來為所有方法、 屬性和事件套用保護，不過請注意存取欄位不會受宣告式安全性影響。 也請注意，連結要求協助防範立即呼叫端，且可能還是會受到引誘攻擊。  
   
 > [!NOTE]
-> .NET Framework 4 中引進了新的透明度模型。 [安全性透明的程式碼層級 2](security-transparent-code-level-2.md)模型會以<xref:System.Security.SecurityCriticalAttribute>屬性識別安全程式碼。 安全性關鍵的程式碼需要呼叫端和繼承者兩者都完全受信任。 從舊版 .NET Framework 程式碼存取安全性規則的組件可以呼叫層級 2 組件。 在此情況下，安全性關鍵屬性會被視為完全信任的連結要求。  
+> .NET Framework 4 中引進了新的透明度模型。 [安全性透明的程式碼層級 2](security-transparent-code-level-2.md)模型會以 <xref:System.Security.SecurityCriticalAttribute> 屬性識別安全的程式碼。 安全性關鍵的程式碼需要呼叫端和繼承者兩者都完全受信任。 從舊版 .NET Framework 程式碼存取安全性規則的組件可以呼叫層級 2 組件。 在此情況下，安全性關鍵屬性會被視為完全信任的連結要求。  
   
  在強式名稱的元件中，會將[LinkDemand](link-demands.md)套用至所有可公開存取的方法、屬性和事件，以限制其使用完全信任的呼叫端。 若要停用此功能，您必須套用 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 屬性。 因此，只有不帶正負號的組件或具有此屬性的組件需要明確地標示類別，以排除不受信任的呼叫端您可以使用這些宣告以標記非為不受信任的呼叫端之類型的子集。  
   
@@ -234,7 +232,7 @@ class Implemented : ICanCastToMe
 ## <a name="virtual-internal-overrides-or-overloads-overridable-friend"></a>Virtual Internal 覆寫或 Overloads Overridable Friend  
   
 > [!NOTE]
-> 這一節會在將`virtual`方法同時宣告為和`internal`時發出安全性問題`Overloads` （ `Overridable` `Friend` Visual Basic）。 此警告僅適用于 .NET Framework 版本1.0 和1.1，不適用於較新的版本。  
+> 本節會在將方法同時宣告為 `virtual` 和 `internal` （`Overloads` `Overridable` `Friend` 在 Visual Basic）時，提出安全性問題的警告。 此警告僅適用于 .NET Framework 版本1.0 和1.1，不適用於較新的版本。  
   
  在 .NET Framework 版本1.0 和1.1 中，當您確認程式碼無法供其他元件使用時，您必須留意類型系統協助工具的細微之處。 宣告為**虛擬**和**內部**的方法（Visual Basic 中的多載可覆**寫 Friend** ）可以覆寫父類別的 vtable 專案，而且只能從相同的元件內使用，因為它是內部的。 不過，覆寫的存取範圍是由**virtual**關鍵字決定，而且只要該程式碼可存取類別本身，就可以從另一個元件覆寫。 如果覆寫的可能性出現問題，請使用宣告式安全性來加以修正，或移除不是絕對必要的**虛擬**關鍵字。  
   

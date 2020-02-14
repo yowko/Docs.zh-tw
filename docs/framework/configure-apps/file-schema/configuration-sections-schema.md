@@ -9,14 +9,12 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], custom settings in configuration files
 - elements [.NET Framework], custom settings in configuration files
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a17d30af9d7abc3eea6b87d5e8768ac49a7c05ab
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b97fea90be301e791bc4109142e6a8b8e1dedaa1
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118922"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214770"
 ---
 # <a name="configuration-sections-schema"></a>設定區段架構
 

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立、初始化和設定追蹤參數
+title: 如何：建立，初始化和設定追蹤參數
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - tracing [.NET Framework], enabling or disabling
 - Web.config configuration file, trace switches
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 13f89af41520fa023d8841d6dc6d7766e2abe6da
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 358e34b2ce5d896ba02b343ce060604f2d42eeeb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052719"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216481"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>作法：建立、初始化和設定追蹤參數
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>如何：建立，初始化和設定追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。  
   
 <a name="create"></a>   
@@ -54,18 +52,18 @@ ms.locfileid: "71052719"
 ## <a name="configuring-trace-switches"></a>設定追蹤參數  
  在散發應用程式之後，您仍然可透過設定應用程式中的追蹤參數，來啟用或停用追蹤輸出。 設定參數表示在初始化參數之後，從外部來源變更其值。 您可以使用組態檔，來變更參數物件的值。 您可以設定開啟或關閉追蹤參數，或設定其層級，並決定要一起傳送至接聽程式的訊息數量和類型。  
   
- 參數是使用 .config 檔案來設定的。 若為 Web 應用程式，這會是與專案關聯的 Web.config 檔案。 在 Windows 應用程式中，這個檔案的名稱為 (應用程式名稱).exe.config。在部署的應用程式中，這個檔案必須與可執行檔位於相同的資料夾中。  
+ 參數是使用 .config 檔案來設定的。 若為 Web 應用程式，這會是與專案關聯的 Web.config 檔案。 在 Windows 應用程式中，這個檔案的名稱為（應用程式名稱） .exe .config。在已部署的應用程式中，這個檔案必須位於與可執行檔相同的資料夾中。  
   
  當應用程式第一次執行建立參數執行個體的程式碼時，會檢查組態檔是否有具名參數的相關追蹤層級資訊。 追蹤系統只會檢查一次組態檔是否有任何特定參數，也就是在應用程式第一次建立參數時。  
   
  在部署的應用程式中，您可以在應用程式未執行時，透過重新設定參數物件來啟用追蹤程式碼。 這通常涉及開啟和關閉參數物件，或是變更追蹤層級，然後再重新啟動應用程式。  
   
- 當您建立參數的執行個體時，也可以透過指定下列兩個引數來初始化執行個體：*displayName* 引數和 *description* 引數。 建構函式的 *displayName* 引數會設定 <xref:System.Diagnostics.Switch> 類別執行個體的 <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> 屬性。 *displayName* 是用來在 .config 檔案中設定參數的名稱，而 *description* 引數則應傳回參數的簡短描述和其控制的訊息。  
+ 當您建立參數的執行個體時，也可以透過指定下列兩個引數來初始化執行個體：*displayName* 引數和 *description* 引數。 建構函式的 *displayName* 引數會設定 <xref:System.Diagnostics.Switch.DisplayName%2A?displayProperty=nameWithType> 類別執行個體的 <xref:System.Diagnostics.Switch> 屬性。 *displayName* 是用來在 .config 檔案中設定參數的名稱，而 *description* 引數則應傳回參數的簡短描述和其控制的訊息。  
   
  除了指定要設定的參數名稱之外，您也必須指定參數的值。 這個值是整數。 如果是 <xref:System.Diagnostics.BooleanSwitch>，0 值會對應至 **Off**，而任何非零值則對應至 **On**。 如果是 <xref:System.Diagnostics.TraceSwitch>，0、1、2、3 和 4 分別對應至 **Off**、**Error**、**Warning**、**Info** 和 **Verbose**。 大於 4 的任何數字都會視為 **Verbose**，而小於零的任何數字則會視為 **Off**。  
   
 > [!NOTE]
-> 在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。 例如，<xref:System.Diagnostics.BooleanSwitch> 的 `true`，或是代表列舉值的文字 (例如 <xref:System.Diagnostics.TraceSwitch> 的 `Error`)。 `<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。  
+> 在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。 例如，`true` 的 <xref:System.Diagnostics.BooleanSwitch>，或是代表列舉值的文字 (例如 `Error` 的 <xref:System.Diagnostics.TraceSwitch>)。 `<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。  
   
  為了讓終端使用者能夠設定應用程式的追蹤參數，您必須在應用程式中提供有關參數的詳細文件。 您應詳述參數類型及其控制項目，以及如何開啟和關閉參數。 您也應為使用者提供 .config 檔案，以在註解中提供適當的說明。  
   
@@ -75,11 +73,11 @@ ms.locfileid: "71052719"
   
 2. 如果您的專案未包含組態檔 (app.config 或 Web.config)，請從 [專案] 功能表中選取 [新增項目]。  
   
-    - **Visual Basic:** 在 [**加入新專案**] 對話方塊中，選擇 [**應用程式佈建檔**]。  
+    - **Visual Basic：** 在 [新增項目] 對話方塊中，選擇 [應用程式組態檔]。  
   
          隨即會建立並開啟應用程式組態檔。 這是根項目為 `<configuration>.` 的 XML 文件。  
   
-    - **視覺C#效果：** 在 [**加入新專案**] 對話方塊中，選擇 [ **XML**檔案]。 將這個檔案命名為 **app.config**。在 XML 編輯器中，於 XML 宣告後加入下列 XML：  
+    - **Visual C#：** 在 [新增項目] 對話方塊中，選擇 [XML 檔]。 將這個檔案命名為**app.config**。在 XML 編輯器中，于 XML 宣告之後，加入下列 XML：  
   
         ```xml  
         <configuration>  
@@ -88,7 +86,7 @@ ms.locfileid: "71052719"
   
          在編譯專案之後，app.config 檔案會複製到專案輸出資料夾，並重新命名為 *applicationname*.exe.config。  
   
-3. 在 `<configuration>` 標記後及 `</configuration>` 標記前，新增適當的 XML 以設定參數。 下列範例使用 `DataMessageSwitch` 的 **DisplayName** 屬性來示範 **BooleanSwitch**，並使用 `TraceLevelSwitch` 的 **DisplayName** 屬性來示範 **TraceSwitch**。  
+3. 在 `<configuration>` 標記後及 `</configuration>` 標記前，新增適當的 XML 以設定參數。 下列範例使用 **的**DisplayName**屬性來示範**BooleanSwitch`DataMessageSwitch`，並使用 **的**DisplayName**屬性來示範**TraceSwitch`TraceLevelSwitch`。  
   
     ```xml  
     <system.diagnostics>  
@@ -128,6 +126,6 @@ ms.locfileid: "71052719"
 ## <a name="see-also"></a>另請參閱
 
 - [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md)
-- [如何：將追蹤語句新增至應用程式程式碼](how-to-add-trace-statements-to-application-code.md)
+- [如何：將追蹤陳述式新增至應用程式碼](how-to-add-trace-statements-to-application-code.md)
 - [追蹤參數](trace-switches.md)
 - [追蹤和偵錯設定結構描述](../configure-apps/file-schema/trace-debug/index.md)

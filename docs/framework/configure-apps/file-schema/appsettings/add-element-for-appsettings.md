@@ -1,5 +1,5 @@
 ---
-title: <appSettings> 的 <add> 項目
+title: <add> 的 <appSettings> 項目
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -7,14 +7,12 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 865c693bf8f23bf050064ac097b72aa6fa3b371e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088751"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214799"
 ---
 # <a name="add-element-for-appsettings"></a>\<新增 \<appSettings 的 > 元素 >
 
@@ -37,9 +35,9 @@ ms.locfileid: "74088751"
 |           | 描述 |
 | --------- | ----------- |
 | **key**   | 必要屬性。<br><br>指定要加入之索引鍵的名稱。 |
-| **值** | 必要屬性。<br><br>指定要加入之索引鍵的值。 |
+| **value** | 必要屬性。<br><br>指定要加入之索引鍵的值。 |
 
-## <a name="parent-element"></a>父項目
+## <a name="parent-element"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
@@ -68,6 +66,6 @@ None
 </appSettings>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 的設定檔架構](../index.md)

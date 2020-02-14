@@ -6,14 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d73c07d58bb226346cb99a1fe50b12bb0e7e746e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e5c5c6cf5744aa385e6f6700cad623751a4d7427
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118535"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215483"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler 和 DictionarySectionHandler 的自訂元素
 
@@ -24,9 +22,9 @@ ms.locfileid: "73118535"
 
 ## <a name="attributes"></a>屬性
 
-None
+無
 
-## <a name="parent-element"></a>父項目
+## <a name="parent-element"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
@@ -80,6 +78,6 @@ None
 
 此元素可用於應用程式佈建檔案 *、電腦設定檔案（machine.config*），以及不在應用程式目錄層級*的 web.config 檔案*。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 的設定檔架構](index.md)

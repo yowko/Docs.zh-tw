@@ -9,19 +9,17 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped structures
 - freeing overlapped structures
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 70d31bc187cabe49351e86a20023e2ec65e87b94
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8a0c72cf26ef8434719ff6661ef15a44f51c8740
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052406"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217255"
 ---
 # <a name="overlappedfreeerror-mda"></a>overlappedFreeError MDA
-重疊作業完成之前，呼叫 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> 方法時，會啟用 `overlappedFreeError` Managed 偵錯助理 (MDA)。  
+重疊作業完成之前，呼叫 `overlappedFreeError` 方法時，會啟用 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> Managed 偵錯助理 (MDA)。  
   
-## <a name="symptoms"></a>徵兆  
+## <a name="symptoms"></a>徵狀  
  已進行記憶體回收之堆積的存取違規或損毀。  
   
 ## <a name="cause"></a>原因  
@@ -29,13 +27,13 @@ ms.locfileid: "71052406"
   
  如果未成功啟動重疊的作業，則此 MDA 可能不會呈現錯誤。  
   
-## <a name="resolution"></a>解決方式  
+## <a name="resolution"></a>解決方案  
  請確定使用重疊結構的 I/O 作業完成，再呼叫 <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29> 方法。  
   
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對 CLR 沒有影響。  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>輸出  
  以下是此 MDA 的範例輸出。  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlappedStructure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
@@ -53,5 +51,5 @@ ms.locfileid: "71052406"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [診斷 Managed 偵錯助理的錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
+- [使用 Managed 偵錯助理診斷錯誤](diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../interop/interop-marshaling.md)

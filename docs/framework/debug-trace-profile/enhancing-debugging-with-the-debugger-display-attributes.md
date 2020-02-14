@@ -13,18 +13,16 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c27732de448e19c4227062706c7a7d73c98e5f19
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: ca118bffb045a0e7e3a5084916a0ff8020ebda90
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966881"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216497"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>使用偵錯工具顯示屬性增強偵錯功能
 
-偵錯工具顯示屬性能讓指定並最了解該類型執行階段行為的開發人員，也指定該類型在偵錯工具中顯示的外觀。 此外，提供 `Target` 屬性的偵錯工具顯示屬性，也可供沒有原始程式碼背景的使用者在組件層級使用。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 屬性控制類型或成員在偵錯工具變數視窗中顯示的方式。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 屬性決定欄位或屬性是否以及如何顯示在偵錯工具變數視窗中。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 屬性會指定類型的替代類型 (或 Proxy)，並且變更在偵錯工具視窗中顯示類型的方式。 當您查看具有 proxy 或替代類型的變數時, proxy 會在 [偵錯工具顯示] 視窗中代表原始類型。 偵錯工具變數視窗只會顯示 proxy 型別的 Public 成員。 私用成員不會顯示。  
+偵錯工具顯示屬性能讓指定並最了解該類型執行階段行為的開發人員，也指定該類型在偵錯工具中顯示的外觀。 此外，提供 `Target` 屬性的偵錯工具顯示屬性，也可供沒有原始程式碼背景的使用者在組件層級使用。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 屬性控制類型或成員在偵錯工具變數視窗中顯示的方式。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 屬性決定欄位或屬性是否以及如何顯示在偵錯工具變數視窗中。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 屬性會指定類型的替代類型 (或 Proxy)，並且變更在偵錯工具視窗中顯示類型的方式。 當您查看具有 proxy 或替代類型的變數時，proxy 會在 [偵錯工具顯示] 視窗中代表原始類型。 偵錯工具變數視窗只會顯示 proxy 型別的 Public 成員。 私用成員不會顯示。  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>使用 DebuggerDisplayAttribute  
 
@@ -47,7 +45,7 @@ class MyHashtable
 
 - <xref:System.Diagnostics.DebuggerBrowsableState.Never> 指出成員未顯示在資料視窗中。  例如，對欄位的 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 使用此值，會從階層中移除欄位；當您按一下類型執行個體的加號 (+) 展開封入類型時，不會顯示欄位。
 
-- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> 指出已顯示成員，但預設不展開。  這是預設行為。
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> 指出已顯示成員，但預設不展開。  此為預設行為。
 
 - <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> 指出成員本身不會顯示，但如果它是陣列或集合，則會顯示其組成物件。
 
@@ -95,9 +93,9 @@ class MyHashtable : Hashtable
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 
-您可以在 Visual Studio 中查看下列程式碼範例<xref:System.Diagnostics.DebuggerDisplayAttribute>, 以查看套用、 <xref:System.Diagnostics.DebuggerBrowsableAttribute>和<xref:System.Diagnostics.DebuggerTypeProxyAttribute>屬性的結果。
+您可以在 Visual Studio 中查看下列程式碼範例，以查看套用 <xref:System.Diagnostics.DebuggerDisplayAttribute>、<xref:System.Diagnostics.DebuggerBrowsableAttribute>和 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 屬性的結果。
 
 ### <a name="code"></a>程式碼
 

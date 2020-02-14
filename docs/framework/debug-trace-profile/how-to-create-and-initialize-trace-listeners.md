@@ -1,5 +1,5 @@
 ---
-title: 作法：建立和初始化追蹤接聽項
+title: 如何：建立和初始設定追蹤接聽項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - tracing [.NET Framework], trace listeners
 - logs, trace listeners
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a67bd2c0daa8acc81113a1e38ea463753ae34077
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ce0df0af32d6798c89c8db6761d18febc1c398bb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052722"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217435"
 ---
-# <a name="how-to-create-and-initialize-trace-listeners"></a>HOW TO：建立和初始化追蹤接聽項
+# <a name="how-to-create-and-initialize-trace-listeners"></a>如何：建立和初始設定追蹤接聽項
 
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 類別會將訊息傳送給名稱為接聽程式的物件，以接收和處理這些訊息。 <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType> 就是這類接聽程式之一，其會在啟用追蹤或偵錯時自動建立與初始化。 如果您要將 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.Debug> 輸出導向任何其他來源，您必須建立和初始化其他的追蹤接聽程式。
 
@@ -77,7 +75,7 @@ ms.locfileid: "71052722"
     Trace.Flush();
     ```
 
-    \-或-
+    \- 或 -
 
 - 如果您不想讓接聽程式接收追蹤輸出，請不要將它加入 <xref:System.Diagnostics.Trace.Listeners%2A> 集合。 您可以呼叫接聽程式自己的輸出方法，透過獨立於 <xref:System.Diagnostics.Trace.Listeners%2A> 集合的接聽程式來發出輸出。 下列範例示範如何將指令行寫入不在 <xref:System.Diagnostics.Trace.Listeners%2A> 集合內的接聽程式。
 
@@ -97,7 +95,7 @@ ms.locfileid: "71052722"
 
 ## <a name="see-also"></a>另請參閱
 
-- [追蹤接聽項](trace-listeners.md)
+- [追蹤接聽程式](trace-listeners.md)
 - [追蹤參數](trace-switches.md)
-- [如何：將追蹤語句新增至應用程式程式碼](how-to-add-trace-statements-to-application-code.md)
+- [如何：將追蹤陳述式新增至應用程式碼](how-to-add-trace-statements-to-application-code.md)
 - [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md)

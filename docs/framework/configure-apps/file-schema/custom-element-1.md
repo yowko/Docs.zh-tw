@@ -6,14 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ac2d01121e81b545556fb082fa7b82c31cccf9da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d0431085a04d3fb817dfe0883779acc4d693084
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118841"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214797"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler 的自訂元素
 
@@ -32,7 +30,7 @@ ms.locfileid: "73118841"
 
 屬性和屬性值是使用者定義的。
 
-## <a name="parent-element"></a>父項目
+## <a name="parent-element"></a>父元素
 
 |     | 描述 |
 | --- | ----------- |
@@ -40,11 +38,11 @@ ms.locfileid: "73118841"
 
 ## <a name="child-elements"></a>子元素
 
-無
+None
 
 ## <a name="remarks"></a>備註
 
-**\<SectionName>** 項目是所定義的自訂項目 [ **\<section>** ](section-element.md) 標記 [ **\<configSections>** ](configsections-element-for-configuration.md) 項目。 當您呼叫 <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>時，設定系統會傳回 <xref:System.Collections.IDictionary> 物件。
+**\<sectionName >** 元素是由[ **\<configSections >** ](configsections-element-for-configuration.md)元素的[ **\<區段 >** ](section-element.md)標記所定義的自訂元素。 當您呼叫 <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>時，設定系統會傳回 <xref:System.Collections.IDictionary> 物件。
 
 ## <a name="example"></a>範例
 

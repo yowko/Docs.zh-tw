@@ -1,7 +1,7 @@
 ---
 title: 浮點數值型別 - C# 參考
-description: 內建 C# 浮點數型別的概觀
-ms.date: 10/22/2019
+description: 瞭解內C#建的浮點類型： float、double 和 decimal
+ms.date: 02/10/2020
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093210"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215244"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮點數值型別 (C# 參考)
 
@@ -50,19 +50,21 @@ System.Double b = 12.3;
 
 相較於 `decimal` 與 `float`，因為 `double` 型別的精確度較高且範圍較小，所以非常適合財務與金融計算。
 
-您可以在運算式中混合使用[整數](integral-numeric-types.md)型別與浮點數型別。 在此情況下，整數型別會轉換成浮點類型。 運算式的評估會根據下列規則來執行：
+您可以在運算式中混合[整數](integral-numeric-types.md)類資料類型和 `float` 和 `double` 類型。 在此情況下，整數類資料類型會隱含地轉換成其中一個浮點類型，並在必要時，將 `float` 類型隱含地轉換成 `double`。 運算式評估如下：
 
-- 如果其中一個浮點類型是 `double`，則運算式會評估為 `double`，或在關聯式和相等比較中為[bool](bool.md) 。
-- 如果運算式中沒有 `double` 類型，則運算式會評估為 `float`，或在關聯式和相等比較中為[bool](bool.md) 。
+- 如果運算式中有 `double` 類型，則運算式會評估為 `double`，或[`bool`](bool.md)在關聯式和相等比較中。
+- 如果運算式中沒有 `double` 類型，則運算式會評估為 `float`，或 `bool` 在關聯式和相等比較中。
 
-浮點運算式可以包含下列值的集合：
+您也可以在運算式中混合整數類資料類型和 `decimal` 類型。 在此情況下，整數類資料類型會隱含地轉換成 `decimal` 類型，而運算式會評估為 `decimal`，或 `bool` 在關聯式和相等比較中。
 
-- 正零和負零
-- 正無限大和負無限大
-- 非數字值 (NaN)
-- 非零值的有限集合
+您不能將 `decimal` 類型與運算式中的 `float` 和 `double` 類型混合在一起。 在此情況下，如果您想要執行算術、比較或相等運算，您必須明確地將運算元從或轉換成 `decimal` 類型，如下列範例所示：
 
-如需這些值的詳細資訊，請參閱 [IEEE](https://www.ieee.org) 網站上的 IEEE Standard for Binary Floating-Point Arithmetic。
+```csharp-interactive
+double a = 1.0;
+decimal b = 2.1m;
+Console.WriteLine(a + (double)b);
+Console.WriteLine((decimal)a + b);
+```
 
 您可以使用[標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)或[自訂數值格式字串](../../../standard/base-types/custom-numeric-format-strings.md)，設定浮點數值格式。
 

@@ -1,5 +1,5 @@
 ---
-title: 作法：建立和初始化追蹤來源
+title: 如何：建立和初始化追蹤來源
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,14 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cab9cc33bd5a4697cac5de85de8aa72e7eb4d6c6
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: ae5e98a1ebf3753b24127f96ed563eba27eea2fb
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052695"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217431"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>HOW TO：建立和初始化追蹤來源
+# <a name="how-to-create-and-initialize-trace-sources"></a>如何：建立和初始化追蹤來源
 應用程式會使用 <xref:System.Diagnostics.TraceSource> 類別產生能夠與應用程式相關聯的追蹤。 <xref:System.Diagnostics.TraceSource> 提供了追蹤方法，能讓您輕鬆地追蹤事件、追蹤資料和問題資訊追蹤。 不論是否使用組態檔，都可以從 <xref:System.Diagnostics.TraceSource> 建立及初始化追蹤輸出。 本主題提供這兩個選項的指示。 不過，建議您使用組態檔來協助重新設定追蹤來源於執行階段所產生的追蹤。  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>若要使用組態檔建立及初始化追蹤來源  

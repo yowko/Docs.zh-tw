@@ -9,14 +9,12 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 256d9c9b825081e3bcfafd6e0e09de825d046d20
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894552"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215792"
 ---
 # <a name="securing-exception-handling"></a>設定例外狀況處理的安全性
 在 Visual C++和 Visual Basic 中，堆疊進一步的篩選運算式會在任何**finally**語句之前執行。 與該篩選相關聯的**catch**區塊會在**finally**語句之後執行。 如需詳細資訊，請參閱[使用使用者篩選的例外](../../standard/exceptions/using-user-filtered-exception-handlers.md)狀況。 本節將探討此順序的安全性含意。 請考慮下列可說明篩選語句和**finally**語句執行順序的虛擬程式碼範例。  
@@ -60,7 +58,7 @@ Finally
 Catch  
 ```  
   
- 此篩選準則會在**finally**語句之前執行，因此在執行其他程式碼時，可能會造成狀態變更的任何專案引進安全性問題。 例如：  
+ 此篩選準則會在**finally**語句之前執行，因此在執行其他程式碼時，可能會造成狀態變更的任何專案引進安全性問題。 例如，  
   
 ```cpp  
 try   
@@ -116,7 +114,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- 在此情況下，正確的修正方法是在**try** / **catch**區塊中包裝現有的**try** / **finally**區塊。 簡單地將**catch throw**子句引進現有的**try** / **finally**區塊，並不會修正問題，如下列範例所示。  
+ 在此情況下，正確的修正方法是在**try**/**catch**區塊中包裝現有的**try**/**finally**區塊。 簡單地介紹**catch throw**子句到現有的**try**/**finally**區塊並不會修正問題，如下列範例所示。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,7 +134,7 @@ YourObject.YourMethod()
 }  
 ```  
   
- 這不會修正問題，因為**finally**語句尚未在`FilterFunc`取得控制項之前執行。  
+ 這不會修正問題，因為**finally**語句在 `FilterFunc` 取得控制權之前尚未執行。  
   
  下列範例會藉由確保**finally**子句在提供呼叫端例外狀況篩選區塊的例外狀況之前先執行，以修正問題。  
   

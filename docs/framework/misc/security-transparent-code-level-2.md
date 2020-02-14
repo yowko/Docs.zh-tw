@@ -7,14 +7,12 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea782b346f6c53664a8aeb736c7d7a4509d83985
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7ac5660c2c431505f4992f5e687974c2b9d06672
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974936"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217001"
 ---
 # <a name="security-transparent-code-level-2"></a>安全性透明的程式碼，層級 2
 
@@ -72,7 +70,7 @@ ms.locfileid: "73974936"
 
 下表比較層級2與層級1的元件層級行為。
 
-|Assembly 屬性|階層 2|階層 1|
+|組件屬性|層級 2|層級 1|
 |------------------------|-------------|-------------|
 |部分信任組件無屬性|根據預設，類型和成員為透明的，但是可能為安全性關鍵或安全性安全關鍵的。|所有類型和成員皆為透明的。|
 |無屬性|不指定屬性會導致 Common Language Runtime 為您決定透明度規則。 所有類型和成員都是安全性關鍵的，但是安全性關鍵違反繼承規則的程式碼除外。|在完全信任的組件上 (位於全域組件快取中或在 `AppDomain` 中識別為完全信任)，所有類型都是透明的，而且所有成員都是安全性安全關鍵的。|
@@ -160,7 +158,7 @@ ms.locfileid: "73974936"
 
 層級 2 透明度模型會將 <xref:System.Security.Permissions.SecurityAction.LinkDemand> 取代成 <xref:System.Security.SecurityCriticalAttribute> 屬性。 在舊版 (層級 1) 程式碼中，<xref:System.Security.Permissions.SecurityAction.LinkDemand> 可自動視為 <xref:System.Security.Permissions.SecurityAction.Demand>。
 
-### <a name="reflection"></a>反射
+### <a name="reflection"></a>反映
 
 叫用關鍵方法或讀取關鍵欄位就會觸發完全信任的要求 (就如同您叫用私用方法或欄位一樣)。 因此，完全信任程式碼可以叫用關鍵方法，而部分信任程式碼則無法叫用。
 
@@ -173,13 +171,13 @@ ms.locfileid: "73974936"
 
 ### <a name="skip-verification-in-full-trust"></a>在完全信任中略過驗證
 
-若為完全信任的透明組件，您就可以在 <xref:System.Security.SecurityRulesAttribute> 屬性中，將 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 屬性設定為 `true`，藉以略過驗證：
+若為完全信任的透明組件，您就可以在 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 屬性中，將 `true` 屬性設定為 <xref:System.Security.SecurityRulesAttribute>，藉以略過驗證：
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 屬性預設為 `false`，因此這個屬性必須設定為 `true`，才能略過驗證。 您應該僅針對最佳化目的進行此作業。 您應該使用[PEVerify 工具](../tools/peverify-exe-peverify-tool.md)中的 [`transparent`] 選項，確保元件中的透明程式碼是可驗證的。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全性透明的程式碼，層級1](security-transparent-code-level-1.md)
 - [安全性變更](../security/security-changes.md)
