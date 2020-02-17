@@ -204,7 +204,7 @@ XAML 元素可以包含 XML 屬性（`xml:lang`），以定義每個元素的語
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.European>：數位一律會轉譯為歐洲數位。
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>：使用數位文化特性的國家數位來轉譯數位，如文化特性的 <xref:System.Globalization.CultureInfo.NumberFormat%2A>所指定。
+- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>：使用數位文化特性的國家/地區數位來轉譯數位，如文化特性的 <xref:System.Globalization.CultureInfo.NumberFormat%2A>所指定。
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>：數位會使用數位文化特性的傳統數位來呈現。 對於大部分的文化特性而言，這與 <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>相同。 不過，<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational> 會導致某些阿拉伯文文化特性的拉丁位數，而此值會產生所有阿拉伯文文化特性的阿拉伯文數位。
 
