@@ -49,8 +49,9 @@
     - name: 安裝當地語系化的 IntelliSense
       href: install/localized-intellisense.md
 - name: 開始使用
-  href: get-started.md
   items:
+    - name: 開始使用
+      href: get-started.md
     - name: 'C# 與 Visual Studio Code 使用者入門'
       href: tutorials/with-visual-studio-code.md
     - name: 使用 Visual Studio Code 在 macOS 上開始使用 .NET Core
@@ -83,16 +84,9 @@
   displayName: app compatibility
   href: compatibility/
 - name: 教學課程
-  href: tutorials/index.md
   items:
-    - name: CLI 的範本
-      items:
-        - name: 1 - 建立項目範本
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2 - 建立專案範本
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3 - 建立範本套件
-          href: tutorials/cli-templates-create-template-pack.md
+    - name: 總覽
+      href: tutorials/index.md
     - name: 以 Visual Studio for Mac 開始使用 .NET Core
       href: tutorials/using-on-mac-vs.md
     - name: 在 macOS 上建置完整的 .NET Core 解決方案
@@ -109,6 +103,14 @@
       href: tutorials/aspnet-core.md
     - name: 從機器碼裝載 .NET Core
       href: tutorials/netcore-hosting.md
+    - name: 建立 CLI 的範本
+      items:
+        - name: 1 - 建立項目範本
+          href: tutorials/cli-templates-create-item-template.md
+        - name: 2 - 建立專案範本
+          href: tutorials/cli-templates-create-project-template.md
+        - name: 3 - 建立範本套件
+          href: tutorials/cli-templates-create-template-pack.md
 - name: 執行階段設定
   items:
     - name: 設定
@@ -131,13 +133,6 @@
       href: native-interop/expose-components-to-com.md
 - name: 套件、中繼套件和架構
   href: packages.md
-- name: CLI 的變更概觀
-  href: tools/cli-msbuild-architecture.md
-  items:
-    - name: 相依性管理
-      href: tools/dependencies.md
-    - name: csproj 格式的新增項目
-      href: tools/csproj.md
 - name: 移轉
   items:
     - name: .NET Core 2.0 至 2.1
@@ -146,11 +141,16 @@
       href: migration/index.md
     - name: project.json 與 csproj 的對應
       href: tools/project-json-to-csproj.md
+    - name: CLI 的變更概觀
+      href: tools/cli-msbuild-architecture.md
+    - name: csproj 格式的新增項目
+      href: tools/csproj.md
     - name: 從 DNX 移轉
       href: migration/from-dnx.md
 - name: 應用程式部署
-  href: deploying/index.md
   items:
+    - name: 總覽
+      href: deploying/index.md
     - name: 使用 CLI 來發行應用程式
       href: deploying/deploy-with-cli.md
     - name: 使用 Visual Studio 部署應用程式
@@ -192,6 +192,8 @@
 - name: 單元測試
   href: testing/index.md
   items:
+    - name: 總覽
+      href: testing/index.md
     - name: 單元測試最佳做法
       href: testing/unit-testing-best-practices.md
     - name: '使用 xUnit 測試 C# 單元'
@@ -221,8 +223,9 @@
 - name: 持續整合
   href: tools/using-ci-with-cli.md
 - name: 版本控制
-  href: versions/index.md
   items:
+    - name: 總覽
+      href: versions/index.md
     - name: .NET Core 版本選取
       href: versions/selection.md
     - name: 移除過時的執行階段及 SDK
@@ -330,8 +333,9 @@
             - name: dotnet remove package
               href: tools/dotnet-remove-package.md
 - name: .NET Core 其他工具
-  href: additional-tools/index.md
   items:
+    - name: 總覽
+      href: additional-tools/index.md
     - name: .NET Core 解除安裝工具
       href: additional-tools/uninstall-tool.md
     - name: WCF Web Service Reference Provider
@@ -364,13 +368,15 @@
       href: porting/wpf.md
     - name: 移植 C++/CLI 專案
       href: porting/cpp-cli.md
-- name: 相依性載入
+- name: 相依性管理與載入
   items:
-    - name: 總覽
+    - name: 相依性管理
+      href: tools/dependencies.md
+    - name: 相依性載入
       href: dependency-loading/overview.md
     - name: 了解 AssemblyLoadContext
       href: dependency-loading/understanding-assemblyloadcontext.md
-    - name: 載入詳細資料
+    - name: 相依性載入詳細資料
       items:
         - name: 預設相依性探查
           href: dependency-loading/default-probing.md
@@ -387,6 +393,4 @@
         - name: 如何使用 .NET Core 中的組件卸載功能及對其進行偵錯
           href: ../standard/assembly/unloadability-howto.md
 - name: .NET Core 發佈封裝
-  items:
-    - name: 總覽
-      href: distribution-packaging.md
+  href: distribution-packaging.md
