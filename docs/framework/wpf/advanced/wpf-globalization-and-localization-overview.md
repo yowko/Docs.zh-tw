@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ba49b3ec0f6edebff6278f4e90ae22baba9f1edf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124553"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452665"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 
@@ -180,25 +180,25 @@ ms.locfileid: "77124553"
 
 |資源索引鍵|當地語系化分類|值|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|按鈕|確定|
+|Button_1:System.Windows.Controls.Button.$Content|按鈕|[確定]|
 |Button_2:System.Windows.Controls.Button.$Content|按鈕|取消|
 |Button_3:System.Windows.Controls.Button.$Content|按鈕|瀏覽...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|輸入程式、資料夾、文件或網際網路資源的名稱，Windows 會自動開啟。|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|未處理：|
-|Window_1:System.Windows.Window.Title|標題|執行|
+|Window_1:System.Windows.Window.Title|Title|執行|
 
 將應用程式當地語系化為德文需要下列翻譯︰
 
 |資源索引鍵|當地語系化分類|值|
 |-|-|-|
-|Button_1:System.Windows.Controls.Button.$Content|按鈕|確定|
+|Button_1:System.Windows.Controls.Button.$Content|按鈕|[確定]|
 |Button_2:System.Windows.Controls.Button.$Content|按鈕|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|按鈕|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Text|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Text|開啟：|
-|Window_1:System.Windows.Window.Title|標題|執行|
+|Window_1:System.Windows.Window.Title|Title|執行|
 
 **Generate**
 
@@ -215,11 +215,11 @@ ms.locfileid: "77124553"
 |程式碼|附屬資源 BAML|當地語系化 BAML|
 |文化特性中性資源|英文的其他資源|當地語系化為德文的其他資源|
 
-.NET framework 會根據應用程式的 `Thread.CurrentThread.CurrentUICulture`，自動選擇要載入的附屬資源元件。 這會預設為 Windows 作業系統的文化特性。 因此，如果您使用德文視窗，de-DE\MyDialog.resources.dll 會載入，如果您使用的是英文視窗，en-US\MyDialog.resources.dll 會載入。 您可以藉由在專案的 AssemblyInfo 中指定 NeutralResourcesLanguage，為您的應用程式設定終極的 fallback 資源。\* 例如，如果您指定：
+.NET 會根據應用程式的 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>，自動選擇要載入的附屬資源元件。 這會預設為 Windows 作業系統的文化特性。 如果您使用德文的 Windows，則會載入*de-DE\MyDialog.resources.dll*檔案。 如果您使用的是英文 Windows， *en-US\MyDialog.resources.dll*檔案就會載入。 您可以藉由在專案的*AssemblyInfo*檔中指定 `NeutralResourcesLanguage` 屬性，為您的應用程式設定終極的 fallback 資源。 例如，如果您指定：
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
-則在無法使用 de-DE\MyDialog.resources.dll 或 de\MyDialog.resources.dll 時，會搭配使用 en-US\MyDialog.resources.dll 與德文 Windows。
+然後，如果下列兩個檔案都無法使用， *en-US\MyDialog.resources.dll*檔案就會與德文視窗搭配使用： *de-DE\MyDialog.resources.dll*或*DE\MyDialog.resources.dll*。
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Microsoft Saudi Arabia 首頁
 
@@ -285,7 +285,7 @@ ms.locfileid: "77124553"
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的預設當地語系化屬性也可以透過程式碼覆寫，因此您可以正確地為自訂控制項設定正確的預設值。 例如，
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的預設當地語系化屬性也可以透過程式碼覆寫，因此您可以正確地為自訂控制項設定正確的預設值。 例如：
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

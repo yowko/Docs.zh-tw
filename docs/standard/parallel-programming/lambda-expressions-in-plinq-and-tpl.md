@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Action delegate, creating with lambda expression
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
-ms.openlocfilehash: d1b716e977702d03db176da70be00a1e5c789a4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129022"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452996"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>PLINQ 和 TPL 中的 Lambda 運算式
 
@@ -26,11 +26,11 @@ ms.locfileid: "73129022"
 
 ## <a name="func-delegate"></a>Func 委派
 
-`Func` 委派所封裝的方法會傳回值。 在 Func 簽章中，最後一個或最右邊的型別參數一律會指定傳回型別。 其中一個常見的編譯器錯誤原因是嘗試將兩個輸入參數傳入 <xref:System.Func%602?displayProperty=nameWithType>；事實上，此型別只會採用一個輸入參數。 Framework 類別庫定義了 17 個版的 `Func`：<xref:System.Func%601?displayProperty=nameWithType>、<xref:System.Func%602?displayProperty=nameWithType>、<xref:System.Func%603?displayProperty=nameWithType> 等，依此類推一直到 <xref:System.Func%6017?displayProperty=nameWithType>。
+`Func` 委派所封裝的方法會傳回值。 在 `Func` 簽章中，最後一個或最右邊的型別參數一律會指定傳回型別。 其中一個常見的編譯器錯誤原因是嘗試將兩個輸入參數傳入 <xref:System.Func%602?displayProperty=nameWithType>；事實上，此型別只會採用一個輸入參數。 .NET 會定義17個版本的 `Func`： <xref:System.Func%601?displayProperty=nameWithType>、<xref:System.Func%602?displayProperty=nameWithType>、<xref:System.Func%603?displayProperty=nameWithType>，依此類推，直到 <xref:System.Func%6017?displayProperty=nameWithType>為止。
 
 ## <a name="action-delegate"></a>Action 委派
 
-<xref:System.Action?displayProperty=nameWithType> 委派所封裝的方法 (在 Visual Basic 中為 Sub) 不會傳回值，或是會傳回 [void](../../csharp/language-reference/keywords/void.md)。 在 Action 型別簽章中，型別參數只代表輸入參數。 就像 Func，Framework Class Library 會定義 17 個版本的 Action，從不具型別參數的版本，一直到具有 16 個型別參數的版本。
+<xref:System.Action?displayProperty=nameWithType> 委派會封裝不會傳回值的方法（在 Visual Basic 中為 Sub）。 在 `Action` 型別簽章中，型別參數只代表輸入參數。 如同 `Func`，.NET 會定義17版的 `Action`，從沒有型別參數的版本，到有16個型別參數的版本。
 
 ## <a name="example"></a>範例
 
@@ -39,6 +39,6 @@ ms.locfileid: "73129022"
 [!code-csharp[System.Threading.Tasks.Parallel#02](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforeach.cs#02)]
 [!code-vb[System.Threading.Tasks.Parallel#02](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb#02)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [平行程式設計](../../../docs/standard/parallel-programming/index.md)

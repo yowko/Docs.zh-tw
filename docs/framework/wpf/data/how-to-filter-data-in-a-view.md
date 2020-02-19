@@ -9,12 +9,12 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: ea49897ca5e9cb6b639cf7d98ff05bd287c51761
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f15bcfd1e3c4175f8b4b97244f120d5edbdec9b8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453478"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453074"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>如何：篩選檢視中的資料
 這個範例示範如何在視圖中篩選資料。  
@@ -35,7 +35,7 @@ ms.locfileid: "73453478"
  [!code-csharp[SortFilter#Unfilter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
  [!code-vb[SortFilter#Unfilter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
   
- 如需如何建立或取得視圖的詳細資訊，請參閱[取得資料集合的預設視圖](how-to-get-the-default-view-of-a-data-collection.md)。 如需完整範例，請參閱[在 View 範例中排序和篩選項目](https://go.microsoft.com/fwlink/?LinkID=160040)。  
+ 如需如何建立或取得視圖的詳細資訊，請參閱[取得資料集合的預設視圖](how-to-get-the-default-view-of-a-data-collection.md)。 如需完整範例，請參閱[在 View 範例中排序和篩選項目](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/SortFilter)。  
   
  如果您的 view 物件來自 <xref:System.Windows.Data.CollectionViewSource> 物件，您可以藉由設定 <xref:System.Windows.Data.CollectionViewSource.Filter> 事件的事件處理常式來套用篩選邏輯。 在下列範例中，`listingDataView` 是 <xref:System.Windows.Data.CollectionViewSource>的實例。  
   
@@ -47,10 +47,10 @@ ms.locfileid: "73453478"
  [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
  [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Data.CollectionView.CanFilter%2A>
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
 - [資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)
 - [排序檢視中的資料](how-to-sort-data-in-a-view.md)
-- [「如何」主題](data-binding-how-to-topics.md)
+- [操作說明主題](data-binding-how-to-topics.md)

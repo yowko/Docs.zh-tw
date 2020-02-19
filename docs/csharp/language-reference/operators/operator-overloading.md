@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: eb4639b7cede59e6ca1e315f54ce805947f03327
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1475852d312fa16980f25347fc9a864cb1659221
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937203"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451924"
 ---
 # <a name="operator-overloading-c-reference"></a>運算子多載 (C# 參考)
 
@@ -35,11 +35,11 @@ ms.locfileid: "75937203"
 
 下表提供 C# 運算子多載性的相關資訊：
 
-| 運算子 | Overloadability |
+| 操作員 | Overloadability |
 | --------- | --------------- |
 |[+x](arithmetic-operators.md#unary-plus-and-minus-operators)、[-x](arithmetic-operators.md#unary-plus-and-minus-operators)、[!x](boolean-logical-operators.md#logical-negation-operator-)、[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-)、[++](arithmetic-operators.md#increment-operator-)、[--](arithmetic-operators.md#decrement-operator---)、[true](true-false-operators.md)、[false](true-false-operators.md)|可多載這些一元運算子。|
 |[x + y](addition-operator.md)、[x - y](subtraction-operator.md)、[x \* y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-)、[x & y](boolean-logical-operators.md#logical-and-operator-)、[x &#124; y](boolean-logical-operators.md#logical-or-operator-)、[x ^ y](boolean-logical-operators.md#logical-exclusive-or-operator-)、[x \<\< y](bitwise-and-shift-operators.md#left-shift-operator-)、[x >> y](bitwise-and-shift-operators.md#right-shift-operator-)、[x == y](equality-operators.md#equality-operator-)、[x != y](equality-operators.md#inequality-operator-)、[x \< y](comparison-operators.md#less-than-operator-)、[x > y](comparison-operators.md#greater-than-operator-)、[x \<= y](comparison-operators.md#less-than-or-equal-operator-)、[x >= y](comparison-operators.md#greater-than-or-equal-operator-)|可多載這些二元運算子。 某些運算子必須成對多載，如需詳細資訊，請參閱本表後的附註。|
-|[x & & y](boolean-logical-operators.md#conditional-logical-and-operator-)、[x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-)|條件邏輯運算子不能多載。 不過，如果具有多載 [`true` 和 `false` 運算子](true-false-operators.md) 的類型也以某種方式多載 `&` 或 <code>&#124;</code> 運算子，就可以分別針對該類型的運算元評估 `&&` 或 <code>&#124;&#124;</code> 運算子。 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[使用者定義條件式邏輯運算子](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)一節。|
+|[x & & y](boolean-logical-operators.md#conditional-logical-and-operator-)、[x &#124; &#124; y](boolean-logical-operators.md#conditional-logical-or-operator-)|條件邏輯運算子不能多載。 不過，如果具有多載 [`true` 和 `false` 運算子](true-false-operators.md) 的類型也以某種方式多載 `&` 或 <code>&#124;</code> 運算子，就可以分別針對該類型的運算元評估 `&&` 或 <code>&#124;&#124;</code> 運算子。 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)的[使用者定義條件式邏輯運算子](~/_csharplang/spec/introduction.md)一節。|
 |[a&#91;i&#93;](member-access-operators.md#indexer-operator-)|元素存取不會視為可多載的運算子，但您可定義[索引子](../../programming-guide/indexers/index.md)。|
 |[(T)x](type-testing-and-cast.md#cast-operator-)|雖然轉換運算子無法多載，但您可以定義新的轉換運算子。 如需詳細資訊，請參閱[使用者定義轉換運算子](user-defined-conversion-operators.md)。|
 |[+=](arithmetic-operators.md#compound-assignment), [-=](arithmetic-operators.md#compound-assignment), [\*=](arithmetic-operators.md#compound-assignment), [/=](arithmetic-operators.md#compound-assignment), [%=](arithmetic-operators.md#compound-assignment), [&=](boolean-logical-operators.md#compound-assignment), [&#124;=](boolean-logical-operators.md#compound-assignment), [^=](boolean-logical-operators.md#compound-assignment), [\<\<=](bitwise-and-shift-operators.md#compound-assignment), [>>=](bitwise-and-shift-operators.md#compound-assignment)|無法明確多載複合指派運算子。 不過，當您多載二元運算子時，也會隱含多載對應的複合指派運算子 (若有)。 例如，`+=` 是使用 `+` 進行評估 (可多載)。|
@@ -59,9 +59,11 @@ ms.locfileid: "75937203"
 - [運算子多載](~/_csharplang/spec/expressions.md#operator-overloading)
 - [運算子](~/_csharplang/spec/classes.md#operators)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)
 - [使用者定義轉換運算子](user-defined-conversion-operators.md)
+- [設計方針-運算子多載](../../../standard/design-guidelines/operator-overloads.md)
+- [設計方針-等號比較運算子](../../../standard/design-guidelines/equality-operators.md)
 - [Why are overloaded operators always static in C#?](https://docs.microsoft.com/archive/blogs/ericlippert/why-are-overloaded-operators-always-static-in-c) (為什麼多載運算子在 C# 中一律為靜態？)

@@ -3,16 +3,16 @@ title: 重大變更-.NET Framework 至 .NET Core
 titleSuffix: ''
 description: 列出從 .NET Framework 到 .NET Core 的重大變更。
 ms.date: 12/18/2019
-ms.openlocfilehash: 407f99adf5d400fce659ef71cda32ceac1e54491
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f712be14d7debc4b3008f8459e6ee925754b25f0
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093054"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449388"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>從 .NET Framework 遷移至 .NET Core 的突破性變更
 
-如果您要將應用程式從 .NET Framework 遷移至 .NET Core，本文中所列的重大變更可能會對您造成影響。 中斷性變更會依類別目錄，以及在這些類別中，由在中引進的 .NET Core 版本來分組。
+如果您要將應用程式從 .NET Framework 遷移至 .NET Core，本文中所列的重大變更可能會對您造成影響。 中斷性變更會依類別目錄，以及在這些類別中所引進的 .NET Core 版本進行分組。
 
 > [!NOTE]
 > 本文不是 .NET Framework 和 .NET Core 之間的重大變更完整清單。 最重要的重大變更會在這裡新增，因為我們會注意到它們。
@@ -20,10 +20,27 @@ ms.locfileid: "77093054"
 ## <a name="corefx"></a>CoreFx
 
 - [預設值為 UseShellExecute 的變更](#change-in-default-value-of-useshellexecute)
+- [FileSystemInfo 擲回的 System.unauthorizedaccessexception](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
 [!INCLUDE[Process.Start changes](~/includes/core-changes/corefx/2.1/process-start-changes.md)]
+
+***
+
+### <a name="net-core-10"></a>.NET Core 1.0
+
+[!INCLUDE [UnauthorizedAccessException thrown by FileSystemInfo.Attributes](~/includes/core-changes/corefx/1.0/filesysteminfo-attributes-exceptions.md)]
+
+***
+
+## <a name="cryptography"></a>Cryptography
+
+- [遵守 SignedCms 的布林值參數。 ComputeSignature](#boolean-parameter-of-signedcmscomputesignature-is-respected)
+
+### <a name="net-core-21"></a>.NET Core 2.1
+
+[!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
 
 ***
 

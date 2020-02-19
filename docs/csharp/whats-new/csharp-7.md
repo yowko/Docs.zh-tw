@@ -3,12 +3,12 @@ title: C# 7.0 的新功能 - C# 指南
 description: 取得 C# 語言版本 7.0 中新功能的概觀。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 73563a04dea04c942a6326d6a04ddd54bb80b0ed
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694578"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448630"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
@@ -16,7 +16,7 @@ C# 7.0 新增許多新功能至 C# 語言：
 
 - [`out` 變數](#out-variables)
   - 您可以宣告 `out` 內嵌值作為使用它們之方法的引數。
-- [元組](#tuples)
+- [Tuple](#tuples)
   - 您可以建立包含多個公用欄位的輕量、未具名的類型。 編譯器和 IDE 工具了解這些類型的語意。
 - [捨棄](#discards)
   - 捨棄是當您不在意指派的值時，於指派內使用的僅限寫入且暫時之變數。 解構 Tuple 及使用者定義型別，以及使用 `out` 參數呼叫方法時，捨棄最為實用。
@@ -57,7 +57,7 @@ C# 7.0 新增許多新功能至 C# 語言：
 - 不需要指派初始值。
   - 藉由在方法呼叫中使用所在宣告 `out` 變數，就不會在指派它之前意外使用它。
 
-## <a name="tuples"></a>Tuple
+## <a name="tuples"></a>Tuples
 
 C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的。 但有時候豐富的語法需要額外的工作才能得到最少的好處。 您可能經常撰寫需要包含多個資料項目之簡單結構的方法。 為了支援這些案例，C# 已新增 *Tuple*。 Tuple 是輕量的資料結構，其中包含多個欄位來代表資料成員。
 這些欄位不會經過驗證，且您無法定義自己的方法
@@ -126,7 +126,7 @@ if (input is int count)
 switch 比對運算式的語法很熟悉，是以已屬於 C# 語言一部分的 `switch` 陳述式為基礎。 更新的 switch 陳述式有數個新的建構：
 
 - `switch` 運算式的控管型別不再限於整數型別、`Enum` 型別、`string`，或對應至這些其中一種類型的可為 Null 的型別。 可以使用任何型別。
-- 您可以測試每個 `case` 標籤中的 `switch` 運算式型別。 如同使用 `is` 運算式，您可以將新的變數指派給該型別。
+- 您可以測試每個 `switch` 標籤中的 `case` 運算式型別。 如同使用 `is` 運算式，您可以將新的變數指派給該型別。
 - 您可以加入 `when` 子句，以進一步測試該變數的條件。
 - `case` 標籤的順序現在很重要。 系統會執行要比對的第一個分支；其他則會略過。
 
@@ -215,7 +215,7 @@ C# 語言具備數個規則，可防止您濫用 `ref` 區域變數並傳回︰
 
 ## <a name="more-expression-bodied-members"></a>更多運算式主體成員
 
-C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodied-function-members)和唯讀屬性。 C# 7.0 擴充了可以實作為運算式的允許成員。 在 C# 7.0 中，您可以實作「建構函式」、「完成項」，以及「屬性」和「索引子」上的 `get` 和 `set` 存取子。 下列程式碼將示範各項的範例：
+C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodied-function-members)和唯讀屬性。 C# 7.0 擴充了可以實作為運算式的允許成員。 在 C# 7.0 中，您可以實作「建構函式」、「完成項」，以及「屬性」`get``set`和「索引子」上的 *和* 存取子。 下列程式碼將示範各項的範例：
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -236,7 +236,7 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 
 從非同步方法傳回 `Task` 物件可能會造成在特定路徑的效能瓶頸。 `Task` 是參考型別，因此使用它表示要配置物件。 當使用 `async` 修飾詞宣告的方法傳回快取的結果時，或是以同步方式完成，額外配置可能會在效能關鍵的程式碼區段中變成一項重要的時間成本。 如果這些配置發生在緊密迴圈中，它可能會變得成本很高。
 
-新的語言功能表示 async 方法傳回型別不限於 `Task`、`Task<T>` 和 `void`。 傳回的型別仍然必須滿足非同步模式，也就是表示 `GetAwaiter` 方法必須可存取。 具體的範例就是，`ValueTask` 類型已新增到 .NET Framework，才便利用這項新的語言功能︰
+新的語言功能表示 async 方法傳回型別不限於 `Task`、`Task<T>` 和 `void`。 傳回的型別仍然必須滿足非同步模式，也就是表示 `GetAwaiter` 方法必須可存取。 做為一個具體範例，`ValueTask` 類型已新增至 .NET，以使用這項新的語言功能：
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 

@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3a3f6edc974448ddab9fe30e97bdc1130d3b97dc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454453"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449968"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>如何：繫結至 Web 服務
 這個範例示範如何系結至 Web 服務方法呼叫所傳回的物件。  
   
 ## <a name="example"></a>範例  
- 這個範例會使用[MSDN/TechNet 發行系統（MTPS）內容服務](https://go.microsoft.com/fwlink/?LinkId=95677)來抓取指定檔所支援的語言清單。  
+ 這個範例會使用 MSDN/TechNet 發行系統（MTPS）內容服務來抓取指定檔所支援的語言清單。  
   
  在您呼叫 Web 服務之前，您必須先建立對它的參考。 若要使用 Visual Studio 建立 MTPS 服務的 Web 參考，請遵循下列步驟：  
   
-1. 在 Visual Studio 中開啟專案。  
+1. 在 Visual Studio 中，開啟您的專案。  
   
 2. 從 [**專案**] 功能表中，按一下 [**加入 Web 參考**]。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73454453"
   
  如需 `getContentResponse`結構的詳細資訊，請參閱[內容服務檔](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)
 - [繫結來源概觀](binding-sources-overview.md)

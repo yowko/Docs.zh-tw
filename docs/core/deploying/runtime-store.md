@@ -2,12 +2,12 @@
 title: 執行階段套件存放區
 description: 了解如何使用 .NET Core 所使用的執行階段套件存放區和目標資訊清單。
 ms.date: 08/12/2017
-ms.openlocfilehash: 8c58ccdb90e5ae9830313f52c19f58629ea5b0a2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737782"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448954"
 ---
 # <a name="runtime-package-store"></a>執行階段套件存放區
 
@@ -122,11 +122,11 @@ dotnet publish --manifest manifest.xml
 
 ASP.NET Core 隱含存放區只適用於 ASP.NET Core 2.0。 強烈建議應用程式使用 ASP.NET Core 2.1 和更新版本，這些**不**會使用隱含存放區。 ASP.NET Core 2.1 和更新版本會使用共用的架構。
 
-當應用程式部署為[與 Framework 相依的部署 (FDD)](index.md#framework-dependent-deployments-fdd) 應用程式時，ASP.NET Core 應用程式會以隱含方式使用執行階段套件存放區功能。 [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) 中的目標包含參考目標系統上隱含套件存放區的資訊清單。 此外，任何相依於 `Microsoft.AspNetCore.All` 套件的 FDD 應用程式，都會造成已發行的應用程式只包含應用程式及其資產，不包含 `Microsoft.AspNetCore.All` 中繼套件列出的套件。 假設這些套件存在於目標系統上。
+當應用程式部署為[與 Framework 相依的部署 (FDD)](index.md#publish-runtime-dependent) 應用程式時，ASP.NET Core 應用程式會以隱含方式使用執行階段套件存放區功能。 [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) 中的目標包含參考目標系統上隱含套件存放區的資訊清單。 此外，任何相依於 `Microsoft.AspNetCore.All` 套件的 FDD 應用程式，都會造成已發行的應用程式只包含應用程式及其資產，不包含 `Microsoft.AspNetCore.All` 中繼套件列出的套件。 假設這些套件存在於目標系統上。
 
 安裝 .NET Core SDK 時，執行階段套件存放區會安裝在主機上。 其他的安裝程式可能會提供執行階段套件存放區，包括 .NET Core SDK 的 Zip/tarball 安裝、`apt-get`、Red Hat Yum、.NET Core Windows Server 裝載組合，以及手動的執行階段套件存放區安裝。
 
-部署[與 Framework 相依的部署 (FDD)](index.md#framework-dependent-deployments-fdd) 應用程式時，請確定目標環境已安裝 .NET Core SDK。 如果應用程式部署到不包含 ASP.NET Core 的環境，您可以像下例一樣在專案檔指定設為  **的 \<** PublishWithAspNetCoreTargetManifest>`false`，從隱含的存放區選擇：
+部署[與 Framework 相依的部署 (FDD)](index.md#publish-runtime-dependent) 應用程式時，請確定目標環境已安裝 .NET Core SDK。 如果應用程式部署到不包含 ASP.NET Core 的環境，您可以像下例一樣在專案檔指定設為  **的 \<** PublishWithAspNetCoreTargetManifest>`false`，從隱含的存放區選擇：
 
 ```xml
 <PropertyGroup>
@@ -135,7 +135,7 @@ ASP.NET Core 隱含存放區只適用於 ASP.NET Core 2.0。 強烈建議應用�
 ```
 
 > [!NOTE]
-> 若為[獨立部署 (SCD)](index.md#self-contained-deployments-scd) 應用程式，假設目標系統不必然包含必要的資訊清單套件。 因此，SCD 應用程式的 **\<PublishWithAspNetCoreTargetManifest>** 不能設定為 `true`。
+> 若為[獨立部署 (SCD)](index.md#publish-self-contained) 應用程式，假設目標系統不必然包含必要的資訊清單套件。 因此，SCD 應用程式的 **\<PublishWithAspNetCoreTargetManifest>** 不能設定為 `true`。
 
 如果您部署的應用程式具有存在於部署中的資訊清單相依性 (組件位於 *bin* 資料夾)，主機對該組件「不會使用」執行階段套件存放區。 無論主機的執行階段套件存放區是否有 *bin* 資料夾組件，都使用它。
 

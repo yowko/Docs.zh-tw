@@ -2,12 +2,12 @@
 title: 使用 .NET Core SDK 和工具的持續整合（CI）
 description: 瞭解如何透過持續整合，在組建伺服器上使用 .NET Core SDK 和其工具。
 ms.date: 05/18/2017
-ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215238"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451034"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>在持續整合 (CI) 中使用 .NET Core SDK 和工具
 
@@ -32,7 +32,7 @@ macOS 使用者應使用 PKG 安裝程式。 在 Linux 上，您可以選擇使�
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> 使用安裝程式指令碼時，不會自動安裝原生相依性。 如果作業系統沒有原生相依性，您必須加以安裝。 如需詳細資訊，請參閱[.Net Core 相依性和需求](../install/dependencies.md?tabs=netcore30&pivots=os-linux)。
+> 使用安裝程式指令碼時，不會自動安裝原生相依性。 如果作業系統沒有原生相依性，您必須加以安裝。 如需詳細資訊，請參閱[.Net Core 相依性和需求](../install/dependencies.md)。
 
 ## <a name="ci-setup-examples"></a>CI 設定範例
 

@@ -2,27 +2,21 @@
 title: Entity Framework 資源
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
-ms.openlocfilehash: 405f07245d41b79e014c721c49bf374441c6faad
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 144f237ace3dd02a55fedaa406205c3fbe69dbe8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248436"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452470"
 ---
 # <a name="entity-framework-resources"></a>Entity Framework 資源
 下列外部資源提供建立 Entity Framework 應用程式的資訊和支援。  
   
- [資料開發人員中心](https://go.microsoft.com/fwlink/?LinkId=213876)  
- 使用 Microsoft 技術進行資料開發的中心位置。  
-  
- [ADO.NET 小組 Blog](https://go.microsoft.com/fwlink/?LinkId=91905)  
+ [ADO.NET 小組 Blog](https://docs.microsoft.com/archive/blogs/adonet/)  
  包含 ADO.NET 特性與功能最新消息與討論的部落格。  
   
- [Entity Framework 設計的 Blog](https://go.microsoft.com/fwlink/?LinkId=186888)  
+ [Entity Framework 設計的 Blog](https://docs.microsoft.com/archive/blogs/efdesign)  
  未來 Entity Framework 版本的設計討論和功能預覽。  
-  
- [資料平臺如何？影片：Entity Framework 系列](https://go.microsoft.com/fwlink/?LinkId=124600)  
- 包含一組影片，示範如何使用 Entity Framework 的各種元件建置應用程式。  
   
  [Entity Framework 常見問題](https://social.technet.microsoft.com/wiki/contents/articles/3737.entity-framework-faq.aspx)  
  包含有關 Entity Framework 常見問題的 Wiki 區段。  

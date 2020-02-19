@@ -5,26 +5,26 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 33f4263c747ac2590234493ec7cb9e6048ed2b96
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 012bddc0b4c29a0b50abc3a0df5c3cd34dc4725a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794021"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452392"
 ---
 # <a name="large-udts"></a>大型 UDT
-使用者定義型別 (UDT) 可透過在 SQL Server 資料庫中儲存 Common Language Runtime (CLR) 物件，讓開發人員擴充伺服器的純量型別 (Scalar Type) 系統。 UDT 可以包含多個項目而且可以具有行為，這點與單一 SQL Server 系統資料型別所組成的傳統別名資料型別不同。  
+使用者定義類型 (UDT) 可讓開發人員將 Common Language Runtime (CLR) 物件儲存在 SQL Server 資料庫中來擴充伺服器的純量類型系統。 UDT 可包含多個項目並可具有不同的行為，與只含單一 SQL Server 系統資料類型的傳統別名資料類型有所不同。  
   
 > [!NOTE]
 > 您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能運用大型 UDT 的強化 SqlClient 支援。  
   
- 之前 UDT 有 8 KB 的大小上限。 在 SQL Server 2008 中，使用 <xref:Microsoft.SqlServer.Server.Format.UserDefined> 格式的 UDT 已不再具有這項限制。  
+ 在過去，UDT 的大小上限為 8 KB。 在 SQL Server 2008 中，目前使用 <xref:Microsoft.SqlServer.Server.Format.UserDefined> 格式的 UDT 已不再具有這項限制。  
   
  如需使用者定義型別的完整文件，請參閱您所使用之 SQL Server 版本的《SQL Server 線上叢書》版本。  
   
- **SQL Server 線上叢書**  
+ **SQL Server 文件**  
   
-1. [CLR 使用者定義類型](https://go.microsoft.com/fwlink/?LinkId=98366)  
+1. [CLR 使用者定義型別](/sql/relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>使用 GetSchema 來擷取 UDT 結構描述  
  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 的 <xref:System.Data.SqlClient.SqlConnection> 方法會在 <xref:System.Data.DataTable> 中傳回資料庫結構描述資訊。 如需詳細資訊，請參閱[SQL Server 架構集合](../sql-server-schema-collections.md)。  
@@ -34,15 +34,15 @@ ms.locfileid: "70794021"
   
 |SqlDataReader 資料行|SQL Server 2005|SQL Server 2008 及更新版本|  
 |--------------------------|---------------------|-------------------------------|  
-|`ColumnSize`|視情況而定|視情況而定|  
+|`ColumnSize`|不定|不定|  
 |`NumericPrecision`|255|255|  
 |`NumericScale`|255|255|  
 |`DataType`|`Byte[]`|UDT 執行個體|  
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|UDT 執行個體|  
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|三部分名稱指定為*SchemaName*。|  
-|`IsLong`|視情況而定|視情況而定|  
+|`DataTypeName`|`SqlDbType.VarBinary`|指定為 *Database.SchemaName.TypeName* 的三部分名稱。|  
+|`IsLong`|不定|不定|  
   
 ## <a name="sqldatareader-considerations"></a>SqlDataReader 考量  
  從 SQL Server 2008 開始，<xref:System.Data.SqlClient.SqlDataReader> 已擴充，可支援大型 UDT 值的擷取。 <xref:System.Data.SqlClient.SqlDataReader> 處理大型 UDT 值的方式取決於您所使用的 SQL Server 版本，以及連接字串中指定的 `Type System Version`。 如需詳細資訊，請參閱 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
@@ -72,8 +72,8 @@ ms.locfileid: "70794021"
   
 |SqlParameter 屬性|描述|  
 |---------------------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|取得或設定代表參數值的物件。 預設為 null。 此屬性可以是 `SqlBinary`、`Byte[]` 或 Managed 物件。|  
-|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|取得或設定代表參數值的物件。 預設為 null。 此屬性可以是 `SqlBinary`、`Byte[]` 或 Managed 物件。|  
+|<xref:System.Data.SqlClient.SqlParameter.Value%2A>|取得或設定代表參數值的物件。 預設值是 null。 屬性可以是 `SqlBinary`、`Byte[]` 或受控物件。|  
+|<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|取得或設定代表參數值的物件。 預設值是 null。 屬性可以是 `SqlBinary`、`Byte[]` 或受控物件。|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|取得或設定要解析之參數值的大小。 預設值為 0。 屬性可以是代表參數值大小的整數。 對於大型 UDT 而言，這可能是 UDT 的實際大小，-1 則代表未知。|  
   
 ## <a name="retrieving-data-example"></a>擷取資料範例  

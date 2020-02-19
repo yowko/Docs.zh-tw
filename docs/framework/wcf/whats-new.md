@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802371"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449500"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 的新功能
 
@@ -36,7 +36,7 @@ WCF 現可支援合約優先開發。 Svcutil 具有/serviceContract 參數，�
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>從可攜式子集專案加入服務參考
 
-可攜式子集專案可讓 .NET 組件程式設計人員維護單一來源的樹狀目錄和建置系統，同時還支援多個 .NET 平台 (桌上型電腦、Silverlight、Windows Phone 和 XBOX)。 可移植子集專案僅參考 .NET 的可移植程式庫，這是可在任何 .NET 平臺上使用的 .NET framework 元件。 開發人員的體驗與在任何其他 WCF 用戶端應用程式內加入服務參考相同。 如需詳細資訊，請參閱[在可移植的子集專案中加入服務參考](add-service-reference-in-a-portable-subset-project.md)。
+可移植子集專案可讓 .NET 元件程式設計人員維護單一來源樹狀結構和組建系統，同時仍然支援多個 .NET 平臺（桌面、Silverlight、Windows Phone 和 Xbox）。 可移植子集專案僅參考可在任何 .NET 平臺上使用之元件的 .NET 可移植程式庫。 開發人員的體驗與在任何其他 WCF 用戶端應用程式內加入服務參考相同。 如需詳細資訊，請參閱[在可移植的子集專案中加入服務參考](add-service-reference-in-a-portable-subset-project.md)。
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 相容模式預設值已變更
 
@@ -78,7 +78,7 @@ WebSockets 是透過連接埠 80 和 443 提供真正雙向通訊的技術，其
 
 下列資料表說明已變更的設定以及可找到其他資訊的位置。
 
-|屬性|On|新的預設值|如需詳細資訊，請參閱。|
+|屬性|另一|新的預設值|如需詳細資訊，請參閱|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * 處理器的數量|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|

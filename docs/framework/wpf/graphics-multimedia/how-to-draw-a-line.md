@@ -1,33 +1,33 @@
 ---
-title: HOW TO：繪製線條
+title: 如何：繪製線條
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drawing [WPF], lines
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-ms.openlocfilehash: c11dfb9523834ec2e622cb2e62bd6982a1a78fd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a803c1be01086ca8911ef4cc33bd67697239e2c0
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947650"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452944"
 ---
-# <a name="how-to-draw-a-line"></a>HOW TO：繪製線條
-此範例將示範如何藉由繪製線條<xref:System.Windows.Shapes.Line>項目。  
+# <a name="how-to-draw-a-line"></a>如何：繪製線條
+這個範例會示範如何使用 <xref:System.Windows.Shapes.Line> 元素繪製線條。  
   
- 若要繪製一條線，請建立<xref:System.Windows.Shapes.Line>項目。 使用其<xref:System.Windows.Shapes.Line.X1%2A>並<xref:System.Windows.Shapes.Line.Y1%2A>屬性來設定它的起點，並使用其<xref:System.Windows.Shapes.Line.X2%2A>和<xref:System.Windows.Shapes.Line.Y2%2A>屬性來設定其端點。 最後，設定其<xref:System.Windows.Shapes.Shape.Stroke%2A>和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>因為沒有筆觸線條是不可見。  
+ 若要繪製線條，請建立 <xref:System.Windows.Shapes.Line> 元素。 使用其 <xref:System.Windows.Shapes.Line.X1%2A> 和 <xref:System.Windows.Shapes.Line.Y1%2A> 屬性來設定其起始點;和會使用其 <xref:System.Windows.Shapes.Line.X2%2A> 和 <xref:System.Windows.Shapes.Line.Y2%2A> 屬性來設定其結束點。 最後，設定它的 <xref:System.Windows.Shapes.Shape.Stroke%2A> 和 <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>，因為不會隱藏沒有筆觸的線條。  
   
- 設定<xref:System.Windows.Shapes.Shape.Fill%2A>一行的項目會有任何作用，由於線條沒有任何內部。  
+ 設定線條的 <xref:System.Windows.Shapes.Shape.Fill%2A> 專案不會有任何作用，因為線條沒有內部。  
   
- 下列範例會繪製內的三行<xref:System.Windows.Controls.Canvas>項目。  
+ 下列範例會在 <xref:System.Windows.Controls.Canvas> 元素內繪製三行。  
   
 ## <a name="example"></a>範例  
  [!code-xaml[drawingwithshapeelements#LineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
- 這個範例屬於較大型的範例;如需完整的範例，請參閱[圖形元素範例](https://go.microsoft.com/fwlink/?LinkID=160037)。  
+ 這個範例是較大範例的一部分;如需完整範例，請參閱[圖形元素範例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Shapes.Line>
-- [圖形元素範例](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [圖形元素範例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements)

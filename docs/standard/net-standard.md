@@ -1,20 +1,20 @@
 ---
 title: .NET Standard
 description: 了解 .NET Standard、其版本及支援的 .NET 實作。
-ms.date: 09/23/2019
+ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124633"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452587"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard)是一種正式的 .net api 規格，其預定適用于所有的 .net 部署。 .NET Standard 背後的動機是在 .NET 生態系統中建立更高的一致性。 [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) 會繼續建立 .NET 實作行為的一致性，但對 .NET 程式庫實作之 .NET Base 類別庫 (BCL) 沒有類似規格。
+[.NET Standard](https://github.com/dotnet/standard)是一種正式的 .net api 規格，其預定適用于所有的 .net 部署。 .NET Standard 背後的動機是在 .NET 生態系統中建立更高的一致性。 [Ecma 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md)會繼續建立 .net 執行行為的一致性，而當 ECMA 335 指定一小組標準程式庫時，.NET Standard 規格會包含更多的 .net api 範圍。
 
 .NET Standard 會啟用下列主要案例：
 

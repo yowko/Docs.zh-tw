@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920384"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450976"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -54,7 +54,7 @@ C#8.0 也是此版本的一部分，其中包括[可為 null 的參考型別](..
 
 ### <a name="default-executables"></a>預設可執行檔
 
-.NET Core 現在預設會建置[架構相依可執行檔](../deploying/index.md#framework-dependent-executables-fde)。 這對於使用 .NET Core 全域安裝版本的應用程式來說，是一項新行為。 先前，只有[獨立式部署](../deploying/index.md#self-contained-deployments-scd)會產生可執行檔。
+.NET Core 現在預設會建置[架構相依可執行檔](../deploying/index.md#publish-runtime-dependent)。 這對於使用 .NET Core 全域安裝版本的應用程式來說，是一項新行為。 先前，只有[獨立式部署](../deploying/index.md#publish-self-contained)會產生可執行檔。
 
 在 `dotnet build` 或 `dotnet publish` 期間，會建立符合您所用 SDK 環境和平台的可執行檔。 針對這些可執行檔，您可以預期能夠進行與其他原生可執行檔相同的操作，例如：
 
@@ -65,7 +65,7 @@ C#8.0 也是此版本的一部分，其中包括[可為 null 的參考型別](..
 
 `dotnet publish` 命令支援將您的應用程式封裝成平台特定單一檔案可執行檔。 可執行檔會自我解壓縮，並包含執行應用程式所需的所有相依性 (包括原生)。 第一次執行應用程式時，系統會將應用程式解壓縮到以應用程式名稱和組建識別碼為基礎的目錄。 再次執行應用程式時的啟動速度會更快。 除非使用新版本，否則應用程式不需要再次自我解壓縮。
 
-若要發佈單一檔案可執行檔，請在專案中或在命令列上使用 `dotnet publish` 命令來設定 `PublishSingleFile`：
+若要發佈單一檔案可執行檔，請在專案中或在命令列上使用 `PublishSingleFile` 命令來設定 `dotnet publish`：
 
 ```xml
 <PropertyGroup>
@@ -273,7 +273,7 @@ Visual Studio 2019 會新增 [新增專案] 範本，供 .NET Core 3.0 Windows F
 
 #### <a name="winforms-high-dpi"></a>WinForms 高 DPI
 
-.NET Core Windows Forms 應用程式可以使用 <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType> 設定高 DPI 模式。 除非已透過其他方法 (例如在 `Application.Run` 前面加上 `App.Manifest` 或 P/Invoke) 進行設定，否則 `SetHighDpiMode` 方法可以設定對應的高 DPI 模式。
+.NET Core Windows Forms 應用程式可以使用 <xref:System.Windows.Forms.Application.SetHighDpiMode(System.Windows.Forms.HighDpiMode)?displayProperty=nameWithType> 設定高 DPI 模式。 除非已透過其他方法 (例如在 `SetHighDpiMode` 前面加上 `App.Manifest` 或 P/Invoke) 進行設定，否則 `Application.Run` 方法可以設定對應的高 DPI 模式。
 
 可能的 `highDpiMode` 值 (如 <xref:System.Windows.Forms.HighDpiMode?displayProperty=nameWithType> 列舉所示) 為：
 
@@ -301,7 +301,7 @@ Windows 提供豐富的原生 API，其採用的形式為一般 C API、COM 和 
 
 [MSIX](https://docs.microsoft.com/windows/msix/) 是新的 Windows 應用程式套件格式。 它可以用來將 .NET Core 3.0 桌面應用程式部署至 Windows 10。
 
-Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) \(機器翻譯\) 可讓您利用[獨立式](../deploying/index.md#self-contained-deployments-scd) .NET Core 應用程式建立 MSIX 套件。
+Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) \(機器翻譯\) 可讓您利用[獨立式](../deploying/index.md#publish-self-contained) .NET Core 應用程式建立 MSIX 套件。
 
 .NET Core 專案檔必須指定在 `<RuntimeIdentifiers>` 屬性中支援的執行階段：
 
@@ -421,7 +421,7 @@ var slice = a[i1..i2]; // { 3, 4, 5 }
 
 ### <a name="async-streams"></a>非同步資料流
 
-<xref:System.Collections.Generic.IAsyncEnumerable%601> 類型是 <xref:System.Collections.Generic.IEnumerable%601> 的新非同步版本。 此語言可讓您透過 `IAsyncEnumerable<T>` 執行 `await foreach` 以取用其元素，然後對它們使用 `yield return` 以產生元素。
+<xref:System.Collections.Generic.IAsyncEnumerable%601> 類型是 <xref:System.Collections.Generic.IEnumerable%601> 的新非同步版本。 此語言可讓您透過 `await foreach` 執行 `IAsyncEnumerable<T>` 以取用其元素，然後對它們使用 `yield return` 以產生元素。
 
 下列範例同時示範如何產生和取用非同步資料流。 `foreach` 是非同步陳述式，其本身會使用 `yield return` 來為呼叫端產生非同步資料流。 此模式 (使用 `yield return`) 是針對產生非同步資料流建議採用的模型。
 
@@ -435,7 +435,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 }
 ```
 
-除了能夠執行 `await foreach` 之外，您也可以建立非同步迭代器，例如建立一個會傳回 `IAsyncEnumerable/IAsyncEnumerator` 以供您在其中執行 `await` 和 `yield` 的迭代器。 針對需要處置的物件，您可以使用各種 BCL 類型 (例如 `Stream` 和 `Timer`) 所實作的 `IAsyncDisposable`。
+除了能夠執行 `await foreach` 之外，您也可以建立非同步迭代器，例如建立一個會傳回 `IAsyncEnumerable/IAsyncEnumerator` 以供您在其中執行 `await` 和 `yield` 的迭代器。 針對需要處置的物件，您可以使用各種 BCL 類型 (例如 `IAsyncDisposable` 和 `Stream`) 所實作的 `Timer`。
 
 如需詳細資訊，請參閱[非同步資料流教學課程](../../csharp/tutorials/generate-consume-asynchronous-stream.md)。
 

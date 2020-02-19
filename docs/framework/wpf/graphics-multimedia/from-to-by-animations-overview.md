@@ -1,5 +1,5 @@
 ---
-title: From-至-By 動畫概觀
+title: 從動畫總覽
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: d36be70a8c1287274c3820aec3aa789830914ceb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 661c035f55ba1fb550726d75921cd01a72b2eecc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615406"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448996"
 ---
 # <a name="fromtoby-animations-overview"></a>From/To/By 動畫概觀
 本主題說明如何使用 From/To/By 動畫以動畫顯示相依性屬性。 From/To/By 動畫可建立兩個值之間的轉換。  
   
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>必要條件  
- 若要了解本主題，您應該熟悉[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]動畫功能。 如需動畫功能，請參閱 <<c0> [ 動畫概觀](animation-overview.md)。  
+## <a name="prerequisites"></a>Prerequisites  
+ 若要瞭解本主題，您應該熟悉 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫功能。 如需動畫功能的簡介，請參閱[動畫總覽](animation-overview.md)。  
   
 <a name="whatisanimation"></a>   
 ## <a name="what-is-a-fromtoby-animation"></a>什麼是 From/To/By 動畫？  
- From/To/By 動畫是一種<xref:System.Windows.Media.Animation.AnimationTimeline>，建立起始值和結束值之間的轉換。 完成轉換所需的時間長度由<xref:System.Windows.Media.Animation.Timeline.Duration%2A>的動畫。  
+ From/To/By 動畫是一種 <xref:System.Windows.Media.Animation.AnimationTimeline> 類型，可在起始值和結束值之間建立轉換。 完成轉換所需的時間量取決於該動畫的 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>。  
   
- 您可以套用 From/To/By 動畫所使用的屬性<xref:System.Windows.Media.Animation.Storyboard>標記和程式碼，或使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>在程式碼中的方法。 您也可以使用 by 動畫建立<xref:System.Windows.Media.Animation.AnimationClock>並將它套用至一或多個屬性。 如需套用動畫之不同方法的詳細資訊，請參閱[屬性動畫技術概觀](property-animation-techniques-overview.md)。  
+ 您可以將 From/To/By 動畫套用至屬性，方法是使用標記和程式碼中的 <xref:System.Windows.Media.Animation.Storyboard>，或在程式碼中使用 <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> 方法。 您也可以使用 From/To/By 動畫來建立 <xref:System.Windows.Media.Animation.AnimationClock>，並將它套用至一或多個屬性。 如需套用動畫之不同方法的詳細資訊，請參閱[屬性動畫技術概觀](property-animation-techniques-overview.md)。  
   
- From/To/By 動畫的目標值不能超過兩個。 如果您所需的動畫會有兩個以上的目標值，請使用主要畫面格動畫。 主要畫面格動畫中所述[主要畫面格動畫概觀](key-frame-animations-overview.md)。  
+ From/To/By 動畫的目標值不能超過兩個。 如果您所需的動畫會有兩個以上的目標值，請使用主要畫面格動畫。 主要畫面格動畫會在[主要畫面格動畫總覽](key-frame-animations-overview.md)中加以說明。  
   
 <a name="animation_types"></a>   
 ## <a name="fromtoby-animation-types"></a>From/To/By 動畫類型  
- 由於動畫會產生屬性值，因此針對不同的屬性類型會有不同的動畫類型。 若要動畫顯示採用的屬性<xref:System.Double>，這類<xref:System.Windows.FrameworkElement.Width%2A>屬性的項目，使用會產生動畫<xref:System.Double>值。 若要動畫顯示採用的屬性<xref:System.Windows.Point>，使用會產生動畫<xref:System.Windows.Point>值，並依此類推。  
+ 由於動畫會產生屬性值，因此針對不同的屬性類型會有不同的動畫類型。 若要以動畫顯示採用 <xref:System.Double>的屬性（例如元素的 <xref:System.Windows.FrameworkElement.Width%2A> 屬性），請使用會產生 <xref:System.Double> 值的動畫。 若要以動畫顯示接受 <xref:System.Windows.Point>的屬性，請使用會產生 <xref:System.Windows.Point> 值的動畫等等。  
   
- From/To/By 動畫類別屬於<xref:System.Windows.Media.Animation>命名空間，並使用下列命名慣例：  
+ From/To/By 動畫類別屬於 <xref:System.Windows.Media.Animation> 命名空間，並使用下列命名慣例：  
   
- *\<Type>* `Animation`  
+ *\<類型 >* `Animation`  
   
  其中 *\<Type>* 是該類別建立動畫的值類型。  
   
@@ -63,82 +63,82 @@ ms.locfileid: "64615406"
   
 <a name="anim_values"></a>   
 ## <a name="target-values"></a>目標值  
- From/To/By 動畫可建立兩個目標值之間的轉換。 它會指定起始值 (使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性) 和結束值 (使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性)。 不過，您也可以只指定起始值、目的值或位移值。 在這些情況下，動畫會從以動畫顯示的屬性，取得遺漏的目標值。 下列清單說明指定動畫目標值的不同方式。  
+ From/To/By 動畫可建立兩個目標值之間的轉換。 通常會指定起始值（使用 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 屬性加以設定）和結束值（使用 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 屬性加以設定）。 不過，您也可以只指定起始值、目的值或位移值。 在這些情況下，動畫會從以動畫顯示的屬性，取得遺漏的目標值。 下列清單說明指定動畫目標值的不同方式。  
   
 - **起始值**  
   
-     使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性，當您想要明確指定動畫的起始值。 您可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>本身，或使用屬性<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>或<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。 如果您只有指定<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性，動畫從該值的基底值的轉換動畫的屬性。  
+     當您想要明確指定動畫的起始值時，請使用 [<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>] 屬性。 您可以單獨使用 [<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>] 屬性，或搭配 [<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>] 或 [<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>] 屬性。 如果您只指定 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 屬性，動畫會從該值轉換成動畫屬性的基底值。  
   
 - **結束值**  
   
-     若要指定動畫的結束值，請使用其<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性。 如果您使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>本身的屬性，動畫會取得其起始值從動畫顯示屬性，或從另一個套用至相同屬性的動畫的輸出。 您可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性搭配<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>來明確指定開始和結束值動畫的屬性。  
+     若要指定動畫的結束值，請使用其 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 屬性。 如果您單獨使用 [<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>] 屬性，動畫會從正在進行動畫處理的屬性取得其起始值，或從套用至相同屬性的另一個動畫的輸出中取得。 您可以使用 [<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>] 屬性搭配 [<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>] 屬性，以明確指定動畫的開始和結束值。  
   
 - **位移值**  
   
-     <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性可讓您指定的位移，而非明確啟動或動畫的結束值。 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>動畫的屬性會指定多少動畫所變更的值在其持續期間內。 您可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性本身，或使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性。 如果您只有指定<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性，動畫之屬性的基底值或另一個動畫的輸出，請新增位移的值。  
+     <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 屬性可讓您指定位移，而不是動畫的明確開始或結束值。 動畫的 [<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>] 屬性會指定動畫在其持續時間內變更值的程度。 您可以使用 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 屬性本身或 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 屬性。 如果您只指定 [<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>] 屬性，動畫會將 [位移] 值新增至屬性的基底值或另一個動畫的輸出。  
   
 <a name="examples"></a>   
 ## <a name="using-fromtoby-values"></a>使用 From/To/By 值  
- 下列各節說明如何使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>， <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>，和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性一起或分開。  
+ 下列各節說明如何一起或分別使用 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>和 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 屬性。  
   
- 本節中的範例會每次使用<xref:System.Windows.Media.Animation.DoubleAnimation>，這是一種 From/To/By 動畫來以動畫顯示<xref:System.Windows.FrameworkElement.Width%2A>屬性<xref:System.Windows.Shapes.Rectangle>也就是 10 個裝置獨立像素高和 100 裝置獨立像素寬。  
+ 本節中的範例會使用 <xref:System.Windows.Media.Animation.DoubleAnimation>，這是 From/To/By 動畫的類型，用來以動畫顯示10個裝置獨立圖元高和100裝置獨立圖元寬的 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.FrameworkElement.Width%2A> 屬性。  
   
- 雖然每個範例會使用<xref:System.Windows.Media.Animation.DoubleAnimation>、 From、 To 和 By 屬性的所有 From/To/By 動畫的行為相同。 雖然每個範例會使用<xref:System.Windows.Media.Animation.Storyboard>，您可以使用 From/To/By 動畫以其他方式。 如需詳細資訊，請參閱 <<c0> [ 屬性動畫技術概觀](property-animation-techniques-overview.md)。  
+ 雖然每個範例都使用 <xref:System.Windows.Media.Animation.DoubleAnimation>，但 from、To 和 By 動畫的全部內容都有相同的行為。 雖然這些範例中的每一個都使用 <xref:System.Windows.Media.Animation.Storyboard>，但您可以透過其他方式使用 From/To/By 動畫。 如需詳細資訊，請參閱[屬性動畫技術總覽](property-animation-techniques-overview.md)。  
   
-### <a name="fromto"></a>寄件者/收件者  
- 當您設定<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>並<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>值放在一起，動畫會從所指定的值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性所指定的值<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性。  
+### <a name="fromto"></a>來源/目的地  
+ 當您同時設定 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 和 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 值時，動畫會從 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 屬性所指定的值，到 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 屬性所指定的值。  
   
- 下列範例會設定<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>的屬性<xref:System.Windows.Media.Animation.DoubleAnimation>設為 50 及其<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>到 300 之間的屬性。 如此一來，<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>從 50 至 300 動畫顯示。  
+ 下列範例會將 <xref:System.Windows.Media.Animation.DoubleAnimation> 的 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 屬性設為50，並將其 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 屬性設定為300。 因此，<xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.FrameworkElement.Width%2A> 會從50到300的動畫。  
   
  [!code-csharp[basicvalues_snip#FromToAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromtoanimationinline)]
  [!code-vb[basicvalues_snip#FromToAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromtoanimationinline)]  
   
-### <a name="to"></a>以  
- 當您將剛<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性，動畫會從基底值的動畫的屬性，或從先前套用至相同的屬性，為所指定的值至組成動畫輸出<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性。  
+### <a name="to"></a>至  
+ 當您只設定 [<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>] 屬性時，動畫會從動畫屬性的基底值進行，或從先前套用至相同屬性的組合動畫的輸出，到 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 屬性所指定的值。  
   
- (「 組成動畫 」 是指<xref:System.Windows.Media.Animation.ClockState.Active>或是<xref:System.Windows.Media.Animation.ClockState.Filling>先前套用至使用套用目前動畫時，仍在作用中是相同屬性的動畫<xref:System.Windows.Media.Animation.HandoffBehavior.Compose>遞移式行為。)  
+ （「撰寫動畫」是指先前套用至相同屬性的 <xref:System.Windows.Media.Animation.ClockState.Active> 或 <xref:System.Windows.Media.Animation.ClockState.Filling> 動畫，而當目前的動畫是使用 <xref:System.Windows.Media.Animation.HandoffBehavior.Compose> 的遞交行為來套用時，仍會生效）。  
   
- 下列範例會將剛<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性<xref:System.Windows.Media.Animation.DoubleAnimation>到 300 之間。 指定沒有起始值，因為<xref:System.Windows.Media.Animation.DoubleAnimation>使用的基底值 (100)<xref:System.Windows.FrameworkElement.Width%2A>做為其起始值的屬性。 <xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>從 100 至動畫的目標值 300 動畫顯示。  
+ 下列範例只會將 <xref:System.Windows.Media.Animation.DoubleAnimation> 的 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 屬性設定為300。 因為沒有指定起始值，所以 <xref:System.Windows.Media.Animation.DoubleAnimation> 會使用 <xref:System.Windows.FrameworkElement.Width%2A> 屬性的基底值（100）做為其起始值。 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.FrameworkElement.Width%2A> 會從100動畫到動畫的目標值300。  
   
  [!code-csharp[basicvalues_snip#ToAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#toanimationinline)]
  [!code-vb[basicvalues_snip#ToAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#toanimationinline)]  
   
-### <a name="by"></a>By  
- 當您將剛<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>動畫的屬性，動畫會從基底值之屬性的動畫顯示，或從該值與所指定的值總和的組成動畫輸出<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。  
+### <a name="by"></a>依據  
+ 當您只設定動畫的 [<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>] 屬性時，動畫會從正在進行動畫之屬性的基底值進行，或從撰寫動畫的輸出到該值的總和，以及由 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 屬性所指定的值來進行。  
   
- 下列範例會將剛<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性<xref:System.Windows.Media.Animation.DoubleAnimation>到 300 之間。 因為範例沒有指定起始值，所以<xref:System.Windows.Media.Animation.DoubleAnimation>使用的基底值<xref:System.Windows.FrameworkElement.Width%2A>屬性，100，做為其起始值。 結束值取決於新增<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>動畫，300，其起始值 100 的值：400. 如此一來，<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>從 100 至 400 動畫顯示。  
+ 下列範例只會將 <xref:System.Windows.Media.Animation.DoubleAnimation> 的 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 屬性設定為300。 因為此範例不會指定起始值，所以 <xref:System.Windows.Media.Animation.DoubleAnimation> 會使用 <xref:System.Windows.FrameworkElement.Width%2A> 屬性的基底值（100）做為其起始值。 結束值的判斷方式是將動畫的 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 值300，加上其起始值100：400。 因此，<xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.FrameworkElement.Width%2A> 會從100到400的動畫。  
   
  [!code-csharp[basicvalues_snip#ByAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#byanimationinline)]
  [!code-vb[basicvalues_snip#ByAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#byanimationinline)]  
   
 ### <a name="fromby"></a>From/By  
- 當您設定<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>並<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>動畫的屬性，動畫會從所指定的值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性，以指定之總和的值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>和<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性。  
+ 當您設定動畫的 [<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>] 和 [<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>] 屬性時，動畫會從 [<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>] 屬性所指定的值，到 [<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>] 和 [<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>] 屬性的總和所指定的值。  
   
- 下列範例會設定<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>的屬性<xref:System.Windows.Media.Animation.DoubleAnimation>設為 50 及其<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>到 300 之間的屬性。 結束值取決於新增<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>動畫，300，其起始值 50 的值：350. 如此一來，<xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>從 50 至 350 動畫顯示。  
+ 下列範例會將 <xref:System.Windows.Media.Animation.DoubleAnimation> 的 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 屬性設為50，並將其 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 屬性設定為300。 結束值的判斷方式是將動畫的 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 值300，加上其起始值50：350。 因此，<xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.FrameworkElement.Width%2A> 會從50到350的動畫。  
   
  [!code-csharp[basicvalues_snip#FromByAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#frombyanimationinline)]
  [!code-vb[basicvalues_snip#FromByAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#frombyanimationinline)]  
   
 ### <a name="from"></a>從  
- 當您指定剛<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>的值為動畫，動畫會從所指定的值<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性，以動畫顯示屬性的基底值，或者組成動畫輸出。  
+ 當您只指定動畫的 [<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>] 值時，動畫會從 [<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>] 屬性所指定的值，到正在製作動畫之屬性的基底值，或是在撰寫動畫的輸出中進行。  
   
- 下列範例會將剛<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性<xref:System.Windows.Media.Animation.DoubleAnimation>為 50。 不指定任何結束值，因為<xref:System.Windows.Media.Animation.DoubleAnimation>使用的基底值<xref:System.Windows.FrameworkElement.Width%2A>屬性，100，做為其結束值。 <xref:System.Windows.FrameworkElement.Width%2A>的<xref:System.Windows.Shapes.Rectangle>從 50 至基底值的動畫顯示<xref:System.Windows.FrameworkElement.Width%2A>屬性，100。  
+ 下列範例只會將 <xref:System.Windows.Media.Animation.DoubleAnimation> 的 <xref:System.Windows.Media.Animation.DoubleAnimation.From%2A> 屬性設定為50。 因為未指定結束值，所以 <xref:System.Windows.Media.Animation.DoubleAnimation> 會使用 <xref:System.Windows.FrameworkElement.Width%2A> 屬性的基底值100做為其結束值。 <xref:System.Windows.Shapes.Rectangle> 的 <xref:System.Windows.FrameworkElement.Width%2A> 會從50動畫到 <xref:System.Windows.FrameworkElement.Width%2A> 屬性100的基底值。  
   
  [!code-csharp[basicvalues_snip#FromAnimationInline](~/samples/snippets/csharp/VS_Snippets_Wpf/basicvalues_snip/CSharp/AnimationTargetValuesExample.cs#fromanimationinline)]
  [!code-vb[basicvalues_snip#FromAnimationInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicvalues_snip/VisualBasic/AnimationTargetValuesExample.vb#fromanimationinline)]  
   
 ### <a name="toby"></a>To/By  
- 如果您同時設定<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>而<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性的動畫，<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性會被忽略。  
+ 如果您同時設定 <xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> 和動畫的 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 屬性，則會忽略 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A> 屬性。  
   
 <a name="otheranimationtypes"></a>   
 ## <a name="other-animation-types"></a>其他動畫類型  
- From/To/By 動畫不是唯一的動畫類型，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供： 它也提供主要畫面格動畫和路徑動畫。  
+ From/To/By 動畫不是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的唯一動畫類型：它也提供主要畫面格動畫和路徑動畫。  
   
-- 主要畫面格動畫會沿著使用主要畫面格所描繪的任意目的數值以動畫顯示。 如需詳細資訊，請參閱 <<c0> [ 主要畫面格動畫概觀](key-frame-animations-overview.md)。  
+- 主要畫面格動畫會沿著使用主要畫面格所描繪的任意目的數值以動畫顯示。 如需詳細資訊，請參閱[主要畫面格動畫總覽](key-frame-animations-overview.md)。  
   
-- 路徑動畫會產生輸出值<xref:System.Windows.Media.PathGeometry>。 如需詳細資訊，請參閱 <<c0> [ 路徑動畫概觀](path-animations-overview.md)。  
+- 路徑動畫會從 <xref:System.Windows.Media.PathGeometry>產生輸出值。 如需詳細資訊，請參閱[路徑動畫總覽](path-animations-overview.md)。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也可讓您建立自己的自訂動畫類型。 如需詳細資訊，請參閱 <<c0> [ 自訂動畫概觀](custom-animations-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也可讓您建立自己的自訂動畫類型。 如需詳細資訊，請參閱[自訂動畫總覽](custom-animations-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -149,4 +149,4 @@ ms.locfileid: "64615406"
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
 - [路徑動畫概觀](path-animations-overview.md)
 - [自訂動畫概觀](custom-animations-overview.md)
-- [From、To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [From、To 和 By 動畫目標值範例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)

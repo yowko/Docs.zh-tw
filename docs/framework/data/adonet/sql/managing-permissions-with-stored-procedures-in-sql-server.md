@@ -2,12 +2,12 @@
 title: 使用預存程序管理 SQL Server 中的權限
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: 412d2a0a292e2ac83e6c42cf721c83e63633408c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 85383c46dd029db825d24d2f67d2dbda00f3bc95
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70780947"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452379"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>使用預存程序管理 SQL Server 中的權限
 為資料庫建立多重防線的方法之一，就是使用預存程序 (Stored Procedure) 或使用者定義的函式來實作所有資料存取。 您可以撤銷或拒絕基礎物件 (例如資料表) 的所有權限，然後在預存程序上授與 EXECUTE 權限。 如此即可有效地在資料和資料庫物件周圍建立安全性防線。  
@@ -32,7 +32,7 @@ ms.locfileid: "70780947"
 ## <a name="stored-procedure-execution"></a>預存程序的執行  
  預存程序可以利用擁有權鏈結提供對資料的存取，如此使用者即使沒有明確的權限，也可以存取資料庫物件。 當循序彼此存取的物件是由同一個使用者所擁有時，即構成擁有權鏈結。 例如，預存程序可以呼叫其他的預存程序，或者預存程序也可以存取多個資料表。 如果執行鏈結中的所有物件都具有相同的擁有者，則 SQL Server 只會檢查呼叫端的 EXECUTE 權限，而不會檢查呼叫端對其他物件的權限。 因此您只需要授與預存程序上的 EXECUTE 權限，而可以撤銷或拒絕基礎資料表上的所有權限。  
   
-## <a name="best-practices"></a>最佳作法  
+## <a name="best-practices"></a>最佳做法  
  單靠撰寫預存程序並不能夠確保應用程式的安全性。 您也應該考量下列潛在的安全性漏洞。  
   
 - 針對想要用來存取資料的資料庫角色，授與預存程序上的 EXECUTE 權限。  
@@ -52,16 +52,16 @@ ms.locfileid: "70780947"
 ## <a name="external-resources"></a>外部資源  
  如需詳細資訊，請參閱下列資源。  
   
-|Resource|描述|  
+|資源|描述|  
 |--------------|-----------------|  
-|《SQL Server 線上叢書》中的[預存程序](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)和 [SQL 插入](https://go.microsoft.com/fwlink/?LinkId=98234)|說明如何建立預存程序以及「SQL 插入」運作方式的主題。|  
+|[預存程式](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)和[SQL 插入](/sql/relational-databases/security/sql-injection)式|文章會說明如何建立預存程式，以及 SQL 插入式的運作方式。|  
   
 ## <a name="see-also"></a>另請參閱
 
 - [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
 - [SQL Server 安全性概觀](overview-of-sql-server-security.md)
 - [SQL Server 中的應用程式安全性案例](application-security-scenarios-in-sql-server.md)
-- [在 SQL Server 中撰寫安全的動態 SQL](writing-secure-dynamic-sql-in-sql-server.md)
+- [在 SQL Server 撰寫安全動態 SQL](writing-secure-dynamic-sql-in-sql-server.md)
 - [在 SQL Server 中簽署預存程序](signing-stored-procedures-in-sql-server.md)
 - [在 SQL Server 中使用模擬來自訂權限](customizing-permissions-with-impersonation-in-sql-server.md)
 - [使用預存程序修改資料](../modifying-data-with-stored-procedures.md)

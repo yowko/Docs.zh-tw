@@ -1,19 +1,19 @@
 ---
 title: dotnet 命令
 description: 瞭解 dotnet 命令（.NET Core CLI 的一般驅動程式）及其使用方式。
-ms.date: 06/04/2018
-ms.openlocfilehash: 7674529980623caa2291987bdeba52f50ce2fc2c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/13/2020
+ms.openlocfilehash: 364978465b63401907b46ead64dbceb2f15c8169
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920541"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451164"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `dotnet` - 管理 .NET 原始程式碼和二進位檔的工具。
 
@@ -21,14 +21,14 @@ ms.locfileid: "76920541"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
     [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
@@ -36,7 +36,7 @@ dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--de
     [--runtimeconfig] [-v|--verbosity] [--version]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
@@ -49,11 +49,11 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 `dotnet` 是管理 .NET 原始程式碼和二進位檔的工具。 會公開執行特定工作的命令，例如 [`dotnet build`](dotnet-build.md) 和 [`dotnet run`](dotnet-run.md)。 每個命令會定義自己的引數。 每個命令後方鍵入 `--help` 以存取簡短說明文件。
 
-可藉由指定應用程式 DLL (例如 `dotnet myapp.dll`)，使用 `dotnet` 來執行應用程式。 請參閱 [.NET Core 應用程式部署](../deploying/index.md) 來了解部署選項。
+可藉由指定應用程式 DLL (例如 `dotnet`)，使用 `dotnet myapp.dll` 來執行應用程式。 請參閱 [.NET Core 應用程式部署](../deploying/index.md) 來了解部署選項。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--additional-deps <PATH>`
 
@@ -98,7 +98,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 在必要的共用架構無法使用時定義行為。 `N` 可以是：
 
 - `0` - 對次要版本也停用向前復原。
-- `1` - 對次要版本向前復原，主要版本則不。 這是預設行為。
+- `1` - 對次要版本向前復原，主要版本則不。 此為預設行為。
 - `2` - 對次要及主要版本向前復原。
 
  如需詳細資訊，請參閱[向前復原](../whats-new/dotnet-core-2-1.md#roll-forward)。
@@ -117,7 +117,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 印出使用中的 .NET Core SDK 版本。
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--additional-deps <PATH>`
 
@@ -167,7 +167,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 印出使用中的 .NET Core SDK 版本。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--additionalprobingpath <PATH>`
 
@@ -215,9 +215,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ### <a name="general"></a>一般
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
-| 命令                                       | 函數                                                            |
+| Command                                       | 函式                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)               | 建置 .NET Core 應用程式。                                     |
 | [dotnet build-server](dotnet-build-server.md) | 與組建所啟動的伺服器互動。                          |
@@ -234,9 +234,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 | [dotnet store](dotnet-store.md)               | 在執行階段套件存放區中儲存組件。                     |
 | [dotnet test](dotnet-test.md)                 | 使用測試執行器執行測試。                                     |
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
-| 命令                             | 函數                                                            |
+| Command                             | 函式                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | 建置 .NET Core 應用程式。                                     |
 | [dotnet clean](dotnet-clean.md)     | 清除組建輸出。                                              |
@@ -252,9 +252,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 | [dotnet store](dotnet-store.md)     | 在執行階段套件存放區中儲存組件。                     |
 | [dotnet test](dotnet-test.md)       | 使用測試執行器執行測試。                                     |
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-| 命令                             | 函數                                                            |
+| Command                             | 函式                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | 建置 .NET Core 應用程式。                                     |
 | [dotnet clean](dotnet-clean.md)     | 清除組建輸出。                                              |
@@ -272,7 +272,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ### <a name="project-references"></a>專案參考
 
-命令 | 函數
+Command | 函式
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | 新增專案參考。
 [dotnet list reference](dotnet-list-reference.md) | 列出專案參考。
@@ -280,35 +280,35 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ### <a name="nuget-packages"></a>NuGet 套件
 
-命令 | 函數
+Command | 函式
 --- | ---
 [dotnet add package](dotnet-add-package.md) | 新增 NuGet 套件。
 [dotnet remove package](dotnet-remove-package.md) | 移除 NuGet 套件。
 
 ### <a name="nuget-commands"></a>NuGet 命令
 
-命令 | 函數
+Command | 函式
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | 從伺服器刪除或取消列出套件。
 [dotnet nuget locals](dotnet-nuget-locals.md) | 清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。
 [dotnet nuget push](dotnet-nuget-push.md) | 將套件推送至伺服器並發行。
 
-### <a name="global-tools-commands"></a>通用工具命令
+### <a name="global-tool-path-and-local-tools-commands"></a>全域、工具路徑和本機工具命令
 
-[.NET Core 通用工具](global-tools.md)將從 .NET Core SDK 2.1.300 開始提供使用：
+工具是從 NuGet 套件安裝並從命令提示字元叫用的主控台應用程式。 您可以自行撰寫工具，或安裝由協力廠商撰寫的工具。 工具也稱為「通用工具」、「工具路徑工具」和「本機工具」。 如需詳細資訊，請參閱[.Net Core 工具總覽](global-tools.md)。 從 .NET Core SDK 2.1 開始提供全域和工具路徑工具。 從 .NET Core SDK 3.0 開始提供本機工具。
 
-命令 | 函數
+Command | 函式
 --- | ---
-[dotnet tool install](dotnet-tool-install.md) | 在您的電腦上安裝通用工具。
-[dotnet tool list](dotnet-tool-list.md) | 列出在您電腦上的預設目錄或在指定路徑中目前已安裝的所有通用工具。
-[dotnet tool uninstall](dotnet-tool-uninstall.md) | 將通用工具從您的電腦解除安裝。
-[dotnet tool update](dotnet-tool-update.md) | 更新您電腦上的通用工具。
+[dotnet tool install](dotnet-tool-install.md) | 在您的電腦上安裝工具。
+[dotnet tool list](dotnet-tool-list.md) | 列出目前安裝在您電腦上的所有全域、工具路徑或本機工具。
+[dotnet tool uninstall](dotnet-tool-uninstall.md) | 從您的電腦卸載工具。
+[dotnet tool update](dotnet-tool-update.md) | 更新安裝在您電腦上的工具。
 
 ### <a name="additional-tools"></a>其他工具
 
 從 .NET Core SDK 2.1.300 開始，先前僅能透過 `DotnetCliToolReference` 於個別專案上使用的數個工具，現在皆已做為 .NET Core SDK 的一部分提供。 這些工具列於下列資料表中：
 
-| 工具                                              | 函數                                                     |
+| 工具                                              | 函式                                                     |
 | ------------------------------------------------- | ------------------------------------------------------------ |
 | dev-certs                                         | 建立及管理開發憑證。                |
 | [ef](/ef/core/miscellaneous/cli/dotnet)           | Entity Framework Core 命令列工具。                    |
@@ -340,7 +340,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ## <a name="environment-variables"></a>環境變數
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 
@@ -362,7 +362,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 如果設定為 `0`，將停用次要版本向前復原。 如需詳細資訊，請參閱[向前復原](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `DOTNET_PACKAGES`
 
@@ -380,7 +380,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 指定是否從全域位置解析 .NET Core 執行階段、共用架構或 SDK。 如果未設定，則預設為 `true`。 設定為 `false` 則不會從全域位置解析，而且會有獨立模式的 .NET Core 安裝 (接受 `0` 或 `false` 值)。 如需多層級查閱的詳細資訊，請參閱 [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md) (多層級 SharedFX 查閱)。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `DOTNET_PACKAGES`
 
@@ -396,7 +396,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 ---
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)
 - [.NET Core 執行時間設定](../run-time-config/index.md)
