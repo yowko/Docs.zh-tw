@@ -2,12 +2,12 @@
 title: 處理非同步應用程式中的重新進入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 44c2cdbadd02aef6b2bbb32bde8bcb9b19f8360d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354271"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452574"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>處理非同步應用程式中的重新進入（Visual Basic）
 
@@ -17,7 +17,7 @@ ms.locfileid: "74354271"
 > 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。
 
 > [!NOTE]
-> 傳輸層安全性（TLS）版本1.2 現在是應用程式開發中所使用的最低版本。 如果您的應用程式以低於4.7 的 .NET framework 版本為目標，請參閱下列文章，以瞭解[傳輸層安全性（TLS）與 .NET Framework 的最佳做法](../../../../framework/network-programming/tls.md) 
+> 傳輸層安全性（TLS）版本1.2 現在是應用程式開發中所使用的最低版本。 如果您的應用程式以4.7 之前的 .NET Framework 版本為目標，請參閱下列文章，以取得[.NET Framework 的傳輸層安全性（TLS）最佳做法](../../../../framework/network-programming/tls.md)。
 
 ## <a name="BKMK_RecognizingReentrancy"></a> 辨識重新進入
 
@@ -474,7 +474,7 @@ End Function
 
 您可以執行這個範例，方法是將變更貼至[建置應用程式](#BKMK_BuildingTheApp)中的程式碼，或者遵循[下載應用程式](#BKMK_DownloadingTheApp)的指示來下載範例，然後執行 QueueResults 專案。
 
-#### <a name="points-of-interest"></a>參考資訊
+#### <a name="points-of-interest"></a>興趣點
 
 在輸出中以井字號 (#) 開頭的資訊行會釐清此範例的運作方式。
 
@@ -556,9 +556,9 @@ End Function
 
 1. 啟動 Visual Studio。
 
-2. 在功能表列上，依序選擇 檔案、新增和 專案。
+2. 在功能表上，依序選擇 [檔案]、[新增] 和 [專案]。
 
-     [ **新增專案** ] 對話方塊隨即開啟。
+     此時會開啟 [新增專案] 對話方塊。
 
 3. 在 [**已安裝的範本**] 窗格中，展開 [ **Visual Basic**]，然後展開 [ **Windows**]。
 
@@ -682,7 +682,7 @@ End Function
 
 12. 從[停用開始按鈕](#BKMK_DisableTheStartButton)、[取消後再重新啟動作業](#BKMK_CancelAndRestart)或[執行多個作業並將輸出加入佇列](#BKMK_RunMultipleOperations)進行變更以處理重新進入。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [逐步解說：使用 Async 和 Await 存取 Web (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

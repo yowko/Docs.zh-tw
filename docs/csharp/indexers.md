@@ -4,12 +4,12 @@ description: 了解 C# 索引子，以及其如何實作索引的屬性，而索
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039124"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450878"
 ---
 # <a name="indexers"></a>索引子
 
@@ -177,7 +177,7 @@ public class DataSamples
 
 ### <a name="dictionaries"></a>字典
 
-另一個常見案例是當您需要建立字典或對應的模型時。 當您的類型根據索引鍵 (通常是文字索引鍵) 儲存值時，就會發生此情況。 此範例會建立將命令列引數對應至管理這些選項之 [Lambda 運算式](delegates-overview.md)的字典。 下列範例顯示兩個類別︰將命令列選項對應至 `Action` 委派的 `ArgsActions` 類別，以及遇到該選項時會使用 `ArgsActions` 執行每個 `Action` 的 `ArgsProcessor`。
+另一個常見案例是當您需要建立字典或對應的模型時。 當您的類型根據索引鍵 (通常是文字索引鍵) 儲存值時，就會發生此情況。 此範例會建立將命令列引數對應至管理這些選項之 [Lambda 運算式](delegates-overview.md)的字典。 下列範例顯示兩個類別︰將命令列選項對應至 `ArgsActions` 委派的 `Action` 類別，以及遇到該選項時會使用 `ArgsProcessor` 執行每個 `ArgsActions` 的 `Action`。
 
 ```csharp
 public class ArgsProcessor
@@ -321,7 +321,7 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 
 會為建構的泛型型別建立「別名」。 這些陳述式可讓程式碼稍後使用更具描述性的 `DateMeasurements` 和 `CityDateMeasurements` 名稱，而不是 `Dictionary<DateTime, Measurements>` 和 `Dictionary<string, Dictionary<DateTime, Measurements> >` 的泛型建構。 此建構確實需要在 `=` 符號右側使用完整的類型名稱。
 
-第二個方法是移除用來對集合進行索引之任何 `DateTime` 物件的時間部分。 .NET Framework 不包含只有日期的類型。
+第二個方法是移除用來對集合進行索引之任何 `DateTime` 物件的時間部分。 .NET 不包含僅限日期的類型。
 開發人員使用 `DateTime` 類型，但使用 `Date` 屬性來確保該日期的任何 `DateTime` 物件都相等。
 
 ## <a name="summing-up"></a>總結

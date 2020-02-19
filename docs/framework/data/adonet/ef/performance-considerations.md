@@ -2,12 +2,12 @@
 title: 效能考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 2b116a22c0f422377246d8cc0b2d647fd78a289b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 6cd0adb7963b3cfc05fcd6f30d8a7039a50f9485
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039849"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452457"
 ---
 # <a name="performance-considerations-entity-framework"></a>效能考量 (Entity Framework)
 本主題說明 ADO.NET Entity Framework 的效能特性，並提供一些考量因素以協助提升 Entity Framework 應用程式的效能。  
@@ -15,11 +15,11 @@ ms.locfileid: "73039849"
 ## <a name="stages-of-query-execution"></a>查詢執行的階段  
  為進一步了解 Entity Framework 中的查詢效能，了解針對概念模型執行查詢並傳回資料做為物件時發生的作業，對您有所幫助。 以下資料表說明這一系列的作業。  
   
-|運算|相對成本|頻率|註解|  
+|作業|相對成本|頻率|註解|  
 |---------------|-------------------|---------------|--------------|  
-|載入中繼資料|一般|在每個應用程式定義域中執行一次。|Entity Framework 使用的模型和對應中繼資料會載入至 <xref:System.Data.Metadata.Edm.MetadataWorkspace>。 這個中繼資料會在全域中作快取，並在相同的應用程式定義域中，提供給其他 <xref:System.Data.Objects.ObjectContext> 執行個體使用。|  
+|載入中繼資料|中度|在每個應用程式定義域中執行一次。|Entity Framework 使用的模型和對應中繼資料會載入至 <xref:System.Data.Metadata.Edm.MetadataWorkspace>。 這個中繼資料會在全域中作快取，並在相同的應用程式定義域中，提供給其他 <xref:System.Data.Objects.ObjectContext> 執行個體使用。|  
 |開啟資料庫連接|適中<sup>1</sup>|需要時。|因為開啟資料庫的連接會耗用寶貴的資源，所以 Entity Framework 只會在需要時開啟和關閉資料庫連接。 您也可以明確開啟連接。 如需詳細資訊，請參閱[管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。|  
-|產生檢視|High|在每個應用程式定義域中執行一次。 (可以預先產生。)|在 Entity Framework 可以針對概念模型執行查詢，或儲存變更至資料來源之前，Entity Framework 必須產生本地查詢檢視集，才能存取資料庫。 由於產生這些檢視的成本很高，您可以預先產生檢視，在設計階段就把這些檢視加入至專案。 如需詳細資訊，請參閱[如何：預先產生視圖以改善查詢效能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。|  
+|產生檢視|高|在每個應用程式定義域中執行一次。 (可以預先產生。)|在 Entity Framework 可以針對概念模型執行查詢，或儲存變更至資料來源之前，Entity Framework 必須產生本地查詢檢視集，才能存取資料庫。 由於產生這些檢視的成本很高，您可以預先產生檢視，在設計階段就把這些檢視加入至專案。 如需詳細資訊，請參閱[如何：預先產生視圖以改善查詢效能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896240(v=vs.100))。|  
 |準備查詢|中等<sup>2</sup>|針對每個唯一查詢執行一次。|包括組成查詢命令、根據模型和對應的中繼資料產生命令樹，以及定義傳回資料的形式等成本。 由於現在會快取 Entity SQL 查詢命令和 LINQ 查詢，因此後續執行相同查詢時可減少些許時間。 之後執行時您仍可以使用已編譯的 LINQ 查詢減少這種成本，且已編譯查詢可能比自動快取的 LINQ 查詢更有效率。 如需詳細資訊，請參閱[編譯的查詢（LINQ to Entities）](./language-reference/compiled-queries-linq-to-entities.md)。 如需 LINQ 查詢執行的一般資訊，請參閱[LINQ to Entities](./language-reference/linq-to-entities.md)。 **注意：** 將 `Enumerable.Contains` 運算子套用至記憶體中集合的 LINQ to Entities 查詢不會自動快取。 此外也不允許在已編譯的 LINQ 查詢中參數化記憶體中的集合。|  
 |執行查詢|低<sup>2</sup>|針對每個查詢執行一次。|使用 ADO.NET 資料提供者，針對資料來源執行命令的成本。 由於大部分的資料來源都會對查詢計畫作快取，後續執行相同查詢命令可能會減少些許時間。|  
 |載入和使用型別|低<sup>3</sup>|針對每個 <xref:System.Data.Objects.ObjectContext> 執行個體執行一次。|載入型別，並針對概念模型定義的型別進行驗證。|  
@@ -32,7 +32,7 @@ ms.locfileid: "73039849"
   
  <sup>3</sup>總成本會與查詢所傳回的物件數目成正比。  
   
- <sup>4</sup> EntityClient 查詢不需要這項負擔，因為 EntityClient 查詢會傳回 <xref:System.Data.EntityClient.EntityDataReader> 而不是物件。 如需詳細資訊，請參閱[Entity Framework 的 EntityClient 提供者](entityclient-provider-for-the-entity-framework.md)。  
+ <sup>4</sup> EntityClient 查詢不需要這項負擔，因為 EntityClient 查詢會傳回 <xref:System.Data.EntityClient.EntityDataReader> 而不是物件。 如需詳細資訊，請參閱 [適用於 Entity Framework 的 EntityClient 提供者](entityclient-provider-for-the-entity-framework.md)。  
   
 ## <a name="additional-considerations"></a>其他考量  
  下列其他考量可能會影響 Entity Framework 應用程式的效能。  
@@ -111,7 +111,7 @@ ms.locfileid: "73039849"
 ### <a name="saving-changes"></a>儲存變更  
  呼叫 <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> 上的 <xref:System.Data.Objects.ObjectContext> 方法時，會針對內容中每一個已加入、已更新或已刪除的物件，產生另一個建立、更新或刪除的命令。 這些命令會在單一異動中的資料來源上執行。 若含有查詢，建立、更新和刪除作業的效能會依概念模型中對應的複雜度而有所不同。  
   
-### <a name="distributed-transactions"></a>分散式異動  
+### <a name="distributed-transactions"></a>分散式交易  
  在明確異動中，需要由分散式異動協調器 (DTC) 管理之資源的作業，會比不需要 DTC 的相似作業耗用更多成本。 提升至 DTC 會發生以下狀況：  
   
 - 包含針對 SQL Server 2000 資料庫或其他資料來源之作業的明確異動，永遠會將明確異動提升至 DTC。  
@@ -128,7 +128,7 @@ ms.locfileid: "73039849"
   
  當您處理非常大的模型時，必須考量以下事項：  
   
- .NET 中繼資料格式會將給定二進位格式的使用者字串字元數目限制為 16,777,215 (0xFFFFFF)。 如果您要產生非常大型模型的視圖，而此視圖檔案達到此大小限制，您將會得到「沒有可用的邏輯空間來建立更多使用者字串」。 編譯錯誤。 這個大小限制適用於所有 Managed 二進位檔。 如需詳細資訊，請參閱示範如何在處理大型和複雜模型時避免錯誤的[blog](https://go.microsoft.com/fwlink/?LinkId=201476) 。  
+ .NET 中繼資料格式會將給定二進位格式的使用者字串字元數目限制為 16,777,215 (0xFFFFFF)。 如果您要產生非常大型模型的視圖，而此視圖檔案達到此大小限制，您將會得到「沒有可用的邏輯空間來建立更多使用者字串」。 編譯錯誤。 這個大小限制適用於所有 Managed 二進位檔。 如需詳細資訊，請參閱示範如何在處理大型和複雜模型時避免錯誤的[blog](https://docs.microsoft.com/archive/blogs/appfabriccat/solving-the-no-logical-space-left-to-create-more-user-strings-error-and-improving-performance-of-pre-generated-views-in-visual-studio-net4-entity-framework) 。  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>考慮針對查詢使用 NoTracking 合併選項  
  追蹤在物件內容中傳回的物件是必要成本。 偵測物件的變更，並確保相同邏輯實體的多個要求能傳回相同物件執行個體，需要將物件附加至 <xref:System.Data.Objects.ObjectContext> 執行個體。 如果您不打算對物件進行更新或刪除，也不需要身分識別管理，請考慮在執行查詢時使用 <xref:System.Data.Objects.MergeOption.NoTracking> 的合併選項。  
@@ -145,14 +145,14 @@ ms.locfileid: "73039849"
  當您的應用程式執行一系列的物件查詢或經常呼叫 <xref:System.Data.Objects.ObjectContext.SaveChanges%2A> 以將建立、更新和刪除作業保存到資料來源時，Entity Framework 必須持續開啟並關閉與資料來源的連接。 在這些情況下，請考慮在這些連接開始時，手動開啟連接，然後當作業完成時，關閉或處置連接。 如需詳細資訊，請參閱[管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。  
   
 ## <a name="performance-data"></a>效能資料  
- Entity Framework 的部分效能資料會在下列[ADO.NET 小組 blog](https://go.microsoft.com/fwlink/?LinkId=91905)的文章中發佈：  
+ Entity Framework 的部分效能資料會在下列[ADO.NET 小組 blog](https://docs.microsoft.com/archive/blogs/adonet/)的文章中發佈：  
   
-- [探索 ADO.NET Entity Framework 的效能-第1部分](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [探索 ADO.NET Entity Framework 的效能-第1部分](https://docs.microsoft.com/archive/blogs/adonet/exploring-the-performance-of-the-ado-net-entity-framework-part-1)  
   
-- [探索 ADO.NET Entity Framework 的效能–第2部分](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [探索 ADO.NET Entity Framework 的效能–第2部分](https://docs.microsoft.com/archive/blogs/adonet/exploring-the-performance-of-the-ado-net-entity-framework-part-2)  
   
-- [ADO.NET Entity Framework 效能比較](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [ADO.NET Entity Framework 效能比較](https://docs.microsoft.com/archive/blogs/adonet/ado-net-entity-framework-performance-comparison)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [開發和部署考量](development-and-deployment-considerations.md)

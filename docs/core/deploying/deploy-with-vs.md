@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920898"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449019"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>使用 Visual Studio 部署 .NET Core 應用程式
 
@@ -24,7 +24,7 @@ ms.locfileid: "76920898"
 - 自封式部署
 - 有協力廠商相依性的自封式部署
 
-如需使用 Visual Studio 開發 .NET Core 應用程式的相關資訊，請參閱[.Net core 相依性和需求](../install/dependencies.md?tabs=netcore30&pivots=os-windows)。
+如需使用 Visual Studio 開發 .NET Core 應用程式的相關資訊，請參閱[.Net core 相依性和需求](../install/dependencies.md?pivots=os-windows)。
 
 ## <a name="framework-dependent-deployment"></a>與 Framework 相依的部署
 
@@ -32,7 +32,7 @@ ms.locfileid: "76920898"
 
 1. 建立專案。
 
-   選取 [檔案] >  [新增] >  [專案]。 在 [新增專案] 對話方塊中，展開 [已安裝] 專案類型窗格中的語言 (C# 或 Visual Basic) 專案類別，選擇 [.NET Core]，然後選擇中央窗格中的 [主控台應用程式 (.NET Core)] 範本。 在 [名稱] 文字方塊中輸入專案名稱，例如 "FDD"。 選取 [確定] 按鈕。
+   選取 [File] \(檔案\) >  [New] \(新增\) >  [Project] \(專案\)。 在 [新增專案] 對話方塊中，展開 [已安裝] 專案類型窗格中的語言 (C# 或 Visual Basic) 專案類別，選擇 [.NET Core]，然後選擇中央窗格中的 [主控台應用程式 (.NET Core)] 範本。 在 [名稱] 文字方塊中輸入專案名稱，例如 "FDD"。 選取 [確定] 按鈕。
 
 1. 新增應用程式的原始程式碼。
 
@@ -43,9 +43,9 @@ ms.locfileid: "76920898"
 
 1. 建立應用程式的偵錯組建。
 
-   選取 [組建] >  [組建方案]。 您也可以編譯並執行應用程式的偵錯組建，方法是選取 [偵錯] >  [開始偵錯]。
+   選取 [建置] > [建置方案]。 您也可以編譯並執行應用程式的偵錯組建，方法是選取 [偵錯] >  [開始偵錯]。
 
-1. 部署應用程式。
+1. 部署您的應用程式。
 
    在您偵錯並測試程式之後，請建立要隨應用程式一起部署的檔案。 若要從 Visual Studio 發行，請執行下列作業：
 
@@ -53,17 +53,17 @@ ms.locfileid: "76920898"
 
       1. 以滑鼠右鍵按一下方案總管中的專案 (而非方案)，然後選取 [發行]。
 
-      1. 在 [發行]索引標籤中，選取 [發行]。 Visual Studio 會將構成應用程式的檔案寫入至本機檔案系統。
+      1. 在 [發行] 索引標籤中，選取 [發行]。 Visual Studio 會將構成應用程式的檔案寫入至本機檔案系統。
 
       1. [發行] 索引標籤現在會顯示單一設定檔 **FolderProfile**。 設定檔的組態設定顯示在索引標籤的 [摘要] 區段中。
 
    產生的檔案會放在 Windows 系統上名為 `Publish` 的目錄，以及 Unix 系統上名為 `publish` 的目錄中，而該目錄位於您專案之 *.\bin\release\netcoreapp2.1* 子目錄的子目錄中。
 
-隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
+隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其保存。
 
 以任何您想要的方式，部署整組應用程式檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。 安裝之後，使用者可以使用 `dotnet` 命令並提供應用程式的檔名 (例如，`dotnet fdd.dll`)，來執行您的應用程式。
 
-除了應用程式二進位檔之外，安裝程式也應該配套共用的 Framework 安裝程式，，或勾選為必要條件當成應用程式安裝的一部分。  共用 Framework 安裝需要系統管理員/根目錄存取權，因為它要通行全機器。
+除了應用程式二進位檔之外，安裝程式也應該配套共用的 Framework 安裝程式，或勾選為必要條件當成應用程式安裝的一部分。  共用 Framework 安裝需要系統管理員/根目錄存取權，因為它要通行全機器。
 
 ## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>有協力廠商相依性的 Framework 相依部署
 
@@ -83,7 +83,7 @@ ms.locfileid: "76920898"
 
 1. 建立專案。
 
-   選取 [檔案] >  [新增] >  [專案]。 在 [新增專案] 對話方塊中，展開 [已安裝] 專案類型窗格中的語言 (C# 或 Visual Basic) 專案類別，選擇 [.NET Core]，然後選擇中央窗格中的 [主控台應用程式 (.NET Core)] 範本。 在 [名稱] 文字方塊中輸入專案名稱 (例如 "SCD")，然後選取 [確定] 按鈕。
+   選取 [File] \(檔案\) >  [New] \(新增\) >  [Project] \(專案\)。 在 [新增專案] 對話方塊中，展開 [已安裝] 專案類型窗格中的語言 (C# 或 Visual Basic) 專案類別，選擇 [.NET Core]，然後選擇中央窗格中的 [主控台應用程式 (.NET Core)] 範本。 在 [名稱] 文字方塊中輸入專案名稱 (例如 "SCD")，然後選取 [確定] 按鈕。
 
 1. 新增應用程式的原始程式碼。
 
@@ -92,17 +92,17 @@ ms.locfileid: "76920898"
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
-1. 決定您是否想使用全球不區分模式。
+1. 決定您是否想使用全域無差異模式。
 
    尤其當您的應用程式以 Linux 為目標時，使用全域無差異模式[能減少您部署的總大小](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)。 全域無差異模式適用於非全域應用程式，其能使用格式化慣例、大小寫慣例及字串比較，還有不因文化特性而異的[排列次序](xref:System.Globalization.CultureInfo.InvariantCulture)。
 
-   在您的專案 (而非解決方案) 點擊右鍵，進入 [方案總管]，然後選取 [Edit SCD.csproj] \(編輯 SCD.csproj\) 或 [Edit SCD.vbproj] \(編輯 SCD.vbproj\) 啟用非變異模式。 接著，將反白處新增至檔案中：
+   在您的專案 (而非解決方案) 點擊右鍵，進入 [方案總管]，然後選取 [Edit SCD.csproj] \(編輯 SCD.csproj\) 或 [Edit SCD.vbproj] \(編輯 SCD.vbproj\) 啟用非變異模式。 接著，將下列反白的幾行新增至檔案：
 
    [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj?highlight=6-8)]
 
 1. 建立應用程式的偵錯組建。
 
-   選取 [組建] >  [組建方案]。 您也可以編譯並執行應用程式的偵錯組建，方法是選取 [偵錯] >  [開始偵錯]。 透過此偵錯步驟，您可以識別應用程式在主機平台上執行時的問題。 您仍然必須在每個目標平台上進行測試。
+   選取 [建置] > [建置方案]。 您也可以編譯並執行應用程式的偵錯組建，方法是選取 [偵錯] >  [開始偵錯]。 透過此偵錯步驟，您可以識別應用程式在主機平台上執行時的問題。 您仍然必須在每個目標平台上進行測試。
 
    如果您啟用了不因全球化而異的模式，請務必測試您的應用程式是否適合缺少不區分文化特性的資料。
 
@@ -110,7 +110,7 @@ ms.locfileid: "76920898"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 和更早版本](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 和更早版本](#tab/vs156)
 
 在您偵錯並測試程式之後，請針對每個目標平台建立要隨應用程式一起部署的檔案。
 
@@ -120,7 +120,7 @@ ms.locfileid: "76920898"
 
    1. 以滑鼠右鍵按一下 [方案總管] 中的專案 (而非解決方案)，然後選取 [編輯 SCD.csproj]。
 
-   1. 在定義應用程式目標平台之 *csproj* 檔案的 `<PropertyGroup>` 區段中建立 `<RuntimeIdentifiers>` 標記，並指定每個目標平台的執行階段識別碼 (RID)。 您也需要新增分號來分隔 Rid。 如需執行階段識別碼清單，請參閱 [.NET Core RID 類別目錄](../rid-catalog.md)。
+   1. 在定義應用程式目標平台之 `<RuntimeIdentifiers>`csproj`<PropertyGroup>` 檔案的 *區段中建立* 標記，並指定每個目標平台的執行階段識別碼 (RID)。 您也需要新增分號來分隔 Rid。 如需執行階段識別碼清單，請參閱 [Runtime IDentifier catalog](../rid-catalog.md)。
 
    例如，下列範例指出應用程式在 64 位元 Windows 10 作業系統和 64 位元 OS X 版本 10.11 作業系統上執行。
 
@@ -142,7 +142,7 @@ ms.locfileid: "76920898"
 
       1. 以滑鼠右鍵按一下方案總管中的專案 (而非方案)，然後選取 [發行]。
 
-      1. 在 [發行]索引標籤中，選取 [發行]。 Visual Studio 會將構成應用程式的檔案寫入至本機檔案系統。
+      1. 在 [發行] 索引標籤中，選取 [發行]。 Visual Studio 會將構成應用程式的檔案寫入至本機檔案系統。
 
       1. [發行] 索引標籤現在會顯示單一設定檔 **FolderProfile**。 設定檔的設定會顯示在索引標籤的 [**摘要**] 區段中。**目標運行**時間會識別已發行的執行時間，而 [**目標位置**] 則會識別要將獨立部署的檔案寫入哪個位置。
 
@@ -160,7 +160,7 @@ ms.locfileid: "76920898"
 
       每個目標位置都包含啟動應用程式所需的一組完整檔案（您的應用程式檔和所有 .NET Core 檔案）。
 
-隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
+隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其保存。
 
 請使用任何您想要的方式，部署已發行的檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。
 
@@ -176,7 +176,7 @@ ms.locfileid: "76920898"
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 和更新版本](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 和更新版本](#tab/vs157)
 
 在您偵錯並測試程式之後，請針對每個目標平台建立要隨應用程式一起部署的檔案。 這牽涉到建立每個目標平台的個別設定檔。
 
@@ -216,7 +216,7 @@ ms.locfileid: "76920898"
 
 重複這些步驟來定義其他應用程式目標平台。
 
-您已完成設定您的設定檔，並已準備好發行應用程式。 若要這樣做：
+您已完成設定您的設定檔，並已準備好發行應用程式。 作法：
 
    1. 如果 [發行] 視窗目前未開啟，請以滑鼠右鍵按一下 [方案總管] 中的專案 (而非解決方案)，然後選取 [發行]。
 
@@ -224,7 +224,7 @@ ms.locfileid: "76920898"
 
    每個目標位置（在我們的範例中，bin\release\netcoreapp2.1\publish\\*設定檔名稱*都包含啟動應用程式所需的一組完整檔案（您的應用程式檔和所有 .net Core 檔案）。
 
-隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其儲存。
+隨著應用程式檔案一起，發佈程序會發出程式資料庫 (.pdb) 檔案，其中包含應用程式的偵錯資訊。 該檔案主要是用於例外狀況偵錯。 您可以選擇不與您的應用程式檔案一起封裝它。 不過，如果您要對應用程式的發行組建進行偵錯，則應該將其保存。
 
 請使用任何您想要的方式，部署已發行的檔案。 例如，您可以使用簡單的 `copy` 命令將它們封裝在 ZIP 檔案中，或與您選擇的任何安裝套件一起部署。
 
@@ -274,7 +274,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 下面是此專案的完整 *csproj* 檔案：
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 和更早版本](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 和更早版本](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 和更新版本](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 和更新版本](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -309,7 +309,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 您只能將具有協力廠商程式庫的獨立部署部署至該程式庫所支援的平臺。 這類似於在與 Framework 相依的部署中擁有仰賴原生相依性的協力廠商相依性；在其中，原生相依性不會存在於目標平台上，除非先前已在該處安裝這些相依性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core 應用程式部署](index.md)
 - [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)

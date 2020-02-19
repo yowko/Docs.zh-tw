@@ -2,12 +2,12 @@
 title: 從 project.json 進行的 .NET Core 移轉
 description: 了解如何使用 project.json 來移轉舊版 .NET Core 專案
 ms.date: 07/19/2017
-ms.openlocfilehash: f81d01c052c3632c48a5f961be86eab686c2074e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714347"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450683"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>從 project.json 移轉 .NET Core 專案
 
@@ -34,7 +34,7 @@ ms.locfileid: "75714347"
 
 ![[單向升級] 對話方塊顯示要移轉的專案清單](media/one-way-upgrade.jpg)
 
-Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您未選擇 [所有專案]，則會出現相同的對話方塊，要求您從該方案升級其餘專案。 移轉專案之後，您可以用滑鼠右鍵按一下方案總管視窗中的專案，然後選取 [編輯\<專案名稱>.csproj] 來查看及修改其內容。
+Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您未選擇 [所有專案]，則會出現相同的對話方塊，要求您從該方案升級其餘專案。 移轉專案之後，您可以用滑鼠右鍵按一下方案總管視窗中的專案，然後選取 [編輯**專案名稱>.csproj]\<** 來查看及修改其內容。
 
 已遷移的檔案（*專案. json*、 *global.asax*、 *xproj*和方案檔）會移至*備份*資料夾。 遷移的方案檔會升級為 Visual Studio 2017 或 Visual Studio 2019，而且您將無法在 Visual Studio 2015 或更早版本中開啟該方案檔。 系統也會自動儲存並開啟名為*UpgradeLog*的檔案，其中包含遷移報表。
 
@@ -65,7 +65,7 @@ Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您�
 如果您仍使用 DNX 進行 .NET Core 程式開發，則應分兩階段完成您的移轉程序：
 
 1. 使用[現有的 DNX 移轉指引](from-dnx.md)，從 DNX 移轉至啟用 project-json 的 CLI。
-2. 遵循上一節中的步驟，從 *project.json* 移轉至 *.csproj*。  
+2. 遵循上一節中的步驟，從 *project.json* 移轉至 *.csproj*。
 
 > [!NOTE]
 > DNX 已在 .NET Core CLI 的 Preview 1 版期間正式被取代。
@@ -75,17 +75,17 @@ Visual Studio 會自動遷移選取的專案。 在遷移方案時，如果您�
 每次工具有新的發行前版本，都會變更及改進 .NET Core csproj 格式。 目前沒有工具可將您的專案檔從舊版 csproj 移轉至最新版本，因此您必須手動編輯專案檔。 實際步驟取決於您要移轉的專案檔版本。 以下是根據版本間所發生之變更所要考量的一些指引：
 
 - 從 `<Project>` 項目移除工具版本屬性 (如果存在的話)。
-- 從 `<Project>` 項目移除 XML 命名空間 (`xmlns`)。
+- 從 `xmlns` 項目移除 XML 命名空間 (`<Project>`)。
 - 如果不存在，則將 `Sdk` 屬性新增至 `<Project>` 項目，並將它設定為 `Microsoft.NET.Sdk` 或 `Microsoft.NET.Sdk.Web`。 這個屬性會指定專案使用可用的 SDK。 `Microsoft.NET.Sdk.Web` 適用於 Web 應用程式。
 - 移除專案頂端和底部的 `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` 和 `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` 陳述式。 這些 import 陳述式是由 SDK 所隱含，因此專案中不需要有這些陳述式。
 - 如果您的專案中有 `Microsoft.NETCore.App` 或 `NETStandard.Library` `<PackageReference>` 專案，您應該將其移除。 這些套件參考是[由 SDK 所隱含](https://aka.ms/sdkimplicitrefs)。
-- 移除 `Microsoft.NET.Sdk` `<PackageReference>` 元素（如果有的話）。 SDK 參考是來自 `<Project>` 項目上的 `Sdk` 屬性。
-- 移除 [SDK 所隱含](../tools/csproj.md#default-compilation-includes-in-net-core-projects)的 [glob](https://en.wikipedia.org/wiki/Glob_(programming))。 在您的專案中留下這些 Glob 會在建置時造成錯誤，因為編譯項目將會重複。
+- 移除 `Microsoft.NET.Sdk` `<PackageReference>` 元素（如果有的話）。 SDK 參考是來自 `Sdk` 項目上的 `<Project>` 屬性。
+- 移除 [SDK 所隱含](https://en.wikipedia.org/wiki/Glob_(programming))的 [glob](../project-sdk/overview.md#default-compilation-includes)。 在您的專案中留下這些 Glob 會在建置時造成錯誤，因為編譯項目將會重複。
 
 完成這些步驟之後，您的專案應該會與 RTM .NET Core csproj 格式完全相容。
 
 如需從舊的 csproj 格式移轉至新格式的前後範例，請參閱 .NET 部落格上的 [Updating Visual Studio 2017 RC - .NET Core Tooling improvements](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) (更新 Visual Studio 2017 RC - .NET Core 工具改進) 文章。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [移植、移轉及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)

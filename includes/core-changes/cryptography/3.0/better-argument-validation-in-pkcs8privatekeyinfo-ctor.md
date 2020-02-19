@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a9b6af31b68c25ab58c52757f48ed23cca3f5a35
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8d3a8712528d2d35c706cc26b8c388b65d6ad506
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567948"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449206"
 ---
 ### <a name="better-argument-validation-in-the-pkcs8privatekeyinfo-constructor"></a>Pkcs8PrivateKeyInfo 的函式中有更好的引數驗證
 
@@ -41,9 +41,9 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 
 請確定只提供有效的 `algorithmParameters` 值，或如果需要例外狀況處理，則呼叫 `Pkcs8PrivateKeyInfo` 的 <xref:System.ArgumentException> 和 <xref:System.Security.Cryptography.CryptographicException> 測試。
 
-### <a name="category"></a>Category
+### <a name="category"></a>類別
 
-密碼編譯
+Cryptography
 
 ### <a name="affected-apis"></a>受影響的 API
 
@@ -53,6 +53,6 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 
 ### Affected APIs
 
-- `M:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.#ctor(System.Security.Cryptography.Oid,System.Nullable{System.ReadOnlyMemory{System.Byte}},System.ReadOnlyMemory{System.Byte},System.Boolean))
+- `M:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.#ctor(System.Security.Cryptography.Oid,System.Nullable{System.ReadOnlyMemory{System.Byte}},System.ReadOnlyMemory{System.Byte},System.Boolean)`
 
 -->

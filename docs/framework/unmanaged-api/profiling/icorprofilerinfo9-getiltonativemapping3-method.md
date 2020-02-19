@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 5c49d75432980d2f3af77ee040bc6eb20886b027
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 22fe5608b0a3f86baf80abb3810a512077954ac3
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861667"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449747"
 ---
 # <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9：： GetILToNativeMapping3 方法
 
@@ -55,14 +55,14 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 ## <a name="requirements"></a>需求
 
-**平臺：** 請參閱[.Net Core 支援的作業系統](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)。
+**平臺：** 請參閱[.Net Core 支援的作業系統](../../../core/install/dependencies.md?pivots=os-windows)。
 
 **標頭：** CorProf.idl、CorProf.h
 
 **程式庫：** CorGuids.lib
 
-**.NET framework 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**.NET Framework 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerInfo9 介面](icorprofilerinfo9-interface.md)
