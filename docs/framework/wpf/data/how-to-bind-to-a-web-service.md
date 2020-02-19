@@ -9,44 +9,44 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 76fa13d4a12362d04c832fd59ee69db5a6811029
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3a3f6edc974448ddab9fe30e97bdc1130d3b97dc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454453"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449968"
 ---
-# <a name="how-to-bind-to-a-web-service"></a><span data-ttu-id="d1cc3-102">如何：繫結至 Web 服務</span><span class="sxs-lookup"><span data-stu-id="d1cc3-102">How to: Bind to a Web Service</span></span>
-<span data-ttu-id="d1cc3-103">這個範例示範如何系結至 Web 服務方法呼叫所傳回的物件。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-103">This example shows how to bind to objects returned by Web service method calls.</span></span>  
+# <a name="how-to-bind-to-a-web-service"></a><span data-ttu-id="5530b-102">如何：繫結至 Web 服務</span><span class="sxs-lookup"><span data-stu-id="5530b-102">How to: Bind to a Web Service</span></span>
+<span data-ttu-id="5530b-103">這個範例示範如何系結至 Web 服務方法呼叫所傳回的物件。</span><span class="sxs-lookup"><span data-stu-id="5530b-103">This example shows how to bind to objects returned by Web service method calls.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d1cc3-104">範例</span><span class="sxs-lookup"><span data-stu-id="d1cc3-104">Example</span></span>  
- <span data-ttu-id="d1cc3-105">這個範例會使用[MSDN/TechNet 發行系統（MTPS）內容服務](https://go.microsoft.com/fwlink/?LinkId=95677)來抓取指定檔所支援的語言清單。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-105">This example uses the [MSDN/TechNet Publishing System (MTPS) Content Service](https://go.microsoft.com/fwlink/?LinkId=95677) to retrieve the list of languages supported by a specified document.</span></span>  
+## <a name="example"></a><span data-ttu-id="5530b-104">範例</span><span class="sxs-lookup"><span data-stu-id="5530b-104">Example</span></span>  
+ <span data-ttu-id="5530b-105">這個範例會使用 MSDN/TechNet 發行系統（MTPS）內容服務來抓取指定檔所支援的語言清單。</span><span class="sxs-lookup"><span data-stu-id="5530b-105">This example uses the MSDN/TechNet Publishing System (MTPS) Content Service to retrieve the list of languages supported by a specified document.</span></span>  
   
- <span data-ttu-id="d1cc3-106">在您呼叫 Web 服務之前，您必須先建立對它的參考。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-106">Before you call a Web service, you need to create a reference to it.</span></span> <span data-ttu-id="d1cc3-107">若要使用 Visual Studio 建立 MTPS 服務的 Web 參考，請遵循下列步驟：</span><span class="sxs-lookup"><span data-stu-id="d1cc3-107">To create a Web reference to the MTPS service using Visual Studio, follow the following steps:</span></span>  
+ <span data-ttu-id="5530b-106">在您呼叫 Web 服務之前，您必須先建立對它的參考。</span><span class="sxs-lookup"><span data-stu-id="5530b-106">Before you call a Web service, you need to create a reference to it.</span></span> <span data-ttu-id="5530b-107">若要使用 Visual Studio 建立 MTPS 服務的 Web 參考，請遵循下列步驟：</span><span class="sxs-lookup"><span data-stu-id="5530b-107">To create a Web reference to the MTPS service using Visual Studio, follow the following steps:</span></span>  
   
-1. <span data-ttu-id="d1cc3-108">在 Visual Studio 中開啟專案。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-108">Open your project in Visual Studio.</span></span>  
+1. <span data-ttu-id="5530b-108">在 Visual Studio 中，開啟您的專案。</span><span class="sxs-lookup"><span data-stu-id="5530b-108">Open your project in Visual Studio.</span></span>  
   
-2. <span data-ttu-id="d1cc3-109">從 [**專案**] 功能表中，按一下 [**加入 Web 參考**]。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-109">From the **Project** menu, click **Add Web Reference**.</span></span>  
+2. <span data-ttu-id="5530b-109">從 [**專案**] 功能表中，按一下 [**加入 Web 參考**]。</span><span class="sxs-lookup"><span data-stu-id="5530b-109">From the **Project** menu, click **Add Web Reference**.</span></span>  
   
-3. <span data-ttu-id="d1cc3-110">在對話方塊中，將**URL**設定為[http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-110">In the dialog box, set the **URL** to [http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).</span></span>  
+3. <span data-ttu-id="5530b-110">在對話方塊中，將**URL**設定為[http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)。</span><span class="sxs-lookup"><span data-stu-id="5530b-110">In the dialog box, set the **URL** to [http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).</span></span>  
   
-4. <span data-ttu-id="d1cc3-111">按 [**移至**]，然後按一下 [**新增參考**]。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-111">Press **Go** and then **Add Reference**.</span></span>  
+4. <span data-ttu-id="5530b-111">按 [**移至**]，然後按一下 [**新增參考**]。</span><span class="sxs-lookup"><span data-stu-id="5530b-111">Press **Go** and then **Add Reference**.</span></span>  
   
- <span data-ttu-id="d1cc3-112">接下來，您可以呼叫 Web 服務方法，並將適當控制項或視窗的 <xref:System.Windows.FrameworkElement.DataContext%2A> 設定為傳回的物件。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-112">Next, you call the Web service method and set the <xref:System.Windows.FrameworkElement.DataContext%2A> of the appropriate control or window to the returned object.</span></span> <span data-ttu-id="d1cc3-113">MTPS 服務的 `GetContent` 方法會接受 `getContentRequest` 物件的參考。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-113">The `GetContent` method of the MTPS service takes a reference to the `getContentRequest` object.</span></span> <span data-ttu-id="d1cc3-114">因此，下列範例會先設定 request 物件：</span><span class="sxs-lookup"><span data-stu-id="d1cc3-114">Therefore, the following example first sets up a request object:</span></span>  
+ <span data-ttu-id="5530b-112">接下來，您可以呼叫 Web 服務方法，並將適當控制項或視窗的 <xref:System.Windows.FrameworkElement.DataContext%2A> 設定為傳回的物件。</span><span class="sxs-lookup"><span data-stu-id="5530b-112">Next, you call the Web service method and set the <xref:System.Windows.FrameworkElement.DataContext%2A> of the appropriate control or window to the returned object.</span></span> <span data-ttu-id="5530b-113">MTPS 服務的 `GetContent` 方法會接受 `getContentRequest` 物件的參考。</span><span class="sxs-lookup"><span data-stu-id="5530b-113">The `GetContent` method of the MTPS service takes a reference to the `getContentRequest` object.</span></span> <span data-ttu-id="5530b-114">因此，下列範例會先設定 request 物件：</span><span class="sxs-lookup"><span data-stu-id="5530b-114">Therefore, the following example first sets up a request object:</span></span>  
   
  [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- <span data-ttu-id="d1cc3-115">設定 <xref:System.Windows.FrameworkElement.DataContext%2A> 之後，您可以建立已設定 <xref:System.Windows.FrameworkElement.DataContext%2A> 之物件屬性的系結。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-115">After the <xref:System.Windows.FrameworkElement.DataContext%2A> has been set, you can create bindings to the properties of the object that the <xref:System.Windows.FrameworkElement.DataContext%2A> has been set to.</span></span> <span data-ttu-id="d1cc3-116">在此範例中，<xref:System.Windows.FrameworkElement.DataContext%2A> 設定為 `GetContent` 方法所傳回的 `getContentResponse` 物件。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-116">In this example, the <xref:System.Windows.FrameworkElement.DataContext%2A> is set to the `getContentResponse` object returned by the `GetContent` method.</span></span> <span data-ttu-id="d1cc3-117">在下列範例中，<xref:System.Windows.Controls.ItemsControl> 系結至，並顯示 `getContentResponse``availableVersionsAndLocales` 的 `locale` 值。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-117">In the following example, the <xref:System.Windows.Controls.ItemsControl> binds to and displays the `locale` values of `availableVersionsAndLocales` of `getContentResponse`.</span></span>  
+ <span data-ttu-id="5530b-115">設定 <xref:System.Windows.FrameworkElement.DataContext%2A> 之後，您可以建立已設定 <xref:System.Windows.FrameworkElement.DataContext%2A> 之物件屬性的系結。</span><span class="sxs-lookup"><span data-stu-id="5530b-115">After the <xref:System.Windows.FrameworkElement.DataContext%2A> has been set, you can create bindings to the properties of the object that the <xref:System.Windows.FrameworkElement.DataContext%2A> has been set to.</span></span> <span data-ttu-id="5530b-116">在此範例中，<xref:System.Windows.FrameworkElement.DataContext%2A> 設定為 `GetContent` 方法所傳回的 `getContentResponse` 物件。</span><span class="sxs-lookup"><span data-stu-id="5530b-116">In this example, the <xref:System.Windows.FrameworkElement.DataContext%2A> is set to the `getContentResponse` object returned by the `GetContent` method.</span></span> <span data-ttu-id="5530b-117">在下列範例中，<xref:System.Windows.Controls.ItemsControl> 系結至，並顯示 `getContentResponse``availableVersionsAndLocales` 的 `locale` 值。</span><span class="sxs-lookup"><span data-stu-id="5530b-117">In the following example, the <xref:System.Windows.Controls.ItemsControl> binds to and displays the `locale` values of `availableVersionsAndLocales` of `getContentResponse`.</span></span>  
   
  [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- <span data-ttu-id="d1cc3-118">如需 `getContentResponse`結構的詳細資訊，請參閱[內容服務檔](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。</span><span class="sxs-lookup"><span data-stu-id="d1cc3-118">For information about the structure of `getContentResponse`, see [Content Service documentation](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).</span></span>  
+ <span data-ttu-id="5530b-118">如需 `getContentResponse`結構的詳細資訊，請參閱[內容服務檔](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。</span><span class="sxs-lookup"><span data-stu-id="5530b-118">For information about the structure of `getContentResponse`, see [Content Service documentation](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1cc3-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="d1cc3-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5530b-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5530b-119">See also</span></span>
 
-- [<span data-ttu-id="d1cc3-120">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="d1cc3-120">Data Binding Overview</span></span>](../../../desktop-wpf/data/data-binding-overview.md)
-- [<span data-ttu-id="d1cc3-121">繫結來源概觀</span><span class="sxs-lookup"><span data-stu-id="d1cc3-121">Binding Sources Overview</span></span>](binding-sources-overview.md)
-- [<span data-ttu-id="d1cc3-122">讓資料可於 XAML 中繫結</span><span class="sxs-lookup"><span data-stu-id="d1cc3-122">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)
+- [<span data-ttu-id="5530b-120">資料繫結概觀</span><span class="sxs-lookup"><span data-stu-id="5530b-120">Data Binding Overview</span></span>](../../../desktop-wpf/data/data-binding-overview.md)
+- [<span data-ttu-id="5530b-121">繫結來源概觀</span><span class="sxs-lookup"><span data-stu-id="5530b-121">Binding Sources Overview</span></span>](binding-sources-overview.md)
+- [<span data-ttu-id="5530b-122">讓資料可於 XAML 中繫結</span><span class="sxs-lookup"><span data-stu-id="5530b-122">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)
