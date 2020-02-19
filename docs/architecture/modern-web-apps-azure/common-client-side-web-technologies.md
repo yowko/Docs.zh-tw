@@ -3,13 +3,13 @@ title: 一般用戶端 web 技術
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 |一般用戶端 web 技術
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.date: 12/04/2019
+ms.openlocfilehash: 2809c8539b42e8e2250039dceed1389b3cbdcd8a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093119"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449370"
 ---
 # <a name="common-client-side-web-technologies"></a>一般用戶端 web 技術
 
@@ -20,9 +20,12 @@ ASP.NET Core 應用程式是 Web 應用程式，通常依賴於如 HTML、CSS �
 
 雖然 HTML 和 CSS 相對穩定，但 JavaScript 透過開發人員使用應用程式架構和公用程式來建置 Web 型應用程式，正以驚人的速度發展。 本章探討 網頁程式開發人員使用 JavaScript 的幾種方式，並提供角度和回應用戶端程式庫的高階總覽。
 
+> [!NOTE]
+> Blazor 提供 JavaScript 架構的替代方案，以建立豐富的互動式用戶端使用者介面。 用戶端 Blazor 支援仍處於預覽狀態，因此現在已超出本章節的範圍。
+
 ## <a name="html"></a>HTML
 
-HTML (超文字標記語言) 是用來建立網頁和 Web 應用程式的標準標記語言。 其項目形成頁面的建置組塊、表示格式化的文字、影像、表單輸入和其他結構。 當瀏覽器向 URL 提出要求時，無論是擷取頁面或應用程式，傳回的第一件事都是 HTML 文件。 此 HTML 文件可能會以 CSS 的形式參考或包含其外觀和版面配置的其他資訊，或以 JavaScript 的形式表現行為。
+HTML 是用來建立網頁和 web 應用程式的標準標記語言。 其項目形成頁面的建置組塊、表示格式化的文字、影像、表單輸入和其他結構。 當瀏覽器向 URL 提出要求時，無論是擷取頁面或應用程式，傳回的第一件事都是 HTML 文件。 此 HTML 文件可能會以 CSS 的形式參考或包含其外觀和版面配置的其他資訊，或以 JavaScript 的形式表現行為。
 
 ## <a name="css"></a>CSS
 
@@ -36,13 +39,13 @@ CSS (階層式樣式表) 用來控制 HTML 項目的外觀和版面配置。 CSS
 
 ### <a name="css-preprocessors"></a>CSS 前置處理器
 
-CSS 樣式表缺少對條件邏輯、變數和其他程式設計語言功能的支援。 因此，大型樣式表通常包含大量的重複，因為相同的顏色、字型或其他設定會套用至 HTML 項目和 CSS 類別的許多不同變化。 透過新增對變數和邏輯的支援，CSS 前置處理器可以幫助您的樣式表遵循 [DRY Principle](https://deviq.com/don-t-repeat-yourself/) (DRY 準則)。
+CSS 樣式表缺少對條件邏輯、變數和其他程式設計語言功能的支援。 因此，大型樣式表單通常會包含相當多的重複專案，因為相同的色彩、字型或其他設定會套用至 HTML 專案和 CSS 類別的許多不同變化。 透過新增對變數和邏輯的支援，CSS 前置處理器可以幫助您的樣式表遵循 [DRY Principle](https://deviq.com/don-t-repeat-yourself/) (DRY 準則)。
 
 最熱門的 CSS 前置處理器是 Sass 和 LESS。 兩者都擴充 CSS 並回溯相容，這表示一般的 CSS 檔案即為有效的 Sass 或 LESS 檔案。 Sass 基於 Ruby，LESS 基於 JavaScript，而兩者通常都是作為本機開發程序的一部分執行。 兩者都有可用的命令列工具，以及使用 Gulp 或 Grunt 工作來執行 Visual Studio 的內建支援。
 
 ## <a name="javascript"></a>JavaScript
 
-JavaScript 是一種動態、解譯的程式設計語言，已在 ECMAScript 語言規格中進行標準化。 其為 Web 程式設計語言。 與 CSS 一樣，JavaScript 可以在 HTML 項目中 (如同頁面內的指令碼區塊) 或在個別的檔案中定義為屬性。 就像 CSS 一樣，通常建議您將 JavaScript 組織成不同的檔案，盡可能將其與個別網頁或應用程式檢視的 HTML 相隔。
+JavaScript 是一種動態、解譯的程式設計語言，已在 ECMAScript 語言規格中進行標準化。 其為 Web 程式設計語言。 與 CSS 一樣，JavaScript 可以在 HTML 項目中 (如同頁面內的指令碼區塊) 或在個別的檔案中定義為屬性。 就像 CSS 一樣，建議您將 JavaScript 組織成不同的檔案，讓它盡可能地根據個別網頁或應用程式視圖上找到的 HTML 加以分隔。
 
 在 Web 應用程式中使用 JavaScript 時，您通常需要執行幾項工作：
 
@@ -79,7 +82,7 @@ jQuery 本身缺少的大部分功能，都可以藉由新增其他程式庫來�
 
 ### <a name="angular-spas"></a>Angular SPA
 
-AngularJS 迅速成為世界上最熱門的 JavaScript 架構之一。 使用 Angular 2，小組從頭開始重建架構 (使用 [TypeScript](https://www.typescriptlang.org/))，並從 AngularJS 更名為僅 Angular。 目前在版本 4，Angular 持續身為建立單頁應用程式的強大架構。
+角度仍然是全球最受歡迎的 JavaScript 架構之一。 由於角度2，小組從頭開始重建架構（使用[TypeScript](https://www.typescriptlang.org/)），並從原始 AngularJS 名稱更名到單純的角度。 過去幾年來，重新設計的角度仍然是建立單一頁面應用程式的強大架構。
 
 Angular 應用程式是由元件所建置。 這些元件將 HTML 範本與特殊物件組合，並控制頁面的一部分。 Angular 文件的簡單元件如下所示：
 
@@ -104,11 +107,11 @@ Microsoft 開發了一個參考應用程式 [eShopOnContainers](https://aka.ms/M
 
 ### <a name="react"></a>React
 
-與 Angular 提供完整的模型檢視控制器模式實作不同，React只關注檢視。 React 並不是一個架構，只是一個程式庫，所以若要建置 SPA 則需要利用額外的程式庫。
+與 Angular 提供完整的模型檢視控制器模式實作不同，React只關注檢視。 React 並不是一個架構，只是一個程式庫，所以若要建置 SPA 則需要利用額外的程式庫。 有一些程式庫是設計用來回應產生豐富的單一頁面應用程式。
 
 React 最重要的功能之一是使用虛擬 DOM。 虛擬 DOM 為 React 提供了幾項優勢，包括效能 (虛擬 DOM 可最佳化實際 DOM 的哪些部分需要更新) 和可測試性 (無需使用瀏覽器測試 React 及其與虛擬 DOM 的互動)。
 
-React 在 HTML 的工作方式上也很獨特。 在程式碼和標記之間沒有嚴格的分隔 (或許是出現於 HTML 屬性中的 JavaScript 參考)，React 直接在 JavaScript 程式碼中新增 HTML 作為 JSX。 JSX 是 HTML 的類似語法，可以編譯成純 JavaScript。 例如，
+React 在 HTML 的工作方式上也很獨特。 在程式碼和標記之間沒有嚴格的分隔 (或許是出現於 HTML 屬性中的 JavaScript 參考)，React 直接在 JavaScript 程式碼中新增 HTML 作為 JSX。 JSX 是 HTML 的類似語法，可以編譯成純 JavaScript。 例如：
 
 ```js
 <ul>
@@ -121,6 +124,40 @@ React 在 HTML 的工作方式上也很獨特。 在程式碼和標記之間沒�
 如果您已經了解 JavaScript，學習 React 應該很容易。 與 Angular 或其他熱門的程式庫相較之下，學習曲線或涉及的特殊語法非常少。
 
 由於 React 不是完整的架構，所以通常需要其他程式庫來處理路由、Web API 呼叫和相依性管理等事項。 好處是您可以挑選最適合的程式庫，但缺點是您需要做出所有決策，並在完成後驗證所有選定的程式庫能夠順利協作。 如果您想要好的起步，可以使用 React Slingshot 之類可以將一組相容程式庫與 React 一起預先封裝的入門套件。
+
+### <a name="vue"></a>Vue
+
+《使用者入門指南》中的 < Vue 是用來建立使用者介面的漸進式架構。 與其他整合型架構不同的是，Vue 是從頭開始設計，以累加方式 adoptable。 核心程式庫僅著重于 view 圖層，而且很容易就能拾取並與其他程式庫或現有專案整合。 另一方面，Vue 與現代化工具和支援程式庫搭配使用時，能夠提供精密的單一頁面應用程式。」
+
+開始使用 Vue 只需要在 HTML 檔案中包含其腳本即可：
+
+```html
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+```
+
+加入架構之後，您就可以使用 Vue 的直接樣板化語法，以宣告的方式將資料轉譯至 DOM：
+
+```html
+<div id="app">
+  {{ message }}
+</div>
+```
+
+然後新增下列腳本：
+
+```js
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+
+這就足以呈現 "Hello Vue！" 在頁面上。 不過要注意的是，Vue 不只是將訊息轉譯成 div 一次。 它支援資料系結和動態更新，如此一來，如果 `message` 的值變更，`<div>` 中的值就會立即更新以反映它。
+
+當然，這只會將 Vue 的功能呈現在表面上。 在過去幾年來，有很多熱門的經驗，而且有大型的社區。 有一份[龐大且持續成長的支援元件和程式庫清單](https://github.com/vuejs/awesome-vue#redux)，可搭配 Vue 來進行擴充。 如果您想要在 web 應用程式中新增用戶端行為，或考慮建立完整的 SPA，Vue 就值得進行調查。
 
 ### <a name="choosing-a-spa-framework"></a>選擇 SPA 架構
 
@@ -157,13 +194,13 @@ JavaScript 架構持續以驚人的速度改良。 使用上面列出的考量�
 > - **Angular**  
 > <https://angular.io/>
 > - **React**  
-> <https://facebook.github.io/react/>
-> - **React Slingshot**  
-> <https://github.com/coryhouse/react-slingshot>
-> - **React vs Angular 2 比較**  
-> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
-> - **2017 年 5 個最佳的 JavaScript 架構**  
-> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
+> <https://reactjs.org/>
+> - **Vue**  
+> <https://vuejs.org/>
+> - **角度與反應 Vs Vue：要在 2020
+> 中選擇哪一種架構**<https://www.codeinwp.com/blog/angular-vs-vue-vs-react/>
+> - **2020中前端開發的最佳 JavaScript 架構**  
+> <https://www.freecodecamp.org/news/complete-guide-for-front-end-developers-javascript-frameworks-2019/>
 
 >[!div class="step-by-step"]
 >[上一頁](common-web-application-architectures.md)

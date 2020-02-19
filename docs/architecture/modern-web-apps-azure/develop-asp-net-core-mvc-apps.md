@@ -3,13 +3,13 @@ title: 開發 ASP.NET Core MVC 應用程式
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 開發 ASP.NET Core MVC 應用程式
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.date: 12/04/2019
+ms.openlocfilehash: 3b1409fbb924638f0148c74a678d482aeb732357
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116537"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449438"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -26,7 +26,7 @@ ASP.NET Core MVC 提供許多實用功能，可用來建置 Web API 及應用程
 
 ### <a name="why-razor-pages"></a>為什麼要使用 Razor Pages？
 
-Razor Pages 在 Visual Studio 中是新 Web 應用程式的預設方法。 Razor Pages 提供較簡易的方法來建置以頁面為基礎的應用程式功能，像是非 SPA 表單。 使用控制器及檢視，應用程式常會有非常大型的控制器與許多不同的相依性及檢視模型搭配運作，並傳回許多不同的檢視。 這會造成很複雜的情況，而且通常會導致控制器無法有效遵循單一責任原則或開放/關閉原則。 Razor Pages 透過使用其 Razor 標記，封裝 Web 應用程式中指定邏輯「頁面」的伺服器端邏輯，解決了這個問題。 沒有伺服器端邏輯的 Razor 頁面可以只由 Razor 檔案 (例如 "Index.cshtml") 構成。 然而，多數非一般的 Razor Pages 會有相關的頁面模型類別，命名方式照慣例與 Razor 檔案相同，副檔名為 ".cs" (例如 "Index.cshtml.cs")。
+Razor Pages 在 Visual Studio 中是新 Web 應用程式的預設方法。 Razor Pages 提供較簡易的方法來建置以頁面為基礎的應用程式功能，像是非 SPA 表單。 使用控制器及檢視，應用程式常會有非常大型的控制器與許多不同的相依性及檢視模型搭配運作，並傳回許多不同的檢視。 這會導致更複雜的情況，而且通常會導致控制器無法有效遵循單一責任原則或開放/關閉原則。 Razor Pages 透過使用其 Razor 標記，封裝 Web 應用程式中指定邏輯「頁面」的伺服器端邏輯，解決了這個問題。 沒有伺服器端邏輯的 Razor 頁面可以只由 Razor 檔案 (例如 "Index.cshtml") 構成。 然而，多數非一般的 Razor Pages 會有相關的頁面模型類別，命名方式照慣例與 Razor 檔案相同，副檔名為 ".cs" (例如 "Index.cshtml.cs")。
 
 Razor 頁面的頁面模型會合併 MVC 控制器及檢視模型的責任。 不會使用控制器動作方法來處理要求，而是執行像是 "OnGet()" 這類的頁面模型處理常式，並根據預設轉譯其相關頁面。 Razor Pages 簡化了在 ASP.NET Core 應用程式中建置個別頁面的程序，同時仍提供 ASP.NET Core MVC 的所有架構功能。 對以頁面為基礎的新功能來說，它們是相當好的預設選擇。
 
@@ -43,9 +43,9 @@ ASP.NET Core 應用程式基本上會將傳入要求對應至傳出回應。 在
 ASP.NET Core MVC 應用程式可以使用慣例路由、屬性路由或兩者。 慣例路由是在程式碼中定義，並使用如下列範例所示的語法來指定路由「慣例」：
 
 ```csharp
-app.UseMvc(routes =>
+app.UseEndpoints(endpoints =>
 {
-    routes.MapRoute("default","{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 ```
 
@@ -82,7 +82,7 @@ Razor Pages 不會使用屬性路由。 您可以為 Razor 頁面指定其他路
 @page "{id:int}"
 ```
 
-在前一個範例中，問題中的頁面會將路由與整數 `id` 參數比對。 例如，位於 `/Pages` 根的 *Products.cshtml* 頁面會有下列路由：
+在前一個範例中，問題中的頁面會將路由與整數 `id` 參數比對。 例如，位於 *根的*Products.cshtml`/Pages` 頁面會有下列路由：
 
 ```csharp
 "/Products/123"
@@ -129,9 +129,9 @@ public class Startup
     public Startup(IHostingEnvironment env)
     {
         var builder = new ConfigurationBuilder()
-        .SetBasePath(env.ContentRootPath)
-        .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-        .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+            .SetBasePath(env.ContentRootPath)
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
     }
 }
 ```
@@ -152,7 +152,7 @@ public void Configure(IApplicationBuilder app,
 此行為的例外是 ConfigureServices 方法；它只能接受 IServiceCollection 類型的一個參數。 它實際上不需要支援相依性插入，因為一方面它會負責將物件新增至服務容器，另一方面它可透過 IServiceCollection 參數存取目前所有已設定的服務。 因此，您可以透過要求所需的服務作為參數，或使用 ConfigureServices 中的 IServiceCollection，在啟動類別的每個部分使用 ASP.NET Core 服務集合中定義的相依性。
 
 > [!NOTE]
-> 如果您需要確保特定服務可供啟動類別使用，您可以使用 WebHostBuilder 及其 ConfigureServices 方法進行設定。
+> 如果您需要確保您的啟動類別能夠使用特定服務，您可以在 CreateDefaultBuilder 呼叫內使用 IWebHostBuilder 和其 ConfigureServices 方法來設定它們。
 
 啟動類別是您應該如何建構 ASP.NET Core 應用程式之其他組件的模型，這些組件包括控制器、中介軟體、篩選條件到您自己的服務。 在每個案例中，您應該遵循[明確相依性準則](https://deviq.com/explicit-dependencies-principle/)，要求而不是直接建立相依性，並在您的應用程式中利用相依性插入。 對於您直接具現化實作的位置和方式請小心，特別是搭配基礎結構使用或具有副作用的服務和物件。 最好是使用您的應用程式核心中定義的抽象概念，並作為引數傳遞到特定實作類型的硬式編碼參考。
 
@@ -191,15 +191,10 @@ public class HomeController
 您也必須將區域支援新增至您的路由：
 
 ```csharp
-app.UseMvc(routes =>
+app.UseEndpoints(endpoints =>
 {
-    // Areas support
-    routes.MapRoute(
-    name: "areaRoute",
-    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
-    routes.MapRoute(
-    name: "default",
-    template: "{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "areaRoute", pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+    endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
 });
 ```
 
@@ -237,9 +232,9 @@ public class FeatureConvention : IControllerModelConvention
 services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 ```
 
-ASP.NET Core MVC 也會使用慣例來尋找檢視。 您可以使用自訂慣例將它覆寫，讓檢視位於功能資料夾中 (使用上述 FeatureConvention 提供的功能名稱)。 您可以從 MSDN 文章 [Feature Slices for ASP.NET Core MVC](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc) (ASP.NET Core MVC 的功能分割)，深入了解此方法及下載工作範例。
+ASP.NET Core MVC 也會使用慣例來尋找檢視。 您可以使用自訂慣例將它覆寫，讓檢視位於功能資料夾中 (使用上述 FeatureConvention 提供的功能名稱)。 您可以從 MSDN 雜誌文章的[ASP.NET CORE MVC 的功能](https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc)配量中，深入瞭解此方法並下載可運作的範例。
 
-### <a name="cross-cutting-concerns"></a>跨領域關注
+### <a name="cross-cutting-concerns"></a>跨領域考量
 
 隨著應用程式成長，排除跨領域關注因素對於去除重複和維持一致性會變得越來越重要。 ASP.NET Core 應用程式中的一些跨領域關注範例包括驗證 (authentication)、模型驗證 (validation) 規則、輸出快取和錯誤處理，還有許多其他範例。 ASP.NET Core MVC [篩選條件](/aspnet/core/mvc/controllers/filters)可讓您在要求處理管線的特定步驟之前或之後執行程式碼。 例如，您可以在模型繫結前後、動作前後或動作結果前後執行篩選條件。 您也可以使用授權篩選條件來控制管線其餘部分的存取。 圖 7-2 顯示如何透過篩選條件 (如已設定) 要求執行流程。
 
@@ -282,7 +277,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-請勿讓您的動作方法因為類似的條件程式碼而變得很雜亂。 相反地，請將原則提取到可視需要套用的篩選條件中。 在此範例中，任何時候將命令傳送至 API，都應該進行模型驗證檢查，該檢查可取代為下列屬性：
+請勿讓您的動作方法因為類似的條件程式碼而變得很雜亂。 相反地，請將原則提取到可視需要套用的篩選條件中。 在此範例中，模型驗證檢查（應該會在命令傳送至 API 時），可由下列屬性來取代：
 
 ```csharp
 public class ValidateModelAttribute : ActionFilterAttribute
@@ -297,7 +292,7 @@ public class ValidateModelAttribute : ActionFilterAttribute
 }
 ```
 
-您可以藉由包含 [Ardalis.ValidateModel](https://www.nuget.org/packages/Ardalis.ValidateModel) 套件，來將 `ValidateModelAttribute` 新增到您的專案作為 NuGet 相依性。 針對 API，您可以使用 `ApiController` 屬性，在不需要個別 `ValidateModel` 篩選的情況下強制執行此行為。
+您可以藉由包含 `ValidateModelAttribute`Ardalis.ValidateModel[ 套件，來將 ](https://www.nuget.org/packages/Ardalis.ValidateModel) 新增到您的專案作為 NuGet 相依性。 針對 API，您可以使用 `ApiController` 屬性，在不需要個別 `ValidateModel` 篩選的情況下強制執行此行為。
 
 同樣地，篩選條件可用來檢查記錄是否存在，並先傳回 404 再執行動作，因此不需要在動作中執行這些檢查。 一旦您取出一般慣例並組織方案，將基礎結構程式碼和商務邏輯與 UI 分隔開來之後，您的 MVC 動作方法應該會非常精簡：
 
@@ -311,7 +306,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 }
 ```
 
-您可以從 MSDN 文章 [Real World ASP.NET Core MVC Filters](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters) (真實世界的 ASP.NET Core MVC 篩選條件)，深入了解如何實作篩選條件及下載工作範例。
+若要深入瞭解如何執行篩選器，以及從 MSDN 雜誌文章：[真實世界 ASP.NET CORE MVC 篩選](https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters)器下載實用的範例，請參閱。
 
 > ### <a name="references--structuring-applications"></a>參考資料 - 建構應用程式
 >
@@ -319,16 +314,16 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine - Feature Slices for ASP.NET Core MVC (MSDN Magazine - ASP.NET Core MVC 的功能分區)**  
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/september/asp-net-core-feature-slices-for-asp-net-core-mvc>
-> - **篩選**  
+> - **篩選條件**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN - Real World ASP.NET Core MVC Filters (真實世界的 ASP.NET Core MVC 篩選條件)**  
+> - **MSDN 雜誌–真實世界 ASP.NET Core MVC 篩選器**  
 >   <https://docs.microsoft.com/archive/msdn-magazine/2016/august/asp-net-core-real-world-asp-net-core-mvc-filters>
 
 ## <a name="security"></a>安全性
 
 保護 Web 應用程式是很龐大的主題，其中包含許多考量。 最基本的安全性層級牽涉到確保您知道指定要求的來源，以及確保該要求只具有其應有的資源存取權。 驗證是比較要求隨附的認證與受信任資料存放區中的認證，來查看是否應該將要求視為來自已知實體的程序。 授權是根據使用者身分識別限制特定資源存取權的程序。 第三個安全性考量是防止第三方竊聽要求，您應該至少[確保應用程式使用 SSL](/aspnet/core/security/enforcing-ssl)。
 
-### <a name="authentication"></a>驗證  (可能為英文網頁)
+### <a name="authentication"></a>驗證
 
 ASP.NET Core Identity 是可用來支援應用程式登入功能的會員系統。 它具備本機使用者帳戶支援，以及來自 Microsoft 帳戶、Twitter、Facebook、Google 等提供者的外部登入提供者支援。 除了 ASP.NET Core Identity，您的應用程式也可以使用 Windows 驗證，或 [Identity Server](https://github.com/IdentityServer/IdentityServer4) 等協力廠商身分識別提供者。
 
@@ -356,11 +351,9 @@ public void Configure(IApplicationBuilder app)
 {
     app.UseStaticFiles();
     app.UseIdentity();
-    app.UseMvc(routes =>
+    app.UseEndpoints(endpoints =>
     {
-        routes.MapRoute(
-        name: "default",
-        template: "{controller=Home}/{action=Index}/{id?}");
+        endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
     });
 }
 ```
@@ -395,7 +388,7 @@ public IActionResult ExecutiveSalaryReport()
 
 以此方式使用原則，您就可以分隔特定角色限制使用的動作類型，或對其套用的規則。 稍後，如果您建立需要存取特定資源的新角色，您只要更新原則即可，而不需要在每個 \[Authorize\] 屬性上更新每個角色清單。
 
-#### <a name="claims"></a>宣告
+#### <a name="claims"></a>Claims
 
 宣告是成對的名稱和數值，代表已驗證使用者的屬性。 例如，您可以將使用者的員工編號儲存為宣告。 宣告可接著作為授權原則的一部分使用。 您可以建立稱為 "EmployeeOnly" 的原則，該原則需要有稱為 "EmployeeNumber" 的宣告，如下列範例所示：
 
@@ -436,7 +429,7 @@ public void ConfigureServices(IServiceCollection services)
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **授權簡介**  
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
-> - **Azure App Service 之 API Apps 的驗證和授權**  
+> - **Azure App Service 中的 API Apps 驗證與授權**  
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 > - **Identity Server**  
 >   <https://github.com/IdentityServer>
@@ -445,9 +438,7 @@ public void ConfigureServices(IServiceCollection services)
 
 除了透過 Web API 提供頁面及回應資料要求，ASP.NET Core 應用程式還可以直接與連線的用戶端通訊。 此輸出通訊可以使用各種傳輸技術，最常見的是 WebSockets。 ASP.NET Core SignalR 是一種程式庫，可讓您簡單地將即時伺服器對用戶端通訊功能新增至應用程式。 SignalR 支援各種傳輸技術 (包括 WebSockets)，並從開發人員擷取許多實作詳細資料。
 
-自 ASP.NET Core 版本 2.1 開始，已可使用 ASP.NET Core SignalR。
-
-即時用戶端通訊 (不論是直接使用 WebSockets 或其他技術) 在許多不同的應用程式案例中都很有用。 其中某些範例包括：
+即時用戶端通訊 (不論是直接使用 WebSockets 或其他技術) 在許多不同的應用程式案例中都很有用。 部分範例包括：
 
 - 即時聊天室應用程式
 
@@ -520,7 +511,7 @@ public class Program
 
 - [領域事件](https://martinfowler.com/eaaDev/DomainEvent.html)，代表系統內發生的事件，系統的其他組件對這些事件會有興趣。
 
-請注意，DDD 領域模型應該將複雜行為封裝在模型內。 特別是實體，不應該只是屬性集合。 當領域模型缺少行為且只代表系統的狀態時，即為 [Anemic 模型](https://deviq.com/anemic-model/)，DDD 中並不需要此模型。
+DDD 領域模型應該在模型內封裝複雜的行為。 特別是實體，不應該只是屬性集合。 當領域模型缺少行為且只代表系統的狀態時，即為 [Anemic 模型](https://deviq.com/anemic-model/)，DDD 中並不需要此模型。
 
 除了這些模型類型，DDD 通常還會採用多種模式：
 
@@ -559,7 +550,7 @@ DDD 牽涉到投資模型、架構和通訊，這對較小型的應用程式，�
 
 ASP.NET Core 應用程式是主控台應用程式，必須在伺服器開機時啟動，並在應用程式 (或伺服器) 損毀時重新啟動。 您可以使用處理序管理員來自動化此程序。 ASP.NET Core 最常見的處理序管理員是 Linux 上的 Nginx 和 Apache，以及 Windows 上的 IIS 或 Windows 服務。
 
-除了處理序管理員，裝載於 Kestrel 網頁伺服器的 ASP.NET Core 應用程式必須使用反向 Proxy 伺服器。 反向 Proxy 伺服器會從網際網路接收 HTTP 要求，並在進行一些初步處理後，將其轉送至 Kestrel。 反向 Proxy 伺服器為應用程式提供一層安全性，而且需要這些伺服器才能進行邊緣部署 (對網際網路流量公開)。 Kestrel 相對較新且尚未提供特定攻擊的防禦。 Kestrel 也不支援在相同的連接埠上裝載多個應用程式，因此無法搭配使用主機標頭等技術，以允許在相同的連接埠和 IP 位址上裝載多個應用程式。
+除了進程管理員之外，ASP.NET Core 應用程式也可以使用反向 proxy 伺服器。 反向 Proxy 伺服器會從網際網路接收 HTTP 要求，並在進行一些初步處理後，將其轉送至 Kestrel。 反向 proxy 伺服器會為應用程式提供一層安全性。 Kestrel 也不支援在相同的連接埠上裝載多個應用程式，因此無法搭配使用主機標頭等技術，以允許在相同的連接埠和 IP 位址上裝載多個應用程式。
 
 ![Kestrel 到網際網路](./media/image7-5.png)
 

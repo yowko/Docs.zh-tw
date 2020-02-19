@@ -1,20 +1,37 @@
 ---
 title: 使用彈性堆疊記錄
 description: 使用彈性堆疊、Logstash 和 Kibana 進行記錄
-ms.date: 09/23/2019
-ms.openlocfilehash: 989834925bc08541bf484e1a4567a56ac324872f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 02/05/2020
+ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087069"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448904"
 ---
 # <a name="logging-with-elastic-stack"></a>使用彈性堆疊記錄
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 有許多良好的集中式記錄工具，其成本會因免費的開放原始碼工具而有所不同，以提供更昂貴的選項。 在許多情況下，免費的工具會比付費供應專案更好或更好。 其中一項工具是三個開放原始碼元件的組合：彈性搜尋、Logstash 和 Kibana。
+
 這些工具統稱為彈性堆疊或 ELK 堆疊。
+
+## <a name="elastic-stack"></a>彈性堆疊
+
+彈性堆疊是一種功能強大的選項，可從 Kubernetes 叢集收集資訊。 Kubernetes 支援將記錄傳送至 Elasticsearch 端點，而在[大部分的情況](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)下，您只需要設定環境變數，如圖7-5 所示：
+
+```kubernetes
+KUBE_LOGGING_DESTINATION=elasticsearch
+KUBE_ENABLE_NODE_LOGGING=true
+```
+
+**圖 7-5**. Kubernetes 的設定變數
+
+這會在叢集上安裝 Elasticsearch，並將所有叢集記錄檔傳送至該叢集。
+
+![Kibana 儀表板範例，其中顯示內嵌自 Kubernetes 的記錄查詢結果，](./media/kibana-dashboard.png)
+**圖 7-6**。 Kibana 儀表板的範例，其中顯示針對內嵌自 Kubernetes 的記錄進行查詢的結果
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>彈性堆疊有哪些優點？
 
@@ -24,7 +41,7 @@ ms.locfileid: "73087069"
 
 第一個元件是[Logstash](https://www.elastic.co/products/logstash)。 這項工具是用來從各種不同的來源收集記錄資訊。 例如，Logstash 可以從磁片讀取記錄，也會接收來自記錄程式庫（例如[Serilog](https://serilog.net/)）的訊息。 Logstash 可以在記錄檔抵達時，對其進行一些基本的篩選和擴充。 例如，如果您的記錄包含 IP 位址，則 Logstash 可能會設定為執行地理查閱，並取得該訊息的國家/地區或甚至是來源的城市。
 
-Serilog 是 .NET 語言的記錄程式庫，可讓您進行參數化記錄。 不會產生內嵌欄位的文字記錄訊息，而是會個別保留參數。 這可讓您進行更聰明的篩選和搜尋。 [圖 7-2] 顯示寫入 Logstash 的範例 Serilog 設定。
+Serilog 是 .NET 語言的記錄程式庫，可讓您進行參數化記錄。 不會產生內嵌欄位的文字記錄訊息，而是會個別保留參數。 這可讓您進行更聰明的篩選和搜尋。 [圖 7-7] 顯示寫入 Logstash 的範例 Serilog 設定。
 
 ```csharp
 var log = new LoggerConfiguration()
@@ -32,9 +49,9 @@ var log = new LoggerConfiguration()
          .CreateLogger();
 ```
 
-**圖 7-2**Serilog config，用於透過 HTTP 將記錄資訊直接寫入 logstash
+**圖 7-7**。 Serilog config，用於透過 HTTP 將記錄資訊直接寫入 logstash
 
-Logstash 會使用如圖7-3 所示的設定。
+Logstash 會使用如圖7-8 所示的設定。
 
 ```
 input {
@@ -52,7 +69,7 @@ output {
 }
 ```
 
-**圖 7-3** -從 Serilog 取用記錄的 Logstash 設定
+**圖 7-8**。 從 Serilog 耗用記錄的 Logstash 設定
 
 在不需要大量記錄操作的情況下，Logstash 稱為「[節拍](https://www.elastic.co/products/beats)」的替代方法。 節拍是一系列的工具，可從記錄收集各種不同的資料到網路資料和執行時間資訊。 許多應用程式都會使用 Logstash 和節拍。
 
@@ -64,7 +81,7 @@ Logstash 收集到記錄檔之後，就需要在某個位置放置它們。 雖�
 
 已製作成包含參數或已透過 Logstash 處理將參數從它們分割的記錄訊息，可以直接查詢，因為 Elasticsearch 會保留此資訊。
 
-如圖7-4 所示，搜尋 `jill@example.com`流覽過前10頁的查詢。
+如圖7-9 所示，搜尋 `jill@example.com`流覽過前10頁的查詢。
 
 ```
 "query": {
@@ -82,7 +99,7 @@ Logstash 收集到記錄檔之後，就需要在某個位置放置它們。 雖�
   }
 ```
 
-**圖 7-4** -用來尋找使用者所造訪前10頁的 Elasticsearch 查詢
+**圖 7-9**。 用來尋找使用者所造訪前10頁的 Elasticsearch 查詢
 
 ## <a name="visualizing-information-with-kibana-web-dashboards"></a>使用 Kibana web 儀表板將資訊視覺化
 

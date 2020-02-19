@@ -3,13 +3,13 @@ title: 現代化 Web 應用程式的特性
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 現代化 Web 應用程式的特性
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3848f3b0cf993930bfc3801ce40c5eac30f094d
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.date: 12/04/2019
+ms.openlocfilehash: d70fa54adeb505fd37807399402281dfda67cf52
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374080"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451560"
 ---
 # <a name="characteristics-of-modern-web-applications"></a>現代化 Web 應用程式的特性
 
@@ -49,7 +49,7 @@ ASP.NET Core 也完全支援內部和應用程式層級的[相依性插入](http
 
 ## <a name="easily-tested-with-automated-tests"></a>以自動化測試輕鬆進行測試
 
-ASP.NET Core 應用程式支援單元測試，其鬆散結合程度和相依性插入的支援使其可以輕鬆將基礎結構問題與假實作交換，以用於測試目的。 ASP.NET Core 也提供可用於在記憶體中裝載應用程式的 TestServer。 功能測試可以對此記憶體中的伺服器發出請求，執行完整的應用程式堆疊 (包含中介軟體、路由、模型繫結、篩選等) 與接收回應，只需要一小部分的時間來將應用程式裝載在實際伺服器上，並透過網路層級傳送要求。 這些測試對於在現代化 Web 應用程式中越來越重要的 API 來說，尤其易於撰寫且具有價值。
+ASP.NET Core 應用程式支援單元測試，其鬆散結合程度和相依性插入的支援使其可以輕鬆將基礎結構問題與假實作交換，以用於測試目的。 ASP.NET Core 也隨附可用於在記憶體中裝載應用程式的 TestServer。 功能測試可以對此記憶體中的伺服器發出請求，執行完整的應用程式堆疊 (包含中介軟體、路由、模型繫結、篩選等) 與接收回應，只需要一小部分的時間來將應用程式裝載在實際伺服器上，並透過網路層級傳送要求。 這些測試對於在現代化 Web 應用程式中越來越重要的 API 來說，尤其易於撰寫且具有價值。
 
 ## <a name="traditional-and-spa-behaviors-supported"></a>支援傳統和 SPA 行為
 
@@ -61,20 +61,28 @@ ASP.NET Core 應用程式支援單元測試，其鬆散結合程度和相依性�
 
 ## <a name="simple-development-and-deployment"></a>簡單開發與部署
 
-可以使用簡單的文字編輯器與命令列介面，或是完整的開發環境如 Visual Studio，來撰寫 ASP.NET Core 應用程式。 整合型應用程式通常會部署到單一端點。 作為持續整合 (CI) 與持續傳遞 (CD) 管道的一部分，部署可以輕鬆自動進行。 除了傳統的 CI/CD 工具之外，Windows Azure 還整合了對 Git 儲存機制的支援，並且可以在更新指定的 Git 分支或標記時自動部署更新。
+ASP.NET Core 的應用程式可以使用簡單的文字編輯器和命令列介面，或是功能完整的開發環境（例如 Visual Studio）來撰寫。 整合型應用程式通常會部署到單一端點。 作為持續整合 (CI) 與持續傳遞 (CD) 管道的一部分，部署可以輕鬆自動進行。 除了傳統的 CI/CD 工具之外，Microsoft Azure 還整合了 git 存放庫的支援，並且可以在對指定的 git 分支或標記進行更新時，自動部署更新。 Azure DevOps 提供功能完整的 CI/CD 組建和部署管線，而 GitHub 動作則為裝載于該處的專案提供另一個選項。
 
 ## <a name="traditional-aspnet-and-web-forms"></a>傳統的 ASP.NET 和 Web Form
 
-除了 ASP.NET Core 之外，傳統 ASP.NET 4.x 仍然是建置 Web 應用程式穩定且可靠的平台。 ASP.NET 支援 MVC 和 Web API 開發模型以及 Web Form，非常適合豐富的頁面型應用程式開發，且具有豐富的協力廠商元件生態系統。 Windows Azure 對 ASP.NET 4.x 應用程式有長期的支援，許多開發人員都熟悉此平台。
+除了 ASP.NET Core 之外，傳統 ASP.NET 4.x 仍然是建置 Web 應用程式穩定且可靠的平台。 ASP.NET 支援 MVC 和 Web API 開發模型，以及 Web form，其適用于豐富的網頁型應用程式開發，並具備豐富的協力廠商元件生態系統。 Microsoft Azure 對 ASP.NET 4.x 應用程式有絕佳的長期以來非常支援，而且許多開發人員都熟悉此平臺。
+
+## <a name="blazor"></a>Blazor
+
+Blazor 隨附于 ASP.NET Core 3.0 和更新版本中。 它提供新的機制，讓您使用 Razor、和 ASP.NET Core 來建立C#豐富的互動式 web 用戶端應用程式。 它提供開發現代化 web 應用程式時要考慮的另一個解決方案。 有兩個要考慮的 Blazor 版本：伺服器端和用戶端。
+
+伺服器端 Blazor 在2019中以 ASP.NET Core 3.0 發行。 正如其名，它會在伺服器上執行，並透過網路將用戶端檔的變更轉譯回瀏覽器。 伺服器端 Blazor 提供豐富的用戶端體驗，而不需要用戶端 JavaScript，也不需要針對每個用戶端頁面互動進行個別的頁面載入。 載入的頁面中的變更是由伺服器所要求，然後再使用 SignalR 傳送回用戶端。
+
+用戶端 Blazor 將于2020發行，並不需要在伺服器上轉譯變更。 相反地，它會利用 WebAssembly 在用戶端中執行 .NET 程式碼。 如果需要要求資料，用戶端仍然可以對伺服器進行 API 呼叫，但所有的用戶端行為都會透過 WebAssembly 在用戶端中執行，而所有主要瀏覽器都已支援，而且只是 JAVAscript 程式庫。
 
 > ### <a name="references--modern-web-applications"></a>參考 – 現代化 Web 應用程式
 >
 > - **ASP.NET Core 簡介**  
 >   <https://docs.microsoft.com/aspnet/core/>
-> - **ASP.NET Core 的六個主要優點使其與眾不同且更好**  
->   <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **ASP.NET Core 中的測試**  
 >   <https://docs.microsoft.com/aspnet/core/testing/>
+> - **Blazor-開始使用**  
+>   <https://blazor.net/docs/get-started.html>
 
 >[!div class="step-by-step"]
 >[上一頁](index.md)

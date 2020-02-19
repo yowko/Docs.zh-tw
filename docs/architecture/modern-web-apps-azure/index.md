@@ -3,17 +3,19 @@ title: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 description: 本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web 應用程式的端對端指引。
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 739dd607aaa45f73e777a30c6495e329236fee17
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.date: 12/4/2019
+ms.openlocfilehash: c19e5e90cfb96463f744cfb064abe72ee5db2e9f
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70296289"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449320"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 
-![《Architect Modern Web Applications》(設計現代化 Web 應用程式架構) 指南的封面影像。](./media/index/web-application-guide-cover-image.png)
+![架構現代化 Web 應用程式指南的書籍封面影像。](./media/index/web-application-guide-cover-image.png)
+
+**版本 3.1** -更新為 ASP.NET Core 3。1
 
 發行者
 
@@ -25,23 +27,23 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 by Microsoft Corporation
+Microsoft Corporation 的著作權©2020
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
 
 本書是以「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路網站參考) 可能會隨時變更，恕不另行通知。
 
-此處所描述的一些範例僅供說明，純屬虛構。 任何實際關聯或連結純屬巧合。
+此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。
 
 Microsoft 與列於 https://www.microsoft.com 「商標」網頁的商標是 Microsoft 集團的商標。
 
 Mac 與 macOS 是 Apple Inc. 的商標。
 
-Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
+Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 
 所有其他商標和標誌屬於其各自擁有者的財產。
 
-作者:
+作者︰
 
 > **Steve "ardalis" Smith** - 軟體架構設計人員和講師 - [Ardalis.com](https://ardalis.com)
 
@@ -79,11 +81,11 @@ Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
 
 使用 ASP.NET Core 建置 Web 應用程式 (且其裝載於 Azure) 提供許多比傳統替代項目更具競爭性的優點。 ASP.NET Core 已針對現代化 Web 應用程式開發做法和雲端裝載案例最佳化。 在本指南中，您將學習如何架構 ASP.NET Core 應用程式，以善加利用這些功能。
 
-## <a name="purpose"></a>用途
+## <a name="purpose"></a>目的
 
-本指南會提供使用 ASP.NET Core 和 Azure 建置整合型  Web 應用程式的端對端指引。 此處的「整合型」是指這些應用程式會部署為單一單位，而不是互動服務和應用程式的集合。
+本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web 應用程式的端對端指引。 此處的「整合型」是指這些應用程式會部署為單一單位，而不是互動服務和應用程式的集合。
 
-本指南是 [" _.NET Microservices.Architecture for Containerized .NET Applications_"](../microservices/index.md) 的補充說明，該書籍著重在 Docker、微服務及部署容器以裝載企業應用程式的部分。
+本指南是「 [ _.net 微服務的補充。容器化 .NET 應用程式的架構_](../microservices/index.md) ，著重在 Docker、微服務及部署容器以裝載企業應用程式。
 
 ### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務。 容器化 .NET 應用程式的架構
 
@@ -110,4 +112,4 @@ Docker 鯨魚標誌是 Docker, Inc. 的註冊商標。使用需要許可。
   [https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server](../../standard/choosing-core-framework-server.md)
 
 >[!div class="step-by-step"]
->[下一步](modern-web-applications-characteristics.md)
+>[下一個](modern-web-applications-characteristics.md)

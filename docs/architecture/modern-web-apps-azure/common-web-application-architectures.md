@@ -3,13 +3,13 @@ title: 一般 Web 應用程式架構
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 探索一般 Web 應用程式架構
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.date: 12/04/2019
+ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884237"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450168"
 ---
 # <a name="common-web-application-architectures"></a>一般 Web 應用程式架構
 
@@ -40,7 +40,7 @@ ms.locfileid: "74884237"
 
 ## <a name="what-are-layers"></a>什麼是「層級」？
 
-當應用程式變得越來越複雜時，管理這種複雜性的一種方法，是根據應用程式的責任或關注點來分解應用程式。 這會遵循關注點分離原則，並有助於成長中的程式碼庫維持井井有條，以便開發人員可以輕鬆地找到特定的功能實作在哪裡。 不過，除了程式碼組織之外，分層的架構還提供許多優勢。
+當應用程式變得越來越複雜時，管理這種複雜性的一種方法，是根據應用程式的責任或關注點來分解應用程式。 這會遵循關注點分離原則，並有助於讓程式碼基底組織成長，讓開發人員可以輕鬆地找到特定功能的執行位置。 不過，除了程式碼組織之外，分層的架構還提供許多優勢。
 
 藉由將程式碼組織成層級，就可以在整個應用程式重複使用通用的低階功能。 這種重複使用是有益的，因為這表示需要撰寫較少的程式碼，且因為它可讓應用程式在單一實作標準化，遵循[一次且僅一次 (DRY)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) 準則。
 
@@ -99,8 +99,7 @@ ms.locfileid: "74884237"
 
 遵循相依性反轉準則以及領域驅動設計 (DDD) 準則的應用程式通常會達到類似的架構。 這個架構多年來有了許多名稱。 最早的其中一個名稱是 Hexagonal Architecture，後來則是 Ports-and-Adapters。 最近，它被引用為 [Onion Architecture](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) 或 [Clean Architecture](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)。 本電子書使用第二個名稱 Clean Architecture 作為此架構的名稱。
 
-> [!NOTE]
-> Clean Architecture 一詞可以套用至使用 DDD 原則建置的應用程式，以及不是使用 DDD 原則建置的應用程式。 在前者的案例，這種組合可能會稱為 Clean DDD Architecture。
+EShopOnWeb reference 應用程式會使用全新的架構方法將其程式碼組織成專案。 您可以在[ardalis/cleanarchitecture](https://github.com/ardalis/cleanarchitecture) GitHub 存放庫中找到可作為您自己 ASP.NET Core 起點的解決方案範本。
 
 Clean Architecture 會將商務邏輯和應用程式模型放在應用程式的中央位置。 不讓商務邏輯相依於資料存取或其他基礎結構的關注點，而是反轉此相依性：基礎結構和實作詳細資料相依於應用程式核心。 藉由在應用程式核心定義抽象或介面，然後它們會由基礎結構層中定義的類型所實作，即可達到此目的。 視覺化這個架構的常見方式是使用一系列的同心圓，類似於洋蔥。 圖 5-7 示範這種架構的表示法。
 
@@ -169,8 +168,8 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 
 ### <a name="ui-layer-types"></a>UI 層類型
 
-- 控制器
-- 篩選器。
+- Controllers
+- 篩選器
 - 檢視
 - ViewModels
 - 啟動
@@ -212,7 +211,7 @@ ASP.NET Core MVC 應用程式中的使用者介面層是應用程式的進入點
 
 容器的設計原本就是不可變的，您永遠不需要擔心 VM 損毀，而更新指令碼可能會忘記處理部分特定設定或是檔案殘留在磁碟上。
 
-您可以使用 Docker 容器進行更簡單的 Web 應用程式整合型部署。 如此可改善持續整合與持續部署管線，並協助完成部署到生產的過程。 不再產生「它可在我的電腦中運作，但為何無法在生產環境中運作？」的疑問
+您可以使用 Docker 容器進行更簡單的 Web 應用程式整合型部署。 如此可改善持續整合與持續部署管線，並協助完成部署到生產的過程。 不再有「它可在我的電腦上運作，為什麼不能在生產環境中運作？」
 
 微服務架構有許多好處，但這些好處的代價是複雜度會增加。 在某些情況下，這些代價會遠大於所獲得的好處，因此在單一容器或幾個容器中執行整合型部署應用程式會是較佳的選擇。
 
@@ -260,24 +259,22 @@ networks:
       name: nat
 ```
 
-`docker-compose.yml` 檔案參考了 `Web` 專案中的 `Dockerfile`。 `Dockerfile` 是用來指定將使用的基底容器，以及如何在其上設定應用程式。 `Web` 的 `Dockerfile`：
+`docker-compose.yml` 檔案參考了 `Dockerfile` 專案中的 `Web`。 `Dockerfile` 是用來指定將使用的基底容器，以及如何在其上設定應用程式。 `Web` 的 `Dockerfile`：
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 
+COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
-
-# Optional: Set this here if not setting it from docker-compose.yml
-# ENV ASPNETCORE_ENVIRONMENT Development
 
 ENTRYPOINT ["dotnet", "Web.dll"]
 ```
@@ -298,7 +295,7 @@ ENTRYPOINT ["dotnet", "Web.dll"]
   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 - **存放庫模式**  
   <https://deviq.com/repository-pattern/>
-- **Clean Architecture 解決方案範例**  
+- **清理架構解決方案範本**  
   <https://github.com/ardalis/cleanarchitecture>
 - **架構微服務電子書**  
   <https://aka.ms/MicroservicesEbook>

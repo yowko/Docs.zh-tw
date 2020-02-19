@@ -1,13 +1,13 @@
 ---
 title: 在 Azure Kubernetes Service 中監視
 description: 在 Azure Kubernetes Service 中監視
-ms.date: 09/23/2019
-ms.openlocfilehash: fc9d84fd738ff1c40d25860680e14313c9323517
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.date: 02/05/2020
+ms.openlocfilehash: 5c46b9e8599f70d430ad26cf1364343454d30a16
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711645"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450059"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>在 Azure Kubernetes Service 中監視
 
@@ -15,28 +15,14 @@ ms.locfileid: "75711645"
 
 Kubernetes 中的內建記錄是基本的。 不過，有一些絕佳的選項可讓您從 Kubernetes 中取得記錄檔，並放在適當的分析位置。 如果您需要監視 AKS 叢集，設定 Kubernetes 的彈性堆疊是絕佳的解決方案。
 
-## <a name="elastic-stack"></a>彈性堆疊
+## <a name="azure-monitor-for-containers"></a>適用於容器的 Azure 監視器
 
-彈性堆疊是一種功能強大的選項，可從 Kubernetes 叢集收集資訊。 Kubernetes 支援將記錄傳送至 Elasticsearch 端點，而在[大部分的情況](https://kubernetes.io/docs/tasks/debug-application-cluster/logging-elasticsearch-kibana/)下，您只需要設定環境變數，如圖7-5 所示：
-
-```kubernetes
-KUBE_LOGGING_DESTINATION=elasticsearch
-KUBE_ENABLE_NODE_LOGGING=true
-```
-
-**圖 7-5** -Kubernetes 的設定變數
-
-這會在叢集上安裝 Elasticsearch，並將所有叢集記錄檔傳送至該叢集。
-
-![Kibana 儀表板範例，其中顯示內嵌自 Kubernetes 的記錄查詢結果，](./media/kibana-dashboard.png)
-**圖 7-6**。 Kibana 儀表板的範例，其中顯示針對內嵌自 Kubernetes 的記錄進行查詢的結果
-
-## <a name="azure-container-monitoring"></a>Azure 容器監視
-
-Azure 容器監視不僅支援從 Kubernetes 取用記錄，還能從其他協調流程引擎（例如 DC/OS、Docker Swarm 和 Red Hat OpenShift）使用。
+[適用于容器的 Azure 監視器](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview)不僅支援從 Kubernetes 取用記錄，還可從 DC/OS、Docker Swarm 和 Red Hat OpenShift 等其他協調流程引擎使用。
 
 ![使用不同容器的記錄](./media/containers-diagram.png)
-**圖 7-7**。  使用來自不同容器的記錄
+**圖 7-10**。 使用來自不同容器的記錄
+
+[Prometheus](https://prometheus.io/)是受歡迎的開放原始碼計量監視解決方案。 它是雲端原生計算基礎的一部分。 一般來說，使用 Prometheus 時，必須使用自己的存放區來管理 Prometheus 伺服器。 不過，[適用于容器的 Azure 監視器會提供與 Prometheus 計量端點的直接整合](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration)，因此不需要個別的伺服器。
 
 記錄和計量資訊不只是從叢集中執行的容器，也是從叢集主機本身收集而來。 它允許從兩者相互關聯記錄資訊，讓它更容易追蹤錯誤。
 
@@ -45,7 +31,7 @@ Azure 容器監視不僅支援從 Kubernetes 取用記錄，還能從其他協�
 無論哪個協調器或作業系統正在執行 Azure 監視器 daemon，記錄資訊都會轉送到與使用者熟悉的相同 Azure 監視器工具。 這可確保在混合不同記錄來源（例如混合式 Kubernetes/Azure Functions 環境）的環境中具有平行體驗。
 
 ![範例儀表板，其中顯示來自數個執行中容器的記錄和度量資訊。](./media/containers-dashboard.png)
-**圖 7-8**。 範例儀表板，顯示來自數個執行中容器的記錄和度量資訊。
+**圖 7-11**。 範例儀表板，顯示來自數個執行中容器的記錄和度量資訊。
 
 ## <a name="logfinalize"></a>Log. Finalize （）
 

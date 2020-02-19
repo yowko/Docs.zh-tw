@@ -3,13 +3,13 @@ title: 使用 ASP.NET Core 應用程式中的資料
 description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | 使用 ASP.NET Core 應用程式中的資料
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: d3c91f594eedd2636cbf08285f0dee352bc4835a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 12/04/2019
+ms.openlocfilehash: f37bdca688559236d9b07b97f7ee7459b3be4f39
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777123"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449344"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
@@ -200,9 +200,9 @@ private void ConfigureOrder(EntityTypeBuilder<Order> builder)
 }
 ```
 
-在此範例中，`ShipToAddress` 屬性的類型為 `Address`。 `Address` 是擁有多個屬性 (例如 `Street` 及 `City`) 的值物件。 EF Core 以每個 `Order` 屬性一個資料行來將 `Address` 物件對應到其資料表，並以屬性名稱作為每個資料行名稱的開頭。 在這個範例中，`Order` 資料表會包含像是 `ShipToAddress_Street` 及 `ShipToAddress_City` 的資料行。
+在此範例中，`ShipToAddress` 屬性的類型為 `Address`。 `Address` 是擁有多個屬性 (例如 `Street` 及 `City`) 的值物件。 EF Core 以每個 `Order` 屬性一個資料行來將 `Address` 物件對應到其資料表，並以屬性名稱作為每個資料行名稱的開頭。 在這個範例中，`Order` 資料表會包含像是 `ShipToAddress_Street` 及 `ShipToAddress_City` 的資料行。 如有需要，也可以在不同的資料表中儲存自有的類型。
 
-[EF Core 2.2 推出了自有實體集合的支援](https://docs.microsoft.com/ef/core/what-is-new/ef-core-2.2#collections-of-owned-entities)
+[在 EF Core 中深入瞭解擁有的實體支援](/ef/core/modeling/owned-entities)。
 
 ### <a name="resilient-connections"></a>具復原功能的連接
 
@@ -242,7 +242,7 @@ public class Startup
 
 System.InvalidOperationException：已設定的執行策略 'SqlServerRetryingExecutionStrategy' 不支援使用者起始的異動。 使用 ' DbCoNtext. CreateExecutionStrategy （） ' 傳回的執行策略，將交易中的所有作業當做可重試的單位來執行。
 
-解決方法是使用代表必須執行之所有項目的委派，來手動叫用 EF 執行策略。 如果發生暫時性失敗，執行策略會再叫用委派一次。 下列程式碼會示範如何實作這個方法：
+解決方法是使用代表必須執行之所有項目的委派，來手動叫用 EF 執行策略。 如果發生暫時性失敗，執行策略會再次叫用委派。 下列程式碼會示範如何實作這個方法：
 
 ```csharp
 // Use of an EF Core resiliency strategy when using multiple DbContexts
@@ -350,7 +350,7 @@ Azure Cosmos DB 是完全受控的 NoSQL 資料庫服務，提供以雲端為基
 
 **圖 8-2**： Azure Cosmos DB 資源組織。
 
-Azure Cosmos DB 查詢語言是一種簡單但功能強大的介面，可用於查詢 JSON 檔。 該語言支援 ANSI SQL 文法子集，並深度整合 JavaScript 物件、陣列、物件建構和函式引動過程。
+Azure Cosmos DB 查詢語言是一種簡單但功能強大的介面，可用於查詢 JSON 檔。 此語言支援 ANSI SQL 文法的子集，並新增 JavaScript 物件、陣列、物件建構和函式叫用的深入整合。
 
 **參考– Azure Cosmos DB**
 
@@ -372,7 +372,7 @@ Azure Cosmos DB 查詢語言是一種簡單但功能強大的介面，可用於�
 
 - Azure 儲存體簡介 <https://docs.microsoft.com/azure/storage/storage-introduction>
 
-## <a name="caching"></a>快取
+## <a name="caching"></a>Caching
 
 在 Web 應用程式中，每個 Web 要求都應盡量在最短時間內完成。 為了達成上述目的，其中一個方法是限制伺服器為完成要求必須發出的外部呼叫數目。 快取功能會將資料的複本儲存到伺服器 (或比資料來源更容易查詢的其他資料存放區)。 Web 應用程式 (特別是非 SPA 的傳統 Web 應用程式) 必須使用每個要求來建置完整的使用者介面。 若要這麼做，通常要從某個使用者要求到下一個使用者要求不斷重複進行許多相同的資料庫查詢。 在大部分情況下，這些資料很少變更，因此實在沒有必要不斷向資料庫提出要求。 ASP.NET Core 支援可快取整個頁面的回應快取，以及可支援更細微快取行為的資料快取。
 

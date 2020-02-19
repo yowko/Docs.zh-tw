@@ -4,19 +4,19 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849584"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450035"
 ---
 # <a name="development-process-for-azure"></a>Azure 開發程序
 
 > _「借助雲端，個人和小型企業彈指之間就能立即設定企業級服務。」_  
 > _- Roy Stephan_
 
-## <a name="vision"></a>願景
+## <a name="vision"></a>視覺
 
 > *以您喜歡的方式開發設計良好的 ASP.NET Core 應用程式，使用 Visual Studio 或 dotnet CLI 和 Visual Studio Code 或您選擇的編輯器。*
 
@@ -26,13 +26,9 @@ ms.locfileid: "70849584"
 
 不論您偏好使用完整且強大的 IDE，還是輕量型的敏捷式編輯器，Microsoft 都能支援您開發 ASP.NET Core 應用程式。
 
-**Visual Studio 2017.** 如果您使用 *Visual Studio 2017*，只要您已安裝「.NET Core 跨平台開發」工作負載，就可以建置 ASP.NET Core 應用程式。 圖 10-1 顯示 Visual Studio 2017 設定對話方塊中的必要工作負載。
+**Visual Studio 2019。** Visual Studio 2019 是用於開發 ASP.NET Core 應用程式的最佳 IDE。 它提供了許多功能，可提升開發人員的生產力。 您可以使用它來開發應用程式，然後分析其效能和其他特性。 整合式偵錯工具可讓您暫停程式碼執行，並在程式碼執行時逐步執行。 內建的測試執行器可讓您組織測試和其結果，甚至可以在撰寫程式碼時執行即時單元測試。 使用 Live Share，您可以與其他開發人員即時共同作業，透過網路順暢地共用您的程式碼會話。 當您準備好時，Visual Studio 包含將應用程式發佈到 Azure 所需的一切，或任何您可能裝載它的位置。
 
-![在 Visual Studio 2017 中安裝 .NET Core 工作負載](./media/image10-1.png)
-
-**圖 10-1.** 安裝 Visual Studio 2017 中的 .NET Core 工作負載。
-
-[下載 Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+[下載 Visual Studio 2019](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio Code 和 dotnet CLI** (適用於 Mac、Linux 和 Windows 的跨平台工具)。 如果您偏好使用支援任何開發語言之輕量型且跨平台的編輯器，您可以使用 Microsoft Visual Studio Code 和 dotnet CLI。 這些產品提供簡單但強大的體驗，可簡化開發人員工作流程。 此外，Visual Studio Code 支援 C\# 及 Web 程式開發的延伸模組，並在編輯器中提供 Intellisense 和捷徑工作。
 
@@ -48,7 +44,7 @@ ms.locfileid: "70849584"
 
 ### <a name="initial-setup"></a>初始設定
 
-若要建立應用程式的發行管線，您需要讓應用程式程式碼進入原始檔控制。 設定本機存放庫並在 Team 專案中將它連接至遠端存放庫。 請遵循下列指示：
+若要建立應用程式的發行管線，您需要讓應用程式程式碼進入原始檔控制。 設定本機存放庫並在 Team 專案中將它連接至遠端存放庫。 遵循下列指示：
 
 - [使用 Git 和 Visual Studio 共用程式碼](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs)或
 
@@ -58,7 +54,7 @@ ms.locfileid: "70849584"
 
 ![AzureWebApp](./media/image10-2.png)
 
-**圖 10-2.** 在 Azure 入口網站建立新的 Azure App Service Web 應用程式。
+**圖 10-1.** 在 Azure 入口網站建立新的 Azure App Service Web 應用程式。
 
 每當新的程式碼認可到專案的原始檔控制存放庫時，CI 的建置程序將會執行自動化建置。 這可提供您程式碼建置 (以及在理想的情況下，通過自動化測試) 且可能部署的立即回應。 這個 CI 組建將會產生 Web 部署套件成品，並發佈它以供您的 CD 程序取用。
 
@@ -74,11 +70,11 @@ CI/CD 管線設定之後，您就可以直接更新 Web 應用程式，並認可
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Azure 裝載之 ASP.NET Core 應用程式的開發工作流程
 
-一旦您設定好 Azure 帳戶和 CI/CD 程序，開發 Azure 裝載的 ASP.NET Core 應用程式便很簡單。 以下是建置 ASP.NET Core 應用程式 (裝載於 Azure App Service 中作為 Web 應用程式) 時通常會採取的基本步驟，如圖 10-3 所示。
+一旦您設定好 Azure 帳戶和 CI/CD 程序，開發 Azure 裝載的 ASP.NET Core 應用程式便很簡單。 以下是您在建立 ASP.NET Core 應用程式（裝載于 Azure App Service 作為 Web 應用程式）時通常會採取的基本步驟，如圖10-2 所示。
 
 ![EndToEndDevDeployWorkflow](./media/image10-3.png)
 
-**圖 10-3.** 建置 ASP.NET Core 應用程式並將其裝載在 Azure 中的逐步工作流程
+**圖 10-2.** 建置 ASP.NET Core 應用程式並將其裝載在 Azure 中的逐步工作流程
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>步驟 1： 本機開發環境內部迴圈
 
@@ -96,11 +92,11 @@ CI/CD 管線設定之後，您就可以直接更新 Web 應用程式，並認可
 
 建置成功之後，CD 程序會取得所產生的組建成品。 這會包括 Web 部署套件。 組建伺服器會將此套件部署至 Azure App Service，以新建的服務來取代任何現有的服務。 此步驟通常以預備環境為目標，但某些應用程式會透過 CD 程序直接部署至生產環境。
 
-#### <a name="step-5-azure-app-service-web-app"></a>步驟 5： Azure App Service Web 應用程式
+#### <a name="step-5-azure-app-service-web-app"></a>步驟 5。 Azure App Service Web 應用程式
 
 部署之後，ASP.NET Core 應用程式會在 Azure App Service Web 應用程式的內容裡執行。 可以使用 Azure 入口網站來監視及進一步設定此 Web 應用程式。
 
-#### <a name="step-6-production-monitoring-and-diagnostics"></a>步驟 6： 生產環境監視及診斷
+#### <a name="step-6-production-monitoring-and-diagnostics"></a>步驟 6. 生產環境監視及診斷
 
 Web 應用程式在執行時，您可以監視應用程式的健康狀態，並收集診斷和使用者行為資料。 Application Insights 隨附於 Visual Studio 中，並提供 ASP.NET 應用程式的自動檢測。 它可以提供您使用方式、例外狀況、要求、效能和記錄檔的相關資訊。
 
