@@ -154,6 +154,9 @@
             - name: 版本控制
               tocHref: /dotnet/core/versions/
               topicHref: /dotnet/core/versions/index
+            - name: SDK 專案
+              tocHref: /dotnet/core/project-sdk/
+              topicHref: /dotnet/core/project-sdk/overview
             - name: 工具
               tocHref: /dotnet/core/tools/
               topicHref: /dotnet/core/tools/index
