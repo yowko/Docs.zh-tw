@@ -2,26 +2,28 @@
 title: 通訊協定緩衝區-WCF 開發人員的 gRPC
 description: 適用于 gRPC 網路的通訊協定緩衝區線路格式簡介。
 ms.date: 09/09/2019
-ms.openlocfilehash: dbe8cb43475cfeec19051daf68452ef86269372f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cc4ff272a9912d6f2dd8f8ddb1972c7369f980fe
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967297"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503451"
 ---
-# <a name="protocol-buffers"></a><span data-ttu-id="6ff72-103">通訊協定緩衝區</span><span class="sxs-lookup"><span data-stu-id="6ff72-103">Protocol buffers</span></span>
+# <a name="protocol-buffers"></a><span data-ttu-id="c4e59-103">通訊協定緩衝區</span><span class="sxs-lookup"><span data-stu-id="c4e59-103">Protocol buffers</span></span>
 
-<span data-ttu-id="6ff72-104">gRPC services 會以*通訊協定緩衝區（Protobuf）訊息*的方式傳送和接收資料，類似于 WCF 的資料合約。</span><span class="sxs-lookup"><span data-stu-id="6ff72-104">gRPC services send and receive data as *Protocol Buffer (Protobuf) messages*, similar to WCF's data contracts.</span></span> <span data-ttu-id="6ff72-105">Protobuf 是一種有效率的方式，可將結構化資料序列化以進行讀取和寫入，而不會造成 XML 或 JSON 之類的人類看得懂的格式產生額外的負擔。</span><span class="sxs-lookup"><span data-stu-id="6ff72-105">Protobuf is an efficient way of serializing structured data for machines to read and write, without the overhead that human-readable formats like XML or JSON incur.</span></span>
+<span data-ttu-id="c4e59-104">gRPC services 會以*通訊協定緩衝區（Protobuf）訊息*的方式傳送和接收資料，類似于 WINDOWS COMMUNICATION FOUNDATION （WCF）中的資料合約。</span><span class="sxs-lookup"><span data-stu-id="c4e59-104">gRPC services send and receive data as *Protocol Buffer (Protobuf) messages*, similar to data contracts in Windows Communication Foundation (WCF).</span></span> <span data-ttu-id="c4e59-105">Protobuf 是一種有效率的方式，可將結構化資料序列化以進行讀取和寫入，而不會造成 XML 或 JSON 之類的人類看得懂的格式產生額外的負擔。</span><span class="sxs-lookup"><span data-stu-id="c4e59-105">Protobuf is an efficient way of serializing structured data for machines to read and write, without the overhead that human-readable formats like XML or JSON incur.</span></span>
 
-<span data-ttu-id="6ff72-106">本章涵蓋 Protobuf 的運作方式，以及如何定義您自己的 Protobuf 訊息。</span><span class="sxs-lookup"><span data-stu-id="6ff72-106">This chapter covers how Protobuf works, and how to define your own Protobuf messages.</span></span>
+<span data-ttu-id="c4e59-106">本章涵蓋 Protobuf 的運作方式，以及如何定義您自己的 Protobuf 訊息。</span><span class="sxs-lookup"><span data-stu-id="c4e59-106">This chapter covers how Protobuf works, and how to define your own Protobuf messages.</span></span>
 
-## <a name="how-protobuf-works"></a><span data-ttu-id="6ff72-107">Protobuf 的運作方式</span><span class="sxs-lookup"><span data-stu-id="6ff72-107">How Protobuf works</span></span>
+## <a name="how-protobuf-works"></a><span data-ttu-id="c4e59-107">Protobuf 的運作方式</span><span class="sxs-lookup"><span data-stu-id="c4e59-107">How Protobuf works</span></span>
 
-<span data-ttu-id="6ff72-108">大部分的 .NET 物件序列化技術（包括 WCF 的資料合約）都是在執行時間使用反映來分析物件結構而運作。</span><span class="sxs-lookup"><span data-stu-id="6ff72-108">Most .NET object serialization techniques, including WCF's data contracts, work by using reflection to analyze the object structure at run time.</span></span> <span data-ttu-id="6ff72-109">相反地，大部分的 Protobuf 程式庫都需要您使用 `.proto` 檔案中的專用語言（*通訊協定緩衝區語言*）來預先定義結構。</span><span class="sxs-lookup"><span data-stu-id="6ff72-109">By contrast, most Protobuf libraries require you to define the structure up front using a dedicated language (*Protocol Buffer Language*) in a `.proto` file.</span></span> <span data-ttu-id="6ff72-110">然後編譯器會使用這個檔案，為任何支援的平臺（包括 .NET、JAVA、C/C++、JavaScript 等等）產生程式碼。</span><span class="sxs-lookup"><span data-stu-id="6ff72-110">This file is then used by a compiler to generate code for any of the supported platforms, including .NET, Java, C/C++, JavaScript, and many more.</span></span> <span data-ttu-id="6ff72-111">Protobuf 編譯器（`protoc`）是由 Google 維護，但有替代的執行方式可供使用。</span><span class="sxs-lookup"><span data-stu-id="6ff72-111">The Protobuf compiler, `protoc`, is maintained by Google, although alternative implementations are available.</span></span> <span data-ttu-id="6ff72-112">產生的程式碼會有效率，並針對資料的快速序列化和還原序列化進行優化。</span><span class="sxs-lookup"><span data-stu-id="6ff72-112">The generated code is efficient and optimized for fast serialization and deserialization of data.</span></span>
+<span data-ttu-id="c4e59-108">大部分的 .NET 物件序列化技術（包括 WCF 的資料合約）都是使用反映，在執行時間分析物件結構。</span><span class="sxs-lookup"><span data-stu-id="c4e59-108">Most .NET object serialization techniques, including WCF's data contracts, work by using reflection to analyze the object structure at runtime.</span></span> <span data-ttu-id="c4e59-109">相反地，大部分的 Protobuf 程式庫都需要您在 `.proto` 檔案中使用專用語言（*通訊協定緩衝區語言*）來預先定義結構。</span><span class="sxs-lookup"><span data-stu-id="c4e59-109">By contrast, most Protobuf libraries require you to define the structure up front by using a dedicated language (*Protocol Buffer Language*) in a `.proto` file.</span></span> <span data-ttu-id="c4e59-110">然後編譯器會使用這個檔案來產生任何支援平臺的程式碼。</span><span class="sxs-lookup"><span data-stu-id="c4e59-110">A compiler then uses this file to generate code for any of the supported platforms.</span></span> <span data-ttu-id="c4e59-111">支援的平臺包括 .NET、JAVA、CC++/、JavaScript 等等。</span><span class="sxs-lookup"><span data-stu-id="c4e59-111">Supported platforms include .NET, Java, C/C++, JavaScript, and many more.</span></span> 
 
-<span data-ttu-id="6ff72-113">Protobuf 電傳格式本身是二進位編碼，其使用一些聰明的技巧，將用來表示訊息的位元組數目降至最低。</span><span class="sxs-lookup"><span data-stu-id="6ff72-113">The Protobuf wire format itself is a binary encoding, which uses some clever tricks to minimize the number of bytes used to represent messages.</span></span> <span data-ttu-id="6ff72-114">使用 Protobuf 並不需要瞭解二進位編碼格式，但如果您有興趣，可以在[通訊協定緩衝區網站](https://developers.google.com/protocol-buffers/docs/encoding)上深入瞭解。</span><span class="sxs-lookup"><span data-stu-id="6ff72-114">Knowledge of the binary encoding format isn't necessary to use Protobuf, but if you're interested you can learn more about it on [the Protocol Buffers web site](https://developers.google.com/protocol-buffers/docs/encoding).</span></span>
+<span data-ttu-id="c4e59-112">Protobuf 編譯器（`protoc`）是由 Google 維護，但有替代的執行方式可供使用。</span><span class="sxs-lookup"><span data-stu-id="c4e59-112">The Protobuf compiler, `protoc`, is maintained by Google, although alternative implementations are available.</span></span> <span data-ttu-id="c4e59-113">產生的程式碼會有效率，並針對資料的快速序列化和還原序列化進行優化。</span><span class="sxs-lookup"><span data-stu-id="c4e59-113">The generated code is efficient and optimized for fast serialization and deserialization of data.</span></span>
+
+<span data-ttu-id="c4e59-114">Protobuf 電傳格式是二進位編碼。</span><span class="sxs-lookup"><span data-stu-id="c4e59-114">The Protobuf wire format is a binary encoding.</span></span> <span data-ttu-id="c4e59-115">它使用一些聰明的技巧，將用來表示訊息的位元組數目降至最低。</span><span class="sxs-lookup"><span data-stu-id="c4e59-115">It uses some clever tricks to minimize the number of bytes used to represent messages.</span></span> <span data-ttu-id="c4e59-116">若要使用 Protobuf，不需要知道二進位編碼格式。</span><span class="sxs-lookup"><span data-stu-id="c4e59-116">Knowledge of the binary encoding format isn't necessary to use Protobuf.</span></span> <span data-ttu-id="c4e59-117">但如果您有興趣，可以在[通訊協定緩衝區網站](https://developers.google.com/protocol-buffers/docs/encoding)上深入瞭解。</span><span class="sxs-lookup"><span data-stu-id="c4e59-117">But if you're interested, you can learn more about it on [the Protocol Buffers website](https://developers.google.com/protocol-buffers/docs/encoding).</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="6ff72-115">[上一頁](why-grpc.md)
->[下一頁](protobuf-messages.md)</span><span class="sxs-lookup"><span data-stu-id="6ff72-115">[Previous](why-grpc.md)
+><span data-ttu-id="c4e59-118">[上一頁](why-grpc.md)
+>[下一頁](protobuf-messages.md)</span><span class="sxs-lookup"><span data-stu-id="c4e59-118">[Previous](why-grpc.md)
 [Next](protobuf-messages.md)</span></span>

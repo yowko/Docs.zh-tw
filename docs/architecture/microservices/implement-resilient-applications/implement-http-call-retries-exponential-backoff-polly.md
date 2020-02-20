@@ -1,31 +1,31 @@
 ---
 title: 使用 Polly 以指數輪詢實作 HTTP 呼叫重試
 description: 了解如何使用 Polly 和 HttpClientFactory 處理 HTTP 失敗。
-ms.date: 01/07/2019
-ms.openlocfilehash: 551cd1230c565b30c81090c984747e726680b9ed
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 60943360c9674f93b246b37b2667b48dab659e0e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089962"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502661"
 ---
-# <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a><span data-ttu-id="bae82-103">使用 HttpClientFactory 和 Polly 原則以指數輪詢實作 HTTP 呼叫重試</span><span class="sxs-lookup"><span data-stu-id="bae82-103">Implement HTTP call retries with exponential backoff with HttpClientFactory and Polly policies</span></span>
+# <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a><span data-ttu-id="564a9-103">使用 HttpClientFactory 和 Polly 原則以指數輪詢實作 HTTP 呼叫重試</span><span class="sxs-lookup"><span data-stu-id="564a9-103">Implement HTTP call retries with exponential backoff with HttpClientFactory and Polly policies</span></span>
 
-<span data-ttu-id="bae82-104">使用指數輪詢重試的建議方法是利用更進階的 .NET 程式庫，例如開放原始碼 [Polly 程式庫](https://github.com/App-vNext/Polly)。</span><span class="sxs-lookup"><span data-stu-id="bae82-104">The recommended approach for retries with exponential backoff is to take advantage of more advanced .NET libraries like the open-source [Polly library](https://github.com/App-vNext/Polly).</span></span>
+<span data-ttu-id="564a9-104">使用指數輪詢重試的建議方法是利用更進階的 .NET 程式庫，例如開放原始碼 [Polly 程式庫](https://github.com/App-vNext/Polly)。</span><span class="sxs-lookup"><span data-stu-id="564a9-104">The recommended approach for retries with exponential backoff is to take advantage of more advanced .NET libraries like the open-source [Polly library](https://github.com/App-vNext/Polly).</span></span>
 
-<span data-ttu-id="bae82-105">Polly 是 .NET 程式庫，提供恢復功能和暫時性錯誤處理功能。</span><span class="sxs-lookup"><span data-stu-id="bae82-105">Polly is a .NET library that provides resilience and transient-fault handling capabilities.</span></span> <span data-ttu-id="bae82-106">您可以藉由套用重試、斷路器、艙壁隔離 (Bulkhead Isolation)、逾時和後援等 Polly 原則，來實作這些功能。</span><span class="sxs-lookup"><span data-stu-id="bae82-106">You can implement those capabilities by applying Polly policies such as Retry, Circuit Breaker, Bulkhead Isolation, Timeout, and Fallback.</span></span> <span data-ttu-id="bae82-107">Polly 是 .NET Framework 4.x 和 .NET Standard 1.0、1.1 和2.0 （支援 .NET Core）的目標。</span><span class="sxs-lookup"><span data-stu-id="bae82-107">Polly targets .NET Framework 4.x and .NET Standard 1.0, 1.1, and 2.0 (which supports .NET Core).</span></span>
+<span data-ttu-id="564a9-105">Polly 是 .NET 程式庫，提供恢復功能和暫時性錯誤處理功能。</span><span class="sxs-lookup"><span data-stu-id="564a9-105">Polly is a .NET library that provides resilience and transient-fault handling capabilities.</span></span> <span data-ttu-id="564a9-106">您可以藉由套用重試、斷路器、艙壁隔離 (Bulkhead Isolation)、逾時和後援等 Polly 原則，來實作這些功能。</span><span class="sxs-lookup"><span data-stu-id="564a9-106">You can implement those capabilities by applying Polly policies such as Retry, Circuit Breaker, Bulkhead Isolation, Timeout, and Fallback.</span></span> <span data-ttu-id="564a9-107">Polly 是 .NET Framework 4.x 和 .NET Standard 1.0、1.1 和2.0 （支援 .NET Core）的目標。</span><span class="sxs-lookup"><span data-stu-id="564a9-107">Polly targets .NET Framework 4.x and .NET Standard 1.0, 1.1, and 2.0 (which supports .NET Core).</span></span>
 
-<span data-ttu-id="bae82-108">不過，撰寫您自己的自訂程式碼以搭配 HttpClient 使用 Polly 的程式庫可能會很複雜。</span><span class="sxs-lookup"><span data-stu-id="bae82-108">However, writing your own custom code to use Polly’s library with HttpClient can be significantly complex.</span></span> <span data-ttu-id="bae82-109">在 eShopOnContainers 的原始版本中，已有採用 Polly 的 [ResilientHttpClient 建置組塊](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)。</span><span class="sxs-lookup"><span data-stu-id="bae82-109">In the original version of eShopOnContainers, there was a [ResilientHttpClient building-block](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) based on Polly.</span></span> <span data-ttu-id="bae82-110">但隨著[HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md)的發行，使用 Polly 執行彈性的 HTTP 通訊變得更簡單，因此建立區塊已從 eShopOnContainers 中淘汰。</span><span class="sxs-lookup"><span data-stu-id="bae82-110">But with the release of [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md), implementing resilient HTTP communication with Polly has become much simpler, so that building-block was deprecated from eShopOnContainers.</span></span>
+<span data-ttu-id="564a9-108">不過，撰寫您自己的自訂程式碼以搭配 HttpClient 使用 Polly 的程式庫可能會很複雜。</span><span class="sxs-lookup"><span data-stu-id="564a9-108">However, writing your own custom code to use Polly’s library with HttpClient can be significantly complex.</span></span> <span data-ttu-id="564a9-109">在 eShopOnContainers 的原始版本中，已有採用 Polly 的 [ResilientHttpClient 建置組塊](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10)。</span><span class="sxs-lookup"><span data-stu-id="564a9-109">In the original version of eShopOnContainers, there was a [ResilientHttpClient building-block](https://github.com/dotnet-architecture/eShopOnContainers/commit/0c317d56f3c8937f6823cf1b45f5683397274815#diff-e6532e623eb606a0f8568663403e3a10) based on Polly.</span></span> <span data-ttu-id="564a9-110">但隨著[HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md)的發行，使用 Polly 執行彈性的 HTTP 通訊變得更簡單，因此建立區塊已從 eShopOnContainers 中淘汰。</span><span class="sxs-lookup"><span data-stu-id="564a9-110">But with the release of [HttpClientFactory](use-httpclientfactory-to-implement-resilient-http-requests.md), implementing resilient HTTP communication with Polly has become much simpler, so that building-block was deprecated from eShopOnContainers.</span></span>
 
-<span data-ttu-id="bae82-111">下列步驟示範如何透過整合到 HttpClientFactory 中的 Polly 使用 Http 重試，如上一節所述。</span><span class="sxs-lookup"><span data-stu-id="bae82-111">The following steps show how you can use Http retries with Polly integrated into HttpClientFactory, which is explained in the previous section.</span></span>
+<span data-ttu-id="564a9-111">下列步驟示範如何透過整合到 HttpClientFactory 中的 Polly 使用 Http 重試，如上一節所述。</span><span class="sxs-lookup"><span data-stu-id="564a9-111">The following steps show how you can use Http retries with Polly integrated into HttpClientFactory, which is explained in the previous section.</span></span>
 
-<span data-ttu-id="bae82-112">**參考 ASP.NET Core 2.2 套件**</span><span class="sxs-lookup"><span data-stu-id="bae82-112">**Reference the ASP.NET Core 2.2 packages**</span></span>
+<span data-ttu-id="564a9-112">**參考 ASP.NET Core 3.1 套件**</span><span class="sxs-lookup"><span data-stu-id="564a9-112">**Reference the ASP.NET Core 3.1 packages**</span></span>
 
-<span data-ttu-id="bae82-113">自.NET Core 2.1 後提供 `HttpClientFactory`不過建議您在專案中使用 NuGet 中的最新 ASP.NET Core 2.2 套件。</span><span class="sxs-lookup"><span data-stu-id="bae82-113">`HttpClientFactory` is available since .NET Core 2.1 however we recommend you to use the latest ASP.NET Core 2.2 packages from NuGet in your project.</span></span> <span data-ttu-id="bae82-114">您通常需要 `AspNetCore` 中繼套件，以及延伸模組套件 `Microsoft.Extensions.Http.Polly`。</span><span class="sxs-lookup"><span data-stu-id="bae82-114">You typically need the `AspNetCore` metapackage, and the extension package `Microsoft.Extensions.Http.Polly`.</span></span>
+<span data-ttu-id="564a9-113">從 .NET Core 2.1 開始提供 `HttpClientFactory`，但我們建議您在專案中使用 NuGet 的最新 ASP.NET Core 3.1 套件。</span><span class="sxs-lookup"><span data-stu-id="564a9-113">`HttpClientFactory` is available since .NET Core 2.1 however we recommend you to use the latest ASP.NET Core 3.1 packages from NuGet in your project.</span></span> <span data-ttu-id="564a9-114">您通常也需要參考 `Microsoft.Extensions.Http.Polly`的延伸模組套件。</span><span class="sxs-lookup"><span data-stu-id="564a9-114">You typically also need to reference the extension package `Microsoft.Extensions.Http.Polly`.</span></span>
 
-<span data-ttu-id="bae82-115">**在啟動時，使用 Polly 的重試原則來設定用戶端**</span><span class="sxs-lookup"><span data-stu-id="bae82-115">**Configure a client with Polly’s Retry policy, in Startup**</span></span>
+<span data-ttu-id="564a9-115">**在啟動時，使用 Polly 的重試原則來設定用戶端**</span><span class="sxs-lookup"><span data-stu-id="564a9-115">**Configure a client with Polly’s Retry policy, in Startup**</span></span>
 
-<span data-ttu-id="bae82-116">如先前章節所示，您必須在標準 Startup.ConfigureServices(...) 方法中定義具名或具類型的用戶端 HttpClient 組態，但現在您可以新增累加式程式碼，為使用指數輪詢的 Http 重試指定原則，如下所示：</span><span class="sxs-lookup"><span data-stu-id="bae82-116">As shown in previous sections, you need to define a named or typed client HttpClient configuration in your standard Startup.ConfigureServices(...) method, but now, you add incremental code specifying the policy for the Http retries with exponential backoff, as below:</span></span>
+<span data-ttu-id="564a9-116">如先前章節所示，您必須在標準 Startup.ConfigureServices(...) 方法中定義具名或具類型的用戶端 HttpClient 組態，但現在您可以新增累加式程式碼，為使用指數輪詢的 Http 重試指定原則，如下所示：</span><span class="sxs-lookup"><span data-stu-id="564a9-116">As shown in previous sections, you need to define a named or typed client HttpClient configuration in your standard Startup.ConfigureServices(...) method, but now, you add incremental code specifying the policy for the Http retries with exponential backoff, as below:</span></span>
 
 ```csharp
 //ConfigureServices()  - Startup.cs
@@ -34,9 +34,9 @@ services.AddHttpClient<IBasketService, BasketService>()
         .AddPolicyHandler(GetRetryPolicy());
 ```
 
-<span data-ttu-id="bae82-117">**AddPolicyHandler()** 方法會將原則新增至您將使用的 `HttpClient` 物件。</span><span class="sxs-lookup"><span data-stu-id="bae82-117">The **AddPolicyHandler()** method is what adds policies to the `HttpClient` objects you'll use.</span></span> <span data-ttu-id="bae82-118">在此案例中，它會為使用指數輪詢的 HTTP 重試新增 Polly 原則。</span><span class="sxs-lookup"><span data-stu-id="bae82-118">In this case, it's adding a Polly’s policy for Http Retries with exponential backoff.</span></span>
+<span data-ttu-id="564a9-117">**AddPolicyHandler()** 方法會將原則新增至您將使用的 `HttpClient` 物件。</span><span class="sxs-lookup"><span data-stu-id="564a9-117">The **AddPolicyHandler()** method is what adds policies to the `HttpClient` objects you'll use.</span></span> <span data-ttu-id="564a9-118">在此案例中，它會為使用指數輪詢的 HTTP 重試新增 Polly 原則。</span><span class="sxs-lookup"><span data-stu-id="564a9-118">In this case, it's adding a Polly’s policy for Http Retries with exponential backoff.</span></span>
 
-<span data-ttu-id="bae82-119">為了有更模組化的方法，可在 `Startup.cs` 檔案內的個別方法中定義 Http 重試原則，如以下程式碼所示：</span><span class="sxs-lookup"><span data-stu-id="bae82-119">To have a more modular approach, the Http Retry Policy can be defined in a separate method within the `Startup.cs` file, as shown in the following code:</span></span>
+<span data-ttu-id="564a9-119">為了有更模組化的方法，可在 `Startup.cs` 檔案內的個別方法中定義 Http 重試原則，如以下程式碼所示：</span><span class="sxs-lookup"><span data-stu-id="564a9-119">To have a more modular approach, the Http Retry Policy can be defined in a separate method within the `Startup.cs` file, as shown in the following code:</span></span>
 
 ```csharp
 static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
@@ -49,11 +49,11 @@ static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 }
 ```
 
-<span data-ttu-id="bae82-120">透過 Polly，您可以定義重試原則，其中包含重試次數、指數輪詢組態，以及發生 HTTP 例外狀況時所要採取的動作，例如記錄錯誤。</span><span class="sxs-lookup"><span data-stu-id="bae82-120">With Polly, you can define a Retry policy with the number of retries, the exponential backoff configuration, and the actions to take when there's an HTTP exception, such as logging the error.</span></span> <span data-ttu-id="bae82-121">在本例中，會設定原則，以便使用指數重試嘗試六次，一開始每隔兩秒。</span><span class="sxs-lookup"><span data-stu-id="bae82-121">In this case, the policy is configured to try six times with an exponential retry, starting at two seconds.</span></span>
+<span data-ttu-id="564a9-120">透過 Polly，您可以定義重試原則，其中包含重試次數、指數輪詢組態，以及發生 HTTP 例外狀況時所要採取的動作，例如記錄錯誤。</span><span class="sxs-lookup"><span data-stu-id="564a9-120">With Polly, you can define a Retry policy with the number of retries, the exponential backoff configuration, and the actions to take when there's an HTTP exception, such as logging the error.</span></span> <span data-ttu-id="564a9-121">在本例中，會設定原則，以便使用指數重試嘗試六次，一開始每隔兩秒。</span><span class="sxs-lookup"><span data-stu-id="564a9-121">In this case, the policy is configured to try six times with an exponential retry, starting at two seconds.</span></span>
 
-## <a name="add-a-jitter-strategy-to-the-retry-policy"></a><span data-ttu-id="bae82-122">將 Jitter 策略新增至重試原則</span><span class="sxs-lookup"><span data-stu-id="bae82-122">Add a jitter strategy to the retry policy</span></span>
+## <a name="add-a-jitter-strategy-to-the-retry-policy"></a><span data-ttu-id="564a9-122">將 Jitter 策略新增至重試原則</span><span class="sxs-lookup"><span data-stu-id="564a9-122">Add a jitter strategy to the retry policy</span></span>
 
-<span data-ttu-id="bae82-123">如果發生高並行和延展性以及高競爭的情況，定期重試原則可能會影響您的系統。</span><span class="sxs-lookup"><span data-stu-id="bae82-123">A regular Retry policy can impact your system in cases of high concurrency and scalability and under high contention.</span></span> <span data-ttu-id="bae82-124">若要解決來自許多用戶端的類似重試因部分中斷而達到最高的問題，一個很好的解決方法是將 Jitter 策略新增至重試演算法/原則。</span><span class="sxs-lookup"><span data-stu-id="bae82-124">To overcome peaks of similar retries coming from many clients in case of partial outages, a good workaround is to add a jitter strategy to the retry algorithm/policy.</span></span> <span data-ttu-id="bae82-125">這可以透過將隨機性加入指數輪詢，來改善端對端系統的整體效能。</span><span class="sxs-lookup"><span data-stu-id="bae82-125">This can improve the overall performance of the end-to-end system by adding randomness to the exponential backoff.</span></span> <span data-ttu-id="bae82-126">發生問題時，突然增加的情況會擴散。</span><span class="sxs-lookup"><span data-stu-id="bae82-126">This spreads out the spikes when issues arise.</span></span> <span data-ttu-id="bae82-127">此原則會以下列範例說明：</span><span class="sxs-lookup"><span data-stu-id="bae82-127">The principle is illustrated by the following example:</span></span>
+<span data-ttu-id="564a9-123">如果發生高並行和延展性以及高競爭的情況，定期重試原則可能會影響您的系統。</span><span class="sxs-lookup"><span data-stu-id="564a9-123">A regular Retry policy can impact your system in cases of high concurrency and scalability and under high contention.</span></span> <span data-ttu-id="564a9-124">若要解決來自許多用戶端的類似重試因部分中斷而達到最高的問題，一個很好的解決方法是將 Jitter 策略新增至重試演算法/原則。</span><span class="sxs-lookup"><span data-stu-id="564a9-124">To overcome peaks of similar retries coming from many clients in case of partial outages, a good workaround is to add a jitter strategy to the retry algorithm/policy.</span></span> <span data-ttu-id="564a9-125">這可以透過將隨機性加入指數輪詢，來改善端對端系統的整體效能。</span><span class="sxs-lookup"><span data-stu-id="564a9-125">This can improve the overall performance of the end-to-end system by adding randomness to the exponential backoff.</span></span> <span data-ttu-id="564a9-126">發生問題時，突然增加的情況會擴散。</span><span class="sxs-lookup"><span data-stu-id="564a9-126">This spreads out the spikes when issues arise.</span></span> <span data-ttu-id="564a9-127">此原則會以下列範例說明：</span><span class="sxs-lookup"><span data-stu-id="564a9-127">The principle is illustrated by the following example:</span></span>
 
 ```csharp
 Random jitterer = new Random();
@@ -66,26 +66,26 @@ var retryWithJitterPolicy = HttpPolicyExtensions
     );
 ```
 
-<span data-ttu-id="bae82-128">Polly 透過專案網站提供可供生產的抖動演算法。</span><span class="sxs-lookup"><span data-stu-id="bae82-128">Polly provides production-ready jitter algorithms via the project website.</span></span>
+<span data-ttu-id="564a9-128">Polly 透過專案網站提供可供生產的抖動演算法。</span><span class="sxs-lookup"><span data-stu-id="564a9-128">Polly provides production-ready jitter algorithms via the project website.</span></span>
 
-## <a name="additional-resources"></a><span data-ttu-id="bae82-129">其他資源</span><span class="sxs-lookup"><span data-stu-id="bae82-129">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="564a9-129">其他資源</span><span class="sxs-lookup"><span data-stu-id="564a9-129">Additional resources</span></span>
 
-- <span data-ttu-id="bae82-130">**重試模式**</span><span class="sxs-lookup"><span data-stu-id="bae82-130">**Retry pattern**</span></span>  
+- <span data-ttu-id="564a9-130">**重試模式**</span><span class="sxs-lookup"><span data-stu-id="564a9-130">**Retry pattern**</span></span>  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- <span data-ttu-id="bae82-131">**Polly 和 HttpClientFactory**</span><span class="sxs-lookup"><span data-stu-id="bae82-131">**Polly and HttpClientFactory**</span></span>  
+- <span data-ttu-id="564a9-131">**Polly 和 HttpClientFactory**</span><span class="sxs-lookup"><span data-stu-id="564a9-131">**Polly and HttpClientFactory**</span></span>  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
-- <span data-ttu-id="bae82-132">**Polly (.NET 復原和暫時性錯誤處理程式庫)**</span><span class="sxs-lookup"><span data-stu-id="bae82-132">**Polly (.NET resilience and transient-fault-handling library)**</span></span>  
+- <span data-ttu-id="564a9-132">**Polly (.NET 復原和暫時性錯誤處理程式庫)**</span><span class="sxs-lookup"><span data-stu-id="564a9-132">**Polly (.NET resilience and transient-fault-handling library)**</span></span>  
   <https://github.com/App-vNext/Polly>
 
-- <span data-ttu-id="bae82-133">**Polly：使用抖動重試**</span><span class="sxs-lookup"><span data-stu-id="bae82-133">**Polly: Retry with Jitter**</span></span>  
+- <span data-ttu-id="564a9-133">**Polly：使用抖動重試**</span><span class="sxs-lookup"><span data-stu-id="564a9-133">**Polly: Retry with Jitter**</span></span>  
   <https://github.com/App-vNext/Polly/wiki/Retry-with-jitter>
 
-- <span data-ttu-id="bae82-134">**Marc Brooker:。抖動：使用隨機性讓事情更好**</span><span class="sxs-lookup"><span data-stu-id="bae82-134">**Marc Brooker. Jitter: Making Things Better With Randomness**</span></span>  
+- <span data-ttu-id="564a9-134">**Marc Brooker:。抖動：使用隨機性讓事情更好**</span><span class="sxs-lookup"><span data-stu-id="564a9-134">**Marc Brooker. Jitter: Making Things Better With Randomness**</span></span>  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="bae82-135">[上一頁](explore-custom-http-call-retries-exponential-backoff.md)
->[下一頁](implement-circuit-breaker-pattern.md)</span><span class="sxs-lookup"><span data-stu-id="bae82-135">[Previous](explore-custom-http-call-retries-exponential-backoff.md)
+><span data-ttu-id="564a9-135">[上一頁](explore-custom-http-call-retries-exponential-backoff.md)
+>[下一頁](implement-circuit-breaker-pattern.md)</span><span class="sxs-lookup"><span data-stu-id="564a9-135">[Previous](explore-custom-http-call-retries-exponential-backoff.md)
 [Next](implement-circuit-breaker-pattern.md)</span></span>
