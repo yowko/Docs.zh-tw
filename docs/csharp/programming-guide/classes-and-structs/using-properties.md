@@ -6,16 +6,16 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705401"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452015"
 ---
 # <a name="using-properties-c-programming-guide"></a>使用屬性 (C# 程式設計手冊)
 
-屬性會合併欄位和方法的各個層面。 對物件的使用者而言，屬性會呈現為欄位，而存取屬性需要相同的語法。 對於類別的實作器而言，屬性是一或兩個程式碼區塊，代表 [get](../../language-reference/keywords/get.md) 存取子和 (或) [set](../../language-reference/keywords/set.md) 存取子。 讀取屬性時，會執行 `get` 存取子的程式碼區塊；指派屬性的新值時，會執行 `set` 存取子的程式碼區塊。 沒有 `set` 存取子的屬性會視為唯寫。 沒有 `get` 存取子的屬性則視為唯寫。 具有這兩個存取子的屬性是讀寫。
+屬性會合併欄位和方法的各個層面。 對物件的使用者而言，屬性會呈現為欄位，而存取屬性需要相同的語法。 對於類別的實作器而言，屬性是一或兩個程式碼區塊，代表 [get](../../language-reference/keywords/get.md) 存取子和 (或) [set](../../language-reference/keywords/set.md) 存取子。 讀取屬性時，會執行 `get` 存取子的程式碼區塊；指派屬性的新值時，會執行 `set` 存取子的程式碼區塊。 沒有 `set` 存取子的屬性會視為唯讀。 沒有 `get` 存取子的屬性則視為唯寫。 具有這兩個存取子的屬性是讀寫。
 
 與欄位不同，屬性不會分類為變數。 因此，您無法將屬性傳遞為 [ref](../../language-reference/keywords/ref.md) 或 [out](../../language-reference/keywords/out-parameter-modifier.md) 參數。
 
@@ -53,7 +53,7 @@ ms.locfileid: "75705401"
 
 ## <a name="the-set-accessor"></a>set 存取子
 
-`set` 存取子與傳回型別為 [void](../../language-reference/keywords/void.md) 的方法類似。 它使用稱為 `value` 的隱含參數，其類型為屬性的類型。 在下列範例中，將 `set` 存取子新增至 `Name` 屬性：
+`set` 存取子與傳回型別為 [void](../../language-reference/builtin-types/void.md) 的方法類似。 它使用稱為 `value` 的隱含參數，其類型為屬性的類型。 在下列範例中，將 `set` 存取子新增至 `Name` 屬性：
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 
@@ -61,7 +61,7 @@ ms.locfileid: "75705401"
 
 [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]
 
-在 `set` 存取子中使用區域變數宣告的隱含參數名稱 `value` 是錯誤的。
+在 `value` 存取子中使用區域變數宣告的隱含參數名稱 `set` 是錯誤的。
 
 ## <a name="remarks"></a>備註
 
@@ -74,7 +74,7 @@ ms.locfileid: "75705401"
 覆寫虛擬屬性的屬性也可為 [sealed](../../language-reference/keywords/sealed.md)，指定它對衍生類別而言不再是虛擬。 最後，屬性可以宣告為 [abstract](../../language-reference/keywords/abstract.md)。 這表示類別中沒有任何實作，而且衍生類別必須撰寫自己的實作。 如需這些選項的詳細資訊，請參閱[抽象和密封類別以及類別成員](abstract-and-sealed-classes-and-class-members.md)。
   
 > [!NOTE]
-> 在 [static](../../language-reference/keywords/static.md) 屬性的存取子上使用 [virtual](../../language-reference/keywords/virtual.md)、[abstract](../../language-reference/keywords/abstract.md) 或 [override](../../language-reference/keywords/override.md) 修飾詞是錯誤的。
+> 在 [static](../../language-reference/keywords/virtual.md) 屬性的存取子上使用 [virtual](../../language-reference/keywords/abstract.md)、[abstract](../../language-reference/keywords/override.md) 或 [override](../../language-reference/keywords/static.md) 修飾詞是錯誤的。
 
 ## <a name="example"></a>範例
 
@@ -106,7 +106,7 @@ ms.locfileid: "75705401"
 
 [!code-csharp[csProgGuideProperties#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#6)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [屬性](properties.md)

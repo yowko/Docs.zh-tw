@@ -2,12 +2,12 @@
 title: 使用 LINQ to XML 進行資料繫結
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: 3c5567c81d2097a1524f5bbbf9010836ca8c0646
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 65e1524a88f1920c037b2747b0bbe30386951635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733814"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452730"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>使用 LINQ to XML 的 WPF 資料系結總覽
 
@@ -91,4 +91,4 @@ WPF 資料繫結可讓 UI 項目將其屬性中的一個屬性與資料來源產
 - [LINQ to XML 動態屬性](linq-to-xml-dynamic-properties.md)
 - [WPF 中的 XAML](../advanced/xaml-in-wpf.md)
 - [資料繫結 (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
-- [使用工作流程標記](https://go.microsoft.com/fwlink/?LinkId=98685)
+- [使用工作流程標記](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735921(v=vs.90))

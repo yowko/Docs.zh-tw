@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 917b51e0cf36cca45135fda4a084eb2bca62e835
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100698"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451976"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2 的新功能
 
@@ -18,7 +18,7 @@ ms.locfileid: "73100698"
 
 ## <a name="new-deployment-mode"></a>新的部署模式
 
-從 .NET Core 2.2 開始，您可以部署[架構相依可執行檔](../deploying/index.md#framework-dependent-executables-fde)，也就是 **.exe** 檔案，而不是 **.dll** 檔案。 架構相依可執行檔 (FDE) 在功能上與架構相依部署類似，仍然必須要有共用的全系統 .NET Core 版本才能執行。 您的應用程式只包含您的程式碼及任何協力廠商相依性。 與架構相依部署不同，FDE 是平台特定的。
+從 .NET Core 2.2 開始，您可以部署[架構相依可執行檔](../deploying/index.md#publish-runtime-dependent)，也就是 **.exe** 檔案，而不是 **.dll** 檔案。 架構相依可執行檔 (FDE) 在功能上與架構相依部署類似，仍然必須要有共用的全系統 .NET Core 版本才能執行。 您的應用程式只包含您的程式碼及任何協力廠商相依性。 與架構相依部署不同，FDE 是平台特定的。
 
 這個新部署模式的獨特優點是會建置可執行檔而非程式庫，這意謂著您可以直接執行您的應用程式，而無須先叫用 `dotnet`。
 

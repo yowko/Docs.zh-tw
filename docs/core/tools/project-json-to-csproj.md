@@ -3,12 +3,12 @@ title: project.json 與 csproj 比較
 description: 查看 project.json 與 csproj 項目的對應。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714126"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451101"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
 
@@ -30,7 +30,7 @@ ms.locfileid: "75714126"
 
 ## <a name="common-top-level-properties"></a>常見的最上層屬性
 
-### <a name="name"></a>{2&gt;名稱&lt;2}
+### <a name="name"></a>NAME
 
 ```json
 {
@@ -38,7 +38,7 @@ ms.locfileid: "75714126"
 }
 ```
 
-不再支援此屬性。 在 csproj 中，這會依專案檔名來判斷，而該名稱通常與目錄名稱相符。 例如，`MyProjectName.csproj`。
+不再支援。 在 csproj 中，這會依專案檔名來判斷，而該名稱通常與目錄名稱相符。 例如： `MyProjectName.csproj` 。
 
 根據預設，專案檔名也會指定 `<AssemblyName>` 和 `<PackageId>` 屬性的值。
 
@@ -49,10 +49,10 @@ ms.locfileid: "75714126"
 </PropertyGroup>
 ```
 
-如果 `buildOptions\outputName` 屬性定義於 project.json，則 `<AssemblyName>` 會有與 `<PackageId>` 不同的值。
+如果 `<AssemblyName>` 屬性定義於 project.json，則 `<PackageId>` 會有與 `buildOptions\outputName` 不同的值。
 如需詳細資訊，請參閱[其他常見的建置選項](#other-common-build-options)。
 
-### <a name="version"></a>版本
+### <a name="version"></a>version
 
 ```json
 {
@@ -337,9 +337,9 @@ And it's really great!</Description>
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-如需詳細資訊，請參閱[獨立性部署 (SCD)](../deploying/index.md#self-contained-deployments-scd)。
+如需詳細資訊，請參閱[獨立性部署 (SCD)](../deploying/index.md#publish-self-contained)。
 
-## <a name="tools"></a>tools
+## <a name="tools"></a>工具
 
 ```json
 {
@@ -572,7 +572,7 @@ MSBuild 中的 `owners` 項目沒有對應項。
 在 csproj 中不支援。 您必須改為在 *.nuspec* 檔案中建立包含內容檔。
 如需詳細資訊，請參閱[包含內容檔](/nuget/schema/nuspec#including-content-files)。
 
-## <a name="files"></a>個檔案
+## <a name="files"></a>files
 
 在 *project.json* 中，可擴充組建和套件以從其他資料夾進行編譯和內嵌。
 在 MSBuild 中，這會使用[目](/visualstudio/msbuild/common-msbuild-project-items)來完成。 以下是常見慣例範例：
@@ -628,7 +628,7 @@ MSBuild 中的 `owners` 項目沒有對應項。
 
 您可以使用 `PackagePath="path"` 修改 .nupkg 內的套件配置。
 
-除了 `Content`，大多數項目群組都需要明確地新增 `Pack="true"`，以包含在套件中。 因為 MSBuild `<IncludeContentInPack>` 屬性預設會設定為 `true`，所以會將 `Content` 放在套件的 *content* 資料夾中。
+除了 `Content`，大多數項目群組都需要明確地新增 `Pack="true"`，以包含在套件中。 因為 MSBuild `Content` 屬性預設會設定為 *，所以會將*  放在套件的 `<IncludeContentInPack>`content`true` 資料夾中。
 如需詳細資訊，請參閱 [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package) (在套件中包含內容)。
 
 `PackagePath="%(Identity)"` 是將套件路徑設定為專案相關檔案路徑的捷徑。
@@ -673,6 +673,6 @@ MSBuild 中的 `owners` 項目沒有對應項。
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [CLI 中變更的高階概觀](../tools/cli-msbuild-architecture.md)

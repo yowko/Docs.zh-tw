@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c3db8f7791e510768608e834339526fb82771979
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713114"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451937"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# 參考)
 
@@ -54,7 +54,7 @@ ms.locfileid: "75713114"
 這些「檢查程式內容」也是唯一有效傳遞 `readonly` 欄位做為[out](out-parameter-modifier.md)或[ref](ref.md)參數的內容。
 
 > [!NOTE]
-> `readonly` 關鍵字與 [const](const.md) 關鍵字不同。 `const` 欄位只能在欄位的宣告中初始化。 您可以在欄位宣告及任何建構函式中，多次指派 `readonly` 欄位。 因此，`readonly` 欄位可能會因使用的建構函式而有不同的值。 此外，雖然 `const` 欄位是編譯時間常數，但是 `readonly` 欄位可用於執行階段常數，如下列範例所示：
+> `readonly` 關鍵字與 [const](const.md) 關鍵字不同。 `const` 欄位只能在欄位的宣告中初始化。 您可以在欄位宣告及任何建構函式中，多次指派 `readonly` 欄位。 因此，`readonly` 欄位可能會因使用的建構函式而有不同的值。 此外，當 `const` 欄位是編譯時間常數時，`readonly` 欄位可用於執行時間常數，如下列範例所示：
 >
 > ```csharp
 > public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
@@ -70,11 +70,11 @@ p2.y = 66;        // Error
 
 您會收到編譯器錯誤訊息：
 
-`A readonly field cannot be assigned to (except in a constructor or a variable initializer)`
+**無法指派 readonly 欄位（除非在函式或變數初始化運算式中）**
 
 ## <a name="readonly-struct-example"></a>唯讀結構範例
 
-`struct` 定義上的 `readonly` 修飾詞會宣告 struct 是**不可變**。 `struct` 的每個執行個體欄位必須標記為 `readonly`，如下列範例所示：
+`readonly` 定義上的 `struct` 修飾詞會宣告 struct 是**不可變**。 `struct` 的每個執行個體欄位必須標記為 `readonly`，如下列範例所示：
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
 
@@ -155,7 +155,7 @@ public string Message { readonly get; set; }
 - [readonly ref 和 readonly 結構](~/_csharplang/proposals/csharp-7.2/readonly-ref.md)
 - [readonly 結構成員](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

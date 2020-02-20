@@ -2,12 +2,12 @@
 title: .NET Core 執行階段識別項 (RID) 目錄
 description: 了解執行階段識別碼 (RID) 以及 RID 在 .NET Core 中的使用方式。
 ms.date: 02/22/2019
-ms.openlocfilehash: 4369e263f1f46c73f04c65e4124f63c68d133520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: feb19632f16a047ecfb2dcb697a9b837824a1929
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789900"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451729"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 類別目錄
 
@@ -27,15 +27,15 @@ RID 是*執行階段識別項*的縮寫。 RID 值是用來識別應用程式執
 
 代表具體作業系統的 RID 通常遵循 `[os].[version]-[architecture]-[additional qualifiers]` 這個模式，其中：
 
-- `[os]` 是作業/平台系統 Moniker。 例如，`ubuntu`。
+- `[os]` 是作業/平台系統 Moniker。 例如： `ubuntu` 。
 
-- `[version]` 是作業系統版本，使用以點分隔 (`.`) 的版本號碼表示。 例如，`15.10`。
+- `[version]` 是作業系統版本，使用以點分隔 (`.`) 的版本號碼表示。 例如： `15.10` 。
 
   - 版本**不應為**行銷版本，因為行銷版本通常代表作業系統的多個個別版本，且具有不同平台 API 介面區。
 
 - `[architecture]` 處理器架構。 例如：`x86`、`x64`、`arm` 或 `arm64`。
 
-- `[additional qualifiers]` 進一步區分不同平台。 例如：`aot`。
+- `[additional qualifiers]` 進一步區分不同平台。 例如： `aot` 。
 
 ## <a name="rid-graph"></a>RID 圖表
 
@@ -108,7 +108,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
   - `win10-arm`
   - `win10-arm64`
 
-如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?tabs=netcore30&pivots=os-windows)。
+如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?pivots=os-windows)。
 
 ## <a name="linux-rids"></a>Linux RID
 
@@ -126,7 +126,7 @@ RID 圖表或執行階段後援圖形是與彼此相容的 RID 清單。 RID 是
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?tabs=netcore30&pivots=os-linux)。
+如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?pivots=os-linux)。
 
 ## <a name="macos-rids"></a>macOS RID
 
@@ -145,8 +145,8 @@ macOS RID 使用較舊的 "OSX" 商標。 僅列出常見值。 如需最新且�
 - macOS 10.14 Mojave (.NET Core 1.1 或更新版本)
   - `osx.10.14-x64`
 
-如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?tabs=netcore30&pivots=os-macos)。
+如需詳細資訊，請參閱[.Net Core 相依性和需求](install/dependencies.md?pivots=os-macos)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段識別碼](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/readme.md)

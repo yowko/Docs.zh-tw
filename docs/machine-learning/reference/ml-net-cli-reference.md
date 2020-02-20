@@ -2,12 +2,12 @@
 title: ML.NET CLI 命令參考
 description: ML.NET CLI 工具中的 auto-train 命令概觀、範例和參考。
 ms.date: 12/18/2019
-ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636116"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449695"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI 命令參考
 
@@ -18,7 +18,7 @@ ms.locfileid: "75636116"
 
 ## <a name="overview"></a>概觀
 
-使用範例：
+使用方式範例：
 
 ```console
 mlnet auto-train --task regression --dataset "cars.csv" --label-column-name price
@@ -94,7 +94,7 @@ mlnet auto-train
 
 不正確輸入選項會導致 CLI 工具發出有效輸入的清單和錯誤訊息。
 
-## <a name="task"></a>工作
+## <a name="task"></a>Task
 
 `--task | --mltask | -T` (string)
 
@@ -188,7 +188,7 @@ mlnet auto-train
 `--has-header | -h` (bool)
 
 指定資料集檔案是否有標頭資料列。
-可能的值為：
+可能的值包括：
 
 - `true`
 - `false`
@@ -225,7 +225,7 @@ mlnet auto-train
 
 如果您沒有指定 `--cache` 參數，則預設會使用 `auto` 快取設定。
 
-## <a name="name"></a>Name
+## <a name="name"></a>名稱
 
 `--name | -N` (string)
 
@@ -237,15 +237,15 @@ ML.NET 模型檔案 (.ZIP 檔案) 也會有相同的名稱。
 
 `--output-path | -o` (string)
 
-放置所產生輸出的根位置/資料集。 預設為目前的目錄。
+放置所產生輸出的根位置/資料集。 預設值是目前的目錄。
 
-## <a name="verbosity"></a>詳細資訊
+## <a name="verbosity"></a>詳細程度
 
 `--verbosity | -V` (string)
 
 設定標準輸出的詳細資訊層級。
 
-允許的值如下：
+允許的值包括：
 
 - `q[uiet]`
 - `m[inimal]` (預設)
@@ -253,13 +253,13 @@ ML.NET 模型檔案 (.ZIP 檔案) 也會有相同的名稱。
 
 根據預設，CLI 工具在運作時應該至少會顯示一些基本回饋，例如提及它正在運作，以及剩餘時間或完成的時間百分比 (如果可能)。
 
-## <a name="help"></a>說明
+## <a name="help"></a>説明
 
 `-h|--help`
 
 印出命令的說明，以及每個命令的參數描述。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何安裝 ML.NET CLI 工具](../how-to-guides/install-ml-net-cli.md)
 - [ML.NET CLI 的總覽](../automate-training-with-cli.md)

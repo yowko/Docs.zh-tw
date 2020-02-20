@@ -2,12 +2,12 @@
 title: WCF 簡化功能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: dd944ad2963e29fd3aa9254f3a37f2c2b98ce70d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 28a05053fda8380b55a1a9eee20119b8c4cfccfe
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802384"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452652"
 ---
 # <a name="wcf-simplification-features"></a>WCF 簡化功能
 
@@ -78,7 +78,7 @@ WCF 現可支援合約優先開發。 Svcutil 工具具有/serviceContract 參�
 
 ## <a name="add-service-reference-from-a-portable-subset-project"></a>從可攜式子集專案加入服務參考
 
-可移植子集專案可讓 .NET 元件程式設計人員維護單一來源樹狀結構和組建系統，同時仍然支援多個 .NET 執行（桌面、Silverlight、Windows Phone 和 XBOX）。 可移植的子集專案僅參考 .NET 的可移植程式庫，這是可在任何 .NET 執行上使用的 .NET framework 元件。 開發人員的體驗與在任何其他 WCF 用戶端應用程式內加入服務參考相同。 如需詳細資訊，請參閱[在可移植的子集專案中加入服務參考](add-service-reference-in-a-portable-subset-project.md)。
+可移植子集專案可讓 .NET 元件程式設計人員維護單一來源樹狀結構和組建系統，同時仍然支援多個 .NET 執行（桌面、Silverlight、Windows Phone 和 Xbox）。 可移植子集專案僅參考 .NET 可在任何 .NET 執行時使用的程式庫。 開發人員的體驗與在任何其他 WCF 用戶端應用程式內加入服務參考相同。 如需詳細資訊，請參閱[在可移植的子集專案中加入服務參考](add-service-reference-in-a-portable-subset-project.md)。
 
 ## <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 相容模式預設值已變更
 
@@ -94,7 +94,7 @@ WCF 會在寫入 WCF 服務時提供 ASP.NET 相容模式，將 ASP.NET HTTP 管
 
 下列資料表說明已變更的設定以及可找到其他資訊的位置。
 
-|屬性|On|新的預設值|更多資訊|
+|屬性|另一|新的預設值|相關資訊|
 |--------------|--------|-----------------|----------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|這個屬性會決定 TCP 連線使用 .NET 框架通訊協定進行自我驗證所需的時間長度。 用戶端必須先傳送一些初始資料，讓伺服器有足夠的資訊來執行驗證。 逾時會故意設定為小於 ReceiveTimeout (10 分鐘)，使未經驗證的惡意用戶端無法長時間保持與伺服器的連接。 預設值為 30 秒。 如需 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A> 的詳細資訊|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 處理器數目|此為通訊端層級的屬性，用來說明要排入佇列之「擱置接受」要求的數目。 如果接聽待辦項目佇列已滿，將會拒絕新的通訊端要求。 如需 <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A> 的詳細資訊|

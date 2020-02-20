@@ -2,12 +2,12 @@
 title: .NET Core CLI 擴充性模型
 description: 瞭解您可以如何擴充 .NET Core CLI。
 ms.date: 04/12/2017
-ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 56a9cedc090ddca446c0ee1a60f2ca49590e7635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920520"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451151"
 ---
 # <a name="net-core-cli-extensibility-model"></a>.NET Core CLI 擴充性模型
 
@@ -32,7 +32,7 @@ CLI 可以用三種主要方式擴充：
 上述這三種擴充性機制都不是專用的。 您可以使用其中一個、全部或其組合。 選擇哪一個主要取決於您嘗試使用延伸模組達成的目標。
 
 ## <a name="per-project-based-extensibility"></a>個別專案擴充性
-個別專案工具是以 NuGet 套件形式散發的[架構相依部署](../deploying/index.md#framework-dependent-deployments-fdd)。 工具只可用於參考它們以及還原它們之專案的內容中。 因為找不到命令，所以專案內容外部 (例如，包含專案的目錄外部) 的引動過程會失敗。
+個別專案工具是以 NuGet 套件形式散發的[架構相依部署](../deploying/index.md#publish-runtime-dependent)。 工具只可用於參考它們以及還原它們之專案的內容中。 因為找不到命令，所以專案內容外部 (例如，包含專案的目錄外部) 的引動過程會失敗。
 
 這些工具非常適合做為組建伺服器，因為不需要專案檔以外的任何項目。 建置流程會執行所建置專案的還原，並且可以使用這些工具。 因為每個專案都只能以一種特定語言撰寫，所以語言專案 (例如 F#) 也在這個分類中。
 

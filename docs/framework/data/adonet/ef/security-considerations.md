@@ -2,15 +2,15 @@
 title: 安全性考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e2e1fc75049d41b50aa59092fe1aa21e8cdab659
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968409"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452483"
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
-本主題說明開發、部署和執行 Entity Framework 應用程式特有的安全性考慮。 您也應該遵循建立安全 .NET Framework 應用程式的建議。 如需詳細資訊，請參閱[安全性總覽](../security-overview.md)。  
+本主題說明開發、部署和執行 Entity Framework 應用程式特有的安全性考慮。 您也應該遵循建立安全 .NET Framework 應用程式的建議。 如需詳細資訊，請參閱[安全性概觀](../security-overview.md)。  
   
 ## <a name="general-security-considerations"></a>一般安全性考量  
  下列安全性考慮適用于所有使用 Entity Framework 的應用程式。  
@@ -27,7 +27,7 @@ ms.locfileid: "73968409"
  進行登入作業期間，以使用者密碼為基礎的資訊會透過基礎資料來源的網路程式庫傳遞至伺服器。 惡意提供者可能會竊取使用者認證、產生惡意查詢，或竄改結果集。  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>加密您的連接以便保護機密資料。  
- Entity Framework 不會直接處理資料加密。 如果使用者透過公用 (Public) 網路存取資料，您的應用程式就應該建立資料來源的加密連接，以便提升安全性。 如需詳細資訊，請參閱資料來源的安全性相關文件。 如需 SQL Server 資料來源，請參閱[SQL Server 的加密連接](https://go.microsoft.com/fwlink/?LinkId=119544)。  
+ Entity Framework 不會直接處理資料加密。 如果使用者透過公用 (Public) 網路存取資料，您的應用程式就應該建立資料來源的加密連接，以便提升安全性。 如需詳細資訊，請參閱資料來源的安全性相關文件。 如需 SQL Server 資料來源，請參閱[SQL Server 的加密連接](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105))。  
   
 #### <a name="secure-the-connection-string"></a>保護連接字串的安全。  
  保護應用程式時的最重要目標之一就是保護資料來源的存取。 如果連接字串未受保護，或者建構方式不當，它就會成為可能的弱點。 如果您以純文字方式儲存連接資訊，或將它保存在記憶體中，就會面臨危害整個系統的風險。 下面是保護連接字串安全的建議方法：  
@@ -51,7 +51,7 @@ ms.locfileid: "73968409"
  如需詳細資訊，請參閱[保護連線資訊](../protecting-connection-information.md)。  
   
 #### <a name="do-not-expose-an-entityconnection-to-untrusted-users"></a>請勿將 EntityConnection 公開 (Expose) 給未受信任的使用者。  
- <xref:System.Data.EntityClient.EntityConnection> 物件會公開基礎連接的連接字串。 擁有 <xref:System.Data.EntityClient.EntityConnection> 物件存取權的使用者也可以變更基礎連接的 <xref:System.Data.ConnectionState>。 <xref:System.Data.EntityClient.EntityConnection> 類別不具備執行緒安全。  
+ <xref:System.Data.EntityClient.EntityConnection> 物件會公開基礎連接的連接字串。 擁有 <xref:System.Data.EntityClient.EntityConnection> 物件存取權的使用者也可以變更基礎連接的 <xref:System.Data.ConnectionState>。 <xref:System.Data.EntityClient.EntityConnection> 類別並非安全執行緒。  
   
 #### <a name="do-not-pass-connections-outside-the-security-context"></a>請勿在安全性內容外部傳遞連接。  
  已經建立連接之後，您就不得在安全性內容外部傳遞連接。 例如，某個具有開啟連接之權限的執行緒不應該將連接儲存在全域位置中。 如果可以在全域位置中使用此連接，則其他惡意執行緒可能會在沒有明確授與權限的情況下，使用開啟的連接。  
@@ -81,7 +81,7 @@ ms.locfileid: "73968409"
  Entity Framework 不會強制執行任何安全性許可權，而且將會叫用進程中任何使用者提供的資料物件程式碼，不論其是否受信任。 請確定資料存放區和應用程式都會執行用戶端的驗證與授權。  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>限制所有組態檔的存取權。  
- 系統管理員必須限制指定應用程式之設定的所有檔案的寫入存取權，包括 enterprisesec*應用程式*> 的 config、security .config、machine.config 和應用程式佈建 \<檔案。config.xml。  
+ 系統管理員必須限制指定應用程式之設定的所有檔案的寫入存取權，包括 enterprisesec*應用程式*> 的 config、security .config、machine.config 和應用程式佈建 \<檔案。  
   
  在 app.config 中可修改提供者不變名稱。用戶端應用程式必須負責透過標準提供者 factory 模型存取基礎提供者，方法是使用強式名稱。  
   
@@ -162,7 +162,7 @@ ADO.NET 中繼資料服務元件不會記錄任何私用資訊。 如果存在�
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>請勿接受來自未受信任來源的 MetadataWorkspace 物件。  
  應用程式不應該接受來自未受信任來源之 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 類別的執行個體 (Instance)。 您應該改為根據這類來源明確建構並填入工作區 (Workspace)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [設定 ADO.NET 應用程式的安全性](../securing-ado-net-applications.md)
 - [部署考量](deployment-considerations.md)

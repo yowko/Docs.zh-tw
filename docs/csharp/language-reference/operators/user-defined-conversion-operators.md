@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 2f4858d729093d3520e97610e0eac8600093187a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 379deb20243a13cc608cb7fe119b341065327c1e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936869"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450670"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>使用者定義轉換運算子 (C# 參考)
 
@@ -42,11 +42,12 @@ ms.locfileid: "75936869"
 - [隱含轉換](~/_csharplang/spec/conversions.md#implicit-conversions)
 - [明確轉換](~/_csharplang/spec/conversions.md#explicit-conversions)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)
 - [運算子多載](operator-overloading.md)
 - [型別測試和轉換運算子](type-testing-and-cast.md)
 - [轉換和型別轉換](../../programming-guide/types/casting-and-type-conversions.md)
+- [設計方針-轉換運算子](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)
 - [C# 中鏈結的使用者定義明確轉換](https://docs.microsoft.com/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c)

@@ -2,12 +2,12 @@
 title: 處理非同步應用程式中的重新進入 (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: 9a6189624eff988ec6b0ac8a93330d591ed46a8c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 67fbbd294ffe6219b58065f974543b2dd483a92c
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772029"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451859"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>處理非同步應用程式中的重新進入 (C#)
 
@@ -28,10 +28,10 @@ ms.locfileid: "72772029"
 - [檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)
 
 > [!NOTE]
-> 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。
+> 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本，以及 .NET Framework 4.5 或更新版本。
 
 > [!NOTE]
-> 傳輸層安全性（TLS）版本1.2 現在是應用程式開發中所使用的最低版本。 如果您的應用程式以低於4.7 的 .NET framework 版本為目標，請參閱下列文章，以瞭解[傳輸層安全性（TLS）與 .NET Framework 的最佳做法](../../../../framework/network-programming/tls.md) 
+> 傳輸層安全性（TLS）版本1.2 現在是應用程式開發中所使用的最低版本。 如果您的應用程式以4.7 之前的 .NET Framework 版本為目標，請參閱下列文章，以取得[.NET Framework 的傳輸層安全性（TLS）最佳做法](../../../../framework/network-programming/tls.md)。
 
 ## <a name="BKMK_RecognizingReentrancy"></a> 辨識重新進入
 
@@ -109,7 +109,7 @@ TOTAL bytes returned:  890591
 
 ### <a name="BKMK_DisableTheStartButton"></a> 停用 [開始] 按鈕
 
-您可以停用 `StartButton_Click` 事件處理常式頂端的按鈕，以便在執行作業時封鎖 [開始] 按鈕。 作業完成時，您可以在 `finally` 區塊中重新啟用按鈕，讓使用者可再次執行應用程式。
+您可以停用  **事件處理常式頂端的按鈕，以便在執行作業時封鎖 [開始]** `StartButton_Click` 按鈕。 作業完成時，您可以在 `finally` 區塊中重新啟用按鈕，讓使用者可再次執行應用程式。
 
 若要設定此案例，請對[檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)中提供的基本程式碼進行下列變更。 您也可以從[非同步範例︰重新進入 .NET 桌面應用程式](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06)下載完成的應用程式。 專案名稱是 DisableStartButton。
 
@@ -405,7 +405,7 @@ public partial class MainWindow : Window  // Class MainPage in Windows Store app
 
 #### <a name="the-click-event-handler"></a>Click 事件處理常式
 
-每當使用者選擇 [開始] 按鈕，事件處理常式 `StartButton_Click` 就會增加群組字母。 處理常式接著會呼叫 `AccessTheWebAsync` 來執行下載作業。
+每當使用者選擇 [開始]`StartButton_Click`**按鈕，事件處理常式** 就會增加群組字母。 處理常式接著會呼叫 `AccessTheWebAsync` 來執行下載作業。
 
 ```csharp
 private async void StartButton_Click(object sender, RoutedEventArgs e)
@@ -437,7 +437,7 @@ private async void StartButton_Click(object sender, RoutedEventArgs e)
 
 `AccessTheWebAsync` 接著呼叫 `FinishOneGroupAsync` 來等候每個下載完成，並顯示它的長度。
 
-`FinishOneGroupAsync` 傳回工作，該工作指派給 `AccessTheWebAsync` 中的 `pendingWork`。 在工作完成前，該值會防止另一項作業中斷該工作。
+`FinishOneGroupAsync` 傳回工作，該工作指派給 `pendingWork` 中的 `AccessTheWebAsync`。 在工作完成前，該值會防止另一項作業中斷該工作。
 
 ```csharp
 private async Task<char> AccessTheWebAsync(char grp)
@@ -494,7 +494,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 }
 ```
 
-#### <a name="points-of-interest"></a>參考資訊
+#### <a name="points-of-interest"></a>興趣點
 
 在輸出中以井字號 (#) 開頭的資訊行會釐清此範例的運作方式。
 
@@ -536,7 +536,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     TOTAL bytes returned:  915908
     ```
 
-- 只有針對群組 A 啟動 `FinishOneGroupAsync` 時 (先啟動)，`pendingWork` 工作才是 Null。 當群組 A 到達 `FinishOneGroupAsync` 時，它尚未完成 await 運算式。 因此，尚未將控制項返回 `AccessTheWebAsync`，且尚未針對 `pendingWork` 進行第一次指派。
+- 只有針對群組 A 啟動 `pendingWork` 時 (先啟動)，`FinishOneGroupAsync` 工作才是 Null。 當群組 A 到達 `FinishOneGroupAsync` 時，它尚未完成 await 運算式。 因此，尚未將控制項返回 `AccessTheWebAsync`，且尚未針對 `pendingWork` 進行第一次指派。
 
 - 下列兩行一律會在輸出中一起出現。 在 `StartButton_Click` 中啟動群組的作業，與將群組的工作指派給 `pendingWork` 之間，程式碼永遠不會中斷
 
@@ -576,9 +576,9 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 1. 啟動 Visual Studio。
 
-2. 在功能表列上，選擇 [ **檔案**]、[ **新增**]、[ **專案**]。
+2. 在功能表上，依序選擇 [檔案]、[新增] 和 [專案]。
 
-     [ **新增專案** ] 對話方塊隨即開啟。
+     此時會開啟 [新增專案] 對話方塊。
 
 3. 在 [安裝的範本] 窗格中，依序展開 [Visual C#] 及 [Windows]。
 
@@ -586,7 +586,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 5. 將專案命名為 `WebsiteDownloadWPF`，選擇4.6 或更高版本的 .NET Framework，然後按一下 [**確定]** 按鈕。
 
-     新的專案隨即出現在方案總管中。
+     新的專案隨即會出現在**方案總管**中。
 
 6. 在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。
 
@@ -614,11 +614,11 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 8. 在**方案總管**中，以滑鼠右鍵按一下 [**參考**]，然後選取 [**新增參考**]。
 
-     新增 <xref:System.Net.Http> 的參考（如果尚未選取）。
+     新增 <xref:System.Net.Http>的參考（如果尚未選取）。
 
 9. 在方案總管中，開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]。
 
-10. 將 MainWindow.xaml.cs 中的程式碼更換為下列程式碼。
+10. 在 MainWindow.xaml.cs 中，將程式碼取代為下列程式碼。
 
     ```csharp
     using System;
@@ -728,7 +728,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 12. 從[停用開始按鈕](#BKMK_DisableTheStartButton)、[取消後再重新啟動作業](#BKMK_CancelAndRestart)或[執行多個作業並將輸出加入佇列](#BKMK_RunMultipleOperations)進行變更以處理重新進入。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [逐步解說：使用 async 和 await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](./index.md)

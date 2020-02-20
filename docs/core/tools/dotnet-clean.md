@@ -2,12 +2,12 @@
 title: dotnet clean 命令
 description: dotnet clean 命令會清除目前的目錄。
 ms.date: 06/26/2019
-ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 715a33a8a1aa13a2a76f9d4522413dcc72e4b4aa
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734247"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451352"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -39,7 +39,7 @@ dotnet clean [-h|--help]
 
 要清除的 MSBuild 專案或方案。 MSBuild 會在目前工作目錄中搜尋副檔名以 *proj* 或 *sln* 結尾的檔案，並使用該檔案。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 * **`-c|--configuration {Debug|Release}`**
 
@@ -67,7 +67,7 @@ dotnet clean [-h|--help]
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  清除指定執行階段的輸出資料夾。 建立[獨立性部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 時會使用此選項。 自 .NET Core 2.0 SDK 起可用的選項。
+  清除指定執行階段的輸出資料夾。 建立[獨立性部署 (SCD)](../deploying/index.md#publish-self-contained) 時會使用此選項。 自 .NET Core 2.0 SDK 起可用的選項。
 
 * **`-v|--verbosity <LEVEL>`**
 

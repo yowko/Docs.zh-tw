@@ -6,12 +6,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: ea8d95c41df236897761ace1062ec325a069d52b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e359913aad4b8cea001a894d4ba5720fab54d42b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714737"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451911"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
 
@@ -60,7 +60,7 @@ ms.locfileid: "75714737"
 
 - 類別屬性
 
-- 成員
+- members
 
 例如，請考慮下列宣告：
 
@@ -151,7 +151,7 @@ partial void onNameChanged()
 }
 ```
 
-- 部分方法宣告必須以內容關鍵字 [partial](../../language-reference/keywords/partial-type.md) 開頭，且此方法必須傳回 [void](../../language-reference/keywords/void.md)。
+- 部分方法宣告必須以內容關鍵字 [partial](../../language-reference/keywords/partial-type.md) 開頭，且此方法必須傳回 [void](../../language-reference/builtin-types/void.md)。
 
 - 部分方法可以有 [in](../../language-reference/keywords/in-parameter-modifier.md) 或 [ref](../../language-reference/keywords/ref.md)，但不能有 [out](../../language-reference/keywords/out-parameter-modifier.md) 參數。
 
@@ -167,9 +167,9 @@ partial void onNameChanged()
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[部分型別](~/_csharplang/spec/classes.md#partial-types)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/classes.md#partial-types)的[部分型別](/dotnet/csharp/language-reference/language-specification/introduction)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別](./classes.md)

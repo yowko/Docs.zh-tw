@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 00f01b63cdf9397fe25f28fff08767dfc3a83e69
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559712"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453113"
 ---
 # <a name="animation-overview"></a>動畫概觀
 
@@ -341,7 +341,7 @@ ms.locfileid: "75559712"
 
 若要讓動畫反映出資料繫結或動畫變更，就必須重新產生動畫的時鐘。 時鐘不會自動產生。 若要讓動畫反映變更，請使用 <xref:System.Windows.Media.Animation.BeginStoryboard> 或 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> 方法來重新套用其分鏡腳本。 當您使用其中一種方法時，動畫會重新啟動。 在程式碼中，您可以使用 <xref:System.Windows.Media.Animation.Storyboard.Seek%2A> 方法，將分鏡腳本移回先前的位置。
 
-如需資料系結動畫的範例，請參閱[主要曲線動畫範例](https://go.microsoft.com/fwlink/?LinkID=160011)。 如需動畫和計時系統運作方式的詳細資訊，請參閱[動畫和計時系統總覽](animation-and-timing-system-overview.md)。
+如需資料系結動畫的範例，請參閱[主要曲線動畫範例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations)。 如需動畫和計時系統運作方式的詳細資訊，請參閱[動畫和計時系統總覽](animation-and-timing-system-overview.md)。
 
 <a name="otherWaysToAnimateSection"></a>
 
@@ -355,11 +355,11 @@ ms.locfileid: "75559712"
 
 下列範例可以幫助您開始將動畫加入至您的應用程式。
 
-- [From、To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [From、To 和 By 動畫目標值範例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)
 
   示範不同 From/To/By 設定。
 
-- [動畫計時行為範例](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [動畫計時行為範例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)
 
   示範您可以控制動畫計時行為的不同方式。 此範例也示範如何資料繫結動畫的目的地值。
 
@@ -367,7 +367,7 @@ ms.locfileid: "75559712"
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
 |[動畫和計時系統概觀](animation-and-timing-system-overview.md)|描述計時系統如何使用 <xref:System.Windows.Media.Animation.Timeline> 和 <xref:System.Windows.Media.Animation.Clock> 類別，這可讓您建立動畫。|
 |[動畫祕訣和訣竅](animation-tips-and-tricks.md)|列出解決動畫問題 (例如效能) 的有用祕訣。|
@@ -380,14 +380,14 @@ ms.locfileid: "75559712"
 |[分鏡腳本概觀](storyboards-overview.md)|描述如何使用有多個時間軸的分鏡腳本建立複雜的動畫。|
 |[計時行為概觀](timing-behaviors-overview.md)|描述動畫中使用的 <xref:System.Windows.Media.Animation.Timeline> 類型和屬性。|
 |[計時事件概觀](timing-events-overview.md)|描述 <xref:System.Windows.Media.Animation.Timeline> 和 <xref:System.Windows.Media.Animation.Clock> 物件上可用的事件，以在時間軸中的點執行程式碼，例如 [開始]、[暫停]、[繼續]、[略過] 或 [停止]。|
-|[「如何」主題](animation-and-timing-how-to-topics.md)|包含在應用程式中使用動畫及時間軸的程式碼範例。|
+|[操作說明主題](animation-and-timing-how-to-topics.md)|包含在應用程式中使用動畫及時間軸的程式碼範例。|
 |[時鐘操作說明主題](clocks-how-to-topics.md)|包含在您的應用程式中使用 <xref:System.Windows.Media.Animation.Clock> 物件的程式碼範例。|
 |[主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)|包含在應用程式中使用主要畫面格動畫的程式碼範例。|
 |[路徑動畫操作說明主題](path-animation-how-to-topics.md)|包含在應用程式中使用路徑動畫的程式碼範例。|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

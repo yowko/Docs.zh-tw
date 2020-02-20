@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9aff20e35469f9e786f0f790fda4ffaa04e76e64
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 5ad9c494fd02059e05cc744aad3b06cfc9399995
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116430"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451876"
 ---
 ### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage 的預設值。版本已變更為1.1
 
@@ -12,7 +12,7 @@ ms.locfileid: "76116430"
 
 #### <a name="version-introduced"></a>引進的版本
 
-.NET Core 3.0
+3.0
 
 #### <a name="change-description"></a>變更描述
 
@@ -24,17 +24,17 @@ ms.locfileid: "76116430"
 
 更新您的程式碼（如果它相依于傳回預設值2.0 的 <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> 屬性）。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
-網路
+網路功能
 
 #### <a name="affected-apis"></a>受影響的 API
 
 - <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName>
 
 <!--
-a def
-### Affected APIs
+
+#### Affected APIs
 
 - `P:System.Net.Http.HttpRequestMessage.Version`
 

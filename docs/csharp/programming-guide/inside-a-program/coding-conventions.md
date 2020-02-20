@@ -6,15 +6,16 @@ helpviewer_keywords:
 - Visual C#, coding conventions
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
-ms.openlocfilehash: c56d673de958f49a9ace60350442e89039e1d69f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712100"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452002"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 編碼慣例 (C# 程式設計手冊)
- 編碼慣例有下列用途：  
+
+編碼慣例有下列用途：  
   
 - 建立外觀一致的程式碼，讓讀者可以專注於內容，而非版面配置。  
   
@@ -24,9 +25,9 @@ ms.locfileid: "75712100"
   
 - 示範 C# 的最佳作法。  
 
- Microsoft 會利用本主題中的指導方針來開發範例與文件。  
+Microsoft 會使用本文中的指導方針來開發範例和檔。  
   
-## <a name="naming-conventions"></a>命名規範  
+## <a name="naming-conventions"></a>命名慣例  
   
 - 在不包含 [using 指示詞](../../language-reference/keywords/using-directive.md)的簡短範例中，使用命名空間限定。 如果您知道專案中預設會匯入命名空間，則無須完整限定該命名空間的名稱。 如果限定的名稱太長無法顯示在同一行，則可以在點 (.) 之後中斷名稱，如下範例所示。  
   
@@ -35,7 +36,8 @@ ms.locfileid: "75712100"
 - 您無須變更使用 Visual Studio 設計工具所建立的物件之名稱，使其符合其他指導方針。  
   
 ## <a name="layout-conventions"></a>版面配置慣例  
- 好的版面配置使用格式設定，來強調程式碼的結構，並讓程式碼更易於閱讀。 Microsoft 範例遵循以下慣例：  
+
+好的版面配置使用格式設定，來強調程式碼的結構，並讓程式碼更易於閱讀。 Microsoft 範例遵循以下慣例：  
   
 - 使用預設程式碼編輯器設定 (智慧型縮排、四個字元縮排、定位點儲存為空格)。 如需詳細資訊，請參閱[選項、文字編輯器、C#、格式](/visualstudio/ide/reference/options-text-editor-csharp-formatting)。  
   
@@ -66,7 +68,8 @@ ms.locfileid: "75712100"
 - 不要在註解周圍建立格式化的星號區塊。  
   
 ## <a name="language-guidelines"></a>語言指導方針  
- 下列各節說明 C# 小組在準備程式碼範例時應遵循的作法。  
+
+下列各節說明 C# 小組在準備程式碼範例時應遵循的作法。  
   
 ### <a name="string-data-type"></a>String 資料類型  
   
@@ -94,33 +97,38 @@ ms.locfileid: "75712100"
   
 - 避免使用 `var` 取代 [dynamic](../../language-reference/builtin-types/reference-types.md)。  
   
-- 使用隱含類型，確定 [for](../../language-reference/keywords/for.md) 和 [foreach](../../language-reference/keywords/foreach-in.md) 迴圈中迴圈變數的類型。  
+- 在[for](../../language-reference/keywords/for.md)迴圈中，使用隱含類型來判斷迴圈變數的型別。  
   
      下列範例在 `for` 陳述式中使用隱含類型。  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
-  
-     下列範例在 `foreach` 陳述式中使用隱含類型。  
-  
-     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]  
-  
+
+- 請勿使用隱含類型來判斷[foreach](../../language-reference/keywords/foreach-in.md)迴圈中迴圈變數的類型。
+
+     下列範例會在 `foreach` 語句中使用明確類型。
+
+     [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
+
+     > [!NOTE]
+     > 請小心不要不小心變更可反復執行集合的元素類型。 例如，您可以輕鬆地從 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 切換至 `foreach` 語句中的 <xref:System.Collections.IEnumerable?displayProperty=nameWithType>，這會變更查詢的執行。
+
 ### <a name="unsigned-data-type"></a>不帶正負號的資料類型  
   
-- 一般而言，請使用 `int` 而非不帶正負號的類型。 `int` 的使用在 C# 中非常普遍，當您使用 `int` 時，可更易於與其他程式庫互動。  
+一般而言，請使用 `int` 而非不帶正負號的類型。 `int` 的使用在 C# 中非常普遍，當您使用 `int` 時，可更易於與其他程式庫互動。  
   
 ### <a name="arrays"></a>陣列  
   
-- 當您在宣告行上初始化陣列時，請使用簡潔的語法。  
+當您在宣告行上初始化陣列時，請使用簡潔的語法。  
   
-     [!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
+[!code-csharp[csProgGuideCodingConventions#13](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#13)]  
   
 ### <a name="delegates"></a>委派  
   
-- 您可以使用簡潔的語法，建立委派類型的執行個體。  
+您可以使用簡潔的語法，建立委派類型的執行個體。  
   
-     [!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
+[!code-csharp[csProgGuideCodingConventions#14](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#14)]  
   
-     [!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
+[!code-csharp[csProgGuideCodingConventions#15](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#15)]  
   
 ### <a name="try-catch-and-using-statements-in-exception-handling"></a>例外狀況處理中的 try-catch 和 using 陳述式  
   
@@ -134,11 +142,11 @@ ms.locfileid: "75712100"
   
 ### <a name="-and-124124-operators"></a>&& 和 &#124;&#124; 運算子  
   
-- 為避免發生例外狀況，並略過不必要的比較來提升效能，請在執行比較時使用 [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) 而非 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)，並使用 [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) 而非 [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)，如下列範例所示。  
+為避免發生例外狀況，並略過不必要的比較來提升效能，請在執行比較時使用 [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) 而非 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)，並使用 [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) 而非 [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)，如下列範例所示。  
   
-     [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
+[!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
-### <a name="new-operator"></a>New 運算子  
+### <a name="new-operator"></a>新增操作員  
   
 - 使用物件執行個體化的簡潔形式，搭配隱含類型，如下宣告所示。  
   
@@ -154,15 +162,15 @@ ms.locfileid: "75712100"
   
 ### <a name="event-handling"></a>事件處理  
   
-- 如果要定義稍後不需要移除的事件處理常式，請使用 Lambda 運算式。  
+如果要定義稍後不需要移除的事件處理常式，請使用 Lambda 運算式。  
   
-     [!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
+[!code-csharp[csProgGuideCodingConventions#22](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#22)]  
   
-     [!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
+[!code-csharp[csProgGuideCodingConventions#23](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#23)]  
   
 ### <a name="static-members"></a>靜態成員  
   
-- 使用類別名稱 *ClassName.StaticMember*，呼叫 [static](../../language-reference/keywords/static.md) 成員。 這種作法可讓靜態存取更加清晰，從而讓程式碼更易於閱讀。  請勿使用衍生類別的名稱，限定在基底類別中定義的靜態成員。  編譯該程式碼時，如果將具有相同名稱的靜態成員加入衍生類別，則會破壞程式碼的清楚程度，且程式碼之後可能會在中斷。  
+使用類別名稱 [ClassName.StaticMember](../../language-reference/keywords/static.md)，呼叫 *static* 成員。 這種作法可讓靜態存取更加清晰，從而讓程式碼更易於閱讀。  請勿使用衍生類別的名稱，限定在基底類別中定義的靜態成員。  編譯該程式碼時，如果將具有相同名稱的靜態成員加入衍生類別，則會破壞程式碼的清楚程度，且程式碼之後可能會在中斷。  
   
 ### <a name="linq-queries"></a>LINQ 查詢  
   
@@ -170,7 +178,7 @@ ms.locfileid: "75712100"
   
      [!code-csharp[csProgGuideCodingConventions#25](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#25)]  
   
-- 使用別名，確保匿名類型的屬性名稱正確使用 Pascal 大小寫慣例。  
+- 使用別名，確保匿名類型的屬性名稱使用 Pascal 大小寫慣例，大寫正確。  
   
      [!code-csharp[csProgGuideCodingConventions#26](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#26)]  
   
@@ -193,9 +201,10 @@ ms.locfileid: "75712100"
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
 ## <a name="security"></a>安全性  
- 請遵循[安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)中的指引。  
+
+請遵循[安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)中的指引。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 編碼慣例](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [安全程式碼撰寫方針](../../../standard/security/secure-coding-guidelines.md)

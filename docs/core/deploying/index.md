@@ -1,101 +1,157 @@
 ---
-title: .NET Core 應用程式部署
-description: 了解部署 .NET Core 應用程式的方式。
-ms.date: 12/03/2018
-ms.openlocfilehash: 425f0d5bf11fd0572825d2025005aacf65d7d2cd
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+title: 應用程式發行
+description: 瞭解發行 .NET Core 應用程式的方式。 .NET Core 可以發佈平臺特定或跨平臺應用程式。 您可以將應用程式發佈為獨立或與執行時間相關聯。 每個模式都會影響使用者執行應用程式的方式。
+ms.date: 01/31/2020
+ms.openlocfilehash: 696cca436c73601a3e7825033152d43a659a7dce
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920881"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448980"
 ---
-# <a name="net-core-application-deployment"></a>.NET Core 應用程式部署
+# <a name="net-core-application-publishing-overview"></a>.NET Core 應用程式發行總覽
 
-您可以建立三種類型的 .NET Core 應用程式部署︰
+您使用 .NET Core 建立的應用程式可以在兩種不同的模式下發行，而此模式會影響使用者執行應用程式的方式。
 
-- 與 Framework 相依的部署。 正如其名，與 Framework 相依的部署 (framework-dependent deployment, FDD) 仰賴存在於目標系統上的全系統共用 .NET Core 版本。 因為 .NET Core 已存在，所以應用程式也可以在 .NET Core 安裝之間攜帶。 您的應用程式僅包含其自有程式碼和 .NET Core 程式庫以外的所有協力廠商相依性。 FDD 包含的 *.dll* 檔案，可以使用 [dotnet 公用程式](../tools/dotnet.md)從命令列啟動。 例如，`dotnet app.dll` 執行名為 `app` 的應用程式。
+將您的應用程式發佈為獨立式，*會產生一個*應用程式，其中包含 .net Core 執行時間和程式庫，以及您的應用程式及其相依性。 應用程式的使用者可以在未安裝 .NET Core 執行時間的電腦上執行它。 
 
-- 自封式部署。 不同於 FDD，自封式部署 (SCD) 不仰賴任何存在於目標系統上的共用元件。 包括 .NET Core 程式庫和 .NET Core 執行階段的所有元件，都隨附於應用程式，並與其他 .NET Core 應用程式隔離。 SCD 包含可執行檔 (例如，Windows 平台上 `app` 應用程式的 *app.exe*)，這是重新命名的特定平台 .NET Core 主應用程式版本，以及實際的應用程式 *.dll* 檔案 (例如 *app.dll*)。
+將應用程式發佈為與*執行時間相依*的會產生應用程式，其中只包含您的應用程式本身及其相依性。 應用程式的使用者必須分別安裝 .NET Core 執行時間。
 
-- 架構相依可執行檔。 產生可在目標平台上執行的可執行檔。 架構相依可執行檔 (FDE) 與 FDDs 類似，它是平台特定且不是自封式。 這些部署仍相依於共用系統面 .NET Core 版本。 與 SCD 不一樣，您的應用程式只包含您的程式碼與 .NET Core 程式庫外的任何第三方相依性。 FDE 會產生在目標平台上執行的可執行檔。
+這兩種發行模式預設都會產生平臺特定的可執行檔。 執行時間相依的應用程式可以在沒有可執行檔的情況下建立，而且這些應用程式會跨平臺。
 
-## <a name="framework-dependent-deployments-fdd"></a>與 Framework 相依的部署 (FDD)
+當可執行檔產生時，您可以使用執行時間識別碼（RID）來指定目標平臺。 如需有關 Rid 的詳細資訊，請參閱[.Net CORE RID 目錄](../rid-catalog.md)。
 
-針對 FDD，您只要部署您的應用程式與協力廠商相依性。 您的應用程式將會使用存在於目標系統上的 .NET Core 版本。 這是以 .NET Core 為目標是 .NET Core 與 ASP.NET Core 應用程式的預設部署模型。
+下表概述用來將應用程式發佈為執行時間相依或獨立、每個 SDK 版本的命令：
 
-### <a name="why-create-a-framework-dependent-deployment"></a>為何建立與 Framework 相依的部署？
+| 類型                                                                                 | SDK 2。1 | SDK 3。x | Command |
+| -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
+| 目前平臺的[執行時間相依可執行檔](#publish-runtime-dependent)。 |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| 特定平臺的[執行時間相依可執行檔](#publish-runtime-dependent)。  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
+| [執行時間相依的跨平臺二進位](#publish-runtime-dependent)檔。               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| [獨立的可執行檔](#publish-self-contained)。                                | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
 
-部署 FDD 有許多優點︰
+如需詳細資訊，請參閱[.Net Core dotnet publish 命令](../tools/dotnet-publish.md)。
 
-- 您不必事先定義 .NET Core 應用程式執行所在的目標作業系統。 由於不論作業系統為何，.NET Core 對可執行檔和程式庫都使用通用的 PE 檔案格式，所以 .NET Core 可以執行您的應用程式，不理會基礎作業系統。 如需 PE 檔格式的詳細資訊，請參閱 [.NET Assembly File Format](../../standard/assembly/file-format.md) (.NET 組件檔案格式)。
+## <a name="produce-an-executable"></a>產生可執行檔
 
-- 部署套件的大小很小。 您只需要部署您的應用程式及其相依性，不用部署 .NET Core。
+可執行檔不是跨平臺。 它們是作業系統和 CPU 架構的特定。 發佈您的應用程式並建立可執行檔時，您可以將應用程式發佈為[獨立](#publish-self-contained)或[執行時間相依](#publish-runtime-dependent)。 以獨立方式發行應用程式包含應用程式的 .NET Core 執行時間，而應用程式的使用者在執行應用程式之前，不必擔心安裝 .NET Core。 發佈為執行時間相依的應用程式不包含 .NET Core 執行時間和程式庫;只包含應用程式和協力廠商相依性。
 
-- 除非被覆寫，否則 FDD 將會使用目標系統上安裝的最新維護執行階段。 這可讓您的應用程式使用最新的已修補 .NET Core 執行階段版本。 
+下列命令會產生可執行檔：
 
-- 多個應用程式使用相同的 .NET Core 安裝，這樣可減少主機系統的磁碟空間和記憶體使用量。
+| 類型                                                                                 | SDK 2。1 | SDK 3。x | Command |
+| ------------------------------------------------------------------------------------ | ------- | ------- | ------- |
+| 目前平臺的[執行時間相依可執行檔](#publish-runtime-dependent)。 |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
+| 特定平臺的[執行時間相依可執行檔](#publish-runtime-dependent)。  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
+| [獨立的可執行檔](#publish-self-contained)。                                | ✔️      | ✔️      | [`dotnet publish -r <RID>`](../tools/dotnet-publish.md) |
 
-另外還有幾個缺點︰
+## <a name="produce-a-cross-platform-binary"></a>產生跨平臺二進位檔
 
-- 只有主機系統安裝您的應用程式以其為目標的 .NET Core 版本[或更新版本](../versions/selection.md#framework-dependent-apps-roll-forward)，您的應用程式才能執行。
+當您將應用程式發佈為與[執行時間相依](#publish-runtime-dependent)時，會以*dll*檔案的形式來建立跨平臺二進位檔。 *Dll*檔案會在您的專案之後命名。 例如，如果您有名為**word_reader**的應用程式，則會建立名為*word_reader*的檔案。 以這種方式發佈的應用程式會使用 `dotnet <filename.dll>` 命令來執行，而且可以在任何平臺上執行。
 
-- .NET Core 執行階段和程式庫在未來的版本中可能有所變更，但不會通知您。 只有極其罕見的情況，才可能變更應用程式的行為。
+只要已安裝目標 .NET Core 執行時間，就可以在任何作業系統上執行跨平臺二進位檔。 如果未安裝目標 .NET Core 執行時間，當應用程式設定為向前復原時，應用程式可能會使用較新的執行時間來執行。 如需詳細資訊，請參閱[執行時間相依應用程式向前](../versions/selection.md#framework-dependent-apps-roll-forward)復原。
 
-## <a name="self-contained-deployments-scd"></a>自封式部署 (SCD)
+下列命令會產生跨平臺二進位檔：
 
-針對自封式部署，您需要部署自己的應用程式和所有需要的協力廠商相依性，以及建置應用程式所用的 .NET Core 版本。 不過，建立 SCD 不包含各種平台的 [.NET Core 原生相依性](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)本身 (例如，macOS 上的 OpenSSL)，所以在執行應用程式前要先行安裝。 如需執行階段之版本繫結的詳細資訊，請參閱 [.NET Core 中的版本繫結](../versions/selection.md)上的文章。
+| 類型                                                                                 | SDK 2。1 | SDK 3。x | Command |
+| -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
+| [執行時間相依的跨平臺二進位](#publish-runtime-dependent)檔。               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 
-從 NET Core 2.1 SDK (2.1.300 版) 開始，.NET Core 就支援*修補版本向前復原*。 當您建立自封式部署時，.NET Core 工具會自動包括您的應用程式以其為目標的最新 .NET Core 維護執行階段版本 （最新的服務執行時間包含安全性修補程式和其他錯誤修正）。服務執行時間不一定要存在於您的組建系統上;它會自動從 NuGet.org 下載。如需詳細資訊，包括如何退出宣告修補程式版本向前復原的指示，請參閱[獨立部署執行時間向前](runtime-patch-selection.md)復原。
+## <a name="publish-runtime-dependent"></a>發行執行時間相依
 
-FDD 和 SCD 使用不同的主機可執行檔，因此您可以使用自己的發行者簽章，為 SCD 簽署主機可執行檔。
+發佈為執行時間相依的應用程式會跨平臺，且不包含 .NET Core 執行時間。 需要應用程式的使用者，才能安裝 .NET Core 執行時間。
 
-### <a name="why-deploy-a-self-contained-deployment"></a>為什麼要部署自封式部署？
+將應用程式發佈為執行時間相依會產生[跨平臺二進位](#produce-a-cross-platform-binary)檔做為*dll*檔，以及以目前平臺為目標的[平臺特定可執行](#produce-an-executable)檔。 *Dll*為跨平臺，而可執行檔不是。 例如，如果您發行名為**word_reader**和目標 Windows 的應用程式，就會建立*word_reader .exe*可執行檔和*word_reader .dll*。 以 Linux 或 macOS 為目標時，會連同*word_reader*建立一個*word_reader*可執行檔。 如需有關 Rid 的詳細資訊，請參閱[.Net CORE RID 目錄](../rid-catalog.md)。
 
-部署自封式部署有兩大優點︰
+> [!IMPORTANT]
+> 當您發佈應用程式執行時間相依時，.NET Core SDK 2.1 不會產生平臺特定的可執行檔。
 
-- 您可以獨家控制隨應用程式部署的 .NET Core 版本。 只有您可以提供 .NET Core 服務。
+您應用程式的跨平臺二進位檔可以使用 `dotnet <filename.dll>` 命令來執行，而且可以在任何平臺上執行。 如果應用程式使用具有平臺特定部署的 NuGet 套件，則所有平臺的相依性會連同應用程式一起複製到 [發佈] 資料夾。
 
-- 您可以保證目標系統能執行您的 .NET Core 應用程式，因為您提供的是它可以執行的 .NET Core 版本。
+您可以藉由將 `-r <RID> --self-contained false` 參數傳遞至[`dotnet publish`](../tools/dotnet-publish.md)命令，為特定平臺建立可執行檔。 當省略 `-r` 參數時，就會為您目前的平臺建立可執行檔。 任何具有目標平臺平臺特定相依性的 NuGet 套件，都會複製到 [發行] 資料夾。
 
-它也有一些缺點︰
+### <a name="advantages"></a>優點
 
-- 因為 .NET Core 包含在您的部署套件中，所以您必須事先選取部署套件建置所在的目標平台。
+- **小型部署**\
+只會散發您的應用程式及其相依性。 .NET Core 執行時間和程式庫是由使用者所安裝，而所有應用程式會共用執行時間。
 
-- 您的部署套件的大小相當大，因為您必須包含 .NET Core 以及應用程式及其協力廠商相依性。
+- **跨平臺**\
+您的應用程式和任何。以網路為基礎的程式庫會在其他作業系統上執行。 您不需要定義應用程式的目標平臺。 如需 .NET 檔案格式的詳細資訊，請參閱[.Net 元件檔案格式](../../standard/assembly/file-format.md)。
 
-  從 .NET Core 2.0 開始，您就可以使用 .NET Core [*全球化不變模式*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)來減少 Linux 系統上的部署大小大約 28 MB。 一般而言，Linux 上的 .NET Core 依賴 [ICU 程式庫](http://icu-project.org)來提供全球化支援。 在不區分模式中，您的部署不包含程式庫，而且所有文化特性的行為[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)。
+- **使用最新修補的運行**時間\
+應用程式會使用安裝在目標系統上的最新執行時間（在目標主要-次要 .NET Core 系列內）。 這表示您的應用程式會自動使用最新修補版本的 .NET Core 執行時間。 可以覆寫這個預設行為。 如需詳細資訊，請參閱[執行時間相依應用程式向前](../versions/selection.md#framework-dependent-apps-roll-forward)復原。
 
-- 將多個自封式 .NET Core 應用程式部署到系統，會消耗大量的磁碟空間，因為每個應用程式都會重複 .NET Core 檔案。
+### <a name="disadvantages"></a>缺點
 
-## <a name="framework-dependent-executables-fde"></a>架構相依可執行檔 (FDE)
+- **需要預先安裝運行**時間\
+只有在主機系統上已安裝您的應用程式目標版本的 .NET Core 時，您的應用程式才能執行。 您可以為應用程式設定向前復原行為，以要求特定版本的 .NET Core 或允許較新版本的 .NET Core。 如需詳細資訊，請參閱[執行時間相依應用程式向前](../versions/selection.md#framework-dependent-apps-roll-forward)復原。
 
-從 .NET Core 2.2 開始，您就可以將您的應用程式部署為 FDE，以及任何必要的第三方相依性。 您的應用程式將會使用安裝在目標系統上的 .NET Core 版本。
+- **.Net Core 可能會變更**\
+.NET Core 執行時間和程式庫可能會在執行應用程式的電腦上更新。 在罕見的情況下，如果您使用 .NET Core 程式庫（大部分應用程式都有這麼做），這可能會變更應用程式的行為。 您可以設定應用程式使用較新版本 .NET Core 的方式。 如需詳細資訊，請參閱[執行時間相依應用程式向前](../versions/selection.md#framework-dependent-apps-roll-forward)復原。
 
-### <a name="why-deploy-a-framework-dependent-executable"></a>為何部署架構相依可執行檔？
+下列缺點僅適用于 .NET Core 2.1 SDK。
 
-部署 FDE有許多優點︰
+- **使用 `dotnet` 命令來啟動應用程式**\
+使用者必須執行 `dotnet <filename.dll>` 命令來啟動您的應用程式。 .NET Core 2.1 SDK 不會針對發佈執行時間相依的應用程式，產生平臺特定的可執行檔。
 
-- 部署套件的大小很小。 您只需要部署您的應用程式及其相依性，不用部署 .NET Core。
+### <a name="examples"></a>範例
 
-- 多個應用程式使用相同的 .NET Core 安裝，這樣可減少主機系統的磁碟空間和記憶體使用量。
+發佈與跨平臺執行時間相關的應用程式。 以目前平臺為目標的可執行檔會隨著*dll*檔案一起建立。
 
-- 您的應用程式可以透過呼叫已發行的可執行檔來執行，而不需要直接叫用 `dotnet` 公用程式。
+```dotnet
+dotnet publish
+```
 
-另外還有幾個缺點︰
+發佈與跨平臺執行時間相關的應用程式。 Linux 64 位可執行檔會與*dll*檔案一併建立。 此命令無法與 .NET Core SDK 2.1 搭配使用。
 
-- 只有主機系統安裝您的應用程式以其為目標的 .NET Core 版本[或更新版本](../versions/selection.md#framework-dependent-apps-roll-forward)，您的應用程式才能執行。
+```dotnet
+dotnet publish -r linux-x64 --self-contained false
+```
 
-- .NET Core 執行階段和程式庫在未來的版本中可能有所變更，但不會通知您。 只有極其罕見的情況，才可能變更應用程式的行為。
+## <a name="publish-self-contained"></a>獨立發行
 
-- 您必須為每個目標平台發行您的應用程式。
+以獨立方式發行應用程式會產生平臺特定的可執行檔。 輸出發佈資料夾包含應用程式的所有元件，包括 .NET Core 程式庫和目標執行時間。 應用程式與其他 .NET Core 應用程式隔離，而且不會使用本機安裝的共用執行時間。 您應用程式的使用者不需要下載和安裝 .NET Core。
 
-## <a name="step-by-step-examples"></a>逐步說明範例
+針對指定的目標平臺，會產生可執行檔二進位檔。 例如，如果您有一個名為**word_reader**的應用程式，而且您發行了獨立的可執行檔，則會建立*word_reader .exe*檔案。 發行 Linux 或 macOS 時，會建立*word_reader*檔案。 目標平臺和架構是使用[`dotnet publish`](../tools/dotnet-publish.md)命令的 `-r <RID>` 參數所指定。 如需有關 Rid 的詳細資訊，請參閱[.Net CORE RID 目錄](../rid-catalog.md)。
 
-如需使用 .NET Core CLI 部署 .NET Core 應用程式的逐步範例，請參閱[使用 .NET Core CLI 發佈 .Net core 應用程式](deploy-with-cli.md)。 如需使用 Visual Studio 部署 .NET Core 應用程式的逐步說明範例，請參閱[使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)。 
+如果應用程式具有平臺特定的相依性（例如包含平臺特定相依性的 NuGet 套件），則這些相依性會連同應用程式一起複製到 [發佈] 資料夾。
 
-## <a name="see-also"></a>請參閱
+### <a name="advantages"></a>優點
 
-- [使用 .NET Core CLI 發佈 .NET Core 應用程式](deploy-with-cli.md)
-- [使用 Visual Studio 部署 .NET Core 應用程式](deploy-with-vs.md)
-- [套件、中繼套件和架構](../packages.md)
-- [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)
+- **控制 .Net Core 版本**\
+您可以控制哪個版本的 .NET Core 會與您的應用程式一起部署。
+
+- **平臺特定目標**\
+因為您必須為每個平臺發佈您的應用程式，所以您知道應用程式的執行位置。 如果 .NET Core 引進新的平臺，則在您發行以該平臺為目標的版本之前，使用者無法在該平臺上執行您的應用程式。 您可以在使用者于新平臺上執行應用程式之前，先測試應用程式的相容性問題。
+
+### <a name="disadvantages"></a>缺點
+
+- **較大的部署**\
+因為您的應用程式包含 .NET Core 執行時間和您所有的應用程式相依性，所以所需的下載大小和硬碟空間會大於[執行時間相關](#publish-runtime-dependent)版本。
+
+  > [!TIP]
+  > 您可以使用 .NET Core[*全球化不變模式*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)，減少在 Linux 系統上部署的大小約 28 MB。 這會強制您的應用程式處理所有文化特性，例如不因[文化](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)特性而異。
+
+- 較**難更新 .Net Core 版本**\
+.NET Core 執行時間（與您的應用程式一起散發）只能透過發行新版本的應用程式來進行升級。 您必須負責提供應用程式的更新版本，以取得 .NET Core 執行時間的安全性修補程式。 
+
+### <a name="examples"></a>範例
+
+發行獨立的應用程式。 建立 macOS 64 位可執行檔。
+
+```dotnet
+dotnet publish -r osx-x64
+```
+
+發行獨立的應用程式。 建立 Windows 64 位可執行檔。
+
+```dotnet
+dotnet publish -r win-x64
+```
+
+## <a name="see-also"></a>另請參閱
+
+- [使用 .NET Core CLI 部署 .NET Core 應用程式。](deploy-with-cli.md)
+- [使用 Visual Studio 部署 .NET Core 應用程式。](deploy-with-vs.md)
+- [封裝、中繼套件和架構。](../packages.md)
+- [.NET Core 執行時間識別碼（RID）目錄。](../rid-catalog.md)
+- [選取要使用的 .NET Core 版本。](../versions/selection.md)

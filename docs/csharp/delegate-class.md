@@ -1,23 +1,23 @@
 ---
 title: System.Delegate 和 `delegate` 關鍵字
-description: 了解 .NET Framework 中支援委派的類別，以及這些類別與 'delegate' 關鍵字的對應關係。
+description: 瞭解 .NET 中支援委派的類別，以及它們如何對應到 ' delegate ' 關鍵字。
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420359"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450917"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 關鍵字
 
-[上一篇](delegates-overview.md)
+[[上一步]](delegates-overview.md)
 
-本文將介紹 .NET Framework 中支援委派的類別，以及這些類別與 `delegate` 關鍵字的對應關係。
+本文涵蓋 .NET 中支援委派的類別，以及如何對應至 `delegate` 關鍵字。
 
-## <a name="defining-delegate-types"></a>定義委派型別
+## <a name="define-delegate-types"></a>定義委派類型
 
 首先讓我們說明 'delegate' 關鍵字，因為您在使用委派時主要會用到這個項目。 當您使用 `delegate` 關鍵字時，編譯器產生的程式碼會對應到叫用 <xref:System.Delegate> 和 <xref:System.MulticastDelegate> 類別成員的方法呼叫。 
 
@@ -41,7 +41,7 @@ public delegate int Comparison<in T>(T left, T right);
 
 編譯器也會產生這個新型別的加入處理常式和移除處理常式，該類別的用戶端即可在執行個體的引動過程清單中加入和移除方法。 編譯器會強制確保您要加入或移除的方法簽章符合宣告方法時所用的簽章。 
 
-## <a name="declaring-instances-of-delegates"></a>宣告委派的執行個體
+## <a name="declare-instances-of-delegates"></a>宣告委派的實例
 
 定義委派之後，您可以建立該型別的執行個體。
 如同 C# 中的所有變數一般，您無法直接宣告命名空間或全域命名空間中的委派執行個體。
@@ -57,7 +57,7 @@ public Comparison<T> comparator;
  
  上述程式碼片段會宣告類別內的成員變數。 您也可以宣告本身為區域變數或方法引數的委派變數。
 
-## <a name="invoking-delegates"></a>叫用委派
+## <a name="invoke-delegates"></a>叫用委派
 
 您可以呼叫委派，藉此叫用該委派引動過程清單中的方法。 在 `Sort()` 方法中，程式碼會呼叫比較方法以判斷物件的放置順序：
 
@@ -70,7 +70,7 @@ int result = comparator(left, right);
 
 該行程式碼會進行不安全的假設︰因此無法保證目標已新增至委派。 如果未附加任何目標，上述行會導致系統擲回 `NullReferenceException`。 我們會在本[系列](delegates-patterns.md)稍後說明可用來解決這個問題的慣用語，這些慣用語比簡單的 null 檢查更複雜。
 
-## <a name="assigning-adding-and-removing-invocation-targets"></a>指派、加入和移除引動過程的目標
+## <a name="assign-add-and-remove-invocation-targets"></a>指派、新增和移除調用目標
 
 這涉及委派型別的定義方式，以及委派執行個體的宣告和叫用方式。
 
@@ -115,7 +115,7 @@ Sort() 範例通常會將單一的目標方法附加至委派。 即便如此，
 
 上述語言支援提供使用委派時通常需要的功能與支援。 這些功能都是建置在 .NET Core Framework 的 <xref:System.Delegate> 和 <xref:System.MulticastDelegate> 兩個類別之上。
 
-`System.Delegate` 類別和其單一的直接子類別 `System.MulticastDelegate` 提供的架構支援，可用來建立委派、將方法註冊為委派目標，以及叫用註冊為委派目標的所有方法。 
+`System.Delegate` 類別和它的單一直接子類別，`System.MulticastDelegate`提供建立委派、將方法註冊為委派目標，以及叫用註冊為委派目標的所有方法的架構支援。 
 
 有趣的是，`System.Delegate` 和 `System.MulticastDelegate` 類別本身不是委派型別， 卻可提供所有特定委派型別的基礎。 這個相同的語言設計程序要求您不能宣告衍生自 `Delegate` 或 `MulticastDelegate` 的類別。 C# 語言規則禁止使用該類別。
  
@@ -131,6 +131,6 @@ Sort() 範例通常會將單一的目標方法附加至委派。 即便如此，
 
 您最常搭配使用委派的方法是 `Invoke()` 和 `BeginInvoke()` / `EndInvoke()`。 `Invoke()` 會叫用已附加至特定委派執行個體的所有方法。 如上方所見，您通常會使用委派變數上的方法呼叫語法來叫用委派。 您可在[本系列中稍後](delegates-patterns.md)看到直接使用這些方法的模式。
 
-現在，您已了解支援委派的語言語法與類別，讓我們來查看如何使用、建立及叫用強型別的委派。
+既然您已經看過語言語法和支援委派的類別，讓我們來檢驗如何使用、建立和叫用強型別委派。
 
-[下一步](delegates-strongly-typed.md)
+[下一個](delegates-strongly-typed.md)

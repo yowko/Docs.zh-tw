@@ -7,12 +7,12 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-ms.openlocfilehash: 47d7648aae08544890a4dd2e42cedbf68a8acc72
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: e1f285aae10a89fa49846534d5b47e15920294ea
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214727"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452275"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<設定的 \<appSettings > 元素 >
 
@@ -33,7 +33,7 @@ ms.locfileid: "77214727"
 
 |           | 描述 |
 | --------- | ----------- |
-| **file**  | 選擇性屬性。<br><br>指定包含自訂應用程式設定之外部檔案的相對路徑。 指定的檔案所包含的設定類型與 **\<加入 >** 、 **\<移除 >** ，以及 **\<清除 >** 元素中所指定的相同，並使用與這些專案相同的索引鍵/值組格式。<br><br>指定的路徑是相對於主要設定檔。 對於 Windows Forms 應用程式，這是二進位檔案夾（例如 */bin/debug*），而不是應用程式佈建檔的位置。 若是 Web Forms 應用程式，路徑會相對於*web.config*檔案所在的應用程式根目錄。<br><br>請注意，如果找不到指定的檔案，執行時間會忽略屬性。 |
+| **file**  | 選擇性屬性。<br><br>指定包含自訂應用程式設定之外部檔案的相對路徑。 指定的檔案所包含的設定類型與 **\<加入 >** 、 **\<移除 >** ，以及 **\<清除 >** 元素中所指定的相同，並使用與這些專案相同的索引鍵/值組格式。<br><br>指定的路徑是相對於主要設定檔。 對於 Windows Forms 應用程式，這是二進位檔案夾（例如 */bin/debug*），而不是應用程式佈建檔的位置。 若是 Web Forms 應用程式，路徑會相對於*web.config*檔案所在的應用程式根目錄。<br><br>如果找不到指定的檔案，執行時間會忽略屬性。 |
 
 ## <a name="parent-element"></a>父元素
 

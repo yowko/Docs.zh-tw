@@ -3,12 +3,12 @@ title: 針對 .NET Core 工具使用問題進行疑難排解
 description: 探索執行 .NET Core 工具和可能的解決方案時常見的問題。
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 45139c3441b84964b937d5d1cc63a018f8d1f0fb
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74282508"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451073"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>針對 .NET Core 工具使用問題進行疑難排解
 
@@ -40,11 +40,11 @@ Possible reasons for this include:
 | `dotnet-<toolName>.exe` | `dotnet <toolName>` |
 | `<toolName>.exe`        | `<toolName>`        |
 
-* 通用工具
+* 全域工具
 
     通用工具可以安裝在預設目錄或特定位置。 預設目錄如下：
 
-    | OS          | 路徑                          |
+    | OS          | Path                          |
     |-------------|-------------------------------|
     | Linux/macOS | `$HOME/.dotnet/tools`         |
     | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -73,7 +73,7 @@ Possible reasons for this include:
 
 ### <a name="runtime-not-found"></a>找不到執行時間
 
-.NET Core 工具是與[架構相依的應用程式](../deploying/index.md#framework-dependent-deployments-fdd)，這表示它們會依賴安裝在您電腦上的 .net core 執行時間。 如果找不到預期的執行時間，它們會遵循一般的 .NET Core 執行時間向前復原規則，例如：
+.NET Core 工具是與[架構相依的應用程式](../deploying/index.md#publish-runtime-dependent)，這表示它們會依賴安裝在您電腦上的 .net core 執行時間。 如果找不到預期的執行時間，它們會遵循一般的 .NET Core 執行時間向前復原規則，例如：
 
 * 應用程式會向前復原到指定的主要和次要版本的最高修補程式版本。
 * 如果沒有符合的主要和次要版本號碼相符的執行時間，則會使用下一個較高的次要版本。

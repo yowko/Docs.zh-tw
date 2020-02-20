@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bae6bf6a1a5d87241b619bf024c099c48af6af43
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937688"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452678"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
@@ -54,7 +54,7 @@ ms.locfileid: "75937688"
 
 ## <a name="audit-your-code-and-make-code-changes"></a>對程式碼進行稽核並做出程式碼變更
 
-針對 ASP.NET 應用程式，請檢查 _web.config_ 的 `<system.web><httpRuntime targetFramework>` 元素，以確認您是使用正確的 .NET Framework 版本。
+針對 ASP.NET 應用程式，請檢查 `<system.web><httpRuntime targetFramework>`web.config_的_ 元素，以確認您是使用正確的 .NET Framework 版本。
 
 針對 Windows Forms 及其他應用程式，請參閱[如何：將 .NET Framework 的某個版本設定為目標](/visualstudio/ide/visual-studio-multi-targeting-overview)。
 
@@ -74,11 +74,11 @@ ms.locfileid: "75937688"
 
 ### <a name="for-tcp-sockets-networking"></a>針對 TCP 通訊端網路功能
 
-<xref:System.Net.Security.SslStream>，在使用 .NET Framework 4.7 及更新版本的情況下，預設會讓 OS 選擇最佳的安全性通訊協定和版本。 若要在可能的情況下取得最佳的預設 OS 選擇，請不要使用會採用明確 <xref:System.Security.Authentication.SslProtocols> 參數之 <xref:System.Net.Security.SslStream> 的方法多載。 否則，請傳遞 <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>。 建議您不要使用 <xref:System.Security.Authentication.SslProtocols.Default>；設定 `SslProtocols.Default` 會強制使用 SSL 3.0/TLS 1.0 並防止 TLS 1.2。
+<xref:System.Net.Security.SslStream>，在使用 .NET Framework 4.7 及更新版本的情況下，預設會讓 OS 選擇最佳的安全性通訊協定和版本。 若要在可能的情況下取得最佳的預設 OS 選擇，請不要使用會採用明確 <xref:System.Net.Security.SslStream> 參數之 <xref:System.Security.Authentication.SslProtocols> 的方法多載。 否則，請傳遞 <xref:System.Security.Authentication.SslProtocols.None?displayProperty=nameWithType>。 建議您不要使用 <xref:System.Security.Authentication.SslProtocols.Default>；設定 `SslProtocols.Default` 會強制使用 SSL 3.0/TLS 1.0 並防止 TLS 1.2。
 
 不要為 <xref:System.Net.ServicePointManager.SecurityProtocol> 屬性 (針對 HTTP 網路功能) 設定值。
 
-不要使用會採用明確 <xref:System.Security.Authentication.SslProtocols> 參數 (針對 TCP 通訊端網路功能) 之 <xref:System.Net.Security.SslStream> 的方法多載。 當您將應用程式目標重新設為 .NET Framework 4.7 或更新版本時，即是遵循最佳做法建議。
+不要使用會採用明確 <xref:System.Net.Security.SslStream> 參數 (針對 TCP 通訊端網路功能) 之 <xref:System.Security.Authentication.SslProtocols> 的方法多載。 當您將應用程式目標重新設為 .NET Framework 4.7 或更新版本時，即是遵循最佳做法建議。
 
 本主題剩下的內容，與針對 TCP 通訊端網路功能將 .NET Framework 4.7 或更新版本設為目標無關。
 
@@ -140,7 +140,7 @@ WCF 架構會自動選擇可用的最高版本通訊協定 (最高版本為 TLS 
 
 ## <a name="if-your-app-targets-net-framework-35"></a>若應用程式是以 .NET Framework 3.5 作為目標
 
-若您必須明確設定安全性通訊協定，而不是讓 .NET framework 或 OS 選擇安全性通訊協定，請將 `SecurityProtocolTypeExtensions` 和 `SslProtocolsExtension` 列舉新增至您的程式碼。 `SecurityProtocolTypeExtensions` 和 `SslProtocolsExtension` 包含適用於 `Tls12`、`Tls11` 的值，以及 `SystemDefault` 值。 請參閱[針對 TLS 系統預設版本的支援已包含在 Windows 8.1 和 Windows Server 2012 R2 的 .NET Framework 3.5 中](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework) \(機器翻譯\)。
+如果您必須明確地設定安全性通訊協定，而不是讓 .NET 或作業系統選擇安全性通訊協定，請將 `SecurityProtocolTypeExtensions` 和 `SslProtocolsExtension` 列舉新增至您的程式碼。 `SecurityProtocolTypeExtensions` 和 `SslProtocolsExtension` 包含適用於 `Tls12`、`Tls11` 的值，以及 `SystemDefault` 值。 如需詳細資訊，請參閱[Windows 8.1 和 Windows Server 2012 R2 上的 .NET Framework 3.5 中所包含的 TLS 系統預設版本支援](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework)。
 
 <a name="configuring-security-via-appcontext-switches"></a>
 
@@ -152,7 +152,7 @@ WCF 架構會自動選擇可用的最高版本通訊協定 (最高版本為 TLS 
 
 ### <a name="switchsystemnetdontenableschusestrongcrypto"></a>Switch.System.Net.DontEnableSchUseStrongCrypto
 
-將 `Switch.System.Net.DontEnableSchUseStrongCrypto` 設定為 `false` 值，會導致您的應用程式使用強式加密。 將 `DontEnableSchUseStrongCrypto` 設定為 `false` 值，會使用更安全的網路通訊協定 (TLS 1.2、TLS 1.1 及 TLS 1.0)，並封鎖不安全的通訊協定。 如需詳細資訊，請參閱 [SCH_USE_STRONG_CRYPTO 旗標](#the-sch_use_strong_crypto-flag)。 設定為 `true` 值會停用應用程式的強式加密。
+將 `false` 設定為 `Switch.System.Net.DontEnableSchUseStrongCrypto` 值，會導致您的應用程式使用強式加密。 將 `false` 設定為 `DontEnableSchUseStrongCrypto` 值，會使用更安全的網路通訊協定 (TLS 1.2、TLS 1.1 及 TLS 1.0)，並封鎖不安全的通訊協定。 如需詳細資訊，請參閱 [SCH_USE_STRONG_CRYPTO 旗標](#the-sch_use_strong_crypto-flag)。 設定為 `true` 值會停用應用程式的強式加密。
 
 若應用程式是以 .NET Framework 4.6 或更新版本作為目標，此參數預設會設定為 `false`。 那是安全的預設值，也是我們建議的選項。 若您的應用程式是在 .NET Framework 4.6 上執行，但是以較舊的版本為目標，此參數預設會設定為 `true`。 在此情況下，您應該明確地將它設定為 `false`。
 
@@ -160,19 +160,19 @@ WCF 架構會自動選擇可用的最高版本通訊協定 (最高版本為 TLS 
 
 ### <a name="switchsystemnetdontenablesystemdefaulttlsversions"></a>Switch.System.Net.DontEnableSystemDefaultTlsVersions
 
-將 `Switch.System.Net.DontEnableSystemDefaultTlsVersions` 設為 `false` 值，會導致您的應用程式允許作業系統選擇通訊協定。 設定為 `true` 值會導致您的應用程式使用由 .NET Framework 所選取的通訊協定。
+將 `false` 設為 `Switch.System.Net.DontEnableSystemDefaultTlsVersions` 值，會導致您的應用程式允許作業系統選擇通訊協定。 設定為 `true` 值會導致您的應用程式使用由 .NET Framework 所選取的通訊協定。
 
 若應用程式是以 .NET Framework 4.7 或更新版本作為目標，此參數預設會設定為 `false`。 這是建議的安全預設值。 若您的應用程式是在 .NET Framework 4.7 或更新版本上執行，但是以較舊的版本為目標，此參數預設會設定為 `true`。 在此情況下，您應該明確地將它設定為 `false`。
 
 ### <a name="switchsystemservicemodeldisableusingservicepointmanagersecurityprotocols"></a>Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols
 
-將 `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` 設定為 `false` 值，會導致您的應用程式針對使用憑證認證的訊息安全性，使用定義於 `ServicePointManager.SecurityProtocols` 中的值。 設定為 `true` 值會使用可用的最高版本通訊協定 (最高版本為 TLS1.0)
+將 `false` 設定為 `Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols` 值，會導致您的應用程式針對使用憑證認證的訊息安全性，使用定義於 `ServicePointManager.SecurityProtocols` 中的值。 設定為 `true` 值會使用可用的最高版本通訊協定 (最高版本為 TLS1.0)
 
 針對以 .NET Framework 4.7 及更新版本為目標的應用程式，此值預設會設定為 `false`。 針對以 .NET Framework 4.6.2 及較舊版本為目標的應用程式，此值預設會設定為 `true`。
 
 ### <a name="switchsystemservicemodeldontenablesystemdefaulttlsversions"></a>Switch.System.ServiceModel.DontEnableSystemDefaultTlsVersions
 
-將 `Switch.System.ServiceModel.DontEnableSystemDefaultTlsVersions` 設為 `false` 值，會設定預設設定以允許作業系統選擇通訊協定。 設定為 `true` 值會將預設值設定為可用的最高版本通訊協定 (最高版本為 TLS1.2)。
+將 `false` 設為 `Switch.System.ServiceModel.DontEnableSystemDefaultTlsVersions` 值，會設定預設設定以允許作業系統選擇通訊協定。 設定為 `true` 值會將預設值設定為可用的最高版本通訊協定 (最高版本為 TLS1.2)。
 
 針對以 .NET Framework 4.7.1 及更新版本為目標的應用程式，此值預設會設定為 `false`。 針對以 .NET Framework 4.7 及較舊版本為目標的應用程式，此值預設會設定為 `true`。
 
@@ -209,7 +209,7 @@ WCF 架構會自動選擇可用的最高版本通訊協定 (最高版本為 TLS 
 
 如需詳細資訊，請參閱 [Windows 10 1511 版和 Windows Server 2016 Technical Preview 4 的累積更新：2016 年 5 月 10 日](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016)。
 
-如需 .NET Framework 3.5.1 的詳細資訊，請參閱[針對 TLS 系統預設版本的支援已包含在 Windows 7 SP1 和 Server 2008 R2 SP1 上的 .NET Framework 3.5.1 中](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework) \(機器翻譯\)。
+如需 .NET Framework 3.5.1 的詳細資訊，請參閱[Windows 7 SP1 和 Server 2008 R2 SP1 .NET Framework 3.5.1 中所包含的 TLS 系統預設版本支援](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework)。
 
 下列 _.REG_ 檔案會將登錄機碼及其變體設定為最安全的值：
 
@@ -241,12 +241,12 @@ Windows Registry Editor Version 5.00
 
 ## <a name="the-sch_use_strong_crypto-flag"></a>The SCH_USE_STRONG_CRYPTO 旗標
 
-啟用 `SCH_USE_STRONG_CRYPTO` 旗標時 (預設會由 `AppContext` 參數或 Windows 登錄啟用)，.NET Framework 會在您的應用程式要求 TLS 安全性通訊協定時使用此旗標。 `SCH_USE_STRONG_CRYPTO` 旗標可以依預設啟用、搭配 `AppContext` 參數啟用，或是搭配登錄啟用。 OS 會將旗標傳遞至 `Schannel`，以指示它停用已知的弱式加密演算法、加密套件，以及 TLS/SSL 通訊協定版本；若不這樣做，系統可能會為了取得更佳的互通性而啟用這些項目。 如需詳細資訊，請參閱＜＞。
+啟用 `AppContext` 旗標時 (預設會由 `SCH_USE_STRONG_CRYPTO` 參數或 Windows 登錄啟用)，.NET Framework 會在您的應用程式要求 TLS 安全性通訊協定時使用此旗標。 `SCH_USE_STRONG_CRYPTO` 旗標可以依預設啟用、搭配 `AppContext` 參數啟用，或是搭配登錄啟用。 OS 會將旗標傳遞至 `Schannel`，以指示它停用已知的弱式加密演算法、加密套件，以及 TLS/SSL 通訊協定版本；若不這樣做，系統可能會為了取得更佳的互通性而啟用這些項目。 如需詳細資訊，請參閱
 
 - [安全通道](/windows/desktop/SecAuthN/secure-channel) \(英文\)
 - [SCHANNEL_CRED 結構](/windows/win32/api/schannel/ns-schannel-schannel_cred) \(英文\)
 
-當您明確使用 <xref:System.Net.SecurityProtocolType> 或 <xref:System.Security.Authentication.SslProtocols> 的 `Tls` (TLS 1.0)、`Tls11` 或 `Tls12` 列舉值時，`SCH_USE_STRONG_CRYPTO` 旗標也會傳遞至 `Schannel`。
+當您明確使用 `SCH_USE_STRONG_CRYPTO` 或 `Schannel` 的 `Tls` (TLS 1.0)、`Tls11` 或 `Tls12` 列舉值時，<xref:System.Net.SecurityProtocolType> 旗標也會傳遞至 <xref:System.Security.Authentication.SslProtocols>。
 
 ## <a name="security-updates"></a>安全性更新
 
@@ -257,7 +257,7 @@ Windows Registry Editor Version 5.00
 - [.NET Framework 2017 年 8 月品質彙總套件預覽](https://devblogs.microsoft.com/dotnet/net-framework-august-2017-preview-of-quality-rollup/) \(英文\)。
 - **或者**[.NET Framework 2017 年 9 月安全性與品質彙總套件](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/) \(英文\)。
 
-請參閱：
+另請參閱：
 
 - [.NET Framework 版本和相依性](../migration-guide/versions-and-dependencies.md)
 - [如何：判斷所安裝的 .NET Framework 版本](../migration-guide/how-to-determine-which-versions-are-installed.md)。
@@ -266,22 +266,22 @@ Windows Registry Editor Version 5.00
 
 若要讓您的應用程式交涉 TLS 1.2，作業系統和 .NET Framework 版本都需要支援 TLS 1.2。
 
-**支援 TLS 1.2 的作業系統要求**
+**用以支援 TLS 1.2 的作業系統需求**
 
 若要在支援 TLS 1.2 和/或 TLS 1.1 的系統上啟用或重新啟用它們，請參閱[傳輸層安全性 (TLS) 登錄設定](/windows-server/security/tls/tls-registry-settings)。
 
 | **作業系統** | **TLS 1.2 支援** |
 | --- | --- |
-| Windows 10<br>Windows Server 2016 | 支援且預設會啟用。 |
-| Windows 8.1<br>Windows Server 2012 R2 | 支援且預設會啟用。 |
-| Windows 8.0<br>Windows Server 2012 | 支援且預設會啟用。 |
-| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | 支援但預設不會啟用。 如需如何啟用 TLS 1.2 的詳細資訊，請參閱[傳輸層安全性 (TLS) 登錄設定](/windows-server/security/tls/tls-registry-settings)網頁。 |
+| Windows 10<br>Windows Server 2016 | 支援，而且已預設為啟用。 |
+| Windows 8.1<br>Windows Server 2012 R2 | 支援，而且已預設為啟用。 |
+| Windows 8.0<br>Windows Server 2012 | 支援，而且已預設為啟用。 |
+| Windows 7 SP1<br>Windows Server 2008 R2 SP1 | 支援，但預設為不啟用。 如需如何啟用 TLS 1.2 的詳細資訊，請參閱[傳輸層安全性 (TLS) 登錄設定](/windows-server/security/tls/tls-registry-settings)網頁。 |
 | Windows Server 2008 | 支援 TLS 1.2 和 TLS 1.1 需要更新。 請參閱[在 Windows Server 2008 SP2 中加入 TLS 1.1 和 TLS 1.2 支援的更新](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s)。 |
 | Windows Vista | 不支援。 |
 
 如需每個 Windows 版本上所預設啟用 TLS/SSL 通訊協定的相關資訊，請參閱 [TLS/SSL (Schannel SSP) 中的通訊協定](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-) \(英文\)。
 
-**使用 .NET Framework 3.5 支援 TLS 1.2 的要求**
+**用以支援 TLS 1.2 與 .NET Framework 3.5 的需求**
 
 此表格顯示使用 .NET Framework 3.5 支援 TLS 1.2 所需的作業系統更新。 建議您套用所有的作業系統更新。
 

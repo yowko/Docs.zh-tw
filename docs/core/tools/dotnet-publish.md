@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: dotnet publish 命令會將 .NET Core 專案發行到目錄中。
 ms.date: 05/29/2018
-ms.openlocfilehash: 4612c8cd1f63550905ef7c6d94af050892b1620c
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117608"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451288"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -21,7 +21,7 @@ ms.locfileid: "71117608"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
@@ -29,7 +29,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
@@ -37,7 +37,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
@@ -66,13 +66,13 @@ dotnet publish [-h|--help]
 
 要發佈的專案。 它是 [C#](csproj.md)、F# 或 Visual Basic 專案檔的路徑與檔案名稱，或包含 C#、F# 或 Visual Basic 專案檔之目錄的路徑。 如果未指定，則會預設為目前目錄。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
-定義組建組態。 預設值為 `Debug`。
+定義組建組態。 預設值是 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -100,7 +100,7 @@ dotnet publish [-h|--help]
 
 `--no-restore`
 
-執行命令時，不會執行隱含還原。
+執行命令時，不會執行隱含的還原。
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -113,7 +113,7 @@ dotnet publish [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-發行所指定執行階段的應用程式。 建立[獨立性部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 時會使用此選項。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 預設值為發行[與 Framework 相依的部署 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)。
+發行所指定執行階段的應用程式。 建立[獨立性部署 (SCD)](../deploying/index.md#publish-self-contained) 時會使用此選項。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 預設值為發行[與 Framework 相依的部署 (FDD)](../deploying/index.md#publish-runtime-dependent)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -123,11 +123,11 @@ dotnet publish [-h|--help]
 
 定義要取代專案檔案的版本欄位中之星號 (`*`) 的版本尾碼。
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-c|--configuration {Debug|Release}`
 
-定義組建組態。 預設值為 `Debug`。
+定義組建組態。 預設值是 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -151,7 +151,7 @@ dotnet publish [-h|--help]
 
 `--no-restore`
 
-執行命令時，不會執行隱含還原。
+執行命令時，不會執行隱含的還原。
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
@@ -164,7 +164,7 @@ dotnet publish [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-發行所指定執行階段的應用程式。 建立[獨立性部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 時會使用此選項。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 預設值為發行[與 Framework 相依的部署 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)。
+發行所指定執行階段的應用程式。 建立[獨立性部署 (SCD)](../deploying/index.md#publish-self-contained) 時會使用此選項。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 預設值為發行[與 Framework 相依的部署 (FDD)](../deploying/index.md#publish-runtime-dependent)。
 
 `-v|--verbosity <LEVEL>`
 
@@ -174,11 +174,11 @@ dotnet publish [-h|--help]
 
 定義要取代專案檔案的版本欄位中之星號 (`*`) 的版本尾碼。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
-定義組建組態。 預設值為 `Debug`。
+定義組建組態。 預設值是 `Debug`。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -199,7 +199,7 @@ dotnet publish [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-發行所指定執行階段的應用程式。 建立[獨立性部署 (SCD)](../deploying/index.md#self-contained-deployments-scd) 時會使用此選項。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 預設值為發行[與 Framework 相依的部署 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd)。
+發行所指定執行階段的應用程式。 建立[獨立性部署 (SCD)](../deploying/index.md#publish-self-contained) 時會使用此選項。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 預設值為發行[與 Framework 相依的部署 (FDD)](../deploying/index.md#publish-runtime-dependent)。
 
 `-v|--verbosity <LEVEL>`
 

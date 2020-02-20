@@ -4,18 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [.NET Framework], public read-only array fields
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
-ms.openlocfilehash: 215e8136b4bc3f2982cdb2d8382b0eca6a881f9b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2df4acc0606e4fe8fccee4a8acc6ab744dcbbb71
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217041"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452704"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>安全及公開唯讀陣列欄位
 絕對不要使用受控程式庫中的唯讀公用陣列欄位來定義應用程式的界限行為或安全性，因為可以修改唯讀的公用陣列欄位。  
   
 ## <a name="remarks"></a>備註  
- 某些 .NET framework 類別包含唯讀公用欄位，其中包含平臺特定的界限參數。  例如，<xref:System.IO.Path.InvalidPathChars> 欄位是一個陣列，描述檔案路徑字串中不允許的字元。  許多類似的欄位都會出現在 .NET Framework。  
+
+某些 .NET 類別包含唯讀的公用欄位，其中包含平臺特定的界限參數。 例如，<xref:System.IO.Path.InvalidPathChars> 欄位是一個陣列，描述檔案路徑字串中不允許的字元。 許多類似的欄位都會出現在整個 .NET 中。  
   
  公用唯讀欄位（例如 <xref:System.IO.Path.InvalidPathChars>）的值可以由您的程式碼或共用程式碼的應用程式域的程式碼修改。  您不應該使用唯讀公用陣列欄位，如下所示來定義應用程式的界限行為。  如果您這樣做，惡意程式碼可以改變界限定義，並以非預期的方式使用您的程式碼。  
   

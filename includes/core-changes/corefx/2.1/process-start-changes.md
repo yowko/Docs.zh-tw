@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7c0930f6606aa96d2863dc740aef8e9cab724b37
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 58cb3580c8701773452ae8338f036a94bbee80c5
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344890"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449387"
 ---
 ### <a name="change-in-default-value-of-useshellexecute"></a>預設值為 UseShellExecute 的變更
 
@@ -27,7 +27,7 @@ ms.locfileid: "75344890"
 
 如果您的應用程式依賴舊的行為，請呼叫 <xref:System.Diagnostics.Process.Start(System.Diagnostics.ProcessStartInfo)?displayProperty=nameWithType>，並 <xref:System.Diagnostics.ProcessStartInfo.UseShellExecute> 設定為 <xref:System.Diagnostics.ProcessStartInfo> 物件上的 `true`。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
 CoreFx
 
@@ -38,7 +38,7 @@ CoreFx
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Diagnostics.Process.Start`
 - `M:System.Diagnostics.ProcessStartInfo`
