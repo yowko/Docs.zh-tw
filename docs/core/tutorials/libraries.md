@@ -3,18 +3,18 @@ title: 使用 .NET Core CLI 開發程式庫
 description: 瞭解如何使用 .NET Core CLI 建立 .NET Core 程式庫。 您將建立支援多個架構的程式庫。
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920437"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503503"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>使用 .NET Core CLI 開發程式庫
 
 本文說明如何使用 .NET Core CLI 撰寫適用于 .NET 的程式庫。 CLI 提供可在所有支援的作業系統上運作的有效率且低階體驗。 您仍然可以使用 Visual Studio 來建置程式庫，而且，如果那是您偏好的體驗，[請參閱 Visual Studio 指南](library-with-visual-studio.md)。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 您需要在電腦上安裝 [.NET Core SDK 和 CLI](https://dotnet.microsoft.com/download)。
 
@@ -96,7 +96,7 @@ ms.locfileid: "76920437"
 </Project>
 ```
 
-就是這麼容易！ 雖然這只會針對 .NET Framework 4 進行編譯，但是您可以在較新版本的 .NET Framework 上使用程式庫。
+就這麼簡單！ 雖然這只會針對 .NET Framework 4 進行編譯，但是您可以在較新版本的 .NET Framework 上使用程式庫。
 
 ## <a name="how-to-multitarget"></a>如何使用多目標
 
@@ -105,7 +105,7 @@ ms.locfileid: "76920437"
 
 當您的專案同時支援 .NET Framework 和 .NET Core 時，可能需要將目標設為舊版 .NET Framework。 在這個案例中，如果您想要為較新的目標使用較新的 API 和語言建構，請在程式碼中使用 `#if` 指示詞。 您也可能需要針對設為目標的每個平台新增不同的套件和相依性，以包含每個案例所需的不同 API。
 
-例如，假設您的程式庫透過 HTTP 執行網路作業。 針對 .NET Standard 和 .NET Framework 4.5 版或更高版本，您可以使用 `System.Net.Http` 命名空間中的 `HttpClient` 類別。 不過，舊版 .NET Framework 沒有 `HttpClient` 類別，因此您可以改用這些項目之 `System.Net` 命名空間中的 `WebClient` 類別。
+例如，假設您的程式庫透過 HTTP 執行網路作業。 針對 .NET Standard 和 .NET Framework 4.5 版或更高版本，您可以使用 `HttpClient` 命名空間中的 `System.Net.Http` 類別。 不過，舊版 .NET Framework 沒有 `HttpClient` 類別，因此您可以改用這些項目之 `WebClient` 命名空間中的 `System.Net` 類別。
 
 專案檔如下所示：
 
@@ -131,8 +131,8 @@ ms.locfileid: "76920437"
 您可在這裡發現三個主要變更︰
 
 1. `TargetFramework` 節點已取代為 `TargetFrameworks`，而且其內表示三個 TFM。
-1. 提取至一個 .NET Framework 參考的 `net40` 目標有一個 `<ItemGroup>` 節點。
-1. 提取至兩個 .NET Framework 參考的 `net45` 目標有一個 `<ItemGroup>` 節點。
+1. 提取至一個 .NET Framework 參考的 `<ItemGroup>` 目標有一個 `net40` 節點。
+1. 提取至兩個 .NET Framework 參考的 `<ItemGroup>` 目標有一個 `net45` 節點。
 
 建置系統會得知 `#if` 指示詞中所使用的下列前置處理器符號︰
 
@@ -220,7 +220,7 @@ netstandard1.4/
 
 1. 設定方案。 您可以使用下列命令：
 
-   ```bash
+   ```dotnetcli
    mkdir SolutionWithSrcAndTest
    cd SolutionWithSrcAndTest
    dotnet new sln
@@ -239,9 +239,9 @@ netstandard1.4/
    |__MyProject.Test/
    ```
 
-1. 巡覽至測試專案的目錄，並將參考從 `MyProject` 新增至 `MyProject.Test`。
+1. 巡覽至測試專案的目錄，並將參考從 `MyProject.Test` 新增至 `MyProject`。
 
-   ```bash
+   ```dotnetcli
    cd MyProject.Test
    dotnet add reference ../MyProject/MyProject.csproj
    ```
@@ -257,7 +257,7 @@ netstandard1.4/
 
 1. 執行 `dotnet test` 命令，確認已執行 xUnit。 如果您選擇使用 MSTest，則應該會改為執行 MSTest 主控台執行器。
 
-就是這麼容易！ 您現在可以使用命令列工具，在所有平臺上測試您的程式庫。 若要在設定好所有項目之後立即繼續測試，測試程式庫就會非常簡單︰
+就這麼簡單！ 您現在可以使用命令列工具，在所有平臺上測試您的程式庫。 若要在設定好所有項目之後立即繼續測試，測試程式庫就會非常簡單︰
 
 1. 對程式庫進行變更。
 1. 在測試目錄中，從命令列中使用 `dotnet test` 命令來執行測試。
@@ -300,7 +300,7 @@ let doWork data = async {
 
 您可以在終端機中執行下列命令，以產生與本指南相同的結構︰
 
-```console
+```dotnetcli
 mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib

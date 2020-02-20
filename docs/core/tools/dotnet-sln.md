@@ -1,21 +1,17 @@
 ---
 title: dotnet sln 命令
 description: dotnet-sln 命令提供方便在方案檔中新增、移除及列出專案的選項。
-ms.date: 10/29/2019
-ms.openlocfilehash: e344deaae0867202a79a3c38df48a2be8d4d7d13
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: dc0e2f294076ea649f150b076ac279cdc5d224a0
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733079"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503599"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
-**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -43,7 +39,7 @@ dotnet new sln
 
   要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果目錄中有多個方案檔，請務必指定一個方案檔。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`-h|--help`**
 
@@ -72,7 +68,7 @@ dotnet sln add [-h|--help]
 
   要加入至方案之專案的路徑。 加入多個專案，方法是在另一個後面加上空格分隔。 Unix/Linux shell[萬用字元模式](https://en.wikipedia.org/wiki/Glob_(programming))擴充會由 `dotnet sln` 命令正確處理。
 
-#### <a name="options"></a>選項
+#### <a name="options"></a>選項。
 
 - **`-h|--help`**
 
@@ -107,7 +103,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
   要從方案中移除之專案的路徑。 藉由在另一個專案後面加上空格，以移除多個專案。 Unix/Linux shell[萬用字元模式](https://en.wikipedia.org/wiki/Glob_(programming))擴充會由 `dotnet sln` 命令正確處理。
 
-#### <a name="options"></a>選項
+#### <a name="options"></a>選項。
 
 - **`-h|--help`**
 
@@ -129,7 +125,7 @@ dotnet sln list [-h|--help]
 
   要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果目錄中有多個方案檔，請務必指定一個方案檔。
 
-#### <a name="options"></a>選項
+#### <a name="options"></a>選項。
 
 - **`-h|--help`**
 

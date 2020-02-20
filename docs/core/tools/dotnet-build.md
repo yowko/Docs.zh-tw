@@ -1,21 +1,17 @@
 ---
 title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
-ms.date: 10/14/2019
-ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734308"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503771"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -73,9 +69,9 @@ dotnet build [-h|--help]
 
 要建置的專案或方案檔。 若未指定專案或解決方案檔，MSBuild 會搜尋目前工作目錄中副檔名結尾為 *proj* 或 *sln* 的檔案，並使用該檔案。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   定義組建組態。 大部分專案的預設值都是 `Debug`，但您可以覆寫專案中的組建設定。
 
@@ -85,7 +81,7 @@ dotnet build [-h|--help]
 
 - **`--force`**
 
-  即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。 自 .NET Core 2.0 SDK 起提供使用。
+  即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
 
 - **`-h|--help`**
 
@@ -105,7 +101,7 @@ dotnet build [-h|--help]
 
 - **`--no-restore`**
 
-  建置期間不會執行隱含還原。 自 .NET Core 2.0 SDK 起提供使用。
+  建置期間不會執行隱含還原。
 
 - **`--nologo`**
 

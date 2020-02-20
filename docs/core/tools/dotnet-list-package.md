@@ -1,17 +1,17 @@
 ---
 title: dotnet list package 命令
 description: "'dotnet list package' 命令提供一個便利選項，可列出適用於專案或解決方案的套件參考。"
-ms.date: 06/26/2019
-ms.openlocfilehash: fe95f3898c5bd85956f4312eb4d20259227e9ff0
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 02/14/2020
+ms.openlocfilehash: bd275c308c3a213661d5cc6c7e60817620f076a5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117723"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503744"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-[!INCLUDE [topic-appliesto-net-core-22plus](../../../includes/topic-appliesto-net-core-22plus.md)]
+**本文適用于：** ✔️ .net CORE 2.2 SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -27,13 +27,13 @@ dotnet list package [-h|--help]
 
 ## <a name="description"></a>描述
 
-`dotnet list package` 命令提供一個便利選項，可列出適用於特定專案或解決方案的所有 NuGet 套件參考。 您需要先建置專案，才能具備處理此命令所需的資產。 下列範例會針對 [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 專案顯示 `dotnet list package` 命令的輸出：
+`dotnet list package` 命令提供一個便利選項，可列出適用於特定專案或解決方案的所有 NuGet 套件參考。 您需要先建置專案，才能具備處理此命令所需的資產。 下列範例會針對 `dotnet list package`SentimentAnalysis[ 專案顯示 ](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 命令的輸出：
 
 ```output
 Project 'SentimentAnalysis' has the following package references
    [netcoreapp2.1]:
    Top-level Package               Requested   Resolved
-   > Microsoft.ML                  0.11.0      0.11.0
+   > Microsoft.ML                  1.4.0       1.4.0
    > Microsoft.NETCore.App   (A)   [2.1.0, )   2.1.0
 
 (A) : Auto-referenced package.
@@ -46,27 +46,21 @@ Project 'SentimentAnalysis' has the following package references
 ```output
 The following sources were used:
    https://api.nuget.org/v3/index.json
+   C:\Program Files (x86)\Microsoft SDKs\NuGetPackages\
 
 Project `SentimentAnalysis` has the following updates to its packages
    [netcoreapp2.1]:
    Top-level Package      Requested   Resolved   Latest
-   > Microsoft.ML         0.11.0      0.11.0     1.0.0-preview
+   > Microsoft.ML         1.4.0       1.4.0      1.5.0-preview
 ```
 
-如果您需要找出專案是否有可轉移的相依性，請使用 `--include-transitive` 選項。 當您在之後將依賴另一個套件的專案中新增套件時，就會發生可轉移的相依性。 下列範例會針對 [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) 專案顯示執行 `dotnet list package --include-transitive` 命令的輸出，其會顯示最上層套件及其相依的套件：
+如果您需要找出專案是否有可轉移的相依性，請使用 `--include-transitive` 選項。 當您在之後將依賴另一個套件的專案中新增套件時，就會發生可轉移的相依性。 下列範例會針對 `dotnet list package --include-transitive`HelloPlugin[ 專案顯示執行 ](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) 命令的輸出，其會顯示最上層套件及其相依的套件：
 
 ```output
 Project 'HelloPlugin' has the following package references
    [netcoreapp3.0]:
-   Top-level Package                      Requested                    Resolved
-   > Microsoft.NETCore.Platforms    (A)   [3.0.0-preview3.19128.7, )   3.0.0-preview3.19128.7
-   > Microsoft.WindowsDesktop.App   (A)   [3.0.0-preview3-27504-2, )   3.0.0-preview3-27504-2
-
-   Transitive Package               Resolved
-   > Microsoft.NETCore.Targets      2.0.0
-   > PluginBase                     1.0.0
-
-(A) : Auto-referenced package.
+   Transitive Package      Resolved
+   > PluginBase            1.0.0
 ```
 
 ## <a name="arguments"></a>引數
@@ -75,63 +69,63 @@ Project 'HelloPlugin' has the following package references
 
 要在其上運作的專案或解決方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果找到一個以上的解決方案或專案，則會擲回錯誤。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
-* **`--config <SOURCE>`**
+- **`--config <SOURCE>`**
 
   搜尋較新的套件時要使用的 NuGet 來源。 需要 `--outdated` 選項。
 
-* **`--framework <FRAMEWORK>`**
+- **`--framework <FRAMEWORK>`**
 
-  只顯示適用於所指定[目標 Framework](../../standard/frameworks.md) 的套件。 若要指定多個架構，請多次指定該選項。 例如：`--framework netcoreapp2.2 --framework netstandard2.0`。
+  只顯示適用於所指定[目標 Framework](../../standard/frameworks.md) 的套件。 若要指定多個架構，請多次指定該選項。 例如： `--framework netcoreapp2.2 --framework netstandard2.0` 。
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   印出命令的簡短說明。
 
-* **`--highest-minor`**
+- **`--highest-minor`**
 
   在搜尋較新的套件時，建議只搜尋主要版本號碼相符的套件。 需要 `--outdated` 選項。
 
-* **`--highest-patch`**
+- **`--highest-patch`**
 
   在搜尋較新的套件時，建議只搜尋主要和次要版本號碼相符的套件。 需要 `--outdated` 選項。
 
-* **`--include-prerelease`**
+- **`--include-prerelease`**
 
   在搜尋較新的套件時，建議搜尋具有發行前版本的套件。 需要 `--outdated` 選項。
 
-* **`--include-transitive`**
+- **`--include-transitive`**
 
   列出可轉移的套件 (除了最上層套件)。 指定此選項時，您會取得最上層套件所依存的套件清單。
 
-* **`--interactive`**
+- **`--interactive`**
 
   可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供使用。
 
-* **`--outdated`**
+- **`--outdated`**
 
   列出有較新版本可供使用的套件。
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   搜尋較新的套件時要使用的 NuGet 來源。 需要 `--outdated` 選項。
 
 ## <a name="examples"></a>範例
 
-* 列出特定專案的套件參考：
+- 列出特定專案的套件參考：
 
   ```dotnetcli
   dotnet list SentimentAnalysis.csproj package
   ```
 
-* 列出有較新版本可供使用 (包括發行前版本) 的套件參考：
+- 列出有較新版本可供使用 (包括發行前版本) 的套件參考：
 
   ```dotnetcli
   dotnet list package --outdated --include-prerelease
   ```
 
-* 列出適用於特定目標 Framework 的套件參考：
+- 列出適用於特定目標 Framework 的套件參考：
 
   ```dotnetcli
   dotnet list package --framework netcoreapp3.0

@@ -4,12 +4,12 @@ description: 了解 C# 中的模式比對運算式
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039371"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501620"
 ---
 # <a name="pattern-matching"></a>模式比對
 
@@ -45,15 +45,15 @@ ms.locfileid: "73039371"
 
 在此更新的版本中，`is` 運算式會測試變數並將它指派給適當型別的新變數。 另請注意，此版本包含 `Rectangle` 型別，它是 `struct`。 新的 `is` 運算式可搭配實值型別以及參考型別。
 
-模式比對運算式的語言規則可協助您避免誤用比對運算式的結果。 在上例中，當個別的模式比對運算式有 `true` 結果時，變數 `s`、`c` 和 `r` 只能在範圍內且要確實指派。 如果您嘗試在另一個位置使用任一變數，您的程式碼就會產生編譯器錯誤。
+模式比對運算式的語言規則可協助您避免誤用比對運算式的結果。 在上例中，當個別的模式比對運算式有 `s` 結果時，變數 `c`、`r` 和 `true` 只能在範圍內且要確實指派。 如果您嘗試在另一個位置使用任一變數，您的程式碼就會產生編譯器錯誤。
 
-讓我們仔細檢查這兩項規則，就從範圍開始。 變數 `c` 只有在第一個 `if` 陳述式的 `else` 分支中時才在範圍內。 `s` 變數位於 `ComputeAreaModernIs` 方法的範圍中。 這是因為 `if` 陳述式的每個分支都會建立變數的個別範圍。 不過，`if` 陳述式本身並不會。 這表示在 `if` 語句中宣告的變數，與 `if` 的語句（在此案例中為方法）位於相同的範圍內。這種行為不是針對模式比對所特有，而是針對變數範圍和 `if` 和 `else` 語句所定義的行為。
+讓我們仔細檢查這兩項規則，就從範圍開始。 變數 `c` 只有在第一個 `else` 陳述式的 `if` 分支中時才在範圍內。 `s` 變數位於 `ComputeAreaModernIs` 方法的範圍中。 這是因為 `if` 陳述式的每個分支都會建立變數的個別範圍。 不過，`if` 陳述式本身並不會。 這表示在 `if` 語句中宣告的變數，與 `if` 的語句（在此案例中為方法）位於相同的範圍內。這種行為不是針對模式比對所特有，而是針對變數範圍和 `if` 和 `else` 語句所定義的行為。
 
-當個別的 `if` 陳述式為 true 時會指派變數 `c` 和 `s`，因為 true 機制時會明確指派。
+當個別的 `c` 陳述式為 true 時會指派變數 `s` 和 `if`，因為 true 機制時會明確指派。
 
 > [!TIP]
-> 本主題中的範例使用建議的建構，其模式比對 `is` 運算式會在 `if` 陳述式的 `true` 分支中明確指派比對變數。
-> 您可以說明只在 `false` 分支中明確指派 `if (!(shape is Square s))` 和變數 `s`，以回復邏輯。 雖然這是有效的 C#，但不建議，因為遵循邏輯會更令人困惑。
+> 本主題中的範例使用建議的建構，其模式比對 `is` 運算式會在 `true` 陳述式的 `if` 分支中明確指派比對變數。
+> 您可以說明只在 `if (!(shape is Square s))` 分支中明確指派 `s` 和變數 `false`，以回復邏輯。 雖然這是有效的 C#，但不建議，因為遵循邏輯會更令人困惑。
 
 這些規則表示您不太可能在不符合模式時，意外心存取模式比對運算式的結果。
 
@@ -83,15 +83,15 @@ ms.locfileid: "73039371"
 現在，使用更一般化的 `switch` 運算式，順序對每個區段都很重要。 `switch` 運算式會以文字順序進行評估。 執行會傳送至符合 `switch` 運算式的第一個 `switch` 標籤。  
 只有無任何其他狀況標籤符合時才會執行 `default` 狀況。 無論其文字順序為何，`default` 狀況都是最後才評估。 如果沒有任何 `default` 狀況，且無其他 `case` 陳述式相符，就繼續執行 `switch` 陳述式後面的陳述式。 不執行任何 `case` 標籤程式碼。
 
-## <a name="when-clauses-in-case-expressions"></a>`case` 運算式中的 `when` 子句
+## <a name="when-clauses-in-case-expressions"></a>`when` 運算式中的 `case` 子句
 
-對 `case` 標籤使用 `when` 子句，可為面積為 0 的圖形建立特殊案例。 邊長為 0 的正方形或半徑為 0 的圓形，面積皆為 0。 您可以對 `case` 標籤使用 `when` 子句來指定該條件︰  
+對 `when` 標籤使用 `case` 子句，可為面積為 0 的圖形建立特殊案例。 邊長為 0 的正方形或半徑為 0 的圓形，面積皆為 0。 您可以對 `when` 標籤使用 `case` 子句來指定該條件︰  
 
 [!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
 這項變更會示範新語法的幾個重點。 首先，多個 `case` 標籤可以套用到一個 `switch` 區段。 當這些標籤的任何一個為 `true` 時，會執行陳述式區塊。 在此情況下，如果 `switch` 運算式是面積為 0 的圓形或正方形，則方法會傳回常數 0。
 
-本例介紹第一個 `switch` 區塊中，兩個 `case` 標籤中的兩個不同變數。 留意到 `switch` 區塊中的陳述式不會使用變數 `c` (適用於圓形) 或 `s` (適用於正方形)。
+本例介紹第一個 `case` 區塊中，兩個 `switch` 標籤中的兩個不同變數。 留意到 `switch` 區塊中的陳述式不會使用變數 `c` (適用於圓形) 或 `s` (適用於正方形)。
 這些變數都不會明確指派在這個 `switch` 區塊中。
 如果符合任一種狀況，顯然指派了其中一個變數。
 不過，在編譯時期不可能分辨「哪個」已被指派，因為在執行階段任何一種狀況都可能符合。 因此，大多數時候當您在同一個區塊使用多個 `case` 標籤時，您不會在 `case` 陳述式中引入新的變數，或是只會在 `when` 子句中使用變數。
@@ -106,9 +106,9 @@ ms.locfileid: "73039371"
 
 [!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
-`null` 模式的特殊行為很有趣，因為模式中的常數 `null` 沒有類型，但可以轉換成任何參考類型或可為 Null 的類型。 不論變數的編譯時間類型為何，語言都會將 `null` 值定義為不會符合任何類型模式，而不是將 `null` 轉換為任何類型。 此行為可讓以 `switch` 為基礎的新類型模式與 `is` 陳述式一致：要檢查的值是 `null` 時，`is` 陳述式一律會傳回 `false`。 它也較為簡單：在您檢查類型之後，就不需要進行額外的 Null 檢查。 您可以從上述範例的任何案例區塊中不會進行任何 Null 檢查的事實得知：因為比對類型模式保證非 Null 值，所以它們不是必要的。
+`null` 模式的特殊行為很有趣，因為模式中的常數 `null` 沒有類型，但可以轉換成任何參考類型或可為 Null 的類型。 不論變數的編譯時間類型為何，語言都會將 `null` 值定義為不會符合任何類型模式，而不是將 `null` 轉換為任何類型。 此行為可讓以 `switch` 為基礎的新類型模式與 `is` 陳述式一致：要檢查的值是 `is` 時，`false` 陳述式一律會傳回 `null`。 它也較為簡單：在您檢查類型之後，就不需要進行額外的 Null 檢查。 您可以從上述範例的任何案例區塊中不會進行任何 Null 檢查的事實得知：因為比對類型模式保證非 Null 值，所以它們不是必要的。
 
-## <a name="var-declarations-in-case-expressions"></a>`case` 運算式中的 `var` 宣告
+## <a name="var-declarations-in-case-expressions"></a>`var` 運算式中的 `case` 宣告
 
 導入 `var` 作為比對運算式之一，為模式比對導入了一些新規則。
 
@@ -116,7 +116,7 @@ ms.locfileid: "73039371"
 
 第二個規則是 `var` 宣告不具有其他類型模式運算式所包含的 Null 檢查。 這表示變數可能是 null，並且在這種情況下需要 null 檢查。
 
-這兩個規則表示在許多情況下，`case` 運算式中的 `var` 宣告與 `default` 運算式的條件相同。
+這兩個規則表示在許多情況下，`var` 運算式中的 `case` 宣告與 `default` 運算式的條件相同。
 因為任何非預設的案例優先於 `default` 案例，所以 `default` 案例將永遠不會執行。
 
 > [!NOTE]
@@ -128,7 +128,7 @@ ms.locfileid: "73039371"
 
 `var` 案例符合 `null`、空字串或任何僅包含空格的字串。 留意到上述程式碼會使用 `?.` 運算子來確保它不會意外地擲回 <xref:System.NullReferenceException>。 `default` 狀況會處理此命令剖析器無法理解的任何其他字串值。
 
-這是一個範例，其中您可能想要考慮與 `default` 運算式不同的 `var` Case 運算式。
+這是一個範例，其中您可能想要考慮與 `var` 運算式不同的 `default` Case 運算式。
 
 ## <a name="conclusions"></a>結論
 
@@ -136,3 +136,7 @@ ms.locfileid: "73039371"
 模式比對適用於任何資料型別。 您會撰寫檢查物件的運算式，並根據這些條件決定控制流程。
 
 比較此範例的程式碼與遵循建立抽象 `Shape` 類別階層的設計，以及各有其虛擬方法以實作計算面積的特定衍生圖形。 當您要處理資料，而且想要分別考量資料儲存和行為時，您會經常發現模式比對運算式是非常有用的工具。
+
+## <a name="see-also"></a>另請參閱
+
+- [教學課程：使用模式比對功能來擴充資料類型](tutorials/pattern-matching.md)

@@ -1,21 +1,17 @@
 ---
 title: dotnet pack 命令
 description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
-ms.date: 08/08/2019
-ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734117"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503653"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -61,15 +57,15 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
   要包裝的專案或方案。 它是[.csproj](csproj.md)檔案、方案檔或目錄的路徑。 如果未指定，命令會在目前的目錄中搜尋專案或方案檔。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
-  定義組建組態。 預設值是 `Debug`。
+  定義組建組態。 大部分專案的預設值都是 `Debug`，但您可以覆寫專案中的組建設定。
 
 - **`--force`**
 
-  即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。 自 .NET Core 2.0 SDK 起可用的選項。
+  即使最後的還原成功，仍強制解析所有相依性。 指定這個旗標等同於刪除 *project.assets.json* 檔案。
 
 - **`-h|--help`**
 
@@ -93,11 +89,11 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 - **`--no-dependencies`**
 
-  忽略專案對專案參考，並且只還原根專案。 自 .NET Core 2.0 SDK 起可用的選項。
+  忽略專案對專案參考，並且只還原根專案。
 
 - **`--no-restore`**
 
-  執行命令時，不會執行隱含的還原。 自 .NET Core 2.0 SDK 起可用的選項。
+  執行命令時，不會執行隱含的還原。
 
 - **`--nologo`**
 
@@ -109,7 +105,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  指定要還原套件的目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 自 .NET Core 2.0 SDK 起可用的選項。
+  指定要還原套件的目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。
 
 - **`-s|--serviceable`**
 
@@ -167,7 +163,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- 封裝專案，並使用特定的執行階段 (Windows 10) 進行還原作業 (.NET Core SDK 2.0 及更新版本)：
+- 封裝專案，並使用特定執行時間（Windows 10）進行還原作業：
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

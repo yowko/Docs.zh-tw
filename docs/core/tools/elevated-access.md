@@ -3,12 +3,12 @@ title: Dotnet 命令的提升存取權限
 description: 了解適用於需要提升存取權限的 dotnet 命令最佳做法。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: cf7c93a0adcae7092a61a6fc6046cd45cf00bf58
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 1cf29012736e5b6d858ca22dc2a9b97e7e8e33ef
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216313"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503576"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Dotnet 命令的提升存取權限
 
@@ -29,14 +29,14 @@ ms.locfileid: "71216313"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 ### <a name="install-the-global-tool"></a>安裝全域工具
 
 若資料夾 `%ProgramFiles%\dotnet-tools` 已存在，請執行下列操作來檢查 "Users" 群組是否有寫入或修改該目錄的權限：
 
 - 以滑鼠右鍵按一下 `%ProgramFiles%\dotnet-tools` 資料夾，然後選取 [屬性]。 [通用屬性] 對話方塊隨即開啟。 
-- 選取 [安全性] 索引標籤。在 [群組或使用者名稱] 下方，檢查 "Users" 群組是否有寫入或修改目錄的權限。 
+- 選取 [**安全性**] 索引標籤。在 [**群組或使用者名稱**] 底下，檢查「使用者」群組是否有寫入或修改目錄的許可權。 
 - 若 "Users" 群組可以寫入或修改目錄，請在安裝工具時使用不同的目錄名稱，而非 *dotnet-tools*。
 
 若要安裝工具，請以提升權限的命令提示字元來執行下列命令。 它會在安裝期間建立 *dotnet-tools* 資料夾。
@@ -73,11 +73,11 @@ TOOLCOMMAND
 dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
@@ -93,14 +93,14 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 - 使用產生的可執行檔 (它可提供最佳的啟動效能)：
 
-   ```bash
+   ```dotnetcli
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
     
-- 搭配 `—no-build` 旗標使用 [dotnet run](dotnet-run.md) 來避免產生新的二進位檔案：
+- 搭配 [ 旗標使用 ](dotnet-run.md)dotnet run`—no-build` 來避免產生新的二進位檔案：
 
-   ```bash
+   ```dotnetcli
    dotnet build
    sudo dotnet run --no-build
    ```

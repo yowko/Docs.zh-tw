@@ -1,17 +1,17 @@
 ---
 title: dotnet msbuild 命令
 description: dotnet msbuild 命令提供對 MSBuild 命令列的存取。
-ms.date: 12/03/2018
-ms.openlocfilehash: dae1e9f0ca355166d41c11fbafb80c7c9fb29748
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733191"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503674"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -31,25 +31,25 @@ ms.locfileid: "76733191"
 
 ## <a name="examples"></a>範例
 
-* 建置專案和其相依性：
+- 建置專案和其相依性：
 
   ```dotnetcli
   dotnet msbuild
   ```
 
-* 使用發行組態來建置專案和其相依性︰
+- 使用發行組態來建置專案和其相依性︰
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-* 執行發行目標並針對 `osx.10.11-x64` RID 發行：
+- 執行發行目標並針對 `osx.10.11-x64` RID 發行：
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-* 查看整個專案和 SDK 包含的所有目標：
+- 查看整個專案和 SDK 包含的所有目標：
 
   ```dotnetcli
   dotnet msbuild -preprocess

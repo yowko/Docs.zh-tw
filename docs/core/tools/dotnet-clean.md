@@ -1,21 +1,17 @@
 ---
 title: dotnet clean 命令
 description: dotnet clean 命令會清除目前的目錄。
-ms.date: 06/26/2019
-ms.openlocfilehash: 715a33a8a1aa13a2a76f9d4522413dcc72e4b4aa
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/14/2020
+ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451352"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503749"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -41,9 +37,9 @@ dotnet clean [-h|--help]
 
 ## <a name="options"></a>選項。
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration <CONFIGURATION>`**
 
-  定義組建組態。 預設值是 `Debug`。 如果在建置階段指定此選項，清除時才需要使用它。
+  定義組建組態。 大部分專案的預設值都是 `Debug`，但您可以覆寫專案中的組建設定。 如果在建置階段指定此選項，清除時才需要使用它。
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -67,7 +63,7 @@ dotnet clean [-h|--help]
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  清除指定執行階段的輸出資料夾。 建立[獨立性部署 (SCD)](../deploying/index.md#publish-self-contained) 時會使用此選項。 自 .NET Core 2.0 SDK 起可用的選項。
+  清除指定執行階段的輸出資料夾。 建立[獨立性部署 (SCD)](../deploying/index.md#publish-self-contained) 時會使用此選項。
 
 * **`-v|--verbosity <LEVEL>`**
 

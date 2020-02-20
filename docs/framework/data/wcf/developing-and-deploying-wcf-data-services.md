@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1a017267c034fa1d6ea522855b7e0e7f056637ac
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937451"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504033"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開發和部署 WCF Data Services
 
@@ -26,7 +26,7 @@ ms.locfileid: "75937451"
 
      WCF Data Services 支援各種資料服務提供者，可讓您根據各種資料來源的資料定義資料模型，從關係資料庫到晚期繫結資料類型。 如需詳細資訊，請參閱[資料服務提供者](data-services-providers-wcf-data-services.md)。
 
-2. **建立資料服務**
+2. **Create the data service**
 
      最基本的資料服務會公開繼承自 <xref:System.Data.Services.DataService%601> 類別的類別，其具有實體容器之命名空間限定名稱 `T` 型別。 如需詳細資訊，請參閱 [Defining WCF Data Services](defining-wcf-data-services.md)的資訊。
 
@@ -80,7 +80,7 @@ ms.locfileid: "75937451"
 
 - 透過讓您檢查要求和回應訊息的內容對資料服務進行偵錯時，HTTP 檢查程式可能會很有幫助。 可以顯示原始封包的任何網路封包分析器可用於檢查資料服務的 HTTP 要求及其回應。
 
-- 在對資料服務進行偵錯工具時，您可能會想要從資料服務取得有關錯誤的詳細資訊，而不是在一般作業期間。 您可以從資料服務取得其他錯誤資訊，方法是，將 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 屬性 (Property) 設為 `true` ，然後在資料服務類別上，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 屬性 (Property) 設為 `true`。 如需詳細資訊，請參閱後續的[偵錯工具 WCF Data Services](https://blogs.msdn.microsoft.com/phaniraj/?m=20086)。 您也可以在 WCF 中啟用追蹤，以查看在 HTTP 訊息層中引發的例外狀況。 如需詳細資訊，請參閱 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)。
+- 在對資料服務進行偵錯工具時，您可能會想要從資料服務取得有關錯誤的詳細資訊，而不是在一般作業期間。 您可以從資料服務取得其他錯誤資訊，方法是，將 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 屬性 (Property) 設為 `true` ，然後在資料服務類別上，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 屬性 (Property) 設為 `true`。 如需詳細資訊，請參閱後續的[偵錯工具 WCF Data Services](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services)。 您也可以在 WCF 中啟用追蹤，以查看在 HTTP 訊息層中引發的例外狀況。 如需詳細資訊，請參閱 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)。
 
 - 資料服務通常會開發成 ASP.NET 應用程式專案，但您也可以在 Visual Studio 中將資料服務建立為 ASP.NET 的網站專案。 如需兩種專案類型之間差異的詳細資訊，請參閱[Web 應用程式專案與 Visual Studio 中的網站專案](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))。
 
@@ -117,7 +117,7 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 
      您可以使用 Windows Azure Tools for Visual Studio，將資料服務部署至 Windows Azure。 您可以從[Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=201848)下載 Windows Azure Tools for Visual Studio。 如需將資料服務部署至 Windows Azure 的詳細資訊，請參閱文章[在 Windows azure 中部署 OData 服務](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)。
 
-### <a name="deployment-considerations"></a>部署考量因素
+### <a name="deployment-considerations"></a>部署考量
 
 部署資料服務時，應該考慮下列事項：
 
@@ -125,8 +125,8 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 
 - 由於 WCF Data Services 包含基本的 WCF 執行，因此您可以使用 Windows Server AppFabric 監視部署至在 Windows Server 上執行之 IIS 的資料服務。 如需使用 Windows Server AppFabric 監視資料服務的詳細資訊，請參閱[使用 Windows Server appfabric 的文章追蹤 WCF Data Services](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [裝載資料服務](hosting-the-data-service-wcf-data-services.md)
 - [保護 WCF 資料服務的安全](securing-wcf-data-services.md)
-- [定義 WCF Data Services](defining-wcf-data-services.md)
+- [Defining WCF Data Services](defining-wcf-data-services.md)

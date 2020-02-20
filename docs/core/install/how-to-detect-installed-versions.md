@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 8ce2710d71c56f182e936f898e25539bc50d3827
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341344"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503843"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>如何檢查是否已安裝 .NET Core
 
@@ -23,13 +23,17 @@ ms.locfileid: "75341344"
 
 ## <a name="check-sdk-versions"></a>檢查 SDK 版本
 
-您可以查看目前已安裝終端機的 .NET Core SDK 版本。 開啟終端機並執行 `dotnet --list-sdks` 命令。
+您可以查看目前已安裝終端機的 .NET Core SDK 版本。 開啟終端機並執行下列命令。
+
+```dotnetcli
+dotnet --list-sdks
+```
+
+您會取得如下所示的輸出。
 
 ::: zone pivot="os-windows"
 
 ```console
-dotnet --list-sdks
-
 2.1.500 [C:\program files\dotnet\sdk]
 2.1.502 [C:\program files\dotnet\sdk]
 2.1.504 [C:\program files\dotnet\sdk]
@@ -45,8 +49,6 @@ dotnet --list-sdks
 ::: zone pivot="os-linux"
 
 ```bash
-dotnet --list-sdks
-
 2.1.500 [/home/user/dotnet/sdk]
 2.1.502 [/home/user/dotnet/sdk]
 2.1.504 [/home/user/dotnet/sdk]
@@ -62,8 +64,6 @@ dotnet --list-sdks
 ::: zone pivot="os-macos"
 
 ```bash
-dotnet --list-sdks
-
 2.1.500 [/usr/local/share/dotnet/sdk]
 2.1.502 [/usr/local/share/dotnet/sdk]
 2.1.504 [/usr/local/share/dotnet/sdk]
@@ -78,13 +78,17 @@ dotnet --list-sdks
 
 ## <a name="check-runtime-versions"></a>檢查執行階段版本
 
-您可以看到目前使用 `dotnet --list-runtimes` 命令安裝了哪些版本的 .NET Core 執行時間。
+您可以使用下列命令來查看目前安裝的 .NET Core 執行階段版本。
+
+```dotnetcli
+dotnet --list-runtimes
+```
+
+您會取得如下所示的輸出。
 
 ::: zone pivot="os-windows"
 
 ```console
-dotnet --list-runtimes
-
 Microsoft.AspNetCore.All 2.1.7 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.2.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
@@ -113,8 +117,6 @@ Microsoft.WindowsDesktop.App 3.1.0 [c:\program files\dotnet\shared\Microsoft.Win
 ::: zone pivot="os-linux"
 
 ```bash
-dotnet --list-runtimes
-
 Microsoft.AspNetCore.All 2.1.7 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.2.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
@@ -141,8 +143,6 @@ Microsoft.NETCore.App 3.1.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
 ::: zone pivot="os-macos"
 
 ```bash
-dotnet --list-runtimes
-
 Microsoft.AspNetCore.All 2.1.7 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.2.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]

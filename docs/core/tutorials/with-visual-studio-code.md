@@ -3,21 +3,21 @@ title: C# 與 Visual Studio Code 使用者入門
 description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您的第一個 .NET Core 應用程式。
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715313"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503516"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 
 .NET Core 提供快速且模組化的平台，可建立在 Windows、Linux 和 macOS 上執行的應用程式。 搭配使用 Visual Studio Code 與 C# 擴充功能，以取得具備 C# IntelliSense (智慧型程式碼完成) 與偵錯完整支援的強大編輯體驗。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
-1. 安裝 [Visual Studio Code (英文)](https://code.visualstudio.com/)。
-2. 安裝 [.NET Core SDK (英文)](https://dotnet.microsoft.com/download)。
+1. 安裝 [Visual Studio Code](https://code.visualstudio.com/)。
+2. 安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。
 3. 安裝適用於 Visual Studio Code 的 [C# 擴充功能](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) \(英文\)。 如需如何在 Visual Studio Code 上安裝擴充功能的詳細資訊，請參閱 [VS Code 擴充功能市集](https://code.visualstudio.com/docs/editor/extension-gallery) \(英文\)。
 
 ## <a name="hello-world"></a>Hello World
@@ -129,8 +129,13 @@ ms.locfileid: "75715313"
 
 5. 儲存變更，然後重新執行您的程式。 應該會顯示含有所附加字串的新訊息。
 
+    ```dotnetcli
+    dotnet run
+    ```
+
+    您會獲得下列輸出︰
+
     ```console
-    > dotnet run
     Hello World! Happy coding!
     ```
 
@@ -140,7 +145,7 @@ ms.locfileid: "75715313"
 
 Visual Studio Code C# 延伸模組可為您產生用於建置和偵錯的資產。 Visual Studio Code 會在您第一次開啟 C# 專案時，提示您產生這些資產。 如果您當時未產生資產，仍可以透過開啟 [命令選擇區] ([檢視] > [命令選擇區])，然後鍵入 ">.NET: Generate Assets for Build and Debug" 來執行此命令。 選取此程式會產生*vscode*、*啟動 json*和您需要的*json*設定檔案。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [設定 Visual Studio Code (英文)](https://code.visualstudio.com/docs/setup/setup-overview)
 - [在 Visual Studio Code 中偵錯 (英文)](https://code.visualstudio.com/Docs/editor/debugging)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e7d7d6e60b2f582a579f5811225f4027c37c7876
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716113"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504108"
 ---
 # <a name="controlling-net-framework-logging"></a>控制 .NET Framework 記錄
 
@@ -17,7 +17,7 @@ ms.locfileid: "75716113"
 
 - [Logman](/windows-server/administration/windows-commands/logman) 和 [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) 命令列工具，隨附於 Windows 作業系統。
 
-- [Windows 效能工具組](/windows-hardware/test/wpt/)中的 [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) 工具。 如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://blogs.msdn.microsoft.com/pigscanfly/tag/xperf/)。
+- [Windows 效能工具組](/windows-hardware/test/wpt/xperf-command-line-reference)中的 [Xperf](/windows-hardware/test/wpt/) 工具。 如需 Xperf 的詳細資訊，請參閱 [Windows 效能部落格](https://docs.microsoft.com/archive/blogs/pigscanfly/)。
 
 若要擷取 CLR 事件資訊，您必須在電腦上安裝 CLR 提供者。 若要確認是否已安裝此提供者，請在命令提示字元中輸入 `logman query providers`。 提供者的清單隨即顯示。 此清單應該會包含 CLR 提供者的項目，如下所示。
 
@@ -45,7 +45,7 @@ Provider                                 GUID
 
 ### <a name="to-capture-clr-etw-events-using-logman"></a>若要使用 Logman 來擷取 CLR ETW 事件
 
-1. 在命令提示中，輸入：
+1. 在命令提示字元中，輸入：
 
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`
 
@@ -69,7 +69,7 @@ Provider                                 GUID
 
 ### <a name="to-capture-clr-etw-events-using-xperf"></a>若要使用 Xperf 來擷取 CLR ETW 事件
 
-1. 在命令提示中，輸入：
+1. 在命令提示字元中，輸入：
 
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`
 
@@ -87,7 +87,7 @@ Provider                                 GUID
 
 ### <a name="to-view-clr-etw-events-using-tracerpt"></a>若要使用 Tracerpt 來檢視 CLR ETW 事件
 
-- 在命令提示中，輸入：
+- 在命令提示字元中，輸入：
 
      `tracerpt clrevents.etl`
 
@@ -95,7 +95,7 @@ Provider                                 GUID
 
 ### <a name="to-view-clr-etw-events-using-xperf"></a>若要使用 Xperf 來檢視 CLR ETW 事件
 
-- 在命令提示中，輸入：
+- 在命令提示字元中，輸入：
 
      `xperf clrevents.etl`
 
@@ -103,13 +103,13 @@ Provider                                 GUID
 
 ### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>若要將 .etl 檔案轉換為逗點分隔值檔案
 
-- 在命令提示中，輸入：
+- 在命令提示字元中，輸入：
 
      `xperf -i clrevents.etl -f clrevents.csv`
 
      這個命令會讓 XPerf 以您可以檢視的逗點分隔值 (CSV) 檔案的形式傾印事件。 因為不同的事件有不同的欄位，所以這個 CSV 檔案中的資料前面會有多行標頭。 每行的第一個欄位都是事件類型，表示應使用哪一行的標頭來判斷其餘的欄位。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
+- [Windows 效能工具組](/windows-hardware/test/wpt/)
 - [Common Language Runtime 中的 ETW 事件](etw-events-in-the-common-language-runtime.md)

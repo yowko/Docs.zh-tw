@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 21e780470f455ac133fd4d11ae43c63a4b18c582
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712035"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503995"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 傳回值 (C# 程式設計手冊)
 
@@ -27,7 +27,7 @@ ms.locfileid: "75712035"
 
 此範例使用 [.NET Core](../../../core/index.md) 命令列工具。 如果您不熟悉 .NET Core 命令列工具，您可以在此[開始使用主題](../../../core/tutorials/cli-create-console-app.md)中了解這些工具。
 
-修改 *program.cs* 中的 `Main` 方法，如下所示：
+修改 `Main`program.cs*中的* 方法，如下所示：
 
  [!code-csharp[csProgGuideMain#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#14)]
 
@@ -39,8 +39,11 @@ ms.locfileid: "75712035"
 
 由於程式碼會傳回零，因為批次檔會報告成功。 不過，如果您將 MainReturnValTest.cs 變更為傳回非零值，並重新編譯程式，則 PowerShell 指令碼的後續執行會報告失敗。
 
-```powershell
+```dotnetcli
 dotnet run
+```
+
+```powershell
 if ($LastExitCode -eq 0) {
     Write-Host "Execution succeeded"
 } else
@@ -90,9 +93,9 @@ private static async Task<int> AsyncConsoleWork()
 - `static Task<int> Main(string[])` 會導致編譯器發出 `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` 的對等項目
 
 > [!NOTE]
->如果這些範例在 `Main` 方法上使用 `async` 修飾詞，編譯器會產生相同的程式碼。
+>如果這些範例在 `async` 方法上使用 `Main` 修飾詞，編譯器會產生相同的程式碼。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [C# 參考](../index.md)

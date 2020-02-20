@@ -5,12 +5,12 @@ ms.date: 01/17/2020
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
-ms.openlocfilehash: 62ec1e21fd8e95991af6e2f8fa6f99c17249c761
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 486b320ca30323684d301630ad29f8f4615764ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452717"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504055"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework 版本和相依性
 
@@ -237,7 +237,7 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 |**CLR 版本**|2.0|
 |**包含在 Visual Studio 版本中**|2005|
 |**Windows 版本**|N/A|
-|**Windows Server 版本**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️200|
+|**Windows Server 版本**|✔️ 2008 R2 SP1<br />✔️ 2008 SP2<br />✔️2003|
 |**若要判斷已安裝的 .NET 版本**|請參閱[相關指示](how-to-determine-which-versions-are-installed.md)|
 
 ### <a name="net-framework-11"></a>.NET Framework 1.1
@@ -273,7 +273,7 @@ CLR 是透過自己的版本號碼加以識別。 每次發行時，.NET Framewo
 
 ## <a name="remarks-for-version-45-and-later"></a>4\.5 版和更新版本的備註
 
-.NET Framework 4.5 是就地更新，會取代您電腦上的 .NET Framework 4，同樣地，.NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 和4.8 都是 .NET Framework 4.5 的就地更新。 就地更新表示它們使用相同的執行階段版本，但元件版本會更新，並包含新的類型和成員。 安裝其中一個更新之後，您的 .NET Framework 4、.NET Framework 4.5、.NET Framework 4.6 或 .NET Framework 4.7 應用程式會繼續執行，而不需重新編譯。 但是，並非反之亦然。 我們不建議在舊版上執行以較新版本 .NET Framework 為目標的應用程式。 例如，我們不建議您在 .NET Framework 4.5 上執行針對 .NET Framework 4.6 的應用程式。
+.NET Framework 4.5 是就地更新，會取代您電腦上的 .NET Framework 4，同樣地，.NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 和4.8 都是 .NET Framework 4.5 的就地更新。 就地更新表示它們使用相同的執行階段版本，但元件版本會更新，並包含新的類型和成員。 安裝其中一個更新之後，您的 .NET Framework 4、.NET Framework 4.5、.NET Framework 4.6 或 .NET Framework 4.7 應用程式會繼續執行，而不需重新編譯。 不過，反向操作則不可行。 我們不建議在舊版上執行以較新版本 .NET Framework 為目標的應用程式。 例如，我們不建議您在 .NET Framework 4.5 上執行針對 .NET Framework 4.6 的應用程式。
 
 以下是適用的方針：
 

@@ -2,18 +2,18 @@
 title: 使用命令列F#工具開始使用
 description: 瞭解如何在任何作業系統（Windows、macOS 或 Linux F# ）上使用 .NET Core CLI，建立簡單的多專案解決方案。
 ms.date: 03/26/2018
-ms.openlocfilehash: aa3ed84660a951eeafc11a00ea3831f587b6d876
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 6f67314f49150e20b18734f21f24daa3ce856922
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559483"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504139"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>開始F#使用 .NET Core CLI
 
 本文說明如何在任何作業系統（Windows、 F# MacOS 或 Linux）上使用 .NET Core CLI 來開始使用。 它會使用主控台應用程式所呼叫的類別庫，來建立多專案方案。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 若要開始，您必須安裝最新的[.NET Core SDK](https://dotnet.microsoft.com/download)。
 
@@ -135,7 +135,7 @@ dotnet sln add src/App/App.fsproj
 
 將目錄變更為 `src/App` 主控台專案，並執行傳遞 `Hello World` 做為引數的專案：
 
-```console
+```dotnetcli
 cd src/App
 dotnet run Hello World
 ```

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: 66c78ee56c9d5153b5b878b2e695ad4ee6bffe0b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 7d43941629e933ac5a9e9c9d6a1388b6194f8d99
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606245"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503485"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# 編譯器選項)
 **-warnaserror+** 選項會將所有警告都視為錯誤  
@@ -29,17 +29,17 @@ ms.locfileid: "69606245"
   
  根據預設， **-warnaserror-** 會生效，這會導致無法產生輸出檔案的警告。 **-warnaserror** 與 **-warnaserror+** 相同，都會將警告視為錯誤。  
   
- 選擇性，如果您只想要將少數特定警告視為錯誤，則可以指定將以逗號分隔的警告編號清單視為錯誤。  
+ 選擇性，如果您只想要將少數特定警告視為錯誤，則可以指定將以逗號分隔的警告編號清單視為錯誤。 可以使用**可為 null**的速記來指定所有的可為 null 的警告集合。
   
  使用 [-warn](./warn-compiler-option.md) 指定您想要編譯器顯示的警告層級。 使用 [-nowarn](./nowarn-compiler-option.md) 停用特定警告。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]  頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2. 按一下 [建置]  屬性頁面。  
+2. 按一下 [建置] 屬性頁面。  
   
-3. 修改 [警告視為錯誤]  屬性。  
+3. 修改 [警告視為錯誤] 屬性。  
   
  若要以程式設計方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "69606245"
   
 ```console  
 csc -warnaserror in.cs  
-csc -warnaserror:642,649,652 in.cs  
+csc -warnaserror:642,649,652,nullable in.cs  
 ```  
   
 ## <a name="see-also"></a>另請參閱

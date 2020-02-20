@@ -1,21 +1,17 @@
 ---
 title: dotnet add package 命令
 description: "'dotnet add package' 命令提供方便的選項，將 NuGet 套件參考新增至專案。"
-ms.date: 06/26/2019
-ms.openlocfilehash: 210dcf0efe06672264ebfa297589bdb387591a42
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: cb44805f91ac4047dd50fd7e88d4eac5f15f2508
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733324"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503806"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -62,7 +58,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
   要新增的套件參考。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`-f|--framework <FRAMEWORK>`**
 

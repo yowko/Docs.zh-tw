@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920471"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503538"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>使用 .NET Core CLI 開始使用 .NET Core
 
@@ -19,16 +19,16 @@ ms.locfileid: "76920471"
 
 如果您不熟悉 .NET Core CLI，請參閱[.NET Core CLI 總覽](../tools/index.md)。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download)或更新版本。
-- 您選擇的文字編輯器或程式碼編輯器。
+- 您偏好的文字編輯器或程式碼編輯器。
 
 ## <a name="hello-console-app"></a>嗨，主控台應用程式！
 
 您可以從 dotnet/samples GitHub 存放庫[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-開啟命令提示字元，並建立名為 *Hello* 的資料夾。 巡覽至您已建立的資料夾，並鍵入下列內容：
+開啟命令提示字元，並建立名為 *Hello* 的資料夾。 流覽至您所建立的資料夾，然後輸入下列文字。
 
 ```dotnetcli
 dotnet new console
@@ -64,17 +64,25 @@ dotnet run
 
     [dotnet run](../tools/dotnet-run.md)會呼叫[dotnet 組建](../tools/dotnet-build.md)，以確保組建目標已建立，然後呼叫 `dotnet <assembly.dll>` 以執行目標應用程式。
     
-    ```console
+    ```dotnetcli
     dotnet run
+    ```
 
+    您會取得下列輸出。
+
+    ```console
     Hello World!
     ```
     
     或者，您也可以執行 `dotnet build` 來編譯器代碼，而不需執行組建主控台應用程式。 這會根據專案的名稱，以 DLL 檔案的形式產生已編譯的應用程式。 在此情況下，所建立的檔案會命名為*Hello .dll*。 此應用程式可以在 Windows 上使用 `dotnet bin\Debug\netcoreapp3.1\Hello.dll` 執行（使用非 Windows 系統的 `/`）。
     
-    ```console
+    ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
+    ```
 
+    您會取得下列輸出。
+
+    ```console
     Hello World!
     ```
     
@@ -98,8 +106,13 @@ dotnet run
 
 03. 執行程式，將參數傳遞至應用程式。 當您使用 `dotnet` 命令來執行應用程式時，請將 `--` 新增至結尾。 `--` 右邊的任何專案都會當做參數傳遞至應用程式。 在下列範例中，`John` 的值會傳遞至應用程式。
 
+    ```dotnetcli
+    dotnet run -- John
+    ```
+
+    您會取得下列輸出。
+
     ```console
-    $ dotnet run -- John
     Hello John!
     Fibonacci Numbers 1-15:
     1: 0
@@ -119,7 +132,7 @@ dotnet run
     15: 377
     ```
 
-就是這麼容易！ 您可以用您喜歡的任何方式修改*Program.cs* 。
+就這麼簡單！ 您可以用您喜歡的任何方式修改*Program.cs* 。
 
 ## <a name="working-with-multiple-files"></a>使用多個檔案
 
@@ -129,16 +142,21 @@ dotnet run
 
     [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
-02. 變更 *Program.cs* 檔案中的 `Main` 方法，以具現化新的類別並呼叫其方法，如下列範例所示：
+02. 變更 `Main`Program.cs*檔案中的* 方法，以具現化新的類別並呼叫其方法，如下列範例所示：
 
     [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 03. 執行[dotnet build](../tools/dotnet-build.md)以編譯變更。
 
-04. 執行[dotnet run](../tools/dotnet-run.md)來執行您的應用程式。 以下顯示程式輸出：
+04. 執行[dotnet run](../tools/dotnet-run.md)來執行您的應用程式。
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    您會取得下列輸出。
 
     ```console
-    $ dotnet run
     0
     1
     1
@@ -156,12 +174,17 @@ dotnet run
     377
     ```
 
-## <a name="publish-your-app"></a>發行您的應用程式
+## <a name="publish-your-app"></a>發佈您的應用程式
 
 準備好散發應用程式之後，請使用[dotnet publish](../tools/dotnet-publish.md)命令來產生_bin\\debug\\netcoreapp 3.1_的_publish_資料夾，\\發佈\\（針對非 Windows 系統使用 `/`）。 您可以將 _publish_  資料夾的內容散發到其他平台，只要那些平台已安裝 dotnet 執行階段。
 
-```console
+```dotnetcli
 dotnet publish
+```
+
+您會取得如下所示的輸出。
+
+```console
 Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -174,9 +197,13 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 您可以使用 [dotnet](../tools/dotnet.md) 命令來執行已發佈的應用程式：
 
-```console
+```dotnetcli
 dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
+```
 
+您會取得下列輸出。
+
+```console
 Hello World!
 ```
 
@@ -190,9 +217,9 @@ Hello World!
 
 ## <a name="conclusion"></a>結論
 
-就是這麼容易！ 現在，您可以開始使用這裡學到的基本概念，建立您自己的程式。
+就這麼簡單！ 現在，您可以開始使用這裡學到的基本概念，建立您自己的程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 .NET Core CLI 組織和測試專案](testing-with-cli.md)
 - [使用 .NET Core CLI 發佈 .NET Core 應用程式](../deploying/deploy-with-cli.md)

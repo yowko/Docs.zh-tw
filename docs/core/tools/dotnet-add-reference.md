@@ -1,17 +1,17 @@
 ---
 title: dotnet 新增參考命令
 description: dotnet add reference 命令提供方便的選項，以新增專案對專案參考。
-ms.date: 06/26/2019
-ms.openlocfilehash: dc8bc01a2bff4f2cf3a8af9efb233448d7de337f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 84ea25e94efc8d84aebfeccf62c30a64551c5019
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733279"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503795"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
-**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
+**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "76733279"
 
   要新增的專案對專案 (P2P) 參考。 指定一個或多個專案。 Unix/Linux 系統支援 [Glob 模式 (英文)](https://en.wikipedia.org/wiki/Glob_(programming))。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`-h|--help`**
 

@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: caf12296b208b3d2e57c3a74300cced225e4db66
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 38ca93f62a066bade988a89b704fca26368b0b2b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738766"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504155"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>使用 ML.NET CLI 分析情感
 
@@ -48,7 +48,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 1. 下載 [UCI 情感標記句子資料集 ZIP 檔案 (請參閱下列注意中的引文)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)，然後將它解壓縮到您選擇的任何資料夾。
 
     > [!NOTE]
-    > 此教學課程所使用的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人， KDD 2015，並裝載于 UCI Machine Learning 存放庫-Dua、d. 和 Karra Taniskidou，E. （2017）。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml ]。 Irvine, CA: University of California, School of Information and Computer Science.
+    > 此教學課程所使用的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人， KDD 2015，並裝載于 UCI Machine Learning 存放庫-Dua、d. 和 Karra Taniskidou，E. （2017）。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml]。 Irvine, CA: University of California, School of Information and Computer Science.
 
 2. 將 `yelp_labelled.txt` 檔案複製到您先前建立的任何資料夾 (例如 `/cli-test`)。
 
@@ -83,11 +83,11 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 1. 執行下列 ML.NET CLI 命令：
 
     ```console
-    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
+    mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
     此命令會執行 **`mlnet auto-train` 命令**：
-    - 針對 **`binary-classification`** 類型的 **ML 工作**
+    - 針對 **類型的 `binary-classification`ML 工作**
     - 使用**資料集檔案`yelp_labelled.txt`** 作為定型和測試資料集 (CLI 會在內部使用交叉驗證，或將它分成兩個資料集：一個用於定型，另一個用於測試)
     - 其中您要預測的**目標/目的資料行** (通常稱為「標籤」) 是**索引為 1 的資料行** (也就是第二個資料行，因為索引是以零起始)
     - **不會使用具有資料行名稱的檔案標頭**，因為這個特定的資料集檔案沒有標頭
@@ -97,11 +97,11 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
     <!-- markdownlint-disable MD023 MD025 -->
 
-    # <a name="windowstabwindows"></a>[Windows](#tab/windows)
+    # <a name="windows"></a>[Windows](#tab/windows)
 
     ![PowerShell 中的 ML.NET CLI auto-train](./media/mlnet-cli/mlnet-auto-train-binary-classification-powershell.gif)
 
-    # <a name="macos-bashtabmacosbash"></a>[macOS Bash](#tab/macosbash)
+    # <a name="macos-bash"></a>[macOS Bash](#tab/macosbash)
 
     ![PowerShell 中的 ML.NET CLI auto-train](./media/mlnet-cli/mlnet-auto-train-binary-classification-bash.gif)
 
@@ -137,7 +137,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 ## <a name="explore-the-generated-c-code-to-use-for-running-the-model-to-make-predictions"></a>探索為了用於執行模型以建立預測所產生的 C# 程式碼
 
-1. 在 Visual Studio (2017 或 2019) 中，開啟您原始目的地資料夾 (在教學課程中名為 `/cli-test`) 內名為 `SampleBinaryClassification` 資料夾中產生的方案。 您應該會看到類似如下的方案：
+1. 在 Visual Studio (2017 或 2019) 中，開啟您原始目的地資料夾 (在教學課程中名為 `SampleBinaryClassification`) 內名為 `/cli-test` 資料夾中產生的方案。 您應該會看到類似如下的方案：
 
     > [!NOTE]
     > 在教學課程中，我們建議使用 Visual Studio，但您也可以使用任何文字編輯器來探索產生的 C# 程式碼 (兩個專案)，並在 macOS、Linux 或 Windows 電腦上使用 `dotnet CLI` 來執行產生的主控台應用程式。
@@ -174,42 +174,42 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
     }
     ```
 
-- 第一行程式碼只會建立每當執行 ML.NET 程式碼時所需的 `MLContext` 物件。
+    - 第一行程式碼只會建立每當執行 ML.NET 程式碼時所需的 `MLContext` 物件。
 
-- 第二行程式碼會加上註解，因為您不需要定型模型，CLI 工具已為您定型模型，並儲存到模型的序列化 .ZIP 檔案。 但如果您想要看看 CLI「如何定型模型」，您可以取消註解該行，並執行/偵錯用於該特定 ML 模型的定型程式碼。
+    - 第二行程式碼會加上註解，因為您不需要定型模型，CLI 工具已為您定型模型，並儲存到模型的序列化 .ZIP 檔案。 但如果您想要看看 CLI「如何定型模型」，您可以取消註解該行，並執行/偵錯用於該特定 ML 模型的定型程式碼。
 
-- 在第三行程式碼中，您會提供該模型 .ZIP 檔案的路徑，使用 `mlContext.Model.Load()` API 從序列化模型 .ZIP 檔案載入模型。
+    - 在第三行程式碼中，您會提供該模型 .ZIP 檔案的路徑，使用 `mlContext.Model.Load()` API 從序列化模型 .ZIP 檔案載入模型。
 
-- 在第四行程式碼中，您會使用 `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API 載入建立 `PredictionEngine` 物件。 每當您想要建立以單一範例資料為目標的預測時 (在本例中會以一段文字來預測其情感)，都需要 `PredictionEngine` 物件。
+    - 在第四行程式碼中，您會使用 `PredictionEngine` API 載入建立 `mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` 物件。 每當您想要建立以單一範例資料為目標的預測時 (在本例中會以一段文字來預測其情感)，都需要 `PredictionEngine` 物件。
 
-- 在第五行程式碼中，您會呼叫函式 `CreateSingleDataSample()` 來建立用於預測的「單一範例資料」。 由於 CLI 工具不知道要使用哪種範例資料類型，因此會在該函式中載入資料集的第一個資料列。 不過，在此情況下，您也可以建立自己的「硬式編碼」資料，藉由更新為實作 `CreateSingleDataSample()` 函式的更簡單程式碼，來取代該函式的目前實作：
+    - 在第五行程式碼中，您會呼叫函式  *來建立用於預測的「單一範例資料」* `CreateSingleDataSample()`。 由於 CLI 工具不知道要使用哪種範例資料類型，因此會在該函式中載入資料集的第一個資料列。 不過，在此情況下，您也可以建立自己的「硬式編碼」資料，藉由更新為實作 `CreateSingleDataSample()` 函式的更簡單程式碼，來取代該函式的目前實作：
 
-    ```csharp
-    private static ModelInput CreateSingleDataSample()
-    {
-        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
-        return sampleForPrediction;
-    }
-    ```
+        ```csharp
+        private static ModelInput CreateSingleDataSample()
+        {
+            ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+            return sampleForPrediction;
+        }
+        ```
 
 1. 執行專案，使用從資料集的第一個資料列載入的原始範例資料，或是提供您自己的自訂硬式編碼範例資料。 您應該取得類似如下的預測：
 
-    # <a name="windowstabwindows"></a>[Windows](#tab/windows)
+    # <a name="windows"></a>[Windows](#tab/windows)
 
     從 Visual Studio 按下 F5 (播放按鈕) 來執行主控台應用程式：
 
     ![PowerShell 中的 ML.NET CLI auto-train](./media/mlnet-cli/sample-cli-prediction-execution.png))
 
-    # <a name="macos-bashtabmacosbash"></a>[macOS Bash](#tab/macosbash)
+    # <a name="macos-bash"></a>[macOS Bash](#tab/macosbash)
 
     從命令提示字元鍵入下列命令來執行主控台應用程式：
 
-     ```bash
-     cd SampleBinaryClassification
-     cd SampleBinaryClassification.ConsoleApp
+    ```dotnetcli
+    cd SampleBinaryClassification
+    cd SampleBinaryClassification.ConsoleApp
 
-     dotnet run
-     ```
+    dotnet run
+    ```
 
     ![PowerShell 中的 ML.NET CLI auto-train](./media/mlnet-cli/sample-cli-prediction-execution-bash.png))
 
@@ -248,7 +248,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 值得將教學課程中所選擇演算法和管線設定與 CLI 工具產生的程式碼進行比較。 根據您花在逐一查看和搜尋更佳模型的時間，所選擇的演算法及其特定超參數和管線設定可能會不同。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您已了解如何：
 > [!div class="checklist"]
 >
 > - 為所選 ML 工作 (要解決的問題) 準備資料
@@ -257,7 +257,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 > - 了解為了執行模型所產生的 C# 程式碼 (用於終端使用者應用程式的程式碼)
 > - 探索為了用來定型「最佳品質」模型所產生的 C# 程式碼 (適用於學習目的)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 ML.NET CLI 自動化模型定型](../automate-training-with-cli.md)
 - [教學課程：在可調整的 ASP.NET Core web 應用程式和 WebAPIs 上執行 ML.NET 模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)

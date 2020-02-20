@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787843"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503497"
 ---
 # <a name="tutorial-create-a-template-pack"></a>教學課程：建立範本套件
 
@@ -25,7 +25,7 @@ ms.locfileid: "76787843"
 > * 從 NuGet 套件檔案安裝範本
 > * 依套件識別碼將範本解除安裝
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 * 完成此教學課程系列的[第 1 部分](cli-templates-create-item-template.md)和[第 2 部分](cli-templates-create-project-template.md)。
 
@@ -51,8 +51,11 @@ dotnet new console -n templatepack -o .
 
 `-n` 參數會將 _.csproj_檔案名設定為_templatepack_。 `-o` 參數會在目前的目錄中建立檔案。 您應該會看到類似以下輸出的結果。
 
+```dotnetcli
+dotnet new console -n templatepack -o .
+```
+
 ```console
-C:\working> dotnet new console -n templatepack -o .
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -109,8 +112,11 @@ dotnet pack
 
 此命令將會建置您的專案，然後在 _working\bin\Debug_ 資料夾中建立 NuGet 套件。
 
+```dotnetcli
+dotnet pack
+```
+
 ```console
-C:\working> dotnet pack
 Microsoft (R) Build Engine version 16.2.0-preview-19278-01+d635043bd for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -140,14 +146,17 @@ Example templates: async project                  consoleasync          [C#]    
 Class library                                     classlib              [C#], F#, VB      Common/Library
 ```
 
-如果您將 NuGet 套件上傳至 NuGet 摘要，您可以使用 `dotnet new -i PACKAGEID` 命令；其中 `PACKAGEID` 和 _.csproj_ 檔案中的 `<PackageId>` 設定相同。 此套件識別碼和 NuGet 套件識別碼相同。
+如果您將 NuGet 套件上傳至 NuGet 摘要，您可以使用 `dotnet new -i PACKAGEID` 命令；其中 `PACKAGEID` 和 `<PackageId>`.csproj_檔案中的_ 設定相同。 此套件識別碼和 NuGet 套件識別碼相同。
 
 ## <a name="uninstall-the-template-pack"></a>將範本套件解除安裝
 
 無論您安裝範本套件的方法為何 (直接透過 _.nupkg_ 檔案或是透過 NuGet 摘要)，移除範本套件的方法也是相同的。 使用您想要解除安裝之範本的 `<PackageId>`。 您可以透過執行 `dotnet new -u` 命令來取得已安裝範本的清單。
 
+```dotnetcli
+dotnet new -u
+```
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -178,7 +187,7 @@ Currently installed items:
 
 執行 `dotnet new -u AdatumCorporation.Utility.Templates` 來將範本解除安裝。 `dotnet new` 命令將會輸出說明資訊，其應該會省略您先前所安裝的範本。
 
-恭喜您！ 您已安裝並解除安裝範本套件。
+恭喜！ 您已安裝並解除安裝範本套件。
 
 ## <a name="next-steps"></a>後續步驟
 

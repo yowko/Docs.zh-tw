@@ -2,12 +2,12 @@
 title: 從 DNX 移轉到 .NET Core CLI
 description: 從使用 DNX 工具移轉為 .NET Core CLI 工具。
 ms.date: 06/20/2016
-ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920631"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503828"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>從 DNX 移轉到 .NET Core CLI (project.json)
 
@@ -48,13 +48,13 @@ CLI 以兩種主要方式封裝：
 
 | DNX 命令                    | CLI 命令    | 描述                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
-| dnx run                        | dotnet run     | 從來源執行程式碼。                                                                                           |
-| dnu build                      | dotnet build   | 建置您程式碼的 IL 二進位檔。                                                                                |
-| dnu pack                       | dotnet pack    | 封裝您程式碼的 NuGet 套件。                                                                        |
+| dnx run                        | `dotnet run`     | 從來源執行程式碼。                                                                                           |
+| dnu build                      | `dotnet build`   | 建置您程式碼的 IL 二進位檔。                                                                                |
+| dnu pack                       | `dotnet pack`    | 封裝您程式碼的 NuGet 套件。                                                                        |
 | dnx \[command] (例如 "dnx web") | N/A\*          | 在 DNX 環境中，依據 project.json 的定義來執行命令。                                                     |
 | dnu install                    | N/A\*          | 在 DNX 環境中，將套件安裝為相依性。                                                            |
-| dnu restore                    | dotnet restore | 還原您在 project.json 中指定的相依性。 ([請參閱注意事項](#dotnet-restore-note))                                                            |
-| dnu publish                    | dotnet publish | 在可攜式、原生可攜式與獨立式這三種形式中，以其中一種方式來發佈要部署的應用程式。 |
+| dnu restore                    | `dotnet restore` | 還原您在 project.json 中指定的相依性。 ([請參閱備註](#dotnet-restore-note))                                                            |
+| dnu publish                    | `dotnet publish` | 在可攜式、原生可攜式與獨立式這三種形式中，以其中一種方式來發佈要部署的應用程式。 |
 | dnu wrap                       | N/A\*          | 在 DNX 環境中，將 project.json 包裝在 csproj 中。                                                                    |
 | dnu 命令                   | N/A\*          | 在 DNX 環境中，管理已全域安裝的命令。                                                           |
 
@@ -110,7 +110,7 @@ CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系�
 
 這麼做會指示 `dotnet build` 針對您的應用程式發出進入點，以讓程式碼可有效執行。 如果您要建置類別庫，只要省略上一節即可。 當然，一旦將上述程式碼片段新增至 `project.json` 檔案之後，您必須新增靜態進入點。 移出 DNX 時，它所提供的 DI 服務便無法再使用，因此進入點必須是基本 .NET 進入點：`static void Main()`。
 
-如果您的 `project.json` 中有「命令」區段，您可以將它移除。 如果某些命令原本是以 DNU 命令的形式存在 (例如 Entity Framework CLI 命令)，則這些命令會以每個專案擴充功能的形式移植至 CLI。 如果您要自行建立命令以在專案中使用，則需要將其取代為 CLI 擴充功能。 在此情況下，`project.json` 中的 `commands` 節點必須以 `tools` 節點取代，且它需要列出工具相依性。
+如果您的 `project.json` 中有「命令」區段，您可以將它移除。 如果某些命令原本是以 DNU 命令的形式存在 (例如 Entity Framework CLI 命令)，則這些命令會以每個專案擴充功能的形式移植至 CLI。 如果您要自行建立命令以在專案中使用，則需要將其取代為 CLI 擴充功能。 在此情況下，`commands` 中的 `project.json` 節點必須以 `tools` 節點取代，且它需要列出工具相依性。
 
 完成這些作業之後，您必須決定應用程式要具備哪種類型的可攜性。 我們對 .NET Core 所提供的可攜性選項範圍投注不少心力，以供您選擇。 比方說，您可能需要完全*可攜式*的應用程式，或希望擁有*獨立*的應用程式。 可攜式應用程式選項很像 .NET Framework 應用程式的運作方式：它需要共用元件以在目標電腦 (.NET Core) 上執行。 獨立的應用程式不需要在目標上安裝 .NET Core，但是您必須為每個想要支援的作業系統產生一個應用程式。 [應用程式可攜性類型](../deploying/index.md)文件中會說明這些可攜性類型等相關資訊。
 
@@ -119,13 +119,13 @@ CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系�
 1. `netcoreapp1.0`- 如果您要撰寫的應用程式在 .NET Core (包括 ASP.NET Core 應用程式) 上
 2. `netstandard1.6`- 如果您要撰寫 .NET Core 的類別庫
 
-如果您使用其他 `dnx` 目標 (例如 `dnx451`)，也必須變更這些項目。 `net451`應變更為 `dnx451`。
+如果您使用其他 `dnx` 目標 (例如 `dnx451`)，也必須變更這些項目。 `dnx451`應變更為 `net451`。
 如需詳細資訊，請參閱 [.NET Standard](../../standard/net-standard.md) 主題。
 
 您的 `project.json` 現已大致就緒。 接著，您必須檢查相依性清單，並將相依性更新為較新版本；如果您是使用 ASP.NET Core 相依性的話，更應注意這項作業。 如果您之前針對 BCL API 使用不同的套件，則可以使用[應用程式可攜性類型](../deploying/index.md)文件中所述的執行階段套件。
 
-準備好後，您可以嘗試使用 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note)) 進行還原。 根據您的相依性版本而定，如果 NuGet 無法解析上述其中一個目標架構的相依性，就可能會發生錯誤。 這是「時間點」的問題，因為隨著時間過去，會有越來越多套件支援這些架構。 目前來看，如果您遇到這個問題，可以使用 `framework` 節點內的 `imports` 陳述式，指定 NuGet 可以還原目標為 "imports" 陳述式內之架構的套件。
-在此情況下取得的還原錯誤應具有足夠資訊，可讓您知道需要匯入哪些架構。 如果您有點跟不上或對這方面不太熟悉，一般來說，只要在 `imports` 陳述式中指定 `dnxcore50` 和 `portable-net45+win8` 就可以達到目的。 下列 JSON 程式碼片段會示範這個過程：
+準備好後，您可以嘗試使用 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note)) 進行還原。 根據您的相依性版本而定，如果 NuGet 無法解析上述其中一個目標架構的相依性，就可能會發生錯誤。 這是「時間點」的問題，因為隨著時間過去，會有越來越多套件支援這些架構。 目前來看，如果您遇到這個問題，可以使用 `imports` 節點內的 `framework` 陳述式，指定 NuGet 可以還原目標為 "imports" 陳述式內之架構的套件。
+在此情況下取得的還原錯誤應具有足夠資訊，可讓您知道需要匯入哪些架構。 如果您有點跟不上或對這方面不太熟悉，一般來說，只要在 `dnxcore50` 陳述式中指定 `portable-net45+win8` 和 `imports` 就可以達到目的。 下列 JSON 程式碼片段會示範這個過程：
 
 ```json
     "frameworks": {

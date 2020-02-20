@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f53f4037f832265a35f65bf2e5096c7e5a37bcf1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340358"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503529"
 ---
 # <a name="tutorial-create-a-project-template"></a>教學課程：建立專案範本
 
@@ -26,7 +26,7 @@ ms.locfileid: "75340358"
 > * 測試項目範本
 > * 將項目範本解除安裝
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 * 完成此教學課程系列的[第 1 部分](cli-templates-create-item-template.md)。
 * 開啟終端機，並流覽至_working\templates_資料夾。
@@ -47,7 +47,7 @@ working
 
 ## <a name="modify-programcs"></a>修改 Program.cs
 
-開啟 _program.cs_ 檔案。 該主控台專案不會使用非同步進入點，因次讓我們來加入它。 將程式碼變更為下列程式碼，然後儲存檔案：
+開啟 _program.cs_ 檔案。 該主控台專案不會使用非同步進入點，因次讓我們來加入它。 將您的程式碼變更為下列，並儲存檔案。
 
 ```csharp
 using System;
@@ -85,14 +85,21 @@ namespace consoleasync
 
 ## <a name="build-the-project"></a>建置專案
 
-在您完成專案範本之前，您應該測試它以確保其能正確編譯及執行。 在終端機中執行 `dotnet run` 命令，您應該會看見下列輸出：
+在您完成專案範本之前，您應該測試它以確保其能正確編譯及執行。
+
+在您的終端機中，執行下列命令。
+
+```dotnetcli
+dotnet run
+```
+
+您會取得下列輸出。
 
 ```console
-C:\working\templates\consoleasync> dotnet run
 Hello World with C# 8.0!
 ```
 
-您可以將使用 `dotnet run` 所建立的 _obj_ 和 _bin_ 資料夾刪除。 刪除這些檔案能確保您的範本只會包含與範本相關的檔案，而不會包含因建置動作而產生的任何檔案。
+您可以將使用 _所建立的_obj_和_bin`dotnet run` 資料夾刪除。 刪除這些檔案能確保您的範本只會包含與範本相關的檔案，而不會包含因建置動作而產生的任何檔案。
 
 您已經建立範本的內容，現在您需要在範本的根資料夾建立範本設定。
 
@@ -102,7 +109,7 @@ Hello World with C# 8.0!
 
 當您建立範本時，範本資料夾中的所有檔案和資料夾都會包含為範本的一部分，除了特殊設定資料夾之外。 此設定資料夾名為 _.template.config_。
 
-首先，建立名為 _.template.config_ 的新子資料夾，然後進入它。 然後，建立名為 _template.json_ 的新檔案。 您的資料夾結構看起來應該像這樣：
+首先，建立名為 _.template.config_ 的新子資料夾，然後進入它。 然後，建立名為 _template.json_ 的新檔案。 您的資料夾結構看起來應該像這樣。
 
 ```console
 working
@@ -112,7 +119,7 @@ working
                 template.json
 ```
 
-使用您慣用的文字編輯器開啟 _template.json_，然後貼上下列 JSON 程式碼並儲存它：
+使用您慣用的文字編輯器開啟_範本_，並貼上下列 json 程式碼並加以儲存。
 
 ```json
 {
@@ -129,16 +136,21 @@ working
 }
 ```
 
-此設定檔會包含您範本的所有設定。 您可以看見基本設定 (例如 `name` 和 `shortName`)，但還有設定為 `project` 的 `tags/type` 值。 這會將您的範本指定為專案範本。 您可以建立的範本類型本身並無限制。 `item` 和 `project` 值是 .NET Core 建議的常用名稱，它們可以讓使用者輕鬆篩選其想要尋找的範本類型。
+此設定檔會包含您範本的所有設定。 您可以看見基本設定 (例如 `name` 和 `shortName`)，但還有設定為 `tags/type` 的 `project` 值。 這會將您的範本指定為專案範本。 您可以建立的範本類型本身並無限制。 `item` 和 `project` 值是 .NET Core 建議的常用名稱，它們可以讓使用者輕鬆篩選其想要尋找的範本類型。
 
-`classifications` 項目代表您執行 `dotnet new` 並取得範本清單時所會看見的 [標籤] 欄。 使用者也可以根據分類標籤搜尋。 不要將 JSON 檔案中的 `tags` 屬性與 `classifications` 標籤清單混淆在一起。 它們是不同的東西，但不幸地具有類似的名稱。 *template.json* 檔案的完整結構描述位於 [JSON 結構描述存放區](http://json.schemastore.org/template)。 如需 *template.json* 檔案的詳細資訊，請參閱 [dotnet 範本化 Wiki](https://github.com/dotnet/templating/wiki) \(英文\)。
+`classifications` 項目代表您執行  **並取得範本清單時所會看見的 [標籤]** `dotnet new` 欄。 使用者也可以根據分類標籤搜尋。 不要將 JSON 檔案中的 `tags` 屬性與 `classifications` 標籤清單混淆在一起。 它們是不同的東西，但不幸地具有類似的名稱。 *template.json* 檔案的完整結構描述位於 [JSON 結構描述存放區](http://json.schemastore.org/template)。 如需 *template.json* 檔案的詳細資訊，請參閱 [dotnet 範本化 Wiki](https://github.com/dotnet/templating/wiki) \(英文\)。
 
-您已經具備有效的 _.template.config/template.json_ 檔案，現在您的範本已經準備好並可供安裝。 在您安裝範本之前，請確定您已將不想要包含在範本中的所有額外檔案資料夾和檔案刪除，例如 _bin_ 或 _obj_ 資料夾。 在您的終端機中，瀏覽至 _consoleasync_ 資料夾，並執行 `dotnet new -i .\` 以安裝位於目前資料夾中的範本。 如果您是使用 Linux 或 MacOS 作業系統，請使用正斜線：`dotnet new -i ./`。
+您已經具備有效的 _.template.config/template.json_ 檔案，現在您的範本已經準備好並可供安裝。 在您安裝範本之前，請確定您已將不想要包含在範本中的所有額外檔案資料夾和檔案刪除，例如 _bin_ 或 _obj_ 資料夾。 在您的終端機中，瀏覽至 _consoleasync_ 資料夾，並執行 `dotnet new -i .\` 以安裝位於目前資料夾中的範本。 如果您使用的是 Linux 或 macOS 作業系統，請使用正斜線： `dotnet new -i ./`。
 
 此命令會輸出已安裝範本的清單，其中應該會包含您的範本。
 
+```dotnetcli
+dotnet new -i .\
+```
+
+您會取得如下所示的輸出。
+
 ```console
-C:\working\templates\consoleasync> dotnet new -i .\
 Usage: new [options]
 
 Options:
@@ -159,26 +171,47 @@ Worker Service                                    worker                [C#]    
 
 ### <a name="test-the-project-template"></a>測試專案範本
 
-您已經安裝項目範本，現在請測試它。 瀏覽至 _test_ 資料夾並使用 `dotnet new consoleasync` 建立新的主控台應用程式。 這會產生工作專案，其可讓您使用 `dotnet run` 命令輕鬆地進行測試。
+您已經安裝項目範本，現在請測試它。
 
-```console
-C:\test> dotnet new consoleasync
-The template "Example templates: async project" was created successfully.
-```
+1. 流覽至_測試_資料夾
 
-```console
-C:\test> dotnet run
-Hello World with C# 8.0!
-```
+1. 使用下列命令建立新的主控台應用程式，以產生可使用 `dotnet run` 命令輕鬆測試的工作專案。
 
-恭喜您！ 您已透過 .NET Core 建立並部署專案範本。 為了針對此教學課程系列的下一部份做準備，您必須將您所建立的範本解除安裝。 同時，請務必刪除 _test_ 資料夾中的所有檔案。 這能讓您回到最原始的狀態，並準備好進行此教學課程的下一個主要區段。
+    ```dotnetcli
+    dotnet new consoleasync
+    ```
+
+    您會取得下列輸出。
+
+    ```console
+    The template "Example templates: async project" was created successfully.
+    ```
+
+1. 使用下列命令執行專案。
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    您會取得下列輸出。
+
+    ```console
+    Hello World with C# 8.0!
+    ```
+
+恭喜！ 您已透過 .NET Core 建立並部署專案範本。 為了針對此教學課程系列的下一部份做準備，您必須將您所建立的範本解除安裝。 同時，請務必刪除 _test_ 資料夾中的所有檔案。 這能讓您回到最原始的狀態，並準備好進行此教學課程的下一個主要區段。
 
 ### <a name="uninstall-the-template"></a>解除安裝範本
 
 由於您是依檔案路徑來安裝範本，您必須使用**絕對**檔案路徑來將它解除安裝。 您可以透過執行 `dotnet new -u` 命令來查看已安裝範本的清單。 您的範本應該會被列在最後。 使用列出的路徑來搭配 `dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` 命令將您的範本解除安裝。
 
+```dotnetcli
+dotnet new -u
+```
+
+您會取得如下所示的輸出。
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -206,8 +239,10 @@ Currently installed items:
       Example templates: async project (consoleasync) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\consoleasync
+若要卸載範本，請執行下列命令。
+
+```dotnetcli
+dotnet new -u C:\working\templates\consoleasync
 ```
 
 ## <a name="next-steps"></a>後續步驟

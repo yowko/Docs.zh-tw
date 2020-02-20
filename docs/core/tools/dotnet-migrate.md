@@ -1,17 +1,17 @@
 ---
 title: dotnet migrate 命令
 description: dotnet migrate 命令會移轉專案及其所有相依性。
-ms.date: 01/07/2020
-ms.openlocfilehash: b81669d3e4cffeaf10bea39639410d5f06579d84
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 6148048c469c43320cc4459352fd2fb62f101740
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734149"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503705"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**本文適用于：** ✔️ .net CORE 1.x sdk ✔️ .net CORE 2.x sdk
+**本文適用于：** ✔️ .net CORE 2.x SDK
 
 ## <a name="name"></a>名稱
 
@@ -56,7 +56,7 @@ dotnet migrate [-h|--help]
 
 如果未指定，則預設值是目前的目錄。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 `--format-report-file-json <REPORT_FILE>`
 
