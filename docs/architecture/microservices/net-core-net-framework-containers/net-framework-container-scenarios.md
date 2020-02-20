@@ -1,13 +1,13 @@
 ---
 title: 針對 Docker 容器選擇 .NET Framework 的時機
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對 Docker 容器選擇 .NET Framework 的時機
-ms.date: 01/07/2019
-ms.openlocfilehash: e60572f33bda93663080b9d2e3504f0987b8483e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: dfb1e8883fc9c3d9235672bc2885858bfb64afa5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899708"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501966"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>針對 Docker 容器選擇 .NET Framework 的時機
 
@@ -21,31 +21,29 @@ ms.locfileid: "75899708"
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>使用不適用於 .NET Core 的協力廠商 .NET 程式庫或 NuGet 套件
 
-協力廠商程式庫會快速採行 [.NET Standard](../../../standard/net-standard.md)，以跨所有 .NET 類別 (包含 .NET Core) 共用程式碼。 使用 .NET Standard 程式庫 2.0 和更新版本，跨不同架構的 API 介面相容性已明顯變好，而且在 .NET Core 2.x 中，應用程式也可以直接參考現有 .NET Framework 程式庫 (請參閱 [.NET Framework 4.6.1 supporting .NET Standard 2.0](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20))。
+協力廠商程式庫會快速採用[.NET Standard](../../../standard/net-standard.md)，讓您可以跨所有 .net 類別（包括 .net Core）共用程式碼。 使用 .NET Standard 2.0 和更新版本，跨不同架構的 API 介面相容性已變得更大。 更多的是，.NET Core 2.x 和更新版本的應用程式也可以直接參考現有的 .NET Framework 程式庫（請參閱[支援 .NET Standard 2.0 的 .NET Framework 4.6.1](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#net-framework-461-supporting-net-standard-20)）。
 
-此外，在 2017 年 11 月已發行 [Windows 相容性套件](../../../core/porting/windows-compat-pack.md)以擴充在 Windows 上的 .NET Standard 2.0 適用的 API 介面。 透過此套件，只需要些許修改甚至不需修改，大部分的現有程式碼即可重新編譯為 .NET Standard 2.x，以在 Windows 上執行。
+此外， [Windows 相容性套件](../../../core/porting/windows-compat-pack.md)延伸了適用于 windows 上 .NET Standard 2.0 的 API 介面。 透過此套件，只需要些許修改甚至不需修改，大部分的現有程式碼即可重新編譯為 .NET Standard 2.x，以在 Windows 上執行。
 
 不過，即使自 .NET Standard 2.0 和 .NET Core 2.1 開始有該例外進展，仍然可能有特定 NuGet 套件需要執行 Windows 而且可能不支援 .NET Core 的情況。 如果這些套件對您的應用程式十分重要，則需要在 Windows 容器上使用 .NET Framework。
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>使用不適用於 .NET Core 的 .NET 技術
 
-部分 .NET Framework 技術在最新版本的 .NET Core (撰寫本文時為 2.2 版) 中未提供。 這其中有一些可在更新的 .NET Core 版本 (.NET Core 2.x) 中使用，但其他則不適用於 .NET Core 設為目標的新應用程式模式，而且可能永遠無法使用。
+目前的 .NET Core 版本（本文撰寫時的3.1 版）並未提供部分 .NET Framework 技術。 其中有些可能會在較新版本中推出，但有些則不符合 .NET Core 的目標應用程式模式，而且可能永遠無法使用。
 
-下列清單顯示 .NET Core 2.x 中未提供的大部分技術：
+下列清單顯示 .NET Core 3.1 中未提供的大部分技術：
 
 - ASP.NET Web Form。 只有在 .NET Framework 上才能使用這項技術。 目前並未規劃將 ASP.NET Web Form 帶入 .NET Core。
 
-- WCF 服務。 即使有 [WCF-Client 程式庫](https://github.com/dotnet/wcf)可從 .NET Core 使用 WCF 服務，但截至 2017 年中，WCF 伺服器實作還是只能在 .NET Framework 上進行。 此案例有可能在未來的 .NET Core 版本中納入，此外也有某些 API 可望在 [Windows 相容性套件](../../../core/porting/windows-compat-pack.md)中納入。
+- WCF 服務。 即使[Wcf 用戶端程式庫](https://github.com/dotnet/wcf)可從 .net CORE 取用 wcf 服務，從2月-2020 開始，wcf 伺服器的執行僅適用于 .NET Framework。 此案例有可能在未來的 .NET Core 版本中納入，此外也有某些 API 可望在 [Windows 相容性套件](../../../core/porting/windows-compat-pack.md)中納入。
 
 - 工作流程相關服務。 Windows Workflow Foundation (WF)、工作流程服務 (WCF + 單一服務中的 WF) 和 WCF Data Services (先前稱為 ADO.NET Data Services) 僅適用於 .NET Framework。 目前未計劃將它們帶到 .NET Core。
 
-除了正式 [.NET Core 藍圖](https://github.com/dotnet/aspnetcore/wiki/Roadmap)中所列的技術之外，也可能會將其他功能移植至 .NET Core。 如需完整清單，請查看 CoreFX GitHub 網站上標記為 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的項目。 請注意，這份清單並不代表 Microsoft 承諾要將這些元件帶入 .NET Core - 這些項目只是擷取社群的要求。 如果您關心上方所列的任何元件，請考慮參與 GitHub 上的討論，讓我們可以聽到您的心聲。 如果您認為缺少了什麼，請[在執行時間存放庫中提出新的問題](https://github.com/dotnet/runtime/issues/new)。
+除了官方[.Net core 藍圖](https://github.com/dotnet/core/blob/master/roadmap.md)中所列的技術之外，其他功能可能會移植到 .net core 或新的[統一 .net 平臺](https://devblogs.microsoft.com/dotnet/introducing-net-5/)。 您可以考慮參與 GitHub 上的討論，以便聽到您的聲音。 如果您認為缺少了什麼，請在[dotnet/runtime](https://github.com/dotnet/runtime/issues/new) GitHub 存放庫中提出新的問題。
 
-即使 .NET Core 3 (在撰寫本文時正在籌備中) 將納入許多現有 .NET Framework API 的支援，但這些支援視桌面而定，因此目前在容器的領域中並無實際效用。
+## <a name="using-a-platform-or-api-that-doesnt-support-net-core"></a>使用不支援 .NET Core 的平臺或 API
 
-## <a name="using-a-platform-or-api-that-does-not-support-net-core"></a>使用不支援 .NET Core 的平台或 API
-
-某些 Microsoft 或協力廠商平台不支援 .NET Core。 例如，部分 Azure 服務提供尚無法在 .NET Core 上使用的 SDK。 這是暫時性的，因為所有 Azure 服務最終都會使用 .NET Core。 例如，[Azure DocumentDB SDK for .NET Core](https://www.nuget.org/packages/Microsoft.Azure.DocumentDB.Core) 已在 2016 年 11 月 16 日發行為預覽版，但現在已公開上市 (GA) 為穩定版本。
+有些 Microsoft 和協力廠商平臺不支援 .NET Core。 例如，有些 Azure 服務提供的 SDK 尚無法在 .NET Core 上使用。 大部分的 Azure SDK 最後應該會移植到 .NET Core/Standard，但有些可能會因為各種原因而不會。 您可以在[AZURE SDK 最新版本](https://azure.github.io/azure-sdk/releases/latest/index.html)頁面中查看可用的 azure sdk。
 
 同時，如果 Azure 中的任何平台或服務仍然不支援 .NET Core 與其用戶端 API，您可以在 .NET Framework 上使用 Azure 服務或用戶端 SDK 中的對等 REST API。
 

@@ -2,18 +2,17 @@
 title: 關於 .NET 微服務和 Web 應用程式中的授權
 description: .NET 微服務和 Web 應用程式中的安全性 - 取得 ASP.NET Core 應用程式中主要授權選項 (以角色為基礎和以原則為基礎) 的概觀。
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 36cd8eaf7ffe78a29762398044dc1803adc1b200
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.date: 01/30/2020
+ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675655"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501771"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>關於 .NET 微服務和 Web 應用程式中的授權
 
-在驗證之後，ASP.NET Core Web API 需要授與存取權。 這個程序允許服務向某些已驗證的使用者提供 API，但不是所有使用者。 [授權](/aspnet/core/security/authorization/introduction)可以根據使用者的角色或自訂原則來完成，這可能包含檢查宣告或其他啟發學習法。
+在驗證之後，ASP.NET Core Web API 需要授與存取權。 這個程序允許服務讓 API 可供某些已驗證的使用者使用，而不是所有使用者都可使用。 [授權](/aspnet/core/security/authorization/introduction)可以根據使用者的角色或自訂原則來完成，這可能包含檢查宣告或其他啟發學習法。
 
 限制對 ASP.NET Core MVC 路由的存取，就像將 Authorize 屬性套用至動作方法一樣簡單 (或套用至控制器類別，如果所有控制器動作都需要授權)，如下例所示：
 
@@ -69,9 +68,9 @@ public ActionResult API1 ()
 
 在本例中，若要呼叫 API1，使用者必須：
 
-- 為系統管理員或  PowerUser 角色，且 
+- 為系統管理員或 PowerUser 角色，且
 
-- 為 RemoteEmployee 角色，「並」 
+- 為 RemoteEmployee 角色，「並」
 
 - 滿足 CustomPolicy 授權的自訂處理常式。
 
@@ -86,8 +85,10 @@ services.AddAuthorization(options =>
 {
     options.AddPolicy("AdministratorsOnly", policy =>
         policy.RequireRole("Administrator"));
+
     options.AddPolicy("EmployeesOnly", policy =>
         policy.RequireClaim("EmployeeNumber"));
+
     options.AddPolicy("Over21", policy =>
         policy.Requirements.Add(new MinimumAgeRequirement(21)));
 });

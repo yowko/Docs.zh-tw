@@ -2,14 +2,13 @@
 title: 使用 Azure Key Vault 以在生產階段保護密碼
 description: .NET 微服務和 Web 應用程式中的安全性 - Azure Key Vault 是可讓系統管理員完全掌控應用程式祕密處理的絕佳方式。 系統管理員甚至可以指派和撤銷開發值，而不需要開發人員來處理它們。
 author: mjrousos
-ms.author: wiwagn
-ms.date: 10/19/2018
-ms.openlocfilehash: 4d121f584188c5d5fa9ddf0d91bea5e107eff0cb
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: cc95d491136c945255408cec2bd49d4d6579e29a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899662"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501759"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>使用 Azure Key Vault 在生產階段保護祕密
 
@@ -28,12 +27,12 @@ ms.locfileid: "75899662"
    Set-AzKeyVaultAccessPolicy -VaultName "<VaultName>" -ServicePrincipalName $sp.ServicePrincipalNames[0] -PermissionsToSecrets all -ResourceGroupName "<KeyVault Resource Group>"
    ```
 
-3. 在建立 <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> 執行個體時呼叫 <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> 擴充方法，以包含金鑰保存庫作為應用程式中的設定來源。 請注意，呼叫 `AddAzureKeyVault` 時需要已註冊並提供先前步驟中金鑰保存庫存取權的應用程式識別碼。
+3. 在建立 <xref:Microsoft.Extensions.Configuration.AzureKeyVaultConfigurationExtensions.AddAzureKeyVault%2A?displayProperty=nameWithType> 執行個體時呼叫 <xref:Microsoft.Extensions.Configuration.IConfigurationRoot> 擴充方法，以包含金鑰保存庫作為應用程式中的設定來源。 請注意，呼叫 `AddAzureKeyVault` 時需要已註冊並提供先前步驟中金鑰保存庫存取權的應用程式識別碼。
 
-   您也可以藉由包含 [Microsoft.IdentityModel.Clients.ActiveDirectory](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) 套件的參考，使用採用憑證來取代用戶端祕密的 `AddAzureKeyVault` 多載。
+   您也可以藉由包含 `AddAzureKeyVault`Microsoft.IdentityModel.Clients.ActiveDirectory[ 套件的參考，使用採用憑證來取代用戶端祕密的 ](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory) 多載。
 
 > [!IMPORTANT]
-> 建議您將 Azure Key Vault 註冊為最新的設定提供者，如此它才能覆寫先前提供者的設定值。
+> 我們建議您註冊 Azure Key Vault 做為最後的設定提供者，因此它可以覆寫先前提供者的設定值。
 
 ## <a name="additional-resources"></a>其他資源
 

@@ -1,13 +1,13 @@
 ---
 title: Docker 術語
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 術語
-ms.date: 01/07/2019
-ms.openlocfilehash: 33f2918df5b63cc4bd54ddb84900c6bd91e9f77e
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921011"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502830"
 ---
 # <a name="docker-terminology"></a>Docker 術語
 
@@ -31,7 +31,7 @@ ms.locfileid: "76921011"
 
 **登錄**：提供存放庫存取權的服務。 大多數公用映像的預設登錄是 [Docker Hub](https://hub.docker.com/) (以組織形式為 Docker 所擁有）。 登錄通常會包含來自多個小組的存放庫。 公司通常會有私人登錄來儲存及管理其所建立的映像。 Azure Container Registry 是另一個範例。
 
-**多架構映射**：針對多結構，這項功能可簡化適當映射的選取專案，根據 docker 執行所在的平臺，例如當 Dockerfile 向登錄要求**來自 mcr.microsoft.com/dotnet/core/sdk:2.2**的基底映射時，它實際上會取得**2.2-sdk-nanoserver-1709**、 **2.2-sdk-nanoserver-1803**、 **2.2-sdk-nanoserver-1809**或**2.2-sdk-延展**，視執行 docker 的作業系統和版本而定。
+**多架構映射**：針對多結構，這項功能可根據 Docker 執行所在的平臺，簡化適當映射的選取。 例如，當 Dockerfile 從登錄要求**mcr.microsoft.com/dotnet/core/sdk:3.1**的基底映射時，它實際上會取得**3.1-sdk-nanoserver-1909**、 **3.1-sdk-nanoserver-1809**或**3.1-sdk-buster-超薄**，視執行 Docker 的作業系統和版本而定。
 
 **Docker Hub**：上傳並使用映像的公開登錄。 Docker Hub 提供 Docker 映像裝載、公開或私人登錄、組建觸發程序和 Webhook，以及與 GitHub 和 Bitbucket 的整合。
 

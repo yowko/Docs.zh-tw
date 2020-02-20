@@ -1,13 +1,13 @@
 ---
 title: 測試 ASP.NET Core 服務和 Web 應用程式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索在容器中用於測試 ASP.NET Core 服務和 Web 應用程式的架構。
-ms.date: 10/02/2018
-ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739464"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501975"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>測試 ASP.NET Core 服務和 Web 應用程式
 
@@ -68,7 +68,7 @@ public async Task Get_order_detail_success()
 
 因為整合測試會執行比單元測試大的程式碼區段，且整合測試會依賴基礎結構項目，所以它們的速度通常和單元測試相比，會呈數量級地變慢。 因此，最好限制您撰寫和執行多少整合測試。
 
-ASP.NET Core 包括內建測試 Web 主機，它可以用來處理 HTTP 要求而不會有網路額外負荷，這表示，您執行這些測試的速度可以比使用真實 Web 主機時更快。 測試 Web 主機 (TestServer) 可透過 Microsoft.AspNetCore.TestHost NuGet 元件取得。 它可以新增至整合測試專案，並用於裝載 ASP.NET Core 應用程式。
+ASP.NET Core 包含內建的測試 web 主機，可以用來處理 HTTP 要求，而不會有網路額外負荷，這表示您可以比使用實際的 web 主機更快執行這些測試。 測試 Web 主機 (TestServer) 可透過 Microsoft.AspNetCore.TestHost NuGet 元件取得。 它可以新增至整合測試專案，並用於裝載 ASP.NET Core 應用程式。
 
 您可以在下列程式碼中看到，當您建立 ASP.NET Core 控制器的整合測試時，您會透過測試主機將控制器具現化。 這相當於 HTTP 要求，但執行速度較快。
 
@@ -140,8 +140,6 @@ compose 應用程式啟動且執行之後，如果您正在執行 Visual Studio�
 
 3. **應用程式功能/整合測試**，著重于微服務整合，並具有會進行數個微服務的測試案例。 這些測試位於 **Application.FunctionalTests** 專案中。
 
-4. **負載測試**，著重于每個微服務的回應時間。 這些測試位於 **LoadTest** 專案中，且需要 Visual Studio 2017 Enterprise Edition。
-
 每個微服務的單元測試和整合測試都包含在每個微服務和應用程式中測試資料夾中。負載測試則包含在解決方案資料夾中的測試資料夾中，如圖 6-25 所示。
 
 ![VS 的螢幕擷取畫面，指出方案中的部分測試專案。](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
@@ -160,9 +158,9 @@ services:
     image: redis:alpine
   rabbitmq:
     image: rabbitmq:3-management-alpine
-  sql.data:
-    image: microsoft/mssql-server-linux:2017-latest
-  nosql.data:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+  nosqldata:
     image: mongo
 ```
 
@@ -179,13 +177,13 @@ services:
     ports:
       - "15672:15672"
       - "5672:5672"
-  sql.data:
+  sqldata:
     environment:
       - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
     ports:
       - "5433:1433"
-  nosql.data:
+  nosqldata:
     ports:
       - "27017:27017"
 ```

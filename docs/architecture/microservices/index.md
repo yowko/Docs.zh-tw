@@ -1,19 +1,19 @@
 ---
 title: .NET 微服務。 容器化 .NET 應用程式的架構
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是模組化的獨立可部署服務。 適用於 Linux 與 Windows 的 Docker 容器，可統合服務及其相依性到單一個單位，簡化部署及測試，然後即可於隔離的環境中執行。
-ms.date: 01/07/2019
-ms.openlocfilehash: 7fa4935fe56ca873a5311812637964083e34170e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089902"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502644"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務：容器化 .NET 應用程式的架構
 
 ![書籍封面](./media/cover-small.png)
 
-**版本 v2.2** - 更新至 ASP.NET Core 2.2
+**版本 3.1** -更新為 ASP.NET Core 3。1
 
 本指南介紹如何開發微服務應用程式及使用容器進行管理， 並討論使用 .NET Core 和 Docker 容器的架構設計和實作方法。
 
@@ -47,7 +47,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 ## <a name="version"></a>版本
 
-本指南已經過修訂，涵蓋了 **.NET Core 2.2** 版，加上許多和 .NET Core 2.2 同時期， 同一波科技「浪潮」相關的更新 (亦即 Azure 加上其他第三方技術)。 這也是同步將書籍版本更新為 **2.2** 版的原因。
+本指南已經過修訂，以涵蓋 **.Net core 3.1**版本，以及與 .net core 3.1 版 coinciding 的相同「wave」技術（也就是 Azure 和其他協力廠商技術）相關的許多其他更新。 這就是為什麼書籍版本也已更新至**3.1**版的原因。
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵蓋的內容
 
@@ -64,7 +64,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 
 如果您是技術決策者 (例如企業架構師)，想概括了解架構和技術，再決定要選取哪個方法以用於新的現代化分散式應用程式，您也會發現本指南很實用。
 
-### <a name="how-to-use-this-guide"></a>如何使用本指南
+### <a name="how-to-use-this-guide"></a>本指南的使用方式
 
 本指南的第一部分介紹 Docker 容器、討論如何在 .NET Core 和 .NET Framework 之間選擇開發架構，並提供微服務概觀。 此內容適用於需要概觀但重點不在程式碼實作詳細資料的架構師和技術決策者。
 
@@ -82,7 +82,7 @@ eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考
 
 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
 
-## <a name="credits"></a>參與名單
+## <a name="credits"></a>學分
 
 共同作者：
 
@@ -146,9 +146,9 @@ eShopOnContainers 應用程式是 .NET Core 和微服務的開放原始碼參考
 >
 > **Charles Lowell**，Microsoft VS CAT 小組軟體工程師
 >
-> **Miguel Veloso**，Sr. 圖靈挑戰顧問
+> 以一般概念**Miguel veloso turing challenge**軟體發展工程師
 
-## <a name="copyright"></a>Copyright
+## <a name="copyright"></a>著作權
 
 下載：<https://aka.ms/microservicesebook>
 
@@ -162,13 +162,13 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2019 by Microsoft Corporation
+Microsoft Corporation 的著作權©2020
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
 
 本書是以「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路網站參考) 可能會隨時變更，恕不另行通知。
 
-此處所描述的一些範例僅供說明，純屬虛構。 任何實際關聯或連結純屬巧合。
+此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。
 
 Microsoft 與列於 <https://www.microsoft.com> 「商標」網頁的商標是 Microsoft 集團的商標。
 
@@ -179,4 +179,4 @@ Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 所有其他商標和標誌屬於其各自擁有者的財產。
 
 >[!div class="step-by-step"]
->[下一步](container-docker-introduction/index.md)
+>[下一個](container-docker-introduction/index.md)

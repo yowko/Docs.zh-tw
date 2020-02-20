@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 3b1409fbb924638f0148c74a678d482aeb732357
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: a18b4dfc60c7d3971136f73f333b7225735710b3
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449438"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503953"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -546,7 +546,7 @@ DDD 牽涉到投資模型、架構和通訊，這對較小型的應用程式，�
 
 ## <a name="deployment"></a>部署
 
-不論應用程式的裝載位置，部署 ASP.NET Core 應用程式的程序都包含幾個步驟。 第一個步驟是發佈應用程式，可透過 dotnet publish CLI 命令來完成。 這會編譯應用程式，並將執行應用程式所需的所有檔案都放在指定的資料夾中。 當您從 Visual Studio 部署時，則會自動為您執行此步驟。 publish 資料夾包含應用程式及其相依性的 .exe 和 .dll 檔案。 獨立應用程式還會包含 .NET 執行階段版本。 ASP.NET Core 應用程式也會包含組態檔、靜態用戶端資產和 MVC 檢視。
+不論應用程式的裝載位置，部署 ASP.NET Core 應用程式的程序都包含幾個步驟。 第一個步驟是發佈應用程式，您可以使用 `dotnet publish` CLI 命令來完成此作業。 這會編譯應用程式，並將執行應用程式所需的所有檔案都放在指定的資料夾中。 當您從 Visual Studio 部署時，則會自動為您執行此步驟。 publish 資料夾包含應用程式及其相依性的 .exe 和 .dll 檔案。 獨立應用程式還會包含 .NET 執行階段版本。 ASP.NET Core 應用程式也會包含組態檔、靜態用戶端資產和 MVC 檢視。
 
 ASP.NET Core 應用程式是主控台應用程式，必須在伺服器開機時啟動，並在應用程式 (或伺服器) 損毀時重新啟動。 您可以使用處理序管理員來自動化此程序。 ASP.NET Core 最常見的處理序管理員是 Linux 上的 Nginx 和 Apache，以及 Windows 上的 IIS 或 Windows 服務。
 

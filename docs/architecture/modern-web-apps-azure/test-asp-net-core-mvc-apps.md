@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: d83f7fca10aed6301c170b7b6c5651da6f02be08
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449357"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503941"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
@@ -70,7 +70,7 @@ Martin Fowler 撰寫了測試金字塔相關事項，其中的一個範例如圖
 
 **圖 9-2**： 方案中的測試組織
 
-您可以使用您偏好的任何測試架構。 xUnit 架構運作良好，且用來寫入所有的 ASP.NET Core 和 EF Core 測試。 您可以使用圖 9-3 中的範本，或使用 dotnet new xunit 的 CLI，在 Visual Studio 中新增 xUnit 測試專案。
+您可以使用您偏好的任何測試架構。 xUnit 架構運作良好，且用來寫入所有的 ASP.NET Core 和 EF Core 測試。 您可以使用 [圖 9-3] 所示的範本，或使用 `dotnet new xunit`的 CLI，在 Visual Studio 中新增 xUnit 測試專案。
 
 ![在 Visual Studio 中新增 xUnit 測試專案](./media/image9-3.png)
 

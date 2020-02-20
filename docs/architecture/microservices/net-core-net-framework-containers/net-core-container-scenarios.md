@@ -1,13 +1,13 @@
 ---
 title: 選擇在 Docker 容器使用 .NET Core 的時機
 description: 適用於容器化 .NET 應用程式的.NET 微服務架構 | 選擇在 Docker 容器使用 .NET Core 的時機
-ms.date: 09/11/2018
-ms.openlocfilehash: d17b6b7620f485f09f8f18ac792418a48ae40037
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 01/30/2020
+ms.openlocfilehash: b3cb1eefe739b4ffdbbdd0bdcb3c74b51862704b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920985"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501853"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>選擇在 Docker 容器使用 .NET Core 的時機
 
@@ -35,11 +35,11 @@ ms.locfileid: "76920985"
 
 儘管容器也可以用來將 Web 應用程式或服務裝入容器中 (遵循任何架構模式)，但通常會與微服務架構搭配使用。 .NET Framework 可用於 Windows 容器，但 .NET Core 的模組性和輕量性質使其更適合容器和微服務架構。 建立和部署容器時，使用 .NET Core 時的映像大小，會遠小於使用 .NET Framework 時的大小。
 
-## <a name="creating-and-deploying-microservices-on-containers"></a>在容器上建立及部署微服務
+## <a name="create-and-deploy-microservices-on-containers"></a>在容器上建立及部署微服務
 
-您可以透過一般處理序，使用傳統的.NET Framework 來建置微服務型應用程式 (不含容器)。 如此一來，因為.NET Framework 已跨處理序安裝和共用，處理序即為輕量的，而且可快速啟動。 不過，如果您使用容器，傳統 .NET Framework 的映像也會以 Windows Server Core 為基礎，而這對於容器上的微服務方法而言過於沉重。
+您可以透過一般處理序，使用傳統的.NET Framework 來建置微服務型應用程式 (不含容器)。 如此一來，因為.NET Framework 已跨處理序安裝和共用，處理序即為輕量的，而且可快速啟動。 不過，如果您使用容器，傳統 .NET Framework 的映像也會以 Windows Server Core 為基礎，而這對於容器上的微服務方法而言過於沉重。 不過，小組也已經尋求提升 .NET Framework 使用者體驗的機會。 最近， [Windows Server Core 容器映射的大小已縮減為 > 40%](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller)。 
 
-相較之下，如果您使用以容器基礎的微服務導向系統，.NET Core 會是最佳選項，因為 .NET Core 是輕量的。 此外，其相關的容器映像 (無論是 Linux 映像或 Windows Nano 映像) 都很精簡、小型，使容器負荷低、可快速啟動。
+另一方面，如果您採用以容器為基礎的微服務導向系統，則 .NET Core 是最佳選擇，因為 .NET Core 很輕量。 此外，其相關的容器映射（無論是 Linux 或 Windows Nano Server）都是精簡且小型的，讓容器變得輕輕鬆又快速啟動。
 
 微服務意味著儘可能愈小愈好：在啟動時負荷極低、佔用空間小、限定環境小、只需要投注一小部分心力 (檢查 DDD，[網域驅動設計](https://en.wikipedia.org/wiki/Domain-driven_design))，而且能夠快速啟動和停止。 基於這些需求，您會需要使用小型且可快速具現化的容器映像，如 .NET Core 容器映像。
 

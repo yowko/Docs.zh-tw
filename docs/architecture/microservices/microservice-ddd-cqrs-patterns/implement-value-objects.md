@@ -1,13 +1,13 @@
 ---
 title: 實作值物件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 深入了解使用新 Entity Framework 功能實作值物件的詳細資料與選項。
-ms.date: 10/08/2018
-ms.openlocfilehash: 70c92fe86fda20ed4e909b945b843e8e71092f09
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.date: 01/30/2020
+ms.openlocfilehash: 4ace5c141b1cbd2dcfefb7ea7165a4006b130479
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899779"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502505"
 ---
 # <a name="implement-value-objects"></a>實作值物件
 
@@ -131,13 +131,13 @@ public class Address : ValueObject
 
 您可以看到此 Address 的值物件實作沒有身分識別，因此在 Address 類別，甚至是 ValueObject 類別也沒有識別碼欄位。
 
-類別中不能沒有識別碼欄位供 Entity Framework 使用，直到 EF Core 2.0 出現，才讓沒有識別碼的值物件實作過程變得順利許多。 這正是下一節的說明。
+在 EF Core 2.0 之前，不可能在 Entity Framework （EF）所使用的類別中有 ID 欄位，這可大幅協助您不使用識別碼來執行更好的值物件。 這正是下一節的說明。
 
-有人認為值物件 (不可變) 應為唯讀 (亦即 get-only 屬性)，而實際上正是如此。 然而，值物件通常會經過序列化及還原序列化以通過訊息佇列，而且會是唯讀的，讓還原序列化程式停止指派值，因而能停留在剛好夠用的唯讀私人集合狀態。
+它可以有人認為值物件（不可變）應為唯讀（也就是具有僅限取得屬性），這的確是真的。 然而，值物件通常會經過序列化及還原序列化以通過訊息佇列，而且會是唯讀的，讓還原序列化程式停止指派值，因而能停留在剛好夠用的唯讀私人集合狀態。
 
-## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20"></a>如何在使用 EF Core 2.0 的資料庫中保存值物件
+## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>如何在具有 EF Core 2.0 和更新版本的資料庫中保存值物件
 
-您只看到如何在您的網域模型中定義值物件。 但您如何透過通常以身分識別鎖定實體的 Entity Framework (EF) Core，在資料庫中真正保存它？
+您只看到如何在您的網域模型中定義值物件。 但是，您要如何使用 Entity Framework Core 來實際將它保存在資料庫中，因為它通常是以身分識別的實體為目標？
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>使用 EF Core 1.1 的背景和較舊的方法
 
@@ -160,11 +160,11 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 
 不過，該值物件保存在資料庫中，就像是不同資料表中的一般實體。
 
-EF Core 2.0 有更好的新方法保存值物件。
+在 EF Core 2.0 和更新版本中，有新的和更好的方法可以保存值物件。
 
-## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20"></a>EF Core 2.0 將值物件保存為擁有的實體類型
+## <a name="persist-value-objects-as-owned-entity-types-in-ef-core-20-and-later"></a>在 EF Core 2.0 和更新版本中，將值物件保存為擁有的實體類型
 
-雖然 DDD 標準值物件模式與 EF Core 擁有的實體類型之間仍有距離，但這是目前使用 EF Core 2.0 保存值物件的最佳方式。 本節結尾會列出限制。
+即使 DDD 中的標準值物件模式與 EF Core 中的自有實體類型之間有一些差距，它目前是使用 EF Core 2.0 和更新版本來保存值物件的最佳方式。 本節結尾會列出限制。
 
 EF Core 從 2.0 版開始新增擁有的實體類型功能。
 
@@ -178,7 +178,7 @@ EF Core 從 2.0 版開始新增擁有的實體類型功能。
 
 - 指向它們的導覽屬性
 
-- 如果是自有類型的集合，則為獨立元件 (EF Core 2.0 尚不支援，即將於 2.2 推出)。
+- 如果是擁有的類型集合，則為獨立元件（EF Core 2.2 和更新版本中支援）。
 
 例如，在 eShopOnContainers 的訂購網域模型中，屬於訂單實體的一部分，Address 值物件在擁有者實體內實作為擁有的實體類型，也就是訂單實體。 Address 是網域模型中未定義任何身分識別屬性的類型。 它用做訂單類型的屬性，指定特定訂單的送貨地址。
 
@@ -238,7 +238,7 @@ orderConfiguration.OwnsOne(p => p.Address)
                             .Property(p=>p.City).HasColumnName("ShippingCity");
 ```
 
-可在 fluent 對應中鏈結 `OwnsOne` 方法。 在下列假設性的範例中，`OrderDetails` 擁有 `BillingAddress` 和 `ShippingAddress`，它們兩個都是 `Address` 類型。 然後 `Order` 類型擁有 `OrderDetails`。
+您可以在流暢的對應中，將 `OwnsOne` 方法鏈在一起。 在下列假設性的範例中，`OrderDetails` 擁有 `BillingAddress` 和 `ShippingAddress`，它們兩個都是 `Address` 類型。 然後 `OrderDetails` 類型擁有 `Order`。
 
 ```csharp
 orderConfiguration.OwnsOne(p => p.OrderDetails, cb =>
@@ -275,7 +275,7 @@ public class Address
 
 - 在我們的堆疊中，自有類型執行個體的身分識別 (金鑰) 是由擁有者類型的身分識別及自有類型的定義所組成。
 
-#### <a name="owned-entities-capabilities"></a>擁有的實體的功能：
+#### <a name="owned-entities-capabilities"></a>擁有的實體功能
 
 - 自有類型可以參考其他實體，可以是自有 (巢狀自有類型) 或非自有 (對其他實體的一般參考導覽屬性)。
 
@@ -283,27 +283,27 @@ public class Address
 
 - 資料表分割會按慣例設定，但您可以選擇不這麼做，而使用 ToTable 將自有類型對應至不同的資料表。
 
-- 積極式載入會自動在自有類型上執行，亦即不需要對查詢呼叫 Include()。
+- 積極式載入會自動在自有的類型上執行，也就是說，不需要在查詢上呼叫 `.Include()`。
 
-- 到 EF Core 2.1 為止，可使用屬性 \[Owned\] 來設定
+- 可以使用 EF Core 2.1 和更新版本的屬性 `[Owned]`進行設定。
 
-#### <a name="owned-entities-limitations"></a>擁有的實體的限制：
+- 可以處理擁有類型的集合（使用2.2 版和更新版本）。
 
-- 您無法建立自有類型的 DbSet\<T\> (特意設計)。
+#### <a name="owned-entities-limitations"></a>擁有的實體限制
 
-- 您無法在自有類型上呼叫 ModelBuilder.Entity\<T\>() (目前特意設計)。
+- 您無法建立擁有類型的 `DbSet<T>` （根據設計）。
 
-- 尚無任何自有類型的集合 (到 EF Core 2.1 為止，但 2.2 後的版本會予以支援)。
+- 您無法在擁有的類型上呼叫 `ModelBuilder.Entity<T>()` （目前為設計）。
 
-- 不支援選擇性 (亦即可為 null) 的自有類型，其在相同的資料表中與擁有者對應 (亦即使用資料表分割)。 這是因為對應會分別為各個屬性執行，而我們沒有整體 null 複雜值的個別防衛單位。
+- 不支援選擇性（也就是可為 null）擁有與相同資料表中的擁有者對應的類型（也就是使用資料表分割）。 這是因為對應會分別為各個屬性執行，而我們沒有整體 null 複雜值的個別防衛單位。
 
 - 不支援自有類型的繼承對應，但您應該能夠將兩種同一繼承階層的分葉類型當成不同的自有類型對應。 EF Core 不會推論出它們屬於同一階層的事實。
 
 #### <a name="main-differences-with-ef6s-complex-types"></a>EF6 複雜類型的主要差異
 
-- 資料表分割為選擇性，亦即其可以選擇性地對應至不同的資料表，但仍為自有類型。
+- 資料表分割是選擇性的，也就是說，它們可以選擇性地對應至不同的資料表，而且仍然是擁有的類型。
 
-- 它們可以參考其他實體 (也就是可在其他非自有類型的關聯性中當作相依端)。
+- 它們可以參考其他實體（也就是，它們可以做為其他非擁有類型之關聯性的相依端）。
 
 ## <a name="additional-resources"></a>其他資源
 
@@ -316,8 +316,11 @@ public class Address
 - **Vaughn Vernon。執行領域驅動設計。** (書籍；包含值物件的探討) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
+- **擁有的實體類型** \
+  <https://docs.microsoft.com/ef/core/modeling/owned-entities>
+
 - **陰影屬性** \
-  [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
+  <https://docs.microsoft.com/ef/core/modeling/shadow-properties>
 
 - **複雜類型和/或值物件**。 EF Core GitHub 存放庫 ([問題] 索引標籤) 的探討 \
   <https://github.com/dotnet/efcore/issues/246>

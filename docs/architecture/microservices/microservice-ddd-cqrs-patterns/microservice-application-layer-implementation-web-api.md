@@ -1,13 +1,13 @@
 ---
 title: 使用 Web API 實作微服務應用程式層
-description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解相依性插入和中繼程序模式，以及它們在 Web API 應用程式層的實作詳細資料。
-ms.date: 10/08/2018
-ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+description: 瞭解相依性插入和中繼程式模式，以及其在 Web API 應用層中的執行詳細資料。
+ms.date: 01/30/2020
+ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "73737496"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502439"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -92,11 +92,9 @@ public void ConfigureServices(IServiceCollection services)
 {
     // Register out-of-the-box framework services.
     services.AddDbContext<CatalogContext>(c =>
-    {
-        c.UseSqlServer(Configuration["ConnectionString"]);
-    },
-    ServiceLifetime.Scoped
-    );
+        c.UseSqlServer(Configuration["ConnectionString"]),
+        ServiceLifetime.Scoped);
+
     services.AddMvc();
     // Register custom application dependencies.
     services.AddScoped<IMyCustomRepository, MyCustomSQLRepository>();
@@ -289,7 +287,7 @@ public class CreateOrderCommand
 
 作為其他特性，命令是不可變的，因為預期的用法是領域模型會直接處理它們。 它們在其預測存留期間不需要變更。 在 C# 類別中，沒有任何 setter 或變更內部狀態的其他方法，可以達到不變性。
 
-請記住，如果您打算或希望讓命令經過序列化/還原序列化程序，則屬性必須具有私用 setter 和 `[DataMember]` (或 `[JsonProperty]`) 屬性，否則還原序列化程式無法在目的地使用必要值重新建構物件。
+請記住，如果您想要或預期命令會通過序列化/還原序列化程式，則屬性必須具有私用 setter 和 `[DataMember]` （或 `[JsonProperty]`）屬性。 否則，還原序列化將無法在目的地以必要的值重建物件。 如果類別有一個具有所有屬性參數的函式，而且具有一般的 camelCase 命名慣例，則您也可以使用真正的唯讀屬性，並以 `[JsonConstructor]`的方式標注該函數。 不過，此選項需要更多程式碼。
 
 例如，建立訂單的命令類別可能類似您想要建立之訂單的資料，但您可能不需要相同的屬性。 例如，`CreateOrderCommand` 沒有訂單識別碼，因為尚未建立訂單。
 
@@ -315,7 +313,7 @@ public class UpdateOrderStatusCommand
 
 ### <a name="the-command-handler-class"></a>命令處理常式類別
 
-您應該為每個命令實作特定命令處理常式類別。 這是模式運作方式，而且它是您將在其中使用命令物件、領域物件和基礎結構存放庫物件的位置。 命令處理常式實際上是 CQRS 和 DDD 的應用程式層中心。 不過，所有領域邏輯都應該包含在領域類別內，即彙總根 (根實體)、子實體或[領域服務](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)內，但不在本身為應用程式層中類別的命令處理常式內。
+您應該為每個命令實作特定命令處理常式類別。 這就是模式的運作方式，而且您將使用命令物件、網域物件和基礎結構存放庫物件。 命令處理常式實際上是 CQRS 和 DDD 的應用程式層中心。 不過，所有領域邏輯都應該包含在網域類別中，包括在匯總根（根實體）、子實體或[網域服務](https://lostechies.com/jimmybogard/2008/08/21/services-in-domain-driven-design/)中，而不是在命令處理常式內，這是來自應用層的類別。
 
 命令處理常式類別提供強式的墊腳石來達成前節中所述的單一職責原則 (SRP)。
 
@@ -435,7 +433,7 @@ public class CreateOrderCommandHandler
 
 使用中繼程序模式的合理原因是，在企業應用程式中，處理要求會變得複雜。 您想要可以新增已開啟數目的跨領域關注，例如記錄、驗證、稽核和安全性。 在這些情況下，您可以依賴中繼程序管道 (請參閱[中繼程序模式](https://en.wikipedia.org/wiki/Mediator_pattern)) 提供這些額外行為或跨領域關注的方法。
 
-中繼程序是封裝此處理序「作法」的物件：它會根據狀態、命令處理常式叫用方式或您提供給處理常式的承載來協調執行。 使用中繼程序元件，即可套用裝飾項目 (或自 [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0) 以來的[管道行為](https://github.com/jbogard/MediatR/wiki/Behaviors))，以透過集中且透明的方式套用跨領域關注。 如需詳細資訊，請參閱[裝飾項目模式](https://en.wikipedia.org/wiki/Decorator_pattern)。
+中繼程序是封裝此處理序「作法」的物件：它會根據狀態、命令處理常式叫用方式或您提供給處理常式的承載來協調執行。 使用中繼程序元件，即可套用裝飾項目 (或自 [MediatR 3](https://github.com/jbogard/MediatR/wiki/Behaviors) 以來的[管道行為](https://www.nuget.org/packages/MediatR/3.0.0))，以透過集中且透明的方式套用跨領域關注。 如需詳細資訊，請參閱[裝飾項目模式](https://en.wikipedia.org/wiki/Decorator_pattern)。
 
 裝飾項目和行為類似[層面導向程式設計 (AOP)](https://en.wikipedia.org/wiki/Aspect-oriented_programming)，僅套用至中繼程序元件所管理的特定處理序管線。 根據在編譯期間插入的「層面編織程序」或根據物件呼叫攔截，套用 AOP 中實作跨領域關注的層面。 這兩種典型 AOP 方法的運作有時稱為「就像變魔術一樣」，因為不容易看到 AOP 的運作工作。 處理嚴重問題或 Bug 時，AOP 很難進行偵錯。 另一方面，這些裝飾項目/行為十分明確，而且只會套用至中繼程序內容，因此，偵錯更容易預測且更為輕鬆。
 
@@ -592,7 +590,7 @@ public class IdentifiedCommandHandler<T, R> :
 }
 ```
 
-因為 IdentifiedCommand 就像是商務命令的信封，所以因不是重複識別碼而需要處理商務命令時，會採用該內部商務命令，並在從 [IdentifiedCommandHandler.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) 執行 `_mediator.Send(message.Command)` 時，將它重新提交給中繼程序，如同上述程式碼的最後一個部分。
+因為 IdentifiedCommand 就像是商務命令的信封，所以因不是重複識別碼而需要處理商務命令時，會採用該內部商務命令，並在從 `_mediator.Send(message.Command)`IdentifiedCommandHandler.cs[ 執行 ](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/IdentifiedCommandHandler.cs) 時，將它重新提交給中繼程序，如同上述程式碼的最後一個部分。
 
 這樣一來，它會連結並執行商務命令處理常式，在本例中，是對 Ordering 資料庫執行交易的 [ CreateOrderCommandHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Commands/CreateOrderCommandHandler.cs)，如下列程式碼所示。
 
@@ -668,7 +666,7 @@ public class MediatorModule : Autofac.Module
 
 這是 MediatR 顯現魔力的地方。
 
-因為每個命令處理常式都會實作泛型 `IAsyncRequestHandler<T>` 介面，所以註冊組件時，程式碼會使用 `RegisteredAssemblyTypes` 註冊所有標記為 `IAsyncRequestHandler` 的類型，同時基於 `CommandHandler` 類別所指出的關聯性而建立 `CommandHandlers` 與其 `Commands` 的關聯，如下列範例所示：
+因為每個命令處理常式都會實作泛型 `IAsyncRequestHandler<T>` 介面，所以註冊組件時，程式碼會使用 `RegisteredAssemblyTypes` 註冊所有標記為 `IAsyncRequestHandler` 的類型，同時基於 `CommandHandlers` 類別所指出的關聯性而建立 `Commands` 與其 `CommandHandler` 的關聯，如下列範例所示：
 
 ```csharp
 public class CreateOrderCommandHandler
@@ -728,7 +726,7 @@ public class LoggingBehavior<TRequest, TResponse>
 
 只要實作此行為類別，以及在管線 (上文的 MediatorModule) 中登錄它，透過 MediatR 處理的所有命令都會記錄執行相關資訊。
 
-eShopOnContainers 訂購微服務也會套用第二個行為來進行基本驗證，即依賴 [FluentValidation](https://github.com/JeremySkinner/FluentValidation) 程式庫的 [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) 類別，如下列程式碼所示：
+eShopOnContainers 訂購微服務也會套用第二個行為來進行基本驗證，即依賴 [FluentValidation](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs) 程式庫的 [ValidatorBehavior](https://github.com/JeremySkinner/FluentValidation) 類別，如下列程式碼所示：
 
 ```csharp
 public class ValidatorBehavior<TRequest, TResponse>

@@ -1,13 +1,13 @@
 ---
 title: 設計微服務領域模型
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解設計 DDD 導向領域模型時的重要概念。
-ms.date: 10/08/2018
-ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737378"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502326"
 ---
 # <a name="design-a-microservice-domain-model"></a>設計微服務領域模型
 
@@ -74,9 +74,9 @@ Eric Evans 提到，「許多物件沒有概念性身分識別。 這些物件�
 
 具有名字和姓氏的一個人通常是一個實體，因為這個人具有身分識別，即使名字和姓氏與另一組值相同亦然，例如若這些姓名同時指向不同的人。
 
-值物件在關聯式資料庫和 EF 等 ORM 中很難管理，但在文件導向資料庫中則更容易實作和使用。
+值物件在關係資料庫和 Orm （例如 Entity Framework （EF））中很難管理，而在檔導向資料庫中，它們比較容易執行和使用。
 
-EF Core 2.0 包含[擁有的實體](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)功能，可更輕鬆地處理值物件，我們將於稍後看到詳細的說明。
+EF Core 2.0 和更新版本包含[擁有的實體](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)功能，可讓您更輕鬆地處理值物件，如我們稍後會詳細說明。
 
 #### <a name="additional-resources"></a>其他資源
 

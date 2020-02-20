@@ -1,15 +1,15 @@
 ---
 title: 協調微服務和多容器應用程式的高延展性和可用性
 description: 探索協調微服務和多容器應用程式之高延展性和可用性的各種選項，以及開發 Kubernetes 應用程式生命週期時使用 Azure Dev Spaces 的可能性。
-ms.date: 09/20/2018
-ms.openlocfilehash: 3915e6386e66d40bedc92368bfbcda81790c6923
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 01/30/2020
+ms.openlocfilehash: f9e91d3958e2d567e68257c377f76cc3c2325a0b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090149"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502988"
 ---
-# <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
+# <a name="orchestrate-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
 如果您的應用程式是以微服務為基礎或分散於多個容器，您就必須為適用於生產環境的應用程式使用協調器。 如之前所介紹，以微服務為基礎的方法中，每個微服務都擁有自己的模型和資料，因此從開發和部署的角度來看，它是非常自主的。 但是，即使您擁有的是由多個服務組成的傳統應用程式 (例如 SOA)，您也會使用多個容器或服務來組成單一商務應用程式，而這些項目都必須部署為分散式系統。 向外延展和管理這類系統非常的複雜；因此，如果您想要擁有一個適用於生產環境且可延展的多容器應用程式，就一定要使用協調器。
 
@@ -72,9 +72,9 @@ Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放�
 
 隨附於 AKS 預設安裝的軟體均不會收取任何費用。 所有預設選項都是使用開放原始碼軟體來實作。 AKS 可供 Azure 中的多部虛擬機器使用。 您僅需支付所選計算執行個體的費用，以及其他已使用的基礎結構資源費用，例如儲存體和網路功能。 AKS 本身沒有任何累加的費用。
 
-如需根據 kubectl 和原始 .yaml 檔案部署到 Kubernetes 的進一步實作資訊，請參閱[在 AKS (Azure Kubernetes Service) 中設定 eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.-Setting-the-solution-up-in-AKS-(Azure-Kubernetes-Service)) 上的文章。
+Kubernetes 的預設生產環境部署選項是使用 Helm 圖表，這會在下一節中引進。
 
-## <a name="deploying-with-helm-charts-into-kubernetes-clusters"></a>使用 Helm 圖表部署到 Kubernetes 叢集中
+## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>使用 Helm 圖表部署到 Kubernetes 叢集中
 
 將應用程式部署到 Kubernetes 叢集時，您可以搭配採用原生格式的部署檔案 (.yaml 檔案) 使用原始 kubectl.exe CLI 工具，如上一節中所述。 不過，對於更複雜的 Kubernetes 應用程式 (例如部署複雜的微服務應用程式時)，則建議使用 [Helm](https://helm.sh/)。
 
@@ -84,15 +84,15 @@ Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放�
 
 Helm 是由 [Cloud Native Computing Foundation (CNCF)](https://www.cncf.io/) 以及 Microsoft、Google、Bitnami 和 Helm 參與者社群共同維護。
 
-如需 Helm 圖表和 Kubernetes 的進一步實作資訊，請參閱[使用 Helm 圖表將 eShopOnContainers 部署到 AKS](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Deploying-to-AKS-using-Helm-Charts) 上的文章。
+如需有關 Helm 圖表和 Kubernetes 的更多執行資訊，請參閱[使用 Helm 圖表部署 eShopOnContainers 至 AKS](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Deploy-to-Azure-Kubernetes-Service-(AKS))文章。
 
 ## <a name="use-azure-dev-spaces-for-your-kubernetes-application-lifecycle"></a>在您的 Kubernetes 應用程式生命週期中使用 Azure Dev Spaces
 
-[Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) 為小組提供快速的 Kubernetes 反覆開發體驗。 只要最少的開發電腦設定，您就可以直接在 Azure Kubernetes Service (AKS) 中反覆執行並偵錯容器。 使用 Visual Studio、Visual Studio Code 或命令列等熟悉的工具，在 Windows、Mac 或 Linux 上進行開發。
+[Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces) 為小組提供快速的 Kubernetes 反覆開發體驗。 只需最基本的開發人員機器設定，您即可直接在 Azure Kubernetes Service (AKS) 中反覆執行和偵錯容器。 在 Windows、Mac 或 Linux 上使用熟悉的工具 (例如 Visual Studio、Visual Studio Code 或命令列) 進行開發。
 
 如前所述，Azure Dev Spaces 在部署容器型應用程式時使用 Helm 圖表。
 
-Azure Dev Spaces 可協助開發小組在 Kubernetes 上更具生產力，因為它讓您只要使用 Visual Studio 2017 或 Visual Studio Code，就能夠直接在 Azure 的全域 Kubernetes 叢集中快速逐一查看並偵錯程式碼。 Azure 中的 Kubernetes 叢集是共用的受控 Kubernetes 叢集，讓您的小組可以共同合作。 您可以在隔離的狀況下開發程式碼，然後部署到全域叢集並使用其他元件進行端對端測試，不需要複寫或模擬相依性。
+Azure Dev Spaces 可協助開發小組在 Kubernetes 上更具生產力，因為它可讓您直接在 Azure 中的全域 Kubernetes 叢集中快速逐一查看程式碼並加以調試，只要使用 Visual Studio 2019 或 Visual Studio Code 即可。 Azure 中的 Kubernetes 叢集是共用的受控 Kubernetes 叢集，讓您的小組可以共同合作。 您可以在隔離的狀況下開發程式碼，然後部署到全域叢集並使用其他元件進行端對端測試，不需要複寫或模擬相依性。
 
 如圖 4-26 所示，Azure Dev Spaces 中最與眾不同的功能，就是能夠建立與叢集中全域部署其餘部分整合的執行「空間」。
 
@@ -100,13 +100,13 @@ Azure Dev Spaces 可協助開發小組在 Kubernetes 上更具生產力，因為
 
 **圖 4-26**。 在 Azure Dev Spaces 中使用多個空間
 
-基本上，您可以在 Azure 中設定共用的開發空間。 每位開發人員可以只專注於他們的應用程式部分，並可以在已包含其案例所依存之所有其他服務和雲端資源的開發空間中，反覆開發預先認可程式碼。 相依性一律保持最新狀態，而開發人員會以鏡像處理生產環境的方式工作。
+基本上，您可以在 Azure 中設定共用的開發空間。 每位開發人員可以只專注於他們的應用程式部分，並可以在已包含其案例所依存之所有其他服務和雲端資源的開發空間中，反覆開發預先認可程式碼。 相依性會永遠保持最新狀態，且開發人員會以能反映生產環境的方式工作。
 
 Azure Dev Spaces 提供空間概念，讓您能夠在相對隔離的狀況下工作，不用擔心中斷您小組的工作。 每個開發空間都是階層式結構的一部分，可讓您從最上層的主開發空間，使用您自己的微服務半成品覆寫一個 (或多個) 微服務。
 
 這項功能是以 URL 前置詞作為基礎，因此在 URL 中使用任何開發空間前置詞時，如果該前置詞存在於開發空間中，目標微服務就會提供要求，否則便會往上轉送到階層中所能找到的第一個目標微服務執行個體，最終則會送到最上層的主開發空間。
 
-您可以查看 [Azure Dev Spaces 上的 eShopOnContainers Wiki 頁面](https://github.com/dotnet-architecture/eShopOnContainers/wiki/10.1-Using-Azure-Dev-Spaces-and-AKS)，以取得具體範例的實用觀點。
+若要取得具體範例的實際觀點，請參閱[Azure Dev Spaces 上的 eShopOnContainers wiki 頁面](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Azure-Dev-Spaces)。
 
 如需進一步資訊，請參閱[使用 Azure Dev Spaces 進行小組開發](https://docs.microsoft.com/azure/dev-spaces/team-development-netcore)一文。
 

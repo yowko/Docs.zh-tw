@@ -1,13 +1,13 @@
 ---
 title: 微服務架構中的通訊
 description: 探索微服務之間的不同通訊方式，並了解同步和非同步方式的影響。
-ms.date: 09/20/2018
-ms.openlocfilehash: 7bd45e0b8f8ea3330cf8d2b613e54111cc72f14f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.date: 01/30/2020
+ms.openlocfilehash: f2d6e78966bb7d5f481de6db0ab1dcfe2812a1b5
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966983"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503307"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>微服務架構中的通訊
 
@@ -61,7 +61,7 @@ ms.locfileid: "73966983"
 
 最後 (這是建置微服務時大部分問題發生的時候)，如果您初始的微服務需要使用原本由其他微服務擁有的資料時，請避免對該資料提出同步要求。 反之，請使用最終一致性 (通常使用整合事件來進行，如接下來的章節中所述)，將該資料 (僅所需的屬性) 複製或散佈到初始服務的資料庫中。
 
-如[識別每個微服務的領域模型界限](identify-microservice-domain-model-boundaries.md)一節中所述，在數個微服務之間複製某些資料的設計是可行的；這麼做可讓您將資料轉譯到特定語言、其他領域或繫結內容。 例如，在 [eShopOnContainers 應用程式](https://github.com/dotnet-architecture/eShopOnContainers)中，您有一個名為 identity.api 的微服務，其負責處理大多數的使用者資料 (含有「使用者」名稱的實體)。 不過，當您要儲存訂購微服務中的使用者相關資料時，請將它儲存為不同的實體，並命名為「買方」。 「買方」實體與原始「使用者」實體會共用相同的識別，但訂購網域可能只需要幾個屬性，而不是整個使用者設定檔。
+如先前在[識別每個微服務的網域模型界限](identify-microservice-domain-model-boundaries.md)一節中所述，在數個微服務之間複製某些資料並不是不正確的設計，相反地，您可以將資料轉譯成特定語言或該其他網域或系結內容的詞彙。 比方說，在[eShopOnContainers 應用程式](https://github.com/dotnet-architecture/eShopOnContainers)中，您有一個名為 `identity-api` 的微服務，其負責處理實體名為 `User`的大部分使用者資料。 不過，當您需要在 `Ordering` 微服務中儲存使用者的相關資料時，您會將它儲存為名為 `Buyer`的不同實體。 `Buyer` 實體與原始 `User` 實體共用相同的身分識別，但它可能只有 `Ordering` 網域所需的幾個屬性，而不是整個使用者設定檔。
 
 您可以使用任何通訊協定來進行通訊，並以非同步方式跨微服務散佈資料，來保持最終一致性。 如前所述，您可以使用事件匯流排或訊息代理程式來運用整合事件；甚至還可以改輪詢其他服務來使用 HTTP。 它並不重要。 重要的規則是不要讓微服務之間建立同步相依性。
 

@@ -1,13 +1,13 @@
 ---
 title: 容器化整合型應用程式
 description: 容器化整合型應用程式雖然無法從微服務架構獲得所有好處，但可立即提供重要部署優勢。
-ms.date: 09/20/2018
-ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 0e6f7504a91d2b1a89193471746168fc34f50956
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737981"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503267"
 ---
 # <a name="containerizing-monolithic-applications"></a>容器化整合型應用程式
 
@@ -61,7 +61,7 @@ ms.locfileid: "73737981"
 
 ![顯示容器登錄的 [建立 App Service] 對話方塊的螢幕擷取畫面。](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
-**圖 4-4**： 將單一容器應用程式從 Visual Studio 發行至 Azure App Service
+**圖 4-4**： 將單一容器應用程式發佈至 Visual Studio 2019 中的 Azure App Service
 
 之前沒有 Docker 時，如果您需要 Azure App Service 不支援的其他功能、架構或相依性，您必須等到 Azure 小組更新 App Service 中的這些相依性。 或者，您必須切換至其他服務 (例如 Azure 雲端服務或 VM)，才能進一步控制並可安裝應用程式的必要元件或架構。
 

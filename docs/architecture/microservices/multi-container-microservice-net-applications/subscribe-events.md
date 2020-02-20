@@ -1,19 +1,19 @@
 ---
 title: 訂閱事件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解發佈及訂閱整合事件的詳細資料。
-ms.date: 10/02/2018
-ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.date: 01/30/2020
+ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937151"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501803"
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
 使用事件匯流排的第一個步驟是訂閱所要接收之事件的微服務。 這應該在接收者微服務中完成。
 
-下列簡單程式碼顯示每個接收者微服務在啟動服務時必須實作的項目 (也就是在 `Startup` 類別中)，以便訂閱所需的事件。 在本例中，`basket.api` 微服務需要訂閱 `ProductPriceChangedIntegrationEvent` 和 `OrderStartedIntegrationEvent` 訊息。
+下列簡單程式碼顯示每個接收者微服務在啟動服務時必須實作的項目 (也就是在 `Startup` 類別中)，以便訂閱所需的事件。 在本例中，`basket-api` 微服務需要訂閱 `ProductPriceChangedIntegrationEvent` 和 `OrderStartedIntegrationEvent` 訊息。
 
 例如，訂閱 `ProductPriceChangedIntegrationEvent` 事件時，可讓購物籃微服務注意到產品價格的任何變更，並在使用者的購物籃中有該項產品時，警告使用者有此變更。
 
@@ -87,7 +87,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 在本例中，由於來源微服務是簡單的 CRUD 微服務，因此該程式碼會直接放在 Web API 控制器中。
 
-在更進階的微服務中，例如使用 CQRS 方法時，它可以在 `Handle()` 方法的 `CommandHandler` 類別中實作。
+在更進階的微服務中，例如使用 CQRS 方法時，它可以在 `CommandHandler` 方法的 `Handle()` 類別中實作。
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>設計發行至事件匯流排時的不可部分完成性和復原
 
@@ -95,7 +95,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 基本上，您可以使用微服務來建置可擴充且高度可用的系統。 簡單來說，CAP 定理指出您無法建置持續可用、極為一致「且」容許任何分割的 (分散式) 資料庫 (或擁有自己模型的微服務)。 您必須從這三個屬性中選擇兩個。
 
-在微服務架構中，您應該選擇可用性和容錯，而且您應該不要強調強式一致性。 因此，在大多數現代化微服務架構應用程式中，您通常不想要在傳訊中使用分散式交易 (就像是使用 [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 實作以 Windows Distributed Transaction Coordinator (DTC) 為基礎的[分散式交易](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))時一樣)。
+在微服務架構中，您應該選擇可用性和容錯，而且您應該不要強調強式一致性。 因此，在大多數現代化微服務架構應用程式中，您通常不想要在傳訊中使用分散式交易 (就像是使用 [MSMQ](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) 實作以 Windows Distributed Transaction Coordinator (DTC) 為基礎的[分散式交易](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx)時一樣)。
 
 讓我們回到一開始的問題及其範例。 如果服務損毀發生在更新資料庫之後 (在本例中會是具有 \_context.SaveChangesAsync() 的程式碼行之後)，但在發行整合事件之前，整體系統可能會變成不一致。 視您正在處理的特定商務作業而定，這可能具商務關鍵性。
 
@@ -301,7 +301,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
-- **遵循訊息冪等**  
+- 遵守**message 等冪性** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>刪除重複的整合事件訊息
@@ -338,7 +338,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **最終一致性** \
-    [https://en.wikipedia.org/wiki/Eventual\_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+    <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Philip 棕色。整合限定內容 \ 的策略**
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
@@ -359,7 +359,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **CAP 定理** \
-    [https://en.wikipedia.org/wiki/CAP\_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+    <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **什麼是 CAP 定理？** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
@@ -377,7 +377,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **可靠性指南** (RabbitMQ 文件) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
+    <https://www.rabbitmq.com/reliability.html#consumer>
 
 > [!div class="step-by-step"]
 > [上一頁](rabbitmq-event-bus-development-test-environment.md)

@@ -1,26 +1,24 @@
 ---
 title: 使用 Ocelot 實作 API 閘道
 description: 了解如何使用 Ocelot 實作 API 閘道，並了解如何在以容器為基礎的環境中使用 Ocelot。
-ms.date: 10/02/2018
-ms.openlocfilehash: c0bcd240b6bd190dd02266c7faaf9fd668eb23bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: 0eb834829a418cfa1ccdf13c5fc8849f6855c4ba
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777299"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502421"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>使用 Ocelot 實作 API 閘道
 
-參考微服務應用程式[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)使用[Ocelot](https://github.com/ThreeMammals/Ocelot)，這是一種簡單且輕量的 API 閘道，您可以在任何地方與您的微服務/容器一起部署，例如在 eShopOnContainers 所使用的下列任何環境中：
-
-- 您本機開發電腦、內部部署或雲端中的 Docker 主機。
-- 內部部署或受控雲端 (例如 Azure Kubernetes Service (AKS)) 中的 Kubernetes 叢集。
-- 內部部署或雲端中的 Service Fabric 叢集。
-- 在 Azure 中以 PaaS/無伺服器形式提供的 Service Fabric 網格。
+> [!IMPORTANT]
+> 參考微服務應用程式[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)目前使用[Envoy](https://www.envoyproxy.io/)所提供的功能來執行 API 閘道，而不是先前參考的[Ocelot](https://github.com/ThreeMammals/Ocelot)。
+> 我們為此設計選擇，因為 Envoy 的內建支援 WebSocket 通訊協定，這是 eShopOnContainers 中實作為新 gRPC 服務間通訊所需的。
+> 不過，我們已將本節保留在指南中，因此您可以將 Ocelot 視為適用于生產等級案例的簡單、功能和輕量 API 閘道。
 
 ## <a name="architect-and-design-your-api-gateways"></a>架構及設計您的 API 閘道
 
-下列架構圖說明如何在 eShopOnContainers 中使用 Ocelot 實作 API 閘道。
+下列架構圖顯示如何在 eShopOnContainers 中使用 Ocelot 來實作為 API 閘道。
 
 ![顯示 eShopOnContainers 架構的圖表。](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture.png)
 
@@ -89,7 +87,7 @@ HTTP 要求最終會執行該類型的 C# 程式碼來存取微服務資料庫�
 關於微服務 URL，當容器部署在您的本機開發電腦（本機 Docker 主機）時，每個微服務的容器一律會在其 dockerfile 中指定內部埠（通常是埠80），如下列 dockerfile 所示：
 
 ```Dockerfile
-FROM microsoft/aspnetcore:2.0.5 AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 ```
@@ -105,7 +103,7 @@ EXPOSE 80
 以下是目錄微服務的 `docker-compose.override.yml` 檔案範例：
 
 ```yml
-catalog.api:
+catalog-api:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
     - ASPNETCORE_URLS=http://0.0.0.0:80
@@ -123,10 +121,10 @@ catalog.api:
 在您的本機 Docker 主機中執行目錄微服務。 請從 Visual Studio 執行完整的 eShopOnContainers 解決方案（它會執行 docker 撰寫檔案中的所有服務），或使用 CMD 或 PowerShell 中的下列 docker 撰寫命令，在放置 `docker-compose.yml` 和 `docker-compose.override.yml` 的資料夾中啟動目錄微服務。
 
 ```console
-docker-compose run --service-ports catalog.api
+docker-compose run --service-ports catalog-api
 ```
 
-此命令只會執行 catalog.api 服務容器及 docker-compose.yml 中指定的相依性。 在本例中為 SQL Server 容器和 RabbitMQ 容器。
+此命令只會執行目錄-api 服務容器，再加上 docker-compose.dev.debug.yml. yml 中指定的相依性。 在本例中為 SQL Server 容器和 RabbitMQ 容器。
 
 然後，您可以直接存取目錄微服務，並透過直接透過該「外部」埠存取的 Swagger UI 查看其方法，在此情況下 `http://localhost:5101/swagger`：
 
@@ -142,7 +140,7 @@ docker-compose run --service-ports catalog.api
 
 Ocelot 基本上是可依特定順序套用的一組中介軟體。
 
-Ocelot 設計成只能搭配 ASP.NET Core 使用。 它以 netstandard2.0 為目標，因此可用於支援 .NET Standard 2.0 的任何位置，包括 .NET Core 2.0 執行階段以及 .NET Framework 4.6.1 執行階段和更新版本。
+Ocelot 設計成只能搭配 ASP.NET Core 使用。 它是以 `netstandard2.0` 為目標，因此可以在支援 .NET Standard 2.0 的任何位置使用，包括 .NET Core 2.0 執行時間和 .NET Framework 4.6.1 執行時間，以及啟動。
 
 您可以從 Visual Studio 透過 [Ocelot 的 NuGet 套件](https://www.nuget.org/packages/Ocelot/)在 ASP.NET Core 專案中安裝 Ocelot 及其相依性。
 
@@ -186,7 +184,7 @@ namespace OcelotApiGw
 }
 ```
 
-對於 Ocelot 而言，此處的重點是您必須透過 `AddJsonFile()` 方法提供給產生器的 `configuration.json` 檔案。 該 `configuration.json` 是您指定所有 API 閘道重設路徑的位置，表示具有特定連接埠的外部端點及相互關聯的內部端點 (通常使用不同的連接埠)。
+對於 Ocelot 而言，此處的重點是您必須透過 `configuration.json` 方法提供給產生器的 `AddJsonFile()` 檔案。 該 `configuration.json` 是您指定所有 API 閘道重設路徑的位置，表示具有特定連接埠的外部端點及相互關聯的內部端點 (通常使用不同的連接埠)。
 
 ```json
 {
@@ -207,7 +205,7 @@ namespace OcelotApiGw
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalog.api",
+          "Host": "catalog-api",
           "Port": 80
         }
       ],
@@ -219,7 +217,7 @@ namespace OcelotApiGw
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -249,7 +247,7 @@ Ocelot API 閘道的主要功能是接受傳入 HTTP 要求並將其轉送到下
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -318,7 +316,7 @@ UpstreamPathTemplate 是 URL，可供 Ocelot 用來識別針對用戶端中的�
 mobileshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5200:80"
   volumes:
@@ -327,7 +325,7 @@ mobileshoppingapigw:
 mobilemarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5201:80"
   volumes:
@@ -336,7 +334,7 @@ mobilemarketingapigw:
 webshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5202:80"
   volumes:
@@ -345,7 +343,7 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5203:80"
   volumes:
@@ -362,13 +360,13 @@ webmarketingapigw:
 
 現在，如果您使用 API 閘道執行 eShopOnContainers （在開啟 Eshoponcontainers-servicesandwebapps.sln 方案或執行「docker-撰寫」時，VS 中預設包含），將會執行下列範例路由。
 
-例如，瀏覽 webshoppingapigw API 閘道所提供的上游 URL `http://localhost:5202/api/v1/c/catalog/items/2/` 時，您會從 Docker 主機的內部下游 URL `http://catalog.api/api/v1/2` 取得相同結果，如下列瀏覽器所示。
+例如，瀏覽 webshoppingapigw API 閘道所提供的上游 URL `http://localhost:5202/api/v1/c/catalog/items/2/` 時，您會從 Docker 主機的內部下游 URL `http://catalog-api/api/v1/2` 取得相同結果，如下列瀏覽器所示。
 
 ![瀏覽器的螢幕擷取畫面，其中顯示透過 API 閘道的回應。](./media/implement-api-gateways-with-ocelot/access-microservice-through-url.png)
 
 **圖 6-35**。 透過 API 閘道提供的 URL 存取微服務
 
-基於測試或偵錯原因，如果您想要直接存取目錄 Docker 容器 (僅限開發環境) 而不透過 API 閘道傳遞，由於 'catalog.api' 是 Docker 主機內部的 DNS 解析 (由 docker-compose 服務名稱處理的服務探索)，因此直接存取容器的唯一方式是透過 docker-compose.override.yml 中發佈的外部連接埠，這只會提供給開發測試，例如下列瀏覽器中的 `http://localhost:5101/api/v1/Catalog/items/1`。
+由於測試或調試因素的緣故，如果您想要直接存取目錄 Docker 容器（僅限開發環境），而不需要通過 API 閘道，由於「類別目錄-API」是 Docker 主機內部的 DNS 解析（由 docker 撰寫服務名稱來處理服務探索），直接存取容器的唯一方式是透過 docker-compose.dev.debug.yml 中發佈的外部埠。 yml，這僅供開發測試之用，例如在下列瀏覽器中 `http://localhost:5101/api/v1/Catalog/items/1`。
 
 ![瀏覽器的螢幕擷取畫面，其中顯示對目錄的直接回應。](./media/implement-api-gateways-with-ocelot/direct-access-microservice-testing.png)
 
@@ -426,7 +424,7 @@ webmarketingapigw:
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -522,7 +520,7 @@ services.AddAuthentication(options =>
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>使用 Kubernetes 輸入加上 Ocelot API 閘道
 
-使用 Kubernetes (例如 Azure Kubernetes Service 叢集) 時，您通常會透過以 *Nginx* 為基礎的 [Kuberentes 輸入層](https://kubernetes.io/docs/concepts/services-networking/ingress/) \(英文\) 來整合所有 HTTP 要求。
+使用 Kubernetes (例如 Azure Kubernetes Service 叢集) 時，您通常會透過以 [Nginx](https://kubernetes.io/docs/concepts/services-networking/ingress/) 為基礎的 *Kuberentes 輸入層* \(英文\) 來整合所有 HTTP 要求。
 
 在 Kubernetes 中，如果您未使用任何輸入方法，則您的服務和 pod 只能透過叢集網路路由 Ip。
 
