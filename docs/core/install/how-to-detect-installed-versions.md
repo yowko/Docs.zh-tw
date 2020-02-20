@@ -6,30 +6,34 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 8ce2710d71c56f182e936f898e25539bc50d3827
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341344"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503843"
 ---
-# <a name="how-to-check-that-net-core-is-already-installed"></a><span data-ttu-id="e85c6-104">如何檢查是否已安裝 .NET Core</span><span class="sxs-lookup"><span data-stu-id="e85c6-104">How to check that .NET Core is already installed</span></span>
+# <a name="how-to-check-that-net-core-is-already-installed"></a><span data-ttu-id="3c0ca-104">如何檢查是否已安裝 .NET Core</span><span class="sxs-lookup"><span data-stu-id="3c0ca-104">How to check that .NET Core is already installed</span></span>
 
-<span data-ttu-id="e85c6-105">本文會教您如何檢查電腦上已安裝的 .NET Core 執行時間和 SDK 版本。</span><span class="sxs-lookup"><span data-stu-id="e85c6-105">This article teaches you how to check which versions of the .NET Core runtime and SDK are installed on your computer.</span></span> <span data-ttu-id="e85c6-106">如果您有整合式開發環境（例如 Visual Studio 或 Visual Studio for Mac），則可能已經安裝 .NET core。</span><span class="sxs-lookup"><span data-stu-id="e85c6-106">.NET core may have already been installed if you have an integrated development environment, such as Visual Studio or Visual Studio for Mac.</span></span>
+<span data-ttu-id="3c0ca-105">本文會教您如何檢查電腦上已安裝的 .NET Core 執行時間和 SDK 版本。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-105">This article teaches you how to check which versions of the .NET Core runtime and SDK are installed on your computer.</span></span> <span data-ttu-id="3c0ca-106">如果您有整合式開發環境（例如 Visual Studio 或 Visual Studio for Mac），則可能已經安裝 .NET core。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-106">.NET core may have already been installed if you have an integrated development environment, such as Visual Studio or Visual Studio for Mac.</span></span>
 
-<span data-ttu-id="e85c6-107">安裝 SDK 會安裝對應的執行時間。</span><span class="sxs-lookup"><span data-stu-id="e85c6-107">Installing an SDK installs the corresponding runtime.</span></span>
+<span data-ttu-id="3c0ca-107">安裝 SDK 會安裝對應的執行時間。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-107">Installing an SDK installs the corresponding runtime.</span></span>
 
-<span data-ttu-id="e85c6-108">如果本文中有任何命令失敗，您就不會安裝執行時間或 SDK。</span><span class="sxs-lookup"><span data-stu-id="e85c6-108">If any command in this article fails, you don't have the runtime or SDK installed.</span></span> <span data-ttu-id="e85c6-109">如需詳細資訊，請參閱[下載並安裝 .Net Core](index.md)。</span><span class="sxs-lookup"><span data-stu-id="e85c6-109">For more information, see [Download and install .NET Core](index.md).</span></span>
+<span data-ttu-id="3c0ca-108">如果本文中有任何命令失敗，您就不會安裝執行時間或 SDK。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-108">If any command in this article fails, you don't have the runtime or SDK installed.</span></span> <span data-ttu-id="3c0ca-109">如需詳細資訊，請參閱[下載並安裝 .Net Core](index.md)。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-109">For more information, see [Download and install .NET Core](index.md).</span></span>
 
-## <a name="check-sdk-versions"></a><span data-ttu-id="e85c6-110">檢查 SDK 版本</span><span class="sxs-lookup"><span data-stu-id="e85c6-110">Check SDK versions</span></span>
+## <a name="check-sdk-versions"></a><span data-ttu-id="3c0ca-110">檢查 SDK 版本</span><span class="sxs-lookup"><span data-stu-id="3c0ca-110">Check SDK versions</span></span>
 
-<span data-ttu-id="e85c6-111">您可以查看目前已安裝終端機的 .NET Core SDK 版本。</span><span class="sxs-lookup"><span data-stu-id="e85c6-111">You can see which versions of the .NET Core SDK are currently installed with a terminal.</span></span> <span data-ttu-id="e85c6-112">開啟終端機並執行 `dotnet --list-sdks` 命令。</span><span class="sxs-lookup"><span data-stu-id="e85c6-112">Open a terminal and run the `dotnet --list-sdks` command.</span></span>
+<span data-ttu-id="3c0ca-111">您可以查看目前已安裝終端機的 .NET Core SDK 版本。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-111">You can see which versions of the .NET Core SDK are currently installed with a terminal.</span></span> <span data-ttu-id="3c0ca-112">開啟終端機並執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-112">Open a terminal and run the following command.</span></span>
+
+```dotnetcli
+dotnet --list-sdks
+```
+
+<span data-ttu-id="3c0ca-113">您會取得如下所示的輸出。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-113">You get output similar to the following.</span></span>
 
 ::: zone pivot="os-windows"
 
 ```console
-dotnet --list-sdks
-
 2.1.500 [C:\program files\dotnet\sdk]
 2.1.502 [C:\program files\dotnet\sdk]
 2.1.504 [C:\program files\dotnet\sdk]
@@ -45,8 +49,6 @@ dotnet --list-sdks
 ::: zone pivot="os-linux"
 
 ```bash
-dotnet --list-sdks
-
 2.1.500 [/home/user/dotnet/sdk]
 2.1.502 [/home/user/dotnet/sdk]
 2.1.504 [/home/user/dotnet/sdk]
@@ -62,8 +64,6 @@ dotnet --list-sdks
 ::: zone pivot="os-macos"
 
 ```bash
-dotnet --list-sdks
-
 2.1.500 [/usr/local/share/dotnet/sdk]
 2.1.502 [/usr/local/share/dotnet/sdk]
 2.1.504 [/usr/local/share/dotnet/sdk]
@@ -76,15 +76,19 @@ dotnet --list-sdks
 
 ::: zone-end
 
-## <a name="check-runtime-versions"></a><span data-ttu-id="e85c6-113">檢查執行階段版本</span><span class="sxs-lookup"><span data-stu-id="e85c6-113">Check runtime versions</span></span>
+## <a name="check-runtime-versions"></a><span data-ttu-id="3c0ca-114">檢查執行階段版本</span><span class="sxs-lookup"><span data-stu-id="3c0ca-114">Check runtime versions</span></span>
 
-<span data-ttu-id="e85c6-114">您可以看到目前使用 `dotnet --list-runtimes` 命令安裝了哪些版本的 .NET Core 執行時間。</span><span class="sxs-lookup"><span data-stu-id="e85c6-114">You can see which versions of the .NET Core runtime are currently installed with the `dotnet --list-runtimes` command.</span></span>
+<span data-ttu-id="3c0ca-115">您可以使用下列命令來查看目前安裝的 .NET Core 執行階段版本。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-115">You can see which versions of the .NET Core runtime are currently installed with the following command.</span></span>
+
+```dotnetcli
+dotnet --list-runtimes
+```
+
+<span data-ttu-id="3c0ca-116">您會取得如下所示的輸出。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-116">You get output similar to the following.</span></span>
 
 ::: zone pivot="os-windows"
 
 ```console
-dotnet --list-runtimes
-
 Microsoft.AspNetCore.All 2.1.7 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.2.0 [c:\program files\dotnet\shared\Microsoft.AspNetCore.All]
@@ -113,8 +117,6 @@ Microsoft.WindowsDesktop.App 3.1.0 [c:\program files\dotnet\shared\Microsoft.Win
 ::: zone pivot="os-linux"
 
 ```bash
-dotnet --list-runtimes
-
 Microsoft.AspNetCore.All 2.1.7 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.2.0 [/home/user/dotnet/shared/Microsoft.AspNetCore.All]
@@ -141,8 +143,6 @@ Microsoft.NETCore.App 3.1.0 [/home/user/dotnet/shared/Microsoft.NETCore.App]
 ::: zone pivot="os-macos"
 
 ```bash
-dotnet --list-runtimes
-
 Microsoft.AspNetCore.All 2.1.7 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.1.13 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
 Microsoft.AspNetCore.All 2.2.0 [/usr/local/share/dotnet/shared/Microsoft.AspNetCore.All]
@@ -166,11 +166,11 @@ Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ::: zone-end
 
-## <a name="more-information"></a><span data-ttu-id="e85c6-115">詳細資訊</span><span class="sxs-lookup"><span data-stu-id="e85c6-115">More information</span></span>
+## <a name="more-information"></a><span data-ttu-id="3c0ca-117">詳細資訊</span><span class="sxs-lookup"><span data-stu-id="3c0ca-117">More information</span></span>
 
-<span data-ttu-id="e85c6-116">您可以使用 `dotnet --info`的命令來查看 SDK 版本和執行階段版本。</span><span class="sxs-lookup"><span data-stu-id="e85c6-116">You can see both the SDK versions and runtime versions with the command `dotnet --info`.</span></span> <span data-ttu-id="e85c6-117">您也會取得其他環境相關資訊，例如作業系統版本和執行時間識別碼（RID）。</span><span class="sxs-lookup"><span data-stu-id="e85c6-117">You'll also get other environmental related information, such as the operating system version and runtime identifier (RID).</span></span>
+<span data-ttu-id="3c0ca-118">您可以使用 `dotnet --info`的命令來查看 SDK 版本和執行階段版本。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-118">You can see both the SDK versions and runtime versions with the command `dotnet --info`.</span></span> <span data-ttu-id="3c0ca-119">您也會取得其他環境相關資訊，例如作業系統版本和執行時間識別碼（RID）。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-119">You'll also get other environmental related information, such as the operating system version and runtime identifier (RID).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="e85c6-118">後續步驟</span><span class="sxs-lookup"><span data-stu-id="e85c6-118">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="3c0ca-120">後續步驟</span><span class="sxs-lookup"><span data-stu-id="3c0ca-120">Next steps</span></span>
 
-- <span data-ttu-id="e85c6-119">[安裝 .Net Core 運行](runtime.md)時間。</span><span class="sxs-lookup"><span data-stu-id="e85c6-119">[Install the .NET Core Runtime](runtime.md).</span></span>
-- <span data-ttu-id="e85c6-120">[安裝 .NET Core SDK](sdk.md)。</span><span class="sxs-lookup"><span data-stu-id="e85c6-120">[Install the .NET Core SDK](sdk.md).</span></span>
+- <span data-ttu-id="3c0ca-121">[安裝 .Net Core 運行](runtime.md)時間。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-121">[Install the .NET Core Runtime](runtime.md).</span></span>
+- <span data-ttu-id="3c0ca-122">[安裝 .NET Core SDK](sdk.md)。</span><span class="sxs-lookup"><span data-stu-id="3c0ca-122">[Install the .NET Core SDK](sdk.md).</span></span>
