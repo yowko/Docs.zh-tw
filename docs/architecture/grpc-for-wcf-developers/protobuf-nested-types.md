@@ -2,16 +2,16 @@
 title: Protobuf 的巢狀型別-WCF 開發人員的 gRPC
 description: 瞭解 Protobuf 和 gRPC 中的嵌套訊息類型，以及它們在中的C#產生方式。
 ms.date: 09/09/2019
-ms.openlocfilehash: bbc7ed41516d29f867bbc9da5b258f6a3c9ff261
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7b9a331336ebe1ca7bc75fdd164b7b88ae4f9db2
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967391"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542842"
 ---
 # <a name="protobuf-nested-types"></a>Protobuf 巢狀型別
 
-就像C#可讓您在其他類別中宣告類別，Protobuf 可讓您在其他訊息中嵌套訊息定義。 下列範例顯示如何建立嵌套訊息類型：
+如同可C#讓您在其他類別中宣告類別，通訊協定緩衝區（Protobuf）可讓您在其他訊息中嵌套訊息定義。 下列範例顯示如何建立嵌套訊息類型：
 
 ```protobuf
 message Outer {

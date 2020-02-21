@@ -1,17 +1,17 @@
 ---
 title: 適用于字典的 Protobuf 對應-針對 WCF 開發人員的 gRPC
-description: 瞭解如何使用 Protobuf 對應來表示。NET 的字典類型。
+description: 瞭解如何在 .NET 中使用 Protobuf 對應來代表字典類型。
 ms.date: 09/09/2019
-ms.openlocfilehash: 8b4f29daa263f329dc533d3ddc596d0f47c1b6e0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bf848bbc7e3618f6d78e280fcd85d5eb88d5cfae
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967419"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543127"
 ---
 # <a name="protobuf-maps-for-dictionaries"></a>適用於字典的 Protobuf 對應
 
-務必要能夠在訊息中表示任何已命名的值集合。 在 .NET 中，這通常是使用字典類型來處理。 Protobuf 對等的 .NET <xref:System.Collections.Generic.IDictionary%602> 類型是 `map<key_type, value_type>` 類型。 本節說明如何在 Protobuf 中宣告 `map`，以及如何使用產生的程式碼。
+務必要能夠在訊息中表示任何已命名的值集合。 在 .NET 中，這通常是透過字典類型來處理。 在通訊協定緩衝區（Protobuf）中，.NET <xref:System.Collections.Generic.IDictionary%602> 類型的對應項是 `map<key_type, value_type>` 類型。 本節說明如何在 Protobuf 中宣告 `map` 類型，以及如何使用產生的程式碼。
 
 ```protobuf
 message StockPrices {
@@ -19,9 +19,9 @@ message StockPrices {
 }
 ```
 
-在產生的程式碼中，`map` 欄位會使用 `Google.Protobuf.Collections.MapField<TKey, TValue>` 類別，它會實作為標準 .NET 集合介面，包括 <xref:System.Collections.Generic.IDictionary%602>。
+在產生的程式碼中，`map` 欄位會使用 `Google.Protobuf.Collections.MapField<TKey, TValue>` 類別。 這個類別會實作為標準 .NET 集合介面，包括 <xref:System.Collections.Generic.IDictionary%602>。
 
-在訊息定義中無法直接重複對應欄位，但是您可以建立包含對應的嵌套訊息，並在訊息類型上使用 `repeated`，如下列範例所示：
+在訊息定義中無法直接重複對應欄位。 但是，您可以建立包含對應的嵌套訊息，並在訊息類型上使用 `repeated`，如下列範例所示：
 
 ```protobuf
 message Order {
@@ -45,7 +45,7 @@ public Order CreateOrder(Dictionary<string, string> attributes)
 }
 ```
 
-## <a name="further-reading"></a>進一步閱讀
+## <a name="further-reading"></a>深入閱讀
 
 如需 Protobuf 的詳細資訊，請參閱官方[Protobuf 檔](https://developers.google.com/protocol-buffers/docs/overview)。
 

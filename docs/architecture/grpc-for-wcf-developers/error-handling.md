@@ -1,19 +1,19 @@
 ---
 title: 錯誤處理-WCF 開發人員的 gRPC
-description: 要寫入的
+description: GRPC 中錯誤處理的相關主題。 包含最常使用之狀態碼的表格。
 ms.date: 09/02/2019
-ms.openlocfilehash: 2c44bd9264c877a7c7a86c115b6da9f759006016
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c380c651f854adc97e8b2ead36d30c3b83662aac
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967786"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542789"
 ---
 # <a name="error-handling"></a>錯誤處理
 
-WCF 會使用 `FaultException<T>` 和 `FaultContract` 來提供詳細的錯誤資訊，包括支援 SOAP 錯誤標準。
+Windows Communication Foundation （WCF）會使用 <xref:System.ServiceModel.FaultException%601> 和[FaultContract](xref:System.ServiceModel.FaultContractAttribute)來提供詳細的錯誤資訊，包括支援 SOAP 錯誤標準。
 
-可惜的是，目前版本的 gRPC 缺少 WCF 所發現的複雜，而且只有以簡單狀態碼和中繼資料為基礎的內建錯誤處理。 下表是最常使用的狀態碼快速指南：
+可惜的是，目前版本的 gRPC 缺少 WCF 所發現的複雜，而且只有根據簡單狀態碼和中繼資料的內建錯誤處理。 下表是最常使用的狀態碼快速指南：
 
 | 狀態碼 | 問題 |
 | ----------- | ------- |
@@ -25,7 +25,7 @@ WCF 會使用 `FaultException<T>` 和 `FaultContract` 來提供詳細的錯誤�
 | `GRPC_STATUS_PERMISSION_DENIED` | 授權失敗。 |
 | `GRPC_STATUS_CANCELLED` | 呼叫已取消，通常是由呼叫端。 |
 
-## <a name="raising-errors-in-aspnet-core-grpc"></a>在 ASP.NET Core gRPC 中引發錯誤
+## <a name="raise-errors-in-aspnet-core-grpc"></a>在 ASP.NET Core gRPC 中引發錯誤
 
 ASP.NET Core gRPC 服務可以藉由擲回 `RpcException`來傳送錯誤回應，而用戶端可以攔截此訊息，如同在同一個進程中。 `RpcException` 必須包含狀態碼和描述，而且可以選擇性地包含中繼資料和較長的例外狀況訊息。 中繼資料可用來傳送支援的資料，類似于 `FaultContract` 物件如何針對 WCF 錯誤執行額外的資料。
 
@@ -44,9 +44,9 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 }
 ```
 
-## <a name="catching-errors-in-grpc-clients"></a>攔截 gRPC 用戶端中的錯誤
+## <a name="catch-errors-in-grpc-clients"></a>GRPC 用戶端中的攔截錯誤
 
-就像 WCF 用戶端可以攔截 <xref:System.ServiceModel.FaultException%601> 錯誤，gRPC 用戶端可以攔截 `RpcException` 來處理錯誤。 因為 `RpcException` 不是泛型型別，所以您無法在不同的區塊中攔截不同的錯誤類型C#，但是您可以使用的*例外狀況篩選*功能，針對不同的狀態碼宣告個別的 `catch` 區塊，如下列範例所示：
+就像 WCF 用戶端可以攔截 <xref:System.ServiceModel.FaultException%601> 錯誤，gRPC 用戶端可以攔截 `RpcException` 來處理錯誤。 因為 `RpcException` 不是泛型型別，所以您無法在不同的區塊中攔截不同的錯誤類型。 但是，您可以C#使用的*例外狀況篩選*功能，針對不同的狀態碼宣告個別的 `catch` 區塊，如下列範例所示：
 
 ```csharp
 try
@@ -69,7 +69,7 @@ catch (RpcException)
 
 ## <a name="grpc-richer-error-model"></a>gRPC 更豐富的錯誤模型
 
-在C#未來，Google 已開發出更[豐富的錯誤模型](https://cloud.google.com/apis/design/errors#error_model)，更像 WCF 的[FaultContract](xref:System.ServiceModel.FaultContractAttribute)，但尚不支援。 目前僅適用于 Go、JAVA、Python 和C++，但的C#支援預計會在下一年推出。
+Google 開發出更[豐富的錯誤模型](https://cloud.google.com/apis/design/errors#error_model)，更像 WCF 的[FaultContract](xref:System.ServiceModel.FaultContractAttribute)，但C#尚不支援此模型。 目前僅適用于 Go、JAVA、Python 和C++。
 
 >[!div class="step-by-step"]
 >[上一頁](metadata.md)

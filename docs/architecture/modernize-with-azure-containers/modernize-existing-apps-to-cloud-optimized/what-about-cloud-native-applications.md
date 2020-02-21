@@ -2,12 +2,12 @@
 title: 雲端原生應用程式呢？
 description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |那麼，雲端原生應用程式呢？
 ms.date: 04/28/2018
-ms.openlocfilehash: cf4c3b24a4eeb62ed84a5fccb294b675d38fcc36
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72318416"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543543"
 ---
 # <a name="what-about-cloud-native-applications"></a>雲端原生應用程式呢？
 
@@ -41,7 +41,10 @@ ms.locfileid: "72318416"
 
 [雲端原生運算基礎（由 cncf）](https://www.cncf.io/)是雲端原生原則的主要升級程式。 Microsoft 是[由 cncf 的成員](https://azure.microsoft.com/blog/announcing-cncf/)。
 
-如需範例定義，以及有關雲端原生應用程式特性的詳細資訊，請參閱 Gartner 文章：[如何架構和設計雲端原生應用程式](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications)。 如需 Microsoft 關於如何執行雲端原生應用程式的特定指引，請參閱[.net 微服務：容器化 .net 應用程式的架構](https://aka.ms/microservicesebook)。
+如需如何設計和開發雲端原生應用程式的詳細指引，請閱讀下列免費電子書：
+
+* [架構適用于 Azure 的雲端原生 .NET 應用程式](../../cloud-native/introduction.md)
+* [.Net 微服務：容器化 .net 應用程式的架構](../../microservices/index.md)。
 
 如果您將完整應用程式遷移至雲端原生模型，最重要的因素就是您必須重新架構至以微服務為基礎的架構。 這很明顯地需要在開發方面投入大量的精力，因為涉及的大型重構程式。 此選項通常是針對需要新的擴充性層級和長期彈性的任務關鍵性應用程式而選擇的。 但是，您可以藉由在幾個新案例中新增微服務，開始轉向雲端原生，最後再將應用程式重構為微服務。 這是一種累加的方法，在某些情況下是最佳選擇。
 

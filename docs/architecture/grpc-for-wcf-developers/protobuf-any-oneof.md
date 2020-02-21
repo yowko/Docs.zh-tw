@@ -2,20 +2,20 @@
 title: Protobuf 適用于 variant 類型的 Any 和一個欄位-WCF 開發人員的 gRPC
 description: 瞭解如何使用 Any 型別和一個關鍵字來代表訊息中的 variant 物件類型。
 ms.date: 09/09/2019
-ms.openlocfilehash: af3ba22c238aa80a8c6119f62d5d8914770cad68
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6fe7acbd1ec35289f7ad6f3acee8509ab934619d
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971609"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543192"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Protobuf variant 類型的 Any 和一個欄位
 
-在 WCF 中處理動態屬性類型（也就是類型 `object`的屬性）很複雜。 必須指定序列化程式，必須提供[KnownType](xref:System.Runtime.Serialization.KnownTypeAttribute)屬性，依此類推。
+在 Windows Communication Foundation （WCF）中處理動態屬性類型（也就是類型 `object`的屬性）會很複雜。 例如，您必須指定序列化程式並提供[KnownType](xref:System.Runtime.Serialization.KnownTypeAttribute)屬性。
 
-Protobuf 提供兩個較簡單的選項，可處理可能屬於一種以上類型的值。 `Any` 類型可以代表任何已知的 Protobuf 訊息類型，而 `oneof` 關鍵字可讓您指定在任何指定的訊息中只能設定一個範圍的欄位。
+通訊協定緩衝區（Protobuf）提供兩個較簡單的選項，可用來處理可能屬於一種以上類型的值。 `Any` 型別可以代表任何已知的 Protobuf 訊息型別。 而且您可以使用 `oneof` 關鍵字，指定在任何訊息中只能設定一個欄位範圍的其中一個。
 
-## <a name="any"></a>任何
+## <a name="any"></a>任意
 
 `Any` 是 Protobuf 的「知名型別」之一，這是一組有用、可重複使用的訊息型別，並以所有支援的語言執行。 若要使用 `Any` 類型，您必須匯入 `google/protobuf/any.proto` 定義。
 
@@ -58,11 +58,11 @@ public void FormatChangeNotification(ChangeNotification change)
 }
 ```
 
-Protobuf 的內部反映程式碼會使用每個產生之類型上的 `Descriptor` 靜態欄位，來解析 `Any` 欄位類型。 另外還有 `TryUnpack<T>` 方法，但即使失敗，也會建立未初始化的 `T` 實例，因此最好使用如上所示的 `Is` 方法。
+Protobuf 的內部反映程式碼會在每個產生的類型上使用 `Descriptor` 靜態欄位，以解析 `Any` 欄位類型。 另外還有 `TryUnpack<T>` 的方法，但即使失敗，也會建立未初始化的 `T` 實例。 如先前所示，最好使用 `Is` 方法。
 
 ## <a name="oneof"></a>一個
 
-一個欄位是一種語言功能：編譯器在產生 message 類別時，會處理 `oneof` 關鍵字。 使用 `oneof` 來指定 `ChangeNotification` 訊息可能如下所示：
+一個欄位是一種語言功能：編譯器會在產生 message 類別時處理 `oneof` 關鍵字。 使用 `oneof` 來指定 `ChangeNotification` 訊息可能如下所示：
 
 ```protobuf
 message Stock {

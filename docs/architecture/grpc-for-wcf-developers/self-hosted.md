@@ -2,12 +2,12 @@
 title: 自我裝載的 gRPC 應用程式-適用于 WCF 開發人員的 gRPC
 description: 將 ASP.NET Core gRPC 應用程式部署為自我裝載的服務。
 ms.date: 09/02/2019
-ms.openlocfilehash: 2244f161ad4b5d60138ae0f7b4d6a9c8c8829aa8
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee370ba1893b060505b38ddf84235bd84433ad32
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503396"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542985"
 ---
 # <a name="self-hosted-grpc-applications"></a>自我裝載的 gRPC 應用程式
 
@@ -90,6 +90,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
   ```dotnetcli
   dotnet publish -c Release -r linux-x64 -o ./publish
   ```
+  
 將 `publish` 目錄的完整內容複寫到 Linux 主機上的安裝資料夾。 註冊服務需要一個特殊的檔案（稱為*單位*檔案），才能新增至 `/etc/systemd/system` 目錄。 您需要根許可權，才能在此資料夾中建立檔案。 以您想要 `systemd` 使用的識別碼和 `.service` 延伸模組來命名檔案。 例如，使用 `/etc/systemd/system/myapp.service`。
 
 服務檔會使用 INI 格式，如下列範例所示：
