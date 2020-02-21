@@ -5,18 +5,18 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: d0fe79ef79125c06be9acd8ba80001a33e150adb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802844"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504038"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>教學課程：使用適用于 Apache Spark 的 .NET 進行結構化串流 
 
 本教學課程會教您如何使用 .NET 為 Apache Spark 叫用 Spark 結構化串流。 Spark 結構化串流是 Apache Spark 支援處理即時資料流。 串流處理表示在即時資料產生時進行分析。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 
 > [!div class="checklist"]
 >
@@ -24,7 +24,7 @@ ms.locfileid: "74802844"
 > * 使用 netcat 建立資料流程
 > * 使用使用者定義函數和 SparkSQL 分析串流資料
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 如果這是您 Apache Spark 應用程式的第一個 .NET，請從[消費者入門教學](get-started.md)課程開始，以熟悉基本概念。
 
@@ -32,7 +32,7 @@ ms.locfileid: "74802844"
 
 1. 在命令提示字元中，執行下列命令以建立新的主控台應用程式：
 
-   ```console
+   ```dotnetcli
    dotnet new console -o mySparkStreamingApp
    cd mySparkStreamingApp
    ```
@@ -41,7 +41,7 @@ ms.locfileid: "74802844"
 
 1. 若要在應用程式中使用 .NET 進行 Apache Spark，請安裝 Microsoft Spark 套件。 在您的主控台中，執行下列命令：
 
-   ```console
+   ```dotnetcli
    dotnet add package Microsoft.Spark
    ```
 
