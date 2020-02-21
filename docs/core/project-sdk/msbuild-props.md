@@ -1,14 +1,14 @@
 ---
 title: 適用于 .NET 的 MSBuild 屬性
 description: .NET Core SDK 所瞭解之 MSBuild 屬性的參考。
-ms.date: 02/02/2020
+ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: f5dc2079bc313b8dd9fa5556cd941521a597ae38
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 00d9152d864ac0727a511f4c3c15abba82aab904
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453808"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503817"
 ---
 # <a name="msbuild-properties-for-net-core-sdk-projects"></a>.NET Core SDK 專案的 MSBuild 屬性
 
@@ -19,25 +19,9 @@ ms.locfileid: "77453808"
 
 ## <a name="framework-properties"></a>架構屬性
 
-- [NetStandardImplicitPackageVersion](#netstandardimplicitpackageversion)
 - [TargetFramework](#targetframework)
 - [TargetFrameworks](#targetframeworks)
-
-### <a name="netstandardimplicitpackageversion"></a>NetStandardImplicitPackageVersion
-
-> [!NOTE]
-> 此屬性僅適用于使用 `netstandard1.x`的專案。 它不適用於使用 `netstandard2` 和更新版本的專案。
-
-當您想要指定低於[中繼套件](../packages.md#metapackages)版本的 framework 版本時，請使用 `NetStandardImplicitPackageVersion` 屬性。 下列範例中的專案檔是以 `netstandard1.3` 為目標，但使用 `NETStandard.Library`的1.6.0 版本。
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
-  </PropertyGroup>
-</Project>
-```
+- [NetStandardImplicitPackageVersion](#netstandardimplicitpackageversion)
 
 ### <a name="targetframework"></a>TargetFramework
 
@@ -69,6 +53,22 @@ ms.locfileid: "77453808"
 ```
 
 如需詳細資訊，請參閱[SDK 樣式專案中的目標 framework](../../standard/frameworks.md)。
+
+### <a name="netstandardimplicitpackageversion"></a>NetStandardImplicitPackageVersion
+
+> [!NOTE]
+> 此屬性僅適用于使用 `netstandard1.x`的專案。 它不適用於使用 `netstandard2.x`的專案。
+
+當您想要指定低於[中繼套件](../packages.md#metapackages)版本的 framework 版本時，請使用 `NetStandardImplicitPackageVersion` 屬性。 下列範例中的專案檔是以 `netstandard1.3` 為目標，但使用 `NETStandard.Library`的1.6.0 版本。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+  </PropertyGroup>
+</Project>
+```
 
 ## <a name="publish-properties"></a>發佈屬性
 
