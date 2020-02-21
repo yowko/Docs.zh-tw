@@ -2,14 +2,14 @@
 title: .NET API 分析器
 description: 了解「.NET API 分析器」如何協助偵測已被取代的 API 及平台相容性問題。
 author: oliag
-ms.date: 04/26/2019
+ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124243"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542620"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -20,11 +20,11 @@ ms.locfileid: "77124243"
 > [!NOTE]
 > .NET API 分析器目前仍然是發行前版本。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - Visual Studio 2017 及更新版本，或 Visual Studio for Mac (所有版本)。
 
-## <a name="discovering-deprecated-apis"></a>探索已被取代的 API
+## <a name="discover-deprecated-apis"></a>探索已淘汰的 Api
 
 ### <a name="what-are-deprecated-apis"></a>什麼是已被取代的 API？
 
@@ -36,7 +36,21 @@ ms.locfileid: "77124243"
 
 「API 分析器」會使用 API 特定的錯誤碼，其開頭為 DE (代表 Deprecation Error，即「取代錯誤」)，可用來控制個別警示的顯示。 [dotnet/platform-compat](https://github.com/dotnet/platform-compat) \(英文\) 存放庫中定義了分析器所識別的已被取代 API。
 
-### <a name="using-the-api-analyzer"></a>使用 API 分析器
+### <a name="add-the-api-analyzer-to-your-project"></a>將 API 分析器新增至您的專案
+
+1. 開啟 Visual Studio。
+2. 開啟您要在其中執行分析器的專案。
+3. 在**方案總管**中，以滑鼠右鍵按一下您的專案，然後選擇 [**管理 NuGet 封裝**]。 (這個選項也可以在 [專案] 功能表中取得)。
+4. 在 [NuGet 套件管理員] 索引標籤上：
+   1. 選取 "nuget.org" 作為封裝來源。
+   2. 移至 [**流覽**] 索引標籤。
+   3. 選取 [包括發行前版本]。
+   4. 搜尋**DotNet 的相容性**。
+   5. 在清單中選取該套件。
+   6. 選取 [安裝] 按鈕。 
+   7. 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
+
+### <a name="use-the-api-analyzer"></a>使用 API 分析器
 
 當程式碼中使用已被取代的 API (例如 <xref:System.Net.WebClient>) 時，「API 分析器」會使用綠色曲線來醒目標示它。 當您將滑鼠游標暫留在該 API 呼叫上時，會顯示燈泡圖示及有關該 API 取代的資訊，如以下範例所示：
 
@@ -50,14 +64,14 @@ ms.locfileid: "77124243"
 
 若要隱藏任何警告，只要在已醒目標示的成員上按一下滑鼠右鍵，然後選取 [隱藏 **診斷識別碼>]\<** 即可。 有兩種隱藏警告的方式： 
 
-- [本機 (在原始程式檔中)](#suppressing-warnings-locally)
-- [全域 (在隱藏項目檔中)](#suppressing-warnings-globally) - 建議使用
+- [本機 (在原始程式檔中)](#suppress-warnings-locally)
+- [全域 (在隱藏項目檔中)](#suppress-warnings-globally) - 建議使用
 
-### <a name="suppressing-warnings-locally"></a>在本機隱藏警告
+### <a name="suppress-warnings-locally"></a>在本機隱藏警告
 
 若要在本機隱藏警告，請在您想要隱藏警告的成員上按一下滑鼠右鍵，然後選取 [快速動作與重構] > [隱藏診斷識別碼 **診斷識別碼>]\<**  > [在原始程式檔中]。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告前置處理器指示詞會新增到您原始程式碼的已定義範圍中：![「以 #pragma warning disable 為框架之程式碼的螢幕擷取畫面」](media/api-analyzer/suppress-in-source.jpg)
 
-### <a name="suppressing-warnings-globally"></a>在全域隱藏警告
+### <a name="suppress-warnings-globally"></a>全域隱藏警告
 
 若要在全域隱藏警告，請在您想要隱藏警告的成員上按一下滑鼠右鍵，然後選取 [快速動作與重構] > [隱藏診斷識別碼 **診斷識別碼>]\<**  > [在隱藏項目檔中]。
 
@@ -69,7 +83,7 @@ ms.locfileid: "77124243"
 
 全域隱藏式建議的使用方式，可確保所有專案的 API 使用方式一致。
 
-## <a name="discovering-cross-platform-issues"></a>探索跨平台問題
+## <a name="discover-cross-platform-issues"></a>探索跨平臺問題
 
 與已被取代的 API 類似，分析器會識別所有不是跨平台的 API。 例如，<xref:System.Console.WindowWidth?displayProperty=nameWithType>可在 Windows 上運作，但無法在 Linux 和 macOS 上運作。 診斷識別碼會顯示在 [錯誤清單] 視窗中。 您可以按一下滑鼠右鍵並選取 [快速動作與重構] 來隱藏該警示。 與有兩個選項 (繼續使用已被取代的成員並隱藏警告，或完全不使用它) 的取代案例不同，在這裡，如果您僅針對特定平台來開發程式碼，就可以隱藏您不打算用來執行程式碼之所有其他平台的所有警告。 若要這樣做，您只需編輯專案檔，然後新增 `PlatformCompatIgnore` 屬性來列出所有要忽略的平台即可。 接受的值包括：`Linux`、`macOS` 及 `Windows`。
 

@@ -2,12 +2,12 @@
 title: dotnet sln 命令
 description: dotnet-sln 命令提供方便在方案檔中新增、移除及列出專案的選項。
 ms.date: 02/14/2020
-ms.openlocfilehash: dc0e2f294076ea649f150b076ac279cdc5d224a0
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503599"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543478"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -15,7 +15,7 @@ ms.locfileid: "77503599"
 
 ## <a name="name"></a>名稱
 
-`dotnet sln` - 修改.NET Core 方案檔。
+`dotnet sln`-列出或修改 .NET Core 方案檔中的專案。
 
 ## <a name="synopsis"></a>概要
 
@@ -25,9 +25,9 @@ dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 
 ## <a name="description"></a>描述
 
-`dotnet sln` 命令提供方便在方案檔中新增、移除及列出專案的方式。
+`dotnet sln` 命令提供一個便利的方式來列出及修改方案檔中的專案。
 
-若要使用 `dotnet sln` 命令，方案檔必須已經存在。 如果您需要建立一個，請使用 [dotnet new](dotnet-new.md) 命令，如下列範例：
+若要使用 `dotnet sln` 命令，方案檔必須已經存在。 如果您需要建立一個，請使用[dotnet new](dotnet-new.md)命令，如下列範例所示：
 
 ```dotnetcli
 dotnet new sln
@@ -37,24 +37,46 @@ dotnet new sln
 
 - **`SOLUTION_FILE`**
 
-  要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果目錄中有多個方案檔，請務必指定一個方案檔。
+  要使用的方案檔。 如果省略這個引數，命令會在目前的目錄中搜尋一個。 如果找不到方案檔或多個方案檔，則命令會失敗。
 
 ## <a name="options"></a>選項。
 
 - **`-h|--help`**
 
-  印出命令的簡短說明。
+  印出如何使用命令的說明。
 
 ## <a name="commands"></a>命令
 
-### `add`
+### `list`
 
-將一個專案或多個專案加入至方案檔。
+列出方案檔中的所有專案。
 
 #### <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH>
+dotnet sln list [-h|--help]
+```
+
+#### <a name="arguments"></a>引數
+
+- **`SOLUTION_FILE`**
+
+  要使用的方案檔。 如果省略這個引數，命令會在目前的目錄中搜尋一個。 如果找不到方案檔或多個方案檔，則命令會失敗。
+
+#### <a name="options"></a>選項。
+
+- **`-h|--help`**
+
+  印出如何使用命令的說明。
+  
+### `add`
+
+將一個或多個專案加入至方案檔。
+
+#### <a name="synopsis"></a>概要
+
+```dotnetcli
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln add [-h|--help]
 ```
 
@@ -62,17 +84,17 @@ dotnet sln add [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果目錄中有多個方案檔，請務必指定一個方案檔。
+  要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個，如果有多個方案檔，則會失敗。
 
 - **`PROJECT_PATH`**
 
-  要加入至方案之專案的路徑。 加入多個專案，方法是在另一個後面加上空格分隔。 Unix/Linux shell[萬用字元模式](https://en.wikipedia.org/wiki/Glob_(programming))擴充會由 `dotnet sln` 命令正確處理。
+  要加入至方案之專案的路徑。 Unix/Linux shell[萬用字元模式](https://en.wikipedia.org/wiki/Glob_(programming))擴充會由 `dotnet sln` 命令正確處理。
 
 #### <a name="options"></a>選項。
 
 - **`-h|--help`**
 
-  印出命令的簡短說明。
+  印出如何使用命令的說明。
 
 - **`--in-root`**
 
@@ -89,7 +111,7 @@ dotnet sln add [-h|--help]
 #### <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH>
+dotnet sln [<SOLUTION_FILE>] remove <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 ```
 
@@ -97,52 +119,42 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果目錄中有多個方案檔，請務必指定一個方案檔。
+  要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個，如果有多個方案檔，則會失敗。
 
 - **`PROJECT_PATH`**
 
-  要從方案中移除之專案的路徑。 藉由在另一個專案後面加上空格，以移除多個專案。 Unix/Linux shell[萬用字元模式](https://en.wikipedia.org/wiki/Glob_(programming))擴充會由 `dotnet sln` 命令正確處理。
+  要加入至方案之專案的路徑。 Unix/Linux shell[萬用字元模式](https://en.wikipedia.org/wiki/Glob_(programming))擴充會由 `dotnet sln` 命令正確處理。
 
 #### <a name="options"></a>選項。
 
 - **`-h|--help`**
 
-  印出命令的簡短說明。
-
-### `list`
-
-列出方案檔中的所有專案。
-
-#### <a name="synopsis"></a>概要
-
-```dotnetcli
-dotnet sln list [-h|--help]
-```
-
-#### <a name="arguments"></a>引數
-
-- **`SOLUTION_FILE`**
-
-  要使用的方案檔。 如果未指定，命令會在目前的目錄中搜尋一個專案檔。 如果目錄中有多個方案檔，請務必指定一個方案檔。
-
-#### <a name="options"></a>選項。
-
-- **`-h|--help`**
-
-  印出命令的簡短說明。
+  印出如何使用命令的說明。
 
 ## <a name="examples"></a>範例
+
+- 列出方案中的專案：
+
+  ```dotnetcli
+  dotnet sln todo.sln list
+  ```
 
 - 將 C# 專案新增至方案：
 
   ```dotnetcli
-  dotnet sln todo.sln add todo-app/todo-app.csproj
+  dotnet sln add todo-app/todo-app.csproj
   ```
 
 - 移除方案中的 C# 專案：
 
   ```dotnetcli
-  dotnet sln todo.sln remove todo-app/todo-app.csproj
+  dotnet sln remove todo-app/todo-app.csproj
+  ```
+
+- 將多C#個專案新增至方案的根目錄：
+
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj --in-root
   ```
 
 - 將多個 C# 專案新增至方案：

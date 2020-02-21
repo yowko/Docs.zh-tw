@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d36909e06bd9a3de0940c4c1b2b9eacbf9cafe7f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ba50eb222d9eab6bffbb8ebfdf0ecf47951ce719
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740587"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543517"
 ---
 # <a name="install-the-net-core-runtime"></a>安裝 .NET Core 執行時間
 
@@ -69,6 +69,8 @@ export PATH=$PATH:$HOME/dotnet
 >
 > 此外，將 `export DOTNET_ROOT=$HOME/dotnet` 新增至檔案結尾。
 
+這種方法可讓您將不同的版本安裝到不同的位置，並明確選擇哪一個應用程式要使用哪一個。
+
 ::: zone-end
 
 ::: zone pivot="os-windows"
@@ -85,6 +87,25 @@ dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 
 > [!NOTE]
 > 上述命令會安裝 ASP.NET Core 執行時間，以達到最大相容性。 ASP.NET Core 執行時間也包含標準的 .NET Core 執行時間。
+
+## <a name="download-and-manually-install"></a>下載並手動安裝
+
+若要將執行時間解壓縮，並在終端機上提供 .NET Core CLI 命令，請先[下載](#all-net-core-downloads).net Core 二進位版本。 然後，建立要安裝的目錄，例如 `%USERPROFILE%\dotnet`。 最後，將下載的 zip 檔案解壓縮至該目錄。
+
+根據預設，.NET Core CLI 命令和應用程式不會使用以這種方式安裝的 .NET Core。 您必須明確地選擇使用它。 若要這麼做，請變更應用程式啟動時所使用的環境變數：
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+這種方法可讓您將多個版本安裝到不同的位置，然後明確地選擇應用程式應該使用的安裝位置，方法是以指向該位置的環境變數執行應用程式。
+
+即使已設定這些環境變數，在選取最佳架構來執行應用程式時，.NET Core 仍然會考慮預設的全域安裝位置。 預設值通常是 `C:\Program Files\dotnet`，這是安裝程式所使用的。 您也可以藉由設定此環境變數，指示執行時間只使用自訂安裝位置：
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 

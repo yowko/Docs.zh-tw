@@ -3,12 +3,12 @@ title: 如何修改字串內容- C#指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973259"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543257"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何在 C\# 中修改字串內容
 
@@ -62,16 +62,17 @@ ms.locfileid: "73973259"
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="unsafe-modifications-to-string"></a>對字串進行不安全的修改
+## <a name="programmatically-build-up-string-content"></a>以程式設計方式建立字串內容
 
-您可在字串建立後，使用**不安全**的程式碼直接加以修改。 不安全的程式碼會略過許多 .NET 設計來減少程式碼中特定類型 Bug 的功能。 因為字串類別設計為**固定**類型，所以您必須使用不安全的程式碼才能直接修改字串。 建立後即無法變更其值。 不安全的程式碼會藉由存取及修改 `string` 使用的記憶體，而不使用一般 `string` 方式，以規避此屬性。
-下列範例專為特殊情況提供，例如您想要使用不安全的模式來直接修改字串。 此範例示範了如何使用 `fixed` 關鍵字。 `fixed` 關鍵字會在程式碼使用不安全的指標存取記憶體時，禁止記憶體回收行程 (GC) 移動記憶體中的字串物件。 它也示範因為 C# 編譯器在內部儲存 (實習生) 字串的方式，可能造成的字串不安全作業的一個副作用。 一般情況下，除非絕對必要，您不應該使用這項技術。 您可從這邊文章深入了解 [unsafe](../language-reference/keywords/unsafe.md) 與 [fixed](../language-reference/keywords/fixed-statement.md)。 <xref:System.String.Intern%2A> 的 API 參考包含字串暫留的資訊。
+由於字串是不可變的，因此先前的範例全都會建立暫存字串或字元陣列。 在高效能案例中，可能需要避免這些堆積配置。 .NET Core 提供 <xref:System.String.Create%2A?displayProperty=nameWithType> 方法，可讓您透過回呼以程式設計方式填滿字串的字元內容，同時避免中繼暫存字串配置。
 
-[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+
+您可以使用 unsafe 程式碼修改固定區塊中的字串，但**強烈**建議您在建立字串之後修改字串內容。 這麼做會以無法預期的方式來中斷專案。 例如，如果有人實習一個具有與您相同內容的字串，則會取得您的複本，而且不會預期您要修改其字串。
 
 您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 規則運算式](../../standard/base-types/regular-expressions.md)
 - [規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)

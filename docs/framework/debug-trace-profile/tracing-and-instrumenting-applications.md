@@ -13,12 +13,12 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 1dd7317e38b6bee44dda75319c9f7c2a6567e3b4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2dcdbaf50ed053d43fc2df2c80fe7688e7b3e51f
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216031"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542607"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>追蹤和稽核應用程式
 追蹤是一種方式，可讓您在應用程式執行時加以監視。 您可以在開發 .NET Framework 應用程式時，加入追蹤和偵錯檢測，當您在開發應用程式時，以及將其部署之後，都可以使用該檢測。 您可以使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 類別，將錯誤和應用程式執行的相關資訊，記錄在記錄檔、文字檔案或其他裝置中，以供稍後進行分析。  
@@ -42,7 +42,7 @@ ms.locfileid: "77216031"
  <xref:System.Diagnostics.Trace> 和 <xref:System.Diagnostics.Debug> 類別提供方法來監視及檢查開發期間或部署後的應用程式效能。 例如，您可使用 <xref:System.Diagnostics.Trace> 類別來追蹤出現於部署應用程式中的特定動作類型 (例如，建立新的資料庫連接)，並藉此監視應用程式的效率。  
   
 ## <a name="code-tracing-and-debugging"></a>程式碼追蹤和偵錯  
- 在開發期間，您可以使用 <xref:System.Diagnostics.Debug> 類別的輸出方法，在 Visual Studio 整合式開發環境 (IDE) 的 [輸出] 視窗中顯示訊息。 例如，  
+ 在開發期間，您可以使用 <xref:System.Diagnostics.Debug> 類別的輸出方法，在 Visual Studio 整合式開發環境 (IDE) 的 [輸出] 視窗中顯示訊息。 例如：  
   
 ```vb  
 Trace.WriteLine("Hello World!")  
@@ -97,7 +97,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 7. 如果在執行階段期間發生問題，請開啟適當的追蹤參數。 如需詳細資訊，請參閱[設定追蹤參數](how-to-create-initialize-and-configure-trace-switches.md)。  
   
-     追蹤程式碼會將追蹤訊息寫入指定的目標，例如畫面、文字檔或事件記錄檔。 您包含在 **Trace.Listeners** 集合中的接聽項類型會決定目標。  
+     追蹤程式碼會將追蹤訊息寫入指定的目標，例如畫面、文字檔或事件記錄檔。 您包含在 <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> 集合中的接聽程式類型會決定目標。  
   
 8. 分析追蹤訊息，以識別並了解應用程式中的問題。  
   
@@ -109,7 +109,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  利用追蹤陳述式，您可以避免掉一些困難的工作，例如，檢查原始來源程式碼、加以修改、重新編譯，以及嘗試在偵錯環境內產生執行階段錯誤。 請記住，檢測應用程式不但可以顯示錯誤，還能監視效能。  
   
 ## <a name="strategic-placement-of-trace-statements"></a>追蹤陳述式的策略位置  
- 當您放置追蹤陳述式以供執行階段使用時，您必須格外小心。 您必須考慮部署的應用程式中可能需要哪些追蹤資訊，以便適當涵蓋所有可能的追蹤案例。 但是，因為使用追蹤的應用程式變化很大，所以沒有追蹤策略位置的一般性方針。 如需有關放置追蹤陳述式的詳細資訊，請參閱[如何：將追蹤陳述式新增到應用程式程式碼](how-to-add-trace-statements-to-application-code.md)。  
+ 在放置追蹤陳述式，以在執行階段使用時，您必須特別小心。 您必須考量，在所部署的應用程式中，可能會需要哪些追蹤資訊，以充分涵蓋所有可能的追蹤案例。 使用追蹤的應用程式差異甚大，但是並沒有追蹤策略位置的一般方針。 如需有關放置追蹤陳述式的詳細資訊，請參閱[如何：將追蹤陳述式新增到應用程式程式碼](how-to-add-trace-statements-to-application-code.md)。  
   
 ## <a name="output-from-tracing"></a>追蹤的輸出  
  追蹤輸出是由稱為「接聽項」的物件來收集。 接聽程式是會接收追蹤輸出，並將其寫入輸出裝置 (通常是視窗、記錄檔或文字檔) 的物件。 建立追蹤接聽程式時，通常會將它加入至 <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> 集合，讓接聽程式能夠接收所有的追蹤輸出。  
@@ -120,18 +120,18 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 |方法|輸出|  
 |------------|------------|  
-|**判斷提示**|指定的文字；或者如果未指定，則為呼叫堆疊。 唯有在 **Assert** 陳述式中指定做為引數的條件是 **false** 時，才會寫入輸出。|  
-|**失敗**|指定的文字；或者如果未指定，則為呼叫堆疊。|  
-|**寫入**|指定的文字。|  
-|**WriteIf**|指定的文字 (如果符合在 **WriteIf** 陳述式中指定作為引數的條件)。|  
-|**WriteLine**|指定的文字和歸位字元。|  
-|**WriteLineIf**|指定的文字和歸位字元 (如果符合在 **WriteLineIf** 陳述式中指定作為引數的條件)。|  
+|`Assert`|指定的文字；或者如果未指定，則為呼叫堆疊。 只有在 `Assert` 語句中指定為引數的條件為**false**時，才會寫入輸出。|  
+|`Fail`|指定的文字；或者如果未指定，則為呼叫堆疊。|  
+|`Write`|指定的文字。|  
+|`WriteIf`|指定的文字（如果滿足在 `WriteIf` 語句中指定為引數的條件）。|  
+|`WriteLine`|指定的文字和歸位字元。|  
+|`WriteLineIf`|指定的文字和換行字元，如果滿足在 `WriteLineIf` 語句中指定為引數的條件。|  
   
- <xref:System.Diagnostics.Trace.Listeners%2A> 集合中的所有接聽程式都會接收上表中所述的訊息，但是採取的動作會因接收訊息的接聽程式種類而異。 例如，當 <xref:System.Diagnostics.DefaultTraceListener> 收到 **Fail** 或失敗的 **Assert** 通知時，它會顯示判斷提示 (Assertion) 對話方塊，但 <xref:System.Diagnostics.TextWriterTraceListener> 僅會將輸出寫入資料流中。  
+ <xref:System.Diagnostics.Trace.Listeners%2A> 集合中的所有接聽程式都會接收上表中所述的訊息，但是採取的動作會因接收訊息的接聽程式種類而異。 例如，當 <xref:System.Diagnostics.DefaultTraceListener> 收到 `Fail` 或失敗的 `Assert` 通知時，會顯示判斷提示對話方塊，但 <xref:System.Diagnostics.TextWriterTraceListener> 只會將輸出寫入其資料流程。  
   
  您可以實作自己的接聽程式來產生自訂結果。 比方說，自訂追蹤接聽程式可能會將訊息顯示在訊息方塊，或連接至資料庫，以將訊息加入資料表。 所有自訂接聽程式應該都會支援上述六種方法。 如需有關如何建立開發人員定義之接聽程式的詳細資訊，請參閱 .NET Framework 參考中的 <xref:System.Diagnostics.TraceListener>。  
   
- **Write** 和 **WriteLine** 方法一律會寫入您指定的文字。 **Assert**、**WriteIf** 和 **WriteLineIf** 需要 Boolean 引數，以控制是否要寫入指定的文字；只有當運算式為 **true** (針對 **WriteIf** 和 **WriteLineIf**) 或 **false** (針對 **Assert**) 時，才會寫入指定的文字。 **Fail** 方法一律會寫入指定的文字。 如需詳細資訊，請參閱[如何：將追蹤陳述式新增到應用程式程式碼](how-to-add-trace-statements-to-application-code.md)和 .NET Framework 參考。  
+ `Write` 和 `WriteLine` 方法一律會寫入您指定的文字。 `Assert`、`WriteIf`和 `WriteLineIf` 需要布林值引數，以控制是否要寫入指定的文字;只有當運算式為**true** （適用于 `WriteIf` 和 `WriteLineIf`），或**false** （適用于 `Assert`）時，才會寫入指定的文字。 `Fail` 方法一律會寫入指定的文字。 如需詳細資訊，請參閱[如何：將追蹤陳述式新增到應用程式程式碼](how-to-add-trace-statements-to-application-code.md)和 .NET Framework 參考。  
   
 ## <a name="security-concerns"></a>安全性考量  
  如果您在部署 ASP.NET 應用程式之前，沒有先停用追蹤和偵錯，您的應用程式可能會顯示其本身會遭惡意程式利用的相關資訊。 如需詳細資訊，請參閱[如何：使用追蹤和偵錯進行條件式編譯](how-to-compile-conditionally-with-trace-and-debug.md)、[編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)，以及[如何：建立、初始化和設定追蹤參數](how-to-create-initialize-and-configure-trace-switches.md)。 偵錯也可以透過 Internet Information Services (IIS) 來設定。  

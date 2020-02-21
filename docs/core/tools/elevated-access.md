@@ -3,12 +3,12 @@ title: Dotnet 命令的提升存取權限
 description: 了解適用於需要提升存取權限的 dotnet 命令最佳做法。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 1cf29012736e5b6d858ca22dc2a9b97e7e8e33ef
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: fe33cbe966d175f71ba350737b283c1e83f64fa6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503576"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543426"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Dotnet 命令的提升存取權限
 
@@ -31,7 +31,7 @@ ms.locfileid: "77503576"
 
 # <a name="windows"></a>[Windows](#tab/windows)
 
-### <a name="install-the-global-tool"></a>安裝全域工具
+### <a name="install-the-tool"></a>安裝工具
 
 若資料夾 `%ProgramFiles%\dotnet-tools` 已存在，請執行下列操作來檢查 "Users" 群組是否有寫入或修改該目錄的權限：
 

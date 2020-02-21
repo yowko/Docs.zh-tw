@@ -1,141 +1,275 @@
 ---
-title: .NET Core 通用工具
-description: 說明何為 .NET Core 通用工具以及它們可用之 .NET Core CLI 命令的概觀。
+title: .NET Core 工具
+description: 如何安裝、使用、更新和移除 .NET Core 工具。 涵蓋通用工具、工具路徑工具和本機工具。
 author: KathleenDollard
-ms.date: 05/29/2018
-ms.openlocfilehash: 1531df48b7ca9c816b897d06e725ec375f6cae31
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/12/2020
+ms.openlocfilehash: d8ee30df3fe063fd41a85072d145b1b5eec7d0d0
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920497"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543387"
 ---
-# <a name="net-core-global-tools-overview"></a>.NET Core 通用工具概觀
+# <a name="how-to-manage-net-core-tools"></a>如何管理 .NET Core 工具
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+**本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
-.NET Core 通用工具是包含主控台應用程式的特殊 NuGet 套件。 通用工具可以安裝在您電腦上的預設位置 (其包含在 PATH 環境變數中) 或自訂位置。
+.NET Core 工具是特殊的 NuGet 套件，其中包含主控台應用程式。 您可以透過下列方式將工具安裝在您的電腦上：
 
-如果您想要使用 .NET Core 通用工具：
+* 作為通用工具。
 
-* 尋找工具的相關資訊 (通常是網站或 GitHub 網頁)。
-* 檢查首頁中作者和統計資料的摘要 (通常是 NuGet.org)。
-* 安裝工具。
-* 呼叫工具。
-* 更新工具。
-* 解除安裝工具。
+  工具二進位檔會安裝在新增至 PATH 環境變數的預設目錄中。 您可以從電腦上的任何目錄叫用此工具，而不需要指定其位置。 其中一個工具版本會用於電腦上的所有目錄。
+
+* 做為自訂位置（也稱為工具路徑工具）中的通用工具。
+
+  工具二進位檔會安裝在您指定的位置。 您可以從安裝目錄叫用此工具，或使用命令名稱提供目錄，或將目錄加入 PATH 環境變數中。 其中一個工具版本會用於電腦上的所有目錄。
+
+* 作為本機工具（適用于 .NET Core SDK 3.0 和更新版本）。
+
+  工具二進位檔會安裝在預設目錄中。 您可以從安裝目錄或其任何子目錄叫用此工具。 不同的目錄可以使用相同工具的不同版本。
+  
+  .NET CLI 會使用資訊清單檔案來追蹤哪些工具會以本機方式安裝到目錄。 當資訊清單檔案儲存在原始程式碼存放庫的根目錄時，參與者可以複製存放庫，並叫用單一 .NET Core CLI 命令，以安裝資訊清單檔案中列出的所有工具。
 
 > [!IMPORTANT]
-> .NET Core 通用工具會顯示在您的路徑中，並且在完全信任環境下執行。 除非您信任作者，否則請勿安裝 .NET Core 通用工具。
+> .NET Core 工具會以完全信任的方式執行。 除非您信任作者，否則請勿安裝 .NET Core 工具。
 
-## <a name="find-a-net-core-global-tool"></a>尋找 .NET Core 通用工具
+## <a name="find-a-tool"></a>尋找工具
 
-目前，.NET Core CLI 中沒有全域工具搜尋功能。 以下是如何尋找工具的一些建議：
+目前，.NET Core 沒有工具搜尋功能。 以下是尋找工具的一些方法：
 
-* 您可以在 [NuGet](https://www.nuget.org) 上找到 .NET Core 通用工具。 不過，NuGet 尚未允許您專門搜尋 .NET Core 通用工具。
-* 您可以在 blog 文章或[natemcmaster/dotnet 工具](https://github.com/natemcmaster/dotnet-tools)GitHub 存放庫中找到工具建議。
-* 您可以在[dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) GitHub 存放庫中查看 ASP.NET 小組所建立之通用工具的原始程式碼。
-* 您可以在[.Net Core dotnet 診斷通用工具](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)瞭解診斷工具。
+* 請參閱[natemcmaster/dotnet 工具](https://github.com/natemcmaster/dotnet-tools)GitHub 存放庫中的工具清單。
+* 使用[ToolGet](https://www.toolget.net/)來搜尋 .net 工具。
+* 請參閱[dotnet/Aspnetcore GitHub 存放庫的 tools 目錄](https://github.com/dotnet/aspnetcore/tree/master/src/Tools)中，由 ASP.NET Core 小組所建立之工具的原始程式碼。
+* 深入瞭解[.Net Core dotnet 診斷工具](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools)的診斷工具。
+* 搜尋[NuGet](https://www.nuget.org)網站。 不過，NuGet 網站還沒有功能可讓您只搜尋工具套件。
 
 ## <a name="check-the-author-and-statistics"></a>檢查作者和統計資料
 
-由於 .NET Core 通用工具在完全信任環境下執行，而且通常是安裝在您的路徑上，它們可以發揮極為強大的功能。 請不要下載來自不信任人員的工具。
+由於 .NET Core 工具會以完全信任的方式執行，且會將通用工具加入 PATH 環境變數中，因此可以非常強大。 請不要下載來自不信任人員的工具。
 
 如果此工具裝載在 NuGet 上，您可以搜尋工具來檢查作者和統計資料。
 
 ## <a name="install-a-global-tool"></a>安裝通用工具
 
-若要安裝通用工具，您可以使用 [dotnet tool install](dotnet-tool-install.md) .NET Core CLI 命令。 下列範例會示範如何在預設位置安裝通用工具：
+若要將工具安裝為全域工具，請使用[dotnet 工具安裝](dotnet-tool-install.md)的 [`-g`] 或 [`--global`] 選項，如下列範例所示：
 
 ```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
-如果無法安裝此工具，則會顯示錯誤訊息。 請確認正在檢查您所預期的摘要。
-
-如果您要嘗試安裝發行前版本或特定版本的工具，可以使用下列格式指定版本號碼：
-
-```dotnetcli
-dotnet tool install -g <package-name> --version <version-number>
-```
-
-如果安裝成功，則會顯示一則訊息，其中顯示用來呼叫此工具的命令以及安裝的版本，類似於下例範例：
+輸出會顯示用來叫用工具的命令，以及安裝的版本，類似于下列範例：
 
 ```output
 You can invoke the tool using the following command: dotnetsay
-Tool 'dotnetsay' (version '2.0.0') was successfully installed.
+Tool 'dotnetsay' (version '2.1.4') was successfully installed.
 ```
 
-通用工具可以安裝在預設目錄或特定位置中。 預設目錄如下：
+工具二進位檔的預設位置取決於作業系統：
 
-| 作業系統          | {2&gt;路徑&lt;2}                          |
+| OS          | Path                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-第一次執行 SDK　時，這些位置會新增至使用者的路徑，因此可以直接呼叫安裝在該處的通用工具。
+此位置會在 SDK 第一次執行時新增至使用者的路徑，因此可以從任何目錄叫用全域工具，而不需指定工具位置。
 
-請注意，通用工具是使用者特定工具，而不是電腦全域工具。 使用者特定表示您無法安裝可供電腦上所有使用者使用的通用工具。 此工具只適用於已安裝工具的每個使用者設定檔。
+工具存取是使用者特定的，而不是電腦全域。 通用工具僅適用于已安裝此工具的使用者。
 
-通用工具也可以安裝在特定目錄中。 安裝在特定目錄時，使用者必須確保命令可用，方法是在路徑中包含該目錄、使用指定的目錄呼叫命令，或從指定的目錄中呼叫工具。
-在此情況下，.NET Core CLI 不會將這個位置自動新增至 PATH 環境變數。
+### <a name="install-a-global-tool-in-a-custom-location"></a>在自訂位置安裝通用工具
 
-## <a name="use-the-tool"></a>使用工具
+若要在自訂位置將工具安裝為全域工具，請使用[dotnet 工具安裝](dotnet-tool-install.md)的 [`--tool-path`] 選項，如下列範例所示。
 
-安裝此工具之後，您可以使用其命令進行呼叫。 請注意，命令可能無法與套件名稱相同。
+在 Windows 上：
 
-如果命令是 `dotnetsay`，呼叫時請使用：
+```dotnetcli
+dotnet tool install dotnetsay --tool-path c:\dotnet-tools
+```
+
+在 Linux 或 macOS 上：
+
+```dotnetcli
+dotnet tool install dotnetsay --tool-path ~/bin
+```
+
+.NET Core SDK 不會自動將此位置新增至 PATH 環境變數。 若要叫用[工具路徑工具](#invoke-a-tool-path-tool)，您必須使用下列其中一種方法來確定命令是否可用：
+
+* 將安裝目錄新增至 PATH 環境變數。
+* 當您叫用它時，請指定該工具的完整路徑。
+* 從安裝目錄中叫用工具。
+
+## <a name="install-a-local-tool"></a>安裝本機工具
+
+**適用于 .NET Core 3.0 SDK 和更新版本。**
+
+若要安裝僅限本機存取的工具（針對目前的目錄和子目錄），必須將它新增至工具資訊清單檔。 若要建立工具資訊清單檔，請執行 `dotnet new tool-manifest` 命令：
+
+```dotnetcli
+dotnet new tool-manifest
+```
+
+此命令會在 *.config*目錄下建立名為*dotnet*的資訊清單檔。 若要將本機工具新增至資訊清單檔，請使用[dotnet tool install](dotnet-tool-install.md)命令，並**省略**`--global` 和 `--tool-path` 選項，如下列範例所示：
+
+```dotnetcli
+dotnet tool install dotnetsay
+```
+
+命令輸出會顯示新安裝工具所在的資訊清單檔，類似于下列範例：
+
+```console
+You can invoke the tool from this directory using the following command:
+dotnet tool run dotnetsay
+Tool 'dotnetsay' (version '2.1.4') was successfully installed.
+Entry is added to the manifest file /home/name/botsay/.config/dotnet-tools.json.
+```
+
+下列範例顯示已安裝兩個本機工具的資訊清單檔案：
+
+```json
+{
+  "version": 1,
+  "isRoot": true,
+  "tools": {
+    "botsay": {
+      "version": "1.0.0",
+      "commands": [
+        "botsay"
+      ]
+    },
+    "dotnetsay": {
+      "version": "2.1.3",
+      "commands": [
+        "dotnetsay"
+      ]
+    }
+  }
+}
+```
+
+您通常會將本機工具新增至存放庫的根目錄。 將資訊清單檔案簽入存放庫之後，從存放庫簽出程式碼的開發人員會取得最新的資訊清單檔案。 若要安裝資訊清單檔案中列出的所有工具，它們會執行 `dotnet tool restore` 命令：
+
+```dotnetcli
+dotnet tool restore
+```
+
+輸出會指出哪些工具已還原：
+
+```console
+Tool 'botsay' (version '1.0.0') was restored. Available commands: botsay
+Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
+Restore was successful.
+```
+
+## <a name="install-a-specific-tool-version"></a>安裝特定的工具版本
+
+若要安裝發行前版本或特定版本的工具，請使用 [`--version`] 選項來指定版本號碼，如下列範例所示：
+
+```dotnetcli
+dotnet tool install dotnetsay --version 2.1.3
+```
+
+## <a name="use-a-tool"></a>使用工具
+
+您用來叫用工具的命令可能與您安裝的封裝名稱不同。 若要顯示目前使用者在電腦上所安裝的所有工具，請使用[dotnet tool list](dotnet-tool-list.md)命令：
+
+```dotnetcli
+dotnet tool list
+```
+
+輸出會顯示每個工具的版本和命令，與下列範例類似：
+
+```console
+Package Id      Version      Commands       Manifest
+-------------------------------------------------------------------------------------------
+botsay          1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
+dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
+```
+
+如本範例所示，此清單會顯示本機工具。 若要查看通用工具，請使用 [`--global`] 選項，然後使用 [`--tool-path`] 選項來查看工具路徑工具。
+
+### <a name="invoke-a-global-tool"></a>叫用全域工具
+
+針對通用工具，請單獨使用工具命令。 例如，如果命令是 `dotnetsay` 或 `dotnet-doc`，這就是您用來叫用命令的內容：
 
 ```console
 dotnetsay
+dotnet-doc
 ```
 
-如果工具作者想要工具顯示在 `dotnet` 提示的內容中，他們可能會以稱為 `dotnet <command>` 的方式進行撰寫，例如：
+如果命令的開頭為 `dotnet-`的前置詞，則叫用此工具的另一種方式是使用 `dotnet` 命令，並省略工具命令前置詞。 例如，如果命令是 `dotnet-doc`，下列命令會叫用工具：
 
 ```dotnetcli
 dotnet doc
 ```
 
-您可以藉由使用 [dotnet tool list](dotnet-tool-list.md) 命令列出已安裝的套件，了解已安裝的通用工具套件中包含哪些工具。
+不過，在下列案例中，您無法使用 `dotnet` 命令來叫用通用工具：
 
-您也可以在工具的網站中，或鍵入下列其中一個命令來尋找使用方式指示：
+* 通用工具和本機工具的命令前面會加上 `dotnet-`。
+* 您想要從本機工具範圍內的目錄叫用全域工具。
 
-```console
-<command> --help
-dotnet <command> --help
+在此案例中，`dotnet doc` 和 `dotnet dotnet-doc` 會叫用本機工具。 若要叫用全域工具，請使用命令本身：
+
+```dotnetcli
+dotnet-doc
 ```
 
-## <a name="other-cli-commands"></a>其他 CLI 命令
+### <a name="invoke-a-tool-path-tool"></a>叫用工具路徑工具
 
-.NET Core SDK 包含其他支援 .NET Core 通用工具的命令。 請使用任何 `dotnet tool` 命令搭配下列其中一個選項：
+若要叫用使用 `tool-path` 選項安裝的全域工具，請確定命令可用，如[本文稍早](#install-a-global-tool-in-a-custom-location)所述。
 
-* `--global` 或 `-g` 指定命令適用於使用者範圍通用工具。
-* `--tool-path` 指定通用工具的自訂位置。
+### <a name="invoke-a-local-tool"></a>叫用本機工具
 
-若要查看哪些命令適用於通用工具：
+若要叫用本機工具，您必須使用安裝目錄中的 `dotnet` 命令。 您可以使用完整格式（`dotnet tool run <COMMAND_NAME>`）或簡短形式（`dotnet <COMMAND_NAME>`），如下列範例所示：
+
+```dotnetcli
+dotnet tool run dotnetsay
+dotnet dotnetsay
+```
+
+如果命令的前面加上 `dotnet-`，您可以在叫用工具時包含或省略前置詞。 例如，如果命令是 `dotnet-doc`，下列任何一個範例都會叫用本機工具：
+
+```dotnetcli
+dotnet tool run dotnet-doc
+dotnet dotnet-doc
+dotnet doc
+```
+
+## <a name="update-a-tool"></a>更新工具
+
+更新工具時，需要使用最新的穩定版本卸載並重新安裝它。 若要更新工具，請使用[dotnet tool update](dotnet-tool-update.md)命令，並搭配您用來安裝工具的相同選項：
+
+```dotnetcli
+dotnet tool update --global <packagename>
+dotnet tool update --tool-path <packagename>
+dotnet tool update <packagename>
+```
+
+針對本機工具，SDK 會藉由查看目前的目錄和上層目錄，尋找包含封裝識別碼的第一個資訊清單檔案。 如果沒有任何資訊清單檔中的封裝識別碼，SDK 會將新專案新增至最接近的資訊清單檔案。
+
+## <a name="uninstall-a-tool"></a>卸載工具
+
+使用 [ [dotnet 工具](dotnet-tool-uninstall.md)] [卸載] 命令，並使用您用來安裝工具的相同選項來移除工具：
+
+```dotnetcli
+dotnet tool uninstall --global <packagename>
+dotnet tool uninstall --tool-path<packagename>
+dotnet tool uninstall <packagename>
+```
+
+針對本機工具，SDK 會藉由查看目前的目錄和上層目錄，尋找包含封裝識別碼的第一個資訊清單檔案。
+
+## <a name="get-help-and-troubleshoot"></a>取得協助和疑難排解
+
+若要取得可用 `dotnet tool` 命令的清單，請輸入下列命令：
 
 ```dotnetcli
 dotnet tool --help
 ```
 
-更新通用工具需要解除安裝再使用最新的穩定版本重新安裝。 若要更新通用工具，請使用 [dotnet tool update](dotnet-tool-update.md) 命令：
+若要取得工具使用方式的指示，請輸入下列其中一個命令，或查看工具的網站：
 
 ```dotnetcli
-dotnet tool update -g <packagename>
+<command> --help
+dotnet <command> --help
 ```
 
-使用 [dotnet tool uninstall](dotnet-tool-uninstall.md) 移除通用工具：
-
-```dotnetcli
-dotnet tool uninstall -g <packagename>
-```
-
-若要顯示電腦上目前已安裝的所有通用工具，以及它們的版本和命令，請使用 [dotnet tool list](dotnet-tool-list.md) 命令：
-
-```dotnetcli
-dotnet tool list -g
-```
-
-## <a name="see-also"></a>請參閱
-
-* [針對 .NET Core 工具使用問題進行疑難排解](troubleshoot-usage-issues.md)
+如果工具無法安裝或執行，請參閱針對[.Net Core 工具使用問題進行疑難排解](troubleshoot-usage-issues.md)。

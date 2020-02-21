@@ -2,13 +2,13 @@
 title: 針對 .NET Core 工具使用問題進行疑難排解
 description: 探索執行 .NET Core 工具和可能的解決方案時常見的問題。
 author: kdollard
-ms.date: 09/23/2019
-ms.openlocfilehash: 45139c3441b84964b937d5d1cc63a018f8d1f0fb
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 02/14/2020
+ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451073"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543270"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>針對 .NET Core 工具使用問題進行疑難排解
 
@@ -59,7 +59,7 @@ Possible reasons for this include:
   * 如果您已安裝 .NET Core 3.0 SDK，而且已將 `DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` 環境變數設定為 `false`。
   * 如果您已安裝 .NET Core 2.2 SDK 或更早版本，而且已將 `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 環境變數設定為 `true`。
 
-  如需通用工具的詳細資訊，請參閱[.Net Core 通用工具總覽](global-tools.md)。
+  如需詳細資訊，請參閱[.Net Core 工具](global-tools.md)。
 
 * 本機工具
 
@@ -137,9 +137,6 @@ dotnet tool install -g <toolName>
 dotnet tool install -g --version 1.1.0-pre <toolName>
 ```
 
-> [!NOTE]
-> .NET Core CLI 小組計畫在未來的版本中新增 `--preview` 交換器，讓這項作業變得更容易。
-
 ### <a name="package-isnt-a-net-core-tool"></a>套件不是 .NET Core 工具
 
 * 找到這個名稱的 NuGet 套件，但它不是 .NET Core 工具。
@@ -162,4 +159,4 @@ dotnet tool install -g --version 1.1.0-pre <toolName>
 
 ## <a name="see-also"></a>另請參閱
 
-* [.NET Core 全域工具概觀](global-tools.md)
+* [.NET Core 工具](global-tools.md)
