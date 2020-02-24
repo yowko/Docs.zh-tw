@@ -250,17 +250,23 @@
   items:
     - name: 總覽
       href: tools/index.md
-    - name: 工具
+    - name: 全域和本機工具
       expanded: true
       items:
-        - name: 全域工具
-          expanded: true
+        - name: 如何管理工具
+          href: tools/global-tools.md
+        - name: 教學課程
           items:
-            - name: 總覽
-              href: tools/global-tools.md
-            - name: 建立全域工具
+            - name: 建立工具
+              displayName: tools
               href: tools/global-tools-how-to-create.md
-        - name: 針對工具使用問題進行疑難排解
+            - name: 安裝和使用全域工具
+              displayName: tools
+              href: tools/global-tools-how-to-use.md
+            - name: 安裝和使用本機工具
+              displayName: tools
+              href: tools/local-tools-how-to-use.md
+        - name: 疑難排解工具
           href: tools/troubleshoot-usage-issues.md
     - name: 較高的存取權
       href: tools/elevated-access.md
@@ -320,6 +326,10 @@
               href: tools/dotnet-tool-install.md
             - name: dotnet tool list
               href: tools/dotnet-tool-list.md
+            - name: dotnet tool restore
+              href: tools/dotnet-tool-restore.md
+            - name: dotnet tool run
+              href: tools/dotnet-tool-run.md
             - name: dotnet tool uninstall
               href: tools/dotnet-tool-uninstall.md
             - name: dotnet tool update
