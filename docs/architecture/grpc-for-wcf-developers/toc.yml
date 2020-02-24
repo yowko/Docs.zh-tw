@@ -12,7 +12,7 @@
           href: interface-definition-language.md
         - name: 網路通訊協定
           href: network-protocols.md
-        - name: 為什麼建議 WCF 開發人員使用 gRPC
+        - name: 為何我們為 WCF 開發人員建議 gRPC
           href: Why-grpc.md
     - name: 通訊協定緩衝區
       href: protocol-buffers.md
@@ -27,7 +27,7 @@
           href: protobuf-repeated.md
         - name: Protobuf 保留欄位
           href: protobuf-reserved.md
-        - name: 適用於變化類型的 Protobuf Any 和 OneOf 欄位
+        - name: 適用於變化類型的 Protobuf Any 和 Oneof 欄位
           href: protobuf-any-oneof.md
         - name: Protobuf 列舉
           href: protobuf-enums.md
@@ -79,7 +79,7 @@
           href: docker.md
         - name: Kubernetes
           href: kubernetes.md
-        - name: gRPC 和服務網格
+        - name: 服務網格
           href: service-mesh.md
         - name: 負載平衡
           href: load-balancing.md
