@@ -11,22 +11,26 @@ metadata:
   author: mamccrea
   ms.author: mamccrea
   ms.date: 09/11/2019
-  ms.openlocfilehash: bce56c20e30df1f6eb6d6be5edb7ea766a783d83
-  ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+  ms.openlocfilehash: b75740fa84fd7c6fa383129075a082c4ea2ccdcc
+  ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 09/27/2019
-  ms.locfileid: "71332568"
+  ms.lasthandoff: 02/21/2020
+  ms.locfileid: "77542802"
 landingContent:
 - title: 關於 Apache Spark 的 .NET
   linkLists:
+  - linkListType: whats-new
+    links:
+    - text: .NET 文件中的新功能
+      url: /dotnet/whats-new/index
   - linkListType: overview
     links:
     - text: 什麼是 .NET for Apache Spark？
       url: what-is-apache-spark-dotnet.md
   - linkListType: reference
     links:
-    - text: 應用程式開發介面參考
+    - text: API 參考
       url: /dotnet/api/?view=spark-dotnet
     - text: GitHub
       url: https://github.com/dotnet/spark
@@ -52,5 +56,5 @@ landingContent:
       url: tutorials/databricks-deployment.md
   - linkListType: how-to-guide
     links:
-    - text: 對應用程式進行 Debug
+    - text: 為您的應用程式偵錯
       url: how-to-guides/debug.md
