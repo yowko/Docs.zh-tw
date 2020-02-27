@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: 717a0074f0750352a23b90a9b6e5eab1dc6c925a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8843b1d30f3e5f31a060e27b41b0105e6584f155
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732357"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628601"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用設計工具在 Windows Form DataGridView 控制項中加入和移除資料行
 Windows Forms <xref:System.Windows.Forms.DataGridView> 控制項必須包含資料行，才能顯示資料。 如果您打算手動填入控制項，就必須自行加入資料行。 或者，您可以將控制項系結至資料來源，以自動產生和填入資料行。 如果資料來源包含比您想要顯示的更多欄，您可以移除不必要的資料行。
@@ -21,7 +21,7 @@ Windows Forms <xref:System.Windows.Forms.DataGridView> 控制項必須包含資�
 
 ## <a name="to-add-a-column-using-the-designer"></a>若要使用設計工具加入資料行
 
-1. 按一下 <xref:System.Windows.Forms.DataGridView> 控制項右上角的智慧標籤圖像（![智慧標籤](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")圖像），然後選取 [**加入資料行**]。
+1. 按一下 <xref:System.Windows.Forms.DataGridView> 控制項右上角的設計工具動作圖像（![小型黑色箭號](./media/designer-actions-glyph.gif)），然後選取 [**新增資料行**]。
 
 2. 在 [**加入資料行**] 對話方塊中，選擇 [資料系結資料**行**] 選項，並從資料來源選取資料行，或選擇 [未系結資料**行**] 選項，並使用所提供的欄位來定義資料行。
 

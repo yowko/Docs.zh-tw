@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0b68a70b55cbf03d480fd388a637a4caf78b6eaa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740214"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628796"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>逐步解說：使用對齊線排列 Windows Forms 上的控制項
 
@@ -124,7 +124,7 @@ ms.locfileid: "76740214"
 
 ## <a name="align-a-label-to-a-controls-text"></a>將標籤對齊控制項的文字
 
-1. 從 [工具箱] <xref:System.Windows.Forms.TextBox>**將** 控制項拖曳至表單。 當您將 [<xref:System.Windows.Forms.TextBox>] 控制項放到表單上時，請按一下智慧標籤圖像，然後選取 [**將文字設定為 textBox1** ] 選項。 如需詳細資訊，請參閱[逐步解說：使用 Windows Forms 控制項上的智慧標籤執行一般](performing-common-tasks-using-smart-tags-on-wf-controls.md)工作。
+1. 從 [工具箱] <xref:System.Windows.Forms.TextBox>**將** 控制項拖曳至表單。 當您將 [<xref:System.Windows.Forms.TextBox>] 控制項放到表單上時，請按一下智慧標籤圖像，然後選取 [**將文字設定為 textBox1** ] 選項。 如需詳細資訊，請參閱[逐步解說：使用設計工具動作執行一般](perform-common-tasks-design-actions.md)工作。
 
 2. 從 [工具箱] <xref:System.Windows.Forms.Label>**將** 控制項拖曳至表單。
 

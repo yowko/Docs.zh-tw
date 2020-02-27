@@ -8,16 +8,16 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6b96d65f657f2af1af5c9a245e956640ee06260e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748514"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625943"
 ---
 # <a name="value-types-c-reference"></a>實數值型別C# （參考）
 
-實*數值型別*和[參考型別](../keywords/reference-types.md)是兩個主要的C#類型類別。 實值型別的變數包含型別的實例。 這與參考型別的變數不同，後者包含型別之實例的參考。 根據預設，在[指派](../operators/assignment-operator.md)時，將引數傳遞至方法，或傳回方法結果，會複製變數值。 在實數值型別變數的情況下，會複製對應的類型實例。 下列範例示範了該行為：
+實*數值型別*和[參考型別](../keywords/reference-types.md)是兩個主要的C#類型類別。 實值型別的變數包含型別的實例。 這與參考型別的變數不同，後者包含型別之實例的參考。 根據預設，在[指派](../operators/assignment-operator.md)時，將引數傳遞至方法，並傳回方法結果，會複製變數值。 在實數值型別變數的情況下，會複製對應的類型實例。 下列範例示範了該行為：
 
 [!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "76748514"
 
 實值型別可以是下列兩種類型的其中一種：
 
-- 封裝資料和相關功能的[結構類型](../keywords/struct.md)
+- 封裝資料和相關功能的[結構類型](struct.md)
 - [列舉類型](enum.md)，這是由一組已命名的常數所定義，代表選擇或選擇的組合
 
 [可為 null 的實數值型別](nullable-value-types.md)`T?` 代表其基礎數值型別的所有值，`T` 和額外的[null](../keywords/null.md)值。 您無法將 `null` 指派給實數值型別的變數，除非它是可為 null 的實數值型別。

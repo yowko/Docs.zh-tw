@@ -2,16 +2,18 @@
 title: 編譯器選項
 description: 使用F#編譯器命令列選項來控制F#應用程式和程式庫的編譯。
 ms.date: 12/10/2018
-ms.openlocfilehash: d0f4d1ca5ae45af25d6c304a2920d5c457700b1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ecaae538a5db2f5dfefa79cb8e7b8b51d39c440d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424763"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628874"
 ---
 # <a name="compiler-options"></a>編譯器選項
 
-本主題描述F#編譯器 fsc 的編譯器命令列選項。 您也可以藉由設定專案屬性來控制編譯環境。
+本主題描述F#編譯器 fsc 的編譯器命令列選項。
+
+您也可以藉由設定專案屬性來控制編譯環境。 針對以 .NET Core 為目標的專案，`.fsproj`中 `<OtherFlags>...</OtherFlags>` 的 [其他旗標] 屬性會用來指定額外的命令列選項。
 
 ## <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
@@ -26,7 +28,7 @@ ms.locfileid: "73424763"
 |`--crossoptimize[+|-]`|啟用或停用跨模組優化。|
 |<code>--delaysign[+&#124;-]</code>|只使用強式名稱金鑰的公用部分來延遲簽署元件。<br /><br />這個編譯器選項相當於相同名稱C#的編譯器選項。 如需詳細資訊， [ &#47;請&#40;參閱&#35; delaysign C&#41;編譯器選項](https://msdn.microsoft.com/library/ta1sxwy8.aspx)。|
 |<code>--checked[+&#124;-]</code>|啟用或停用產生溢位檢查。<br /><br />這個編譯器選項相當於相同名稱C#的編譯器選項。 如需詳細資訊，請參閱[ &#47;已檢查&#40;的 C&#35;編譯器選項&#41;](https://msdn.microsoft.com/library/h25wtyxf.aspx)。|
-|<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|啟用或停用產生的調試資訊，或指定要產生的調試資訊類型。 預設值為 full，允許附加至執行中的程式。 選擇 [ **pdbonly** ] 以取得儲存在 pdb （程式資料庫）檔案中的有限偵錯工具資訊。<br /><br />相當於相同C#名稱的編譯器選項。 如需詳細資訊，請參閱<br /><br />[debug C&#35;選項&#41;。 &#47; &#40; ](https://msdn.microsoft.com/library/8cw0bt21.aspx)|
+|<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|啟用或停用產生的調試資訊，或指定要產生的調試資訊類型。 預設值為 full，允許附加至執行中的程式。 選擇 [ **pdbonly** ] 以取得儲存在 pdb （程式資料庫）檔案中的有限偵錯工具資訊。<br /><br />相當於相同C#名稱的編譯器選項。 如需相關資訊，請參閱<br /><br />[debug C&#35;選項&#41;。 &#47; &#40; ](https://msdn.microsoft.com/library/8cw0bt21.aspx)|
 |`--define:symbol`<br /><br />`-d:symbol`|定義要在條件式編譯中使用的符號。|
 |<code>--deterministic[+&#124;-]</code>|產生具決定性的元件（包括模組版本 GUID 和時間戳記）。 此選項不能搭配萬用字元版本號碼使用，而且只支援內嵌和可移植的調試類型|
 |`--doc:xmldoc-filename`|指示編譯器產生 XML 檔批註給指定的檔案。 如需詳細資訊，請參閱 [XML Documentation](xml-documentation.md)。<br /><br />這個編譯器選項相當於相同名稱C#的編譯器選項。 如需詳細資訊， [ &#47;請&#40;參閱&#35; doc C&#41;編譯器選項](https://msdn.microsoft.com/library/3260k4x7.aspx)。|
@@ -57,7 +59,7 @@ ms.locfileid: "73424763"
 |`--standalone`|指定產生包含所有相依性的元件，使其本身執行，而不需要其他元件（例如連結F#庫）。|
 |`--staticlink:assembly-name`|以靜態方式連結指定的元件，以及相依于這個元件的所有參考 Dll。 使用元件名稱，而不是 DLL 名稱。|
 |`--subsystemversion`|指定所產生的可執行檔所要使用的 OS 子系統版本。 針對 Windows 8.1 使用6.02，適用于 Windows 7 的6.01，6.00 適用于 Windows Vista。 此選項僅適用于可執行檔，而非 Dll，而且只有在您的應用程式相依于特定版本的作業系統時，才需要使用。 如果使用此選項，且使用者嘗試在較低版本的 OS 上執行您的應用程式，則會失敗並出現錯誤訊息。|
-|<code>--tailcalls[+&#124;-]</code>|啟用或停用 tail IL 指令的使用，這會導致堆疊框架重複用於尾遞迴函式。 這個選項預設為啟用。|
+|<code>--tailcalls[+&#124;-]</code>|啟用或停用 tail IL 指令的使用，這會導致堆疊框架重複用於尾遞迴函式。 此選項預設為啟用。|
 |<code>--target:[exe&#124;winexe&#124;library&#124;module] filename</code>|指定所產生之已編譯器代碼的類型和檔案名。<ul><li>`exe` 表示主控台應用程式。<br /></li><li>`winexe` 表示 Windows 應用程式，這與主控台應用程式不同，因為它並未定義標準的輸入/輸出資料流程（stdin、stdout 和 stderr）。<br /></li><li>`library` 是沒有進入點的元件。<br /></li><li>`module` 是 .NET Framework 模組（. .netmodule），稍後可以與其他模組結合成元件。<br /></li><ul/>這個編譯器選項相當於相同名稱C#的編譯器選項。 如需詳細資訊， [ &#47;請&#40;參閱&#35;目標 C&#41;編譯器選項](https://msdn.microsoft.com/library/6h25dztx.aspx)。|
 |`--times`|顯示編譯的計時資訊。|
 |`--utf8output`|啟用以 UTF-8 編碼方式列印編譯器輸出。|
@@ -69,7 +71,7 @@ ms.locfileid: "73424763"
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|描述|
+|Title|描述|
 |-----|-----------|
 |[F# Interactive 選項](fsharp-interactive-options.md)|描述解譯器（fsi.exe）所F#支援的命令列選項。|
 |[專案屬性參考](/visualstudio/ide/reference/project-properties-reference)|描述專案的 UI，包括提供組建選項的專案屬性頁。|

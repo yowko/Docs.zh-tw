@@ -6,16 +6,16 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 465dbb9120e6e81e5ef216c34dc6a92283956033
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 8eedfaed111f01cc2ec55a2f42df66d4588bd42f
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964666"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626733"
 ---
 # <a name="constructors-c-programming-guide"></a>建構函式 (C# 程式設計手冊)
 
-每當建立[類別](../../language-reference/keywords/class.md)或[結構](../../language-reference/keywords/struct.md)時，都會呼叫其建構函式。 類別或結構可有使用不同引數的多個建構函式。 建構函式能讓程式設計師可以設定預設值、限制具現化，以及撰寫彈性且容易閱讀的程式碼。 如需詳細資訊和範例，請參閱[使用建構函式](./using-constructors.md)和[執行個體建構函式](./instance-constructors.md)。  
+每當建立[類別](../../language-reference/keywords/class.md)或[結構](../../language-reference/builtin-types/struct.md)時，都會呼叫其建構函式。 類別或結構可有使用不同引數的多個建構函式。 建構函式能讓程式設計師可以設定預設值、限制具現化，以及撰寫彈性且容易閱讀的程式碼。 如需詳細資訊和範例，請參閱[使用建構函式](./using-constructors.md)和[執行個體建構函式](./instance-constructors.md)。  
 
 ## <a name="parameterless-constructors"></a>無參數建構函式
   
@@ -45,7 +45,7 @@ ms.locfileid: "75964666"
 
 如需詳細資訊及範例，請參閱[靜態建構函式](./static-constructors.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用建構函式](./using-constructors.md)  
   
  [執行個體建構函式](./instance-constructors.md)  
@@ -56,7 +56,7 @@ ms.locfileid: "75964666"
   
  [如何撰寫複製的構造函式](./how-to-write-a-copy-constructor.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)

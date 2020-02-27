@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: d5fab6acc53e5b8be247e958bdba78f0d3647fdc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d49a718e42a989c731cdf748fb63a6305ee096bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744110"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626319"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>如何：使用設計工具將資料繫結至 Windows Forms DataGridView 控制項
 您可以使用設計工具，將 <xref:System.Windows.Forms.DataGridView> 控制項連接到數種不同種類的資料來源，包括資料庫、商務物件或 Web 服務。 當您使用設計工具將控制項系結至資料來源時，控制項會自動系結至代表資料來源的 <xref:System.Windows.Forms.BindingSource> 元件。 此外，控制項中會自動產生資料行，以符合資料來源所提供的結構描述資訊。
@@ -24,7 +24,7 @@ ms.locfileid: "76744110"
 
 ## <a name="to-bind-the-control-to-a-data-source"></a>將控制項繫結至資料來源
 
-1. 按一下 <xref:System.Windows.Forms.DataGridView> 控制項右上角的智慧標籤圖像（![智慧標籤](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")圖像）。
+1. 按一下 <xref:System.Windows.Forms.DataGridView> 控制項右上角的設計工具動作圖像（![小型黑色箭號](./media/designer-actions-glyph.gif)）。
 
 2. 按一下 [選擇資料來源] 選項的下拉式箭號。
 

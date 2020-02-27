@@ -3,12 +3,12 @@ title: .NET Core 專案 SDK 總覽
 description: 深入瞭解 .NET Core 專案 Sdk。
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: b1b839f81b1b4a8d20dbb34d3d2fc000c64acb8a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: c41b25bf7933e7b1f6cb50da5e52dc0b312f5c74
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453801"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626246"
 ---
 # <a name="net-core-project-sdks"></a>.NET Core 專案 Sdk
 
@@ -32,7 +32,7 @@ ms.locfileid: "77453801"
 
 ## <a name="project-files"></a>專案檔
 
-.NET Core 專案是以[MSBuild](/visualstudio/msbuild/msbuild)格式為基礎。 專案檔，其副檔名如 *.csproj*適用于C#專案，而 *.fsproj*用於F#專案，則為 XML 格式。 MSBuild 專案檔的根項目是[專案](/msbuild/project-element-msbuild)元素。 `Project` 元素具有選擇性的 `Sdk` 屬性，可指定要使用的 SDK （和版本）。 若要使用 .NET Core 工具並建立您的程式碼，請將 `Sdk` 屬性設定為[可用 sdk](#available-sdks)資料表中的其中一個識別碼。
+.NET Core 專案是以[MSBuild](/visualstudio/msbuild/msbuild)格式為基礎。 專案檔，其副檔名如 *.csproj*適用于C#專案，而 *.fsproj*用於F#專案，則為 XML 格式。 MSBuild 專案檔的根項目是[專案](/visualstudio/msbuild/project-element-msbuild)元素。 `Project` 元素具有選擇性的 `Sdk` 屬性，可指定要使用的 SDK （和版本）。 若要使用 .NET Core 工具並建立您的程式碼，請將 `Sdk` 屬性設定為[可用 sdk](#available-sdks)資料表中的其中一個識別碼。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

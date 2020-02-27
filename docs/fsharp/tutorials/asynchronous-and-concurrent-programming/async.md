@@ -2,12 +2,12 @@
 title: 非同步程式設計
 description: 瞭解如何F#根據衍生自核心函式程式設計概念的語言層級程式設計模型，提供非同步全新支援。
 ms.date: 12/17/2018
-ms.openlocfilehash: 471566befd69f330fb9254dbd57b19569d9f9ad3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7021d7936d10f9ea6fceb4aa56db3285d21624ad
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344665"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628848"
 ---
 # <a name="async-programming-in-f"></a>F\# 中的非同步程式設計
 
@@ -33,7 +33,7 @@ ms.locfileid: "75344665"
 - "a"，表示 "not"。
 - 「同步」，表示「同時」。
 
-當您將這兩個詞彙放在一起時，您會看到「非同步」表示「不是同一時間」。 就這麼容易！ 在此定義中，不會隱含並行或平行處理。 這在實務上也是如此。
+當您將這兩個詞彙放在一起時，您會看到「非同步」表示「不是同一時間」。 就這麼簡單！ 在此定義中，不會隱含並行或平行處理。 這在實務上也是如此。
 
 實際上，中F#的非同步計算會排定為獨立執行主要程式流程。 這並不代表並行或平行處理，也不表示一定會在背景中進行計算。 事實上，非同步計算甚至可以同步執行，視計算的本質和計算執行所在的環境而定。
 
@@ -69,7 +69,7 @@ let main argv =
     0
 ```
 
-在此範例中，`printTotalFileBytes` 函數的類型 `string -> Async<unit>`。 呼叫函數並不會實際執行非同步計算。 相反地，它會傳回 `Async<unit>`，作為要以非同步方式執行之工作的*規格*。 它會呼叫其主體中的 `Async.AwaitTask`，將 <xref:System.IO.File.WriteAllBytesAsync%2A> 的結果轉換成適當的類型。
+在此範例中，`printTotalFileBytes` 函數的類型 `string -> Async<unit>`。 呼叫函數並不會實際執行非同步計算。 相反地，它會傳回 `Async<unit>`，作為要以非同步方式執行之工作的*規格*。 它會呼叫其主體中的 `Async.AwaitTask`，將 <xref:System.IO.File.ReadAllBytesAsync%2A> 的結果轉換成適當的類型。
 
 另一個重要的程式程式碼是 `Async.RunSynchronously`的呼叫。 這是非同步模組的其中一個啟動函式，如果您想要實際執行非同步計算，就必須F#呼叫這個函式。
 
@@ -144,7 +144,7 @@ let main argv =
 
 在非同步計算中啟動子計算。 這可讓多個非同步計算同時執行。 子計算會與父計算共用解除標記。 如果父計算已取消，子計算也會一併取消。
 
-簽章：
+簽章
 
 ```fsharp
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
@@ -164,7 +164,7 @@ computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 
 執行非同步計算，並在目前的作業系統執行緒上立即啟動。 如果您需要在計算期間更新呼叫執行緒上的某個專案，這會很有説明。 例如，如果非同步計算必須更新 UI （例如更新進度列），則應該使用 `Async.StartImmediate`。
 
-簽章：
+簽章
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
@@ -182,7 +182,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 
 執行執行緒集區中的計算。 傳回在計算終止（產生結果、擲回例外狀況或取消）時，將在對應狀態下完成的 <xref:System.Threading.Tasks.Task%601>。 如果未提供解除標記，則會使用預設的解除標記。
 
-簽章：
+簽章
 
 ```fsharp
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
@@ -200,7 +200,7 @@ computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellatio
 
 排定要平行執行的一系列非同步計算。 藉由指定 `maxDegreesOfParallelism` 參數，可以選擇性地調整/節流處理平行處理原則的程度。
 
-簽章：
+簽章
 
 ```fsharp
 computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
@@ -220,7 +220,7 @@ computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
 
 排程要依行程順序執行的一系列非同步計算。 第一次計算將會執行，接下來是下一個，依此類推。 不會平行執行計算。
 
-簽章：
+簽章
 
 ```fsharp
 computations: seq<Async<'T>> -> Async<'T[]>
@@ -239,7 +239,7 @@ computations: seq<Async<'T>> -> Async<'T[]>
 
 傳回非同步計算，等候指定的 <xref:System.Threading.Tasks.Task%601> 完成，並將其結果傳回為 `Async<'T>`
 
-簽章：
+簽章
 
 ```fsharp
 task: Task<'T>  -> Async<'T>
@@ -257,7 +257,7 @@ task: Task<'T>  -> Async<'T>
 
 建立異步計算，以執行指定的 `Async<'T>`，並傳回 `Async<Choice<'T, exn>>`。 如果指定的 `Async<'T>` 成功完成，則會傳回包含結果值的 `Choice1Of2`。 如果在完成之前擲回例外狀況，則會傳回具有引發例外狀況的 `Choice2of2`。 如果它用於本身由許多計算組成的非同步計算，而其中一個計算擲回例外狀況，則會完全停止內含的計算。
 
-簽章：
+簽章
 
 ```fsharp
 computation: Async<'T> -> Async<Choice<'T, exn>>
@@ -275,7 +275,7 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 建立異步計算來執行指定的計算，並忽略其結果。
 
-簽章：
+簽章
 
 ```fsharp
 computation: Async<'T> -> Async<unit>
@@ -293,7 +293,7 @@ computation: Async<'T> -> Async<unit>
 
 執行非同步計算，並在呼叫執行緒上等候其結果。 此呼叫正在封鎖。
 
-簽章：
+簽章
 
 ```fsharp
 computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
@@ -312,7 +312,7 @@ computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -
 
 線上程集區中啟動會傳回 `unit`的非同步計算。 不等候其結果。 以 `Async.Start` 開始的嵌套計算會與呼叫它們的父系計算完全獨立地啟動。 其存留期不會系結至任何父系計算。 如果父代計算已取消，則不會取消任何子計算。
 
-簽章：
+簽章
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
@@ -382,7 +382,7 @@ module Async =
 
 雖然F#提供在目前線程上啟動非同步計算的一些功能（或明確地不在目前線程上），但非同步通常不會與特定的執行緒策略相關聯。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [F#非同步程式設計模型](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Jet .com 的F#非同步指南](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)

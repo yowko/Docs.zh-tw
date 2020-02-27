@@ -1,13 +1,13 @@
 ---
-title: Iterator
+title: 迭代器
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2789ac66690ebfd472b9bae5ccf08b1bdfaa0922
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353730"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628731"
 ---
 # <a name="iterators-visual-basic"></a>反覆運算器（Visual Basic）
 
@@ -435,7 +435,7 @@ End Class
 
 若要查看編譯器的功能，您可以使用 Ildasm.exe 工具來檢視為迭代器方法產生的 Microsoft 中繼語言程式碼。
 
-當您建立[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)的反覆運算器時，您不需要執行整個 <xref:System.Collections.IEnumerator> 介面。 當編譯器偵測到迭代器時，它會自動產生 `Current` 或 `MoveNext` 介面的 `Dispose`、<xref:System.Collections.IEnumerator> 和 <xref:System.Collections.Generic.IEnumerator%601> 方法。
+當您建立[類別](../../language-reference/statements/class-statement.md)或[結構](../../language-reference/statements/structure-statement.md)的反覆運算器時，您不需要執行整個 <xref:System.Collections.IEnumerator> 介面。 當編譯器偵測到迭代器時，它會自動產生 `Current` 或 `MoveNext` 介面的 `Dispose`、<xref:System.Collections.IEnumerator> 和 <xref:System.Collections.Generic.IEnumerator%601> 方法。
 
 之後每次反覆運算 `For Each…Next` 迴圈 (或直接呼叫 `IEnumerator.MoveNext`)，下一個迭代器程式碼主體都會在上一個 `Yield` 陳述式之後繼續。 接著，它會繼續進行下一個 `Yield` 語句，直到到達反覆運算器主體的結尾，或遇到 `Exit Function` 或 `Return` 語句為止。
 
@@ -453,7 +453,7 @@ End Class
 
 - 在迭代器中封裝建立清單。 在迭代器方法中，您可以建立清單，然後在迴圈中產生每個結果。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>

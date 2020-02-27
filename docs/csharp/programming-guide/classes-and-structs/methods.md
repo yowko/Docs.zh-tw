@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543556"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626525"
 ---
 # <a name="methods-c-programming-guide"></a>方法 (C# 程式設計手冊)
 
@@ -21,7 +21,7 @@ ms.locfileid: "77543556"
 
 ## <a name="method-signatures"></a>方法簽章
 
-方法是在[類別](../../language-reference/keywords/class.md)、[結構](../../language-reference/keywords/struct.md)或[介面](../interfaces/index.md)中宣告，藉由指定存取層級（例如 `public` 或 `private`）、選擇性修飾詞（例如 `abstract` 或 `sealed`、傳回值、方法的名稱，以及任何方法參數）。 這些部份放在一起即為方法的簽章。
+方法是在[類別](../../language-reference/keywords/class.md)、[結構](../../language-reference/builtin-types/struct.md)或[介面](../interfaces/index.md)中宣告，藉由指定存取層級（例如 `public` 或 `private`）、選擇性修飾詞（例如 `abstract` 或 `sealed`、傳回值、方法的名稱，以及任何方法參數）。 這些部份放在一起即為方法的簽章。
 
 > [!NOTE]
 > 方法的傳回類型不是方法多載用途的方法簽章的一部分。 不過，在判斷委派與所指向的方法之間的相容性時，它是方法簽章的一部分。
@@ -151,13 +151,13 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 如果方法會傳回 `void` 或非同步方法，則方法的主體必須是陳述式運算式 (如同 lambda)。 若為屬性和索引子，它們必須是唯讀，因此您不應使用 `get` 存取子關鍵字。
 
-## <a name="iterators"></a>Iterator
+## <a name="iterators"></a>迭代器
 
-迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](../../language-reference/keywords/yield.md) 陳述式一次傳回一個項目。 當 [yield return](../../language-reference/keywords/yield.md) 到達陳述式時，會記住在程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。
+迭代器會對集合執行自訂的反覆項目，例如清單或陣列。 迭代器會使用 [yield return](../../language-reference/keywords/yield.md) 陳述式，一次傳回一個項目。 當 [yield return](../../language-reference/keywords/yield.md) 到達陳述式時，會記住在程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。
 
 您會使用 [foreach](../../language-reference/keywords/foreach-in.md) 陳述式透過用戶端程式碼呼叫迭代器。
 
-迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>或 <xref:System.Collections.Generic.IEnumerator%601>。
+迭代器的傳回類型可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。
 
 如需詳細資訊，請參閱 [Iterator](../concepts/iterators.md)。
 

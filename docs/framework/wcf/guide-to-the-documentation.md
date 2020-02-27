@@ -5,17 +5,15 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: 12408bd9f10e7ed147a6c1adc0497d3b8d797e42
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 705e571e11fa7c8276fcb48d15ed0160fbda2bc5
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319815"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628757"
 ---
 # <a name="guide-to-the-documentation"></a>文件指南
 此處提供有關 Windows Communication Foundation （WCF）檔的指引。 連結文件是建議的起點，並且根據特定興趣和專業等級分群組。  
-  
- 若要安裝獨立版本的檔和說明檢視器，請下載[Microsoft Windows SDK v 7.1](https://go.microsoft.com/fwlink/?LinkID=194146&clcid=0x409)。  
   
 ## <a name="new-to-windows-communication-foundation-programming"></a>Windows Communication Foundation 程式設計的新功能  
   
@@ -61,7 +59,7 @@ ms.locfileid: "72319815"
 ## <a name="ws--protocols-supported-in-windows-communication-foundation"></a>Windows Communication Foundation 中支援的 WS-* 通訊協定  
  若要查看系統提供的系結所支援的通訊協定清單，請參閱[系統提供的互通性系結所支援的 Web 服務通訊協定](./feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)。 若要查看系統提供之系結的清單，請參閱[系統提供](system-provided-bindings.md)的系結。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Windows Communication Foundation 範例](./samples/index.md)
 - [概念性概觀](conceptual-overview.md)

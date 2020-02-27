@@ -1,63 +1,25 @@
 ---
 title: 物件導向程式設計 (C#)
-ms.date: 07/20/2015
+ms.date: 02/08/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 1de150f6eb4be893ca1afce6bd16afde5752c986
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 01d6f55bf0752f902f351675c4596abbb8ac85c2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711825"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627886"
 ---
-# <a name="object-oriented-programming-c"></a>物件導向程式設計 (C#)
+# <a name="object-oriented-programming-c"></a>物件導向程式設計（C#）
 
 C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完整支援。
 
-「封裝」指的是將一組相關的屬性、方法和其他成員，視為單一單位或物件。
+- 「封裝」指的是將一組相關的屬性、方法和其他成員，視為單一單位或物件。
+- 「繼承」則是描述依據現有類別來建立新類別的能力。
+- 「多型」指的是您可以有多個交替使用的類別，即使每個類別是以不同的方式來實作相同的屬性或方法。
 
-「繼承」則是描述依據現有類別來建立新類別的能力。
+## <a name="classes-and-objects"></a>類別與物件
 
-「多型」指的是您可以有多個交替使用的類別，即使每個類別是以不同的方式來實作相同的屬性或方法。
-
-本節將說明下列概念：
-
-- [類別與物件](#Classes)
-
-  - [類別成員](#Members)
-
-    - [屬性與欄位](#Properties)
-
-    - [方法](#Methods)
-
-    - [建構函式](#Constructors)
-
-    - [完成項](#Finalizers)
-
-    - [事件](#Events)
-
-    - [巢狀類別](#NestedClasses)
-
-  - [存取修飾詞與存取層級](#AccessModifiers)
-
-  - [具現化類別](#InstantiatingClasses)
-
-  - [靜態類別與成員](#Static)
-
-  - [匿名類型](#AnonymousTypes)
-
-- [繼承](#Inheritance)
-
-  - [覆寫成員](#Overriding)
-
-- [介面](#Interfaces)
-
-- [泛型](#Generics)
-
-- [委派](#Delegates)
-
-## <a name="Classes"></a>類別與物件
-
-「類別」和「物件」有時會交換使用，但事實上，類別說的是物件的「型別」，而物件則是類別之可使用的「執行個體」。 因此，建立物件的動作稱為「具現化」。 再以藍圖作比喻，若類別是藍圖，物件就是根據藍圖所蓋的建築物。
+詞彙*類別*和*物件*會分別描述物件的*類型*和類別的*實例*。 因此，建立物件的動作稱為「具現化」。 再以藍圖作比喻，若類別是藍圖，物件就是根據藍圖所蓋的建築物。
 
 若要定義類別：
 
@@ -67,7 +29,7 @@ class SampleClass
 }
 ```
 
-C# 也會提供輕量版的類別，稱為「結構」，當您必須建立龐大物件陣列而不想要使用太多記憶體時，這個結構會很有用。
+C#也提供稱為*結構*的類型，當您不需要對繼承或多型的支援時很有用。
 
 若要定義結構：
 
@@ -77,32 +39,28 @@ struct SampleStruct
 }
 ```
 
-如需詳細資訊，請參閱＜＞。
+如需詳細資訊，請參閱[類別](../../language-reference/keywords/class.md)和[結構](../../language-reference/builtin-types/struct.md)關鍵字上的文章。
 
-- [class](../../language-reference/keywords/class.md)
-
-- [struct](../../language-reference/keywords/struct.md)
-
-### <a name="Members"></a> 類別成員
+### <a name="class-members"></a>類別成員
 
 每個類別都有不同的「類別成員」，包括描述類別資料的屬性、定義類別行為的方法，以及提供不同類別與物件之間通訊的事件。
 
-#### <a name="Properties"></a> 屬性與欄位
+#### <a name="properties-and-fields"></a>屬性和欄位
 
-欄位和屬性表示物件包含的資訊。 欄位就像是變數，可直接讀取或設定。
+欄位和屬性表示物件包含的資訊。 欄位就像變數一樣，因為它們可以直接讀取或設定，受限於適當的存取修飾詞。
 
-若要定義欄位：
+若要定義可從類別的實例中存取的欄位：
 
 ```csharp
-class SampleClass
+public class SampleClass
 {
-    public string sampleField;
+    string sampleField;
 }
 ```
 
-屬性具有取得和設定程序，讓您更容易控制設定與傳回數值的方式。
+屬性具有 `get` 和 `set` 存取子，可對設定或傳回值的方式提供更多的控制。
 
-C# 允許您建立私用欄位來儲存屬性值，或是使用所謂的自動實作屬性，自動在幕後建立此欄位並提供屬性程序的基本邏輯。
+C#可讓您建立私用欄位來儲存屬性值，或使用自動執行的屬性，在幕後自動建立此欄位，並提供屬性程式的基本邏輯。
 
 若要定義自動實作屬性：
 
@@ -122,22 +80,22 @@ class SampleClass
     public int Sample
     {
         // Return the value stored in a field.
-        get { return _sample; }
+        get => _sample;
         // Store the value in the field.
-        set { _sample = value; }
+        set =>  _sample = value;
     }
 }
 ```
 
-大部分屬性都具有方法或程序，可以設定及取得屬性值。 但是您可以建立唯讀或唯寫屬性來限制不得修改或讀取。 在 C# 中，則可以省略 `get` 或 `set` 屬性方法。 不過，自動實作的屬性不可以是唯讀或唯寫。
+大部分屬性都具有方法或程序，可以設定及取得屬性值。 但是您可以建立唯讀或唯寫屬性來限制不得修改或讀取。 在 C# 中，則可以省略 `get` 或 `set` 屬性方法。 不過，自動執行的屬性不能是寫入。 唯讀自動執行的屬性可以在包含類別的函式中設定。
 
-如需詳細資訊，請參閱＜＞。
+如需詳細資訊，請參閱
 
 - [get](../../language-reference/keywords/get.md)
 
 - [set](../../language-reference/keywords/set.md)
 
-#### <a name="Methods"></a> 方法
+#### <a name="methods"></a>方法
 
 「方法」是物件可執行的動作。
 
@@ -164,13 +122,12 @@ public int sampleMethod(int sampleParam) {}
 
 在多數情況下，您是在類別定義中宣告方法。 不過， C# 也支援「擴充方法」，允許您在現有類別的實際定義之外將方法新增至類別。
 
-如需詳細資訊，請參閱＜＞。
+如需詳細資訊，請參閱
 
 - [方法](../classes-and-structs/methods.md)
-
 - [擴充方法](../classes-and-structs/extension-methods.md)
 
-#### <a name="Constructors"></a> 建構函式
+#### <a name="constructors"></a>建構函式
 
 建構函式是類別方法，會在建立指定類型的物件時自動執行。 建構函式通常用來初始化新物件的資料成員， 而且只能在建立類別時執行一次。 此外，建構函式中的程式碼永遠會在類別中的任何其他程式碼執行之前執行。 不過，就和其他任何方法一樣，您可以建立多個建構函式多載。
 
@@ -188,13 +145,13 @@ public class SampleClass
 
 如需詳細資訊，請參閱[建構函式](../classes-and-structs/constructors.md)。
 
-#### <a name="Finalizers"></a> 完成項
+#### <a name="finalizers"></a>完成項
 
 完成項是用來解構類別的執行個體。 在 .NET Framework 中，記憶體回收行程會自動管理應用程式中 Managed 物件的記憶體配置及釋放。 不過，您可能仍需要使用完成項來清除應用程式建立的任何 Unmanaged 資源。 一個類別只能有一個完成項。
 
 如需 .NET Framework 的完成項和記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbage-collection/index.md)。
 
-#### <a name="Events"></a> 事件
+#### <a name="events"></a>事件
 
 事件可讓類別或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或引發) 事件的類別稱為「發行者」，而接收 (或處理) 事件的類別則稱為「訂閱者」。 如需事件的詳細資訊以及如何引發和處理事件，請參閱[處理和引發事件](../../../standard/events/index.md)。
 
@@ -204,7 +161,7 @@ public class SampleClass
 
 - 若要訂閱事件，請使用 `+=` 運算子；若要取消訂閱事件，則使用 `-=` 運算子。
 
-#### <a name="NestedClasses"></a>巢狀類別
+#### <a name="nested-classes"></a>嵌套類別
 
 在類別中定義的另一個類別即稱為「巢狀」類別。 巢狀類別預設為私用。
 
@@ -224,7 +181,7 @@ class Container
 Container.Nested nestedInstance = new Container.Nested()
 ```
 
-### <a name="AccessModifiers"></a> 存取修飾詞與存取層級
+### <a name="access-modifiers-and-access-levels"></a>存取修飾詞與存取層級
 
 所有類別及類別成員都可以使用「存取修飾詞」，指定要提供給其他類別的存取層級。
 
@@ -241,7 +198,7 @@ Container.Nested nestedInstance = new Container.Nested()
 
 如需詳細資訊，請參閱[存取修飾詞](../classes-and-structs/access-modifiers.md)。
 
-### <a name="InstantiatingClasses"></a> 具現化類別
+### <a name="instantiating-classes"></a>具現化類別
 
 若要建立物件，您必須將類別執行個體化，或是建立類別執行個體。
 
@@ -266,13 +223,12 @@ SampleClass sampleObject = new SampleClass
     { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-如需詳細資訊，請參閱＜＞。
+如需詳細資訊，請參閱
 
 - [new 運算子](../../language-reference/operators/new-operator.md)
-
 - [物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)
 
-### <a name="Static"></a> 靜態類別與成員
+### <a name="static-classes-and-members"></a>靜態類別與成員
 
 類別的靜態成員是類別所有執行個體共用的屬性、程序或欄位。
 
@@ -295,7 +251,7 @@ C# 中的靜態類別只有靜態成員，且無法具現化。 靜態成員也�
 
 如需詳細資訊，請參閱[靜態](../../language-reference/keywords/static.md)。
 
-### <a name="AnonymousTypes"></a> 匿名型別
+### <a name="anonymous-types"></a>匿名型別
 
 使用匿名類型建立物件時，您不需要撰寫資料類型的類別定義， 編譯器 (Compiler) 會自動幫您建立類別 (Class)。 這個類別沒有可使用的名稱，但是包含您在宣告物件時指定的屬性。
 
@@ -309,7 +265,7 @@ var sampleObject =
 
 如需詳細資訊，請參閱[匿名型別](../classes-and-structs/anonymous-types.md)。
 
-## <a name="Inheritance"></a> 繼承
+## <a name="inheritance"></a>繼承
 
 繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。 成員被繼承的類別稱為「基底類別」，而繼承這種成員的類別即稱為「衍生類別」。 不過，C# 中的所有類別都隱含繼承 <xref:System.Object> 類別，這個類別會支援 .NET 類別階層架構，並為所有類別提供低階服務。
 
@@ -336,13 +292,13 @@ public sealed class A { }
 public abstract class B { }
 ```
 
-如需詳細資訊，請參閱＜＞。
+如需詳細資訊，請參閱
 
 - [sealed](../../language-reference/keywords/sealed.md)
 
 - [abstract](../../language-reference/keywords/abstract.md)
 
-### <a name="Overriding"></a> 覆寫成員
+### <a name="overriding-members"></a>覆寫成員
 
 衍生類別預設會從其基底類別繼承所有成員。 如果想要變更所繼承成員的行為，您必須覆寫這個成員。 也就是說，您可以定義衍生類別中方法、屬性或事件的新實作。
 
@@ -355,7 +311,7 @@ public abstract class B { }
 |[abstract](../../language-reference/keywords/abstract.md)|要求在衍生類別中覆寫類別成員。|
 |[new 修飾詞](../../language-reference/keywords/new-modifier.md)|隱藏繼承自基底類別的成員。|
 
-## <a name="Interfaces"></a> 介面
+## <a name="interfaces"></a>介面
 
 介面就像類別，可定義屬性、方法和事件集。 但與類別不同的是，介面並不提供實作。 介面是由類別實作，並定義為與類別不同的實體。 介面就代表著一種合約，因為實作介面的類別必須完全依介面的定義來實作這個介面的各個方面。
 
@@ -380,13 +336,9 @@ class SampleClass : ISampleInterface
 }
 ```
 
-如需詳細資訊，請參閱＜＞。
+如需詳細資訊，請[參閱介面上](../interfaces/index.md)的程式設計指南一文和[interface](../../language-reference/keywords/interface.md)關鍵字上的語言參考文章。
 
-[介面](../interfaces/index.md)
-
-[interface](../../language-reference/keywords/interface.md)
-
-## <a name="Generics"></a> 泛型
+## <a name="generics"></a>泛型
 
 .NET Framework 中的類別、結構、介面和方法可以包括「型別參數」，這些參數會定義可儲存或使用之物件的類型。 泛型最常見的範例是集合，您可以在其中指定要儲存於集合之物件的類型。
 
@@ -406,13 +358,13 @@ SampleGeneric<string> sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
-如需詳細資訊，請參閱＜＞。
+如需詳細資訊，請參閱
 
 - [泛型](../../../standard/generics/index.md)
 
 - [泛型](../generics/index.md)
 
-## <a name="Delegates"></a> 委派
+## <a name="delegates"></a>委派
 
 「委派」是定義方法簽章的類型，可以提供任何具有相容簽章之方法的參考。 您可以透過委派叫用 (Invoke) 或呼叫方法。 委派可以用來將方法當做引數傳遞給其他方法。
 
@@ -444,12 +396,8 @@ class SampleClass
 }
 ```
 
-如需詳細資訊，請參閱＜＞。
+如需詳細資訊，請[參閱委派](../../language-reference/builtin-types/reference-types.md)關鍵字上的程式設計指南[文章和語言](../delegates/index.md)參考文章。
 
-- [委派](../delegates/index.md)
-
-- [delegate](../../language-reference/builtin-types/reference-types.md)
-
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)

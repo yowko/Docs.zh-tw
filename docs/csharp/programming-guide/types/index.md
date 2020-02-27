@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: d277869809b7148a2c3d568c91fce15f9a83baa1
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093561"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628133"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 
@@ -67,7 +67,7 @@ C# 提供一組標準內建數字類型，代表整數、浮點數值、布林�
 
 ## <a name="custom-types"></a>自訂類型
 
-您可以使用 [struct](../../language-reference/keywords/struct.md)、[class](../../language-reference/keywords/class.md)、[interface](../../language-reference/keywords/interface.md) 和 [enum](../../language-reference/builtin-types/enum.md) 建構來建立您自己的自訂類型。 .NET 類別庫本身是 Microsoft 所提供的自訂型別集合，可供您用於自己的應用程式中。 根據預設，類別庫中最常使用的型別可用於任何 C# 程式中。 只有當您明確地將專案參考新增至定義所在的組件時，才能使用其他類型。 編譯器在有該組件的參考之後，您可以針對在原始程式碼的該組件中宣告的類型宣告變數 (和常數)。 如需詳細資訊，請參閱 [.NET 類別庫](../../../standard/class-library-overview.md)。
+您可以使用 [struct](../../language-reference/builtin-types/struct.md)、[class](../../language-reference/keywords/class.md)、[interface](../../language-reference/keywords/interface.md) 和 [enum](../../language-reference/builtin-types/enum.md) 建構來建立您自己的自訂類型。 .NET 類別庫本身是 Microsoft 所提供的自訂型別集合，可供您用於自己的應用程式中。 根據預設，類別庫中最常使用的型別可用於任何 C# 程式中。 只有當您明確地將專案參考新增至定義所在的組件時，才能使用其他類型。 編譯器在有該組件的參考之後，您可以針對在原始程式碼的該組件中宣告的類型宣告變數 (和常數)。 如需詳細資訊，請參閱 [.NET 類別庫](../../../standard/class-library-overview.md)。
 
 ## <a name="the-common-type-system"></a>一般類型系統
 
@@ -75,7 +75,7 @@ C# 提供一組標準內建數字類型，代表整數、浮點數值、布林�
 
 - 它支援繼承準則。 型別可以衍生自稱為「基底型別」的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底類型同樣可以衍生自一些其他類型，衍生類型則會繼承其繼承階層架構中兩個基底類型的成員。 包括 <xref:System.Int32?displayProperty=nameWithType> (C# 關鍵字：[int](../../language-reference/builtin-types/integral-numeric-types.md)) 等內建數字型別在內的所有型別，最終都衍生自單一基底型別，即 <xref:System.Object?displayProperty=nameWithType> (C# 關鍵字：[object](../../language-reference/builtin-types/reference-types.md))。 這種統一型別階層架構稱為[一般型別系統](../../../standard/base-types/common-type-system.md) (CTS)。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](../classes-and-structs/inheritance.md)。
 
-- CTS 中的每個型別都會定義為「實值型別」或「參考型別」。 這包括 .NET 類別庫中的所有自訂型別以及您自己的使用者定義型別。 您使用 [struct](../../language-reference/keywords/struct.md) 關鍵字定義的型別為實值型別；所有內建的數字型別都是 `structs`。 您使用 [class](../../language-reference/keywords/class.md) 關鍵字定義的類型為參考型別。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
+- CTS 中的每個型別都會定義為「實值型別」或「參考型別」。 這包括 .NET 類別庫中的所有自訂型別以及您自己的使用者定義型別。 您使用 [struct](../../language-reference/builtin-types/struct.md) 關鍵字定義的型別為實值型別；所有內建的數字型別都是 `structs`。 您使用 [class](../../language-reference/keywords/class.md) 關鍵字定義的類型為參考型別。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
 
 下圖顯示 CTS 中的實值型別和參考型別之間的關聯性。
 
@@ -90,7 +90,7 @@ C# 提供一組標準內建數字類型，代表整數、浮點數值、布林�
 
 實值型別衍生自 <xref:System.ValueType?displayProperty=nameWithType>，該型別又衍生自 <xref:System.Object?displayProperty=nameWithType>。 衍生自 <xref:System.ValueType?displayProperty=nameWithType> 的型別在 CLR 中具有特殊行為。 實值型別變數會直接包含其值，這表示配置的記憶體內嵌在宣告該變數的內容中。 實值型別變數不會有任何個別的堆積配置或記憶體回收額外負荷。
 
-實值型別有兩種類別︰[struct](../../language-reference/keywords/struct.md) 和 [enum](../../language-reference/builtin-types/enum.md)。
+實值型別有兩種類別︰[struct](../../language-reference/builtin-types/struct.md) 和 [enum](../../language-reference/builtin-types/enum.md)。
 
 內建的數字類型為結構，而您可以存取其屬性和方法︰
 
@@ -109,7 +109,7 @@ char c = 'Z';
 
 實值型別為 *sealed*，其表示您無法從 <xref:System.Int32?displayProperty=nameWithType> 衍生類型，也無法定義從任何使用者定義的類別或結構繼承的結構，因為結構只能從 <xref:System.ValueType?displayProperty=nameWithType> 繼承。 不過，結構可以實作一或多個介面。 您可以將結構類型轉型為它實作的介面類型；這會導致 *boxing* 作業將結構包裝在受控堆積上的參考型別物件內。 當您將實值型別傳遞至接受 <xref:System.Object?displayProperty=nameWithType> 或任何介面型別做為輸入參數的方法時，就會發生 Boxing 作業。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](./boxing-and-unboxing.md)。
 
-您使用 [struct](../../language-reference/keywords/struct.md) 關鍵字來建立您自己自訂的實值型別。 一般來說，會使用結構作為一小組相關變數的容器，如下列範例所示︰
+您使用 [struct](../../language-reference/builtin-types/struct.md) 關鍵字來建立您自己自訂的實值型別。 一般來說，會使用結構作為一小組相關變數的容器，如下列範例所示︰
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
@@ -138,13 +138,13 @@ MyClass mc2 = mc;
 IMyInterface iface = new MyClass();
 ```
 
-建立物件時，會在 Managed 堆積上配置記憶體，而變數只會保留物件位置的參考。 配置以及由 CLR 的自動記憶體管理功能 (也就是「記憶體回收」) 回收 Managed 堆積上的類型時，都需要額外負荷。 不過，記憶體回收也已獲得高度最佳化，因此在大部分情況下並不會產生效能問題。 如需有關記憶體回收的詳細資訊，請參閱[自動記憶體管理](../../../standard/automatic-memory-management.md)。
+建立物件時，會在 Managed 堆積上配置記憶體，而變數只會保留物件位置的參考。 配置和由 CLR 的自動記憶體管理功能 (也就是「記憶體回收」) 回收 Managed 堆積上的型別時，都需要額外負荷。 不過，記憶體回收也已獲得高度最佳化，因此在大部分情況下並不會產生效能問題。 如需有關記憶體回收的詳細資訊，請參閱[自動記憶體管理](../../../standard/automatic-memory-management.md)。
 
 所有陣列都是參考型別，即使其元素都是實值型別。 陣列隱含衍生自 <xref:System.Array?displayProperty=nameWithType> 類別，但您會利用 C# 所提供的簡化語法來宣告及使用陣列，如下列範例所示：
 
 [!code-csharp[csProgGuideTypes#45](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#45)]
 
-參考型別完全支援繼承。 當您建立類別時，可以繼承自任何其他未定義為 [sealed](../../language-reference/keywords/sealed.md) 的介面或類別，而其他類別可以繼承自您的類別並覆寫您的虛擬方法。 如需如何為您自己建立類別的詳細資訊，請參閱[類別和結構](../classes-and-structs/index.md)。 如有關繼承和虛擬方法的詳細資訊，請參閱[繼承](../classes-and-structs/inheritance.md)。
+參考型別完全支援繼承。 當您建立類別時，您可以繼承自任何未定義為 [sealed](../../language-reference/keywords/sealed.md) 的介面或類別，而其他類別可以繼承自您的類別並覆寫您的虛擬方法。 如需如何為您自己建立類別的詳細資訊，請參閱[類別和結構](../classes-and-structs/index.md)。 如有關繼承和虛擬方法的詳細資訊，請參閱[繼承](../classes-and-structs/inheritance.md)。
 
 ## <a name="types-of-literal-values"></a>常值的類型
 

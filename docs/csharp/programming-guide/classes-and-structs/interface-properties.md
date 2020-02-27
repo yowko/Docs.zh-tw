@@ -1,24 +1,24 @@
 ---
 title: 介面屬性 - C# 程式設計手冊
-ms.date: 07/20/2015
+ms.date: 01/31/2020
 helpviewer_keywords:
 - properties [C#], on interfaces
 - interfaces [C#], properties
 ms.assetid: 6503e9ed-33d7-44ec-b4c1-cc16c084b795
-ms.openlocfilehash: ff892a35f4be6600c00bc0c72c2f789ef6eb4408
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5798b80526f34e923e2eaab43847b98f6c64e14b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705531"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626616"
 ---
 # <a name="interface-properties-c-programming-guide"></a>介面屬性 (C# 程式設計手冊)
 
-屬性可以宣告於 [interface](../../language-reference/keywords/interface.md) 上。 介面屬性存取子的範例如下：
+屬性可以宣告於 [interface](../../language-reference/keywords/interface.md) 上。 下列範例會宣告介面屬性存取子：
 
-[!code-csharp[csProgGuideProperties#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#14)]
+[!code-csharp[DeclareProperties](~/samples/snippets/csharp/interfaces/properties.cs#DeclareInterfaceProperties)]
 
-介面屬性的存取子沒有主體。 因此，存取子的目的是指出屬性是讀寫、唯讀還是唯寫。
+介面屬性通常不會有主體。 存取子會指出屬性為讀寫、唯讀或僅寫入。 不同于類別和結構，宣告不含主體的存取子並不會宣告[自動實作為屬性](auto-implemented-properties.md)。 從C# 8.0 開始，介面可能會定義成員的預設實值，包括屬性。 在介面中定義屬性的預設實為罕見，因為介面可能不會定義實例資料欄位。
 
 ## <a name="example"></a>範例
 
@@ -26,19 +26,20 @@ ms.locfileid: "75705531"
 
 您可以使用屬性的完整名稱，而屬性參考在其中宣告成員的介面。 例如：
 
-[!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
-這稱為[明確介面實作](../interfaces/explicit-interface-implementation.md)。 例如，如果 `Employee` 類別實作 `ICitizen` 和 `IEmployee` 這兩個介面，而且這兩個介面都具有 `Name` 屬性，則需要明確介面成員實作。 也就是說，下列屬性宣告：
+上述範例示範[明確的介面執行](../interfaces/explicit-interface-implementation.md)。 例如，如果 `Employee` 類別實作 `ICitizen` 和 `IEmployee` 這兩個介面，而且這兩個介面都具有 `Name` 屬性，則需要明確介面成員實作。 也就是說，下列屬性宣告：
 
-[!code-csharp[csProgGuideProperties#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#16)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#ExplicitImplementation)]
 
-在 `IEmployee` 介面上實作 `Name` 屬性，而下列宣告：
+在 `Name` 介面上實作 `IEmployee` 屬性，而下列宣告：
 
-[!code-csharp[csProgGuideProperties#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#17)]
+[!code-csharp[ExplicitProperties](~/samples/snippets/csharp/interfaces/properties.cs#CitizenImplementation)]
 
-在 `ICitizen` 介面上實作 `Name` 屬性。
+在 `Name` 介面上實作 `ICitizen` 屬性。
 
-[!code-csharp[csProgGuideProperties#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#15)]
+[!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#PropertyExample)]
+[!code-csharp[Example](~/samples/snippets/csharp/interfaces/properties.cs#UseProperty)]
 
 **`210 Hazem Abolrous`**
 
@@ -52,7 +53,7 @@ Employee number: 211
 Employee name: Hazem Abolrous
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [屬性](./properties.md)

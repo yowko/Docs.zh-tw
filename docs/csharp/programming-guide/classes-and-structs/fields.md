@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 665c99302887c51c69b4d818619dd6bedd43b644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714940"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628237"
 ---
 # <a name="fields-c-programming-guide"></a>欄位 (C# 程式設計手冊)
 
-「欄位」是任意類型的變數，可在[類別](../../language-reference/keywords/class.md)或[結構](../../language-reference/keywords/struct.md)中直接宣告。 欄位是其包含類型的「成員」。
+「欄位」是任意類型的變數，可在[類別](../../language-reference/keywords/class.md)或[結構](../../language-reference/builtin-types/struct.md)中直接宣告。 欄位是其包含類型的「成員」。
 
 類別或結構可能具有實例欄位、靜態欄位或兩者。 執行個體欄位是專屬於某種類型的執行個體。 如果您有搭配執行個體欄位 F 的類別 T，您可以建立兩個類型 T 的物件，然後修改每個物件中的 F 值，而不會影響另一個物件中的值。 相較之下，靜態欄位屬類別本身所擁有，並在該類別的所有執行個體之間共用。 您只能使用類別名稱來存取靜態欄位。 如果您依實例名稱存取靜態欄位，您會收到[CS0176](../../misc/cs0176.md)編譯時期錯誤。
 
@@ -48,7 +48,7 @@ ms.locfileid: "75714940"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)

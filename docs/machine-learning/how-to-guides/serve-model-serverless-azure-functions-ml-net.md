@@ -1,16 +1,16 @@
 ---
 title: 將模型部署到 Azure Functions
 description: 使用 Azure Functions 在網際網路上提供 ML.NET 情感分析機器學習模型以進行預測
-ms.date: 11/07/2019
+ms.date: 02/21/2020
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 5ef6331950845b2900e33b2c51c308644ba17fd6
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 33afd568bb12b855a3888bec31f2e9bbc3c720da
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733346"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628666"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>將模型部署到 Azure Functions
 
@@ -32,7 +32,7 @@ ms.locfileid: "73733346"
 
 ## <a name="create-azure-functions-project"></a>建立 Azure Functions 專案
 
-1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [雲端] 節點。 然後選取 [Azure Functions] 專案範本。 在 [名稱] 文字方塊中，輸入 "SentimentAnalysisFunctionsApp"，然後選取 [確定] 按鈕。
+1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案] >  [新增] >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [雲端] 節點。 然後選取 [Azure Functions] 專案範本。 在 [名稱] 文字方塊中，輸入 "SentimentAnalysisFunctionsApp"，然後選取 [確定] 按鈕。
 1. 在 [新增專案] 對話方塊中，開啟專案選項上方的下拉式清單，然後選取 [Azure Functions v2 (.NET Core)]。 然後，選取 [Http 觸發程序] 專案，然後選取 [確定] 按鈕。
 1. 在您的專案中建立名為 *MLModels* 的目錄，以儲存您的模型：
 
@@ -50,9 +50,9 @@ ms.locfileid: "73733346"
 
     在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.Extensions.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
 
-1. 安裝1.0.28 的**NuGet 套件**版本 **+** ：
+1. 請安裝**1.0.31** **NuGet 套件**版本：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 [nuget.org] 作為套件來源，選取 [已安裝] 索引標籤 **，搜尋**[1.0.28]，在清單中選取該套件，從 [版本] 下拉式清單中選取 []**或更新版本**，然後選取 [**更新**] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。 選擇 [nuget.org] 作為套件來源，選取 [已安裝] 索引標籤 **，搜尋**[1.0.31]，在清單中選取該套件，從 [版本] 下拉式清單中選取 [ ]，然後選取 [**更新**] 按鈕。 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
 
 ## <a name="add-pre-trained-model-to-project"></a>將預先定型的模型新增到專案
 
@@ -63,7 +63,7 @@ ms.locfileid: "73733346"
 
 建立用來預測情緒的類別。 將新類別新增至專案：
 
-1. 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
+1. 在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新項目]。
 
 1. 在 [新增項目] 對話方塊中，選取 [Azure Function]，然後將 [名稱] 欄位變更為 *AnalyzeSentiment.cs*。 接著，選取 [新增] 按鈕。
 
@@ -115,7 +115,7 @@ ms.locfileid: "73733346"
 
 如果您想要深入瞭解相依性[插入](https://en.wikipedia.org/wiki/Dependency_injection)，下列連結提供詳細資訊。
 
-1. 在 [方案總管] 中，於專案上按一下滑鼠右鍵，然後選取 [新增] > [新增項目]。
+1. 在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新項目]。
 1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *Startup.cs*。 接著，選取 [新增] 按鈕。
 1. 將下列 using 語句新增至*Startup.cs*的頂端：
 
@@ -181,7 +181,7 @@ ms.locfileid: "73733346"
 
 `Run` 方法執行時，來自 HTTP 請求的傳入資料會還原序列化，並用來作為 `PredictionEnginePool` 的輸入。 接著會呼叫 `Predict` 方法，使用在 `Startup` 類別中註冊的 `SentimentAnalysisModel` 進行預測，並在成功時將結果傳回給使用者。
 
-## <a name="test-locally"></a>在本機進行測試
+## <a name="test-locally"></a>本機測試
 
 一切都設定好後，就可以開始測試應用程式：
 
@@ -198,8 +198,8 @@ ms.locfileid: "73733346"
     Negative
     ```
 
-恭喜您！ 您已成功提供您的模型，以使用 Azure Function 在網際網路上進行預測。
+恭喜！ 您已成功提供您的模型，以使用 Azure Function 在網際網路上進行預測。
 
 ## <a name="next-steps"></a>後續步驟
 
-- [部署到 Azure](/azure/azure-functions/functions-develop-vs#publish-to-azure)
+- [部署至 Azure](/azure/azure-functions/functions-develop-vs#publish-to-azure)

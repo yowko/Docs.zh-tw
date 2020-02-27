@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 258cf59fb8383fe131f4a0e78dac6189e1d9c91e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337665"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628042"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
 
@@ -30,7 +30,7 @@ ms.locfileid: "75337665"
 
 如果三個元件全都存在，則是絕對路徑。 如果未指定任何磁碟區或磁碟機代號，且目錄名稱開頭為[目錄分隔符號字元](<xref:System.IO.Path.DirectorySeparatorChar>)，則路徑是相對於目前磁碟機的根目錄。 否則，路徑是相對於目前的目錄。 下表顯示一些可能的目錄和檔案路徑。
 
-|{2&gt;路徑&lt;2}  |描述  |
+|Path  |描述  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | 從磁碟機 C: 根目錄開始的絕對檔案路徑 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 從目前磁碟機根目錄開始的絕對路徑。 |
@@ -49,6 +49,8 @@ ms.locfileid: "75337665"
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
 
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ## <a name="unc-paths"></a>UNC 路徑
 
 通用命名慣例 (UNC) 路徑，用來存取網路資源，具有下列格式：
@@ -60,7 +62,7 @@ ms.locfileid: "75337665"
 
 以下是 UNC 路徑的一些範例：
 
-|{2&gt;路徑&lt;2}  |描述  |
+|Path  |描述  |
 | -- | -- |
 | `\\system07\C$\` | `system07` 上磁碟機 C: 的根目錄。 |
 | `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share 磁碟區 Test 目錄中的 Foo.txt 檔案。|

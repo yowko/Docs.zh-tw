@@ -2,12 +2,12 @@
 title: 使用列舉類別，而非列舉類型
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解如何使用列舉類別 (而非列舉) 來解決後者的一些限制。
 ms.date: 10/08/2018
-ms.openlocfilehash: 6752adb28b1bd0982c66fa2d021b04b999447c6e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 82bd80d19b3b73eb2f45ede8cc7ad4593c688277
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337683"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628458"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>使用列舉類別，而非列舉類型
 
@@ -81,12 +81,6 @@ public class CardType : Enumeration
 ```
 
 ## <a name="additional-resources"></a>其他資源
-
-- **Enum’s are evil—update (列舉很邪惡—更新)**  \
-  <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
-
-- **Daniel hardman:。列舉如何散佈疾病，以及如何解決此**情況 \
-  <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
 - **Jimmy Bogard。列舉類別** \
   <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>

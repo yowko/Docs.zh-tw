@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: b5be6892a265f0a2b7f3109321fdcf46d4b0ea22
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9005c425badc5a4ed74e6af3447e563daf61229e
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711840"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627795"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定大小緩衝區 (C# 程式設計手冊)
 
@@ -22,7 +22,7 @@ private fixed char name[30];
 
 ## <a name="remarks"></a>備註
 
-在安全的程式碼中，包含陣列的 C# 結構不包含陣列項目。 相反地，該結構會包含元素的參考。 您可以將固定大小的陣列嵌入用於[不安全](../../language-reference/keywords/unsafe.md)程式碼區塊的 [struct](../../language-reference/keywords/struct.md)。
+在安全的程式碼中，包含陣列的 C# 結構不包含陣列項目。 相反地，該結構會包含元素的參考。 您可以將固定大小的陣列嵌入用於[不安全](../../language-reference/builtin-types/struct.md)程式碼區塊的 [struct](../../language-reference/keywords/unsafe.md)。
 
 下列 `struct` 的大小為 8 個位元組。 `pathName` 陣列是參考：
 
@@ -32,7 +32,7 @@ private fixed char name[30];
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
-128 個元素的 `char` 陣列大小為 256 個位元組。 不論編碼為何，在固定大小的 [char](../../language-reference/builtin-types/char.md) 緩衝區中，每個字元一律會有兩個位元組。 即使 char 緩衝區使用 `CharSet = CharSet.Auto` 或 `CharSet = CharSet.Ansi` 封送處理至 API 方法或結構也一樣。 如需詳細資訊，請參閱<xref:System.Runtime.InteropServices.CharSet>。
+128 個元素的 `char` 陣列大小為 256 個位元組。 不論編碼為何，在固定大小的 [char](../../language-reference/builtin-types/char.md) 緩衝區中，每個字元一律會有兩個位元組。 即使 char 緩衝區使用 `CharSet = CharSet.Auto` 或 `CharSet = CharSet.Ansi` 封送處理至 API 方法或結構也一樣。 如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.CharSet>。
 
 上述範例示範如何存取 `fixed` 欄位而無需進行釘選，這是從 C# 7.3 開始可供使用的功能。
 
@@ -48,7 +48,7 @@ private fixed char name[30];
 - 陣列的宣告應包含計數，例如 `char id[8]`。 您不能使用 `char id[]`。
 - 不安全的緩衝區只能是不安全內容中結構的執行個體欄位。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [Unsafe 程式碼和指標](index.md)

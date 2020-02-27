@@ -2,16 +2,16 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 05/29/2018
-ms.openlocfilehash: 909815151265117395c6d8d13b4443a245c05f9e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 890d1fc3fd9d47f2bdcd63f2a25248c3edd705e4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451190"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626043"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -19,36 +19,15 @@ ms.locfileid: "77451190"
 
 ## <a name="synopsis"></a>概要
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
-
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] 
-    [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
+    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
+    [--filter] [-l|--logger] [--no-build] [--no-restore]
+    [-o|--output] [-r|--results-directory] [-s|--settings]
+    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
-
-dotnet test [-h|--help]
-```
-
----
 
 ## <a name="description"></a>描述
 
@@ -60,213 +39,103 @@ dotnet test [-h|--help]
 
 ## <a name="arguments"></a>引數
 
-`PROJECT`
+- **`PROJECT`**
 
-測試專案的路徑。 如果未指定，則會預設為目前目錄。
+  測試專案的路徑。 如果未指定，則會預設為目前目錄。
 
 ## <a name="options"></a>選項。
 
-# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
+  在測試執行中，從指定的路徑使用自訂測試配接器。
 
-在測試執行中，從指定的路徑使用自訂測試配接器。
+- **`-blame`**
 
-`--blame`
+  在歸責模式下執行測試。 此選項有助於隔離導致測試主控制項損毀的問題測試。 它會以 *Sequence.xml* 的形式在目前目錄中建立一個輸出檔，用來擷取損毀前的測試執行順序。
 
-在歸責模式下執行測試。 這個選項有助於隔離造成測試主機損毀的問題。 它會以 *Sequence.xml* 的形式在目前目錄中建立一個輸出檔，用來擷取損毀前的測試執行順序。
+- **`c|--configuration {Debug|Release}`**
 
-`-c|--configuration {Debug|Release}`
+  定義組建組態。 預設值是 `Debug`，但您的專案組態無法覆寫這個預設的 SDK 設定。
 
-定義組建組態。 預設值是 `Debug`，但您的專案組態無法覆寫這個預設的 SDK 設定。
+- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
+  測試回合啟用資料收集器。 如需詳細資訊，請參閱[監視及分析測試回合](https://aka.ms/vstest-collect)。
 
-測試回合啟用資料收集器。 如需詳細資訊，請參閱[監視及分析測試回合](https://aka.ms/vstest-collect)。
+- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
+  針對測試平台啟用診斷模式，並將診斷訊息寫入至指定的檔案。
 
-針對測試平台啟用診斷模式，並將診斷訊息寫入至指定的檔案。
+- **`f|--framework <FRAMEWORK>`**
 
-`-f|--framework <FRAMEWORK>`
+  尋找特定[架構](../../standard/frameworks.md)的測試二進位檔。
 
-尋找特定[架構](../../standard/frameworks.md)的測試二進位檔。
+- **`--filter <EXPRESSION>`**
 
-`--filter <EXPRESSION>`
+  使用指定的運算式篩選出目前專案中的測試。 如需詳細資訊，請參閱[篩選選項詳細資料](#filter-option-details)一節。 如需如何使用選擇性單元測試篩選的詳細資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
 
-使用指定的運算式篩選出目前專案中的測試。 如需詳細資訊，請參閱[篩選選項詳細資料](#filter-option-details)一節。 如需如何使用選擇性單元測試篩選的詳細資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
+- **`h|--help`**
 
-`-h|--help`
+  印出命令的簡短說明。
 
-印出命令的簡短說明。
+- **`l|--logger <LoggerUri/FriendlyName>`**
 
-`-l|--logger <LoggerUri/FriendlyName>`
+  指定測試結果的記錄器。
 
-指定測試結果的記錄器。
+- **`--no-build`**
 
-`--no-build`
+  不會在執行前建置測試專案。 它也會以隱含方式設定-`--no-restore` 旗標。
 
-不會在執行前建置測試專案。 它也會隱含設定 `--no-restore` 旗標。
+- **`--no-restore`**
 
-`--no-restore`
+  執行命令時，不會執行隱含的還原。
 
-執行命令時，不會執行隱含的還原。
+- **`-o|--output <OUTPUT_DIRECTORY>`**
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  在其中尋找要執行的二進位檔的目錄。
 
-在其中尋找要執行的二進位檔的目錄。
+- **`-r|--results-directory <PATH>`**
 
-`-r|--results-directory <PATH>`
+  要放置測試結果的目錄。 如果指定的目錄不存在，則會建立該目錄。
 
-要放置測試結果的目錄。 如果指定的目錄不存在，則會建立該目錄。
+- **`-s|--settings <SETTINGS_FILE>`**
 
-`-s|--settings <SETTINGS_FILE>`
+  用來執行測試的 `.runsettings` 檔案。 [使用 `.runsettings` 檔案設定單元測試](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)。
 
-用來執行測試的 `.runsettings` 檔案。 [使用 `.runsettings` 檔案設定單元測試](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)。
+- **`-t|--list-tests`**
 
-`-t|--list-tests`
+  列出在目前專案中探索到的所有測試。
 
-列出在目前專案中探索到的所有測試。
+- **`-v|--verbosity <LEVEL>`**
 
-`-v|--verbosity <LEVEL>`
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
-設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+- `RunSettings` 引數
 
-`RunSettings arguments`
+  引數會當做測試的 `RunSettings` 設定來傳遞。 指定為 "-- " 後 (注意 -- 後方的空格) 之 `[name]=[value]` 組的引數。 空格適用來分隔多個 `[name]=[value]` 組。
 
-針對測試傳遞為 RunSettings 設定的引數。 指定為 "-- " 後 (注意 -- 後方的空格) 之 `[name]=[value]` 組的引數。 空格適用來分隔多個 `[name]=[value]` 組。
+  範例： `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-範例： `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
-
-如需有關 RunSettings 的詳細資訊，請參閱 [vstest.console.exe：傳遞 RunSettings 引數](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md) \(英文\)。
-
-# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-在測試執行中，從指定的路徑使用自訂測試配接器。
-
-`-c|--configuration {Debug|Release}`
-
-定義組建組態。 預設值是 `Debug`，但您的專案組態無法覆寫這個預設的 SDK 設定。
-
-`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
-
-測試回合啟用資料收集器。 如需詳細資訊，請參閱[監視及分析測試回合](https://aka.ms/vstest-collect)。
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-針對測試平台啟用診斷模式，並將診斷訊息寫入至指定的檔案。
-
-`-f|--framework <FRAMEWORK>`
-
-尋找特定[架構](../../standard/frameworks.md)的測試二進位檔。
-
-`--filter <EXPRESSION>`
-
-使用指定的運算式篩選出目前專案中的測試。 如需詳細資訊，請參閱[篩選選項詳細資料](#filter-option-details)一節。 如需如何使用選擇性單元測試篩選的詳細資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
-
-`-h|--help`
-
-印出命令的簡短說明。
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-指定測試結果的記錄器。
-
-`--no-build`
-
-不會在執行前建置測試專案。 它也會隱含設定 `--no-restore` 旗標。
-
-`--no-restore`
-
-執行命令時，不會執行隱含的還原。
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-在其中尋找要執行的二進位檔的目錄。
-
-`-r|--results-directory <PATH>`
-
-要放置測試結果的目錄。 如果指定的目錄不存在，則會建立該目錄。
-
-`-s|--settings <SETTINGS_FILE>`
-
-用來執行測試的 `.runsettings` 檔案。 [使用 `.runsettings` 檔案設定單元測試](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)。
-
-`-t|--list-tests`
-
-列出在目前專案中探索到的所有測試。
-
-`-v|--verbosity <LEVEL>`
-
-設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
-
-# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`-a|--test-adapter-path <PATH_TO_ADAPTER>`
-
-在測試執行中，從指定的路徑使用自訂測試配接器。
-
-`-c|--configuration {Debug|Release}`
-
-定義組建組態。 預設值是 `Debug`，但您的專案組態無法覆寫這個預設的 SDK 設定。
-
-`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
-
-針對測試平台啟用診斷模式，並將診斷訊息寫入至指定的檔案。
-
-`-f|--framework <FRAMEWORK>`
-
-尋找特定[架構](../../standard/frameworks.md)的測試二進位檔。
-
-`--filter <EXPRESSION>`
-
-使用指定的運算式篩選出目前專案中的測試。 如需詳細資訊，請參閱[篩選選項詳細資料](#filter-option-details)一節。 如需如何使用選擇性單元測試篩選的詳細資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
-
-`-h|--help`
-
-印出命令的簡短說明。
-
-`-l|--logger <LoggerUri/FriendlyName>`
-
-指定測試結果的記錄器。
-
-`--no-build`
-
-不會在執行前建置測試專案。
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-在其中尋找要執行的二進位檔的目錄。
-
-`-s|--settings <SETTINGS_FILE>`
-
-用來執行測試的 `.runsettings` 檔案。 [使用 `.runsettings` 檔案設定單元測試](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)。
-
-`-t|--list-tests`
-
-列出在目前專案中探索到的所有測試。
-
-`-v|--verbosity <LEVEL>`
-
-設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
-
----
+  如需詳細資訊，請參閱[vstest：傳遞 .runsettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 
 ## <a name="examples"></a>範例
 
-執行目前目錄之專案中的測試：
+- 執行目前目錄之專案中的測試：
 
-`dotnet test`
+  ```dotnetcli
+  dotnet test
+  ```
 
-執行 `test1` 專案中的測試︰
+- 執行 `test1` 專案中的測試︰
 
-`dotnet test ~/projects/test1/test1.csproj`
+  ```dotnetcli
+  dotnet test ~/projects/test1/test1.csproj
+  ```
 
-在目前目錄中的專案中執行測試，並以 trx 格式產生測試結果檔案：
+- 在目前目錄中的專案中執行測試，並以 trx 格式產生測試結果檔案：
 
-`dotnet test --logger trx`
+  ```dotnetcli
+  dotnet test --logger trx
+  ```
 
 ## <a name="filter-option-details"></a>篩選選項詳細資料
 

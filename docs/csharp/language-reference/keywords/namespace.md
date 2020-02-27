@@ -8,12 +8,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: 1eaec05289ad1146ac3dcd6479442a6fae067cc9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b35f0a2a5cc0b2895b491d4ee24f89955f4b8fed
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713371"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625796"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# 參考)
 
@@ -27,11 +27,11 @@ ms.locfileid: "75713371"
 
 - 另一個命名空間
 
-- [Class - 類別](class.md)
+- [class](class.md)
 
 - [interface](interface.md)
 
-- [struct](struct.md)
+- [struct](../builtin-types/struct.md)
 
 - [enum](../builtin-types/enum.md)
 
@@ -53,13 +53,13 @@ ms.locfileid: "75713371"
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[命名空間](~/_csharplang/spec/namespaces.md)一節。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/namespaces.md)的[命名空間](~/_csharplang/spec/introduction.md)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)
 - [using](using-directive.md)
-- [using static](using-static.md)
+- [使用靜態](using-static.md)
 - [命名空間別名限定詞 `::`](../operators/namespace-alias-qualifier.md)
 - [命名空間](../../programming-guide/namespaces/index.md)

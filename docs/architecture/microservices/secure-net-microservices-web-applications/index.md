@@ -3,12 +3,12 @@ title: 保護 .NET 微服務和 Web 應用程式
 description: .NET 微服務和 Web 應用程式中的安全性 - 了解 ASP.NET Core Web 應用程式中的驗證選項。
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501635"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628328"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>製作安全的 .NET 微服務和 Web 應用程式
 
@@ -135,8 +135,8 @@ public void ConfigureServices(IServiceCollection services)
 
 如需為外部提供者設定應用程式的詳細資訊，請參閱[ASP.NET Core 檔中的外部提供者驗證](/aspnet/core/security/authentication/social/)。
 
-> [!TIP]
-所有詳細資料都是由先前所述的授權中介軟體和服務所處理。 因此，當您在 Visual Studio 建立 ASP.NET 程式碼 web 應用程式專案時，只需要選擇 [**個別使用者帳戶**] 驗證選項，如圖9-3 所示，除了註冊先前所述的驗證提供者之外。
+>[!TIP]
+>所有詳細資料都是由先前所述的授權中介軟體和服務所處理。 因此，當您在 Visual Studio 建立 ASP.NET 程式碼 web 應用程式專案時，只需要選擇 [**個別使用者帳戶**] 驗證選項，如圖9-3 所示，除了註冊先前所述的驗證提供者之外。
 
 ![[新增 ASP.NET Core Web 應用程式] 對話方塊的螢幕擷取畫面。](./media/index/select-individual-user-account-authentication-option.png)
 

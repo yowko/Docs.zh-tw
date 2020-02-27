@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: dotnet publish 命令會將 .NET Core 專案發行到目錄中。
 ms.date: 05/29/2018
-ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 88dc53d6c45bc18f630d8a7137704e813ad4f0e3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451288"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626069"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -70,9 +70,9 @@ dotnet publish [-h|--help]
 
 # <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
-定義組建組態。 預設值是 `Debug`。
+定義組建組態。 大部分專案的預設值都是 `Debug`，但您可以覆寫專案中的組建設定。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -125,9 +125,9 @@ dotnet publish [-h|--help]
 
 # <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
-定義組建組態。 預設值是 `Debug`。
+定義組建組態。 大部分專案的預設值都是 `Debug`，但您可以覆寫專案中的組建設定。
 
 `-f|--framework <FRAMEWORK>`
 
@@ -176,9 +176,9 @@ dotnet publish [-h|--help]
 
 # <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`-c|--configuration {Debug|Release}`
+`-c|--configuration <CONFIGURATION>`
 
-定義組建組態。 預設值是 `Debug`。
+定義組建組態。 大部分專案的預設值都是 `Debug`，但您可以覆寫專案中的組建設定。
 
 `-f|--framework <FRAMEWORK>`
 

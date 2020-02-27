@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 95735d5032a8896570918b991f12b853af88fb68
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a2f5300f9647823cf2c9ac2a4a5c7c888c7dd245
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705479"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626577"
 ---
 # <a name="objects-c-programming-guide"></a>物件 (C# 程式設計手冊)
 類別或結構定義就像是指定型別可以做什麼的藍圖。 物件基本上是根據藍圖配置和設定的記憶體區塊。 程式可建立許多同類別的物件。 物件也稱為執行個體，可儲存在具名變數或陣列或集合中。 用戶端程式碼是使用這些變數呼叫方法，並存取物件公用屬性的程式碼。 在 C# 之類的物件導向語言中，一般程式包含多個動態互動的物件。  
@@ -43,12 +43,12 @@ ms.locfileid: "75705479"
   
  [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
- 由於 `Equals` 的 <xref:System.ValueType?displayProperty=nameWithType> 實作必須能夠判斷結構中有哪些欄位，因此會使用反映。 建立您自己的結構時，請覆寫 `Equals` 方法以提供型別專屬的有效相等演算法。  
+ 由於 <xref:System.ValueType?displayProperty=nameWithType> 的 `Equals` 實作必須能夠判斷結構中有哪些欄位，因此會使用反映。 建立您自己的結構時，請覆寫 `Equals` 方法以提供型別專屬的有效相等演算法。  
   
 - 若要判斷兩個類別執行個體中的欄位值是否相等，您或許可以使用 <xref:System.Object.Equals%2A> 方法或 [== 運算子](../../language-reference/operators/equality-operators.md#equality-operator-)。 但請只有當類別覆寫或多載它們，以提供「相等」表示的型別物件的自訂定義時，才使用它們。 此類別可能也會實作 <xref:System.IEquatable%601> 介面或 <xref:System.Collections.Generic.IEqualityComparer%601> 介面。 這兩個介面都會提供可用以測試值相等的方法。 在設計您自己的類別以覆寫 `Equals`時，請務必遵循[如何定義類型的實值相等](../statements-expressions-operators/how-to-define-value-equality-for-a-type.md)和 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>中所述的指導方針。
   
 ## <a name="related-sections"></a>相關章節  
- 如需詳細資訊，請參閱：＜ ＞  
+ 其他資訊：  
   
 - [類別](./classes.md)  
   
@@ -60,12 +60,12 @@ ms.locfileid: "75705479"
   
 - [事件](../events/index.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [繼承](./inheritance.md)
-- [Class - 類別](../../language-reference/keywords/class.md)
-- [struct](../../language-reference/keywords/struct.md)
+- [class](../../language-reference/keywords/class.md)
+- [struct](../../language-reference/builtin-types/struct.md)
 - [new 運算子](../../language-reference/operators/new-operator.md)
 - [一般類型系統](../../../standard/base-types/common-type-system.md)

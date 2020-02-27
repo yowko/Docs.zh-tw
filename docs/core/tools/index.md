@@ -3,12 +3,12 @@ title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI 及其功能的總覽。
 ms.date: 02/13/2020
-ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543310"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625978"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI 總覽
 
@@ -87,7 +87,7 @@ dotnet /build_output/my_app.dll
 dotnet build
 ```
 
-首先，驅動器會決定要使用的 SDK 版本。 若沒有 ['global.json'](global-json.md)，將會使用最新可用版本的 SDK。 這可能是預覽版或穩定的版本，視兩者中何者版本最新。  確定 SDK 版本之後，就會開始執行命令。
+首先，驅動器會決定要使用的 SDK 版本。 如果沒有[global json](global-json.md)檔案，則會使用可用的最新 SDK 版本。 這可能是預覽版或穩定的版本，視兩者中何者版本最新。  確定 SDK 版本之後，就會開始執行命令。
 
 ### <a name="command"></a>Command
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: ac862d163f1bd8b66f29160d836bc459e4bf4081
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0305df5e7566f9441ce09fa3346a8b2dc67c8943
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745135"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627964"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>如何：將載入、儲存和取消按鈕加入至 Windows Form BindingNavigator 控制項
 
@@ -35,7 +35,7 @@ ms.locfileid: "76745135"
 
 5. 選取 <xref:System.Windows.Forms.BindingNavigator> 控制項。
 
-6. 按一下智慧標籤圖像（![智慧標籤](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")圖像），讓**BindingNavigator** [工作] 對話方塊出現，然後選取 [**編輯專案**]。
+6. 按一下 [設計工具動作] 圖像（![Small 黑色箭號](./media/designer-actions-glyph.gif)），讓 [ **BindingNavigator**工作] 對話方塊出現，然後選取 [**編輯專案**]。
 
      [**專案集合編輯器**] 隨即出現。
 
@@ -49,7 +49,7 @@ ms.locfileid: "76745135"
 
     4. 將每個按鈕的 [<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>] 屬性設為 [**文字**]。 或者，您可以將此屬性設定為**Image**或**ImageAndText**，並設定要在 <xref:System.Windows.Forms.ToolStripItem.Image%2A> 屬性中顯示的影像。
 
-    5. 按一下 [確定] 關閉對話方塊。 這些按鈕會新增至 <xref:System.Windows.Forms.ToolStrip>。
+    5. 按一下 **[確定]** ，關閉對話方塊。 這些按鈕會新增至 <xref:System.Windows.Forms.ToolStrip>。
 
 8. 以滑鼠右鍵按一下表單，然後選擇 [ **View Code**]。
 

@@ -3,12 +3,12 @@ title: global.json 概觀
 description: 了解如何使用 global.json 檔案來設定執行.NET Core CLI 命令時的 NET Core SDK 版本。
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8582c495be58e38ca19320f14e20f8c511a9c821
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 70257566e1ff30f5c97212a5e0e3c308c27738b7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920502"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625991"
 ---
 # <a name="globaljson-overview"></a>global.json 概觀
 
@@ -24,15 +24,15 @@ ms.locfileid: "76920502"
 
 ## <a name="globaljson-schema"></a>global.json 結構描述
 
-### <a name="sdk"></a>SDK
+### <a name="sdk"></a>sdk
 
-類型：`object`
+輸入： `object`
 
 指定要選取 .NET Core SDK 的相關資訊。
 
-#### <a name="version"></a>版本
+#### <a name="version"></a>version
 
-- 類型：`string`
+- 輸入： `string`
 
 - 自： .NET Core 1.0 SDK 起提供。
 
@@ -45,7 +45,7 @@ ms.locfileid: "76920502"
 
 #### <a name="allowprerelease"></a>allowPrerelease
 
-- 類型：`boolean`
+- 輸入： `boolean`
 
 - 自： .NET Core 3.0 SDK 起提供。
 
@@ -58,7 +58,7 @@ ms.locfileid: "76920502"
 
 #### <a name="rollforward"></a>向前復原
 
-- 類型：`string`
+- 輸入： `string`
 
 - 自： .NET Core 3.0 SDK 起提供。
 
@@ -73,7 +73,7 @@ ms.locfileid: "76920502"
 
 下表顯示 `rollForward` 機碼的可能值：
 
-| {2&gt;值&lt;2}         | 行為 |
+| 值         | 行為 |
 | ------------- | ---------- |
 | `patch`       | 使用指定的版本。 <br> 如果找不到，則會向前復原到最新的修補程式等級。 <br> 如果找不到，則會失敗。 <br><br> 這個值是舊版 SDK 的舊行為。 |
 | `feature`     | 會針對指定的主要、次要和功能區使用最新的修補程式等級。 <br> 如果找不到，則會向前復原至相同主要/次要內的下一個較高功能區，並使用該功能區的最新修補程式等級。 <br> 如果找不到，則會失敗。 |
@@ -136,7 +136,7 @@ ms.locfileid: "76920502"
 
 若要在您的電腦上安裝其他 .NET Core SDK 版本，請造訪[下載 .Net Core](https://dotnet.microsoft.com/download/dotnet-core)頁面。
 
-執行 [dotnet new](dotnet-new.md) 命令，可在目前的目錄中建立新的 *global.json* 檔案，與下面的範例類似：
+執行 *dotnet new* 命令，可在目前的目錄中建立新的 [global.json](dotnet-new.md) 檔案，與下面的範例類似：
 
 ```dotnetcli
 dotnet new globaljson --sdk-version 3.0.100
@@ -147,7 +147,7 @@ dotnet new globaljson --sdk-version 3.0.100
 > [!NOTE]
 > 比對規則是由 `dotnet.exe` 進入點所控制，這在所有已安裝的 .NET Core 安裝的執行時間中都是通用的。 當您有多個並行安裝的執行時間時，會使用 .NET Core 執行時間最新安裝版本的比對規則。
 
-## <a name="net-core-3xtabnetcore3x"></a>[.NET Core 3。x](#tab/netcore3x)
+## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 
 從 .NET Core 3.0 開始，判斷要使用的 SDK 版本時，適用下列規則：
 
@@ -160,7 +160,7 @@ dotnet new globaljson --sdk-version 3.0.100
   - 如果未設定 `rollFoward` 值，則會使用 `latestPatch` 做為預設的 `rollForward` 原則。 否則，請檢查[向前復原](#rollforward)區段中的每個值及其行為。
   - 是否考慮發行前版本，以及未設定 `allowPrerelease` 時的預設行為，請參閱[allowPrerelease](#allowprerelease)一節。
 
-## <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+## <a name="net-core-2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 在 .NET Core 2.x SDK 中，當您決定要使用的 SDK 版本時，適用下列規則：
 
@@ -174,26 +174,28 @@ SDK 版本是由下列元件所組成：
 
 `[.NET Core major version].[.NET Core minor version].[xyz][-optional preview name]`
 
-.NET Core SDK **功能版本**是由 SDK 2.1.100 和更新版本號碼最後部分 (`xyz`) 的第一個數字 (`x`) 表示。 一般而言，.NET Core SDK 的發行週期比 .NET Core 快。
+.NET Core SDK **功能版本**是由 SDK 2.1.100 和更新版本號碼最後部分 (`x`) 的第一個數字 (`xyz`) 表示。 一般而言，.NET Core SDK 的發行週期比 .NET Core 快。
 
-**修補程式版本**由 SDK 2.1.100 和更新版本號碼最後部分 (`xyz`) 的最後兩個數字 (`yz`) 定義。 例如，如果指定 `2.1.300` 做為 SDK 版本，SDK 選取項目最高會找到 `2.1.399`，但是 `2.1.400` 不視為 `2.1.300` 的修補版本。
+**修補程式版本**由 SDK 2.1.100 和更新版本號碼最後部分 (`yz`) 的最後兩個數字 (`xyz`) 定義。 例如，如果指定 `2.1.300` 做為 SDK 版本，SDK 選取項目最高會找到 `2.1.399`，但是 `2.1.400` 不視為 `2.1.300` 的修補版本。
 
 .NET Core SDK 版本 `2.1.100` 到 `2.1.201` 是在版本號碼轉換期間發行，它們並沒有正確地處理 `xyz` 標記法。 強烈建議如果您在 *global.json* 檔案中指定這些版本，則必須確保目標電腦上有這些指定的版本。
 
 ---
 
-## <a name="troubleshooting-build-warnings"></a>為組建警告進行疑難排解
+## <a name="troubleshoot-build-warnings"></a>針對組建警告進行疑難排解
 
-> [!WARNING]
-> 您正在使用.NET Core SDK 的預覽版本。 您可以在目前的專案中透過 global.json 檔案定義 SDK 版本。 詳情請見 <https://go.microsoft.com/fwlink/?linkid=869452>
+* 下列警告指出您的專案是使用 .NET Core SDK 的搶鮮版來編譯：
 
-此警告表示您的專案是使用 .NET Core SDK 的搶鮮版來編譯。 .NET Core SDK 版本一向承諾提供高品質的產品。 不過，如果您不想要使用發行前版本，請在[allowPrerelease](#allowprerelease)區段中查看可與 .net CORE 3.0 SDK 或更新版本搭配使用的不同策略。 對於從未安裝 .NET Core 3.0 或更新版本的電腦，您必須建立一個*global json*檔案，並指定您要使用的確切版本。
+  > 您正在使用.NET Core SDK 的預覽版本。 您可以在目前的專案中透過 global.json 檔案定義 SDK 版本。 詳細資訊請 <https://go.microsoft.com/fwlink/?linkid=869452>。
 
-> [!WARNING]
-> 啟動專案 '{startupProject}' targets framework '.NETCoreApp' version '{targetFrameworkVersion}'。 這個版本的 Entity Framework Core.NET 命令列工具僅支援 2.0 版或更新版本。 如需使用較舊版本工具的詳細資訊，請參閱 <https://go.microsoft.com/fwlink/?linkid=871254> \(英文\)
+  .NET Core SDK 版本一向承諾提供高品質的產品。 不過，如果您不想要使用發行前版本，請在[allowPrerelease](#allowprerelease)區段中查看可與 .net CORE 3.0 SDK 或更新版本搭配使用的不同策略。 對於從未安裝 .NET Core 3.0 或更新版本的電腦，您必須建立一個*global json*檔案，並指定您要使用的確切版本。
 
-從 .NET Core 2.1 SDK (2.1.300 版) 開始，`dotnet ef` 命令會包含在 SDK 中。 這個警告指出您的專案目標為 EF Core 1.0 或 1.1，與 .NET Core 2.1 SDK 和更新版本不相容。 若要編譯您的專案，請在您的機器上安裝 .NET Core 2.0 SDK (2.1.201 版) 和更舊版本，然後使用 *global.json* 檔案來定義所需的 SDK 版本。 如需 `dotnet ef` 命令的詳細資訊，請參閱 [EF Core .NET 命令列工具](/ef/core/miscellaneous/cli/dotnet)。
+* 下列警告指出您的專案目標為 EF Core 1.0 或1.1，這與 .NET Core 2.1 SDK 和更新版本不相容：
 
-## <a name="see-also"></a>請參閱
+  > 啟動專案 '{startupProject}' targets framework '.NETCoreApp' version '{targetFrameworkVersion}'。 這個版本的 Entity Framework Core.NET 命令列工具僅支援 2.0 版或更新版本。 如需使用舊版工具的詳細資訊，請參閱 <https://go.microsoft.com/fwlink/?linkid=871254>。
+
+  從 .NET Core 2.1 SDK (2.1.300 版) 開始，`dotnet ef` 命令會包含在 SDK 中。 若要編譯您的專案，請在您的電腦上安裝 .NET Core 2.0 SDK （版本2.1.201）或更早的版本，並使用*global.asax*檔案定義所需的 SDK 版本。 如需 `dotnet ef` 命令的詳細資訊，請參閱 [EF Core .NET 命令列工具](/ef/core/miscellaneous/cli/dotnet)。
+
+## <a name="see-also"></a>另請參閱
 
 - [解析專案 SDK 的方式](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

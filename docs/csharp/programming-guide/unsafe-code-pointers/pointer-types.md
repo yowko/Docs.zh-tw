@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: ad6e6f17f9a8c30339a74b8ab41af3a99e716d3f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745354"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627706"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
 
@@ -24,14 +24,14 @@ void* identifier; //allowed but not recommended
 
 指標型別不會從 [object](../../language-reference/builtin-types/reference-types.md) 繼承，而且指標型別與 `object` 之間無法進行轉換。 此外，boxing 和 unboxing 不支援指標。 不過，不同的指標類型之間以及指標類型與整數類資料類型之間可以進行轉換。
 
-當您在相同的宣告中宣告多個指標時，星號 (\*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如，
+當您在相同的宣告中宣告多個指標時，星號 (\*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如：
 
 ```csharp
 int* p1, p2, p3;   // Ok
 int *p1, *p2, *p3;   // Invalid in C#
 ```
 
-指標無法指向參考或包含參考的 [struct](../../language-reference/keywords/struct.md)，因為即使指標指向物件參考，依然可以對物件參考進行記憶體回收。 記憶體回收行程不會持續追蹤是否有任何指標類型指向物件。
+指標無法指向參考或包含參考的 [struct](../../language-reference/builtin-types/struct.md)，因為即使指標指向物件參考，依然可以對物件參考進行記憶體回收。 記憶體回收行程不會持續追蹤是否有任何指標類型指向物件。
 
 `myType*` 類型的指標變數值是 `myType` 類型變數的位址。 以下是指標類型宣告的範例：
 
@@ -63,7 +63,7 @@ int* myVariable;
 
 下表所列出的運算子和陳述式可以用於 unsafe 內容中的指標：
 
-|運算子/陳述式|用法|
+|運算子/陳述式|使用|
 |-------------------------|---------|
 |`*`|執行指標間接取值。|
 |`->`|透過指標存取結構的成員。|

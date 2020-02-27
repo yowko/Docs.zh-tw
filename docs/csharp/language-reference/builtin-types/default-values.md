@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2447db25e837cdcd6d67847b8677d7d44da551a9
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964941"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625861"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>類型的C#預設值（C#參考）
 
@@ -24,7 +24,7 @@ ms.locfileid: "75964941"
 |[bool](bool.md)|`false`|
 |[char](char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|這個值是由運算式 `(E)0` 所產生，其中 `E` 是列舉識別碼。|
-|[struct](../keywords/struct.md)|這個值是藉由將所有實值型別欄位設定為其預設值，並將所有參考型別欄位設定為 `null` 所產生。|
+|[struct](struct.md)|這個值是藉由將所有實值型別欄位設定為其預設值，並將所有參考型別欄位設定為 `null` 所產生。|
 |任何[可為 Null 的值型別](nullable-value-types.md)|<xref:System.Nullable%601.HasValue%2A> 屬性是 `false` 且未定義 <xref:System.Nullable%601.Value%2A> 屬性的執行個體。 該預設值也稱為可為 null 的實數值型別的*null*值。|
 
 使用[預設運算子](../operators/default.md)產生型別的預設值，如下列範例所示：
@@ -55,7 +55,7 @@ Console.WriteLine(n);  // output: (0, 0)
 - [預設值](~/_csharplang/spec/variables.md#default-values)
 - [預設建構函式](~/_csharplang/spec/types.md#default-constructors)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [建構函式](../../programming-guide/classes-and-structs/constructors.md)

@@ -2,12 +2,12 @@
 title: 集合型別
 description: 瞭解F#集合類型，以及它們與 .NET Framework 中集合類型的差異。
 ms.date: 05/16/2016
-ms.openlocfilehash: e5735efbffb1010f3886f3b32800a61e2d3b0d36
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: df34a18e7762c52e169aa8a69709ae16064c134d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344575"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628861"
 ---
 # <a name="f-collection-types"></a>F# 集合類型
 
@@ -22,47 +22,47 @@ ms.locfileid: "75344575"
 |類型|描述|相關連結|
 |----|-----------|-------------|
 |[清單](https://msdn.microsoft.com/library/c627b668-477b-4409-91ed-06d7f1b3e4a7)|相同類型的已排序且不可變的元素序列。 實作為連結的清單。|[清單](lists.md)<br /><br />[List 模組](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788)|
-|[陣列](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|固定大小、以零為基底、可變動的連續資料元素集合，這些專案全都屬於相同的類型。|[陣列](arrays.md)<br /><br />[陣列模組](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D 模組](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D 模組](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
+|[Array](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|固定大小、以零為基底、可變動的連續資料元素集合，這些專案全都屬於相同的類型。|[陣列](arrays.md)<br /><br />[陣列模組](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D 模組](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Array3D 模組](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
 |[seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|一系列全部屬於一個型別的元素。 當您有大量、已排序的資料集合，但不一定要使用所有專案時，序列會特別有用。 個別順序元素只會視需要計算，因此，如果未使用所有元素，序列的執行效果會比清單更好。 序列是以 `seq<'T>` 類型表示，也就是 `IEnumerable<T>`的別名。 因此，任何執行 `System.Collections.Generic.IEnumerable<'T>` 的 .NET Framework 類型都可以當做序列使用。|[序列](sequences.md)<br /><br />[Seq 模組](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[地圖](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|元素的不可變字典。 元素是依索引鍵存取。|[Map 模組](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|以二進位樹狀F#結構為基礎的不可變資料集，其中比較是結構比較函數，這可能會在索引鍵值上使用 `System.IComparable` 介面的執行。|[設定模組](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[設定](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|以二進位樹狀F#結構為基礎的不可變資料集，其中比較是結構比較函數，這可能會在索引鍵值上使用 `System.IComparable` 介面的執行。|[設定模組](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>函數表
 
 本節會比較集合類型上F#可用的函式。 會提供函數的計算複雜度，其中 N 是第一個集合的大小，而 M 是第二個集合的大小（如果有的話）。 虛線（-）表示此函式無法在集合上使用。 因為順序會延遲評估，所以函數（例如 Seq）可能是 O （1），因為它會立即傳回，雖然它仍然會在列舉時影響序列的效能。
 
-|函數|陣列|清單|序列|對應|設定|描述|
+|函式|Array|清單|順序|對應|Set|描述|
 |--------|-----|----|--------|---|---|-----------|
-|append|O （M）|O （N）|O （N）|-|-|傳回新的集合，其中包含第一個集合的專案，後面接著第二個集合的元素。|
-|新增|-|-|-|O （log N）|O （log N）|傳回已加入元素的新集合。|
-|平均值|O （N）|O （N）|O （N）|-|-|傳回集合中元素的平均值。|
+|附加|O （N）|O （N）|O （N）|-|-|傳回新的集合，其中包含第一個集合的專案，後面接著第二個集合的元素。|
+|add|-|-|-|O （log N）|O （log N）|傳回已加入元素的新集合。|
+|average|O （N）|O （N）|O （N）|-|-|傳回集合中元素的平均值。|
 |averageBy|O （N）|O （N）|O （N）|-|-|傳回適用于每個專案之所提供函式的結果平均值。|
 |array.blit|O （N）|-|-|-|-|複製陣列的區段。|
 |快取|-|-|O （N）|-|-|計算並儲存序列的元素。|
 |強制轉型|-|-|O （N）|-|-|將元素轉換成指定的類型。|
-|選擇|O （N）|O （N）|O （N）|-|-|將指定的函式 `f` 套用至清單的每個元素 `x`。 傳回清單，其中包含函式傳回 `Some(f(x))`之每個元素的結果。|
+|choose|O （N）|O （N）|O （N）|-|-|將指定的函式 `f` 套用至清單的每個元素 `x`。 傳回清單，其中包含函式傳回 `Some(f(x))`之每個元素的結果。|
 |收集|O （N）|O （N）|O （N）|-|-|將指定的函式套用至集合的每個專案，串連所有結果，並傳回合並的清單。|
 |Seq.comparewith|-|-|O （N）|-|-|使用指定的比較函式（依元素）來比較兩個序列。|
-|Concat|O （N）|O （N）|O （N）|-|-|結合指定列舉型別為單一串連列舉。|
-|包含|-|-|-|-|O （log N）|如果集合包含指定的專案，則傳回 true。|
+|concat|O （N）|O （N）|O （N）|-|-|結合指定列舉型別為單一串連列舉。|
+|contains|-|-|-|-|O （log N）|如果集合包含指定的專案，則傳回 true。|
 |containsKey|-|-|-|O （log N）|-|測試元素是否在對應的定義域中。|
 |count|-|-|-|-|O （N）|傳回集合中項目的數目。|
 |Seq.countby|-|-|O （N）|-|-|將金鑰產生的函式套用至序列的每個元素，並傳回產生唯一索引鍵的序列，以及其在原始序列中的發生次數。|
-|複製|O （N）|-|O （N）|-|-|複製集合。|
+|copy|O （N）|-|O （N）|-|-|複製集合。|
 |建立|O （N）|-|-|-|-|建立整個專案的陣列，這些專案最初都是指定的值。|
 |delay|-|-|O （1）|-|-|傳回從指定之序列的延遲規格建立的序列。|
 |差異|-|-|-|-|O （M &#42; log N）|傳回新的集合，其中包含從第一個集合中移除之第二個集合的元素。|
 |distinct|||O （1）&#42;|||根據專案的泛型雜湊和相等比較，傳回不包含重複專案的序列。 如果專案在序列中出現多次，則會捨棄後續的出現次數。|
 |Seq.distinctby|||O （1）&#42;|||根據指定的索引鍵產生函式所傳回之索引鍵的一般雜湊和相等比較，傳回不包含重複專案的序列。 如果專案在序列中出現多次，則會捨棄後續的出現次數。|
-|空白|O （1）|O （1）|O （1）|O （1）|O （1）|建立空集合。|
+|empty|O （1）|O （1）|O （1）|O （1）|O （1）|建立空集合。|
 |exists|O （N）|O （N）|O （N）|O （log N）|O （log N）|測試序列中的任何元素是否符合指定的述詞。|
 |list.exists2|O （分鐘（N，M））|-|O （分鐘（N，M））|||測試輸入序列的任何對應元素是否符合指定的述詞。|
 |fill|O （N）|||||將陣列的元素範圍設定為指定的值。|
-|篩選器|O （N）|O （N）|O （N）|O （N）|O （N）|傳回新的集合，其中僅包含指定的述詞 `true`的集合元素。|
-|find|O （N）|O （N）|O （N）|O （log N）|-|傳回第一個專案，指定的函式會 `true`此元素。 如果沒有這類元素存在，則傳回 `System.Collections.Generic.KeyNotFoundException`。|
+|filter|O （N）|O （N）|O （N）|O （N）|O （N）|傳回新的集合，其中僅包含指定的述詞 `true`的集合元素。|
+|尋找|O （N）|O （N）|O （N）|O （log N）|-|傳回第一個專案，指定的函式會 `true`此元素。 如果沒有這類元素存在，則傳回 `System.Collections.Generic.KeyNotFoundException`。|
 |findIndex|O （N）|O （N）|O （N）|-|-|傳回陣列中符合指定述詞之第一個元素的索引。 如果沒有元素滿足述詞，則引發 `System.Collections.Generic.KeyNotFoundException`。|
 |Map.findkey|-|-|-|O （log N）|-|針對集合中的每個對應評估函式，並傳回第一個對應的索引鍵，其中函式會傳回 `true`。 如果沒有這類元素存在，則此函式會引發 `System.Collections.Generic.KeyNotFoundException`。|
-|摺疊|O （N）|O （N）|O （N）|O （N）|O （N）|將函式套用至集合中的每個專案，並透過計算將累計引數串接在一起。 如果輸入函式為 f，且元素為 i0 .。。在中，這個函數會計算 f （.。。（f s i0） ...）在.|
+|倍|O （N）|O （N）|O （N）|O （N）|O （N）|將函式套用至集合中的每個專案，並透過計算將累計引數串接在一起。 如果輸入函式為 f，且元素為 i0 .。。在中，這個函數會計算 f （.。。（f s i0） ...）在.|
 |list.fold2|O （N）|O （N）|-|-|-|將函式套用至兩個集合的對應元素，並透過計算將累計引數串接在一起。 集合必須具有相同的大小。 如果輸入函式為 f，且元素為 i0 .。。在和 j0 中 .。。jN，這個函數會計算 f （.。。（f s i0 j0） ...）在 jN 中。|
 |List.foldback|O （N）|O （N）|-|O （N）|O （N）|將函式套用至集合中的每個專案，並透過計算將累計引數串接在一起。 如果輸入函式為 f，且元素為 i0 .。。在中，這個函數會計算 f i0 （.。。（s 中的 f））。|
 |List.foldback2|O （N）|O （N）|-|-|-|將函式套用至兩個集合的對應元素，並透過計算將累計引數串接在一起。 集合必須具有相同的大小。 如果輸入函式為 f，且元素為 i0 .。。在和 j0 中 .。。jN，這個函數會計算 f i0 j0 （.。。（jN s 中的 f））。|
@@ -84,7 +84,7 @@ ms.locfileid: "75344575"
 |array.iteri2|O （N）|O （N）|-|-|-|將指定的函式套用至由兩個數組中的相符索引所繪製的一對元素。 傳遞給函式的整數會指出元素的索引。 這兩個數組的長度必須相同。|
 |array.iter2|O （N）|O （N）|O （N）|-|-|將指定的函式套用至由兩個數組中的相符索引所繪製的一對元素。 這兩個數組的長度必須相同。|
 |last|O （1）|O （N）|O （N）|-|-|傳回適用集合中的最後一個專案。|
-|length|O （1）|O （N）|O （N）|-|-|傳回集合中的元素數目。|
+|長度|O （1）|O （N）|O （N）|-|-|傳回集合中的元素數目。|
 |map|O （N）|O （N）|O （1）|-|-|建立集合，其專案是將指定的函式套用至陣列的每個元素的結果。|
 |list.map2|O （N）|O （N）|O （1）|-|-|建立集合，其專案是將給定函式套用至兩個集合之對應元素的結果。 這兩個輸入陣列的長度必須相同。|
 |list.map3|-|O （N）|-|-|-|建立集合，其專案是將給定函式套用至三個集合之對應元素的結果。|
@@ -93,7 +93,7 @@ ms.locfileid: "75344575"
 |max|O （N）|O （N）|O （N）|-|-|傳回集合中最大的元素，並使用[max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce)運算子進行比較。|
 |maxBy|O （N）|O （N）|O （N）|-|-|傳回集合中最大的元素，比較方式是使用函數結果的[max](https://msdn.microsoft.com/library/9a988328-00e9-467b-8dfa-e7a6990f6cce) 。|
 |Set.maxelement|-|-|-|-|O （log N）|根據用於集合的順序，傳回集合中最大的元素。|
-|min|O （N）|O （N）|O （N）|-|-|傳回集合中的最小元素，使用[min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed)運算子進行比較。|
+|Min|O （N）|O （N）|O （N）|-|-|傳回集合中的最小元素，使用[min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed)運算子進行比較。|
 |minBy|O （N）|O （N）|O （N）|-|-|傳回集合中最少的元素，相較于函數結果上的[min](https://msdn.microsoft.com/library/adea4fd7-bfad-4834-989c-7878aca81fed)運算子。|
 |Set.minelement|-|-|-|-|O （log N）|根據用於集合的順序，傳回集合中的最低元素。|
 |List.ofarray|-|O （N）|O （1）|O （N）|O （N）|建立集合，其中包含與指定陣列相同的元素。|
@@ -101,7 +101,7 @@ ms.locfileid: "75344575"
 |List.ofseq|O （N）|O （N）|-|O （N）|O （N）|建立集合，其中包含與指定序列相同的元素。|
 |配對|-|-|O （N）|-|-|傳回輸入序列中每個專案及其前置項的序列，但第一個專案除外，只會傳回做為第二個元素的前身。|
 |partition|O （N）|O （N）|-|O （N）|O （N）|將集合分割成兩個集合。 第一個集合包含指定的述詞傳回 `true`的元素，而第二個集合包含指定的述詞傳回 `false`的元素。|
-|permute|O （N）|O （N）|-|-|-|傳回陣列，其中包含根據指定的排列而排列的所有元素。|
+|置換|O （N）|O （N）|-|-|-|傳回陣列，其中包含根據指定的排列而排列的所有元素。|
 |領|O （N）|O （N）|O （N）|O （log N）|-|將指定的函式套用至後續的元素，並傳回函式傳回部分的第一個結果。 如果函數永遠不會傳回部分，則會引發 `System.Collections.Generic.KeyNotFoundException`。|
 |readonly|-|-|O （N）|-|-|建立會委派給給定順序物件的序列物件。 此作業可確保類型轉換無法重新探索並改變原始序列。 例如，如果給定陣列，則傳回的序列將傳回陣列的元素，但是您無法將傳回的順序物件轉換成陣列。|
 |reduce|O （N）|O （N）|O （N）|-|-|將函式套用至集合中的每個專案，並透過計算將累計引數串接在一起。 此函式一開始會將函式套用到前兩個元素，並將此結果與第三個元素一起傳遞至函式，依此類推。 函數會傳回最終結果。|
@@ -112,7 +112,7 @@ ms.locfileid: "75344575"
 |搜索|O （N）|O （N）|O （N）|-|-|將函式套用至集合中的每個專案，並透過計算將累計引數串接在一起。 這項作業會將函式套用至第二個引數和清單的第一個元素。 然後，作業會將此結果連同第二個元素一起傳遞至函式，依此類推。 最後，作業會傳回中繼結果和最終結果的清單。|
 |Array.scanback|O （N）|O （N）|-|-|-|類似于 List.foldback 作業，但是會傳回中繼和最終結果。|
 |singleton|-|-|O （1）|-|O （1）|傳回只產生一個專案的序列。|
-|設定|O （1）|-|-|-|-|將陣列的元素設定為指定的值。|
+|set|O （1）|-|-|-|-|將陣列的元素設定為指定的值。|
 |skip|-|-|O （N）|-|-|傳回會略過基礎序列之 N 個元素的序列，然後產生序列的其餘專案。|
 |skipWhile|-|-|O （N）|-|-|傳回的序列，會在反覆運算時略過基礎序列的元素，而指定的述詞會傳回 `true`，然後產生序列的其餘元素。|
 |sort|O （N log N）平均值<br /><br />O （N ^ 2）最差案例|O （N log N）|O （N log N）|-|-|依元素值排序集合。 元素會使用[比較](https://msdn.microsoft.com/library/295e1320-0955-4c3d-ac31-288fa80a658c)進行比較。|
@@ -122,7 +122,7 @@ ms.locfileid: "75344575"
 |Array.sortinplacewith|O （N log N）平均值<br /><br />O （N ^ 2）最差案例|-|-|-|-|將陣列的元素加以改變，並使用指定的比較函式做為順序，以排序該專案。|
 |List.sortwith|O （N log N）平均值<br /><br />O （N ^ 2）最差案例|O （N log N）|-|-|-|使用給定的比較函數做為順序並傳回新的集合，來排序集合的元素。|
 |sub|O （N）|-|-|-|-|建立陣列，其中包含由起始索引和長度指定的給定子範圍。|
-|加總|O （N）|O （N）|O （N）|-|-|傳回集合中元素的總和。|
+|Sum|O （N）|O （N）|O （N）|-|-|傳回集合中元素的總和。|
 |sumBy|O （N）|O （N）|O （N）|-|-|傳回將函式套用至集合中的每個元素所產生的結果總和。|
 |尾|-|O （1）|-|-|-|傳回不含其第一個元素的清單。|
 |take|-|-|O （N）|-|-|傳回序列中最多到指定計數的元素。|
@@ -144,7 +144,7 @@ ms.locfileid: "75344575"
 |zip|O （N）|O （N）|O （N）|-|-|將兩個集合合併成一組配對。 這兩個清單的長度必須相等。|
 |list.zip3|O （N）|O （N）|O （N）|-|-|將這三個集合結合成三個清單。 清單的長度必須相等。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [F# 類型](fsharp-types.md)
 - [F# 語言參考](index.md)

@@ -2,12 +2,12 @@
 title: 利用 Azure 雲端服務及 Windows 容器將現有的 .NET 應用程式現代化 (第 2 版)
 description: 了解如何利用這本電子書，將現有的應用程式原形移轉到 Azure 雲端及容器並加以現代化。
 ms.date: 04/28/2018
-ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9439de84dd46ac3153d951378764d10184c33a52
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714576"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628365"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>利用 Azure 雲端服務及 Windows 容器將現有的 .NET 應用程式現代化 (第 2 版)
 
@@ -19,9 +19,9 @@ Microsoft Press 及 Microsoft DevDiv 部門
 One Microsoft Way  
 Redmond, Washington 98052-6399  
 
-Copyright © 2018 by Microsoft Corporation  
+Microsoft Corporation 的著作權©2020  
 
-All rights reserved. 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製。
+著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製。
 
 本書免費提供，為電子書的格式，可以從 Microsoft 的多種不同管道取得，例如 <https://dot.net/architecture>。
 
@@ -29,11 +29,11 @@ All rights reserved. 本書內容的任何部分在未經過發行者書面許�
 
 本書依照「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路的網站參考) 如有變更，恕不另行通知。
 
-此處所描述的一些範例僅供說明，純屬虛構。 任何實際關聯或連結純屬巧合。
+此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。
 
 Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Microsoft 集團的商標。 所有其他商標皆屬於其各自擁有者的財產。
 
-作者：
+作者︰
 > **Cesar de la Torre**，Microsoft Corp. .NET 產品小組資深專案經理
 
 參與者和檢閱者：
@@ -202,4 +202,4 @@ GitHub 上的 [eShopModernizing](https://github.com/dotnet-architecture/eShopMod
 本指南的目的在協助您了解改進及現代化現有 .NET Web 應用程式時的選項。 本指南與相關範例應用程式將會不斷更新。 歡迎您提供寶貴的意見！ 如果您對如何改進本指南有任何意見，請傳送到 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)。
 
 >[!div class="step-by-step"]
->[下一步](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->
+>[下一個](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->

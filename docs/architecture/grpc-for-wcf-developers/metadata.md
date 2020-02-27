@@ -1,25 +1,25 @@
 ---
 title: WCF 開發人員的中繼資料 gRPC
-description: 如何在 gRPC 中使用中繼資料來傳遞用戶端與伺服器之間的其他內容
+description: 如何在 gRPC 中使用中繼資料來傳遞用戶端和伺服器之間的其他內容。
 ms.date: 09/02/2019
-ms.openlocfilehash: 723d877bfbf0c2b0785949ff15939aedbac4d4e9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 64fa94d1e63af480cbc7363631de161c5b8b8fb8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971982"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628575"
 ---
 # <a name="metadata"></a>中繼資料
 
-「中繼資料」指的是處理要求和回應時可能有用的其他資料，但不屬於實際的應用程式資料。 中繼資料可能包含驗證權杖、要求識別碼和標記以供監視之用，或是資料集內的記錄數目等相關資訊。
+*中繼資料*是指在處理要求和回應期間可能有用，但不屬於實際應用程式資料的其他資料。 中繼資料可能包含驗證權杖、要求識別碼和標記以供監視之用，以及資料的相關資訊，例如 dataset 中的記錄數目。
 
-您可以使用 <xref:System.ServiceModel.OperationContextScope> 和 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders?displayProperty=nameWithType> 屬性，將泛型索引鍵/值標頭新增至 WCF 訊息，並使用 <xref:System.ServiceModel.Channels.MessageProperties>來處理它們。
+您可以使用 <xref:System.ServiceModel.OperationContextScope> 和 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders?displayProperty=nameWithType> 屬性，將泛型索引鍵/值標頭加入 Windows Communication Foundation （WCF）訊息中，然後使用 <xref:System.ServiceModel.Channels.MessageProperties>來處理它們。
 
-gRPC 呼叫和回應也可以包含類似 HTTP 標頭的中繼資料。 這些主要不是 gRPC 本身，而且會傳遞給您的應用程式代碼或中介軟體來處理。 中繼資料會以索引鍵/值組表示，其中的索引鍵為字串，而值為字串或二進位資料。 您不需要指定 `.proto` 檔案中的中繼資料。
+gRPC 呼叫和回應也可以包含類似 HTTP 標頭的中繼資料。 此中繼資料主要不會 gRPC 本身，並會傳遞給您的應用程式代碼或中介軟體進行處理。 中繼資料會以索引鍵/值組表示，其中索引鍵為字串，而值為字串或二進位資料。 您不需要指定 `.proto` 檔案中的中繼資料。
 
-中繼資料的處理方式是使用[Grpc](https://www.nuget.org/packages/Grpc.Core.Api/) NuGet 套件中的 `Metadata` 類別。 這個類別可以與集合初始化運算式語法搭配使用。
+中繼資料是由[Grpc](https://www.nuget.org/packages/Grpc.Core.Api/) NuGet 套件的 `Metadata` 類別所處理。 這個類別可以與集合初始化運算式語法搭配使用。
 
-下列範例顯示如何將中繼資料新增至C#用戶端的呼叫：
+這個範例示範如何將中繼資料新增至C#用戶端的呼叫：
 
 ```csharp
 var metadata = new Metadata

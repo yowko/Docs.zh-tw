@@ -3,12 +3,12 @@ title: .NET Core SDK 遙測
 description: 探索收集使用方式資訊以進行分析的 .NET Core SDK 遙測功能，它會收集哪些資料以及如何停用。
 author: KathleenDollard
 ms.date: 08/27/2019
-ms.openlocfilehash: 8bde344ee393e113502a0895ee55c241cbf24c57
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abc9f8e1ef134ebfb5ec9acacb629d5180aaf83b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714108"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625913"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遙測
 
@@ -16,13 +16,13 @@ ms.locfileid: "75714108"
 
 根據 [Creative Commons Attribution 授權](https://creativecommons.org/licenses/by/4.0/)，所收集的資料為匿名，且將會以彙總形式發佈。 
 
-## <a name="scope"></a>範圍
+## <a name="scope"></a>`Scope`
 
 `dotnet` 有兩個功能：執行應用程式，以及執行 CLI 命令。 使用 `dotnet` 啟動應用程式時 (格式如下)，「不會收集」遙測：
 
 - `dotnet [path-to-app].dll`
 
-使用以下任何 [.NET Core CLI 命令](index.md) 時，則「會收集」遙測：
+使用以下任何 *[.NET Core CLI 命令](index.md)* 時，則「會收集」遙測：
 
 - `dotnet build`
 - `dotnet pack`
@@ -54,7 +54,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 遙測功能會收集下列資料：
 
-| SDK 版本 | Data |
+| SDK 版本 | 資料 |
 |--------------|------|
 | 全部          | 叫用的時間戳記。 |
 | 全部          | 叫用的命令 (例如 "build")，從 2.1 開始已雜湊。 |
@@ -94,8 +94,8 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 |-------------------------|------------------------------------------------------------------------------------------------|
 | `--verbosity`           | 所有命令                                                                                   |
 | `--language`            | `dotnet new`                                                                                   |
-| `--configuration`       | `dotnet build`、 `dotnet clean`、 `dotnet publish`、 `dotnet run`、 `dotnet test`                  |
-| `--framework`           | `dotnet build`、 `dotnet clean`、 `dotnet publish`、 `dotnet run`、 `dotnet test`、 `dotnet vstest` |
+| `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
+| `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
 | `--runtime`             | `dotnet build`、`dotnet publish`                                                              |
 | `--platform`            | `dotnet vstest`                                                                                |
 | `--logger`              | `dotnet vstest`                                                                                |
@@ -128,13 +128,13 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-information"></a>避免意外洩漏資訊
+### <a name="avoid-inadvertent-disclosure-of-information"></a>避免意外洩漏資訊
 
 .NET Core 參與者及執行其自行建置之 .NET Core SDK 版本的任何其他人，都應該考慮其 SDK 原始程式碼的路徑。 如果使用 .NET Core SDK 時發生損毀，且該 SDK是自訂偵錯組建或透過自訂組建符號檔所設定，則會在堆疊追蹤過程中從組建電腦收集 SDK 來源檔案路徑，且不會進行雜湊處理。
 
 因此，.NET Core SDK 自訂組建不應該位於其路徑名稱會公開個人或敏感性資訊的目錄中。 
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core CLI Telemetry - 2019 Q2 Data](https://dotnet.microsoft.com/platform/telemetry/dotnet-core-cli-2019q2) (.NET Core CLI 遙測 - 2019 年第 2 季資料)
 - [遙測參考來源 (dotnet/cli 存放庫)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)

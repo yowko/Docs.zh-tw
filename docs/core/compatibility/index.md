@@ -2,12 +2,12 @@
 title: 中斷性變更的類型
 description: 瞭解 .NET Core 如何嘗試維護跨 .NET 版本開發人員的相容性，以及將哪種變更視為重大變更。
 ms.date: 06/10/2019
-ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092976"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628588"
 ---
 # <a name="changes-that-affect-compatibility"></a>影響相容性的變更
 
@@ -49,7 +49,7 @@ ms.locfileid: "77092976"
 
   *舊*元件必須以指向新元件的 <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> 標記。
 
-- **允許✔️：將[結構](../../csharp/language-reference/keywords/struct.md)類型變更為 `readonly struct` 類型**
+- **允許✔️：將[結構](../../csharp/language-reference/builtin-types/struct.md)類型變更為 `readonly struct` 類型**
 
   不允許將 `readonly struct` 類型變更為 `struct` 類型。
 
@@ -77,11 +77,11 @@ ms.locfileid: "77092976"
 
   介面移除規則有一個例外：您可以新增衍生自已移除之介面的介面實作。 例如，如果型別或介面現在實作 <xref:System.IDisposable> (它會實作 <xref:System.ComponentModel.IComponent>)，則可以移除 <xref:System.IDisposable>。
 
-- 不**允許 ❌：將 `readonly struct` 型別變更為[結構](../../csharp/language-reference/keywords/struct.md)型**別
+- 不**允許 ❌：將 `readonly struct` 型別變更為[結構](../../csharp/language-reference/builtin-types/struct.md)型**別
 
   不過，允許將 `struct` 類型變更為 `readonly struct` 類型。
 
-- 不**允許 ❌：將[結構](../../csharp/language-reference/keywords/struct.md)型別變更為 `ref struct` 型別，** 反之亦然
+- 不**允許 ❌：將[結構](../../csharp/language-reference/builtin-types/struct.md)型別變更為 `ref struct` 型別，** 反之亦然
 
 - 不**允許 ❌：減少類型的可見度**
 
@@ -300,7 +300,7 @@ ms.locfileid: "77092976"
 
 - **允許✔️：將[params](../../csharp/language-reference/keywords/params.md)新增至參數**
 
-- 不**允許 ❌：將[結構](../../csharp/language-reference/keywords/struct.md)變更為[類別](../../csharp/language-reference/keywords/class.md)，反之亦然**
+- 不**允許 ❌：將[結構](../../csharp/language-reference/builtin-types/struct.md)變更為[類別](../../csharp/language-reference/keywords/class.md)，反之亦然**
 
 - 不**允許 ❌：將[Checked](../../csharp/language-reference/keywords/virtual.md)關鍵字新增至程式碼區塊**
 

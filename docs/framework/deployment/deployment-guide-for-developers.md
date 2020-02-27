@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094133"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628120"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
@@ -55,7 +55,7 @@ ms.locfileid: "77094133"
 
 |應用程式的部署策略|可用的部署方法|可供使用的 .NET Framework 可轉散發套件|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|從 Web 安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Web 安裝程式](#redistributable-packages)|
+|從 Web 安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[Web installer](#redistributable-packages)|
 |從光碟安裝|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX 工具組](#wix)<br />- [手動安裝](#installing_manually)|[離線安裝程式](#redistributable-packages)|
 |從區域網路安裝 (適用於企業應用程式)|- [ClickOnce](#clickonce-deployment)|[Web 安裝程式](#redistributable-packages) (如需相關限制，請參閱 [ClickOnce](#clickonce-deployment) ) 或 [離線安裝程式](#redistributable-packages)|
 
@@ -134,21 +134,7 @@ InstallAware 可以從單一來源來建立 Windows 應用程式 (APPX)、Window
 
 ### <a name="installshield-deployment"></a>InstallShield 部署
 
-在 Visual Studio 中，選擇 InstallShield 部署並加入 .NET Framework 的相依性：
-
-1. 在 Visual Studio 功能表列上，選擇 [ **檔案**]、[ **新增**]、[ **專案**]。
-
-2. 在 [ **新增專案** ] 對話方塊的左窗格中，依序選擇 [ **其他專案類型**]、[ **安裝和部署**]、[ **InstallShield LE**]。
-
-3. 在 [ **名稱** ] 方塊中輸入您的專案名稱，然後選擇 [ **確定**]。
-
-4. 如果您初次建立安裝程式和部署專案，請選擇 [移至 InstallShield] 或 [啟用 InstallShield 限量版]，以下載您 Microsoft Visual Studio 版本的 InstallShield 限量版。 重新啟動 Visual Studio。
-
-5. 移至 [ **專案助理** ] 精靈，並選擇 [ **應用程式檔案** ] 以加入 [專案輸出]。 您可以使用這個精靈設定其他專案屬性。
-
-6. 移至 [ **安裝需求** ] 然後選取作業系統以及要安裝的 .NET Framework 版本。
-
-7. 開啟安裝專案的捷徑功能表，然後選擇 [ **建置**]。
+InstallShield 會建立 Windows 應用程式套件（MSIX、APPX）、Windows Installer 套件（MSI）和機器碼（EXE）安裝程式。 InstallShield 也提供 Visual Studio 整合。 如需詳細資訊，請參閱[InstallShield](https://www.flexerasoftware.com/install/products/installshield.html)網站。
 
 <a name="wix"></a>
 

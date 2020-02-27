@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712802"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626707"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (泛型類型條件約束) (C# 參考)
 
@@ -32,7 +32,7 @@ ms.locfileid: "75712802"
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where` 子句可能包括 `notnull` 條件約束。 `notnull` 條件約束會將類型參數限制為不可為 null 的類型。 該類型可能是實[數值型別](struct.md)或不可為 null 的參考型別。 從C# 8.0 開始，針對[`nullable enable` 內容](../../nullable-references.md#nullable-contexts)中編譯的程式碼，可以使用 `notnull` 條件約束。 與其他條件約束不同的是，如果類型引數違反 `notnull` 條件約束，則編譯器會產生警告，而不是錯誤。 只有在 `nullable enable` 內容中才會產生警告。 
+`where` 子句可能包括 `notnull` 條件約束。 `notnull` 條件約束會將類型參數限制為不可為 null 的類型。 該類型可能是實[數值型別](../builtin-types/value-types.md)或不可為 null 的參考型別。 從C# 8.0 開始，針對[`nullable enable` 內容](../../nullable-references.md#nullable-contexts)中編譯的程式碼，可以使用 `notnull` 條件約束。 與其他條件約束不同的是，如果類型引數違反 `notnull` 條件約束，則編譯器會產生警告，而不是錯誤。 只有在 `nullable enable` 內容中才會產生警告。
 
 > [!IMPORTANT]
 > 包含 `notnull` 條件約束的泛型宣告可以在可為 null 的遺忘式內容中使用，但編譯器不會強制執行條件約束。
@@ -43,7 +43,7 @@ ms.locfileid: "75712802"
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-`where` 子句也可能包含建構函式條件約束 `new()`。 該條件約束可讓您使用 `new` 運算子建立型別參數執行個體。 [New （）條件約束](new-constraint.md)可讓編譯器知道提供的任何型別引數都必須具有可存取的無參數函數。 例如：
+`where` 子句也可能包含建構函式條件約束 `new()`。 該條件約束可讓您使用 `new` 運算子建立型別參數執行個體。 [New （）條件約束](new-constraint.md)可讓編譯器知道提供的任何型別引數都必須具有可存取的無參數函數。 例如:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 

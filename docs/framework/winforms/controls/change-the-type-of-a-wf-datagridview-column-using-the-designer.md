@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: 976f257d38dc7be5c904e63da47c61486bd3301c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 470f350a4791a3db39d08ab7992d86eb7b2e270a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737141"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628614"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>如何：使用設計工具變更 Windows Form DataGridView 資料行的類型
 有時候您會想要變更已經加入至 Windows Forms <xref:System.Windows.Forms.DataGridView> 控制項的資料行類型。 例如，當您將控制項系結至資料來源時，您可能會想要修改自動產生之部分資料行的類型。 當您顯示的資料表中有資料行包含相關資料表中之資料列的外鍵時，這會很有用。 在此情況下，您可能會想要將顯示這些外鍵的文字方塊資料行，取代為在相關資料表中顯示更有意義之值的下拉式方塊資料行。
@@ -21,7 +21,7 @@ ms.locfileid: "76737141"
 
 ### <a name="to-change-the-type-of-a-column-using-the-designer"></a>若要使用設計工具變更資料行的類型
 
-1. 按一下 <xref:System.Windows.Forms.DataGridView> 控制項右上角的智慧標籤圖像（![智慧標籤](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")圖像），然後選取 [**編輯資料行**]。
+1. 按一下 <xref:System.Windows.Forms.DataGridView> 控制項右上角的設計工具動作圖像（![小型黑色箭號](./media/designer-actions-glyph.gif)），然後選取 [**編輯資料行**]。
 
 2. 從 [選取的資料**行**] 清單中選取資料行。
 

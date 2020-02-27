@@ -3,12 +3,12 @@ title: C# 型別和變數 - C# 語言教學課程
 description: 了解如何在 C# 中定義類型和宣告變數
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 28ba01f7d3f9c71e99945a5d5e813d95389b3b79
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 571e346d1e46be798dca1b42cfcc2af3aa65e641
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737629"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627561"
 ---
 # <a name="types-and-variables"></a>型別與變數
 
@@ -47,7 +47,7 @@ C# 的實值型別可進一步細分為*簡單型別*、*列舉型別*、*結構
 [ValueTypes]: ../language-reference/builtin-types/value-types.md
 [SimpleTypes]: ../language-reference/builtin-types/value-types.md#built-in-value-types
 [EnumTypes]: ../language-reference/builtin-types/enum.md
-[StructTypes]: ../language-reference/keywords/struct.md
+[StructTypes]: ../language-reference/builtin-types/struct.md
 [NullableTypes]: ../language-reference/builtin-types/nullable-value-types.md
 [ReferenceTypes]: ../language-reference/keywords/reference-types.md
 [ClassTypes]: ../language-reference/keywords/class.md
@@ -93,7 +93,7 @@ C# 中有數種*變數*，包括欄位、陣列元素、區域變數和參數。
   - 該型別的值
 - 可為 Null 的實值型別
   - `null` 值或該型別的值
-- object
+- 物件 (object)
   - `null` 參考、任一參考型別之物件的參考，或是任一實值型別的 Boxed 值的參考
 - 類別型別
   - `null` 參考、該類別型別之執行個體的參考，或衍生自該類別型別之類別執行個體的參考

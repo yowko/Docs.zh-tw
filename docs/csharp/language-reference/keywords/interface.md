@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: b315d1f04c9e74700afba8ee7871b23ab4b2fd28
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744687"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625848"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: （C#參考）
 
-介面會定義合約。 任何執行該合約的[`class`](class.md)或[`struct`](struct.md)都必須提供在介面中定義之成員的實作為。 從C# 8.0 開始，介面可能會定義成員的預設實值。 它也可以定義[`static`](static.md)成員，以便為一般功能提供單一的執行方式。
+介面會定義合約。 任何執行該合約的[`class`](class.md)或[`struct`](../builtin-types/struct.md)都必須提供在介面中定義之成員的實作為。 從C# 8.0 開始，介面可能會定義成員的預設實值。 它也可以定義[`static`](static.md)成員，以便為一般功能提供單一的執行方式。
 
 在下列範例中，類別 `ImplementationClass` 必須實作名為 `SampleMethod` 的方法，該方法沒有參數並會傳回 `void`。
 
@@ -78,6 +78,4 @@ public interface INamed
 - [介面](../../programming-guide/interfaces/index.md)
 - [使用屬性](../../programming-guide/classes-and-structs/using-properties.md)
 - [使用索引子](../../programming-guide/indexers/using-indexers.md)
-- [class](class.md)
-- [struct](struct.md)
 - [介面](../../programming-guide/interfaces/index.md)

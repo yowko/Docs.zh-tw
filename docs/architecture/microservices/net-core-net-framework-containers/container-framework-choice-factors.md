@@ -2,12 +2,12 @@
 title: 決策資料表。 用於 Docker 的 .NET Frameworks
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 決策資料表，用於 Docker 的 .NET Frameworks
 ms.date: 09/11/2018
-ms.openlocfilehash: 0087d80c2d949daf14e1edd773dd310f47c508a9
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8ffe2b7bc0bee976d3a63b274994dbcc8aef0c61
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039671"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628315"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>決策資料表：用於 Docker 的 .NET Frameworks
 
@@ -27,7 +27,7 @@ ms.locfileid: "71039671"
 | ASP.NET 4 (MVC 5、Web API 2 和 Web Form) | -- | .NET Framework |
 | SignalR 服務 | .NET Core 2.1 或更新版本 | .NET Framework <br/> .NET Core 2.1 或更新版本 |
 | WCF、WF 和其他舊版架構 | .NET Core 中的 WCF （僅限用戶端程式庫） | .NET Framework <br/> .NET Core 中的 WCF （僅限用戶端程式庫） |
-| Azure 服務的使用量 | .NET Core <br/> (最終所有 Azure 服務都會提供適用於 .NET Core 的用戶端 SDK) | .NET Framework <br/> .NET Core <br/> (最終所有 Azure 服務都會提供適用於 .NET Core 的用戶端 SDK) |
+| Azure 服務的使用量 | .NET Core <br/> （最後，大部分的 Azure 服務都會提供適用于 .NET Core 的用戶端 Sdk） | .NET Framework <br/> .NET Core <br/> （最後，大部分的 Azure 服務都會提供適用于 .NET Core 的用戶端 Sdk） |
 
 >[!div class="step-by-step"]
 >[上一頁](net-framework-container-scenarios.md)

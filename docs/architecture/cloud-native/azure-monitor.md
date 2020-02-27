@@ -2,12 +2,12 @@
 title: Azure 監視器
 description: 使用 Azure 監視器來取得系統的可見度。
 ms.date: 02/05/2020
-ms.openlocfilehash: 961331011db4e59583438a2dbdf366bbe0e34261
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 87ffca186346c3356c0277809d1d67145d1dd17b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448911"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628029"
 ---
 # <a name="azure-monitor"></a>Azure 監視器
 
@@ -78,7 +78,7 @@ Azure 監視器會自動利用機器學習服務來瞭解已部署應用程式�
 ## <a name="references"></a>參考
 
 - [Azure 監視器](https://docs.microsoft.com/azure/azure-monitor/overview)
-- [智慧型警示管理-MS Ignite-影片](https://oxfordcomputergroup.com/resourceso365-security-native-cloud-authentication/)
+- [智慧型警示管理-MS Ignite-影片](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]
 >[上一頁](monitoring-azure-kubernetes.md)

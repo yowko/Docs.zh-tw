@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: e42f165bfedec3b1fa54615ee7e2a2028f40aadb
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 5b98e3e2d41d3e49a28db6393f15f13c3579b06d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960492"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628074"
 ---
 # <a name="work-with-buffers-in-net"></a>在 .NET 中使用緩衝區
 
@@ -51,13 +51,13 @@ ms.locfileid: "74960492"
 
 <xref:System.Buffers.ReadOnlySequence%601> 是一種結構，可以代表連續或不連續的 `T`序列。 它可以從下列結構來進行：
 
-1. `T[]`
-1. `ReadOnlyMemory<T>`
+1. `T[]`。
+1. `ReadOnlyMemory<T>`。
 1. 一對連結的清單節點 <xref:System.Buffers.ReadOnlySequenceSegment%601> 和索引，代表序列的開始和結束位置。
 
 第三個表示是最有趣的一種，因為它對 `ReadOnlySequence<T>`上的各種作業有效能上的影響：
 
-|Representation|運算|複雜性|
+|表示法|作業|複雜度|
 ---|---|---|
 |`T[]`/`ReadOnlyMemory<T>`|`Length`|`O(1)`|
 |`T[]`/`ReadOnlyMemory<T>`|`GetPosition(long)`|`O(1)`|
@@ -115,9 +115,11 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet5)]
 
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ##### <a name="process-text-data"></a>處理文字資料
 
-下列範例︰
+下列範例將：
 
 - 尋找 `ReadOnlySequence<byte>` 中的第一個分行符號（`\r\n`），並透過 out ' line ' 參數傳回它。
 - 修剪該行，排除輸入緩衝區中的 `\r\n`。
@@ -138,7 +140,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 ### <a name="potential-problems-with-readonlysequencet-and-sequenceposition"></a>ReadOnlySequence\<T > 和 SequencePosition 的潛在問題
 
-處理 `ReadOnlySequence<T>`/`SequencePosition` 和一般 `ReadOnlySpan<T>`/`ReadOnlyMemory<T>`/`T[]`/時，會出現幾個不尋常的結果：
+處理 `ReadOnlySequence<T>`/`SequencePosition` 和一般 `ReadOnlySpan<T>`/`ReadOnlyMemory<T>`/`T[]`/時，會出現幾個不尋常的結果：`int`
 
 - `SequencePosition` 是特定 `ReadOnlySequence<T>`的位置標記，而不是絕對位置。 由於它是相對於特定的 `ReadOnlySequence<T>`，因此如果在其來源的 `ReadOnlySequence<T>` 之外使用，則不會有意義。
 - 無法在沒有 `ReadOnlySequence<T>`的 `SequencePosition` 上執行算術。 這表示 `position++` 撰寫 `ReadOnlySequence<T>.GetPosition(position, 1)`的基本事項。
@@ -146,7 +148,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 - 無法比較兩個 `SequencePosition`，因此很難以：
   - 知道某個位置是否大於或小於另一個位置。
   - 撰寫一些剖析演算法。
-- `ReadOnlySequence<T>` 大於物件參考，而且應該在可能的情況下，[以](../../csharp/language-reference/keywords/in-parameter-modifier.md)或[ref](../../csharp/language-reference/keywords/ref.md)傳遞。 `in` 或 `ref` 傳遞 `ReadOnlySequence<T>`，會減少[結構](../../csharp/language-reference/keywords/struct.md)的複本。
+- `ReadOnlySequence<T>` 大於物件參考，而且應該在可能的情況下，[以](../../csharp/language-reference/keywords/in-parameter-modifier.md)或[ref](../../csharp/language-reference/keywords/ref.md)傳遞。 `in` 或 `ref` 傳遞 `ReadOnlySequence<T>`，會減少[結構](../../csharp/language-reference/builtin-types/struct.md)的複本。
 - 空白區段：
   - 在 `ReadOnlySequence<T>`內有效。
   - 重複使用 `ReadOnlySequence<T>.TryGet` 方法時，可能會出現。

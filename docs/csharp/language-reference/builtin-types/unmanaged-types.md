@@ -3,12 +3,12 @@ title: Unmanaged 型別 - C# 參考
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 97aa4dd629e385dbe9641d82a7da21a0aaa63e92
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 042cf382879cc4010a388fb75f41099b4342c9d9
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75342584"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626941"
 ---
 # <a name="unmanaged-types-c-reference"></a>Unmanaged 型別 (C# 參考)
 
@@ -17,7 +17,7 @@ ms.locfileid: "75342584"
 - `sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float`、`double`、`decimal` 或 `bool`
 - 任何 [enum](enum.md) 型別
 - 任何[指標](../../programming-guide/unsafe-code-pointers/pointer-types.md)型別
-- 只有包含非受控類型欄位和（在7.3 和更早版本中C# ）的任何使用者定義[結構](../keywords/struct.md)類型不是結構化類型（至少包含一個類型引數的類型）
+- 只有包含非受控類型欄位和（在7.3 和更早版本中C# ）的任何使用者定義[結構](struct.md)類型不是結構化類型（至少包含一個類型引數的類型）
 
 從C# 7.3 開始，您可以使用[`unmanaged` 條件約束](../../programming-guide/generics/constraints-on-type-parameters.md#unmanaged-constraint)，指定型別參數為非指標、不可為 null 的非受控型別。
 
@@ -33,7 +33,7 @@ ms.locfileid: "75342584"
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[指標型別](~/_csharplang/spec/unsafe-code.md#pointer-types)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [指標型別](../../programming-guide/unsafe-code-pointers/pointer-types.md)

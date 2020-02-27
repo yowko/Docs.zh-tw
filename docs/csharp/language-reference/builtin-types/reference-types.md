@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 6b65d7e79e4eac30171eb0aad650f7c1e3880e30
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163094"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627266"
 ---
 # <a name="built-in-reference-types-c-reference"></a>內建參考型別 (C# 參考)
 
@@ -97,9 +97,9 @@ for (int i = 0; i < str.Length; i++)
 ```csharp-interactive
 string a = "\\\u0066\n F";
 Console.WriteLine(a);
-\\ Output:
-\\ \f
-\\  F
+// Output:
+// \f
+//  F
 ```
 
 > [!NOTE]
@@ -144,7 +144,7 @@ public delegate int AnotherDelegate(MyType m, long num);
 
 在大多數情況下，`dynamic` 類型的行為與 `object` 類型類似。 特別是，任何非 Null 運算式都可轉換成 `dynamic` 型別。 `dynamic` 型別與 `object` 的不同之處在於，包含型別 `dynamic` 運算式的操作，不會由編譯器解析或進行型別檢查。 編譯器會將作業資訊封裝在一起，而且稍後在執行階段會使用這項資訊來評估作業。 在此程序期間，會將 `dynamic` 類型的變數編譯為 `object` 類型的變數。 因此，`dynamic` 類型只存在於編譯時期，而非執行階段。
 
-下列範例會對照 `dynamic` 類型的變數與 `object` 類型的變數。 若要在編譯時期驗證每個變數的類型，請將滑鼠指標放在 `WriteLine` 陳述式中的 `dyn` 或 `obj` 上方。 將下列程式碼複製到可使用 IntelliSense 的編輯器。 IntelliSense 會顯示「動態」來表示 `dyn`，並顯示「物件」來表示 `obj`。
+下列範例會對照 `dynamic` 類型的變數與 `object` 類型的變數。 若要在編譯時期驗證每個變數的類型，請將滑鼠指標放在 `dyn` 陳述式中的 `obj` 或 `WriteLine` 上方。 將下列程式碼複製到可使用 IntelliSense 的編輯器。 IntelliSense 會顯示「動態」來表示 `dyn`，並顯示「物件」來表示 `obj`。
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 
@@ -168,7 +168,7 @@ obj = obj + 3;
 
 [!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
 
-### <a name="see-also"></a>請參閱
+### <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](../keywords/index.md)

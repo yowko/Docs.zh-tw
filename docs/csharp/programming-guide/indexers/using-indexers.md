@@ -4,16 +4,16 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: bf290681395460bec10be45c4eaa1f165e453caf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 17162a0dc959a85c03a5cb5757e2b91fe10b0ab3
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75702892"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628159"
 ---
 # <a name="using-indexers-c-programming-guide"></a>使用索引子 (C# 程式設計手冊)
 
-索引子是語法便利性，可讓您建立用戶端應用程式可以就像陣列一樣地存取的 [class](../../language-reference/keywords/class.md)、[struct](../../language-reference/keywords/struct.md) 或 [interface](../../language-reference/keywords/interface.md)。 索引子最常實作於類型中，而類型的主要用途是封裝內部集合或陣列。 例如，假設您有一個 `TempRecord` 類別，其代表在 24 小時期間內於 10 個不同時間記錄的華氏溫度。 此類別包含型別為 `float[]` 的陣列 `temps` 以儲存溫度值。 透過在此類別中實作索引子，用戶端能以 `TempRecord` 執行個體中 `float temp = tr[4]` 的形式 (而非 `float temp = tr.temps[4]`) 來存取溫度。 索引子標記法不僅可簡化用戶端應用程式的語法，還可以讓其他開發人員更直覺地了解類別其用途。  
+索引子是語法便利性，可讓您建立用戶端應用程式可以就像陣列一樣地存取的 [class](../../language-reference/keywords/class.md)、[struct](../../language-reference/builtin-types/struct.md) 或 [interface](../../language-reference/keywords/interface.md)。 索引子最常實作於類型中，而類型的主要用途是封裝內部集合或陣列。 例如，假設您有一個 `TempRecord` 類別，其代表在 24 小時期間內於 10 個不同時間記錄的華氏溫度。 此類別包含型別為 `temps` 的陣列 `float[]` 以儲存溫度值。 透過在此類別中實作索引子，用戶端能以 `TempRecord` 執行個體中 `float temp = tr[4]` 的形式 (而非 `float temp = tr.temps[4]`) 來存取溫度。 索引子標記法不僅可簡化用戶端應用程式的語法，還可以讓其他開發人員更直覺地了解類別其用途。  
   
 若要在類別或結構上宣告索引子，請使用 [this](../../language-reference/keywords/this.md) 關鍵字，如下列範例所示：
 
@@ -72,7 +72,7 @@ C# 不會將索引子參數類型限制為整數。 例如，搭配使用字串�
   
 - 將 [get](../../language-reference/keywords/get.md) 與 [set](../../language-reference/keywords/set.md) 存取子的存取範圍設定為合理限制。 這對 `set` 存取子特別重要。 如需詳細資訊，請參閱[限制存取子的存取範圍](../classes-and-structs/restricting-accessor-accessibility.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [索引子](./index.md)
