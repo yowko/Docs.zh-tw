@@ -1,23 +1,23 @@
 ---
-title: Iterator
+title: 迭代器
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2789ac66690ebfd472b9bae5ccf08b1bdfaa0922
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353730"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628731"
 ---
-# <a name="iterators-visual-basic"></a><span data-ttu-id="47155-102">反覆運算器（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="47155-102">Iterators (Visual Basic)</span></span>
+# <a name="iterators-visual-basic"></a><span data-ttu-id="f8cb5-102">反覆運算器（Visual Basic）</span><span class="sxs-lookup"><span data-stu-id="f8cb5-102">Iterators (Visual Basic)</span></span>
 
-<span data-ttu-id="47155-103">「迭代器」可用來逐步執行集合，例如清單和陣列。</span><span class="sxs-lookup"><span data-stu-id="47155-103">An *iterator* can be used to step through collections such as lists and arrays.</span></span>
+<span data-ttu-id="f8cb5-103">「迭代器」可用來逐步執行集合，例如清單和陣列。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-103">An *iterator* can be used to step through collections such as lists and arrays.</span></span>
 
-<span data-ttu-id="47155-104">迭代器方法或 `get` 存取子會對集合執行自訂反覆運算。</span><span class="sxs-lookup"><span data-stu-id="47155-104">An iterator method or `get` accessor performs a custom iteration over a collection.</span></span> <span data-ttu-id="47155-105">Iterator 方法會使用[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)語句，一次傳回一個元素。</span><span class="sxs-lookup"><span data-stu-id="47155-105">An iterator method uses the [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element one at a time.</span></span> <span data-ttu-id="47155-106">當到達 `Yield` 陳述式時，系統會記住程式碼中的目前位置。</span><span class="sxs-lookup"><span data-stu-id="47155-106">When a `Yield` statement is reached, the current location in code is remembered.</span></span> <span data-ttu-id="47155-107">下次呼叫迭代器函式時，便會從這個位置重新開始執行。</span><span class="sxs-lookup"><span data-stu-id="47155-107">Execution is restarted from that location the next time the iterator function is called.</span></span>
+<span data-ttu-id="f8cb5-104">迭代器方法或 `get` 存取子會對集合執行自訂反覆運算。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-104">An iterator method or `get` accessor performs a custom iteration over a collection.</span></span> <span data-ttu-id="f8cb5-105">Iterator 方法會使用[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)語句，一次傳回一個元素。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-105">An iterator method uses the [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) statement to return each element one at a time.</span></span> <span data-ttu-id="f8cb5-106">當到達 `Yield` 陳述式時，系統會記住程式碼中的目前位置。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-106">When a `Yield` statement is reached, the current location in code is remembered.</span></span> <span data-ttu-id="f8cb5-107">下次呼叫迭代器函式時，便會從這個位置重新開始執行。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-107">Execution is restarted from that location the next time the iterator function is called.</span></span>
 
-<span data-ttu-id="47155-108">您會從用戶端程式代碼取用反覆運算器，方法是使用[For Each 。下一個](../../../visual-basic/language-reference/statements/for-each-next-statement.md)語句，或使用 LINQ 查詢。</span><span class="sxs-lookup"><span data-stu-id="47155-108">You consume an iterator from client code by using a [For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement, or by using a LINQ query.</span></span>
+<span data-ttu-id="f8cb5-108">您會從用戶端程式代碼取用反覆運算器，方法是使用[For Each 。下一個](../../../visual-basic/language-reference/statements/for-each-next-statement.md)語句，或使用 LINQ 查詢。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-108">You consume an iterator from client code by using a [For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) statement, or by using a LINQ query.</span></span>
 
-<span data-ttu-id="47155-109">在下列範例中，第一次反覆運算 `For Each` 迴圈會使 `SomeNumbers` 迭代器方法中的執行繼續，直到到達第一個 `Yield` 陳述式為止。</span><span class="sxs-lookup"><span data-stu-id="47155-109">In the following example, the first iteration of the `For Each` loop causes execution to proceed  in the `SomeNumbers` iterator method until the first `Yield` statement is reached.</span></span> <span data-ttu-id="47155-110">此反覆運算會傳回值 3，並保留迭代器方法中的目前位置。</span><span class="sxs-lookup"><span data-stu-id="47155-110">This iteration returns a value of 3, and the current location in the iterator method is retained.</span></span> <span data-ttu-id="47155-111">下次反覆運算迴圈時，迭代器方法中的執行會從上次停止的位置繼續，並且在到達 `Yield` 陳述式時再次停止。</span><span class="sxs-lookup"><span data-stu-id="47155-111">On the next iteration of the loop, execution in the iterator method continues from where it left off, again stopping when it reaches a `Yield` statement.</span></span> <span data-ttu-id="47155-112">此反覆運算會傳回值 5，並再次保留迭代器方法中的目前位置。</span><span class="sxs-lookup"><span data-stu-id="47155-112">This iteration returns a value of 5, and the current location in the iterator method is again retained.</span></span> <span data-ttu-id="47155-113">當到達迭代器方法結尾時，迴圈便完成。</span><span class="sxs-lookup"><span data-stu-id="47155-113">The loop completes when the end of the iterator method is reached.</span></span>
+<span data-ttu-id="f8cb5-109">在下列範例中，第一次反覆運算 `For Each` 迴圈會使 `SomeNumbers` 迭代器方法中的執行繼續，直到到達第一個 `Yield` 陳述式為止。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-109">In the following example, the first iteration of the `For Each` loop causes execution to proceed  in the `SomeNumbers` iterator method until the first `Yield` statement is reached.</span></span> <span data-ttu-id="f8cb5-110">此反覆運算會傳回值 3，並保留迭代器方法中的目前位置。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-110">This iteration returns a value of 3, and the current location in the iterator method is retained.</span></span> <span data-ttu-id="f8cb5-111">下次反覆運算迴圈時，迭代器方法中的執行會從上次停止的位置繼續，並且在到達 `Yield` 陳述式時再次停止。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-111">On the next iteration of the loop, execution in the iterator method continues from where it left off, again stopping when it reaches a `Yield` statement.</span></span> <span data-ttu-id="f8cb5-112">此反覆運算會傳回值 5，並再次保留迭代器方法中的目前位置。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-112">This iteration returns a value of 5, and the current location in the iterator method is again retained.</span></span> <span data-ttu-id="f8cb5-113">當到達迭代器方法結尾時，迴圈便完成。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-113">The loop completes when the end of the iterator method is reached.</span></span>
 
 ```vb
 Sub Main()
@@ -35,38 +35,38 @@ Private Iterator Function SomeNumbers() As System.Collections.IEnumerable
 End Function
 ```
 
-<span data-ttu-id="47155-114">迭代器方法或 `get` 存取子的傳回型別可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。</span><span class="sxs-lookup"><span data-stu-id="47155-114">The return type of an iterator method or `get` accessor can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.</span></span>
+<span data-ttu-id="f8cb5-114">迭代器方法或 `get` 存取子的傳回型別可以是 <xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601>。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-114">The return type of an iterator method or `get` accessor can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.</span></span>
 
-<span data-ttu-id="47155-115">您可以使用 `Exit Function` 或 `Return` 語句來結束反復專案。</span><span class="sxs-lookup"><span data-stu-id="47155-115">You can use an `Exit Function` or `Return` statement to end the iteration.</span></span>
+<span data-ttu-id="f8cb5-115">您可以使用 `Exit Function` 或 `Return` 語句來結束反復專案。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-115">You can use an `Exit Function` or `Return` statement to end the iteration.</span></span>
 
-<span data-ttu-id="47155-116">Visual Basic 反覆運算器函數或 `get` 存取子宣告包含[iterator](../../../visual-basic/language-reference/modifiers/iterator.md)修飾詞。</span><span class="sxs-lookup"><span data-stu-id="47155-116">A Visual Basic iterator function or `get` accessor declaration includes an [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md) modifier.</span></span>
+<span data-ttu-id="f8cb5-116">Visual Basic 反覆運算器函數或 `get` 存取子宣告包含[iterator](../../../visual-basic/language-reference/modifiers/iterator.md)修飾詞。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-116">A Visual Basic iterator function or `get` accessor declaration includes an [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md) modifier.</span></span>
 
-<span data-ttu-id="47155-117">反覆運算器是在 Visual Studio 2012 的 Visual Basic 中引進。</span><span class="sxs-lookup"><span data-stu-id="47155-117">Iterators were introduced in Visual Basic in Visual Studio 2012.</span></span>
+<span data-ttu-id="f8cb5-117">反覆運算器是在 Visual Studio 2012 的 Visual Basic 中引進。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-117">Iterators were introduced in Visual Basic in Visual Studio 2012.</span></span>
 
-<span data-ttu-id="47155-118">**本主題內容**</span><span class="sxs-lookup"><span data-stu-id="47155-118">**In this topic**</span></span>
+<span data-ttu-id="f8cb5-118">**本主題內容**</span><span class="sxs-lookup"><span data-stu-id="f8cb5-118">**In this topic**</span></span>
 
-- [<span data-ttu-id="47155-119">簡易迭代器</span><span class="sxs-lookup"><span data-stu-id="47155-119">Simple Iterator</span></span>](#BKMK_SimpleIterator)
+- [<span data-ttu-id="f8cb5-119">簡易迭代器</span><span class="sxs-lookup"><span data-stu-id="f8cb5-119">Simple Iterator</span></span>](#BKMK_SimpleIterator)
 
-- [<span data-ttu-id="47155-120">建立集合類別</span><span class="sxs-lookup"><span data-stu-id="47155-120">Creating a Collection Class</span></span>](#BKMK_CollectionClass)
+- [<span data-ttu-id="f8cb5-120">建立集合類別</span><span class="sxs-lookup"><span data-stu-id="f8cb5-120">Creating a Collection Class</span></span>](#BKMK_CollectionClass)
 
-- [<span data-ttu-id="47155-121">Try 區塊</span><span class="sxs-lookup"><span data-stu-id="47155-121">Try Blocks</span></span>](#BKMK_TryBlocks)
+- [<span data-ttu-id="f8cb5-121">Try 區塊</span><span class="sxs-lookup"><span data-stu-id="f8cb5-121">Try Blocks</span></span>](#BKMK_TryBlocks)
 
-- [<span data-ttu-id="47155-122">匿名方法</span><span class="sxs-lookup"><span data-stu-id="47155-122">Anonymous Methods</span></span>](#BKMK_AnonymousMethods)
+- [<span data-ttu-id="f8cb5-122">匿名方法</span><span class="sxs-lookup"><span data-stu-id="f8cb5-122">Anonymous Methods</span></span>](#BKMK_AnonymousMethods)
 
-- [<span data-ttu-id="47155-123">搭配泛型清單使用迭代器</span><span class="sxs-lookup"><span data-stu-id="47155-123">Using Iterators with a Generic List</span></span>](#BKMK_GenericList)
+- [<span data-ttu-id="f8cb5-123">搭配泛型清單使用迭代器</span><span class="sxs-lookup"><span data-stu-id="f8cb5-123">Using Iterators with a Generic List</span></span>](#BKMK_GenericList)
 
-- [<span data-ttu-id="47155-124">語法資訊</span><span class="sxs-lookup"><span data-stu-id="47155-124">Syntax Information</span></span>](#BKMK_SyntaxInformation)
+- [<span data-ttu-id="f8cb5-124">語法資訊</span><span class="sxs-lookup"><span data-stu-id="f8cb5-124">Syntax Information</span></span>](#BKMK_SyntaxInformation)
 
-- [<span data-ttu-id="47155-125">技術實作</span><span class="sxs-lookup"><span data-stu-id="47155-125">Technical Implementation</span></span>](#BKMK_Technical)
+- [<span data-ttu-id="f8cb5-125">技術實作</span><span class="sxs-lookup"><span data-stu-id="f8cb5-125">Technical Implementation</span></span>](#BKMK_Technical)
 
-- [<span data-ttu-id="47155-126">迭代器的使用</span><span class="sxs-lookup"><span data-stu-id="47155-126">Use of Iterators</span></span>](#BKMK_UseOfIterators)
+- [<span data-ttu-id="f8cb5-126">迭代器的使用</span><span class="sxs-lookup"><span data-stu-id="f8cb5-126">Use of Iterators</span></span>](#BKMK_UseOfIterators)
 
 > [!NOTE]
-> <span data-ttu-id="47155-127">針對主題中的所有範例（簡單反覆運算器範例除外），包含 `System.Collections` 和 `System.Collections.Generic` 命名空間的[Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)語句。</span><span class="sxs-lookup"><span data-stu-id="47155-127">For all examples in the topic except the Simple Iterator example, include [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) statements for the `System.Collections` and `System.Collections.Generic` namespaces.</span></span>
+> <span data-ttu-id="f8cb5-127">針對主題中的所有範例（簡單反覆運算器範例除外），包含 `System.Collections` 和 `System.Collections.Generic` 命名空間的[Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)語句。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-127">For all examples in the topic except the Simple Iterator example, include [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) statements for the `System.Collections` and `System.Collections.Generic` namespaces.</span></span>
 
-## <a name="BKMK_SimpleIterator"></a> <span data-ttu-id="47155-128">簡易迭代器</span><span class="sxs-lookup"><span data-stu-id="47155-128">Simple Iterator</span></span>
+## <a name="BKMK_SimpleIterator"></a> <span data-ttu-id="f8cb5-128">簡易迭代器</span><span class="sxs-lookup"><span data-stu-id="f8cb5-128">Simple Iterator</span></span>
 
-<span data-ttu-id="47155-129">下列範例中的單一 `Yield` 語句位於[For 。下一個](../../../visual-basic/language-reference/statements/for-next-statement.md)迴圈。</span><span class="sxs-lookup"><span data-stu-id="47155-129">The following example has a single `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop.</span></span> <span data-ttu-id="47155-130">在 `Main` 中，每次反覆運算 `For Each` 陳述式主體都會建立迭代器函式的呼叫，以繼續進行下一個 `Yield` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="47155-130">In `Main`, each iteration of the `For Each` statement body creates a call to the iterator function, which proceeds to the next `Yield` statement.</span></span>
+<span data-ttu-id="f8cb5-129">下列範例中的單一 `Yield` 語句位於[For 。下一個](../../../visual-basic/language-reference/statements/for-next-statement.md)迴圈。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-129">The following example has a single `Yield` statement that is inside a [For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) loop.</span></span> <span data-ttu-id="f8cb5-130">在 `Main` 中，每次反覆運算 `For Each` 陳述式主體都會建立迭代器函式的呼叫，以繼續進行下一個 `Yield` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-130">In `Main`, each iteration of the `For Each` statement body creates a call to the iterator function, which proceeds to the next `Yield` statement.</span></span>
 
 ```vb
 Sub Main()
@@ -90,11 +90,11 @@ As System.Collections.Generic.IEnumerable(Of Integer)
 End Function
 ```
 
-## <a name="BKMK_CollectionClass"></a> <span data-ttu-id="47155-131">建立集合類別</span><span class="sxs-lookup"><span data-stu-id="47155-131">Creating a Collection Class</span></span>
+## <a name="BKMK_CollectionClass"></a> <span data-ttu-id="f8cb5-131">建立集合類別</span><span class="sxs-lookup"><span data-stu-id="f8cb5-131">Creating a Collection Class</span></span>
 
-<span data-ttu-id="47155-132">在以下範例中，`DaysOfTheWeek` 類別會實作 <xref:System.Collections.IEnumerable> 介面，而這個介面需使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="47155-132">In the following example, the `DaysOfTheWeek` class implements the <xref:System.Collections.IEnumerable> interface, which requires a <xref:System.Collections.IEnumerable.GetEnumerator%2A> method.</span></span> <span data-ttu-id="47155-133">編譯器會隱含呼叫 `GetEnumerator` 方法，以傳回 <xref:System.Collections.IEnumerator>。</span><span class="sxs-lookup"><span data-stu-id="47155-133">The compiler implicitly calls the `GetEnumerator` method, which returns an <xref:System.Collections.IEnumerator>.</span></span>
+<span data-ttu-id="f8cb5-132">在以下範例中，`DaysOfTheWeek` 類別會實作 <xref:System.Collections.IEnumerable> 介面，而這個介面需使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-132">In the following example, the `DaysOfTheWeek` class implements the <xref:System.Collections.IEnumerable> interface, which requires a <xref:System.Collections.IEnumerable.GetEnumerator%2A> method.</span></span> <span data-ttu-id="f8cb5-133">編譯器會隱含呼叫 `GetEnumerator` 方法，以傳回 <xref:System.Collections.IEnumerator>。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-133">The compiler implicitly calls the `GetEnumerator` method, which returns an <xref:System.Collections.IEnumerator>.</span></span>
 
-<span data-ttu-id="47155-134">`GetEnumerator` 方法會使用 `Yield` 語句，一次傳回一個字串，而 `Iterator` 修飾詞則是在函式宣告中。</span><span class="sxs-lookup"><span data-stu-id="47155-134">The `GetEnumerator` method returns each string one at a time by using the `Yield` statement, and  an `Iterator` modifier is in the function declaration.</span></span>
+<span data-ttu-id="f8cb5-134">`GetEnumerator` 方法會使用 `Yield` 語句，一次傳回一個字串，而 `Iterator` 修飾詞則是在函式宣告中。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-134">The `GetEnumerator` method returns each string one at a time by using the `Yield` statement, and  an `Iterator` modifier is in the function declaration.</span></span>
 
 ```vb
 Sub Main()
@@ -123,9 +123,9 @@ Private Class DaysOfTheWeek
 End Class
 ```
 
-<span data-ttu-id="47155-135">下列範例會建立 `Zoo` 類別，其中包含動物的集合。</span><span class="sxs-lookup"><span data-stu-id="47155-135">The following example creates a `Zoo` class that contains a collection of animals.</span></span>
+<span data-ttu-id="f8cb5-135">下列範例會建立 `Zoo` 類別，其中包含動物的集合。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-135">The following example creates a `Zoo` class that contains a collection of animals.</span></span>
 
-<span data-ttu-id="47155-136">參考類別執行個體 (`For Each`) 的 `theZoo` 陳述式會隱含呼叫 `GetEnumerator` 方法。</span><span class="sxs-lookup"><span data-stu-id="47155-136">The `For Each` statement that refers to the class instance (`theZoo`) implicitly calls the `GetEnumerator` method.</span></span> <span data-ttu-id="47155-137">參考 `For Each` 和 `Birds` 屬性的 `Mammals` 陳述式會使用 `AnimalsForType` 具名迭代器方法。</span><span class="sxs-lookup"><span data-stu-id="47155-137">The `For Each` statements that refer to the `Birds` and `Mammals` properties use the `AnimalsForType` named iterator method.</span></span>
+<span data-ttu-id="f8cb5-136">參考類別執行個體 (`For Each`) 的 `theZoo` 陳述式會隱含呼叫 `GetEnumerator` 方法。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-136">The `For Each` statement that refers to the class instance (`theZoo`) implicitly calls the `GetEnumerator` method.</span></span> <span data-ttu-id="f8cb5-137">參考 `For Each` 和 `Birds` 屬性的 `Mammals` 陳述式會使用 `AnimalsForType` 具名迭代器方法。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-137">The `For Each` statements that refer to the `Birds` and `Mammals` properties use the `AnimalsForType` named iterator method.</span></span>
 
 ```vb
 Sub Main()
@@ -216,11 +216,11 @@ Public Class Zoo
 End Class
 ```
 
-## <a name="BKMK_TryBlocks"></a><span data-ttu-id="47155-138">Try 區塊</span><span class="sxs-lookup"><span data-stu-id="47155-138">Try Blocks</span></span>
+## <a name="BKMK_TryBlocks"></a><span data-ttu-id="f8cb5-138">Try 區塊</span><span class="sxs-lookup"><span data-stu-id="f8cb5-138">Try Blocks</span></span>
 
-<span data-ttu-id="47155-139">Visual Basic 允許在 Try 的 `Try` 區塊中使用 `Yield` 語句 ... [Catch 。Finally 語句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="47155-139">Visual Basic allows a `Yield` statement in the `Try` block of a [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span> <span data-ttu-id="47155-140">具有 `Yield` 語句的 `Try` 區塊可以有 `Catch` 區塊，而且可以有 `Finally` 區塊。</span><span class="sxs-lookup"><span data-stu-id="47155-140">A `Try` block that has a `Yield` statement can have `Catch` blocks, and can have a `Finally` block.</span></span>
+<span data-ttu-id="f8cb5-139">Visual Basic 允許在 Try 的 `Try` 區塊中使用 `Yield` 語句 ... [Catch 。Finally 語句](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-139">Visual Basic allows a `Yield` statement in the `Try` block of a [Try...Catch...Finally Statement](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).</span></span> <span data-ttu-id="f8cb5-140">具有 `Yield` 語句的 `Try` 區塊可以有 `Catch` 區塊，而且可以有 `Finally` 區塊。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-140">A `Try` block that has a `Yield` statement can have `Catch` blocks, and can have a `Finally` block.</span></span>
 
-<span data-ttu-id="47155-141">下列範例會在 iterator 函式中包含 `Try`、`Catch`和 `Finally` 區塊。</span><span class="sxs-lookup"><span data-stu-id="47155-141">The following example includes `Try`, `Catch`, and `Finally` blocks in an iterator function.</span></span> <span data-ttu-id="47155-142">Iterator 函數中的 `Finally` 區塊會在 `For Each` 反復專案完成之前執行。</span><span class="sxs-lookup"><span data-stu-id="47155-142">The `Finally` block in the iterator function executes before the `For Each` iteration finishes.</span></span>
+<span data-ttu-id="f8cb5-141">下列範例會在 iterator 函式中包含 `Try`、`Catch`和 `Finally` 區塊。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-141">The following example includes `Try`, `Catch`, and `Finally` blocks in an iterator function.</span></span> <span data-ttu-id="f8cb5-142">Iterator 函數中的 `Finally` 區塊會在 `For Each` 反復專案完成之前執行。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-142">The `Finally` block in the iterator function executes before the `For Each` iteration finishes.</span></span>
 
 ```vb
 Sub Main()
@@ -253,13 +253,13 @@ Private Iterator Function Test() As IEnumerable(Of Integer)
 End Function
 ```
 
-<span data-ttu-id="47155-143">`Yield` 語句不能在 `Catch` 區塊或 `Finally` 區塊內。</span><span class="sxs-lookup"><span data-stu-id="47155-143">A `Yield` statement cannot be inside a `Catch` block or a `Finally` block.</span></span>
+<span data-ttu-id="f8cb5-143">`Yield` 語句不能在 `Catch` 區塊或 `Finally` 區塊內。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-143">A `Yield` statement cannot be inside a `Catch` block or a `Finally` block.</span></span>
 
-<span data-ttu-id="47155-144">如果 `For Each` 主體（而不是 iterator 方法）擲回例外狀況，則不會執行 iterator 函式中的 `Catch` 區塊，但會執行 iterator 函數中的 `Finally` 區塊。</span><span class="sxs-lookup"><span data-stu-id="47155-144">If the `For Each` body (instead of the iterator method) throws an exception, a `Catch` block in the iterator function is not executed, but a `Finally` block in the iterator function is executed.</span></span> <span data-ttu-id="47155-145">Iterator 函式內的 `Catch` 區塊只會攔截在 iterator 函式內發生的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="47155-145">A `Catch` block inside an iterator function catches only exceptions that occur inside the iterator function.</span></span>
+<span data-ttu-id="f8cb5-144">如果 `For Each` 主體（而不是 iterator 方法）擲回例外狀況，則不會執行 iterator 函式中的 `Catch` 區塊，但會執行 iterator 函數中的 `Finally` 區塊。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-144">If the `For Each` body (instead of the iterator method) throws an exception, a `Catch` block in the iterator function is not executed, but a `Finally` block in the iterator function is executed.</span></span> <span data-ttu-id="f8cb5-145">Iterator 函式內的 `Catch` 區塊只會攔截在 iterator 函式內發生的例外狀況。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-145">A `Catch` block inside an iterator function catches only exceptions that occur inside the iterator function.</span></span>
 
-## <a name="BKMK_AnonymousMethods"></a><span data-ttu-id="47155-146">匿名方法</span><span class="sxs-lookup"><span data-stu-id="47155-146">Anonymous Methods</span></span>
+## <a name="BKMK_AnonymousMethods"></a><span data-ttu-id="f8cb5-146">匿名方法</span><span class="sxs-lookup"><span data-stu-id="f8cb5-146">Anonymous Methods</span></span>
 
-<span data-ttu-id="47155-147">在 Visual Basic 中，匿名函式可以是反覆運算器函數。</span><span class="sxs-lookup"><span data-stu-id="47155-147">In Visual Basic, an anonymous function can be an iterator function.</span></span> <span data-ttu-id="47155-148">下列範例將說明這點。</span><span class="sxs-lookup"><span data-stu-id="47155-148">The following example illustrates this.</span></span>
+<span data-ttu-id="f8cb5-147">在 Visual Basic 中，匿名函式可以是反覆運算器函數。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-147">In Visual Basic, an anonymous function can be an iterator function.</span></span> <span data-ttu-id="f8cb5-148">下列範例將說明這點。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-148">The following example illustrates this.</span></span>
 
 ```vb
 Dim iterateSequence = Iterator Function() _
@@ -275,7 +275,7 @@ Next
 Console.ReadKey()
 ```
 
-<span data-ttu-id="47155-149">下列範例具有可驗證引數的非反覆運算器方法。</span><span class="sxs-lookup"><span data-stu-id="47155-149">The following example has a non-iterator method that validates the arguments.</span></span> <span data-ttu-id="47155-150">方法會傳回匿名反覆運算器的結果，以描述集合元素。</span><span class="sxs-lookup"><span data-stu-id="47155-150">The method returns the result of an anonymous iterator that describes the collection elements.</span></span>
+<span data-ttu-id="f8cb5-149">下列範例具有可驗證引數的非反覆運算器方法。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-149">The following example has a non-iterator method that validates the arguments.</span></span> <span data-ttu-id="f8cb5-150">方法會傳回匿名反覆運算器的結果，以描述集合元素。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-150">The method returns the result of an anonymous iterator that describes the collection elements.</span></span>
 
 ```vb
 Sub Main()
@@ -306,17 +306,17 @@ As IEnumerable
 End Function
 ```
 
-<span data-ttu-id="47155-151">如果驗證是在 iterator 函式內，就無法執行驗證，直到 `For Each` 主體的第一個反復專案開始為止。</span><span class="sxs-lookup"><span data-stu-id="47155-151">If validation is instead inside the iterator function, the validation cannot be performed until the start of the first iteration of the `For Each` body.</span></span>
+<span data-ttu-id="f8cb5-151">如果驗證是在 iterator 函式內，就無法執行驗證，直到 `For Each` 主體的第一個反復專案開始為止。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-151">If validation is instead inside the iterator function, the validation cannot be performed until the start of the first iteration of the `For Each` body.</span></span>
 
-## <a name="BKMK_GenericList"></a> <span data-ttu-id="47155-152">搭配泛型清單使用迭代器</span><span class="sxs-lookup"><span data-stu-id="47155-152">Using Iterators with a Generic List</span></span>
+## <a name="BKMK_GenericList"></a> <span data-ttu-id="f8cb5-152">搭配泛型清單使用迭代器</span><span class="sxs-lookup"><span data-stu-id="f8cb5-152">Using Iterators with a Generic List</span></span>
 
-<span data-ttu-id="47155-153">在以下範例中，`Stack(Of T)` 泛型類別會實作 <xref:System.Collections.Generic.IEnumerable%601> 泛型介面。</span><span class="sxs-lookup"><span data-stu-id="47155-153">In the following example, the `Stack(Of T)` generic class implements the <xref:System.Collections.Generic.IEnumerable%601> generic interface.</span></span> <span data-ttu-id="47155-154">`Push` 方法會將值指派給 `T` 類型的陣列。</span><span class="sxs-lookup"><span data-stu-id="47155-154">The `Push` method assigns values to an array of type `T`.</span></span> <span data-ttu-id="47155-155"><xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法會使用 `Yield` 陳述式以傳回陣列值。</span><span class="sxs-lookup"><span data-stu-id="47155-155">The <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method returns the array values by using the `Yield` statement.</span></span>
+<span data-ttu-id="f8cb5-153">在以下範例中，`Stack(Of T)` 泛型類別會實作 <xref:System.Collections.Generic.IEnumerable%601> 泛型介面。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-153">In the following example, the `Stack(Of T)` generic class implements the <xref:System.Collections.Generic.IEnumerable%601> generic interface.</span></span> <span data-ttu-id="f8cb5-154">`Push` 方法會將值指派給 `T` 類型的陣列。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-154">The `Push` method assigns values to an array of type `T`.</span></span> <span data-ttu-id="f8cb5-155"><xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法會使用 `Yield` 陳述式以傳回陣列值。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-155">The <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method returns the array values by using the `Yield` statement.</span></span>
 
-<span data-ttu-id="47155-156">除了泛型 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法，您也必須實作非泛型 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="47155-156">In addition to the generic <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method, the non-generic <xref:System.Collections.IEnumerable.GetEnumerator%2A> method must also be implemented.</span></span> <span data-ttu-id="47155-157">這是因為 <xref:System.Collections.Generic.IEnumerable%601> 繼承自 <xref:System.Collections.IEnumerable>。</span><span class="sxs-lookup"><span data-stu-id="47155-157">This is because <xref:System.Collections.Generic.IEnumerable%601> inherits from <xref:System.Collections.IEnumerable>.</span></span> <span data-ttu-id="47155-158">非泛型實作會延後到泛型實作。</span><span class="sxs-lookup"><span data-stu-id="47155-158">The non-generic implementation defers to the generic implementation.</span></span>
+<span data-ttu-id="f8cb5-156">除了泛型 <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> 方法，您也必須實作非泛型 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-156">In addition to the generic <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> method, the non-generic <xref:System.Collections.IEnumerable.GetEnumerator%2A> method must also be implemented.</span></span> <span data-ttu-id="f8cb5-157">這是因為 <xref:System.Collections.Generic.IEnumerable%601> 繼承自 <xref:System.Collections.IEnumerable>。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-157">This is because <xref:System.Collections.Generic.IEnumerable%601> inherits from <xref:System.Collections.IEnumerable>.</span></span> <span data-ttu-id="f8cb5-158">非泛型實作會延後到泛型實作。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-158">The non-generic implementation defers to the generic implementation.</span></span>
 
-<span data-ttu-id="47155-159">此範例使用具名迭代器來支援逐一查看相同資料集合的各種方法。</span><span class="sxs-lookup"><span data-stu-id="47155-159">The example uses named iterators to support various ways of iterating through the same collection of data.</span></span> <span data-ttu-id="47155-160">這些具名迭代器是 `TopToBottom` 和 `BottomToTop` 屬性，以及 `TopN` 方法。</span><span class="sxs-lookup"><span data-stu-id="47155-160">These named iterators are the `TopToBottom` and `BottomToTop` properties, and the `TopN` method.</span></span>
+<span data-ttu-id="f8cb5-159">此範例使用具名迭代器來支援逐一查看相同資料集合的各種方法。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-159">The example uses named iterators to support various ways of iterating through the same collection of data.</span></span> <span data-ttu-id="f8cb5-160">這些具名迭代器是 `TopToBottom` 和 `BottomToTop` 屬性，以及 `TopN` 方法。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-160">These named iterators are the `TopToBottom` and `BottomToTop` properties, and the `TopN` method.</span></span>
 
-<span data-ttu-id="47155-161">`BottomToTop` 屬性宣告包含 `Iterator` 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="47155-161">The `BottomToTop` property declaration includes the `Iterator` keyword.</span></span>
+<span data-ttu-id="f8cb5-161">`BottomToTop` 屬性宣告包含 `Iterator` 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-161">The `BottomToTop` property declaration includes the `Iterator` keyword.</span></span>
 
 ```vb
 Sub Main()
@@ -419,44 +419,44 @@ Public Class Stack(Of T)
 End Class
 ```
 
-## <a name="BKMK_SyntaxInformation"></a> <span data-ttu-id="47155-162">語法資訊</span><span class="sxs-lookup"><span data-stu-id="47155-162">Syntax Information</span></span>
+## <a name="BKMK_SyntaxInformation"></a> <span data-ttu-id="f8cb5-162">語法資訊</span><span class="sxs-lookup"><span data-stu-id="f8cb5-162">Syntax Information</span></span>
 
-<span data-ttu-id="47155-163">出現的迭代器可以是方法或 `get` 存取子。</span><span class="sxs-lookup"><span data-stu-id="47155-163">An iterator can occur as a method or `get` accessor.</span></span> <span data-ttu-id="47155-164">迭代器不能出現在事件、執行個體建構函式、靜態建構函式或靜態解構函式中。</span><span class="sxs-lookup"><span data-stu-id="47155-164">An iterator cannot occur in an event, instance constructor, static constructor, or static destructor.</span></span>
+<span data-ttu-id="f8cb5-163">出現的迭代器可以是方法或 `get` 存取子。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-163">An iterator can occur as a method or `get` accessor.</span></span> <span data-ttu-id="f8cb5-164">迭代器不能出現在事件、執行個體建構函式、靜態建構函式或靜態解構函式中。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-164">An iterator cannot occur in an event, instance constructor, static constructor, or static destructor.</span></span>
 
-<span data-ttu-id="47155-165">`Yield` 陳述式中的運算式類型必須隱含轉換成迭代器的傳回型別。</span><span class="sxs-lookup"><span data-stu-id="47155-165">An implicit conversion must exist from the expression type in the `Yield` statement to the return type of the iterator.</span></span>
+<span data-ttu-id="f8cb5-165">`Yield` 陳述式中的運算式類型必須隱含轉換成迭代器的傳回型別。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-165">An implicit conversion must exist from the expression type in the `Yield` statement to the return type of the iterator.</span></span>
 
-<span data-ttu-id="47155-166">在 Visual Basic 中，iterator 方法不能有任何 `ByRef` 參數。</span><span class="sxs-lookup"><span data-stu-id="47155-166">In Visual Basic, an iterator method cannot have any `ByRef` parameters.</span></span>
+<span data-ttu-id="f8cb5-166">在 Visual Basic 中，iterator 方法不能有任何 `ByRef` 參數。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-166">In Visual Basic, an iterator method cannot have any `ByRef` parameters.</span></span>
 
-<span data-ttu-id="47155-167">在 Visual Basic 中，"Yield" 不是保留字，只有在 `Iterator` 方法或 `get` 存取子中使用時，才具有特殊意義。</span><span class="sxs-lookup"><span data-stu-id="47155-167">In Visual Basic, "Yield" is not a reserved word and has special meaning only when it is used in an `Iterator` method or `get` accessor.</span></span>
+<span data-ttu-id="f8cb5-167">在 Visual Basic 中，"Yield" 不是保留字，只有在 `Iterator` 方法或 `get` 存取子中使用時，才具有特殊意義。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-167">In Visual Basic, "Yield" is not a reserved word and has special meaning only when it is used in an `Iterator` method or `get` accessor.</span></span>
 
-## <a name="BKMK_Technical"></a> <span data-ttu-id="47155-168">技術實作</span><span class="sxs-lookup"><span data-stu-id="47155-168">Technical Implementation</span></span>
+## <a name="BKMK_Technical"></a> <span data-ttu-id="f8cb5-168">技術實作</span><span class="sxs-lookup"><span data-stu-id="f8cb5-168">Technical Implementation</span></span>
 
-<span data-ttu-id="47155-169">雖然您將迭代器撰寫成方法，但編譯器會將其轉譯成巢狀類別，其實也就是狀態機器。</span><span class="sxs-lookup"><span data-stu-id="47155-169">Although you write an iterator as a method, the compiler translates it into a nested class that is, in effect, a state machine.</span></span> <span data-ttu-id="47155-170">此類別會在用戶端程式碼中的 `For Each...Next` 迴圈繼續期間追蹤迭代器的位置。</span><span class="sxs-lookup"><span data-stu-id="47155-170">This class keeps track of the position of the iterator as long the `For Each...Next` loop in the client code continues.</span></span>
+<span data-ttu-id="f8cb5-169">雖然您將迭代器撰寫成方法，但編譯器會將其轉譯成巢狀類別，其實也就是狀態機器。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-169">Although you write an iterator as a method, the compiler translates it into a nested class that is, in effect, a state machine.</span></span> <span data-ttu-id="f8cb5-170">此類別會在用戶端程式碼中的 `For Each...Next` 迴圈繼續期間追蹤迭代器的位置。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-170">This class keeps track of the position of the iterator as long the `For Each...Next` loop in the client code continues.</span></span>
 
-<span data-ttu-id="47155-171">若要查看編譯器的功能，您可以使用 Ildasm.exe 工具來檢視為迭代器方法產生的 Microsoft 中繼語言程式碼。</span><span class="sxs-lookup"><span data-stu-id="47155-171">To see what the compiler does, you can use the Ildasm.exe tool to view the Microsoft intermediate language code that is generated for an iterator method.</span></span>
+<span data-ttu-id="f8cb5-171">若要查看編譯器的功能，您可以使用 Ildasm.exe 工具來檢視為迭代器方法產生的 Microsoft 中繼語言程式碼。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-171">To see what the compiler does, you can use the Ildasm.exe tool to view the Microsoft intermediate language code that is generated for an iterator method.</span></span>
 
-<span data-ttu-id="47155-172">當您建立[類別](../../../csharp/language-reference/keywords/class.md)或[結構](../../../csharp/language-reference/keywords/struct.md)的反覆運算器時，您不需要執行整個 <xref:System.Collections.IEnumerator> 介面。</span><span class="sxs-lookup"><span data-stu-id="47155-172">When you create an iterator for a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md), you do not have to implement the whole <xref:System.Collections.IEnumerator> interface.</span></span> <span data-ttu-id="47155-173">當編譯器偵測到迭代器時，它會自動產生 `Current` 或 `MoveNext` 介面的 `Dispose`、<xref:System.Collections.IEnumerator> 和 <xref:System.Collections.Generic.IEnumerator%601> 方法。</span><span class="sxs-lookup"><span data-stu-id="47155-173">When the compiler detects the iterator, it automatically generates the `Current`, `MoveNext`, and `Dispose` methods of the <xref:System.Collections.IEnumerator> or <xref:System.Collections.Generic.IEnumerator%601> interface.</span></span>
+<span data-ttu-id="f8cb5-172">當您建立[類別](../../language-reference/statements/class-statement.md)或[結構](../../language-reference/statements/structure-statement.md)的反覆運算器時，您不需要執行整個 <xref:System.Collections.IEnumerator> 介面。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-172">When you create an iterator for a [class](../../language-reference/statements/class-statement.md) or [struct](../../language-reference/statements/structure-statement.md), you do not have to implement the whole <xref:System.Collections.IEnumerator> interface.</span></span> <span data-ttu-id="f8cb5-173">當編譯器偵測到迭代器時，它會自動產生 `Current` 或 `MoveNext` 介面的 `Dispose`、<xref:System.Collections.IEnumerator> 和 <xref:System.Collections.Generic.IEnumerator%601> 方法。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-173">When the compiler detects the iterator, it automatically generates the `Current`, `MoveNext`, and `Dispose` methods of the <xref:System.Collections.IEnumerator> or <xref:System.Collections.Generic.IEnumerator%601> interface.</span></span>
 
-<span data-ttu-id="47155-174">之後每次反覆運算 `For Each…Next` 迴圈 (或直接呼叫 `IEnumerator.MoveNext`)，下一個迭代器程式碼主體都會在上一個 `Yield` 陳述式之後繼續。</span><span class="sxs-lookup"><span data-stu-id="47155-174">On each successive iteration of the `For Each…Next` loop (or the direct call to `IEnumerator.MoveNext`), the next iterator code body resumes after the previous `Yield` statement.</span></span> <span data-ttu-id="47155-175">接著，它會繼續進行下一個 `Yield` 語句，直到到達反覆運算器主體的結尾，或遇到 `Exit Function` 或 `Return` 語句為止。</span><span class="sxs-lookup"><span data-stu-id="47155-175">It then continues to the next `Yield` statement until the end of the iterator body is reached, or until an `Exit Function` or `Return` statement is encountered.</span></span>
+<span data-ttu-id="f8cb5-174">之後每次反覆運算 `For Each…Next` 迴圈 (或直接呼叫 `IEnumerator.MoveNext`)，下一個迭代器程式碼主體都會在上一個 `Yield` 陳述式之後繼續。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-174">On each successive iteration of the `For Each…Next` loop (or the direct call to `IEnumerator.MoveNext`), the next iterator code body resumes after the previous `Yield` statement.</span></span> <span data-ttu-id="f8cb5-175">接著，它會繼續進行下一個 `Yield` 語句，直到到達反覆運算器主體的結尾，或遇到 `Exit Function` 或 `Return` 語句為止。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-175">It then continues to the next `Yield` statement until the end of the iterator body is reached, or until an `Exit Function` or `Return` statement is encountered.</span></span>
 
-<span data-ttu-id="47155-176">反覆運算器不支援 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="47155-176">Iterators do not support the <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="47155-177">若要從頭開始逐一查看，您必須取得新的迭代器。</span><span class="sxs-lookup"><span data-stu-id="47155-177">To re-iterate from the start, you must obtain a new iterator.</span></span>
+<span data-ttu-id="f8cb5-176">反覆運算器不支援 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> 方法。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-176">Iterators do not support the <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> method.</span></span> <span data-ttu-id="f8cb5-177">若要從頭開始逐一查看，您必須取得新的迭代器。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-177">To re-iterate from the start, you must obtain a new iterator.</span></span>
 
-<span data-ttu-id="47155-178">如需詳細資訊，請參閱[Visual Basic 語言規格](../../../visual-basic/reference/language-specification/index.md)。</span><span class="sxs-lookup"><span data-stu-id="47155-178">For additional information, see the [Visual Basic Language Specification](../../../visual-basic/reference/language-specification/index.md).</span></span>
+<span data-ttu-id="f8cb5-178">如需詳細資訊，請參閱[Visual Basic 語言規格](../../../visual-basic/reference/language-specification/index.md)。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-178">For additional information, see the [Visual Basic Language Specification](../../../visual-basic/reference/language-specification/index.md).</span></span>
 
-## <a name="BKMK_UseOfIterators"></a> <span data-ttu-id="47155-179">迭代器的使用</span><span class="sxs-lookup"><span data-stu-id="47155-179">Use of Iterators</span></span>
+## <a name="BKMK_UseOfIterators"></a> <span data-ttu-id="f8cb5-179">迭代器的使用</span><span class="sxs-lookup"><span data-stu-id="f8cb5-179">Use of Iterators</span></span>
 
-<span data-ttu-id="47155-180">當您需要使用複雜的程式碼來填入清單序列時，迭代器可讓您維持 `For Each` 迴圈的簡潔性。</span><span class="sxs-lookup"><span data-stu-id="47155-180">Iterators enable you to maintain the simplicity of a `For Each` loop when you need to use complex code to populate a list sequence.</span></span> <span data-ttu-id="47155-181">當您想要執行下列作業時，這會很有用：</span><span class="sxs-lookup"><span data-stu-id="47155-181">This can be useful when you want to do the following:</span></span>
+<span data-ttu-id="f8cb5-180">當您需要使用複雜的程式碼來填入清單序列時，迭代器可讓您維持 `For Each` 迴圈的簡潔性。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-180">Iterators enable you to maintain the simplicity of a `For Each` loop when you need to use complex code to populate a list sequence.</span></span> <span data-ttu-id="f8cb5-181">當您想要執行下列作業時，這會很有用：</span><span class="sxs-lookup"><span data-stu-id="f8cb5-181">This can be useful when you want to do the following:</span></span>
 
-- <span data-ttu-id="47155-182">在第一次反覆運算 `For Each` 迴圈之後修改清單序列。</span><span class="sxs-lookup"><span data-stu-id="47155-182">Modify the list sequence after the first `For Each` loop iteration.</span></span>
+- <span data-ttu-id="f8cb5-182">在第一次反覆運算 `For Each` 迴圈之後修改清單序列。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-182">Modify the list sequence after the first `For Each` loop iteration.</span></span>
 
-- <span data-ttu-id="47155-183">避免在第一次反覆運算 `For Each` 迴圈之前完整載入大型清單。</span><span class="sxs-lookup"><span data-stu-id="47155-183">Avoid fully loading a large list before the first iteration of a `For Each` loop.</span></span> <span data-ttu-id="47155-184">分頁擷取以分批載入資料表資料列即為一例。</span><span class="sxs-lookup"><span data-stu-id="47155-184">An example is a paged fetch to load a batch of table rows.</span></span> <span data-ttu-id="47155-185">另一個範例是 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法，它會在 .NET Framework 中實作迭代器。</span><span class="sxs-lookup"><span data-stu-id="47155-185">Another example is the <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> method, which implements iterators within the .NET Framework.</span></span>
+- <span data-ttu-id="f8cb5-183">避免在第一次反覆運算 `For Each` 迴圈之前完整載入大型清單。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-183">Avoid fully loading a large list before the first iteration of a `For Each` loop.</span></span> <span data-ttu-id="f8cb5-184">分頁擷取以分批載入資料表資料列即為一例。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-184">An example is a paged fetch to load a batch of table rows.</span></span> <span data-ttu-id="f8cb5-185">另一個範例是 <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> 方法，它會在 .NET Framework 中實作迭代器。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-185">Another example is the <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> method, which implements iterators within the .NET Framework.</span></span>
 
-- <span data-ttu-id="47155-186">在迭代器中封裝建立清單。</span><span class="sxs-lookup"><span data-stu-id="47155-186">Encapsulate building the list in the iterator.</span></span> <span data-ttu-id="47155-187">在迭代器方法中，您可以建立清單，然後在迴圈中產生每個結果。</span><span class="sxs-lookup"><span data-stu-id="47155-187">In the iterator method, you can build the list and then yield each result in a loop.</span></span>
+- <span data-ttu-id="f8cb5-186">在迭代器中封裝建立清單。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-186">Encapsulate building the list in the iterator.</span></span> <span data-ttu-id="f8cb5-187">在迭代器方法中，您可以建立清單，然後在迴圈中產生每個結果。</span><span class="sxs-lookup"><span data-stu-id="f8cb5-187">In the iterator method, you can build the list and then yield each result in a loop.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="47155-188">請參閱</span><span class="sxs-lookup"><span data-stu-id="47155-188">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8cb5-188">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f8cb5-188">See also</span></span>
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [<span data-ttu-id="47155-189">For Each...Next 陳述式</span><span class="sxs-lookup"><span data-stu-id="47155-189">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [<span data-ttu-id="47155-190">Yield 陳述式</span><span class="sxs-lookup"><span data-stu-id="47155-190">Yield Statement</span></span>](../../../visual-basic/language-reference/statements/yield-statement.md)
-- [<span data-ttu-id="47155-191">Iterator</span><span class="sxs-lookup"><span data-stu-id="47155-191">Iterator</span></span>](../../../visual-basic/language-reference/modifiers/iterator.md)
+- [<span data-ttu-id="f8cb5-189">For Each...Next 陳述式</span><span class="sxs-lookup"><span data-stu-id="f8cb5-189">For Each...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [<span data-ttu-id="f8cb5-190">Yield 陳述式</span><span class="sxs-lookup"><span data-stu-id="f8cb5-190">Yield Statement</span></span>](../../../visual-basic/language-reference/statements/yield-statement.md)
+- [<span data-ttu-id="f8cb5-191">Iterator</span><span class="sxs-lookup"><span data-stu-id="f8cb5-191">Iterator</span></span>](../../../visual-basic/language-reference/modifiers/iterator.md)
