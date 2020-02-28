@@ -2,12 +2,12 @@
 title: C# 的教學課程 - C# 指南
 description: 第一次接觸 C#？ 了解該語言的基本概念。
 ms.date: 04/05/2019
-ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b510342f957a259a6c7763441778461b3dd4ef1e
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711658"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673286"
 ---
 # <a name="a-tour-of-the-c-language"></a>C#語言教學課程
 
@@ -23,7 +23,7 @@ C# 有***統一的型別系統***。 所有的 C# 型別 (包括 `int` 和 `doub
 
 為了確保C#程式和程式庫能夠以相容的方式在一段時間內演變， C#我們將著重于設計的***版本***設定。 許多程式設計語言並不注重此問題，因此當推出新版的相依程式庫時，以那些語言撰寫的程式需要進行較多修改才能繼續運作。 C#以版本設定考慮直接影響的設計層麵包括個別的 `virtual` 和 `override` 修飾詞、方法多載解析的規則，以及明確介面成員宣告的支援。
 
-## <a name="hello-world"></a>Hello World
+## <a name="hello-world"></a>Hello world
 
 “Hello, World” 程式通常用來介紹程式設計語言。 以下是以 C# 撰寫的：
 
@@ -48,7 +48,7 @@ Hello, World
 
 “Hello, World” 程式宣告的 `Hello` 類別包含單一成員，即名為 `Main` 的方法。 `Main` 方法是使用 static 修飾詞來宣告。 執行個體方法可以使用關鍵字 `this` 參考特定的封入物件執行個體，但靜態方法卻不需要參考特定物件即可運作。 依照慣例，會使用名為 `Main` 的靜態方法做為程式的進入點。
 
-程式的輸出是由 `System` 命名空間中 `Console` 類別的 `WriteLine` 方法產生。 此類別是由標準類別程式庫提供，根據預設，編譯器會自動參考此程式庫。
+程式的輸出是由 `WriteLine` 命名空間中 `Console` 類別的 `System` 方法產生。 此類別是由標準類別程式庫提供，根據預設，編譯器會自動參考此程式庫。
 
 ## <a name="elements-of-the-c-language"></a>C#語言的元素
 
@@ -64,8 +64,6 @@ C# 還有更多可探討的主題。 下列主題提供 C# 語言元素的概觀
   - 您會使用***陳述式***來表達程式的動作。
 - [類別與物件](classes-and-objects.md)
   - ***類別***是 C# 最基本的型別。 ***物件***是類別的執行個體。 類別是使用***成員*** (此主題中也有探討) 來建置。
-- [結構](structs.md)
-  - 不同於類別，***結構***是屬於實值型別的資料結構。
 - [陣列](arrays.md)
   - ***陣列***是一種資料結構，其中包含一些可透過計算索引存取的變數。
 - [介面](interfaces.md)
@@ -79,4 +77,4 @@ C# 還有更多可探討的主題。 下列主題提供 C# 語言元素的概觀
 > 這些文章適用于C# 7.0 和更新版本。 某些功能可能無法在較舊版本中使用。
 
 > [!div class="step-by-step"]
-> [下一步](program-structure.md)
+> [下一個](program-structure.md)

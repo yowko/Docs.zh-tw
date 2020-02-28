@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 500160d3bc9280b866e5f5ba24c5edc623e752c1
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713684"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673091"
 ---
 # <a name="class-c-reference"></a>類別 (C# 參考)
 
@@ -32,10 +32,10 @@ class TestClass
 
 |繼承|範例|
 |-----------------|-------------|
-|None|`class ClassA { }`|
-|Single|`class DerivedClass: BaseClass { }`|
-|無，實作兩個介面|`class ImplClass: IFace1, IFace2 { }`|
-|單一，實作一個介面|`class ImplDerivedClass: BaseClass, IFace1 { }`|
+|無|`class ClassA { }`|
+|Single|`class DerivedClass : BaseClass { }`|
+|無，實作兩個介面|`class ImplClass : IFace1, IFace2 { }`|
+|單一，實作一個介面|`class ImplDerivedClass : BaseClass, IFace1 { }`|
 
 直接在命名空間內宣告的類別 (未巢狀在其他類別內) 可以是 [public](./public.md) 或 [internal](./internal.md)。 類別預設為 `internal`。
 
@@ -71,9 +71,9 @@ class TestClass
 
 - [介面](../../programming-guide/interfaces/index.md)
 
-- [結構](../../programming-guide/classes-and-structs/structs.md)
+- [結構類型](../builtin-types/struct.md)
 
-- [列舉](../builtin-types/enum.md)
+- [列舉類型](../builtin-types/enum.md)
 
 ## <a name="example"></a>範例
 
@@ -83,13 +83,13 @@ class TestClass
 
 ## <a name="comments"></a>註解
 
-請注意，在上述範例中，只能透過 `Child` 類別的公用方法來存取私用欄位 (`name` 和 `age`)。 例如，您無法使用如下的陳述式，從 `Main` 方法列印子系的名稱︰
+請注意，在上述範例中，只能透過 `name` 類別的公用方法來存取私用欄位 (`age` 和 `Child`)。 例如，您無法使用如下的陳述式，從 `Main` 方法列印子系的名稱︰
 
 ```csharp
 Console.Write(child1.name);   // Error
 ```
 
-只有在 `Main` 已是類別的成員時，才能從 `Main` 存取 `Child` 的 private 成員。
+只有在 `Child` 已是類別的成員時，才能從 `Main` 存取 `Main` 的 private 成員。
 
 類型已宣告在存取修飾詞未預設為 `private` 的類別內，因此，如果已移除關鍵字，則此範例中的資料成員仍然會是 `private`。
 
@@ -99,7 +99,7 @@ Console.Write(child1.name);   // Error
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

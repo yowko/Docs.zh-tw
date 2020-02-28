@@ -4,12 +4,12 @@ description: 了解所有 C# 程式中的核心類型 (數字、字串和物件)
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 10230394ece27a2a34be1075abcdbd3765995aeb
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: bb2177026afb2eef2e14ece0c306bfd3ffe7af39
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628562"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673260"
 ---
 # <a name="types-variables-and-values"></a>類型、變數和值
 
@@ -82,9 +82,10 @@ C# 提供一組標準內建數字類型，代表整數、浮點數值、布林�
   
 - 它支援繼承準則。 型別可以衍生自稱為「基底型別」的其他型別。 衍生的型別會繼承 (有部份限制) 基底型別的方法、屬性和其他成員。 基底類型同樣可以衍生自一些其他類型，衍生類型則會繼承其繼承階層架構中兩個基底類型的成員。 所有類型 (包括 <xref:System.Int32> 這類內建數字類型 (C# 關鍵字：`int`)) 最終衍生自單一基底類型，即 <xref:System.Object> (C# 關鍵字：`object`)。 這種統一類型階層架構稱為[一般型別系統](../standard/common-type-system.md) (CTS)。 如需 C# 中有關繼承的詳細資訊，請參閱[繼承](programming-guide/classes-and-structs/inheritance.md)。  
   
-- CTS 中的每個型別都會定義為「實值型別」或「參考型別」。 這包括 .NET Framework Class Library 中的所有自訂類型以及您自己的使用者定義型別。 您使用 [struct](language-reference/builtin-types/struct.md) 關鍵字定義的類型為實值型別；所有內建數字類型都是 **struct**。 如需實值型別的詳細資訊，請參閱[結構](structs.md)。 您使用 [class](language-reference/keywords/class.md) 關鍵字定義的類型為參考型別。 如需參考型別的詳細資訊，請參閱[類別](programming-guide/classes-and-structs/classes.md)。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
+- CTS 中的每個型別都會定義為「實值型別」或「參考型別」。 這包括 .NET 類別庫中的所有自訂型別以及您自己的使用者定義型別。 您使用 `struct` 或 `enum` 關鍵字所定義的類型是實數值型別。 如需實數值型別的詳細資訊，請參閱實[數值型別](language-reference/builtin-types/value-types.md)。 您使用 [class](language-reference/keywords/class.md) 關鍵字定義的類型為參考型別。 如需參考型別的詳細資訊，請參閱[類別](programming-guide/classes-and-structs/classes.md)。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。
 
 ## <a name="see-also"></a>另請參閱
 
-- [結構](structs.md)
+- [結構類型](language-reference/builtin-types/struct.md)
+- [列舉類型](language-reference/builtin-types/enum.md)
 - [類別](programming-guide/classes-and-structs/classes.md)

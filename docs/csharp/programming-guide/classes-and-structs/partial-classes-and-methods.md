@@ -6,12 +6,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 641c2e3adfb3dabaa300e94b203aa6c4c4b509d2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628185"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673351"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
 
@@ -60,7 +60,7 @@ ms.locfileid: "77628185"
 
 - 類別屬性
 
-- members
+- 成員
 
 例如，請考慮下列宣告：
 
@@ -173,6 +173,6 @@ partial void onNameChanged()
 
 - [C# 程式設計指南](../index.md)
 - [類別](./classes.md)
-- [結構](./structs.md)
+- [結構類型](../../language-reference/builtin-types/struct.md)
 - [介面](../interfaces/index.md)
 - [partial (型別)](../../language-reference/keywords/partial-type.md)

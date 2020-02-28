@@ -5,12 +5,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: a2f5300f9647823cf2c9ac2a4a5c7c888c7dd245
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 09b290713f3bc2a7a7824bb19c98138943ad5b2c
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626577"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673377"
 ---
 # <a name="objects-c-programming-guide"></a>物件 (C# 程式設計手冊)
 類別或結構定義就像是指定型別可以做什麼的藍圖。 物件基本上是根據藍圖配置和設定的記憶體區塊。 程式可建立許多同類別的物件。 物件也稱為執行個體，可儲存在具名變數或陣列或集合中。 用戶端程式碼是使用這些變數呼叫方法，並存取物件公用屬性的程式碼。 在 C# 之類的物件導向語言中，一般程式包含多個動態互動的物件。  
@@ -52,8 +52,6 @@ ms.locfileid: "77626577"
   
 - [類別](./classes.md)  
   
-- [結構](./structs.md)  
-  
 - [建構函式](./constructors.md)  
   
 - [完成項](./destructors.md)  
@@ -66,6 +64,6 @@ ms.locfileid: "77626577"
 - [object](../../language-reference/builtin-types/reference-types.md)
 - [繼承](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
-- [struct](../../language-reference/builtin-types/struct.md)
+- [結構類型](../../language-reference/builtin-types/struct.md)
 - [new 運算子](../../language-reference/operators/new-operator.md)
 - [一般類型系統](../../../standard/base-types/common-type-system.md)

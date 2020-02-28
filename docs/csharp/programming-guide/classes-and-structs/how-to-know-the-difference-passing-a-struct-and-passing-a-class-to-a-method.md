@@ -6,12 +6,12 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 258001ae8ed3591bf75aeb040d1a63118196455a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a280a6df873d7c03c204bc5c86468e7e7298d723
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628198"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673429"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>如何瞭解傳遞結構和將類別參考傳遞給方法之間的差異（C#程式設計手冊）
 下例示範將 [struct](../../language-reference/builtin-types/struct.md) 傳遞給方法，與將 [class](../../language-reference/keywords/class.md) 執行個體傳遞給方法有何不同。 在此範例中，兩個引數 (struct 和 class 執行個體) 都是以傳值方式傳遞，而且兩種方法都會變更引數其中一個欄位的值。 不過，兩個方法的結果不相同，因為傳遞 struct 時所傳送內容，和傳遞 class 執行個體時所傳送的內容不同。  
@@ -29,5 +29,5 @@ ms.locfileid: "77628198"
 
 - [C# 程式設計指南](../index.md)
 - [類別](./classes.md)
-- [結構](./structs.md)
+- [結構類型](../../language-reference/builtin-types/struct.md)
 - [傳遞參數](./passing-parameters.md)

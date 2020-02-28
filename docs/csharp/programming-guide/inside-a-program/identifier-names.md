@@ -2,12 +2,12 @@
 title: 識別碼名稱
 description: 了解 C# 程式設計語言中有效識別碼名稱的規則。
 ms.date: 08/21/2018
-ms.openlocfilehash: f8a27ddae0437ed037b59f76d60dc7e420ddc2eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: bef6e2ea285b5391af3350ae42a4105d140c6d1b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69589350"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673364"
 ---
 # <a name="identifier-names"></a>識別碼名稱
 
@@ -19,7 +19,7 @@ ms.locfileid: "69589350"
 
 如需有效識別碼的完整定義，請參閱 [C# 語言規格中的識別碼主題](../../../../_csharplang/spec/lexical-structure.md#identifiers)。
 
-## <a name="naming-conventions"></a>命名規範
+## <a name="naming-conventions"></a>命名慣例
 
 除了規則外，一些識別碼[命名慣例](../../../standard/design-guidelines/naming-guidelines.md)也用於 .NET API 中。 依照慣例，C# 程式針對類型名稱、命名空間和所有公用成員使用 `PascalCase`。 此外，常見慣例如下：
 
@@ -38,7 +38,7 @@ ms.locfileid: "69589350"
 - [C# 程式內部](./index.md)
 - [C# 參考](../../language-reference/index.md)
 - [類別](../classes-and-structs/classes.md)
-- [結構](../classes-and-structs/structs.md)
+- [結構類型](../../language-reference/builtin-types/struct.md)
 - [命名空間](../namespaces/index.md)
 - [介面](../interfaces/index.md)
 - [委派](../delegates/index.md)

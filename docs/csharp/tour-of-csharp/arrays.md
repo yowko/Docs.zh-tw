@@ -3,12 +3,12 @@ title: C# 陣列 - C# 語言教學課程
 description: 陣列是 C# 語言中最基本的集合類型
 ms.date: 08/10/2016
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: 56a053ac8525d4c6c34592d6092f3f162cb04247
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 195df1f31c71ee7a202a3b57076775c4f717d399
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634610"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673312"
 ---
 # <a name="arrays"></a>陣列
 
@@ -44,5 +44,5 @@ New 運算子允許使用***陣列初始設定式***指定陣列元素的初始�
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[上一頁](structs.md)
+>[上一頁](classes-and-objects.md)
 >[下一頁](interfaces.md)

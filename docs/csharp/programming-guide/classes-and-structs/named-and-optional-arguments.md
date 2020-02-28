@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 6afa8a2bd2dfee8d7c36b58342036d18241317a8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3685482caebd892c460a3cc2ecf3a22acbe3c9ec
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714791"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673403"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
 C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
@@ -69,7 +69,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數�
   
 - 常數運算式；  
   
-- `new ValType()` 形式的運算式，其中 `ValType` 是實值型別，例如 [enum](../../language-reference/builtin-types/enum.md) 或 [struct](structs.md)；  
+- `new ValType()` 形式的運算式，其中 `ValType` 是實值型別，例如 [enum](../../language-reference/builtin-types/enum.md) 或 [struct](../../language-reference/builtin-types/struct.md)；  
   
 - [default(ValType)](../../language-reference/operators/default.md) 形式的運算式，其中 `ValType` 是實值型別。  
   
@@ -100,7 +100,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數�
 ## <a name="com-interfaces"></a>COM 介面  
  具名和選擇性引數以及對動態物件和其他增強功能的支援，大幅改善與 COM API 的互通性，例如 Office Automation API。  
   
- 例如，Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range> 介面的 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 方法有七個參數，都是選擇性參數。 下圖會顯示這些參數：  
+ 例如，Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 介面的 <xref:Microsoft.Office.Interop.Excel.Range> 方法有七個參數，都是選擇性參數。 下圖會顯示這些參數：  
   
  ![顯示 AutoFormat 方法之 IntelliSense 快速諮詢的螢幕擷取畫面。](./media/named-and-optional-arguments/autoformat-method-parameters.png)  
   
@@ -114,7 +114,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數�
   
  如需詳細資訊和範例，請參閱[如何在 Office 程式設計中使用命名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何使用C#功能存取 Office interop 物件](../interop/how-to-access-office-onterop-objects.md)。  
   
-## <a name="overload-resolution"></a>Overload Resolution  
+## <a name="overload-resolution"></a>多載解析  
  使用具名和選擇性引數會以下列方式影響多載解析︰  
   
 - 如果每個參數都是選擇性或為依名稱或位置對應要呼叫之陳述式的單一引數，且該引數可以轉換成參數的型別，則方法、索引子或建構函式就是執行的候選項目。  
@@ -126,7 +126,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數�
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何在 Office 程式設計中使用命名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [使用動態型別](../types/using-type-dynamic.md)

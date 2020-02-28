@@ -3,12 +3,12 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739100"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673273"
 ---
 # <a name="the-history-of-c"></a>C\# 的歷史
 
@@ -37,7 +37,7 @@ C# 1.0 版看起來與現今相比去除了一些功能。 您會發現自己撰
 C# 1.0 的主要功能包含：
 
 - [類別](../programming-guide/classes-and-structs/classes.md)
-- [結構](../programming-guide/classes-and-structs/structs.md)
+- [結構](../language-reference/builtin-types/struct.md)
 - [介面](../programming-guide/interfaces/index.md)
 - [事件](../events-overview.md)
 - [屬性](../properties.md)
@@ -48,7 +48,7 @@ C# 1.0 的主要功能包含：
 
 ## <a name="c-version-12"></a>C# 1.2 版
 
-C#1.2 版隨附 Visual Studio .NET 2003。 本版內含對語言的小幅功能改善。 最值得注意的是，自本版開始，當 <xref:System.Collections.IEnumerator> 實作 <xref:System.IDisposable> 時，在 `foreach` 迴圈產生的程式碼會在 <xref:System.Collections.IEnumerator> 呼叫 <xref:System.IDisposable.Dispose%2A>。
+C#1.2 版隨附 Visual Studio .NET 2003。 本版內含對語言的小幅功能改善。 最值得注意的是，自本版開始，當 `foreach` 實作 <xref:System.IDisposable.Dispose%2A> 時，在 <xref:System.Collections.IEnumerator> 迴圈產生的程式碼會在 <xref:System.Collections.IEnumerator> 呼叫 <xref:System.IDisposable>。
 
 ## <a name="c-version-20"></a>C# 2.0 版
 
@@ -58,7 +58,7 @@ C#1.2 版隨附 Visual Studio .NET 2003。 本版內含對語言的小幅功能�
 - [部分型別](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [匿名方法](../language-reference/operators/delegate-operator.md)
 - [可為 Null 的實值型別](../language-reference/builtin-types/nullable-value-types.md)
-- [迭代器](../programming-guide/concepts/iterators.md)
+- [Iterator](../programming-guide/concepts/iterators.md)
 - [共變數和反變數](../programming-guide/concepts/covariance-contravariance/index.md)
 
 其他 C# 2.0 功能將功能新增至現有功能：
@@ -70,9 +70,9 @@ C#1.2 版隨附 Visual Studio .NET 2003。 本版內含對語言的小幅功能�
 
 雖然 C# 一開始可能是泛型的物件導向 (OO) 語言，但 C# 2.0 版很急促地改變了。 穩定之後，它們追蹤一些嚴重的開發人員痛苦點。 而且是徹底地追隨。
 
-使用泛型時，型別和方法可以操作任意型別，同時仍然保留型別安全。 例如，<xref:System.Collections.Generic.List%601> 可讓您具有 `List<string>` 或 `List<int>`，並且對那些字串或整數逐一執行型別安全的作業。 使用泛型最好不要建立衍生自 `ArrayList` 的 `ListInt`，或針對每個作業從 `Object` 轉型。
+使用泛型時，型別和方法可以操作任意型別，同時仍然保留型別安全。 例如，<xref:System.Collections.Generic.List%601> 可讓您具有 `List<string>` 或 `List<int>`，並且對那些字串或整數逐一執行型別安全的作業。 使用泛型最好不要建立衍生自 `ListInt` 的 `ArrayList`，或針對每個作業從 `Object` 轉型。
 
-C# 2.0 版帶來了迭代器。 簡單的說，迭代器讓您使用 `foreach` 迴圈檢查 `List` (或其他可列舉型別) 中的所有項目。 將迭代器當成語言的頭等部分能大幅增強語言的可讀性，並讓人們能理解程式碼。
+C# 2.0 版帶來了迭代器。 簡單的說，迭代器讓您使用 `List` 迴圈檢查 `foreach` (或其他可列舉型別) 中的所有項目。 將迭代器當成語言的頭等部分能大幅增強語言的可讀性，並讓人們能理解程式碼。
 
 但 C# 仍繼續追趕 Java。 Java 已經發行了包含泛型和迭代器的版本。 但是，很快就會變更，因為語言會持續朝不同方向發展。
 
@@ -124,7 +124,7 @@ C#版本5.0 （以 Visual Studio 2012 發行）是語言的焦點版本。 幾�
 
 ### <a name="see-also"></a>另請參閱
 
-- [Code Project：C# 5.0 的呼叫端資訊屬性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [程式碼專案：C# 5.0 中的呼叫端資訊屬性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 呼叫端資訊屬性可讓您輕鬆地擷取您正在執行的內容，而不必依賴大量的未定案反映程式碼。 它在診斷和記錄工作方面有許多用途。
 
@@ -132,7 +132,7 @@ C#版本5.0 （以 Visual Studio 2012 發行）是語言的焦點版本。 幾�
 
 ## <a name="c-version-60"></a>C# 6.0 版
 
-在 3.0 和 5.0 版本中，C# 在物件導向語言中新增了一些重大的新功能。 隨著版本6.0 的發行，Visual Studio 2015，它會從執行主要的最佳功能開始，改為發行許多較小的C#功能，讓程式設計更具生產力。 這裡列出其中一些：
+在 3.0 和 5.0 版本中，C# 在物件導向語言中新增了一些重大的新功能。 隨著版本6.0 的發行，Visual Studio 2015，它會從執行主要的最佳功能開始，改為發行許多較小的C#功能，讓程式設計更具生產力。 以下說明其中一部分：
 
 - [動態匯入](./csharp-6.md#using-static)
 - [例外狀況篩選條件](./csharp-6.md#exception-filters)
@@ -173,4 +173,4 @@ C#版本5.0 （以 Visual Studio 2012 發行）是語言的焦點版本。 幾�
 
 但 C# 的運用範圍更廣了。 .NET Core 現在以任何作業系統為目標，並堅定地關注雲端和可攜性。  除了提出新功能之外，這些新功能當然也會佔據語言設計人員的想法和時間。
 
-_文章_ [_最初發佈於 NDepend 部落格_](https://blog.ndepend.com/c-versions-look-language-history/) _，感謝 Erik Dietrich 和 Patrick Smacchia。_
+[_最初發佈于 NDepend blog_](https://blog.ndepend.com/c-versions-look-language-history/)的文章 _，Erik Dietrich 和派翠克主題 Smacchia。_

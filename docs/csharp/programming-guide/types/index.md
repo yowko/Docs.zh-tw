@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a094e6e8ab9094fb14ce9a2ca8a180cbf9b273cb
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628133"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673390"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 
@@ -113,7 +113,7 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-如需結構的詳細資訊，請參閱[結構](../classes-and-structs/structs.md)。 如需實數值型別的詳細資訊，請參閱實[數值型別](../../language-reference/builtin-types/value-types.md)。
+如需結構的詳細資訊，請參閱[結構類型](../../language-reference/builtin-types/struct.md)。 如需實數值型別的詳細資訊，請參閱實[數值型別](../../language-reference/builtin-types/value-types.md)。
 
 實值型別的另一種類別是 [enum](../../language-reference/builtin-types/enum.md)。 列舉會定義一組具名的整數常數。 例如，.NET 類別庫中的 <xref:System.IO.FileMode?displayProperty=nameWithType> 列舉包含一組指定該如何開啟檔案的具名常數整數。 其定義方式如下列範例所示：
 
@@ -205,3 +205,4 @@ stringList.Add(4);
 - [C# 程式設計指南](../index.md)
 - [XML 資料類型轉換](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [整數型別](../../language-reference/builtin-types/integral-numeric-types.md)
+ 
