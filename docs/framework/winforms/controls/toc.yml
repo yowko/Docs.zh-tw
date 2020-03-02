@@ -1181,7 +1181,7 @@
           href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
         - name: 逐步解說：從控制項繼承
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-        - name: 逐步解說：使用智慧標籤執行一般工作
+        - name: 逐步解說：使用設計動作執行一般工作
           href: perform-common-tasks-design-actions.md
         - name: 逐步解說：序列化標準類型的集合
           href: serializing-collections-designerserializationvisibilityattribute.md
