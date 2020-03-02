@@ -156,7 +156,7 @@ ms.locfileid: "70989696"
 
 1. 按下 CTRL+SHIFT+B 以建置方案。
 
-     如需有關如何執行工作流程的指示，請參閱下一個主題，[如何：執行工作流程](how-to-run-a-workflow.md)。 如果您已經完成 [如何：以不同的工作流程樣式執行工作流程](how-to-run-a-workflow.md) 步驟，並想要使用此步驟中的順序工作流程執行它，請直接[跳至 [](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)如何：執行工作流程](how-to-run-a-workflow.md)。
+     如需有關如何執行工作流程的指示，請參閱下一個主題，[如何：執行工作流程](how-to-run-a-workflow.md)。 如果您已經完成 [如何：以不同的工作流程樣式執行工作流程](how-to-run-a-workflow.md) 步驟，並想要使用此步驟中的順序工作流程執行它，請直接[跳至](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)[如何：執行工作流程](how-to-run-a-workflow.md)。
 
 ## <a name="see-also"></a>另請參閱
 
