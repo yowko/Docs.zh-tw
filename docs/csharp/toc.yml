@@ -82,8 +82,6 @@
       href: tour-of-csharp/statements.md
     - name: 類別與物件
       href: tour-of-csharp/classes-and-objects.md
-    - name: 結構
-      href: tour-of-csharp/structs.md
     - name: 陣列
       href: tour-of-csharp/arrays.md
     - name: 介面
@@ -129,8 +127,6 @@
       href: basic-types.md
     - name: 類別
       href: programming-guide/classes-and-structs/classes.md
-    - name: 結構
-      href: structs.md
     - name: Tuple
       href: tuples.md
     - name: 解構元組和其他類型
@@ -941,19 +937,12 @@
     - name: 類別和結構
       items:
         - name: 總覽
-          displayName: classes structs
+          displayName: classes
           href: programming-guide/classes-and-structs/index.md
         - name: 類別
           href: programming-guide/classes-and-structs/classes.md
         - name: 物件
           href: programming-guide/classes-and-structs/objects.md
-        - name: 結構
-          items:
-            - name: 總覽
-              displayName: structs
-              href: programming-guide/classes-and-structs/structs.md
-            - name: 使用結構
-              href: programming-guide/classes-and-structs/using-structs.md
         - name: 繼承
           href: programming-guide/classes-and-structs/inheritance.md
         - name: 多型
@@ -1337,8 +1326,9 @@
                 - name: 列舉類型
                   href: language-reference/builtin-types/enum.md
                   displayName: 'enum, bit flags, bit field'
-                - name: struct
-                  href: language-reference/keywords/struct.md
+                - name: 結構類型
+                  href: language-reference/builtin-types/struct.md
+                  displayName: struct type
                 - name: 可為 Null 的實值型別
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'
