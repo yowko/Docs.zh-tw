@@ -12,6 +12,8 @@
       href: install/runtime.md
     - name: 支援的 OS 和相依性
       href: install/dependencies.md
+    - name: macOS Notarization 問題
+      href: install/macos-notarization-issues.md
     - name: 如何檢查 .NET Core 版本
       href: install/how-to-detect-installed-versions.md
     - name: Linux 套件管理員
@@ -109,6 +111,17 @@
           href: tutorials/cli-templates-create-project-template.md
         - name: 3 - 建立範本套件
           href: tutorials/cli-templates-create-template-pack.md
+    - name: 建立適用於 CLI 的工具
+      items:
+        - name: 1 - 建立工具
+          displayName: 'tools, tutorials'
+          href: tools/global-tools-how-to-create.md
+        - name: 2 - 使用全域工具
+          displayName: 'tools, tutorials'
+          href: tools/global-tools-how-to-use.md
+        - name: 3 - 使用本機工具
+          href: tools/local-tools-how-to-use.md
+          displayName: 'tools, tutorials'
 - name: 專案 SDK
   items:
     - name: 總覽
@@ -121,163 +134,12 @@
           href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
         - name: Microsoft.NET.Sdk.Razor
           href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
-- name: 執行階段設定
-  items:
-    - name: 設定
-      href: run-time-config/index.md
-    - name: 編譯設定
-      href: run-time-config/compilation.md
-    - name: 偵錯與分析設定
-      href: run-time-config/debugging-profiling.md
-    - name: 記憶體回收行程設定
-      href: run-time-config/garbage-collector.md
-    - name: 全球化設定
-      href: run-time-config/globalization.md
-    - name: 網路設定
-      href: run-time-config/networking.md
-    - name: 執行緒設定
-      href: run-time-config/threading.md
-- name: 原生互通性
-  items:
-    - name: 將 .NET Core 元件公開給 COM
-      href: native-interop/expose-components-to-com.md
-- name: 套件、中繼套件和架構
-  href: packages.md
-- name: 移轉
-  items:
-    - name: .NET Core 2.0 至 2.1
-      href: migration/20-21.md
-    - name: 從 project.json 移轉
-      href: migration/index.md
-    - name: project.json 與 csproj 的對應
-      href: tools/project-json-to-csproj.md
-    - name: CLI 的變更概觀
-      href: tools/cli-msbuild-architecture.md
-    - name: csproj 格式的新增項目
-      href: tools/csproj.md
-    - name: 從 DNX 移轉
-      href: migration/from-dnx.md
-- name: 應用程式部署
-  items:
-    - name: 總覽
-      href: deploying/index.md
-    - name: 使用 CLI 來發行應用程式
-      href: deploying/deploy-with-cli.md
-    - name: 使用 Visual Studio 部署應用程式
-      href: deploying/deploy-with-vs.md
-    - name: 使用 CLI 來建立 NuGet 套件
-      href: deploying/creating-nuget-packages.md
-    - name: 獨立式部署執行階段向前復原
-      href: deploying/runtime-patch-selection.md
-    - name: 執行階段套件存放區
-      href: deploying/runtime-store.md
-- name: Docker
-  items:
-    - name: .NET 和 Docker 簡介
-      href: docker/introduction.md
-    - name: 將 .NET Core 應用程式容器化
-      href: docker/build-container.md
-    - name: Visual Studio 中的容器工具
-      href: /visualstudio/containers/overview
-- name: 診斷工具
-  items:
-    - name: 總覽
-      href: diagnostics/index.md
-    - name: 受控偵錯工具
-      href: diagnostics/managed-debuggers.md
-    - name: 記錄和追蹤
-      href: diagnostics/logging-tracing.md
-    - name: .NET Core CLI 全域工具
-      items:
-        - name: dotnet-counters
-          href: diagnostics/dotnet-counters.md
-        - name: dotnet-dump
-          href: diagnostics/dotnet-dump.md
-        - name: dotnet-trace
-          href: diagnostics/dotnet-trace.md
-    - name: .NET Core 診斷教學課程
-      items:
-        - name: 針對記憶體流失進行偵錯
-          href: diagnostics/debug-memory-leak.md
-- name: 單元測試
-  href: testing/index.md
-  items:
-    - name: 總覽
-      href: testing/index.md
-    - name: 單元測試最佳做法
-      href: testing/unit-testing-best-practices.md
-    - name: '使用 xUnit 測試 C# 單元'
-      href: testing/unit-testing-with-dotnet-test.md
-    - name: '使用 NUnit 測試 C# 單元'
-      href: testing/unit-testing-with-nunit.md
-    - name: '使用 MSTest 測試 C# 單元'
-      href: testing/unit-testing-with-mstest.md
-    - name: '使用 xUnit 測試 F# 單元'
-      href: testing/unit-testing-fsharp-with-dotnet-test.md
-    - name: '使用 NUnit 測試 F# 單元'
-      href: testing/unit-testing-fsharp-with-nunit.md
-    - name: '使用 MSTest 測試 F# 單元'
-      href: testing/unit-testing-fsharp-with-mstest.md
-    - name: 使用 xUnit 測試 VB 單元
-      href: testing/unit-testing-visual-basic-with-dotnet-test.md
-    - name: 使用 NUnit 測試 VB 單元
-      href: testing/unit-testing-visual-basic-with-nunit.md
-    - name: 使用 MSTest 測試 VB 單元
-      href: testing/unit-testing-visual-basic-with-mstest.md
-    - name: 執行選擇性單元測試
-      href: testing/selective-unit-tests.md
-    - name: 單元測試發佈的輸出
-      href: testing/unit-testing-published-output.md
-    - name: Visual Studio 的即時單元測試 .NET Core 專案
-      href: /visualstudio/test/live-unit-testing-start
-- name: 持續整合
-  href: tools/using-ci-with-cli.md
-- name: 版本控制
-  items:
-    - name: 總覽
-      href: versions/index.md
-    - name: .NET Core 版本選取
-      href: versions/selection.md
-    - name: 移除過時的執行階段及 SDK
-      href: versions/remove-runtime-sdk-versions.md
-- name: 執行階段識別碼 (RID) 目錄
-  href: rid-catalog.md
 - name: .NET Core SDK 概觀
   href: sdk.md
 - name: .NET Core CLI
   items:
     - name: 總覽
       href: tools/index.md
-    - name: 全域和本機工具
-      expanded: true
-      items:
-        - name: 如何管理工具
-          href: tools/global-tools.md
-        - name: 教學課程
-          items:
-            - name: 建立工具
-              displayName: tools
-              href: tools/global-tools-how-to-create.md
-            - name: 安裝和使用全域工具
-              displayName: tools
-              href: tools/global-tools-how-to-use.md
-            - name: 安裝和使用本機工具
-              displayName: tools
-              href: tools/local-tools-how-to-use.md
-        - name: 疑難排解工具
-          href: tools/troubleshoot-usage-issues.md
-    - name: 較高的存取權
-      href: tools/elevated-access.md
-    - name: 擴充性模型
-      href: tools/extensibility.md
-    - name: 自訂範本
-      href: tools/custom-templates.md
-    - name: 啟用 TAB 鍵自動完成
-      href: tools/enable-tab-autocomplete.md
-    - name: 遙測
-      href: tools/telemetry.md
-    - name: global.json 概觀
-      href: tools/global-json.md
     - name: 參考資料
       items:
         - name: dotnet
@@ -352,6 +214,44 @@
               href: tools/dotnet-list-package.md
             - name: dotnet remove package
               href: tools/dotnet-remove-package.md
+    - name: 全域和本機工具
+      items:
+        - name: 管理工具
+          href: tools/global-tools.md
+        - name: 疑難排解工具
+          href: tools/troubleshoot-usage-issues.md
+    - name: global.json 概觀
+      href: tools/global-json.md
+    - name: 自訂範本
+      href: tools/custom-templates.md
+    - name: 遙測
+      href: tools/telemetry.md
+    - name: 較高的存取權
+      href: tools/elevated-access.md
+    - name: 啟用 TAB 鍵自動完成
+      href: tools/enable-tab-autocomplete.md
+    - name: 擴充性模型
+      href: tools/extensibility.md
+- name: 診斷工具
+  items:
+    - name: 總覽
+      href: diagnostics/index.md
+    - name: 受控偵錯工具
+      href: diagnostics/managed-debuggers.md
+    - name: 記錄和追蹤
+      href: diagnostics/logging-tracing.md
+    - name: .NET Core CLI 全域工具
+      items:
+        - name: dotnet-counters
+          href: diagnostics/dotnet-counters.md
+        - name: dotnet-dump
+          href: diagnostics/dotnet-dump.md
+        - name: dotnet-trace
+          href: diagnostics/dotnet-trace.md
+    - name: .NET Core 診斷教學課程
+      items:
+        - name: 針對記憶體流失進行偵錯
+          href: diagnostics/debug-memory-leak.md
 - name: .NET Core 其他工具
   items:
     - name: 總覽
@@ -366,6 +266,58 @@
       href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
     - name: XML 序列化程式產生器
       href: additional-tools/xml-serializer-generator.md
+- name: 應用程式部署
+  items:
+    - name: 總覽
+      href: deploying/index.md
+    - name: 使用 CLI 來發行應用程式
+      href: deploying/deploy-with-cli.md
+    - name: 使用 Visual Studio 部署應用程式
+      href: deploying/deploy-with-vs.md
+    - name: 使用 CLI 來建立 NuGet 套件
+      href: deploying/creating-nuget-packages.md
+    - name: 獨立式部署執行階段向前復原
+      href: deploying/runtime-patch-selection.md
+    - name: 執行階段套件存放區
+      href: deploying/runtime-store.md
+- name: Docker
+  items:
+    - name: .NET 和 Docker 簡介
+      href: docker/introduction.md
+    - name: 將 .NET Core 應用程式容器化
+      href: docker/build-container.md
+    - name: Visual Studio 中的容器工具
+      href: /visualstudio/containers/overview
+- name: 執行階段設定
+  items:
+    - name: 設定
+      href: run-time-config/index.md
+    - name: 編譯設定
+      href: run-time-config/compilation.md
+    - name: 偵錯與分析設定
+      href: run-time-config/debugging-profiling.md
+    - name: 記憶體回收行程設定
+      href: run-time-config/garbage-collector.md
+    - name: 全球化設定
+      href: run-time-config/globalization.md
+    - name: 網路設定
+      href: run-time-config/networking.md
+    - name: 執行緒設定
+      href: run-time-config/threading.md
+- name: 移轉
+  items:
+    - name: .NET Core 2.0 至 2.1
+      href: migration/20-21.md
+    - name: 從 project.json 移轉
+      href: migration/index.md
+    - name: project.json 與 csproj 的對應
+      href: tools/project-json-to-csproj.md
+    - name: CLI 的變更概觀
+      href: tools/cli-msbuild-architecture.md
+    - name: csproj 格式的新增項目
+      href: tools/csproj.md
+    - name: 從 DNX 移轉
+      href: migration/from-dnx.md
 - name: 從 .NET Framework 移植
   items:
     - name: 總覽
@@ -388,6 +340,47 @@
       href: porting/wpf.md
     - name: 移植 C++/CLI 專案
       href: porting/cpp-cli.md
+- name: 單元測試
+  href: testing/index.md
+  items:
+    - name: 總覽
+      href: testing/index.md
+    - name: 單元測試最佳做法
+      href: testing/unit-testing-best-practices.md
+    - name: '使用 xUnit 測試 C# 單元'
+      href: testing/unit-testing-with-dotnet-test.md
+    - name: '使用 NUnit 測試 C# 單元'
+      href: testing/unit-testing-with-nunit.md
+    - name: '使用 MSTest 測試 C# 單元'
+      href: testing/unit-testing-with-mstest.md
+    - name: '使用 xUnit 測試 F# 單元'
+      href: testing/unit-testing-fsharp-with-dotnet-test.md
+    - name: '使用 NUnit 測試 F# 單元'
+      href: testing/unit-testing-fsharp-with-nunit.md
+    - name: '使用 MSTest 測試 F# 單元'
+      href: testing/unit-testing-fsharp-with-mstest.md
+    - name: 使用 xUnit 測試 VB 單元
+      href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: 使用 NUnit 測試 VB 單元
+      href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: 使用 MSTest 測試 VB 單元
+      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: 執行選擇性單元測試
+      href: testing/selective-unit-tests.md
+    - name: 單元測試發佈的輸出
+      href: testing/unit-testing-published-output.md
+    - name: Visual Studio 的即時單元測試 .NET Core 專案
+      href: /visualstudio/test/live-unit-testing-start
+- name: 版本控制
+  items:
+    - name: 總覽
+      href: versions/index.md
+    - name: .NET Core 版本選取
+      href: versions/selection.md
+    - name: 移除過時的執行階段及 SDK
+      href: versions/remove-runtime-sdk-versions.md
+- name: 執行階段識別碼 (RID) 目錄
+  href: rid-catalog.md
 - name: 相依性管理與載入
   items:
     - name: 相依性管理
@@ -414,3 +407,9 @@
           href: ../standard/assembly/unloadability-howto.md
 - name: .NET Core 發佈封裝
   href: distribution-packaging.md
+- name: 將 .NET Core 元件公開給 COM
+  href: native-interop/expose-components-to-com.md
+- name: 套件、中繼套件和架構
+  href: packages.md
+- name: 持續整合
+  href: tools/using-ci-with-cli.md
