@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 4377d113a18d23c8a0f9a669e6112f1a8223cc79
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 77c7b7bd7f3e59fbe782755c829f18cf1cefc725
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450865"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239816"
 ---
 # <a name="enumeration-types-c-reference"></a>列舉類型（C#參考）
 
@@ -54,7 +54,7 @@ enum ErrorCode : ushort
 
 如果您想要列舉類型來代表選擇的組合，請針對這些選擇定義列舉成員，讓個別的選擇是位欄位。 也就是說，這些列舉成員的相關聯值應該是兩個的乘冪。 然後，您可以使用[位邏輯運算子 `|` 或 `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) ，分別結合選擇或交集的選擇組合。 若要指出列舉類型會宣告位欄位，請將[Flags](xref:System.FlagsAttribute)屬性套用至其中。 如下列範例所示，您也可以在列舉類型的定義中包含一些一般組合。
 
-[!code-csharp[enum flags](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
+[!code-csharp[enum flags](~/samples/snippets/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
 
 如需詳細資訊和範例，請參閱 <xref:System.Enum?displayProperty=nameWithType> API 參考頁面的 <xref:System.FlagsAttribute?displayProperty=nameWithType> API 參考頁面和[非獨佔成員和 Flags 屬性](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute)一節。
 
@@ -68,7 +68,7 @@ enum ErrorCode : ushort
 
 針對任何列舉型別，列舉型別與其基礎整數型別之間存在明確轉換。 如果您將列舉值[轉換](../operators/type-testing-and-cast.md#cast-operator-)為其基礎類型，則結果會是列舉成員的相關整數值。
 
-[!code-csharp[enum conversions](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
+[!code-csharp[enum conversions](~/samples/snippets/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
 
 使用 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 方法來判斷列舉類型是否包含具有特定相關聯值的列舉成員。
 

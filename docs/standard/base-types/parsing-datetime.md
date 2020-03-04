@@ -14,12 +14,12 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 16daa0ef3133b6cd04dc48b7f79fd365098e4bdf
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348076"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156539"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>在 .NET 中剖析日期和時間字串
 
@@ -44,11 +44,11 @@ ms.locfileid: "75348076"
 
 您可以指定 <xref:System.Globalization.DateTimeStyles.NoCurrentDateDefault> 常數來覆寫這些預設值。 當您使用該常數時，任何遺失的年份、月份或日期屬性都會設定為值 `1`。 [最後一個範例](#styles-example)會使用 <xref:System.DateTime.Parse%2A> 來示範此行為。
 
-除了日期和時間元件外，日期和時間的字串表示可以包含表示時間與國際標準時間 (UTC) 差的位移。 例如，字串 "2/14/2007 5:32:00 -7:00" 定義的時間比 UTC 早 7 個小時。 如果時間的字串表示中省略了位移，剖析就會傳回 <xref:System.DateTime> 物件及其設為 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 的 <xref:System.DateTime.Kind%2A> 屬性。 如果指定了位移，剖析就會傳回 <xref:System.DateTime> 物件及其設為 <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 的 <xref:System.DateTime.Kind%2A> 屬性，且其值會調整成您電腦的當地時區。 您可以搭配剖析方法使用 <xref:System.Globalization.DateTimeStyles> 值來修改此行為。
+除了日期和時間元件外，日期和時間的字串表示可以包含表示時間與國際標準時間 (UTC) 差的位移。 例如，字串 "2/14/2007 5:32:00 -7:00" 定義的時間比 UTC 早 7 個小時。 如果時間的字串表示中省略了位移，剖析就會傳回 <xref:System.DateTime> 物件及其設為 <xref:System.DateTime.Kind%2A> 的 <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 屬性。 如果指定了位移，剖析就會傳回 <xref:System.DateTime> 物件及其設為 <xref:System.DateTime.Kind%2A> 的 <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 屬性，且其值會調整成您電腦的當地時區。 您可以搭配剖析方法使用 <xref:System.Globalization.DateTimeStyles> 值來修改此行為。
   
 格式提供者也可以用來解譯不明確的數值日期。 "02/03/04" 字串並未明確表示代表月份、日期和年份的日期元件。 元件會根據格式提供者中的相似日期格式順序來解譯。
 
-## <a name="parse"></a>Parse
+## <a name="parse"></a>剖析
 
 下面的範例會示範如何使用 <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 方法將 `string` 轉換成 <xref:System.DateTime>。 本範例會使用與目前執行緒相關聯的文化特性。 如果與目前文化特性相關聯的 <xref:System.Globalization.CultureInfo> 無法剖析輸入字串，則會擲回 <xref:System.FormatException>。
 
@@ -61,7 +61,7 @@ ms.locfileid: "75348076"
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
 
-您也可以明確地定義剖析字串時所使用的文化特性格式設定慣例。 您將指定由 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 屬性傳回的其中一個標準 <xref:System.Globalization.DateTimeFormatInfo> 物件。 下列範例使用格式提供者將德文字串剖析成 <xref:System.DateTime>。 它會建立代表 `de-DE` 文化特性的 <xref:System.Globalization.CultureInfo>。 `CultureInfo` 物件可確保成功剖析此特定字串。 這可排除 <xref:System.Threading.Thread.CurrentThread> 的 <xref:System.Threading.Thread.CurrentCulture> 有任何設定。  
+您也可以明確地定義剖析字串時所使用的文化特性格式設定慣例。 您將指定由 <xref:System.Globalization.DateTimeFormatInfo> 屬性傳回的其中一個標準 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 物件。 下列範例使用格式提供者將德文字串剖析成 <xref:System.DateTime>。 它會建立代表 <xref:System.Globalization.CultureInfo> 文化特性的 `de-DE`。 `CultureInfo` 物件可確保成功剖析此特定字串。 這可排除 <xref:System.Threading.Thread.CurrentCulture> 的 <xref:System.Threading.Thread.CurrentThread> 有任何設定。  
   
 [!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
@@ -72,7 +72,7 @@ ms.locfileid: "75348076"
 
 [!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
- 
+
 ## <a name="parseexact"></a>ParseExact
 
 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 方法會將符合其中一個指定字串模式的字串轉換為 <xref:System.DateTime> 物件。 當不是指定形式之一的字串傳遞至此方法時，就會擲回 <xref:System.FormatException>。 您可以指定標準日期和時間格式指定名稱之一，或指定自訂格式指定名稱的組合。 使用自訂格式指定名稱，您有機會建構自訂的辨識字串。 如需指定名稱的說明，請參閱[標準日期和時間格式字串](standard-date-and-time-format-strings.md)以及[自訂日期和時間格式字串](custom-date-and-time-format-strings.md)主題。  
@@ -82,12 +82,12 @@ ms.locfileid: "75348076"
 [!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
-<xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.ParseExact%2A> 方法的每個多載也都有 <xref:System.IFormatProvider> 參數，可提供有關設定字串格式的特定文化特性資訊。 此 <xref:System.IFormatProvider> 物件是代表標準文化特性的 <xref:System.Globalization.CultureInfo> 物件，或 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  <xref:System.DateTime.ParseExact%2A> 也會使用可定義一或多個自訂日期和時間格式的額外字串或字串陣列引數。  
+<xref:System.DateTime.Parse%2A> 和 <xref:System.DateTime.ParseExact%2A> 方法的每個多載也都有 <xref:System.IFormatProvider> 參數，可提供有關設定字串格式的特定文化特性資訊。 此 <xref:System.IFormatProvider> 物件是代表標準文化特性的 <xref:System.Globalization.CultureInfo> 物件，或 <xref:System.Globalization.DateTimeFormatInfo> 屬性所傳回的 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 物件。  <xref:System.DateTime.ParseExact%2A> 也會使用可定義一或多個自訂日期和時間格式的額外字串或字串陣列引數。  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Parsing Strings](parsing-strings.md)
 - [格式化類型](formatting-types.md)
 - [.NET 中的類型轉換](type-conversion.md)
 - [標準日期和時間格式](standard-date-and-time-format-strings.md)
-- [自訂日期和時間格式字串](custom-date-and-time-format-strings.md)
+- [自訂日期與時間格式字串](custom-date-and-time-format-strings.md)

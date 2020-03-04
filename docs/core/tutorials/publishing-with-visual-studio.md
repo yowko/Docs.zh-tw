@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741574"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156630"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>使用 Visual Studio 發佈您的 .NET Core Hello World 應用程式
 
@@ -25,15 +25,15 @@ ms.locfileid: "76741574"
 1. 在 **HelloWorld** 專案 (而非 HelloWorld 方案) 上按一下滑鼠右鍵，然後從功能表選取 [發行]。 （您也可以從主要的 [**組建**] 功能表中選取 [**發佈 HelloWorld** ]）。
 
    ![Visual Studio [發行] 操作功能表](media/publishing-with-visual-studio/publish-context-menu.png)
-   
+
 1. 在 [**挑選發行目標**] 頁面上，選取 [**資料夾**]，然後選取 [**建立設定檔**]。
 
    ![在 Visual Studio 中挑選發行目標](media/publishing-with-visual-studio/pick-publish-target.png)
-   
+
 1. 在 [**發行**] 頁面上，選取 [**發佈**]。
 
    ![Visual Studio [發行] 視窗](media/publishing-with-visual-studio/publish-page.png)
-   
+
 ## <a name="inspect-the-files"></a>檢查檔案
 
 發佈程式會建立與 framework 相依的部署，這是一種部署類型，其中已發佈的應用程式會在 .NET Core 所支援的任何平臺上執行，並在系統上安裝 .NET Core。 使用者可以按兩下可執行檔，或從命令提示字元發出 `dotnet HelloWorld.dll` 命令，以執行已發佈的應用程式。
@@ -59,7 +59,7 @@ ms.locfileid: "76741574"
          這是與[framework 相依](../deploying/deploy-with-cli.md#framework-dependent-deployment)的應用程式部署版本。 若要執行此動態連結程式庫，請在命令提示字元中輸入 `dotnet HelloWorld.dll`。
 
       * *HelloWorld .exe*
-      
+
          這是與[framework 相依的應用程式可執行檔](../deploying/deploy-with-cli.md#framework-dependent-executable)版本。 若要執行，請在命令提示字元中輸入 `HelloWorld.exe`。
 
       * *HelloWorld.pdb* (對於部署為選用)

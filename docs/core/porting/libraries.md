@@ -3,18 +3,18 @@ title: 將程式庫移植到 .NET Core
 description: 了解如何將程式庫專案從 .NET Framework 移植到 .NET Core。
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 646587120de2e51280c2af4de36bf3a6b0f60c2d
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920614"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157527"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>將 .NET Framework 程式庫移植到 .NET Core
 
 瞭解如何將 .NET Framework 程式庫程式碼移植到 .NET Core，在其中執行跨平臺，並擴充使用它的應用程式範圍。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 本文假設您已具備下列條件：
 
@@ -91,13 +91,13 @@ ms.locfileid: "76920614"
    - 是否需要重構程式碼？
    - 對於那些無法移植的類型，是否有可完成相同工作的替代 Api？ 例如，如果您使用的是 <xref:System.Net.WebClient> 類別，您可能可以改用 <xref:System.Net.Http.HttpClient> 類別。
    - 是否有不同的可攜式 API 可用來完成工作，即使它不是直接替換項目？ 例如，如果您使用 <xref:System.Xml.Schema.XmlSchema> 來剖析 XML，但不需要 XML 架構探索，您可以使用 <xref:System.Xml.Linq> Api 並自行執行剖析，而不是依賴 API。
-1. 如果有難以移轉的組件，暫時留在 .NET Framework 是否值得？ 以下是要考量的事項：
+1. 如果有難以移轉的組件，暫時留在 .NET Framework 是否值得？ 以下是要考量的一些事項：
    - 程式庫中可能有一些功能與 .NET Core 不相容，因為它太過依賴 .NET Framework 或 Windows 特定的功能。 是否值得讓該功能立即保留，並以較少的功能釋出程式庫的暫存 .NET Core 版本，直到有資源可供埠使用為止？
    - 重構是否會有幫助？
 1. 撰寫無法使用的 .NET Framework API 自有實作是否合理？
    您可以考慮從[.NET Framework 參考來源](https://github.com/Microsoft/referencesource)複製、修改和使用程式碼。 參考來源程式碼是依據 [MIT 授權條款](https://github.com/Microsoft/referencesource/blob/master/LICENSE.txt) \(英文\) 授權，因此您有充分的權限可以將該來源做為自己程式碼的基礎。 您只需記得在程式碼中適當地將版權歸於 Microsoft。
 1. 視需要對不同的專案重複此程序。
- 
+
 分析階段可能需要一些時間，視您的程式碼基底大小而定。 在這個階段花時間徹底了解所需的變更範圍並開發計畫，通常能為未來省下許多時間，特別是在您程式碼基底較為複雜的情況下。
 
 您的計劃可能涉及在對程式碼基底進行重大變更時仍要以 .NET Framework 4.7.2 為目標，讓它成為前一種方法更有條理的版本。 執行計畫的方式須視程式碼基底而定。
@@ -111,10 +111,10 @@ ms.locfileid: "76920614"
 移轉程式碼後，確定一切正常運作的最佳方式，是在將程式碼移轉到 .NET Core 時測試程式碼。 若要這樣做，您必須使用能針對 .NET Core 建置並執行測試的測試架構。 目前有三個選項︰
 
 - [xUnit](https://xunit.github.io/)
-  - [使用者入門](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+  - [快速入門](https://xunit.github.io/docs/getting-started-dotnet-core.html)
   - [將 MSTest 專案轉換成 xUnit 的工具](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
-  - [使用者入門](https://github.com/nunit/docs/wiki/Installation)
+  - [快速入門](https://github.com/nunit/docs/wiki/Installation)
   - [關於從 MSTest 移轉至 NUnit 的部落格文章](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](/visualstudio/test/unit-test-basics)
 

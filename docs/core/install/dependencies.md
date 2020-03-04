@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4164ea5a04d80ab20109168a225b793b02ee616a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448889"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157802"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core 相依性和需求
 
@@ -214,7 +214,7 @@ ms.locfileid: "77448889"
 | Fedora                         |  29 +                    | x64 |
 | Debian                         |  9                      | x64、ARM32 |
 | Ubuntu                         |  16.04、18.04、19.04、19.10    | x64、ARM32 |
-| Linux Mint                     |  17 +                    | x64 |
+| Linux Mint                     |  17+                    | x64 |
 | openSUSE                       |  15 +                    | x64 |
 | SUSE Enterprise Linux (SLES)   |  12 SP2+                | x64 |
 | Alpine Linux                   |  3.8+                   | x64 |
@@ -294,6 +294,14 @@ Fedora 使用者：如果您的 OpenSSL 版本 > = 1.1，您必須安裝相容�
 | 3.0               | 高塞拉里昂（10.13 +）  | x64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
 | 2.2               | 塞拉里昂（10.12 +）       | x64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | 塞拉里昂（10.12 +）       | x64 | [詳細資訊](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+
+從 macOS Catalina （版本10.15）開始，在2019年6月1日之後以開發人員識別碼散發的所有軟體都必須是公證。 這項需求適用于 .NET core 執行時間、.NET Core SDK 和使用 .NET Core 所建立的軟體。
+
+從2020年2月18日起，已公證 .NET Core （執行時間和 SDK）版本3.1、3.0 和2.1 的安裝程式。 先前發行的版本不會公證。 如果您執行非公證應用程式，您會看到類似下圖的錯誤：
+
+![macOS Catalina notarization 警示](media/dependencies/macos-notarized-pkg-warning.png)
+
+如需強制執行 notarization 如何影響 .NET Core （和您的 .NET Core 應用程式）的詳細資訊，請參閱[使用 MacOS Catalina notarization](macos-notarization-issues.md)。
 
 ## <a name="libgdiplus"></a>libgdiplus
 

@@ -4,12 +4,12 @@ description: 透過逐步使用 dotnet test 和 xUnit 建置範例 Visual Basic 
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-ms.openlocfilehash: c587aaa5c4c50ec66ac6cd8cd7aefd7b0ca1a80c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 9a99d9031711a3e958132416d0235df76f4a9092
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715415"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240944"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 Visual Basic .NET Core 程式庫進行單元測試
 
@@ -41,7 +41,7 @@ Namespace Prime.Services
 End Namespace
 ```
 
-將目錄變更回 *unit-testing-vb-using-dotnet-test* 目錄。 執行 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) 以將類別庫專案加入方案中。
+將目錄變更回 *unit-testing-vb-using-dotnet-test* 目錄。 執行 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) 以將類別庫專案加到方案中。
 
 ## <a name="creating-the-test-project"></a>建立測試專案
 
@@ -87,11 +87,11 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
         PrimeServiceTests.vbproj
 ```
 
-執行 *unit-testing-vb-using-dotnet-test* 目錄中的 [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md)。 
+執行 [unit-testing-vb-using-dotnet-test`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` 目錄中的 ](../tools/dotnet-sln.md)。
 
 ## <a name="creating-the-first-test"></a>建立第一個測試
 
-撰寫一個會失敗的測試，再使其通過，然後重複這個過程。 將 *UnitTest1.vb* 從 *PrimeService.Tests* 目錄移除，並建立名為 *PrimeService_IsPrimeShould.VB* 的新 Visual Basic 檔案。 加入下列程式碼：
+您會撰寫一個失敗測試，讓它通過，然後重複此程序。 將 *UnitTest1.vb* 從 *PrimeService.Tests* 目錄移除，並建立名為 *PrimeService_IsPrimeShould.VB* 的新 Visual Basic 檔案。 新增下列程式碼：
 
 ```vb
 Imports Xunit
@@ -132,7 +132,7 @@ End Function
 
 您不需要建立新測試，只要套用這兩個屬性以建立單一理論即可。 該理論是一種方法，這種方法會測試數個低於二 (最小的質數) 的值：
 
-[!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
+[!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-dotnet-test/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
 執行 `dotnet test`，然後會有兩個測試失敗。 若要使所有測試通過，請變更方法開頭的 `if` 子句：
 

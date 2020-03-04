@@ -2,12 +2,12 @@
 title: 使用 Visual Studio for Mac 建立完整的 .NET Core 解決方案
 description: 本文會逐步引導您建立 .NET Core 解決方案，其中包含可重複使用的程式庫和單元測試。
 ms.date: 12/19/2019
-ms.openlocfilehash: dea23da33912de849f0dcbe1e2f6fa3edb3a5e24
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8c9fcca404a3875b6bb7f9cf20551a017ff553c5
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215209"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239959"
 ---
 # <a name="build-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上建立完整的 .NET Core 解決方案
 
@@ -42,7 +42,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 1. 在 [ **Solution** pad] 中，展開 [`TextUtils`] 節點，以顯示範本所提供的類別檔案*Class1.cs*。 在檔案上按一下 Ctrl 鍵，從內容功能表中選取 [**重新命名**]，然後將檔案重新命名為*WordCount.cs*。 開啟檔案，並以下列程式碼取代內容：
 
-   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
+   [!code-csharp[Main](../../../samples/snippets/core/tutorials/using-on-mac-vs-full-solution/csharp/TextUtils/WordCount.cs)]
 
 1. 使用三種不同的方法來儲存<kbd>盤</kbd>案：使用鍵盤快速鍵<kbd>&#8984;</kbd>+，從功能表**選取** 檔案 > **儲存**，或按 ctrl-按一下檔案的索引標籤，然後從內容功能表中選取 **儲存**。 下圖顯示 IDE 視窗︰
 
@@ -175,7 +175,7 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 1. 開啟 *Program.cs* 檔案。 將程式碼取代為下列程式碼：
 
-   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
+   [!code-csharp[Main](../../../samples/snippets/core/tutorials/using-on-mac-vs-full-solution/csharp/WordCounterApp/Program.cs)]
 
 1. Ctrl-按一下 [`WordCounterApp`] 專案，然後從內容功能表中選取 [**執行專案**]。 當您執行應用程式時，請根據主控台視窗中的提示，提供搜尋文字和輸入字串的值。 應用程式會指出搜尋文字在字串中出現的次數。
 

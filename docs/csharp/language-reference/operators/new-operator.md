@@ -4,12 +4,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: beb55f0765e7f9090f0587f1d2a06cf03ea90ab8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 60d1f1b2fc2792d40d36482dc880d924220f12a2
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712659"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239192"
 ---
 # <a name="new-operator-c-reference"></a>new 運算子 (C# 參考)
 
@@ -19,23 +19,23 @@ ms.locfileid: "75712659"
 
 ## <a name="constructor-invocation"></a>建構函式引動過程
 
-若要建立型別的新執行個體，您通常會使用 `new` 運算子叫用該型別的其中一個[建構函式](../../programming-guide/classes-and-structs/constructors.md)：
+若要建立型別的新執行個體，您通常會使用 [ 運算子叫用該型別的其中一個](../../programming-guide/classes-and-structs/constructors.md)建構函式`new`：
 
-[!code-csharp-interactive[invoke constructor](~/samples/csharp/language-reference/operators/NewOperator.cs#Constructor)]
+[!code-csharp-interactive[invoke constructor](~/samples/snippets/csharp/language-reference/operators/NewOperator.cs#Constructor)]
 
-您可以搭配 `new` 運算子使用[物件或集合初始設定式](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)，來在單一陳述式中具現化和初始化物件，如下列範例所示：
+您可以搭配 [ 運算子使用](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)物件或集合初始設定式`new`，來在單一陳述式中具現化和初始化物件，如下列範例所示：
 
-[!code-csharp-interactive[constructor with initializer](~/samples/csharp/language-reference/operators/NewOperator.cs#ConstructorWithInitializer)]
+[!code-csharp-interactive[constructor with initializer](~/samples/snippets/csharp/language-reference/operators/NewOperator.cs#ConstructorWithInitializer)]
 
 ## <a name="array-creation"></a>建立陣列
 
 您也可以使用 `new` 運算子建立陣列執行個體，如下列範例所示：
 
-[!code-csharp-interactive[create array](~/samples/csharp/language-reference/operators/NewOperator.cs#Array)]
+[!code-csharp-interactive[create array](~/samples/snippets/csharp/language-reference/operators/NewOperator.cs#Array)]
 
 在單一陳述式中使用陣列初始化語法建立陣列執行個體，並使用項目。 下列範例會示範執行該操作的各種方式：
 
-[!code-csharp-interactive[initialize array](~/samples/csharp/language-reference/operators/NewOperator.cs#ArrayInitialization)]
+[!code-csharp-interactive[initialize array](~/samples/snippets/csharp/language-reference/operators/NewOperator.cs#ArrayInitialization)]
 
 如需陣列的詳細資訊，請參閱[陣列](../../programming-guide/arrays/index.md)。
 
@@ -43,7 +43,7 @@ ms.locfileid: "75712659"
 
 若要建立[匿名型別](../../programming-guide/classes-and-structs/anonymous-types.md)的執行個體，請使用 `new` 運算子及物件初始設定式語法：
 
-[!code-csharp-interactive[anonymous type](~/samples/csharp/language-reference/operators/NewOperator.cs#AnonymousType)]
+[!code-csharp-interactive[anonymous type](~/samples/snippets/csharp/language-reference/operators/NewOperator.cs#AnonymousType)]
 
 ## <a name="destruction-of-type-instances"></a>型別執行個體的解構
 
@@ -57,9 +57,9 @@ ms.locfileid: "75712659"
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [new 運算子](~/_csharplang/spec/expressions.md#the-new-operator)一節。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/expressions.md#the-new-operator)的 [new 運算子](~/_csharplang/spec/introduction.md)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)

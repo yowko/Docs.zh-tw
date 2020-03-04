@@ -13,12 +13,12 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: ae0ba0bf15b6a02df5130d34d277322897826697
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338518"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159308"
 ---
 # <a name="composite-formatting"></a>複合格式
 
@@ -31,7 +31,7 @@ ms.locfileid: "75338518"
   
 - <xref:System.String.Format%2A?displayProperty=nameWithType>，傳回格式化的結果字串。  
   
-- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>，將格式化的結果字串附加至 <xref:System.Text.StringBuilder> 物件。   
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>，將格式化的結果字串附加至 <xref:System.Text.StringBuilder> 物件。
 - <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> 方法的部分多載，對主控台顯示格式化的結果字串。  
   
 - <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType> 方法的部分多載，將格式化的結果字串寫入至資料流或檔案。 衍生自 <xref:System.IO.TextWriter> 的類別，例如 <xref:System.IO.StreamWriter> 和 <xref:System.Web.UI.HtmlTextWriter>，也會共用這項功能。  
@@ -85,11 +85,11 @@ ms.locfileid: "75338518"
   
  下表列出 .NET Framework 類別庫中支援預先定義之格式字串的類型或類型分類，並提供列出支援之格式字串的主題連結。 請注意，字串格式是一種可延伸機制，可讓為所有現有類型定義新的格式字串，以及定義一組應用程式定義類型所支援的格式字串。 如需詳細資訊，請參閱 <xref:System.IFormattable> 和 <xref:System.ICustomFormatter> 介面主題。  
   
-|類型或類型分類|請參閱 。|  
+|類型或類型分類|請參閱|  
 |---------------------------|---------|  
-|日期和時間類型 (<xref:System.DateTime>、<xref:System.DateTimeOffset>)|[標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|日期和時間類型 (<xref:System.DateTime>、<xref:System.DateTimeOffset>)|[Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
 |列舉類型 (衍生自 <xref:System.Enum?displayProperty=nameWithType> 的所有類型)|[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|  
-|數字類型 (<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>)|[Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
+|數字類型 (<xref:System.Numerics.BigInteger>、<xref:System.Byte>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32>、<xref:System.UInt64>)|[標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
   
@@ -157,17 +157,17 @@ ms.locfileid: "75338518"
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Console.WriteLine%2A>
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - [字串內插補點 (C#)](../../csharp/language-reference/tokens/interpolated.md)
 - [字串內插補點 (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 - [格式化類型](../../../docs/standard/base-types/formatting-types.md)
-- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [標準 TimeSpan 格式字串](../../../docs/standard/base-types/standard-timespan-format-strings.md)
 - [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)
 - [Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)

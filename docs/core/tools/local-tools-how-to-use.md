@@ -2,12 +2,12 @@
 title: 教學課程：安裝和使用 .NET Core 本機工具
 description: 瞭解如何安裝和使用 .NET 工具做為本機工具。
 ms.date: 02/12/2020
-ms.openlocfilehash: 6de620772cec1e9d1b1f57380b72c0163d68337c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543863"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156695"
 ---
 # <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>教學課程：使用 .NET Core CLI 安裝和使用 .NET Core 本機工具
 
@@ -24,9 +24,9 @@ ms.locfileid: "77543863"
 
 ## <a name="create-a-manifest-file"></a>建立資訊清單檔
 
-若要安裝僅限本機存取的工具（針對目前的目錄和子目錄），必須將它新增至資訊清單檔。 
+若要安裝僅限本機存取的工具（針對目前的目錄和子目錄），必須將它新增至資訊清單檔。
 
-從*botsay\<名稱 >*  資料夾中，流覽至 存放*庫* 資料夾的一個層級：
+從*botsay*資料夾中，流覽到 [存放*庫*] 資料夾的一個層級：
 
 ```console
 cd ..
@@ -63,7 +63,7 @@ The template "Dotnet local tool manifest file" was created successfully.
 從您在第一個教學課程中建立的套件安裝此工具：
 
 ```dotnetcli
-dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
+dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
 ```
 
 此命令會將工具新增至您在上一個步驟中建立的資訊清單檔案。 命令輸出會顯示新安裝工具所在的資訊清單檔案：
@@ -71,7 +71,7 @@ dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
  ```console
  You can invoke the tool from this directory using the following command:
  'dotnet tool run botsay' or 'dotnet botsay'
- Tool 'botsay-<name>' (version '1.0.0') was successfully installed.
+ Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
  Entry is added to the manifest file /home/name/repository/.config/dotnet-tools.json
  ```
 
@@ -82,7 +82,7 @@ dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
   "version": 1,
   "isRoot": true,
   "tools": {
-    "botsay-<name>": {
+    "microsoft.botsay": {
       "version": "1.0.0",
       "commands": [
         "botsay"
@@ -111,7 +111,7 @@ dotnet tool run botsay hello from the bot
      "version": 1,
      "isRoot": true,
      "tools": {
-       "botsay-<name>": {
+       "microsoft.botsay": {
          "version": "1.0.0",
          "commands": [
            "botsay"
@@ -131,7 +131,7 @@ dotnet tool run botsay hello from the bot
 
 1. 儲存您的變更。
 
-   進行這種變更的方式與從存放庫取得最新版本，在其他人安裝了專案目錄的封裝 `dotnetsay`。 
+   進行這種變更的方式與從存放庫取得最新版本，在其他人安裝了專案目錄的封裝 `dotnetsay`。
 
 1. 執行 `dotnet tool restore` 命令。
 
@@ -142,7 +142,7 @@ dotnet tool run botsay hello from the bot
    命令會產生如下列範例所示的輸出：
 
    ```console
-   Tool 'botsay-<name>' (version '1.0.0') was restored. Available commands: botsay
+   Tool 'microsoft.botsay' (version '1.0.0') was restored. Available commands: botsay
    Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
    Restore was successful.
    ```
@@ -157,9 +157,9 @@ dotnet tool run botsay hello from the bot
 
    ```console
    Package Id      Version      Commands       Manifest
-   -------------------------------------------------------------------------------------------
-   botsay-<name>   1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
-   dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
+   --------------------------------------------------------------------------------------------
+   microsoft.botsay 1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
+   dotnetsay        2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
    ```
 
 1. 測試控管：
@@ -191,7 +191,7 @@ Update 命令會尋找包含封裝識別碼的第一個資訊清單檔案，並�
 執行[dotnet tool uninstall](dotnet-tool-uninstall.md)命令以移除已安裝的工具：
 
 ```dotnetcli
-dotnet tool uninstall botsay-<name>
+dotnet tool uninstall microsoft.botsay
 ```
 
 ```dotnetcli

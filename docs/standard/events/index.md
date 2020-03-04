@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423532"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159620"
 ---
 # <a name="handling-and-raising-events"></a>處理和引發事件
 
@@ -27,7 +27,7 @@ ms.locfileid: "73423532"
   
  如需處理 Windows 8.x Microsoft Store 應用程式中事件的詳細資訊，請參閱[事件和路由事件概觀](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10))。  
   
-## <a name="events"></a>「事件」
+## <a name="events"></a>事件
 
 事件是由物件傳送的訊息，用以表示發生動作。 這個動作可能是因使用者互動所造成，例如按一下按鈕，也可能起因於其他程式邏輯，如變更屬性值。 引發事件的物件稱為「事件發送者」。 事件發送者並不清楚哪個物件或方法會接收 (處理) 它所引發的事件。 事件通常是事件發送者的成員，例如，<xref:System.Web.UI.WebControls.Button.Click> 事件是 <xref:System.Web.UI.WebControls.Button> 類別的成員，而 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件是實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面之類別的成員。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "73423532"
 [!code-vb[EventsOverview#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#2)]  
   
 ## <a name="static-and-dynamic-event-handlers"></a>靜態和動態事件處理常式  
- 
+
 .NET 可讓訂閱者以靜態或動態方式註冊事件通知。 靜態事件處理常式在其處理事件之類別的整個生命週期內都有效。 動態事件處理常式會在程式執行期間明確地啟動及停用，通常是為了回應某些條件式邏輯。 比方說，如果只有在某些情況下才需要事件通知，或如果應用程式提供多個事件處理常式且執行階段條件會定義一個要使用的適當處理常式，即可使用動態事件處理常式。 上一節中的範例示範了如何以動態方式加入事件處理常式。 如需詳細資訊，請參閱[事件](../../visual-basic/programming-guide/language-features/events/index.md) (in Visual Basic) 及[事件](../../csharp/programming-guide/events/index.md) (in C#)。  
   
 ## <a name="raising-multiple-events"></a>引發多個事件  
@@ -88,14 +88,14 @@ ms.locfileid: "73423532"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[操作說明：引發和使用事件](how-to-raise-and-consume-events.md)|包含引發和使用事件的範例。|  
 |[操作說明：使用事件屬性處理多個事件](how-to-handle-multiple-events-using-event-properties.md)|示範如何使用事件屬性處理多個事件。|  
 |[觀察者設計模式](observer-design-pattern.md)|描述設計模式，可讓訂閱者向提供者註冊，並且接收通知。|  
 |[操作說明：使用 Web Form 應用程式中的事件](how-to-consume-events-in-a-web-forms-application.md)|示範如何處理 Web Form 控制項所引發的事件。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.EventHandler>
 - <xref:System.EventHandler%601>

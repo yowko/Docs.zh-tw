@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 61cc3c3ab4f0b22c4040a9b8a025c81071f4d942
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5df1ae60ddc298f75d70db7769ec1bf1d21b8ef2
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712698"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239283"
 ---
 # <a name="-operator-c-reference"></a>=> 運算子 (C# 參考)
 
@@ -24,15 +24,15 @@ ms.locfileid: "75712698"
 
 下列範例使用 [LINQ](../../programming-guide/concepts/linq/index.md) 功能並搭配方法語法來示範 Lambda 運算式的使用方式：
 
-[!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
 
 Lambda 運算式的輸入參數是在編譯時期的強型別。 當編譯器可以推斷輸入參數的類型（如上述範例所示）時，您可能會省略類型宣告。 如果您需要指定輸入參數的類型，您必須針對每個參數執行此動作，如下列範例所示：
 
-[!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
 
 下列範例顯示如何定義不含輸入參數的 lambda 運算式：
 
-[!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
 
 如需詳細資訊，請參閱 [Lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)。
 
@@ -73,7 +73,7 @@ public override string ToString()
 
 如需 Lambda 運算子的詳細資訊，請參閱[ C#語言規格](~/_csharplang/spec/introduction.md)的[匿名函數運算式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)

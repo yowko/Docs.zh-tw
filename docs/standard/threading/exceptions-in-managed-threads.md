@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 2c3215fd42e8cf6d6427d23f94c14db4230ddd02
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138068"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159646"
 ---
 # <a name="exceptions-in-managed-threads"></a>Managed 執行緒中的例外狀況
 從 .NET Framework version 2.0 開始，通用語言執行平台允許執行緒中大多數未處理的例外狀況自然地繼續。 在大多數情況下，這表示未處理的例外狀況導致應用程式終止。  
@@ -23,7 +23,7 @@ ms.locfileid: "73138068"
   
  通用語言執行平台針對用於控制程式流程的特定未處理例外狀況提供了防護網︰  
   
-- 因為呼叫了 <xref:System.Threading.Thread.Abort%2A>，而導致執行緒中擲回 <xref:System.Threading.ThreadAbortException>。  
+- 因為呼叫了 <xref:System.Threading.ThreadAbortException>，而導致執行緒中擲回 <xref:System.Threading.Thread.Abort%2A>。  
   
 - 因為正在卸載執行緒執行所在的應用程式定義域，而在執行緒中擲回 <xref:System.AppDomainUnloadedException>。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "73138068"
   
  允許執行緒中的未處理例外狀況自然地進行，直到作業系統終止程式，公開開發和測試期間的這類問題為止。 程式終止的錯誤報告可支援偵錯。  
   
-<a name="ChangeFromPreviousVersions"></a>   
+<a name="ChangeFromPreviousVersions"></a>
 ## <a name="change-from-previous-versions"></a>從舊版變更  
  最重大的變更與 Managed 執行緒有關。 在 .NET Framework 1.0 和 1.1 版中，通用語言執行平台會針對下列情況中未處理的例外狀況提供防護網：  
   
 - 執行緒集區執行緒上不會有未處理的例外狀況。 當工作擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後將執行緒傳回到執行緒集區。  
   
-- 使用 <xref:System.Threading.Thread> 類別的 <xref:System.Threading.Thread.Start%2A> 方法建立的執行緒上不會有未處理例外狀況之類的項目。 在此種執行緒上執行的程式碼擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後正常終止執行緒。  
+- 使用 <xref:System.Threading.Thread.Start%2A> 類別的 <xref:System.Threading.Thread> 方法建立的執行緒上不會有未處理例外狀況之類的項目。 在此種執行緒上執行的程式碼擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後正常終止執行緒。  
   
 - 完成項執行緒上不會有未處理的例外狀況。 當完成項擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後允許完成項執行緒繼續執行完成項。  
   
@@ -76,6 +76,6 @@ ms.locfileid: "73138068"
 ## <a name="host-override"></a>主機覆寫  
  在 .NET Framework 2.0 版中，Unmanaged 主機可以使用裝載 API 中的 [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) 介面，覆寫通用語言執行平台的預設未處理例外狀況原則。 [Iclrpolicymanager:: Setunhandledexceptionpolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 函數用來設定未處理例外狀況的原則。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)

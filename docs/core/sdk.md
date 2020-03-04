@@ -3,12 +3,12 @@ title: .NET Core SDK 概觀
 description: 了解 .NET Core SDK 相關資訊，這是用來建立 .NET Core 專案的一組程式庫和工具。
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: 09b32b0065326af54da935a810764f93248618af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c2723e0e28c889f91f79ea3c0b26aa38f69fb41c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920602"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157462"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK 概觀
 
@@ -20,7 +20,7 @@ ms.locfileid: "76920602"
 
 ## <a name="acquiring-the-net-core-sdk"></a>取得 .NET Core SDK
 
-使用任何工具時，第一件事都是要取得適合電腦的工具。 視您的案例而定，您可以使用下列方法之一安裝 SDK：
+擁有任何工具時，第一件事都是要將工具安裝到電腦上。 視您的案例而定，您可以使用下列方法之一安裝 SDK：
 
 - 使用原生的安裝程式。
 - 使用安裝 Shell 指令碼。
@@ -31,7 +31,7 @@ ms.locfileid: "76920602"
 
 根據預設，SDK 會以「並存」（SxS）的方式安裝，這表示單一電腦上的任何指定時間都可以共存多個版本。 如需了解執行 CLI 命令時如何挑選版本的詳細說明，請參閱[選取要使用的 .NET Core 版本](versions/selection.md)一文。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core CLI 總覽](tools/index.md)
 - [.NET Core 版本控制概觀](versions/index.md)

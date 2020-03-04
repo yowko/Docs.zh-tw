@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960381"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160218"
 ---
 # <a name="managed-execution-process"></a>Managed 執行程序
 <a name="introduction"></a> Managed 執行處理序包含下列步驟，將於本主題中稍後詳細討論：  
@@ -36,15 +36,15 @@ ms.locfileid: "74960381"
   
      Common Language Runtime 提供基礎結構，啟用執行以及可在執行期間使用的服務。  
   
-<a name="choosing_a_compiler"></a>   
+<a name="choosing_a_compiler"></a>
 ## <a name="choosing-a-compiler"></a>選擇編譯器  
  若要享有 Common Language Runtime (CLR) 帶來的好處，就必須使用一個或多個以執行階段為目標的語言編譯器，例如 Visual Basic、C#、Visual C++、F#，或眾多協力廠商編譯器的其中一種，例如 Eiffel、Perl 或 COBOL 編譯器。  
   
- 因為是多種程式語言的執行環境，執行階段會支援各種資料類型和語言功能。 您使用的語言編譯器將決定有哪些執行階段功能可用，而您可使用那些功能來設計程式碼。 編譯器會建立程式碼必須使用的語法，而不是由執行階段建立。 如果您的元件必須完全可用於其他語言撰寫的元件，元件的匯出類型必須只公開包含在 [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) 中的語言功能。 您可以使用 <xref:System.CLSCompliantAttribute> 屬性來確保您的程式碼符合 CLS 標準。 如需詳細資訊，請參閱 [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md)。  
+ 因為是多種程式語言的執行環境，執行階段會支援各種資料類型和語言功能。 您使用的語言編譯器將決定有哪些執行階段功能可用，而您可使用那些功能來設計程式碼。 編譯器會建立程式碼必須使用的語法，而不是由執行階段建立。 如果您的元件必須完全可用於其他語言撰寫的元件，元件的匯出類型必須只公開包含在 [Language Independence and Language-Independent Components](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) 中的語言功能。 您可以使用 <xref:System.CLSCompliantAttribute> 屬性來確保您的程式碼符合 CLS 標準。 如需詳細資訊，請參閱[語言獨立性以及與語言無關的元件](../../docs/standard/language-independence-and-language-independent-components.md)。  
   
  [回到頁首](#introduction)  
   
-<a name="compiling_to_msil"></a>   
+<a name="compiling_to_msil"></a>
 ## <a name="compiling-to-msil"></a>編譯為 MSIL  
  編譯為 Managed 程式碼時，編譯器會將您的原始程式碼轉譯成 Microsoft 中間語言 (MSIL)，這是一種與 CPU 無關的指令集，可以有效率地轉換為機器碼。 MSIL 包括可用來載入、儲存、初始化和呼叫物件上方法的指令，以及用於算術和邏輯運算、控制流程、直接記憶體存取、例外處理和其他作業的指令。 在程式碼可以執行之前，必須將 MSIL 轉換為 CPU 特定程式碼，而此轉換通常是由 [Just-In-Time (JIT) 編譯器](#compiling_msil_to_native_code)進行。 由於 Common Language Runtime 會為其支援的每一個電腦架構提供一個或多個 JIT 編譯器，因此相同的 MSIL 集可以在任何受支援的架構上進行 JIT 編譯並執行。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74960381"
   
  [回到頁首](#introduction)  
   
-<a name="compiling_msil_to_native_code"></a>   
+<a name="compiling_msil_to_native_code"></a>
 ## <a name="compiling-msil-to-native-code"></a>將 MSIL 編譯成機器碼  
  Microsoft 中間語言 (MSIL) 必須先根據 Common Language Runtime 編譯成機器碼才能執行 (該程式碼是根據目標電腦架構來編譯)。 .NET Framework 提供兩種執行這項轉換的方式：  
   
@@ -89,7 +89,7 @@ ms.locfileid: "74960381"
   
  [回到頁首](#introduction)  
   
-<a name="running_code"></a>   
+<a name="running_code"></a>
 ## <a name="running-code"></a>執行程式碼  
  Common Language Runtime 提供基礎結構，啟用 Managed 執行以及可在執行期間使用的服務。 在可以執行方法之前，必須將其編譯為處理器特定程式碼。 在初次呼叫時，已經產生 MSIL 的每個方法都會進行 JIT 編譯，然後才會執行。 下次執行方法時，就會執行現有以 JIT 編譯的機器碼。 JIT 編譯和接著執行程式碼的過程會不斷重複，直到執行完成為止。  
   
@@ -105,13 +105,13 @@ ms.locfileid: "74960381"
   
  [回到頁首](#introduction)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [概觀](../../docs/framework/get-started/overview.md)
 - [語言獨立性以及與語言無關的元件](../../docs/standard/language-independence-and-language-independent-components.md)
 - [中繼資料和自我描述元件](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL 組譯工具)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [Security](../../docs/standard/security/index.md)
+- [安全性](../../docs/standard/security/index.md)
 - [與 Unmanaged 程式碼互通](../../docs/framework/interop/index.md)
 - [部署](../../docs/framework/deployment/net-framework-applications.md)
 - [.NET 中的組件](assembly/index.md)

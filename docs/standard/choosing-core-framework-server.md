@@ -3,12 +3,12 @@ title: 針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行�
 description: 本指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 實作。
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: c202e42a46c4a72bdceca1fb250170d381603a8d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 0b6bf4c2eb66aa4de497923a0a16b65a955ba6fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124620"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159971"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -75,7 +75,7 @@ ms.locfileid: "77124620"
 
 程式庫會快速採用 .NET Standard。 .NET Standard 可跨所有 .NET 實作 (包括 .NET Core) 共用程式碼。 透過 .NET Standard 2.0，甚至會更容易達成：
 
-- API 介面變得更大。 
+- API 介面變得更大。
 - 引入了 .NET Framework 相容性模式。 此相容性模式可讓 .NET Standard/.NET Core 專案參考 .NET Framework 程式庫。 若要深入了解相容性模式，請參閱 [Announcing .NET Standard 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/) (宣告 .NET Standard 2.0)。
 
 因此，只有在程式庫或 NuGet 套件使用的技術不適用於 .NET Standard/.NET Core 時，才需要使用 .NET Framework。
@@ -86,7 +86,7 @@ ms.locfileid: "77124620"
 
 - ASP.NET Web Forms 應用程式：ASP.NET Web Forms 只能在 .NET Framework 中使用。 ASP.NET Core 無法用於 ASP.NET Web Forms。 目前並未規劃將 ASP.NET Web Forms 帶入 .NET Core。
 
-- ASP.NET Web Pages 應用程式：ASP.NET Web Pages 未隨附於 ASP.NET Core 中。 
+- ASP.NET Web Pages 應用程式：ASP.NET Web Pages 未隨附於 ASP.NET Core 中。
 
 - WCF 服務實作。 即使已有 [WCF 用戶端程式庫](https://github.com/dotnet/wcf) 可從 .NET Core 取用 WCF 服務，但 WCF 伺服器實作目前只能在 .NET Framework 中使用。 此案例不是 .NET Core 目前計劃的一部分，但未來會納入考慮。
 

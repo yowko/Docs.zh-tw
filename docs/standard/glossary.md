@@ -3,12 +3,12 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921116"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160088"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -22,11 +22,11 @@ ms.locfileid: "76921116"
 
 請參閱 [CoreRT](#corert) 及 [.NET Native](#net-native)。
 
-## <a name="aspnet"></a>[ASP.NET] 
+## <a name="aspnet"></a>ASP.NET
 
 隨附於 .NET Framework 的原始 ASP.NET 實作。
 
-有時 ASP.NET 是指包括 ASP.NET Core 在內之兩個 ASP.NET 實作的籠統名詞。 該詞彙在任何指定的執行個體中所代表的意義取決於內容。 當想要澄清您不是使用 ASP.NET 來表示這兩種實作時，請參閱 ASP.NET 4.x。 
+有時 ASP.NET 是指包括 ASP.NET Core 在內之兩個 ASP.NET 實作的籠統名詞。 該詞彙在任何指定的執行個體中所代表的意義取決於內容。 當想要澄清您不是使用 ASP.NET 來表示這兩種實作時，請參閱 ASP.NET 4.x。
 
 請參閱 [ASP.NET 文件](/aspnet/#pivot=aspnet)。
 
@@ -36,7 +36,7 @@ ms.locfileid: "76921116"
 
 請參閱 [ASP.NET Core 文件](/aspnet/#pivot=core)。
 
-## <a name="assembly"></a>assembly
+## <a name="assembly"></a>組件 (assembly)
 
 可以包含可由應用程式或其他組件呼叫之 API 集合的 *.dll*/ *.exe* 檔案。
 
@@ -78,7 +78,7 @@ Common Language Runtime。
 
 「.NET 生態系統」一詞與「.NET 堆疊」等類似詞彙的不同之處在於，前者包含協力廠商應用程式和程式庫。 以下是用於句子中的範例：
 
-- 「[.NET Standard](#net-standard) 背後的動機是在 .NET 生態系統中建立更高的一致性。」 
+- 「[.NET Standard](#net-standard) 背後的動機是在 .NET 生態系統中建立更高的一致性。」
 
 ## <a name="framework"></a>架構
 
@@ -96,7 +96,7 @@ Common Language Runtime。
 
 記憶體回收行程。
 
-記憶體回收行程是自動記憶體管理的實作。  GC 會釋放不再使用之物件所佔用的記憶體。 
+記憶體回收行程是自動記憶體管理的實作。  GC 會釋放不再使用之物件所佔用的記憶體。
 
 請參閱[記憶體回收](garbage-collection/index.md)。
 
@@ -127,7 +127,7 @@ Just-in-Time 編譯器。
 - [.NET Core](#net-core)
 - [通用 Windows 平台 (UWP)](#uwp)
 
-## <a name="library"></a>程式庫
+## <a name="library"></a>圖書館
 
 可由應用程式或其他程式庫呼叫的 API 集合。 .NET 程式庫是由一或多個[組件](#assembly)組成。
 
@@ -157,7 +157,7 @@ Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS �
 
 請參閱 [.NET 指南](index.md)
 
-## <a name="net-core"></a>.NET Core 
+## <a name="net-core"></a>.NET Core
 
 .NET 的跨平台、高效能、開放原始碼實作。 包括 Core Common Language Runtime (CoreCLR)、Core AOT 執行階段 (CoreRT 開發中)、Core 基底類別庫，以及 Core SDK。
 
@@ -191,7 +191,7 @@ UWP 是 .NET Native 第一個支援的應用程式架構。 現在，我們支�
 
 請參閱 [Intro to .NET Native and CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md) (.NET Native 和 CoreRT 簡介)
 
-## <a name="net-standard"></a>.NET 標準
+## <a name="net-standard"></a>.NET Standard
 
 可用於每個 .NET 實作之 .NET API 的型式規格。
 
@@ -207,22 +207,22 @@ UWP 是 .NET Native 第一個支援的應用程式架構。 現在，我們支�
 
 ## <a name="package"></a>套件
 
-NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名組件及其他中繼資料 (例如作者名稱)。
+NuGet 套件 (簡稱套件) 是 &mdash;.zip&mdash; 檔案，其中包含一或多個同名組件及其他中繼資料 (例如作者名稱)。
 
 *.zip* 檔案包含一個 *.nupkg* 延伸模組和許多特定資產 (例如 *.dll* 檔案和 *.xml* 檔案)，可搭配多個架構和版本使用。 安裝於應用程式或程式庫時，會根據應用程式或程式庫所指定的目標 Framework 來選取適當的資產。 定義介面的資產位於 *ref* 資料夾中，而定義實作的資產則位於 *lib* 資料夾中。
 
-## <a name="platform"></a>{2&gt;platform&lt;2}
+## <a name="platform"></a>平台
 
 作業系統及其執行所在的硬體，例如 Windows、macOS、Linux、iOS 和 Android。
 
 以下是用於句子中的範例：
 
-- 「.NET Core 是 .NET 的跨平台實作。」 
+- 「.NET Core 是 .NET 的跨平台實作。」
 - 「PCL 設定檔代表 Microsoft 平台，而 .NET Standard 則無從驗證平台。」
 
 .NET 文件經常使用「.NET 平台」來表示 .NET 實作或包含所有實作的 .NET 堆疊。 這兩種用法通常會與主要 (OS/硬體) 意義混淆，因此我們計劃從文件中排除這些用法。
 
-## <a name="runtime"></a>執行階段 ( runtime)
+## <a name="runtime"></a>執行階段
 
 受管理程式的執行環境。
 
@@ -239,13 +239,13 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 - 「要在多個執行階段上執行的程式庫應以此架構為目標。」 (指的是 .NET Standard)
 - 「不同的 .NET 執行階段會實作特定版本的 .NET Standard。 … 每個 .NET 執行階段版本會宣佈它所支援的最高 .NET Standard 版本...」
 
-我們計劃排除這個不一致的用法。 
+我們計劃排除這個不一致的用法。
 
 ## <a name="stack"></a>堆疊
 
 可搭配使用以建置及執行應用程式的一組程式設計技術。
 
-「.NET 堆疊」是指 .NET Standard 和所有 .NET 實作。 「一個 .NET 堆疊」一詞可能是指 .NET 的一項實作。 
+「.NET 堆疊」是指 .NET Standard 和所有 .NET 實作。 「一個 .NET 堆疊」一詞可能是指 .NET 的一項實作。
 
 ## <a name="target-framework"></a>Target Framework - 目標 Framework
 
@@ -271,7 +271,7 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 
 用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 其設計目的是為了整合您可能想要設為目標的不同裝置類型，包括電腦、平板電腦、平板手機、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 應用程式可以用C++、 C#、Visual Basic 和 JavaScript 撰寫。 當使用C#和 Visual Basic 時，.net api 是由 .net Core 提供。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 指南](index.md)
 - [.NET Framework 指南](../framework/index.md)

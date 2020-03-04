@@ -4,18 +4,18 @@ description: 本教學課程會教導您如何使用 LINQ 產生序列、撰寫�
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345615"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240011"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>使用語言整合式查詢（LINQ）
 
 ## <a name="introduction"></a>簡介
 
-此教學課程會教導您 .NET Core 和 C# 語言中的功能。 您將習得以下方法：
+此教學課程會教導您 .NET Core 和 C# 語言中的功能。 您將了解如何：
 
 - 使用 LINQ 產生序列。
 - 撰寫可在 LINQ 查詢中輕鬆使用的方法。
@@ -29,7 +29,7 @@ ms.locfileid: "75345615"
 
 本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/samples GitHub 存放機制中查看[完整範例](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 您將必須設定電腦以執行 .NET Core。 您可以在[.Net Core 下載](https://dotnet.microsoft.com/download)頁面上找到安裝指示。 您可以在 Windows、Ubuntu Linux 或 OS X 上，或在 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 下列說明使用[Visual Studio Code](https://code.visualstudio.com/) ，這是一個開放原始碼的跨平臺編輯器。 不過，您可以使用您熟悉的任何工具。
 
@@ -41,7 +41,7 @@ ms.locfileid: "75345615"
 
 ## <a name="create-the-data-set"></a>建立資料集
 
-開始之前，請確定下列程式碼行位於 `dotnet new console` 所產生的`Program.cs` 檔案最上方：
+開始之前，請確定下列程式碼行位於 `Program.cs` 所產生的`dotnet new console` 檔案最上方：
 
 ```csharp
 // Program.cs
@@ -84,7 +84,7 @@ static IEnumerable<string> Ranks()
 }
 ```
 
-將這些方法放置於 `Program.cs` 檔案中的 `Main` 方法下方。 這兩個方法都利用 `yield return` 語法，來在執行時產生序列。 編譯器會建置能實作 <xref:System.Collections.Generic.IEnumerable%601>，並會在要求它們時產生字串序列的物件。
+將這些方法放置於 `Main` 檔案中的 `Program.cs` 方法下方。 這兩個方法都利用 `yield return` 語法，來在執行時產生序列。 編譯器會建置能實作 <xref:System.Collections.Generic.IEnumerable%601>，並會在要求它們時產生字串序列的物件。
 
 現在，使用這些迭代器方法來建立一副牌。 您將在 `Main` 方法中放置 LINQ 查詢。 以下就來看看此程序：
 
@@ -179,7 +179,7 @@ public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> firs
 
 以下是該方法的實作：
 
-[!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
+[!CODE-csharp[InterleaveSequenceWith](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
 現在您已經撰寫了此方法，請回到 `Main` 方法，然後對牌堆洗牌一次：
 
@@ -213,7 +213,7 @@ public static void Main(string[] args)
 
 撰寫判斷兩個序列是否相等的方法應該很單純。 它的架構與您先前撰寫的洗牌方法類似。 只是這次不使用 `yield return` 每個元素，而是比較各序列的相符元素。 當整個序列都已列舉後，如果每個元素都相符，則序列便為相同：
 
-[!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
+[!CODE-csharp[SequenceEquals](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
 這裡示範第二個 LINQ 慣用語：終端方法。 它們會將序列 (在此範例中為兩個序列) 當作輸入，並傳回單一純量值。 使用終端方法時，它們永遠都是適用於 LINQ 查詢之方法鏈結中的最終方法，因此有「終端」的名稱。
 
@@ -267,7 +267,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 在您的 `Extensions.cs` 檔案中，輸入或複製下列方法。 這個擴充方法會在您的專案目錄內建立稱為 `debug.log` 的新檔案，並記錄目前正在對記錄檔執行哪一個查詢。 此擴充方法可附加到任何查詢，以標示查詢所執行的內容。
 
-[!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
+[!CODE-csharp[LogQuery](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 您會在 `File` 下看到紅色波浪線，表示它不存在。 它不會編譯，原因是編譯器不知道 `File` 是什麼。 若要解決這個問題，請務必將下列這一行程式碼新增至 `Extensions.cs` 的第一行下：
 
@@ -329,7 +329,7 @@ public static void Main(string[] args)
 
 您可以在此處改善程式碼的效能，以減少您所進行的執行次數。 您可進行的簡單修正是「快取」建構這副牌的原始 LINQ 查詢結果。 目前，您會在每次 do-while 迴圈經歷反覆執行時一再地執行查詢、重新建構這副牌，而且每次都會對它進行重新洗牌。 若要快取這副牌，您可以利用 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 和 <xref:System.Linq.Enumerable.ToList%2A>；當您將它們附加至查詢時，它們將執行您已告訴它們的相同動作，但現在它們會根據您選擇呼叫的方法，將結果儲存在陣列或清單中。 將 LINQ 方法 <xref:System.Linq.Enumerable.ToArray%2A> 附加至這兩個查詢，然後再次執行程式：
 
-[!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
+[!CODE-csharp[Main](../../../samples/snippets/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 現在，已將外部洗牌減少至 30 個查詢。 搭配內部洗牌再次執行，您將會看到類似的改善：它現在會執行 162 個查詢。
 

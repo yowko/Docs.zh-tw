@@ -2,18 +2,18 @@
 title: 應用程式發行
 description: 瞭解發行 .NET Core 應用程式的方式。 .NET Core 可以發佈平臺特定或跨平臺應用程式。 您可以將應用程式發佈為獨立或與執行時間相關聯。 每個模式都會影響使用者執行應用程式的方式。
 ms.date: 01/31/2020
-ms.openlocfilehash: 696cca436c73601a3e7825033152d43a659a7dce
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448980"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157931"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core 應用程式發行總覽
 
 您使用 .NET Core 建立的應用程式可以在兩種不同的模式下發行，而此模式會影響使用者執行應用程式的方式。
 
-將您的應用程式發佈為獨立式，*會產生一個*應用程式，其中包含 .net Core 執行時間和程式庫，以及您的應用程式及其相依性。 應用程式的使用者可以在未安裝 .NET Core 執行時間的電腦上執行它。 
+將您的應用程式發佈為獨立式，*會產生一個*應用程式，其中包含 .net Core 執行時間和程式庫，以及您的應用程式及其相依性。 應用程式的使用者可以在未安裝 .NET Core 執行時間的電腦上執行它。
 
 將應用程式發佈為與*執行時間相依*的會產生應用程式，其中只包含您的應用程式本身及其相依性。 應用程式的使用者必須分別安裝 .NET Core 執行時間。
 
@@ -132,7 +132,7 @@ dotnet publish -r linux-x64 --self-contained false
   > 您可以使用 .NET Core[*全球化不變模式*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)，減少在 Linux 系統上部署的大小約 28 MB。 這會強制您的應用程式處理所有文化特性，例如不因[文化](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)特性而異。
 
 - 較**難更新 .Net Core 版本**\
-.NET Core 執行時間（與您的應用程式一起散發）只能透過發行新版本的應用程式來進行升級。 您必須負責提供應用程式的更新版本，以取得 .NET Core 執行時間的安全性修補程式。 
+.NET Core 執行時間（與您的應用程式一起散發）只能透過發行新版本的應用程式來進行升級。 您必須負責提供應用程式的更新版本，以取得 .NET Core 執行時間的安全性修補程式。
 
 ### <a name="examples"></a>範例
 

@@ -1,13 +1,13 @@
 ---
 title: 健康狀況監視
 description: 瀏覽實作健康情況監視的其中一種方式。
-ms.date: 01/30/2020
-ms.openlocfilehash: a91e51af66049f9774365cd56b90ab792a4dd4fc
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.date: 03/02/2020
+ms.openlocfilehash: 3b8ba57149061e629bee441672718eba8a79da63
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502704"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241152"
 ---
 # <a name="health-monitoring"></a>健康狀況監視
 
@@ -19,7 +19,7 @@ ms.locfileid: "77502704"
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>在 ASP.NET Core 服務中實作健康情況檢查
 
-開發 ASP.NET Core 微服務或 web 應用程式時，您可以使用 ASP .NET Core 3.1 （[HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)）中所發行的內建健全狀況檢查功能。 如同許多 ASP.NET Core 功能，健康情況檢查隨附一組服務與中介軟體。
+開發 ASP.NET Core 微服務或 web 應用程式時，您可以使用 ASP .NET Core 2.2 （[HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)）中所發行的內建健全狀況檢查功能。 如同許多 ASP.NET Core 功能，健康情況檢查隨附一組服務與中介軟體。
 
 健康情況服務和中介軟體不僅簡單易用，還提供功能讓您驗證應用程式所需的任何外部資源 (例如 SQL Server 資料庫或遠端 API) 是否正常運作。 使用這個功能時，您也可以自行決定何種情況下表示資源狀況良好，如我們稍後所說明。
 
@@ -27,7 +27,9 @@ ms.locfileid: "77502704"
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>在您的後端 ASP.NET 微服務中使用 HealthChecks 功能
 
-在本節中，您將瞭解如何在範例 ASP.NET Core 3.1 Web API 應用程式中使用[AspNetCore HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)中所執行的 HealthChecks 功能。 這項功能在大規模的微服務（例如 eShopOnContainers）中會在稍後的章節中說明。 首先，您需要為每個微服務定義健康狀態良好的構成項目。 在範例應用程式中，如果可以透過 HTTP 存取微服務 API 且其相關 SQL Server 資料庫亦可供存取，即表示微服務健康狀態良好。
+在本節中，您將瞭解如何在使用[HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)套件時，在範例 ASP.NET Core 3.1 Web API 應用程式中執行 HealthChecks 功能。 下一節將說明在大規模微服務（如 eShopOnContainers）中的這項功能的執行方式。
+
+首先，您需要為每個微服務定義健康狀態良好的構成項目。 在範例應用程式中，如果其 API 可透過 HTTP 存取，且其相關的 SQL Server 資料庫也可供使用，則我們會定義微服務狀況良好。
 
 在 .NET Core 3.1 中，您可以使用內建 Api 來設定服務，並以這種方式新增微服務及其相依 SQL Server 資料庫的健康情況檢查：
 
@@ -40,10 +42,11 @@ public void ConfigureServices(IServiceCollection services)
     // Registers required services for health checks
     services.AddHealthChecks()
         // Add a health check for a SQL Server database
-        .AddSqlServer(
-            configuration["ConnectionString"],
-            name: "OrderingDB-check",
-            tags: new string[] { "orderingdb" });
+        .AddCheck(
+            "OrderingDB-check", 
+            new SqlConnectionHealthCheck(Configuration["ConnectionString"]), 
+            HealthStatus.Unhealthy, 
+            new string[] { "orderingdb" });
 }
 ```
 
@@ -114,11 +117,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     app.UseEndpoints(endpoints =>
     {
         //...
-        endpoints.MapHealthChecks("/hc", new HealthCheckOptions()
-        {
-            Predicate = _ => true,
-            ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
-        });
+        endpoints.MapHealthChecks("/hc");
         //...
     });
     //…
@@ -129,9 +128,9 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 ### <a name="healthchecks-implementation-in-eshoponcontainers"></a>eShopOnContainers 中的 HealthChecks 實作
 
-eShopOnContainers 中的微服務依賴多個服務來執行其工作。 例如，來自 eShopOnContainers 的 `Catalog.API` 微服務依賴多個服務，例如 Azure Blob 儲存體、SQL Server 和 RabbitMQ。 因此，它具有數個使用 `AddCheck()` 方法新增的健康情況檢查。 對於每個相依服務，需要新增一個自訂 `IHealthCheck`，定義其各自的健康情況狀態。
+eShopOnContainers 中的微服務依賴多個服務來執行其工作。 例如，來自 eShopOnContainers 的 `Catalog.API` 微服務依賴多個服務，例如 Azure Blob 儲存體、SQL Server 和 RabbitMQ。 因此，它具有數個使用 `AddCheck()` 方法新增的健康情況檢查。 針對每個相依服務，必須新增自訂的 `IHealthCheck` 實作為定義其各自的健全狀況狀態。
 
-開放原始碼專案[AspNetCore](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)可解決這個問題，方法是為每個以 .net Core 3.1 為基礎的企業服務提供自訂健康情況檢查。 每個健康情況檢查都可當成個別 NuGet 套件提供，然後便可輕鬆地將其新增至專案。 eShopOnContainers 會在其所有微服務中廣泛使用它們。
+開放原始碼專案[AspNetCore](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)可解決這個問題，方法是為這些企業服務提供自訂的健康情況檢查，這些都是以 .net Core 3.1 為基礎。 每個健康情況檢查都可當成個別 NuGet 套件提供，然後便可輕鬆地將其新增至專案。 eShopOnContainers 會在其所有微服務中廣泛使用它們。
 
 例如，在 `Catalog.API` 微服務中，已新增下列 NuGet 套件：
 

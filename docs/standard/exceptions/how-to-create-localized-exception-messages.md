@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 48e429a6379b0a13cb81f8db6fae27aa31409840
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5a02c71b16e2c8e5ade5128866af7dc46a03ba4a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794617"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160179"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>如何使用當地語系化的例外狀況訊息來建立使用者定義的例外狀況
 
@@ -30,7 +30,7 @@ ms.locfileid: "76794617"
     [Serializable]
     public class StudentNotFoundException : Exception { }
     ```
-    
+
     ```vb
     <Serializable>
     Public Class StudentNotFoundException
@@ -53,7 +53,7 @@ ms.locfileid: "76794617"
             : base(message, inner) { }
     }
     ```
-    
+
     ```vb
     <Serializable>
     Public Class StudentNotFoundException
@@ -165,7 +165,7 @@ Throw New StudentNotFoundException("The student cannot be found.", "John")
     > [!NOTE]
     > 如果專案名稱是 `TestProject`，而資源檔*ExceptionMessages*位於專案的*Resources*資料夾中，則資源檔的完整名稱會是 `TestProject.Resources.ExceptionMessages`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何建立使用者定義的例外狀況](how-to-create-user-defined-exceptions.md)
 - [建立桌面應用程式的附屬元件](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

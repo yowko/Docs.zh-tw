@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 2397bf999ba97fe0c011de180e05be4177894365
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920388"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239881"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
@@ -51,7 +51,7 @@ ms.locfileid: "76920388"
    dotnet watch -- --verbose build
    ```
 
-   請注意到位於 `--verbose` 選項之前的 `--` 選項。 它能將直接傳遞給 `dotnet watch` 命令的選項，與傳遞給子 `dotnet` 處理序的引數分隔開來。 如果沒有它的話，`--verbose` 選項將會套用至 `dotnet watch` 命令，而非 `dotnet build` 命令。
+   請注意到位於 `--` 選項之前的 `--verbose` 選項。 它能將直接傳遞給 `dotnet watch` 命令的選項，與傳遞給子 `dotnet` 處理序的引數分隔開來。 如果沒有它的話，`--verbose` 選項將會套用至 `dotnet watch` 命令，而非 `dotnet build` 命令。
   
    如需詳細資訊，請參閱[使用 dotnet Watch 開發 ASP.NET Core 應用程式](/aspnet/core/tutorials/dotnet-watch)。
 
@@ -153,7 +153,7 @@ dotnet tool install -g dotnetsay
   COMPlus_TieredCompilation="1"
   ```
 
-- 若要針對個別專案使用階層式編譯，請在 MSBuild 專案檔的 `<PropertyGroup>` 區段中加入 `<TieredCompilation>` 屬性，如下列範例所示：
+- 若要針對個別專案使用階層式編譯，請在 MSBuild 專案檔的 `<TieredCompilation>` 區段中加入 `<PropertyGroup>` 屬性，如下列範例所示：
 
    ```xml
    <PropertyGroup>
@@ -177,17 +177,17 @@ dotnet tool install -g dotnetsay
 
 下列範例使用 <xref:System.Span%601> 和 <xref:System.Memory%601> 執行個體來提供陣列中 10 個元素的虛擬檢視。
 
-[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli 壓縮
 
 .NET Core 2.1 新增對 Brotli 壓縮和解壓縮的支援。 Brotli 是定義於 [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) \(英文\) 中的一般用途無失真壓縮演算法，並受到大部分網頁瀏覽器和主流 Web 伺服器的支援。 您可以使用資料流形式的 <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> 類別，或是高效能範圍型的 <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> 和 <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> 類別。 下列範例說明搭配 <xref:System.IO.Compression.BrotliStream> 類別進行壓縮：
 
-[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> 行為與 <xref:System.IO.Compression.DeflateStream> 和 <xref:System.IO.Compression.GZipStream> 相同，這可讓您輕鬆地將呼叫這些 API 的程式碼轉換為 <xref:System.IO.Compression.BrotliStream>。
 
@@ -201,7 +201,7 @@ dotnet tool install -g dotnetsay
 
 - 新的 <xref:System.Span%601> 型密碼編譯 API 可用於雜湊、HMAC、亂數密碼編譯產生、非對稱簽章產生、非對稱簽章處理，以及 RSA 加密。
 
-- 透過使用以 <xref:System.Span%601> 為基礎的實作，能使 <xref:System.Security.Cryptography.Rfc2898DeriveBytes?displayProperty=nameWithType> 的效能提升大約 15%。
+- 透過使用以 <xref:System.Security.Cryptography.Rfc2898DeriveBytes?displayProperty=nameWithType> 為基礎的實作，能使 <xref:System.Span%601> 的效能提升大約 15%。
 
 - 新的 <xref:System.Security.Cryptography.CryptographicOperations?displayProperty=nameWithType> 類別包含兩種新方法：
 
@@ -229,7 +229,7 @@ dotnet tool install -g dotnetsay
 
 - 橫跨所有 .NET Core 平台的一致行為。
 
-<xref:System.Net.Http.SocketsHttpHandler> 是 .NET Core 2.1 中的預設實作。 不過，您可以呼叫 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 方法來將應用程式設定為使用舊版的 <xref:System.Net.Http.HttpClientHandler> 類別：
+<xref:System.Net.Http.SocketsHttpHandler> 是 .NET Core 2.1 中的預設實作。 不過，您可以呼叫 <xref:System.Net.Http.HttpClientHandler> 方法來將應用程式設定為使用舊版的 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 類別：
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);
@@ -243,9 +243,13 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 在 Windows 上，您也可以選擇使用依賴原生實作的 <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType>，或是將 <xref:System.Net.Http.SocketsHttpHandler> 類別的執行個體傳遞到 <xref:System.Net.Http.HttpClient> 建構函式來使用該類別。
 
-在 Linux 和 macOS 上，您只能針對個別處理序設定 <xref:System.Net.Http.HttpClient>。 在 Linux 上，如果您要使用舊的 <xref:System.Net.Http.HttpClient> 實作，便需要部署 [libcurl](https://curl.haxx.se/libcurl/) \(英文\)。 (它會隨 .NET Core 2.0 一起安裝)
+在 Linux 和 macOS 上，您只能針對個別處理序設定 <xref:System.Net.Http.HttpClient>。 在 Linux 上，如果您要使用舊的 [ 實作，便需要部署 ](https://curl.haxx.se/libcurl/)libcurl<xref:System.Net.Http.HttpClient> \(英文\)。 (它會隨 .NET Core 2.0 一起安裝)
 
-## <a name="see-also"></a>請參閱
+### <a name="breaking-changes"></a>重大變更
+
+如需重大變更的詳細資訊，請參閱[從2.0 版遷移至2.1 的重大變更](../compatibility/2.0-2.1.md)。
+
+## <a name="see-also"></a>另請參閱
 
 - [.NET Core 的新功能](index.md)
 - [EF Core 2.1 的新功能](/ef/core/what-is-new/ef-core-2.1)

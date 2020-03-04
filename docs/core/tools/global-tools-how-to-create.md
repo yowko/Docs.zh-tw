@@ -2,12 +2,12 @@
 title: 教學課程：建立 .NET Core 工具
 description: 瞭解如何建立 .NET Core 工具。 工具是使用 .NET Core CLI 安裝的主控台應用程式。
 ms.date: 02/12/2020
-ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543400"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156721"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>教學課程：使用 .NET Core CLI 建立 .NET Core 工具
 
@@ -31,24 +31,18 @@ ms.locfileid: "77543400"
 
 1. 開啟命令提示字元，並建立名為*repository*的資料夾。
 
-1. 流覽至存放*庫*資料夾，並輸入下列命令，將 `<name>` 取代為唯一值，讓專案名稱成為唯一的。 
+1. 流覽至存放*庫*資料夾，並輸入下列命令：
 
    ```dotnetcli
-   dotnet new console -n botsay-<name>
+   dotnet new console -n microsoft.botsay
    ```
 
-   例如，您可以執行下列命令：
+   命令會在存放*庫*資料夾底下，建立名為*botsay*的新資料夾。
 
-   ```dotnetcli
-   dotnet new console -n botsay-nancydavolio
-   ```
-
-   命令會在存放*庫*資料夾底下建立名為*botsay\<名稱 >* 的新資料夾。
-
-1. 流覽至*botsay-\<名稱 >*  資料夾。
+1. 流覽至*botsay*資料夾。
 
    ```console
-   cd botsay-<name>
+   cd microsoft.botsay
    ```
 
 ## <a name="add-the-code"></a>新增程式碼
@@ -151,9 +145,9 @@ dotnet run -- Hello from the bot
 
 ## <a name="package-the-tool"></a>封裝工具
 
-在您可以將應用程式封裝並散發為工具之前，您需要修改專案檔案。 
+在您可以將應用程式封裝並散發為工具之前，您需要修改專案檔案。
 
-1. 開啟*botsay\<名稱 > .csproj*檔案，然後將三個新的 XML 節點加入至 `<PropertyGroup>` 節點的結尾：
+1. 開啟*botsay .csproj*檔案，然後將三個新的 XML 節點加入至 `<PropertyGroup>` 節點的結尾：
 
    ```xml
    <PackAsTool>true</PackAsTool>
@@ -190,7 +184,7 @@ dotnet run -- Hello from the bot
    dotnet pack
    ```
 
-   從*botsay\<名稱 > .csproj*檔案中的 `<PackageOutputPath>` 值所識別的資料夾中建立的*botsay\<名稱 > nupkg*檔案，在此範例中是 */nupkg*資料夾。
+   *Botsay .csproj*檔案中的 `<PackageOutputPath>` 值所識別的資料夾中，會建立*nupkg*檔案，在此範例中是 */nupkg*資料夾。
   
    當您想要公開發行工具時，可以將它上傳至 `https://www.nuget.org`。 當此工具可在 NuGet 上使用之後，開發人員就可以使用[dotnet tool install](dotnet-tool-install.md)命令來安裝此工具。 在本教學課程中，您會直接從本機*nupkg*資料夾安裝套件，因此不需要將套件上傳至 NuGet。
 

@@ -2,12 +2,12 @@
 title: dotnet tool list 命令
 description: Dotnet tool list 命令會列出安裝在您電腦上的 .NET Core 工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: bb74cfeaf441cf8a1a030d97d16655f85d8267d1
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543452"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156981"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -40,7 +40,7 @@ dotnet tool list <-h|--help>
 
 - **`-g|--global`**
 
-  列出使用者範圍的通用工具。 無法與 `--tool-path` 選項合併使用。 省略 `--global` 和 `--tool-path` 會列出本機工具。 
+  列出使用者範圍的通用工具。 無法與 `--tool-path` 選項合併使用。 省略 `--global` 和 `--tool-path` 會列出本機工具。
 
 - **`-h|--help`**
 
@@ -48,7 +48,7 @@ dotnet tool list <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  指定要在其中尋找通用工具的自訂位置。 PATH 可為絕對路徑或相對路徑。 無法與 `--global` 選項合併使用。 省略 `--global` 和 `--tool-path` 會列出本機工具。 
+  指定要在其中尋找通用工具的自訂位置。 PATH 可為絕對路徑或相對路徑。 無法與 `--global` 選項合併使用。 省略 `--global` 和 `--tool-path` 會列出本機工具。
 
 ## <a name="examples"></a>範例
 

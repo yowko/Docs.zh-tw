@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742583"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156552"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1 的新功能
 
@@ -29,13 +29,41 @@ Visual Studio for Mac 也支援並包含 Visual Studio for Mac 8.4 中的 .NET C
 
 .NET Core 3.1 是 LTS 版本，在接下來的三年來提供 Microsoft 支援。 強烈建議您將應用程式移至 .NET Core 3.1。 其他主要版本的目前生命週期如下所示：
 
-| 發行 | 附註 |
+| 版本 | 附註 |
 | ------- | ---- |
 | .NET Core 3.0 | 2020年3月3日結束生命週期。     |
 | .NET Core 2.2 | 2019年12月23日結束生命週期。 |
 | .NET Core 2.1 | 2021年8月21日結束生命週期。    |
 
 如需詳細資訊，請參閱[.Net Core 支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。
+
+## <a name="macos-apphost-and-notarization"></a>macOS appHost 和 notarization
+
+*僅限 macOS*
+
+從適用于 macOS 的公證 .NET Core SDK 3.1 開始，appHost 設定預設為停用。 如需詳細資訊，請參閱[MacOS Catalina Notarization 和對 .Net Core 下載和專案的影響](../install/macos-notarization-issues.md)。
+
+當 appHost 設定啟用時，.NET Core 會在您建立或發行時產生原生符合-O 可執行檔。 當您的應用程式是從使用 `dotnet run` 命令的原始程式碼執行，或直接啟動符合-O 可執行檔時，就會在 appHost 的內容中執行。
+
+如果沒有 appHost，使用者唯一可以啟動[執行時間相依](../deploying/index.md#publish-runtime-dependent)應用程式的方式是使用 `dotnet <filename.dll>` 命令。 當您發佈[獨立](../deploying/index.md#publish-self-contained)應用程式時，一律會建立 appHost。
+
+您可以在專案層級設定 appHost，或使用 `-p:UseAppHost` 參數切換特定 `dotnet` 命令的 appHost：
+
+- 專案檔
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- 命令列參數
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+如需 `UseAppHost` 設定的詳細資訊，請參閱[適用于 MICROSOFT .net 的 MSBuild 屬性](../project-sdk/msbuild-props.md#useapphost)。
 
 ## <a name="windows-forms"></a>Windows Form
 

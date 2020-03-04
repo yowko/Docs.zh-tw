@@ -4,12 +4,12 @@ description: 最近對 C# 語言的增強功能，可讓您撰寫可驗證的安
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: f590a338d35966e2cd3a507164057a49b8a5f6f8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346711"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239972"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>撰寫安全且有效率的 C# 程式碼
 
@@ -23,7 +23,7 @@ C# 中的新功能可讓您撰寫可驗證的安全程式碼，取得更佳的�
 
 - 宣告 [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) 來表達型別為**固定**，並可讓編譯器在使用 [`in`](language-reference/keywords/in-parameter-modifier.md) 參數時儲存複本。
 - 如果類型不可為固定，請宣告 `struct` 成員 `readonly`，以指出該成員不會修改狀態。
-- 當傳回值為大於 <xref:System.IntPtr.Size?displayProperty=nameWithType> 的 `struct`，且儲存體存留期大於傳回值的方法時，使用 [`ref readonly`](language-reference/keywords/ref.md#reference-return-values) 傳回。
+- 當傳回值為大於 [ 的 `ref readonly`，且儲存體存留期大於傳回值的方法時，使用 ](language-reference/keywords/ref.md#reference-return-values)`struct`<xref:System.IntPtr.Size?displayProperty=nameWithType> 傳回。
 - 當 `readonly struct` 的大小大於 <xref:System.IntPtr.Size?displayProperty=nameWithType> 時，基於效能原因，您應將它作為 `in` 參數傳遞。
 - 絕對不要傳遞 `struct` 做為 `in` 參數，除非它是以 `readonly` 修飾詞進行宣告，或方法只呼叫結構的 `readonly` 成員。 違反本指引可能會對效能造成負面影響，而且可能會導致不明確的行為。
 - 使用 [`ref struct`](language-reference/keywords/ref.md#ref-struct-types) 或 `readonly ref struct` (例如 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>) 來將記憶體作為位元組序列使用。
@@ -45,7 +45,7 @@ public struct Point3D
 
 ## <a name="declare-readonly-structs-for-immutable-value-types"></a>宣告固定實值型別的唯讀結構
 
-使用 `readonly` 修飾詞宣告 `struct`，通知編譯器您的意圖是要建立固定型別。 編譯器會實行包含下列規則的設計決策：
+使用 `struct` 修飾詞宣告 `readonly`，通知編譯器您的意圖是要建立固定型別。 編譯器會實行包含下列規則的設計決策：
 
 - 所有欄位成員都必須是 `readonly`
 - 所有屬性都必須是唯讀屬性，包含自動實作的屬性。
@@ -154,7 +154,7 @@ public struct Point3D
 
 在呼叫位置，呼叫者會選擇使用 `Origin` 屬性作為 `ref readonly` 或作為值：
 
-[!code-csharp[AssignRefReadonly](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
+[!code-csharp[AssignRefReadonly](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
 在上述程式碼中的第一項指派，會建立 `Origin` 常數的複本，並指派該複本。 第二項指派則會指派參考。 請注意，`readonly` 修飾詞必須是變數宣告的一部分。 其參考項目無法修改。 如果嘗試修改，會導致編譯時期錯誤。
 
@@ -163,7 +163,7 @@ public struct Point3D
 編譯器會強制呼叫者不可修改該參考。 若嘗試直接指派到值，則會產生編譯時間錯誤。 但是，編譯器無法得知是否有任何成員方法修改結構的狀態。
 為確保物件未經修改，編譯器會建立複本，並使用該複本呼叫成員參考。 任何修改皆僅會修改防禦複本。
 
-## <a name="apply-the-in-modifier-to-readonly-struct-parameters-larger-than-systemintptrsize"></a>將 `in` 修飾詞套用到大於 `System.IntPtr.Size` 的 `readonly struct` 參數
+## <a name="apply-the-in-modifier-to-readonly-struct-parameters-larger-than-systemintptrsize"></a>將 `in` 修飾詞套用到大於 `readonly struct` 的 `System.IntPtr.Size` 參數
 
 `in` 關鍵字會補充現有的 `ref` 和 `out` 關鍵字，以參考型式傳遞引數。 `in` 關鍵字會指定以參考型式傳遞引數，但呼叫的方法不會修改值。
 
@@ -180,7 +180,7 @@ public struct Point3D
 
 下列程式碼示範計算 3D 空間中不同兩點間距離的方法。
 
-[!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
+[!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
 引數為雙結構，每個結構皆包含三個雙精度浮點數。 一個雙精度浮點數是 8 個位元組，因此每個引數是 24 個位元組。 藉由指定 `in` 修飾詞，您會傳遞一個 4 位元組或 8 位元組參考至那些引數，取決於電腦的架構。 大小的差異很小，但是當您的應用程式使用許多不同值在緊密迴圈中呼叫此方法時，差異便會加大。
 
@@ -190,9 +190,9 @@ public struct Point3D
 
 `in` 參數另一項功能是您可以使用常值或常數來作為 `in` 參數的引數。 此外，不同於 `ref` 或 `out` 參數，您也不需要在呼叫位置套用 `in` 修飾詞。 下列程式碼示範兩種呼叫 `CalculateDistance` 方法的範例。 第一種使用兩個利用參考傳遞的區域變數。 第二種則包含建立為方法呼叫之一部份的暫存變數。
 
-[!code-csharp[UseInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
+[!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
 
-編譯器強制 `in` 引數唯讀性質的方式有數種。  首先，呼叫的方法不可直接指派到 `in` 參數。 當該值為 `struct` 類型時，該方法不可直接指派到 `in` 參數的任何欄位。 此外，您也無法使用 `ref` 或 `out` 修飾詞，將 `in` 參數傳遞至任何方法。
+編譯器強制 `in` 引數唯讀性質的方式有數種。  首先，呼叫的方法不可直接指派到 `in` 參數。 當該值為 `in` 類型時，該方法不可直接指派到 `struct` 參數的任何欄位。 此外，您也無法使用 `in` 或 `ref` 修飾詞，將 `out` 參數傳遞至任何方法。
 這些規則適用於所有 `in` 參數的欄位，提供的欄位為 `struct` 類型，且參數也為 `struct` 類型。 實際上，這些規則適用於成員存取的多個層級，提供所有成員存取層級的類型為 `structs`。
 編譯器會強制 `struct` 類型作為 `in` 引數傳遞，且其 `struct` 成員在作為引數對其他方法使用時為唯讀變數。
 
@@ -204,11 +204,11 @@ public struct Point3D
 
 當您更新現有的程式碼以使用唯讀參考引數時，這些規則相當實用。 在呼叫的方法中，您可呼叫所有使用傳值參數的執行個體方法。 在那些執行個體中，會建立 `in` 參數的複本。 因為編譯器可為任何 `in` 參數建立暫存變數，所以您也可以為任何 `in` 參數指定預設值。 下列程式碼會將原點 (點 0,0) 指定為第二個點的預設值：
 
-[!code-csharp[InArgumentDefault](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
+[!code-csharp[InArgumentDefault](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
 
 若要強制編譯器以參考型式來傳遞唯讀引數，請在呼叫位置於引數上指定 `in` 修飾詞，如下列程式碼所示：
 
-[!code-csharp[UseInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
+[!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
 
 此行為能在可提升效能時，使在大型程式碼基底中採用 `in` 參數一段時間更加輕鬆。 您必須先將 `in` 修飾詞新增至方法簽章。 隨後便可在呼叫位置新增 `in` 修飾詞並建立 `readonly struct` 型別，避免編譯器在更多位置建立 `in` 參數的防禦性複本。
 
@@ -218,13 +218,13 @@ public struct Point3D
 
 以上所述的技術解釋了如何透過傳回參考及以參考型式傳遞值來避免複製。 這些技術在引數型別宣告為 `readonly struct` 型別時的效果最佳。 否則，編譯器必須在許多情況中建立**防禦性複本**，強制實施任何引數的唯讀性。 請考慮下列範例，該範例會計算原點至 3D 點的距離：
 
-[!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
+[!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
 `Point3D` 結構「不是」唯讀結構。 此方法的主體中有六個不同屬性存取呼叫。 在第一次檢查中，您可能會認為這些存取都是安全的。 畢竟，`get` 存取子應該不會修改物件的狀態。 但是沒有任何語言規則強制該行為。 它只是一個常見的慣例。 任何型別都可實作修改內部狀態的 `get` 存取子。 若沒有任何語言保證，編譯器必須先建立引數的暫時複本，再呼叫任何成員。 暫存位置會在堆疊上建立，引數的值則會複製到暫存位置，而該值則會針對每個成員存取，作為 `this` 引數複製到堆疊。 在許多情況下，當引數型別並非 `readonly struct` 時，這些複本會危害效能，使得以值型式傳遞的速度高於以唯讀參考型式傳遞。
 
 相反地，如果距離計算使用不可變的結構，`ReadonlyPoint3D`，就不需要暫存物件：
 
-[!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
+[!code-csharp[readonlyInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 當您呼叫 `readonly struct`的成員時，編譯器會產生更有效率的程式碼： `this` 參考，而不是接收者複本，一律是以傳址方式傳遞至成員方法的 `in` 參數。 當您使用 `readonly struct` 作為 `in` 引數時，這項最佳化可避免進行複製。
 
@@ -262,7 +262,7 @@ public struct Point3D
 
 這些 C# 語言的增強功能專為注重效能的演算法設計，對於這些演算法來說，最小化記憶體配置在達到所需效能的過程中扮演了重要角色。 您會發現到您不常在您撰寫的程式碼中使用這些功能。 但是，您已透過 .NET 採用了這些增強功能。 隨著愈來愈多的 API 利用這些功能，您會發現自己的應用程式效能有所改善。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ref 關鍵字](language-reference/keywords/ref.md)
 - [ref 傳回值和 ref 區域變數](programming-guide/classes-and-structs/ref-returns.md)

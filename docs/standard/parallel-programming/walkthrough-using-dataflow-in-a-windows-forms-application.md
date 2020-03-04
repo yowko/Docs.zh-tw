@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：在 Windows Forms 應用程式中使用資料流程
+title: 逐步解說：在 Windows Form 應用程式中使用資料流程
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-ms.openlocfilehash: b6f4b933f76834f48d522d9c97fb0c9b5c24e13d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 794253514edf63f02276e1ece21c60a85c534390
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139926"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159763"
 ---
-# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>逐步解說：在 Windows Forms 應用程式中使用資料流程
+# <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>逐步解說：在 Windows Form 應用程式中使用資料流程
 本文鍵示範如何建立資料流程區塊網路，其可以在 Windows Forms 應用程式中執行映像處理。  
   
  這個範例會從指定的資料夾載入映像檔案、建立複合映像，以及顯示結果。 這個範例會使用資料流程模型，透過網路路由映像。 在資料流程模型中，程式的獨立元件會透過傳送訊息，彼此進行通訊。 當元件收到訊息時，它會執行某些動作，然後將結果傳遞給另一個元件。 比較資料流程模型與控制流程模型，在其中應用程式會使用控制項結構，例如，條件陳述式、迴圈等等，來控制程式中作業的順序。  
@@ -35,7 +35,7 @@ ms.locfileid: "73139926"
   
 - [完整範例](#complete)  
   
-<a name="winforms"></a>   
+<a name="winforms"></a>
 ## <a name="creating-the-windows-forms-application"></a>建立 Windows Forms 應用程式  
  本節描述如何建立基本 Windows Forms 應用程式，並且將控制項新增至主要表單。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "73139926"
   
 4. 將第二個 <xref:System.Windows.Forms.ToolStripButton> 控制項加入 <xref:System.Windows.Forms.ToolStrip> 控制項。 將 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> 屬性設為 <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text>，將 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設為 **Cancel**，然後將 <xref:System.Windows.Forms.ToolStripItem.Enabled%2A> 屬性設為 `False`。  
   
-5. 將 <xref:System.Windows.Forms.PictureBox> 物件加入主要表單。 將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
+5. 將 <xref:System.Windows.Forms.PictureBox> 物件加入主要表單。 將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
-<a name="network"></a>   
+<a name="network"></a>
 ## <a name="creating-the-dataflow-network"></a>建立資料流程網路  
  本節描述如何建立會執行映像處理的資料流程網路。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "73139926"
   
  下表描述網路的成員。  
   
-|成員|輸入|描述|  
+|member|類型|描述|  
 |------------|----------|-----------------|  
 |`loadBitmaps`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|採用資料夾路徑做為輸入，並且產生 <xref:System.Drawing.Bitmap> 物件的集合作為輸出。|  
 |`createCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|採用 <xref:System.Drawing.Bitmap> 物件的集合做為輸入，並且產生複合點陣圖做為輸出。|  
@@ -101,25 +101,25 @@ ms.locfileid: "73139926"
   
  此範例使用共用取消權杖，而非設定 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性，因為 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性會永久取消資料流程區塊的執行。 取消語彙基元可讓此範例重複使用相同的資料流程網路多次，即使使用者取消一或多個作業。 如需使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 以永久取消資料流程區塊執行的範例，請參閱[如何：取消資料流程區塊](../../../docs/standard/parallel-programming/how-to-cancel-a-dataflow-block.md)。  
   
-<a name="ui"></a>   
+<a name="ui"></a>
 ## <a name="connecting-the-dataflow-network-to-the-user-interface"></a>連接資料流程網路與使用者介面  
  本節描述如何連接資料流程網路與使用者介面。 建立複合映像和取消作業是從 [選擇資料夾] 和 [取消] 按鈕起始。 當使用者選擇任一個按鈕時，會以非同步方式起始適當的動作。  
   
 ### <a name="to-connect-the-dataflow-network-to-the-user-interface"></a>若要連接資料流程網路與使用者介面  
   
-1. 在主要表單的表單設計工具上，為 **Choose Folder** 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件建立事件處理常式。  
+1. 在主要表單的表單設計工具上，為 <xref:System.Windows.Forms.ToolStripItem.Click>Choose Folder**按鈕的** 事件建立事件處理常式。  
   
-2. 實作 **Choose Folder** 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
+2. 實作 <xref:System.Windows.Forms.ToolStripItem.Click>Choose Folder**按鈕的** 事件。  
   
      [!code-csharp[TPLDataflow_CompositeImages#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#6)]  
   
-3. 在主要表單的表單設計工具上，為 **Cancel** 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件建立事件處理常式。  
+3. 在主要表單的表單設計工具上，為 <xref:System.Windows.Forms.ToolStripItem.Click>Cancel**按鈕的** 事件建立事件處理常式。  
   
-4. 實作 **Cancel** 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
+4. 實作 <xref:System.Windows.Forms.ToolStripItem.Click>Cancel**按鈕的** 事件。  
   
      [!code-csharp[TPLDataflow_CompositeImages#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#7)]  
   
-<a name="complete"></a>   
+<a name="complete"></a>
 ## <a name="the-complete-example"></a>完整範例  
  下列範例將示範本逐步解說的完整程式碼。  
   
@@ -129,6 +129,6 @@ ms.locfileid: "73139926"
   
  ![Windows Forms 應用程式](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

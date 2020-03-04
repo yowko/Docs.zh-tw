@@ -8,24 +8,24 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a2b9dce3b0ca5e66cfc0fbdbbf8f341abca0b636
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625943"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239725"
 ---
 # <a name="value-types-c-reference"></a>實數值型別C# （參考）
 
 實*數值型別*和[參考型別](../keywords/reference-types.md)是兩個主要的C#類型類別。 實值型別的變數包含型別的實例。 這與參考型別的變數不同，後者包含型別之實例的參考。 根據預設，在[指派](../operators/assignment-operator.md)時，將引數傳遞至方法，並傳回方法結果，會複製變數值。 在實數值型別變數的情況下，會複製對應的類型實例。 下列範例示範了該行為：
 
-[!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
+[!code-csharp[copy of values](~/samples/snippets/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
 
 如上述範例所示，實數值型別變數上的作業只會影響實數值型別的實例，並儲存在變數中。
 
 如果實值型別包含引用型別的資料成員，則在複製實值型別實例時，只會複製參考型別的實例參考。 複製和原始實數值型別實例都具有相同的參考類型實例的存取權。 下列範例示範了該行為：
 
-[!code-csharp[shallow copy](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ShallowCopy)]
+[!code-csharp[shallow copy](~/samples/snippets/csharp/language-reference/builtin-types/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
 > 若要讓您的程式碼較不容易出錯且更健全，請定義和使用不可變的實數值型別。 本文只會針對示範用途使用可變的實值型別。

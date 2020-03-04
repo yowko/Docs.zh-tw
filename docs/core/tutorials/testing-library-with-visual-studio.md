@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 3a4f25b0d250469102fdac6ee960e42b2d969aed
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 307261088f5c7c69c0e69fbd6b99940c04842eec
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559574"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156617"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio"></a>在 Visual Studio 中使用 .NET Core 測試 .NET Standard 程式庫
 
@@ -29,7 +29,7 @@ ms.locfileid: "75559574"
 
    1. 在 [**加入新專案**] 頁面的 [搜尋] 方塊中，輸入**mstest** 。 從**C#** [語言] 清單中選擇或**Visual Basic** ，然後從 [平臺] 清單中選擇 [**所有平臺**]。 選擇 [ **MsTest 測試專案（.Net Core）** ] 範本，然後選擇 **[下一步]** 。
 
-   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**StringLibraryTest** 。 然後選擇 [**建立**]。
+   1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入**StringLibraryTest** 。 然後選擇 [建立]。
 
    > [!NOTE]
    > 除了 MSTest 以外，您也可以在 Visual Studio 中建立 .NET Core 的 xUnit 和 nUnit 測試專案。
@@ -54,13 +54,13 @@ ms.locfileid: "75559574"
 
     ```vb
     Imports Microsoft.VisualStudio.TestTools.UnitTesting
-    
+
     Namespace StringLibraryTest
         <TestClass>
         Public Class UnitTest1
             <TestMethod>
             Sub TestSub()
-    
+
             End Sub
         End Class
     End Namespace
@@ -89,7 +89,7 @@ ms.locfileid: "75559574"
 
 最常見的測試會呼叫 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> 類別的成員。 許多判斷提示方法都至少包括兩個參數，一個是預期的測試結果，另一個是實際的測試結果。 下表顯示一些 `Assert` 類別最常呼叫的方法：
 
-| Assert 方法     | 函數 |
+| Assert 方法     | 函式 |
 | ------------------ | -------- |
 | `Assert.AreEqual`  | 驗證兩個值或物件相等。 如果值或物件不相等，判斷提示就會失敗。 |
 | `Assert.AreSame`   | 驗證兩個物件變數參考相同的物件。 如果變數參考不同的物件，判斷提示就會失敗。 |
@@ -113,14 +113,14 @@ ms.locfileid: "75559574"
 
    `TestStartsWithUpper` 方法中的大寫字元測試包含希臘文大寫字母 Alpha （U + 0391）和斯拉夫文大寫字母 EM （U + 041C）。 `TestDoesNotStartWithUpper` 方法中的小寫字元測試包含希臘文小寫字母 Alpha （U + 03B1）和斯拉夫文小寫字母 Ghe （U + 0433）。
 
-1. 在功能表列上 **，選取 [** 檔案] > [**將 UnitTest1.cs 另存為** **] 或 [** 檔案] > **將 unittest1.cpp 另存為**。 在 **[另存新檔]** 對話方塊中，選擇 **[儲存]** 按鈕旁的箭號，然後選擇 **[以編碼方式儲存]** 。
+1. 在功能表列上 **，選取 [** 檔案] > [**將 UnitTest1.cs 另存為** **] 或 [** 檔案] > **將 unittest1.cpp 另存為**。 在 [另存新檔] 對話方塊中，選取 [儲存] 按鈕旁的箭號，然後選取 [以編碼方式儲存]*。
 
    > [!div class="mx-imgBorder"]
    > ![Visual Studio [另存新檔] 對話方塊](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 
-1. 在 **[確認另存新檔]** 對話方塊中，選擇 **[是]** 按鈕以儲存檔案。
+1. 在 [確認另存新檔] 對話方塊中，選取 [是] 按鈕以儲存檔案。
 
-1. 在 **[進階儲存選項]** 對話方塊的，選取 **[編碼]** 下拉式清單中選擇 **[Unicode (UTF-8 有簽章) - 字碼頁 65001]** ，然後選擇 **[確定]** 。
+1. 在 [進階儲存選項] 對話方塊中，選取 [編碼] 下拉式清單中的 [Unicode (UTF-8 有簽章) - 字碼頁 65001]，然後選取 [確定]。
 
    > [!div class="mx-imgBorder"]
    > ![Visual Studio 先進的儲存選項對話方塊](./media/testing-library-with-visual-studio/advanced-save-options.png)
@@ -136,7 +136,7 @@ ms.locfileid: "75559574"
 
 您的測試回合未失敗，但將它稍微變更，使其中一個測試方法失敗：
 
-1. 修改 `TestDoesNotStartWithUpper` 方法中的 `words` 陣列，以包含字串「錯誤」。 您不需要儲存檔案，因為當組建方案以執行測試時，Visual Studio 會自動儲存開啟的檔案。
+1. 修改 `words` 方法中的 `TestDoesNotStartWithUpper` 陣列，以包含字串「錯誤」。 您不需要儲存檔案，因為當組建方案以執行測試時，Visual Studio 會自動儲存開啟的檔案。
 
    ```csharp
    string[] words = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
@@ -154,7 +154,7 @@ ms.locfileid: "75559574"
    > [!div class="mx-imgBorder"]
    > 具有失敗測試的 ![測試瀏覽器視窗](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. 選取失敗的測試，`TestDoesNotStartWith`。 [測試總管] 視窗會顯示判斷提示產生的訊息："Assert.IsFalse failed. Expected for 'Error': false; actual:True" (Assert.IsFalse 失敗。預期為 'Error'：false；實際為：True)。 因為失敗，在「錯誤」之後的陣列中的所有字串都未經過測試。
+1. 選取失敗的測試，`TestDoesNotStartWith`。 **[測試總管]** 下方的窗格會顯示判斷提示產生的訊息：「Assert.IsFalse 失敗。 'Error' 的預期︰false；實際：True」。 因為失敗，在「錯誤」之後的陣列中的所有字串都未經過測試。
 
    > [!div class="mx-imgBorder"]
    > 顯示 IsFalse 判斷提示失敗的 ![Test Explorer 視窗](./media/testing-library-with-visual-studio/failed-test-detail.png)
@@ -177,7 +177,7 @@ ms.locfileid: "75559574"
    > [!div class="mx-imgBorder"]
    > 具有 build 命令](./media/testing-library-with-visual-studio/build-library-context-menu.png) 的 ![StringLibrary 內容功能表
 
-1. 從功能表列中，選擇 [測試] >  [執行] >  [所有測試] 來執行單元測試。 所有測試皆通過。
+1. 從功能表列中，選擇 [測試] >  [執行] >  [所有測試] 來執行單元測試。 測試成功。
 
 既然您已經完成程式庫測試，下一步是將它提供給呼叫端。 您可以將它與一或多個應用程式搭售，或是將將它發佈為 NuGet 套件。 如需詳細資訊，請參閱[使用 .NET Standard 類別庫](consuming-library-with-visual-studio.md)。
 

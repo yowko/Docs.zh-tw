@@ -1,18 +1,18 @@
 ---
-title: 作法：判斷檔案是否為元件
+title: 如何：判斷檔案是否為元件
 ms.date: 08/19/2019
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: f9bff86ac559e40136ed016b862eef8ba0863ce3
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 1d66c0c166724f195a3cafd9bcbe3c7414c08ebb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70973219"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159503"
 ---
-# <a name="how-to-determine-if-a-file-is-an-assembly"></a>HOW TO：判斷檔案是否為元件
+# <a name="how-to-determine-if-a-file-is-an-assembly"></a>如何：判斷檔案是否為元件
 
 檔案只有受管理時才是組件，而且其中繼資料會包含組件項目。 如需元件和中繼資料的詳細資訊，請參閱[組件資訊清單](manifest.md)。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "70973219"
   
 2. 載入您要測試的檔案。  
   
-3. 如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。 如需詳細資訊，請參閱主題[如何：視圖元件內容](view-contents.md)。  
+3. 如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。 如需詳細資訊，請參閱 how [to： View assembly 內容](view-contents.md)主題。  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>如何以程式設計方式判斷檔案是否為組件  
   
@@ -88,7 +88,7 @@ End Module
 ' Output (with .NET Framework 3.5 installed):  
 '        Yes, the file is an Assembly.  
 ```
- 
+
 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法會載入測試檔案，然後在讀取資訊之後釋放它。  
   
 ## <a name="see-also"></a>另請參閱

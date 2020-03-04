@@ -3,12 +3,12 @@ title: 使用預設介面方法建立 mixin 類型
 description: 使用預設介面成員，您可以使用實作者的選擇性預設實作為擴充介面。
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921451"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240102"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>教學課程：使用具有預設介面方法的介面建立類別時，混合中的功能
 
@@ -22,7 +22,7 @@ ms.locfileid: "76921451"
 > * 建立使用預設實現的類別。
 > * 建立會覆寫部分或全部預設實作為的類別。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) （含）以後版本開始提供8.0 編譯器。
 
@@ -53,21 +53,21 @@ ms.locfileid: "76921451"
 
 首先建立介面來定義所有光源的行為：
 
-[!code-csharp[Declare base interface](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
+[!code-csharp[Declare base interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetILightInterfaceV1)]
 
 基本的額外負荷輕量裝置可能會實作為下列程式碼所示的介面：
 
-[!code-csharp[First overhead light](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
+[!code-csharp[First overhead light](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetOverheadLightV1)]
 
 在本教學課程中，程式碼不會驅動 IoT 裝置，而是會藉由將訊息寫入主控台來模擬這些活動。 您可以流覽程式碼，而不需要自動化您的公司。
 
 接下來，我們將定義可在超時時間之後自動關閉的光線介面：
 
-[!code-csharp[pure Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
+[!code-csharp[pure Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
 
 您可以將基本的執行方式新增至額外負荷，但更好的解決方案是修改此介面定義，以提供 `virtual` 的預設實作為方式：
 
-[!code-csharp[Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
+[!code-csharp[Timer interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
 
 藉由加入該變更，`OverheadLight` 類別可以藉由宣告介面的支援，來實作用計時器函式：
 
@@ -77,7 +77,7 @@ public class OverheadLight : ITimerLight { }
 
 不同的光源類型可能會支援更複雜的通訊協定。 它可以為 `TurnOnFor`提供自己的執行，如下列程式碼所示：
 
-[!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
+[!code-csharp[Override the timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
 不同于覆寫虛擬類別方法，`HalogenLight` 類別中的 `TurnOnFor` 宣告不會使用 `override` 關鍵字。
 
@@ -85,19 +85,19 @@ public class OverheadLight : ITimerLight { }
 
 當您引進更先進的功能時，預設介面方法的優點會變得更清楚。 使用介面可讓您混合和比對功能。 它也可以讓每個類別作者在預設的執行和自訂執行之間做選擇。 讓我們使用閃爍燈的預設實來新增介面：
 
-[!code-csharp[Define the blinking light interface](~/samples/csharp/tutorials/mixins-with-interfaces/IBlinkingLight.cs?name=SnippetBlinkingLight)]
+[!code-csharp[Define the blinking light interface](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/IBlinkingLight.cs?name=SnippetBlinkingLight)]
 
 預設的實值可讓任何光線閃爍。 額外負荷可能會使用預設的實作為新增計時器和閃爍功能：
 
-[!code-csharp[Use the default blink function](~/samples/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
+[!code-csharp[Use the default blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/OverheadLight.cs?name=SnippetOverheadLight)]
 
 新的光源類型，`LEDLight` 同時支援計時器函式和閃爍函式。 這個淺色樣式會同時執行 `ITimerLight` 和 `IBlinkingLight` 介面，並覆寫 `Blink` 方法：
 
-[!code-csharp[Override the blink function](~/samples/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
+[!code-csharp[Override the blink function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/LEDLight.cs?name=SnippetLEDLight)]
 
 `ExtraFancyLight` 可能會直接支援閃爍和計時器函式：
 
-[!code-csharp[Override the blink and timer function](~/samples/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
+[!code-csharp[Override the blink and timer function](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ExtraFancyLight.cs?name=SnippetExtraFancyLight)]
 
 您稍早建立的 `HalogenLight` 不支援閃爍。 因此，請勿將 `IBlinkingLight` 新增至其支援的介面清單。
 
@@ -105,21 +105,21 @@ public class OverheadLight : ITimerLight { }
 
 接下來，讓我們撰寫一些測試程式碼。 您可以藉由檢查C#支援的介面，來利用的[模式](../pattern-matching.md)比對功能來判斷光線的功能。  下列方法會練習每個光線支援的功能：
 
-[!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
+[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
 
 `Main` 方法中的下列程式碼會依序建立每個光源類型，並測試該光線：
 
-[!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
+[!code-csharp[Test a light's capabilities](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
 
 ## <a name="how-the-compiler-determines-best-implementation"></a>編譯器如何判斷最佳的執行方式
 
 此案例顯示不含任何執行的基底介面。 將方法新增至 `ILight` 介面會帶來新的複雜性。 管理預設介面方法的語言規則會將對執行多個衍生介面之實體類別的影響降至最低。 讓我們使用新的方法來增強原始介面，以顯示如何變更其使用方式。 每個指示器光線都可以將其電源狀態報表為列舉值：
 
-[!code-csharp[Enumeration for power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
+[!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
 預設的執行是採用 AC 電源：
 
-[!code-csharp[Report a default power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
+[!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 
 這些變更會完全編譯，即使 `ExtraFancyLight` 宣告 `ILight` 介面和衍生介面的支援，`ITimerLight` 和 `IBlinkingLight`。 在 `ILight` 介面中，只會宣告一個「最接近」的實作為。 任何宣告覆寫的類別都會變成一個「最接近」的執行。 您在上述類別中看到的範例會已覆寫其他衍生介面的成員。
 

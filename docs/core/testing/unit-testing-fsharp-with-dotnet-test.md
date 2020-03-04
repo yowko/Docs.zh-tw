@@ -4,12 +4,12 @@ description: 透過逐步使用 dotnet test 和 xUnit 建置範例方案的互�
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 9cf301533046951f8fd3f9829afabadf6bba3d64
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5fe4a8faddd87334439513368f24d808abc58e65
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715434"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157306"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 .NET Core 中的 F# 程式庫進行單元測試
 
@@ -82,11 +82,11 @@ dotnet add reference ../MathService/MathService.fsproj
         MathServiceTests.fsproj
 ```
 
-在 fsharp.core 目錄的*單元測試*中執行 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`。 
+在 fsharp.core 目錄的*單元測試*中執行 `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`。
 
 ## <a name="creating-the-first-test"></a>建立第一個測試
 
-撰寫一個會失敗的測試，再使其通過，然後重複這個過程。 開啟 *Tests.fs* 並加入下列程式碼：
+您會撰寫一個失敗測試，讓它通過，然後重複此程序。 開啟 *Tests.fs* 並加入下列程式碼：
 
 ```fsharp
 [<Fact>]
@@ -158,15 +158,15 @@ let ``SquaresOfOdds works`` () =
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let squaresOfOdds xs = 
-    xs 
-    |> Seq.filter isOdd 
+let squaresOfOdds xs =
+    xs
+    |> Seq.filter isOdd
     |> Seq.map square
 ```
 
 您已建置好小型的程式庫和該程式庫的一組單元測試， 您已建立方案結構，因此加入新套件與測試是一般工作流程的一部分。 您已集中大部分的時間與精力以解決應用程式目標。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [dotnet new](../tools/dotnet-new.md)
 - [dotnet sln](../tools/dotnet-new.md)

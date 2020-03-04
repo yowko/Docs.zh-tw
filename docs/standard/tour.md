@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337584"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241139"
 ---
 # <a name="tour-of-net"></a>.NET 教學課程
 
@@ -21,13 +21,13 @@ ms.locfileid: "75337584"
 
 ## <a name="how-to-run-the-code-samples"></a>如何執行程式碼範例
 
-若要了解如何設定開發環境以執行程式碼範例，請參閱[入門](get-started.md)主題。 請從此頁面將程式碼複製並貼入您的環境中來執行它們。 
+若要了解如何設定開發環境以執行程式碼範例，請參閱[入門](get-started.md)主題。 請從此頁面將程式碼複製並貼入您的環境中來執行它們。
 
-## <a name="programming-languages"></a>程式語言
+## <a name="programming-languages"></a>程式設計語言
 
 .NET 支援多種程式設計語言。 .NET 實作會實作[通用語言基礎結構 (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)，它的其中一個功能是指定與語言無關的執行階段和語言互通性。 這表示您可以選擇任何 .NET 語言，在 .NET 上建置應用程式與服務。
 
-Microsoft 積極地開發並支援三種 .net C#語言F#：、和 Visual Basic。 
+Microsoft 積極地開發並支援三種 .net C#語言F#：、和 Visual Basic。
 
 * C# 既簡單、強大、型別安全且為物件導向，同時保留 C 樣式語言的易讀性與簡潔性。 熟悉 C 和類似語言的任何人在適應 C# 方面很少有問題。 若要深入了解 C#，請參閱 [C# 指南](../csharp/index.yml)。
 
@@ -41,7 +41,7 @@ Microsoft 積極地開發並支援三種 .net C#語言F#：、和 Visual Basic�
 
 下列兩行會配置記憶體：
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
 沒有類似的關鍵字可取消配置記憶體，因為當記憶體回收行程透過其排程執行回收記憶體時，就會自動取消配置。
 
@@ -49,7 +49,7 @@ Microsoft 積極地開發並支援三種 .net C#語言F#：、和 Visual Basic�
 
 在下列範例中，執行階段會擲回 <xref:System.IndexOutOfRangeException> 例外狀況來確保記憶體安全：
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="working-with-unmanaged-resources"></a>使用 Unmanaged 資源
 
@@ -57,7 +57,7 @@ Microsoft 積極地開發並支援三種 .net C#語言F#：、和 Visual Basic�
 
 在.NET 中，參考 Unmanaged 資源的物件會實作 <xref:System.IDisposable> 介面。 當您完成使用此物件時，您可以呼叫物件的 <xref:System.IDisposable.Dispose> 方法來釋放任何 Unmanaged 資源。 .NET 語言為這類物件提供一個方便的[`using` 語句](../csharp/language-reference/keywords/using.md)，如下列範例所示：
 
-[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
+[!code-csharp[UnmanagedResources](../../samples/snippets/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
 當 `using` 區塊完成後，.NET 執行階段會自動呼叫 `stream` 物件的 <xref:System.IDisposable.Dispose> 方法來釋放檔案控制代碼。 如果例外狀況造成控制項離開區塊，執行階段也會執行此作業。
 
@@ -71,17 +71,17 @@ Microsoft 積極地開發並支援三種 .net C#語言F#：、和 Visual Basic�
 
 物件是特定類型的執行個體。 指定物件所允許的唯一作業會是其類型所允許的作業。 `Dog` 類型可能會有 `Jump` 和 `WagTail` 方法，但沒有 `SumTotal` 方法。 程式只能呼叫屬於指定類型的方法。 所有其他呼叫會導致編譯時期錯誤，或執行階段例外狀況 (如果使用動態功能或 `object`)。
 
-.NET 語言是物件導向，具有基底和衍生類別的階層架構。 .NET 執行階段只允許符合物件階層架構的的物件轉換和呼叫。 請記住，以任何 .NET 語言所定義的每種類型都是衍生自基底 <xref:System.Object> 類型。
+.NET 語言是物件導向，具有基底和衍生類別的階層架構。 .NET 執行階段只允許符合物件階層架構的的物件轉換和呼叫。 請記住，以任何 .NET 語言所定義的每種類型都是衍生自基底 <xref:System.Object> 型別。
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
 此外也會使用型別安全，藉由確保存取子關鍵字的精確度，來協助強制執行封裝。 存取子關鍵字是控制其他程式碼存取指定型別成員的成品。 這些關鍵字通常會用於某種類型中用來管理其行為的各種資料。
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
 C#、Visual Basic 與 F# 支援本機*型別推斷*。 型別推斷表示編譯器會從右邊的運算式推算左邊的運算式類型。 這並不會破壞或規避型別安全。 產生的類型確實具有強型別，其中包含其所指的所有項目。 上述範例中的 `dog` 已重寫並引入型別推斷，範例的其餘部分則保持不變：
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
 F#除了在和 Visual Basic 中C#找到的方法區域型別推斷，還有更進一步的型別推斷功能。 如需詳細資訊，請參閱[型別推斷](../fsharp/language-reference/type-inference.md)。
 
@@ -101,7 +101,7 @@ F#除了在和 Visual Basic 中C#找到的方法區域型別推斷，還有更�
 
 下列範例顯示使用 <xref:System.Collections.Generic.List%601> 類型執行個體的基本程式正在執行：
 
-[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
+[!code-csharp[GenericsShort](../../samples/snippets/csharp/snippets/tour/GenericsShort.csx)]
 
 如需詳細資訊，請參閱[泛型型別 (泛型) 概觀](generics.md)主題。
 
@@ -131,9 +131,9 @@ Mono (以及 Xamarin) 對 Java 和 Objective-C 的互通性支援大致上很類
 
 CLR 可讓您根據語言支援透過 `unsafe` 程式碼存取原生記憶體及執行指標算術。 特定演算法和系統互通性需要這些作業。 Unsafe 程式碼雖然功能強大，但除非是必須與系統 API 互通，或必須實作最有效率的演算法，否則不建議使用。 Unsafe 程式碼在不同的環境中執行時可能不盡相同，而且也會失去記憶體回收行程和型別安全的好處。 建議您盡可能限制和集中使用 Unsafe 程式碼，並徹底測試該程式碼。
 
-下列範例是 `StringBuilder` 類別的 `ToString()` 方法修改後的版本。 它說明如何使用 `unsafe` 程式碼直接四處移動記憶體區塊，以有效率地實作演算法：
+下列範例是 `ToString()` 類別的 `StringBuilder` 方法修改後的版本。 它說明如何使用 `unsafe` 程式碼直接四處移動記憶體區塊，以有效率地實作演算法：
 
-[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
+[!code-csharp[Unsafe](../../samples/snippets/csharp/snippets/tour/Unsafe.csx)]
 
 ## <a name="next-steps"></a>後續步驟
 

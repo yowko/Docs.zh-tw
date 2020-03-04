@@ -4,12 +4,12 @@ description: 瞭解如何將現有 TensorFlow 模型的知識，轉移到新的 
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: f5ec31f8bfdc089d275588b228c8ce6f28a44201
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 1e5478f53c82f36ddafe19e3659e2234ff9687b4
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092547"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241022"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>教學課程：從預先定型的 TensorFlow 模型產生 ML.NET 影像分類模型
 
@@ -145,15 +145,15 @@ toaster2.png    appliance
 
 1. 在 `using`Program.cs*檔案頂端新增下列額外的* 陳述式：
 
-    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddUsings)]
+    [!code-csharp[AddUsings](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#AddUsings)]
 
 1. 將下列程式碼新增至 `Main` 方法上方的一行，以指定資產路徑：
 
-    [!code-csharp[DeclareGlobalVariables](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareGlobalVariables)]
+    [!code-csharp[DeclareGlobalVariables](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DeclareGlobalVariables)]
 
 1. 為輸入資料和預測建立類別。
 
-    [!code-csharp[DeclareImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareImageData)]
+    [!code-csharp[DeclareImageData](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DeclareImageData)]
 
     `ImageData` 是輸入資料集類別，並具有下列 <xref:System.String> 欄位：
 
@@ -162,7 +162,7 @@ toaster2.png    appliance
 
 1. 將新類別新增至 `ImagePrediction` 的專案：
 
-    [!code-csharp[DeclareImagePrediction](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DeclareImagePrediction)]
+    [!code-csharp[DeclareImagePrediction](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DeclareImagePrediction)]
 
     `ImagePrediction` 是影像預測類別，並具有下列欄位：
 
@@ -175,7 +175,7 @@ toaster2.png    appliance
 
 1. 搭配 `mlContext` 的新執行個體來初始化 `MLContext` 變數。  在 `Console.WriteLine("Hello World!")` 方法中，以下列程式碼取代 `Main`：
 
-    [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CreateMLContext)]
+    [!code-csharp[CreateMLContext](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#CreateMLContext)]
 
     [MLContext 類別](xref:Microsoft.ML.MLContext)是所有 ML.NET 作業的起點，且初始化 `mlContext` 會建立新的 ML.NET 環境，其可在模型建立工作流程物件之間共用。 就概念而言，類似於 Entity Framework 中的 `DBContext`。
 
@@ -183,7 +183,7 @@ toaster2.png    appliance
 
 1. 開始模型有數個您需要傳入的參數。 使用下列程式碼，在 `Main()` 方法後面建立結構，以將參數值對應至易記名稱：
 
-    [!code-csharp[InceptionSettings](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#InceptionSettings)]
+    [!code-csharp[InceptionSettings](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#InceptionSettings)]
 
 ### <a name="create-a-display-utility-method"></a>建立顯示公用程式方法
 
@@ -200,7 +200,7 @@ toaster2.png    appliance
 
 1. 填入 `DisplayResults` 方法的主體：
 
-    [!code-csharp[DisplayPredictions](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPredictions)]
+    [!code-csharp[DisplayPredictions](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DisplayPredictions)]
 
 ### <a name="create-a-tsv-file-utility-method"></a>建立 .tsv 檔案公用程式方法
 
@@ -215,7 +215,7 @@ toaster2.png    appliance
 
 1. 填入 `ReadFromTsv` 方法的主體：
 
-    [!code-csharp[ReadFromTsv](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReadFromTsv)]
+    [!code-csharp[ReadFromTsv](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#ReadFromTsv)]
 
     程式碼會剖析 `tags.tsv` 檔案，將檔案路徑新增至 `ImagePath` 屬性的影像檔案名稱，並將它和 `Label` 載入 `ImageData` 物件中。
 
@@ -232,11 +232,11 @@ toaster2.png    appliance
 
 1. 建立 `ImageData` 物件，其中包含單一 `ImagePath`的完整路徑和影像檔案名稱。 將下列程式碼新增為 `ClassifySingleImage()` 方法中的下一行：
 
-    [!code-csharp[LoadImageData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadImageData)]
+    [!code-csharp[LoadImageData](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#LoadImageData)]
 
 1. 藉由新增下列程式碼做為 `ClassifySingleImage` 方法中的下一行，進行單一預測：
 
-    [!code-csharp[PredictSingle](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#PredictSingle)]
+    [!code-csharp[PredictSingle](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#PredictSingle)]
 
     若要取得預測，請使用[Predict （）](xref:Microsoft.ML.PredictionEngine%602.Predict%2A)方法。 [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，可讓您在單一資料實例上執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) 不是安全執行緒。 可接受在單一執行緒或原型環境中使用。 為了改善生產環境中的效能和執行緒安全，請使用 `PredictionEnginePool` 服務，這會建立[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件的[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) ，以便在整個應用程式中使用。 請參閱本指南，以瞭解如何[在 ASP.NET Core WEB API 中使用 `PredictionEnginePool`](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)。
 
@@ -245,7 +245,7 @@ toaster2.png    appliance
 
 1. 將預測結果顯示為 `ClassifySingleImage()` 方法中的下一行程式碼：
 
-   [!code-csharp[DisplayPrediction](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayPrediction)]
+   [!code-csharp[DisplayPrediction](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DisplayPrediction)]
 
 ## <a name="construct-the-mlnet-model-pipeline"></a>建立 ML.NET 模型管線
 
@@ -266,13 +266,13 @@ ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行
 
 1. 新增估算器以載入、調整大小，並從影像資料中將圖元解壓縮：
 
-    [!code-csharp[ImageTransforms](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ImageTransforms)]
+    [!code-csharp[ImageTransforms](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#ImageTransforms)]
 
     影像資料必須處理成 TensorFlow 模型所預期的格式。 在此情況下，影像會載入記憶體中，並調整為一致大小，而圖元會解壓縮為數值向量。
 
 1. 新增估計工具以載入 TensorFlow 模型，並對它進行評分：
 
-    [!code-csharp[ScoreTensorFlowModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ScoreTensorFlowModel)]
+    [!code-csharp[ScoreTensorFlowModel](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#ScoreTensorFlowModel)]
 
     管線中的這個階段會將 TensorFlow 模型載入記憶體中，然後透過 TensorFlow 模型網路處理圖元值的向量。 將輸入套用至深度學習模型，並使用模型產生輸出，稱為**計分**。 整體使用模型時，計分會進行推斷或預測。
 
@@ -282,29 +282,29 @@ ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行
 
 1. 新增估計工具，以將定型資料中的字串標籤對應到整數索引鍵值：
 
-    [!code-csharp[MapValueToKey](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapValueToKey)]
+    [!code-csharp[MapValueToKey](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#MapValueToKey)]
 
     接下來附加的 ML.NET 訓練員要求其標籤必須是 `key` 格式，而不是任一字元串。 「索引鍵」是一個數位，其中包含一個與字串值的對應。
 
 1. 新增 ML.NET 訓練演算法：
 
-    [!code-csharp[AddTrainer](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#AddTrainer)]
+    [!code-csharp[AddTrainer](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#AddTrainer)]
 
 1. 新增估計工具以將預測的索引鍵值對應回字串：
 
-    [!code-csharp[MapKeyToValue](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#MapKeyToValue)]
+    [!code-csharp[MapKeyToValue](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#MapKeyToValue)]
 
 ## <a name="train-the-model"></a>將模型定型
 
 1. 使用[LoadFromTextFile](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile(Microsoft.ML.DataOperationsCatalog,System.String,Microsoft.ML.Data.TextLoader.Options))包裝函式載入定型資料。 將下列程式碼加入為 `GenerateModel()` 方法中的下一行：
 
-    [!code-csharp[LoadData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadData "Load the data")]
+    [!code-csharp[LoadData](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#LoadData "Load the data")]
 
     ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。 `IDataView` 是彈性且有效率的表格式資料描述方式 (數值和文字)。 資料可以從文字或即時 (例如 SQL 資料庫或記錄檔) 載入至 `IDataView` 物件。
 
 1. 使用上述載入的資料來定型模型：
 
-    [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#TrainModel)]
+    [!code-csharp[TrainModel](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#TrainModel)]
 
     `Fit()` 方法會將訓練資料集套用至管線，以訓練您的模型。
 
@@ -312,13 +312,13 @@ ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行
 
 1. 將下列程式碼新增至 `GenerateModel` 方法的下一行，以載入並轉換測試資料：
 
-    [!code-csharp[LoadAndTransformTestData](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#LoadAndTransformTestData "Load and transform test data")]
+    [!code-csharp[LoadAndTransformTestData](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#LoadAndTransformTestData "Load and transform test data")]
 
     您可以使用幾個範例影像來評估模型。 就像定型資料一樣，這些都需要載入 `IDataView`，讓模型可以轉換它們。
 
 1. 將下列程式碼新增至 `GenerateModel()` 方法，以評估模型：
 
-    [!code-csharp[Evaluate](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#Evaluate)]
+    [!code-csharp[Evaluate](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#Evaluate)]
 
     當您具有預測之後，請設定 [Evaluate()](xref:Microsoft.ML.RecommendationCatalog.Evaluate%2A) 方法：
 
@@ -329,7 +329,7 @@ ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行
 
     使用下列程式碼來顯示計量、共用結果，然後依結果採取動作：
 
-    [!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#DisplayMetrics)]
+    [!code-csharp[DisplayMetrics](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#DisplayMetrics)]
 
     下列計量會針對影像分類進行評估：
 
@@ -338,17 +338,17 @@ ML.NET 模型管線是一鏈估算器。 請注意，管線結構中不會執行
 
 1. 新增下列程式碼來將定型後的模型作為下一行傳回：
 
-    [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#ReturnModel)]
+    [!code-csharp[SaveModel](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#ReturnModel)]
 
 ## <a name="run-the-application"></a>執行應用程式！
 
 1. 在建立 MLCoNtext 類別之後，將呼叫新增至 `Main` 方法中的 `GenerateModel`：
 
-    [!code-csharp[CallGenerateModel](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallGenerateModel)]
+    [!code-csharp[CallGenerateModel](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#CallGenerateModel)]
 
 1. 將呼叫新增至 `ClassifySingleImage()` 方法，做為 `Main` 方法中的下一行程式碼：
 
-    [!code-csharp[CallClassifySingleImage](../../../samples/machine-learning/tutorials/TransferLearningTF/Program.cs#CallClassifySingleImage)]
+    [!code-csharp[CallClassifySingleImage](../../../samples/snippets/machine-learning/TransferLearningTF/csharp/Program.cs#CallClassifySingleImage)]
 
 1. 執行主控台應用程式（Ctrl + F5）。 您的結果應該與下列輸出類似。  您可能會看到警告或處理中訊息，但為了讓結果變得清楚，這些訊息已從下列結果中移除。
 

@@ -4,12 +4,12 @@ description: 了解如何使用可回收 AssemblyLoadContext 來載入和卸載�
 author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
-ms.openlocfilehash: 462e6d2c7f135d2ba274d78fe31ad27391eac416
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 267c2209556b66ab3541c9c79c99d7eceb2024da
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740442"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159737"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>如何使用 .NET Core 中的組件卸載功能及對其進行偵錯
 
@@ -38,7 +38,7 @@ ms.locfileid: "73740442"
 
 如您所見，`Load` 方法會傳回 `null`。 這表示所有相依性組件都會載入到預設內容，而新的內容只會包含明確載入其中的組件。
 
-如果您也想要將部分或所有相依性載入到 `AssemblyLoadContext`，則可以在 `Load` 方法中使用 `AssemblyDependencyResolver`。 `AssemblyDependencyResolver` 會將元件名稱解析成絕對元件檔案路徑。 解析程式會使用載入內容之主要元件目錄中的 *.deps.json*檔案和元件檔。
+如果您也想要將部分或所有相依性載入到 `AssemblyLoadContext`，則可以在 `AssemblyDependencyResolver` 方法中使用 `Load`。 `AssemblyDependencyResolver` 會將元件名稱解析成絕對元件檔案路徑。 解析程式會使用載入內容之主要元件目錄中的 *.deps.json*檔案和元件檔。
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
@@ -56,7 +56,7 @@ ms.locfileid: "73740442"
 
 [!code-csharp[Part 2](~/samples/snippets/standard/assembly/unloading/simple_example.cs#4)]
 
-在 `Main` 方法傳回之後，您可以藉由在自訂的 `AssemblyLoadContext` 上呼叫 `Unload` 方法，或去除您對 `AssemblyLoadContext` 的參考來起始卸載：
+在 `Main` 方法傳回之後，您可以藉由在自訂的 `Unload` 上呼叫 `AssemblyLoadContext` 方法，或去除您對 `AssemblyLoadContext` 的參考來起始卸載：
 
 [!code-csharp[Part 3](~/samples/snippets/standard/assembly/unloading/simple_example.cs#5)]
 
@@ -82,7 +82,7 @@ ms.locfileid: "73740442"
 
 由於卸載的關係，這很容易忘記可能會讓 `AssemblyLoadContext` 運作，並防止卸載的參考。 以下是可以保存參考的實體（其中一些不明顯）摘要：
 
-- 儲存在堆疊位置或處理器暫存器中的可回收 `AssemblyLoadContext` 外部的一般參考（方法區域變數，由使用者程式碼明確建立，或由即時（JIT）編譯器隱含建立）、靜態變數或強式（釘選） GC 控制碼，以及可傳遞的，指向：
+- 保留自可回收 `AssemblyLoadContext` 外部的一般參考，儲存于堆疊位置或處理器暫存器中（方法區域變數是由使用者程式碼明確建立，或由即時（JIT）編譯器隱含建立）、靜態變數或強式（釘選） GC 控制碼，以及可直接指向：
   - 載入到可回收 `AssemblyLoadContext` 中的組件。
   - 來自這類組件的類型。
   - 來自這類組件類型的執行個體。
@@ -123,12 +123,12 @@ plugin load /path/to/libsosplugin.so
 !dumpheap -type LoaderAllocator
 ```
 
-此命令會傾印 GC 堆積中類型名稱包含 `LoaderAllocator` 的所有物件。 請看以下範例：
+此命令會傾印 GC 堆積中類型名稱包含 `LoaderAllocator` 的所有物件。 範例如下：
 
 ```console
          Address               MT     Size
-000002b78000ce40 00007ffadc93a288       48     
-000002b78000ceb0 00007ffadc93a218       24     
+000002b78000ce40 00007ffadc93a288       48
+000002b78000ceb0 00007ffadc93a218       24
 
 Statistics:
               MT    Count    TotalSize Class Name
@@ -137,7 +137,7 @@ Statistics:
 Total 2 objects
 ```
 
-在下面的 "Statistics:" 部分中，檢查屬於 `System.Reflection.LoaderAllocator` 的 `MT` (`MethodTable`)，這是我們關注的物件。 然後，在清單中，尋找 `MT` 符合的專案，並取得物件本身的位址。 在我們的案例中，它是 "000002b78000ce40"。
+在下面的 "Statistics:" 部分中，檢查屬於 `MT` 的 `MethodTable` (`System.Reflection.LoaderAllocator`)，這是我們關注的物件。 然後，在清單中，尋找 `MT` 符合的專案，並取得物件本身的位址。 在我們的案例中，它是 "000002b78000ce40"。
 
 既然我們知道 `LoaderAllocator` 物件的位址，就可以使用另一個命令來尋找其 GC 根：
 
@@ -196,35 +196,35 @@ OS Thread Id: 0x6ba8 (0)
 0000001fc697d5c8 00007ffb50d9de12 [HelperMethodFrame: 0000001fc697d5c8] System.Diagnostics.Debugger.BreakInternal()
 0000001fc697d6d0 00007ffa864765fa System.Diagnostics.Debugger.Break()
 0000001fc697d700 00007ffa864736bc example.Program.Main(System.String[]) [E:\unloadability\example\Program.cs @ 70]
-0000001fc697d998 00007ffae5fdc1e3 [GCFrame: 0000001fc697d998] 
-0000001fc697df28 00007ffae5fdc1e3 [GCFrame: 0000001fc697df28] 
+0000001fc697d998 00007ffae5fdc1e3 [GCFrame: 0000001fc697d998]
+0000001fc697df28 00007ffae5fdc1e3 [GCFrame: 0000001fc697df28]
 OS Thread Id: 0x2ae4 (1)
-Unable to walk the managed stack. The current thread is likely not a 
+Unable to walk the managed stack. The current thread is likely not a
 managed thread. You can run !threads to get a list of managed threads in
 the process
 Failed to start stack walk: 80070057
 OS Thread Id: 0x61a4 (2)
-Unable to walk the managed stack. The current thread is likely not a 
+Unable to walk the managed stack. The current thread is likely not a
 managed thread. You can run !threads to get a list of managed threads in
 the process
 Failed to start stack walk: 80070057
 OS Thread Id: 0x7fdc (3)
-Unable to walk the managed stack. The current thread is likely not a 
+Unable to walk the managed stack. The current thread is likely not a
 managed thread. You can run !threads to get a list of managed threads in
 the process
 Failed to start stack walk: 80070057
 OS Thread Id: 0x5390 (4)
-Unable to walk the managed stack. The current thread is likely not a 
+Unable to walk the managed stack. The current thread is likely not a
 managed thread. You can run !threads to get a list of managed threads in
 the process
 Failed to start stack walk: 80070057
 OS Thread Id: 0x5ec8 (5)
         Child SP               IP Call Site
-0000001fc70ff6e0 00007ffb5437f6e4 [DebuggerU2MCatchHandlerFrame: 0000001fc70ff6e0] 
+0000001fc70ff6e0 00007ffb5437f6e4 [DebuggerU2MCatchHandlerFrame: 0000001fc70ff6e0]
 OS Thread Id: 0x4624 (6)
         Child SP               IP Call Site
 GetFrameContext failed: 1
-0000000000000000 0000000000000000 
+0000000000000000 0000000000000000
 OS Thread Id: 0x60bc (7)
         Child SP               IP Call Site
 0000001fc727f158 00007ffb5437fce4 [HelperMethodFrame: 0000001fc727f158] System.Threading.Thread.SleepInternal(Int32)
@@ -232,8 +232,8 @@ OS Thread Id: 0x60bc (7)
 0000001fc727f290 00007ffa865005b3 test.Program.ThreadProc() [E:\unloadability\test\Program.cs @ 17]
 0000001fc727f2c0 00007ffb37ea6a5b System.Threading.Thread.ThreadMain_ThreadStart()
 0000001fc727f2f0 00007ffadbc4cbe3 System.Threading.ExecutionContext.RunInternal(System.Threading.ExecutionContext, System.Threading.ContextCallback, System.Object)
-0000001fc727f568 00007ffae5fdc1e3 [GCFrame: 0000001fc727f568] 
-0000001fc727f7f0 00007ffae5fdc1e3 [DebuggerU2MCatchHandlerFrame: 0000001fc727f7f0] 
+0000001fc727f568 00007ffae5fdc1e3 [GCFrame: 0000001fc727f568]
+0000001fc727f7f0 00007ffae5fdc1e3 [DebuggerU2MCatchHandlerFrame: 0000001fc727f7f0]
 
 ```
 

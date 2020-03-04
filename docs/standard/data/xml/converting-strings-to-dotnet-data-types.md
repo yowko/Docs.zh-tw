@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
-ms.openlocfilehash: ac7e1b68f3f43a0c84c7330666825207e5b90004
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e54990785cafd6061c6d53c13af6476a4b46e20e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711047"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160348"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>將字串轉換成 .NET Framework 資料型別
 若要將一個字串轉換成 .NET Framework 資料型別，請使用符合應用程式需求的 **XmlConvert** 方法。 如需所有可用於 **XmlConvert** 類別的轉換方法清單，請參閱 <xref:System.Xml.XmlConvert>。  
@@ -27,7 +27,7 @@ ms.locfileid: "75711047"
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
 |Double.NegativeInfinity|"-INF"|  
-|DateTime|格式為 "yyyy-MM-ddTHH:mm:sszzzzzz" 及其子集。|  
+|Datetime|格式為 "yyyy-MM-ddTHH:mm:sszzzzzz" 及其子集。|  
 |Timespan|格式為 PnYnMnTnHnMnS，即 `P2Y10M15DT10H30M20S` 代表期間為 2 年 10 個月 15 天 10 小時 30 分鐘 20 秒。|  
   
 > [!NOTE]
@@ -47,9 +47,9 @@ DateTime date = new DateTime (2001, 08, 04);
 writer.WriteElementString("Date", XmlConvert.ToString(date));  
 ```  
   
- **Output**  
+ **輸出**  
   
- `<Date>2001-08-04T00:00:00</Date>`。  
+ `<Date>2001-08-04T00:00:00</Date>`第 1 課：建立 Windows Azure 儲存體物件{2}。  
   
  下列程式碼會將整數轉換成字串：  
   
@@ -65,7 +65,7 @@ Int32 value = 200;
 writer.WriteElementString("Number", XmlConvert.ToString(value));  
 ```  
   
- **Output**  
+ **輸出**  
   
  `<Number>200</Number>`  
   
@@ -77,7 +77,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
 |有效的字串輸入參數|.NET Framework 輸出型別|  
 |----------------------------------|--------------------------------|  
 |"true"|Boolean.True|  
-|"1"|Boolean.True|  
+|「1」|Boolean.True|  
 |"false"|Boolean.False|  
 |"0"|Boolean.False|  
   
@@ -87,7 +87,7 @@ writer.WriteElementString("Number", XmlConvert.ToString(value));
   
 ```xml  
 <Boolean>true</Boolean>  
-<Boolean>1</Boolean>   
+<Boolean>1</Boolean>
 ```  
   
  這兩者都可由下列程式碼辨識，其中 **bvalue** 為 **System.Boolean.True**：  
@@ -131,7 +131,7 @@ Double value = Double.PositiveInfinity;
 writer.WriteElementString("Infinity", XmlConvert.ToString(value));  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 資料類型轉換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [將 .NET Framework 類型轉換成字串](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

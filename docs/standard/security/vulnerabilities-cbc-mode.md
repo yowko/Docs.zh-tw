@@ -3,16 +3,16 @@ title: CBC 解密弱點
 description: 瞭解如何使用填補來偵測和減輕密碼區塊連結（CBC）模式對稱解密的時間弱點。
 ms.date: 06/12/2018
 author: blowdart
-ms.openlocfilehash: 87f8e3c53e4d06f6a4edc7670891ac83ec8d65ab
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4616ef9015b47ff232a17f058c7a0f1449f42e81
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705843"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159958"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>使用填補進行 CBC 模式對稱解密的時間弱點
 
-Microsoft 認為在套用可驗證的填補時，若未先確定加密文字的完整性，就無法再將加密的資料解密為對稱式加密模式，但非常特定具體. 此 judgement 是以目前已知的密碼編譯研究為基礎。 
+Microsoft 認為在套用可驗證的填補時，若未先確定加密文字的完整性，就無法再將加密的資料解密為對稱式加密模式，但非常特定具體. 此 judgement 是以目前已知的密碼編譯研究為基礎。
 
 ## <a name="introduction"></a>簡介
 

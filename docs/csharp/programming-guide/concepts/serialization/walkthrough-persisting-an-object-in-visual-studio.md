@@ -1,12 +1,12 @@
 ---
 title: 逐步解說：使用 C# 保存物件
 ms.date: 04/26/2018
-ms.openlocfilehash: 5e3a327ca0a257c45de361e0b3734e0b127f9869
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 9531909bdf1ed61305c292411ef2cd08b7b67465
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70851036"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240463"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>逐步解說：使用 C\# 保存物件
 
@@ -20,7 +20,7 @@ ms.locfileid: "70851036"
 > [!IMPORTANT]
 > 這個範例會使用二進位格式檔案來儲存資料。 這些格式不適用於敏感性資料，例如密碼或信用卡資訊。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 若要建置並執行，請安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。
 
@@ -41,19 +41,19 @@ ms.locfileid: "70851036"
 1. 在編輯器中開啟應用程式，並新增名為 `Loan.cs` 的新類別。
 1. 將下列程式碼新增至 `Loan` 類別：
 
-[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#1)]
+[!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#1)]
 
 您還必須建立使用 `Loan` 類別的應用程式。
 
 ## <a name="serialize-the-loan-object"></a>序列化 Loan 物件
 
-1. 開啟 `Program.cs`。 加入下列程式碼：
+1. 開啟 `Program.cs`。 新增下列程式碼：
 
-[!code-csharp[Create a loan object](../../../../../samples/csharp/serialization/Program.cs#1)]
+[!code-csharp[Create a loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#1)]
 
 為 `PropertyChanged` 事件新增事件處理常式，並新增幾行來修改 `Loan` 物件和顯示所做的變更。 您可以在下列程式碼中看到新增的項目：
 
-[!code-csharp[Listening for the PropertyChanged event](../../../../../samples/csharp/serialization/Program.cs#2)]
+[!code-csharp[Listening for the PropertyChanged event](../../../../../samples/snippets/csharp/serialization/Program.cs#2)]
 
 此時，您可以執行該程式碼，並查看目前的輸出：
 
@@ -69,33 +69,33 @@ New customer value: Henry Clay
 
 為了保存 Loan 類別的值，您必須先使用 `Serializable` 屬性來標示類別。 在 Loan 類別定義之上新增下列程式碼：
 
-[!code-csharp[Loan class definition](../../../../../samples/csharp/serialization/Loan.cs#2)]
+[!code-csharp[Loan class definition](../../../../../samples/snippets/csharp/serialization/Loan.cs#2)]
 
 編譯器接收到 <xref:System.SerializableAttribute> 時，即會了解類別中的所有項目皆可保存至檔案。 因為 `PropertyChanged` 事件不代表應儲存之物件圖形的一部分，所以它不應該被序列化。 這樣做會序列化附加至該事件的所有物件。 您可以將 <xref:System.NonSerializedAttribute> 新增至 `PropertyChanged` 事件處理常式的欄位宣告。
 
-[!code-csharp[Disable serialization for the event handler](../../../../../samples/csharp/serialization/Loan.cs#3)]
+[!code-csharp[Disable serialization for the event handler](../../../../../samples/snippets/csharp/serialization/Loan.cs#3)]
 
 從 C# 7.3 開始，您可以使用 `field` 目標值，將屬性 (attribute) 附加至使用自動實作屬性 (property) 的支援欄位。 下列程式碼會新增 `TimeLastLoaded` 屬性，並將它標示為不可序列化：
 
-[!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/csharp/serialization/Loan.cs#4)]
+[!code-csharp[Disable serialization for an auto-implemented property](../../../../../samples/snippets/csharp/serialization/Loan.cs#4)]
 
 下一個步驟是將序列化程式碼新增至 LoanApp 應用程式。 若要序列化類別並將它寫入檔案，您必須使用 <xref:System.IO> 和 <xref:System.Runtime.Serialization.Formatters.Binary> 命名空間。 若要避免輸入完整的名稱，您可以新增必要命名空間的參考，如下列程式碼所示：
 
-[!code-csharp[Adding namespaces for serialization](../../../../../samples/csharp/serialization/Program.cs#3)]
+[!code-csharp[Adding namespaces for serialization](../../../../../samples/snippets/csharp/serialization/Program.cs#3)]
 
 下一個步驟是新增程式碼，以在建立物件時，從檔案還原序列化物件。 將常數新增至已序列化資料檔案名稱的類別，如下列程式碼所示：
 
-[!code-csharp[Define the name of the saved file](../../../../../samples/csharp/serialization/Program.cs#4)]
+[!code-csharp[Define the name of the saved file](../../../../../samples/snippets/csharp/serialization/Program.cs#4)]
 
 接下來，在建立 `TestLoan` 物件這一行之後新增下列程式碼：
 
-[!code-csharp[Read from a file if it exists](../../../../../samples/csharp/serialization/Program.cs#5)]
+[!code-csharp[Read from a file if it exists](../../../../../samples/snippets/csharp/serialization/Program.cs#5)]
 
 您必須先檢查檔案是否存在。 如果存在的話，請建立 <xref:System.IO.Stream> 類別以讀取二進位檔案，並建立 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 類別來轉譯該檔案。 您也需要將資料流類型轉換成 Loan 物件類型。
 
 接下來，您必須新增程式碼，將類別序列化為檔案。 在 `Main` 方法的現有程式碼之後，新增下列程式碼：
 
-[!code-csharp[Save the existing Loan object](../../../../../samples/csharp/serialization/Program.cs#6)]
+[!code-csharp[Save the existing Loan object](../../../../../samples/snippets/csharp/serialization/Program.cs#6)]
 
 您現在可以再次建置並執行應用程式。 第一次執行時，請注意利率會從 7.5 開始，然後變更為 7.1。 關閉應用程式，然後再重新執行。 現在，應用程式會列印訊息，表示它已讀取儲存的檔案，而利率即使在變更它的程式碼之前也是 7.1。
 

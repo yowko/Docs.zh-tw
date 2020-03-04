@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
-ms.openlocfilehash: e6b811d58ef9d98c51e9a45a46a1965c4fa12b55
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b1df520d00d3a98b2e518092d4eff51b5d0b7741
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711112"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158021"
 ---
 # <a name="changing-namespace-prefix-properties"></a>變更命名空間前置詞屬性
 **XmlNode** 類別可以讓您變更與指定之節點關聯的命名空間前置詞。 例如，下列程式碼顯示要變更之項目的前置詞。  
@@ -27,12 +27,12 @@ Console.WriteLine(doc.InnerXml)
 ```csharp  
 XmlDocument doc = new XmlDocument();  
 doc.LoadXml("<a:test xmlns:a='123' xmlns:b='456'/>");  
-XmlElement e = doc.DocumentElement;         
+XmlElement e = doc.DocumentElement;
 e.Prefix = "b";  
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **Output**  
+ **輸出**  
   
 ```xml  
 <b:test xmlns:a="123" xmlns:b="456" />  
@@ -51,12 +51,12 @@ Console.WriteLine(doc.InnerXml)
 ```csharp  
 XmlDocument doc = new XmlDocument();  
 doc.LoadXml("<test xmlns='123'/>");  
-XmlElement e = doc.DocumentElement;         
+XmlElement e = doc.DocumentElement;
 e.Prefix = "a";  
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **Output**  
+ **輸出**  
   
 ```xml  
 <a:test xmlns="123" xmlns:a="123" />  
@@ -64,6 +64,6 @@ Console.WriteLine(doc.InnerXml);
   
  樹狀結構保留於字串做為 **doc.InnerXml** 的呼叫結果時，會加入 `xmlns:a='123'` 屬性以保留 `test` 項目的命名空間。 它原本是 `'123'`，且仍保留為 `'123'`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

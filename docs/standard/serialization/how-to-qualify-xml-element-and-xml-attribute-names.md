@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 383dc7687e67e183b86598857067801c950b0312
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: db0795dd83cc96aba49dd435c875e98a9a6c18cb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545086"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159867"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>如何限定 XML 元素和 XML 屬性名稱
 
@@ -40,7 +40,7 @@ XML 命名空間提供限定 XML 文件中 XML 項目和 XML 屬性名稱的方�
 
 ## <a name="example"></a>範例
 
-下列範例建立 `XmlSerializerNamespaces`，並在物件加入兩個前置詞和命名空間配對。 程式碼建立用來系列化 `XmlSerializer` 類別執行個體的 `Books`。 程式碼以 `Serialize``XmlSerializerNamespaces`呼叫  方法，讓 XML 能包含有前置詞的命名空間。
+下列範例建立 `XmlSerializerNamespaces`，並在物件加入兩個前置詞和命名空間配對。 程式碼建立用來系列化 `XmlSerializer` 類別執行個體的 `Books`。 程式碼以 `Serialize``XmlSerializerNamespaces`呼叫 {3} 方法，讓 XML 能包含有前置詞的命名空間。
 
 ```vb
 Imports System.IO
@@ -111,7 +111,7 @@ public class Program
     {
         SerializeObject("XmlNamespaces.xml");
     }
-    
+
     public static void SerializeObject(string filename)
     {
         var mySerializer = new XmlSerializer(typeof(Books));
@@ -169,6 +169,6 @@ public class Price
 - [XML 序列化簡介](introducing-xml-serialization.md)
 - [XmlSerializer 類別](xref:System.Xml.Serialization.XmlSerializer)
 - [可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
-- [如何：指定 XML 資料流程的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [如何：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
 - [如何：序列化物件](how-to-serialize-an-object.md)
 - [如何：還原序列化物件](how-to-deserialize-an-object.md)

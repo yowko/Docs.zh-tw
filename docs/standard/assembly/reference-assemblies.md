@@ -4,12 +4,12 @@ description: 瞭解參考元件，這是 .NET 中只包含程式庫公用 API �
 author: MSDN-WhiteKnight
 ms.date: 09/12/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 7d2cc01861e8a3fdc260a2990ca0652878c386b0
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 3b85e51a015cca1e53ee2503c7bfa58c504fc718
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089274"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156461"
 ---
 # <a name="reference-assemblies"></a>參考組件
 
@@ -27,7 +27,7 @@ ms.locfileid: "74089274"
 
 .NET Framework 程式庫的參考元件會與目標套件一起散發。 您可以藉由下載獨立安裝程式或在 Visual Studio 安裝程式中選取元件來取得它們。 如需詳細資訊，請參閱[安裝適用于開發人員的 .NET Framework](../../framework/install/guide-for-developers.md)。 針對 .NET Core 和 .NET Standard，參考元件會視需要自動下載（透過 NuGet）並加以參考。 針對 .NET Core 3.0 和更新版本，核心架構的參考元件位於[NETCore](https://www.nuget.org/packages/Microsoft.NETCore.App.Ref)中，而不是使用[NETCore 應用程式](https://www.nuget.org/packages/Microsoft.NETCore.App)套件（3.0 之前的版本）。 如需詳細資訊，請參閱 .NET Core 指南中的[封裝、中繼套件和](../../core/packages.md)架構。
 
-當您使用 [**加入參考**] 對話方塊，在 Visual Studio 中加入 .NET Framework 元件的參考時，您可以從清單中選取元件，然後 Visual Studio 自動尋找對應至目標 Framework 版本的參考元件。已在您的專案中選取。 這同樣適用于使用[參考](/visualstudio/msbuild/common-msbuild-project-items#reference)專案專案，直接在 MSBuild 專案中加入參考：您只需要指定元件名稱，而不是完整的檔案路徑。 當您在命令列中使用 `-reference` 編譯器選項（[在C# ](../../csharp/language-reference/compiler-options/reference-compiler-option.md)和中[Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)）新增這些元件的參考，或在 Roslyn API 中使用 <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> 方法時，您必須手動指定正確目標平臺版本的參考元件檔案。 .NET Framework 參考元件檔案位於 *% ProgramFiles （x86）%\\參考元件\\Microsoft\\Framework\\中.Netframework*目錄。 針對 .NET Core，您可以藉由將 `PreserveCompilationContext` 專案屬性設定為 `true`，強制發行作業將目標平臺的參考元件複製到輸出目錄的*publish/refs*子目錄中。 然後您可以將這些參考元件檔案傳遞給編譯器。 使用[DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/)套件中的 `DependencyContext` 有助於找出其路徑。
+當您使用 [**加入參考**] 對話方塊在 Visual Studio 中加入 .NET Framework 元件的參考時，會從清單中選取元件，而且 Visual Studio 會自動尋找對應至專案中所選目標 Framework 版本的參考元件。 這同樣適用于使用[參考](/visualstudio/msbuild/common-msbuild-project-items#reference)專案專案，直接在 MSBuild 專案中加入參考：您只需要指定元件名稱，而不是完整的檔案路徑。 當您在命令列中使用 `-reference` 編譯器選項（[在C# ](../../csharp/language-reference/compiler-options/reference-compiler-option.md)和中[Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md)）新增這些元件的參考，或在 Roslyn API 中使用 <xref:Microsoft.CodeAnalysis.Compilation.AddReferences%2A?displayProperty=nameWithType> 方法時，您必須手動指定正確目標平臺版本的參考元件檔案。 .NET Framework 參考元件檔案位於 *% ProgramFiles （x86）%\\參考元件\\Microsoft\\Framework\\中.Netframework*目錄。 針對 .NET Core，您可以藉由將 `PreserveCompilationContext` 專案屬性設定為 `true`，強制發行作業將目標平臺的參考元件複製到輸出目錄的*publish/refs*子目錄中。 然後您可以將這些參考元件檔案傳遞給編譯器。 使用[DependencyModel](https://www.nuget.org/packages/Microsoft.Extensions.DependencyModel/)套件中的 `DependencyContext` 有助於找出其路徑。
 
 因為它們不包含任何實作為，所以無法載入參考元件來執行;嘗試這麼做會導致 <xref:System.BadImageFormatException?displayProperty=nameWithType>。 不過，如果您需要檢查其內容，仍然可以將它們載入僅限反映的內容（使用 <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> 方法）。
 
@@ -43,7 +43,7 @@ Ide 和 build 工具也可以利用參考元件，在包含多個類別庫的大
 - 從命令列編譯器時，請指定 `-refonly` （[C#](../../csharp/language-reference/compiler-options/refonly-compiler-option.md) / [Visual Basic](../../visual-basic/reference/command-line-compiler/refonly-compiler-option.md) ）或 `-refout` （[C#](../../csharp/language-reference/compiler-options/refout-compiler-option.md) / [Visual Basic](../../visual-basic/reference/command-line-compiler/refout-compiler-option.md)）編譯器選項。
 - 使用 Roslyn API 時，藉由將 <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.EmitMetadataOnly?displayProperty=nameWithType> 設定為 `true`，並在傳遞至 <xref:Microsoft.CodeAnalysis.Compilation.Emit%2A?displayProperty=nameWithType> 方法的物件中 <xref:Microsoft.CodeAnalysis.Emit.EmitOptions.IncludePrivateMembers?displayProperty=nameWithType> `false`。
 
-如果您想要使用 NuGet 套件散發參考元件，您必須將它們包含在封裝目錄下的*ref \\* 子目錄中，而不是在用於執行元件的*lib \\* 子目錄中。
+如果您想要使用 NuGet 套件散發參考元件，您必須將它們包含在封裝目錄下的*ref\\* 子目錄中，而不是在用於執行元件的*lib\\* 子目錄中。
 
 ## <a name="reference-assemblies-structure"></a>參考元件結構
 
@@ -70,7 +70,7 @@ Ide 和 build 工具也可以利用參考元件，在包含多個類別庫的大
 > [!NOTE]
 > 本節中的資訊僅適用于從C# 7.1 版或 Visual Basic 版本15.3 開始的 Roslyn 編譯器所產生的參考元件。 .NET Framework 和 .NET Core 程式庫的參考元件結構在某些詳細資料中可能會有不同，因為它們會使用自己產生參考元件的機制。 例如，它們可能會有完全空白的方法主體，而不是 `throw null` 主體。 但是一般原則仍然適用：它們沒有可使用的方法，而且只包含對公用 API 觀點有明顯影響的成員的中繼資料。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 中的組件](index.md)
 - [Framework 目標概觀](/visualstudio/ide/visual-studio-multi-targeting-overview)

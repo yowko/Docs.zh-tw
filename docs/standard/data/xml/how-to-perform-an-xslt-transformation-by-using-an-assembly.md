@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
-ms.openlocfilehash: 9fd8656594730f29d28cbfdd130d322bfc000614
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 447cf18c7a9d24addf9d0a4ad523f46a45a5d27a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710826"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155971"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>HOW TO：使用組件執行 XSLT 轉換
 XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後此組件可以直接傳遞到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。  
@@ -171,15 +171,15 @@ XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後此�
 xslt.Load(typeof(Transform));  
 ```  
   
-使用  
+取代為  
   
-```csharp 
+```csharp
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
-``` 
+```
   
 。 如需有關 Assembly. Load 方法的詳細資訊，請參閱 <xref:System.Reflection.Assembly.Load%2A>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
 - [XSLT 編譯器 (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

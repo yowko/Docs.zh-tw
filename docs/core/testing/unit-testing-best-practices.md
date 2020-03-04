@@ -4,12 +4,12 @@ description: 了解撰寫單元測試的最佳做法，提高 .NET Core 和 .NET
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 387d66bfeaf48359a27a532247a799c319f38caa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 586373381bcb18384cbf29bb2ca2bd220a2b2d3d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714289"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240957"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 的單元測試最佳做法
 
@@ -111,17 +111,17 @@ Assert.True(mockOrder.Validated);
 - 用以測試的案例。
 - 叫用案例時的預期行為。
 
-#### <a name="why"></a>為什麼？
+#### <a name="why"></a>原因為何？
 
 - 命名標準很重要，因為名稱會明確表示測試目的。
 
 測試不只要確定您的程式碼能夠運作，還會提供文件。 只要查看這套單元測試，您應能推斷程式碼的行為，甚至無需查看程式碼本身。 此外，當測試失敗時，您可以確切看到哪些案例不符合預期。
 
 #### <a name="bad"></a>不良：
-[!code-csharp[BeforeNaming](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeNaming)]
+[!code-csharp[BeforeNaming](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeNaming)]
 
 #### <a name="better"></a>較佳：
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="arranging-your-tests"></a>排列測試
 **排列、採取動作、判定**是進行單元測試時的常見模式。 顧名思義，其中包含三個主要動作：
@@ -130,7 +130,7 @@ Assert.True(mockOrder.Validated);
 - 對物件「採取動作」。
 - 「判定」某個項目如預期般運作。
 
-#### <a name="why"></a>為什麼？
+#### <a name="why"></a>原因為何？
 
 - 清楚分隔正在測試的項目與「排列」和「判定」步驟。
 - 這麼做可使判定與「採取動作」程式碼相互摻雜的機率更低。
@@ -138,15 +138,15 @@ Assert.True(mockOrder.Validated);
 可讀性是撰寫測試時最重要的層面之一。 分隔測試內的每個動作可清楚突顯呼叫程式碼、如何呼叫程式碼，以及您嘗試進行判定所需的相依性。 雖然可以合併某些步驟並減少測試的大小，但主要目標是盡可能讓測試可讀。
 
 #### <a name="bad"></a>不良：
-[!code-csharp[BeforeArranging](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeArranging)]
+[!code-csharp[BeforeArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeArranging)]
 
 #### <a name="better"></a>較佳：
-[!code-csharp[AfterArranging](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterArranging)]
+[!code-csharp[AfterArranging](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterArranging)]
 
 ### <a name="write-minimally-passing-tests"></a>撰寫最低限度通過測試
 要在單元測試中使用的輸入應該是最簡單的，才能驗證您目前正在測試的行為。
 
-#### <a name="why"></a>為什麼？
+#### <a name="why"></a>原因為何？
 
 - 測試對程式碼基底的未來變更變得更具復原性。
 - 更接近測試行為而不是實作。
@@ -154,34 +154,34 @@ Assert.True(mockOrder.Validated);
 如果測試包含的資訊比通過測試所需還要多，更有可能會將錯誤帶進測試中，且會讓測試的意圖較不清楚。 撰寫測試時，您想要著重於行為。 在模型上設定額外的屬性，或在不需要時使用非零值，只會減損您嘗試證明的項目。
 
 #### <a name="bad"></a>不良：
-[!code-csharp[BeforeMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
+[!code-csharp[BeforeMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMinimallyPassing)]
 
 #### <a name="better"></a>較佳：
-[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
+[!code-csharp[AfterNamingAndMinimallyPassing](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterNamingAndMinimallyPassing)]
 
 ### <a name="avoid-magic-strings"></a>避免魔術字串
 相較於在生產環境程式碼中為變數命名，在單元測試中為變數命名的重要性有過之而無不及。 單元測試不應該包含魔術字串。
 
-#### <a name="why"></a>為什麼？
+#### <a name="why"></a>原因為何？
 
 - 避免測試的讀者為了找出使該值變得特殊的原因而需要檢查生產環境程式碼。
 - 明確地顯示您想要「證明」的項目，而不是嘗試「完成」的項目。
 
 魔術字串可能會對測試的讀者造成混淆。 如果字串看起來不正常，讀者可能會納悶為什麼針對參數或傳回值選擇特定值。 這可能會導致他們過於仔細查看實作詳細資料，而不是專注於測試。
 
-> [!TIP] 
+> [!TIP]
 > 在撰寫測試時，您的目標應該是盡可能表達意圖。 如果是魔術字串，將這些值指派給常數會是不錯的方法。
 
 #### <a name="bad"></a>不良：
-[!code-csharp[BeforeMagicString](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMagicString)]
+[!code-csharp[BeforeMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMagicString)]
 
 #### <a name="better"></a>較佳：
-[!code-csharp[AfterMagicString](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMagicString)]
+[!code-csharp[AfterMagicString](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMagicString)]
 
 ### <a name="avoid-logic-in-tests"></a>避免在測試中使用邏輯
 撰寫您的單元測試時，請避免使用手動字串串連和邏輯條件，例如 `if`、`while`、`for`、`switch` 等等。
 
-#### <a name="why"></a>為什麼？
+#### <a name="why"></a>原因為何？
 
 - 在測試內帶進 Bug 的機率更低。
 - 著重最終結果，而不是實作詳細資料。
@@ -192,15 +192,15 @@ Assert.True(mockOrder.Validated);
 > 如果測試中的邏輯看似無法避免，請考慮將測試分割成兩個或多個不同的測試。
 
 #### <a name="bad"></a>不良：
-[!code-csharp[LogicInTests](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#LogicInTests)]
+[!code-csharp[LogicInTests](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#LogicInTests)]
 
 #### <a name="better"></a>較佳：
-[!code-csharp[AfterTestLogic](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterTestLogic)]
+[!code-csharp[AfterTestLogic](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterTestLogic)]
 
 ### <a name="prefer-helper-methods-to-setup-and-teardown"></a>慣用 Helper 方法來設定及終止
 如果您的測試需要類似的物件或狀態，比起利用 Setup 和 Teardown 屬性 (若有)，更慣用 Helper 方法。
 
-#### <a name="why"></a>為什麼？
+#### <a name="why"></a>原因為何？
 
 - 讀取測試時混淆較少，因為在每個測試內都可以看見所有的程式碼。
 - 對於給定的測試，設定太多或太少的機率更低。
@@ -208,26 +208,26 @@ Assert.True(mockOrder.Validated);
 
 在單元測試架構中，會在測試套件內的每個單元測試之前或其中呼叫 `Setup`。 雖然有人可能會認為這是很有用的工具，但它最後通常會導致測試過大且難以閱讀。 每個測試通常會有不同的需求，以便啟動及執測試。 不幸的是，`Setup` 會強迫您針對每個測試使用完全相同的需求。
 
-> [!NOTE] 
+> [!NOTE]
 > 自 2.x 版開始，xUnit 已移除 Setup 及 TearDown 這兩者
 
 #### <a name="bad"></a>不良：
-[!code-csharp[BeforeSetup](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeSetup)]
+[!code-csharp[BeforeSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeSetup)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[BeforeHelperMethod](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeHelperMethod)]
+[!code-csharp[BeforeHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeHelperMethod)]
 
 #### <a name="better"></a>較佳：
-[!code-csharp[AfterHelperMethod](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterHelperMethod)]
+[!code-csharp[AfterHelperMethod](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterHelperMethod)]
 
 ```csharp
 // more tests...
 ```
 
-[!code-csharp[AfterSetup](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterSetup)]
+[!code-csharp[AfterSetup](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterSetup)]
 
 ### <a name="avoid-multiple-asserts"></a>避免多個判定
 在撰寫測試時，請嘗試於每個測試只包含一個判定。 只使用一個判定的常見方法包括：
@@ -235,11 +235,11 @@ Assert.True(mockOrder.Validated);
 - 為每個判定建立個別測試。
 - 使用參數化測試。
 
-#### <a name="why"></a>為什麼？
+#### <a name="why"></a>原因為何？
 
 - 如果某個判定失敗，將不會評估後續的判定。
 - 確保您不會在測試中判定多個案例。
-- 為您提供測試失敗原因的全貌。 
+- 為您提供測試失敗原因的全貌。
 
 將多個判定帶進測試案例時，並不保證所有的判定皆會執行。 在大部分的單元測試架構中，一旦判定在單元測試中失敗，進行中的測試將自動視為失敗。 這可能會令人困惑，因為實際運作的功能會顯示為失敗。
 
@@ -247,13 +247,13 @@ Assert.True(mockOrder.Validated);
 > 這項規則的常見例外狀況是針對物件進行判定時。 在此情況下，通常可以接受對每個屬性擁有多個判定，確保物件處於您預期的狀態。
 
 #### <a name="bad"></a>不良：
-[!code-csharp[BeforeMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
+[!code-csharp[BeforeMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
 
 #### <a name="better"></a>較佳：
-[!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
+[!code-csharp[AfterMultipleAsserts](../../../samples/snippets/core/testing/unit-testing-best-practices/csharp/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>透過單元測試的公用方法驗證私用方法
-在大部分情況下，應該不需要測試私用方法。 私用方法是實作詳細資料。 您可以這樣來看：私用方法永遠不會單獨存在。 在某個時間點，將有一個公眾對應方法呼叫私用方法作為其實作的一部分。 您應該關注的是呼叫私用方法的公用方法最終結果。 
+在大部分情況下，應該不需要測試私用方法。 私用方法是實作詳細資料。 您可以這樣來看：私用方法永遠不會單獨存在。 在某個時間點，將有一個公眾對應方法呼叫私用方法作為其實作的一部分。 您應該關注的是呼叫私用方法的公用方法最終結果。
 
 請考慮下列情況
 
@@ -270,9 +270,9 @@ private string TrimInput(string input)
 }
 ```
 
-您的第一個反應可能是開始撰寫 `TrimInput` 的測試，因為您想要確定該方法是否如預期般運作。 不過，`ParseLogLine` 很有可能會以非預期的方式操作 `sanitizedInput`，使得對 `TrimInput` 的測試變得毫無用處。 
+您的第一個反應可能是開始撰寫 `TrimInput` 的測試，因為您想要確定該方法是否如預期般運作。 不過，`ParseLogLine` 很有可能會以非預期的方式操作 `sanitizedInput`，使得對 `TrimInput` 的測試變得毫無用處。
 
-實際的測試應該針對公眾對應方法 `ParseLogLine` 執行，因為這才是您最應關注的項目。 
+實際的測試應該針對公眾對應方法 `ParseLogLine` 執行，因為這才是您最應關注的項目。
 
 ```csharp
 public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
@@ -293,11 +293,11 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }
@@ -326,7 +326,7 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 }
 ```
 
-不幸的是，您很快就會發現測試有幾個問題。 
+不幸的是，您很快就會發現測試有幾個問題。
 
 - 如果測試套件是在星期二執行，第二項測試會通過，但第一項測試會失敗。
 - 如果測試套件是在其他天執行，第一項測試會通過，但第二項測試會失敗。
@@ -341,11 +341,11 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
+    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }

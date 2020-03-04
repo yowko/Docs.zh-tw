@@ -13,15 +13,15 @@ helpviewer_keywords:
 - base streams
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
-ms.openlocfilehash: 689cc9537cd7a5fe6a677d42e5790bbcf1b3aefa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3f18712793254f4942c092c87a3e64c73b492ae0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708144"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160101"
 ---
 # <a name="compose-streams"></a>撰寫資料流
-*備份存放區*是一種儲存媒體，例如磁碟或記憶體。 每個不同的備份存放區都會實作自己的資料流，作為 <xref:System.IO.Stream> 類別的實作。 
+*備份存放區*是一種儲存媒體，例如磁碟或記憶體。 每個不同的備份存放區都會實作自己的資料流，作為 <xref:System.IO.Stream> 類別的實作。
 
 每個資料流類型都會在其指定的備份存放區中讀取和寫入位元組。 連線到備份存放區的資料流稱為*基底資料流*。 基底資料流具有建構函式，其中包含將資料流連線至備份存放區所需的參數。 例如，<xref:System.IO.FileStream> 的建構函式會指定路徑參數，此參數可指定處理程序共用檔案的方式。  
 
@@ -44,7 +44,7 @@ ms.locfileid: "75708144"
  [!code-csharp[System.IO.StreamReader#21](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.StreamReader/CS/source3.cs#21)]
  [!code-vb[System.IO.StreamReader#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.StreamReader/VB/source3.vb#21)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>

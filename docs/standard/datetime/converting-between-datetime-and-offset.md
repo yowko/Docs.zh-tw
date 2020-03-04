@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: 428553f75db2cca6705ac72873e86e120e94d134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c19296f75e9e002e88263c5e5efa9917e185ebc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132586"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156032"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>在 DateTime 與 DateTimeOffset 之間轉換
 
@@ -94,12 +94,12 @@ ms.locfileid: "73132586"
 
 ### <a name="converting-a-local-time"></a>轉換當地時間
 
-若要表示 <xref:System.DateTimeOffset> 值代表當地時間，您可以將 <xref:System.DateTimeOffset.DateTime%2A?displayProperty=nameWithType> 屬性傳回的 <xref:System.DateTime> 值傳遞給 `static` （`Shared`） Visual Basic 方法。 方法會傳回傳遞給它的日期和時間做為其第一個參數，但會將 <xref:System.DateTime.Kind%2A> 屬性設為其第二個參數所指定的值。 下列程式碼會在轉換其位移對應至當地時區的 <xref:System.DateTimeOffset> 值時，使用 <xref:System.DateTime.SpecifyKind%2A> 方法。
+若要表示 <xref:System.DateTimeOffset> 值代表當地時間，您可以將 <xref:System.DateTimeOffset.DateTime%2A?displayProperty=nameWithType> 屬性傳回的 <xref:System.DateTime> 值傳遞給 `static` （`Shared`） Visual Basic 方法。<xref:System.DateTime.SpecifyKind%2A> 方法會傳回傳遞給它的日期和時間做為其第一個參數，但會將 <xref:System.DateTime.Kind%2A> 屬性設為其第二個參數所指定的值。 下列程式碼會在轉換其位移對應至當地時區的 <xref:System.DateTimeOffset> 值時，使用 <xref:System.DateTime.SpecifyKind%2A> 方法。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#7)]
 
-您也可以使用 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 屬性，將 <xref:System.DateTimeOffset> 值轉換為本機 <xref:System.DateTime> 值。 傳回的 <xref:System.DateTime> 值的 <xref:System.DateTime.Kind%2A> 屬性會 <xref:System.DateTimeKind.Local>。 下列程式碼會在轉換其位移對應至當地時區的 <xref:System.DateTimeOffset> 值時，使用 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 屬性。 
+您也可以使用 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 屬性，將 <xref:System.DateTimeOffset> 值轉換為本機 <xref:System.DateTime> 值。 傳回的 <xref:System.DateTime> 值的 <xref:System.DateTime.Kind%2A> 屬性會 <xref:System.DateTimeKind.Local>。 下列程式碼會在轉換其位移對應至當地時區的 <xref:System.DateTimeOffset> 值時，使用 <xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> 屬性。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#10)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#10)]
@@ -127,6 +127,6 @@ ms.locfileid: "73132586"
 
 - 它假設位移等於當地時區位移的日期和時間代表當地時區。 因為日期和時間值與其原始時區解除關聯，所以這可能不是這種情況；日期和時間可能源自另一個具有相同位移的時區。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [日期、時間及時區](../../../docs/standard/datetime/index.md)

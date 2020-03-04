@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 427550e1fbeb38cefbb4afe97d80e198ac2d6cb0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adda4ed2ab5c59e3518b8e724044529a79840ad0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127639"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156474"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>如何：參考強式名稱的元件
 參考強式名稱組件中類型或資源的程序通常十分簡單。 您可以在編譯時間 (早期繫結) 或執行階段進行參考。  
@@ -44,12 +44,12 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 當您使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 方法來建立強式名稱元件的執行時間參考時，您必須使用所參考之強式名稱元件的顯示名稱。 顯示名稱的語法如下：  
 
-\<組件名稱> **,** \<版本號碼> **,** \<文化特性> **,** \<公開金鑰權杖>  
+\<*元件名稱*> **、** \<*版本號碼*> **、** \<*文化*特性> **、** \<*公開金鑰 token*>  
 
-例如:  
+例如：  
 
 ```console
-myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33   
+myDll, Version=1.1.0.0, Culture=en, PublicKeyToken=03689116d3a4ae33
 ```  
 
 在此範例中，`PublicKeyToken` 是公開金鑰權杖的十六進位格式。 如果沒有文化特性值，請使用 `Culture=neutral`。  
@@ -73,12 +73,12 @@ Dim myDll As Assembly = _
 
 您可以使用下列[強式名稱 (Sn.exe)](../../framework/tools/sn-exe-strong-name-tool.md) 命令，列印特定組件之公開金鑰和公開金鑰權杖的十六進位格式：  
 
-**sn-Tp \<**  *組件* **>**  
+**sn-Tp \<** *元件* **>**  
 
 如果您有公開金鑰檔案，則可以改用下列命令 (請注意命令列選項上的大小寫差異)：  
 
-**sn -tp \<** *公開金鑰檔* **>**  
+**sn-tp \<** *公用金鑰*檔案 **>**  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [建立和使用強式名稱的元件](create-use-strong-named.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -checked compiler option [C#]
 - /checked compiler option [C#]
 ms.assetid: fb7475d3-e6a6-4e6d-b86c-69e7a74c854b
-ms.openlocfilehash: 4e07698e7abdad00983b61412fa2a57e651d4d46
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 44dc0fc8f50e5248ce2fca17c36f7309a6aca8d1
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606995"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239688"
 ---
 # <a name="-checked-c-compiler-options"></a>-checked (C# 編譯器選項)
 **-checked** 選項會指定產生超出該資料類型範圍之值且不在 [checked](../keywords/checked.md) 或 [unchecked](../keywords/unchecked.md) 關鍵字範圍內的整數算術陳述式是否導致執行階段例外狀況。  
@@ -35,13 +35,13 @@ ms.locfileid: "69606995"
  
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]  頁面。 如需詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+1. 開啟專案的 [屬性] 頁面。 如需詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
-2. 按一下 [建置]  屬性頁面。  
+2. 按一下 [建置] 屬性頁面。  
   
-3. 按一下 [ **進階** ] 按鈕。  
+3. 按一下 [進階] 按鈕。  
   
-4. 修改 [檢查算術溢位/反向溢位]  屬性。  
+4. 修改 [**檢查算術溢**位] 屬性。  
   
  若要以程式設計方式存取這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.CheckForOverflowUnderflow%2A>。  
   

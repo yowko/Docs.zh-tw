@@ -4,12 +4,12 @@ description: 在本教學課程中，您將瞭解如何使用 Docker 容器化 .
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 17d3dfbe58770b19a75be1dad3ae03406584992c
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900117"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157826"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教學課程：容器化 .NET Core 應用程式
 
@@ -29,7 +29,7 @@ ms.locfileid: "75900117"
 > [!TIP]
 > 如果您要使用現有的 ASP.NET Core 應用程式，請參閱[瞭解如何容器化 ASP.NET Core 應用程式](/aspnet/core/host-and-deploy/docker/building-net-docker-images)教學課程。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 安裝下列先決條件：
 
@@ -141,7 +141,7 @@ dotnet publish -c Release
 
 此命令會將您的應用程式編譯至 *publish* 資料夾。 從工作資料夾通往 *publish* 資料夾的路徑應該是 `.\app\bin\Release\netcoreapp3.1\publish\`
 
-從*應用程式*資料夾中，取得 [發行] 資料夾的目錄清單，以確認已建立*myapp .dll*檔案。 
+從*應用程式*資料夾中，取得 [發行] 資料夾的目錄清單，以確認已建立*myapp .dll*檔案。
 
 ```console
 > dir bin\Release\netcoreapp3.1\publish
@@ -166,7 +166,7 @@ myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 
 ## <a name="create-the-dockerfile"></a>建立 Dockerfile
 
-`docker build` 命令會使用 *Dockerfile* 檔案來建立容器映像。 此檔案是名為*Dockerfile*的文字檔，沒有副檔名。
+*命令會使用*Dockerfile`docker build` 檔案來建立容器映像。 此檔案是名為*Dockerfile*的文字檔，沒有副檔名。
 
 在您的終端機中，瀏覽至上一層目錄來移至您一開始建立的工作資料夾。 在工作資料夾中建立名為 *Dockerfile* 的檔案，然後在文字編輯器中開啟它。 視您要容器化的應用程式類型而定，您將選擇 ASP.NET Core 執行時間或 .NET Core 執行時間。 若不確定，請選擇包含 .NET Core 執行時間的 ASP.NET Core 執行時間。 本教學課程將使用 ASP.NET Core 執行時間映射，但在上一節中建立的應用程式是 .NET Core 應用程式。
 
@@ -213,7 +213,7 @@ docker-working
 docker build -t myimage -f Dockerfile .
 ```
 
-Docker 將會處理 *Dockerfile* 中的每一行。 `docker build` 命令中的 `.` 會指示 Docker 使用目前的資料夾來尋找 *Dockerfile*。 此命令會建置映像，並建立名為 **myimage** 的本機存放庫以指向該映像。 當此命令完成之後，執行 `docker images` 以查看已安裝的映像清單：
+Docker 將會處理 *Dockerfile* 中的每一行。 `.` 命令中的 `docker build` 會指示 Docker 使用目前的資料夾來尋找 *Dockerfile*。 此命令會建置映像，並建立名為 **myimage** 的本機存放庫以指向該映像。 當此命令完成之後，執行 `docker images` 以查看已安裝的映像清單：
 
 ```console
 > docker images
@@ -368,7 +368,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### <a name="change-the-entrypoint"></a>變更 ENTRYPOINT
 
-`docker run` 命令也可讓您從 *Dockerfile* 修改 `ENTRYPOINT` 命令並執行其他動作，但只適用於該容器。 例如，使用下列命令來執行 `bash` 或 `cmd.exe`。 視需要編輯命令。
+`docker run` 命令也可讓您從 `ENTRYPOINT`Dockerfile*修改* 命令並執行其他動作，但只適用於該容器。 例如，使用下列命令來執行 `bash` 或 `cmd.exe`。 視需要編輯命令。
 
 #### <a name="windows"></a>Windows
 

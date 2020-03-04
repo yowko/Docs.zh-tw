@@ -3,17 +3,17 @@ title: 管理 XML 文件中的命名空間
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 64ef9fd4ca3a9a83b9cd3eba9cb952b0f668e9f0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710696"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160036"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>管理 XML 文件中的命名空間
 XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和預定的 URI。 若要建立這些關聯，請為命名空間 URI 定義前置詞，並使用這些前置詞來限定 XML 資料中的元素與屬性名稱。 命名空間可用來避免元素和屬性名稱發生衝突，並讓相同名稱的元素和屬性以不同方式處理和驗證。  
   
-<a name="declare"></a>   
+<a name="declare"></a>
 ## <a name="declaring-namespaces"></a>宣告命名空間  
  若要在元素上宣告命名空間，請使用 `xmlns:` 屬性：  
   
@@ -30,7 +30,7 @@ XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和�
   
  若要表示某元素是特定命名空間的一部分，請將命名空間前置詞加到其中。 例如，如果 `Author` 元素屬於 `mybook` 命名空間，便會將它宣告為 `<mybook:Author>`。  
   
-<a name="scope"></a>   
+<a name="scope"></a>
 ## <a name="declaration-scope"></a>宣告範圍  
  命名空間的有效範圍，是從宣告點至宣告該命名空間之元素的結尾。 在此範例中，於 `BOOK` 元素中定義的命名空間並不適用於 `BOOK` 元素以外的元素，如 `Publisher` 元素：  
   
@@ -65,7 +65,7 @@ XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和�
   
  以下是您可以使用 <xref:System.Xml.XmlNamespaceManager> 類別執行的一些管理和查詢工作。 如需詳細資訊和範例，請追蹤每個方法或屬性的參考頁面連結。  
   
-|進行|使用|  
+|至|使用|  
 |--------|---------|  
 |加入命名空間|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> 方法|  
 |移除命名空間|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> 方法|  
@@ -77,7 +77,7 @@ XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和�
 |檢查前置詞是否定義於目前範圍中|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> 方法|  
 |取得用來查詢前置詞與 URI 的名稱資料表|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> 屬性|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlNamespaceManager>
 - [XML 文件和資料](../../../../docs/standard/data/xml/index.md)

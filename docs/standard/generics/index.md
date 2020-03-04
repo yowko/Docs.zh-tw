@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708367"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156305"
 ---
 # <a name="generics-in-net"></a>.NET 的泛型
 
@@ -57,13 +57,13 @@ ms.locfileid: "75708367"
   
 - *「泛型類型參數」* (Generic type parameter) 或 *「類型參數」* (type parameter)，是泛型類型或方法定義中的預留位置。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> 泛型類型有兩個類型參數， `TKey` 和 `TValue`，分別代表其索引鍵和值的類型。  
   
-- *「建構的泛型類型」* (constructed generic type) 或 *「建構的類型」* (constructed type)，是為泛型類型定義的泛型類型參數所指定之類型的結果。  
+- 「建構的泛型型別」或「建構的型別」，是為泛型型別定義的泛型型別參數所指定之型別的結果。  
   
 - *「泛型類型引數」* (generic type argument) 是要替換泛型類型參數的所有類型。  
   
-- 一般詞彙 *「泛型類型」* (generic type) 包括建構的類型和泛型類型定義。  
+- 一般詞彙「泛型型別」包括建構的型別和泛型型別定義兩者。  
   
-- 泛型型別參數的「共變數」和「反變數」可讓您使用建構的泛型型別，其型別引數比目標建構的型別有更多衍生 (共變數) 或更少衍生 (反變數)。 共變性和逆變性合稱為「 *變異性*」(Variance)。 如需詳細資訊，請參閱 [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md) (共變數和反變數)。  
+- 泛型型別參數的「共變數」和「反變數」可讓您使用建構的泛型型別，其型別引數比目標建構的型別有更多衍生 (共變數) 或更少衍生 (反變數)。 共變數和反變數合稱為「變異數」。 如需詳細資訊，請參閱 [Covariance and Contravariance](../../../docs/standard/generics/covariance-and-contravariance.md) (共變數和反變數 (C# 和 Visual Basic))。  
   
 - *「條件約束」* (Constraint)，是在泛型類型參數上的限制。 例如，您可以限制類型參數為實作 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 泛型介面的類型，以確保能夠排序類型的執行個體。 您也可以將型別參數限制為具有特定基底類別的型別，或是具有無參數建構函式的型別，或為參考型別或實值型別。 的泛型類型的使用者無法替換沒有滿足這些條件約束的類型引數。  
   
@@ -124,27 +124,27 @@ ms.locfileid: "75708367"
   
  Common Language Runtime 提供新的 opcode 及前置詞，以支援 Microsoft 中繼語言 (MSIL) 中的泛型類型，包括 <xref:System.Reflection.Emit.OpCodes.Stelem>、 <xref:System.Reflection.Emit.OpCodes.Ldelem>、 <xref:System.Reflection.Emit.OpCodes.Unbox_Any>、 <xref:System.Reflection.Emit.OpCodes.Constrained>和 <xref:System.Reflection.Emit.OpCodes.Readonly>。  
   
- Visual C++、C# 和 Visual Basic 均提供定義及使用泛型的完整支援。 如需語言支援的詳細資訊，請參閱 [Visual Basic 中的泛型型別](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)、[泛型簡介](../../csharp/programming-guide/generics/index.md)和 [Visual C++ 中的泛型概觀](/cpp/windows/overview-of-generics-in-visual-cpp)。 
+ Visual C++、C# 和 Visual Basic 均提供定義及使用泛型的完整支援。 如需語言支援的詳細資訊，請參閱 [Visual Basic 中的泛型型別](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)、[泛型簡介](../../csharp/programming-guide/generics/index.md)和 [Visual C++ 中的泛型概觀](/cpp/windows/overview-of-generics-in-visual-cpp)。
 
 ## <a name="nested-types-and-generics"></a>巢狀類型和泛型  
  泛型類型中的巢狀類型，可取決於封入泛型類型的類型參數。 Common Language Runtime 會將巢狀類型視為泛型，即使它們沒有自己的泛型類型參數。 當您建立巢狀類型的執行個體時，必須為所有封入泛型類型指定類型引數。  
 
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[.NET 中的泛型集合](../../../docs/standard/generics/collections.md)|描述 .NET 中的泛型集合類別以及其他泛型類型。|  
 |[管理陣列和清單的泛型委派](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|描述轉換、搜尋述詞以及要在陣列或集合的元素上採取之動作的泛型委派。|  
 |[泛型介面](../../../docs/standard/generics/interfaces.md)|描述提供泛型類型系列中常見功能的泛型介面。|  
 |[共變數和反變數](../../../docs/standard/generics/covariance-and-contravariance.md)|描述泛型類型參數的共變數和反變數。|  
 |[常用的集合類型](../../../docs/standard/collections/commonly-used-collection-types.md)|提供 .NET 中集合類型的特性和使用方式案例的摘要資訊，包括泛型類型。|  
-|[何時使用泛型集合](../../../docs/standard/collections/when-to-use-generic-collections.md)|描述一般的規則，以判斷何時使用泛型集合類型。|  
+|[使用泛型集合的時機](../../../docs/standard/collections/when-to-use-generic-collections.md)|描述一般的規則，以判斷何時使用泛型集合類型。|  
 |[操作說明：使用反映發出定義泛型型別](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|說明如何產生包括泛型類型和方法的動態組件。|  
-|[Generic Types in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|為 Visual Basic 使用者描述泛型功能，包括使用及定義泛型類型的「操作說明」主題。|  
+|[Generic Types in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|為 Visual Basic 使用者描述泛型功能，包括使用及定義泛型類型的「如何使用」主題。|  
 |[泛型簡介](../../csharp/programming-guide/generics/index.md)|為 C# 使用者提供定義和使用泛型類型的概觀。|  
 |[Visual C++ 中的泛型概觀](/cpp/windows/overview-of-generics-in-visual-cpp)|描述 C++ 使用者的泛型功能，包括泛型和範本之間的差異。|  
 
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  

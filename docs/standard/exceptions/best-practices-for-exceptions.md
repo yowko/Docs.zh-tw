@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 6a165c3e0f41603ef7233669d7148dd44b1d3ce6
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696758"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160166"
 ---
 # <a name="best-practices-for-exceptions"></a>例外狀況的最佳做法
 
@@ -56,7 +56,7 @@ ms.locfileid: "71696758"
 
 另一個避免例外狀況的方法是針對很常見的錯誤案例傳回 Null (或預設值)，而不擲回例外狀況。 相當普遍的錯誤案例可視為一般控制流程。 針對這些案例傳回 Null (或預設值)，就能盡量降低對應用程式效能的影響。
 
-針對實值型別，無論是要使用 `Nullable<T>` 還是預設值作為您的錯誤指標，都是必須為您的特定應用程式考慮的事項之一。 透過使用 `Nullable<Guid>`，`default` 會成為 `null`，而非 `Guid.Empty`。 有時候，當值存在或不存在時，新增 `Nullable<T>` 可讓您清楚了解。 在其他時候，新增 `Nullable<T>` 會建立不必要的額外案例，而且會產生潛在的錯誤來源。 
+針對實值型別，無論是要使用 `Nullable<T>` 還是預設值作為您的錯誤指標，都是必須為您的特定應用程式考慮的事項之一。 透過使用 `Nullable<Guid>`，`default` 會成為 `null`，而非 `Guid.Empty`。 有時候，當值存在或不存在時，新增 `Nullable<T>` 可讓您清楚了解。 在其他時候，新增 `Nullable<T>` 會建立不必要的額外案例，而且會產生潛在的錯誤來源。
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>擲回例外狀況來代替傳回錯誤碼
 
@@ -64,7 +64,7 @@ ms.locfileid: "71696758"
 
 ## <a name="use-the-predefined-net-exception-types"></a>使用預先定義的 .NET 例外狀況類型
 
-只有在預先定義的類型不適用時，才引進新的例外狀況類別。 例如:
+只有在預先定義的類型不適用時，才引進新的例外狀況類別。 例如：
 
 - 如果屬性集或方法呼叫對於物件的目前狀態而言並不適當，就會擲回 <xref:System.InvalidOperationException> 例外狀況。
 
@@ -72,7 +72,7 @@ ms.locfileid: "71696758"
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>使用字組 `Exception` 作為例外狀況類別名稱的結尾
 
-如需自訂例外狀況，請適當地加以命名，並從 <xref:System.Exception>加以衍生。 例如:
+如需自訂例外狀況，請適當地加以命名，並從 <xref:System.Exception>加以衍生。 例如：
 
 [!code-cpp[Conceptual.Exception.Handling#4](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -88,7 +88,7 @@ ms.locfileid: "71696758"
 
 - <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>，它會接受字串訊息和內部例外狀況。
 
-如需範例，請參閱[如何：建立使用者定義例外狀況](how-to-create-user-defined-exceptions.md)。
+如需範例，請參閱[如何：建立使用者定義的例外狀況](how-to-create-user-defined-exceptions.md)。
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>確保從遠端執行程式碼時可以使用例外狀況資料
 
@@ -98,7 +98,7 @@ ms.locfileid: "71696758"
 
 - 將組件放入這兩個應用程式定義域共用的通用應用程式基底。
 
-    \-或-
+    \- 或 -
 
 - 如果定義域不共用通用應用程式基底，則以強式名稱簽署含有例外狀況資訊的組件，並將組件部署到全域組件快取中。
 
@@ -108,12 +108,12 @@ ms.locfileid: "71696758"
 
 ## <a name="include-a-localized-string-message-in-every-exception"></a>在每個例外狀況中，納入當地語系化的字串訊息
 
-使用者所看到的錯誤訊息，衍生自擲回的例外狀況之 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性，而並非來自例外狀況類別的名稱。 一般來說，您要將值指派到 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性，方法是將訊息字串傳遞到[例外狀況建構函式](xref:System.Exception.%23ctor%2A)的 `message` 引數。
+使用者所看到的錯誤訊息，衍生自擲回的例外狀況之 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性，而並非來自例外狀況類別的名稱。 一般來說，您要將值指派到 <xref:System.Exception.Message?displayProperty=nameWithType> 屬性，方法是將訊息字串傳遞到`message`例外狀況建構函式[的 ](xref:System.Exception.%23ctor%2A) 引數。
 
 若是當地語系化的應用程式，則應對每個應用程式可能會擲回的例外狀況，該提供當地語系化的訊息字串。 您可使用資源檔，提供當地語系化的錯誤訊息。 如需當地語系化應用程式及取得當地語系化字串的詳細資訊，請參閱下列文章：
 
 - [如何：使用當地語系化的例外狀況訊息建立使用者定義的例外狀況](how-to-create-localized-exception-messages.md)
-- [桌面應用程式中的資源](../../framework/resources/index.md) 
+- [桌面應用程式中的資源](../../framework/resources/index.md)
 - <xref:System.Resources.ResourceManager?displayProperty=nameWithType>
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>在自訂例外狀況中，視需要提供額外的屬性
@@ -126,7 +126,7 @@ ms.locfileid: "71696758"
 
 ## <a name="use-exception-builder-methods"></a>使用例外狀況產生器方法
 
-類別在它的實作中從不同的地方擲回相同的例外狀況是很常見的。 若要避免過多的程式碼，請使用 Helper 方法，以建立例外狀況並將它傳回。 例如:
+類別在它的實作中從不同的地方擲回相同的例外狀況是很常見的。 若要避免過多的程式碼，請使用 Helper 方法，以建立例外狀況並將它傳回。 例如：
 
 [!code-cpp[Conceptual.Exception.Handling#6](~/samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 221d19ee6441614324d375b66e8b13a90f683890
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e0a6912c10baa0be4a8ef9f6536948ae27f235c7
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921282"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159555"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>如何從 Newtonsoft 遷移至 System.web. Json
 
@@ -81,7 +81,7 @@ ms.locfileid: "76921282"
 
 <xref:System.Text.Json> 預設為嚴格，並可避免代表呼叫端的任何猜測或解讀，強調決定性的行為。 此程式庫是故意以這種方式設計來實現效能和安全性。 `Newtonsoft.Json` 預設為彈性。 這項設計的基本差異在於預設行為的下列許多特定差異背後。
 
-### <a name="case-insensitive-deserialization"></a>不區分大小寫的還原序列化 
+### <a name="case-insensitive-deserialization"></a>不區分大小寫的還原序列化
 
 在還原序列化期間，`Newtonsoft.Json` 預設會執行不區分大小寫的屬性名稱比對。 <xref:System.Text.Json> 預設值區分大小寫，這可提供較佳的效能，因為它會執行完全相符的作業。 如需如何執行不區分大小寫比對的相關資訊，請參閱不[區分大小寫的屬性](system-text-json-how-to.md#case-insensitive-property-matching)比對。
 
@@ -194,7 +194,7 @@ The JSON value could not be converted to System.String.
 
 `Newtonsoft.Json` 可以序列化或還原序列化 JSON 字串所代表的數位（以引號括住）。 例如，它可以接受： `{"DegreesCelsius":"23"}`，而不是 `{"DegreesCelsius":23}`。 若要在 <xref:System.Text.Json>中啟用該行為，請執行如下列範例所示的自訂轉換子。 轉換器會處理定義為 `long`的屬性：
 
-* 它會將它們序列化為 JSON 字串。 
+* 它會將它們序列化為 JSON 字串。
 * 它會在還原序列化時，接受引號內的 JSON 數位和數位。
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/LongToStringConverter.cs)]
@@ -238,7 +238,7 @@ The JSON value could not be converted to System.String.
 
 若要執行 `object` 屬性的型別推斷，請建立如[如何撰寫自訂轉換器](system-text-json-converters-how-to.md#deserialize-inferred-types-to-object-properties)中的範例所示的轉換器。
 
-### <a name="deserialize-null-to-non-nullable-type"></a>將 null 還原序列化為不可為 null 的類型 
+### <a name="deserialize-null-to-non-nullable-type"></a>將 null 還原序列化為不可為 null 的類型
 
 `Newtonsoft.Json` 在下列案例中不會擲回例外狀況：
 
@@ -326,7 +326,7 @@ The JSON value could not be converted to System.String.
 
 `Newtonsoft.Json` 有數種方式可以有條件地忽略序列化或還原序列化上的屬性：
 
-* `DefaultContractResolver` 可讓您根據任意條件，選取要包含或排除的屬性。 
+* `DefaultContractResolver` 可讓您根據任意條件，選取要包含或排除的屬性。
 * `JsonSerializerSettings` 上的 `NullValueHandling` 和 `DefaultValueHandling` 設定，可讓您指定應該忽略所有的 null 值或預設值屬性。
 * [`[JsonProperty]`] 屬性上的 [`NullValueHandling`] 和 [`DefaultValueHandling`] 設定可讓您指定在設定為 null 或預設值時，應該忽略的個別屬性。
 
@@ -341,7 +341,7 @@ The JSON value could not be converted to System.String.
 * 忽略所有具有類型之預設值的屬性。
 * 忽略具有類型之預設值的選取屬性。
 * 如果其值為 null，則忽略選取的屬性。
-* 根據在執行時間評估的任意準則，忽略選取的屬性。 
+* 根據在執行時間評估的任意準則，忽略選取的屬性。
 
 針對該功能，您可以撰寫自訂的轉換器。 以下是範例 POCO 和適用于它的自訂轉換器，其說明此方法：
 
@@ -349,7 +349,7 @@ The JSON value could not be converted to System.String.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
 
-如果參數的值為 null、空字串或 "N/A"，則轉換器會從序列化中省略 `Summary` 屬性。 
+如果參數的值為 null、空字串或 "N/A"，則轉換器會從序列化中省略 `Summary` 屬性。
 
 藉由[使用類別上的屬性](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)，或[將轉換器加入](system-text-json-converters-how-to.md#registration-sample---converters-collection)至 <xref:System.Text.Json.JsonSerializerOptions.Converters> 集合，來註冊此自訂轉換子。
 
@@ -446,7 +446,7 @@ The JSON value could not be converted to System.String.
 
 ### <a name="jsondocument-is-idisposable"></a>JsonDocument 是 IDisposable
 
-`JsonDocument` 會將資料的記憶體中視圖建立成集區緩衝區。 因此，不同于 `Newtonsoft.Json`的 `JObject` 或 `JArray`，`JsonDocument` 型別會執行 `IDisposable`，而且必須在 using 區塊內使用。 
+`JsonDocument` 會將資料的記憶體中視圖建立成集區緩衝區。 因此，不同于 `Newtonsoft.Json`的 `JObject` 或 `JArray`，`JsonDocument` 型別會執行 `IDisposable`，而且必須在 using 區塊內使用。
 
 如果您想要將存留期擁有權和處置責任轉移給呼叫者，只會從您的 API 傳回 `JsonDocument`。 在大部分的情況下，這並不是必要的。 如果呼叫端需要使用整個 JSON 檔，則會傳回 <xref:System.Text.Json.JsonDocument.RootElement%2A>的 <xref:System.Text.Json.JsonElement.Clone%2A>，也就是 <xref:System.Text.Json.JsonElement>。 如果呼叫端需要使用 JSON 檔中的特定元素，則會傳回該 <xref:System.Text.Json.JsonElement>的 <xref:System.Text.Json.JsonElement.Clone%2A>。 如果您直接傳回 `RootElement` 或子項目而不進行 `Clone`，則在處置擁有它的 `JsonDocument` 之後，呼叫端將無法存取傳回的 `JsonElement`。
 
@@ -456,7 +456,7 @@ The JSON value could not be converted to System.String.
 public JsonElement LookAndLoad(JsonElement source)
 {
     string json = File.ReadAllText(source.GetProperty("fileName").GetString());
-   
+
     using (JsonDocument doc = JsonDocument.Parse(json))
     {
         return doc.RootElement.Clone();
@@ -464,7 +464,7 @@ public JsonElement LookAndLoad(JsonElement source)
 }
 ```
 
-上述程式碼需要包含 `fileName` 屬性的 `JsonElement`。 它會開啟 JSON 檔案，並建立 `JsonDocument`。 方法假設呼叫端想要使用整份檔，因此它會傳回 `RootElement`的 `Clone`。 
+上述程式碼需要包含 `fileName` 屬性的 `JsonElement`。 它會開啟 JSON 檔案，並建立 `JsonDocument`。 方法假設呼叫端想要使用整份檔，因此它會傳回 `RootElement`的 `Clone`。
 
 如果您收到 `JsonElement` 並傳回子項目，則不需要傳回子項目的 `Clone`。 呼叫端負責保持傳入 `JsonElement` 所屬的 `JsonDocument`。 例如：
 
@@ -514,7 +514,7 @@ public JsonElement ReturnFileName(JsonElement source)
 
 `Utf8JsonReader` 支援從以 UTF-8 編碼的[ReadOnlySpan\<byte >](xref:System.ReadOnlySpan%601)或[ReadOnlySequence\<byte >](xref:System.Buffers.ReadOnlySequence%601) （這是從 <xref:System.IO.Pipelines.PipeReader>讀取的結果）讀取。
 
-對於同步讀取，您可以讀取 JSON 承載，直到資料流程結尾到位元組陣列，然後將它傳遞到讀取器。 若要從字串讀取（編碼為 UTF-16），請呼叫 <xref:System.Text.Encoding.UTF8>。<xref:System.Text.Encoding.GetBytes%2A> 首先，將字串轉碼為 UTF-8 編碼的位元組陣列。 然後將它傳遞給 `Utf8JsonReader`。 
+對於同步讀取，您可以讀取 JSON 承載，直到資料流程結尾到位元組陣列，然後將它傳遞到讀取器。 若要從字串讀取（編碼為 UTF-16），請呼叫 <xref:System.Text.Encoding.UTF8>。<xref:System.Text.Encoding.GetBytes%2A> 首先，將字串轉碼為 UTF-8 編碼的位元組陣列。 然後將它傳遞給 `Utf8JsonReader`。
 
 由於 `Utf8JsonReader` 會將輸入視為 JSON 文字，因此會將 UTF-8 位元組順序標記（BOM）視為不正確 JSON。 呼叫端必須先篩選掉，再將資料傳遞給讀取器。
 

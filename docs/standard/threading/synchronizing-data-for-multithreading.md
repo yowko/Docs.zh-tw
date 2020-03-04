@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128972"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159386"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>同步多執行緒處理的資料
 
@@ -30,10 +30,10 @@ ms.locfileid: "73128972"
   
  通用語言執行平台提供執行緒模型，其中類別分為一些分類，可以根據需求以各種不同的方式同步處理。 下表顯示為指定同步處理分類的欄位和方法提供哪些同步處理支援。  
   
-|Category|全域欄位|靜態欄位|靜態方法|執行個體欄位|執行個體方法|特定程式碼區塊|  
+|類別|全域欄位|靜態欄位|靜態方法|執行個體欄位|執行個體方法|特定程式碼區塊|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
 |沒有同步處理|否|否|否|否|否|否|  
-|同步處理的內容|否|否|否|[是]|[是]|否|  
+|同步處理的內容|否|否|否|是|是|否|  
 |同步程式碼區域|否|否|只有當標記時|否|只有當標記時|只有當標記時|  
 |手動同步處理|手動|手動|手動|手動|手動|手動|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73128972"
 > [!NOTE]
 > `lock` 和 `SyncLock` 陳述式會使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> 來實作，讓 <xref:System.Threading.Monitor> 的其他方法可在同步處理的區域內搭配它們使用。  
   
- 您也可以使用值為 <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType> 的 <xref:System.Runtime.CompilerServices.MethodImplAttribute> 來裝飾方法，其效果與使用 <xref:System.Threading.Monitor> 或其中一個編譯器關鍵字來鎖定方法的整個主體相同。  
+ 您也可以使用值為 <xref:System.Runtime.CompilerServices.MethodImplAttribute> 的 <xref:System.Runtime.CompilerServices.MethodImplOptions.Synchronized?displayProperty=nameWithType> 來裝飾方法，其效果與使用 <xref:System.Threading.Monitor> 或其中一個編譯器關鍵字來鎖定方法的整個主體相同。  
   
  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 可以用來中斷執行緒的封鎖作業，例如等待存取已同步處理的程式碼區域。 **Thread.Interrupt** 也會用來中斷執行緒的作業，例如 <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType>。  
   
@@ -64,10 +64,10 @@ ms.locfileid: "73128972"
  在這兩種情況下，如果在程式碼區塊中擲回例外狀況，**lock** 或 **SyncLock** 取得的鎖定會自動釋放。 C# 和 Visual Basic 編譯器會在嘗試開始時發出 **try**/**finally** 區塊與 **Monitor.Enter**，以及在 **finally** 區塊中發出 **Monitor.Exit**。 如果在 **lock** 或 **SyncLock** 區塊內擲回例外狀況，會執行 **finally** 處理常式以允許您進行任何清除工作。  
   
 ## <a name="synchronized-context"></a>同步處理的內容  
- 
-僅限在 .NET Framework 和 Xamarin 應用程式中，您可以在任何 <xref:System.ContextBoundObject> 上使用 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> 來同步所有執行個體方法和欄位。 相同內容網域中所有物件都共用相同的鎖定。 允許多個執行緒存取方法和欄位，但是一次只允許單一執行緒。  
+
+僅限在 .NET Framework 和 Xamarin 應用程式中，您可以在任何 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> 上使用 <xref:System.ContextBoundObject> 來同步所有執行個體方法和欄位。 相同內容網域中所有物件都共用相同的鎖定。 允許多個執行緒存取方法和欄位，但是一次只允許單一執行緒。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
 - [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)

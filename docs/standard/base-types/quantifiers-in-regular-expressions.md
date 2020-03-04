@@ -14,12 +14,12 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-ms.openlocfilehash: a7a870ac32385bf5015f1a95c0246fed6a5c9c05
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f1627248cbed0f03c6fb76ce660f9b2bf7764781
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084240"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160010"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>規則運算式中的數量詞
 數量詞指定輸入中要有多少字元、群組或字元類別的執行個體，才能找到相符項目。  下表列出 .NET 支援的數量詞。  
@@ -29,9 +29,9 @@ ms.locfileid: "73084240"
 |`*`|`*?`|比對零或多次。|  
 |`+`|`+?`|比對一或多次。|  
 |`?`|`??`|比對零或一次。|  
-|`{` n `}`|`{` n `}?`|確實比對 *n* 次。|  
-|`{` n `,}`|`{` n `,}?`|至少比對 *n* 次。|  
-|`{` n `,` m `}`|`{` n `,` m `}?`|比對 *n* 到 *m* 次。|  
+|`{` *n* `}`|`{` *n* `}?`|確實比對 *n* 次。|  
+|`{` *n* `,}`|`{` *n* `,}?`|至少比對 *n* 次。|  
+|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|比對 *n* 到 *m* 次。|  
   
  數量 `n` 和 `m` 都是整數常數。 數量詞通常是 Greedy (窮盡)。其會讓規則運算式引擎盡可能多地從每次出現的特定模式進行比對。 在數量詞中加上 `?` 字元會使它 Lazy (最少)，造成規則運算式引擎比對的項目愈少愈好。 如需 greedy (匹配優先) 與 lazy (忽略優先) 量詞間差異的完整說明，請參閱本主題稍後的 [Greedy (匹配優先) 與 Lazy (忽略優先) 量詞](#Greedy)一節。  
   
@@ -222,7 +222,7 @@ ms.locfileid: "73084240"
 |`{1,10}`|比對 1 到 10 次上一個模式。|  
 |`[.!?]`|比對任一標點符號字元 "."、"!" 或 "?"。|  
   
-<a name="Greedy"></a>   
+<a name="Greedy"></a>
 ## <a name="greedy-and-lazy-quantifiers"></a>Greedy (匹配優先) 與 Lazy (忽略優先) 量詞  
  數個數量詞有兩種版本︰  
   
@@ -251,7 +251,7 @@ ms.locfileid: "73084240"
 ## <a name="quantifiers-and-empty-matches"></a>量詞和空白比對  
  在找到最低擷取次數時，數量詞 `*`、`+` 和 `{`*n*`,`*m*`}` 及其對應 Lazy (最少) 絕對不會在空白比對之後重複執行。 當可能群組擷取的最大數目是無限或接近無限時，此規則可防止數量詞在碰到空白子運算式比對時進入無限迴圈。  
   
- 例如，下列程式碼顯示以會比對零或一個 "a" 字元零或多次的規則運算式模式 `(a?)*` 呼叫 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 方法的結果。 請注意，單一擷取群組會擷取每個 "a" 以及 <xref:System.String.Empty?displayProperty=nameWithType>，但不會有第二個空白比對，因為第一個空白比對就會導致數量詞停止重複。  
+ 例如，下列程式碼顯示以會比對零或一個 "a" 字元零或多次的規則運算式模式 <xref:System.Text.RegularExpressions.Regex.Match%2A?displayProperty=nameWithType> 呼叫 `(a?)*` 方法的結果。 請注意，單一擷取群組會擷取每個 "a" 以及 <xref:System.String.Empty?displayProperty=nameWithType>，但不會有第二個空白比對，因為第一個空白比對就會導致數量詞停止重複。  
   
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#1](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch1.cs#1)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch1.vb#1)]  
@@ -269,7 +269,7 @@ ms.locfileid: "73084240"
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

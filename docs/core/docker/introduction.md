@@ -3,12 +3,12 @@ title: Docker 簡介
 description: 本文在 .NET Core 應用程式內容中提供了 Docker 的簡介及概觀。
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 40c8a3c8d81d23c621ccb83a283f49aa34a58ac1
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: eedfd1e7c1b361beb9d4f271e739657ef5e894a6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920814"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157787"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
@@ -18,7 +18,7 @@ ms.locfileid: "76920814"
 
 ## <a name="docker-basics"></a>Docker 基本知識
 
-有幾個概念您應該很熟悉。 Docker 用戶端具有可用來管理映射和容器的 CLI。 如先前所述，您應該仔細閱讀 [Docker 概觀](https://docs.docker.com/engine/docker-overview/) \(英文\) 文件。 
+有幾個概念您應該很熟悉。 Docker 用戶端具有可用來管理映射和容器的 CLI。 如先前所述，您應該仔細閱讀 [Docker 概觀](https://docs.docker.com/engine/docker-overview/) \(英文\) 文件。
 
 ### <a name="images"></a>影像
 
@@ -32,9 +32,9 @@ ms.locfileid: "76920814"
 
 ### <a name="registries"></a>登錄
 
-容器登錄是映像存放庫的集合。 您可以使用登錄映像作為映像的基礎。 您可以在登錄中直接從映像建立容器。 在[進行容器化應用程式或微服務的架構設計及建置](../../architecture/microservices/architect-microservice-container-applications/index.md)時，[Docker 容器、映像和登錄之間的關係](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md)是相當重要的概念。 此作法能大幅縮短開發和部署之間的時間。
+容器登錄是映像存放庫的集合。 您可以使用登錄映像作為映像的基礎。 您可以在登錄中直接從映像建立容器。 在[進行容器化應用程式或微服務的架構設計及建置](../../architecture/microservices/container-docker-introduction/docker-containers-images-registries.md)時，[Docker 容器、映像和登錄之間的關係](../../architecture/microservices/architect-microservice-container-applications/index.md)是相當重要的概念。 此作法能大幅縮短開發和部署之間的時間。
 
-Docker 擁有公用登錄，已裝載於 [Docker Hub](https://hub.docker.com/) \(英文\) 供您使用。 Docker Hub 會列出 [.NET core 相關映像](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)。 
+Docker 擁有公用登錄，已裝載於 [Docker Hub](https://hub.docker.com/) \(英文\) 供您使用。 Docker Hub 會列出 [.NET core 相關映像](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)。
 
 Microsoft 容器登錄 (MCR) 是 Microsoft 提供容器映像的官方來源。 MCR 建置在 Azure CDN 上，用來提供全域複寫的映像。 不過，MCR 並沒有公開網站，因此了解 Microsoft 所提供容器映像的主要方式是透過 [Microsoft Docker Hub 頁面](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)。
 
@@ -44,7 +44,7 @@ Microsoft 容器登錄 (MCR) 是 Microsoft 提供容器映像的官方來源。 
 
 ## <a name="net-core-images"></a>.NET Core 映像
 
-官方 .NET Core Docker 映像會發佈至 Microsoft 容器登錄 (MCR)，並且可在 [Microsoft.NET Core Docker Hub 存放庫](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\) 中找到。 每個存放庫都包含您可以使用的 .NET (SDK 或執行階段) 與作業系統不同組合的映像。 
+官方 .NET Core Docker 映像會發佈至 Microsoft 容器登錄 (MCR)，並且可在 [Microsoft.NET Core Docker Hub 存放庫](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\) 中找到。 每個存放庫都包含您可以使用的 .NET (SDK 或執行階段) 與作業系統不同組合的映像。
 
 Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET Core 存放庫](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) \(英文\) 可提供為了在生產環境中執行 ASP.NET Core 應用程式而建置的映像。
 
@@ -61,7 +61,7 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 - [Azure 容器執行個體](https://azure.microsoft.com/services/container-instances/)
 在沒有任何較高層級管理服務的情況下，將容器裝載於雲端。
 
-- [Azure Batch](https://azure.microsoft.com/services/batch/)\
+- [Azure Batch](https://azure.microsoft.com/services/batch/)
 使用容器執行重複的計算工作。
 
 - [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)

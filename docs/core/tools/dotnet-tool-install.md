@@ -2,12 +2,12 @@
 title: dotnet tool install 命令
 description: Dotnet tool install 命令會在您的電腦上安裝指定的 .NET Core 工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 837d12bc807ad95ccdbd9c0e087c7d45418c6e74
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 641e6a2753b1cf3bfc334ba2495342f7c42421fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626030"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156970"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -73,7 +73,7 @@ dotnet new tool-manifest
 
 - **`-g|--global`**
 
-  指定安裝為使用者範圍。 無法與 `--tool-path` 選項合併使用。 省略 `--global` 和 `--tool-path` 指定本機工具安裝。 
+  指定安裝為使用者範圍。 無法與 `--tool-path` 選項合併使用。 省略 `--global` 和 `--tool-path` 指定本機工具安裝。
 
 - **`-h|--help`**
 
@@ -81,7 +81,7 @@ dotnet new tool-manifest
 
 - **`tool-path <PATH>`**
 
-  指定要安裝通用工具的位置。 PATH 可為絕對路徑或相對路徑。 如果 PATH 不存在，命令會嘗試建立它。 省略 `--global` 和 `--tool-path` 指定本機工具安裝。 
+  指定要安裝通用工具的位置。 PATH 可為絕對路徑或相對路徑。 如果 PATH 不存在，命令會嘗試建立它。 省略 `--global` 和 `--tool-path` 指定本機工具安裝。
 
 - **`-v|--verbosity <LEVEL>`**
 

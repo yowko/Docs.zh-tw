@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 02b94b673dc4468e68a1dadd83aab0e3bfcfaa16
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921199"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160296"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>如何：撰寫簡單的 Parallel ForEach 迴圈
 
@@ -50,7 +50,7 @@ ms.locfileid: "76921199"
 您可以從命令列使用 .NET Core CLI 命令（例如，`dotnet new console` 或 `dotnet new console -lang vb`），也可以建立檔案，並針對 .NET Framework 應用程式使用命令列編譯器。
 
 對於 .NET Core 專案，您必須參考 **System.Drawing.Common** NuGet 套件。 在 Visual Studio 中，使用 NuGet 套件管理員來安裝套件。 或者，您可將參考新增至 \*.csproj 或 \*.vbproj 檔案中的套件：
- 
+
 ```xml
 <ItemGroup>
      <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
@@ -61,7 +61,7 @@ ms.locfileid: "76921199"
 
 若要從 Visual Studio 執行您的主控台應用程式，請按 **F5**。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [平行程式設計](../../../docs/standard/parallel-programming/index.md)

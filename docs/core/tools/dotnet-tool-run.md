@@ -2,14 +2,14 @@
 title: dotnet 工具執行命令
 description: Dotnet 工具執行命令會叫用本機工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 05b21c0f5ea86f4b99b220f556c61bf83f464114
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 76830b8a8088fbf21f14ab0722b9547eabde7ba4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543877"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156955"
 ---
-# <a name="dotnet-tool-run"></a>dotnet 工具執行
+# <a name="dotnet-tool-run"></a>dotnet tool run
 
 **本文適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
 
@@ -20,7 +20,7 @@ ms.locfileid: "77543877"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet tool run <COMMAND NAME> 
+dotnet tool run <COMMAND NAME>
 dotnet tool run <-h|--help>
 ```
 

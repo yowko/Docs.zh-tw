@@ -17,12 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: e7922294db1236e697df80203583b2dbb3e41a01
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 1b61cc88de4f73abfe6d8e77f8f32c2c71e70a9d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124438"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78158060"
 ---
 # <a name="backtracking-in-regular-expressions"></a>規則運算式中的回溯
 回溯 (Backtracking) 會在規則運算式模式包含選擇性的[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)或[替代建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)，且規則運算式引擎返回之前儲存的狀態繼續搜尋相符項目時發生。 回溯是規則運算式的核心能力，可讓運算式功能強大且靈活，並且比對非常複雜的模式。 但同時，這項強大功能需付出相當的代價。 回溯經常是影響規則運算式引擎之效能最重要的一項因素。 幸好開發人員能夠掌控規則運算式引擎的行為，以及其使用回溯的方式。 本主題將說明回溯運作的方式，以及如何進行控制。  
@@ -62,7 +62,7 @@ ms.locfileid: "77124438"
 |18|\w|"d" (索引 13)|可能符合的結果。|  
 |19|\b|"" (索引 14)|相符項目。|  
   
- 如果規則運算式模式未包含選擇性數量詞或交替建構，則比對規則運算式模式與輸入字串所需的比較次數上限，約相當於輸入字串中的字元數。 在這個案例中，規則運算式引擎會使用 19 項比較找出這 13 個字元字串中可能的相符項目。  換句話說，如果沒有選擇性數量詞或交替建構，規則運算式引擎就會以近似線性時間執行。   
+ 如果規則運算式模式未包含選擇性數量詞或交替建構，則比對規則運算式模式與輸入字串所需的比較次數上限，約相當於輸入字串中的字元數。 在這個案例中，規則運算式引擎會使用 19 項比較找出這 13 個字元字串中可能的相符項目。  換句話說，如果沒有選擇性數量詞或交替建構，規則運算式引擎就會以近似線性時間執行。
 
 ## <a name="backtracking-with-optional-quantifiers-or-alternation-constructs"></a>含有選擇性數量詞或交替建構的回溯  
  當規則運算式包含選擇性數量詞或交替建構時，輸入字串的評估就不再是線性。 與 NFA 引擎比對的模式是由規則運算式中的語言項目所引導，而不是由輸入字串中要比對的字元引導。 因此，規則運算式引擎會嘗試完整比對選擇性或替代子運算式。 當規則運算式引擎前進到子運算式中的下一個語言項目且比對失敗時，它可能會捨棄成功比對的一部分，並且返回之前儲存的狀態，以便完整比對規則運算式與輸入字串。 這個返回之前儲存狀態尋找符合結果的程序，就稱為回溯 (Backtracking)。  
@@ -84,7 +84,7 @@ ms.locfileid: "77124438"
   
 - 接著再比較模式中的 "s" 與相符的 "e" 字元後面接著的 "s" ("expressions" 中的第一個 "s")。 比對將會成功。  
   
- 當您使用回溯時，比對規則運算式模式與長度 55 個字元的輸入字串需要進行 67 次比較作業。 通常如果規則運算式模式包含單一交替建構或單一選擇性數量詞，則比對模式所需的比較作業次數會超過輸入字串中字元數的兩倍。   
+ 當您使用回溯時，比對規則運算式模式與長度 55 個字元的輸入字串需要進行 67 次比較作業。 通常如果規則運算式模式包含單一交替建構或單一選擇性數量詞，則比對模式所需的比較作業次數會超過輸入字串中字元數的兩倍。
 
 ## <a name="backtracking-with-nested-optional-quantifiers"></a>含有巢狀選擇性數量詞的回溯  
  如果模式包含大量交替建構、包括巢狀交替建構，或是最常見的巢狀選擇性數量詞，則比對規則運算式模式所需的比較作業次數可能大幅增加。 例如，規則運算式模式 `^(a+)+$` 的設計為比對包含一個或多個 "a" 字元的完整字串。 範例中提供了兩個長度相同的輸入字串，但只有第一個字串與模式相符。 <xref:System.Diagnostics.Stopwatch?displayProperty=nameWithType> 類別可用來判斷比對作業進行的時間。  
@@ -100,7 +100,7 @@ ms.locfileid: "77124438"
   
 - 它會返回之前儲存的符合結果 3。 然後判斷出有兩個額外的 "a" 字元要指派至額外的擷取群組。 然而，字串結尾測試失敗。 接著它會返回符合結果 3，並嘗試比對兩個額外的擷取群組中的這兩個額外的 "a" 字元。 字串結尾測試仍然失敗。 這些失敗的比對需要經過 12 次比較。 到目前為止，總共執行了 25 次比較。  
   
- 輸入字串與規則運算式的比較會依照這種方式繼續進行，直到規則運算式引擎嘗試過所有可能的比對組合，然後得到沒有符合的結果這個結論。 由於巢狀數量詞的關係，這個比較是 O(2<sup>n</sup>) 或指數運算，其中 *n* 是輸入字串中的字元數。 這表示，在最糟的情況下，包含 30 個字元的輸入字串約需要進行 1,073,741,824 次比較，而包含 40 個字元的輸入字串約需要進行 1,099,511,627,776 次比較。 如果您使用這類長度甚至更長的字串，則規則運算式方法處理不符合規則運算式模式的輸入時，可能需要相當長的時間才能完成。 
+ 輸入字串與規則運算式的比較會依照這種方式繼續進行，直到規則運算式引擎嘗試過所有可能的比對組合，然後得到沒有符合的結果這個結論。 由於巢狀數量詞的關係，這個比較是 O(2<sup>n</sup>) 或指數運算，其中 *n* 是輸入字串中的字元數。 這表示，在最糟的情況下，包含 30 個字元的輸入字串約需要進行 1,073,741,824 次比較，而包含 40 個字元的輸入字串約需要進行 1,099,511,627,776 次比較。 如果您使用這類長度甚至更長的字串，則規則運算式方法處理不符合規則運算式模式的輸入時，可能需要相當長的時間才能完成。
 
 ## <a name="controlling-backtracking"></a>控制回溯  
  回溯可讓您建立強大、靈活的規則運算式。 不過，如上一節所示，這些好處可能伴隨著令人敬謝不敏的低落效能。 為了避免大量回溯，當您具現化 <xref:System.Text.RegularExpressions.Regex> 物件或呼叫靜態規則運算式比對方法時，應該定義逾時間隔。 下一節將討論這個部分。 此外，.NET 支援三個正則運算式語言專案，可限制或隱藏回溯並支援複雜的正則運算式，但幾乎不會造成效能損失：不可部分完成的[群組](#atomic-groups)、左合樣[判斷](#lookbehind-assertions)提示和右合樣[判斷](#lookahead-assertions)提示。 如需各語言項目的詳細資訊，請參閱 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
@@ -113,7 +113,7 @@ ms.locfileid: "77124438"
   
  <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外狀況表示規則運算式引擎在指定的逾時間隔內找不到相符項目，但不會指出擲回例外狀況的原因。 這個原因可能是大量回溯，不過也有可能是對於擲回例外狀況當時的系統負載而言，設定的逾時間隔太低。 當您處理例外狀況時，可以選擇中放棄一步比對輸入字串，或增加逾時間隔並重試比對作業。  
   
- 例如，下列程式碼會呼叫 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 建構函式來具現化逾時值為一秒的 <xref:System.Text.RegularExpressions.Regex> 物件。 規則運算式模式 `(a+)+$`會在行尾比對一個或多個 "a" 字元的一個或多個序列，並且受限於大量回溯。 如果擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ，則範例會將逾時值增加至最大間隔三秒。 在這個間隔之後，它就會放棄嘗試比對模式。  
+ 例如，下列程式碼會呼叫 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 建構函式來具現化逾時值為一秒的 <xref:System.Text.RegularExpressions.Regex> 物件。 規則運算式模式 `(a+)+$` 會在行尾比對一個或多個 "a" 字元的一個或多個序列，並且受限於大量回溯。 如果擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ，則範例會將逾時值增加至最大間隔三秒。 在這個間隔之後，它就會放棄嘗試比對模式。  
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  

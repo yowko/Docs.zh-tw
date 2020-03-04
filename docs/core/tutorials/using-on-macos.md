@@ -2,12 +2,12 @@
 title: 教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
 description: 本文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。
 ms.date: 12/19/2019
-ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f5da16d413ddc25587ff35550fe9f308dc87f4bb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741537"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156591"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
 
@@ -16,7 +16,7 @@ ms.locfileid: "76741537"
 > [!NOTE]
 > 這篇文章會在 macOS 上使用 [Visual Studio Code](https://code.visualstudio.com)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。 .NET Core SDK 包含 .NET Core 架構和執行階段的最新版本。
 
@@ -155,7 +155,7 @@ namespace TestApp
 從 *golden* 資料夾中，執行下列命令：
 
 ```dotnetcli
-dotnet restore 
+dotnet restore
 dotnet test test-library/test-library.csproj
 ```
 

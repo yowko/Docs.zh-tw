@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 8025f84f2425f5b91e08b28ddb24d105d8c4d1a3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163198"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159581"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>如何在 .NET 中序列化和還原序列化（封送處理和 unmarshal） JSON
 
@@ -61,7 +61,7 @@ using System.Text.Json.Serialization;
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
 
-序列化上述型別之實例的 JSON 輸出如下列範例所示。 預設會縮減 JSON 輸出： 
+序列化上述型別之實例的 JSON 輸出如下列範例所示。 預設會縮減 JSON 輸出：
 
 ```json
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
@@ -191,7 +191,7 @@ using System.Text.Json.Serialization;
 * [將所有屬性名稱轉換成 camel 大小寫](#use-camel-case-for-all-json-property-names)
 * [執行自訂屬性命名原則](#use-a-custom-json-property-naming-policy)
 * [將字典索引鍵轉換成 camel 大小寫](#camel-case-dictionary-keys)
-* [將列舉轉換為字串和大小寫](#enums-as-strings) 
+* [將列舉轉換為字串和大小寫](#enums-as-strings)
 
 針對需要對 JSON 屬性名稱和值進行特殊處理的其他案例，您可以[執行自訂轉換器](system-text-json-converters-how-to.md)。
 
@@ -378,11 +378,11 @@ JSON 屬性命名原則：
 
 以下是要序列化和 JSON 輸出的範例物件：
 
-|屬性 |{2&gt;值&lt;2}  |
+|屬性 |值  |
 |---------|---------|
-| 日期    | 8/1/2019 12:00:00 AM-07:00|
+| Date    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| 總結| null|
+| 摘要| null|
 
 ```json
 {
@@ -507,7 +507,7 @@ JSON 屬性命名原則：
 ```
 
 > [!IMPORTANT]
-> 這些方法只會針對要序列化的根物件提供多型序列化，而不是針對該根物件的屬性。 
+> 這些方法只會針對要序列化的根物件提供多型序列化，而不是針對該根物件的屬性。
 
 如果您將較低層級的物件定義為 `object`的類型，您就可以取得其多型序列化。 例如，假設您的 `WeatherForecast` 類別具有一個名為 `PreviousForecast` 的屬性，可以定義為 `WeatherForecast` 或 `object`的類型：
 
@@ -566,7 +566,7 @@ JSON 屬性命名原則：
 }
 ```
 
-如需多型**序列化**的詳細資訊，以及還原序列化**的相關資訊**，請參閱[如何從 Newtonsoft.Json 遷移至 System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)。
+如需多型**序列化**的詳細資訊，以及還原序列化**的相關資訊**，請參閱[如何從 Newtonsoft 遷移至 system.object](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)。
 
 ## <a name="allow-comments-and-trailing-commas"></a>允許批註和尾端逗號
 
@@ -634,14 +634,14 @@ JSON 屬性命名原則：
 
 當您將稍早所示的 JSON 還原序列化為此範例類型時，額外的資料會變成 `ExtensionData` 屬性的機碼值組：
 
-|屬性 |{2&gt;值&lt;2}  |注意事項  |
+|屬性 |值  |注意  |
 |---------|---------|---------|
-| 日期    | 8/1/2019 12:00:00 AM-07:00||
+| Date    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | 區分大小寫不相符（`temperatureCelsius` 在 JSON 中），因此不會設定屬性。 |
-| 總結 | 熱 ||
+| 摘要 | 經常性存取 ||
 | ExtensionData | temperatureCelsius：25 |因為大小寫不相符，所以這個 JSON 屬性會是額外的，而且會成為字典中的索引鍵/值組。|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON 中的額外屬性會變成索引鍵/值組，並以陣列做為值物件。|
-| |SummaryWords:<br>酷<br>風大<br>潮濕 |JSON 中的額外屬性會變成索引鍵/值組，並以陣列做為值物件。|
+| |SummaryWords:<br>非經常性存取<br>風大<br>潮濕 |JSON 中的額外屬性會變成索引鍵/值組，並以陣列做為值物件。|
 
 當目標物件序列化時，延伸模組資料索引鍵值組會變成 JSON 屬性，就像是傳入 JSON 中所示：
 
@@ -712,7 +712,7 @@ JSON 中的 Null 值只有在有效時才會被忽略。 不可為 null 的實�
 上述程式碼：
 
 * 假設要分析的 JSON 是在名為 `jsonString`的字串中。
-* 計算 `Students` 陣列中具有 `Grade` 屬性之物件的平均等級。 
+* 計算 `Students` 陣列中具有 `Grade` 屬性之物件的平均等級。
 * 為沒有成績的學生指派預設等級70。
 * 藉由遞增 `count` 變數與每個反復專案來計算學生數目。 另一種方法是呼叫 <xref:System.Text.Json.JsonElement.GetArrayLength%2A>，如下列範例所示：
 
@@ -732,7 +732,7 @@ JSON 中的 Null 值只有在有效時才會被忽略。 不可為 null 的實�
 
 * 讀取 JSON 檔案、將資料載入 `JsonDocument`，並將格式化（已列印）的 JSON 寫入檔案。
 * 會使用 <xref:System.Text.Json.JsonDocumentOptions> 來指定允許輸入 JSON 中的批註，但會忽略它。
-* 完成時，會在寫入器上呼叫 <xref:System.Text.Json.Utf8JsonWriter.Flush%2A>。 另一個替代方式是讓寫入器在處置時 autoflush。 
+* 完成時，會在寫入器上呼叫 <xref:System.Text.Json.Utf8JsonWriter.Flush%2A>。 另一個替代方式是讓寫入器在處置時 autoflush。
 
 以下是範例程式碼所要處理的 JSON 輸入範例：
 
@@ -769,7 +769,7 @@ JSON 中的 Null 值只有在有效時才會被忽略。 不可為 null 的實�
 * 假設檔案是以 UTF-16 編碼，並將其轉碼為 UTF-8。 您可以使用下列程式碼，直接將編碼為 UTF-8 的檔案讀入 `ReadOnlySpan<byte>`中：
 
   ```csharp
-  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
+  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
   ```
 
   如果檔案包含 UTF-8 位元組順序標記（BOM），請先將它移除，再將位元組傳遞給 `Utf8JsonReader`，因為讀取器需要文字。 否則，BOM 會被視為不正確 JSON，而讀取器會擲回例外狀況。

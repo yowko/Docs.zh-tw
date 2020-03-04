@@ -15,12 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.openlocfilehash: 8db9ef72415f148aca2c975fc4e8b70421e3adc3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 02664bd2812f89649ec933483161263bae530a75
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711554"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159685"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>規則運算式中的替代建構
 
@@ -62,14 +62,14 @@ ms.locfileid: "75711554"
 |<code>(\d{2}-\d{7}&#124;\d{3}-\d{2}-\d{4})</code>|比對下列其中一項：兩個十進位數字後接連字號再後接七個十進位數字，或是三個十進位數字、連字號、兩個十進位數字、另一個連字號及四個十進位數字。|  
 |`\d`|結束字緣比對。|  
   
-<a name="Conditional_Expr"></a>   
+<a name="Conditional_Expr"></a>
 ## <a name="conditional-matching-with-an-expression"></a>使用運算式進行的條件式比對
 
-這個語言項目會嘗試比對兩個模式的其中一個是否符合初始模式。 它的語法為：  
+這個語言項目會嘗試比對兩個模式的其中一個是否符合初始模式。 其語法如下：  
 
 `(?(`*運算式*`)`*是*`|`*否*`)`
 
-其中 *expression* 是要比對的初始模式， *yes* 是符合 *expression* 時要比對的模式，而 *no* 是不符合 *expression* 時要比對的選擇性模式。 規則運算式引擎會將 *expression* 視為零寬度的判斷提示，也就是說，規則運算式引擎不會在評估 *expression*之後於輸入資料流中前進。 因此，此建構等同於下列：
+其中 *expression* 是要比對的初始模式， *yes* 是符合 *expression* 時要比對的模式，而 *no* 是不符合 *expression* 時要比對的選擇性模式。 規則運算式引擎會將 *expression* 視為零寬度的判斷提示，也就是說，規則運算式引擎不會在評估 *expression* 之後於輸入資料流中前進。 因此，此建構等同於下列：
 
 `(?(?=`*運算式*`)`*是*`|`*否*`)`
 
@@ -96,7 +96,7 @@ ms.locfileid: "75711554"
 <a name="Conditional_Group"></a>
 ## <a name="conditional-matching-based-on-a-valid-captured-group"></a>依據有效擷取群組進行的條件式比對
 
-這個語言項目會嘗試根據它是否已經比對指定的擷取群組，比對兩種模式的其中一種。 它的語法為：
+這個語言項目會嘗試根據它是否已經比對指定的擷取群組，比對兩種模式的其中一種。 其語法如下：
 
 `(?(`*名稱*`)`*是*`|`*否*`)`
 
@@ -106,7 +106,7 @@ ms.locfileid: "75711554"
 
 其中 *name* 是名稱，而 *number* 是擷取群組的數目， *yes* 是 *name* 或 *number* 其中之一相符時要比對的運算式，而 *no* 則是不符合時要比對的選擇性運算式。
 
-如果 *name* 並未對應到規則運算式模式中所使用的擷取群組名稱，則交替建構會解譯為運算式測試，如上一節中所說明。 通常，這表示 *expression* 判斷值為 `false`。 如果 *number* 沒有對應到規則運算式模式中所使用的編號擷取群組，則規則運算式引擎會擲回 <xref:System.ArgumentException>。
+如果 *name* 並未對應到規則運算式模式中所使用的擷取群組名稱，則替代建構會解譯為運算式測試，如上一節中所說明。 通常，這表示 *expression* 判斷值為 `false`。 如果 *number* 沒有對應到規則運算式模式中所使用的編號擷取群組，則規則運算式引擎會擲回 <xref:System.ArgumentException>。
 
 下列範例是[以 &#124; 進行的二選一模式比對](#Either_Or)一節中使用的範例變化。 它會使用名為 `n2` 的擷取群組，其由兩個數字後接連字號所組成。 替代建構會測試是否已在輸入字串中比對這個擷取群組。 如果是，交替建構會嘗試比對九位數雇主識別碼 (EIN) 的末七碼。美國雇主識別碼 (EIN)。 如果不是，則會嘗試比對九位數美國社會安全碼 (SSN)。社會安全碼 (SSN)。
 
@@ -129,6 +129,6 @@ ms.locfileid: "75711554"
 [!code-csharp[RegularExpressions.Language.Alternation#5](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
 [!code-vb[RegularExpressions.Language.Alternation#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)

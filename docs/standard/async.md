@@ -6,19 +6,19 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
-ms.openlocfilehash: 1570909b7b416eff81dd90a936ff5ed10aad94f1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d649bc3a92d3bb834b3bc4f7d3c1bcb0f9417375
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346076"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159724"
 ---
 # <a name="async-overview"></a>非同步總覽
 
-不久之前，只要購買較新的電腦或伺服器，應用程式的執行速度就會更快，然後逐漸停止。 這事實上相反。 具有 1ghz 單一核心 ARM 晶片和伺服器工作負載的行動電話已轉換為 VM。 使用者仍然想要回應式 UI，而且企業擁有者想要擁有隨其業務調整的伺服器。 行動和雲端以及已連接網際網路母體 >3B 使用者的轉換已導致新的一組軟體模式。 
+不久之前，只要購買較新的電腦或伺服器，應用程式的執行速度就會更快，然後逐漸停止。 這事實上相反。 具有 1ghz 單一核心 ARM 晶片和伺服器工作負載的行動電話已轉換為 VM。 使用者仍然想要回應式 UI，而且企業擁有者想要擁有隨其業務調整的伺服器。 行動和雲端以及已連接網際網路母體 >3B 使用者的轉換已導致新的一組軟體模式。
 
 - 用戶端應用程式應該一律啟動、一律連線，並持續回應使用者互動 (例如觸控)，而且在應用程式市集具有高評價！
-- 服務應該透過正常相應增加和相應減少來處理流量暴增情況。 
+- 服務應該透過正常相應增加和相應減少來處理流量暴增情況。
 
 非同步程式設計是一項重要技術，可讓您更容易處理對多個核心的封鎖 I/O 和並行作業。 .NET 提供的功能可讓應用程式和服務在、Visual Basic 和C# F#中，使用容易使用的語言層級非同步程式設計模型進行回應和彈性。
 
@@ -33,7 +33,7 @@ ms.locfileid: "75346076"
 - 許多較新的 .NET API 都是非同步的。
 - 輕鬆地在 .NET 中撰寫非同步程式碼！
 
-## <a name="whats-next"></a>後續步驟
+## <a name="whats-next"></a>下一步
 
 如需詳細資訊，請參閱[深入了解非同步](async-in-depth.md)主題。
 

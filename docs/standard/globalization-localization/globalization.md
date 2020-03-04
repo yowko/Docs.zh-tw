@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1055b10d0e3e971a6b0963c1ed950fef903ac5bd
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120899"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239946"
 ---
 # <a name="globalization"></a>全球化
 
@@ -66,12 +66,12 @@ ms.locfileid: "73120899"
 > [!TIP]
 > 您可以搭配 <xref:System.Globalization.StringInfo> 類別使用文字項目，而無須使用字串中的個別字元。
 
-在字串搜尋和比較中，常見的錯誤是將字串視為字元的集合，且各個都由一個 <xref:System.Char> 物件表示。 事實上，單一字元可能由一個、兩個或多個 <xref:System.Char> 物件所形成。 若字母是由 Unicode 基本拉丁字元範圍 (U+0021 到 U+007E) 以外的字元所組成，則在此文化特性的字串中最常出現上述這類字元。 下列範例嘗試在字串中尋找拉丁大寫字母 A 帶抑音符號字元 (U+00C0) 的索引。 不過，此字元可以有兩種表示方式︰單一程式碼單位 (U+00C0)，或作為複合字元 (兩個程式碼單位︰U+0021 與 U+007E)。 在此情況下，字元在字串執行個體中的表示方式為兩個 <xref:System.Char> 物件、U+0021 與 U+007E。 範例程式碼會呼叫 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 和 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 多載，以在字串執行個體中尋找此字元的位置，但這些多載會傳回不同的結果。 第一個方法呼叫具有 <xref:System.Char> 引數；它會執行序數比較，因此找不到相符項目。 第二個呼叫具有 <xref:System.String> 引數；它會執行區分文化特性的比較，因此會找到相符項目。
+在字串搜尋和比較中，常見的錯誤是將字串視為字元的集合，且各個都由一個 <xref:System.Char> 物件表示。 事實上，單一字元可能由一個、兩個或多個 <xref:System.Char> 物件所形成。 若字母是由 Unicode 基本拉丁字元範圍 (U+0021 到 U+007E) 以外的字元所組成，則在此文化特性的字串中最常出現上述這類字元。 下列範例嘗試在字串中尋找拉丁大寫字母 A 帶抑音符號字元 (U+00C0) 的索引。 不過，這個字元可以用兩種不同的方式來表示：單一程式碼單位（U + 00C0）或複合字元（兩個程式碼單位： U + 0041 和 U + 0300）。 在此情況下，字元會在字串實例中以兩個 <xref:System.Char> 物件（U + 0041 和 U + 0300）來表示。 範例程式碼會呼叫 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 和 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 多載，以在字串執行個體中尋找此字元的位置，但這些多載會傳回不同的結果。 第一個方法呼叫具有 <xref:System.Char> 引數；它會執行序數比較，因此找不到相符項目。 第二個呼叫具有 <xref:System.String> 引數；它會執行區分文化特性的比較，因此會找到相符項目。
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
 
-您可透過呼叫內含如 <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 或 <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 等方法之 <xref:System.StringComparison> 參數的多載，進而避免此範例的模稜兩可情形 (呼叫至方法的兩個相似多載而傳回不同的結果)。
+您可透過呼叫內含如 <xref:System.StringComparison> 或 <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 等方法之 <xref:System.String.LastIndexOf%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 參數的多載，進而避免此範例的模稜兩可情形 (呼叫至方法的兩個相似多載而傳回不同的結果)。
 
 不過，搜尋不一定會區分文化特性。 如果搜尋的目的為制定安全性決策或是允許或不允許存取某些資源，則應為序數比較，如下一節所述。
 
@@ -79,7 +79,7 @@ ms.locfileid: "73120899"
 
 如果您想要測試兩個字串是否相等，而不是判斷其在排序次序方面的比較，請使用 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法，而不是使用如 <xref:System.String.Compare%2A?displayProperty=nameWithType> 或 <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType> 等字串比較方法。
 
-若要有條件地存取某些資源，通常會執行相等比較。 例如，您可能會執行相等比較，以驗證密碼或確認檔案存在。 這類非語言比較應該一律是序數，而不區分文化特性。 一般而言，您應該使用 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 值 (適用於密碼等字串)，或 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 值 (適用於檔案名稱或 URI 等字串) 來呼叫執行個體 <xref:System.String.Equals%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法或靜態 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 方法。
+若要有條件地存取某些資源，通常會執行相等比較。 例如，您可能會執行相等比較，以驗證密碼或確認檔案存在。 這類非語言比較應該一律是序數，而不區分文化特性。 一般而言，您應該使用 <xref:System.String.Equals%28System.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 值 (適用於密碼等字串)，或 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 值 (適用於檔案名稱或 URI 等字串) 來呼叫執行個體 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 方法或靜態 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 方法。
 
 相等比較有時會涉及搜尋或子字串比較，而不是呼叫 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法。 在某些情況下，您可以使用子字串搜尋來判斷該子字串是否等於另一個字串。 如果這項比較的目的非關語言，仍應為序數而非區分文化特性的搜尋。
 
@@ -118,7 +118,7 @@ ms.locfileid: "73120899"
 
 如果您的應用程式執行字串資料的廣泛特定文化特性排序，則可使用 <xref:System.Globalization.SortKey> 類別來比較字串。 排序鍵會反映特定文化特性排序權數，包括字母、大小寫及特定字串的變音符號權數。 由於比較所使用的排序鍵為二進位，因此與隱含或明確使用 <xref:System.Globalization.CompareInfo> 物件的比較相比更為快速。 您透過將字串傳遞至 <xref:System.Globalization.CompareInfo.GetSortKey%2A?displayProperty=nameWithType> 方法，進而為特定字串建立特定文化特性的排序鍵。
 
-下列範例類似於先前的範例。 不過，它會定義 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 實作，該實作會比較加以具現化並傳遞給 <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%29?displayProperty=nameWithType> 方法的排序鍵，而不是呼叫會隱含呼叫 <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType> 方法的 <xref:System.Array.Sort%28System.Array%29?displayProperty=nameWithType> 方法。
+下列範例類似於先前的範例。 不過，它會定義 <xref:System.Array.Sort%28System.Array%29?displayProperty=nameWithType> 實作，該實作會比較加以具現化並傳遞給 <xref:System.Globalization.CompareInfo.Compare%2A?displayProperty=nameWithType> 方法的排序鍵，而不是呼叫會隱含呼叫 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> 方法的 <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Collections.Generic.IComparer%7B%60%600%7D%29?displayProperty=nameWithType> 方法。
 
 [!code-csharp[Conceptual.Globalization#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/sortkey1.cs#15)]
 [!code-vb[Conceptual.Globalization#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/sortkey1.vb#15)]
@@ -133,7 +133,7 @@ ms.locfileid: "73120899"
 
 ### <a name="display-dates-and-times"></a>顯示日期和時間
 
-一般而言，當日期和時間在使用者介面中顯示時，您應採用使用者文化特性的格式化慣例，其由 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性及 `CultureInfo.CurrentCulture.DateTimeFormat` 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件所定義。 當您使用下列任何一種方法將日期格式化時，將自動使用目前文化特性的格式化慣例︰
+一般而言，當日期和時間在使用者介面中顯示時，您應採用使用者文化特性的格式化慣例，其由 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性及 <xref:System.Globalization.DateTimeFormatInfo> 屬性所傳回的 `CultureInfo.CurrentCulture.DateTimeFormat` 物件所定義。 當您使用下列任何一種方法將日期格式化時，將自動使用目前文化特性的格式化慣例︰
 
 - 無參數的 <xref:System.DateTime.ToString?displayProperty=nameWithType> 方法
 
@@ -264,7 +264,7 @@ ms.locfileid: "73120899"
 [!code-csharp[Conceptual.Globalization#20](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/monthname2.cs#20)]
 [!code-vb[Conceptual.Globalization#20](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/monthname2.vb#20)]
 
-## <a name="numeric-values"></a>數值
+## <a name="numeric-values"></a>數字值
 
 處理數字的方式取決於其是否會顯示在使用者介面中或是受到保存。 本節將探討這兩種使用方式。
 
@@ -273,7 +273,7 @@ ms.locfileid: "73120899"
 
 ### <a name="display-numeric-values"></a>顯示數值
 
-一般而言，當數字在使用者介面中顯示時，您應採用使用者文化特性的格式化慣例，其由 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性及 `CultureInfo.CurrentCulture.NumberFormat` 屬性所傳回的 <xref:System.Globalization.NumberFormatInfo> 物件所定義。 當您使用下列任何一種方法將日期格式化時，將自動使用目前文化特性的格式化慣例︰
+一般而言，當數字在使用者介面中顯示時，您應採用使用者文化特性的格式化慣例，其由 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性及 <xref:System.Globalization.NumberFormatInfo> 屬性所傳回的 `CultureInfo.CurrentCulture.NumberFormat` 物件所定義。 當您使用下列任何一種方法將日期格式化時，將自動使用目前文化特性的格式化慣例︰
 
 - 任何數值類型的無參數 `ToString` 方法
 
@@ -311,7 +311,7 @@ ms.locfileid: "73120899"
 [!code-csharp[Conceptual.Globalization#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/currency1.cs#16)]
 [!code-vb[Conceptual.Globalization#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/currency1.vb#16)]
 
-相反地，您應將數值及一些文化特性資訊 (例如文化特性名稱) 序列化，讓值和其貨幣符號可在目前文化特性獨立進行還原序列化。 下列範例透過使用兩個成員 (<xref:System.Decimal> 值和值所屬的文化特性名稱) 定義 `CurrencyValue` 結構來完成上述項目。
+相反地，您應將數值及一些文化特性資訊 (例如文化特性名稱) 序列化，讓值和其貨幣符號可在目前文化特性獨立進行還原序列化。 下列範例透過使用兩個成員 (`CurrencyValue` 值和值所屬的文化特性名稱) 定義 <xref:System.Decimal> 結構來完成上述項目。
 
 [!code-csharp[Conceptual.Globalization#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/currency2.cs#17)]
 [!code-vb[Conceptual.Globalization#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/currency2.vb#17)]
@@ -338,7 +338,7 @@ ms.locfileid: "73120899"
 
 - 在 Windows 系統上，使用者可透過使用 [控制台] 中的 [地區和語言] 應用程式，自訂文化特性 (Culture) 專屬的設定。 將 <xref:System.Globalization.CultureInfo> 物件具現化時，您可透過呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來判斷其是否反映這些使用者自訂。 一般對終端使用者應用程式而言，您應該遵守使用者喜好設定，並以使用者所預期的格式呈現資料。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)
 - [使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)

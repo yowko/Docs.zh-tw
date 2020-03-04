@@ -8,12 +8,12 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-ms.openlocfilehash: 70ed4176872e18ccafa00808630fcc51337b8479
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123217"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156006"
 ---
 # <a name="runtime-callable-wrapper"></a>執行階段可呼叫包裝函式
 Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) 的 Proxy 來公開 COM 物件。 雖然 RCW 對 .NET 用戶端似乎是個普通物件，但其主要功能是在 .NET 用戶端與 COM 物件之間封送處理呼叫。  
@@ -31,9 +31,9 @@ Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) �
  標準包裝函式會強制執行內建的封送處理規則。 例如，當 .NET 用戶端將字串類型當做引數的一部分傳遞至 Unmanaged 物件時，包裝函式會將字串轉換成 BSTR 類型。 如果 COM 物件將 BSTR 傳回至其 Managed 呼叫端，該呼叫端會收到一個字串。 用戶端和伺服器都會傳送及接收其熟悉的資料。 其他類型則不需轉換。 比方說，標準包裝函式一律會在 Managed 與 Unmanaged 程式碼之間傳遞 4 位元組的整數，而不會轉換類型。  
   
 ## <a name="marshaling-selected-interfaces"></a>封送處理選取的介面  
- [執行階段可呼叫包裝函式](runtime-callable-wrapper.md) (RCW) 的主要目標，是要隱藏 Managed 與 Unmanaged 程式設計模型之間的差異。 為了建立無縫轉換，RCW 會使用所選取的 COM 介面，而不會將其公開給 .NET 用戶端，如下圖所示。 
+ [執行階段可呼叫包裝函式](runtime-callable-wrapper.md) (RCW) 的主要目標，是要隱藏 Managed 與 Unmanaged 程式設計模型之間的差異。 為了建立無縫轉換，RCW 會使用所選取的 COM 介面，而不會將其公開給 .NET 用戶端，如下圖所示。
 
- 下圖顯示 COM 介面與執行階段可呼叫包裝函式： 
+ 下圖顯示 COM 介面與執行階段可呼叫包裝函式：
   
  ![執行階段可呼叫包裝函式與介面的螢幕擷取畫面。](./media/runtime-callable-wrapper/runtime-callable-wrapper-interfaces.gif)  
   
@@ -53,12 +53,12 @@ Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) �
 |介面|描述|  
 |---------------|-----------------|  
 |**IConnectionPoint** 和 **IConnectionPointContainer**|RCW 會將公開連接點事件樣式的物件，轉換成委派架構的事件。|  
-|**IDispatchEx** (僅限 .NET Framework) |如果類別實作 **IDispatchEx**，RCW 就會實作 **IExpando**。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸模組，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫的呼叫。|  
+|**IDispatchEx** (僅限 .NET Framework) |如果類別實作 **IDispatchEx**，RCW 就會實作 **IExpando**。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫呼叫。|  
 |**IEnumVARIANT**|可讓支援列舉的 COM 類型被視為集合來處理。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [COM 包裝函式](com-wrappers.md)
 - [COM 可呼叫包裝函式](com-callable-wrapper.md)
 - [型別程式庫至組件轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [匯入類型程式庫做為組件](../../framework/interop/importing-a-type-library-as-an-assembly.md)
+- [匯入型別程式庫作為組件](../../framework/interop/importing-a-type-library-as-an-assembly.md)

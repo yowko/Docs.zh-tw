@@ -2,15 +2,15 @@
 title: 模型產生器 Azure 訓練資源
 description: Azure Machine Learning 的資源指南
 ms.topic: reference
-ms.date: 02/25/2020
+ms.date: 02/27/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: a0a75283cdc7402c67b6bfb0799189fa34cd39a7
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 866fd5a90d13f85f2f8a1aa45ff0e1efb0096642
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77675202"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159295"
 ---
 # <a name="model-builder-azure-training-resources"></a>模型產生器 Azure 訓練資源
 
@@ -52,7 +52,7 @@ Azure Machine Learning 計算是用於定型的雲端式 Linux VM。
 
 ## <a name="training"></a>訓練
 
-Azure 上的訓練僅適用于模型產生器影像分類案例。 用來定型這些模型的演算法是以 ResNet50 架構為基礎的深度類神經網路。 定型期間，會布建定型模型所需的資源，並定型模型。 此程式需要幾分鐘的時間，而且可能會根據所選取的計算大小和資料量而有所不同。 您可以藉由選取 Visual Studio 中的 [在 Azure 入口網站中監視目前的執行] 連結來追蹤執行進度。
+Azure 上的訓練僅適用于模型產生器影像分類案例。 用來定型這些模型的演算法是以 ResNet50 架構為基礎的深度類神經網路。 定型程式需要一些時間，且時間量可能會根據所選計算的大小以及資料量而有所不同。 第一次訓練模型時，您可以預期較長的定型時間，因為必須布建資源。 您可以藉由選取 Visual Studio 中的 [在 Azure 入口網站中監視目前的執行] 連結來追蹤執行進度。
 
 ## <a name="results"></a>結果
 
@@ -64,12 +64,26 @@ Azure 上的訓練僅適用于模型產生器影像分類案例。 用來定型�
   - bestModel. onnx：以 Open Neural Network Exchange （ONNX）格式的模型序列化版本。 ONNX 是 AI 模型的開放原始碼格式，可支援 ML.NET、PyTorch 和 TensorFlow 等架構之間的互通性。
   - bestModelMap：進行預測以將模型輸出對應至文字類別目錄時，所使用的類別目錄清單。
   - MLModel .zip： ML.NET 預測管線的序列化版本，它會使用模型*bestModel*的序列化版本來進行預測，並使用 `bestModelMap.json` 檔案來對應輸出。
-  
+
+## <a name="use-the-machine-learning-model"></a>使用機器學習模型
+
+*模型*專案中的 `ModelInput` 和 `ModelOutput` 類別會分別定義模型預期之輸入和輸出的架構。
+
+在影像分類案例中，`ModelInput` 包含兩個數據行：
+
+- `ImageSource`：影像位置的字串路徑。
+- `Label`：影像所屬的實體類別目錄。 只有在定型時，才會使用 `Label` 做為輸入，而在進行預測時則不需要提供。
+
+`ModelOutput` 包含兩個數據行：
+
+- `Prediction`：影像的預測類別。
+- `Score`：所有類別的機率清單（最高屬於 `Prediction`）。
+
 ## <a name="troubleshooting"></a>疑難排解
 
 ### <a name="cannot-create-compute"></a>無法建立計算
 
 如果在建立 Azure Machine Learning 計算期間發生錯誤，計算資源可能仍存在，錯誤狀態。 如果您嘗試以相同的名稱重新建立計算資源，作業會失敗。 若要修正此錯誤，請使用以下其中一種方法：
 
-* 以不同的名稱建立新的計算
-* 移至 Azure 入口網站，並移除原始的計算資源
+- 以不同的名稱建立新的計算
+- 移至 Azure 入口網站，並移除原始的計算資源

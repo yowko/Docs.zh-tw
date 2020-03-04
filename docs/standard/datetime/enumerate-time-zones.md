@@ -9,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], enumerating
 - enumerating time zones [.NET Framework]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 662e389f4fecc77244e378f1c0672935403fa456
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa8962c8aea208778983610041937dc3f75c1f1e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129115"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159438"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>如何：列舉電腦上存在的時區
 
@@ -25,7 +25,7 @@ ms.locfileid: "73129115"
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>列舉本機系統上展示的時區
 
-1. 呼叫 <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> 方法。 方法會傳回 <xref:System.TimeZoneInfo> 物件的泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 集合。 集合中的專案會依其 <xref:System.TimeZoneInfo.DisplayName%2A> 屬性進行排序。 例如:
+1. 呼叫 <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> 方法。 方法會傳回 <xref:System.TimeZoneInfo> 物件的泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 集合。 集合中的專案會依其 <xref:System.TimeZoneInfo.DisplayName%2A> 屬性進行排序。 例如：
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
@@ -55,7 +55,7 @@ ms.locfileid: "73129115"
 大部分的清單控制項（例如 <xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> 或 <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType> 控制項）可讓您將物件變數的集合指派給其 `DataSource` 屬性，前提是該集合會執行 <xref:System.Collections.IEnumerable> 介面。 （泛型 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 類別會執行此工作）。若要在集合中顯示個別物件，控制項會呼叫該物件的 `ToString` 方法，以解壓縮用來表示物件的字串。 在 <xref:System.TimeZoneInfo> 物件的情況下，`ToString` 方法會傳回 <xref:System.TimeZoneInfo> 物件的顯示名稱（其 <xref:System.TimeZoneInfo.DisplayName%2A> 屬性的值）。
 
 > [!NOTE]
-> 因為清單控制項會呼叫物件的 `ToString` 方法，所以您可以將 <xref:System.TimeZoneInfo> 物件的集合指派給控制項，讓控制項為每個物件顯示有意義的名稱，並取出使用者已選取的 <xref:System.TimeZoneInfo> 物件。 這樣就不需要將集合中每個物件的字串解壓縮，將字串指派給指派給控制項之 `DataSource` 屬性的集合，並抓取使用者已選取的字串，然後使用這個字串來解壓縮物件說明。 
+> 因為清單控制項會呼叫物件的 `ToString` 方法，所以您可以將 <xref:System.TimeZoneInfo> 物件的集合指派給控制項，讓控制項為每個物件顯示有意義的名稱，並取出使用者已選取的 <xref:System.TimeZoneInfo> 物件。 這樣就不需要將集合中每個物件的字串解壓縮，將字串指派給指派給控制項之 `DataSource` 屬性的集合，並抓取使用者所選取的字串，然後使用這個字串來解壓縮它所描述的物件。
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
@@ -67,7 +67,7 @@ ms.locfileid: "73129115"
 
   <xref:System.Collections.ObjectModel>
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [日期、時間及時區](../../../docs/standard/datetime/index.md)
 - [操作說明：將時區儲存到內嵌資源](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

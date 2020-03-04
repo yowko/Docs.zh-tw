@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 0aa323533dd9136372c2bbc330c9c3056fdf428c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740561"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157567"
 ---
 # <a name="install-the-net-core-sdk"></a>安裝 .NET Core SDK
 
@@ -35,6 +35,19 @@ Windows 有獨立的安裝程式，可用於安裝 .NET Core 3.1 SDK：
 macOS 具有可用於安裝 .NET Core 3.1 SDK 的獨立安裝程式：
 
 - [x64 （64位） Cpu](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+
+## <a name="download-and-manually-install"></a>下載並手動安裝
+
+除了適用于 .NET Core 的 macOS 安裝程式之外，您還可以下載並手動安裝 SDK。
+
+若要解壓縮 SDK，並在終端機上提供 .NET Core CLI 命令，請先[下載](#all-net-core-downloads).net Core 二進位版本。 然後，開啟終端機並執行下列命令。 假設執行時間已下載至 `~/Downloads/dotnet-sdk.pkg` 檔案。
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-sdk.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
 
 ::: zone-end
 
@@ -104,6 +117,25 @@ Visual Studio 可以安裝最新的 .NET Core SDK 和執行時間。
 - **桌上型電腦 & Mobile**一節中的 **.net 桌面開發**工作負載。
 
 [使用 .NET Core 工作負載 ![Windows Visual Studio 2019](media/install-sdk/windows-install-visual-studio-2019.png)](media/install-sdk/windows-install-visual-studio-2019.png#lightbox)
+
+## <a name="download-and-manually-install"></a>下載並手動安裝
+
+若要將執行時間解壓縮，並在終端機上提供 .NET Core CLI 命令，請先[下載](#all-net-core-downloads).net Core 二進位版本。 然後，建立要安裝的目錄，例如 `%USERPROFILE%\dotnet`。 最後，將下載的 zip 檔案解壓縮至該目錄。
+
+根據預設，.NET Core CLI 命令和應用程式不會使用以這種方式安裝的 .NET Core。 您必須明確地選擇使用它。 若要這麼做，請變更應用程式啟動時所使用的環境變數：
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+這種方法可讓您將多個版本安裝到不同的位置，然後明確地選擇應用程式應該使用的安裝位置，方法是以指向該位置的環境變數執行應用程式。
+
+即使已設定這些環境變數，在選取最佳架構來執行應用程式時，.NET Core 仍然會考慮預設的全域安裝位置。 預設值通常是 `C:\Program Files\dotnet`，這是安裝程式所使用的。 您也可以藉由設定此環境變數，指示執行時間只使用自訂安裝位置：
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
 
 ::: zone-end
 
@@ -186,6 +218,7 @@ Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET 
 
 ::: zone pivot="os-macos"
 
+- 使用[MacOS Catalina notarization](macos-notarization-issues.md)。
 - [教學課程：開始使用 macOS](../tutorials/using-on-mac-vs.md)。
 - [教學課程：使用 Visual Studio Code 建立新的應用程式](../tutorials/with-visual-studio-code.md)。
 - [教學課程：容器化 .Net Core 應用程式](../docker/build-container.md)。

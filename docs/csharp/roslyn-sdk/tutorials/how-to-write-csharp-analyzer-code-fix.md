@@ -3,12 +3,12 @@ title: 教學課程：撰寫您的第一個分析器和程式碼修正
 description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建置分析器和程式碼修正的逐步指示。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 99401e74588088d56b3fbd916e050f5d468722a1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f6fc21c010f9b5fcd5e709ef822639c020a7c93b
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346944"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240546"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
 
@@ -16,7 +16,7 @@ ms.locfileid: "75346944"
 
 在本教學課程中，您將探索如何使用 Roslyn API 建立**分析器**和隨附的**程式碼修正**。 分析器是執行原始程式碼分析並向使用者報告問題的方式之一。 分析器也可以選擇性地提供程式碼修正，以顯示對使用者的原始程式碼所做的修改。 本教學課程所建立的分析器會尋找可使用 `const` 修飾詞來宣告、但並未這麼做的區域變數宣告。 隨附的程式碼修正會修改這些宣告，而新增 `const` 修飾詞。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
@@ -27,7 +27,7 @@ ms.locfileid: "75346944"
 
 建立和驗證您的分析器時須執行幾個步驟：
 
-1. 建立方案。
+1. 建立解決方案。
 1. 註冊的分析器名稱和描述。
 1. 報告分析器警告和建議。
 1. 實作接受建議的程式碼修正。
@@ -75,7 +75,7 @@ Console.WriteLine(x);
 
 ## <a name="create-analyzer-registrations"></a>建立分析器註冊
 
-範本會在 **MakeConstAnalyzer.cs** 檔案中建立初始 `DiagnosticAnalyzer` 類別，。 此初始分析器會顯示每個分析器的兩個重要屬性。
+範本會在 `DiagnosticAnalyzer`MakeConstAnalyzer.cs**檔案中建立初始** 類別，。 此初始分析器會顯示每個分析器的兩個重要屬性。
 
 - 每個診斷分析器都必須提供 `[DiagnosticAnalyzer]` 屬性，以說明它據以運作的語言。
 - 每個診斷分析器都必須衍生自 <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> 類別。
@@ -105,7 +105,7 @@ context.RegisterSymbolAction(AnalyzeSymbol, SymbolKind.NamedType);
 
 將其取代為以下這一行：
 
-[!code-csharp[Register the node action](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstAnalyzer.cs#RegisterNodeAction "Register a node action")]
+[!code-csharp[Register the node action](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstAnalyzer.cs#RegisterNodeAction "Register a node action")]
 
 完成此變更後，您可以刪除 `AnalyzeSymbol` 方法。 此分析器會檢查 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.LocalDeclarationStatement?displayProperty=nameWithType>，而非 <xref:Microsoft.CodeAnalysis.SymbolKind.NamedType?displayProperty=nameWithType> 陳述式。 請注意，`AnalyzeNode` 的下方有紅色波浪線。 您剛才新增的程式碼會參考尚未宣告的 `AnalyzeNode` 方法。 請使用下列程式碼宣告該方法：
 
@@ -115,7 +115,7 @@ private void AnalyzeNode(SyntaxNodeAnalysisContext context)
 }
 ```
 
-在 **MakeConstAnalyzer.cs** 中將 `Category` 變更為 "Usage"，如下列程式碼所示：
+在 `Category`MakeConstAnalyzer.cs**中將** 變更為 "Usage"，如下列程式碼所示：
 
 ```csharp
 private const string Category = "Usage";
@@ -130,7 +130,7 @@ int x = 0;
 Console.WriteLine(x);
 ```
 
-第一個步驟是尋找區域宣告。 在 **MakeConstAnalyzer.cs** 中將下列程式碼新增至 `AnalyzeNode`：
+第一個步驟是尋找區域宣告。 在 `AnalyzeNode`MakeConstAnalyzer.cs**中將下列程式碼新增至**：
 
 ```csharp
 var localDeclaration = (LocalDeclarationStatementSyntax)context.Node;
@@ -192,17 +192,17 @@ Console.WriteLine(x);
 
 開啟範本所新增的 **MakeConstCodeFixProvider.cs** 檔案。  此程式碼修正已連線到您的診斷分析器所產生的診斷識別碼，但尚未實作正確的程式碼轉換。 首先，您應移除某些範本程式碼。 請將標題字串變更為「設為常數」:
 
-[!code-csharp[Update the CodeFix title](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CodeFixTitle "Update the CodeFix title")]
+[!code-csharp[Update the CodeFix title](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CodeFixTitle "Update the CodeFix title")]
 
 接著，請刪除 `MakeUppercaseAsync` 方法。 該方法已不適用。
 
 所有程式碼修正提供者皆衍生自 <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider>。 它們全都會覆寫 <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType>，以報告可用的程式碼修正。 在 `RegisterCodeFixesAsync` 中，將您要搜尋的上階節點類型變更為符合診斷的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>：
 
-[!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
+[!code-csharp[Find local declaration node](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 
 接著，變更最後一行以註冊程式碼修正。 您的修正將會建立在將 `const` 修飾詞新增至現有宣告後而產生的新文件：
 
-[!code-csharp[Register the new code fix](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
+[!code-csharp[Register the new code fix](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
 
 在剛才新增程式碼中，您會在符號 `MakeConstAsync` 上看到紅色波浪線。 請為 `MakeConstAsync` 新增宣告，如下列程式碼所示：
 
@@ -216,9 +216,9 @@ private async Task<Document> MakeConstAsync(Document document,
 
 新的 `MakeConstAsync` 方法會將代表使用者來源檔案的 <xref:Microsoft.CodeAnalysis.Document> 轉換為新的 <xref:Microsoft.CodeAnalysis.Document>，此時其中包含 `const` 宣告。
 
-您可以建立要在宣告陳述式前面插入的新 `const` 關鍵字權杖。 請務必先從宣告陳述式的第一個權杖中移除任何前置邏輯，再將其附加至 `const` 權杖。 將下列程式碼加入 `MakeConstAsync` 方法：
+您可以建立要在宣告陳述式前面插入的新 `const` 關鍵字權杖。 請務必先從宣告陳述式的第一個權杖中移除任何前置邏輯，再將其附加至 `const` 權杖。 將下列程式碼新增至 `MakeConstAsync` 方法：
 
-[!code-csharp[Create a new const keyword token](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CreateConstToken  "Create the new const keyword token")]
+[!code-csharp[Create a new const keyword token](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#CreateConstToken  "Create the new const keyword token")]
 
 接著，使用下列程式碼將 `const` 權杖新增宣告：
 
@@ -233,7 +233,7 @@ var newLocal = trimmedLocal
 
 然後請將新的宣告格式化，以符合 C# 格式化規則。 將變更格式化以符合現有的程式碼，可產生更理想的體驗。 緊跟在現有程式碼後面新增下列陳述式：
 
-[!code-csharp[Format the new declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
+[!code-csharp[Format the new declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
 
 此程式碼需要新的命名空間。 將下列 `using` 陳述式新增至檔案最上方：
 
@@ -249,13 +249,13 @@ using Microsoft.CodeAnalysis.Formatting;
 
 請在 `MakeConstAsync` 方法的結尾新增下列程式碼：
 
-[!code-csharp[replace the declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
+[!code-csharp[replace the declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
 您的程式碼修正已可供試用。  按 F5，在 Visual Studio 的第二個執行個體中執行分析器專案。 在第二個 Visual Studio 執行個體中建立新的 C# 主控台應用程式專案，並將數個以常數值初始化的區域變數宣告新增至 Main 方法。 您會看到系統將其報告為警告，如下所示。
 
 ![可設為常數警告](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
-您已完成許多進度。 可設為 `const` 的宣告底下會出現波浪線。 但仍有工作尚待完成。 如果您依序以 `i`、`j`、`k` 的順序將 `const` 新增至宣告，則可正常運作。 但是，如果您以不同的順序從 `k` 開始新增 `const` 修飾詞，分析器將會產生錯誤：除非 `i` 和 `j` 皆已為 `const`，否則 `k` 無法宣告為 `const`。 您必須執行更多分析，以確保能夠以不同的方式讓變數完成宣告和初始化。
+您已完成許多進度。 可設為 `const` 的宣告底下會出現波浪線。 但仍有工作尚待完成。 如果您依序以 `const`、`i`、`j` 的順序將 `k` 新增至宣告，則可正常運作。 但是，如果您以不同的順序從 `const` 開始新增 `k` 修飾詞，分析器將會產生錯誤：除非 `k` 和 `const` 皆已為 `i`，否則 `j` 無法宣告為 `const`。 您必須執行更多分析，以確保能夠以不同的方式讓變數完成宣告和初始化。
 
 ## <a name="build-data-driven-tests"></a>建置資料驅動型測試
 
@@ -308,15 +308,15 @@ public void WhenDiagnosticIsRaisedFixUpdatesCode(
 
 上述程式碼也對建置預期診斷結果的程式碼做了些許變更。 它會使用在 `MakeConst` 分析器中註冊的公用常數。 此外，它會針對輸入和已修正的來源使用兩個字串常數。 將下列字串常數新增至 `UnitTest` 類別：
 
-[!code-csharp[string constants for fix test](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
+[!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-執行這兩項測試，並確定可通過測試。 在 Visual Studio 中選取 [測試] > [視窗] > [測試總管]，以開啟 [測試總管]。  按 [全部執行] 連結。
+執行這兩項測試，並確定可通過測試。 在 Visual Studio 中選取 [測試] **[視窗]**  >  **[測試總管]**  > ，以開啟 [測試總管]。  按 [全部執行] 連結。
 
 ## <a name="create-tests-for-valid-declarations"></a>建立有效宣告的測試
 
 一般而言，分析器應盡快結束，而執行最少量的工作。 Visual Studio 會以使用者編輯程式碼的形式呼叫已註冊的分析器。 回應能力是關鍵需求。 不應引發診斷的程式碼有數個測試案例。 您的分析器已處理其中一個測試，也就是變數會在初始化後進行指派的案例。 請將下列的字串常數新增至您的測試，以表示該案例：
 
-[!code-csharp[variable assigned](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VariableAssigned "a variable that is assigned after being initialized won't raise the diagnostic")]
+[!code-csharp[variable assigned](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VariableAssigned "a variable that is assigned after being initialized won't raise the diagnostic")]
 
 然後，為此測試新增資料列，如下列程式碼片段所示：
 
@@ -331,19 +331,19 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 - 因為已是常數，而已經是 `const` 的宣告：
 
-   [!code-csharp[already const declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
+   [!code-csharp[already const declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
 
 - 因為沒有可使用的值，而沒有初始設定式的宣告：
 
-   [!code-csharp[declarations that have no initializer](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
+   [!code-csharp[declarations that have no initializer](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
 
 - 因為不可以是編譯時期常數，因此初始設定式不是常數的宣告：
 
-   [!code-csharp[declarations where the initializer isn't const](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
+   [!code-csharp[declarations where the initializer isn't const](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
 
 如果 C# 允許以多個宣告作為一個陳述式，情況可能會更複雜。 請考慮使用下列測試案例字串常數：
 
-[!code-csharp[multiple initializers](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#MultipleInitializers "A declaration can be made constant only if all variables in that statement can be made constant")]
+[!code-csharp[multiple initializers](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#MultipleInitializers "A declaration can be made constant only if all variables in that statement can be made constant")]
 
 變數 `i` 可設為常數，但變數 `j` 不可。 因此，此陳述式不可設為常數宣告。 請為這些測試全部新增 `DataRow` 宣告：
 
@@ -423,25 +423,25 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 ## <a name="add-the-final-polish"></a>新增最終修改
 
-作業即將完成。 您的分析器還有幾種條件需要處理。 使用者撰寫程式碼時，Visual Studio 會呼叫分析器。 經呼叫的分析器常用來處理未編譯的程式碼。 診斷分析器的 `AnalyzeNode` 方法不會檢查常數值是否可轉換成變數類型。 因此，目前的實作會逕行將不正確的宣告 (例如 int i = "abc"') 轉換為區域常數。 請為該條件新增來源字串常數：
+就快要完成了。 您的分析器還有幾種條件需要處理。 使用者撰寫程式碼時，Visual Studio 會呼叫分析器。 經呼叫的分析器常用來處理未編譯的程式碼。 診斷分析器的 `AnalyzeNode` 方法不會檢查常數值是否可轉換成變數類型。 因此，目前的實作會逕行將不正確的宣告 (例如 int i = "abc"') 轉換為區域常數。 請為該條件新增來源字串常數：
 
-[!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
+[!code-csharp[Mismatched types don't raise diagnostics](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
 此外，參考類型未正確處理。 參考類型唯一允許的常數值為 `null`；此案例中的例外為 <xref:System.String?displayProperty=nameWithType>，它可允許字串常值。 換句話說，`const string s = "abc"` 是合法的，`const object s = "abc"` 則否。 下列程式碼片段會驗證該條件：
 
-[!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
+[!code-csharp[Reference types don't raise diagnostics](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 
 為求周密，您必須新增另一個測試，以確定您可以建立字串的常數宣告。 下列程式碼片段會定義引發診斷的程式碼和套用修正後的程式碼：
 
-[!code-csharp[string reference types raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#ConstantIsString "When the variable type is string, it can be constant")]
+[!code-csharp[string reference types raise diagnostics](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#ConstantIsString "When the variable type is string, it can be constant")]
 
 最後，如果以 `var` 關鍵字宣告變數，程式碼修正將執行錯誤的動作並產生 `const var` 宣告，但 C# 語言並不加以支援。 若要修正此 Bug，程式碼修正必須將 `var` 關鍵字取代為推斷的類型名稱：
 
-[!code-csharp[var references need to use the inferred types](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VarDeclarations "Declarations made using var must have the type replaced with the inferred type")]
+[!code-csharp[var references need to use the inferred types](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#VarDeclarations "Declarations made using var must have the type replaced with the inferred type")]
 
 這些變更會同時更新這兩項測試的資料列宣告。 下列程式碼顯示這些測試使用所有資料列屬性時的情形：
 
-[!code-csharp[The finished tests](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FinishedTests "The finished tests for the make const analyzer")]
+[!code-csharp[The finished tests](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FinishedTests "The finished tests for the make const analyzer")]
 
 幸運的是，上述所有 Bug 都可以使用您剛才學習的技術來解決。
 
@@ -495,7 +495,7 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 
 程式碼看似不少。 其實並不然。 請將宣告和初始化 `newLocal` 的那一行取代為下列程式碼。 它會 `newModifiers` 初始化之後立即執行：
 
-[!code-csharp[Replace Var designations](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
+[!code-csharp[Replace Var designations](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
 
 您必須新增一個 `using` 陳述式才能使用 <xref:Microsoft.CodeAnalysis.Simplification.Simplifier> 類型：
 
@@ -520,7 +520,7 @@ int k = i + j;
 
 完成這些變更後，將只有前兩個變數上會有紅色波浪線。 將 `const` 新增至 `i` 和 `j` 後，將會出現新的 `k` 警告，因為它現在已可為 `const`。
 
-恭喜您！ 您已建立第一個 .NET Compiler Platform 延伸模組，可執行即時程式碼分析以偵測問題，並提供快速修正加以更正。 在本文中，您已認識 .NET Compiler Platform SDK (Roslyn API) 所包含的多種程式碼 API。 您可以根據範例 GitHub 存放庫中[已完成的範例](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst)檢查您的工作。
+恭喜！ 您已建立第一個 .NET Compiler Platform 延伸模組，可執行即時程式碼分析以偵測問題，並提供快速修正加以更正。 在本文中，您已認識 .NET Compiler Platform SDK (Roslyn API) 所包含的多種程式碼 API。 您可以根據範例 GitHub 存放庫中[已完成的範例](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst)檢查您的工作。
 
 ## <a name="other-resources"></a>其他資源
 

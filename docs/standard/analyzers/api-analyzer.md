@@ -4,12 +4,12 @@ description: 了解「.NET API 分析器」如何協助偵測已被取代的 API
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542620"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156130"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -47,7 +47,7 @@ ms.locfileid: "77542620"
    3. 選取 [包括發行前版本]。
    4. 搜尋**DotNet 的相容性**。
    5. 在清單中選取該套件。
-   6. 選取 [安裝] 按鈕。 
+   6. 選取 [安裝] 按鈕。
    7. 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
 
 ### <a name="use-the-api-analyzer"></a>使用 API 分析器
@@ -56,13 +56,13 @@ ms.locfileid: "77542620"
 
 ![「帶有綠色曲線的 WebClient API 及左邊有燈泡圖示的螢幕擷取畫面」](media/api-analyzer/green-squiggle.jpg)
 
-[錯誤清單] 視窗會包含警告，其中每個已被取代的 API 都會有一個唯一識別碼 ，如以下範例所示 (`DE004`)： 
+[錯誤清單] 視窗會包含警告，其中每個已被取代的 API 都會有一個唯一識別碼 ，如以下範例所示 (`DE004`)：
 
 ![「錯誤清單視窗的螢幕擷取畫面，其中顯示警告的識別碼和描述」](media/api-analyzer/warnings-id-and-descriptions.jpg "包含警告的錯誤清單視窗。")
 
 藉由按一下識別碼，您便可以前往含有詳細資訊的網頁，當中會說明 API 被取代的原因，並提供有關可使用之替代 API 的建議。
 
-若要隱藏任何警告，只要在已醒目標示的成員上按一下滑鼠右鍵，然後選取 [隱藏 **診斷識別碼>]\<** 即可。 有兩種隱藏警告的方式： 
+若要隱藏任何警告，只要在已醒目標示的成員上按一下滑鼠右鍵，然後選取 [隱藏 **診斷識別碼>]\<** 即可。 有兩種隱藏警告的方式：
 
 - [本機 (在原始程式檔中)](#suppress-warnings-locally)
 - [全域 (在隱藏項目檔中)](#suppress-warnings-globally) - 建議使用

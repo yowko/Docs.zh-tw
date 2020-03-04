@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 692a0f8ad933f3ba4bef50681cb3487fa0a7eea9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714840"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240996"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隱含類型區域變數 (C# 程式設計手冊)
 
@@ -88,9 +88,9 @@ private var bookTitles = new List<string>();
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-無論如何，使用 `var` 都可能會使您的程式碼對其他開發人員而言更難以了解。 基於這個理由，C# 文件通常只有在必要時才會使用 `var`。
+使用 `var` 有助於簡化您的程式碼，但它的用法應該限制在需要的情況下，或讓您的程式碼更容易閱讀。 如需有關何時正確使用 `var` 的詳細資訊，請參閱程式C#代碼撰寫方針一文的[隱含類型區域變數](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../language-reference/index.md)
 - [隱含型別陣列](../arrays/implicitly-typed-arrays.md)

@@ -3,12 +3,12 @@ title: 用於移植到 .NET Core 的工具
 description: 了解一些您可用來移植到 .NET Core 的工具
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 3b71c31b4f26b278b2bd1088adc8e9f64d28ab7b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 98b3a29f2287414b2cd323f1cbf2225905592b26
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215186"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157514"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>協助移植到 .NET Core 的工具
 
@@ -21,5 +21,5 @@ ms.locfileid: "77215186"
 
 此外，您也可以嘗試使用 [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) 工具將較小的解決方案或個別專案移植到 .NET Core 專案檔案格式。
 
-> [!WARNING] 
+> [!WARNING]
 > CsprojToVs2017 是第三方工具。 不保證它可搭配您的所有專案運作，而且它可能會導致您所依賴的行為發生些微變更。 CsprojToVs2017 應該當作將可自動化之基本事項自動化的「起點」使用。 它不是可以用來移轉專案檔格式保證解決方案。

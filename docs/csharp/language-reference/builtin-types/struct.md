@@ -8,18 +8,18 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 6113912f176d2d7b68c77ff2e78a361b373ca31a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 523269ffc9de9b750330fcefd15a9026d6dc59b8
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634866"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239777"
 ---
 # <a name="structure-types-c-reference"></a>結構類型（C#參考）
 
 *結構型*別（或*結構型*別）是可以封裝資料和相關功能的實[值型](value-types.md)別。 您可以使用 `struct` 關鍵字來定義結構類型：
 
-[!code-csharp[struct example](~/samples/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
+[!code-csharp[struct example](~/samples/snippets/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
 
 結構類型具有*值的語義*。 也就是說，結構類型的變數會包含類型的實例。 根據預設，變數值會在指派時複製、將引數傳遞至方法，並傳回方法結果。 在結構類型變數的情況下，會複製類型的實例。 如需詳細資訊，請參閱實[數值型別](value-types.md)。
 
@@ -47,7 +47,7 @@ ms.locfileid: "77634866"
 
 如果結構類型的所有實例欄位都可存取，您也可以在不使用 `new` 運算子的情況下將它具現化。 在此情況下，您必須在第一次使用實例之前，先初始化所有實例欄位。 下列範例顯示如何執行該項工作：
 
-[!code-csharp[without new](~/samples/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
+[!code-csharp[without new](~/samples/snippets/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
 
 在內[建實數值型別](value-types.md#built-in-value-types)的情況下，請使用對應的常值來指定類型的值。
 

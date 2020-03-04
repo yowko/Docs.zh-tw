@@ -3,12 +3,12 @@ title: 開始使用語法分析 (Roslyn API)
 description: 周遊、查詢和查核語法樹狀結構的簡介。
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347006"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240506"
 ---
 # <a name="get-started-with-syntax-analysis"></a>開始使用語法分析
 
@@ -84,35 +84,35 @@ Syntax API 會建立根代表編譯單位的樹狀結構。 樹狀結構中的�
 您要分析先前顯示的基本 "Hello World!" 程式。
 將 Hello World 程式的文字新增為 `Program` 類別中的常數：
 
-[!code-csharp[Declare the program text](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
+[!code-csharp[Declare the program text](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
-接下來，新增下列程式碼來建置 `programText` 常數中程式碼文字的**語法樹狀結構**。  請將下列這一行新增到您的 `Main` 方法：
+接下來，新增下列程式碼來建置  **常數中程式碼文字的**語法樹狀結構`programText`。  請將下列這一行新增到您的 `Main` 方法：
 
-[!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
+[!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
 這兩行建立樹狀結構，並擷取該樹狀結構的根節點。 您現在可以檢查樹狀結構中的節點。 將下列各行新增至 `Main` 方法，以顯示樹狀結構中根節點的部分屬性：
 
-[!code-csharp[Examine the root node](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
+[!code-csharp[Examine the root node](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
 
 執行應用程式，以查看您程式碼探索到有關此樹狀結構中根節點的相關資訊。
 
 一般而言，您會周遊樹狀結構，以了解程式碼。 在此範例中，您將分析所知道的程式碼來探索 API。 新增下列程式碼，以檢查 `root` 節點的第一個成員：
 
-[!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
+[!code-csharp[Find the first member](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
 該成員是 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType>。 它代表 `namespace HelloWorld` 宣告範圍內的所有項目。 新增下列程式碼，以檢查 `HelloWorld` 命名空間內所宣告的節點：
 
-[!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
+[!code-csharp[Find the class declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
 執行程式，以查看您所學到的內容。
 
 既然您知道宣告是 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax?displayProperty=nameWithType>，請宣告該類型的新變數來檢查類別宣告。 這個類別只會包含一個成員：`Main` 方法。 新增下列程式碼以尋找 `Main` 方法，並將其轉換為 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax?displayProperty=nameWithType>。
 
-[!code-csharp[Find the main declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
+[!code-csharp[Find the main declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
 
-方法宣告節點包含方法的所有語法資訊。 讓我們顯示 `Main` 方法的傳回型別、引數數目和類型，以及方法的本文。 加入下列程式碼：
+方法宣告節點包含方法的所有語法資訊。 讓我們顯示 `Main` 方法的傳回型別、引數數目和類型，以及方法的本文。 新增下列程式碼：
 
-[!code-csharp[Examine the syntax of the main method](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
+[!code-csharp[Examine the syntax of the main method](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
 
 執行程式，以查看所有已探索到有關此程式的相關資訊：
 
@@ -144,7 +144,7 @@ The body text of the Main method follows:
 
 您可以使用這些查詢方法來尋找 `Main` 方法的引數，作為巡覽樹狀結構的替代方法。 將下列程式碼新增至 `Main` 方法的底部：
 
-[!code-csharp[Query the tree for the arguments to Main](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
+[!code-csharp[Query the tree for the arguments to Main](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
 
 第一個陳述式使用 LINQ 運算式和 <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A> 方法來找出與前一個範例相同的參數。
 
@@ -156,7 +156,7 @@ The body text of the Main method follows:
 
 您通常會想要尋找語法樹狀結構中特定類型的所有節點，例如，檔案中的每個屬性宣告。 擴充 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker?displayProperty=nameWithType> 類別並覆寫 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitPropertyDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax)> 方法，即可處理語法樹狀結構中的每個屬性宣告，而不需要事先知道其結構。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 是特定類型的 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor>，以遞迴瀏覽節點和其每個子系。
 
-此範例會實作 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>，以檢查語法樹狀結構。 它會收集發現到且未匯入 `System` 命名空間的 `using` 指示詞。
+此範例會實作 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>，以檢查語法樹狀結構。 它會收集發現到且未匯入 `using` 命名空間的 `System` 指示詞。
 
 建立新的 C# **獨立程式碼分析工具**專案；將它命名為 "**SyntaxWalker**"。
 
@@ -164,35 +164,35 @@ The body text of the Main method follows:
 
 如同先前的範例，您可以定義字串常數，以保留您要分析的程式文字：
 
-[!code-csharp[Define the code text to analyzer](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
+[!code-csharp[Define the code text to analyzer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
 
 此來源文字包含散佈到四個不同位置的 `using` 指示詞：檔案層級、在最上層命名空間中以及在兩個巢狀命名空間中。 此範例強調使用 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 類別查詢程式碼的核心案例。 很難瀏覽根語法樹狀結構中的每個節點來尋找 using 宣告。 相反地，您建立衍生類別，並且覆寫只有在樹狀結構中的目前節點是 using 指示詞時才呼叫的方法。 您的訪客不會對任何其他節點類型進行任何處理。 這個方法會檢查每個 `using` 陳述式，並建置不在 `System` 命名空間中的命名空間集合。 您建置 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 以檢查所有 `using` 陳述式，但僅限 `using` 陳述式。
 
 定義程式文字完成後，您必須建立 `SyntaxTree` 並取得該樹狀結構的根目錄：
 
-[!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
+[!code-csharp[Create the Syntax tree and access the root](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
 接著，建立新類別。 在 Visual Studio 中，選擇 [專案] > [新增項目]。 在 [新增項目] 對話方塊中，將 *UsingCollector.cs* 鍵入為檔案名稱。
 
-您在 `UsingCollector` 類別中實作 `using` 訪客功能。 從讓 `UsingCollector` 類別衍生自 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 開始。
+您在 `using` 類別中實作 `UsingCollector` 訪客功能。 從讓 `UsingCollector` 類別衍生自 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 開始。
 
-[!code-csharp[Declare the base class for the using collector](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
+[!code-csharp[Declare the base class for the using collector](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 
 您需要儲存體來保留您要收集的命名空間節點。  在 `UsingCollector` 類別中宣告公用唯讀屬性；您使用這個變數來儲存您找到的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> 節點：
 
-[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
+[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
 
 基底類別 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 可實作邏輯，以瀏覽語法樹狀結構中的每個節點。 衍生類別會覆寫您感興趣之特定節點所呼叫的方法。 在此情況下，您對任何 `using` 指示詞感興趣。 這表示您必須覆寫 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> 方法。 這個方法的一個引數是 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> 物件。 這是使用訪客的重要優點：他們會呼叫引數已轉換為特定節點類型的覆寫方法。 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> 類別具有 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.Name> 屬性，可儲存所匯入命名空間的名稱。 它是 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>。 在 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> 覆寫中，新增下列程式碼：
 
-[!code-csharp[Examine using nodes for the System namespace](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
+[!code-csharp[Examine using nodes for the System namespace](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
 
 與先前範例相同，您已新增各種 `WriteLine` 陳述式，以協助了解這個方法。 您可以看到何時呼叫它，以及每次傳遞給它的引數。
 
 最後，您必須新增兩行程式碼來建立 `UsingCollector`，並讓它瀏覽根節點，以收集所有 `using` 陳述式。 接著，新增 `foreach` 迴圈，以顯示您的收集器所找到的所有 `using` 陳述式：
 
-[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
+[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
 
-編譯並執行程式。 您應該會看到下列輸出：
+編譯並執行程式。 您應該會看見下列輸出：
 
 ```console
         VisitUsingDirective called with System.
@@ -220,4 +220,4 @@ Microsoft.CSharp
 Press any key to continue . . .
 ```
 
-恭喜您！ 您已使用 **Syntax API** 來尋找 C# 原始程式碼中特定類型的 C# 陳述式和宣告。
+恭喜！ 您已使用 **Syntax API** 來尋找 C# 原始程式碼中特定類型的 C# 陳述式和宣告。

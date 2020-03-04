@@ -11,12 +11,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 9998e69e8bf1505bcfc7a9103e9d89616dad9633
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738776"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160309"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>如何：使用強式名稱簽署元件
 
@@ -41,7 +41,7 @@ ms.locfileid: "75738776"
   
 2. 選擇 [ **簽署** ] 索引標籤。  
   
-3. 選取 [簽署組件] 方塊。  
+3. 選取 [簽署組件]方塊。  
   
 4. 在 [**選擇強式名稱金鑰**檔案] 方塊中，選擇 **[流覽]** ，然後流覽至金鑰檔。 若要建立新的金鑰檔，請選擇 [**新增**]，然後在 [**建立強式名稱金鑰**] 對話方塊中輸入其名稱。  
   
@@ -73,9 +73,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 ## <a name="sign-an-assembly-with-a-strong-name-by-using-attributes"></a>使用屬性以強式名稱簽署元件  
   
 1. 將 <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 屬性加入至您的原始程式碼檔，並指定容器或檔案名稱，其中包含以強式名稱簽署組件時所使用的金鑰組。  
-   
+
 2. 以一般方式編譯原始程式碼檔。  
-   
+
    > [!NOTE]
    > C# 和 Visual Basic 編譯器在原始程式碼中遇到 <xref:System.Reflection.AssemblyKeyFileAttribute> 或 <xref:System.Reflection.AssemblyKeyNameAttribute> 屬性時，會發出編譯器警告 (分別為 CS1699 和 BC41008)。 您可以忽略這些警告。  
 
@@ -107,7 +107,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
 csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
 ```  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [建立和使用強式名稱的元件](create-use-strong-named.md)
 - [如何：建立公開/私密金鑰組](create-public-private-key-pair.md)

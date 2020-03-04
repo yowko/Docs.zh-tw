@@ -1,13 +1,13 @@
 ---
 title: dotnet-計數器-.NET Core
 description: 瞭解如何安裝和使用 dotnet-counter 命令列工具。
-ms.date: 10/14/2019
-ms.openlocfilehash: 399d5908e8ac52bcd4a20c1a819fc6c99f4de2f4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/26/2020
+ms.openlocfilehash: 88f701a60d0ee03dd0236ae54c57679943e14939
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737701"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157878"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -31,7 +31,7 @@ dotnet-counters [-h|--help] [--version] <command>
 
 `dotnet-counters` 是一種效能監視工具，可用於臨機操作健全狀況監視和第一層效能調查。 它可以觀察透過 <xref:System.Diagnostics.Tracing.EventCounter> API 發佈的效能計數器值。 例如，您可以快速監視 CPU 使用量，或 .NET Core 應用程式中擲回之例外狀況的速率，以查看使用 `PerfView` 或 `dotnet-trace`進行更嚴重的效能調查之前是否有任何可疑的問題。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`--version`**
 
@@ -43,10 +43,55 @@ dotnet-counters [-h|--help] [--version] <command>
 
 ## <a name="commands"></a>命令
 
-| 命令                                             |
+| Command                                             |
 | --------------------------------------------------- |
+| [dotnet-計數器收集](#dotnet-counters-collect) |
 | [dotnet-計數器清單](#dotnet-counters-list)       |
 | [dotnet-計數器監視](#dotnet-counters-monitor) |
+| [dotnet-計數器 ps](#dotnet-counters-ps) |
+
+## <a name="dotnet-counters-collect"></a>dotnet-計數器收集
+
+定期收集選取的計數器值，並將它們匯出為指定的檔案格式，以進行後續處理。
+
+### <a name="synopsis"></a>概要
+
+```console
+dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
+```
+
+### <a name="options"></a>選項。
+
+- **`-p|--process-id <PID>`**
+
+  要監視之進程的識別碼。
+
+- **`--refresh-interval <SECONDS>`**
+
+  更新所顯示計數器之間的延遲秒數
+
+- **`counter_list <COUNTERS>`**
+
+  以空格分隔的計數器清單。 `provider_name[:counter_name]`可以指定計數器。 如果在沒有符合資格的 `counter_name`的情況下使用 `provider_name`，則會顯示所有計數器。 若要探索提供者和計數器名稱，請使用[dotnet-計數器 list](#dotnet-counters-list)命令。
+
+- **`--format <csv|json>`**
+
+  要匯出的格式。 目前可用： csv、json。
+
+- **`-o|--output <output>`**
+
+  輸出檔案的名稱。
+
+### <a name="examples"></a>範例
+
+- 以3秒的重新整理間隔收集所有計數器，並產生 csv 作為輸出：
+
+  ```console
+  > dotnet-counters collect --process-id 1902 --refresh-interval 3 --format csv
+
+  counter_list is unspecified. Monitoring all counters by default.
+  Starting a counter session. Press Q to quit.
+  ```
 
 ## <a name="dotnet-counters-list"></a>dotnet-計數器清單
 
@@ -84,7 +129,7 @@ dotnet-counters list [-h|--help]
 dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list]
 ```
 
-### <a name="options"></a>選項
+### <a name="options"></a>選項。
 
 - **`-p|--process-id <PID>`**
 
@@ -135,3 +180,22 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
   Press p to pause, r to resume, q to quit.
       request                                      100
   ```
+  
+## <a name="dotnet-counters-ps"></a>dotnet-計數器 ps 
+
+顯示可以監視的 dotnet 進程清單。
+
+### <a name="synopsis"></a>概要
+
+```console
+dotnet-counters ps [-h|--help]
+```
+
+### <a name="example"></a>範例
+
+```console
+> dotnet-counters ps
+  
+  15683 WebApi     /home/suwhang/repos/WebApi/WebApi
+  16324 dotnet     /usr/local/share/dotnet/dotnet
+```

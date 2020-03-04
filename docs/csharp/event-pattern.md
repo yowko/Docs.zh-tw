@@ -4,16 +4,16 @@ description: 了解 .NET 事件模式、如何建立標準事件來源，以及�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: a050dc9a11470ff3b71488ce2ab4b92e607aa9b0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 517e46ffec163a9bd49baa58fc0b37b54b2b2809
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037176"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239855"
 ---
 # <a name="standard-net-event-patterns"></a>標準的 .NET 事件模式
 
-[上一篇](events-overview.md)
+[[上一步]](events-overview.md)
 
 .NET 事件通常會遵循少數已知的模式。 這些模式的標準化表示開發人員可以利用這些標準模式的知識，它們可套用至任何 .NET 事件程式。
 
@@ -40,7 +40,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 以下是尋找搜尋檔案的初始事件引數宣告︰ 
 
-[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
+[!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
 即使這個類型看起來像是小型的僅限資料類型，您也應該遵循規範，讓它成為參考 (`class`) 類型。 這表示參考會傳遞引數物件，而所有訂閱者都會檢視資料的任何更新。 第一個版本是不可變的物件。 您應該更偏好讓事件引數類型中的屬性成為不可變。 這樣一來，某個訂閱者就無法在其他訂閱者看到值之前變更值。 (以下是這個情況的例外狀況。)  
 
@@ -48,21 +48,21 @@ void OnEventRaised(object sender, EventArgs args);
 
 我們要填寫 FileSearcher 類別，以搜尋符合模式的檔案，並在發現相符項目時引發正確的事件。
 
-[!code-csharp[FileSearcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
+[!code-csharp[FileSearcher](../../samples/snippets/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="defining-and-raising-field-like-events"></a>定義及引發的欄位型事件
 
 將事件新增至類別的最簡單方式，是將該事件宣告為公用欄位，如上例所示︰
 
-[!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
+[!code-csharp[DeclareEvent](../../samples/snippets/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
 這看起來像是在宣告公用欄位，並會是不正確的物件導向做法。 您想要透過屬性或方法保護資料存取。 雖然這看起來不像正確的做法，但編譯器產生的程式碼確實會建立包裝函式，讓事件物件只能以安全的方式存取。 欄位型事件唯一可用的作業是新增處理常式︰
 
-[!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
+[!code-csharp[DeclareEventHandler](../../samples/snippets/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 
 以及移除處理常式：
 
-[!code-csharp[RemoveEventHandler](../../samples/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
+[!code-csharp[RemoveEventHandler](../../samples/snippets/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
 
 請注意，處理常式有區域變數。 如果使用了 Lambda 的主體，移除就無法正確運作。 它會有不同的委派執行個體，不以無訊息模式執行任何動作。
 
@@ -86,7 +86,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 我們要實作本例的第一個版本。 您需要將名為 `CancelRequested` 的布林值欄位加入到 `FileFoundArgs` 類型：
 
-[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgs "Update event arguments")]
+[!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgs "Update event arguments")]
 
 這個新欄位會自動初始化為 `false` (布林值欄位的預設值)，如此您就不會不小心取消。 元件僅有的其他變更是在引發事件後檢查旗標，查看是否有任何訂閱者曾要求取消︰
 
@@ -124,29 +124,29 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 您會從建立新的 EventArgs 衍生類別以報告新目錄和進度開始。 
 
-[!code-csharp[DirEventArgs](../../samples/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
+[!code-csharp[DirEventArgs](../../samples/snippets/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
 同樣地，您可以依照建議，為事件引數建立不可變的參考類型。
 
 接下來定義事件。 這次，您要使用不同的語法。 除了使用欄位語法，您也可以使用新增和移除處理常式來明確建立屬性。 在本範例中，那些處理常式中不需要額外的程式碼，但這會顯示您建立它們的方式。
 
-[!code-csharp[Declare event with add and remove handlers](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
+[!code-csharp[Declare event with add and remove handlers](../../samples/snippets/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
 
 就很多方面而言，此處所撰寫的程式碼，可以對應到編譯器針對先前欄位事件定義所產生的程式碼。 您建立事件所用的語法和用於[屬性](properties.md)的語法極其相似。 請注意，處理常式有不同的名稱︰`add` 和 `remove`。 分別表示訂閱事件，或取消訂閱事件。 請注意，您也必須宣告私用支援欄位來儲存事件變數。 它會初始化為 Null。
 
 接下來，我們要新增 `Search` 方法的多載，此方法會周遊子目錄並引發這兩個事件。 達成這個目的最簡單方式，是使用預設引數來指定您想要搜尋所有目錄︰
 
-[!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
+[!code-csharp[SearchImplementation](../../samples/snippets/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
 此時，您可以執行應用程式呼叫多載以搜尋所有子目錄。 新的 `ChangeDirectory` 事件沒有任何訂閱者，但使用 `?.Invoke()` 慣用語可確保其正確運作。
 
  我們要新增處理常式寫入一行程式碼，在主控台視窗中顯示進度。 
 
-[!code-csharp[Search](../../samples/csharp/events/Program.cs#Search "Declare event handler")]
+[!code-csharp[Search](../../samples/snippets/csharp/events/Program.cs#Search "Declare event handler")]
 
 您已見過整個 .NET 生態系統所遵循的模式。
 了解這些模式和慣例，您就能夠快速撰寫慣用的 C# 和 .NET。
 
 接下來，您會在最新版本的 .NET 中看到這些模式的某些變更。
 
-[下一步](modern-events.md)
+[下一個](modern-events.md)

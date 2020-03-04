@@ -4,12 +4,12 @@ description: 這個 advanced 教學課程示範如何使用可為 null 的參考
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 4edeab7b2a4211d50c424f567ad7df6ced0bf4ce
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 38619f9efa5da1f9b3264b3d4240103f0869afea
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093301"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240024"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教學課程：使用可為 null 的參考型別來遷移現有程式碼
 
@@ -77,11 +77,11 @@ public class NewsStoryViewModel
 
 `NewsStoryViewModel` 類別是資料轉送物件 (DTO)，而其中兩個屬性為讀取/寫入字串：
 
-[!code-csharp[InitialViewModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#StarterViewModel)]
+[!code-csharp[InitialViewModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#StarterViewModel)]
 
 這兩個屬性會造成 `CS8618`，「不可為 Null 屬性尚未初始化」。 這已相當清楚：兩個 `string` 屬性在建構 `null` 時都具備了 `NewsStoryViewModel` 預設值。 重要的是探索 `NewsStoryViewModel` 物件的建構方式。 查看此類別，您無法辨識 `null` 值究竟是設計的一部分，還是這些物件會在建立其中一個時設為非 Null 值。 `GetNews` 類別的 `NewsService` 方法中建立了新的故事：
 
-[!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
+[!code-csharp[StarterCreateNewsItem](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
 先前的程式碼區塊中此時又發生了一些事情。 此應用程式使用 [AutoMapper](https://automapper.org/) NuGet 套件來從 `ISyndicationItem` 建構新的項目。 您發現新的故事項目已經建構完成，而屬性也已在單一陳述式中設定。 這表示 `NewsStoryViewModel` 的設計指出這些屬性永遠都不應該具備 `null` 值。 這些屬性應為**不可為 Null 參考型別**。 這種方式最能表達原始的設計意圖。 事實上，任何 `NewsStoryViewModel` 都會以非 null 值正確具*現*化。 這可讓下列的初始化程式碼成為有效修正：
 
@@ -96,15 +96,15 @@ public class NewsStoryViewModel
 
 將 `Title` 和 `Uri` 指派為 `default` (針對 `null` 型別為 `string`) 不會變更程式的執行階段行為。 `NewsStoryViewModel` 仍然會使用 Null 值建構，但現在編譯器不會再回報警告。 **Null 寬恕運算子** (即跟隨在 `!` 後方的 `default` 字元) 會告知編譯器先前的運算式並非 Null。 當其他變更對程式碼基底強制執行較大的變更時，這項技術可能會很方便，但在此應用程式中，有一個相對快速且更好的解決方案：使 `NewsStoryViewModel` 成為不變的型別，其中所有屬性都是在此函式中設定。 對 `NewsStoryViewModel` 進行下列變更：
 
-[!code-csharp[FinishedViewModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
+[!code-csharp[FinishedViewModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
 
 完成之後，您需要更新設定 AutoMapper 的程式碼，讓其使用建構函式而非設定屬性。 開啟 `NewsService.cs`，在檔案的底部尋找下列程式碼：
 
-[!code-csharp[StarterAutoMapper](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#ConfigureAutoMapper)]
+[!code-csharp[StarterAutoMapper](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#ConfigureAutoMapper)]
 
 該程式碼會將 `ISyndicationItem` 物件的屬性對應到 `NewsStoryViewModel` 屬性。 您想要 AutoMapper 改為使用建構函式來提供對應。 請使用下列 automapper 組態，取代以上程式碼：
 
-[!code-csharp[FinishedViewModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#ConfigureAutoMapper)]
+[!code-csharp[FinishedViewModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#ConfigureAutoMapper)]
 
 請注意，由於這個類別相當小且您已仔細地檢查過，您應在此類別的宣告上方開啟 `#nullable enable` 指示詞。 對建構函式的變更可能會中斷某些東西，因此建議您在繼續之前執行所有測試並測試應用程式。
 
@@ -112,11 +112,11 @@ public class NewsStoryViewModel
 
 其他時候，類別的結構會提供意圖的不同線索。 開啟 *Pages* 資料夾中的 *Error.cshtml.cs* 檔案。 `ErrorViewModel` 包含下列程式碼：
 
-[!code-csharp[StarterErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Error.cshtml.cs#StartErrorModel)]
+[!code-csharp[StarterErrorModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Error.cshtml.cs#StartErrorModel)]
 
 將 `#nullable enable` 新增到類別宣告之前，並將 `#nullable restore` 指示詞新增到該宣告之後。 您會收到一個警告，告知您 `RequestId` 並未初始化。 藉由查看類別，您應判斷該 `RequestId` 屬性在某些情況下應為 Null。 `ShowRequestId` 屬性的存在指出可能遺失值。 因為 `null` 是有效的，請在 `?` 型別上新增 `string` 來指出 `RequestId` 屬性是「可為 Null 的參考型別」。 最終類別看起來會和下列範例相似：
 
-[!code-csharp[FinishedErrorModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Error.cshtml.cs#ErrorModel)]
+[!code-csharp[FinishedErrorModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Error.cshtml.cs#ErrorModel)]
 
 檢查屬性的使用方式，您便會發現在與其建立關聯的頁面上，會在於標記中轉譯它之前檢查該屬性是否為 Null。 這便是可為 Null 參考型別的安全使用方式，因此您已不須再對此類別進行任何操作。
 
@@ -124,27 +124,27 @@ public class NewsStoryViewModel
 
 通常，修正一組警告會在相關程式碼中建立新的警告。 讓我們透過修正 `index.cshtml.cs` 類別，查看警告實際運作的方式。 請開啟 `index.cshtml.cs` 檔案並檢查程式碼。 此檔案包含索引頁背後的程式碼：
 
-[!code-csharp[StarterIndexModel](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Index.cshtml.cs#IndexModelStart)]
+[!code-csharp[StarterIndexModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Index.cshtml.cs#IndexModelStart)]
 
 新增 `#nullable enable` 指示詞，您便會看到兩個警告。 `ErrorText` 屬性或 `NewsItems` 屬性都並未初始化。 檢查這個類別會導致您認為這兩個屬性都應該是可為 null 的參考型別：兩者都有私用 setter。 其中剛好有一個已在 `OnGet` 方法中指派。 在進行變更前，請先觀察兩個屬性的消費者。 在頁面本身中，會在為任何錯誤產生標記前再度檢查 `ErrorText` 是否為 Null。 `NewsItems` 集合也會受到檢查是否為 `null`，以及檢查其是否具有項目。 一種快速修正的方式，便是將兩個屬性設為可為 Null 的參考型別。 更佳修正方式是將集合設為不可為 Null 的參考型別，並在擷取新聞時將項目新增到現有集合。 第一個修正是將 `?` 新增到 `string` 的 `ErrorText` 型別：
 
-[!code-csharp[UpdateErrorText](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#UpdateErrorText)]
+[!code-csharp[UpdateErrorText](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#UpdateErrorText)]
 
 這項變更不會影響其他程式碼，因為任何對 `ErrorText` 屬性的存取都已由 Null 檢查防護。 接下來，請初始化 `NewsItems` 清單並移除屬性 setter，使其成為唯讀屬性：
 
-[!code-csharp[InitializeNewsItems](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#InitializeNewsItems)]
+[!code-csharp[InitializeNewsItems](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#InitializeNewsItems)]
 
 這會修正警告，但會引進另一項錯誤。 `NewsItems` 清單現在已是**以建構修正**，但在 `OnGet` 中設定清單的程式碼也必須變更，才能符合新的 API。 取代指派，請改為呼叫 `AddRange` 來將新的項目新增到現有清單：
 
-[!code-csharp[AddRange](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#AddRange)]
+[!code-csharp[AddRange](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#AddRange)]
 
 使用 `AddRange` 而非指派，表示 `GetNews` 方法可傳回 `IEnumerable` 而非 `List`。 這會省下一個配置。 變更方法的簽章並移除 `ToList` 呼叫，如下列程式碼範例所示：
 
-[!code-csharp[GetNews](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#GetNewsFinished)]
+[!code-csharp[GetNews](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#GetNewsFinished)]
 
 變更簽章也會中斷其中一項測試。 開啟 `NewsServiceTests.cs` 專案 `Services` 資料夾中的 `SimpleFeedReader.Tests` 檔案。 巡覽至 `Returns_News_Stories_Given_Valid_Uri` 測試，並將 `result` 變數的型別變更為 `IEnumerable<NewsItem>`。 變更型別表示 `Count` 屬性不再開放使用，因此請將 `Count` 中的 `Assert` 屬性取代為對 `Any()` 的呼叫：
 
-[!code-csharp[FixTests](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader.Tests/Services/NewsServiceTests.cs#FixTestSignature)]
+[!code-csharp[FixTests](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader.Tests/Services/NewsServiceTests.cs#FixTestSignature)]
 
 您也需要將一個 `using System.Linq` 陳述式新增到檔案的開頭。
 
@@ -159,7 +159,7 @@ public class NewsStoryViewModel
 
 您已對 `NewsService` 類別進行變更，因此請開啟該類別的 `#nullable enable` 註釋。 這將不會產生任何新的警告。 但是，仔細檢查類別有助於說明編譯器流程分析的一些限制。 檢查建構函式：
 
-[!code-csharp[ServiceConstructor](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#ServiceConstructor)]
+[!code-csharp[ServiceConstructor](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#ServiceConstructor)]
 
 `IMapper` 參數型別為不可為 Null 的參考。 ASP.NET Core 基礎結構程式碼會呼叫它，因此編譯器並不真的了解 `IMapper` 永遠不會為 Null。 若無法解析必要服務，預設 ASP.NET Core 相依性 (DI) 容器會擲回例外狀況，因此程式碼是正確的。 編譯器無法驗證所有對您公用 API 進行的呼叫，即使程式碼是在啟用可為 Null 註釋內容的情況下編譯也一樣。 此外，您的程式庫可能會由專案取用，但那些專案可能尚未加入使用可為 Null 的參考型別。 即使您已將它們宣告為不可為 Null 類型，也請驗證針對公用 API 進行的輸入。
 

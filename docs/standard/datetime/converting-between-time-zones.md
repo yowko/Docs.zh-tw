@@ -12,12 +12,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: d0b38523f054598ba6fb1f05a0183bc4ccff2120
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fbb59dbe364763209f44a4e2241d1d5275036c40
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132568"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156019"
 ---
 # <a name="converting-times-between-time-zones"></a>在各時區間轉換時間
 
@@ -57,7 +57,7 @@ ms.locfileid: "73132568"
 
 ## <a name="converting-utc-to-a-designated-time-zone"></a>將 UTC 轉換為指定的時區
 
-若要將 UTC 轉換為當地時間，請參閱後面的「將 UTC 轉換為當地時間」一節。 若要將 UTC 轉換為您指定之任何時區的時間，請呼叫 <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> 方法。 這個方法採用兩個參數：
+若要將 UTC 轉換為當地時間，請參閱後面的「將 UTC 轉換為當地時間」一節。 若要將 UTC 轉換為您指定之任何時區的時間，請呼叫 <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> 方法。 此方法接受兩個參數：
 
 - 要轉換的 UTC。 這必須是 <xref:System.DateTime> 值，其 <xref:System.DateTime.Kind%2A> 屬性設定為 `Unspecified` 或 `Utc`。
 
@@ -109,7 +109,7 @@ ms.locfileid: "73132568"
 例如，如果網頁使用者要求的日期和時間已知且序列化為字串 (格式為 MM/dd/yyyy hh:mm:ss zzzz)，則下列 `ReturnTimeOnServer` 方法會將這個日期和時間值轉換為 Web 伺服器上的時間和日期。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
-[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)] 
+[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)]
 
 如果將字串 "9/1/2007 5:32:07 -05:00" 傳遞給這個方法，代表時區中的日期和時間比 UTC 早五個小時，就會傳回 9/1/2007 3:32:07 AM -07:00，代表伺服器位於美國「太平洋標準時間」時區。
 
@@ -118,8 +118,8 @@ ms.locfileid: "73132568"
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.TimeZoneInfo>
 - [日期、時間及時區](../../../docs/standard/datetime/index.md)
-- [尋找定義於本機系統的時區](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+- [尋找本機系統上定義的時區](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)

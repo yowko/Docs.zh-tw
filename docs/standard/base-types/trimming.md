@@ -15,17 +15,17 @@ helpviewer_keywords:
 - TrimStart method
 - removing characters
 ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
-ms.openlocfilehash: 66a4945f536c2f30d61a878e6449a6b0f6b45f22
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bdbe267bb178e90c0008422e6543a23178c2c4d8
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132888"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159984"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>在 .NET 中修剪和移除字串中的字元
 如果您將句子剖析成個別文字，最後可能會得到許多文字，但文字任一端有空格 (也稱為空白字元)。 在這種情況下，您可以使用 **System.String** 類別中的其中一個 Trim 方法，從字串中的指定位置移除任意數目的空格或其他字元。 下表描述可用的 Trim 方法。  
   
-|方法名稱|請使用|  
+|方法名稱|使用|  
 |-----------------|---------|  
 |<xref:System.String.Trim%2A?displayProperty=nameWithType>|將字元陣列中字串開頭和結尾指定的空格或空白字元移除。|  
 |<xref:System.String.TrimEnd%2A?displayProperty=nameWithType>|從字串尾端移除字元陣列中指定的字元。|  
@@ -77,7 +77,7 @@ ms.locfileid: "73132888"
   
  此程式碼會讓主控台顯示 `World!`。  
   
-## <a name="remove"></a>移除 
+## <a name="remove"></a>移除
 
  <xref:System.String.Remove%2A?displayProperty=nameWithType> 方法會從現有字串中的指定位置開始，移除指定的字元數。 這個方法會假設以零為起始的索引。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "73132888"
  [!code-csharp[Conceptual.String.BasicOps#21](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/trimming.cs#21)]
  [!code-vb[Conceptual.String.BasicOps#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/trimming.vb#21)]  
   
-## <a name="replace"></a>取代
+## <a name="replace"></a>Replace
 
  您也可以從字串中移除指定的字元或子字串，方法是呼叫 <xref:System.String.Replace%28System.String%2CSystem.String%29?displayProperty=nameWithType> 方法並指定空字串 (<xref:System.String.Empty?displayProperty=nameWithType>) 做為取代。 下列範例將會從字串中移除所有逗號。  
   
  [!code-csharp[Conceptual.String.BasicOps#23](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/replace1.cs#23)]
  [!code-vb[Conceptual.String.BasicOps#23](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/replace1.vb#23)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)

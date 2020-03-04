@@ -3,12 +3,12 @@ title: 轉換中的結果樹狀片段
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-ms.openlocfilehash: 33d66b0a835be8bacab76ef9295ce8158385d8d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e454c1194e8c280042857f106e22d0d0509417e3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710254"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156357"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>轉換中的結果樹狀片段
 
@@ -111,13 +111,13 @@ ms.locfileid: "75710254"
 
 使用這個樣式表轉換 XML 的結果會顯示在下列輸出中。
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```xml
 <first_book xmlns:user="urn:books">Book1</first_book>
 ```
 
-如上所述，`node-set` 函式讓您可以將 result tree fragment 轉換為節點集。 產生的節點集永遠包含單一節點，且為樹狀結構的根節點。 如果您將 result tree fragment 轉換為節點集，即可將其用於一般節點集所使用之處，例如 for-each 陳述式或 `select` 屬性值之中。 下列程式行顯示，片段被轉換為節點集以及當做節點集使用：
+如上所述，`node-set` 函式讓您可以將 result tree fragment 轉換為節點集。 產生的節點集永遠包含單一節點，且為樹狀的根節點。 如果您將 result tree fragment 轉換為節點集，即可將其用於一般節點集所使用之處，例如 for-each 陳述式或 `select` 屬性值之中。 下列程式行顯示，片段被轉換為節點集以及當做節點集使用：
 
 `<xsl:for-each select="msxsl:node-set($node-fragment)">`
 
@@ -140,7 +140,7 @@ ms.locfileid: "75710254"
     </xsl:variable>
 
     <xsl:template match="/">
-            <xsl:for-each select="msxsl:node-set($states)"/> 
+            <xsl:for-each select="msxsl:node-set($states)"/>
     </xsl:template>
 </xsl:stylesheet>
 ```
@@ -167,8 +167,8 @@ ms.locfileid: "75710254"
 <![CDATA[
     string func(XPathNodeIterator it)
     {
-        it.MoveNext(); 
-        return it.Current.Value; 
+        it.MoveNext();
+        return it.Current.Value;
         //it.Current returns XPathNavigator positioned on the current node
     }
 
@@ -190,7 +190,7 @@ ms.locfileid: "75710254"
 <books xmlns:user="urn:books">Book1Book2Book3Book4</books>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [使用 XslTransform 類別進行 XSLT 轉換](xslt-transformations-with-the-xsltransform-class.md)

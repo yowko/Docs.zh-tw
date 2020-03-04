@@ -10,23 +10,23 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: f72d2d83d701b20648140900d65c9098a8abb721
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 310967f39c3aa7a46d79087bcbf0cb016f7d7284
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76164056"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159568"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>如何在 .NET 中撰寫 JSON 序列化（封送處理）的自訂轉換器
 
-本文說明如何為 <xref:System.Text.Json> 命名空間中提供的 JSON 序列化類別建立自訂的轉換器。 如需 `System.Text.Json`的簡介，請參閱[如何在 .net 中序列化和還原序列化 JSON](system-text-json-how-to.md)。
+本文說明如何為 <xref:[!OP.NO-LOC(System.Text.Json)]> 命名空間中提供的 JSON 序列化類別建立自訂的轉換器。 如需 `[!OP.NO-LOC(System.Text.Json)]`的簡介，請參閱[如何在 .net 中序列化和還原序列化 JSON](system-text-json-how-to.md)。
 
-*轉換器*是一個類別，可將物件或值轉換成 JSON。 針對對應至 JavaScript 基本類型的大部分基本型別，`System.Text.Json` 命名空間具有內建的轉換器。 您可以撰寫自訂轉換器：
+*轉換器*是一個類別，可將物件或值轉換成 JSON。 針對對應至 JavaScript 基本類型的大部分基本型別，`[!OP.NO-LOC(System.Text.Json)]` 命名空間具有內建的轉換器。 您可以撰寫自訂轉換器：
 
 * 覆寫內建轉換器的預設行為。 例如，您可能想要以 mm/dd/yyyy 格式來表示 `DateTime` 值，而不是預設的 ISO 8601-1:2019 格式。
 * 支援自訂實值型別。 例如，`PhoneNumber` 結構。
 
-您也可以撰寫自訂轉換器，使用目前版本中未包含的功能來自訂或擴充 `System.Text.Json`。 本文稍後會涵蓋下列案例：
+您也可以撰寫自訂轉換器，使用目前版本中未包含的功能來自訂或擴充 `[!OP.NO-LOC(System.Text.Json)]`。 本文稍後會涵蓋下列案例：
 
 * [將推斷的類型還原序列化為物件屬性](#deserialize-inferred-types-to-object-properties)。
 * [支援具有非字串索引鍵的字典](#support-dictionary-with-non-string-key)。
@@ -58,7 +58,7 @@ ms.locfileid: "76164056"
 
 ## <a name="sample-factory-pattern-converter"></a>範例 factory 模式切換器
 
-下列程式碼顯示可搭配 `Dictionary<Enum,TValue>`使用的自訂轉換器。 程式碼會遵循 factory 模式，因為第一個泛型型別參數是 `Enum`，而第二個是開啟的。 `CanConvert` 方法只會針對具有兩個泛型參數的 `Dictionary` 傳回 `true`，其中第一個是 `Enum` 型別。 內部轉換器會取得現有的轉換器，以處理在執行時間針對 `TValue`所提供的任何類型。 
+下列程式碼顯示可搭配 `Dictionary<Enum,TValue>`使用的自訂轉換器。 程式碼會遵循 factory 模式，因為第一個泛型型別參數是 `Enum`，而第二個是開啟的。 `CanConvert` 方法只會針對具有兩個泛型參數的 `Dictionary` 傳回 `true`，其中第一個是 `Enum` 型別。 內部轉換器會取得現有的轉換器，以處理在執行時間針對 `TValue`所提供的任何類型。
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
@@ -68,47 +68,47 @@ ms.locfileid: "76164056"
 
 下列步驟說明如何遵循基本模式來建立轉換器：
 
-* 建立衍生自 <xref:System.Text.Json.Serialization.JsonConverter%601> 的類別，其中 `T` 是要序列化和還原序列化的類型。
-* 覆寫 `Read` 方法，將內送 JSON 還原序列化，並將它轉換成類型 `T`。 使用傳遞至方法的 <xref:System.Text.Json.Utf8JsonReader> 來讀取 JSON。
-* 覆寫 `Write` 方法，將 `T`類型的傳入物件序列化。 使用傳遞至方法的 <xref:System.Text.Json.Utf8JsonWriter> 來寫入 JSON。
+* 建立衍生自 <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverter%601> 的類別，其中 `T` 是要序列化和還原序列化的類型。
+* 覆寫 `Read` 方法，將內送 JSON 還原序列化，並將它轉換成類型 `T`。 使用傳遞至方法的 <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonReader> 來讀取 JSON。
+* 覆寫 `Write` 方法，將 `T`類型的傳入物件序列化。 使用傳遞至方法的 <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonWriter> 來寫入 JSON。
 * 只有在必要時，才覆寫 `CanConvert` 方法。 當要轉換的型別是 `T`型別時，預設的實值會傳回 `true`。 因此，只支援類型 `T` 的轉換器不需要覆寫此方法。 如需需要覆寫此方法之轉換器的範例，請參閱本文稍後[的多](#support-polymorphic-deserialization)型還原序列化一節。
 
-您可以參考[內建的轉換器原始程式碼](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/)做為參考執行，以撰寫自訂的轉換器。
+您可以參考[內建的轉換器原始程式碼](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/src/[!OP.NO-LOC(System/Text/Json)]/Serialization/Converters/)做為參考執行，以撰寫自訂的轉換器。
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>遵循 factory 模式的步驟
 
 下列步驟說明如何遵循 factory 模式來建立轉換器：
 
-* 建立衍生自 <xref:System.Text.Json.Serialization.JsonConverterFactory> 的類別。
-* 當要轉換的型別是轉換器可以處理的類型時，覆寫 `CanConvert` 方法，使其傳回 true。 例如，如果轉換器適用于 `List<T>` 它可能只會處理 `List<int>`、`List<string>`和 `List<DateTime>`。 
+* 建立衍生自 <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterFactory> 的類別。
+* 當要轉換的型別是轉換器可以處理的類型時，覆寫 `CanConvert` 方法，使其傳回 true。 例如，如果轉換器適用于 `List<T>` 它可能只會處理 `List<int>`、`List<string>`和 `List<DateTime>`。
 * 覆寫 `CreateConverter` 方法，以傳回將處理在執行時間所提供之類型轉換的轉換器類別實例。
-* 建立 `CreateConverter` 方法具現化的轉換器類別。 
+* 建立 `CreateConverter` 方法具現化的轉換器類別。
 
 開放式泛型需要 factory 模式，因為所有類型的物件來回轉換的程式碼都不相同。 舉例來說，開放式泛型型別的轉換器（例如`List<T>`）必須針對封閉式泛型型別（例如，`List<DateTime>`）建立轉換子，以供幕後使用。 必須撰寫程式碼，以處理轉換器可以處理的每個封閉式泛型型別。
 
-`Enum` 類型類似于開放式泛型型別： `Enum` 的轉換器必須針對特定 `Enum` （例如，`WeekdaysEnum`）建立轉換器，以供幕後使用。 
+`Enum` 類型類似于開放式泛型型別： `Enum` 的轉換器必須針對特定 `Enum` （例如，`WeekdaysEnum`）建立轉換器，以供幕後使用。
 
 ## <a name="error-handling"></a>錯誤處理
 
-如果您需要在錯誤處理常式代碼中擲回例外狀況，請考慮在沒有訊息的情況下擲回 <xref:System.Text.Json.JsonException>。 此例外狀況類型會自動建立訊息，其中包含造成錯誤之 JSON 部分的路徑。 例如，語句 `throw new JsonException();` 會產生類似下列範例的錯誤訊息：
+如果您需要在錯誤處理常式代碼中擲回例外狀況，請考慮在沒有訊息的情況下擲回 <xref:[!OP.NO-LOC(System.Text.Json)].JsonException>。 此例外狀況類型會自動建立訊息，其中包含造成錯誤之 JSON 部分的路徑。 例如，語句 `throw new JsonException();` 會產生類似下列範例的錯誤訊息：
 
 ```
-Unhandled exception. System.Text.Json.JsonException: 
-The JSON value could not be converted to System.Object. 
+Unhandled exception. [!OP.NO-LOC(System.Text.Json)].JsonException:
+The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
-如果您提供訊息（例如 `throw new JsonException("Error occurred")`，例外狀況仍然會在 <xref:System.Text.Json.JsonException.Path> 屬性中提供路徑。
+如果您提供訊息（例如 `throw new JsonException("Error occurred")`，例外狀況仍然會在 <xref:[!OP.NO-LOC(System.Text.Json)].JsonException.Path> 屬性中提供路徑。
 
 ## <a name="register-a-custom-converter"></a>註冊自訂轉換器
 
 *註冊*自訂轉換器，讓 `Serialize` 和 `Deserialize` 方法使用它。 選擇下列其中一種方法：
 
-* 將轉換器類別的實例加入至 <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> 集合。
-* 將[[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute)屬性套用至需要自訂轉換器的屬性。
-* 將[[JsonConverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute)屬性套用至代表自訂實數值型別的類別或結構。
+* 將轉換器類別的實例加入至 <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters?displayProperty=nameWithType> 集合。
+* 將[[JsonConverter]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute)屬性套用至需要自訂轉換器的屬性。
+* 將[[JsonConverter]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute)屬性套用至代表自訂實數值型別的類別或結構。
 
-## <a name="registration-sample---converters-collection"></a>註冊範例-轉換器集合 
+## <a name="registration-sample---converters-collection"></a>註冊範例-轉換器集合
 
 以下範例會讓 <xref:System.ComponentModel.DateTimeOffsetConverter> <xref:System.DateTimeOffset>類型的屬性的預設值：
 
@@ -296,7 +296,7 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 * [Int32 轉換器，可在還原序列化時同時允許字串和數位值](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
 * [列舉轉換器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
 * [列出接受外部資料的\<T > 轉換器](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
-* [Long [] 轉換器，適用于以逗號分隔的數位清單](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs) 
+* [Long [] 轉換器，適用于以逗號分隔的數位清單](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs)
 
 如果您需要建立可修改現有內建轉換器行為的轉換器，您可以取得[現有轉換器的原始程式碼](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)，做為自訂的起點。
 

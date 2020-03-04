@@ -2,12 +2,12 @@
 title: 安裝當地語系化的 IntelliSense 檔案
 description: 了解如何設定開發電腦，以在 Visual Studio 中使用 .NET Core 專案的當地語系化 IntelliSense 檔案。
 ms.date: 01/23/2020
-ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733646"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157709"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>如何安裝 .NET Core 的當地語系化 IntelliSense 檔案
 
@@ -16,7 +16,7 @@ ms.locfileid: "76733646"
 - 如何安裝這些檔案的當地語系化版本。
 - 如何修改 Visual Studio 安裝以使用不同語言。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 或更新版本。
 - [Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更新版本。
@@ -37,12 +37,12 @@ ms.locfileid: "76733646"
    1. 巡覽至 .NET Core 安裝資料夾。 根據預設，其位於 *%ProgramFiles%\dotnet\packs*。
    1. 選擇要為其安裝 IntelliSense 的 SDK，然後巡覽至相關聯的路徑。 您有下列選擇：
 
-      | SDK 類型        | 路徑                               |
+      | SDK 類型        | Path                               |
       | --------------- | ---------------------------------- |
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
-      | Windows 桌惎 | *Microsoft.WindowsDesktop.App.Ref* |
+      | Windows 桌面 | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard   | *NETStandard.Library.Ref*          |
-   
+
    1. 巡覽至要為其安裝當地語系化 IntelliSense 的版本。 例如，*3.1.0*。
    1. 開啟 *ref* 資料夾。
    1. 開啟 Moniker 資料夾。 例如，*netcoreapp3.1*。
@@ -51,9 +51,9 @@ ms.locfileid: "76733646"
 
 1. 在剛開啟的 Moniker 資料夾中建立子資料夾。 資料夾名稱會指出所要使用的語言。 下表指定不同選項：
 
-   | 語言              | 資料夾名稱 |
+   | Language              | 資料夾名稱 |
    | --------------------- | ----------- |
-   | 葡萄牙文(巴西)  | *pt-br*     |
+   | 巴西葡萄牙文  | *pt-br*     |
    | 中文 (簡體)  | *zh-hans*   |
    | 中文 (繁體) | *zh-hant*   |
    | 法文                | *fr*        |
@@ -116,7 +116,7 @@ ms.locfileid: "76733646"
 
 1. 在 [**環境**] 節點底下，選擇 [**國際設定**]。
 
-1. 在 [語言] 下拉式清單中，選取所需要的語言。 選擇 [確定]。 
+1. 在 [語言] 下拉式清單中，選取所需要的語言。 選擇 [確定]。
 
 1. 對話方塊會通知您必須重新啟動 Visual Studio，才能使變更生效。 選擇 [確定]。
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-ms.openlocfilehash: 1f300bab01f94af8c70c8b67a69a73fbc5ba5bac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: af6df3729f1bd926e9a47cc5b9d9bf460c8e1225
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709825"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159282"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection 結構描述編譯
 **XmlSchemaCollection** 是一種快取 (Cache) 或程式庫，您可在此儲存和驗證 XML 資料精簡 (XDR) 和 XML 結構描述定義語言 (XSD) 結構描述。 **XmlSchemaCollection** 會藉由在記憶體中快取結構描述，而不是從檔案或 URL 存取它們的方式來提升效能。  
@@ -34,7 +34,7 @@ ms.locfileid: "75709825"
 ## <a name="validate-xml-documents-using-xmlschemacollection"></a>使用 XmlSchemaCollection 驗證 XML 文件  
  您可以藉由建立 **XmlSchemaCollection** 物件、將您的結構描述加入至集合中，然後設定 **XmlValidatingReader** 上的 **Schemas** 屬性，將建立的 **XmlSchemaCollection** 指派給 **XmlValidatingReader**，就可以利用 **XmlSchemaCollection** 來驗證 XML 執行個體文件。  
   
-### <a name="improved-performance"></a>提升效能  
+### <a name="improved-performance"></a>改良的效能  
  如果您要依照相同的結構描述驗證多個文件，建議您使用 **XmlSchemaCollection**，因為它能夠提供比在記憶體中快取結構描述更佳的效能。  
   
  下列程式碼範例會建立 **XmlSchemaCollection** 物件、將結構描述加入集合中並設定 **Schemas** 屬性。  
@@ -51,11 +51,11 @@ vr.Schemas.Add(xsc)
 XmlTextReader tr = new XmlTextReader("Books.xml");  
 XmlValidatingReader vr = new XmlValidatingReader(tr);  
 XmlSchemaCollection xsc = new XmlSchemaCollection();  
-xsc.Add("urn:bookstore-schema", "Books.xsd");    
+xsc.Add("urn:bookstore-schema", "Books.xsd");
 vr.Schemas.Add(xsc);  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 XmlSchemaCollection 的 XDR 驗證](../../../../docs/standard/data/xml/xdr-validation-with-xmlschemacollection.md)
 - [使用 XmlSchemaCollection 進行 XML 結構描述 (XSD) 驗證](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemacollection.md)

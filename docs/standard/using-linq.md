@@ -9,12 +9,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 6ec86b7e728eef2cb4937662fd013d7fe951904d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: eafd8f78c3d8de1ba064021111f869571d5a570f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347278"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160322"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
@@ -143,7 +143,7 @@ Dim filteredItems = From item In myItems
 
 API 語法只是一個使用查詢語法的更簡潔方法嗎？
 
-No。 查詢語法可讓您使用 **let** 子句，允許您在運算式的範圍內導入及繫結變數，並在運算式的後續片段中使用它。 可以僅使用 API 語法來重新產生相同的程式碼，但很可能會產生難以閱讀的程式碼。
+否。 查詢語法可讓您使用 **let** 子句，允許您在運算式的範圍內導入及繫結變數，並在運算式的後續片段中使用它。 可以僅使用 API 語法來重新產生相同的程式碼，但很可能會產生難以閱讀的程式碼。
 
 而這就帶出了一個問題，**您應該只使用查詢語法嗎？**
 
@@ -257,7 +257,7 @@ var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthCompa
 ```
 
 ```vb
-Public Class DogHairLengthComparer 
+Public Class DogHairLengthComparer
   Inherits IEqualityComparer(Of Dog)
 
   Public Function Equals(a As Dog,b As Dog) As Boolean
@@ -321,7 +321,7 @@ public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params st
     {
         return self == to;
     }
-    
+
     // Selects the properties which have unequal values into a sequence of those properties.
     var unequalProperties = from property in typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance)
                             where !ignore.Contains(property.Name)
@@ -334,14 +334,14 @@ public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params st
 ```
 
 ```vb
-<System.Runtime.CompilerServices.Extension()> 
+<System.Runtime.CompilerServices.Extension()>
 Public Function PublicInstancePropertiesEqual(Of T As Class)(self As T, [to] As T, ParamArray ignore As String()) As Boolean
     If self Is Nothing OrElse [to] Is Nothing Then
         Return self Is [to]
     End If
 
     ' Selects the properties which have unequal values into a sequence of those properties.
-    Dim unequalProperties = From [property] In GetType(T).GetProperties(BindingFlags.Public Or BindingFlags.Instance) 
+    Dim unequalProperties = From [property] In GetType(T).GetProperties(BindingFlags.Public Or BindingFlags.Instance)
                             Where Not ignore.Contains([property].Name)
                             Let selfValue = [property].GetValue(self, Nothing)
                             Let toValue = [property].GetValue([to], Nothing)
@@ -354,7 +354,7 @@ End Function
 
 PLINQ 或 Parallel LINQ，都是 LINQ 運算式的平行執行引擎。 換句話說，標準 LINQ 運算式可以在任意數目的執行緒上進行完整的平行處理。 這是透過在執行運算式之前呼叫 `AsParallel()` 所完成的。
 
-請考慮下列事項：
+請考慮下列：
 
 ```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)

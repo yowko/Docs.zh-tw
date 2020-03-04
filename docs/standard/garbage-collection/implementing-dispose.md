@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 0583329ae75fa54cf000212479895ccebdbd30d8
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142063"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238984"
 ---
 # <a name="implementing-a-dispose-method"></a>實作 Dispose 方法
 
@@ -33,7 +33,7 @@ ms.locfileid: "74142063"
   
 若要確保資源永遠都能適當清除，<xref:System.IDisposable.Dispose%2A> 方法應該能夠被呼叫多次而不會擲回例外狀況。  
   
-此處所提供的 <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> 方法程式碼範例，顯示積極記憶體回收如何在被回收的物件仍在執行時，即讓完成項開始執行。 在冗長的 <xref:System.GC.KeepAlive%2A> 方法結尾處呼叫 <xref:System.IDisposable.Dispose%2A> 方法，這是個不錯的做法。  
+針對 <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> 方法所提供的程式碼範例會顯示垃圾收集如何導致完成項執行，而物件或其成員的非受控參考仍在使用中。 利用 <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType>，讓物件不符合從目前常式開始到呼叫這個方法的時間點，就無法進行垃圾收集。
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() 和 Dispose(Boolean)  
@@ -99,7 +99,7 @@ ms.locfileid: "74142063"
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> 在 C# 中，您會透過定義[解構函式](../../csharp/programming-guide/classes-and-structs/destructors.md)來覆寫 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
+> 在 C# 中，您會透過定義<xref:System.Object.Finalize%2A?displayProperty=nameWithType>解構函式[來覆寫 ](../../csharp/programming-guide/classes-and-structs/destructors.md)。  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>實作衍生類別的處置模式
 
@@ -123,9 +123,9 @@ ms.locfileid: "74142063"
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> 在 C# 中，您會透過定義[解構函式](../../csharp/programming-guide/classes-and-structs/destructors.md)來覆寫 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
+> 在 C# 中，您會透過定義<xref:System.Object.Finalize%2A?displayProperty=nameWithType>解構函式[來覆寫 ](../../csharp/programming-guide/classes-and-structs/destructors.md)。  
   
-<a name="SafeHandles"></a>   
+<a name="SafeHandles"></a>
 ## <a name="using-safe-handles"></a>使用安全控制代碼
 
 撰寫物件完成項的程式碼是一項複雜的工作，若未正確撰寫，可能會造成問題。 因此，建議您建構 <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> 物件，而不要實作完成項。  
@@ -142,7 +142,7 @@ ms.locfileid: "74142063"
   
 - <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 類別，適用於等候控制代碼。  
   
-<a name="base"></a>   
+<a name="base"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-base-class"></a>使用安全控制代碼實作基底類別的處置模式
 
 下列範例將說明使用安全控制代碼封裝 Unmanaged 資源之基底類別 `DisposableStreamResource` 的處置模式。 它會定義 `DisposableResource` 類別，該類別使用 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 包裝代表開啟檔案的 <xref:System.IO.Stream> 物件。 `DisposableResource` 方法還包含單一屬性 `Size`，該屬性會傳回檔案資料流中的位元組總數。  
@@ -150,7 +150,7 @@ ms.locfileid: "74142063"
 [!code-csharp[Conceptual.Disposable#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/base1.cs#9)]
 [!code-vb[Conceptual.Disposable#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/base1.vb#9)]  
   
-<a name="derived"></a>   
+<a name="derived"></a>
 ## <a name="using-a-safe-handle-to-implement-the-dispose-pattern-for-a-derived-class"></a>使用安全控制代碼實作衍生類別的處置模式
 
 下列範例將說明衍生類別 `DisposableStreamResource2` 的處置模式，該類別繼承自上述範例中顯示的 `DisposableStreamResource` 類別。 這個類別會加入額外的方法 `WriteFileInfo`，並使用 <xref:Microsoft.Win32.SafeHandles.SafeFileHandle> 物件包裝可寫入檔案的控制代碼。  
@@ -158,7 +158,7 @@ ms.locfileid: "74142063"
 [!code-csharp[Conceptual.Disposable#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/derived1.cs#10)]
 [!code-vb[Conceptual.Disposable#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/derived1.vb#10)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.GC.SuppressFinalize%2A>
 - <xref:System.IDisposable>

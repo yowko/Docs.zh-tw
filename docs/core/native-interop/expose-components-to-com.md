@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f6665e18e51af96761941e419fabc409e4b9391d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973317"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240970"
 ---
 # <a name="exposing-net-core-components-to-com"></a>將 .NET Core 元件公開給 COM
 
-在 .NET Core 中，相較於 .NET Framework，向 COM 公開您 .NET 物件的流程已大幅簡化。 下列流程將逐步解說如何向 COM 公開類別。 本教學課程會示範如何：
+在 .NET Core 中，相較於 .NET Framework，向 COM 公開您 .NET 物件的流程已大幅簡化。 下列流程將逐步解說如何向 COM 公開類別。 本教學課程說明如何：
 
 - 從 .NET Core 向 COM 公開類別。
 - 在建置您的 .NET Core 程式庫時，一併產生 COM 伺服器。
@@ -32,21 +32,35 @@ ms.locfileid: "73973317"
 第一步是建立程式庫。
 
 1. 建立新的資料夾，然後在該資料夾中執行下列命令：
-    
+
     ```dotnetcli
     dotnet new classlib
     ```
 
 2. 開啟 `Class1.cs`。
 3. 將 `using System.Runtime.InteropServices;` 新增到檔案的頂端。
-4. 建立名為 `IServer` 的介面。 例如:
+4. 建立名為 `IServer` 的介面。 例如：
 
-   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+   ```csharp
+   using System;
+   using System.Runtime.InteropServices;
 
-5. 使用您要實作之 COM 介面的介面 GUID，將 `[Guid("<IID>")]` 屬性新增到介面。 例如，`[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]`。 請注意，因為對 COM 而言，此 GUID 是此介面的唯一識別碼，所以其必須是唯一的。 在 Visual Studio 中，您可以前往 [工具] > [建立 GUID] 開啟建立 GUID 工具，以產生 GUID。
+   [ComVisible(true)]
+   [Guid(ContractGuids.ServerInterface)]
+   [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+   public interface IServer
+   {
+       /// <summary>
+       /// Compute the value of the constant Pi.
+       /// </summary>
+       double ComputePi();
+   }
+   ```
+
+5. 使用您要實作之 COM 介面的介面 GUID，將 `[Guid("<IID>")]` 屬性新增到介面。 例如： `[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]` 。 請注意，因為對 COM 而言，此 GUID 是此介面的唯一識別碼，所以其必須是唯一的。 在 Visual Studio 中，您可以前往 [工具] > [建立 GUID] 開啟建立 GUID 工具，以產生 GUID。
 6. 將 `[InterfaceType]` 屬性新增到介面，並指定您介面應實作的基底 COM 介面。
 7. 建立名為 `Server` 且實作 `IServer` 的類別。
-8. 使用您要實作之 COM 類別的識別碼 GUID，將 `[Guid("<CLSID>")]` 屬性新增到類別。 例如，`[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]`。 一如介面 GUID，因為對 COM 而言，此 GUID 是此介面唯一的識別碼，所以其必須是唯一的。
+8. 使用您要實作之 COM 類別的識別碼 GUID，將 `[Guid("<CLSID>")]` 屬性新增到類別。 例如： `[Guid("9f35b6f5-2c05-4e7f-93aa-ee087f6e7ab6")]` 。 一如介面 GUID，因為對 COM 而言，此 GUID 是此介面唯一的識別碼，所以其必須是唯一的。
 9. 將 `[ComVisible(true)]` 屬性新增到介面和類別。
 
 > [!IMPORTANT]
@@ -54,7 +68,7 @@ ms.locfileid: "73973317"
 
 ## <a name="generate-the-com-host"></a>產生 COM 主機
 
-1. 開啟 `.csproj` 專案檔，然後在 `<PropertyGroup></PropertyGroup>` 標籤內新增 `<EnableComHosting>true</EnableComHosting>`。
+1. 開啟 `.csproj` 專案檔，然後在 `<EnableComHosting>true</EnableComHosting>` 標籤內新增 `<PropertyGroup></PropertyGroup>`。
 2. 建置專案。
 
 產生的輸出包含 `ProjectName.dll`、`ProjectName.deps.json`、`ProjectName.runtimeconfig.json` 和 `ProjectName.comhost.dll` 檔案。
@@ -65,7 +79,7 @@ ms.locfileid: "73973317"
 
 ## <a name="enabling-regfree-com"></a>啟用 RegFree COM
 
-1. 開啟 `.csproj` 專案檔，然後在 `<PropertyGroup></PropertyGroup>` 標籤內新增 `<EnableRegFreeCom>true</EnableRegFreeCom>`。
+1. 開啟 `.csproj` 專案檔，然後在 `<EnableRegFreeCom>true</EnableRegFreeCom>` 標籤內新增 `<PropertyGroup></PropertyGroup>`。
 2. 建置專案。
 
 產生的輸出現在還包含 `ProjectName.X.manifest` 檔案。 此檔案為並存資訊清單，可與 Registry-Free COM 搭配使用。
@@ -74,7 +88,7 @@ ms.locfileid: "73973317"
 
 GitHub 上的 dotnet/samples 存放庫提供功能完整的 [COM 伺服器範例](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)。
 
-## <a name="additional-notes"></a>其他備註
+## <a name="additional-notes"></a>其他注意事項
 
 不同於 .NET Framework，.NET Core 不支援從 .NET Core 組件產生 COM 型別程式庫 (TLB)。 本指南是針對 COM 介面的原生宣告，手動撰寫 IDLC++檔案或 C/標頭。
 

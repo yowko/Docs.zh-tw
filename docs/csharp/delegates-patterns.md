@@ -3,16 +3,16 @@ title: 委派的一般模式
 description: 了解在程式碼中使用委派，以避免元件之間強式結合的一般模式。
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 40e6ced7337e32d6e9b67b12a15ad7e03a77c4b6
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454076"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239868"
 ---
 # <a name="common-patterns-for-delegates"></a>委派的一般模式
 
-[上一篇](delegates-strongly-typed.md)
+[[上一步]](delegates-strongly-typed.md)
 
 委派會提供一種機制，啟用與元件之間最小結合程度有關的軟體設計。
 
@@ -54,15 +54,15 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 讓我們開始︰初始實作將接受新訊息，並使用任何附加的委派來寫入它們。 您可以開始使用一個將訊息寫入至主控台的委派。
 
-[!code-csharp[LoggerImplementation](../../samples/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
+[!code-csharp[LoggerImplementation](../../samples/snippets/csharp/delegates-and-events/Logger.cs#FirstImplementation "A first Logger implementation.")]
 
 上述靜態類別是可運作的最簡單事項。 我們需要撰寫將訊息寫入主控台之方法的單一實作︰ 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/snippets/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 最後，您必須連結委派，方法是將它附加到記錄器中所宣告的 WriteMessage 委派︰
 
-[!code-csharp[ConnectDelegate](../../samples/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
+[!code-csharp[ConnectDelegate](../../samples/snippets/csharp/delegates-and-events/Program.cs#ConnectDelegate "Connect to the delegate")]
 
 ## <a name="practices"></a>做法
 
@@ -72,18 +72,18 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 使用的介面最小也最具彈性︰若要建立新的輸出記錄器，您必須建立一種方法。 該方法可能是靜態方法或執行個體方法。 它可能會任何存取權。
 
-## <a name="formatting-output"></a>Formatting Output
+## <a name="formatting-output"></a>格式化輸出
 
 讓我們使第一版更為強固，然後開始建立其他記錄機制。
 
 接下來，讓我們將幾個引數新增至 `LogMessage()` 方法，讓您的記錄類別建立更結構化的訊息︰
 
-[!code-csharp[Severity](../../samples/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
-[!code-csharp[NextLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
+[!code-csharp[Severity](../../samples/snippets/csharp/delegates-and-events/Logger.cs#Severity "Define severities")]
+[!code-csharp[NextLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerTwo "Refine the Logger")]
 
 接下來，讓我們使用該 `Severity` 引數，來篩選傳送到記錄檔輸出的訊息。 
 
-[!code-csharp[FinalLogger](../../samples/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
+[!code-csharp[FinalLogger](../../samples/snippets/csharp/delegates-and-events/Logger.cs#LoggerFinal "Finish the Logger")]
 
 ## <a name="practices"></a>做法
 
@@ -97,11 +97,11 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 以下是檔案型記錄器︰
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
 建立這個類別之後，即可將它具現化，而且它會將其 LogMessage 方法附加至記錄器元件︰
 
-[!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
+[!code-csharp[FileLogger](../../samples/snippets/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
 
 這兩者不互斥。 您可以連接這兩種記錄方法，並將訊息產生到主控台和檔案︰
 
@@ -133,7 +133,7 @@ Logger.WriteMessage -= LoggingMethods.LogToConsole;
 
 ## <a name="handling-null-delegates"></a>處理 Null 委派
 
-最後，讓我們更新 LogMessage 方法，以在未選取輸出機制時，在大部分情況下都更為強固。 目前實作將會在 `WriteMessage` 委派未附加引動過程清單時擲回 `NullReferenceException`。
+最後，讓我們更新 LogMessage 方法，以在未選取輸出機制時，在大部分情況下都更為強固。 目前實作將會在 `NullReferenceException` 委派未附加引動過程清單時擲回 `WriteMessage`。
 您可能會偏好的設計是在未附加任何方法時，以無訊息模式繼續進行。 搭配使用 Null 條件運算子與 `Delegate.Invoke()` 方法，這個作業即容易達成：
 
 ```csharp
@@ -143,9 +143,9 @@ public static void LogMessage(string msg)
 }
 ```
 
-左運算元 (在此情況下為 `WriteMessage`) 為 Null 時，Null 條件運算子 (`?.`) 會短路，這表示不會嘗試記錄訊息。
+左運算元 (在此情況下為 `?.`) 為 Null 時，Null 條件運算子 (`WriteMessage`) 會短路，這表示不會嘗試記錄訊息。
 
-您找不到 `System.Delegate` 或 `System.MulticastDelegate` 的文件中所列的 `Invoke()` 方法。 編譯器會針對任何宣告的委派類型產生類型安全 `Invoke` 方法。 在此範例中，這表示 `Invoke` 接受單一 `string` 引數，且具有 void 傳回型別。
+您找不到 `Invoke()` 或 `System.Delegate` 的文件中所列的 `System.MulticastDelegate` 方法。 編譯器會針對任何宣告的委派類型產生類型安全 `Invoke` 方法。 在此範例中，這表示 `Invoke` 接受單一 `string` 引數，且具有 void 傳回型別。
 
 ## <a name="summary-of-practices"></a>做法摘要
 
@@ -153,4 +153,4 @@ public static void LogMessage(string msg)
 
 記錄器類別可以進行任意數目的增強或變更，而不需要中斷變更。 與任何類別一樣，修改公用 API 會有中斷變更的風險。 但是，因為記錄器與任何輸出引擎之間的結合程度只能透過委派，所以不會包含其他類型 (例如介面或基底類別)。 結合程度越小越好。
 
-[下一步](events-overview.md)
+[下一個](events-overview.md)

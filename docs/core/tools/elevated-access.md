@@ -3,16 +3,16 @@ title: Dotnet 命令的提升存取權限
 description: 了解適用於需要提升存取權限的 dotnet 命令最佳做法。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: fe33cbe966d175f71ba350737b283c1e83f64fa6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543426"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156760"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Dotnet 命令的提升存取權限
 
-軟體開發最佳做法會引導開發人員撰寫需要最少權限的軟體。 但是，由於作業系統規則，有些軟體 (例如效能監視工具) 會需要系統管理員權限。 下列指導會描述使用 .NET Core 撰寫這類軟體時的支援案例。 
+軟體開發最佳做法會引導開發人員撰寫需要最少權限的軟體。 但是，由於作業系統規則，有些軟體 (例如效能監視工具) 會需要系統管理員權限。 下列指導會描述使用 .NET Core 撰寫這類軟體時的支援案例。
 
 下列命令可以提升的權限來執行：
 
@@ -35,8 +35,8 @@ ms.locfileid: "77543426"
 
 若資料夾 `%ProgramFiles%\dotnet-tools` 已存在，請執行下列操作來檢查 "Users" 群組是否有寫入或修改該目錄的權限：
 
-- 以滑鼠右鍵按一下 `%ProgramFiles%\dotnet-tools` 資料夾，然後選取 [屬性]。 [通用屬性] 對話方塊隨即開啟。 
-- 選取 [**安全性**] 索引標籤。在 [**群組或使用者名稱**] 底下，檢查「使用者」群組是否有寫入或修改目錄的許可權。 
+- 以滑鼠右鍵按一下 `%ProgramFiles%\dotnet-tools` 資料夾，然後選取 [屬性]。 [通用屬性] 對話方塊隨即開啟。
+- 選取 [**安全性**] 索引標籤。在 [**群組或使用者名稱**] 底下，檢查「使用者」群組是否有寫入或修改目錄的許可權。
 - 若 "Users" 群組可以寫入或修改目錄，請在安裝工具時使用不同的目錄名稱，而非 *dotnet-tools*。
 
 若要安裝工具，請以提升權限的命令提示字元來執行下列命令。 它會在安裝期間建立 *dotnet-tools* 資料夾。
@@ -97,7 +97,7 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
-    
+
 - 搭配 [ 旗標使用 ](dotnet-run.md)dotnet run`—no-build` 來避免產生新的二進位檔案：
 
    ```dotnetcli

@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: bfa9c24ef4cd2c418c91e00318aa47b889078d40
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d4444b6d080afa92a4e7fd9f30c5f9358f02f0ef
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552650"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159230"
 ---
 # <a name="framework-libraries"></a>Framework 程式庫
 
@@ -34,7 +34,7 @@ BCL 提供最基本的類型和公用程式功能，是所有其他 .NET 類別�
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 代表記憶體位元組之不帶正負號的 8 位元整數。
 * <xref:System.Boolean?displayProperty=nameWithType> （[bool](../csharp/language-reference/builtin-types/bool.md)）-表示 `true` 或 `false`的布林類型。
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/builtin-types/char.md)) - 代表 Unicode 字元的 16 位元數值類型。
-* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - 代表連續字元。 不同於 `char[]`，但允許編製索引為 `string` 中的每個 `char`。
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - 代表連續字元。 不同於 `char[]`，但允許編製索引為 `char` 中的每個 `string`。
 
 ## <a name="data-structures"></a>資料結構
 
@@ -52,7 +52,7 @@ BCL 提供最基本的類型和公用程式功能，是所有其他 .NET 類別�
 
 * <xref:System.Net.Http.HttpClient> - 此 API 可用於傳送 HTTP 要求，以及從 URI 所識別的資源接收 HTTP 回應。
 * <xref:System.Xml.Linq.XDocument> - 此 API 可用於載入，以及使用 LINQ 查詢 XML 文件。
-* <xref:System.IO.StreamReader> - 此 API 可用於讀取檔案。 
+* <xref:System.IO.StreamReader> - 此 API 可用於讀取檔案。
 * <xref:System.IO.StreamWriter> - 此 API 可用於寫入檔案。
 
 ## <a name="app-model-apis"></a>應用程式模型 API

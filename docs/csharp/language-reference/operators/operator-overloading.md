@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 - operator overloading [C#]
-ms.openlocfilehash: 1475852d312fa16980f25347fc9a864cb1659221
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: c59ae6960a77efd866db4748ca537d9e5218fd1e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451924"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238971"
 ---
 # <a name="operator-overloading-c-reference"></a>運算子多載 (C# 參考)
 
@@ -25,7 +25,7 @@ ms.locfileid: "77451924"
 
 下列範例會定義簡化的結構以表示有理數。 結構會多載一些[算術運算子](arithmetic-operators.md)：
 
-[!code-csharp[fraction example](~/samples/csharp/language-reference/operators/OperatorOverloading.cs)]
+[!code-csharp[fraction example](~/samples/snippets/csharp/language-reference/operators/OperatorOverloading.cs)]
 
 您可以藉由定義從 `int` 到 `Fraction`的[隱含轉換](user-defined-conversion-operators.md)，來擴充上述範例。 多載運算子即可支援這兩種類型的引數。 亦即，您可以將整數新增至分數，並取得分數的結果。
 

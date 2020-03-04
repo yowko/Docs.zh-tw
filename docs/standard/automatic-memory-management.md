@@ -12,12 +12,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-ms.openlocfilehash: d112bf6d145893bd7b0f99e2b233fc83e72fe227
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1038f16dca507e58005189c9558a9ec8dae4b34f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140577"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159698"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 自動記憶體管理是 Common Language Runtime 在 [Managed 執行](../../docs/standard/managed-execution-process.md)期間所提供的一項服務。 Common Language Runtime 的記憶體回收行程會管理應用程式記憶體的配置和釋放。 這表示開發人員在開發 Managed 應用程式時，不需要撰寫程式碼來執行記憶體管理工作。 自動記憶體管理可排除一些常見的問題，例如，忘記釋放物件而造成記憶體流失 (Memory Leak)，或嘗試存取已經釋放物件的記憶體。 本章節將描述記憶體回收行程如何配置和釋放記憶體。  
@@ -27,7 +27,7 @@ ms.locfileid: "73140577"
   
  從 Managed 堆積中配置記憶體要比 Unmanaged 記憶體配置快。 由於 Runtime 是用增加指標值的方式為物件配置記憶體，因此速度幾乎和從堆疊中配置記憶體一樣快。 此外，由於連續配置的新物件是連續儲存在 Managed 堆積中，因此應用程式可以非常快速地存取這些物件。  
   
-<a name="cpconautomaticmemorymanagementreleasingmemoryanchor1"></a>   
+<a name="cpconautomaticmemorymanagementreleasingmemoryanchor1"></a>
 ## <a name="releasing-memory"></a>釋放記憶體  
  記憶體回收行程的最佳化引擎會根據所做的配置，決定執行回收的最佳時機。 當記憶體回收行程執行回收時，會將應用程式已經不再使用的物件記憶體釋放出來。 它會檢查應用程式的根目錄 (Root)，判斷哪些物件已不再使用。 每一個應用程式都有一組根目錄。 每一個根目錄都會參考 Managed 堆積上的物件，要不然就是設定為 Null。 應用程式的根目錄包括執行緒堆疊上的靜態欄位、區域變數和參數，以及 CPU 暫存器。 記憶體回收行程可以存取 [Just-in-Time (JIT) 編譯器](../../docs/standard/managed-execution-process.md)和執行階段所保留的使用中根目錄清單。 它會用這份清單來檢查應用程式的根目錄，然後在處理序中建立圖形，其中包含可從根目錄取得的所有物件。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "73140577"
 ## <a name="releasing-memory-for-unmanaged-resources"></a>釋放 Unmanaged 資源的記憶體  
  對於應用程式所建立的大部分物件而言，您都可以依賴記憶體回收行程自動執行必要的記憶體管理工作。 但是，Unmanaged 資源需要明確清除。 最常見的 Unmanaged 資源類型就是包裝作業系統資源 (例如檔案控制代碼、視窗控制代碼或網路連接) 的物件。 雖然記憶體回收行程能夠追蹤封裝 Unmanaged 資源的 Managed 物件存留期，但是它並沒有關於如何清除資源的相關資訊。 當建立封裝 Unmanaged 資源的物件時，建議您提供必要的程式碼，在公用 **Dispose** 方法中清除 Unmanaged 資源。 您可以提供 **Dispose** 方法，讓物件的使用者在用完物件後，明確釋放出它所佔用的記憶體。 當您使用封裝 Unmanaged 資源的物件時，應留意 **Dispose** 的用法，並在必要時加以呼叫。 如需清除 Unmanaged 資源的詳細資訊，以及實作 **Dispose** 的設計模式範例，請參閱[記憶體回收](../../docs/standard/garbage-collection/index.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.GC>
 - [記憶體回收](../../docs/standard/garbage-collection/index.md)

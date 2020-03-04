@@ -1,14 +1,14 @@
 ---
 title: C# 陳述式 - C# 語言教學課程
 description: 您將使用陳述式來建立 C# 程式的動作
-ms.date: 11/06/2016
+ms.date: 02/27/2020
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 26b151bc116dde9120757f954bdcf3aee041c5f5
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: ced13b1bfd17977acb98bf33c0a477161cf08a93
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634537"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159100"
 ---
 # <a name="statements"></a>陳述式
 
@@ -20,11 +20,11 @@ ms.locfileid: "65634537"
 
 「運算式陳述式」可用來評估運算式。 可用來作為陳述式的運算式包括方法叫用、使用 `new` 運算子的物件配置、使用 `=` 和複合指派運算子的指派、使用 `++` 和 `--` 運算子的遞增和遞減運算，以及 `await` 運算。
 
-「選取範圍陳述式」可用來選取一些可能陳述式的其中之一，以根據某個運算式的值來執行。 在此群組中的是 `if` 和 `switch` 陳述式。
+「選取範圍陳述式」可用來選取一些可能陳述式的其中之一，以根據某個運算式的值來執行。 此群組包含 `if` 和 `switch` 語句。
 
-「反覆運算陳述式」可用來重複執行內嵌的陳述式。 在此群組中的是 `while`、`do`、`for` 及 `foreach` 陳述式。
+「反覆運算陳述式」可用來重複執行內嵌的陳述式。 此群組包含 `while`、`do`、`for`和 `foreach` 語句。
 
-「跳躍陳述式」可用來轉移控制項。 在此群組中的是 `break`、`continue`、`goto`、`throw`、`return` 及 `yield` 陳述式。
+「跳躍陳述式」可用來轉移控制項。 此群組包含 `break`、`continue`、`goto`、`throw`、`return`和 `yield` 語句。
 
 `try`...`catch` 陳述式可用來攔截在執行區塊時發生的例外狀況，而 `try`...`finally` 陳述式則可用來指定不論是否發生例外狀況都一律會執行的最終處理程式碼。
 

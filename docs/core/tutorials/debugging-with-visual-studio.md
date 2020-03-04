@@ -3,12 +3,12 @@ title: 使用 Visual Studio 來進行 Hello World .NET Core 應用程式的 Debu
 description: 瞭解如何在 Visual Studio 中C# ，對以或 Visual Basic 撰寫的 Hello World 應用程式進行 debug。
 ms.date: 12/05/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: bc2736165ec827c1f2670605f23f549ceed4e83a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2ee1401fc89f990c5f930d80d1a510a117e63a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714060"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156669"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>使用 Visual Studio C#來 Debug 或 Visual Basic .net Core Hello World 應用程式
 
@@ -28,7 +28,7 @@ ms.locfileid: "75714060"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 在程式碼視窗的左邊界按一下該行，在讀取 `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` 的那一行上設定*中斷點*。 您也可以設定中斷點，方法是將插入號放在程式程式碼中，然後按**F9** ，或從功能表列選擇 [ **Debug** ] > [**切換中斷點**]。
 
@@ -64,12 +64,12 @@ ms.locfileid: "75714060"
 
 1. 按任意鍵以結束應用程式，並停止進行偵錯工具。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 在程式碼視窗的左邊界按一下該行，在讀取 `Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")` 的那一行上設定*中斷點*。 您也可以設定中斷點，方法是將插入號放在想要的行上，然後從功能表列選擇 [ **Debug** ] > [**切換中斷點**]。
 
    中斷點會在執行中斷點的行*之前*，暫時中斷應用程式的執行。
-   
+
    如下圖所示，Visual Studio 會以醒目提示並在左邊界顯示一個紅色圓圈的方式，指出已設定中斷點的行。
 
    ![已設定中斷點的 Visual Studio 程式視窗](./media/debugging-with-visual-studio/vb/set-breakpoint-in-editor.png)
@@ -104,7 +104,7 @@ ms.locfileid: "75714060"
 
 若要設定條件中斷點並測試使用無法輸入字串時會發生的情況，請執行下列操作：
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 在代表中斷點的紅點上按一下滑鼠右鍵。 在內容功能表上，選取 [條件] 以開啟 [中斷點設定] 對話方塊。 勾選 [**條件**] 方塊（如果尚未選取）。
 
@@ -142,7 +142,7 @@ ms.locfileid: "75714060"
 
 1. 按一下程式碼視窗左邊界中的點，或在選取程式程式碼時選擇 [ **Debug] > [切換中斷點**]，以清除中斷點。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 在代表中斷點的紅點上按一下滑鼠右鍵。 在內容功能表上，選取 [條件] 以開啟 [中斷點設定] 對話方塊。 核取 [條件] 的方塊。
 
@@ -185,7 +185,7 @@ ms.locfileid: "75714060"
 
 Visual Studio 也可讓您逐行執行程式並監視其執行情況。 通常，您會設定中斷點，然後使用此功能來依循程式流程執行您程式碼的一小部分。 因為您的程式很小，您可以逐步執行整個程式：
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. 在功能表列上，選擇 [ **Debug** ] > [**逐步**執行]，或按**F11**。 Visual Studio 會醒目提示要執行的下一行，並在該行旁邊顯示一個箭頭。
 
@@ -211,7 +211,7 @@ Visual Studio 也可讓您逐行執行程式並監視其執行情況。 通常�
 
 1. 按任意鍵以關閉主控台視窗並停止調試。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. 在功能表列上，選擇 [ **Debug** ] > [**逐步**執行]，或按**F11**。 Visual Studio 會醒目提示要執行的下一行，並在該行旁邊顯示一個箭頭。
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 87436b7d9e2041afb14b146ae0c16201c8593154
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b33366922677b26f8fe99454206cacd5bb124f32
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348285"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159269"
 ---
 # <a name="custom-date-and-time-format-strings"></a>自訂日期與時間格式字串
 
@@ -30,7 +30,7 @@ ms.locfileid: "75348285"
 
 自訂日期和時間格式字串可以與 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值搭配使用。
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
 <a name="table"></a> 在格式化作業中，自訂日期和時間格式字串可以搭配日期和時間執行個體的 `ToString` 方法或是支援複合格式的方法使用。 以下範例說明這兩種用法。
 
@@ -90,7 +90,7 @@ ms.locfileid: "75348285"
 |"zzz"|與 UTC 相差的時數和分鐘數。<br /><br /> 詳細資訊：["zzz" 自訂格式規範](#zzzSpecifier)。|2009-06-15T13:45:30-07:00 -> -07:00|
 |":"|時間分隔符號。<br /><br /> 詳細資訊：[":" 自訂格式規範](#timeSeparator)。|2009-06-15T13:45:30 -> : (en-US)<br /><br /> 2009-06-15T13:45:30 -> . (it-IT)<br /><br /> 2009-06-15T13:45:30 -> : (ja-JP)|
 |"/"|日期分隔符號。<br /><br /> 詳細資訊：["/" 自訂格式規範](#dateSeparator)。|2009-06-15T13:45:30 -> / (en-US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -> . (tr-TR)|
-|"*字串*"<br /><br /> '*字串*'|常值字串分隔符號。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
+|"*string*"<br /><br /> '*string*'|常值字串分隔符號。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ('arr:' h:m t) -> arr: 1:45 P|
 |%|將下列字元定義為自訂格式規範。<br /><br /> 詳細資訊：[使用單一自訂格式規範](#UsingSingleSpecifiers)。|2009-06-15T13:45:30 (%h) -> 1|
 |&#92;|逸出字元。<br /><br /> 詳細資訊︰[字元常值](#Literals)和[使用逸出字元](#escape)。|2009-06-15T13:45:30 (h \h) -> 1 h|
 |任意字元|字元會原封不動地複製到結果字串。<br /><br /> 詳細資訊︰[字元常值](#Literals)。|2009-06-15T01:45:30 (arr hh:mm t) -> arr 01:45 A|
@@ -257,7 +257,7 @@ ms.locfileid: "75348285"
 
 [回到表格](#table)
 
-## <a name="FFFFF_Specifier"></a>"fffff" 自訂格式規範
+## <a name="FFFFF_Specifier"></a>"FFFFF" 自訂格式規範
 
 "FFFFF" 自訂格式規範表示秒數的五位有效小數位數，也就是說，它表示日期和時間值中的十萬分之一秒。 不過，結尾的零或五個零的數字都不會顯示。
 
@@ -398,7 +398,7 @@ ms.locfileid: "75348285"
 [!code-csharp[Formatting.DateAndTime.Custom#11](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
 [!code-vb[Formatting.DateAndTime.Custom#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]
 
-[回到表格](#table) 
+[回到表格](#table)
 
 ## <a name="MM_Specifier"></a>"MM" 自訂格式規範
 
@@ -627,9 +627,9 @@ ms.locfileid: "75348285"
 
 ||||||
 |-|-|-|-|-|
-|華氏 (F)|H|K|M|d|
-|f|g|h|m|秒|
-|t|Y|z|%|：|
+|F|H|K|M|d|
+|f|g|h|m|s|
+|t|y|{1}z{2}|%|所解碼的字元：|
 |/|"|'|&#92;||
 
 所有其他字元一律會解譯為字元常值，並在格式化作業中，原封不動地包含在結果字串中。  在剖析作業中，它們必須完全符合輸入字串中的字元；這項比較會區分大小寫。
@@ -653,7 +653,7 @@ ms.locfileid: "75348285"
 [!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
-## <a name="notes"></a>注意事項
+## <a name="notes"></a>注意
 
 ### <a name="UsingSingleSpecifiers"></a>使用單一自訂格式規範
 
@@ -670,7 +670,7 @@ ms.locfileid: "75348285"
 
 格式字串中的 "d"、"f"、"F"、"g"、"h"、"H"、"K"、"m"、"M"、"s"、"t"、"y"、"z"、":" 或 "/" 字元會解譯為自訂格式規範，而不是常值字元。 若要避免將字元解譯為格式規範，您可以在前面加上反斜線 (\\)，這是逸出字元。 逸出字元表示接下來的字元是字元常值，應該原封不動地放入結果字串中。
 
-若要在結果字串中加上反斜線，您必須再加上一個反斜線 (變成`\\`)，才能將反斜線解譯為常值。
+若要在結果字串中加上反斜線，您必須再加上一個反斜線 (變成 `\\`)，才能將反斜線解譯為常值。
 
 > [!NOTE]
 > 某些編譯器 (例如 C++ 和 C# 編譯器) 也可能會將單一反斜線字元解譯為逸出字元。 為了確保字串在格式化時能夠正確獲得解譯，您可以在 C# 中的字串前面加上逐字字串常值字元 (@ 字元)，或在 C# 和 C++ 中的每個反斜線前面再加上一個反斜線字元。 下列 C# 範例示範這兩種做法。
@@ -692,11 +692,11 @@ ms.locfileid: "75348285"
 
 許多自訂日期和時間格式規範所產生的結果字串，也取決於目前 <xref:System.Globalization.DateTimeFormatInfo> 物件的屬性。 您的應用程式可以變更對應的 <xref:System.Globalization.DateTimeFormatInfo> 屬性，藉此改變某些自訂日期和時間格式規範所產生的結果。 例如，"ddd" 格式規範會將 <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> 字串陣列中找到的縮寫星期幾名稱加入至結果字串。 同樣地，"MMMM" 格式規範會將 <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> 字串陣列中找到的完整月份名稱加到結果字串。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [格式化類型](../../../docs/standard/base-types/formatting-types.md)
-- [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))
 - [Sample: .NET Core WinForms Formatting Utility (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb) (範例：.NET Core WinForms 格式化公用程式 (Visual Basic))

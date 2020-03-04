@@ -4,12 +4,12 @@ description: 透過逐步使用 dotnet test 和 xUnit 建置範例方案的互�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c9e3d63a2cf4f560591459833340b729ffec1b95
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714241"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240892"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>使用 dotnet test 與 xUnit 為 .NET Core 中的 C# 進行單元測試
 
@@ -33,7 +33,7 @@ ms.locfileid: "75714241"
 下列指示提供建立測試解決方案的步驟。 如需在一個步驟中建立測試解決方案的指示，請參閱[建立測試方案的命令](#create-test-cmd)。
 
 * 開啟 Shell 視窗。
-* 執行下列命令：
+* 執行以下命令：
 
   ```dotnetcli
   dotnet new sln -o unit-testing-using-dotnet-test
@@ -41,7 +41,7 @@ ms.locfileid: "75714241"
 
   [`dotnet new sln`](../tools/dotnet-new.md)命令會在*單元測試-使用-dotnet-測試*目錄中建立新的解決方案。
 * 將目錄變更為*單元測試-使用-dotnet-test*資料夾。
-* 執行下列命令：
+* 執行以下命令：
 
   ```dotnetcli
   dotnet new classlib -o PrimeService
@@ -175,7 +175,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-執行 `dotnet test`。 測試就會成功。
+執行 `dotnet test`。 測試會成功。
 
 ### <a name="add-more-tests"></a>新增更多測試
 
@@ -207,7 +207,7 @@ public void IsPrime_InputIs1_ReturnFalse()
 
 取代為下列程式碼：
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-dotnet-test/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 在上述程式碼中，`[Theory]` 和 `[InlineData]` 可讓測試數個小於二的值。 兩個是最小的質數。
 

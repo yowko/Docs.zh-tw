@@ -4,12 +4,12 @@ description: 本進階教學課程探討如何安全地將新功能新增至現�
 ms.date: 05/06/2019
 ms.technlogy: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: b9194b769a3ba6d2906d6177c2363d6093b85188
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0f11c85be6e53d512b3794496db29803c4a10679
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039242"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78240385"
 ---
 # <a name="tutorial-update-interfaces-with-default-interface-methods-in-c-80"></a>教學課程：在8.0 中C#使用預設介面方法更新介面
 
@@ -27,15 +27,15 @@ ms.locfileid: "73039242"
 
 您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用8.0 編譯器。
 
-## <a name="scenario-overview"></a>情節概觀
+## <a name="scenario-overview"></a>案例概觀
 
 本教學課程從客戶關係程式庫第 1 版開始。 您可以在 [GitHub 的範例存放庫](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship)中取得入門應用程式。 建置此程式庫的公司想要讓客戶透過現有應用程式來採用其程式庫。 他們提供可讓其程式庫使用者實作的基本介面定義。 以下是客戶的介面定義：
 
-[!code-csharp[InitialCustomerInterface](~/samples/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/ICustomer.cs?name=SnippetICustomerVersion1)]
+[!code-csharp[InitialCustomerInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/ICustomer.cs?name=SnippetICustomerVersion1)]
 
 他們定義代表訂單的第二個介面：
 
-[!code-csharp[InitialOrderInterface](~/samples/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/IOrder.cs?name=SnippetIorderVersion1)]
+[!code-csharp[InitialOrderInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/starter/customer-relationship/IOrder.cs?name=SnippetIorderVersion1)]
 
 針對這些介面，小組可以建置適用於其使用者的程式庫，來為其客戶打造更好的體驗。 其目標是加深與現有客戶的關係，並改善與新客戶的關係。
 
@@ -53,15 +53,15 @@ ms.locfileid: "73039242"
 
 首先，將新方法新增至實作：
 
-[!code-csharp[InitialOrderInterface](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
+[!code-csharp[InitialOrderInterface](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionOne)]
 
 程式庫作者撰寫第一個測試來檢查實作：
 
-[!code-csharp[TestDefaultImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetTestDefaultImplementation)]
+[!code-csharp[TestDefaultImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetTestDefaultImplementation)]
 
 請注意下列測試部分：
 
-[!code-csharp[TestDefaultImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetHighlightCast)]
+[!code-csharp[TestDefaultImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetHighlightCast)]
 
 `SampleCustomer` 必須轉換成 `ICustomer`。 `SampleCustomer` 類別不需要提供 `ComputeLoyaltyDiscount` 的實作；這會由 `ICustomer` 介面提供。 不過，`SampleCustomer` 類別不會從其介面繼承成員。 該規則並未變更。 為了呼叫在介面中宣告和實作的任何方法，變數必須是介面類型，在本例中為 `ICustomer`。
 
@@ -69,13 +69,13 @@ ms.locfileid: "73039242"
 
 這是一個不錯的起點。 但預設實作太過侷限。 此系統的許多取用者可能選擇不同購買數目閾值、不同成員資格長度，或不同分比折扣。 您可以藉由提供設定這些參數的方法，來為更多客戶提供更好的升級體驗。 我們將新增靜態方法，設定這三個參數來控制預設實作：
 
-[!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
+[!code-csharp[VersionTwoImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetLoyaltyDiscountVersionTwo)]
 
 該小型程式碼片段中顯示許多新的語言功能。 介面現在可以包含靜態成員，包括欄位和方法。 也會啟用不同的存取修飾詞。 其他欄位是私用的，而新方法是公用的。 介面成員上允許任何修飾詞。
 
 使用一般公式來計算忠誠度折扣 (但參數不同) 的應用程式不需要提供自訂實作；這些應用程式可透過靜態方法來設定引數。 例如，下列程式碼會設定「客戶感謝」，獎勵其成員資格超過一個月的任何客戶：
 
-[!code-csharp[SetLoyaltyThresholds](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetSetLoyaltyThresholds)]
+[!code-csharp[SetLoyaltyThresholds](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/Program.cs?name=SnippetSetLoyaltyThresholds)]
 
 ## <a name="extend-the-default-implementation"></a>擴充預設實作
 
@@ -83,11 +83,11 @@ ms.locfileid: "73039242"
 
 假設有間新創公司想要吸引新客戶。 該公司提供 50% 折扣給首次下單的新客戶。 至於現有的客戶則享有標準折扣。 程式庫作者必須將預設實作移入 `protected static` 方法，才能讓實作此介面的任何類別在其實作中重複使用程式碼。 介面成員的預設實作也會呼叫此共用方法：
 
-[!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetFinalVersion)]
+[!code-csharp[VersionTwoImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/ICustomer.cs?name=SnippetFinalVersion)]
 
 在實作此介面的類別實作中，覆寫可以呼叫靜態 Helper 方法，並擴充該邏輯以提供「新客戶」折扣：
 
-[!code-csharp[VersionTwoImplementation](~/samples/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
+[!code-csharp[VersionTwoImplementation](~/samples/snippets/csharp/tutorials/default-interface-members-versions/finished/customer-relationship/SampleCustomer.cs?name=SnippetOverrideAndExtend)]
 
 您可以在 [GitHub 上的範例存放庫](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/finished/customer-relationship) \(英文\) 中查看已完成的完整程式碼。 您可以在 [GitHub 的範例存放庫](https://github.com/dotnet/samples/tree/master/csharp/tutorials/default-interface-members-versions/starter/customer-relationship)中取得入門應用程式。
 

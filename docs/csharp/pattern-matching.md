@@ -4,12 +4,12 @@ description: 了解 C# 中的模式比對運算式
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ffa59d073ad891fd93e0f8d7ad8889de0499b106
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501620"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78241009"
 ---
 # <a name="pattern-matching"></a>模式比對
 
@@ -27,7 +27,7 @@ ms.locfileid: "77501620"
 
 不是從抽象圖形定義與加入不同的特定圖形類別開始，讓我們改從只定義每個幾何圖形的簡單資料開始︰
 
-[!code-csharp[ShapeDefinitions](../../samples/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
+[!code-csharp[ShapeDefinitions](../../samples/snippets/csharp/PatternMatching/Shapes.cs#01_ShapeDefinitions "Shape definitions")]
 
 讓我們從這些結構撰寫方法，計算某些圖形的面積。
 
@@ -35,13 +35,13 @@ ms.locfileid: "77501620"
 
 在 C# 7.0 之前，您需要以一系列的 `if` 和 `is` 陳述式測試每個型別：
 
-[!code-csharp[ClassicIsExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
+[!code-csharp[ClassicIsExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#02_ClassicIsExpression "Classic type pattern using is")]
 
 上述程式碼是「型別模式」的傳統運算式︰您要測試變數，以判斷其型別並根據該型別採取不同的動作。
 
 如果測試成功，使用 `is` 運算式的延伸模組來指派變數，此程式碼會變得更簡單：
 
-[!code-csharp[IsPatternExpression](../../samples/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
+[!code-csharp[IsPatternExpression](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#03_IsPatternExpression "is pattern expression")]
 
 在此更新的版本中，`is` 運算式會測試變數並將它指派給適當型別的新變數。 另請注意，此版本包含 `Rectangle` 型別，它是 `struct`。 新的 `is` 運算式可搭配實值型別以及參考型別。
 
@@ -64,12 +64,12 @@ ms.locfileid: "77501620"
 傳統 `switch` 陳述式以前是模式運算式︰它支援常數模式。
 您可以比較變數和 `case` 陳述式使用的常數︰
 
-[!code-csharp[ClassicSwitch](../../samples/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
+[!code-csharp[ClassicSwitch](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#04_ClassicSwitch "Classic switch statement")]
 
 `switch` 陳述式以前支援的唯一模式是常數模式。 以前更限制為數值型別和 `string` 型別。
 這些限制現已移除，而且您可以使用型別模式撰寫 `switch` 陳述式︰
 
-[!code-csharp[Switch Type Pattern](../../samples/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
+[!code-csharp[Switch Type Pattern](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#05_SwitchTypePattern "Compute with `switch` expression")]
 
 模式比對 `switch` 陳述式使用開發人員熟悉的語法，而開發人員之前使用傳統的 C 樣式 `switch` 陳述式。 已評估每個 `case`，且執行符合輸入變數的條件下程式碼。 程式碼無法從一個狀況運算式「繼續」執行到下一個，`case` 陳述式的語法需要每個 `case` 都以 `break`、`return` 或 `goto` 作為結束。
 
@@ -87,7 +87,7 @@ ms.locfileid: "77501620"
 
 對 `when` 標籤使用 `case` 子句，可為面積為 0 的圖形建立特殊案例。 邊長為 0 的正方形或半徑為 0 的圓形，面積皆為 0。 您可以對 `when` 標籤使用 `case` 子句來指定該條件︰  
 
-[!code-csharp[ComputeDegenerateShapes](../../samples/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
+[!code-csharp[ComputeDegenerateShapes](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#07_ComputeDegenerateShapes "Compute shapes with 0 area")]
 
 這項變更會示範新語法的幾個重點。 首先，多個 `case` 標籤可以套用到一個 `switch` 區段。 當這些標籤的任何一個為 `true` 時，會執行陳述式區塊。 在此情況下，如果 `switch` 運算式是面積為 0 的圓形或正方形，則方法會傳回常數 0。
 
@@ -98,13 +98,13 @@ ms.locfileid: "77501620"
 
 新增這些面積為 0 的圖形後，讓我們再新增幾個圖形型別︰矩形和三角形︰
 
-[!code-csharp[AddRectangleAndTriangle](../../samples/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
+[!code-csharp[AddRectangleAndTriangle](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#09_AddRectangleAndTriangle "Add rectangle and triangle")]
 
  這組變更會新增退化狀況的 `case` 標籤，以及每個新圖形的標籤和區塊。 
 
 最後，您可以新增 `null` 狀況，以確保引數不是 `null`：
 
-[!code-csharp[NullCase](../../samples/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
+[!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
 `null` 模式的特殊行為很有趣，因為模式中的常數 `null` 沒有類型，但可以轉換成任何參考類型或可為 Null 的類型。 不論變數的編譯時間類型為何，語言都會將 `null` 值定義為不會符合任何類型模式，而不是將 `null` 轉換為任何類型。 此行為可讓以 `switch` 為基礎的新類型模式與 `is` 陳述式一致：要檢查的值是 `is` 時，`false` 陳述式一律會傳回 `null`。 它也較為簡單：在您檢查類型之後，就不需要進行額外的 Null 檢查。 您可以從上述範例的任何案例區塊中不會進行任何 Null 檢查的事實得知：因為比對類型模式保證非 Null 值，所以它們不是必要的。
 
@@ -124,7 +124,7 @@ ms.locfileid: "77501620"
 
 第三個規則介紹了 `var` 案例可能會很有用的使用方式。 假設您在進行模式比對，而其輸入為字串，且您要搜尋已知的命令值。 您可能會撰寫類似：
 
-[!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
+[!code-csharp[VarCaseExpression](../../samples/snippets/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
 `var` 案例符合 `null`、空字串或任何僅包含空格的字串。 留意到上述程式碼會使用 `?.` 運算子來確保它不會意外地擲回 <xref:System.NullReferenceException>。 `default` 狀況會處理此命令剖析器無法理解的任何其他字串值。
 
