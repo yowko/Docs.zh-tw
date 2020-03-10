@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 12/04/2018
-ms.openlocfilehash: 9495288658fa102df8f0fbd643e2fcdf49d8f3b3
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: e045c39240c99777d05ca86ee0a8cd1fa4309c4f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451976"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156578"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2 的新功能
 
@@ -22,13 +22,13 @@ ms.locfileid: "77451976"
 
 這個新部署模式的獨特優點是會建置可執行檔而非程式庫，這意謂著您可以直接執行您的應用程式，而無須先叫用 `dotnet`。
 
-## <a name="core"></a>Core
+## <a name="core"></a>核心
 
 **處理執行階段服務中的事件**
 
-您可能常常會想要監視應用程式的執行階段服務使用情況 (例如 GC、JIT 及 ThreadPool)，以了解這些服務對您應用程式的影響。 在 Windows 系統上，通常是藉由監視目前程序的 ETW 事件來達到此目的。 雖然此方法持續行得通，但如果您是在低權限環境或是在 Linux 或 macOS 中執行，則未必總是能夠使用 ETW。 
+您可能常常會想要監視應用程式的執行階段服務使用情況 (例如 GC、JIT 及 ThreadPool)，以了解這些服務對您應用程式的影響。 在 Windows 系統上，這通常是藉由監視目前進程的 ETW 事件來完成。 雖然這會繼續運作，但如果您是在低許可權環境或 Linux 或 macOS 上執行，則不一定能夠使用 ETW。
 
-從 .NET Core 2.2 開始，現在已可使用 <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> 類別來取用 CoreCLR 事件。 這些事件將這類執行階段服務的行為描述為 GC、JIT、ThreadPool 及 Interop。 這些是作為 CoreCLR ETW 提供者之一部分公開的相同事件。  這可讓應用程式取用這些事件，或使用傳輸機制將事件傳送給遙測彙總服務。 您可以從下列程式碼範例了解如何訂閱事件：
+從 .NET Core 2.2 開始，現在已可使用 <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> 類別來取用 CoreCLR 事件。 這些事件將這類執行階段服務的行為描述為 GC、JIT、ThreadPool 及 Interop。 這些是作為 CoreCLR ETW 提供者之一部分公開的相同事件。  這可讓應用程式取用這些事件，或使用傳輸機制將它們傳送至遙測匯總服務。 您可以從下列程式碼範例了解如何訂閱事件：
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -68,7 +68,7 @@ internal sealed class SimpleEventListener : EventListener
 
 **使用 SqlConnection.AccessToken 屬性向 Azure SQL 資料庫進行 AAD 驗證**
 
-從 .NET Core 2.2 開始，Azure Active Directory 簽發的存取權杖可用來向 Azure SQL 資料庫進行驗證。 為了支援存取權杖，已將 <xref:System.Data.SqlClient.SqlConnection.AccessToken> 屬性新增至 <xref:System.Data.SqlClient.SqlConnection> 類別。 若要利用 AAD 驗證，請下載 4.6 版 System.Data.SqlClient NuGet 套件。 為了使用此功能，您可以使用 [`Microsoft.IdentityModel.Clients.ActiveDirectory`](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/) NuGet 套件中所含的[適用於 .NET 的 Active Directory 驗證程式庫](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)來取得存取權杖值。
+從 .NET Core 2.2 開始，Azure Active Directory 簽發的存取權杖可用來向 Azure SQL 資料庫進行驗證。 為了支援存取權杖，已將 <xref:System.Data.SqlClient.SqlConnection.AccessToken> 屬性新增至 <xref:System.Data.SqlClient.SqlConnection> 類別。 若要利用 AAD 驗證，請下載 4.6 版 System.Data.SqlClient NuGet 套件。 為了使用此功能，您可以使用 [](https://github.com/AzureAD/azure-activedirectory-library-for-dotnet)[ NuGet 套件中所含的`Microsoft.IdentityModel.Clients.ActiveDirectory`適用於 .NET 的 Active Directory 驗證程式庫](https://www.nuget.org/packages/Microsoft.IdentityModel.Clients.ActiveDirectory/)來取得存取權杖值。
 
 ## <a name="jit-compiler-improvements"></a>JIT 編譯器的改進項目
 
@@ -82,7 +82,7 @@ internal sealed class SimpleEventListener : EventListener
 
 如需了解階層式編譯所能產生的效能改進，請參閱[宣布推出 .NET Core 2.2 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/) \(英文\)。
 
-在 .NET Core 2.2 Preview 2 中，階層式編譯是預設啟用的功能。 不過，我們已判定我們尚未做好預設啟用階層式編譯的準備。 因此，在 .NET Core 2.2 中，階層式編譯仍繼續維持為可選擇加入的功能。 如需有關如何選擇加入階層式編譯的資訊，請參閱 [.NET Core 2.1 的新功能](dotnet-core-2-1.md)中的 [Jit 編譯器的改進項目](dotnet-core-2-1.md#jit-compiler-improvements)。
+在 .NET Core 2.2 Preview 2 中，階層式編譯是預設啟用的功能。 不過，我們已判定我們尚未做好預設啟用階層式編譯的準備。 因此，在 .NET Core 2.2 中，階層式編譯仍繼續維持為可選擇加入的功能。 如需有關如何選擇加入階層式編譯的資訊，請參閱 [.NET Core 2.1 的新功能](dotnet-core-2-1.md#jit-compiler-improvements)中的 [Jit 編譯器的改進項目](dotnet-core-2-1.md)。
 
 ## <a name="runtime"></a>執行階段
 

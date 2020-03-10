@@ -2,26 +2,26 @@
 title: dotnet run 命令
 description: dotnet run 命令提供方便的選項，以透過原始程式碼來執行應用程式。
 ms.date: 02/19/2020
-ms.openlocfilehash: 415d7079db6a3da80c4fcf2074307ea760e84982
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: e442ed56d676ffd189ef6d394d840cea671c2dc6
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503604"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157072"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
 **本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
-## <a name="name"></a>名字
+## <a name="name"></a>名稱
 
 `dotnet run` - 執行原始程式碼，而不需要有任何明確的編譯或啟動命令。
 
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile] 
-    [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] 
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile]
+    [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project]
     [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
@@ -42,7 +42,7 @@ dotnet myapp.dll
 
 如需 `dotnet` 驅動程式的詳細資訊，請參閱 [.NET Core 命令列工具 (CLI)](index.md) 主題。
 
-為了執行應用程式，`dotnet run` 命令會從 NuGet 快取解析共用執行階段之外的應用程式相依性。 因為它會使用快取相依性，不建議您在生產環境中使用 `dotnet run` 執行應用程式。 相反地，使用 [`dotnet publish`](dotnet-publish.md) 命令[建立部署](../deploying/index.md)，並部署已發佈的輸出。
+為了執行應用程式，`dotnet run` 命令會從 NuGet 快取解析共用執行階段之外的應用程式相依性。 因為它會使用快取相依性，不建議您在生產環境中使用 `dotnet run` 執行應用程式。 相反地，使用 [](../deploying/index.md)[ 命令`dotnet publish`建立部署](dotnet-publish.md)，並部署已發佈的輸出。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -90,7 +90,7 @@ dotnet myapp.dll
 
 - **`--no-restore`**
 
-  執行命令時，不會執行隱含還原。
+  執行命令時，不會執行隱含的還原。
 
 - **`-p|--project <PATH>`**
 
@@ -102,7 +102,7 @@ dotnet myapp.dll
 
 - **`-v|--verbosity <LEVEL>`**
 
-  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值是 `m`。 自 .NET Core 2.1 SDK 起提供。 
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值是 `m`。 自 .NET Core 2.1 SDK 起提供。
 
 ## <a name="examples"></a>範例
 
@@ -118,7 +118,7 @@ dotnet myapp.dll
   dotnet run --project ./projects/proj1/proj1.csproj
   ```
 
-- 執行目前目錄中的專案 (因為已使用空白的 `--` 選項，所以這個範例中的 `--help` 引數會傳遞給應用程式)：
+- 執行目前目錄中的專案 (因為已使用空白的 `--help` 選項，所以這個範例中的 `--` 引數會傳遞給應用程式)：
 
   ```dotnetcli
   dotnet run --configuration Release -- --help

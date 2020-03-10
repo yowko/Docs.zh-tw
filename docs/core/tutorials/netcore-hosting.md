@@ -3,12 +3,12 @@ title: 撰寫自訂 .NET Core 執行階段主機
 description: 了解如何從原生程式碼裝載 .NET Core 執行階段，以支援需要控制 .NET Core 執行階段運作方式的進階案例。
 author: mjrousos
 ms.date: 12/21/2018
-ms.openlocfilehash: 83012dd70c2480ce488c361e821694fb957d12d9
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 46c7873a1865db04cf1c2b1bb2ded2b5dacbcc8d
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777225"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78239894"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>撰寫自訂 .NET Core 主機以從原生程式碼控制 .NET 執行階段
 
@@ -18,7 +18,7 @@ ms.locfileid: "75777225"
 
 本文概述從機器碼啟動 .NET Core 執行階段及在其中執行受控碼的必要步驟。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>Prerequisites
 
 因為主機是原生應用程式，所以本教學C++課程涵蓋如何將應用程式建立為裝載 .net Core。 您將需要 C++ 開發環境 (例如 [Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 所提供的環境)。
 
@@ -29,7 +29,7 @@ ms.locfileid: "75777225"
 
 * 在 .NET Core 3.0 及更新版本中裝載 .NET Core 執行階段的建議方式，是使用 `nethost` 和 `hostfxr` 程式庫的 API。 這些進入點能處理尋找及設定初始化執行階段的複雜程度，並允許啟動受控應用程式及呼叫靜態受控方法。
 * 裝載早於 .NET Core 3.0 之 .NET Core 執行階段的建議方式，是使用 [CoreClrHost.h](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/hosts/inc/coreclrhost.h) \(英文\) API。 此 API 會公開函式，以便輕鬆地啟動和停止執行階段，以及叫用受控碼 (無論是透過啟動受控 exe 或藉由呼叫靜態受控方法)。
-* .NET Core 也可以使用 [mscoree.h](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/mscoree.h) 中的 `ICLRRuntimeHost4` 介面進行裝載。 此 API 的運行時間長於 CoreClrHost.h，因此您可能會看到舊版主機使用它。 它仍可運作，且比起 CoreClrHost 更能控制裝載處理序。 不過，在大部分情況下，CoreClrHost.h 目前仍然是慣用方法，因為其 API 更為簡單。
+* .NET Core 也可以使用 `ICLRRuntimeHost4`mscoree.h[ 中的 ](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/mscoree.h) 介面進行裝載。 此 API 的運行時間長於 CoreClrHost.h，因此您可能會看到舊版主機使用它。 它仍可運作，且比起 CoreClrHost 更能控制裝載處理序。 不過，在大部分情況下，CoreClrHost.h 目前仍然是慣用方法，因為其 API 更為簡單。
 
 ## <a name="sample-hosts"></a>範例主機
 
@@ -39,11 +39,11 @@ dotnet/samples GitHub 存放庫中提供下列示範教學課程所述步驟的[
 
 ## <a name="create-a-host-using-nethosth-and-hostfxrh"></a>使用 NetHost.h 和 HostFxr.h 建立主機
 
-下列步驟詳細說明如何使用 `nethost` 和 `hostfxr` 程式庫來在原生應用程式中啟動 .NET Core 執行階段，並呼叫受控靜態方法。 [範例](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr) \(英文\) 會使用搭配 .NET SDK 安裝的 `nethost` 標頭及程式庫，以及來自 [dotnet/core-setup](https://github.com/dotnet/core-setup) \(英文\) 存放庫的 [`coreclr_delegates.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/coreclr_delegates.h) \(英文\) 及 [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) \(英文\) 檔案的複本。
+下列步驟詳細說明如何使用 `nethost` 和 `hostfxr` 程式庫來在原生應用程式中啟動 .NET Core 執行階段，並呼叫受控靜態方法。 [範例](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithHostFxr) \(英文\) 會使用搭配 .NET SDK 安裝的 `nethost` 標頭及程式庫，以及來自 [dotnet/core-setup`coreclr_delegates.h` \(英文\) 存放庫的 ](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/coreclr_delegates.h)[`hostfxr.h` \(英文\) 及 ](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h)[](https://github.com/dotnet/core-setup) \(英文\) 檔案的複本。
 
 ### <a name="step-1---load-hostfxr-and-get-exported-hosting-functions"></a>步驟 1 - 載入 HostFxr 並取得匯出的裝載函式
 
-`nethost` 程式庫會提供用來找出 `hostfxr` 程式庫的 `get_hostfxr_path` 函式。 `hostfxr` 程式庫會公開用來裝載 .NET Core 執行階段的函式。 函式的完整清單可在 [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) \(英文\) 和[原生裝載設計文件](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md) \(英文\) 中找到。 範例和本教課程會使用下列項目：
+`nethost` 程式庫會提供用來找出 `get_hostfxr_path` 程式庫的 `hostfxr` 函式。 `hostfxr` 程式庫會公開用來裝載 .NET Core 執行階段的函式。 函式的完整清單可在 [`hostfxr.h`](https://github.com/dotnet/core-setup/blob/master/src/corehost/cli/hostfxr.h) \(英文\) 和[原生裝載設計文件](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/native-hosting.md) \(英文\) 中找到。 範例和本教課程會使用下列項目：
 
 * `hostfxr_initialize_for_runtime_config`：使用指定的執行時間設定，初始化主機內容並準備初始化 .NET Core 執行時間。
 * `hostfxr_get_runtime_delegate`：取得執行時間功能的委派。
@@ -51,19 +51,19 @@ dotnet/samples GitHub 存放庫中提供下列示範教學課程所述步驟的[
 
 `hostfxr` 程式庫是使用 `get_hostfxr_path` 來找到。 系統接著會載入它並擷取其匯出。
 
-[!code-cpp[HostFxrHost#LoadHostFxr](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadHostFxr)]
+[!code-cpp[HostFxrHost#LoadHostFxr](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadHostFxr)]
 
 ### <a name="step-2---initialize-and-start-the-net-core-runtime"></a>步驟 2 - 初始化並啟動 .NET Core 執行階段
 
 `hostfxr_initialize_for_runtime_config` 和 `hostfxr_get_runtime_delegate` 函式會使用適用於將載入之受控元件的執行階段設定，來初始化並啟動 .NET Core 執行階段。 `hostfxr_get_runtime_delegate` 函式會被用來取得能允許載入受控組件，並取得針對該組件中靜態方法之函式指標的執行階段委派。
 
-[!code-cpp[HostFxrHost#Initialize](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#Initialize)]
+[!code-cpp[HostFxrHost#Initialize](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#Initialize)]
 
 ### <a name="step-3---load-managed-assembly-and-get-function-pointer-to-a-managed-method"></a>步驟 3 - 載入受控組件並取得針對受控方法的函式指標
 
 系統會呼叫執行階段委派來載入受控組件，並取得針對受控方法的函式指標。 該委派需要組件路徑、類型名稱及方法名稱作為輸入，並會傳回可用來叫用受控方法的函式指標。
 
-[!code-cpp[HostFxrHost#LoadAndGet](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadAndGet)]
+[!code-cpp[HostFxrHost#LoadAndGet](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#LoadAndGet)]
 
 在呼叫執行階段委派期間，透過將 `nullptr` 傳遞為委派類型名稱，範例會針對受控方法使用預設簽章：
 
@@ -77,7 +77,7 @@ public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 
 原生主機現在可以呼叫受控方法，並向它傳遞所需的參數。
 
-[!code-cpp[HostFxrHost#CallManaged](~/samples/core/hosting/HostWithHostFxr/src/NativeHost/nativehost.cpp#CallManaged)]
+[!code-cpp[HostFxrHost#CallManaged](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithHostFxr/src/NativeHost/nativehost.cpp#CallManaged)]
 
 ## <a name="create-a-host-using-coreclrhosth"></a>使用 CoreClrHost.h 建立主機
 
@@ -91,7 +91,7 @@ public delegate int ComponentEntryPoint(IntPtr args, int sizeBytes);
 
 找到後，會使用 `LoadLibraryEx` （在 Windows 上）或 `dlopen` （在 Linux/macOS 上）載入程式庫。
 
-[!code-cpp[CoreClrHost#1](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#1)]
+[!code-cpp[CoreClrHost#1](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#1)]
 
 ### <a name="step-2---get-net-core-hosting-functions"></a>步驟 2 - 取得 .NET Core 裝載函式
 
@@ -105,7 +105,7 @@ CoreClrHost 有幾個可用於裝載 .NET Core 的重要方法：
 
 載入 CoreCLR 程式庫之後，下一個步驟是使用 `GetProcAddress` （在 Windows 上）或 `dlsym` （在 Linux/macOS 上）來取得這些函式的參考。
 
-[!code-cpp[CoreClrHost#2](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#2)]
+[!code-cpp[CoreClrHost#2](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#2)]
 
 ### <a name="step-3---prepare-runtime-properties"></a>步驟 3 - 準備執行階段屬性
 
@@ -121,23 +121,23 @@ CoreClrHost 有幾個可用於裝載 .NET Core 的重要方法：
 
 在此範例主機中，只需列出目前目錄中的所有程式庫，即可建構 TPA 清單：
 
-[!code-cpp[CoreClrHost#7](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#7)]
+[!code-cpp[CoreClrHost#7](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#7)]
 
 由於此範例很簡單，因此它只需要 `TRUSTED_PLATFORM_ASSEMBLIES` 屬性：
 
-[!code-cpp[CoreClrHost#3](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#3)]
+[!code-cpp[CoreClrHost#3](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#3)]
 
 ### <a name="step-4---start-the-runtime"></a>步驟 4 - 啟動執行階段
 
 不同於裝載 API 的 mscoree.h (如下所述)，CoreCLRHost.h API 只需使用單一呼叫，即可啟動執行階段並建立預設的 AppDomain。 `coreclr_initialize` 函式會採用基底路徑、名稱和稍早所述的屬性，並透過 `hostHandle` 參數將控制代碼傳回到主機。
 
-[!code-cpp[CoreClrHost#4](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#4)]
+[!code-cpp[CoreClrHost#4](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#4)]
 
 ### <a name="step-5---run-managed-code"></a>步驟 5 - 執行受控碼！
 
 執行階段啟動後，主機便可以呼叫受控碼。 這可透過幾種不同的方式來完成。 連結至這個教學課程之範例程式碼使用 `coreclr_create_delegate` 函式來建立靜態受控方法的委派。 此 API 會採用[組件名稱](../../standard/assembly/names.md)、命名空間限定的類型名稱和方法名稱作為輸入，並傳回可用來叫用方法的委派。
 
-[!code-cpp[CoreClrHost#5](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#5)]
+[!code-cpp[CoreClrHost#5](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#5)]
 
 在此範例中，主機現在可以呼叫 `managedDelegate` 來執行 `ManagedWorker.DoWork` 方法。
 
@@ -157,7 +157,7 @@ int hr = executeAssembly(
 
 最後，當主機完成受控碼的執行時，.NET Core 執行階段會使用 `coreclr_shutdown` 或 `coreclr_shutdown_2` 來關閉。
 
-[!code-cpp[CoreClrHost#6](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#6)]
+[!code-cpp[CoreClrHost#6](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithCoreClrHost/src/SampleHost.cpp#6)]
 
 CoreCLR 不支援重新初始化或卸載。 請勿再次呼叫 `coreclr_initialize` 或卸載 CoreCLR 程式庫。
 
@@ -173,7 +173,7 @@ CoreCLR 不支援重新初始化或卸載。 請勿再次呼叫 `coreclr_initial
 ### <a name="step-1---identify-the-managed-entry-point"></a>步驟 1 - 識別 Managed 進入點
 參考必要的標頭 (例如 [mscoree.h](https://github.com/dotnet/runtime/blob/master/src/coreclr/src/pal/prebuilt/inc/mscoree.h) 和 stdio.h) 之後，.NET Core 主機必須先找出所要使用的 Managed 進入點。 在我們的範例主機中，只要將第一個命令列引數帶到主機，做為將會執行 `main` 方法之受控二進位檔的路徑即可。
 
-[!code-cpp[NetCoreHost#1](~/samples/core/hosting/HostWithMscoree/host.cpp#1)]
+[!code-cpp[NetCoreHost#1](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#1)]
 
 ### <a name="step-2---find-and-load-coreclr"></a>步驟 2 - 找到並載入 CoreCLR
 .NET Core 執行階段 API 位於 *CoreCLR.dll* (Windows 上)。 若要取得我們的裝載介面 (`ICLRRuntimeHost4`)，您必須找到並載入 *CoreCLR.dll*。 主機會定義尋找 *CoreCLR.dll* 的方式慣例。 某些主機預期此檔案會出現在已知的全機器位置 (例如 *%programfiles%\dotnet\shared\Microsoft.NETCore.App\2.1.6*)。 其他主機則預期會從主機本身或所要裝載之應用程式旁的位置載入 *CoreCLR.dll*。 不過，其他主機還是可以參考環境變數以尋找程式庫。
@@ -182,17 +182,17 @@ CoreCLR 不支援重新初始化或卸載。 請勿再次呼叫 `coreclr_initial
 
 我們的範例主機會在一些常見的位置中探查 *CoreCLR.dll*。 找到之後，必須透過 `LoadLibrary` （或 Linux/macOS 上的 `dlopen`）來載入它。
 
-[!code-cpp[NetCoreHost#2](~/samples/core/hosting/HostWithMscoree/host.cpp#2)]
+[!code-cpp[NetCoreHost#2](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#2)]
 
 ### <a name="step-3---get-an-iclrruntimehost4-instance"></a>步驟 3 - 取得 ICLRRuntimeHost4 執行個體
 `ICLRRuntimeHost4` 的裝載介面是藉由呼叫 `GetCLRRuntimeHost`上的 `GetProcAddress` （或 Linux/macOS 上的 `dlsym`）來抓取，然後叫用該函式。
 
-[!code-cpp[NetCoreHost#3](~/samples/core/hosting/HostWithMscoree/host.cpp#3)]
+[!code-cpp[NetCoreHost#3](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#3)]
 
 ### <a name="step-4---set-startup-flags-and-start-the-runtime"></a>步驟 4 - 設定啟動旗標並啟動執行階段
 準備好 `ICLRRuntimeHost4` 之後，現在可以指定全執行階段啟動旗標並啟動執行階段。 啟動旗標會決定所要使用的記憶體回收行程 (GC) (並行或伺服器)，而不論使用的是單一 AppDomain 或多個 AppDomain；它也會決定 (為了以定義域中性方式載入組件) 所要使用的載入器最佳化原則。
 
-[!code-cpp[NetCoreHost#4](~/samples/core/hosting/HostWithMscoree/host.cpp#4)]
+[!code-cpp[NetCoreHost#4](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#4)]
 
 呼叫 `Start` 函式以啟動執行階段。
 
@@ -205,7 +205,7 @@ hr = runtimeHost->Start();
 
 AppDomain 旗標會指定與安全性和 Interop 相關的 AppDomain 行為。 舊版的 Silverlight 主機使用這些設定來沙箱化使用者程式碼，但最新式的 .NET Core 主機則會以完全信任的方式來執行使用者程式碼並啟用 Interop。
 
-[!code-cpp[NetCoreHost#5](~/samples/core/hosting/HostWithMscoree/host.cpp#5)]
+[!code-cpp[NetCoreHost#5](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#5)]
 
 決定要使用的 AppDomain 旗標之後，必須定義 AppDomain 屬性。 這些屬性是字串的索引鍵/值組。 許多屬性與 AppDomain 載入組件的方式相關。
 
@@ -219,17 +219,17 @@ AppDomain 旗標會指定與安全性和 Interop 相關的 AppDomain 行為。 �
 
 在我們的[簡單範例主機](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithMscoree)中，這些屬性會設定如下：
 
-[!code-cpp[NetCoreHost#6](~/samples/core/hosting/HostWithMscoree/host.cpp#6)]
+[!code-cpp[NetCoreHost#6](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#6)]
 
 ### <a name="step-6---create-the-appdomain"></a>步驟 6 - 建立 AppDomain
 準備好所有 AppDomain 旗標和屬性之後，即可使用 `ICLRRuntimeHost4::CreateAppDomainWithManager` 來設定 AppDomain。 此函式會選擇性地接受完整組件名稱和類型名稱，以用作定義域的 AppDomain 管理員。 AppDomain 管理員可讓主機控制 AppDomain 行為的某些層面，並可在主機不想直接叫用使用者程式碼時，提供進入點以啟動 Managed 程式碼。
 
-[!code-cpp[NetCoreHost#7](~/samples/core/hosting/HostWithMscoree/host.cpp#7)]
+[!code-cpp[NetCoreHost#7](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#7)]
 
 ### <a name="step-7---run-managed-code"></a>步驟 7 - 執行 Managed 程式碼！
 在 AppDomain 啟動並執行之後，主機現在可以開始執行 Managed 程式碼。 最簡單的做法是使用 `ICLRRuntimeHost4::ExecuteAssembly` 叫用 Managed 組件的進入點方法。 請注意，此函式僅適用於單一定義域案例。
 
-[!code-cpp[NetCoreHost#8](~/samples/core/hosting/HostWithMscoree/host.cpp#8)]
+[!code-cpp[NetCoreHost#8](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#8)]
 
 如果 `ExecuteAssembly` 不符合您的主機需求，另一個選擇是使用 `CreateDelegate` 建立靜態 Managed 方法的函式指標。 雖然此做法要求主機必須知道所呼叫的方法簽章 (以便建立函式指標類型)，但允許主機彈性地叫用組件進入點以外的程式碼。 第二個參數中提供的組件名稱為要載入之程式庫的[完整受控組件名稱](../../standard/assembly/names.md)。
 
@@ -248,7 +248,7 @@ hr = runtimeHost->CreateDelegate(
 ### <a name="step-8---clean-up"></a>步驟 8 - 清除
 最後，主機應該藉由卸載 AppDomain、停止執行階段並釋放 `ICLRRuntimeHost4` 參考來清除自身。
 
-[!code-cpp[NetCoreHost#9](~/samples/core/hosting/HostWithMscoree/host.cpp#9)]
+[!code-cpp[NetCoreHost#9](~/samples/snippets/core/tutorials/netcore-hosting/csharp/HostWithMscoree/host.cpp#9)]
 
 CoreCLR 不支援卸載。 請勿卸載 CoreCLR 程式庫。
 
