@@ -3,10 +3,10 @@ title: 設計微服務應用程式層及 Web API
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 用於設計應用程式層的 SOLID 準則簡介。
 ms.date: 10/08/2018
 ms.openlocfilehash: 3c3b9f74e76e01deafa1f97de5d3250d57716014
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68676515"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>設計微服務應用程式層及 Web API
@@ -35,15 +35,15 @@ SOLID 與您設計應用程式或微服務的內部層及減少其之間的相�
 
 #### <a name="additional-resources"></a>其他資源
 
-- **SOLID：基本 OOP 準則** \
+- **SOLID：基本 OOP 原則** \
   <https://deviq.com/solid/>
 
-- **Inversion of Control Containers and the Dependency Injection pattern (逆轉控制容器和相依性插入模式)**  \
+- **控制容器和依賴項注入模式的反轉** \
   <https://martinfowler.com/articles/injection.html>
 
-- **Steve Smith.New is Glue (接著劑：New)**  \
+- **史蒂夫·史密斯新是膠水** \
   <https://ardalis.com/new-is-glue>
 
 > [!div class="step-by-step"]
-> [上一頁](nosql-database-persistence-infrastructure.md)
-> [下一頁](microservice-application-layer-implementation-web-api.md)
+> [上一個](nosql-database-persistence-infrastructure.md)
+> [下一個](microservice-application-layer-implementation-web-api.md)

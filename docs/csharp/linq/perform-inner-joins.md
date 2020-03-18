@@ -4,11 +4,11 @@ description: 了解如何使用 C# 中的 LINQ 執行內部聯結。
 ms.date: 12/01/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
 ms.openlocfilehash: a3e8e9bd97ec630797bc48a3302b27ed45d9103e
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857953"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659835"
 ---
 # <a name="perform-inner-joins"></a>執行內部聯結
 
@@ -18,9 +18,9 @@ ms.locfileid: "54857953"
 
 - 簡單內部聯結，根據簡單的索引鍵將兩個資料來源的項目相互關聯。
 
-- 內部聯結，根據「複合」的索引鍵將兩個資料來源的項目相互關聯。 複合索引鍵，也就是由多個值組成的索引鍵，可讓您根據多個屬性將項目相互關聯。
+- 內部聯結，根據「複合」** 的索引鍵將兩個資料來源的項目相互關聯。 複合索引鍵，也就是由多個值組成的索引鍵，可讓您根據多個屬性將項目相互關聯。
 
-- 「多個聯結」，彼此附加的連續聯結作業。
+- 「多個聯結」**，彼此附加的連續聯結作業。
 
 - 使用群組聯結實作的內部聯結。
 

@@ -8,7 +8,7 @@
           href: attributeusage.md
     - name: 使用反映存取屬性
       href: accessing-attributes-by-using-reflection.md
-    - name: HOW TO：使用屬性建立 C/C++ 等位
+    - name: 如何：使用屬性建立 C/C++ 等位
       href: how-to-create-a-c-cpp-union-by-using-attributes.md
     - name: 常見屬性
       href: common-attributes.md

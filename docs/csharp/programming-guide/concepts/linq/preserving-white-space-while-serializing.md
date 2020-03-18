@@ -3,10 +3,10 @@ title: 序列化時保留空白字元
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
 ms.openlocfilehash: 6d357d40c13a66a152b3c8bb5f61e3a3374c4055
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66484071"
 ---
 # <a name="preserving-white-space-while-serializing"></a>序列化時保留空白字元

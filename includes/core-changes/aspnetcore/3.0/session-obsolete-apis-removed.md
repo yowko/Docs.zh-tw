@@ -1,26 +1,26 @@
 ---
 ms.openlocfilehash: 4dcb357570cb6597fde86c9e8f2acb74364cfaa3
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198380"
 ---
-### <a name="session-state-obsolete-apis-removed"></a>會話狀態：已移除已淘汰的 Api
+### <a name="session-state-obsolete-apis-removed"></a>會話狀態：已刪除的已過期 API
 
-已移除用於設定會話 cookie 的已淘汰 Api。 如需詳細資訊，請參閱[aspnet/公告 # 257](https://github.com/aspnet/Announcements/issues/257)。
+用於配置會話 Cookie 的過時 API 已被刪除。 有關詳細資訊，請參閱[aspnet/公告#257](https://github.com/aspnet/Announcements/issues/257)。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
 3.0
 
-#### <a name="reason-for-change"></a>變更的原因
+#### <a name="reason-for-change"></a>更改原因
 
-這種變更會在 Api 之間強制執行一致性，以設定使用 cookie 的功能。
+此更改強制跨 API 配置使用 Cookie 的功能的一致性。
 
 #### <a name="recommended-action"></a>建議的動作
 
-將已移除 Api 的使用方式遷移至其較新的替代專案。 請考慮 `Startup.ConfigureServices` 中的下列範例：
+將已刪除 API 的使用遷移到其較新的替換。 請考慮 `Startup.ConfigureServices` 中的下列範例：
 
 ```csharp
 public void ConfigureServices(ServiceCollection services)
@@ -44,7 +44,7 @@ public void ConfigureServices(ServiceCollection services)
 }
 ```
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

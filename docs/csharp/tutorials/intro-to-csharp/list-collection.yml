@@ -10,10 +10,10 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 11/12/2019
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "73969381"
 items:
 - durationInMinutes: 1
@@ -22,7 +22,7 @@ items:
 - title: 建立清單
   durationInMinutes: 2
   content: >
-    在互動式視窗中執行下列程式碼。 選取 [**進入焦點模式]** 按鈕。 然後，在互動式視窗中輸入下列程式碼區塊（將 `<name>` 取代為您的名稱），然後選取 [**執行**]：
+    在互動式視窗中執行下列程式碼。 選擇"**輸入對焦模式"** 按鈕。 然後，在互動式視窗中鍵入以下代碼塊（替換為`<name>`您的姓名），然後選擇 **"運行**：
 
 
     ```csharp
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    如果您在環境中執行此程式，則應該改為遵循[本機版本](arrays-and-collections.md)的指示。
+    如果在您的環境中運行此參數，則應按照[本地版本的](arrays-and-collections.md)說明操作。
 
 
     您已建立字串清單，在該清單中新增三個名稱，並以全部大寫的形式列印出那些名稱。 您會使用從先前教學課程中學習到的概念，在清單中執行迴圈。
@@ -106,7 +106,7 @@ items:
     ```
 
 
-    再次選取 [**執行**] 以查看結果。 在 C# 中，索引是從 0 開始，因此最大的有效索引數目為清單項目數目減去 1。
+    選擇"再次**運行**"以查看結果。 在 C# 中，索引是從 0 開始，因此最大的有效索引數目為清單項目數目減去 1。
 
 
     > [!NOTE]
@@ -165,7 +165,7 @@ items:
     ```
 
 
-    這將會建立整數清單，並將前兩個整數設定為 1 的值。 「費氏數列」，是從兩個 1 開始的一連串數字。 這兩個值之後每個費式數列數字，都會是其前兩個數字的總和。 新增下列程式碼：
+    這將會建立整數清單，並將前兩個整數設定為 1 的值。 「費氏數列」**，是從兩個 1 開始的一連串數字。 這兩個值之後每個費式數列數字，都會是其前兩個數字的總和。 新增下列程式碼：
 
 
     ```csharp
@@ -183,7 +183,7 @@ items:
     ```
 
 
-    按 [執行] 以查看結果。
+    按 [執行]**** 以查看結果。
 
 
     > [!NOTE]
@@ -230,13 +230,13 @@ items:
 
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - content: >-
-    您已經完成清單互動式教學課程。 那是對於 C# 互動式教學課程的最終簡介。 您可以瀏覽 [.NET 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
+    您已經完成清單互動式教學課程。 那是對於 C# 互動式教學課程的最終簡介。 您可以瀏覽 [.NET 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) \(英文\) 以下載 .NET Core SDK、在您的機器上建立專案，並繼續撰寫程式碼。 "後續步驟"部分將帶您回到這些教程。
 
 
     您可以在下列文章中深入了解 [.NET 集合](../../../standard/collections/index.md)：
 
     - [選取集合型別](../../../standard/collections/selecting-a-collection-class.md)
 
-    - [常用的集合型別](../../../standard/collections/commonly-used-collection-types.md)
+    - [常用的集合類型](../../../standard/collections/commonly-used-collection-types.md)
 
     - [何時使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)

@@ -3,10 +3,10 @@ title: 服務導向架構
 description: 了解微服務和服務導向架構 (SOA) 的基本差異。
 ms.date: 09/20/2018
 ms.openlocfilehash: 84786539fbac0e8b38a81a2580232474774cd355
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674925"
 ---
 # <a name="service-oriented-architecture"></a>服務導向架構
@@ -22,5 +22,5 @@ Docker 容器十分適用 (但不是必要) 於傳統服務導向架構和更進
 本指南著重在微服務，因為 SOA 方法與微服務架構中所使用的需求和技術相較之下較不精準。 如果您知道如何建置微服務應用程式，則也會知道如何建置較簡單的服務導向應用程式。
 
 >[!div class="step-by-step"]
->[上一頁](docker-application-state-data.md)
->[下一頁](microservices-architecture.md)
+>[上一個](docker-application-state-data.md)
+>[下一個](microservices-architecture.md)

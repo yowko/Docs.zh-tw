@@ -3,10 +3,10 @@ title: LINQ to XML 事件 (C#)
 ms.date: 07/20/2015
 ms.assetid: ce7de951-cba7-4870-9962-733eb01cd680
 ms.openlocfilehash: 8e0cb4519dd0fc2bed443d9a62b9a2545d10e161
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253167"
 ---
 # <a name="linq-to-xml-events-c"></a>LINQ to XML 事件 (C#)
@@ -19,14 +19,14 @@ ms.locfileid: "70253167"
 ## <a name="types-and-events"></a>型別與事件  
  使用事件時，您可以使用下列型別：  
   
-|類型|說明|  
+|類型|描述|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|引發 <xref:System.Xml.Linq.XObject> 的事件時，指定事件型別。|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|提供 <xref:System.Xml.Linq.XObject.Changing> 和 <xref:System.Xml.Linq.XObject.Changed> 事件的資料。|  
   
  修改 XML 樹狀結構時，會引發下列事件：  
   
-|Event - 事件|描述|  
+|事件|描述|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|只會在此 <xref:System.Xml.Linq.XObject> 或其任何子代即將變更前發生。|  
 |<xref:System.Xml.Linq.XObject.Changed>|<xref:System.Xml.Linq.XObject> 已變更時或其任何子代已變更時發生。|  

@@ -6,15 +6,15 @@ helpviewer_keywords:
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
 ms.openlocfilehash: 21452e259596c9ab10b3d653ec1d8fb90fad131d
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75937619"
 ---
 # <a name="namespaces-c-programming-guide"></a>命名空間 (C# 程式設計手冊)
 
-C# 程式設計大量使用命名空間的原因有兩個。 首先，.NET 會使用命名空間來組織其許多類別，如下所示：  
+C# 程式設計大量使用命名空間的原因有兩個。 首先，.NET 使用命名空間來組織其許多類，如下所示：  
 
 [!code-csharp[csProgGuide#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#22)]
 
@@ -32,7 +32,7 @@ C# 程式設計大量使用命名空間的原因有兩個。 首先，.NET 會�
 
 命名空間的名稱必須是有效的 C# [識別碼名稱](../inside-a-program/identifier-names.md)。
 
-## <a name="namespaces-overview"></a>命名空間總覽
+## <a name="namespaces-overview"></a>命名空間概述
 
 命名空間具有下列屬性：
 
@@ -45,11 +45,11 @@ C# 程式設計大量使用命名空間的原因有兩個。 首先，.NET 會�
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[命名空間](~/_csharplang/spec/namespaces.md)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [使用命名空間](using-namespaces.md)
 - [如何使用 My 命名空間](how-to-use-the-my-namespace.md)
 - [識別碼名稱](../inside-a-program/identifier-names.md)
-- [using 指示詞](../../language-reference/keywords/using-directive.md)
-- [:: 運算子](../../language-reference/operators/namespace-alias-qualifier.md)
+- [使用指令](../../language-reference/keywords/using-directive.md)
+- [* 操作員](../../language-reference/operators/namespace-alias-qualifier.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
 ms.openlocfilehash: 6087a64bea5a59bfcfc5372f6a9d6eb8b9c940cb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606461"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (C# 編譯器選項)
@@ -37,13 +37,13 @@ ms.locfileid: "69606461"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]  頁面。  
+1. 開啟專案的 [屬性]**** 頁面。  
   
-2. 按一下 [應用程式]  屬性頁。  
+2. 按一下 [應用程式]**** 屬性頁。  
   
-3. 修改 [輸出類型]  屬性。  
+3. 修改 [輸出類型]**** 屬性。  
   
- 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="example"></a>範例  
  下列每個命令列都會建立 `in.exe` 來編譯 `in.cs`：  
@@ -55,5 +55,5 @@ csc in.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [-target (C# 編譯器選項)](./target-compiler-option.md)
+- [-目標（C# 編譯器選項）](./target-compiler-option.md)
 - [C# 編譯器選項](./index.md)

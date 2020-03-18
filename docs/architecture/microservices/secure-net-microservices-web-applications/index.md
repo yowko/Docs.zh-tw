@@ -4,10 +4,10 @@ description: .NET 微服務和 Web 應用程式中的安全性 - 了解 ASP.NET 
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628328"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>製作安全的 .NET 微服務和 Web 應用程式
@@ -20,13 +20,13 @@ ms.locfileid: "77628328"
 
 在微服務案例中，驗證通常會集中處理。 如果您使用 API 閘道，則閘道會是適合驗證的位置，如圖 9-1 所示。 如果您使用此方法，請確定若沒有 API 閘道，就無法直接到達個別微服務，除非有其他安全性機制可驗證訊息，而不論其是否來自閘道。
 
-![此圖顯示用戶端行動應用程式如何與後端互動。](./media/index/api-gateway-centralized-authentication.png)
+![顯示用戶端移動應用如何與後端交互的圖表。](./media/index/api-gateway-centralized-authentication.png)
 
 **圖 9-1**. 使用 API 閘道的集中式驗證
 
-當 API 閘道將驗證集中時，會在將要求轉送給微服務時新增使用者資訊。 如果可以直接存取服務，則驗證服務 (例如 Azure Active Directory 或專用驗證微服務) 會作為安全性權杖服務 (STS)，可用來驗證使用者。 信任決策會在服務與安全性權杖或 Cookie 之間共用。 （如有需要，可以在 ASP.NET Core 應用程式之間共用這些權杖，方法是執行[cookie 共用](/aspnet/core/security/cookie-sharing)）。此模式如圖9-2 所示。
+當 API 閘道將驗證集中時，會在將要求轉送給微服務時新增使用者資訊。 如果可以直接存取服務，則驗證服務 (例如 Azure Active Directory 或專用驗證微服務) 會作為安全性權杖服務 (STS)，可用來驗證使用者。 信任決策會在服務與安全性權杖或 Cookie 之間共用。 （如果需要，這些權杖可以通過實現[Cookie 共用](/aspnet/core/security/cookie-sharing)在 ASP.NET 核心應用程式之間共用。圖 9-2 顯示了此模式。
 
-![此圖顯示透過後端微服務的驗證。](./media/index/identity-microservice-authentication.png)
+![顯示通過後端微服務進行身份驗證的圖表。](./media/index/identity-microservice-authentication.png)
 
 **圖 9-2**： 由識別微服務驗證並透過授權權杖共用信任
 
@@ -37,9 +37,9 @@ ms.locfileid: "77628328"
 ASP.NET Core 中用來識別應用程式使用者的主要機制是 [ASP.NET Core Identity](/aspnet/core/security/authentication/identity) 成員資格系統。 ASP.NET Core 身分識別會將使用者資訊 (包括登入資訊、角色及宣告) 儲存在由開發人員設定的資料存放區中。 一般而言，ASP.NET Core Identity 資料存放區是 `Microsoft.AspNetCore.Identity.EntityFrameworkCore` 套件中所提供的 Entity Framework 存放區。 不過，您可以使用自訂存放區或其他協力廠商套件，將身分識別資訊儲存在 Azure 表格儲存體、CosmosDB 或其他位置。
 
 > [!TIP]
-> ASP.NET Core 2.1 和更新版本提供作為[Razor 類別庫](/aspnet/core/razor-pages/ui-class)的[ASP.NET Core 身分識別](/aspnet/core/security/authentication/identity)，因此，您不會在專案中看到大部分必要的程式碼，就像先前版本的情況一樣。 如需如何自訂身分識別程式碼以符合您的需求的詳細資訊，請參閱[ASP.NET Core 專案中的 Scaffold 身分識別](/aspnet/core/security/authentication/scaffold-identity)。
+> ASP.NET Core 2.1 和更高版本將核心標識作為[Razor 類庫](/aspnet/core/razor-pages/ui-class)提供[ASP.NET，](/aspnet/core/security/authentication/identity)因此您不會像早期版本那樣在專案中看到許多必要的代碼。 有關如何自訂標識代碼以滿足您的需要的詳細資訊，請參閱[ASP.NET 核心專案中的腳手架標識](/aspnet/core/security/authentication/scaffold-identity)。
 
-下列程式碼是從 ASP.NET Core Web 應用程式 MVC 3.1 專案範本取得，並選取個別的使用者帳戶驗證。 它會示範如何在 `Startup.ConfigureServices` 方法中使用 Entity Framework Core 來設定 ASP.NET Core 身分識別。
+以下代碼取自ASP.NET核心 Web 應用程式 MVC 3.1 專案範本，並選擇了單個使用者帳戶身份驗證。 它演示如何在`Startup.ConfigureServices`方法中使用實體框架核心配置ASP.NET核心標識。
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -57,7 +57,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-設定 ASP.NET Core 身分識別之後，您可以新增 `app.UseAuthentication()` 和 `endpoints.MapRazorPages()` 來啟用它，如服務的 `Startup.Configure` 方法中的下列程式碼所示：
+配置ASP.NET核心標識後，可以通過添加`app.UseAuthentication()`和`endpoints.MapRazorPages()`來啟用它，如服務`Startup.Configure`方法中的以下代碼所示：
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -77,7 +77,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 ```
 
 > [!IMPORTANT]
-> 前面程式碼中的行**必須依照顯示的順序**，身分識別才能正常運作。
+> 預置代碼中的行**必須處於"順序"中，** 以便標識正常工作。
 
 您可以在下列幾個情況下使用 ASP.NET Code Identity：
 
@@ -95,7 +95,7 @@ ASP.NET Core Identity 也支援[雙因素驗證](/aspnet/core/security/authentic
 
 ASP.NET Core 也支援使用[外部驗證提供者](/aspnet/core/security/authentication/social/)，讓使用者透過 [OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2) 流程登入。 這表示使用者可以使用來自 Microsoft、Google、Facebook 或 Twitter 等提供者的現有驗證程序進行登入，並將這些身分識別與您應用程式中的 ASP.NET Core Identity 建立關聯。
 
-若要使用外部驗證（除了前面所述的驗證中介軟體以外 `app.UseAuthentication()`），您也必須在 `Startup` 中註冊外部提供者，如下列範例所示：
+要使用外部身份驗證，除了包括前面提到的身份驗證中介軟體外，使用 方法`app.UseAuthentication()`還必須在 中`Startup`註冊外部提供程式，如以下示例所示：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -119,30 +119,30 @@ public void ConfigureServices(IServiceCollection services)
 
 下表顯示熱門的外部驗證提供者及其關聯的 NuGet 套件：
 
-| **提供者**  | **套件**                                          |
+| **供應商**  | **包**                                          |
 | ------------- | ---------------------------------------------------- |
 | **Microsoft** | **Microsoft.AspNetCore.Authentication.MicrosoftAccount** |
-| **Google**    | **Microsoft.AspNetCore.Authentication.Google**           |
+| **谷歌**    | **Microsoft.AspNetCore.Authentication.Google**           |
 | **Facebook**  | **Microsoft.AspNetCore.Authentication.Facebook**         |
 | **Twitter**   | **Microsoft.AspNetCore.Authentication.Twitter**          |
 
-在所有情況下，您都必須完成與廠商相依的應用程式註冊程式，而且通常包含：
+在所有情況下，您必須完成依賴于供應商的應用程式註冊過程，並且通常涉及：
 
-1. 取得用戶端應用程式識別碼。
-2. 取得用戶端應用程式密碼。
-3. 設定重新導向 URL，由授權中介軟體和已註冊的提供者處理
-4. （選擇性）設定 [登出 URL]，以在單一登入（SSO）案例中正確地處理登出。
+1. 獲取用戶端應用程式 ID。
+2. 獲取用戶端應用程式金鑰。
+3. 配置重定向 URL，該 URL 由授權中介軟體和註冊供應商處理
+4. 可選，配置登出 URL 以正確處理單一登入 （SSO） 方案中的登出。
 
-如需為外部提供者設定應用程式的詳細資訊，請參閱[ASP.NET Core 檔中的外部提供者驗證](/aspnet/core/security/authentication/social/)。
+有關為外部提供程式配置應用的詳細資訊，請參閱[ASP.NET 核心文檔中的外部提供程式身份驗證](/aspnet/core/security/authentication/social/)。
 
 >[!TIP]
->所有詳細資料都是由先前所述的授權中介軟體和服務所處理。 因此，當您在 Visual Studio 建立 ASP.NET 程式碼 web 應用程式專案時，只需要選擇 [**個別使用者帳戶**] 驗證選項，如圖9-3 所示，除了註冊先前所述的驗證提供者之外。
+>所有詳細資訊均由前面提到的授權中介軟體和服務處理。 因此，只需在 Visual Studio 中創建ASP.NET代碼 Web 應用程式專案時，只需選擇**單個使用者帳戶**身份驗證選項，如圖 9-3 所示，此外還註冊前面提到的身份檢查器提供者。
 
-![[新增 ASP.NET Core Web 應用程式] 對話方塊的螢幕擷取畫面。](./media/index/select-individual-user-account-authentication-option.png)
+![新ASP.NET核心 Web 應用程式對話方塊的螢幕截圖。](./media/index/select-individual-user-account-authentication-option.png)
 
-**圖 9-3**。 在 Visual Studio 2019 中建立 web 應用程式專案時，選取 [個別使用者帳戶] 選項（用於使用外部驗證）。
+**圖 9-3**。 在 Visual Studio 2019 中創建 Web 應用程式專案時，選擇用於外部身份驗證的"個人使用者帳戶"選項。
 
-除了先前所列的外部驗證提供者，還有協力廠商套件提供中介軟體以使用其他更多外部驗證提供者。 如需清單，請參閱 GitHub 上的[AspNet. Security. OAuth. provider](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)存放庫。
+除了先前所列的外部驗證提供者，還有協力廠商套件提供中介軟體以使用其他更多外部驗證提供者。 有關清單，請參閱 GitHub 上的[AspNet.Security.OAuth.提供程式](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)存儲庫。
 
 您也可以建立自己的外部驗證中介軟體來解決某些特殊需求。
 
@@ -154,7 +154,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ### <a name="authenticate-with-an-openid-connect-or-oauth-20-identity-provider"></a>使用 OpenID Connect 或 OAuth 2.0 識別提供者進行驗證
 
-如果使用者資訊儲存在 Azure Active Directory 或是支援 OpenID Connect 或 OAuth 2.0 的其他身分識別解決方案中，您可以使用 **Microsoft.AspNetCore.Authentication.OpenIdConnect** 套件透過 OpenID Connect 工作流程進行驗證。 例如，若要對 eShopOnContainers 中的 Identity.Api 微服務進行驗證，ASP.NET Core Web 應用程式可以使用該套件中的中介軟體，如以下 `Startup.cs` 中的簡例所示：
+如果使用者資訊存儲在 Azure 活動目錄或其他支援 OpenID 連接或 OAuth 2.0 的標識解決方案中，則可以使用**Microsoft.AspNetCore.身份驗證.OpenIdConnect**包使用 OpenID Connect 工作流進行身份驗證。 例如，若要對 eShopOnContainers 中的 Identity.Api 微服務進行驗證，ASP.NET Core Web 應用程式可以使用該套件中的中介軟體，如以下 `Startup.cs` 中的簡例所示：
 
 ```csharp
 // Startup.cs
@@ -254,7 +254,7 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
 
 對 OpenID Connect 端點進行驗證或發行您自己的安全性權杖涵蓋一些案例。 但如果服務只需要將存取權限制給具有其他服務所提供之有效安全性權杖的使用者，又如何？
 
-針對該案例，**Microsoft.AspNetCore.Authentication.JwtBearer** 套件會提供用於處理 JWT 權杖的驗證中介軟體。 JWT 代表 "[JSON Web Token](https://tools.ietf.org/html/rfc7519)"，這是用於傳達安全性宣告的常見安全性權杖格式 (由 RFC 7519 定義)。 使用中介軟體來取用該等權杖的簡例看起來就像此程式碼片段，取自 eShopOnContainers 的 Ordering.Api 微服務。
+對於這種情況，處理 JWT 權杖的身份驗證中介軟體在**Microsoft.AspNetCore.身份驗證.JwtBearer**包中可用。 JWT 代表 "[JSON Web Token](https://tools.ietf.org/html/rfc7519)"，這是用於傳達安全性宣告的常見安全性權杖格式 (由 RFC 7519 定義)。 使用中介軟體來取用該等權杖的簡例看起來就像此程式碼片段，取自 eShopOnContainers 的 Ordering.Api 微服務。
 
 ```csharp
 // Startup.cs
@@ -301,31 +301,31 @@ public void ConfigureServices(IServiceCollection services)
 
 準備好此中介軟體之後，就會從授權標頭自動擷取 JWT 權杖。 這些權杖會接著還原序列化、驗證 (使用 `Audience` 和 `Authority` 參數中的值) 並儲存為使用者資訊，以供 MVC 動作或授權篩選稍後參考。
 
-JWT 持有人驗證中介軟體也可以支援更進階的案例；例如，在沒有授權單位的情況下，使用本機憑證來驗證權杖。 在此案例中，您可以在 `TokenValidationParameters`物件中指定 `JwtBearerOptions` 物件。
+JWT 持有人驗證中介軟體也可以支援更進階的案例；例如，在沒有授權單位的情況下，使用本機憑證來驗證權杖。 在此案例中，您可以在 `JwtBearerOptions`物件中指定 `TokenValidationParameters` 物件。
 
 ## <a name="additional-resources"></a>其他資源
 
-- **在應用程式之間共用 Cookie** \
+- **應用程式之間共用 Cookie** \
   [https://docs.microsoft.com/aspnet/core/security/cookie-sharing](/aspnet/core/security/cookie-sharing)
 
-- **身分識別簡介** \
+- **身份介紹** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **Rick Anderson。使用 SMS \ 的雙因素驗證**
+- **裡克·安德森使用 SMS 進行雙重身份驗證** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
-- **使用 Facebook、Google 和其他外部提供者啟用驗證** \
+- **使用 Facebook、Google 和其他外部供應商啟用身份驗證** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell anicas,。OAuth 2 \ 簡介**
+- **蜜雪兒·阿尼察OAuth 2 的簡介** \
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers** (ASP.NET OAuth 提供者的 GitHub 存放庫) \
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
-- **IdentityServer4。官方檔** \
+- **標識伺服器4。正式檔** \
   <https://identityserver4.readthedocs.io/en/latest/>
 
 >[!div class="step-by-step"]
->[上一頁](../implement-resilient-applications/monitor-app-health.md)
->[下一頁](authorization-net-microservices-web-applications.md)
+>[上一個](../implement-resilient-applications/monitor-app-health.md)
+>[下一個](authorization-net-microservices-web-applications.md)

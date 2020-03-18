@@ -1,26 +1,26 @@
 ---
-title: Azure 無伺服器平臺-無伺服器應用程式
-description: Azure 無伺服器平臺提供的功能包括事件觸發的立即調整程式碼、雲端式發行/訂閱、工作流程協調等等。
+title: Azure 無伺服器平臺 - 無伺服器應用
+description: Azure 無伺服器平臺提供的功能包括事件觸發的即時縮放代碼、基於雲的 pub/sub、工作流業務流程等。
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 43646db564ae31d26fe59e1ad7392e51d2d4e953
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69577591"
 ---
 # <a name="azure-serverless-platform"></a>Azure 無伺服器平臺
 
-Azure 無伺服器平臺包括 Azure Functions、Logic Apps 和事件方格。 這些服務會一起工作，並與其他許多資源連接。 無伺服器平臺可與從資料庫和儲存體到分析以及機器學習/人工智慧的所有專案搭配運作。
+Azure 無伺服器平臺包括 Azure 函數、邏輯應用和事件網格。 這些服務協同工作，並與無數其他資源連接。 無伺服器平臺可處理從資料庫和存儲到分析和機器學習/人工智慧的所有內容。
 
-您也可以使用 Application Insights，這是用來捕捉診斷追蹤和遙測資料的無伺服器平臺。 Application Insights 適用于所有類型的應用程式（桌上型電腦、行動裝置或 web），以及無伺服器的執行。 平臺會在下圖中視覺化：
+您還可以使用應用程式見解，一個無伺服器平臺來捕獲診斷跟蹤和遙測。 應用程式見解可用於所有類型的應用程式（桌面、移動或 Web）以及無伺服器實現。 該平臺在下圖中視覺化：
 
 ![Azure 無伺服器平臺](./media/azure-serverless-platform.png)
 
-本章會細分每個元件的基本概念。
+本章細分每個元件的基礎知識。
 
 >[!div class="step-by-step"]
->[上一頁](serverless-design-examples.md)
->[下一頁](azure-functions.md)
+>[上一個](serverless-design-examples.md)
+>[下一個](azure-functions.md)

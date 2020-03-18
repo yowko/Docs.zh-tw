@@ -5,10 +5,10 @@ helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
 ms.openlocfilehash: dcc73aba738d6296a44c48aad8b66cd6fc7f4a7b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77448435"
 ---
 # <a name="using-delegates-c-programming-guide"></a>使用委派 (C# 程式設計手冊)
@@ -51,7 +51,7 @@ The number is: 3
 
 [!code-csharp[csProgGuideDelegates#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#27)]
 
-此時，`allMethodsDelegate` 在其引動過程清單中包含三種方法：`Method1`、`Method2` 和 `DelegateMethod`。 原始的三個委派 `d1`、`d2` 和 `d3` 維持不變。 當叫用 `allMethodsDelegate` 時，會依序呼叫所有三個方法。 如果委派使用參考參數，則參考會依序傳入這三個方法中的每一個，而且任一方法所做的任何變更，下一個方法都看得到。 當任一方法擲回未在該方法內攔截到例外狀況時，該例外狀況會傳遞至委派的呼叫端，且不會呼叫引動過程清單中的任何後續方法。 如果委派具有傳回值和 (或) 輸出參數，則它會傳回所叫用之最後一個方法的傳回值與參數。 若要將方法從引動過程清單中移除，請使用[減去或減去指派運算子](../../language-reference/operators/subtraction-operator.md) (`-` 或 `-=`)。 例如：
+此時，`allMethodsDelegate` 在其引動過程清單中包含三種方法：`Method1`、`Method2` 和 `DelegateMethod`。 原始的三個委派 `d1`、`d2` 和 `d3` 維持不變。 當叫用 `allMethodsDelegate` 時，會依序呼叫所有三個方法。 如果委派使用參考參數，則參考會依序傳入這三個方法中的每一個，而且任一方法所做的任何變更，下一個方法都看得到。 當任一方法擲回未在該方法內攔截到例外狀況時，該例外狀況會傳遞至委派的呼叫端，且不會呼叫引動過程清單中的任何後續方法。 如果委派具有傳回值和 (或) 輸出參數，則它會傳回所叫用之最後一個方法的傳回值與參數。 要從調用清單中刪除方法，請使用[減法或減法指派運算子](../../language-reference/operators/subtraction-operator.md)（`-`或`-=`）。 例如：
 
 [!code-csharp[csProgGuideDelegates#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#28)]
 

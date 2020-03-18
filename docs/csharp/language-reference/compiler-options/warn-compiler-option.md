@@ -13,10 +13,10 @@ helpviewer_keywords:
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 ms.openlocfilehash: 5b05e944a37e16fc1fcc422271be00c09a271a33
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602400"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C# 編譯器選項)
@@ -49,13 +49,13 @@ ms.locfileid: "69602400"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]  頁面。  
+1. 開啟專案的 [屬性]**** 頁面。  
   
-2. 按一下 [建置]  屬性頁面。  
+2. 按一下 [建置]**** 屬性頁面。  
   
-3. 修改 [警告層級]  屬性。  
+3. 修改 [警告層級]**** 屬性。  
   
- 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>。  
   
 ## <a name="example"></a>範例  
  編譯 `in.cs`，並讓編譯器只顯示層級 1 警告：  

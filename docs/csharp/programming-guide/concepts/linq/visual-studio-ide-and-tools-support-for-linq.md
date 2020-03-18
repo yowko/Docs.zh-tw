@@ -3,10 +3,10 @@ title: LINQ 的 Visual Studio IDE 和工具支援 (C#)
 ms.date: 07/20/2015
 ms.assetid: c1f6cfdf-c96f-417f-acc8-4a049772ead3
 ms.openlocfilehash: a42d6711e34564f03aaf07c295bc682965513619
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69590914"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-c"></a>LINQ 的 Visual Studio IDE 和工具支援 (C#)

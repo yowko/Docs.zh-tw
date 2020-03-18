@@ -17,10 +17,10 @@ helpviewer_keywords:
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
 ms.openlocfilehash: aed8b412ea1580f7dfa4f87333598d76a85b5e64
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69603017"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (C# 編譯器選項)
@@ -45,15 +45,15 @@ ms.locfileid: "69603017"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]  頁面。  
+1. 開啟專案的 [屬性]**** 頁面。  
   
-2. 按一下 [建置]  屬性頁面。  
+2. 按一下 [建置]**** 屬性頁面。  
   
-3. 按一下 [ **進階** ] 按鈕。  
+3. 按一下 [進階]**** 按鈕。  
   
-4. 修改 [檔案對齊]  屬性。  
+4. 修改 [檔案對齊]**** 屬性。  
   
- 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,15 +1,15 @@
 ---
-title: 如何：改善模型精確度
+title: 使用方式：提高模型精度
 description: 了解如何改善模型正確性
 ms.date: 04/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc
 ms.openlocfilehash: 8f3b283de378a37bfe429688207ea9fb52f9ca7f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75739581"
 ---
 # <a name="improve-mlnet-model-accuracy"></a>改善 ML.NET 模型正確性
@@ -32,7 +32,7 @@ ms.locfileid: "75739581"
 
 雖然更多資料樣本和特性有利於改善模型的正確性，但它們也可能帶入雜訊，因為並非所有的資料和特性都有意義。 因此，請務必了解哪些特性對演算法決策影響最大。 使用 Permutation Feature Importance (PFI) 等技巧，有利於識別這些主要特性，且不僅可協助說明模型，還可使用輸出作為特性選取方法，減少進入定型程序的雜訊特性量。
 
-如需使用 PFI 的詳細資訊，請參閱[使用排列功能重要性說明模型預測](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)。
+有關使用 PFI 的詳細資訊，請參閱[使用排列要素重要性解釋模型預測](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)。
 
 ## <a name="cross-validation"></a>交叉驗證
 

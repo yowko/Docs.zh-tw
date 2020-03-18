@@ -3,27 +3,27 @@ title: 以 Visual Studio for Mac 開始使用 .NET Core
 description: 本主題會逐步引導您使用 Visual Studio for Mac 和 .NET Core 建置簡單主控台應用程式。
 ms.date: 12/19/2019
 ms.openlocfilehash: 4cd7e311411bce62698e291e763227496877ea39
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740487"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core
 
-Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整的整合式開發環境 (IDE)。 本文會逐步引導您使用 Visual Studio for Mac 和 .NET Core 來建立簡單的主控台應用程式。
+Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整的整合式開發環境 (IDE)。 本文將引導您使用 Mac 和 .NET Core 的 Visual Studio 構建一個簡單的主控台應用程式。
 
 > [!NOTE]
 > 我們非常重視您的意見反應。 您有兩種方式可以提供意見反應給 Visual Studio for Mac 開發小組：
 >
-> * 在 Visual Studio for Mac 中，從功能表選取 [說明] > [回報問題]，或從歡迎畫面選取 [回報問題]，這會開啟用來提出錯誤報告的視窗。 您可在[開發人員社群](https://developercommunity.visualstudio.com/spaces/8/index.html)入口網站追蹤您的意見反應。
-> * 若要提出建議，請從功能表選取 [說明] > [提供建議]，或從歡迎畫面選取 [提供建議]，這會帶您前往 [Visual Studio for Mac 開發人員社群網頁](https://developercommunity.visualstudio.com/content/idea/post.html?space=41) \(英文\)。
+> * 在 Mac 的 Visual Studio 中，從功能表中選擇 **"説明** > **報告問題**"或"從歡迎"螢幕**中報告問題**，這將打開一個視窗以提交 Bug 報告。 您可在[開發人員社群](https://developercommunity.visualstudio.com/spaces/8/index.html)入口網站追蹤您的意見反應。
+> * 要提出建議，請從功能表中選擇 **"説明** > **提供建議**"或"從歡迎畫面**提供建議**"，該螢幕將帶您前往[Mac 開發人員社區網頁的視覺化工作室](https://developercommunity.visualstudio.com/content/idea/post.html?space=41)。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
-請參閱[.Net Core 相依性和需求](../install/dependencies.md?pivots=os-macos)一文。
+請參閱[.NET 核心依賴項和要求](../install/dependencies.md?pivots=os-macos)一文。
 
-請參閱[.Net Core 支援](/visualstudio/mac/net-core-support)文章，以確保您使用的是支援的 .net Core 版本。
+檢查[.NET 核心支援](/visualstudio/mac/net-core-support)文章，以確保您使用的是 .NET Core 受支援的版本。
 
 ## <a name="get-started"></a>開始使用
 
@@ -33,17 +33,17 @@ Visual Studio for Mac 針對開發 .NET Core 應用程式，提供功能完整�
 
 ## <a name="creating-a-project"></a>建立專案
 
-1. 選取 [開始] 視窗上的 [**新增**]。
+1. 在啟動視窗中選擇 **"新建**"。
 
    ![Visual Studio for Mac [開始] 畫面上的 [新增] 按鈕](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
-1. 在 [新增專案] 對話方塊中，選取 [.NET Core] 節點下的 [應用程式]。 選取 [主控台應用程式] 範本，接著選取 [下一步]。
+1. 在 [新增專案]**** 對話方塊中，選取 [.NET Core]**** 節點下的 [應用程式]****。 選取 [主控台應用程式]**** 範本，接著選取 [下一步]****。
 
    ![[新增專案] 範本清單](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
 
 1. 如果您已安裝多個版本的 .NET Core，請針對您的專案選取目標 Framework。
 
-1. 針對 [專案名稱] 輸入 "HelloWorld"。 選取 [建立]。
+1. 針對 [專案名稱]**** 輸入 "HelloWorld"。 選取 [建立]****。
 
    ![設定新主控台應用程式對話方塊](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 

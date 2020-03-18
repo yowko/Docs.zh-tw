@@ -3,10 +3,10 @@ title: SOA 應用程式
 description: 請記住，容器也是 SOA 應用程式的實用部署選項。
 ms.date: 02/15/2019
 ms.openlocfilehash: aa56ada7b14a465fb3dafd02b03b815782ac765b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672355"
 ---
 # <a name="service-oriented-applications"></a>服務導向應用程式
@@ -20,5 +20,5 @@ Docker 容器十分適用 (但不是必要) 於傳統服務導向架構和更進
 綜觀各方面條件來看，針對傳統 SOA 架構以及更進階的微服務架構 (其中每個微服務擁有其資料模型) 均適用容器叢集解決方案。 由於採用多個資料庫，您可以擴充資料層，而不需使用由 SOA 服務共用的整合型資料庫。 不過，我們只會單純就架構和設計面來探討資料分割。
 
 >[!div class="step-by-step"]
->[上一頁](state-and-data-in-docker-applications.md)
->[下一頁](orchestrate-high-scalability-availability.md)
+>[上一個](state-and-data-in-docker-applications.md)
+>[下一個](orchestrate-high-scalability-availability.md)

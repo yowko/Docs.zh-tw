@@ -12,10 +12,10 @@ helpviewer_keywords:
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
 ms.openlocfilehash: e14bf59f5922a918b627af22c052c8efd9081e84
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602519"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C# 編譯器選項)
@@ -35,7 +35,7 @@ ms.locfileid: "69602519"
  資源的邏輯名稱；用來載入資源的名稱。 預設值是檔案名稱。  
   
  `accessibility-modifier` (選擇性)  
- 資源的存取範圍：公用或私用。 預設值是公用。  
+ 資源的存取範圍：公用或私用。 預設值是 public。  
   
 ## <a name="remarks"></a>備註  
  使用 [-linkresource](./linkresource-compiler-option.md) 將資源連結至組件，而不將資源檔新增至輸出檔案。  
@@ -52,11 +52,11 @@ ms.locfileid: "69602519"
   
 1. 將資源檔新增至專案。  
   
-2. 選取您想要內嵌在方案總管  中的檔案。  
+2. 選取您想要內嵌在方案總管**** 中的檔案。  
   
-3. 在 [屬性]  視窗中，選取檔案的 [建置動作]  。  
+3. 在 [屬性]**** 視窗中，選取檔案的 [建置動作]****。  
   
-4. 將 [建置動作]  設定為 [內嵌資源]  。  
+4. 將 [建置動作]**** 設定為 [內嵌資源]****。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.FileProperties2.BuildAction%2A>。  
   

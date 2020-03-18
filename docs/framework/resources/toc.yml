@@ -1,7 +1,7 @@
 - name: .NET 應用程式中的資源
   href: index.md
   items:
-    - name: 建立資源檔
+    - name: 建立資源檔案
       href: creating-resource-files-for-desktop-apps.md
       items:
         - name: 以程式設計方式使用 .resx 檔案

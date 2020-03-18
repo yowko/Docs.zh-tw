@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450035"
 ---
 # <a name="development-process-for-azure"></a>Azure 開發程序
@@ -26,7 +26,7 @@ ms.locfileid: "77450035"
 
 不論您偏好使用完整且強大的 IDE，還是輕量型的敏捷式編輯器，Microsoft 都能支援您開發 ASP.NET Core 應用程式。
 
-**Visual Studio 2019。** Visual Studio 2019 是用於開發 ASP.NET Core 應用程式的最佳 IDE。 它提供了許多功能，可提升開發人員的生產力。 您可以使用它來開發應用程式，然後分析其效能和其他特性。 整合式偵錯工具可讓您暫停程式碼執行，並在程式碼執行時逐步執行。 內建的測試執行器可讓您組織測試和其結果，甚至可以在撰寫程式碼時執行即時單元測試。 使用 Live Share，您可以與其他開發人員即時共同作業，透過網路順暢地共用您的程式碼會話。 當您準備好時，Visual Studio 包含將應用程式發佈到 Azure 所需的一切，或任何您可能裝載它的位置。
+**視覺工作室 2019.** Visual Studio 2019 是一流的 IDE，用於開發ASP.NET核心應用程式。 它提供了一系列可提高開發人員工作效率的功能。 您可以使用它來開發應用程式，然後分析其性能和其他特徵。 集成調試器允許您暫停代碼執行，並在代碼運行時動態來回切換代碼。 內置測試回合程式允許您組織測試及其結果，甚至可以在編碼時執行即時單元測試。 使用即時共用，您可以與其他開發人員即時協作，通過網路無縫共用代碼會話。 準備就緒後，Visual Studio 會包含將應用程式發佈到 Azure 或可能承載應用程式的任何位置所需的一切。
 
 [下載 Visual Studio 2019](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
@@ -54,7 +54,7 @@ ms.locfileid: "77450035"
 
 ![AzureWebApp](./media/image10-2.png)
 
-**圖 10-1.** 在 Azure 入口網站建立新的 Azure App Service Web 應用程式。
+**圖 10-1。** 在 Azure 入口網站建立新的 Azure App Service Web 應用程式。
 
 每當新的程式碼認可到專案的原始檔控制存放庫時，CI 的建置程序將會執行自動化建置。 這可提供您程式碼建置 (以及在理想的情況下，通過自動化測試) 且可能部署的立即回應。 這個 CI 組建將會產生 Web 部署套件成品，並發佈它以供您的 CD 程序取用。
 
@@ -62,7 +62,7 @@ ms.locfileid: "77450035"
 
 請務必啟用持續整合，以便每當您小組中有人認可新的程式碼時，系統便將建置排入佇列中。 測試組建，並確認它產生 Web 部署套件作為其中一個成品。
 
-建置成功時，您的 CD 程序會將 CI 組建的結果部署至 Azure Web 應用程式。 若要設定這種情況，您需要建立及設定「發行」，這會部署到您的 Azure App Service。
+建置成功時，您的 CD 程序會將 CI 組建的結果部署至 Azure Web 應用程式。 若要設定這種情況，您需要建立及設定「發行」**，這會部署到您的 Azure App Service。
 
 [定義 CD 發行程序](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
 
@@ -70,11 +70,11 @@ CI/CD 管線設定之後，您就可以直接更新 Web 應用程式，並認可
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Azure 裝載之 ASP.NET Core 應用程式的開發工作流程
 
-一旦您設定好 Azure 帳戶和 CI/CD 程序，開發 Azure 裝載的 ASP.NET Core 應用程式便很簡單。 以下是您在建立 ASP.NET Core 應用程式（裝載于 Azure App Service 作為 Web 應用程式）時通常會採取的基本步驟，如圖10-2 所示。
+一旦您設定好 Azure 帳戶和 CI/CD 程序，開發 Azure 裝載的 ASP.NET Core 應用程式便很簡單。 以下是構建 ASP.NET 酷睿應用時通常採取的基本步驟，該應用作為 Web 應用託管在 Azure 應用服務中，如圖 10-2 所示。
 
 ![EndToEndDevDeployWorkflow](./media/image10-3.png)
 
-**圖 10-2.** 建置 ASP.NET Core 應用程式並將其裝載在 Azure 中的逐步工作流程
+**圖10-2。** 建置 ASP.NET Core 應用程式並將其裝載在 Azure 中的逐步工作流程
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>步驟 1： 本機開發環境內部迴圈
 
@@ -106,5 +106,5 @@ Web 應用程式在執行時，您可以監視應用程式的健康狀態，並�
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
->[上一頁](test-asp-net-core-mvc-apps.md)
->[下一頁](azure-hosting-recommendations-for-asp-net-web-apps.md)
+>[上一個](test-asp-net-core-mvc-apps.md)
+>[下一個](azure-hosting-recommendations-for-asp-net-web-apps.md)

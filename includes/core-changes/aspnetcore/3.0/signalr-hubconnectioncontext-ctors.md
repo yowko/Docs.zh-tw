@@ -1,22 +1,22 @@
 ---
 ms.openlocfilehash: 8979b7ffc09726c6588fe3ba60b916202697648f
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522658"
 ---
-### <a name="signalr-hubconnectioncontext-constructors-changed"></a>SignalR： HubConnectionCoNtext 的函式已變更
+### <a name="signalr-hubconnectioncontext-constructors-changed"></a>信號R：中心連接上下文建構函式已更改
 
-SignalR 的 `HubConnectionContext` 的函式已變更為接受選項類型，而不是多個參數，以供未來證明加入選項。 這種變更會以接受選項類型的單一函式來取代兩個函數。
+SignalR 的`HubConnectionContext`建構函式更改為接受選項類型（而不是多個參數）為面向未來的添加選項。 此更改將兩個建構函式替換為接受選項類型的單個建構函式。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-`HubConnectionContext` 有兩個函數：
+`HubConnectionContext`有兩個建構函式：
 
 ```csharp
 public HubConnectionContext(ConnectionContext connectionContext, TimeSpan keepAliveInterval, ILoggerFactory loggerFactory);
@@ -25,19 +25,19 @@ public HubConnectionContext(ConnectionContext connectionContext, TimeSpan keepAl
 
 #### <a name="new-behavior"></a>新的行為
 
-這兩個函式已移除，並使用一個函式來取代：
+兩個建構函式被刪除，並替換為一個建構函式：
 
 ```csharp
 public HubConnectionContext(ConnectionContext connectionContext, HubConnectionContextOptions contextOptions, ILoggerFactory loggerFactory)
 ```
 
-#### <a name="reason-for-change"></a>變更的原因
+#### <a name="reason-for-change"></a>更改原因
 
-新的函式會使用新的 options 物件。 因此，`HubConnectionContext` 的功能可以在未來擴充，而不需要進行更多的建構函式和重大變更。
+新的建構函式使用新的選項物件。 因此，將來可以擴展`HubConnectionContext`其特徵，而無需進行更多的建構函式和重大更改。
 
 #### <a name="recommended-action"></a>建議的動作
 
-而不是使用下列的構造函式：
+而不是使用以下建構函式：
 
 ```csharp
 HubConnectionContext connectionContext = new HubConnectionContext(
@@ -47,7 +47,7 @@ HubConnectionContext connectionContext = new HubConnectionContext(
     clientTimeoutInterval: TimeSpan.FromSeconds(15));
 ```
 
-使用下列的函數：
+使用以下建構函式：
 
 ```csharp
 HubConnectionContextOptions contextOptions = new HubConnectionContextOptions()
@@ -58,7 +58,7 @@ HubConnectionContextOptions contextOptions = new HubConnectionContextOptions()
 HubConnectionContext connectionContext = new HubConnectionContext(connectionContext, contextOptions, loggerFactory);
 ```
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

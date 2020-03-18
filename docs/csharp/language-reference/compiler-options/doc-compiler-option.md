@@ -13,10 +13,10 @@ helpviewer_keywords:
 - /doc compiler option [C#]
 ms.assetid: 849eea59-c936-4311-bad8-d07404480f2a
 ms.openlocfilehash: 01ea71f3de9e30abe25184e38a59f3707b54bd5a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73422966"
 ---
 # <a name="-doc-c-compiler-options"></a>-doc (C# 編譯器選項)
@@ -43,7 +43,7 @@ ms.locfileid: "73422966"
   
  若要以產生的 .xml 檔案搭配 [IntelliSense](/visualstudio/ide/using-intellisense) 功能使用，.xml 檔案的檔案名稱要和您想支援的組件同名，然後確定 .xml 檔案和組件位於相同的目錄。 如此，在 Visual Studio 專案中參考組件時，也會找到 .xml 檔案。 如需詳細資訊，請參閱[提供程式碼註解](/visualstudio/ide/reference/generate-xml-documentation-comments)。  
   
- 除非您使用 [-target:module](./target-module-compiler-option.md) 編譯，否則 `file` 會包含 \<assembly>\</assembly> 標記，以指定包含編譯輸出檔案之組建資訊清單的檔案名稱。  
+ 除非使用[-target：module](./target-module-compiler-option.md)編譯`file`，\<否則將\<包含程式集>/assembly>標記，指定包含編譯輸出檔案的組件資訊清單的檔的名稱。  
   
 > [!NOTE]
 > -doc 選項適用於所有輸入檔案，或者，如果設定於 [專案設定]，則適用於專案中的所有檔案。 若要停用與特定檔案或程式碼區段文件註解相關的警告，請使用[#pragma 警告](../preprocessor-directives/preprocessor-pragma-warning.md)。  
@@ -52,15 +52,15 @@ ms.locfileid: "73422966"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性]**** 頁面。  
   
-2. 按一下 [建置] 索引標籤。  
+2. 按一下 [建置]**** 索引標籤。  
   
 3. 修改 **XML 文件檔案**屬性。  
   
  如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DocumentationFile%2A>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

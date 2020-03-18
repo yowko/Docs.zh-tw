@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 ms.openlocfilehash: 5150e871d75c3c34dab10f10cdac3d8322d7a834
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70849875"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C# 編譯器選項)
@@ -62,16 +62,16 @@ anycpu (預設值)、anycpu32bitpreferred、ARM、x64、x86 或 Itanium。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性] 頁面。
+1. 開啟專案的 [屬性] **** 頁面。
 
-2. 按一下 [建置] 屬性頁面。
+2. 按一下 [建置]**** 屬性頁面。
 
-3. 修改**平台目標**屬性，並且針對以 .NET Framework 4.5 為目標的專案選取或清除 [建議使用 32 位元] 核取方塊。
+3. 修改**平台目標**屬性，並且針對以 .NET Framework 4.5 為目標的專案選取或清除 [建議使用 32 位元]**** 核取方塊。
 
 > [!NOTE]
-> `-platform`在 Visual C# Express 的開發環境中無法使用。
+> `-platform`在 Visual C# Express 的開發環境中不可用。
 
-如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>。
+如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>。
 
 ## <a name="example"></a>範例
 

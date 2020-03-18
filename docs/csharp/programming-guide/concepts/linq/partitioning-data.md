@@ -3,10 +3,10 @@ title: 分割資料 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
 ms.openlocfilehash: d9330e9973b2f25903e1f81a7296362e2a7c756b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591587"
 ---
 # <a name="partitioning-data-c"></a>分割資料 (C#)
@@ -18,9 +18,9 @@ LINQ 中的分割是指將輸入序列分成兩個區段的作業，不用重新
   
  分割序列的標準查詢運算子方法詳列於下一節。  
   
-## <a name="operators"></a>運算子  
+## <a name="operators"></a>操作員  
   
-|運算子名稱|說明|C# 查詢運算式語法|更多資訊|  
+|運算子名稱|描述|C# 查詢運算式語法|相關資訊|  
 |-------------------|-----------------|---------------------------------|----------------------|  
 |Skip|略過項目直至序列中指定的位置為止。|不適用。|<xref:System.Linq.Enumerable.Skip%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Skip%2A?displayProperty=nameWithType>|  
 |SkipWhile|根據述詞函式跳過項目，直到不符合條件的項目為止。|不適用。|<xref:System.Linq.Enumerable.SkipWhile%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SkipWhile%2A?displayProperty=nameWithType>|  

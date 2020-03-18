@@ -3,10 +3,10 @@ title: 呼叫端資訊 (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
 ms.openlocfilehash: 4b2c34945b47db01b0e655f68f92e4dae7445c2c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595347"
 ---
 # <a name="caller-information-c"></a>呼叫端資訊 (C#)
@@ -15,7 +15,7 @@ ms.locfileid: "69595347"
 
 若要取得這項資訊，可使用套用至選擇性參數的屬性，每個屬性都有預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中定義的 Caller Info 屬性：
 
-|屬性|說明|類型|
+|屬性|描述|類型|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含呼叫端的原始程式檔完整路徑。 這是編譯時間的檔案路徑。|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|原始程式檔中呼叫方法所在的行號。|`Integer`|
@@ -61,7 +61,7 @@ Caller Info 屬性不會讓參數成為選擇性， 而是會影響省略引數�
 
 ### <a name="member-names"></a>成員名稱
 
-您可以使用 `CallerMemberName` 屬性避免指定成員名稱做為所呼叫方法的 `String` 引數。 利用這個技巧就可以避免發生 [重新命名重構]  未變更 `String` 值這個問題。 這項優點對於下列工作特別有用：
+您可以使用 `CallerMemberName` 屬性避免指定成員名稱做為所呼叫方法的 `String` 引數。 利用這個技巧就可以避免發生 [重新命名重構]**** 未變更 `String` 值這個問題。 這項優點對於下列工作特別有用：
 
 - 使用追蹤和診斷常式。
 

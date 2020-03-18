@@ -7,16 +7,16 @@ helpviewer_keywords:
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
 ms.openlocfilehash: 183f53a579bdd9f70deb16ca9157c377fa3aff3f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75712308"
 ---
 # <a name="events-c-programming-guide"></a>事件 (C# 程式設計手冊)
-事件可讓 [類別](../../language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或 *「引發」* (raise)) 事件的類別稱為 *「發行者」* (publisher)，而接收 (或 *「處理」* (handle)) 事件的類別則稱為 *「訂閱者」* (subscriber)。  
+事件可讓 [類別](../../language-reference/keywords/class.md) 或物件在某些相關的事情發生時，告知其他類別或物件。 發送（或*引發*）事件的類稱為*發行者*，接收（或*處理*）事件的類稱為*訂閱者*。  
   
-在典型的 C# Windows Forms 或 Web 應用程式中，您可訂閱由控制項 (如按鈕和清單方塊) 引發的事件。 您可以使用 Visual C# 整合式開發環境 (IDE) 來瀏覽控制項發行的事件，並選擇您想要處理的事件。 IDE 提供一種簡單的方式來自動新增空的事件處理常式方法，及用來訂閱該事件的程式碼。 如需詳細資訊，請參閱[如何訂閱及取消訂閱事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)。
+在典型的 C# Windows Forms 或 Web 應用程式中，您可訂閱由控制項 (如按鈕和清單方塊) 引發的事件。 您可以使用 Visual C# 整合式開發環境 (IDE) 來瀏覽控制項發行的事件，並選擇您想要處理的事件。 IDE 提供一種簡單的方式來自動新增空的事件處理常式方法，及用來訂閱該事件的程式碼。 有關詳細資訊，請參閱[如何訂閱和取消訂閱事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)。
   
 ## <a name="events-overview"></a>事件概觀  
  事件有下列屬性：  
@@ -34,28 +34,28 @@ ms.locfileid: "75712308"
 - 在 .NET Framework 類別庫中，事件取決於 <xref:System.EventHandler> 委派以及 <xref:System.EventArgs> 基底類別。  
   
 ## <a name="related-sections"></a>相關章節  
- 如需詳細資訊，請參閱＜＞。  
+ 如需詳細資訊，請參閱  
   
-- [如何訂閱和取消訂閱事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)
+- [如何訂閱及取消訂閱事件](./how-to-subscribe-to-and-unsubscribe-from-events.md)
 
-- [如何發行符合 .NET Framework 方針的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [如何發佈符合 .NET Framework 方針的事件](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 
-- [如何在衍生類別中引發基類事件](./how-to-raise-base-class-events-in-derived-classes.md)
+- [如何在衍生類別中引發基底類別事件](./how-to-raise-base-class-events-in-derived-classes.md)
 
-- [如何執行介面事件](./how-to-implement-interface-events.md)
+- [如何實作介面事件](./how-to-implement-interface-events.md)
 
-- [如何執行自訂事件存取子](./how-to-implement-custom-event-accessors.md)
+- [如何實現自訂事件訪問器](./how-to-implement-custom-event-accessors.md)
 
 ## <a name="c-language-specification"></a>C# 語言規格  
 
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的[事件](~/_csharplang/spec/classes.md#events)。 語言規格是 C# 語法及用法的限定來源。
   
 ## <a name="featured-book-chapters"></a>精選書籍章節  
- [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) (委派、事件和 Lambda 運算式)  
+ [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) (C# 3.0 Cookbook 第三版：250 個以上 C# 3.0 程式設計人員適用的方案) 中的 [Delegates, Events, and Lambda Expressions](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
  [Delegates and Events](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) in [Learning C# 3.0: Master the fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.EventHandler>
 - [C# 程式設計指南](../index.md)

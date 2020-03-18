@@ -6,10 +6,10 @@ ms.date: 10/04/2018
 dev_langs:
 - fsharp
 ms.openlocfilehash: 3347e5b90c31589e9a0f99ac0d9298927a717f56
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715451"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>使用 dotnet test 與 NUnit 為 .NET Core 中的 F# 程式庫進行單元測試
@@ -18,10 +18,10 @@ ms.locfileid: "75715451"
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更新版本。
-- 您選擇的文字編輯器或程式碼編輯器。
+- 您偏好的文字編輯器或程式碼編輯器。
 
 ## <a name="creating-the-source-project"></a>建立來源專案
 
@@ -137,7 +137,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.True(false)
 ```
 
-`[<TestFixture>]` 屬性表示包含測試的類別。 `[<Test>]` 屬性表示由測試執行器執行的測試方法。 從*單元測試-fsharp.core*目錄中，執行 `dotnet test` 來建立測試和類別庫，然後執行測試。 NUnit 測試執行器包含執行測試的程式進入點。 `dotnet test` 會使用您建立的單元測試專案來開始測試執行器。
+`[<TestFixture>]` 屬性表示包含測試的類別。 `[<Test>]` 屬性表示由測試執行器執行的測試方法。 從 *unit-testing-with-fsharp* 目錄，執行 `dotnet test` 來建置測試和類別庫，然後執行測試。 NUnit 測試執行器包含執行測試的程式進入點。 `dotnet test` 會使用您建立的單元測試專案來開始測試執行器。
 
 這兩個測試會顯示最基本的成功和失敗測試。 `My test` 成功，而 `Fail every time` 失敗。 現在，針對 `squaresOfOdds` 方法建立測試。 `squaresOfOdds` 方法會傳回屬於輸入序列一部分的所有奇數整數值平方序列。 您能以反覆方式建立會驗證功能的測試，而不需要嘗試一次撰寫所有那些函式。 將每個測試設定為通過表示為方法建立必要功能。
 
@@ -210,7 +210,7 @@ let squaresOfOdds xs =
 
 您已建置好小型的程式庫和該程式庫的一組單元測試， 您已建立方案結構，因此加入新套件與測試是一般工作流程的一部分。 您已集中大部分的時間與精力以解決應用程式目標。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [dotnet add reference](../tools/dotnet-add-reference.md)
-- [dotnet test](../tools/dotnet-test.md)
+- [點網測試](../tools/dotnet-test.md)

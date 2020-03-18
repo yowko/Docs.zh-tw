@@ -1,6 +1,6 @@
 ---
-title: 列舉類型- C#參考
-description: 瞭解代表C#選擇或選擇組合的列舉類型
+title: 枚舉類型 - C# 引用
+description: 瞭解表示選擇或選項群組合的 C# 枚舉類型
 ms.date: 12/13/2019
 f1_keywords:
 - enum
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 77c7b7bd7f3e59fbe782755c829f18cf1cefc725
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239816"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847701"
 ---
-# <a name="enumeration-types-c-reference"></a>列舉類型（C#參考）
+# <a name="enumeration-types-c-reference"></a>枚舉類型（C# 引用）
 
-*列舉型*別（或*列舉型*別）是由基礎[整數數值](integral-numeric-types.md)類型的一組命名常數所定義的實[值型](value-types.md)別。 若要定義列舉類型，請使用 `enum` 關鍵字，並指定*列舉成員*的名稱：
+*枚舉類型*（或*枚舉類型*）是由基礎[整體數值](integral-numeric-types.md)類型的一組命名常量定義的[數值型別](value-types.md)。 要定義枚舉類型，請使用 關鍵字`enum`並指定*枚舉成員*的名稱：
 
 ```csharp
 enum Season
@@ -32,7 +32,7 @@ enum Season
 }
 ```
 
-根據預設，列舉成員的相關聯常數值是 `int`的類型;開頭為零，並依照定義文字順序增加一個。 您可以明確地指定任何其他[整數數值](integral-numeric-types.md)類型做為列舉類型的基礎類型。 您也可以明確指定相關聯的常數值，如下列範例所示：
+預設情況下，枚舉成員的關聯常量值為`int`類型 ;它們以零開始，然後按照定義文本順序增加一個。 您可以顯式指定任何其他[積分數值](integral-numeric-types.md)類型作為枚舉類型的基礎類型。 您還可以顯式指定關聯的常量值，如以下示例所示：
 
 ```csharp
 enum ErrorCode : ushort
@@ -44,35 +44,35 @@ enum ErrorCode : ushort
 }
 ```
 
-您無法在列舉類型的定義內定義方法。 若要將功能加入至列舉類型，請建立[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)。
+不能在枚舉類型的定義中定義方法。 要將功能添加到枚舉類型，請創建[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)。
 
-列舉型別的預設值 `E` 是運算式 `(E)0`所產生的值，即使零沒有對應的列舉成員也一樣。
+枚舉類型的`E`預設值是運算式`(E)0`生成的值，即使零沒有相應的枚舉成員也是如此。
 
-您可以使用列舉類型，從一組互斥值或選擇組合來表示選擇。 若要代表選擇的組合，請將列舉類型定義為位旗標。
+您可以使用枚舉類型表示一組互斥值或選項群組合的選擇。 要表示選項的組合，請將枚舉類型定義為位標誌。
 
 ## <a name="enumeration-types-as-bit-flags"></a>作為位元旗標的列舉類型
 
-如果您想要列舉類型來代表選擇的組合，請針對這些選擇定義列舉成員，讓個別的選擇是位欄位。 也就是說，這些列舉成員的相關聯值應該是兩個的乘冪。 然後，您可以使用[位邏輯運算子 `|` 或 `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) ，分別結合選擇或交集的選擇組合。 若要指出列舉類型會宣告位欄位，請將[Flags](xref:System.FlagsAttribute)屬性套用至其中。 如下列範例所示，您也可以在列舉類型的定義中包含一些一般組合。
+如果希望枚舉類型表示選項的組合，請為這些選項定義枚舉成員，以便單個選項是位欄位。 也就是說，這些枚舉成員的相關值應該是兩者的權力。 然後，您可以使用[位邏輯運算子`|``&`，也可以](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators)分別組合選項或相交選項群組合。 要指示枚舉型別宣告位欄位，請對其應用[Flags](xref:System.FlagsAttribute)屬性。 如以下示例所示，您還可以在枚舉類型的定義中包括一些典型的組合。
 
-[!code-csharp[enum flags](~/samples/snippets/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
+[!code-csharp[enum flags](snippets/EnumType.cs#Flags)]
 
-如需詳細資訊和範例，請參閱 <xref:System.Enum?displayProperty=nameWithType> API 參考頁面的 <xref:System.FlagsAttribute?displayProperty=nameWithType> API 參考頁面和[非獨佔成員和 Flags 屬性](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute)一節。
+有關詳細資訊和示例，請參閱<xref:System.FlagsAttribute?displayProperty=nameWithType>API 參考頁和非[獨佔成員以及](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute) <xref:System.Enum?displayProperty=nameWithType> API 參考頁的標誌屬性部分。
 
-## <a name="the-systemenum-type-and-enum-constraint"></a>System.string 類型和 enum 條件約束
+## <a name="the-systemenum-type-and-enum-constraint"></a>系統.枚舉類型和枚舉約束
 
-<xref:System.Enum?displayProperty=nameWithType> 類型是所有列舉類型的抽象基類。 它提供了數種方法來取得列舉型別和其值的相關資訊。 如需詳細資訊和範例，請參閱 <xref:System.Enum?displayProperty=nameWithType> API 參考頁面。
+類型<xref:System.Enum?displayProperty=nameWithType>是所有枚舉類型的抽象基類。 它提供了許多方法來獲取有關枚舉類型及其值的資訊。 有關詳細資訊和示例，<xref:System.Enum?displayProperty=nameWithType>請參閱 API 參考頁。
 
-從C# 7.3 開始，您可以在基類條件約束（也稱為[列舉條件約束](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)）中使用 `System.Enum`，以指定類型參數是列舉類型。
+從 C# 7.3 開始，`System.Enum`可以在基類約束（稱為[枚舉約束](../../programming-guide/generics/constraints-on-type-parameters.md#enum-constraints)）中使用來指定類型參數是枚舉類型。
 
 ## <a name="conversions"></a>轉換
 
-針對任何列舉型別，列舉型別與其基礎整數型別之間存在明確轉換。 如果您將列舉值[轉換](../operators/type-testing-and-cast.md#cast-operator-)為其基礎類型，則結果會是列舉成員的相關整數值。
+對於任何枚舉類型，枚舉類型與其基礎積分類型之間存在顯式轉換。 如果將枚舉值[轉換為](../operators/type-testing-and-cast.md#cast-operator-)其基礎類型，則結果為枚舉成員的關聯積分值。
 
-[!code-csharp[enum conversions](~/samples/snippets/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
+[!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 
-使用 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> 方法來判斷列舉類型是否包含具有特定相關聯值的列舉成員。
+使用<xref:System.Enum.IsDefined%2A?displayProperty=nameWithType>方法確定枚舉類型是否包含具有特定關聯值的枚舉成員。
 
-針對任何列舉類型，會分別存在與 <xref:System.Enum?displayProperty=nameWithType> 類型之間的[裝箱和取消裝箱](../../programming-guide/types/boxing-and-unboxing.md)轉換。
+對於任何枚舉類型，分別存在與<xref:System.Enum?displayProperty=nameWithType>類型轉換的[裝箱和取消裝箱](../../programming-guide/types/boxing-and-unboxing.md)轉換。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -81,14 +81,14 @@ enum ErrorCode : ushort
 - [列舉](~/_csharplang/spec/enums.md)
 - [列舉值和作業](~/_csharplang/spec/enums.md#enum-values-and-operations)
 - [列舉邏輯運算子](~/_csharplang/spec/expressions.md#enumeration-logical-operators)
-- [列舉比較運算子](~/_csharplang/spec/expressions.md#enumeration-comparison-operators)
-- [明確列舉轉換](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
-- [隱含列舉轉換](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
+- [枚舉比較運算子](~/_csharplang/spec/expressions.md#enumeration-comparison-operators)
+- [顯式枚舉轉換](~/_csharplang/spec/conversions.md#explicit-enumeration-conversions)
+- [隱式枚舉轉換](~/_csharplang/spec/conversions.md#implicit-enumeration-conversions)
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [列舉格式字串](../../../standard/base-types/enumeration-format-strings.md)
-- [設計方針-列舉設計](../../../standard/design-guidelines/enum.md)
-- [設計方針-列舉命名慣例](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
-- [switch 陳述式](../keywords/switch.md)
+- [列舉類型格式字串](../../../standard/base-types/enumeration-format-strings.md)
+- [設計指南 - 枚舉設計](../../../standard/design-guidelines/enum.md)
+- [設計指南 - 枚舉命名約定](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [Switch 陳述式](../keywords/switch.md)

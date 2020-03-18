@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /nowin32manifest compiler option [C#]
 ms.assetid: 6f06365b-b87b-46a2-b187-b3bfeaf4862d
 ms.openlocfilehash: 8820410bfdbce2f9986605f37af4d14957471126
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602709"
 ---
 # <a name="-nowin32manifest-c-compiler-options"></a>-nowin32manifest (C# 編譯器選項)
@@ -27,7 +27,7 @@ ms.locfileid: "69602709"
 ## <a name="remarks"></a>備註  
  使用此選項時，應用程式在 Windows Vista 上會虛擬化，除非您在 Win32 資源檔案中或於更新版本組建步驟期間提供應用程式資訊清單。  
   
- 在 Visual Studio 中，選取 [資訊清單]  下拉式清單的 [建立無資訊清單應用程式]  選項，在 [Application Property] (應用程式屬性)  頁面中設定這個選項。 如需詳細資訊，請參閱[專案設計工具、應用程式頁面 (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp)。  
+ 在 Visual Studio 中，選取 [資訊清單]**** 下拉式清單的 [建立無資訊清單應用程式]**** 選項，在 [Application Property] (應用程式屬性)**** 頁面中設定這個選項。 有關詳細資訊，請參閱[應用程式頁、專案設計器 （C#）。](/visualstudio/ide/reference/application-page-project-designer-csharp)  
   
  如需建立資訊清單的詳細資訊，請參閱 [-win32manifest (C# 編譯器選項)](./win32manifest-compiler-option.md)。  
   

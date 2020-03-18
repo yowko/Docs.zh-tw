@@ -3,10 +3,10 @@ title: C# 中的預設命名空間範圍
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
 ms.openlocfilehash: 7615351f6e5f8b18bd6466a83d54aa65a6c99b50
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253043"
 ---
 # <a name="scope-of-default-namespaces-in-c"></a>C\# 中的預設命名空間範圍

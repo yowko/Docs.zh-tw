@@ -5,15 +5,15 @@ helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712945"
 ---
 # <a name="using-static-directive-c-reference"></a>using static 指示詞 (C# 參考)
 
-`using static` 指示詞指定一種類型，讓您不需要指定類型名稱，即可存取其靜態成員和巢狀型別。 它的語法為：
+`using static` 指示詞指定一種類型，讓您不需要指定類型名稱，即可存取其靜態成員和巢狀型別。 其語法如下：
 
 ```csharp
 using static <fully-qualified-type-name>;
@@ -49,9 +49,9 @@ using static <fully-qualified-type-name>;
 
 在此範例中，`using static` 指示詞也可能已套用至 <xref:System.Double> 類型。 因此不需要指定類型名稱，即可呼叫 <xref:System.Double.TryParse(System.String,System.Double@)> 方法。 不過，這會建立難以閱讀的程式碼，因為您必須檢查 `using static` 陳述式，以判斷呼叫了哪一個數字類型的 `TryParse` 方法。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [using 指示詞](using-directive.md)
+- [使用指令](using-directive.md)
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)
 - [使用命名空間](../../programming-guide/namespaces/using-namespaces.md)

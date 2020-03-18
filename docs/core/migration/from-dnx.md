@@ -3,10 +3,10 @@ title: 從 DNX 移轉到 .NET Core CLI
 description: 從使用 DNX 工具移轉為 .NET Core CLI 工具。
 ms.date: 06/20/2016
 ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503828"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>從 DNX 移轉到 .NET Core CLI (project.json)
@@ -28,11 +28,11 @@ ms.locfileid: "77503828"
 首先，我們必須先概述這項工具的幾個一般變更。
 
 ### <a name="no-more-dnvm"></a>不再有 DNVM
-DNVM 是「DotNet 版本管理員」的簡稱，其為一種可用來在電腦上安裝 DNX 的 Bash/PowerShell 指令碼。 它可幫助使用者從其指定的摘要 (或預設摘要) 取得所需的 DNX，並將特定 DNX 標示為「作用中」，以將它放在指定工作階段的 $PATH 中。 這樣一來，您就可以使用各種工具。
+DNVM 是「DotNet 版本管理員」** 的簡稱，其為一種可用來在電腦上安裝 DNX 的 Bash/PowerShell 指令碼。 它可幫助使用者從其指定的摘要 (或預設摘要) 取得所需的 DNX，並將特定 DNX 標示為「作用中」，以將它放在指定工作階段的 $PATH 中。 這樣一來，您就可以使用各種工具。
 
-DNVM 已中止，因為 .NET Core CLI 中的變更將其功能集設為多餘的。
+DNVM 已停產，因為其功能集由於 .NET 核心 CLI 中的更改而變得多餘。
 
-CLI 以兩種主要方式封裝：
+CLI 以兩種主要方式打包：
 
 1. 適用於指定平台的原生安裝程式
 2. 適用於其他情況的安裝指令碼 (例如 CI 伺服器)
@@ -69,7 +69,7 @@ DNU 具有「全域命令」的概念。 基本上，這當中包括封裝為 Nu
 CLI 不支援此概念。 不過，它支援新增個別專案命令的概念；您可使用熟悉的 `dotnet <command>` 語法叫用這些命令。
 
 ### <a name="installing-dependencies"></a>安裝相依性
-從 v1 起，.NET Core CLI 沒有用於安裝相依性的 `install` 命令。 若要從 NuGet 安裝套件，您必須將它以相依性形式新增至 `project.json` 檔案，然後執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note))。
+截至 v1，.NET Core CLI 沒有用於安裝`install`依賴項的命令。 若要從 NuGet 安裝套件，您必須將它以相依性形式新增至 `project.json` 檔案，然後執行 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note))。
 
 ### <a name="running-your-code"></a>執行您的程式碼
 有以下兩種執行程式碼的主要方式。 一個是使用 `dotnet run`，從來源執行。 不同於 `dnx run`，這麼做並不會執行任何記憶體中編譯。 實際上，它會叫用 `dotnet build` 以建置您的程式碼，然後執行建置的二進位檔。
@@ -84,7 +84,7 @@ CLI 不支援此概念。 不過，它支援新增個別專案命令的概念；
 3. 將任何 DNX API 移轉至其 BCL 對應項目。
 
 ### <a name="changing-the-globaljson-file"></a>變更 global.json 檔案
-`global.json` 檔案的作用如同 RC1 和 RC2 (或更新版本) 專案的方案檔。 為了讓 .NET Core CLI （以及 Visual Studio）區分 RC1 和更新版本，它們會使用 `"sdk": { "version" }` 屬性來區分 RC1 或更新版本的專案。 如果 `global.json` 完全沒有這個節點，就會假設其為最新版本。
+`global.json` 檔案的作用如同 RC1 和 RC2 (或更新版本) 專案的方案檔。 為了使 .NET 核心 CLI（以及 Visual Studio）區分 RC1 和更高版本，他們使用`"sdk": { "version" }`屬性來區分哪個專案是 RC1 或更高版本。 如果 `global.json` 完全沒有這個節點，就會假設其為最新版本。
 
 若要更新 `global.json` 檔案，可移除該屬性或將它設為您想要使用之工具的正確版本，在此案例中為 **1.0.0-preview2-003121**：
 
@@ -110,7 +110,7 @@ CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系�
 
 這麼做會指示 `dotnet build` 針對您的應用程式發出進入點，以讓程式碼可有效執行。 如果您要建置類別庫，只要省略上一節即可。 當然，一旦將上述程式碼片段新增至 `project.json` 檔案之後，您必須新增靜態進入點。 移出 DNX 時，它所提供的 DI 服務便無法再使用，因此進入點必須是基本 .NET 進入點：`static void Main()`。
 
-如果您的 `project.json` 中有「命令」區段，您可以將它移除。 如果某些命令原本是以 DNU 命令的形式存在 (例如 Entity Framework CLI 命令)，則這些命令會以每個專案擴充功能的形式移植至 CLI。 如果您要自行建立命令以在專案中使用，則需要將其取代為 CLI 擴充功能。 在此情況下，`commands` 中的 `project.json` 節點必須以 `tools` 節點取代，且它需要列出工具相依性。
+如果您的 `project.json` 中有「命令」區段，您可以將它移除。 如果某些命令原本是以 DNU 命令的形式存在 (例如 Entity Framework CLI 命令)，則這些命令會以每個專案擴充功能的形式移植至 CLI。 如果您要自行建立命令以在專案中使用，則需要將其取代為 CLI 擴充功能。 在此情況下，`project.json` 中的 `commands` 節點必須以 `tools` 節點取代，且它需要列出工具相依性。
 
 完成這些作業之後，您必須決定應用程式要具備哪種類型的可攜性。 我們對 .NET Core 所提供的可攜性選項範圍投注不少心力，以供您選擇。 比方說，您可能需要完全*可攜式*的應用程式，或希望擁有*獨立*的應用程式。 可攜式應用程式選項很像 .NET Framework 應用程式的運作方式：它需要共用元件以在目標電腦 (.NET Core) 上執行。 獨立的應用程式不需要在目標上安裝 .NET Core，但是您必須為每個想要支援的作業系統產生一個應用程式。 [應用程式可攜性類型](../deploying/index.md)文件中會說明這些可攜性類型等相關資訊。
 
@@ -119,13 +119,13 @@ CLI 和 DNX 都使用以 `project.json` 檔案為基礎的相同基本專案系�
 1. `netcoreapp1.0`- 如果您要撰寫的應用程式在 .NET Core (包括 ASP.NET Core 應用程式) 上
 2. `netstandard1.6`- 如果您要撰寫 .NET Core 的類別庫
 
-如果您使用其他 `dnx` 目標 (例如 `dnx451`)，也必須變更這些項目。 `dnx451`應變更為 `net451`。
+如果您使用其他 `dnx` 目標 (例如 `dnx451`)，也必須變更這些項目。 `net451`應變更為 `dnx451`。
 如需詳細資訊，請參閱 [.NET Standard](../../standard/net-standard.md) 主題。
 
 您的 `project.json` 現已大致就緒。 接著，您必須檢查相依性清單，並將相依性更新為較新版本；如果您是使用 ASP.NET Core 相依性的話，更應注意這項作業。 如果您之前針對 BCL API 使用不同的套件，則可以使用[應用程式可攜性類型](../deploying/index.md)文件中所述的執行階段套件。
 
-準備好後，您可以嘗試使用 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note)) 進行還原。 根據您的相依性版本而定，如果 NuGet 無法解析上述其中一個目標架構的相依性，就可能會發生錯誤。 這是「時間點」的問題，因為隨著時間過去，會有越來越多套件支援這些架構。 目前來看，如果您遇到這個問題，可以使用 `imports` 節點內的 `framework` 陳述式，指定 NuGet 可以還原目標為 "imports" 陳述式內之架構的套件。
-在此情況下取得的還原錯誤應具有足夠資訊，可讓您知道需要匯入哪些架構。 如果您有點跟不上或對這方面不太熟悉，一般來說，只要在 `dnxcore50` 陳述式中指定 `portable-net45+win8` 和 `imports` 就可以達到目的。 下列 JSON 程式碼片段會示範這個過程：
+準備好後，您可以嘗試使用 `dotnet restore` ([請參閱注意事項](#dotnet-restore-note)) 進行還原。 根據您的相依性版本而定，如果 NuGet 無法解析上述其中一個目標架構的相依性，就可能會發生錯誤。 這是「時間點」的問題，因為隨著時間過去，會有越來越多套件支援這些架構。 目前來看，如果您遇到這個問題，可以使用 `framework` 節點內的 `imports` 陳述式，指定 NuGet 可以還原目標為 "imports" 陳述式內之架構的套件。
+在此情況下取得的還原錯誤應具有足夠資訊，可讓您知道需要匯入哪些架構。 如果您有點跟不上或對這方面不太熟悉，一般來說，只要在 `imports` 陳述式中指定 `dnxcore50` 和 `portable-net45+win8` 就可以達到目的。 下列 JSON 程式碼片段會示範這個過程：
 
 ```json
     "frameworks": {

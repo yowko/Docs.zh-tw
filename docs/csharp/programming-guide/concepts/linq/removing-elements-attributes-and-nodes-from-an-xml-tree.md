@@ -3,10 +3,10 @@ title: 從 XML 樹狀結構移除項目、屬性和節點 (C#)
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
 ms.openlocfilehash: badaa6bab35367d62a73f56c5221cb7d6d4a45f7
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591268"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>從 XML 樹狀結構移除項目、屬性和節點 (C#)
@@ -19,7 +19,7 @@ ms.locfileid: "69591268"
 
 下列方法會從 XML 樹狀移除節點和屬性。
 
-|方法|說明|
+|方法|描述|
 |------------|-----------------|
 |<xref:System.Xml.Linq.XAttribute.Remove%2A?displayProperty=nameWithType>|從其父代移除 <xref:System.Xml.Linq.XAttribute>。|
 |<xref:System.Xml.Linq.XContainer.RemoveNodes%2A?displayProperty=nameWithType>|從 <xref:System.Xml.Linq.XContainer> 移除子節點。|
@@ -32,7 +32,7 @@ ms.locfileid: "69591268"
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>說明
+### <a name="description"></a>描述
 
 這個範例會示範三種移除項目的方法。 首先，它會移除單一項目。 接著，它會反覆運算項目的集合，使用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 運算子具體化它們，然後移除集合。 最後，它會擷取項目的集合，並使用 <xref:System.Xml.Linq.Extensions.Remove%2A> 擴充方法加以移除。
 

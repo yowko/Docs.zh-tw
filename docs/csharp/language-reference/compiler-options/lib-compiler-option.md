@@ -9,14 +9,14 @@ helpviewer_keywords:
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 ms.openlocfilehash: 0c230147be055170ca015f27bd42bb096399405d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606828"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# 編譯器選項)
-**-lib** 選項會使用 [-reference (C# 編譯器選項)](./reference-compiler-option.md) 選項，來指定參考的組件位置。  
+**-lib**選項指定通過[-參考 （C# 編譯器選項） 選項](./reference-compiler-option.md)引用的程式集的位置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,13 +52,13 @@ ms.locfileid: "69606828"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性頁]  對話方塊。  
+1. 開啟專案的 [屬性頁] **** 對話方塊。  
   
-2. 按一下 [參考路徑]  屬性頁。  
+2. 按一下 [參考路徑]**** 屬性頁。  
   
 3. 修改清單方塊的內容。  
   
- 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>。  
   
 ## <a name="example"></a>範例  
  編譯 t2.cs 以建立 .exe 檔。 編譯器會在工作目錄和 C 磁碟機的根目錄中尋找組件參考。  

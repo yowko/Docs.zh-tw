@@ -1,35 +1,35 @@
 ---
 ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74100760"
 ---
-### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>授權： AddAuthorization 多載已移至不同的元件
+### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>授權：將授權重載移動到不同的程式集
 
-用來存放在 `Microsoft.AspNetCore.Authorization` 中的核心 `AddAuthorization` 方法已重新命名為 `AddAuthorizationCore`。 舊的 `AddAuthorization` 方法仍然存在，但卻是在 `Microsoft.AspNetCore.Authorization.Policy` 元件中。 使用這兩種方法的應用程式應該看不到任何影響。 請注意，`Microsoft.AspNetCore.Authorization.Policy` 現在隨附于共用架構中，而不是獨立套件，如[共用架構：從 AspNetCore 移除的元件](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)中所述。
+過去駐`AddAuthorization`留在 中`Microsoft.AspNetCore.Authorization`的核心方法重命名為`AddAuthorizationCore`。 舊`AddAuthorization`方法仍然存在，但位於程式集中`Microsoft.AspNetCore.Authorization.Policy`。 使用這兩種方法的應用不應看到任何影響。 請注意，`Microsoft.AspNetCore.Authorization.Policy`現在在共用框架中發貨，而不是共用框架中討論的獨立包[：從 Microsoft 中刪除的程式集](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
-`AddAuthorization` 方法存在於 `Microsoft.AspNetCore.Authorization` 中。
+`AddAuthorization`方法存在於`Microsoft.AspNetCore.Authorization`中。
 
 #### <a name="new-behavior"></a>新的行為
 
-`AddAuthorization` 方法存在於 `Microsoft.AspNetCore.Authorization.Policy` 中。 `AddAuthorizationCore` 是舊方法的新名稱。
+`AddAuthorization`方法存在於`Microsoft.AspNetCore.Authorization.Policy`中。 `AddAuthorizationCore`是舊方法的新名稱。
 
-#### <a name="reason-for-change"></a>變更的原因
+#### <a name="reason-for-change"></a>更改原因
 
-`AddAuthorization` 是新增授權所需之所有泛型服務的較佳方法名稱。
+`AddAuthorization`是添加授權所需的所有公共服務的更好方法名稱。
 
 #### <a name="recommended-action"></a>建議的動作
 
-請將參考新增至 `Microsoft.AspNetCore.Authorization.Policy`，或改為使用 `AddAuthorizationCore`。
+增加參考`Microsoft.AspNetCore.Authorization.Policy`或改用引用`AddAuthorizationCore`。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

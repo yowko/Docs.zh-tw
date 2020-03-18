@@ -3,15 +3,15 @@ title: 在 C# 中逐一查看集合
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
 ms.openlocfilehash: aceedd11466c75cedad3c67224c3a5595b4cabfa
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626266"
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 
-「迭代器」可用來逐步執行集合，例如清單和陣列。
+「迭代器」** 可用來逐步執行集合，例如清單和陣列。
 
 迭代器方法或 `get` 存取子會對集合執行自訂反覆運算。 迭代器方法使用 [yield return](../../language-reference/keywords/yield.md) 陳述式，一次傳回一個項目。 當到達 `yield return` 陳述式時，系統會記住程式碼中的目前位置。 下次呼叫迭代器函式時，便會從這個位置重新開始執行。
 
@@ -43,11 +43,11 @@ public static System.Collections.IEnumerable SomeNumbers()
 您可以使用 `yield break` 陳述式結束反覆項目。
 
 > [!NOTE]
-> 如需本主題中除簡易迭代器範例以外的其他所有範例，請加入 [ 和 ](../../language-reference/keywords/using-directive.md) 命名空間的 `System.Collections`using`System.Collections.Generic` 指示詞。
+> 如需本主題中除簡易迭代器範例以外的其他所有範例，請加入 `System.Collections` 和 `System.Collections.Generic` 命名空間的 [using](../../language-reference/keywords/using-directive.md) 指示詞。
 
 ## <a name="simple-iterator"></a>簡單的 Iterator
 
-下列範例在 `yield return`for[ 迴圈內有一行 ](../../language-reference/keywords/for.md) 陳述式。 在 `Main` 中，每次反覆運算 `foreach` 陳述式主體都會建立迭代器函式的呼叫，以繼續進行下一個 `yield return` 陳述式。
+下列範例在 [for](../../language-reference/keywords/for.md) 迴圈內有一行 `yield return` 陳述式。 在 `Main` 中，每次反覆運算 `foreach` 陳述式主體都會建立迭代器函式的呼叫，以繼續進行下一個 `yield return` 陳述式。
 
 ```csharp
 static void Main()
@@ -110,7 +110,7 @@ public class DaysOfTheWeek : IEnumerable
 
 下列範例會建立 `Zoo` 類別，其中包含動物的集合。
 
-參考類別執行個體 (`foreach`) 的 `theZoo` 陳述式會隱含呼叫 `GetEnumerator` 方法。 參考 `foreach` 和 `Birds` 屬性的 `Mammals` 陳述式會使用 `AnimalsForType` 具名迭代器方法。
+參考類別執行個體 (`theZoo`) 的 `foreach` 陳述式會隱含呼叫 `GetEnumerator` 方法。 參考 `Birds` 和 `Mammals` 屬性的 `foreach` 陳述式會使用 `AnimalsForType` 具名迭代器方法。
 
 ```csharp
 static void Main()
@@ -324,11 +324,11 @@ public class Stack<T> : IEnumerable<T>
 
 出現的迭代器可以是方法或 `get` 存取子。 迭代器不能出現在事件、執行個體建構函式、靜態建構函式或靜態完成項中。
 
-從 `yield return` 語句中的運算式類型到反覆運算器所傳回之 `IEnumerable<T>` 的型別引數，必須有隱含轉換。
+隱式轉換必須存在於`yield return`語句中的運算式類型到反覆運算器返回的類型`IEnumerable<T>`參數。
 
 在 C# 中，迭代器方法不可有任何 `in`、`ref` 或 `out` 參數。
 
-在C#中，`yield` 不是保留字，只有在 `return` 或 `break` 關鍵字之前使用時，才具有特殊意義。
+在 C#`yield`中，它不是保留詞，只有在 在`return`或`break`關鍵字之前使用時才具有特殊含義。
 
 ## <a name="technical-implementation"></a>技術實作
 
@@ -336,7 +336,7 @@ public class Stack<T> : IEnumerable<T>
 
 若要查看編譯器的功能，您可以使用 Ildasm.exe 工具，檢視為迭代器方法產生的 Microsoft 中繼語言程式碼。
 
-當您建立 [class](../../language-reference/keywords/class.md) 或 [struct](../../language-reference/builtin-types/struct.md) 的迭代器時，您不需要實作整個 <xref:System.Collections.IEnumerator> 介面。 當編譯器偵測到迭代器時，它會自動產生 `Current` 或 `MoveNext` 介面的 `Dispose`、<xref:System.Collections.IEnumerator> 和 <xref:System.Collections.Generic.IEnumerator%601> 方法。
+當您建立 [class](../../language-reference/keywords/class.md) 或 [struct](../../language-reference/builtin-types/struct.md) 的迭代器時，您不需要實作整個 <xref:System.Collections.IEnumerator> 介面。 當編譯器偵測到迭代器時，它會自動產生 <xref:System.Collections.IEnumerator> 或 <xref:System.Collections.Generic.IEnumerator%601> 介面的 `Current`、`MoveNext` 和 `Dispose` 方法。
 
 之後每次反覆運算 `foreach` 迴圈 (或直接呼叫 `IEnumerator.MoveNext`)，下一個迭代器程式碼主體都會在上一個 `yield return` 陳述式之後繼續。 然後繼續執行至下一個 `yield return` 陳述式，直到達到迭代器主體結尾，或遇到 `yield break` 陳述式為止。
 

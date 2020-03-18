@@ -1,34 +1,34 @@
 ---
 ms.openlocfilehash: 60ebcd9fc9ca18c33d31b82ba5020426d22a7d5a
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901829"
 ---
-### <a name="authentication-httpcontextauthentication-property-removed"></a>驗證：已移除 HttpCoNtext 驗證屬性
+### <a name="authentication-httpcontextauthentication-property-removed"></a>身份驗證：HTTPCoNtext.身份驗證屬性已刪除
 
-已移除 `HttpContext` 上已淘汰的 `Authentication` 屬性。
+已刪除 上的`Authentication``HttpContext`已棄用屬性。
 
 #### <a name="change-description"></a>變更描述
 
-做為[dotnet/aspnetcore # 6504](https://github.com/dotnet/aspnetcore/pull/6504)的一部分，已移除 `HttpContext` 上已淘汰的 `Authentication` 屬性。 2\.0 之後，`Authentication` 屬性已被取代。 已發行[遷移指南](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)，以將使用此已淘汰屬性的程式碼遷移至新的取代 api。 與舊的 ASP.NET Core 1.x 驗證堆疊相關的其餘未使用類別/Api，已在認可[dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65)中移除。
+作為[dotnet/aspnetcore_6504](https://github.com/dotnet/aspnetcore/pull/6504)的一部分，已刪除`Authentication`上的`HttpContext`棄用屬性。 自`Authentication`2.0 起，該屬性已被棄用。 發佈了[遷移指南](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)，用於使用此棄用屬性將代碼遷移到新的替換 API。 其餘未使用的類/API與舊ASP.NET Core 1.x 身份驗證堆疊在提交[dotnet/aspnetcore@d7a7c65](https://github.com/dotnet/aspnetcore/commit/d7a7c65)中被刪除。
 
-如需討論，請參閱[dotnet/aspnetcore # 6533 沒有](https://github.com/dotnet/aspnetcore/issues/6533)。
+有關討論，請參閱[點網/阿斯平核心#6533](https://github.com/dotnet/aspnetcore/issues/6533)。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
 3.0
 
-#### <a name="reason-for-change"></a>變更的原因
+#### <a name="reason-for-change"></a>更改原因
 
-ASP.NET Core 1.0 Api 已由 <xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>中的擴充方法所取代。
+ASP.NET 核心 1.0 API 已被 中的<xref:Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions?displayProperty=fullName>擴充方法替換。
 
 #### <a name="recommended-action"></a>建議的動作
 
 請參閱[遷移指南](/aspnet/core/migration/1x-to-2x/identity-2x?view=aspnetcore-2.2#use-httpcontext-authentication-extensions)。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

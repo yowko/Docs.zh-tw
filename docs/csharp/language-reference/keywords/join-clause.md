@@ -9,10 +9,10 @@ helpviewer_keywords:
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713398"
 ---
 # <a name="join-clause-c-reference"></a>join 子句 (C# 參考)
@@ -55,7 +55,7 @@ ms.locfileid: "75713398"
 
 ## <a name="left-outer-join"></a>左方外部聯結
 
-在左方外部聯結中，會傳回左側來源序列中的所有項目，即使在右側序列中沒有相符項目亦然。 若要在 LINQ 中執行左方外部聯結，請搭配使用 `DefaultIfEmpty` 方法與群組聯結，以指定當左邊的元素沒有相符專案時，所要產生的預設右端專案。 您可以使用 `null` 作為任何參考型別的預設值，也可以指定使用者定義的預設類型。 在下列範例中，會顯示使用者定義的預設類型：
+在左方外部聯結中，會傳回左側來源序列中的所有項目，即使在右側序列中沒有相符項目亦然。 要在 LINQ 中執行左外部聯結，`DefaultIfEmpty`請使用 方法與組聯接結合使用，以指定在左側元素沒有匹配項時要生成預設的右側元素。 您可以使用 `null` 作為任何參考型別的預設值，也可以指定使用者定義的預設類型。 在下列範例中，會顯示使用者定義的預設類型：
 
 [!code-csharp[cscsrefQueryKeywords#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#27)]
 
@@ -71,7 +71,7 @@ ms.locfileid: "75713398"
 
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>物件集合上的聯結與關聯式資料表的比較
 
-在 LINQ 查詢運算式中，聯結作業是在物件集合上執行。 物件集合無法以與兩個關聯式資料表完全相同的方式進行「聯結」。 在 LINQ 中，只有當兩個來源序列未受任何關聯性系結時，才需要明確 `join` 子句。 使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 時，外部索引鍵資料表在物件模型中會表示為主要資料表的屬性。 例如，在 Northwind 資料庫中，Customer 資料表與 Orders 資料表有外部索引鍵關聯性。 當您將資料表對應至物件模型時，Customer 類別會有 Orders 屬性，其中包含與 Customer 相關聯之 Orders 的集合。 實際上已為您完成此聯結。
+在 LINQ 查詢運算式中，聯接操作對物件集合執行。 物件集合無法以與兩個關聯式資料表完全相同的方式進行「聯結」。 在 LINQ`join`中，僅當兩個源序列不與任何關係綁定時，才需要顯式子句。 使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 時，外部索引鍵資料表在物件模型中會表示為主要資料表的屬性。 例如，在 Northwind 資料庫中，Customer 資料表與 Orders 資料表有外部索引鍵關聯性。 當您將資料表對應至物件模型時，Customer 類別會有 Orders 屬性，其中包含與 Customer 相關聯之 Orders 的集合。 實際上已為您完成此聯結。
 
 如需在 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 內容中查詢所有關聯資料表的詳細資訊，請參閱[如何︰對應資料庫關聯性](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)。
 
@@ -89,15 +89,15 @@ ms.locfileid: "75713398"
 
 如果 `join` 子句沒有後接 `into`，則會將該子句轉譯為 <xref:System.Linq.Enumerable.Join%2A> 方法呼叫。 如果 `join` 子句後接 `into`，則會將該子句轉譯為 <xref:System.Linq.Enumerable.GroupJoin%2A> 方法呼叫。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [查詢關鍵字 (LINQ)](query-keywords.md)
-- [Language-Integrated Query (LINQ)](../../linq/index.md)
-- [聯結作業](../../programming-guide/concepts/linq/join-operations.md)
+- [查詢關鍵字 （LINQ）](query-keywords.md)
+- [語言綜合查詢（LINQ）](../../linq/index.md)
+- [加入操作](../../programming-guide/concepts/linq/join-operations.md)
 - [group 子句](group-clause.md)
 - [執行左方外部聯結](../../linq/perform-left-outer-joins.md)
 - [執行內部聯結](../../linq/perform-inner-joins.md)
 - [執行群組聯結](../../linq/perform-grouped-joins.md)
-- [排序 Join 子句的結果](../../linq/order-the-results-of-a-join-clause.md)
+- [排序 join 子句的結果](../../linq/order-the-results-of-a-join-clause.md)
 - [使用複合索引鍵執行聯結](../../linq/join-by-using-composite-keys.md)
 - [適用於 Visual Studio 相容的資料庫系統](/visualstudio/data-tools/installing-database-systems-tools-and-samples)

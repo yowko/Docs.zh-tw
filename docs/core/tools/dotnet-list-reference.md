@@ -3,15 +3,15 @@ title: dotnet list reference 命令
 description: dotnet list reference 命令提供方便的選項，以列出專案對專案參考。
 ms.date: 02/14/2020
 ms.openlocfilehash: 43c4dbc94b33e717c6ba0a1c1c5317ac006f5bba
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503711"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
-**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
+**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 

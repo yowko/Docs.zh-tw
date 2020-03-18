@@ -9,10 +9,10 @@ helpviewer_keywords:
 - expression trees
 - debugview
 ms.openlocfilehash: ba695fc808108c49a4eee3c70a305b24c91769d8
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "67661720"
 ---
 # <a name="debugview-syntax"></a>`DebugView` 語法
@@ -47,14 +47,14 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 
 對於具有標準尾碼為 C# 常值的數值類型，尾碼會新增至值。 下表顯示各種不同之數值類型的相關聯尾碼。
 
-| 類型 | 關鍵字 | 尾碼 |
+| 類型 | 關鍵字 | 後置詞 |
 |--|--|--|
 | <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/builtin-types/integral-numeric-types.md) | U |
-| <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/builtin-types/integral-numeric-types.md) | L |
+| <xref:System.Int64?displayProperty=nameWithType> | [長](../../../language-reference/builtin-types/integral-numeric-types.md) | L |
 | <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/builtin-types/integral-numeric-types.md) | UL |
-| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/builtin-types/floating-point-numeric-types.md) | D |
-| <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/builtin-types/floating-point-numeric-types.md) | F |
-| <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/builtin-types/floating-point-numeric-types.md) | M |
+| <xref:System.Double?displayProperty=nameWithType> | [雙](../../../language-reference/builtin-types/floating-point-numeric-types.md) | D |
+| <xref:System.Single?displayProperty=nameWithType> | [浮動](../../../language-reference/builtin-types/floating-point-numeric-types.md) | F |
+| <xref:System.Decimal?displayProperty=nameWithType> | [十進位](../../../language-reference/builtin-types/floating-point-numeric-types.md) | M |
 
 ### <a name="examples"></a>範例
 

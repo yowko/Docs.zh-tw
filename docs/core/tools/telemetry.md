@@ -4,10 +4,10 @@ description: 探索收集使用方式資訊以進行分析的 .NET Core SDK 遙�
 author: KathleenDollard
 ms.date: 08/27/2019
 ms.openlocfilehash: 9d5d7ff09ade89712f2fbbe35224851bb1c28b4c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156682"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遙測
@@ -18,11 +18,11 @@ ms.locfileid: "78156682"
 
 ## <a name="scope"></a>影響範圍
 
-`dotnet` 有兩個功能：執行應用程式，以及執行 CLI 命令。 使用  *啟動應用程式時 (格式如下)，「不會收集」* `dotnet`遙測：
+`dotnet` 有兩個功能：執行應用程式，以及執行 CLI 命令。 使用 `dotnet` 啟動應用程式時 (格式如下)，「不會收集」** 遙測：
 
 - `dotnet [path-to-app].dll`
 
-使用以下任何 *.NET Core CLI 命令* 時，則「會收集」[](index.md)遙測：
+使用以下任何 [.NET Core CLI 命令](index.md) 時，則「會收集」** 遙測：
 
 - `dotnet build`
 - `dotnet pack`
@@ -63,7 +63,7 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 | 全部          | SDK 正在執行的執行階段識別碼 (RID)。 |
 | 全部          | .NET Core SDK 版本。 |
 | 全部          | 遙測設定檔：選擇性值，只能透過明確的使用者加入使用，且只能在 Microsoft 內部使用。 |
-| >=2.0        | 命令引數和選項：會收集數個引數和選項 (不是任意字串)。 請參閱[收集的選項](#collected-options)。 2\.1.300 之後已雜湊。 |
+| >=2.0        | 命令引數和選項：會收集數個引數和選項 (不是任意字串)。 請參閱[收集的選項](#collected-options)。 2.1.300 之後已雜湊。 |
 | >=2.0         | SDK 是否正在容器中執行。 |
 | >=2.0         | 目標 Framework (來自 `TargetFramework` 事件)，從 2.1 開始已雜湊。 |
 | >=2.0         | 雜湊的媒體存取控制 (MAC) 位址：電腦的密碼編譯 (SHA256) 匿名唯一識別碼。 |
@@ -95,8 +95,8 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 | `--verbosity`           | 所有命令                                                                                   |
 | `--language`            | `dotnet new`                                                                                   |
 | `--configuration`       | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`                  |
-| `--framework`           | `dotnet build`、`dotnet clean`、`dotnet publish`、`dotnet run`、`dotnet test`、`dotnet vstest` |
-| `--runtime`             | `dotnet build`、`dotnet publish`                                                              |
+| `--framework`           | `dotnet build`, `dotnet clean`, `dotnet publish`, `dotnet run`, `dotnet test`, `dotnet vstest` |
+| `--runtime`             | `dotnet build`,  `dotnet publish`                                                              |
 | `--platform`            | `dotnet vstest`                                                                                |
 | `--logger`              | `dotnet vstest`                                                                                |
 | `--sdk-package-version` | `dotnet migrate`                                                                               |
@@ -128,7 +128,7 @@ at Microsoft.DotNet.Cli.Program.ProcessArgs(String[] args, ITelemetry telemetryC
 at Microsoft.DotNet.Cli.Program.Main(String[] args)
 ```
 
-### <a name="avoid-inadvertent-disclosure-of-information"></a>避免意外洩漏資訊
+### <a name="avoid-inadvertent-disclosure-of-information"></a>避免無意中洩露資訊
 
 .NET Core 參與者及執行其自行建置之 .NET Core SDK 版本的任何其他人，都應該考慮其 SDK 原始程式碼的路徑。 如果使用 .NET Core SDK 時發生損毀，且該 SDK是自訂偵錯組建或透過自訂組建符號檔所設定，則會在堆疊追蹤過程中從組建電腦收集 SDK 來源檔案路徑，且不會進行雜湊處理。
 

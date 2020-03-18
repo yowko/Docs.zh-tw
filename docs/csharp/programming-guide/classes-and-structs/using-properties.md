@@ -7,10 +7,10 @@ helpviewer_keywords:
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
 ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77452015"
 ---
 # <a name="using-properties-c-programming-guide"></a>使用屬性 (C# 程式設計手冊)
@@ -49,7 +49,7 @@ ms.locfileid: "77452015"
 
 [!code-csharp[csProgGuideProperties#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#11)]
 
-在先前的程式碼區段中，如果您未將值指派給 `Name` 屬性，它會傳回 `NA`的值。
+在前面的程式碼片段中，如果不為`Name`屬性賦值，它將傳回值`NA`。
 
 ## <a name="the-set-accessor"></a>set 存取子
 
@@ -61,20 +61,20 @@ ms.locfileid: "77452015"
 
 [!code-csharp[csProgGuideProperties#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#13)]
 
-在 `value` 存取子中使用區域變數宣告的隱含參數名稱 `set` 是錯誤的。
+在 `set` 存取子中使用區域變數宣告的隱含參數名稱 `value` 是錯誤的。
 
 ## <a name="remarks"></a>備註
 
 屬性可標記為 `public`、`private`、`protected`、`internal`、`protected internal` 或 `private protected`。 這些存取修飾詞定義類別使用者如何存取屬性。 相同屬性的 `get` 和 `set` 存取子可能會有不同的存取修飾詞。 例如，`get` 可能是 `public` 以允許從類型外部進行唯讀存取，而 `set` 可能是 `private` 或 `protected`。 如需詳細資訊，請參閱[存取修飾詞](./access-modifiers.md)。
 
-屬性可以使用 `static` 關鍵字宣告為靜態屬性。 這可隨時向呼叫者提供屬性，即使沒有任何類別執行個體也是一樣。 如需詳細資訊，請參閱[靜態類別和靜態類別成員](./static-classes-and-static-class-members.md)。
+屬性可以使用 `static` 關鍵字宣告為靜態屬性。 這可隨時向呼叫者提供屬性，即使沒有任何類別執行個體也是一樣。 有關詳細資訊，請參閱[靜態類和靜態類成員](./static-classes-and-static-class-members.md)。
 
 屬性可以使用 [virtual](../../language-reference/keywords/virtual.md) 關鍵字標示為虛擬屬性。 這可讓衍生類別使用 [override](../../language-reference/keywords/override.md) 關鍵字覆寫屬性行為。 如需這些選項的詳細資訊，請參閱[繼承](inheritance.md)。
 
 覆寫虛擬屬性的屬性也可為 [sealed](../../language-reference/keywords/sealed.md)，指定它對衍生類別而言不再是虛擬。 最後，屬性可以宣告為 [abstract](../../language-reference/keywords/abstract.md)。 這表示類別中沒有任何實作，而且衍生類別必須撰寫自己的實作。 如需這些選項的詳細資訊，請參閱[抽象和密封類別以及類別成員](abstract-and-sealed-classes-and-class-members.md)。
   
 > [!NOTE]
-> 在 [static](../../language-reference/keywords/virtual.md) 屬性的存取子上使用 [virtual](../../language-reference/keywords/abstract.md)、[abstract](../../language-reference/keywords/override.md) 或 [override](../../language-reference/keywords/static.md) 修飾詞是錯誤的。
+> 在 [static](../../language-reference/keywords/static.md) 屬性的存取子上使用 [virtual](../../language-reference/keywords/virtual.md)、[abstract](../../language-reference/keywords/abstract.md) 或 [override](../../language-reference/keywords/override.md) 修飾詞是錯誤的。
 
 ## <a name="example"></a>範例
 
@@ -84,7 +84,7 @@ ms.locfileid: "77452015"
 
 ## <a name="example"></a>範例
 
-這個範例示範如何存取基類中的屬性，而該類別在衍生類別中具有相同名稱的另一個屬性所隱藏：
+此示例演示如何訪問基類中由派生類中具有相同名稱的另一個屬性隱藏的屬性：
 
 [!code-csharp[csProgGuideProperties#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#3)]
 
@@ -111,4 +111,4 @@ ms.locfileid: "77452015"
 - [C# 程式設計指南](../index.md)
 - [屬性](properties.md)
 - [介面屬性](interface-properties.md)
-- [自動實作的屬性](auto-implemented-properties.md)
+- [自動實現屬性](auto-implemented-properties.md)

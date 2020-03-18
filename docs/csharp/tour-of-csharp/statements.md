@@ -4,27 +4,27 @@ description: 您將使用陳述式來建立 C# 程式的動作
 ms.date: 02/27/2020
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
 ms.openlocfilehash: ced13b1bfd17977acb98bf33c0a477161cf08a93
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159100"
 ---
 # <a name="statements"></a>陳述式
 
 程式的動作是藉由*陳述式*來表達。 C# 支援數種不同類型的陳述式，其中一些是以內嵌陳述式來定義。
 
-「區塊」可允許在許可單一陳述式的內容中撰寫多個陳述式。 區塊是由在 `{` 與 `}` 分隔符號之間撰寫的陳述式清單所組成。
+「區塊」** 可允許在許可單一陳述式的內容中撰寫多個陳述式。 區塊是由在 `{` 與 `}` 分隔符號之間撰寫的陳述式清單所組成。
 
-「宣告陳述式」可用來宣告區域變數和常數。
+「宣告陳述式」** 可用來宣告區域變數和常數。
 
-「運算式陳述式」可用來評估運算式。 可用來作為陳述式的運算式包括方法叫用、使用 `new` 運算子的物件配置、使用 `=` 和複合指派運算子的指派、使用 `++` 和 `--` 運算子的遞增和遞減運算，以及 `await` 運算。
+「運算式陳述式」** 可用來評估運算式。 可用來作為陳述式的運算式包括方法叫用、使用 `new` 運算子的物件配置、使用 `=` 和複合指派運算子的指派、使用 `++` 和 `--` 運算子的遞增和遞減運算，以及 `await` 運算。
 
-「選取範圍陳述式」可用來選取一些可能陳述式的其中之一，以根據某個運算式的值來執行。 此群組包含 `if` 和 `switch` 語句。
+「選取範圍陳述式」** 可用來選取一些可能陳述式的其中之一，以根據某個運算式的值來執行。 此組包含 和`if``switch`語句。
 
-「反覆運算陳述式」可用來重複執行內嵌的陳述式。 此群組包含 `while`、`do`、`for`和 `foreach` 語句。
+「反覆運算陳述式」** 可用來重複執行內嵌的陳述式。 此組包含`while`、`do`和`for``foreach`語句。
 
-「跳躍陳述式」可用來轉移控制項。 此群組包含 `break`、`continue`、`goto`、`throw`、`return`和 `yield` 語句。
+「跳躍陳述式」** 可用來轉移控制項。 此組包含`break`、、、、、`return``yield``continue``goto``throw`和 語句。
 
 `try`...`catch` 陳述式可用來攔截在執行區塊時發生的例外狀況，而 `try`...`finally` 陳述式則可用來指定不論是否發生例外狀況都一律會執行的最終處理程式碼。
 
@@ -109,5 +109,5 @@ ms.locfileid: "78159100"
  [!code-csharp[UsingStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L198-L206)]
 
 >[!div class="step-by-step"]
->[上一頁](expressions.md)
->[下一頁](classes-and-objects.md)
+>[上一個](expressions.md)
+>[下一個](classes-and-objects.md)

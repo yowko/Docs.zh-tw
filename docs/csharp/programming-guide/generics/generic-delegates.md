@@ -6,10 +6,10 @@ helpviewer_keywords:
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
 ms.openlocfilehash: 4e57256328fc81a485670b47fcf8fd1c38e26fac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712217"
 ---
 # <a name="generic-delegates-c-programming-guide"></a>泛型委派 (C# 程式設計手冊)
@@ -33,13 +33,13 @@ ms.locfileid: "75712217"
   
  [!code-csharp[csProgGuideGenerics#40](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#40)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic>
 - [C# 程式設計指南](../index.md)
 - [泛型簡介](./index.md)
-- [泛型方法](./generic-methods.md)
-- [泛型類別](./generic-classes.md)
+- [通用方法](./generic-methods.md)
+- [通用類](./generic-classes.md)
 - [泛型介面](./generic-interfaces.md)
 - [委派](../delegates/index.md)
 - [泛型](../../../standard/generics/index.md)

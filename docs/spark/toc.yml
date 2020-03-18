@@ -1,9 +1,9 @@
 - name: .NET for Apache Spark 指南
   href: index.yml
-- name: 總覽
+- name: 概觀
   expanded: true
   items:
-    - name: Apache Spark 是什麼？
+    - name: 什麼是 Apache Spark？
       href: what-is-spark.md
     - name: 什麼是 .NET for Apache Spark？
       href: what-is-apache-spark-dotnet.md
@@ -21,9 +21,9 @@
       href: tutorials/batch-processing.md
     - name: 結構化串流
       href: tutorials/streaming.md
-- name: 作法指南
+- name: 操作指南
   items:
-    - name: 偵錯應用程式
+    - name: 為您的應用程式偵錯
       href: how-to-guides/debug.md
     - name: 將作業提交至 HDInsight
       href: how-to-guides/hdinsight-deploy-methods.md
@@ -35,9 +35,9 @@
       href: how-to-guides/ubuntu-instructions.md
     - name: 在 Windows 上建置應用程式
       href: how-to-guides/windows-instructions.md
-- name: 參考資料
+- name: 參考
   items:
-    - name: 應用程式開發介面參考
+    - name: API 參考
       href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
 - name: 資源
   items:

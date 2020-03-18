@@ -1,18 +1,18 @@
 ---
-title: 教學課程：使用屬性-C#
+title: 教程：使用屬性 - C#
 description: 了解 C# 中屬性的運作方式。
 author: mgroves
 ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
 ms.openlocfilehash: 24cb7d35a89fda78511dc4ba725b69c5d601a008
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937476"
 ---
-# <a name="use-attributes-in-c"></a>使用 C\# 中的屬性
+# <a name="use-attributes-in-c"></a>使用 C 中的屬性\#
 
 屬性提供以宣告方式將資訊與程式碼相關聯的方法。 它們也可提供可重複使用的元素，以套用至各種不同的目標。
 
@@ -20,8 +20,8 @@ ms.locfileid: "75937476"
 
 在本教學課程中，將介紹如何將屬性加入您的程式碼、如何建立及使用您自己的屬性，以及如何使用一些內建到 .NET Core 的屬性。
 
-## <a name="prerequisites"></a>必要條件：
-您將必須設定電腦以執行 .NET Core。 您可以在[.Net Core 下載](https://dotnet.microsoft.com/download)頁面上找到安裝指示。
+## <a name="prerequisites"></a>必要條件
+您將必須設定電腦以執行 .NET Core。 您可以在[.NET 核心下載](https://dotnet.microsoft.com/download)頁面上找到安裝說明。
 您可以在 Windows、Ubuntu Linux、macOS 或是 Docker 容器中執行此應用程式。
 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
@@ -31,7 +31,7 @@ ms.locfileid: "75937476"
 
 `dotnet new console`
 
-此命令將會建立最基本的 .NET core 專案檔案。 您將必須執行 `dotnet restore` 以還原編譯此專案所需的相依性。
+此命令將創建裸骨 .NET 核心專案檔案。 您將必須執行 `dotnet restore` 以還原編譯此專案所需的相依性。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -82,17 +82,17 @@ ms.locfileid: "75937476"
 
 屬性可用在許多「目標」上。 上述範例顯示它們使用於類別，但也可以用在：
 
-* Assembly
+* 組件
 * 類別
 * 建構函式
-* Delegate - 委派
-* Enum
-* Event
+* 委派
+* 例舉
+* 事件
 * 欄位
 * GenericParameter
 * 介面
 * 方法
-* Module
+* 模組
 * 參數
 * 屬性
 * ReturnValue
@@ -136,17 +136,17 @@ ms.locfileid: "75937476"
 
 以下是幾個值得注意的屬性，內建於 .NET Core 基底類別庫中︰
 
-* `[Obsolete]`。 此屬性使用於上述範例中，且存在於 `System` 命名空間。 提供有關變更的程式碼基底的宣告式文件會很有用。 訊息可以字串的形式提供，使用另一個布林值參數可以從編譯器警告提升至編譯器錯誤。
+* `[Obsolete]`. 此屬性使用於上述範例中，且存在於 `System` 命名空間。 提供有關變更的程式碼基底的宣告式文件會很有用。 訊息可以字串的形式提供，使用另一個布林值參數可以從編譯器警告提升至編譯器錯誤。
 
-* `[Conditional]`。 此屬性位於 `System.Diagnostics` 命名空間。 這個屬性可以套用至方法 (或屬性類別)。 您必須傳遞字串給建構函式。
+* `[Conditional]`. 此屬性位於 `System.Diagnostics` 命名空間。 這個屬性可以套用至方法 (或屬性類別)。 您必須傳遞字串給建構函式。
 如果該字串不符合 `#define` 指示詞，C# 編譯器會移除對該方法的任何呼叫 (但非方法本身)。 這通常用於偵錯 (診斷) 用途。
 
-* `[CallerMemberName]`。 這個屬性可以用於參數，並存在 `System.Runtime.CompilerServices` 命名空間中。 這個屬性可用來插入呼叫另一個方法之方法的名稱。 在各種 UI 架構中實作 INotifyPropertyChanged 時，這通常做為消除 'magic strings' 的方法。 範例如下：
+* `[CallerMemberName]`. 這個屬性可以用於參數，並存在 `System.Runtime.CompilerServices` 命名空間中。 這個屬性可用來插入呼叫另一個方法之方法的名稱。 在各種 UI 架構中實作 INotifyPropertyChanged 時，這通常做為消除 'magic strings' 的方法。 例如：
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 
 在上述程式碼中，您不必使用常值 `"Name"` 字串。 這有助於避免打字錯誤相關的問題，也可使重構/重新命名更順暢。
 
-## <a name="summary"></a>總結
+## <a name="summary"></a>摘要
 
 屬性為 C# 帶來了宣告式能力，但它們是程式碼的中繼資料形式，且無法自行運作。

@@ -3,19 +3,19 @@ title: 實作微服務之間的事件通訊 (整合事件)
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解整合事件以實作微服務之間的事件通訊。
 ms.date: 10/02/2018
 ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712399"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>實作微服務之間的事件通訊 (整合事件)
 
 如前所述，當您使用事件通訊時，微服務會在發生值得注意的事件時發行事件，例如當它更新商務實體時。 其他微服務會訂閱這些事件。 當微服務收到事件時，它可以更新自己的商務實體，這可能會導致發行更多的事件。 這是最終一致性概念的本質。 此發行/訂閱系統通常藉由使用事件匯流排實作來執行。 事件匯流排可設計為介面，並具備訂閱及取消訂閱事件以及發行事件所需的 API。 它也可以有一或多個實作以任何處理序間或傳訊通訊為基礎，例如支援非同步通訊和發行/訂閱模型的傳訊佇列或服務匯流排。
 
-您可以使用事件來實作橫跨多個服務的商務交易，這樣將提供這些服務之間的最終一致性。 最終一致的交易是由一系列的分散式動作所組成。 在每個動作中，微服務會更新商務實體，並發行觸發下一個動作的事件。 [圖 6-18] 顯示透過和「事件匯流排」發佈的 PriceUpdated 事件，因此價格更新會傳播到購物籃和其他微服務。
+您可以使用事件來實作橫跨多個服務的商務交易，這樣將提供這些服務之間的最終一致性。 最終一致的交易是由一系列的分散式動作所組成。 在每個動作中，微服務會更新商務實體，並發行觸發下一個動作的事件。 圖 6-18 顯示了通過事件匯流排發佈的 PriceUpdate 事件，因此價格更新將傳播到購物籃和其他微服務。
 
-![非同步事件驅動通訊與事件匯流排的圖表。](./media/integration-event-based-microservice-communications/event-driven-communication.png)
+![與事件匯流排的非同步事件驅動通信圖。](./media/integration-event-based-microservice-communications/event-driven-communication.png)
 
 **圖 6-18**。 以事件匯流排為基礎的事件驅動通訊
 
@@ -27,7 +27,7 @@ ms.locfileid: "75712399"
 
 針對只為您的開發環境實作事件匯流排的概念證明，如同 eShopOnContainers 範例，在執行作為容器的 RabbitMQ 上進行簡單實作可能就足夠了。 但對於需要高延展性的關鍵任務和生產系統，您可能想要評估，並使用 Azure 服務匯流排。
 
-如果您的長時間執行處理序需要高階抽象，以及更豐富的功能，例如 [Sagas](https://docs.particular.net/nservicebus/sagas/)，以便讓分散式開發更容易，則其他商業和開放原始碼的服務匯流排，例如 NServiceBus、MassTransit 和 Brighter 都值得評估。 在此案例中，要使用的抽象和 API 通常會直接由這些高階服務匯流排提供，而不是您自己的抽象 (例如 [eShopOnContainers 所提供的簡單事件匯流排抽象](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs))。 就這一點而言，您可以[使用 NServiceBus](https://go.particular.net/eShopOnContainers) （特定軟體所執行的其他衍生範例）來研究分支 eShopOnContainers。
+如果您的長時間執行處理序需要高階抽象，以及更豐富的功能，例如 [Sagas](https://docs.particular.net/nservicebus/sagas/)，以便讓分散式開發更容易，則其他商業和開放原始碼的服務匯流排，例如 NServiceBus、MassTransit 和 Brighter 都值得評估。 在此案例中，要使用的抽象和 API 通常會直接由這些高階服務匯流排提供，而不是您自己的抽象 (例如 [eShopOnContainers 所提供的簡單事件匯流排抽象](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs))。 為此，您可以使用 NServiceBus（由特定軟體實現的其他派生示例）來研究[分叉的 eShopOn 容器](https://go.particular.net/eShopOnContainers)。
 
 當然，您一律可以在較低階技術 (例如 RabbitMQ 和 Docker) 上建置自己的服務匯流排功能，但是「重新發明車輪」所需的工作對於自訂企業應用程式而言可能成本太高。
 
@@ -64,11 +64,11 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 事件匯流排允許微服務之間的發佈/訂閱樣式通訊，而不需要元件明確知道彼此，如圖 6-19 所示。
 
-![顯示基本發行/訂閱模式的圖表。](./media/integration-event-based-microservice-communications/publish-subscribe-basics.png)
+![顯示基本發佈/訂閱模式的圖表。](./media/integration-event-based-microservice-communications/publish-subscribe-basics.png)
 
 **圖 6-19**。 事件匯流排的發行/訂閱基本概念
 
-上圖顯示微服務 A 發佈至事件匯流排，它會散發給訂閱微服務 B 和 C，而不需要發行者知道訂閱者。 事件匯流排與觀察者模式及發行-訂閱模式有關。
+上圖顯示微服務 A 發佈到事件匯流排，該匯流排分發到訂閱微服務 B 和 C，而發行者無需瞭解訂閱者。 事件匯流排與觀察者模式及發行-訂閱模式有關。
 
 ### <a name="observer-pattern"></a>觀察者模式
 
@@ -92,7 +92,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 在圖 6-20 中，您可以看到事件匯流排的抽象概念，其中具有根據基礎結構傳訊技術 (例如 RabbitMQ、Azure 服務匯流排或其他事件/訊息代理程式) 的多個實作。
 
-![顯示事件匯流排抽象層新增的圖表。](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
+![顯示事件匯流排抽象層添加的圖表。](./media/integration-event-based-microservice-communications/multiple-implementations-event-bus.png)
 
 **圖 6-20**。 事件匯流排的多個實作
 
@@ -129,17 +129,17 @@ public interface IEventBus
 
 ## <a name="additional-resources"></a>其他資源
 
-一些已準備好用於生產環境的訊息解決方案：
+一些生產就緒消息傳遞解決方案：
 
 - **Azure 服務匯流排** \
   <https://docs.microsoft.com/azure/service-bus-messaging/>
   
-- **NServiceBus** \
+- **N服務匯流排** \
   <https://particular.net/nservicebus>
   
-- **MassTransit** \
+- **公共交通** \
   <https://masstransit-project.com/>
 
 > [!div class="step-by-step"]
-> [上一頁](database-server-container.md)
-> [下一頁](rabbitmq-event-bus-development-test-environment.md)
+> [上一個](database-server-container.md)
+> [下一個](rabbitmq-event-bus-development-test-environment.md)

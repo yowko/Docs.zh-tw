@@ -1,18 +1,18 @@
 ---
-title: 定型和評估模型
+title: 定型及評估模型
 description: 了解如何建置機器學習模型、收集計量，以及使用 ML.NET 測量效能。 機器學習模型會識別定型資料中的模式，以使用新資料進行預測。
 ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
 ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976765"
 ---
-# <a name="train-and-evaluate-a-model"></a>定型和評估模型
+# <a name="train-and-evaluate-a-model"></a>定型及評估模型
 
 了解如何建置機器學習模型、收集計量，以及使用 ML.NET 測量效能。 雖然此範例訓練的是迴歸模型，但概念可適用於大多數的其他演算法。
 
@@ -38,7 +38,7 @@ public class HousingData
 }
 ```
 
-假設下列資料已載入至 [`IDataView`](xref:Microsoft.ML.IDataView)。
+給定載入到 的[`IDataView`](xref:Microsoft.ML.IDataView)以下資料。
 
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -82,7 +82,7 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-使用 [`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit*) 方法將資料分割成定型及測試集。 其結果將會是一個 [`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData) 物件，其中包含兩個 [`IDataView`](xref:Microsoft.ML.IDataView) 成員，一個用於定型集，一個用於測試集。 資料分割百分比是由 `testFraction` 參數所決定。 以下程式碼片段會保留原始資料的 20% 作為測試集。
+使用[`TrainTestSplit`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestSplit*)方法將資料拆分為訓練組和測試集。 結果將是一個包含[`TrainTestData`](xref:Microsoft.ML.DataOperationsCatalog.TrainTestData)兩[`IDataView`](xref:Microsoft.ML.IDataView)個成員的物件，一個用於訓練集，另一個用於測試集。 資料分割百分比是由 `testFraction` 參數所決定。 以下程式碼片段會保留原始資料的 20% 作為測試集。
 
 ```csharp
 DataOperationsCatalog.TrainTestData dataSplit = mlContext.Data.TrainTestSplit(data, testFraction: 0.2);
@@ -98,11 +98,11 @@ ML.NET 演算法針對輸入資料行類型具有條件約束。 此外，若沒
 
 ### <a name="working-with-expected-column-types"></a>使用預期的資料行類型
 
-ML.NET 中的機器學習演算法預期收到大小已知浮動向量作為輸入。 當所有資料都已是數字格式，且可一起進行處理時 (例如影像像素)，請將 [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 屬性套用到您的資料模型。
+ML.NET 中的機器學習演算法預期收到大小已知浮動向量作為輸入。 當所有資料[`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute)都已採用數位格式且打算一起處理（即圖像圖元）時，將該屬性應用於資料模型。
 
-若資料並非全部都是數字格式，且您希望為每個資料行個別套用不同的資料轉換時，請在所有資料行都已經過處理後使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法來將所有個別資料行合併成單一特徵向量，輸出到新資料行。
+如果資料不是全部數位，並且您希望在每個列上分別應用不同的資料轉換，則在處理了所有列後使用[`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*)方法將所有單個列合併為一個要素向量，該要素向量將輸出到新列。
 
-下列程式碼片段會將 `Size` 和 `HistoricalPrices` 資料行合併成單一特徵向量，輸出到稱為 `Features` 的新資料行。 因為規模不同，[`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) 會套用到 `Features` 資料行以正常化資料。
+下列程式碼片段會將 `Size` 和 `HistoricalPrices` 資料行合併成單一特徵向量，輸出到稱為 `Features` 的新資料行。 由於比例存在差異，[`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*)因此將應用於`Features`列以正常化資料。
 
 ```csharp
 // Define Data Prep Estimator
@@ -123,7 +123,7 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 
 ML.NET 演算法會在沒有指定任何項目時使用預設資料行名稱。 所有訓練員都具有一個稱為 `featureColumnName` 的參數作為演算法的輸入，且當適用時，他們也會針對預期值擁有一個稱為 `labelColumnName` 的參數。 根據預設，這些值分別是 `Features` 和 `Label`。
 
-透過在預先處理期間使用 [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) 方法來建立稱為 `Features` 的新資料行，便不需要在演算法的參數中指定特徵資料行名稱，因為它們已存在於預先處理的 `IDataView` 中。 標籤資料行是 `CurrentPrice`，但因為已在資料模型中使用 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 屬性，ML.NET 會將 `CurrentPrice` 資料行重新命名成 `Label`，使其不再需要提供 `labelColumnName` 參數給機器學習服務演算法的估算。
+通過在預處理[`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*)期間使用 方法創建稱為`Features`的新列，無需在演算法的參數中指定要素列名稱，因為它已存在於預處理中。 `IDataView` 標籤列`CurrentPrice`為 ，但由於屬性[`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute)在資料模型中使用，ML.NET重命名`CurrentPrice`列`Label`，從而不再需要向機器學習演算法估計器提供`labelColumnName`參數。
 
 若您不想要使用預設資料行名稱，請在定義機器學習服務演算法估算時將特徵和標籤資料行的名稱作為參數傳遞，如接下來的程式碼片段所示：
 
@@ -133,7 +133,7 @@ var UserDefinedColumnSdcaEstimator = mlContext.Regression.Trainers.Sdca(labelCol
 
 ## <a name="train-the-machine-learning-model"></a>定型機器學習模型
 
-預先處理資料後，請使用 [`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase`2.Fit*) 方法來使用 [`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) 迴歸演算法定型機器學習模型。
+預處理資料後，使用 該方法[`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase`2.Fit*)使用[`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer)回歸演算法訓練機器學習模型。
 
 ```csharp
 // Define StochasticDualCoordinateAscent regression algorithm estimator
@@ -145,21 +145,21 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>擷取模型參數
 
-在定型模型後，請擷取學習到的 [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) 以進行檢查或重新定型。 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) 可提供偏差和學習到的相關係數，或是定型模型的權數。
+模型經過培訓後，提取所學知識[`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601)進行檢查或再培訓。 [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters)提供訓練模型的偏置和學習係數或權重。
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;
 ```
 
 > [!NOTE]
-> 其他模型也具有其工作限定的參數。 例如，[K-平均演算法](xref:Microsoft.ML.Trainers.KMeansTrainer)會根據距心將資料放入叢集，[`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) 則包含儲存這些所學習到距心的屬性。 若要深入了解，請前往 [`Microsoft.ML.Trainers` API 文件](xref:Microsoft.ML.Trainers)並尋找其名稱中包含 `ModelParameters` 的類別。
+> 其他模型也具有其工作限定的參數。 例如，[K-平均演算法](xref:Microsoft.ML.Trainers.KMeansTrainer)會根據距心將資料放入叢集，[`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) 則包含儲存這些所學習到距心的屬性。 要瞭解更多資訊，[`Microsoft.ML.Trainers`](xref:Microsoft.ML.Trainers)請訪問 API 文檔並查找包含`ModelParameters`其名稱中的類。
 
 ## <a name="evaluate-model-quality"></a>評估模型品質
 
-若要協助選擇最佳的執行模型，評估其在測試資料上的效能非常重要。 請使用 [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) 方法來針對定型後的模型測量各種計量。
+若要協助選擇最佳的執行模型，評估其在測試資料上的效能非常重要。 使用[`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*)方法測量已訓練的模型的各種指標。
 
 > [!NOTE]
-> `Evaluate` 方法會根據執行的機器學習服務工作類型，產生不同的計量。 如需詳細資訊，請前往 [`Microsoft.ML.Data` API 文件](xref:Microsoft.ML.Data)並尋找其名稱中包含 `Metrics` 的類別。
+> `Evaluate` 方法會根據執行的機器學習服務工作類型，產生不同的計量。 有關詳細資訊，請訪問[`Microsoft.ML.Data`API 文檔](xref:Microsoft.ML.Data)並查找包含`Metrics`其名稱中的類。
 
 ```csharp
 // Measure trained model performance

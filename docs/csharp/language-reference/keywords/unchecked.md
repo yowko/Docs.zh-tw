@@ -8,10 +8,10 @@ helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
 ms.openlocfilehash: 6dad0dfd508fb390dd0a52d1b48d70b4c5725513
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712997"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (C# 參考)
@@ -38,10 +38,10 @@ ms.locfileid: "75712997"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [Checked 與 Unchecked](checked-and-unchecked.md)
-- [checked](checked.md)
+- [已選中和未選中](checked-and-unchecked.md)
+- [已選取](checked.md)

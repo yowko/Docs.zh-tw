@@ -4,15 +4,15 @@ description: dotnet-nuget-delete 命令會從伺服器刪除或取消列出套�
 author: karann-msft
 ms.date: 06/26/2019
 ms.openlocfilehash: 0950f03c0986bde17ae3e2e7170d402ea8222853
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76733129"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
-**本文適用于：** ✔️ .net CORE 1.x SDK 和更新版本
+**本文適用于：✔️** .NET Core 1.x SDK 和更高版本
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -32,7 +32,7 @@ dotnet nuget delete [-h|--help]
 
 ## <a name="description"></a>描述
 
-`dotnet nuget delete` 命令會從伺服器刪除或取消列出套件。 對於 [nuget.org](https://www.nuget.org/)，該動作是取消列出套件。
+`dotnet nuget delete` 命令會從伺服器刪除或取消列出套件。 對於[nuget.org](https://www.nuget.org/)，操作是取消包清單。
 
 ## <a name="arguments"></a>引數
 
@@ -44,7 +44,7 @@ dotnet nuget delete [-h|--help]
 
   要刪除的套件版本。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 * **`--force-english-output`**
 

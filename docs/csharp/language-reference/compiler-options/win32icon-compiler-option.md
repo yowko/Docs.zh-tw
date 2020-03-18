@@ -9,14 +9,14 @@ helpviewer_keywords:
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
 ms.openlocfilehash: f3df92d8d0b0135eac1a055afafffa0015fecc2b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69606272"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (C# 編譯器選項)
-**-win32icon** 選項會在輸出檔案內插入一個 .ico 檔，讓輸出檔案在檔案總管中具有所需的外觀。  
+**-win32icon**選項在輸出檔案中插入一個 .ico 檔，這為輸出檔案在檔資源管理器中提供了所需的外觀。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,17 +31,17 @@ ms.locfileid: "69606272"
 ## <a name="remarks"></a>備註  
  .ico 檔案可以使用 [Resource Compiler](/windows/desktop/menurc/resource-compiler) (資源編譯器) 建立。 資源編譯器是在編譯 Visual C++ 程式時叫用，而 .ico 檔案則是從 .rc 檔案建立。  
   
- 請參閱 [-linkresource](./linkresource-compiler-option.md) (以參考) 或 [-resource](./resource-compiler-option.md) (以附加) .NET Framework 資源檔。 請參閱 [-win32res](./win32res-compiler-option.md) 以匯入 .res 檔案。  
+ 請參閱[-連結資源](./linkresource-compiler-option.md)（要引用）或[-資源](./resource-compiler-option.md)（附加）.NET 框架資源檔。 請參閱[-win32res](./win32res-compiler-option.md)以導入 .res 檔。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]  頁面。  
+1. 開啟專案的 [屬性]**** 頁面。  
   
-2. 按一下 [應用程式]  屬性頁。  
+2. 按一下 [應用程式]**** 屬性頁。  
   
 3. 修改**應用程式圖示**屬性。  
   
- 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>。  
   
 ## <a name="example"></a>範例  
  編譯 `in.cs` 並附加 .ico 檔案 `rf.ico`，以產生 `in.exe`：  

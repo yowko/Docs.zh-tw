@@ -7,13 +7,13 @@ helpviewer_keywords:
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
 ms.openlocfilehash: d2fd879203932ea3f2211e38a2efdd626928962b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713916"
 ---
-# <a name="introduction-to-the-c-language-and-the-net-framework"></a>C#語言和 .NET Framework 簡介
+# <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET 框架簡介
 
 C# 是型別安全的優質物件導向語言，可讓開發人員建置各種在 .NET Framework 上執行且兼具安全性與穩定性的應用程式。 您可以使用 C# 建立 Windows 用戶端應用程式、XML Web 服務、分散式元件、主從應用程式、資料庫應用程式，而且還不僅止於此。 Visual C# 提供進階的程式碼編輯器、使用方便的使用者介面設計工具、整合式偵錯工具及許多其他工具，以根據 C# 語言和 .NET Framework 輕鬆地開發應用程式。  
   
@@ -22,13 +22,13 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
 ## <a name="c-language"></a>C# 語言
 
-C# 語法的表達能力相當高，同時也很簡單且易於了解。 任何熟悉 C、 C# C++或 JAVA 的人，都能立即辨識的大括弧語法。 了解上述任何一種語言的開發人員一般都能在極短時間內開始用 C# 有效率地工作。 C#語法簡化了的許多複雜性， C++並提供強大的功能，例如可為 null 的實數值型別、列舉、委派、lambda 運算式，以及直接記憶體存取。 C# 支援泛型方法和型別，提供更高的型別安全和效能。C# 也支援迭代器，讓集合類別的實作者定義自訂的反覆項目表現方式，使得用戶端程式碼可以容易地使用。 語言整合式查詢（LINQ）運算式會將強型別查詢設為第一類語言結構。  
+C# 語法的表達能力相當高，同時也很簡單且易於了解。 熟悉 C、C++ 或 JAVA 的任何人都可以立即識別 C# 的捲曲式語法。 了解上述任何一種語言的開發人員一般都能在極短時間內開始用 C# 有效率地工作。 C# 語法簡化了C++的許多複雜性，並提供了強大的功能，如空數值型別、枚舉、委託、lambda 運算式和直接記憶體存取。 C# 支援泛型方法和型別，提供更高的型別安全和效能。C# 也支援迭代器，讓集合類別的實作者定義自訂的反覆項目表現方式，使得用戶端程式碼可以容易地使用。 語言集成查詢 （LINQ） 運算式使強型別查詢成為一流語言構造。  
   
  C# 為物件導向語言，支援封裝、繼承和多型的概念。 包括應用程式的進入點 `Main` 方法在內，所有變數和方法都會封裝在類別定義內。 類別可直接繼承自一個父類別，但可以實作數目不拘的介面。 覆寫父類別中虛擬方法的方法需要利用 `override` 關鍵字，避免意外重複定義。 在 C# 中，結構就像輕量型的類別。它是堆疊配置型別，可以實作介面，但不支援繼承。  
   
  除了這些基本物件導向準則，C# 可讓您透過許多創新的語言建構，輕鬆地開發軟體元件，包括下列各項︰  
   
-- 稱為「委派」的封裝方法簽章，可啟用型別安全事件通知。  
+- 稱為「委派」** 的封裝方法簽章，可啟用型別安全事件通知。  
   
 - 屬性，可做為私用成員變數的存取子。  
   
@@ -36,9 +36,9 @@ C# 語法的表達能力相當高，同時也很簡單且易於了解。 任何�
   
 - 內嵌 XML 文件註解。  
   
-- 語言整合式查詢（LINQ），可在各種不同的資料來源中提供內建的查詢功能。  
+- 語言集成查詢 （LINQ），它提供各種資料來源的內置查詢功能。  
   
- 如果您必須與 COM 物件或原生 Win32 DLL 等其他 Windows 軟體互動，您可以在 C# 中透過稱為 "Interop" 的處理序來達到此目的。 Interop 幾乎可讓 C# 程式執行大部分原生 C++ 應用程式的功能。 C#甚至針對直接記憶體存取很重要的情況，支援指標和「unsafe」程式碼的概念。  
+ 如果您必須與 COM 物件或原生 Win32 DLL 等其他 Windows 軟體互動，您可以在 C# 中透過稱為 "Interop" 的處理序來達到此目的。 Interop 幾乎可讓 C# 程式執行大部分原生 C++ 應用程式的功能。 C# 甚至支援指標和"不安全"代碼的概念，適用于直接記憶體存取至關重要的情況。  
   
  相較於 C 和 C++，C# 建置流程相當簡單，也比 Java 更有彈性。 沒有個別標頭檔，也不需要以特定順序宣告方法和型別。 C# 原始程式檔可以定義數目不拘的類別、結構、介面及事件。  
   
@@ -48,15 +48,15 @@ C# 語法的表達能力相當高，同時也很簡單且易於了解。 任何�
   
 - 如需有關 C# 語言特定層面的詳細資訊，請參閱 [C# 參考](../language-reference/index.md)。  
   
-- 如需 LINQ 的詳細資訊，請參閱[linq （語言整合式查詢）](../programming-guide/concepts/linq/index.md)。  
+- 有關 LINQ 的詳細資訊，請參閱[LINQ（語言集成查詢）。](../programming-guide/concepts/linq/index.md)  
 
 ## <a name="net-framework-platform-architecture"></a>.NET Framework 平台架構
 
  C# 程式在 .NET Framework 上執行，其為 Windows 不可或缺的元件，包括稱為通用語言執行平台 (CLR) 的虛擬執行系統和一組已整合類別庫。 CLR 是由 Microsoft 通用語言基礎結構 (CLI) 的商業實作，此國際標準是建立各種語言和程式庫都能一起順暢執行和開發環境的基礎。  
   
- 以 C# 撰寫的原始程式碼會編譯成符合 CLI 規格的[中繼語言 (IL)](../../standard/managed-code.md)。 IL 程式碼和像是點陣圖和字串的資源，會以稱為組件的可執行檔儲存在磁碟上，副檔名通常為 .exe 或 .dll。 組件包含的資訊清單提供有關組件的型別、版本、文化特性及安全性需求資訊。  
+ 用 C# 編寫的原始程式碼編譯為符合 CLI 規範[的中間語言 （IL）。](../../standard/managed-code.md) IL 程式碼和像是點陣圖和字串的資源，會以稱為組件的可執行檔儲存在磁碟上，副檔名通常為 .exe 或 .dll。 組件包含的資訊清單提供有關組件的型別、版本、文化特性及安全性需求資訊。  
   
- C# 程式執行時，組件會載入至 CLR，根據資訊清單中的資訊執行各種不同動作。 然後，如果符合安全性需求，CLR 會執行即時（JIT）編譯，將 IL 程式碼轉換成原生機器指令。 CLR 也提供有關自動記憶體回收、例外狀況處理和資源管理的其他服務。 CLR 執行的程式碼有時稱為「managed 程式碼」，與「非受控碼」相反，它會編譯成以特定系統為目標的原生電腦語言。 下圖說明 C# 原始程式碼檔、.NET Framework 類別庫、組件及 CLR 的編譯時期和執行階段關聯性。  
+ C# 程式執行時，組件會載入至 CLR，根據資訊清單中的資訊執行各種不同動作。 然後，如果滿足安全要求，CLR 將執行即時 （JIT） 編譯，將 IL 代碼轉換為本機指令。 CLR 也提供有關自動記憶體回收、例外狀況處理和資源管理的其他服務。 與"非託管代碼"相比，由 CLR 執行的代碼有時稱為"託管代碼"，後者編譯為針對特定系統的本機語言。 下圖說明 C# 原始程式碼檔、.NET Framework 類別庫、組件及 CLR 的編譯時期和執行階段關聯性。  
   
  ![從 C# 原始程式碼到電腦執行](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
@@ -66,6 +66,6 @@ C# 語法的表達能力相當高，同時也很簡單且易於了解。 任何�
   
  如需 .NET Framework 的詳細資訊，請參閱 [Microsoft.NET Framework 概觀 (英文)](../../framework/get-started/overview.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [使用視覺效果消費者入門C#](/visualstudio/ide/quickstart-csharp-console)
+- [Visual C# 使用者入門](/visualstudio/ide/quickstart-csharp-console)

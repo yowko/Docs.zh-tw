@@ -49,7 +49,7 @@
               href: propertypath-xaml-syntax.md
             - name: 'PresentationOptions:Freeze 屬性'
               href: presentationoptions-freeze-attribute.md
-        - name: '標記相容性 (mc:)語言功能'
+        - name: '標記相容性 (mc:) 語言功能'
           href: markup-compatibility-mc-language-features.md
           items:
             - name: 'mc:Ignorable 屬性'
@@ -65,7 +65,7 @@
           href: freezable-objects-overview.md
         - name: 對齊、邊界和填補概觀
           href: alignment-margins-and-padding-overview.md
-        - name: HOW TO 主題
+        - name: 如何主題
           href: base-elements-how-to-topics.md
           items:
             - name: 將 UIElement 設為透明或半透明
@@ -97,7 +97,7 @@
           href: serialization-limitations-of-xamlwriter-save.md
         - name: 初始化物件樹狀結構以外的物件項目
           href: initialization-for-object-elements-not-in-an-object-tree.md
-        - name: HOW TO 主題
+        - name: 如何主題
           href: element-tree-and-serialization-how-to-topics.md
           items:
             - name: 依名稱尋找項目
@@ -133,7 +133,7 @@
           href: collection-type-dependency-properties.md
         - name: XAML 載入和相依性屬性
           href: xaml-loading-and-dependency-properties.md
-        - name: HOW TO 主題
+        - name: 如何主題
           href: properties-how-to-topics.md
           items:
             - name: 實作相依性屬性
@@ -163,7 +163,7 @@
           href: visual-basic-and-wpf-event-handling.md
         - name: 弱式事件模式
           href: weak-event-patterns.md
-        - name: HOW TO 主題
+        - name: 如何主題
           href: events-how-to-topics.md
           items:
             - name: 使用程式碼新增事件處理常式
@@ -189,7 +189,7 @@
           href: styling-for-focus-in-controls-and-focusvisualstyle.md
         - name: 逐步解說：建立您的第一個觸控應用程式
           href: walkthrough-creating-your-first-touch-application.md
-        - name: HOW TO 主題
+        - name: 如何主題
           href: input-and-commands-how-to-topics.md
           items:
             - name: 啟用命令
@@ -228,7 +228,7 @@
                   href: handwriting-recognition.md
                 - name: 儲存筆墨
                   href: storing-ink.md
-                - name: Ink 物件模型：Windows Forms 和 COM 與 WPF 的比較
+                - name: Ink 物件模型：Windows Form 和 COM 與 WPF 的比較
                   href: the-ink-object-model-windows-forms-and-com-versus-wpf.md
                 - name: 筆墨進階處理
                   href: advanced-ink-handling.md
@@ -241,7 +241,7 @@
                       href: creating-an-ink-input-control.md
                     - name: 筆墨執行緒模型
                       href: the-ink-threading-model.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: digital-ink-how-to-topics.md
               items:
                 - name: 從自訂控制項選取筆墨
@@ -271,7 +271,7 @@
           href: data-and-data-objects.md
         - name: 逐步解說：在使用者控制項上啟用拖放功能
           href: walkthrough-enabling-drag-and-drop-on-a-user-control.md
-        - name: HOW TO 主題
+        - name: 如何主題
           href: drag-and-drop-how-to-topics.md
           items:
             - name: 開啟置放在 RichTextBox 控制項上的檔案
@@ -296,7 +296,7 @@
               href: resources-and-code.md
             - name: 合併的資源字典
               href: merged-resource-dictionaries.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: resources-how-to-topics.md
               items:
                 - name: 定義和參考資源
@@ -318,7 +318,7 @@
           href: documents-in-wpf.md
         - name: 文件序列化與儲存
           href: document-serialization-and-storage.md
-        - name: 標註
+        - name: 註解
           href: annotations.md
           items:
             - name: 附註概觀
@@ -334,7 +334,7 @@
               href: textelement-content-model-overview.md
             - name: 資料表概觀
               href: table-overview.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: flow-content-elements-how-to-topics.md
               items:
                 - name: 調整段落的間距
@@ -389,7 +389,7 @@
                   href: packaging-fonts-with-applications.md
                 - name: 範例 OpenType 字型套件
                   href: sample-opentype-font-pack.md
-                - name: HOW TO 主題
+                - name: 如何主題
                   href: fonts-how-to-topics.md
                   items:
                     - name: 列舉系統字型
@@ -401,9 +401,9 @@
               items:
                 - name: GlyphRun 物件和 Glyphs 項目簡介
                   href: introduction-to-the-glyphrun-object-and-glyphs-element.md
-                - name: 作法：使用圖像繪製文字
+                - name: 如何：使用圖像繪製文字
                   href: draw-text-using-glyphs.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: typography-how-to-topics.md
               items:
                 - name: 建立文字裝飾
@@ -429,7 +429,7 @@
           items:
             - name: 列印概觀
               href: printing-overview.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: printing-how-to-topics.md
               items:
                 - name: '叫用 [列印] 對話方塊'
@@ -463,7 +463,7 @@
           href: localization-attributes-and-comments.md
         - name: WPF 中的雙向功能概觀
           href: bidirectional-features-in-wpf-overview.md
-        - name: HOW TO 主題
+        - name: 如何主題
           href: globalization-and-localization-how-to-topics.md
           items:
             - name: 將應用程式當地語系化
@@ -476,7 +476,7 @@
               href: how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md
             - name: 在可當地語系化的應用程式中使用資源
               href: how-to-use-resources-in-localizable-applications.md
-    - name: 配置
+    - name: 版面配置
       href: layout.md
     - name: 移轉和互通性
       href: migration-and-interoperability.md
@@ -494,23 +494,23 @@
               href: windows-forms-and-wpf-property-mapping.md
             - name: 混合應用程式疑難排解
               href: troubleshooting-hybrid-applications.md
-            - name: 逐步解說：將 Windows Forms 控制項裝載在 WPF 中
+            - name: 逐步解說：在 WPF 中裝載 Windows Form 控制項
               href: walkthrough-hosting-a-windows-forms-control-in-wpf.md
-            - name: 逐步解說：使用 XAML 將 Windows Forms 控制項裝載在 WPF 中
+            - name: 逐步解說：使用 XAML 在 WPF 中裝載 Windows Form 控制項
               href: walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md
-            - name: 逐步解說：將 Windows Forms 複合控制項裝載在 WPF 中
+            - name: 逐步解說：在 WPF 中裝載 Windows Form 複合控制項
               href: walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md
-            - name: 逐步解說：將 ActiveX 控制項裝載在 WPF 中
+            - name: 逐步解說：在 WPF 中裝載 ActiveX 控制項
               href: walkthrough-hosting-an-activex-control-in-wpf.md
-            - name: 作法：在混合應用程式中啟用視覺化樣式
+            - name: 如何：在混合應用程式中啟用視覺化樣式
               href: how-to-enable-visual-styles-in-a-hybrid-application.md
-            - name: 逐步解說：在 WPF 中排列 Windows Forms 控制項
+            - name: 逐步解說：在 WPF 中排列 Windows Form 控制項
               href: walkthrough-arranging-windows-forms-controls-in-wpf.md
             - name: 逐步解說：繫結至混合應用程式中的資料
               href: walkthrough-binding-to-data-in-hybrid-applications.md
-            - name: 逐步解說：在 Windows Forms 中裝載立體 WPF 複合控制項
+            - name: 逐步解說：在 Windows Form 中裝載立體 WPF 複合控制項
               href: walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md
-            - name: 逐步解說：在 Windows Forms 中裝載 WPF 複合控制項
+            - name: 逐步解說：在 Windows Form 中裝載 WPF 複合控制項
               href: walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md
             - name: 逐步解說：使用 ElementHost 控制項對應屬性
               href: walkthrough-mapping-properties-using-the-elementhost-control.md
@@ -527,20 +527,20 @@
               href: sharing-message-loops-between-win32-and-wpf.md
             - name: 在 WPF 中裝載 Win32 內容
               href: hosting-win32-content-in-wpf.md
-            - name: 逐步解說：將 Win32 控制項裝載在 WPF 中
+            - name: 逐步解說：在 WPF 中裝載 Win32 控制項
               href: walkthrough-hosting-a-win32-control-in-wpf.md
-            - name: 逐步解說：將 WPF 內容裝載在 Win32 中
+            - name: 逐步解說：在 Win32 中裝載 WPF 內容
               href: walkthrough-hosting-wpf-content-in-win32.md
-            - name: 逐步解說：將 WPF 時鐘裝載在 Win32 中
+            - name: 逐步解說：在 Win32 中裝載 WPF 時鐘
               href: walkthrough-hosting-a-wpf-clock-in-win32.md
         - name: WPF 和 Direct3D9 互通
           href: wpf-and-direct3d9-interoperation.md
           items:
             - name: Direct3D9 和 WPF 互通性的效能考量
               href: performance-considerations-for-direct3d9-and-wpf-interoperability.md
-            - name: 逐步解說：建立 Direct3D9 內容以裝載在 WPF 中
+            - name: 逐步解說：建立裝載於 WPF 中的 Direct3D9 內容
               href: walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md
-            - name: 逐步解說：將 Direct3D9 內容裝載在 WPF 中
+            - name: 逐步解說：在 WPF 中裝載 Direct3D9 內容
               href: walkthrough-hosting-direct3d9-content-in-wpf.md
     - name: 效能
       href: performance.md
@@ -566,7 +566,7 @@
               href: optimizing-performance-text.md
             - name: 資料繫結
               href: optimizing-performance-data-binding.md
-            - name: 控制項
+            - name: 控制
               href: optimizing-performance-controls.md
             - name: 其他效能建議
               href: optimizing-performance-other-recommendations.md

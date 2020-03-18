@@ -6,13 +6,13 @@ ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
 ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503551"
 ---
-# <a name="tutorial-create-an-item-template"></a>教學課程：建立專案範本
+# <a name="tutorial-create-an-item-template"></a>教程：創建專案範本
 
 透過 .NET Core，您可以建立及部署能產生專案、檔案，甚至是資源的範本。 此教學課程是指導您如何建立、安裝及解除安裝能搭配 `dotnet new` 命令使用之範的本系列文章第一部分。
 
@@ -26,14 +26,14 @@ ms.locfileid: "77503551"
 > * 測試項目範本
 > * 將項目範本解除安裝
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 * [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 * 請參閱參考文章 [dotnet new 的自訂範本](../tools/custom-templates.md)。
 
   該參考文章會說明範本的基本概念及構成方式。 那些資訊有一部分會在此重述。
 
-* 開啟終端機，並流覽至_working\templates_資料夾。
+* 開啟終端機並瀏覽至 _working\templates_ 資料夾。
 
 ## <a name="create-the-required-folders"></a>建立必要的資料夾
 
@@ -41,7 +41,7 @@ ms.locfileid: "77503551"
 
 首先，請建立父資料夾；其名稱並不重要。 然後，建立名為 _working_ 的子資料夾。 在 _working_ 資料夾中，建立名為 _templates_ 的子資料夾。
 
-接下來，在父資料夾底下建立名為 _test_ 的資料夾。 資料夾結構看起來應該如下所示。
+接下來，在父資料夾底下建立名為 _test_ 的資料夾。 資料夾結構應如下所示。
 
 ```console
 parent_folder
@@ -54,7 +54,7 @@ parent_folder
 
 項目範本是特定類型的範本，其會包含一或多個檔案。 這些範本類型很適合在您想要產生設定、程式碼或方案檔之類的項目時使用。 在此範例中，您將會建立能將擴充方法加入字串類型的類別。
 
-在終端機中，流覽至 [ _working\templates_ ] 資料夾，然後建立名為 [_擴充_功能] 的新子資料夾。 進入該資料夾。
+在您的終端機中，瀏覽至 _working\templates_ 資料夾，並建立名為 _extensions_ 的新子資料夾。 進入該資料夾。
 
 ```console
 working
@@ -85,7 +85,7 @@ namespace System
 
 ## <a name="create-the-template-config"></a>建立範本設定
 
-.NET Core 會將範本辨識為存在於範本根目錄中的特殊資料夾及設定檔。 在本教學課程中，您的範本資料夾位於_working\templates\extensions_。
+.NET Core 會將範本辨識為存在於範本根目錄中的特殊資料夾及設定檔。 在此教學課程中，您的範本資料夾是位於 _working\templates\extensions_。
 
 當您建立範本時，範本資料夾中的所有檔案和資料夾都會包含為範本的一部分，除了特殊設定資料夾之外。 此設定資料夾名為 _.template.config_。
 
@@ -99,7 +99,7 @@ working
                 template.json
 ```
 
-使用您慣用的文字編輯器開啟_範本_，並貼上下列 json 程式碼並加以儲存。
+使用您最喜愛的文字編輯器打開_範本.json，_ 並粘貼到以下 JSON 代碼並保存它。
 
 ```json
 {
@@ -116,14 +116,14 @@ working
 }
 ```
 
-此設定檔會包含您範本的所有設定。 您可以看見基本設定 (例如 `name` 和 `shortName`)，但還有設定為 `tags/type` 的 `item` 值。 這會將您的範本分類為項目範本。 您可以建立的範本類型本身並無限制。 `item` 和 `project` 值是 .NET Core 建議的常用名稱，它們可以讓使用者輕鬆篩選其想要尋找的範本類型。
+此設定檔會包含您範本的所有設定。 您可以看見基本設定 (例如 `name` 和 `shortName`)，但還有設定為 `item` 的 `tags/type` 值。 這會將您的範本分類為項目範本。 您可以建立的範本類型本身並無限制。 `item` 和 `project` 值是 .NET Core 建議的常用名稱，它們可以讓使用者輕鬆篩選其想要尋找的範本類型。
 
-`classifications` 項目代表您執行  **並取得範本清單時所會看見的 [標籤]** `dotnet new` 欄。 使用者也可以根據分類標籤搜尋。 不要將 `tags`.json 檔案中的 \* 屬性與 `classifications` 標籤清單混淆在一起。 它們是不同的東西，但不幸地具有類似的名稱。 *template.json* 檔案的完整結構描述位於 [JSON 結構描述存放區](http://json.schemastore.org/template)。 如需 *template.json* 檔案的詳細資訊，請參閱 [dotnet 範本化 Wiki](https://github.com/dotnet/templating/wiki) \(英文\)。
+`classifications` 項目代表您執行 `dotnet new` 並取得範本清單時所會看見的 [標籤]**** 欄。 使用者也可以根據分類標籤搜尋。 不要將 \*.json 檔案中的 `tags` 屬性與 `classifications` 標籤清單混淆在一起。 它們是不同的東西，但不幸地具有類似的名稱。 *template.json* 檔案的完整結構描述位於 [JSON 結構描述存放區](http://json.schemastore.org/template)。 如需 *template.json* 檔案的詳細資訊，請參閱 [dotnet 範本化 Wiki](https://github.com/dotnet/templating/wiki) \(英文\)。
 
 您已經具備有效的 _.template.config/template.json_ 檔案，現在您的範本已經準備好並可供安裝。 在您的終端機中，瀏覽至 _extensions_ 資料夾，並執行下列命令以安裝位於目前資料夾中的範本：
 
-* **在 Windows 上**：`dotnet new -i .\`
-* **在 Linux 或 MacOS 上**：`dotnet new -i ./`
+* **在 Windows**上 ：`dotnet new -i .\`
+* **在Linux或macOS**上 ：`dotnet new -i ./`
 
 此命令會輸出已安裝範本的清單，其中應該會包含您的範本。
 
@@ -155,7 +155,7 @@ Worker Service                                    worker                [C#]    
 dotnet new console
 ```
 
-您會取得如下所示的輸出。
+您將獲得類似于以下內容的輸出。
 
 ```console
 The template "Console Application" was created successfully.
@@ -167,13 +167,13 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
-使用執行專案。
+使用 運行專案。
 
 ```dotnetcli
 dotnet run
 ```
 
-您會取得下列輸出。
+您將獲得以下輸出。
 
 ```console
 Hello World!
@@ -185,7 +185,7 @@ Hello World!
 dotnet new stringext
 ```
 
-您會取得下列輸出。
+您將獲得以下輸出。
 
 ```console
 The template "Example templates: string extensions" was created successfully.
@@ -203,7 +203,7 @@ Console.WriteLine("Hello World!".Reverse());
 dotnet run
 ```
 
-您會取得下列輸出。
+您將獲得以下輸出。
 
 ```console
 !dlroW olleH
@@ -219,7 +219,7 @@ dotnet run
 dotnet new -u
 ```
 
-您會取得如下所示的輸出。
+您將獲得類似于以下內容的輸出。
 
 ```console
 Template Instantiation Commands for .NET Core CLI
@@ -249,7 +249,7 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-若要卸載範本，請執行下列命令。
+要卸載範本，請運行以下命令。
 
 ```dotnetcli
 dotnet new -u C:\working\templates\extensions

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
 ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73418059"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>逐步解說：在 C# 中撰寫查詢 (LINQ)
@@ -26,15 +26,15 @@ ms.locfileid: "73418059"
   
 1. 啟動 Visual Studio。  
   
-2. 在功能表列上，選擇 [ **檔案**]、[ **新增**]、[ **專案**]。  
+2. 從功能表列依序選擇 [**檔案**]、[**新增**] 及 [**專案**]。  
   
-     [ **新增專案** ] 對話方塊隨即開啟。  
+     此時會開啟 [新增專案]**** 對話方塊。  
   
-3. 依序展開 [已安裝]、[範本] 和 [Visual C#]，然後選擇 [主控台應用程式]。  
+3. 依序展開 [已安裝]****、[範本]**** 和 [Visual C#]****，然後選擇 [主控台應用程式]****。  
   
-4. 在 [名稱] 文字方塊中，輸入不同的名稱或接受預設名稱，然後按一下 [確定] 按鈕。  
+4. 在 [名稱]**** 文字方塊中，輸入不同的名稱或接受預設名稱，然後按一下 [確定]**** 按鈕。  
   
-     新的專案隨即出現在方案總管中。  
+     新的專案隨即會出現在方案總管**** 中。  
   
 5. 您會發現專案具有 System.Core.dll 的參考和 <xref:System.Linq?displayProperty=nameWithType> 命名空間的 `using` 指示詞。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73418059"
   
 #### <a name="to-create-a-simple-query"></a>建立簡單查詢  
   
-- 在應用程式的 `Main` 方法中，建立簡單的查詢，即可在執行查詢時產生第一次測驗分數超過 90 分之所有學生的清單。 請注意，因為已選取整個 `Student` 物件，所以查詢的類型是 `IEnumerable<Student>`。 雖然程式碼也可以藉由 [var](../../../language-reference/keywords/var.md) 關鍵字來使用隱含類型，但需使用明確類型來清楚說明結果 (如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../classes-and-structs/implicitly-typed-local-variables.md))。  
+- 在應用程式的 `Main` 方法中，建立簡單的查詢，即可在執行查詢時產生第一次測驗分數超過 90 分之所有學生的清單。 請注意，因為已選取整個 `Student` 物件，所以查詢的類型是 `IEnumerable<Student>`。 雖然程式碼也可以藉由 [var](../../../language-reference/keywords/var.md) 關鍵字來使用隱含類型，但需使用明確類型來清楚說明結果  (如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](../../classes-and-structs/implicitly-typed-local-variables.md))。  
   
      另請注意，查詢的範圍變數 `student` 可作為來源中每個 `Student` 的參考，並提供每個物件的成員存取。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "73418059"
   
 ## <a name="execute-the-query"></a>執行查詢  
   
-#### <a name="to-execute-the-query"></a>查詢查詢  
+#### <a name="to-execute-the-query"></a>若要執行查詢  
   
 1. 現在，請撰寫 `foreach` 迴圈以執行查詢。 請注意下列程式碼的相關重點：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73418059"
   
     - 此變數的類型是 `Student`，其與 `IEnumerable<Student>` 查詢變數類型相容。  
   
-2. 加入此程式碼之後，建置並執行應用程式，即可在 [主控台] 視窗中查看結果。  
+2. 加入此程式碼之後，建置並執行應用程式，即可在 [主控台]**** 視窗中查看結果。  
   
  [!code-csharp[CsLINQGettingStarted#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#13)]  
   
@@ -115,7 +115,7 @@ ms.locfileid: "73418059"
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
-     如需詳細資訊，請參閱 [orderby 子句](../../../language-reference/keywords/orderby-clause.md)。  
+     有關詳細資訊，請參閱[訂單子句](../../../language-reference/keywords/orderby-clause.md)。  
   
 #### <a name="to-group-the-results"></a>若要將結果分組  
   
@@ -127,9 +127,9 @@ ms.locfileid: "73418059"
   
      [!code-csharp[CsLINQGettingStarted#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#15)]  
   
-3. 執行應用程式，並在 [主控台] 視窗中檢視結果。  
+3. 執行應用程式，並在 [主控台]**** 視窗中檢視結果。  
   
-     如需詳細資訊，請參閱 [group 子句](../../../language-reference/keywords/group-clause.md)。  
+     有關詳細資訊，請參閱[組子句](../../../language-reference/keywords/group-clause.md)。  
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>若要將變數設為隱含類型  
   
@@ -153,7 +153,7 @@ ms.locfileid: "73418059"
   
      [!code-csharp[csLINQGettingStarted#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#18)]  
   
-     如需詳細資訊，請參閱 [let 子句](../../../language-reference/keywords/let-clause.md)。  
+     有關詳細資訊，請參閱[讓子句](../../../language-reference/keywords/let-clause.md)。  
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>若要在查詢運算式中使用方法語法  
   
@@ -182,7 +182,7 @@ ms.locfileid: "73418059"
   
  [LINQ to Objects (C#)](./linq-to-objects.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Language-Integrated Query (LINQ) (C#)](./index.md)
 - [LINQ 查詢運算式](../../../linq/index.md)

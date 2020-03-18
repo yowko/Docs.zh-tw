@@ -3,15 +3,15 @@ title: dotnet help 命令
 description: dotnet help 命令會顯示指定命令更詳細的線上文件。
 ms.date: 02/14/2020
 ms.openlocfilehash: f5d9221ae18653451a3bf97dc82fae396ae4e288
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503724"
 ---
 # <a name="dotnet-help-reference"></a>dotnet help reference
 
-**本文適用于：** ✔️ .net CORE 2.0 SDK 和更新版本
+**本文適用于：✔️** .NET Core 2.0 SDK 和更高版本
 
 ## <a name="name"></a>名稱
 

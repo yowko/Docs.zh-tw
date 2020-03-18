@@ -3,10 +3,10 @@ title: 預先不可部分完成 XName 物件 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e84fbbe7-f072-4771-bfbb-059d18e1ad15
 ms.openlocfilehash: 2fd754a352bd2988e52ec9c67a9915a8e587b107
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69591491"
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a>預先不可部分完成 XName 物件 (LINQ to XML) (C#)
@@ -17,7 +17,7 @@ ms.locfileid: "69591491"
  您應該使用自己的案例來測試預先不可部分完成，以便決定是否應該使用此作業。  
   
 ## <a name="example"></a>範例  
- 下列範例為其示範。  
+ 下列範例示範此作業。  
   
 ```csharp  
 XName Root = "Root";  

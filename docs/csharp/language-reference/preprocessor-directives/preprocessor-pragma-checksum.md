@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 ms.openlocfilehash: 1bbb404e1183daa5e68e512e7439b6ae52abd605
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712477"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma 總和檢查碼 (C# 參考)
@@ -53,8 +53,8 @@ class TestClass
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 前置處理器指示詞](./index.md)
+- [C# 預處理器指令](./index.md)

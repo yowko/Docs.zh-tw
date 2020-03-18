@@ -6,10 +6,10 @@ helpviewer_keywords:
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
 ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937511"
 ---
 # <a name="generic-classes-c-programming-guide"></a>泛型類別 (C# 程式設計手冊)
@@ -65,7 +65,7 @@ ms.locfileid: "75937511"
   
  泛型類別都是非變異值。 換句話說，如果輸入參數指定 `List<BaseClass>`，您會在嘗試提供 `List<DerivedClass>` 時收到編譯時期錯誤。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic>
 - [C# 程式設計指南](../index.md)

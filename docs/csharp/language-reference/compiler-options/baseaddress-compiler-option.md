@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 ms.openlocfilehash: f138f445b8a335c7505e25b34f560c4da40ab2dd
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937205"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (C# 編譯器選項)
@@ -24,7 +24,7 @@ ms.locfileid: "75937205"
 -baseaddress:address  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>引數  
  `address`  
  DLL 的基底位址。 這個位址可以指定十進位、十六進位或八進位數字。  
   
@@ -37,17 +37,17 @@ ms.locfileid: "75937205"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性]**** 頁面。  
   
-2. 按一下 [建置] 屬性頁面。  
+2. 按一下 [建置]**** 屬性頁面。  
   
-3. 按一下 [ **進階** ] 按鈕。  
+3. 按一下 [進階]**** 按鈕。  
   
 4. 修改 **DLL 基底位址**屬性。  
   
      若要以程式設計方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
 - [C# 編譯器選項](./index.md)

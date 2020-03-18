@@ -1,36 +1,36 @@
 ---
 ms.openlocfilehash: b49b2f88b130bb952b77964d5bf38374dc606385
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74567949"
 ---
-### <a name="net-core-30-prefers-openssl-11x-to-openssl-10x"></a>.NET Core 3.0 傾向于將 OpenSSL 1.1. x OpenSSL 1.0. x
+### <a name="net-core-30-prefers-openssl-11x-to-openssl-10x"></a>.NET 核心 3.0 更喜歡 OpenSSL 1.1.x 到 OpenSSL 1.0.x
 
-適用于 Linux 的 .NET Core 可跨多個 Linux 發行版本，同時支援 OpenSSL 1.0. x 和 OpenSSL 1.1. x。  .NET Core 2.1 和 .NET Core 2.2 會先尋找 1.0. x，然後回到 1.1. x; .NET Core 3.0 會先尋找 1.1. x。 這是為了新增密碼編譯標準的支援而進行的變更。
+Linux 的 .NET Core 可跨多個 Linux 發行版本工作，可以同時支援 OpenSSL 1.0.x 和 OpenSSL 1.1.x。  .NET 核心 2.1 和 .NET Core 2.2 先查找 1.0.x，然後回落至 1.1.x;.NET Core 3.0 先查找 1.1.x。 進行此更改是為了增加對新加密標準的支援。
 
-這項變更可能會影響使用 .NET Core 中的 OpenSSL 特定 interop 類型執行平臺 interop 的程式庫或應用程式。
+此更改可能會影響使用 .NET Core 中特定于 OpenSSL 的互操作類型的庫或應用程式。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Core 2.2 和更早版本中，執行時間偏好在 1.1. x 版上載入 OpenSSL 1.0. x。 這表示與 OpenSSL 互通的 <xref:System.IntPtr> 和 <xref:System.Runtime.InteropServices.SafeHandle> 型別會與 libcrypto 搭配使用。 1.0.0/libcrypto. 1.0/libcrypto。因此，請依照喜好設定。
+在 .NET Core 2.2 和早期版本中，運行時更喜歡將 OpenSSL 1.0.x 載入到 1.1.x 以上。 這意味著使用 OpenSSL 的交互操作<xref:System.IntPtr>和<xref:System.Runtime.InteropServices.SafeHandle>類型與 libcrypto.so.1.0.0 / libcrypto.so.1.0 / libcrypto.so.so.1.0 / libcrypto.so.so.10 按首選項使用。
 
-從 .NET Core 3.0 開始，執行時間偏好在 OpenSSL 1.0. x 上載入 OpenSSL 1.1. x，因此與 OpenSSL 互通的 <xref:System.IntPtr> 和 <xref:System.Runtime.InteropServices.SafeHandle> 類型會用於 libcrypto。因此，1.1/libcrypto. 11/libcrypto。因此，請依喜好設定使用 1.1.0/libcrypto。 因此，從 .NET Core 2.1 或 .NET Core 2.2 升級時，直接與 OpenSSL 互通的程式庫和應用程式可能會與 .NET Core 公開的值具有不相容的指標。
+從 .NET Core 3.0 開始，運行時更喜歡載入 OpenSSL 1.1.x 而不是 OpenSSL 1.0.x，因此使用 OpenSSL 的交互操作<xref:System.IntPtr>和<xref:System.Runtime.InteropServices.SafeHandle>類型與 libcrypto.so.so.1.1/ libcrypto.so.11 / libcrypto.so.1.1.0 / libcrypto.so.1.1.1.1 首選項一起使用。 因此，當從 .NET Core 2.1 或 .NET Core 2.2 升級時，直接與 OpenSSL 交互操作的庫和應用程式可能具有與 .NET Core 公開值不相容的指標。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
 3.0
 
 #### <a name="recommended-action"></a>建議的動作
 
-使用 OpenSSL 直接作業的程式庫和應用程式必須謹慎，以確保它們使用與 .NET Core 執行時間相同的 OpenSSL 版本。
+使用 OpenSSL 直接操作的庫和應用程式需要小心，以確保它們使用與 .NET Core 運行時相同的 OpenSSL 版本。
 
-所有使用 <xref:System.IntPtr> 或從 .NET Core 密碼編譯類型 <xref:System.Runtime.InteropServices.SafeHandle> 值的程式庫或應用程式，都應該將其使用的程式庫版本與新的 <xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType> 屬性進行比較，以確保指標相容。
+使用 .NET Core<xref:System.IntPtr>加密<xref:System.Runtime.InteropServices.SafeHandle>類型或直接使用 OpenSSL 的值的所有庫或應用程式都應將其使用的庫版本與新<xref:System.Security.Cryptography.SafeEvpPKeyHandle.OpenSslVersion?displayProperty=nameWithType>屬性進行比較，以確保指標相容。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>類別
 
-密碼編譯
+Cryptography
 
 #### <a name="affected-apis"></a>受影響的 API
 

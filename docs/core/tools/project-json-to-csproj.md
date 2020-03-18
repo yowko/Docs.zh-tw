@@ -4,10 +4,10 @@ description: 查看 project.json 與 csproj 項目的對應。
 author: natemcmaster
 ms.date: 03/13/2017
 ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77451101"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
@@ -49,7 +49,7 @@ ms.locfileid: "77451101"
 </PropertyGroup>
 ```
 
-如果 `<AssemblyName>` 屬性定義於 project.json，則 `<PackageId>` 會有與 `buildOptions\outputName` 不同的值。
+如果 `buildOptions\outputName` 屬性定義於 project.json，則 `<AssemblyName>` 會有與 `<PackageId>` 不同的值。
 如需詳細資訊，請參閱[其他常見的建置選項](#other-common-build-options)。
 
 ### <a name="version"></a>version
@@ -333,7 +333,7 @@ And it's really great!</Description>
 ### <a name="standalone-apps-self-contained-deployment"></a>獨立應用程式 (獨立性部署)
 
 在 project.json 中，定義 `runtimes` 區段表示應用程式在建置和發行期間是獨立的。
-在 MSBuild 中，所有專案在建置期間都是「可攜式」，但可發行為獨立專案。
+在 MSBuild 中，所有專案在建置期間都是「可攜式」**，但可發行為獨立專案。
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
@@ -486,7 +486,7 @@ And it's really great!</Description>
 ```
 
 MSBuild 中的 `owners` 項目沒有對應項。
-對於 `summary`，您可以使用 MSBuild `<Description>` 屬性，即使 `summary` 的值不會自動移轉至該屬性亦然，因為該屬性會對應至 [`description`](#other-common-root-level-options) 項目。
+對於`summary`，可以使用 MSBuild`<Description>`屬性，即使 的值`summary`不會自動遷移到該屬性，因為該屬性對應到元素。 [`description`](#other-common-root-level-options)
 
 ## <a name="scripts"></a>指令碼
 
@@ -561,7 +561,7 @@ MSBuild 中的 `owners` 項目沒有對應項。
 </PropertyGroup>
 ```
 
-## <a name="shared"></a>shared
+## <a name="shared"></a>共用
 
 ```json
 {
@@ -628,7 +628,7 @@ MSBuild 中的 `owners` 項目沒有對應項。
 
 您可以使用 `PackagePath="path"` 修改 .nupkg 內的套件配置。
 
-除了 `Content`，大多數項目群組都需要明確地新增 `Pack="true"`，以包含在套件中。 因為 MSBuild `Content` 屬性預設會設定為 *，所以會將*  放在套件的 `<IncludeContentInPack>`content`true` 資料夾中。
+除了 `Content`，大多數項目群組都需要明確地新增 `Pack="true"`，以包含在套件中。 因為 MSBuild `<IncludeContentInPack>` 屬性預設會設定為 `true`，所以會將 `Content` 放在套件的 *content* 資料夾中。
 如需詳細資訊，請參閱 [Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package) (在套件中包含內容)。
 
 `PackagePath="%(Identity)"` 是將套件路徑設定為專案相關檔案路徑的捷徑。

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
 ms.openlocfilehash: 25421df2e9306071ce3506aaf7affd1b259d1c32
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602437"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (C# 編譯器選項)
@@ -33,7 +33,7 @@ ms.locfileid: "69602437"
   
  Visual Studio 開發環境不支援建立模組。  
   
- 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
 ## <a name="example"></a>範例  
  建立 `in.netmodule` 以編譯 `in.cs`：  
@@ -44,5 +44,5 @@ csc -target:module in.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [-target (C# 編譯器選項)](./target-compiler-option.md)
+- [-目標（C# 編譯器選項）](./target-compiler-option.md)
 - [C# 編譯器選項](./index.md)

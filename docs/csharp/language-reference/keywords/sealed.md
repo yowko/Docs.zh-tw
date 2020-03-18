@@ -8,10 +8,10 @@ helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
 ms.openlocfilehash: 686afd5d9d0394bb1a802551b65083732599f384
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713101"
 ---
 # <a name="sealed-c-reference"></a>sealed (C# 參考)
@@ -67,7 +67,7 @@ sealed class B : A {}
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
@@ -76,5 +76,5 @@ sealed class B : A {}
 - [抽象和密封類別以及類別成員](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [存取修飾詞](../../programming-guide/classes-and-structs/access-modifiers.md)
 - [修飾詞](index.md)
-- [override](override.md)
-- [virtual](virtual.md)
+- [覆蓋](override.md)
+- [虛擬](virtual.md)

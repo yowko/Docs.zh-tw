@@ -3,10 +3,10 @@ title: 重構為純虛擬函式 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
 ms.openlocfilehash: 4cf91ff078bd1c4582daa05475a91c4a4ecaba3e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253104"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>重構為純虛擬函式 (C#)
@@ -114,5 +114,5 @@ class Program
   
 ## <a name="see-also"></a>另請參閱
 
-- [純功能性轉換簡介 (C#)](./introduction-to-pure-functional-transformations.md)
-- [函數式程式設計與命令式程式設計的比較 (C#)](./functional-programming-vs-imperative-programming.md)
+- [純函數式轉換簡介 (C#)](./introduction-to-pure-functional-transformations.md)
+- [功能程式設計與命令性程式設計 （C#）](./functional-programming-vs-imperative-programming.md)

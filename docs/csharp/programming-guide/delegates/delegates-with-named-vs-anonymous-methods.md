@@ -1,15 +1,15 @@
 ---
-title: 具有命名與匿名方法的委派- C#程式設計指南
+title: 具有命名方法與匿名方法的代表 - C# 程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
 ms.openlocfilehash: 1ec366999ca6457471b705fa83f06fcde4293f4e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712373"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>使用具名和匿名方法委派的比較 (C# 程式設計手冊)
@@ -36,9 +36,9 @@ ms.locfileid: "75712373"
   
  [!code-csharp[csProgGuideDelegates#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#3)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [委派](./index.md)
-- [如何合併委派（多播委派）](./how-to-combine-delegates-multicast-delegates.md)
+- [如何組合委託（多播代表）](./how-to-combine-delegates-multicast-delegates.md)
 - [事件](../events/index.md)

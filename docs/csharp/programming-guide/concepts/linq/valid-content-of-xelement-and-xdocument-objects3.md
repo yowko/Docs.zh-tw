@@ -3,10 +3,10 @@ title: XElement 和 XDocument 物件的有效內容
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
 ms.openlocfilehash: 1ad5b18e3bbc2143a56f9c8e7b34354761b4e42f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69590943"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement 和 XDocument 物件的有效內容
@@ -45,7 +45,7 @@ ms.locfileid: "69590943"
   
 - <xref:System.Xml.Linq.XAttribute>  
   
-- 任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的型別  
+- 實作 <xref:System.Collections.Generic.IEnumerable%601> 的任何類型  
   
  如果物件實作 <xref:System.Collections.Generic.IEnumerable%601>，系統列舉物件中的集合，並加入集合中的所有項目。 如果集合包含 <xref:System.Xml.Linq.XNode> 或 <xref:System.Xml.Linq.XAttribute> 物件，系統會個別加入集合中的每個項目。 如果集合包含文字 (或轉換為文字的物件)，集合中的文字會遭到串連，並加入為單一文字節點。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "69590943"
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>允許加入內容的建構函式與函式  
  下列方法可讓您將子內容加入到 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XDocument>：  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.%23ctor%2A>|建構 <xref:System.Xml.Linq.XElement>。|  
 |<xref:System.Xml.Linq.XDocument.%23ctor%2A>|建構 <xref:System.Xml.Linq.XDocument>。|  

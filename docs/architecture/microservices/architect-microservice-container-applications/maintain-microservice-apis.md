@@ -3,10 +3,10 @@ title: 建立、發展以及版本控制微服務 API 與協定
 description: 因為需求會變更，所以要建立考慮演進和版本控制的 API 與合約。
 ms.date: 09/20/2018
 ms.openlocfilehash: 1972d02d8bf7935c71bfd383707ae19ea2baded9
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672895"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>建立、發展以及版本控制微服務 API 與協定
@@ -25,15 +25,15 @@ API 定義的性質取決於您所用的通訊協定。 例如，若您使用傳
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Scott Hanselman。ASP.NET Core RESTful Web API 版本設定變得更加容易** \
+- **斯科特·漢瑟曼ASP.NET核心 RESTful Web API 版本控制變得簡單** \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
-- **進行 RESTful web API 的版本設定** \
+- **版本化 RESTful Web API** \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy Fielding。版本設定、超媒體及 REST** \
+- **羅伊·菲爾丁版本控制、超媒體和 REST** \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 >[!div class="step-by-step"]
->[上一頁](asynchronous-message-based-communication.md)
->[下一頁](microservices-addressability-service-registry.md)
+>[上一個](asynchronous-message-based-communication.md)
+>[下一個](microservices-addressability-service-registry.md)

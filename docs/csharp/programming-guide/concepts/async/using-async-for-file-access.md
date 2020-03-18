@@ -3,10 +3,10 @@ title: 使用非同步方式存取檔案 (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
 ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595542"
 ---
 # <a name="using-async-for-file-access-c"></a>使用非同步方式存取檔案 (C#)
@@ -178,4 +178,4 @@ public async Task ProcessWriteMultAsync()
 
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](./index.md)
 - [非同步方法的傳回型別 (C#)](./async-return-types.md)
-- [非同步程式中的控制流程 (C#)](./control-flow-in-async-programs.md)
+- [同步程式中的控制流 （C#）](./control-flow-in-async-programs.md)

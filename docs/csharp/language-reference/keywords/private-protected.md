@@ -3,10 +3,10 @@ title: private protected - C# 參考
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: a73d61712075cf24d2b94c505104df1fade629e9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713205"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# 參考)
@@ -68,15 +68,15 @@ class DerivedClass2 : BaseClass
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [存取修飾詞](access-modifiers.md)
-- [存取範圍層級](accessibility-levels.md)
+- [協助工具級別](accessibility-levels.md)
 - [修飾詞](index.md)
 - [public](public.md)
-- [private](private.md)
-- [internal](internal.md)
+- [私人](private.md)
+- [內部](internal.md)
 - [internal virtual 關鍵字的安全性考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

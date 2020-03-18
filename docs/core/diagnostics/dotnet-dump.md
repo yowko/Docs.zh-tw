@@ -1,24 +1,24 @@
 ---
-title: dotnet-傾印-.NET Core
-description: 安裝和使用 dotnet-傾印命令列工具。
+title: 點網轉儲 - .NET 核心
+description: 安裝和使用點網轉儲命令列工具。
 ms.date: 10/14/2019
 ms.openlocfilehash: 3c0e28d4efc96ae53ec7dfae243725ab400e6b8f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76737666"
 ---
-# <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>傾印集合和分析公用程式（`dotnet-dump`）
+# <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>轉儲收集和分析實用程式 （`dotnet-dump`）
 
-**本文適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
+**本文適用于：✔️** .NET Core 3.0 SDK 和更高版本
 
 > [!NOTE]
-> macOS 不支援 `dotnet-dump`。
+> `dotnet-dump`macOS 上不受支援。
 
 ## <a name="installing-dotnet-dump"></a>安裝 `dotnet-dump`
 
-若要安裝 `dotnet-dump` [NuGet 套件](https://www.nuget.org/packages/dotnet-dump)的最新發行版本，請使用[dotnet tool install](../tools/dotnet-tool-install.md)命令：
+要安裝最新版本的`dotnet-dump` [NuGet 包](https://www.nuget.org/packages/dotnet-dump)，請使用[dotnet 工具安裝](../tools/dotnet-tool-install.md)命令：
 
 ```dotnetcli
 dotnet tool install -g dotnet-dump
@@ -32,28 +32,28 @@ dotnet-dump [-h|--help] [--version] <command>
 
 ## <a name="description"></a>描述
 
-`dotnet-dump` 的全域工具可讓您收集和分析 Windows 和 Linux 傾印，而不需要任何與 Linux `lldb` 相關的原生偵錯工具。 這項工具在 Alpine Linux 這類平臺上很重要，因為無法使用完整的 `lldb`。 `dotnet-dump` 工具可讓您執行 SOS 命令來分析損毀和垃圾收集行程（GC），但它不是原生偵錯工具，因此不支援顯示原生堆疊框架之類的動作。
+全域`dotnet-dump`工具是收集和分析 Windows 和 Linux 轉儲的方法，無需像 Linux 那樣`lldb`涉及任何本機調試器。 此工具在阿爾卑斯 Linux 等平臺中非常重要，因為平臺無法`lldb`完全工作。 該工具`dotnet-dump`允許您運行 SOS 命令來分析崩潰和垃圾回收器 （GC），但它不是本機調試器，因此不支援顯示本機堆疊幀之類的內容。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`--version`**
 
-  顯示 dotnet 計數器公用程式的版本。
+  顯示點網計數器實用程式的版本。
 
 - **`-h|--help`**
 
-  顯示命令列說明。
+  顯示命令列説明。
 
 ## <a name="commands"></a>命令
 
-| 命令                                     |
+| Command                                     |
 | ------------------------------------------- |
-| [dotnet-傾印收集](#dotnet-dump-collect) |
-| [dotnet-傾印分析](#dotnet-dump-analyze) |
+| [點網轉儲收集](#dotnet-dump-collect) |
+| [點網轉儲分析](#dotnet-dump-analyze) |
 
-## <a name="dotnet-dump-collect"></a>dotnet-傾印收集
+## <a name="dotnet-dump-collect"></a>點網轉儲收集
 
-從進程中捕捉傾印。
+從進程捕獲轉儲。
 
 ### <a name="synopsis"></a>概要
 
@@ -61,43 +61,43 @@ dotnet-dump [-h|--help] [--version] <command>
 dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag]
 ```
 
-### <a name="options"></a>選項
+### <a name="options"></a>選項。
 
 - **`-h|--help`**
 
-  顯示命令列說明。
+  顯示命令列説明。
 
 - **`-p|--process-id <PID>`**
 
-  指定要從中收集記憶體傾印的處理序識別碼。
+  指定要從中收集記憶體傾印的進程 ID 號。
 
 - **`--type <Heap|Mini>`**
 
-  指定傾印類型，它會決定從進程收集的資訊種類。 有兩種類型：
+  指定轉儲類型，該類型確定從進程收集的資訊類型。 有兩種類型：
 
-  - `Heap`-包含模組清單、執行緒清單、所有堆疊、例外狀況資訊、處理資訊和所有記憶體（對應的影像除外）的大型且較完整的傾印。
-  - `Mini`-包含模組清單、執行緒清單、例外狀況資訊和所有堆疊的小型傾印。
+  - `Heap`- 一個大型且相對全面的轉儲，其中包含模組清單、執行緒清單、所有堆疊、異常資訊、控制碼資訊和映射圖像之外的所有記憶體。
+  - `Mini`- 包含模組清單、執行緒清單、異常資訊和所有堆疊的小轉儲。
 
-  如果未指定，`Heap` 為預設值。
+  如果未指定，`Heap`則為預設值。
 
 - **`-o|--output <output_dump_path>`**
 
-  應在其中寫入所收集傾印的完整路徑和檔案名。
+  應寫入收集的轉儲的完整路徑和檔案名。
 
   如果未指定：
 
-  - 預設為 Windows 上的 *. \ dump_YYYYMMDD_HHMMSS dmp* 。
-  - 預設為 *./core_YYYYMMDD_HHMMSS* on Linux。
+  - 在 Windows 上預設為 *._dump_YYYYMMDD_HHMMSS.dmp。*
+  - 預設值為 linux 上的 *./core_YYYYMMDD_HHMMSS。*
 
-  YYYYMMDD 是年/月/日，而 HHMMSS 是小時/分鐘/秒。
+  YYYYMMD是年/月/日，HHMMSS為小時/分鐘/秒。
 
 - **`--diag`**
 
-  啟用傾印收集診斷記錄。
+  啟用轉儲集合診斷日誌記錄。
 
-## <a name="dotnet-dump-analyze"></a>dotnet-傾印分析
+## <a name="dotnet-dump-analyze"></a>點網轉儲分析
 
-啟動互動式 shell 以探索傾印。 Shell 會接受各種[SOS 命令](#analyze-sos-commands)。
+啟動互動式 shell 以探索轉儲。 shell 接受各種[SOS 命令](#analyze-sos-commands)。
 
 ### <a name="synopsis"></a>概要
 
@@ -109,56 +109,56 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 - **`<dump_path>`**
 
-  指定要分析之傾印檔案的路徑。
+  指定要分析的轉儲檔的路徑。
 
-### <a name="options"></a>選項
+### <a name="options"></a>選項。
 
 - **`-c|--command <debug_command>`**
 
-  指定啟動時要在 shell 中執行的[命令](#analyze-sos-commands)。
+  指定在啟動時要在 shell 中運行[的命令](#analyze-sos-commands)。
 
 ### <a name="analyze-sos-commands"></a>分析 SOS 命令
 
-| 命令                             | 函數                                                                                      |
+| Command                             | 函式                                                                                      |
 | ----------------------------------- | --------------------------------------------------------------------------------------------- |
-| `soshelp`                           | 顯示所有可用的命令                                                               |
+| `soshelp`                           | 顯示所有可用命令                                                               |
 | `soshelp|help <command>`            | 顯示指定的命令。                                                               |
-| `exit|quit`                         | 結束互動模式。                                                                       |
+| `exit|quit`                         | 退出交互模式。                                                                       |
 | `clrstack <arguments>`              | 僅提供 Managed 程式碼的堆疊追蹤。                                                  |
-| `clrthreads <arguments>`            | 列出正在執行的 managed 執行緒。                                                            |
-| `dumpasync <arguments>`             | 顯示垃圾收集堆積上非同步狀態機器的相關資訊。                |
-| `dumpassembly <arguments>`          | 顯示元件的詳細資料。                                                           |
-| `dumpclass <arguments>`             | 顯示指定位址之 EE 類別結構的相關資訊。                     |
-| `dumpdelegate <arguments>`          | 顯示委派的相關資訊。                                                        |
-| `dumpdomain <arguments>`            | 顯示所有 Appdomain 和網域中所有元件的資訊。                |
-| `dumpheap <arguments>`              | 顯示有關垃圾收集堆積和物件相關集合統計資料的資訊。       |
+| `clrthreads <arguments>`            | 列出正在運行的託管執行緒。                                                            |
+| `dumpasync <arguments>`             | 顯示有關垃圾回收堆上非同步狀態電腦的資訊。                |
+| `dumpassembly <arguments>`          | 顯示有關程式集的詳細資訊。                                                           |
+| `dumpclass <arguments>`             | 在指定位址顯示有關 EE 類結構的資訊。                     |
+| `dumpdelegate <arguments>`          | 顯示有關委託的資訊。                                                        |
+| `dumpdomain <arguments>`            | 顯示域中所有 AppDomains 和所有程式集的資訊。                |
+| `dumpheap <arguments>`              | 顯示有關垃圾回收的堆和有關物件的收集統計資訊的資訊。       |
 | `dumpil <arguments>`                | 顯示與 Managed 方法相關聯的 Microsoft 中繼語言 (MSIL)。 |
 | `dumplog <arguments>`               | 將記憶體中壓力記錄檔的內容寫入指定的檔案。                         |
-| `dumpmd <arguments>`                | 在指定的位址顯示 MethodDesc 結構的相關資訊。                   |
-| `dumpmodule <arguments>`            | 在指定的位址顯示 EE 模組結構的相關資訊。                    |
+| `dumpmd <arguments>`                | 在指定位址顯示有關 MethodDesc 結構的資訊。                   |
+| `dumpmodule <arguments>`            | 在指定位址顯示有關 EE 模組結構的資訊。                    |
 | `dumpmt <arguments>`                | 顯示在所指定位址之方法資料表的相關資訊。                           |
-| `dumpobj <arguments>`               | 顯示位於指定位址之物件的相關資訊。                                       |
+| `dumpobj <arguments>`               | 在指定位址顯示有關物件的資訊。                                       |
 | `dso|dumpstackobjects <arguments>`  | 顯示可在目前堆疊界限內找到的所有 Managed 物件。                    |
-| `eeheap <arguments>`                | 顯示內部執行時間資料結構所耗用之進程記憶體的相關資訊。              |
+| `eeheap <arguments>`                | 顯示有關內部運行時資料結構消耗的進程記憶體的資訊。              |
 | `finalizequeue <arguments>`         | 顯示所有已註冊為完成項的物件。                                             |
-| `gcroot <arguments>`                | 顯示指定位址之物件的參考資訊（或根）。              |
-| `gcwhere <arguments>`               | 顯示傳入之引數的 GC 堆積中的位置。                               |
-| `ip2md <arguments>`                 | 在 JIT 程式碼中，以指定的位址顯示 MethodDesc 結構。                       |
+| `gcroot <arguments>`                | 顯示有關指定位址對物件的引用（或根）的資訊。              |
+| `gcwhere <arguments>`               | 顯示傳入的參數的 GC 堆中的位置。                               |
+| `ip2md <arguments>`                 | 在 JIT 代碼中顯示指定位址上的 MethodDesc 結構。                       |
 | `histclear <arguments>`             | 釋放 `hist*` 命令系列所使用的任何資源。                                |
 | `histinit <arguments>`              | 初始化在偵錯項目中儲存之壓力記錄檔中的 SOS 結構。                     |
-| `histobj <arguments>`               | 顯示與 `<arguments>`相關的垃圾收集壓力記錄重設。              |
+| `histobj <arguments>`               | 顯示與 的`<arguments>`垃圾回收應力日誌重新置放。              |
 | `histobjfind <arguments>`           | 顯示參考位於指定位址之物件的所有記錄檔項目。               |
 | `histroot <arguments>`              | 顯示與指定之根的提升和重新配置都相關的資訊。        |
-| `lm|modules`                        | 顯示進程中的原生模組。                                                   |
-| `name2ee <arguments>`               | 顯示 `<argument>`的 MethodTable 結構和 EEClass 結構。                |
-| `pe|printexception <arguments>`     | 顯示從位址 `<argument>`的例外狀況類別衍生的任何物件。             |
+| `lm|modules`                        | 在此過程中顯示本機模組。                                                   |
+| `name2ee <arguments>`               | 顯示 的方法表結構和 EEClass`<argument>`結構。                |
+| `pe|printexception <arguments>`     | 在 位址`<argument>`顯示從異常類派生的任何物件。             |
 | `setsymbolserver <arguments>`       | 啟用符號伺服器支援                                                             |
 | `syncblk <arguments>`               | 顯示 SyncBlock 持有者資訊。                                                           |
-| `threads|setthread <threadid>`      | 設定或顯示 SOS 命令的目前線程識別碼。                                  |
+| `threads|setthread <threadid>`      | 設置或顯示 SOS 命令的當前執行緒 ID。                                  |
 
 ## <a name="using-dotnet-dump"></a>使用 `dotnet-dump`
 
-第一個步驟是收集傾印。 如果已產生核心傾印，則可以略過此步驟。 作業系統或 .NET Core 執行時間的內建傾印[功能](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md)，都可以建立核心傾印。
+第一步是收集轉儲。 如果已生成核心轉儲，則可以跳過此步驟。 作業系統或 .NET Core 運行時的內置[轉儲生成功能](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md)可以各自創建核心轉儲。
 
 ```console
 $ dotnet-dump collect --process-id 1902
@@ -167,7 +167,7 @@ Written 98983936 bytes (24166 pages) to core file
 Complete
 ```
 
-現在使用 `analyze` 命令來分析核心傾印：
+現在使用`analyze`命令分析核心轉儲：
 
 ```console
 $ dotnet-dump analyze ./core_20190226_135850
@@ -177,7 +177,7 @@ Type 'quit' or 'exit' to exit the session.
 >
 ```
 
-此動作會啟動一個互動式會話，它會接受類似下列的命令：
+此操作將啟動一個互動式會話，該會話接受以下命令：
 
 ```console
 > clrstack
@@ -193,7 +193,7 @@ OS Thread Id: 0x573d (0)
 00007FFD28B43610 00007fb22aa9cedf [GCFrame: 00007ffd28b43610]
 ```
 
-若要查看終止應用程式的未處理例外狀況：
+要查看終止應用的未處理異常：：
 
 ```console
 > pe -lines
@@ -214,12 +214,12 @@ StackTraceString: <none>
 HResult: 80131604
 ```
 
-## <a name="special-instructions-for-docker"></a>Docker 的特殊指示
+## <a name="special-instructions-for-docker"></a>碼頭塢碼頭的特殊說明
 
-如果您是在 Docker 底下執行，傾印集合需要 `SYS_PTRACE` 功能（`--cap-add=SYS_PTRACE` 或 `--privileged`）。
+如果在 Docker 下運行，轉儲集合需要`SYS_PTRACE`功能 （`--cap-add=SYS_PTRACE` `--privileged`或 。
 
-在 Microsoft .NET Core SDK Linux Docker 映射上，某些 `dotnet-dump` 命令可能會擲回下列例外狀況：
+在 Microsoft .NET 核心 SDK `dotnet-dump` Linux Docker 映射上，某些命令可能會引發以下異常：
 
-> 未處理的例外狀況： System.dllnotfoundexception：無法載入共用程式庫 ' libdl.so ' 或其相依性的其中一個例外狀況。
+> 未處理的異常：System.DllNotFoundException：無法載入共用庫"libdl.so"或其依賴項之一的異常。
 
-若要解決此問題，請安裝 "libc6-dev" 套件。
+要解決此問題，請安裝"libc6-dev"包。
