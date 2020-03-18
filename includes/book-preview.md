@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 356ff8a29783175f201a3f2ad73054734fc24f18
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71182808"
 ---
 > [!IMPORTANT]
-> <span data-ttu-id="69707-101">**預覽版本**</span><span class="sxs-lookup"><span data-stu-id="69707-101">**PREVIEW EDITION**</span></span>
+> <span data-ttu-id="6ea85-101">**預覽版**</span><span class="sxs-lookup"><span data-stu-id="6ea85-101">**PREVIEW EDITION**</span></span>
 >
-> <span data-ttu-id="69707-102">本文提供來自目前正在建設之書籍的早期內容。</span><span class="sxs-lookup"><span data-stu-id="69707-102">This article provides early content from a book that is currently under construction.</span></span> <span data-ttu-id="69707-103">如果您有任何意見反應，請將<https://aka.ms/ebookfeedback>其提交至。</span><span class="sxs-lookup"><span data-stu-id="69707-103">If you have any feedback, submit it at <https://aka.ms/ebookfeedback>.</span></span>
+> <span data-ttu-id="6ea85-102">本文提供了一本目前正在建的書的早期內容。</span><span class="sxs-lookup"><span data-stu-id="6ea85-102">This article provides early content from a book that is currently under construction.</span></span> <span data-ttu-id="6ea85-103">如果您有任何回饋，請將它提交到<https://aka.ms/ebookfeedback>。</span><span class="sxs-lookup"><span data-stu-id="6ea85-103">If you have any feedback, submit it at <https://aka.ms/ebookfeedback>.</span></span>

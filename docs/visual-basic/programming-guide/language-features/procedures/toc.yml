@@ -1,23 +1,23 @@
 - name: Visual Basic 中的程序
   href: index.md
   items:
-    - name: HOW TO：建立程序
+    - name: 作法：建立程序
       href: how-to-create-a-procedure.md
     - name: 子程序
       href: sub-procedures.md
       items:
-        - name: HOW TO：呼叫不傳回值的程序
+        - name: 作法：呼叫不傳回值的程序
           href: how-to-call-a-procedure-that-does-not-return-a-value.md
-        - name: HOW TO：呼叫事件處理常式
+        - name: 作法：呼叫事件處理常式
           href: how-to-call-an-event-handler.md
     - name: 函式程序
       href: function-procedures.md
       items:
-        - name: HOW TO：建立傳回值的程序
+        - name: 作法：建立傳回值的程序
           href: how-to-create-a-procedure-that-returns-a-value.md
-        - name: HOW TO：傳回程序的值
+        - name: 作法：傳回程序的值
           href: how-to-return-a-value-from-a-procedure.md
-        - name: HOW TO：呼叫傳回值的程序
+        - name: 作法：呼叫傳回值的程序
           href: how-to-call-a-procedure-that-returns-a-value.md
     - name: 屬性程序
       href: property-procedures.md
@@ -26,37 +26,37 @@
           href: auto-implemented-properties.md
         - name: 屬性和變數之間的差異
           href: differences-between-properties-and-variables.md
-        - name: HOW TO：建立屬性
+        - name: 作法：建立屬性
           href: how-to-create-a-property.md
-        - name: HOW TO：宣告混合存取層級的屬性
+        - name: 作法：宣告混合存取層級的屬性
           href: how-to-declare-a-property-with-mixed-access-levels.md
-        - name: HOW TO：呼叫屬性程序
+        - name: 作法：呼叫屬性程序
           href: how-to-call-a-property-procedure.md
-        - name: HOW TO：宣告及呼叫預設屬性
+        - name: 作法：宣告及呼叫預設屬性
           href: how-to-declare-and-call-a-default-property.md
-        - name: HOW TO：將值置入屬性
+        - name: 作法：將值置入屬性
           href: how-to-put-a-value-in-a-property.md
-        - name: HOW TO：取得屬性值
+        - name: 作法：取得屬性值
           href: how-to-get-a-value-from-a-property.md
     - name: 運算子程序
       href: operator-procedures.md
       items:
-        - name: HOW TO：定義運算子
+        - name: 作法：定義運算子
           href: how-to-define-an-operator.md
-        - name: HOW TO：定義轉換運算子
+        - name: 作法：定義轉換運算子
           href: how-to-define-a-conversion-operator.md
-        - name: HOW TO：呼叫運算子程序
+        - name: 作法：呼叫運算子程序
           href: how-to-call-an-operator-procedure.md
-        - name: HOW TO：使用定義運算子的類別
+        - name: 作法：使用定義運算子的類別
           href: how-to-use-a-class-that-defines-operators.md
     - name: 程序參數和引數
       href: procedure-parameters-and-arguments.md
       items:
         - name: 參數和引數之間的差異
           href: differences-between-parameters-and-arguments.md
-        - name: HOW TO：定義程序的參數
+        - name: 作法：定義程序的參數
           href: how-to-define-a-parameter-for-a-procedure.md
-        - name: HOW TO：將引數傳遞至程序
+        - name: 作法：將引數傳遞至程序
           href: how-to-pass-arguments-to-a-procedure.md
         - name: 以傳值和傳址方式傳遞引數
           href: passing-arguments-by-value-and-by-reference.md
@@ -65,11 +65,11 @@
               href: differences-between-modifiable-and-nonmodifiable-arguments.md
             - name: 以傳值或傳址方式傳遞引數的差別
               href: differences-between-passing-an-argument-by-value-and-by-reference.md
-            - name: HOW TO：變更程序引數的值
+            - name: 作法：變更程序引數的值
               href: how-to-change-the-value-of-a-procedure-argument.md
-            - name: HOW TO：防止程序引數的值變更
+            - name: 作法：防止程序引數的值變更
               href: how-to-protect-a-procedure-argument-against-value-changes.md
-            - name: HOW TO：強制以傳值方式傳遞引數
+            - name: 作法：強制以傳值方式傳遞引數
               href: how-to-force-an-argument-to-be-passed-by-value.md
         - name: 依位置和名稱傳遞引數
           href: passing-arguments-by-position-and-by-name.md
@@ -84,13 +84,13 @@
     - name: 程序多載
       href: procedure-overloading.md
       items:
-        - name: HOW TO：定義程序的多個版本
+        - name: 作法：定義程序的多個版本
           href: how-to-define-multiple-versions-of-a-procedure.md
-        - name: HOW TO：呼叫多載程序
+        - name: 作法：呼叫多載程序
           href: how-to-call-an-overloaded-procedure.md
-        - name: HOW TO：多載使用選擇性參數的程序
+        - name: 作法：多載使用選擇性參數的程序
           href: how-to-overload-a-procedure-that-takes-optional-parameters.md
-        - name: HOW TO：多載使用不確定參數數目的程序
+        - name: 作法：多載使用不確定參數數目的程序
           href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
         - name: 多載程序的考量
           href: considerations-in-overloading-procedures.md
@@ -101,14 +101,14 @@
     - name: 擴充方法
       href: extension-methods.md
       items:
-        - name: HOW TO：撰寫延伸模組
+        - name: 作法：撰寫延伸模組
           href: how-to-write-an-extension-method.md
-        - name: HOW TO：呼叫延伸模組
+        - name: 作法：呼叫延伸模組
           href: how-to-call-an-extension-method.md
     - name: Lambda 運算式
       href: lambda-expressions.md
       items:
-        - name: HOW TO：建立 Lambda 運算式
+        - name: 作法：建立 Lambda 運算式
           href: how-to-create-a-lambda-expression.md
     - name: 部分方法
       href: partial-methods.md

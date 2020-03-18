@@ -11,7 +11,7 @@
     - name: 其他控制結構
       href: other-control-structures.md
       items:
-        - name: HOW TO：處置系統資源
+        - name: 作法：處置系統資源
           href: how-to-dispose-of-a-system-resource.md
     - name: 巢狀控制結構
       href: nested-control-structures.md

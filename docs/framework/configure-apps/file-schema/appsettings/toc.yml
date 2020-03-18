@@ -1,7 +1,7 @@
 - name: 應用程式設定結構描述
   href: index.md
   items:
-    - name: <configuration> 的 <appSettings> 項目
+    - name: <appSettings> 的 <configuration> 項目
       href: appsettings-element-for-configuration.md
       items:
         - name: <add> 項目

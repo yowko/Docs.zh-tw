@@ -3,29 +3,29 @@ title: ML.NET 的自動化機器學習
 description: 自動模型選取和定型概觀
 ms.date: 05/01/2019
 ms.topic: overview
-ms.custom: mvc
-ms.openlocfilehash: c6c369dc0b0375f180d33d85ef320ddb24102f3e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.custom: mvc, mlnet-tooling
+ms.openlocfilehash: acd6cae71d2d5d79209a77d34175e7f1b3c1ee35
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740105"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78849350"
 ---
-# <a name="automated-machine-learning-with-mlnet"></a><span data-ttu-id="f67e6-103">ML.NET 的自動化機器學習</span><span class="sxs-lookup"><span data-stu-id="f67e6-103">Automated machine learning with ML.NET</span></span>
+# <a name="automated-machine-learning-with-mlnet"></a><span data-ttu-id="cdc3f-103">ML.NET 的自動化機器學習</span><span class="sxs-lookup"><span data-stu-id="cdc3f-103">Automated machine learning with ML.NET</span></span>
 
-<span data-ttu-id="f67e6-104">自動化機器學習是 ML.NET 的一項功能，可執行自動模型選取和定型。</span><span class="sxs-lookup"><span data-stu-id="f67e6-104">Automated machine learning is a feature of ML.NET that performs automatic model selection and training.</span></span> <span data-ttu-id="f67e6-105">您可以指定機器學習工作並提供資料集，而自動化 ML 會選擇具有最佳計量的模型。</span><span class="sxs-lookup"><span data-stu-id="f67e6-105">You specify the machine learning task and supply a dataset, and automated ML chooses the model with the best metrics.</span></span> <span data-ttu-id="f67e6-106">它會輸出：</span><span class="sxs-lookup"><span data-stu-id="f67e6-106">It outputs:</span></span>
+<span data-ttu-id="cdc3f-104">自動化機器學習是 ML.NET 的一項功能，可執行自動模型選取和定型。</span><span class="sxs-lookup"><span data-stu-id="cdc3f-104">Automated machine learning is a feature of ML.NET that performs automatic model selection and training.</span></span> <span data-ttu-id="cdc3f-105">您可以指定機器學習工作並提供資料集，而自動化 ML 會選擇具有最佳計量的模型。</span><span class="sxs-lookup"><span data-stu-id="cdc3f-105">You specify the machine learning task and supply a dataset, and automated ML chooses the model with the best metrics.</span></span> <span data-ttu-id="cdc3f-106">它會輸出：</span><span class="sxs-lookup"><span data-stu-id="cdc3f-106">It outputs:</span></span>
 
-- <span data-ttu-id="f67e6-107">可載入預測應用程式的模型檔案</span><span class="sxs-lookup"><span data-stu-id="f67e6-107">a model file that can be loaded into your prediction application</span></span>
-- <span data-ttu-id="f67e6-108">進行預測的應用程式程式碼</span><span class="sxs-lookup"><span data-stu-id="f67e6-108">application code to make predictions</span></span>
-- <span data-ttu-id="f67e6-109">用於特徵選取和模型定型 (以了解模型) 的原始程式碼</span><span class="sxs-lookup"><span data-stu-id="f67e6-109">the source code used for feature selection and model training (to understand the model)</span></span>
+- <span data-ttu-id="cdc3f-107">可載入預測應用程式的模型檔案</span><span class="sxs-lookup"><span data-stu-id="cdc3f-107">a model file that can be loaded into your prediction application</span></span>
+- <span data-ttu-id="cdc3f-108">進行預測的應用程式程式碼</span><span class="sxs-lookup"><span data-stu-id="cdc3f-108">application code to make predictions</span></span>
+- <span data-ttu-id="cdc3f-109">用於特徵選取和模型定型 (以了解模型) 的原始程式碼</span><span class="sxs-lookup"><span data-stu-id="cdc3f-109">the source code used for feature selection and model training (to understand the model)</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="f67e6-110">這項功能目前處於預覽狀態，資料可能會有變更。</span><span class="sxs-lookup"><span data-stu-id="f67e6-110">This feature is currently in Preview, and material may be subject to change.</span></span>
+> <span data-ttu-id="cdc3f-110">這項功能目前處於預覽狀態，資料可能會有變更。</span><span class="sxs-lookup"><span data-stu-id="cdc3f-110">This feature is currently in Preview, and material may be subject to change.</span></span>
 
-<span data-ttu-id="f67e6-111">自動化 ML 目前僅限於二元分類、多元分類和迴歸的機器學習[工作](resources/tasks.md)。</span><span class="sxs-lookup"><span data-stu-id="f67e6-111">Automated ML is currently limited to the machine learning [tasks](resources/tasks.md) of binary classification, multiclass classification, and regression.</span></span> <span data-ttu-id="f67e6-112">未來版本將支援其他機器學習工作。</span><span class="sxs-lookup"><span data-stu-id="f67e6-112">The other machine learning tasks will be supported in future releases.</span></span>
+<span data-ttu-id="cdc3f-111">自動化 ML 目前僅限於二元分類、多元分類和迴歸的機器學習[工作](resources/tasks.md)。</span><span class="sxs-lookup"><span data-stu-id="cdc3f-111">Automated ML is currently limited to the machine learning [tasks](resources/tasks.md) of binary classification, multiclass classification, and regression.</span></span> <span data-ttu-id="cdc3f-112">未來版本將支援其他機器學習工作。</span><span class="sxs-lookup"><span data-stu-id="cdc3f-112">The other machine learning tasks will be supported in future releases.</span></span>
 
-<span data-ttu-id="f67e6-113">使用自動化 ML 的方法三種：</span><span class="sxs-lookup"><span data-stu-id="f67e6-113">There are three ways to use automated ML:</span></span>
+<span data-ttu-id="cdc3f-113">使用自動化 ML 的方法三種：</span><span class="sxs-lookup"><span data-stu-id="cdc3f-113">There are three ways to use automated ML:</span></span>
 
-1. <span data-ttu-id="f67e6-114">透過圖形化使用者介面，使用 [ML.NET 模型產生器](automate-training-with-model-builder.md)</span><span class="sxs-lookup"><span data-stu-id="f67e6-114">With a graphical user interface, with the [ML.NET Model Builder](automate-training-with-model-builder.md)</span></span>
-1. <span data-ttu-id="f67e6-115">在命令列上，使用 [ML.NET CLI](automate-training-with-cli.md)</span><span class="sxs-lookup"><span data-stu-id="f67e6-115">On the command line, with the [ML.NET CLI](automate-training-with-cli.md)</span></span>
-1. <span data-ttu-id="f67e6-116">透過應用程式，使用[自動化 ML API](how-to-guides/how-to-use-the-automl-api.md)</span><span class="sxs-lookup"><span data-stu-id="f67e6-116">Via an application, with the [automated ML API](how-to-guides/how-to-use-the-automl-api.md)</span></span>
+1. <span data-ttu-id="cdc3f-114">透過圖形化使用者介面，使用 [ML.NET 模型產生器](automate-training-with-model-builder.md)</span><span class="sxs-lookup"><span data-stu-id="cdc3f-114">With a graphical user interface, with the [ML.NET Model Builder](automate-training-with-model-builder.md)</span></span>
+1. <span data-ttu-id="cdc3f-115">在命令列上，使用 [ML.NET CLI](automate-training-with-cli.md)</span><span class="sxs-lookup"><span data-stu-id="cdc3f-115">On the command line, with the [ML.NET CLI](automate-training-with-cli.md)</span></span>
+1. <span data-ttu-id="cdc3f-116">透過應用程式，使用[自動化 ML API](how-to-guides/how-to-use-the-automl-api.md)</span><span class="sxs-lookup"><span data-stu-id="cdc3f-116">Via an application, with the [automated ML API](how-to-guides/how-to-use-the-automl-api.md)</span></span>

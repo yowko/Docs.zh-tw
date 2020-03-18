@@ -19,7 +19,7 @@
       href: hosting/
     - name: 中繼資料
       href: metadata/
-    - name: 程式碼剖析
+    - name: 分析
       href: profiling/
     - name: 強式命名
       href: strong-naming/

@@ -1,36 +1,36 @@
 ---
 ms.openlocfilehash: b4a20599ce6b7d8fd642e4f0e5b5f7d3fbcdac92
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393996"
 ---
-### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a><span data-ttu-id="fbb49-101">已移除過時的 Antiforgery、CORS、診斷、MVC 和路由 Api</span><span class="sxs-lookup"><span data-stu-id="fbb49-101">Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed</span></span>
+### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a><span data-ttu-id="63c25-101">已刪除的過期反偽造、CORS、診斷、MVC 和路由 API</span><span class="sxs-lookup"><span data-stu-id="63c25-101">Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed</span></span>
 
-<span data-ttu-id="fbb49-102">已移除 ASP.NET Core 2.2 中過時的成員和相容性參數。</span><span class="sxs-lookup"><span data-stu-id="fbb49-102">Obsolete members and compatibility switches in ASP.NET Core 2.2 were removed.</span></span>
+<span data-ttu-id="63c25-102">ASP . NET Core 2 . 2 中的過時成員和相容換機已被刪除。</span><span class="sxs-lookup"><span data-stu-id="63c25-102">Obsolete members and compatibility switches in ASP.NET Core 2.2 were removed.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="fbb49-103">引進的版本</span><span class="sxs-lookup"><span data-stu-id="fbb49-103">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="63c25-103">介紹的版本</span><span class="sxs-lookup"><span data-stu-id="63c25-103">Version introduced</span></span>
 
-<span data-ttu-id="fbb49-104">3.0</span><span class="sxs-lookup"><span data-stu-id="fbb49-104">3.0</span></span>
+<span data-ttu-id="63c25-104">3.0</span><span class="sxs-lookup"><span data-stu-id="63c25-104">3.0</span></span>
 
-#### <a name="reason-for-change"></a><span data-ttu-id="fbb49-105">變更的原因</span><span class="sxs-lookup"><span data-stu-id="fbb49-105">Reason for change</span></span>
+#### <a name="reason-for-change"></a><span data-ttu-id="63c25-105">更改原因</span><span class="sxs-lookup"><span data-stu-id="63c25-105">Reason for change</span></span>
 
-<span data-ttu-id="fbb49-106">API surface 一段時間的改善。</span><span class="sxs-lookup"><span data-stu-id="fbb49-106">Improvement of API surface over time.</span></span>
+<span data-ttu-id="63c25-106">隨著時間的推移，API 表面的改進。</span><span class="sxs-lookup"><span data-stu-id="63c25-106">Improvement of API surface over time.</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="fbb49-107">建議的動作</span><span class="sxs-lookup"><span data-stu-id="fbb49-107">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="63c25-107">建議的動作</span><span class="sxs-lookup"><span data-stu-id="63c25-107">Recommended action</span></span>
 
-<span data-ttu-id="fbb49-108">以 .NET Core 2.2 為目標時，請遵循過時組建訊息中的指導方針，改為採用新的 Api。</span><span class="sxs-lookup"><span data-stu-id="fbb49-108">While targeting .NET Core 2.2, follow the guidance in the obsolete build messages to adopt new APIs instead.</span></span>
+<span data-ttu-id="63c25-108">在定位 .NET Core 2.2 時，請按照過時的生成消息中的指南來採用新的 API。</span><span class="sxs-lookup"><span data-stu-id="63c25-108">While targeting .NET Core 2.2, follow the guidance in the obsolete build messages to adopt new APIs instead.</span></span>
 
-#### <a name="category"></a><span data-ttu-id="fbb49-109">分類</span><span class="sxs-lookup"><span data-stu-id="fbb49-109">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="63c25-109">類別</span><span class="sxs-lookup"><span data-stu-id="63c25-109">Category</span></span>
 
-<span data-ttu-id="fbb49-110">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="fbb49-110">ASP.NET Core</span></span>
+<span data-ttu-id="63c25-110">ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="63c25-110">ASP.NET Core</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="fbb49-111">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="fbb49-111">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="63c25-111">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="63c25-111">Affected APIs</span></span>
 
-<span data-ttu-id="fbb49-112">下列類型和成員已標示為已過時，適用于 ASP.NET Core 2.1 和2.2：</span><span class="sxs-lookup"><span data-stu-id="fbb49-112">The following types and members were marked as obsolete for ASP.NET Core 2.1 and 2.2:</span></span>
+<span data-ttu-id="63c25-112">以下類型和成員被標記為已過時，ASP.NET Core 2.1 和 2.2：</span><span class="sxs-lookup"><span data-stu-id="63c25-112">The following types and members were marked as obsolete for ASP.NET Core 2.1 and 2.2:</span></span>
 
-<span data-ttu-id="fbb49-113">**型別**</span><span class="sxs-lookup"><span data-stu-id="fbb49-113">**Types**</span></span>
+<span data-ttu-id="63c25-113">**型別**</span><span class="sxs-lookup"><span data-stu-id="63c25-113">**Types**</span></span>
 
 - <xref:Microsoft.AspNetCore.Diagnostics.Views.WelcomePage?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.DiagnosticsViewPage.Views.AttributeValue?displayProperty=nameWithType>
@@ -43,7 +43,7 @@ ms.locfileid: "72393996"
 - <xref:Microsoft.AspNetCore.Routing.IRouteValuesAddressMetadata?displayProperty=nameWithType>
 - <xref:Microsoft.AspNetCore.Routing.RouteValuesAddressMetadata?displayProperty=nameWithType>
 
-<span data-ttu-id="fbb49-114">**建構函式**</span><span class="sxs-lookup"><span data-stu-id="fbb49-114">**Constructors**</span></span>
+<span data-ttu-id="63c25-114">**建構函式**</span><span class="sxs-lookup"><span data-stu-id="63c25-114">**Constructors**</span></span>
 
 - <xref:Microsoft.AspNetCore.Cors.Infrastructure.CorsService.%23ctor(Microsoft.Extensions.Options.IOptions{Microsoft.AspNetCore.Cors.Infrastructure.CorsOptions})?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Routing.Tree.TreeRouteBuilder.%23ctor(Microsoft.Extensions.Logging.ILoggerFactory,System.Text.Encodings.Web.UrlEncoder,Microsoft.Extensions.ObjectPool.ObjectPool{Microsoft.AspNetCore.Routing.Internal.UriBuildingContext},Microsoft.AspNetCore.Routing.IInlineConstraintResolver)?displayProperty=fullName>
@@ -79,7 +79,7 @@ ms.locfileid: "72393996"
 - <xref:Microsoft.AspNetCore.Mvc.TagHelpers.ScriptTagHelper.%23ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Caching.Memory.IMemoryCache,System.Text.Encodings.Web.HtmlEncoder,System.Text.Encodings.Web.JavaScriptEncoder,Microsoft.AspNetCore.Mvc.Routing.IUrlHelperFactory)?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.RazorPageAdapter.%23ctor(Microsoft.AspNetCore.Mvc.Razor.RazorPageBase)?displayProperty=fullName>
 
-<span data-ttu-id="fbb49-115">**屬性**</span><span class="sxs-lookup"><span data-stu-id="fbb49-115">**Properties**</span></span>
+<span data-ttu-id="63c25-115">**屬性**</span><span class="sxs-lookup"><span data-stu-id="63c25-115">**Properties**</span></span>
 
 - <xref:Microsoft.AspNetCore.Antiforgery.AntiforgeryOptions.CookieDomain?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Antiforgery.AntiforgeryOptions.CookieName?displayProperty=fullName>
@@ -104,7 +104,7 @@ ms.locfileid: "72393996"
 - <xref:Microsoft.AspNetCore.Mvc.RazorPages.RazorPagesOptions.AllowDefaultHandlingForOptionsRequests?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Mvc.RazorPages.RazorPagesOptions.AllowMappingHeadRequestsToGetHandler?displayProperty=fullName>
 
-<span data-ttu-id="fbb49-116">**方法**</span><span class="sxs-lookup"><span data-stu-id="fbb49-116">**Methods**</span></span>
+<span data-ttu-id="63c25-116">**方法**</span><span class="sxs-lookup"><span data-stu-id="63c25-116">**Methods**</span></span>
 
 - <xref:Microsoft.AspNetCore.Mvc.LocalRedirectResult.ExecuteResult(Microsoft.AspNetCore.Mvc.ActionContext)?displayProperty=fullName>
 - <xref:Microsoft.AspNetCore.Mvc.RedirectResult.ExecuteResult(Microsoft.AspNetCore.Mvc.ActionContext)?displayProperty=fullName>

@@ -23,7 +23,7 @@
       items:
         - name: 使用預存程序管理 SQL Server 中的權限
           href: managing-permissions-with-stored-procedures-in-sql-server.md
-        - name: 在 SQL Server 中撰寫安全的動態 SQL
+        - name: 在 SQL Server 撰寫安全動態 SQL
           href: writing-secure-dynamic-sql-in-sql-server.md
         - name: 在 SQL Server 中簽署預存程序
           href: signing-stored-procedures-in-sql-server.md
@@ -80,10 +80,10 @@
           href: multiple-bulk-copy-operations.md
         - name: 異動和大量複製作業
           href: transaction-and-bulk-copy-operations.md
-    - name: Multiple Active Result Sets (MARS)
+    - name: Multiple Active Result Set (MARS)
       href: multiple-active-result-sets-mars.md
       items:
-        - name: 啟用 Multiple Active Result Sets
+        - name: 啟用 Multiple Active Result Set
           href: enabling-multiple-active-result-sets.md
         - name: 操作資料
           href: manipulating-data.md
@@ -114,9 +114,9 @@
       items:
         - name: SQL Server CLR 整合簡介
           href: introduction-to-sql-server-clr-integration.md
-        - name: CLR 使用者定義函式
+        - name: CLR 使用者定義函數
           href: clr-user-defined-functions.md
-        - name: CLR 使用者定義類型
+        - name: CLR 使用者定義型別
           href: clr-user-defined-types.md
         - name: CLR 預存程序
           href: clr-stored-procedures.md

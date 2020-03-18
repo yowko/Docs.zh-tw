@@ -8,7 +8,7 @@
     - name: 延遲初始設定
       href: lazy-initialization.md
       items:
-        - name: HOW TO：執行物件的延遲初始設定
+        - name: 如何：執行物件的延遲初始化
           href: how-to-perform-lazy-initialization-of-objects.md
     - name: ETW Events in the .NET Framework
       href: etw-events.md
@@ -60,5 +60,5 @@
           href: reliability-best-practices.md
         - name: 限制的執行區域
           href: constrained-execution-regions.md
-    - name: 效能祕訣
+    - name: 效能提示
       href: performance-tips.md

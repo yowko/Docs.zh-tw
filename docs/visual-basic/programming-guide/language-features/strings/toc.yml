@@ -16,31 +16,31 @@
           href: interpolated-strings.md
         - name: 以零為起始與以一為起始的字串存取比較
           href: zero-based-vs-one-based-string-access.md
-    - name: HOW TO：使用 StringBuilder 建立字串
+    - name: 作法：使用 StringBuilder 建立字串
       href: how-to-create-strings-using-a-stringbuilder.md
-    - name: HOW TO：在字串內搜尋
+    - name: 作法：在字串內搜尋
       href: how-to-search-within-a-string.md
     - name: 在字串和其他資料類型之間進行轉換
       href: converting-between-strings-and-other-data-types.md
       items:
-        - name: HOW TO：將位元組陣列轉換為字串
+        - name: 作法：將位元組陣列轉換為字串
           href: how-to-convert-an-array-of-bytes-into-a-string.md
-        - name: HOW TO：將字串轉換為位元組陣列
+        - name: 作法：將字串轉換為位元組陣列
           href: how-to-convert-strings-into-an-array-of-bytes.md
-        - name: HOW TO：從字元值陣列建立字串
+        - name: 作法：從字元值陣列建立字串
           href: how-to-create-a-string-from-an-array-of-char-values.md
-        - name: HOW TO：將十六進位字串轉換為數字
+        - name: 作法：將十六進位字串轉換為數字
           href: how-to-convert-hexadecimal-strings-to-numbers.md
-        - name: HOW TO：將字串轉換為字元陣列
+        - name: 作法：將字串轉換為字元陣列
           href: how-to-convert-a-string-to-an-array-of-characters.md
-        - name: HOW TO：存取字串中的字元
+        - name: 作法：存取字串中的字元
           href: how-to-access-characters-in-strings.md
     - name: 驗證字串
       href: validating-strings.md
       items:
-        - name: HOW TO：驗證檔案名稱和路徑
+        - name: 作法：驗證檔案名稱和路徑
           href: how-to-validate-file-names-and-paths.md
-        - name: HOW TO：驗證代表日期或時間的字串
+        - name: 作法：驗證代表日期或時間的字串
           href: how-to-validate-strings-that-represent-dates-or-times.md
         - name: 將規則運算式與 MaskedTextBox 控制項搭配使用
           href: using-regular-expressions-with-the-maskedtextbox-control.md

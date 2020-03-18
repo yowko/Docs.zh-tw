@@ -1,11 +1,11 @@
 - name: Accessing Application Settings
   href: index.md
   items:
-    - name: HOW TO：建立使用者設定的屬性方格
+    - name: 作法：建立使用者設定的屬性方格
       href: how-to-create-property-grids-for-user-settings.md
-    - name: HOW TO：保存使用者設定
+    - name: 作法：保存使用者設定
       href: how-to-persist-user-settings.md
-    - name: HOW TO：變更使用者設定
+    - name: 作法：變更使用者設定
       href: how-to-change-user-settings.md
-    - name: HOW TO：讀取應用程式設定
+    - name: 作法：讀取應用程式設定
       href: how-to-read-application-settings.md
