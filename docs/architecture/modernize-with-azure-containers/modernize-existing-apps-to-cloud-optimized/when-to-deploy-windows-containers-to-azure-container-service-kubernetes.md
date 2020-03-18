@@ -1,27 +1,27 @@
 ---
-title: 將 Windows 容器部署至 Azure Container Service 的時機（也就是 Kubernetes）
-description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |將 Windows 容器部署至 Azure Container Service 的時機（也就是 Kubernetes）
+title: 何時將 Windows 容器部署到 Azure 容器服務（即庫伯奈斯）
+description: 使用 Azure 雲和 Windows 容器對現有 .NET 應用程式進行現代化 |何時將 Windows 容器部署到 Azure 容器服務（即庫伯奈斯）
 ms.date: 04/30/2018
 ms.openlocfilehash: 903082deba635dd0dfc22d0186fbc589f8d05b92
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69577941"
 ---
-# <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a><span data-ttu-id="211de-103">將 Windows 容器部署至 Azure Container Service 的時機（也就是 Kubernetes）</span><span class="sxs-lookup"><span data-stu-id="211de-103">When to deploy Windows Containers to Azure Container Service (that is, Kubernetes)</span></span>
+# <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a><span data-ttu-id="e4e7f-103">何時將 Windows 容器部署到 Azure 容器服務（即庫伯奈斯）</span><span class="sxs-lookup"><span data-stu-id="e4e7f-103">When to deploy Windows Containers to Azure Container Service (that is, Kubernetes)</span></span>
 
-<span data-ttu-id="211de-104">Azure Container Service 特別針對 Azure，將熱門開放原始碼工具和技術的設定優化。</span><span class="sxs-lookup"><span data-stu-id="211de-104">Azure Container Service optimizes the configuration of popular open-source tools and technologies specifically for Azure.</span></span> <span data-ttu-id="211de-105">您會取得一個開放解決方案，為您的容器和您的應用程式設定提供可攜性。</span><span class="sxs-lookup"><span data-stu-id="211de-105">You get an open solution that offers portability both for your containers and for your application configuration.</span></span> <span data-ttu-id="211de-106">您可以選取 [大小]、[主機數] 和 [orchestrator 工具]。</span><span class="sxs-lookup"><span data-stu-id="211de-106">You select the size, the number of hosts, and the orchestrator tools.</span></span> <span data-ttu-id="211de-107">Azure Container Service 會為您處理基礎結構。</span><span class="sxs-lookup"><span data-stu-id="211de-107">Azure Container Service handles the infrastructure for you.</span></span>
+<span data-ttu-id="e4e7f-104">Azure 容器服務優化了專為 Azure 提供的熱門開源工具和技術的配置。</span><span class="sxs-lookup"><span data-stu-id="e4e7f-104">Azure Container Service optimizes the configuration of popular open-source tools and technologies specifically for Azure.</span></span> <span data-ttu-id="e4e7f-105">您將獲得一個開放的解決方案，該解決方案既可為容器提供便攜性，也可提供應用程式佈建。</span><span class="sxs-lookup"><span data-stu-id="e4e7f-105">You get an open solution that offers portability both for your containers and for your application configuration.</span></span> <span data-ttu-id="e4e7f-106">您可以選擇大小、主機數和協調器工具。</span><span class="sxs-lookup"><span data-stu-id="e4e7f-106">You select the size, the number of hosts, and the orchestrator tools.</span></span> <span data-ttu-id="e4e7f-107">Azure 容器服務可為您處理基礎結構。</span><span class="sxs-lookup"><span data-stu-id="e4e7f-107">Azure Container Service handles the infrastructure for you.</span></span>
 
-<span data-ttu-id="211de-108">如果您已經在使用開放原始碼協調器（例如 Kubernetes、Docker Swarm 或 DC/OS），則不需要變更現有的管理作法，就能將容器工作負載移至雲端。</span><span class="sxs-lookup"><span data-stu-id="211de-108">If you are already working with open-source orchestrators like Kubernetes, Docker Swarm, or DC/OS, you don't need to change your existing management practices to move container workloads to the cloud.</span></span> <span data-ttu-id="211de-109">使用您已熟悉的應用程式管理工具，並透過適用于您所選 orchestrator 的標準 API 端點進行連接。</span><span class="sxs-lookup"><span data-stu-id="211de-109">Use the application management tools that you're already familiar with and connect via the standard API endpoints for the orchestrator of your choice.</span></span>
+<span data-ttu-id="e4e7f-108">如果您已經在使用開源協調器（如 Kubernetes、Docker Swarm 或 DC/OS），則無需更改現有管理實踐將容器工作負載移動到雲。</span><span class="sxs-lookup"><span data-stu-id="e4e7f-108">If you are already working with open-source orchestrators like Kubernetes, Docker Swarm, or DC/OS, you don't need to change your existing management practices to move container workloads to the cloud.</span></span> <span data-ttu-id="e4e7f-109">使用您已經熟悉的應用程式管理工具，並通過您選擇的協調器的標準 API 終結點進行連接。</span><span class="sxs-lookup"><span data-stu-id="e4e7f-109">Use the application management tools that you're already familiar with and connect via the standard API endpoints for the orchestrator of your choice.</span></span>
 
-<span data-ttu-id="211de-110">如果您使用 Linux Docker 容器，則所有這些協調器都是成熟的環境，但可能僅適用于 Windows 容器的預覽狀態。</span><span class="sxs-lookup"><span data-stu-id="211de-110">All these orchestrators are mature environments if you are using Linux Docker containers, but might only be in Preview state for Windows Containers.</span></span>
+<span data-ttu-id="e4e7f-110">如果使用 Linux Docker 容器，但可能僅處於 Windows 容器的預覽狀態，則所有這些協調器都是成熟的環境。</span><span class="sxs-lookup"><span data-stu-id="e4e7f-110">All these orchestrators are mature environments if you are using Linux Docker containers, but might only be in Preview state for Windows Containers.</span></span>
 
-<span data-ttu-id="211de-111">例如，在 Kubernetes 中，容器的支援是原生（第一方公民），因此在 Kubernetes 上使用 Windows 容器也會有效（在2018年初的 ACS 中為預覽狀態）。</span><span class="sxs-lookup"><span data-stu-id="211de-111">For example, in Kubernetes, support for containers is native (first-class citizen), so using Windows Containers on Kubernetes is also effective (in preview in ACS as of early 2018).</span></span>
+<span data-ttu-id="e4e7f-111">例如，在 Kubernetes 中，對容器的支援是本機（一級公民），因此在 Kubernetes 上使用 Windows 容器也有效（在 2018 年初的 ACS 預覽版中）。</span><span class="sxs-lookup"><span data-stu-id="e4e7f-111">For example, in Kubernetes, support for containers is native (first-class citizen), so using Windows Containers on Kubernetes is also effective (in preview in ACS as of early 2018).</span></span>
 
-<span data-ttu-id="211de-112">重要事項：適用于 Kubernetes 的 ACS （Azure Container Service）演變和「更多 PaaS」版本是 AKS （Azure Kubernetes Service），不過，Windows 容器在第 2 2018 季仍不受支援，但很快就會受到支援。</span><span class="sxs-lookup"><span data-stu-id="211de-112">Important note: The evolved and “more PaaS” version of ACS (Azure Container Service) for Kubernetes is AKS (Azure Kubernetes Service), however, Windows Containers are still not supported as of Q2 2018, but it will be supported soon.</span></span>
+<span data-ttu-id="e4e7f-112">重要提示：Kubernetes 的 ACS（Azure 容器服務）的已演變和"更多 PaaS"版本是 AKS（Azure Kubernetes 服務），但是，截至 2018 年第 2 季度，Windows 容器仍然不受支援，但很快就會得到支援。</span><span class="sxs-lookup"><span data-stu-id="e4e7f-112">Important note: The evolved and “more PaaS” version of ACS (Azure Container Service) for Kubernetes is AKS (Azure Kubernetes Service), however, Windows Containers are still not supported as of Q2 2018, but it will be supported soon.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="211de-113">[上一頁](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
->[下一頁](choosing-azure-compute-options-for-container-based-applications.md)</span><span class="sxs-lookup"><span data-stu-id="211de-113">[Previous](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
+><span data-ttu-id="e4e7f-113">[上一個](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
+>[下一個](choosing-azure-compute-options-for-container-based-applications.md)</span><span class="sxs-lookup"><span data-stu-id="e4e7f-113">[Previous](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
 [Next](choosing-azure-compute-options-for-container-based-applications.md)</span></span>

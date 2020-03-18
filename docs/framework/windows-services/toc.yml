@@ -7,26 +7,26 @@
       href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
     - name: 服務應用程式的程式設計架構
       href: service-application-programming-architecture.md
-    - name: HOW TO：建立 Windows 服務
+    - name: 作法：建立 Windows 服務
       href: how-to-create-windows-services.md
       items:
-        - name: HOW TO：以程式設計方式撰寫服務
+        - name: 作法：以程式設計方式撰寫服務
           href: how-to-write-services-programmatically.md
-        - name: HOW TO：將安裝程式新增至服務應用程式
+        - name: 作法：將安裝程式新增至服務應用程式
           href: how-to-add-installers-to-your-service-application.md
-        - name: HOW TO：指定服務的資訊安全內容
+        - name: 作法：指定服務的資訊安全內容
           href: how-to-specify-the-security-context-for-services.md
-        - name: HOW TO：安裝和解除安裝服務
+        - name: 作法：安裝和解除安裝服務
           href: how-to-install-and-uninstall-services.md
-        - name: HOW TO：啟動服務
+        - name: 作法：啟動服務
           href: how-to-start-services.md
-        - name: HOW TO：暫停 Windows 服務 (Visual Basic)
+        - name: 作法：暫停 Windows 服務 (Visual Basic)
           href: how-to-pause-a-windows-service-visual-basic.md
-        - name: HOW TO：繼續執行 Windows 服務 (Visual Basic)
+        - name: 作法：繼續執行 Windows 服務 (Visual Basic)
           href: how-to-continue-a-windows-service-visual-basic.md
-        - name: HOW TO：偵錯 Windows 服務應用程式
+        - name: 作法：偵錯 Windows 服務應用程式
           href: how-to-debug-windows-service-applications.md
-        - name: HOW TO：記錄關於服務的資訊
+        - name: 作法：記錄關於服務的資訊
           href: how-to-log-information-about-services.md
         - name: 疑難排解：對 Windows 服務進行偵錯
           href: troubleshooting-debugging-windows-services.md

@@ -10,13 +10,13 @@
       items:
         - name: 建立網際網路要求
           href: creating-internet-requests.md
-        - name: 作法：要求網頁並擷取結果當作資料流
+        - name: 如何：要求網頁並擷取結果當做資料流
           href: how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md
-        - name: 作法：使用 WebRequest 類別要求資料
+        - name: 如何：使用 WebRequest 類別要求資料
           href: how-to-request-data-using-the-webrequest-class.md
-        - name: 作法：使用 WebRequest 類別傳送資料
+        - name: 如何：使用 WebRequest 類別傳送資料
           href: how-to-send-data-using-the-webrequest-class.md
-        - name: 作法：擷取符合 WebRequest 的通訊協定專屬 WebResponse
+        - name: 如何：擷取符合 WebRequest 的通訊協定特定 WebResponse
           href: how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md
         - name: 在網路上使用資料流
           href: using-streams-on-the-network.md
@@ -27,9 +27,9 @@
     - name: 可插式通訊協定程式設計
       href: programming-pluggable-protocols.md
       items:
-        - name: 作法：使用 WebRequest 註冊自訂通訊協定
+        - name: 如何：使用 WebRequest 註冊自訂通訊協定
           href: how-to-register-a-custom-protocol-using-webrequest.md
-        - name: 作法：轉換 WebRequest 類型以存取通訊協定特定屬性
+        - name: 如何：轉換 WebRequest 類型以存取通訊協定特定屬性
           href: how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md
         - name: 衍生自 WebRequest
           href: deriving-from-webrequest.md
@@ -40,14 +40,14 @@
       items:
         - name: HTTP
           href: http.md
-        - name: 作法：存取 HTTP 特定屬性
+        - name: 如何：存取 HTTP 特定屬性
           href: how-to-access-http-specific-properties.md
         - name: 管理連接
           href: managing-connections.md
           items:
             - name: 連接群組
               href: connection-grouping.md
-            - name: 作法：將使用者資訊指派給群組連線
+            - name: 如何：將使用者資訊指派給群組連接
               href: how-to-assign-user-information-to-group-connections.md
         - name: TCP-UDP
           href: tcp-udp.md
@@ -59,7 +59,7 @@
         - name: 通訊端
           href: sockets.md
           items:
-            - name: 作法：建立通訊端
+            - name: 如何：建立通訊端
               href: how-to-create-a-socket.md
             - name: 使用用戶端通訊端
               href: using-client-sockets.md
@@ -89,11 +89,11 @@
         - name: FTP
           href: ftp.md
           items:
-            - name: 作法：透過 FTP 下載檔案
+            - name: 如何：透過 FTP 下載檔案
               href: how-to-download-files-with-ftp.md
-            - name: 作法：透過 FTP 上傳檔案
+            - name: 如何：透過 FTP 上傳檔案
               href: how-to-upload-files-with-ftp.md
-            - name: 作法：以 FTP 列出目錄內容
+            - name: 如何：以 FTP 列出目錄內容
               href: how-to-list-directory-contents-with-ftp.md
         - name: 了解 WebRequest 問題和例外狀況
           href: understanding-webrequest-problems-and-exceptions.md
@@ -108,7 +108,7 @@
           href: ipv6-auto-configuration.md
         - name: 啟用和停用 IPv6
           href: enabling-and-disabling-ipv6.md
-        - name: 作法：修改電腦組態檔以啟用 IPv6 支援
+        - name: 如何：修改電腦設定檔案以啟用 IPv6 支援
           href: how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md
     - name: 設定網際網路應用程式
       href: configuring-internet-applications.md
@@ -119,7 +119,7 @@
           href: interpreting-network-tracing.md
         - name: 啟用網路追蹤
           href: enabling-network-tracing.md
-        - name: 作法：設定網路追蹤
+        - name: 如何：設定網路追蹤
           href: how-to-configure-network-tracing.md
     - name: 網路應用程式的快取管理
       href: cache-management-for-network-applications.md
@@ -138,13 +138,13 @@
         - name: 設定網路應用程式的快取功能
           href: configuring-caching-in-network-applications.md
           items:
-            - name: 作法：為應用程式設定以位置為基礎的快取原則
+            - name: 如何：為應用程式設定以位置為基礎的快取原則
               href: how-to-set-a-location-based-cache-policy-for-an-application.md
-            - name: 作法：為應用程式設定以時間為基礎的預設快取原則
+            - name: 如何：為應用程式設定以時間為基礎的預設快取原則
               href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
             - name: 如何：自訂以時間為基礎的快取原則
               href: how-to-customize-a-time-based-cache-policy.md
-            - name: 作法：設定要求的快取原則
+            - name: 如何：設定要求的快取原則
               href: how-to-set-cache-policy-for-a-request.md
     - name: 網路程式設計的安全性
       href: security-in-network-programming.md
@@ -174,18 +174,18 @@
           href: proxy-configuration.md
         - name: 自動 Proxy 偵測
           href: automatic-proxy-detection.md
-        - name: 作法：啟用 WebRequest 以使用 Proxy 與網際網路通訊
+        - name: 如何：啟用 WebRequest 以使用 Proxy 與網際網路通訊
           href: how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md
-        - name: 作法：覆寫全域 Proxy 的選取範圍
+        - name: 如何：覆寫全域 Proxy 的選取範圍
           href: how-to-override-a-global-proxy-selection.md
     - name: NetworkInformation
       href: networkinformation.md
       items:
-        - name: 作法：偵測網路可用性和位址變更
+        - name: 如何：偵測網路可用性和位址變更
           href: how-to-detect-network-availability-and-address-changes.md
-        - name: 作法：取得介面和通訊協定資訊
+        - name: 如何：取得介面和通訊協定資訊
           href: how-to-get-interface-and-protocol-information.md
-        - name: 作法：Ping 主機
+        - name: 如何：Ping 主機
           href: how-to-ping-a-host.md
     - name: 2.0 版之 System.Uri 命名空間的變更
       href: changes-to-the-system-uri-namespace-in-version-2-0.md
@@ -215,7 +215,7 @@
           href: peer-to-peer-networking-scenarios.md
     - name: 3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更
       href: changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md
-    - name: 具有延伸保護的整合式 Windows 驗證
+    - name: 具有擴充保護的整合式 Windows 驗證
       href: integrated-windows-authentication-with-extended-protection.md
     - name: 使用 IPv6 和 Teredo 的 NAT 周遊
       href: nat-traversal-using-ipv6-and-teredo.md

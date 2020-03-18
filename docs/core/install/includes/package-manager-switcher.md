@@ -1,28 +1,28 @@
 ---
-ms.openlocfilehash: 6557c2277e4c8063b7d7d08ae7bc2ba5414a5d9d
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 24e990d0561f1f0faade2c8e62ca640e4daba93f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163224"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78848076"
 ---
 
 > [!div class="op_single_selector"]
 >
-> - [Ubuntu 19.10-x64](../linux-package-manager-ubuntu-1910.md)
-> - [Ubuntu 19.04-x64](../linux-package-manager-ubuntu-1904.md)
-> - [Ubuntu 18.04-x64](../linux-package-manager-ubuntu-1804.md)
-> - [Ubuntu 16.04-x64](../linux-package-manager-ubuntu-1604.md)
-> - [CentOS 7-x64](../linux-package-manager-centos7.md)
-> - [Debian 10-x64](../linux-package-manager-debian10.md)
-> - [Debian 9-x64](../linux-package-manager-debian9.md)
-> - [Fedora 31-x64](../linux-package-manager-fedora31.md)
-> - [Fedora 30-x64](../linux-package-manager-fedora30.md)
-> - [Fedora 29-x64](../linux-package-manager-fedora29.md)
-> - [OpenSUSE 15-x64](../linux-package-manager-opensuse15.md)
-> - [RHEL 8.1-x64](../linux-package-manager-rhel81.md)
-> - [RHEL 7-x64](../linux-package-manager-rhel7.md)
-> - [SLES 15-x64](../linux-package-manager-sles15.md)
-> - [SLES 12-x64](../linux-package-manager-sles12.md)
+> - [烏本圖 19.10 - x64](../linux-package-manager-ubuntu-1910.md)
+> - [烏本圖 19.04 - x64](../linux-package-manager-ubuntu-1904.md)
+> - [烏本圖 18.04 - x64](../linux-package-manager-ubuntu-1804.md)
+> - [烏本圖 16.04 - x64](../linux-package-manager-ubuntu-1604.md)
+> - [CentOS 7 - x64](../linux-package-manager-centos7.md)
+> - [Debian 10 - x64](../linux-package-manager-debian10.md)
+> - [Debian 9 - x64](../linux-package-manager-debian9.md)
+> - [費朵拉 31 - x64](../linux-package-manager-fedora31.md)
+> - [費朵拉 30 - x64](../linux-package-manager-fedora30.md)
+> - [費朵拉 29 - x64](../linux-package-manager-fedora29.md)
+> - [OpenSUSE 15 - x64](../linux-package-manager-opensuse15.md)
+> - [RHEL 8 - x64](../linux-package-manager-rhel8.md)
+> - [RHEL 7 - x64](../linux-package-manager-rhel7.md)
+> - [SLES 15 - x64](../linux-package-manager-sles15.md)
+> - [SLES 12 - x64](../linux-package-manager-sles12.md)
 
-<span data-ttu-id="a9ca7-116">_只有**x64**架構支援套件管理員安裝_。</span><span class="sxs-lookup"><span data-stu-id="a9ca7-116">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="a9ca7-117">其他架構（例如**ARM**）必須[手動安裝 .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install)或[手動安裝 .net Core 運行](../runtime.md?pivots=os-linux#download-and-manually-install)時間。</span><span class="sxs-lookup"><span data-stu-id="a9ca7-117">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="a9ca7-118">如需詳細資訊，請參閱[.Net Core 相依性和需求](../dependencies.md)。</span><span class="sxs-lookup"><span data-stu-id="a9ca7-118">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>
+<span data-ttu-id="4d3e1-116">_包管理器安裝僅在**x64**體系結構上受支援_。</span><span class="sxs-lookup"><span data-stu-id="4d3e1-116">_Package manager installs are only supported on the **x64** architecture_.</span></span> <span data-ttu-id="4d3e1-117">其他體系結構（如**ARM）** 必須[手動安裝 .NET 核心 SDK](../sdk.md?pivots=os-linux#download-and-manually-install)或[手動安裝 .NET 核心運行時](../runtime.md?pivots=os-linux#download-and-manually-install)。</span><span class="sxs-lookup"><span data-stu-id="4d3e1-117">Other architectures, such as **ARM**, must [manually install the .NET Core SDK](../sdk.md?pivots=os-linux#download-and-manually-install) or [manually install the .NET Core Runtime](../runtime.md?pivots=os-linux#download-and-manually-install).</span></span> <span data-ttu-id="4d3e1-118">有關詳細資訊，請參閱[.NET 核心依賴項和要求](../dependencies.md)。</span><span class="sxs-lookup"><span data-stu-id="4d3e1-118">For more information, see [.NET Core dependencies and requirements](../dependencies.md).</span></span>

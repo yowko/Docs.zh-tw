@@ -1,18 +1,18 @@
 ---
-title: 範例 XML 檔：命名空間中的數值資料
+title: XML 檔範例：命名空間中的數值資料
 ms.date: 07/20/2015
 ms.assetid: 51750cab-3c66-4511-90fb-b9d211308d31
 ms.openlocfilehash: 02788b73a7af9922b5a50237f2d2e401cba8abe2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "66483698"
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="20d02-102">範例 XML 檔：命名空間中的數值資料</span><span class="sxs-lookup"><span data-stu-id="20d02-102">Sample XML File: Numerical Data in a Namespace</span></span>
-<span data-ttu-id="20d02-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="20d02-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="20d02-104">此檔案包含數值資料以進行加總、平均和群組。</span><span class="sxs-lookup"><span data-stu-id="20d02-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="20d02-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="20d02-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="49ddd-102">範例 XML 檔：命名空間中的數值資料</span><span class="sxs-lookup"><span data-stu-id="49ddd-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="49ddd-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="49ddd-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="49ddd-104">此檔案包含數值資料以進行加總、平均和群組。</span><span class="sxs-lookup"><span data-stu-id="49ddd-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="49ddd-105">XML 位於命名空間中。</span><span class="sxs-lookup"><span data-stu-id="49ddd-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a><span data-ttu-id="20d02-106">資料</span><span class="sxs-lookup"><span data-stu-id="20d02-106">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="49ddd-106">資料</span><span class="sxs-lookup"><span data-stu-id="49ddd-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
