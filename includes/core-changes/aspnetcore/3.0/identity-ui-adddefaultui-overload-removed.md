@@ -1,32 +1,32 @@
 ---
 ms.openlocfilehash: 806722ea9aec1c828786525e3155b7f624159ac1
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522691"
 ---
-### <a name="identity-adddefaultui-method-overload-removed"></a>識別： AddDefaultUI 方法多載已移除
+### <a name="identity-adddefaultui-method-overload-removed"></a>標識：刪除添加 DefaultUI 方法重載
 
-從 ASP.NET Core 3.0 開始，<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)?displayProperty=nameWithType> 方法多載已不存在。
+從 ASP.NET Core 3.0<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder,Microsoft.AspNetCore.Identity.UI.UIFramework)?displayProperty=nameWithType>開始，該方法重載不再存在。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
 3.0
 
-#### <a name="reason-for-change"></a>變更的原因
+#### <a name="reason-for-change"></a>更改原因
 
-這項變更是採用靜態 web 資產功能的結果。
+此更改是採用靜態 Web 資產功能的結果。
 
 #### <a name="recommended-action"></a>建議的動作
 
-呼叫 <xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType>，而不是多載。 如果您使用的是啟動程式3，也請將下行新增至專案檔中的 `<PropertyGroup>` 元素：
+調用<xref:Microsoft.AspNetCore.Identity.IdentityBuilderUIExtensions.AddDefaultUI(Microsoft.AspNetCore.Identity.IdentityBuilder)?displayProperty=nameWithType>而不是重載。 如果使用 Bootstrap 3，請向專案檔案中`<PropertyGroup>`的元素添加以下行：
 
 ```xml
 <IdentityUIFrameworkVersion>Bootstrap3</IdentityUIFrameworkVersion>
 ```
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

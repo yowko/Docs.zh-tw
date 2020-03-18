@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713944"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
@@ -48,7 +48,7 @@ downloadButton.Clicked += async (o, e) =>
 };
 ```
 
-就是這麼容易！ 這個程式碼表示目的 (非同步下載一些資料)，而不陷入與工作物件的互動。
+這樣就大功告成了！ 這個程式碼表示目的 (非同步下載一些資料)，而不陷入與工作物件的互動。
 
 ### <a name="cpu-bound-example-performing-a-calculation-for-a-game"></a>CPU 繫結範例：執行遊戲的計算
 
@@ -74,7 +74,7 @@ calculateButton.Clicked += async (o, e) =>
 };
 ```
 
-就是這麼容易！  此程式碼完全表示按鈕 click 事件的目的、不需要手動管理背景執行緒，並且以非封鎖方式這麼做。
+就這麼簡單！  此程式碼完全表示按鈕 click 事件的目的、不需要手動管理背景執行緒，並且以非封鎖方式這麼做。
 
 ### <a name="what-happens-under-the-covers"></a>背後作業
 
@@ -106,13 +106,13 @@ calculateButton.Clicked += async (o, e) =>
 
     如果您的答案為「是」，則工作是 **CPU 繫結**。
 
-如果您的工作是**i/o**系結，請使用 `async`，*而不*`Task.Run``await`。  您「不應該」使用 Task Parallel Library。  [深入了解非同步](../standard/async-in-depth.md)一文中描述這個問題的原因。
+如果您的工作是「I/O 繫結」****，請使用「沒有」`await` ** `Task.Run` 的 `async` 和 。  您「不應該」** 使用 Task Parallel Library。  [深入了解非同步](../standard/async-in-depth.md)一文中描述這個問題的原因。
 
-如果您擁有的工作是**CPU**系結，而且您在意回應能力，請使用 `async` 並 `await`，但在另一個*具有*`Task.Run`的執行緒上產生工作。  如果工作適用於並行和平行處理原則，您應該也考慮使用 [工作平行程式庫](../standard/parallel-programming/task-parallel-library-tpl.md)。
+如果您的工作是「CPU 繫結」****，而且您關心回應性，請使用 `async` 和 `await`，但在「含」** `Task.Run` 的其他執行緒上繁衍工作。  如果工作適用於並行和平行處理原則，您應該也考慮使用 [工作平行程式庫](../standard/parallel-programming/task-parallel-library-tpl.md)。
 
 此外，您應該一律測量程式碼的執行。  例如，您可能會發現，在進行多執行緒處理時，與內容切換的負擔相較之下，CPU 繫結工作較不耗費資源。  每個選項都有其取捨，您應該挑選適用於您情況的正確取捨。
 
-## <a name="more-examples"></a>其他範例
+## <a name="more-examples"></a>更多範例
 
 下列範例示範可使用 C# 撰寫非同步程式碼的各種方式。  它們會涵蓋數個您可能會遇到的不同案例。
 
@@ -218,15 +218,15 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 
 雖然非同步程式設計相當簡單，但是需要牢記一些詳細資料，以避免非預期的行為。
 
-* `async`**方法**的主體中必須有 `await`**關鍵字，否則永遠不會產生！**
+* `async` **方法需要其主體中有** `await` **關鍵字，否則它們將永遠不會產生！**
 
 這是需要記住的重要事項。  如果 `await` 未用於 `async` 方法的主體中，C# 編譯器將會產生警告，但程式碼的編譯和執行就像一般方法一樣。  請注意，因為 C# 編譯器針對非同步方法所產生的狀態機器不會完成任何作業，所以這也非常沒有效率。
 
-* **您應該新增 “Async” 作為所撰寫之每個非同步方法名稱的尾碼。**
+* **應添加"非同步"作為您編寫的每個非同步方法名稱的尾碼。**
 
 這是 .NET 中所使用的慣例，可更容易區分同步與非同步方法。 請注意，不一定會套用程式碼未明確呼叫的特定方法 (例如事件處理常式或 Web 控制器方法)。 因為您的程式碼未明確呼叫這些方法，則明確命名並不重要。
 
-* `async void`**只應用於事件處理常式。**
+* `async void` **應該只用於事件處理常式。**
 
 因為事件沒有傳回型別 (因此無法利用 `Task` 和 `Task<T>`)，所以 `async void` 是允許非同步事件處理常式運作的唯一方式。 `async void` 的任何其他使用都未遵循 TAP 模型，而且不容易使用，例如：
 
@@ -242,7 +242,7 @@ LINQ 中的 Lambda 運算式會使用延後執行，這表示程式碼可以在�
 
 將封鎖目前執行緒作為等候工作完成的方式可能會造成死結和封鎖的內容執行緒，而且可能需要更為複雜的錯誤處理。 下表提供如何處理以非封鎖方式等候工作的指引︰
 
-| 使用這個項目... | 而不是這個項目... | 執行時機 |
+| 目的... | 而不是這個項目... | 執行時機 |
 | --- | --- | --- |
 | `await` | `Task.Wait` 或 `Task.Result` | 擷取背景工作的結果 |
 | `await Task.WhenAny` | `Task.WaitAny` | 等候任何工作完成 |
@@ -251,7 +251,7 @@ LINQ 中的 Lambda 運算式會使用延後執行，這表示程式碼可以在�
 
 * **撰寫較不具狀態的程式碼**
 
-請不要取決於全域物件的狀態或特定方法的執行。 相反地，請只取決於方法的傳回值。 為什麼？
+請不要取決於全域物件的狀態或特定方法的執行。 相反地，請只取決於方法的傳回值。 原因為何？
 
 * 程式碼會比較容易理解。
 * 程式碼會比較容易測試。
@@ -265,5 +265,5 @@ LINQ 中的 Lambda 運算式會使用延後執行，這表示程式碼可以在�
 ## <a name="other-resources"></a>其他資源
 
 * [深入了解非同步](../standard/async-in-depth.md)提供工作運作方式的詳細資訊。
-* [使用 async 和 await 進行非同步程式設計 (C#)](./programming-guide/concepts/async/index.md)
+* [非同步程式設計與非同步和等待 （C#）](./programming-guide/concepts/async/index.md)
 * Lucian Wischik 的 [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) (非同步的六個必要祕訣) 是進行非同步程式設計的不錯資源。

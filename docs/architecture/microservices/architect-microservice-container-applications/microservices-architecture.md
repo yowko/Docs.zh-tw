@@ -3,10 +3,10 @@ title: 微服務架構
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 微服務架構的 30.000 英呎視圖。
 ms.date: 09/20/2018
 ms.openlocfilehash: d1c58d218be9e5f8c0ae8ae732f9bdd06674a2c2
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834390"
 ---
 # <a name="microservices-architecture"></a>微服務架構
@@ -19,11 +19,11 @@ ms.locfileid: "71834390"
 
 另一個優點是微服務可以獨立擴充。 您不需要具有必須以單位擴充的單一整合型應用程式，您可以改為擴充特定微服務。 這樣一來，您就可以只調整需要更多處理能力或網路頻寬的功能區域來支援需求，而不是擴充不需要調整的其他應用程式區域。 由於需要較少的硬體，因此會為您節省成本。
 
-![這兩種部署方法之間差異的圖表。](./media/microservices-architecture/monolith-deployment-vs-microservice-approach.png)
+![兩種部署方法之間的差異圖。](./media/microservices-architecture/monolith-deployment-vs-microservice-approach.png)
 
-**圖 4-6**： 整合型部署與微服務方法
+**圖4-6**。 整合型部署與微服務方法
 
-如圖4-6 所示，在傳統的整合型方法中，應用程式會在多個伺服器/VM 中複製整個應用程式來進行調整。 在微服務方法中，會以較小的服務隔離功能，因此每個服務都可以獨立調整。 微服務方法可讓您針對每個微服務進行 agile 變更和快速反復專案，因為您可以變更複雜、大型且可擴充的應用程式的特定小型區域。
+如圖 4-6 所示，在傳統的單片方法中，應用程式通過克隆多個伺服器/VM 中的整個應用程式來擴展。 在微服務方法中，會以較小的服務隔離功能，因此每個服務都可以獨立調整。 微服務方法允許敏捷更改和快速反覆運算每個微服務，因為您可以更改複雜、大型和可擴展應用程式的特定社區域。
 
 架構更細緻的微服務架構應用程式可進行持續整合與持續傳遞實務。 它也會加速將新功能傳遞到應用程式中。 應用程式的更細緻組合也可讓您隔離執行及測試微服務，以及自主發展微服務，同時確保這些服務之間有清楚的合約。 只要您未變更介面或合約，您就可以變更任何微服務的內部實作或新增功能，而不會中斷其他微服務。
 
@@ -43,21 +43,21 @@ ms.locfileid: "71834390"
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Mark Russinovich。微服務：由雲端支援的應用程式革命** \
+- **馬克·魯西諾維奇微服務：由雲驅動的應用程式革命** \
   <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
-- **聖馬丁 Fowler。微服務** \
+- **馬丁·福勒微服務** \
   <https://www.martinfowler.com/articles/microservices.html>
 
-- **聖馬丁 Fowler。微服務必要條件** \
+- **馬丁·福勒微服務先決條件** \
   <https://martinfowler.com/bliki/MicroservicePrerequisites.html>
 
-- **Jimmy Nilsson。 \ 的區塊雲端**運算
+- **吉米·尼爾森塊雲計算** \
   <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
-- **Cesar de La Torre。Microsoft 平臺和工具的容器化 Docker 應用程式生命週期**（可下載的電子書） \
+- **塞薩爾·德拉托雷使用微軟平臺和工具（可下載電子書）實現集裝箱式 Docker 應用程式生命週期**|
   <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]
->[上一頁](service-oriented-architecture.md)
->[下一頁](data-sovereignty-per-microservice.md)
+>[上一個](service-oriented-architecture.md)
+>[下一個](data-sovereignty-per-microservice.md)

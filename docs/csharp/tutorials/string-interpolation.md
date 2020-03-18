@@ -5,10 +5,10 @@ author: pkulikov
 ms.technology: csharp-fundamentals
 ms.date: 09/02/2019
 ms.openlocfilehash: b901ae661ebd4af625d9f3c999b0eb50dda1990d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73039204"
 ---
 # <a name="string-interpolation-in-c"></a>C\# 中的字串插補
@@ -75,7 +75,7 @@ ms.locfileid: "73039204"
 
 插入字串支援可用於一般字串常值中所有逸出序列。 如需詳細資訊，請參閱[字串逸出序列](../programming-guide/strings/index.md#string-escape-sequences)。
 
-若要逐字解譯逸出序列，請使用[逐字](../language-reference/tokens/verbatim.md)字串常值。 內插逐字字串是以 `$` 字元開頭，後面接著 `@` 字元。 從C# 8.0 開始，您可以使用`$`，並以任何順序`@`權杖： `$@"..."`和`@$"..."`都是有效的內插逐字字串。
+若要逐字解譯逸出序列，請使用[逐字](../language-reference/tokens/verbatim.md)字串常值。 插值逐字字串以`$`字元後跟`@`字元開頭。 從 C# 8.0 開始，可以`$`按`@`任意順序使用 和 標記`$@"..."`：`@$"..."`兩者都是有效的逐字字串插值字串。
 
 若要在結果字串中包含大括號 "{" 或 "}"，請使用兩個大括號 "{{" 或 "}}"。 如需詳細資訊，請參閱[複合格式](../../standard/base-types/composite-formatting.md)主題的[逸出大括號](../../standard/base-types/composite-formatting.md#escaping-braces)一節。
 
@@ -107,7 +107,7 @@ ms.locfileid: "73039204"
 
 本教學課程描述了使用字串插補的常見案例。 如需字串插補的詳細資訊，請參閱[字串插補](../language-reference/tokens/interpolated.md)主題。 如需在 .NET 中格式化類型的詳細資訊，請參閱[在 .NET 中格式化類型](../../standard/base-types/formatting-types.md)和[複合格式](../../standard/base-types/composite-formatting.md)主題。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.String.Format%2A?displayProperty=nameWithType>
 - <xref:System.FormattableString?displayProperty=nameWithType>

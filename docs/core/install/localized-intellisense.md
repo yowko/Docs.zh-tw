@@ -3,10 +3,10 @@ title: 安裝當地語系化的 IntelliSense 檔案
 description: 了解如何設定開發電腦，以在 Visual Studio 中使用 .NET Core 專案的當地語系化 IntelliSense 檔案。
 ms.date: 01/23/2020
 ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157709"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>如何安裝 .NET Core 的當地語系化 IntelliSense 檔案
@@ -16,7 +16,7 @@ ms.locfileid: "78157709"
 - 如何安裝這些檔案的當地語系化版本。
 - 如何修改 Visual Studio 安裝以使用不同語言。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 或更新版本。
 - [Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 或更新版本。
@@ -32,7 +32,7 @@ ms.locfileid: "78157709"
 
 1. 解壓縮 ZIP 檔案的內容。
 
-1. 流覽至 [.NET Core Intellisense] 資料夾。
+1. 導航到 .NET 核心智慧感知資料夾。
 
    1. 巡覽至 .NET Core 安裝資料夾。 根據預設，其位於 *%ProgramFiles%\dotnet\packs*。
    1. 選擇要為其安裝 IntelliSense 的 SDK，然後巡覽至相關聯的路徑。 您有下列選擇：
@@ -54,8 +54,8 @@ ms.locfileid: "78157709"
    | Language              | 資料夾名稱 |
    | --------------------- | ----------- |
    | 巴西葡萄牙文  | *pt-br*     |
-   | 中文 (簡體)  | *zh-hans*   |
-   | 中文 (繁體) | *zh-hant*   |
+   | 中文 (簡體)  | *日漢斯*   |
+   | 中文 (繁體) | *日漢特*   |
    | 法文                | *fr*        |
    | 德文                | *de*        |
    | 義大利文               | *it*        |
@@ -75,11 +75,11 @@ ms.locfileid: "78157709"
 如果您並未在安裝期間安裝所需要的語言套件，請遵循以下方式更新 Visual Studio 來安裝語言套件：
 
 > [!IMPORTANT]
-> 若要安裝、更新或修改 Visual Studio，您必須使用具有系統管理員許可權的帳戶登入。 如需詳細資訊，請參閱[使用者權限和 Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio)。
+> 要安裝、更新或修改 Visual Studio，必須使用具有管理員許可權的帳戶登錄。 有關詳細資訊，請參閱[使用者許可權和視覺化工作室](/visualstudio/ide/user-permissions-and-visual-studio)。
 
 1. 在電腦上找到 Visual Studio 安裝程式。
 
-   例如，在執行 Windows 10，的電腦上，選取 [開始]，然後捲動到字母 [V]，它在其中列為 [Visual Studio Installer]。
+   例如，在執行 Windows 10，的電腦上，選取 [開始]****，然後捲動到字母 [V]****，它在其中列為 [Visual Studio Installer]****。
 
    ![在 Windows 上開啟 Visual Studio 安裝程式](./media/localized-intellisense/vs-installer-windows-start.png)
 
@@ -90,19 +90,19 @@ ms.locfileid: "78157709"
 
    您可能需要更新安裝程式才能繼續。 若是如此，請遵循提示。
 
-1. 在安裝程式中，尋找要新增語言套件的目標 Visual Studio 版本，然後選擇 [修改]。
+1. 在安裝程式中，尋找要新增語言套件的目標 Visual Studio 版本，然後選擇 [修改]****。
 
    ![更新或修改 Visual Studio](./media/localized-intellisense/vs-installer-modify.png)
 
    > [!IMPORTANT]
-   > 如果您沒有看到 [修改] 按鈕，但有看到 [更新] 按鈕，則表示您需要先更新 Visual Studio，之後才能修改安裝。
-   > 更新完成後，[修改] 按鈕應該會隨即出現。
+   > 如果您沒有看到 [修改]**** 按鈕，但有看到 [更新]**** 按鈕，則表示您需要先更新 Visual Studio，之後才能修改安裝。
+   > 更新完成後，[修改]**** 按鈕應該會隨即出現。
 
-1. 在 [語言套件] 索引標籤中，選取或取消選取要安裝或解除安裝的語言。
+1. 在 [語言套件]**** 索引標籤中，選取或取消選取要安裝或解除安裝的語言。
 
    ![Visual Studio [語言套件] 索引標籤](./media/localized-intellisense/vs-modify-language-packs.png)
 
-1. 選擇 [修改]。 更新會開始進行。
+1. 選擇 [修改]****。 更新會開始進行。
 
 ### <a name="modify-language-settings-in-visual-studio"></a>修改 Visual Studio 中的語言設定
 
@@ -110,15 +110,15 @@ ms.locfileid: "78157709"
 
 1. 開啟 Visual Studio。
 
-1. 在 [開始] 視窗中，選擇 [不使用程式碼繼續]。
+1. 在 [開始] 視窗中，選擇 [不使用程式碼繼續]****。
 
-1. 在功能表列上，選取 [**工具**] [ > **選項**]。 [選項] 對話方塊隨即開啟。
+1. 在功能表列上，選擇 **"工具** > **選項**"。 [選項] 對話方塊隨即開啟。
 
-1. 在 [**環境**] 節點底下，選擇 [**國際設定**]。
+1. 在 **"環境**"節點下，選擇 **"國際設置**"。
 
-1. 在 [語言] 下拉式清單中，選取所需要的語言。 選擇 [確定]。
+1. 在 [語言]**** 下拉式清單中，選取所需要的語言。 選擇 **"確定**"。
 
-1. 對話方塊會通知您必須重新啟動 Visual Studio，才能使變更生效。 選擇 [確定]。
+1. 對話方塊會通知您必須重新啟動 Visual Studio，才能使變更生效。 選擇 **"確定**"。
 
 1. 重新啟動 Visual Studio。
 

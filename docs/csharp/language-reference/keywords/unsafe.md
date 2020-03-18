@@ -8,10 +8,10 @@ helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
 ms.openlocfilehash: ef98809eae0329c028dfb318c4a437aae4736db1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712984"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (C# 參考)
@@ -42,7 +42,7 @@ unsafe
 }
 ```
 
-若要編譯不安全的程式碼，您必須指定 [`-unsafe`](../compiler-options/unsafe-compiler-option.md) 編譯器選項。 Common Language Runtime 不會驗證不安全的程式碼。
+要編譯不安全的代碼，必須指定[`-unsafe`](../compiler-options/unsafe-compiler-option.md)編譯器選項。 Common Language Runtime 不會驗證不安全的程式碼。
 
 ## <a name="example"></a>範例
 
@@ -52,11 +52,11 @@ unsafe
 
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的 [Unsafe 程式碼](~/_csharplang/spec/unsafe-code.md)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [fixed 陳述式](fixed-statement.md)
 - [Unsafe 程式碼和指標](../../programming-guide/unsafe-code-pointers/index.md)
-- [固定大小的緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+- [固定大小緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

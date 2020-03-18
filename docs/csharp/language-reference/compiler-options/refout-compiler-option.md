@@ -8,10 +8,10 @@ helpviewer_keywords:
 - /refout compiler option [C#]
 - -refout compiler option [C#]
 ms.openlocfilehash: f48316a1e6f657e3bd0190d269dfe0e875a833d9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72771765"
 ---
 # <a name="-refout-c-compiler-options"></a>-refout (C# 編譯器選項)
@@ -30,11 +30,11 @@ ms.locfileid: "72771765"
 
 ## <a name="remarks"></a>備註
 
-參考元件是一種特殊類型的元件，其中只包含代表程式庫公用 API 介面所需的最小中繼資料量。 其中包括在建立工具中參考元件時，所有重要成員的宣告，但會排除所有成員的執行，以及對其 API 合約沒有明顯影響的私用成員宣告。 如需詳細資訊，請參閱 .NET 中的[參考元件](../../../standard/assembly/reference-assemblies.md)指南。
+引用程式集是一種特殊類型的程式集，僅包含表示庫的公共 API 曲面所需的最小中繼資料量。 它們包括在生成工具中引用程式集時具有重大意義的所有成員的聲明，但不包括對其 API 協定沒有可觀察到影響的所有成員的實現和聲明。 有關詳細資訊，請參閱 .NET 指南中的[參考程式集](../../../standard/assembly/reference-assemblies.md)。
 
-`-refout` 和 [`-refonly`](refonly-compiler-option.md) 選項互斥。
+`-refout`和[`-refonly`](refonly-compiler-option.md)選項是互斥的。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
 ms.openlocfilehash: c78818f40b76414d289af6c704ff019b63befe37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712568"
 ---
 # <a name="elif-c-reference"></a>#elif (C# 參考)
@@ -40,8 +40,8 @@ ms.locfileid: "75712568"
   
  如需如何使用 `#elif` 的範例，請參閱 [#if](./preprocessor-if.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 前置處理器指示詞](./index.md)
+- [C# 預處理器指令](./index.md)

@@ -4,10 +4,10 @@ description: 使用 dotnet test 與 NUnit 逐步建置解決方案範例的互�
 author: rprouse
 ms.date: 08/31/2018
 ms.openlocfilehash: 283aa5a28ed213d4290eb3c73a98af56ec074ad0
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240879"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>利用 NUnit 與 .NET Core 進行 C# 單元測試
@@ -16,7 +16,7 @@ ms.locfileid: "78240879"
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更新版本。
 - 您偏好的文字編輯器或程式碼編輯器。
@@ -89,7 +89,7 @@ dotnet new nunit
 
 [!code-xml[Packages](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService.Tests.csproj#Packages)]
 
-測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new`，新增了 Microsoft 測試 SDK、NUnit 測試架構以及 NUnit 測試配接器。 現在，將 `PrimeService` 類別庫新增為專案的另一個相依性。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
+測試專案需要其他套件來建立和執行單元測試。 上一個步驟中的 `dotnet new`，新增了 Microsoft 測試 SDK、NUnit 測試架構以及 NUnit 測試配接器。 現在，將 `PrimeService` 類別庫新增為專案的另一個相依性。 使用以下[`dotnet add reference`](../tools/dotnet-add-reference.md)命令：
 
 ```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
@@ -118,13 +118,13 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 ## <a name="creating-the-first-test"></a>建立第一個測試
 
-您會撰寫一個失敗測試，讓它通過，然後重複此程序。 在 *PrimeService.Tests* 目錄中，將 *UnitTest1.cs* 檔案重新命名為 *PrimeService_IsPrimeShould.cs*，並將其整個內容取代為下列程式碼：
+撰寫一個會失敗的測試，再使其通過，然後重複這個過程。 在 *PrimeService.Tests* 目錄中，將 *UnitTest1.cs* 檔案重新命名為 *PrimeService_IsPrimeShould.cs*，並將其整個內容取代為下列程式碼：
 
 [!code-csharp[Sample_FirstTest](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_FirstTest)]
 
 `[TestFixture]` 屬性代表包含單元測試的類別。 `[Test]` 屬性指出方法是測試方法。
 
-儲存此檔案並執行 [`dotnet test`](../tools/dotnet-test.md) 來建置測試和類別庫，然後執行測試。 NUnit 測試執行器包含執行測試的程式進入點。 `dotnet test` 會使用您建立的單元測試專案來開始測試執行器。
+保存此檔並執行[`dotnet test`](../tools/dotnet-test.md)以生成測試和類庫，然後運行測試。 NUnit 測試執行器包含執行測試的程式進入點。 `dotnet test` 會使用您建立的單元測試專案來開始測試執行器。
 
 您的測試失敗。 您尚未建立實作。 在可運作的 `PrimeService` 類別中撰寫最簡單的程式碼以讓此測試成功：
 
@@ -149,7 +149,7 @@ public bool IsPrime(int candidate)
 
 [!code-csharp[Sample_TestCode](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-執行 `dotnet test`，然後會有兩個測試失敗。 若要讓所有測試都能通過，請變更 `if`PrimeService.cs`Main` 檔案中 *方法開頭處的* 子句：
+執行 `dotnet test`，然後會有兩個測試失敗。 若要讓所有測試都能通過，請變更 *PrimeService.cs* 檔案中 `Main` 方法開頭處的 `if` 子句：
 
 ```csharp
 if (candidate < 2)

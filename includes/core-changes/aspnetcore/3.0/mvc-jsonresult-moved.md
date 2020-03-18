@@ -1,42 +1,42 @@
 ---
 ms.openlocfilehash: f6fd75c5b49156f44d31c650ea452eb549f13b0e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901961"
 ---
-### <a name="mvc-jsonresult-moved-to-microsoftaspnetcoremvccore"></a>MVC： JsonResult 已移至 AspNetCore. Core
+### <a name="mvc-jsonresult-moved-to-microsoftaspnetcoremvccore"></a>MVC： JsonResult 移動到微軟.AspNetCore.Mvc.Core
 
-`JsonResult` 已移至 `Microsoft.AspNetCore.Mvc.Core` 元件。 這個類型是用來在[AspNetCore](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Formatters.Json)中定義。 已將元件層級[[TypeForwardedTo]](xref:System.Runtime.CompilerServices.TypeForwardedToAttribute)屬性加入 `Microsoft.AspNetCore.Mvc.Formatters.Json`，以解決大部分使用者的這個問題。 使用協力廠商程式庫的應用程式可能會遇到問題。
+`JsonResult`已移動到程式集`Microsoft.AspNetCore.Mvc.Core`。 此類型曾經在微軟中定義[。](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Formatters.Json) 向大多數使用者添加了`Microsoft.AspNetCore.Mvc.Formatters.Json`程式集級[[TypeForwardedto]](xref:System.Runtime.CompilerServices.TypeForwardedToAttribute)屬性以解決此問題。 使用協力廠商庫的應用可能會遇到問題。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
-3.0 Preview 6
+3.0 預覽 6
 
 #### <a name="old-behavior"></a>舊的行為
 
-已成功使用以2.2 為基礎的程式庫組建應用程式。
+使用基於 2.2 的庫的應用成功生成。
 
 #### <a name="new-behavior"></a>新的行為
 
-使用以2.2 為基礎之程式庫的應用程式無法編譯。 提供的錯誤包含下列文字的變化：
+使用基於 2.2 的庫的應用編譯失敗。 提供了包含以下文本變體的錯誤：
 
 ```
 The type 'JsonResult' exists in both 'Microsoft.AspNetCore.Mvc.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60' and 'Microsoft.AspNetCore.Mvc.Formatters.Json, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60'
 ```
 
-如需這類問題的範例，請參閱[dotnet/aspnetcore # 7220](https://github.com/dotnet/aspnetcore/issues/7220)。
+有關此類問題的示例，請參閱[dotnet/aspnetcore_7220](https://github.com/dotnet/aspnetcore/issues/7220)。
 
-#### <a name="reason-for-change"></a>變更的原因
+#### <a name="reason-for-change"></a>更改原因
 
-ASP.NET Core 組合的平台層級變更，如[aspnet/公告 # 325](https://github.com/aspnet/Announcements/issues/325)所述。
+ASP.NET核心的組成的平臺級更改，如[aspnet/公告#325](https://github.com/aspnet/Announcements/issues/325)所述。
 
 #### <a name="recommended-action"></a>建議的動作
 
-針對2.2 版 `Microsoft.AspNetCore.Mvc.Formatters.Json` 所編譯的程式庫可能需要重新編譯，才能解決所有取用者的問題。 如果受影響，請聯絡程式庫作者。 要求重新編譯程式庫至目標 ASP.NET Core 3.0。
+根據 2.2 版本的庫編譯`Microsoft.AspNetCore.Mvc.Formatters.Json`可能需要重新編譯以解決所有消費者的問題。 如果受到影響，請與庫作者聯繫。 請求重新編譯庫以ASP.NET Core 3.0。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

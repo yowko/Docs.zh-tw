@@ -3,10 +3,10 @@ title: Docker 容器、映像和登錄
 description: 了解在使用 Docker 部署應用程式的整個過程中，登錄扮演何種重要角色。
 ms.date: 02/15/2019
 ms.openlocfilehash: bfef21cab7be89abaf33b89366d7cff2115a7cc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72770923"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker 容器、映像和登錄
@@ -15,13 +15,13 @@ ms.locfileid: "72770923"
 
 為了執行應用程式或服務，應用程式的映像會具現化以建立容器，並將在 Docker 主機上執行該容器。 這些容器一開始會在開發環境或電腦上進行測試。
 
-您會將影像儲存在作為映射程式庫的登錄中。 若要部署至實際執行的協調器，您需要使用登錄。 Docker 會透過 [Docker Hub](https://hub.docker.com/) 維護公開登錄；其他廠商則會針對不同的映像集合提供登錄，包括 [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)。 或者，企業可以在內部部署有針對其專屬 Docker 映像的私人登錄。
+將圖像存儲在充當圖像庫的註冊表中。 若要部署至實際執行的協調器，您需要使用登錄。 Docker 會透過 [Docker Hub](https://hub.docker.com/) 維護公開登錄；其他廠商則會針對不同的映像集合提供登錄，包括 [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)。 或者，企業可以在內部部署有針對其專屬 Docker 映像的私人登錄。
 
 圖 1-4 顯示 Docker 中映像和登錄與其他元件的關係。 它也顯示來自廠商的多個登錄供應項目。
 
-![顯示 Docker 中基本分類法的圖表。](./media/docker-containers-images-and-registries/taxonomy-docker-terms-concepts.png)
+![顯示 Docker 中基本分類的圖表。](./media/docker-containers-images-and-registries/taxonomy-docker-terms-concepts.png)
 
-**圖 1-4**。 Docker 術語和概念分類
+**圖 1-4**. Docker 術語和概念分類
 
 登錄就像是一個書架，映像會存放於此處，並供提取用以建置容器，以執行服務或 Web 應用程式。 內部部署和公用雲端上都會有私人 Docker 登錄。 Docker Hub 是由 Docker 維護的公開登錄，連同 Docker Trusted Registry 這項企業級解決方案，Azure 提供了 Azure Container Registry。 AWS、Google 和其他服務也有容器登錄。
 
@@ -34,5 +34,5 @@ ms.locfileid: "72770923"
 - 您想要在映像與所選擇的部署環境之間有最低的網路延遲。 例如，如果您的生產環境是 Azure，您可以將映像儲存在 [Azure Container Registry](https://azure.microsoft.com/services/container-registry/) 中，使網路延遲降至最低。 同樣地，如果您的生產環境是內部部署，您可能想要在相同的區域網路內提供內部部署 Docker Trusted Registry。
 
 >[!div class="step-by-step"]
->[上一頁](docker-terminology.md)
->[下一頁](road-to-modern-applications-based-on-containers.md)
+>[上一個](docker-terminology.md)
+>[下一個](road-to-modern-applications-based-on-containers.md)

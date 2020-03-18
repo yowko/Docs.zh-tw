@@ -1,37 +1,37 @@
 ---
 ms.openlocfilehash: d207a937917da78f6b902ad8ca4f02fa9a46c2e1
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116345"
 ---
-### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>MyServices 命名空間中的類型無法使用
+### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>Microsoft 中的類型.VisualBasic.MyServices 命名空間不可用
 
-<xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> 命名空間中的類型無法使用。
+命名空間中<xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName>的類型不可用。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
-.NET Core 3.0 Preview 8
+.NET 核心 3.0 預覽 8
 
 #### <a name="change-description"></a>變更描述
 
-在某些 .NET Core 3.0 Preview 版本中，可以使用 <xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName> 命名空間中的類型。 從 .NET Core 3.0 Preview 9 開始就不再提供這些功能。
+命名空間中<xref:Microsoft.VisualBasic.MyServices?displayProperty=fullName>的類型在某些 .NET Core 3.0 預覽版本中可用。 它們不再可用，從 .NET 核心 3.0 預覽 9 開始。
 
-已移除類型，以避免不必要的元件相依性或後續版本中的重大變更。
+已刪除這些類型，以避免不必要的程式集依賴關係或後續版本中的中斷更改。
 
 #### <a name="recommended-action"></a>建議的動作
 
-如果您的程式碼相依于**MyServices**類型及其成員，則 .net 類別庫中會有對應的類型和成員。 以下是**MyServices**類型對應到其對等 .net 類別庫類型的對應：
+如果您的代碼取決於**Microsoft.VisualBasic.MyServices**類型及其成員的使用，則 .NET 類庫中有相應的類型和成員。 以下是**Microsoft.VisualBasic.MyServices**的映射，其等效的 .NET 類庫類型：
 
-|MyServices 類型|.NET 類別庫類型|
+|微軟.視覺基礎.我的服務類型|.NET 類庫類型|
 |--|--|
-|<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>|適用于 WPF 應用程式的 <xref:System.Windows.Clipboard?displayProperty=nameWithType>，<xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> 適用于 Windows Forms 應用程式|
-|<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>|<xref:System.IO> 命名空間中的類型|
-|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>|<xref:Microsoft.Win32> 命名空間中的登錄相關類型|
+|<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>|<xref:System.Windows.Clipboard?displayProperty=nameWithType>對於 WPF<xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType>應用程式，用於 Windows 表單應用程式|
+|<xref:Microsoft.VisualBasic.MyServices.FileSystemProxy>|命名空間中<xref:System.IO>的類型|
+|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>|命名空間中的<xref:Microsoft.Win32>註冊表相關類型|
 |<xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy>|<xref:System.Environment.GetFolderPath%2A?displayProperty=nameWithType>|
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
 Visual Basic
 

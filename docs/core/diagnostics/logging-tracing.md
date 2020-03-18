@@ -1,108 +1,108 @@
 ---
-title: 記錄和追蹤-.NET Core
-description: .NET Core 記錄和追蹤的簡介。
+title: 日誌記錄和跟蹤 - .NET 核心
+description: .NET 核心日誌記錄和跟蹤簡介。
 ms.date: 08/05/2019
 ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714415"
 ---
-# <a name="net-core-logging-and-tracing"></a>.NET Core 記錄和追蹤
+# <a name="net-core-logging-and-tracing"></a>.NET 核心日誌記錄和跟蹤
 
-針對相同的技巧，記錄和追蹤其實是兩個名稱。 自電腦提早起，使用了簡單的技巧。 它只需要檢測應用程式來寫入輸出，以便稍後使用。
+日誌記錄和跟蹤實際上是同一技術的兩個名稱。 這種簡單的技術從電腦的早期就被使用。 它只需檢測應用程式以寫入以後使用的輸出。
 
-## <a name="reasons-to-use-logging-and-tracing"></a>使用記錄和追蹤的理由
+## <a name="reasons-to-use-logging-and-tracing"></a>使用日誌記錄和跟蹤的原因
 
-這項簡單的技巧非常強大。 它可以用於偵錯工具失敗的情況：
+這個簡單的技術是驚人的強大。 它可用於調試器失敗的情況：
 
-- 很長一段時間內發生的問題，可能會很容易使用傳統的偵錯工具進行 debug。 記錄允許長時間內的詳細事後剖析後評論。 相反地，偵錯工具會限制為即時分析。
-- 多執行緒應用程式和分散式應用程式通常很難進行調試。  附加偵錯工具通常會修改行為。 您可以視需要分析詳細的記錄，以瞭解複雜的系統。
-- 分散式應用程式中的問題可能是因為許多元件之間的複雜互動而引發，所以將偵錯工具連接到系統的每個部分可能並不合理。
-- 許多服務都不應該停止。 附加偵錯工具通常會導致逾時錯誤。
-- 問題不一定是預見。 記錄和追蹤是針對低額外負荷而設計的，因此在發生問題的情況下，程式一律會進行記錄。
+- 長時間出現問題，使用傳統調試器可能很難調試。 日誌允許長時間進行詳細的事後審查。 相反，調試器受限制為即時分析。
+- 多執行緒應用程式和分散式應用程式通常難以調試。  附加調試器往往會修改行為。 可以根據需要分析詳細的日誌，以瞭解複雜的系統。
+- 分散式應用程式中的問題可能來自許多元件之間的複雜交互，將調試器連接到系統的每個部分可能不合理。
+- 許多服務不應停滯。 附加調試器通常會導致超時失敗。
+- 問題並不總是被預見到的。 日誌記錄和跟蹤專為低開銷而設計，以便在出現問題時始終可以記錄程式。
 
-## <a name="net-core-apis"></a>.NET Core Api
+## <a name="net-core-apis"></a>.NET 核心 API
 
-### <a name="print-style-apis"></a>列印樣式 Api
+### <a name="print-style-apis"></a>列印樣式 API
 
-<xref:System.Console?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace?displayProperty=nameWithType>和 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 類別各自提供類似的列印樣式 Api，方便進行記錄。
+各<xref:System.Console?displayProperty=nameWithType><xref:System.Diagnostics.Trace?displayProperty=nameWithType>各<xref:System.Diagnostics.Debug?displayProperty=nameWithType>各提供便於日誌記錄的類似列印樣式 API。
 
-選擇要使用的列印樣式 API 是由您決定。 主要差異包括：
+選擇使用哪種列印樣式 API 由您決定。 主要差異包括：
 
 - <xref:System.Console?displayProperty=nameWithType>
-  - 一律啟用並一律寫入主控台。
-  - 適用于您的客戶可能需要在版本中看到的資訊。
-  - 因為這是最簡單的方法，所以通常用於臨機操作暫存的偵錯工具。 此 debug 程式碼通常不會簽入原始檔控制中。
+  - 始終啟用並始終寫入主控台。
+  - 對於您的客戶可能需要在版本中看到的資訊非常有用。
+  - 因為它是最簡單的方法，它通常用於臨時臨時調試。 此調試代碼通常從未簽入到原始程式碼。
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
-  - 只有在定義 `TRACE` 時才會啟用。
-  - 預設會寫入至附加的 <xref:System.Diagnostics.Trace.Listeners>，<xref:System.Diagnostics.DefaultTraceListener>。
-  - 建立將在大部分組建中啟用的記錄檔時，請使用此 API。
+  - 僅在定義時`TRACE`啟用。
+  - 預設情況下，寫入<xref:System.Diagnostics.Trace.Listeners>附加的<xref:System.Diagnostics.DefaultTraceListener>。
+  - 創建將在大多數生成中啟用的日誌時使用此 API。
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
-  - 只有在定義 `DEBUG` 時才會啟用。
-  - 寫入附加的偵錯工具。
-  - On `*nix` 在 `COMPlus_DebugWriteToStdErr` 已設定時寫入 stderr。
-  - 建立只會在 debug 組建中啟用的記錄檔時，請使用此 API。
+  - 僅在定義時`DEBUG`啟用。
+  - 寫入附加的調試器。
+  - 如果`*nix``COMPlus_DebugWriteToStdErr`設置為"設置"，則寫入穩穩。
+  - 創建僅在調試生成中啟用的日誌時使用此 API。
 
-### <a name="logging-events"></a>記錄事件
+### <a name="logging-events"></a>日誌記錄事件
 
-下列 Api 是更多事件導向。 與其記錄簡單的字串，它們會記錄事件物件。
+以下 API 更加面向事件。 他們不是記錄簡單的字串，而是記錄事件物件。
 
 - <xref:System.Diagnostics.Tracing.EventSource?displayProperty=nameWithType>
-  - EventSource 是主要根 .NET Core 追蹤 API。
-  - 適用于所有 .NET Standard 版本。
-  - 只允許追蹤可序列化物件。
-  - 寫入附加的[事件](xref:System.Diagnostics.Tracing.EventListener)接聽程式。
-  - .NET Core 會針對下列各項提供接聽程式：
-    - 所有平臺上的 .NET Core EventPipe
-    - [Windows 事件追蹤（ETW）](/windows/win32/etw/event-tracing-portal)
-    - [適用于 Linux 的 LTTng 追蹤架構](https://lttng.org/)
+  - 事件源是主根 .NET 核心跟蹤 API。
+  - 適用于所有 .NET 標準版本。
+  - 只允許跟蹤可序列化物件。
+  - 寫入附加[的事件攔截器](xref:System.Diagnostics.Tracing.EventListener)。
+  - .NET 核心為：
+    - .NET Core 在所有平臺上的事件管道
+    - [Windows 事件追蹤 (ETW)](/windows/win32/etw/event-tracing-portal)
+    - [Linux 的 LTTng 跟蹤框架](https://lttng.org/)
 
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
-  - 包含在 .NET Core 中，以及做為 .NET Framework 的[NuGet 套件](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource)。
-  - 允許非可序列化物件的同進程追蹤。
-  - 包含橋接器，可讓所選的已記錄物件欄位寫入 <xref:System.Diagnostics.Tracing.EventSource>。
+  - 包含在 .NET 核心中，並作為 .NET 框架的[NuGet 包](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource)。
+  - 允許在進程內跟蹤不可序列化的物件。
+  - 包括一個橋接器，用於允許將記錄物件的選定欄位寫入<xref:System.Diagnostics.Tracing.EventSource>。
 
 - <xref:System.Diagnostics.Activity?displayProperty=nameWithType>
-  - 提供明確的方式來識別特定活動或交易所產生的記錄檔訊息。 此物件可用來讓不同服務之間的記錄相互關聯。
+  - 提供了一種識別特定活動或事務產生的日誌消息的明確方法。 此物件可用於關聯不同服務的日誌。
 
 - <xref:System.Diagnostics.EventLog?displayProperty=nameWithType>
-  - 僅 Windows。
-  - 將訊息寫入 Windows 事件記錄檔。
-  - 系統管理員預期 Windows 事件記錄檔中會出現嚴重的應用程式錯誤訊息。
+  - 僅限 Windows。
+  - 將消息寫入 Windows 事件日誌。
+  - 系統管理員希望致命的應用程式錯誤訊息出現在 Windows 事件日誌中。
 
-## <a name="ilogger-and-logging-frameworks"></a>ILogger 和記錄架構
+## <a name="ilogger-and-logging-frameworks"></a>ILogger 和日誌記錄框架
 
-低層級 Api 可能不是您記錄需求的正確選擇。 您可能想要考慮使用記錄架構。
+低級 API 可能不是滿足日誌記錄需求的正確選擇。 您可能需要考慮日誌記錄框架。
 
-<xref:Microsoft.Extensions.Logging.ILogger> 介面已用來建立一般記錄介面，可透過相依性插入來插入記錄器。
+該<xref:Microsoft.Extensions.Logging.ILogger>介面已用於創建一個公共日誌記錄介面，其中記錄器可以通過依賴項注入插入。
 
-比方說，若要讓您為應用程式做出最佳選擇，`ASP.NET` 提供內建和協力廠商架構的選取支援：
+例如，為了允許您為應用程式`ASP.NET`做出最佳選擇，可以支援一系列內置和協力廠商框架：
 
-- [ASP.NET 內建記錄提供者](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
-- [ASP.NET 協力廠商記錄提供者](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
+- [ASP.NET內置日誌記錄提供程式](/aspnet/core/fundamentals/logging/#built-in-logging-providers)
+- [ASP.NET協力廠商日誌記錄提供程式](/aspnet/core/fundamentals/logging/#third-party-logging-providers)
 
-## <a name="logging-related-references"></a>記錄相關參考
+## <a name="logging-related-references"></a>記錄相關引用
 
 - [如何：使用追蹤和偵錯進行條件式編譯](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 
-- [如何：將追蹤陳述式新增至應用程式碼](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：將追蹤陳述式加入至應用程式程式碼](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
-- [ASP.NET 記錄](/aspnet/core/fundamentals/logging)提供它所支援的記錄技術的總覽。
+- [ASP.NET日誌記錄](/aspnet/core/fundamentals/logging)提供了它支援的日誌記錄技術的概述。
 
-- 字串內插補點可簡化撰寫記錄程式碼的程式。 [ C# ](../../csharp/language-reference/tokens/interpolated.md)
+- [C# 字串插值](../../csharp/language-reference/tokens/interpolated.md)可以簡化日誌記錄代碼的編寫。
 
-- <xref:System.Exception.Message?displayProperty=nameWithType> 屬性適用于記錄例外狀況。
+- 該<xref:System.Exception.Message?displayProperty=nameWithType>屬性可用於記錄異常。
 
-- <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> 類別可在記錄中提供堆疊資訊時很有用。
+- 該<xref:System.Diagnostics.StackTrace?displayProperty=nameWithType>類可用於在日誌中提供堆疊資訊。
 
 ## <a name="performance-considerations"></a>效能考量
 
-字串格式設定可能會產生顯著的 CPU 處理時間。
+字串格式可能需要明顯的 CPU 處理時間。
 
-在效能關鍵應用程式中，建議您：
+在性能關鍵型應用程式中，建議您：
 
-- 當沒有人在接聽時，請避免大量記錄。 請先檢查是否已啟用記錄，以避免建立昂貴的記錄訊息。
-- 只記錄有用的功能。
-- 將複雜的格式延後到分析階段。
+- 當沒有人在聽時，避免大量日誌記錄。 通過檢查是否首先啟用日誌記錄，避免構造昂貴的日誌記錄消息。
+- 只記錄有用內容。
+- 將花哨的格式延遲到分析階段。

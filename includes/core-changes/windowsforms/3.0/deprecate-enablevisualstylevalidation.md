@@ -1,32 +1,32 @@
 ---
 ms.openlocfilehash: 75baa4f23eae838defafd3ce9b3907a187982a18
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937049"
 ---
-### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>不支援 EnableVisualStyleValidation 相容性切換
+### <a name="enablevisualstylevalidation-compatibility-switch-not-supported"></a>不支援啟用視覺化樣式驗證相容性開關
 
-.NET Core 3.0 的 Windows Forms 不支援 `Switch.System.Windows.Forms.EnableVisualStyleValidation` 相容性參數。
+.NET `Switch.System.Windows.Forms.EnableVisualStyleValidation` Core 3.0 上的 Windows 表單不支援相容性開關。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Framework 中，`Switch.System.Windows.Forms.EnableVisualStyleValidation` 相容性參數允許應用程式選擇不驗證數值格式所提供的視覺化樣式。
+在 .NET 框架`Switch.System.Windows.Forms.EnableVisualStyleValidation`中，相容性開關允許應用程式選擇不驗證以數位形式提供的可視樣式。
 
-在 .NET Core 中，不支援 `Switch.System.Windows.Forms.EnableVisualStyleValidation` 參數。
+在 .NET 內核`Switch.System.Windows.Forms.EnableVisualStyleValidation`中，不支援交換器。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
-3.0 Preview 9
+3.0 預覽 9
 
 #### <a name="recommended-action"></a>建議的動作
 
-移除參數。 不支援此參數，而且沒有可用的替代功能。
+卸下開關。 不支援該開關，並且沒有可用的替代功能。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
-Windows 表單
+Windows Forms
 
 #### <a name="affected-apis"></a>受影響的 API
 

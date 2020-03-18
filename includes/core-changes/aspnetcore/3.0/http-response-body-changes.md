@@ -1,22 +1,22 @@
 ---
 ms.openlocfilehash: cd66317bc93343e03a73dec74dff534776ca42e4
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73198379"
 ---
-### <a name="http-response-body-infrastructure-changes"></a>HTTP：回應主體基礎結構變更
+### <a name="http-response-body-infrastructure-changes"></a>HTTP：回應正文基礎結構更改
 
-支援 HTTP 回應主體的基礎結構已變更。 如果您直接使用 `HttpResponse`，則不需要進行任何程式碼變更。 如果您要包裝或取代 `HttpResponse.Body` 或存取 `HttpContext.Features`，請進一步閱讀。
+支援 HTTP 回應正文的基礎結構已更改。 如果您直接使用`HttpResponse`，則不需要進行任何代碼更改。 如果要包裝、替換`HttpResponse.Body`或訪問`HttpContext.Features`，請進一步閱讀。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-有三個與 HTTP 回應主體相關聯的 Api：
+有三個 API 與 HTTP 回應正文相關聯：
 
 - `IHttpResponseFeature.Body`
 - `IHttpSendFileFeature.SendFileAsync`
@@ -24,17 +24,17 @@ ms.locfileid: "73198379"
 
 #### <a name="new-behavior"></a>新的行為
 
-如果您取代 `HttpResponse.Body`，則會使用 `StreamResponseBodyFeature`，以指定串流的包裝函式取代整個 `IHttpResponseBodyFeature`，以提供所有預期 Api 的預設執行。 將原始資料流程設回會還原此變更。
+如果替換`HttpResponse.Body`，它將用給定流周圍的`IHttpResponseBodyFeature`包裝器替換整個物件，用於`StreamResponseBodyFeature`為所有預期的 API 提供預設實現。 設置回原始流將恢復此更改。
 
-#### <a name="reason-for-change"></a>變更的原因
+#### <a name="reason-for-change"></a>更改原因
 
-動機是將回應主體 Api 結合成單一的新功能介面。
+動機是將回應體 API 合併到單個新功能介面中。
 
 #### <a name="recommended-action"></a>建議的動作
 
-使用 `IHttpResponseBodyFeature`，您先前使用的是 `IHttpResponseFeature.Body`、`IHttpSendFileFeature` 或 `IHttpBufferingFeature`。
+使用`IHttpResponseBodyFeature`以前使用`IHttpResponseFeature.Body`或`IHttpSendFileFeature``IHttpBufferingFeature`的位置。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

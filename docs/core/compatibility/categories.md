@@ -3,22 +3,22 @@ title: 中斷性變更類別
 description: 了解 .NET Core 如何分類中斷性變更。
 ms.date: 06/10/2019
 ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093041"
 ---
 # <a name="breaking-change-categories"></a>中斷性變更類別
 
-*相容性*是指在實作之 .NET 版本上編譯或執行程式碼的能力，而該版本與原先開發程式碼時所使用的 .NET 版本不同。 特定變更可能會造成六種不同的相容性影響。 評估相容性時所考慮的[個別變更種類](index.md)分為下列類別：
+*相容性*是指在實作之 .NET 版本上編譯或執行程式碼的能力，而該版本與原先開發程式碼時所使用的 .NET 版本不同。 特定變更可能會造成六種不同的相容性影響。 評估相容性時考慮[的單個更改類型](index.md)分為以下幾類：
 
-- [行為變更](#behavioral-change)
+- [行為變化](#behavioral-change)
 - [二進位相容性](#binary-compatibility)
-- [來源相容性](#source-compatibility)
-- [設計階段相容性](#design-time-compatibility)
-- [回溯相容性](#backwards-compatibility)
-- [向前相容性](#forward-compatibility)（不是 .net Core 的目標）
+- [源相容性](#source-compatibility)
+- [設計時相容性](#design-time-compatibility)
+- [向後相容性](#backwards-compatibility)
+- [正向相容性](#forward-compatibility)（不是 .NET 核心的目標）
 
 ## <a name="behavioral-change"></a>行為變更
 
@@ -42,7 +42,7 @@ ms.locfileid: "77093041"
 
 回溯相容性是指現有 API 消費者對新版執行時，仍能保有相同行為的能力。 行為變更與二進位相容性變更都會影響回溯相容性。 若消費者無法對新版執行，或對新版執行時，無法保有相同的行為，此 API 便是*回溯不相容*。
 
-不鼓勵影響回溯相容性的變更，因為開發人員希望在較新版本的 API 中提供回溯相容性。
+不鼓勵更改影響向後相容性，因為開發人員期望在 API 的較新版本中向後相容。
 
 ## <a name="forward-compatibility"></a>往後相容性
 

@@ -4,10 +4,10 @@ description: 陣列是 C# 語言中最基本的集合類型
 ms.date: 02/27/2020
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
 ms.openlocfilehash: 3e045c0933a21beab6958c7851546ba6e0b55ef9
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159191"
 ---
 # <a name="arrays"></a>陣列
@@ -25,7 +25,7 @@ ms.locfileid: "78159191"
 [!code-csharp[ArrayRank](../../../samples/snippets/csharp/tour/arrays/Program.cs#L24-L26)]
 
 `a1` 陣列包含 10 個元素、`a2`陣列包含 50 (10 × 5) 個元素，`a3` 陣列包含 100 (10 × 5 × 2) 個元素。
-陣列的元素型別可以是任一型別，包括陣列型別。 具有陣列類型之元素的陣列有時稱為***不規則陣列***，因為元素陣列的長度不一定是相同的。 下列範例會配置一個 `int` 型別的陣列：
+陣列的元素型別可以是任一型別，包括陣列型別。 具有陣列類型元素的陣列有時稱為***鋸齒陣列***，因為元素陣列的長度不一定都相同。 下列範例會配置一個 `int` 型別的陣列：
 
 [!code-csharp[ArrayAllocation](../../../samples/snippets/csharp/tour/arrays/Program.cs#L31-L34)]
 
@@ -35,14 +35,14 @@ New 運算子允許使用***陣列初始設定式***指定陣列元素的初始�
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-陣列的長度是從 {和} 之間的運算式數目推斷而來。 本機變數與欄位宣告可以進一步縮短，就不需要重新敘述陣列型別。
+陣列的長度是從 * 和 + 之間的運算式數推斷的。 本機變數與欄位宣告可以進一步縮短，就不需要重新敘述陣列型別。
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
-上述兩個範例都相當於下列程式碼：
+前面的兩個示例都等效于以下代碼：
 
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
->[上一頁](classes-and-objects.md)
->[下一頁](interfaces.md)
+>[上一個](classes-and-objects.md)
+>[下一個](interfaces.md)

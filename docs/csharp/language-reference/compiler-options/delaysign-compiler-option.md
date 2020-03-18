@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
 ms.openlocfilehash: 9fdc02c22d9d8c8a709155e43a17ebf0d86dfd69
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970436"
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (C# 編譯器選項)
@@ -29,11 +29,11 @@ ms.locfileid: "70970436"
 
 `+` &#124; `-`
 
-如果需要完整簽署的組件，請使用 **-delaysign-** 。 如果只想在組件中放置公開金鑰，請使用 **-delaysign+** 。 預設值為 **-delaysign-** 。
+如果需要完整簽署的組件，請使用 **-delaysign-**。 如果只想在組件中放置公開金鑰，請使用 **-delaysign+**。 預設值為 **-delaysign-**。
 
 ## <a name="remarks"></a>備註
 
-**-delaysign** 選項必須搭配 [-keyfile](./keyfile-compiler-option.md) 或 [-keycontainer](./keycontainer-compiler-option.md) 才有作用。
+**-delaysign**選項沒有效果，除非與[-鍵檔](./keyfile-compiler-option.md)或[-key 容器](./keycontainer-compiler-option.md)一起使用。
 
 **-delaysign** 和 **-publicsign** 選項是互斥的。
 
@@ -45,10 +45,10 @@ ms.locfileid: "70970436"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性] 頁面。
-1. 修改 [僅延遲簽署] 屬性。
+1. 開啟專案的 [屬性] **** 頁面。
+1. 修改 [僅延遲簽署]**** 屬性。
 
-如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。
+如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。
 
 ## <a name="see-also"></a>另請參閱
 

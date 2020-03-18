@@ -1,22 +1,22 @@
 ---
 ms.openlocfilehash: ae5a5fbf97ed4a03de7d35b9d5d5ca8de3aebc39
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394343"
 ---
-### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>Caching： ResponseCaching "pubternal" 類型已變更為 internal
+### <a name="caching-responsecaching-pubternal-types-changed-to-internal"></a>緩存：回應緩存"公共"類型更改為內部
 
-在 ASP.NET Core 3.0 中，`ResponseCaching` 中的 "pubternal" 類型已變更為 [`internal`]。
+在 ASP.NET Core 3.0 中`ResponseCaching`，"pubenal"類型已更改`internal`為 。
 
-此外，`IResponseCachingPolicyProvider` 和 `IResponseCachingKeyProvider` 的預設值不會再加入至服務，做為 `AddResponseCaching` 方法的一部分。
+此外，作為方法的一部分`IResponseCachingPolicyProvider`，`IResponseCachingKeyProvider`和 的預設實現不再添加到服務中`AddResponseCaching`。
 
 #### <a name="change-description"></a>變更描述
 
-在 ASP.NET Core 中，"pubternal" 類型會宣告為 `public`，但位於尾碼為 `.Internal`的命名空間中。 雖然這些類型是公用的，但它們沒有支援原則，而且可能會受到重大變更。 可惜的是，意外使用這些型別是很常見的，因而導致這些專案的重大變更，並限制維護架構的能力。
+在 ASP.NET 核心中，"pubenal"型別宣告`public`為，但駐留在尾碼與`.Internal`的命名空間中。 雖然這些類型的是公共的，但它們沒有支援策略，並且可能會進行重大更改。 遺憾的是，意外使用這些類型很常見，導致這些專案的更改中斷，並限制了維護框架的能力。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
 3.0
 
@@ -26,15 +26,15 @@ ms.locfileid: "72394343"
 
 #### <a name="new-behavior"></a>新的行為
 
-這些類型現在 `internal`。
+這些類型現在是`internal`。
 
-#### <a name="reason-for-change"></a>變更的原因
+#### <a name="reason-for-change"></a>更改原因
 
-`internal` 範圍更能反映不受支援的原則。
+範圍`internal`更好地反映了不支援的策略。
 
 #### <a name="recommended-action"></a>建議的動作
 
-複製您的應用程式或程式庫所使用的類型。
+複製應用或庫使用的類型。
 
 #### <a name="category"></a>類別
 

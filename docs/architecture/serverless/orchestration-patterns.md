@@ -1,25 +1,25 @@
 ---
-title: 協調流程模式-無伺服器應用程式
-description: Azure 長期函數 pr
+title: 業務流程模式 - 無伺服器應用
+description: Azure 持久功能 pr
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2bd81c29e727254af6c8ecf39ee4bfef1f39d009
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522644"
 ---
-# <a name="orchestration-patterns"></a>協調流程模式
+# <a name="orchestration-patterns"></a>編排模式
 
-Durable Functions 可讓您更輕鬆地建立可設定狀態的工作流程，其中包含無伺服器環境中的離散、長時間執行活動。 由於 Durable Functions 可以追蹤您工作流程的進度，並定期檢查執行歷程記錄，因此它本身就能執行一些有趣的模式。
+耐用的函數使創建由無伺服器環境中離散、長時間運行的活動組成的有狀態工作流變得更加容易。 由於持久函數可以跟蹤工作流的進度並定期檢查執行歷史記錄，因此它有助於實現一些有趣的模式。
 
-## <a name="function-chaining"></a>函數鏈
+## <a name="function-chaining"></a>函式鏈結
 
-在一般的順序程式中，活動必須以特定順序逐一執行。 （選擇性）近期的活動可能需要先前函式的一些輸出。 這項對活動順序的相依性會建立執行的函式鏈。
+在典型的順序過程中，活動需要按特定順序逐一執行。 或者，即將進行的活動可能需要來自上一個函數的某些輸出。 這種對活動排序的依賴會創建一個執行的函數鏈。
 
-使用 Durable Functions 來執行此工作流程模式的優點，在於它的執行檢查點功能。 如果伺服器當機、網路超時或發生其他問題，長期函式會從上次已知狀態繼續，並繼續執行您的工作流程，即使它位於另一部伺服器上也一樣。
+使用持久函數來實現此工作流模式的好處來自于它執行檢查點的能力。 如果伺服器崩潰、網路超時或發生其他問題，則持久功能可以從上次已知狀態恢復並繼續運行工作流，即使它位於其他伺服器上也是如此。
 
 ```csharp
 [FunctionName("PlaceOrder")]
@@ -37,9 +37,9 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-在上述程式碼範例中，`CallActivityAsync` 函數負責在資料中心的虛擬機器上執行指定的活動。 當 await 傳回且基礎工作完成時，會將執行記錄到歷程記錄資料表。 協調器函式中的程式碼可利用工作平行程式庫的任何熟悉結構和 async/await 關鍵字。
+在前面的代碼示例中，`CallActivityAsync`該函數負責在資料中心的虛擬機器上運行給定活動。 當等待返回和基礎任務完成時，執行將記錄到歷史記錄表中。 協調器函數中的代碼可以使用任務並行庫的任何熟悉的構造和非同步/等待關鍵字。
 
-下列程式碼是 `ProcessPayment` 方法可能如下所示的簡化範例：
+以下代碼是方法可能是什麼樣子的`ProcessPayment`簡化示例：
 
 ```csharp
 [FunctionName("ProcessPayment")]
@@ -56,11 +56,11 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 }
 ```
 
-## <a name="asynchronous-http-apis"></a>非同步 HTTP Api
+## <a name="asynchronous-http-apis"></a>非同步 HTTP API
 
-在某些情況下，工作流程可能會包含需要相當長一段時間才能完成的活動。 假設有一個處理常式，會將媒體檔案備份到 blob 儲存體中。 視媒體檔案的大小和數量而定，此備份程式可能需要數小時才能完成。
+在某些情況下，工作流可能包含需要相對很長時間才能完成的活動。 想像一下，將媒體檔案備份到 Blob 存儲的過程。 根據媒體檔案的大小和數量，此備份過程可能需要數小時才能完成。
 
-在此案例中，`DurableOrchestrationClient`檢查執行中工作流程狀態的功能會變得很有用。 當使用 `HttpTrigger` 來啟動工作流程時，`CreateCheckStatusResponse` 方法可以用來傳回 `HttpResponseMessage`的實例。 此回應會在承載中提供具有 URI 的用戶端，可用來檢查執行中進程的狀態。
+在這種情況下，`DurableOrchestrationClient`檢查正在運行的工作流狀態的能力變得有用。 使用`HttpTrigger`啟動工作流時，`CreateCheckStatusResponse`該方法可用於返回 的`HttpResponseMessage`實例。 此回應在有效負載中為用戶端提供 URI，可用於檢查正在運行的進程的狀態。
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -76,7 +76,7 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-下面的範例結果顯示回應承載的結構。
+下面的示例結果顯示回應負載的結構。
 
 ```json
 {
@@ -87,7 +87,7 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-使用您慣用的 HTTP 用戶端時，可以對 statusQueryGetUri 中的 URI 提出 GET 要求，以檢查執行中工作流程的狀態。 傳回的狀態回應應如下列程式碼所示。
+使用首選的 HTTP 用戶端，可以向狀態查詢GetUri 中的 URI 發出 GET 請求，以檢查正在運行的工作流的狀態。 返回的狀態回應應類似于以下代碼。
 
 ```json
 {
@@ -101,13 +101,13 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-當程式繼續進行時，狀態回應會變更為 [**失敗**] 或 [**已完成**]。 成功完成時，裝載中的**輸出**屬性會包含任何傳回的資料。
+隨著進程的繼續，狀態回應將更改為 **"失敗"** 或 **"已完成**"。 成功完成後，有效負載中的**輸出**屬性將包含任何返回的資料。
 
 ## <a name="monitoring"></a>監視
 
-針對簡單的週期性工作，Azure Functions 提供可根據 CRON 運算式排程的 `TimerTrigger`。 計時器適用于簡單、短期的工作，但在某些情況下，也可能需要更具彈性的排程。 此案例是監視模式和 Durable Functions 可提供協助的時機。
+對於簡單的重複任務，Azure 函數提供`TimerTrigger`可以基於 CRON 運算式進行計畫的。 計時器適用于簡單、短期的任務，但在某些情況下可能需要更靈活的調度。 此方案是監視模式和持久函數可以提供説明時。
 
-Durable Functions 可提供彈性的排程間隔、存留期管理，以及從單一協調流程功能建立多個監視器進程。 這項功能的其中一個使用案例，可能是建立在符合特定閾值後才會完成的股票價格變更監看員。
+持久函數允許靈活的調度間隔、存留期管理和從單個業務流程函數創建多個監視器進程。 此功能的一個用例可能是為滿足特定閾值後完成的股價變化創建觀察程式。
 
 ```csharp
 [FunctionName("CheckStockPrice")]
@@ -149,13 +149,13 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-`DurableOrchestrationContext`的 `CreateTimer` 方法會設定下一個叫用迴圈的排程，以檢查股票價格變更。 `DurableOrchestrationContext` 也具有 `CurrentUtcDateTime` 屬性，可取得 UTC 格式的目前日期時間值。 最好是使用這個屬性，而不是 `DateTime.UtcNow`，因為它很容易模擬以進行測試。
+`DurableOrchestrationContext`該方法`CreateTimer`設置迴圈下一次調用的計畫，以檢查股票價格變化。 `DurableOrchestrationContext`還具有用於`CurrentUtcDateTime`獲取 UTC 中的當前 DateTime 值的屬性。 最好使用此屬性，`DateTime.UtcNow`而不是因為它很容易被嘲笑以進行測試。
 
 ## <a name="recommended-resources"></a>建議的資源
 
 - [Azure Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-- [.NET Core 與 .NET Standard 中的單元測試](../../core/testing/index.md)
+- [.NET 核心和 .NET 標準中的單元測試](../../core/testing/index.md)
 
 >[!div class="step-by-step"]
->[上一頁](durable-azure-functions.md)
->[下一頁](serverless-business-scenarios.md)
+>[上一個](durable-azure-functions.md)
+>[下一個](serverless-business-scenarios.md)

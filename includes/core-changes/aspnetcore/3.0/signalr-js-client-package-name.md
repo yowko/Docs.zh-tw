@@ -1,40 +1,40 @@
 ---
 ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901762"
 ---
-### <a name="signalr-javascript-client-package-name-changed"></a>SignalR： JavaScript 用戶端封裝名稱已變更
+### <a name="signalr-javascript-client-package-name-changed"></a>信號R：JavaScript用戶端包名稱已更改
 
-在 ASP.NET Core 3.0 Preview 7 中，SignalR JavaScript 用戶端封裝名稱從 `@aspnet/signalr` 變更為 `@microsoft/signalr`。 名稱變更反映出 SignalR 在不只是 ASP.NET Core 的應用程式中很有用的事實，因為 Azure SignalR Service。
+在ASP.NET酷3.0預覽7中，SignalR JavaScript用戶端包名稱從`@aspnet/signalr`更改為`@microsoft/signalr`。 名稱更改反映了一個事實，即由於 Azure SignalR 服務，SignalR 不僅在 ASP.NET 核心應用中非常有用。
 
-若要回應這項變更，請變更您*封裝*中的參考、`require` 語句和 ECMAScript `import` 語句。 在此重新命名過程中，不會變更任何 API。
+要對此更改做出反應，請更改*包.json*檔、`require`語句和 ECMAScript`import`語句中的引用。 作為此重命名的一部分，任何 API 都不會改變。
 
-如需討論，請參閱[dotnet/aspnetcore # 11637](https://github.com/dotnet/aspnetcore/issues/11637)。
+有關討論，請參閱[點網/阿斯平核心#11637](https://github.com/dotnet/aspnetcore/issues/11637)。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
 3.0
 
 #### <a name="old-behavior"></a>舊的行為
 
-用戶端套件的名稱為 `@aspnet/signalr`。
+用戶端包已命名`@aspnet/signalr`。
 
 #### <a name="new-behavior"></a>新的行為
 
-用戶端套件的名稱為 `@microsoft/signalr`。
+用戶端包名為`@microsoft/signalr`。
 
-#### <a name="reason-for-change"></a>變更的原因
+#### <a name="reason-for-change"></a>更改原因
 
-[名稱] 變更清楚說明 SignalR 在 ASP.NET Core 應用程式之外很有用，因為 Azure SignalR Service。
+名稱更改闡明，由於 Azure SignalR 服務，SignalR 在 ASP.NET 核心應用之外非常有用。
 
 #### <a name="recommended-action"></a>建議的動作
 
-切換至新的封裝 `@microsoft/signalr`。
+切換到新包`@microsoft/signalr`。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
 ASP.NET Core
 

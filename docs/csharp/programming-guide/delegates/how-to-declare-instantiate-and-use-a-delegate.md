@@ -1,17 +1,17 @@
 ---
-title: 如何宣告、具現化和使用委派程式C#設計指南
+title: 如何聲明、具現化和使用委託 - C# 程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
 ms.openlocfilehash: 7ac1d736e19c4dcf1c8408db944505c399762778
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712360"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>如何宣告、具現化和使用委派（C#程式設計手冊）
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>如何聲明、具現化和使用委託（C# 程式設計指南）
 在 C# 1.0 和更新版本中，宣告委派的方式如下列範例所示。  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  
@@ -30,7 +30,7 @@ ms.locfileid: "75712360"
   
  [!code-csharp[csProgGuideDelegates#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#31)]  
   
- 如需詳細資訊，請參閱 [Lambda 運算式](../statements-expressions-operators/lambda-expressions.md)。  
+ 有關詳細資訊，請參閱[Lambda 運算式](../statements-expressions-operators/lambda-expressions.md)。  
   
  下列範例說明如何宣告、具現化和使用委派。 `BookDB` 類別會封裝用來保留書籍資料的書店資料庫。 它會公開 `ProcessPaperbackBooks` 方法，此方法會尋找資料庫中的所有平裝書，並針對每本書呼叫委派。 所使用的 `delegate` 類型稱為 `ProcessBookDelegate`。 `Test` 類別會使用這個類別來列印平裝書的書名和平均價格。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "75712360"
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDelegates#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#12)]  
   
-## <a name="robust-programming"></a>最佳化程式設計  
+## <a name="robust-programming"></a>穩固程式設計  
   
 - 宣告委派。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75712360"
   
      委派可以同步呼叫 (如此範例所示)，或使用 `BeginInvoke` 和 `EndInvoke` 方法以非同步方式呼叫。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [事件](../events/index.md)

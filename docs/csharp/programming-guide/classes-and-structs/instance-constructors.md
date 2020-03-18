@@ -6,10 +6,10 @@ helpviewer_keywords:
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
 ms.openlocfilehash: 621b8ca7510b0b9916c9c46f201ff77402c3c655
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75964718"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>執行個體建構函式 (C# 程式設計手冊)
@@ -23,7 +23,7 @@ ms.locfileid: "75964718"
 > [!NOTE]
 > 為了清楚起見，這個類別會包含公用欄位。 我們不建議您在程式設計中使用公用欄位，因為這麼做會允許程式中的任何方法，在不受限制及未經驗證的情況下，存取物件的內部運作。 資料成員一般應為私用，而且只應透過類別方法和屬性來存取。  
   
- 每當建立以 `Coords` 類別為基礎的物件時，即會呼叫這個執行個體建構函式。 像這種不接受任何引數的建構函式，稱為「無參數建構函式」。 不過，提供額外的建構函式通常很實用。 比方說，我們可以將建構函式新增至 `Coords` 類別，以指定資料成員的起始值：  
+ 每當建立以 `Coords` 類別為基礎的物件時，即會呼叫這個執行個體建構函式。 像這種不接受任何引數的建構函式，稱為「無參數建構函式」**。 不過，提供額外的建構函式通常很實用。 比方說，我們可以將建構函式新增至 `Coords` 類別，以指定資料成員的起始值：  
   
  [!code-csharp[csProgGuideObjects#76](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#76)]  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75964718"
   
  [!code-csharp[csProgGuideObjects#77](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#77)]  
   
- 如果類別不含建構函式，則會自動產生無參數建構函式，並使用預設值來初始化物件欄位。 例如，系統會將 [int](../../language-reference/builtin-types/integral-numeric-types.md) 初始化為 0。 如需類型預設值的詳細資訊，請參閱[ C#類型的預設值](../../language-reference/builtin-types/default-values.md)。 因此，由於 `Coords` 類別的無參數建構函式會將所有資料成員初始化為零，所以您可以將其完全移除，而不需變更類別的運作方式。 本主題稍後的範例 1 提供使用多個建構函式的完整範例；範例 2 則提供自動產生建構函式的範例。  
+ 如果類別不含建構函式，則會自動產生無參數建構函式，並使用預設值來初始化物件欄位。 例如，系統會將 [int](../../language-reference/builtin-types/integral-numeric-types.md) 初始化為 0。 有關類型預設值的資訊，請參閱[C# 類型的預設值](../../language-reference/builtin-types/default-values.md)。 因此，由於 `Coords` 類別的無參數建構函式會將所有資料成員初始化為零，所以您可以將其完全移除，而不需變更類別的運作方式。 本主題稍後的範例 1 提供使用多個建構函式的完整範例；範例 2 則提供自動產生建構函式的範例。  
   
  執行個體建構函式也可用來呼叫基底類別的執行個體建構函式。 類別建構函式可以透過初始設定式，來叫用基底類別的建構函式，如下所示：  
   
@@ -58,10 +58,10 @@ ms.locfileid: "75964718"
   
  如需更多基底類別建構函式的叫用範例，請參閱 [virtual](../../language-reference/keywords/virtual.md)、[override](../../language-reference/keywords/override.md) 和 [base](../../language-reference/keywords/base.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)
 - [建構函式](./constructors.md)
 - [完成項](./destructors.md)
-- [static](../../language-reference/keywords/static.md)
+- [靜態](../../language-reference/keywords/static.md)

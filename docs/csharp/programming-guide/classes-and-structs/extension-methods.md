@@ -7,18 +7,18 @@ helpviewer_keywords:
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 ms.openlocfilehash: ce35ef4d4286310aa6c8b6e40c3a448b0d91ea7d
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937528"
 ---
 # <a name="extension-methods-c-programming-guide"></a>擴充方法 (C# 程式設計手冊)
 擴充方法可讓您在現有類型中「加入」方法，而不需要建立新的衍生類型、重新編譯，或是修改原始類型。 擴充方法是一種特殊的靜態方法，但是會將它們當成擴充類型上的執行個體方法來呼叫。 對於以 C#、F# 和 Visual Basic 撰寫的用戶端程式碼，呼叫擴充方法或是在類型中實際定義的方法，兩者之間並沒有明顯的差別。  
   
- 最常見的擴充方法是 LINQ 標準查詢運算子，可將查詢功能加入至現有的 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 和 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 類型。 若要使用標準查詢運算子，請先使用 `using System.Linq` 指示詞將它們帶入範圍內。 接著，任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的類型都會具有執行個體方法，如 <xref:System.Linq.Enumerable.GroupBy%2A>、<xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.Average%2A> 等。 如果在 <xref:System.Collections.Generic.IEnumerable%601> 類型 (如 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array>) 的執行個體後面輸入「點」，就可以在 IntelliSense 陳述式完成時看到這些額外的方法。  
+ 最常見的擴充方法是 LINQ 標準查詢運算子，它們將查詢功能添加到現有<xref:System.Collections.IEnumerable?displayProperty=nameWithType>和<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>類型。 若要使用標準查詢運算子，請先使用 `using System.Linq` 指示詞將它們帶入範圍內。 接著，任何實作 <xref:System.Collections.Generic.IEnumerable%601> 的類型都會具有執行個體方法，如 <xref:System.Linq.Enumerable.GroupBy%2A>、<xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.Average%2A> 等。 如果在 <xref:System.Collections.Generic.IEnumerable%601> 類型 (如 <xref:System.Collections.Generic.List%601> 或 <xref:System.Array>) 的執行個體後面輸入「點」，就可以在 IntelliSense 陳述式完成時看到這些額外的方法。  
   
- 下列範例將示範如何在整數陣列上呼叫標準查詢運算子 `OrderBy` 方法。 括號括住的運算式就是 Lambda 運算式。 許多標準查詢運算子會將 Lambda 運算式當成參數，但是擴充方法不會強制這樣做。 如需詳細資訊，請參閱 [Lambda 運算式](../statements-expressions-operators/lambda-expressions.md)。  
+ 下列範例將示範如何在整數陣列上呼叫標準查詢運算子 `OrderBy` 方法。 括號括住的運算式就是 Lambda 運算式。 許多標準查詢運算子會將 Lambda 運算式當成參數，但是擴充方法不會強制這樣做。 有關詳細資訊，請參閱[Lambda 運算式](../statements-expressions-operators/lambda-expressions.md)。  
   
  [!code-csharp[csProgGuideExtensionMethods#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#3)]  
   
@@ -43,7 +43,7 @@ int i = s.WordCount();
   
  在您的程式碼中，可以利用執行個體方法語法來叫用擴充方法。 不過，編譯器所產生的中繼語言 (IL) 會將您的程式碼轉譯為靜態方法上的呼叫。 因此，實際上並未違反封裝 (Encapsulation) 的準則。 事實上，擴充方法無法存取它們所擴充之類型中的私用變數。  
   
- 如需詳細資訊，請參閱[如何執行和呼叫自訂擴充方法](./how-to-implement-and-call-a-custom-extension-method.md)。
+ 有關詳細資訊，請參閱[如何實現和調用自訂擴充方法](./how-to-implement-and-call-a-custom-extension-method.md)。
   
  一般而言，您呼叫擴充方法的頻率將遠高於實作自己的方法。 因為擴充方法是使用執行個體方法語法進行呼叫，所以不需要任何特殊知識就可以從用戶端程式碼使用它們。 若要啟用特定類型的擴充方法，只要針對定義這些方法所在的命名空間加入 `using` 指示詞即可。 例如，若要使用標準查詢運算子，請將下面這個 `using` 指示詞加入至程式碼：  
   
@@ -51,7 +51,7 @@ int i = s.WordCount();
 using System.Linq;  
 ```  
   
- （您可能也必須新增對 system.string 的參考）。您會注意到，標準查詢運算子現在會出現在 IntelliSense 中，做為大部分 <xref:System.Collections.Generic.IEnumerable%601> 類型的其他可用方法。  
+ （您可能還必須添加對 System.Core.dll 的引用。您會注意到，標準查詢運算子現在顯示為適用于大多數<xref:System.Collections.Generic.IEnumerable%601>類型的其他方法。  
   
 ## <a name="binding-extension-methods-at-compile-time"></a>在編譯時期繫結擴充方法  
  您可以使用擴充方法來擴充類別或介面，但無法覆寫它們。 而且永遠不會呼叫擁有與介面或類別方法相同名稱和簽章的擴充方法。 在編譯時期，擴充方法的優先順序一律低於類型本身中定義的執行個體方法。 換句話說，如果類型具有名為 `Process(int i)` 的方法，而您的擴充方法也具有相同的簽章，則編譯器一律會繫結至執行個體方法。 編譯器遇到方法引動過程時，會先在類型的執行個體方法中尋找相符項目。 如果找不到相符項目，則會搜尋任何針對該類型定義的擴充方法，並繫結至找到的第一個擴充方法。 下列範例將示範編譯器如何判斷要繫結的擴充方法或執行個體方法。  
@@ -65,7 +65,7 @@ using System.Linq;
   
  [!code-csharp[csProgGuideExtensionMethods#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#5)]  
   
-## <a name="general-guidelines"></a>一般方針  
+## <a name="general-guidelines"></a>一般準則  
  一般而言，建議您應謹慎地實作擴充方法，而且只有在必要時才實作。 當用戶端程式碼必須擴充現有的類型時，應該盡可能以建立衍生自現有類型的新類型來達成此目的。 如需詳細資訊，請參閱[繼承](./inheritance.md)。  
   
  使用擴充方法來擴充無法變更其原始程式碼的類型時，會有類型實作的變更導致擴充方法中斷的風險。  
@@ -78,11 +78,11 @@ using System.Linq;
   
  針對實作的類別庫，您不應該使用擴充方法阻止組件的版本號碼遞增。 如果您要在擁有其原始程式碼的程式庫中加入重要功能，則應遵循組件版本控制的標準 .NET Framework 方針。 如需詳細資訊，請參閱[組件版本控制](../../../standard/assembly/versioning.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [平行程式設計範例 (包括許多範例擴充方法)](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
-- [Lambda 運算式](../statements-expressions-operators/lambda-expressions.md)
+- [蘭姆達運算式](../statements-expressions-operators/lambda-expressions.md)
 - [標準查詢運算子概觀](../concepts/linq/standard-query-operators-overview.md)
 - [Conversion rules for Instance parameters and their impact](https://docs.microsoft.com/archive/blogs/sreekarc/conversion-rules-for-instance-parameters-and-their-impact) (執行個體參數的轉換規則與其影響)
 - [Extension methods Interoperability between languages](https://docs.microsoft.com/archive/blogs/sreekarc/extension-methods-interoperability-between-languages) (語言之間擴充方法的互通性)

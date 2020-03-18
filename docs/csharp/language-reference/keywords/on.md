@@ -8,10 +8,10 @@ helpviewer_keywords:
 - on keyword [C#]
 ms.assetid: 06abc536-e07c-4e34-88c1-425208bdcb21
 ms.openlocfilehash: 0c443b395ff41ac4584da706722186cf9247ad24
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713307"
 ---
 # <a name="on-c-reference"></a>on (C# 參考)
@@ -24,7 +24,7 @@ ms.locfileid: "75713307"
 
 [!code-csharp[csrefKeywordsContextual#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#12)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [Language-Integrated Query (LINQ)](../../linq/index.md)
+- [語言綜合查詢（LINQ）](../../linq/index.md)

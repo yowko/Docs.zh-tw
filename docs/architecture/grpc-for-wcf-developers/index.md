@@ -1,12 +1,12 @@
 ---
-title: WCF 開發人員的 ASP.NET Core gRPC-WCF 開發人員的 gRPC
-description: 在 WCF 開發人員的 ASP.NET Core 3.0 中建立 gRPC 服務的簡介
+title: ASP.NET面向 WCF 開發人員的核心 gRPC - gRPC 面向 WCF 開發人員
+description: 為 WCF 開發人員ASP.NET核心 3.0 構建 gRPC 服務簡介
 ms.date: 09/02/2019
 ms.openlocfilehash: 40307124c521659a00339884bacf48881fa3e048
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77543231"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>適用於 WCF 開發人員的 ASP.NET Core gRPC
@@ -31,42 +31,42 @@ Copyright © 2019 by Microsoft Corporation
 
 此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。
 
-Microsoft 與列於 https://www.microsoft.com 「商標」網頁的商標是 Microsoft 集團的商標。
+Microsoft 與列於 https://www.microsoft.com「商標」網頁的商標是 Microsoft 集團的商標。
 
-Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
+Docker 鯨魚標誌是 Docker， Inc. 經許可使用的注冊商標。
 
 所有其他商標和標誌屬於其各自擁有者的財產。
 
 作者：
 
-> **Mark Rendle** -首席技術長-[視覺的編碼](https://visualrecode.com)
+> **馬克·倫德爾**- 首席技術官 -[視覺重碼](https://visualrecode.com)
 >
-> **Miranda Steiner** -技術作者
+> **米蘭達·施泰納**- 技術作者
 
-編輯：
+編輯器：
 
-> **Maira Wenzel** -Sr. 內容開發人員-Microsoft
+> **Maira Wenzel** - Sr. 內容開發人員 - 微軟
 
 ## <a name="introduction"></a>簡介
 
-gRPC 是一種現代化的架構，可用於建立網路服務和分散式應用程式。 想像一下 Windows Communication Foundation （WCF） NetTCP 系結的效能，並結合 SOAP 的跨平臺互通性。 gRPC 是以 HTTP/2 和 Protobuf 訊息編碼通訊協定為基礎，可在應用程式與服務之間提供高效能、低頻寬的通訊。 它支援跨最受歡迎的程式設計語言和平臺產生伺服器和用戶端程式代碼，包括 .NET、JAVA、Python、node.js、 C++Go 和。 有了 ASP.NET Core 3.0 中 gRPC 的第一級支援，以及 .NET 4.x 現有的 gRPC 工具和程式庫，對於想要在組織中採用 .NET Core 的開發團隊而言，這是 WCF 的絕佳替代方案。
+gRPC 是構建網路服務和分散式應用程式的現代框架。 想像一下 Windows 通信基礎 （WCF） NetTCP 綁定的性能，以及 SOAP 的跨平臺互通性。 gRPC 基於 HTTP/2 和 Protobuf 消息編碼協議構建，以便在應用程式和服務之間提供高性能、低頻寬的通信。 它支援在最流行的程式設計語言和平臺上生成伺服器和用戶端代碼，包括 .NET、JAVA、Python、Node.js、Go 和C++。 ASP.NET Core 3.0 中對 gRPC 的一流支援，以及現有的 gRPC 工具和 .NET 4.x 的庫，對於希望在其組織中採用 .NET Core 的開發團隊而言，它是 WCF 的絕佳替代方案。
 
 ## <a name="who-should-use-this-guide"></a>誰應該使用本指南
 
-本指南是針對在先前已使用 WCF 的 .NET Framework 或 .NET Core 中工作的開發人員，以及想要將其應用程式遷移至 .NET Core 3.0 和更新版本之新式 RPC 環境的使用者而撰寫。 更常見的情況是，如果您要升級或考慮升級至 .NET Core 3.0，而您想要使用內建的 gRPC 工具，本指南也很有用。
+本指南是為以前使用過 WCF 的 .NET 框架或 .NET Core 工作的開發人員編寫的，這些開發人員尋求將其應用程式遷移到用於 .NET Core 3.0 和更高版本的現代 RPC 環境。 更一般地說，如果要升級到 .NET Core 3.0，並且想要使用內置 gRPC 工具，本指南也很有用。
 
 ## <a name="how-you-can-use-this-guide"></a>此指南的使用方式
 
-這是在 ASP.NET Core 3.0 中建立 gRPC 服務的簡要介紹，並特別參考 WCF 做為類似的平臺。 其中說明 gRPC 的原則，並將每個概念關聯至 WCF 的對等功能，並提供將現有 WCF 應用程式遷移至 gRPC 的指引。 它也適用于經驗豐富的開發人員，而且想要學習 gRPC 來建立新的服務。 您可以使用範例應用程式做為您自己專案的範本或參考，而且可以免費複製並重複使用本書或其範例中的程式碼。
+這是ASP.NET核心3.0中構建 gRPC 服務的簡短介紹，其中特別提到 WCF 作為類似平臺。 它解釋了 gRPC 的原則，將每個概念與 WCF 的等效功能相關聯，並為將現有的 WCF 應用程式遷移到 gRPC 提供了指導。 對於具有 WCF 經驗並希望學習 gRPC 以構建新服務的開發人員來說，它也很有用。 您可以將應用程式範例用作您自己的專案的範本或參考，並且可以自由地複製和重用書籍或其示例中的代碼。
 
-請隨意將本指南轉寄給您的小組，協助確保對這些考量和機會有共同的了解。 讓每個人都能使用一組通用的詞彙和基礎原則，有助於確保一致地應用架構模式和實務。
+請隨意將本指南轉寄給您的小組，協助確保對這些考量和機會有共同的了解。 讓每個人都從一組共同的術語和基本原則中工作，有助於確保架構模式和實踐的一致應用。
 
 ## <a name="references"></a>參考
 
 - **gRPC 網站**
   <https://grpc.io>
-- **針對伺服器應用程式的 .Net Core 和 .NET Framework 進行選擇**
+- **在 .NET 核心和 .NET 框架之間選擇伺服器應用**
   <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
->[下一個](introduction.md)
+>[下一步](introduction.md)

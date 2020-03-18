@@ -4,10 +4,10 @@ description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建�
 ms.date: 08/01/2018
 ms.custom: mvc
 ms.openlocfilehash: f6fc21c010f9b5fcd5e709ef822639c020a7c93b
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240546"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
@@ -16,12 +16,12 @@ ms.locfileid: "78240546"
 
 在本教學課程中，您將探索如何使用 Roslyn API 建立**分析器**和隨附的**程式碼修正**。 分析器是執行原始程式碼分析並向使用者報告問題的方式之一。 分析器也可以選擇性地提供程式碼修正，以顯示對使用者的原始程式碼所做的修改。 本教學課程所建立的分析器會尋找可使用 `const` 修飾詞來宣告、但並未這麼做的區域變數宣告。 隨附的程式碼修正會修改這些宣告，而新增 `const` 修飾詞。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-- [Visual Studio 2019](https://www.visualstudio.com/downloads)
+- [視覺工作室 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+- [視覺工作室 2019](https://www.visualstudio.com/downloads)
 
-您必須透過 Visual Studio 安裝程式安裝 **.NET COMPILER PLATFORM SDK** ：
+您需要通過視覺化工作室安裝程式安裝 **.NET 編譯器平臺 SDK：**
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -51,8 +51,8 @@ Console.WriteLine(x);
 
 其中涉及用以判斷變數是否可設為常數的分析，這需要進行語法分析、初始設定式運算式的常數分析，和資料流程分析，以確保一律不會寫入變數。 .NET Compiler Platform 所提供的 API 可讓您更輕鬆地執行這項分析。 第一個步驟是建立新的 C# **具有程式碼修正的分析器**專案。
 
-- 在 Visual Studio 中選擇 [檔案] > [新增] > [專案...]，以顯示 [新增專案] 對話方塊。
-- 在 [Visual C# > 擴充性] 下方，選擇 [具有程式碼修正的分析器 (.NET Standard)]。
+- 在 Visual Studio 中選擇 [檔案] > [新增] > [專案...]****，以顯示 [新增專案] 對話方塊。
+- 在 [Visual C# > 擴充性]**** 下方，選擇 [具有程式碼修正的分析器 (.NET Standard)]****。
 - 將您的專案命名為 "**MakeConst**"，然後按一下 [確定]。
 
 具有程式碼修正範本的分析器會建立三個專案：一個包含分析器和程式碼修正，第二個是單元測試專案，第三個則是 VSIX 專案。 預設啟始專案為 VSIX 專案。 按 **F5** 以啟動 VSIX 專案。 這會啟動已載入新分析器的第二個 Visual Studio 執行個體。
@@ -60,7 +60,7 @@ Console.WriteLine(x);
 > [!TIP]
 > 當您執行分析器時，您會啟動 Visual Studio 的第二個複本。 此複本會使用不同的登錄區來儲存設定。 這可讓您區分兩個 Visual Studio 複本中的的視覺化設定。 您可以挑選不同的佈景主題，用於 Visual Studio 的實驗性執行。 此外，請勿使用 Visual Studio 的實驗性執行漫遊您的設定或登入 Visual Studio 帳戶。 設定會因此而不同。
 
-在您剛啟動的第二個 Visual Studio 實例中，建立C#新的主控台應用程式專案（.net Core 或 .NET Framework 專案可正常執行--分析器會在來源層級工作）。將滑鼠停留在具有波浪底線的標記上方，分析器所提供的警告文字隨即出現。
+在剛剛啟動的第二個 Visual Studio 實例中，創建新的 C# 主控台應用程式專案（.NET Core 或 .NET 框架專案將工作 -- 分析器在源級別工作。使用波浪底線將滑鼠懸停在標記上，並顯示分析器提供的警告文本。
 
 範本會建立分析器，以針對每個在類型名稱中包含小寫字母的類型宣告回報警告，如下圖所示：
 
@@ -75,7 +75,7 @@ Console.WriteLine(x);
 
 ## <a name="create-analyzer-registrations"></a>建立分析器註冊
 
-範本會在 `DiagnosticAnalyzer`MakeConstAnalyzer.cs**檔案中建立初始** 類別，。 此初始分析器會顯示每個分析器的兩個重要屬性。
+範本會在 **MakeConstAnalyzer.cs** 檔案中建立初始 `DiagnosticAnalyzer` 類別，。 此初始分析器會顯示每個分析器的兩個重要屬性。
 
 - 每個診斷分析器都必須提供 `[DiagnosticAnalyzer]` 屬性，以說明它據以運作的語言。
 - 每個診斷分析器都必須衍生自 <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> 類別。
@@ -93,7 +93,7 @@ Console.WriteLine(x);
 - 將 `AnalyzerMessageFormat` 變更為「可設為常數」。
 - 將 `AnalyzerDescription` 變更為「設為常數」。
 
-此外，請將 [存取修飾詞] 下拉式清單變更為 `public`。 這可以讓這些常數在單元測試中更易於使用。 完成作業後，資源編輯器應會如下圖所示：
+此外，請將 [存取修飾詞]**** 下拉式清單變更為 `public`。 這可以讓這些常數在單元測試中更易於使用。 完成作業後，資源編輯器應會如下圖所示：
 
 ![更新字串資源](media/how-to-write-csharp-analyzer-code-fix/update-string-resources.png)
 
@@ -115,7 +115,7 @@ private void AnalyzeNode(SyntaxNodeAnalysisContext context)
 }
 ```
 
-在 `Category`MakeConstAnalyzer.cs**中將** 變更為 "Usage"，如下列程式碼所示：
+在 **MakeConstAnalyzer.cs** 中將 `Category` 變更為 "Usage"，如下列程式碼所示：
 
 ```csharp
 private const string Category = "Usage";
@@ -130,7 +130,7 @@ int x = 0;
 Console.WriteLine(x);
 ```
 
-第一個步驟是尋找區域宣告。 在 `AnalyzeNode`MakeConstAnalyzer.cs**中將下列程式碼新增至**：
+第一個步驟是尋找區域宣告。 在 **MakeConstAnalyzer.cs** 中將下列程式碼新增至 `AnalyzeNode`：
 
 ```csharp
 var localDeclaration = (LocalDeclarationStatementSyntax)context.Node;
@@ -255,7 +255,7 @@ using Microsoft.CodeAnalysis.Formatting;
 
 ![可設為常數警告](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
-您已完成許多進度。 可設為 `const` 的宣告底下會出現波浪線。 但仍有工作尚待完成。 如果您依序以 `const`、`i`、`j` 的順序將 `k` 新增至宣告，則可正常運作。 但是，如果您以不同的順序從 `const` 開始新增 `k` 修飾詞，分析器將會產生錯誤：除非 `k` 和 `const` 皆已為 `i`，否則 `j` 無法宣告為 `const`。 您必須執行更多分析，以確保能夠以不同的方式讓變數完成宣告和初始化。
+您已完成許多進度。 可設為 `const` 的宣告底下會出現波浪線。 但仍有工作尚待完成。 如果您依序以 `i`、`j`、`k` 的順序將 `const` 新增至宣告，則可正常運作。 但是，如果您以不同的順序從 `k` 開始新增 `const` 修飾詞，分析器將會產生錯誤：除非 `i` 和 `j` 皆已為 `const`，否則 `k` 無法宣告為 `const`。 您必須執行更多分析，以確保能夠以不同的方式讓變數完成宣告和初始化。
 
 ## <a name="build-data-driven-tests"></a>建置資料驅動型測試
 
@@ -310,7 +310,7 @@ public void WhenDiagnosticIsRaisedFixUpdatesCode(
 
 [!code-csharp[string constants for fix test](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-執行這兩項測試，並確定可通過測試。 在 Visual Studio 中選取 [測試] **[視窗]**  >  **[測試總管]**  > ，以開啟 [測試總管]。  按 [全部執行] 連結。
+執行這兩項測試，並確定可通過測試。 在 Visual Studio 中選取 [測試]**** > [視窗]**** > [測試總管]****，以開啟 [測試總管]****。  按 [全部執行]**** 連結。
 
 ## <a name="create-tests-for-valid-declarations"></a>建立有效宣告的測試
 
