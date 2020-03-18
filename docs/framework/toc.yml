@@ -6,7 +6,7 @@
   href: get-started/
 - name: 安裝指南
   href: install/
-- name: 移轉手冊
+- name: 移轉指南
   href: migration-guide/
 - name: 開發指南
   href: development-guide.md
@@ -20,13 +20,14 @@
     - name: 資料與模型化
       href: data/
     - name: 用戶端應用程式
-      href: develop-client-apps.md
       items:
+        - name: 總覽
+          href: develop-client-apps.md
         - name: Windows Presentation Foundation
           href: wpf/
         - name: Windows Forms
           href: winforms/
-    - name: 使用 WCF 以服務為導向的應用程式
+    - name: 採用 WCF 的服務導向應用程式
       href: wcf/
     - name: Windows Workflow Foundation
       href: windows-workflow-foundation/
@@ -34,9 +35,9 @@
       href: windows-services/
     - name: 64 位元應用程式
       href: 64-bit-apps.md
-    - name: 使用 ASP.NET 的 Web 應用程式
+    - name: 採用 ASP.NET 的 Web 應用程式
       href: develop-web-apps-with-aspnet.md
-    - name: 以 .NET Framework 進行網路程式設計
+    - name: 網路程式設計
       href: network-programming/
     - name: 設定應用程式
       href: configure-apps/
@@ -52,9 +53,9 @@
       href: reflection-and-codedom/
     - name: Managed Extensibility Framework (MEF)
       href: mef/
-    - name: 與 Unmanaged 程式碼互通
+    - name: 與非受控的程式碼交互操作
       href: interop/
-    - name: Unmanaged API 參考
+    - name: 非受控 API 參考
       href: unmanaged-api/
     - name: XAML 服務
       href: ../desktop-wpf/xaml-services/

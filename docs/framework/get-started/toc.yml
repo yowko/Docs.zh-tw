@@ -1,11 +1,11 @@
-- name: 快速入門
+- name: 使用者入門
   href: index.md
   items:
     - name: 總覽
       href: overview.md
-    - name: .NET Framework 和 Out-of-Band 發行版本
+    - name: .NET Framework 與不定期發行
       href: the-net-framework-and-out-of-band-releases.md
-    - name: .NET 的核心和開放原始碼
+    - name: .NET Core 與開放原始碼
       href: net-core-and-open-source.md
     - name: 系統需求
       href: system-requirements.md
