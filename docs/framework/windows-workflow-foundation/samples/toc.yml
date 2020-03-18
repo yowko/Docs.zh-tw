@@ -1,7 +1,7 @@
 - name: Windows Workflow 範例
   href: index.md
   items:
-    - name: 應用程式
+    - name: Application
       href: application.md
       items:
         - name: 文件核准程序
@@ -45,7 +45,7 @@
                   href: using-the-expressiontextbox-in-a-custom-activity-designer.md
                 - name: 使用編輯範圍
                   href: using-editing-scope.md
-        - name: Designer
+        - name: 設計師
           href: designer.md
           items:
             - name: 移除設計工具新增至 XAML 檔案的檢視狀態
@@ -74,7 +74,7 @@
               href: tracking-events-into-event-tracing-in-windows.md
             - name: SQL 追蹤
               href: sql-tracking.md
-    - name: 情節
+    - name: 狀況
       href: scenario.md
       items:
         - name: 活動程式庫

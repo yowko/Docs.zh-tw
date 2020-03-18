@@ -1,5 +1,5 @@
 ---
-title: 如何寫入文字檔-程式C#設計指南
+title: 如何寫入文字檔 - C# 程式設計指南
 ms.date: 07/20/2015
 f1_keywords:
 - TextWriter.WriteLine
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
 ms.openlocfilehash: ac16fb971eae5654a55e2f1753d78a6458f03315
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712243"
 ---
-# <a name="how-to-write-to-a-text-file-c-programming-guide"></a><span data-ttu-id="7019f-102">如何寫入文字檔（C#程式設計手冊）</span><span class="sxs-lookup"><span data-stu-id="7019f-102">How to write to a text file (C# Programming Guide)</span></span>
-<span data-ttu-id="7019f-103">在下列這些範例中，會示範幾個將文字寫入檔案的方法。</span><span class="sxs-lookup"><span data-stu-id="7019f-103">These examples show various ways to write text to a file.</span></span> <span data-ttu-id="7019f-104">前兩個範例會在 <xref:System.IO.File?displayProperty=nameWithType> 類別上使用靜態便利方法，將任何 `IEnumerable<string>` 和字串的每個項目和字串寫入文字檔。</span><span class="sxs-lookup"><span data-stu-id="7019f-104">The first two examples use static convenience methods on the <xref:System.IO.File?displayProperty=nameWithType> class to write each element of any `IEnumerable<string>` and a string to a text file.</span></span> <span data-ttu-id="7019f-105">範例 3 中會示範寫入檔案時，如何在需要分別處理每一行時，將文字加入至檔案。</span><span class="sxs-lookup"><span data-stu-id="7019f-105">Example 3 shows how to add text to a file when you have to process each line individually as you write to the file.</span></span> <span data-ttu-id="7019f-106">範例 1-3 會覆寫檔案中所有現有的內容，但是範例 4 將示範如何將文字附加至現有的檔案。</span><span class="sxs-lookup"><span data-stu-id="7019f-106">Examples 1-3 overwrite all existing content in the file, but example 4 shows you how to append text to an existing file.</span></span>  
+# <a name="how-to-write-to-a-text-file-c-programming-guide"></a><span data-ttu-id="846df-102">如何寫入文字檔（C# 程式設計指南）</span><span class="sxs-lookup"><span data-stu-id="846df-102">How to write to a text file (C# Programming Guide)</span></span>
+<span data-ttu-id="846df-103">在下列這些範例中，會示範幾個將文字寫入檔案的方法。</span><span class="sxs-lookup"><span data-stu-id="846df-103">These examples show various ways to write text to a file.</span></span> <span data-ttu-id="846df-104">前兩個範例會在 <xref:System.IO.File?displayProperty=nameWithType> 類別上使用靜態便利方法，將任何 `IEnumerable<string>` 和字串的每個項目和字串寫入文字檔。</span><span class="sxs-lookup"><span data-stu-id="846df-104">The first two examples use static convenience methods on the <xref:System.IO.File?displayProperty=nameWithType> class to write each element of any `IEnumerable<string>` and a string to a text file.</span></span> <span data-ttu-id="846df-105">範例 3 中會示範寫入檔案時，如何在需要分別處理每一行時，將文字加入至檔案。</span><span class="sxs-lookup"><span data-stu-id="846df-105">Example 3 shows how to add text to a file when you have to process each line individually as you write to the file.</span></span> <span data-ttu-id="846df-106">範例 1-3 會覆寫檔案中所有現有的內容，但是範例 4 將示範如何將文字附加至現有的檔案。</span><span class="sxs-lookup"><span data-stu-id="846df-106">Examples 1-3 overwrite all existing content in the file, but example 4 shows you how to append text to an existing file.</span></span>  
   
- <span data-ttu-id="7019f-107">這些範例全都會將字串常值寫入至檔案。</span><span class="sxs-lookup"><span data-stu-id="7019f-107">These examples all write string literals to files.</span></span> <span data-ttu-id="7019f-108">如果您想要格式化寫入檔案的文字，請使用 <xref:System.String.Format%2A> 方法或 C# [字串內插補點](../../language-reference/tokens/interpolated.md)功能。</span><span class="sxs-lookup"><span data-stu-id="7019f-108">If you want to format text written to a file, use the <xref:System.String.Format%2A> method or C# [string interpolation](../../language-reference/tokens/interpolated.md) feature.</span></span>  
+ <span data-ttu-id="846df-107">這些範例全都會將字串常值寫入至檔案。</span><span class="sxs-lookup"><span data-stu-id="846df-107">These examples all write string literals to files.</span></span> <span data-ttu-id="846df-108">如果您想要格式化寫入檔案的文字，請使用 <xref:System.String.Format%2A> 方法或 C# [字串內插補點](../../language-reference/tokens/interpolated.md)功能。</span><span class="sxs-lookup"><span data-stu-id="846df-108">If you want to format text written to a file, use the <xref:System.String.Format%2A> method or C# [string interpolation](../../language-reference/tokens/interpolated.md) feature.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7019f-109">範例</span><span class="sxs-lookup"><span data-stu-id="7019f-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="846df-109">範例</span><span class="sxs-lookup"><span data-stu-id="846df-109">Example</span></span>  
  [!code-csharp[csFilesandFolders#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#3)]  
   
-## <a name="robust-programming"></a><span data-ttu-id="7019f-110">最佳化程式設計</span><span class="sxs-lookup"><span data-stu-id="7019f-110">Robust Programming</span></span>  
- <span data-ttu-id="7019f-111">以下條件可能會造成例外狀況：</span><span class="sxs-lookup"><span data-stu-id="7019f-111">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="846df-110">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="846df-110">Robust Programming</span></span>  
+ <span data-ttu-id="846df-111">以下條件可能會造成例外狀況：</span><span class="sxs-lookup"><span data-stu-id="846df-111">The following conditions may cause an exception:</span></span>  
   
-- <span data-ttu-id="7019f-112">該檔案存在而且是唯讀的。</span><span class="sxs-lookup"><span data-stu-id="7019f-112">The file exists and is read-only.</span></span>  
+- <span data-ttu-id="846df-112">該檔案存在而且是唯讀的。</span><span class="sxs-lookup"><span data-stu-id="846df-112">The file exists and is read-only.</span></span>  
   
-- <span data-ttu-id="7019f-113">路徑名稱可能太長。</span><span class="sxs-lookup"><span data-stu-id="7019f-113">The path name may be too long.</span></span>  
+- <span data-ttu-id="846df-113">路徑名稱可能太長。</span><span class="sxs-lookup"><span data-stu-id="846df-113">The path name may be too long.</span></span>  
   
-- <span data-ttu-id="7019f-114">磁碟可能已滿。</span><span class="sxs-lookup"><span data-stu-id="7019f-114">The disk may be full.</span></span>  
+- <span data-ttu-id="846df-114">磁碟可能已滿。</span><span class="sxs-lookup"><span data-stu-id="846df-114">The disk may be full.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7019f-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="7019f-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="846df-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="846df-115">See also</span></span>
 
-- [<span data-ttu-id="7019f-116">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="7019f-116">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="7019f-117">檔案系統和登錄 (C# 程式設計指南)</span><span class="sxs-lookup"><span data-stu-id="7019f-117">File System and the Registry (C# Programming Guide)</span></span>](./index.md)
-- [<span data-ttu-id="7019f-118">範例：如何將集合儲存至應用程式儲存空間</span><span class="sxs-lookup"><span data-stu-id="7019f-118">Sample: Save a collection to Application Storage</span></span>](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)
+- [<span data-ttu-id="846df-116">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="846df-116">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="846df-117">檔案系統和登錄 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="846df-117">File System and the Registry (C# Programming Guide)</span></span>](./index.md)
+- [<span data-ttu-id="846df-118">範例：如何將集合儲存至應用程式儲存空間</span><span class="sxs-lookup"><span data-stu-id="846df-118">Sample: Save a collection to Application Storage</span></span>](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)

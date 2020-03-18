@@ -1,70 +1,70 @@
 ---
-title: 在 CentOS 7 上安裝 .NET Core-套件管理員-.NET Core
-description: 使用封裝管理員，在 CentOS 7 上安裝 .NET Core SDK 和執行時間。
+title: 在 CentOS 7 上安裝 .NET 內核 - 包管理器 - .NET 核心
+description: 使用包管理器在 CentOS 7 上安裝 .NET 核心 SDK 和運行時。
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.openlocfilehash: 66e78aadf933d3e10b99e3d2c7258733e96164f6
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920860"
 ---
-# <a name="centos-7-package-manager---install-net-core"></a><span data-ttu-id="91afe-103">CentOS 7 套件管理員-安裝 .NET Core</span><span class="sxs-lookup"><span data-stu-id="91afe-103">CentOS 7 Package Manager - Install .NET Core</span></span>
+# <a name="centos-7-package-manager---install-net-core"></a><span data-ttu-id="3199a-103">CentOS 7 套裝軟體管理器 - 安裝 .NET 內核</span><span class="sxs-lookup"><span data-stu-id="3199a-103">CentOS 7 Package Manager - Install .NET Core</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-<span data-ttu-id="91afe-104">本文說明如何使用套件管理員，在 CentOS 7 上安裝 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="91afe-104">This article describes how to use a package manager to install .NET Core on CentOS 7.</span></span> <span data-ttu-id="91afe-105">如果您要安裝執行階段，我們建議您安裝 [ASP.NET Core runtime](#install-the-aspnet-core-runtime)，因為它同時包含 .net Core 和 ASP.NET Core 執行階段。</span><span class="sxs-lookup"><span data-stu-id="91afe-105">If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.</span></span>
+<span data-ttu-id="3199a-104">本文介紹如何使用包管理器在 CentOS 7 上安裝 .NET Core。</span><span class="sxs-lookup"><span data-stu-id="3199a-104">This article describes how to use a package manager to install .NET Core on CentOS 7.</span></span> <span data-ttu-id="3199a-105">如果要安裝運行時，我們建議您安裝[ASP.NET核心運行時](#install-the-aspnet-core-runtime)，因為它包括 .NET Core 和 ASP.NET核心運行時。</span><span class="sxs-lookup"><span data-stu-id="3199a-105">If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.</span></span>
 
-## <a name="register-microsoft-key-and-feed"></a><span data-ttu-id="91afe-106">註冊 Microsoft 金鑰和總結</span><span class="sxs-lookup"><span data-stu-id="91afe-106">Register Microsoft key and feed</span></span>
+## <a name="register-microsoft-key-and-feed"></a><span data-ttu-id="3199a-106">註冊 Microsoft 金鑰和摘要</span><span class="sxs-lookup"><span data-stu-id="3199a-106">Register Microsoft key and feed</span></span>
 
-<span data-ttu-id="91afe-107">安裝 .NET 之前，您必須：</span><span class="sxs-lookup"><span data-stu-id="91afe-107">Before installing .NET, you'll need to:</span></span>
+<span data-ttu-id="3199a-107">在安裝 .NET 之前，您需要：</span><span class="sxs-lookup"><span data-stu-id="3199a-107">Before installing .NET, you'll need to:</span></span>
 
-- <span data-ttu-id="91afe-108">註冊 Microsoft 金鑰。</span><span class="sxs-lookup"><span data-stu-id="91afe-108">Register the Microsoft key.</span></span>
-- <span data-ttu-id="91afe-109">註冊產品存放庫。</span><span class="sxs-lookup"><span data-stu-id="91afe-109">Register the product repository.</span></span>
-- <span data-ttu-id="91afe-110">安裝必要的相依性。</span><span class="sxs-lookup"><span data-stu-id="91afe-110">Install required dependencies.</span></span>
+- <span data-ttu-id="3199a-108">註冊微軟金鑰。</span><span class="sxs-lookup"><span data-stu-id="3199a-108">Register the Microsoft key.</span></span>
+- <span data-ttu-id="3199a-109">註冊產品存儲庫。</span><span class="sxs-lookup"><span data-stu-id="3199a-109">Register the product repository.</span></span>
+- <span data-ttu-id="3199a-110">安裝所需的依賴項。</span><span class="sxs-lookup"><span data-stu-id="3199a-110">Install required dependencies.</span></span>
 
-<span data-ttu-id="91afe-111">每部電腦只需要執行這項作業一次。</span><span class="sxs-lookup"><span data-stu-id="91afe-111">This only needs to be done once per machine.</span></span>
+<span data-ttu-id="3199a-111">每部電腦只需要執行這項作業一次。</span><span class="sxs-lookup"><span data-stu-id="3199a-111">This only needs to be done once per machine.</span></span>
 
-<span data-ttu-id="91afe-112">開啟終端機並執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="91afe-112">Open a terminal and run the following command.</span></span>
+<span data-ttu-id="3199a-112">打開終端並運行以下命令。</span><span class="sxs-lookup"><span data-stu-id="3199a-112">Open a terminal and run the following command.</span></span>
 
 ```bash
 sudo rpm -Uvh https://packages.microsoft.com/config/centos/7/packages-microsoft-prod.rpm
 ```
 
-## <a name="install-the-net-core-sdk"></a><span data-ttu-id="91afe-113">安裝 .NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="91afe-113">Install the .NET Core SDK</span></span>
+## <a name="install-the-net-core-sdk"></a><span data-ttu-id="3199a-113">安裝 .NET Core SDK</span><span class="sxs-lookup"><span data-stu-id="3199a-113">Install the .NET Core SDK</span></span>
 
-<span data-ttu-id="91afe-114">更新可供安裝的產品，然後安裝 .NET Core SDK。</span><span class="sxs-lookup"><span data-stu-id="91afe-114">Update the products available for installation, then install the .NET Core SDK.</span></span> <span data-ttu-id="91afe-115">在您的終端機中，執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="91afe-115">In your terminal, run the following command.</span></span>
+<span data-ttu-id="3199a-114">更新可供安裝的產品，然後安裝 .NET 核心 SDK。</span><span class="sxs-lookup"><span data-stu-id="3199a-114">Update the products available for installation, then install the .NET Core SDK.</span></span> <span data-ttu-id="3199a-115">在終端中，運行以下命令。</span><span class="sxs-lookup"><span data-stu-id="3199a-115">In your terminal, run the following command.</span></span>
 
 ```bash
 sudo yum install dotnet-sdk-3.1
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a><span data-ttu-id="91afe-116">安裝 ASP.NET Core 執行階段</span><span class="sxs-lookup"><span data-stu-id="91afe-116">Install the ASP.NET Core runtime</span></span>
+## <a name="install-the-aspnet-core-runtime"></a><span data-ttu-id="3199a-116">安裝ASP.NET核心運行時</span><span class="sxs-lookup"><span data-stu-id="3199a-116">Install the ASP.NET Core runtime</span></span>
 
-<span data-ttu-id="91afe-117">更新可供安裝的產品，然後安裝 ASP.NET 執行時間。</span><span class="sxs-lookup"><span data-stu-id="91afe-117">Update the products available for installation, then install the ASP.NET runtime.</span></span> <span data-ttu-id="91afe-118">在您的終端機中，執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="91afe-118">In your terminal, run the following command.</span></span>
+<span data-ttu-id="3199a-117">更新可供安裝的產品，然後安裝ASP.NET運行時。</span><span class="sxs-lookup"><span data-stu-id="3199a-117">Update the products available for installation, then install the ASP.NET runtime.</span></span> <span data-ttu-id="3199a-118">在終端中，運行以下命令。</span><span class="sxs-lookup"><span data-stu-id="3199a-118">In your terminal, run the following command.</span></span>
 
 ```bash
 sudo yum install aspnetcore-runtime-3.1
 ```
 
-## <a name="install-the-net-core-runtime"></a><span data-ttu-id="91afe-119">安裝 .NET Core 執行階段</span><span class="sxs-lookup"><span data-stu-id="91afe-119">Install the .NET Core runtime</span></span>
+## <a name="install-the-net-core-runtime"></a><span data-ttu-id="3199a-119">安裝 .NET 核心運行時</span><span class="sxs-lookup"><span data-stu-id="3199a-119">Install the .NET Core runtime</span></span>
 
-<span data-ttu-id="91afe-120">更新可供安裝的產品，然後安裝 .NET Core 執行階段。</span><span class="sxs-lookup"><span data-stu-id="91afe-120">Update the products available for installation, then install the .NET Core runtime.</span></span> <span data-ttu-id="91afe-121">在您的終端機中，執行下列命令。</span><span class="sxs-lookup"><span data-stu-id="91afe-121">In your terminal, run the following command.</span></span>
+<span data-ttu-id="3199a-120">更新可用於安裝的產品，然後安裝 .NET Core 運行時。</span><span class="sxs-lookup"><span data-stu-id="3199a-120">Update the products available for installation, then install the .NET Core runtime.</span></span> <span data-ttu-id="3199a-121">在終端中，運行以下命令。</span><span class="sxs-lookup"><span data-stu-id="3199a-121">In your terminal, run the following command.</span></span>
 
 ```bash
 sudo yum install dotnet-runtime-3.1
 ```
 
-## <a name="how-to-install-other-versions"></a><span data-ttu-id="91afe-122">如何安裝其他版本</span><span class="sxs-lookup"><span data-stu-id="91afe-122">How to install other versions</span></span>
+## <a name="how-to-install-other-versions"></a><span data-ttu-id="3199a-122">如何安裝其他版本</span><span class="sxs-lookup"><span data-stu-id="3199a-122">How to install other versions</span></span>
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="91afe-123">針對套件管理員進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="91afe-123">Troubleshoot the package manager</span></span>
+## <a name="troubleshoot-the-package-manager"></a><span data-ttu-id="3199a-123">排除包管理器故障</span><span class="sxs-lookup"><span data-stu-id="3199a-123">Troubleshoot the package manager</span></span>
 
-<span data-ttu-id="91afe-124">本節提供使用封裝管理員安裝 .NET Core 時，可能會收到的常見錯誤資訊。</span><span class="sxs-lookup"><span data-stu-id="91afe-124">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
+<span data-ttu-id="3199a-124">本節提供有關在使用包管理器安裝 .NET Core 時可能得到的常見錯誤的資訊。</span><span class="sxs-lookup"><span data-stu-id="3199a-124">This section provides information on common errors you may get while using the package manager to install .NET Core.</span></span>
 
-### <a name="failed-to-fetch"></a><span data-ttu-id="91afe-125">無法提取</span><span class="sxs-lookup"><span data-stu-id="91afe-125">Failed to fetch</span></span>
+### <a name="failed-to-fetch"></a><span data-ttu-id="3199a-125">無法提取</span><span class="sxs-lookup"><span data-stu-id="3199a-125">Failed to fetch</span></span>
 
 [!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

@@ -1,20 +1,20 @@
 ---
-title: 如何計算 CSV 文字檔中的資料行值（LINQ）（C#）
+title: 如何計算 CSV 文字檔 （LINQ） （C#） 中的列值
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: a48850e8f6229b80ebd9207bb1b7353f8b0c9e02
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 458950d58b15dcd572329228d76d85881043e07a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141366"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169346"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="68f20-102">如何計算 CSV 文字檔中的資料行值（LINQ）（C#）</span><span class="sxs-lookup"><span data-stu-id="68f20-102">How to compute column values in a CSV text file (LINQ) (C#)</span></span>
-<span data-ttu-id="68f20-103">本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。</span><span class="sxs-lookup"><span data-stu-id="68f20-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="68f20-104">此處顯示的範例準則可以套用至其他類型的結構化文字。</span><span class="sxs-lookup"><span data-stu-id="68f20-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="a6a12-102">如何計算 CSV 文字檔 （LINQ） （C#） 中的列值</span><span class="sxs-lookup"><span data-stu-id="a6a12-102">How to compute column values in a CSV text file (LINQ) (C#)</span></span>
+<span data-ttu-id="a6a12-103">本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。</span><span class="sxs-lookup"><span data-stu-id="a6a12-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="a6a12-104">此處顯示的範例準則可以套用至其他類型的結構化文字。</span><span class="sxs-lookup"><span data-stu-id="a6a12-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-## <a name="to-create-the-source-file"></a><span data-ttu-id="68f20-105">建立來源檔案</span><span class="sxs-lookup"><span data-stu-id="68f20-105">To create the source file</span></span>  
+## <a name="to-create-the-source-file"></a><span data-ttu-id="a6a12-105">建立來源檔案</span><span class="sxs-lookup"><span data-stu-id="a6a12-105">To create the source file</span></span>  
   
-1. <span data-ttu-id="68f20-106">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="68f20-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="68f20-107">假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。</span><span class="sxs-lookup"><span data-stu-id="68f20-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
+1. <span data-ttu-id="a6a12-106">將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。</span><span class="sxs-lookup"><span data-stu-id="a6a12-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="a6a12-107">假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。</span><span class="sxs-lookup"><span data-stu-id="a6a12-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
     ```csv
     111, 97, 92, 81, 60  
@@ -31,7 +31,7 @@ ms.locfileid: "74141366"
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a><span data-ttu-id="68f20-108">範例</span><span class="sxs-lookup"><span data-stu-id="68f20-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a6a12-108">範例</span><span class="sxs-lookup"><span data-stu-id="a6a12-108">Example</span></span>  
   
 ```csharp  
 class SumColumns  
@@ -61,14 +61,14 @@ class SumColumns
     {  
         Console.WriteLine("Single Column Query:");  
   
-        // Parameter examNum specifies the column to   
+        // Parameter examNum specifies the column to
         // run the calculations on. This value could be  
-        // passed in dynamically at runtime.               
+        // passed in dynamically at runtime.
   
         // Variable columnQuery is an IEnumerable<int>.  
         // The following query performs two steps:  
-        // 1) use Split to break each row (a string) into an array   
-        //    of strings,   
+        // 1) use Split to break each row (a string) into an array
+        //    of strings,
         // 2) convert the element at position examNum to an int  
         //    and select it.  
         var columnQuery =  
@@ -95,17 +95,17 @@ class SumColumns
         Console.WriteLine("Multi Column Query:");  
   
         // Create a query, multiColQuery. Explicit typing is used  
-        // to make clear that, when executed, multiColQuery produces   
+        // to make clear that, when executed, multiColQuery produces
         // nested sequences. However, you get the same results by  
         // using 'var'.  
   
         // The multiColQuery query performs the following steps:  
-        // 1) use Split to break each row (a string) into an array   
-        //    of strings,   
-        // 2) use Skip to skip the "Student ID" column, and store the   
+        // 1) use Split to break each row (a string) into an array
+        //    of strings,
+        // 2) use Skip to skip the "Student ID" column, and store the
         //    rest of the row in scores.  
         // 3) convert each score in the current row from a string to  
-        //    an int, and select that entire sequence as one row   
+        //    an int, and select that entire sequence as one row
         //    in the results.  
         IEnumerable<IEnumerable<int>> multiColQuery =  
             from line in strs  
@@ -115,7 +115,7 @@ class SumColumns
                     select Convert.ToInt32(str));  
   
         // Execute the query and cache the results to improve  
-        // performance.   
+        // performance.
         // ToArray could be used instead of ToList.  
         var results = multiColQuery.ToList();  
   
@@ -123,11 +123,11 @@ class SumColumns
         int columnCount = results[0].Count();  
   
         // Perform aggregate calculations Average, Max, and  
-        // Min on each column.              
-        // Perform one iteration of the loop for each column   
+        // Min on each column.
+        // Perform one iteration of the loop for each column
         // of scores.  
-        // You can use a for loop instead of a foreach loop   
-        // because you already executed the multiColQuery   
+        // You can use a for loop instead of a foreach loop
+        // because you already executed the multiColQuery
         // query by calling ToList.  
         for (int column = 0; column < columnCount; column++)  
         {  
@@ -156,12 +156,12 @@ class SumColumns
  */  
 ```  
   
- <span data-ttu-id="68f20-109">查詢的運作方式是使用 <xref:System.String.Split%2A> 方法，將每一行文字轉換成陣列。</span><span class="sxs-lookup"><span data-stu-id="68f20-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="68f20-110">每個陣列項目表示一個資料行。</span><span class="sxs-lookup"><span data-stu-id="68f20-110">Each array element represents a column.</span></span> <span data-ttu-id="68f20-111">最後，每個資料行中的文字都會轉換成其數值表示法。</span><span class="sxs-lookup"><span data-stu-id="68f20-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="68f20-112">如果您的檔案是以定位鍵分隔的檔案，只需要將 `Split` 方法中的引數更新成 `\t` 即可。</span><span class="sxs-lookup"><span data-stu-id="68f20-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
+ <span data-ttu-id="a6a12-109">查詢的運作方式是使用 <xref:System.String.Split%2A> 方法，將每一行文字轉換成陣列。</span><span class="sxs-lookup"><span data-stu-id="a6a12-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="a6a12-110">每個陣列項目表示一個資料行。</span><span class="sxs-lookup"><span data-stu-id="a6a12-110">Each array element represents a column.</span></span> <span data-ttu-id="a6a12-111">最後，每個資料行中的文字都會轉換成其數值表示法。</span><span class="sxs-lookup"><span data-stu-id="a6a12-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="a6a12-112">如果您的檔案是以定位鍵分隔的檔案，只需要將 `Split` 方法中的引數更新成 `\t` 即可。</span><span class="sxs-lookup"><span data-stu-id="a6a12-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="68f20-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="68f20-113">Compiling the Code</span></span>  
- <span data-ttu-id="68f20-114">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="68f20-114">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="a6a12-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="a6a12-113">Compiling the Code</span></span>  
+ <span data-ttu-id="a6a12-114">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="a6a12-114">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="68f20-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="68f20-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6a12-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a6a12-115">See also</span></span>
 
-- [<span data-ttu-id="68f20-116">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="68f20-116">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="68f20-117">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="68f20-117">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="a6a12-116">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="a6a12-116">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="a6a12-117">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="a6a12-117">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

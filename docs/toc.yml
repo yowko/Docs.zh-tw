@@ -1,4 +1,4 @@
-- name: 歡迎畫面
+- name: 歡迎使用
   href: welcome.md
 - name: .NET 文件中的新功能
   href: whats-new/index.yml

@@ -22,7 +22,7 @@
           href: application-insights.md
         - name: Azure Logic Apps
           href: logic-apps.md
-        - name: Azure 事件方格
+        - name: Azure Event Grid
           href: event-grid.md
     - name: 永久的 Azure 函式
       href: durable-azure-functions.md

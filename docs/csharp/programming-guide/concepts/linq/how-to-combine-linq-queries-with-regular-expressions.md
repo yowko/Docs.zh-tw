@@ -1,18 +1,18 @@
 ---
-title: 如何結合 LINQ 查詢與正則運算式（C#）
+title: 如何將 LINQ 查詢與正則運算式 （C#） 相結合
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
-ms.openlocfilehash: 97551f7d9d8cf13f05449c2f825ed4d29eb3d86e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 104e63adb9c07a75077b92654afd791b6c82d8de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141405"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169425"
 ---
-# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a><span data-ttu-id="88b6c-102">如何結合 LINQ 查詢與正則運算式（C#）</span><span class="sxs-lookup"><span data-stu-id="88b6c-102">How to combine LINQ queries with regular expressions (C#)</span></span>
-<span data-ttu-id="88b6c-103">此範例會示範如何使用 <xref:System.Text.RegularExpressions.Regex> 類別來建立規則運算式，以在文字字串中進行更複雜的比對。</span><span class="sxs-lookup"><span data-stu-id="88b6c-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="88b6c-104">LINQ 查詢讓您輕鬆地準確篩選出您想要用規則運算式搜尋的檔案，並調整結果。</span><span class="sxs-lookup"><span data-stu-id="88b6c-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>  
+# <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a><span data-ttu-id="698af-102">如何將 LINQ 查詢與正則運算式 （C#） 相結合</span><span class="sxs-lookup"><span data-stu-id="698af-102">How to combine LINQ queries with regular expressions (C#)</span></span>
+<span data-ttu-id="698af-103">此範例會示範如何使用 <xref:System.Text.RegularExpressions.Regex> 類別來建立規則運算式，以在文字字串中進行更複雜的比對。</span><span class="sxs-lookup"><span data-stu-id="698af-103">This example shows how to use the <xref:System.Text.RegularExpressions.Regex> class to create a regular expression for more complex matching in text strings.</span></span> <span data-ttu-id="698af-104">LINQ 查詢讓您輕鬆地準確篩選出您想要用規則運算式搜尋的檔案，並調整結果。</span><span class="sxs-lookup"><span data-stu-id="698af-104">The LINQ query makes it easy to filter on exactly the files that you want to search with the regular expression, and to shape the results.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="88b6c-105">範例</span><span class="sxs-lookup"><span data-stu-id="88b6c-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="698af-105">範例</span><span class="sxs-lookup"><span data-stu-id="698af-105">Example</span></span>  
   
 ```csharp  
 class QueryWithRegEx  
@@ -36,7 +36,7 @@ class QueryWithRegEx
         // This query produces a list of files where a match  
         // was found, and a list of the matchedValues in that file.  
         // Note: Explicit typing of "Match" in select clause.  
-        // This is required because MatchCollection is not a   
+        // This is required because MatchCollection is not a
         // generic IEnumerable collection.  
         var queryMatchingFiles =  
             from file in fileList  
@@ -56,7 +56,7 @@ class QueryWithRegEx
   
         foreach (var v in queryMatchingFiles)  
         {  
-            // Trim the path a bit, then write   
+            // Trim the path a bit, then write
             // the file name in which a match was found.  
             string s = v.name.Substring(startFolder.Length - 1);  
             Console.WriteLine(s);  
@@ -73,7 +73,7 @@ class QueryWithRegEx
         Console.ReadKey();  
     }  
   
-    // This method assumes that the application has discovery   
+    // This method assumes that the application has discovery
     // permissions for all folders under the specified path.  
     static IEnumerable<System.IO.FileInfo> GetFiles(string path)  
     {  
@@ -93,12 +93,12 @@ class QueryWithRegEx
 }  
 ```  
   
- <span data-ttu-id="88b6c-106">請注意，您也可以對由 `RegEx` 搜尋所傳回的 <xref:System.Text.RegularExpressions.MatchCollection> 物件進行查詢。</span><span class="sxs-lookup"><span data-stu-id="88b6c-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="88b6c-107">在本例中，結果只會產生每個相符項目的值。</span><span class="sxs-lookup"><span data-stu-id="88b6c-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="88b6c-108">不過，它也可以使用 LINQ 對該集合執行所有種類的篩選、排序及群組。</span><span class="sxs-lookup"><span data-stu-id="88b6c-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="88b6c-109">因為 <xref:System.Text.RegularExpressions.MatchCollection> 為非泛型 <xref:System.Collections.IEnumerable> 集合，所以您必須在查詢中明確地陳述範圍變數的類型。</span><span class="sxs-lookup"><span data-stu-id="88b6c-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>  
+ <span data-ttu-id="698af-106">請注意，您也可以對由 `RegEx` 搜尋所傳回的 <xref:System.Text.RegularExpressions.MatchCollection> 物件進行查詢。</span><span class="sxs-lookup"><span data-stu-id="698af-106">Note that you can also query the <xref:System.Text.RegularExpressions.MatchCollection> object that is returned by a `RegEx` search.</span></span> <span data-ttu-id="698af-107">在本例中，結果只會產生每個相符項目的值。</span><span class="sxs-lookup"><span data-stu-id="698af-107">In this example only the value of each match is produced in the results.</span></span> <span data-ttu-id="698af-108">不過，它也可以使用 LINQ 對該集合執行所有種類的篩選、排序及群組。</span><span class="sxs-lookup"><span data-stu-id="698af-108">However, it is also possible to use LINQ to perform all kinds of filtering, sorting, and grouping on that collection.</span></span> <span data-ttu-id="698af-109">因為 <xref:System.Text.RegularExpressions.MatchCollection> 為非泛型 <xref:System.Collections.IEnumerable> 集合，所以您必須在查詢中明確地陳述範圍變數的類型。</span><span class="sxs-lookup"><span data-stu-id="698af-109">Because <xref:System.Text.RegularExpressions.MatchCollection> is a non-generic <xref:System.Collections.IEnumerable> collection, you have to explicitly state the type of the range variable in the query.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="88b6c-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="88b6c-110">Compiling the Code</span></span>  
- <span data-ttu-id="88b6c-111">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="88b6c-111">Create a C# console application project with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="698af-110">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="698af-110">Compiling the Code</span></span>  
+ <span data-ttu-id="698af-111">建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。</span><span class="sxs-lookup"><span data-stu-id="698af-111">Create a C# console application project with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="88b6c-112">請參閱</span><span class="sxs-lookup"><span data-stu-id="88b6c-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="698af-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="698af-112">See also</span></span>
 
-- [<span data-ttu-id="88b6c-113">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="88b6c-113">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="88b6c-114">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="88b6c-114">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="698af-113">LINQ 和字串 (C#)</span><span class="sxs-lookup"><span data-stu-id="698af-113">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="698af-114">LINQ 和檔案目錄 (C#)</span><span class="sxs-lookup"><span data-stu-id="698af-114">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)

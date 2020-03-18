@@ -63,7 +63,7 @@
               href: m_connectionlist.md
         - name: ConnectStream 類別
           items:
-            - name: Connection 屬性
+            - name: 連線屬性
               href: system.net.connectstream.connection.md
         - name: CoreResponseData 類別
           href: coreresponsedata.md
