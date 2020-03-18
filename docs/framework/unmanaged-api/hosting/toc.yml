@@ -78,7 +78,7 @@
     - name: 裝載全域靜態函式
       href: hosting-global-static-functions.md
       items:
-        - name: '裝載全域靜態函式的 .NET Framework 4 '
+        - name: 裝載全域靜態函式的 .NET Framework 4
           href: net-framework-4-hosting-global-static-functions.md
           items:
             - name: CLRCreateInstance 函式

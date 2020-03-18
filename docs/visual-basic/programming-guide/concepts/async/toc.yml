@@ -3,9 +3,9 @@
   items:
     - name: 逐步解說：使用 Async 和 Await 存取 Web
       href: walkthrough-accessing-the-web-by-using-async-and-await.md
-    - name: HOW TO：使用 Task.WhenAll 擴充非同步逐步解說的內容
+    - name: 如何：使用 Task.WhenAll 擴充非同步逐步解說的內容
       href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-    - name: HOW TO：使用 Async 和 Await 同時發出多個 Web 要求
+    - name: 如何：使用 Async 和 Await，同時發出多個 Web 要求
       href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
     - name: Async 傳回型別
       href: async-return-types.md

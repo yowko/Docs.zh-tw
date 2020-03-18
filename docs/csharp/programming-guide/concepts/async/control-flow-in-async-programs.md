@@ -3,10 +3,10 @@ title: 非同步程式中的控制流程 (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 99f80a86f14179c5f270064a9f96e35f8611ef13
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204437"
 ---
 # <a name="control-flow-in-async-programs-c"></a>非同步程式中的控制流程 (C#)
@@ -97,11 +97,11 @@ Length of the downloaded string: 33946.
 
 ### <a name="download-the-program"></a>下載程式
 
-您可以從[非同步範例：非同步程式中的控制流程](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)下載本主題的應用程式。 下列步驟會開啟和執行程式。
+您可以從 [Async Sample: Control Flow in Async Programs](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (非同步範例：非同步程式中的控制流程) 下載本主題的應用程式。 下列步驟會開啟和執行程式。
 
 1. 解壓縮下載的檔案，然後啟動 Visual Studio。
 
-2. 在功能表列上選擇 [檔案]   >  [開啟]   > [專案/解決方案]  。
+2. 在功能表列上，選擇 **"檔** > **打開** > **專案/解決方案**"。
 
 3. 巡覽至保存解壓縮之範例程式碼的資料夾，並開啟方案 (.sln) 檔案，然後選擇 **F5** 鍵來建置和執行專案。
 
@@ -113,21 +113,21 @@ Length of the downloaded string: 33946.
 
 1. 啟動 Visual Studio。
 
-2. 在功能表列上，選擇 [檔案]   > [新增]   > [專案]  。
+2. 在功能表列上，選擇 **"檔** > **新專案** > **"。**
 
-     [ **新增專案** ] 對話方塊隨即開啟。
+     此時會開啟 [新增專案]**** 對話方塊。
 
-3. 選擇 [已安裝]   >  [Visual C#]   >  [Windows Desktop]  類別，然後從專案範本的清單中選擇 [WPF 應用程式]  。
+3. 選擇 **"已安裝** > **的視覺化 C#** > **Windows 桌面"** 類別，然後從專案範本清單中選擇**WPF 應用**。
 
-4. 輸入 `AsyncTracer` 作為專案的名稱，然後選擇 [確定]  按鈕。
+4. 輸入 `AsyncTracer` 作為專案的名稱，然後選擇 [確定]**** 按鈕。
 
-     新的專案隨即出現在方案總管  中。
+     新的專案隨即會出現在方案總管**** 中。
 
 5. 在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。
 
-     如未顯示索引標籤，請在方案總管  中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 [檢視程式碼]  。
+     如未顯示索引標籤，請在方案總管**** 中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 [檢視程式碼]****。
 
-6. 在 MainWindow.xaml 的 [XAML]  檢視中，以下列程式碼取代程式碼。
+6. 在 MainWindow.xaml 的 [XAML]**** 檢視中，以下列程式碼取代程式碼。
 
     ```csharp
     <Window
@@ -143,11 +143,11 @@ Length of the downloaded string: 33946.
     </Window>
     ```
 
-     包含文字方塊和按鈕的簡易視窗會出現在 MainWindow.xaml 的 [設計]  檢視中。
+     包含文字方塊和按鈕的簡易視窗會出現在 MainWindow.xaml 的 [設計]**** 檢視中。
 
 7. 加入 <xref:System.Net.Http> 的參考。
 
-8. 在方案總管  中，開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]  。
+8. 在方案總管**** 中開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]****。
 
 9. 將 MainWindow.xaml.cs 中的程式碼更換為下列程式碼。
 
@@ -236,7 +236,7 @@ Length of the downloaded string: 33946.
     }
     ```
 
-10. 選擇 **F5** 鍵以執行程式，然後選擇 [開始]  按鈕。
+10. 選擇 **F5** 鍵以執行程式，然後選擇 [開始]**** 按鈕。
 
     即會出現下列輸出：
 
@@ -274,7 +274,7 @@ Length of the downloaded string: 33946.
 
 前兩個顯示當 `startButton_Click` 呼叫 `AccessTheWebAsync`，以及 `AccessTheWebAsync` 呼叫非同步 <xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> 時，追蹤路徑的程式碼行。 下圖概述不同方法的呼叫。
 
-![步驟一和二](./media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
+![步驟一和二](./media/asynctrace-onetwo.png "非同步跟蹤-一次性")
 
 `AccessTheWebAsync` 和 `client.GetStringAsync` 傳回的類型都是 <xref:System.Threading.Tasks.Task%601>。 針對 `AccessTheWebAsync`，TResult 是整數。 針對 `GetStringAsync`，TResult 是字串。 如需非同步方法傳回型別的詳細資訊，請參閱[非同步方法的傳回型別 (C#)](./async-return-types.md)。
 
@@ -306,7 +306,7 @@ string urlContents = await getStringTask;
 
  下圖顯示從 `client.GetStringAsync` 到指派給 `getStringTask` 以及從建立 `getStringTask` 到套用 await 運算子的控制流程。
 
- ![步驟三](./media/asynctrace-three.png "AsyncTrace-Three")
+ ![步驟三](./media/asynctrace-three.png "非同步跟蹤-三")
 
  除非傳回 `client.GetStringAsync`，否則 await 運算式會暫止 `AccessTheWebAsync`。 同時，控制項會返回 `AccessTheWebAsync` 的呼叫端 `startButton_Click`。
 
@@ -341,7 +341,7 @@ int contentLength = await getLengthTask;
 
  在下圖中，除非等候 `getLengthTask`，否則箭頭會顯示從 `AccessTheWebAsync` 中的 await 運算式到將值指派給 `getLengthTask` (後接 `startButton_Click` 中的正常處理) 的控制流程。
 
- ![步驟四](./media/asynctrace-four.png "AsyncTrace-FOUR")
+ ![步驟四](./media/asynctrace-four.png "非同步跟蹤-四")
 
 ### <a name="step-five"></a>步驟五
 
@@ -358,7 +358,7 @@ FIVE:  Back in AccessTheWebAsync.
 
  下圖顯示 `client.GetStringAsync` (和 `getStringTask`) 完成後的控制權轉移。
 
- ![步驟五](./media/asynctrace-five.png "AsyncTrace-FIVE")
+ ![步驟五](./media/asynctrace-five.png "非同步跟蹤-五")
 
  `AccessTheWebAsync` 會執行直到完成，而且控制項會返回正在等待完成的 `startButton_Click`。
 
@@ -383,11 +383,11 @@ int contentLength = await getLengthTask;
 
  下圖顯示從 `AccessTheWebAsync` 到 `startButton_Click` 的控制項返回。
 
- ![步驟六](./media/asynctrace-six.png "AsyncTrace-SIX")
+ ![步驟六](./media/asynctrace-six.png "非同步跟蹤-SIX")
 
 ## <a name="see-also"></a>另請參閱
 
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](./index.md)
 - [非同步方法的傳回型別 (C#)](./async-return-types.md)
-- [逐步解說：使用 Async 和 Await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [非同步範例：非同步程式中的控制流程 (C# 和 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [逐步解說：使用 async 和 await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async Sample: Control Flow in Async Programs (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0) (非同步範例：非同步程式中的控制流程 (C# 和 Visual Basic))

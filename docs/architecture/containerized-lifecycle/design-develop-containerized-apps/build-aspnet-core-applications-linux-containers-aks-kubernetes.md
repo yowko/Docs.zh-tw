@@ -3,10 +3,10 @@ title: 建置以 Linux 容器部署到 AKS/Kubernetes 叢集的 ASP.NET Core 2.2
 description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
 ms.date: 02/25/2019
 ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70848749"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>建置以 Linux 容器部署到 AKS/Kubernetes 協調器的 ASP.NET Core 2.2 應用程式
@@ -33,9 +33,9 @@ ASP.NET Core 是一般用途的開發平台，由 Microsoft 和 GitHub 上的 .N
 
 **圖 4-36**. 建立 ASP.NET Core 應用程式
 
-若要在 Visual Studio 中建立範例專案，請選取 [檔案] > [新增] > [專案]，然後依序選取左窗格中的 [Web] 專案類型和 [ASP.NET Web 應用程式]。
+要在 Visual Studio 中創建示例**專案**，請選擇 **"檔** > **新專案** > "，在左側窗格中選擇**Web**專案類型，然後**選擇ASP.NET核心 Web 應用程式**。
 
-Visual Studio 會列出適用於 Web 專案的範本。 在我們的範例中，選取 [API] 以建立 ASP.NET Web API 應用程式。
+Visual Studio 會列出適用於 Web 專案的範本。 在我們的範例中，選取 [API]**** 以建立 ASP.NET Web API 應用程式。
 
 確認您已選取 ASP.NET Core 2.2 作為架構。 .NET Core 2.2 隨附於上一版的 Visual Studio 2017，並會在您安裝 Visual Studio 2017 時自動為您安裝和設定。
 
@@ -45,13 +45,13 @@ Visual Studio 會列出適用於 Web 專案的範本。 在我們的範例中，
 
 如果您有任何舊版 .NET Core，您可以從 <https://dotnet.microsoft.com/download> 下載並安裝 2.2 版。
 
-您可以在建立專案期間或之後新增 Docker 支援，以便可隨時將您的專案「Docker 化」。 若要在建立專案之後新增 Docker 支援，請在 [方案總管] 中以滑鼠右鍵按一下專案節點，然後從操作功能表選取 [新增] > [Docker 支援]。
+您可以在建立專案期間或之後新增 Docker 支援，以便可隨時將您的專案「Docker 化」。 要在專案創建後添加 Docker 支援，請按右鍵解決方案資源管理器中的專案節點，並在內容功能表上選擇 **"添加** > **Docker 支援**"。
 
-![將 Docker 支援新增至現有專案的內容功能表選項：以滑鼠右鍵按一下（在專案上） > 新增 > Docker 支援。](media/add-docker-support-to-project.png)
+![將 Docker 支援添加到現有專案的內容功能表選項：按右鍵（在專案上）>添加> Docker 支援。](media/add-docker-support-to-project.png)
 
 **圖 4-38**. 將 Docker 支援新增至現有的專案
 
-若要完成新增 Docker 支援，您可以選擇 [Windows] 或 [Linux]。 在此案例中，請選取 [Linux]，因為 AKS 不支援 Windows 容器 (自 2018 年起)。
+若要完成新增 Docker 支援，您可以選擇 [Windows] 或 [Linux]。 在此案例中，請選取 [Linux]****，因為 AKS 不支援 Windows 容器 (自 2018 年起)。
 
 ![用於選取 Dockerfile 目標 OS 的選項對話方塊。](media/select-linux-docker-support.png)
 
@@ -61,7 +61,7 @@ Visual Studio 會列出適用於 Web 專案的範本。 在我們的範例中，
 
 如您所見，Visual Studio 2017 與 Docker 之間的整合完全取決於開發人員生產力。
 
-現在，您可以按 **F5** 鍵或使用 [播放] 按鈕來執行應用程式。
+現在，您可以按 **F5** 鍵或使用 [播放]**** 按鈕來執行應用程式。
 
 執行專案之後，您可以使用 `docker images` 命令列出映像。 您應該會看到使用 Visual Studio 2017 自動部署專案所建立的 `mssampleapplication` 映像。
 
@@ -69,7 +69,7 @@ Visual Studio 會列出適用於 Web 專案的範本。 在我們的範例中，
 docker images
 ```
 
-![來自 docker images 命令的主控台輸出會顯示包含下列內容的清單：存放庫、標記、映射識別碼、已建立（日期）和大小。](media/docker-images-command.png)
+![來自 Docker 映射命令的主控台輸出顯示具有：存儲庫、標記、圖像 ID、已創建（日期）和大小的清單。](media/docker-images-command.png)
 
 **圖 4-40**. Docker 映像檢視
 
@@ -79,7 +79,7 @@ docker images
 
 ### <a name="create-the-image-in-release-mode"></a>在 [發行] 模式中建立映像
 
-我們現在要在 [發行] 模式中建立映像 (用於生產環境)，做法是變更為 [發行] (如圖 4-41 所示)，然後如往常般執行應用程式。
+我們現在要在 [發行]**** 模式中建立映像 (用於生產環境)，做法是變更為 [發行]**** (如圖 4-41 所示)，然後如往常般執行應用程式。
 
 ![在 [發行] 模式中建置的 VS 工具列選項。](media/select-release-mode.png)
 
@@ -89,7 +89,7 @@ docker images
 
 ### <a name="create-a-new-tag-for-the-image"></a>為映像建立新的標記
 
-每個容器映射都必須以登錄的 `loginServer` 名稱標記。 將容器映射推送至映射登錄時，會使用此標記來進行路由。
+每個容器映像都必須標記登錄的 `loginServer` 名稱。 將容器映像推送到映像登錄時，此標籤可用於路由傳送。
 
 您可以從 Azure 入口網站檢視 `loginServer` 名稱，然後從 Azure Container Registry 擷取資訊
 
@@ -147,7 +147,7 @@ docker push mssampleacr.azurecr.io/mssampleaksapplication:v1
 
 **圖 4-46**. 節點檢視
 
-下一個步驟是將您的容器部署到 AKS Kubernetess 叢集。 為此，您需要包含下列內容的檔案 ( **.yml 部署檔案**)：
+下一個步驟是將您的容器部署到 AKS Kubernetess 叢集。 為此，您需要包含下列內容的檔案 (**.yml 部署檔案**)：
 
 ```yml
 apiVersion: apps/v1beta1
@@ -190,7 +190,7 @@ spec:
 az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-![上述命令的主控台輸出：在/root/.kube/config 中合併「MSSampleK8Cluster 為目前內容」](media/getting-aks-credentials.png)
+![來自上述命令的主控台輸出：合併的"MSSampleK8Cluster 作為 /root/.kube/config 中的當前上下文](media/getting-aks-credentials.png)
 
 **圖 4-47**. 取得認證
 
@@ -219,8 +219,8 @@ az aks browse --resource-group MSSampleResourceGroupAKS --name mssampleclusterk8
 現在您已使用 Linux 容器和 AKS Kubernetes 叢集在 Azure 上部署應用程式。 您可以存取瀏覽至您服務公用 IP 的應用程式，並可從 Azure 入口網站取得此服務。
 
 > [!NOTE]
-> 您可以在本指南的[**部署到 Azure Kubernetes Service (AKS)** ](deploy-azure-kubernetes-service.md) 一節中，了解如何為此範例建立 AKS 叢集。
+> 您可以在本指南的[**部署到 Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) 一節中，了解如何為此範例建立 AKS 叢集。
 
 >[!div class="step-by-step"]
->[上一頁](set-up-windows-containers-with-powershell.md)
->[下一頁](../docker-devops-workflow/index.md)
+>[上一個](set-up-windows-containers-with-powershell.md)
+>[下一個](../docker-devops-workflow/index.md)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
 ms.openlocfilehash: 17162a0dc959a85c03a5cb5757e2b91fe10b0ab3
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77628159"
 ---
 # <a name="using-indexers-c-programming-guide"></a>使用索引子 (C# 程式設計手冊)
 
-索引子是語法便利性，可讓您建立用戶端應用程式可以就像陣列一樣地存取的 [class](../../language-reference/keywords/class.md)、[struct](../../language-reference/builtin-types/struct.md) 或 [interface](../../language-reference/keywords/interface.md)。 索引子最常實作於類型中，而類型的主要用途是封裝內部集合或陣列。 例如，假設您有一個 `TempRecord` 類別，其代表在 24 小時期間內於 10 個不同時間記錄的華氏溫度。 此類別包含型別為 `temps` 的陣列 `float[]` 以儲存溫度值。 透過在此類別中實作索引子，用戶端能以 `TempRecord` 執行個體中 `float temp = tr[4]` 的形式 (而非 `float temp = tr.temps[4]`) 來存取溫度。 索引子標記法不僅可簡化用戶端應用程式的語法，還可以讓其他開發人員更直覺地了解類別其用途。  
+索引子是語法便利性，可讓您建立用戶端應用程式可以就像陣列一樣地存取的 [class](../../language-reference/keywords/class.md)、[struct](../../language-reference/builtin-types/struct.md) 或 [interface](../../language-reference/keywords/interface.md)。 索引子最常實作於類型中，而類型的主要用途是封裝內部集合或陣列。 例如，假設您有一個 `TempRecord` 類別，其代表在 24 小時期間內於 10 個不同時間記錄的華氏溫度。 此類別包含型別為 `float[]` 的陣列 `temps` 以儲存溫度值。 透過在此類別中實作索引子，用戶端能以 `TempRecord` 執行個體中 `float temp = tr[4]` 的形式 (而非 `float temp = tr.temps[4]`) 來存取溫度。 索引子標記法不僅可簡化用戶端應用程式的語法，還可以讓其他開發人員更直覺地了解類別其用途。  
   
 若要在類別或結構上宣告索引子，請使用 [this](../../language-reference/keywords/this.md) 關鍵字，如下列範例所示：
 

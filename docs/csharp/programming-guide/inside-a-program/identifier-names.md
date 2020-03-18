@@ -3,10 +3,10 @@ title: 識別碼名稱
 description: 了解 C# 程式設計語言中有效識別碼名稱的規則。
 ms.date: 08/21/2018
 ms.openlocfilehash: bef6e2ea285b5391af3350ae42a4105d140c6d1b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77673364"
 ---
 # <a name="identifier-names"></a>識別碼名稱
@@ -37,7 +37,7 @@ ms.locfileid: "77673364"
 - [C# 程式設計指南](../index.md)
 - [C# 程式內部](./index.md)
 - [C# 參考](../../language-reference/index.md)
-- [類別](../classes-and-structs/classes.md)
+- [類](../classes-and-structs/classes.md)
 - [結構類型](../../language-reference/builtin-types/struct.md)
 - [命名空間](../namespaces/index.md)
 - [介面](../interfaces/index.md)

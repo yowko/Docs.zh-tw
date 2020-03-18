@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 29fb5279eab2f5dd8307c244e0882670abf338e3
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70373817"
 ---
-本文是關於測試 .NET Core 專案。 如果您要測試**ASP.NET Core**專案，請參閱[ASP.NET Core 中的整合測試](/aspnet/core/test/integration-tests#test-app-prerequisites)。
+本文是關於測試 .NET Core 專案。 如果要測試**ASP.NET核心**專案，請參閱[ASP.NET 酷中的集成測試](/aspnet/core/test/integration-tests#test-app-prerequisites)。

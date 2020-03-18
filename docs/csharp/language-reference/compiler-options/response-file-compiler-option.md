@@ -8,10 +8,10 @@ helpviewer_keywords:
 - '@ compiler option'
 ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
 ms.openlocfilehash: d8e5c0ec148754c3e4cebfa32ad9f44a0bb0119e
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70202903"
 ---
 # <a name="-c-compiler-options"></a>@ (C# 編譯器選項)
@@ -42,7 +42,7 @@ ms.locfileid: "70202903"
   
  編譯器會處理遇到的命令選項。 因此，命令列引數可以覆寫回應檔中先前列出的選項。 相反地，回應檔中的選項將會覆寫在命令列或其他回應檔中先前所列的選項。  
   
- C# 提供 csc.rsp 檔案，而此檔案位於與 csc.exe 檔案相同的目錄中。 如需 csc.rsp 的詳細資訊，請參閱 [-noconfig](./noconfig-compiler-option.md)。  
+ C# 提供 csc.rsp 檔案，而此檔案位於與 csc.exe 檔案相同的目錄中。 有關 csc.rsp 的更多資訊，請參閱[-noconfig。](./noconfig-compiler-option.md)  
   
  無法在 Visual Studio 開發環境中設定此編譯器選項，也無法以程式設計方式進行變更。  
   

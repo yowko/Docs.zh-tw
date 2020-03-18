@@ -3,10 +3,10 @@ title: 分散式資料管理的挑戰和解決方案
 description: 了解微服務產業中分散式資料管理的挑戰和解決方案。
 ms.date: 09/20/2018
 ms.openlocfilehash: c30de24591d5a73fd34087f34a69e9c7ed54cd35
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834450"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散式資料管理的挑戰和解決方案
@@ -35,7 +35,7 @@ ms.locfileid: "71834450"
 
 請牢記，這種集中式的資料庫僅供不需要即時資料的查詢和報表使用。 作為來源的原始更新和交易，必須位於微服務資料中。 同步處理資料的方式，是使用事件導向的通訊 (後續各節予以說明)，或使用其他資料庫基礎結構的匯入/匯出工具。 如果使用事件導向的通訊，則該整合程序會類似先前所述針對 CQRS 查詢資料表的資料傳播方式。
 
-不過，如果您的應用程式設計涉及針對複雜查詢不斷彙總多項微服務的資訊，它可能是不良設計的徵兆，因為微服務應該盡可能與其他微服務隔離。 （這會排除一律應該使用冷資料中心資料庫的報表/分析）。發生此問題通常是合併微服務的原因。 您必須平衡每一項微服務的演進與部署自主性與強式的相依性、一致性及資料彙總。
+不過，如果您的應用程式設計涉及針對複雜查詢不斷彙總多項微服務的資訊，它可能是不良設計的徵兆，因為微服務應該盡可能與其他微服務隔離。 （這不包括始終應使用冷資料中央資料庫的報告/分析。遇到此問題通常是合併微服務的原因。 您必須平衡每一項微服務的演進與部署自主性與強式的相依性、一致性及資料彙總。
 
 ## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>挑戰 \#3：如何跨多項微服務達到一致性
 
@@ -47,9 +47,9 @@ ms.locfileid: "71834450"
 
 不過，在微服務型的應用程式中，Product 和 Basket 資料表分別為其微服務所擁有。 沒有任何一項微服務會在本身交易中包含其他微服務所擁有的資料表/儲存體，直接查詢也不會，如圖 4-9 所示。
 
-![此圖顯示無法共用微服務資料庫資料。](./media/distributed-data-management/indepentent-microservice-databases.png)
+![顯示無法共用微服務資料庫資料的圖表。](./media/distributed-data-management/indepentent-microservice-databases.png)
 
-**圖 4-9**。 微服務無法直接存取其他微服務的資料表
+**圖4-9**。 微服務無法直接存取其他微服務的資料表
 
 目錄微服務不應該直接更新 Basket 資料表，因為 Basket 資料表為購物籃微服務所擁有。 為更新購物籃微服務，目錄微服務應該使用可能以非同步通訊為基礎的最終一致性，例如整合事件 (訊息和事件通訊)。 這是 [eShopOnContainers](https://aka.ms/eshoponcontainers) 參考應用程式執行這類跨微服務一致性的方式。
 
@@ -83,30 +83,30 @@ ms.locfileid: "71834450"
 
 ## <a name="additional-resources"></a>其他資源
 
-- **CAP 定理** \
+- **CAP定理** \
   <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **最終一致性** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **資料一致性入門** \
+- **資料一致性引引器** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **聖馬丁 Fowler。CQRS （命令與查詢責任隔離）**  \
+- **馬丁·福勒CQRS（命令和查詢責任分離）** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **具體化檢視** \
+- **具體化視圖** \
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
-- **Charles 資料列。ACID 與基底：資料庫交易處理的轉移 pH** \
+- **查理斯·羅ACID vs. BASE：資料庫交易處理的移動 pH** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
 - **補償交易** \
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
-- **Udi Dahan。服務導向組合** \
+- **烏迪·達漢面向服務的合成** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
->[上一頁](logical-versus-physical-architecture.md)
->[下一頁](identify-microservice-domain-model-boundaries.md)
+>[上一個](logical-versus-physical-architecture.md)
+>[下一個](identify-microservice-domain-model-boundaries.md)

@@ -1,33 +1,33 @@
 ---
-title: 持久的 Azure 函式-無伺服器應用程式
-description: 持久的 Azure 函式會擴充 Azure Functions 執行時間，以在程式碼中啟用具狀態工作流程。
+title: 耐用的 Azure 功能 - 無伺服器應用
+description: 持久 Azure 函數擴展 Azure 函數運行時，以便在代碼中啟用有狀態的工作流。
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522858"
 ---
 # <a name="durable-azure-functions"></a>永久的 Azure 函式
 
-使用 Azure Functions 建立無伺服器應用程式時，您的作業通常會設計成以無狀態的方式執行。 這種設計選擇的原因是因為平臺會調整，所以難以得知程式碼執行所在的伺服器。 此外，也很難以知道有多少實例在任何指定的時間點處於作用中狀態。 不過，有些類別的應用程式需要已知進程的目前狀態。 請考慮將訂單提交到線上商店的程式。 簽出作業可能是由多個需要知道進程狀態的作業所組成的工作流程。 這類資訊可能包括產品清查、客戶的帳戶上是否有任何信用額度，還有處理信用卡的結果。 這些作業很容易就是自己的內部工作流程，甚至是協力廠商系統的服務。
+使用 Azure 函數創建無伺服器應用程式時，操作通常設計為以無狀態方式運行。 之所以選擇此設計，是因為隨著平臺的擴展，很難知道代碼在運行哪些伺服器。 也很難知道在任意給定點啟動了多少個實例。 但是，有些應用程式類需要已知的進程目前狀態。 考慮向線上商店提交訂單的過程。 簽出操作可能是一個工作流，由需要瞭解流程狀態的多個操作組成。 如果客戶帳戶上有任何積分，以及處理信用卡的結果，此類資訊可能包括產品庫存。 這些操作很容易成為它們自己的內部工作流，甚至是來自協力廠商系統的服務。
 
-目前有各種模式可協助協調內部和外部系統之間的應用程式狀態。 在依賴集中式佇列系統、分散式索引鍵/值存放區或共用資料庫來管理該狀態的解決方案中，通常會有這種情況。 不過，這些都是現在需要布建和管理的其他資源。 在無伺服器環境中，您的程式碼可能會變得麻煩地嘗試與這些資源手動協調。 Azure Functions 提供建立名為 Durable Functions 的具狀態函式的替代方法。
+當今存在各種模式，有助於協調內部和外部系統之間的應用程式狀態。 通常遇到依賴集中式佇列系統、分散式金鑰值存儲或共用資料庫來管理該狀態的解決方案。 但是，這些都是現在需要預配和管理的其他資源。 在無伺服器環境中，嘗試手動與這些資源進行協調時，代碼可能會變得麻煩。 Azure 函數提供了創建稱為持久函數的有狀態函數的替代方法。
 
-Durable Functions 是 Azure Functions 執行時間的延伸模組，可讓您在程式碼中定義具狀態工作流程。 藉由將工作流程分解成活動，Durable Functions 擴充功能可以管理狀態、建立進度檢查點，以及處理跨伺服器的函式呼叫分佈。 在背景中，它會使用 Azure 儲存體帳戶來保存執行歷程記錄、排程活動函式，以及取得回應。 您的無伺服器程式碼應該永遠不會與該儲存體帳戶中的保存資訊互動，而且通常不是開發人員需要互動的東西。
+持久函數是 Azure 函數運行時的擴展，用於在代碼中定義有狀態工作流。 通過將工作流分解為活動，持久函數擴展可以管理狀態、創建進度檢查點和處理跨伺服器分發函式呼叫。 在後臺，它利用 Azure 存儲帳戶來保留執行歷史記錄、計畫活動函數和檢索回應。 無伺服器代碼絕不應與該存儲帳戶中的持久資訊進行交互，並且通常不是開發人員需要與之交互的內容。
 
-## <a name="triggering-a-stateful-workflow"></a>觸發具狀態工作流程
+## <a name="triggering-a-stateful-workflow"></a>觸發有狀態的工作流
 
-Durable Functions 中可設定狀態的工作流程可以分成兩個內部元件;協調流程和活動觸發程式。 觸發程式和系結是 Azure Functions 所使用的核心元件，可讓您的無伺服器函式在啟動、接收輸入和傳回結果時收到通知。
+持久函數中的有狀態工作流可以分為兩個內在元件;業務流程和活動觸發器。 觸發器和綁定是 Azure 函數使用的核心元件，用於使無伺服器函數在啟動、接收輸入和返回結果時收到通知。
 
-### <a name="working-with-the-orchestration-client"></a>使用協調流程用戶端
+### <a name="working-with-the-orchestration-client"></a>使用業務流程用戶端
 
-相較于 Azure Functions 中的其他已觸發作業樣式，協調流程是唯一的。 Durable Functions 可執行可能需要數小時或甚至數天才能完成的函式。 該類型的行為需要能夠檢查執行中協調流程的狀態、事先終止，或傳送外來事件的通知。
+與 Azure 函數中其他樣式的觸發操作相比，業務流程是唯一的。 持久功能允許執行可能需要數小時甚至數天才能完成的功能。 這種類型的行為需要能夠檢查正在運行的業務流程的狀態、先發制人地終止或發送外來事件的通知。
 
-在這種情況下，Durable Functions 擴充功能會提供 `DurableOrchestrationClient` 類別，讓您能夠與協調的函式互動。 您可以使用 `OrchestrationClientAttribute` 系結取得協調流程用戶端的存取權。 一般來說，您會將此屬性包含在另一個觸發程式類型，例如 `HttpTrigger` 或 `ServiceBusTrigger`。 一旦觸發了來源函式，就可以使用協調流程用戶端來啟動協調器函數。
+在這種情況下，持久函數擴展提供允許您與業務流程交互`DurableOrchestrationClient`的類。 您可以使用`OrchestrationClientAttribute`綁定訪問業務流程用戶端。 通常，您將此屬性包含為另一個觸發器類型，如 或`HttpTrigger``ServiceBusTrigger`。 觸發源函數後，業務流程用戶端可用於啟動協調器函數。
 
 ```csharp
 [FunctionName("KickOff")]
@@ -43,15 +43,15 @@ public static async Task<HttpResponseMessage> Run(
 }
 ```
 
-### <a name="the-orchestrator-function"></a>協調器函式
+### <a name="the-orchestrator-function"></a>協調器功能
 
-使用 Azure Functions 標記中的 OrchestrationTriggerAttribute 來標注函式，以作為協調器函數。 負責管理組成具狀態工作流程的各種活動。
+在 Azure 函數中使用業務流程觸發器屬性對函數進行標記標記，該函數充當協調器函數。 它負責管理構成有狀態工作流的各種活動。
 
-協調器函式無法利用 OrchestrationTriggerAttribute 以外的系結。 這個屬性只能搭配 DurableOrchestrationCoNtext 的參數類型使用。 因為不支援在函式簽章中的輸入還原序列化，所以不能使用其他輸入。 若要取得協調流程用戶端所提供的輸入，必須使用 Getinput t>\<T\> 方法。
+協調器函數無法使用業務流程觸發器屬性以外的綁定。 此屬性只能與持久管弦上下文的參數類型一起使用。 由於不支援函數簽名中輸入的序列化，因此無法使用任何其他輸入。 要獲取業務流程用戶端提供的輸入，必須使用 GetInput\<T\>方法。
 
-此外，協調流程函式的傳回類型必須是 void、Task 或 JSON 可序列化的值。
+此外，業務流程函數的返回類型必須是 void、任務或 JSON 可序列化值。
 
-> *為了簡潔起見，已省略錯誤處理常式代碼*
+> *為了簡潔起見，錯誤處理代碼被遺漏了*
 
 ```csharp
 [FunctionName("PlaceOrder")]
@@ -69,19 +69,19 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-協調流程的多個實例可以同時啟動和執行。 在 `DurableOrchestrationClient` 上呼叫 `StartNewAsync` 方法會啟動協調流程的新實例。 方法會傳回在協調流程啟動時完成的 `Task<string>`。 如果協調流程未在30秒內啟動，則會擲回 `TimeoutException` 類型的例外狀況。
+可以同時啟動和運行業務流程的多個實例。 在`StartNewAsync`調用 上`DurableOrchestrationClient`的方法將啟動業務流程的新實例。 該方法返回在業務流程`Task<string>`啟動時完成的 。 如果業務流程在`TimeoutException`30 秒內未啟動，則引發類型的異常。
 
-從 `StartNewAsync` 完成的 `Task<string>` 應該包含協調流程實例的唯一識別碼。 此實例識別碼可用來叫用該特定協調流程上的作業。 可以查詢協調流程中的狀態或已傳送的事件通知。
+已完成`Task<string>`的`StartNewAsync`應包含業務流程實例的唯一 ID。 此實例 ID 可用於調用該特定業務流程的操作。 可以查詢業務流程的狀態或發送的事件通知。
 
-### <a name="the-activity-functions"></a>活動函式
+### <a name="the-activity-functions"></a>活動功能
 
-活動函式是離散作業，會在協調流程函數內一起撰寫以建立工作流程。 以下是大部分實際工作發生的地方。 它們代表商務邏輯、長時間執行的程式，以及更大的解決方案的拼圖片段。
+活動函數是在業務流程函數中組合以創建工作流的離散操作。 這裡大多數實際工作將發生的地方。 它們表示業務邏輯、長時間運行的流程以及較大解決方案的拼圖。
 
-`ActivityTriggerAttribute` 可用來標注 `DurableActivityContext`類型的函數參數。 使用批註會通知執行時間函式要當做活動函數使用。 使用 `DurableActivityContext` 參數的 `GetInput<T>` 方法來抓取活動函式的輸入值。
+`ActivityTriggerAttribute`用於批批類型`DurableActivityContext`中的函數參數。 使用注釋通知運行時該函數旨在用作活動函數。 使用`GetInput<T>``DurableActivityContext`參數的方法檢索活動函數的輸入值。
 
-與協調流程函式類似，活動函式的傳回類型必須是 void、Task 或 JSON 可序列化的值。
+與業務流程函數類似，活動函數的返回類型必須是 void、任務或 JSON 可序列化值。
 
-任何在活動函式中擲回的未處理例外狀況，都會傳送至呼叫協調器函式，並以 `TaskFailedException`形式呈現。 此時，可能會攔截到錯誤並記錄在協調器中，而且可以重試活動。
+在活動函數中引發的任何未處理異常都將發送到調用協調器函數，並呈現為`TaskFailedException`。 此時，錯誤可以捕獲並記錄在協調器中，並且可以重試活動。
 
 ```csharp
 [FunctionName("CheckAndReserveInventory")]
@@ -96,10 +96,10 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 
 ## <a name="recommended-resources"></a>建議的資源
 
-- [Durable Functions](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
-- [Durable Functions 的系結](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
-- [管理 Durable Functions 中的實例](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
+- [長期函式](https://docs.microsoft.com/azure/azure-functions/durable-functions-overview)
+- [持久函數綁定](https://docs.microsoft.com/azure/azure-functions/durable-functions-bindings)
+- [在持久函數中管理實例](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
->[上一頁](event-grid.md)
->[下一頁](orchestration-patterns.md)
+>[上一個](event-grid.md)
+>[下一個](orchestration-patterns.md)

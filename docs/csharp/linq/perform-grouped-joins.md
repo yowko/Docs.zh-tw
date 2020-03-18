@@ -4,11 +4,11 @@ description: 了解如何使用 C# 中的 LINQ 執行群組聯結。
 ms.date: 12/01/2016
 ms.assetid: 9667daf9-a5fd-4b43-a5c4-a9c2b744000e
 ms.openlocfilehash: dfb75b55336d8ca486d5f10b187e955d20cd06fd
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857550"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61689134"
 ---
 # <a name="perform-grouped-joins"></a>執行群組聯結
 

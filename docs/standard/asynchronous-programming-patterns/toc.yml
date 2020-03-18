@@ -21,11 +21,11 @@
           href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
         - name: 決定何時實作事件架構非同步模式
           href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
-        - name: HOW TO：實作支援事件架構非同步模式的元件
+        - name: 如何：實作支援事件架構非同步模式的元件
           href: component-that-supports-the-event-based-asynchronous-pattern.md
-        - name: HOW TO：實作事件架構非同步模式的用戶端
+        - name: 如何：實作事件架構非同步模式的用戶端
           href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
-        - name: HOW TO：使用支援事件架構非同步模式的元件
+        - name: 如何：使用支援事件架構非同步模式的元件
           href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
     - name: 非同步程式設計模型 (APM)
       href: asynchronous-programming-model-apm.md

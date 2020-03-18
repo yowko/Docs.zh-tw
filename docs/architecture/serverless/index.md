@@ -5,15 +5,15 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73093540"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>無伺服器應用程式：架構、模式和 Azure 實作
 
-![顯示無伺服器應用程式電子書封面的螢幕擷取畫面。](./media/index/serverless-apps-cover.jpg)
+![顯示無伺服器應用電子書封面的螢幕截圖。](./media/index/serverless-apps-cover.jpg)
 
 > 下載：<https://aka.ms/serverless-ebook>
 
@@ -33,7 +33,7 @@ Copyright © 2018 by Microsoft Corporation
 
 本書依照「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路網站參考) 可能會隨時變更，恕不另行通知。
 
-此處所描述的一些範例僅供說明，純屬虛構。 任何實際關聯或連結純屬巧合。
+此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。
 
 Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Microsoft 集團的商標。
 
@@ -41,23 +41,23 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 
 所有其他商標和標誌屬於其各自擁有者的財產。
 
-作者:
+作者︰
 
-> Microsoft Corp 的資深雲端提倡者 **[Jeremy Likness](https://twitter.com/jeremylikness)** 。
+> **[傑瑞米·利內斯](https://twitter.com/jeremylikness)**，微軟公司高級雲宣導者。
 
 參與者：
 
-> Microsoft Corp 的資深雲端提倡者 **[Cecil Phillip](https://twitter.com/cecilphillip)** 。
+> **[塞西爾·菲力浦](https://twitter.com/cecilphillip)**，微軟公司高級雲宣導者。
 
 編輯者：
 
-> **[Bill Wagner](https://twitter.com/billwagner)** ，Microsoft Corp 的資深內容開發人員。
+> **[比爾·瓦格納](https://twitter.com/billwagner)**，微軟公司高級內容開發者。
 
-> Microsoft Corp 的資深內容開發人員 **[Maira Wenzel](https://twitter.com/mairacw)** 。
+> **[MairaWenzel，](https://twitter.com/mairacw)** 微軟公司高級內容開發者。
 
 參與者和檢閱者：
 
-> **[Steve Smith](https://twitter.com/ardalis)** ，Ardalis Services 負責人。
+> **[Steve Smith](https://twitter.com/ardalis)**，Ardalis Services 負責人。
 
 ## <a name="introduction"></a>簡介
 
@@ -88,7 +88,7 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 - 儲存體備份傳送至何處？
 - 應該具有備用電力嗎？
 
-這份清單還不只如此，而且額外負荷也很龐大。 在許多情況下，IT 部門不得已，必須處理許多浪費的資源。 浪費的原因是過度佈建服務器作為損毀修復和待命伺服器的備份電腦，以啟用相應放大。幸運的是，使用虛擬機器（Vm）的虛擬化技術（如[hyper-v](/virtualization/hyper-v-on-windows/about/)）引進了基礎結構即服務（IaaS）。 虛擬化的基礎結構可讓作業設定一組標準的伺服器作為骨幹，而創造出彈性的環境，可「視需求」佈建唯一的伺服器。 更重要的是，虛擬化為使用雲端提供虛擬機器「作為服務」創造了很棒的條件。 公司可以不用擔心備用電力或實體電腦。 相反地，則是以虛擬環境為重心。
+這份清單還不只如此，而且額外負荷也很龐大。 在許多情況下，IT 部門不得已，必須處理許多浪費的資源。 浪費是由於過度分配伺服器作為災害復原備份機和待命伺服器，以實現橫向擴展。幸運的是，虛擬機器 （VM） 引入虛擬化技術（如[Hyper-V）](/virtualization/hyper-v-on-windows/about/)產生了基礎架構即服務 （IaaS）。 虛擬化的基礎結構可讓作業設定一組標準的伺服器作為骨幹，而創造出彈性的環境，可「視需求」佈建唯一的伺服器。 更重要的是，虛擬化為使用雲端提供虛擬機器「作為服務」創造了很棒的條件。 公司可以不用擔心備用電力或實體電腦。 相反地，則是以虛擬環境為重心。
 
 因為作業仍需負責處理各種工作，所以 IaaS 仍然需要龐大的額外負荷。 這些工作包括：
 
@@ -118,7 +118,7 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 
 ### <a name="additional-resources"></a>其他資源
 
-- [Azure 架構中心](https://docs.microsoft.com/azure/architecture/)
+- [Azure 體系結構中心](https://docs.microsoft.com/azure/architecture/)
 - [雲端應用程式的最佳做法](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>誰應該使用本指南

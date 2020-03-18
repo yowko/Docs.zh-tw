@@ -3,15 +3,15 @@ title: 實作具復原功能的 Entity Framework Core SQL 連接
 description: 了解如何實作具復原功能的 Entity Framework Core SQL 連線。 在雲端中使用 Azure SQL Database 時，此技術特別重要。
 ms.date: 10/16/2018
 ms.openlocfilehash: 7a047edca21d63a451e90f407b23f3358d461330
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78241061"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>實作具復原功能的 Entity Framework Core SQL 連接
 
-針對 Azure SQL DB，Entity Framework (EF) Core 已提供內部資料庫連線恢復功能和重試邏輯。 如果您想要使用<xref:Microsoft.EntityFrameworkCore.DbContext>具復原功能的 EF Core 連線[，則必須為每個 ](/ef/core/miscellaneous/connection-resiliency) 連線啟用 Entity Framework 執行策略。
+針對 Azure SQL DB，Entity Framework (EF) Core 已提供內部資料庫連線恢復功能和重試邏輯。 如果您想要使用[具復原功能的 EF Core 連線](/ef/core/miscellaneous/connection-resiliency)，則必須為每個 <xref:Microsoft.EntityFrameworkCore.DbContext> 連線啟用 Entity Framework 執行策略。
 
 例如，EF Core 連接層級的下列程式碼可在連接失敗時重試具有恢復功能的 SQL 連接。
 
@@ -146,12 +146,12 @@ public class ResilientTransaction
 
 ## <a name="additional-resources"></a>其他資源
 
-- **在 ASP.NET MVC 應用程式中使用 EF 來恢復連線和攔截命令** \
+- **在ASP.NET MVC 應用程式中，使用 EF 連接恢復和命令攔截** \
   [https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application)
 
-- **Cesar de La Torre。使用復原 Entity Framework Core SQL 連接和交易** \
+- **塞薩爾·德拉托雷使用彈性實體框架核心 SQL 連接和事務** \
   <https://devblogs.microsoft.com/cesardelatorre/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
 >[!div class="step-by-step"]
->[上一頁](implement-retries-exponential-backoff.md)
->[下一頁](use-httpclientfactory-to-implement-resilient-http-requests.md)
+>[上一個](implement-retries-exponential-backoff.md)
+>[下一個](use-httpclientfactory-to-implement-resilient-http-requests.md)

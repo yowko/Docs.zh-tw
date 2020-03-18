@@ -36,7 +36,7 @@
               href: iclrdatatarget-gettlsvalue-method.md
             - name: ReadVirtual 方法
               href: iclrdatatarget-readvirtual-method.md
-            - name: Request 方法
+            - name: 要求方法
               href: iclrdatatarget-request-method.md
             - name: SetThreadContext 方法
               href: iclrdatatarget-setthreadcontext-method.md

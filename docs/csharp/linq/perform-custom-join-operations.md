@@ -4,11 +4,11 @@ description: 了解如何在 C# 中執行自訂的 LINQ 聯結作業。
 ms.date: 12/01/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
 ms.openlocfilehash: 7051007c67bd64cd11ede2f4d5352ce3d497255f
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857862"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659848"
 ---
 # <a name="perform-custom-join-operations"></a>執行自訂的聯結作業
 
@@ -25,7 +25,7 @@ ms.locfileid: "54857862"
  若要執行非等聯結的聯結，您可以使用多個 `from` 子句個別引入每個資料來源。 然後，在 `where` 子句中套用述詞運算式，設定每個來源的變數範圍。 運算式也可以採用方法呼叫的形式。
 
 > [!NOTE]
-> 請勿將這類的自訂聯結運算與使用多個 `from` 子句來存取內部集合相混淆。 如需詳細資訊，請參閱 [join 子句](../language-reference/keywords/join-clause.md)。
+> 請勿將這類的自訂聯結運算與使用多個 `from` 子句來存取內部集合相混淆。 有關詳細資訊，請參閱[聯接子句](../language-reference/keywords/join-clause.md)。
 
 ## <a name="example"></a>範例
 
@@ -43,6 +43,6 @@ ms.locfileid: "54857862"
 
 ## <a name="see-also"></a>另請參閱
 
-- [Language-Integrated Query (LINQ)](index.md)
-- [join 子句](../language-reference/keywords/join-clause.md)
-- [排序 Join 子句的結果](order-the-results-of-a-join-clause.md)
+- [語言綜合查詢（LINQ）](index.md)
+- [聯接子句](../language-reference/keywords/join-clause.md)
+- [排序 join 子句的結果](order-the-results-of-a-join-clause.md)

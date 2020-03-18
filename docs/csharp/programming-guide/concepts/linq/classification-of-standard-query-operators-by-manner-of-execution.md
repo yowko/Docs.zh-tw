@@ -3,10 +3,10 @@ title: 依據執行方式將標準查詢運算子分類 (C#)
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
 ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69924284"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>依據執行方式將標準查詢運算子分類 (C#)
@@ -14,7 +14,7 @@ ms.locfileid: "69924284"
   
 ## <a name="manners-of-execution"></a>執行方式  
   
-### <a name="immediate"></a>即時運算  
+### <a name="immediate"></a>立即  
  立即執行表示讀取資料來源，並且在程式碼中宣告查詢的位置執行作業。 會立即執行傳回單一非可列舉結果的所有標準查詢運算子。  
   
 ### <a name="deferred"></a>已延期  
@@ -22,7 +22,7 @@ ms.locfileid: "69924284"
   
  使用延後執行的查詢運算子可以另外分類為資料流和非資料流。  
   
-#### <a name="streaming"></a>資料流  
+#### <a name="streaming"></a>串流  
  資料流運算子在產生項目之前不需要讀取所有來源資料。 執行時，資料流運算子會在讀取並產生項目時 (適用時) 於每個來源項目上執行其運算。 除非產生結果項目，否則資料流運算子會繼續讀取來源項目。 這表示可能會讀取多個來源項目，以產生一個結果項目。  
   
 #### <a name="non-streaming"></a>非資料流  
@@ -34,7 +34,7 @@ ms.locfileid: "69924284"
 > [!NOTE]
 > 如果在兩個資料行中標記運算子，則作業包含兩個輸入序列，而且會以不同的方式評估每個序列。 在這些情況下，它一律是參數清單中以延後資料流方式評估的第一個序列。  
   
-|標準查詢運算子|傳回型別|立即執行|延後資料流執行|延後非資料流執行|  
+|標準查詢運算子|傳回類型|立即執行|延後資料流執行|延後非資料流執行|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
 |<xref:System.Linq.Enumerable.Aggregate%2A>|TSource|X|||  
 |<xref:System.Linq.Enumerable.All%2A>|<xref:System.Boolean>|X|||  

@@ -4,11 +4,11 @@ description: 了解如何使用 C# 中的 LINQ 將結果分組。
 ms.date: 12/01/2016
 ms.assetid: 2e4ec27f-06fb-4de7-8973-0189906d4520
 ms.openlocfilehash: 577a358c31fcf5346e7aab7a2e2b6be10fd1beff
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857849"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61688458"
 ---
 # <a name="group-query-results"></a>將查詢結果分組
 
@@ -78,9 +78,9 @@ ms.locfileid: "54857849"
 
 - <xref:System.Linq.Enumerable.GroupBy%2A>
 - <xref:System.Linq.IGrouping%602>
-- [Language-Integrated Query (LINQ)](index.md)
+- [語言綜合查詢（LINQ）](index.md)
 - [group 子句](../language-reference/keywords/group-clause.md)
-- [匿名類型](../programming-guide/classes-and-structs/anonymous-types.md)
+- [匿名型別](../programming-guide/classes-and-structs/anonymous-types.md)
 - [在分組作業上執行子查詢](perform-a-subquery-on-a-grouping-operation.md)
 - [建立巢狀群組](create-a-nested-group.md)
 - [分組資料](../programming-guide/concepts/linq/grouping-data.md)

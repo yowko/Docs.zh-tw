@@ -4,11 +4,11 @@ description: 了解如何在 C# 之 LINQ 查詢運算式中建立巢狀群組。
 ms.date: 12/01/2016
 ms.assetid: e9f00708-362e-4d13-98c5-d77549347ba0
 ms.openlocfilehash: 7d056c9e215ccc7ca24d621b64e2328bed79f22e
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857667"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61688614"
 ---
 # <a name="create-a-nested-group"></a>建立巢狀群組
 
@@ -17,7 +17,7 @@ ms.locfileid: "54857667"
 ## <a name="example"></a>範例
 
 > [!NOTE]
-> 這個範例包含[查詢物件的集合](query-a-collection-of-objects.md)中範例程式碼中定義的物件參考。
+> 本例包含[查詢物件的集合](query-a-collection-of-objects.md)中範例程式碼中定義的物件參考。
 
 [!code-csharp[csProgGuideLINQ#24](~/samples/snippets/csharp/concepts/linq/how-to-create-a-nested-group_1.cs)]
 
@@ -25,4 +25,4 @@ ms.locfileid: "54857667"
 
 ## <a name="see-also"></a>另請參閱
 
-- [Language-Integrated Query (LINQ)](index.md)
+- [語言綜合查詢（LINQ）](index.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
 ms.openlocfilehash: 6c4fedd469efb79f91780dff26da89b586de2d1c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713336"
 ---
 # <a name="new-modifier-c-reference"></a>new 修飾詞 (C# 參考)
@@ -57,7 +57,7 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [new 修飾詞](~/_csharplang/spec/classes.md#the-new-modifier)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../language-reference/index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

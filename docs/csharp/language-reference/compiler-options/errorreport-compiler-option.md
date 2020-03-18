@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 ms.openlocfilehash: 52b58aac5e82d4228dfda9c4d77c1d1c5de3e0cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70253885"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# 編譯器選項)
@@ -28,14 +28,14 @@ ms.locfileid: "70253885"
 ```
 
 ## <a name="arguments"></a>引數
- **none**  
+ **無**  
  將不會收集有關內部編譯器錯誤的報告，也不會將報告傳送給 Microsoft。
 
- **提示**提示您在收到內部編譯器錯誤時傳送報告。 **提示**是您在開發環境中編譯應用程式的預設值。
+ **提示**提示您收到內部編譯器錯誤時發送報告。 **提示**是您在開發環境中編譯應用程式的預設值。
 
- **佇列**將錯誤報表排入佇列。 當您使用系統管理認證登入時，您可以報告自上次登入後的任何失敗。 系統提示您傳送錯誤報告的頻率，最多三天一次。 **佇列**是您在命令列編譯應用程式的預設值。
+ **佇列**對錯誤報表進行排隊。 當您使用系統管理認證登入時，您可以報告自上次登入後的任何失敗。 系統提示您傳送錯誤報告的頻率，最多三天一次。 **佇列**是您在命令列編譯應用程式的預設值。
 
- **傳送**會自動將內部編譯器錯誤的報告傳送給 Microsoft。 若要啟用此選項，您必須先同意 Microsoft 資料收集原則。 第一次在電腦上指定 **-errorreport:send** 時，編譯器訊息會請您參考包含 Microsoft 資料收集原則的網站。
+ **發送**自動向 Microsoft 發送內部編譯器錯誤報表。 若要啟用此選項，您必須先同意 Microsoft 資料收集原則。 第一次在電腦上指定 **-errorreport:send** 時，編譯器訊息會請您參考包含 Microsoft 資料收集原則的網站。
 
 ## <a name="remarks"></a>備註
  編譯器無法處理原始程式碼檔案時，就會出現編譯器內部錯誤 (ICE)。 發生 ICE 時，編譯器不會產生輸出檔或任何有用的診斷，無法讓您修正程式碼。
@@ -46,11 +46,11 @@ ms.locfileid: "70253885"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性] 頁面。 如需詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。
+1. 開啟專案的 [屬性]**** 頁面。 如需詳細資訊，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。
 
-2. 按一下 [建置] 屬性頁面。
+2. 按一下 [建置]**** 屬性頁面。
 
-3. 按一下 [ **進階** ] 按鈕。
+3. 按一下 [進階]**** 按鈕。
 
 4. 修改**報告編譯器內部錯誤**屬性。
 

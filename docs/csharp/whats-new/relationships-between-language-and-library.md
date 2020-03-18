@@ -3,11 +3,11 @@ title: 語言功能和程式庫類型之間的關聯性 | Microsoft Docs
 description: 語言功能經常會依賴程式庫類型進行實作。 了解該關聯性。
 ms.date: 07/20/2017
 ms.openlocfilehash: dfae7972af0a251a92700d7d33bd6f971eb1870e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360079"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61706022"
 ---
 # <a name="relationships-between-language-features-and-library-types"></a>語言功能和程式庫類型之間的關聯性
 

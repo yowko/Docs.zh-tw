@@ -1,5 +1,5 @@
 ---
-title: char 類型- C#參考
+title: 字元類型 - C# 引用
 ms.date: 11/22/2019
 f1_keywords:
 - char
@@ -7,55 +7,55 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: a5aca12e4037d517c3bcfb403c990605a052d48f
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: c4e29e6437edfe549b36a04a2050f63caa0d3d2a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239842"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846518"
 ---
-# <a name="char-c-reference"></a>char （C#參考）
+# <a name="char-c-reference"></a>字元（C# 參考）
 
-`char` 類型關鍵字是代表 Unicode UTF-16 字元之 .NET <xref:System.Char?displayProperty=nameWithType> 結構類型的別名。
+類型`char`關鍵字是表示 Unicode UTF-16 字元的 .NET<xref:System.Char?displayProperty=nameWithType>結構類型的別名。
 
 |類型|範圍|大小|.NET 類型|
 |----------|-----------|----------|-------------------------|
-|`char`|U+0000 到 U+FFFF|16位|<xref:System.Char?displayProperty=nameWithType>|
+|`char`|U+0000 到 U+FFFF|16 位|<xref:System.Char?displayProperty=nameWithType>|
 
-`char` 類型的預設值為 `\0`，也就是 U + 0000。
+`char`類型的預設值為`\0`，即 U+0000。
 
-[字串](reference-types.md#the-string-type)類型以 `char` 值序列的形式來表示文字。
+[字串](reference-types.md#the-string-type)類型將文本表示為值序列`char`。
 
 ## <a name="literals"></a>常值
 
-您可以使用指定 `char` 值：
+可以使用以下條件指定`char`值：
 
-- 字元常值。
-- Unicode 逸出序列，`\u` 後面接著字元碼的四符號十六進位標記法。
-- 十六進位的逸出序列，`\x` 後面接著字元碼的十六進位標記法。
+- 字元文本。
+- Unicode 逸出序列，後面`\u`跟著字元代碼的四符號十六進位表示形式。
+- 十六進位逸出序列，`\x`後跟字元代碼的十六進位表示形式。
 
-[!code-csharp-interactive[char literals](~/samples/snippets/csharp/language-reference/builtin-types/CharType.cs#Literals)]
+[!code-csharp-interactive[char literals](snippets/CharType.cs#Literals)]
 
-如上述範例所示，您也可以將字元碼的值轉換成對應的 `char` 值。
+如前面的示例所示，您還可以將字元代碼的值轉換為相應的`char`值。
 
 > [!NOTE]
-> 在 Unicode 逸出序列的情況下，您必須指定全部四個十六進位數位。 也就是說，`\u006A` 是有效的逸出序列，而 `\u06A` 和 `\u6A` 則無效。
+> 在 Unicode 逸出序列中，必須指定所有四個十六進位數位。 也就是說，`\u006A`是有效的逸出序列，而`\u06A`和`\u6A`無效。
 >
-> 在十六進位 escape 序列的情況下，您可以省略前置的零。 也就是說，`\x006A`、`\x06A`和 `\x6A` 的逸出序列都是有效的，而且會對應至相同的字元。
+> 在十六進位逸出序列的情況下，可以省略前置字元為零。 也就是說，`\x006A`和`\x06A``\x6A`逸出序列是有效的，並且對應于同一個字元。
 
 ## <a name="conversions"></a>轉換
 
-`char` 類型可以隱含地轉換成下列[整數](integral-numeric-types.md)類資料類型： `ushort`、`int`、`uint`、`long`和 `ulong`。 它也可以隱含地轉換成內建的[浮點](floating-point-numeric-types.md)數數值型別： `float`、`double`和 `decimal`。 它可以明確轉換成 `sbyte`、`byte`和 `short` 整數類資料類型。
+類型`char`隱式可轉換為以下[積分](integral-numeric-types.md)`ushort`類型： 、 `int`、 `uint` `long`、`ulong`和 。 它還隱式可轉換為內置[浮點](floating-point-numeric-types.md)數數值型別：`float`和`double`。 `decimal` 它顯式可轉換為`sbyte`、`byte`和`short`積分類型。
 
-沒有從其他類型到 `char` 類型的隱含轉換。 不過，任何[整數](integral-numeric-types.md)或[浮點數](floating-point-numeric-types.md)類型都可以明確地轉換成 `char`。
+沒有從其他類型的隱式轉換到類型`char`。 但是，任何[積分](integral-numeric-types.md)或[浮點](floating-point-numeric-types.md)數位類型都顯式轉換為`char`。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱[ C#語言規格](~/_csharplang/spec/introduction.md)的[整數類資料類型](~/_csharplang/spec/types.md#integral-types)一節。
+有關詳細資訊，請參閱[C# 語言規範](~/_csharplang/spec/introduction.md)的["積分類型"](~/_csharplang/spec/types.md#integral-types)部分。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [值類型](value-types.md)
+- [實值型別](value-types.md)
 - [字串](../../programming-guide/strings/index.md)
 - <xref:System.Text.Rune?displayProperty=nameWithType>

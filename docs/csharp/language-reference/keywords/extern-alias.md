@@ -9,10 +9,10 @@ helpviewer_keywords:
 - aliases, extern keyword
 ms.assetid: f487bf4f-c943-4fca-851b-e540c83d9027
 ms.openlocfilehash: 86202333484933d7449b0c4d8c5a3f1a63cd7775
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713553"
 ---
 # <a name="extern-alias-c-reference"></a>外部別名 (C# 參考)
@@ -40,10 +40,10 @@ ms.locfileid: "75713553"
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](./index.md)
-- [:: 運算子](../operators/namespace-alias-qualifier.md)
-- [-reference (C# 編譯器選項)](../compiler-options/reference-compiler-option.md)
+- [* 操作員](../operators/namespace-alias-qualifier.md)
+- [-引用（C# 編譯器選項）](../compiler-options/reference-compiler-option.md)

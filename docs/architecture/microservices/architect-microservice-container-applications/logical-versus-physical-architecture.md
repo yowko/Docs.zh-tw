@@ -3,10 +3,10 @@ title: 邏輯架構與實體架構
 description: 了解邏輯架構與實體架構之間的差異。
 ms.date: 09/20/2018
 ms.openlocfilehash: 8d1bfca190eb9b18d46625fa4afdec963eb07054
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834407"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>邏輯架構與實體架構
@@ -25,14 +25,14 @@ ms.locfileid: "71834407"
 
 如圖 4-8 所示，目錄商務微服務可能是由數個服務或處理序所組成。 這些服務可以是多個 ASP.NET Web API 服務，或是使用 HTTP 或任何其他通訊協定的任何其他服務類型。 更重要的是，只要這些服務與相同的業務領域相關，就可以共用相同的資料。
 
-![目錄 business 微服務與實體伺服器的圖表。](./media/logical-versus-physical-architecture/multiple-physical-services.png)
+![帶物理伺服器的目錄業務微服務圖。](./media/logical-versus-physical-architecture/multiple-physical-services.png)
 
-**圖 4-8**： 具有數項實體服務的商務微服務
+**圖4-8**。 具有數項實體服務的商務微服務
 
 範例中的服務會共用相同的資料模型，因為 Web API 服務與 Search 服務是以相同的資料為目標。 因此，實際實作商務微服務時，您會分割該功能，因此可視需要縮放每個內部服務。 Web API 服務通常可能需要比 Search 服務更多的執行個體，也可能相反。
 
 簡單來說，微服務的邏輯架構不一定會與實體部署架構一致。 在本指南中，每當我們提到微服務時，指的是無法對應至一或多個 (實體) 服務的商務或邏輯微服務。 在大部分情況下，這會是單一服務，但可能更多。
 
 >[!div class="step-by-step"]
->[上一頁](data-sovereignty-per-microservice.md)
->[下一頁](distributed-data-management.md)
+>[上一個](data-sovereignty-per-microservice.md)
+>[下一個](distributed-data-management.md)

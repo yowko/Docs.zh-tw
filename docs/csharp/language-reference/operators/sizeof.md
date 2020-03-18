@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sizeof keyword [C#]
 ms.assetid: c548592c-677c-4f40-a4ce-e613f7529141
-ms.openlocfilehash: 711005479eea2757b4ef18f6710a4453bfca02f9
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: a9e80ecb3288479a2ca81b43c9d088809ed5f2f0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238828"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847283"
 ---
 # <a name="sizeof-operator-c-reference"></a>sizeof 運算子 (C# 參考)
 
@@ -40,19 +40,19 @@ ms.locfileid: "78238828"
 
 下列範例示範 `sizeof` 運算子的用法：
 
-[!code-csharp[sizeof examples](~/samples/snippets/csharp/language-reference/operators/SizeOfOperator.cs)]
+[!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
 
 `sizeof` 運算子會傳回通用語言執行平台在受控記憶體中原先將配置的位元組數。 針對 [struct](../builtin-types/struct.md)型別，該值包含任何填補，如先前範例所示範。 `sizeof` 運算子的結果可能會與 <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> 方法的結果不同，因為後者會傳回型別在 *unmanaged* 記憶體中的大小。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator)中的 [sizeof 運算子](~/_csharplang/spec/introduction.md)區段。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)中的 [sizeof 運算子](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator)區段。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 運算子](index.md)
 - [指標相關運算子](pointer-related-operators.md)
-- [指標型別](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [記憶體與延伸相關類型](../../../standard/memory-and-spans/index.md)
+- [指標類型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [記憶體和跨距相關類型](../../../standard/memory-and-spans/index.md)
 - [.NET 的泛型](../../../standard/generics/index.md)

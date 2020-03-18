@@ -55,7 +55,7 @@
         - name: 開發通道
           href: developing-channels.md
           items:
-            - name: 服務：通道接聽程式和通道
+            - name: 服務：通道接聽程式與通道
               href: service-channel-listeners-and-channels.md
             - name: 用戶端：通道處理站與通道
               href: client-channel-factories-and-channels.md
@@ -115,7 +115,7 @@
         - name: 匯出 WCF 擴充的自訂中繼資料
           href: exporting-custom-metadata-for-a-wcf-extension.md
           items:
-            - name: HOW TO：匯出自訂 WSDL
+            - name: HOW TO：匯出自訂的 WSDL
               href: how-to-export-custom-wsdl.md
             - name: HOW TO：匯出自訂原則判斷提示
               href: how-to-export-custom-policy-assertions.md
@@ -126,7 +126,7 @@
               href: how-to-import-custom-wsdl.md
             - name: HOW TO：匯入自訂原則判斷提示
               href: how-to-import-custom-policy-assertions.md
-            - name: HOW TO：撰寫 ServiceContractGenerator 的延伸模組
+            - name: HOW TO：撰寫 ServiceContractGenerator 的擴充
               href: how-to-write-an-extension-for-the-servicecontractgenerator.md
         - name: 發行與擷取自訂繫結上的中繼資料
           href: publishing-and-retrieving-metadata-over-a-custom-binding.md

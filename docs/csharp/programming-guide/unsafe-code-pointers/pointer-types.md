@@ -5,10 +5,10 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77627706"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
@@ -24,7 +24,7 @@ void* identifier; //allowed but not recommended
 
 指標型別不會從 [object](../../language-reference/builtin-types/reference-types.md) 繼承，而且指標型別與 `object` 之間無法進行轉換。 此外，boxing 和 unboxing 不支援指標。 不過，不同的指標類型之間以及指標類型與整數類資料類型之間可以進行轉換。
 
-當您在相同的宣告中宣告多個指標時，星號 (\*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如：
+當您在相同的宣告中宣告多個指標時，星號 (*) 只會與基礎類型一起出現，而不會做為每個指標名稱的前置詞使用。 例如：
 
 ```csharp
 int* p1, p2, p3;   // Ok
@@ -51,7 +51,7 @@ int* myVariable;
 
 這個運算式 `*myVariable` 表示位於 `int` 所包含之位址的 `myVariable` 變數。
 
-[fixed 陳述式](../../language-reference/keywords/fixed-statement.md)和[指標轉換](./pointer-conversions.md)主題中有數個指標範例。 下列範例使用 `unsafe` 關鍵字和 `fixed` 陳述式，並示範如何讓內部指標遞增。  您可以將這個程式碼貼入主控台應用程式的 Main 函式中來執行它 這些範例必須使用 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 編譯器選項集合來編譯。
+[fixed 陳述式](../../language-reference/keywords/fixed-statement.md)和[指標轉換](./pointer-conversions.md)主題中有數個指標範例。 下列範例使用 `unsafe` 關鍵字和 `fixed` 陳述式，並示範如何讓內部指標遞增。  您可以將這個程式碼貼入主控台應用程式的 Main 函式中來執行它  這些範例必須使用 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 編譯器選項集合來編譯。
 
 [!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
 
@@ -72,14 +72,14 @@ int* myVariable;
 |`++` 和 `--`|遞增和遞減指標。|
 |`+` 和 `-`|執行指標算術。|
 |`==`、`!=`、`<`、`>`、`<=` 和 `>=`|比較指標。|
-|[`stackalloc` 運算子](../../language-reference/operators/stackalloc.md)|在堆疊上配置記憶體。|
-|[`fixed` 陳述式](../../language-reference/keywords/fixed-statement.md)|暫時固定變數以便找到其位址。|
+|[`stackalloc`運算元](../../language-reference/operators/stackalloc.md)|在堆疊上配置記憶體。|
+|[`fixed`聲明](../../language-reference/keywords/fixed-statement.md)|暫時固定變數以便找到其位址。|
 
 如需指標相關運算子的詳細資訊，請參閱[指標相關運算子](../../language-reference/operators/pointer-related-operators.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/unsafe-code.md#pointer-types)的[指標型別](~/_csharplang/spec/introduction.md)。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[指標型別](~/_csharplang/spec/unsafe-code.md#pointer-types)。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -87,5 +87,5 @@ int* myVariable;
 - [Unsafe 程式碼和指標](index.md)
 - [指標轉換](pointer-conversions.md)
 - [參考型別](../../language-reference/keywords/reference-types.md)
-- [值類型](../../language-reference/builtin-types/value-types.md)
-- [unsafe](../../language-reference/keywords/unsafe.md)
+- [實值型別](../../language-reference/builtin-types/value-types.md)
+- [安全](../../language-reference/keywords/unsafe.md)

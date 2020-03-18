@@ -1,102 +1,102 @@
 ---
-title: 瞭解 AssemblyLoadCoNtext-.NET Core
-description: 瞭解 .NET Core 中 AssemblyLoadCoNtext 之用途和行為的重要概念。
+title: 瞭解程式集載入上下文 - .NET 核心
+description: 瞭解 .NET Core 中程式集 LoadCoNtext 的目的和行為的關鍵概念。
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 8a73a432bf8cc72cced77cf6c62a785b72032913
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72291257"
 ---
-# <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>瞭解 System.web AssemblyLoadCoNtext
+# <a name="understanding-systemruntimeloaderassemblyloadcontext"></a>瞭解系統.運行時.載入程式.程式集載入上下文
 
-<xref:System.Runtime.Loader.AssemblyLoadContext> 類別對於 .NET Core 而言是唯一的。 本文會嘗試使用概念資訊來補充 <xref:System.Runtime.Loader.AssemblyLoadContext> API 檔。
+類<xref:System.Runtime.Loader.AssemblyLoadContext>對 .NET Core 是唯一的。 本文嘗試用概念資訊<xref:System.Runtime.Loader.AssemblyLoadContext>補充 API 文檔。
 
-這篇文章與執行動態載入的開發人員有關，特別是動態載入架構開發人員。
+本文與實現動態載入的開發人員相關，尤其是動態載入框架開發人員。
 
-## <a name="what-is-the-assemblyloadcontext"></a>什麼是 AssemblyLoadCoNtext？
+## <a name="what-is-the-assemblyloadcontext"></a>什麼是程式集載入上下文？
 
-每個 .NET Core 應用程式都會隱含地使用 <xref:System.Runtime.Loader.AssemblyLoadContext>。
-這是執行時間的提供者，用來尋找和載入相依性。 每當載入相依性時，就會叫用 <xref:System.Runtime.Loader.AssemblyLoadContext> 實例來尋找它。
+每個 .NET 核心應用程式隱<xref:System.Runtime.Loader.AssemblyLoadContext>式使用 。
+它是用於查找和載入依賴項的運行時提供程式。 每當載入依賴項時，都會<xref:System.Runtime.Loader.AssemblyLoadContext>調用實例來查找它。
 
-- 它提供了尋找、載入和快取 managed 元件和其他相依性的服務。
+- 它提供定位、載入和緩存託管程式集和其他依賴項的服務。
 
-- 為了支援動態程式碼載入和卸載，它會建立隔離的內容，以便在自己的 <xref:System.Runtime.Loader.AssemblyLoadContext> 實例中載入程式碼及其相依性。
+- 為了支援動態代碼載入和卸載，它為在其自己的<xref:System.Runtime.Loader.AssemblyLoadContext>實例中載入代碼及其依賴項創建了一個隔離上下文。
 
-## <a name="when-do-you-need-multiple-assemblyloadcontext-instances"></a>何時需要多個 AssemblyLoadCoNtext 實例？
+## <a name="when-do-you-need-multiple-assemblyloadcontext-instances"></a>何時需要多個程式集載入上下文實例？
 
-單一 <xref:System.Runtime.Loader.AssemblyLoadContext> 實例限制為每個簡單元件名稱只載入一個 <xref:System.Reflection.Assembly> 版本，<xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>。
+單個<xref:System.Runtime.Loader.AssemblyLoadContext>實例僅限於僅載入每個簡單程式集名稱的一個版本<xref:System.Reflection.Assembly><xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>。
 
-以動態方式載入程式碼模組時，這種限制可能會造成問題。 每個模組都是獨立編譯的，而且可能相依于不同版本的 <xref:System.Reflection.Assembly>。 當不同的模組相依于常用程式庫的不同版本時，通常會發生此問題。
+動態載入代碼模組時，此限制可能會成為問題。 每個模組都是獨立編譯的，可能依賴于 不同的<xref:System.Reflection.Assembly>版本。 當不同的模組依賴于常用庫的不同版本時，通常會出現此問題。
 
-為了支援動態載入程式碼，<xref:System.Runtime.Loader.AssemblyLoadContext> API 提供在相同的應用程式中載入 <xref:System.Reflection.Assembly> 的衝突版本。 每個 <xref:System.Runtime.Loader.AssemblyLoadContext> 實例都會提供一個唯一的字典，將每個 <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> 對應到特定的 <xref:System.Reflection.Assembly> 實例。
+為了支援動態載入代碼，API<xref:System.Runtime.Loader.AssemblyLoadContext>提供在同一應用程式中載入 衝突版本的<xref:System.Reflection.Assembly>。 每個<xref:System.Runtime.Loader.AssemblyLoadContext>實例都提供一個唯一<xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>的字典，<xref:System.Reflection.Assembly>將每個實例映射到一個特定實例。
 
-它也提供便利的機制來分組與程式碼模組相關的相依性，以供稍後卸載。
+它還提供了一種方便的機制，用於分組與代碼模組相關的依賴項，以便以後卸載。
 
-## <a name="what-is-special-about-the-assemblyloadcontextdefault-instance"></a>AssemblyLoadCoNtext 實例有何特別意義？
+## <a name="what-is-special-about-the-assemblyloadcontextdefault-instance"></a>程式集載入上下文.預設實例有哪些特別內容？
 
-執行時間會在啟動時自動填入 <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> 實例。  它會使用[預設探查](default-probing.md)來尋找並尋找所有靜態相依性。
+<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>實例由啟動時運行時自動填滿。  它使用[預設探測](default-probing.md)來查找和查找所有靜態依賴項。
 
-它可解決最常見的相依性載入案例。
+它解決了最常見的依賴項載入方案。
 
-## <a name="how-does-assemblyloadcontext-support-dynamic-dependencies"></a>AssemblyLoadCoNtext 如何支援動態相依性？
+## <a name="how-does-assemblyloadcontext-support-dynamic-dependencies"></a>程式集載入上下文如何支援動態依賴項？
 
-<xref:System.Runtime.Loader.AssemblyLoadContext> 具有可覆寫的各種事件和虛擬函式。
+<xref:System.Runtime.Loader.AssemblyLoadContext>具有可以重寫的各種事件和虛擬函數。
 
-<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> 實例僅支援覆寫事件。
+實例<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>僅支援重寫事件。
 
-「 [Managed 元件載入演算法](loading-managed.md)」、「[附屬元件載入演算法](loading-resources.md)」和「[非受控（原生）程式庫載入演算法](loading-unmanaged.md)」文章會參考所有可用的事件和虛擬函式。  這些文章會顯示每個事件和函式在載入演算法中的相對位置。 本文不會重現該資訊。
+文章[託管程式集載入演算法](loading-managed.md)、[附屬程式集載入演算法](loading-resources.md)和非[託管（本機）庫載入演算法](loading-unmanaged.md)是指所有可用的事件和虛擬函數。  這些文章顯示了每個事件和函數在載入演算法中的相對位置。 本文不會重現該資訊。
 
-本節涵蓋相關事件和功能的一般原則。
+本節介紹相關事件和職能的一般原則。
 
-- **可重複**。 特定相依性的查詢一定會產生相同的回應。 必須傳回相同的已載入相依性實例。 這項需求是快取一致性的基礎。 對於 managed 元件而言，我們要建立 <xref:System.Reflection.Assembly> 快取。 快取索引鍵是簡單的元件名稱，<xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>。
-- **通常不會擲**回。  在找不到所要求的相依性時，這些函式預期會傳回 `null` 而不是擲回。 擲回會提前結束搜尋，並將例外狀況傳播給呼叫者。 擲回應該限制為非預期的錯誤，例如元件損毀或記憶體不足的狀況。
-- **避免遞迴**。 請注意，這些函式和處理常式會執行載入規則以尋找相依性。 您的執行不應呼叫觸發遞迴的 Api。 您的程式碼通常應該呼叫需要特定路徑或記憶體參考引數的**AssemblyLoadCoNtext**載入函數。
-- **載入正確的 AssemblyLoadCoNtext**。 選擇要載入的相依性是應用程式特有的。  此選項是由這些事件和函式所執行。 當您的程式碼呼叫**AssemblyLoadCoNtext**時，在您想要載入程式碼的實例上呼叫這些函式。 有時傳回 `null` 並讓 <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> 處理負載可能是最簡單的選項。
-- **請留意執行緒爭用**。 載入可由多個執行緒觸發。 AssemblyLoadCoNtext 會藉由將元件自動新增至快取，來處理執行緒爭用。 會捨棄競爭失敗者的實例。 在您的執行邏輯中，請勿新增未正確處理多個執行緒的額外邏輯。
+- **可重複**。 對特定依賴項的查詢必須始終產生相同的回應。 必須返回相同的載入的依賴項實例。 此要求對於快取一致性至關重要。 對於託管程式集，我們創建了緩存<xref:System.Reflection.Assembly>。 緩存鍵是一個簡單的程式集名稱<xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>。
+- **通常不扔**。  當找不到請求的依賴項時，預計`null`這些函數返回而不是引發。 引發將過早結束搜索，並將異常傳播到調用方。 投擲應限於意外錯誤，如損壞的程式集或記憶體不足條件。
+- **避免遞迴**。 請注意，這些函數和處理常式實現了用於查找依賴項的載入規則。 您的實現不應調用觸發遞迴的 API。 代碼通常應調用需要特定路徑或記憶體傳址參數的**AssemblyLoadCoNtext**載入函數。
+- **載入到正確的程式集載入上下文**。 選擇載入依賴項的位置是特定于應用程式的。  選擇由這些事件和函數實現。 當代碼調用**AssemblyLoadCoNtext**逐路徑載入函數時，在您希望載入代碼的實例上調用它們。 某個時候返回`null`並讓<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>控制碼載入可能是最簡單的選項。
+- **注意執行緒爭用**。 載入可以由多個執行緒觸發。 AssemblyLoadCoNtext 通過原子方式將程式集添加到其緩存來處理執行緒爭用。 種族失敗者的實例被丟棄。 在實現邏輯中，不要添加無法正確處理多個執行緒的額外邏輯。
 
-## <a name="how-are-dynamic-dependencies-isolated"></a>如何隔離動態相依性？
+## <a name="how-are-dynamic-dependencies-isolated"></a>如何隔離動態依賴關係？
 
-每個 <xref:System.Runtime.Loader.AssemblyLoadContext> 實例都代表 <xref:System.Reflection.Assembly> 實例和 <xref:System.Type> 定義的唯一範圍。
+每個<xref:System.Runtime.Loader.AssemblyLoadContext>實例表示<xref:System.Reflection.Assembly>實例和<xref:System.Type>定義的唯一範圍。
 
-這些相依性之間沒有二進位隔離。 它們只會被隔離，而不是依名稱尋找彼此。
+這些依賴項之間沒有二進位隔離。 他們只是通過沒有按名字找到對方而孤立。
 
-在每個 <xref:System.Runtime.Loader.AssemblyLoadContext>中：
+在每個<xref:System.Runtime.Loader.AssemblyLoadContext>：
 
-- <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> 可能會參考不同的 <xref:System.Reflection.Assembly> 實例。
-- <xref:System.Type.GetType%2A?displayProperty=nameWithType> 可能會針對相同的類型 `name`傳回不同的類型實例。
+- <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>可以引用其他<xref:System.Reflection.Assembly>實例。
+- <xref:System.Type.GetType%2A?displayProperty=nameWithType>可能為同一類型`name`返回不同類型的實例。
 
-## <a name="how-are-dependencies-shared"></a>如何共用相依性？
+## <a name="how-are-dependencies-shared"></a>如何共用依賴項？
 
-您可以輕鬆地在 <xref:System.Runtime.Loader.AssemblyLoadContext> 實例之間共用相依性。 一般模型是用來載入相依性的一個 <xref:System.Runtime.Loader.AssemblyLoadContext>。  另一個則是使用已載入元件的參考來共用相依性。
+依賴項可以很容易地在實例之間<xref:System.Runtime.Loader.AssemblyLoadContext>共用。 一般模型是一個<xref:System.Runtime.Loader.AssemblyLoadContext>載入依賴項。  另一個通過使用對載入的程式集的引用共用依賴項。
 
-這是執行時間元件所需的共用。 這些元件只能載入 <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>。 `ASP.NET`、`WPF`或 `WinForms`之類的架構都必須有相同的需求。
+運行時程式集需要此共用。 這些程式集只能載入到 中<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>。 對於 框架（如`ASP.NET`、`WPF`或`WinForms`）也是如此。
 
-建議您將共用相依性載入 <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>。 這種共用是常見的設計模式。
+建議將共用依賴項載入到<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>中。 此共用是常見的設計模式。
 
-共用會在自訂 <xref:System.Runtime.Loader.AssemblyLoadContext> 實例的程式碼中執行。 <xref:System.Runtime.Loader.AssemblyLoadContext> 具有可覆寫的各種事件和虛擬函式。 當這些函式的任何一項傳回 <xref:System.Reflection.Assembly> 實例的參考，而該實例是在另一個 <xref:System.Runtime.Loader.AssemblyLoadContext> 實例中載入時，就會共用 <xref:System.Reflection.Assembly> 實例。 標準負載演算法會延遲 <xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType> 進行載入，以簡化常見的共用模式。  請參閱[Managed 元件載入演算法](loading-managed.md)。
+共用在自訂<xref:System.Runtime.Loader.AssemblyLoadContext>實例的編碼中實現。 <xref:System.Runtime.Loader.AssemblyLoadContext>具有可以重寫的各種事件和虛擬函數。 當這些函數中的任何一個返回對在另一<xref:System.Reflection.Assembly>個<xref:System.Runtime.Loader.AssemblyLoadContext>實例中載入的實例的引用時<xref:System.Reflection.Assembly>，該實例將共用。 標準負載演算法順從<xref:System.Runtime.Loader.AssemblyLoadContext.Default?displayProperty=nameWithType>載入以簡化公共共用模式。  請參閱[託管程式集載入演算法](loading-managed.md)。
 
 ## <a name="complications"></a>複雜功能
 
 ### <a name="type-conversion-issues"></a>類型轉換問題
 
-當兩個 <xref:System.Runtime.Loader.AssemblyLoadContext> 實例包含具有相同 `name`的類型定義時，它們不是相同的類型。 如果和都是來自相同的 <xref:System.Reflection.Assembly> 實例，它們就是相同的類型。
+當兩<xref:System.Runtime.Loader.AssemblyLoadContext>個實例包含具有相同`name`的類型定義時，它們不是同一類型。 它們是同一類型，只有當它們來自同一<xref:System.Reflection.Assembly>個實例時。
 
-為了讓事情複雜化，有關這些不相符類型的例外狀況訊息可能會造成混淆。 在例外狀況訊息中，這些型別會依照其簡單類型名稱來參考。 在此情況下，常見的例外狀況訊息的格式如下：
+使問題複雜化的是，有關這些不匹配類型的異常消息可能會令人困惑。 這些類型在異常消息中由其簡單類型名稱引用。 在這種情況下，常見的異常消息是這樣的形式：
 
-> 類型 ' IsolatedType ' 的物件無法轉換成類型 ' IsolatedType '。
+> 類型"隔離類型"的物件不能轉換為類型"隔離類型"。
 
-### <a name="debugging-type-conversion-issues"></a>調試型別轉換問題
+### <a name="debugging-type-conversion-issues"></a>調試類型轉換問題
 
-假設有一對不相符的類型，也請務必知道：
+給定一對不匹配的類型，還必須瞭解：
 
-- 每個類型的 <xref:System.Type.Assembly?displayProperty=nameWithType>
-- 每個類型的 <xref:System.Runtime.Loader.AssemblyLoadContext>都可以透過 <xref:System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)?displayProperty=nameWithType> 函數取得。
+- 每種類型的<xref:System.Type.Assembly?displayProperty=nameWithType>
+- 每個類型的<xref:System.Runtime.Loader.AssemblyLoadContext>的 ，可通過 函數<xref:System.Runtime.Loader.AssemblyLoadContext.GetLoadContext(System.Reflection.Assembly)?displayProperty=nameWithType>獲得。
 
-假設有兩個物件 `a` 和 `b`，則在偵錯工具中評估下列功能將會很有説明：
+給定兩個`a`物件`b`和 ，在調試器中評估以下內容將很有説明：
 
 ```csharp
 // In debugger look at each assembly's instance, Location, and FullName
@@ -109,8 +109,8 @@ System.Runtime.AssemblyLoadContext.GetLoadContext(b.GetType().Assembly)
 
 ### <a name="resolving-type-conversion-issues"></a>解決類型轉換問題
 
-有兩種設計模式可解決這些類型轉換問題。
+有兩種設計模式可用於解決這些類型的轉換問題。
 
-1. 使用一般共用類型。 這個共用型別可以是基本的執行時間型別，也可以牽涉到在共用元件中建立新的共用型別。  共用類型通常是在應用程式元件中定義的[介面](../../csharp/language-reference/keywords/interface.md)。 另請參閱：[如何共用](#how-are-dependencies-shared)相依性？。
+1. 使用公共共用類型。 此共用類型可以是基元運行時類型，也可以涉及在共用組件中創建新的共用類型。  通常，共用類型是在應用程式程式集中定義的[介面](../../csharp/language-reference/keywords/interface.md)。 另請參閱：[如何共用依賴項？](#how-are-dependencies-shared)
 
-2. 使用封送處理技術，從一種類型轉換成另一種。
+2. 使用封送技術從一種類型轉換為另一種類型。

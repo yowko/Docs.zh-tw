@@ -3,10 +3,10 @@ title: 延後執行範例 (C#)
 ms.date: 07/20/2015
 ms.assetid: 50f4fbac-81fe-4f26-aedf-506e21419b19
 ms.openlocfilehash: 0816594ad016f19af4c97198160b4bafb9b4b8b4
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70204129"
 ---
 # <a name="deferred-execution-example-c"></a>延後執行範例 (C#)

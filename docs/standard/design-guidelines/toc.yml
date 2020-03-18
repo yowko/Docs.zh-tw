@@ -82,7 +82,7 @@
           href: using-standard-exception-types.md
         - name: 例外狀況和效能
           href: exceptions-and-performance.md
-    - name: 用法方針
+    - name: 使用方針
       href: usage-guidelines.md
       items:
         - name: 陣列
@@ -95,7 +95,7 @@
           href: serialization.md
         - name: System.Xml 使用方式
           href: system-xml-usage.md
-        - name: 等號比較運算子
+        - name: 相等運算子
           href: equality-operators.md
     - name: 通用設計模式
       href: common-design-patterns.md

@@ -3,10 +3,10 @@ title: Docker 應用程式中的狀態和資料
 description: 了解將狀態儲存在容器化應用程式的可用選項。
 ms.date: 02/15/2019
 ms.openlocfilehash: b2368efb0eff2bdce48b77b2addcc4de89822c74
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72394649"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 應用程式中的狀態和資料
@@ -31,7 +31,7 @@ ms.locfileid: "72394649"
 
 從 Docker 容器：
 
-- Docker 提供一項功能，稱為「重疊檔案系統」。 這項功能會實作寫入時複製工作，將已更新資訊儲存到容器的根檔案系統。 該資訊位在容器所依據的原始映像之上。 如果從系統中刪除容器，這些變更將會遺失。 因此，雖然有可能將容器的狀態儲存在其本機存放區，但根據這項功能來設計系統會與容器設計的前提 (預設為無狀態) 衝突。
+- Docker 提供一項功能，稱為「重疊檔案系統」**。 這項功能會實作寫入時複製工作，將已更新資訊儲存到容器的根檔案系統。 該資訊位在容器所依據的原始映像之上。 如果從系統中刪除容器，這些變更將會遺失。 因此，雖然有可能將容器的狀態儲存在其本機存放區，但根據這項功能來設計系統會與容器設計的前提 (預設為無狀態) 衝突。
 
 - 不過，Docker 磁碟區現在是處理 Docker 本機資料的慣用方法。 若您需要容器內儲存體的詳細資訊，請查看 [Docker storage drivers ](https://docs.docker.com/engine/userguide/storagedriver/) (Docker 儲存體驅動程式) 與 [About images, containers, and storage drivers](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/) (關於映像、容器及儲存體驅動程式)。
 
@@ -43,13 +43,13 @@ ms.locfileid: "72394649"
 
 **繫結裝載**已持續提供很長時間，允許將任何資料夾對應到容器中的掛接點。 繫結裝載的限制比磁碟區更多，且具有某些重要的安全性問題，因此磁碟區是建議的選項。
 
-**`tmpfs` 裝載**為虛擬資料夾，只存在於主機的記憶體中且永遠不會寫入檔案系統。 它們既快速又安全，但會使用記憶體，且僅適用於非持續性資料。
+裝載是僅駐留在主機記憶體中的虛擬資料夾，永遠不會寫入檔案系統。 ** `tmpfs` ** 它們既快速又安全，但會使用記憶體，且僅適用於非持續性資料。
 
 如圖 4-5 所示，一般 Docker 磁碟區可儲存在容器本身之外，但必須在主機伺服器或 VM 的實體界限內。 不過，Docker 容器無法從一部主機伺服器或 VM 存取另一部主機伺服器或 VM 的磁碟區。 換句話說，使用這些磁碟區，將無法管理在不同 Docker 主機上執行容器間所共用的資料，雖然仍可透過支援遠端主機的磁碟區驅動程式來達到此目的。
 
-![顯示儲存在容器外部之 Docker 磁片區的圖表。](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
+![顯示存儲在容器外部的 Docker 卷的圖表。](./media/state-and-data-in-docker-applications/container-based-application-external-data-sources.png)
 
-**圖 4-5**： 容器式應用程式的磁碟區和外部資料來源
+**圖4-5**。 容器式應用程式的磁碟區和外部資料來源
 
 此外，當 Docker 容器是由協調器所管理時，容器可能會根據叢集所執行的最佳化，在主機之間「移動」。 因此，不建議您使用資料磁碟區來儲存商務資料。 但對於處理追蹤檔案、時態性檔案或不影響商務資料一致性的類似檔案而言，這會是不錯的機制。
 
@@ -57,14 +57,14 @@ ms.locfileid: "72394649"
 
 **Azure 儲存體。** 商務資料通常需要放在外部資源或資料庫中，例如 Azure 儲存體。 Azure 儲存體會提供下列雲端服務：
 
-- Blob 儲存體可儲存非結構化的物件資料。 Blob 可以是任何類型的文字或二進位資料，例如文件或媒體檔案 (影像、音訊和視訊檔案)。 Blob 儲存體也稱為物件儲存體。
+- Blob 儲存體可儲存非結構化物件資料。 Blob 可以是任何類型的文字或二進位資料，例如文件或媒體檔案 (影像、音訊和視訊檔案)。 Blob 儲存體也稱為物件儲存體。
 
 - 檔案儲存體可為使用標準 SMB 通訊協定的舊版應用程式提供共用儲存體。 Azure 虛擬機器和雲端服務可透過掛接共用，在應用程式元件之間共用檔案資料。 內部部署應用程式可透過檔案服務 REST API 來存取共用中的檔案資料。
 
-- 表格儲存體可儲存結構化的資料集。 表格儲存體是 NoSQL 索引鍵屬性資料存放區，可快速開發及存取大量資料。
+- 資料表儲存體可儲存結構化的資料集。 表格儲存體是 NoSQL 索引鍵屬性資料存放區，可快速開發及存取大量資料。
 
-**關聯式資料庫和 NoSQL 資料庫。** 外部資料庫有許多選擇，包括 SQL Server、于 postgresql、Oracle 之類的關係資料庫，或如 Azure Cosmos DB、MongoDB 等的 NoSQL 資料庫。這些資料庫不會在本指南中說明，因為它們是完全不同的主題。
+**關聯式資料庫和 NoSQL 資料庫。** 外部資料庫有許多選擇，從關係資料庫（如 SQL Server、PostgreSQL、Oracle）或 NoSQL 資料庫（如 Azure Cosmos DB、MongoDB 等）進行。這些資料庫不會作為本指南的一部分進行解釋，因為它們完全是一個不同的主題。
 
 >[!div class="step-by-step"]
->[上一頁](monolithic-applications.md)
->[下一頁](soa-applications.md)
+>[上一個](monolithic-applications.md)
+>[下一個](soa-applications.md)

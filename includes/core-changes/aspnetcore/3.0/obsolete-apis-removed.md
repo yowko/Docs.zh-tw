@@ -1,34 +1,34 @@
 ---
 ms.openlocfilehash: b4a20599ce6b7d8fd642e4f0e5b5f7d3fbcdac92
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72393996"
 ---
-### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a>已移除過時的 Antiforgery、CORS、診斷、MVC 和路由 Api
+### <a name="obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed"></a>已刪除的過期反偽造、CORS、診斷、MVC 和路由 API
 
-已移除 ASP.NET Core 2.2 中過時的成員和相容性參數。
+ASP . NET Core 2 . 2 中的過時成員和相容換機已被刪除。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
 3.0
 
-#### <a name="reason-for-change"></a>變更的原因
+#### <a name="reason-for-change"></a>更改原因
 
-API surface 一段時間的改善。
+隨著時間的推移，API 表面的改進。
 
 #### <a name="recommended-action"></a>建議的動作
 
-以 .NET Core 2.2 為目標時，請遵循過時組建訊息中的指導方針，改為採用新的 Api。
+在定位 .NET Core 2.2 時，請按照過時的生成消息中的指南來採用新的 API。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
 ASP.NET Core
 
 #### <a name="affected-apis"></a>受影響的 API
 
-下列類型和成員已標示為已過時，適用于 ASP.NET Core 2.1 和2.2：
+以下類型和成員被標記為已過時，ASP.NET Core 2.1 和 2.2：
 
 **型別**
 

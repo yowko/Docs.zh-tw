@@ -5,10 +5,10 @@ ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
 ms.openlocfilehash: 12093e9c9246c87cc5ea3aedaca6ba34acacce4d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73036999"
 ---
 # <a name="expression-trees-explained"></a>說明運算式樹狀架構
@@ -16,7 +16,7 @@ ms.locfileid: "73036999"
 [上一個主題 -- 概觀](expression-trees.md)
 
 運算式樹狀架構是一種定義程式碼的資料結構。 其所依據的結構，與編譯器分析程式碼和產生編譯輸出所使用的結構相同。 當您閱讀完本教學課程之後，您將會發現運算式樹狀架構與 Roslyn API 中用來建立[分析器和程式碼修正](https://github.com/dotnet/roslyn-analyzers)的類型相當類似
-（分析器和程式碼修正是 NuGet 套件，可對程式碼執行靜態分析，並為開發人員建議可能的修正）。概念很類似，而最終結果是可讓您以有意義的方式檢查原始程式碼的資料結構。 不過，運算式樹狀架構是根據一組與 Roslyn API 完全不同的類別和 API。
+（分析器和代碼修復程式是 NuGet 包，用於對代碼執行靜態分析，並可為開發人員建議潛在的修補程式。概念相似，最終結果是資料結構允許以有意義的方式檢查原始程式碼。 不過，運算式樹狀架構是根據一組與 Roslyn API 完全不同的類別和 API。
 
 讓我們來看一個簡單的範例。
 程式碼行如下：

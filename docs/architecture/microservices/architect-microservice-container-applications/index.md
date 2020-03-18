@@ -3,15 +3,15 @@ title: 架構容器與微服務應用程式
 description: 架構容器與微服務應用程式不簡單，不可小視。 在此章節中了解核心概念。
 ms.date: 09/20/2018
 ms.openlocfilehash: aff30c907f1140b94dbcae330ed7cb633b0a744b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70295515"
 ---
 # <a name="architecting-container-and-microservice-based-applications"></a>架構容器與微服務應用程式
 
-*Microservices 提供極大的好處，但也會引發龐大的新挑戰。當建立微服務應用程式時，會以微服務架構模式為基礎。*
+*微服務帶來巨大的好處，但也帶來了巨大的新的挑戰。微服務體系結構模式是創建基於微服務的應用程式的基本支柱。*
 
 稍早在本指南中，您了解有關容器和 Docker 的基本概念。 這是您開始使用容器所需的基本資訊。 雖然容器是啟用程式且非常適合微服務，但對微服務架構而言絕非必要，而且此架構章節中的許多架構概念在沒有容器的情況下也適用。 不過，由於已介紹過容器的重要性，因此本指南會將重點放在這兩者的交集。
 
@@ -28,5 +28,5 @@ ms.locfileid: "70295515"
 您可能發現有時需要在單一容器中執行多個處理序。 在此情況下，由於每個容器只能有一個進入點，因此您可以在容器中執行指令碼來視需要啟動許多程式。 例如，您可以使用 [Supervisor](http://supervisord.org/) 或類似工具，在單一容器中啟動多個處理序。 但是即使您能找到每個容器保有多個處理序的結構，該方法仍不常見。
 
 >[!div class="step-by-step"]
->[上一頁](../net-core-net-framework-containers/official-net-docker-images.md)
->[下一頁](containerize-monolithic-applications.md)
+>[上一個](../net-core-net-framework-containers/official-net-docker-images.md)
+>[下一個](containerize-monolithic-applications.md)

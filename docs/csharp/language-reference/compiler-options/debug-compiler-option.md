@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
 ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69922504"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C# 編譯器選項)
@@ -33,7 +33,7 @@ ms.locfileid: "69922504"
  指定編譯器所產生的偵錯資訊類型。 完整引數 (當您未指定 **-debug:pdbonly** 時，它就會生效) 允許將偵錯工具附加至執行中的程式。 指定 pdbonly 讓原始程式碼在偵錯工具中啟動程式時進行偵錯，但只有在將執行中的程式附加到偵錯工具時，才會顯示組譯工具。  
   
 ## <a name="remarks"></a>備註  
- 若要建立偵錯組建，請使用此選項。 如果未指定 **-debug**、 **-debug+** 或 **-debug:full**，您將無法偵錯程式的輸出檔案。  
+ 若要建立偵錯組建，請使用此選項。 如果未指定 **-debug**、**-debug+** 或 **-debug:full**，您將無法偵錯程式的輸出檔案。  
   
  如果您使用 **-debug:full**，請注意會對 JIT 最佳化程式碼速度和大小造成某種程度的影響，以及對使用 **-debug:full** 的程式碼品質造成某種程度的影響。 建議使用 **-debug:pdbonly** 或沒有 PDB 可以產生發行程式碼。  
   
@@ -42,19 +42,19 @@ ms.locfileid: "69922504"
   
  如需如何設定應用程式偵錯效能的詳細資訊，請參閱[使映像偵錯更容易](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)。  
   
- 若要變更 .pdb 檔案的位置，請參閱 [-pdb (C# 編譯器選項)](./pdb-compiler-option.md)。  
+ 要更改 .pdb 檔的位置，請參閱[-pdb （C# 編譯器選項）。](./pdb-compiler-option.md)  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]  頁面。  
+1. 開啟專案的 [屬性]**** 頁面。  
   
-2. 按一下 [建置]  屬性頁面。  
+2. 按一下 [建置]**** 屬性頁面。  
   
-3. 按一下 [ **進階** ] 按鈕。  
+3. 按一下 [進階]**** 按鈕。  
   
-4. 修改 [偵錯資訊]  屬性。  
+4. 修改 [偵錯資訊]**** 屬性。  
   
- 如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>。  
+ 如需如何以程式設計方式設定這個編譯器選項的資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>。  
   
 ## <a name="example"></a>範例  
  將偵錯資訊放入輸出檔案 `app.pdb` 中：  

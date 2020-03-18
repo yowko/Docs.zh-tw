@@ -3,10 +3,10 @@ title: 協調微服務和多容器應用程式的高延展性和可用性
 description: 了解如何使用 Azure Kubernetes Service 部署應用程式。
 ms.date: 02/15/2019
 ms.openlocfilehash: 0aa2f83fbf8f9a8815d65730002943cca748643d
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71182366"
 ---
 # <a name="deploy-to-azure-kubernetes-service-aks"></a>部署到 Azure Kubernetes Service (AKS)
@@ -18,7 +18,7 @@ ms.locfileid: "71182366"
 - Linux 或 Mac 開發電腦
 - Windows 開發電腦
   - 啟用 Windows 的開發人員模式
-  - 適用于 Linux 的 Windows 子系統
+  - 適用於 Linux 的 Windows 子系統
 - 在 [Windows、Mac 或 Linux](https://docs.microsoft.com/cli/azure/install-azure-cli) 上安裝 Azure CLI
 
 > [!NOTE]
@@ -64,7 +64,7 @@ AKS 叢集：
 az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Cluster
 ```
 
-![上述命令的主控台輸出：在/root/.kube/config. 中合併「MsSampleK8Cluster 為目前內容」](media/get-credentials-command-result.png)
+![來自上述命令的主控台輸出：合併的"MsSampleK8Cluster 作為 /root/.kube/config 中的當前上下文。](media/get-credentials-command-result.png)
 
 **圖 4-19**. `aks get-credentials` 命令的結果。
 
@@ -74,10 +74,10 @@ az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Clu
 kubectl get nodes
 ```
 
-![上述命令的主控台輸出：具有狀態、存留期（執行時間）和版本的節點清單](media/kubectl-get-nodes-command-result.png)
+![來自上述命令的主控台輸出：具有狀態、年齡（執行時間）和版本的節點清單](media/kubectl-get-nodes-command-result.png)
 
 **圖 4-20**： `kubectl get nodes` 命令的結果。
 
 >[!div class="step-by-step"]
->[上一頁](orchestrate-high-scalability-availability.md)
->[下一頁](docker-apps-development-environment.md)
+>[上一個](orchestrate-high-scalability-availability.md)
+>[下一個](docker-apps-development-environment.md)

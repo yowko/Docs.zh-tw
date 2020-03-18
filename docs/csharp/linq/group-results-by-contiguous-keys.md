@@ -4,11 +4,11 @@ description: 如何使用 C# 中的 LINQ 以相鄰索引鍵將結果分組。
 ms.date: 08/14/2018
 ms.assetid: cbda9c08-151b-4c9e-82f7-c3d7f3dac66b
 ms.openlocfilehash: b5753c85bb07be4fc84b78a299eece961969ff9d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47193001"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61659900"
 ---
 # <a name="group-results-by-contiguous-keys"></a>以相鄰索引鍵將結果分組
 
@@ -31,7 +31,7 @@ ms.locfileid: "47193001"
 
 2. Linq
 
-3. is
+3. 是
 
 4. really
 
@@ -51,4 +51,4 @@ ms.locfileid: "47193001"
 
 ## <a name="see-also"></a>另請參閱
 
-- [Language-Integrated Query (LINQ)](index.md)
+- [語言綜合查詢（LINQ）](index.md)

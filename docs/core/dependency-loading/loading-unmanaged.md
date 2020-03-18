@@ -1,35 +1,35 @@
 ---
-title: 未受管理的程式庫載入演算法-.NET Core
-description: .NET Core 中非受控元件載入演算法的詳細資料描述
+title: 非託管庫載入演算法 - .NET Core
+description: .NET Core 中非託管程式集載入演算法的詳細資訊說明
 ms.date: 10/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: c651aa6e0f37a968e6f8b26d1909def6fa488ccd
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72250039"
 ---
-# <a name="unmanaged-native-library-loading-algorithm"></a>非受控（原生）程式庫載入演算法
+# <a name="unmanaged-native-library-loading-algorithm"></a>非託管（本機）庫載入演算法
 
-未受管理的程式庫會以包含各種階段的演算法找出並載入。
+非託管庫位於並載入了涉及不同階段的演算法。
 
-下列演算法說明如何透過 `PInvoke`載入原生程式庫。
+以下演算法描述本機庫如何通過`PInvoke`載入 方式。
 
-## <a name="pinvoke-load-library-algorithm"></a>`PInvoke` 載入程式庫演算法
+## <a name="pinvoke-load-library-algorithm"></a>`PInvoke`負載庫演算法
 
-嘗試載入非受控元件時，`PInvoke` 會使用下列演算法：
+`PInvoke`嘗試載入非託管程式集時使用以下演算法：
 
-1. 判斷 `active` <xref:System.Runtime.Loader.AssemblyLoadContext>。 若為非受控載入程式庫，`active` AssemblyLoadCoNtext 是具有定義 `PInvoke`的元件。
+1. 確定`active`<xref:System.Runtime.Loader.AssemblyLoadContext>。 對於非託管負載庫，`active`程式集 LoadCoNtext 是具有定義 的`PInvoke`程式集的。
 
-2. 針對 `active` <xref:System.Runtime.Loader.AssemblyLoadContext>，請嘗試依下列順序尋找元件：
-    * 正在檢查其快取。
+2. 對於`active`<xref:System.Runtime.Loader.AssemblyLoadContext>， 請嘗試按優先順序順序查找程式集：
+    * 檢查其緩存。
 
-    * 呼叫由 <xref:System.Runtime.InteropServices.NativeLibrary.SetDllImportResolver(System.Reflection.Assembly,System.Runtime.InteropServices.DllImportResolver)?displayProperty=nameWithType> 函數所設定的目前 <xref:System.Runtime.InteropServices.DllImportResolver?displayProperty=nameWithType> 委派。
+    * 按<xref:System.Runtime.InteropServices.NativeLibrary.SetDllImportResolver(System.Reflection.Assembly,System.Runtime.InteropServices.DllImportResolver)?displayProperty=nameWithType>函式呼叫<xref:System.Runtime.InteropServices.DllImportResolver?displayProperty=nameWithType>當前委託集。
 
-    * 在 `active` AssemblyLoadCoNtext 上呼叫 <xref:System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDll%2A?displayProperty=nameWithType> 函數。
+    * 在<xref:System.Runtime.Loader.AssemblyLoadContext.LoadUnmanagedDll%2A?displayProperty=nameWithType>`active`程式集載入上下文上調用函數。
 
-    * 檢查 <xref:System.AppDomain> 實例的快取，並執行[非受控（原生）程式庫探查](default-probing.md#unmanaged-native-library-probing)邏輯。
+    * 檢查<xref:System.AppDomain>實例的緩存並運行[非託管（本機）庫探測](default-probing.md#unmanaged-native-library-probing)邏輯。
 
-    * 引發 `active` AssemblyLoadCoNtext 的 <xref:System.Runtime.Loader.AssemblyLoadContext.ResolvingUnmanagedDll?displayProperty=nameWithType> 事件。
+    * 引發<xref:System.Runtime.Loader.AssemblyLoadContext.ResolvingUnmanagedDll?displayProperty=nameWithType>`active`程式集載入上下文的事件。

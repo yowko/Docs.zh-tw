@@ -8,10 +8,10 @@ helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
 ms.openlocfilehash: 5963bb85ef4b61c1dc478667fb0e2e5438f3e4ad
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713697"
 ---
 # <a name="checked-c-reference"></a>checked (C# 參考)
@@ -40,10 +40,10 @@ ms.locfileid: "75713697"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](./index.md)
-- [Checked 與 Unchecked](./checked-and-unchecked.md)
-- [unchecked](./unchecked.md)
+- [已選中和未選中](./checked-and-unchecked.md)
+- [取消選取](./unchecked.md)

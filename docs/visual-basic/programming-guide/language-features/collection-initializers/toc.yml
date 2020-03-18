@@ -1,7 +1,7 @@
 - name: 集合初始設定式
   href: index.md
   items:
-    - name: HOW TO：建立集合初始設定式所使用的 Add 延伸模組
+    - name: 如何：建立集合初始設定式所使用的 Add 擴充方法
       href: how-to-create-an-add-extension-method-used-by-a-collection-initializer.md
-    - name: HOW TO：建立集合初始設定式所使用的集合
+    - name: 如何：建立集合初始設定式所使用的集合
       href: how-to-create-a-collection-used-by-a-collection-initializer.md

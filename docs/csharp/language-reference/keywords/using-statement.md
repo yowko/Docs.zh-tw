@@ -5,10 +5,10 @@ helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
 ms.openlocfilehash: 52cde99fd029ce50f159b2a87fbfbf47fc79dccc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712958"
 ---
 # <a name="using-statement-c-reference"></a>using 陳述式 (C# 參考)
@@ -21,7 +21,7 @@ ms.locfileid: "75712958"
 
 [!code-csharp[csrefKeywordsNamespace#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#4)]
 
-從C# 8.0 開始，您可以針對不需要大括弧的 `using` 語句使用下列替代語法：
+從 C# 8.0 開始，對於不需要大括弧的`using`語句，可以使用以下替代語法：
 
 [!code-csharp[csrefKeywordsNamespace#New](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#ModernUsing)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "75712958"
 
 [!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
 
-較新的 `using` 語句語法會轉譯成非常類似的程式碼。 `try` 區塊會在宣告變數的位置開啟。 `finally` 區塊會在封閉區塊的結尾處新增，通常是在方法的結尾處。
+較新的`using`語句語法轉換為非常相似的代碼。 塊`try`將在聲明變數的位置打開。 塊`finally`在封閉塊的末尾添加，通常在方法的末尾。
 
 如需 `try`-`finally` 陳述式的詳細資訊，請參閱 [try-finally](try-finally.md) 主題。
 
@@ -43,7 +43,7 @@ ms.locfileid: "75712958"
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#6)]
 
-您也可以使用C# 8 引進的新語法，結合相同類型的多個宣告。 下列範例會顯示這一點：
+您可以使用與 C# 8 一起引入的新語法組合同一類型的多個聲明。 下列範例會顯示這一點：
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#MultipleUsing)]
 
@@ -57,13 +57,13 @@ ms.locfileid: "75712958"
 
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的 [using 陳述式](~/_csharplang/spec/statements.md#the-using-statement)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [using 指示詞](using-directive.md)
+- [使用指令](using-directive.md)
 - [記憶體回收](../../../standard/garbage-collection/index.md)
 - [使用實作 IDisposable 的物件](../../../standard/garbage-collection/using-objects.md)
 - [IDisposable 介面](xref:System.IDisposable)
-- [使用8.0 中C#的語句](~/_csharplang/proposals/csharp-8.0/using.md)
+- [在 C# 8.0 中使用語句](~/_csharplang/proposals/csharp-8.0/using.md)

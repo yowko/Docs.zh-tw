@@ -11,10 +11,10 @@ helpviewer_keywords:
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
 ms.openlocfilehash: 98c1a8dceec3e5a47627841988e2d722c56fc36c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715268"
 ---
 # <a name="if-else-c-reference"></a>if-else (C# 參考)
@@ -81,7 +81,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-就像在 else 區塊或 then 區塊中的陳述式可以是任何有效的陳述式一樣，您可以為這個條件使用任何有效的布林運算式。 您可以使用[邏輯運算子](../operators/boolean-logical-operators.md) (例如 `!`、`&&`、`||`、`&`、`|` 和 `^`) 來撰寫複合條件。 下列程式碼顯示範例。
+就像在 else 區塊或 then 區塊中的陳述式可以是任何有效的陳述式一樣，您可以為這個條件使用任何有效的布林運算式。 可以使用[邏輯運算子](../operators/boolean-logical-operators.md)（`!`如`&&`、、、、`&``|``^``||`和 ）來制定複合條件。 下列程式碼顯示範例。
 
 ```csharp
 // NOT
@@ -134,11 +134,11 @@ if (!(m >= n || m >= p))
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [?: 運算子](../operators/conditional-operator.md)
+- [？： 操作員](../operators/conditional-operator.md)
 - [if-else 陳述式 (C++)](/cpp/cpp/if-else-statement-cpp)
-- [switch](switch.md)
+- [開關](switch.md)

@@ -4,10 +4,10 @@ description: 說明 C# 的 discard 支援，這是未指派且可捨棄的變數
 ms.technology: csharp-fundamentals
 ms.date: 07/21/2017
 ms.openlocfilehash: a76e7fc13f92ec0de87153bb35eb3924bb317616
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73100631"
 ---
 # <a name="discards---c-guide"></a>Discard - C# 指南
@@ -22,7 +22,7 @@ ms.locfileid: "73100631"
 
 在 C# 7.0 中，下列內容中的指派支援 discard：
 
-- 元組和物件[解構](deconstruct.md)。
+- 元和物件[解構](deconstruct.md)。
 - 以 [is](language-reference/keywords/is.md) 和 [switch](language-reference/keywords/switch.md) 進行的模式比對。
 - 以 `out` 參數進行的方法呼叫。
 - 範圍內沒有 `_` 時的獨立 `_`。
@@ -45,7 +45,7 @@ ms.locfileid: "73100631"
 
 ## <a name="pattern-matching-with-switch-and-is"></a>以 `switch` 和 `is` 進行的模式比對
 
-「捨棄模式」可用於以 [is](language-reference/keywords/is.md) 和 [switch](language-reference/keywords/switch.md) 關鍵字進行的模式比對。 每個運算式一律會比對捨棄模式。
+「捨棄模式」** 可用於以 [is](language-reference/keywords/is.md) 和 [switch](language-reference/keywords/switch.md) 關鍵字進行的模式比對。 每個運算式一律會比對捨棄模式。
 
 下列範例會定義 `ProvidesFormatInfo` 方法，該方法使用 [is](language-reference/keywords/is.md) 陳述式來判斷物件是否提供 <xref:System.IFormatProvider> 實作，並測試物件是否為 `null`。 它也會使用捨棄模式來處理任何其他類型的非 Null 物件。
 
@@ -67,20 +67,20 @@ ms.locfileid: "73100631"
 
 請注意，`_` 也是有效的識別項。 在支援的內容之外使用時，`_` 會視為有效的變數，而不是 discard。 如果範圍內已有名為 `_` 的識別項，使用 `_` 作為獨立 discard 可能會導致：
 
-- 將預定的 dscard 值指派給範圍內的 `_` 變數，而意外修改變數的值。 例如:
+- 將預定的 dscard 值指派給範圍內的 `_` 變數，而意外修改變數的值。 例如：
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
 
-- 違反型別安全的編譯器錯誤。 例如:
+- 違反型別安全的編譯器錯誤。 例如：
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
 
-- 編譯器錯誤 CS0136：「無法在此範圍宣告名為 '\_' 的區域變數或參數，因為該名稱已用於封入區域變數範圍，以定義區域變數或參數」。 例如:
+- 編譯器錯誤 CS0136：「無法在此範圍宣告名為 '\_' 的區域變數或參數，因為該名稱已用於封入區域變數範圍，以定義區域變數或參數」。 例如：
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [解構 Tuple 和其他型別](deconstruct.md)
-- [`is` 關鍵字](language-reference/keywords/is.md)
-- [`switch` 關鍵字](language-reference/keywords/switch.md)
+- [`is`關鍵 字](language-reference/keywords/is.md)
+- [`switch`關鍵 字](language-reference/keywords/switch.md)

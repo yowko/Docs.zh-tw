@@ -7,61 +7,61 @@
         - name: 從檔案讀取
           href: reading-from-files.md
           items:
-            - name: HOW TO：從文字檔讀取
+            - name: 作法：從文字檔讀取
               href: how-to-read-from-text-files.md
-            - name: HOW TO：從逗號分隔文字檔讀取
+            - name: 作法：從逗號分隔文字檔讀取
               href: how-to-read-from-comma-delimited-text-files.md
-            - name: HOW TO：從固定寬度的文字檔讀取
+            - name: 作法：從固定寬度的文字檔讀取
               href: how-to-read-from-fixed-width-text-files.md
-            - name: HOW TO：以多種格式從文字檔讀取
+            - name: 作法：以多種格式從文字檔讀取
               href: how-to-read-from-text-files-with-multiple-formats.md
-            - name: HOW TO：讀取二進位檔案
+            - name: 作法：讀取二進位檔案
               href: how-to-read-from-binary-files.md
-            - name: HOW TO：以 StreamReader 從檔案讀取文字
+            - name: 作法：以 StreamReader 從檔案讀取文字
               href: how-to-read-text-from-files-with-a-streamreader.md
         - name: 寫入檔案
           href: writing-to-files.md
           items:
-            - name: HOW TO：將文字寫入檔案
+            - name: 作法：將文字寫入檔案
               href: how-to-write-text-to-files.md
-            - name: HOW TO：附加至文字檔
+            - name: 作法：附加至文字檔
               href: how-to-append-to-text-files.md
-            - name: HOW TO：寫入二進位檔案
+            - name: 作法：寫入二進位檔案
               href: how-to-write-to-binary-files.md
-            - name: HOW TO：將文字寫入我的文件目錄中的檔案
+            - name: 作法：將文字寫入我的文件目錄中的檔案
               href: how-to-write-text-to-files-in-the-my-documents-directory.md
-            - name: HOW TO：以 StreamWriter 將文字寫入檔案
+            - name: 作法：以 StreamWriter 將文字寫入檔案
               href: how-to-write-text-to-files-with-a-streamwriter.md
         - name: 建立、刪除和移動檔案和目錄
           href: creating-deleting-and-moving-files-and-directories.md
           items:
-            - name: HOW TO：將具有特定模式的檔案複製到目錄
+            - name: 作法：將具有特定模式的檔案複製到目錄
               href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
-            - name: HOW TO：在相同目錄中建立檔案複本
+            - name: 作法：在相同目錄中建立檔案複本
               href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
-            - name: HOW TO：在不同目錄中建立檔案複本
+            - name: 作法：在不同目錄中建立檔案複本
               href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
-            - name: HOW TO：建立檔案
+            - name: 作法：建立檔案
               href: how-to-create-a-file.md
-            - name: HOW TO：刪除檔案
+            - name: 作法：刪除檔案
               href: how-to-delete-a-file.md
-            - name: HOW TO：尋找具有特定模式的檔案
+            - name: 作法：尋找具有特定模式的檔案
               href: how-to-find-files-with-a-specific-pattern.md
-            - name: HOW TO：移動檔案
+            - name: 作法：移動檔案
               href: how-to-move-a-file.md
-            - name: HOW TO：重新命名檔案
+            - name: 作法：重新命名檔案
               href: how-to-rename-a-file.md
-            - name: HOW TO：將目錄複製到另一個目錄
+            - name: 作法：將目錄複製到另一個目錄
               href: how-to-copy-a-directory-to-another-directory.md
-            - name: HOW TO：建立目錄
+            - name: 作法：建立目錄
               href: how-to-create-a-directory.md
-            - name: HOW TO：尋找具有特定模式的子目錄
+            - name: 作法：尋找具有特定模式的子目錄
               href: how-to-find-subdirectories-with-a-specific-pattern.md
-            - name: HOW TO：取得目錄中的檔案集合
+            - name: 作法：取得目錄中的檔案集合
               href: how-to-get-the-collection-of-files-in-a-directory.md
-            - name: HOW TO：擷取我的文件目錄的內容
+            - name: 作法：擷取我的文件目錄的內容
               href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
-            - name: HOW TO：剖析檔案路徑
+            - name: 作法：剖析檔案路徑
               href: how-to-parse-file-paths.md
         - name: 使用 TextFieldParser 物件剖析文字檔
           href: parsing-text-files-with-the-textfieldparser-object.md

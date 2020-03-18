@@ -3,10 +3,10 @@ title: 在微服務中套用簡化的 CQRS 和 DDD 模式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS 和 DDD 模式之間的整體關聯。
 ms.date: 10/08/2018
 ms.openlocfilehash: f42b553fd30fdffdc6e325b11740fe9162aab7c8
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834308"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>在微服務中套用簡化 CQRS 和 DDD 模式
@@ -15,7 +15,7 @@ CQRS 是將模型分隔為讀取資料和寫入資料的架構模式。 相關�
 
 - 查詢： 這些作業會傳回結果，但不會變更系統的狀態，而且沒有副作用。
 
-- 命令： 這些作業會變更系統的狀態。
+- 命令。 這些作業會變更系統的狀態。
 
 CQS 是一個簡單的概念，它與相同物件內的方法 (查詢或命令) 相關。 每個方法可傳回狀態或變動狀態，但不會同時執行。 即使是單一存放庫模式物件也會遵守 CQS。 CQS 可視為 CQRS 的基本原則。
 
@@ -27,19 +27,19 @@ CQRS 表示會有兩個物件用於讀取/寫入作業，在其他內容中則�
 
 eShopOnContainers 參考應用程式中的訂購微服務即為這種服務的範例。 此服務會實作以簡化的 CQRS 方法為基礎的微服務。 它會使用單一資料來源或資料庫，但有兩個邏輯模型加上異動領域的 DDD 模式，如圖 7-2 所示。
 
-![顯示高階簡化的 CQRS 和 DDD 微服務的圖表。](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
+![顯示高級別簡化 CQRS 和 DDD 微服務的圖表。](./media/apply-simplified-microservice-cqrs-ddd-patterns/simplified-cqrs-ddd-microservice.png)
 
 **圖 7-2**. 簡化的 CQRS 和 DDD 型微服務
 
-邏輯「排序」微服務包含其訂購資料庫，它可以是相同的 Docker 主機，但不一定要有。 資料庫在相同的 Docker 主機中對開發有利，但對生產則不然。
+邏輯"訂購"微服務包括其排序資料庫，該資料庫可以是，但不一定是同一個 Docker 主機。 資料庫在相同的 Docker 主機中對開發有利，但對生產則不然。
 
 應用程式層可以是 Web API 本身。 此處的重要設計觀點是微服務已遵循 CQRS 模式，將查詢、ViewModel (專為用戶端應用程式所建立的資料模型) 與命令、領域模型、異動分開。 此方法可確保查詢不會受限於來自 DDD 模式的限制和條件約束，這些限制和條件約束只對異動和更新才有意義，如稍後章節所述。
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Greg 年輕事件來源系統中的版本控制**（免費閱讀線上電子書） \
+- **葛列格·楊事件源系統中的版本控制**（免費閱讀線上電子書） |
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
->[上一頁](index.md)
->[下一頁](eshoponcontainers-cqrs-ddd-microservice.md)
+>[上一個](index.md)
+>[下一個](eshoponcontainers-cqrs-ddd-microservice.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
 ms.openlocfilehash: 148a63c37cfbc4c60448adccde10947e91e22bb9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970179"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C# 編譯器選項)
@@ -25,7 +25,7 @@ ms.locfileid: "70970179"
 ```  
   
 ## <a name="arguments"></a>引數  
- `file`、 `file2`  
+ `file`, `file2`  
  包含中繼資料的輸出檔案。 檔案不能包含組件資訊清單。 若要匯入多個檔案，請以逗號或分號分隔檔案名稱。  
   
 ## <a name="remarks"></a>備註  
@@ -48,5 +48,5 @@ csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs
 
 - [C# 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
-- [多檔案組件](../../../framework/app-domains/multifile-assemblies.md)
+- [多檔程式集](../../../framework/app-domains/multifile-assemblies.md)
 - [如何：建置多檔案組件](../../../framework/app-domains/build-multifile-assembly.md)

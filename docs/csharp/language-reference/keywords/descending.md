@@ -8,10 +8,10 @@ helpviewer_keywords:
 - descending keyword [C#]
 ms.assetid: 8d2cd1e5-9c1c-4dfc-b84c-60e2d3240927
 ms.openlocfilehash: e17963e58abef2757594d0f6f3f7c5e805a1c966
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713588"
 ---
 # <a name="descending-c-reference"></a>descending (C# 參考)
@@ -24,8 +24,8 @@ ms.locfileid: "75713588"
 
 [!code-csharp[csrefKeywordsContextual#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#11)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 中的 LINQ](../../linq/index.md)
-- [ascending](./ascending.md)
+- [上升](./ascending.md)

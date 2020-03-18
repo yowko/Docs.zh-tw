@@ -1,9 +1,9 @@
 - name: 委派
   href: index.md
   items:
-    - name: HOW TO：叫用委派方法
+    - name: 作法：叫用委派方法
       href: how-to-invoke-a-delegate-method.md
-    - name: HOW TO：將程序傳遞至其他程序
+    - name: 作法：將程序傳遞至其他程序
       href: how-to-pass-procedures-to-another-procedure.md
     - name: 寬鬆委派轉換
       href: relaxed-delegate-conversion.md

@@ -1,15 +1,15 @@
 ---
-title: 一般指引
+title: 一般方針
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 一般指引
 ms.date: 09/11/2018
 ms.openlocfilehash: 2fa66d7593b764a8df4d9acc20f93d3f8fb26174
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73089642"
 ---
-# <a name="general-guidance"></a>一般指引
+# <a name="general-guidance"></a>一般方針
 
 本節提供了何時應選擇 .NET Core 或 .NET Framework 的摘要。 我們在後續的章節中提供了更多關於這些選擇的詳細資料。
 
@@ -37,12 +37,12 @@ ms.locfileid: "73089642"
 
 ### <a name="additional-resources"></a>其他資源
 
-- **電子書：使用 Azure 和 Windows 容器將現有的 .NET Framework 應用程式現代化**  
+- **電子書：使用 Azure 和 Windows 容器對現有 .NET 框架應用程式進行現代化改造**  
     https://aka.ms/liftandshiftwithcontainersebook
 
 - **應用程式範例：使用 Windows 容器現代化舊版 ASP.NET Web 應用程式**  
     https://aka.ms/eshopmodernizing
 
 >[!div class="step-by-step"]
->[上一頁](index.md)
->[下一頁](net-core-container-scenarios.md)
+>[上一個](index.md)
+>[下一個](net-core-container-scenarios.md)

@@ -3,10 +3,10 @@ title: 在非同步工作完成時進行處理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
 ms.openlocfilehash: b618fd6bf80551231d2b285fd0e8aef688d00d93
-ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71736735"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>啟動多項非同步工作並在它們完成時進行處理 (C#)
@@ -20,20 +20,20 @@ ms.locfileid: "71736735"
 
 ## <a name="download-an-example-solution"></a>下載範例解決方案
 
-您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
+您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。
 
 > [!TIP]
-> 如果您不想要下載專案，您可以改為參閱本主題結尾的*MainWindow.xaml.cs*檔案。
+> 如果不想下載專案，則可以在本主題末尾查看*MainWindow.xaml.cs*檔。
 
-1. 將您從 *.zip*檔案下載的檔案解壓縮，然後啟動 Visual Studio。
+1. 從 *.zip*檔中提取您下載的檔，然後啟動視覺化工作室。
 
-2. 在功能表列上選擇 [檔案] >  [開啟] > [專案/解決方案]。
+2. 在功能表列上，選擇 **"檔** > **打開** > **專案/解決方案**"。
 
-3. 在 [**開啟專案**] 對話方塊中，開啟包含您所下載之範例程式碼的資料夾，然後開啟*AsyncFineTuningCS*/*AsyncFineTuningVB*的方案（ *.sln*）檔案。
+3. 在 **"打開專案"** 對話方塊中，打開保存您下載的示例代碼的資料夾，然後打開*AsyncFineTuningCS*/*AsyncFineTuningVB*的解決方案 *（.sln*） 檔。
 
-4. 在方案總管中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。
+4. 在方案總管**** 中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]****。
 
-5. 選擇<kbd>F5</kbd>鍵以執行程式，或按<kbd>Ctrl</kbd>+<kbd>F5</kbd>鍵以執行程式，而不進行任何偵錯工具。
+5. 選擇<kbd>F5</kbd>鍵以在調試時運行程式，或者按<kbd>Ctrl</kbd>+<kbd>F5</kbd>鍵運行程式而不偵錯工具。
 
 6. 執行專案數次，確認所下載的長度不一定會以相同的順序出現。
 
@@ -41,7 +41,7 @@ ms.locfileid: "71736735"
 
 此範例會新增至在[當其中一項工作完成時，取消剩餘的非同步工作 (C#)](cancel-remaining-async-tasks-after-one-is-complete.md) 中開發的程式碼，並使用相同的 UI。
 
-若要自行逐步建置範例，請遵循[下載範例](cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example)一節中的指示，但將 [CancelAfterOneTask] 設定為啟始專案。 將本主題中的變更新增至該專案中的 `AccessTheWebAsync` 方法。 變更會標上星號。
+若要自行逐步建置範例，請遵循[下載範例](cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example)一節中的指示，但將 [CancelAfterOneTask]**** 設定為啟始專案。 將本主題中的變更新增至該專案中的 `AccessTheWebAsync` 方法。 變更會標上星號。
 
 **CancelAfterOneTask** 專案已經包含一個查詢，這個查詢在執行時，會建立一組工作。 下列程式碼中的每個 `ProcessURLAsync` 呼叫都會傳回 `TResult` 為整數的 <xref:System.Threading.Tasks.Task%601>：
 
@@ -49,7 +49,7 @@ ms.locfileid: "71736735"
 IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessURL(url, client, ct);
 ```
 
-在專案的*MainWindow.xaml.cs*檔案中，對 `AccessTheWebAsync` 方法進行下列變更：
+在專案的*MainWindow.xaml.cs*檔中，對`AccessTheWebAsync`方法進行以下更改：
 
 - 套用 <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> 來執行查詢，而非 <xref:System.Linq.Enumerable.ToArray%2A>。
 
@@ -71,7 +71,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3. 等候 `ProcessURLAsync` 呼叫所傳回的 `firstFinishedTask`。 `firstFinishedTask` 變數是 <xref:System.Threading.Tasks.Task%601>，其中 `TReturn` 是整數。 工作已完成，但您等候它擷取所下載網站的長度，如下列範例所示。 如果工作發生錯誤，`await` 會擲回儲存在 `AggregateException` 中的第一個子例外，不同于讀取會擲回 `AggregateException` 的 `Result` 屬性。
+    3. 等候 `ProcessURLAsync` 呼叫所傳回的 `firstFinishedTask`。 `firstFinishedTask` 變數是 <xref:System.Threading.Tasks.Task%601>，其中 `TReturn` 是整數。 工作已完成，但您等候它擷取所下載網站的長度，如下列範例所示。 如果任務出錯`await`，將引發存儲在 中`AggregateException`的第一個子異常，這與讀取`Result`將引發 的屬性`AggregateException`不同。
 
         ```csharp
         int length = await firstFinishedTask;
@@ -85,9 +85,9 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 ## <a name="complete-example"></a>完整範例
 
-下列程式碼是範例的*MainWindow.xaml.cs*檔案的完整文字。 星號會標記已針對此範例新增的項目。 同時請注意，您必須新增 <xref:System.Net.Http> 的參考。
+以下代碼是示例*MainWindow.xaml.cs*檔的完整文本。 星號會標記已針對此範例新增的項目。 同時請注意，您必須新增 <xref:System.Net.Http> 的參考。
 
-您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
+您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。
 
 ```csharp
 using System;
@@ -230,4 +230,4 @@ namespace ProcessTasksAsTheyFinish
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [微調非同步應用程式 (C#)](fine-tuning-your-async-application.md)
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](index.md)
-- [非同步範例：微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式)

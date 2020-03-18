@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
 ms.openlocfilehash: 6c8408c0c613e361dae0c1db19f854e9421ca467
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "70970372"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# 編譯器選項)
@@ -49,9 +49,9 @@ ms.locfileid: "70970372"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性]**** 頁面。  
   
-2. 按一下 [應用程式] 屬性頁。  
+2. 按一下 [應用程式]**** 屬性頁。  
   
 3. 修改**組件名稱**屬性。  
   

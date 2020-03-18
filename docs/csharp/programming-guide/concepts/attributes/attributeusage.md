@@ -2,26 +2,26 @@
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
 ms.openlocfilehash: a3a82e33d7259ec56ec3e907bc3d4d9f8a01167d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589305"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "61668714"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
 決定如何使用自訂屬性類別。 <xref:System.AttributeUsageAttribute> 是您套用至自訂屬性定義的屬性。 `AttributeUsage` 屬性可讓您控制：
 
 - 屬性可能套用至哪些程式元素。 除非您限制其使用方式，否則屬性可能會套用至下列任一程式元素：
-  - 組件
-  - name
-  - Field - 欄位
-  - Event - 事件
-  - 方法
-  - param
+  - 組件 (assembly)
+  - module
+  - field
+  - event
+  - method
+  - 參數
   - 屬性
   - return
-  - 類型
+  - type
 - 屬性是否可以套用至單一程式元素多次。
 - 衍生類別是否會繼承屬性。
 
@@ -88,4 +88,4 @@ SecondAttribute
 - [反映 (C#)](../reflection.md)
 - [屬性](index.md)
 - [建立自訂屬性 (C#)](creating-custom-attributes.md)
-- [使用反射存取屬性 (C#)](accessing-attributes-by-using-reflection.md)
+- [使用反映存取屬性 (C#)](accessing-attributes-by-using-reflection.md)

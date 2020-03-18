@@ -3,10 +3,10 @@ title: .NET Core Runtime 與 SDK 如何進行版本設定
 description: 此文章說明 .NET Core SDK 與 Runtime 如何進行版本設定 (類似語意式版本設定)。
 ms.date: 07/26/2018
 ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75777322"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 版本設定概觀
@@ -23,23 +23,23 @@ ms.locfileid: "75777322"
 
 SDK 版本號碼的第三個位置同時傳達次要與修補號碼。 次要版本會被乘以 100。 次要版本 1、修補版本 2 將以 102 表示。 最後兩位數代表修補號碼。 例如，.NET Core 2.2 的發行可能會建立如下表的發行版本：
 
-| 變更                | .NET Core 執行階段 | .NET Core SDK （\*） |
+| 變更                | .NET Core 執行階段 | .NET 核心\*SDK （ ） |
 |-----------------------|-------------------|-------------------|
 | 初始版本       | 2.2.0             | 2.2.100           |
 | SDK 修補程式             | 2.2.0             | 2.2.101           |
 | 執行階段與 SDK 修補程式 | 2.2.1             | 2.2.102           |
 | SDK 功能變更    | 2.2.1             | 2.2.200           |
 
-（\*）此圖表使用 2.2 .NET Core 執行時間作為範例，因為歷史成品是指 .NET Core 2.1 的第一個 SDK 是2.1.300。 如需詳細資訊，請參閱 [.NET Core 版本選擇](selection.md)。
+（\*） 此圖表使用 2.2 .NET 核心運行時作為示例，因為歷史工件意味著 .NET Core 2.1 的第一個 SDK 是 2.1.300。 如需詳細資訊，請參閱 [.NET Core 版本選擇](selection.md)。
 
-附註：
+注意：
 
 - 若 SDK 在執行階段功能更新之前有 10 個功能更新，版本號碼會滾入 1000 系列，且具有 2.2.1000 做為 2.2.900 之後的未來發行版本。 此情況不應該發生。
 - 不會發生沒有功能發行版本的 99 修補發行版本。 若發行版本接近此號碼，它會強制功能發行版本。
 
 您可以在 [dotnet/designs](https://github.com/dotnet/designs/pull/29) 存放庫 \(英文\) 中查看此初始提案的詳細資訊。
 
-## <a name="semantic-versioning"></a>語意版本控制
+## <a name="semantic-versioning"></a>語意化版本控制系統
 
 .NET Core *執行階段* 大致上遵循[語意式版本控制 (SemVer)](https://semver.org/)並採用 `MAJOR.MINOR.PATCH` 版本控制，使用版本號碼的不同部分來描述變更的程度和類型。
 
@@ -80,11 +80,11 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="preview-versions"></a>預覽版本
 
-預覽版本將 `-preview[number]-([build]|"final")` 附加至版本。 例如，`2.0.0-preview1-final`。
+預覽版本將 `-preview[number]-([build]|"final")` 附加至版本。 例如： `2.0.0-preview1-final` 。
 
 ### <a name="servicing-versions"></a>服務版本
 
-版本發行之後，版本分支通常會停止產生每日組建，改為開始產生服務組建。 服務版本會將 `-servicing-[number]` 附加至版本。 例如，`2.0.1-servicing-006924`。
+版本發行之後，版本分支通常會停止產生每日組建，改為開始產生服務組建。 服務版本會將 `-servicing-[number]` 附加至版本。 例如： `2.0.1-servicing-006924` 。
 
 ## <a name="relationship-to-net-standard-versions"></a>與 .NET Standard 版本的關聯性
 
@@ -96,17 +96,17 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 .NET Core 的每個版本都實作 .NET Standard. 的版本。 實作 .NET Standard 的版本意指支援舊版 .NET Standard。 .NET Standard 與 .NET Core 版本彼此獨立。 .NET Core 2.0 實作 .NET Standard 2.0 只是巧合。 .NET Core 2.1 也實作 .NET Standard 2.0。 .NET Core 將支援未來推出的 .NET Standard 版本。
 
-| .NET Core | .NET 標準 |
+| .NET Core | .NET Standard |
 |-----------|---------------|
 | 1.0       | 最高到 1.6     |
 | 2.0       | 最高到 2.0     |
 | 2.1       | 最高到 2.0     |
 | 2.2       | 最高到 2.0     |
-| 3.0       | 最多2.1     |
+| 3.0       | 高達 2.1     |
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [目標架構](../../standard/frameworks.md)
+- [目標框架](../../standard/frameworks.md)
 - [.NET Core 發佈封裝](../build/distribution-packaging.md)
 - [.NET Core 支援週期資料表](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3) (.NET Core 2+ 版本繫結)

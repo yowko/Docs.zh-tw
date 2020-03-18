@@ -2,12 +2,12 @@
 title: 設計基礎結構持續性層
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索基礎結構持續性層設計中的存放庫模式。
 ms.date: 10/08/2018
-ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737936"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846805"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>設計基礎結構持續性層
 
@@ -33,11 +33,11 @@ ms.locfileid: "73737936"
 
 在這裡要特別再次強調的是，您應該只會針對每個彙總根定義一個存放庫，如圖 7-17 所示。 若要達到在彙總內所有物件之間維持交易一致性的彙總根目標，請絕對不要針對資料庫中的每個資料表建立儲存機制。
 
-![顯示網域和其他基礎結構關聯性的圖表。](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
+![顯示域和其他基礎結構關係的圖表。](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **圖 7-17**。 儲存機制、彙總和資料庫資料表之間的關聯性
 
-上圖顯示網域和基礎結構層之間的關聯性：買方匯總取決於 IBuyerRepository，而 Order 匯總取決於 IOrderRepository 介面，這些介面會在基礎結構層中執行由相依于 UnitOfWork 的對應存放庫（也就是在該處執行），可存取資料層中的資料表。
+上圖顯示了域和基礎結構層之間的關係：買方聚合取決於 IBuyerRepository 和訂單聚合取決於 IOrderRepository 介面，這些介面在基礎結構層中實現由依賴于 UnitOfWork 的相應存儲庫（也在那裡實現）訪問資料層中的表。
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>每個存放庫強制執行一個彙總根
 
@@ -110,26 +110,23 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ### <a name="repository-pattern"></a>存放庫模式
 
-- **The Repository pattern** \ (存放庫模式)\
-  <https://deviq.com/repository-pattern/>
-
-- **Edward Hieatt 和對我的竊取。存放庫模式。** \
+- **愛德華·希亞特和羅布存儲庫模式。** \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
-- **The Repository pattern** \ (存放庫模式)\
+- **存儲庫模式** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans。領域驅動設計：處理軟體核心的複雜性。** (書籍，包括存放庫模式的討論) \
+- **埃裡克·埃文斯域驅動設計：解決軟體核心的複雜性。** (書籍，包括存放庫模式的討論) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>工作單位模式
 
-- **聖馬丁 Fowler。工作單位模式。** \
+- **馬丁·福勒工作單位模式。** \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
-- **在 ASP.NET MVC 應用程式中實作存放庫與工作單位模式** \
+- **在 mVC 應用程式中實現ASP.NET的存儲庫和工作模式單元** \
   <https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
 >[!div class="step-by-step"]
->[上一頁](domain-events-design-implementation.md)
->[下一頁](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+>[上一個](domain-events-design-implementation.md)
+>[下一個](infrastructure-persistence-layer-implemenation-entity-framework-core.md)

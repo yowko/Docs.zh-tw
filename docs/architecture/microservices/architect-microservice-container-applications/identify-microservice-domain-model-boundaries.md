@@ -3,10 +3,10 @@ title: 識別每個微服務的領域模型界限
 description: 探索將大型應用程式分割成微服務，以達到良好架構的精髓。
 ms.date: 09/20/2018
 ms.openlocfilehash: 9c433066dd8e93dbb09b15e58c9c85617775723d
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "71834408"
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>識別每個微服務的領域模型界限
@@ -27,17 +27,17 @@ ms.locfileid: "71834408"
 
 針對每個微服務的領域模型該有多大的這個問題，最佳答案或許如下：它應該具有自主的 BC 並盡可能隔離，以便您能夠持續工作而不需要經常切換至其他內容 (其他微服務的模型)。 在圖 4-10 中，您會看到多個微服務 (多個 BC) 各自擁有自己的模型，以及根據您應用程式中每個識別領域的特定需求，可如何定義這些微服務的實體。
 
-![顯示多個模型界限中實體的圖表。](./media/identify-microservice-domain-model-boundaries/identify-entities-microservice-model-boundries.png)
+![顯示多個模型邊界中的實體的圖表。](./media/identify-microservice-domain-model-boundaries/identify-entities-microservice-model-boundries.png)
 
 **圖 4-10**： 識別實體和微服務模型界限
 
-圖 4-10 說明與線上會議管理系統相關的範例案例。 根據系結內容，相同的實體會顯示為「使用者」、「買方」、「付款者」和「客戶」。 您已根據領域專家為您定義的領域，識別可實作成微服務的數個 BC。 如您所見，單一微服務模型中就有多個實體，例如「付款」微服務中有多個「付款」。 這些實體實作起來很容易。
+圖 4-10 說明與線上會議管理系統相關的範例案例。 根據邊界上下文，同一實體顯示為"使用者"、"買方"、"付款人"和"客戶"。 您已根據領域專家為您定義的領域，識別可實作成微服務的數個 BC。 如您所見，單一微服務模型中就有多個實體，例如「付款」微服務中有多個「付款」。 這些實體實作起來很容易。
 
 不過，您也可能會有多個形狀不同的實體，但在來自多個微服務的多個領域模型之間共用相同的身分識別。 例如，在「會議管理」微服務中已識別「使用者」實體。 具有相同身分識別的相同使用者也是「訂購」微服務中的「購買者」，或「付款」微服務中的「付款者」，甚至是「客戶服務」微服務中的「客戶」。 這是因為根據每個領域專家所使用的[通用語言](https://martinfowler.com/bliki/UbiquitousLanguage.html)，使用者可能會有不同的檢視方塊，甚至會有不同的屬性。 名為「會議管理」之微服務模型中的使用者實體可能會有其大多數的個人資料屬性。 不過，在「付款」微服務中作為「付款者」或在「客戶服務」微服務中作為「客戶」的相同使用者不一定需要相同的屬性清單。
 
 圖 4-11 說明類似的方法。
 
-![此圖顯示如何將資料模型分解成多個領域模型。](./media/identify-microservice-domain-model-boundaries/decompose-traditional-data-models.png)
+![顯示如何將資料模型分解為多個域模型的圖表。](./media/identify-microservice-domain-model-boundaries/decompose-traditional-data-models.png)
 
 **圖 4-11**： 將傳統資料模型分解成多個領域模型
 
@@ -50,5 +50,5 @@ ms.locfileid: "71834408"
 不要跨領域共用具有相同屬性數目的相同使用者實體有幾個優點。 一個優點是減少重複，讓微服務模型不會有任何不必要的資料。 另一個優點是具有主要微服務，以針對每個實體擁有一種資料類型，讓該資料類型的更新和查詢完全取決於該微服務。
 
 >[!div class="step-by-step"]
->[上一頁](distributed-data-management.md)
->[下一頁](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)
+>[上一個](distributed-data-management.md)
+>[下一個](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

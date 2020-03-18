@@ -1,34 +1,34 @@
 ---
-title: Application Insights-無伺服器應用程式
-description: Application Insights 是無伺服器診斷平臺，可讓開發人員偵測、分級和診斷 web 應用程式、行動應用程式、桌面應用程式和微服務中的問題。
+title: 應用程式洞察 - 無伺服器應用
+description: 應用程式見解是一個無伺服器診斷平臺，使開發人員能夠檢測、分診和診斷 Web 應用、移動應用、桌面應用和微服務中的問題。
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 7c1013ac029645a2da44aaf1c3b6ba74ca3f3dde
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522742"
 ---
-# <a name="telemetry-with-application-insights"></a>具有 Application Insights 的遙測
+# <a name="telemetry-with-application-insights"></a>使用 Application Insights 進行遙測
 
-[Application Insights](https://docs.microsoft.com/azure/application-insights)是無伺服器診斷平臺，可讓開發人員偵測、分級和診斷 web 應用程式、行動應用程式、桌面應用程式和微服務中的問題。 您只要在入口網站中翻轉交換器，就可以開啟函式應用程式的 Application Insights。 Application Insights 提供所有這些功能，而不需要設定伺服器或設定您自己的資料庫。 所有 Application Insights 的功能都是以服務的形式提供，可自動與您的應用程式整合。
+[應用程式見解](https://docs.microsoft.com/azure/application-insights)是一個無伺服器診斷平臺，使開發人員能夠檢測、分診和診斷 Web 應用、移動應用、桌面應用和微服務中的問題。 只需在門戶中翻轉開關，即可打開函數應用的應用程式見解。 應用程式見解提供所有這些功能，而無需佈建服務器或設置自己的資料庫。 所有應用程式見解功能都作為自動與您的應用集成的服務提供。
 
-![Application Insights 標誌](./media/application-insights-logo.png)
+![應用程式見解徽標](./media/application-insights-logo.png)
 
-將 Application Insights 新增至現有的應用程式，就像將檢測金鑰新增至應用程式的設定一樣簡單。 有了 Application Insights，您可以：
+向現有應用添加應用程式見解與向應用程式的設置添加檢測金鑰一樣簡單。 借助應用程式見解，您可以：
 
-- 根據度量建立自訂圖表和警示，例如函式呼叫數目、執行函式所花的時間，以及例外狀況
-- 分析失敗和伺服器例外狀況
-- 依作業向下切入效能，並測量呼叫協力廠商相依性所花費的時間
-- 監視裝載函式應用程式的所有伺服器上的 CPU 使用量、記憶體和速率
-- 觀看計量的即時串流，包括函數應用程式的要求計數和延遲
-- 使用[分析](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)來搜尋、查詢及建立函數資料的自訂圖表
+- 基於指標創建自訂圖表和警報，例如函式呼叫次數、運行函數所需的時間以及異常
+- 分析故障和伺服器異常
+- 按操作深入瞭解性能並衡量調用協力廠商依賴關係所需的時間
+- 監視託管功能應用的所有伺服器的 CPU 使用方式、記憶體和速率
+- 查看指標的即時流，包括功能應用的請求計數和延遲
+- 使用[Analytics（分析）](https://docs.microsoft.com/azure/application-insights/app-insights-analytics)搜索、查詢和創建函數資料的自訂圖表
 
 ![計量瀏覽器](./media/metrics-explorer.png)
 
-除了內建的遙測之外，也可以產生自訂遙測。 下列程式碼片段會使用函數應用程式的檢測金鑰集來建立自訂遙測用戶端：
+除了內置遙測之外，還可以生成自訂遙測。 以下程式碼片段使用函數應用的檢測金鑰集創建自訂遙測用戶端：
 
 ```csharp
 public static TelemetryClient telemetry = new TelemetryClient()
@@ -37,7 +37,7 @@ public static TelemetryClient telemetry = new TelemetryClient()
 };
 ```
 
-下列程式碼會測量在[Azure 表格儲存體](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)實例中插入新資料列所需的時間：
+以下代碼測量將新行插入[Azure 表存儲](https://docs.microsoft.com/azure/cosmos-db/table-storage-overview)實例所需的時間：
 
 ```csharp
 var operation = TableOperation.Insert(entry);
@@ -47,16 +47,16 @@ await table.ExecuteAsync(operation);
 telemetry.TrackDependency("AzureTableStorageInsert", "Insert", startTime, timer.Elapsed, true);
 ```
 
-產生的效能圖表如下所示：
+將顯示生成的性能圖：
 
 ![自訂遙測](./media/custom-telemetry.png)
 
-自訂遙測會顯示插入新資料列的平均時間為32.6 毫秒。
+自訂遙測顯示插入新行的平均時間是 32.6 毫秒。
 
-Application Insights 提供強大且方便的方式，以記錄有關無伺服器應用程式的詳細遙測。 您可以完全控制所提供的追蹤和記錄層級。 您可以追蹤自訂統計資料，例如事件、相依性和網頁檢視。 最後，強大的分析可讓您撰寫詢問重要問題的查詢，並產生圖表和先進的深入解析。
+應用程式見解提供了一種功能強大、方便的方式來記錄有關無伺服器應用程式的詳細遙測資料。 您可以完全控制提供的跟蹤和日誌記錄級別。 您可以跟蹤自訂統計資訊，如事件、依賴項和網頁檢視。 最後，強大的分析使您能夠編寫詢問重要問題的查詢，並生成圖表和高級見解。
 
-如需詳細資訊，請參閱[Monitor Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)。
+如需詳細資訊，請參閱[監視 Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)。
 
 >[!div class="step-by-step"]
->[上一頁](azure-functions.md)
->[下一頁](logic-apps.md)
+>[上一個](azure-functions.md)
+>[下一個](logic-apps.md)

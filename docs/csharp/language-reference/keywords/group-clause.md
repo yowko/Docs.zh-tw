@@ -9,10 +9,10 @@ helpviewer_keywords:
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
 ms.openlocfilehash: 75a366ec24e4e48af7e87d3372950aad8d76435b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713475"
 ---
 # <a name="group-clause-c-reference"></a>group 子句 (C# 參考)
@@ -53,7 +53,7 @@ ms.locfileid: "75713475"
 
 ### <a name="grouping-by-numeric-range"></a>依數字範圍群組
 
-下一個範例使用運算式來建立代表百分位數範圍的數字群組索引鍵。 請注意會使用 [let](let-clause.md) 作為儲存方法呼叫結果的方便位置，因此不需要在 `group` 子句中呼叫方法兩次。 如需如何在查詢運算式中安全地使用方法的詳細資訊，請參閱[處理查詢運算式中的例外](../../linq/handle-exceptions-in-query-expressions.md)狀況。
+下一個範例使用運算式來建立代表百分位數範圍的數字群組索引鍵。 請注意會使用 [let](let-clause.md) 作為儲存方法呼叫結果的方便位置，因此不需要在 `group` 子句中呼叫方法兩次。 有關如何在查詢運算式中安全地使用方法的詳細資訊，請參閱[處理查詢運算式中的異常](../../linq/handle-exceptions-in-query-expressions.md)。
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -65,7 +65,7 @@ ms.locfileid: "75713475"
 group person by new {name = person.surname, city = person.city};
 ```
 
-如果您必須將查詢變數傳遞給另一種方法，請使用具名類型。 請使用索引鍵的自動實作屬性建立特殊類別，然後覆寫 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 您也可以使用結構，在此情況下，您絕對不需要覆寫這些方法。 如需詳細資訊，請參閱[如何使用自動執行的屬性來執行輕量類別](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)和[如何查詢樹狀目錄中的重複](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)檔案。 第二篇文章的程式碼範例示範如何使用含有具名類型的複合索引鍵。
+如果您必須將查詢變數傳遞給另一種方法，請使用具名類型。 請使用索引鍵的自動實作屬性建立特殊類別，然後覆寫 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法。 您也可以使用結構，在此情況下，您絕對不需要覆寫這些方法。 有關詳細資訊，請參閱[如何實現具有自動實現屬性的羽量級類](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md)以及如何[查詢目錄樹中的重複檔案](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)。 第二篇文章的程式碼範例示範如何使用含有具名類型的複合索引鍵。
 
 ## <a name="example"></a>範例
 
@@ -77,7 +77,7 @@ group person by new {name = person.surname, city = person.city};
 
 ## <a name="example"></a>範例
 
-這個範例示範如何搭配使用「接續」與 `into`，以在建立其他邏輯之後，對群組執行這些邏輯。 如需詳細資訊，請參閱 [into](into.md)。 下列範例會查詢每個群組，只選取其索引鍵值是母音的群組。
+這個範例示範如何搭配使用「接續」** 與 `into`，以在建立其他邏輯之後，對群組執行這些邏輯。 如需詳細資訊，請參閱 [into](into.md)。 下列範例會查詢每個群組，只選取其索引鍵值是母音的群組。
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 
@@ -85,14 +85,14 @@ group person by new {name = person.surname, city = person.city};
 
 在編譯時期，`group` 子句會轉譯成 <xref:System.Linq.Enumerable.GroupBy%2A> 方法的呼叫。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.IGrouping%602>
 - <xref:System.Linq.Enumerable.GroupBy%2A>
 - <xref:System.Linq.Enumerable.ThenBy%2A>
 - <xref:System.Linq.Enumerable.ThenByDescending%2A>
 - [查詢關鍵字](query-keywords.md)
-- [Language-Integrated Query (LINQ)](../../linq/index.md)
-- [建立巢狀群組](../../linq/create-a-nested-group.md)
-- [將查詢結果分組](../../linq/group-query-results.md)
-- [在分組作業上執行子查詢](../../linq/perform-a-subquery-on-a-grouping-operation.md)
+- [語言綜合查詢（LINQ）](../../linq/index.md)
+- [創建嵌套組](../../linq/create-a-nested-group.md)
+- [組查詢結果](../../linq/group-query-results.md)
+- [對分組操作執行子查詢](../../linq/perform-a-subquery-on-a-grouping-operation.md)
