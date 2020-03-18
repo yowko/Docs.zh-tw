@@ -1,4 +1,4 @@
-- name: 總覽
+- name: 概觀
   href: index.md
 - name: 連接字串
   href: connection-strings.md
@@ -9,7 +9,7 @@
 - name: 資料庫錯誤
   displayName: 'Busy, locked, retries, timeouts'
   href: database-errors.md
-- name: 異動
+- name: 交易
   href: transactions.md
 - name: 批次處理
   href: batching.md
@@ -23,7 +23,7 @@
       href: encryption.md
     - name: 線上備份
       href: backup.md
-    - name: 使用者定義的函式
+    - name: 使用者自訂函數
       displayName: UDFs
       href: user-defined-functions.md
     - name: 自訂 SQLite 版本
@@ -41,7 +41,7 @@
   items:
     - name: ADO.NET
       href: adonet-limitations.md
-    - name: Async
+    - name: 非同步處理
       href: async.md
     - name: 大量插入
       href: bulk-insert.md

@@ -25,7 +25,7 @@
       items:
         - name: HOW TO：建立活動
           href: how-to-create-an-activity.md
-        - name: HOW TO：建立工作流程
+        - name: 'How to: Create a Workflow'
           href: how-to-create-a-workflow.md
           items:
             - name: HOW TO：建立流程圖工作流程
@@ -36,11 +36,11 @@
               href: how-to-create-a-state-machine-workflow.md
         - name: HOW TO：執行工作流程
           href: how-to-run-a-workflow.md
-        - name: HOW TO：建立及執行長時間執行的工作流程
+        - name: 'How to: Create and Run a Long Running Workflow'
           href: how-to-create-and-run-a-long-running-workflow.md
         - name: HOW TO：建立自訂追蹤參與者
           href: how-to-create-a-custom-tracking-participant.md
-        - name: HOW TO：並存裝載工作流程的多個版本
+        - name: HOW TO：裝載工作流程並存的多個版本
           href: how-to-host-multiple-versions-of-a-workflow-side-by-side.md
         - name: HOW TO：更新執行中工作流程執行個體的定義
           href: how-to-update-the-definition-of-a-running-workflow-instance.md
@@ -138,7 +138,7 @@
               href: expressions.md
             - name: 'C# 運算式'
               href: csharp-expressions.md
-            - name: 屬性與引數
+            - name: 屬性與引數的比較
               href: properties-vs-arguments.md
             - name: 使用 CacheMetadata 公開資料
               href: exposing-data-with-cachemetadata.md
@@ -152,7 +152,7 @@
           items:
             - name: 例外狀況
               href: exceptions.md
-            - name: 異動
+            - name: 交易
               href: workflow-transactions.md
             - name: 補償
               href: compensation.md
@@ -169,7 +169,7 @@
               href: using-workflowinvoker-and-workflowapplication.md
             - name: 活動樹狀結構檢查
               href: activity-tree-inspection.md
-            - name: '序列化工作流程及 XAML 之間的活動 '
+            - name: 序列化工作流程及 XAML 之間的活動
               href: serializing-workflows-and-activities-to-and-from-xaml.md
             - name: 使用 WorkflowIdentity 與版本控制
               href: using-workflowidentity-and-versioning.md
@@ -215,7 +215,7 @@
                   items:
                     - name: 持續性資料庫結構描述
                       href: persistence-database-schema.md
-                    - name: HOW TO：將執行個體資料屬性還原序列化
+                    - name: HOW TO：還原序列化執行個體資料屬性
                       href: how-to-deserialize-instance-data-properties.md
                     - name: HOW TO：非保存執行個體的查詢
                       href: how-to-query-for-non-persisted-instances.md
@@ -229,7 +229,7 @@
             - name: 持續性參與者
               href: persistence-participants.md
               items:
-                - name: HOW TO：建立自訂持續性參與者
+                - name: HOW TO：建立自訂非持續性參與者
                   href: how-to-create-a-custom-persistence-participant.md
             - name: 持續性的最佳作法
               href: persistence-best-practices.md
