@@ -1,13 +1,13 @@
 ---
 title: 在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方法
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS 在 eShopOnContainers 訂購微服務中的實作。
-ms.date: 10/08/2018
-ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.date: 03/03/2020
+ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674125"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847150"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>在 eShopOnContainers 的 DDD 微服務中套用 CQRS 和 CQS 方式
 
@@ -23,7 +23,7 @@ eShopOnContainers 參考應用程式中訂購微服務的設計是基於 CQRS �
 
 其中一個模式便是彙總模式，我們會在稍後的章節中檢查。 簡而言之，在彙總模式中，您會將許多領域物件視為其在領域內關聯性結果的單一單位。 您不一定會想要在查詢中利用這種模式，因為它可能會增加查詢邏輯的複雜度。 針對唯讀查詢，您無法藉由將多個物件視為單一彙總而取得好處。 您只會增加複雜度。
 
-如圖 7-2 所示，本指南建議您只在微服務的交易/更新區域中使用 DDD 模式 (即透過命令觸發)。 查詢可遵循更簡單的方法，並且與命令分離，遵循 CQRS 方法。
+如上一節圖 7-2 所示，本指南建議僅在微服務的事務/更新區域（即由命令觸發）中使用 DDD 模式。 查詢可遵循更簡單的方法，並且與命令分離，遵循 CQRS 方法。
 
 若要實作「查詢端」，您可以從您完全成熟的 ORM，像是 EF Core、AutoMapper 投影、預存程序、檢視、具體化檢視或微型 ORM 等許多方法中選擇。
 
@@ -41,15 +41,15 @@ eShopOnContainers 參考應用程式中訂購微服務的設計是基於 CQRS �
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Martin Fowler：CQRS** \
+- **馬丁·福勒CQRS** \
   <https://martinfowler.com/bliki/CQRS.html>
 
-- **Greg Young。CQRS 文件** \
+- **葛列格·楊CQRS 文檔** \
   <https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf>
 
-- **Udi Dahan.已釐清的 CQRS** \
+- **烏迪·達漢澄清的 CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 >[!div class="step-by-step"]
->[上一頁](apply-simplified-microservice-cqrs-ddd-patterns.md)
->[下一頁](cqrs-microservice-reads.md)
+>[上一個](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[下一個](cqrs-microservice-reads.md)

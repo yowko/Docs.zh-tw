@@ -19,10 +19,10 @@ helpviewer_keywords:
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159425"
 ---
 # <a name="types-of-isolation"></a>隔離的類型
@@ -38,9 +38,9 @@ ms.locfileid: "78159425"
   
  隔離儲存區可以透過結合使用者、網域和組件身分識別的概念，以下列方式隔離資料，且每個方式都有自己的使用案例：  
   
-- [依使用者和組件隔離](#UserAssembly)  
+- [按使用者和程式集隔離](#UserAssembly)  
   
-- [依使用者、網域和組件隔離](#UserDomainAssembly)  
+- [按使用者、域和程式集隔離](#UserDomainAssembly)  
   
  這些隔離中，任一個都可以與漫遊使用者設定檔結合。 如需詳細資訊，請參閱[隔離儲存區和漫遊](#Roaming)一節。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "78159425"
  請注意，除了漫遊存放區之外，電腦一律以隱含方式將隔離儲存區隔離，因為它會使用指定電腦本機的儲存設施。  
   
 > [!IMPORTANT]
-> Windows 8.x 存放區應用程式無法使用隔離儲存區。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。  
+> 獨立存儲不適用於 Windows 8.x 應用商店應用。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。  
   
 <a name="UserAssembly"></a>
 ## <a name="isolation-by-user-and-assembly"></a>依使用者和組件隔離  
@@ -73,7 +73,7 @@ ms.locfileid: "78159425"
   
 <a name="UserDomainAssembly"></a>
 ## <a name="isolation-by-user-domain-and-assembly"></a>依使用者、網域和組件隔離  
- 如果您的應用程式使用需要私人資料存放區的協力廠商組件，您可以使用隔離儲存區來儲存私人資料。 依使用者、網域和組件隔離可確保只有指定之組件中的程式碼可以存取資料，而且只有在組件由建立存放區時所執行的應用程式使用的情況下，以及只有在建立存放區之使用者執行應用程式的情況下，才可以存取。 依使用者、網域和組件隔離可防止協力廠商組件向其他應用程式洩漏資料。 如果您知道您想要使用隔離儲存區，但不確定要使用哪一種隔離，這種隔離類型應該是預設選擇。 呼叫 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 的靜態 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 方法，並傳入使用者、網域和組件 <xref:System.IO.IsolatedStorage.IsolatedStorageScope> 會傳回具有這種隔離的儲存區。  
+ 如果您的應用程式使用需要私人資料存放區的協力廠商組件，您可以使用隔離儲存區來儲存私人資料。 依使用者、網域和組件隔離可確保只有指定之組件中的程式碼可以存取資料，而且只有在組件由建立存放區時所執行的應用程式使用的情況下，以及只有在建立存放區之使用者執行應用程式的情況下，才可以存取。 依使用者、網域和組件隔離可防止協力廠商組件向其他應用程式洩漏資料。 如果您知道您想要使用隔離儲存區，但不確定要使用哪一種隔離，這種隔離類型應該是預設選擇。 呼叫 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 的靜態 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> 方法，並傳入使用者、網域和組件 <xref:System.IO.IsolatedStorage.IsolatedStorageScope> 會傳回具有這種隔離的儲存區。  
   
  下列程式碼範例會擷取依使用者、網域和組件隔離的存放區。 您可以透過 `isoFile` 物件存取這個存放區。  
   
@@ -106,4 +106,4 @@ ms.locfileid: "78159425"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
-- [隔離儲存區](../../../docs/standard/io/isolated-storage.md)
+- [隔離存儲](../../../docs/standard/io/isolated-storage.md)

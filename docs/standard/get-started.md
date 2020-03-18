@@ -6,33 +6,33 @@ ms.date: 01/21/2020
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
 ms.openlocfilehash: af0ce454a986f22dfb00888cab6e34901930c5a9
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124256"
 ---
 # <a name="get-started"></a>開始使用
 
-開始使用 .NET 的方法有好幾種。 由於 .NET 是一個龐大的平臺，因此本檔中有多篇文章可協助您開始使用 .NET，每個都有不同的觀點。
+開始使用 .NET 的方法有好幾種。 由於 .NET 是一個龐大的平臺，因此本文檔中有多個文章可以説明您從不同的角度開始使用 .NET。
 
 ## <a name="get-started-using-net-languages"></a>開始使用 .NET 語言
 
-* 使用者入門文章和[ C#教學](../csharp/tutorials/index.md)課程提供以為中心的方式開始C#使用的方式。 [ C# ](../csharp/getting-started/index.md)
+* [C# 入門](../csharp/getting-started/index.md)文章和[C# 教程](../csharp/tutorials/index.md)提供了以 C# 為中心的方法入門的方法。
 
-* 快速入門教學課程涵蓋了您可以使用F#的三種主要方式：使用 Visual Studio、Visual Studio Code 或命令列工具。 [ F# ](../fsharp/get-started/index.md)
+* [F# 入門](../fsharp/get-started/index.md)教程介紹了可以使用 F# 的三種主要方法：使用視覺化工作室、視覺化工作室代碼或命令列工具。
 
-* [Visual Basic 使用者入門](../visual-basic/getting-started/index.md)文章提供在 Visual Studio 中使用 Visual Basic 的指南。
+* [視覺基本入門](../visual-basic/getting-started/index.md)文章提供了在視覺工作室中使用視覺基本版指南。
 
 ## <a name="get-started-using-net-core"></a>開始使用 .NET Core
 
-* [.Net Core 快速](../core/get-started.md)入門概述文章，說明如何在不同的作業系統上開始使用 .net Core，以及如何使用不同的工具。
+* [開始使用 .NET Core](../core/get-started.md)提供了文章的概述，其中演示如何在不同的作業系統和使用不同的工具上開始使用 .NET Core。
 
-* [.Net core 教學](../core/tutorials/index.md)課程詳細說明如何使用您的作業系統和選擇的工具來開始使用 .net core。
+* [.NET Core 教程](../core/tutorials/index.md)詳細介紹了使用作業系統和首選工具開始使用 .NET Core 的方法。
 
-## <a name="get-started-using-net-standard"></a>開始使用 .NET Standard
+## <a name="get-started-using-net-standard"></a>開始使用 .NET 標準
 
-* 如需入門教學課程，請參閱[在 Visual Studio 中建立 .NET Standard 程式庫](../core/tutorials/library-with-visual-studio.md)。
+* 有關介紹性教程，請參閱[在 Visual Studio 中構建 .NET 標準庫](../core/tutorials/library-with-visual-studio.md)。
 
 ## <a name="get-started-using-net-core-on-docker"></a>開始在 Docker 上使用 .NET Core
 

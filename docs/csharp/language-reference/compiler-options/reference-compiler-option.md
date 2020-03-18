@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 247fb222eaacdb5ee60df2dded3a857f0395eb34
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 3e6a999d528be111ba2b92886f4e6e3ebf185d5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606581"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173662"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C# 編譯器選項)
 **-reference** 選項可讓編譯器將指定檔案的 [public](../keywords/public.md) 類型資訊匯入至目前的專案，以讓您透過指定的組件檔案來參考中繼資料。  
@@ -61,7 +61,7 @@ ms.locfileid: "69606581"
  預設會使用 csc 回應檔 (.rsp)，以參考常用的 .NET Framework 組件。 如果您不想讓編譯器使用 csc.rsp，可使用 [-noconfig](./noconfig-compiler-option.md)。  
   
 > [!NOTE]
-> 在 Visual Studio 中，使用 [新增參考]  對話方塊。 如需詳細資訊，請參閱[如何：使用參考管理員新增或移除參考](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。 新增參考時，為了確保使用 `-reference` 以及使用 [新增參考]  對話方塊的對等行為，請將您要新增之組件的 [內嵌 Interop 類型]  屬性設為 **False**。 這個屬性的預設值為 **True**。  
+> 在 Visual Studio 中，使用 [新增參考]**** 對話方塊。 如需詳細資訊，請參閱 [如何：使用參考管理員新增或移除參考](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。 新增參考時，為了確保使用 `-reference` 以及使用 [新增參考]**** 對話方塊的對等行為，請將您要新增之組件的 [內嵌 Interop 類型]**** 屬性設為 **False**。 這個屬性的預設值為 **True**。  
   
 ## <a name="example"></a>範例  
  這個範例會示範如何使用[外部別名](../keywords/extern-alias.md)功能。  
@@ -89,7 +89,7 @@ GridV1::Grid
  此外，您可以在 `GridV2` 前面加上控制項名稱，以參照 `grid20.dll` 的方格控制項，如下所示：  
   
 ```csharp  
-GridV2::Grid   
+GridV2::Grid
 ```  
   
 ## <a name="see-also"></a>另請參閱

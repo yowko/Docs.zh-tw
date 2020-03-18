@@ -6,10 +6,10 @@ helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 ms.openlocfilehash: 790543118b18b0422f41c3249512b62aae0cfb03
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75938102"
 ---
 # <a name="thread-safe-collections"></a>安全執行緒集合
@@ -43,15 +43,15 @@ ms.locfileid: "75938102"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[BlockingCollection 概觀](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|描述 <xref:System.Collections.Concurrent.BlockingCollection%601> 類型所提供的功能。|  
-|[操作說明：在 ConcurrentDictionary 中新增和移除項目](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|描述如何新增和移除 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 中的項目|  
+|[如何：在 ConcurrentDictionary 中加入和移除項目](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|描述如何新增和移除 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 中的項目|  
 |[操作說明：從 BlockingCollection 個別新增和擷取項目](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|描述在未使用唯讀列舉值的情況下，如何新增和擷取封鎖回收中的項目。|  
-|[操作說明：將界限和封鎖功能新增至集合](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|描述如何使用任何集合類別作為 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 集合的基礎儲存機制。|  
-|[操作說明：使用 ForEach 來移除 BlockingCollection 中的項目](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|描述如何使用 `foreach` (在 Visual Basic 中為 `For Each`) 來移除封鎖集合中的所有項目。|  
-|[操作說明：在管線中使用封鎖集合的陣列](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|描述如何同時使用多個封鎖回收來實作管線。|  
+|[如何：將界限和封鎖功能新增至集合](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|描述如何使用任何集合類別作為 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> 集合的基礎儲存機制。|  
+|[如何：使用 ForEach 來移除 BlockingCollection 中的項目](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|描述如何使用 `foreach` (在 Visual Basic 中為 `For Each`) 來移除封鎖集合中的所有項目。|  
+|[如何：在管線中使用封鎖集合的陣列](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|描述如何同時使用多個封鎖回收來實作管線。|  
 |[如何：使用 ConcurrentBag 建立物件集區](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|示範在您可以重複使用物件而非持續建立新物件的情況下，如何使用並行資料包改善效能。|  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

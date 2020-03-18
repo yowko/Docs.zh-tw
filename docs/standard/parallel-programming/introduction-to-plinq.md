@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 ms.openlocfilehash: ed1b2df57c118a0ebb6b5ffa4326b3e2eac81dec
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75632359"
 ---
 # <a name="introduction-to-plinq"></a>PLINQ 簡介
@@ -21,7 +21,7 @@ ms.locfileid: "75632359"
 
 Language-Integrated Query (LINQ) 是在 .NET Framework 3.5 中引進的。 其特色是以型別安全方法查詢任何 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 資料來源的統一模型。 LINQ to Objects 是 LINQ 查詢的名稱，它是針對記憶體中的集合 (例如 <xref:System.Collections.Generic.List%601> 和陣列) 執行。 本文假設您已對 LINQ 有基本了解。 如需詳細資訊，請參閱 [Language-Integrated Query (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md) 或 [Language-Integrated Query (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。
 
-Parallel LINQ (PLINQ) 是平行實作的 LINQ 模式。 PLINQ 查詢在很多方面類似於非平行 LINQ to Objects 查詢。 PLINQ 查詢就如同連續的 LINQ 查詢，會在任何記憶體中的 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 資料來源上運作，並具有延後執行，這表示在列舉查詢之前，它們不會開始執行。 這兩種查詢的主要差別在於，PLINQ 會嘗試充分利用系統上的所有處理器。 它所採取的方式是將資料來源分割成多個區段，然後在多個處理器上，以平行方式在不同的背景工作執行緒上對每個區段執行查詢。 在許多情況下，平行執行意謂著查詢的執行速度會明顯加快。
+Parallel LINQ (PLINQ) 是平行實作的 LINQ 模式。 PLINQ 查詢在很多方面類似於非平行 LINQ to Objects 查詢。 PLINQ 查詢（與順序 LINQ 查詢一樣）對任何記憶體<xref:System.Collections.IEnumerable>中或<xref:System.Collections.Generic.IEnumerable%601>資料來源進行操作，並且具有順延強制，這意味著在枚舉查詢之前，它們不會開始執行。 這兩種查詢的主要差別在於，PLINQ 會嘗試充分利用系統上的所有處理器。 它所採取的方式是將資料來源分割成多個區段，然後在多個處理器上，以平行方式在不同的背景工作執行緒上對每個區段執行查詢。 在許多情況下，平行執行意謂著查詢的執行速度會明顯加快。
 
 透過平行執行，PLINQ 就能對適用於某些查詢種類的舊版程式碼，達成顯著的效能改善，而這通常只需要對資料來源新增 <xref:System.Linq.ParallelEnumerable.AsParallel%2A> 作業即可做到。 不過，平行處理原則也會帶來自己的複雜性，所以並非所有查詢作業都可透過 PLINQ 加快執行速度。 事實上，平行處理的確會降低某些查詢的速度。 因此，您應該了解各種問題 (例如排序) 會如何影響平行查詢。 如需詳細資訊，請參閱[認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)。
 
@@ -34,7 +34,7 @@ Parallel LINQ (PLINQ) 是平行實作的 LINQ 模式。 PLINQ 查詢在很多方
 
 <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> 類別會公開幾乎所有的 PLINQ 功能。 此類別和其餘的 <xref:System.Linq?displayProperty=nameWithType> 命名空間型別會編譯成 System.Core.dll 組件。 Visual Studio 中預設的 C# 和 Visual Basic 專案都會參考此組件並匯入該命名空間。
 
-<xref:System.Linq.ParallelEnumerable> 會實作 LINQ to Objects 所支援的所有標準查詢運算子，但不會嘗試平行處理每個運算子。 如果您不熟悉 linq，請參閱[linq 簡介（C#）](../../csharp/programming-guide/concepts/linq/index.md)和[linq 簡介（Visual Basic）](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)。
+<xref:System.Linq.ParallelEnumerable> 會實作 LINQ to Objects 所支援的所有標準查詢運算子，但不會嘗試平行處理每個運算子。 如果您不熟悉 LINQ，請參閱[LINQ 簡介 （C#）](../../csharp/programming-guide/concepts/linq/index.md)和[LINQ 簡介（視覺基礎知識）。](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
 
 除了標準查詢運算子外，<xref:System.Linq.ParallelEnumerable> 類別還會包含一組方法，以供啟用平行執行特有的行為。 下表列出這些 PLINQ 特有的方法。
 
@@ -64,7 +64,7 @@ Parallel LINQ (PLINQ) 是平行實作的 LINQ 模式。 PLINQ 查詢在很多方
 
 根據預設，PLINQ 會保守行事。 在執行階段，PLINQ 基礎結構會分析查詢的整體結構。 如果查詢可透過平行化作業來加快執行速度，PLINQ 會將來源序列分割成可同時執行的工作。 如果平行處理查詢的方式並不安全，PLINQ 就會循序執行查詢。 如果 PLINQ 可選擇是要使用成本可能較高的平行演算法，還是使用成本不高的循序演算法，則依預設它會選擇循序演算法。 您可以使用 <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> 方法和 <xref:System.Linq.ParallelExecutionMode?displayProperty=nameWithType> 列舉來指示 PLINQ 選取平行演算法。 當您在測試和測量後得知，某特定查詢在平行執行時速度會更快，便適合這麼做。 如需詳細資訊，請參閱[如何：在 PLINQ 中指定執行模式](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)。
 
-## <a name="degree-of-parallelism"></a>平行處理原則的刻度
+## <a name="degree-of-parallelism"></a>平行處理原則的程度
 
 根據預設，PLINQ 會使用主機電腦上的所有處理器。 您可以使用 <xref:System.Linq.ParallelEnumerable.WithDegreeOfParallelism%2A> 方法來指示 PLINQ 使用不超過指定數目的處理器。 若您想要確保電腦上執行的其他處理序可獲得一定的 CPU 使用時間，您便可以這麼做。 下列程式碼片段會限制查詢最多只能使用兩個處理器。
 
@@ -94,7 +94,7 @@ Parallel LINQ (PLINQ) 是平行實作的 LINQ 模式。 PLINQ 查詢在很多方
 
 ## <a name="the-forall-operator"></a>ForAll 運算子
 
-在連續的 LINQ 查詢中，會延後執行，直到查詢是在 `foreach` （在 Visual Basic 中`For Each`）迴圈中列舉，或叫用 <xref:System.Linq.ParallelEnumerable.ToList%2A>、<xref:System.Linq.ParallelEnumerable.ToArray%2A> 或 <xref:System.Linq.ParallelEnumerable.ToDictionary%2A>之類的方法。 在 PLINQ 中，您也可以使用 `foreach` 來執行查詢，並逐一查看各項結果。 不過，`foreach` 本身並不會以平行方式執行，因此，所有平行工作的輸出必須合併回用來執行迴圈的執行緒。 在 PLINQ 中，當您必須保留查詢結果的最終排序時，以及每當您以序列方式處理結果時 (例如，當您為每個元素呼叫 `Console.WriteLine` 時)，您都可以使用 `foreach`。 在不必保留順序時，以及在結果本身可以平行處理時，若您需要更快速地執行查詢，請使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法來執行 PLINQ 查詢。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 不會執此最終合併步驟。 下列程式碼範例示範如何使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法。 這裡會使用 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>，因為它已經過最佳化，能夠用於同時新增的多個執行緒，而不會嘗試移除任何項目。
+在順序 LINQ 查詢中，執行將延遲，直到`foreach`在（Visual`For Each` Basic）迴圈中枚舉查詢，或者通過調用方法（如<xref:System.Linq.ParallelEnumerable.ToList%2A>）<xref:System.Linq.ParallelEnumerable.ToArray%2A>或<xref:System.Linq.ParallelEnumerable.ToDictionary%2A>。 在 PLINQ 中，您也可以使用 `foreach` 來執行查詢，並逐一查看各項結果。 不過，`foreach` 本身並不會以平行方式執行，因此，所有平行工作的輸出必須合併回用來執行迴圈的執行緒。 在 PLINQ 中，當您必須保留查詢結果的最終排序時，以及每當您以序列方式處理結果時 (例如，當您為每個元素呼叫 `Console.WriteLine` 時)，您都可以使用 `foreach`。 在不必保留順序時，以及在結果本身可以平行處理時，若您需要更快速地執行查詢，請使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法來執行 PLINQ 查詢。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 不會執此最終合併步驟。 下列程式碼範例示範如何使用 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 方法。 這裡會使用 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>，因為它已經過最佳化，能夠用於同時新增的多個執行緒，而不會嘗試移除任何項目。
 
 [!code-csharp[PLINQ#4](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#4)]
 [!code-vb[PLINQ#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#4)]
@@ -105,7 +105,7 @@ Parallel LINQ (PLINQ) 是平行實作的 LINQ 模式。 PLINQ 查詢在很多方
 
 ## <a name="cancellation"></a>取消
 
-PLINQ 已與 .NET Framework 4 中的取消作業型別整合。 （如需詳細資訊，請參閱[Managed 執行緒中的取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)）。因此，與順序 LINQ to Objects 查詢不同的是，PLINQ 查詢可以取消。 若要建立可取消的 PLINQ 查詢，請在查詢中使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 運算子，並提供 <xref:System.Threading.CancellationToken> 執行個體做為引數。 當權杖上的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性設為 true 時，PLINQ 將注意到，並會停止所有執行緒上的處理作業，然後擲回 <xref:System.OperationCanceledException>。
+PLINQ 已與 .NET Framework 4 中的取消作業型別整合。 （有關詳細資訊，請參閱[在託管執行緒中取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)。因此，與按順序 LINQ 到物件查詢不同，可以取消 PLINQ 查詢。 若要建立可取消的 PLINQ 查詢，請在查詢中使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 運算子，並提供 <xref:System.Threading.CancellationToken> 執行個體做為引數。 當權杖上的 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性設為 true 時，PLINQ 將注意到，並會停止所有執行緒上的處理作業，然後擲回 <xref:System.OperationCanceledException>。
 
 在設定了取消權杖之後，PLINQ 查詢還是可能會繼續處理某些元素。
 
@@ -132,7 +132,7 @@ PLINQ 支援固定數目的分割 (但在執行階段為了保持負載平衡，
 
 在許多情況下，查詢可平行處理，但設定平行查詢時所帶來的額外負荷，遠超過所獲得的效能好處。 如果查詢不會執行許多計算，或如果資料來源很小，PLINQ 查詢的速度可能會比 LINQ to Objects 循序查詢還慢。 您可以使用 Visual Studio Team Server 中的 Parallel Performance Analyzer 來比較各種查詢的效能，以找出處理瓶頸，以及判斷您的查詢該平行執行還是循序執行。 如需詳細資訊，請參閱[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer)和[如何：測量 PLINQ 查詢效能](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [認識 PLINQ 中的加速](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - '#endregion directive [C#]'
 ms.assetid: 16099660-91b2-49e5-9646-77f9ef069526
-ms.openlocfilehash: b334691689da8b3e8f74f4899e34061bfc921c07
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c61c7a890811014acc69a43e422be53480bfb6f9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712529"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173415"
 ---
 # <a name="endregion-c-reference"></a>#endregion (C# 參考)
 `#endregion` 會標示 [#region](./preprocessor-region.md) 區塊的結尾。 例如：  
   
 ```csharp
 #region MyClass definition  
-class MyClass   
+class MyClass
 {  
-    static void Main()   
+    static void Main()
     {  
     }  
 }  
 #endregion  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 前置處理器指示詞](./index.md)
+- [C# 預處理器指令](./index.md)

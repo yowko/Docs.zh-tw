@@ -13,14 +13,14 @@ helpviewer_keywords:
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
 ms.openlocfilehash: 1038f16dca507e58005189c9558a9ec8dae4b34f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159698"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
-自動記憶體管理是 Common Language Runtime 在 [Managed 執行](../../docs/standard/managed-execution-process.md)期間所提供的一項服務。 Common Language Runtime 的記憶體回收行程會管理應用程式記憶體的配置和釋放。 這表示開發人員在開發 Managed 應用程式時，不需要撰寫程式碼來執行記憶體管理工作。 自動記憶體管理可排除一些常見的問題，例如，忘記釋放物件而造成記憶體流失 (Memory Leak)，或嘗試存取已經釋放物件的記憶體。 本章節將描述記憶體回收行程如何配置和釋放記憶體。  
+自動記憶體管理是通用語言運行時在[託管執行](../../docs/standard/managed-execution-process.md)期間提供的服務之一。 Common Language Runtime 的記憶體回收行程會管理應用程式記憶體的配置和釋放。 這表示開發人員在開發 Managed 應用程式時，不需要撰寫程式碼來執行記憶體管理工作。 自動記憶體管理可排除一些常見的問題，例如，忘記釋放物件而造成記憶體流失 (Memory Leak)，或嘗試存取已經釋放物件的記憶體。 本章節將描述記憶體回收行程如何配置和釋放記憶體。  
   
 ## <a name="allocating-memory"></a>配置記憶體  
  當您初始化新的處理序 (Process) 時，Runtime 會保留一塊連續的位址空間區域，供處理序使用。 這塊保留的位址空間稱為 Managed 堆積 (Heap)。 Managed 堆積會保留即將配置給堆積中下一個物件的位址指標。 剛開始會將這個指標設定為 Managed 堆積的基底位址 (Base Address)。 所有[參考類型](../../docs/standard/base-types/common-type-system.md)都是在 Managed 堆積上進行配置。 當應用程式建立第一個參考型別時，會為該型別配置 Managed 堆積基底位址的記憶體。 當應用程式建立第二個物件時，記憶體回收行程會為它配置緊接在第一個物件後面位址空間的記憶體。 只要有可供使用的位址空間，記憶體回收行程就會繼續用這種方式為新的物件配置空間。  

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 ms.openlocfilehash: ad36789579b95e0129e402765194b9f5e45a4cc1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127509"
 ---
 # <a name="threads-and-threading"></a>執行緒與執行緒處理
@@ -20,12 +20,12 @@ ms.locfileid: "73127509"
 
 ## <a name="processes-and-threads"></a>處理序和執行緒
 
-「處理序」是正在執行的程式。 作業系統使用處理序來分隔正在執行的應用程式。 「執行緒」是要作業系統配置處理器時間的基本單位。 每個執行緒都有[排程優先順序](scheduling-threads.md)，並保有系統在執行緒執行暫停時用來儲存執行緒內容的一組結構。 執行緒內容包括執行緒順暢繼續執行所需的所有資訊，包括執行緒的一組 CPU 暫存器和堆疊。 多個執行緒可在一個處理序中執行。 一個處理序的所有執行緒都共用該處理序的虛擬位址空間。 執行緒可以執行任一部分的程式碼，包括另一個執行緒目前正在執行的部分。
+「處理序」** 是正在執行的程式。 作業系統使用處理序來分隔正在執行的應用程式。 「執行緒」** 是要作業系統配置處理器時間的基本單位。 每個執行緒都有[排程優先順序](scheduling-threads.md)，並保有系統在執行緒執行暫停時用來儲存執行緒內容的一組結構。 執行緒內容包括執行緒順暢繼續執行所需的所有資訊，包括執行緒的一組 CPU 暫存器和堆疊。 多個執行緒可在一個處理序中執行。 一個處理序的所有執行緒都共用該處理序的虛擬位址空間。 執行緒可以執行任一部分的程式碼，包括另一個執行緒目前正在執行的部分。
 
 > [!NOTE]
-> .NET Framework 提供使用「應用程式定義域」來隔離處理序內應用程式的方式 （應用程式域無法在 .NET Core 上使用）。如需詳細資訊，請參閱[應用程式域](../../framework/app-domains/application-domains.md)一文的[應用程式域和執行緒](../../framework/app-domains/application-domains.md#application-domains-and-threads)一節。
+> .NET Framework 提供使用「應用程式定義域」** 來隔離處理序內應用程式的方式  （應用程式域在 .NET Core 上不可用。有關詳細資訊，請參閱[應用程式域](../../framework/app-domains/application-domains.md)一文[中的應用程式域和執行緒](../../framework/app-domains/application-domains.md#application-domains-and-threads)部分。
 
-根據預設，.NET 程式會從單一執行緒開始，通常稱為「主」執行緒。 不過，它可以建立額外的執行緒與主執行緒平行或同時執行程式碼。 這些執行緒通常稱為「背景工作執行緒」。
+根據預設，.NET 程式會從單一執行緒開始，通常稱為「主」** 執行緒。 不過，它可以建立額外的執行緒與主執行緒平行或同時執行程式碼。 這些執行緒通常稱為*輔助執行緒*。
 
 ## <a name="when-to-use-multiple-threads"></a>使用多執行緒的時機
 
@@ -47,9 +47,9 @@ TPL 和 PLINQ 都憑藉 <xref:System.Threading.ThreadPool> 執行緒來運作。
 
 請務必處理執行緒中的例外狀況。 執行緒中未處理的例外狀況一般會終止處理序。 如需詳細資訊，請參閱[受控執行緒中的例外狀況](exceptions-in-managed-threads.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行緒物件和功能](threading-objects-and-features.md)
 - [受控執行緒處理最佳做法](managed-threading-best-practices.md)
 - [.NET 中的平行處理、並行和非同步程式設計](../parallel-processing-and-concurrency.md)
-- [About Processes and Threads](/windows/desktop/procthread/about-processes-and-threads) (處理序和執行緒的簡介)
+- [關於處理序和執行緒](/windows/desktop/procthread/about-processes-and-threads)

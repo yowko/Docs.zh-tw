@@ -1,279 +1,279 @@
 ---
-title: 關聯式與 NoSQL 資料的比較
-description: 瞭解雲端原生應用程式中的關聯式和 NoSQL 資料
+title: 關係與 NoSQL 資料
+description: 瞭解雲原生應用程式中的關係資料和 NoSQL 資料
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: 5ca40791f6c6a3d04f3a7d7d9d2dbf0f23196f8f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 04693e30ba3848f1e51f1c69a75be5f18ead4cf1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794916"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141415"
 ---
-# <a name="relational-vs-nosql-data"></a>關聯式與 NoSQL 資料的比較
+# <a name="relational-vs-nosql-data"></a>關係與 NoSQL 資料
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-關聯式和 NoSQL 是在雲端原生應用程式中，通常會實作為兩種類型的資料庫系統。 它們會以不同的方式建立、以不同的方式儲存資料，並以不同方式存取。 在本節中，我們將探討這兩者。 在本章稍後，我們將探討名為*NewSQL*的新興資料庫技術。
+關係和 NoSQL 是兩種類型的資料庫系統，通常在雲本機應用程式中實現。 它們構建方式不同，存儲資料不同，訪問方式也不同。 在本節中，我們將介紹這兩個。 在本章的後面部分，我們將介紹一種名為*NewSQL*的新興資料庫技術。
 
-*關係資料庫*是數十年的普遍技術。 這些是成熟、經過證明且廣泛實行的。 競爭資料庫產品、工具和專業知識為數眾多。 關係資料庫會提供相關資料表的存放區。 這些資料表具有固定的架構，使用 SQL （結構化查詢語言 (SQL)）來管理資料，並支援 ACID 保證。
+*幾十年來，關係資料庫*一直是一種流行的技術。 它們成熟、成熟且廣泛實施。 競爭的資料庫產品、工具和專業知識比比皆是。 關係資料庫提供相關資料表的存儲。 這些表具有固定的架構，使用 SQL（結構化查詢語言）來管理資料，並支援 ACID 保證。
 
-*無-SQL 資料庫*會參考高效能、非關聯式資料存放區。 他們在 excel 中使用易用性、擴充性、彈性和可用性等特性。 NoSQL 不會聯結正規化資料的資料表，而是儲存非結構化或半結構化資料，通常是在索引鍵/值組或 JSON 檔中。 無-SQL 資料庫通常不會提供超出單一資料庫分割範圍的 ACID 保證。 需要次要秒數回應時間的高容量服務，傾向于 NoSQL 資料存放區。
+*無 SQL 資料庫*是指高性能、非關係資料存儲。 他們在易用性、可擴充性、彈性和可用性特性方面表現卓越。 NoSQL 不是聯接正常化資料的表，而是存儲非結構化或半結構化資料，通常存儲在鍵值對或 JSON 文檔中。 無 SQL 資料庫通常不提供超出單個資料庫分區範圍的 ACID 保證。 需要次秒回應時間的高容量服務有利於 NoSQL 資料存儲。
 
-無法十分出色分散式雲端原生系統的[NoSQL](https://www.geeksforgeeks.org/introduction-to-nosql/)技術影響。 這個空間中的新資料技術激增，有一次只依賴關係資料庫而中斷的解決方案。
+[NoSQL](https://www.geeksforgeeks.org/introduction-to-nosql/)技術對分散式雲本機系統的影響怎麼強調也不為過。 這一領域的新資料技術的激增打亂了曾經完全依賴關係資料庫的解決方案。
 
-NoSQL 資料庫包含數種不同的模型，可用於存取和管理資料，每個都適用于特定的使用案例。 圖5-9 顯示四個常見的模型。
+NoSQL 資料庫包括幾個用於訪問和管理資料的不同模型，每個模型都適合特定的用例。 圖 5-9 顯示了四種常見模型。
 
-![NoSQL 資料模型](./media/types-of-nosql-datastores.png)
+![無SQL資料模型](./media/types-of-nosql-datastores.png)
 
 **圖 5-9**： NoSQL 資料庫的資料模型
 
-| 型號 | 特性 |
+| 模型 | 特性 |
 | :-------- | :-------- |
-| 檔存放區 | 資料和中繼資料會以階層方式儲存在資料庫內以 JSON 為基礎的檔中。 |
-| 金鑰值存放區 | 最簡單的 NoSQL 資料庫，資料會以索引鍵/值組的集合表示。 |
-| 寬資料行存放區 | 相關資料會以一組嵌套索引鍵/值配對的形式儲存在單一資料行中。 |
-| 圖形存放區 | 資料會儲存在圖形結構中，做為節點、邊緣和資料屬性。 |
+| 文檔存儲 | 資料和中繼資料在資料庫中基於 JSON 的文檔中分層存儲。 |
+| 關鍵價值存儲 | 作為 NoSQL 資料庫中最簡單的資料，資料表示為鍵值對的集合。 |
+| 寬柱商店 | 相關資料存儲在單個列中的一組嵌套鍵/值對中。 |
+| 圖形存儲 | 資料存儲在圖形結構中作為節點、邊和資料屬性。 |
 
 ## <a name="the-cap-theorem"></a>CAP 定理
 
-若要瞭解這些資料庫類型之間的差異，請考慮 CAP 定理，這是一組套用至儲存狀態之分散式系統的原則。 圖5-10 顯示 CAP 定理的三個屬性。
+為了瞭解這些類型的資料庫之間的差異，請考慮 CAP 定理，這是一組應用於存儲狀態的分散式系統的原則。 圖 5-10 顯示了 CAP 定理的三個屬性。
 
 ![CAP 定理](./media/cap-theorem.png)
 
 **圖 5-10**。 CAP 定理
 
-定理說明分散式資料系統會在一致性、可用性及分割區容錯之間提供取捨。 而且，任何資料庫都只能保證三個屬性的其中*兩個*：
+該定理指出，分散式資料系統將在一致性、可用性和分區容差之間進行權衡。 而且，任何資料庫只能保證三個屬性中的*兩*個：
 
-- *保證.* 叢集中的每個節點都會以最新的資料回應，即使系統必須封鎖要求，直到所有複本更新為止。 如果您查詢目前正在更新之專案的「一致系統」，您會等待該回應，直到所有複本都成功更新為止。 不過，您將會收到最新的資料。
+- *一致性。* 群集中的每個節點都回應最新的資料，即使系統必須阻止請求，直到所有副本更新。 如果查詢當前正在更新的專案的"一致系統"，則將等待該回應，直到所有副本成功更新。 但是，您將收到最新的資料。
 
-- *提供.* 每個節點都會傳回立即回應，即使該回應不是最新的資料也一樣。 如果您針對正在更新的專案查詢「可用的系統」，您會收到服務可在當時提供的最佳解答。
+- *可用 性。* 每個節點都會返回即時回應，即使該回應不是最新的資料。 如果查詢正在更新的專案的"可用系統"，您將獲得該服務此時可以提供的最佳答案。
 
-- *分割區容錯。* 保證即使複寫的資料節點失敗或失去與其他複寫資料節點的連線，系統仍會繼續運作。
+- *分區容差。* 保證即使複製的資料節點發生故障或失去與其他複製資料節點的連接，系統也能繼續運行。
 
-關係資料庫通常會提供一致性和可用性，而不是分割區容錯。 它們通常會布建到單一伺服器，並藉由將更多資源新增至電腦來垂直調整。
+關係資料庫通常提供一致性和可用性，但不提供分區容差。 它們通常預配到單個伺服器，並通過向電腦添加更多資源來垂直擴展。
 
-許多關係資料庫系統都支援內建複寫功能，其中主資料庫的複本可以對其他次要伺服器實例進行。 寫入作業會對主要實例進行，並複寫到每個次要資料庫。 失敗時，主要實例可以故障切換到次要資料庫，以提供高可用性。 次要複本也可以用來散發讀取作業。 雖然寫入作業一律會針對主要複本進行，但是讀取作業可以路由傳送至任何次要資料庫，以減少系統負載。
+許多關係資料庫系統都支援內置複製功能，其中主資料庫的副本可以製作到其他次要伺服器實例。 寫入操作對主實例執行，並複製到每個輔助實例。 發生故障時，主實例可能會容錯移轉到輔助實例以提供高可用性。 次要資料庫還可用於分發讀取操作。 雖然寫入操作始終針對主副本，但讀取操作可以路由到任何輔助副本，以減少系統負載。
 
-資料也可以跨多個節點進行水準分割，例如使用[分區化](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-scale-introduction)。 但是，分區化會在多個無法輕鬆通訊的部分分隔資料，大幅增加作業額外負荷。 管理成本可能很高，而且耗時。 最後，它可能會影響效能、資料表聯結和參考完整性。
+資料也可以跨多個節點水準分區，例如分[片](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-scale-introduction)。 但是，分片化通過將資料吐出許多不易通信的片段，大大增加了操作開銷。 管理可能既昂貴又耗時。 它最終可能會影響性能、表聯接和參考完整性。
 
-如果資料複本在「高度一致」的關係資料庫叢集中遺失網路連線，您將無法寫入資料庫。 系統會拒絕寫入作業，因為它無法將該變更複寫到其他資料複本。 在交易完成之前，每個資料複本都必須更新。
+如果資料副本在"高度一致"的關係資料庫群集中失去網路連接，您將無法寫入資料庫。 系統將拒絕寫入操作，因為它無法將該更改複製到其他資料副本。 每個資料副本都必須在事務完成之前進行更新。
 
-NoSQL 資料庫通常會支援高可用性和分割區容錯。 它們會水準相應放大，通常是跨商用伺服器。 這種方法可讓您以更低的成本，在地理區域內外提供極高的可用性。 您可以跨這些機器或節點分割和複寫資料，以提供冗余和容錯功能。 缺點是一致的。 對某個 NoSQL 節點上的資料所做的變更，可能需要一些時間才能傳播至其他節點。 Typically, a NoSQL database node will provide an immediate response to a query - even if the data that is presented is stale and hasn't updated yet.
+NoSQL 資料庫通常支援高可用性和分區容差。 它們橫向擴展，通常跨商品伺服器擴展。 這種方法在地理區域內和跨地理區域之間提供巨大的可用性，成本降低。 跨這些電腦或節點對資料進行分區和複製，從而提供冗余和容錯能力。 缺點是一致性。 更改一個 NoSQL 節點上的資料可能需要一些時間才能傳播到其他節點。 通常，NoSQL 資料庫節點會立即回應查詢 - 即使顯示的資料已過時且尚未更新。
 
-If data replicas were to lose connectivity in a "highly available" NoSQL database cluster, you could still complete a write operation to the database. The database cluster would allow the write operation and update each data replica as it becomes available.
+如果資料副本在"高度可用"的 NoSQL 資料庫群集中失去連接，您仍然可以完成對資料庫的寫入操作。 資料庫群集將允許寫入操作，並在每個資料副本可用時更新它。
 
-This kind of result is known as eventual consistency, a characteristic of distributed data systems where ACID transactions aren't supported. It's a brief delay between the update of a data item and time that it takes to propagate that update to each of the replica nodes. Under normal conditions, the lag is typically short, but can increase when problems arise. For example, what would happen if you were to update a product item in a NoSQL database in the United States and query that same data item from a replica node in Europe? You would receive the earlier product information, until the cluster updates the European node with the product change. By immediately returning a query result and not waiting for all replica nodes to update, you gain enormous scale and volume, but with the possibility of presenting older data.
+這種結果稱為最終一致性，這是不支援 ACID 事務的分散式資料系統的一個特徵。 在資料項目的更新與將該更新傳播到每個副本節點所需的時間之間，這是短暫的延遲。 在正常情況下，滯後通常是短的，但當出現問題時可能會增加。 例如，如果要更新美國 NoSQL 資料庫中的產品項並從歐洲的副本節點查詢同一資料項目，會發生什麼情況？ 您將收到較早的產品資訊，直到群集更新帶有產品更改的歐洲節點。 通過立即返回查詢結果，而不是等待所有副本節點更新，您可以獲得巨大的規模和卷，但可以呈現較舊的資料。
 
-High availability and massive scalability are often more critical to the business than strong consistency. Developers can implement techniques and patterns such as Sagas, CQRS, and asynchronous messaging to embrace eventual consistency.
+高可用性和大規模可擴充性通常比強一致性對業務更關鍵。 開發人員可以實施像 Sagas、CQRS 和非同步消息傳遞這樣的技術和模式，以擁抱最終的一致性。
 
-> Nowadays, care must be taken when conidering the CAP theorem constraints. A new type of database, called NewSQL, has emerged which extends the relational database engine to support both horizontal scalability and the scalable performance of NoSQL systems.
+> 如今，在約束 CAP 定理約束時必須小心謹慎。 一種稱為NewSQL的新型資料庫已經擴展了關係資料庫引擎，以支援NoSQL系統的橫向可擴充性和可擴充性能。
 
-## <a name="considerations-for-relational-vs-nosql-systems"></a>Considerations for relational vs. NoSQL systems
+## <a name="considerations-for-relational-vs-nosql-systems"></a>關係與 NoSQL 系統的注意事項
 
-Based upon specific data requirements, a cloud-native-based microservice can implement a relational, NoSQL datastore or both.
+根據特定資料要求，基於雲的微服務可以實現關係、NoSQL 資料存儲或兩者。
 
-|  Consider a NoSQL datastore when: | Consider a relational database when: | 
+|  在以下時間考慮 NoSQL 資料存儲： | 在以下時間考慮關係資料庫： |
 | :-------- | :-------- |
-| You have high volume workloads that require large scale | Your workload volume is consistent and requires medium to large scale |
-| Your workloads don't require ACID guarantees |  ACID guarantees are required |
-| Your data is dynamic and frequently changes | Your data is predictable and highly structured |
-| Data can be expressed without relationships | Data is best expressed relationally |  
-| You need fast writes and write safety isn't critical | Write safety is a requirement |  
-| Data retrieval is simple and tends to be flat | You work with complex queries and reports|
-| Your data requires a wide geographic distribution | Your users are more centralized | 
-| Your application will be deployed to commodity hardware, such as with public clouds | Your application will be deployed to large, high-end hardware | 
+| 您擁有需要大規模的高容量工作負載 | 您的工作負載量是一致的，需要大中型 |
+| 您的工作負載不需要 ACID 保證 |  需要 ACID 保證 |
+| 您的資料是動態的，並且經常更改 | 您的資料是可預測的，並且結構高度 |
+| 資料可以在沒有關系的情況下表達 | 資料最好以關係表示 |  
+| 您需要快速寫入，寫入安全性不重要 | 寫入安全是一項要求 |  
+| 資料檢索簡單，趨於平面 | 您處理複雜的查詢和報表|
+| 您的資料需要廣泛的地理分佈 | 您的使用者更集中 |
+| 您的應用程式將部署到商用硬體，例如使用公共雲 | 您的應用程式將部署到大型高端硬體 |
 |||
 
-In the next sections, we'll explore the options available in the Azure cloud for storing and managing your cloud-native data.
+在下一節中，我們將探討 Azure 雲中可用於存儲和管理雲原生資料的選項。
 
-## <a name="database-as-a-service"></a>Database as a Service
+## <a name="database-as-a-service"></a>資料庫為服務
 
-To start, you could provision an Azure virtual machine and install your database of choice for each service. While you'd have full control over the environment, you'd forgo many built-in features of the cloud platform. You'd also be responsible for managing the virtual machine and database for each service. This approach could quickly become time-consuming and expensive.
+首先，您可以預配 Azure 虛擬機器，並為每個服務安裝您選擇的資料庫。 雖然您可以完全控制環境，但您會放棄雲平臺的許多內置功能。 您還將負責管理每個服務的虛擬機器和資料庫。 這種方法可能很快變得耗時且成本高昂。
 
-Instead, cloud-native applications favor data services exposed as a [Database as a Service (DBaaS)](https://www.stratoscale.com/blog/dbaas/what-is-database-as-a-service/). Fully managed by a cloud vendor, these services provide built-in security, scalability, and monitoring. Instead of owning the service, you simply consume it as a [backing service](./definition.md#backing-services). The provider operates the resource at scale and bears the responsibility for performance and maintenance.
+相反，雲原生應用程式傾向于作為[資料庫作為服務 （DBaaS）](https://www.stratoscale.com/blog/dbaas/what-is-database-as-a-service/)公開的資料服務。 這些服務完全由雲供應商管理，可提供內置的安全性、可擴充性和監視。 您只需將其用作[支援服務](./definition.md#backing-services)，而不是擁有該服務。 供應商大規模運營資源，並負責性能和維護。
 
-They can be configured across cloud availability zones and regions to achieve high availability. They all support just-in-time capacity and a pay-as-you-go model. Azure features different kinds of managed data service options, each with specific benefits.
+它們可以跨雲可用性區域和區域進行配置，以實現高可用性。 他們都支援準時的容量和即用即付模式。 Azure 具有不同類型的託管資料服務選項，每個選項都有特定的優勢。
 
-We'll first look at relational DBaaS services available in Azure. You'll see that Microsoft's flagship SQL Server database is available along with several open-source options. Then, we'll talk about the NoSQL data services in Azure.
+我們首先將瞭解 Azure 中提供的關係 DBaaS 服務。 您將看到 Microsoft 的旗艦 SQL Server 資料庫以及幾個開源選項都可用。 然後，我們將討論 Azure 中的 NoSQL 資料服務。
 
-## <a name="azure-relational-databases"></a>Azure relational databases
+## <a name="azure-relational-databases"></a>Azure 關係資料庫
 
-For cloud-native microservices that require relational data, Azure offers four managed relational databases as a service (DBaaS) offerings, shown in Figure 5-11.
+對於需要關係資料的雲原生微服務，Azure 提供四個託管關係資料庫作為服務 （DBaaS） 產品，如圖 5-11 所示。
 
-![Managed relational databases in Azure](./media/azure-managed-databases.png)
+![Azure 中的託管關係資料庫](./media/azure-managed-databases.png)
 
-**圖 5-11**。 Managed relational databases available in Azure
+**圖 5-11**。 Azure 中提供的託管關係資料庫
 
-In the previous figure, note how each sits upon a common DBaaS infrastructure which features key capabilities at no additional cost.
+在上圖中，請注意每個基礎設施如何位於通用 DBaaS 基礎結構上，該基礎結構具有關鍵功能，無需額外費用。
 
-These features are especially important to organizations who provision large numbers of databases, but have limited resources to administer them.
-You can provision an Azure database in minutes by selecting the amount of processing cores, memory, and underlying storage. You can scale the database on-the-fly and dynamically adjust resources with little to no downtime.
+這些功能對於提供大量資料庫但管理這些資料庫的資源有限的組織尤其重要。
+通過選擇處理核心、記憶體和基礎存儲的數量，可以在幾分鐘內預配 Azure 資料庫。 您可以動態擴展資料庫並動態調整資源，但停機時間很少或沒有停機時間。
 
 ## <a name="azure-sql-database"></a>Azure SQL Database
 
-具有 Microsoft SQL Server 專長的開發小組應該考慮[Azure SQL Database](https://docs.microsoft.com/azure/sql-database/)。 它是完全受控的關係資料庫即服務（DBaaS），以 Microsoft SQL Server 資料庫引擎為基礎。 服務會共用在內部部署版本的 SQL Server 中找到的許多功能，並執行 SQL Server 資料庫引擎的最新穩定版本。
+具有 Microsoft SQL Server 專業知識的開發團隊應考慮[Azure SQL 資料庫](https://docs.microsoft.com/azure/sql-database/)。 它是基於 Microsoft SQL Server 資料庫引擎的完全託管關係資料庫即服務 （DBaaS）。 該服務共用 SQL Server 的本地版本中的許多功能，並運行 SQL Server 資料庫引擎的最新穩定版本。
 
-若要搭配使用雲端原生微服務，有三個部署選項可提供 Azure SQL Database：
+對於與雲原生微服務一起使用，Azure SQL 資料庫提供三個部署選項：
 
-- 單一資料庫代表在 Azure 雲端中的[Azure SQL Database 伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-servers)上執行的完全受控 SQL Database。 資料庫會被視為[*包含*](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases)，因為它在基礎資料庫伺服器上沒有任何設定相依性。
+- 單個資料庫表示在 Azure 雲中的 Azure [SQL 資料庫伺服器上](https://docs.microsoft.com/azure/sql-database/sql-database-servers)運行的完全託管 SQL 資料庫。 資料庫被視為[*包含*](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases)，因為它對基礎資料庫伺服器上沒有配置依賴項。
   
-- [受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)是 Microsoft SQL Server 資料庫引擎的完全受控實例，可提供與內部部署 SQL Server 接近100% 的相容性。 此選項支援較大的資料庫，最高可達 35 TB，並放在[Azure 虛擬網路](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)中，以獲得更好的隔離。
+- [託管實例](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)是 Microsoft SQL Server 資料庫引擎的完全託管實例，它提供與本地 SQL Server 的近 100% 相容性。 此選項支援更大的資料庫（最多 35 TB）並放置在[Azure 虛擬網路中](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview)以更好的隔離。
 
-- [Azure SQL Database 無伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-serverless)是單一資料庫的計算層，可根據工作負載需求自動進行調整。 它只會針對每秒使用的計算數量計費。 此服務非常適合具有間歇性、無法預測之使用模式的工作負載，而且會與非使用狀態的期間混合。 無伺服器計算層也會在非使用中期間自動暫停資料庫，因此只會收取儲存體費用。 當活動傳回時，它會自動繼續。
+- [Azure SQL 資料庫無伺服器](https://docs.microsoft.com/azure/sql-database/sql-database-serverless)是單個資料庫的計算層，該資料庫根據工作負載需求自動擴展。 它只對每秒使用的計算量進行帳單。 該服務非常適合間歇性、不可預知的使用模式的工作負載，這些工作負載穿插于不活動期。 無伺服器計算層還會在非活動期間自動暫停資料庫，以便只收取存儲費用。 當活動返回時，它會自動復原。
 
-除了傳統的 Microsoft SQL Server 堆疊之外，Azure 也有三個熱門開放原始碼資料庫的受控版本。
+除了傳統的 Microsoft SQL Server 堆疊之外，Azure 還具有三個常用開源資料庫的託管版本。
 
-## <a name="open-source-databases-in-azure"></a>Azure 中的開放原始碼資料庫
+## <a name="open-source-databases-in-azure"></a>Azure 中的開源資料庫
 
-開放原始碼關係資料庫已成為雲端原生應用程式的熱門選擇。 許多企業都傾向于商務資料庫產品，特別是為了節省成本。 許多開發團隊都享有其彈性、支援小組的開發，以及工具和擴充功能的生態系統。 開放原始碼資料庫可以跨多個雲端提供者部署，協助將「廠商鎖定」的顧慮降到最低。
+開源關係資料庫已成為雲原生應用程式的熱門選擇。 許多企業比商務資料庫產品更青睞它們，尤其是為了節省成本。 許多開發團隊都享有靈活性、社區支援的開發以及工具和擴展的生態系統。 開源資料庫可以跨多個雲供應商部署，有助於最大限度地減少"供應商鎖定"的問題。
 
-開發人員可以輕鬆自我裝載 Azure VM 上的任何開放原始碼資料庫。 雖然提供完整的控制權，但這種方法會讓您進入攔截，以進行資料庫和 VM 的管理、監視和維護。
+開發人員可以輕鬆地在 Azure VM 上自承載任何開源資料庫。 在提供完全控制的同時，此方法使您能夠對資料庫和 VM 的管理、監視和維護。
 
-不過，Microsoft 會藉由提供數個熱門的開放原始碼資料庫做為*完全受控*的 DBaaS 服務，繼續致力於讓 Azure 成為「開放式平臺」。
+但是，Microsoft 繼續致力於將 Azure 作為*完全託管*的 DBaaS 服務提供幾個流行的開源資料庫，從而保持 Azure 的"開放平臺"。
 
 ### <a name="azure-database-for-mysql"></a>適用於 MySQL 的 Azure 資料庫
 
-[MySQL](https://en.wikipedia.org/wiki/MySQL) 是一個開放原始碼關係資料庫，以及一個以[燈泡軟體堆疊](https://en.wikipedia.org/wiki/LAMP_(software_bundle))為基礎之應用程式的要件。 針對*讀取繁重*的工作負載廣泛選擇，許多大型組織都使用它，包括 Facebook、Twitter 和 YouTube。 此社區版本免費提供，而 enterprise edition 則需要購買授權。 產品原本是在1995中建立的，由 Sun Microsystems 在2008中購買。 Oracle 在2010中取得了 Sun 和 MySQL。
+[MySQL](https://en.wikipedia.org/wiki/MySQL) 是一個開源關係資料庫，是[建立在LAMP軟體堆疊](https://en.wikipedia.org/wiki/LAMP_(software_bundle))上的應用程式的支柱。 廣泛選擇*閱讀繁重的*工作量，它被許多大型組織使用，包括Facebook，Twitter和YouTube。 社區版免費提供，而企業版需要購買許可證。 該產品最初創建于1995年，于2008年被Sun微系統公司購買。 甲骨文于2010年收購了Sun和MySQL。
 
-[適用於 MySQL 的 Azure 資料庫](https://azure.microsoft.com/services/mysql/)是以開放原始碼 MySQL 伺服器引擎為基礎的受控關係資料庫服務。 它會使用 MySQL 社區 edition。 Azure MySQL 伺服器是服務的管理點。 它與用於內部部署的 MySQL 伺服器引擎相同。 引擎可以為每個伺服器建立單一資料庫，或為每個共用資源的伺服器建立多個資料庫。 您可以使用相同的開放原始碼工具繼續管理資料，而不需要學習新技能或管理虛擬機器。
+[MySQL 的 Azure 資料庫](https://azure.microsoft.com/services/mysql/)是基於開源 MySQL Server 引擎的託管關係資料庫服務。 它使用 MySQL 社區版本。 Azure MySQL 伺服器是服務的管理點。 它與用於本地部署的 MySQL 伺服器引擎相同。 引擎可以創建每個伺服器的單個資料庫，也可以創建每個共用資源的伺服器的多個資料庫。 您可以繼續使用相同的開源工具管理資料，而無需學習新技能或管理虛擬機器。
 
 ### <a name="azure-database-for-mariadb"></a>適用於 MariaDB 的 Azure 資料庫
 
-[適用于 mariadb](https://mariadb.com/)伺服器是另一個熱門的開放原始碼資料庫伺服器。 當 Oracle 購買 Sun Microsystems （擁有 MySQL）時，它會建立為 MySQL 的*分支*。 其目的是要確保適用于 mariadb 保持開放原始碼。 因為適用于 mariadb 是 MySQL 的分支，所以資料和資料表定義相容，而用戶端通訊協定、結構和 Api 則是 knit。
+[瑪麗亞DB](https://mariadb.com/)伺服器是另一個流行的開源資料庫伺服器。 當甲骨文收購擁有MySQL的太陽微系統公司時，它被創建為MySQL的*分叉*。 目的是確保MariaDB保持開放源碼。 由於 MariaDB 是 MySQL 的分叉，因此資料和表定義是相容的，並且用戶端協定、結構和 API 是緊密相連的。
 
-適用于 mariadb 有一個強大的社區，供許多大型企業使用。 雖然 Oracle 會持續維護、增強和支援 MySQL，但適用于 mariadb foundation 會管理適用于 mariadb，以允許對產品和檔進行公開貢獻。
+MariaDB 擁有強大的社區，被許多大型企業所使用。 當 Oracle 繼續維護、增強和支援 MySQL 時，MariaDB 基金會管理 MariaDB，允許對產品和文檔進行公共貢獻。
 
-[適用於 MariaDB 的 Azure 資料庫](https://azure.microsoft.com/services/mariadb/)是 Azure 雲端中完全受控的關係資料庫即服務。 此服務是以適用于 mariadb 的「社區版本伺服器引擎」為基礎。 它可以處理任務關鍵性工作負載，並提供可預測的效能和動態擴充性。
+[MariaDB 的 Azure 資料庫](https://azure.microsoft.com/services/mariadb/)是 Azure 雲中完全託管的關係資料庫，即服務。 該服務基於 MariaDB 社區版伺服器引擎。 它能夠處理任務關鍵型工作負載，具有可預測的性能和動態可擴充性。
 
 ### <a name="azure-database-for-postgresql"></a>適用於 PostgreSQL 的 Azure 資料庫
 
-[于 postgresql](https://www.postgresql.org/)是開放原始碼關係資料庫，有超過30年的有效開發。 PostgresSQL 具有可靠性和資料完整性的強式信譽。 它的功能豐富、SQL 相容，而且比 MySQL 更具效能，特別是針對複雜查詢和大量寫入的工作負載。 許多大型企業（包括 Apple、Red Hat 和 Fujitsu）都有使用於 postgresql 的建立產品。
+[PostgreSQL](https://www.postgresql.org/)是一個開源關係資料庫，擁有超過 30 年的積極發展。 PostgresSQL 在可靠性和資料完整性方面享有盛譽。 它功能豐富、SQL 相容，並且被認為比 MySQL 更具性能- 尤其對於具有複雜查詢和大量寫入的工作負載。 許多大型企業，包括蘋果，紅帽和富士通已經建立了產品使用PostgreSQL。
 
-[適用於 PostgreSQL 的 Azure 資料庫](https://azure.microsoft.com/services/postgresql/)是完全受控的關係資料庫服務，以開放原始碼 Postgres 資料庫引擎為基礎。 此服務支援許多開發平臺，包括C++、JAVA、Python、Node、C\#和 PHP。 您可以使用[命令列介面](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1)工具或 Azure 資料移轉服務，將于 postgresql 資料庫移轉至其中。
+[基於開源 Postgres 資料庫引擎的 PostgreSQL Azure 資料庫](https://azure.microsoft.com/services/postgresql/)是一個完全託管的關係資料庫服務。 該服務支援許多開發平臺，包括C++、JAVA、Python、Node、C\#和 PHP。 您可以使用[命令列介面](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1)工具或 Azure 資料移轉服務將 PostgreSQL 資料庫遷移到該資料庫。
 
-適用於 PostgreSQL 的 Azure 資料庫提供兩個部署選項： 
+用於 PostgreSQL 的 Azure 資料庫提供兩個部署選項：
 
-- [單一伺服器](https://docs.microsoft.com/azure/postgresql/concepts-servers)部署選項是多個資料庫的中央管理點，您可以在其中部署許多資料庫。 定價是以核心和儲存體為基礎，依伺服器進行結構化。
+- [單伺服器](https://docs.microsoft.com/azure/postgresql/concepts-servers)部署選項是多個資料庫的中心管理點，您可以向其部署多個資料庫。 定價基於內核和存儲，按伺服器進行結構化。
 
-- [超大規模資料庫（Citus）選項](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/)是由 Citus 資料技術提供技術支援。 藉由在數百個節點間*水準調整*單一資料庫，以提供快速的效能和規模，讓效能達到高效能。 此選項可讓引擎在記憶體中容納更多資料、跨數百個節點平行處理查詢，以及更快編制資料索引。 
+- [超大規模 （Citus） 選項](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/)由 Citus 資料技術提供支援。 通過跨數百個節點*水準擴展*單個資料庫，實現高性能，從而提供快速性能和擴展。 此選項允許引擎在記憶體中容納更多資料，跨數百個節點並行化查詢，並更快地索引資料。
 
-## <a name="nosql-data-in-azure"></a>Azure 中的 NoSQL 資料
+## <a name="nosql-data-in-azure"></a>Azure 中的無 SQL 資料
 
-Cosmos DB 是 Azure 雲端中完全受控的全域分散式 NoSQL 資料庫服務。 世界各地的許多大型公司都採用這種方式，包括可口可樂-Cola、Skype、ExxonMobil 和「自由相互」。
+Cosmos DB 是 Azure 雲中完全託管的全域分佈的 NoSQL 資料庫服務。 它已被世界各地的許多大公司採用，包括可口可樂、Skype、埃克森美孚和自由互助。
 
-如果您的服務需要來自世界各地、高可用性或彈性擴充性的快速回應，Cosmos DB 是絕佳的選擇。 圖5-12 顯示 Cosmos DB。
+如果您的服務需要來自世界任何地方的快速回應、高可用性或彈性可擴充性，Cosmos DB 是一個很好的選擇。 圖 5-12 顯示了宇宙 DB。
 
-![Cosmos DB 總覽](./media/cosmos-db-overview.png)
+![宇宙 DB 概述](./media/cosmos-db-overview.png)
 
-**圖 5-12**： Cosmos DB 的總覽
+**圖5-12**：宇宙DB概述
 
-上圖顯示 Cosmos DB 中提供的許多內建雲端原生功能。 在本節中，我們將進一步探討它們。
+上圖顯示了 Cosmos DB 中可用的許多內置雲原生功能。 在本節中，我們將仔細研究它們。
 
 ### <a name="global-support"></a>全球支援
 
-雲端原生應用程式通常具有全球物件，而且需要全球規模。
+雲原生應用程式通常具有全球受眾，需要全球擴展。
 
-您可以跨區域或全球各地散發 Cosmos 資料庫、將資料放在使用者附近、改善回應時間，並減少延遲。 您可以從區域新增或移除資料庫，而不需暫停或重新部署您的服務。 在背景中，Cosmos DB 會以透明方式將資料複製到每個已設定的區域。
+您可以跨地區或在世界各地分發 Cosmos 資料庫，將資料放在使用者附近，縮短回應時間並減少延遲。 您可以在不暫停或重新部署服務的情況下從區域添加或刪除資料庫。 在後臺，Cosmos DB 透明地將資料複製到每個配置的區域。
 
-Cosmos DB 支援全域層級的[主動/主動](https://kemptechnologies.com/white-papers/unfog-confusion-active-passive-activeactive-load-balancing/)叢集，可讓您設定任何資料庫區域以*同時支援寫入和讀取*。
+Cosmos DB 支援全域級別的[活動/主動](https://kemptechnologies.com/white-papers/unfog-confusion-active-passive-activeactive-load-balancing/)群集，使您能夠配置任何資料庫區域以支援*寫入和讀取*。
 
-[多重主機](https://docs.microsoft.com/azure/cosmos-db/multi-master-benefits)通訊協定是 Cosmos DB 中的一項重要功能，可啟用下列功能：
+[多主協定](https://docs.microsoft.com/azure/cosmos-db/multi-master-benefits)是 Cosmos DB 中的一個重要功能，可實現以下功能：
 
-- 無限制的彈性寫入和讀取擴充性。
+- 無限的彈性寫入和讀取可擴充性。
 
-- 99.999% 全球各地的讀取和寫入可用性。
+- 在世界各地具有 99.999% 的讀取和寫入可用性。
 
-- 保證在第99個百分位數小於10毫秒提供服務的讀取和寫入。
+- 保證讀取和寫入會以第 99 百分位數且小於 10 毫秒的方式提供服務。
 
-透過 Cosmos DB[多路連接 api](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)，您的微服務會自動知道最接近的 Azure 區域，並將要求傳送給它。 最接近的區域是由 Cosmos DB 來識別，而不會有任何設定變更。 如果區域變成無法使用，多路連接功能會自動將要求路由傳送至下一個最接近的可用區域。
+使用 Cosmos DB[多宿主 API，](https://docs.microsoft.com/azure/cosmos-db/distribute-data-globally)微服務會自動知道最近的 Azure 區域並向其發送請求。 最近的區域由 Cosmos DB 標識，無需進行任何配置更改。 如果區域不可用，多宿主功能將自動將請求路由到下一個最近的可用區域。
 
-### <a name="multi-model-support"></a>多模型支援
+### <a name="multi-model-support"></a>多型號支援
 
-將整合型應用程式遷移至雲端原生架構時，開發小組有時必須遷移開放原始碼的 NoSQL 資料存放區。 Cosmos DB 可以協助您使用其*多模型*資料平臺，在這些 NoSQL 資料存放區中保留您的投資。 圖5-13 顯示支援的 NoSQL[相容性 api](https://www.wikiwand.com/en/Cosmos_DB)。
+將單片應用程式重新程式設計到雲原生體系結構時，開發團隊有時必須遷移開源 NoSQL 資料存儲。 Cosmos DB 可説明您通過其*多模型*資料平臺在這些 NoSQL 資料存儲中保留投資。 圖 5-13 顯示了支援的 NoSQL[相容性 API](https://www.wikiwand.com/en/Cosmos_DB)。
 
-![Cosmos DB 提供者](./media/cosmos-db-providers.png)
+![宇宙資料庫提供程式](./media/cosmos-db-providers.png)
 
-**圖 5-13**： Cosmos DB 提供者
+**圖 5-13**： 宇宙資料庫提供程式
 
-開發小組可以將現有的 Mongo、Gremlin 或 Cassandra 資料庫移轉到 Cosmos DB，但對資料或程式碼的變更最少。 針對新的應用程式，開發小組可以選擇開放原始碼選項或內建的 SQL API 模型。
+開發團隊可以將現有的蒙戈、格雷姆林或卡珊多拉資料庫移轉到 Cosmos DB，只需對資料或代碼進行最少的更改。 對於新應用，開發團隊可以選擇開源選項或內置 SQL API 模型。
 
-> 就內部而言，Cosmos 會以基本資料類型組成的簡單結構格式來儲存資料。 資料庫引擎會針對每個要求，將基本資料轉譯成您所選取的模型標記法。
+> 在內部，Cosmos 以由原始資料類型組成的簡單結構格式存儲資料。 對於每個請求，資料庫引擎都會將原始資料轉換為您選擇的模型表示形式。
 
-在上圖5-13 中，請記下 [[資料表 API](https://docs.microsoft.com/azure/cosmos-db/table-introduction) ] 選項。 此 API 是 Azure 表格儲存體的演進。 兩者都共用相同的基礎資料表模型，但 Cosmos DB 資料表 API 新增了 Azure 儲存體 API 中未提供的 premium 增強功能。 這些功能的對比圖5-4。
+在上圖 5-13 中，請注意[表 API](https://docs.microsoft.com/azure/cosmos-db/table-introduction)選項。 此 API 是 Azure 表存儲的演變。 兩者共用相同的基礎資料表模型，但 Cosmos DB 表 API 添加了 Azure 存儲 API 中不可用的高級增強功能。 這些功能在圖 5-4 中進行了對比。
 
 ![Azure 資料表 API](media/azure-table-api.png)
 
-**圖 5-14**： Azure 資料表 API 提供者
+**圖 5-14**： Azure 表 API 提供程式
 
-使用 Azure 資料表儲存體的微服務可以輕鬆地遷移至 Cosmos DB 資料表 API。 不需要變更程式碼。
+使用 Azure 表存儲的微服務可以輕鬆地遷移到 Cosmos DB 表 API。 不需要變更程式碼。
 
-### <a name="tunable-consistency"></a>可調式一致性
+### <a name="tunable-consistency"></a>可調一致性
 
-稍早在*關聯式與 NoSQL*一節中，我們討論了*資料一致性*的主旨。 資料一致性指的是資料的*完整性*。 具有分散式資料的雲端原生服務依賴複寫，而且必須在讀取一致性、可用性和延遲之間進行基本取捨。
+在 *"關係與NoSQL"* 部分的早些時候，我們討論了*資料一致性*的主題。 資料一致性是指資料*的完整性*。 具有分散式資料的雲原生服務依賴于複製，必須在讀取一致性、可用性和延遲之間做出根本性的權衡。
 
-大部分的分散式資料庫可讓開發人員在兩種一致性模型之間做選擇：強式一致性和最終一致性。 *強式一致性*是資料可程式性的黃金標準。 它保證查詢一律會傳回最新的資料，即使系統必須產生延遲，等待更新在所有資料庫複本之間複寫。 設定為*最終一致性*的資料庫會立即傳回資料，即使該資料不是最新的複本也一樣。 第二個選項可提供更高的可用性、更高的規模，並提升效能。
+大多數分散式資料庫允許開發人員在兩種一致性模型之間進行選擇：強一致性和最終一致性。 *強一致性*是資料可程式設計性的黃金標準。 它保證查詢將始終返回最新的資料 - 即使系統必須產生延遲等待更新在所有資料庫副本之間複製。 雖然為*最終一致性*配置的資料庫將立即返回資料，即使該資料不是最新的副本。 後一個選項可實現更高的可用性、更大的規模和更高的性能。
 
-Azure Cosmos DB 提供五個定義完善的[一致性模型](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)，如圖5-15 所示。
+Azure Cosmos DB 提供了圖 5-15 所示的五個定義良好的[一致性模型](https://docs.microsoft.com/azure/cosmos-db/consistency-levels)。
 
-![Cosmos DB 一致性圖表](./media/cosmos-consistency-level-graph.png)
+![宇宙 DB 一致性圖](./media/cosmos-consistency-level-graph.png)
 
-**圖 5-15**： Cosmos DB 一致性層級
+**圖 5-15**： 宇宙 DB 一致性級別
 
- 這些選項可讓您針對一致性、可用性和資料的效能，做出精確的選擇和細微的取捨。 圖5-16 說明每個層級。
+ 這些選項使您能夠對資料的一致性、可用性和性能做出精確的選擇和精細權衡。 圖 5-16 描述了每個級別。
 
-![Cosmos DB 一致性層級](./media/cosmos-db-consistency-levels.png)
+![宇宙資料庫一致性級別](./media/cosmos-db-consistency-levels.png)
 
-**圖 5-16**： Cosmos DB 一致性層級描述
+**圖 5-16**： 宇宙 DB 一致性級別描述
 
-在[Cosmos DB 一致性層級入門一](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)文中，Microsoft Cloud 開發人員提倡者 Jeremy Likeness 提供五種模型的絕佳說明。
+在["9球背後：宇宙DB一致性水準解釋"](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)一文中，微軟雲開發者宣導者Jeremy Likeness對五種模型給出了極好的解釋。
 
 ### <a name="partitioning"></a>資料分割
 
-Azure Cosmos DB 會採用自動[分割](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview)來調整資料庫，以符合您的雲端原生服務的效能需求。
+Azure Cosmos DB 採用自動[分區](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview)來擴展資料庫以滿足雲原生服務的性能需求。
 
-您可以藉由建立資料庫、容器和專案來管理 Cosmos DB 資料中的資料。
+通過創建資料庫、容器和項來管理 Cosmos DB 資料中的資料。
 
-容器存留在 Cosmos DB 資料庫中，代表不受架構限制的專案群組。 專案是您加入至容器的資料。 它們是以檔、資料列、節點或邊緣表示。 所有新增至容器的專案都會自動編制索引。
+容器位於 Cosmos DB 資料庫中，表示與架構無關的專案分組。 項是添加到容器中的資料。 它們表示為文檔、行、節點或邊。 添加到容器的所有專案都將自動編制索引。
 
-若要分割容器，專案會分成不同的子集，稱為「邏輯分割區」。 系統會根據與容器中每個專案相關聯的分割區索引鍵的值來填入邏輯分割區。 圖5-18 顯示兩個容器，其中每一個都具有以資料分割索引鍵值為基礎的邏輯分割區。
+要對容器進行分區，項被劃分為稱為邏輯分區的不同子集。 邏輯分區是根據與容器中的每個項關聯的分區鍵的值填充的。 圖 5-18 顯示了兩個容器，每個容器都有一個基於分區鍵值的邏輯分區。
 
-![Cosmos DB 資料分割機制](./media/cosmos-db-partitioning.png)
+![宇宙資料庫分區機制](./media/cosmos-db-partitioning.png)
 
-**圖 5-18**： Cosmos DB 資料分割機制
+**圖 5-18**： 宇宙 DB 分區機制
 
-請注意，在上圖中，每個專案都包含「city」或「機場」的分割區索引鍵。 索引鍵會決定專案的邏輯分割區。 具有城市代碼的專案會指派給左邊的容器，以及具有機場代碼的專案到右邊的容器。 將資料分割索引鍵值與識別碼值結合，會建立專案的索引，以唯一識別專案。
+請注意，在上圖中，每個專案如何包含"城市"或"機場"的分區鍵。 鍵確定項的邏輯分區。 帶有城市代碼的專案將分配給左側的容器，以及帶有機場代碼的專案分配給右側的容器。 將分區鍵值與 ID 值合併將創建項的索引，該索引唯一地標識項。
 
-就內部而言，Cosmos DB 會自動管理實體分割區上[邏輯](https://docs.microsoft.com/azure/cosmos-db/partition-data)分割區的位置，以滿足容器的擴充性和效能需求。 隨著應用程式輸送量和儲存需求的增加，Azure Cosmos DB 會將邏輯分割區重新分配到更多伺服器。 轉散發作業是由 Cosmos DB 管理，並在不中斷或停機的情況下叫用。
+在內部，Cosmos DB 自動管理[物理分區上的邏輯分區](https://docs.microsoft.com/azure/cosmos-db/partition-data)放置，以滿足容器的可伸縮性和性能需求。 隨著應用程式輸送量和存儲要求的提高，Azure Cosmos DB 會跨更多伺服器重新分發邏輯分區。 重新分發操作由 Cosmos DB 管理，並在不中斷或停機的情況下調用。
 
-## <a name="newsql-databases"></a>NewSQL 資料庫
+## <a name="newsql-databases"></a>新建 SQL 資料庫
 
-*NewSQL* 是一項新興的資料庫技術，結合了 NoSQL 的分散式擴充性與關係資料庫的 ACID 保證。 對於必須跨分散式環境處理大量資料的商務系統而言，NewSQL 資料庫是很重要的，其具有完整的交易式支援和 ACID 合規性。 雖然 NoSQL 資料庫可提供大規模的擴充性，但不保證資料的一致性。 不一致資料的間歇性問題可能會對開發小組造成負擔。 開發人員必須在其微服務程式代碼中建立保護措施，以管理不一致的資料所造成的問題。
+*NewSQL* 是一種新興的資料庫技術，它將 NoSQL 的分散式可擴充性與關係資料庫的 ACID 保證相結合。 NewSQL 資料庫對於必須在分散式環境中處理大量資料的業務系統非常重要，這些系統具有完全的事務支援和 ACID 合規性。 雖然 NoSQL 資料庫可以提供海量可伸縮性，但它不能保證資料一致性。 資料不一致的間歇性問題可能會給開發團隊帶來負擔。 開發人員必須在微服務代碼中構造安全措施，以管理由不一致資料引起的問題。
 
-雲端原生運算基礎（由 CNCF）具備數個 NewSQL 資料庫專案。
+雲原生計算基礎 （CNCF） 具有多個新 SQL 資料庫專案。
 
-| 專案 | 特性 |
+| 隨附此逐步解說的專案 | 特性 |
 | :-------- | :-------- |
-| Cockroach DB |符合 ACID 規範的關係資料庫，可進行全域調整。 將新節點新增至叢集，CockroachDB 會負責平衡實例和地理位置之間的資料。 它會建立、管理和散發複本，以確保可靠性。 它是開放原始碼且可免費使用。  |
-| TiDB | 支援混合式交易和分析處理（HTAP）工作負載的開放原始碼資料庫。 它與 MySQL 相容，而且具備水準擴充性、強式一致性和高可用性。  TiDB 的作用就像 MySQL 伺服器。 您可以繼續使用現有的 MySQL 用戶端程式庫，而不需要對應用程式進行大量的程式碼變更。 |
-| YugabyteDB | 一種開放原始碼、高效能、分散式 SQL database。 它支援低查詢延遲、對失敗的恢復能力，以及全域資料散發。 YugabyteDB 與 PostgressSQL 相容，並會處理相應放大的 RDBMS 和網際網路級別 OLTP 工作負載。 產品也支援 NoSQL，而且與 Cassandra 相容。 |
-|Vitess | Vitess 是一種資料庫解決方案，可用於部署、調整和管理 MySQL 實例的大型叢集。 它可以在公用或私用雲端架構中執行。 它結合並擴充許多重要的 MySQL 功能和功能，包括垂直和水準分區化支援。 Vitess 是由 YouTube 所產生，自2011起就已提供所有 YouTube 資料庫流量。 |
+| 蟑螂 DB |符合 ACID 的、全域擴展的關係資料庫。 向群集添加新節點，而 CockroachDB 負責平衡跨實例和地理位置的資料。 它創建、管理和分發副本以確保可靠性。 它是開源的，免費提供。  |
+| 提亞布 | 支援混合事務和分析處理 （HTAP） 工作負載的開源資料庫。 它與 MySQL 相容，具有水準可擴充性、強一致性和高可用性。  TiDB 充當 MySQL 伺服器。 您可以繼續使用現有的 MySQL 用戶端庫，而無需對應用程式進行大量代碼更改。 |
+| 尤加位元組開發銀行 | 開源、高性能、分散式 SQL 資料庫。 它支援低查詢延遲、抵禦故障的彈性和全域資料分發。 YugabyDB 與後回歸 SQL 相容，可處理橫向擴展 RDBMS 和 Internet 規模 OLTP 工作負載。 該產品還支援NoSQL，並與卡珊多拉相容。 |
+|維特斯 | ViTES 是一種資料庫解決方案，用於部署、縮放和管理大型 MySQL 實例群集。 它可以在公共或私有雲體系結構中運行。 它結合了並擴展了許多重要的 MySQL 功能，並具有垂直和水準分片支援功能。 Vites源自YouTube，自2011年以來一直提供所有YouTube資料庫流量。 |
 
-上圖中的開放原始碼專案可從雲端原生計算基礎取得。 其中三個供應專案都是完整的資料庫產品，其中包括 .NET Core 支援。 另一個（Vitess）是一種資料庫叢集系統，它會水準調整大型的 MySQL 實例叢集。 
+上圖中的開源專案可從雲原生計算基金會獲得。 其中三種產品是完整的資料庫產品，其中包括 .NET Core 支援。 另一個 Vites 是一個資料庫群集系統，它水準縮放 MySQL 實例的大型群集。
 
-NewSQL 資料庫的主要設計目標是在 Kubernetes 中以原生方式工作，利用平臺的復原和擴充性。
+NewSQL 資料庫的關鍵設計目標是利用平臺的彈性和可擴充性，在 Kubernetes 中本機工作。
 
-NewSQL 資料庫的設計，是為了在暫時的雲端環境中，您可以在稍後的通知中重新開機或排程基礎虛擬機器。 這些資料庫的設計是要在沒有資料遺失或停機的情況下，仍可承受節點失敗。 例如，CockroachDB 可以跨叢集中的節點維護三個一致的資料複本，以在電腦遺失的情況下存活。
+NewSQL 資料庫旨在在短暫的雲環境中蓬勃發展，在臨時雲環境中，基礎虛擬機器可在接到通知後立即重新開機或重新安排。 資料庫旨在抵禦節點故障，而不會遺失資料或停機。 例如，CockroachDB 通過在群集中的節點上維護任何資料的三個一致副本，能夠經受住電腦損失。
 
-Kubernetes 會使用*服務結構*，讓用戶端從單一 DNS 專案處理一組完全相同的 NewSQL 資料庫處理常式。 藉由將資料庫實例與相關聯之服務的位址分離，我們可以進行調整，而不會中斷現有的應用程式實例。 在指定的時間將要求傳送至任何服務，一律會產生相同的結果。
+Kubernetes 使用*服務構造*允許用戶端從單個 DNS 條目處理一組相同的 NewSQL 資料庫進程。 通過將資料庫實例與與其關聯的服務位址分離，我們可以在不中斷現有應用程式實例的情況下進行擴展。 在給定時間向任何服務發送請求將始終產生相同的結果。
 
-在此案例中，所有資料庫實例都是相等的。 沒有主要或次要關聯性。 在 CockroachDB 中找到的技術，像是*共識*複寫，可讓任何資料庫節點處理任何要求。 如果接收負載平衡要求的節點在本機上有其所需的資料，則會立即回應。 如果沒有，節點會變成閘道，並將要求轉送至適當的節點，以取得正確的答案。 從用戶端的觀點來看，每個資料庫節點都是相同的：它們會顯示為單一*邏輯*資料庫，具有單一電腦系統的一致性保證，儘管有數十個或甚至數百個在幕後工作的節點。
+在這種情況下，所有資料庫實例都是相等的。 沒有主關係或次要關係。 在 CockroachDB 中找到*的協商一致複製*等技術允許任何資料庫節點處理任何請求。 如果接收負載平衡請求的節點具有本地所需的資料，它將立即回應。 如果沒有，節點將成為閘道，並將請求轉發到相應的節點以獲得正確答案。 從用戶端的角度來看，每個資料庫節點都是一樣的：它們顯示為單個*邏輯*資料庫，具有單機系統的一致性保證，儘管有數十個甚至數百個節點在幕後工作。
 
-若要深入瞭解 NewSQL 資料庫背後的機制，請參閱[虛線： Kubernetes 原生資料庫的四個屬性一](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/)文。
+有關 NewSQL 資料庫背後的機制的詳細資訊，請參閱[DASH：庫伯內斯-本機資料庫的四個屬性](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/)一文。
 
-## <a name="data-migration-to-the-cloud"></a>將資料移轉至雲端
+## <a name="data-migration-to-the-cloud"></a>資料移轉到雲
 
-較費時的工作之一，就是將資料從一個資料平臺遷移到另一個。 [Azure 資料移轉服務](https://azure.microsoft.com/services/database-migration/)有助於加速這類工作。 它可以將數個外部資料庫來源的資料移轉到 Azure 資料平臺，並將停機時間降到最低。 目標平臺包含下列服務：
+更耗時的任務之一是從一個資料平臺將資料移轉到另一個資料平臺。 [Azure 資料移轉服務](https://azure.microsoft.com/services/database-migration/)可説明加快此類工作。 它可以將資料從多個外部資料庫源遷移到 Azure 資料平臺，但停機時間最少。 目標平臺包括以下服務：
 
 - Azure SQL Database
 - 適用於 MySQL 的 Azure 資料庫
@@ -281,8 +281,8 @@ Kubernetes 會使用*服務結構*，讓用戶端從單一 DNS 專案處理一�
 - 適用於 PostgreSQL 的 Azure 資料庫
 - CosmosDB
   
-此服務會提供建議，引導您完成執行小型或大型遷移所需的變更。
+該服務提供建議，指導您完成執行遷移所需的更改，無論是小還是大。
 
 >[!div class="step-by-step"]
->[上一頁](Database-per-microservice.md)
->[下一頁](azure-caching.md)
+>[上一個](Database-per-microservice.md)
+>[下一個](azure-caching.md)

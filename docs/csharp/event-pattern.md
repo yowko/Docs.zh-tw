@@ -4,16 +4,16 @@ description: 了解 .NET 事件模式、如何建立標準事件來源，以及�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 517e46ffec163a9bd49baa58fc0b37b54b2b2809
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: dec516767e43a6bf4edfa555e34f3adcc21a46e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239855"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146137"
 ---
 # <a name="standard-net-event-patterns"></a>標準的 .NET 事件模式
 
-[[上一步]](events-overview.md)
+[上一步](events-overview.md)
 
 .NET 事件通常會遵循少數已知的模式。 這些模式的標準化表示開發人員可以利用這些標準模式的知識，它們可套用至任何 .NET 事件程式。
 
@@ -31,14 +31,14 @@ void OnEventRaised(object sender, EventArgs args);
 
 引數清單包含兩個引數︰寄件者及事件引數。 `sender` 的編譯時間類型是 `System.Object`，即使您可能知道一向正確之衍生程度較高的類型。 依照慣例使用 `object`。
 
-第二個引數一向是衍生自 `System.EventArgs` 的類型。 （您會在下一[節](modern-events.md)看到此慣例已不再強制執行）。如果您的事件種類不需要任何其他引數，您仍然可以同時提供這兩個引數。
+第二個引數一向是衍生自 `System.EventArgs` 的類型。 （您將在下[一節中](modern-events.md)看到此約定不再強制執行。如果事件種類不需要任何其他參數，您仍將同時提供這兩個參數。
 您應該使用特殊值 `EventArgs.Empty` 來表示您的事件不包含任何額外的資訊。
 
 我們要組建一個類別，列出目錄中的檔案，或其遵循模式的任一子目錄。 每次找到符合模式的檔案，此元件都會引發事件。
 
 使用事件模型可提供一些設計優勢。 您可以建立多個事件接聽程式，於找到搜尋的檔案時，執行不同的動作。 結合不同的接聽程式可以建立更強固的演算法。
 
-以下是尋找搜尋檔案的初始事件引數宣告︰ 
+以下是尋找搜尋檔案的初始事件引數宣告︰
 
 [!code-csharp[EventArgs](../../samples/snippets/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
@@ -76,7 +76,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 事件處理常式不傳回值，因此您需要以另一種方式進行通訊。 標準事件模式使用 EventArgs 物件包含事件訂閱者可用於通訊取消的欄位。
 
-根據「取消」合約的語意，有兩種不同的模式可以使用。 這兩種情況下，您都會將布林值欄位新增至找到之檔案事件的 EventArguments。 
+根據「取消」合約的語意，有兩種不同的模式可以使用。 這兩種情況下，您都會將布林值欄位新增至找到之檔案事件的 EventArguments。
 
 一種模式可讓任何一位訂閱者取消作業。
 針對此模式，新的欄位會初始化為 `false`。 任何訂閱者都可以將它變更為 `true`。 在所有訂閱者皆已看過引發的事件之後，FileSearcher 元件會檢查布林值並採取動作。
@@ -122,7 +122,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 這在有許多子目錄的目錄中可能會是冗長的作業。 新增在每個新目錄搜尋開始時要引發的事件。 這可讓訂閱者追蹤進度，將使用者更新為要處理的使用者。 您到目前為止建立的所有範例都是公用的。 讓我們把這個變成內部事件。 這表示您也可以將用於引數的類型變成內部。
 
-您會從建立新的 EventArgs 衍生類別以報告新目錄和進度開始。 
+您會從建立新的 EventArgs 衍生類別以報告新目錄和進度開始。
 
 [!code-csharp[DirEventArgs](../../samples/snippets/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
@@ -140,7 +140,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 此時，您可以執行應用程式呼叫多載以搜尋所有子目錄。 新的 `ChangeDirectory` 事件沒有任何訂閱者，但使用 `?.Invoke()` 慣用語可確保其正確運作。
 
- 我們要新增處理常式寫入一行程式碼，在主控台視窗中顯示進度。 
+ 我們要新增處理常式寫入一行程式碼，在主控台視窗中顯示進度。
 
 [!code-csharp[Search](../../samples/snippets/csharp/events/Program.cs#Search "Declare event handler")]
 
@@ -149,4 +149,4 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 接下來，您會在最新版本的 .NET 中看到這些模式的某些變更。
 
-[下一個](modern-events.md)
+[下一步](modern-events.md)

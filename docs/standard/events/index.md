@@ -15,23 +15,23 @@ helpviewer_keywords:
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 ms.openlocfilehash: b8ed028bc1edabf14d7b2dd67d94b28d574d2eb4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159620"
 ---
 # <a name="handling-and-raising-events"></a>處理和引發事件
 
-.NET 中的事件是以委派模型為基礎。 委派模型遵循[觀察者設計模式](observer-design-pattern.md)，它可讓訂閱者向提供者註冊，並且接收通知。 事件發送者會推播事件已發生的通知，而事件接收器會收到該通告並定義對它的回應。 本文將描述委派模型的主要元件、如何在應用程式中使用事件，以及如何在程式碼中實作事件。  
+.NET 中的事件是以委派模型為基礎。 委託模型遵循[觀察者設計模式](observer-design-pattern.md)，使訂閱者能夠註冊和接收來自提供程式的通知。 事件發送者會推播事件已發生的通知，而事件接收器會收到該通告並定義對它的回應。 本文將描述委派模型的主要元件、如何在應用程式中使用事件，以及如何在程式碼中實作事件。  
   
  如需處理 Windows 8.x Microsoft Store 應用程式中事件的詳細資訊，請參閱[事件和路由事件概觀](https://docs.microsoft.com/previous-versions/windows/apps/hh758286(v=win.10))。  
   
 ## <a name="events"></a>事件
 
-事件是由物件傳送的訊息，用以表示發生動作。 這個動作可能是因使用者互動所造成，例如按一下按鈕，也可能起因於其他程式邏輯，如變更屬性值。 引發事件的物件稱為「事件發送者」。 事件發送者並不清楚哪個物件或方法會接收 (處理) 它所引發的事件。 事件通常是事件發送者的成員，例如，<xref:System.Web.UI.WebControls.Button.Click> 事件是 <xref:System.Web.UI.WebControls.Button> 類別的成員，而 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件是實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面之類別的成員。  
+事件是由物件傳送的訊息，用以表示發生動作。 這個動作可能是因使用者互動所造成，例如按一下按鈕，也可能起因於其他程式邏輯，如變更屬性值。 引發事件的物件稱為「事件發送者」**。 事件發送者並不清楚哪個物件或方法會接收 (處理) 它所引發的事件。 事件通常是事件發送者的成員，例如，<xref:System.Web.UI.WebControls.Button.Click> 事件是 <xref:System.Web.UI.WebControls.Button> 類別的成員，而 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件是實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面之類別的成員。  
   
-若要定義事件，您可以在事件類別的特徵標記中使用 C# 的 [`event`](../../csharp/language-reference/keywords/event.md) 或 Visual Basic 的 [`Event`](../../visual-basic/language-reference/statements/event-statement.md) 關鍵字，並指定事件之委派的型別。 委派將在下一節中描述。  
+要定義事件，請在事件類的簽名中使用[`event`](../../csharp/language-reference/keywords/event.md)C# 或[`Event`](../../visual-basic/language-reference/statements/event-statement.md)Visual Basic 關鍵字，並指定事件委託的類型。 委派將在下一節中描述。  
   
 一般而言，若要引發事件，您會加入標記為 `protected` 和 `virtual` (C#) 或 `Protected` 和 `Overridable` (Visual Basic) 的方法。 為這個 `On`*EventName* 方法命名，例如 `OnDataReceived`。 這個方法應該接受一個指定事件資料物件 (<xref:System.EventArgs> 型別或衍生型別之物件) 的參數。 您可以提供這個方法讓衍生類別覆寫引發事件的邏輯。 衍生類別一定要呼叫基底類別的 `On`*EventName* 方法，以確保註冊的委派收到事件。  
 
@@ -48,9 +48,9 @@ ms.locfileid: "78159620"
   
 .NET 提供了 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委派來支援大多數事件案例。 請針對所有沒有事件資料的事件使用 <xref:System.EventHandler> 委派。 請針對有事件相關資料的事件使用 <xref:System.EventHandler%601> 委派。 這些委派沒有傳回型別值，而且會接受兩個參數 (事件來源的物件和事件資料的物件)。  
   
-委派為[多點傳送](xref:System.MulticastDelegate)，這表示它們可以持有對一個以上事件處理方法的參考。 如需詳細資訊，請參閱 <xref:System.Delegate> 參考頁面。 委派可讓事件處理更彈性並進行精細的控制。 委派會維護事件的已註冊事件處理常式清單，進而做為引發事件之類別的事件分派者。  
+委託是[多播的](xref:System.MulticastDelegate)，這意味著它們可以保存對多個事件處理方法的引用。 如需詳細資訊，請參閱 <xref:System.Delegate> 參考頁面。 委派可讓事件處理更彈性並進行精細的控制。 委派會維護事件的已註冊事件處理常式清單，進而做為引發事件之類別的事件分派者。  
   
-對於無法使用 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委派的情況，您可以定義委派。 需要定義委派的情況非常少見，例如，當您必須使用無法辨識泛型的程式碼時。 您會在宣告中以 C# 的 [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) 與 Visual Basic 的 [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) 關鍵字標記委派。 下列範例將示範如何宣告名為 `ThresholdReachedEventHandler` 的委派。  
+對於無法使用 <xref:System.EventHandler> 和 <xref:System.EventHandler%601> 委派的情況，您可以定義委派。 需要定義委派的情況非常少見，例如，當您必須使用無法辨識泛型的程式碼時。 在聲明中使用 C#[`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type)和 Visual [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) Basic 關鍵字標記委託。 下列範例將示範如何宣告名為 `ThresholdReachedEventHandler` 的委派。  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  
@@ -90,10 +90,10 @@ ms.locfileid: "78159620"
   
 |Title|描述|  
 |-----------|-----------------|  
-|[操作說明：引發和使用事件](how-to-raise-and-consume-events.md)|包含引發和使用事件的範例。|  
-|[操作說明：使用事件屬性處理多個事件](how-to-handle-multiple-events-using-event-properties.md)|示範如何使用事件屬性處理多個事件。|  
-|[觀察者設計模式](observer-design-pattern.md)|描述設計模式，可讓訂閱者向提供者註冊，並且接收通知。|  
-|[操作說明：使用 Web Form 應用程式中的事件](how-to-consume-events-in-a-web-forms-application.md)|示範如何處理 Web Form 控制項所引發的事件。|  
+|[如何：引發和使用事件](how-to-raise-and-consume-events.md)|包含引發和使用事件的範例。|  
+|[如何：使用事件屬性處理多個事件](how-to-handle-multiple-events-using-event-properties.md)|示範如何使用事件屬性處理多個事件。|  
+|[觀察器設計模式](observer-design-pattern.md)|描述設計模式，可讓訂閱者向提供者註冊，並且接收通知。|  
+|[如何：使用 Web Form 應用程式中的事件](how-to-consume-events-in-a-web-forms-application.md)|示範如何處理 Web Form 控制項所引發的事件。|  
   
 ## <a name="see-also"></a>另請參閱
 

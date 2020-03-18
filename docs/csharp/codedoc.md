@@ -4,54 +4,54 @@ description: 了解如何使用 XML 文件註解記錄您的程式碼，並在�
 ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 1ed39c4733c36b3932fcb85bf50d4f4c0e53aa6f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965928"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146313"
 ---
-# <a name="document-your-code-with-xml-comments"></a>使用 XML 批註記錄您的程式碼
+# <a name="document-your-code-with-xml-comments"></a>使用 XML 注釋記錄代碼
 
 XML 文件註解是一種特殊類型的註解，新增於任何使用者定義型別或成員的定義上方。
 XML 文件註解具特殊性，因為編譯器可以處理它們以在編譯時期產生 XML 文件檔案。
-編譯器產生的 XML 檔案可以與您的 .NET 元件一起散發，讓 Visual Studio 和其他 Ide 可以使用 IntelliSense 來顯示類型或成員的快速資訊。 此外，可以透過 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類工具執行 XML 檔案來產生 API 參考網站。
+編譯器生成的 XML 檔可以與 .NET 程式集一起分發，以便 Visual Studio 和其他 IDEs 可以使用 IntelliSense 顯示有關類型或成員的快速資訊。 此外，可以透過 [DocFX](https://dotnet.github.io/docfx/) 和 [Sandcastle](https://github.com/EWSoftware/SHFB) 這類工具執行 XML 檔案來產生 API 參考網站。
 
 編譯器會忽略 XML 文件註解 (例如所有其他註解)。
 
 您可以執行下列其中一項動作，以在編譯時期產生 XML 檔案︰
 
-- 如果您是從命令列使用 .NET Core 開發應用程式，您可以將 `GenerateDocumentationFile` 元素加入 .csproj 專案檔的 `<PropertyGroup>` 區段中。 您也可以使用[`DocumentationFile` 元素](/visualstudio/msbuild/common-msbuild-project-properties)直接指定檔案的路徑。 下列範例會在根檔案名稱與組件相同的專案目錄中產生 XML 檔案：
+- 如果要從命令列使用 .NET Core 開發應用程式，則可以向 .csproj`<PropertyGroup>`專案檔案部分添加`GenerateDocumentationFile`元素。 您還可以使用[`DocumentationFile`元素](/visualstudio/msbuild/common-msbuild-project-properties)直接指定文檔檔的路徑。 下列範例會在根檔案名稱與組件相同的專案目錄中產生 XML 檔案：
 
    ```xml
    <GenerateDocumentationFile>true</GenerateDocumentationFile>
    ```
-   
+
    這個運算式就相當於下列運算式：
-   
+
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
    ```
 
-- 如果您正在使用 Visual Studio 開發應用程式，請以滑鼠右鍵按一下專案，然後選取 [屬性]。 在屬性對話方塊中，選取 [建置] 索引標籤，然後檢查 [XML 文件檔案]。 您也可以變更編譯器寫入檔案的位置。
+- 如果您正在使用 Visual Studio 開發應用程式，請以滑鼠右鍵按一下專案，然後選取 [屬性]****。 在屬性對話方塊中，選取 [建置]**** 索引標籤，然後檢查 [XML 文件檔案]****。 您也可以變更編譯器寫入檔案的位置。
 
-- 如果您要從命令列編譯 .NET Framework 應用程式，請在編譯時新增[-doc 編譯器選項](language-reference/compiler-options/doc-compiler-option.md)。  
+- 如果要從命令列編譯 .NET Framework 應用程式，則在編譯時添加[-doc 編譯器選項](language-reference/compiler-options/doc-compiler-option.md)。  
 
 XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 例如：
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
-## <a name="walkthrough"></a>逐步解說
+## <a name="walkthrough"></a>逐步介紹
 
-讓我們逐步解說記錄非常基本的數學程式庫，讓新的開發人員可以輕鬆地瞭解/參與，並讓協力廠商開發人員使用。
+讓我們演練一下記錄一個非常基本的數學庫，以便新開發人員能夠輕鬆理解/貢獻，並使協力廠商開發人員能夠輕鬆使用。
 
 以下是簡單數學程式庫的程式碼︰
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-範例程式庫支援 `int` 和 `double` 資料類型上的四個主要算數運算（`add`、`subtract`、`multiply`和 `divide`）。
+示例庫支援四個主要算數運算`add`（ `subtract` `multiply`、`divide`和`int`）`double`和 資料類型。
 
-現在您想要能夠使用您的程式庫但無法存取原始程式碼的協力廠商開發人員，從您的程式碼建立 API 參考檔。
+現在，您希望能夠為使用庫但無法訪問原始程式碼的協力廠商開發人員從代碼創建 API 參考文檔。
 如先前所述，XML 文件標籤可以用來達到此目的。 現在將向您介紹 C# 編譯器支援的標準 XML 標籤。
 
 ## <a name="summary"></a>\<summary>
@@ -61,7 +61,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-`<summary>` 標記很重要，建議您將其納入，因為它的內容是 IntelliSense 或 API 參考檔中類型或成員資訊的主要來源。
+該`<summary>`標記很重要，我們建議您包括它，因為它的內容是 IntelliSense 或 API 參考文檔中類型或成員資訊的主要來源。
 
 ## <a name="remarks"></a>\<remarks>
 
@@ -137,7 +137,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 ## <a name="param"></a>\<param>
 
-您可以使用 `<param>` 標記來描述方法的參數。 以下是 double `Add` 方法的範例：標記描述的參數是在**必要**的 `name` 屬性中指定。
+您可以使用 `<param>` 標記來描述方法的參數。 以下是雙 `Add` 方法的範例：標記所描述的屬性指定於**必要的** `name` 屬性中。
 
 [!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -150,7 +150,7 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 ## <a name="paramref"></a>\<paramref>
 
-您有時可能正在描述方法在 `<summary>` 標記中所執行的作業，而且您可能會想要參考參數。 則 `<paramref>` 標記最適合這麼做。 讓我們更新雙 `Add` 方法的摘要。 如同 `<param>` 標記，參數名稱是在**必要**的 `name` 屬性中指定。
+您有時可能正在描述方法在 `<summary>` 標記中所執行的作業，而且您可能會想要參考參數。 則 `<paramref>` 標記最適合這麼做。 讓我們更新雙 `Add` 方法的摘要。 與標記`<param>`一樣，參數名稱在**所需**`name`屬性中指定。
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -163,19 +163,19 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 ## <a name="list"></a>\<list>
 
-您可以使用 `<list>` 標記，將檔資訊格式化為已排序的清單、未排序清單或資料表。 建立 `Math` 程式庫所支援的未排序數學運算清單。
+您可以使用 標記`<list>`將文檔資訊格式化為有序清單、無序清單或表。 建立 `Math` 程式庫所支援的未排序數學運算清單。
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 您可以分別將 `type` 屬性變更為 `number` 或 `table`，以建立排序過的清單或表格。
 
-## <a name="inheritdoc"></a>\<inheritdoc >
+## <a name="inheritdoc"></a>\<繼承>
 
-您可以使用 `<inheritdoc>` 標記，從基類、介面和類似的方法繼承 XML 批註。 這可避免不必要的複製和貼上重複的 XML 批註，並自動保持 XML 批註的同步處理。
+可以使用`<inheritdoc>`標記從基類、介面和類似方法繼承 XML 注釋。 這樣可以消除重複的 XML 注釋的不需要複製和粘貼，並自動保持 XML 注釋同步。
 
 [!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
-### <a name="put-it-all-together"></a>將它全部放在一起
+### <a name="put-it-all-together"></a>組合在一起
 
 如已遵循本教學課程，並已在必要時將標記套用至程式碼，則程式碼現在看起來應該如下︰
 
@@ -206,12 +206,12 @@ XML 文件註解使用三個正斜線 (`///`) 和 XML 格式化註解主體。 �
 
 `name` 屬性代表標記中位在註解前面的名稱規範。
 
-可以用來取代 `name`的 `id` 屬性，代表批註前面標記的識別碼。
+屬性`id`（可用於 代替`name`）表示注釋前面的標記的 ID。
 
 ### <a name="user-defined-tags"></a>使用者定義的標記
 
 以上所述的所有標記都代表 C# 編譯器所辨識的標記。 不過，使用者可以定義自己的標記。
-Sandcastle 這類之類的工具可支援額外的標記，例如[\<事件 >](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)和[\<附注 >](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)，甚至支援[記錄命名空間](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)。
+像Sandcastle這樣的工具為額外的標籤提供支援，如[\<事件>](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm)和[\<注釋>，](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)甚至支援[記錄命名空間](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm)。
 自訂或內部文件產生工具也可以與標準標記搭配使用，而且可以支援從 HTML 到 PDF 的多個輸出格式。
 
 ## <a name="recommendations"></a>建議
@@ -223,10 +223,10 @@ Sandcastle 這類之類的工具可支援額外的標記，例如[\<事件 >](ht
 - 類型和其成員最少應該具有 `<summary>` 標記，因為 IntelliSense 需要其內容。
 - 應該使用結尾為句號的完整句子來撰寫文件文字。
 - 完全支援部分類別，而且文件資訊將會串連為該類型的單一項目。
-- 編譯器會驗證 `<exception>`、`<include>`、`<param>`、`<see>`、`<seealso>`和 `<typeparam>` 標記的語法。
+- `<exception>`編譯器驗證 的語法， `<include>`、 `<param>`、 `<see>`、 `<seealso>`、`<typeparam>`和 標記。
 - 編譯器會驗證包含程式碼其他部分的檔案路徑和參考的參數。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [XML 文件註解 (C# 程式設計手冊)](programming-guide/xmldoc/index.md)
-- [建議使用的文件註解標記 (C# 程式設計手冊)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [XML 文檔注釋（C# 程式設計指南）](programming-guide/xmldoc/index.md)
+- [建議使用的文件註解標籤 (C# 程式設計手冊)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

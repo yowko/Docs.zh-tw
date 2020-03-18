@@ -5,28 +5,28 @@ author: janvorli
 ms.author: janvorli
 ms.date: 02/05/2019
 ms.openlocfilehash: 267c2209556b66ab3541c9c79c99d7eceb2024da
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159737"
 ---
 # <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>如何使用 .NET Core 中的組件卸載功能及對其進行偵錯
 
 從 .NET Core 3.0 開始，支援載入及稍後卸載一組組件的功能。 在 .NET Framework 中，自訂應用程式定義域已用於此用途，但 .NET Core 僅支援單一預設應用程式定義域。
 
-.NET Core 3.0 和更新版本透過 <xref:System.Runtime.Loader.AssemblyLoadContext> 支援卸載功能。 您可以將一組組件載入可回收 `AssemblyLoadContext`，在其中執行方法，或只使用反映進行檢查，最後卸載 `AssemblyLoadContext`。 這會卸載載入 `AssemblyLoadContext`中的元件。
+.NET Core 3.0 和更新版本透過 <xref:System.Runtime.Loader.AssemblyLoadContext> 支援卸載功能。 您可以將一組組件載入可回收 `AssemblyLoadContext`，在其中執行方法，或只使用反映進行檢查，最後卸載 `AssemblyLoadContext`。 將卸載載入到 的`AssemblyLoadContext`程式集。
 
-使用 `AssemblyLoadContext` 與使用 AppDomain 卸載之間有一個值得注意的差異。 使用 AppDomain 時，會強制卸載。 在卸載時，在目標 AppDomain 中執行的所有線程都會中止，在目標 AppDomain 中建立的 managed COM 物件會損毀，依此類推。 使用 `AssemblyLoadContext` 時，卸載為「合作」。 呼叫 <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> 方法只會起始卸載。 卸載會在下列情況之後完成：
+使用 `AssemblyLoadContext` 與使用 AppDomain 卸載之間有一個值得注意的差異。 使用 AppDomain 時，會強制卸載。 卸載時，目標 AppDomain 中運行的所有線程都已中止，目標 AppDomain 中創建的託管 COM 物件將銷毀，等等。 使用 `AssemblyLoadContext` 時，卸載為「合作」。 呼叫 <xref:System.Runtime.Loader.AssemblyLoadContext.Unload%2A?displayProperty=nameWithType> 方法只會起始卸載。 卸載會在下列情況之後完成：
 
 - 沒有任何執行緒會將組件中方法載入到其呼叫堆疊上的 `AssemblyLoadContext`。
-- 從載入 `AssemblyLoadContext`的任何類型、這些類型的實例，以及元件本身都是由所參考：
+- 載入到這些類型的 的`AssemblyLoadContext`程式集中，沒有一種類型的類型，並且程式集本身都引用於：
   - `AssemblyLoadContext` 外部的參考，但弱式參考 (<xref:System.WeakReference> 或 <xref:System.WeakReference%601>) 除外。
-  - 來自 `AssemblyLoadContext`內外的強式垃圾收集行程（GC）控制碼（[GCHandleType. Normal](xref:System.Runtime.InteropServices.GCHandleType.Normal)或[GCHandleType](xref:System.Runtime.InteropServices.GCHandleType.Pinned)）。
+  - 強垃圾回收器 （GC） 控制碼 （[GCHandleType.正常](xref:System.Runtime.InteropServices.GCHandleType.Normal)或[GCHandleType.固定](xref:System.Runtime.InteropServices.GCHandleType.Pinned)）`AssemblyLoadContext`從 內部和外部 。
 
-## <a name="use-collectible-assemblyloadcontext"></a>使用可回收的 AssemblyLoadCoNtext
+## <a name="use-collectible-assemblyloadcontext"></a>使用可收集程式集載入上下文
 
-本節包含詳細的逐步教學課程，示範將 .NET Core 應用程式載入可回收 `AssemblyLoadContext`，執行其進入點，然後將其卸載的簡單方式。 您可以在[https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading](https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading)找到完整的範例。
+本節包含詳細的逐步教學課程，示範將 .NET Core 應用程式載入可回收 `AssemblyLoadContext`，執行其進入點，然後將其卸載的簡單方式。 您可以在 中找到完整的示例。 [https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading](https://github.com/dotnet/samples/tree/master/core/tutorials/Unloading)
 
 ### <a name="create-a-collectible-assemblyloadcontext"></a>建立可回收 AssemblyLoadContext
 
@@ -38,7 +38,7 @@ ms.locfileid: "78159737"
 
 如您所見，`Load` 方法會傳回 `null`。 這表示所有相依性組件都會載入到預設內容，而新的內容只會包含明確載入其中的組件。
 
-如果您也想要將部分或所有相依性載入到 `AssemblyLoadContext`，則可以在 `AssemblyDependencyResolver` 方法中使用 `Load`。 `AssemblyDependencyResolver` 會將元件名稱解析成絕對元件檔案路徑。 解析程式會使用載入內容之主要元件目錄中的 *.deps.json*檔案和元件檔。
+如果您也想要將部分或所有相依性載入到 `AssemblyLoadContext`，則可以在 `Load` 方法中使用 `AssemblyDependencyResolver`。 將`AssemblyDependencyResolver`程式集名稱解析為絕對程式集檔路徑。 解析程式使用載入到上下文中的主程式集目錄中的 *.deps.json*檔和程式集檔。
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
@@ -56,7 +56,7 @@ ms.locfileid: "78159737"
 
 [!code-csharp[Part 2](~/samples/snippets/standard/assembly/unloading/simple_example.cs#4)]
 
-在 `Main` 方法傳回之後，您可以藉由在自訂的 `Unload` 上呼叫 `AssemblyLoadContext` 方法，或去除您對 `AssemblyLoadContext` 的參考來起始卸載：
+在 `Main` 方法傳回之後，您可以藉由在自訂的 `AssemblyLoadContext` 上呼叫 `Unload` 方法，或去除您對 `AssemblyLoadContext` 的參考來起始卸載：
 
 [!code-csharp[Part 3](~/samples/snippets/standard/assembly/unloading/simple_example.cs#5)]
 
@@ -70,35 +70,35 @@ ms.locfileid: "78159737"
 
 [!code-csharp[Part 5](~/samples/snippets/standard/assembly/unloading/simple_example.cs#6)]
 
-不過，卸載不會立即完成。 如先前所述，它會依賴垃圾收集行程來收集測試元件中的所有物件。 在許多情況下，並不需要等候卸載完成。 不過，在某些情況下，知道卸載已經完成是很有用的。 例如，您可能想要刪除從磁碟載入到自訂 `AssemblyLoadContext` 的組件檔。 在這種情況下，可以使用下列程式碼片段。 它會觸發垃圾收集並等候迴圈中的暫止完成項，直到自訂 `AssemblyLoadContext` 的弱式參考設定為 `null`（表示已收集目標物件）為止。 在大部分情況下，只需要一個通過迴圈的傳遞。 不過，針對在 `AssemblyLoadContext` 中執行之程式碼所建立物件具有完成項的更複雜案例，可能需要更多的傳遞。
+不過，卸載不會立即完成。 如前所述，它依賴于垃圾回收器從測試程式集收集所有物件。 在許多情況下，並不需要等候卸載完成。 不過，在某些情況下，知道卸載已經完成是很有用的。 例如，您可能想要刪除從磁碟載入到自訂 `AssemblyLoadContext` 的組件檔。 在這種情況下，可以使用下列程式碼片段。 它觸發垃圾回收，並在迴圈中等待掛起的終端子，直到對自訂`AssemblyLoadContext`的弱引用設置為`null`，指示已收集目標物件。 在大多數情況下，只需要一個通過迴圈。 不過，針對在 `AssemblyLoadContext` 中執行之程式碼所建立物件具有完成項的更複雜案例，可能需要更多的傳遞。
 
 [!code-csharp[Part 6](~/samples/snippets/standard/assembly/unloading/simple_example.cs#7)]
 
 ### <a name="the-unloading-event"></a>卸載事件
 
-在某些情況下，載入到自訂 `AssemblyLoadContext` 中的程式碼可能需要在起始卸載時執行一些清除。 例如，它可能需要停止執行緒或清除強式 GC 控制碼。 `Unloading` 事件可用於這類情況。 執行必要清除的處理常式可以連結到這個事件。
+在某些情況下，載入到自訂 `AssemblyLoadContext` 中的程式碼可能需要在起始卸載時執行一些清除。 例如，它可能需要停止執行緒或清理強大的 GC 控制碼。 `Unloading` 事件可用於這類情況。 執行必要清除的處理常式可以連結到這個事件。
 
 ### <a name="troubleshoot-unloadability-issues"></a>針對卸載功能問題進行疑難排解
 
-由於卸載的關係，這很容易忘記可能會讓 `AssemblyLoadContext` 運作，並防止卸載的參考。 以下是可以保存參考的實體（其中一些不明顯）摘要：
+由於卸載的協作性質，很容易忘記可能將材料保留在收藏品`AssemblyLoadContext`中並防止卸載的引用。 下面是可以保存引用的實體（其中一些非明顯）的摘要：
 
-- 保留自可回收 `AssemblyLoadContext` 外部的一般參考，儲存于堆疊位置或處理器暫存器中（方法區域變數是由使用者程式碼明確建立，或由即時（JIT）編譯器隱含建立）、靜態變數或強式（釘選） GC 控制碼，以及可直接指向：
+- 從存儲在堆疊插槽或處理器寄存器中的`AssemblyLoadContext`收藏品外部持有的常規引用（方法區域變數，由使用者代碼顯式創建，或由及時 （JIT） 編譯器隱式創建）、靜態變數或強（固定）GC 控制碼，並傳遞指向：
   - 載入到可回收 `AssemblyLoadContext` 中的組件。
   - 來自這類組件的類型。
   - 來自這類組件類型的執行個體。
 - 從載入到可回收 `AssemblyLoadContext` 之組件執行程式碼的執行緒。
-- 在可回收 `AssemblyLoadContext`內建立之自訂、非可回收 `AssemblyLoadContext` 類型的實例。
-- 暫止 <xref:System.Threading.RegisteredWaitHandle> 實例，並將回呼設定為自訂 `AssemblyLoadContext`中的方法。
+- 在收藏品`AssemblyLoadContext``AssemblyLoadContext`中創建的自訂、不可收藏類型的實例。
+- 將<xref:System.Threading.RegisteredWaitHandle>回檔設置為自訂`AssemblyLoadContext`中的方法的掛起實例。
 
 > [!TIP]
-> 儲存在堆疊位置或處理器暫存器中，而且可能會導致無法卸載 `AssemblyLoadContext` 的物件參考，可能會在下列情況下發生：
+> 存儲在堆疊插槽或處理器寄存器中且可能阻止卸載的物件引用`AssemblyLoadContext`可能發生在以下情況下：
 >
-> - 當函式呼叫結果直接傳遞至另一個函式時，即使沒有使用者建立的本機變數也一樣。
-> - 當 JIT 編譯程式保留方法中某個點上可用之物件的參考時。
+> - 當函式呼叫結果直接傳遞到另一個函數時，即使沒有使用者創建的區域變數。
+> - 當 JIT 編譯器保留對方法中某個點可用的物件的引用時。
 
 ## <a name="debug-unloading-issues"></a>對卸載問題進行偵錯
 
-對卸載問題進行偵錯可能很繁瑣。 您可能會遇到以下狀況：您不知道哪些項目可以使 `AssemblyLoadContext` 保持運作，但是卸載會失敗。 協助此問題之最佳武器是含有 SOS 外掛程式的 WinDbg (UNIX 上的 LLDB)。 您必須找出讓 `LoaderAllocator` (其屬於特定 `AssemblyLoadContext`) 保持運作的項目。 SOS 外掛程式可讓您查看 GC 堆積物件、其階層和根。
+對卸載問題進行偵錯可能很繁瑣。 您可能會遇到以下狀況：您不知道哪些項目可以使 `AssemblyLoadContext` 保持運作，但是卸載會失敗。 協助此問題之最佳武器是含有 SOS 外掛程式的 WinDbg (UNIX 上的 LLDB)。 您必須找出讓 `LoaderAllocator` (其屬於特定 `AssemblyLoadContext`) 保持運作的項目。 SOS 外掛程式允許您查看 GC 堆物件、其層次結構和根。
 
 若要將外掛程式載入到偵錯工具，請在偵錯工具命令列中輸入下列命令：
 
@@ -114,10 +114,10 @@ ms.locfileid: "78159737"
 plugin load /path/to/libsosplugin.so
 ```
 
-讓我們來 debug 一個發生卸載問題的範例程式。 原始程式碼包含在以下內容中。 當您在 WinDbg 底下執行它時，程式會在嘗試檢查卸載是否成功之後，立即中斷至偵錯工具。 然後，您就可以開始尋找原因。
+讓我們調試一個在卸載時出現問題的示常式序。 原始程式碼包含在以下內容中。 當您在 WinDbg 底下執行它時，程式會在嘗試檢查卸載是否成功之後，立即中斷至偵錯工具。 然後，您就可以開始尋找原因。
 
 > [!TIP]
-> 如果您使用 Unix 上的 LLDB 進行偵錯工具，下列範例中的 SOS 命令前面不會有 `!`。
+> 如果在 Unix 上使用 LLDB 進行調試，則以下示例中的 SOS 命令`!`前面沒有。
 
 ```console
 !dumpheap -type LoaderAllocator
@@ -137,15 +137,15 @@ Statistics:
 Total 2 objects
 ```
 
-在下面的 "Statistics:" 部分中，檢查屬於 `MT` 的 `MethodTable` (`System.Reflection.LoaderAllocator`)，這是我們關注的物件。 然後，在清單中，尋找 `MT` 符合的專案，並取得物件本身的位址。 在我們的案例中，它是 "000002b78000ce40"。
+在下面的 "Statistics:" 部分中，檢查屬於 `System.Reflection.LoaderAllocator` 的 `MT` (`MethodTable`)，這是我們關注的物件。 然後，在開頭的清單中，找到匹配`MT`該條目的條目，並獲取物件本身的位址。 在我們的例子中，它是"000002b78000ce40"。
 
-既然我們知道 `LoaderAllocator` 物件的位址，就可以使用另一個命令來尋找其 GC 根：
+現在我們知道了物件的位址，`LoaderAllocator`我們可以使用另一個命令來查找其 GC 根：
 
 ```console
 !gcroot -all 0x000002b78000ce40
 ```
 
-此命令會傾印導致 `LoaderAllocator` 執行個體的物件參考鏈。 此清單會以根節點開頭，這是讓我們的 `LoaderAllocator` 保持運作的實體，因此是問題的核心。 根可以是堆疊位置、處理器暫存器、GC 控制代碼或靜態變數。
+此命令會傾印導致 `LoaderAllocator` 執行個體的物件參考鏈。 清單從根開始，根是保持我們`LoaderAllocator`生存的實體，因此是問題的核心。 根可以是堆疊位置、處理器暫存器、GC 控制代碼或靜態變數。
 
 以下是 `gcroot` 命令的輸出範例：
 
@@ -174,13 +174,13 @@ HandleTable:
 Found 3 roots.
 ```
 
-下一步是找出根所在的位置，以便您可以修正它。 最簡單的情況是當根為堆疊位置或處理器暫存器時。 在此情況下，`gcroot` 會顯示其框架包含根的函式名稱，以及執行該函式的執行緒。 困難的情況是當根為靜態變數或 GC 控制代碼時。
+下一步是找出根的位置，以便您可以修復它。 最簡單的情況是當根為堆疊位置或處理器暫存器時。 在這種情況下，`gcroot`將顯示其幀包含根和執行該函數的執行緒的函數的名稱。 困難的情況是當根為靜態變數或 GC 控制代碼時。
 
 在上一個範例中，第一個根是類型為 `System.Reflection.RuntimeMethodInfo` 的區域變數，儲存在函式 `example.Program.Main(System.String[])` 的框架中，位址為 `rbp-20` (`rbp` 是處理器暫存器 `rbp`，-20 是該暫存器中的十六進位位移)。
 
 第二個根是標準 (強式) `GCHandle`，它會保存 `test.Test` 類別執行個體的參考。
 
-第三個根是固定的 `GCHandle`。 這是一個靜態變數，但是可惜的是，沒有辦法告訴您。 參考型別靜態變數會儲存在內部執行階段結構的受控物件陣列中。
+第三個根是固定的 `GCHandle`。 這個實際上是一個靜態變數，但不幸的是，沒有辦法告訴。 參考型別靜態變數會儲存在內部執行階段結構的受控物件陣列中。
 
 另一個可以防止卸載 `AssemblyLoadContext` 的情況，就是當執行緒具有組件的方法框架，而該組件已載入到其堆疊的 `AssemblyLoadContext` 時。 您可以藉由傾印所有執行緒的受控呼叫堆疊來進行檢查：
 
@@ -188,7 +188,7 @@ Found 3 roots.
 ~*e !clrstack
 ```
 
-此命令表示「將 `!clrstack` 命令套用到所有執行緒」。 下列是此範例中該命令的輸出。 可惜的是，LLDB on Unix 沒有任何方法可將命令套用至所有線程，因此您必須手動切換執行緒，並重複 `clrstack` 命令。 忽略偵錯工具顯示「無法進行 managed 堆疊」的所有線程。
+此命令表示「將 `!clrstack` 命令套用到所有執行緒」。 下列是此範例中該命令的輸出。 遺憾的是，Unix 上的 LLDB 沒有任何方法對所有線程應用命令，因此您必須手動切換執行緒並重複該`clrstack`命令。 忽略調試器說"無法遍歷託管堆疊"的所有線程。
 
 ```console
 OS Thread Id: 0x6ba8 (0)
@@ -249,6 +249,6 @@ OS Thread Id: 0x60bc (7)
 
 ## <a name="program-loaded-into-the-testassemblyloadcontext"></a>載入到 TestAssemblyLoadContext 的程式
 
-下列程式碼代表在主要測試程式中傳遞至 `ExecuteAndUnload` 方法的*test .dll* 。
+以下代碼表示傳遞給主測試程式中`ExecuteAndUnload`的方法的*test.dll。*
 
 [!code-csharp[Program loaded into the TestAssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/unloadability_issues_example_test.cs)]

@@ -1,23 +1,23 @@
 ---
-title: 運算式樹狀架構
+title: Expression Trees
 description: 了解 .NET Core 中的運算式樹狀架構，以及如何使用它們來表示您可以檢查、修改和執行的程式碼結構。
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: b7d039ea4585953473dc88cebcc516ea240cdc3a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e1026ef70860da519b688a9d67181b88d03f6f0b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036328"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145835"
 ---
-# <a name="expression-trees"></a>運算式樹狀架構
+# <a name="expression-trees"></a>Expression Trees
 
-如果您使用過 LINQ，您會有豐富的程式庫使用經驗，其中 `Func` 類型是 API 集合的一部分 （如果您不熟悉 LINQ，您可能會想要閱讀[linq 教學](linq/index.md)課程和此專案前面的[lambda 運算式](./programming-guide/statements-expressions-operators/lambda-expressions.md)相關文章。）*運算式樹狀*架構可讓您更豐富地與函式的引數互動。
+如果您使用過 LINQ，您會有豐富的程式庫使用經驗，其中 `Func` 類型是 API 集合的一部分 （如果您不熟悉 LINQ，則可能需要在此教程之前閱讀[LINQ 教程](linq/index.md)和有關[lambda 運算式](./programming-guide/statements-expressions-operators/lambda-expressions.md)的文章。*運算式樹*與函數的參數提供了更豐富的交互。
 
-當您建立 LINQ 查詢時，通常會使用 Lambda 運算式來撰寫函式引數。 在一般 LINQ 查詢中，這些函式引數會轉換成編譯器所建立的委派。 
+當您建立 LINQ 查詢時，通常會使用 Lambda 運算式來撰寫函式引數。 在一般 LINQ 查詢中，這些函式引數會轉換成編譯器所建立的委派。
 
-當您想要有更豐富的互動時，您必須使用「運算式樹狀架構」。
+當您想要有更豐富的互動時，您必須使用「運算式樹狀架構」**。
 運算式樹狀架構會以您可以查看、修改或執行的結構來表示程式碼。 這些工具可讓您在執行階段操作程式碼。 您可以撰寫程式碼來查看執行中的演算法，或插入新功能。 在更進階的案例中，您可以修改執行中的演算法，甚至將 C# 運算式轉譯為其他格式，以便在其他環境中執行。
 
 您可能已撰寫使用運算式樹狀架構的程式碼。 Entity Framework 的 LINQ API 接受運算式樹狀架構作為 LINQ 查詢運算式模式的引數。
@@ -27,19 +27,19 @@ ms.locfileid: "73036328"
 
 1. [說明運算式樹狀架構](expression-trees-explained.md)
 
-    了解「運算式樹狀架構」背後的結構和概念。
-    
+    了解「運算式樹狀架構」** 背後的結構和概念。
+
 2. [支援運算式樹狀架構的架構類型](expression-classes.md)
-    
+
     了解定義及操作運算式樹狀架構的結構和類別。
-    
+
 3. [執行運算式](expression-trees-execution.md)
 
     了解如何將以 Lambda 運算式表示的運算式樹狀架構轉換成委派，再執行所產生的委派。
 
 4. [解譯運算式](expression-trees-interpreting.md)
 
-    了解如何周遊及查看「運算式樹狀架構」，以了解運算式樹狀架構所表示的程式碼。
+    了解如何周遊及查看「運算式樹狀架構」**，以了解運算式樹狀架構所表示的程式碼。
 
 5. [建置運算式](expression-trees-building.md)
 

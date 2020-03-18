@@ -11,10 +11,10 @@ helpviewer_keywords:
 - garbage collection, encapsulating resources
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 ms.openlocfilehash: c5232aa89064c514e71f3a18bc754159e9c9b15b
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160273"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>使用實作 IDisposable 的物件
@@ -45,9 +45,9 @@ C# `using` 陳述式還可讓您以單一陳述式取得多項資源，其內部
 
 ## <a name="tryfinally-block"></a>Try/finally 區塊
 
-您可以選擇直接實作 `try/finally` 區塊，而不將 `using` 區塊包裝在 `try/finally` 陳述式中。 這可成為您的個人編碼風格，也可能基於下列其中一個原因而這樣做：  
+您可以選擇直接實作 `try/finally` 區塊，而不將 `try/finally` 區塊包裝在 `using` 陳述式中。 這可成為您的個人編碼風格，也可能基於下列其中一個原因而這樣做：  
   
-- 包含 `catch` 區塊以處理 `try` 區塊中擲回的任何例外狀況。 否則，當 `using` 區塊不存在時，`using` 陳述式擲回的所有例外狀況都會是未處理，就連 `try/catch` 區塊中擲回的任何例外狀況也一樣。  
+- 包含 `catch` 區塊以處理 `try` 區塊中擲回的任何例外狀況。 否則，當 `try/catch` 區塊不存在時，`using` 陳述式擲回的所有例外狀況都會是未處理，就連 `using` 區塊中擲回的任何例外狀況也一樣。  
   
 - 若要將實作 <xref:System.IDisposable> 且範圍對於物件宣告所在區塊並非區域的物件具現化。  
   
@@ -56,10 +56,10 @@ C# `using` 陳述式還可讓您以單一陳述式取得多項資源，其內部
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-如果您的程式語言不支援 `try/finally` 陳述式，但是允許直接呼叫 `using` 方法，而使得您選擇實作或必須實作 <xref:System.IDisposable.Dispose%2A> 區塊，則可以遵循這個基本模式。
+如果您的程式語言不支援 `using` 陳述式，但是允許直接呼叫 <xref:System.IDisposable.Dispose%2A> 方法，而使得您選擇實作或必須實作 `try/finally` 區塊，則可以遵循這個基本模式。
   
 ## <a name="see-also"></a>另請參閱
 
-- [清除 Unmanaged 資源](../../../docs/standard/garbage-collection/unmanaged.md)
-- [using 陳述式 (C# 參考)](../../csharp/language-reference/keywords/using-statement.md)
+- [清理非託管資源](../../../docs/standard/garbage-collection/unmanaged.md)
+- [使用語句（C# 引用）](../../csharp/language-reference/keywords/using-statement.md)
 - [Using 陳述式 (Visual Basic)](../../visual-basic/language-reference/statements/using-statement.md)

@@ -4,24 +4,24 @@ description: 將運算式樹狀架構轉換成可執行檔的中繼語言 (IL) �
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 9af4b346962cb743daddf774e8b3c1f8fa722ae4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 802a83f52f9c05a99c3f49f8f6511eff81ef3eaa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037106"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146017"
 ---
 # <a name="executing-expression-trees"></a>執行運算式樹狀架構
 
 [上一個課程 -- 支援運算式樹狀架構的架構類型](expression-classes.md)
 
-「運算式樹狀架構」是一種表示特定程式碼的資料結構。
+「運算式樹狀架構」** 是一種表示特定程式碼的資料結構。
 它不是已編譯且可執行的程式碼。 如果您想要執行由運算式樹狀架構表示的 .NET 程式碼，您必須將它轉換成可執行 IL 指令。
 
 ## <a name="lambda-expressions-to-functions"></a>將 Lambda 運算式轉換成函式
 
-您可以將任何 LambdaExpression 或衍生自 LambdaExpression 的任何類型，轉換成可執行 IL。 其他運算式類型則無法直接轉換成程式碼。 這項限制實際上不會造成太大影響。 Lambda 運算式是您想要轉換成可執行中繼語言 (IL) 以便執行的唯一運算式類型。 (想想直接執行 `ConstantExpression` 的用意。 這是否表示任何有用的？）任何是 `LambdaExpression`的運算式樹狀架構，或是從 `LambdaExpression` 衍生的類型，都可以轉換成 IL。
-運算式類型 `Expression<TDelegate>` 是 .NET Core 程式庫中唯一的具體範例。 它可用來表示對應至任何委派類型的運算式。 因為此類型對應至委派類型，所以 .NET 可以查看運算式，並為符合 Lambda 運算式簽章的適當委派產生 IL。 
+您可以將任何 LambdaExpression 或衍生自 LambdaExpression 的任何類型，轉換成可執行 IL。 其他運算式類型則無法直接轉換成程式碼。 這項限制實際上不會造成太大影響。 Lambda 運算式是您想要轉換成可執行中繼語言 (IL) 以便執行的唯一運算式類型。 (想想直接執行 `ConstantExpression` 的用意。 這是否意味著任何有用的東西？）任何運算式樹或`LambdaExpression`派生自的任何`LambdaExpression`運算式樹都可以轉換為 IL。
+運算式類型 `Expression<TDelegate>` 是 .NET Core 程式庫中唯一的具體範例。 它可用來表示對應至任何委派類型的運算式。 因為此類型對應至委派類型，所以 .NET 可以查看運算式，並為符合 Lambda 運算式簽章的適當委派產生 IL。
 
 在大多數情況下，這會在運算式和其對應委派之間建立一個簡單的對應。 例如，由 `Expression<Func<int>>` 表示的運算式樹狀架構會轉換成 `Func<int>` 類型的委派。 針對具有任何傳回型別和引數清單的 Lambda 運算式，會有一個委派類型，它是由該 Lambda 運算式表示之可執行程式碼的目標類型。
 
@@ -48,9 +48,9 @@ Console.WriteLine(answer);
 
 建議您不要嘗試建立任何更複雜的快取機制來提升效能，方法是避免不必要的編譯呼叫。 比較兩個任意運算式樹狀架構以判斷其是否代表相同的演算法，執行起來也很耗時。 您可能會發現避免任何額外的 `LambdaExpression.Compile()` 呼叫所省下的計算時間，超過執行程式碼以判斷兩個不同的運算式樹狀架構是否產生相同的可執行程式碼所花費的時間。
 
-## <a name="caveats"></a>警告
+## <a name="caveats"></a>警示
 
-您可以使用運算式樹狀架構執行的其中一個最簡單的作業，就是將 Lambda 運算式編譯成委派並叫用該委派。 不過，即使這是簡單的作業，還是必須注意幾點。 
+您可以使用運算式樹狀架構執行的其中一個最簡單的作業，就是將 Lambda 運算式編譯成委派並叫用該委派。 不過，即使這是簡單的作業，還是必須注意幾點。
 
 Lambda 運算式會透過運算式中參考的任何區域變數建立結束型別。 您必須確保屬於該委派的任何變數都可用於呼叫 `Compile` 的位置，以及在執行所產生的委派時使用。
 
@@ -108,7 +108,7 @@ private static Func<int, int> CreateBoundResource()
 }
 ```
 
-此方法所傳回的委派已透過 `constant` 物件關閉，該物件已經過處置 (因為已在 `using` 陳述式中宣告，所以已經過處置)。 
+此方法所傳回的委派已透過 `constant` 物件關閉，該物件已經過處置 (因為已在 `using` 陳述式中宣告，所以已經過處置)。
 
 現在，當您執行此方法所傳回的委派時，執行當下會擲回 `ObjectDisposedException`。
 
@@ -118,7 +118,7 @@ private static Func<int, int> CreateBoundResource()
 
 運算式中的程式碼可能會參考其他組件中的方法或屬性。 定義運算式、編譯運算式及叫用所產生的委派時，都必須存取該組件。 如果沒有該組件，則會發生 `ReferencedAssemblyNotFoundException`。
 
-## <a name="summary"></a>總結
+## <a name="summary"></a>摘要
 
 您可以編譯表示 Lambda 運算式的運算式樹狀架構，以建立可執行的委派。 這提供一個機制來執行由運算式樹狀架構表示的程式碼。
 

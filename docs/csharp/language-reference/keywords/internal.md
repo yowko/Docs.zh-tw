@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: db653d0ed7f4835348484242b03392a8955c6392
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e5a5ca18828b689241abbb6d80c5adc51efb073c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713432"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173597"
 ---
 # <a name="internal-c-reference"></a>internal (C# 參考)
-`internal` 關鍵字是類型和類型成員的[存取修飾詞](./access-modifiers.md)。 
+`internal` 關鍵字是類型和類型成員的[存取修飾詞](./access-modifiers.md)。
   
- > 此頁面涵蓋 `internal` 存取。 `internal` 關鍵字也是屬於 [`protected internal`](./protected-internal.md) 存取修飾詞。
+ > 此頁面涵蓋 `internal` 存取。 關鍵字`internal`也是訪問修改器的一[`protected internal`](./protected-internal.md)部分。
   
 內部類型或成員只能在相同組件的檔案內存取，如下列範例所示：  
   
 ```csharp  
-public class BaseClass   
+public class BaseClass
 {  
     // Only accessible within the same assembly.
     internal static int x = 0;
@@ -43,7 +43,7 @@ public class BaseClass
 ```csharp  
 // Assembly1.cs  
 // Compile with: /target:library  
-internal class BaseClass   
+internal class BaseClass
 {  
    public static int intM = 0;  
 }  
@@ -52,9 +52,9 @@ internal class BaseClass
 ```csharp  
 // Assembly1_a.cs  
 // Compile with: /reference:Assembly1.dll  
-class TestAccess   
+class TestAccess
 {  
-   static void Main()   
+   static void Main()
    {  
       var myBase = new BaseClass();   // CS0122  
    }  
@@ -67,7 +67,7 @@ class TestAccess
 ```csharp  
 // Assembly2.cs  
 // Compile with: /target:library  
-public class BaseClass   
+public class BaseClass
 {  
    internal static int intM = 0;  
 }  
@@ -76,9 +76,9 @@ public class BaseClass
 ```csharp  
 // Assembly2_a.cs  
 // Compile with: /reference:Assembly2.dll  
-public class TestAccess   
+public class TestAccess
 {  
-   static void Main()   
+   static void Main()
    {  
       var myBase = new BaseClass();   // Ok.  
       BaseClass.intM = 444;    // CS0117  
@@ -90,14 +90,14 @@ public class TestAccess
 
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[已宣告存取範圍](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](./index.md)
 - [存取修飾詞](./access-modifiers.md)
-- [存取範圍層級](./accessibility-levels.md)
+- [協助工具級別](./accessibility-levels.md)
 - [修飾詞](index.md)
 - [public](./public.md)
-- [private](./private.md)
-- [protected](./protected.md)
+- [私人](./private.md)
+- [保護](./protected.md)

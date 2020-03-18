@@ -4,16 +4,16 @@ description: 了解 C# 索引子，以及其如何實作索引的屬性，而索
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450878"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79145680"
 ---
 # <a name="indexers"></a>索引子
 
-「索引子」類似於屬性。 從許多方面來看，索引子是建立在與[屬性](properties.md)相同的語言功能之上。 索引子可啟用「索引」屬性，也就是使用一或多個引數參考的屬性。 這些引數可對某些數值集合進行索引。
+「索引子」** 類似於屬性。 從許多方面來看，索引子是建立在與[屬性](properties.md)相同的語言功能之上。 索引子可啟用「索引」** 屬性，也就是使用一或多個引數參考的屬性。 這些引數可對某些數值集合進行索引。
 
 ## <a name="indexer-syntax"></a>索引子語法
 
@@ -37,20 +37,20 @@ public int this[string key]
 在第一個範例中，您可以看到屬性語法和索引子語法之間的關聯性。 這點相似性會出現在索引子的大部分語法規則中。 索引子可以有任何有效的存取修飾詞 (public、protected internal、protected、internal、private 或 private protected)。 它們可能是密封、虛擬或抽象的。 如同屬性，您可以為索引子中 get 與 set 存取子，指定不同的存取修飾詞。
 您也可以指定唯讀索引子 (藉由省略 set 存取子) 或唯寫索引子 (藉由省略 get 存取子)。
 
-您可以將使用屬性時所學到的幾乎所有知識應用到索引子。 這項規則的唯一例外是「自動實作屬性」。 編譯器不一定可為索引子產生正確的儲存體。
+您可以將使用屬性時所學到的幾乎所有知識應用到索引子。 這項規則的唯一例外是「自動實作屬性」**。 編譯器不一定可為索引子產生正確的儲存體。
 
-索引子和屬性的不同之處，在於具有可參考一組項目中某個項目的引數。 您可以在一個類型上定義多個索引子，但前提是每個索引子的引數清單必須是唯一的。 讓我們探索幾個不同的案例，在這些案例中，您可以在類別定義中使用一或多個索引子。 
+索引子和屬性的不同之處，在於具有可參考一組項目中某個項目的引數。 您可以在一個類型上定義多個索引子，但前提是每個索引子的引數清單必須是唯一的。 讓我們探索幾個不同的案例，在這些案例中，您可以在類別定義中使用一或多個索引子。
 
 ## <a name="scenarios"></a>案例
 
-當您的類型 API 建立一些集合的模型，以供您在其中定義該集合的引數時，您會在此類型中定義「索引子」。 您的索引子不一定會直接對應至屬於 .NET Core Framework 的集合類型。 您的類型除了建立集合的模型之外，可能還有其他職責。
+當您的類型 API 建立一些集合的模型，以供您在其中定義該集合的引數時，您會在此類型中定義「索引子」**。 您的索引子不一定會直接對應至屬於 .NET Core Framework 的集合類型。 您的類型除了建立集合的模型之外，可能還有其他職責。
 索引子可讓您提供符合類型抽象概念的 API，而不會公開有關該抽象概念的值如何儲存或計算的內部詳細資料。
 
-讓我們逐步解說使用「索引子」的一些常見案例。 您可以存取[索引子的範例資料夾](https://github.com/dotnet/samples/tree/master/csharp/indexers)。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+讓我們逐步解說使用「索引子」** 的一些常見案例。 您可以存取[索引子的範例資料夾](https://github.com/dotnet/samples/tree/master/csharp/indexers)。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ### <a name="arrays-and-vectors"></a>陣列和向量
 
-建立索引子的其中一個最常見案例，就是當您的類型建立陣列或向量的模型時。 您可以建立索引子來建立已排序資料清單的模型。 
+建立索引子的其中一個最常見案例，就是當您的類型建立陣列或向量的模型時。 您可以建立索引子來建立已排序資料清單的模型。
 
 建立您自己的索引子的優點，就是您可以定義該集合的儲存體以符合您的需求。 假設您的類型所建立的歷程資料模型太大，而無法一次全部載入記憶體。 您需要根據使用情況載入和卸載集合區段。 下列範例會建立此行為的模型。 它會報告有多少資料點。 它會建立頁面，以視需要保留資料區段。 它會從記憶體中刪除頁面，以挪出空間給較新要求所需的頁面使用。
 
@@ -177,7 +177,7 @@ public class DataSamples
 
 ### <a name="dictionaries"></a>字典
 
-另一個常見案例是當您需要建立字典或對應的模型時。 當您的類型根據索引鍵 (通常是文字索引鍵) 儲存值時，就會發生此情況。 此範例會建立將命令列引數對應至管理這些選項之 [Lambda 運算式](delegates-overview.md)的字典。 下列範例顯示兩個類別︰將命令列選項對應至 `ArgsActions` 委派的 `Action` 類別，以及遇到該選項時會使用 `ArgsProcessor` 執行每個 `ArgsActions` 的 `Action`。
+另一個常見案例是當您需要建立字典或對應的模型時。 當您的類型根據索引鍵 (通常是文字索引鍵) 儲存值時，就會發生此情況。 此範例會建立將命令列引數對應至管理這些選項之 [Lambda 運算式](delegates-overview.md)的字典。 下列範例顯示兩個類別︰將命令列選項對應至 `Action` 委派的 `ArgsActions` 類別，以及遇到該選項時會使用 `ArgsActions` 執行每個 `Action` 的 `ArgsProcessor`。
 
 ```csharp
 public class ArgsProcessor
@@ -224,9 +224,10 @@ public class ArgsActions
 
 ### <a name="multi-dimensional-maps"></a>多維對應
 
-您可以建立使用多個引數的索引子。 此外，這些引數並不限於相同的類型。 讓我們來看以下兩個範例。   
+您可以建立使用多個引數的索引子。 此外，這些引數並不限於相同的類型。 讓我們來看以下兩個範例。
 
-第一個範例顯示產生 Mandelbrot 集合值的類別。 如需該集合背後數學的詳細資訊，請參閱[這篇文章](https://en.wikipedia.org/wiki/Mandelbrot_set)。 索引子使用兩個雙精度浮點數在 X, Y 平面中定義一個點。
+第一個範例顯示產生 Mandelbrot 集合值的類別。 如需該集合背後數學的詳細資訊，請參閱[這篇文章](https://en.wikipedia.org/wiki/Mandelbrot_set)。
+索引子使用兩個雙精度浮點數在 X, Y 平面中定義一個點。
 get 存取子會計算反覆運算次數，直到某個點經判斷不在集合內為止。 如果到達最高次數，該點是在集合內，而且會傳回類別的 maxIterations 值 (為了 Mandelbrot 集合所普及化的電腦產生影像，會定義決定點在集合之外所需之反覆運算次數的色彩)。
 
 ```csharp
@@ -267,9 +268,9 @@ Mandelbrot 集合會在每個 (x,y) 座標定義實數值的值。
 讓我們來看上次使用的索引子，該索引子接受多個不同類型的引數。 假設有個管理歷程溫度資料的程式。 此索引子使用城市和日期來設定或取得該地點的高低溫度：
 
 ```csharp
-using DateMeasurements = 
+using DateMeasurements =
     System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;
-using CityDataMeasurements = 
+using CityDataMeasurements =
     System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 
 public class HistoricalWeatherData
@@ -319,12 +320,13 @@ using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, 
 using CityDataMeasurements = System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 ```
 
-會為建構的泛型型別建立「別名」。 這些陳述式可讓程式碼稍後使用更具描述性的 `DateMeasurements` 和 `CityDateMeasurements` 名稱，而不是 `Dictionary<DateTime, Measurements>` 和 `Dictionary<string, Dictionary<DateTime, Measurements> >` 的泛型建構。 此建構確實需要在 `=` 符號右側使用完整的類型名稱。
+會為建構的泛型型別建立「別名」**。 這些陳述式可讓程式碼稍後使用更具描述性的 `DateMeasurements` 和 `CityDateMeasurements` 名稱，而不是 `Dictionary<DateTime, Measurements>` 和 `Dictionary<string, Dictionary<DateTime, Measurements> >` 的泛型建構。
+此建構確實需要在 `=` 符號右側使用完整的類型名稱。
 
-第二個方法是移除用來對集合進行索引之任何 `DateTime` 物件的時間部分。 .NET 不包含僅限日期的類型。
+第二個方法是移除用來對集合進行索引之任何 `DateTime` 物件的時間部分。 .NET 不包括僅日期類型。
 開發人員使用 `DateTime` 類型，但使用 `Date` 屬性來確保該日期的任何 `DateTime` 物件都相等。
 
 ## <a name="summing-up"></a>總結
 
 每當您的類別中有屬性類元素，且該屬性不代表單一值，而代表數值集合 (其中每個項目是由一組引數所識別) 時，就應該建立索引子。 這些引數可唯一識別應參考集合中的哪個項目。
-索引子會擴充[屬性](properties.md)的概念，其中成員的處理方式就像是類別外部的資料項目，但是就像內部的方法一樣。 索引子允許引數在代表一組項目的屬性中尋找單一項目。
+索引子擴展[屬性](properties.md)的概念，其中成員被視為類外部的資料項目，但類似于內部的方法。 索引子允許引數在代表一組項目的屬性中尋找單一項目。

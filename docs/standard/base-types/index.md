@@ -8,17 +8,17 @@ helpviewer_keywords:
 - type system, base types
 ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
 ms.openlocfilehash: 8fa22ce749dc7d117a4a37de5d09abd9892eeab7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103539"
 ---
 # <a name="working-with-base-types-in-net"></a>在 .NET 中使用基底類型
 本節說明 .NET 基底類型作業，包括格式化、轉換和一般作業。  
   
-## <a name="in-this-section"></a>本章節內容  
- [.NET Framework 中的型別轉換](../../../docs/standard/base-types/type-conversion.md)  
+## <a name="in-this-section"></a>本節內容  
+ [在 .NET 框架中鍵入轉換](../../../docs/standard/base-types/type-conversion.md)  
  描述如何將一個類型轉換為另一個類型。  
   
  [格式化類型](../../../docs/standard/base-types/formatting-types.md)  

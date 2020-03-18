@@ -1,15 +1,15 @@
 ---
-title: .NET Framework 分析器-.NET
-description: 瞭解如何使用 .NET Framework 分析器套件中的 .NET Framework 分析器來尋找和解決安全性風險
+title: .NET 框架分析器 - .NET
+description: 瞭解如何使用 .NET 框架分析器包中的 .NET 框架分析器來查找和解決安全風險
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: dd69671e709549fe0ad0f582e4d09b43f7321df2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78155993"
 ---
 # <a name="the-net-framework-analyzer"></a>.NET Framework Analyzer
@@ -20,7 +20,7 @@ ms.locfileid: "78155993"
 
 ## <a name="installing-and-configuring-the-net-framework-analyzer"></a>安裝和設定 .NET Framework Analyzer
 
-.NET Framework 分析器必須在您想要執行的每個專案上安裝為 NuGet 套件。 只有一位開發人員必須將它們新增至專案。 分析器套件是一種專案相依性，而且會在具有已更新方案之後，於每位開發人員的電腦上執行。
+.NET 框架分析器必須作為 NuGet 包安裝在您希望它們運行的每個專案上。 只有一位開發人員必須將它們新增至專案。 分析器套件是一種專案相依性，而且會在具有已更新方案之後，於每位開發人員的電腦上執行。
 
 [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/) NuGet 套件提供 .NET Framework Analyzer。 此套件只提供 .NET Framework 特有的分析器，包含安全性分析器。 在大部分情況下，您會想要有 [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) NuGet 套件。
 FxCopAnalyzers 彙總套件包含 Framework.Analyzers 套件中所含的所有架構分析器以及下列分析器：
@@ -98,7 +98,7 @@ public class MyItemType
 
 ### <a name="ca2237-mark-iserializable-types-with-serializable"></a>CA2237：必須以可序列化標記 ISerializable 類型
 
-若要讓通用語言執行平台辨識為可序列化，即使類型透過實作 <xref:System.SerializableAttribute> 介面來使用自訂序列化常式，仍然必須使用 <xref:System.Runtime.Serialization.ISerializable> 屬性來標記類型。
+若要讓通用語言執行平台辨識為可序列化，即使類型透過實作 <xref:System.Runtime.Serialization.ISerializable> 介面來使用自訂序列化常式，仍然必須使用 <xref:System.SerializableAttribute> 屬性來標記類型。
 
 **類別：** 使用方式
 

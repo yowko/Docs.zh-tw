@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
 ms.openlocfilehash: d4444b6d080afa92a4e7fd9f30c5f9358f02f0ef
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159230"
 ---
 # <a name="framework-libraries"></a>Framework 程式庫
@@ -32,9 +32,9 @@ BCL 提供最基本的類型和公用程式功能，是所有其他 .NET 類別�
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) - 32 位元浮點類型。
 * <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)) - 128 位元 Decimal 類型。
 * <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)) - 代表記憶體位元組之不帶正負號的 8 位元整數。
-* <xref:System.Boolean?displayProperty=nameWithType> （[bool](../csharp/language-reference/builtin-types/bool.md)）-表示 `true` 或 `false`的布林類型。
+* <xref:System.Boolean?displayProperty=nameWithType>（[布林](../csharp/language-reference/builtin-types/bool.md)） - 表示`true`或`false`的布林類型。
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/builtin-types/char.md)) - 代表 Unicode 字元的 16 位元數值類型。
-* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - 代表連續字元。 不同於 `char[]`，但允許編製索引為 `char` 中的每個 `string`。
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)) - 代表連續字元。 不同於 `char[]`，但允許編製索引為 `string` 中的每個 `char`。
 
 ## <a name="data-structures"></a>資料結構
 

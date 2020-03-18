@@ -4,23 +4,23 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 2b347442c4a9b7b6cf912ec461248f901dc45417
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503941"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147487"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
 > *「如果您不喜歡為您的產品進行單元測試，您的客戶多半也不會喜歡測試它。」*
  > \_- 匿名-
 
-軟體複雜與否，都可能以意想不到的方式回應變更而失敗。 因此，除了最不重要的 (或最不關鍵的) 應用程式之外，對所有應用程式進行變更後都需要進行測試。 手動測試是最慢、最不可靠且最昂貴的測試軟體方式。 不幸的是，如果應用程式設計為不可測試，則手動可能是唯一可用的手段。 為了遵循[第4章](architectural-principles.md)中所述的架構原則而撰寫的應用程式，應可進行單元測試。 ASP.NET Core 的應用程式支援自動化整合和功能測試。
+軟體複雜與否，都可能以意想不到的方式回應變更而失敗。 因此，除了最不重要的 (或最不關鍵的) 應用程式之外，對所有應用程式進行變更後都需要進行測試。 手動測試是最慢、最不可靠且最昂貴的測試軟體方式。 不幸的是，如果應用程式設計為不可測試，則手動可能是唯一可用的手段。 為遵循[第 4 章](architectural-principles.md)中規定的體系結構原則而編寫的應用程式應可單元測試。 ASP.NET核心應用程式支援自動集成和功能測試。
 
 ## <a name="kinds-of-automated-tests"></a>自動化測試的種類
 
-軟體應用程式自動化測試有許多種類的。 最簡單且最低層級的測試為單元測試。 在稍微較高的層級中，有整合測試和功能測試。 其他種類的測試（例如 UI 測試、負載測試、壓力測試和冒煙測試）已超出本檔的範圍。
+軟體應用程式自動化測試有許多種類的。 最簡單且最低層級的測試為單元測試。 在稍高的級別上，有集成測試和功能測試。 其他類型的測試（如 UI 測試、負載測試、壓力測試和煙霧測試）超出了本文檔的範圍。
 
 ### <a name="unit-tests"></a>單元測試
 
@@ -58,7 +58,7 @@ Martin Fowler 撰寫了測試金字塔相關事項，其中的一個範例如圖
 
 ### <a name="what-to-test"></a>測試的內容
 
-對於沒有撰寫自動化測試經驗的開發人員來說，常見問題就是測試的內容。 測試條件式邏輯是很好的起點。 您在任何地方都有一個行為會根據條件陳述式（如果是-else、switch 等等）而變更的方法，您應該就能啟動至少幾個測試，以確認特定條件的正確行為。 如果您的程式碼有錯誤狀況，可透過程式碼撰寫至少一個「開心路徑」 (即沒有錯誤) 的測試，且至少一個「悲傷路徑」 (含有錯誤或非典型結果) 的測試，來確認您的應用程式在出現錯誤時的行為如預期。 最後，嘗試專注於測試可能失敗的事項，而不是專注於程式碼涵蓋範圍等指標。 一般來說，程式碼涵蓋範圍是多優於少。 不過，撰寫更多複雜和商務關鍵方法的測試，通常比撰寫自動屬性的測試更適合用來改善測試程式碼涵蓋範圍計量。
+對於沒有撰寫自動化測試經驗的開發人員來說，常見問題就是測試的內容。 測試條件式邏輯是很好的起點。 在具有基於條件陳述式（if-else、switch 等）更改行為的方法的任何位置，您都應該能夠至少提出幾個測試來確認某些條件的正確行為。 如果您的程式碼有錯誤狀況，可透過程式碼撰寫至少一個「開心路徑」 (即沒有錯誤) 的測試，且至少一個「悲傷路徑」 (含有錯誤或非典型結果) 的測試，來確認您的應用程式在出現錯誤時的行為如預期。 最後，嘗試專注於測試可能失敗的事項，而不是專注於程式碼涵蓋範圍等指標。 一般來說，程式碼涵蓋範圍是多優於少。 但是，對複雜且業務關鍵型方法編寫更多測試通常比為自動屬性編寫測試（只是為了改進測試代碼覆蓋率指標）更好地利用時間。
 
 ## <a name="organizing-test-projects"></a>組織測試專案
 
@@ -66,19 +66,19 @@ Martin Fowler 撰寫了測試金字塔相關事項，其中的一個範例如圖
 
 常用的方法是在 'src' 資料夾下組織應用程式專案，並在平行的 ‘tests' 資料夾下組織應用程式測試專案。 如果您覺得這樣的組織很有用，您可以在 Visual Studio 中建立相符的解決方案資料夾。
 
-![方案中的測試組織](./media/image9-2.png)
+![解決方案中的測試組織](./media/image9-2.png)
 
-**圖 9-2**： 方案中的測試組織
+**圖 9-2**： 解決方案中的測試組織
 
-您可以使用您偏好的任何測試架構。 xUnit 架構運作良好，且用來寫入所有的 ASP.NET Core 和 EF Core 測試。 您可以使用 [圖 9-3] 所示的範本，或使用 `dotnet new xunit`的 CLI，在 Visual Studio 中新增 xUnit 測試專案。
+您可以使用您偏好的任何測試架構。 xUnit 架構運作良好，且用來寫入所有的 ASP.NET Core 和 EF Core 測試。 您可以使用圖 9-3 所示的範本或在使用`dotnet new xunit`的 CLI 中添加 xUnit 測試專案。
 
-![在 Visual Studio 中新增 xUnit 測試專案](./media/image9-3.png)
+![在視覺化工作室中添加 xUnit 測試專案](./media/image9-3.png)
 
-**圖 9-3**。 在 Visual Studio 中新增 xUnit 測試專案
+**圖 9-3**。 在視覺化工作室中添加 xUnit 測試專案
 
 ### <a name="test-naming"></a>命名測試
 
-以一致的方式為您的測試命名，並以名稱指出每個測試的用途。 取得巨大成功的一種方法，是根據其正在測試的類別和方法來命名測試類別。 這會導致許多小測試類別，但可以非常清楚劃分每項測試的職責。 藉由設定測試類別名稱來識別要測試的類別和方法，測試方法名稱可用於指定要測試的行為。 這應該包含預期的行為，以及任何應該產生這種行為的輸入或假設。 測試名稱的一些範例：
+以一致的方式命名測試，名稱指示每個測試的作用。 取得巨大成功的一種方法，是根據其正在測試的類別和方法來命名測試類別。 這會導致許多小測試類別，但可以非常清楚劃分每項測試的職責。 藉由設定測試類別名稱來識別要測試的類別和方法，測試方法名稱可用於指定要測試的行為。 這應該包含預期的行為，以及任何應該產生這種行為的輸入或假設。 測試名稱的一些範例：
 
 - `CatalogControllerGetImage.CallsImageServiceWithId`
 
@@ -90,23 +90,23 @@ Martin Fowler 撰寫了測試金字塔相關事項，其中的一個範例如圖
 
 此方法的變體，會結束每個含有 "Should" 的測試類別名稱，並稍微修改時態：
 
-- `CatalogControllerGetImage`**Should**`.`**Call**`ImageServiceWithId`
+- `CatalogControllerGetImage`**應**`.`**致電**`ImageServiceWithId`
 
-- `CatalogControllerGetImage`**Should**`.`**Log**`WarningGivenImageMissingException`
+- `CatalogControllerGetImage`**應**`.`**記錄**`WarningGivenImageMissingException`
 
-有些小組會認為第二種命名方法更清楚，只是略為冗長。 無論如何，請嘗試使用能深入了解測試行為的命名慣例；如此，當一或多項測試失敗時，從其名稱即可明顯看出是哪些案例失敗。 避免命名您的測試模糊（例如 ControllerTests），因為當您在測試結果中看到這些專案時，不會提供任何值。
+有些小組會認為第二種命名方法更清楚，只是略為冗長。 無論如何，請嘗試使用能深入了解測試行為的命名慣例；如此，當一或多項測試失敗時，從其名稱即可明顯看出是哪些案例失敗。 避免模糊地命名測試，如 ControllerTest.Test1，因為當您在測試結果中看到測試時，這些測試沒有提供任何價值。
 
 如果您遵循如上所述會產生許多小型測試類別的命名慣例，建議使用資料夾和命名空間來進一步組織測試。 圖 9-4 顯示在幾個測試專案中按資料夾組織測試的一種方法。
 
-![根據要測試的類別，依資料夾組織測試類別](./media/image9-4.png)
+![根據正在測試的類按資料夾組織測試類](./media/image9-4.png)
 
 **圖 9-4。** 根據正在測試的類別，按資料夾來組織測試類別。
 
-如果特定應用程式類別有許多要測試的方法（也就是許多測試類別），則將它們放在對應至應用程式類別的資料夾中可能會有意義。 這個組織與您如何將檔案組織到別處的資料夾中沒有區別。 如果在包含許多其他檔案的資料夾中有三或四個以上相關檔案，將其移到其本身的子資料夾通常會很有幫助。
+如果特定應用程式類有許多方法正在測試（因此有許多測試類），則將這些方法放在與應用程式類對應的資料夾中可能有意義。 這個組織與您如何將檔案組織到別處的資料夾中沒有區別。 如果在包含許多其他檔案的資料夾中有三或四個以上相關檔案，將其移到其本身的子資料夾通常會很有幫助。
 
 ## <a name="unit-testing-aspnet-core-apps"></a>對 ASP.NET Core 應用程式進行單元測試
 
-在設計良好的 ASP.NET Core 應用程式中，大部分的複雜性和商務邏輯都會封裝在商務實體與各種服務中。 ASP.NET Core MVC 應用程式本身及其控制器、篩選器、檢視模型和檢視，應只需要很少量的單元測試。 指定動作的許多功能，大多在動作方法本身之外。 使用單元測試無法有效測試路由或全域錯誤處理是否運作正常。 同樣地，任何篩選準則（包括模型驗證和驗證和授權篩選器）都無法使用測試目標控制器的動作方法進行單元測試。 如果沒有這些行為來源，大多數行動方法應十分微小，會將其大部分工作委派給可獨立於使用它們的控制器來進行測試之服務。
+在設計良好的 ASP.NET Core 應用程式中，大部分的複雜性和商務邏輯都會封裝在商務實體與各種服務中。 ASP.NET Core MVC 應用程式本身及其控制器、篩選器、檢視模型和檢視，應只需要很少量的單元測試。 指定動作的許多功能，大多在動作方法本身之外。 使用單元測試無法有效測試路由或全域錯誤處理是否運作正常。 同樣，任何篩選器（包括模型驗證、身份驗證和授權篩選器）都不能使用針對控制器操作方法的測試進行單元測試。 如果沒有這些行為來源，大多數行動方法應十分微小，會將其大部分工作委派給可獨立於使用它們的控制器來進行測試之服務。
 
 有時您需要重構程式碼才能進行單元測試。 通常這包括識別抽象概念與使用相依性插入來存取您想要測試的程式碼中之抽象概念，而不是直接針對基礎結構進行編碼。 例如，請考慮這個簡單的動作方法，來顯示影像：
 
@@ -143,7 +143,7 @@ public IActionResult GetImage(int id)
 }
 ```
 
-`_logger` 和 `_imageService` 都已插入為相依性。 現在您可以測試傳遞至動作方法的相同識別碼是否會傳遞給 `_imageService`，並將產生的位元組當做 FileResult 的一部分傳回。 您也可以測試錯誤記錄是否如預期般發生，如果影像遺失，則會傳回 `NotFound` 的結果，假設這是重要的應用程式行為（也就是開發人員為了診斷問題而新增的暫時性程式碼）。 實際的檔案邏輯已移至另一個實作服務中，並且已擴大為針對遺失檔案情況來傳回應用程式特定的例外狀況。 您可以使用整合測試來獨立測試此實作。
+`_logger`並`_imageService`都作為依賴項注入。 現在，您可以測試傳遞給操作方法的相同 ID 是否傳遞給`_imageService`，並且生成的位元組是否作為 FileResult 的一部分返回。 您還可以測試錯誤日誌記錄按預期進行，如果缺少映射，則返回`NotFound`結果，假設這是重要的應用程式行為（即，不僅僅是開發人員為診斷問題而添加的臨時代碼）。 實際的檔案邏輯已移至另一個實作服務中，並且已擴大為針對遺失檔案情況來傳回應用程式特定的例外狀況。 您可以使用整合測試來獨立測試此實作。
 
 在多數情況下，建議您在控制器中使用全域例外處理常式，以便其使用最少邏輯數量，而可能用不著進行單元測試。 您應該使用功能測試及下方說明的 `TestServer` 類別來進行大部分的控制器動作測試。
 
@@ -153,7 +153,7 @@ public IActionResult GetImage(int id)
 
 ## <a name="functional-testing-aspnet-core-apps"></a>對 ASP.NET Core 應用程式進行功能測試
 
-對 ASP.NET Core 應用程式來說，`TestServer` 類別使功能測試變得相當易於撰寫。 您可以直接使用 `WebHostBuilder` （或 `HostBuilder`）來設定 `TestServer` （如同您的應用程式一般），或使用 `WebApplicationFactory` 類型（自2.1 版起提供）。 您應該盡可能讓測試主機幾乎與生產主機完全一樣，以便測試的執行行為與應用程式在生產環境中的執行行為類似。 `WebApplicationFactory` 類別有助於設定 TestServer 的 ContentRoot，ASP.NET Core 用它來尋找靜態資源 (如檢視)。
+對 ASP.NET Core 應用程式來說，`TestServer` 類別使功能測試變得相當易於撰寫。 直接使用`TestServer``WebHostBuilder`（或 ）`HostBuilder`配置 （或 ） （與應用程式通常一樣`WebApplicationFactory`），或使用類型（自版本 2.1 起可用）。 您應該盡可能讓測試主機幾乎與生產主機完全一樣，以便測試的執行行為與應用程式在生產環境中的執行行為類似。 `WebApplicationFactory` 類別有助於設定 TestServer 的 ContentRoot，ASP.NET Core 用它來尋找靜態資源 (如檢視)。
 
 建立簡單功能測試的方法是，建立實作 IClassFixture\<WebApplicationFactory\<TEntry>> 的測試類別，其中 TEntry 是 Web 應用程式的啟動類別。 準備好測試類別之後，測試固件可以使用處理站的 CreateClient 方法來建立用戶端：
 
@@ -202,7 +202,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory 
+                // Add a database context (ApplicationDbContext) using an in-memory
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {
@@ -294,15 +294,15 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>參考 - 測試 ASP.NET Core MVC 應用程式
 >
-> - **ASP.NET Core \ 中的測試**
+> - **ASP.NET核心測試** \
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **單元測試命名慣例** \
+> - **單元測試命名約定** \
 >   <https://ardalis.com/unit-test-naming-convention>
-> - **測試 EF Core** \
+> - **測試 EF 核心** \
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
-> - **ASP.NET Core \ 中的整合測試**
+> - **ASP.NET核心中的集成測試** \
 >   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
 
 >[!div class="step-by-step"]
->[上一頁](work-with-data-in-asp-net-core-apps.md)
->[下一頁](development-process-for-azure.md)
+>[上一個](work-with-data-in-asp-net-core-apps.md)
+>[下一個](development-process-for-azure.md)

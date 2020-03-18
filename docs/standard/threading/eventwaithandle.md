@@ -9,10 +9,10 @@ helpviewer_keywords:
 - threading [.NET Framework], cross-process synchronization
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 ms.openlocfilehash: 80c90254978495a58d228c4302eda84d6165c800
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138081"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
@@ -60,7 +60,7 @@ ms.locfileid: "73138081"
 > [!NOTE]
 > 不同於 <xref:System.Threading.EventWaitHandle> 類別，衍生的類別 <xref:System.Threading.AutoResetEvent> 和 <xref:System.Threading.ManualResetEvent> 只能代表本機等候控制代碼。 它們無法代表具名系統事件。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.EventWaitHandle>
 - <xref:System.Threading.WaitHandle>

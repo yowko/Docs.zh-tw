@@ -6,10 +6,10 @@ helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 ms.openlocfilehash: 5a0abef6de9f932f44fc7e3239b98c3a27846580
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711216"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>使用安全執行緒集合的時機
@@ -28,7 +28,7 @@ ms.locfileid: "75711216"
  *加速*  
  相對於相同案例中的另一種類型，具有較快速的演算法效能。  
   
- *擴充性*  
+ *可 伸縮 性*  
  效能會隨著電腦上的核心數目等比例地增加。 在八個核心上進行擴充之演算法的執行速度，比兩個核心還要快。  
   
 ## <a name="concurrentqueuet-vs-queuet"></a>ConcurrentQueue(T) 與 Queue(T) 的比較  
@@ -60,8 +60,8 @@ ms.locfileid: "75711216"
 ## <a name="blockingcollection"></a>BlockingCollection  
  需要界限和封鎖語意時，<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 的執行速度可能會比任何自訂實作還要快。 它也支援大量取消、列舉和例外狀況處理。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)
-- [平行程式設計](../../../../docs/standard/parallel-programming/index.md)
+- [執行緒安全集合](../../../../docs/standard/collections/thread-safe/index.md)
+- [並行程式設計](../../../../docs/standard/parallel-programming/index.md)

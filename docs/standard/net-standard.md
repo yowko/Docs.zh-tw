@@ -6,27 +6,27 @@ ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77452587"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard)是一種正式的 .net api 規格，其預定適用于所有的 .net 部署。 .NET Standard 背後的動機是在 .NET 生態系統中建立更高的一致性。 [Ecma 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md)會繼續建立 .net 執行行為的一致性，而當 ECMA 335 指定一小組標準程式庫時，.NET Standard 規格會包含更多的 .net api 範圍。
+[.NET 標準](https://github.com/dotnet/standard)是 .NET API 的正式規範，用於在所有 .NET 實現中可用。 .NET 標準背後的動機是在 .NET 生態系統中建立更大的統一性。 [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md)繼續為 .NET 實現行為建立統一性，雖然 ECMA 335 指定了一組小組標準庫，但 .NET 標準規範包含更廣泛的 .NET API 範圍。
 
-.NET Standard 會啟用下列主要案例：
+.NET 標準支援以下關鍵方案：
 
 - 定義一致的 BCL API 集合，以供所有 .NET 實作來實作，而不論工作負載為何。
 - 可讓開發人員使用這組相同的 API，產生可跨 .NET 實作使用的可攜式程式庫。
 - 減少或甚至排除因 .NET API 而必須對共用原始檔進行的條件式編譯，僅適用於 OS API。
 
-不同的 .NET 實作會以特定版本的 .NET Standard 為目標。 每個 .NET 實作版本會宣佈它所支援的最高 .NET Standard 版本，此聲明表示它也會支援舊版。 例如，.NET Framework 4.6 會實 .NET Standard 1.3，這表示它會公開 .NET Standard 版本1.0 到1.3 中定義的所有 Api。 同樣地，.NET Framework 4.6.1 會實 .NET Standard 1.4，而 .NET Core 1.0 則會執行 .NET Standard 1.6。
+不同的 .NET 實作會以特定版本的 .NET Standard 為目標。 每個 .NET 實作版本會宣佈它所支援的最高 .NET Standard 版本，此聲明表示它也會支援舊版。 例如，.NET 框架 4.6 實現 .NET 標準 1.3，這意味著它公開 .NET 標準版本 1.0 到 1.3 中定義的所有 API。 同樣，.NET 框架 4.6.1 實現 .NET 標準 1.4，而 .NET 核心 1.0 實現 .NET 標準 1.6。
 
 ## <a name="net-implementation-support"></a>.NET 實作支援
 
-下表列出支援每個 .NET Standard 版本的**最低**平台版本。 這表示所列出平台的更新版本也支援所對應 .NET Standard 版本。 例如，.NET Core 2.2 支援 .NET Standard 2.0 及更早版本。
+下表列出了支援每個 .NET 標準版本的**最小**平臺版本。 這表示所列出平台的更新版本也支援所對應 .NET Standard 版本。 例如，.NET Core 2.2 支援 .NET Standard 2.0 及更早版本。
 
 [!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
@@ -44,7 +44,7 @@ ms.locfileid: "77452587"
 - 版本越新，可供您使用的 API 就越多。
 - 版本越舊，可實作它的平台就越多。
 
-一般而言，建議您儘可能以「最舊的」.NET Standard 版本為目標。 因此，在您找到可作為目標的最新 .NET Standard 版本之後，請依照下列步驟操作：
+一般而言，建議您儘可能以「最舊的」**.NET Standard 版本為目標。 因此，在您找到可作為目標的最新 .NET Standard 版本之後，請依照下列步驟操作：
 
 1. 以次舊的 .NET Standard 版本為目標並建置您的專案。
 2. 如果您的專案建置成功，便重複步驟 1。 否則，請將目標重新設定為次新版本，這會是您應該使用的版本。
@@ -64,7 +64,7 @@ ms.locfileid: "77452587"
 
 ### <a name="official-artifacts"></a>正式成品
 
-正式規格是一組定義 API 的 .cs 檔案，這些 API 是標準的一部分。 [dotnet/standard 存放庫](https://github.com/dotnet/standard/tree/master/src/netstandard/ref)中的 [ref 目錄](https://github.com/dotnet/standard)定義 .NET Standard API。
+正式規格是一組定義 API 的 .cs 檔案，這些 API 是標準的一部分。 [dotnet/standard 存放庫](https://github.com/dotnet/standard)中的 [ref 目錄](https://github.com/dotnet/standard/tree/master/src/netstandard/ref)定義 .NET Standard API。
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) 中繼套件 ([原始檔](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props)) 描述定義 (部分) 一或多個 .NET Standard 版本的程式庫集合。
 
@@ -75,16 +75,16 @@ ms.locfileid: "77452587"
 
 為了更方便閱讀及支援特定開發人員案例 (例如使用編譯器)，已提供衍生成品。
 
-- [Markdown 中的 API 清單](https://github.com/dotnet/standard/tree/master/docs/versions)
+- [以 Markdown 撰寫的 API 清單](https://github.com/dotnet/standard/tree/master/docs/versions)
 - 以 [NuGet 套件](../core/packages.md)散發並由 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) 中繼套件參考的參考組件。
 
 ### <a name="package-representation"></a>封裝表示
 
 .NET Standard 參考組件的主要散發工具是 [NuGet 套件](../core/packages.md)。 傳遞實作的方法有許多種，各自適合每種 .NET 實作。
 
-NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standard 套件是以 ".NET Standard" 架構為目標。 您可以使用 `netstandard` [COMPACT TFM](frameworks.md) （例如 `netstandard1.4`），以 .NET Standard 架構為目標。 要在多個執行階段上執行的程式庫應以此架構為目標。 對大多數的 API 來說，會以 `netstandard2.0` 為目標，因為提供的 API 數目，超過 .NET Standard 1.6 與 2.0 之間的一倍。
+NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standard 套件是以 ".NET Standard" 架構為目標。 您可以使用`netstandard`[緊湊的 TFM（](frameworks.md)例如， `netstandard1.4`） 定位 .NET 標準框架。 要在多個執行階段上執行的程式庫應以此架構為目標。 對大多數的 API 來說，會以 `netstandard2.0` 為目標，因為提供的 API 數目，超過 .NET Standard 1.6 與 2.0 之間的一倍。
 
-[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) 中繼套件會參考定 .NET Standard 的完整一組 NuGet 套件。  若要將 `netstandard` 設為目標，最常見方式是參考這個中繼套件。 它描述大約 40 種定義 .NET Standard 的 .NET 程式庫和相關 API，並提供其存取權。 您可以參考目標為 `netstandard` 的其他套件，以存取其他 API。
+元[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/)包引用定義 .NET 標準的完整 NuGet 包集。  若要將 `netstandard` 設為目標，最常見方式是參考這個中繼套件。 它描述大約 40 種定義 .NET Standard 的 .NET 程式庫和相關 API，並提供其存取權。 您可以參考目標為 `netstandard` 的其他套件，以存取其他 API。
 
 ### <a name="versioning"></a>版本控制
 
@@ -102,7 +102,7 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 
 ## <a name="targeting-net-standard"></a>以 .NET Standard 為目標
 
-您可以搭配使用 [ 架構和 NETStandard.Library 中繼套件，來](../core/tutorials/libraries.md)建置 .NET 標準程式庫`netstandard`。 您可以查看[使用 .NET Core 工具將 .NET Standard 設為目標](../core/packages.md)的範例。
+您可以搭配使用 `netstandard` 架構和 NETStandard.Library 中繼套件，來[建置 .NET Standard 程式庫](../core/tutorials/libraries.md)。 您可以查看[使用 .NET Core 工具將 .NET Standard 設為目標](../core/packages.md)的範例。
 
 ## <a name="net-framework-compatibility-mode"></a>.NET Framework 相容性模式
 
@@ -162,5 +162,5 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 ## <a name="see-also"></a>另請參閱
 
 - [.NET Standard 版本](https://github.com/dotnet/standard/blob/master/docs/versions.md)
-- [建立 .NET Standard 程式庫](../core/tutorials/library-with-visual-studio.md)
+- [構建 .NET 標準庫](../core/tutorials/library-with-visual-studio.md)
 - [跨平台目標](./library-guidance/cross-platform-targeting.md)

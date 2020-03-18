@@ -12,10 +12,10 @@ helpviewer_keywords:
 - catch blocks
 ms.assetid: 12af9ff3-8587-4f31-90cf-6c2244e0fdae
 ms.openlocfilehash: 48b450e579263876725f96e0adfc4c16aac1d869
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160153"
 ---
 # <a name="how-to-use-specific-exceptions-in-a-catch-block"></a>如何使用 Catch 區塊中的特定例外狀況
@@ -24,7 +24,7 @@ ms.locfileid: "78160153"
 
 發生例外狀況時，該例外狀況會在堆疊中向上傳遞，讓每個 catch 區塊都有機會處理。 Catch 陳述式的順序很重要。 請將針對特定例外狀況的 catch 區塊放在一般例外狀況的 catch 區塊之前，否則編譯器可能會發出錯誤。 藉由比對 catch 區塊中指定的例外狀況類型與例外狀況名稱，即可決定正確的 catch 區塊。 如果沒有特定 catch 區塊，則會由一般 catch 區塊 (如果有的話) 攔截例外狀況。
 
-下列程式碼範例使用 `try`/`catch` 區塊來攔截 <xref:System.InvalidCastException>。 此範例會建立具有員工層級 (`Employee`) 之單一屬性的類別，稱為 `Emlevel`。 `PromoteEmployee` 方法會採用一個物件並遞增員工層級。 <xref:System.InvalidCastException> 會在 <xref:System.DateTime> 執行個體傳遞給 `PromoteEmployee` 方法時發生。
+下列程式碼範例使用 `try`/`catch` 區塊來攔截 <xref:System.InvalidCastException>。 此範例會建立具有員工層級 (`Emlevel`) 之單一屬性的類別，稱為 `Employee`。 `PromoteEmployee` 方法會採用一個物件並遞增員工層級。 <xref:System.InvalidCastException> 會在 <xref:System.DateTime> 執行個體傳遞給 `PromoteEmployee` 方法時發生。
 
 [!code-cpp[CatchException#2](../../../samples/snippets/cpp/VS_Snippets_CLR/CatchException/CPP/catchexception1.cpp#2)]
 [!code-csharp[CatchException#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CatchException/CS/catchexception1.cs#2)]
@@ -32,4 +32,4 @@ ms.locfileid: "78160153"
 
 ## <a name="see-also"></a>另請參閱
 
-- [例外狀況](index.md)
+- [異常](index.md)

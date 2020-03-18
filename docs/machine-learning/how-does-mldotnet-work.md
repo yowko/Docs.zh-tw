@@ -4,37 +4,37 @@ description: 不論是在線上或是離線，ML.NET 都能讓您將機器學習
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794567"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185860"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>什麼是 ML.NET，它如何運作？
 
-不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用這項功能，您可以使用應用程式可用的資料來建立自動預測。 機器學習應用程式會利用資料中的模式來進行預測，而不需要明確地進行程式設計。
+不論是在線上或是離線，ML.NET 都能讓您將機器學習新增至 .NET 應用程式。 使用這項功能，您可以使用應用程式可用的資料來建立自動預測。 機器學習應用程式利用資料中的模式進行預測，而不需要顯式程式設計。
 
-ML.NET 的核心是機器學習**模型**。 模型會指定將輸入資料轉換成預測所需的步驟。 透過 ML.NET，您可以藉由指定演算法來定型自訂模型，或者您也可以匯入預先定型的 TensorFlow 和 ONNX 模型。
+ML.NET的中心是機器學習**模型**。 該模型指定將輸入資料轉換為預測所需的步驟。 使用ML.NET，您可以通過指定演算法來訓練自訂模型，也可以導入預先訓練的 TensorFlow 和 ONNX 模型。
 
-一旦有了模型之後，您就可以將它新增至您的應用程式以進行預測。
+獲得模型後，可以將其添加到應用程式中以進行預測。
 
-ML.NET 會使用 .NET Core，或使用 .NET Framework 在 windows、Linux 和 macOS 上執行。 所有平臺都支援64位。 Windows 上支援32位，但 TensorFlow、LightGBM 和 ONNX 相關的功能除外。
+ML.NET使用 .NET 核心在 Windows、Linux 和 macOS 上運行，或者使用 .NET 框架在 Windows 上運行。 所有平臺上都支援 64 位。 Windows 上支援 32 位，但 TensorFlow、LightGBM 和 ONNX 相關功能除外。
 
-您可以使用 ML.NET 進行的預測類型範例：
+可以使用ML.NET進行的預測類型的示例：
 
 |||
 |-|-|
-|分類/分類|自動將客戶的意見反應分成正負類別|
-|迴歸/預測連續值|根據大小和位置預測房價|
-|異常偵測|偵測詐騙的銀行交易 |
-|建議|根據線上購物者之前的購買記錄，建議他們可能想要購買的產品|
-|時間序列/順序資料|預測氣象/產品銷售|
-|影像分類|分類醫學影像中的 pathologies|
+|分類|自動將客戶意見反應分為正面與負面類別|
+|迴歸/預測連續數值|根據大小和位置來預測房屋價格|
+|異常偵測|偵測詐騙銀行交易 |
+|建議|根據線上顧客先前的購買，來建議他們可能想要購買的產品|
+|時間序列/順序資料|預測天氣/產品銷售|
+|影像分類|在醫療圖像中分類病理學|
 
 ## <a name="hello-mlnet-world"></a>Hello ML.NET World
 
-下列程式碼片段中程式碼會示範最簡單的 ML.NET 應用程式。 此範例會建構線性迴歸模型，使用房子大小及價格資料來預測房價。 
+下列程式碼片段中程式碼會示範最簡單的 ML.NET 應用程式。 此範例會建構線性迴歸模型，使用房子大小及價格資料來預測房價。
 
  ```csharp
     using System;
@@ -101,11 +101,11 @@ ML.NET 會使用 .NET Core，或使用 .NET Framework 在 windows、Linux 和 ma
 
 讓我們稍微深入探討這些概念。
 
-## <a name="machine-learning-model"></a>機器學習模型
+## <a name="machine-learning-model"></a>機器學習服務模型
 
 ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達成預測的輸出。
 
-### <a name="basic"></a>Basic
+### <a name="basic"></a>基本
 
 最基本的模型是二維線性迴歸，其中一個持續數量和另一個成正比，如上述的房價範例所示。
 
@@ -125,11 +125,11 @@ ML.NET 模型是一個物件，包含要對輸入資料執行的轉換，以達�
 
 ## <a name="data-preparation"></a>資料準備
 
-在大部分的情況下，您所用的資料不適合直接用來定型機器學習模型。 原始資料必須先備妥或預先處理，然後才能用來尋找模型的參數。 您的資料可能需要從字串值轉換成數值表示。 您的輸入資料中可能有多餘資訊。 您可能需要縮小或擴充您輸入資料的維度。 您的資料可能需要標準化或調整。
+在大部分的情況下，您所用的資料不適合直接用來定型機器學習模型。 原始資料需要準備或預處理，然後才能用於查找模型的參數。 您的資料可能需要從字串值轉換成數值表示。 您的輸入資料中可能有多餘資訊。 您可能需要縮小或擴充您輸入資料的維度。 您的資料可能需要標準化或調整。
 
 [ML.NET 教學課程](./tutorials/index.md)會教導您用於特定機器學習工作之文字、影像、數值和時間序列資料的不同資料處理管線。
 
-[如何準備您的資料](./how-to-guides/prepare-data-ml-net.md)會示範如何更廣泛地套用資料準備。
+[如何準備資料](./how-to-guides/prepare-data-ml-net.md)演示如何更普遍地應用資料準備。
 
 您可以在＜資源＞一節中找到所有[可用轉換](./resources/transforms.md)的附錄。
 
@@ -177,10 +177,10 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
 |定型演算法|二元分類|<xref:Microsoft.ML.BinaryClassificationCatalog>||
 ||多元分類|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||異常偵測|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
-||群集|<xref:Microsoft.ML.ClusteringCatalog>||
-||針對|<xref:Microsoft.ML.ForecastingCatalog>||
-||排名|<xref:Microsoft.ML.RankingCatalog>||
-||回復|<xref:Microsoft.ML.RegressionCatalog>||
+||叢集|<xref:Microsoft.ML.ClusteringCatalog>||
+||預測|<xref:Microsoft.ML.ForecastingCatalog>||
+||次序|<xref:Microsoft.ML.RankingCatalog>||
+||迴歸|<xref:Microsoft.ML.RegressionCatalog>||
 ||建議|<xref:Microsoft.ML.RecommendationCatalog>|新增 `Microsoft.ML.Recommender` NuGet 套件|
 ||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|新增 `Microsoft.ML.TimeSeries` NuGet 套件|
 |模型使用方式 ||<xref:Microsoft.ML.ModelOperationsCatalog>||
@@ -210,9 +210,9 @@ ML.NET 應用程式以 <xref:Microsoft.ML.MLContext> 物件開始。 此單一�
     var model = pipeline.Fit(trainingData);
 ```
 
-呼叫 `Fit()` 會使用輸入定型資料來評估模型的參數。 這就是所謂的「定型」(Training) 模型。 請記住，上述的線性迴歸模型有兩個模型參數：**偏差**和**權數**。 呼叫 `Fit()` 之後，即已知參數值。 大部分模型的參數都比這個模型多。
+呼叫 `Fit()` 會使用輸入定型資料來評估模型的參數。 這就是定型模型。 請記住，上述的線性迴歸模型有兩個模型參數：**偏差**和**權數**。 呼叫 `Fit()` 之後，即已知參數值。 大部分模型的參數都比這個模型多。
 
-您可以在[如何訓練模型](./how-to-guides/train-machine-learning-model-ml-net.md)中深入瞭解模型定型。
+你可以瞭解更多關於模型培訓如何[訓練你的模型](./how-to-guides/train-machine-learning-model-ml-net.md)。
 
 產生的模型物件會實作 <xref:Microsoft.ML.ITransformer> 介面。 亦即，模型會將輸入資料轉換成預測。
 
@@ -240,17 +240,17 @@ ML.NET 機器學習管線的核心是 [DataView](xref:Microsoft.ML.IDataView) �
 
 如果管線中來自轉換之輸出結構描述不符合下一個轉換的輸入結構描述，則 ML.NET 會擲回例外狀況。
 
-資料檢視物件具有資料行和資料列。 每個資料行都有名稱和類型以及長度。 例如，房屋價格範例中的輸入資料行是**大小**和**價格**。 兩者都是型別，而且都是純量數量，而不是向量。
+資料檢視物件具有資料行和資料列。 每個資料行都有名稱和類型以及長度。 例如，房價示例中的輸入列是 **"大小**"和 **"價格**"。 它們都是類型，它們是標量，而不是向量量。
 
    ![具有房價預測資料的 ML.NET 資料檢視範例](./media/ml-net-dataview.png)
 
-所有 ML.NET 演算法都在尋找向量的輸入資料行。 根據預設，此向量資料行稱為**特性**。 這就是為什麼我們要在房價範例中，把 [大小] 資料行串連到稱為 [特性]的新資料行。
+所有 ML.NET 演算法都在尋找向量的輸入資料行。 根據預設，此向量資料行稱為**特性**。 這就是為什麼我們要在房價範例中，把 [大小]**** 資料行串連到稱為 [特性]**** 的新資料行。
 
  ```csharp
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
  ```
 
-所有演算法也都會在執行預測之後，建立新的資料行。 這些新資料行的固定名稱取決於機器學習演算法類型。 若為迴歸工作，其中一個新資料行稱為 [分數]。 這就是為什麼我們要使用這個名稱作為價格資料的屬性。
+所有演算法也都會在執行預測之後，建立新的資料行。 這些新資料行的固定名稱取決於機器學習演算法類型。 若為迴歸工作，其中一個新資料行稱為 [分數]****。 這就是為什麼我們要使用這個名稱作為價格資料的屬性。
 
 ```csharp
     public class Prediction
@@ -280,8 +280,8 @@ DataView 物件的重要屬性是它們都**延遲**評估。 資料檢視只會
 
 ## <a name="next-steps"></a>後續步驟
 
-* 瞭解如何使用不同的機器學習工作，在[教學](./tutorials/index.md)課程中搭配更實際的資料集來建立應用程式。
+* 瞭解如何使用不同的機器學習任務構建應用程式，並在[教程](./tutorials/index.md)中使用更真實的資料集。
 
-* 深入瞭解[如何指南](./how-to-guides/index.md)中的特定主題。
+* 在["如何指南](./how-to-guides/index.md)"中更深入地瞭解特定主題。
 
-* 如果您很榮幸，可以直接深入探索[API 參考檔](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)。
+* 如果你超級熱心，你可以直接進入[API參考文檔](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet)。

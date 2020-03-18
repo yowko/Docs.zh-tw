@@ -10,10 +10,10 @@ helpviewer_keywords:
 - long paths
 - path formats, Windows
 ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628042"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows 系統上的檔案路徑格式
@@ -44,7 +44,7 @@ ms.locfileid: "77628042"
 
 您可以呼叫 <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType> 方法來判斷檔案路徑是否完整 (也就是路徑獨立於目前的目錄，目前目錄變更時它不會變更)。 請注意，這類路徑可以包含相對目錄區段 (`.` 和 `..`)，而且如果解析的路徑永遠指向相同位置便仍然完整。
 
-下例會說明絕對和相對路徑之間的差異。 它假設目錄 D:\FY2018\ 存在，而且您尚未設定任何目前目錄來進行 D:\在執行範例之前，從命令提示字元。
+下例會說明絕對和相對路徑之間的差異。 它假定目錄 D：[FY2018] 存在，並且您尚未為 D：* 設置任何目前的目錄。從運行示例之前的命令提示符。
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -202,7 +202,7 @@ DOS 裝置路徑由以下元件組成：
 
 開頭為 `\\?\` 的路徑，在您明確地將其傳遞給 [GetFullPathName 函式](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)時，仍會正規化。
 
-您可以將超過 `MAX_PATH` 個字元的路徑傳遞給[GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) ，而不 `\\?\`。 它支援最長可達 Windows 可處理字串大小上限的任意長度路徑。
+您可以傳遞多個`MAX_PATH`字元的路徑來[獲取完整路徑名稱](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)，而無需`\\?\`。 它支援最長可達 Windows 可處理字串大小上限的任意長度路徑。
 
 ## <a name="case-and-the-windows-file-system"></a>大小寫與 Windows 檔案系統
 

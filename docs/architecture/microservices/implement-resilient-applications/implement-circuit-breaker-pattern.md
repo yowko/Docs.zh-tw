@@ -1,13 +1,13 @@
 ---
 title: 實作斷路器模式
 description: 了解如何實作斷路器模式作為 Http 重試的互補系統。
-ms.date: 10/16/2018
-ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 03/03/2020
+ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732834"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847241"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>實作斷路器模式
 
@@ -15,7 +15,7 @@ ms.locfileid: "73732834"
 
 在分散式環境中，呼叫遠端資源和服務可能會由於暫時性錯誤 (例如網路連線太慢和逾時)，或是資源回應緩慢或暫時無法使用而失敗。 這些錯誤通常會在很短的時間內自我修正，而且強大的雲端應用程式應該能夠使用「重試模式」之類的策略來處理錯誤。
 
-不過有時候，錯誤是由於非預期的事件所致，可能需要更長時間來修正。 這些錯誤的嚴重性可能從失去部分連線到服務完全失敗。 在這些情況下，讓應用程式持續重試不太可能會成功的作業可能毫無意義。
+不過有時候，錯誤是由於非預期的事件所致，可能需要更長時間來修正。 這些錯誤的嚴重性範圍包含失去部分連線到整個服務無法運作。 在這些情況下，讓應用程式持續重試不太可能會成功的作業可能毫無意義。
 
 相反地，應用程式應該設計成接受作業失敗並據以處理失敗。
 
@@ -25,11 +25,11 @@ ms.locfileid: "73732834"
 
 斷路器模式的目的與「重試模式」不同。 「重試模式」可讓應用程式重試作業，期望該作業最終會成功。 斷路器模式可防止應用程式執行可能失敗的作業。 應用程式可以結合這兩種模式。 不過，重試邏輯應該會受到斷路器所傳回之任何例外狀況的影響，而且如果斷路器指出錯誤不是暫時的，就應該放棄重試嘗試。
 
-## <a name="implement-circuit-breaker-pattern-with-httpclientfactory-and-polly"></a>使用 HttpClientFactory 和 Polly 實作斷路器模式
+## <a name="implement-circuit-breaker-pattern-with-ihttpclientfactory-and-polly"></a>實現帶`IHttpClientFactory`和波莉的斷路器模式
 
-實作重試時，斷路器的建議方法是利用經過實證的 .NET 程式庫，例如 Polly 及其與 HttpClientFactory 的原生整合。
+與實現重試時一樣，斷路器推薦的方法是利用經過驗證的 .NET 庫（如 Polly）及其與`IHttpClientFactory`的本機集成。
 
-將斷路器原則新增至您的 HttpClientFactory 傳出中介軟體管線，就像是將單一程式碼片段增量新增至使用 HttpClientFactory 時已有的程式碼一樣簡單。
+將斷路器策略添加到`IHttpClientFactory`傳出中介軟體管道中非常簡單，只需將單個增量代碼添加到使用`IHttpClientFactory`時已有的代碼。
 
 此處用於 HTTP 呼叫重試之程式碼的唯一新增項目，就是用來將斷路器原則新增至所要使用之原則清單的程式碼，如下列程式碼增量所示 (屬於 ConfigureServices() 方法一部分)。
 
@@ -61,7 +61,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 相對於由 Azure 為您自動管理，上述所有功能適用於從 .NET 程式碼管理容錯移轉的情況，並提供位置透明度。
 
-從使用觀點來看，使用 HttpClient 時，不需要在此新增任何項目，因為使用 HttpClient 時的程式碼與 HttpClientFactory 相同，如先前章節所示。
+從使用的角度來看，使用 HttpClient 時，無需在此處添加任何新內容，因為代碼與 使用`HttpClient``IHttpClientFactory`時的代碼相同，如前幾節所示。
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>在 eShopOnContainers 中測試 Http 重試和斷路器
 
@@ -94,7 +94,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 您可以接著使用 URI `http://localhost:5103/failing` 來檢查狀態，如圖 8-5 所示。
 
-![檢查失敗中介軟體模擬狀態的螢幕擷取畫面。](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
+![檢查中介軟體類比失敗狀態的螢幕截圖。](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
 **圖 8-5**。 檢查「失敗」的 ASP.NET 中介軟體狀態 (在本例中已停用)
 
@@ -134,7 +134,7 @@ public class CartController : Controller
 
 以下摘要說明。 重試原則嘗試提出 HTTP 要求幾次，並收到 HTTP 錯誤。 當重試次數達到針對斷路器原則設定的最大數目時 (在本例中為 5)，應用程式會擲回 BrokenCircuitException。 結果是易懂訊息，如圖 8-6 所示。
 
-![具有購物籃服務無法處理錯誤之 MVC web 應用程式的螢幕擷取畫面。](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
+![MVC Web 應用程式的螢幕截圖，帶有購物籃服務失效錯誤。](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 
 **圖 8-6**。 斷路器傳回錯誤至 UI
 
@@ -148,5 +148,5 @@ public class CartController : Controller
   [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
->[上一頁](implement-http-call-retries-exponential-backoff-polly.md)
->[下一頁](monitor-app-health.md)
+>[上一個](implement-http-call-retries-exponential-backoff-polly.md)
+>[下一個](monitor-app-health.md)

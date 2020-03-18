@@ -6,10 +6,10 @@ helpviewer_keywords:
 - thread-safe collections, custom blocking collections
 ms.assetid: 4c2492de-3876-4873-b5a1-000bb404d770
 ms.openlocfilehash: 33c0b5a93a9c63e3e743a04e69bb7353ac69fa8a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711281"
 ---
 # <a name="how-to-add-bounding-and-blocking-functionality-to-a-collection"></a>如何：將界限和封鎖功能加入至集合
@@ -26,6 +26,6 @@ ms.locfileid: "75711281"
   
  根據預設，<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> 的儲存體是 <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [安全執行緒集合](../../../../docs/standard/collections/thread-safe/index.md)
+- [執行緒安全集合](../../../../docs/standard/collections/thread-safe/index.md)

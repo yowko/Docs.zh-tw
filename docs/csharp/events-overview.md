@@ -3,18 +3,18 @@ title: 事件簡介
 description: 透過此概觀了解 .NET Core 中的事件，以及事件的語言設計目標。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: ceae2b9319a1de9f01102987735c7db2c2883f18
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 4e660f85eecfd5668919baf21a0d26f858faf5a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138527"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146110"
 ---
 # <a name="introduction-to-events"></a>事件簡介
 
-[上一篇](delegates-patterns.md)
+[上一步](delegates-patterns.md)
 
-事件就像委派，是「晚期繫結」機制。 事實上，事件是建立在委派的語言支援上。
+事件就像委派，是「晚期繫結」** 機制。 事實上，事件是建立在委派的語言支援上。
 
 事件一種物件 (向系統中所有感興趣的元件) 廣播有事發生的方式。 任何其他元件皆可以訂閱事件，並在引發事件時收到通知。
 
@@ -26,13 +26,13 @@ ms.locfileid: "74138527"
 
 ## <a name="design-goals-for-event-support"></a>事件支援的設計目標
 
-事件的語言設計以下列目標為目標：
+事件的語言設計針對以下目標：
 
-- 在事件來源與事件接收器之間啟用極少的結合。 這兩個元件可能不是由相同的組織所撰寫，甚至可能依完全不同的排程更新。
+- 啟用事件源和事件接收器之間的極小耦合。 這兩個元件可能不是由相同的組織所撰寫，甚至可能依完全不同的排程更新。
 
-- 訂閱事件和取消訂閱該相同事件應該非常簡單。
+- 訂閱事件並取消訂閱同一事件應該非常簡單。
 
-- 事件來源應該支援多個事件訂閱者。 它也應該支援不附加任何事件訂閱者。
+- 事件源應支援多個事件訂閱者。 它也應該支援不附加任何事件訂閱者。
 
 您可以看到事件的目標與委派的目標非常相似。
 這就是事件語言支援建立在委派語言支援上的原因。
@@ -49,7 +49,7 @@ public event EventHandler<FileListArgs> Progress;
 
 事件類型 (本例中為 `EventHandler<FileListArgs>`) 必須是委派類型。 宣告事件時應該遵循一些慣例。 一般而言，事件委派類型具有 void 傳回。
 事件宣告應該是動詞或動詞片語。
-當附隨報告已發生的專案時，請使用過去的時態。 報告將要發生的事件時，請使用現在式動詞 (例如，`Closing`)。 通常使用現在式是表示您的類別支援某類的自訂行為。 最常見的情況之一就是支援取消。 例如，`Closing` 事件可包括一個引數，指出關閉作業是否應該繼續。  其他情況可讓呼叫端更新事件引數的屬性以修改行為。 您可引發事件，指出演算法會採用的下一個提議動作。 事件處理常式可透過修改事件引數的屬性來要求不同的動作。
+當附隨報告已發生的內容時，請使用過去的時態。 報告將要發生的事件時，請使用現在式動詞 (例如，`Closing`)。 通常使用現在式是表示您的類別支援某類的自訂行為。 最常見的情況之一就是支援取消。 例如，`Closing` 事件可包括一個引數，指出關閉作業是否應該繼續。  其他情況可讓呼叫端更新事件引數的屬性以修改行為。 您可引發事件，指出演算法會採用的下一個提議動作。 事件處理常式可透過修改事件引數的屬性來要求不同的動作。
 
 當您想要引發事件時，可使用委派引動過程語法呼叫事件處理常式︰
 
@@ -59,17 +59,17 @@ Progress?.Invoke(this, new FileListArgs(file));
 
 如上一節中討論的[委派](delegates-patterns.md)，?。
 當該事件沒有訂閱者時，運算子讓您輕鬆確定不用嘗試引發事件。
- 
+
 使用 `+=` 運算子訂閱事件︰
 
 ```csharp
-EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
+EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
     Console.WriteLine(eventArgs.FoundFile);
 
 fileLister.Progress += onProgress;
 ```
 
-處理常式方法的前置詞前面通常會加上事件名稱，如上所示。
+處理常式方法通常具有首碼"On"後跟事件名稱，如上所示。
 
 使用 `-=` 運算子取消訂閱事件：
 

@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 47b77792fd3a2b2700ec0734851fdec534361596
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 883e0a7f833c15d2c1cce6b3d52d16aad01a5cd0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712867"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173454"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# 參考)
 
 `virtual` 關鍵字可用來修改方法、屬性、索引子或事件宣告，並可在衍生類別中受到覆寫。 例如，繼承這個方法的任何類別均可將其覆寫：
 
 ```csharp
-public virtual double Area() 
+public virtual double Area()
 {
     return x * y;
 }
@@ -37,7 +37,7 @@ public virtual double Area()
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-除了宣告和調用語法的差異之外，虛擬屬性的行為與虛擬方法類似。
+虛擬屬性的行為類似于虛擬方法，但聲明和調用語法的差異除外。
 
 - 在靜態屬性上使用 `virtual` 修飾詞是錯誤的。
 
@@ -61,9 +61,9 @@ public Cylinder(double r, double h): base(r, h) {}
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [多型](../../programming-guide/classes-and-structs/polymorphism.md)
-- [abstract](abstract.md)
-- [override](override.md)
-- [new (修飾詞)](new-modifier.md)
+- [Polymorphism](../../programming-guide/classes-and-structs/polymorphism.md)
+- [抽象](abstract.md)
+- [覆蓋](override.md)
+- [新建（修飾符）](new-modifier.md)

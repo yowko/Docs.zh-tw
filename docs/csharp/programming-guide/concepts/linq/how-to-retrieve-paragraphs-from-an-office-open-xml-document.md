@@ -1,15 +1,15 @@
 ---
-title: 如何從 Office Open XML 檔取出段落（C#）
+title: 如何從 Office 打開的 XML 文檔 （C#） 檢索段落
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
 ms.openlocfilehash: 241bacc730f205bf501c1ab1ab47f6fda4c15d64
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347464"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>如何從 Office Open XML 檔取出段落（C#）
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>如何從 Office 打開的 XML 文檔 （C#） 檢索段落
 本主題顯示的範例可開啟 Office Open XML 文件，並在文件中擷取所有段落的集合。  
   
  如需 Office Open XML 的詳細資訊，請參閱 [Open XML SDK](https://github.com/OfficeDev/Open-XML-SDK) \(英文\) 和 [www.ericwhite.com](http://ericwhite.com/) \(英文\)。  

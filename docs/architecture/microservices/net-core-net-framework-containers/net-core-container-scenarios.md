@@ -2,12 +2,12 @@
 title: 選擇在 Docker 容器使用 .NET Core 的時機
 description: 適用於容器化 .NET 應用程式的.NET 微服務架構 | 選擇在 Docker 容器使用 .NET Core 的時機
 ms.date: 01/30/2020
-ms.openlocfilehash: b3cb1eefe739b4ffdbbdd0bdcb3c74b51862704b
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: f784512af3f520f96d499ab002eda58071b3c284
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501853"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147371"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>選擇在 Docker 容器使用 .NET Core 的時機
 
@@ -27,19 +27,19 @@ ms.locfileid: "77501853"
 
 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) 是在 macOS 上執行的 IDE (即 Xamarin Studio 的演進)，並支援 Docker 型應用程式開發。 針對在 Mac 電腦上工作同時想要使用功能強大之 IDE 的開發人員，這應該是偏好選項。
 
-您也可以在 macOS、Linux 和 Windows 上使用[Visual Studio Code](https://code.visualstudio.com/) 。 Visual Studio Code 完全支援 .NET Core，包括 IntelliSense 和調試。 因為 VS Code 是輕量編輯器，所以您可以使用它搭配 Docker CLI 和[.NET Core CLI](../../../core/tools/index.md)，在 Mac 上開發容器化應用程式。 您還可以透過大多數協力廠商編輯器如 Sublime、Emacs、vi 及開放原始碼 Omnisharp 專案 (提供 IntelliSense 支援)，來將目標設定為 .NET Core。
+您還可以在 macOS、Linux 和 Windows 上使用[視覺化工作室代碼](https://code.visualstudio.com/)。 視覺化工作室代碼完全支援 .NET 核心，包括 IntelliSense 和調試。 由於 VS 代碼是一個羽量級編輯器，您可以使用它開發在 Mac 上與 Docker CLI 和[.NET 核心 CLI](../../../core/tools/index.md)一起開發容器化應用程式。 您還可以透過大多數協力廠商編輯器如 Sublime、Emacs、vi 及開放原始碼 Omnisharp 專案 (提供 IntelliSense 支援)，來將目標設定為 .NET Core。
 
-除了 Ide 和編輯器以外，您還可以將[.NET Core CLI](../../../core/tools/index.md)用於所有支援的平臺。
+除了 ID和編輯器之外，您還可以對所有受支援的平臺使用[.NET Core CLI。](../../../core/tools/index.md)
 
 ## <a name="using-containers-for-new-green-field-projects"></a>在新 (「綠地區」) 專案使用容器
 
 儘管容器也可以用來將 Web 應用程式或服務裝入容器中 (遵循任何架構模式)，但通常會與微服務架構搭配使用。 .NET Framework 可用於 Windows 容器，但 .NET Core 的模組性和輕量性質使其更適合容器和微服務架構。 建立和部署容器時，使用 .NET Core 時的映像大小，會遠小於使用 .NET Framework 時的大小。
 
-## <a name="create-and-deploy-microservices-on-containers"></a>在容器上建立及部署微服務
+## <a name="create-and-deploy-microservices-on-containers"></a>在容器上創建和部署微服務
 
-您可以透過一般處理序，使用傳統的.NET Framework 來建置微服務型應用程式 (不含容器)。 如此一來，因為.NET Framework 已跨處理序安裝和共用，處理序即為輕量的，而且可快速啟動。 不過，如果您使用容器，傳統 .NET Framework 的映像也會以 Windows Server Core 為基礎，而這對於容器上的微服務方法而言過於沉重。 不過，小組也已經尋求提升 .NET Framework 使用者體驗的機會。 最近， [Windows Server Core 容器映射的大小已縮減為 > 40%](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller)。 
+您可以透過一般處理序，使用傳統的.NET Framework 來建置微服務型應用程式 (不含容器)。 如此一來，因為.NET Framework 已跨處理序安裝和共用，處理序即為輕量的，而且可快速啟動。 不過，如果您使用容器，傳統 .NET Framework 的映像也會以 Windows Server Core 為基礎，而這對於容器上的微服務方法而言過於沉重。 然而，團隊一直在尋找機會來改善 .NET Framework 使用者的體驗。 最近[，Windows 伺服器核心容器映射的大小已減少到 >40%。](https://devblogs.microsoft.com/dotnet/we-made-windows-server-core-container-images-40-smaller)
 
-另一方面，如果您採用以容器為基礎的微服務導向系統，則 .NET Core 是最佳選擇，因為 .NET Core 很輕量。 此外，其相關的容器映射（無論是 Linux 或 Windows Nano Server）都是精簡且小型的，讓容器變得輕輕鬆又快速啟動。
+另一方面，如果您採用基於容器的面向微服務的系統，.NET Core 是最佳候選者，因為 .NET Core 是羽量級的。 此外，它相關的容器映射，無論是Linux還是Windows Nano Server，都是精益和小型的，使容器變得輕快，啟動速度很快。
 
 微服務意味著儘可能愈小愈好：在啟動時負荷極低、佔用空間小、限定環境小、只需要投注一小部分心力 (檢查 DDD，[網域驅動設計](https://en.wikipedia.org/wiki/Domain-driven_design))，而且能夠快速啟動和停止。 基於這些需求，您會需要使用小型且可快速具現化的容器映像，如 .NET Core 容器映像。
 
@@ -52,5 +52,5 @@ ms.locfileid: "77501853"
 這對於微服務架構特別重要，您可以在其中執行數百個微服務 (容器)。 透過 Linux 或 Windows Nano 上的 ASP.NET Core 映像 (以 .NET Core 執行階段為基礎)，您可以大幅減少伺服器或 VM 的數量來執行系統，最終節省基礎架構和託管的成本。
 
 >[!div class="step-by-step"]
->[上一頁](general-guidance.md)
->[下一頁](net-framework-container-scenarios.md)
+>[上一個](general-guidance.md)
+>[下一個](net-framework-container-scenarios.md)

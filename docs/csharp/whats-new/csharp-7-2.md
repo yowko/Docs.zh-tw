@@ -3,10 +3,10 @@ title: C# 7.2 的新功能
 description: C# 7.2 新功能的概觀。
 ms.date: 08/16/2017
 ms.openlocfilehash: 7febefb81bbea6f24690adb05488ad6a18bbf552
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75694591"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 的新功能
@@ -21,14 +21,14 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 此版本的新款語言功能包括：
 
 - [撰寫安全、有效率之程式碼的技巧](#safe-efficient-code-enhancements)
-  - 這是語法改進功能組合，這些改進功能可讓您使用參考語意來處理實值型別。
+  - 此為語法改進功能組合，其可讓使用參考語意進行實質型別作業變得可能。
 - [非後置具名引數](#non-trailing-named-arguments)
   - 具名引數之後可以接著位置引數。
 - [數值常值中的前置底線](#leading-underscores-in-numeric-literals)
   - 數值常值的任何列印數字之前，現都可加上前置底線。
-- [`private protected` 存取修飾詞](#private-protected-access-modifier)
+- [`private protected`訪問修改器](#private-protected-access-modifier)
   - 您可利用 `private protected` 存取修飾詞，存取相同組件中的衍生類別。
-- [`ref` 條件運算式](#conditional-ref-expressions)
+- [條件`ref`運算式](#conditional-ref-expressions)
   - 條件運算式 (`?:`) 的結果現在可以是參考。
 
 此文章的其餘部分將概述各個功能。 您將了解每項功能背後的原因。 您將了解語法。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
@@ -40,7 +40,7 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 
 ## <a name="safe-efficient-code-enhancements"></a>安全、有效率的程式碼增強功能
 
-您可利用 7.2 版新加入的語言功能，於使用參考語意時運用實值型別。 這些功能之設計目的是加強加效能，方法是將複製實質型別最小化，而不產生與使用參考型別相關的記憶體配置。 功能包括：
+您可利用 7.2 版新加入的語言功能，於使用參考語意時運用實值型別。 這些功能之設計目的是加強加效能，方法是將複製實質型別最小化，而不產生與使用參考型別相關的記憶體配置。 這些功能包括：
 
 - 參數上的 `in` 修飾詞，可指定引數將以傳址方式傳遞，但不受呼叫的方法修改。 將 `in` 修飾詞新增至引數是[來源相容變更](version-update-considerations.md#source-compatible-changes)。
 - 方法上 `ref readonly` 修飾詞的傳回內容，可指示方法要以傳址方式傳回其值，但不允許寫入該物件。 如果將傳回項目指派給值。則新增 `ref readonly` 修飾詞是[來源相容變更](version-update-considerations.md#source-compatible-changes)。 將 `readonly` 修飾詞新增至現有 `ref` 傳回陳述式是[不相容的變更](version-update-considerations.md#incompatible-changes)。 需要呼叫端更新 `ref` 本機變數的宣告，以包含 `readonly` 修飾詞。

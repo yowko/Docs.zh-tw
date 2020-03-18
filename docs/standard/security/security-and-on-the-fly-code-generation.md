@@ -1,5 +1,6 @@
 ---
 title: 安全性和產生作業中的程式碼
+description: 代表信任度較低的代碼生成代碼是一個安全問題，尤其是在調用方可以影響代碼生成時。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: 64ddcc6a379e5719eb734eede13e576a707696fe
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 34ebda27a81ca29ebb27a721b77b735a12be882e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705882"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186791"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>安全性和產生作業中的程式碼
 某些程式庫的運作方式為產生程式碼，然後執行這個程式碼以進行呼叫端的特定作業。 這種方法的基本問題在於程式庫可能會代表較不受信任的程式碼來產生程式碼，然後以較高的信任層級來執行這個程式碼。 當呼叫端可能影響程式碼產生時，這個問題會更嚴重，因此您必須確保產生的程式碼只會是您認為安全的程式碼。  
@@ -24,6 +25,6 @@ ms.locfileid: "75705882"
   
  當您編譯程式碼時，請考慮惡意程式是否有可能修改程式碼。 在編譯器讀取原始程式碼之前，或在您的程式碼載入 .dll 檔案之前，是不是有空檔時間可以讓惡意程式碼變更磁碟上的原始程式碼？ 如果是，您必須視需要使用檔案系統中的存取控制清單，來保護含有這些檔案的目錄。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

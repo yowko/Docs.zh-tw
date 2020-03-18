@@ -13,17 +13,17 @@ helpviewer_keywords:
 - culture-insensitive string operations
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
 ms.openlocfilehash: 06c46033936e16355b8d2eb6650e8731a04af6e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141284"
 ---
 # <a name="culture-insensitive-string-operations"></a>不區分文化特性 (Culture) 的字串作業
 
 如果您建立的應用程式會根據個別文化特性對使用者顯示結果，區分文化特性字串作業將有所助益。 根據預設，區分文化特性的方法會從目前執行緒的 <xref:System.Globalization.CultureInfo.CurrentCulture%2A> 屬性取得要使用的文化特性。
 
-請注意，區分文化特性的字串作業並不一定是所要的行為。 若結果應該與文化特性無關，但使用了區分文化特性的作業，可能會造成應用程式程式碼在具有自訂大小寫對應和排序規則的文化特性上失敗。 如需範例，請參閱[使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)一文中的[使用目前文化特性 (Culture) 的字串比較](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture)一節。
+請注意，區分文化特性的字串作業並不一定是所要的行為。 若結果應該與文化特性無關，但使用了區分文化特性的作業，可能會造成應用程式程式碼在具有自訂大小寫對應和排序規則的文化特性上失敗。 例如，請參閱"[使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)"一文中的["使用目前範圍性的字串比較"](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture)部分。
 
 字串作業是否應該區分文化特性取決於您的應用程式如何使用結果。 對使用者顯示結果的字串作業，通常都是區分文化特性的。 例如，如果應用程式要在清單方塊中顯示排序過的當地語系化字串清單，應用程式就應該執行區分文化特性的排序。
 
@@ -31,6 +31,6 @@ ms.locfileid: "73141284"
 
 不論您是否要開發含有處理當地語系化和全球化問題之程式碼的應用程式，您應該知道預設情況下會擷取區分文化特性結果的 .NET Framework 方法。 本主題的目的在說明當您的應用程式想要取得不區分文化特性的結果時，使用這些方法的正確方式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)

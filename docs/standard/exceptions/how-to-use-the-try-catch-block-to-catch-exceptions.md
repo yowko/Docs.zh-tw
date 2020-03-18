@@ -12,10 +12,10 @@ helpviewer_keywords:
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
 ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708462"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>如何使用 try/catch 區塊攔截例外狀況
@@ -29,14 +29,14 @@ ms.locfileid: "75708462"
 
 通用語言執行平台 (CLR) 會攔截 `catch` 區塊未處理的例外狀況。 如果 CLR 攔截了例外狀況，可能會發生下列其中一種結果，視您的 CLR 組態而有所不同：
 
-- [偵錯] 對話方塊隨即出現。
+- [偵錯]**** 對話方塊隨即出現。
 - 程式停止執行，內容為例外狀況資訊的對話方塊隨即出現。
 - 錯誤會輸出至[標準錯誤輸出資料流](xref:System.Console.Error)。
 
 > [!NOTE]
 > 多數程式碼可以擲回例外狀況，而且某些例外狀況 (例如 <xref:System.OutOfMemoryException>) 可能在任何時間由 CLR 本身擲回。 雖然應用程式不必處理這些例外狀況，但是請在撰寫供他人使用的程式庫時注意其發生的可能性。 如需何時在 `try` 區塊中設定程式碼的建議，請參閱[例外狀況的最佳做法](best-practices-for-exceptions.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [例外狀況](index.md)
+- [異常](index.md)
 - [在 .NET 中處理 I/O 錯誤](../io/handling-io-errors.md)

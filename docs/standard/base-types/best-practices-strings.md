@@ -19,10 +19,10 @@ helpviewer_keywords:
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711476"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>在 .NET 中使用字串的最佳做法
@@ -43,7 +43,7 @@ ms.locfileid: "75711476"
 - 正規化字串以進行比較，使用 <xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> 方法，而非 <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> 方法。
 - 使用 <xref:System.String.Equals%2A?displayProperty=nameWithType> 方法的多載，來測試兩個字串是否相等。
 - 使用 <xref:System.String.Compare%2A?displayProperty=nameWithType> 和 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 方法來排序字串，而不檢查是否相等。
-- 使用區分文化特性的格式來顯示使用者介面中的非字串資料，例如數字和日期。 使用[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的格式，來保存字串形式的非字串資料。
+- 使用區分文化特性的格式來顯示使用者介面中的非字串資料，例如數字和日期。 使用格式與[不變區域性](xref:System.Globalization.CultureInfo.InvariantCulture)保持字串形式的非字串資料。
 
 當您使用字串時，請避免下列作法：
 
@@ -91,13 +91,13 @@ ms.locfileid: "75711476"
 > [!NOTE]
 > 您可以下載[排序權數資料表](https://www.microsoft.com/download/details.aspx?id=10921)，該文字檔集合包含在 Windows 作業系統排序及比較作業中使用的字元權數資訊，以及下載[預設 Unicode 定序元素資料表](https://www.unicode.org/Public/UCA/latest/allkeys.txt) (適用於 Linux 和 macOS 的最新版本排序權數資料表)。 Linux 和 macOS 上的特定版本排序權數資料表，取決於在系統上安裝的 [International Components for Unicode](http://site.icu-project.org/) 程式庫。 如需其實作的 ICU 版本及 Unicode 版本詳細資訊，請參閱[下載 ICU](http://site.icu-project.org/download)。
 
-不過，評估兩個字串是否相等或決定排序順序不會產生單一的正確結果，而要取決於用來比較字串的準則而定。 特別是，如果字串比較是序數或根據目前文化特性或[不因文化特性而異](xref:System.Globalization.CultureInfo.InvariantCulture)的大小寫與排序慣例 (根據英文語言的無從驗證地區設定文化特性)，則可能會產生不同的結果。
+不過，評估兩個字串是否相等或決定排序順序不會產生單一的正確結果，而要取決於用來比較字串的準則而定。 特別是，基於目前範圍性或[不變區域性](xref:System.Globalization.CultureInfo.InvariantCulture)（基於英語的局部與無關區域性）的套管和排序約定的帶形或基於序列的字串比較可能會產生不同的結果。
 
 此外，使用不同版本 .NET 或使用不同作業系統或作業系統版本上 .NET 所做的字串比較，可能會傳回不同的結果。 如需詳細資訊，請參閱[字串及 Unicode 標準](xref:System.String#Unicode)。
 
 ### <a name="string-comparisons-that-use-the-current-culture"></a>使用目前之文化特性的字串比較
 
-比較字串時，其中一個準則需使用目前文化特性的慣例。 如果比較是以目前文化特性為依據，就會使用執行緒的目前文化特性或地區設定。 如果使用者未設定文化特性，則會預設為控制台 [地區選項] 視窗中的設定。 當資料是語言相關資料，以及資料會反映區分文化特性的使用者互動時，請一律使用以目前文化特性為根據的比較。
+比較字串時，其中一個準則需使用目前文化特性的慣例。 如果比較是以目前文化特性為依據，就會使用執行緒的目前文化特性或地區設定。 如果使用者未設定文化特性，則會預設為控制台 [地區選項] **** 視窗中的設定。 當資料是語言相關資料，以及資料會反映區分文化特性的使用者互動時，請一律使用以目前文化特性為根據的比較。
 
 不過，當文化特性變更時，.NET 中的比較和大小寫行為也會有所變更。 當執行應用程式的電腦其文化特性不同於開發應用程式的電腦時，或執行中的執行緒變更其文化特性時，會發生這種情況。 此種行為有其用意，但對許多開發人員來說並不容易注意到。 下列範例說明美國英文 ("en-US") 和瑞典文 ("sv-SE") 文化特性之間排序次序的差異。 請注意單字 "ångström"、"Windows" 和 "Visual Studio" 出現在已排序的字串陣列中的不同位置。
 
@@ -131,12 +131,12 @@ ms.locfileid: "75711476"
 [!code-csharp[Conceptual.Strings.BestPractices#12](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#12)]
 [!code-vb[Conceptual.Strings.BestPractices#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#12)]
 
-在此情況下，由於 "file：" 是要被視為非語言、不區分文化特性的識別碼，因此應該改為撰寫程式碼，如下列範例所示：
+在這種情況下，由於"file："旨在解釋為非語言、不區分區域性的識別碼，因此代碼應編寫如下示例所示：
 
 [!code-csharp[Conceptual.Strings.BestPractices#13](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#13)]
 [!code-vb[Conceptual.Strings.BestPractices#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#13)]
 
-### <a name="ordinal-string-operations"></a>序數位符串作業
+### <a name="ordinal-string-operations"></a>序形字串操作
 
 在方法呼叫中指定 <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 或 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 值意謂著非語言比較，其中忽略自然語言的特性。 若使用這類 <xref:System.StringComparison> 值來呼叫方法，方法就會以簡單的位元組比較來進行字串作業決策，而不以文化特性參數化的大小寫或對等項目資料表為根據。 在大部分情況下，這種方法非常適合預期的字串解譯，同時可讓程式碼更快速、可靠。
 
@@ -147,12 +147,12 @@ ms.locfileid: "75711476"
 > [!IMPORTANT]
 > 雖然字串比較方法可以忽略內嵌的 Null 字元，但 <xref:System.String.Contains%2A?displayProperty=nameWithType>、 <xref:System.String.EndsWith%2A?displayProperty=nameWithType>、 <xref:System.String.IndexOf%2A?displayProperty=nameWithType>、 <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>和 <xref:System.String.StartsWith%2A?displayProperty=nameWithType> 之類的字串搜尋方法就不能這麼做了。
 
-下列範例會對字串 "Aa" 執行區分文化特性的比較，並使用類似的字串，其中包含 "A" 和 "a" 之間的數個內嵌 null 字元，並顯示兩個字串如何視為相等：
+下面的示例對字串"Aa"執行區分區域性的比較，該字串與包含"A"和"a"之間的多個嵌入空字元的類似字串進行了比較，並顯示了兩個字串的相等性：
 
 [!code-csharp[Conceptual.Strings.BestPractices#19](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls1.cs#19)]
  [!code-vb[Conceptual.Strings.BestPractices#19](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls1.vb#19)]
 
-不過，當您使用序數比較時，字串不會視為相等，如下列範例所示：
+但是，當您使用元數比較時，字串不被視為相等，如下例所示：
   
 [!code-csharp[Conceptual.Strings.BestPractices#20](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls2.cs#20)]
 [!code-vb[Conceptual.Strings.BestPractices#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls2.vb#20)]
@@ -176,7 +176,7 @@ ms.locfileid: "75711476"
 
 不包含 <xref:System.String.Equals%2A?displayProperty=nameWithType> 引數 (包括等號比較運算子) 的 <xref:System.StringComparison> 多載是以序數語意為預設。 在任何情況下，我們建議您呼叫具有 <xref:System.StringComparison> 參數的多載。
 
-### <a name="string-operations-that-use-the-invariant-culture"></a>使用不因文化特性而異的字串作業
+### <a name="string-operations-that-use-the-invariant-culture"></a>使用不變區域性的字串操作
 
 採用不因文化特性而異的比較會使用靜態 <xref:System.Globalization.CultureInfo.CompareInfo%2A> 屬性傳回的 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 屬性。 這種行為在所有系統上都相同，它會將其範圍之外的任何字元轉譯成它認為是相等非變異字元的字元。 這項原則很適合跨文化特性來維護一套字串行為，但通常會產生非預期的結果。
 
@@ -197,16 +197,16 @@ InvariantCulture: a + ̊ = å
 
 ## <a name="choosing-a-stringcomparison-member-for-your-method-call"></a>為您的方法呼叫選擇 StringComparison 成員
 
-下表概述從語義字串內容到 <xref:System.StringComparison> 列舉成員的對應：
+下表概述了從語義字串上下文到枚舉成員的<xref:System.StringComparison>映射：
 
-|Data|行為|對應的 System.StringComparison<br /><br /> value|
+|資料|行為|對應的 System.StringComparison<br /><br /> value|
 |----------|--------------|-----------------------------------------------------|
 |區分大小寫的內部識別項。<br /><br /> 在標準中區分大小寫的識別項，例如 XML 和 HTTP。<br /><br /> 區分大小寫的安全性相關設定。|位元組完全相符的非語言識別項。|<xref:System.StringComparison.Ordinal>|
 |不區分大小寫的內部識別項。<br /><br /> 在標準中區分大小寫的識別項，例如 XML 和 HTTP。<br /><br /> 檔案路徑。<br /><br /> 登錄機碼和值。<br /><br /> 環境變數。<br /><br /> 資源識別項 (例如控制代碼名稱)。<br /><br /> 不區分大小寫的安全性相關設定。|大小寫不重要的非語言識別項，特別是大部分 Windows 系統服務中儲存的資料。|<xref:System.StringComparison.OrdinalIgnoreCase>|
 |某些永續性、語言相關的資料。<br /><br /> 需要固定排序次序之語言資料的顯示。|仍與語言相關之不區分文化特性的資料。|<xref:System.StringComparison.InvariantCulture><br /><br /> -或-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|
 |向使用者顯示的資料。<br /><br /> 大部分的使用者輸入。|需要當地語言自訂的資料。|<xref:System.StringComparison.CurrentCulture><br /><br /> -或-<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|
 
-## <a name="common-string-comparison-methods-in-net"></a>.NET 中常用的字串比較方法
+## <a name="common-string-comparison-methods-in-net"></a>.NET 中的常見字串比較方法
 
 下列各節描述字串比較最常用的方法。
 
@@ -295,7 +295,7 @@ InvariantCulture: a + ̊ = å
 [!code-csharp[Conceptual.Strings.BestPractices#9](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
 [!code-vb[Conceptual.Strings.BestPractices#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]
 
-### <a name="collections-example-hashtable-constructor"></a>集合範例： Hashtable 函數表
+### <a name="collections-example-hashtable-constructor"></a>集合示例：雜湊表建構函式
 
 第二個受到字串比較方式而影響作業的範例是雜湊字串。
 
@@ -341,7 +341,7 @@ InvariantCulture: a + ̊ = å
 [!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
 [!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
 
-不過，如果您在 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 和 <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>的呼叫中將 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性取代為 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>，保存的日期和時間資料將會成功還原，如下列輸出所示：
+但是，如果在 調用<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>和<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType><xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType><xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>中將 屬性替換為 ，則持久化日期和時間資料將成功還原，如下輸出所示：
 
 ```console
 06.05.1758 21:26
@@ -351,6 +351,6 @@ InvariantCulture: a + ̊ = å
 18.02.1905 15:12
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [操作字串](manipulating-strings.md)

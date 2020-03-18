@@ -11,10 +11,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 ms.openlocfilehash: a76cc40f308ac2f636a650cd4a17da0e94e23a34
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160257"
 ---
 # <a name="managed-threading-best-practices"></a>受控執行緒處理最佳做法
@@ -90,7 +90,7 @@ else {
   
 - 不要從主要程式控制背景工作執行緒的執行 (例如，使用事件)。 相反地，請設計您的程式，讓背景工作執行緒負責等候到可進行工作、執行工作，並在工作完成時通知程式的其他組件。 如果背景工作執行緒不會封鎖起來，請考慮使用執行緒集區的執行緒。 <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType> 在背景工作執行緒封鎖的情況下很有用。  
   
-- 請勿使用型別來作為鎖定物件。 也就是避免像是 C# 中的 `lock(typeof(X))` 或 Visual Basic 中的 `SyncLock(GetType(X))` 的程式碼，或避免搭配 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> 物件使用 <xref:System.Type>。 針對指定的類型，每個應用程式定義域都會有 <xref:System.Type?displayProperty=nameWithType> 的一個執行個體。 如果您鎖定的型別是公用的，則不是您自有的程式碼也可鎖定該型別，而導致死結。 若要了解其他問題，請參閱[可靠性最佳作法](../../../docs/framework/performance/reliability-best-practices.md)。  
+- 請勿使用型別來作為鎖定物件。 也就是避免像是 C# 中的 `lock(typeof(X))` 或 Visual Basic 中的 `SyncLock(GetType(X))` 的程式碼，或避免搭配 <xref:System.Type> 物件使用 <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>。 針對指定的類型，每個應用程式定義域都會有 <xref:System.Type?displayProperty=nameWithType> 的一個執行個體。 如果您鎖定的型別是公用的，則不是您自有的程式碼也可鎖定該型別，而導致死結。 若要了解其他問題，請參閱[可靠性最佳作法](../../../docs/framework/performance/reliability-best-practices.md)。  
   
 - 鎖定執行個體時請小心，例如 C# 中的 `lock(this)` 或 Visual Basic 中的 `SyncLock(Me)`。 如果您應用程式中屬於該型別之外的其他程式碼鎖定物件，系統可能會發生死結。  
   

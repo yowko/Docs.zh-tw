@@ -13,31 +13,31 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: d6314fae266505fbb4410aaaa351973070ab3811
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156435"
 ---
 # <a name="resolve-assembly-loads"></a>解析組件負載
-.NET 會針對需要更進一步控制元件載入的應用程式提供 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。 藉由處理這個事件，您的應用程式可以將組件從一般探查路徑外部載入到載入內容、選取要載入的數個組件版本、發出動態組件，並傳回它，以此類推。 本主題提供處理 <xref:System.AppDomain.AssemblyResolve> 事件的指引。  
+.NET 為<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>需要更好地控制程式集載入的應用程式提供事件。 藉由處理這個事件，您的應用程式可以將組件從一般探查路徑外部載入到載入內容、選取要載入的數個組件版本、發出動態組件，並傳回它，以此類推。 本主題提供處理 <xref:System.AppDomain.AssemblyResolve> 事件的指引。  
   
 > [!NOTE]
 > 若要解析僅限反映內容中的組件載入，請改為使用 <xref:System.AppDomain.ReflectionOnlyAssemblyResolve?displayProperty=nameWithType> 事件。  
   
-## <a name="how-the-assemblyresolve-event-works"></a>System.appdomain.assemblyresolve 事件的運作方式  
+## <a name="how-the-assemblyresolve-event-works"></a>程式集解析事件的工作原理  
  當您註冊 <xref:System.AppDomain.AssemblyResolve> 事件的處理常式時，只要執行階段無法依名稱繫結至組件，就會叫用處理常式。 例如，從使用者程式碼呼叫下列方法可能會引發 <xref:System.AppDomain.AssemblyResolve> 事件：  
   
 - 第一個引數是字串的 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 方法多載或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法多載，可代表要載入之組件的顯示名稱 (即 <xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> 屬性所傳回的字串)。  
   
-- 第一個引數是 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 物件的 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法多載或 <xref:System.Reflection.AssemblyName> 方法多載，可識別要載入的組件。  
+- 第一個引數是 <xref:System.Reflection.AssemblyName> 物件的 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 方法多載或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法多載，可識別要載入的組件。  
   
 - <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 方法多載。  
   
 - 執行個體化另一個應用程式定義域中物件的 <xref:System.AppDomain.CreateInstance%2A?displayProperty=nameWithType> 或 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A?displayProperty=nameWithType> 方法多載。  
   
 ### <a name="what-the-event-handler-does"></a>事件處理常式的作用  
- <xref:System.AppDomain.AssemblyResolve> 事件的處理常式會在 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 屬性中接收要載入之組件的顯示名稱。 如果處理常式無法辨識元件名稱，則會傳回 `null` （C#）、`Nothing` （Visual Basic）或 `nullptr` （Visual C++）。  
+ <xref:System.AppDomain.AssemblyResolve> 事件的處理常式會在 <xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> 屬性中接收要載入之組件的顯示名稱。 如果處理常式無法識別程式集名稱，則返回`null`（C#）、（`Nothing`可視基本）或`nullptr`（可視C++）。  
   
  如果處理常式可辨識組件名稱，則可以載入並傳回滿足要求的組件。 下列清單描述一些範例情節。  
   
@@ -64,15 +64,15 @@ ms.locfileid: "78156435"
   
  如需內容的資訊，請參閱 <xref:System.Reflection.Assembly.LoadFrom%28System.String%29?displayProperty=nameWithType> 方法多載。  
   
- 相同組件的多個版本可以載入相同的應用程式定義域。 不建議這種做法，因為它可能會導致類型指派問題。 請參閱[元件載入的最佳作法](../../framework/deployment/best-practices-for-assembly-loading.md)。  
+ 相同組件的多個版本可以載入相同的應用程式定義域。 不建議這種做法，因為它可能會導致類型指派問題。 請參閱[程式集載入的最佳做法](../../framework/deployment/best-practices-for-assembly-loading.md)。  
   
-### <a name="what-the-event-handler-should-not-do"></a>事件處理常式不應執行的動作  
+### <a name="what-the-event-handler-should-not-do"></a>事件處理常式不應做什麼  
 處理 <xref:System.AppDomain.AssemblyResolve> 事件的主要規則是您不應該嘗試傳回無法辨識的組件。 當您撰寫處理常式時，應該知道哪些組件可能會引發此事件。 針對其他組件，您的處理常式應該傳回 Null。  
 
 > [!IMPORTANT]
 > 從 .NET Framework 4 開始，會針對附屬組件引發 <xref:System.AppDomain.AssemblyResolve> 事件。 如果處理常式嘗試解析所有組件載入要求，則這項變更會影響針對舊版 .NET Framework 所撰寫的事件處理常式。 略過無法辨識之組件的事件處理常式不會受到這項變更的影響：它們會傳回 Null，並遵循正常後援機制。  
 
-載入組件時，事件處理常式不得使用任何 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法多載，而此方法多載可以遞迴引發 <xref:System.AppDomain.AssemblyResolve> 事件，因為這可能會導致堆疊溢位。 （請參閱本主題稍早所提供的清單）。即使您提供載入要求的例外狀況處理，也會發生這種情況，因為在所有事件處理常式都傳回之前，不會擲回任何例外狀況。 因此，如果找不到 `MyAssembly`，則下列程式碼會導致堆疊溢位：  
+載入組件時，事件處理常式不得使用任何 <xref:System.AppDomain.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法多載，而此方法多載可以遞迴引發 <xref:System.AppDomain.AssemblyResolve> 事件，因為這可能會導致堆疊溢位。 （請參閱本主題前面提供的清單。即使您為載入請求提供異常處理，也會發生這種情況，因為在所有事件處理常式都返回之前不會引發異常。 因此，如果找不到 `MyAssembly`，則下列程式碼會導致堆疊溢位：  
 
 ```cpp
 using namespace System;
@@ -198,5 +198,5 @@ End Class
 
 ## <a name="see-also"></a>另請參閱
 
-- [元件載入的最佳做法](../../framework/deployment/best-practices-for-assembly-loading.md)
+- [裝配體載入的最佳做法](../../framework/deployment/best-practices-for-assembly-loading.md)
 - [使用應用程式域](../../framework/app-domains/use.md)

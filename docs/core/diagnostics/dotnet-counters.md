@@ -1,21 +1,21 @@
 ---
-title: dotnet-計數器-.NET Core
-description: 瞭解如何安裝和使用 dotnet-counter 命令列工具。
+title: 點網計數器 - .NET 核心
+description: 瞭解如何安裝和使用點網計數器命令列工具。
 ms.date: 02/26/2020
-ms.openlocfilehash: 88f701a60d0ee03dd0236ae54c57679943e14939
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: dc95297478784ca06fe442a939f8489a40b29da7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157878"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147174"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
-**本文適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
+**本文適用于：✔️** .NET Core 3.0 SDK 和更高版本
 
-## <a name="install-dotnet-counters"></a>安裝 dotnet-計數器
+## <a name="install-dotnet-counters"></a>安裝點網計數器
 
-若要安裝 `dotnet-counters` [NuGet 套件](https://www.nuget.org/packages/dotnet-counters)的最新發行版本，請使用[dotnet tool install](../tools/dotnet-tool-install.md)命令：
+要安裝最新版本的`dotnet-counters` [NuGet 包](https://www.nuget.org/packages/dotnet-counters)，請使用[dotnet 工具安裝](../tools/dotnet-tool-install.md)命令：
 
 ```dotnetcli
 dotnet tool install --global dotnet-counters
@@ -29,30 +29,30 @@ dotnet-counters [-h|--help] [--version] <command>
 
 ## <a name="description"></a>描述
 
-`dotnet-counters` 是一種效能監視工具，可用於臨機操作健全狀況監視和第一層效能調查。 它可以觀察透過 <xref:System.Diagnostics.Tracing.EventCounter> API 發佈的效能計數器值。 例如，您可以快速監視 CPU 使用量，或 .NET Core 應用程式中擲回之例外狀況的速率，以查看使用 `PerfView` 或 `dotnet-trace`進行更嚴重的效能調查之前是否有任何可疑的問題。
+`dotnet-counters`是用於臨時運行狀況監控和一級績效調查的性能監控工具。 它可以觀察通過<xref:System.Diagnostics.Tracing.EventCounter>API 發佈的效能計數器值。 例如，您可以快速監視 CPU 使用率或引發到 .NET Core 應用程式中的異常率等內容，以查看在使用`PerfView`或`dotnet-trace`進行更嚴肅的性能調查之前，是否有可疑之處。
 
 ## <a name="options"></a>選項。
 
 - **`--version`**
 
-  顯示 dotnet 計數器公用程式的版本。
+  顯示點網計數器實用程式的版本。
 
 - **`-h|--help`**
 
-  顯示命令列說明。
+  顯示命令列説明。
 
 ## <a name="commands"></a>命令
 
 | Command                                             |
 | --------------------------------------------------- |
-| [dotnet-計數器收集](#dotnet-counters-collect) |
-| [dotnet-計數器清單](#dotnet-counters-list)       |
-| [dotnet-計數器監視](#dotnet-counters-monitor) |
-| [dotnet-計數器 ps](#dotnet-counters-ps) |
+| [點網計數器收集](#dotnet-counters-collect) |
+| [點網計數器清單](#dotnet-counters-list)       |
+| [點網計數器監視器](#dotnet-counters-monitor) |
+| [點網計數器 ps](#dotnet-counters-ps) |
 
-## <a name="dotnet-counters-collect"></a>dotnet-計數器收集
+## <a name="dotnet-counters-collect"></a>點網計數器收集
 
-定期收集選取的計數器值，並將它們匯出為指定的檔案格式，以進行後續處理。
+定期收集選定的計數器值並將其匯出到指定的檔案格式以進行後處理。
 
 ### <a name="synopsis"></a>概要
 
@@ -64,19 +64,19 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`-p|--process-id <PID>`**
 
-  要監視之進程的識別碼。
+  要監視的進程的 ID。
 
 - **`--refresh-interval <SECONDS>`**
 
-  更新所顯示計數器之間的延遲秒數
+  更新顯示的計數器之間的延遲秒數
 
 - **`counter_list <COUNTERS>`**
 
-  以空格分隔的計數器清單。 `provider_name[:counter_name]`可以指定計數器。 如果在沒有符合資格的 `counter_name`的情況下使用 `provider_name`，則會顯示所有計數器。 若要探索提供者和計數器名稱，請使用[dotnet-計數器 list](#dotnet-counters-list)命令。
+  計數器的空間分隔清單。 可以指定`provider_name[:counter_name]`計數器。 `provider_name`如果使用時沒有限定`counter_name`，則顯示所有計數器。 要發現提供程式和計數器名稱，請使用[dotnet 計數器清單](#dotnet-counters-list)命令。
 
 - **`--format <csv|json>`**
 
-  要匯出的格式。 目前可用： csv、json。
+  T 要匯出的格式。 當前可用： csv， json.
 
 - **`-o|--output <output>`**
 
@@ -84,7 +84,7 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 ### <a name="examples"></a>範例
 
-- 以3秒的重新整理間隔收集所有計數器，並產生 csv 作為輸出：
+- 以 3 秒的刷新間隔收集所有計數器，並將 csv 生成為輸出：
 
   ```console
   > dotnet-counters collect --process-id 1902 --refresh-interval 3 --format csv
@@ -93,9 +93,9 @@ dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [count
   Starting a counter session. Press Q to quit.
   ```
 
-## <a name="dotnet-counters-list"></a>dotnet-計數器清單
+## <a name="dotnet-counters-list"></a>點網計數器清單
 
-顯示計數器名稱和描述的清單，依提供者分組。
+顯示按提供程式分組的計數器名稱和說明的清單。
 
 ### <a name="synopsis"></a>概要
 
@@ -119,9 +119,9 @@ dotnet-counters list [-h|--help]
         exception-count              Number of Exceptions / sec
 ```
 
-## <a name="dotnet-counters-monitor"></a>dotnet-計數器監視
+## <a name="dotnet-counters-monitor"></a>點網計數器監視器
 
-顯示已選取計數器的定期重新整理值。
+顯示所選計數器的定期刷新值。
 
 ### <a name="synopsis"></a>概要
 
@@ -133,19 +133,19 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`-p|--process-id <PID>`**
 
-  要監視之進程的識別碼。
+  要監視的進程的 ID。
 
 - **`--refresh-interval <SECONDS>`**
 
-  更新所顯示計數器之間的延遲秒數
+  更新顯示的計數器之間的延遲秒數
 
 - **`counter_list <COUNTERS>`**
 
-  以空格分隔的計數器清單。 `provider_name[:counter_name]`可以指定計數器。 如果在沒有符合資格的 `counter_name`的情況下使用 `provider_name`，則會顯示所有計數器。 若要探索提供者和計數器名稱，請使用[dotnet-計數器 list](#dotnet-counters-list)命令。
+  計數器的空間分隔清單。 可以指定`provider_name[:counter_name]`計數器。 `provider_name`如果使用時沒有限定`counter_name`，則顯示所有計數器。 要發現提供程式和計數器名稱，請使用[dotnet 計數器清單](#dotnet-counters-list)命令。
 
 ### <a name="examples"></a>範例
 
-- 以3秒的重新整理間隔監視 `System.Runtime` 的所有計數器：
+- `System.Runtime`以 3 秒的刷新間隔監控所有計數器：
 
   ```console
   > dotnet-counters monitor --process-id 1902  --refresh-interval 3 System.Runtime
@@ -161,7 +161,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       Number of Exceptions / sec                     4
   ```
 
-- 僅監視 `System.Runtime`的 CPU 使用量和 GC 堆積大小：
+- 僅從 監控 CPU 使用率`System.Runtime`和 GC 堆大小：
 
   ```console
   > dotnet-counters monitor --process-id 1902 System.Runtime[cpu-usage,gc-heap-size]
@@ -172,7 +172,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- 從使用者定義的 `EventSource`監視 `EventCounter` 值。 如需詳細資訊，請參閱[教學課程：如何使用 EventCounters 測量非常頻繁事件的效能](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)。
+- 監視`EventCounter`使用者定義的`EventSource`值。 有關詳細資訊，請參閱[教程：如何使用事件計數器測量非常頻繁事件的性能](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md)。
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal
@@ -181,9 +181,9 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       request                                      100
   ```
   
-## <a name="dotnet-counters-ps"></a>dotnet-計數器 ps 
+## <a name="dotnet-counters-ps"></a>點網計數器 ps
 
-顯示可以監視的 dotnet 進程清單。
+顯示可監視的 dotnet 進程的清單。
 
 ### <a name="synopsis"></a>概要
 

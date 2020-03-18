@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -linkresource compiler option [C#]
 - linkresource compiler option [C#]
 ms.assetid: 440c26c2-77c1-4811-a0a3-57cce3f5fc96
-ms.openlocfilehash: 454915454f3faf15933257f3e3e221afec51d0ee
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 41af8e0ba8ffebd07d3cb1d2bc5fbc04b8cd595d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606761"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173727"
 ---
 # <a name="-linkresource-c-compiler-options"></a>-linkresource (C# 編譯器選項)
 在輸出檔中建立 .NET Framework 資源連結。 資源檔不會新增至輸出檔。 這點與 [-resource](./resource-compiler-option.md) 選項不同；後者會將資源檔內嵌在輸出檔案中。  
@@ -35,12 +35,12 @@ ms.locfileid: "69606761"
  資源的邏輯名稱；用來載入資源的名稱。 預設值是檔案的名稱。  
   
  `accessibility-modifier` (選擇性)  
- 資源的存取範圍：公用或私用。 預設值是公用。  
+ 資源的存取範圍：公用或私用。 預設值是 public。  
   
 ## <a name="remarks"></a>備註  
  根據預設，使用 C# 編譯器建立連結資源時，這些資源在組件中為公用狀態。 若要將資源設為私用，可將 `private` 指定為存取範圍修飾詞。 您只能使用 `public` 或 `private` 修飾詞。  
   
- **-linkresource** 必須使用其中一個 [-target](./target-compiler-option.md) 選項 ( **-target:module** 除外)。  
+ **-linkresource** 必須使用其中一個 [-target](./target-compiler-option.md) 選項 (**-target:module** 除外)。  
   
  例如，如果 `filename` 是由 [Resgen.exe](../../../framework/tools/resgen-exe-resource-file-generator.md) 或是在開發環境中所建立的 .NET Framework 資源檔，就可以使用 <xref:System.Resources> 命名空間中的成員進行存取。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager?displayProperty=nameWithType>。 對於其他所有資源，請使用 <xref:System.Reflection.Assembly> 類別中的 `GetManifestResource` 方法，以在執行階段存取資源。  
   
@@ -70,7 +70,7 @@ gacutil -i A.dll
   
 ```console  
 csc -t:module A.cs  
-al -out:A.dll A.netmodule -link:N.dll   
+al -out:A.dll A.netmodule -link:N.dll
 gacutil -i A.dll  
 ```  
   

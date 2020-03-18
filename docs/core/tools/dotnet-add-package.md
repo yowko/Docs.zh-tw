@@ -2,16 +2,16 @@
 title: dotnet add package 命令
 description: "'dotnet add package' 命令提供方便的選項，將 NuGet 套件參考新增至專案。"
 ms.date: 02/14/2020
-ms.openlocfilehash: cb44805f91ac4047dd50fd7e88d4eac5f15f2508
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 8121539a50d2ac2837693ccc35581f7fde1d1fc1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503806"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146602"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
-**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
+**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -30,7 +30,7 @@ ms.locfileid: "77503806"
 例如，將 `Newtonsoft.Json` 新增至 *ToDo.csproj* 會產生類似下例的輸出：
 
 ```console
-  Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
+Writing C:\Users\me\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
 log  : Restoring packages for C:\Temp\projects\consoleproj\consoleproj.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json
@@ -62,7 +62,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  只有在以特定[架構](../../standard/frameworks.md)為目標時，才能新增套件參考。
+  僅當定位特定[框架](../../standard/frameworks.md)時，才添加包引用。
 
 - **`-h|--help`**
 

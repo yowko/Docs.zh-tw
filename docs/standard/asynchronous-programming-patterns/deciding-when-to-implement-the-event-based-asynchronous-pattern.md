@@ -13,10 +13,10 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
 ms.openlocfilehash: 5fca32953af91184fe99d8ef6afe5a2374f325d6
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/09/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67663722"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>決定何時實作事件架構非同步模式
@@ -32,7 +32,7 @@ ms.locfileid: "67663722"
 > [!NOTE]
 > 實作 <xref:System.IAsyncResult> 模式但未一併實作事件架構模式的情況非常罕見。
 
-## <a name="guidelines"></a>方針
+## <a name="guidelines"></a>指導方針
 
 下列清單說明實作事件架構非同步模式時的指導方針：
 

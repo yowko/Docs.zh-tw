@@ -4,18 +4,18 @@ description: 了解建置運算式樹狀架構的技術。
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 45628b00633c8d6ff51dbd5f5dbdda7ca25dd7c4
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c93eb16ebf2ff66dc0162afb6841f2cadfce174e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037100"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146043"
 ---
 # <a name="building-expression-trees"></a>組建運算式樹狀架構
 
 [上一篇 - 解譯運算式](expression-trees-interpreting.md)
 
-目前為止看到的所有運算式樹狀架構都是由 C# 編譯器建立。 您唯一要做的是建立 Lambda 運算式，指派給類型為 `Expression<Func<T>>` 的變數或類似類型。 這不是建立運算式樹狀結構的唯一方法。 在許多情況下，您會發現需要在執行階段的記憶體中建立一個運算式。 
+目前為止看到的所有運算式樹狀架構都是由 C# 編譯器建立。 您唯一要做的是建立 Lambda 運算式，指派給類型為 `Expression<Func<T>>` 的變數或類似類型。 這不是建立運算式樹狀結構的唯一方法。 在許多情況下，您會發現需要在執行階段的記憶體中建立一個運算式。
 
 組建運算式樹狀架構很複雜，因為這些運算式樹狀架構是不可變的。 所謂不可變，表示樹狀結構必須從分葉向上組建到根。 您要用來組建運算式樹狀架構的 API 反映這項事實︰組建節點要使用的方法會採用其所有子系作為引數。 讓我們逐步解說幾個範例，向您示範技巧。
 
@@ -71,7 +71,7 @@ var lambda = Expression.Lambda(
 Expression<Func<double, double, double>> distanceCalc =
     (x, y) => Math.Sqrt(x * x + y * y);
 ```
- 
+
 您要從建立 `x` 和 `y` 的參數運算式開始：
 
 ```csharp
@@ -111,7 +111,7 @@ var distanceLambda = Expression.Lambda(
 
 ## <a name="building-code-in-depth"></a>深度組建程式碼
 
-您不會受限於使用這些 API 所可以組建的項目。 不過，想要組建的運算式樹狀架構越複雜，程式碼就越難管理及閱讀。 
+您不會受限於使用這些 API 所可以組建的項目。 不過，想要組建的運算式樹狀架構越複雜，程式碼就越難管理及閱讀。
 
 我們要組建相當於這個程式碼的運算式樹狀架構︰
 
@@ -128,7 +128,7 @@ Func<int, int> factorialFunc = (n) =>
 };
 ```
 
-請注意，上例中，我並未組建運算式樹狀架構，只有委派。 使用 `Expression` 類別就無法建立陳述式 Lambda。 以下是組建相同功能需要的程式碼。 它之所以複雜是因為沒有 API 可組建 `while` 迴圈，您需要改組建包含條件式測試的迴圈，以及脫離迴圈的標籤目標。 
+請注意，上例中，我並未組建運算式樹狀架構，只有委派。 使用 `Expression` 類別就無法建立陳述式 Lambda。 以下是組建相同功能需要的程式碼。 它之所以複雜是因為沒有 API 可組建 `while` 迴圈，您需要改組建包含條件式測試的迴圈，以及脫離迴圈的標籤目標。
 
 ```csharp
 var nArgument = Expression.Parameter(typeof(int), "n");
@@ -162,13 +162,13 @@ BlockExpression body = Expression.Block(
 );
 ```
 
-組建階乘函式運算式樹狀結構的程式碼相當長，也更複雜，滿是標籤和 break 陳述式及其他項目，是日常編碼工作想要避免的坑。 
+組建階乘函式運算式樹狀結構的程式碼相當長，也更複雜，滿是標籤和 break 陳述式及其他項目，是日常編碼工作想要避免的坑。
 
 我在本節中也更新了訪客程式碼，可瀏覽此運算式樹狀結構中的每個節點，並寫出此範例所建立之節點的相關資訊。 您可以在 dotnet/docs GitHub 存放庫[檢視或下載範例程式碼](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)。 建置並執行範例來親自試驗。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="examining-the-apis"></a>檢查 API
 
-運算式樹狀架構 API 是較難在 .NET Core 中巡覽的項目，但是沒關係。 其目的是相當複雜的任務︰撰寫會在執行階段產生程式碼的程式碼。 它們必須得複雜才能在支援 C# 語言提供的所有控制結構，以及在合理範圍內保持最小的 API 介面區之間取得平衡。 這項平衡表示許多控制結構不是由其 C# 建構所呈現，而是由代表基礎邏輯的建構所呈現，此基礎邏輯是編譯器從這些較高層級的建構所產生。 
+運算式樹狀架構 API 是較難在 .NET Core 中巡覽的項目，但是沒關係。 其目的是相當複雜的任務︰撰寫會在執行階段產生程式碼的程式碼。 它們必須得複雜才能在支援 C# 語言提供的所有控制結構，以及在合理範圍內保持最小的 API 介面區之間取得平衡。 這項平衡表示許多控制結構不是由其 C# 建構所呈現，而是由代表基礎邏輯的建構所呈現，此基礎邏輯是編譯器從這些較高層級的建構所產生。
 
 此外，在此階段中，還有不能直接使用內建 `Expression` 類別方法來組建的 C# 運算式。 這些通常是新增至 C# 5 和 C# 6 的最新運算子和運算式。 (例如，無法組建 `async` 運算式，也不能直接建立新的 `?.` 運算子。)
 

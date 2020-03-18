@@ -1,5 +1,5 @@
 ---
-title: HOW TO：讀取和寫入隔離儲存區中的檔案
+title: 如何：讀取和寫入離儲存區中的檔案
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - stores, reading and writing to files
 ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
 ms.openlocfilehash: a1ea65b0b8280faf51595b2fe9edcbf17eaabd8f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706682"
 ---
-# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>HOW TO：讀取和寫入隔離儲存區中的檔案
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>如何：讀取和寫入離儲存區中的檔案
 若要在隔離存放區中的檔案內進行讀取或寫入，請使用具有資料流讀取器 (<xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> 物件) 或資料流寫入器 (<xref:System.IO.StreamReader> 物件) 的 <xref:System.IO.StreamWriter> 物件。  
   
 ## <a name="example"></a>範例  
@@ -32,7 +32,7 @@ ms.locfileid: "75706682"
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>
@@ -40,5 +40,5 @@ ms.locfileid: "75706682"
 - <xref:System.IO.FileAccess?displayProperty=nameWithType>
 - <xref:System.IO.StreamReader?displayProperty=nameWithType>
 - <xref:System.IO.StreamWriter?displayProperty=nameWithType>
-- [檔案和資料流 I/O](../../../docs/standard/io/index.md)
-- [隔離儲存區](../../../docs/standard/io/isolated-storage.md)
+- [檔和流 I/O](../../../docs/standard/io/index.md)
+- [隔離存儲](../../../docs/standard/io/isolated-storage.md)
