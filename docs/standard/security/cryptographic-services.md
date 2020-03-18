@@ -1,5 +1,5 @@
 ---
-title: Cryptographic Services
+title: 密碼編譯服務
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 66af8126ab61d37065b9a328d5e088ed7bf4cbef
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c1783a578d0b55b0b62a1ffb870802faca97623f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709201"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187016"
 ---
-# <a name="cryptographic-services"></a>Cryptographic Services
+# <a name="cryptographic-services"></a>密碼編譯服務
 
 公用網路（例如網際網路）無法在兩實體之間提供一種可安全通訊的方式。 這類網路上的通訊很容易被人讀取，或是被未經授權的協力廠商所修改。 密碼編譯有助於保護資料不受人檢視，可提供一種方式來偵測資料是否已遭修改，比起其他非安全的通道，它有助提供安全的通訊方式。 比方說，可以利用密碼編譯演算法來加密資料，並以加密的狀態傳送，而稍後由指定的一方解密資料。 假使第三方攔截到加密資料，也難以破解。
 
 在 .NET Framework 中，在 <xref:System.Security.Cryptography?displayProperty=nameWithType> 類別的命名空間可為您管理許多密碼編譯的細節。 其中某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，其他則純粹是 Managed 實作。 您不用是加密專家才能使用這些類別。 當您在其中一個加密演算法類別中建立新執行個體時，會自動產生金鑰以便於使用，而且預設屬性盡可能以安全為主。
 
-本總覽提供 .NET Framework 支援的加密方法和做法的概要，包括 .NET Framework 3.5 中引進的 ClickOnce 資訊清單、Suite B 和新一代密碼編譯（CNG）支援。
+本概述提供了 .NET Framework 支援的加密方法和做法的概要，包括 .NET 框架 3.5 仲介紹的 ClickOnce 清單、套件 B 和加密新一代 （CNG） 支援。
 
 如需有關密碼編譯、Microsoft 服務、元件，以及可讓您新增密碼編譯安全性至應用程式之工具的相關資訊，請參閱此文件安全性之＜Win32 和 COM 開發＞一節。
 
@@ -82,21 +82,21 @@ CBC 加密使用初始化向量 (IV) 來加密純文字的第一個區塊，克�
 
 私密金鑰加密的缺點是，它假設兩方都已同意一個金鑰與 IV，並且通訊過其值。 IV 不算是機密，而且能用訊息以純文字傳輸。 不過，金鑰必須保持機密，不可讓未授權使用者知道。 由於這些問題，私密金鑰加密通常會與公開金鑰加密搭配使用，以利私下通訊金鑰和 IV 的值。
 
-假設 Alice 和 Bob 是想要透過非安全通道進行通訊的兩方，它們可使用私密金鑰加密，如下所示：Alice 和 Bob 同意將特定金鑰和特定 IV 與一種特定演算法 (例如 AES) 搭配使用。 Alice 撰寫一則訊息，並建立要傳送訊息的網路串流（可能是具名管道或網路電子郵件）。 接下來，她使用金鑰和 IV 將文字加密，並透過內部網路傳送加密訊息和 IV 給 Bob。 Bob 收到加密文字，並使用該 IV 和先前同意的金鑰解密文字。 如果傳輸被攔截了，攔截者不知道金鑰，所以無法復原原始訊息。 在此案例中，要保持機密的僅有金鑰。 在真實案例中，Alice 或 Bob 兩方都沒有產生私密金鑰，而是使用公開金鑰 (非對稱式) 加密來傳輸私密 (對稱) 金鑰至其他對象。 (如需公開金鑰加密的詳細資訊，請參閱下一節)。
+假設 Alice 和 Bob 是想要透過非安全通道進行通訊的兩方，它們可使用私密金鑰加密，如下所示：Alice 和 Bob 同意將特定金鑰和特定 IV 與一種特定演算法 (例如 AES) 搭配使用。 Alice 撰寫郵件並創建用於發送消息的網路流（可能是具名管道或網路電子郵件）。 接下來，她使用金鑰和 IV 將文字加密，並透過內部網路傳送加密訊息和 IV 給 Bob。 Bob 收到加密文字，並使用該 IV 和先前同意的金鑰解密文字。 如果傳輸被截獲，攔截器無法恢復原始消息，因為他們不知道金鑰。 在此案例中，要保持機密的僅有金鑰。 在真實案例中，Alice 或 Bob 兩方都沒有產生私密金鑰，而是使用公開金鑰 (非對稱式) 加密來傳輸私密 (對稱) 金鑰至其他對象。 (如需公開金鑰加密的詳細資訊，請參閱下一節)。
 
-.NET Framework 提供下列可執行秘密金鑰加密演算法的類別：
+.NET 框架提供以下實現金鑰加密演算法的類：
 
-- <xref:System.Security.Cryptography.AesManaged> （在 .NET Framework 3.5 中引進）。
+- <xref:System.Security.Cryptography.AesManaged>（在 .NET 框架 3.5 仲介紹）。
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>。
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 
 - <xref:System.Security.Cryptography.HMACSHA1> (技術上算是秘密金鑰演算法，因為它代表使用結合私密金鑰的加密編譯雜湊函式所計算出的訊息驗證碼。 請參閱本主題稍後的 [雜湊值](#hash-values))
 
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>。
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RijndaelManaged>。
+- <xref:System.Security.Cryptography.RijndaelManaged>.
 
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>。
+- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
 
 ## <a name="public-key-encryption"></a>公開金鑰加密
 
@@ -122,7 +122,7 @@ CBC 加密使用初始化向量 (IV) 來加密純文字的第一個區塊，克�
 
 - 相較於私密金鑰演算法，公開金鑰演算法速度很慢，並非設計來加密大量資料。 公開金鑰演算法只適合傳送非常少量的資料。 通常，公開金鑰加密是用來加密要使用私密金鑰演算法來加密的金鑰和 IV。 金鑰和 IV 傳送之後，其餘的工作階段會使用私密金鑰加密。
 
-.NET Framework 提供下列執行公開金鑰加密演算法的類別：
+.NET 框架提供以下實現公開金鑰加密演算法的類：
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -149,7 +149,7 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 > [!NOTE]
 > 任何人都可以驗證簽章，因為寄件者的公開金鑰是通用資訊，而且通常包含於數位簽章格式中。 此方法不保留訊息的機密性，對於需要保密的訊息，還是必須經過加密。
 
-.NET Framework 提供下列可執行數位簽章演算法的類別：
+.NET 框架提供以下實現數位簽章演算法的類：
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -167,7 +167,7 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 - Alice 傳送純文字訊息和雜湊訊息 (數位簽章) 給 Bob。 Bob 收到後雜湊該訊息，並將他從 Alice 接收到的雜湊值與自己的雜湊值相比較。 如果雜湊值完全相同，訊息未遭竄改。 如果值不相同，則 Alice 撰寫訊息後已遭修改。
 
-  可惜這個方法無法確認寄件者的真實性。 任何人都可以模擬 Alice 並傳送訊息給 Bob。 他們可以使用相同的雜湊演算法來簽署訊息，而且 Bob 只能用符合其簽章的訊息來判斷。 這是一種攔截攻擊的形式。 如需詳細資訊，請參閱[新一代密碼編譯（CNG）安全通訊範例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))。
+  可惜這個方法無法確認寄件者的真實性。 任何人都可以模擬 Alice 並傳送訊息給 Bob。 他們可以使用相同的雜湊演算法來簽署訊息，而且 Bob 只能用符合其簽章的訊息來判斷。 這是一種攔截攻擊的形式。 有關詳細資訊，請參閱[下一代加密 （CNG） 安全通信示例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))。
 
 - Alice 透過非安全的公用通道傳送純文字訊息給 Bob。 Alice 透過安全的私用通道傳雜湊送息給 Bob。 Bob 收到純文字訊息，然後進行雜湊，並將該雜湊與私下交換的雜湊相比。 如果雜湊相符，Bob 就知道兩件事：
 
@@ -183,23 +183,23 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 先前的方法中，沒有一項能防止他人讀取 Alice 的訊息，因為它們會以純文字傳送。 完整的安全性通常需有數位簽章和加密 (訊息簽章)。
 
-.NET Framework 提供下列可執行雜湊演算法的類別：
+.NET 框架提供以下實現雜湊演算法的類：
 
-- <xref:System.Security.Cryptography.HMACSHA1>。
+- <xref:System.Security.Cryptography.HMACSHA1>.
 
-- <xref:System.Security.Cryptography.MACTripleDES>。
+- <xref:System.Security.Cryptography.MACTripleDES>.
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>。
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RIPEMD160>。
+- <xref:System.Security.Cryptography.RIPEMD160>.
 
-- <xref:System.Security.Cryptography.SHA1Managed>。
+- <xref:System.Security.Cryptography.SHA1Managed>.
 
-- <xref:System.Security.Cryptography.SHA256Managed>。
+- <xref:System.Security.Cryptography.SHA256Managed>.
 
-- <xref:System.Security.Cryptography.SHA384Managed>。
+- <xref:System.Security.Cryptography.SHA384Managed>.
 
-- <xref:System.Security.Cryptography.SHA512Managed>。
+- <xref:System.Security.Cryptography.SHA512Managed>.
 
 - 所有安全雜湊演算法 (SHA) 的 HMAC 變數，訊息摘要 5 (MD5) 和 RIPEMD-160 演算法。
 
@@ -212,13 +212,13 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 ## <a name="random-number-generation"></a>產生變數
 
-對許多密碼編譯作業而言，亂數產生是不可或缺的項目。 例如，密碼編譯金鑰需要盡可能為隨機產生，以致於其他人無法重現金鑰。 密碼編譯亂數產生器需產生在運算資源上，無法預測的機率必須大於一半之輸出。 因此，任何預測下一個輸出位元的方法，必須不能優於隨機猜測的方式。 .NET Framework 中的類別會使用亂數產生器來產生密碼編譯金鑰。
+對許多密碼編譯作業而言，亂數產生是不可或缺的項目。 例如，密碼編譯金鑰需要盡可能為隨機產生，以致於其他人無法重現金鑰。 密碼編譯亂數產生器需產生在運算資源上，無法預測的機率必須大於一半之輸出。 因此，任何預測下一個輸出位元的方法，必須不能優於隨機猜測的方式。 .NET 框架中的類使用亂數產生器生成加密金鑰。
 
 <xref:System.Security.Cryptography.RNGCryptoServiceProvider> 類別是亂數產生器演算法的一種實作。
 
 ## <a name="clickonce-manifests"></a>ClickOnce 資訊清單
 
-在 .NET Framework 3.5 中，下列的密碼編譯類別可讓您取得並驗證使用[ClickOnce 技術](/visualstudio/deployment/clickonce-security-and-deployment)部署之應用程式的資訊清單簽章資訊：
+在 .NET 框架 3.5 中，以下加密類允許您獲取和驗證使用[ClickOnce 技術](/visualstudio/deployment/clickonce-security-and-deployment)部署的應用程式的清單簽名資訊：
 
 - 當您使用它的 <xref:System.Security.Cryptography.ManifestSignatureInformation> 方法多載時， <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> 類別可取得資訊清單簽章的相關資訊。
 
@@ -238,7 +238,7 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 ## <a name="suite-b-support"></a>Suite B 支援
 
-.NET Framework 3.5 支援國家安全機構（NSA）所發佈的 Suite B 組密碼編譯演算法。 如需 Suite B 的詳細資訊，請參閱 [NSA Suite B 密碼編譯說明書](https://www.nsa.gov/what-we-do/information-assurance/)。
+.NET 框架 3.5 支援國家安全局 （NSA） 發佈的套件 B 集加密演算法。 如需 Suite B 的詳細資訊，請參閱 [NSA Suite B 密碼編譯說明書](https://www.nsa.gov/what-we-do/information-assurance/)。
 
 下列演算法包含：
 
@@ -254,11 +254,11 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 ## <a name="cryptography-next-generation-cng-classes"></a>新一代密碼編譯 (CNG) 類別
 
-新一代密碼編譯 (CNG) 類別提供可在原生 CNG 函式周圍的 Managed 包裝函式。 （CNG 取代了 CryptoAPI）。這些類別具有 "Cng" 作為其名稱的一部分。 CNG 包裝函式類別的中心是 <xref:System.Security.Cryptography.CngKey> 金鑰容器類別，其會擷取儲存體和使用 CNG 金鑰。 這個類別可讓您安全地儲存金鑰組或公開金鑰，並使用簡單的字串名稱參考它。 橢圓曲線基礎 <xref:System.Security.Cryptography.ECDsaCng> 簽章類別和 <xref:System.Security.Cryptography.ECDiffieHellmanCng> 加密類別可以使用 <xref:System.Security.Cryptography.CngKey> 物件。
+新一代密碼編譯 (CNG) 類別提供可在原生 CNG 函式周圍的 Managed 包裝函式。 （CNG 是加密 API 的替換。這些類的名稱中都有"Cng"。 CNG 包裝函式類別的中心是 <xref:System.Security.Cryptography.CngKey> 金鑰容器類別，其會擷取儲存體和使用 CNG 金鑰。 這個類別可讓您安全地儲存金鑰組或公開金鑰，並使用簡單的字串名稱參考它。 橢圓曲線基礎 <xref:System.Security.Cryptography.ECDsaCng> 簽章類別和 <xref:System.Security.Cryptography.ECDiffieHellmanCng> 加密類別可以使用 <xref:System.Security.Cryptography.CngKey> 物件。
 
 <xref:System.Security.Cryptography.CngKey> 類別用於各種其他作業，包括開啟、建立、刪除及匯出金鑰。 它也提供存取基礎金鑰控制代碼，以便在直接呼叫原生函式時使用。
 
-.NET Framework 3.5 也包括各種支援的 CNG 類別，如下所示：
+.NET 框架 3.5 還包括各種支援 CNG 類，如下所示：
 
 - <xref:System.Security.Cryptography.CngProvider> 維護金鑰儲存提供者。
 
@@ -268,7 +268,7 @@ RSA 允許加密和簽章，但是 DSA 只能用於簽章，而且 Diffie-hellma
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
 |[加密模型](../../../docs/standard/security/cryptography-model.md)|描述基底類別程式庫中如何實作密碼編譯。|
 |[逐步解說： 建立密碼編譯的應用程式](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|示範基本的加密和解密工作。|

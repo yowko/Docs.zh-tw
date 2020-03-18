@@ -19,19 +19,19 @@ helpviewer_keywords:
 - isolation
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 ms.openlocfilehash: ed784bafda2aed829f2e97d7e7e8b2716c48c7ba
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706578"
 ---
 # <a name="isolated-storage"></a>隔離儲存區
 <a name="top"></a> 對於傳統型應用程式而言，隔離儲存區為資料儲存機制，藉著定義標準化方式，將程式碼與儲存的資料產生關聯，以提供隔離和安全。 標準化也提供其他利益。 系統管理員可以使用設計來操作隔離儲存區的工具，設定檔案存放空間、設定安全性原則，和刪除未使用的資料。 有了隔離儲存區，您的程式碼不再需要唯一路徑去指定檔案系統中的安全位置，並且資料也被保護以免受到只擁有隔離儲存區存取權的其他應用程式的影響。 指示應用程式之存放區域所在位置的硬式編碼資訊是沒有必要的。
 
 > [!IMPORTANT]
-> Windows 8.x 存放區應用程式無法使用隔離儲存區。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
+> 獨立存儲不適用於 Windows 8.x 應用商店應用。 請改用 Windows 執行階段 API 所提供的 `Windows.Storage` 命名空間來儲存本機資料與檔案。 如需詳細資訊，請參閱 Windows 開發人員中心的[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
 
-此主題包括下列章節：
+本主題包含下列幾節：
 
 - [資料區間和存放區](#data_compartments_and_stores)
 
@@ -49,7 +49,7 @@ ms.locfileid: "75706578"
 
 - [相關主題](#related_topics)
 
-- [參考資料](#reference)
+- [參考](#reference)
 
 <a name="data_compartments_and_stores"></a>
 
@@ -116,7 +116,7 @@ ms.locfileid: "75706578"
 |Windows 2000、Windows XP、Windows Server 2003 (從 Windows NT 4.0 升級)|啟用漫遊的存放區 =<br /><br /> \<SYSTEMROOT>\Profiles\\<user\>\Application Data<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMROOT>\Profiles\\<user\>\Local Settings\Application Data|
 |Windows 2000 - 全新安裝 (以及從 Windows 98 和 Windows NT 3.51 升級)|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Application Data<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Local Settings\Application Data|
 |Windows XP、Windows Server 2003 - 全新安裝 (以及從 Windows 2000 和 Windows 98 升級)|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Application Data<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<user\>\Local Settings\Application Data|
-|Windows 8、Windows 7、Windows Server 2008、Windows Vista|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Roaming<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Local|
+|Windows 8， 視窗 7， Windows 伺服器 2008， Windows Vista|啟用漫遊的存放區 =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Roaming<br /><br /> 非漫遊存放區 =<br /><br /> \<SYSTEMDRIVE>\Users\\<user\>\AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 
@@ -132,7 +132,7 @@ ms.locfileid: "75706578"
 
 隔離儲存區類別允許您建立、列舉和刪除隔離儲存區。 您可以透過 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 物件使用執行這些工作的方法。 某些作業會要求您擁有代表管理隔離儲存區權限的 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 權限，您可能也需要擁有作業系統權限才能存取檔案或目錄。
 
-如需示範常見隔離儲存區工作的一系列範例，請參閱 [相關主題](#related_topics)中所列的「如何」主題。
+如需示範常見隔離儲存區工作的一系列範例，請參閱[相關主題](#related_topics)中所列的「如何」主題。
 
 <a name="scenarios_for_isolated_storage"></a>
 
@@ -162,22 +162,22 @@ ms.locfileid: "75706578"
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
 |[隔離的類型](../../../docs/standard/io/types-of-isolation.md)|描述各種類型的隔離。|
 |[操作說明：取得隔離儲存區的存放區](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|提供使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別的範例，示範如何使用它來取得使用者和組件所隔離的存放區。|
-|[操作說明：列舉隔離儲存區的存放區](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 方法來計算使用者之所有隔離儲存區的大小。|
-|[如何：刪除隔離儲存區中的存放區](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> 方法，以兩種不同的方式刪除隔離存放區。|
-|[操作說明：預期隔離儲存區發生空間不足的情況](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|示範如何測量隔離存放區內的剩餘空間。|
-|[如何：在隔離儲存區中建立檔案和目錄](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|提供一些在隔離存放區中建立檔案和目錄的範例。|
-|[如何：尋找隔離儲存區中的現有檔案和目錄](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|示範如何在隔離儲存區中讀取目錄結構和檔案。|
-|[如何：讀取和寫入隔離儲存區中的檔案](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|提供將字串寫入至隔離儲存區檔案並將它讀回的範例。|
+|[如何：列舉隔離儲存區的存放區](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 方法來計算使用者之所有隔離儲存區的大小。|
+|[操作說明：刪除隔離儲存區中的存放區](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|示範如何使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> 方法，以兩種不同的方式刪除隔離存放區。|
+|[如何：預期隔離儲存區發生空間不足的情況](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|示範如何測量隔離存放區內的剩餘空間。|
+|[操作說明：在隔離儲存區中建立檔案和目錄](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|提供一些在隔離存放區中建立檔案和目錄的範例。|
+|[操作說明：尋找隔離儲存區中的現有檔案和目錄](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|示範如何在隔離儲存區中讀取目錄結構和檔案。|
+|[如何：讀取和寫入離儲存區中的檔案](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|提供將字串寫入至隔離儲存區檔案並將它讀回的範例。|
 |[如何：刪除隔離儲存區中的檔案和目錄](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|示範如何刪除隔離儲存區的檔案和目錄。|
-|[檔案和資料流 I/O](../../../docs/standard/io/index.md)|說明如何執行同步和非同步檔案及資料流存取。|
+|[檔和流 I/O](../../../docs/standard/io/index.md)|說明如何執行同步和非同步檔案及資料流存取。|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType>
 

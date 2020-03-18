@@ -7,10 +7,10 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 ms.openlocfilehash: d649bc3a92d3bb834b3bc4f7d3c1bcb0f9417375
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159724"
 ---
 # <a name="async-overview"></a>非同步總覽
@@ -20,7 +20,7 @@ ms.locfileid: "78159724"
 - 用戶端應用程式應該一律啟動、一律連線，並持續回應使用者互動 (例如觸控)，而且在應用程式市集具有高評價！
 - 服務應該透過正常相應增加和相應減少來處理流量暴增情況。
 
-非同步程式設計是一項重要技術，可讓您更容易處理對多個核心的封鎖 I/O 和並行作業。 .NET 提供的功能可讓應用程式和服務在、Visual Basic 和C# F#中，使用容易使用的語言層級非同步程式設計模型進行回應和彈性。
+非同步程式設計是一項重要技術，可讓您更容易處理對多個核心的封鎖 I/O 和並行作業。 .NET 通過 C#、Visual Basic 和 F# 中的便於使用的語言級非同步程式設計模型，使應用和服務具有回應性和彈性。
 
 ## <a name="why-write-async-code"></a>為什麼撰寫非同步程式碼？
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - scheduling threads
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
 ms.openlocfilehash: abcdf56b90513b937adefc38583e0312fec69785
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106221"
 ---
 # <a name="scheduling-threads"></a>排程執行緒
@@ -19,7 +19,7 @@ ms.locfileid: "73106221"
   
  執行緒會根據它們的優先權排定執行。 即使執行緒在執行階段內執行，所有的執行緒都會由作業系統指派處理器時間配量。 用來決定執行緒執行順序之排程演算法的詳細資料會隨著每個作業系統而不同。 在某些作業系統上，(在可以執行的執行緒中) 具有最高優先權的執行緒一律會排定為第一個執行。 如果具有相同優先權的多個執行緒都可使用，排程器會針對該優先權不斷循環執行緒，讓每個執行緒在固定的時間配量中執行。 只要具有高優先權的執行緒可以執行，低優先權的執行緒就不會執行。 當指定的優先權沒有可執行的執行緒時，排程器將移至下一個較低的優先順序，並排程該優先順序的執行緒執行。 如果高優先順序的執行緒變成可以執行，會佔用低優先權的執行緒並允許重新執行高優先權的執行緒。 除此之外，因為應用程式的使用者介面會在前景與背景之間移動，所以作業系統可以動態調整執行緒的優先權。 其他作業系統可能會選擇使用不同的排程演算法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用執行緒和執行緒處理](../../../docs/standard/threading/using-threads-and-threading.md)
 - [Windows 中的 Managed 和 Unmanaged 執行緒處理](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)

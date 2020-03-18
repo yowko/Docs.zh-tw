@@ -13,11 +13,11 @@ helpviewer_keywords:
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 ms.openlocfilehash: 6f2f4055a95dbcea8d7872b5c5fa3ccede8c2c8c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120724"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400376"
 ---
 # <a name="com-callable-wrapper"></a>COM 可呼叫包裝函式
 
@@ -60,8 +60,8 @@ CCW 會以與 COM 強制進行介面型互動一致的方式，向 COM 用戶端
 
 |介面|描述|
 |---------------|-----------------|
-|(\_*classname*) 類別介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|
-|**IConnectionPoint** 和 **IConnectionPointContainer**|來源為以委派為基礎之事件的物件介面 (註冊事件訂閱者用的介面)。|
+|（\_*類名稱*） 類介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|
+|**I連接點**和**I連接點容器**|來源為以委派為基礎之事件的物件介面 (註冊事件訂閱者用的介面)。|
 |**IDispatchEx** (僅限 .NET Framework)|如果類別實作 **IExpando**，則為執行階段提供的介面。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸模組，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫的呼叫。|
 |**IEnumVARIANT**|集合類型類別的介面，如果類別實作 **IEnumerable**，它會列舉集合中的物件。|
 
@@ -192,11 +192,11 @@ public class LoanApp
 <EmbedInteropTypes>True</EmbedInteropTypes>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
-- [COM 包裝函式](com-wrappers.md)
+- [COM 包裝器](com-wrappers.md)
 - [將 .NET Framework 元件公開給 COM](../../framework/interop/exposing-dotnet-components-to-com.md)
 - [將 .NET 核心元件公開給 COM](../../core/native-interop/expose-components-to-com.md)
-- [限定互通的 .NET 類型](qualify-net-types-for-interoperation.md)
+- [限定交互操作的 .NET 類型](qualify-net-types-for-interoperation.md)
 - [執行階段可呼叫包裝函式](runtime-callable-wrapper.md)

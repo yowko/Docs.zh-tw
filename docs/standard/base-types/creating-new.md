@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
 ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73103823"
 ---
 # <a name="creating-new-strings-in-net"></a>在 .NET 中建立新字串
@@ -32,7 +32,7 @@ ms.locfileid: "73103823"
 ## <a name="methods-that-return-strings"></a>傳回字串的方法  
  下表列出數個可傳回新字串物件的有用方法。  
   
-|方法名稱|請使用|  
+|方法名稱|使用|  
 |-----------------|---------|  
 |<xref:System.String.Format%2A?displayProperty=nameWithType>|從一組輸入物件建立格式化的字串。|  
 |<xref:System.String.Concat%2A?displayProperty=nameWithType>|從兩個或多個字串建立字串。|  
@@ -40,7 +40,7 @@ ms.locfileid: "73103823"
 |<xref:System.String.Insert%2A?displayProperty=nameWithType>|藉由將字串插入現有字串的指定索引中來建立新字串。|  
 |<xref:System.String.CopyTo%2A?displayProperty=nameWithType>|將字串中的指定字元複製到字元陣列中的指定位置。|  
   
-### <a name="format"></a>格式  
+### <a name="format"></a>[格式]  
  您可以使用 **String.Format** 方法，來建立格式化的字串和串連代表多個物件的字串。 這個方法會自動將任何傳遞的物件轉換為字串。 例如，如果您的應用程式必須向使用者顯示 **Int32** 值和 **DateTime** 值，您可以使用 **Format** 方法，輕鬆地建構代表這些值的字串。 如需搭配此方法使用之格式慣例的資訊，請參閱[複合格式](../../../docs/standard/base-types/composite-formatting.md)一節。  
   
  下列範例會使用 **Format** 方法來建立使用整數變數的字串。  
@@ -64,7 +64,7 @@ ms.locfileid: "73103823"
  [!code-csharp[Strings.Creating#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#3)]
  [!code-vb[Strings.Creating#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#3)]  
   
-### <a name="insert"></a>Insert  
+### <a name="insert"></a>插入  
  **String.Insert** 方法會將字串插入另一個字串中的指定位置，藉以建立新的字串。 這個方法會使用以零起始的索引。 下列範例會將字串插入 `MyString` 的第五個索引位置，並使用這個值來建立新的字串。  
   
  [!code-csharp[Strings.Creating#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#4)]
@@ -78,7 +78,7 @@ ms.locfileid: "73103823"
  [!code-csharp[Strings.Creating#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Strings.Creating/cs/Example.cs#5)]
  [!code-vb[Strings.Creating#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Strings.Creating/vb/Example.vb#5)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [基本字串作業](../../../docs/standard/base-types/basic-string-operations.md)
-- [複合格式設定](../../../docs/standard/base-types/composite-formatting.md)
+- [複合格式](../../../docs/standard/base-types/composite-formatting.md)

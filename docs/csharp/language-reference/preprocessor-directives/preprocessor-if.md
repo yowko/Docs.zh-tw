@@ -7,15 +7,15 @@ helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
 ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75899846"
 ---
-# <a name="if-c-reference"></a>#if （C#參考）
+# <a name="if-c-reference"></a>#if（C# 參考）
 
-當 C# 編譯器遇到 `#if` 指示詞，且其後接著 [#endif](preprocessor-endif.md) 指示詞時，只有在定義了指定的符號時，它才會編譯指示詞之間的程式碼。 不同於 C 和 C++，您無法將數值指派給符號。 中C#的 `#if` 語句是布林值，而且只會測試是否已定義符號。 例如：
+當 C# 編譯器遇到 `#if` 指示詞，且其後接著 [#endif](preprocessor-endif.md) 指示詞時，只有在定義了指定的符號時，它才會編譯指示詞之間的程式碼。 不同於 C 和 C++，您無法將數值指派給符號。 C# 中的`#if`語句是布林，僅測試符號是否已定義。 例如：
 
 ```csharp
 #if DEBUG
@@ -23,28 +23,28 @@ ms.locfileid: "75899846"
 #endif
 ```
 
-您只能使用運算子[==](../operators/equality-operators.md#equality-operator-) （相等）和[！ =](../operators/equality-operators.md#inequality-operator-) （不等）來測試 `true` 或 `false`的[bool](../builtin-types/bool.md)值。 `true` 表示已定義符號。 `#if DEBUG` 陳述式的意義與 `#if (DEBUG == true)` 一樣。 您可以使用[& & （和）](../operators/boolean-logical-operators.md#conditional-logical-and-operator-)、 [ &#124; &#124; （或）](../operators/boolean-logical-operators.md#conditional-logical-or-operator-)和[！（不是）](../operators/boolean-logical-operators.md#logical-negation-operator-)用來評估是否已定義多個符號的運算子。 您也可以使用括弧來將符號和運算子分組。
+只能使用[==](../operators/equality-operators.md#equality-operator-)運算子（相等）和[！*（](../operators/equality-operators.md#inequality-operator-)不等）來測試[bool](../builtin-types/bool.md)值`true`或`false`。 `true`表示符號已定義。 `#if DEBUG` 陳述式的意義與 `#if (DEBUG == true)` 一樣。 您可以使用[&& （和）](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) [&#124;&#124; （或）](../operators/boolean-logical-operators.md#conditional-logical-or-operator-)和[！（不）](../operators/boolean-logical-operators.md#logical-negation-operator-)運算子以評估是否已定義多個符號。 您也可以使用括弧來將符號和運算子分組。
 
 ## <a name="remarks"></a>備註
 
-`#if` 連同 [#else](preprocessor-else.md)、[#elif](preprocessor-elif.md)、[#endif](preprocessor-endif.md)、[#define](preprocessor-define.md) 及 [#undef](preprocessor-undef.md) 指示詞，可讓您根據一或多個符號是否存在來包含或排除程式碼。 在編譯偵錯組建的程式碼時，或是在針對特定組態進行編譯時，這非常實用。
+`#if`，以及[#else](preprocessor-else.md)#else、#elif、#endif、#define和[#define](preprocessor-define.md)[#undef](preprocessor-undef.md)指令，允許您根據一個或多個符號的存在包括或排除代碼。 [#elif](preprocessor-elif.md) [#endif](preprocessor-endif.md) 在編譯偵錯組建的程式碼時，或是在針對特定組態進行編譯時，這非常實用。
 
 以 `#if` 指示詞開頭的條件式指示詞必須明確地以 `#endif` 指示詞終止。
 
 `#define` 可讓您定義符號。 屆時，使用該符號作為傳遞到 `#if` 指示詞的運算式，運算式就會評估為 `true`。
 
-您也可以使用 [-define](../compiler-options/define-compiler-option.md) 編譯器選項來定義符號。 您可以使用 [#undef](preprocessor-undef.md) 來取消定義符號。
+還可以使用[-define](../compiler-options/define-compiler-option.md)編譯器選項定義符號。 您可以使用 [#undef](preprocessor-undef.md) 來取消定義符號。
 
 透過 `-define` 或 `#define` 定義的符號不會與相同名稱的變數發生衝突。 也就是說，您不應將變數名稱傳遞給前置處理器指示詞，而且符號僅能由前置處理器指示詞來評估。
 
 使用 `#define` 建立的符號範圍是定義它的檔案。
 
-組建系統也會留意代表 SDK 樣式專案中不同[目標 framework](../../../standard/frameworks.md)的預先定義預處理器符號。 若要建立能以多個 .NET 實作或版本為目標的應用程式，這些符號就很實用。
+生成系統還瞭解預定義的預處理器符號，這些符號表示 SDK 樣式專案中的不同[目標框架](../../../standard/frameworks.md)。 若要建立能以多個 .NET 實作或版本為目標的應用程式，這些符號就很實用。
 
 [!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
 
 > [!NOTE]
-> 針對傳統 .NET Framework 專案，您必須透過專案的 [屬性] 頁面，手動設定 Visual Studio 中不同目標 framework 的條件式編譯符號。
+> 對於傳統的 .NET Framework 專案，您必須通過專案的屬性頁手動設定 Visual Studio 中不同目標框架的條件編譯符號。
 
 其他預先定義符號包括 DEBUG 和 TRACE 常數。 您可以使用 `#define` 來覆寫為專案所設定的值。 例如，DEBUG 符號會根據您的組建組態屬性 ("Debug" 或 "Release" 模式) 而自動設定。
 
@@ -89,9 +89,9 @@ public class MyClass
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 前置處理器指示詞](index.md)
+- [C# 預處理器指令](index.md)
 - [如何：使用追蹤和偵錯進行條件式編譯](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

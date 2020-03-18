@@ -3,11 +3,11 @@ title: NuGet 與 .NET 程式庫
 description: 針對 .NET 程式庫搭配 NuGet 進行封裝的最佳做法建議。
 ms.date: 01/15/2019
 ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731382"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400516"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -19,7 +19,7 @@ NuGet 是適用於 .NET 生態系統的套件管理員，也是開發人員探�
 
 NuGet 套件 (`*.nupkg`) 是包含 .NET 組件與相關聯中繼資料的 Zip 檔案。
 
-有兩種主要的方式可用來建立 NuGet 套件。 較新且建議的方式，是從 SDK 樣式專案 (內容以 `<Project Sdk="Microsoft.NET.Sdk">` 作為開頭的專案) 建立套件。 系統會自動將組件與目標新增到套件中，並將剩餘的中繼資料新增到 MSBuild 檔案，例如套件名稱與版本號碼。 搭配 [`dotnet pack`](../../core/tools/dotnet-pack.md) 命令進行編譯將會輸出 `*.nupkg` 檔案，而非組件。
+有兩種主要的方式可用來建立 NuGet 套件。 較新且建議的方式，是從 SDK 樣式專案 (內容以 `<Project Sdk="Microsoft.NET.Sdk">` 作為開頭的專案) 建立套件。 系統會自動將組件與目標新增到套件中，並將剩餘的中繼資料新增到 MSBuild 檔案，例如套件名稱與版本號碼。 使用[`dotnet pack`](../../core/tools/dotnet-pack.md)命令編譯輸出`*.nupkg`檔而不是程式集。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -34,7 +34,7 @@ NuGet 套件 (`*.nupkg`) 是包含 .NET 組件與相關聯中繼資料的 Zip �
 
 較舊的 NuGet 套件建立方式，是使用 `*.nuspec` 檔案與 `nuget.exe` 命令列工具來建立。 nuspec 檔案可讓您做出大幅度的控制，但您必須仔細地指定要在最終的 NuGet 套件中包含哪些組件與目標。 這是一件很容易出錯的工作，也很容易在未來做出變更後忘記更新 nuspec 檔案。 nuspec 的優點在於您可以用它來針對尚未支援 SDK 樣式專案檔的架構建立 NuGet 套件。
 
-✔️考慮使用 SDK 樣式專案檔來建立 NuGet 套件。
+✔️ 請考慮使用 SDK 樣式專案檔來建立 NuGet 套件。
 
 ## <a name="package-dependencies"></a>套件相依性
 
@@ -54,20 +54,20 @@ NuGet 套件能支援許多[中繼資料屬性](/nuget/reference/nuspec)。 下�
 | `PackageTags`                      | `tags`                     | 以空格分隔的標記與關鍵字清單，能描述套件。 標記會在搜尋套件時使用。             |
 | `PackageIconUrl`                   | `iconUrl`                  | 要作為套件圖示使用之影像的 URL。 URL 應為 HTTPS 且影像大小應為 64x64 並具有透明背景。             |
 | `PackageProjectUrl`                | `projectUrl`               | 專案首頁或來源存放庫的 URL。             |
-| `PackageLicenseExpression`         | `license`                  | 專案授權的 [SPDX 識別碼](https://spdx.org/licenses/)。 只有 OSI 和 FSF 核准的授權可以使用識別碼。 其他授權應該使用 `PackageLicenseFile`。 閱讀更多 [`license` 中繼資料](/nuget/reference/nuspec#license)的相關資訊。 |
+| `PackageLicenseExpression`         | `license`                  | 專案授權的 [SPDX 識別碼](https://spdx.org/licenses/)。 只有 OSI 和 FSF 核准的授權可以使用識別碼。 其他授權應該使用 `PackageLicenseFile`。 閱讀有關[`license`中繼資料](/nuget/reference/nuspec#license)的更多內容。 |
 
 > [!IMPORTANT]
 > 沒有授權的專案預設會具有[專屬著作權](https://choosealicense.com/no-permission/)，這會使其他人無法合法使用它。
 
-✔️請考慮選擇具有前置詞的 NuGet 套件名稱，以符合 NuGet 的前置詞保留[準則](/nuget/reference/id-prefix-reservation)。
+✔️ 請考慮選擇具有符合 NuGet 的前置詞保留[準則](/nuget/reference/id-prefix-reservation)之前置詞的 NuGet 套件名稱。
 
-✔️請將 HTTPS href 用於您的套件圖示。
+✔️ 請務必為您的套件圖示使用 HTTPS href。
 
 > NuGet.org 等網站會在啟用 HTTPS 的情況下執行，因此顯示非 HTTPS 影像將會產生混合內容警告。
 
-✔️使用64x64 的套件圖示影像，並具有透明的背景以取得最佳的流覽結果。
+✔️ 請務必使用大小為 64x64 且具有透明背景的套件圖示影像，以取得最佳檢視效果。
 
-✔️考慮設定[來源連結](./sourcelink.md)，將原始檔控制中繼資料新增至您的元件和 NuGet 套件。
+✔️ 請考慮設定[來源連結](./sourcelink.md)以將原始程式碼控制中繼資料新增到您的組件與 NuGet 套件。
 
 > 來源連結會自動將 `RepositoryUrl` 和 `RepositoryType` 中繼資料新增到 NuGet 套件。 來源連結也會新增套件建置所根據確切原始碼的相關資訊。 例如，從 Git 存放庫建立的套件將會新增認可雜湊作為中繼資料。
 
@@ -82,11 +82,11 @@ NuGet 套件能支援許多[中繼資料屬性](/nuget/reference/nuspec)。 下�
 > [!NOTE]
 > 穩定套件無法相依於發行前套件。 您必須使自己的套件成為發行前版本，或是相依於較舊的穩定版本。
 
-![NuGet 發行前套件相依性](./media/nuget/nuget-prerelease-package.png "NuGet 發行前套件相依性")
+![NuGet 預發行包依賴項](./media/nuget/nuget-prerelease-package.png "NuGet 預發行包依賴項")
 
-✔️在測試、預覽或試驗時發行發行前版本套件。
+✔️ 請務必在進行測試、預覽或實驗時發佈發行前套件。
 
-✔️在其就緒時發佈穩定套件，讓其他穩定套件可以參考它。
+✔️ 請務必在套件準備好時發佈穩定版本，使其他穩定套件可以參考它。
 
 ## <a name="symbol-packages"></a>符號套件
 
@@ -95,9 +95,9 @@ NuGet 套件能支援許多[中繼資料屬性](/nuget/reference/nuspec)。 下�
 NuGet.org 裝載自己的[符號伺服器存放庫](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)。 開發人員可以使用發佈至 NuGet.org 符號伺服器的符號，方法是將 `https://symbols.nuget.org/download/symbols` 新增至其[在 Visual Studio 中的符號來源](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)。
 
 > [!IMPORTANT]
-> NuGet.org 符號伺服器只支援 SDK 樣式專案所建立的新[可攜式符號檔](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)(`*.pdb`)。
+> NuGet.org符號伺服器僅支援由 SDK 樣式專案創建`*.pdb`的新[可擕式符號檔](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md)（ ） 。
 >
-> 若要在調試 .NET 程式庫時使用 NuGet.org 符號伺服器，開發人員必須具有 Visual Studio 2017 15.9 版或更新版本。
+> 要在調試 .NET 庫時使用NuGet.org符號伺服器，開發人員必須具有 Visual Studio 2017 版本 15.9 或更高版本。
 
 建立符號套件的替代方案是在主要的 NuGet 套件中內嵌符號檔。 主要的 NuGet 套件會較大，但內嵌的符號檔表示開發人員不需要設定 NuGet.org 符號伺服器。 如果您正在使用 SDK 樣式專案建置 NuGet 套件，您可以透過設定 `AllowedOutputExtensionsInPackageBuildOutputFolder` 屬性來內嵌符號檔：
 
@@ -112,12 +112,12 @@ NuGet.org 裝載自己的[符號伺服器存放庫](/nuget/create-packages/symbo
 
 內嵌符號檔缺點是它們會讓使用 SDK 樣式專案編譯的 .NET 程式庫套件大小增加約 30%。 如果套件大小是個問題，您應該改為將符號發佈在符號套件中。
 
-✔️考慮將符號當做符號套件（`*.snupkg`）發行至 NuGet.org
+✔️ 請考慮將符號以符號套件 (`*.snupkg`) 形式發佈至 NuGet.org
 
 > 符號套件 (`*.snupkg`) 提供開發人員良好的隨選偵錯體驗，不會讓主要套件大小過大，而對不想要偵錯 NuGet 套件的人在還原效能方面造成影響。
 >
-> 要注意的是，使用者可能需要在其 IDE 中尋找並設定 NuGet 符號伺服器（以一次性設定的形式）來取得符號檔。 Visual Studio 2019 16.1 版已將 NuGet. 組織的符號伺服器新增至預設符號伺服器清單。
+> 需要注意的是，使用者可能需要在其 IDE 中查找和配置 NuGet 符號伺服器（作為一次性設置），以獲取符號檔。 Visual Studio 2019 版本 16.1 將 NuGet.org 的符號伺服器添加到預設符號伺服器清單中。
 
 >[!div class="step-by-step"]
->[上一頁](strong-naming.md)
->[下一頁](dependencies.md)
+>[上一個](strong-naming.md)
+>[下一個](dependencies.md)

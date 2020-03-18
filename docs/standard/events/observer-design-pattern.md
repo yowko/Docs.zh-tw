@@ -13,15 +13,15 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
 ms.openlocfilehash: 817337cec604a431f9f7d4eacb04378ee0d3c227
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131582"
 ---
 # <a name="observer-design-pattern"></a>觀察器設計模式
 
-觀察者設計模式可讓訂閱者向提供者註冊，並且接收通知。 它適合任何需要推入型通知的情節。 這個模式會定義「提供者」(也稱為「主題」或「可預見值」)，以及零個、一個或多個「觀察者」。 觀察者會向提供者註冊，而且只要預先定義的條件、事件或狀態有所變更，提供者就會自動呼叫觀察者的其中一種方法，來通知所有觀察者。 在這個方法呼叫中，提供者也可以提供目前的狀態資訊給觀察者。 在 .NET Framework 中，觀察者設計模式是透過實作泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和 <xref:System.IObserver%601?displayProperty=nameWithType> 介面來套用。 泛型型別參數代表提供通知資訊的類型。
+觀察者設計模式可讓訂閱者向提供者註冊，並且接收通知。 它適合任何需要推入型通知的情節。 這個模式會定義「提供者」**(也稱為「主題」** 或「可預見值」**)，以及零個、一個或多個「觀察者」**。 觀察者會向提供者註冊，而且只要預先定義的條件、事件或狀態有所變更，提供者就會自動呼叫觀察者的其中一種方法，來通知所有觀察者。 在這個方法呼叫中，提供者也可以提供目前的狀態資訊給觀察者。 在 .NET Framework 中，觀察者設計模式是透過實作泛型 <xref:System.IObservable%601?displayProperty=nameWithType> 和 <xref:System.IObserver%601?displayProperty=nameWithType> 介面來套用。 泛型型別參數代表提供通知資訊的類型。
 
 ## <a name="applying-the-pattern"></a>套用模式
 
@@ -91,8 +91,8 @@ ms.locfileid: "73131582"
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
 |[觀察者設計模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)|描述開發實作觀察者設計模式的應用程式時，所採用的最佳做法。|
-|[操作說明：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)|提供溫度監控應用程式的提供者逐步實作。|
+|[如何：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)|提供溫度監控應用程式的提供者逐步實作。|
 |[操作說明：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)|提供溫度監控應用程式的觀察者逐步實作。|

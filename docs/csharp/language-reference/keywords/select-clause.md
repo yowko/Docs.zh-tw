@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: b4d25f80e4cdb08fbc28fa4db3cb1c790b1145e6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 68ea7ad6fc7cf5580dbdd0ae7f012f36566db0dc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713088"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173506"
 ---
 # <a name="select-clause-c-reference"></a>select 子句 (C# 參考)
 
@@ -23,11 +23,11 @@ ms.locfileid: "75713088"
 
 [!code-csharp[cscsrefQueryKeywords#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Select.cs#8)]  
 
-`select` 子句所產生的序列類型可決定查詢變數 `queryHighScores` 的類型。 在最簡單的情況下，`select` 子句只會指定範圍變數。 這會導致傳回的序列將相同類型的項目包含為資料來源。 如需詳細資訊，請參閱 [LINQ 查詢作業中的類型關聯性](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。 不過，`select` 子句也提供功能強大的機制，將來源資料轉換 (或「投影」) 為新的類型。 如需詳細資訊，請參閱[使用 LINQ 轉換資料 (C#)](../../programming-guide/concepts/linq/data-transformations-with-linq.md)。
+`select` 子句所產生的序列類型可決定查詢變數 `queryHighScores` 的類型。 在最簡單的情況下，`select` 子句只會指定範圍變數。 這會導致傳回的序列將相同類型的項目包含為資料來源。 如需詳細資訊，請參閱 [LINQ 查詢作業中的類型關聯性](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。 不過，`select` 子句也提供功能強大的機制，將來源資料轉換 (或「投影」**) 為新的類型。 如需詳細資訊，請參閱[使用 LINQ 轉換資料 (C#)](../../programming-guide/concepts/linq/data-transformations-with-linq.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範 `select` 子句可接受的所有不同形式。 在每個查詢中，請注意 `select` 子句與「查詢變數」類型之間的關聯性 (`studentQuery1`、`studentQuery2`，依此類推)。
+下列範例示範 `select` 子句可接受的所有不同形式。 在每個查詢中`select`，請注意子句與*查詢變數*類型 （、`studentQuery1``studentQuery2`等）之間的關係。
 
 [!code-csharp[cscsrefQueryKeywords#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Select.cs#9)]
 
@@ -37,12 +37,12 @@ ms.locfileid: "75713088"
 
 在編譯時間，`select` 子句會轉譯為 <xref:System.Linq.Enumerable.Select%2A> 標準查詢運算子的方法呼叫。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [查詢關鍵字 (LINQ)](query-keywords.md)
-- [from 子句](from-clause.md)
+- [查詢關鍵字 （LINQ）](query-keywords.md)
+- [從 條款](from-clause.md)
 - [partial (方法) (C# 參考)](partial-method.md)
-- [匿名類型](../../programming-guide/classes-and-structs/anonymous-types.md)
+- [匿名型別](../../programming-guide/classes-and-structs/anonymous-types.md)
 - [C# 中的 LINQ](../../linq/index.md)
-- [開始使用 C# 中的 LINQ](/dotnet/csharp/programming-guide/concepts/linq/)
+- [語言綜合查詢（LINQ）](../../programming-guide/concepts/linq/index.md)

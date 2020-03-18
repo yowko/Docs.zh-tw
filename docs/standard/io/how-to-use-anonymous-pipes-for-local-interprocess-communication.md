@@ -14,10 +14,10 @@ helpviewer_keywords:
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
 ms.openlocfilehash: ea4aee60d090a56eb0cf3f2a81c1b05c04806d4b
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77627990"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>如何：使用匿名管道進行本機處理序間通訊
@@ -26,7 +26,7 @@ ms.locfileid: "77627990"
  若要實作匿名管道，請使用 <xref:System.IO.Pipes.AnonymousPipeServerStream> 和 <xref:System.IO.Pipes.AnonymousPipeClientStream> 類別。  
   
 ## <a name="example"></a>範例  
- 下列範例會示範如何使用匿名管道，將字串從父處理序傳送至子處理序。 此範例會在父處理序中，使用 <xref:System.IO.Pipes.AnonymousPipeServerStream> 的 <xref:System.IO.Pipes.PipeDirection> 值建立 <xref:System.IO.Pipes.PipeDirection.Out> 物件。 接著，父處理序會使用建立 <xref:System.IO.Pipes.AnonymousPipeClientStream> 物件的用戶端控制代碼來建立子處理序。 子處理序具有 <xref:System.IO.Pipes.PipeDirection> 的 <xref:System.IO.Pipes.PipeDirection.In> 值。  
+ 下列範例會示範如何使用匿名管道，將字串從父處理序傳送至子處理序。 此範例會在父處理序中，使用 <xref:System.IO.Pipes.PipeDirection.Out> 的 <xref:System.IO.Pipes.PipeDirection> 值建立 <xref:System.IO.Pipes.AnonymousPipeServerStream> 物件。 接著，父處理序會使用建立 <xref:System.IO.Pipes.AnonymousPipeClientStream> 物件的用戶端控制代碼來建立子處理序。 子處理序具有 <xref:System.IO.Pipes.PipeDirection.In> 的 <xref:System.IO.Pipes.PipeDirection> 值。  
   
  接著，父處理序會將使用者提供的字串傳送給子處理序。 此字串會顯示到子處理序中的主控台。  
   
@@ -48,4 +48,4 @@ ms.locfileid: "77627990"
 ## <a name="see-also"></a>另請參閱
 
 - [管道](../../../docs/standard/io/pipe-operations.md)
-- [操作說明：使用具名管道進行網路處理序間通訊](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [如何：使用具名管道進行網路處理序間通訊](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

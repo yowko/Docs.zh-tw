@@ -9,10 +9,10 @@ helpviewer_keywords:
 - SpinLock, how to enable thread-tracking
 ms.assetid: 62ee2e68-0bdd-4869-afc9-f0a57a11ae01
 ms.openlocfilehash: f52a844284cf46bcace3f54f8b320d336050a64e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138038"
 ---
 # <a name="how-to-enable-thread-tracking-mode-in-spinlock"></a>如何：啟用 SpinLock 中的執行緒追蹤模式
@@ -28,6 +28,6 @@ ms.locfileid: "73138038"
  [!code-csharp[CDS_SpinLock#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#01)]
  [!code-vb[CDS_SpinLock#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_threadtracking.vb#01)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [SpinLock](../../../docs/standard/threading/spinlock.md)
+- [旋轉鎖定](../../../docs/standard/threading/spinlock.md)

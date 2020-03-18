@@ -9,22 +9,22 @@ helpviewer_keywords:
 - tasks, child tasks
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 ms.openlocfilehash: 8f15ee4f136e3e2df1a4e1c7683467f2a4bc9bc0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123190"
 ---
 # <a name="attached-and-detached-child-tasks"></a>附加與中斷連結的子工作
-「子工作」(或「巢狀工作」) 是 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 執行個體，它是在另一項工作 (稱為「父工作」) 的使用者委派中建立。 子工作可以中斷連結或附加。 「中斷連結的子工作」(detached child task) 是獨立於其父代而執行的工作。 「附加的子工作」(attached child task) 是巢狀工作，而且是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項所建立，其父代並不明確或預設禁止它附加。 工作可能會建立任意數目的附加和中斷連結的子工作，只受限於系統資源。  
+「子工作」**(或「巢狀工作」**) 是 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 執行個體，它是在另一項工作 (稱為「父工作」**) 的使用者委派中建立。 子工作可以中斷連結或附加。 「中斷連結的子工作」**(detached child task) 是獨立於其父代而執行的工作。 「附加的子工作」**(attached child task) 是巢狀工作，而且是使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項所建立，其父代並不明確或預設禁止它附加。 工作可能會建立任意數目的附加和中斷連結的子工作，只受限於系統資源。  
   
  下表列出這兩種子工作之間的基本差異。  
   
-|Category|中斷連結的子工作|附加的子工作|  
+|類別|中斷連結的子工作|附加的子工作|  
 |--------------|--------------------------|--------------------------|  
-|等候子工作完成的父系。|否|[是]|  
-|父系會傳播子工作擲回的例外狀況。|否|[是]|  
-|父系的狀態取決於子系的狀態。|否|[是]|  
+|等候子工作完成的父系。|否|是|  
+|父系會傳播子工作擲回的例外狀況。|否|是|  
+|父系的狀態取決於子系的狀態。|否|是|  
   
  在大部分情況下，我們建議您使用中斷連結的子工作，因為它們與其他工作的關聯性較不複雜。 這也就是為什麼在父工作中建立的工作會依預設中斷連結，且您必須明確指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項才能建立附加的子工作。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "73123190"
  工作取消需要合作。 也就是說，若要能取消，每個附加或中斷連結的子工作必須監視取消語彙基元的狀態。 如果您想要使用一個取消要求來取消父系及其所有子系，您會將相同的語彙基元當做引數傳遞至所有工作，並在每個工作中提供邏輯以回應每個工作中的要求。 如需詳細資訊，請參閱[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)和[如何：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)。  
   
 ### <a name="when-the-parent-cancels"></a>當父系取消時  
- 如果父系在其子工作啟動之前自行取消，則永遠不會啟動子系。 如果父系在子工作已經開始之後自行取消，則子系會執行到完成為止，除非它有自己的取消邏輯。 如需詳細資訊，請參閱[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)。  
+ 如果父系在其子工作啟動之前自行取消，則永遠不會啟動子系。 如果父系在子工作已經開始之後自行取消，則子系會執行到完成為止，除非它有自己的取消邏輯。 如需詳細資訊，請參閱 [Task Cancellation](../../../docs/standard/parallel-programming/task-cancellation.md)。  
   
 ### <a name="when-a-detached-child-task-cancels"></a>當取消中斷連結的子工作時  
  如果中斷連結的子工作使用傳遞給父系的相同語彙基元來自行取消，且父系不等候子工作，則不會傳播任何例外狀況，因為例外狀況被視為良性合作取消。 此行為與任何最上層工作相同。  
@@ -76,7 +76,7 @@ ms.locfileid: "73123190"
   
  當子工作未及時完成時，您也可能想要防止子工作附加到其父系。 由於父工作會在所有子工作完成後才完成，因此長時間執行的子工作可能造成整個應用程式效能不佳。 如需示範如何藉由防止工作附加至其父工作以改善應用程式效能的範例，請參閱[如何：防止子工作附加到其父系](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [平行程式設計](../../../docs/standard/parallel-programming/index.md)
-- [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [並行程式設計](../../../docs/standard/parallel-programming/index.md)
+- [資料並行性](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

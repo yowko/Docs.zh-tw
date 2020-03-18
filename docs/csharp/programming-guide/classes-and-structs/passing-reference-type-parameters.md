@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
 ms.openlocfilehash: 6fa0e60fafabaa9fb04cdc5d5bf3f9e29490e84f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714711"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>傳遞參考類型的參數 (C# 程式設計手冊)
@@ -38,11 +38,11 @@ ms.locfileid: "75714711"
   
  如需字串的詳細資訊，請參閱 [string](../../language-reference/builtin-types/reference-types.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [傳遞參數](./passing-parameters.md)
 - [ref](../../language-reference/keywords/ref.md)
-- [in](../../language-reference/keywords/in-parameter-modifier.md)
-- [out](../../language-reference/keywords/out.md)
-- [參考型別](../../language-reference/keywords/reference-types.md)
+- [在](../../language-reference/keywords/in-parameter-modifier.md)
+- [出](../../language-reference/keywords/out.md)
+- [參考類型](../../language-reference/keywords/reference-types.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74203992"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ 中的合併選項
@@ -32,11 +32,11 @@ ms.locfileid: "74203992"
   
 - `Not Buffered`  
   
-     <xref:System.Linq.ParallelMergeOptions.NotBuffered> 選項會讓每個處理過的元素一產生就從每個執行緒傳回。 此行為類似「串流處理」輸出。 如果 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 運算子存在查詢中，`NotBuffered` 會保留來源元素的順序。 雖然 `NotBuffered` 開始提供結果，但產生所有結果的總時間可能會比使用其中一個其他合併選項還長。  
+     <xref:System.Linq.ParallelMergeOptions.NotBuffered> 選項會讓每個處理過的元素一產生就從每個執行緒傳回。 此行為類似「串流處理」輸出。 如果 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 運算子存在查詢中，`NotBuffered` 會保留來源元素的順序。 儘管在`NotBuffered`結果可用時就開始生成結果，但生成所有結果的總時間可能仍比使用其他合併選項之一長。  
   
 - `Auto Buffered`  
   
-     <xref:System.Linq.ParallelMergeOptions.AutoBuffered> 選項會讓查詢將項目收集至緩衝區中，然後定期將緩衝區內容一次產生至耗用端執行緒中。 這類似以區塊方式產生來源資料，而非使用 `NotBuffered` 的「串流處理」行為。 相較於 `AutoBuffered`，`NotBuffered` 會需要更多時間才能讓第一個元素可用於使用的執行緒上。 緩衝區的大小和確切的產生行為無法設定，而且可能有所不同，這取決於和查詢相關的各種因素。  
+     <xref:System.Linq.ParallelMergeOptions.AutoBuffered> 選項會讓查詢將項目收集至緩衝區中，然後定期將緩衝區內容一次產生至耗用端執行緒中。 這類似以區塊方式產生來源資料，而非使用 `NotBuffered` 的「串流處理」行為。 相較於 `NotBuffered`，`AutoBuffered` 會需要更多時間才能讓第一個元素可用於使用的執行緒上。 緩衝區的大小和確切的產生行為無法設定，而且可能有所不同，這取決於和查詢相關的各種因素。  
   
 - `FullyBuffered`  
   
@@ -47,23 +47,23 @@ ms.locfileid: "74203992"
   
 |運算子|限制|  
 |--------------|------------------|  
-|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|無|  
-|<xref:System.Linq.ParallelEnumerable.Cast%2A>|無|  
+|<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Cast%2A>|None|  
 |<xref:System.Linq.ParallelEnumerable.Concat%2A>|只含有陣列或清單來源的非排序查詢。|  
-|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|無|  
-|<xref:System.Linq.ParallelEnumerable.OfType%2A>|無|  
+|<xref:System.Linq.ParallelEnumerable.DefaultIfEmpty%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.OfType%2A>|None|  
 |<xref:System.Linq.ParallelEnumerable.Reverse%2A>|只含有陣列或清單來源的非排序查詢。|  
-|<xref:System.Linq.ParallelEnumerable.Select%2A>|無|  
-|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|無|  
-|<xref:System.Linq.ParallelEnumerable.Skip%2A>|無|  
-|<xref:System.Linq.ParallelEnumerable.Take%2A>|無|  
-|<xref:System.Linq.ParallelEnumerable.Where%2A>|無|  
+|<xref:System.Linq.ParallelEnumerable.Select%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.SelectMany%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Skip%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Take%2A>|None|  
+|<xref:System.Linq.ParallelEnumerable.Where%2A>|None|  
   
  所有其他的 PLINQ 查詢運算子可能會忽略使用者提供的合併選項。 某些查詢運算子 (例如 <xref:System.Linq.ParallelEnumerable.Reverse%2A> 和 <xref:System.Linq.ParallelEnumerable.OrderBy%2A>) 在所有元素都已產生並重新排序之前無法產生任何元素。 因此，當 <xref:System.Linq.ParallelMergeOptions> 使用於也包含運算子 (例如 <xref:System.Linq.ParallelEnumerable.Reverse%2A>) 的查詢中時，一直到該運算子已產生其結果後，才會在查詢中套用合併行為。  
   
  某些運算子是否可以處理合併選項，取決於來源序列的類型，以及先前是否在查詢中使用了 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 運算子。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> 一律為 <xref:System.Linq.ParallelMergeOptions.NotBuffered>；它會立即產生其元素。 <xref:System.Linq.ParallelEnumerable.OrderBy%2A> 一律為 <xref:System.Linq.ParallelMergeOptions.FullyBuffered>；它必須先排序整個清單後才會產生。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [操作說明：在 PLINQ 中指定合併選項](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

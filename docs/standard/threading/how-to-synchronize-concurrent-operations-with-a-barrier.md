@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Barrier, how to use
 ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
 ms.openlocfilehash: 33098878764c2f8a8c1f83a122028da40b984243
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73137967"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>如何：使用屏障同步處理並行作業
@@ -26,6 +26,6 @@ ms.locfileid: "73137967"
   
  <xref:System.Threading.Barrier> 是一種物件，可防止平行作業中的個別工作繼續執行，直到所有的工作都到達屏障為止。 當階段中發生平行作業，且各階段要求在工作之間進行同步處理時，它會很有用。 在此範例中，作業有兩個階段。 在第一個階段中，每個工作都會使用資料填入其緩衝區區段。 當每個工作完成填入其區段時，工作會向屏障發出訊號，告知它已準備好繼續進行，然後等候。 當所有的工作都已向屏障發出訊號，就會將工作解除封鎖，並開始第二階段。 屏障是必要的，因為第二階段要求每個工作都擁有此點已產生之所有資料的存取權。 若沒有屏障，第一個要完成的工作可能會嘗試從其他工作尚未填入的緩衝區讀取。 您可以此種方式同步處理任何數目的階段。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [適用於平行程式設計的資料結構](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)

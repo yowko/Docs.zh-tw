@@ -1,5 +1,5 @@
 ---
-title: HOW TO：取得隔離儲存區的存放區
+title: 如何：取得離儲存區的存放區
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
 ms.openlocfilehash: 7104ba665f60c2d55217a2d8628c85f6e469ad6f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706927"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>HOW TO：取得隔離儲存區的存放區
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>如何：取得離儲存區的存放區
 隔離存放區會公開資料區間內的虛擬檔案系統。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 類別提供多種與隔離存放區互動的方法。 若要建立和擷取存放區，<xref:System.IO.IsolatedStorage.IsolatedStorageFile> 提供三種靜態方法：  
   
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> 會傳回使用者和組件所隔離的儲存區。  
@@ -54,10 +54,10 @@ ms.locfileid: "75706927"
  [!code-csharp[Conceptual.IsolatedStorage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#7)]
  [!code-vb[Conceptual.IsolatedStorage#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source6.vb#7)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
-- [隔離儲存區](../../../docs/standard/io/isolated-storage.md)
+- [隔離存儲](../../../docs/standard/io/isolated-storage.md)
 - [隔離的類型](../../../docs/standard/io/types-of-isolation.md)
 - [.NET 中的組件](../assembly/index.md)

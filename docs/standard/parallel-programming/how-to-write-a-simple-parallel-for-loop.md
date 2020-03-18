@@ -11,10 +11,10 @@ helpviewer_keywords:
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139664"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>如何：撰寫簡單的 Parallel.For 迴圈
@@ -68,9 +68,9 @@ ms.locfileid: "73139664"
 
 將這段程式碼複製並貼到 Visual Studio 專案。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>
-- [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [平行程式設計](../../../docs/standard/parallel-programming/index.md)
+- [資料並行性](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [並行程式設計](../../../docs/standard/parallel-programming/index.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
 ms.openlocfilehash: db25028e10872cfca08d28518c795414d06c5d49
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124792"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>規則運算式中的執行緒安全
@@ -25,6 +25,6 @@ ms.locfileid: "73124792"
   
  列舉程式是唯一的例外狀況。 應用程式必須將集合列舉程式的呼叫序列化。 規則是，如果某個集合可以在多個執行緒上同時列舉，您就應該在列舉程式所周遊之集合的根物件位置，同步處理列舉程式方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)

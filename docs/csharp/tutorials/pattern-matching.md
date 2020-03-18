@@ -4,14 +4,14 @@ description: 此進階教學課程示範如何使用模式比對技術，以個�
 ms.date: 03/13/2019
 ms-technology: csharp-whats-new
 ms.custom: mvc
-ms.openlocfilehash: fd08e707402bfcd552997111a9c3fa58841a5466
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: df1054d8e0ec2b2539e6a1d00bf353d8ca927397
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240050"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156528"
 ---
-# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>教學課程：使用模式比對功能來擴充資料類型
+# <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>教程：使用模式匹配功能擴展資料類型
 
 C# 7 引進基本的模式比對功能。 那些功能已在 C# 8 中擴充，有了新的運算式和模式。 您可以撰寫行為如同您擴充其他程式庫中之型別的功能。 模式的另一個用途是建立應用程式需要的功能，但該功能不是要擴充之型別的基本功能。
 
@@ -23,9 +23,9 @@ C# 7 引進基本的模式比對功能。 那些功能已在 C# 8 中擴充，�
 > - 使用模式比對運算式根據類型和屬性值實作行為。
 > - 結合模式比對與其他技術，建立完整的演算法。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用8個編譯器。
+您需要設置電腦以運行 .NET Core，包括 C# 8.0 編譯器。 C# 8 編譯器可從[Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.NET Core 3.0 SDK](https://dotnet.microsoft.com/download)開始。
 
 本教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
@@ -50,9 +50,9 @@ C# 7 引進基本的模式比對功能。 那些功能已在 C# 8 中擴充，�
 本教學課程所使用案例會醒目提示適合以模式比對來解決的問題類型：
 
 - 您要處理的物件不在符合您目標的物件階層中。 您可能會使用屬於不相關之系統的類別。
-- 您要新增的功能不屬於這些類別的核心抽象概念。 車輛付的通行費隨不同類型的車輛而「變更」，但通行費不是車輛的核心函式。
+- 您要新增的功能不屬於這些類別的核心抽象概念。 車輛付的通行費隨不同類型的車輛而「變更」**，但通行費不是車輛的核心函式。
 
-當資料的「圖形」與資料上的「作業」不是一起描述時，C# 中的模式比對功能可讓它變得更容易使用。
+當資料的「圖形」** 與資料上的「作業」** 不是一起描述時，C# 中的模式比對功能可讓它變得更容易使用。
 
 ## <a name="implement-the-basic-toll-calculations"></a>實作基本通行費計算
 
@@ -89,7 +89,7 @@ namespace toll_calculator
 }
 ```
 
-上述程式碼使用可測試**型別模式**的 [switch 運算式`switch` (與 ](../language-reference/keywords/switch.md) 陳述式不同)。 **switch 運算式**的開始是變數 (上述程式碼中的 `vehicle`)，接著是 `switch` 關鍵字。 然後所有的 **switch 臂**都在大括號內。 `switch` 運算式會對括住 `switch` 陳述式的語法進行其他細分。 已省略 `case` 關鍵字，且每個臂的結果都是運算式。 最後兩個臂顯示新的語言功能。 `{ }` 案例比對不符合先前臂的任何非 Null 物件。 此臂會攔截傳遞到此方法的任何不正確型別。  `{ }` 案例必須遵循每種車輛類型的案例。 順序如已顛倒，則 `{ }` 案例會優先。 最後，`null` 模式會偵測 `null` 於何時傳遞至這個方法。 因為其他型別模式只比對正確型別的非 Null 物件，所以 `null` 可以在最後。
+上述程式碼使用可測試**型別模式**的 **switch 運算式** (與 [`switch`](../language-reference/keywords/switch.md) 陳述式不同)。 **switch 運算式**的開始是變數 (上述程式碼中的 `vehicle`)，接著是 `switch` 關鍵字。 然後所有的 **switch 臂**都在大括號內。 `switch` 運算式會對括住 `switch` 陳述式的語法進行其他細分。 已省略 `case` 關鍵字，且每個臂的結果都是運算式。 最後兩個臂顯示新的語言功能。 `{ }` 案例比對不符合先前臂的任何非 Null 物件。 此臂會攔截傳遞到此方法的任何不正確型別。  `{ }` 案例必須遵循每種車輛類型的案例。 順序如已顛倒，則 `{ }` 案例會優先。 最後，`null` 模式會偵測 `null` 於何時傳遞至這個方法。 因為其他型別模式只比對正確型別的非 Null 物件，所以 `null` 可以在最後。
 
 您可以使用 `Program.cs` 中的下列程式碼來測試此程式碼：
 
@@ -138,7 +138,7 @@ namespace toll_calculator
 }
 ```
 
-該程式碼包含在入門專案中，但已標記為批註。移除批註，您可以測試您所撰寫的內容。
+該代碼包含在初學者專案中，但已注釋掉。刪除注釋，您可以測試已編寫的內容。
 
 您已經開始了解模式能如何協助您在程式碼和資料分離的情況下建立演算法。 `switch` 運算式會測試型別，並根據結果產生不同的值。 這只是個開頭。
 
@@ -241,7 +241,7 @@ vehicle switch
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
-    
+
     { }     => throw new ArgumentException(message: "Not a known vehicle type", paramName: nameof(vehicle)),
     null    => throw new ArgumentNullException(nameof(vehicle))
 };
@@ -300,22 +300,22 @@ public decimal CalculateToll(object vehicle) =>
 
 | Day        | Time         | 方向 | Premium |
 | ---------- | ------------ | --------- |--------:|
-| Weekday    | 早上尖峰時段 | 輸入   | x 2.00  |
-| Weekday    | 早上尖峰時段 | 輸出  | x 1.00  |
-| Weekday    | 日間      | 輸入   | x 1.50  |
-| Weekday    | 日間      | 輸出  | x 1.50  |
-| Weekday    | 晚上尖峰時段 | 輸入   | x 1.00  |
-| Weekday    | 晚上尖峰時段 | 輸出  | x 2.00  |
-| Weekday    | 夜間    | 輸入   | x 0.75  |
-| Weekday    | 夜間    | 輸出  | x 0.75  |
-| 週末    | 早上尖峰時段 | 輸入   | x 1.00  |
-| 週末    | 早上尖峰時段 | 輸出  | x 1.00  |
-| 週末    | 日間      | 輸入   | x 1.00  |
-| 週末    | 日間      | 輸出  | x 1.00  |
-| 週末    | 晚上尖峰時段 | 輸入   | x 1.00  |
-| 週末    | 晚上尖峰時段 | 輸出  | x 1.00  |
-| 週末    | 夜間    | 輸入   | x 1.00  |
-| 週末    | 夜間    | 輸出  | x 1.00  |
+| Weekday    | 早上尖峰時段 | 進入   | x 2.00  |
+| Weekday    | 早上尖峰時段 | 離開  | x 1.00  |
+| Weekday    | 日間      | 進入   | x 1.50  |
+| Weekday    | 日間      | 離開  | x 1.50  |
+| Weekday    | 晚上尖峰時段 | 進入   | x 1.00  |
+| Weekday    | 晚上尖峰時段 | 離開  | x 2.00  |
+| Weekday    | 夜間    | 進入   | x 0.75  |
+| Weekday    | 夜間    | 離開  | x 0.75  |
+| 週末    | 早上尖峰時段 | 進入   | x 1.00  |
+| 週末    | 早上尖峰時段 | 離開  | x 1.00  |
+| 週末    | 日間      | 進入   | x 1.00  |
+| 週末    | 日間      | 離開  | x 1.00  |
+| 週末    | 晚上尖峰時段 | 進入   | x 1.00  |
+| 週末    | 晚上尖峰時段 | 離開  | x 1.00  |
+| 週末    | 夜間    | 進入   | x 1.00  |
+| 週末    | 夜間    | 離開  | x 1.00  |
 
 三個變數的 16 個不同組合。 透過結合一些條件，您將會簡化最終的 switch 運算式。
 
@@ -384,7 +384,7 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 此範例會醒目提示模式比對的優點之一：依序評估模式分支。 如果您重新排列它們，讓前面分支處理其中一個最近的案例，則編譯器會提出有關無法連線程式碼的警告。 那些語言規則讓您可以放心地進行上述簡化，而不需擔心程式碼會變更。
 
-模式比對讓某些類型的程式碼更容易讀取，並在您無法將程式碼新增至類別時，提供物件導向技術的替代方式。 雲端是造成資料和功能分開的原因。 資料的「圖形」與資料上的「作業」不需要一起描述。 在此教學課程中，您以和現有資料原始功能完全不同的方式取用它們。 模式比對讓您能夠撰寫覆寫這些類型的功能，即使您無法擴充它們。
+模式比對讓某些類型的程式碼更容易讀取，並在您無法將程式碼新增至類別時，提供物件導向技術的替代方式。 雲端是造成資料和功能分開的原因。 資料的「圖形」** 與資料上的「作業」** 不需要一起描述。 在此教學課程中，您以和現有資料原始功能完全不同的方式取用它們。 模式比對讓您能夠撰寫覆寫這些類型的功能，即使您無法擴充它們。
 
 ## <a name="next-steps"></a>後續步驟
 

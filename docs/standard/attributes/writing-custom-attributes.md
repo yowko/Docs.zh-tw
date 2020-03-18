@@ -17,10 +17,10 @@ helpviewer_keywords:
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 ms.openlocfilehash: 6570c6994c0f2e6571361c3eadc73b02a55f1584
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140582"
 ---
 # <a name="writing-custom-attributes"></a>撰寫自訂屬性
@@ -32,7 +32,7 @@ ms.locfileid: "73140582"
   
 - [宣告屬性類別](#declaring-the-attribute-class)  
   
-- [宣告建構函式](#declaring-constructors)  
+- [聲明建構函式](#declaring-constructors)  
   
 - [宣告屬性](#declaring-properties)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73140582"
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute> 有三個建立自訂屬性所需的重要成員：[AttributeTargets](#attributetargets-member)、[Inherited](#inherited-property) 及 [AllowMultiple](#allowmultiple-property)。  
+ <xref:System.AttributeUsageAttribute> 有三個建立自訂屬性所需的重要成員： [AttributeTargets](#attributetargets-member)、 [Inherited](#inherited-property)和 [AllowMultiple](#allowmultiple-property)。  
   
 ### <a name="attributetargets-member"></a>AttributeTargets 成員  
  在上述範例中，指定了 <xref:System.AttributeTargets.All?displayProperty=nameWithType> ，指出此屬性可以套用到所有程式元素。 或者，您也可以指定 <xref:System.AttributeTargets.Class?displayProperty=nameWithType>，指出您的屬性可以套用到類別，或指定 <xref:System.AttributeTargets.Method?displayProperty=nameWithType>，指出屬性只能套用至方法。 所有的程式項目都可以用這種方式透過自訂屬性標示為描述。  
@@ -116,7 +116,7 @@ ms.locfileid: "73140582"
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- 您可以多載建構函式以容納不同的值組合。 如果您也為自訂的屬性類別定義 [屬性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) ，您可以在初始化屬性時使用具名和位置參數的組合。 通常您會將所有必要的參數定義為位置，而所有選擇性參數則定義為名稱。 在此情況下，屬性沒有必要的參數就無法初始化。 所有其他參數皆為選擇性使用。 請注意在 Visual Basic 中，屬性類別的建構函式不應使用 ParamArray 引數。  
+ 您可以多載建構函式以容納不同的值組合。 如果您也為自訂的屬性類別定義 [屬性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120)) ，您可以在初始化屬性時使用具名和位置參數的組合。 通常您會將所有必要的參數定義為位置，而所有選擇性參數則定義為名稱。 在此情況下，屬性沒有必要的參數就無法初始化。 所有其他參數都是選擇性的。 請注意在 Visual Basic 中，屬性類別的建構函式不應使用 ParamArray 引數。  
   
  下列程式碼範例示範如何使用選擇性和必要的參數，來套用使用先前建構函示的屬性。 這項作業會假設屬性有一個必要的布林值和一個選擇性的字串屬性。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "73140582"
   
  第一個範例示範只套用了必要具名參數的屬性，而第二個範例則示範同時套用了必要和選擇性參數的屬性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>

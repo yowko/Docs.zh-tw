@@ -7,10 +7,10 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
 ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75345545"
 ---
 # <a name="delegates-and-lambdas"></a>委派和 Lambda
@@ -106,7 +106,7 @@ public class Program
 }
 ```
 
-如您所見，委派的主體只是一組運算式，與任何其他委派相同。 但這並不是不同的定義，而是當作「臨機操作」引入 <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> 方法呼叫。
+如您所見，委派的主體只是一組運算式，與任何其他委派相同。 但這並不是不同的定義，而是當作「臨機操作」__ 引入 <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType> 方法呼叫。
 
 不過，即使使用此方法，還是有許多程式碼可以捨棄。 此時就需要 **Lambda 運算式**。
 
@@ -155,10 +155,10 @@ public MainWindow()
 }
 ```
 
-在此內容中使用 `+=` 運算子來訂閱[事件](../../docs/csharp/language-reference/keywords/event.md)。 如需詳細資訊，請參閱[如何訂閱及取消訂閱事件](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+在此內容中使用 `+=` 運算子來訂閱[事件](../../docs/csharp/language-reference/keywords/event.md)。 有關詳細資訊，請參閱[如何訂閱和取消訂閱事件](../../docs/csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="further-reading-and-resources"></a>延伸閱讀和資源
 
 * [委派](../../docs/csharp/programming-guide/delegates/index.md)
 * [匿名函式](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-* [Lambda 運算式](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [蘭姆達運算式](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

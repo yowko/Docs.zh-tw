@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
 ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127578"
 ---
 # <a name="parsing-other-strings-in-net"></a>在 .NET 中剖析其他字串
@@ -39,7 +39,7 @@ ms.locfileid: "73127578"
  [!code-csharp[Conceptual.String.Parse#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#3)]
  [!code-vb[Conceptual.String.Parse#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#3)]  
   
-## <a name="enumeration"></a>列舉  
+## <a name="enumeration"></a>列舉型別  
  您可以使用靜態的 **Parse** 方法初始化字串值的列舉類型。 此方法接受您剖析的列舉類型、要剖析的字串，以及指出剖析是否區分大小寫的選擇性 Boolean 旗標。 您要剖析的字串可以包含數個以逗號分隔的值，前後可有一或多個空格 (也稱為空白字元)。 當字串包含多個值時，傳回物件的值就是結合了位元 OR 運算的所有指定值的值。  
   
  下列範例會使用 **Parse** 方法來將字串表示轉換為列舉值。 <xref:System.DayOfWeek> 列舉會從字串初始化為 **Thursday**。  
@@ -48,7 +48,7 @@ ms.locfileid: "73127578"
  [!code-csharp[Conceptual.String.Parse#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.parse/cs/parse.cs#4)]
  [!code-vb[Conceptual.String.Parse#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.parse/vb/parse.vb#4)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [剖析字串](../../../docs/standard/base-types/parsing-strings.md)
 - [格式化類型](../../../docs/standard/base-types/formatting-types.md)

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 ms.openlocfilehash: 89c486618729c334bf74f0a1f4f9dd1b3cee8b0e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78158164"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>以工作為基礎的非同步模式 (TAP)
@@ -24,13 +24,13 @@ ms.locfileid: "78158164"
   
 ## <a name="naming-parameters-and-return-types"></a>命名、參數和傳回型別
 
-TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步程式設計模型 (APM 或 `IAsyncResult`) 模式和事件架構非同步模式 (EAP) 形成對比。 APM 要求 `Begin` 和 `End` 方法。 EAP 需要一個具有 `Async` 尾碼的方法，也需要一或多個事件、事件處理常式委派類型，以及 `EventArg` 衍生型別。 TAP 中的非同步方法會在傳回可等候型別之方法的作業名稱後面包括 `Async` 尾碼，例如 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask> 和 <xref:System.Threading.Tasks.ValueTask%601>。 例如，`Get` 表示傳回 `Task<String>` 的非同步 `GetAsync` 作業。 如果您將 TAP 方法加入至已包含具有 `Async` 尾碼之 EAP 方法名稱的類別，請改用 `TaskAsync` 尾碼。 例如，如果類別已經有 `GetAsync` 方法，請使用 `GetTaskAsync` 這個名稱。 如果方法啟動非同步作業但不傳回可等候型別，則其名稱應以 `Begin`、`Start` 或其他動詞開頭，以表明此方法不傳回或擲回作業的結果。  
+TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步程式設計模型 (APM 或 `IAsyncResult`) 模式和事件架構非同步模式 (EAP) 形成對比。 APM 要求 `Begin` 和 `End` 方法。 EAP 需要一個具有 `Async` 尾碼的方法，也需要一或多個事件、事件處理常式委派類型，以及 `EventArg` 衍生型別。 TAP 中的非同步方法會在傳回可等候型別之方法的作業名稱後面包括 `Async` 尾碼，例如 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask> 和 <xref:System.Threading.Tasks.ValueTask%601>。 例如，`GetAsync` 表示傳回 `Task<String>` 的非同步 `Get` 作業。 如果您將 TAP 方法加入至已包含具有 `Async` 尾碼之 EAP 方法名稱的類別，請改用 `TaskAsync` 尾碼。 例如，如果類別已經有 `GetAsync` 方法，請使用 `GetTaskAsync` 這個名稱。 如果方法啟動非同步作業但不傳回可等候型別，則其名稱應以 `Begin`、`Start` 或其他動詞開頭，以表明此方法不傳回或擲回作業的結果。  
   
  TAP 方法會傳回 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>，取決於對應的同步方法傳回 void 或 `TResult` 類型。  
   
  TAP 方法的參數應該與其同步對應項目的參數相符，並且應該以相同順序提供。  不過，`out` 和 `ref` 參數不受限於這項規則，因此應完全避免使用。 所有可能會透過 `out` 或 `ref` 參數傳回的資料，都應該改成做為 `TResult` 所傳回 <xref:System.Threading.Tasks.Task%601> 的一部分傳回，而且應使用 Tuple 或自訂資料結構來容納多個值。 即使 TAP 方法的同步對應項目沒有提供 <xref:System.Threading.CancellationToken> 參數，您也應該考慮新增一個。
 
- 專門用於建立、管理或組合工作的方法 (其中方法的非同步用意以方法名稱或方法所屬的類型名稱清楚表示) 不需要遵循這個命名模式，這類方法通常稱為「組合器」。 組合器的範例包括 <xref:System.Threading.Tasks.Task.WhenAll%2A> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A>，並且將在[使用以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators)文件的[使用內建工作式組合器](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)一節中加以討論。  
+ 專門用於建立、管理或組合工作的方法 (其中方法的非同步用意以方法名稱或方法所屬的類型名稱清楚表示) 不需要遵循這個命名模式，這類方法通常稱為「組合器」**。 組合器的範例包括 <xref:System.Threading.Tasks.Task.WhenAll%2A> 和 <xref:System.Threading.Tasks.Task.WhenAny%2A>，並且將在[使用以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)文件的[使用內建工作式組合器](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators)一節中加以討論。  
   
  如需說明 TAP 語法與舊有非同步程式設計模式 (例如非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)) 的語法之間差異的範例，請參閱[非同步程式設計模式](../../../docs/standard/asynchronous-programming-patterns/index.md)。  
   
@@ -52,9 +52,9 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
  TAP 方法的呼叫端可能會透過同步等待產生的工作來阻止等待 TAP 方法完成，或是在非同步作業完成時執行其他 (接續) 程式碼。 接續程式碼 (Continuation Code) 的建立者可以控制執行程式碼的位置。 您可以明確建立接續程式碼、透過 <xref:System.Threading.Tasks.Task> 類別的方法建立 (例如 <xref:System.Threading.Tasks.Task.ContinueWith%2A>)，或使用建置於接續之上的語言支援以隱含方式建立 (例如 C# 中的 `await`、Visual Basic 中的 `Await`，或 F# 中的 `AwaitValue`)。  
   
 ## <a name="task-status"></a>工作狀態  
- <xref:System.Threading.Tasks.Task> 類別會提供非同步作業的生命週期，而該週期是以 <xref:System.Threading.Tasks.TaskStatus> 列舉表示。 為了支援從 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 衍生的類型隱密案例，以及支援分隔建構與排程，<xref:System.Threading.Tasks.Task> 類別會公開 <xref:System.Threading.Tasks.Task.Start%2A> 方法。 由公用 <xref:System.Threading.Tasks.Task> 建構函式所建立的工作稱為「靜止工作」(Cold Task)，因為這類工作的生命週期是從非排程的 <xref:System.Threading.Tasks.TaskStatus.Created> 狀態開始，而且只有在這些執行個體上呼叫 <xref:System.Threading.Tasks.Task.Start%2A> 時才會排程。
+ <xref:System.Threading.Tasks.Task> 類別會提供非同步作業的生命週期，而該週期是以 <xref:System.Threading.Tasks.TaskStatus> 列舉表示。 為了支援從 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 衍生的類型隱密案例，以及支援分隔建構與排程，<xref:System.Threading.Tasks.Task> 類別會公開 <xref:System.Threading.Tasks.Task.Start%2A> 方法。 由公用 <xref:System.Threading.Tasks.Task> 建構函式所建立的工作稱為「靜止工作」(Cold Task)**，因為這類工作的生命週期是從非排程的 <xref:System.Threading.Tasks.TaskStatus.Created> 狀態開始，而且只有在這些執行個體上呼叫 <xref:System.Threading.Tasks.Task.Start%2A> 時才會排程。
 
- 所有其他工作都是從作用狀態開始其生命週期，也就是說，它們所代表的非同步作業已啟始，而且其工作狀態是 <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外的列舉值。 從 TAP 方法傳回的所有工作都必須為啟用狀態。 **如果 TAP 方法在內部使用工作的建構函式將所要傳回的工作具現化，則 TAP 方法必須先在 <xref:System.Threading.Tasks.Task.Start%2A> 物件上呼叫 <xref:System.Threading.Tasks.Task>，再將它傳回。** TAP 方法的消費者可以安全地假設傳回的工作為作用中，並且不應嘗試在任何從 TAP 方法傳回的 <xref:System.Threading.Tasks.Task.Start%2A> 上呼叫 <xref:System.Threading.Tasks.Task>。 在作用中工作上呼叫 <xref:System.Threading.Tasks.Task.Start%2A> 會導致 <xref:System.InvalidOperationException> 例外狀況。  
+ 所有其他工作都是從作用狀態開始其生命週期，也就是說，它們所代表的非同步作業已啟始，而且其工作狀態是 <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外的列舉值。 從 TAP 方法傳回的所有工作都必須為啟用狀態。 **如果 TAP 方法在內部使用工作的建構函式將所要傳回的工作具現化，則 TAP 方法必須先在 <xref:System.Threading.Tasks.Task> 物件上呼叫 <xref:System.Threading.Tasks.Task.Start%2A>，再將它傳回。** TAP 方法的消費者可以安全地假設傳回的工作為作用中，並且不應嘗試在任何從 TAP 方法傳回的 <xref:System.Threading.Tasks.Task.Start%2A> 上呼叫 <xref:System.Threading.Tasks.Task>。 在作用中工作上呼叫 <xref:System.Threading.Tasks.Task.Start%2A> 會導致 <xref:System.InvalidOperationException> 例外狀況。  
   
 ## <a name="cancellation-optional"></a>取消 (選擇性)  
  在 TAP 中，取消對於非同步方法實作者和非同步方法消費者而言都是選擇性的。 如果作業允許取消，則會公開可接受取消語彙基元 (<xref:System.Threading.CancellationToken> 執行個體) 的非同步方法多載。 依照慣例，參數會命名為 `cancellationToken`。  
@@ -193,5 +193,5 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
 |-----------|-----------------|  
 |[非同步程式設計模式](../../../docs/standard/asynchronous-programming-patterns/index.md)|介紹執行非同步作業的三種模式：工作式非同步模式 (TAP)、非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)。|  
 |[實作以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|描述三種實作工作式非同步模式 (TAP) 的方式：使用 Visual Studio 中的 C# 和 Visual Basic 編譯器、手動，或是透過編譯器和手動方法的組合。|  
-|[使用以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|描述如何使用工作和回呼達到等待的目的，而不會遭到封鎖。|  
-|[與其他非同步模式和型別互通](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|描述如何使用工作式非同步模式 (TAP) 實作非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)。|
+|[Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|描述如何使用工作和回呼達到等待的目的，而不會遭到封鎖。|  
+|[Interop 與其他非同步模式和類型](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|描述如何使用工作式非同步模式 (TAP) 實作非同步程式設計模型 (APM) 和事件式非同步模式 (EAP)。|

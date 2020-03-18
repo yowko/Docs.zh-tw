@@ -8,10 +8,10 @@ helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
 ms.openlocfilehash: ff8348a725f43fa8789c73fa58549da26126369c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712880"
 ---
 # <a name="var-c-reference"></a>var (C# 參考)
@@ -23,7 +23,7 @@ var i = 10; // Implicitly typed.
 int i = 10; // Explicitly typed.
 ```
 
-如需詳細資訊，請參閱[隱含型別區域變數](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md)和 [LINQ 查詢作業中的類型關聯性](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)。
+有關詳細資訊，請參閱[LINQ 查詢操作中的](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)[隱式鍵入的區域變數](../../programming-guide/classes-and-structs/implicitly-typed-local-variables.md)和類型關係。
 
 ## <a name="example"></a>範例
 
@@ -31,7 +31,7 @@ int i = 10; // Explicitly typed.
 
 [!code-csharp[csrefKeywordsTypes#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#18)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

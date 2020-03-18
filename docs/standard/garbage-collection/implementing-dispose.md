@@ -10,10 +10,10 @@ helpviewer_keywords:
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78238984"
 ---
 # <a name="implementing-a-dispose-method"></a>實作 Dispose 方法
@@ -33,7 +33,7 @@ ms.locfileid: "78238984"
   
 若要確保資源永遠都能適當清除，<xref:System.IDisposable.Dispose%2A> 方法應該能夠被呼叫多次而不會擲回例外狀況。  
   
-針對 <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> 方法所提供的程式碼範例會顯示垃圾收集如何導致完成項執行，而物件或其成員的非受控參考仍在使用中。 利用 <xref:System.GC.KeepAlive%2A?displayProperty=nameWithType>，讓物件不符合從目前常式開始到呼叫這個方法的時間點，就無法進行垃圾收集。
+為<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType>該方法提供的代碼示例顯示垃圾回收如何導致終端子運行，而對物件或其成員的非託管引用仍在使用中。 利用<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType>使物件不符合垃圾回收條件可能很有意義，從當前常式的開始到調用此方法的點。
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() 和 Dispose(Boolean)  
@@ -99,11 +99,11 @@ ms.locfileid: "78238984"
 [!code-vb[System.IDisposable#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/base2.vb#5)]  
   
 > [!NOTE]
-> 在 C# 中，您會透過定義<xref:System.Object.Finalize%2A?displayProperty=nameWithType>解構函式[來覆寫 ](../../csharp/programming-guide/classes-and-structs/destructors.md)。  
+> 在 C# 中，您會透過定義[解構函式](../../csharp/programming-guide/classes-and-structs/destructors.md)來覆寫 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
   
 ## <a name="implementing-the-dispose-pattern-for-a-derived-class"></a>實作衍生類別的處置模式
 
-從實作 <xref:System.IDisposable> 介面的類別衍生的類別不應該實作 <xref:System.IDisposable>，因為 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的基底類別實作會由其衍生類別繼承。 相反地，若要釋放衍生類別的資源，請提供下列各項：  
+從實作 <xref:System.IDisposable> 介面的類別衍生的類別不應該實作 <xref:System.IDisposable>，因為 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 的基底類別實作會由其衍生類別繼承。 相反，要釋放派生類的資源，您需要提供以下內容：  
   
 - 覆寫基底類別方法及實際釋放衍生類別之資源的 `protected Dispose(Boolean)` 方法。 此方法也應呼叫基底類別的 `Dispose(Boolean)` 方法，並傳遞其處置狀態作為引數。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "78238984"
 [!code-vb[System.IDisposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.idisposable/vb/derived2.vb#6)]  
   
 > [!NOTE]
-> 在 C# 中，您會透過定義<xref:System.Object.Finalize%2A?displayProperty=nameWithType>解構函式[來覆寫 ](../../csharp/programming-guide/classes-and-structs/destructors.md)。  
+> 在 C# 中，您會透過定義[解構函式](../../csharp/programming-guide/classes-and-structs/destructors.md)來覆寫 <xref:System.Object.Finalize%2A?displayProperty=nameWithType>。  
   
 <a name="SafeHandles"></a>
 ## <a name="using-safe-handles"></a>使用安全控制代碼

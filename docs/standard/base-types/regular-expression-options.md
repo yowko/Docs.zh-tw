@@ -13,27 +13,27 @@ helpviewer_keywords:
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73972106"
 ---
 # <a name="regular-expression-options"></a>規則運算式選項
 
 依預設，輸入字串與規則運算式模式中任何常值字元的比較會區分大小寫，規則運算式模式中的空白字元會解譯成常值空白字元，而規則運算式中的擷取群組會隱含也會明確命名。 您可以藉由指定規則運算式選項來修改這些預設規則運算式行為和幾個其他方面。 這些選項 (列示於下表) 可以內嵌為規則運算式模式的部分，或是提供給 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別建構函式或靜態模式比對方法，以做為 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列舉值。
 
-|RegexOptions 成員|內嵌字元|作用|
+|RegexOptions 成員|內嵌字元|效果|
 |-------------------------|----------------------|------------|
 |<xref:System.Text.RegularExpressions.RegexOptions.None>|無法使用|使用預設行為。 如需詳細資訊，請參閱[預設選項](#default-options)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|使用不區分大小寫的比對方式。 如需詳細資訊，請參閱[不區分大小寫比對](#case-insensitive-matching)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase>|`i`|使用不區分大小寫的比對方式。 有關詳細資訊，請參閱[不區分大小寫的匹配](#case-insensitive-matching)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.Multiline>|`m`|使用多行模式，其中 `^` 和 `$` 會比對每一行的開頭與結尾 (而不是輸入字串的開頭和結尾)。 如需詳細資訊，請參閱[多行模式](#multiline-mode)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|使用單行模式，其中句點 (.) 會比對每個字元 (而不是 `\n` 以外的每個字元)。 如需詳細資訊，請參閱[單行模式](#single-line-mode)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|不擷取未命名的群組。 唯一有效的擷取是明確命名或編號的群組，格式如下：`(?<`name`>` subexpression`)`。 如需詳細資訊，請參閱[僅明確擷取](#explicit-captures-only)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|使用單行模式，其中句點 (.) 會比對每個字元 (而不是 `\n` 以外的每個字元)。 有關詳細資訊，請參閱[單行模式](#single-line-mode)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|不擷取未命名的群組。 唯一有效的擷取是明確命名或編號的群組，格式如下：`(?<`name** subexpression`>` **`)`。 如需詳細資訊，請參閱[僅明確擷取](#explicit-captures-only)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|無法使用|將規則運算式編譯為組件。 如需詳細資訊，請參閱[編譯的規則運算式](#compiled-regular-expressions)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|在模式中排除未逸出的空白字元，並且在數字符號 (`#`) 後面啟用註解。 如需詳細資訊，請參閱[忽略空白字元](#ignore-white-space)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|在模式中排除未逸出的空白字元，並且在數字符號 (`#`) 後面啟用註解。 有關詳細資訊，請參閱[忽略空白](#ignore-white-space)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|無法使用|變更搜尋方向。 搜尋方向為由右至左，而不是由左至右。 如需詳細資訊，請參閱[由右至左模式](#right-to-left-mode)。|
-|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|無法使用|為運算式啟用符合 ECMAScript 規範的行為。 如需詳細資訊，請參閱 [ECMAScript 相符行為](#ecmascript-matching-behavior)。|
+|<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|無法使用|為運算式啟用符合 ECMAScript 的行為。 如需詳細資訊，請參閱 [ECMAScript 相符行為](#ecmascript-matching-behavior)。|
 |<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|無法使用|忽略語言中的文化特性差異。 如需詳細資訊，請參閱[使用不因國別而異的文化特性比較](#comparison-using-the-invariant-culture)。|
 
 ## <a name="specifying-the-options"></a>指定選項
@@ -44,21 +44,21 @@ ms.locfileid: "73972106"
 
   當使用類別建構函式的 `options` 參數提供選項給 <xref:System.Text.RegularExpressions.Regex> 執行個體時，選項會指派給 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 屬性。 不過，<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 屬性不會在規則運算式模式中反映內嵌選項。
 
-  下列範例提供一個實例。 其使用 `options` 方法的 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 參數來啟用不區分大小寫比對，並且在識別以字母 "d" 開頭的文字時，忽略模式空白字元。
+  下列範例提供說明。 其使用 `options` 方法的 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 參數來啟用不區分大小寫比對，並且在識別以字母 "d" 開頭的文字時，忽略模式空白字元。
 
   [!code-csharp[Conceptual.Regex.Language.Options#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#6)]
   [!code-vb[Conceptual.Regex.Language.Options#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#6)]
 
 - 使用語法 `(?imnsx-imnsx)`，在規則運算式模式中套用內嵌選項。 此選項會從定義選項的位置開始套用至模式，直到模式結尾，或是有其他內嵌選項取消定義選項為止。 請注意，<xref:System.Text.RegularExpressions.Regex> 執行個體的 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 屬性不會反映這些內嵌選項。 如需詳細資訊，請參閱[其他建構](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)主題。
 
-  下列範例提供一個實例。 其使用內嵌選項來啟用不區分大小寫比對，並且在識別以字母 "d" 開頭的文字時，忽略模式空白字元。
+  下列範例提供說明。 其使用內嵌選項來啟用不區分大小寫比對，並且在識別以字母 "d" 開頭的文字時，忽略模式空白字元。
 
   [!code-csharp[Conceptual.Regex.Language.Options#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#7)]
   [!code-vb[Conceptual.Regex.Language.Options#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#7)]
 
-- 使用語法 `(?imnsx-imnsx:`subexpression`)`，在規則運算式模式的特定群組建構中套用內嵌選項。 如果選項集前面沒有符號，會開啟選項集；如果選項集前面有減號，則會關閉選項集。 （`?` 是語言結構的固定部分，無論啟用或停用選項，都需要此語法。）此選項只適用于該群組。 如需詳細資訊，請參閱[分組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
+- 通過在正則運算式模式中使用語法`(?imnsx-imnsx:`*子運算式*`)`在特定的分組構造中應用內聯選項。 如果選項集前面沒有符號，會開啟選項集；如果選項集前面有減號，則會關閉選項集。 （`?`是語言構造語法的固定部分，無論選項是啟用還是禁用，都需要該語法。該選項僅適用于該組。 如需詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
-  下列範例提供一個實例。 其使用群組建構中的內嵌選項來啟用不區分大小寫比對，並且在識別以字母 "d" 開頭的文字時，忽略模式空白字元。
+  下列範例提供說明。 其使用群組建構中的內嵌選項來啟用不區分大小寫比對，並且在識別以字母 "d" 開頭的文字時，忽略模式空白字元。
 
   [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
   [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]
@@ -110,7 +110,7 @@ ms.locfileid: "73972106"
 
 ## <a name="default-options"></a>預設選項
 
-<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 選項指出未指定任何選項，而規則運算式引擎使用其預設行為。 其中包括下列項目：
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 選項指出未指定任何選項，而規則運算式引擎使用其預設行為。 這包括下列項目：
 
 - 模式被解譯為標準規則運算式，而不是 ECMAScript 規則運算式。
 
@@ -137,7 +137,7 @@ ms.locfileid: "73972106"
 
 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> 選項 (或 `i` 內嵌選項) 提供不區分大小寫比對。 依預設，會使用目前文化特性的大小寫慣例。
 
-下列範例定義規則運算式模式 `\bthe\w*\b`，它會比對以 "the" 開頭的所有文字。 因為第一次呼叫 <xref:System.Text.RegularExpressions.Regex.Match%2A> 方法是使用預設的區分大小寫比較，所以輸出指出未比對句子開頭的 "The" 字串。 選項設為 <xref:System.Text.RegularExpressions.Regex.Match%2A> 來呼叫 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> 方法時，才會加以比對。
+下列範例定義規則運算式模式 `\bthe\w*\b`，它會比對以 "the" 開頭的所有文字。 因為第一次呼叫 <xref:System.Text.RegularExpressions.Regex.Match%2A> 方法是使用預設的區分大小寫比較，所以輸出指出未比對句子開頭的 "The" 字串。 選項設為 <xref:System.Text.RegularExpressions.Regex.Match%2A> 來呼叫  <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> 方法時，才會加以比對。
 
 [!code-csharp[Conceptual.Regex.Language.Options#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case1.cs#1)]
 [!code-vb[Conceptual.Regex.Language.Options#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case1.vb#1)]
@@ -190,7 +190,7 @@ ms.locfileid: "73972106"
 
 ## <a name="explicit-captures-only"></a>僅明確擷取
 
-依預設，擷取群組的定義方式是在規則運算式模式中使用括號。 具名群組是以 `(?<`name`>`subexpression`)` 語言選項來指派名稱或號碼，而未具名群組可透過索引來存取。 在 <xref:System.Text.RegularExpressions.GroupCollection> 物件中，未具名群組的前面是具名群組。
+依預設，擷取群組的定義方式是在規則運算式模式中使用括號。 命名組由`(?<`*名稱*`>`*子運算式*`)`語言選項分配名稱或數位，而未命名的組可通過索引訪問。 在 <xref:System.Text.RegularExpressions.GroupCollection> 物件中，未具名群組的前面是具名群組。
 
 群組建構通常只用來將數量詞套用至多個語言項目，我們對所擷取的子字串並不感興趣。 例如，如果下列運算式：
 
@@ -262,13 +262,13 @@ ms.locfileid: "73972106"
 
 - 字元類別中的空白字元一律解譯為常值。 例如，規則運算式模式 `[ .,;:]` 會比對任何單一空白字元、句點、逗號、分號或冒號。
 
-- 方括號數量詞中不允許空白字元，例如 `{`n`}`、`{`n`,}` 和 `{`n`,`m`}`。 例如，規則運算式模式 `\d{1, 3}` 無法比對從一到三位數的任何數字序列，因為其中包含空白字元。
+- `{`括弧內的限定限定詞中不允許使用空白，例如*n、n*`}``{`*n*`,}`和`{` *n*`,`*m*`}`。 例如，規則運算式模式 `\d{1, 3}` 無法比對從一到三位數的任何數字序列，因為其中包含空白字元。
 
-- 引進語言項目的字元序列中，不允許空白字元。 例如:
+- 引進語言項目的字元序列中，不允許空白字元。 例如：
 
-  - 語言元素 `(?:`subexpression`)` 代表非擷取群組，而該項目的 `(?:` 部分不能有內嵌空格。 模式 `(? :`*subexpression*`)` 會在執行時期擲回 <xref:System.ArgumentException>，因為規則運算式引擎無法剖析該模式，而且模式 `( ?:`*subexpression*`)` 無法比對 *subexpression*。
+  - 語言元素`(?:`*子運算式*`)`表示非捕獲組，`(?:`並且元素部分不能具有嵌入空格。 模式`(? :`*子運算式*`)`在運行時引發<xref:System.ArgumentException>一個，因為正則運算式引擎無法分析模式，並且模式`( ?:`*子運算式*`)`無法匹配*子運算式*。
 
-  - 語言元素 `\p{`name`}` 代表 Unicode 類別或具名資料區塊，不能在此元素的 `\p{` 部分中包含內嵌空格。 如果包含空白字元，則此項目會在執行時期擲回 <xref:System.ArgumentException>。
+  - 語言元素`\p{`*名稱*`}`表示 Unicode 類別或命名塊，不能在元素部分`\p{`中包含嵌入空格。 如果包含空白字元，則此項目會在執行時期擲回 <xref:System.ArgumentException>。
 
 啟用此選項有助於簡化通常很難剖析及了解的規則運算式。 其增進了可讀性，並且讓規則運算式可以被記載下來。
 
@@ -298,7 +298,7 @@ ms.locfileid: "73972106"
 [!code-csharp[Conceptual.Regex.Language.Options#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft1.cs#17)]
 [!code-vb[Conceptual.Regex.Language.Options#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft1.vb#17)]
 
-另請注意，右合樣判斷提示 (`(?=`subexpression`)` 語言元素) 和左合樣判斷提示 (`(?<=`subexpression`)` 語言元素) 沒有變更方向。 右合樣判斷提示朝右看，而左合樣判斷提示朝左看。 例如，規則運算式 `(?<=\d{1,2}\s)\w+,?\s\d{4}` 使用左合樣判斷提示來測試月份名稱前面的日期。 然後規則運算式會比對月和年。 如需右合樣判斷提示和左合樣判斷提示的詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
+另請注意，前視斷言（`(?=`*子運算式*`)`語言元素）和後視斷言（`(?<=`*子運算式*`)`語言元素）不會更改方向。 右合樣判斷提示朝右看，而左合樣判斷提示朝左看。 例如，規則運算式 `(?<=\d{1,2}\s)\w+,?\s\d{4}` 使用左合樣判斷提示來測試月份名稱前面的日期。 然後規則運算式會比對月和年。 如需右合樣判斷提示和左合樣判斷提示的詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
 [!code-csharp[Conceptual.Regex.Language.Options#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft2.cs#18)]
 [!code-vb[Conceptual.Regex.Language.Options#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft2.vb#18)]
@@ -324,7 +324,7 @@ ms.locfileid: "73972106"
 
 ECMAScript 的行為與標準規則運算式有三個不同層面：字元類別語法、自我參考擷取群組，以及八進位與反向參考解譯。
 
-- 字元類別語法。 因為標準規則運算式支援 Unicode，而 ECMAScript 不支援，所以 ECMAScript 中的字元類別有較多的語法限制，而且有些字元類別語言項目有不同的意義。 例如，ECMAScript 不支援語言項目 (例如 Unicode 類別) 或資料區塊項目 `\p` 和 `\P`。 同樣地，使用 ECMAScript 時，`\w` 項目 (用來比對文字字元) 同等於 `[a-zA-Z_0-9]` 字元類別，使用標準行為時，同等於 `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`。 如需詳細資訊，請參閱[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。
+- 字元類別語法。 因為標準規則運算式支援 Unicode，而 ECMAScript 不支援，所以 ECMAScript 中的字元類別有較多的語法限制，而且有些字元類別語言項目有不同的意義。 例如，ECMAScript 不支援語言項目 (例如 Unicode 類別) 或資料區塊項目 `\p` 和 `\P`。 同樣地，使用 ECMAScript 時，`\w` 項目 (用來比對文字字元) 同等於 `[a-zA-Z_0-9]` 字元類別，使用標準行為時，同等於 `[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]`。 有關詳細資訊，請參閱[字元類](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。
 
   下列範例說明標準與 ECMAScript 模式比對之間的差異。 其定義規則運算式 `\b(\w+\s*)+`，可比對後接空白字元的文字。 該輸入包含兩個字串，一個使用 Latin 字元集，另一個使用 Cyrillic 字元集。 如輸出所示，呼叫使用 ECMAScript 比對的 <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 方法時，無法比對 Cyrillic 文字，而使用標準比對的方法呼叫則可比對這些文字。
 
@@ -375,6 +375,6 @@ ECMAScript 的行為與標準規則運算式有三個不同層面：字元類別
 [!code-csharp[Conceptual.Regex.Language.Options#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/culture1.cs#15)]
 [!code-vb[Conceptual.Regex.Language.Options#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/culture1.vb#15)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [正則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 ms.openlocfilehash: 51292d977f2be87cec7c3481f5004fe5fe756224
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74204546"
 ---
 # <a name="task-based-asynchronous-programming"></a>工作型非同步程式設計
 
-工作平行程式庫 (TPL) 是以「工作」(Task) 的概念為基礎，工作表示非同步作業。 在某些方面，工作類似執行緒或 <xref:System.Threading.ThreadPool> 工作項目，但是抽象等級較高。 「工作平行處理原則」(Task Parallelism) 是指同時執行一個或多個獨立工作。 工作主要提供兩項優點：
+工作平行程式庫 (TPL) 是以「工作」**(Task) 的概念為基礎，工作表示非同步作業。 在某些方面，工作類似執行緒或 <xref:System.Threading.ThreadPool> 工作項目，但是抽象等級較高。 「工作平行處理原則」**(Task Parallelism) 是指同時執行一個或多個獨立工作。 工作主要提供兩項優點：
 
 - 更有效率且更靈活地使用系統資源。
 
@@ -65,7 +65,7 @@ ms.locfileid: "74204546"
 [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
 [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]
 
-<xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 都會公開一個靜態 <xref:System.Threading.Tasks.Task.Factory%2A> 屬性，以傳回 <xref:System.Threading.Tasks.TaskFactory>的預設實例，讓您可以呼叫方法做為 `Task.Factory.StartNew()`。 另外，在下面範例中，每個工作都屬於 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 類型，因此它們都各自具有包含計算結果的公用 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性。 這些工作會以非同步方式執行，且可能以任何順序完成。 如果在計算完成之前就存取 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性，則這個屬性會封鎖呼叫端執行緒，直到有值為止。
+<xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 都會公開靜態 <xref:System.Threading.Tasks.Task.Factory%2A> 屬性，這個屬性會傳回 <xref:System.Threading.Tasks.TaskFactory> 的預設執行個體，讓您以 `Task.Factory.StartNew()` 的形式呼叫這個方法。 另外，在下面範例中，每個工作都屬於 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 類型，因此它們都各自具有包含計算結果的公用 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性。 這些工作會以非同步方式執行，且可能以任何順序完成。 如果在計算完成之前就存取 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性，則這個屬性會封鎖呼叫端執行緒，直到有值為止。
 
 [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
 [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]
@@ -87,9 +87,9 @@ ms.locfileid: "74204546"
 [!code-csharp[TPL_TaskIntro#23](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
 [!code-vb[TPL_TaskIntro#23](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]
 
-## <a name="task-id"></a>工作 ID
+## <a name="task-id"></a>工作識別碼
 
-每個工作都會得到一個整數 ID，這個 ID 負責在應用程式定義域中唯一識別該工作，且可以經由 <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=nameWithType> 屬性來存取。 當要在 Visual Studio Debugger 的 [平行堆疊] 和 [工作] 視窗中檢閱工作資訊時，這個 ID 很有用。 ID 是採延遲建立的方式，也就是說，要等到收到要求後才會建立 ID。因此，每次執行程式時，工作都可能會有不同的 ID。 如需如何在偵錯工具中檢閱工作識別碼的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)和[使用平行堆疊視窗](/visualstudio/debugger/using-the-parallel-stacks-window)。
+每個工作都會得到一個整數 ID，這個 ID 負責在應用程式定義域中唯一識別該工作，且可以經由 <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=nameWithType> 屬性來存取。 當要在 Visual Studio Debugger 的 [平行堆疊]**** 和 [工作]**** 視窗中檢閱工作資訊時，這個 ID 很有用。 ID 是採延遲建立的方式，也就是說，要等到收到要求後才會建立 ID。因此，每次執行程式時，工作都可能會有不同的 ID。 如需如何在偵錯工具中檢閱工作識別碼的詳細資訊，請參閱[使用工作視窗](/visualstudio/debugger/using-the-tasks-window)和[使用平行堆疊視窗](/visualstudio/debugger/using-the-parallel-stacks-window)。
 
 ## <a name="task-creation-options"></a>工作建立選項
 
@@ -114,7 +114,7 @@ ms.locfileid: "74204546"
 每個執行緒都有相關聯的文化特性和 UI 文化特性，分別由 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> 屬性定義。 執行緒的文化特性會用在格式化、剖析、排序及字串比較之類的作業。 執行緒的 UI 文化特性會用於資源查閱。 一般來說，除非您使用 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> 屬性，為應用程式定義域中的所有執行緒指定預設文化特性，否則執行緒的預設文化特性和 UI 文化特性是由系統文化特性所定義。 如果您明確設定執行緒的文化特性，並啟動新的執行緒，新的執行緒並不會繼承呼叫執行緒的文化特性；相反地，其文化特性為預設系統文化特性。 如果應用程式是以早於 .NET Framework 4.6 的 .NET Framework 版本為目標，則其以工作為基礎的程式設計模型遵循此做法。
 
 > [!IMPORTANT]
-> 請注意，作為工作內容一部分之呼叫執行緒文化特性適用於以 .NET Framework 4.6 為「目標」的應用程式，不適用於在 .NET Framework 4.6 「之下執行」的應用程式。 在 Visual Studio 中建立專案時，您可以從 [新增專案] 對話方塊頂端的下拉式清單中選取特定版本的 .NET Framework 設為目標，如果是在 Visual Studio 之外，您可以使用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 屬性。 如果應用程式是以早於 .NET Framework 4.6 的 .NET Framework 版本為目標，或是不以特定版本的 .NET Framework 版本為目標，則工作文化特性還是取決於所執行之執行緒的文化特性。
+> 請注意，作為工作內容一部分之呼叫執行緒文化特性適用於以 .NET Framework 4.6 為「目標」** 的應用程式，不適用於在 .NET Framework 4.6 「之下執行」** 的應用程式。 在 Visual Studio 中建立專案時，您可以從 [新增專案]**** 對話方塊頂端的下拉式清單中選取特定版本的 .NET Framework 設為目標，如果是在 Visual Studio 之外，您可以使用 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 屬性。 如果應用程式是以早於 .NET Framework 4.6 的 .NET Framework 版本為目標，或是不以特定版本的 .NET Framework 版本為目標，則工作文化特性還是取決於所執行之執行緒的文化特性。
 
 從以 .NET Framework 4.6 為目標的應用程式開始，即使工作是在執行緒集區執行緒上非同步執行，每項工作仍會繼承呼叫執行緒的文化特性。
 
@@ -123,7 +123,7 @@ ms.locfileid: "74204546"
 [!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
 [!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
 
-如果您使用 Visual Studio，您可以省略 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 屬性，然後在 [新增專案] 對話方塊中建立專案時，改為選取 .NET Framework 4.6 做為目標。
+如果您使用 Visual Studio，您可以省略 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 屬性，然後在 [新增專案]**** 對話方塊中建立專案時，改為選取 .NET Framework 4.6 做為目標。
 
 如果輸出所反映之應用程式行為是以早於 .NET Framework 4.6 的 .NET framework 版本為目標，請移除原始程式碼中的 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 屬性。 輸出會反映預設系統文化特性的格式化慣例，而不是呼叫執行緒文化特性的格式化慣例。
 
@@ -131,9 +131,9 @@ ms.locfileid: "74204546"
 
 ## <a name="creating-task-continuations"></a>建立工作接續
 
-<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> 方法可讓您指定在「前項工作」(Antecedent Task) 完成時要啟動的工作。 前項工作的參考會傳遞給接續工作的委派，以便檢查前項工作的狀態，並可藉由擷取 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性的值，使用前項的輸出做為接續的輸入。
+<xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> 方法可讓您指定在「前項工作」(Antecedent Task)** 完成時要啟動的工作。 前項工作的參考會傳遞給接續工作的委派，以便檢查前項工作的狀態，並可藉由擷取 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性的值，使用前項的輸出做為接續的輸入。
 
-在下面範例中，`getData` 工作是透過呼叫 <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> 方法來啟動。 當 `processData` 完成時，會自動啟動 `getData` 工作，而 `displayData` 完成時會啟動 `processData`。 `getData` 會產生可透過 `getData` 工作的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性來存取 `processData` 工作的整數陣列。 `processData` 工作會處理該陣列並傳回結果，這個結果的類型是從傳遞給 <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> 方法之 Lambda 運算式的傳回類型推斷而來。 當 `displayData` 完成時，`processData` 工作會自動執行，而 <xref:System.Tuple%603> Lambda 運算式傳回的 `processData` 物件可供 `displayData` 工作透過 `processData` 工作的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性來存取。 `displayData` 工作會接受 `processData` 工作的結果並且產生結果，這個結果的類型也是以類似方式推斷而來，且這個結果會放在 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性中讓程式取得。
+在下面範例中，`getData` 工作是透過呼叫 <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> 方法來啟動。 當 `processData` 完成時，會自動啟動 `getData` 工作，而 `displayData` 完成時會啟動 `processData`。 `getData` 會產生整數陣列，`processData` 工作可透過 `getData` 工作的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性存取該陣列。 `processData` 工作會處理該陣列並傳回結果，這個結果的類型是從傳遞給 <xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> 方法之 Lambda 運算式的傳回類型推斷而來。 當 `displayData` 完成時，`processData` 工作會自動執行，而 <xref:System.Tuple%603> Lambda 運算式傳回的 `processData` 物件可供 `displayData` 工作透過 `processData` 工作的 <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> 屬性來存取。 `displayData` 工作會接受 `processData` 工作的結果並且產生結果，這個結果的類型也是以類似方式推斷而來，且這個結果會放在 <xref:System.Threading.Tasks.Task%601.Result%2A> 屬性中讓程式取得。
 
 [!code-csharp[TPL_TaskIntro#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/continuations1.cs#5)]
 [!code-vb[TPL_TaskIntro#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/continuations1.vb#5)]
@@ -149,7 +149,7 @@ ms.locfileid: "74204546"
 
 ## <a name="creating-detached-child-tasks"></a>建立中斷連結的子工作
 
-當在工作內執行的使用者程式碼建立新工作，卻未指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 選項時，新的工作不會以任何特殊方式與父工作保持同步。 這種非同步處理的工作稱為「中斷連結的巢狀工作」(Detached Nested Task) 或「中斷連結的子工作」(Detached Child Task)。 下面範例會示範一個工作如何建立一個中斷連結的子工作。
+當在工作內執行的使用者程式碼建立新工作，卻未指定 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 選項時，新的工作不會以任何特殊方式與父工作保持同步。 這種非同步處理的工作稱為「中斷連結的巢狀工作」**(Detached Nested Task) 或「中斷連結的子工作」**(Detached Child Task)。 下面範例會示範一個工作如何建立一個中斷連結的子工作。
 
 [!code-csharp[TPL_TaskIntro#07](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/taskintro.cs#07)]
 [!code-vb[TPL_TaskIntro#07](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/tpl_intro.vb#07)]
@@ -158,7 +158,7 @@ ms.locfileid: "74204546"
 
 ## <a name="creating-child-tasks"></a>建立子工作
 
-當在工作內執行的使用者程式碼以 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 選項建立新工作時，新的工作即稱為父工作的「附加的子工作」(Attached Child Task)。 您可以使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 選項來呈現結構化工作平行處理原則，因為父工作會隱含等候所有附加的子工作都完成。 下面範例會示範一個父工作如何建立十個附加的子工作。 請注意，雖然此範例會呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法等候父工作完成，但不一定會明確等候附加的子工作完成。
+當在工作內執行的使用者程式碼以 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 選項建立新工作時，新的工作即稱為父工作的「附加的子工作」(Attached Child Task)**。 您可以使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent> 選項來呈現結構化工作平行處理原則，因為父工作會隱含等候所有附加的子工作都完成。 下面範例會示範一個父工作如何建立十個附加的子工作。 請注意，雖然此範例會呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法等候父工作完成，但不一定會明確等候附加的子工作完成。
 
 [!code-csharp[TPL_TaskIntro#8](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/child1.cs#8)]
 [!code-vb[TPL_TaskIntro#8](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/child1.vb#8)]
@@ -186,7 +186,7 @@ ms.locfileid: "74204546"
 
 有些多載可讓您指定逾時，有些多載則額外接受一個 <xref:System.Threading.CancellationToken> 做為輸入參數，讓等候作業本身也可以取消 (不管是透過程式設計還是做為對使用者輸入的回應)。
 
-等候工作時，也會隱含等候該工作之所有使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立的子系。 如果工作已經完成，<xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 會立即傳回。 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法會擲回工作所引發的任何例外狀況，即使 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法是在工作完成之後才呼叫也一樣。
+等候工作時，也會隱含等候該工作之所有使用 <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> 選項建立的子系。 如果工作已完成，則 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 會立即傳回。 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法會擲回工作所引發的任何例外狀況，即使 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法是在工作完成之後才呼叫也一樣。
 
 ## <a name="composing-tasks"></a>組成工作
 
@@ -268,26 +268,26 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 
 建議您不要繼承自 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>， 建議您改用 <xref:System.Threading.Tasks.Task.AsyncState%2A> 屬性，建立其他資料或狀態與 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件的關聯。 您也可以使用擴充方法，擴充 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類別的功能。 如需擴充方法的詳細資訊，請參閱[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)和[擴充方法](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。
 
-如果您必須繼承自 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>，則無法使用 <xref:System.Threading.Tasks.Task.Run%2A>或 <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>、<xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>或 <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> 類別來建立自訂工作類型的實例，因為這些機制只會建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。 此外，也不可以使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 所提供的工作接續機制來建立自訂工作類型執行個體，因為這些機制也是只建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。
+如果必須從<xref:System.Threading.Tasks.Task>繼承<xref:System.Threading.Tasks.Task%601>或 ，不能<xref:System.Threading.Tasks.Task.Run%2A>使用 或<xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>，<xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType>或 ， 或 類來創建自訂任務類型的實例，因為這些<xref:System.Threading.Tasks.Task>機制<xref:System.Threading.Tasks.Task%601>僅創建 和 物件。 此外，也不可以使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 所提供的工作接續機制來建立自訂工作類型執行個體，因為這些機制也是只建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|Title|描述|
 |-|-|
 |[使用接續工作鏈結工作](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|說明接續的運作方式。|
 |[附加與中斷連結的子工作](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|說明附加的與中斷連結的子工作之間的差異。|
 |[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)|說明 <xref:System.Threading.Tasks.Task> 物件內建的取消支援。|
 |[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|說明並行執行緒上發生例外狀況時的處理方式。|
-|[操作說明：使用 Parallel.Invoke 執行平行作業](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.Invoke%2A>。|
-|[操作說明：傳回工作的值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|說明如何從工作傳回值。|
-|[操作說明：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|說明如何取消工作。|
-|[操作說明：建立經過預先計算的工作](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|描述如何使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法擷取保留在快取中之非同步下載作業的結果。|
-|[操作說明：使用平行工作周遊二進位樹狀](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|說明如何使用工作，在二進位樹狀目錄中周遊。|
+|[如何：使用 Parallel.Invoke 執行平行作業](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.Invoke%2A>。|
+|[如何：傳回工作的值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|說明如何從工作傳回值。|
+|[如何：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|說明如何取消工作。|
+|[如何：建立經過預先計算的工作](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|描述如何使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法擷取保留在快取中之非同步下載作業的結果。|
+|[如何：使用平行工作周遊二進位樹狀](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|說明如何使用工作，在二進位樹狀目錄中周遊。|
 |[操作說明：解除包裝巢狀工作](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|示範如何使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 擴充方法。|
-|[資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 建立資料的平行迴圈。|
-|[平行程式設計](../../../docs/standard/parallel-programming/index.md)|.NET Framework 平行程式設計的最上層節點。|
+|[資料並行性](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 建立資料的平行迴圈。|
+|[並行程式設計](../../../docs/standard/parallel-programming/index.md)|.NET Framework 平行程式設計的最上層節點。|
 
 ## <a name="see-also"></a>另請參閱
 
-- [平行程式設計](../../../docs/standard/parallel-programming/index.md)
+- [並行程式設計](../../../docs/standard/parallel-programming/index.md)
 - [使用 .NET Framework 進行平行程式設計的範例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - SpinLock, how to use
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
 ms.openlocfilehash: ad254cb6208bff868e5fc689c502b7ddcc175ad5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73137960"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>操作說明：使用 SpinLock 進行低階同步處理
@@ -28,7 +28,7 @@ ms.locfileid: "73137960"
   
  請注意 `false` (在 Visual Basic 中為 `False`) 在<xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> 呼叫中的用法。 這可提供最佳效能。 在 IA64 架構上指定 `true` (在 Visual Basic 中為 `True`) 以使用記憶體範圍，如此可排清寫入緩衝區，以確保鎖定現已可供其他執行緒結束。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行緒物件和功能](threading-objects-and-features.md)
 - [lock 陳述式 (C#)](../../csharp/language-reference/keywords/lock-statement.md)

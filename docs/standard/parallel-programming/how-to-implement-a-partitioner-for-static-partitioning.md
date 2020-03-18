@@ -6,10 +6,10 @@ helpviewer_keywords:
 - tasks, how to create a static partitioner
 ms.assetid: f4410508-cac6-4ba7-bef1-c5e68b2794f3
 ms.openlocfilehash: 94fbb681b20b9c920c20df2a9017f75a9aa9a6ea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091525"
 ---
 # <a name="how-to-implement-a-partitioner-for-static-partitioning"></a>如何：為靜態分割實作 Partitioner
@@ -20,6 +20,6 @@ ms.locfileid: "73091525"
   
  對於此範例中的分割區，我們假設每個元素的處理時間以線性增加。 在真實世界中，可能很難以這種方式來預測處理時間。 如果您正在使用包含特定資料來源的靜態 Partitioner，您可以最佳化來源的分割公式、加入負載平衡邏輯，或使用[如何： 實作動態分割](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)中示範的區塊分割方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [PLINQ 和 TPL 的自訂 Partitioner](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)

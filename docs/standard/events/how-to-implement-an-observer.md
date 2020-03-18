@@ -10,10 +10,10 @@ helpviewer_keywords:
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 ms.openlocfilehash: e6aba4d85e502563291478640927bd0f234736a8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139315"
 ---
 # <a name="how-to-implement-an-observer"></a>如何：實作觀察器
@@ -47,9 +47,9 @@ ms.locfileid: "73139315"
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#12)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IObserver%601>
-- [觀察者設計模式](../../../docs/standard/events/observer-design-pattern.md)
-- [操作說明：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)
+- [觀察器設計模式](../../../docs/standard/events/observer-design-pattern.md)
+- [如何：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)
 - [觀察者設計模式最佳做法](../../../docs/standard/events/observer-design-pattern-best-practices.md)

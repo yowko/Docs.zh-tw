@@ -1,15 +1,15 @@
 ---
-title: 如何使用 XmlSerializer 進行序列化（C#）
+title: 如何使用 Xml 序列化器 （C#） 序列化
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
 ms.openlocfilehash: 0ec19e964471382c6f10f07d6d4bb25f88fd532f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347388"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a>如何使用 XmlSerializer 進行序列化（C#）
+# <a name="how-to-serialize-using-xmlserializer-c"></a>如何使用 Xml 序列化器 （C#） 序列化
 本主題顯示的範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化與還原序列化。  
   
 ## <a name="example"></a>範例  

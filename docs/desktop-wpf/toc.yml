@@ -18,7 +18,7 @@
       href: fundamentals/xaml-resources-define.md
     - name: 樣式及範本
       items:
-        - name: 總覽
+        - name: 概觀
           href: fundamentals/styles-templates-overview.md
         - name: 建立並套用樣式
           href: fundamentals/styles-templates-create-apply-style.md

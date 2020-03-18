@@ -17,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
 ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74884406"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Common Language Runtime (CLR) 概觀
@@ -62,13 +62,13 @@ Common Language Runtime 使得設計其物件可跨語言互動的元件和應�
 
 ## <a name="clr-versions"></a>CLR 版本
 
-.NET Framework 版本號碼不一定會對應到它所包含之 CLR 的版本號碼。 如需 .NET Framework 版本及其對應 CLR 版本的清單，請參閱[.NET Framework 版本和](../framework/migration-guide/versions-and-dependencies.md)相依性。 .NET Core 版本具有單一產品版本，也就是沒有個別的 CLR 版本。 如需 .NET Core 版本的清單，請參閱[下載 .Net core](https://dotnet.microsoft.com/download/dotnet-core)。
+.NET 框架版本號不一定對應于它所包含的 CLR 的版本號。 有關 .NET 框架版本及其相應的 CLR 版本的清單，請參閱[.NET 框架版本和依賴項](../framework/migration-guide/versions-and-dependencies.md)。 .NET Core 版本具有單個產品版本，即沒有單獨的 CLR 版本。 有關 .NET 核心版本的清單，請參閱[下載 .NET 核心](https://dotnet.microsoft.com/download/dotnet-core)。
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
 |[Managed 執行程序](managed-execution-process.md)|描述充分利用 Common Language Runtime 所需要的步驟。|
-|[自動管理記憶體](automatic-memory-management.md)|說明記憶體回收行程如何配置和釋放記憶體。|
-|[.NET Framework 概觀](../framework/get-started/overview.md)|說明重要的 .NET Framework 概念，例如一般型別系統、跨語言互通性 (Interoperability)、Managed 執行、應用程式定義域和組件。|
+|[自動記憶體管理](automatic-memory-management.md)|說明記憶體回收行程如何配置和釋放記憶體。|
+|[.NET Framework 的概觀](../framework/get-started/overview.md)|說明重要的 .NET Framework 概念，例如一般型別系統、跨語言互通性 (Interoperability)、Managed 執行、應用程式定義域和組件。|
 |[一般類型系統](./base-types/common-type-system.md)|描述型別如何在執行階段中宣告、使用和管理，以支援跨程式語言整合。|

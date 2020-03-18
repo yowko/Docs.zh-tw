@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pausing threads
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 ms.openlocfilehash: 3020694b93479d5f1d64d31c203f8fe033a10320
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128997"
 ---
 # <a name="pausing-and-interrupting-threads"></a>暫停和中斷執行緒
@@ -47,11 +47,11 @@ ms.locfileid: "73128997"
   
 - <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 會從任何可能的等候中喚醒執行緒，並造成 <xref:System.Threading.ThreadAbortException> 在執行緒中被擲回。 如需詳細資訊，請參閱[終結執行緒](../../../docs/standard/threading/destroying-threads.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Thread>
 - <xref:System.Threading.ThreadInterruptedException>
 - <xref:System.Threading.ThreadAbortException>
 - [執行緒處理](../../../docs/standard/threading/index.md)
 - [使用執行緒和執行緒處理](../../../docs/standard/threading/using-threads-and-threading.md)
-- [同步處理原始物件概觀](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [同步基元概述](../../../docs/standard/threading/overview-of-synchronization-primitives.md)

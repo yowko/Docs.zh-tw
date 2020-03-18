@@ -13,10 +13,10 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
 ms.openlocfilehash: 439b862612d7997c9277ffb2cf4f15b14bd0b106
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78156045"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式的最佳作法
@@ -35,7 +35,7 @@ ms.locfileid: "78156045"
   
 - 在與此方法相同的類別上定義 <em>MethodName</em>**Completed** 事件。  
   
-- 對衍生自 <xref:System.EventArgs> 類別的 <em>MethodName</em>**Completed** 事件，定義 <xref:System.ComponentModel.AsyncCompletedEventArgs> 類別和伴隨的委派。 預設類別名稱的格式應該為 <em>MethodName</em>**CompletedEventArgs**。  
+- 對衍生自 <xref:System.ComponentModel.AsyncCompletedEventArgs> 類別的 <em>MethodName</em>**Completed** 事件，定義 <xref:System.EventArgs> 類別和伴隨的委派。 預設類別名稱的格式應該為 <em>MethodName</em>**CompletedEventArgs**。  
   
 - 確定 <xref:System.EventArgs> 類別是 <em>MethodName</em> 方法的傳回值所特有。 當您使用 <xref:System.EventArgs> 類別時，應該不需要開發人員轉換結果。  
   
@@ -99,7 +99,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 - 如果您的類別支援多個並行引動過程，請勿公開 `IsBusy` 屬性。 例如，XML Web 服務 Proxy 不會公開 `IsBusy` 屬性，因為這些 Proxy 支援非同步方法的多個並行引動過程。  
   
-- `IsBusy` 屬性在呼叫 `true`MethodNameAsync**方法之後，以及引發**MethodNameCompleted**事件之前，應該傳回**。 否則應該傳回 `false`。 <xref:System.ComponentModel.BackgroundWorker> 和 <xref:System.Net.WebClient> 元件都是公開 `IsBusy` 屬性之類別的範例。  
+- `IsBusy` 屬性在呼叫 <em>MethodName</em>**Async** 方法之後，以及引發 <em>MethodName</em>**Completed** 事件之前，應該傳回 `true`。 否則應該傳回 `false`。 <xref:System.ComponentModel.BackgroundWorker> 和 <xref:System.Net.WebClient> 元件都是公開 `IsBusy` 屬性之類別的範例。  
   
 ### <a name="cancellation"></a>取消  
   
@@ -155,4 +155,4 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - [決定何時實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
 - [實作事件架構非同步模式的最佳作法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [如何：使用支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)
-- [操作說明：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [如何：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)

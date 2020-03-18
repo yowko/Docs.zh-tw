@@ -13,10 +13,10 @@ helpviewer_keywords:
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
 ms.openlocfilehash: b3a106eb58de4865e260a43c8466019e738510f5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73130894"
 ---
 # <a name="extending-metadata-using-attributes"></a>使用屬性擴充中繼資料
@@ -26,7 +26,7 @@ Common Language Runtime 可讓您加入稱為屬性 (Attribute) 之類似關鍵�
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[套用屬性](../../../docs/standard/attributes/applying-attributes.md)|描述如何將屬性套用至您程式碼的項目。|  
 |[撰寫自訂屬性](../../../docs/standard/attributes/writing-custom-attributes.md)|描述如何設計自訂屬性類別。|  
@@ -34,5 +34,5 @@ Common Language Runtime 可讓您加入稱為屬性 (Attribute) 之類似關鍵�
 |[中繼資料和自我描述元件](../../../docs/standard/metadata-and-self-describing-components.md)|提供中繼資料的概觀，並描述如何在 .NET Framework 可攜式執行檔 (PE) 中實作。|  
 |[操作說明：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|說明如何擷取僅限反映的內容中的自訂屬性資訊。|  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Attribute?displayProperty=nameWithType>

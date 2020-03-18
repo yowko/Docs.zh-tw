@@ -10,15 +10,15 @@ helpviewer_keywords:
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 ms.openlocfilehash: 842ca4ff17f9cbab3a1518d2dea37436c9b23f9d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78155928"
 ---
 # <a name="destroying-threads"></a>終結執行緒
 
-若要終止執行緒的執行，您通常會使用[合作式取消模型](cancellation-in-managed-threads.md)。 有時候，無法以合作方式停止執行緒，因為它會執行協力廠商程式碼，而不是針對合作取消所設計。 .NET Framework 中的 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法可以用來強制終止 managed 執行緒。 當您呼叫 <xref:System.Threading.Thread.Abort%2A>時，Common Language Runtime 會在目標執行緒中擲回一個 <xref:System.Threading.ThreadAbortException>，以供目標執行緒攔截。 如需詳細資訊，請參閱 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 .NET Core 不支援 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 方法。 如果您需要在 .NET Core 中強制終止協力廠商程式碼的執行，請在個別的進程中執行，並使用 <xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>。
+要終止執行緒的執行，通常使用[協作取消模型](cancellation-in-managed-threads.md)。 有時無法以協作方式停止執行緒，因為它運行的協力廠商代碼不是為協作取消而設計的。 .NET 框架中<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>的方法可用於強制終止託管執行緒。 調用 時<xref:System.Threading.Thread.Abort%2A>調用 ，通用語言運行時在目標<xref:System.Threading.ThreadAbortException>執行緒中引發 一個，目標執行緒可以捕獲該執行緒。 如需詳細資訊，請參閱 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 .NET Core 中不支援該方法<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 如果需要在 .NET Core 中強制終止協力廠商代碼的執行，請在單獨的進程中運行它並使用<xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>。
 
 > [!NOTE]
 > 如果執行緒在其 <xref:System.Threading.Thread.Abort%2A> 方法被呼叫時正在執行非受控碼，執行階段就會將它標示為 <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>。 當執行緒返回受控碼時，會擲回例外狀況。  
@@ -61,7 +61,7 @@ catch (ThreadAbortException ex)
 // is rethrown at the end of the Finally clause.  
 ```  
   
- 清除程式碼必須位於 `catch` 子句或 `finally` 子句，因為系統必須在 <xref:System.Threading.ThreadAbortException> 子句結尾處重新擲回 `finally`，如果沒有 `catch` 子句，則會在 `finally` 子句結尾處重新擲回。  
+ 清除程式碼必須位於 `catch` 子句或 `finally` 子句，因為系統必須在 `finally` 子句結尾處重新擲回 <xref:System.Threading.ThreadAbortException>，如果沒有 `finally` 子句，則會在 `catch` 子句結尾處重新擲回。  
   
  您可以呼叫 <xref:System.Threading.Thread.ResetAbort%2A?displayProperty=nameWithType> 方法來防止系統重新擲回例外狀況。 但是，只有當您自己的程式碼會造成 <xref:System.Threading.ThreadAbortException>，才應採取此作法。  
   

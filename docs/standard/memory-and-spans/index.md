@@ -8,15 +8,15 @@ helpviewer_keywords:
 - buffers"
 - pipeline processing
 ms.openlocfilehash: b61b1dbbedf4658fe113986fbb4a792a2f574534
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121992"
 ---
 # <a name="memory--and-span-related-types"></a>記憶體與延伸相關類型
 
-從 .NET Core 2.1 開始，.NET 就包括一些相關類型，這些類型代表連續的強型別任意記憶體區域。 它們包括：
+從 .NET Core 2.1 開始，.NET 就包括一些相關類型，這些類型代表連續的強型別任意記憶體區域。 其中包括：
 
 - <xref:System.Span%601?displayProperty=nameWithType>，此類型是用來存取連續記憶體區域。 <xref:System.Span%601> 執行個體可由類型 `T` 的陣列、<xref:System.String>、使用[stackalloc](../../csharp/language-reference/operators/stackalloc.md) 配置的緩衝區或非受控記憶體的指標來支持。 因為它必須在堆疊上配置，它有一些限制。 例如，類別中欄位的類型不能是 <xref:System.Span%601>，而且延伸也不能用於非同步作業中。
 
@@ -45,7 +45,7 @@ ms.locfileid: "73121992"
 
 因為記憶體與延伸相關類型通常用於將資料存放在處理管線中，開發人員在使用<xref:System.Span%601>、<xref:System.Memory%601> 與相關類型時務必依照一組最佳作法執行。 這些最佳做法記錄在[記憶體\<T>與延伸\<T> 使用指導方針](memory-t-usage-guidelines.md)中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Memory%601?displayProperty=nameWithType>
 - <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>

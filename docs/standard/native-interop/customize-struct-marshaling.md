@@ -6,11 +6,11 @@ dev_langs:
 - csharp
 - cpp
 ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741527"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400369"
 ---
 # <a name="customizing-structure-marshaling"></a>自訂結構封送處理
 
@@ -20,17 +20,17 @@ ms.locfileid: "76741527"
 
 .NET 提供 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 屬性與 <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> 列舉，讓您可以自訂欄位在記憶體中的放置方式。 下列指導方針將可協助您避免常見問題。
 
-✔️請盡可能考慮使用 `LayoutKind.Sequential`。
+✔️ 考慮使用 `LayoutKind.Sequential` (若可行)。
 
-當您的原生結構也有明確的配置（例如等位）時，✔️只在封送處理中使用 `LayoutKind.Explicit`。
+✔️ 務必只在封送處理中使用 `LayoutKind.Explicit` (當您的原生結構也有明確的配置 (例如聯集) 時)。
 
-如果您需要以 .NET Core 3.0 之前的執行時間為目標，請 ❌ 避免在非 Windows 平臺上封送處理結構時使用 `LayoutKind.Explicit`。 3\.0 之前的 .NET Core 執行時間不支援在 Intel 或 AMD 64 位非 Windows 系統上，以傳值方式將明確結構傳遞至原生函式。 不過，執行階段支援在所有平台上以傳參考方式傳遞明確結構。
+❌如果需要在`LayoutKind.Explicit`.NET Core 3.0 之前定位運行時，則在非 Windows 平臺上對結構進行封送時使用。 3.0 之前的 .NET Core 運行時不支援按值將顯式結構傳遞給英特爾或 AMD 64 位非 Windows 系統上的本機函數。 不過，執行階段支援在所有平台上以傳參考方式傳遞明確結構。
 
 ## <a name="customizing-boolean-field-marshaling"></a>自訂布林值欄位封送處理
 
 機器碼有許多不同的布林值表示法。 在 Windows 上，有三種方式可以代表布林值。 執行階段不知道您結構的原生定義，因此它可以做到的最佳程度是猜測如何封送處理您的布林值。 .NET 執行階段提供一種方式來指出如何封送處理您的布林值欄位。 下列範例示範如何將 .NET `bool` 封送處理為不同的原生布林值類型。
 
-布林值預設為封送處理為原生 4 位元組 Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) 值，如下列範例所示：
+布林值預設為本機 4 位元組 Win32[`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL)值封送，如以下示例所示：
 
 ```csharp
 public struct WinBool
@@ -163,7 +163,7 @@ struct InPlaceArray
 
 .NET 也為封送處理字串欄位提供各種自訂。
 
-根據預設，.NET 會將字串封送處理為指向結尾為 Null 之字串的指標。 編碼取決於 <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> 中 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 欄位的值。 若未指定任何屬性，編碼會預設為 ANSI 編碼。
+根據預設，.NET 會將字串封送處理為指向結尾為 Null 之字串的指標。 編碼取決於 <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 中 <xref:System.Runtime.InteropServices.StructLayoutAttribute.CharSet?displayProperty=nameWithType> 欄位的值。 若未指定任何屬性，編碼會預設為 ANSI 編碼。
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
@@ -195,7 +195,7 @@ struct DefaultString
 };
 ```
 
-若需要為不同的藍未使用不同的編碼或只是想要在您的結構定義中更為明確，您可以使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> 屬性上的 <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> 或 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 值。
+若需要為不同的藍未使用不同的編碼或只是想要在您的結構定義中更為明確，您可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 屬性上的 <xref:System.Runtime.InteropServices.UnmanagedType.LPStr?displayProperty=nameWithType> 或 <xref:System.Runtime.InteropServices.UnmanagedType.LPWStr?displayProperty=nameWithType> 值。
 
 ```csharp
 public struct AnsiString
@@ -227,7 +227,7 @@ struct UnicodeString
 };
 ```
 
-若想要使用 UTF-8 編碼來封送處理您的字串，您可以使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 中的 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 值。
+若想要使用 UTF-8 編碼來封送處理您的字串，您可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 中的 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 值。
 
 ```csharp
 public struct UTF8String
@@ -247,7 +247,7 @@ struct UTF8String
 > [!NOTE]
 > 使用 <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 需要 .NET Framework 4.7 (或更新版本) 或 .NET Core 1.1 (或更新版本)。 它在 .NET Standard 2.0 中不提供。
 
-若您要處理 COM API，您可能必須將字串封送處理為 `BSTR`。 使用 <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> 值時，您可以將字串封送處理為 `BSTR`。
+若您要處理 COM API，您可能必須將字串封送處理為 `BSTR`。 使用 <xref:System.Runtime.InteropServices.UnmanagedType.BStr?displayProperty=nameWithType> 值，您可以將字串封送處理為 `BSTR`。
 
 ```csharp
 public struct BString
@@ -264,7 +264,7 @@ struct BString
 };
 ```
 
-使用 WinRT 型 API 時，您可能需要將字串封送處理為 `HSTRING`。  使用 <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> 值時，您可以將字串封送處理為 `HSTRING`。
+使用 WinRT 型 API 時，您可能需要將字串封送處理為 `HSTRING`。  使用 <xref:System.Runtime.InteropServices.UnmanagedType.HString?displayProperty=nameWithType> 值，您可以將字串封送處理為 `HSTRING`。
 
 ```csharp
 public struct HString
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>自訂十進位欄位封送處理
 
-如果您在 Windows 上工作，您可能會遇到一些使用原生 [`CY` 或 `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 結構的 API。 根據預設，.NET `decimal` 類型會封送處理為原生 [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 結構。 不過，您可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 搭配 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值來指示封送處理器將 `decimal` 值轉換為原生 `CY` 值。
+如果您正在處理 Windows，則可能會遇到一些使用本機[`CY`或`CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1)結構的 API。 預設情況下，.NET`decimal`類型對本機[`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1)結構進行封送。 不過，您可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 搭配 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值來指示封送處理器將 `decimal` 值轉換為原生 `CY` 值。
 
 ```csharp
 public struct Currency
@@ -358,7 +358,7 @@ struct ObjectDefault
 };
 ```
 
-若要將物件欄位封送處理為 `IDispatch*`，請新增具有 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 值的 <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType>。
+若要將物件欄位封送處理為 `IDispatch*`，請新增具有 <xref:System.Runtime.InteropServices.UnmanagedType.IDispatch?displayProperty=nameWithType> 值的 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。
 
 ```csharp
 public struct ObjectDispatch
@@ -375,7 +375,7 @@ struct ObjectDispatch
 };
 ```
 
-若要將它封送處理為 `VARIANT`，請新增具有 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 值的 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>。
+若要將它封送處理為 `VARIANT`，請新增具有 <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> 值的 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。
 
 ```csharp
 public struct ObjectVariant

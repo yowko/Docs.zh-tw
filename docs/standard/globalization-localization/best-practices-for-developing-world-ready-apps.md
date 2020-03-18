@@ -9,10 +9,10 @@ helpviewer_keywords:
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 ms.openlocfilehash: a2cd1039f95a763002922fc2fa24eff77838de80
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141293"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>開發世界性應用程式的最佳做法
@@ -49,7 +49,7 @@ ms.locfileid: "73141293"
 
 9. 使用國際資料，在國際作業系統版本上測試您的應用程式功能。
 
-10. 如果安全性決策是根據字串比較或大小寫變更作業的結果而定，則請使用不區分文化特性 (Culture) 的字串作業。 這種作法可以確保結果不會受 `CultureInfo.CurrentCulture` 的值所影響。 如需示範區分文化特性 (Culture) 的字串比較如何產生不一致結果的範例，請參閱[使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)中的[「使用目前文化特性 (Culture) 的字串比較」](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture)一節。
+10. 如果安全性決策是根據字串比較或大小寫變更作業的結果而定，則請使用不區分文化特性 (Culture) 的字串作業。 這種作法可以確保結果不會受 `CultureInfo.CurrentCulture` 的值所影響。 有關[使用字串的最佳實踐](../../../docs/standard/base-types/best-practices-strings.md)的示例，請參閱使用[目前範圍性的"字串比較"](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture)部分，該示例演示了區分區域性的字串比較如何產生不一致的結果。
 
 ## <a name="localization-best-practices"></a>當地語系化最佳做法
 
@@ -91,7 +91,7 @@ ms.locfileid: "73141293"
 
 4. 指定 ASP.NET 應用程式中，下列三個位置的 requestEncoding、responseEncoding、fileEncoding、culture 和 uiCulture 屬性值：
 
-    - 在 Web.config 檔案的全球化區段中。 這個程式位於 ASP.NET 應用程式外部。 如需詳細資訊，請參閱 [\<globalization> 元素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100))。
+    - 在 Web.config 檔案的全球化區段中。 這個程式位於 ASP.NET 應用程式外部。 有關詳細資訊，請參閱[\<> 元素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hy4kkhe0(v=vs.100))的全球化。
 
     - 在網頁指示詞中。 請注意，當應用程式位於網頁中，表示這個檔案已被讀取。 因此，此時要指定 fileEncoding 和 requestEncoding 已經太遲了。 您只能在網頁指示詞中指定 uiCulture、Culture 和 responseEncoding。
 
@@ -99,7 +99,7 @@ ms.locfileid: "73141293"
 
 5. 請注意，uiCulture 值可設為瀏覽器所接受的語言。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)
 - [桌面應用程式中的資源](../../../docs/framework/resources/index.md)

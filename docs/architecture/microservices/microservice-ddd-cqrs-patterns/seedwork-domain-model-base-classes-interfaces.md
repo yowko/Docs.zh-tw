@@ -3,25 +3,25 @@ title: Seedwork (網域模型的可重複使用基底類別和介面)
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用 seedwork 概念作為起點，開始實作 DDD 導向的領域模型。
 ms.date: 10/08/2018
 ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116577"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (網域模型的可重複使用基底類別和介面)
 
-方案資料夾中包含了一個 *SeedWork* 資料夾。 此資料夾包含自訂基底類別，您可以使用它們作為您領域實體和值物件的基底。 使用這些基類，讓您在每個網域的物件類別中都沒有多餘的程式碼。 這些類別類型的資料夾名為 *SeedWork*，而非 *Framework*。 這稱為*SeedWork* ，因為該資料夾只包含一小部分可重複使用的類別，無法真正被視為架構。 *SeedWork* 是一個由 [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) 引入的字詞，並由 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) 進一步推廣，但您也可以將資料夾命名為 Common、SharedKernel 或其他相似名稱。
+方案資料夾中包含了一個 *SeedWork* 資料夾。 此資料夾包含自訂基底類別，您可以使用它們作為您領域實體和值物件的基底。 使用這些基類，這樣每個域的物件類中沒有冗餘碼。 這些類別類型的資料夾名為 *SeedWork*，而非 *Framework*。 它被稱為*SeedWork，* 因為該資料夾只包含一小部分不可重用的類，這些類不能真正被視為框架。 *SeedWork* 是一個由 [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) 引入的字詞，並由 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) 進一步推廣，但您也可以將資料夾命名為 Common、SharedKernel 或其他相似名稱。
 
 圖 7-12 顯示了組成 Ordering 微服務中領域模型 seedwork 的類別。 它有幾個自訂的基底類別，像是 Entity、ValueObject 及 Enumeration，以及其他幾個介面。 這些介面 (IRepository 和 IUnitOfWork) 會通知基礎結構層需要實作的內容。 這些介面也會透過來自應用程式層的相依性插入使用。
 
-:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="SeedWork 資料夾中所含類別的螢幕擷取畫面。":::
-SeedWork 資料夾的詳細內容，其中包含基類和介面： Entity.cs、Enumeration.cs、IAggregateRoot.cs、IRepository.cs、IUnitOfWork.cs 和 ValueObject.cs。
+:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="種子工作資料夾中包含的類的螢幕截圖。":::
+SeedWork 資料夾的詳細內容，其中包含基本類和介面：Entity.cs、Enumeration.cs、IAggregateRoot.cs、IRepository.cs、IUnitOfWork.cs和ValueObject.cs。
 :::image-end:::
 
 **圖 7-12**。 領域模型 “seedwork" 基底類別與介面的範例組
 
-這是一種許多開發人員在物件之間共用的複製及貼上重複使用內容，而非正式的架構。 您可以在任何層或程式庫中具有 seedwork。 不過，如果類別和介面的集合夠大，您可能會想要建立單一類別庫。
+這是一種許多開發人員在物件之間共用的複製及貼上重複使用內容，而非正式的架構。 您可以在任何層或程式庫中具有 seedwork。 但是，如果類和介面集足夠大，則可能需要創建單個類庫。
 
 ## <a name="the-custom-entity-base-class"></a>自訂 Entity 基底類別
 
@@ -139,9 +139,9 @@ public interface IRepository<T> where T : IAggregateRoot
 
 ## <a name="additional-resources"></a>其他資源
 
-- **聖馬丁 Fowler。分隔的介面。** \
+- **馬丁·福勒分離介面。** \
   <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 >[!div class="step-by-step"]
->[上一頁](net-core-microservice-domain-model.md)
->[下一頁](implement-value-objects.md)
+>[上一個](net-core-microservice-domain-model.md)
+>[下一個](implement-value-objects.md)

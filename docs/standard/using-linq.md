@@ -1,6 +1,6 @@
 ---
 title: LINQ (Language Integrated Query)
-description: 瞭解 LINQ 如何提供語言層級查詢功能和 API， C#並 Visual Basic 為撰寫表達性、宣告式程式碼的方式。
+description: 瞭解 LINQ 如何提供語言級查詢功能和 C# 和 Visual Basic API，作為編寫表達性聲明性代碼的一種方式。
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,17 +10,17 @@ dev_langs:
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.openlocfilehash: eafd8f78c3d8de1ba064021111f869571d5a570f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160322"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
 ## <a name="what-is-it"></a>這是什麼？
 
-LINQ 提供語言層級的查詢功能，以及[更高順序](https://en.wikipedia.org/wiki/Higher-order_function)的函C#式 API，並 Visual Basic 為撰寫表達性、宣告式程式碼的方式。
+LINQ 提供語言級查詢功能和到 C# 和 Visual Basic[的更高階函數](https://en.wikipedia.org/wiki/Higher-order_function)API，作為編寫表達性聲明性代碼的一種方式。
 
 語言層級查詢語法︰
 
@@ -395,5 +395,5 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 ## <a name="further-resources"></a>其他資源︰
 
 * [101 LINQ 範例](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* [Linqpad](https://www.linqpad.net/)，這是適用于C#/F#/Visual Basic 的遊樂場環境和資料庫查詢引擎
+* [Linqpad，](https://www.linqpad.net/)一個遊樂場環境和資料庫查詢引擎，用於 C#/F#/視覺基礎
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，為學習 LINQ-to-object 如何實作的電子書

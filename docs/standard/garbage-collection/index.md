@@ -19,10 +19,10 @@ helpviewer_keywords:
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
 ms.openlocfilehash: 846df5ecb1e681e8d0440e627586a681bf071efa
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160140"
 ---
 # <a name="garbage-collection"></a>記憶體回收
@@ -38,9 +38,9 @@ ms.locfileid: "78160140"
 |[引發的收集](../../../docs/standard/garbage-collection/induced.md)|描述如何進行記憶體回收。|  
 |[延遲模式](../../../docs/standard/garbage-collection/latency.md)|描述判斷記憶體回收干擾程度的模式。|  
 |[共用 Web 裝載的最佳化](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|描述如何最佳化伺服器上由數個小型網站所共用的記憶體回收。|  
-|[記憶體回收通知](../../../docs/standard/garbage-collection/notifications.md)|描述如何判斷何時接近完整的記憶體回收，以及何時已完成。|  
+|[記憶體回收告知](../../../docs/standard/garbage-collection/notifications.md)|描述如何判斷何時接近完整的記憶體回收，以及何時已完成。|  
 |[應用程式定義域資源監視](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|描述如何監視應用程式定義域的 CPU 和記憶體使用量。|  
-|[弱式參考](../../../docs/standard/garbage-collection/weak-references.md)|描述下列功能：允許記憶體回收行程回收物件，同時仍然允許應用程式存取該物件。|  
+|[弱引用](../../../docs/standard/garbage-collection/weak-references.md)|描述下列功能：允許記憶體回收行程回收物件，同時仍然允許應用程式存取該物件。|  
   
 ## <a name="reference"></a>參考  
  <xref:System.GC?displayProperty=nameWithType>  
@@ -61,4 +61,4 @@ ms.locfileid: "78160140"
   
 ## <a name="see-also"></a>另請參閱
 
-- [清除 Unmanaged 資源](../../../docs/standard/garbage-collection/unmanaged.md)
+- [清理非託管資源](../../../docs/standard/garbage-collection/unmanaged.md)

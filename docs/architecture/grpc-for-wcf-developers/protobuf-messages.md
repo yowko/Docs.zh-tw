@@ -1,23 +1,23 @@
 ---
-title: Protobuf 訊息-WCF 開發人員的 gRPC
-description: 瞭解 Protobuf 訊息如何定義于 IDL 中，以及如何在C#中產生。
+title: 原型消息 - gRPC，面向 WCF 開發人員
+description: 瞭解如何在 IDL 中定義 Protobuf 消息並在 C# 中生成。
 ms.date: 09/09/2019
-ms.openlocfilehash: c7375bafb7572b0eaa0458b0310a0114e3fd078c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 5b3d4383de39a3785ef804fec21939a740f54669
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543036"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147980"
 ---
 # <a name="protobuf-messages"></a>Protobuf 訊息
 
-本節涵蓋如何在 `.proto` 檔案中宣告通訊協定緩衝區（Protobuf）訊息。 它會說明欄位編號和類型的基本概念，並查看 `protoc` 編譯器所C#產生的程式碼。 
+本節介紹如何在`.proto`檔中聲明協定緩衝區（Protobuf）消息。 它解釋了欄位數和類型的基本概念，並查看`protoc`編譯器生成的 C# 代碼。
 
-本章的其餘部分將詳細說明 Protobuf 中不同類型資料的呈現方式。
+本章的其餘部分將更詳細地介紹在 Protobuf 中如何表示不同類型的資料。
 
-## <a name="declaring-a-message"></a>宣告訊息
+## <a name="declaring-a-message"></a>聲明消息
 
-在 Windows Communication Foundation （WCF）中，股票市場貿易應用程式的 `Stock` 類別可能會如下列範例所定義：
+在 Windows 通信基礎 （WCF） 中，股票市場交易應用程式的`Stock`類可以定義如下示例：
 
 ```csharp
 namespace TraderSys
@@ -37,7 +37,7 @@ namespace TraderSys
 }
 ```
 
-若要在 Protobuf 中執行對等的類別，您必須在 `.proto` 檔案中宣告它。 然後 `protoc` 編譯器會在組建程式中產生 .NET 類別。
+要在 Protobuf 中實現等效類，必須在`.proto`檔中聲明它。 然後`protoc`，編譯器將生成 .NET 類作為生成過程的一部分。
 
 ```protobuf
 syntax "proto3";
@@ -54,28 +54,28 @@ message Stock {
 }  
 ```
 
-第一行會宣告所使用的語法版本。 語言的第3版已于2016發行。 這是我們建議的 gRPC 服務版本。
+第一行聲明正在使用的語法版本。 該語言版本 3 于 2016 年發佈。 它是我們為 gRPC 服務推薦的版本。
 
-`option csharp_namespace` 行指定要用於產生C#之類型的命名空間。 針對其他語言編譯 `.proto` 檔案時，將會忽略此選項。 Protobuf 檔案通常包含數種語言的語言特定選項。
+該`option csharp_namespace`行指定要用於生成的 C# 類型的命名空間。 在為其他語言編譯檔時，`.proto`將忽略此選項。 Protobuf 檔通常包含多種語言的語言特定選項。
 
-`Stock` 訊息定義會指定四個欄位。 每個都有類型、名稱和欄位編號。
+消息`Stock`定義指定四個欄位。 每個都有一個類型、一個名稱和一個欄位編號。
 
 ## <a name="field-numbers"></a>欄位編號
 
-欄位編號是 Protobuf 中很重要的一部分。 它們是用來識別二進位編碼資料中的欄位，這表示它們無法從版本變更為您的服務版本。 優點是可以回溯相容性和向前相容性。 用戶端和服務只會略過不知道的欄位編號，只要處理遺漏值的可能性即可。
+欄位編號是 Protobuf 的重要組成部分。 它們用於標識二進位編碼資料中的欄位，這意味著它們無法從服務的版本更改為版本。 優點是向後相容性和正向相容性是可能的。 只要處理丟失值的可能性，用戶端和服務將忽略他們不知道的欄位編號。
 
-在二進位格式中，欄位編號會與類型識別碼結合。 從1到15的欄位可以用其類型編碼為單一位元組。 從16到2047的數位需要2個位元組。 如果因任何原因而需要訊息超過2047個欄位，您就可以更高。 欄位編號1到15的單一位元組識別碼提供較佳的效能，因此您應該將它們用於最基本、常用的欄位。
+在二進位格式中，欄位編號與類型識別碼組合。 欄位編號從 1 到 15 可以編碼其類型為單個位元組。 從 16 到 2，047 的數位需要 2 個位元組。 如果出於任何原因需要郵件上的 2，047 個欄位，則可以走高。 欄位號 1 到 15 的單個位元組識別碼提供了更好的性能，因此應將它們用於最基本、最常用的欄位。
 
 ## <a name="types"></a>類型
 
-類型宣告使用 Protobuf 的原生純量資料類型，將在[下一節](protobuf-data-types.md)中更詳細地討論。 本章的其餘部分將涵蓋 Protobuf 的內建型別，並說明它們與常見 .NET 類型的關聯性。
+型別宣告使用 Protobuf 的本機純量資料型別，[下一節](protobuf-data-types.md)將更詳細地討論這些類型。 本章的其餘部分將介紹 Protobuf 的內置類型，並展示它們與常見的 .NET 類型的關係。
 
 > [!NOTE]
-> Protobuf 原本就不支援 `decimal` 型別，所以改為使用 `double`。 對於需要完整十進位數精確度的應用程式，請參閱本章下一節中的[小數章節](protobuf-data-types.md#decimals)。
+> Protobuf 不支援本機`decimal`類型，因此`double`使用。 對於需要全小數精度的應用程式，請參閱本章下一部分[中有關小數部分](protobuf-data-types.md#decimals)的部分。
 
 ## <a name="the-generated-code"></a>產生的程式碼
 
-當您建立應用程式時，Protobuf 會為您的每個訊息建立類別，並將C#其原生類型對應至類型。 產生的 `Stock` 類型會具有下列簽章：
+生成應用程式時，Protobuf 會為每個消息創建類，將其本機類型映射到 C# 類型。 生成的`Stock`類型將具有以下簽名：
 
 ```csharp
 public class Stock
@@ -87,12 +87,12 @@ public class Stock
 }
 ```
 
-產生的實際程式碼遠比這個複雜。 原因是每個類別都包含將本身序列化和還原序列化為二進位電傳格式所需的所有程式碼。
+生成的實際代碼要比這更複雜得多。 原因是每個類都包含序列化自身並將其反序列化為二進位線格式所需的所有代碼。
 
 ### <a name="property-names"></a>屬性名稱
 
-請注意，Protobuf 編譯器 `PascalCase` 套用至屬性名稱，雖然它們 `snake_case` 在 `.proto` 檔中。 [Protobuf 樣式指南](https://developers.google.com/protocol-buffers/docs/style)會建議在您的訊息定義中使用 `snake_case`，讓其他平臺的程式碼產生會針對其慣例產生預期的大小寫。
+請注意，Protobuf 編譯器應用於`PascalCase`屬性名稱，儘管它們位於`snake_case``.proto`檔中。 [Protobuf 樣式指南](https://developers.google.com/protocol-buffers/docs/style)建議`snake_case`在消息定義中使用，以便其他平臺的代碼生成生成其約定的預期情況。
 
 >[!div class="step-by-step"]
->[上一頁](protocol-buffers.md)
->[下一頁](protobuf-data-types.md)
+>[上一個](protocol-buffers.md)
+>[下一個](protobuf-data-types.md)

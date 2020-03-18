@@ -5,17 +5,17 @@ author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
 ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465421"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61923847"
 ---
 # <a name="generic-types-overview"></a>泛型型別概觀
 
 開發人員經常會在 .NET 中使用泛型，不論是隱含使用或明確使用。 當您在 .NET 中使用 LINQ 時，您是否曾注意到您正在使用 <xref:System.Collections.Generic.IEnumerable%601>？ 如果您曾經看過使用 Entity Framework 與資料庫通訊的「一般存放庫」線上範例，您是否注意到大部分的方法會傳回 IQueryable\<T>？ 您可能想知道這些範例中的 **T** 為何，以及它出現在這裡的原因。
 
-在 .NET Framework 2.0 中首次引進，**泛型**基本上是「程式碼範本」，可讓開發人員定義[型別安全](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100))資料結構，而不需要認可至實際資料類型。 例如，<xref:System.Collections.Generic.List%601> 是可宣告的[泛型集合](xref:System.Collections.Generic)，並可搭配任何型別使用：`List<int>`、`List<string>`、`List<Person>` 等等。
+在 .NET Framework 2.0 中首次引進，**泛型**基本上是「程式碼範本」，可讓開發人員定義[型別安全](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100))資料結構，而不需要認可至實際資料類型。 <xref:System.Collections.Generic.List%601>例如，是一個[泛型集合](xref:System.Collections.Generic)，可以聲明和用於任何類型的 ，如`List<int>`。 `List<string>` `List<Person>`
 
 若要了解為什麼泛型十分實用，讓我們看看加入泛型前後的特定類別：<xref:System.Collections.ArrayList>。 在 .NET Framework 1.0 中，`ArrayList` 元素的型別為 <xref:System.Object>。 這表示任何加入的元素都會以無訊息模式轉換成 `Object`。 從清單中讀取元素時會發生同樣的情況。 此程序稱為 [Boxing 和 Unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md)，它會影響效能。 但更重要的是，在編譯時無法判斷清單中的資料型別。 因此很容易產生一些易損壞的程式碼。 泛型可以透過定義每個清單執行個體將包含之資料的型別解決這個問題。 例如，您只能將整數加入 `List<int>`，以及只能將 Persons 加入 `List<Person>`。
 

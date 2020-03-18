@@ -11,10 +11,10 @@ helpviewer_keywords:
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 ms.openlocfilehash: b9f7c122ac8acf34f740aca5f0fafc162edcea82
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127591"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore 和 SemaphoreSlim
@@ -44,7 +44,7 @@ ms.locfileid: "73127591"
   
  使用存取控制安全性來保護代表具名號誌的 <xref:System.Threading.Semaphore> 物件，最好是使用指定 <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType> 物件的建構函式。 您也可以使用 <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType> 方法套用存取控制安全性，但這會在建立號誌的時間與它受保護的時間之間留下弱點時段。 使用存取控制安全性來保護號誌，有助於防止惡意攻擊，但不能解決意外名稱衝突的問題。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Semaphore>
 - <xref:System.Threading.SemaphoreSlim>

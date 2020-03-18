@@ -15,10 +15,10 @@ helpviewer_keywords:
 - localizing resources
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 ms.openlocfilehash: 89851c42570f301bee8a3eca744eb5d069347d4e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120877"
 ---
 # <a name="localization"></a>當地語系化
@@ -31,7 +31,7 @@ ms.locfileid: "73120877"
 
 Windows Software Development Kit (SDK) 提供 Windows Forms 資源編輯器 (Winres.exe)，讓您可以快速地將 Windows Forms 當地語系化成目標文化特性。 如需有關使用此工具的相關資訊，請參閱 [Winres.exe (Windows Forms 資源編輯器)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)
 - [可當地語系化檢閱](../../../docs/standard/globalization-localization/localizability-review.md)

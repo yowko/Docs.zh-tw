@@ -36,26 +36,26 @@ helpviewer_keywords:
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159997"
 ---
 # <a name="the-regular-expression-object-model"></a>規則運算式物件模型
 <a name="introduction"></a> 本主題說明用來處理 .NET 規則運算式的物件模型。 它包含下列區段：  
   
-- [規則運算式引擎](#Engine)  
+- [正則運算式引擎](#Engine)  
   
-- [MatchCollection 與 Match 物件](#Match_and_MCollection)  
+- [匹配集合和匹配物件](#Match_and_MCollection)  
   
-- [群組集合](#GroupCollection)  
+- [組集合](#GroupCollection)  
   
-- [擷取的群組](#the_captured_group)  
+- [捕獲的組](#the_captured_group)  
   
-- [擷取集合](#CaptureCollection)  
+- [捕獲集合](#CaptureCollection)  
   
-- [個別擷取](#the_individual_capture)  
+- [個人捕獲](#the_individual_capture)  
   
 <a name="Engine"></a>
 ## <a name="the-regular-expression-engine"></a>規則運算式引擎  
@@ -167,7 +167,7 @@ ms.locfileid: "78159997"
 ### <a name="the-match-collection"></a>比對集合  
  <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法會傳回 <xref:System.Text.RegularExpressions.MatchCollection> 物件，其中包含 <xref:System.Text.RegularExpressions.Match> 物件，這些物件代表規則運算式引擎找到的所有相符項目，並按照其於輸入字串中出現的順序排列。 如果沒有相符項目，該方法會傳回 <xref:System.Text.RegularExpressions.MatchCollection> 物件，但不含成員。 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 屬性可讓您依索引存取集合的個別成員，從零到 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 屬性的值減一。 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> 是集合的索引子 (在 C# 中) 和預設屬性 (在 Visual Basic 中)。  
   
- 依預設，呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法時會使用延遲評估來填入 <xref:System.Text.RegularExpressions.MatchCollection> 物件。 若要存取需要完整填入集合的屬性，例如 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 屬性，可能會導致效能傷害。 因此，建議您使用 <xref:System.Collections.IEnumerator> 方法傳回的 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 物件來存取集合。 個別語言會提供包裝集合之 `For Each` 介面的建構 (例如 Visual Basic 中的 `foreach`，以及 C# 中的 <xref:System.Collections.IEnumerator>)。  
+ 依預設，呼叫 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> 方法時會使用延遲評估來填入 <xref:System.Text.RegularExpressions.MatchCollection> 物件。 若要存取需要完整填入集合的屬性，例如 <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> 屬性，可能會導致效能傷害。 因此，建議您使用 <xref:System.Collections.IEnumerator> 方法傳回的 <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> 物件來存取集合。 個別語言會提供包裝集合之 <xref:System.Collections.IEnumerator> 介面的建構 (例如 Visual Basic 中的 `For Each`，以及 C# 中的 `foreach`)。  
   
  下列範例使用 <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> 方法，以在輸入字串中找到的所有相符項目來填入 <xref:System.Text.RegularExpressions.MatchCollection> 物件。 此範例會列舉集合、將相符項目複製到字串陣列，並記錄整數陣列中的字元位置。  
   
@@ -353,4 +353,4 @@ ms.locfileid: "78159997"
 
 - <xref:System.Text.RegularExpressions>
 - [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)
-- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [正則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

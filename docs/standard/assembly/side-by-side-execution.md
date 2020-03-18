@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], side-by-side execution
 ms.assetid: e42036ee-7590-47d1-b884-cc856e39bd5d
 ms.openlocfilehash: 234efba66d87b520b54d6d113afcc4bba0bfe06a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138635"
 ---
 # <a name="assemblies-and-side-by-side-execution"></a>組件和並存執行
@@ -18,9 +18,9 @@ ms.locfileid: "73138635"
   
 支援並存儲存和執行同一組件的不同版本，是強式命名所不可或缺的部分，而且已內建至執行階段的基礎結構中。 由於強式名稱組件的版本號碼是其識別的一部分，所以執行階段可以在全域組件快取中存放相同組件的多個版本，並且在 Run Time 載入這些組件。  
   
-雖然執行階段為您提供建立並存應用程式的能力，但是並存執行並非自動的。 如需有關建立並存執行應用程式的詳細資訊，請參閱[建立並存執行元件的指導方針](../../framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)。  
+雖然執行階段為您提供建立並存應用程式的能力，但是並存執行並非自動的。 有關創建應用程式以進行並存執行的詳細資訊，請參閱[創建元件以進行並存執行的指南](../../framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [執行階段如何找出組件](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [運行時如何定位程式集](../../framework/deployment/how-the-runtime-locates-assemblies.md)
 - [.NET 中的組件](index.md)

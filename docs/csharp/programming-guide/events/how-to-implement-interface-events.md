@@ -1,18 +1,18 @@
 ---
-title: 如何執行介面事件-程式C#設計指南
+title: 如何實現介面事件 - C# 程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: b84b96245310bce557bcd3865e41cf152e7ae9df
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c0d221ef1272a43e2682ef2af3fa37d2d12d35e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712334"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167476"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>如何執行介面事件（C#程式設計手冊）
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>如何實現介面事件（C# 程式設計指南）
 [介面](../../language-reference/keywords/interface.md)可以宣告[事件](../../language-reference/keywords/event.md)。 下列範例示範如何在類別中實作介面事件。 基本上，規則與您在實作任何介面方法或屬性時相同。  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>在類別中實作介面事件  
@@ -26,7 +26,7 @@ namespace ImplementInterfaceEvents
     {  
         event EventHandler ShapeChanged;  
     }  
-    public class MyEventArgs : EventArgs   
+    public class MyEventArgs : EventArgs
     {  
         // class members  
     }  
@@ -39,7 +39,7 @@ namespace ImplementInterfaceEvents
 
             OnShapeChanged(new MyEventArgs(/*arguments*/));  
 
-            // or do something here after the event.   
+            // or do something here after the event.
         }  
         protected virtual void OnShapeChanged(MyEventArgs e)  
         {  
@@ -57,10 +57,10 @@ namespace ImplementInterfaceEvents
   
  [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [事件](./index.md)
 - [委派](../delegates/index.md)
 - [明確介面實作](../interfaces/explicit-interface-implementation.md)
-- [如何在衍生類別中引發基類事件](./how-to-raise-base-class-events-in-derived-classes.md)
+- [如何在衍生類別中引發基底類別事件](./how-to-raise-base-class-events-in-derived-classes.md)

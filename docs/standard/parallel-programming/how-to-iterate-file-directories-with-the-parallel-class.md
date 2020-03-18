@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parallel loops, how to iterate directories
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
 ms.openlocfilehash: fda8443666d1c90b31cf02c2f925d1c89243a8e9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091322"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>如何：使用平行類別逐一查看檔案目錄
@@ -30,6 +30,6 @@ ms.locfileid: "73091322"
   
  請注意，若有例外狀況在主執行緒上擲出，由 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 啟動的執行緒可能會繼續執行。 若要停止這些執行緒，您可以在例外處理常式中設定布林值變數，並在平行迴圈的每個反覆運算上檢查其值。 若該值指出有擲出例外狀況，請使用 <xref:System.Threading.Tasks.ParallelLoopState> 變數來停止或中斷迴圈。 如需詳細資訊，請參閱[如何：停止或中斷 Parallel.For 迴圈](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd460721(v=vs.100))。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [資料平行處理原則](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+- [資料並行性](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

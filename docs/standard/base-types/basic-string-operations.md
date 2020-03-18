@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
 ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132918"
 ---
 # <a name="basic-string-operations-in-net"></a>.NET 中的基本字串作業
 應用程式通常是以根據使用者輸入建構訊息的方式來回應使用者。 例如，網站就經常以包含使用者姓名的特殊問候語來回應新登入的使用者。 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別中有數個方法，可讓您以動態方式建構要在使用者介面中顯示的自訂字串。 這些方法也可協助您執行一些基本字串作業，例如從位元組陣列建立新的字串、比較字串值，以及修改現有的字串。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [建立新字串](../../../docs/standard/base-types/creating-new.md)  
  描述將物件轉換為字串和組合字串的基本方式。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73132918"
  [比較字串](../../../docs/standard/base-types/comparing.md)  
  描述如何比較兩個或多個字串的內容。  
   
- [變更大小寫](../../../docs/standard/base-types/changing-case.md)  
+ [更改案例](../../../docs/standard/base-types/changing-case.md)  
  描述如何變更字串內的字元大小寫。  
   
  [使用 StringBuilder 類別](../../../docs/standard/base-types/stringbuilder.md)  

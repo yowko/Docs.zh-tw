@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124581"
 ---
 # <a name="net-class-libraries"></a>.NET 類別庫
@@ -42,7 +42,7 @@ ms.locfileid: "77124581"
 
 .NET Standard 程式庫可以取代平台特定和可攜式程式庫概念。 就它們可以公開基礎平台 (沒有綜合平台或平台交集) 的所有功能這點而言，它們是平台特定的。 就它們可以在所有支援的平台上運作這點而言，它們是可攜式。
 
-.NET Standard 公開一組程式庫「協定」。 .NET 實作必須完整支援或根本不支援每個協定。 因此，每個實作都支援一組 .NET Standard 協定。 必然結果是支援協定相依性的平台上支援每個 .NET Standard 類別庫。
+.NET Standard 公開一組程式庫「協定」__。 .NET 實作必須完整支援或根本不支援每個協定。 因此，每個實作都支援一組 .NET Standard 協定。 必然結果是支援協定相依性的平台上支援每個 .NET Standard 類別庫。
 
 .NET Standard 不會公開 .NET Framework 的整個功能 (也不會公開目標)，不過公開的 API 數目會多於可攜式類別庫。 一段時間之後，就會新增更多 API。
 

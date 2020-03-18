@@ -1,7 +1,7 @@
 - name: XAML 語言參考
   href: index.md
   items:
-    - name: 'XAML 命名空間 (x:)語言功能'
+    - name: 'XAML 命名空間 (x:) 語言功能'
       href: namespace-language-features.md
       items:
         - name: XAML 2009 (非 WPF) 語言功能

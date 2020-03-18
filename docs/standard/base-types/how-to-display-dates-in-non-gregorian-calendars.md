@@ -12,10 +12,10 @@ helpviewer_keywords:
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 ms.openlocfilehash: 455996d091f92367667e7077a4524898cd8face6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138745"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>如何：在非西曆中顯示日期
@@ -83,6 +83,6 @@ ms.locfileid: "73138745"
   
  不論此範例中用來建立 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值的月曆為何，該值通常會以西曆日期來表示。 這是因為 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 類型不會保留任何月曆資訊。 這兩個值會在內部表示為自 0001 年 1 月 1 日午夜開始經過的刻度數。 該數字的轉譯會根據月曆而定。 大部分文化特性的預設月曆是西曆。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)

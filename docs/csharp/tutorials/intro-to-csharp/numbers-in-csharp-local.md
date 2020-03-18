@@ -3,22 +3,22 @@ title: C# 中的數字 - C# 教學課程簡介
 description: 透過探索數值類型及其屬性和方法來了解 C#。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 7537bb597665461021946a792e342149f29c0e95
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7e9af4b3b859f74d7e92ff10b3964ddd59d2473b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694656"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156541"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>在 C\# 中操作整數和浮點數數字
 
 此教學課程會以互動方式教導您有關 C# 中的數字型別。 您將會撰寫少量程式碼，然後編譯並執行該程式碼。 教學課程包含一系列探索 C# 中數字和數學運算的課程。 這些課程會教導您 C# 語言的基本概念。
 
-此教學課程要求您必須有可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 Windows、Linux 或 macOS 上設定本機開發環境的指示。 您可以在[熟悉開發工具](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
+此教學課程要求您必須有可用於開發的電腦。 .NET 教程[Hello World 在 10 分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)提供了在 Windows、Linux 或 macOS 上設置本地開發環境的說明。 您可以在[熟悉開發工具](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
 
 ## <a name="explore-integer-math"></a>探索整數運算
 
-建立名為 *numbers-quickstart* 的目錄。 將它設為目前的目錄，然後執行下列命令：
+建立名為 *numbers-quickstart* 的目錄。 使目前的目錄並運行以下命令：
 
 ```dotnetcli
 dotnet new console -n NumbersInCSharp -o .
@@ -35,7 +35,7 @@ Console.WriteLine(c);
 
 在命令視窗中輸入 `dotnet run` 來執行此程式碼。
 
-您看到的只是一種基本的整數數學運算。 `int` 類型代表**整數**、零、正數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：
+您看到的只是一種基本的整數數學運算。 類型`int`表示**整數**、零整數、正數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：
 
 - `-` 用於減法
 - `*` 用於乘法
@@ -66,7 +66,7 @@ Console.WriteLine(c);
 > 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 **編譯器**會找出那些錯誤並回報給您。 當輸出包含錯誤訊息時，請仔細查看範例程式碼及視窗中的程式碼，看看有哪些可以修正。
 > 該練習將有助於您了解 C# 程式碼的結構。
 
-您已完成第一個步驟。 在開始下一節之前，讓我們將目前的程式碼移到另一個個別的方法。 這可讓您更輕鬆地開始處理新的範例。 將 `Main` 方法重新命名為 `WorkingWithIntegers`，然後撰寫會呼叫 `WorkingWithIntegers` 的新 `Main` 方法。 當您完成時，您的程式碼看起來應該像這樣：
+您已完成第一個步驟。 在開始下一節之前，讓我們將目前的程式碼移到另一個個別的方法。 這可讓您更輕鬆地開始處理新的範例。 將 `Main` 方法重新命名為 `WorkingWithIntegers`，然後撰寫會呼叫 `WorkingWithIntegers` 的新 `Main` 方法。 完成後，代碼應如下所示：
 
 ```csharp
 using System;
@@ -79,19 +79,19 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
-            
+
             // addition
             int c = a + b;
             Console.WriteLine(c);
-            
+
             // subtraction
             c = a - b;
             Console.WriteLine(c);
-            
+
             // multiplication
             c = a * b;
             Console.WriteLine(c);
-            
+
             // division
             c = a / b;
             Console.WriteLine(c);
@@ -171,19 +171,19 @@ namespace NumbersInCSharp
         {
             int a = 18;
             int b = 6;
-            
+
             // addition
             int c = a + b;
             Console.WriteLine(c);
-            
+
             // subtraction
             c = a - b;
             Console.WriteLine(c);
-            
+
             // multiplication
             c = a * b;
             Console.WriteLine(c);
-            
+
             // division
             c = a / b;
             Console.WriteLine(c);
@@ -257,11 +257,11 @@ Console.WriteLine($"An example of overflow: {what}");
 
 當 `int` 型別不符合您的需求時，還有其他具有不同限制和精確度的數字型別可供使用。 我們會在下一篇探索那些數字型別。
 
-同樣地，讓我們將您在本節中所撰寫的程式碼置於個別的方法中。 將它命名為 `TestLimits`。
+同樣地，讓我們將您在本節中所撰寫的程式碼置於個別的方法中。 將它命名為 `TestLimits`
 
 ## <a name="work-with-the-double-type"></a>使用 Double 型別
 
-`double` 數字型別代表雙精確度浮點數。 您可能不熟悉這些字詞。 **浮點數**可用以代表非常大或非常小的非整數數字。 **雙精確度**表示這些數字使用比**單精確度**更高的精確度來儲存。 在現代的電腦上，比較常使用雙精確度而非單精確度數字。
+`double` 數字型別代表雙精確度浮點數。 您可能不熟悉這些字詞。 **浮點**數可用於表示可能非常大或小幅度的非積分數位。 **雙精確度**表示這些數字使用比**單精確度**更高的精確度來儲存。 在現代的電腦上，比較常使用雙精確度而非單精確度數字。
 讓我們開始探索吧。 新增下列程式碼並查看結果：
 
 ```csharp
@@ -338,7 +338,7 @@ Console.WriteLine(c / d);
 您已經了解不同的數字型別，接著請撰寫程式碼，以計算半徑 2.50 公分的圓形面積。 提醒您圓形面積是 PI 乘以半徑的平方。 提示：.NET 包含 PI 的常數：<xref:System.Math.PI?displayProperty=nameWithType>，可用來作為該值。
 
 您應該會取得介於 19 和 20 的答案。
-您可以[查看 GitHub 上已完成的範例程式碼](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)來檢查您的答案。
+您可以通過[查看 GitHub 上已完成的示例代碼](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106)來檢查您的答案。
 
 如果您想要的話，可以嘗試其他公式。
 
@@ -346,6 +346,6 @@ Console.WriteLine(c / d);
 
 您可以在下列主題中深入了解 C# 中的數字：
 
-- [整數數數值型別](../../language-reference/builtin-types/integral-numeric-types.md)
-- [浮點數數值型別](../../language-reference/builtin-types/floating-point-numeric-types.md)
+- [整數數值類型](../../language-reference/builtin-types/integral-numeric-types.md)
+- [浮點數值類型](../../language-reference/builtin-types/floating-point-numeric-types.md)
 - [內建數值轉換](../../language-reference/builtin-types/numeric-conversions.md)

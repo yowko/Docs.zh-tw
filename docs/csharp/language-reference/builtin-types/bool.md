@@ -1,5 +1,5 @@
 ---
-title: bool 類型- C#參考
+title: 布林型 - C# 參考
 ms.date: 11/26/2019
 f1_keywords:
 - bool
@@ -8,43 +8,43 @@ helpviewer_keywords:
 - bool data type [C#]
 - Boolean [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 0e01c183ef07c23203619e0cbbf550c6268bdd46
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 2ba2e54a6b0f24402fc3728dfe19b548a2368830
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239829"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846441"
 ---
-# <a name="bool-c-reference"></a>bool （C#參考）
+# <a name="bool-c-reference"></a>布林（C# 參考）
 
-`bool` 類型關鍵字是 .NET <xref:System.Boolean?displayProperty=nameWithType> 結構類型的別名，代表布林值，可以是 `true` 或 `false`。
+類型`bool`關鍵字是 .NET<xref:System.Boolean?displayProperty=nameWithType>結構類型的別名，表示布林值，可以是`true`或`false`。
 
-若要以 `bool` 類型的值執行邏輯運算，請使用[布林邏輯](../operators/boolean-logical-operators.md)運算子。 `bool` 類型是比較和[等號](../operators/equality-operators.md)[比較](../operators/comparison-operators.md)運算子的結果類型。 `bool` 運算式可以是[if](../keywords/if-else.md)、 [do](../keywords/do.md)、 [while](../keywords/while.md)和[for](../keywords/for.md)語句中的控制條件運算式，以及[條件運算子 `?:`](../operators/conditional-operator.md)中的。
+要使用`bool`類型的值執行邏輯操作，請使用[布林邏輯](../operators/boolean-logical-operators.md)運算子。 類型`bool`是[比較](../operators/comparison-operators.md)和[相等](../operators/equality-operators.md)運算子的結果類型。 運算式`bool`可以是[if](../keywords/if-else.md)中的控制條件運算式，在 中[執行](../keywords/do.md)，[對於](../keywords/while.md)[語句和](../keywords/for.md)條件[運算子`?:`](../operators/conditional-operator.md)。
 
-`bool` 類型的預設值為 `false`。
+`bool`類型的預設值為`false`。
 
 ## <a name="literals"></a>常值
 
-您可以使用 `true` 和 `false` 常值來初始化 `bool` 變數或傳遞 `bool` 值：
+可以使用`true`和`false`文本來初始化`bool`變數或傳遞`bool`值：
 
-[!code-csharp-interactive[bool literals](~/samples/snippets/csharp/language-reference/builtin-types/BoolType.cs#Literals)]
+[!code-csharp-interactive[bool literals](snippets/BoolType.cs#Literals)]
 
 ## <a name="three-valued-boolean-logic"></a>三值布林邏輯
 
-如果您需要支援三值邏輯（例如，當您使用支援三值布林值類型的資料庫時），請使用可為 null 的 `bool?` 類型。 針對 `bool?` 運算元，預先定義的 `&` 和 `|` 運算子支援三值邏輯。 如需詳細資訊，請參閱[布林值邏輯運算子](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一文的[可為 Null 的布林值邏輯運算子](../operators/boolean-logical-operators.md)一節。
+如果需要支援三值`bool?`邏輯，請使用可 null 類型，例如，當您使用支援三值布林類型的資料庫時。 針對 `bool?` 運算元，預先定義的 `&` 和 `|` 運算子支援三值邏輯。 如需詳細資訊，請參閱[布林邏輯運算子](../operators/boolean-logical-operators.md)一文的[可為 Null 的布林邏輯運算子](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)一節。
 
-如需可為 null 的實數值型別的詳細資訊，請參閱[nullable 實數值型別](nullable-value-types.md)。
+有關空數值型別的詳細資訊，請參閱[空數值型別](nullable-value-types.md)。
 
 ## <a name="conversions"></a>轉換
 
-C#只提供兩個牽涉到 `bool` 類型的轉換。 這些是對應的可為 null `bool?` 類型的隱含轉換，以及來自 `bool?` 類型的明確轉換。 不過，.NET 提供了其他方法，可讓您用來轉換成 `bool` 類型或從中轉換。 如需詳細資訊，請參閱 <xref:System.Boolean?displayProperty=nameWithType> API 參考頁面的[轉換成和引數的布林值](/dotnet/api/system.boolean#converting-to-and-from-boolean-values)一節。
+C# 僅提供兩個涉及`bool`該類型的轉換。 這些是對相應空`bool?`類型的隱式轉換，是從`bool?`該類型的顯式轉換。 但是，.NET 提供了可用於轉換為`bool`類型或從類型轉換的其他方法。 有關詳細資訊，請參閱<xref:System.Boolean?displayProperty=nameWithType>API 參考頁的"[轉換到布林值"和"從布林值轉換"](/dotnet/api/system.boolean#converting-to-and-from-boolean-values)部分。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱[ C#語言規格](~/_csharplang/spec/introduction.md)[的 bool 類型](~/_csharplang/spec/types.md#the-bool-type)一節。
+有關詳細資訊，請參閱[C# 語言規範](~/_csharplang/spec/introduction.md)的[Bool 類型](~/_csharplang/spec/types.md#the-bool-type)部分。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [值類型](value-types.md)
+- [實值型別](value-types.md)
 - [true 和 false 運算子](../operators/true-false-operators.md)

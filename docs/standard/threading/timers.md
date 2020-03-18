@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
 ms.openlocfilehash: d7d1fa13b02fe7425fa9b4cb81ba20297a23fe4b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128956"
 ---
 # <a name="timers"></a>計時器
@@ -45,7 +45,7 @@ ms.locfileid: "73128956"
 [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
 [!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]
 
-如需詳細資訊與範例，請參閱<xref:System.Threading.Timer?displayProperty=nameWithType>。
+如需詳細資訊和範例，請參閱 <xref:System.Threading.Timer?displayProperty=nameWithType>。
 
 ## <a name="the-systemtimerstimer-class"></a>System.Timers.Timer 類別
 
@@ -53,9 +53,9 @@ ms.locfileid: "73128956"
 
 建立 <xref:System.Timers.Timer?displayProperty=nameWithType> 物件時，您可以指定要引發 <xref:System.Timers.Timer.Elapsed> 事件的時間間隔。 使用 <xref:System.Timers.Timer.Enabled%2A> 屬性指出計時器是否應該引發 <xref:System.Timers.Timer.Elapsed> 事件。 如果您需要 <xref:System.Timers.Timer.Elapsed> 事件只在經過指定的間隔之後才引發，請將 <xref:System.Timers.Timer.AutoReset%2A> 設定為 `false`。 <xref:System.Timers.Timer.AutoReset%2A> 屬性的預設值為 `true`，表示 <xref:System.Timers.Timer.Elapsed> 事件會依 <xref:System.Timers.Timer.Interval%2A> 屬性定義的間隔定期引發。
 
-如需詳細資訊與範例，請參閱<xref:System.Timers.Timer?displayProperty=nameWithType>。
+如需詳細資訊和範例，請參閱 <xref:System.Timers.Timer?displayProperty=nameWithType>。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Timer?displayProperty=nameWithType>
 - <xref:System.Timers.Timer?displayProperty=nameWithType>

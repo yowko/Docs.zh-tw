@@ -9,10 +9,10 @@ helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 ms.openlocfilehash: 628d6a96606117d447c61d01595d13dd4a957ce4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138116"
 ---
 # <a name="countdownevent"></a>CountdownEvent
@@ -38,13 +38,13 @@ ms.locfileid: "73138116"
  [!code-vb[CDS_CountdownEvent#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/module1.vb#01)]  
   
 ## <a name="countdownevent-with-cancellation"></a>含有取消的 CountdownEvent  
- 下列範例示範如何使用取消語彙基元，來取消 <xref:System.Threading.CountdownEvent> 上的等候作業。 基本模式會遵循適用於統一取消的模型，這是在 .NET Framework 4 中引進的。 如需詳細資訊，請參閱[受控執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)。  
+ 下列範例示範如何使用取消語彙基元，來取消 <xref:System.Threading.CountdownEvent> 上的等候作業。 基本模式會遵循適用於統一取消的模型，這是在 .NET Framework 4 中引進的。 有關詳細資訊，請參閱[在託管執行緒中取消](../../../docs/standard/threading/cancellation-in-managed-threads.md)。  
   
  [!code-csharp[CDS_CountdownEvent#02](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_countdownevent/cs/countdownevent.cs#02)]
  [!code-vb[CDS_CountdownEvent#02](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_countdownevent/vb/canceleventwait.vb#02)]  
   
  請注意，等候作業不會取消正在發出訊號給它的執行緒。 一般而言，會將取消套用至邏輯作業，其中可以包括在事件上等候，以及正在同步處理等候的所有工作項目。 在此範例中，會針對每個工作項目傳遞相同取消語彙基元的複本，讓它可以回應取消要求。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Semaphore?displayProperty=nameWithType>

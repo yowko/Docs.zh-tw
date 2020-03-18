@@ -18,29 +18,29 @@ helpviewer_keywords:
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75346621"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 格式字串
 
-標準 <xref:System.TimeSpan> 格式字串會使用單一格式規範來定義格式作業所產生之 <xref:System.TimeSpan> 值的文字表示。 任何包含一個以上字元 (包含空格) 的格式字串，都會解譯為自訂 <xref:System.TimeSpan> 格式字串。 如需詳細資訊，請參閱[自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
+ 標準 <xref:System.TimeSpan> 格式字串會使用單一格式規範，來定義從格式化作業所產生之 <xref:System.TimeSpan> 值的文字表示。 任何包含一個以上字元 (包含空格) 的格式字串，都會解譯為自訂 <xref:System.TimeSpan> 格式字串。 有關詳細資訊，請參閱[自訂時間跨度格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)。  
   
  <xref:System.TimeSpan> 值的字串表示，藉由呼叫 <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> 方法的多載而產生，同時也可藉由支援複合格式化的方法所產生，例如 <xref:System.String.Format%2A?displayProperty=nameWithType>。 如需詳細資訊，請參閱[格式化類型](../../../docs/standard/base-types/formatting-types.md)和[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)。 下列範例說明格式化作業中的標準格式字串用法。  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
   
- <xref:System.TimeSpan> 和 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 方法也會使用標準 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 格式字串，以定義剖析作業之輸入字串的必要格式 （剖析會將值的字串表示轉換成該值）。下列範例說明如何在剖析作業中使用標準格式字串。  
+ <xref:System.TimeSpan> 和 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 方法也會使用標準 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 格式字串，以定義剖析作業之輸入字串的必要格式 （分析將值的字串表示形式轉換為該值。下面的示例說明了在分析操作中使用標準格式字串。  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
 下表列出標準時間間隔格式規範。  
   
-|格式規範|Name|描述|範例|  
+|格式規範|名稱|描述|範例|  
 |----------------------|----------|-----------------|--------------|  
 |"c"|常數 (非變異) 格式|這個規範不區分文化特性。 它採用 `[-][d'.']hh':'mm':'ss['.'fffffff]` 格式<br /><br /> \ ("t" 與 "T" 格式字串會產生相同的結果)。<br /><br /> 詳細資訊：[常數 ("c") 格式規範](#the-constant-c-format-specifier)。|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
 |"g"|一般短格式|這個規範只會輸出需要的內容。 它會區分文化特性，並採用 `[-][d':']h':'mm':'ss[.FFFFFFF]` 格式。<br /><br /> 詳細資訊：[一般短 ("g") 格式規範](#the-general-short-g-format-specifier)。|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:500.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:500.599 (fr-FR)|  
@@ -53,12 +53,12 @@ ms.locfileid: "75346621"
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 句號 (.) 和冒號 (:) 是常值的符號。 下表說明其餘項目。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
-|*d*|選擇性的天數，沒有前置的零。|  
+|*D*|選擇性的天數，沒有前置的零。|  
 |*hh*|小時數，範圍從 "00" 到 "23"。|  
-|*mm*|分鐘數，範圍從 "00" 到 "59"。|  
+|*毫米*|分鐘數，範圍從 "00" 到 "59"。|  
 |*ss*|秒數，範圍從 "0" 到 "59"。|  
 |*fffffff*|秒的選擇性小數部分。  其值的範圍可從 "0000001" (一個刻度或一秒的千萬分之一) 到 "9999999" (一秒的千萬分之 9,999,999，也就是一秒減一個刻度)。|  
   
@@ -73,21 +73,21 @@ ms.locfileid: "75346621"
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
 
 ## <a name="the-general-short-g-format-specifier"></a>一般短 ("g") 格式規範  
- "g" <xref:System.TimeSpan> 格式規範會以壓縮形式傳回 <xref:System.TimeSpan> 值的字串表示，而且只包括必要的項目。 其形式如下：  
+ "g" <xref:System.TimeSpan> 格式規範會以壓縮形式傳回 <xref:System.TimeSpan> 值的字串表示，而且只包括必要的項目。 其具備下列格式：  
   
  [-][*d*:]*h*:*mm*:*ss*[.*FFFFFFF*]  
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 冒號 (:) 是常值符號。 下表說明其餘項目。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
-|*d*|選擇性的天數，沒有前置的零。|  
-|*h*|小時數，範圍從 "0" 到 "23"，且沒有前置的零。|  
-|*mm*|分鐘數，範圍從 "00" 到 "59"。|  
+|*D*|選擇性的天數，沒有前置的零。|  
+|*H*|小時數，範圍從 "0" 到 "23"，且沒有前置的零。|  
+|*毫米*|分鐘數，範圍從 "00" 到 "59"。|  
 |*ss*|秒數，範圍從 "00" 到 "59"。|  
 |*.*|小數的秒數分隔符號。 它相當於指定之文化特性的 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 屬性，且不會覆寫使用者。|  
-|*FFFFFFF*|小數的秒數。 盡可能顯示最少的數字。|  
+|*森林論壇*|小數的秒數。 盡可能顯示最少的數字。|  
   
  和 "G" 格式規範一樣，"g" 格式規範已經過當地語系化。 它的小數秒數分隔符號取決於目前的文化特性或指定之文化特性的 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 屬性。  
   
@@ -99,16 +99,16 @@ ms.locfileid: "75346621"
 ## <a name="the-general-long-g-format-specifier"></a>一般長 ("G") 格式規範  
  "G" <xref:System.TimeSpan> 格式規範會以長形式傳回 <xref:System.TimeSpan> 值的字串表示，而此形式一律會同時包含日數和小數秒數。 從 "G" 標準格式規範產生的字串具有下列形式：  
   
- [-]*d*:*hh*:*mm*:*ss*.*fffffff*  
+ [-]*d*：*hh*：*毫米*：*ss*.*弗夫夫夫*  
   
  在方括號 ([ 和 ]) 中的項目是選擇性的項目。 冒號 (:) 是常值符號。 下表說明其餘項目。  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |*-*|選擇性的負號，表示負的時間間隔。|  
-|*d*|天數，沒有前置的零。|  
+|*D*|天數，沒有前置的零。|  
 |*hh*|小時數，範圍從 "00" 到 "23"。|  
-|*mm*|分鐘數，範圍從 "00" 到 "59"。|  
+|*毫米*|分鐘數，範圍從 "00" 到 "59"。|  
 |*ss*|秒數，範圍從 "00" 到 "59"。|  
 |*.*|小數的秒數分隔符號。 它相當於指定之文化特性的 <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> 屬性，且不會覆寫使用者。|  
 |*fffffff*|小數的秒數。|  
@@ -120,8 +120,8 @@ ms.locfileid: "75346621"
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
  [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [格式化類型](../../../docs/standard/base-types/formatting-types.md)
 - [自訂 TimeSpan 格式字串](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+- [剖析字串](../../../docs/standard/base-types/parsing-strings.md)

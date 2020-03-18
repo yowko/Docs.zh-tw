@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 ms.openlocfilehash: 66e7d01f37a1119b9d2076a9131aa40f26d15625
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708187"
 ---
 # <a name="asynchronous-file-io"></a>非同步檔案 I/O
 
-非同步作業可讓您執行耗用大量資源的 I/O 作業，而不需要封鎖主執行緒。 這項效能考慮在 Windows 8.x 儲存應用程式或傳統型應用程式中特別重要，因為在此情況下，耗時的資料流程作業可以封鎖 UI 執行緒，讓您的應用程式看起來像是無法運作。
+非同步作業可讓您執行耗用大量資源的 I/O 作業，而不需要封鎖主執行緒。 在 Windows 8.x 應用商店應用或桌面應用中，這種性能考慮尤其重要，其中耗時的流操作可能會阻止 UI 執行緒並使應用看起來好像不工作。
 
 從 .NET Framework 4.5 開始，I/O 類型包含非同步方法，可簡化非同步作業。 非同步方法在其名稱中包含 `Async` ，例如 <xref:System.IO.Stream.ReadAsync%2A>、 <xref:System.IO.Stream.WriteAsync%2A>、 <xref:System.IO.Stream.CopyToAsync%2A>、 <xref:System.IO.Stream.FlushAsync%2A>、 <xref:System.IO.TextReader.ReadLineAsync%2A>和 <xref:System.IO.TextReader.ReadToEndAsync%2A>。 這些非同步方法會在 Stream 類別上實作 (例如 <xref:System.IO.Stream>、 <xref:System.IO.FileStream>和 <xref:System.IO.MemoryStream>)，以及在用於從資料流讀取或寫入資料流的類別上實作 (例如 <xref:System.IO.TextReader> 和 <xref:System.IO.TextWriter>)。
 
@@ -50,16 +50,16 @@ C# 和 Visual Basic 各有兩個進行非同步程式設計的關鍵字：
 [!code-csharp[Asynchronous_File_IO_async#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Asynchronous_File_IO_async/cs/example2.cs#2)]
 [!code-vb[Asynchronous_File_IO_async#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Asynchronous_File_IO_async/vb/example2.vb#2)]
 
-下一個範例顯示程式碼後置檔案和 XAML 檔案，這些檔案是用來開啟檔案做為 Windows 8.x 存放區應用程式中的 <xref:System.IO.Stream>，並使用 <xref:System.IO.StreamReader> 類別的實例來讀取其內容。 它會使用非同步方法開啟檔案作為資料流並讀取其內容。
+下一個示例顯示代碼隱藏檔和 XAML 檔，用於在 Windows 8.x<xref:System.IO.Stream>應用商店應用中以打開檔作為 檔，並使用<xref:System.IO.StreamReader>類的實例讀取其內容。 它會使用非同步方法開啟檔案作為資料流並讀取其內容。
 
 [!code-csharp[System.IO.WindowsRuntimeStorageExtensions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/cs/blankpage.xaml.cs#2)]
 [!code-vb[System.IO.WindowsRuntimeStorageExtensions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/vb/blankpage.xaml.vb#2)]
 
 [!code-xaml[System.IO.WindowsRuntimeStorageExtensions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/cs/blankpage.xaml#1)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO.Stream>
-- [檔案和資料流 I/O](index.md)
-- [使用 async 和 await 進行非同步程式設計 (C#)](../../csharp/programming-guide/concepts/async/index.md)
+- [檔和流 I/O](index.md)
+- [非同步程式設計與非同步和等待 （C#）](../../csharp/programming-guide/concepts/async/index.md)
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)

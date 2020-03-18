@@ -13,10 +13,10 @@ helpviewer_keywords:
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 ms.openlocfilehash: 5d40db7f902dac8bd6bbdc1510be8e56a321be30
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159451"
 ---
 # <a name="how-to-copy-directories"></a>如何：複製目錄
@@ -24,7 +24,7 @@ ms.locfileid: "78159451"
 
 如需非同步檔案複製的範例，請參閱[非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)。
 
-此範例會將 `copySubDirs` 方法的 `DirectoryCopy` 設定為 `true` 來複製子目錄。 `DirectoryCopy` 方法會以遞迴方式複製子目錄，方法是在每個子目錄上呼叫其本身，直到沒有其他要複製的子目錄為止。  
+此範例會將 `DirectoryCopy` 方法的 `copySubDirs` 設定為 `true` 來複製子目錄。 `DirectoryCopy` 方法會以遞迴方式複製子目錄，方法是在每個子目錄上呼叫其本身，直到沒有其他要複製的子目錄為止。  
   
 ## <a name="example"></a>範例  
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
@@ -38,5 +38,5 @@ ms.locfileid: "78159451"
 - <xref:System.IO.DirectoryInfo>
 - <xref:System.IO.FileStream>
 - [檔案和資料流 I/O](../../../docs/standard/io/index.md)
-- [一般 I/O 工作](../../../docs/standard/io/common-i-o-tasks.md)
-- [非同步檔案 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)
+- [常見 I/O 任務](../../../docs/standard/io/common-i-o-tasks.md)
+- [非同步檔 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)

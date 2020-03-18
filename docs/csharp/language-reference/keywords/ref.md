@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 25c74317ce9033ef10735ee0087f275632b6bd17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715191"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399361"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -41,7 +41,7 @@ ms.locfileid: "75715191"
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on ref and out".
     public void SampleMethod(out int i) { }
     public void SampleMethod(ref int i) { }
@@ -75,7 +75,7 @@ class CS0663_Example
 
 參考傳回值是使用 `ref` 關鍵字所定義：
 
-- 在方法簽章中。 例如，下列方法簽章指出 `GetCurrentPrice` 方法以傳址方式傳回 <xref:System.Decimal> 值。
+- 在方法簽章中。 例如，下列方法簽章指出 `GetCurrentPrice` 方法以傳參考方式傳回 <xref:System.Decimal> 值。
 
 ```csharp
 public ref decimal GetCurrentPrice()
@@ -115,9 +115,11 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 從 C# 7.3 開始，`foreach` 陳述式的反覆運算變數可以是 ref 區域變數或 ref readonly 區域變數。 如需詳細資訊，請參閱 [foreach 陳述式](foreach-in.md)一文。
 
+此外，從 C# 7.3 開始，可以使用[ref 指派運算子](../operators/assignment-operator.md#ref-assignment-operator)重新分配 ref 區域變數或 ref 唯讀區域變數。
+
 ## <a name="ref-readonly-locals"></a>ref readonly 區域變數
 
-ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref readonly` 且使用 `return ref` 的方法或屬性傳回)。 `ref readonly` 區域變數結合了 `ref` 區域變數的屬性和 `readonly` 變數：它是受指派之儲存體的別名，且無法修改。 
+ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref readonly` 且使用 `return ref` 的方法或屬性傳回)。 `ref readonly` 區域變數結合了 `ref` 區域變數的屬性和 `readonly` 變數：它是受指派之儲存體的別名，且無法修改。
 
 ## <a name="a-ref-returns-and-ref-locals-example"></a>ref 傳回值和 ref 區域變數範例
 
@@ -137,7 +139,7 @@ ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref re
 
 - 您無法分隔 `ref struct`。 您不可為類型是 `object`、`dynamic` 或任何介面類型的變數，指派 `ref struct` 類型。
 - `ref struct` 型別無法實作介面。
-- 您不可將 `ref struct` 宣告為類別或一般結構的欄位成員。 這包括宣告自動實作屬性，其會建立編譯器產生的支援欄位。 
+- 您不可將 `ref struct` 宣告為類別或一般結構的欄位成員。 這包括宣告自動實作屬性，其會建立編譯器產生的支援欄位。
 - 您不可在非同步方法中宣告類型為 `ref struct` 的區域變數。 但可以在傳回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `Task` 之類型別的同步方法中，宣告這些區域變數。
 - 您不可在迭代器中宣告 `ref struct` 區域變數。
 - 您不可在 Lambda 運算式或區域函式中擷取 `ref struct` 變數。
@@ -150,12 +152,11 @@ ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref re
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)
 - [ref 傳回值和 ref 區域變數](../../programming-guide/classes-and-structs/ref-returns.md)
 - [條件 ref 運算式](../operators/conditional-operator.md#conditional-ref-expression)
-- [ref 指派運算子](../operators/assignment-operator.md#ref-assignment-operator)
 - [傳遞參數](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [方法參數](method-parameters.md)
 - [C# 參考](../index.md)

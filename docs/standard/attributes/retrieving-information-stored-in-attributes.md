@@ -12,10 +12,10 @@ helpviewer_keywords:
 - attributes [.NET Framework], retrieving
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 ms.openlocfilehash: 4f0f3555ae1ab7e662d5f88ac65739a7c791a964
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78158073"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>擷取儲存於屬性中的資訊
@@ -26,11 +26,11 @@ ms.locfileid: "78158073"
   
  本節說明下列擷取屬性的方式：  
   
-- [擷取單一屬性執行個體](#cpconretrievingsingleinstanceofattribute)  
+- [檢索屬性的單個實例](#cpconretrievingsingleinstanceofattribute)  
   
 - [擷取套用至相同範圍的多個屬性執行個體](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
-- [擷取套用至不同範圍的多個屬性執行個體](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [檢索應用於不同作用域的屬性的多個實例](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>擷取單一屬性執行個體  
@@ -58,7 +58,7 @@ The attribute was not found.
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>擷取套用至相同範圍的多個屬性執行個體  
- 在上述範例中，要檢查的類別和要尋找的特定屬性都會傳遞至 <xref:System.Attribute.GetCustomAttribute%2A>。 如果類別層級上只套用一個屬性執行個體，該程式碼可以運作良好。 不過，如果在相同的類別層級上套用多個屬性執行個體，**GetCustomAttribute** 方法不會擷取所有資訊。 在相同屬性的多個執行個體都套用至相同範圍的情況下，您可以使用 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> 將屬性的所有執行個體放入陣列。 例如，如果在相同類別的類別層級上套用 `DeveloperAttribute` 的兩個執行個體，可修改 `GetAttribute` 方法以顯示在兩個屬性中找到的資訊。 請記住，若要在相同層級上套用多個屬性，屬性必須使用 **中設定為**true**的**AllowMultiple<xref:System.AttributeUsageAttribute> 屬性來定義。  
+ 在上述範例中，要檢查的類別和要尋找的特定屬性都會傳遞至 <xref:System.Attribute.GetCustomAttribute%2A>。 如果類別層級上只套用一個屬性執行個體，該程式碼可以運作良好。 不過，如果在相同的類別層級上套用多個屬性執行個體，**GetCustomAttribute** 方法不會擷取所有資訊。 在相同屬性的多個執行個體都套用至相同範圍的情況下，您可以使用 <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> 將屬性的所有執行個體放入陣列。 例如，如果在相同類別的類別層級上套用 `DeveloperAttribute` 的兩個執行個體，可修改 `GetAttribute` 方法以顯示在兩個屬性中找到的資訊。 請記住，若要在相同層級上套用多個屬性，屬性必須使用 <xref:System.AttributeUsageAttribute> 中設定為 **true** 的 **AllowMultiple** 屬性來定義。  
   
  下列程式碼範例會示範如何使用 **GetCustomAttributes** 方法，來建立會參考任何指定類別中所有 `DeveloperAttribute` 執行個體的陣列。 所有屬性的值隨即顯示在主控台。  
   
