@@ -1,5 +1,5 @@
 ---
-title: HOW TO：列舉隔離儲存區的存放區
+title: 如何：列舉隔離儲存區的存放區
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - data stores, enumerating
 ms.assetid: 0fcf279a-f241-48f0-8034-2e3d331f1fcb
 ms.openlocfilehash: 3ba38093e9e978c89cdb2bb7a584ed9e04c1096d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75707524"
 ---
-# <a name="how-to-enumerate-stores-for-isolated-storage"></a><span data-ttu-id="9022a-102">HOW TO：列舉隔離儲存區的存放區</span><span class="sxs-lookup"><span data-stu-id="9022a-102">How to: Enumerate Stores for Isolated Storage</span></span>
-<span data-ttu-id="9022a-103">您可以使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 靜態方法，列舉目前使用者的所有隔離存放區。</span><span class="sxs-lookup"><span data-stu-id="9022a-103">You can enumerate all isolated stores for the current user by using the  <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> static method.</span></span> <span data-ttu-id="9022a-104">這個方法會使用 <xref:System.IO.IsolatedStorage.IsolatedStorageScope> 值並傳回 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 列舉值。</span><span class="sxs-lookup"><span data-stu-id="9022a-104">This  method takes an <xref:System.IO.IsolatedStorage.IsolatedStorageScope> value and returns an <xref:System.IO.IsolatedStorage.IsolatedStorageFile> enumerator.</span></span> <span data-ttu-id="9022a-105">若要列舉存放區，您必須擁有指定 <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> 值的 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 權限。</span><span class="sxs-lookup"><span data-stu-id="9022a-105">To enumerate stores, you must have the <xref:System.Security.Permissions.IsolatedStorageFilePermission> permission that specifies the <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> value.</span></span> <span data-ttu-id="9022a-106">如果您使用 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> 值呼叫 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> 方法，它會傳回針對目前使用者定義之 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 物件的陣列。</span><span class="sxs-lookup"><span data-stu-id="9022a-106">If you call the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> method with the <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> value, it returns an array of <xref:System.IO.IsolatedStorage.IsolatedStorageFile> objects that are defined for the current user.</span></span>  
+# <a name="how-to-enumerate-stores-for-isolated-storage"></a><span data-ttu-id="92023-102">如何：列舉隔離儲存區的存放區</span><span class="sxs-lookup"><span data-stu-id="92023-102">How to: Enumerate Stores for Isolated Storage</span></span>
+<span data-ttu-id="92023-103">您可以使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> 靜態方法，列舉目前使用者的所有隔離存放區。</span><span class="sxs-lookup"><span data-stu-id="92023-103">You can enumerate all isolated stores for the current user by using the  <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> static method.</span></span> <span data-ttu-id="92023-104">這個方法會使用 <xref:System.IO.IsolatedStorage.IsolatedStorageScope> 值並傳回 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 列舉值。</span><span class="sxs-lookup"><span data-stu-id="92023-104">This  method takes an <xref:System.IO.IsolatedStorage.IsolatedStorageScope> value and returns an <xref:System.IO.IsolatedStorage.IsolatedStorageFile> enumerator.</span></span> <span data-ttu-id="92023-105">若要列舉存放區，您必須擁有指定 <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> 值的 <xref:System.Security.Permissions.IsolatedStorageFilePermission> 權限。</span><span class="sxs-lookup"><span data-stu-id="92023-105">To enumerate stores, you must have the <xref:System.Security.Permissions.IsolatedStorageFilePermission> permission that specifies the <xref:System.Security.Permissions.IsolatedStorageContainment.AdministerIsolatedStorageByUser> value.</span></span> <span data-ttu-id="92023-106">如果您使用 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> 值呼叫 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> 方法，它會傳回針對目前使用者定義之 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> 物件的陣列。</span><span class="sxs-lookup"><span data-stu-id="92023-106">If you call the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> method with the <xref:System.IO.IsolatedStorage.IsolatedStorageScope.User> value, it returns an array of <xref:System.IO.IsolatedStorage.IsolatedStorageFile> objects that are defined for the current user.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9022a-107">範例</span><span class="sxs-lookup"><span data-stu-id="9022a-107">Example</span></span>  
- <span data-ttu-id="9022a-108">下列程式碼範例會取得使用者和組件所隔離的存放區、建立一些檔案，然後使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> 方法擷取這些檔案。</span><span class="sxs-lookup"><span data-stu-id="9022a-108">The following code example obtains a store that is isolated by user and assembly, creates a few files, and retrieves those files by using the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> method.</span></span>  
+## <a name="example"></a><span data-ttu-id="92023-107">範例</span><span class="sxs-lookup"><span data-stu-id="92023-107">Example</span></span>  
+ <span data-ttu-id="92023-108">下列程式碼範例會取得使用者和組件所隔離的存放區、建立一些檔案，然後使用 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> 方法擷取這些檔案。</span><span class="sxs-lookup"><span data-stu-id="92023-108">The following code example obtains a store that is isolated by user and assembly, creates a few files, and retrieves those files by using the <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> method.</span></span>  
   
  [!code-csharp[Conceptual.IsolatedStorage#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source2.cs#2)]
  [!code-vb[Conceptual.IsolatedStorage#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source2.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="9022a-109">請參閱</span><span class="sxs-lookup"><span data-stu-id="9022a-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="92023-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="92023-109">See also</span></span>
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
-- [<span data-ttu-id="9022a-110">隔離儲存區</span><span class="sxs-lookup"><span data-stu-id="9022a-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)
+- [<span data-ttu-id="92023-110">隔離存儲</span><span class="sxs-lookup"><span data-stu-id="92023-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)
