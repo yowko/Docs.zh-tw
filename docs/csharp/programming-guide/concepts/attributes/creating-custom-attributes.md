@@ -3,10 +3,10 @@ title: 建立自訂屬性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
 ms.openlocfilehash: c0f25adf0d562b659edaa8f36e72332fd0c1ee7e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69595413"
 ---
 # <a name="creating-custom-attributes-c"></a>建立自訂屬性 (C#)
@@ -70,5 +70,5 @@ class SampleClass
 - [撰寫自訂屬性](../../../../standard/attributes/writing-custom-attributes.md)
 - [反映 (C#)](../reflection.md)
 - [屬性 (C#)](./index.md)
-- [使用反射存取屬性 (C#)](./accessing-attributes-by-using-reflection.md)
+- [使用反映存取屬性 (C#)](./accessing-attributes-by-using-reflection.md)
 - [AttributeUsage (C#)](./attributeusage.md)

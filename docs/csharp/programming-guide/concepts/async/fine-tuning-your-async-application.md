@@ -3,10 +3,10 @@ title: 微調非同步應用程式 (C#)
 ms.date: 07/20/2015
 ms.assetid: 97696eb9-81fc-4940-9655-84daa8eb4d5c
 ms.openlocfilehash: cff50e62ff62b70e97e7ea6e03714326d774e407
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73970234"
 ---
 # <a name="fine-tuning-your-async-application-c"></a>微調非同步應用程式 (C#)
@@ -20,13 +20,13 @@ ms.locfileid: "73970234"
   
 - `WhenAll` 會在集合中的所有工作完成時，傳回一個完成的工作。  
   
-     如需使用 `WhenAll`的詳細資訊和範例，請參閱[如何使用 system.threading.tasks.task.whenall 擴充非同步逐步解說C#（）](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
+     有關詳細資訊和使用的示例`WhenAll`，請參閱[如何使用 Task.WhenAll （C#） 擴展非同步演練](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
   
  本節包含下列範例。  
   
-- [取消一項非同步工作或工作清單 (C#)](./cancel-an-async-task-or-a-list-of-tasks.md)  
+- [取消非同步任務或工作清單 （C#）。](./cancel-an-async-task-or-a-list-of-tasks.md)  
   
-- [在一段時間後取消非同步工作 (C#)](./cancel-async-tasks-after-a-period-of-time.md)  
+- [在時間段 （C#） 後取消非同步任務](./cancel-async-tasks-after-a-period-of-time.md)  
   
 - [當其中一項工作完成時，取消剩餘的非同步工作 (C#)](./cancel-remaining-async-tasks-after-one-is-complete.md)  
   
@@ -37,10 +37,10 @@ ms.locfileid: "73970234"
   
  這些專案會建立 UI，其中包含一個啟動處理序的按鈕和一個取消處理序的按鈕，如下圖所示。 這兩個按鈕的名稱分別是 `startButton` 和 `cancelButton`。  
   
- ![具有 [取消] 按鈕的 WPF 視窗](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "具有 [開始] 和 [停止] 按鈕的對話方塊")  
+ ![具有 [取消] 按鈕的 WPF 視窗](./media/fine-tuning-your-async-application/cancellation-and-start-button.png "帶有"開始"和"停止"按鈕的對話方塊")  
   
  您可以從 [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](./index.md)

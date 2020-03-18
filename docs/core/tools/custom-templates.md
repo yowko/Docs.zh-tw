@@ -4,17 +4,17 @@ description: 了解任何 .NET 專案或檔案類型的自訂範本。
 author: thraka
 ms.date: 06/14/2019
 ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73420873"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new 的自訂範本
 
-[.NET Core SDK](https://dotnet.microsoft.com/download) \(英文\) 具有許多已經安裝並可供您使用的範本。 [`dotnet new` 命令](dotnet-new.md)不僅是使用範本的方式，也是安裝及解除安裝範本的方式。 從 .NET Core 2.0 開始，您可以建立任何專案類型的自訂範本，例如應用程式、服務、工具或類別庫。 您甚至可以建立會輸出一或多個獨立檔案的範本，例如組態檔。
+[.NET Core SDK](https://dotnet.microsoft.com/download) \(英文\) 具有許多已經安裝並可供您使用的範本。 該[`dotnet new`命令](dotnet-new.md)不僅是使用範本的方式，也是如何安裝和卸載範本的方法。 從 .NET Core 2.0 開始，您可以建立任何專案類型的自訂範本，例如應用程式、服務、工具或類別庫。 您甚至可以建立會輸出一或多個獨立檔案的範本，例如組態檔。
 
-您可以直接參考 NuGet *.nupkg* 檔案，或指定包含範本的檔案系統目錄，來從任何 NuGet 摘要上的 NuGet 套件安裝自訂的範本。 範本引擎提供可讓您取代值、包含與排除檔案，以及在範本被使用時執行自訂處理作業的功能。
+您可以通過直接引用 NuGet *.nupkg*檔，或通過指定包含該範本的檔案系統目錄，在任何 NuGet 源上安裝 NuGet 包中的自訂範本。 範本引擎提供可讓您取代值、包含與排除檔案，以及在範本被使用時執行自訂處理作業的功能。
 
 範本引擎是開放原始碼，而線上程式碼存放庫位於 GitHub 的 [dotnet/templating](https://github.com/dotnet/templating/)。 如需範本範例，請瀏覽 [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) 存放庫。 GitHub 的 [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (dotnet new 的可用範本) 中，有包括協力廠商範本在內的更多範本。 如需建立與使用自訂範本的詳細資訊，請參閱[如何建立您自己的 dotnet new 範本](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)以及 [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki) (維基百科：dotnet/templating GitHub 存放庫)。
 
@@ -28,16 +28,16 @@ ms.locfileid: "73420873"
 dotnet new --list
 ```
 
-## <a name="configuration"></a>Configuration
+## <a name="configuration"></a>組態
 
 範本是由下列部分組成：
 
 - 來源檔案和資料夾。
-- 設定檔 (*template.json*)。
+- 設定檔 （*範本.json*）。
 
 ### <a name="source-files-and-folders"></a>來源檔案和資料夾
 
-來源檔案和資料夾包含您想要範本引擎在 `dotnet new <TEMPLATE>` 命令被執行時使用的任何檔案和資料夾。 範本引擎的設計是將「可執行專案」用為原始程式碼以產生專案。 這有幾項優點：
+來源檔案和資料夾包含您想要範本引擎在 `dotnet new <TEMPLATE>` 命令被執行時使用的任何檔案和資料夾。 範本引擎的設計是將「可執行專案」** 用為原始程式碼以產生專案。 這有幾項優點：
 
 - 範本引擎不需要您將特殊權杖插入專案的原始程式碼。
 - 程式碼檔案不是特殊的檔案，也不使用範本引擎以任何方式修改。 因此，通常在處理專案時使用的工具也用來處理範本內容。
@@ -52,11 +52,11 @@ dotnet new --list
 
 *template.json* 檔案放在範本根目錄的 *.template.config* 資料夾中。 檔案向範本引擎提供組態資訊。 最小的組態需要下表顯示的成員，這即足以建立具有功能的範本。
 
-| 成員            | 輸入          | 描述 |
+| member            | 類型          | 描述 |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* 檔案的 JSON 結構描述。 支援 JSON 結構描述的編輯器，會在指定結構描述時，啟用 JSON 編輯功能。 例如，[Visual Studio Code](https://code.visualstudio.com/) 需要此成員才能啟用 IntelliSense。 使用 `http://json.schemastore.org/template` 的值。 |
 | `author`          | 字串        | 範本的作者。 |
-| `classifications` | array(string) | 搜尋範本時，使用者可能用來尋找範本的零或多個範本特性。 當它出現在使用 `dotnet new -l|--list` 命令產生的範本清單中時，分類也會出現在「標記」資料行中。 |
+| `classifications` | array(string) | 搜尋範本時，使用者可能用來尋找範本的零或多個範本特性。 當它出現在使用 `dotnet new -l|--list` 命令產生的範本清單中時，分類也會出現在「標記」** 資料行中。 |
 | `identity`        | 字串        | 此範本的唯一名稱。 |
 | `name`            | 字串        | 使用者應該會看到的範本名稱。 |
 | `shortName`       | 字串        | 適用於選取要套用至環境之範本的預設速記名稱；此環境中的範本名稱是由使用者指定，而不是透過 GUI 選取。 例如，從命令提示字元以 CLI 命令使用範本時，簡短名稱很有用。 |
@@ -95,7 +95,7 @@ dotnet new --list
 
 自訂範本會搭配 [dotnet pack](dotnet-pack.md) 命令和 *.csproj* 檔案進行封裝。 或者，[NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) \(部分機器翻譯\) 可以搭配 [nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) \(部分機器翻譯\) 命令和 *.nuspec* 檔案使用。 不過，NuGet 在 Windows 上需要 .NET Framework，在 Linux 和 MacOS 上則需要 [Mono](https://www.mono-project.com/) \(英文\)。
 
-*.csproj* 檔案與傳統的程式碼專案 *.csproj* 檔案具有些微的不同。 請注意下列設定：
+*.csproj* 檔案與傳統的程式碼專案 *.csproj* 檔案具有些微的不同。 請注意下列設定︰
 
 01. 已加入 `<PackageType>` 設定並將其設定為 `Template`。
 01. 已加入 `<PackageVersion>` 設定並將其設定為有效的 [NuGet 版本號碼](/nuget/reference/package-versioning)。
@@ -248,7 +248,7 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 dotnet new <TEMPLATE>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [建立 dotnet new 的自訂範本 (教學課程)](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/templating GitHub repo Wiki](https://github.com/dotnet/templating/wiki) (維基百科：dotnet/templating GitHub 存放庫)

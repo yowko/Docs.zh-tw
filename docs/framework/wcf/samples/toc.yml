@@ -24,7 +24,7 @@
     - name: 基本
       href: basic.md
       items:
-        - name: 快速入門
+        - name: 開始使用
           href: getting-started-sample.md
         - name: AJAX
           href: ajax.md
@@ -138,7 +138,7 @@
                   href: ws-transport-with-message-credential.md
                 - name: WS 交易流程
                   href: ws-transaction-flow.md
-        - name: 用戶端
+        - name: Client
           href: client.md
           items:
             - name: 用戶端互通性
@@ -202,7 +202,7 @@
                   href: one-way.md
                 - name: 工作階段
                   href: session.md
-                - name: 資料流
+                - name: STREAM
                   href: stream.md
                 - name: XmlSerializer 錯誤
                   href: xmlserializer-faults.md
@@ -215,11 +215,11 @@
         - name: 探索
           href: discovery-samples.md
           items:
-            - name: 公告
+            - name: 通知
               href: announcements-sample.md
             - name: 基本
               href: basic-sample.md
-            - name: Configuration
+            - name: 組態
               href: configuration-sample.md
             - name: 探索範圍
               href: discovery-with-scopes-sample.md
@@ -229,7 +229,7 @@
               href: workflow-discovery-sample.md
             - name: 探索路由器服務
               href: discovery-router-service.md
-        - name: 管理
+        - name: 管理性
           href: management.md
           items:
             - name: WCF 服務及 Windows 的事件追蹤
@@ -294,7 +294,7 @@
                   href: using-the-wcf-moniker-with-com-clients.md
                 - name: 含 WCF 服務的 ASMX 用戶端
                   href: asmx-client-with-a-wcf-service.md
-            - name: 「行為」
+            - name: 行為
               href: behaviors.md
               items:
                 - name: 並行
@@ -485,7 +485,7 @@
           href: message-inspectors.md
         - name: WebContentTypeMapper
           href: webcontenttypemapper-sample.md
-    - name: 情節
+    - name: 狀況
       href: scenario.md
       items:
         - name: 資料繫結案例

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -preferreduilang compiler option [C#]
 ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
 ms.openlocfilehash: 7ebafcf446c9033c93e0c5fa5e11ea2930bd2e1e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602554"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang (C# 編譯器選項)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
 ms.openlocfilehash: 6c842abc1423e7ee0d98b71392e02410c6cf9172
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602732"
 ---
 # <a name="-main-c-compiler-options"></a>-main (C# 編譯器選項)
@@ -36,11 +36,11 @@ ms.locfileid: "69602732"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1. 開啟專案的 [屬性]  頁面。  
+1. 開啟專案的 [屬性]**** 頁面。  
   
-2. 按一下 [應用程式]  屬性頁。  
+2. 按一下 [應用程式]**** 屬性頁。  
   
-3. 修改 [啟始物件]  屬性。  
+3. 修改 [啟始物件]**** 屬性。  
   
      若要以程式設計方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>。  
   

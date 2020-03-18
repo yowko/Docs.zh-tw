@@ -3,10 +3,10 @@ title: 使用 .NET Core 實作微服務領域模型
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 進入 DDD 導向領域模型的實作詳細資料。
 ms.date: 10/08/2018
 ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972049"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>使用 .NET Core 實作微服務領域模型
@@ -17,7 +17,7 @@ ms.locfileid: "73972049"
 
 用於 eShopOnContainers 參考應用程式的資料夾組織展示了應用程式的 DDD 模型。 您可能會發現不同的資料夾組織可以更清楚的與您為應用程式選擇的設計進行通訊。 如同您在圖 7-10 中所看到的，在訂購領域模型中有兩個彙總，即訂單彙總和購買者彙總。 每一個彙總都是一組領域實體和值物件，雖然您也可以使用單一領域實體 (彙總根或根實體) 來組成彙總。
 
-:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="方案總管中的排序. 網域專案的螢幕擷取畫面。":::
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="解決方案資源管理器中排序.域專案的螢幕截圖。":::
 Ordering.Domain 專案的 [方案總管] 檢視，顯示包含 BuyerAggregate 及 OrderAggregate 資料夾的 AggregatesModel 資料夾，每一個包含它的實體類別、值物件檔案等等。
 :::image-end:::
 
@@ -33,7 +33,7 @@ Ordering.Domain 專案的 [方案總管] 檢視，顯示包含 BuyerAggregate �
 
 「交易一致性」表示彙總保證會在商務動作結束時維持一致及最新狀態。 例如，來自 eShopOnContainers 訂購微服務領域模型的訂單彙總是由圖 7-11 中的內容所組成。
 
-:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="OrderAggregate 資料夾及其類別的螢幕擷取畫面。":::
+:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="訂單聚合資料夾及其類的螢幕截圖。":::
 OrderAggregate 資料夾的詳細檢視：Address.cs 是值物件、IOrderRepository 是存放庫介面、Order.cs 是彙總根、OrderItem.cs 是子系實體，且 OrderStatus.cs 是列舉類別。
 :::image-end:::
 
@@ -97,7 +97,7 @@ public class Order : Entity, IAggregateRoot
 
 請務必注意，這是實作為 POCO 類別的領域實體。 它對 Entity Framework Core 或任何其他基礎結構架構都沒有任何直接相依性。 這項實作是以 DDD 方式進行的 (也應如此)，單純只是實作領域模型的 C\# 程式碼。
 
-此外，類別會使用名為 IAggregateRoot 的介面裝飾。 該介面是一個空介面，有時候稱之為*標記介面 (marker interface)* ，單純用於指出此實體類別同時也是一個彙總根。
+此外，類別會使用名為 IAggregateRoot 的介面裝飾。 該介面是一個空介面，有時候稱之為*標記介面 (marker interface)*，單純用於指出此實體類別同時也是一個彙總根。
 
 標記介面有時候會被視為「反模式 (anti-pattern)」。然而，它同時也是一種標記類別的明瞭方式，尤其是在該介面可能會進一步發展的情況下。 屬性也可以是用於標記的另外一個選擇，但通常看見 IAggregate 介面旁邊的基底類別 (Entity)，會比將 Aggregate 屬性標記放在類別上方要來得更快。 這在任何案例中都只是一種喜好設定。
 
@@ -109,7 +109,7 @@ public class Order : Entity, IAggregateRoot
 
 在先前的程式碼中，請注意許多屬性都是唯讀或私用，且只能透過類別方法進行更新，以使得任何更新都必須考量到類別方法中指定的商務領域變異及邏輯。
 
-例如，根據 DDD 模式，**您「不」應從任何命令處理常式方法或應用程式層類別進行下列動作** (實際上，您應該無法這麼做)：
+例如，根據 DDD 模式，**您「不」** 應從任何命令處理常式方法或應用程式層類別進行下列動作** (實際上，您應該無法這麼做)：
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -170,15 +170,15 @@ myOrder.AddOrderItem(productId, productName, pictureUrl, unitPrice, discount, un
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Vaughn Vernon。使用 DDD 和 Entity Framework 建立匯總模型。** 請注意，這*並非* Entity Framework Core。 \
+- **沃恩·弗農使用 DDD 和實體框架對聚合建模。** 請注意，這*並非* Entity Framework Core。 \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman。資料點-針對領域驅動設計撰寫程式碼：以資料為焦點的開發人員的秘訣** \
+- **朱莉·萊曼資料點 - 域驅動設計的編碼：資料聚焦開發人員的提示** \
   <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
-- **Udi Dahan。如何建立完全封裝的網域模型** \
+- **烏迪·達漢如何創建完全封裝的域模型** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 > [!div class="step-by-step"]
-> [上一頁](microservice-domain-model.md)
-> [下一頁](seedwork-domain-model-base-classes-interfaces.md)
+> [上一個](microservice-domain-model.md)
+> [下一個](seedwork-domain-model-base-classes-interfaces.md)

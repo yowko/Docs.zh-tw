@@ -3,10 +3,10 @@ title: 非同步訊息通訊
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 非同步訊息型通訊是微服務架構的基本概念，因為它是最終保持微服務彼此之間相互獨立，同時又能同步的最佳方式。
 ms.date: 09/20/2018
 ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73454227"
 ---
 # <a name="asynchronous-message-based-communication"></a>非同步訊息通訊
@@ -53,7 +53,7 @@ ms.locfileid: "73454227"
 
 很重要的一點是，您可能想要傳達給訂閱相同事件訂閱的多個微服務。 若要這樣做，您可以根據事件驅動通訊，使用發行/訂閱傳訊，如圖 4-19 所示。 這個發佈/訂閱機制非微服務架構所獨有。 它類似 DDD 中的[繫結內容](https://martinfowler.com/bliki/BoundedContext.html)通訊方式，或是 [Command and Query Responsibility Segregation (CQRS)](https://martinfowler.com/bliki/CQRS.html) (命令和查詢責任隔離 (CQRS)) 架構模式中，將更新從寫入資料庫傳播到讀取資料庫的方式。 目標是在分散式系統的多個資料來源之間有最終一致性。
 
-![顯示非同步事件驅動通訊的圖表。](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
+![顯示非同步事件驅動的通信的圖表。](./media/asynchronous-message-based-communication/asynchronous-event-driven-communication.png)
 
 **圖 4-19**. 非同步事件驅動訊息通訊
 
@@ -83,27 +83,27 @@ ms.locfileid: "73454227"
 
 ## <a name="additional-resources"></a>其他資源
 
-- **事件驅動傳訊** \
+- **事件驅動消息** \
   <https://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **發佈/訂閱頻道** \
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **Udi Dahan。澄清 CQRS** \
+- **烏迪·達漢澄清的 CQRS** \
   <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
-- **命令與查詢責任隔離 (CQRS)**  \
+- **命令和查詢責任分離 （CQRS）** \
   <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
-- **在繫結的內容之間通訊** \
+- **邊界上下文之間的通信** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **最終一致性** \
   <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Jimmy Bogard。重構以提高彈性：評估**結合性 \
+- **吉米·博加德重構對復原力：評估耦合** \
   <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
-> [上一頁](communication-in-microservice-architecture.md)
-> [下一頁](maintain-microservice-apis.md)
+> [上一個](communication-in-microservice-architecture.md)
+> [下一個](maintain-microservice-apis.md)

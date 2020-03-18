@@ -3,10 +3,10 @@ title: 一般容器設計準則
 description: 了解良好容器設計的基本原則就是「容器應只裝載一個處理序」。
 ms.date: 02/15/2019
 ms.openlocfilehash: 69f3ff6c9303f0c4082695d861a8c90031295b6a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68672495"
 ---
 # <a name="common-container-design-principles"></a>一般容器設計準則
@@ -20,5 +20,5 @@ ms.locfileid: "68672495"
 有時候，您可能需要在單一容器中執行多個處理序。 在任何架構文件中，並沒有「絕不可能」或「一律如此」的情況。 在需要多個處理序的情況下，常見的模式是使用 [Supervisor](http://supervisord.org/)。
 
 >[!div class="step-by-step"]
->[上一頁](design-docker-applications.md)
->[下一頁](monolithic-applications.md)
+>[上一個](design-docker-applications.md)
+>[下一個](monolithic-applications.md)

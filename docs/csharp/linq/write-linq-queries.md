@@ -4,10 +4,10 @@ description: 了解如何在 C# 中撰寫 LINQ 查詢。
 ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
 ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "65632883"
 ---
 # <a name="write-linq-queries-in-c"></a>在 C\# 中撰寫 LINQ 查詢
@@ -27,7 +27,7 @@ ms.locfileid: "65632883"
 
 ## <a name="example---query-syntax"></a>範例 - 查詢語法
 
-撰寫大部分查詢的建議方式是使用「查詢語法」來建立「查詢運算式」。 下列範例示範三個查詢運算式。 第一個查詢運算式示範如何使用 `where` 子句套用條件來篩選或限制結果。 它會傳回值大於 7 或小於 3 的來源序列中的所有項目。 第二個運算式示範如何排序傳回的結果。 第三個運算式示範如何根據索引鍵來分組結果。 此查詢會根據單字的第一個字母來傳回兩個群組。
+撰寫大部分查詢的建議方式是使用「查詢語法」** 來建立「查詢運算式」**。 下列範例示範三個查詢運算式。 第一個查詢運算式示範如何使用 `where` 子句套用條件來篩選或限制結果。 它會傳回值大於 7 或小於 3 的來源序列中的所有項目。 第二個運算式示範如何排序傳回的結果。 第三個運算式示範如何根據索引鍵來分組結果。 此查詢會根據單字的第一個字母來傳回兩個群組。
 
 [!code-csharp[csProgGuideLINQ#5](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]
 
@@ -81,6 +81,6 @@ int numCount = numbers.Where(n => n < 3 || n > 7).Count();
 
 ## <a name="see-also"></a>另請參閱
 
-- [逐步解說：用 C# 撰寫查詢](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
-- [Language-Integrated Query (LINQ)](index.md)
-- [where 子句](../language-reference/keywords/where-clause.md)
+- [逐步解說：在 C# 中撰寫查詢](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [語言綜合查詢（LINQ）](index.md)
+- [其中條款](../language-reference/keywords/where-clause.md)

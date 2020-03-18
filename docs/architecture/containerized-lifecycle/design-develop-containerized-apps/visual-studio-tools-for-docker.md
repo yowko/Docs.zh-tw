@@ -4,10 +4,10 @@ description: 了解 Visual Studio 2017 15.7 版和更新版本中可用的 Docke
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 2b6fdc33f9cf850cf9e52fca4a1a9754cd412567
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68673875"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>在 Windows 上使用 Visual Studio 2017 中的 Docker 工具
@@ -25,7 +25,7 @@ ms.locfileid: "68673875"
 
 您可以將兩種 Docker 支援層級新增至專案。 在 ASP.NET Core 專案中，您可以啟用 Docker 支援，只將 `Dockerfile` 檔案新增至專案。 下一個層級是容器協調流程支援，這會將 `Dockerfile` 新增至專案 (如果它尚未存在) 和解決方案層級的 `docker-compose.yml` 檔案。 預設會透過 Docker Compose 在 Visual Studio 2017 15.0 版至 15.7 版中新增容器協調流程支援。 容器協調流程支援是 Visual Studio 2017 15.8 版或更新版本中的選擇性功能。 15.8 版和更新版本支援 Docker Compose 與 Service Fabric。
 
-[新增] > [Docker 支援]  和 [新增] > [容器協調器支援]  命令位於 [方案總管]  中 ASP.NET Core 專案的專案節點右鍵功能表 (或操作功能表) 上，如圖 4-31 所示：
+[新增] > [Docker 支援]**** 和 [新增] > [容器協調器支援]**** 命令位於 [方案總管]**** 中 ASP.NET Core 專案的專案節點右鍵功能表 (或操作功能表) 上，如圖 4-31 所示：
 
 ![Visual Studio 中的 [新增 Docker 支援] 功能表選項](./media/add-docker-support-menu.png)
 
@@ -33,7 +33,7 @@ ms.locfileid: "68673875"
 
 ### <a name="add-docker-support"></a>新增 Docker 支援
 
-您可以透過在 [方案總管]  中選取 [新增]   > [Docker 支援]  ，為現有的 ASP.NET Core 專案新增 Docker 支援。 您也可以在專案建立期間啟用 Docker 支援，方法是在按一下 [新增專案]  對話方塊的 [確定]  之後開啟的 [新增 ASP.NET Core Web 應用程式]  對話方塊中選取 [啟用 Docker 支援]  ，如圖 4-32 所示。
+您可以通過在**解決方案資源管理器**中選擇 **"添加** > **Docker 支援**"，將 Docker 支援添加到現有ASP.NET核心專案。 您也可以在專案建立期間啟用 Docker 支援，方法是在按一下 [新增專案]**** 對話方塊的 [確定]**** 之後開啟的 [新增 ASP.NET Core Web 應用程式]**** 對話方塊中選取 [啟用 Docker 支援]****，如圖 4-32 所示。
 
 ![在 Visual Studio 中為新的 ASP.NET Core Web 應用程式啟用 Docker 支援](./media/enable-docker-support-visual-studio.png)
 
@@ -52,9 +52,9 @@ ms.locfileid: "68673875"
 
 若要撰寫多容器解決方案，請將容器協調流程支援新增至您的專案。 如果它們在同一個 *docker-compose.yml* 文件中定義，則允許您同時執行一組容器 (整個解決方案) 並對其進行偵錯。
 
-若要新增容器協調流程支援，請以滑鼠右鍵按一下 [方案總管]  中的解決方案或專案節點，然後選擇 [新增] > [容器協調流程支援]  。 然後選擇 [Docker Compose]  或 [Service Fabric]  來管理容器。
+若要新增容器協調流程支援，請以滑鼠右鍵按一下 [方案總管]**** 中的解決方案或專案節點，然後選擇 [新增] > [容器協調流程支援]****。 然後選擇 [Docker Compose]**** 或 [Service Fabric]**** 來管理容器。
 
-向專案新增容器協調流程支援後，您會看到專案中新增了 Dockerfile，且 [方案總管]  中的解決方案新增了 **docker-compose** 資料夾，如圖 4-34 所示：
+向專案新增容器協調流程支援後，您會看到專案中新增了 Dockerfile，且 [方案總管]**** 中的解決方案新增了 **docker-compose** 資料夾，如圖 4-34 所示：
 
 ![Visual Studio 中 [方案總管] 中的 Docker 檔案](media/docker-support-solution-explorer.png)
 
@@ -64,23 +64,23 @@ ms.locfileid: "68673875"
 
 ## <a name="configure-docker-tools"></a>設定 Docker 工具
 
-從主功能表中，選擇 [工具] > [選項]  ，並展開 [容器工具] > [設定]  。 容器工具設定隨即出現。
+從主功能表中，選擇 [工具] > [選項]****，並展開 [容器工具] > [設定]****。 容器工具設定隨即出現。
 
-![Visual Studio Docker 工具選項，其中顯示：自動在專案載入時提取所需的 Docker 映像、自動在背景中啟動容器、自動在解決方案關閉時終止容器，以及不要提示信任 SSL 憑證。](./media/visual-studio-docker-tools-options.png)
+![Visual Studio Docker 工具選項，顯示：在專案負載上自動拉取所需的 Docker 映射，在後臺自動啟動容器，在解決方案關閉時自動終止容器，並且不提示信任 SSL 憑證。](./media/visual-studio-docker-tools-options.png)
 
 **圖 4-35**. Docker 工具選項
 
 下表可協助您決定如何設定這些選項。
 
-| 名稱 | 預設設定 | 適用於 | 說明 |
+| 名稱 | 預設值 | 套用至 | 描述 |
 | -----|:---------------:|:----------:| ----------- |
-| 自動在專案載入時提取所需的 Docker 映像 | 開啟 | Docker Compose | 為了提高載入專案時的效能，Visual Studio 會在背景中啟動 Docker 提取作業，因此當您準備好要執行程式碼時，映像已下載或正在下載中。 如果您只要載入專案並瀏覽程式碼，則可以關閉這項功能，避免下載您不需要的容器映像。 |
-| 自動在背景中啟動容器 | 開啟 | Docker Compose | 同樣為了提高效能，Visual Studio 會在您建置並執行容器時建立一個容器，內含準備好可供使用的磁碟區裝載。 如果您想要控制何時建立容器，請關閉這項功能。 |
-| 自動在解決方案關閉時終止容器 | 開啟 | Docker Compose | 如果您希望解決方案的容器在關閉解決方案或關閉 Visual Studio 之後繼續執行，請關閉這項功能。 |
-| 不要提示信任 localhost SSL 憑證 | Off | ASP.NET Core 2.2 專案 | 如果 localhost SSL 憑證不受信任，則除非核取此核取方塊，否則每次執行專案時 Visual Studio 都會提示。 |
+| 自動在專案載入時提取所需的 Docker 映像 | 另一 | Docker Compose | 為了提高載入專案時的效能，Visual Studio 會在背景中啟動 Docker 提取作業，因此當您準備好要執行程式碼時，映像已下載或正在下載中。 如果您只要載入專案並瀏覽程式碼，則可以關閉這項功能，避免下載您不需要的容器映像。 |
+| 自動在背景中啟動容器 | 另一 | Docker Compose | 同樣為了提高效能，Visual Studio 會在您建置並執行容器時建立一個容器，內含準備好可供使用的磁碟區裝載。 如果您想要控制何時建立容器，請關閉這項功能。 |
+| 自動在解決方案關閉時終止容器 | 另一 | Docker Compose | 如果您希望解決方案的容器在關閉解決方案或關閉 Visual Studio 之後繼續執行，請關閉這項功能。 |
+| 不要提示信任 localhost SSL 憑證 | 關閉 | ASP.NET Core 2.2 專案 | 如果 localhost SSL 憑證不受信任，則除非核取此核取方塊，否則每次執行專案時 Visual Studio 都會提示。 |
 
 > [!WARNING]
-> 如果 localhost SSL 憑證不受信任，且您核取隱藏提示的方塊，則 HTTPS Web 要求可能會在應用程式或服務的執行階段失敗。 在此情況下，請取消核取 [不要提示]  核取方塊，執行您的專案，並在提示時表示信任。
+> 如果 localhost SSL 憑證不受信任，且您核取隱藏提示的方塊，則 HTTPS Web 要求可能會在應用程式或服務的執行階段失敗。 在此情況下，請取消核取 [不要提示]**** 核取方塊，執行您的專案，並在提示時表示信任。
 
 > [!TIP]
 > 如需服務實作和使用 Visual Studio Tools for Docker 的進一步詳細資料，請閱讀下列文章：
@@ -90,5 +90,5 @@ ms.locfileid: "68673875"
 >使用 Visual Studio 將 ASP.NET 容器部署到容器登錄：<https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 >[!div class="step-by-step"]
->[上一頁](docker-apps-inner-loop-workflow.md)
->[下一頁](set-up-windows-containers-with-powershell.md)
+>[上一個](docker-apps-inner-loop-workflow.md)
+>[下一個](set-up-windows-containers-with-powershell.md)

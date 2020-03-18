@@ -3,10 +3,10 @@ title: 微服務可定址性和服務登錄
 description: 了解容器映像登錄在微服務架構中的角色。
 ms.date: 09/20/2018
 ms.openlocfilehash: d72ba399f3da730f0e57c44c5ec01c1cc9f5fc05
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674045"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>微服務可定址性和服務登錄
@@ -19,15 +19,15 @@ ms.locfileid: "68674045"
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Chris Richardson：模式：Service registry** \
+- **克裡斯·理查森模式：服務註冊表** \
   <https://microservices.io/patterns/service-registry.html>
 
-- **Auth0：服務登錄** \
+- **Auth0.服務註冊** \
   <https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/>
 
-- **Gabriel Schenker：服務探索** \
+- **加布裡埃爾·申克服務發現** \
   <https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/>
 
 >[!div class="step-by-step"]
->[上一頁](maintain-microservice-apis.md)
->[下一頁](microservice-based-composite-ui-shape-layout.md)
+>[上一個](maintain-microservice-apis.md)
+>[下一個](microservice-based-composite-ui-shape-layout.md)

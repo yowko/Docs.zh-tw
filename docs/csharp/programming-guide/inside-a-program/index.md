@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
 ms.openlocfilehash: a180dc30c7fab11e5b939682244dbb90eb7615eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "69589262"
 ---
 # <a name="inside-a-c-program"></a>C# 程式深入解析
@@ -28,13 +28,13 @@ ms.locfileid: "69589262"
 
 ## <a name="related-sections"></a>相關章節
 
-- [C++ 使用者入門](../../getting-started/index.md)
+- [C# 使用者入門](../../getting-started/index.md)
 
 - [C# 程式設計指南](../index.md)
 
 - [C# 參考](../../language-reference/index.md)
 
-- [範例與教學課程](../../../samples-and-tutorials/index.md)
+- [示例和教程](../../../samples-and-tutorials/index.md)
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
