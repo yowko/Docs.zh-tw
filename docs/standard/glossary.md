@@ -4,11 +4,11 @@ description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
 ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160088"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400432"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -38,15 +38,15 @@ ms.locfileid: "78160088"
 
 ## <a name="assembly"></a>組件 (assembly)
 
-可以包含可由應用程式或其他組件呼叫之 API 集合的 *.dll*/ *.exe* 檔案。
+可以包含應用程式或其他程式集可以調用的 API 集合的 *.dll*/*.exe*檔。
 
-一個組件可以包含介面、類別、結構、列舉和委派等類型。 專案的 *bin* 資料夾中的組件有時稱為「二進位檔」。 另請參閱[程式庫](#library)。
+一個組件可以包含介面、類別、結構、列舉和委派等類型。 專案的 *bin* 資料夾中的組件有時稱為「二進位檔」**。 另請參閱[程式庫](#library)。
 
 ## <a name="clr"></a>CLR
 
 Common Language Runtime。
 
-確切意義取決於內容，但這通常是指 .NET Framework 的執行階段。 CLR 會處理記憶體配置和管理。 CLR 也是虛擬機器，它不只會執行應用程式，也會使用 [JIT](#jit) 編譯器即時產生和編譯程式碼。 目前的 Microsoft CLR 實作僅限 Windows。
+確切意義取決於內容，但這通常是指 .NET Framework 的執行階段。 CLR 會處理記憶體配置和管理。 CLR 也是一個虛擬機器，它不僅執行應用，而且還使用[JIT](#jit)編譯器動態生成和編譯代碼。 目前的 Microsoft CLR 實作僅限 Windows。
 
 ## <a name="coreclr"></a>CoreCLR
 
@@ -58,7 +58,7 @@ Common Language Runtime。
 
 .NET Core 基底類別庫 (BCL)
 
-組成系統的一組程式庫。\* （以及限定範圍的 Microsoft.\*）命名空間。 BCL 是 ASP.NET Core 等較高層級的應用程式架構建置所在之較低層級的一般目的架構。 .Net Core BCL 的原始程式碼包含在[.Net core 運行](https://github.com/dotnet/runtime)時間存放庫中。 不過，大多數的 .NET Core API 也適用於 .NET Framework；因此您可以將 CoreFX 視為 .NET Framework BCL 的分支。
+構成系統的一組庫。\* （且在有限程度上為微軟\*.）命名空間。 BCL 是 ASP.NET Core 等較高層級的應用程式架構建置所在之較低層級的一般目的架構。 .NET Core BCL 的原始程式碼包含在[.NET Core 運行時存儲庫](https://github.com/dotnet/runtime)中。 不過，大多數的 .NET Core API 也適用於 .NET Framework；因此您可以將 CoreFX 視為 .NET Framework BCL 的分支。
 
 ## <a name="corert"></a>CoreRT
 
@@ -66,13 +66,13 @@ Common Language Runtime。
 
 相較於 CLR/CoreCLR，CoreRT 不是虛擬機器，這表示它不會包含即時產生和執行程式碼的功能，因為它不包含 [JIT](#jit)。 不過，它包含 [GC](#gc)，以及執行階段類型識別 (RTTI) 和反映功能。 不過，其型別系統已設計成不需要反映的中繼資料。 這讓 [AOT](#aot) 工具鏈能夠抽離不必要的中繼資料，更重要的是，它能夠識別應用程式未使用的程式碼。 CoreRT 正在開發中。
 
-請參閱[.NET Native 和 CoreRT 的簡介](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)。
+請參閱[.NET 本機和核心RT 簡介](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)。
 
 ## <a name="cross-platform"></a>跨平台
 
 能夠開發和執行可在多個不同的作業系統 (例如 Linux、Windows 和 iOS) 上使用的應用程式，而無需特別針對每個作業系統重新撰寫。 這樣可讓程式碼在不同平台的應用程式之間重複使用並維持一致性。
 
-## <a name="ecosystem"></a>ecosystem (生態系統)
+## <a name="ecosystem"></a>生態系統
 
 用來建置及執行適用於指定技術之應用程式的所有執行階段軟體、開發工具和社群資源。
 
@@ -86,8 +86,8 @@ Common Language Runtime。
 
 「架構」一字在下列詞彙中有更特定的技術意義：
 
-- [.NET Framework](#net-framework)
-- [目標 Framework](#target-framework)
+- [.NET 框架](#net-framework)
+- [目標框架](#target-framework)
 - [TFM (目標 Framework Moniker)](#tfm)
 
 在現有的文件中，「架構」有時是指 [.NET 實作](#implementation-of-net)。 例如，某篇文章可能會將 .NET Core 稱為架構。 我們計劃從文件中排除這個令人混淆的用法。
@@ -123,7 +123,7 @@ Just-in-Time 編譯器。
 
 .NET 實作的範例：
 
-- [.NET Framework](#net-framework)
+- [.NET 框架](#net-framework)
 - [.NET Core](#net-core)
 - [通用 Windows 平台 (UWP)](#uwp)
 
@@ -167,7 +167,7 @@ Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS �
 
 用於開發 .NET Core 應用程式的跨平台工具鏈。
 
-請參閱[.NET Core CLI](../core/tools/index.md)。
+請參閱[.NET 核心 CLI](../core/tools/index.md)。
 
 ## <a name="net-core-sdk"></a>.NET Core SDK
 
@@ -207,7 +207,7 @@ UWP 是 .NET Native 第一個支援的應用程式架構。 現在，我們支�
 
 ## <a name="package"></a>套件
 
-NuGet 套件 (簡稱套件) 是 &mdash;.zip&mdash; 檔案，其中包含一或多個同名組件及其他中繼資料 (例如作者名稱)。
+NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名組件及其他中繼資料 (例如作者名稱)。
 
 *.zip* 檔案包含一個 *.nupkg* 延伸模組和許多特定資產 (例如 *.dll* 檔案和 *.xml* 檔案)，可搭配多個架構和版本使用。 安裝於應用程式或程式庫時，會根據應用程式或程式庫所指定的目標 Framework 來選取適當的資產。 定義介面的資產位於 *ref* 資料夾中，而定義實作的資產則位於 *lib* 資料夾中。
 
@@ -269,12 +269,12 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 
 通用 Windows 平台。
 
-用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 其設計目的是為了整合您可能想要設為目標的不同裝置類型，包括電腦、平板電腦、平板手機、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 應用程式可以用C++、 C#、Visual Basic 和 JavaScript 撰寫。 當使用C#和 Visual Basic 時，.net api 是由 .net Core 提供。
+用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 其設計目的是為了整合您可能想要設為目標的不同裝置類型，包括電腦、平板電腦、平板手機、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 應用可以用C++、C#、可視基本版和 JavaScript 編寫。 使用 C# 和視覺化基本時，.NET API 由 .NET Core 提供。
 
 ## <a name="see-also"></a>另請參閱
 
 - [.NET 指南](index.md)
-- [.NET Framework 指南](../framework/index.md)
+- [.NET 框架指南](../framework/index.md)
 - [.NET Core](../core/index.md)
-- [ASP.NET 概觀](/aspnet/index#pivot=aspnet)
+- [ASP.NET概述](/aspnet/index#pivot=aspnet)
 - [ASP.NET Core 概觀](/aspnet/index#pivot=core)

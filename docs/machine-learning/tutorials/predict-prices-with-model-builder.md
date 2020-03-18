@@ -1,25 +1,25 @@
 ---
-title: 教學課程：使用模型產生器的回歸預測價格
+title: 教程：使用模型產生器使用回歸預測價格
 description: 本教學課程會特別示範如何使用 ML.NET 模型產生器來建置迴歸模型以預測紐約市的計程車費用。
 author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 254f3c4c05a2c18f6182fc5f18d93114e20ed953
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.custom: mvc, mlnet-tooling
+ms.openlocfilehash: c027fe57f571c791784b0bdb7ad9503fc49daa1c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344994"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187701"
 ---
-# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>教學課程：使用模型產生器的回歸預測價格
+# <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>教程：使用模型產生器使用回歸預測價格
 
-瞭解如何使用 ML.NET 模型產生器來建立回歸模型，以預測價格。  在本教學課程中您所開發 .NET 主控台應用程式會根據紐約的歷史計程車費用資料來預測計程車費用。
+了解如何使用 ML.NET 模型產生器建置迴歸模型來預測價格。  在本教學課程中您所開發 .NET 主控台應用程式會根據紐約的歷史計程車費用資料來預測計程車費用。
 
 模型建置器價格預測範例可用於任何需要數字預測值的案例。 範例案例包括：房價預測、需求預測及銷售預測。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 > [!div class="checklist"]
 >
 > - 準備並了解資料
@@ -38,7 +38,7 @@ ms.locfileid: "75344994"
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
-1. 建立名為 "TaxiFarePrediction" 的 **C# .net Core 主控台應用程式**。 請確定未**核**取 **[將方案和專案放在相同的目錄** **（vs** 2019）] 或 [**為方案建立目錄**] （vs 2017）。
+1. 創建**C# .NET 核心主控台應用程式**，稱為"TaxiFare 預測"。 確保**未選中****同一目錄中的放置解決方案和專案**（VS 2019），或**選中****"創建解決方案目錄**"（VS 2017）。
 
 ## <a name="prepare-and-understand-the-data"></a>準備並了解資料
 
@@ -48,11 +48,11 @@ ms.locfileid: "75344994"
 
     1. 若要下載該資料集，請瀏覽至 [taxi-fare-train.csv 下載連結](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/taxi-fare-train.csv)。
 
-    1. 當頁面載入時，以滑鼠右鍵按一下頁面上的任何位置，然後選取 [另存新檔]。
+    1. 當頁面載入時，以滑鼠右鍵按一下頁面上的任何位置，然後選取 [另存新檔]****。
 
-    1. 然後使用 [另存新檔] 對話方塊，將檔案儲存於您在上一步所建立的 [Data] 資料夾中。
+    1. 然後使用 [另存新檔]**** 對話方塊，將檔案儲存於您在上一步所建立的 [Data]** 資料夾中。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 *taxi-fare-train.csv* 檔案，然後選取 [屬性]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
+1. 在 [方案總管]**** 中，以滑鼠右鍵按一下 *taxi-fare-train.csv* 檔案，然後選取 [屬性]****。 在 **"高級"** 下，將 **"複製到輸出目錄**"的值更改為 **"如果更新"，則將其更改為"複製**"。
 
 `taxi-fare-train.csv` 資料集中的每個資料列都包含計程車車程的詳細資料。
 
@@ -68,32 +68,32 @@ ms.locfileid: "75344994"
     - **payment_type：** 付款方式 (現金或信用卡) 是一項特徵。
     - **fare_amount：** 計程車車資總計是標籤。
 
-`label` 是您希望進行預測的資料行。 執行迴歸工作時，目標是預測數值。 在這個價格預測案例中，會預測計程車車程的成本。 因此，**fare_amount** 為標籤。 所識別 `features` 則是您提供模型來預測 `label` 的輸入。 在此情況下，除了**trip_time_in_secs**以外，其餘的資料行會當做特徵或輸入來預測費用金額。
+`label` 是您希望進行預測的資料行。 執行迴歸工作時，目標是預測數值。 在這個價格預測案例中，會預測計程車車程的成本。 因此，**fare_amount** 為標籤。 所識別 `features` 則是您提供模型來預測 `label` 的輸入。 在這種情況下，除**trip_time_in_secs**外，其餘列用作用於預測票價金額的要素或輸入。
 
 ## <a name="choose-a-scenario"></a>選擇案例
 
 若要定型您的模型，您需要從模型產生器所提供的可用機器學習服務案例清單中選取。 在此案例中，案例為 `Price Prediction`。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 *TaxiFarePrediction* 專案，然後選取 [新增] > [機器學習服務]。
+1. 在 [方案總管]**** 中，以滑鼠右鍵按一下 *TaxiFarePrediction* 專案，然後選取 [新增]**** > [機器學習服務]****。
 1. 在模型產生器工具的案例步驟中，請選取 *Price Prediction* 案例。
 
 ## <a name="load-the-data"></a>載入資料
 
 模型建立器接受來自兩個來源的資料：SQL Server 資料庫或 CSV 或 TSV 格式的本機檔案。
 
-1. 在模型產生器工具的資料步驟中，從資料來源下拉式清單中選取 [檔案]。
-1. 選取 [選取檔案] 文字方塊旁邊的按鈕，然後使用 [檔案總管] 進行瀏覽，並選取 *Data* 目錄中的 *taxi-fare-test.csv*
-1. 在 [*要預測的資料行（標籤）* ] 下拉式清單中選擇 [ *fare_amount* ]。
-1. 展開 [*輸入資料行（功能）* ] 下拉式清單，然後取消核取 [ *trip_time_in_secs* ] 資料行，在定型期間將其排除為功能。  流覽至模型產生器工具的 [定型] 步驟。
+1. 在模型產生器工具的資料步驟中，從資料來源下拉式清單中選取 [檔案]**。
+1. 選取 [選取檔案]** 文字方塊旁邊的按鈕，然後使用 [檔案總管] 進行瀏覽，並選取 *Data* 目錄中的 *taxi-fare-test.csv*
+1. 在 *"要預測（標籤）* 下拉清單的列中選擇*fare_amount。*
+1. 展開*輸入列（功能）* 下拉，並取消選中*trip_time_in_secs*列以在訓練期間將其排除為要素。  導航到模型產生器工具的火車步長。
 
 ## <a name="train-the-model"></a>將模型定型
 
 在本教學課程中用來定型價格預測模型的機器學習服務工作是迴歸。 在模型定型程序的期間，模型產生器會使用不同迴歸演算法及設定來定型不同模型以尋找可最佳執行您資料集的模型。
 
-定型模型所需要的時間會與資料量成比例。 「模型產生器」會根據您的資料來源大小，自動選取要定型的預設值 **（秒）** 。
+定型模型所需要的時間會與資料量成比例。 模型產生器根據資料來源的大小自動選擇**時間訓練時間（秒）** 的預設值。
 
-1. 除非您想要定型較長的時間，否則請保留預設值 [針對*時間進行定型（秒）* ]。
-2. 選取 [開始定型]。
+1. 保留預設值，如 *"訓練時間"（秒），* 除非您喜歡訓練更長時間。
+2. 選取 [開始定型]**。
 
 在整個定型程序期間，進度資料會顯示在定型步驟的 `Progress` 區段中。
 
@@ -106,7 +106,7 @@ ms.locfileid: "75344994"
 
 ## <a name="evaluate-the-model"></a>評估模型
 
-定型步驟之結果將會是具備最佳效能的單一模型。 在模型產生器工具的評估步驟中，輸出區段將會在 [最佳模型] 項目中包含執行效能最佳模型所使用的演算法，並在 [最佳模型品質 (RSquared)] 中包含計量。 此外，還會具備一個摘要表，其中包含前五個模型及其計量。
+定型步驟之結果將會是具備最佳效能的單一模型。 在模型產生器工具的評估步驟中，輸出區段將會在 [最佳模型]** 項目中包含執行效能最佳模型所使用的演算法，並在 [最佳模型品質 (RSquared)]** 中包含計量。 此外，還會具備一個摘要表，其中包含前五個模型及其計量。
 
 若您不滿意您的正確性計量，可嘗試及改善模型正確性的一些簡單方法為增加定型模型的時間，或是使用更多資料。 如果您覺得滿意，請瀏覽至程式碼步驟。
 
@@ -114,19 +114,19 @@ ms.locfileid: "75344994"
 
 定型程序的結果會建立兩個專案。
 
-- TaxiFarePredictionML. Consoleapp.exe： .NET Core 主控台應用程式，其中包含模型定型和範例耗用量程式碼。
-- TaxiFarePredictionML： .NET Standard 類別庫，其中包含定義輸入和輸出模型資料之架構的資料模型、定型期間儲存的最佳執行模型版本，以及稱為 `ConsumeModel` 以進行預測的 helper 類別。
+- 計程車Fare預測ML.ConsoleApp：一個.NET核心主控台應用程式，其中包含模型訓練和示例消耗代碼。
+- TaxiFare預測ML.Model：一個.NET標準類庫，其中包含定義輸入和輸出模型資料架構的資料模型、培訓期間最佳性能模型的保存版本以及調用`ConsumeModel`用於進行預測的説明器類。
 
-1. 在模型建立器工具的程式碼步驟中，選取 [新增專案] 來將自動產生的專案新增到解決方案。
+1. 在模型建立器工具的程式碼步驟中，選取 [新增專案]**** 來將自動產生的專案新增到解決方案。
 1. 開啟 *TaxiFarePrediction* 專案中的 *Program.cs* 檔案。
-1. 新增下列 using 語句，以參考*TaxiFarePredictionML 模型*專案：
+1. 添加以下使用語句以引用*TaxiFare 預測ML.模型*專案：
 
     ```csharp
     using System;
     using TaxiFarePredictionML.Model;
     ```
 
-1. 若要使用模型對新資料進行預測，請在應用程式的 `Main` 方法內，建立 `ModelInput` 類別的新實例。 請注意，費用金額不是輸入的一部分。 這是因為模型會為它產生預測。
+1. 要使用模型對新資料進行預測，請在應用程式`ModelInput``Main`的方法內創建類的新實例。 請注意，費用金額不是輸入的一部分。 這是因為模型會為它產生預測。
 
     ```csharp
     // Create sample data
@@ -140,7 +140,7 @@ ms.locfileid: "75344994"
     };
     ```
 
-1. 使用來自 `ConsumeModel` 類別的 `Predict` 方法。 `Predict` 方法會載入定型的模型、建立模型的[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) ，並使用它來對新資料進行預測。
+1. 使用`Predict`類 中`ConsumeModel`的方法。 該方法`Predict`載入訓練的模型，為模型創建[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)a，並用它來對新資料進行預測。
 
     ```csharp
     // Make prediction
@@ -163,7 +163,7 @@ ms.locfileid: "75344994"
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您已了解如何：
 > [!div class="checklist"]
 >
 > - 準備並了解資料
@@ -178,6 +178,6 @@ ms.locfileid: "75344994"
 若要深入了解此教學課程中提及的主題，請瀏覽下列資源：
 
 - [模型建立器案例](../automate-training-with-model-builder.md#scenarios)
-- [迴歸](../resources/glossary.md#regression)
+- [回歸](../resources/glossary.md#regression)
 - [迴歸模型計量](../resources/metrics.md#evaluation-metrics-for-regression-and-recommendation)
 - [NYC TLC 計程車旅程資料集](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page) \(英文\)

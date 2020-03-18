@@ -17,26 +17,26 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
 ms.openlocfilehash: 04ac99c6b5100c3749eefc219e51b4d0084bef06
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346635"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400320"
 ---
 # <a name="standard-numeric-format-strings"></a>標準數值格式字串
 
 標準數值格式字串會用來格式化一般數字類型。 標準數值格式字串會採用 `Axx` 格式，其中：
 
-- `A` 是稱為「格式規範」的單一字母字元。 任何包含一個以上字母字元 (包含泛空白字元 (White Space)) 的數值格式字串都會解譯為自訂數值格式字串。 如需詳細資訊，請參閱[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。
+- `A` 是稱為「格式規範」** 的單一字母字元。 任何包含一個以上字母字元 (包含泛空白字元 (White Space)) 的數值格式字串都會解譯為自訂數值格式字串。 如需詳細資訊，請參閱[自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)。
 
-- `xx` 是稱為「精確度規範」的選用性整數。 精確度規範的範圍從 0 到 99，而且會影響結果內的位數。 請注意，精確度規範可控制數字字串表示法中的位數。 它不會捨入數字本身。 若要執行捨入運算，請使用 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType> 或 <xref:System.Math.Round%2A?displayProperty=nameWithType> 方法。
+- `xx` 是稱為「精確度規範」** 的選用性整數。 精確度規範的範圍從 0 到 99，而且會影響結果內的位數。 請注意，精確度規範可控制數字字串表示法中的位數。 它不會捨入數字本身。 若要執行捨入運算，請使用 <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>、<xref:System.Math.Floor%2A?displayProperty=nameWithType> 或 <xref:System.Math.Round%2A?displayProperty=nameWithType> 方法。
 
-  當「有效位數規範」控制結果字串中小數點後的位數，結果字串會反映已四捨五入為最接近無限精確度之可代表結果的數字。 若有兩個相等的近似可代表結果：
+  當「有效位數規範」** 控制結果字串中小數點後的位數，結果字串會反映已四捨五入為最接近無限精確度之可代表結果的數字。 若有兩個相等的近似可代表結果：
   - **在 .NET Framework 與 .NET Core (最高版本 .NET Core 2.0) 上**，執行階段會選取具有較大之最不顯著位數 (亦即，使用 <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>) 的結果。
   - **在 .NET Core 2.1 與更新版本上**，執行階段會選取具有偶數最不顯著位數 (亦即，使用 <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>) 的結果。
 
   > [!NOTE]
-  > 有效位數規範可判斷結果字串中的位數。 若要使用前置或尾端空格填補結果字串，請使用[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)功能，並在格式項目中定義「對齊元件」。
+  > 有效位數規範可判斷結果字串中的位數。 若要使用前置或尾端空格填補結果字串，請使用[複合格式設定](../../../docs/standard/base-types/composite-formatting.md)功能，並在格式項目中定義「對齊元件」**。
 
 標準數值格式字串受到下列各項支援：
 
@@ -51,9 +51,9 @@ ms.locfileid: "75346635"
 
 <a name="table"></a>下表描述標準數值格式規範，並顯示每個格式範例所產生的範例輸出。 如需使用標準數值格式字串的詳細資訊，請參閱[備註](#NotesStandardFormatting)一節，如需其用法的完整解說，請參閱[範例](#example)一節。
 
-|格式規範|Name|描述|範例|
+|格式規範|名稱|描述|範例|
 |----------------------|----------|-----------------|--------------|
-|"C" 或 "c"|貨幣|結果：貨幣值。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[貨幣 ("C") 格式規範](#CFormatString)。|123.456 （"C"，en-us）-> \\$123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 （"C3"，en-us）-> （\\$123.456）<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
+|"C" 或 "c"|貨幣|結果：貨幣值。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[貨幣 ("C") 格式規範](#CFormatString)。|123.456 （"C"， en-US） \\-> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 （"C3"， en-US）\\-> （123.456 美元）<br /><br /> -123.456 ("C3", fr-FR) -> -123,456 €<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|
 |"D" 或 "d"|Decimal|結果：帶選擇性負號的整數位數。<br /><br /> 支援的類型：只有整數類型。<br /><br /> 精確度規範：最少位數。<br /><br /> 預設精確度規範：必要的最少位數。<br /><br /> 詳細資訊：[十進位 ("D") 格式規範](#DFormatString)。|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|
 |"E" 或 "e"|指數 (科學記號)|結果：指數標記法。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設精確度規範：6。<br /><br /> 詳細資訊：[指數 ("E") 格式規範](#EFormatString)。|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1,052033e+003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr-FR) -> -1,05E+003|
 |"F" 或 "f"|固定點|結果：帶選擇性負號的整數和小數位數。<br /><br /> 支援的類型：所有數字類型。<br /><br /> 有效位數規範：小數位數的數目。<br /><br /> 預設有效位數規範：由 <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> 定義。<br /><br /> 詳細資訊：[固定點 ("F") 格式規範](#FFormatString)。|1234.567 ("F", en-US) -> 1234.57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1", en-US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.56 ("F4", en-US) -> -1234.5600<br /><br /> -1234.56 ("F4", de-DE) -> -1234,5600|
@@ -115,7 +115,7 @@ ms.locfileid: "75346635"
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSeparator%2A>|定義分隔整數群組的字串。|
 |<xref:System.Globalization.NumberFormatInfo.CurrencyGroupSizes%2A>|定義整數部分的每個群組中出現的整數位數。|
 
-下列範例會使用貨幣格式規範來格式化 <xref:System.Double> 值：
+下面的示例使用貨幣格式<xref:System.Double>指定符設置值：
 
 [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
 [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
@@ -163,7 +163,7 @@ ms.locfileid: "75346635"
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定義將係數中的整數位數與小數位數分隔的字串。|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|定義表示指數為正數的字串。|
 
-下列範例會使用指數格式規範來格式化 <xref:System.Double> 值：
+下面的示例使用指數格式<xref:System.Double>指定器設置值：
 
 [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
 [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
@@ -187,7 +187,7 @@ ms.locfileid: "75346635"
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定義分隔整數位數與小數位數的字串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|定義小數位數的預設數目。 您可以使用有效位數規範來覆寫這個值。|
 
-下列範例會使用固定點格式規範來格式化 <xref:System.Double> 和 <xref:System.Int32> 值：
+下面的示例使用定點格式<xref:System.Double>指定器<xref:System.Int32>設置 和 值：
 
 [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
 [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
@@ -234,7 +234,7 @@ ms.locfileid: "75346635"
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定義分隔整數位數與小數位數的字串。|
 |<xref:System.Globalization.NumberFormatInfo.PositiveSign%2A>|定義表示指數為正數的字串。|
 
-下列範例會使用一般格式規範來格式化各種浮點值：
+以下示例使用常規格式指定器設置各種浮點值：
 
 [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
 [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
@@ -259,7 +259,7 @@ ms.locfileid: "75346635"
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A>|定義分隔整數與小數位數的字串。|
 |<xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A>|定義小數位數的預設數目。 您可以使用精確度規範來覆寫這個值。|
 
-下列範例會使用數位格式規範來格式化各種浮點值：
+以下示例使用數位格式指定器設置各種浮點值：
 
 [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
 [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
@@ -286,7 +286,7 @@ ms.locfileid: "75346635"
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSeparator%2A>|定義分隔整數群組的字串。|
 |<xref:System.Globalization.NumberFormatInfo.PercentGroupSizes%2A>|定義整數部分的每個群組中出現的整數位數。|
 
-下列範例會使用百分比格式規範來格式化浮點值：
+以下示例使用百分比格式指定器設置浮點值：
 
 [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
 [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
@@ -322,7 +322,7 @@ ms.locfileid: "75346635"
 > [!IMPORTANT]
 > 在某些情況下，使用 "R" 標準數值格式字串格式化的 <xref:System.Double> 值，如果使用 `/platform:x64` 或 `/platform:anycpu` 參數編譯並在 64 位元系統上執行，則不會成功地反覆存取。 如需詳細資訊，請參閱下一段內容。
 
-若要解決以 "R" 標準數值格式字串格式化的 <xref:System.Double> 值，在使用 `/platform:x64` 或 `/platform:anycpu` 參數編譯並於 64 位元系統上執行時，不會成功地反覆存取的問題，您可以使用 "G17" 標準數值格式字串格式化 <xref:System.Double> 值。 下列範例會使用 "R" 格式字串搭配不會成功往返的 <xref:System.Double> 值，而且也會使用 "G17" 格式字串來成功地反復存取原始值：
+若要解決以 "R" 標準數值格式字串格式化的 <xref:System.Double> 值，在使用 `/platform:x64` 或 `/platform:anycpu` 參數編譯並於 64 位元系統上執行時，不會成功地反覆存取的問題，您可以使用 "G17" 標準數值格式字串格式化 <xref:System.Double> 值。 下面的示例使用具有不成功往返<xref:System.Double>的值的"R"格式字串，並且還使用"G17"格式字串成功往返原始值：
 
 [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#RoundTrip)]
 [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]
@@ -349,13 +349,13 @@ ms.locfileid: "75346635"
 
 <a name="NotesStandardFormatting"></a>
 
-## <a name="notes"></a>注意事項
+## <a name="notes"></a>注意
 
-### <a name="control-panel-settings"></a>Control Panel Settings
+### <a name="control-panel-settings"></a>控制台設定值
 
 [控制台] 中 [ **地區及語言選項]** 項目的設定會影響格式化作業所產生的結果字串。 這些設定是用來初始化與目前執行緒文化特性相關的 <xref:System.Globalization.NumberFormatInfo> 物件，該物件會提供用來管理格式的值。 使用不同設定的電腦會產生不同的結果字串。
 
-此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 建構函式來將新的 <xref:System.Globalization.CultureInfo> 物件具現化，而此物件代表的文化特性與目前系統文化特性相同，則 [控制台] 中的 [地區及語言選項] 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。
+此外，如果使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 建構函式來將新的 <xref:System.Globalization.CultureInfo> 物件具現化，而此物件代表的文化特性與目前系統文化特性相同，則 [控制台] 中的 [地區及語言選項]**** 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。
 
 ### <a name="numberformatinfo-properties"></a>NumberFormatInfo 屬性
 
@@ -381,12 +381,12 @@ ms.locfileid: "75346635"
 [!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
 [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Globalization.NumberFormatInfo>
-- [Custom Numeric Format Strings](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [自訂數位格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
 - [格式化類型](../../../docs/standard/base-types/formatting-types.md)
-- [操作說明：以前置字元為零來填補數字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
+- [如何：以前置字元零來填補數字](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)
 - [複合格式](../../../docs/standard/base-types/composite-formatting.md)
 - [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))
 - [Sample: .NET Core WinForms Formatting Utility (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb) (範例：.NET Core WinForms 格式化公用程式 (Visual Basic))

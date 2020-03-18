@@ -3,10 +3,10 @@ title: -subsystemversion (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
 ms.openlocfilehash: d76c9424340b4b6f3c211c849b466be55eb79d1e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74802040"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (C# 編譯器選項)
@@ -50,7 +50,7 @@ ms.locfileid: "74802040"
 
 - 如果設定下列清單中的任何編譯器選項，則預設值為 6.02：
 
-  - [-target:appcontainerexe](./target-appcontainerexe-compiler-option.md)
+  - [-目標：應用容器exe](./target-appcontainerexe-compiler-option.md)
 
   - [-target:winmdobj](./target-winmdobj-compiler-option.md)
 
@@ -64,6 +64,6 @@ ms.locfileid: "74802040"
 
 若要在 Visual Studio 中設定 **-subsystemversion** 編譯器選項，您必須開啟 .csproj 檔案，並在 MSBuild XML 中指定 `SubsystemVersion` 屬性的值。 您不能在 Visual Studio IDE 中設定此選項。 如需詳細資訊，請參閱本主題稍早的＜預設值＞或[通用的 MSBuild 專案屬性](/visualstudio/msbuild/common-msbuild-project-properties)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 編譯器選項](./index.md)

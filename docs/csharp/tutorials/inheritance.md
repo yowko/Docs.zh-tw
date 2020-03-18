@@ -4,20 +4,20 @@ description: 了解如何使用 C# 程式庫和應用程式中的繼承。
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b69da841c7c7a2e518191ad34f2ff5b368899728
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120125"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156749"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
 
 本教學課程將介紹 C# 中的繼承。 繼承是一種物件導向程式設計語言的功能，可讓您定義基底類別，提供特定功能 (資料和行為)，以及定義繼承或覆寫該功能的衍生類別。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-本教學課程假設您已安裝 .NET Core SDK。 請造訪[.Net Core 下載](https://dotnet.microsoft.com/download)頁面下載。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
+本教程假定您已安裝 .NET 核心 SDK。 訪問[.NET 核心下載](https://dotnet.microsoft.com/download)頁面下載。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
 
 ## <a name="running-the-examples"></a>執行範例
 
@@ -34,9 +34,9 @@ ms.locfileid: "73120125"
 
 ## <a name="background-what-is-inheritance"></a>背景︰什麼是繼承？
 
-「繼承」是物件導向程式設計的其中一個基本屬性。 它可讓您定義子類別，重複使用 (繼承)、擴充或修改父類別行為。 其成員可供繼承的類別稱為「基底類別」。 繼承基底類別成員的類別則稱為「衍生類別」。
+「繼承」** 是物件導向程式設計的其中一個基本屬性。 它可讓您定義子類別，重複使用 (繼承)、擴充或修改父類別行為。 其成員可供繼承的類別稱為「基底類別」**。 繼承基底類別成員的類別則稱為「衍生類別」**。
 
-C# 和 .NET 只支援「單一繼承」。 也就是說，類別只能繼承自單一類別。 不過，繼承可以轉移，這可讓您定義一組型別的繼承階層。 換句話說，型別 `D` 可繼承自型別 `C`，其繼承自型別 `B`，而該型別的繼承來源為基底類別型別 `A`。 因為繼承可以轉移，所以型別 `D` 可以使用型別 `A` 的成員。
+C# 和 .NET 只支援「單一繼承」**。 也就是說，類別只能繼承自單一類別。 不過，繼承可以轉移，這可讓您定義一組型別的繼承階層。 換句話說，型別 `D` 可繼承自型別 `C`，其繼承自型別 `B`，而該型別的繼承來源為基底類別型別 `A`。 因為繼承可以轉移，所以型別 `D` 可以使用型別 `A` 的成員。
 
 基底類別的所有成員不一定都由衍生類別繼承。 不會繼承的成員如下︰
 
@@ -60,7 +60,7 @@ C# 和 .NET 只支援「單一繼承」。 也就是說，類別只能繼承自�
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-衍生類別也可以提供替代實作來「覆寫」繼承的成員 。 基底類別中的成員必須標示有 [virtual](../language-reference/keywords/virtual.md) 關鍵字，才能覆寫成員。 根據預設，基底類別成員未標記為 `virtual`，因此無法覆寫。 如下列範例所示，嘗試覆寫非虛擬成員會產生編譯器錯誤 CS0506：「\<member> 無法覆寫繼承的成員 \<member>，因為其未標記為 virtual、abstract 或 override」。
+衍生類別也可以提供替代實作來「覆寫」** 繼承的成員 。 基底類別中的成員必須標示有 [virtual](../language-reference/keywords/virtual.md) 關鍵字，才能覆寫成員。 根據預設，基底類別成員未標記為 `virtual`，因此無法覆寫。 如下列範例所示，嘗試覆寫非虛擬成員會產生編譯器錯誤 CS0506：「\<member> 無法覆寫繼承的成員 \<member>，因為其未標記為 virtual、abstract 或 override」。
 
 ```csharp
 public class A
@@ -80,7 +80,7 @@ public class B : A
 }
 ```
 
-在某些情況下，衍生類別「必須」覆寫基底類別實作。 標示有 [abstract](../language-reference/keywords/abstract.md) 關鍵字的基底類別成員都需要以衍生類別覆寫。 嘗試編譯下列範例會產生編譯器錯誤 CS0534：「&lt;class&gt; 未實作繼承的抽象成員 &lt;member&gt;」，因為類別 `B` 不會為 `A.Method1` 提供任何實作。
+在某些情況下，衍生類別「必須」** 覆寫基底類別實作。 標示有 [abstract](../language-reference/keywords/abstract.md) 關鍵字的基底類別成員都需要以衍生類別覆寫。 嘗試編譯下列範例會產生編譯器錯誤 CS0534：「&lt;class&gt; 未實作繼承的抽象成員 &lt;member&gt;」，因為類別 `B` 不會為 `A.Method1` 提供任何實作。
 
 ```csharp
 public abstract class A
@@ -141,10 +141,10 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 | 型別分類 | 隱含繼承自                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
-| Class - 類別         | <xref:System.Object>                                                          |
-| struct        | <xref:System.ValueType>、 <xref:System.Object>                                 |
-| enum          | <xref:System.Enum>、<xref:System.ValueType>、<xref:System.Object>             |
-| 委派      | <xref:System.MulticastDelegate>、<xref:System.Delegate>、<xref:System.Object> |
+| class         | <xref:System.Object>                                                          |
+| struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
+| 列舉          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
+| 委派      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
 
 ## <a name="inheritance-and-an-is-a-relationship"></a>繼承和「是」關聯性
 
@@ -165,7 +165,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="designing-the-base-class-and-derived-classes"></a>設計基底類別和衍生類別
 
-讓我們來看設計基底類別和其衍生類別的流程。 在本節中，您將定義一個基類，`Publication`，代表任何種類的發行，例如書籍、雜誌、報紙、期刊、文章等等。您也會定義衍生自 `Publication`的 `Book` 類別。 您可以輕鬆地擴充該範例來定義其他衍生類別，例如 `Magazine`、`Journal`、`Newspaper` 及 `Article`。
+讓我們來看設計基底類別和其衍生類別的流程。 在本節中，您將定義一個基類，`Publication`它表示任何類型的出版物，如書籍、雜誌、報紙、期刊、文章等。您還將定義派生自`Book``Publication`的類。 您可以輕鬆地擴充該範例來定義其他衍生類別，例如 `Magazine`、`Journal`、`Newspaper` 及 `Article`。
 
 ### <a name="the-base-publication-class"></a>基底 Publication 類別
 
@@ -189,7 +189,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
   針對您的範例，您將 `Publication` 類別標示為 [abstract](../language-reference/keywords/abstract.md)，使它無法具現化。  不含任何 `abstract` 方法的 `abstract` 類別指出此類別代表數個實體類別 共用的抽象概念 (例如 `Book`、`Journal`)。
 
-- 不論衍生類別是否必須繼承特定成員的基底類別實作、是否有覆寫基底類別實作的選項，或是否必須提供實作。 您都可以使用 [abstract](../language-reference/keywords/abstract.md) 關鍵字，強制衍生類別提供實作。 您可以使用 [virtual](../language-reference/keywords/virtual.md) 關鍵字，允許衍生類別覆寫基底類別方法。 根據預設，「不」可覆寫基底類別中定義的方法。
+- 不論衍生類別是否必須繼承特定成員的基底類別實作、是否有覆寫基底類別實作的選項，或是否必須提供實作。 您都可以使用 [abstract](../language-reference/keywords/abstract.md) 關鍵字，強制衍生類別提供實作。 您可以使用 [virtual](../language-reference/keywords/virtual.md) 關鍵字，允許衍生類別覆寫基底類別方法。 根據預設，「不」** 可覆寫基底類別中定義的方法。
 
  `Publication` 類別沒有任何 `abstract` 方法，但類別本身為 `abstract`。
 
@@ -279,7 +279,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 ## <a name="designing-abstract-base-classes-and-their-derived-classes"></a>設計抽象基底類別及其衍生類別
 <a name="abstract"></a>
 
-在上述範例中，您定義的基底類別會為一些方法提供實作，以允許衍生類別共用程式碼。 不過，在許多情況下，基底類別不需要提供實作。 相反地，基底類別是宣告「抽象方法」的「抽象類別」；它會作為範本，定義每個衍生類別都必須實作的成員。 通常在抽象基底類別中，每個衍生類型都會有該類型的唯一實作。 您已使用 abstract 關鍵字來標示類別，因為具現化 `Publication` 物件沒有任何意義，但該類別確實會提供發行物通用功能的實作。
+在上述範例中，您定義的基底類別會為一些方法提供實作，以允許衍生類別共用程式碼。 不過，在許多情況下，基底類別不需要提供實作。 相反地，基底類別是宣告「抽象方法」** 的「抽象類別」**；它會作為範本，定義每個衍生類別都必須實作的成員。 通常在抽象基底類別中，每個衍生類型都會有該類型的唯一實作。 您已使用 abstract 關鍵字來標示類別，因為具現化 `Publication` 物件沒有任何意義，但該類別確實會提供發行物通用功能的實作。
 
 例如，每個封閉的二維幾何圖形都包括兩個屬性：面積 (其為圖形內部範圍) 以及周長或圖形邊緣的距離。 不過，計算這些屬性的方式，完全取決於特定圖形。 例如，計算圓形的周長 (圓周) 的公式，就和計算三角形周長的公式不同。 `Shape` 類別是具有 `abstract` 方法的 `abstract` 類別。 這表示衍生類別共用相同的功能，但這些衍生類別會以不同的方式來實作該功能。
 
@@ -291,11 +291,11 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-下列範例使用衍生自 `Shape` 的物件。 具現化衍生自 `Shape` 的物件陣列，並呼叫會包裝所傳回 `Shape` 屬性值的 `Shape` 類別靜態方法。 執行階段會從衍生類型的覆寫屬性擷取值。 範例也會將陣列中的每個 `Shape` 物件轉換為其衍生型別，而且如果轉換成功，就會擷取 `Shape` 的那個特定子類別的屬性。 
+下列範例使用衍生自 `Shape` 的物件。 具現化衍生自 `Shape` 的物件陣列，並呼叫會包裝所傳回 `Shape` 屬性值的 `Shape` 類別靜態方法。 執行階段會從衍生類型的覆寫屬性擷取值。 範例也會將陣列中的每個 `Shape` 物件轉換為其衍生型別，而且如果轉換成功，就會擷取 `Shape` 的那個特定子類別的屬性。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [類別與物件](../tour-of-csharp/classes-and-objects.md)
-- [繼承 (C# 程式設計指南)](../programming-guide/classes-and-structs/inheritance.md)
+- [類和物件](../tour-of-csharp/classes-and-objects.md)
+- [繼承 (C# 程式設計手冊)](../programming-guide/classes-and-structs/inheritance.md)

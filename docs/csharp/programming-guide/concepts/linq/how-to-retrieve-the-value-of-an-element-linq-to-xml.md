@@ -1,15 +1,15 @@
 ---
-title: 如何取出元素的值（LINQ to XML）（C#）
+title: 如何檢索元素的值（LINQ 到 XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 775e7282408910cc06b7d660d84cb6f80ef47949
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6f2d355eac9914cd4c03d3a4521992b346b92f0b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347421"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168683"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>如何取出元素的值（LINQ to XML）（C#）
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>如何檢索元素的值（LINQ 到 XML）（C#）
 本主題顯示如何取得項目的值。 以下有兩種主要的方式可達成此目標。 其中一種方式為，將 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 轉型為所需的型別。 然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別，並將其指派給您的變數。 或者，您可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 屬性。  
   
  不過，使用 C# 時，轉型 (Casting) 通常是較好的方法。 如果您要將項目或屬性轉型為可為 Null 的型別 (Nullable Type)，擷取可能存在或可能不存在之項目 (或屬性) 的值時，較容易撰寫程式碼。 本主題中的最後一個範例會示範這個情況。 不過，您無法像透過 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性般，透過轉型設定項目的內容。  
@@ -54,7 +54,7 @@ Value of e:44
  您可以使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性來擷取項目的內容：  
   
 ```csharp  
-XElement e = new XElement("StringElement", "abcde");   
+XElement e = new XElement("StringElement", "abcde");
 Console.WriteLine(e);  
 Console.WriteLine("Value of e:" + e.Value);  
 ```  
@@ -145,6 +145,6 @@ v4:element does not exist
   
  一般而言，使用轉換擷取元素及屬性內容時，您可以撰寫較簡易的程式碼。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ to XML 座標軸 (C#)](./linq-to-xml-axes-overview.md)

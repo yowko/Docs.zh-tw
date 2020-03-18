@@ -2,12 +2,12 @@
 title: WordprocessingML 文件以及樣式
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 8f335303f2e288103520d0bedf81e295ab56efef
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 10697744680276a40fb7a175e4c04920c9e3c243
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590877"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167864"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>WordprocessingML 文件以及樣式
 更複雜的 WordprocessingML 文件擁有使用樣式格式化的段落。  
@@ -136,4 +136,3 @@ ms.locfileid: "69590877"
   </w:body>  
 </w:document>  
 ```  
- 

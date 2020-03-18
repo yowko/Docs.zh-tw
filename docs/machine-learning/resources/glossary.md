@@ -4,17 +4,17 @@ description: 對於您在 ML.NET 中建置自訂模型來說，相當實用的�
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739883"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398934"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機器學習詞彙的重要字詞
 
 以下清單匯集了對於您在 ML.NET 中建置自訂模型來說，相當實用的重要機器學習字詞。
 
-## <a name="accuracy"></a>準確率
+## <a name="accuracy"></a>精確度
 
 在[分類](#classification)中，準確率係指正確分類的項目數，除以測試集內的項目總數後，所得出的值。 範圍為 0 (最不準確) 到 1 (最準確)。 準確率是模型效能的其中一個評估計量。 請將它與[精確率](#precision)、[召回率](#recall)及 [F 分數](#f-score)一起考量。
 
@@ -40,11 +40,11 @@ ms.locfileid: "75739883"
 
 使用資料來預測分類時，[監督式機器學習](#supervised-machine-learning)工作便稱為分類。 [二元分類](#binary-classification)係指僅預測兩個分類 (例如，將影像分類成「貓」或「狗」的圖片)。 [多元分類](#multiclass-classification)係指預測多個分類 (例如，將影像分類成一種特定狗品種的圖片)。
 
-## <a name="coefficient-of-determination"></a>判斷的係數
+## <a name="coefficient-of-determination"></a>決定係數
 
 在[迴歸](#regression)中，指出資料與模型相符程度的評估計量。 範圍為 0 到 1。 值為 0 時，表示資料為隨機資料，或與模型不相符。 值為 1 時，表示模型與資料完全相符。 這通常稱為r<sup>2</sup>R<sup>2</sup> 或 R 平方。
 
-## <a name="data"></a>Data
+## <a name="data"></a>資料
 
 資料是所有機器學習應用程式的中心。 在 ML.NET 中，資料是由 <xref:Microsoft.ML.IDataView> 物件表示。 資料檢視物件：
 
@@ -64,23 +64,23 @@ ML.NET 中實作 <xref:Microsoft.ML.IEstimator%601> 介面的類別。
 
 擴充方法密集用在 ML.NET 中，以建構[評估工具](#estimator)的執行個體。
 
-## <a name="feature"></a>特殊功能
+## <a name="feature"></a>功能
 
 所評估之現象的可評估屬性，通常是一個數 (雙精度浮點數) 值。 多個特徵會稱為**特徵向量**，且通常會儲存成 `double[]`。 特徵定義了所評估之現象的重要特性。 如需詳細資訊，請參閱維基百科上的[特徵](https://en.wikipedia.org/wiki/Feature_(machine_learning)) \(英文\) 一文。
 
-## <a name="feature-engineering"></a>特徵工程
+## <a name="feature-engineering"></a>特徵設計
 
 特徵工程是一個程序，牽涉到定義一組[特徵](#feature)，並開發能從可用現象資料產生特徵向量 (亦即特徵擷取) 的軟體。 如需詳細資訊，請參閱維基百科上的[特徵工程](https://en.wikipedia.org/wiki/Feature_engineering) \(英文\) 一文。
 
-## <a name="f-score"></a>F-score
+## <a name="f-score"></a>F 分數
 
 在[分類](#classification)中，用來平衡[精準率](#precision)和[召回率](#recall)的評估計量。
 
 ## <a name="hyperparameter"></a>超參數
 
-機器學習演算法的參數。 範例包括決策樹系中要學習的樹數目，或梯度下降演算法中的步階大小。 「超參數」的值是在將模型定型之前設定的，並且會控管尋找預測函式之參數 (例如決策樹中的比較點或線性迴歸模型中的加權) 的程序。 如需詳細資訊，請參閱維基百科上的[超參數](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) \(英文\) 一文。
+機器學習演算法的參數。 範例包括決策樹系中要學習的樹數目，或梯度下降演算法中的步階大小。 「超參數」** 的值是在將模型定型之前設定的，並且會控管尋找預測函式之參數 (例如決策樹中的比較點或線性迴歸模型中的加權) 的程序。 如需詳細資訊，請參閱維基百科上的[超參數](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) \(英文\) 一文。
 
-## <a name="label"></a>ThisAddIn
+## <a name="label"></a>標籤
 
 要使用機器學習模型來預測的元素。 例如，狗的品種或未來的股價。
 
@@ -98,7 +98,7 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
 
 在[迴歸](#regression)中，作為所有模型誤差平均值的評估計量，其中模型誤差係指所預測[標籤](#label)值與正確標籤值之間的差距。
 
-## <a name="model"></a>型號
+## <a name="model"></a>模型
 
 傳統上，預測函式的參數。 例如，線性迴歸模型中的加權，或決策樹中的分割點。 在 ML.NET 中，模型包含預測領域物件 (例如影像或文字) [標籤](#label)所需的一切資訊。 這意謂著 ML.NET 模型除了包含預測函式的參數之外，也包含必要的特徵化步驟。
 
@@ -122,22 +122,22 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
 
 讓模型與資料集相符所需的所有作業。 管線會由資料輸入、轉換、特徵化及學習步驟所組成。 在管線定型之後，就會轉換成模型。
 
-## <a name="precision"></a>精確度
+## <a name="precision"></a>Precision
 
 在[分類](#classification)中，類別的精確率係指正確預測為屬於該類別的項目數，除以預測為屬於該類別的項目總數後，所得出的值。
 
-## <a name="recall"></a>召回率
+## <a name="recall"></a>召回
 
 在[分類](#classification)中，類別的召回率係指正確預測為屬於該類別的項目數，除以實際屬於該類別的項目總數後，所得出的值。
 
-## <a name="regularization"></a>正則化
+## <a name="regularization"></a>正規化
 
  正規化不利於太過複雜的線性模型。 正規化有兩種：
 
 - $L_1$ 正規化零加權不顯著的特性。 在這種正規化後，已儲存的模型大小可能會變得較小。
-- $L _2 $ 正規化可將不重要功能的權數範圍降至最低。 這是較一般的程式，對極端值而言較不敏感。
+- $L_2$ 的正規化可最大限度減少無足輕重功能的重量範圍。 這是一個更常規的過程，對異常值不太敏感。
 
-## <a name="regression"></a>回復
+## <a name="regression"></a>迴歸
 
 輸出為實際值 (例如雙精度浮點數) 的[機器學習](#supervised-machine-learning)工作。 範例包括預測股價。 如需詳細資訊，請參閱[機器學習工作](tasks.md)主題的[迴歸](tasks.md#regression)一節。
 
@@ -145,7 +145,7 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
 
 在[迴歸](#regression)中，此評估計量是所有絕對誤差的總和除以正確[標籤](#label)值與所有正確標籤值之平均值的差距總和後，所得出的值。
 
-## <a name="relative-squared-error"></a>相對均方差
+## <a name="relative-squared-error"></a>相對平方誤差
 
 在[迴歸](#regression)中，此評估計量是所有平方絕對誤差的總和除以正確[標籤](#label)值與所有正確標籤值之平均值的平方差距總和後，所得出的值。
 
@@ -153,7 +153,7 @@ Loss 函式是定型標籤值和模型所做預測之間的差異。 模型的�
 
 在[迴歸](#regression)中，此評估計量是誤差平方值之平均值的平方根。
 
-## <a name="scoring"></a>評分
+## <a name="scoring"></a>計分
 
 評分是將新資料套用至定型機器學習模型並產生預測的流程。 評分也稱為推斷。 根據模型的類型而定，分數可能是原始值、機率或類別。
 

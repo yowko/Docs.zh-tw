@@ -1,15 +1,15 @@
 ---
-title: 如何尋找相關元素（XPath-LINQ to XML）（C#）
+title: 如何查找相關元素（XPath-LINQ 到 XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: cdc281d0b08ee7b7f93ac28b14e82fa113a3379d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f74c338019c0451ab5e3ac0d8da10392ae5601ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141027"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169229"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>如何尋找相關元素（XPath-LINQ to XML）（C#）
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>如何查找相關元素（XPath-LINQ 到 XML）（C#）
 本主題顯示如何取得在其他項目值所參考的屬性上選取的項目。  
   
  XPath 運算式為：  
@@ -83,4 +83,3 @@ Results are identical
   </FullAddress>  
 </Customer>  
 ```  
- 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework, asynchronous design patterns
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 ms.openlocfilehash: f80e6ae520ab03c0f5f4edc30c0b7102193ee6c5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139823"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>使用以工作為基礎的非同步模式
@@ -298,7 +298,7 @@ foreach(Task recommendation in recommendations)
 }
 ```
 
- 或：
+ 或者：
 
 ```csharp
 foreach(Task recommendation in recommendations)
@@ -631,7 +631,7 @@ double currentPrice = await NeedOnlyOne(
 ```
 
 ### <a name="interleaved-operations"></a>交錯作業
- 當您處理非常大量的工作時，使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法來支援交錯案例會有潛在的效能問題。 對 <xref:System.Threading.Tasks.Task.WhenAny%2A> 發出的每個呼叫會導致向每個工作登錄接續。 對於 N 個工作數目，這會導致在交錯作業的存留期間建立的 O （N<sup>2</sup>）接續。 如果您正在處理大量工作，可以使用結合（在下列範例中`Interleaved`）來解決效能問題：
+ 當您處理非常大量的工作時，使用 <xref:System.Threading.Tasks.Task.WhenAny%2A> 方法來支援交錯案例會有潛在的效能問題。 對 <xref:System.Threading.Tasks.Task.WhenAny%2A> 發出的每個呼叫會導致向每個工作登錄接續。 對於 N 個任務數，這將導致在交錯操作的存留期內創建的 O（N<sup>2</sup>） 延續。 如果您正在處理大量任務，則可以使用組合器（`Interleaved`在以下示例中）來解決性能問題：
 
 ```csharp
 static IEnumerable<Task<T>> Interleaved<T>(IEnumerable<Task<T>> tasks)
@@ -831,10 +831,10 @@ private static void Produce(int data)
 ```
 
 > [!NOTE]
-> .NET Framework 4.5 有提供 <xref:System.Threading.Tasks.Dataflow> 命名空間，可透過 **NuGet** 取得。 若要安裝包含 <xref:System.Threading.Tasks.Dataflow> 命名空間的組件，請在 Visual Studio 中開啟您的專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]，然後在線上搜尋 Microsoft.Tpl.Dataflow 套件。
+> .NET Framework 4.5 有提供 <xref:System.Threading.Tasks.Dataflow> 命名空間，可透過 **NuGet** 取得。 若要安裝包含 <xref:System.Threading.Tasks.Dataflow> 命名空間的組件，請在 Visual Studio 中開啟您的專案，從 [專案] 功能表中選擇 [管理 NuGet 套件]****，然後在線上搜尋 Microsoft.Tpl.Dataflow 套件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [工作式非同步模式 (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
 - [實作以工作為基礎的非同步模式](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
-- [與其他非同步模式和型別互通](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)
+- [Interop 與其他非同步模式和類型](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

@@ -1,15 +1,15 @@
 ---
-title: 如何使用群組將檔案分割成許多檔案（LINQ）（C#）
+title: 如何使用組 （LINQ） （C#） 將檔拆分為多個檔
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 934b6385a8634c23a4e29098367c9aaa7355f11c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 654b444c26f2868c4e2b0e2893a639ebc6cacabf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347311"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168566"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>如何使用群組將檔案分割成許多檔案（LINQ）（C#）
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>如何使用組 （LINQ） （C#） 將檔拆分為多個檔
 此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。  
   
 ### <a name="to-create-the-data-files"></a>建立資料檔  
@@ -92,7 +92,7 @@ class SplitWithGroups
         Console.ReadKey();  
     }  
 }  
-/* Output:   
+/* Output:
     A  
        Aw, Kam Foo  
     B  
@@ -128,7 +128,7 @@ class SplitWithGroups
 
 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ 和字串 (C#)](./linq-and-strings.md)
 - [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

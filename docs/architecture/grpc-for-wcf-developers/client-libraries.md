@@ -1,36 +1,36 @@
 ---
-title: 建立 gRPC 用戶端程式庫-適用于 WCF 開發人員的 gRPC
-description: 討論 gRPC 服務的共用用戶端程式庫/套件。
+title: 為 WCF 開發人員創建 gRPC 用戶端庫 - gRPC
+description: 討論 gRPC 服務的共用用戶端庫/包。
 ms.date: 09/02/2019
 ms.openlocfilehash: bb58cb3cda4b0cbb3a5d34129961349bcb0093e9
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711462"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401666"
 ---
-# <a name="create-grpc-client-libraries"></a>建立 gRPC 用戶端程式庫
+# <a name="create-grpc-client-libraries"></a>創建 gRPC 用戶端庫
 
-不需要散發 gRPC 應用程式的用戶端程式庫。 您可以在組織內建立 `.proto` 檔案的共用程式庫，而其他小組則可以使用這些檔案在自己的專案中產生用戶端程式代碼。 但是，如果您有私用的 NuGet 存放庫，而且有許多其他小組使用 .NET Core，您就可以建立用戶端 NuGet 封裝，並將其發佈為服務專案的一部分。 這可以是共用和推廣服務的好方法。
+不需要為 gRPC 應用程式分發用戶端庫。 您可以在組織內創建檔共用`.proto`庫，其他團隊可以使用這些檔在他們自己的專案中生成用戶端代碼。 但是，如果您有一個私有的 NuGet 存儲庫，並且許多其他團隊正在使用 .NET Core，則可以創建和發佈用戶端 NuGet 包，作為服務專案的一部分。 這是分享和推廣服務的好方法。
 
-散發用戶端程式庫的優點之一，是您可以使用實用的「便利性」方法和屬性，來增強產生的 gRPC 和 Protobuf 類別。 在用戶端程式代碼中，就像在伺服器中一樣，所有類別都會宣告為 `partial`，因此您可以擴充它們，而不需要編輯產生的程式碼。 這表示，您可以輕鬆地將「函式」、「方法」和「計算」屬性加入至基本類型。
+分發用戶端庫的一個優點是，您可以使用有用的"方便"方法和屬性增強生成的 gRPC 和 Protobuf 類。 在用戶端代碼中，如在伺服器中，所有類都聲明為`partial`，因此您可以擴展它們，而無需編輯生成的代碼。 這意味著可以輕鬆地將建構函式、方法和計算屬性添加到基本類型。
 
 > [!CAUTION]
-> 您不應該使用自訂程式碼來提供基本功能。 您不想要將該基本功能限制為使用共用程式庫的 .NET 小組，而不是將其提供給使用其他語言或平臺的小組，例如 Python 或 JAVA。
+> 不應使用自訂代碼來提供基本功能。 您不希望將該基本功能限制為使用共用庫的 .NET 團隊，而不是將其提供給使用其他語言或平臺（如 Python 或 JAVA）的團隊。
 
-請確定有許多小組可以存取您的 gRPC 服務。 這麼做的最佳方式是共用 `.proto` 檔案，讓開發人員可以產生自己的用戶端。 這特別適用于多平臺環境，其中不同的小組經常使用不同的程式設計語言和架構，或者您的 API 可從外部存取。
+確保盡可能多的團隊可以訪問您的 gRPC 服務。 最好的方法是共用`.proto`檔，以便開發人員可以生成自己的用戶端。 在多平臺環境中尤其如此，其中不同的團隊經常使用不同的程式設計語言和框架，或者 API 是外部可訪問的。
 
-## <a name="useful-extensions"></a>有用的擴充功能
+## <a name="useful-extensions"></a>有用的擴展
 
-.NET 中有兩個常用的介面，可用來處理物件的資料流程： <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.IObservable%601>。 從 .NET Core 3.0 和C# 8.0 開始，有一個用來非同步處理資料流程的 <xref:System.Collections.Generic.IAsyncEnumerable%601> 介面，以及使用介面的 `await foreach` 語法。 本節提供可重複使用的程式碼，以將這些介面套用至 gRPC 資料流程。
+.NET 中有兩個常用介面用於處理物件流：<xref:System.Collections.Generic.IEnumerable%601>和<xref:System.IObservable%601>。 從 .NET Core 3.0 和 C# 8.0<xref:System.Collections.Generic.IAsyncEnumerable%601>開始，有一個用於非同步處理`await foreach`流的介面，以及一個用於使用該介面的語法。 本節介紹將這些介面應用於 gRPC 流的可重用代碼。
 
-有了 .NET Core gRPC 用戶端程式庫，`IAsyncStreamReader<T>` 的 `ReadAllAsync` 擴充方法會建立 `IAsyncEnumerable<T>` 介面。 對於使用被動程式設計的開發人員而言，建立 `IObservable<T>` 介面的同等擴充方法可能會類似下一節中的範例。
+使用 .NET Core gRPC 用戶端庫時，有`ReadAllAsync`一種擴展`IAsyncStreamReader<T>`方法用於創建`IAsyncEnumerable<T>`介面。 對於使用反應式程式設計的開發人員，創建介面的`IObservable<T>`等效擴充方法可能類似于下一節中的示例。
 
-### <a name="iobservable"></a>IObservable
+### <a name="iobservable"></a>可觀察
 
-`IObservable<T>` 介面是 `IEnumerable<T>`的「被動」反轉。 「回應式」方法不會從資料流程提取專案，而是讓資料流程將專案推送至「訂閱者」。 這與 gRPC 資料流程非常類似，而且可以輕鬆地在 `IAsyncStreamReader<T>` 介面周圍包裝 `IObservable<T>` 介面。
+介面`IObservable<T>`是 中的"反應"反對。 `IEnumerable<T>` 被動方法允許流將專案推送到訂閱伺服器，而不是從流中提取專案。 這與 gRPC 流非常相似，並且很容易圍繞`IObservable<T>``IAsyncStreamReader<T>`介面包裝介面。
 
-此程式碼的長度超過 `IAsyncEnumerable<T>` 的程式碼C# ，因為沒有使用可預見值的內建支援。 您必須手動建立實類別。 不過，它是一個泛型類別，因此單一的實作用會跨所有類型運作。
+此代碼比`IAsyncEnumerable<T>`代碼長，因為 C# 沒有內置支援使用可觀察器。 您必須手動創建實現類。 但它是一個泛型類，因此單個實現適用于所有類型。
 
 ```csharp
 using System;
@@ -63,9 +63,9 @@ namespace Grpc.Core
 ```
 
 > [!IMPORTANT]
-> 這個可觀察的執行只會呼叫一次 `Subscribe` 方法，因為嘗試從資料流程讀取的多個訂閱者會導致混亂。 在可預見值中，有一些運算子（`Replay`[例如）會](https://www.nuget.org/packages/System.Reactive.Linq)啟用緩衝和可重複共用的，這可以與此實作為搭配使用。
+> 此可觀察的實現只允許`Subscribe`調用一次該方法，因為有多個訂閱者嘗試從流中讀取將導致混亂。 有運算子，如`Replay` [System.Reactive.Linq，](https://www.nuget.org/packages/System.Reactive.Linq)它們支援可觀察的緩衝和可重複共用，這些可與此實現一起使用。
 
-`GrpcStreamSubscription` 類別會處理 `IAsyncStreamReader`的列舉：
+類`GrpcStreamSubscription`處理 的`IAsyncStreamReader`枚舉：
 
 ```csharp
 public class GrpcStreamSubscription : IDisposable
@@ -127,7 +127,7 @@ public class GrpcStreamSubscription : IDisposable
 }
 ```
 
-現在只需要一個簡單的擴充方法，即可從串流讀取器建立可觀察的。
+現在只需要一個簡單的擴充方法，從流讀取器創建可觀察的。
 
 ```csharp
 using System;
@@ -145,10 +145,10 @@ namespace Grpc.Core
 }
 ```
 
-## <a name="summary"></a>總結
+## <a name="summary"></a>摘要
 
-`IAsyncEnumerable` 和 `IObservable` 模型都是受到妥善支援的方式，也是在 .NET 中處理非同步資料資料流程的完整記錄方法。 gRPC 串流會妥善對應到兩個範例，提供與 .NET Core 的緊密整合，以及回應式和非同步程式設計樣式。
+和`IAsyncEnumerable``IObservable`模型都是支援良好且記錄良好的處理 .NET 中非同步資料流程的方法。 gRPC 流很好地映射到這兩種範例，提供與 .NET Core 以及被動和非同步程式設計樣式的緊密集成。
 
 >[!div class="step-by-step"]
->[上一頁](streaming-versus-repeated.md)
->[下一頁](security.md)
+>[上一個](streaming-versus-repeated.md)
+>[下一個](security.md)

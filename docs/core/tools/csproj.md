@@ -3,11 +3,11 @@ title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.date: 04/08/2019
 ms.openlocfilehash: 2fb00e830380c5c4cbf7b6dcd2c8a585e1617b4b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451365"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398990"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -15,7 +15,7 @@ ms.locfileid: "77451365"
 
 ## <a name="implicit-package-references"></a>隱含套件參考
 
-會根據您專案檔之 `<TargetFramework>` 或 `<TargetFrameworks>` 屬性中指定的目標架構來隱含參考中繼套件。 如果指定了 `<TargetFrameworks>`，則會忽略 `<TargetFramework>`，與順序無關。 如需詳細資訊，請參閱[套件、中繼套件和](../packages.md)架構。
+會根據您專案檔之 `<TargetFramework>` 或 `<TargetFrameworks>` 屬性中指定的目標架構來隱含參考中繼套件。 如果指定了 `<TargetFramework>`，則會忽略 `<TargetFrameworks>`，與順序無關。 有關詳細資訊，請參閱[包、元包和框架](../packages.md)。
 
 ```xml
  <PropertyGroup>
@@ -33,7 +33,7 @@ ms.locfileid: "77451365"
 
 由於會隱含參考 `Microsoft.NETCore.App` 或 `NETStandard.Library` 中繼套件，因此建議使用下列最佳做法：
 
-- 以 .NET Core 或 .NET Standard 為目標時，絕不透過專案檔中的 `Microsoft.NETCore.App` 項目明確參考 `NETStandard.Library` 或 `<PackageReference>` 中繼套件。
+- 以 .NET Core 或 .NET Standard 為目標時，絕不透過專案檔中的 `<PackageReference>` 項目明確參考 `Microsoft.NETCore.App` 或 `NETStandard.Library` 中繼套件。
 - 如果您以 .NET Core 為目標時需要特定版本的執行階段，您應該使用專案中的 `<RuntimeFrameworkVersion>` 屬性 (例如 `1.0.4`)，而不是參考中繼套件。
   - 如果您使用[獨立性部署](../deploying/index.md#publish-self-contained)，並需要 1.0.0 LTS 執行階段的特定更新程式版本，就可能會發生此情況。
 - 如果您以 .NET Standard 為目標時需要特定版本的 `NETStandard.Library` 中繼套件，您可以使用 `<NetStandardImplicitPackageVersion>` 屬性並設定所需的版本。
@@ -41,7 +41,7 @@ ms.locfileid: "77451365"
 
 ## <a name="implicit-version-for-some-package-references"></a>某些套件參考的隱含版本
 
-[`<PackageReference>`](#packagereference) 的大部分使用方式都需要設定 `Version` 屬性來指定要使用的 NuGet 套件版本。 不過，使用 .NET Core 2.1 或 2.2 並參考 [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) 或 [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage) 時，該屬性是不必要的。 .NET Core SDK 可以自動針對這些套件選取應使用的版本。
+大多數用法[`<PackageReference>`](#packagereference)要求設置`Version`屬性以指定要使用的 NuGet 包版本。 不過，使用 .NET Core 2.1 或 2.2 並參考 [Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) 或 [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage) 時，該屬性是不必要的。 .NET Core SDK 可以自動針對這些套件選取應使用的版本。
 
 ### <a name="recommendation"></a>建議
 
@@ -57,7 +57,7 @@ ms.locfileid: "77451365"
 
 這些針對 ASP.NET Core 中繼套件的參考，具有和大部分的一般 NuGet 套件些微不同的行為。 使用這些中繼套件之應用程式的[架構相依部署](../deploying/index.md#publish-runtime-dependent)會自動利用 ASP.NET Core 共用架構的優點。 當您使用中繼套件時，系統**不會**搭配應用程式部署來自所參考之 ASP.NET Core NuGet 套件的任何資產；ASP.NET Core 共用架構會包含這些資產。 共用架構中的資產會針對目標平台最佳化，以改善應用程式啟動時間。 如需共用架構的詳細資訊，請參閱 [.NET Core 發佈封裝](../distribution-packaging.md)。
 
-如果「已指定」某個版本，系統會將它視為 ASP.NET Core 共用架構適用於架構相依部署的「最小」版本，以及獨立式部署的「確切」版本。 這可能會導致下列結果：
+如果「已指定」** 某個版本，系統會將它視為 ASP.NET Core 共用架構適用於架構相依部署的「最小」** 版本，以及獨立式部署的「確切」** 版本。 這可能會導致下列結果：
 
 - 如果安裝在伺服器上的 ASP.NET Core 版本小於 PackageReference 上所指定的版本，.NET Core 處理序將無法啟動。 針對中繼套件的更新通常會在於裝載環境 (例如 Azure) 中推出之前，先在 NuGet.org 上提供使用。 將 PackageReference 上的版本更新為 ASP.NET Core 的版本，可能會導致已部署的應用程式發生失敗。
 - 如果應用程式是以[獨立式部署](../deploying/index.md#publish-self-contained)的形式部署，該應用程式可能不會包含針對 .NET Core 的最新安全性更新。 沒有指定版本時，獨立式部署中的 SDK 可以自動包含最新版本的 ASP.NET Core。
@@ -95,7 +95,7 @@ ms.locfileid: "77451365"
 
 這項變更不會修改其他包含項目的主要機制。 不過，如果您想要指定某些檔案由應用程式發行，您仍然可以使用 *csproj* 中已知的機制來執行這項作業 (例如 `<Content>` 項目)。
 
-`<EnableDefaultCompileItems>` 只會停用 `Compile` GLOB，而不會影響隱含 `None` GLOB 這類其他 GLOB，後者也會套用至 \*.cs 項目。 因此，方案總管會繼續將 \*.cs 項目顯示為包含為 `None` 項目之專案的一部分。 透過類似的方式，您可以將 `<EnableDefaultNoneItems>` 設為 False 以停用隱含 `None` GLOB，如下所示：
+`<EnableDefaultCompileItems>` 只會停用 `Compile` GLOB，而不會影響隱含 `None` GLOB 這類其他 GLOB，後者也會套用至 \*.cs 項目。 因此，方案總管**** 會繼續將 \*.cs 項目顯示為包含為 `None` 項目之專案的一部分。 透過類似的方式，您可以將 `<EnableDefaultNoneItems>` 設為 False 以停用隱含 `None` GLOB，如下所示：
 
 ```xml
 <PropertyGroup>
@@ -113,7 +113,7 @@ ms.locfileid: "77451365"
 
 ## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>如何以 MSBuild 查看專案的方式查看整個專案
 
-雖然那些 csproj 變更可大幅簡化專案檔，在包括 SDK 和其目標之後，您可能會想要以 MSBuild 查看專案的方式查看完全展開的專案。 使用 [`/pp`](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) 命令的 [`dotnet msbuild` 切換](dotnet-msbuild.md) 對專案進行前置處理，它可以在不需要實際建置專案的情況下，顯示匯入的檔案、檔案的來源，以及該檔案對組建的貢獻：
+雖然那些 csproj 變更可大幅簡化專案檔，在包括 SDK 和其目標之後，您可能會想要以 MSBuild 查看專案的方式查看完全展開的專案。 使用 [`dotnet msbuild`](dotnet-msbuild.md) 命令的 [`/pp` 切換](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) 對專案進行前置處理，它可以在不需要實際建置專案的情況下，顯示匯入的檔案、檔案的來源，以及該檔案對組建的貢獻：
 
 `dotnet msbuild -pp:fullproject.xml`
 
@@ -125,15 +125,15 @@ ms.locfileid: "77451365"
 
 ### <a name="sdk-attribute"></a>Sdk 屬性
 
-`<Project>`.csproj*檔案的根* 元素有一個新屬性，稱為 `Sdk`。 `Sdk` 會指定專案將使用的 SDK。 如[分層文件](cli-msbuild-architecture.md)所述，SDK 是可建置 .NET Core 程式碼的一組 MSBuild [工作](/visualstudio/msbuild/msbuild-tasks)和[目標](/visualstudio/msbuild/msbuild-targets)。 下列 Sdk 適用于 .NET Core：
+*.csproj* 檔案的根 `<Project>` 元素有一個新屬性，稱為 `Sdk`。 `Sdk` 會指定專案將使用的 SDK。 如[分層文件](cli-msbuild-architecture.md)所述，SDK 是可建置 .NET Core 程式碼的一組 MSBuild [工作](/visualstudio/msbuild/msbuild-tasks)和[目標](/visualstudio/msbuild/msbuild-targets)。 以下 SDK 可用於 .NET 核心：
 
 1. 識別碼為 `Microsoft.NET.Sdk` 的 .NET Core SDK
 2. 識別碼為 `Microsoft.NET.Sdk.Web` 的 .NET Core Web SDK
 3. 識別碼為 `Microsoft.NET.Sdk.Razor` 的 .NET Core Razor 類別庫 SDK
-4. 具有 `Microsoft.NET.Sdk.Worker` 識別碼的 .NET Core 背景工作角色服務（自 .NET Core 3.0 起）
-5. 具有 `Microsoft.NET.Sdk.WindowsDesktop` 識別碼的 .NET Core WinForms 和 WPF （自 .NET Core 3.0 開始）
+4. 具有 ID 的`Microsoft.NET.Sdk.Worker`.NET 核心工作人員服務（自 .NET Core 3.0）
+5. .NET 核心 WinForms 和 WPF`Microsoft.NET.Sdk.WindowsDesktop`的 ID （自 .NET Core 3.0）
 
-您必須在 `Sdk` 項目中將 `<Project>` 屬性設定為上述其中一個識別碼，才能使用 .NET Core 工具並建置您的程式碼。
+您必須在 `<Project>` 項目中將 `Sdk` 屬性設定為上述其中一個識別碼，才能使用 .NET Core 工具並建置您的程式碼。
 
 ### <a name="packagereference"></a>PackageReference
 
@@ -145,9 +145,9 @@ ms.locfileid: "77451365"
 
 #### <a name="version"></a>版本
 
-必要的 `Version` 屬性會指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)配置的規則。 預設行為是最小版本（內含相符）。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3, )` 並且表示已解析的封裝會有版本1.2.3 （如果有的話）或更高版本。
+必要的 `Version` 屬性會指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/reference/package-versioning#version-ranges-and-wildcards)配置的規則。 預設行為是最小版本，包含匹配。 例如，指定`Version="1.2.3"`等效于 NuGet 標記法`[1.2.3, )`，這意味著解析的包將具有版本 1.2.3（如果可用或更大）。
 
-#### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets 和 PrivateAssets
+#### <a name="includeassets-excludeassets-and-privateassets"></a>包括資產、排除資產和私有資產
 
 `IncludeAssets` 屬性指定應取用哪些資產 (屬於由 `<PackageReference>` 所指定的套件)。 根據預設，所有套件資產均包含在內。
 
@@ -156,15 +156,15 @@ ms.locfileid: "77451365"
 `PrivateAssets` 屬性指定應取用哪些資產 (屬於由 `<PackageReference>` 所指定但未流向下一個專案的套件)。 根據預設，當此屬性不存在時，`Analyzers`、`Build` 和 `ContentFiles` 會是私人資產。
 
 > [!NOTE]
-> `PrivateAssets` 相當於*專案. json*/*xproj* `SuppressParent` 元素。
+> `PrivateAssets`等效于*專案.json*/*xproj*`SuppressParent`元素。
 
 這些屬性可包含下列一或多個項目，若列出不只一個，則以分號 `;` 字元分隔：
 
-- `Compile` – *lib*資料夾的內容可供編譯。
-- `Runtime` –*運行*時間資料夾的內容會散發。
-- `ContentFiles` - 會使用 *contentfiles* 資料夾的內容。
-- `Build` –會使用*build*資料夾中的 .props/目標。
-- `Native` –原生資產的內容會複製到執行時間的*輸出*資料夾。
+- `Compile`• *lib*資料夾的內容可供編譯。
+- `Runtime`•*分配運行時*資料夾的內容。
+- `ContentFiles`• 使用*內容檔*資料夾的內容。
+- `Build`• 使用*生成*資料夾中的道具/目標。
+- `Native`• 本機資產中的內容將複製到運行時的*輸出*資料夾。
 - `Analyzers` – 會使用分析器。
 
 另外，該屬性也可以包含︰
@@ -174,17 +174,17 @@ ms.locfileid: "77451365"
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
 
-`<DotNetCliToolReference>` 項目元素指定使用者想要在專案內容中還原的 CLI 工具。 它會取代 `tools`project.json*中的* 節點。
+`<DotNetCliToolReference>` 項目元素指定使用者想要在專案內容中還原的 CLI 工具。 它會取代 *project.json* 中的 `tools` 節點。
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-請注意，`DotNetCliToolReference`[現在](https://github.com/dotnet/announcements/issues/107)已被取代，以取代[.Net Core 本機工具](https://aka.ms/local-tools)。
+請注意，`DotNetCliToolReference`[現在棄用](https://github.com/dotnet/announcements/issues/107)有利於[.NET 核心本地工具](https://aka.ms/local-tools)。
 
 #### <a name="version"></a>版本
 
-`Version` 指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)配置的規則。 預設行為是最小版本（內含相符）。 例如，指定 `Version="1.2.3"` 相當於 NuGet 標記法 `[1.2.3, )` 並且表示已解析的封裝會有版本1.2.3 （如果有的話）或更高版本。
+`Version` 指定要還原的套件版本。 該屬性採用 [NuGet 版本控制](/nuget/create-packages/dependency-versions#version-ranges)配置的規則。 預設行為是最小版本，包含匹配。 例如，指定`Version="1.2.3"`等效于 NuGet 標記法`[1.2.3, )`，這意味著解析的包將具有版本 1.2.3（如果可用或更大）。
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 
@@ -227,7 +227,7 @@ RID 允許發行獨立部署。
 
 ## <a name="build-events"></a>建置事件
 
-在專案檔中指定預先建立和後置組建事件的方式已經變更。 在 SDK 樣式的專案格式中不建議使用 PreBuildEvent 和 Postbuildevent.bat 屬性，因為不會解析如 $ （ProjectDir）之類的宏。 例如，已不再支援下列程式碼：
+在專案檔案中指定預生成和生成後事件的方式已更改。 不建議在 SDK 樣式的專案格式中使用 PreBuildEvent 和 PostBuildEvent 屬性，因為宏（如 $（ProjectDir））未解析。 例如，不再支援以下代碼：
 
 ```xml
 <PropertyGroup>
@@ -235,7 +235,7 @@ RID 允許發行獨立部署。
 </PropertyGroup>
 ```
 
-在 SDK 樣式專案中，使用名為 `PreBuild` 或 `PostBuild` 的 MSBuild 目標，並設定 `PreBuild` 的 `BeforeTargets` 屬性或 `AfterTargets` 的 `PostBuild`屬性。 在上述範例中，請使用下列程式碼：
+在`PreBuild`SDK 樣式專案中，使用名為 或`PostBuild`的 MSBuild`BeforeTargets`目標`PreBuild`，並為`AfterTargets`或`PostBuild`設置 的屬性。 對於前面的示例，請使用以下代碼：
 
 ```xml
 <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
@@ -248,11 +248,11 @@ RID 允許發行獨立部署。
 ```
 
 > [!NOTE]
->您可以針對 MSBuild 目標使用任何名稱，但 Visual Studio IDE 會辨識 `PreBuild` 和 `PostBuild` 目標，因此建議使用這些名稱，讓您可以編輯 Visual Studio IDE 中的命令。
+>您可以將任何名稱用於 MSBuild 目標，但視覺化工作室 IDE 可識別`PreBuild`和目標`PostBuild`，因此我們建議您使用這些名稱，以便可以在視覺化工作室 IDE 中編輯命令。
 
 ## <a name="nuget-metadata-properties"></a>NuGet 中繼資料屬性
 
-隨著改為使用 MSBuild，我們已經將封裝 NuGet 套件時使用的輸入中繼資料從 *project.json* 移動到 *.csproj* 檔。 此輸入是 MSBuild 屬性，因此必須移至 `<PropertyGroup>` 群組。 以下是使用 `dotnet pack` 命令或 SDK 中的 `Pack` MSBuild 目標時，用來做為封裝程式輸入的屬性清單：
+移動到 MSBuild 後，我們將 NuGet 包從*project.json*打包到 *.csproj*檔時使用的輸入中繼資料。 此輸入是 MSBuild 屬性，因此必須移至 `<PropertyGroup>` 群組。 以下是在使用`dotnet pack`作為 SDK 一部分的命令或`Pack`MSBuild 目標時用作打包過程輸入的屬性的清單：
 
 ### <a name="ispackable"></a>IsPackable
 
@@ -272,7 +272,7 @@ RID 允許發行獨立部署。
 
 ### <a name="authors"></a>Authors
 
-以分號分隔的套件作者清單，與 nuget.org 上的設定檔名稱相符。這些會顯示在 nuget.org 上的 NuGet 元件庫中，並用於相同作者的交互參照封裝。
+包作者的分號分隔清單，與nuget.org上的設定檔名稱匹配。這些顯示在 nuGet 庫中nuget.org，用於由相同的作者交叉引用包。
 
 ### <a name="packagedescription"></a>PackageDescription
 
@@ -280,7 +280,7 @@ UI 顯示中的套件詳細描述。
 
 ### <a name="description"></a>描述
 
-組件的完整描述。 如果未指定 `PackageDescription`，則此屬性也會用來做為封裝的描述。
+組件的完整描述。 如果未`PackageDescription`指定，則此屬性也用作包的說明。
 
 ### <a name="copyright"></a>著作權
 
@@ -292,7 +292,7 @@ UI 顯示中的套件詳細描述。
 
 ### <a name="developmentdependency"></a>DevelopmentDependency
 
-布林值，指定封裝是否標示為僅限開發的相依性，這可防止封裝當做其他封裝的相依性來包含。 使用 PackageReference （NuGet 4.8 +）時，此旗標也表示編譯時期資產會從編譯中排除。 如需詳細資訊，請參閱 [PackageReference 的 DevelopmentDependency 支援](https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference) \(英文\)。
+指定包是否標記為僅開發依賴項的布林值，它阻止包作為依賴項包含在其他包中。 使用包參考 （NuGet 4.8+），此標誌還意味著編譯時的資產被排除在編譯之外。 如需詳細資訊，請參閱 [PackageReference 的 DevelopmentDependency 支援](https://github.com/NuGet/Home/wiki/DevelopmentDependency-support-for-PackageReference) \(英文\)。
 
 ### <a name="packagelicenseexpression"></a>PackageLicenseExpression
 
@@ -325,7 +325,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 若您使用未獲指派 SPDX 識別碼的授權，或其為自訂授權，則這會是套件內授權檔案的路徑 (否則，會優先使用 `PackageLicenseExpression`)
 
-取代 `PackageLicenseUrl`、無法與 `PackageLicenseExpression`合併，而且需要 Visual Studio 版本15.9.4 和 .NET SDK 2.1.502 或2.2.101 或更新版本。
+`PackageLicenseUrl`替換 不能與`PackageLicenseExpression`組合 ，需要 Visual Studio 版本 15.9.4 和 .NET SDK 2.1.502 或 2.2.101 或更新。
 
 您必須明確地將授權檔案新增到專案，以確保其封裝妥當，使用範例：
 
@@ -340,7 +340,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="packagelicenseurl"></a>PackageLicenseUrl
 
-適用于封裝之授權的 URL。 (_自 Visual Studio 15.9.4、.NET SDK 2.1.502 及 2.2.101 起淘汰_)
+適用于包的許可證的 URL。 (_自 Visual Studio 15.9.4、.NET SDK 2.1.502 及 2.2.101 起淘汰_)
 
 ### <a name="packageiconurl"></a>PackageIconUrl
 
@@ -370,7 +370,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="istool"></a>IsTool
 
-指定是否要將所有輸出檔複製到 *tools* 資料夾，而不是 *lib* 資料夾。 這與 `DotNetCliTool`不同，後者是藉由在 *.csproj*檔案中設定 `PackageType` 來指定。
+指定是否要將所有輸出檔複製到 *tools* 資料夾，而不是 *lib* 資料夾。 這與`DotNetCliTool`不同，後者通過在 *.csproj* `PackageType`檔中設置 來指定。
 
 ### <a name="repositoryurl"></a>RepositoryUrl
 
@@ -380,11 +380,11 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 指定存放庫的類型。 預設值為 "git"。
 
-### <a name="repositorybranch"></a>RepositoryBranch
-指定存放庫中來源分支的名稱。 當專案封裝在 NuGet 套件中時，會將它新增至套件中繼資料。
+### <a name="repositorybranch"></a>存儲庫分支
+指定存儲庫中源分支的名稱。 當專案打包在 NuGet 包中時，它將添加到包中繼資料中。
 
-### <a name="repositorycommit"></a>RepositoryCommit
-選擇性存放庫認可或變更集，用來指出要建立封裝的來源。 您也必須指定 `RepositoryUrl`，才能包含這個屬性。 當專案封裝在 NuGet 套件中時，此認可或變更集會新增至套件中繼資料。
+### <a name="repositorycommit"></a>存儲庫提交
+可選的存儲庫提交或更改集，以指示針對生成包的源。 `RepositoryUrl`還必須指定此屬性才能包含。 當專案打包在 NuGet 包中時，此提交或更改集將添加到包中繼資料中。
 
 ### <a name="nopackageanalysis"></a>NoPackageAnalysis
 
@@ -396,7 +396,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ### <a name="includebuildoutput"></a>IncludeBuildOutput
 
-這個布林值會指定組建輸出元件是否應該封裝到*nupkg*檔中。
+此布林值指定生成輸出程式集是否應打包到 *.nupkg*檔中。
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 
@@ -427,11 +427,11 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 ## <a name="assemblyinfo-properties"></a>AssemblyInfo 屬性
 
-[組件屬性](../../standard/assembly/set-attributes.md)，通常存在於 AssemblyInfo 檔案，現在會自動從屬性產生。
+[組件屬性](../../standard/assembly/set-attributes.md)，通常存在於 AssemblyInfo** 檔案，現在會自動從屬性產生。
 
 ### <a name="properties-per-attribute"></a>每個屬性 (Attribute) 的屬性 (Property)
 
-如下表所示，每個屬性都有一個屬性，可控制其內容，另一個則停用其層代：
+如下表所示，每個屬性都有一個屬性，用於控制其內容，另一個屬性則禁用其生成：
 
 | 屬性                                                      | 屬性               | 要停用的屬性                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|
@@ -452,7 +452,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 - `InformationalVersion` 預設為 `$(Version)` 的值。
 - 如果有屬性，則 `InformationalVersion` 會附加 `$(SourceRevisionId)`。 可以使用 `IncludeSourceRevisionInInformationalVersion` 來加以停用。
 - 也會針對 NuGet 中繼資料使用 `Copyright` 和 `Description` 屬性。
-- `Configuration` 與所有建置程序共用，並且是透過 `--configuration` 命令的 `dotnet` 參數來設定。
+- `Configuration` 與所有建置程序共用，並且是透過 `dotnet` 命令的 `--configuration` 參數來設定。
 
 ### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo
 

@@ -2,12 +2,12 @@
 title: 在 C# 中建立 XML 樹狀 (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: a77171ebbc07e54f6988fb97aff197b4c6d31721
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 4794e4fe019b30d8f2acb3eb255bb77ba2f7f290
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594631"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169541"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>在 C# 中建立 XML 樹狀結構 (LINQ to XML)
 本節提供在 C# 中建立 XML 樹狀的相關資訊。  
@@ -25,7 +25,7 @@ ms.locfileid: "69594631"
 XElement contacts =  
     new XElement("Contacts",  
         new XElement("Contact",  
-            new XElement("Name", "Patrick Hines"),   
+            new XElement("Name", "Patrick Hines"),
             new XElement("Phone", "206-555-0144"),  
             new XElement("Address",  
                 new XElement("Street1", "123 Main St"),  
@@ -42,7 +42,7 @@ XElement contacts =
 ## <a name="xelement-constructors"></a>XElement 建構函式  
  <xref:System.Xml.Linq.XElement> 類別會將下列建構函式用於功能結構。 請注意，<xref:System.Xml.Linq.XElement> 還有其他建構函式，但是它們不用於功能結構，因此未在此處列出。  
   
-|建構函式|說明|  
+|建構函式|描述|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|建立 <xref:System.Xml.Linq.XElement>。 `name` 參數會指定項目的名稱；`content` 會指定項目的內容。|  
 |`XElement(XName name)`|在將其 <xref:System.Xml.Linq.XElement> 初始化為指定之名稱的情況下，建立 <xref:System.Xml.Linq.XName>。|  
@@ -139,7 +139,7 @@ Console.WriteLine(address);
 XElement contacts =  
     new XElement("Contacts",  
         new XElement("Contact",  
-            new XElement("Name", "Patrick Hines"),                                                   
+            new XElement("Name", "Patrick Hines"),
             new XElement("Phone", "206-555-0144"),  
             new XElement("Address",  
                 new XElement("Street1", "123 Main St"),  
@@ -183,7 +183,7 @@ Console.WriteLine(phone);
   
 ```xml  
 <Phone Type="Home">555-555-5555</Phone>
-```   
+```
 
 ### <a name="creating-an-empty-element"></a>建立空項目  
  若要建立空的 <xref:System.Xml.Linq.XElement>，您不用將任何內容傳遞到建構函式。 下列範例會建立空項目：  

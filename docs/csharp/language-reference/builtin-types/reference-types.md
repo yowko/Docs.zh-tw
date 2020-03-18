@@ -20,20 +20,20 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: 6b65d7e79e4eac30171eb0aad650f7c1e3880e30
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: c2c03f47babd9ccf87eb60d33b9d65d1a9c82e2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77627266"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399641"
 ---
 # <a name="built-in-reference-types-c-reference"></a>內建參考型別 (C# 參考)
 
-C# 有數種內建參考型別。 它們具有關鍵字或運算子，是 .NET 程式庫中類型的同義字。 
+C# 有數種內建參考型別。 它們具有關鍵字或運算子，是 .NET 程式庫中類型的同義字。
 
 ## <a name="the-object-type"></a>物件型別
 
-`object` 類型是 <xref:System.Object?displayProperty=nameWithType> 在 .NET 中的別名。 在 C# 的統一型別系統中，所有類型 (預先定義和使用者定義的、參考型別和實值型別) 都會直接或間接繼承自 <xref:System.Object?displayProperty=nameWithType>。 您可以將任何型別的值指派給 `object` 型別的變數。 任何 `object` 變數都可以使用常值 `null` 指派給其預設值。 當實值型別的變數轉換成物件時，即稱之為 *Boxed*。 當類型 `object` 的變數轉換成實數值型別時，就表示它是取消*裝箱*。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../programming-guide/types/boxing-and-unboxing.md)。 
+`object` 類型是 <xref:System.Object?displayProperty=nameWithType> 在 .NET 中的別名。 在 C# 的統一型別系統中，所有類型 (預先定義和使用者定義的、參考型別和實值型別) 都會直接或間接繼承自 <xref:System.Object?displayProperty=nameWithType>。 您可以將任何型別的值指派給 `object` 型別的變數。 任何 `object` 變數都可以使用常值 `null` 指派給其預設值。 當實值型別的變數轉換成物件時，即稱之為 *Boxed*。 當類型的`object`變數轉換為數值型別時，它被稱為*解箱*。 如需詳細資訊，請參閱 [Boxing 和 Unboxing](../../programming-guide/types/boxing-and-unboxing.md)。
 
 ## <a name="the-string-type"></a>字串型別
 
@@ -60,21 +60,21 @@ string a = "good " + "morning";
 
 這會建立包含 "good morning" 的字串物件。
 
-字串是「不可變的」；在建立物件之後，就無法變更字串物件的內容，雖然語法讓它看起來就像您可以這麼做一樣。 例如，當您撰寫此程式碼時，編譯器實際上會建立新的字串物件，以保存新序列的字元，並且會將新物件指派給 `b`。 已配置給 `b` 的記憶體 (當其包含字串 "h" 時) 即適用於記憶體回收。
+字串是「不可變的」**；在建立物件之後，就無法變更字串物件的內容，雖然語法讓它看起來就像您可以這麼做一樣。 例如，當您撰寫此程式碼時，編譯器實際上會建立新的字串物件，以保存新序列的字元，並且會將新物件指派給 `b`。 已配置給 `b` 的記憶體 (當其包含字串 "h" 時) 即適用於記憶體回收。
 
 ```csharp
 string b = "h";
 b += "ello";
 ```
 
-`[]`[運算子](../operators/member-access-operators.md#indexer-operator-)可用於唯讀存取字串中的個別字元。 有效的索引值從 `0` 開始，而且必須小於字串的長度：
+`[]`[運算子](../operators/member-access-operators.md#indexer-operator-)可用於對字串的單個字元的唯讀訪問。 有效的索引值從`0`開始，並且必須小於字串的長度：
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-以類似的方式，`[]` 運算子也可以用來逐一查看字串中的每個字元：
+同樣，`[]`運算子還可用於反覆運算字串中的每個字元：
 
 ```csharp-interactive
 string str = "test";
@@ -84,7 +84,7 @@ for (int i = 0; i < str.Length; i++)
   Console.Write(str[i] + " ");
 }
 // Output: t e s t
-``` 
+```
 
 字串常值的型別是 `string`，可以撰寫為兩種形式：quoted 和 `@`-quoted。 以引號括住的字串常值是以雙引號 (") 括住：
 
@@ -111,7 +111,7 @@ Console.WriteLine(a);
 @"good morning"  // a string literal
 ```
 
-逐字字串的優點是「不會」處理逸出序列，例如，這可讓您輕鬆地撰寫完整 Windows 檔案名稱︰
+逐字字串的優點是「不會」** 處理逸出序列，例如，這可讓您輕鬆地撰寫完整 Windows 檔案名稱︰
 
 ```csharp
 @"c:\Docs\Source\a.txt"  // rather than "c:\\Docs\\Source\\a.txt"
@@ -136,7 +136,7 @@ public delegate int AnotherDelegate(MyType m, long num);
 
 `delegate` 是可用來封裝具名或匿名方法的參考型別。 委派類似 C++ 中的函式指標，但委派是型別安全而且安全的。 如需委派的應用程式，請參閱[委派](../../programming-guide/delegates/index.md)和[泛型委派](../../programming-guide/generics/generic-delegates.md)。 委派是[事件](../../programming-guide/events/index.md)的基礎。 委派的具現化方式是將它與具名或匿名方法建立關聯。
 
-委派必須使用具有相容傳回型別和輸入參數的方法或 Lambda 運算式進行具現化。 如需方法簽章中所允許變異程度的詳細資訊，請參閱 [Variance in Delegates](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) (委派中的變異數)。 若與匿名方法搭配使用，則會一起宣告要與它建立關聯的委派和程式碼。 
+委派必須使用具有相容傳回型別和輸入參數的方法或 Lambda 運算式進行具現化。 如需方法簽章中所允許變異程度的詳細資訊，請參閱 [Variance in Delegates](../../programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) (委派中的變異數)。 若與匿名方法搭配使用，則會一起宣告要與它建立關聯的委派和程式碼。
 
 ## <a name="the-dynamic-type"></a>動態型別
 
@@ -144,7 +144,7 @@ public delegate int AnotherDelegate(MyType m, long num);
 
 在大多數情況下，`dynamic` 類型的行為與 `object` 類型類似。 特別是，任何非 Null 運算式都可轉換成 `dynamic` 型別。 `dynamic` 型別與 `object` 的不同之處在於，包含型別 `dynamic` 運算式的操作，不會由編譯器解析或進行型別檢查。 編譯器會將作業資訊封裝在一起，而且稍後在執行階段會使用這項資訊來評估作業。 在此程序期間，會將 `dynamic` 類型的變數編譯為 `object` 類型的變數。 因此，`dynamic` 類型只存在於編譯時期，而非執行階段。
 
-下列範例會對照 `dynamic` 類型的變數與 `object` 類型的變數。 若要在編譯時期驗證每個變數的類型，請將滑鼠指標放在 `dyn` 陳述式中的 `obj` 或 `WriteLine` 上方。 將下列程式碼複製到可使用 IntelliSense 的編輯器。 IntelliSense 會顯示「動態」來表示 `dyn`，並顯示「物件」來表示 `obj`。
+下列範例會對照 `dynamic` 類型的變數與 `object` 類型的變數。 若要在編譯時期驗證每個變數的類型，請將滑鼠指標放在 `WriteLine` 陳述式中的 `dyn` 或 `obj` 上方。 將下列程式碼複製到可使用 IntelliSense 的編輯器。 IntelliSense 會顯示「動態」**** 來表示 `dyn`，並顯示「物件」**** 來表示 `obj`。
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 
@@ -178,7 +178,7 @@ obj = obj + 3;
 - [基本字串作業](../../../standard/base-types/basic-string-operations.md)
 - [建立新字串](../../../standard/base-types/creating-new.md)
 - [型別測試和轉換運算子](../operators/type-testing-and-cast.md)
-- [如何使用模式比對和 as 和 is 運算子安全地轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [如何使用模式匹配和作為 和 運算子安全地強制轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [逐步解說：建立和使用動態物件](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>
 - <xref:System.String?displayProperty=nameWithType>

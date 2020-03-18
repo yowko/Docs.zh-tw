@@ -4,14 +4,14 @@ description: 這個進階教學課程說明產生及取用非同步資料流提�
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 2fab2917a26a1774ad73866fa0448dbf47c94583
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: de090eb9cc1e8b511956313ab5169ee4d07a492f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240089"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156736"
 ---
-# <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教學課程：使用C# 8.0 和 .net Core 3.0 產生和取用非同步資料流程
+# <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教程：使用 C# 8.0 和 .NET Core 3.0 生成和使用非同步流
 
 C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生資料流中的元素時，它會建構資料來源資料流處理模型。 非同步資料流仰賴 .NET Standard 2.1 中引進並在 .NET Core 3.0 中實作的新介面來針對非同步資料流處理資料來源提供自然程式設計模型。
 
@@ -23,9 +23,9 @@ C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生
 > - 以非同步方式取用資料來源。
 > - 識別何時應該使用新的介面與資料來源，而非先前的同步資料來源。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用8個編譯器。
+您需要設置電腦以運行 .NET Core，包括 C# 8.0 編譯器。 C# 8 編譯器可從[Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.NET Core 3.0 SDK](https://dotnet.microsoft.com/download)開始。
 
 您將必須建立 [GitHub 存取權杖](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token)，以便存取 GitHub GraphQL 端點。 為您的 GitHub 存取權杖選取下列權限：
 
@@ -59,7 +59,7 @@ C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生
 
 [!code-csharp[RunPagedQueryStarter](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
 
-讓我們專注在分頁上述程式碼的演算法與非同步結構。 （如需 GitHub GraphQL API 的詳細資訊，您可以參閱[Github GraphQL 檔](https://developer.github.com/v4/guides/)）。`runPagedQueryAsync` 方法會列舉最新到最舊的問題。 它會要求每頁 25 個議題，並檢查回應的 `pageInfo` 結構以使用上一頁繼續。 這遵循 GraphQL 對多頁回應的標準分頁支援。 回應包括 `pageInfo` 物件，此物件包括 `hasPreviousPages` 值與用來要求上一頁的 `startCursor` 值。 議題位於 `nodes` 陣列中。 `runPagedQueryAsync` 方法會將這些節點附加到包含來自所有頁面之結果的陣列。
+讓我們專注在分頁上述程式碼的演算法與非同步結構。 （有關 GitHub 圖形 QL API 的詳細資訊，請參閱[GitHub GraphQL 文檔](https://developer.github.com/v4/guides/)。該方法`runPagedQueryAsync`枚舉了從最近到最舊的問題。 它會要求每頁 25 個議題，並檢查回應的 `pageInfo` 結構以使用上一頁繼續。 這遵循 GraphQL 對多頁回應的標準分頁支援。 回應包括 `pageInfo` 物件，此物件包括 `hasPreviousPages` 值與用來要求上一頁的 `startCursor` 值。 議題位於 `nodes` 陣列中。 `runPagedQueryAsync` 方法會將這些節點附加到包含來自所有頁面之結果的陣列。
 
 擷取並還原一頁的結果之後，`runPagedQueryAsync` 會回報進度並檢查取消。 若已要求取消，`runPagedQueryAsync` 會擲回 <xref:System.OperationCanceledException>。
 
@@ -132,11 +132,13 @@ namespace System
 
 [!code-csharp[FinishedEnumerateAsyncStream](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
 
+預設情況元素在捕獲的上下文中處理。 如果要禁用上下文捕獲，請使用<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>擴充方法。 有關同步上下文和捕獲當前上下文的詳細資訊，請參閱有關[使用基於任務的非同步模式](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)的文章。
+
 您可以從 [dotnet/samples](https://github.com/dotnet/samples) 存放庫 (位於 [csharp/tutorials/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/finished) 資料夾中) 取得已完成之教學課程的程式碼。
 
 ## <a name="run-the-finished-application"></a>執行已完成的應用程式
 
-再次執行應用程式。 將其行為與入門應用程式的行為進行比較。 當第一個結果頁面可用時會儘快列舉。 您會發現要求並擷取每個新頁面時會暫停一些時間，燃後快速列舉下一個頁面的結果。 不需要 `try` / `catch` 區塊就能處理取消：呼叫者可以停止列舉集合。 系統會明確回報進度，因為非同步資料流會在下載每個頁面時產生結果。 傳回之每個問題的狀態會順暢地包含在 `await foreach` 迴圈中。 您不需要回呼物件來追蹤進度。
+再次執行應用程式。 將其行為與入門應用程式的行為進行比較。 當第一個結果頁面可用時會儘快列舉。 您會發現要求並擷取每個新頁面時會暫停一些時間，燃後快速列舉下一個頁面的結果。 不需要 `try` / `catch` 區塊就能處理取消：呼叫者可以停止列舉集合。 系統會明確回報進度，因為非同步資料流會在下載每個頁面時產生結果。 返回的每個問題的狀態都無縫地包含在迴圈中`await foreach`。 不需要回檔物件來跟蹤進度。
 
 您可以透過檢查程式碼看到記憶體使用狀況的改進。 您再也不需要在列舉結果之前配置集合以儲存所有結果。 呼叫者可以決定如何取用結果，以及是否需要儲存體集合。
 

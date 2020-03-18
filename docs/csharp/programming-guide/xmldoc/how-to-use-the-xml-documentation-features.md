@@ -1,16 +1,16 @@
 ---
-title: 如何使用 XML 檔功能-程式C#設計指南
+title: 如何使用XML文檔功能 - C# 程式設計指南
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e279b13d9216120e25f454faa14dc71ad24c74ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789777"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156996"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>如何使用 XML 文件功能
 
@@ -20,7 +20,7 @@ ms.locfileid: "76789777"
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-此範例會產生包含下列內容的 *.xml*檔案。
+該示例生成包含以下內容的 *.xml*檔。
 
 ```xml
 <?xml version="1.0"?>
@@ -62,7 +62,7 @@ ms.locfileid: "76789777"
             </summary>
             <param name="s"> Parameter description for s goes here.</param>
             <seealso cref="T:System.String">
-            You can use the cref attribute on any tag to reference a type or member 
+            You can use the cref attribute on any tag to reference a type or member
             and the compiler will check that the reference exists.
             </seealso>
         </member>
@@ -120,7 +120,7 @@ XML 文件是以 /// 開頭。 當您建立新的專案時，精靈會為您在�
 
 - 文件必須是語式正確的 XML。 如果 XML 的語式不正確，則會產生警告，而且文件檔案會包含註解，指出發生錯誤。
 
-- 開發人員可以自由建立自己的標記集合。 有一[組建議的標記](recommended-tags-for-documentation-comments.md)。 其中一些建議的標記具有特殊意義：
+- 開發人員可以自由建立自己的標記集合。 有一[組推薦的標記](recommended-tags-for-documentation-comments.md)。 其中一些建議的標記具有特殊意義：
 
   - \<param> 標記是用來描述參數。 如果使用，編譯器會驗證參數存在，而且所有參數在文件中都有描述。 如果驗證失敗，編譯器會發出警告。
 
@@ -131,10 +131,10 @@ XML 文件是以 /// 開頭。 當您建立新的專案時，精靈會為您在�
     > [!NOTE]
     > XML 檔案不會提供類型和成員的完整資訊 (例如，它不會包含任何類型資訊)。 若要取得類型或成員的完整資訊，文件檔案在使用時必須能夠反映實際類型或成員。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
-- [-doc （C#編譯器選項）](../../language-reference/compiler-options/doc-compiler-option.md)
-- [XML 檔批註](./index.md)
-- [DocFX 檔處理器](https://dotnet.github.io/docfx/)
-- [Sandcastle 這類檔處理器](https://github.com/EWSoftware/SHFB)
+- [-文檔（C# 編譯器選項）](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML 文件註解](./index.md)
+- [DocFX 文檔處理器](https://dotnet.github.io/docfx/)
+- [沙堡文檔處理器](https://github.com/EWSoftware/SHFB)

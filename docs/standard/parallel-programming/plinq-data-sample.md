@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140007"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 資料範例
@@ -29,7 +29,7 @@ ms.locfileid: "73140007"
   
 2. 使用這些步驟之後的程式碼取代 Module1.vb 或 Program.cs 的內容。  
   
-3. 在 [專案] 功能表中，按一下 [加入新項目]。 選取 [文字檔]，然後按一下 [確定]。 複製本主題中的資料，然後將它貼到新的文字檔中。 在 [檔案] 功能表上，按一下 [儲存]，將檔案命名為 Plinqdata.csv，然後將它儲存在包含原始程式碼檔案的資料夾。  
+3. 在 [專案]**** 功能表上，按一下 [加入新項目]****。 選取 [文字檔]****，然後按一下 [確定]****。 複製本主題中的資料，然後將它貼到新的文字檔中。 在 [檔案]**** 功能表上，按一下 [儲存]****，將檔案命名為 Plinqdata.csv，然後將它儲存在包含原始程式碼檔案的資料夾。  
   
 4. 按 F5 鍵，確認專案正確地建置和執行。 主控台視窗中應該會顯示以下輸出。  
   
@@ -860,6 +860,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
