@@ -1,19 +1,19 @@
 ---
-title: 如何投影物件圖形（C#）
+title: 如何投影物件圖 （C#）
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: 93fabe26fd3d9ff0b61d8b8dfc33425715452c88
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: eafb3d9064159c43fc98e0b241f0045465fca824
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635687"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168956"
 ---
-# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="5f555-102">如何投影物件圖形（C#）</span><span class="sxs-lookup"><span data-stu-id="5f555-102">How to project an object graph (C#)</span></span>
-<span data-ttu-id="5f555-103">本主題說明如何從 XML 規劃或填入物件圖形。</span><span class="sxs-lookup"><span data-stu-id="5f555-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
+# <a name="how-to-project-an-object-graph-c"></a><span data-ttu-id="06c94-102">如何投影物件圖 （C#）</span><span class="sxs-lookup"><span data-stu-id="06c94-102">How to project an object graph (C#)</span></span>
+<span data-ttu-id="06c94-103">本主題說明如何從 XML 規劃或填入物件圖形。</span><span class="sxs-lookup"><span data-stu-id="06c94-103">This topic illustrates how to project, or populate, an object graph from XML.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5f555-104">範例</span><span class="sxs-lookup"><span data-stu-id="5f555-104">Example</span></span>  
- <span data-ttu-id="5f555-105">下列程式碼會填入具有 `Address`、`PurchaseOrder` 及來自[範例 XML 檔：典型採購訂單 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 文件之 `PurchaseOrderItem` 類別的物件圖形。</span><span class="sxs-lookup"><span data-stu-id="5f555-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
+## <a name="example"></a><span data-ttu-id="06c94-104">範例</span><span class="sxs-lookup"><span data-stu-id="06c94-104">Example</span></span>  
+ <span data-ttu-id="06c94-105">下列程式碼會填入具有 `Address`、`PurchaseOrder` 及來自[範例 XML 檔：典型採購訂單 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 文件之 `PurchaseOrderItem` 類別的物件圖形。</span><span class="sxs-lookup"><span data-stu-id="06c94-105">The following code populates an object graph with the `Address`, `PurchaseOrder`, and `PurchaseOrderItem` classes from the [Sample XML File: Typical Purchase Order (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML document.</span></span>  
   
 ```csharp  
 class Address  
@@ -185,7 +185,7 @@ class Program {
                             from a in po.Elements("Address")  
                             select new Address {  
                                 AddressType = ((string)a.Attribute("Type") == "Shipping") ?  
-                                    Address.AddressUse.Shipping :   
+                                    Address.AddressUse.Shipping :
                                     Address.AddressUse.Billing,  
                                 Name = (string)a.Element("Name"),  
                                 Street = (string)a.Element("Street"),  
@@ -214,9 +214,9 @@ class Program {
 }  
 ```  
   
- <span data-ttu-id="5f555-106">在此範例中，LINQ 查詢的結果會以 `PurchaseOrderItem`的 <xref:System.Collections.Generic.IEnumerable%601> 傳回。</span><span class="sxs-lookup"><span data-stu-id="5f555-106">In this example, the result of the LINQ query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="5f555-107">`PurchaseOrder` 類別中的項目是 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 類型。</span><span class="sxs-lookup"><span data-stu-id="5f555-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="5f555-108">程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。</span><span class="sxs-lookup"><span data-stu-id="5f555-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
+ <span data-ttu-id="06c94-106">在此示例中，LINQ 查詢的結果將作為 返回作為<xref:System.Collections.Generic.IEnumerable%601>。 `PurchaseOrderItem`</span><span class="sxs-lookup"><span data-stu-id="06c94-106">In this example, the result of the LINQ query is returned as an <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="06c94-107">`PurchaseOrder` 類別中的項目是 `PurchaseOrderItem` 的 <xref:System.Collections.Generic.IEnumerable%601> 類型。</span><span class="sxs-lookup"><span data-stu-id="06c94-107">The items in the `PurchaseOrder` class are of type <xref:System.Collections.Generic.IEnumerable%601> of `PurchaseOrderItem`.</span></span> <span data-ttu-id="06c94-108">程式碼使用 <xref:System.Linq.Enumerable.ToList%2A> 擴充方法以從查詢結果建立 <xref:System.Collections.Generic.List%601> 集合。</span><span class="sxs-lookup"><span data-stu-id="06c94-108">The code uses the <xref:System.Linq.Enumerable.ToList%2A> extension method to create a <xref:System.Collections.Generic.List%601> collection from the results of the query.</span></span>  
   
- <span data-ttu-id="5f555-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="5f555-109">The example produces the following output:</span></span>  
+ <span data-ttu-id="06c94-109">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="06c94-109">The example produces the following output:</span></span>  
   
 ```output  
 PurchaseOrderNumber: 99503  
@@ -255,7 +255,7 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5f555-110">請參閱</span><span class="sxs-lookup"><span data-stu-id="5f555-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="06c94-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="06c94-110">See also</span></span>
 
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>

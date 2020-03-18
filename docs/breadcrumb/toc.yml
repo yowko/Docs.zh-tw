@@ -384,7 +384,7 @@
                 - name: Windows Workflow (WF) 範例
                   tocHref: /dotnet/framework/windows-workflow-foundation/samples/
                   topicHref: /dotnet/framework/windows-workflow-foundation/samples/index
-            - name: Windows Forms
+            - name: Windows Form
               tocHref: /dotnet/framework/winforms/
               topicHref: /dotnet/framework/winforms/index
               items:
@@ -401,10 +401,10 @@
                 - name: 進階
                   tocHref: /dotnet/framework/wpf/advanced/
                   topicHref: /dotnet/framework/wpf/advanced/index
-                - name: 應用程式開發
+                - name: XBOX Video Application Development
                   tocHref: /dotnet/framework/wpf/app-development/
                   topicHref: /dotnet/framework/wpf/app-development/index
-                - name: 控制項
+                - name: 控制
                   tocHref: /dotnet/framework/wpf/controls/
                   topicHref: /dotnet/framework/wpf/controls/index
                 - name: 資料
@@ -445,7 +445,7 @@
             - name: 教學課程
               tocHref: /dotnet/csharp/tutorials/
               topicHref: /dotnet/csharp/tutorials/index
-            - name: 導覽
+            - name: 教學
               tocHref: /dotnet/csharp/tour-of-csharp/
               topicHref: /dotnet/csharp/tour-of-csharp/index
             - name: 新功能
@@ -454,7 +454,7 @@
             - name: .NET Compiler Platform SDK
               tocHref: /dotnet/csharp/roslyn-sdk/
               topicHref: /dotnet/csharp/roslyn-sdk/index
-            - name: 程式設計手冊
+            - name: 程式設計指南
               tocHref: /dotnet/csharp/programming-guide/
               topicHref: /dotnet/csharp/programming-guide/index
               items:
@@ -540,14 +540,14 @@
                 - name: XML 文件
                   tocHref: /dotnet/csharp/programming-guide/xmldoc/
                   topicHref: /dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments
-            - name: 語言參考
+            - name: 程式設計語言參考
               tocHref: /dotnet/csharp/language-reference/
               topicHref: /dotnet/csharp/language-reference/index
               items:
                 - name: 關鍵字
                   tocHref: /dotnet/csharp/language-reference/keywords/
                   topicHref: /dotnet/csharp/language-reference/keywords/index
-                - name: 運算子
+                - name: 操作員
                   tocHref: /dotnet/csharp/language-reference/operators/
                   topicHref: /dotnet/csharp/language-reference/operators/index
                 - name: 特殊字元
@@ -673,17 +673,17 @@
             - name: COM Interop
               tocHref: /dotnet/visual-basic/programming-guide/com-interop/
               topicHref: /dotnet/visual-basic/programming-guide/com-interop/index
-            - name: 語言參考
+            - name: 程式設計語言參考
               tocHref: /dotnet/visual-basic/language-reference/
               topicHref: /dotnet/visual-basic/language-reference/index
-            - name: 參考資料
+            - name: 參考
               tocHref: /dotnet/visual-basic/reference/
               topicHref: /dotnet/visual-basic/reference/index
         - name: ML.NET 指南
           tocHref: /dotnet/machine-learning/
           topicHref: /dotnet/machine-learning/index
           items:
-            - name: 作法指南
+            - name: 操作指南
               tocHref: /dotnet/machine-learning/how-to-guides/
               topicHref: /dotnet/machine-learning/how-to-guides/index
             - name: 資源

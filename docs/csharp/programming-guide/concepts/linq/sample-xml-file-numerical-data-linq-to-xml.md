@@ -2,17 +2,17 @@
 title: 範例 XML 檔：數值資料 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 365cae86-a166-46df-b56a-0209d9771c27
-ms.openlocfilehash: fc990d2f9f15f05337e6d21dd9b46a78caa1f63a
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: 921d2a42d0d553b08ecd291b3480d040dd379a96
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483588"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168099"
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="218f9-102">範例 XML 檔：數值資料 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="218f9-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
-<span data-ttu-id="218f9-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="218f9-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="218f9-104">此檔案包含數值資料以進行加總、平均和群組。</span><span class="sxs-lookup"><span data-stu-id="218f9-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a><span data-ttu-id="b2a87-102">範例 XML 檔：數值資料 (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="b2a87-102">Sample XML File: Numerical Data (LINQ to XML)</span></span>
+<span data-ttu-id="b2a87-103">下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。</span><span class="sxs-lookup"><span data-stu-id="b2a87-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="b2a87-104">此檔案包含數值資料以進行加總、平均和群組。</span><span class="sxs-lookup"><span data-stu-id="b2a87-104">This file contains numerical data for summing, averaging, and grouping.</span></span>  
   
-## <a name="dataxml"></a><span data-ttu-id="218f9-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="218f9-105">Data.xml</span></span>  
+## <a name="dataxml"></a><span data-ttu-id="b2a87-105">Data.xml</span><span class="sxs-lookup"><span data-stu-id="b2a87-105">Data.xml</span></span>  
   
 ```xml  
 <Root>  
@@ -54,4 +54,3 @@ ms.locfileid: "66483588"
   </Data>  
 </Root>  
 ```  
- 
