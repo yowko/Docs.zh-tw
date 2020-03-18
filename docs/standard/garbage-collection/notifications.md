@@ -10,19 +10,19 @@ helpviewer_keywords:
 - garbage collection, notifications
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 ms.openlocfilehash: d5646c4969c95350ab4cd63b16f6f99ffba3a4ec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131539"
 ---
 # <a name="garbage-collection-notifications"></a>記憶體回收告知
-在某些情況下，通用語言執行平台 (CLR) 所執行的完整記憶體回收 (也就是層代 2 回收) 可能會降低效能。 這可能是特別針對處理大量要求的伺服器所引發的問題;在此情況下，長時間垃圾收集可能會導致要求超時。若要避免在關鍵期間發生完整收集，您可以收到通知，指出已接近完整垃圾收集，然後採取動作將工作負載重新導向至另一個伺服器實例。 您也可以自行引發回收，前提是目前的伺服器執行個體不需要處理要求。  
+在某些情況下，通用語言執行平台 (CLR) 所執行的完整記憶體回收 (也就是層代 2 回收) 可能會降低效能。 這可能是一個問題，特別是對於處理大量請求的伺服器;在這種情況下，長時間的垃圾回收可能會導致請求超時。為了防止在關鍵時間段內發生完整回收，可以通知您完全垃圾回收正在接近，然後採取措施將工作負載重定向到另一個伺服器實例。 您也可以自行引發回收，前提是目前的伺服器執行個體不需要處理要求。  
   
  <xref:System.GC.RegisterForFullGCNotification%2A> 方法會註冊一個當執行階段偵測到接近完整記憶體回收時要引發的通知。 通知有兩個部分：當接近完整記憶體回收時，以及當完整記憶體回收完成時。  
   
 > [!WARNING]
-> 只有進行封鎖的記憶體回收會引發通知。 如果已啟用 [\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 設定元素，背景記憶體回收將不會引發通知。  
+> 只有進行封鎖的記憶體回收會引發通知。 啟用[\<gcConcurrent>](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)配置元素時，後臺垃圾回收不會引發通知。  
   
  若要判斷引發通知的時機，請使用 <xref:System.GC.WaitForFullGCApproach%2A> 和 <xref:System.GC.WaitForFullGCComplete%2A> 方法。 一般來說，您會在 `while` 迴圈中使用這些方法，以持續取得可顯示通知狀態的 <xref:System.GCNotificationStatus> 列舉。 如果值為 <xref:System.GCNotificationStatus.Succeeded>，您可以執行以下動作：  
   
@@ -120,6 +120,6 @@ ms.locfileid: "73131539"
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [記憶體回收](../../../docs/standard/garbage-collection/index.md)

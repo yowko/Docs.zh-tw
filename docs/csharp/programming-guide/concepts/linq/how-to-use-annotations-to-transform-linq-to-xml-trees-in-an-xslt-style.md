@@ -1,15 +1,15 @@
 ---
-title: 如何使用批註以 XSLT 樣式轉換 LINQ to XML 樹狀結構（C#）
+title: 如何使用注釋在 XSLT 樣式 （C#） 中將 LINQ 轉換為 XML 樹
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 109e1a49530f34e7197f8c975de8c04245b11734
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7d6d646bb9b7b344750c22cb24bc81999da5210d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347287"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168553"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>如何使用批註以 XSLT 樣式轉換 LINQ to XML 樹狀結構（C#）
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>如何使用注釋在 XSLT 樣式 （C#） 中將 LINQ 轉換為 XML 樹
 附註可用於簡化 XML 樹狀的轉換。  
   
  有些 XML 文件為「中央具有混合內容的文件」。 使用這類文件時，您不一定要知道項目子節點的組織結構。 例如，包含文字的節點類似如下：  
@@ -148,7 +148,7 @@ After Transform
 - 函式的虛擬程式碼相當簡單：  
   
 ```text  
-The function takes an XElement as an argument and returns an XElement.   
+The function takes an XElement as an argument and returns an XElement.
 If an element has an XElement annotation, then  
     Return a new XElement  
         The name of the new XElement is the annotation element's name.  
@@ -233,7 +233,7 @@ static XElement XForm(XElement source)
                 )  
         );  
     }  
-}   
+}
 ```  
   
 ## <a name="complete-example"></a>完整範例  

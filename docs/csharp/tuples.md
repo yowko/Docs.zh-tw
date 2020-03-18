@@ -4,12 +4,12 @@ description: 了解 C# 中的未具名和具名 Tuple 類型
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: f551a1df4a31c3311119a0327e02fbc6096ce0a0
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9ce9e1d4395d1a75f36004384ec215c615cd9802
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039718"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156905"
 ---
 # <a name="c-tuple-types"></a>C# Tuple 型別
 
@@ -19,7 +19,7 @@ C# Tuple 是您使用輕量型語法所定義的型別。 優點包括更簡單�
 
 > [!NOTE]
 > 新的 Tuple 功能需要 <xref:System.ValueTuple> 類型。
-> 您必須新增 NuGet 套件 [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/)，以將它用於不包含類型的平台。
+> 您必須添加 NuGet 包[`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/)才能在不包含類型的平臺上使用它。
 >
 > 這類似於依賴架構中所傳遞類型的其他語言功能。 範例包含依賴 `INotifyCompletion` 介面的 `async` 和 `await` 以及依賴 `IEnumerable<T>` 的 LINQ。 不過，傳遞機制會變更，因為 .NET 變得與平台更為無關。 .NET Framework 可能不會永遠隨附於相同的步調，作為語言編譯器。 如果新語言功能依賴新類型，則在提供語言功能時，會以 NuGet 套件形式提供這些類型。 因為這些新類型會新增至 .NET Standard API 並傳遞為架構的一部分，所以將會移除 NuGet 套件需求。
 
@@ -32,20 +32,20 @@ C# Tuple 是您使用輕量型語法所定義的型別。 優點包括更簡單�
 若要避免這些缺點，您可以建立 `class` 或 `struct` 來帶出多個元素。 不幸的是，您需要執行更多工作，並且會模糊您的設計目的。 設定 `struct` 或 `class` 表示您定義的類型同時具有資料和行為。 許多次，您都只想要將多個值儲存在單一物件中。
 
 語言功能和 `ValueTuple` 泛型結構會強制執行您無法將任何行為 (方法) 新增至這些 Tuple 類型的規則。
-所有 `ValueTuple` 類型都是「可變動結構」。 每個成員欄位都是公用欄位。 這可將它們設為非常輕量型。 不過，這表示，如果不變性十分重要，則不應該使用 Tuple。
+所有 `ValueTuple` 類型都是「可變動結構」**。 每個成員欄位都是公用欄位。 這可將它們設為非常輕量型。 不過，這表示，如果不變性十分重要，則不應該使用 Tuple。
 
 Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容器。 讓我們來探索這些差異。
 
 ## <a name="named-and-unnamed-tuples"></a>具名和未具名 Tuple
 
 `ValueTuple` 結構具有名為 `Item1`、`Item2`、`Item3` 等等的欄位，而這些欄位與現有 `Tuple` 型別中所定義的屬性類似。
-這些名稱只是您可用於「未具名 Tuple」的名稱。 當您未將任何替代欄位名稱提供給 Tuple 時，即已建立未具名 Tuple：
+這些名稱只是您可用於「未具名 Tuple」** 的名稱。 當您未將任何替代欄位名稱提供給 Tuple 時，即已建立未具名 Tuple：
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
 
-上述範例中使用了常值常數將 Tuple 初始化，且不會有在 C# 7.1 中使用「Tuple 欄位名稱投射轉換」建立的元素名稱。
+上例中的元組使用文本常量初始化，並且不會在 C# 7.1 中使用*元數位段名稱投影*創建元素名稱。
 
-不過，當您初始化 Tuple 時，可以使用新的語言功能，讓每個欄位具有更適合的名稱。 這麼做會建立「具名 Tuple」。
+不過，當您初始化 Tuple 時，可以使用新的語言功能，讓每個欄位具有更適合的名稱。 這麼做會建立「具名 Tuple」**。
 具名元組仍會有名為 `Item1`、`Item2`、`Item3` 等等的元素。
 但對於您已命名的任一元素，也會有同義字。
 您可以指定每個元素的名稱來建立具名元組。 其中一個方式是在 Tuple 初始化期間指定名稱：
@@ -54,7 +54,7 @@ Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容�
 
 這些同義字是由編譯器和語言所處理，讓您可以有效率地使用具名 Tuple。 IDE 和編輯器可以使用 Roslyn API 來讀取這些語意名稱。 您可以在相同組件的任何地方，依據這些語意名稱來參考具名 Tuple 的元素。 產生所編譯的輸出時，編譯器會將您定義的名稱取代為 `Item*` 對等項目。 編譯過的 Microsoft Intermediate Language (MSIL) 不會包括您為這些元素指定的名稱。
 
-從 C# 7.1 開始，元組的欄位名稱可從用來將元組初始化的變數提供。 即為 **[元組投影初始設定式](#tuple-projection-initializers)** 。 下列程式碼會建立名為 `accumulation` 的元組，並有元素 `count` (整數) 與 `sum` (雙精度浮點數)。
+從 C# 7.1 開始，元組的欄位名稱可從用來將元組初始化的變數提供。 即為 **[元組投影初始設定式](#tuple-projection-initializers)**。 下列程式碼會建立名為 `accumulation` 的元組，並有元素 `count` (整數) 與 `sum` (雙精度浮點數)。
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -78,7 +78,7 @@ Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容�
 
 在兩種情況下，候選欄位名稱不會投影至元組欄位：
 
-1. 候選名稱是保留的元組名稱。 範例包括 `Item3`、`ToString`或 `Rest`。
+1. 候選名稱是保留的元組名稱。 示例包括`Item3` `ToString`、`Rest`或 。
 1. 候選名稱與另一個明確或隱含的元組欄位名稱重複。
 
 這些情況可避免語意模糊。 如果將這些名稱作為元組中的欄位名稱使用，就會造成語意模糊。 這兩種情況都不會造成編譯時期錯誤。 反之，沒有投影名稱的元素不會有語意名稱對其投影。  下列範例將示範這些情況：
@@ -165,7 +165,7 @@ named = differentShape;
 Visual Studio 的重構支援可輕鬆地將核心統計資料的功能擷取至私用方法。 這會提供 `private static` 方法，以傳回具有 `Sum`、`SumOfSquares` 和 `Count` 這三個值的 Tuple 類型：
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
- 
+
 如果您想要手動進行一些快速編輯，則語言會啟用可讓您使用的更多選項。 首先，您可以使用 `var` 宣告來初始化 `ComputeSumAndSumOfSquares` 方法呼叫的 Tuple 結果。 您也可以在 `ComputeSumAndSumOfSquares` 方法內建立三個不連續變數。 最終版本如下列程式碼所示：
 
 [!code-csharp[CleanedTupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#09_CleanedTupleVersion "After final cleanup")]
@@ -217,7 +217,7 @@ Tuple 很有用的另一個習慣用法是當您撰寫 LINQ 查詢時。 最終�
 
 ## <a name="deconstruction"></a>解構
 
-您可以「解構」方法所傳回的 Tuple，來解除封裝 Tuple 中的所有項目。 有三種不同的方法可以解構 Tuple。  首先，您可以在括弧內明確宣告每個欄位的類型，以建立元組中每個元素的離散變數：
+您可以「解構」** 方法所傳回的 Tuple，來解除封裝 Tuple 中的所有項目。 有三種不同的方法可以解構 Tuple。  首先，您可以在括弧內明確宣告每個欄位的類型，以建立元組中每個元素的離散變數：
 
 [!code-csharp[Deconstruct](../../samples/snippets/csharp/tuples/statistics.cs#10_Deconstruct "Deconstruct")]
 
@@ -225,7 +225,7 @@ Tuple 很有用的另一個習慣用法是當您撰寫 LINQ 查詢時。 最終�
 
 [!code-csharp[DeconstructToVar](../../samples/snippets/csharp/tuples/statistics.cs#11_DeconstructToVar "Deconstruct to Var")]
 
-它也可以搭配使用 `var` 關鍵字與括弧內的任何或所有變數宣告。 
+它也可以搭配使用 `var` 關鍵字與括弧內的任何或所有變數宣告。
 
 ```csharp
 (double sum, var sumOfSquares, var count) = ComputeSumAndSumOfSquares(sequence);
@@ -284,13 +284,13 @@ if (("Althea", "Goodwin") == p)
 
 `Deconstruct` 方法可以將 `Person` 物件 `p` 轉換為包含兩個字串的 Tuple，但它並不適用於相等測試的內容中。
 
-## <a name="tuples-as-out-parameters"></a>元組當做 out 參數
+## <a name="tuples-as-out-parameters"></a>Tuples 作為出參數
 
-元組可以用來當做 out 參數*本身*。 請勿與先前在[解構](#deconstruction)一節中提及的任何多義性混淆。 在方法呼叫中，您只需要描述元組的圖形：
+元數本身*可用作外參數*。 不要與["解構](#deconstruction)"部分前面提到的任何歧義混淆。 在方法調用中，只需描述元組的形狀：
 
 [!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
 
-或者，您可以使用[_未命名_](#named-and-unnamed-tuples)的元組，並將其欄位參考為 `Item1` 和 `Item2`：
+或者，您可以使用[_未命名的_](#named-and-unnamed-tuples)元組，並將其欄位稱為`Item1`和 ： `Item2`
 
 ```csharp
 dict.TryGetValue(2, out (int, string) pair);
@@ -298,6 +298,6 @@ dict.TryGetValue(2, out (int, string) pair);
 Console.WriteLine($"{pair.Item1}: {pair.Item2}");
 ```
 
-## <a name="conclusion"></a>結論 
+## <a name="conclusion"></a>結論
 
 具名元組的新語言和程式庫支援可讓您更輕鬆地處理使用可儲存多個元素的資料結構但未定義行為的設計，就像類別與結構一樣。 將 Tuple 用於這些類型十分簡單且簡潔。 您會獲得靜態類型檢查的所有優點，而不需要使用更詳細的 `class` 或 `struct` 語法來撰寫類型。 即便如此，它們還是最適用於為 `private` 或 `internal` 的公用程式方法。 公用方法傳回具有多個元素的值時，請建立使用者定義型別，即 `class` 或 `struct` 型別。

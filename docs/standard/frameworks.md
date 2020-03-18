@@ -1,17 +1,17 @@
 ---
-title: SDK 樣式專案中的目標 framework-.NET
+title: SDK 樣式專案中的目標框架 - .NET
 description: 了解 .NET Core 應用程式和程式庫的目標 Framework。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
 ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124594"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400551"
 ---
-# <a name="target-frameworks-in-sdk-style-projects"></a>SDK 樣式專案中的目標 framework
+# <a name="target-frameworks-in-sdk-style-projects"></a>SDK 樣式專案中的目標框架
 
 當您以應用程式或程式庫中的架構為目標時，您將指定要提供給應用程式或程式庫的一組 API。 您可以在專案檔中使用目標 Framework Moniker (TFM) 來指定目標 Framework。
 
@@ -21,7 +21,7 @@ ms.locfileid: "77124594"
 
 針對某些目標 Framework (例如 .NET Framework)，API 是由該架構安裝在系統上的組件所定義，而且可能包含應用程式架構 API (例如 ASP.NET)。
 
-針對以套件為基礎的目標 Framework (例如 .NET Standard 和 .NET Core)，API 是由包含在應用程式或程式庫中的套件所定義。 「中繼套件」是 NuGet 套件，本身沒有任何內容，而是一份相依性 (其他專案) 清單。 以 NuGet 套件為基礎的目標 Framework 會隱含指定一個中繼套件，該套件會參考組成架構的所有套件。
+針對以套件為基礎的目標 Framework (例如 .NET Standard 和 .NET Core)，API 是由包含在應用程式或程式庫中的套件所定義。 「中繼套件」** 是 NuGet 套件，本身沒有任何內容，而是一份相依性 (其他專案) 清單。 以 NuGet 套件為基礎的目標 Framework 會隱含指定一個中繼套件，該套件會參考組成架構的所有套件。
 
 ## <a name="latest-target-framework-versions"></a>最新目標 Framework 版本
 
@@ -29,8 +29,8 @@ ms.locfileid: "77124594"
 
 | 目標 Framework      | 最新 <br/> 穩定版 | Target Framework Moniker (TFM) | 已實作 <br/> .NET Standard 版本 |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.1                         | netstandard 2.1                 | N/A                                     |
-| .NET Core             | 3.1                         | netcoreapp 3.1                  | 2.1                                     |
+| .NET Standard         | 2.1                         | 淨標準2.1                 | N/A                                     |
+| .NET Core             | 3.1                         | netcoreapp3.1                  | 2.1                                     |
 | .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>支援的目標 Framework 版本
@@ -39,18 +39,18 @@ ms.locfileid: "77124594"
 
 | 目標 Framework           | TFM |
 | -------------------------- | --- |
-| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard 2.1 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp 3.0<br>netcoreapp 3.1 |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>淨標準2.1 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0<br>netcoreapp3.1 |
 | .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows 市集              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
-| [Silverlight]                | sl4<br>sl5 |
+| Silverlight                | sl4<br>sl5 |
 | Windows Phone              | wp [wp7]<br>wp7<br>wp75<br>wp8<br>wp81<br>wpa81 |
 | 通用 Windows 平台 | uap [uap10.0]<br>uap10.0 [win10] [netcore50] |
 
 ## <a name="how-to-specify-target-frameworks"></a>如何指定目標 Framework
 
-目標 Framework 會在專案檔中指定。 指定單一目標 Framework 時，請使用 **TargetFramework** 項目。 下列主控台應用程式專案檔案示範如何以 .NET Core 3.0 為目標：
+目標 Framework 會在專案檔中指定。 指定單一目標 Framework 時，請使用 **TargetFramework** 項目。 以下主控台應用專案檔案演示如何定位 .NET Core 3.0：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -106,7 +106,7 @@ public class MyClass
 }
 ```
 
-當您使用 SDK 樣式專案時，組建系統會留意代表支援的[目標 framework 版本](#supported-target-framework-versions)資料表中所顯示之目標架構的預處理器符號。 使用代表 .NET Standard 或 .NET Core TFM 的符號時，請以底線取代點，並將小寫字母變更為大寫 (例如 `netstandard1.4` 的符號是 `NETSTANDARD1_4`)。
+當您使用 SDK 樣式的專案時，生成系統知道表示["支援目標框架"表](#supported-target-framework-versions)中顯示的目標框架的預處理器符號。 使用代表 .NET Standard 或 .NET Core TFM 的符號時，請以底線取代點，並將小寫字母變更為大寫 (例如 `netstandard1.4` 的符號是 `NETSTANDARD1_4`)。
 
 .NET Core 目標 Framework 之前置處理器符號的完整清單如下：
 
@@ -132,7 +132,7 @@ public class MyClass
 - [套件、中繼套件和架構](../core/packages.md)
 - [使用跨平台工具開發程式庫](../core/tutorials/libraries.md)
 - [.NET Standard](net-standard.md)
-- [.NET Core 版本控制](../core/versions/index.md)
+- [.NET 核心版本控制](../core/versions/index.md)
 - [dotnet/standard GitHub 存放庫](https://github.com/dotnet/standard)
 - [NuGet 工具 GitHub 存放庫](https://github.com/joelverhagen/NuGetTools)
 - [Framework Profiles in .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html) (.NET 中的 Framework 設定檔)

@@ -1,15 +1,15 @@
 ---
-title: 如何取出單一屬性（LINQ to XML）（C#）
+title: 如何檢索單個屬性（LINQ 到 XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 31b34bddc9e748b473641235402847991d444c39
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 830a7be24702b6037ac62471060fbe49d8ded598
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347497"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168709"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>如何取出單一屬性（LINQ to XML）（C#）
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>如何檢索單個屬性（LINQ 到 XML）（C#）
 這個主題會說明如何擷取項目的單一屬性 (如果有屬性名稱)。 這在撰寫您要尋找具有特定屬性之項目的查詢運算式時，相當實用。  
   
  <xref:System.Xml.Linq.XElement.Attribute%2A> 類別的 <xref:System.Xml.Linq.XElement> 方法會傳回具有指定之名稱的 <xref:System.Xml.Linq.XAttribute>。  
@@ -43,7 +43,7 @@ work
 ```  
   
 ## <a name="example"></a>範例  
- 如果您要擷取屬性的值，您可以進行轉型，如同將 <xref:System.Xml.Linq.XElement> 物件轉型。 下列範例為其示範。  
+ 如果您要擷取屬性的值，您可以進行轉型，如同將 <xref:System.Xml.Linq.XElement> 物件轉型。 下列範例示範此作業。  
   
 ```csharp  
 XElement cust = new XElement("PhoneNumbers",  
@@ -54,7 +54,7 @@ XElement cust = new XElement("PhoneNumbers",
         new XAttribute("type", "work"),  
         "555-555-6666")  
 );  
-IEnumerable<XElement> elList =   
+IEnumerable<XElement> elList =
     from el in cust.Descendants("Phone")  
     select el;  
 foreach (XElement el in elList)  
@@ -97,6 +97,6 @@ home
 work  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ to XML 座標軸 (C#)](./linq-to-xml-axes-overview.md)

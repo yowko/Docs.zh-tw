@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
 ms.openlocfilehash: b883012cf8f72247ff4e0b47a46eee1854e2d534
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76735656"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外狀況和例外處理 (C# 程式設計手冊)
@@ -31,7 +31,7 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
 - 在可能擲回例外狀況的陳述式前後使用 `try` 區塊。
 - 一旦 `try` 區塊中發生例外狀況之後，控制流程就會跳至第一個相關聯的例外狀況處理常式，此處理常式存在於呼叫堆疊中的任何位置。 在 C# 中，`catch` 關鍵字是用來定義例外狀況處理常式。
 - 如果沒有指定例外狀況的例外狀況處理常式存在，程式就會停止執行並出現錯誤訊息。
-- 除非您可以處理它，否則不要攔截例外狀況，並讓應用程式保持已知的狀態。 如果您攔截 `System.Exception`，請使用 `catch` 區塊結尾的 `throw` 關鍵字來重新擲回。
+- 除非您可以處理它，否則不要攔截例外狀況，並讓應用程式保持已知的狀態。 如果捕獲`System.Exception`，請使用`throw``catch`塊末尾的關鍵字重新引發它。
 - 如果 `catch` 區塊定義了例外狀況變數，您可以使用它來取得所發生例外狀況型別的詳細資訊。
 - 例外狀況可以透過程式使用 `throw` 關鍵字明確地產生。
 - 例外狀況物件包含錯誤的詳細資訊，例如呼叫堆疊的狀態和錯誤狀態的文字描述。
@@ -40,27 +40,27 @@ C# 語言的例外狀況處理功能可協助您處理在程式執行時發生�
 
 ## <a name="related-sections"></a>相關章節
 
-如需例外狀況和例外狀況處理的詳細資訊，請參閱下列文章：
+有關異常和異常處理的詳細資訊，請參閱以下文章：
 
 - [使用例外狀況](using-exceptions.md)
 - [例外狀況處理](exception-handling.md)
 - [建立和擲回例外狀況](creating-and-throwing-exceptions.md)
 - [編譯器所產生的例外狀況](compiler-generated-exceptions.md)
-- [如何使用 try/catch 處理例外狀況（C#程式設計手冊）](how-to-handle-an-exception-using-try-catch.md)
+- [如何使用 try/catch 處理異常（C# 程式設計指南）](how-to-handle-an-exception-using-try-catch.md)
 - [如何使用 finally 執行清除程式碼](how-to-execute-cleanup-code-using-finally.md)
 - [如何攔截非 CLS 例外狀況](how-to-catch-a-non-cls-exception.md)
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/exceptions.md)中的[例外狀況](/dotnet/csharp/language-reference/language-specification/introduction)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的[例外狀況](~/_csharplang/spec/exceptions.md)。 語言規格是 C# 語法及用法的限定來源。
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.SystemException>
 - [C# 程式設計指南](../index.md)
 - [C# 關鍵字](../../language-reference/keywords/index.md)
-- [throw](../../language-reference/keywords/throw.md)
-- [try-catch](../../language-reference/keywords/try-catch.md)
+- [扔](../../language-reference/keywords/throw.md)
+- [試捕](../../language-reference/keywords/try-catch.md)
 - [try-finally](../../language-reference/keywords/try-finally.md)
 - [try-catch-finally](../../language-reference/keywords/try-catch-finally.md)
-- [例外狀況](../../../standard/exceptions/index.md)
+- [異常](../../../standard/exceptions/index.md)

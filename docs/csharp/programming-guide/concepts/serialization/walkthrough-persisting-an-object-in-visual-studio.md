@@ -1,12 +1,12 @@
 ---
 title: 逐步解說：使用 C# 保存物件
 ms.date: 04/26/2018
-ms.openlocfilehash: 9531909bdf1ed61305c292411ef2cd08b7b67465
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 85c5d1b711180eda5734d5860d996242c6bc89d1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240463"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167566"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>逐步解說：使用 C\# 保存物件
 
@@ -20,7 +20,7 @@ ms.locfileid: "78240463"
 > [!IMPORTANT]
 > 這個範例會使用二進位格式檔案來儲存資料。 這些格式不適用於敏感性資料，例如密碼或信用卡資訊。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - 若要建置並執行，請安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。
 
@@ -29,7 +29,7 @@ ms.locfileid: "78240463"
 > [!TIP]
 > 需要安裝程式碼編輯器嗎？ 試用 [Visual Studio](https://visualstudio.com/downloads)！
 
-- 範例需要 C# 7.3。 請參閱[選取 C# 語言版本](../../../language-reference/configure-language-version.md) 
+- 範例需要 C# 7.3。 請參閱[選取 C# 語言版本](../../../language-reference/configure-language-version.md)
 
 您可以在 [.NET 範例 GitHub 存放庫](https://github.com/dotnet/samples/tree/master/csharp/serialization) (英文) 線上檢查範例程式程。
 

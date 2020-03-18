@@ -13,10 +13,10 @@ helpviewer_keywords:
 - events [.NET Framework], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 ms.openlocfilehash: f74d75a09da350b34dfb067c3d0db8fc669116ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124774"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>如何：使用事件屬性處理多個事件
@@ -24,7 +24,7 @@ ms.locfileid: "73124774"
   
  若要儲存每個事件的委派，您可以使用 <xref:System.ComponentModel.EventHandlerList> 類別，或實作您自己的集合。 集合類別必須提供方法，根據事件索引鍵來設定、存取和擷取事件處理常式委派。 例如，您可以使用 <xref:System.Collections.Hashtable> 類別，或是從 <xref:System.Collections.DictionaryBase> 類別衍生自訂類別。 委派集合的實作詳細資料不需要公開至類別之外。  
   
- 類別內的每個事件屬性，都會定義一個 add 存取子方法和一個 remove 存取子方法。 事件屬性的 add 存取子會在委派集合中加入輸入委派執行個體。 事件屬性的 remove 存取子會從委派集合中移除輸入委派執行個體。 事件屬性存取子會使用事件屬性的預先定義索引鍵，從委派集合新增和移除執行個體。  
+ 類別內的每個事件屬性，都會定義一個 add 存取子方法和一個 remove 存取子方法。 事件屬性的 add 存取子會在委派集合中加入輸入委派執行個體。 事件屬性的 remove 存取子會從委派集合中移除輸入委派執行個體。  事件屬性存取子會使用事件屬性的預先定義索引鍵，從委派集合新增和移除執行個體。  
   
 ### <a name="to-handle-multiple-events-using-event-properties"></a>使用事件屬性處理多個事件  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73124774"
  [!code-csharp[Conceptual.Events.Other#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.events.other/cs/example3.cs#31)]
  [!code-vb[Conceptual.Events.Other#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.events.other/vb/example3.vb#31)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [事件](../../../docs/standard/events/index.md)

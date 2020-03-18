@@ -16,10 +16,10 @@ helpviewer_keywords:
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
 ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121939"
 ---
 # <a name="metadata-and-self-describing-components"></a>中繼資料和自我描述元件
@@ -157,11 +157,11 @@ JIT 編譯器會讀取整個方法的 MSIL、全面分析它，並產生那個�
 
 下表顯示 **MethodDef** 表格中，由描述 `Add` 方法的中繼資料語彙基元所參考的部分。 雖然尚有其他中繼資料表存在於這個組件中並擁有其唯一值，但只有這個表格在討論之列。
 
-|表格列|相關的虛擬位址 (RVA)|ImplFlags|旗標|[屬性]<br /><br /> (指向字串堆積)|簽章 (指向 BLOB 堆積)|
+|資料列|相關的虛擬位址 (RVA)|ImplFlags|Flags|名稱<br /><br /> (指向字串堆積)|簽章 (指向 BLOB 堆積)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
-|1|0x00002050|IL<br /><br /> Managed|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (建構函式)||
-|2|0x00002058|IL<br /><br /> Managed|Public<br /><br /> Static<br /><br /> ReuseSlot|主要|String|
-|3|0x0000208c|IL<br /><br /> Managed|Public<br /><br /> Static<br /><br /> ReuseSlot|新增|int, int, int|
+|1|0x00002050|IL<br /><br /> 受控|公開<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (建構函式)||
+|2|0x00002058|IL<br /><br /> 受控|公開<br /><br /> 靜態<br /><br /> ReuseSlot|主要區段|String|
+|3|0x0000208c|IL<br /><br /> 受控|公開<br /><br /> 靜態<br /><br /> ReuseSlot|加|int, int, int|
 
 表格的每一欄包含您程式碼的重要資訊。 **RVA** 欄允許執行階段計算定義這個方法之 MSIL 的起始記憶體位址。 **ImplFlags** 和 **Flags** 欄包含描述方法的位元遮罩 (例如，方法為 Public 或 Private)。 **Name** 欄對字串堆積中的方法名稱進行索引。 **Signature** 欄對 Blob 堆積中方法簽章的定義進行索引。
 
@@ -171,6 +171,6 @@ JIT 編譯器會讀取整個方法的 MSIL、全面分析它，並產生那個�
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
 |[屬性](../../docs/standard/attributes/index.md)|描述如何套用屬性、撰寫自訂屬性和擷取儲存於屬性的資訊。|

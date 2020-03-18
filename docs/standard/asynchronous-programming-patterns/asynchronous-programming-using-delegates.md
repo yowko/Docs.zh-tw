@@ -13,10 +13,10 @@ helpviewer_keywords:
 - synchronous calling in asynchronous manner
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
 ms.openlocfilehash: 4e17e6a96a12b705cf455d70add7e12a30f5fa90
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121738"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>使用委派非同步設計程式
@@ -25,14 +25,14 @@ ms.locfileid: "73121738"
 > [!IMPORTANT]
 > 編譯器應該利用由使用者指定的委派簽章，使用 `Invoke`、`BeginInvoke` 和 `EndInvoke` 方法發出委派類別。 `BeginInvoke` 和 `EndInvoke` 方法應該裝飾為原生。 因為這些方法標示為原生，CLR 會在類別載入時自動提供實作。 載入器可確保不覆寫它們。  
   
-## <a name="in-this-section"></a>本章節內容  
- [非同步呼叫同步方法](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+## <a name="in-this-section"></a>本節內容  
+ [以非同步的方式呼叫同步方法](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) \(部分機器翻譯\)  
  討論使用委派對一般方法進行非同步呼叫，並提供簡單的程式碼範例，示範等待非同步呼叫返回的四種方式。  
   
 ## <a name="related-sections"></a>相關章節  
  [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
  描述使用 .NET Framework 進行非同步程式設計。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Delegate>

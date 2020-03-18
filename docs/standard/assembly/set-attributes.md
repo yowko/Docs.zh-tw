@@ -11,10 +11,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 0e4e2e595ed4f95511bd23ab0ed00139f71b2c8b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73740467"
 ---
 # <a name="set-assembly-attributes"></a>設定組件屬性
@@ -37,9 +37,9 @@ ms.locfileid: "73740467"
 
 |組件識別屬性|描述|
 |---------------------------------|-----------------|
-|<xref:System.Reflection.AssemblyCultureAttribute>|列舉的欄位，會指出組件所支援的文化特性。 組件也可以指定文化特性獨立性，表示其包含預設文化特性的資源。 **注意：** 執行階段會將任何未將文化特性屬性設為 null 的組件作為附屬組件。 這類組件會受限於附屬組件繫結規則。 如需詳細資訊，請參閱[執行時間如何找出元件](../../framework/deployment/how-the-runtime-locates-assemblies.md)。|
+|<xref:System.Reflection.AssemblyCultureAttribute>|列舉的欄位，會指出組件所支援的文化特性。 組件也可以指定文化特性獨立性，表示其包含預設文化特性的資源。 **注意：** 執行階段會將任何未將文化特性屬性設為 null 的組件作為附屬組件。 這類組件會受限於附屬組件繫結規則。 有關詳細資訊，請參閱[運行時如何定位程式集](../../framework/deployment/how-the-runtime-locates-assemblies.md)。|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|此值用以設定組件屬性，例如組件是否可並存執行。|
-|<xref:System.Reflection.AssemblyVersionAttribute>|格式為 *major*.*minor*.*build*.*revision* 的數值 (例如 2.4.0.0)。 通用語言執行平台會使用此值來執行強式名稱組件中的繫結作業。 **注意：** 如果 <xref:System.Reflection.AssemblyInformationalVersionAttribute> 屬性未套用到組件，則 <xref:System.Reflection.AssemblyVersionAttribute> 屬性所指定的版本號碼會由 <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>、<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> 與 <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType> 屬性所使用。|
+|<xref:System.Reflection.AssemblyVersionAttribute>|格式為 *major*.*minor*.*build*.*revision* 的數值 (例如 2.4.0.0)。 通用語言執行平台會使用此值來執行強式名稱組件中的繫結作業。 **注：** <xref:System.Reflection.AssemblyInformationalVersionAttribute>如果該<xref:System.Reflection.AssemblyVersionAttribute>屬性未應用於程式集，則 屬性指定的版本號由<xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>和<xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType><xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>屬性使用。|
 
 下列程式碼範例顯示如何將版本與文化特性屬性套用至組件。
 
@@ -88,7 +88,7 @@ ms.locfileid: "73740467"
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|此字串值表示組件的設定，例如 Retail 或 Debug。 執行階段不使用此值。|
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|此字串值指定可供參考組件使用的預設別名。 此值會在組件本身的名稱不容易記時 (例如 GUID 值) 提供易記名稱。 也可以使用此值作為完整組件名稱的簡短形式。|
 |<xref:System.Reflection.AssemblyDescriptionAttribute>|此字串值指定簡短描述，該描述彙總組件的本質與用途。|
-|<xref:System.Reflection.AssemblyTitleAttribute>|此字串值指定組件的易記名稱。 例如，名為*comdlg*的元件可能會有「Microsoft 通用對話方塊控制項」標題。|
+|<xref:System.Reflection.AssemblyTitleAttribute>|此字串值指定組件的易記名稱。 例如，名為*comdlg*的程式集可能具有"Microsoft 通用對話方塊控制項"的標題。|
 
 ## <a name="strong-name-attributes"></a>強式名稱屬性
 
@@ -97,10 +97,10 @@ ms.locfileid: "73740467"
 |強式名稱屬性|描述|
 |----------------------------|-----------------|
 |<xref:System.Reflection.AssemblyDelaySignAttribute>|此布林值表示正在使用延遲簽章。|
-|<xref:System.Reflection.AssemblyKeyFileAttribute>|此字串值表示檔案名稱，該檔案包含公開金鑰 (如果使用延遲簽章) 或公開與私密金鑰，而金鑰以參數形式傳遞至該屬性的建構函式。 請注意，檔案名是相對於輸出檔案路徑（ *.exe*或 *.dll*），而不是來源檔案路徑。|
+|<xref:System.Reflection.AssemblyKeyFileAttribute>|此字串值表示檔案名稱，該檔案包含公開金鑰 (如果使用延遲簽章) 或公開與私密金鑰，而金鑰以參數形式傳遞至該屬性的建構函式。 請注意，檔案名是相對於輸出檔案路徑 *（.exe*或 *.dll），* 而不是原始檔案路徑。|
 |<xref:System.Reflection.AssemblyKeyNameAttribute>|表示內含金鑰組的金鑰容器，而該金鑰組以參數形式傳遞至該屬性的建構函式。|
 
-下列程式碼範例顯示使用延遲簽署來建立強式名稱元件時所要套用的屬性，其具有名為*myKey*的公開金鑰檔案。
+下面的代碼示例顯示了使用延遲簽名創建具有公開金鑰檔稱為*myKey.snk*的強命名程式集時要應用的屬性。
 
 ```cpp
 [assembly:AssemblyKeyFileAttribute("myKey.snk")];
@@ -117,6 +117,6 @@ ms.locfileid: "73740467"
 <Assembly:AssemblyDelaySignAttribute(True)>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [建立元件](create.md)
+- [建立組件](create.md)

@@ -1,5 +1,5 @@
 ---
-title: 結構類型- C#參考
+title: 結構類型 - C# 引用
 ms.date: 02/24/2020
 f1_keywords:
 - struct_CSharpKeyword
@@ -8,64 +8,64 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 523269ffc9de9b750330fcefd15a9026d6dc59b8
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239777"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847725"
 ---
-# <a name="structure-types-c-reference"></a>結構類型（C#參考）
+# <a name="structure-types-c-reference"></a>結構類型（C# 參考）
 
-*結構型*別（或*結構型*別）是可以封裝資料和相關功能的實[值型](value-types.md)別。 您可以使用 `struct` 關鍵字來定義結構類型：
+*結構類型*（或*結構類型*）是一種可以封裝資料和相關功能[的數值型別](value-types.md)。 使用 關鍵字`struct`定義結構類型：
 
-[!code-csharp[struct example](~/samples/snippets/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
 
-結構類型具有*值的語義*。 也就是說，結構類型的變數會包含類型的實例。 根據預設，變數值會在指派時複製、將引數傳遞至方法，並傳回方法結果。 在結構類型變數的情況下，會複製類型的實例。 如需詳細資訊，請參閱實[數值型別](value-types.md)。
+結構類型具有*值語義*。 也就是說，結構類型的變數包含類型的實例。 預設情況下，在賦值時複製變數值，將參數傳遞給方法，並返回方法結果。 對於結構類型變數，將複製類型的實例。 有關詳細資訊，請參閱[數值型別](value-types.md)。
 
-一般來說，您會使用結構類型來設計以資料為中心的小型類型，以提供些許或無行為。 例如，.NET 會使用結構類型來代表數位（[整數](integral-numeric-types.md)和[實數](floating-point-numeric-types.md)）、[布林值](bool.md)、 [Unicode 字元](char.md)和[時間實例](xref:System.DateTime)。 如果您將焦點放在類型的行為，請考慮定義[類別](../keywords/class.md)。 類別類型具有*參考語義*。 也就是說，類別類型的變數包含類型實例的參考，而不是實例本身。
+通常，使用結構類型來設計提供很少或沒有行為的小型以資料為中心的類型。 例如，.NET 使用結構類型來表示數位（[整數](integral-numeric-types.md)和[實數](floating-point-numeric-types.md)）、[布林值](bool.md)[、Unicode 字元](char.md)、[時間實例](xref:System.DateTime)。 如果您專注于類型的行為，請考慮定義[類](../keywords/class.md)。 類類型具有*引用語義*。 也就是說，類類型的變數包含對類型實例的引用，而不是實例本身。
 
 ## <a name="limitations-with-the-design-of-a-structure-type"></a>結構類型設計的限制
 
-當您設計結構類型時，您具有與[類別](../keywords/class.md)類型相同的功能，但有下列例外狀況：
+設計結構類型時，具有與[類](../keywords/class.md)類型相同的功能，但以下情況除外：
 
-- 您不能宣告無參數的函式。 每個結構類型已經提供隱含的無參數的函式，以產生類型的[預設值](default-values.md)。
+- 不能聲明無參數建構函式。 每個結構類型都已提供一個隱式無參數建構函式，該建構函式組建類型的[預設值](default-values.md)。
 
-- 您無法在其宣告中初始化實例欄位或屬性。 不過，您可以在其宣告中初始化[靜態](../keywords/static.md)或[常數](../keywords/const.md)欄位或靜態屬性。
+- 不能在其聲明上初始化實例欄位或屬性。 但是，您可以在其聲明上初始化[靜態](../keywords/static.md)或[const](../keywords/const.md)欄位或靜態屬性。
 
-- 結構類型的「構造函式」必須初始化該類型的所有實例欄位。
+- 結構類型的建構函式必須初始化類型的所有實例欄位。
 
-- 結構類型無法繼承自其他類別或結構類型，而且不能是類別的基底。 不過，結構類型可以執行[介面](../keywords/interface.md)。
+- 結構類型不能從其他類或結構類型繼承，也不能是類的基礎。 但是，結構類型可以實現[介面](../keywords/interface.md)。
 
-- 您不[能在結構類型中宣告](../../programming-guide/classes-and-structs/destructors.md)完成項。
+- 不能在結構類型中聲明[終端子](../../programming-guide/classes-and-structs/destructors.md)。
 
 ## <a name="instantiation-of-a-structure-type"></a>結構類型的具現化
 
-在C#中，您必須先初始化已宣告的變數，才能使用它。 因為結構類型變數無法 `null` （除非它是[可為 null 的實數值型別](nullable-value-types.md)的變數），所以您必須具現化對應類型的實例。 有幾種方式可以這麼做。
+在 C# 中，必須先初始化聲明變數，然後才能使用它。 因為結構類型變數不能`null`（除非它是可 null[數值型別的](nullable-value-types.md)變數），因此必須具現化相應類型的實例。 有幾種方法可以做到這一點。
 
-通常，您可以使用[`new`](../operators/new-operator.md)運算子來呼叫適當的處理常式，以具現化結構類型。 每個結構類型都至少有一個函式。 這是隱含的無參數的函式，它會產生類型的[預設值](default-values.md)。 您也可以使用[預設](../operators/default.md)的運算子或常值來產生類型的預設值。
+通常，通過使用運算子調用適當的建構函式來[`new`](../operators/new-operator.md)具現化結構類型。 每個結構類型至少有一個建構函式。 這是一個隱式無參數建構函式，它組建類型的[預設值](default-values.md)。 您還可以使用[預設](../operators/default.md)運算子或文本組建類型的預設值。
 
-如果結構類型的所有實例欄位都可存取，您也可以在不使用 `new` 運算子的情況下將它具現化。 在此情況下，您必須在第一次使用實例之前，先初始化所有實例欄位。 下列範例顯示如何執行該項工作：
+如果結構類型的所有實例欄位都可訪問，也可以在沒有`new`運算子的情況下具現化它。 在這種情況下，您必須在首次使用實例之前初始化所有實例欄位。 下列範例顯示如何執行該項工作：
 
-[!code-csharp[without new](~/samples/snippets/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
 
-在內[建實數值型別](value-types.md#built-in-value-types)的情況下，請使用對應的常值來指定類型的值。
+在[內置數值型別](value-types.md#built-in-value-types)的情況下，使用相應的文本指定類型的值。
 
-## <a name="passing-structure-type-variables-by-reference"></a>以傳址方式傳遞結構型別變數
+## <a name="passing-structure-type-variables-by-reference"></a>通過引用傳遞結構類型變數
 
-當您將結構型別變數當做引數傳遞至方法，或從方法傳回結構型別值時，會複製結構型別的整個實例。 這可能會影響您的程式碼在涉及大型結構類型的高效能案例中的效能。 您可以透過傳址方式傳遞結構型別變數，以避免值複製。 您可以使用[`ref`](../keywords/ref.md#passing-an-argument-by-reference)、 [`out`](../keywords/out-parameter-modifier.md)或[`in`](../keywords/in-parameter-modifier.md)方法參數修飾詞，來指出引數必須以傳址方式傳遞。 使用[ref](../../programming-guide/classes-and-structs/ref-returns.md) return 傳回以傳址方式傳回的方法結果。 如需詳細資訊，請參閱[撰寫安全C#且有效率](../../write-safe-efficient-code.md)的程式碼。
+將結構類型變數作為參數傳遞給方法或從方法返回結構類型值時，將複製結構類型的整個實例。 這可能會影響代碼在涉及大型結構類型的高性能方案中的性能。 可以通過引用傳遞結構類型變數來避免值複製。 使用[`ref`](../keywords/ref.md#passing-an-argument-by-reference)、[`out`](../keywords/out-parameter-modifier.md)或[`in`](../keywords/in-parameter-modifier.md)方法參數修改器指示必須通過引用傳遞參數。 使用[ref 返回](../../programming-guide/classes-and-structs/ref-returns.md)通過引用返回方法結果。 有關詳細資訊，請參閱[編寫安全高效的 C# 代碼](../../write-safe-efficient-code.md)。
 
 ## <a name="conversions"></a>轉換
 
-針對任何結構類型，會在 <xref:System.ValueType?displayProperty=nameWithType> 和 <xref:System.Object?displayProperty=nameWithType> 類型之間存在進行的[裝箱和取消裝箱](../../programming-guide/types/boxing-and-unboxing.md)轉換。 結構型別和它所執行的任何介面之間也有一個裝箱和取消裝箱轉換。
+對於任何結構類型，都存在與 和<xref:System.ValueType?displayProperty=nameWithType><xref:System.Object?displayProperty=nameWithType>類型轉換的[裝箱和取消裝箱](../../programming-guide/types/boxing-and-unboxing.md)轉換。 結構類型和它實現的任何介面之間也存在裝箱和取消裝箱轉換。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱[ C#語言規格](~/_csharplang/spec/introduction.md)的[結構](~/_csharplang/spec/structs.md)一節。
+有關詳細資訊，請參閱[C# 語言規範](~/_csharplang/spec/introduction.md)的["結構"](~/_csharplang/spec/structs.md)部分。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [設計方針-在類別和結構之間選擇](../../../standard/design-guidelines/choosing-between-class-and-struct.md)
-- [設計方針-結構設計](../../../standard/design-guidelines/struct.md)
-- [類別和結構](../../programming-guide/classes-and-structs/index.md)
+- [設計指南 - 在類和結構之間進行選擇](../../../standard/design-guidelines/choosing-between-class-and-struct.md)
+- [設計指南 - 結構設計](../../../standard/design-guidelines/struct.md)
+- [類和結構](../../programming-guide/classes-and-structs/index.md)

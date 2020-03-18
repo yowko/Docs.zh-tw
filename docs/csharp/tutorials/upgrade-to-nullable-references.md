@@ -1,19 +1,19 @@
 ---
-title: 升級為可為 null 的參考型別
-description: 這個 advanced 教學課程示範如何使用可為 null 的參考型別來遷移現有程式碼。
+title: 升級到空參考型別
+description: 本高級教程演示如何遷移具有空參考型別的現有代碼。
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 38619f9efa5da1f9b3264b3d4240103f0869afea
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 9767493059623e770cc100b83b9284e8d0bdf0f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240024"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156450"
 ---
-# <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教學課程：使用可為 null 的參考型別來遷移現有程式碼
+# <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>教程：使用可空參考型別遷移現有代碼
 
-C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實值類型補充實值類型的相同方式來補充參考類型。 您可以藉由將  **附加至類型，來將變數宣告為**可為 Null 的參考類型`?`。 例如，`string?` 代表可為 Null 的 `string`。 您可以使用這些新類型更清楚地表達設計意圖：部分變數「永遠都必須有值」，而其他變數「可能會遺漏值」。 任何參考型別的現有變數都會解譯成不可為 Null 的參考型別。 
+C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實值類型補充實值類型的相同方式來補充參考類型。 您可以藉由將 `?` 附加至類型，來將變數宣告為**可為 Null 的參考類型**。 例如，`string?` 代表可為 Null 的 `string`。 您可以使用這些新類型更清楚地表達設計意圖：部分變數「永遠都必須有值」**，而其他變數「可能會遺漏值」**。 任何參考型別的現有變數都會解譯成不可為 Null 的參考型別。
 
 在本教學課程中，您將了解如何：
 
@@ -24,15 +24,15 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 > - 管理啟用可為 Null 內容及停用可為 Null 內容之間的介面。
 > - 控制可為 Null 的註釋內容。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-您必須設定電腦以執行 .NET Core，包括C# 8.0 編譯器。 從C# [Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.net Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用8個編譯器。
+您需要設置電腦以運行 .NET Core，包括 C# 8.0 編譯器。 C# 8 編譯器可從[Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.NET Core 3.0 SDK](https://dotnet.microsoft.com/download)開始。
 
 本教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
 ## <a name="explore-the-sample-application"></a>探索應用程式範例
 
-您將遷移的應用程式範例是一個 RSS 摘要讀取器 Web 應用程式。 它會從單一 RSS 摘要讀取，並顯示最新文章的摘要。 您可以選取任何文章來造訪網站。 應用程式相對較新，但是在可為 Null 參考型別開放使用前撰寫的。 應用程式的設計決策代表了健全的準則，但並未利用這項重要的語言功能。
+您將遷移的應用程式範例是一個 RSS 摘要讀取器 Web 應用程式。 它會從單一 RSS 摘要讀取，並顯示最新文章的摘要。 您可以選擇任何訪問網站的文章。 應用程式相對較新，但是在可為 Null 參考型別開放使用前撰寫的。 應用程式的設計決策代表了健全的準則，但並未利用這項重要的語言功能。
 
 應用程式範例包含了單元測試程式庫，可驗證應用程式的主要功能。 若您根據所產生的警告變更任何實作，該專案可使安全升級更為容易。 您可以從 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) GitHub 存放庫下載起始程式碼。
 
@@ -40,7 +40,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 
 ## <a name="upgrade-the-projects-to-c-8"></a>將專案升級至 C# 8
 
-良好的第一個步驟，便是判斷移轉任務的範圍。 請從將專案升級至 C# 8.0 (或更新版本) 開始。 將 `LangVersion` 元素加入至 Web 專案和單元測試專案之 .csproj 檔案中的 PropertyGroup：
+良好的第一個步驟，便是判斷移轉任務的範圍。 請從將專案升級至 C# 8.0 (或更新版本) 開始。 在`LangVersion`Web 專案和單元測試專案的 csproj 檔中將元素添加到屬性組：
 
 ```xml
 <LangVersion>8.0</LangVersion>
@@ -79,11 +79,11 @@ public class NewsStoryViewModel
 
 [!code-csharp[InitialViewModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#StarterViewModel)]
 
-這兩個屬性會造成 `CS8618`，「不可為 Null 屬性尚未初始化」。 這已相當清楚：兩個 `string` 屬性在建構 `null` 時都具備了 `NewsStoryViewModel` 預設值。 重要的是探索 `NewsStoryViewModel` 物件的建構方式。 查看此類別，您無法辨識 `null` 值究竟是設計的一部分，還是這些物件會在建立其中一個時設為非 Null 值。 `GetNews` 類別的 `NewsService` 方法中建立了新的故事：
+這兩個屬性會造成 `CS8618`，「不可為 Null 屬性尚未初始化」。 這已相當清楚：兩個 `string` 屬性在建構 `NewsStoryViewModel` 時都具備了 `null` 預設值。 重要的是探索 `NewsStoryViewModel` 物件的建構方式。 查看此類別，您無法辨識 `null` 值究竟是設計的一部分，還是這些物件會在建立其中一個時設為非 Null 值。 `NewsService` 類別的 `GetNews` 方法中建立了新的故事：
 
 [!code-csharp[StarterCreateNewsItem](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-先前的程式碼區塊中此時又發生了一些事情。 此應用程式使用 [AutoMapper](https://automapper.org/) NuGet 套件來從 `ISyndicationItem` 建構新的項目。 您發現新的故事項目已經建構完成，而屬性也已在單一陳述式中設定。 這表示 `NewsStoryViewModel` 的設計指出這些屬性永遠都不應該具備 `null` 值。 這些屬性應為**不可為 Null 參考型別**。 這種方式最能表達原始的設計意圖。 事實上，任何 `NewsStoryViewModel` 都會以非 null 值正確具*現*化。 這可讓下列的初始化程式碼成為有效修正：
+先前的程式碼區塊中此時又發生了一些事情。 此應用程式使用 [AutoMapper](https://automapper.org/) NuGet 套件來從 `ISyndicationItem` 建構新的項目。 您發現新的故事項目已經建構完成，而屬性也已在單一陳述式中設定。 這表示 `NewsStoryViewModel` 的設計指出這些屬性永遠都不應該具備 `null` 值。 這些屬性應為**不可為 Null 參考型別**。 這種方式最能表達原始的設計意圖。 事實上，任何 「都會」`NewsStoryViewModel` ** 使用非 Null 值正確具現化。 這可讓下列的初始化程式碼成為有效修正：
 
 ```csharp
 public class NewsStoryViewModel
@@ -94,7 +94,7 @@ public class NewsStoryViewModel
 }
 ```
 
-將 `Title` 和 `Uri` 指派為 `default` (針對 `null` 型別為 `string`) 不會變更程式的執行階段行為。 `NewsStoryViewModel` 仍然會使用 Null 值建構，但現在編譯器不會再回報警告。 **Null 寬恕運算子** (即跟隨在 `!` 後方的 `default` 字元) 會告知編譯器先前的運算式並非 Null。 當其他變更對程式碼基底強制執行較大的變更時，這項技術可能會很方便，但在此應用程式中，有一個相對快速且更好的解決方案：使 `NewsStoryViewModel` 成為不變的型別，其中所有屬性都是在此函式中設定。 對 `NewsStoryViewModel` 進行下列變更：
+將 `Title` 和 `Uri` 指派為 `default` (針對 `string` 型別為 `null`) 不會變更程式的執行階段行為。 `NewsStoryViewModel` 仍然會使用 Null 值建構，但現在編譯器不會再回報警告。 **Null 寬恕運算子** (即跟隨在 `default` 後方的 `!` 字元) 會告知編譯器先前的運算式並非 Null。 當其他更改強制對代碼庫進行更大的更改時，此技術可能是權宜之計，但在此應用程式中，有一個相對快速更好的解決方案：使一`NewsStoryViewModel`個不可變類型，其中所有屬性都設置在建構函式中。 對 `NewsStoryViewModel` 進行下列變更：
 
 [!code-csharp[FinishedViewModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
 
@@ -108,13 +108,13 @@ public class NewsStoryViewModel
 
 請注意，由於這個類別相當小且您已仔細地檢查過，您應在此類別的宣告上方開啟 `#nullable enable` 指示詞。 對建構函式的變更可能會中斷某些東西，因此建議您在繼續之前執行所有測試並測試應用程式。
 
-第一組變更示範了在原始設計指出變數不應設為 `null` 時探索的方式。 這項技術稱為**以建構修正**。 您宣告物件及其屬性不可在建構時為 `null`。 編譯器的流程分析會保證那些屬性在建構完成後不會設為 `null`。 請注意，此建構函式是由外部程式碼呼叫，而程式碼並非**可為 Null 遺忘**。 新的語法不會提供執行階段檢查。 外部程式碼可能會規避編譯器的流程分析。 
+第一組變更示範了在原始設計指出變數不應設為 `null` 時探索的方式。 這項技術稱為**以建構修正**。 您宣告物件及其屬性不可在建構時為 `null`。 編譯器的流程分析會保證那些屬性在建構完成後不會設為 `null`。 請注意，此建構函式是由外部程式碼呼叫，而程式碼並非**可為 Null 遺忘**。 新的語法不會提供執行階段檢查。 外部程式碼可能會規避編譯器的流程分析。
 
 其他時候，類別的結構會提供意圖的不同線索。 開啟 *Pages* 資料夾中的 *Error.cshtml.cs* 檔案。 `ErrorViewModel` 包含下列程式碼：
 
 [!code-csharp[StarterErrorModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Error.cshtml.cs#StartErrorModel)]
 
-將 `#nullable enable` 新增到類別宣告之前，並將 `#nullable restore` 指示詞新增到該宣告之後。 您會收到一個警告，告知您 `RequestId` 並未初始化。 藉由查看類別，您應判斷該 `RequestId` 屬性在某些情況下應為 Null。 `ShowRequestId` 屬性的存在指出可能遺失值。 因為 `null` 是有效的，請在 `?` 型別上新增 `string` 來指出 `RequestId` 屬性是「可為 Null 的參考型別」。 最終類別看起來會和下列範例相似：
+將 `#nullable enable` 新增到類別宣告之前，並將 `#nullable restore` 指示詞新增到該宣告之後。 您會收到一個警告，告知您 `RequestId` 並未初始化。 藉由查看類別，您應判斷該 `RequestId` 屬性在某些情況下應為 Null。 `ShowRequestId` 屬性的存在指出可能遺失值。 因為 `null` 是有效的，請在 `string` 型別上新增 `?` 來指出 `RequestId` 屬性是「可為 Null 的參考型別」**。 最終類別看起來會和下列範例相似：
 
 [!code-csharp[FinishedErrorModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Error.cshtml.cs#ErrorModel)]
 
@@ -126,7 +126,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterIndexModel](~/samples/snippets/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Pages/Index.cshtml.cs#IndexModelStart)]
 
-新增 `#nullable enable` 指示詞，您便會看到兩個警告。 `ErrorText` 屬性或 `NewsItems` 屬性都並未初始化。 檢查這個類別會導致您認為這兩個屬性都應該是可為 null 的參考型別：兩者都有私用 setter。 其中剛好有一個已在 `OnGet` 方法中指派。 在進行變更前，請先觀察兩個屬性的消費者。 在頁面本身中，會在為任何錯誤產生標記前再度檢查 `ErrorText` 是否為 Null。 `NewsItems` 集合也會受到檢查是否為 `null`，以及檢查其是否具有項目。 一種快速修正的方式，便是將兩個屬性設為可為 Null 的參考型別。 更佳修正方式是將集合設為不可為 Null 的參考型別，並在擷取新聞時將項目新增到現有集合。 第一個修正是將 `?` 新增到 `string` 的 `ErrorText` 型別：
+新增 `#nullable enable` 指示詞，您便會看到兩個警告。 `ErrorText` 屬性或 `NewsItems` 屬性都並未初始化。 檢查此類將引導您相信這兩個屬性都應該是空參考型別：兩者都有私有設置器。 其中剛好有一個已在 `OnGet` 方法中指派。 在進行變更前，請先觀察兩個屬性的消費者。 在頁面本身中，會在為任何錯誤產生標記前再度檢查 `ErrorText` 是否為 Null。 `NewsItems` 集合也會受到檢查是否為 `null`，以及檢查其是否具有項目。 一種快速修正的方式，便是將兩個屬性設為可為 Null 的參考型別。 更佳修正方式是將集合設為不可為 Null 的參考型別，並在擷取新聞時將項目新增到現有集合。 第一個修正是將 `?` 新增到 `ErrorText` 的 `string` 型別：
 
 [!code-csharp[UpdateErrorText](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Pages/Index.cshtml.cs#UpdateErrorText)]
 
@@ -142,7 +142,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[GetNews](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/Services/NewsService.cs#GetNewsFinished)]
 
-變更簽章也會中斷其中一項測試。 開啟 `NewsServiceTests.cs` 專案 `Services` 資料夾中的 `SimpleFeedReader.Tests` 檔案。 巡覽至 `Returns_News_Stories_Given_Valid_Uri` 測試，並將 `result` 變數的型別變更為 `IEnumerable<NewsItem>`。 變更型別表示 `Count` 屬性不再開放使用，因此請將 `Count` 中的 `Assert` 屬性取代為對 `Any()` 的呼叫：
+變更簽章也會中斷其中一項測試。 開啟 `SimpleFeedReader.Tests` 專案 `Services` 資料夾中的 `NewsServiceTests.cs` 檔案。 巡覽至 `Returns_News_Stories_Given_Valid_Uri` 測試，並將 `result` 變數的型別變更為 `IEnumerable<NewsItem>`。 變更型別表示 `Count` 屬性不再開放使用，因此請將 `Assert` 中的 `Count` 屬性取代為對 `Any()` 的呼叫：
 
 [!code-csharp[FixTests](~/samples/snippets/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader.Tests/Services/NewsServiceTests.cs#FixTestSignature)]
 
@@ -167,4 +167,4 @@ public class NewsStoryViewModel
 
 您已修正您在初始測試編譯中識別的警告，因此現在您可以開啟兩個專案的可為 Null 註釋內容。 重建專案，編譯器不會回報任何警告。 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished) GitHub 存放庫取得完成專案的程式碼。
 
-支援可為 Null 參考型別的新功能，可協助您尋找並修正處理您程式碼中 `null` 值方式中潛在的錯誤。 啟用可為 Null 註釋內容，可讓您表達您的設計意圖：有些變數永遠不該為 Null，其他變數則可以包含 Null 值。 這些功能可讓您更輕易地宣告設計意圖。 同樣的，可為 Null 警告內容會指示編譯器，在您違反該意圖時發出警告。 這些警告會引導您進行更新，讓您的程式碼復原性更佳，並降低在執行期間擲回 `NullReferenceException` 的機率。 您可以控制這些內容的範圍，讓您專注在要遷移的程式碼本機區域，而無須更動剩餘的程式碼基底。 在實務上，您可以將此移轉任務作為您類別一般維護的一部分。 本教學課程示範了遷移應用程式，以使用可為 Null 參考型別的過程。 您可以透過檢查 [Jon Skeet](https://github.com/jskeet) 為了將可為 Null 參考型別併入 [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits) 所製作的 PR，來探索這項程序的更大實際範例。 或者，您也可以透過[Entity Framework Core-使用可為 null 的參考](/ef/core/miscellaneous/nullable-reference-types)型別，學習使用可為 null 的參考型別搭配 Entity Framework Core 的技術。
+支援可為 Null 參考型別的新功能，可協助您尋找並修正處理您程式碼中 `null` 值方式中潛在的錯誤。 啟用可為 Null 註釋內容，可讓您表達您的設計意圖：有些變數永遠不該為 Null，其他變數則可以包含 Null 值。 這些功能可讓您更輕易地宣告設計意圖。 同樣的，可為 Null 警告內容會指示編譯器，在您違反該意圖時發出警告。 這些警告會引導您進行更新，讓您的程式碼復原性更佳，並降低在執行期間擲回 `NullReferenceException` 的機率。 您可以控制這些內容的範圍，讓您專注在要遷移的程式碼本機區域，而無須更動剩餘的程式碼基底。 在實務上，您可以將此移轉任務作為您類別一般維護的一部分。 本教學課程示範了遷移應用程式，以使用可為 Null 參考型別的過程。 您可以透過檢查 [Jon Skeet](https://github.com/jskeet) 為了將可為 Null 參考型別併入 [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits) 所製作的 PR，來探索這項程序的更大實際範例。 或者只是此外，您可以學習在實體框架核心中使用實體框架核心使用空參考型別的技術[- 使用可無參考型別](/ef/core/miscellaneous/nullable-reference-types)。

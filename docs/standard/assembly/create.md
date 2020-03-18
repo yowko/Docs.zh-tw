@@ -8,10 +8,10 @@ helpviewer_keywords:
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 ms.openlocfilehash: 81fffb2b2e1d56d6068bf6f663a13fad6968a383
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73740514"
 ---
 # <a name="create-assemblies"></a>建立組件
@@ -38,16 +38,16 @@ ms.locfileid: "73740514"
 
      包含需要相同安全性權限之類型的群組模組。
 
-- 範圍設定
+- 範圍
 
      包含其可視性應該限制為相同組件之類型的群組模組。
 
-將 common language runtime 元件提供給未受管理的 COM 應用程式時，有一些特殊的考慮。 如需使用非受控碼的詳細資訊，請參閱[將 .NET Framework 元件公開給 COM](../../framework/interop/exposing-dotnet-components-to-com.md)。
+使通用語言運行時程式集可供非託管 COM 應用程式使用時，有特殊注意事項。 有關使用非託管代碼的詳細資訊，請參閱[向 COM 公開 .NET 框架元件](../../framework/interop/exposing-dotnet-components-to-com.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [元件版本控制](versioning.md)
-- [如何：建立單一檔案元件](../../framework/app-domains/build-single-file-assembly.md)
-- [如何：建立多檔案元件](../../framework/app-domains/build-multifile-assembly.md)
-- [執行階段如何找出組件](../../framework/deployment/how-the-runtime-locates-assemblies.md)
-- [多檔案元件](../../framework/app-domains/multifile-assemblies.md)
+- [組件版本控制](versioning.md)
+- [如何：構建單檔程式集](../../framework/app-domains/build-single-file-assembly.md)
+- [如何：構建多檔程式集](../../framework/app-domains/build-multifile-assembly.md)
+- [運行時如何定位程式集](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [多檔案組件](../../framework/app-domains/multifile-assemblies.md)

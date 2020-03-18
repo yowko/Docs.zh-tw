@@ -13,10 +13,10 @@ helpviewer_keywords:
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
 ms.openlocfilehash: 1004a2f9a0594d9150d147dec1e16b56205e0d13
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711398"
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合類型
@@ -32,14 +32,14 @@ ms.locfileid: "75711398"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[集合和資料結構](../../../docs/standard/collections/index.md)|討論 .NET Framework 中可用的各種集合類型，包括堆疊、佇列、清單、陣列和字典。|  
 |[Hashtable 和 Dictionary 集合類型](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|說明泛型和非泛型雜湊字典類型的功能。|  
 |[排序集合類型](../../../docs/standard/collections/sorted-collection-types.md)|說明提供清單和集合之排序功能的類別。|  
 |[泛型](../../../docs/standard/generics/index.md)|描述泛型功能，包括 .NET Framework 提供的泛型集合、委派和介面。 提供 C#、Visual Basic 和 Visual C++ 功能說明文件的連結，以及支援技術 (例如反映) 的連結。|  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Collections?displayProperty=nameWithType>  
   
  <xref:System.Collections.Generic?displayProperty=nameWithType>  

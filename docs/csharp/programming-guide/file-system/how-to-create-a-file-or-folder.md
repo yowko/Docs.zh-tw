@@ -1,5 +1,5 @@
 ---
-title: 如何建立檔案或資料夾-程式C#設計指南
+title: 如何創建檔或資料夾 - C# 程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: e0d0a7fbbc7e6a5c9a0bd00dec1188c5cfdcf896
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cdcc0a375aa1eca29c024d1e0c9008f337d0c772
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705245"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167553"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何建立檔案或資料夾（C#程式設計手冊）
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>如何創建檔或資料夾（C# 程式設計指南）
 您可以程式設計的方式在電腦上建立資料夾、建立子資料夾、在子資料夾中建立檔案，以及將資料寫入檔案。  
   
 ## <a name="example"></a>範例  
@@ -37,7 +37,7 @@ ms.locfileid: "75705245"
 - 請在下列程式碼中以 `using` 陳述式取代 `if`-`else` 陳述式。  
   
     ```csharp  
-    using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
+    using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))
     {  
         for (byte i = 0; i < 100; i++)  
         {  
@@ -67,8 +67,8 @@ ms.locfileid: "75705245"
   
  若您沒有權限可建立資料夾，則範例會擲回 <xref:System.UnauthorizedAccessException> 類別的執行個體。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 程式設計指南](../index.md)
-- [檔案系統和登錄 (C# 程式設計指南)](./index.md)
+- [檔案系統和登錄 (C# 程式設計手冊)](./index.md)

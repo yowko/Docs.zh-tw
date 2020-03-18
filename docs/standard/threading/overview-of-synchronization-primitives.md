@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 ms.openlocfilehash: 43f78c914b7cb01f9b0de4c258d5882548e52790
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73106585"
 ---
 # <a name="overview-of-synchronization-primitives"></a>同步處理原始物件概觀
@@ -140,7 +140,7 @@ ms.locfileid: "73106585"
 
 如需詳細資訊，請參閱 [SpinWait](spinwait.md) 文章與 <xref:System.Threading.SpinWait> API 參考。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [安全執行緒集合](../collections/thread-safe/index.md)

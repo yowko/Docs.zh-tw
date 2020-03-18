@@ -3,11 +3,11 @@ title: 資料轉換
 description: 探索 ML.NET 中支援的特徵工程元件。
 ms.date: 04/02/2019
 ms.openlocfilehash: ca410b475c556db5ad4c3862fb79755b455d6830
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739598"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398920"
 ---
 # <a name="data-transformations"></a>資料轉換
 
@@ -25,7 +25,7 @@ ms.locfileid: "75739598"
 
 ## <a name="column-mapping-and-grouping"></a>資料行對應及群組
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate%2A> | 將一或多個輸入資料行串連成新的輸出資料行 |
 | <xref:Microsoft.ML.TransformExtensionsCatalog.CopyColumns%2A> | 複製並重新命名一或多個輸入資料行 |
@@ -34,7 +34,7 @@ ms.locfileid: "75739598"
 
 ## <a name="normalization-and-scaling"></a>標準化和調整
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> | 減去 (定型資料的) 平均數並除以 (定型資料的) 變異數 |
 | <xref:Microsoft.ML.NormalizationCatalog.NormalizeLogMeanVariance%2A> | 依定型資料的對數進行標準化 |
@@ -46,7 +46,7 @@ ms.locfileid: "75739598"
 
 ## <a name="conversions-between-data-types"></a>資料類型之間的轉換
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.ConversionsExtensionsCatalog.ConvertType%2A> | 將某個輸入資料行的類型轉換成新的類型 |
 | <xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValue%2A> | 根據所提供的對應字典將值對應至索引鍵 (類別) |
@@ -58,7 +58,7 @@ ms.locfileid: "75739598"
 
 ## <a name="text-transformations"></a>文字轉換
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.TextCatalog.FeaturizeText%2A> | 將文字資料行轉換為標準化 ngram 和 char-gram 計數的浮動陣列 |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords%2A> | 將一或多個文字資料行分割為個別字詞 |
@@ -75,7 +75,7 @@ ms.locfileid: "75739598"
 
 ## <a name="image-transformations"></a>影像轉換
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale%2A> | 將影像轉換為灰階 |
 | <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToImage%2A> | 將像素的向量轉換為 <xref:Microsoft.ML.Transforms.Image.ImageDataViewType> |
@@ -86,14 +86,14 @@ ms.locfileid: "75739598"
 
 ## <a name="categorical-data-transformations"></a>類別資料轉換
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotEncoding%2A> | 將一或多個文字資料行轉換為 [one-hot](https://en.wikipedia.org/wiki/One-hot) \(英文\) 編碼向量 |
 | <xref:Microsoft.ML.CategoricalCatalog.OneHotHashEncoding%2A> | 將一或多個文字資料行轉換為以雜湊為基礎的 one-hot 編碼向量 |
 
 ## <a name="time-series-data-transformations"></a>時間序列資料轉換
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectAnomalyBySrCnn%2A> | 使用光譜殘留 (SR) 演算法偵測輸入時間序列資料中的異常 |
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectChangePointBySsa%2A> | 使用單一頻譜分析 (SSA) 偵測時間序列資料中的變更點 |
@@ -102,36 +102,36 @@ ms.locfileid: "75739598"
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectSpikeBySsa%2A> | 使用單一頻譜分析 (SSA) 偵測時間序列資料中的尖峰 |
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidSpike%2A> | 使用彈性核心密度估計和鞅分數，偵測獨立和相同分散式 (IID) 時間序列資料中的尖峰 |
 
-## <a name="missing-values"></a>遺失值
+## <a name="missing-values"></a>遺漏值
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.ExtensionsCatalog.IndicateMissingValues%2A> | 建立新的布林值輸出資料行，其值在輸入資料行中的值遺失時為 true |
 | <xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues%2A> | 建立新的輸出資料行，其值在輸入資料行中的值遺失時會被設為預設值，否則則會為輸入值 |
 
 ## <a name="feature-selection"></a>特徵選取
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnCount%2A> | 選取其非預設值大於某個閾值的特徵 |
 | <xref:Microsoft.ML.FeatureSelectionCatalog.SelectFeaturesBasedOnMutualInformation%2A> | 選取其標籤資料行中的資料最具相依性的特徵 |
 
 ## <a name="feature-transformations"></a>功能轉換
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.KernelExpansionCatalog.ApproximatedKernelMap%2A> | 將每個輸入向量對應至較低維度的功能空間，其中內部產品會近似核心函式，以便可以將功能當作線性演算法的輸入使用 |
 | <xref:Microsoft.ML.PcaCatalog.ProjectToPrincipalComponents%2A> | 套用主體元件分析演算法，以減少輸入特徵向量的維度 |
 
 ## <a name="explainability-transformations"></a>可解釋性轉換
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.ExplainabilityCatalog.CalculateFeatureContribution%2A> | 為特徵向量的每個元素計算貢獻分數 |
 
 ## <a name="calibration-transformations"></a>校正轉換
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 |<xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.String%2CSystem.String%2CSystem.String%29> | 使用羅吉斯回歸搭配使用定型資料估計的參數，將二元分類器原始分數轉換成類別機率 |
 | <xref:Microsoft.ML.BinaryClassificationCatalog.CalibratorsCatalog.Platt%28System.Double%2CSystem.Double%2CSystem.String%29> | 使用羅吉斯回歸搭配固定參數，將二元分類器原始分數轉換成類別機率 |
@@ -140,13 +140,13 @@ ms.locfileid: "75739598"
 
 ## <a name="deep-learning-transformations"></a>深度學習轉換
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel%2A> | 使用匯入的 ONNX 模型轉換輸入資料 |
 | <xref:Microsoft.ML.TensorflowCatalog.LoadTensorFlowModel%2A> | 使用匯入的 TensorFlow 模型轉換輸入資料 |
 
 ## <a name="custom-transformations"></a>自訂轉換
 
-| Transform | 定義 |
+| 轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.CustomMappingCatalog.CustomMapping%2A> | 搭配使用者定義的對應將現有資料行轉換為新的資料行 |

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 2397bf999ba97fe0c011de180e05be4177894365
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 54ace52fc6a8f4614c1f762b65453979bcb92c7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239881"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398864"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 的新功能
 
 .NET Core 2.1 包含針對下列區域的增強與新功能：
 
-- [工具](#tooling)
-- [向前復原](#roll-forward)
+- [Tooling](#tooling)
+- [向前滾動](#roll-forward)
 - [部署](#deployment)
 - [Windows 相容性套件](#windows-compatibility-pack)
 - [JIT 編譯改進功能](#jit-compiler-improvements)
@@ -43,7 +43,7 @@ ms.locfileid: "78239881"
 
 ### <a name="new-cli-commands"></a>新的 CLI 命令
 
-先前僅能透過 [`DotnetCliToolReference`](../tools/extensibility.md) 於個別專案上使用的數個工具，現在皆已做為 .NET Core SDK 的一部分提供。 這些工具包括：
+先前僅能透過 `DotnetCliToolReference` 於個別專案上使用的數個工具，現在皆已做為 .NET Core SDK 的一部分提供。 這些工具包括：
 
 - `dotnet watch` 提供檔案系統監看員，能先等候檔案變更再執行一組指定的命令。 例如，下列命令會自動重建目前的專案，並在其中的檔案發生變更時產生詳細資訊輸出：
 
@@ -51,9 +51,9 @@ ms.locfileid: "78239881"
    dotnet watch -- --verbose build
    ```
 
-   請注意到位於 `--` 選項之前的 `--verbose` 選項。 它能將直接傳遞給 `dotnet watch` 命令的選項，與傳遞給子 `dotnet` 處理序的引數分隔開來。 如果沒有它的話，`--verbose` 選項將會套用至 `dotnet watch` 命令，而非 `dotnet build` 命令。
+   請注意到位於 `--verbose` 選項之前的 `--` 選項。 它能將直接傳遞給 `dotnet watch` 命令的選項，與傳遞給子 `dotnet` 處理序的引數分隔開來。 如果沒有它的話，`--verbose` 選項將會套用至 `dotnet watch` 命令，而非 `dotnet build` 命令。
   
-   如需詳細資訊，請參閱[使用 dotnet Watch 開發 ASP.NET Core 應用程式](/aspnet/core/tutorials/dotnet-watch)。
+   有關詳細資訊，請參閱使用[dotnet 手錶 開發ASP.NET核心應用](/aspnet/core/tutorials/dotnet-watch)。
 
 - `dotnet dev-certs` 能產生和管理在開發 ASP.NET Core 應用程式期間使用的憑證。
 
@@ -65,7 +65,7 @@ ms.locfileid: "78239881"
 
 ### <a name="global-tools"></a>通用工具
 
-.NET Core 2.1 支援*通用工具*，亦即從命令列以通用方式提供的自訂工具。 舊版 .NET Core 的擴充性模型，只能透過使用 [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) 來使自訂工具可供每個專案使用。
+.NET Core 2.1 支援*通用工具*，亦即從命令列以通用方式提供的自訂工具。 舊版 .NET Core 的擴充性模型，只能透過使用 `DotnetCliToolReference` 來使自訂工具可供每個專案使用。
 
 若要安裝通用工具，您需使用 [dotnet tool install](../tools/dotnet-tool-install.md) 命令。 例如：
 
@@ -79,24 +79,24 @@ dotnet tool install -g dotnetsay
 
 在 .NET Core 2.1 SDK 中，所有工具作業都使用 `dotnet tool` 命令。 有下列選項可供使用：
 
-- 使用 [`dotnet tool install`](../tools/dotnet-tool-install.md) 來安裝工具。
+- [`dotnet tool install`](../tools/dotnet-tool-install.md)以安裝工具。
 
-- 使用 [`dotnet tool update`](../tools/dotnet-tool-update.md) 來解除安裝並重新安裝工具，這可有效地更新該工具。
+- [`dotnet tool update`](../tools/dotnet-tool-update.md)卸載並重新安裝工具，從而有效地更新它。
 
-- 使用 [`dotnet tool list`](../tools/dotnet-tool-list.md) 來列出目前已安裝的工具。
+- [`dotnet tool list`](../tools/dotnet-tool-list.md)列出當前安裝的工具。
 
-- 使用 [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) 來解除安裝目前已安裝的工具。
+- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md)卸載當前安裝的工具。
 
 ## <a name="roll-forward"></a>向前復原
 
-從 .NET Core 2.0 開始，所有 .NET Core 應用程式都會自動向前復原為系統上安裝的最新次要版本。
+從 .NET Core 2.0 開始，所有 .NET Core 應用程式都會自動向前復原為系統上安裝的最新次要版本**。
 
 從 .NET Core 2.0 開始，如果用來建置應用程式的 .NET Core 版本不存在於執行階段中，則應用程式會自動針對已安裝的最新 .NET Core *次要版本*執行。 換句話說，如果應用程式是使用 .NET Core 2.0 建置，而主機系統上不存在 .NET Core 2.0，但是有 .NET Core 2.1，則該應用程式會搭配 NET Core 2.1 執行。
 
 > [!IMPORTANT]
 > 此向前復原行為不適用於預覽版本。 根據預設，也不會套用至主要版本，但可透過以下設定進行變更。
 
-您可以透過變更無候選版共用架構的向前復原設定，來修改此行為。 可用的設定包括：
+您可以透過變更無候選版共用架構的向前復原設定，來修改此行為。 可用的設定為：
 
 - `0` - 停用次要版本向前復原行為。 使用此設定，為 .NET Core 2.0.0 建置的應用程式會向前復原為 .NET Core 2.0.1，而不是 .NET Core 2.2.0 或 .NET Core 3.0.0。
 - `1` - 啟用次要版本向前復原行為。 這是設定的預設值。 使用此設定，為 .NET Core 2.0.0 建置的應用程式會依安裝的版本向前復原為 .NET Core 2.0.1 或 NET Core 2.2.0，但不會是 .NET Core 3.0.0。
@@ -112,7 +112,7 @@ dotnet tool install -g dotnetsay
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- 使用[.NET Core CLI](../tools/index.md)時，請將下列具有所需值的選項新增至 .net Core 命令（例如 `run`）：
+- 使用[.NET 核心 CLI](../tools/index.md)時，將具有所需值的以下選項添加到 .NET Core`run`命令，如 ：
 
    ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
@@ -124,11 +124,11 @@ dotnet tool install -g dotnetsay
 
 ### <a name="self-contained-application-servicing"></a>獨立的應用程式服務
 
-`dotnet publish` 現在會搭配服務執行階段版本發佈獨立應用程式。 當您搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈獨立應用程式時，應用程式就會包含該 SDK 已知的最新服務執行階段版本。 當您升級至最新的 SDK 時，將會搭配最新的 .NET Core 執行階段版本一起發佈。 這適用於 .NET Core 1.0 執行階段和更新版本。
+`dotnet publish` 現在會搭配服務執行階段版本發佈獨立應用程式。 當您搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈獨立應用程式時，應用程式就會包含該 SDK 已知的最新服務執行階段版本。 升級到最新 SDK 時，您將使用最新的 .NET Core 執行階段版本進行發佈。 這適用於 .NET Core 1.0 執行階段和更新版本。
 
-獨立發行版本依賴 NuGet.org 上的執行階段版本。您的電腦上不需要有服務執行時間。
+自包含發佈依賴于 NuGet.org 上的執行階段版本。您不需要在電腦上有已維修的運行時。
 
-使用 .NET Core 2.0 SDK 時，獨立應用程式會搭配 .NET Core 2.0.0 執行階段一起發佈，除非有透過 `RuntimeFrameworkVersion` 屬性指定其他版本。 藉由這項新行為，您將不再需要設定此屬性來為獨立應用程式選取較新的執行階段版本。 從現在起，最簡單的方法將會是一律搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈。
+使用 .NET Core 2.0 SDK 時，獨立應用程式會搭配 .NET Core 2.0.0 執行階段一起發佈，除非有透過 `RuntimeFrameworkVersion` 屬性指定其他版本。 使用此新行為，您不再需要設置此屬性為自包含應用程式選擇更高的執行階段版本。 從現在起，最簡單的方法將會是一律搭配 .NET Core 2.1 SDK (2.1.300 版) 發佈。
 
 如需詳細資訊，請參閱[獨立式部署執行階段向前復原](../deploying/runtime-patch-selection.md)。
 ## <a name="windows-compatibility-pack"></a>Windows 相容性套件
@@ -137,7 +137,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="jit-compiler-improvements"></a>JIT 編譯器的改進項目
 
-.NET Core 併入新的 JIT 編譯器技術，稱為「階層式編譯」(也稱為「調適型最佳化」)，可大幅地提升效能。 階層式編譯是可選擇加入的設定。
+.NET Core 併入新的 JIT 編譯器技術，稱為「階層式編譯」**(也稱為「調適型最佳化」**)，可大幅地提升效能。 階層式編譯是可選擇加入的設定。
 
 由 JIT 編譯器所執行的其中一項重要工作，是將程式碼的執行最佳化。 不過，針對很少使用的程式碼路徑，編譯器將程式碼最佳化的時間，可能會比執行階段執行未最佳化程式碼的時間還要久。 階層式編譯會在 JIT 編譯中引入兩個階段：
 
@@ -153,7 +153,7 @@ dotnet tool install -g dotnetsay
   COMPlus_TieredCompilation="1"
   ```
 
-- 若要針對個別專案使用階層式編譯，請在 MSBuild 專案檔的 `<TieredCompilation>` 區段中加入 `<PropertyGroup>` 屬性，如下列範例所示：
+- 若要針對個別專案使用階層式編譯，請在 MSBuild 專案檔的 `<PropertyGroup>` 區段中加入 `<TieredCompilation>` 屬性，如下列範例所示：
 
    ```xml
    <PropertyGroup>
@@ -201,7 +201,7 @@ dotnet tool install -g dotnetsay
 
 - 新的 <xref:System.Span%601> 型密碼編譯 API 可用於雜湊、HMAC、亂數密碼編譯產生、非對稱簽章產生、非對稱簽章處理，以及 RSA 加密。
 
-- 透過使用以 <xref:System.Security.Cryptography.Rfc2898DeriveBytes?displayProperty=nameWithType> 為基礎的實作，能使 <xref:System.Span%601> 的效能提升大約 15%。
+- 透過使用以 <xref:System.Span%601> 為基礎的實作，能使 <xref:System.Security.Cryptography.Rfc2898DeriveBytes?displayProperty=nameWithType> 的效能提升大約 15%。
 
 - 新的 <xref:System.Security.Cryptography.CryptographicOperations?displayProperty=nameWithType> 類別包含兩種新方法：
 
@@ -211,7 +211,7 @@ dotnet tool install -g dotnetsay
 
 - 靜態 <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> 方法會以隨機值填滿 <xref:System.Span%601>。
 
-- Linux 和 macOS 現在支援 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType>。
+- 現在<xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType>，Linux 和 macOS 上支援 。
 
 - 橢圓曲線 Diffie-Hellman (ECDH) 現在可用於 <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType> 類別系列。 介面區與在 .NET Framework 中的介面區相同。
 
@@ -229,7 +229,7 @@ dotnet tool install -g dotnetsay
 
 - 橫跨所有 .NET Core 平台的一致行為。
 
-<xref:System.Net.Http.SocketsHttpHandler> 是 .NET Core 2.1 中的預設實作。 不過，您可以呼叫 <xref:System.Net.Http.HttpClientHandler> 方法來將應用程式設定為使用舊版的 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 類別：
+<xref:System.Net.Http.SocketsHttpHandler> 是 .NET Core 2.1 中的預設實作。 不過，您可以呼叫 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 方法來將應用程式設定為使用舊版的 <xref:System.Net.Http.HttpClientHandler> 類別：
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);
@@ -243,11 +243,11 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 
 在 Windows 上，您也可以選擇使用依賴原生實作的 <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType>，或是將 <xref:System.Net.Http.SocketsHttpHandler> 類別的執行個體傳遞到 <xref:System.Net.Http.HttpClient> 建構函式來使用該類別。
 
-在 Linux 和 macOS 上，您只能針對個別處理序設定 <xref:System.Net.Http.HttpClient>。 在 Linux 上，如果您要使用舊的 [ 實作，便需要部署 ](https://curl.haxx.se/libcurl/)libcurl<xref:System.Net.Http.HttpClient> \(英文\)。 (它會隨 .NET Core 2.0 一起安裝)
+在 Linux 和 macOS 上，您只能針對個別處理序設定 <xref:System.Net.Http.HttpClient>。 在 Linux 上，如果您要使用舊的 <xref:System.Net.Http.HttpClient> 實作，便需要部署 [libcurl](https://curl.haxx.se/libcurl/) \(英文\)。 (它會隨 .NET Core 2.0 一起安裝)
 
 ### <a name="breaking-changes"></a>重大變更
 
-如需重大變更的詳細資訊，請參閱[從2.0 版遷移至2.1 的重大變更](../compatibility/2.0-2.1.md)。
+有關重大更改的資訊，請參閱[從版本 2.0 遷移到 2.1 的中斷更改](../compatibility/2.0-2.1.md)。
 
 ## <a name="see-also"></a>另請參閱
 

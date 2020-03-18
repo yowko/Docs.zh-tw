@@ -7,12 +7,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: c00f506a682ec5d9805537b80159fd41d2174b67
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 539b2861e975c0c758c43c8a5d4cca86e3d2bb2c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75702944"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79167533"
 ---
 # <a name="indexers-c-programming-guide"></a>索引子 (C# 程式設計手冊)
 
@@ -26,12 +26,12 @@ ms.locfileid: "75702944"
 > 如需更多範例，請參閱[相關章節](./index.md#BKMK_RelatedSections)。  
   
 ## <a name="expression-body-definitions"></a>運算式主體定義  
- 
+
 通常會利用索引子的 get 或 set 存取子來組成要傳回或設定值的陳述式。 運算式主體成員提供簡化的語法來支援此案例。 從 C# 6 開始，可將唯讀索引子實作為運算式主體成員，如下列範例所示。
 
 [!code-csharp[indexers#2](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-2.cs)]  
 
-請注意，`=>` 會引進運算式主體，且不使用 `get` 關鍵字。 
+請注意，`=>` 會引進運算式主體，且不使用 `get` 關鍵字。
 
 從 C# 7.0 開始，可同時將 get 和 set 存取子實作為運算式主體成員。 在此情況下，必須同時使用 `get` 和 `set` 關鍵字。 例如：
 
@@ -53,7 +53,7 @@ ms.locfileid: "75702944"
   
 - 索引子可具有一個以上的型式參數，例如，存取二維陣列時。  
   
-## <a name="BKMK_RelatedSections"></a> 相關章節  
+## <a name="BKMK_RelatedSections"></a>相關部分  
   
 - [使用索引子](./using-indexers.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75702944"
 
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的[索引子](~/_csharplang/spec/classes.md#indexers)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [屬性](../classes-and-structs/properties.md)

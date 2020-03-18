@@ -7,10 +7,10 @@ helpviewer_keywords:
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 ms.openlocfilehash: 2da29e0baf429142707d0ddd39b1a11c13a17a90
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141533"
 ---
 # <a name="observer-design-pattern-best-practices"></a>觀察器設計模式最佳作法
@@ -51,8 +51,8 @@ ms.locfileid: "73141533"
   
  雖然您可以將觀察者附加到多個提供者，但建議的模式是將 <xref:System.IObserver%601> 執行個體只附加到一個 <xref:System.IObservable%601> 執行個體。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [觀察者設計模式](../../../docs/standard/events/observer-design-pattern.md)
+- [觀察器設計模式](../../../docs/standard/events/observer-design-pattern.md)
 - [操作說明：實作觀察者](../../../docs/standard/events/how-to-implement-an-observer.md)
-- [操作說明：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)
+- [如何：實作提供者](../../../docs/standard/events/how-to-implement-a-provider.md)

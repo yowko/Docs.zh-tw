@@ -1,61 +1,61 @@
 ---
-title: GRPC 應用程式中的安全性-WCF 開發人員適用的 gRPC
-description: GRPC 中的呼叫和通道驗證和授權的總覽。
+title: gRPC 應用中的安全性 - 適用于 WCF 開發人員的 gRPC
+description: gRPC 中的呼叫和通道身份驗證和授權的概述。
 ms.date: 09/02/2019
-ms.openlocfilehash: d5804ad5de4a834eb81b90fa1ea7a61969a0b42f
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 70cbf441bbc1b299b997f7d1f02bcd2bf7fde60c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503416"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79147811"
 ---
 # <a name="security-in-grpc-applications"></a>gRPC 應用程式中的安全性
 
-在任何真實世界的案例中，保護應用程式和服務都是不可或缺的。 安全性涵蓋三個主要領域： 
+在任何實際場景中，保護應用程式和服務都至關重要。 安全涵蓋三個關鍵領域：
 
-* 將網路流量加密，以防止惡意駭客攔截它。
-* 驗證用戶端和伺服器以建立身分識別和信任。
-* 授權用戶端控制系統的存取權，並根據身分識別套用許可權。
+* 加密網路流量，防止惡意駭客攔截網路流量。
+* 驗證用戶端和伺服器以建立身份和信任。
+* 授權用戶端控制對系統的訪問，並根據標識應用許可權。
 
 > [!NOTE]
-> *驗證*會考慮建立用戶端或伺服器的身分識別。 *授權*會負責判斷用戶端是否有存取資源或發出命令的許可權。
+> *身份驗證*與建立用戶端或伺服器的標識有關。 *授權*涉及確定用戶端是否具有訪問資源或發出命令的許可權。
 
-本章將涵蓋 gRPC for ASP.NET Core 的驗證和授權功能。 它也會透過 TLS 加密連接討論網路安全性。
+本章將介紹 gRPC 中用於ASP.NET核心的身份驗證和授權功能。 它還將討論通過 TLS 加密連接的網路安全。
 
-## <a name="wcf-authentication-and-authorization"></a>WCF 驗證和授權
+## <a name="wcf-authentication-and-authorization"></a>WCF 身份驗證和授權
 
-在 Windows Communication Foundation （WCF）中，驗證和授權是以不同的方式處理，視使用的傳輸和系結而定。 WCF 支援各種 WS-\* 安全性標準。 它也支援在 IIS 中執行的 HTTP 服務或 Windows 系統之間 NetTCP 服務的 Windows 驗證。
+在 Windows 通信基礎 （WCF） 中，身份驗證和授權的處理方式不同，具體取決於所使用的傳輸和綁定。 WCF 支援各種\*WS-安全標準。 它還支援對在 IIS 中運行的 HTTP 服務或 Windows 系統之間的 NetTCP 服務進行 Windows 身份驗證。
 
-## <a name="grpc-authentication-and-authorization"></a>gRPC 驗證與授權
+## <a name="grpc-authentication-and-authorization"></a>gRPC 身份驗證和授權
 
-gRPC 驗證和授權適用于兩個層級：
+gRPC 身份驗證和授權在兩個級別上工作：
 
-* 呼叫層級的驗證/授權通常是透過在進行呼叫時于中繼資料中套用的權杖來處理。 
-* 通道層級驗證會使用在連接層級套用的用戶端憑證。 它也可以包含呼叫層級的驗證/授權認證，以自動套用至通道上的每個呼叫。 
+* 調用級別的身份驗證/授權通常通過在進行調用時在中繼資料中應用的權杖進行處理。
+* 通道級身份驗證使用在連接級別應用的用戶端憑證。 它還可以包括呼叫級身份驗證/授權憑據，以便自動應用於通道上的每個呼叫。
 
-您可以使用其中一種或兩種機制來協助保護您的服務。
+您可以使用以下任一機制或兩種機制來説明保護服務。
 
-GRPC 的 ASP.NET Core 實作為透過大部分標準 ASP.NET Core 機制來支援驗證和授權：
+gRPC ASP.NET核心實現通過大多數標準ASP.NET核心機制支援身份驗證和授權：
 
-- 呼叫驗證
+- 呼叫身份驗證
   - Azure Active Directory
-  - IdentityServer
-  - JWT 持有人權杖
+  - 標識伺服器
+  - JWT 持票代幣
   - OAuth 2.0
   - OpenID Connect
   - WS-同盟
-- 通道驗證
+- 通道身份驗證
   - 用戶端憑證
 
-呼叫驗證方法全都以*權杖*為基礎。 唯一的真正差異在於如何產生權杖，以及用來驗證 ASP.NET Core 服務中之權杖的程式庫。
+調用身份驗證方法都基於*權杖*。 唯一的真正區別是權杖的生成方式以及用於驗證 ASP.NET Core 服務中的權杖的庫。
 
-如需詳細資訊，請參閱[驗證和授權](/aspnet/core/grpc/authn-and-authz)一文。
+有關詳細資訊，請參閱[身份驗證和授權](/aspnet/core/grpc/authn-and-authz)一文。
 
 > [!NOTE]
-> 當您在 TLS 加密的 HTTP/2 連線上使用 gRPC 時，用戶端與伺服器之間的所有流量都會加密，即使您未使用通道層級驗證也一樣。
+> 當您通過 TLS 加密的 HTTP/2 連接使用 gRPC 時，用戶端和伺服器之間的所有流量都加密，即使您不使用通道級身份驗證也是如此。
 
-本章將示範如何將呼叫認證和通道認證套用至 gRPC 服務。 它也會示範如何使用 .NET Core gRPC 用戶端的認證來向服務進行驗證。
+本章將演示如何將呼叫憑據和通道憑據應用於 gRPC 服務。 它還將演示如何使用 .NET Core gRPC 用戶端的憑據對服務進行身份驗證。
 
 >[!div class="step-by-step"]
->[上一頁](client-libraries.md)
->[下一頁](call-credentials.md)
+>[上一個](client-libraries.md)
+>[下一個](call-credentials.md)

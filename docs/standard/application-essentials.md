@@ -6,16 +6,16 @@ helpviewer_keywords:
 - .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
 ms.openlocfilehash: 494f3305f225e0130df30433f3fa0d06ca218068
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73122554"
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework 應用程式基本概念
 這部分的 .NET Framework 說明文件提供 .NET Framework 中基本應用程式開發工作的相關資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [基底類型](../../docs/standard/base-types/index.md)  
  討論如何格式化和剖析基底資料類型，以及使用規則運算式來處理文字。  
   
@@ -31,10 +31,10 @@ ms.locfileid: "73122554"
  [事件](../../docs/standard/events/index.md)  
  提供 .NET Framework 中事件模型的概觀。  
   
- [例外狀況](../../docs/standard/exceptions/index.md)  
+ [異常](../../docs/standard/exceptions/index.md)  
  說明 .NET Framework 提供的錯誤處理機制，以及處理例外狀況的基礎。  
   
- [檔案和資料流 I/O](../../docs/standard/io/index.md)  
+ [檔和流 I/O](../../docs/standard/io/index.md)  
  說明如何執行同步和非同步檔案及資料流存取，以及如何使用隔離儲存區 (Isolated Storage)。  
   
  [日期、時間和時區](../../docs/standard/datetime/index.md)  
@@ -52,17 +52,17 @@ ms.locfileid: "73122554"
  [全球化和當地語系化](../../docs/standard/globalization-localization/index.md)  
  提供資訊以協助您設計及開發全球化整備應用程式。  
   
- [協助工具](../../docs/framework/ui-automation/index.md)提供 Microsoft 使用者介面自動化的相關資訊，這是一個協助工具架構，可提供以程式設計方式存取使用者介面（UI）的相關資訊，滿足輔助技術產品和自動化測試架構的需求。  
+ [協助工具](../../docs/framework/ui-automation/index.md)提供有關 Microsoft UI 自動化的資訊，這是一個輔助技術框架，通過提供對使用者介面 （UI） 資訊的程式設計訪問，滿足輔助技術產品和自動測試框架的需求。  
   
  [屬性](../../docs/standard/attributes/index.md)  
  說明如何使用屬性來自訂中繼資料。  
   
- [64 位元應用程式](../../docs/framework/64-bit-apps.md)  
+ [64 位應用程式](../../docs/framework/64-bit-apps.md)  
  討論開發要在 Windows 64 位元作業系統上執行之應用程式的相關問題。  
   
 ## <a name="related-sections"></a>相關章節  
  [開發指南](../../docs/framework/development-guide.md)  
  提供應用程式開發所有主要技術領域和工作的指引，包括建立、設定、偵錯、保護及部署您的應用程式，以及有關動態程式設計、互通性、擴充性、記憶體管理和執行緒的資訊。  
   
- [Security](../../docs/standard/security/index.md)  
+ [安全性](../../docs/standard/security/index.md)  
  提供通用語言執行平台和 .NET Framework 中，可加強應用程式開發安全性的類別和服務相關資訊。

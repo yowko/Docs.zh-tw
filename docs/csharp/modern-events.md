@@ -4,16 +4,16 @@ description: 了解 .NET Core 事件模式如何啟用回溯相容性的彈性�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: a916a09b622f8df9bf99fafe52f35c706220f484
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c8858158ede761db8a3002beb26e521880f77feb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039782"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170432"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>更新的 .NET Core 事件模式
 
-[上一篇](event-pattern.md)
+[上一步](event-pattern.md)
 
 前一篇文章討論最常見的事件模式。 .NET Core 有比較寬鬆的模式。 在本版中，`EventHandler<TEventArgs>` 定義不再具有 `TEventArgs` 必須是 `System.EventArgs` 衍生類別的條件約束。
 
@@ -59,7 +59,7 @@ internal struct SearchDirectoryArgs
 ```csharp
 worker.StartWorking += async (sender, eventArgs) =>
 {
-    try 
+    try
     {
         await DoWorkAsync();
     }
@@ -72,7 +72,7 @@ worker.StartWorking += async (sender, eventArgs) =>
 };
 ```
 
-首先，請注意處理常式會標示為非同步處理常式。 因為它被指派給事件處理常式委派型別，所以會有 void 傳回型別。 這表示您必須遵循處理常式中示範的模式，不允許從非同步處理常式的內容中擲回任何例外狀況。 因為它不會傳回工作，所以沒有任何工作會進入錯誤狀態來報告錯誤。 因為是非同步方法，所以方法不能只擲回例外狀況。 （呼叫方法已繼續執行，因為它是 `async`）。實際的執行時間行為將會針對不同的環境以不同的方式定義。 它可能會終止執行緒或擁有線程的進程，或讓進程處於不定狀態。 所有這些可能的結果都非常不希望。
+首先，請注意處理常式會標示為非同步處理常式。 因為它被指派給事件處理常式委派型別，所以會有 void 傳回型別。 這表示您必須遵循處理常式中示範的模式，不允許從非同步處理常式的內容中擲回任何例外狀況。 因為它不會傳回工作，所以沒有任何工作會進入錯誤狀態來報告錯誤。 因為是非同步方法，所以方法不能只擲回例外狀況。 （調用方法已繼續執行，因為它是`async`.對於不同的環境，實際運行時行為的定義將有所不同。 它可以終止執行緒或擁有線程的進程，或使進程處於不確定狀態。 所有這些潛在的結果都是極不可取的。
 
 這就是為什麼您應該將非同步工作的 await 陳述式包裝在自己的 try 區塊中。 如果它真的導致錯誤的工作，您可以記錄錯誤。 如果是您的應用程式無法復原的錯誤，您可以快速且正常地結束程式。
 

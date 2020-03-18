@@ -25,10 +25,10 @@ helpviewer_keywords:
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 ms.openlocfilehash: 0e88303f2bac2dae90a97f9d2de92af1d2a0f80d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976483"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework 中的類型轉換
@@ -44,11 +44,11 @@ ms.locfileid: "73976483"
   
 - 從介面物件轉換回實作該介面的原始類型。  在 C# 中，這種轉換需要轉型運算子。 在 Visual Basic 中，如果已 `Option Strict` 開啟則需要 `CType` 運算子。  
   
- 除了這些自動轉換以外，.NET Framework 還提供多個支援自訂類型轉換的功能。 這些需求包括下列各項：  
+ 除了這些自動轉換以外，.NET Framework 還提供多個支援自訂類型轉換的功能。 這些選項包括：  
   
-- `Implicit` 運算子，這個運算子定義類型之間可用的擴展轉換。 如需詳細資訊，請參閱[使用 Implicit 運算子的隱含轉換](#implicit-conversion-with-the-implicit-operator)一節。  
+- `Implicit` 運算子，這個運算子定義類型之間可用的擴展轉換。 有關詳細資訊，請參閱[隱式運算子部分的隱式轉換](#implicit-conversion-with-the-implicit-operator)。  
   
-- `Explicit` 運算子，這個運算子定義類型之間可用的縮小轉換。 如需詳細資訊，請參閱[使用 Explicit 運算子的明確轉換](#explicit-conversion-with-the-explicit-operator)一節。  
+- `Explicit` 運算子，這個運算子定義類型之間可用的縮小轉換。 有關詳細資訊，請參閱["顯式運算子"部分的顯式轉換](#explicit-conversion-with-the-explicit-operator)。  
   
 - <xref:System.IConvertible> 介面，這個介面定義轉換至每一個基底 .NET Framework 資料類型的方式。 如需詳細資訊，請參閱 [IConvertible 介面](#the-iconvertible-interface)一節。  
   
@@ -85,13 +85,13 @@ ms.locfileid: "73976483"
   
  例如，<xref:System.UInt32>、<xref:System.Int64> 和 <xref:System.UInt64> 資料類型的範圍超過 <xref:System.Int32> 資料類型的範圍，如下表所示。  
   
-|輸入|與 Int32 的範圍比較|  
+|類型|與 Int32 的範圍比較|  
 |----------|------------------------------------|  
 |<xref:System.Int64>|<xref:System.Int64.MaxValue?displayProperty=nameWithType> 大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>，而 <xref:System.Int64.MinValue?displayProperty=nameWithType> 小於 (負值範圍大於) <xref:System.Int32.MinValue?displayProperty=nameWithType>。|  
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> 大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
 |<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> 大於 <xref:System.Int32.MaxValue?displayProperty=nameWithType>。|  
   
- 為了處理縮小轉換，.NET Framework 允許類型定義 `Explicit` 運算子。 然後，個別語言編譯器就可以使用自己的語法來實作這個運算子，也可以呼叫 <xref:System.Convert> 類別的成員來執行轉換。 （如需有關 <xref:System.Convert> 類別的詳細資訊，請參閱本主題稍後[的 Convert 類別](#the-convert-class)）。下列範例說明如何使用語言功能來處理將這些可能超出範圍的整數值明確轉換成 <xref:System.Int32> 值。  
+ 為了處理縮小轉換，.NET Framework 允許類型定義 `Explicit` 運算子。 然後，個別語言編譯器就可以使用自己的語法來實作這個運算子，也可以呼叫 <xref:System.Convert> 類別的成員來執行轉換。 （有關類的詳細資訊，<xref:System.Convert>請參閱本主題後面的[轉換類](#the-convert-class)。下面的示例說明了使用語言功能來處理這些可能超範圍整數值的顯式轉換到<xref:System.Int32>值。  
   
  [!code-csharp[Conceptual.Conversion#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/explicit1.cs#4)]
  [!code-vb[Conceptual.Conversion#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/explicit1.vb#4)]  
@@ -101,7 +101,7 @@ ms.locfileid: "73976483"
  大多數的編譯器都允許明確轉換以已檢查或未檢查的方式執行。 如果執行已檢查的轉換，當要轉換之類型的值不在目標類型的範圍內時，則會擲回 <xref:System.OverflowException>。 在同樣的狀況下執行未檢查的轉換時，轉換可能不會擲回例外狀況，但實際行為會變得不明確，且可能產生不正確的值。  
   
 > [!NOTE]
-> 在 C# 中，已檢查的轉換可以透過使用 `checked` 關鍵字搭配轉型運算子來執行，也可以指定 `/checked+` 編譯器選項來執行。 相反地，未檢查的轉換可使用 `unchecked` 關鍵字搭配轉型運算子來執行，或可以指定 `/checked-` 編譯器選項來執行。 根據預設，明確轉換是未檢查的。 在 Visual Basic 中，已檢查的轉換可藉由清除專案的 [進階編譯器設定] 對話方塊中的 [移除整數的溢位檢查] 核取方塊來執行，或可以指定 `/removeintchecks-` 編譯器選項來執行。 相反地，未檢查的轉換可以藉由選取專案的 [進階編譯器設定] 對話方塊中的 [移除整數的溢位檢查] 核取方塊來執行，也可以指定 `/removeintchecks+` 編譯器選項來執行。 根據預設，明確轉換是檢查的。  
+> 在 C# 中，已檢查的轉換可以透過使用 `checked` 關鍵字搭配轉型運算子來執行，也可以指定 `/checked+` 編譯器選項來執行。 相反地，未檢查的轉換可使用 `unchecked` 關鍵字搭配轉型運算子來執行，或可以指定 `/checked-` 編譯器選項來執行。 根據預設，明確轉換是未檢查的。 在 Visual Basic 中，已檢查的轉換可藉由清除專案的 [進階編譯器設定]**** 對話方塊中的 [移除整數的溢位檢查]**** 核取方塊來執行，或可以指定 `/removeintchecks-` 編譯器選項來執行。 相反地，未檢查的轉換可以藉由選取專案的 [進階編譯器設定]**** 對話方塊中的 [移除整數的溢位檢查]**** 核取方塊來執行，也可以指定 `/removeintchecks+` 編譯器選項來執行。 根據預設，明確轉換是檢查的。  
   
  下列 C# 範例使用 `checked` 和 `unchecked` 關鍵字，說明將超出 <xref:System.Byte> 範圍的值轉換為 <xref:System.Byte> 時的行為差異。 已檢查的轉換會擲回例外狀況，但未檢查的轉換會指派 <xref:System.Byte.MaxValue?displayProperty=nameWithType> 給 <xref:System.Byte> 變數。  
   
@@ -131,12 +131,12 @@ ms.locfileid: "73976483"
  [!code-csharp[Conceptual.Conversion#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/iconvertible1.cs#7)]
  [!code-vb[Conceptual.Conversion#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/iconvertible1.vb#7)]  
   
- 由於必須呼叫其介面上的轉換方法，而不是呼叫實作類型上的轉換方法，這種需求使得明確介面實作相當耗費資源。 相反地，在通用語言執行平台基底類型之間轉換時，我們建議您呼叫 <xref:System.Convert> 類別的適當成員。 如需詳細資訊，請參閱下一節 [Convert 類別](#the-convert-class)。  
+ 由於必須呼叫其介面上的轉換方法，而不是呼叫實作類型上的轉換方法，這種需求使得明確介面實作相當耗費資源。 相反地，在通用語言執行平台基底類型之間轉換時，我們建議您呼叫 <xref:System.Convert> 類別的適當成員。 有關詳細資訊，請參閱下一節["轉換類](#the-convert-class)"。  
   
 > [!NOTE]
 > 除了 .NET Framework 提供的 <xref:System.IConvertible> 介面和 <xref:System.Convert> 類別之外，個別語言可能還會提供執行轉換的方式。 例如，C# 使用轉型 (Casting) 運算子、Visual Basic 使用編譯器實作的轉換函式，例如 `CType`、`CInt` 和 `DirectCast`。  
   
- 在大多數情況下，<xref:System.IConvertible> 介面的設計主要是支援在 .NET Framework 中的各基底類型之間轉換。 不過，也可以使用自訂類型來實作介面，以支援從該類型轉換至其他自訂類型。 如需詳細資訊，請參閱本主題稍後的[使用 ChangeType 方法的自訂轉換](#custom-conversions-with-the-changetype-method)一節。
+ 在大多數情況下，<xref:System.IConvertible> 介面的設計主要是支援在 .NET Framework 中的各基底類型之間轉換。 不過，也可以使用自訂類型來實作介面，以支援從該類型轉換至其他自訂類型。 有關詳細資訊，請參閱本主題後面[使用更改類型方法的自訂轉換](#custom-conversions-with-the-changetype-method)部分。
 
 ## <a name="the-convert-class"></a>Convert 類別
  雖然可以呼叫每一個基底類別的 <xref:System.IConvertible> 介面實作來執行類型轉換，但建議的語言中立方式是呼叫 <xref:System.Convert?displayProperty=nameWithType> 類別的方法，在不同的基底類型之間轉換。 此外，也可以使用 <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法將指定的自訂類型轉換為另一種類型。  
@@ -190,7 +190,7 @@ ms.locfileid: "73976483"
   
  如需使用類型轉換子執行轉換的詳細資訊，請參閱 <xref:System.ComponentModel.TypeConverter?displayProperty=nameWithType>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - <xref:System.IConvertible>

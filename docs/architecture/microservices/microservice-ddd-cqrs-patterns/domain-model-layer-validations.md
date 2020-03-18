@@ -3,10 +3,10 @@ title: 設計領域模型層中的驗證
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解領域模型驗證的關鍵概念。
 ms.date: 10/08/2018
 ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75899672"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>設計領域模型層中的驗證
@@ -61,7 +61,7 @@ public void SetAddress(string line1, string line2,
 
 您仍然可以在實體類別中使用資料註解和 `IValidatableObject.Validate` 方法，透過覆寫 DbContext 的 SaveChanges 方法來實作自訂驗證。
 
-您可以在 [GitHub 上的這個留言](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539)裡看到驗證 `IValidatableObject` 實體的範例實作。 該範例不會執行以屬性為基礎的驗證，但是在相同的覆寫中，使用反映就可以輕鬆地執行。
+您可以在 [GitHub 上的這個留言](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539)裡看到驗證 `IValidatableObject` 實體的範例實作。 該示例不執行基於屬性的驗證，但在同一重寫中使用反射應易於實現。
 
 不過，從 DDD 觀點，領域模型會妥善使用您實體行為方法中的例外狀況，或藉由實作規格和通知模式來強制執行驗證規則。
 
@@ -85,27 +85,27 @@ public void SetAddress(string line1, string line2,
 
 ## <a name="additional-resources"></a>其他資源
 
-- **Rachel Appel。ASP.NET Core MVC \ 中的模型驗證簡介**
+- **瑞秋·阿佩爾ASP.NET核心MVC中模型驗證簡介** \
   <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 
-- **Rick Anderson。新增驗證** \
+- **裡克·安德森添加驗證** \
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
-- **聖馬丁 Fowler。將擲回例外狀況取代為驗證中的通知** \
+- **馬丁·福勒在驗證中將引發異常替換為通知** \
   <https://martinfowler.com/articles/replaceThrowWithNotification.html>
 
-- **規格和通知模式** \
+- **規範和通知模式** \
   <https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns>
 
-- **Lev Gorodinski。網域驅動設計（DDD） \ 中的驗證**
+- **列夫·戈羅丁斯基域驅動設計 （DDD） 中的驗證** \
   <http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/>
 
-- **Colin 插孔。領域模型驗證** \
+- **科林·傑克域模型驗證** \
   <https://colinjack.blogspot.com/2008/03/domain-model-validation.html>
 
-- **Jimmy Bogard。DDD world \ 中的驗證**
+- **吉米·博加德DDD 世界中的驗證** \
   <https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/>
 
 > [!div class="step-by-step"]
-> [上一頁](enumeration-classes-over-enum-types.md)
-> [下一頁](client-side-validation.md)
+> [上一個](enumeration-classes-over-enum-types.md)
+> [下一個](client-side-validation.md)

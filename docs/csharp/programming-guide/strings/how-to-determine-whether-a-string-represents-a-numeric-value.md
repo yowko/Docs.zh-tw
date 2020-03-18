@@ -1,23 +1,23 @@
 ---
-title: 如何判斷字串是否代表數值程式C#設計指南
+title: 如何確定字串是否表示數值 - C# 程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - numeric strings [C#]
 - validating numeric input [C#]
 - strings [C#], numeric
 ms.assetid: a4e84e10-ea0a-489f-a868-503dded9d85f
-ms.openlocfilehash: bd89024a0a9bd62927d2d5e0eda248b57bb7d21d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 15a21a6298f8f0a57e0189554246202b220dd259
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711918"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157061"
 ---
-# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>如何判斷字串是否代表數值（C#程式設計手冊）
+# <a name="how-to-determine-whether-a-string-represents-a-numeric-value-c-programming-guide"></a>如何確定字串是否表示數值（C# 程式設計指南）
 若要判斷字串是否為所指定數值類型的有效呈現，請使用靜態 `TryParse` 方法，而這個方法是由所有基本數字類型以及 <xref:System.DateTime> 和 <xref:System.Net.IPAddress> 此等類型所實作。 下列範例示範如何判斷 "108" 是否為有效 [int](../../language-reference/builtin-types/integral-numeric-types.md)。  
   
 ```csharp  
-int i = 0;   
+int i = 0;
 string s = "108";  
 bool result = int.TryParse(s, out i); //i now = 108  
 ```  
@@ -32,16 +32,16 @@ bool result = int.TryParse(s, out i); //i now = 108
   
  [!code-csharp[csProgGuideStrings#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#14)]  
   
-## <a name="robust-programming"></a>最佳化程式設計  
+## <a name="robust-programming"></a>穩固程式設計  
  基本數值類型也會實作 `Parse` 靜態方法，但如果字串不是有效數字，則會擲回例外狀況。 `TryParse` 通常更具效率，因為它在數字不正確時就會傳回 false。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請一律使用 `TryParse` 或 `Parse` 方法來驗證文字方塊和下拉式方塊這類控制項的使用者輸入。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [如何將位元組陣列轉換為 int](../types/how-to-convert-a-byte-array-to-an-int.md)
-- [如何將字串轉換成數位](../types/how-to-convert-a-string-to-a-number.md)
-- [如何在十六進位字串和數位類型之間轉換](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
-- [剖析數值字串](../../../standard/base-types/parsing-numeric.md)
+- [如何將位元組陣列轉換成整數](../types/how-to-convert-a-byte-array-to-an-int.md)
+- [如何將字串轉換為數字](../types/how-to-convert-a-string-to-a-number.md)
+- [如何在十六進位字串和數數值型別之間進行轉換](../types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md)
+- [分析數位字串](../../../standard/base-types/parsing-numeric.md)
 - [格式化類型](../../../standard/base-types/formatting-types.md)

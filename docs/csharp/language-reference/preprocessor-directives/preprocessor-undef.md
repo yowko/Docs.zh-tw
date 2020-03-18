@@ -7,16 +7,16 @@ helpviewer_keywords:
 - '#undef directive [C#]'
 ms.assetid: 686c92d2-7194-4be4-b2f4-80091712d513
 ms.openlocfilehash: 21923412aa178c3b86e94a54bd911130e48e4deb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712438"
 ---
 # <a name="undef-c-reference"></a>#undef (C# 參考)
 `#undef` 可讓您取消定義符號，如此一來，在 [#if](./preprocessor-if.md) 指示詞中使用符號作為運算式，運算式就會評估為 `false`。  
   
- 使用 [#define](./preprocessor-define.md) 指示詞或 [-define](../compiler-options/define-compiler-option.md) 編譯器選項可以定義符號。 `#undef` 指示詞必須先出現在檔案中，才能使用亦非指示詞的任何陳述式。  
+ 符號可以使用[#define](./preprocessor-define.md)指令或[-define](../compiler-options/define-compiler-option.md)編譯器選項進行定義。 `#undef` 指示詞必須先出現在檔案中，才能使用亦非指示詞的任何陳述式。  
   
 ## <a name="example"></a>範例  
 
@@ -40,8 +40,8 @@ class MyClass
 
 **未定義 DEBUG**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 前置處理器指示詞](./index.md)
+- [C# 預處理器指令](./index.md)

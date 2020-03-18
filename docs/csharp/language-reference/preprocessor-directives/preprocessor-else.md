@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#else directive [C#]'
 ms.assetid: 6a347322-cfa2-4a86-98f8-ddfa2cb7d4db
 ms.openlocfilehash: 967ef38687b739ef3bea3f8923ab26bba0b6cea9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712555"
 ---
 # <a name="else-c-reference"></a>#else (C# 參考)
@@ -19,8 +19,8 @@ ms.locfileid: "75712555"
 ## <a name="remarks"></a>備註  
  [#endif](./preprocessor-endif.md) 必須是 `#else` 後面的下一個前置處理器指示詞。 如需如何使用 `#else` 的範例，請參閱 [#if](./preprocessor-if.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 前置處理器指示詞](./index.md)
+- [C# 預處理器指令](./index.md)

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
 ms.openlocfilehash: aa175d95f27fcbf28c3f3da3eaa7b8f7988681e1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140088"
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>如何：取消資料流程區塊
@@ -66,20 +66,20 @@ ms.locfileid: "73140088"
  此範例在它建構管線成員時會設定 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性。 因為 <xref:System.Threading.Tasks.Dataflow.DataflowBlockOptions.CancellationToken%2A> 屬性會永久取消資料流程區塊執行，所以必須在使用者取消此作業，而後想要將更多工作項目新增至管線之後，重新建立整個管線。 如需示範取消資料流程區塊的替代方式，以便在取消作業後執行其他工作的範例，請參閱[逐步解說︰在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>將資料流程管線連接至使用者介面  
- 本節說明如何將資料流程管線連接至使用者介面。 建立管線以及將工作項目新增至管線都是由 [新增工作項目] 按鈕的事件處理常式所控制。 取消作業是由 [取消] 按鈕所起始。 當使用者按一下任一個按鈕時，會以非同步方式起始適當的動作。  
+ 本節說明如何將資料流程管線連接至使用者介面。 建立管線以及將工作項目新增至管線都是由 [新增工作項目]**** 按鈕的事件處理常式所控制。 取消作業是由 [取消]**** 按鈕所起始。 當使用者按一下任一個按鈕時，會以非同步方式起始適當的動作。  
   
 ### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>將資料流程管線連接至使用者介面  
   
-1. 在主要表單的表單設計工具上，為 [新增工作項目] 的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件建立事件處理常式。  
+1. 在主要表單的表單設計工具上，為 [新增工作項目]**** 的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件建立事件處理常式。  
   
-2. 實作 [新增工作項目] 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
+2. 實作 [新增工作項目]**** 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#5)]
      [!code-vb[TPLDataflow_CancellationWinForms#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#5)]  
   
-3. 在主要表單的表單設計工具上，為 [取消] 的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件建立事件處理常式。  
+3. 在主要表單的表單設計工具上，為 [取消]**** 的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件建立事件處理常式。  
   
-4. 實作 [取消] 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件處理常式。  
+4. 實作 [取消]**** 按鈕的 <xref:System.Windows.Forms.ToolStripItem.Click> 事件處理常式。  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#6)]
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
@@ -92,8 +92,8 @@ ms.locfileid: "73140088"
   
  下圖顯示執行的應用程式。  
   
- ![Windows Forms 應用程式](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
+ ![Windows Form 應用程式](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

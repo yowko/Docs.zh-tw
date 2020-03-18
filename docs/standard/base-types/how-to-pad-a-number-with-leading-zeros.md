@@ -12,10 +12,10 @@ helpviewer_keywords:
 - numbers [.NET Framework], format strings
 ms.assetid: 0b2c2cb5-c580-4891-8d81-cb632f5ec384
 ms.openlocfilehash: bc3c4b75c484274c214141d8fbfcf8ac592b0b99
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131981"
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>如何：以前置字元零來填補數字
@@ -100,8 +100,8 @@ ms.locfileid: "73131981"
 [!code-csharp[Formatting.HowTo.PadNumber#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.PadNumber/cs/Pad1.cs#4)]
 [!code-vb[Formatting.HowTo.PadNumber#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.PadNumber/vb/Pad1.vb#4)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [自訂數值格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
-- [標準數值格式字串](../../../docs/standard/base-types/standard-numeric-format-strings.md)
-- [複合格式設定](../../../docs/standard/base-types/composite-formatting.md)
+- [自訂數位格式字串](../../../docs/standard/base-types/custom-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)
+- [複合格式](../../../docs/standard/base-types/composite-formatting.md)

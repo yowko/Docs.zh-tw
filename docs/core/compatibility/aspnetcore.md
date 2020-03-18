@@ -1,82 +1,82 @@
 ---
-title: ASP.NET Core 的重大變更
+title: ASP.NET核心突破性更改
 titleSuffix: ''
-description: 列出 ASP.NET Core 中的重大變更。
+description: 列出ASP.NET核心中的重大更改。
 ms.date: 01/10/2020
 author: scottaddie
 ms.author: scaddie
 ms.openlocfilehash: c54735cd53fb9cb48eb84045791ccc559fe683cd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093171"
 ---
-# <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 的重大變更
+# <a name="aspnet-core-breaking-changes"></a>ASP.NET核心突破性更改
 
-ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
+ASP.NET核心提供 .NET Core 使用的 Web 應用開發功能。
 
-下列重大變更記載于此頁面：
+此頁面將記錄以下重大更改：
 
-- [HTTP：瀏覽器 SameSite 變更影響驗證](#http-browser-samesite-changes-impact-authentication)
-- [已移除過時的 Antiforgery、CORS、診斷、MVC 和路由 Api](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
-- [驗證： Google + 淘汰](#authentication-google-deprecated-and-replaced)
-- [驗證：已移除 HttpCoNtext 驗證屬性](#authentication-httpcontextauthentication-property-removed)
-- [驗證： Newtonsoft 已取代的 Json 類型](#authentication-newtonsoftjson-types-replaced)
-- [驗證： OAuthHandler ExchangeCodeAsync 簽章已變更](#authentication-oauthhandler-exchangecodeasync-signature-changed)
-- [授權： AddAuthorization 多載已移至不同的元件](#authorization-addauthorization-overload-moved-to-different-assembly)
-- [授權： IAllowAnonymous 已從 AuthorizationFilterCoNtext 移除。篩選](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
-- [授權： IAuthorizationPolicyProvider 的部署需要新的方法](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
-- [Caching： CompactOnMemoryPressure 屬性已移除](#caching-compactonmemorypressure-property-removed)
-- [快取： SqlClient 使用新的封裝](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
-- [Caching： ResponseCaching "pubternal" 類型已變更為 internal](#caching-responsecaching-pubternal-types-changed-to-internal)
-- [資料保護： DataProtection. AzureStorage 使用新的 Azure 儲存體 Api](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
-- [裝載：已從 Windows 裝載套件組合中移除 AspNetCoreModule V1](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
-- [裝載：泛型主機會限制啟動的函數插入](#hosting-generic-host-restricts-startup-constructor-injection)
-- [裝載：已為 IIS 跨進程應用程式啟用 HTTPS 重新導向](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
-- [裝載：已取代 IHostingEnvironment 和 IApplicationLifetime 類型](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
-- [裝載：已從 WebHostBuilder 相依性移除 ObjectPoolProvider](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
-- [HTTP： DefaultHttpCoNtext 擴充性已移除](#http-defaulthttpcontext-extensibility-removed)
-- [HTTP： HeaderNames 欄位已變更為靜態唯讀](#http-headernames-constants-changed-to-static-readonly)
-- [HTTP：回應主體基礎結構變更](#http-response-body-infrastructure-changes)
-- [HTTP：某些 cookie SameSite 預設值已變更](#http-some-cookie-samesite-defaults-changed-to-none)
-- [HTTP：預設停用同步 IO](#http-synchronous-io-disabled-in-all-servers)
-- [識別： AddDefaultUI 方法多載已移除](#identity-adddefaultui-method-overload-removed)
-- [身分識別： UI 啟動程式版本變更](#identity-default-bootstrap-version-of-ui-changed)
-- [身分識別： SignInAsync 擲回未驗證身分識別的例外狀況](#identity-signinasync-throws-exception-for-unauthenticated-identity)
-- [身分識別：使用的函式接受新的參數](#identity-signinmanager-constructor-accepts-new-parameter)
-- [身分識別： UI 使用靜態 web 資產功能](#identity-ui-uses-static-web-assets-feature)
-- [Kestrel：已移除連接介面卡](#kestrel-connection-adapters-removed)
-- [Kestrel：已移除空的 HTTPS 元件](#kestrel-empty-https-assembly-removed)
-- [Kestrel：要求尾標頭已移至新的集合](#kestrel-request-trailer-headers-moved-to-new-collection)
-- [Kestrel：傳輸抽象層變更](#kestrel-transport-abstractions-removed-and-made-public)
-- [當地語系化：已標記為過時的 Api](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
-- [記錄： DebugLogger 類別已設為內部](#logging-debuglogger-class-made-internal)
-- [MVC：已移除控制器動作非同步尾碼](#mvc-async-suffix-trimmed-from-controller-action-names)
-- [MVC： JsonResult 已移至 AspNetCore. Core](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
-- [MVC：先行編譯工具已被取代](#mvc-precompilation-tool-deprecated)
-- [MVC：類型已變更為內部](#mvc-pubternal-types-changed-to-internal)
-- [MVC： Web API 相容性填充碼已移除](#mvc-web-api-compatibility-shim-removed)
-- [Razor：將執行時間編譯移至封裝](#razor-runtime-compilation-moved-to-a-package)
-- [會話狀態：已移除已淘汰的 Api](#session-state-obsolete-apis-removed)
-- [共用架構：從 AspNetCore 應用程式移除元件](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
-- [共用架構： AspNetCore 全部移除](#shared-framework-removed-microsoftaspnetcoreall)
-- [SignalR： HandshakeProtocol. SuccessHandshakeData 已取代](#signalr-handshakeprotocolsuccesshandshakedata-replaced)
-- [SignalR：已移除 HubConnection 方法](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
-- [SignalR： HubConnectionCoNtext 的函式已變更](#signalr-hubconnectioncontext-constructors-changed)
-- [SignalR： JavaScript 用戶端封裝名稱變更](#signalr-javascript-client-package-name-changed)
-- [SignalR：過時的 Api](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
-- [Spa：已標記為過時的 SpaServices 和 NodeServices](#spas-spaservices-and-nodeservices-marked-obsolete)
-- [Spa： SpaServices 和 NodeServices 主控台記錄器 fallback 預設變更](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
-- [目標 framework：不支援 .NET Framework](#target-framework-net-framework-support-dropped)
+- [HTTP： 瀏覽器同網站更改影響身份驗證](#http-browser-samesite-changes-impact-authentication)
+- [已刪除的過期反偽造、CORS、診斷、MVC 和路由 API](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
+- [身份驗證：Google+ 棄用](#authentication-google-deprecated-and-replaced)
+- [身份驗證：HTTPCoNtext.身份驗證屬性已刪除](#authentication-httpcontextauthentication-property-removed)
+- [身份驗證：牛頓軟.Json 類型替換](#authentication-newtonsoftjson-types-replaced)
+- [身份驗證：OAuthHandler 交換代碼同步簽名已更改](#authentication-oauthhandler-exchangecodeasync-signature-changed)
+- [授權：將授權重載移動到不同的程式集](#authorization-addauthorization-overload-moved-to-different-assembly)
+- [授權：從授權篩選器上下文中刪除 IAllowAnonymous。篩檢程式](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
+- [授權：I授權策略提供程式實現需要新方法](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [緩存：已刪除 CompactOn 記憶體壓力屬性](#caching-compactonmemorypressure-property-removed)
+- [緩存：微軟.擴展.緩存.SqlServer 使用新的 SqlClient 包](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
+- [緩存：回應緩存"公共"類型更改為內部](#caching-responsecaching-pubternal-types-changed-to-internal)
+- [資料保護：資料保護.Azure 存儲使用新的 Azure 存儲 API](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
+- [託管：從 Windows 託管捆綁包中刪除的 AspNetCore 模組 V1](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
+- [託管：通用主機限制啟動建構函式注入](#hosting-generic-host-restricts-startup-constructor-injection)
+- [託管：為 IIS 進程外應用啟用 HTTPS 重定向](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
+- [託管：已替換 IHosting 環境和 I應用程式生命週期類型](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
+- [託管：從 WebHostBuilder 依賴項中刪除物件集區提供程式](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP： 預設 HttpCoNtext 擴充性已被刪除](#http-defaulthttpcontext-extensibility-removed)
+- [HTTP：標題名稱欄位更改為靜態唯讀](#http-headernames-constants-changed-to-static-readonly)
+- [HTTP：回應正文基礎結構更改](#http-response-body-infrastructure-changes)
+- [HTTP： 某些 Cookie 同網站預設值已更改](#http-some-cookie-samesite-defaults-changed-to-none)
+- [HTTP：預設情況下禁用同步 IO](#http-synchronous-io-disabled-in-all-servers)
+- [標識：刪除添加 DefaultUI 方法重載](#identity-adddefaultui-method-overload-removed)
+- [標識：UI 引導版本更改](#identity-default-bootstrap-version-of-ui-changed)
+- [標識：SignInAsync 為未身份驗證的標識引發異常](#identity-signinasync-throws-exception-for-unauthenticated-identity)
+- [標識：SignInManager 建構函式接受新參數](#identity-signinmanager-constructor-accepts-new-parameter)
+- [標識：UI 使用靜態 Web 資產功能](#identity-ui-uses-static-web-assets-feature)
+- [Kestrel：連接配接器已移除](#kestrel-connection-adapters-removed)
+- [Kestrel： 空 HTTPS 程式集已刪除](#kestrel-empty-https-assembly-removed)
+- [Kestrel：請求將拖車頭移動到新集合](#kestrel-request-trailer-headers-moved-to-new-collection)
+- [Kestrel：傳輸抽象層更改](#kestrel-transport-abstractions-removed-and-made-public)
+- [當地語系化：標記為過時的 API](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [日誌記錄：調試記錄器類是內部製作的](#logging-debuglogger-class-made-internal)
+- [MVC：已刪除控制器操作非同步尾碼](#mvc-async-suffix-trimmed-from-controller-action-names)
+- [MVC： JsonResult 移動到微軟.AspNetCore.Mvc.Core](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
+- [MVC：預編譯工具已棄用](#mvc-precompilation-tool-deprecated)
+- [MVC：類型更改為內部](#mvc-pubternal-types-changed-to-internal)
+- [MVC：已刪除 Web API 相容性](#mvc-web-api-compatibility-shim-removed)
+- [Razor：運行時編譯移動到包](#razor-runtime-compilation-moved-to-a-package)
+- [會話狀態：已刪除的已過期 API](#session-state-obsolete-apis-removed)
+- [共用框架：從 Microsoft 中刪除程式集.AspNetCore.App](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
+- [共用框架：微軟.AspNetCore.全部刪除](#shared-framework-removed-microsoftaspnetcoreall)
+- [信號R：握手協定.成功握手資料被替換](#signalr-handshakeprotocolsuccesshandshakedata-replaced)
+- [信號R：已刪除集線器連接方法](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
+- [信號R：中心連接上下文建構函式已更改](#signalr-hubconnectioncontext-constructors-changed)
+- [信號R：JavaScript用戶端包名稱更改](#signalr-javascript-client-package-name-changed)
+- [信號R：過時的 API](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
+- [Spa 服務：標記為過時的 Spa 服務和節點服務](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [Spa服務和節點服務主控台記錄器回退預設更改](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
+- [目標框架： .NET 框架不支援](#target-framework-net-framework-support-dropped)
 
-## <a name="aspnet-core-31"></a>ASP.NET Core 3.1
+## <a name="aspnet-core-31"></a>ASP.NET核心 3.1
 
 [!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
 
 ***
 
-## <a name="aspnet-core-30"></a>ASP.NET Core 3.0
+## <a name="aspnet-core-30"></a>ASP.NET核心 3.0
 
 [!INCLUDE[Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 

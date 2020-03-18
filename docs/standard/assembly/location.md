@@ -6,10 +6,10 @@ helpviewer_keywords:
 - assemblies [.NET Framework], location
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 ms.openlocfilehash: 0b84aba749625f0f86027cd9d09a5e9a2229a3f2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73733134"
 ---
 # <a name="assembly-location"></a>組件位置
@@ -27,8 +27,8 @@ ms.locfileid: "73733134"
 
      HTTP 伺服器上部署的組件必須具有強式名稱；您指向應用程式組態檔的程式碼基底區段中的組件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [建立元件](create.md)
+- [建立組件](create.md)
 - [全域組件快取](../../framework/app-domains/gac.md)
-- [執行階段如何找出組件](../../framework/deployment/how-the-runtime-locates-assemblies.md)
+- [運行時如何定位程式集](../../framework/deployment/how-the-runtime-locates-assemblies.md)

@@ -1,5 +1,5 @@
 ---
-title: <include> - C#程式設計指南
+title: <include> - C# 程式設計指南
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 1e3722cbed02775d0ad4f392840ea10275c96be1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 22d87559766c04e53141e843ee8768c8aab89a85
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793422"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156970"
 ---
-# <a name="include-c-programming-guide"></a>\<包含 > （C#程式設計手冊）
+# <a name="include-c-programming-guide"></a>\<包括>（C# 程式設計指南）
 
 ## <a name="syntax"></a>語法
 
@@ -49,11 +49,11 @@ ms.locfileid: "76793422"
 
 ## <a name="example"></a>範例
 
-這是多檔案範例。 以下是第一個使用 \<包含 > 的檔案。
+這是多檔案範例。 下面是第一個檔，它使用\<包括>。
 
 [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]
 
-第二個檔案（ *xml_include_tag .doc*）包含下列檔批註。
+第二個檔*xml_include_tag.doc*包含以下文檔注釋。
 
 ```xml
 <MyDocs>
@@ -86,19 +86,19 @@ The summary for this other type.
     <members>
         <member name="T:Test">
             <summary>
-The summary for this type.   
-</summary>   
-        </member>   
-        <member name="T:Test2">   
-            <summary>   
-The summary for this other type.   
-</summary>   
-        </member>   
-    </members>   
-</doc>   
+The summary for this type.
+</summary>
+        </member>
+        <member name="T:Test2">
+            <summary>
+The summary for this other type.
+</summary>
+        </member>
+    </members>
+</doc>
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
-- [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)
+- [文檔注釋的推薦標記](./recommended-tags-for-documentation-comments.md)

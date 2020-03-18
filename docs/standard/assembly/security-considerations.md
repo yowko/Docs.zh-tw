@@ -16,10 +16,10 @@ helpviewer_keywords:
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73972313"
 ---
 # <a name="assembly-security-considerations"></a>組件安全性考量
@@ -29,7 +29,7 @@ ms.locfileid: "73972313"
   
 - 輸入辨識項會和載入器所集合的辨識項合併，以建立用於原則解析的最終辨識項組。 使用這個語意的方法包括 **Assembly.Load**、**Assembly.LoadFrom** 和 **Activator.CreateInstance**。  
   
-- 輸入辨識項使用時不會更改，就和用於原則解析的最終辨識項組一樣。 使用這個語意的方法包括 **Assembly.Load(byte[])** 和 **AppDomain.DefineDynamicAssembly()** 。  
+- 輸入辨識項使用時不會更改，就和用於原則解析的最終辨識項組一樣。 使用這個語意的方法包括 **Assembly.Load(byte[])** 和 **AppDomain.DefineDynamicAssembly()**。  
   
   選擇性的使用權限可以藉由該組件要在其上執行之電腦上所設定的[安全性原則](../../framework/misc/code-access-security-basics.md)來授與。 如果您希望程式碼處理所有可能的安全性例外狀況，您可以執行下列某一項動作：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73972313"
   
  在載入期間，組件的辨識項 (Evidence) 是用來做為安全性原則的輸入。 安全性原則是由企業和電腦的系統管理員以及使用者原則設定所建立的，它決定在執行時授予所有 Managed 程式碼的使用權限集。 安全性原則可以針對組件 (如果具有簽署工具產生的簽章) 的發行者、針對要從其中下載組件的 Web 網站和區域 (Internet Explorer 的用詞)，或針對組件的強式名稱 (Strong Name) 建立。 例如，電腦的系統管理員可以建立安全性原則，允許從某一 Web 網站下載並且由特定軟體公司簽名的所有程式碼存取電腦上的某個資料庫，但是不授予寫入該電腦磁碟的存取權。  
   
-## <a name="strong-named-assemblies-and-signing-tools"></a>強式名稱的元件和簽署工具  
+## <a name="strong-named-assemblies-and-signing-tools"></a>強式名稱的程式集和簽名工具  
 
  > [!WARNING]
  > 請勿依賴強式名稱提供安全性。 強式名稱僅提供唯一識別。
@@ -60,8 +60,8 @@ ms.locfileid: "73972313"
   
  由於強式命名和使用 [SignTool.exe (簽署工具)](../../framework/tools/signtool-exe.md) 的簽署可保證完整性，所以您可以讓程式碼存取安全性原則以這兩種形式的組件辨識項作為基礎。 強式命名和使用 [SignTool.exe (簽署工具)](../../framework/tools/signtool-exe.md) 的簽署，可以透過數位簽章和憑證來保證完整性。 所有前述技術 (雜湊驗證、強式命名和使用 [SignTool.exe (簽署工具)](../../framework/tools/signtool-exe.md) 的簽署)，合在一起即可確保組件沒有以任何方式改變。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [強式名稱的組件](strong-named.md)
+- [強命名程式集](strong-named.md)
 - [.NET 中的組件](index.md)
 - [SignTool.exe (簽署工具)](../../framework/tools/signtool-exe.md)

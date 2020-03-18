@@ -8,10 +8,10 @@ helpviewer_keywords:
 - console applications
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 ms.openlocfilehash: 1ec65795a7f3d706b2878dd8a8397ae42b61ce7e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73132858"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>在 .NET Framework 中建置主控台應用程式
@@ -24,13 +24,13 @@ ms.locfileid: "73132858"
   
  因為沒有可以將資訊寫入的主控台，所以如果主控台不存在 (例如在 Windows 架構應用程式中) 的話，將看不到寫入標準輸出資料流的輸出。 將資訊寫入不可存取的主控台不會導致引發例外狀況。  
   
- 此外，若要在使用 Visual Studio 開發的 Windows 架構應用程式內啟用主控台來讀取和寫入，請開啟專案的 [屬性] 對話方塊，按一下 [應用程式] 索引標籤，然後將 [應用程式類型] 設定為 [主控台應用程式]。  
+ 此外，若要在使用 Visual Studio 開發的 Windows 架構應用程式內啟用主控台來讀取和寫入，請開啟專案的 [屬性]**** 對話方塊，按一下 [應用程式]**** 索引標籤，然後將 [應用程式類型]**** 設定為 [主控台應用程式]****。  
   
  主控台應用程式缺乏預設會啟動的訊息幫浦 (Message Pump)。 因此，對 Microsoft Win32 計時器的主控台呼叫可能會失敗。  
   
  **System.Console** 類別具有可以從主控台讀取個別字元或整行的方法。 其他方法會轉換資料和格式字串，並接著將格式化的字串寫到主控台。 如需格式化字串的詳細資訊，請參閱[格式化類型](../../docs/standard/base-types/formatting-types.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Console?displayProperty=nameWithType>
 - [格式化類型](../../docs/standard/base-types/formatting-types.md)

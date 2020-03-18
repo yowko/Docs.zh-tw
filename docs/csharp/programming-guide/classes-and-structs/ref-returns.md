@@ -2,12 +2,12 @@
 title: ref 傳回值和 ref 區域變數 (C# 手冊)
 description: 了解如何定義和使用 ref 傳回值和 ref 區域變數值
 ms.date: 04/04/2018
-ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 87a9538db60d69062f0fb48ed9683a9d4f972b91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736814"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170069"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
@@ -15,9 +15,9 @@ ms.locfileid: "73736814"
 
 ## <a name="what-is-a-reference-return-value"></a>何謂參考傳回值？
 
-大部分的開發人員都熟悉「以傳址方式」將引數傳遞給已呼叫方法。 所呼叫方法的引數清單包含以傳址方式傳遞的變數。 呼叫者會觀察到所呼叫方法對其值進行的任何變更。 「參考傳回值」表示方法會將「參考」 (或別名) 傳回給某個變數。 該變數的範圍必須包含方法。 該變數的存留期必須延伸到傳回方法。 呼叫者對方法的傳回值所進行的修改，是針對方法傳回的變數進行。
+大部分的開發人員都熟悉「以傳址方式」** 將引數傳遞給已呼叫方法。 所呼叫方法的引數清單包含以傳址方式傳遞的變數。 呼叫者會觀察到所呼叫方法對其值進行的任何變更。 「參考傳回值」** 表示方法會將「參考」** (或別名) 傳回給某個變數。 該變數的範圍必須包含方法。 該變數的存留期必須延伸到傳回方法。 呼叫者對方法的傳回值所進行的修改，是針對方法傳回的變數進行。
 
-宣告方法傳回「參考傳回值」，表示方法會將別名傳回給變數。 此設計通常用於呼叫的程式碼應可透過別名來存取該變數 (包括進行修改) 時。 這樣一來，以傳址方式傳回的方法就不能有傳回型別 `void`。
+宣告方法傳回「參考傳回值」**，表示方法會將別名傳回給變數。 此設計通常用於呼叫的程式碼應可透過別名來存取該變數 (包括進行修改) 時。 這樣一來，以傳址方式傳回的方法就不能有傳回型別 `void`。
 
 方法可傳回為參考傳回值的運算式有一些限制。 限制包含：
 
@@ -25,7 +25,7 @@ ms.locfileid: "73736814"
 
 - 傳回值不能是常值 `null`。 傳回 `null` 會產生編譯器錯誤 CS8156「無法在此內容中使用運算式，因為其可能不會以傳址方式傳回」。
 
-   具有 ref 傳回的方法可以將別名傳回給目前值為 null （未具現化）值或[可](../../language-reference/builtin-types/nullable-value-types.md)為 null 實數值型別的變數。
+   具有 ref 返回的方法可以將別名返回到其值當前為空（未具現化）值或數值型別的[空數值型別的](../../language-reference/builtin-types/nullable-value-types.md)變數。
 
 - 傳回值不能是常數、列舉成員、屬性的以傳值方式傳回值，或是 `class` 或 `struct` 的方法。 違反此規則會產生編譯器錯誤 CS8156「無法在此內容中使用運算式，因為其可能不會以傳址方式傳回」。
 
@@ -54,8 +54,8 @@ ref 傳回值是在已呼叫方法的範圍中，另一個變數的別名。 您
 
 - 當您指派其值時，是將值指派給別名的變數。
 - 當您讀取其值時，是讀取別名的變數值。
-- 如果您以「傳址」方式傳回它，就是將別名傳回至同一個變數。
-- 如果您以「傳址」方式將它傳遞到另一個方法，就是將參考傳遞至別名的變數。
+- 如果您以「傳址」** 方式傳回它，就是將別名傳回至同一個變數。
+- 如果您以「傳址」** 方式將它傳遞到另一個方法，就是將參考傳遞至別名的變數。
 - 當您建立 [ref 區域變數](#ref-locals)別名時，就是對相同變數建立新的別名。
 
 ## <a name="ref-locals"></a>ref 區域變數
@@ -74,7 +74,7 @@ Person p = contacts.GetContactInformation("Brandie", "Best");
 
 上述的指派將 `p` 宣告為區域變數。 其初始值的複製來源，是讀取 `GetContactInformation` 所傳回的值。 對 `p` 的任何後續指派將不會變更 `GetContactInformation` 傳回的變數值。 變數 `p` 不再是所傳回之變數的別名。
 
-您宣告「ref 區域變數」以將別名複製到原始的值。 在下列指派中，`p` 是 `GetContactInformation` 所傳回之變數的別名。
+您宣告「ref 區域變數」** 以將別名複製到原始的值。 在下列指派中，`p` 是 `GetContactInformation` 所傳回之變數的別名。
 
 ```csharp
 ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
@@ -82,7 +82,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 後續 `p` 的使用方式與使用 `GetContactInformation` 傳回的變數相同，因為 `p` 是該變數的別名。 變更 `p` 也會變更 `GetContactInformation` 傳回的變數。
 
-`ref` 關鍵字是用於區域變數宣告的前面「和」方法呼叫的前面。 
+`ref` 關鍵字是用於區域變數宣告的前面「和」** 方法呼叫的前面。
 
 您可透過相同方式以參考存取值。 在某些情況下，以參考存取值會避免潛在過度浪費資源的複製作業，進而增加效能。 例如，下列陳述式示範了如何定義用於參考值的區域變數值。
 
@@ -90,7 +90,7 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-區域變數宣告的前面「和」第二個範例中值的前面都會使用 `ref` 關鍵字。 無法在這兩個範例內的變數宣告和指派中同時包含 `ref` 關鍵字，會導致編譯器錯誤 CS8172「無法使用值將傳址變數初始化」。 
+區域變數宣告的前面「和」** 第二個範例中值的前面都會使用 `ref` 關鍵字。 無法在這兩個範例內的變數宣告和指派中同時包含 `ref` 關鍵字，會導致編譯器錯誤 CS8172「無法使用值將傳址變數初始化」。
 
 在 C# 7.3 之前，無法重新指派 ref 區域變數，以在初始化之後參照不同的儲存體。 已移除該限制。 下列範例示範重新指派：
 
@@ -103,7 +103,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 ## <a name="ref-returns-and-ref-locals-an-example"></a>ref 傳回值和 ref 區域變數：範例
 
-下列範例定義 `NumberStore` 類別，以儲存整數值的陣列。 `FindNumber` 方法會以傳址方式傳回第一個數字，而此數字大於或等於傳遞為引數的數字。 如果數字未大於或等於引數，則方法會在索引 0 傳回數字。 
+下列範例定義 `NumberStore` 類別，以儲存整數值的陣列。 `FindNumber` 方法會以傳址方式傳回第一個數字，而此數字大於或等於傳遞為引數的數字。 如果數字未大於或等於引數，則方法會在索引 0 傳回數字。
 
 [!code-csharp[ref-returns](../../../../samples/snippets/csharp/programming-guide/ref-returns/NumberStore.cs#1)]
 
@@ -119,7 +119,7 @@ refLocal = ref anotherVeryLargeStruct; // reassigned, refLocal refers to differe
 
 如果搜尋數目較接近陣列結尾，則這個第二個版本對較長的序列更具效率。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ref 關鍵字](../../language-reference/keywords/ref.md)
 - [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)

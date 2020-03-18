@@ -3,20 +3,20 @@ title: 類別和物件 - C# 教學課程簡介
 description: 建立您的第一個 C# 程式並探索物件導向概念
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: 5715124a307c7b7fe41b584df82dd328c873ae29
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: b6ad72997647b80b981f1a1871e384791404bdf7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240076"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156589"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>探索使用類別與物件的物件導向程式設計
 
-此教學課程要求您必須有可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 Windows、Linux 或 macOS 上設定本機開發環境的指示。 您可以在[熟悉開發工具](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
+此教學課程要求您必須有可用於開發的電腦。 .NET 教程[Hello World 在 10 分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)提供了在 Windows、Linux 或 macOS 上設置本地開發環境的說明。 您可以在[熟悉開發工具](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
 
 ## <a name="create-your-application"></a>建立您的應用程式
 
-使用終端機視窗，建立名為 *classes* 的目錄。 您將在該目錄建立應用程式。 在主控台視窗中變更至該目錄並輸入 `dotnet new console`。 這個命令會建立您的應用程式。 開啟 *Program.cs*。 它看起來應該如下所示：
+使用終端機視窗，建立名為 *classes* 的目錄。 您將在該目錄建立應用程式。 在主控台視窗中變更至該目錄並輸入 `dotnet new console`。 這個命令會建立您的應用程式。 打開*Program.cs*。 它看起來應該如下所示：
 
 ```csharp
 using System;
@@ -33,7 +33,7 @@ namespace classes
 }
 ```
 
-在此教學課程中，您將建立代表銀行帳戶的新型別。 開發人員通常會在不同的文字檔中定義每個類別。 隨著程式大小增加，這麼做會使它更易於管理。 在 *classes* 目錄中，建立名為 *BankAccount.cs* 的新檔案。 
+在此教學課程中，您將建立代表銀行帳戶的新型別。 開發人員通常會在不同的文字檔中定義每個類別。 隨著程式大小增加，這麼做會使它更易於管理。 在 *classes* 目錄中，建立名為 *BankAccount.cs* 的新檔案。
 
 這個檔案會包含***銀行帳戶***的定義。 物件導向程式設計會以***類別***的形式建立類型來組織程式碼。 這些類別包含代表特定實體的程式碼。 `BankAccount` 類別代表銀行帳戶。 程式碼會透過方法和屬性來實作特定的作業。 在此教學課程中，銀行帳戶支援此行為：
 
@@ -71,13 +71,13 @@ namespace classes
 }
 ```
 
-在繼續之前，讓我們先查看您所建置的內容。  `namespace` 宣告能提供以邏輯方式組織程式碼的方式。 此教學課程的規模相對較小，所以您會將所有程式碼置於一個命名空間。 
+在繼續之前，讓我們先查看您所建置的內容。  `namespace` 宣告能提供以邏輯方式組織程式碼的方式。 此教學課程的規模相對較小，所以您會將所有程式碼置於一個命名空間。
 
-`public class BankAccount` 能定義您要建立的類別 (或類型)。 在類別宣告之後，`{` 和 `}` 內的所有專案都會定義類別的狀態和行為。 ***類別有五個***成員`BankAccount`。 前三個為***屬性***。 屬性是資料元素，且可以具有強制執行驗證或其他規則的程式碼。 後兩個為***方法***。 方法是執行單一函式的程式碼區塊。 閱讀每個成員的名稱，應該能提供足夠的資訊，以供您或其他開發人員了解該類別的功能。
+`public class BankAccount` 能定義您要建立的類別 (或類型)。 `{`和 類聲明後面的所有內容定義類的狀態`}`和行為。 `BankAccount` 類別有五個***成員***。 前三個為***屬性***。 屬性是資料元素，且可以具有強制執行驗證或其他規則的程式碼。 後兩個為***方法***。 方法是執行單一函式的程式碼區塊。 閱讀每個成員的名稱，應該能提供足夠的資訊，以供您或其他開發人員了解該類別的功能。
 
 ## <a name="open-a-new-account"></a>開啟新帳戶
 
-第一個要實作的功能是開啟一個銀行帳戶。 當客戶開啟帳戶時，他們必須提供初始餘額，以及該帳戶的一或多個擁有者的相關資訊。 
+第一個要實作的功能是開啟一個銀行帳戶。 當客戶開啟帳戶時，他們必須提供初始餘額，以及該帳戶的一或多個擁有者的相關資訊。
 
 建立一個 `BankAccount` 類型的新物件，表示定義一個能指派那些值的***建構函式***。 ***建構函式***是具有和該類別相同名稱的成員。 它是用來初始化該類別類型的物件。 將下列建構函式新增到 `BankAccount` 類型：
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-當您使用 [`new`](../../language-reference/operators/new-operator.md) 建立物件時，系統便會呼叫建構函式。 使用下列程式碼取代*Program.cs*中的行 `Console.WriteLine("Hello World!");` （以您的名稱取代 `<name>`）：
+使用 創建物件時，將調用建構函式[`new`](../../language-reference/operators/new-operator.md)。 將Program.cs中的`Console.WriteLine("Hello World!");`行*Program.cs*替換為以下代碼（替換為`<name>`您的姓名）：
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -106,7 +106,7 @@ Console.WriteLine($"Account {account.Number} was created for {account.Owner} wit
 private static int accountNumberSeed = 1234567890;
 ```
 
-這是一個資料成員。 它是 `private`，這表示它只能由 `BankAccount` 類別中的程式碼存取。 這是一種將公開責任（如擁有帳戶號碼）與私用實施（產生帳戶號碼的方式）分開的方式。 它也是 `static`，這表示它是由所有 `BankAccount` 物件共用的。 非靜態變數的值對於每個 `BankAccount` 物件的執行個體而言都是唯一的。 將下列兩行新增到建構函式來指派帳戶號碼：
+這是一個資料成員。 它是 `private`，這表示它只能由 `BankAccount` 類別中的程式碼存取。 這是一種將公共責任（如具有帳號）與私有實現（如何生成帳號）區分開來的方法。 它也是 `static`，這表示它是由所有 `BankAccount` 物件共用的。 非靜態變數的值對於每個 `BankAccount` 物件的執行個體而言都是唯一的。 將下列兩行新增到建構函式來指派帳戶號碼：
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -123,7 +123,7 @@ accountNumberSeed++;
 
 [!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
-現在，讓我們將 <xref:System.Collections.Generic.List%601> 物件的 `Transaction` 新增到 `BankAccount` 類別。 新增下列宣告：
+現在，讓我們將 `Transaction` 物件的 <xref:System.Collections.Generic.List%601> 新增到 `BankAccount` 類別。 新增下列宣告：
 
 [!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
@@ -133,19 +133,19 @@ accountNumberSeed++;
 using System.Collections.Generic;
 ```
 
-現在，讓我們變更 `Balance` 的報告方式。  報告可以透過針對所有交易的值進行加總來取得。 將 `Balance` 類別中 `BankAccount` 的宣告修改成如下內容：
+現在，讓我們變更 `Balance` 的報告方式。  報告可以透過針對所有交易的值進行加總來取得。 將 `BankAccount` 類別中 `Balance` 的宣告修改成如下內容：
 
 [!code-csharp[BalanceComputation](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
 此範例顯示出***屬性***的一個重要層面。 現在您會在另一個程式要求餘額時計算該值。 您的計算會列舉所有交易，並提供總和作為目前的餘額。
 
-接下來，請實作 `MakeDeposit` 和 `MakeWithdrawal` 方法。 這些方法會強制執行最後兩個規則：初始餘額必須為正數，且所有提款都不能產生負數的餘額。 
+接下來，請實作 `MakeDeposit` 和 `MakeWithdrawal` 方法。 這些方法會強制執行最後兩個規則：初始餘額必須為正數，且所有提款都不能產生負數的餘額。
 
 這也引進了***例外狀況***的概念。 這是指出方法若無法完成其工作便應擲回例外狀況的標準方法。 例外狀況的類型和與它相關的訊息會描述該錯誤。 在這裡，如果存款的金額是負數，`MakeDeposit` 方法便會擲回例外狀況。 如果提款金額是負數，或如果套用提款金額會造成負數的餘額，則 `MakeWithdrawal` 方法會擲回例外狀況：
 
 [!code-csharp[DepositAndWithdrawal](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#DepositAndWithdrawal)]
 
-[`throw`](../../language-reference/keywords/throw.md) 陳述式會**擲回**例外狀況。 目前區塊的執行會結束，而且控制權會移轉給呼叫堆疊中找到最初相符的 `catch` 區塊。 您會在稍後新增 `catch` 區塊來測試此程式碼。
+該[`throw`](../../language-reference/keywords/throw.md)語句**引發**異常。 目前區塊的執行會結束，而且控制權會移轉給呼叫堆疊中找到最初相符的 `catch` 區塊。 您會在稍後新增 `catch` 區塊來測試此程式碼。
 
 應該對建構函式進行一項變更來使它會新增初始交易，而不是直接更新餘額。 由於您已撰寫 `MakeDeposit` 方法，請從建構函式呼叫它。 完成的建構函式應該看起來如下：
 
@@ -175,7 +175,7 @@ catch (ArgumentOutOfRangeException e)
 }
 ```
 
-使用 [`try` 與 `catch` 陳述式](../../language-reference/keywords/try-catch.md)來標記可能會擲回例外狀況的程式碼區塊，並攔截您所預期的那些錯誤。 您可以使用同樣的技巧來測試會針對負數餘額擲回例外狀況的程式碼：
+使用[`try`和`catch`語句](../../language-reference/keywords/try-catch.md)來標記可能引發異常的代碼塊，並捕獲預期的錯誤。 您可以使用同樣的技巧來測試會針對負數餘額擲回例外狀況的程式碼：
 
 ```csharp
 // Test for a negative balance.
@@ -194,7 +194,7 @@ catch (InvalidOperationException e)
 
 ## <a name="challenge---log-all-transactions"></a>挑戰 - 記錄所有交易
 
-若要完成此教學課程，您可以撰寫會針對交易記錄建立 `GetAccountHistory` 的 `string` 方法。 將此方法新增到 `BankAccount` 型別：
+若要完成此教學課程，您可以撰寫會針對交易記錄建立 `string` 的 `GetAccountHistory` 方法。 將此方法新增到 `BankAccount` 型別：
 
 [!code-csharp[History](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#History)]
 
@@ -210,6 +210,6 @@ Console.WriteLine(account.GetAccountHistory());
 
 ## <a name="next-steps"></a>後續步驟
 
-如果您停滯，可以[在我們的 GitHub 存放庫中](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)看到本教學課程的來源。
+如果你被卡住了，你可以[在我們的GitHub存儲庫中](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)看到本教程的來源。
 
-恭喜，您已完成所有 C# 簡介教學課程。 如果您想要深入瞭解，請嘗試我們的[教學](../index.md)課程。
+恭喜，您已完成所有 C# 簡介教學課程。 如果你渴望瞭解更多，請嘗試我們的[教程。](../index.md)

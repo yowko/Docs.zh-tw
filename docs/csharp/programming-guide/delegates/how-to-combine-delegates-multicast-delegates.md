@@ -1,15 +1,15 @@
 ---
-title: 如何合併委派（多播委派）-程式C#設計指南
+title: 如何組合委託（多播代表） - C# 程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], combining
 - multicast delegates [C#]
 ms.assetid: 4e689450-6d0c-46de-acfd-f961018ae5dd
 ms.openlocfilehash: 7b5b9ba5c9bf70983fac9f869836b4c8c5449eca
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705375"
 ---
 # <a name="how-to-combine-delegates-multicast-delegates-c-programming-guide"></a>如何合併委派 (多點傳送委派) (C# 程式設計手冊)
@@ -20,7 +20,7 @@ ms.locfileid: "75705375"
 ## <a name="example"></a>範例  
  [!code-csharp[csProgGuideDelegates#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#11)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.MulticastDelegate>
 - [C# 程式設計指南](../index.md)

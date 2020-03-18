@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cancellation, how to poll for requests
 ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 ms.openlocfilehash: df76674e3003bbb77ef062e90b1dc3283f681d35
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138018"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>如何：透過輪詢接聽取消要求
@@ -28,6 +28,6 @@ ms.locfileid: "73138018"
   
  如果您正在呼叫 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A>，當您要進行其他工作來回應取消 (擲回例外狀況除外) 時，只需明確檢查 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性。 在此範例中，您可以看到程式碼會實際存取屬性兩次：一次是明確的存取，另一次則是在 <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A> 方法中。 但由於讀取 <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> 屬性的動作牽涉到每次存取只能有一個暫時性讀取指令，因此，從效能觀點來看，兩次存取並不重要。 最好還是呼叫方法，而非手動擲回 <xref:System.OperationCanceledException>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)

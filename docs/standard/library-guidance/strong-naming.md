@@ -3,10 +3,10 @@ title: 強式命名與 .NET 程式庫
 description: .NET 程式庫強式命名的最佳做法建議。
 ms.date: 10/16/2018
 ms.openlocfilehash: db268093b07a2ece7cdb8329fd789b52da9c5c32
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76744530"
 ---
 # <a name="strong-naming"></a>強式命名
@@ -43,11 +43,11 @@ ms.locfileid: "76744530"
 您應該為您的開放原始碼 .NET 程式庫進行強式命名。 強式命名組件可確保大部分的人可以使用它，而嚴格的組件載入只會影響 .NET Framework。
 
 > [!NOTE]
-> 本指導方針專屬於公開散發的 .NET 程式庫，例如 NuGet.org 上發行的 .NET 程式庫。大部分 .NET 應用程式都不需要強式命名，而且預設不應該這麼做。
+> 本指南特定于公開分發的 .NET 庫，例如NuGet.org上發佈的 .NET 庫。大多數 .NET 應用程式不需要強命名，預設情況下不應進行強命名。
 
-✔️考慮對程式庫的元件進行強式命名。
+✔️ 考慮為您的程式庫組件進行強式命名。
 
-✔️考慮將強式命名金鑰加入至您的原始檔控制系統。
+✔️ 考慮將強式命名金鑰新增至您的原始檔控制系統。
 
 > 公開可用的金鑰可讓開發人員使用相同的金鑰修改及編譯您的程式庫原始程式碼。
 >
@@ -56,18 +56,18 @@ ms.locfileid: "76744530"
 > [!IMPORTANT]
 > 當需要程式碼發行者的身分識別時，建議使用 [Authenticode](/windows-hardware/drivers/install/authenticode) 與 [NuGet 套件簽署](/nuget/create-packages/sign-a-package)。 程式碼存取安全性 (CAS) 不應作為安全性風險降低機制使用。
 
-✔️考慮只在主要版本變更時遞增元件版本，以協助使用者減少系結重新導向，以及更新的頻率。
+✔️ 考慮僅在主要版本變更時遞增組件版本，以協助使用者減少繫結重新導向，以及更新它們的頻率。
 
 > 深入了解[版本控制與組件版本](./versioning.md#assembly-version)。
 
-❌ 不要加入、移除或變更強式命名金鑰。
+❌請勿新增、移除或變更強式命名金鑰。
 
 > 修改組件的強式命名金鑰會變更組件的身分識別，並且中斷使用它的編譯程式碼。 如需詳細資訊，請參閱[二進位中斷性變更](./breaking-changes.md#binary-breaking-change)。
 
-❌ 不要發佈程式庫的強式名稱和非強式名稱版本。 例如 `Contoso.Api` 和 `Contoso.Api.StrongNamed`。
+❌不要發佈庫的強命名和非強命名版本。 例如 `Contoso.Api` 和 `Contoso.Api.StrongNamed`。
 
 > 發佈兩個套件會派生您的開發人員生態系統。 此外，如果應用程式最後根據這兩個套件，開發人員可能會遇到類型名稱衝突。 就 .NET 而言，它們在不同的組件中是不同的類型。
 
 >[!div class="step-by-step"]
->[上一頁](cross-platform-targeting.md)
->[下一頁](nuget.md)
+>[上一個](cross-platform-targeting.md)
+>[下一個](nuget.md)

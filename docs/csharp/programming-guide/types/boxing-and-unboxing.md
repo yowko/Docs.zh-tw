@@ -10,15 +10,15 @@ helpviewer_keywords:
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
 ms.openlocfilehash: 62df08bf4ae3580e9b8d5b3aab0697d396674ca1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76745421"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing 和 Unboxing (C# 程式設計手冊)
 
-Boxing 是將[實值型別](../../language-reference/builtin-types/value-types.md)轉換為 `object` 類型或是由這個實值型別實作之任何介面類型的程序。 當 common language runtime （CLR）方塊為實值型別時，它會將值包裝在 <xref:System.Object?displayProperty=nameWithType> 實例內，並將其儲存在受控堆積上。 Unbox 處理則會從物件中擷取實值類型。 Boxing 是隱含處理，unboxing 則是明確處理。 Boxing 和 unboxing 的概念是 C# 類型系統統一檢視的基礎，其中任何類型的值都可視為物件。
+Boxing 是將[實值型別](../../language-reference/builtin-types/value-types.md)轉換為 `object` 類型或是由這個實值型別實作之任何介面類型的程序。 當通用語言運行時 （CLR） 為數值型別包裝時，它將值包裝在<xref:System.Object?displayProperty=nameWithType>實例中並將其存儲在託管堆中。 Unbox 處理則會從物件中擷取實值類型。 Boxing 是隱含處理，unboxing 則是明確處理。 Boxing 和 unboxing 的概念是 C# 類型系統統一檢視的基礎，其中任何類型的值都可視為物件。
 
 在下列範例中，整數變數 `i` 會經過 *Box* 處理並且指派給 `o` 物件。
 
@@ -98,7 +98,7 @@ Unboxing 是將 `object` 類型明確轉換為[實值型別](../../language-refe
 int j = (short) o;
 ```
 
-變更為：
+至：
 
 ```csharp
 int j = (int) o;
@@ -116,4 +116,4 @@ int j = (int) o;
 
 - [C# 程式設計指南](../index.md)
 - [參考型別](../../language-reference/keywords/reference-types.md)
-- [值類型](../../language-reference/builtin-types/value-types.md)
+- [實值型別](../../language-reference/builtin-types/value-types.md)

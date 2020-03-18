@@ -1,75 +1,75 @@
 ---
-title: 預設探查-.NET Core
-description: 瞭解 .NET Core 的 AssemblyLoadCoNtext。預設探查邏輯以尋找相依性。
+title: 預設探測 - .NET 核心
+description: .NET Core 的系統概述.運行時.載入程式.程式集載入上下文.預設探測邏輯以查找依賴項。
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: 500ee6ee863b1f311970a9e718936f57f7d4efd6
-ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72031834"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399088"
 ---
-# <a name="default-probing"></a>預設探查
+# <a name="default-probing"></a>預設探測
 
-<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> 實例負責尋找元件的相依性。 本文說明 <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> 實例的探查邏輯。
+實例<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>負責查找程式集的依賴項。 本文介紹了<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>實例的探測邏輯。
 
-## <a name="host-configured-probing-properties"></a>主機設定的探查屬性
+## <a name="host-configured-probing-properties"></a>主機配置的探測屬性
 
-當執行時間啟動時，執行時間主機會提供一組名為的探查屬性，以設定 <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> 探查路徑。
+啟動運行時時，執行階段主機提供一組命名探測屬性，這些屬性配置<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>探測路徑。
 
-每個探查屬性都是選擇性的。 如果有，每個屬性都是字串值，其中包含絕對路徑的分隔清單。 分隔符號是 Windows 上的 '; ' 和所有其他平臺上的 '： '。
+每個探測屬性都是可選的。 如果存在，則每個屬性都是包含絕對路徑的分隔清單的字串值。 分隔符號在 Windows 上為";"在所有其他平臺上為"："。
 
-|內容名稱                 |描述  |
+|屬性名稱                 |描述  |
 |------------------------------|---------|
-|`TRUSTED_PLATFORM_ASSEMBLIES`   | 平臺和應用程式元件檔案路徑的清單。 |
-|`PLATFORM_RESOURCE_ROOTS`       | 要搜尋附屬資源元件的目錄路徑清單。 |
-|`NATIVE_DLL_SEARCH_DIRECTORIES` | 要搜尋非受控（原生）程式庫的目錄路徑清單。        |
-|`APP_PATHS`                     | 要搜尋 managed 元件的目錄路徑清單。 |
-|`APP_NI_PATHS`                  | 要搜尋 managed 元件原生映射的目錄路徑清單。 |
+|`TRUSTED_PLATFORM_ASSEMBLIES`   | 平臺和應用程式程式集檔路徑的清單。 |
+|`PLATFORM_RESOURCE_ROOTS`       | 用於搜索附屬資來源程式集的目錄路徑清單。 |
+|`NATIVE_DLL_SEARCH_DIRECTORIES` | 用於搜索非託管（本機）庫的目錄路徑清單。        |
+|`APP_PATHS`                     | 用於搜索託管程式集的目錄路徑清單。 |
+|`APP_NI_PATHS`                  | 用於搜索託管程式集的本機映射的目錄路徑清單。 |
 
-### <a name="how-are-the-properties-populated"></a>屬性的填入方式為何？
+### <a name="how-are-the-properties-populated"></a>屬性是如何填充的？
 
-填入屬性有兩個主要案例，視 *\<myapp >. .deps.json*是否存在而定。
+根據*\<myapp>.deps.json*檔是否存在，填充屬性有兩種主要方案。
 
-- 當 *\*.deps.json*檔案存在時，它會經過剖析以填入探查屬性。
-- 當 .deps.json 不存在 *\** 時，會假設應用程式的目錄包含所有相依性。 目錄的內容是用來填入探查屬性。
+- 當*\*.deps.json*檔存在時，將對其進行分析以填充探測屬性。
+- 當*\*.deps.json*檔不存在時，假定應用程式的目錄包含所有依賴項。 目錄的內容用於填充探測屬性。
 
-此外，也會剖析任何參考架構的 *\*. .deps.json. json*檔案。
+此外，任何引用框架的*\*.deps.json*檔也會得到類似的解析。
 
-最後，環境變數 `ADDITIONAL_DEPS` 可以用來新增其他相依性。
+最後，環境變數`ADDITIONAL_DEPS`可用於添加其他依賴項。
 
-### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>如何? 看到來自受控碼的探查屬性？
+### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>如何查看來自託管代碼的探測屬性？
 
-您可以使用上表中的屬性名稱呼叫 <xref:System.AppContext.GetData(System.String)?displayProperty=nameWithType> 函式，以取得每個屬性。
+每個屬性都可以通過從上表中<xref:System.AppContext.GetData(System.String)?displayProperty=nameWithType>調用具有屬性名稱的函數來可用。
 
-### <a name="how-do-i-debug-the-probing-properties-construction"></a>如何? debug 探查屬性的結構嗎？
+### <a name="how-do-i-debug-the-probing-properties-construction"></a>如何調試探測屬性的構造？
 
-啟用特定環境變數時，.NET Core 執行時間主機將會輸出有用的追蹤訊息：
+啟用某些環境變數時，.NET Core 執行階段主機將輸出有用的跟蹤消息：
 
 |環境變數        |描述  |
 |----------------------------|---------|
-|`COREHOST_TRACE=1`          |啟用追蹤。|
-|`COREHOST_TRACEFILE=<path>` |追蹤檔案路徑，而不是預設的 `stderr`。|
-|`COREHOST_TRACE_VERBOSITY`  |設定從1（最低）到4（最高）的詳細資訊。|
+|`COREHOST_TRACE=1`          |啟用跟蹤。|
+|`COREHOST_TRACEFILE=<path>` |跟蹤到檔路徑而不是預設`stderr`。|
+|`COREHOST_TRACE_VERBOSITY`  |將詳細程度從 1（最低）設置為 4（最高）。|
 
-## <a name="managed-assembly-default-probing"></a>受管理元件的預設探查
+## <a name="managed-assembly-default-probing"></a>託管程式集預設探測
 
-當探查找出 managed 元件時，<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> 會依序在下列位置尋找：
+當探測以查找託管程式集時，請<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>按以下順序查看：
 
-- 與 `TRUSTED_PLATFORM_ASSEMBLIES` （移除副檔名之後）中的 <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> 相符的檔案。
-- `APP_NI_PATHS` 中具有一般副檔名的原生映射元件檔。
-- `APP_PATHS` 中具有一般副檔名的元件檔。
+- 與 in<xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>`TRUSTED_PLATFORM_ASSEMBLIES`匹配的檔（刪除檔副檔名後）。
+- 具有常見檔副檔名`APP_NI_PATHS`的本機映射程式集檔。
+- 程式集檔與`APP_PATHS`通用檔副檔名。
 
-## <a name="satellite-resource-assembly-probing"></a>附屬（資源）元件探查
+## <a name="satellite-resource-assembly-probing"></a>衛星（資源）程式集探測
 
-若要尋找特定文化特性的附屬元件，請建立一組檔案路徑。
+要查找特定區域性的附屬程式集，構造一組檔路徑。
 
-針對 `PLATFORM_RESOURCE_ROOTS` 中的每個路徑，然後 `APP_PATHS`，附加 <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> 字串、目錄分隔符號、<xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> 字串和副檔名 ' .dll '。
+`PLATFORM_RESOURCE_ROOTS`對於 中的每個路徑，`APP_PATHS`然後，追加<xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>字串、目錄分隔符號、<xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType>字串和副檔名".dll"。
 
-如果有任何相符的檔案存在，請嘗試載入並傳回它。
+如果存在任何匹配檔，請嘗試載入並返回它。
 
-## <a name="unmanaged-native-library-probing"></a>非受控（原生）程式庫探查
+## <a name="unmanaged-native-library-probing"></a>非託管（本機）庫探測
 
-當探查找出非受控程式庫時，會搜尋 `NATIVE_DLL_SEARCH_DIRECTORIES` 尋找相符的程式庫。
+當探測以查找非託管庫時，`NATIVE_DLL_SEARCH_DIRECTORIES`將搜索 查找匹配的庫。

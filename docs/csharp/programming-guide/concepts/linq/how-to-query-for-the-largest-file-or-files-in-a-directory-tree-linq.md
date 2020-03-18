@@ -1,15 +1,15 @@
 ---
-title: 如何查詢樹狀目錄中的最大檔案（LINQ）（C#）
+title: 如何查詢目錄樹 （LINQ） （C#） 中的最大檔或檔
 ms.date: 07/20/2015
 ms.assetid: 20c8a917-0552-4514-b489-0b8b6a4c3b4c
-ms.openlocfilehash: dee501dc8d0cabd718307b45c99ca049ae4250aa
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ed7d610bd292be4062db89f3c94af280e851141f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344557"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168761"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>如何查詢樹狀目錄中的最大檔案（LINQ）（C#）
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-c"></a>如何查詢目錄樹 （LINQ） （C#） 中的最大檔或檔
 此範例顯示五個與檔案位元組大小相關的查詢：  
   
 - 如何擷取最大檔案的位元組大小。  
@@ -96,7 +96,7 @@ class QueryBySize
         }  
   
         // Group the files according to their size, leaving out  
-        // files that are less than 200000 bytes.   
+        // files that are less than 200000 bytes.
         var querySizeGroups =  
             from file in fileList  
             let len = GetFileLength(file)  
@@ -144,8 +144,8 @@ class QueryBySize
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
 建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。
- 
-## <a name="see-also"></a>請參閱
+
+## <a name="see-also"></a>另請參閱
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)
 - [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - TLS
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 ms.openlocfilehash: b5a7c4b78f8599f64aa11f1c98c033866e582933
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127514"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>執行緒區域儲存區：執行緒相關的靜態欄位和資料位置
@@ -55,7 +55,7 @@ ms.locfileid: "73127514"
   
  具名插槽很方便，因為當您需要擷取該插槽時，您可以透過將其名稱傳遞至 <xref:System.Threading.Thread.GetNamedDataSlot%2A> 方法來完成，而不需維護未命名插槽的參考。 不過，如果另一個元件針對其執行緒相關儲存區使用相同名稱，而且執行緒會執行來自您的元件和另一個元件的程式碼，則這兩個元件可能會損毀彼此的資料 (此案例假設這兩個元件正在相同的應用程式定義域中執行，而且它們並未設計來共用相同資料)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ContextStaticAttribute>
 - <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>

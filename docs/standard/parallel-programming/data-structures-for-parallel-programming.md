@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123142"
 ---
 # <a name="data-structures-for-parallel-programming"></a>適用於平行程式設計的資料結構
@@ -20,7 +20,7 @@ ms.locfileid: "73123142"
   
  下表列出新的並行集合類別：  
   
-|輸入|描述|  
+|類型|描述|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType>|提供安全執行緒集合適用的封鎖和界限容量，這個集合會實作 <xref:System.Collections.Concurrent.IProducerConsumerCollection%601?displayProperty=nameWithType>。 在沒有可用插槽或集合已滿的情況下封鎖產生者執行緒。 在集合為空的情況下封鎖取用者執行緒。 此類型也支援由取用者和產生者所進行的非封鎖存取。 <xref:System.Collections.Concurrent.BlockingCollection%601> 可以作為基底類別或備份存放區使用，以針對任何支援 <xref:System.Collections.Generic.IEnumerable%601>的集合類別提供封鎖和繫結。|  
 |<xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>|能提供可調整之新增和取得作業的安全執行緒包實作。|  
@@ -35,7 +35,7 @@ ms.locfileid: "73123142"
   
  下表列出新的同步處理類型：  
   
-|輸入|描述|  
+|類型|描述|  
 |----------|-----------------|  
 |<xref:System.Threading.Barrier?displayProperty=nameWithType>|透過提供一個點，可讓每個工作發出其抵達的訊號並在部分或所有工作皆已抵達之前持續封鎖，來使多執行緒能以平行方式處理演算法。 如需詳細資訊，請參閱[屏障](../../../docs/standard/threading/barrier.md)。|  
 |<xref:System.Threading.CountdownEvent?displayProperty=nameWithType>|透過提供簡單的會合機制來簡化分岔和連結案例。 如需詳細資訊，請參閱 [CountdownEvent](../../../docs/standard/threading/countdownevent.md)。|  
@@ -44,18 +44,18 @@ ms.locfileid: "73123142"
 |<xref:System.Threading.SpinLock?displayProperty=nameWithType>|能使嘗試取得鎖定的執行緒在產生其配量之前，於迴圈中等候 (或*旋轉*) 一段時間的互斥鎖定原始物件。 在預期等候鎖定時間較短的案例中，<xref:System.Threading.SpinLock> 能提供比其他鎖定形式更佳的效能。 如需詳細資訊，請參閱 [SpinLock](../../../docs/standard/threading/spinlock.md)。|  
 |<xref:System.Threading.SpinWait?displayProperty=nameWithType>|會旋轉一段特定的時間，並於最終超過旋轉計數時將執行緒置於等候狀態的小型輕量型類型。  如需詳細資訊，請參閱 [SpinWait](../../../docs/standard/threading/spinwait.md)。|  
   
- 如需詳細資訊，請參閱:  
+ 如需詳細資訊，請參閱  
   
-- [操作說明：使用 SpinLock 進行低階同步處理](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [如何：使用旋轉鎖定進行低級同步](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
-- [如何：使用屏障同步處理並行作業](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)。  
+- [如何：將併發操作與障礙同步](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)。  
   
 ## <a name="lazy-initialization-classes"></a>延遲初始設定類別  
  使用延遲初始設定時，物件的記憶體只會在有需要時才會配置。 延遲初始設定可透過將物件配置平均分配於程式的存留期來提升效能。 您可以透過包裝類型 <xref:System.Lazy%601>，來針對任何自訂類型啟用延遲初始設定。  
   
  下表列出延遲初始設定類型：  
   
-|輸入|描述|  
+|類型|描述|  
 |----------|-----------------|  
 |<xref:System.Lazy%601?displayProperty=nameWithType>|提供輕量型的安全執行緒延遲初始設定。|  
 |<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>|以針對每個執行緒的方式提供延遲初始化的值，其中每個執行緒都會延遲叫用初始化函式。|  
@@ -66,8 +66,8 @@ ms.locfileid: "73123142"
 ## <a name="aggregate-exceptions"></a>彙總例外狀況  
  <xref:System.AggregateException?displayProperty=nameWithType> 類型可以用來擷取在個別執行緒上並行擲出的多個例外狀況，並將它們以單一例外狀況的形式傳回聯結執行緒。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 類型，以及 PLINQ 都會針對此目的廣泛使用 <xref:System.AggregateException>。 如需詳細資訊，請參閱[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)和[如何：處理 PLINQ 查詢中的例外狀況](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - <xref:System.Threading?displayProperty=nameWithType>
-- [平行程式設計](../../../docs/standard/parallel-programming/index.md)
+- [並行程式設計](../../../docs/standard/parallel-programming/index.md)

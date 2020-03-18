@@ -1,30 +1,30 @@
 ---
-title: 將 Windows Forms 應用程式移植到 .NET Core
-description: 教您如何將 .NET Framework Windows Forms 應用程式移植到適用于 Windows 的 .NET Core。
+title: 將 Windows 表單應用移植到 .NET 核心
+description: 教您如何將 .NET 框架 Windows 表單應用程式移植到 .NET Windows 核心。
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116019"
 ---
-# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何將 Windows Forms 桌面應用程式移植到 .NET Core
+# <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>如何將 Windows 表單桌面應用移植到 .NET Core
 
-本文說明如何將以 Windows Forms 為基礎的桌面應用程式，從 .NET Framework 移植到 .NET Core 3.0 或更新版本。 .NET Core 3.0 SDK 支源 Windows Forms 應用程式。 Windows Forms 仍然是僅限 Windows 的架構，只能在 Windows 上執行。 本範例使用 .NET Core SDK CLI 來建立和管理您的專案。
+本文介紹如何將基於 Windows 表單的桌面應用從 .NET 框架移植到 .NET Core 3.0 或更高版本。 .NET Core 3.0 SDK 支源 Windows Forms 應用程式。 Windows Forms 仍然是僅限 Windows 的架構，只能在 Windows 上執行。 本範例使用 .NET Core SDK CLI 來建立和管理您的專案。
 
 在此文章中，各種不同的名稱會用來識別用於移轉的檔案類型。 在移轉您的專案時，您的檔案會有不同的名稱，因此請在心裡將它們與下面所列的項目進行比對：
 
-| File | 描述 |
+| 檔案 | 描述 |
 | ---- | ----------- |
 | **MyApps.sln** | 方案檔的名稱。 |
 | **MyForms.csproj** | 要移植的 .NET Framework Windows Forms 專案的名稱。 |
 | **MyFormsCore.csproj** | 您所建立的新 .NET Core 專案的名稱。 |
 | **MyAppCore.exe** | .NET Core Windows Forms 應用程式可執行檔。 |
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
 - 適用於您想要執行之任何設計工具工作的 [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 。
 
@@ -33,11 +33,11 @@ ms.locfileid: "76116019"
   - .NET Core 跨平台開發
 
 - 在解決方案中運作的 Windows Forms 專案，可以毫無問題地建置並執行。
-- 中C#編碼的專案。
-- [.Net Core](https://dotnet.microsoft.com/download/dotnet-core) 3.0 或更新版本。
+- 以 C# 編碼的專案。
+- [.NET 核心](https://dotnet.microsoft.com/download/dotnet-core)3.0 或更高版本。
 
 > [!NOTE]
-> **Visual Studio 2017** 不支援 .NET Core 3.0 專案。 **Visual Studio 2019** 支援 .NET Core 3.0 專案，但尚不支援 .NET Core 3.0 Windows Forms 專案的視覺化設計工具。 若要使用視覺化設計工具，您必須在與 .NET Core 專案共用表單檔案的方案中擁有 .NET Windows Forms 專案。
+> **Visual Studio 2017** 不支援 .NET Core 3.0 專案。 **Visual Studio 2019** 支援 .NET Core 3.0 專案，但尚不支援 .NET Core 3.0 Windows Forms 專案的視覺化設計工具。 要使用視覺化設計器，必須在解決方案中具有一個 .NET Windows 表單專案，該專案與 .NET Core 專案共用表單檔案。
 
 ### <a name="consider"></a>Consider
 
@@ -49,7 +49,7 @@ ms.locfileid: "76116019"
 
 01. 您正在使用不同版本的 Windows Forms。
 
-    當 .NET Core 3.0 Preview 1 發行時，Windows Forms 在 GitHub 上進入開放原始碼。 .NET Core 的程式碼 Windows Forms 是 .NET Framework Windows Forms 程式碼基底的分支。 很可能存在一些差異，而您的應用程式將無法移植。
+    發佈 .NET Core 3.0 預覽版 1 時，Windows 表單在 GitHub 上打開源碼。 .NET 核心 Windows 表單的代碼是 .NET 框架 Windows 表單代碼庫的分叉。 很可能存在一些差異，而您的應用程式將無法移植。
 
 01. [Windows 相容性套件][compat-pack]可能可以協助您進行遷移。
 
@@ -106,7 +106,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-將**myformscore.csproj. .csproj**專案新增至**MyApps** ，其中包含 Visual Studio 或**SolutionFolder**目錄中的 .NET Core CLI：
+使用 Visual Studio 或解決方案**資料夾**目錄中的 .NET 核心 CLI 將**MyFormsCore.csproj**專案添加到**MyApps.sln：**
 
 ```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -118,13 +118,13 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 加入至主要 `<PropertyGroup>` 節點有三個設定。
 
-- **GenerateAssemblyInfo**\
+- **生成裝配資訊**\
 當您將此屬性設定為 `false`，它就不會產生組件屬性。 這可以避免與 .NET Framework 專案中的現有 `AssemblyInfo.cs` 檔案衝突。
 
-- **AssemblyName**\
+- **程式集名稱**\
 這個屬性的值是您在編譯時所建立的二進位輸出。 該名稱不需要加入副檔名。 例如，使用 `MyCoreApp` 產生 `MyCoreApp.exe`。
 
-- **RootNamespace**\
+- **根命名空間**\
 專案使用的預設命名空間。 這應該與 .NET Framework 專案的預設命名空間相符。
 
 將這三個元素新增至 `MyFormsCore.csproj` 檔案中的 `<PropertyGroup>` 節點：
@@ -145,7 +145,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 </Project>
 ```
 
-## <a name="add-source-code"></a>加入原始程式碼
+## <a name="add-source-code"></a>新增原始程式碼
 
 現在，**MyFormsCore.csproj** 專案不會進行編譯任何程式碼。 根據預設，.NET Core 專案會自動包含目前目錄和任何子目錄中的所有原始程式碼。 您必須使用相對路徑，將專案設定為包含 .NET Framework 專案中的程式碼。 如果您的 .NET Framework 專案使用 **.resx** 檔案作為表單的圖示和資源，那麼您還需要包含這些檔案。
 
@@ -160,7 +160,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 或者，您可以為 .NET Framework 專案中的每個檔案建立 `<Compile>` 或 `<EmbeddedResource>` 項目。
 
-## <a name="add-nuget-packages"></a>新增 NuGet 套件
+## <a name="add-nuget-packages"></a>新增 NuGet 封裝
 
 將 .NET Framework 專案參考的每個 NuGet 套件新增至 .NET Core 專案。
 
@@ -188,7 +188,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package MetroFramework.Fonts
 
 使用上一個步驟的範例，讓我們展開我們正在使用的專案和檔案。
 
-| File | 描述 |
+| 檔案 | 描述 |
 | ---- | ----------- |
 | **MyApps.sln** | 方案檔的名稱。 |
 | **MyControls.csproj** | 要移植的 .NET Framework Windows Forms 控制項專案的名稱。 |
@@ -261,7 +261,7 @@ SolutionFolder
 
 如您所見，`<OutputType>` 節點已被刪除，編譯器預設會產生程式庫，而不是可執行檔。 `<AssemblyName>` 和 `<RootNamespace>` 已變更。 具體來說，`<RootNamespace>` 應符合您正在移植的 Windows Forms 控制項程式庫的命名空間。 最後，調整 `<Compile>` 和 `<EmbeddedResource>` 節點以指向要移植的 Windows Forms 控制項程式庫的資料夾。
 
-接下來，在主要的 .NET Core **myformscore.csproj**專案中，加入新的 .net Core Windows Forms 控制項程式庫的參考。 使用 Visual Studio 或 **SolutionFolder** 目錄中的 .NET Core CLI 新增參考：
+接下來，在主 .NET 核心**MyFormsCore.csproj**專案中，添加對新的 .NET 核心 Windows 表單控制項庫的引用。 使用 Visual Studio 或 **SolutionFolder** 目錄中的 .NET Core CLI 新增參考：
 
 ```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj
@@ -299,7 +299,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ## <a name="next-steps"></a>後續步驟
 
-- 瞭解[從 .NET Framework 到 .Net Core 的重大變更](../compatibility/fx-core.md)。
+- 瞭解[從 .NET 框架到 .NET 核心 的中斷更改](../compatibility/fx-core.md)。
 - 深入了解 [Windows 相容性套件][compat-pack]。
 - 觀看[有關移植](https://www.youtube.com/watch?v=upVQEUc_KwU) .NET Framework Windows Form 專案到 .NET Core 的影片。
 

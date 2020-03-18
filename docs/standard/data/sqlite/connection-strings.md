@@ -1,96 +1,96 @@
 ---
 title: 連接字串
 ms.date: 12/13/2019
-description: 連接字串支援的關鍵字和值。
+description: 支援的關鍵字和連接字串的值。
 ms.openlocfilehash: bb54d152bac62a86c2a49192cf678a745159164e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447010"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400446"
 ---
 # <a name="connection-strings"></a>連接字串
 
-連接字串是用來指定如何連接到資料庫。 在 Microsoft 中的連接字串會遵循標準[ADO.NET 語法](../../../framework/data/adonet/connection-strings.md)，做為關鍵字和值的分號分隔清單。
+連接字串用於指定如何連接到資料庫。 Microsoft.Data.Sqlite 中的連接字串遵循標準[ADO.NET語法](../../../framework/data/adonet/connection-strings.md)作為關鍵字和值的分號分隔清單。
 
 ## <a name="keywords"></a>關鍵字
 
-下列連接字串關鍵字可與 Microsoft 一起使用。 Sqlite：
+以下連接字串關鍵字可用於 Microsoft.Data.Sqlite：
 
 ### <a name="data-source"></a>資料來源
 
-資料庫檔案的路徑。 *DataSource* （不含空格）和*Filename*是此關鍵字的別名。
+資料庫檔案的路徑。 *資料來源*（沒有空格）和*檔案名*是此關鍵字的別名。
 
-SQLite 會對待相對於目前工作目錄的路徑。 也可以指定絕對路徑。
+SQLite 處理相對於當前工作目錄的路徑。 也可以指定絕對路徑。
 
-如果是**空**的，SQLite 會在關閉連線時，建立已刪除的暫存磁片資料庫。
+如果**為空**，SQLite 將創建一個臨時磁片資料庫，該資料庫在連接關閉時被刪除。
 
-如果 `:memory:`，則會使用記憶體內部資料庫。 如需詳細資訊，請參閱[記憶體內部資料庫](in-memory-databases.md)。
+如果`:memory:`使用 記憶體中資料庫。 有關詳細資訊，請參閱[記憶體中資料庫](in-memory-databases.md)。
 
-以 `|DataDirectory|` 替代字串開頭的路徑會被視為相對路徑。 如果設定，則會建立相對於 DataDirectory 應用程式域屬性值的路徑。
+以替換字串開頭的`|DataDirectory|`路徑與相對路徑相同。 如果設置，則根據 DataDirectory 應用程式域屬性值製作路徑。
 
-此關鍵字也支援[URI 檔案名](https://www.sqlite.org/uri.html)。
+此關鍵字還支援[URI 檔案名](https://www.sqlite.org/uri.html)。
 
-### <a name="mode"></a>Mode
+### <a name="mode"></a>[模式]
 
 連接模式。
 
-| {2&gt;值&lt;2}           | 描述                                                                                        |
+| 值           | 描述                                                                                        |
 | --------------- | -------------------------------------------------------------------------------------------------- |
-| ReadWriteCreate | 開啟資料庫進行讀取和寫入，如果不存在，則建立它。 這是預設設定。 |
-| ReadWrite       | 開啟資料庫進行讀取和寫入。                                                        |
-| ReadOnly        | 以唯讀模式開啟資料庫。                                                              |
-| 記憶體          | 開啟記憶體內部資料庫。                                                                       |
+| 讀取寫入創建 | 打開資料庫進行讀取和寫入，如果資料庫不存在，請創建它。 這是預設值。 |
+| 讀寫       | 打開用於讀取和寫入的資料庫。                                                        |
+| 唯讀        | 以唯讀模式打開資料庫。                                                              |
+| 記憶體          | 打開記憶體中資料庫。                                                                       |
 
 ### <a name="cache"></a>快取
 
-連接所使用的快取模式。
+連接使用的緩存模式。
 
-| {2&gt;值&lt;2}   | 描述                                                                                    |
+| 值   | 描述                                                                                    |
 | ------- | ---------------------------------------------------------------------------------------------- |
-| 預設值 | 使用基礎 SQLite 程式庫的預設模式。 這是預設設定。                   |
-| 私人 | 每個連接都會使用私用快取。                                                          |
-| [共用]  | 連接會共用快取。 此模式可以變更交易和表鎖定的行為。 |
+| 預設 | 使用基礎 SQLite 庫的預設模式。 這是預設值。                   |
+| Private | 每個連接都使用專用緩存。                                                          |
+| 共用  | 連接共用緩存。 此模式可以更改事務和表鎖定的行為。 |
 
 ### <a name="password"></a>密碼
 
-加密金鑰。 當指定時，會在開啟連接之後立即傳送 `PRAGMA key`。
+加密金鑰。 指定後，`PRAGMA key`將立即在打開連接後發送。
 
 > [!WARNING]
-> 當原生 SQLite 程式庫不支援加密時，Password 不會有任何作用。
+> 當本機 SQLite 庫不支援加密時，密碼不起作用。
 
 ### <a name="foreign-keys"></a>外部索引鍵
 
-值，指出是否啟用外鍵條件約束。
+指示是否啟用外鍵約束的值。
 
-| {2&gt;值&lt;2}   | 描述
+| 值   | 描述
 | ------- | --- |
-| True    | 在開啟連接之後立即傳送 `PRAGMA foreign_keys = 1`。
-| False   | 在開啟連接之後立即傳送 `PRAGMA foreign_keys = 0`。
-| (空白) | 不會傳送 `PRAGMA foreign_keys`。 這是預設設定。 |
+| True    | 打開`PRAGMA foreign_keys = 1`連接後立即發送。
+| False   | 打開`PRAGMA foreign_keys = 0`連接後立即發送。
+| (空白) | 不發送`PRAGMA foreign_keys`。 這是預設值。 |
 
-不需要啟用外鍵，如 e_sqlite3 中，SQLITE_DEFAULT_FOREIGN_KEYS 用來編譯原生 SQLite 程式庫。
+e_sqlite3 如果SQLITE_DEFAULT_FOREIGN_KEYS用於編譯本機 SQLite 庫，則無需啟用外鍵。
 
-### <a name="recursive-triggers"></a>遞迴觸發程式
+### <a name="recursive-triggers"></a>遞迴觸發器
 
-值，指出是否要啟用遞迴觸發程式。
+指示是否啟用遞迴觸發器的值。
 
-| {2&gt;值&lt;2} | 描述                                                                 |
+| 值 | 描述                                                                 |
 | ----- | --------------------------------------------------------------------------- |
-| True  | 在開啟連接之後立即傳送 `PRAGMA recursive_triggers`。 |
-| False | 不會傳送 `PRAGMA recursive_triggers`。 這是預設設定。              |
+| True  | 打開`PRAGMA recursive_triggers`連接後立即發送。 |
+| False | 不發送`PRAGMA recursive_triggers`。 這是預設值。              |
 
 ## <a name="connection-string-builder"></a>連接字串產生器
 
-您可以使用 <xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> 做為建立連接字串的強型別方式。 它也可以用來防止連接字串插入式攻擊。
+可以使用<xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder>作為創建連接字串的強型別方法。 它還可用於防止連接字串注入攻擊。
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_ConnectionStringBuilder)]
 
 ## <a name="examples"></a>範例
 
-### <a name="basic"></a>Basic
+### <a name="basic"></a>基本
 
-具有共用快取以改善並行的基本連接字串。
+具有共用緩存的基本連接字串，用於改進併發性。
 
 ```ConnectionString
 Data Source=Application.db;Cache=Shared
@@ -106,30 +106,30 @@ Data Source=Encrypted.db;Password=MyEncryptionKey
 
 ### <a name="read-only"></a>唯讀
 
-應用程式無法修改的唯讀資料庫。
+應用無法修改的唯讀資料庫。
 
 ```ConnectionString
 Data Source=Reference.db;Mode=ReadOnly
 ```
 
-### <a name="in-memory"></a>記憶體中
+### <a name="in-memory"></a>記憶體內
 
-私用記憶體內部資料庫。
+專用記憶體資料庫。
 
 ```ConnectionString
 Data Source=:memory:
 ```
 
-### <a name="sharable-in-memory"></a>可在記憶體中共用
+### <a name="sharable-in-memory"></a>可共用記憶體
 
-由可*共用*的名稱所識別的可共用記憶體內部資料庫。
+由名稱 *"可共用*"標識的可共用記憶體資料庫。
 
 ```ConnectionString
 Data Source=Sharable;Mode=Memory;Cache=Shared
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [ADO.NET 中的連接字串](../../../framework/data/adonet/connection-strings.md)
-* [記憶體內部資料庫](in-memory-databases.md)
-* [異動](transactions.md)
+* [記憶體中資料庫](in-memory-databases.md)
+* [交易](transactions.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何串連多個字串（C#指南）
+title: 如何串聯多個字串（C# 指南）
 description: 以下提供用 C# 串連字串的多種方式。 了解選項及做出不同選擇的原因。
 ms.date: 02/20/2018
 helpviewer_keywords:
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
 ms.openlocfilehash: 9a0640a7ce73fa8454442cd301157bf5c265f9de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713904"
 ---
-# <a name="how-to-concatenate-multiple-strings-c-guide"></a>如何串連多個字串（C#指南）
+# <a name="how-to-concatenate-multiple-strings-c-guide"></a>如何串聯多個字串（C# 指南）
 
-「串連」是將一個字串附加至另一個字串結尾的程序。 使用 `+` 運算子即可串連字串。 若是字串常值和字串常數，會在編譯時間進行串連；在非編譯時間不會發生串連。 若是字串變數，串連只會發生在執行階段。
+「串連」** 是將一個字串附加至另一個字串結尾的程序。 使用 `+` 運算子即可串連字串。 若是字串常值和字串常數，會在編譯時間進行串連；在非編譯時間不會發生串連。 若是字串變數，串連只會發生在執行階段。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -24,7 +24,7 @@ ms.locfileid: "75713904"
   
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
 
-若要串連字串變數，您可以使用 `+` 或 `+=` 運算子、[字串內插補點](../language-reference/tokens/interpolated.md)，或是 <xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.String.Concat%2A?displayProperty=nameWithType>、<xref:System.String.Join%2A?displayProperty=nameWithType> 或 <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType> 方法。 `+` 運算子簡單易用，且容易建立直覺化程式碼。 即使一個陳述式使用數個 `+` 運算子，字串內容也只會複製一次。 下列程式碼示範使用 `+` 和 `+=` 運算子來串連字串的範例：
+要串聯字串變數，可以使用`+`或`+=`運算子、[字串插值](../language-reference/tokens/interpolated.md)或<xref:System.String.Format%2A?displayProperty=nameWithType>、<xref:System.String.Concat%2A?displayProperty=nameWithType>或<xref:System.String.Join%2A?displayProperty=nameWithType><xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>方法。 `+` 運算子簡單易用，且容易建立直覺化程式碼。 即使一個陳述式使用數個 `+` 運算子，字串內容也只會複製一次。 下列程式碼示範使用 `+` 和 `+=` 運算子來串連字串的範例：
 
 [!code-csharp-interactive[combining strings using +](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#2)]  
 
@@ -41,7 +41,7 @@ ms.locfileid: "75713904"
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
-您可以閱讀更多有關[選擇字串串連或 `StringBuilder` 類別的原因](xref:System.Text.StringBuilder#StringAndSB)。
+您可以閱讀有關[選擇字串串聯`StringBuilder`或類的原因](xref:System.Text.StringBuilder#StringAndSB)的更多內容。
 
 從集合加入字串的另一個選項是使用 <xref:System.String.Concat%2A?displayProperty=nameWithType> 方法。 如果應該以分隔符號分隔來源字串，請使用 <xref:System.String.Join%2A?displayProperty=nameWithType> 方法。 下列程式碼會使用這兩種方法來結合文字陣列：
 
@@ -51,9 +51,9 @@ ms.locfileid: "75713904"
 
 [!code-csharp-interactive[string concatenation using LINQ expressions](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#6)]  
 
-您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
+您可以通過查看[GitHub 存儲庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的代碼來嘗試這些示例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.String>
 - <xref:System.Text.StringBuilder>

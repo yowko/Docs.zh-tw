@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Web Forms, event handling
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
 ms.openlocfilehash: 1f95fd0dcc12f2d4e47ee07e1e6bb15d91000f0f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124790"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>如何：使用 Web Form 應用程式中的事件
@@ -49,6 +49,6 @@ ASP.NET Web Form 應用程式中的常見使用情況是使用控制項填入網
   
 3. 在步驟 2 中定義的事件處理常式方法中加入程式碼，在事件發生時執行所需的任何動作。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [事件](../../../docs/standard/events/index.md)

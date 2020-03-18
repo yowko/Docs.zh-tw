@@ -1,36 +1,36 @@
 ---
-title: WCF 開發人員的 RPC gRPC 類型
-description: 瞭解 WCF 支援的遠端程序呼叫類型，以及它們在 gRPC 中的對等專案
+title: 適用于 WCF 開發人員的 RPC 類型 - gRPC
+description: 審查 WCF 支援的遠端程序呼叫的類型及其在 gRPC 中的等效調用
 ms.date: 09/02/2019
-ms.openlocfilehash: 58f097bac61395e6810155e8ae9a6bbf2219ec5e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: b9d4ce7cae693ed7904229483cbccfe3b299b640
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503438"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401680"
 ---
 # <a name="types-of-rpc"></a>RPC 類型
 
-身為 Windows Communication Foundation （WCF）開發人員，您可能會用來處理下列類型的遠端程序呼叫（RPC）：
+作為 Windows 通信基礎 （WCF） 開發人員，您可能習慣于處理以下類型的遠端程序呼叫 （RPC）：
 
-- 要求/回復
-- 雙面
-  - 使用會話的單向雙工
-  - 具有會話的全雙工
+- 請求/回復
+- 雙工：
+  - 帶會話的單向雙工
+  - 帶會話的全雙工
 - 單向
 
-您可以將這些 RPC 類型相當自然地對應到現有的 gRPC 概念。 本章將依次探討每個區域。 [第5章](migrate-wcf-to-grpc.md)將更深入探討類似的範例。
+可以自然地將這些 RPC 類型映射到現有的 gRPC 概念。 本章將依次介紹每個領域。 [第五章](migrate-wcf-to-grpc.md)將更深入地探討類似的例子。
 
 | WCF | gRPC |
 | --- | ---- |
-| 一般要求/回復 | 一元 (Unary) |
-| 具有使用用戶端回呼介面之會話的雙工服務 | 伺服器串流 |
-| 具有會話的全雙工服務 | 雙向串流 |
-| 單向作業 | 用戶端串流 |
+| 定期請求/回復 | 一元 (Unary) |
+| 使用用戶端回檔介面使用會話的雙工服務 | 伺服器流式處理 |
+| 帶會話的全雙工服務 | 雙向流式處理 |
+| 單向操作 | 用戶端流式處理 |
 
-## <a name="requestreply"></a>要求/回復
+## <a name="requestreply"></a>請求/回復
 
-針對採用並傳回少量資料的簡單要求/回復方法，請使用最簡單的 gRPC 模式（一元 RPC）。
+對於獲取和返回少量資料的簡單請求/回復方法，請使用最簡單的 gRPC 模式，即一元 RPC。
 
 ```protobuf
 service Things {
@@ -57,21 +57,21 @@ public async Task ShowThing(int thingId)
 }
 ```
 
-如您所見，執行 gRPC 一元 RPC 服務方法與執行 WCF 作業類似。 其差異在於，使用 gRPC 時，您會覆寫基類方法，而不是執行介面。 在伺服器上，gRPC 基底方法一律會傳回 <xref:System.Threading.Tasks.Task%601>，雖然用戶端同時提供非同步和封鎖方法來呼叫服務。
+如您所見，實現 gRPC 一元 RPC 服務方法類似于實現 WCF 操作。 區別在於，使用 gRPC，可以重寫基類方法，而不是實現介面。 在伺服器上，gRPC 基方法始終返回<xref:System.Threading.Tasks.Task%601>，儘管用戶端同時提供非同步和阻止方法來調用服務。
 
-## <a name="wcf-duplex-one-way-to-client"></a>WCF 雙工，一種用戶端
+## <a name="wcf-duplex-one-way-to-client"></a>WCF 雙工，用戶端的一種方式
 
-WCF 應用程式（具有特定系結）可以在用戶端與伺服器之間建立持續連線。 伺服器可以使用 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> 屬性中指定的*回呼介面*，以非同步方式將資料傳送至用戶端，直到關閉連接為止。
+WCF 應用程式（具有某些綁定）可以在用戶端和伺服器之間創建持久連接。 伺服器可以使用<xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>屬性中指定的*回檔介面*將資料非同步發送到用戶端，直到連接關閉。
 
-gRPC 服務提供與訊息資料流程類似的功能。 在執行方面，資料流程不會*完全*對應到 WCF 雙工服務，但您可以達到相同的結果。
+gRPC 服務提供與消息流類似的功能。 流在實現方面不會*精確*映射到 WCF 雙工服務，但您可以實現相同的結果。
 
-### <a name="grpc-streaming"></a>gRPC 串流
+### <a name="grpc-streaming"></a>gRPC 流式處理
 
-gRPC 支援從用戶端到伺服器，以及從伺服器到用戶端的持續性資料流程建立。 這兩種類型的資料流程可以同時為作用中。 這種功能稱為雙向串流。 
+gRPC 支援創建從用戶端到伺服器以及從伺服器到用戶端的持久流。 這兩種類型的流可以同時處於活動狀態。 此功能稱為雙向流式處理。
 
-您可以使用資料流程來處理一段時間的任意非同步訊息。 或者，您可以使用它們來傳遞太大的大型資料集，以便在單一要求或回應中產生和傳送。
+隨著時間的推移，您可以將流用於任意的非同步消息傳遞。 或者，您可以使用它們傳遞太大的大型資料集，無法生成和發送單個請求或回應。
 
-下列範例顯示伺服器資料流程 RPC。
+下面的示例顯示了伺服器流 RPC。
 
 ```protobuf
 service ClockStreamer {
@@ -96,7 +96,7 @@ public class ClockStreamerService : ClockStreamer.ClockStreamerBase
 }
 ```
 
-您可以從用戶端應用程式取用此伺服器資料流程，如下列程式碼所示：
+此伺服器流可以從用戶端應用程式使用，如以下代碼所示：
 
 ```csharp
 public async Task TellTheTimeAsync(CancellationToken token)
@@ -115,19 +115,19 @@ public async Task TellTheTimeAsync(CancellationToken token)
 ```
 
 > [!NOTE]
-> 伺服器串流處理 Rpc 適用于訂用帳戶樣式服務。 當大型資料集在記憶體中建立整個資料集沒有效率或無法完成時，它們也很有用。 不過，串流回應與在單一訊息中傳送 `repeated` 欄位的速度一樣快。 作為規則，串流不應用於小型資料集。
+> 伺服器流式處理中心對於訂閱樣式的服務很有用。 當在記憶體中構建整個資料集效率低下或不可能時，它們對於發送大型資料集也很有用。 但是，流式處理回應不如在一條消息中`repeated`發送欄位快。 通常，流式處理不應用於小型資料集。
 
-### <a name="differences-from-wcf"></a>WCF 的差異
+### <a name="differences-from-wcf"></a>與 WCF 的差異
 
-WCF 雙工服務使用的用戶端回呼介面可以有多個方法。 GRPC 伺服器串流服務只能透過單一資料流程傳送訊息。 如果您需要多個方法，請使用具有[任何欄位或欄位之一的](protobuf-any-oneof.md)訊息類型來傳送不同的訊息，並在用戶端中撰寫程式碼來處理它們。
+WCF 雙工服務使用用戶端回檔介面，該介面可以有多個方法。 gRPC 伺服器流服務只能通過單個流發送消息。 如果需要多種方法，請使用具有[Any 欄位或欄位之一](protobuf-any-oneof.md)的訊息類型發送不同的消息，並在用戶端中編寫代碼來處理它們。
 
-在 WCF 中，具有會話的[ServiceContract](xref:System.ServiceModel.ServiceContractAttribute)類別會保持運作，直到連接關閉為止。 可以在會話內呼叫多個方法。 在 gRPC 中，執行方法傳回的 `Task` 不應完成，直到連接關閉為止。
+在 WCF 中，具有會話[的服務合同](xref:System.ServiceModel.ServiceContractAttribute)類將保持活動狀態，直到連接關閉。 可以在會話中調用多種方法。 在 gRPC`Task`中，在關閉連接之前，實現方法返回的不應完成。
 
-## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>WCF 單向作業和 gRPC 用戶端串流
+## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>WCF 單向操作和 gRPC 用戶端流
 
-WCF 提供單向作業（以 `[OperationContract(IsOneWay = true)]`標記），其會傳回傳輸特定的通知。 gRPC 服務方法一律會傳迴響應，即使它是空的也一樣。 用戶端應該一律等待該回應。 如需 gRPC 中的「暫時訊息」模式，您可以建立用戶端串流服務。
+WCF 提供單向操作（標記為`[OperationContract(IsOneWay = true)]`），返回特定于傳輸的確認。 gRPC 服務方法始終返回回應，即使它為空。 用戶端應始終等待該回應。 對於 gRPC 中"即用即用"消息傳遞樣式，您可以創建用戶端流服務。
 
-### <a name="thing_logproto"></a>thing_log. proto
+### <a name="thing_logproto"></a>thing_log.proto
 
 ```protobuf
 service ThingLog {
@@ -158,7 +158,7 @@ public class ThingLogService : Protos.ThingLog.ThingLogBase
 }
 ```
 
-### <a name="thinglog-client-example"></a>ThingLog 用戶端範例
+### <a name="thinglog-client-example"></a>ThingLog 用戶端示例
 
 ```csharp
 public class ThingLogger : IAsyncDisposable
@@ -189,13 +189,13 @@ public class ThingLogger : IAsyncDisposable
 }
 ```
 
-您可以使用用戶端串流 Rpc 來進行引發和忘記的訊息，如先前範例所示。 您也可以使用它們將非常大型的資料集傳送至伺服器。 適用于效能的相同警告：對於較小的資料集，請在一般訊息中使用 `repeated` 欄位。
+您可以使用用戶端流 RPC 進行觸發和忘記消息傳遞，如上例所示。 您還可以使用它們向伺服器發送非常大的資料集。 相同的性能警告適用：對於較小的資料集，在`repeated`常規消息中使用欄位。
 
 ## <a name="wcf-full-duplex-services"></a>WCF 全雙工服務
 
-WCF 雙工系結支援服務介面和用戶端回呼介面上的多個單向作業。 這種支援可讓用戶端與伺服器之間進行進行中的交談。 gRPC 支援類似于雙向串流 Rpc 的專案，其中兩個參數都以 `stream` 修飾詞標記。
+WCF 雙工綁定支援在服務介面和用戶端回檔介面上執行多個單向操作。 這種支援允許用戶端和伺服器之間持續對話。 gRPC 支援與雙向流式處理 RPC 類似的內容，其中兩個參數`stream`都用修飾符標記。
 
-### <a name="chatproto"></a>聊天. proto
+### <a name="chatproto"></a>聊天.proto
 
 ```protobuf
 service Chatter {
@@ -228,9 +228,9 @@ public class ChatterService : Chatter.ChatterBase
 }
 ```
 
-在上述範例中，您可以看到執行方法會同時收到要求資料流程（`IAsyncStreamReader<MessageRequest>`）和回應資料流程（`IServerStreamWriter<MessageResponse>`）。 方法可以讀取和寫入訊息，直到連接關閉為止。
+在前面的示例中，您可以看到實現方法同時接收請求流 （`IAsyncStreamReader<MessageRequest>`） 和回應流 （`IServerStreamWriter<MessageResponse>`。 該方法可以讀取和寫入消息，直到連接關閉。
 
-### <a name="chatter-client"></a>Chatter 用戶端
+### <a name="chatter-client"></a>聊天用戶端
 
 ```csharp
 public class Chat : IAsyncDisposable
@@ -271,5 +271,5 @@ public class Chat : IAsyncDisposable
 ```
 
 >[!div class="step-by-step"]
->[上一頁](wcf-bindings.md)
->[下一頁](metadata.md)
+>[上一個](wcf-bindings.md)
+>[下一個](metadata.md)

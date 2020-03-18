@@ -12,18 +12,18 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: ccf3572df99f5c3de127c9ada690a977843648af
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 2017aade92e8d7ad2af7101a107122fa8d7b9e27
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238838"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847647"
 ---
 # <a name="--and---operators-c-reference"></a>- 及 -= 運算子 (C# 參考)
 
-內建[整數](../builtin-types/integral-numeric-types.md)和[浮點數](../builtin-types/floating-point-numeric-types.md)類型和[委派](../builtin-types/reference-types.md#the-delegate-type)類型都支援 `-` 和 `-=` 運算子。
+和`-``-=`運算子由內置[積分](../builtin-types/integral-numeric-types.md)和[浮點](../builtin-types/floating-point-numeric-types.md)數位類型和[委託](../builtin-types/reference-types.md#the-delegate-type)類型支援。
 
-如需算術 `-` 運算子的資訊，請參閱[算術運算子](arithmetic-operators.md#unary-plus-and-minus-operators)一文中的[一元加號和減號運算子](arithmetic-operators.md#subtraction-operator--)與[減法運算子 -](arithmetic-operators.md) 章節。
+如需算術 `-` 運算子的資訊，請參閱[算術運算子](arithmetic-operators.md)一文中的[一元加號和減號運算子](arithmetic-operators.md#unary-plus-and-minus-operators)與[減法運算子 -](arithmetic-operators.md#subtraction-operator--) 章節。
 
 ## <a name="delegate-removal"></a>委派移除
 
@@ -31,19 +31,19 @@ ms.locfileid: "78238838"
 
 - 如果兩個運算元都為非 Null，且右邊運算元的引動過程清單是左邊運算元之引動過程清單的適當連續子清單，則作業結果會是新引動過程清單藉由從左邊運算元之引動過程清單來移除右邊運算元的項目所取得。 如果右邊運算元清單與左邊運算元清單中的多個連續子清單相符，則只會移除最右邊的相符子清單。 如果移除導致空白清單，則結果是 `null`。
 
-  [!code-csharp-interactive[delegate removal](~/samples/snippets/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+  [!code-csharp-interactive[delegate removal](snippets/SubtractionOperator.cs#DelegateRemoval)]
 
 - 如果右邊運算元的引動過程清單不是左邊運算元之引動過程清單的適當連續子清單，則作業的結果會是左邊運算元。 例如，移除不屬於多點傳送委派的委派就不會執行任何動作，而且會導致多點傳送委派不變。
 
-  [!code-csharp-interactive[delegate removal with no effect](~/samples/snippets/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
+  [!code-csharp-interactive[delegate removal with no effect](snippets/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  上述範例也會示範在委派移除期間，系統會比較委派執行個體。 例如，從評估相同 [lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)所產生的委派不相等。 如需有關委派等號比較的詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/expressions.md#delegate-equality-operators)的[委派等號比較運算子](~/_csharplang/spec/introduction.md)一節。
+  上述範例也會示範在委派移除期間，系統會比較委派執行個體。 例如，從評估相同 [lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)所產生的委派不相等。 如需有關委派等號比較的詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[委派等號比較運算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)一節。
 
 - 如果左邊運算元是 `null`，則作業的結果是 `null`。 如果右邊運算元是 `null`，則作業的結果是左邊運算元。
 
-  [!code-csharp-interactive[delegate removal and null](~/samples/snippets/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
+  [!code-csharp-interactive[delegate removal and null](snippets/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-若要結合委派，請使用 [`+` 運算子](addition-operator.md#delegate-combination)。
+要合併委託，請使用[`+`運算子](addition-operator.md#delegate-combination)。
 
 如需委派型別的詳細資訊，請參閱[委派](../../programming-guide/delegates/index.md)。
 
@@ -65,9 +65,9 @@ x = x - y
 
 下列範例示範 `-=` 運算子的用法：
 
-[!code-csharp-interactive[-= examples](~/samples/snippets/csharp/language-reference/operators/SubtractionOperator.cs#SubtractAndAssign)]
+[!code-csharp-interactive[-= examples](snippets/SubtractionOperator.cs#SubtractAndAssign)]
 
-當您取消訂閱`-=`事件[時，您也會使用 ](../keywords/event.md) 來指定要移除的事件處理常式方法。 如需詳細資訊，請參閱[如何訂閱及取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+當您取消訂閱[事件](../keywords/event.md)時，您也會使用 `-=` 來指定要移除的事件處理常式方法。 有關詳細資訊，請參閱[如何訂閱和取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
@@ -75,7 +75,7 @@ x = x - y
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/expressions.md#unary-minus-operator)的[一元減號運算子](~/_csharplang/spec/expressions.md#subtraction-operator)與[減法運算子](~/_csharplang/spec/introduction.md)章節。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[一元減號運算子](~/_csharplang/spec/expressions.md#unary-minus-operator)與[減法運算子](~/_csharplang/spec/expressions.md#subtraction-operator)章節。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -83,4 +83,4 @@ x = x - y
 - [C# 運算子](index.md)
 - [事件](../../programming-guide/events/index.md)
 - [算術運算子](arithmetic-operators.md)
-- [ + 及 += 運算子](addition-operator.md)
+- [* 和 + 運算子](addition-operator.md)

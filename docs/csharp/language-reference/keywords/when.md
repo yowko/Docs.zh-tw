@@ -8,10 +8,10 @@ helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
 ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712828"
 ---
 # <a name="when-c-reference"></a>when (C# 參考)
@@ -23,7 +23,7 @@ ms.locfileid: "75712828"
 
 ## <a name="when-in-a-catch-statement"></a>`catch` 陳述式中的 `when`
 
-從 C# 6 開始，`when` 可以用於 `catch` 陳述式中，來指定必須符合才能執行特定例外狀況的處理常式的條件。 它的語法為：
+從 C# 6 開始，`when` 可以用於 `catch` 陳述式中，來指定必須符合才能執行特定例外狀況的處理常式的條件。 其語法如下：
 
 ```csharp
 catch (ExceptionType [e]) when (expr)
@@ -37,7 +37,7 @@ catch (ExceptionType [e]) when (expr)
 
 ## <a name="when-in-a-switch-statement"></a>`switch` 陳述式中的 `when`
 
-從 C# 7.0 開始，`case` 標籤不再需要互斥，而且 `case` 標籤在 `switch` 陳述式中的出現順序可以判斷要執行的 switch 區塊。 `when` 關鍵字可以用來指定篩選條件，使其相關聯的 case 標籤只有在篩選條件也是為 true 時才為 true。 它的語法為：
+從 C# 7.0 開始，`case` 標籤不再需要互斥，而且 `case` 標籤在 `switch` 陳述式中的出現順序可以判斷要執行的 switch 區塊。 `when` 關鍵字可以用來指定篩選條件，使其相關聯的 case 標籤只有在篩選條件也是為 true 時才為 true。 其語法如下：
 
 ```csharp
 case (expr) when (when-condition):
@@ -49,8 +49,8 @@ case (expr) when (when-condition):
 
 [!code-csharp[when-with-case#1](~/samples/snippets/csharp/language-reference/keywords/when/when.cs#1)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [switch 陳述式](switch.md)
+- [Switch 陳述式](switch.md)
 - [try/catch 陳述式](try-catch.md)
-- [try/catch/finally 陳述式](try-catch-finally.md)
+- [嘗試/捕獲/最後陳述](try-catch-finally.md)

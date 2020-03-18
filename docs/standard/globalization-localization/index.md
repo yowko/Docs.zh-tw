@@ -12,10 +12,10 @@ helpviewer_keywords:
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120890"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>全球化與當地語系化 .NET 應用程式
@@ -26,11 +26,11 @@ ms.locfileid: "73120890"
 
 這個步驟包含設計和撰寫文化特性中性和語言中性的應用程式程式碼，且該應用程式支援當地語系化使用者介面和所有使用者的區域資料。 這個步驟包含不是根據文化特性假設做出的設計和開發決策。 即使全球化的應用程式並未當地語系化，但是它的設計和撰寫方式讓後續能夠相對方便地進行一種或多種語言的當地語系化。
 
-[可當地語系化檢閱](localizability-review.md)
+[可當地語系化性審查](localizability-review.md)
 
 這個步驟包含檢閱應用程式的程式碼和設計，確保它可以輕鬆地當地語系化並識別當地語系化時可能發生的阻礙，以及確認應用程式的可執行碼與其資源分開。 如果全球化階段有效，則當地語系化能力檢閱將確認全球化期間所選擇的設計和編碼。 當地語系化能力階段也可能會找出任何其餘的問題，如此應用程式的原始程式碼就不需要在當地語系化階段進行修改。
 
-[當地語系化](localization.md)
+[定位](localization.md)
 
 這個步驟包含自訂特定文化特性或地區的應用程式。 如果已正確執行全球化和當地語系化能力的步驟，則當地語系化的主要工作就是轉譯使用者介面。
 
@@ -50,11 +50,11 @@ ms.locfileid: "73120890"
 
 討論建立世界通用應用程式的第一個階段，包括設計和撰寫文化特性中性和語言中性之應用程式的程式碼。
 
-[可當地語系化檢閱](localizability-review.md)
+[可當地語系化性審查](localizability-review.md)
 
 討論建立當地語系化應用程式的第二個階段，包括識別當地語系化過程中可能遭遇到的阻礙。
 
-[當地語系化](localization.md)
+[定位](localization.md)
 
 討論建立當地語系化應用程式的最後一個階段，包括自訂特定區域或文化特性的應用程式使用者介面。
 
@@ -66,7 +66,7 @@ ms.locfileid: "73120890"
 
 說明進行全球化、當地語系化和開發世界性的 ASP.NET 的最佳實施方針。
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 - <xref:System.Globalization?displayProperty=nameWithType> 命名空間
 

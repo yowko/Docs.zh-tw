@@ -1,15 +1,15 @@
 ---
-title: 如何從檔案系統填入 XML 樹狀結構（C#）
+title: 如何從檔案系統 （C#） 填充 XML 樹
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
 ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345788"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>如何從檔案系統填入 XML 樹狀結構（C#）
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>如何從檔案系統 （C#） 填充 XML 樹
 XML 樹狀的常用與實用應用為當做階層式名稱/值資料存放區使用。 您可以利用階層式資料填入 XML 樹狀結構，然後進行查詢、轉換，並在必要時，進行序列化。 在這個使用案例中，許多 XML 專用語意 (Semantics) (例如，命名空間與空白字元行為) 都不重要。 反之，您會使用 XML 樹狀當做記憶體中的小型單一使用者階層式資料庫。  
   
 ## <a name="example"></a>範例  

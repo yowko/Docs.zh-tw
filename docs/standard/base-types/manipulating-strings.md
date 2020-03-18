@@ -7,16 +7,16 @@ helpviewer_keywords:
 - manipulating strings
 ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
 ms.openlocfilehash: 5188c4f1099aad486e921dfba0c6c4216613ba4e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73135223"
 ---
 # <a name="manipulating-strings-in-net"></a>在 .NET 中操作字串
 .NET 提供大量的常式集合，讓您能夠有效率建立、比較和修改字串，並迅速剖析大量文字和資料以搜尋、移除和取代文字模式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)  
  檢查 .NET 中的字串排序、比較與大小寫方法，並提供選取字串處理方法的建議。  
   

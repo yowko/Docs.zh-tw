@@ -21,10 +21,10 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 ms.openlocfilehash: ac034ff37b0b39f41d6f58381286706f9a9ac602
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121707"
 ---
 # <a name="net-regular-expressions"></a>.NET 規則運算式
@@ -95,7 +95,7 @@ ms.locfileid: "73121707"
   
 |||  
 |-|-|  
-|`\$`|在輸入字串中尋找單獨出現的貨幣符號 (`$`)。 規則運算式模式字串包含反斜線，表示貨幣符號要解譯為字面意義，而不是規則運算式錨點。 （`$` 符號本身會指出正則運算式引擎應該嘗試在字串結尾處開始比對）。為了確保目前文化特性的貨幣符號不會誤譯為正則運算式符號，此範例會呼叫 <xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> 方法來將字元轉義。|  
+|`\$`|在輸入字串中尋找單獨出現的貨幣符號 (`$`)。 規則運算式模式字串包含反斜線，表示貨幣符號要解譯為字面意義，而不是規則運算式錨點。 （僅`$`符號就表示正則運算式引擎應嘗試在字串末尾開始其匹配。為了確保目前範圍性的貨幣符號不會被誤解為正則運算式符號，該示例調用<xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType>方法以逸出字元。|  
 |`\s*`|尋找出現零或多次的空格字元。|  
 |`[-+]?`|尋找出現一或多次的正號或負號。|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|此運算式外面括號將其定義成擷取群組或子運算式。 如果找到相符項目，從 <xref:System.Text.RegularExpressions.Group> 屬性傳回之 <xref:System.Text.RegularExpressions.GroupCollection> 物件中的第二個 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件，擷取此部分比對字串的相關資訊。 (集合中的第一個項目代表整個比對。)|  
@@ -109,14 +109,14 @@ ms.locfileid: "73121707"
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|Title|描述|  
 |-----------|-----------------|  
-|[規則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)|提供您可以用來定義規則運算式之字元、運算子和建構組合的資訊。|  
-|[規則運算式物件模型](the-regular-expression-object-model.md)|提供資訊和程式碼範例，說明如何使用規則運算式類別。|  
-|[規則運算式行為的詳細資訊](details-of-regular-expression-behavior.md)|提供 .NET 規則運算式之功能和行為的相關資訊。|  
+|[正則運算式語言 - 快速參考](regular-expression-language-quick-reference.md)|提供您可以用來定義規則運算式之字元、運算子和建構組合的資訊。|  
+|[正則運算式物件模型](the-regular-expression-object-model.md)|提供資訊和程式碼範例，說明如何使用規則運算式類別。|  
+|[正則運算式行為的詳細資訊](details-of-regular-expression-behavior.md)|提供 .NET 規則運算式之功能和行為的相關資訊。|  
 |[規則運算式範例](regular-expression-examples.md)|提供程式碼範例，以說明規則運算式的一般用法。|  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
  [規則運算式 - 快速參考 (以 Word 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  

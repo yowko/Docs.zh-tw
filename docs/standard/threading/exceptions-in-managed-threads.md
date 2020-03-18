@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159646"
 ---
 # <a name="exceptions-in-managed-threads"></a>Managed 執行緒中的例外狀況
@@ -23,7 +23,7 @@ ms.locfileid: "78159646"
   
  通用語言執行平台針對用於控制程式流程的特定未處理例外狀況提供了防護網︰  
   
-- 因為呼叫了 <xref:System.Threading.ThreadAbortException>，而導致執行緒中擲回 <xref:System.Threading.Thread.Abort%2A>。  
+- 因為呼叫了 <xref:System.Threading.Thread.Abort%2A>，而導致執行緒中擲回 <xref:System.Threading.ThreadAbortException>。  
   
 - 因為正在卸載執行緒執行所在的應用程式定義域，而在執行緒中擲回 <xref:System.AppDomainUnloadedException>。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "78159646"
   
 - 執行緒集區執行緒上不會有未處理的例外狀況。 當工作擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後將執行緒傳回到執行緒集區。  
   
-- 使用 <xref:System.Threading.Thread.Start%2A> 類別的 <xref:System.Threading.Thread> 方法建立的執行緒上不會有未處理例外狀況之類的項目。 在此種執行緒上執行的程式碼擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後正常終止執行緒。  
+- 使用 <xref:System.Threading.Thread> 類別的 <xref:System.Threading.Thread.Start%2A> 方法建立的執行緒上不會有未處理例外狀況之類的項目。 在此種執行緒上執行的程式碼擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後正常終止執行緒。  
   
 - 完成項執行緒上不會有未處理的例外狀況。 當完成項擲回未處理的例外狀況時，執行平台會將例外狀況堆疊追蹤列印到主控台，然後允許完成項執行緒繼續執行完成項。  
   
@@ -78,4 +78,4 @@ ms.locfileid: "78159646"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)
+- [託管執行緒基礎知識](../../../docs/standard/threading/managed-threading-basics.md)

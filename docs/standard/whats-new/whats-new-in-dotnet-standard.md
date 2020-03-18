@@ -5,17 +5,17 @@ ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76921063"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard 的新功能
 
 .NET Standard 是定義 API 的版本集正式規格，必須能在遵守該版本標準的 .NET 實作中取得。 .NET Standard 是以程式庫開發人員為目標。 以 .NET Standard 版本為目標的程式庫可以用於任何支援該標準的版本之 .NET Framework、.NET Core 或 Xamarin 實作。
 
-.NET Standard 的最新版本為 2.0。 它隨附于 .NET Core 2.0 SDK，以及已安裝 .NET Core 工作負載的 Visual Studio 2017 15.3 版。
+.NET Standard 的最新版本為 2.0。 它包含在 .NET Core 2.0 SDK 以及安裝了 .NET Core 工作負載的 Visual Studio 2017 版本 15.3 中。
 
 ## <a name="supported-net-implementations"></a>支援的 .NET 實作
 
@@ -59,17 +59,17 @@ ms.locfileid: "76921063"
 
 ### <a name="support-for-visual-basic"></a>Visual Basic 的支援
 
-您現在可以在 Visual Basic 中開發 .NET Standard 程式庫。 針對使用已安裝 .NET Core 工作負載之 Visual Studio 2017 15.3 版或更新版本的 Visual Basic 開發人員，Visual Studio 現在包含 .NET Standard 類別庫範本。 對於使用其他開發工具和環境的 Visual Basic 開發人員，您可以使用 [dotnet new](../../core/tools/dotnet-new.md) 命令來建立 .NET Standard 程式庫專案。 如需詳細資訊，請參閱 [.NET Standard 程式庫的工具支援](#tooling-support-for-net-standard-libraries)。
+您現在可以在 Visual Basic 中開發 .NET Standard 程式庫。 對於使用 Visual Studio 2017 版本 15.3 或更高版本安裝了 .NET Core 工作負載的 Visual 基本開發人員，Visual Studio 現在包括 .NET 標準類庫範本。 對於使用其他開發工具和環境的 Visual Basic 開發人員，您可以使用 [dotnet new](../../core/tools/dotnet-new.md) 命令來建立 .NET Standard 程式庫專案。 如需詳細資訊，請參閱 [.NET Standard 程式庫的工具支援](#tooling-support-for-net-standard-libraries)。
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard 程式庫的工具支援
 
-隨著 .NET Core 2.0 和 .NET Standard 2.0 的發行，Visual Studio 2017 和[.NET Core CLI](../../core/tools/index.md)都包含建立 .NET Standard 程式庫的工具支援。
+隨著 .NET Core 2.0 和 .NET 標準 2.0 的發佈，Visual Studio 2017 和[.NET 核心 CLI](../../core/tools/index.md)都包含了創建 .NET 標準庫的工具支援。
 
-如果您安裝包含 **.NET Core 跨平台開發**工作負載的 Visual Studio，就可以使用專案範本來建立 .NET Standard 2.0 程式庫專案，如下圖所示：
+如果安裝具有 **.NET Core 跨平臺開發工作負載的**Visual Studio，則可以使用專案範本創建 .NET 標準 2.0 庫專案，如下圖所示：
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 ![新增 .NET Standard 程式庫專案](./media/std-project-cs.png)
 
@@ -79,7 +79,7 @@ ms.locfileid: "76921063"
 dotnet new classlib
 ```
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 ![新增 .NET Standard 程式庫專案](./media/std-project-vb.png)
 
@@ -91,7 +91,7 @@ dotnet new classlib -lang vb
 
 ---
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Standard](../net-standard.md)
 - [.NET Standard 簡介](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)

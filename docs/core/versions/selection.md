@@ -5,11 +5,11 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450995"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398822"
 ---
 # <a name="select-the-net-core-version-to-use"></a>選取要使用的 .NET Core 版本
 
@@ -38,7 +38,7 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 
 在罕見的情況下，您可能需要使用舊版的 SDK。 您可以在 [*global.json* 檔案](../tools/global-json.md)中指定該版本。 「使用最新版」原則表示您只會使用 *global.json* 指定比最新安裝版本更早的 .NET Core SDK 版本。
 
-*global.json* 可能放在檔案階層中的任何地方。 CLI 會從專案目錄向上搜尋，以找到第一個 *global.json*。 您可以根據指定的 *global.json* 在檔案系統中的位置，來控制其所套用的專案。 .NET CLI 會從目前的工作目錄向上反覆巡覽路徑，以搜尋 *global.json* 檔案。 第一個找到的 *global.json* 檔案指定所使用的版本。 如果已安裝該 SDK 版本，則會使用該版本。 如果找不到在*global.asax*中指定的 sdk，則 .net CLI 會使用比對[規則](../tools/global-json.md#matching-rules)來選取相容的 sdk，如果找不到，則會失敗。
+*global.json* 可能放在檔案階層中的任何地方。 CLI 會從專案目錄向上搜尋，以找到第一個 *global.json*。 您可以根據指定的 *global.json* 在檔案系統中的位置，來控制其所套用的專案。 .NET CLI 會從目前的工作目錄向上反覆巡覽路徑，以搜尋 *global.json* 檔案。 第一個找到的 *global.json* 檔案指定所使用的版本。 如果安裝了該 SDK 版本，則使用該版本。 如果未找到*全域.json*中指定的 SDK，則 .NET CLI 使用[匹配規則](../tools/global-json.md#matching-rules)來選擇相容的 SDK，如果未找到，則失敗。
 
 下列範例示範 *global.json* 語法：
 
@@ -54,9 +54,9 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 
 1. `dotnet` 會從目前的工作目錄向上反覆反向巡覽路徑，以搜尋 *global.json* 檔案。
 1. `dotnet` 使用第一個找到的 *global.json* 中指定的 SDK。
-1. 如果找不到 `dotnet`global.json *，* 會使用最新安裝的 SDK。
+1. 如果找不到 *global.json*，`dotnet` 會使用最新安裝的 SDK。
 
-您可以在 [global.json](../tools/global-json.md#matching-rules) 一文的*比對規則*一節中，深入了解如何選取 SDK 版本。
+您可以在 *global.json* 一文的[比對規則](../tools/global-json.md#matching-rules)一節中，深入了解如何選取 SDK 版本。
 
 ## <a name="target-framework-monikers-define-build-time-apis"></a>目標 Framework Moniker 定義建置時間 API
 
@@ -78,7 +78,7 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 
 ## <a name="framework-dependent-apps-roll-forward"></a>架構相依應用程式向前復原
 
-當您使用 [`dotnet run`](../tools/dotnet-run.md) 從來源執行應用程式、使用 [ 從](../deploying/index.md#publish-runtime-dependent)[架構相依部署`dotnet myapp.dll`](../tools/dotnet.md#description)執行應用程式，或使用 [ 從架構相依可執行檔](../deploying/index.md#publish-runtime-dependent)`myapp.exe`執行應用程式時，`dotnet` 可執行檔會是該應用程式的**主機**。
+當您使用 從 源使用[`dotnet run`](../tools/dotnet-run.md)運行應用程式時，使用 從[`dotnet myapp.dll`](../tools/dotnet.md#description)與 的框架[**相關的部署**](../deploying/index.md#publish-runtime-dependent)運行應用程式，或者從`myapp.exe`與`dotnet`的[**與 框架相關的可執行檔**](../deploying/index.md#publish-runtime-dependent)運行應用程式時，可執行檔是應用程式的**主機**。
 
 該主機會選擇電腦上最新安裝的修補程式版本。 例如，如果您在專案檔中指定 `netcoreapp2.0`，且 `2.0.4` 是最新安裝的 .NET 執行階段，則會使用 `2.0.4` 執行階段。
 
@@ -97,7 +97,7 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 2. 執行時，未安裝 2.0.* 版，但已安裝 2.2.2。 則會使用 2.2.2 版。
 3. 稍後，使用者會安裝 2.0.5 並再次執行應用程式，則現在會使用 2.0.5。
 
-2\.0.5 和 2.2.2 的行為可能不同，特別是針對序列化二進位資料等案例。
+2.0.5 和 2.2.2 的行為可能不同，特別是針對序列化二進位資料等案例。
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>獨立部署包含選取的執行階段
 
@@ -113,4 +113,4 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 <RuntimeFrameworkVersion>2.0.4</RuntimeFrameworkVersion>
 ```
 
-`RuntimeFrameworkVersion` 項目會覆寫預設版本原則。 針對獨立部署，`RuntimeFrameworkVersion` 會指定「確切」的執行階段架構版本。 針對架構相依應用程式，`RuntimeFrameworkVersion` 會指定所需的「最低」執行階段架構版本。
+`RuntimeFrameworkVersion` 項目會覆寫預設版本原則。 針對獨立部署，`RuntimeFrameworkVersion` 會指定「確切」** 的執行階段架構版本。 針對架構相依應用程式，`RuntimeFrameworkVersion` 會指定所需的「最低」** 執行階段架構版本。

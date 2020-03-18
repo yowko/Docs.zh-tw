@@ -3,16 +3,16 @@ title: .NET Compiler Platform SDK 概念和物件模型
 description: 這個概觀提供有效率地使用 .NET 編譯器 SDK 所需的背景。 您將學習 API 層、所含的主要類型和整體物件模型。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: ee8f902bf1df8b63e229fd518e7a0c592fcd47ca
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675702"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156957"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>了解 .NET Compiler Platform SDK 模型
 
-編譯器會處理您遵循結構化規則所撰寫的程式碼，而結構化規則通常與人們閱讀和了解程式碼的方式不同。 編譯器所使用模型的基本了解務必了解您在建置 Roslyn 工具時所使用的 API。 
+編譯器會處理您遵循結構化規則所撰寫的程式碼，而結構化規則通常與人們閱讀和了解程式碼的方式不同。 編譯器所使用模型的基本了解務必了解您在建置 Roslyn 工具時所使用的 API。
 
 ## <a name="compiler-pipeline-functional-areas"></a>編譯器管線功能區域
 
@@ -30,7 +30,7 @@ ms.locfileid: "57675702"
 
 每個編譯器都會將這些元件一起合併為單一端對端整體。
 
-這些 API 與 Visual Studio 使用的相同。 例如，概述和格式化功能的程式碼會使用語法樹狀結構、物件瀏覽器和導覽功能會使用符號表、重構和 [移至定義] 使用語意模型，而 [編輯後繼續] 會使用所有這些項目 (包含發出 API)。 
+這些 API 與 Visual Studio 使用的相同。 例如，概述和格式化功能的程式碼會使用語法樹狀結構、物件瀏覽器和導覽功能會使用符號表、重構和 [移至定義] 使用語意模型，而 [編輯後繼續] 會使用所有這些項目 (包含發出 API)。
 
 ## <a name="api-layers"></a>API 層
 

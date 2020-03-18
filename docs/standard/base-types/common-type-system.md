@@ -17,11 +17,11 @@ helpviewer_keywords:
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 ms.openlocfilehash: c574719da9b89b468b92b042e1f2b5b10fbe3c0d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159321"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79400488"
 ---
 # <a name="common-type-system"></a>一般類型系統
 一般型別系統定義如何在 Common Language Runtime 中宣告、使用和管理型別，同時也是執行階段支援跨語言整合中很重要的一部分。 一般型別系統可執行下列功能：  
@@ -38,11 +38,11 @@ ms.locfileid: "78159321"
   
 - [.NET 中的類型](#types_in_the_net_framework)  
   
-- [型別定義](#type_definitions)  
+- [類型定義](#type_definitions)  
   
-- [型別成員](#type_members)  
+- [類型成員](#type_members)  
   
-- [類型成員的特性](#characteristics_of_type_members)  
+- [類型成員的特徵](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>
 ## <a name="types-in-net"></a>.NET 中的類型  
@@ -54,7 +54,7 @@ ms.locfileid: "78159321"
   
  .NET 中的一般型別系統支援下列五種型別：  
   
-- [類別](#Classes)  
+- [類](#Classes)  
   
 - [結構](#Structures)  
   
@@ -72,14 +72,14 @@ ms.locfileid: "78159321"
   
 |特性|描述|  
 |--------------------|-----------------|  
-|密封|指定無法從這個型別衍生出其他類別。|  
-|implements|指出類別會以提供介面成員實作的方式來使用一個或多個介面。|  
+|sealed|指定無法從這個型別衍生出其他類別。|  
+|實作|指出類別會以提供介面成員實作的方式來使用一個或多個介面。|  
 |abstract|表示這個類別無法執行個體化。 若要使用這個特性，必須從它衍生出其他類別。|  
 |繼承|指出類別的執行個體可用於已指定基底類別 (Base Class) 的任何位置。 從基底類別繼承的衍生類別可以使用基底類別所提供的任何公用成員實作，或者衍生類別可以利用本身的實作來覆寫公用成員的實作。|  
 |exported 或 not exported|指出是否可在定義類別的組件中看見類別。 這項特性僅適用於最上層類別，並不適用於巢狀類別。|  
   
 > [!NOTE]
-> 類別也可以透過巢狀方式置於父類別或結構中。 巢狀類別也具有成員特性。 如需詳細資訊，請參閱[巢狀型別](#NestedTypes)。  
+> 類別也可以透過巢狀方式置於父類別或結構中。 巢狀類別也具有成員特性。 有關詳細資訊，請參閱[巢狀型別](#NestedTypes)。  
   
  沒有實作的類別成員是抽象成員。 有一個或多個抽象成員的類別本身就是抽象的；所以無法建立它的新執行個體。 有些以執行階段為目標的語言即使沒有任何抽象的成員，也允許您將類別標記為抽象。 當您需要封裝一組衍生類別在適當時可繼承或覆寫的基本功能時，可以使用抽象類別 (Abstract Class)。 非抽象的類別即稱為實體類別 (Concrete Class)。  
   
@@ -215,7 +215,7 @@ ms.locfileid: "78159321"
   
  然而，大部分語言會對型別名稱強制執行其他限制。 所有比較都是以位元組為基礎，因此會區分大小寫，而且與地區設定無關 (Locale-Independent)。  
   
- 雖然型別可能會參考其他模組和組件中的型別，但是型別必須在一個 .NET 模組中完整定義 （不過，視編譯器支援而定，它可以分割成多個原始程式碼檔案）。類型名稱在命名空間中必須是唯一的。 若要能完整辨認型別，必須以包含型別實作的命名空間來限定型別名稱。  
+ 雖然型別可能會參考其他模組和組件中的型別，但是型別必須在一個 .NET 模組中完整定義 （但是，根據編譯器支援，它可以劃分為多個原始程式碼檔。類型名稱必須僅在命名空間內是唯一的。 若要能完整辨認型別，必須以包含型別實作的命名空間來限定型別名稱。  
   
 ### <a name="base-types-and-interfaces"></a>基底型別和介面  
  型別可繼承其他型別的數值和行為。 一般型別系統不允許型別繼承一個以上的基底型別。  
@@ -226,7 +226,7 @@ ms.locfileid: "78159321"
 ## <a name="type-members"></a>型別成員  
  執行階段允許您定義能夠指定型別行為與狀態的型別成員。 型別成員包含下列：  
   
-- [欄位](#Fields)  
+- [領域](#Fields)  
   
 - [屬性](#Properties)  
   
@@ -236,7 +236,7 @@ ms.locfileid: "78159321"
   
 - [事件](#Events)  
   
-- [巢狀類型](#NestedTypes)  
+- [巢狀型別](#NestedTypes)  
   
 <a name="Fields"></a>
 ### <a name="fields"></a>欄位  
@@ -276,7 +276,7 @@ ms.locfileid: "78159321"
   
 <a name="Events"></a>
 ### <a name="events"></a>事件  
- 事件 (Event) 會定義可以回應的事件 (Incident)，並且定義用於訂閱、取消訂閱和產生事件 (Event) 的方法。 事件通常是用來通知其他型別有狀態變更。 如需詳細資訊，請參閱 [Events](../../../docs/standard/events/index.md)。  
+ 事件 (Event) 會定義可以回應的事件 (Incident)，並且定義用於訂閱、取消訂閱和產生事件 (Event) 的方法。 事件通常是用來通知其他型別有狀態變更。 如需詳細資訊，請參閱[事件](../../../docs/standard/events/index.md)。  
   
 <a name="NestedTypes"></a>
 ### <a name="nested-types"></a>巢狀類型  
@@ -298,7 +298,7 @@ ms.locfileid: "78159321"
 |常值|欄位|指定給欄位的數值是在編譯時間得知的內建實值型別的固定值。 常值 (Literal) 欄位有時候也稱為常數。|  
 |newslot 或 override|全部|定義成員與具有相同簽章的繼承成員之間的互動方式：<br /><br /> newslot<br /> 隱藏具有相同簽章的繼承成員。<br /><br /> override<br /> 取代繼承虛擬方法的定義。<br /><br /> 預設值為 newslot。|  
 |靜態|欄位、方法、屬性和事件|成員屬於定義於其上的型別，而非屬於特定的型別執行個體；即使沒有建立型別執行個體，成員仍然存在，而且供型別的所有執行個體共用。|  
-|虛擬|方法、屬性和事件|方法可由衍生型別實作，而且可以用靜態或動態方式叫用。 如果使用動態引動，在執行時期進行呼叫的執行個體型別會決定呼叫哪一個方法實作，而不是由編譯時間得知的型別決定。 若要用靜態方式叫用虛擬方法，可能必須將變數轉型為使用方法所需版本的型別。|  
+|virtual|方法、屬性和事件|方法可由衍生型別實作，而且可以用靜態或動態方式叫用。 如果使用動態引動，在執行時期進行呼叫的執行個體型別會決定呼叫哪一個方法實作，而不是由編譯時間得知的型別決定。 若要用靜態方式叫用虛擬方法，可能必須將變數轉型為使用方法所需版本的型別。|  
   
 ### <a name="overloading"></a>多載化  
  每一個型別成員都具有唯一 (Unique) 的簽章。 方法簽章包含方法名稱和參數清單 (方法引數的順序和型別)。 只要簽章不相同，就可以在型別中定義具有相同名稱的多個方法。 定義兩個或多個具有相同名稱的方法時，就說這個方法是多載。 例如在 <xref:System.Char?displayProperty=nameWithType> 中，會多載 <xref:System.Char.IsDigit%2A> 方法。 其中一個方法採用 <xref:System.Char>， 另一個方法則採用 <xref:System.String> 與 <xref:System.Int32>。  
