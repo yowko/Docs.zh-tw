@@ -1,0 +1,246 @@
+### YamlMime:Hub
+title: .NET 文件
+summary: 學習如何在執行 C#、Visual Basic 及 F# 的平台上，使用 .NET 建立應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
+brand: dotnet
+metadata:
+  title: .NET 文件
+  description: 學習如何在執行 C#、Visual Basic 及 F# 的平台上，使用 .NET 建立應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
+  ms.product: dotnet
+  ms.topic: hub-page
+  ms.collection: collection
+  author: BillWagner
+  ms.author: wiwagn
+  ms.date: 12/19/2019
+  ms.openlocfilehash: 6b23ab2f0214f23d45499fcf8ab7c3f2771be15c
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.translationtype: HT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 03/16/2020
+  ms.locfileid: "79416323"
+highlightedContent:
+  items:
+  - title: C# 簡介。 快速互動式開始。
+    itemType: get-started
+    url: csharp/tutorials/intro-to-csharp/hello-world.yml
+  - title: 建立您的第一個主控台應用程式。
+    itemType: tutorial
+    url: core/get-started.md
+  - title: 建立您的第一個 Web 應用程式。
+    itemType: learn
+    url: https://dotnet.microsoft.com/learn/aspnet/hello-world-tutorial/intro
+  - title: .NET 文件中的新功能
+    itemType: whats-new
+    url: whats-new/index.yml
+conceptualContent:
+  title: .NET：可用。 跨平台。 開放原始碼。
+  summary: 此開發人員平台可讓您建置所有的應用程式，包括網路應用程式、行動應用程式、傳統型應用程式、遊戲應用程式、IoT 應用程式等等。 Windows、Linux 及 macOS 皆可支援。
+  items:
+  - title: 開放原始碼 .NET
+    summary: 了解 .NET Core
+    links:
+    - url: core/index.md
+      itemType: overview
+      text: .NET Core 概觀
+    - url: core/whats-new/dotnet-core-3-1.md
+      itemType: whats-new
+      text: .NET Core 3.1 的新功能
+    - url: standard/tour.md
+      itemType: overview
+      text: .NET 教學課程
+    - url: core/deploying/index.md
+      itemType: deploy
+      text: 部署 .NET Core 應用程式
+    - url: core/docker/build-container.md
+      itemType: tutorial
+      text: 使用 Docker 將 .NET Core 應用程式容器化
+    - url: core/tutorials/index.md
+      itemType: tutorial
+      text: 教學課程
+  - title: .NET 概念
+    summary: 了解 .NET 的基本概念
+    links:
+    - url: https://channel9.msdn.com/Series/NET-Core-101/What-is-NET
+      itemType: video
+      text: 什麼是 .NET？
+    - url: standard/index.md
+      itemType: overview
+      text: .NET 概觀
+    - url: standard/net-standard.md
+      itemType: overview
+      text: .NET Standard
+    - url: /aspnet/core/
+      itemType: overview
+      text: ASP.NET Core
+    - url: /ef/core/
+      itemType: overview
+      text: Entity Framework Core
+    - url: standard/get-started.md
+      itemType: get-started
+      text: 開始使用
+    - url: standard/components.md
+      itemType: concept
+      text: .NET 架構元件
+    - url: framework/index.md
+      itemType: overview
+      text: .NET Framework (Windows) 應用程式
+  - title: 開發 .NET 應用程式
+    summary: 開始使用 .NET 開發
+    links:
+    - url: core/sdk.md
+      itemType: download
+      text: 下載 .NET Core SDK
+    - url: core/tools/index.md
+      itemType: overview
+      text: .NET Core CLI 概觀
+    - url: core/porting/index.md
+      itemType: how-to-guide
+      text: 從 .NET Framework 移植到 .NET Core
+    - url: core/compatibility/index.md
+      itemType: concept
+      text: .NET Core 中斷變更
+    - url: desktop-wpf/overview/index.md
+      itemType: overview
+      text: 建立適用於 Windows 的 .NET Core 傳統型應用程式
+    - url: standard/library-guidance/index.md
+      itemType: concept
+      text: 開放原始碼程式庫指南
+  - title: .NET 架構指南
+    summary: 閱讀 .NET 的基礎開發與架構指南
+    links:
+    - url: architecture/microservices/index.md
+      itemType: architecture
+      text: .NET 微服務：容器化 .NET 應用程式的架構
+    - url: architecture/modern-web-apps-azure/index.md
+      itemType: architecture
+      text: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
+    - url: architecture/containerized-lifecycle/index.md
+      itemType: architecture
+      text: 採用 Microsoft 平台與工具容器化之 Docker 應用程式的生命週期
+    - url: architecture/modernize-with-azure-containers/index.md
+      itemType: architecture
+      text: 使用 Azure 雲端及 Windows 容器現代化現有的 .NET 應用程式
+    footerLink:
+      url: architecture/index.yml
+      text: 所有架構指南
+tools:
+  title: 程式語言
+  summary: 您可以使用 C#、F#或 Visual Basic 撰寫 .Net 應用程式。
+  items:
+  - title: C 系列最新型物件導向型別安全的成員
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Csharp.svg
+    url: csharp/index.yml
+  - title: .NET 的功能性程式設計語言
+    imageSrc: https://docs.microsoft.com/media/logos/logo_Fsharp.svg
+    url: fsharp/index.yml
+  - title: 一套清晰易懂，易於接受的語言
+    imageSrc: https://docs.microsoft.com/media/logos/logo_VB.svg
+    url: visual-basic/index.yml
+additionalContent:
+  sections:
+  - title: 建立您的應用程式
+    summary: 網路應用程式、行動應用程式、傳統型應用程式、遊戲應用程式、IoT 應用程式等等，任君選擇。
+    items:
+    - title: Web
+      links:
+      - url: /aspnet/core/getting-started
+        text: 建立您的第一個 Web 應用程式
+      - url: /aspnet/core/tutorials
+        text: ASP.NET Core 教學課程
+      - url: /aspnet/core
+        text: 什麼是 ASP.NET Core？
+      - url: /aspnet/core/tutorials/first-mvc-app/start-mvc
+        text: Visual Studio 中的 ASP.NET Core
+      - url: /aspnet/mvc/overview/deployment/docker-aspnetmvc
+        text: Windows 容器中的 ASP.NET MVC 應用程式
+      - url: /aspnet/core/blazor/
+        text: Blazor：採用.NET 的互動式用戶端 Web UI
+    - title: 雲端原生與微服務
+      links:
+      - url: /dotnet/azure/
+        text: 適用於 .NET 的 Azure 文件
+      - url: /azure/storage
+        text: 存放裝置
+      - url: /dotnet/fsharp/using-fsharp-on-azure/
+        text: 在 Azure 上使用 F#
+      - url: architecture/serverless/index.md
+        text: 無伺服器應用程式：架構、模式和 Azure 實作
+      - url: architecture/microservices/index.md
+        text: .NET 微服務：容器化 .NET 應用程式的架構
+    - title: 行動訊息
+      links:
+      - url: /xamarin/ios/
+        text: Xamarin.iOS
+      - url: /xamarin/android
+        text: Xamarin.Android
+      - url: /xamarin/xamarin-forms
+        text: Xamarin.Forms
+    - title: 桌面
+      links:
+      - url: /uwp
+        text: 通用 Windows 應用程式
+      - url: desktop-wpf/index.md
+        text: Windows Presentation Foundation (.NET Core)
+      - url: framework/wpf/index.md
+        text: Windows Presentation Foundation (.NET Framework)
+      - url: framework/winforms/index.md
+        text: Windows Forms
+      - url: /xamarin/mac
+        text: 適用於 macOS 的 Xamarin
+    - title: 遊戲
+      links:
+      - url: https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link
+        text: 使用 Visual Studio 開發遊戲
+      - url: https://docs.cryengine.com/display/CEPROG/C%23+Programming
+        text: 了解如何使用 CRYENGINE 與 C# 建置遊戲
+      - url: http://www.monogame.net/documentation/?page=main
+        text: 使用 MonoGame 程式庫與 C# 建置遊戲
+      - url: https://docs.unity3d.com/Manual/index.html
+        text: 了解如何使用 Unity 與 C# 建置 2D 及 3D 遊戲
+    - title: 機器學習與 AI
+      links:
+      - url: machine-learning/index.yml
+        text: 使用 ML.NET 建置自訂的 AI 解決方案
+      - url: /azure/cognitive-services/
+        text: Azure 認知服務
+      - url: /azure/machine-learning
+        text: Azure Machine Learning
+      - url: spark/index.yml
+        text: .NET for Apache Spark
+    - title: 物聯網 (IoT)
+      links:
+      - url: https://channel9.msdn.com/Shows/On-NET/IoT-support-for-NET-Core
+        text: 在 .NET 上：了解 .NET Core 如何支援 IoT
+      - url: https://docs.microsoft.com/archive/msdn-magazine/2019/august/net-core-cross-platform-iot-programming-with-net-core-3-0
+        text: 使用 .NET Core 3.0 在不同平台上設計 IoT 程式
+      - url: https://github.com/dotnet/iot
+        text: .NET Core IoT 程式庫
+      - url: https://www.nuget.org/packages/System.Device.Gpio
+        text: System.Device.Gpio NuGet 套件
+  - title: API 參考章節
+    summary: 依照您的需要搜尋 .NET API 參考文件。
+    items:
+    - title: .NET Core API 參考
+      summary: .NET Core 的 API 參考文件
+      url: https://docs.microsoft.com/dotnet/api/?view=netcore-3.1
+    - title: .NET Framework API 參考
+      summary: .NET Framework 的 API 參考文件
+      url: https://docs.microsoft.com/dotnet/api/?view=netframework-4.8
+    - title: ASP.NET Core API 參考
+      summary: ASP.NET Core 的 API 參考文件
+      url: https://docs.microsoft.com/dotnet/api/?view=aspnetcore-3.1
+    - title: ML.NET API 參考
+      summary: ML.NET 的 API 參考文件
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+    - title: .NET for Apache Spark API 參考
+      summary: .NET for Apache Spark 的 API 參考文件
+      url: https://docs.microsoft.com/dotnet/api/?view=spark-dotnet
+    - title: C# 語言參考
+      summary: C# 語言參考與規格
+      url: csharp/language-reference/index.md
+    - title: F# 語言參考
+      summary: F# 語言參考
+      url: fsharp/language-reference/index.md
+    - title: Visual Basic 語言參考
+      summary: Visual Basic 語言參考與規格
+      url: visual-basic/language-reference/index.md
+  footer: 參與 .NET 文件。請參閱 [參與者指南](https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md)(英文)。

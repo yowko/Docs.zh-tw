@@ -136,8 +136,6 @@
           href: implement-resilient-applications/implement-retries-exponential-backoff.md
         - name: 實作具有恢復功能的 Entity Framework Core SQL 連接
           href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
-        - name: 使用指數輪詢探索自訂 HTTP 呼叫重試
-          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
         - name: 使用 HttpClientFactory 實作復原 HTTP 要求
           href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
         - name: 使用 Polly 以指數輪詢實作 HTTP 呼叫重試
