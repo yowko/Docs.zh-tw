@@ -1,15 +1,15 @@
 ---
-title: 如何尋找具有特定子專案的元素（C#）
+title: 如何查找具有特定子項目 （C#） 的元素
 ms.date: 07/20/2015
 ms.assetid: 00cf5555-374e-4369-bf93-7bd2e7f21db3
 ms.openlocfilehash: 0536b1b92d4d7fc18b5d406bbcd24aefc6a840c6
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141141"
 ---
-# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>如何尋找具有特定子專案的元素（C#）
+# <a name="how-to-find-an-element-with-a-specific-child-element-c"></a>如何查找具有特定子項目 （C#） 的元素
 本主題顯示如何利用特定的值尋找具有子項目的特定項目。  
   
 ## <a name="example"></a>範例  
@@ -57,9 +57,9 @@ foreach (XElement el in tests)
 0006  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
-- [投影作業 (C#)](./projection-operations.md)
+- [投射作業 (C#)](./projection-operations.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 5565f37c9cfd8cb84c07f9ecc6f6c2edf8c66c61
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ae8741e2f29db0a470ad8d3b121375fbdeaff0d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714758"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170191"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>物件和集合初始設定式 (C# 程式設計手冊)
 
@@ -22,7 +22,7 @@ C# 可讓您具現化物件或集合，並以單一陳述式執行成員指派�
   
 [!code-csharp[ObjectInitializer1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#CatDeclaration)]  
 [!code-csharp[ObjectInitializer1a](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ObjectPropertyInitialization)]  
- 
+
 物件初始設定式語法可讓您建立執行個體，然後將新建立的物件及其指派的屬性指派給指派作業中的變數。
 
 從 C# 6 開始，物件初始設定式除了指派欄位和屬性，還可以設定索引子。 請考慮此基本 `Matrix` 類別：
@@ -57,13 +57,13 @@ public string this[char c, int i] {  set { ... }; }
 
 ## <a name="object-initializers-with-anonymous-types"></a>具有匿名類型的物件初始設定式
 
-雖然物件初始化運算式可以用於任何內容中，但它們在 LINQ 查詢運算式中特別有用。 查詢運算式經常使用[匿名型別](./anonymous-types.md)，此型別只能使用物件初始設定式初始化，如下列宣告所示。  
+儘管物件初始化器可用於任何上下文，但它們在 LINQ 查詢運算式中特別有用。 查詢運算式經常使用[匿名型別](./anonymous-types.md)，此型別只能使用物件初始設定式初始化，如下列宣告所示。  
 
 ```csharp
 var pet = new { Age = 10, Name = "Fluffy" };  
 ```
 
-匿名型別可讓 LINQ 查詢運算式中的 `select` 子句將原始序列的物件轉換成物件，其值和圖形可能與原始的不同。 如果您只要儲存序列中每個物件的部分資訊，這就會很實用。 在下列範例中，假設產品物件 (`p`) 包含許多欄位和方法，而您只想要建立包含產品名稱和單價的物件序列。  
+匿名型別使`select`LINQ 查詢運算式中的子句能夠將原始序列的物件轉換為其值和形狀可能與原始物件不同的物件。 如果您只要儲存序列中每個物件的部分資訊，這就會很實用。 在下列範例中，假設產品物件 (`p`) 包含許多欄位和方法，而您只想要建立包含產品名稱和單價的物件序列。  
   
 [!code-csharp[ObjectInitializer3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#AnonymousUse)]  
 
@@ -102,7 +102,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
 [!code-csharp[DictionaryInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryIndexerInitializer)]  
 
-上述範例會產生呼叫 <xref:System.Collections.Generic.Dictionary%602.Item(%600)> 以設定值的程式碼。 在C# 6 之前，您可以使用下列語法來初始化字典和其他關聯的容器。 請注意，它會使用具有多個值的物件，而不是使用括弧和指派的索引子語法：
+上述範例會產生呼叫 <xref:System.Collections.Generic.Dictionary%602.Item(%600)> 以設定值的程式碼。 在 C# 6 之前，可以使用以下語法初始化字典和其他關聯容器。 請注意，它會使用具有多個值的物件，而不是使用括弧和指派的索引子語法：
 
 [!code-csharp[DictionaryAddInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#DictionaryAddInitializer)]  
 
@@ -122,8 +122,8 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
 
 [!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [C# 中的 LINQ](../../linq/index.md)
-- [匿名類型](anonymous-types.md)
+- [匿名型別](anonymous-types.md)

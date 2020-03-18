@@ -4,23 +4,23 @@ description: 了解 .NET Core SDK 相關資訊，這是用來建立 .NET Core �
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
 ms.openlocfilehash: c2723e0e28c889f91f79ea3c0b26aa38f69fb41c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157462"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK 概觀
 
 .NET Core SDK 是可讓開發人員建立 .NET Core 應用程式與程式庫的一組程式庫與工具。 其中包含用來建置並執行應用程式的下列元件：
 
-- .NET Core CLI。
+- .NET 核心 CLI。
 - .NET core 程式庫和執行階段。
-- `dotnet`[驅動程式](tools/index.md#driver)。
+- `dotnet`[司機](tools/index.md#driver).
 
 ## <a name="acquiring-the-net-core-sdk"></a>取得 .NET Core SDK
 
-擁有任何工具時，第一件事都是要將工具安裝到電腦上。 視您的案例而定，您可以使用下列方法之一安裝 SDK：
+使用任何工具時，第一件事都是要取得適合電腦的工具。 視您的案例而定，您可以使用下列方法之一安裝 SDK：
 
 - 使用原生的安裝程式。
 - 使用安裝 Shell 指令碼。
@@ -29,11 +29,11 @@ ms.locfileid: "78157462"
 
 另一方面，安裝指令碼不需要系統管理權限。 不過，它們也不會在電腦上安裝任何必要條件；您需要手動安裝所有必要條件。 指令碼大部分用於設定組建伺服器，或您想要安裝工具但沒有系統管理權限時 (請確實注意上述先決條件警告)。 您可在[安裝指令碼參考](tools/dotnet-install-script.md)一文中取得需詳細資訊。 如對如何在 CI 組建伺服器上設定 SDK 有興趣，請參閱[在持續整合 (CI) 中使用 .NET Core SDK 和工具](tools/using-ci-with-cli.md)一文。
 
-根據預設，SDK 會以「並存」（SxS）的方式安裝，這表示單一電腦上的任何指定時間都可以共存多個版本。 如需了解執行 CLI 命令時如何挑選版本的詳細說明，請參閱[選取要使用的 .NET Core 版本](versions/selection.md)一文。
+預設情況下，SDK 以"並排"（SxS） 方式安裝，這意味著多個版本可以在一台電腦上的任意給定時間共存。 如需了解執行 CLI 命令時如何挑選版本的詳細說明，請參閱[選取要使用的 .NET Core 版本](versions/selection.md)一文。
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Core CLI 總覽](tools/index.md)
+- [.NET 核心 CLI 概述](tools/index.md)
 - [.NET Core 版本控制概觀](versions/index.md)
-- [如何移除 .NET Core 執行階段和 SDK](versions/remove-runtime-sdk-versions.md)
+- [如何刪除 .NET 核心運行時和 SDK](versions/remove-runtime-sdk-versions.md)
 - [選取要使用的 .NET Core 版本](versions/selection.md)

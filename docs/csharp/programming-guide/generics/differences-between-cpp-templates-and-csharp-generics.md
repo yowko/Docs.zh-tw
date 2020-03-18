@@ -5,10 +5,10 @@ helpviewer_keywords:
 - generics [C#], vs. C++ templates
 ms.assetid: 1da6beeb-d4a4-4da0-87b7-0cfbe04920b7
 ms.openlocfilehash: e44f67353410c58c406620109270972df17f9f86
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75703529"
 ---
 # <a name="differences-between-c-templates-and-c-generics-c-programming-guide"></a>C++ 樣板和 C# 泛型之間的差異 (C# 程式設計手冊)
@@ -32,7 +32,7 @@ C# 泛型和 C++ 範本都是支援參數化型別的語言功能。 不過，�
   
 - C++ 允許不適用於範本中所有型別參數的程式碼，接著檢查用作型別參數的特定類型。 C# 需要撰寫類別中的程式碼，因此，將會使用符合條件約束的任何類型。 例如，在 C++ 中，可以撰寫在型別參數的物件上使用算術運算子 `+` 和 `-` 的函式，這樣會在使用不支援這些運算子的類型來具現化範本時產生錯誤。 C# 不允許這項作業；允許的唯一語言建構是可從條件約束推算的語言建構。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [泛型簡介](./index.md)

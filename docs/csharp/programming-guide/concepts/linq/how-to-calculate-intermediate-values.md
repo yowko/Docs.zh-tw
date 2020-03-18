@@ -1,15 +1,15 @@
 ---
-title: 如何計算中繼值（C#）
+title: 如何計算中間值 （C#）
 ms.date: 07/20/2015
 ms.assetid: 7fd3001f-f8f9-4bce-879f-d4c7af8a04fe
 ms.openlocfilehash: 3ead3bfb02f7c9192db96996c1f1e01a86a4191a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141443"
 ---
-# <a name="how-to-calculate-intermediate-values-c"></a>如何計算中繼值（C#）
+# <a name="how-to-calculate-intermediate-values-c"></a>如何計算中間值 （C#）
 這個範例顯示如何計算可用於排序、篩選與選取的中繼值。  
   
 ## <a name="example"></a>範例  

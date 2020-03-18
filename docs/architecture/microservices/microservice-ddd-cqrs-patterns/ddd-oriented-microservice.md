@@ -3,11 +3,11 @@ title: 設計 DDD 導向微服務
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 DDD 導向的訂購微服務及其應用程式層的設計。
 ms.date: 10/08/2018
 ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739973"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401694"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>設計 DDD 導向微服務
 
@@ -37,13 +37,13 @@ ms.locfileid: "73739973"
 
 圖 7-5 顯示分層設計在 eShopOnContainer 應用程式中的實作方式。
 
-![顯示領域驅動設計微服務中之圖層的圖表。](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
+![顯示域驅動設計微服務中的圖層的圖表。](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
 **圖 7-5**. eShopOnContainers 訂購微服務中的 DDD 層
 
 訂購等 DDD 微服務中的三層。 每一層都是 VS 專案：應用程式層是 Ordering.API、領域層是 Ordering.Domain，而基礎結構層是 Ordering.Infrastructure。 您會希望將系統設計成每一個層都只會跟特定的其他層通訊。 若層是作為不同的類別程式庫實作的，這會比較容易強制執行，因為您可以清楚的識別程式庫之間設定了哪些相依性。 例如，領域模型層不應該相依於任何其他的層 (領域模型類別應為簡單的 CLR 物件 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 類別)。 如圖 7-6 所示，**Ordering.Domain** 層程式庫只在 .NET Core 程式庫或 NuGet 套件上具有相依性，在任何其他自訂程式庫 (例如資料程式庫或永續性程式庫) 上則不具有相依性。
 
-![排序的螢幕擷取畫面。網域相依性。](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
+![排序.域依賴項的螢幕截圖。](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **圖 7-6**。 作為程式庫實作的層允許對層之間的相依性進行更佳的控制
 
@@ -85,7 +85,7 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 
 因此，您的層或類別庫及專案最後應相依於您的領域模型層 (程式庫)，而不是反過來也一樣，如圖 7-7 所示。
 
-![此圖顯示 DDD 服務層之間存在的相依性。](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
+![顯示 DDD 服務層之間存在依賴項的關係圖。](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
 
 **圖 7-7**。 DDD 中層之間的相依性
 
@@ -93,15 +93,15 @@ DDD 服務中的相依性，應用程式層相依於領域和基礎結構，基�
 
 #### <a name="additional-resources"></a>其他資源
 
-- **DevIQ。持續性無知原則** \
+- **德維克持久性無知原則** \
   <https://deviq.com/persistence-ignorance/>
 
-- **Oren Eini。基礎結構無知** \
+- **奧倫·艾尼基礎設施無知** \
   <https://ayende.com/blog/3137/infrastructure-ignorance>
 
-- **天使 Lopez。領域導向設計中的分層架構** \
+- **安琪爾·洛佩茲域驅動設計中的分層體系結構** \
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
->[上一頁](cqrs-microservice-reads.md)
->[下一頁](microservice-domain-model.md)
+>[上一個](cqrs-microservice-reads.md)
+>[下一個](microservice-domain-model.md)

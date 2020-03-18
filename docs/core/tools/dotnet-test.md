@@ -2,16 +2,16 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 02/27/2020
-ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bac2f0e613c34bc9f657551a5eac4038207a93ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157007"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847894"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-**本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
+**本文適用于：✔️** .NET 核心 2.1 SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -20,11 +20,13 @@ ms.locfileid: "78157007"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
-    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
-    [--filter] [-l|--logger] [--no-build] [--no-restore]
-    [-o|--output] [-r|--results-directory] [-s|--settings]
-    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT> | <SOLUTION>]
+    [-a|--test-adapter-path] [--blame] [-c|--configuration]
+    [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [--interactive] [-l|--logger] [--no-build] [--nologo]
+    [--no-restore] [-o|--output] [-r|--results-directory]
+    [--runtime] [-s|--settings] [-t|--list-tests]
+    [-v|--verbosity] [[--] <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
@@ -39,9 +41,9 @@ dotnet test [-h|--help]
 
 ## <a name="arguments"></a>引數
 
-- **`PROJECT`**
+- **`PROJECT | SOLUTION`**
 
-  測試專案的路徑。 如果未指定，則會預設為目前目錄。
+  測試專案或解決方案的路徑。 如果未指定，則會預設為目前目錄。
 
 ## <a name="options"></a>選項。
 
@@ -51,9 +53,9 @@ dotnet test [-h|--help]
 
 - **`-blame`**
 
-  在歸責模式下執行測試。 此選項有助於隔離導致測試主控制項損毀的問題測試。 它會以 *Sequence.xml* 的形式在目前目錄中建立一個輸出檔，用來擷取損毀前的測試執行順序。
+  在歸責模式下執行測試。 此選項有助於隔離導致測試主機崩潰的問題測試。 它會以 *Sequence.xml* 的形式在目前目錄中建立一個輸出檔，用來擷取損毀前的測試執行順序。
 
-- **`c|--configuration {Debug|Release}`**
+- **`c|--configuration <CONFIGURATION>`**
 
   定義組建組態。 預設值是 `Debug`，但您的專案組態無法覆寫這個預設的 SDK 設定。
 
@@ -77,17 +79,25 @@ dotnet test [-h|--help]
 
   印出命令的簡短說明。
 
+- **`--interactive`**
+
+  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供。
+
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
   指定測試結果的記錄器。
 
 - **`--no-build`**
 
-  不會在執行前建置測試專案。 它也會以隱含方式設定-`--no-restore` 旗標。
+  不會在執行前建置測試專案。 它還隱式設置 -`--no-restore`標誌。
+
+- **`--nologo`**
+
+  在不顯示 Microsoft 測試平臺橫幅的情況下運行測試。 自 .NET Core 3.0 SDK 起提供。
 
 - **`--no-restore`**
 
-  執行命令時，不會執行隱含的還原。
+  執行命令時，不會執行隱含還原。
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -96,6 +106,10 @@ dotnet test [-h|--help]
 - **`-r|--results-directory <PATH>`**
 
   要放置測試結果的目錄。 如果指定的目錄不存在，則會建立該目錄。
+
+- **`--runtime <RUNTIME_IDENTIFIER>`**
+
+  要測試的目標運行時。
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
@@ -109,13 +123,13 @@ dotnet test [-h|--help]
 
   設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
 
-- `RunSettings` 引數
+- `RunSettings`參數
 
-  引數會當做測試的 `RunSettings` 設定來傳遞。 指定為 "-- " 後 (注意 -- 後方的空格) 之 `[name]=[value]` 組的引數。 空格適用來分隔多個 `[name]=[value]` 組。
+  參數作為`RunSettings`測試的配置傳遞。 指定為 "-- " 後 (注意 -- 後方的空格) 之 `[name]=[value]` 組的引數。 空格適用來分隔多個 `[name]=[value]` 組。
 
   範例： `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  如需詳細資訊，請參閱[vstest：傳遞 .runsettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
+  有關詳細資訊，請參閱[vstest.console.exe： 傳遞回合設定 args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 
 ## <a name="examples"></a>範例
 
@@ -161,7 +175,7 @@ dotnet test [-h|--help]
 
 `<value>` 為字串。 所有的查閱皆不區分大小寫。
 
-沒有 `<operator>` 的運算式會自動被視為 `contains` 屬性上的 `FullyQualifiedName` (例如，`dotnet test --filter xyz` 等同於 `dotnet test --filter FullyQualifiedName~xyz`)。
+沒有 `<operator>` 的運算式會自動被視為 `FullyQualifiedName` 屬性上的 `contains` (例如，`dotnet test --filter xyz` 等同於 `dotnet test --filter FullyQualifiedName~xyz`)。
 
 運算式可以使用條件運算子聯結：
 
@@ -176,5 +190,5 @@ dotnet test [-h|--help]
 
 ## <a name="see-also"></a>另請參閱
 
-- [架構與目標](../../standard/frameworks.md)
+- [框架和目標](../../standard/frameworks.md)
 - [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)

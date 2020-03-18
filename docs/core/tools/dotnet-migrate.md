@@ -3,15 +3,15 @@ title: dotnet migrate 命令
 description: dotnet migrate 命令會移轉專案及其所有相依性。
 ms.date: 02/14/2020
 ms.openlocfilehash: 6148048c469c43320cc4459352fd2fb62f101740
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503705"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**本文適用于：** ✔️ .net CORE 2.x SDK
+**本文適用于：✔️** .NET 核心 2.x SDK
 
 ## <a name="name"></a>名稱
 
@@ -26,18 +26,18 @@ dotnet migrate [-h|--help]
 
 ## <a name="description"></a>描述
 
-此命令已被取代。 從 .NET Core 3.0 SDK 開始，不再提供 `dotnet migrate` 命令。 它只能將 Preview 2 .NET Core 專案遷移至不支援的 1.x .NET Core 專案。
+此命令已棄用。 該`dotnet migrate`命令從 .NET Core 3.0 SDK 開始不再可用。 它只能將預覽 2 .NET Core 專案遷移到 1.x .NET Core 專案，該專案已表示支援。
 
 根據預設，命令會移轉根專案和根專案包含的任何專案參考。 可以在執行階段使用 `--skip-project-references` 選項停用此行為。
 
 可針對下列資產進行移轉：
 
-* 指定要移轉之 *project.json* 檔案的單一專案。
-* 於 *global.json* 檔案中指定的所有目錄，方法是傳遞 *global.json* 檔案的路徑。
+* 通過指定要遷移*的專案.json*檔，創建單個專案。
+* 通過將路徑傳遞到*global.json*檔，在*全域.json*檔中指定的所有目錄。
 * *solution.sln* 檔案，移轉方案參考的專案。
 * 指定之目錄的所有子目錄，以遞迴方式進行。
 
-`dotnet migrate` 命令會在 *目錄 (若目錄不存在則會建立) 中保留移轉的*project.json`backup` 檔案。 使用 `--skip-backup` 選項會覆寫此行為。
+`dotnet migrate` 命令會在 `backup` 目錄 (若目錄不存在則會建立) 中保留移轉的 *project.json* 檔案。 使用 `--skip-backup` 選項會覆寫此行為。
 
 根據預設，移轉作業會將移轉程序的狀態輸出到標準輸出 (STDOUT)。 如果使用 `--report-file <REPORT_FILE>` 選項，則輸出會儲存到指定的檔案。
 
@@ -76,7 +76,7 @@ dotnet migrate [-h|--help]
 
 `--skip-backup`
 
-成功移轉後，略過將 *project.json*、*global.json* 和 *\*.xproj* 移動至 `backup` 目錄。
+成功遷移後，將移動*專案.json、global.json*和*global.json*`backup`*\*.xproj*移到目錄中。
 
 `-t|--template-file <TEMPLATE_FILE>`
 

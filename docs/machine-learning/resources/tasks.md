@@ -3,19 +3,19 @@ title: 機器學習工作
 description: 探索 ML.NET 中支援的各種不同機器學習工作與相關的工作。
 ms.date: 12/23/2019
 ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745109"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399200"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET 中的機器學習工作
 
-機器學習工作是根據所詢問的問題或問題，以及可用的資料，進行預測或推斷的類型。 例如，分類工作會將資料指派給類別目錄，而叢集工作會根據相似性將資料分組。
+機器學習任務是根據所問的問題或問題以及可用資料進行的預測或推理的類型。 例如，分類任務將資料分配給類別，而群集任務根據相似性對資料進行分組。
 
-機器學習工作會依賴資料中的模式，而不是明確地進行設計。
+機器學習任務依賴于資料中的模式，而不是顯式程式設計。
 
-本文說明您可以在 ML.NET 中選擇的不同機器學習工作，以及一些常見的使用案例。
+本文介紹了在ML.NET和一些常見用例中可以選擇的不同機器學習任務。
 
 一旦您決定哪一個工作適用於您的案例，您就必須選擇最佳演算法來訓練模型。 每個工作的區段中列出了可用的演算法。
 
@@ -26,7 +26,7 @@ ms.locfileid: "76745109"
 * [理解 Twitter 評論的情感](../tutorials/sentiment-analysis.md)是「正面」還是「負面」。
 * 診斷病患是否有某種疾病。
 * 決定是否要將電子郵件標示為「垃圾郵件」。
-* 判斷相片是否包含特定專案，例如狗或水果。
+* 確定照片是否包含特定物品，如狗或水果。
 
 如需詳細資訊，請參閱維基百科上的[二元分類](https://en.wikipedia.org/wiki/Binary_classification) \(英文\) 一文。
 
@@ -54,7 +54,7 @@ ms.locfileid: "76745109"
 輸入標籤資料行資料必須是 <xref:System.Boolean>。
 輸入特徵資料行資料必須是 <xref:System.Single> 的固定大小向量。
 
-這些訓練人員會輸出下列資料行：
+這些培訓師輸出以下列：
 
 | 輸出資料行名稱 | 資料行類型 | 描述|
 | -- | -- | -- |
@@ -97,7 +97,7 @@ ms.locfileid: "76745109"
 | 輸出名稱 | 類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> 的向量 | 所有類別的分數。 較高值表示落入相關聯類別的機率較高。 若第 i 個項目具有最大值，則預測標籤索引將會是 i。 請注意，i 是以零為基礎的索引。 |
-| `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型 | 預測標籤的索引。 若其值是 i，則實際標籤可能會是索引鍵/值輸入標籤類型中的第 i 個類別。 |
+| `PredictedLabel` | [鍵](xref:Microsoft.ML.Data.KeyDataViewType)類型 | 預測標籤的索引。 若其值是 i，則實際標籤可能會是索引鍵/值輸入標籤類型中的第 i 個類別。 |
 
 ## <a name="regression"></a>迴歸
 
@@ -154,7 +154,7 @@ ms.locfileid: "76745109"
 | 輸出名稱 | 類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> 的向量 | 指定資料點到所有叢集幾何中心的距離 |
-| `PredictedLabel` | [key](xref:Microsoft.ML.Data.KeyDataViewType) 類型 | 由模型所預測最接近的叢集索引。 |
+| `PredictedLabel` | [鍵](xref:Microsoft.ML.Data.KeyDataViewType)類型 | 由模型所預測最接近的叢集索引。 |
 
 ## <a name="anomaly-detection"></a>異常偵測
 
@@ -186,7 +186,7 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 | 輸出名稱 | 類型 | 描述|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 由異常偵測模型所計算之非負數且沒有限制的分數 |
-| `PredictedLabel` | <xref:System.Boolean> | True/false 值，表示輸入是否為異常（PredictedLabel = true）或不是（PredictedLabel = false） |
+| `PredictedLabel` | <xref:System.Boolean> | 表示輸入是否為異常（預測Label=true）的真/假值（預測Label=false） |
 
 ## <a name="ranking"></a>次序
 
@@ -223,10 +223,10 @@ PCA 是以機器學習所建立的技術，經常用於探索資料分析，因�
 
 ## <a name="forecasting"></a>預測
 
-預測工作會使用過去的時間序列資料來預測未來的行為。 適用于預測的案例包括氣象預測、季節性銷售預測和預測性維護。
+預測任務使用過去的時間序列資料來預測未來的行為。 適用于預測的方案包括天氣預報、季節性銷售預測和預測維護，
 
-### <a name="forecasting-trainers"></a>預測講師
+### <a name="forecasting-trainers"></a>預測培訓師
 
-您可以使用下列演算法來定型預測模型：
+您可以使用以下演算法訓練預測模型：
 
 <xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>

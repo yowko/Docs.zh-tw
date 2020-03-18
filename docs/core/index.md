@@ -1,19 +1,19 @@
 ---
 title: .NET Core 指南
-description: .NET Core 是適用于建立 Windows、Linux 和 macOS 應用程式的模組化、高效能的 .NET 執行。 了解 .NET Core 以開始使用。
+description: .NET Core 是 .NET 的模組化高性能實現，用於創建 Windows、Linux 和 macOS 應用。 了解 .NET Core 以開始使用。
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: 3db98d21a7cdc80d8a98b23782a81ffa37520937
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75740754"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
-[.NET Core](about.md) 是[開放原始碼](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)的一般用途開發平台，由 Microsoft 與 [GitHub](https://github.com/dotnet/core) 上的 .NET 社群共同維護。 它可以跨平台支援 Windows、macOS 與 Linux，並可用於建置裝置、雲端與 IoT 應用程式。
+[.NET Core](about.md)是一個[開源](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)的通用開發平臺，由微軟和[GitHub](https://github.com/dotnet/core)上的 .NET 社區維護。 它可以跨平台支援 Windows、macOS 與 Linux，並可用於建置裝置、雲端與 IoT 應用程式。
 
 請參閱[關於 .NET Core](about.md)以深入了解 .NET Core，包括其特性、支援的語言與架構，亦即主要 API。
 
@@ -21,24 +21,24 @@ ms.locfileid: "75740754"
 
 ## <a name="download-net-core"></a>下載 .NET Core
 
-下載[.NET Core SDK](https://www.microsoft.com/net/download) ，在您的 Windows、MacOS 或 Linux 電腦上嘗試 .net Core。 如果您想要使用 Docker 容器，請造訪[.Net Core Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/)。
+下載[.NET 核心 SDK，](https://www.microsoft.com/net/download)在 Windows、macOS 或 Linux 電腦上嘗試 .NET 酷睿。 如果您更喜歡使用 Docker 容器，請訪問[.NET 核心 Docker 集線器 。](https://hub.docker.com/_/microsoft-dotnet-core/)
 
 若您要尋找另一個 .NET Core 版本，所有 .NET Core 版本都可以在 [.NET Core 下載 ](https://dotnet.microsoft.com/download/dotnet-core)找到。
 
-## <a name="net-core-31"></a>.NET Core 3.1
+## <a name="net-core-31"></a>.NET 核心 3.1
 
-最新版本是 .NET Core 3.1。 3.1 包含 .NET Core 3.0 的次要改良功能，但是 .NET Core 3.1 是[長期支援的版本](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。 如需 .NET Core 3.1 版本的詳細資訊，請參閱[.Net core 3.1 的新功能](./whats-new/dotnet-core-3-1.md)。
+最新版本是 .NET 核心 3.1。 3.1 包括對 .NET Core 3.0 的細微改進，但是.NET Core 3.1 是長期[支援的版本](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。 有關 .NET Core 3.1 版本的詳細資訊，請參閱[.NET Core 3.1 中的新增功能](./whats-new/dotnet-core-3-1.md)。
 
 ## <a name="create-your-first-application"></a>建立您的第一個應用程式
 
-安裝 .NET Core SDK 之後，請開啟命令提示字元。 輸入下列 `dotnet` 命令來建立和執行C#應用程式：
+安裝 .NET Core SDK 之後，請開啟命令提示字元。 輸入以下`dotnet`命令以創建和運行 C# 應用程式：
 
 ```dotnetcli
 dotnet new console
 dotnet run
 ```
 
-您應該會看到下列輸出：
+您應該會看見下列輸出：
 
 ```output
 Hello World!
@@ -46,7 +46,7 @@ Hello World!
 
 ## <a name="support"></a>支援
 
-Microsoft、Windows、macOS 和 Linux 上都[支援](https://dotnet.microsoft.com/platform/support/policy).net Core。 每年都為它推出安全性與品質更新數次，通常是一個月一次。
+.NET Core 在 Windows、macOS 和 Linux 上[得到微軟的支援](https://dotnet.microsoft.com/platform/support/policy)。 每年都為它推出安全性與品質更新數次，通常是一個月一次。
 
 .NET Core 二進位發行版本是在 Azure 中由 Microsoft 維護的服務上建置及測試，而且享有與任何 Microsoft 產品一樣的支援。
 

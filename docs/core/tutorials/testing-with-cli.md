@@ -1,16 +1,16 @@
 ---
-title: 使用 .NET Core CLI 組織和測試專案
+title: 使用 .NET 核心 CLI 組織和測試專案
 description: 本教學課程說明如何從命令列組織和測試 .NET Core 專案。
 author: cartermp
 ms.date: 09/10/2018
 ms.openlocfilehash: 0d61e0fc004cfcb6d78c49475c7b7f0f523aad2c
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78239907"
 ---
-# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>使用 .NET Core CLI 組織和測試專案
+# <a name="organizing-and-testing-projects-with-the-net-core-cli"></a>使用 .NET 核心 CLI 組織和測試專案
 
 此教學課程遵循[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core](cli-create-console-app.md)，讓您超越建立簡單主控台應用程式來開發進階且井然有序的應用程式。 此教學課程在示範如何使用資料夾來組織您的程式碼之後，會示範如何使用 [xUnit](https://xunit.github.io/) 測試架構來擴充主控台應用程式。
 
@@ -104,7 +104,7 @@ Meow!
 
 巡覽回到 *src* 資料夾，並建立內含 *NewTypesTests* 資料夾的 *test* 資料夾。 在命令提示字元中，從 *NewTypesTests* 資料夾執行 `dotnet new xunit`。 這會產生兩個檔案︰*NewTypesTests.csproj* 及 *UnitTest1.cs*。
 
-測試專案目前無法測試 `NewTypes` 中的類型，並且需要 `NewTypes` 專案的專案參考。 若要新增專案參考，請使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令︰
+測試專案目前無法測試 `NewTypes` 中的類型，並且需要 `NewTypes` 專案的專案參考。 要添加專案引用，請使用 以下[`dotnet add reference`](../tools/dotnet-add-reference.md)命令：
 
 ```dotnetcli
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
@@ -158,10 +158,10 @@ public class PetTests
 }
 ```
 
-選擇性練習︰如果您稍早已將產生 `Bird` 的 `Tweet!` 類型新增至擁有者，請將測試方法新增至 PetTests.cs 檔案，並新增 `BirdTalkToOwnerReturnsTweet` 以確認 `TalkToOwner` 方法正確作用於 `Bird` 類型。
+選擇性練習︰如果您稍早已將產生 `Tweet!` 的 `Bird` 類型新增至擁有者，請將測試方法新增至 PetTests.cs** 檔案，並新增 `BirdTalkToOwnerReturnsTweet` 以確認 `TalkToOwner` 方法正確作用於 `Bird` 類型。
 
 > [!NOTE]
-> 雖然您預期 `expected` 與 `actual` 值相等，但是具有 `Assert.NotEqual` 檢查的初始判斷提示指定這些值「不相等」。 一開始一律會讓測試失敗，以檢查測試邏輯。 在您確認測試失敗之後，調整判斷提示以允許測試通過。
+> 雖然您預期 `expected` 與 `actual` 值相等，但是具有 `Assert.NotEqual` 檢查的初始判斷提示指定這些值「不相等」**。 一開始一律會讓測試失敗，以檢查測試邏輯。 在您確認測試失敗之後，調整判斷提示以允許測試通過。
 
 下列顯示完整專案結構：
 
@@ -181,7 +181,7 @@ public class PetTests
       |__NewTypesTests.csproj
 ```
 
-從 *test/NewTypesTests* 目錄開始。 使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令還原測試專案。 使用 [`dotnet test`](../tools/dotnet-test.md) 命令執行測試。 這個命令會啟動專案檔中指定的測試執行器。
+從 *test/NewTypesTests* 目錄開始。 使用[`dotnet restore`](../tools/dotnet-restore.md)命令還原測試專案。 使用[`dotnet test`](../tools/dotnet-test.md)命令運行測試。 這個命令會啟動專案檔中指定的測試執行器。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -235,4 +235,4 @@ Test execution time: 1.6029 Seconds
 
 通過測試。 與擁有者交談時，寵物類型的方法會傳回正確值。
 
-您已了解使用 xUnit 來組織及測試專案的技術。 繼續使用這些技術，以將它們套用至您自己的專案。 *祝各位程式撰寫愉快！*
+您已了解使用 xUnit 來組織及測試專案的技術。 繼續使用這些技術，以將它們套用至您自己的專案。 *祝各位編碼程式愉快！*

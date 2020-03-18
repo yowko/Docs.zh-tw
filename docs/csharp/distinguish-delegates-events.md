@@ -4,18 +4,18 @@ description: 了解委派和事件的差異，以及何時使用 .NET Core 的�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: ff90af1d2b1a92f06eed58228f8e8ca5ff6b93ca
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 04738ac2dd82da9c577e88598d0bb737a93333c1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037324"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146174"
 ---
 # <a name="distinguishing-delegates-and-events"></a>區別委派和事件
 
-[上一篇](modern-events.md)
+[上一步](modern-events.md)
 
-決定以 `delegates` 為基礎的設計與以 `events` 為基礎的設計時，不熟悉 .NET Core 平台的開發人員通常十分糾結。 這是很難理解的概念，因為兩個語言功能非常類似。 事件甚至是使用委派的語言支援所建置。 
+決定以 `delegates` 為基礎的設計與以 `events` 為基礎的設計時，不熟悉 .NET Core 平台的開發人員通常十分糾結。 這是很難理解的概念，因為兩個語言功能非常類似。 事件甚至是使用委派的語言支援所建置。
 
 它們都提供晚期繫結案例︰元件透過呼叫只在執行階段才知道的方法來進行通訊。 兩者都支援單一和多個訂閱者方法。 您可能會發現這稱為單點傳送和多點傳送支援。 它們同時支援使用類似的語法來新增和移除處理常式。 最後，引發事件與呼叫委派會使用完全相同的方法呼叫語法。 兩者甚至都支援相同的 `Invoke()` 方法語法，以與 `?.` 運算子搭配使用。
 
@@ -23,7 +23,7 @@ ms.locfileid: "73037324"
 
 ## <a name="listening-to-events-is-optional"></a>接聽事件為選擇性
 
-決定要使用之語言功能的最重要考量為是否都必須要有附加的訂閱者。 如果您的程式碼必須呼叫訂閱者所提供的程式碼，則應該使用以委派為基礎的設計。 如果您的程式碼可以完成其所有工作，而不需要呼叫任何訂閱者，則應該使用以事件為基礎的設計。 
+決定要使用之語言功能的最重要考量為是否都必須要有附加的訂閱者。 如果您的程式碼必須呼叫訂閱者所提供的程式碼，則應該使用以委派為基礎的設計。 如果您的程式碼可以完成其所有工作，而不需要呼叫任何訂閱者，則應該使用以事件為基礎的設計。
 
 請考慮本節期間所建置的範例。 必須將電腦函式提供給您使用 `List.Sort()` 所建置的程式碼，才能適當地排序項目。 必須提供具有委派的 LINQ 查詢，才能判斷要傳回的項目。 兩者都是使用委派所建置的設計。
 
@@ -38,7 +38,7 @@ UX 控制項仍然會正常運作，即使沒有任何訂閱者接聽事件也�
 
 請注意，這兩種啟發學習法可能通常都存在︰如果委派方法傳回值，則在某個方面可能會影響演算法。
 
-## <a name="event-listeners-often-have-longer-lifetimes"></a>事件接聽程式通常會有較長的存留期 
+## <a name="event-listeners-often-have-longer-lifetimes"></a>事件接聽程式通常會有較長的存留期
 
 這是稍弱的理由。 不過，事件來源在一段長時間後引發事件時，您可能會發現事件設計更為自然。 您可以在許多系統上看到 UX 控制項之此項作業的範例。 訂閱事件之後，事件來源可能會在整個程式存留期引發事件。
 (不再需要事件時，即可取消與事件的訂閱)。

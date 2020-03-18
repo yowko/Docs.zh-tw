@@ -6,11 +6,11 @@ helpviewer_keywords:
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
 ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78240996"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399823"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>隱含類型區域變數 (C# 程式設計手冊)
 
@@ -44,11 +44,11 @@ ms.locfileid: "78240996"
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-如需詳細資訊，請參閱[如何在查詢運算式中使用隱含類型區域變數和陣列](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
+有關詳細資訊，請參閱[如何在查詢運算式中使用隱式鍵入的區域變數和陣列](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
 
 ## <a name="var-and-anonymous-types"></a>var 和匿名型別
 
-在許多情況下，使用 `var` 是選擇性的，只是為了在語法上便於使用。 不過，當變數以匿名型別初始化時，如果您稍後需要存取物件的屬性，則必須宣告該變數為 `var`。 這是 LINQ 查詢運算式中的常見案例。 如需詳細資訊，請參閱[匿名型別](anonymous-types.md)。
+在許多情況下，使用 `var` 是選擇性的，只是為了在語法上便於使用。 不過，當變數以匿名型別初始化時，如果您稍後需要存取物件的屬性，則必須宣告該變數為 `var`。 這是 LINQ 查詢運算式中的常見方案。 有關詳細資訊，請參閱[匿名型別](anonymous-types.md)。
 
 從原始程式碼的觀點來看，匿名型別沒有名稱。 因此，如果已使用 `var` 初始化查詢變數，則存取傳回的物件序列中屬性的唯一方法，就是使用 `var` 作為 `foreach` 陳述式中反覆運算變數的類型。
 
@@ -62,7 +62,7 @@ ms.locfileid: "78240996"
 
 - `var` 無法在類別範圍的欄位中使用。
 
-- 使用 `var` 宣告的變數無法在初始化運算式中使用。 換句話說，這個運算式是合法的： `int i = (i = 20);` 但這個運算式會產生編譯時期錯誤： `var i = (i = 20);`
+- 使用 `var` 宣告的變數無法在初始化運算式中使用。 換句話說，此運算式是合法的：`int i = (i = 20);`但此運算式會產生編譯時間錯誤：`var i = (i = 20);`
 
 - 無法在相同的陳述式中初始化多個隱含型別變數。
 
@@ -88,18 +88,18 @@ private var bookTitles = new List<string>();
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-使用 `var` 有助於簡化您的程式碼，但它的用法應該限制在需要的情況下，或讓您的程式碼更容易閱讀。 如需有關何時正確使用 `var` 的詳細資訊，請參閱程式C#代碼撰寫方針一文的[隱含類型區域變數](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables)一節。
+使用`var`有助於簡化代碼，但應將其使用僅限於需要代碼的情況，或者它使代碼更易於閱讀的情況。 有關何時正確使用`var`的詳細資訊，請參閱 C# 編碼指南一文上的[隱式鍵入的區域變數](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables)部分。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../language-reference/index.md)
 - [隱含型別陣列](../arrays/implicitly-typed-arrays.md)
-- [如何在查詢運算式中使用隱含類型區域變數和陣列](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
-- [匿名類型](anonymous-types.md)
+- [如何在查詢運算式中使用隱式鍵入的區域變數和陣列](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [匿名型別](anonymous-types.md)
 - [物件和集合初始設定式](object-and-collection-initializers.md)
-- [var](../../language-reference/keywords/var.md)
+- [無 功](../../language-reference/keywords/var.md)
 - [C# 中的 LINQ](../../linq/index.md)
 - [LINQ (Language-Integrated Query)](../../linq/index.md)
-- [for](../../language-reference/keywords/for.md)
+- [對於](../../language-reference/keywords/for.md)
 - [foreach、in](../../language-reference/keywords/foreach-in.md)
-- [using 陳述式](../../language-reference/keywords/using-statement.md)
+- [使用語句](../../language-reference/keywords/using-statement.md)

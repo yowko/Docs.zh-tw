@@ -1,27 +1,27 @@
 ---
-title: Blazor 應用程式的專案結構
-description: 瞭解 ASP.NET Web Forms 和 Blazor 專案的專案結構如何比較。
+title: 布拉佐應用程式的專案結構
+description: 瞭解ASP.NET Web 表單和 Blazor 專案的專案結構比較情況。
 author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
 ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087858"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401575"
 ---
-# <a name="project-structure-for-blazor-apps"></a>Blazor 應用程式的專案結構
+# <a name="project-structure-for-blazor-apps"></a>布拉佐應用程式的專案結構
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-儘管其重要的專案結構有所差異，ASP.NET Web Forms 和 Blazor 也會共用許多類似的概念。 在這裡，我們將探討 Blazor 專案的結構，並將其與 ASP.NET 的 Web form 專案進行比較。
+儘管它們的專案結構存在顯著差異，但 Web 表單和 Blazor ASP.NET有許多類似的概念。 在這裡，我們將查看 Blazor 專案的結構，並將其與ASP.NET Web 表單專案進行比較。
 
-若要建立您的第一個 Blazor 應用程式，請遵循[Blazor 快速入門步驟](/aspnet/core/blazor/get-started)中的指示。 您可以遵循指示來建立 Blazor 伺服器應用程式，或裝載于 ASP.NET Core 中的 Blazor WebAssembly 應用程式。 除了裝載模型特定的邏輯之外，這兩個專案中的大部分程式碼都相同。
+要創建您的第一個 Blazor 應用程式，請按照[Blazor 入門步驟](/aspnet/core/blazor/get-started)中的說明進行操作。 您可以按照說明創建 Blazor Server 應用或託管在 ASP.NET 核心中的 Blazor WebAssembly 應用。 除了特定于宿主模型的邏輯之外，兩個專案中的大多數代碼都是相同的。
 
 ## <a name="project-file"></a>專案檔
 
-Blazor 伺服器應用程式是 .NET Core 專案。 Blazor 伺服器應用程式的專案檔就像它可以取得的一樣簡單：
+Blazor 伺服器應用程式是 .NET 核心專案。 Blazor Server 應用的專案檔案非常簡單，因為它可以得到：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -33,7 +33,7 @@ Blazor 伺服器應用程式是 .NET Core 專案。 Blazor 伺服器應用程式
 </Project>
 ```
 
-Blazor WebAssembly 應用程式的專案檔看起來有點複雜（確切版本號碼可能會不同）：
+Blazor WebAssembly 應用的專案檔案看起來更參與（確切的版本號可能有所不同）：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.Web">
@@ -57,11 +57,11 @@ Blazor WebAssembly 應用程式的專案檔看起來有點複雜（確切版本�
 </Project>
 ```
 
-Blazor WebAssembly projects 的目標是以 WebAssembly 為基礎的 .NET 執行時間在瀏覽器中執行，而不是 .NET Core .NET Standard。 您無法將 .NET 安裝到網頁瀏覽器中，就像您可以在伺服器或開發人員電腦上一樣。 因此，專案會使用個別的封裝參考來參考 Blazor 架構。
+Blazor WebAssembly 專案的目標是 .NET 標準而不是 .NET Core，因為它們在基於 WebAssembly 的 .NET 運行時的瀏覽器中運行。 不能像在伺服器或開發人員電腦上那樣將 .NET 安裝到 Web 瀏覽器中。 因此，該專案使用單個包引用引用 Blazor 框架。
 
-相較之下，預設的 ASP.NET Web form 專案在其 *.csproj*檔案中包含將近300行的 XML，其中大部分是明確列出專案中的各種程式碼和內容檔案。 .NET Core 和 .NET Standard 型專案中的許多簡化，都來自于參考 `Microsoft.NET.Sdk.Web` SDK 所匯入的預設目標和屬性，通常稱為 Web SDK。 Web SDK 包含萬用字元和其他便利，可簡化專案中的程式碼和內容檔案的加入。 您不需要明確列出檔案。 以 .NET Core 為目標時，Web SDK 也會同時將架構參考新增至 .NET Core 和 ASP.NET Core 共用架構。 您可以從 [**方案總管**] 視窗中的 [相依**性 > 架構] 節點**查看架構。 共用架構是安裝 .NET Core 時安裝在電腦上的元件集合。
+相比之下，預設ASP.NET Web 表單專案在其 *.csproj*檔中包含近 300 行 XML，其中大多數顯式列出專案中的各種代碼和內容檔。 基於 .NET Core 和 .NET 標準專案中的許多簡化都來自通過引用`Microsoft.NET.Sdk.Web`SDK 導入的預設目標和屬性，通常簡稱為 Web SDK。 Web SDK 包括萬用字元和其他簡化專案中包含代碼和內容檔的便利。 您無需顯式列出檔。 在定位 .NET Core 時，Web SDK 還會添加對 .NET Core 和 ASP.NET核心共用框架的框架引用。 框架在**解決方案資源管理器**視窗中**的依賴項** > **框架**節點中可見。 共用框架是安裝 .NET Core 時安裝在電腦上的程式集的集合。
 
-雖然它們受到支援，但在 .NET Core 專案中，個別元件參考較不常見。 大部分的專案相依性會當做 NuGet 套件參考來處理。 您只需要參考 .NET Core 專案中的最上層套件相依性。 可轉移的相依性會自動包含在內。 封裝參考會使用 `<PackageReference>` 專案新增至專案檔，而不是使用通常在 ASP.NET Web Forms 專案中找到的*套件 .config*檔案來參考封裝。
+儘管它們受支援，但單個程式集引用在 .NET Core 專案中不太常見。 大多數專案依賴項都作為 NuGet 包引用處理。 您只需引用 .NET Core 專案中的頂級包依賴項。 自動包含傳遞依賴項。 套裝程式引用使用 元素添加到專案檔案中`<PackageReference>`，而不是使用 ASP.NET Web 表單專案中常見的*包.config*檔來引用包。
 
 ```xml
 <ItemGroup>
@@ -71,7 +71,7 @@ Blazor WebAssembly projects 的目標是以 WebAssembly 為基礎的 .NET 執行
 
 ## <a name="entry-point"></a>進入點
 
-Blazor 伺服器應用程式的進入點是在*Program.cs*檔案中定義，如同您在主控台應用程式中所看到的。 當應用程式執行時，它會使用 web apps 特有的預設值來建立和執行 web 主機實例。 Web 主機會管理 Blazor 伺服器應用程式的生命週期，並設定主機層級服務。 這類服務的範例包括設定、記錄、相依性插入，以及 HTTP 伺服器。 這段程式碼大多是重複的，而且通常會保持不變。
+Blazor Server 應用的進入點在*Program.cs*檔中定義，正如您在主控台應用中看到的。 應用執行時，它使用特定于 Web 應用的預設值創建並運行 Web 主機實例。 Web 主機管理 Blazor Server 應用的生命週期並設置主機級服務。 此類服務的示例包括配置、日誌記錄、依賴項注入和 HTTP 伺服器。 此代碼大部分是樣板，通常保持不變。
 
 ```csharp
 public class Program
@@ -90,17 +90,17 @@ public class Program
 }
 ```
 
-Blazor WebAssembly apps 也會定義*Program.cs*中的進入點。 程式碼看起來稍有不同。 程式碼很類似，因為它會設定 app 主機，以提供相同的主機層級服務給應用程式。 不過，WebAssembly 應用程式主機不會設定 HTTP 伺服器，因為它會直接在瀏覽器中執行。
+Blazor WebAssembly 應用程式還在*Program.cs*中定義了進入點。 代碼看起來略有不同。 代碼類似，因為它正在設置應用主機以向應用提供相同的主機級服務。 但是，WebAssembly 應用主機不會設置 HTTP 伺服器，因為它直接在瀏覽器中執行。
 
-Blazor apps 具有 `Startup` 類別，而不是*global.asax*檔案，以定義應用程式的啟動邏輯。 `Startup` 類別是用來設定應用程式和任何應用程式特定服務。 在 Blazor 伺服器應用程式中，`Startup` 類別是用來針對用戶端瀏覽器與伺服器之間的 Blazor 所使用的即時連接設定端點。 在 Blazor WebAssembly 應用程式中，`Startup` 類別會定義應用程式的根元件和應該呈現的位置。 我們將深入探討[應用程式啟動](./app-startup.md)一節中的 `Startup` 類別。
+Blazor 應用具有`Startup`一個類而不是*全域.asax*檔來定義應用程式的啟動邏輯。 該`Startup`類用於配置應用和任何特定于應用的服務。 在 Blazor Server 應用中`Startup`，類用於設置 Blazor 在用戶端瀏覽器和伺服器之間使用的即時連接的終結點。 在 Blazor WebAssembly 應用中`Startup`，類定義應用的根元件以及應呈現這些元件的位置。 我們將更深入地瞭解`Startup`[應用啟動](./app-startup.md)部分中的類。
 
 ## <a name="static-files"></a>靜態檔案
 
-不同于 ASP.NET Web form 專案，Blazor 專案中的所有檔案都可以要求為靜態檔案。 只有*wwwroot*資料夾中的檔案可供 web 定址。 此資料夾稱為應用程式的「web 根目錄」。 應用程式的 web 根目錄以外的任何專案都*不是*web 可定址的。 此設定可提供額外的安全性等級，以防止透過 web 意外公開專案檔。
+與 web 表單專案ASP.NET不同，並非所有 Blazor 專案中的檔都可以請求作為靜態檔。 只有*wwwroot*資料夾中的檔是 Web 位址定址的。 此資料夾將引用到應用程式的"Web 根"。 應用 Web 根之外的任何內容*都無法*Web 定址。 此設置提供了額外的安全級別，可防止意外在 Web 上公開專案檔案。
 
 ## <a name="configuration"></a>組態
 
-ASP.NET Web Forms 應用程式中的設定通常會使用一或多個*web.config*檔案來處理。 Blazor 應用程式通常不會有*web.config*檔案。 如果有的話，檔案只會在裝載于 IIS 上時用來設定 IIS 特定的設定。 相反地，Blazor 伺服器應用程式會使用 ASP.NET Core 設定抽象概念（Blazor WebAssembly 應用程式目前不支援相同的設定抽象概念，但這可能是未來新增的功能）。 例如，預設的 Blazor 伺服器應用程式會將某些設定儲存在*appsettings*中。
+ASP.NET Web 表單應用中的配置通常使用一個或多個*Web.config 檔*進行處理。 Blazor 應用程式通常沒有*Web.config*檔。 如果這樣做，則該檔僅用於在 IIS 上託管時配置特定于 IIS 的設置。 相反，Blazor Server 應用使用ASP.NET核心配置抽象（Blazor WebAssembly 應用目前不支援相同的配置抽象，但這可能是將來添加的功能）。 例如，預設的 Blazor Server 應用程式將某些*設置存儲在 appsettings.json*中。
 
 ```json
 {
@@ -115,15 +115,15 @@ ASP.NET Web Forms 應用程式中的設定通常會使用一或多個*web.config
 }
 ```
 
-我們[將在設定一節](./config.md)中深入瞭解 ASP.NET Core 專案中的設定。
+我們將在"配置"部分中瞭解有關ASP.NET核心專案中[的配置](./config.md)。
 
-## <a name="razor-components"></a>Razor 元件
+## <a name="razor-components"></a>剃刀元件
 
-Blazor projects 中的大部分檔案都是*razor*檔案。 Razor 是以 HTML C#為基礎的樣板化語言，可用來動態產生 web UI。 *Razor*檔案會定義構成應用程式 UI 的元件。 在大部分的情況下，Blazor 伺服器和 Blazor WebAssembly 應用程式的元件都相同。 Blazor 中的元件類似于 ASP.NET Web Forms 中的使用者控制項。
+布拉佐專案中的大多數檔都是 *.razor*檔。 Razor 是基於 HTML 和 C# 的範本化語言，用於動態生成 Web UI。 *.razor*檔定義構成應用 UI 的元件。 在大多數情況下，布拉佐伺服器和 Blazor WebAssembly 應用的元件都是相同的。 Blazor 中的元件類似于ASP.NET Web 表單中的使用者控制項。
 
-建立專案時，每個 Razor 元件檔案都會編譯成 .NET 類別。 產生的類別會捕獲元件的狀態、呈現邏輯、生命週期方法、事件處理常式和其他邏輯。 我們將在[使用 Blazor 建立可重複使用的 UI 元件](./components.md)一節中探討撰寫元件。
+生成專案時，每個 Razor 元件檔都會編譯為 .NET 類。 生成的類捕獲元件的狀態、呈現邏輯、生命週期方法、事件處理常式和其他邏輯。 我們將介紹使用 Blazor 部分構建[可重用 UI 元件](./components.md)的創作元件。
 
-*_Imports razor*檔案不是 razor 元件檔案。 相反地，它們會定義一組 Razor 指示詞，以匯入相同資料夾和其子資料夾內的其他*razor*檔案。 例如，_Imports 的*razor*檔案是為常用的命名空間加入 `using` 語句的傳統方式：
+*_Imports.Razor*檔不是 Razor 元件檔。 相反，它們定義了一組 Razor 指令，以導入到同一資料夾中及其子資料夾中的其他 *.razor*檔中。 例如 *，_Imports.razor*檔是添加`using`常用命名空間語句的傳統方法：
 
 ```razor
 @using System.Net.Http
@@ -139,38 +139,38 @@ Blazor projects 中的大部分檔案都是*razor*檔案。 Razor 是以 HTML C#
 
 ## <a name="pages"></a>頁面
 
-Blazor apps 中的頁面在哪裡？ Blazor 不會為可定址頁面定義個別的副檔名，例如 ASP.NET Web Forms 應用程式中的 *.aspx*檔案。 相反地，頁面是藉由將路由指派給元件來定義。 通常會使用 `@page` Razor 指示詞來指派路由。 例如，在*Pages/Counter*檔案中撰寫的 `Counter` 元件會定義下列路由：
+Blazor 應用程式中的頁面在哪裡？ Blazor 不會為可定址頁面定義單獨的檔副檔名，如 ASP.NET Web 表單應用中的 *.aspx*檔。 相反，頁面是通過為元件分配路由來定義的。 路由通常使用`@page`Razor 指令分配。 例如，`Counter`在*Pages/Counter.razor*檔中創作的元件定義了以下路由：
 
 ```razor
 @page "/counter"
 ```
 
-Blazor 中的路由是在用戶端處理，而不是在伺服器上。 當使用者在瀏覽器中導覽時，Blazor 會攔截導覽，然後以相符的路由呈現元件。
+Blazor 中的路由是用戶端處理的，而不是伺服器上的。 當使用者在瀏覽器中導航時，Blazor 會攔截導航，然後使用匹配的路由呈現元件。
 
-元件路由目前不是由元件的檔案位置推斷，像是使用 *.aspx*頁面。 未來可能會加入這項功能。 每個路由都必須在元件上明確指定。 將可路由的元件儲存在*Pages*資料夾中沒有特殊意義，而且純粹是慣例。
+元件路由當前未像使用 *.aspx*頁一樣由元件的檔位置推斷。 此功能將來可能會添加。 必須在元件上顯式指定每個路由。 在*Pages*資料夾中存儲可路由元件沒有特殊含義，純屬慣例。
 
-我們將在 [[頁面]、[路由及](./pages-routing-layouts.md)配置] 區段中的 [在 Blazor 中路由]，更詳細地查看。
+我們將在["頁面"、路由和佈局](./pages-routing-layouts.md)部分更詳細地介紹 Blazor 中的路由。
 
-## <a name="layout"></a>配置
+## <a name="layout"></a>版面配置
 
-在 ASP.NET Web Forms 應用程式中，會使用主版頁面（*網站. master*）來處理一般頁面配置。 在 Blazor apps 中，頁面配置是使用版面配置元件（*Shared/MainLayout*）來處理。 版面配置元件將在[頁面、路由和版面](./pages-routing-layouts.md)配置一節中更詳細地討論。
+在ASP.NET Web 表單應用中，使用母版頁 *（Site.Master*） 處理常見頁面配置。 在 Blazor 應用中，頁面配置使用佈局元件 （*共用/MainLayout.razor）* 處理。 佈局元件將在[頁面、路由和佈局](./pages-routing-layouts.md)部分中詳細討論。
 
-## <a name="bootstrap-blazor"></a>啟動程式 Blazor
+## <a name="bootstrap-blazor"></a>靴子布拉佐爾
 
-若要啟動載入 Blazor，應用程式必須：
+要引導 Blazor，應用程式必須：
 
-- 指定頁面上要呈現根元件（*Razor*）的位置。
-- 新增對應的 Blazor framework 腳本。
+- 指定在頁面上應呈現根元件 （*App.Razor*） 的位置。
+- 添加相應的 Blazor 框架腳本。
 
-在 Blazor 伺服器應用程式中，根元件的 [主機] 頁面會定義在 *_Host 的 cshtml*檔案中。 這個檔案會定義 Razor 頁面，而不是元件。 Razor Pages 使用 Razor 語法定義伺服器可定址的頁面，非常類似于 *.aspx*頁面。 `Html.RenderComponentAsync<TComponent>(RenderMode)` 方法是用來定義應該呈現根層級元件的位置。 `RenderMode` 選項會指出元件的呈現方式。 下表概述支援的 `RenderMode` 選項。
+在 Blazor Server 應用中，根元件的主機頁在 *_Host.cshtml*檔中定義。 此檔定義剃刀頁，而不是元件。 Razor 頁面使用 Razor 語法來定義伺服器可定址頁面，非常類似于 *.aspx*頁面。 該方法`Html.RenderComponentAsync<TComponent>(RenderMode)`用於定義應呈現根級元件的位置。 該`RenderMode`選項指示元件的呈現方式。 下表概述了支援`RenderMode`的選項。
 
 |選項                        |描述       |
 |------------------------------|------------------|
-|`RenderMode.Server`           |在建立與瀏覽器的連線之後，以互動方式呈現|
-|`RenderMode.ServerPrerendered`|先資源清單，然後以互動方式呈現|
+|`RenderMode.Server`           |建立與瀏覽器的連接後以對話模式呈現|
+|`RenderMode.ServerPrerendered`|首先預渲染，然後以對話模式呈現|
 |`RenderMode.Static`           |呈現為靜態內容|
 
-*_Framework/blazor.server.js*的腳本參考會建立與伺服器的即時連接，然後處理所有使用者互動和 UI 更新。
+對 *_framework/blazor.server.js*的腳本引用建立與伺服器的即時連接，然後處理所有使用者交互和 UI 更新。
 
 ```razor
 @page "/"
@@ -197,7 +197,7 @@ Blazor 中的路由是在用戶端處理，而不是在伺服器上。 當使用
 </html>
 ```
 
-在 Blazor WebAssembly 應用程式中，[主機] 頁面是*wwwroot/index.html*底下的簡單靜態 HTML 檔案。 `<app>` 元素是用來指出應該呈現根元件的位置。
+在 Blazor WebAssembly 應用程式中，主機頁是*wwwroot/index.html*下的簡單靜態 HTML 檔案。 該`<app>`元素用於指示應呈現根元件的位置。
 
 ```html
 <!DOCTYPE html>
@@ -218,7 +218,7 @@ Blazor 中的路由是在用戶端處理，而不是在伺服器上。 當使用
 </html>
 ```
 
-要轉譯的特定元件是在應用程式的 `Startup.Configure` 方法中設定，其中包含對應的 CSS 選取器，表示應該呈現元件的位置。
+要呈現的特定元件在應用`Startup.Configure`的方法中配置，並帶有相應的 CSS 選取器，指示應呈現元件的位置。
 
 ```csharp
 public class Startup
@@ -234,21 +234,21 @@ public class Startup
 }
 ```
 
-## <a name="build-output"></a>組建輸出
+## <a name="build-output"></a>建置輸出
 
-建立 Blazor 專案時，會將所有 Razor 元件和程式碼檔案編譯成單一元件。 不同于 ASP.NET Web Forms 專案，Blazor 不支援 UI 邏輯的執行時間編譯。
+生成 Blazor 專案時，所有 Razor 元件和代碼檔都編譯到單個程式集中。 與web表單專案ASP.NET不同，Blazor 不支援 UI 邏輯的運行時編譯。
 
 ## <a name="run-the-app"></a>執行應用程式
 
-若要執行 Blazor 伺服器應用程式，請按 Visual Studio 中的 `F5`。 Blazor apps 不支援執行時間編譯。 若要查看程式碼和元件標記變更的結果，請重建並重新啟動已附加偵錯工具的應用程式。 如果您在未附加偵錯工具的情況下執行（`Ctrl+F5`），Visual Studio 會監看檔案變更，並在進行變更時重新開機應用程式。 您會在進行變更時手動重新整理瀏覽器。
+要運行 Blazor 伺服器應用，`F5`請按視覺化工作室。 Blazor 應用不支援運行時編譯。 要查看代碼和元件標記更改的結果，請重新生成並重新啟動應用，並附加調試器。 如果在未附加調試器的情況下運行 （），Visual`Ctrl+F5`Studio 會監視檔更改，並在進行更改時重新開機應用。 在進行更改時，您可以手動刷新瀏覽器。
 
-若要執行 Blazor WebAssembly 應用程式，請選擇下列其中一種方法：
+要運行 Blazor WebAssembly 應用，請選擇以下方法之一：
 
-- 直接使用開發伺服器來執行用戶端專案。
-- 使用 ASP.NET Core 裝載應用程式時，執行伺服器專案。
+- 直接使用開發伺服器運行用戶端專案。
+- 使用 ASP.NET 核心託管應用時運行伺服器專案。
 
-Blazor WebAssembly apps 不支援使用 Visual Studio 進行偵錯工具。 若要執行應用程式，請使用 `Ctrl+F5`，而不是 `F5`。 您可以改為直接在瀏覽器中調試 Blazor WebAssembly 應用程式。 如需詳細資訊，請參閱[Debug ASP.NET Core Blazor](/aspnet/core/blazor/debug) 。
+Blazor WebAssembly 應用不支援使用視覺化工作室進行調試。 要運行應用，請使用`Ctrl+F5`而不是`F5`。 您可以直接在瀏覽器中調試 Blazor WebAssembly 應用。 有關詳細資訊[，請參閱調試ASP.NET核心布拉佐爾](/aspnet/core/blazor/debug)。
 
 >[!div class="step-by-step"]
->[上一頁](hosting-models.md)
->[下一頁](app-startup.md)
+>[上一個](hosting-models.md)
+>[下一個](app-startup.md)

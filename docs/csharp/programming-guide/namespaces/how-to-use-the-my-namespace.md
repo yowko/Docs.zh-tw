@@ -1,17 +1,17 @@
 ---
-title: 如何使用 My 命名空間-程式C#設計指南
+title: 如何使用我的命名空間 - C# 程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
 ms.openlocfilehash: 063b46a32ced859c6c86e40c4a6b9870c3decd24
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75700415"
 ---
-# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>如何使用 My 命名空間（C#程式設計手冊）
+# <a name="how-to-use-the-my-namespace-c-programming-guide"></a>如何使用我的命名空間（C# 程式設計指南）
 <xref:Microsoft.VisualBasic.MyServices> 命名空間 (Visual Basic 中的 `My`) 允許您以輕鬆且直覺式的方式存取許多 .NET Framework 類別，讓您能夠撰寫程式碼以與電腦、應用程式、設定、資源等等互動。 雖然原本設計為搭配使用 Visual Basic，但 `MyServices` 命名空間可以在 C# 應用程式中使用。  
   
  如需從 Visual Basic 中使用 `MyServices` 命名空間的詳細資訊，請參閱[使用 My 開發](../../../visual-basic/developing-apps/development-with-my/index.md)。  
@@ -21,9 +21,9 @@ ms.locfileid: "75700415"
   
 #### <a name="to-add-a-reference-to-the-visual-basic-library"></a>新增 Visual Basic 程式庫的參考  
   
-1. 在方案總管 中，以滑鼠右鍵按一下 [參考] 節點，然後選取 [Add Reference] (新增參考)。  
+1. 在**解決方案資源管理器**中，按右鍵 **"引用"** 節點，然後選擇"**添加參考**"。  
   
-2. 當 [參考] 對話方塊出現時，向下捲動清單，然後選取 Microsoft.VisualBasic.dll。  
+2. 當 [參考]**** 對話方塊出現時，向下捲動清單，然後選取 Microsoft.VisualBasic.dll。  
   
      您也可以在程式開頭處的 `using` 區段中包含下列這行。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "75700415"
   
  [!code-csharp[csProgGuideNamespaces#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces3.cs#20)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [命名空間](./index.md)

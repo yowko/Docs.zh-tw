@@ -2,12 +2,12 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 23d73a26bbe0e711bb3a081994826e06634c4bac
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a560155b936aef7a4a346d39eaed75e0a85c1a73
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418699"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169879"
 ---
 # <a name="collections-c"></a>集合 (C#)
 
@@ -15,7 +15,7 @@ ms.locfileid: "73418699"
 
 陣列是最適用於建立和處理固定數目的強類型物件。 如需陣列的資訊，請參閱[陣列](../arrays/index.md)。
 
-集合會提供較具彈性的方式來使用物件群組。 與陣列不同的是，您使用的物件群組可依程式變更的需要來動態增減。 對於某些集合，您可以將鍵值指派給您放入集合的任何物件，讓您可以藉由使用鍵值快速擷取物件。
+集合會提供較具彈性的方式來使用物件群組。 與陣列不同的是，您使用的物件群組可依程式變更的需要來動態增減。 對於某些集合，您可以將索引鍵值指派給您放入集合的任何物件，讓您可以藉由使用索引鍵快速擷取物件。
 
 集合是類別，因此您必須在將項目加入該集合之前，宣告類別的執行個體。
 
@@ -24,7 +24,7 @@ ms.locfileid: "73418699"
 > [!NOTE]
 > 在本主題的範例中，請包括 `System.Collections.Generic` 和 `System.Linq` 命名空間的 [using](../../language-reference/keywords/using-directive.md) 指示詞。
 
- **本主題內容**
+ **在本主題中**
 
 - [使用簡單的集合](#BKMK_SimpleCollection)
 
@@ -70,7 +70,7 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-如果預先知道集合的內容，即可使用「集合初始設定式」來初始化集合。 如需詳細資訊，請參閱[物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)。
+如果預先知道集合的內容，即可使用「集合初始設定式」** 來初始化集合。 如需詳細資訊，請參閱[物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)。
 
 下列範例與前一個範例相同，但有一點除外，就是集合初始設定式是用來將項目加入集合中。
 
@@ -200,7 +200,7 @@ public class Galaxy
 
 下表列出 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間的一些常用類別：
 
-|執行個體|描述|
+|類別|描述|
 |---|---|
 |<xref:System.Collections.Generic.Dictionary%602>|表示根據索引鍵所整理的索引鍵/值組集合。|
 |<xref:System.Collections.Generic.List%601>|表示可以依照索引存取的物件清單。 提供搜尋、排序和修改清單的方法。|
@@ -230,7 +230,7 @@ public class Galaxy
 
 下表列出 `System.Collections` 命名空間的一些常用類別：
 
-|執行個體|描述|
+|類別|描述|
 |---|---|
 |<xref:System.Collections.ArrayList>|代表會視需要動態增加大小的物件陣列。|
 |<xref:System.Collections.Hashtable>|代表根據索引鍵的雜湊程式碼，所整理的索引鍵/值組集合。|
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>使用 LINQ 存取集合
 
-LINQ (Language-Integrated Query (LINQ)) 可用來存取集合。 LINQ 查詢提供篩選、排序和分組功能。 如需詳細資訊，請參閱[開始使用 C# 中的 LINQ](/dotnet/csharp/programming-guide/concepts/linq/)。
+LINQ (Language-Integrated Query (LINQ)) 可用來存取集合。 LINQ 查詢提供篩選、排序和分組功能。 有關詳細資訊，請參閱在[C# 中使用 LINQ 入門](linq/index.md)。
 
 下列範例會對泛型 `List` 執行 LINQ 查詢。 LINQ 查詢會傳回包含結果的不同集合。
 
@@ -561,9 +561,9 @@ public class Color
 
 <a name="BKMK_Iterators"></a>
 
-## <a name="iterators"></a>Iterators
+## <a name="iterators"></a>Iterator
 
-「迭代器」是用來在集合上執行自訂反覆項目。 迭代器可以是方法或 `get` 存取子。 迭代器會使用 [yield return](../../language-reference/keywords/yield.md) 陳述式，一次一個地傳回集合中的每個項目。
+「迭代器」** 是用來在集合上執行自訂反覆項目。 迭代器可以是方法或 `get` 存取子。 迭代器會使用 [yield return](../../language-reference/keywords/yield.md) 陳述式，一次一個地傳回集合中的每個項目。
 
 您會使用 [foreach](../../language-reference/keywords/foreach-in.md) 陳述式來呼叫迭代器。 `foreach` 迴圈的每個反覆項目都會呼叫迭代器。 在迭代器中到達 `yield return` 陳述式時，會傳回運算式，並保留程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。
 
@@ -596,7 +596,7 @@ private static IEnumerable<int> EvenSequence(
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)
 - [程式設計概念 (C#)](./index.md)

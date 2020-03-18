@@ -2,12 +2,12 @@
 title: 健康狀況監視
 description: 瀏覽實作健康情況監視的其中一種方式。
 ms.date: 03/02/2020
-ms.openlocfilehash: 3b8ba57149061e629bee441672718eba8a79da63
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: d3d2bc72cf29b3d1ac93191e7ff2bd827c9ee68d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78241152"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401708"
 ---
 # <a name="health-monitoring"></a>健康狀況監視
 
@@ -19,7 +19,7 @@ ms.locfileid: "78241152"
 
 ## <a name="implement-health-checks-in-aspnet-core-services"></a>在 ASP.NET Core 服務中實作健康情況檢查
 
-開發 ASP.NET Core 微服務或 web 應用程式時，您可以使用 ASP .NET Core 2.2 （[HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)）中所發行的內建健全狀況檢查功能。 如同許多 ASP.NET Core 功能，健康情況檢查隨附一組服務與中介軟體。
+在開發ASP.NET核心微服務或 Web 應用程式時，可以使用 ASP .NET Core[2.2（Microsoft.擴展.診斷.運行狀況檢查](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)）中發佈的內置運行狀況檢查功能。 如同許多 ASP.NET Core 功能，健康情況檢查隨附一組服務與中介軟體。
 
 健康情況服務和中介軟體不僅簡單易用，還提供功能讓您驗證應用程式所需的任何外部資源 (例如 SQL Server 資料庫或遠端 API) 是否正常運作。 使用這個功能時，您也可以自行決定何種情況下表示資源狀況良好，如我們稍後所說明。
 
@@ -27,11 +27,11 @@ ms.locfileid: "78241152"
 
 ### <a name="use-the-healthchecks-feature-in-your-back-end-aspnet-microservices"></a>在您的後端 ASP.NET 微服務中使用 HealthChecks 功能
 
-在本節中，您將瞭解如何在使用[HealthChecks](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)套件時，在範例 ASP.NET Core 3.1 Web API 應用程式中執行 HealthChecks 功能。 下一節將說明在大規模微服務（如 eShopOnContainers）中的這項功能的執行方式。
+在本節中，您將學習如何在使用[Microsoft 時](https://www.nuget.org/packages/Microsoft.Extensions.Diagnostics.HealthChecks)ASP.NET Core 3.1 Web API 應用程式中實現運行狀況檢查功能。 下一節將介紹在大型微服務（如 eShopOnContainers）中實現此功能。
 
-首先，您需要為每個微服務定義健康狀態良好的構成項目。 在範例應用程式中，如果其 API 可透過 HTTP 存取，且其相關的 SQL Server 資料庫也可供使用，則我們會定義微服務狀況良好。
+首先，您需要為每個微服務定義健康狀態良好的構成項目。 在應用程式範例中，如果微服務的 API 可通過 HTTP 訪問，並且其相關的 SQL Server 資料庫也可用，則我們定義微服務是健康的。
 
-在 .NET Core 3.1 中，您可以使用內建 Api 來設定服務，並以這種方式新增微服務及其相依 SQL Server 資料庫的健康情況檢查：
+在 .NET Core 3.1 中，使用內置 API，您可以佈建服務，以這種方式為微服務及其相關的 SQL Server 資料庫添加運行狀況檢查：
 
 ```csharp
 // Startup.cs from .NET Core 3.1 Web API sample
@@ -43,9 +43,9 @@ public void ConfigureServices(IServiceCollection services)
     services.AddHealthChecks()
         // Add a health check for a SQL Server database
         .AddCheck(
-            "OrderingDB-check", 
-            new SqlConnectionHealthCheck(Configuration["ConnectionString"]), 
-            HealthStatus.Unhealthy, 
+            "OrderingDB-check",
+            new SqlConnectionHealthCheck(Configuration["ConnectionString"]),
+            HealthStatus.Unhealthy,
             new string[] { "orderingdb" });
 }
 ```
@@ -104,9 +104,9 @@ public class SqlConnectionHealthCheck : IHealthCheck
 }
 ```
 
-請注意，在上述程式碼中，`Select 1` 是用來檢查資料庫健康情況的查詢。 為了監視微服務的可用性，協調器之類的 Kubernetes 會藉由傳送要求來測試微服務，定期執行健康情況檢查。 請務必讓您的資料庫查詢保持效率，以便這些作業可以快速執行，但不會產生更高的資源使用率。
+請注意，在上述程式碼中，`Select 1` 是用來檢查資料庫健康情況的查詢。 為了監視微服務的可用性，Kubernetes 等協調器通過發送測試微服務的請求定期執行運行狀況檢查。 請務必讓您的資料庫查詢保持效率，以便這些作業可以快速執行，但不會產生更高的資源使用率。
 
-最後，新增可回應 url 路徑 `/hc`的中介軟體：
+最後，添加回應 URL 路徑`/hc`的中介軟體：
 
 ```csharp
 // Startup.cs from .NET Core 3.1 Web Api sample
@@ -128,13 +128,13 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 ### <a name="healthchecks-implementation-in-eshoponcontainers"></a>eShopOnContainers 中的 HealthChecks 實作
 
-eShopOnContainers 中的微服務依賴多個服務來執行其工作。 例如，來自 eShopOnContainers 的 `Catalog.API` 微服務依賴多個服務，例如 Azure Blob 儲存體、SQL Server 和 RabbitMQ。 因此，它具有數個使用 `AddCheck()` 方法新增的健康情況檢查。 針對每個相依服務，必須新增自訂的 `IHealthCheck` 實作為定義其各自的健全狀況狀態。
+eShopOnContainers 中的微服務依賴多個服務來執行其工作。 例如，來自 eShopOnContainers 的 `Catalog.API` 微服務依賴多個服務，例如 Azure Blob 儲存體、SQL Server 和 RabbitMQ。 因此，它具有數個使用 `AddCheck()` 方法新增的健康情況檢查。 對於每個從屬服務，需要`IHealthCheck`添加定義其各自運行狀況的自訂實現。
 
-開放原始碼專案[AspNetCore](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)可解決這個問題，方法是為這些企業服務提供自訂的健康情況檢查，這些都是以 .net Core 3.1 為基礎。 每個健康情況檢查都可當成個別 NuGet 套件提供，然後便可輕鬆地將其新增至專案。 eShopOnContainers 會在其所有微服務中廣泛使用它們。
+開源專案[AspNetCore.診斷.HealthCheck](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks)通過為構建在 .NET Core 3.1 之上的每個企業服務提供自訂運行狀況檢查實現來解決此問題。 每個健康情況檢查都可當成個別 NuGet 套件提供，然後便可輕鬆地將其新增至專案。 eShopOnContainers 在其所有微服務中廣泛使用它們。
 
 例如，在 `Catalog.API` 微服務中，已新增下列 NuGet 套件：
 
-![HealthChecks NuGet 套件的螢幕擷取畫面。](./media/monitor-app-health/aspnet-core-diagnostics-health-checks.png)
+![AspNetCore.診斷.運行狀況檢查 NuGet 包的螢幕截圖。](./media/monitor-app-health/aspnet-core-diagnostics-health-checks.png)
 
 **圖 8-7**。 目錄 API 中使用 AspNetCore.Diagnostics.HealthChecks 實作的自訂健康情況檢查
 
@@ -186,7 +186,7 @@ public static IServiceCollection AddCustomHealthCheck(this IServiceCollection se
 }
 ```
 
-最後，新增 HealthCheck 中介軟體以接聽 "/hc" 端點：
+最後，添加 HealthCheck 中介軟體以偵聽"/hc"終結點：
 
 ```csharp
 // HealthCheck middleware
@@ -202,7 +202,7 @@ app.UseHealthChecks("/hc", new HealthCheckOptions()
 
 完成此文章中說明的健康情況檢查設定並在 Docker 中開始執行微服務之後，您就可以直接從瀏覽器檢查微服務的健康情況。 您必須在 Docker 主機中發佈容器連接埠，以便透過外部 Docker 主機 IP 或 `localhost` 存取容器，如圖 8-8 所示。
 
-![健全狀況檢查所傳回之 JSON 回應的螢幕擷取畫面。](./media/monitor-app-health/health-check-json-response.png)
+![通過運行狀況檢查返回的 JSON 回應的螢幕截圖。](./media/monitor-app-health/health-check-json-response.png)
 
 **圖 8-8**。 從瀏覽器檢查單一服務的健康狀態
 
@@ -216,7 +216,7 @@ eShopOnContainers 範例包含顯示範例健康情況檢查報告的網頁，�
 
 幸好，[AspNetCore.Diagnostics.HealthChecks](https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks) 也會提供 [AspNetCore.HealthChecks.UI](https://www.nuget.org/packages/AspNetCore.HealthChecks.UI/) NuGet 套件，其可用來顯示所設定 URI 中的健康情況檢查結果。
 
-![健全狀況檢查 UI eShopOnContainers 健全狀況狀態的螢幕擷取畫面。](./media/monitor-app-health/health-check-status-ui.png)
+![運行狀況檢查 UI eShopOn 容器運行狀況狀態的螢幕截圖。](./media/monitor-app-health/health-check-status-ui.png)
 
 **圖 8-9**。 eShopOnContainers 中的範例健康狀態檢查報告
 
@@ -268,7 +268,7 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 比方說，大部分協調器可以使用健康狀態檢查來管理零停機部署。 只有當服務/容器的狀態變更為健康狀態良好時，協調器才會開始將流量路由到服務/容器的執行個體。
 
-當協調器執行應用程式升級時，健康狀態監視尤為重要。 某些協調器 (例如 Azure Service Fabric) 會分階段升級服務 — 例如，它們可能會為每個應用程式升級進行五分之一的叢集介面更新。 在相同時間升級的一組節點即為一個「升級網域」。 每個升級網域都已升級並可供使用者使用之後，該升級網域還必須通過健康狀態檢查，部署才會移到下一個升級網域。
+當協調器執行應用程式升級時，健康狀態監視尤為重要。 某些協調器 (例如 Azure Service Fabric) 會分階段升級服務 — 例如，它們可能會為每個應用程式升級進行五分之一的叢集介面更新。 在相同時間升級的一組節點即為一個「升級網域」**。 每個升級網域都已升級並可供使用者使用之後，該升級網域還必須通過健康狀態檢查，部署才會移到下一個升級網域。
 
 服務健全狀況的另一個層面是來自服務的報告計量。 這是 Service Fabric 等協調器的一項健康狀態模型進階功能。 使用協調器時，計量非常重要，因為其可用來平衡資源使用狀況。 計量也可以當做系統健全狀況的指標。 比方說，您的應用程式可能有許多微服務，而每個執行個體都會報告每秒要求數 (RPS) 計量。 如果某一個服務比其他服務使用更多資源 (記憶體、處理器等)，協調器可以在叢集中移動服務執行個體，以嘗試維護平均的資源使用率。
 
@@ -284,15 +284,15 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 
 ## <a name="additional-resources"></a>其他資源
 
-- **適用於 ASP.NET Core 的 HealthChecks 和 HealthChecks UI** \
+- **運行狀況檢查和運行狀況檢查 UI ASP.NET核心** \
   <https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks>
 
-- **Service Fabric 健康情況監視簡介** \
+- **服務結構運行狀況監測簡介** \
   [https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction](/azure/service-fabric/service-fabric-health-introduction)
 
 - **Azure 監視器** \
   <https://azure.microsoft.com/services/monitor/>
 
 >[!div class="step-by-step"]
->[上一頁](implement-circuit-breaker-pattern.md)
->[下一頁](../secure-net-microservices-web-applications/index.md)
+>[上一個](implement-circuit-breaker-pattern.md)
+>[下一個](../secure-net-microservices-web-applications/index.md)

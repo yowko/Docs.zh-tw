@@ -3,15 +3,15 @@ title: dotnet vstest 命令
 description: dotnet vstest 命令會建置專案和其所有相依性。
 ms.date: 02/27/2020
 ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156929"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
-**本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
+**本文適用于：✔️** .NET 核心 2.1 SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -61,11 +61,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
 
 - **`--Parallel`**
 
-  以平行方式執行測試。 根據預設，電腦上所有的可用核心都可供使用。 在 *.runsettings*檔案中的 [`RunConfiguration`] 節點底下設定 [`MaxCpuCount`] 屬性，以指定明確的核心數目。
+  並行運行測試。 根據預設，電腦上所有的可用核心都可供使用。 通過在*回合設定*檔中的`RunConfiguration`節點下設置屬性來`MaxCpuCount`指定顯式內核數。
 
 - **`--TestCaseFilter <Expression>`**
 
-  執行符合指定之運算式的測試。 `<Expression>` 的格式為 `<property>Operator<value>[|&<Expression>]`，其中 Operator (運算子) 為 `=`、`!=` 或 `~` 其中之一。 運算子 `~` 具有「包含」語意，且適用於像是 `DisplayName` 的字串屬性。 括弧 `()` 用來將子運算式分組。
+  執行符合指定之運算式的測試。 `<Expression>` 的格式為 `<property>Operator<value>[|&<Expression>]`，其中 Operator (運算子) 為 `=`、`!=` 或 `~` 其中之一。 運算子 `~` 具有「包含」語意，且適用於像是 `DisplayName` 的字串屬性。 括弧`()`用於對子運算式進行分組。
 
 - **`-?|--Help`**
 
@@ -127,19 +127,19 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
 
 ## <a name="examples"></a>範例
 
-在*mytestproject.dll*中執行測試：
+運行*測試在我的測試專案.dll*：
 
 ```dotnetcli
 dotnet vstest mytestproject.dll
 ```
 
-在*mytestproject.dll*中執行測試，並使用自訂名稱匯出至自訂資料夾：
+在*mytestproject.dll*中運行測試 ，匯出到具有自訂名稱的自訂資料夾：
 
 ```dotnetcli
 dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path
 ```
 
-在*mytestproject.dll*和*myothertestproject.exe*中執行測試：
+運行*測試在我的測試專案.dll**和我的其他測試專案.exe*：
 
 ```dotnetcli
 dotnet vstest mytestproject.dll myothertestproject.exe

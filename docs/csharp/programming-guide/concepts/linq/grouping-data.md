@@ -3,10 +3,10 @@ title: 分組資料 (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
 ms.openlocfilehash: 7ef3d3c9097d7a9478605565518ac8975feb9fe2
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635739"
 ---
 # <a name="grouping-data-c"></a>分組資料 (C#)
@@ -20,7 +20,7 @@ ms.locfileid: "75635739"
   
 ## <a name="methods"></a>方法  
   
-|方法名稱|描述|C# 查詢運算式語法|更多資訊|  
+|方法名稱|描述|C# 查詢運算式語法|相關資訊|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |GroupBy|共用共同屬性的群組項目。 每個群組都由一個 <xref:System.Linq.IGrouping%602> 物件代表。|`group … by`<br /><br /> -或-<br /><br /> `group … by … into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
 |ToLookup|根據索引鍵選取器函式，將元素插入 <xref:System.Linq.Lookup%602> (一對多字典)。|不適用。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
@@ -59,13 +59,13 @@ foreach (var group in query)
 */  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq>
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
 - [group 子句](../../../language-reference/keywords/group-clause.md)
-- [建立巢狀群組](../../../linq/create-a-nested-group.md)
-- [如何依副檔名將檔案分組（LINQ）（C#）](./how-to-group-files-by-extension-linq.md)
-- [將查詢結果分組](../../../linq/group-query-results.md)
-- [在分組作業上執行子查詢](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
-- [如何使用群組將檔案分割成許多檔案（LINQ）（C#）](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [創建嵌套組](../../../linq/create-a-nested-group.md)
+- [如何按副檔名 （LINQ） （C#） 對檔進行分組](./how-to-group-files-by-extension-linq.md)
+- [組查詢結果](../../../linq/group-query-results.md)
+- [對分組操作執行子查詢](../../../linq/perform-a-subquery-on-a-grouping-operation.md)
+- [如何使用組 （LINQ） （C#） 將檔拆分為多個檔](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

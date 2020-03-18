@@ -1,23 +1,23 @@
 ---
-title: 如何聯結兩個集合（LINQ to XML）（C#）
+title: 如何聯接兩個集合（LINQ 到 XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
 ms.openlocfilehash: a5044778bbfd9529faf5fe63c72076f6a973c815
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345865"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-c"></a>如何聯結兩個集合（LINQ to XML）（C#）
+# <a name="how-to-join-two-collections-linq-to-xml-c"></a>如何聯接兩個集合（LINQ 到 XML）（C#）
 
-XML 文件中的項目或屬性有時候會參考其他項目或屬性。 例如，[範例 XML 檔：客戶和訂單 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML 文件包含客戶清單與訂單清單。 每個 `Customer` 項目都包含一個 `CustomerID` 屬性。 每個 `Order` 元素包含一個 `CustomerID` 元素。 每個訂單中的 `CustomerID` 項目都會參考客戶中的 `CustomerID` 屬性。
+XML 文件中的項目或屬性有時候會參考其他項目或屬性。 例如，[範例 XML 檔：客戶和訂單 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md) XML 文件包含客戶清單與訂單清單。 每個 `Customer` 項目都包含一個 `CustomerID` 屬性。 每個 `Order` 項目都包含一個 `CustomerID` 項目。 每個訂單中的 `CustomerID` 項目都會參考客戶中的 `CustomerID` 屬性。
 
 [範例 XSD 檔：客戶和訂單](./sample-xsd-file-customers-and-orders1.md)主題包含可用於驗證此文件的 XSD。 它會使用 XSD 的 `xs:key` 和 `xs:keyref` 功能來建立 `CustomerID` 項目的 `Customer` 屬性為索引鍵，並在每個 `CustomerID` 項目中的 `Order` 項目和每個 `CustomerID` 項目中的 `Customer` 屬性之間建立關聯性。
 
 利用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]，您可以使用 `join` 子句來利用此關聯性。
 
-因為沒有可用的索引，所以這類聯結將會有不佳的執行時間效能。
+由於沒有可用的索引，因此此類聯接的運行時性能較差。
 
 如需 `join` 的詳細資訊，請參閱[聯結作業 (C#)](./join-operations.md)。
 
@@ -33,7 +33,7 @@ XML 文件中的項目或屬性有時候會參考其他項目或屬性。 例如
 
 此範例使用下列 XSD 結構描述︰[範例 XSD 檔：客戶和訂單](./sample-xsd-file-customers-and-orders1.md)。
 
-以這種方式加入將無法順利執行。 聯結會透過線性搜尋執行。 沒有雜湊資料表或索引協助執行。
+以這種方式加入不會很好。 聯結會透過線性搜尋執行。 沒有雜湊資料表或索引協助執行。
 
 ```csharp
 XmlSchemaSet schemas = new XmlSchemaSet();

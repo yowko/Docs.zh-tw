@@ -6,10 +6,10 @@ helpviewer_keywords:
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
 ms.openlocfilehash: 4012027dc1a9bd2543d0a4195360e5f7e0586fe1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705258"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>使用例外狀況 (C# 程式設計手冊)
@@ -43,7 +43,7 @@ ms.locfileid: "75705258"
   
 - 如果到達執行緒的開頭，則會終止執行緒。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [例外狀況和例外狀況處理](./index.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
 ms.openlocfilehash: 2d6d0c52be2306292224d7831f8818c6f865f2f4
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "69602747"
 ---
 # <a name="-noconfig-c-compiler-options"></a>-noconfig (C# 編譯器選項)
@@ -32,7 +32,7 @@ ms.locfileid: "69602747"
   
  編譯器最後才會處理傳遞至 **csc** 命令的選項。 因此，命令列上的任何選項會覆寫 csc.rsp 檔案中相同選項的設定。  
   
- 如果您不想要編譯器尋找和使用 csc.rsp 檔案中的設定，請指定 **-noconfig**。  
+ 如果不希望編譯器查找並使用 csc.rsp 檔中的設置，請指定 **-noconfig**。  
   
  Visual Studio 不提供這個編譯器選項，您亦無法以程式設計方式變更。  
   

@@ -4,10 +4,10 @@ description: 開始使用 .NET 系列的技術。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124217"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
@@ -27,14 +27,14 @@ ms.locfileid: "77124217"
 
 此外，也請追蹤最新的 .NET 活動：
 
-- [Microsoft Ignite](https://www.microsoft.com/ignite)
-- [Microsoft Build](https://www.microsoft.com/build)
+- [微軟點火](https://www.microsoft.com/ignite)
+- [微軟構建](https://www.microsoft.com/build)
 - [.NET Conf](https://www.dotnetconf.net/)
 
 如需新增至 .NET 實作的最新功能與支援語言的相關資訊，請參閱以下文章：
 
 - [.NET Core 的新功能](core/whats-new/index.md)
-- [.NET Framework 的新功能](framework/whats-new/index.md)
+- [.NET 框架中的新增功能](framework/whats-new/index.md)
 - [C# 的新功能](csharp/whats-new/index.md)
 - [Visual Basic 的新功能](visual-basic/getting-started/whats-new.md)
 
@@ -44,32 +44,32 @@ ms.locfileid: "77124217"
 
 - [.NET 指南](standard/index.md)
 - [.NET Core 指南](core/index.md)
-- [.NET Framework 指南](framework/index.md)
+- [.NET 框架指南](framework/index.md)
 - [C# 指南](csharp/index.yml)
 - [F# 指南](fsharp/index.yml)
 - [Visual Basic 指南](visual-basic/index.yml)
-- [ML.NET 指南](machine-learning/index.yml)
+- [ML.NET指南](machine-learning/index.yml)
 - [.NET for Apache Spark](spark/index.yml)
 - [.NET 應用程式架構](architecture/index.yml)
 
 此外，您可以瀏覽 [.NET API 參考](/dotnet/api)。
 
-## <a name="videos"></a>Videos
+## <a name="videos"></a>影片
 
-探索 web、行動裝置、桌上型電腦、 C#機器學習服務、容器/Docker、資料存取等的影片：
+流覽 Web、移動、桌面、C#、機器學習、容器/Docker、資料訪問等視頻：
 
-[.NET 101 影片系列](https://dotnet.microsoft.com/learn/videos)
+[.NET 101 視頻系列](https://dotnet.microsoft.com/learn/videos)
 
 ## <a name="open-source"></a>開放原始碼
 
 這份文件是完全[開放原始檔](https://github.com/dotnet/docs)。 您可以透過任何想要的方式參與，包括建立文件撰寫問題。 此外，.NET 的大多部分本身也是開放原始碼。 下列清單顯示主要的 .NET GitHub 存放庫：
 
 - [.NET Core Home](https://github.com/dotnet/core) (.NET Core 首頁)
-- [.NET Core 執行時間](https://github.com/dotnet/runtime)
-- [.NET Core SDK](https://github.com/dotnet/sdk)
+- [.NET 核心運行時](https://github.com/dotnet/runtime)
+- [.NET 核心 SDK](https://github.com/dotnet/sdk)
 - [Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools](https://github.com/dotnet/roslyn) (Roslyn (C# 和 Visual Basic) 編譯器平台和 IDE 工具)
 - [F# Compiler and IDE Tools](https://github.com/dotnet/fsharp) (F# 編譯器和 IDE 工具)
 - [Windows Forms](https://github.com/dotnet/winforms) \(英文\)
 - [WPF](https://github.com/dotnet/wpf)
 
-您可以加入已活躍於 [.NET 社群 (英文)](https://dotnet.microsoft.com/platform/community) 的其他人，了解最新消息或尋求協助。
+您可以加入已在[.NET 社區中](https://dotnet.microsoft.com/platform/community)活動的其他人，瞭解新增功能或尋求説明。

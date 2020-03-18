@@ -1,35 +1,35 @@
 ---
-title: 檢查 Windows、Linux 和 macOS 上已安裝的 .NET Core 版本-.NET Core
-description: 瞭解如何列出電腦上已安裝的 .NET Core 版本。 這包括 .NET Core 執行時間和 SDK。
+title: 檢查 Windows、Linux 和 macOS 上安裝的 .NET 核心版本 - .NET Core
+description: 瞭解如何列出電腦上安裝了 .NET Core 的哪些版本。 這包括 .NET 核心運行時和 SDK。
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
 ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503843"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399032"
 ---
-# <a name="how-to-check-that-net-core-is-already-installed"></a>如何檢查是否已安裝 .NET Core
+# <a name="how-to-check-that-net-core-is-already-installed"></a>如何檢查 .NET 核心是否已安裝
 
-本文會教您如何檢查電腦上已安裝的 .NET Core 執行時間和 SDK 版本。 如果您有整合式開發環境（例如 Visual Studio 或 Visual Studio for Mac），則可能已經安裝 .NET core。
+本文教您如何檢查電腦上安裝了 .NET Core 運行時和 SDK 的哪些版本。 如果您具有集成的開發環境（如適用于 Mac 的視覺化工作室或視覺工作室），則可能已安裝 .NET 內核。
 
-安裝 SDK 會安裝對應的執行時間。
+安裝 SDK 會安裝相應的運行時。
 
-如果本文中有任何命令失敗，您就不會安裝執行時間或 SDK。 如需詳細資訊，請參閱[下載並安裝 .Net Core](index.md)。
+如果本文中的任何命令失敗，則未安裝運行時或 SDK。 有關詳細資訊，請參閱[下載並安裝 .NET 核心](index.md)。
 
 ## <a name="check-sdk-versions"></a>檢查 SDK 版本
 
-您可以查看目前已安裝終端機的 .NET Core SDK 版本。 開啟終端機並執行下列命令。
+您可以看到 .NET 核心 SDK 的哪些版本當前隨終端一起安裝。 打開終端並運行以下命令。
 
 ```dotnetcli
 dotnet --list-sdks
 ```
 
-您會取得如下所示的輸出。
+您將獲得類似于以下內容的輸出。
 
 ::: zone pivot="os-windows"
 
@@ -78,13 +78,13 @@ dotnet --list-sdks
 
 ## <a name="check-runtime-versions"></a>檢查執行階段版本
 
-您可以使用下列命令來查看目前安裝的 .NET Core 執行階段版本。
+您可以看到 .NET Core 運行時的哪些版本當前已安裝以下命令。
 
 ```dotnetcli
 dotnet --list-runtimes
 ```
 
-您會取得如下所示的輸出。
+您將獲得類似于以下內容的輸出。
 
 ::: zone pivot="os-windows"
 
@@ -168,9 +168,9 @@ Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="more-information"></a>詳細資訊
 
-您可以使用 `dotnet --info`的命令來查看 SDK 版本和執行階段版本。 您也會取得其他環境相關資訊，例如作業系統版本和執行時間識別碼（RID）。
+您可以使用 命令`dotnet --info`同時查看 SDK 版本和執行階段版本。 您還將獲得其他與環境相關的資訊，如作業系統版本和運行時識別碼 （RID）。
 
 ## <a name="next-steps"></a>後續步驟
 
-- [安裝 .Net Core 運行](runtime.md)時間。
-- [安裝 .NET Core SDK](sdk.md)。
+- [安裝 .NET 核心運行時](runtime.md)。
+- [安裝 .NET 核心 SDK](sdk.md)。

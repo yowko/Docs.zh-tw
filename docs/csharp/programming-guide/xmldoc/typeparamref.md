@@ -1,5 +1,5 @@
 ---
-title: <typeparamref> 程式C#設計指南
+title: <typeparamref>- C# 程式設計指南
 ms.date: 07/20/2015
 f1_keywords:
 - typeparamref
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
 ms.openlocfilehash: 266eadad322fd3c4167c7a911cb57ef1e1333012
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789664"
 ---
-# <a name="typeparamref-c-programming-guide"></a>\<typeparamref > （C#程式設計手冊）
+# <a name="typeparamref-c-programming-guide"></a>\<類型參數>（C# 程式設計指南）
 
 ## <a name="syntax"></a>語法
 
@@ -34,13 +34,13 @@ ms.locfileid: "76789664"
 
 使用這個標記，讓文件檔案的取用者以某種明顯方式格式化單字，例如斜體。
 
-使用 [-doc](../../language-reference/compiler-options/doc-compiler-option.md) 編譯可處理檔案的文件註解。
+使用[-doc](../../language-reference/compiler-options/doc-compiler-option.md)編譯，以處理檔的文檔注釋。
 
 ## <a name="example"></a>範例
 
 [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
-- [建議使用的檔註解標記](./recommended-tags-for-documentation-comments.md)
+- [建議使用的文件註解標籤](./recommended-tags-for-documentation-comments.md)

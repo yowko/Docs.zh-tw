@@ -1,19 +1,19 @@
 ---
-title: MSBuild 的重大變更
-description: 列出 MSBuild for .NET Core 中的重大變更。
+title: MS 構建重大更改
+description: 列出 MSBuild 中為 .NET 核心所做的重大更改。
 ms.date: 02/10/2020
 ms.openlocfilehash: 42588fc885c38a3d543fa94b11765e77633e209c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77453787"
 ---
-# <a name="msbuild-breaking-changes"></a>MSBuild 的重大變更
+# <a name="msbuild-breaking-changes"></a>MS 構建重大更改
 
-下列重大變更記載于此頁面：
+此頁面將記錄以下重大更改：
 
-- [資源資訊清單檔案名變更](#resource-manifest-file-names)
+- [資源清單檔案名稱更改](#resource-manifest-file-names)
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

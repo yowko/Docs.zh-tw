@@ -4,10 +4,10 @@ description: .NET 微服務和 Web 應用程式中的安全性 - 取得 ASP.NET 
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501771"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>關於 .NET 微服務和 Web 應用程式中的授權
@@ -68,9 +68,9 @@ public ActionResult API1 ()
 
 在本例中，若要呼叫 API1，使用者必須：
 
-- 為系統管理員或 PowerUser 角色，且
+- 為系統管理員或** PowerUser 角色，且**
 
-- 為 RemoteEmployee 角色，「並」
+- 為 RemoteEmployee 角色，「並」**
 
 - 滿足 CustomPolicy 授權的自訂處理常式。
 
@@ -114,18 +114,18 @@ services.AddAuthorization(options =>
 
 ## <a name="additional-resources"></a>其他資源
 
-- **ASP.NET Core 驗證** \
+- **ASP.NET核心身份驗證** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **ASP.NET Core 授權** \
+- **ASP.NET核心授權** \
   [https://docs.microsoft.com/aspnet/core/security/authorization/introduction](/aspnet/core/security/authorization/introduction)
 
-- **以角色為基礎的授權** \
+- **基於角色的授權** \
   [https://docs.microsoft.com/aspnet/core/security/authorization/roles](/aspnet/core/security/authorization/roles)
 
-- **自訂以原則為基礎的授權** \
+- **基於策略的自訂授權** \
   [https://docs.microsoft.com/aspnet/core/security/authorization/policies](/aspnet/core/security/authorization/policies)
 
 >[!div class="step-by-step"]
->[上一頁](index.md)
->[下一頁](developer-app-secrets-storage.md)
+>[上一個](index.md)
+>[下一個](developer-app-secrets-storage.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
 ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75700194"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>使用命名空間 (C# 程式設計手冊)
@@ -30,13 +30,13 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
   
  [!code-csharp[csProgGuide#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#31)]  
   
- 不要：  
+ 不要這樣撰寫：  
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
 ## <a name="namespace-aliases"></a>命名空間別名
 
- 您也可以使用 [`using` 指示詞](../../language-reference/keywords/using-directive.md)來建立命名空間的別名。 使用[命名空間別名限定詞`::`](../../language-reference/operators/namespace-alias-qualifier.md)來存取別名命名空間的成員。 下列範例示範如何建立及使用命名空間別名：
+ 您還可以使用[`using`該指令](../../language-reference/keywords/using-directive.md)為命名空間創建別名。 使用[命名空間別名限定詞`::`](../../language-reference/operators/namespace-alias-qualifier.md)來存取別名命名空間的成員。 下列範例示範如何建立及使用命名空間別名：
   
 [!code-csharp[csProgGuideNamespaces#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#5)]
   
@@ -90,10 +90,10 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
   
  這會適用，但是如果後續引進名為 `Alias` 的類型，`Alias.` 會改為繫結至該類型。 使用 `Alias::Exception` 來確保將 `Alias` 視為命名空間別名，而非型別。  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [命名空間](./index.md)
-- [. 運算子](../../language-reference/operators/member-access-operators.md#member-access-operator-)
-- [:: 運算子](../../language-reference/operators/namespace-alias-qualifier.md)
+- [.運算元](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [* 操作員](../../language-reference/operators/namespace-alias-qualifier.md)
 - [外部別名](../../language-reference/keywords/extern-alias.md)

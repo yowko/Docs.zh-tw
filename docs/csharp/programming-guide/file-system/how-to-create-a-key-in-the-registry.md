@@ -1,5 +1,5 @@
 ---
-title: 如何在登錄程式C#設計指南中建立金鑰
+title: 如何在註冊表中創建金鑰 - C# 程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
 ms.openlocfilehash: 16974db950a3a460416cfb917147439707e1d007
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635440"
 ---
-# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>如何在登錄中建立機碼（C#程式設計手冊）
+# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>如何在註冊表中創建金鑰（C# 程式設計指南）
 本範例會將 "Name" 和 "Isabella" 的值組新增至目前使用者之登錄的 "Names" 索引鍵下。  
   
 ## <a name="example"></a>範例  
@@ -33,7 +33,7 @@ key.Close();
   
 - 以直接位在 Names 節點下的值名稱取代 `Name` 參數。  
   
-## <a name="robust-programming"></a>最佳化程式設計  
+## <a name="robust-programming"></a>穩固程式設計  
  檢查登錄結構以找出適合索引鍵的位置。 例如，您可能想要開啟目前使用者的軟體金鑰，並以貴公司的名稱建立金鑰。 請將登錄值新增至貴公司的索引鍵。  
   
  以下條件可能會造成例外狀況：  
@@ -55,7 +55,7 @@ key.Close();
   
  即使使用存取控制清單 (ACL) 來保護登錄機碼，將密碼等機密資料以純文字儲存在登錄中也不安全。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [C# 程式設計指南](../index.md)

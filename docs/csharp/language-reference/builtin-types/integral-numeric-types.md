@@ -33,15 +33,15 @@ helpviewer_keywords:
 - long keyword [C#]
 - ulong keyword [C#]
 ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093197"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整數的數字型別 (C# 參考)
 
-整數*類資料類型*代表整數。 所有整數數數值型別都是實[數值型別](value-types.md)。 它們也是[簡單類型](value-types.md#built-in-value-types)，而且可以使用[常](#integer-literals)值進行初始化。 所有整數數數值型別都支援[算術](../operators/arithmetic-operators.md)、[位邏輯](../operators/bitwise-and-shift-operators.md)、比較和[等號](../operators/equality-operators.md)[比較](../operators/comparison-operators.md)運算子。
+*積分數數值型別*表示整數。 所有積分數數值型別都是[數值型別](value-types.md)。 它們也是[簡單的類型](value-types.md#built-in-value-types)，可以使用[文本](#integer-literals)初始化。 所有積分數數值型別都支援[算術](../operators/arithmetic-operators.md)、[位邏輯](../operators/bitwise-and-shift-operators.md)、[比較](../operators/comparison-operators.md)和[相等](../operators/equality-operators.md)運算子。
 
 ## <a name="characteristics-of-the-integral-types"></a>整數型別的特性
 
@@ -71,13 +71,13 @@ System.Int32 b = 123;
 
 ## <a name="integer-literals"></a>整數常值
 
-整數常值可以是
+整數文本可以是
 
-- *decimal*：不含任何前置詞
-- *十六進位*：使用 `0x` 或 `0X` 前置詞
-- *binary*：具有 `0b` 或 `0B` 前置詞（可在C# 7.0 和更新版本中取得）
+- *十進位*：沒有任何首碼
+- *十六進位*：帶`0x`或`0X`首碼
+- *二進位*： `0b` `0B`帶 或 首碼（在 C# 7.0 及更高版本中提供）
 
-下列程式碼示範每個的範例：
+以下代碼演示了每個示例：
 
 ```csharp
 var decimalLiteral = 42;
@@ -85,31 +85,31 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-上述範例也會示範如何使用 `_` 做為*數位分隔符號*，從C# 7.0 開始支援。 您可以使用數位分隔符號搭配所有類型的數值常值。
+前面的示例還顯示`_`用作*數位分隔符號*的用途，該分隔符號支援從 C# 7.0 開始。 您可以將數位分隔符號用於所有類型的數位文本。
 
-整數常值的類型是由其後綴決定，如下所示：
+整數文本的類型由其後綴確定，如下所示：
 
-- 如果常值沒有後置詞，其類型會是下列類型中可表示其值的第一個型別： `int`、`uint`、`long`、`ulong`。
-- 如果常值是以 `U` 或 `u`為後置字元，則其類型會是下列類型中可表示其值的第一個型別： `uint`、`ulong`。
-- 如果常值是以 `L` 或 `l`為後置字元，則其類型會是下列類型中可表示其值的第一個型別： `long`、`ulong`。
+- 如果文本`int`沒有尾碼，則其類型是可以表示其值的以下類型中的第一個： 、 `uint`、 `long`、 `ulong`、 、 、 、 、 、 、 、 、 、 、 、 、 、
+- 如果文本`U`尾碼于 或`u`，其類型是可以表示其值的以下類型中的第一個： `uint`。 `ulong`
+- 如果文本`L`尾碼于 或`l`，其類型是可以表示其值的以下類型中的第一個： `long`。 `ulong`
 
   > [!NOTE]
-  > 您可以使用小寫字母 `l` 做為尾碼。 不過，這會產生編譯器警告，因為字母 `l` 可以與數位 `1`混淆。 為了清楚起見，請使用 `L`。
+  > 您可以將小寫字母`l`用作尾碼。 但是，這將生成編譯器警告，因為字母`l`可能會與數位`1`混淆。 用於`L`清楚。
 
-- 如果常值是以 `UL`、`Ul`、`uL`、`ul`、`LU`、`Lu`、`lU`或 `lu`為尾碼，則其類型為 `ulong`。
+- 如果文本`UL`尾碼為 、 `Ul`、 `uL`、、、、、、、、、`ul``LU``Lu``lU`其類型為`lu`。 `ulong`
 
 如果整數常值所代表的值超出 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，就會發生編譯錯誤 [CS1021](../../misc/cs1021.md)。
 
-如果 `int` 整數常值的判斷類型，而且常值所代表的值是在目的地類型的範圍內，則可以隱含地將該值轉換成 `sbyte`、`byte`、`short`、`ushort`、`uint`或 `ulong`：
+如果整數文本的確定類型為`int`，並且文本表示的值在目標型別的範圍內，則可以隱式轉換為`sbyte`、、、、、、、、、、、、、`short``ushort``uint``ulong``byte`或 ：
 
 ```csharp
 byte a = 17;
 byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 ```
 
-如上述範例所示，如果常值不在目的地類型的範圍內，就會發生編譯器錯誤[CS0031](../../misc/cs0031.md) 。
+如前面的示例所示，如果文本的值不在目標型別範圍內，則會發生編譯器錯誤[CS0031。](../../misc/cs0031.md)
 
-您也可以使用轉型，將整數常值所代表的值轉換為類型，而不是常值的判斷型別：
+您還可以使用強制轉換將整數文本表示的值轉換為文本的確定類型以外的類型：
 
 ```csharp
 var signedByte = (sbyte)42;
@@ -118,7 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>轉換
 
-您可以將任何整數數數值型別轉換成任何其他整數數數值型別。 如果目的地類型可以儲存來源類型的所有值，則轉換是隱含的。 否則，您必須使用[cast 運算子 `()`](../operators/type-testing-and-cast.md#cast-operator-)來叫用明確轉換。 如需詳細資訊，請參閱[內建數值轉換](numeric-conversions.md)。
+您可以將任何積分數數值型別轉換為任何其他積分數數值型別。 如果目標型別可以存儲源類型的所有值，則轉換是隱式轉換。 否則，您需要使用[強制轉換運算子`()`](../operators/type-testing-and-cast.md#cast-operator-)調用顯式轉換。 有關詳細資訊，請參閱[內置數位轉換](numeric-conversions.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -130,7 +130,7 @@ var longVariable = (long)42;
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [值類型](value-types.md)
+- [實值型別](value-types.md)
 - [浮點類型](floating-point-numeric-types.md)
-- [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
+- [標準數位格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET 中的數值](../../../standard/numerics.md)

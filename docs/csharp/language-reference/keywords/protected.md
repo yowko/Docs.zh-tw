@@ -8,17 +8,17 @@ helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
 ms.openlocfilehash: bec619d4f49bd26daa742c18c830909c14948adf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713179"
 ---
 # <a name="protected-c-reference"></a>protected (C# 參考)
 
 `protected` 關鍵字是成員存取修飾詞。
 
- > 此頁面涵蓋 `protected` 存取。 `protected` 關鍵字也是屬於 [`protected internal`](protected-internal.md) 和 [`private protected`](private-protected.md) 存取修飾詞。
+ > 此頁面涵蓋 `protected` 存取。 關鍵字`protected`也是[`protected internal`](protected-internal.md)和[`private protected`](private-protected.md)訪問修飾符的一部分。
 
 受保護的成員可在其類別內由衍生類別執行個體存取。
 
@@ -50,15 +50,15 @@ ms.locfileid: "75713179"
 
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[已宣告存取範圍](~/_csharplang/spec/basic-concepts.md#declared-accessibility)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [存取修飾詞](access-modifiers.md)
-- [存取範圍層級](accessibility-levels.md)
+- [協助工具級別](accessibility-levels.md)
 - [修飾詞](index.md)
 - [public](public.md)
-- [private](private.md)
-- [internal](internal.md)
+- [私人](private.md)
+- [內部](internal.md)
 - [internal virtual 關鍵字的安全性考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

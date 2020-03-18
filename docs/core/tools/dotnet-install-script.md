@@ -1,19 +1,19 @@
 ---
 title: dotnet-install 指令碼
-description: 瞭解安裝 .NET Core SDK 和共用執行時間的 dotnet-安裝腳本。
+description: 瞭解用於安裝 .NET 核心 SDK 和共用運行時的 dotnet 安裝腳本。
 ms.date: 01/23/2020
 ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092859"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 指令碼參考
 
 ## <a name="name"></a>名稱
 
-`dotnet-install.ps1` | `dotnet-install.sh`-用來安裝 .NET Core SDK 和共用執行時間的腳本。
+`dotnet-install.ps1` | `dotnet-install.sh`- 用於安裝 .NET 核心 SDK 和共用運行時的腳本。
 
 ## <a name="synopsis"></a>概要
 
@@ -35,12 +35,12 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 ## <a name="description"></a>描述
 
-`dotnet-install` 腳本是用來執行 .NET Core SDK 的非系統管理員安裝，其中包括 .NET Core CLI 和共用執行時間。
+這些`dotnet-install`腳本用於執行 .NET 核心 SDK 的非管理員安裝，其中包括 .NET Core CLI 和共用運行時。
 
-建議您使用穩定版本的腳本：
+我們建議您使用腳本的穩定版本：
 
-- Bash （Linux/macOS）： <https://dot.net/v1/dotnet-install.sh>
-- PowerShell （Windows）： <https://dot.net/v1/dotnet-install.ps1>
+- Bash（Linux/macOS）：<https://dot.net/v1/dotnet-install.sh>
+- 電源外殼（視窗）：<https://dot.net/v1/dotnet-install.ps1>
 
 這些指令碼對於自動化案例和非系統管理員安裝非常有幫助。 有兩個指令碼：一個是在 Windows 上運作的 PowerShell 指令碼，另一個是在 Linux/macOS 上運作的 Bash 指令碼。 這兩個指令碼有相同的行為。 Bash 指令碼也能讀取 PowerShell 參數，因此您可以搭配 PowerShell 參數使用 Linux/macOS 系統上的指令碼。
 
@@ -50,7 +50,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 執行指令碼之前，請安裝所有必要的[相依性 (英文)](../install/dependencies.md)。
 
-您可以使用 `-Version|--version` 引數安裝特定版本。 版本必須指定為三部分版本（例如 `2.1.0`）。 如果未提供，就會使用 `latest` 版本。
+您可以使用 `-Version|--version` 引數安裝特定版本。 版本必須指定為三部分版本（例如。 `2.1.0` 如果未提供，就會使用 `latest` 版本。
 
 ## <a name="options"></a>選項。
 
@@ -61,7 +61,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
   - `Current` - 最新版本。
   - `LTS` - 長期支援通道 (最新的支援版本)。
   - 代表特定版本的 X.Y 格式兩段式版本 (例如 `2.1` 或 `3.0`)。
-  - 分支名稱：例如，`release/3.1.1xx` 或 `master` （適用于夜間發行）。 使用此選項可從預覽頻道安裝版本。 使用[安裝程式和二進位](https://github.com/dotnet/core-sdk#installers-and-binaries)檔中列出的通道名稱。
+  - 分支名稱：例如，`release/3.1.1xx`或`master`（用於夜間發佈）。 使用此選項可以從預覽頻道安裝版本。 使用[安裝程式和二進位檔案](https://github.com/dotnet/core-sdk#installers-and-binaries)中列出的通道的名稱。
 
   預設值是 `LTS`。 如需有關 .NET 支援通道的詳細資訊，請參閱 [.NET Core 支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) \(英文\) 頁面。
 
@@ -71,13 +71,13 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
   - `latest` - 通道上的最新組建 (與 `-Channel` 選項搭配使用)。
   - `coherent` - 通道上的最新一致性組建；使用最新的穩定套件組合 (與分支名稱 `-Channel` 選項搭配使用)。
-  - 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如： `2.0.0-preview2-006120` 。
+  - 代表特定組建版本的 X.Y.Z 格式三段式版本；取代 `-Channel` 選項。 例如：`2.0.0-preview2-006120`。
 
   如果未指定，`-Version` 會預設為 `latest`。
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 
-  指定將用來判斷 SDK 版本之[global json](global-json.md)檔案的路徑。 *Global. json*檔案必須有 `sdk:version`的值。
+  指定用於確定 SDK 版本的[global.json](global-json.md)檔的路徑。 *全域.json*檔必須具有 的值`sdk:version`。
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
@@ -92,7 +92,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
   > [!NOTE]
   > 此參數已被淘汰，在未來的指令碼版本中可能會將其移除。 建議的替代方案是 `-Runtime|--runtime` 選項。
 
-  只安裝共用執行階段位元，而不是整個 SDK。 此選項相當於指定 `-Runtime|--runtime dotnet`。
+  只安裝共用執行階段位元，而不是整個 SDK。 此選項等效于指定`-Runtime|--runtime dotnet`。
 
 - **`-Runtime|--runtime <RUNTIME>`**
 
@@ -108,7 +108,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-NoPath|--no-path`**
 
-  如果設定，就不會將安裝資料夾匯出至目前工作階段的路徑。 根據預設，腳本會修改路徑，使 .NET Core CLI 在安裝後立即可供使用。
+  如果設定，就不會將安裝資料夾匯出至目前工作階段的路徑。 預設情況下，腳本修改 PATH，使 .NET 核心 CLI 在安裝後立即可用。
 
 - **`-Verbose|--verbose`**
 
@@ -132,7 +132,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`--runtime-id`**
 
-  指定要安裝工具的[執行時間識別碼](../rid-catalog.md)。 使用適用于便攜 Linux 的 `linux-x64`。 （僅適用于 Linux/macOS）
+  指定正在為其安裝工具的[運行時識別碼](../rid-catalog.md)。 用於`linux-x64`可擕式 Linux。 （僅適用于 Linux/macOS）
 
 - **`-ProxyAddress`**
 
@@ -166,7 +166,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
   ./dotnet-install.sh --channel LTS
   ```
 
-- 將3.1 通道的最新版本安裝至指定的位置：
+- 將最新版本從 3.1 通道安裝到指定位置：
 
   Windows：
 
@@ -180,7 +180,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
   ./dotnet-install.sh --channel 3.1 --install-dir ~/cli
   ```
 
-- 安裝共用執行時間的3.0.0 版本：
+- 安裝共用運行時的 3.0.0 版本：
 
   Windows：
 

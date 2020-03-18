@@ -3,10 +3,10 @@ title: 建立簡單資料驅動 CRUD 微服務
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解如何在微服務應用程式的內容中建立簡單的 CRUD (資料驅動) 微服務。
 ms.date: 01/30/2020
 ms.openlocfilehash: b72d7defed81e57e2971c5e2b53df2d86b2dc947
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502369"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
@@ -17,9 +17,9 @@ ms.locfileid: "77502369"
 
 從設計觀點來看，這種類型的容器化微服務非常簡單。 可能是要解決的問題相當簡單，或者可能其實作僅只是一種概念的證明。
 
-![此圖顯示簡單的 CRUD 微服務內部設計模式。](./media/data-driven-crud-microservice/internal-design-simple-crud-microservices.png)
+![顯示簡單 CRUD 微服務內部設計模式的圖表。](./media/data-driven-crud-microservice/internal-design-simple-crud-microservices.png)
 
-**圖 6-4**。 簡單 CRUD 微服務的內部設計
+**圖6-4**。 簡單 CRUD 微服務的內部設計
 
 eShopOnContainers 應用程式範例的目錄微服務即為這種簡單資料驅動服務的範例。 這種類型的服務會在單一 ASP.NET Core Web API 專案中實作所有自身的功能，包括其資料模型的類別、商務邏輯，以及資料存取程式碼。 它也會將相關資料儲存於在 SQL Server 中執行的資料庫中 (當作開發/測試用途的另一個容器)，但也可當作任何一般 SQL Server 主機，如圖 6-5 所示。
 
@@ -27,7 +27,7 @@ eShopOnContainers 應用程式範例的目錄微服務即為這種簡單資料�
 
 **圖 6-5**。 簡單資料驅動/CRUD 微服務設計
 
-上圖顯示 [邏輯目錄] 微服務，其中包含其目錄資料庫（可以是或不在相同的 Docker 主機中）。 將資料庫存放在相同的 Docker 主機中，可能適用于開發，但不適合用于生產環境。 當您開發這種服務時，您只需要 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) 及一個資料存取 API 或 ORM，像是 [Entity Framework Core](https://docs.microsoft.com/ef/core/index)。 您也可以透過 [Swashbuckle](https://swagger.io/) 自動產生 [Swagger](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) 中繼資料來提供您服務提供之內容的描述，如下一節中所解釋的。
+前面的關係圖顯示了邏輯目錄微服務，其中包括其目錄資料庫，該資料庫可以位於同一 Docker 主機中，也可以不在同一個 Docker 主機中。 將資料庫位於同一 Docker 主機中可能有利於開發，但不適合生產。 當您開發這種服務時，您只需要 [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) 及一個資料存取 API 或 ORM，像是 [Entity Framework Core](https://docs.microsoft.com/ef/core/index)。 您也可以透過 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) 自動產生 [Swagger](https://swagger.io/) 中繼資料來提供您服務提供之內容的描述，如下一節中所解釋的。
 
 請注意，在 Docker 容器中執行像是 SQL Server 這種資料庫伺服器對開發環境來說是非常適合的，因為您可以設定所有的相依性並使其順利執行，而無須在雲端或內部部署環境佈建資料庫。 這在執行整合測試時會非常方便。 然而，針對生產環境，我們不建議在容器內執行資料庫伺服器，因為使用此方法，您通常無法取得高度的可用性。 針對 Azure 中的生產環境，通常建議您使用 Azure SQL DB 或任何其他可提供高度可用性及延展性的資料庫技術。 舉例來說，若要採用 NoSQL 方法，您可能會選擇 CosmosDB。
 
@@ -37,13 +37,13 @@ eShopOnContainers 應用程式範例的目錄微服務即為這種簡單資料�
 
 若要使用 .NET Core 及 Visual Studio 實作簡單 CRUD 微服務，就從建立簡單 ASP.NET Core Web API 專案 (要在 .NET Core 上執行才能於 Linux Docker 主機上執行) 開始，如圖 6-6 所示。
 
-![顯示專案設定的 Visual 工作室螢幕擷取畫面。](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
+![顯示專案設置的視覺化工作室的螢幕截圖。](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
-**圖 6-6**。 在 Visual Studio 2019 中建立 ASP.NET Core Web API 專案
+**圖 6-6**。 在 Visual Studio 2019 中創建ASP.NET核心 Web API 專案
 
-若要建立 ASP.NET Core Web API 專案，首先要選取一個 ASP.NET Core Web 應用程式，然後選取 API 類型。 建立專案之後，您可以使用 Entity Framework API 或其他 API，利用您在任何其他 Web API 專案上相同的方式，實作您的 MVC 控制器。 在新的 Web API 專案中，您可以看到該微服務的唯一相依性即是 ASP.NET Core 本身。 就內部而言，在*AspNetCore*中，它會參考 Entity Framework 和其他許多 .Net Core NuGet 套件，如圖6-7 所示。
+若要建立 ASP.NET Core Web API 專案，首先要選取一個 ASP.NET Core Web 應用程式，然後選取 API 類型。 建立專案之後，您可以使用 Entity Framework API 或其他 API，利用您在任何其他 Web API 專案上相同的方式，實作您的 MVC 控制器。 在新的 Web API 專案中，您可以看到該微服務的唯一相依性即是 ASP.NET Core 本身。 在內部，在*Microsoft.AspNetCore.所有*依賴項中，它引用實體框架和許多其他 .NET Core NuGet 包，如圖 6-7 所示。
 
-![VS 的螢幕擷取畫面，其中顯示目錄. Api 的 NuGet 相依性。](./media/data-driven-crud-microservice/simple-crud-web-api-microservice-dependencies.png)
+![VS 的螢幕截圖顯示了目錄.Api 的 NuGet 依賴項。](./media/data-driven-crud-microservice/simple-crud-web-api-microservice-dependencies.png)
 
 **圖 6-7**。 簡單 CRUD Web API 微服務的相依性
 
@@ -98,7 +98,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-您可以有其他 `DbContext` 實作。 例如，在範例 Catalog API 微服務中，有一個名為 `DbContext` 的第二個 `CatalogContextSeed`，其會在第一次嘗試存取資料庫時自動填入範例資料。 這個方法對示範資料及自動化測試案例來說也非常有用。
+您可以有其他 `DbContext` 實作。 例如，在範例 Catalog API 微服務中，有一個名為 `CatalogContextSeed` 的第二個 `DbContext`，其會在第一次嘗試存取資料庫時自動填入範例資料。 這個方法對示範資料及自動化測試案例來說也非常有用。
 
 在 `DbContext` 內，您會使用 `OnModelCreating` 方法來自訂物件/資料庫實體對應及其他 [EF 擴充點](https://devblogs.microsoft.com/dotnet/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)。
 
@@ -185,9 +185,9 @@ _context.SaveChanges();
 
 在 ASP.NET Core 中，您可以直接使用相依性插入 (DI)。 您不需要設定協力廠商的控制反轉 (IoC) 容器，雖然您可以將您偏好的 IoC 容器插入 ASP.NET Core 基礎結構 (若您想要的話)。 在此案例下，這表示您可以透過控制器的建構函式直接插入必要的 EF DbContext 或其他存放庫。
 
-在上述 `CatalogController` 類別的範例中，我們透過 `CatalogContext` 建構函式插入了 `CatalogController()` 類型的物件及其他物件。
+在上述 `CatalogController` 類別的範例中，我們透過 `CatalogController()` 建構函式插入了 `CatalogContext` 類型的物件及其他物件。
 
-要在 Web API 專案中設定的一項重要組態，是將 DbContext 類別註冊至服務的 IoC 容器內。 您通常會在 `Startup` 類別中，藉由在 `ConfigureServices()` 方法內呼叫 `services.AddDbContext<DbContext>()` 方法來執行此動作，如下列**簡化**範例所示：
+要在 Web API 專案中設定的一項重要組態，是將 DbContext 類別註冊至服務的 IoC 容器內。 通常在`Startup`類中`services.AddDbContext<DbContext>()`通過在`ConfigureServices()`方法內調用方法來執行此操作，如下**簡化**示例所示：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -225,7 +225,7 @@ public void ConfigureServices(IServiceCollection services)
 - **查詢資料** \
   [https://docs.microsoft.com/ef/core/querying/index](/ef/core/querying/index)
 
-- **儲存資料** \
+- **保存資料** \
   [https://docs.microsoft.com/ef/core/saving/index](/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Docker 容器所使用的 DB 連接字串及環境變數
@@ -267,7 +267,7 @@ catalog-api:
 
 最後，您可以使用 Configuration\["ConnectionString"\] 來在您的程式碼中取得該值，如先前程式碼範例中的 ConfigurationServices 方法所示。
 
-然而，針對生產環境，建議您探索其他儲存像是連接字串這種機密資料的方式。 使用 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) 是管理應用程式祕密的絕佳方法。
+然而，針對生產環境，建議您探索其他儲存像是連接字串這種機密資料的方式。 管理應用程式機密的一種好方法是使用[Azure 金鑰保存庫](https://azure.microsoft.com/services/key-vault/)。
 
 Azure Key Vault 可協助儲存及保護您雲端應用程式及服務所使用的密碼編譯金鑰及祕密。 任何您想要嚴格控管的項目都是祕密，例如 API 金鑰、連接字串、密碼等，而嚴格控管的方法包括使用方式記錄、設定到期日、管理存取權*等等*。
 
@@ -306,13 +306,13 @@ public class CatalogController : ControllerBase
 
 ### <a name="additional-resources"></a>其他資源
 
-- **Scott Hanselman。ASP.NET Core RESTful Web API 版本設定變得更容易** \
+- **斯科特·漢瑟曼ASP.NET核心 RESTful Web API 版本控制變得簡單** \
   <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
-- **進行 RESTful web API 的版本設定** \
+- **版本化 RESTful Web API** \
   <https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api>
 
-- **Roy。版本控制、超媒體和 REST** \
+- **羅伊·菲爾丁版本控制、超媒體和 REST** \
   <https://www.infoq.com/articles/roy-fielding-on-versioning>
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>從您的 ASP.NET Core Web API 產生 Swagger 描述中繼資料
@@ -333,9 +333,9 @@ Swagger 的核心是 Swagger 規格，即儲存於 JSON 或 YAML 檔案中的 AP
 
 - [AutoRest](https://github.com/Azure/AutoRest)。 您可以為呼叫 Swagger 自動產生 .NET 用戶端類別。 此工具可於 CLI 中使用，也可以與 Visual Studio 整合以讓使用者透過 GUI 簡單的進行操作。
 
-- [Microsoft Flow](https://flow.microsoft.com/)。 您可以自動[使用及將您的 API 整合](https://flow.microsoft.com/blog/integrating-custom-api/)至高階 Microsoft Flow 工作流程，而無須任何程式設計技能。
+- [微軟流](https://flow.microsoft.com/)。 您可以自動[使用及將您的 API 整合](https://flow.microsoft.com/blog/integrating-custom-api/)至高階 Microsoft Flow 工作流程，而無須任何程式設計技能。
 
-- [Microsoft PowerApps](https://powerapps.microsoft.com/)。 您可以自動從使用 [PowerApps Studio](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/) 建置的 [PowerApps 行動應用程式](https://powerapps.microsoft.com/build-powerapps/) 取用您的 API，而無須任何程式設計技能。
+- [微軟電源應用程式](https://powerapps.microsoft.com/)。 您可以自動從使用 [PowerApps Studio](https://powerapps.microsoft.com/build-powerapps/) 建置的 [PowerApps 行動應用程式](https://powerapps.microsoft.com/blog/register-and-use-custom-apis-in-powerapps/) 取用您的 API，而無須任何程式設計技能。
 
 - [Azure App Service Logic Apps](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-what-are-logic-apps)。 您可以自動[使用並將您的 API 整合至 Azure App Service Logic App](https://docs.microsoft.com/azure/app-service-logic/app-service-logic-custom-hosted-api)，而無須任何程式設計技能。
 
@@ -345,7 +345,7 @@ Microsoft Flow、PowerApps 及 Azure Logic Apps 都使用 Swagger 的中繼資�
 
 有許多選項可用來依據 *swagger-ui*，以功能 API 說明頁面的形式為 ASP.NET Core REST API 應用程式自動產生 Swagger 中繼資料。
 
-可能是目前在[eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)中使用的[Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) ，我們將在本指南中討論一些詳細資料，但也有使用[NSwag](https://github.com/RSuter/NSwag)的選項，它可以從 Swagger 或 OpenAPI 規格產生 Typescript 和 c\# API 用戶端，以及 c\# 控制器，甚至是使用[NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio)掃描包含控制器的 .dll。
+可能最好的知道是[Swashbuckle，](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)這是目前用於[eShopOn容器](https://github.com/dotnet-architecture/eShopOnContainers)，我們將在本指南仲介紹一些細節，但也有選項使用[NSwag，](https://github.com/RSuter/NSwag)它可以生成打字和C\# API用戶端，以及C\#控制器，從斯瓦格或OpenAPI規範，甚至通過掃描.dll包含控制器，使用[NSwagStudio。](https://github.com/RSuter/NSwag/wiki/NSwagStudio)
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>如何使用 Swashbuckle NuGet 套件來自動化產生 API Swagger 中繼資料
 
@@ -357,7 +357,7 @@ Swashbuckle 會結合 API 總管及 Swagger 或 [swagger-ui](https://github.com/
 
 這表示您可以使用可協助開發人員使用您 API 的良好探索 UI，來補充您的 API。 由於它是自動產生的，它只需要非常少量的程式碼及維護，讓您可以專注於建置您的 API。 API 總管的結果會如圖 6-8 所示。
 
-![Swagger API Explorer 顯示 eShopOContainers API 的螢幕擷取畫面。](./media/data-driven-crud-microservice/swagger-metadata-eshoponcontainers-catalog-microservice.png)
+![顯示 eShopO 容器 API 的斯瓦格 API 資源管理器的螢幕截圖。](./media/data-driven-crud-microservice/swagger-metadata-eshoponcontainers-catalog-microservice.png)
 
 **圖 6-8**。 基於 Swagger 中繼資料的 Swashbuckle API—eShopOnContainers 目錄微服務
 
@@ -365,7 +365,7 @@ Swashbuckle 產生的 Swagger UI API 文件包含所有已發佈的動作。 API
 
 目前，Swashbuckle 由五個內部 NuGet 套件組成，位於高層級中繼套件 ASP.NET Core 應用程式的 [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore) 之下。
 
-在您的 Web API 專案中安裝這些 NuGet 套件之後，您需要在 Startup 類別中設定 Swagger，如下列**簡化**的程式碼所示：
+在 Web API 專案中安裝這些 NuGet 包後，需要在啟動類中配置 Swagger，如以下**簡化**代碼：
 
 ```csharp
 public class Startup
@@ -417,13 +417,13 @@ public class Startup
 
 您先前曾看過 Swashbuckle 為 URL 產生的 UI，像是 `http://<your-root-url>/swagger`。 在圖 6-9 中，您也可以看到該如何測試任一 API 方法。
 
-![Swagger UI 的螢幕擷取畫面，其中顯示可用的測試控管。](./media/data-driven-crud-microservice/swashbuckle-ui-testing.png)
+![顯示可用測試控管的斯瓦格 UI 螢幕截圖。](./media/data-driven-crud-microservice/swashbuckle-ui-testing.png)
 
 **圖 6-9**。 Swashbuckle UI 測試目錄/項目 API 方法
 
-Swagger UI API 詳細資料會顯示回應的範例，並可用於執行實際 API，對於開發人員探索很有助益。 圖 6-10 顯示了當您使用 `http://<your-root-url>/swagger/v1/swagger.json`Postman[ \(英文\) 要求 ](https://www.getpostman.com/) 時，從 eShopOnContainers 微服務 (即於幕後使用的工具) 產生的 Swagger JSON 中繼資料。
+Swagger UI API 詳細資料會顯示回應的範例，並可用於執行實際 API，對於開發人員探索很有助益。 圖 6-10 顯示了當您使用 [Postman](https://www.getpostman.com/) \(英文\) 要求 `http://<your-root-url>/swagger/v1/swagger.json` 時，從 eShopOnContainers 微服務 (即於幕後使用的工具) 產生的 Swagger JSON 中繼資料。
 
-![顯示 Swagger JSON 中繼資料的範例 Postman UI 螢幕擷取畫面。](./media/data-driven-crud-microservice/swagger-json-metadata.png)
+![顯示斯瓦格 JSON 中繼資料的示例郵遞員 UI 的螢幕截圖。](./media/data-driven-crud-microservice/swagger-json-metadata.png)
 
 **圖 6-10**。 Swagger JSON 中繼資料
 
@@ -431,15 +431,15 @@ Swagger UI API 詳細資料會顯示回應的範例，並可用於執行實際 A
 
 ### <a name="additional-resources"></a>其他資源
 
-- **使用 Swagger 的 ASP.NET Web API 說明頁面** \
+- **使用斯瓦格ASP.NET Web API 説明頁** \
   [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
-- **開始使用 Swashbuckle 及 ASP.NET Core** \
+- **開始使用斯沃什巴克爾和ASP.NET核心** \
   [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle](/aspnet/core/tutorials/getting-started-with-swashbuckle)
 
-- **開始使用 NSwag 及 ASP.NET Core** \
+- **開始使用 NSwag 和ASP.NET核心** \
   [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag](/aspnet/core/tutorials/getting-started-with-nswag)
 
 > [!div class="step-by-step"]
-> [上一頁](microservice-application-design.md)
-> [下一頁](multi-container-applications-docker-compose.md)
+> [上一個](microservice-application-design.md)
+> [下一個](multi-container-applications-docker-compose.md)

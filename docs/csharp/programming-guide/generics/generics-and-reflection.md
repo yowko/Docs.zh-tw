@@ -6,10 +6,10 @@ helpviewer_keywords:
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
 ms.openlocfilehash: 4893bf5ebe73988bb6535cc2a85591ff0dde6ebd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712165"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>泛型和反映 (C# 程式設計手冊)
@@ -44,9 +44,9 @@ ms.locfileid: "75712165"
 |<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|如果目前 <xref:System.Reflection.MethodInfo> 代表泛型方法的定義，則傳回 true。|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|使用類型陣列的項目取代目前泛型方法定義的類型參數，並傳回代表所產生之建構方法的 <xref:System.Reflection.MethodInfo> 物件。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [泛型](./index.md)
-- [反映和泛用類型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
+- [反映和泛型型別](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)
 - [泛型](../../../standard/generics/index.md)

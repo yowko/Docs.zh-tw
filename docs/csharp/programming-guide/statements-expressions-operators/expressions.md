@@ -6,15 +6,15 @@ helpviewer_keywords:
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
 ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75699089"
 ---
 # <a name="expressions-c-programming-guide"></a>運算式 (C# 程式設計手冊)
 
-「運算式」是一連串的一或多個運算元以及零或多個[運算子](../../language-reference/operators/index.md)，可以評估為單一值、物件、方法或命名空間。 運算式可以包含常值、方法呼叫、運算子和其運算元，或「簡單名稱」。 簡單名稱可以是變數、型別成員、方法參數、命名空間或型別的名稱。  
+「運算式」** 是一連串的一或多個運算元以及零或多個[運算子](../../language-reference/operators/index.md)，可以評估為單一值、物件、方法或命名空間。 運算式可以包含常值、方法呼叫、運算子和其運算元，或「簡單名稱」**。 簡單名稱可以是變數、型別成員、方法參數、命名空間或型別的名稱。  
   
  運算式可以使用運算子 (後者又可能使用其他運算式當作參數) 或方法呼叫 (它的參數又可能是其他方法呼叫)，因此運算式的範圍可以從簡單到非常複雜。 下列是兩個運算式範例：  
   
@@ -30,13 +30,13 @@ System.Convert.ToInt32("35");
   
  每個值都有關聯型別。 例如，如果 x 和 y 都是 `int` 類型的變數，則運算式 `x + y` 的值也會輸入為 `int`。 如果將值指派給不同類型的變數，或者，如果 x 和 y 是不同的類型，則會套用類型轉換規則。 如需這類轉換運作方式的詳細資訊，請參閱[轉換和類型轉換](../types/casting-and-type-conversions.md)。  
   
-## <a name="overflows"></a>溢位
+## <a name="overflows"></a>溢出
 
- 如果值大於實值型別的最大值，則數值運算式可能會造成溢位。 如需詳細資訊，請參閱[已檢查和未核](../../language-reference/keywords/checked-and-unchecked.md)取，以及[內建數值轉換](../../language-reference/builtin-types/numeric-conversions.md)一文的[明確數值轉換](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)一節。
+ 如果值大於實值型別的最大值，則數值運算式可能會造成溢位。 有關詳細資訊，請參閱["已選中"和"取消選中"](../../language-reference/keywords/checked-and-unchecked.md)以及[內置數位轉換](../../language-reference/builtin-types/numeric-conversions.md)文章中的[顯式數位轉換](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)部分。
   
 ## <a name="operator-precedence-and-associativity"></a>運算子優先順序和關聯性
 
- 運算式的評估方式受到關聯性和運算子優先順序規則的管理。 如需詳細資訊，請參閱[運算子](../../language-reference/operators/index.md)。  
+ 運算式的評估方式受到關聯性和運算子優先順序規則的管理。 如需詳細資訊，請參閱 [運算子](../../language-reference/operators/index.md)。  
   
  大多數的運算式 (指派運算式和方法叫用運算式除外) 必須內嵌在陳述式中。 如需詳細資訊，請參閱[陳述式](./statements.md)。  
   
@@ -60,7 +60,7 @@ System.Convert.ToInt32("35");
 DoWork();  
 ```  
   
- 方法叫用需要後面接著括弧和任何方法參數的方法名稱，這是先前範例中的名稱，或另一個運算式的結果。 如需詳細資訊，請參閱[方法](../classes-and-structs/methods.md)。 委派叫用會使用以括弧括住的委派和方法參數名稱。 如需詳細資訊，請參閱[委派](../delegates/index.md)。 如果方法傳回值，則方法叫用和委派叫用會評估為方法的傳回值。 傳回 void 的方法不能用來取代運算式中的值。  
+ 方法叫用需要後面接著括弧和任何方法參數的方法名稱，這是先前範例中的名稱，或另一個運算式的結果。 如需詳細資訊，請參閱[方法](../classes-and-structs/methods.md)。 委派叫用會使用以括弧括住的委派和方法參數名稱。 如需詳細資訊，請參閱 [委派](../delegates/index.md)中定義的介面的私用 C++ 專屬實作。 如果方法傳回值，則方法叫用和委派叫用會評估為方法的傳回值。 傳回 void 的方法不能用來取代運算式中的值。  
 
 ## <a name="query-expressions"></a>查詢運算式
 
@@ -68,7 +68,7 @@ DoWork();
   
 ## <a name="lambda-expressions"></a>Lambda 運算式
 
- Lambda 運算式代表「內嵌方法」，而這種方法沒有名稱，但可以有輸入參數和多個陳述式。 它們廣泛用於 LINQ，以將引數傳遞給方法。 根據所使用的內容，會將 Lambda 運算式編譯為委派或運算式樹狀架構。 如需詳細資訊，請參閱 [Lambda 運算式](lambda-expressions.md)。  
+ Lambda 運算式代表「內嵌方法」，而這種方法沒有名稱，但可以有輸入參數和多個陳述式。 它們廣泛用於 LINQ，以將引數傳遞給方法。 根據所使用的內容，會將 Lambda 運算式編譯為委派或運算式樹狀架構。 有關詳細資訊，請參閱[Lambda 運算式](lambda-expressions.md)。  
   
 ## <a name="expression-trees"></a>運算式樹狀架構
 
@@ -76,7 +76,7 @@ DoWork();
   
 ## <a name="expression-body-definitions"></a>運算式主體定義
 
-C# 支援「運算式主體成員」，可讓您提供方法、建構函式、完成項、屬性和索引子的精簡運算式主體定義。 如需詳細資訊，請參閱[運算式主體成員](expression-bodied-members.md)。
+C# 支援「運算式主體成員」**，可讓您提供方法、建構函式、完成項、屬性和索引子的精簡運算式主體定義。 如需詳細資訊，請參閱[運算式主體成員](expression-bodied-members.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -86,10 +86,10 @@ C# 支援「運算式主體成員」，可讓您提供方法、建構函式、�
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[運算式](~/_csharplang/spec/expressions.md)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
-- [運算子](../../language-reference/operators/index.md)
+- [運營商](../../language-reference/operators/index.md)
 - [方法](../classes-and-structs/methods.md)
 - [委派](../delegates/index.md)
 - [型別](../types/index.md)

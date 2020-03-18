@@ -6,17 +6,17 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
 ms.openlocfilehash: 11df1d5caaa7b7974360d863f85afbff18985e47
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977094"
 ---
 # <a name="inspect-intermediate-data-during-processing"></a>在處理期間檢查中繼資料
 
 了解如何在 ML.NET 中，於載入、處理和模型定型步驟期間檢查中繼資料。 中繼資料是機器學習服務管線中每個階段的輸出。
 
-您可以在 ML.NET 中透過各種方式檢查與以下內容相似且會載入 [`IDataView`](xref:Microsoft.ML.IDataView) 的中繼資料。
+可以通過各種方式以ML.NET檢查中間資料，如下面表示[`IDataView`](xref:Microsoft.ML.IDataView)的資料，該資料載入到 中所示。
 
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -62,7 +62,7 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>將 IDataView 轉換成 IEnumerable
 
-其中一個檢查 [`IDataView`](xref:Microsoft.ML.IDataView) 最快速的方式便是將它轉換成 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)。 若要將 [`IDataView`](xref:Microsoft.ML.IDataView) 轉換成 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)，請使用 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 方法。
+檢查 的最快方法之一[`IDataView`](xref:Microsoft.ML.IDataView)[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)是將轉換為 。 轉換 以[`IDataView`](xref:Microsoft.ML.IDataView)[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)使用[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*)方法。
 
 若要最佳化效能，請將 `reuseRowObject` 設為 `true`。 如此會使用目前資料列的資料，在評估時才延遲填入相同的物件，而非為資料集中的每個資料列建立新物件。
 
@@ -81,10 +81,10 @@ foreach (HousingData row in housingDataEnumerable)
 
 ## <a name="accessing-specific-indices-with-ienumerable"></a>使用 IEnumerable 存取特定索引
 
-若您只需要存取一部分的資料或特定索引，請使用 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*)，並將 `reuseRowObject` 參數的值設為 `false`，為資料集中所要求的每個資料列建立新物件。 接著，將 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) 轉換成陣列或清單。
+如果只需要訪問資料或特定索引的一部分，請使用[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*)參數值並將其設置為`reuseRowObject``false`，以便為資料集中的每個請求行創建新物件。 然後，將[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)轉換為數組或清單。
 
 > [!WARNING]
-> 將 [`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) 的結果轉換成陣列或清單，會將所有要求的 [`IDataView`](xref:Microsoft.ML.IDataView) 資料列載入記憶體，而這可能會影響效能。
+> 將 的結果[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*)轉換為數組或清單會將所有請求[`IDataView`](xref:Microsoft.ML.IDataView)的行載入到可能影響性能的記憶體中。
 
 一旦所有集合都已建立完成，您便可以在資料上執行作業。 以下程式碼片段會擷取資料集中的前三個資料列，並計算目前的平均價格。
 
@@ -104,7 +104,7 @@ float averageCurrentPrice = (firstRow.CurrentPrice + secondRow.CurrentPrice + th
 
 ## <a name="inspect-values-in-a-single-column"></a>檢查單一資料行中的值
 
-在模型建置流程的任何一個時間點，[`IDataView`](xref:Microsoft.ML.IDataView) 單一資料行中的值可透過使用 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) 方法進行存取。 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) 方法會將單一資料行中的所有值作為 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) 傳回。
+在模型構建過程中的任意點，[`IDataView`](xref:Microsoft.ML.IDataView)可以使用[`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*)方法訪問 該方法[`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*)將單個列中的所有值作為 返回[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)。
 
 ```csharp
 IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
@@ -112,10 +112,10 @@ IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
 
 ## <a name="inspect-idataview-values-one-row-at-a-time"></a>一次檢查一列 IDataView 值
 
-[`IDataView`](xref:Microsoft.ML.IDataView) 會延遲評估。 若要逐一查看 [`IDataView`](xref:Microsoft.ML.IDataView)，而不將其轉換成 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)(如本文件先前章節所示範)，請使用 [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) 方法並將您 [`IDataView`](xref:Microsoft.ML.IDataView) 的 [DataViewSchema](xref:Microsoft.ML.DataViewSchema) 作為參數傳遞，來建立 [`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor)。 然後，若要逐一查看資料列，請使用 [`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) 指標方法，搭配 [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) 委派來從每個資料行擷取個別的值。
+[`IDataView`](xref:Microsoft.ML.IDataView)是懶惰的評估。 要反覆運算 的[`IDataView`](xref:Microsoft.ML.IDataView)行，而不轉換為 本文檔前面各節中[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)所示的 行，請使用[`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor)[`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*)方法並傳入 資料[DataViewSchema](xref:Microsoft.ML.DataViewSchema)[`IDataView`](xref:Microsoft.ML.IDataView)視圖架構作為參數創建 。 然後，要反覆運算行，請使用[`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*)游標方法以及[`ValueGetter`](xref:Microsoft.ML.ValueGetter%601)委託從每個列中提取相應的值。
 
 > [!IMPORTANT]
-> 基於效能考量，ML.NET 中的向量會使用 [`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601)，而非原生集合類型 (即 `Vector`、`float[]` 等)。
+> 出於性能目的，ML.NET中的向量使用[`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601)而不是本機集合類型（即`Vector`。`float[]`
 
 ```csharp
 // Get DataViewSchema of IDataView
@@ -150,10 +150,10 @@ using (DataViewRowCursor cursor = data.GetRowCursor(columns))
 > [!WARNING]
 > 請不要在生產程式碼中使用 `Preview`，因為它旨在用於偵錯，可能會降低效能。
 
-模型建置流程是實驗性且反覆性的。 若要預覽預先處理之後或針對資料子集定型機器學習模型之後資料的結果，請使用 [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview*) 方法，該方法會傳回 [`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview)。 結果是一個具備 `ColumnView` 和 `RowView` 屬性的物件，這兩個屬性都是 [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)，且包含特定資料行或資料列中的值。 使用 `maxRows` 參數指定要套用轉換的資料列數。
+模型建置流程是實驗性且反覆性的。 要預覽在資料子集上預處理或訓練機器學習模型後資料的外觀，請使用 返回[`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview*)的方法[`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview)返回 。 結果是具有`ColumnView`和`RowView`屬性的物件，該物件既是[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601)和 屬性，也包含特定列或行中的值。 使用 `maxRows` 參數指定要套用轉換的資料列數。
 
 ![資料偵錯工具預覽物件](./media/inspect-intermediate-data-ml-net/data-debugger-preview-01.png)
 
-檢查 [`IDataView`](xref:Microsoft.ML.IDataView) 的結果看起來會與下列內容相似：
+檢查 的結果[`IDataView`](xref:Microsoft.ML.IDataView)類似于以下內容：
 
 ![資料偵錯工具預覽資料列檢視](./media/inspect-intermediate-data-ml-net/data-debugger-preview-02.png)

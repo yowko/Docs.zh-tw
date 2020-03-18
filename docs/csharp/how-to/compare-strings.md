@@ -1,15 +1,15 @@
 ---
-title: 如何比較字串- C#指南
+title: 如何比較字串 - C# 指南
 description: 了解如何比較和排序字串值，不論大小寫、不論文化特性特定的順序
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
 ms.openlocfilehash: dda3ec8cb6a0131867e6ea3bb0cf7199d86058ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73973326"
 ---
 # <a name="how-to-compare-strings-in-c"></a>如何：在 C\# 比較字串
@@ -29,19 +29,19 @@ ms.locfileid: "73973326"
 
 ## <a name="default-ordinal-comparisons"></a>預設的序數比較
 
-根據預設，最常見的作業如下：
+預設情況下，最常見的操作：
 
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
 - <xref:System.String.Equals%2A?displayProperty=nameWithType>
-- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 和 <xref:System.String.op_Inequality%2A?displayProperty=nameWithType>，也就是等[號比較運算子分別 `==` 和 `!=`](../language-reference/operators/equality-operators.md#string-equality)
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType>和<xref:System.String.op_Inequality%2A?displayProperty=nameWithType>， 即[相等運算子`==`和`!=`](../language-reference/operators/equality-operators.md#string-equality)，
 
-執行區分大小寫的序數比較，並視需要使用目前的文化特性。 下列範例示範：
+執行區分大小寫的單位比較，並在必要時使用目前範圍性。 以下示例演示：
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-比較字串時，預設序數比較並不會考慮語言規則。 其會在兩個字串中比較各 <xref:System.Char> 物件的二進位值。 如此一來，預設序數比較也會區分大小寫。
+在比較字串時，預設的元數比較不考慮語言規則。 其會在兩個字串中比較各 <xref:System.Char> 物件的二進位值。 如此一來，預設序數比較也會區分大小寫。
 
-請注意，使用 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 和 <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> 方法，與 <xref:System.String.Equals%2A?displayProperty=nameWithType> 和 `==` 和 `!=` 運算子相等的測試與字串比較不同。 雖然相等的測試會執行區分大小寫的序數比較，但比較方法會使用目前的文化特性執行區分大小寫、區分文化特性的比較。 因為預設比較方法時常執行不同類型的比較，所以建議您皆透過呼叫明確指定要執行比較之類型的多載，以讓程式碼的意圖更加明確。
+請注意，<xref:System.String.Equals%2A?displayProperty=nameWithType>使用 和 和`==``!=`運算子的相等性測試不同于使用<xref:System.String.CompareTo%2A?displayProperty=nameWithType>和<xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)>方法的字串比較。 雖然相等性測試執行區分大小寫之間的單位比較，但比較方法使用目前範圍性執行區分大小寫、區域性敏感的比較。 因為預設比較方法時常執行不同類型的比較，所以建議您皆透過呼叫明確指定要執行比較之類型的多載，以讓程式碼的意圖更加明確。
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>不區分大小寫的序數比較
 
@@ -122,7 +122,7 @@ ms.locfileid: "73973326"
 
 ## <a name="reference-equality-and-string-interning"></a>參考相等與字串暫留
 
-沒有任何範例使用 <xref:System.Object.ReferenceEquals%2A>。 這個方法會判斷兩個字串是否相同的物件。 這可能會導致不一致的字串比較結果。 下列範例示範 C# 的「字串暫留」功能。 當程式宣告兩個或多個相同的字串變數時，編譯器會將它們全部儲存在相同的位置。 藉由呼叫 <xref:System.Object.ReferenceEquals%2A> 方法，您會看到兩個字串實際上參考記憶體中的相同物件。 請使用 <xref:System.String.Copy%2A?displayProperty=nameWithType> 方法以避免暫留。 複製完成後，兩個字串會有不同的儲存位置，即使它們有相同的值。 執行下列範例以顯示字串 `a` 和 `b` 已「暫留」，也就是說它們共用相同的存放裝置。 字串 `a` 和 `c` 則否。
+沒有任何範例使用 <xref:System.Object.ReferenceEquals%2A>。 這個方法會判斷兩個字串是否相同的物件。 這可能會導致不一致的字串比較結果。 下列範例示範 C# 的「字串暫留」** 功能。 當程式宣告兩個或多個相同的字串變數時，編譯器會將它們全部儲存在相同的位置。 藉由呼叫 <xref:System.Object.ReferenceEquals%2A> 方法，您會看到兩個字串實際上參考記憶體中的相同物件。 請使用 <xref:System.String.Copy%2A?displayProperty=nameWithType> 方法以避免暫留。 複製完成後，兩個字串會有不同的儲存位置，即使它們有相同的值。 執行下列範例以顯示字串 `a` 和 `b` 已「暫留」**，也就是說它們共用相同的存放裝置。 字串 `a` 和 `c` 則否。
 
 [!code-csharp-interactive[Demonstrating string interning](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#9)]
 
@@ -131,7 +131,7 @@ ms.locfileid: "73973326"
 
 您可以透過呼叫 <xref:System.String.Intern%2A?displayProperty=nameWithType> 方法實習字串或擷取參考到現有的已實習字串。 若要判斷字串是否已實習，請呼叫 <xref:System.String.IsInterned%2A?displayProperty=nameWithType> 方法。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>
 - <xref:System.StringComparer?displayProperty=nameWithType>

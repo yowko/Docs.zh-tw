@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
 ms.openlocfilehash: 50b192d5a7416a982f41d0c3ac13e9c1bfe3397c
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673351"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399816"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分類別和方法 (C# 程式設計手冊)
 
@@ -60,7 +60,7 @@ ms.locfileid: "77673351"
 
 - 類別屬性
 
-- 成員
+- members
 
 例如，請考慮下列宣告：
 
@@ -92,15 +92,15 @@ ms.locfileid: "77673351"
 
   - [public](../../language-reference/keywords/public.md)
 
-  - [private](../../language-reference/keywords/private.md)
+  - [私人](../../language-reference/keywords/private.md)
 
-  - [protected](../../language-reference/keywords/protected.md)
+  - [保護](../../language-reference/keywords/protected.md)
 
-  - [internal](../../language-reference/keywords/internal.md)
+  - [內部](../../language-reference/keywords/internal.md)
 
-  - [abstract](../../language-reference/keywords/abstract.md)
+  - [抽象](../../language-reference/keywords/abstract.md)
 
-  - [sealed](../../language-reference/keywords/sealed.md)
+  - [密封](../../language-reference/keywords/sealed.md)
 
   - 基底類別
 
@@ -167,12 +167,12 @@ partial void onNameChanged()
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/classes.md#partial-types)的[部分型別](/dotnet/csharp/language-reference/language-specification/introduction)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[部分型別](~/_csharplang/spec/classes.md#partial-types)。 語言規格是 C# 語法及用法的限定來源。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
-- [類別](./classes.md)
+- [類](./classes.md)
 - [結構類型](../../language-reference/builtin-types/struct.md)
 - [介面](../interfaces/index.md)
-- [partial (型別)](../../language-reference/keywords/partial-type.md)
+- [部分（類型）](../../language-reference/keywords/partial-type.md)

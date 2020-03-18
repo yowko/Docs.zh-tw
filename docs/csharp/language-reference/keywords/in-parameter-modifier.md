@@ -4,12 +4,12 @@ ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 10e7b91f9a6bf280c5f0654b243492bac8cde1e0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cbde7a571fb71ed7577077c77a5c61db553ec859
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715244"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173610"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 參數修飾詞 (C# 參考)
 
@@ -19,7 +19,7 @@ ms.locfileid: "75715244"
 
 上述範例示範了 `in` 修飾詞在呼叫位置通常非必要。 而只有在宣告方法時才會需要該項目。
 
-> [!NOTE] 
+> [!NOTE]
 > `in` 關鍵字也可與泛型型別搭配使用，來指定類型參數是否為 Contravariant、屬於 `foreach` 陳述式的一部分，或是屬於 LINQ 查詢中的 `join` 子句。 如需如何在這些內容中使用 `in` 關鍵字的詳細資訊，請參閱 [in](in.md)，其提供所有這些使用的連結。
   
 傳遞為 `in` 引數的變數，必須先經過初始化，才能在方法呼叫中傳遞。 但是，呼叫方法可能不會指派值或修改引數。  
@@ -31,7 +31,7 @@ ms.locfileid: "75715244"
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on in, ref and out".
     public void SampleMethod(in int i) { }
     public void SampleMethod(ref int i) { }
@@ -50,7 +50,7 @@ class InOverloads
 
 ## <a name="overload-resolution-rules"></a>多載解析規則
 
-您可以透過了解 `in` 引數的動機，來了解傳值方式與 `in` 引數的方法多載解析規則。 使用 `in` 參數定義方法可能會使效能最佳化。 某些 `struct` 型別引數可能大小很大，在緊密迴圈或關鍵程式碼路徑中呼叫方法時，複製那些結構的成本便很重要。 方法會宣告 `in` 參數，以指定可以用傳址方式安全地傳遞引數，因為被呼叫的方法不會修改該引數的狀態。 以傳址方式傳遞那些引數，可避免 (可能) 相當耗費資源的複製。 
+您可以透過了解 `in` 引數的動機，來了解傳值方式與 `in` 引數的方法多載解析規則。 使用 `in` 參數定義方法可能會使效能最佳化。 某些 `struct` 型別引數可能大小很大，在緊密迴圈或關鍵程式碼路徑中呼叫方法時，複製那些結構的成本便很重要。 方法會宣告 `in` 參數，以指定可以用傳址方式安全地傳遞引數，因為被呼叫的方法不會修改該引數的狀態。 以傳址方式傳遞那些引數，可避免 (可能) 相當耗費資源的複製。
 
 針對呼叫位置的引數指定 `in` 通常是選擇性的。 以傳值方式傳遞引數，和使用 `in` 修飾詞以傳址方式傳遞引數，兩者之間沒有語意差異。 呼叫位置的 `in` 修飾詞是選擇性的，因為您不需要指出引數的值可能會變更。 在呼叫位置明確地新增 `in` 修飾詞，可以確保引數是以傳址方式傳遞，而非以傳值方式傳遞。 明確地使用 `in` 有下列兩個效果：
 
@@ -108,7 +108,7 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 以傳址方式傳遞引數的唯一方法呼叫，是最終的方法呼叫。
 
 > [!NOTE]
-> 為簡單起見，上述程式碼使用 `int` 作為引數型別。 因為 `int` 在大多數新型電腦中，不會比參考大，所以將單一 `int` 以唯讀傳址方式傳遞並沒有好處。 
+> 為簡單起見，上述程式碼使用 `int` 作為引數型別。 因為 `int` 在大多數新型電腦中，不會比參考大，所以將單一 `int` 以唯讀傳址方式傳遞並沒有好處。
 
 ## <a name="limitations-on-in-parameters"></a>`in` 參數的限制
 
@@ -120,7 +120,7 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 ## <a name="c-language-specification"></a>C# 語言規格  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)

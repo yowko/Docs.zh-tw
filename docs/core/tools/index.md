@@ -1,22 +1,22 @@
 ---
 title: .NET Core CLI
 titleSuffix: ''
-description: .NET Core CLI 及其功能的總覽。
+description: .NET 核心 CLI 及其功能的概述。
 ms.date: 02/13/2020
-ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156708"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399116"
 ---
-# <a name="net-core-cli-overview"></a>.NET Core CLI 總覽
+# <a name="net-core-cli-overview"></a>.NET 核心 CLI 概述
 
-**本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
+**本文適用于：✔️** .NET 核心 2.1 SDK 和更高版本
 
-.NET Core 命令列介面（CLI）是用於開發、建立、執行和發佈 .NET Core 應用程式的跨平臺工具鏈。
+.NET Core 命令列介面 （CLI） 是一個跨平臺工具鏈，用於開發、構建、運行和發佈 .NET Core 應用程式。
 
-.NET Core CLI 包含在[.NET Core SDK](../sdk.md)中。 若要瞭解如何安裝 .NET Core SDK，請參閱[安裝 .NET Core SDK](../install/sdk.md)。
+.NET 核心 CLI 包含在[.NET 核心 SDK](../sdk.md)中。 要瞭解如何安裝 .NET 核心 SDK，請參閱[安裝 .NET 核心 SDK](../install/sdk.md)。
 
 ## <a name="cli-commands"></a>CLI 命令
 
@@ -24,46 +24,46 @@ ms.locfileid: "78156708"
 
 ### <a name="basic-commands"></a>基本命令
 
-- [new](dotnet-new.md)
-- [還原](dotnet-restore.md)
-- [build](dotnet-build.md)
-- [publish](dotnet-publish.md)
-- [run](dotnet-run.md)
-- [test](dotnet-test.md)
-- [vstest](dotnet-vstest.md)
-- [pack](dotnet-pack.md)
-- [移轉](dotnet-migrate.md)
-- [clean](dotnet-clean.md)
-- [sln](dotnet-sln.md)
-- [help](dotnet-help.md)
-- [store](dotnet-store.md)
+- [`new`](dotnet-new.md)
+- [`restore`](dotnet-restore.md)
+- [`build`](dotnet-build.md)
+- [`publish`](dotnet-publish.md)
+- [`run`](dotnet-run.md)
+- [`test`](dotnet-test.md)
+- [`vstest`](dotnet-vstest.md)
+- [`pack`](dotnet-pack.md)
+- [`migrate`](dotnet-migrate.md)
+- [`clean`](dotnet-clean.md)
+- [`sln`](dotnet-sln.md)
+- [`help`](dotnet-help.md)
+- [`store`](dotnet-store.md)
 
 ### <a name="project-modification-commands"></a>專案修改命令
 
-- [add package](dotnet-add-package.md)
-- [add reference](dotnet-add-reference.md)
-- [remove package](dotnet-remove-package.md)
-- [remove reference](dotnet-remove-reference.md)
-- [list reference](dotnet-list-reference.md)
+- [`add package`](dotnet-add-package.md)
+- [`add reference`](dotnet-add-reference.md)
+- [`remove package`](dotnet-remove-package.md)
+- [`remove reference`](dotnet-remove-reference.md)
+- [`list reference`](dotnet-list-reference.md)
 
 ### <a name="advanced-commands"></a>進階命令
 
-- [nuget delete](dotnet-nuget-delete.md)
-- [nuget locals](dotnet-nuget-locals.md)
-- [nuget push](dotnet-nuget-push.md)
-- [msbuild](dotnet-msbuild.md)
-- [dotnet install script](dotnet-install-script.md)
+- [`nuget delete`](dotnet-nuget-delete.md)
+- [`nuget locals`](dotnet-nuget-locals.md)
+- [`nuget push`](dotnet-nuget-push.md)
+- [`msbuild`](dotnet-msbuild.md)
+- [`dotnet install script`](dotnet-install-script.md)
 
 ### <a name="tool-management-commands"></a>工具管理命令
 
-- [工具安裝](dotnet-tool-install.md)
-- [工具清單](dotnet-tool-list.md)
-- [工具更新](dotnet-tool-update.md)
-- **從 .NET Core SDK 3.0 開始提供的**[工具還原](global-tools.md#install-a-local-tool)
-- **從 .NET Core SDK 3.0 開始提供的**[工具執行](global-tools.md#invoke-a-local-tool)
-- [工具卸載](dotnet-tool-uninstall.md)
+- [`tool install`](dotnet-tool-install.md)
+- [`tool list`](dotnet-tool-list.md)
+- [`tool update`](dotnet-tool-update.md)
+- [`tool restore`](global-tools.md#install-a-local-tool)自 .NET 核心 SDK 3.0 起可用。
+- [`tool run`](global-tools.md#invoke-a-local-tool)自 .NET 核心 SDK 3.0 起可用。
+- [`tool uninstall`](dotnet-tool-uninstall.md)
 
-工具是從 NuGet 套件安裝並從命令提示字元叫用的主控台應用程式。 您可以自行撰寫工具，或安裝由協力廠商撰寫的工具。 工具也稱為「通用工具」、「工具路徑工具」和「本機工具」。 如需詳細資訊，請參閱[.Net Core 工具總覽](global-tools.md)。
+工具是從 NuGet 包安裝並從命令提示符調用的主控台應用程式。 您可以自己編寫工具或安裝由協力廠商編寫的工具。 工具也稱為全域工具、刀具路徑工具和本地工具。 有關詳細資訊，請參閱[.NET 核心工具概述](global-tools.md)。
 
 ## <a name="command-structure"></a>命令結構
 
@@ -87,7 +87,7 @@ dotnet /build_output/my_app.dll
 dotnet build
 ```
 
-首先，驅動器會決定要使用的 SDK 版本。 如果沒有[global json](global-json.md)檔案，則會使用可用的最新 SDK 版本。 這可能是預覽版或穩定的版本，視兩者中何者版本最新。  確定 SDK 版本之後，就會開始執行命令。
+首先，驅動器會決定要使用的 SDK 版本。 如果沒有[全域.json](global-json.md)檔，則使用可用的 SDK 的最新版本。 這可能是預覽版或穩定的版本，視兩者中何者版本最新。  確定 SDK 版本之後，就會開始執行命令。
 
 ### <a name="command"></a>Command
 
@@ -103,5 +103,5 @@ dotnet build
 
 ## <a name="see-also"></a>另請參閱
 
-- [dotnet/sdk GitHub 存放庫](https://github.com/dotnet/sdk/)
+- [點網/sdk GitHub 存儲庫](https://github.com/dotnet/sdk/)
 - [.NET core 安裝指南 (英文)](../install/sdk.md)

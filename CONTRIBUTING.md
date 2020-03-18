@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e5da9a98e8725880223df3737dc60f773db8d20e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336715"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79141129"
 ---
-# <a name="contributing"></a>貢獻
+# <a name="contributing"></a>參與
 
 感謝您對參與 .NET 文件感興趣！
 
@@ -15,32 +15,36 @@ ms.locfileid: "75336715"
 
 本文件涵蓋參與 [.NET 文件網站](https://docs.microsoft.com/dotnet)所裝載文章和程式碼範例的程序。 貢獻可以簡單到像錯字更正，或是複雜到像是新的文章。
 
-- [使用規範](#dos-and-donts)
+- [DO 和 DON Ts](#dos-and-donts)
 - [投稿程序](#process-for-contributing)
 - [C# 互動式體驗](#the-c-interactive-experience)
 - [參與者授權合約](#contributor-license-agreement)
 
 此存放庫包含 .NET 的概念文件。 .NET 文件網站除了此存放庫之外，還使用多個存放庫作為建置基礎：
 
-- 程式[代碼範例和程式碼片段](https://github.com/dotnet/samples)此存放庫的問題和工作會在[dotnet/檔/問題](https://github.com/dotnet/docs/issues)中進行追蹤。
-- [.NET API 參考](https://github.com/dotnet/dotnet-api-docs)此存放庫的問題和工作會在[dotnet/dotnet-api-檔/問題](https://github.com/dotnet/dotnet-api-docs/issues)中進行追蹤。
-- [.NET COMPILER PLATFORM SDK 參考](https://github.com/dotnet/roslyn-api-docs)此存放庫的問題和工作會在[dotnet/檔/問題](https://github.com/dotnet/docs/issues)中進行追蹤。
+- [代碼示例和程式碼片段](https://github.com/dotnet/samples)此存儲庫的問題和任務在[dotnet/docs/問題](https://github.com/dotnet/docs/issues)中跟蹤。
+- [.NET API 參考](https://github.com/dotnet/dotnet-api-docs)此存儲庫的問題和任務在[dotnet/dotnet-api-docs/問題](https://github.com/dotnet/dotnet-api-docs/issues)中跟蹤。
+- [.NET 編譯器平臺 SDK 參考](https://github.com/dotnet/roslyn-api-docs)此回購的問題和任務在[dotnet/docs/問題](https://github.com/dotnet/docs/issues)中跟蹤。
+
+### <a name="contributing-to-international-content"></a>為國際內容做出貢獻
+
+目前不接受對機器翻譯 （MT） 內容的貢獻。 為了提高 MT 內容的品質，我們已過渡到神經 MT 引擎。 我們接受並鼓勵為人類翻譯 （HT） 內容提供貢獻，用於訓練神經 MT 引擎。 因此，隨著時間的推移，對 HT 內容的貢獻將提高 HT 和 MT 的品質。 MT 主題將有一個免責聲明，指出主題的一部分可能是 MT，並且 **"編輯"** 按鈕不會顯示為禁用。
 
 ## <a name="dos-and-donts"></a>可進行及避免進行的事項
 
 下列清單顯示您參與 .NET 文件時，應謹記在心的一些指導規則：
 
-- 請**勿**以大量提取要求來讓我們大吃一驚。 而是請您先提出問題並開始討論，我們會在您投入大量的時間之前，先行確認方向。 若要進行大量變更，請將工作分成較小的 Pr （最多100個檔案）。 如果您的 PR 未遵循下列指導方針，則強烈建議使用此指導方針。
-- **請**查看目前[的抓取](https://github.com/dotnet/docs/labels/up-for-grabs)問題，以取得有關工作的建議。
-- **請**為每個工作建立一個 PR。 包含多個不相關變更的 Pr 比較難審視。 這會延遲評論和合併 Pr。 這項指導方針也適用于評論：我們不會在評論中建議不相關的變更。我們要求社區評論遵守此指導方針。
-- **請**提供您 PR 中工作的清楚描述。 請告訴我們變更的內容和原因。 「更新 article.md」的預設描述對審核者而言並不實用。
-- 請**不要**提交 pr 進行僅限樣式的變更，而不需要事先討論。 這些 Pr 需要花更多時間來審查準確度，而合併它們通常會造成與其他重要更新的合併衝突。 我們正努力遵循一致的風格，但我們正在進行平衡以處理其他工作。 當我們因其他原因而進行重大更新時，會將文章納入樣式一致性。
-- **請務必**閱讀[樣式指南](./styleguide/template.md)與[語態和語氣](./styleguide/voice-tone.md)指導方針。 新的新增專案應遵循這些指導方針。
+- 請**勿**以大量提取要求來讓我們大吃一驚。 而是請您先提出問題並開始討論，我們會在您投入大量的時間之前，先行確認方向。 對於批量更改，將工作分解為較小的 P（最多 100 個檔）。 如果您的公關沒有遵循以下準則，強烈建議使用此準則。
+- **一應**查看當前問題[，以便獲取](https://github.com/dotnet/docs/labels/up-for-grabs)任務建議。
+- **為每個**任務創建一個 PR。 包含多個不相關的更改的 PR 更難查看。 這延遲了審核和合併 P。 本指南也適用于審核：我們儘量不建議評論中的不相關更改;我們要求社區評論遵守本準則。
+- **在**公關中提供工作的明確描述。 告訴我們發生了什麼變化，為什麼。 "更新article.md"的預設說明對檢閱者沒有説明。
+- **未經**事先討論，不要提交僅樣式更改的 PR。 這些 PR 需要額外時間來查看準確性，而合併它們通常會導致與其他重要更新的合併衝突。 我們正在努力遵循一致的風格，但我們正在平衡與其他任務的工作。 當我們出於其他原因進行重大更新時，文章會符合樣式。
+- **請務必**閱讀[樣式指南](./styleguide/template.md)與[語態和語氣](./styleguide/voice-tone.md)指導方針。 新的新增內容應遵循這些準則。
 - **請務必**在對文章進行作業之前，先在分叉上建立您自己的分支。
 - **請務必**遵循 [GitHub 流程的工作流程](https://guides.github.com/introduction/flow/)。
 - **請務必**利用部落格及推特 (或任何其他形式)，頻繁地發表您的文章！
 
-這些指導方針可協助我們尊重所有人的時間。 許多人都參與這些存放庫。 遵循這些指導方針，可讓我們更輕鬆地及時審查和合併您的 PR。 這些作法會將與其他社區成員和我們小組 Pr 的衝突降至最低。 由於未遵循這些指導方針的 Pr 通常會對美國和社區成員造成額外的工作，因此可能會拒絕這些 Pr。 如果您想要發生例外狀況，請先建立問題。
+這些準則説明我們尊重每個人的時間。 許多人為這些存儲庫做出了貢獻。 遵循這些準則，我們更容易及時審核和合併您的公關。 這些做法最大限度地減少了與其他社區成員和我們的團隊的 PR 衝突。 由於不遵守這些準則的 P 經常為我們和社區成員帶來額外工作，因此這些 P 可能會被拒絕。 如果需要異常，從創建問題開始。
 
 > 注意：您可能注意到某些主題目前並未依循這裡及[風格指南](./styleguide/template.md)上指定的所有指導方針。 我們目前正在努力達到整個網站的一致性。
 
@@ -48,8 +52,8 @@ ms.locfileid: "75336715"
 
 您需要對 [Git 和 GitHub.com](https://guides.github.com/activities/hello-world/) 有基本了解。
 
-**步驟1：** 針對小型變更略過此步驟（例如，如果您要更正錯誤或立即開啟提取要求，以解決您在檔中找到的問題）。 如果您有興趣撰寫新內容或徹底修訂現有的內容，請開立一個描述您所要執行動作的[問題](https://github.com/dotnet/docs/issues)。
-[docs] 資料夾中的內容會組織成目錄 (TOC) 中所反映的各個小節。 請定義主題在 TOC 中的位置。 取得您提案的意見反應。
+**第 1 步：** 跳過此步驟進行小更改（例如，如果您正在更正拼寫錯誤或立即打開拉取請求以解決您在文檔中找到的問題）。 如果您有興趣撰寫新內容或徹底修訂現有的內容，請開立一個描述您所要執行動作的[問題](https://github.com/dotnet/docs/issues)。
+[docs]** 資料夾中的內容會組織成目錄 (TOC) 中所反映的各個小節。 請定義主題在 TOC 中的位置。 取得您提案的意見反應。
 
 -或-
 
@@ -57,15 +61,15 @@ ms.locfileid: "75336715"
 
 - **維護**。 此類別包括非常簡單的參與，例如修正中斷或不正確的連結、新增遺漏的程式碼範例，或處理有限的內容問題。 在某些情況下，這些問題可能會與大量的檔案有關。 在該情況下，您應該先讓我們知道您想要處理的項目，再開始進行。
 
-- **內容更新**。 如果文件集相當龐大，內容很容易就會過期而需要修訂。 此外，基於各種原因，某些內容已重複或甚至是 triplicated。 更新內容牽涉到確認個別主題是否為最新，或修訂某個功能區域中的內容以去除重複項，並確保所有唯一內容都保存在較小的文件集內。
+- **內容更新**。 如果文件集相當龐大，內容很容易就會過期而需要修訂。 此外，由於各種原因，某些內容已被覆制甚至三分。 更新內容牽涉到確認個別主題是否為最新，或修訂某個功能區域中的內容以去除重複項，並確保所有唯一內容都保存在較小的文件集內。
 
 - **新內容撰寫**。 如果您有興趣撰寫自己的主題，這些問題列出了我們所知想要新增到文件集的主題。 不過，在您開始進行某個主題之前，請先讓我們知道。 如果您有興趣撰寫這裡未列出的主題，請開立問題。
 
 您也可以查看我們的[待處理問題](https://github.com/dotnet/docs/issues) \(英文\) 清單，然後自願處理您有興趣的問題。 我們使用 [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) \(開放取用\) 標籤來標記開放參與的問題。
 
-**步驟 2：** 視需要將 `dotnet/docs`、`dotnet/samples` 或 `dotnet/dotnet-api-docs` 存放庫分叉，然後為您的變更建立分支。
+**第 2 步：** 根據需要分叉`dotnet/docs`或`dotnet/samples``dotnet/dotnet-api-docs`存儲庫，並為更改創建分支。
 
-若是進行少量變更，您可以使用 GitHub 的 Web 介面。 只需在您想要變更的檔案上按一下 [Edit the file in your fork of this project] \(編輯此專案分叉中的檔案\) 即可。 GitHub 會在您提交變更時，為您建立新的分支。
+若是進行少量變更，您可以使用 GitHub 的 Web 介面。 只需在您想要變更的檔案上按一下 [Edit the file in your fork of this project] \(編輯此專案分叉中的檔案\)**** 即可。 GitHub 會在您提交變更時，為您建立新的分支。
 
 **步驟 3：** 對這個新的分支進行變更。
 
@@ -74,8 +78,8 @@ ms.locfileid: "75336715"
 請瀏覽至對應到步驟 1 中為您文章所決定的目錄位置資料夾。
 該資料夾包含該章節中所有文章的 Markdown 檔案。
 請視需要建立新的資料夾，以存放您內容的檔案。 該小節的主要文章稱為 *index.md*。
-針對影像及其他靜態資源，請在包含您文章的資料夾內建立一個名為 *media* 的子資料夾 (如果此子資料夾尚未存在)。 在 [media] 資料夾內，使用文章名稱 (索引檔案除外) 建立一個子資料夾。
-將較大型的範例納入存放庫根目錄底下的 [samples] 資料夾中。
+針對影像及其他靜態資源，請在包含您文章的資料夾內建立一個名為 *media* 的子資料夾 (如果此子資料夾尚未存在)。 在 [media]** 資料夾內，使用文章名稱 (索引檔案除外) 建立一個子資料夾。
+將較大型的範例納入存放庫根目錄底下的 [samples]** 資料夾中。
 
 請務必遵循正確的 Markdown 語法。 如需詳細資訊，請參閱[樣式指南](./styleguide/template.md)。
 
@@ -92,9 +96,9 @@ docs
             portability_report.png
 ```
 
-**步驟4：** 從您的分支提交提取要求（PR）至 `dotnet/docs/master`、`dotnet/dotnet-api-docs/master`或 `dotnet/samples/master`。
+**第 4 步：** 從分支將拉取請求 （PR）`dotnet/docs/master`提交`dotnet/dotnet-api-docs/master`到`dotnet/samples/master`或 。
 
-您的 PR 應*一律*以存放庫的預設分支為目標（除非您正在使用發行分支）。 針對 dotnet/檔，主要分支是預設分支。 針對當地語系化的存放庫，live branch 是預設值。 您*絕對不*應該開啟以 dotnet/檔上的 live 分支為目標的 PR。
+PR*應始終*以存儲庫的預設分支為目標（除非您正在處理發佈分支）。 對於 dotnet/docs，主分支是預設分支。 對於當地語系化的存儲庫，即時分支是預設的。 *切勿*打開針對 dotnet/docs 上的即時分支的 PR。
 
 每個 PR 通常應該一次處理一個問題。 PR 可以修改一或多個檔案。 如果您要處理不同檔案上的多個修正，建議您使用個別的 PR。
 
@@ -118,11 +122,11 @@ docs
 
 程式碼都存在於 [dotnet/samples](https://github.com/dotnet/samples) 存放庫中。 我們正朝著建立一個讓範例資料夾結構符合文件資料夾結構的模型方向前進。 我們所依循的標準為：
 
-- 最上層的 [snippets] 資料夾包含小型、重點範例的程式碼片段。
-- API 參考範例一直以來都位於一個依循下列模式的資料夾中：*程式碼片段/\<語言>/api/\<命名空間>/\<API 名稱>* 。
+- 最上層的 [snippets]** 資料夾包含小型、重點範例的程式碼片段。
+- API 參考範例一直以來都位於一個依循下列模式的資料夾中：*程式碼片段/\<語言>/api/\<命名空間>/\<API 名稱>*。
 - 其他最上層資料夾則與 *docs* 存放庫中的最上層資料夾相符。 例如，docs 存放庫包含一個 *machine-learning/tutorials* 資料夾，而機器學習教學課程的範例則位於 *samples/machine-learning/tutorials* 資料夾中。
 
-此外，[core] 和 [standard] 資料夾底下的所有範例都應該在 .NET Core 支援的所有平台上建置並執行。 我們的 CI 建置系統將會強制執行該做法。 最上層 [framework] 資料夾則包含只會在 Windows 上建置並驗證的範例。
+此外，[core]** 和 [standard]** 資料夾底下的所有範例都應該在 .NET Core 支援的所有平台上建置並執行。 我們的 CI 建置系統將會強制執行該做法。 最上層 [framework]** 資料夾則包含只會在 Windows 上建置並驗證的範例。
 
 隨著 docs 存放庫新增新的內容，我們可能會擴充這些目錄。 舉例來說，我們將會新增 Xamarin 目錄，例如 `xamarin-ios` 和 `xamarin-android` 目錄。
 
@@ -135,7 +139,7 @@ docs
 
 ## <a name="the-c-interactive-experience"></a>C# 互動式體驗
 
-以 C# 撰寫的簡短程式碼範例可以使用 `csharp-interactive` 語言標記來指定在瀏覽器中執行的 C# 範例。 （內嵌程式碼範例會使用 `csharp-interactive` 標記，針對來源所包含的程式碼片段，請使用 `code-csharp-interactive` 標記）。這些程式碼範例會在文章中顯示程式碼視窗和 [輸出] 視窗。 在使用者執行範例之後，輸出視窗會顯示來自執行互動式程式碼的所有輸出。
+以 C# 撰寫的簡短程式碼範例可以使用 `csharp-interactive` 語言標記來指定在瀏覽器中執行的 C# 範例。 （內聯代碼示例使用`csharp-interactive`標記，對於從源包含的程式碼片段，請使用`code-csharp-interactive`標記。這些代碼示例在文章中顯示一個代碼視窗和一個輸出視窗。 在使用者執行範例之後，輸出視窗會顯示來自執行互動式程式碼的所有輸出。
 
 C# 互動式體驗改變了我們使用範例的方式。 訪客可以執行範例來查看結果。 有一些因素可協助判斷範例或相對應的文字是否應該包含輸出的相關資訊。
 

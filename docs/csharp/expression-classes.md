@@ -4,12 +4,12 @@ description: 了解支援運算式樹狀架構的架構類型、建立運算式�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 157e97594f27345ac96fe91f7dd6f29907c2c7ac
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8483c46dde3ea97138e55ab84a5924a3d2578730
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037611"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146082"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>支援運算式樹狀架構的架構類型
 
@@ -65,5 +65,5 @@ var addition = Expression.Add(one, two);
 3. 查看 `ExpressionVisitor` 類別來建立修改的運算式樹狀架構。
 
 當您一一查看這三個區域時，會找到更多。 唯一不變的是，當您開始使用這三個步驟的其中一個時，您會找到您要的資訊。
- 
+
  [下一篇 - 執行運算式樹狀架構](expression-trees-execution.md)

@@ -3,10 +3,10 @@ title: 用戶端驗證 (展示層中的驗證)
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索用戶端驗證的重要概念。
 ms.date: 10/08/2018
 ms.openlocfilehash: 4e72dcafafc3144a75afe1fd23a4a779f5667459
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "68674355"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>用戶端驗證 (展示層中的驗證)
@@ -27,26 +27,26 @@ ms.locfileid: "68674355"
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Xamarin 行動應用程式中的驗證
 
-- **驗證文字輸入並顯示錯誤** \
+- **驗證文本輸入並顯示錯誤** \
   [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
-- **驗證回呼** \
+- **驗證回檔** \
   <https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/>
 
 ### <a name="validation-in-aspnet-core-apps"></a>ASP.NET Core 應用程式中的驗證
 
-- **Rick Anderson，新增驗證** \
+- **裡克·安德森添加驗證** \
   <https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation>
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>SPA Web 應用程式中的驗證 (Angular 2、TypeScript、JavaScript)
 
-- **Ado Kukic：Angular 2 表單驗證** \
+- **阿多·庫基奇角 2 表單驗證** \
   <https://scotch.io/tutorials/angular-2-form-validation>
 
-- **表單驗證**  \
+- **表單驗證** \
   <https://angular.io/guide/form-validation>
 
-- **Validation (驗證)，** Breeze 文件， \
+- **驗證。** Breeze 文件， \
   <https://breeze.github.io/doc-js/validation.html>
 
 總而言之，這些是對於驗證而言最重要的概念：
@@ -60,5 +60,5 @@ ms.locfileid: "68674355"
 - 在許多情況下，在用戶端重複驗證是不錯的做法，因為應用程式可以採取主動。
 
 >[!div class="step-by-step"]
->[上一頁](domain-model-layer-validations.md)
->[下一頁](domain-events-design-implementation.md)
+>[上一個](domain-model-layer-validations.md)
+>[下一個](domain-events-design-implementation.md)

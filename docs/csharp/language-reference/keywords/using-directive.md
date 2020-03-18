@@ -5,10 +5,10 @@ helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
 ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093145"
 ---
 # <a name="using-directive-c-reference"></a>using 指示詞 (C# 參考)
@@ -35,7 +35,7 @@ ms.locfileid: "77093145"
     using Project = PC.MyCompany.Project;
     ```
 
-`using` 關鍵字也用來建立 *using 陳述式*，協助確保能夠正確處理 <xref:System.IDisposable> 物件 (例如檔案和字型)。 如需詳細資訊，請參閱 [sing 陳述式](using-statement.md)。
+`using` 關鍵字也用來建立 *using 陳述式*，協助確保能夠正確處理 <xref:System.IDisposable> 物件 (例如檔案和字型)。 如需詳細資訊，請參閱 [using 陳述式](using-statement.md)。
 
 ## <a name="using-static-type"></a>Using static 類型
 
@@ -91,7 +91,7 @@ using alias 指示詞的右邊不能有開放式的泛型類型。 例如，您�
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/namespaces.md#using-directives)的 [Using 指示詞](/dotnet/csharp/language-reference/language-specification/introduction)。 語言規格是 C# 語法及用法的限定來源。
+如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的 [Using 指示詞](~/_csharplang/spec/namespaces.md#using-directives)。 語言規格是 C# 語法及用法的限定來源。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -100,4 +100,4 @@ using alias 指示詞的右邊不能有開放式的泛型類型。 例如，您�
 - [使用命名空間](../../programming-guide/namespaces/using-namespaces.md)
 - [C# 關鍵字](index.md)
 - [命名空間](../../programming-guide/namespaces/index.md)
-- [using 陳述式](using-statement.md)
+- [使用語句](using-statement.md)

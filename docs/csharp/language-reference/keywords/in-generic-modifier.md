@@ -5,10 +5,10 @@ helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
 ms.openlocfilehash: 57da13f6dc6719166b9051afeb2532ba5fbeff3a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713478"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (泛型修飾詞) (C# 參考)
@@ -23,7 +23,7 @@ ms.locfileid: "75713478"
 
 您可以將類型相同但具有衍生程度較低之泛型型別參數的另一個委派指派給 Contravariant 委派。
 
-如需詳細資訊，請參閱 [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (共變數和反變數)。
+如需詳細資訊，請參閱 [Covariance and Contravariance](../../programming-guide/concepts/covariance-contravariance/index.md) (共變數和反變數 (C# 和 Visual Basic))。
 
 ## <a name="contravariant-generic-interface"></a>Contravariant 泛型介面
 
@@ -41,8 +41,8 @@ ms.locfileid: "75713478"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [out](out-generic-modifier.md)
+- [出](out-generic-modifier.md)
 - [共變數和反變數](../../programming-guide/concepts/covariance-contravariance/index.md)
 - [修飾詞](index.md)

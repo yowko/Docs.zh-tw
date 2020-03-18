@@ -3,10 +3,10 @@ title: 逐步解說：使用 async 和 await 存取 Web (C#)
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: 42b09dab26fd514e184163eaf41aff117d3a463f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74281788"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>逐步解說：使用 async 和 await 存取 Web (C#)
@@ -17,7 +17,7 @@ ms.locfileid: "74281788"
 
 本逐步解說從同步化 Windows Presentation Foundation (WPF) 應用程式開始，該應用程式會加總網站清單中的位元組數目。 然後逐步解說會藉由使用新功能，將應用程式轉換為非同步解決方案。
 
-如果您不想要自行建置應用程式，可以下載 [非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) 。
+如果您不想要自行建置應用程式，可以下載 [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) (非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic))。
 
 > [!NOTE]
 > 若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。
@@ -26,63 +26,63 @@ ms.locfileid: "74281788"
 
 1. 啟動 Visual Studio。
 
-2. 在功能表列上，選擇 [檔案] > [新增] > [專案]。
+2. 在功能表列上，選擇 **"檔** > **新專案** > **"。**
 
-     [ **新增專案** ] 對話方塊隨即開啟。
+     此時會開啟 [新增專案]**** 對話方塊。
 
-3. 在 [已安裝的範本] 窗格中，選擇 [Visual C#]，然後從專案類型清單中選擇 [WPF 應用程式]。
+3. 在 **"已安裝範本"** 窗格中，選擇 Visual C#，然後從專案類型清單中選擇**WPF 應用程式**。
 
-4. 在 [名稱] 文字方塊中，輸入 `AsyncExampleWPF`，然後選擇 [確定] 按鈕。
+4. 在 [名稱]**** 文字方塊中，輸入 `AsyncExampleWPF`，然後選擇 [確定]**** 按鈕。
 
-     新的專案隨即會出現在**方案總管**中。
+     新的專案隨即會出現在方案總管**** 中。
 
 ## <a name="design-a-simple-wpf-mainwindow"></a>設計簡單的 WPF MainWindow
 
 1. 在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。
 
-2. 如果未顯示 [工具箱] 視窗，請選擇 [檢視] 功能表，然後選擇 [工具箱]。
+2. 如果未顯示 [工具箱]**** 視窗，請選擇 [檢視]**** 功能表，然後選擇 [工具箱]****。
 
-3. 將 **Button** 控制項和 **TextBox** 控制項加入 [MainWindow] 視窗。
+3. 將 **Button** 控制項和 **TextBox** 控制項加入 [MainWindow]**** 視窗。
 
-4. 反白顯示 **TextBox** 控制項，並在 [屬性] 視窗中，設定下列值：
+4. 反白顯示 **TextBox** 控制項，並在 [屬性]**** 視窗中，設定下列值：
 
-    - 將 [名稱] 屬性設定為 `resultsTextBox`。
+    - 將 [名稱]**** 屬性設定為 `resultsTextBox`。
 
-    - 將 [高度] 屬性設為 250。
+    - 將 [高度]**** 屬性設為 250。
 
-    - 將 [寬度] 屬性設為 500。
+    - 將 [寬度]**** 屬性設為 500。
 
-    - 在 [文字] 索引標籤上，指定等寬字型，例如 Lucida Console 或全域等寬。
+    - 在 [文字]**** 索引標籤上，指定等寬字型，例如 Lucida Console 或全域等寬。
 
-5. 反白顯示 **Button** 控制項，並在 [屬性] 視窗中，設定下列值：
+5. 反白顯示 **Button** 控制項，並在 [屬性]**** 視窗中，設定下列值：
 
-    - 將 [名稱] 屬性設定為 `startButton`。
+    - 將 [名稱]**** 屬性設定為 `startButton`。
 
-    - 將 [內容] 屬性的值從 **Button** 變更為 **Start**。
+    - 將 [內容]**** 屬性的值從 **Button** 變更為 **Start**。
 
-6. 放置文字方塊和按鈕，使兩者都出現在 [MainWindow] 視窗中。
+6. 放置文字方塊和按鈕，使兩者都出現在 [MainWindow]**** 視窗中。
 
      如需 WPF XAML 設計工具的詳細資訊，請參閱[使用 XAML 設計工具建立 UI](/visualstudio/xaml-tools/creating-a-ui-by-using-xaml-designer-in-visual-studio)。
 
 ## <a name="add-a-reference"></a>加入參考
 
-1. 在方案總管中，反白顯示您的專案名稱。
+1. 在方案總管**** 中，反白顯示您的專案名稱。
 
-2. 在功能表列上，選擇 [專案]  >  [加入參考]。
+2. 在功能表列上，選擇 **"專案** > **添加參考**"。
 
-     **[參考管理員]** 對話方塊隨即顯示。
+     [參考管理員]**** 對話方塊隨即顯示。
 
 3. 在對話方塊上方，請確認專案的目標是 .NET Framework 4.5 或更新版本。
 
-4. 在 [組件] 分類中，選擇 [Framework] (如果尚未選擇)。
+4. 在 [組件]**** 分類中，選擇 [Framework]**** (如果尚未選擇)。
 
-5. 在名稱清單中，選取 [System.Net.Http] 核取方塊。
+5. 在名稱清單中，選取 [System.Net.Http]**** 核取方塊。
 
-6. 選擇 [確定] 按鈕以關閉對話方塊。
+6. 選擇 [確定]**** 按鈕以關閉對話方塊。
 
 ## <a name="add-necessary-using-directives"></a>加入必要的 using 指示詞
 
-1. 在方案總管中開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]。
+1. 在方案總管**** 中開啟 MainWindow.xaml.cs 的捷徑功能表，然後選擇 [檢視程式碼]****。
 
 2. 如果尚未顯示，請將下列 `using` 指示詞加入程式碼檔案頂端。
 
@@ -94,7 +94,7 @@ ms.locfileid: "74281788"
 
 ## <a name="create-a-synchronous-app"></a>建立同步應用程式
 
-1. 在設計視窗 MainWindow.xaml 中，按兩下 [開始] 按鈕，以在 MainWindow.xaml.cs 中建立 `startButton_Click` 事件處理常式。
+1. 在設計視窗 MainWindow.xaml 中，按兩下 [開始]**** 按鈕，以在 MainWindow.xaml.cs 中建立 `startButton_Click` 事件處理常式。
 
 2. 在 MainWindow.xaml.cs 中，將下列程式碼複製到 `startButton_Click` 的內文：
 
@@ -197,7 +197,7 @@ ms.locfileid: "74281788"
 
 ## <a name="test-the-synchronous-solution"></a>測試同步解決方案
 
-選擇 **F5** 鍵以執行程式，然後選擇 [開始] 按鈕。
+選擇 **F5** 鍵以執行程式，然後選擇 [開始]**** 按鈕。
 
 應該會顯示如下列清單的輸出：
 
@@ -218,7 +218,7 @@ Total bytes returned:  1834802
 Control returned to startButton_Click.
 ```
 
-請注意，需要花費幾秒鐘以顯示計數。 在這段期間，在等候下載要求資源的同時，會封鎖 UI 執行緒。 如此一來，您就無法在選擇 [開始] 按鈕之後，移動、最大化、最小化，或甚至關閉顯示視窗。 這些努力會失敗，直到位元組計數開始出現為止。 如果網站沒有回應，也不會指出失敗的站台。 甚至難以停止等候以及關閉程式。
+請注意，需要花費幾秒鐘以顯示計數。 在這段期間，在等候下載要求資源的同時，會封鎖 UI 執行緒。 如此一來，您就無法在選擇 [開始]**** 按鈕之後，移動、最大化、最小化，或甚至關閉顯示視窗。 這些努力會失敗，直到位元組計數開始出現為止。 如果網站沒有回應，也不會指出失敗的站台。 甚至難以停止等候以及關閉程式。
 
 ## <a name="convert-geturlcontents-to-an-asynchronous-method"></a>將 GetURLContents 轉換為非同步方法
 
@@ -235,7 +235,7 @@ Control returned to startButton_Click.
     using (WebResponse response = webReq.GetResponseAsync())
     ```
 
-2. `GetResponseAsync` 會傳回 <xref:System.Threading.Tasks.Task%601>。 在此情況下，工作傳回變數 `TResult` 具有類型 <xref:System.Net.WebResponse>。 工作承諾會在已下載要求的資料及工作執行完成之後，產生實際 `WebResponse` 物件。
+2. `GetResponseAsync` 會傳回 <xref:System.Threading.Tasks.Task%601>。 在這種情況下，*任務返回變數*，`TResult`具有 類型<xref:System.Net.WebResponse>。 工作承諾會在已下載要求的資料及工作執行完成之後，產生實際 `WebResponse` 物件。
 
      若要從工作擷取 `WebResponse` 值，請將 [await](../../../language-reference/operators/await.md) 運算子套用至 `GetResponseAsync` 的呼叫，如下列程式碼所示。
 
@@ -254,7 +254,7 @@ Control returned to startButton_Click.
 
      對 `webReq.GetResponseAsync` 的呼叫會傳回 `Task(Of WebResponse)` 或 `Task<WebResponse>`。 await 運算子會套用至工作以擷取 `WebResponse` 值。
 
-     如果非同步方法有不需要依賴工作完成的工作要執行，此方法可以在呼叫非同步方法之後，以及套用 `await` 運算子之前，繼續這兩個陳述式之間的工作。 如需範例，請參閱[如何使用 async 和 await 以平行方式提出多個 webC#要求（）](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)和[如何使用 system.threading.tasks.task.whenall （C#）擴充非同步逐步](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)解說。
+     如果非同步方法有不需要依賴工作完成的工作要執行，此方法可以在呼叫非同步方法之後，以及套用 `await` 運算子之前，繼續這兩個陳述式之間的工作。 有關示例，請參閱[如何使用非同步和 await （C#） 並行發出多個 Web 請求](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)，[以及如何使用 Task.WhenAll （C#） 擴展非同步演練](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)。
 
 3. 由於您在上一個步驟中加入 `await` 運算子，所以發生編譯器錯誤。 此運算子只能用於以 [async](../../../language-reference/keywords/async.md) 修飾詞標示的方法。 當您重複轉換步驟以將對 `CopyTo` 的呼叫取代為對 `CopyToAsync` 的呼叫時，略過錯誤。
 
@@ -277,13 +277,13 @@ Control returned to startButton_Click.
         //await copyTask;
         ```
 
-4. `GetURLContents` 中還需要完成的工作是調整方法簽章。 您只能在以 `await`async[ 修飾詞標示的方法中使用 ](../../../language-reference/keywords/async.md) 運算子。 新增修飾詞以將方法標示為「非同步方法」，如下列程式碼所示。
+4. `GetURLContents` 中還需要完成的工作是調整方法簽章。 您只能在以 [async](../../../language-reference/keywords/async.md) 修飾詞標示的方法中使用 `await` 運算子。 新增修飾詞以將方法標示為「非同步方法」**，如下列程式碼所示。
 
     ```csharp
     private async byte[] GetURLContents(string url)
     ```
 
-5. 非同步方法的傳回型別在 C# 中只能是 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `void`。 一般而言，`void` 的傳回型別只適用於非同步事件處理常式，其中 `void` 為必要項目。 在其他情況下，如果完成的方法有 `Task(T)`return[ 陳述式，則會傳回類型 T 的值，請使用 ](../../../language-reference/keywords/return.md)；如果完成的方法不會傳回有意義的值，則使用 `Task`。 您可以將 `Task` 傳回類型想成是有意義的 "Task(void)"。
+5. 非同步方法的傳回型別在 C# 中只能是 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `void`。 一般而言，`void` 的傳回型別只適用於非同步事件處理常式，其中 `void` 為必要項目。 在其他情況下，如果完成的方法有 [return](../../../language-reference/keywords/return.md) 陳述式，則會傳回類型 T 的值，請使用 `Task(T)`；如果完成的方法不會傳回有意義的值，則使用 `Task`。 您可以將 `Task` 傳回類型想成是有意義的 "Task(void)"。
 
      如需詳細資訊，請參閱[非同步方法的傳回型別 (C#)](./async-return-types.md)。
 
@@ -330,7 +330,7 @@ Control returned to startButton_Click.
 
     - 將 "Async" 加入至方法名稱。
 
-    - 沒有工作傳回變數 T，這次是因為 `SumPageSizesAsync` 不會傳回 T 的值（此方法沒有 `return` 的語句）。不過，此方法必須傳回要可等候的 `Task`。 因此，請將方法的傳回型別從 `void` 變更為 `Task`。
+    - 沒有任務返回變數 T，這次是因為`SumPageSizesAsync`不返回 T 的值。 `return`但是，該方法必須返回`Task`待等待。 因此，請將方法的傳回型別從 `void` 變更為 `Task`。
 
     下列程式碼會顯示這些變更。
 
@@ -346,7 +346,7 @@ Control returned to startButton_Click.
 
 2. 因為 `SumPageSizesAsync` 是非同步方法，在事件處理常式中變更程式碼以等候結果。
 
-     對 `SumPageSizesAsync` 的呼叫會鏡射 `CopyToAsync` 中對 `GetURLContentsAsync` 的呼叫。 呼叫會傳回 `Task`，而不是 `Task(T)`。
+     對 `SumPageSizesAsync` 的呼叫會鏡射 `GetURLContentsAsync` 中對 `CopyToAsync` 的呼叫。 呼叫會傳回 `Task`，而不是 `Task(T)`。
 
      如同先前的程序，您可以使用一個陳述式或兩個陳述式轉換呼叫。 下列程式碼會顯示這些變更。
 
@@ -359,7 +359,7 @@ Control returned to startButton_Click.
     //await sumTask;
     ```
 
-3. 若要避免不小心重新進入作業，請在 `startButton_Click` 頂端加入下列陳述式以停用 [開始] 按鈕。
+3. 若要避免不小心重新進入作業，請在 `startButton_Click` 頂端加入下列陳述式以停用 [開始]**** 按鈕。
 
     ```csharp
     // Disable the button until the operation is complete.
@@ -381,25 +381,25 @@ Control returned to startButton_Click.
     private async void startButton_Click(object sender, RoutedEventArgs e)
     ```
 
-     一般而言，事件處理常式的名稱並沒有改變。 因為事件處理常式必須傳回 `Task`，所以傳回型別不會變更為 `void`。
+     一般而言，事件處理常式的名稱並沒有改變。 因為事件處理常式必須傳回 `void`，所以傳回型別不會變更為 `Task`。
 
      專案從同步到非同步處理的轉換已完成。
 
 ## <a name="test-the-asynchronous-solution"></a>測試非同步解決方案
 
-1. 選擇 **F5** 鍵以執行程式，然後選擇 [開始] 按鈕。
+1. 選擇 **F5** 鍵以執行程式，然後選擇 [開始]**** 按鈕。
 
 2. 類似同步方案的輸出應該會顯示。 但是，請注意下列差異。
 
-    - 處理完成之後，結果不會同時發生。 例如，這兩個程式在 `startButton_Click` 中都包含程式碼行，會清除文字方塊。 此用意是在顯示一個結果集之後、二度選擇 [開始] 按鈕時，清除執行之間的文字方塊。 在同步版本中，當下載完成且 UI 執行緒可以執行其他工作時，會在第二次顯示計數之前，清除文字方塊。 在非同步版本中，會在您選擇 [開始] 按鈕之後，立即清除文字方塊。
+    - 處理完成之後，結果不會同時發生。 例如，這兩個程式在 `startButton_Click` 中都包含程式碼行，會清除文字方塊。 此用意是在顯示一個結果集之後、二度選擇 [開始]**** 按鈕時，清除執行之間的文字方塊。 在同步版本中，當下載完成且 UI 執行緒可以執行其他工作時，會在第二次顯示計數之前，清除文字方塊。 在非同步版本中，會在您選擇 [開始]**** 按鈕之後，立即清除文字方塊。
 
-    - 最重要的是，不會在下載期間封鎖 UI 執行緒。 您可以移動視窗或調整其大小，同時下載、計算及顯示 Web 資源。 如果其中一個網站變慢或沒有回應，您可以選擇 [關閉] 按鈕 (右上角紅色欄位中的 x)，取消作業。
+    - 最重要的是，不會在下載期間封鎖 UI 執行緒。 您可以移動視窗或調整其大小，同時下載、計算及顯示 Web 資源。 如果其中一個網站變慢或沒有回應，您可以選擇 [關閉]**** 按鈕 (右上角紅色欄位中的 x)，取消作業。
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>將方法 GetURLContentsAsync 取代為 .NET Framework 方法
 
 1. .NET Framework 4.5 提供許多您可以使用的非同步方法。 其中一個方法 (<xref:System.Net.Http.HttpClient> 方法 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>) 會執行這個逐步解說所需的工作。 您可以使用這個方法，而不是 `GetURLContentsAsync` 方法，這是您在先前的程序中建立的方法。
 
-     第一個步驟是在方法 `HttpClient` 中建立 `SumPageSizesAsync` 物件。 在方法的開頭，加入下列宣告。
+     第一個步驟是在方法 `SumPageSizesAsync` 中建立 `HttpClient` 物件。 在方法的開頭，加入下列宣告。
 
     ```csharp
     // Declare an HttpClient object and increase the buffer size. The
@@ -416,11 +416,11 @@ Control returned to startButton_Click.
 
 3. 移除或取消註解您撰寫的 `GetURLContentsAsync` 方法。
 
-4. 選擇 **F5** 鍵以執行程式，然後選擇 [開始] 按鈕。
+4. 選擇 **F5** 鍵以執行程式，然後選擇 [開始]**** 按鈕。
 
      此版本之專案的行為應該符合「測試非同步方案」程序描述的行為，而且您只需要投入較少的精力。
 
-## <a name="example-code"></a>範例程式碼
+## <a name="example-code"></a>程式碼範例
 
 下列程式碼包含使用您撰寫的 `GetURLContentsAsync` 方法，從同步轉換為非同步方案的完整範例。 請注意，它極為類似原始的同步方案。
 
@@ -690,11 +690,11 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>另請參閱
 
-- [(非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110))
+- [Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hh300224(v=vs.110)) (非同步範例：存取 Web 逐步解說 (C# 和 Visual Basic))
 - [async](../../../language-reference/keywords/async.md)
-- [await](../../../language-reference/operators/await.md)
-- [使用 async 和 await 進行非同步程式設計 (C#)](./index.md)
+- [等待](../../../language-reference/operators/await.md)
+- [使用 Async 和 Await 進行非同步程式設計 (C#)](./index.md)
 - [非同步方法的傳回型別 (C#)](./async-return-types.md)
-- [Task-based Asynchronous Programming (TAP)](https://www.microsoft.com/download/details.aspx?id=19957) (以工作為基礎的非同步程式設計 (TAP))
-- [如何使用 System.threading.tasks.task.whenall （C#）擴充非同步逐步解說](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [如何使用 async 和 await （C#）以平行方式提出多個 web 要求](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [以工作為基礎的非同步程式設計 (TAP)](https://www.microsoft.com/download/details.aspx?id=19957)
+- [如何使用 Task.WhenAll （C#） 擴展非同步演練](./how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [如何使用非同步和等待 （C#） 並行發出多個 Web 請求](./how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

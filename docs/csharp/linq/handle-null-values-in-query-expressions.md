@@ -4,10 +4,10 @@ description: 了解如何處理 C# 之 LINQ 查詢運算式中的 Null 值。
 ms.date: 12/01/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
 ms.openlocfilehash: c9a3aaec05fa029a8db66826bdcb4a1d106176e3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73736865"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>處理查詢運算式中的 Null 值
@@ -28,8 +28,8 @@ ms.locfileid: "73736865"
 
 [!code-csharp[csProgGuideLINQ#83](~/samples/snippets/csharp/concepts/linq/how-to-handle-null-values-in-query-expressions_2.cs)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Nullable%601>
-- [Language-Integrated Query (LINQ)](index.md)
-- [可為 Null 的實值型別](../language-reference/builtin-types/nullable-value-types.md)
+- [語言綜合查詢（LINQ）](index.md)
+- [可為 Null 的實值類型](../language-reference/builtin-types/nullable-value-types.md)

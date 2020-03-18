@@ -1,20 +1,20 @@
 ---
-title: 處理 XML 檔案程式C#設計指南
+title: 處理 XML 檔 - C# 程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
 ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793384"
 ---
-# <a name="processing-the-xml-file-c-programming-guide"></a>處理 XML 檔案（C#程式設計手冊）
+# <a name="processing-the-xml-file-c-programming-guide"></a>處理 XML 檔（C# 程式設計指南）
 
-編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 （如需如何標記程式碼的相關資訊，請參閱[建議的檔註解標記](./recommended-tags-for-documentation-comments.md)）。識別碼字串可唯一識別結構。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應該識別碼且適用於該文件的 .NET Framework 中繼資料/反映項目。
+編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 （有關如何標記代碼的資訊，請參閱[文檔注釋的建議標記](./recommended-tags-for-documentation-comments.md)。ID 字串唯一標識構造。 處理 XML 檔案的程式可以使用識別碼字串，來識別對應該識別碼且適用於該文件的 .NET Framework 中繼資料/反映項目。
 
 XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個元素所產生之識別碼的一般清單。
 
@@ -27,11 +27,11 @@ XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個�
     |字元|描述|
     |---------------|-----------------|
     |N|命名空間<br /><br /> 您無法將文件註解新增至命名空間，但可讓 cref 參考它們 (如果支援)。|
-    |T|類型：類別、介面、結構、列舉或委派|
-    |華氏 (F)|Field - 欄位|
+    |T|類型：類、介面、結構、枚舉或委託|
+    |F|field|
     |P|屬性 (包括索引子或其他索引屬性)|
     |M|方法 (包括像是建構函式、運算子之類的特殊方法)|
-    |E|事件|
+    |E|event|
     |!|錯誤字串<br /><br /> 字串的其餘部分提供與錯誤相關的資訊。 C# 編譯器會針對無法解析的連結產生錯誤資訊。|
 
 - 字串的第二個部分是項目的完整名稱 (從命名空間的根開始)。 項目名稱、其封入類型及命名空間會以句號來分隔。 如果項目名稱本身包含句點，則會以雜湊符號 ('#') 來取代它們。 假設沒有項目的名稱中直接含有雜湊符號。 例如，String 建構函式的完整名稱會是 "System.String.#ctor"。
@@ -40,7 +40,7 @@ XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個�
 
   - 基底類型。 一般類型 (ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE) 會表示為類型的完整名稱。
 
-  - 內建類型（例如，ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF 和 ELEMENT_TYPE_VOID）會表示為對應完整類型的完整名稱。 例如，System.Int32 或 System.TypedReference。
+  - 內部類型（例如，ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF和ELEMENT_TYPE_VOID）表示為相應完整類型的完全限定名稱。 例如，System.Int32 或 System.TypedReference。
 
   - ELEMENT_TYPE_PTR 會表示為 '\*'，緊接在已修改的類型之後。
 
@@ -56,7 +56,7 @@ XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個�
 
   - ELEMENT_TYPE_GENERICARRAY 會表示為 "[?]"，緊接在陣列的元素類型之後。 C# 編譯器永遠都不會產生這個。
 
-  - ELEMENT_TYPE_ARRAY 會表示為 [*lowerbound*:`size`,*lowerbound*:`size`]，其中逗號數目的順位是 -1，而每個維度的下限和大小 (如果已知) 會以十進位格式表示。 如果未指定下限或大小，就會加以省略。 如果省略了特定維度的下限和大小，也會省略 ':'。 例如，下限為 1 且未指定大小的 2 維度陣列是 [1:,1:]。
+  - ELEMENT_TYPE_ARRAY表示為 [*下界*：`size`、*下界*：]`size`其中逗號數為排名 - 1，每個維度的下界和大小（如果已知）以小數表示。 如果未指定下限或大小，就會加以省略。 如果省略了特定維度的下限和大小，也會省略 ':'。 例如，下限為 1 且未指定大小的 2 維度陣列是 [1:,1:]。
 
   - ELEMENT_TYPE_FNPTR 會表示為 "=FUNC:`type`(*signature*)"，其中 `type` 是傳回類型，而 *signature* 是方法的引數。 如果沒有任何引數，就會省略括弧。 C# 編譯器永遠都不會產生這個。
 
@@ -82,8 +82,8 @@ XML 檔案不會以階層方式呈現您的程式碼；它是具有針對每個�
 
 [!code-csharp[csProgGuidePointers#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#21)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
-- [-doc （C#編譯器選項）](../../language-reference/compiler-options/doc-compiler-option.md)
-- [XML 檔批註](./index.md)
+- [-文檔（C# 編譯器選項）](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML 文件註解](./index.md)

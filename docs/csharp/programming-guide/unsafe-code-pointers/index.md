@@ -11,10 +11,10 @@ helpviewer_keywords:
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
 ms.openlocfilehash: 013af4e55c8fc396bbc92058d7fb454484f3263e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711827"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>不安全的程式碼和指標 (C# 程式設計手冊)
@@ -40,9 +40,9 @@ ms.locfileid: "75711827"
   
 ## <a name="related-sections"></a>相關章節
 
-如需詳細資訊，請參閱＜＞。
+如需詳細資訊，請參閱
 
-- [指標型別](pointer-types.md)
+- [指標類型](pointer-types.md)
 
 - [固定大小的緩衝區](fixed-size-buffers.md)
 
@@ -50,7 +50,7 @@ ms.locfileid: "75711827"
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)中的[不安全的程式碼](~/_csharplang/spec/unsafe-code.md)主題。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
-- [Unsafe.DangerousAPI](../../language-reference/keywords/unsafe.md)
+- [安全](../../language-reference/keywords/unsafe.md)

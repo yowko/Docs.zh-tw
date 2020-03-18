@@ -13,15 +13,15 @@ helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
 ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345397"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
 
-`switch` 是一個選取範圍陳述式，可根據使用「比對運算式」的模式比對，從候選項清單中選擇要執行的單一「參數區段」。
+`switch` 是一個選取範圍陳述式，可根據使用「比對運算式」** 的模式比對，從候選項清單中選擇要執行的單一「參數區段」**。
 
 [!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "75345397"
 
 ## <a name="the-match-expression"></a>比對運算式
 
-比對運算式提供要與 `case` 標籤中的模式進行比對的值。 它的語法為：
+比對運算式提供要與 `case` 標籤中的模式進行比對的值。 其語法如下：
 
 ```csharp
    switch (expr)
@@ -44,22 +44,22 @@ ms.locfileid: "75345397"
 在 C# 6 和更早坂本中，比對運算式必須是傳回下列類型之值的運算式︰
 
 - [char](../builtin-types/char.md)。
-- [string](../builtin-types/reference-types.md)。
+- [字串](../builtin-types/reference-types.md)。
 - [bool](../builtin-types/bool.md)。
-- [整數](../builtin-types/integral-numeric-types.md)值，例如 `int` 或 `long`。
-- [enum](../builtin-types/enum.md) 值。
+- [整體](../builtin-types/integral-numeric-types.md)值，如 或`int`。 `long`
+- [枚舉](../builtin-types/enum.md)值。
 
 從 C# 7.0 開始，比對運算式可以是任何非 Null 運算式。
 
 ## <a name="the-switch-section"></a>參數區段
 
-`switch` 陳述式包含一個或多個參數區段。 每個參數區段都包含一或多個「case 標籤」 (case 或預設標籤)，後面接著一或多個陳述式。 `switch` 陳述式在任何參數區段中最多只能放置一個預設標籤。 下列範例示範擁有三個參數區段的簡單 `switch` 陳述式，每個區段包含兩個陳述式。 第二個參數區段包含 `case 2:` 和 `case 3:` 標籤。
+`switch` 陳述式包含一個或多個參數區段。 每個參數區段都包含一或多個「case 標籤」** (case 或預設標籤)，後面接著一或多個陳述式。 `switch` 陳述式在任何參數區段中最多只能放置一個預設標籤。 下列範例示範擁有三個參數區段的簡單 `switch` 陳述式，每個區段包含兩個陳述式。 第二個參數區段包含 `case 2:` 和 `case 3:` 標籤。
 
 `switch` 陳述式可包含任意數目的參數區段，而每個區段都可以擁有一或多個 case 標籤，如下列範例所示。 不過，不可以有兩個 case 標籤包含相同的運算式。
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 因此，下列程式碼會產生編譯器錯誤，CS0163：「控制項無法從一個 case 標籤（\<案例標籤 >）到另一個。」
+switch 陳述式中只會執行一個參數區段。 C# 不允許從某個參數區段繼續執行至另一個參數區段。 因此，以下代碼生成編譯器錯誤 CS0163："控制項不能從一個案例標籤（\<大小寫標籤>）下降到另一個大小寫標籤。
 
 ```csharp
 switch (caseSwitch)
@@ -82,7 +82,7 @@ switch (caseSwitch)
 
 ## <a name="case-labels"></a>case 標籤
 
-每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至包含「第一個」相符 case 標籤的參數區段。 若無任何狀況標籤模式符合比對運算式，會將控制權轉移到具有 `default` 狀況標籤的區段 (如有此區段)。 如果沒有 `default` 狀況，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
+每個 case 標籤都會指定要與比對運算式比較的模式 (先前範例中的 `caseSwitch` 變數)。 如果相符，控制權會轉移至包含「第一個」**** 相符 case 標籤的參數區段。 若無任何狀況標籤模式符合比對運算式，會將控制權轉移到具有 `default` 狀況標籤的區段 (如有此區段)。 如果沒有 `default` 狀況，則不會執行任何參數區段中的陳述式，而且控制權會轉移到 `switch` 陳述式外部。
 
 如需 `switch` 陳述式和模式比對的資訊，請參閱[模式比對與 `switch` 陳述式](#pattern)一節。
 
@@ -112,7 +112,7 @@ switch (caseSwitch)
 
 ### <a name="constant-pattern"></a>常數模式
 
-常數模式會測試比對運算式是否等於指定的常數。 它的語法為：
+常數模式會測試比對運算式是否等於指定的常數。 其語法如下：
 
 ```csharp
    case constant:
@@ -120,8 +120,8 @@ switch (caseSwitch)
 
 其中，*constant* 是用來測試的值。 *constant* 可以是下列任何常數運算式：
 
-- [Bool](../builtin-types/bool.md)常值： `true` 或 `false`。
-- 任何[整數](../builtin-types/integral-numeric-types.md)常數，例如 `int`、`long`或 `byte`。
+- [布林](../builtin-types/bool.md)文本：或`true`。 `false`
+- 任何[積分](../builtin-types/integral-numeric-types.md)常量，如`int`、或`long` `byte`。
 - 所宣告之 `const` 變數的名稱。
 - 列舉常數。
 - [char](../builtin-types/char.md) 常值。
@@ -143,7 +143,7 @@ switch (caseSwitch)
 
 ### <a name="type-pattern"></a>類型模式
 
-類型模式會啟用精簡類型評估和轉換。 與 `switch` 陳述式搭配使用來執行模式比對時，會測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。 它的語法為：
+類型模式會啟用精簡類型評估和轉換。 與 `switch` 陳述式搭配使用來執行模式比對時，會測試運算式是否可轉換成指定的類型；如果可以的話，則會將它轉換成該類型的變數。 其語法如下：
 
 ```csharp
    case type varname
@@ -157,7 +157,7 @@ switch (caseSwitch)
 
 - *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
 
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」是定義於其型別宣告的變數類型。 變數的「執行階段類型」是指派給該變數的執行個體類型。
+- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」** 是定義於其型別宣告的變數類型。 變數的「執行階段類型」** 是指派給該變數的執行個體類型。
 
 - *expr* 是實作 *type* 介面的類型執行個體。
 
@@ -197,10 +197,10 @@ case null:
 
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)中的 [switch 陳述式](~/_csharplang/spec/statements.md#the-switch-statement)。 語言規格是 C# 語法及用法的限定來源。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [if-else](if-else.md)
-- [模式比對](../../pattern-matching.md)
+- [如果-else](if-else.md)
+- [模式匹配](../../pattern-matching.md)

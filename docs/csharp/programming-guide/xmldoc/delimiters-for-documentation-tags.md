@@ -1,5 +1,5 @@
 ---
-title: 檔標記的分隔符號- C#程式設計指南
+title: 文檔標記的分隔符號 - C# 程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], delimiters
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
 ms.openlocfilehash: dd4ddb3b324bd6d235efb541c90875dbe9ed4c2d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789824"
 ---
-# <a name="delimiters-for-documentation-tags-c-programming-guide"></a>檔標記的分隔符號（C#程式設計手冊）
+# <a name="delimiters-for-documentation-tags-c-programming-guide"></a>文檔標記的分隔符號（C# 程式設計指南）
 
 使用 XML 文件註解時需要分隔符號，以向編譯器指出文件註解的開始和結束位置。 您可以搭配使用下列類型的分隔符號與 XML 文件標記︰
 
@@ -28,7 +28,7 @@ ms.locfileid: "76789824"
 
   多行分隔符號。
 
-  當您使用 `/** */` 分隔符號時，有一些要遵循的格式化規則：
+  使用分隔符號時，`/** */`需要遵循一些格式規則：
   
   - 在包含 `/**` 分隔符號的行上，如果該行的其餘部分是空白字元，則不會處理該行的註解。 如果 `/**` 分隔符號後面的第一個字元是空白字元，則會忽略該空白字元，並處理該行的其餘部分。 否則，會將 `/**` 分隔符號後面的整行文字處理為註解的一部分。
 
@@ -52,7 +52,7 @@ ms.locfileid: "76789824"
     */
     ```
 
-  - 編譯器會在第二和第三行的開頭，識別「\*」的一般模式。 模式不會包括在輸出中。
+  - 編譯器在第二行和第三行的開頭\*標識了""的常見模式。 模式不會包括在輸出中。
 
     ```csharp
     /**
@@ -82,8 +82,8 @@ ms.locfileid: "76789824"
     ```
     <!-- markdownlint-enable MD010 -->
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
-- [XML 檔批註](./index.md)
-- [-doc （C#編譯器選項）](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML 文件註解](./index.md)
+- [-文檔（C# 編譯器選項）](../../language-reference/compiler-options/doc-compiler-option.md)

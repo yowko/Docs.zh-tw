@@ -1,15 +1,15 @@
 ---
-title: 如何查詢字串中的字元（LINQ）（C#）
+title: 如何查詢字串中的字元 （LINQ） （C#）
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
 ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345673"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>如何查詢字串中的字元（LINQ）（C#）
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>如何查詢字串中的字元 （LINQ） （C#）
 因為 <xref:System.String> 類別會實作泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，所以可以用字元序列的形式查詢任何字串。 不過，這不是常見的 LINQ 用法。 對於複雜的模式比對作業，使用 <xref:System.Text.RegularExpressions.Regex> 類別。  
   
 ## <a name="example"></a>範例  
@@ -57,7 +57,7 @@ class QueryAString
 ## <a name="compiling-the-code"></a>編譯程式碼  
  建立 C# 主控台應用程式專案，以及具有 `using` 指示詞的 System.Linq 和 System.IO 命名空間。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ 和字串 (C#)](./linq-and-strings.md)
-- [如何結合 LINQ 查詢與正則運算式（C#）](./how-to-combine-linq-queries-with-regular-expressions.md)
+- [如何將 LINQ 查詢與正則運算式 （C#） 相結合](./how-to-combine-linq-queries-with-regular-expressions.md)

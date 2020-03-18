@@ -13,15 +13,15 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: 3685482caebd892c460a3cc2ecf3a22acbe3c9ec
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.openlocfilehash: 15b685248730c1f742035612a201d97d180bbc41
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673403"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399809"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>具名和選擇性引數 (C# 程式設計手冊)
-C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
+C# 4 引進具名和選擇性引數。 「具名引數」** 可讓您使用參數的名稱而非使用參數清單中的參數位置來關聯引數，指定特定參數的引數。 「選擇性引數」** 可讓您省略某些參數的引數。 這兩種技巧都可以搭配方法、索引子、建構函式和委派使用。  
   
  當您使用具名和選擇性引數時，會依照引數清單中的引數顯示順序來評估引數，不是依照參數清單的順序。  
   
@@ -40,7 +40,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數�
   
  具名引數也藉由識別每個引數所代表的意義，改善程式碼的可讀性。 在下列範例方法中，`sellerName` 不可以為 Null 或空白字元。 因為 `sellerName` 和 `productName` 都是字串類型，所以可以使用具名引數來區分兩者，並減少讀取程式碼的任何人的混淆，而不是依位置傳送引數。
   
- 在下列情況下，具名引數在與位置引數搭配使用時有效： 
+ 在下列情況下，具名引數在與位置引數搭配使用時有效：
 
 - 它們的後面沒有任何位置引數，或
 
@@ -50,7 +50,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數�
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- 遵循任何順序不正確的引數的位置引數無效。
+ 任何順序順序命名的參數之後的位置參數都無效。
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -100,7 +100,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數�
 ## <a name="com-interfaces"></a>COM 介面  
  具名和選擇性引數以及對動態物件和其他增強功能的支援，大幅改善與 COM API 的互通性，例如 Office Automation API。  
   
- 例如，Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 介面的 <xref:Microsoft.Office.Interop.Excel.Range> 方法有七個參數，都是選擇性參數。 下圖會顯示這些參數：  
+ 例如，Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range> 介面的 <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> 方法有七個參數，都是選擇性參數。 下圖會顯示這些參數：  
   
  ![顯示 AutoFormat 方法之 IntelliSense 快速諮詢的螢幕擷取畫面。](./media/named-and-optional-arguments/autoformat-method-parameters.png)  
   
@@ -112,9 +112,9 @@ C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數�
   
  [!code-csharp[csProgGuideNamedAndOptional#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/namedandoptcom.cs#13)]  
   
- 如需詳細資訊和範例，請參閱[如何在 Office 程式設計中使用命名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)和[如何使用C#功能存取 Office interop 物件](../interop/how-to-access-office-onterop-objects.md)。  
+ 有關詳細資訊和示例，請參閱如何在[Office 程式設計中使用具名引數和可選參數](./how-to-use-named-and-optional-arguments-in-office-programming.md)以及如何[使用 C# 功能訪問 Office 交互操作物件](../interop/how-to-access-office-onterop-objects.md)。  
   
-## <a name="overload-resolution"></a>多載解析  
+## <a name="overload-resolution"></a>Overload Resolution  
  使用具名和選擇性引數會以下列方式影響多載解析︰  
   
 - 如果每個參數都是選擇性或為依名稱或位置對應要呼叫之陳述式的單一引數，且該引數可以轉換成參數的型別，則方法、索引子或建構函式就是執行的候選項目。  
@@ -128,7 +128,7 @@ C# 4 引進具名和選擇性引數。 「具名引數」可讓您使用參數�
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何在 Office 程式設計中使用命名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)
+- [如何在 Office 程式設計中使用具名和選擇性引數](./how-to-use-named-and-optional-arguments-in-office-programming.md)
 - [使用動態型別](../types/using-type-dynamic.md)
 - [使用建構函式](./using-constructors.md)
 - [使用索引子](../indexers/using-indexers.md)

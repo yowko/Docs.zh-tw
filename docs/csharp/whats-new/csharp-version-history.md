@@ -4,31 +4,31 @@ description: 最早的語言版本有哪些內容，而在之後有什麼演變�
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
-ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77673273"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399683"
 ---
 # <a name="the-history-of-c"></a>C\# 的歷史
 
 此文章提供了 C# 語言每個主要版本的歷史。 C# 小組將持續創新並加入新功能。 您可以在ˋ GitHub 上的 [dotnet/roslyn 存放庫repository](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) 存放庫中找到詳細語言功能狀態 (包括針對未來版本考慮加入的功能)。
 
 > [!IMPORTANT]
-> C# 語言中的部分功能仰賴 C#規格定義為「標準程式庫」中的型別和方法。 .NET 平台在許多套件中會提供那些類型與方法。 例外狀況處理便是其中一個例子。 每個 `throw` 陳述式或運算式都會受到檢查，以確保擲回衍生自 <xref:System.Exception> 的物件。 每個 `catch` 也一樣會受到檢查，以確保攔截到衍生自 <xref:System.Exception> 的型別。 每個版本都可能會加入新的需求。 若要在較舊的環境中使用最新的語言功能，可能需要安裝特定的程式庫。 每個特定版本的頁面中會記載這些相依性。 若要知道此相依性的背景，可深入了解[語言和程式庫之間的關係](relationships-between-language-and-library.md)。
+> C# 語言中的部分功能仰賴 C#規格定義為「標準程式庫」** 中的型別和方法。 .NET 平台在許多套件中會提供那些類型與方法。 例外狀況處理便是其中一個例子。 每個 `throw` 陳述式或運算式都會受到檢查，以確保擲回衍生自 <xref:System.Exception> 的物件。 每個 `catch` 也一樣會受到檢查，以確保攔截到衍生自 <xref:System.Exception> 的型別。 每個版本都可能會加入新的需求。 若要在較舊的環境中使用最新的語言功能，可能需要安裝特定的程式庫。 每個特定版本的頁面中會記載這些相依性。 若要知道此相依性的背景，可深入了解[語言和程式庫之間的關係](relationships-between-language-and-library.md)。
 
 C# 建置工具將最新的主要語言版本視為預設語言版本。 主要版本之間可能存在單點發行版本，此節的其他文章對此進行了詳細介紹。 若要使用小數點版本中的最新功能，您需要[設定編譯器語言版本](../language-reference/configure-language-version.md)並選取該版本。 自 C# 7.0 以來已經有三個單點發行版本：
 
 - [C# 7.3](csharp-7-3.md)：
   - 從 [Visual Studio 2017 版本 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md) 開始，可以使用 C# 7.3。
 - [C# 7.2](csharp-7-2.md):
-  - C#從[Visual Studio 2017 15.5 版](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)和[.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md)開始提供7.2。
+  - C# 7.2 可從[Visual Studio 2017 版本 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)和[.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md)開始。
 - [C# 7.1](csharp-7-1.md)：
   - 從 [Visual Studio 2017 version 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 和 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 開始，可以使用 C# 7.1。
 
 ## <a name="c-version-10"></a>C# 1.0 版
 
-當您回頭看一下， C# Visual Studio .net 2002 發行的版本1.0，看起來很像 JAVA。 在[其聲明的 ECMA 設計目標當中](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)，它試圖成為「簡單、現代化、一般用途的物件導向語言」。  同時，看似 Java 表示它達成了那些早期的設計目標。
+當您回過頭來查看時，C# 版本 1.0 與 Visual Studio .NET 2002 一起發佈，看起來非常像 JAVA。 在[其聲明的 ECMA 設計目標當中](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)，它試圖成為「簡單、現代化、一般用途的物件導向語言」。  同時，看似 Java 表示它達成了那些早期的設計目標。
 
 但如果您現在回顧 C# 1.0，會覺得有點暈眩。 它缺乏內建的非同步功能和部分圍繞著您視為理所當然的泛型熟練功能。 事實上，它完全缺乏了泛型。  那麼 [LINQ](../linq/index.md) 呢？ 尚無法使用。 那些新增項目需要好幾年才會出現。
 
@@ -36,30 +36,30 @@ C# 1.0 版看起來與現今相比去除了一些功能。 您會發現自己撰
 
 C# 1.0 的主要功能包含：
 
-- [類別](../programming-guide/classes-and-structs/classes.md)
+- [類](../programming-guide/classes-and-structs/classes.md)
 - [結構](../language-reference/builtin-types/struct.md)
 - [介面](../programming-guide/interfaces/index.md)
 - [事件](../events-overview.md)
 - [屬性](../properties.md)
 - [委派](../delegates-overview.md)
 - [運算式](../programming-guide/statements-expressions-operators/expressions.md)
-- [陳述式](../programming-guide/statements-expressions-operators/statements.md)
+- [語句](../programming-guide/statements-expressions-operators/statements.md)
 - [屬性](../programming-guide/concepts/attributes/index.md)
 
 ## <a name="c-version-12"></a>C# 1.2 版
 
-C#1.2 版隨附 Visual Studio .NET 2003。 本版內含對語言的小幅功能改善。 最值得注意的是，自本版開始，當 `foreach` 實作 <xref:System.IDisposable.Dispose%2A> 時，在 <xref:System.Collections.IEnumerator> 迴圈產生的程式碼會在 <xref:System.Collections.IEnumerator> 呼叫 <xref:System.IDisposable>。
+C# 版本 1.2 隨 Visual Studio .NET 2003 一起提供。 本版內含對語言的小幅功能改善。 最值得注意的是，自本版開始，當 <xref:System.Collections.IEnumerator> 實作 <xref:System.IDisposable> 時，在 `foreach` 迴圈產生的程式碼會在 <xref:System.Collections.IEnumerator> 呼叫 <xref:System.IDisposable.Dispose%2A>。
 
 ## <a name="c-version-20"></a>C# 2.0 版
 
 現在事情開始變得有趣。 讓我們看看 2005 年與 Visual Studio 2005 一起發行的 C# 2.0 中，一些主要功能：
 
 - [泛型](../programming-guide/generics/index.md)
-- [部分型別](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
+- [部分類型](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [匿名方法](../language-reference/operators/delegate-operator.md)
-- [可為 Null 的實值型別](../language-reference/builtin-types/nullable-value-types.md)
-- [Iterator](../programming-guide/concepts/iterators.md)
-- [共變數和反變數](../programming-guide/concepts/covariance-contravariance/index.md)
+- [可為 Null 的實值類型](../language-reference/builtin-types/nullable-value-types.md)
+- [迭代器](../programming-guide/concepts/iterators.md)
+- [共變數和逆方差](../programming-guide/concepts/covariance-contravariance/index.md)
 
 其他 C# 2.0 功能將功能新增至現有功能：
 
@@ -70,9 +70,9 @@ C#1.2 版隨附 Visual Studio .NET 2003。 本版內含對語言的小幅功能�
 
 雖然 C# 一開始可能是泛型的物件導向 (OO) 語言，但 C# 2.0 版很急促地改變了。 穩定之後，它們追蹤一些嚴重的開發人員痛苦點。 而且是徹底地追隨。
 
-使用泛型時，型別和方法可以操作任意型別，同時仍然保留型別安全。 例如，<xref:System.Collections.Generic.List%601> 可讓您具有 `List<string>` 或 `List<int>`，並且對那些字串或整數逐一執行型別安全的作業。 使用泛型最好不要建立衍生自 `ListInt` 的 `ArrayList`，或針對每個作業從 `Object` 轉型。
+使用泛型時，型別和方法可以操作任意型別，同時仍然保留型別安全。 例如，<xref:System.Collections.Generic.List%601> 可讓您具有 `List<string>` 或 `List<int>`，並且對那些字串或整數逐一執行型別安全的作業。 使用泛型最好不要建立衍生自 `ArrayList` 的 `ListInt`，或針對每個作業從 `Object` 轉型。
 
-C# 2.0 版帶來了迭代器。 簡單的說，迭代器讓您使用 `List` 迴圈檢查 `foreach` (或其他可列舉型別) 中的所有項目。 將迭代器當成語言的頭等部分能大幅增強語言的可讀性，並讓人們能理解程式碼。
+C# 2.0 版帶來了迭代器。 簡單的說，迭代器讓您使用 `foreach` 迴圈檢查 `List` (或其他可列舉型別) 中的所有項目。 將迭代器當成語言的頭等部分能大幅增強語言的可讀性，並讓人們能理解程式碼。
 
 但 C# 仍繼續追趕 Java。 Java 已經發行了包含泛型和迭代器的版本。 但是，很快就會變更，因為語言會持續朝不同方向發展。
 
@@ -83,12 +83,12 @@ C# 3.0 版在 2007 年晚期和 Visual Studio 2008 一起出現，不過語言�
 - [自動實作屬性](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [匿名型別](../programming-guide/classes-and-structs/anonymous-types.md)
 - [查詢運算式](../linq/query-expression-basics.md)
-- [Lambda 運算式](../programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [運算式樹狀架構](../expression-trees.md)
+- [蘭姆達運算式](../programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [運算式樹](../expression-trees.md)
 - [擴充方法](../programming-guide/classes-and-structs/extension-methods.md)
-- [隱含型別區域變數](../language-reference/keywords/var.md)
+- [隱式鍵入的區域變數](../language-reference/keywords/var.md)
 - [部分方法](../language-reference/keywords/partial-method.md)
-- [物件和集合初始設定式](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [物件和集合初始化器](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 回顧以往，許多功能似乎無法避免和分離。 它們全都因為策略的緣故而放在一起。 一般認為 C# 版本的殺手級功能是查詢運算式，也稱為 Language-Integrated Query (LINQ)。
 
@@ -100,14 +100,14 @@ C# 3.0 版在 2007 年晚期和 Visual Studio 2008 一起出現，不過語言�
 
 ## <a name="c-version-40"></a>C# 4.0 版
 
-C#版本4.0 （以 Visual Studio 2010 發行）可能會有一段很棘手的時間，也就是版本3.0 的突破性狀態。 3\.0 版開始，C# 讓語言穩固地擺脫 Java 的影子，並建立聲望。 語言很快地變優雅。
+C# 版本 4.0 與 Visual Studio 2010 一起發佈，將很難達到版本 3.0 的突破性狀態。 3.0 版開始，C# 讓語言穩固地擺脫 Java 的影子，並建立聲望。 語言很快地變優雅。
 
 下一版確實導入了一些有趣的新功能：
 
 - [動態繫結](../language-reference/builtin-types/reference-types.md)
 - [具名/選擇性引數](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [泛型 covariant 和 contravariant](../../standard/generics/covariance-and-contravariance.md)
-- [內嵌 Interop 型別](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
+- [嵌入式互操作類型](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
 內嵌 interop 型別能減輕部署痛苦。 泛型 covariance 和 contravariance 可讓您有更強大的功能來使用泛型，但它們有點學術，可能最受架構和程式庫作者欣賞。 具名和選擇性參數可讓您消除許多方法多載，並提供方便性。 但這些功能沒有一項能完全改變典範。
 
@@ -117,7 +117,7 @@ C#版本4.0 （以 Visual Studio 2010 發行）可能會有一段很棘手的時
 
 ## <a name="c-version-50"></a>C# 5.0 版
 
-C#版本5.0 （以 Visual Studio 2012 發行）是語言的焦點版本。 幾乎該版本的所有心血都投入了另一個奠基的語言概念：非同步程式設計的 `async` 和 `await` 模型。  以下是主要的功能清單：
+C# 版本 5.0 與 Visual Studio 2012 一起發佈，是該語言的重點版本。 幾乎該版本的所有心血都投入了另一個奠基的語言概念：非同步程式設計的 `async` 和 `await` 模型。  以下是主要的功能清單：
 
 - [非同步成員](../async.md)
 - [呼叫端資訊屬性](../programming-guide/concepts/caller-information.md)
@@ -132,14 +132,14 @@ C#版本5.0 （以 Visual Studio 2012 發行）是語言的焦點版本。 幾�
 
 ## <a name="c-version-60"></a>C# 6.0 版
 
-在 3.0 和 5.0 版本中，C# 在物件導向語言中新增了一些重大的新功能。 隨著版本6.0 的發行，Visual Studio 2015，它會從執行主要的最佳功能開始，改為發行許多較小的C#功能，讓程式設計更具生產力。 以下說明其中一部分：
+在 3.0 和 5.0 版本中，C# 在物件導向語言中新增了一些重大的新功能。 隨著版本 6.0 與 Visual Studio 2015 發佈， 它將放棄做一個主要殺手功能， 而是釋放許多較小的功能，使 C# 程式設計更有成效. 以下說明其中一部分：
 
 - [動態匯入](./csharp-6.md#using-static)
-- [例外狀況篩選條件](./csharp-6.md#exception-filters)
+- [異常篩選器](./csharp-6.md#exception-filters)
 - [Auto 屬性初始設定式](./csharp-6.md#auto-property-initializers)
 - [運算式主體的成員](./csharp-6.md#expression-bodied-function-members)
 - [Null 傳播程式](./csharp-6.md#null-conditional-operators)
-- [字串內插補點](./csharp-6.md#string-interpolation)
+- [字串插補](./csharp-6.md#string-interpolation)
 - [nameof 運算子](./csharp-6.md#the-nameof-expression)
 - [索引初始設定式](csharp-6.md#extension-add-methods-in-collection-initializers)
 
@@ -154,12 +154,12 @@ C#版本5.0 （以 Visual Studio 2012 發行）是語言的焦點版本。 幾�
 
 ## <a name="c-version-70"></a>C# 7.0 版
 
-最新的主要版本是C# 7.0 版，Visual Studio 2017 發行。 此版本擁有 C# 6.0 中的某些進化和酷炫的東西，但是沒有編譯器作為服務。 下列為部分新功能：
+最新版本是 C# 版本 7.0，隨 Visual Studio 2017 一起發佈。 此版本擁有 C# 6.0 中的某些進化和酷炫的東西，但是沒有編譯器作為服務。 下列為部分新功能：
 
 - [Out 變數](./csharp-7.md#out-variables)
 - [Tuple 和解構](./csharp-7.md#tuples)
 - [模式比對](./csharp-7.md#pattern-matching)
-- [區域函式](./csharp-7.md#local-functions)
+- [本地功能](./csharp-7.md#local-functions)
 - [展開的運算式主體成員](./csharp-7.md#more-expression-bodied-members)
 - [Ref 區域變數和傳回](./csharp-7.md#ref-locals-and-returns)
 
@@ -173,4 +173,4 @@ C#版本5.0 （以 Visual Studio 2012 發行）是語言的焦點版本。 幾�
 
 但 C# 的運用範圍更廣了。 .NET Core 現在以任何作業系統為目標，並堅定地關注雲端和可攜性。  除了提出新功能之外，這些新功能當然也會佔據語言設計人員的想法和時間。
 
-[_最初發佈于 NDepend blog_](https://blog.ndepend.com/c-versions-look-language-history/)的文章 _，Erik Dietrich 和派翠克主題 Smacchia。_
+_文章_ [_最初發佈於 NDepend 部落格_](https://blog.ndepend.com/c-versions-look-language-history/)_，感謝 Erik Dietrich 和 Patrick Smacchia。_

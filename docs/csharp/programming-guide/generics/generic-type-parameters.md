@@ -6,10 +6,10 @@ helpviewer_keywords:
 - type parameters [C#]
 ms.assetid: a03b0ab2-0606-4b41-b7bf-e64d5bb4d18f
 ms.openlocfilehash: 8412980d35989c445d2e0a44c0b9f35e6087bb8d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712178"
 ---
 # <a name="generic-type-parameters-c-programming-guide"></a>泛型型別參數 (C# 程式設計手冊)
@@ -38,7 +38,7 @@ ms.locfileid: "75712178"
 
 程式碼分析規則 [CA1715](/visualstudio/code-quality/ca1715) 可用於確保適當地命名型別參數。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic>
 - [C# 程式設計指南](../index.md)

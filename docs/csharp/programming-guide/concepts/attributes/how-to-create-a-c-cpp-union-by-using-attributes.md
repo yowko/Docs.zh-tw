@@ -1,17 +1,17 @@
 ---
-title: 如何使用屬性建立 C/C++聯集（C#）
+title: 如何使用屬性 （C#） 創建 C/C++聯合
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
 ms.openlocfilehash: ff8ce560444581a28b257820573224f89a274cd9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141582"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>如何使用屬性建立 C/C++聯集（C#）
+# <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>如何使用屬性 （C#） 創建 C/C++聯合
 
-藉由使用屬性，您可以自訂結構在記憶體中的配置方式。 例如，您可以使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 屬性，以 C/C++ 建立所謂的等位。
+通過使用屬性，可以自訂結構在記憶體中的佈局方式。 例如，您可以使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 屬性，以 C/C++ 建立所謂的等位。
 
 ## <a name="example"></a>範例
 
@@ -69,7 +69,7 @@ struct TestExplicit
 
 `i1` 和 `i2` 這兩個整數欄位和 `lg` 共用相同的記憶體位置。 使用平台叫用時，這種結構配置控制項很有用。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
@@ -78,4 +78,4 @@ struct TestExplicit
 - [反映 (C#)](../reflection.md)
 - [屬性 (C#)](index.md)
 - [建立自訂屬性 (C#)](creating-custom-attributes.md)
-- [使用反射存取屬性 (C#)](accessing-attributes-by-using-reflection.md)
+- [使用反映存取屬性 (C#)](accessing-attributes-by-using-reflection.md)

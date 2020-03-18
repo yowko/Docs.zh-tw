@@ -3,10 +3,10 @@ title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
 ms.openlocfilehash: ae4389aa1ce049edc71bff42c38f66fb328ba034
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75344786"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
@@ -26,7 +26,7 @@ ms.locfileid: "75344786"
   
  本節的目的是要透過一些精選的範例，示範 LINQ 方法， 而不是要提供詳細的說明。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [LINQ 和字串 (C#)](./linq-and-strings.md)  
  說明如何使用 LINQ 查詢及轉換字串與字串集合。 此外也包含示範這些原理的主題連結。  
   
@@ -36,10 +36,10 @@ ms.locfileid: "75344786"
  [LINQ 和檔案目錄 (C#)](./linq-and-file-directories.md)  
  說明如何使用 LINQ 與檔案系統互動。 此外也包含示範這些概念的主題連結。  
   
- [如何使用 LINQ 查詢 ArrayList （C#）](./how-to-query-an-arraylist-with-linq.md)  
+ [如何使用 LINQ （C#） 查詢 ArrayList](./how-to-query-an-arraylist-with-linq.md)  
  示範如何以 C# 查詢 ArrayList。  
   
- [如何新增 LINQ 查詢的自訂方法（C#）](./how-to-add-custom-methods-for-linq-queries.md)  
+ [如何為 LINQ 查詢 （C#） 添加自訂方法](./how-to-add-custom-methods-for-linq-queries.md)  
  說明如何透過將擴充方法加入至 <xref:System.Collections.Generic.IEnumerable%601> 介面，來延伸您可以用於 LINQ 查詢的方法組。  
   
  [Language-Integrated Query (LINQ) (C#)](./index.md)  

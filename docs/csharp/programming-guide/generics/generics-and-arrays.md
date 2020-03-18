@@ -6,10 +6,10 @@ helpviewer_keywords:
 - arrays [C#], generics
 ms.assetid: 7d956536-3851-41b5-94ad-3e7c0a5fe485
 ms.openlocfilehash: a8fad38fac07b9e8d51529d3ab7070328a333dbb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75703009"
 ---
 # <a name="generics-and-arrays-c-programming-guide"></a>泛型和陣列 (C# 程式設計手冊)
@@ -19,10 +19,10 @@ ms.locfileid: "75703009"
   
  [!code-csharp[csProgGuideGenerics#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#35)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Collections.Generic>
 - [C# 程式設計指南](../index.md)
 - [泛型](./index.md)
-- [陣列](../arrays/index.md)
+- [陣 列](../arrays/index.md)
 - [泛型](../../../standard/generics/index.md)

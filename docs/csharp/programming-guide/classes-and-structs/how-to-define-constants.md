@@ -6,13 +6,13 @@ helpviewer_keywords:
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
 ms.openlocfilehash: 15526655de8af6fed464376db1ac761468215210
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75337663"
 ---
-# <a name="how-to-define-constants-in-c"></a>如何在 C\# 中定義常數
+# <a name="how-to-define-constants-in-c"></a>如何以 C 定義常量\#
 常數是欄位，其值於編譯時期設定且絕對不會變更。 使用常數提供有意義的名稱，而不是特殊值的數值常值 (「神奇號碼」)。  
   
 > [!NOTE]
@@ -27,6 +27,6 @@ ms.locfileid: "75337663"
   
  使用類別名稱限定詞，可協助確保您和其他常數使用者了解它是無法修改的常數。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [類別和結構](./index.md)

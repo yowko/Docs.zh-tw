@@ -4,10 +4,10 @@ description: 了解如何選擇機器學習模型的 ML.NET 演算法
 ms.topic: overview
 ms.date: 06/05/2019
 ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75739989"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>如何選擇 ML.NET 演算法

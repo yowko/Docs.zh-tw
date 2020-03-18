@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
 ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705388"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>使用 Override 和 New 關鍵字進行版本控制 (C# 程式設計手冊)
@@ -61,7 +61,7 @@ C# 語言的設計，就是讓不同文件庫的[基底](../../language-referenc
   
  [!code-csharp[csProgGuideInheritance#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#31)]  
   
- 使用 `new` 關鍵字會通知編譯器，您的定義要隱藏基底類別中包含的定義。 這是預設行為。  
+ 使用 `new` 關鍵字會通知編譯器，您的定義要隱藏基底類別中包含的定義。 此為預設行為。  
   
 ## <a name="override-and-method-selection"></a>覆寫和方法選擇  
  在類別上命名方法時，如果有多個方法與呼叫相容，C# 編譯器會選取最好的方法呼叫，例如當有兩種方法同名時，並傳遞與參數相容的參數。 下列方法相容︰  
@@ -78,7 +78,7 @@ C# 語言的設計，就是讓不同文件庫的[基底](../../language-referenc
   
  如需更多的 `new` 和 `override` 範例，請參閱[了解使用 Override 和 New 關鍵字的時機](./knowing-when-to-use-override-and-new-keywords.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [類別和結構](./index.md)

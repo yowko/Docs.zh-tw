@@ -4,35 +4,35 @@ description: 取得 C# 語言版本 7.0 中新功能的概觀。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: a6ac5c00ceb2ce8e5e56e2a86a8cde937d5108e2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448630"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399690"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 的新功能
 
 C# 7.0 新增許多新功能至 C# 語言：
 
-- [`out` 變數](#out-variables)
+- [`out`變數](#out-variables)
   - 您可以宣告 `out` 內嵌值作為使用它們之方法的引數。
-- [Tuple](#tuples)
+- [Tuples](#tuples)
   - 您可以建立包含多個公用欄位的輕量、未具名的類型。 編譯器和 IDE 工具了解這些類型的語意。
 - [捨棄](#discards)
   - 捨棄是當您不在意指派的值時，於指派內使用的僅限寫入且暫時之變數。 解構 Tuple 及使用者定義型別，以及使用 `out` 參數呼叫方法時，捨棄最為實用。
-- [模式比對](#pattern-matching)
+- [模式匹配](#pattern-matching)
   - 您可以建立以任意類型和這些類型成員的值為基礎的分支邏輯。
-- [`ref` 區域變數和傳回](#ref-locals-and-returns)
+- [`ref`區域變數和返回](#ref-locals-and-returns)
   - 方法區域變數和傳回值可以是其他儲存體的參考。
-- [區域函式](#local-functions)
+- [本地功能](#local-functions)
   - 您可以將函式巢狀放置在其他函式內，限制其範圍和可視性。
 - [更多運算式主體成員](#more-expression-bodied-members)
   - 可以使用運算式來撰寫的成員清單已經增長。
-- [`throw`運算式](#throw-expressions)
+- [`throw`表達 式](#throw-expressions)
   - 您可以在程式碼建構中擲回例外狀況 (因為先前 `throw` 是陳述式，所以您無法這麼做)。
 - [通用的非同步傳回型別](#generalized-async-return-types)
   - 使用 `async` 修飾詞宣告的方法除了 `Task` 和 `Task<T>` 之外，也能傳回其他類型。
-- [數值常值語法增強功能](#numeric-literal-syntax-improvements)
+- [數值常值的語法增強功能](#numeric-literal-syntax-improvements)
   - 新的語彙基元改善了數值常數的可讀性。
 
 此文章的其餘部分將概述各個功能。 您將了解每項功能背後的原因。 您將了解語法。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
@@ -109,12 +109,12 @@ C# 為類別和結構提供豐富的語法，可用來解釋您的設計目的�
 
 ## <a name="pattern-matching"></a>模式比對
 
-「模式比對」是一項功能，可讓您對物件類型以外的屬性實作方法分派。 您可能已經熟悉根據物件類型的方法分派。 在物件導向程式設計中，虛擬和覆寫方法可提供語言語法，以根據物件的類型實作方法分派。 基底和衍生類別能提供不同的實作。
+「模式比對」** 是一項功能，可讓您對物件類型以外的屬性實作方法分派。 您可能已經熟悉根據物件類型的方法分派。 在物件導向程式設計中，虛擬和覆寫方法可提供語言語法，以根據物件的類型實作方法分派。 基底和衍生類別能提供不同的實作。
 模式比對運算式會擴充這個概念，讓您可以輕鬆地為不是透過繼承階層架構而關聯的類型和資料元素實作類似的分派模式。
 
 模式比對支援 `is` 運算式和 `switch` 運算式。 每個都讓您能檢查物件和其屬性，以判斷該物件是否符合搜尋的模式。 您使用 `when` 關鍵字來指定其他規則給該模式。
 
-`is` 模式運算式會擴充熟悉的 [`is` 運算子](../language-reference/keywords/is.md#pattern-matching-with-is)，來查詢其類型的相關物件，並使用一個指令指派結果。 下列程式碼會檢查變數是否為 `int`，如果是，則將其加入至目前的總和：
+模式`is`運算式擴展熟悉的[`is`運算子](../language-reference/keywords/is.md#pattern-matching-with-is)以查詢物件的類型，並在一個指令中分配結果。 下列程式碼會檢查變數是否為 `int`，如果是，則將其加入至目前的總和：
 
 ```csharp
 if (input is int count)
@@ -126,7 +126,7 @@ if (input is int count)
 switch 比對運算式的語法很熟悉，是以已屬於 C# 語言一部分的 `switch` 陳述式為基礎。 更新的 switch 陳述式有數個新的建構：
 
 - `switch` 運算式的控管型別不再限於整數型別、`Enum` 型別、`string`，或對應至這些其中一種類型的可為 Null 的型別。 可以使用任何型別。
-- 您可以測試每個 `switch` 標籤中的 `case` 運算式型別。 如同使用 `is` 運算式，您可以將新的變數指派給該型別。
+- 您可以測試每個 `case` 標籤中的 `switch` 運算式型別。 如同使用 `is` 運算式，您可以將新的變數指派給該型別。
 - 您可以加入 `when` 子句，以進一步測試該變數的條件。
 - `case` 標籤的順序現在很重要。 系統會執行要比對的第一個分支；其他則會略過。
 
@@ -200,7 +200,7 @@ C# 語言具備數個規則，可防止您濫用 `ref` 區域變數並傳回︰
 
 ## <a name="local-functions"></a>區域函式
 
-類別的許多設計都包括從唯一一個位置呼叫的方法。 這些額外的私用方法會使每一種方法維持小而聚焦。 「區域函式」可讓您在另一個方法的內容中宣告方法。 區域函式可讓類別讀者輕鬆查看區域方法只會從其宣告的內容中呼叫。
+類別的許多設計都包括從唯一一個位置呼叫的方法。 這些額外的私用方法會使每一種方法維持小而聚焦。 「區域函式」** 可讓您在另一個方法的內容中宣告方法。 區域函式可讓類別讀者輕鬆查看區域方法只會從其宣告的內容中呼叫。
 
 有兩個常見的區域函式使用案例︰公用迭代器方法和公用非同步方法。 這兩種方法都會產生程式碼，比程式設計人員想像更晚才報告錯誤。 在迭代器方法中，任何例外狀況只會在呼叫列舉傳回序列的程式碼時觀察到。 在非同步方法中，任何例外狀況只會在傳回的 `Task` 等候時觀察到。 下列範例示範使用區域函式分隔參數驗證和迭代器實作：
 
@@ -211,11 +211,11 @@ C# 語言具備數個規則，可防止您濫用 `ref` 區域變數並傳回︰
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> 區域函式支援的部分設計也可以使用「Lambda 運算式」完成。 如需詳細資訊，請參閱區域函式[與 lambda 運算式](../local-functions-vs-lambdas.md)。
+> 區域函式支援的部分設計也可以使用「Lambda 運算式」** 完成。 有關詳細資訊，請參閱[本地函數與 lambda 運算式](../local-functions-vs-lambdas.md)。
 
 ## <a name="more-expression-bodied-members"></a>更多運算式主體成員
 
-C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodied-function-members)和唯讀屬性。 C# 7.0 擴充了可以實作為運算式的允許成員。 在 C# 7.0 中，您可以實作「建構函式」、「完成項」，以及「屬性」`get``set`和「索引子」上的 *和* 存取子。 下列程式碼將示範各項的範例：
+C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodied-function-members)和唯讀屬性。 C# 7.0 擴充了可以實作為運算式的允許成員。 在 C# 7.0 中，您可以實作「建構函式」**、「完成項」**，以及「屬性」** 和「索引子」** 上的 `get` 和 `set` 存取子。 下列程式碼將示範各項的範例：
 
 [!code-csharp[ExpressionBodiedMembers](~/samples/snippets/csharp/new-in-7/expressionmembers.cs#ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -228,7 +228,7 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 
 ## <a name="throw-expressions"></a>throw 運算式
 
-在 C# 中，`throw` 一直都是陳述式。 因為 `throw` 是陳述式，而不是運算式，所以有您無法在其中使用它的 C# 建構。 這些包含條件運算式、Null 聯合運算式和一些 Lambda 運算式。 新增運算式主體成員會新增 `throw` 運算式適用的更多位置。 為了讓您可以撰寫任何這些建構，C# 7.0 引進了 [*throw 運算式*](../language-reference/keywords/throw.md#the-throw-expression)。
+在 C# 中，`throw` 一直都是陳述式。 因為 `throw` 是陳述式，而不是運算式，所以有您無法在其中使用它的 C# 建構。 這些包含條件運算式、Null 聯合運算式和一些 Lambda 運算式。 新增運算式主體成員會新增 `throw` 運算式適用的更多位置。 因此，您可以編寫這些構造中的任何一個，C# 7.0 引入了[*引發運算式*](../language-reference/keywords/throw.md#the-throw-expression)。
 
 此新增可讓您更輕鬆地撰寫更多以運算式為基礎的程式碼。 您不需要額外的陳述式就可以進行錯誤檢查。
 
@@ -236,18 +236,18 @@ C# 6 引進了成員函式的[運算式主體成員](csharp-6.md#expression-bodi
 
 從非同步方法傳回 `Task` 物件可能會造成在特定路徑的效能瓶頸。 `Task` 是參考型別，因此使用它表示要配置物件。 當使用 `async` 修飾詞宣告的方法傳回快取的結果時，或是以同步方式完成，額外配置可能會在效能關鍵的程式碼區段中變成一項重要的時間成本。 如果這些配置發生在緊密迴圈中，它可能會變得成本很高。
 
-新的語言功能表示 async 方法傳回型別不限於 `Task`、`Task<T>` 和 `void`。 傳回的型別仍然必須滿足非同步模式，也就是表示 `GetAwaiter` 方法必須可存取。 做為一個具體範例，`ValueTask` 類型已新增至 .NET，以使用這項新的語言功能：
+新的語言功能表示 async 方法傳回型別不限於 `Task`、`Task<T>` 和 `void`。 傳回的型別仍然必須滿足非同步模式，也就是表示 `GetAwaiter` 方法必須可存取。 作為一個具體示例，`ValueTask`該類型已添加到 .NET 以使用此新語言功能：
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 
 > [!NOTE]
-> 您必須新增 NuGet 套件 [`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/)，才可使用 <xref:System.Threading.Tasks.ValueTask%601> 類型。
+> 您需要添加 NuGet 包[`System.Threading.Tasks.Extensions`](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/)才能使用該<xref:System.Threading.Tasks.ValueTask%601>類型。
 
 這項增強功能最能幫助程式庫作者避免在效能關鍵的程式碼中配置 `Task`。
 
 ## <a name="numeric-literal-syntax-improvements"></a>數值常值的語法增強功能
 
-錯譯數值常數，可能會使得在第一次閱讀它時，更加難以了解程式碼。 位元遮罩或其他符號值容易遭到誤解。 C# 7.0 包含兩項新功能，可以用預期用途最容易閱讀的方式來撰寫數字︰「二進位常值」和「數字分隔符號」。
+錯譯數值常數，可能會使得在第一次閱讀它時，更加難以了解程式碼。 位元遮罩或其他符號值容易遭到誤解。 C# 7.0 包含兩項新功能，可以用預期用途最容易閱讀的方式來撰寫數字︰「二進位常值」** 和「數字分隔符號」**。
 
 當您在建立位元遮罩時，或是每當數字的二進位表示法構成最容易閱讀的程式碼時，請以二進位撰寫該數字︰
 

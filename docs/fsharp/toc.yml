@@ -57,13 +57,13 @@
       items:
         - name: 算術運算子
           href: language-reference/symbol-and-operator-reference/arithmetic-operators.md
-        - name: Boolean 運算子
+        - name: 布林運算子
           href: language-reference/symbol-and-operator-reference/boolean-operators.md
         - name: 位元運算子
           href: language-reference/symbol-and-operator-reference/bitwise-operators.md
         - name: 可為 Null 的運算子
           href: language-reference/symbol-and-operator-reference/nullable-operators.md
-    - name: 函式
+    - name: Functions
       href: language-reference/functions/index.md
       items:
         - name: let 繫結
@@ -97,7 +97,7 @@
       href: language-reference/unit-type.md
     - name: 字串
       href: language-reference/strings.md
-    - name: Tuple
+    - name: Tuples
       href: language-reference/tuples.md
     - name: 'F# 集合類型'
       href: language-reference/fsharp-collection-types.md
@@ -109,9 +109,9 @@
       href: language-reference/sequences.md
     - name: 配量
       href: language-reference/slices.md
-    - name: 選項
+    - name: 選項。
       href: language-reference/options.md
-    - name: 值的選項
+    - name: 值選項
       href: language-reference/value-options.md
     - name: 結果
       href: language-reference/results.md
@@ -124,7 +124,7 @@
           href: language-reference/generics/constraints.md
         - name: 以統計方式解析的型別參數
           href: language-reference/generics/statically-resolved-type-parameters.md
-    - name: 資料錄
+    - name: 記錄
       href: language-reference/records.md
     - name: 匿名記錄
       href: language-reference/anonymous-records.md
@@ -220,7 +220,7 @@
       href: language-reference/namespaces.md
     - name: 模組
       href: language-reference/modules.md
-    - name: 匯入宣告：Open 關鍵字
+    - name: 匯入宣告：open 關鍵字
       href: language-reference/import-declarations-the-open-keyword.md
     - name: 簽名檔
       href: language-reference/signature-files.md

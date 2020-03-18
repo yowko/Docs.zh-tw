@@ -7,10 +7,10 @@ f1_keywords:
 helpviewer_keywords:
 - fixed keyword [C#]
 ms.openlocfilehash: e527e8a54a739391d18b180532372b5b70f34d37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713526"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 陳述式 (C# 參考)
@@ -62,17 +62,17 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-您可以配置堆疊上的記憶體，此處不受記憶體回收限制，因此不需要釘選。 若要那麼做，請使用 [`stackalloc` 運算子](../operators/stackalloc.md)。
+您可以配置堆疊上的記憶體，此處不受記憶體回收限制，因此不需要釘選。 為此，請使用[`stackalloc`運算子](../operators/stackalloc.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [fixed 陳述式](~/_csharplang/spec/unsafe-code.md#the-fixed-statement)一節。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
-- [Unsafe.DangerousAPI](unsafe.md)
-- [指標型別](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [固定大小的緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+- [安全](unsafe.md)
+- [指標類型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [固定大小緩衝區](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

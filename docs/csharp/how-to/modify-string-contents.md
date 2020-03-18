@@ -1,16 +1,16 @@
 ---
-title: 如何修改字串內容- C#指南
+title: 如何修改字串內容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
 ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543257"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>如何在 C\# 中修改字串內容
+# <a name="how-to-modify-string-contents-in-c"></a>如何修改 C 中的字串內容\#
 
 本文示範多種技術，會藉由修改現有的 `string`來產生 `string`。 所有示範的技術均會傳回修改結果，作為新的 `string` 物件。 為明確示範此做法，所有的範例都會將結果儲存到新的變數。 接著，您可在執行各個範例時，對原本的 `string` 與修改後產生的 `string` 進行檢查。
 
@@ -24,7 +24,7 @@ ms.locfileid: "77543257"
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#1)]
 
-上述程式碼示範了字串的「固定」屬性。 您可以看到在上述程式碼中，原本的字串 `source` 並未受到修改。 <xref:System.String.Replace%2A?displayProperty=nameWithType> 方法會建立包含修改項目的新 `string`。
+上述程式碼示範了字串的「固定」** 屬性。 您可以看到在上述程式碼中，原本的字串 `source` 並未受到修改。 <xref:System.String.Replace%2A?displayProperty=nameWithType> 方法會建立包含修改項目的新 `string`。
 
 <xref:System.String.Replace%2A> 方法可取代字串或單一字元。 在這兩種情況下，所找到之文字的每個項目均會受到取代。  下列範例將所有 ' ' 字元取代為 '\_'：
 
@@ -48,7 +48,7 @@ ms.locfileid: "77543257"
 
 您可使用[規則運算式](../../standard/base-types/regular-expressions.md)以新文字取代文字相符模式，可由模式定義。 下列範例使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別在來源字串中尋找模式，並以適當的大小寫加以取代。 <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> 方法會以提供取代項目邏輯的函式作為其引數之一。 在此範例中，該函式 `LocalReplaceMatchCase` 是在範例方法中宣告的**區域函式**。 `LocalReplaceMatchCase` 會使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別以適當的大小寫來建置取代字串。
 
-規則運算式在搜尋及取代遵循模式的文字時相當實用，但對於已知文字則否。 如需詳細資訊，請參閱[如何搜尋字串](search-strings.md)。 搜尋模式 "the\s" 會搜尋後面接著空白字元的字組 "the"。 模式的該部分會確認其不會對應來源字串中的 "there"。 如需規則運算式語言元素的詳細資訊，請參閱[規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)。
+規則運算式在搜尋及取代遵循模式的文字時相當實用，但對於已知文字則否。 [請參閱如何搜索字串](search-strings.md)以瞭解更多詳細資訊。 搜尋模式 "the\s" 會搜尋後面接著空白字元的字組 "the"。 模式的該部分會確認其不會對應來源字串中的 "there"。 如需規則運算式語言元素的詳細資訊，請參閱[規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)。
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 
@@ -62,17 +62,17 @@ ms.locfileid: "77543257"
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="programmatically-build-up-string-content"></a>以程式設計方式建立字串內容
+## <a name="programmatically-build-up-string-content"></a>以程式設計方式構建字串內容
 
-由於字串是不可變的，因此先前的範例全都會建立暫存字串或字元陣列。 在高效能案例中，可能需要避免這些堆積配置。 .NET Core 提供 <xref:System.String.Create%2A?displayProperty=nameWithType> 方法，可讓您透過回呼以程式設計方式填滿字串的字元內容，同時避免中繼暫存字串配置。
+由於字串是不可變的，前面的示例都創建臨時字串或字元陣列。 在高性能方案中，最好避免這些堆分配。 .NET Core<xref:System.String.Create%2A?displayProperty=nameWithType>提供了一種方法，允許您通過回檔以程式設計方式填補字元串的字元內容，同時避免中間臨時字串分配。
 
 [!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
-您可以使用 unsafe 程式碼修改固定區塊中的字串，但**強烈**建議您在建立字串之後修改字串內容。 這麼做會以無法預期的方式來中斷專案。 例如，如果有人實習一個具有與您相同內容的字串，則會取得您的複本，而且不會預期您要修改其字串。
+您可以使用不安全的代碼修改固定塊中的字串，但**強烈建議**在創建字串後修改字串內容。 這樣做會以不可預知的方式破壞事情。 例如，如果有人實習生的內容與您的相同，他們會獲取您的副本，並且根本不希望您修改其字串。
 
-您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
+您可以通過查看[GitHub 存儲庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的代碼來嘗試這些示例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
 ## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 規則運算式](../../standard/base-types/regular-expressions.md)
-- [規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [正則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)

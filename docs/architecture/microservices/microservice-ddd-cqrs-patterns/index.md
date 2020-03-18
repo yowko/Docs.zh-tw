@@ -3,19 +3,19 @@ title: 利用 DDD 和 CQRS 模式解決微服務中的商務複雜度
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解如何利用 DDD 與 CQRS 模式解決複雜的商業案例
 ms.date: 10/08/2018
 ms.openlocfilehash: 88b105b68307c8587f877bb9ddf370e143d8539b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73739844"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>使用 DDD 與 CQRS 模式解決微服務中的商務複雜度
 
-設計每個微服務的領域模型，或反映對業務領域了解程度的繫結內容。
+設計每個微服務的領域模型，或反映對業務領域了解程度的繫結內容。**
 
 本節著重於當您需要解決複雜的子系統時所實作的更進階微服務，或是衍生自領域專家對不斷改變之商務規則知識的微服務。 此節中所使用的架構模式是以領域驅動設計 (Domain-Driven Design，DDD) 以及命令和查詢職責分離 (Command and Query Responsibility Segregation，CQRS) 方法為基礎，如圖 7-1 所示。
 
-:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="比較外部和內部架構模式的圖表。":::
+:::image type="complex" source="./media/index/internal-versus-external-architecture.png" alt-text="比較外部和內部體系結構模式的圖表。":::
 外部架構的差異：微服務模式、API 閘道、彈性通訊、pub/sub 等：內部架構：資料 動/CRUD、DDD 模式、相依性插入、多程式庫等。
 :::image-end:::
 
@@ -31,46 +31,46 @@ DDD 是一個龐大的主題，內含一組豐富的學習資源。 您可以從
 
 ##### <a name="ddd-domain-driven-design"></a>DDD (領域驅動設計)
 
-- **Eric Evans。網域語言** \
+- **埃裡克·埃文斯域語言** \
   <https://domainlanguage.com/>
 
-- **聖馬丁 Fowler。領域驅動設計** \
+- **馬丁·福勒域驅動設計** \
   <https://martinfowler.com/tags/domain%20driven%20design.html>
 
-- **Jimmy Bogard。加強您的領域：入門** \
+- **吉米·博加德強化您的領域：入門** \
   <https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/>
 
 ##### <a name="ddd-books"></a>DDD 書籍
 
-- **Eric Evans。領域驅動設計：處理軟體 \ 核心的複雜性**
+- **埃裡克·埃文斯域驅動設計：解決軟體核心的複雜性** \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
-- **Eric Evans。領域驅動設計參考：定義和模式摘要** \
+- **埃裡克·埃文斯域驅動設計參考：定義和模式摘要** \
   <https://www.amazon.com/Domain-Driven-Design-Reference-Definitions-2014-09-22/dp/B01N8YB4ZO/>
 
-- **Vaughn Vernon。執行領域驅動設計** \
+- **沃恩·弗農實現域驅動設計** \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
-- **Vaughn Vernon。領域驅動設計**已 \
+- **沃恩·弗農域驅動設計蒸餾** \
   <https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/>
 
-- **Jimmy Nilsson。套用領域驅動設計和模式** \
+- **吉米·尼爾森應用域驅動設計和模式** \
   <https://www.amazon.com/Applying-Domain-Driven-Design-Patterns-Examples/dp/0321268202/>
 
-- **Cesar de La Torre。使用 .NET \ 的 N 層式網域導向架構指南**
+- **塞薩爾·德拉托雷N 層面向域的體系結構指南，帶 .NET** \
   <https://www.amazon.com/N-Layered-Domain-Oriented-Architecture-Guide-NET/dp/8493903612/>
 
-- **Abel Avram 和 Floyd Marinescu。領域驅動設計快速** \
+- **阿貝爾·阿夫拉姆和佛洛德·海軍陸戰隊快速進行域驅動設計** \
   <https://www.amazon.com/Domain-Driven-Design-Quickly-Abel-Avram/dp/1411609255/>
 
-- **Scott Millett、Nick Tune - 領域驅動設計的模式、準則與實務** \
+- **斯科特·米利特， 尼克·特恩 - 領域驅動設計的模式、原則和實踐** \
   <http://www.wrox.com/WileyCDA/WroxTitle/Patterns-Principles-and-Practices-of-Domain-Driven-Design.productCd-1118714709.html>
 
 ##### <a name="ddd-training"></a>DDD 訓練課程
 
-- **Julie Lerman 和 Steve Smith。領域驅動設計基本**概念 \
+- **朱莉·萊曼和史蒂夫·史密斯域驅動設計基礎知識** \
   <https://bit.ly/PS-DDD>
 
 >[!div class="step-by-step"]
->[上一頁](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
->[下一頁](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[上一個](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
+>[下一個](apply-simplified-microservice-cqrs-ddd-patterns.md)

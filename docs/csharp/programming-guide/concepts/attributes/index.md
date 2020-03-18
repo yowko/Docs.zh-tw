@@ -2,19 +2,19 @@
 title: 屬性 (C#)
 ms.date: 04/26/2018
 ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141560"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399746"
 ---
 # <a name="attributes-c"></a>屬性 (C#)
 
-屬性提供一種功能強大的方法，可將中繼資料或宣告資訊關聯至程式碼 (組建、型別、方法、屬性等)。 將屬性關聯至程式實體之後，就能在執行階段使用稱為「反映」的技術來查詢該屬性。 如需詳細資訊，請參閱[反映 (C#)](../reflection.md)。
+屬性提供一種功能強大的方法，可將中繼資料或宣告資訊關聯至程式碼 (組建、型別、方法、屬性等)。 將屬性關聯至程式實體之後，就能在執行階段使用稱為「反映」** 的技術來查詢該屬性。 如需詳細資訊，請參閱[反映 (C#)](../reflection.md)。
 
 屬性 (Attribute) 包含下列屬性 (Property)：
 
-- 屬性會將中繼資料新增至您的程式。 「中繼資料」是在程式中定義的型別相關資訊。 所有的 .NET 組件都包含一組指定的中繼資料，來描述組件中所定義的型別和型別成員。 您可以新增自訂屬性來指定所需的任何其他資訊。 如需詳細資訊，請參閱[建立自訂屬性 (C#)](creating-custom-attributes.md)。
+- 屬性會將中繼資料新增至您的程式。 「中繼資料」** 是在程式中定義的型別相關資訊。 所有的 .NET 組件都包含一組指定的中繼資料，來描述組件中所定義的型別和型別成員。 您可以新增自訂屬性來指定所需的任何其他資訊。 如需詳細資訊，請參閱[建立自訂屬性 (C#)](creating-custom-attributes.md)。
 - 您可以將一或多個屬性 (Attribute) 套用至整個組件、模組或較小的程式元素，例如類別和屬性 (Property)。
 - 屬性 (Attribute) 可以利用與方法與屬性 (Property) 相同的方式來接受引數。
 - 您的程式可以使用反映，來檢查自己的中繼資料或其他程式的中繼資料。 如需詳細資訊，請參閱[使用反映存取屬性 (C#)](accessing-attributes-by-using-reflection.md)。
@@ -57,7 +57,7 @@ ms.locfileid: "74141560"
 
 ### <a name="attribute-targets"></a>屬性目標
 
-屬性的「目標」是要套用屬性的實體。 例如，屬性可套用至類別、特定的方法或整個組件。 根據預設，屬性會套用至其後的元素。 但是，舉例來說，您也可以明確地識別是否要將屬性套用到方法、它的參數或它的傳回值。
+屬性的「目標」** 是要套用屬性的實體。 例如，屬性可套用至類別、特定的方法或整個組件。 預設情況下，屬性應用於其後面的元素。 但是，舉例來說，您也可以明確地識別是否要將屬性套用到方法、它的參數或它的傳回值。
 
 若要明確地識別屬性目標，請使用下列語法：
 
@@ -72,7 +72,7 @@ ms.locfileid: "74141560"
 |`assembly`|整個組件|
 |`module`|目前的組件模組|
 |`field`|類別或結構中的欄位|
-|`event`|Event - 事件|
+|`event`|事件|
 |`method`|方法或 `get` 和 `set` 屬性存取子|
 |`param`|方法參數或 `set` 屬性存取子參數|
 |`property`|屬性|
@@ -101,8 +101,8 @@ using System.Reflection;
 
 下列清單包含一些程式碼中常見的屬性用法：
 
-- 在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱<xref:System.Web.Services.WebMethodAttribute>。
-- 描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱<xref:System.Runtime.InteropServices.MarshalAsAttribute>。
+- 在 Web 服務中使用 `WebMethod` 屬性標示方法，以表示此方法應該可以透過 SOAP 通訊協定來呼叫。 如需詳細資訊，請參閱 <xref:System.Web.Services.WebMethodAttribute>。
+- 描述在與原生程式碼交互作用時，如何封送處理方法參數。 如需詳細資訊，請參閱 <xref:System.Runtime.InteropServices.MarshalAsAttribute>。
 - 描述適用於類別、方法和介面的 COM 屬性。
 - 使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 類別呼叫 Unmanaged 程式碼。
 - 針對標題、版本、描述或商標等方面來描述您的組件。
@@ -115,17 +115,17 @@ using System.Reflection;
 
 ## <a name="related-sections"></a>相關章節
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱
 
 - [建立自訂屬性 (C#)](creating-custom-attributes.md)  
-- [使用反射存取屬性 (C#)](accessing-attributes-by-using-reflection.md)  
-- [如何使用屬性建立 C/C++聯集（C#）](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [使用反映存取屬性 (C#)](accessing-attributes-by-using-reflection.md)  
+- [如何使用屬性 （C#） 創建 C/C++聯合](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [常見屬性 (C#)](common-attributes.md)  
 - [呼叫端資訊 (C#)](../caller-information.md)  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../../index.md)
 - [反映 (C#)](../reflection.md)
 - [屬性](../../../../standard/attributes/index.md)
-- [在 C# 中使用屬性](../../../tutorials/attributes.md)
+- [使用 C 中的屬性#](../../../tutorials/attributes.md)

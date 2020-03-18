@@ -1,15 +1,15 @@
 ---
-title: 如何尋找具有特定屬性（C#）的元素
+title: 如何查找具有特定屬性 （C#） 的元素
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
 ms.openlocfilehash: 106885b8658c493caab3101e6b4ce921589076eb
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141157"
 ---
-# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>如何尋找具有特定屬性（C#）的元素
+# <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>如何查找具有特定屬性 （C#） 的元素
 這個主題顯示如何尋找其屬性具有特定值的項目。  
   
 ## <a name="example"></a>範例  
@@ -69,9 +69,9 @@ foreach (XElement el in address)
 </aw:Address>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
-- [投影作業 (C#)](./projection-operations.md)
+- [投射作業 (C#)](./projection-operations.md)

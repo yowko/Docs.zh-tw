@@ -3,10 +3,10 @@ title: -target:winmdobj (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.assetid: 1819a045-659d-498a-9457-c466e902986f
 ms.openlocfilehash: 85ae9a3f5e9b038c0c56935ec5af2b9b09d19f20
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74204484"
 ---
 # <a name="-targetwinmdobj-c-compiler-options"></a>-target:winmdobj (C# 編譯器選項)
@@ -29,13 +29,13 @@ ms.locfileid: "74204484"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-ide-for-a-windows-store-app"></a>若要在 Visual Studio IDE 中為 Windows 市集應用程式設定這個編譯器選項  
   
-1. 在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。  
+1. 在方案總管**** 中，開啟專案的捷徑功能表，然後選擇 [屬性]****。  
   
-2. 選擇 [應用程式] 索引標籤。  
+2. 選擇 [應用程式]**** 索引標籤。  
   
-3. 在 [輸出類型] 清單中，選擇 [WinMD 檔案]。  
+3. 在 [輸出類型]**** 清單中，選擇 [WinMD 檔案]****。  
   
-     [ **WinMD**檔案] 選項僅適用于 Windows 8.X 存放區應用程式範本。  
+     **WinMD 檔**選項僅適用于 Windows 8.x 應用商店應用範本。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   
@@ -48,5 +48,5 @@ csc -target:winmdobj filename.cs
   
 ## <a name="see-also"></a>另請參閱
 
-- [-target (C# 編譯器選項)](./target-compiler-option.md)
+- [-目標（C# 編譯器選項）](./target-compiler-option.md)
 - [C# 編譯器選項](./index.md)

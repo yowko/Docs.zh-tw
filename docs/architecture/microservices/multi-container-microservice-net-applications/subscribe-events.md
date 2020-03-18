@@ -3,10 +3,10 @@ title: 訂閱事件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解發佈及訂閱整合事件的詳細資料。
 ms.date: 01/30/2020
 ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501803"
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
@@ -32,7 +32,7 @@ eventBus.Subscribe<OrderStartedIntegrationEvent,
 
 ## <a name="publishing-events-through-the-event-bus"></a>透過事件匯流排發行事件
 
-最後，訊息傳送者 (來源微服務) 會使用類似下列範例的程式碼發行整合事件 （這是一個簡化的範例，不會將不可部分完成的部分納入考慮）。每當事件必須傳播到多個微服務（通常是在從原始微服務認可資料或交易之後）時，您就會執行類似的程式碼。
+最後，訊息傳送者 (來源微服務) 會使用類似下列範例的程式碼發行整合事件 （這是一個不考慮原子性的簡化示例。每當事件必須跨多個微服務傳播時，您就會實現類似的代碼，通常是在從源微服務提交資料或事務之後。
 
 首先，事件匯流排實作物件 (採用 RabbitMQ 或採用服務匯流排) 會插入控制器建構函式，如下列程式碼所示：
 
@@ -87,15 +87,15 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 在本例中，由於來源微服務是簡單的 CRUD 微服務，因此該程式碼會直接放在 Web API 控制器中。
 
-在更進階的微服務中，例如使用 CQRS 方法時，它可以在 `CommandHandler` 方法的 `Handle()` 類別中實作。
+在更進階的微服務中，例如使用 CQRS 方法時，它可以在 `Handle()` 方法的 `CommandHandler` 類別中實作。
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>設計發行至事件匯流排時的不可部分完成性和復原
 
 當您透過分散式傳訊系統 (例如您的事件匯流排) 發佈整合事件時，會發生以不可部分完成方式更新原始資料庫及發佈事件的問題 (也就是兩個作業皆完成或皆未完成)。 例如，在稍早所示的簡化範例中，程式碼會在產品價格變更時將資料認可至資料庫，然後發行 ProductPriceChangedIntegrationEvent 訊息。 乍看之下，以不可分割方式執行這兩個作業可能很重要。 不過，如果您使用涉及資料庫和訊息代理程式的分散式交易，如同您在 [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 等較舊系統中的做法，則不建議這樣做，原因如 [CAP 定理](https://www.quora.com/What-Is-CAP-Theorem-1)所述。
 
-基本上，您可以使用微服務來建置可擴充且高度可用的系統。 簡單來說，CAP 定理指出您無法建置持續可用、極為一致「且」容許任何分割的 (分散式) 資料庫 (或擁有自己模型的微服務)。 您必須從這三個屬性中選擇兩個。
+基本上，您可以使用微服務來建置可擴充且高度可用的系統。 簡單來說，CAP 定理指出您無法建置持續可用、極為一致「且」** 容許任何分割的 (分散式) 資料庫 (或擁有自己模型的微服務)。 您必須從這三個屬性中選擇兩個。
 
-在微服務架構中，您應該選擇可用性和容錯，而且您應該不要強調強式一致性。 因此，在大多數現代化微服務架構應用程式中，您通常不想要在傳訊中使用分散式交易 (就像是使用 [MSMQ](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85)) 實作以 Windows Distributed Transaction Coordinator (DTC) 為基礎的[分散式交易](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx)時一樣)。
+在微服務架構中，您應該選擇可用性和容錯，而且您應該不要強調強式一致性。 因此，在大多數現代化微服務架構應用程式中，您通常不想要在傳訊中使用分散式交易 (就像是使用 [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 實作以 Windows Distributed Transaction Coordinator (DTC) 為基礎的[分散式交易](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))時一樣)。
 
 讓我們回到一開始的問題及其範例。 如果服務損毀發生在更新資料庫之後 (在本例中會是具有 \_context.SaveChangesAsync() 的程式碼行之後)，但在發行整合事件之前，整體系統可能會變成不一致。 視您正在處理的特定商務作業而定，這可能具商務關鍵性。
 
@@ -107,7 +107,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 - 使用[寄件匣模式](https://www.kamilgrzybek.com/design/the-outbox-pattern/)。 這是交易式資料表，可儲存整合事件 (以延伸本機交易)。
 
-在此案例中，使用完整的事件溯源 (ES) 模式即使不是「最佳」方法，也是最佳方法之一。 不過，在許多應用程式案例中，您可能無法實作完整的 ES 系統。 ES 表示只會將領域事件儲存在您的交易式資料庫中，而不會儲存目前的狀態資料。 只儲存領域事件可能有許多好處，例如提供系統歷程記錄，以及能夠判斷過去任何時間的系統狀態。 不過，實作完整的 ES 系統需要您重新架構大部分的系統，因而引進許多其他的複雜度和需求。 例如，您會想要使用專為事件溯源所建立的資料庫 (例如[事件存放區](https://eventstore.org/))，或文件導向資料庫 (例如 Azure Cosmos DB、MongoDB、Cassandra、CouchDB 或 RavenDB)。 ES 是解決這個問題的最好方法，但除非您已熟悉事件溯源，否則並不是最簡單的解決方法。
+在此案例中，使用完整的事件溯源 (ES) 模式即使不是「最佳」** 方法，也是最佳方法之一。 不過，在許多應用程式案例中，您可能無法實作完整的 ES 系統。 ES 表示只會將領域事件儲存在您的交易式資料庫中，而不會儲存目前的狀態資料。 只儲存領域事件可能有許多好處，例如提供系統歷程記錄，以及能夠判斷過去任何時間的系統狀態。 不過，實作完整的 ES 系統需要您重新架構大部分的系統，因而引進許多其他的複雜度和需求。 例如，您會想要使用專為事件溯源所建立的資料庫 (例如[事件存放區](https://eventstore.org/))，或文件導向資料庫 (例如 Azure Cosmos DB、MongoDB、Cassandra、CouchDB 或 RavenDB)。 ES 是解決這個問題的最好方法，但除非您已熟悉事件溯源，否則並不是最簡單的解決方法。
 
 使用交易記錄採礦的選項一開始看起來很簡單。 不過，若要使用此方法，微服務必須與 RDBMS 交易記錄結合，例如 SQL Server 交易記錄。 這可能不適當。 另一個缺點是，交易記錄中記錄的低層級更新可能不會與高層級整合事件位於相同層級。 如果是這樣，可能會很難處理這些交易記錄作業的反向工程。
 
@@ -139,7 +139,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 圖 6-22 顯示這些方法中第一個方法的架構。
 
-![不使用背景工作微服務發行時的不可部分完成性圖表。](./media/subscribe-events/atomicity-publish-event-bus.png)
+![在沒有輔助角色微服務的情況下發布時的原子性圖。](./media/subscribe-events/atomicity-publish-event-bus.png)
 
 **圖 6-22**。 將事件發行至事件匯流排時的不可部分完成性
 
@@ -147,7 +147,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 關於第二個方法：您會使用 EventLog 資料表作為佇列，且一律會使用背景工作微服務來發行訊息。 在此情況下，其流程會如圖 6-23 所示。 圖中顯示額外的微服務，而且資料表是發行事件時的單一來源。
 
-![使用背景工作微服務發行時的不可部分完成性圖表。](./media/subscribe-events/atomicity-publish-worker-microservice.png)
+![使用輔助角色微服務發佈時的原子性圖。](./media/subscribe-events/atomicity-publish-worker-microservice.png)
 
 **圖 6-23**。 使用背景工作微服務將事件發行至事件匯流排時的不可部分完成性
 
@@ -279,7 +279,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 事件處理常式需要確認產品是否存在於任何購物籃執行個體中。 它也會更新每個相關購物籃明細項目的項目價格。 最後，其會建立一個警示，向使用者顯示價格變更，如圖 6-24 所示。
 
-![瀏覽器的螢幕擷取畫面，其中顯示使用者購物車的價格變更通知。](./media/subscribe-events/display-item-price-change.png)
+![顯示使用者購物車上價格更改通知的瀏覽器的螢幕截圖。](./media/subscribe-events/display-item-price-change.png)
 
 **圖 6-24**。 顯示購物籃中的項目價格變更，如整合事件所傳達
 
@@ -301,7 +301,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
-- 遵守**message 等冪性** \
+- **榮譽消息不信** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>刪除重複的整合事件訊息
@@ -322,40 +322,40 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
-- **使用 NServiceBus 派生的 eShopOnContainers (Particular Software)**  \
+- **使用 NServiceBus（特定軟體）叉式電子購物容器** \
     <https://go.particular.net/eShopOnContainers>
 
-- **事件驅動傳訊** \
+- **事件驅動消息** \
     <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
-- **Jimmy Bogard。重構以提高彈性：評估**結合性 \
+- **吉米·博加德重構對復原力：評估耦合** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
-- **發佈訂閱通道** \
+- **發佈-訂閱頻道** \
     <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **在繫結的內容之間通訊** \
+- **邊界上下文之間的通信** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **最終一致性** \
     <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **Philip 棕色。整合限定內容 \ 的策略**
+- **菲力浦·布朗集成邊界上下文的策略** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
-- **Chris Richardson。使用匯總、事件來源和 CQRS 開發交易微服務-第2部分** \
+- **克裡斯·理查森使用聚合、事件源和 CQRS 開發交易微服務 - 第 2 部分** \
     <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
-- **Chris Richardson。事件來源模式** \
+- **克裡斯·理查森事件採購模式** \
     <https://microservices.io/patterns/data/event-sourcing.html>
 
-- **事件溯源簡介** \
+- **介紹活動採購** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
 - **Event Store 資料庫**. 官方網站。 \
     <https://geteventstore.com/>
 
-- **派翠克 nommensen:。微服務 \ 的事件驅動資料管理**
+- **派翠克·諾門森用於微服務的事件驅動資料管理** \
     <https://dzone.com/articles/event-driven-data-management-for-microservices-1>
 
 - **CAP 定理** \
@@ -364,21 +364,21 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 - **什麼是 CAP 定理？** \
     <https://www.quora.com/What-Is-CAP-Theorem-1>
 
-- **資料一致性入門** \
+- **資料一致性引引器** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **Rick Saling。CAP 定理：為什麼雲端和網際網路的「每個專案都不同**」 \
+- **裡克·薩林CAP定理：為什麼雲和互聯網"一切都不同"** \
     <https://docs.microsoft.com/archive/blogs/rickatmicrosoft/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
-- **Eric Brewer。上限12年後：「規則」變更的方式** \
+- **埃裡克·布魯爾十二年後的CAP："規則"是如何變化的** \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
-- **Azure 服務匯流排。代理訊息：重複偵測**  \
+- **Azure 服務匯流排。代理消息：重複檢測**  \
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **可靠性指南** (RabbitMQ 文件) \
     <https://www.rabbitmq.com/reliability.html#consumer>
 
 > [!div class="step-by-step"]
-> [上一頁](rabbitmq-event-bus-development-test-environment.md)
-> [下一頁](test-aspnet-core-services-web-apps.md)
+> [上一個](rabbitmq-event-bus-development-test-environment.md)
+> [下一個](test-aspnet-core-services-web-apps.md)

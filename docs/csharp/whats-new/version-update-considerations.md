@@ -3,11 +3,11 @@ title: 適用於 C# 開發人員的版本和更新考量
 description: 在您的程式庫中引進新的語言功能，會影響使用該程式庫的程式碼。
 ms.date: 09/19/2018
 ms.openlocfilehash: 3ffe2f6fd64a391fddf28233dccb022c95851884
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634482"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399382"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>適用於 C# 開發人員的版本和更新考量
 

@@ -1,32 +1,32 @@
 ---
 ms.openlocfilehash: 7e76c32ddeb50eaf1ee93d7cf3cac7469187cc41
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937031"
 ---
-### <a name="allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>不支援 AllowUpdateChildControlIndexForTabControls 相容性切換
+### <a name="allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>允許更新兒童控制索引ForTab控制相容性開關不支援
 
-.NET Framework 4.6 和更新版本的 Windows Forms 支援 `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` 相容性參數，但從 .NET Core 3.0 開始 Windows Forms 不支援。
+.NET 框架 4.6 上的 Windows 表單和更高版本支援`Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls`相容性開關，但在以 .NET Core 3.0 開頭的 Windows 表單中不支援相容性開關。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Framework 4.6 和更新版本中，選取索引標籤會重新排序其控制項集合。 當此行為不需要時，`Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` 相容性參數可讓應用程式略過此重新排列。
+在 .NET 框架 4.6 和更高版本中，選擇選項卡重新排序其控制項集合。 相容性`Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls`開關允許應用程式在這樣做不可取時跳過此重新排序。
 
-在 .NET Core 中，不支援 `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` 參數。
+在 .NET 內核`Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls`中，不支援交換器。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
-3.0 Preview 9
+3.0 預覽 9
 
 #### <a name="recommended-action"></a>建議的動作
 
-移除參數。 不支援此參數，而且沒有可用的替代功能。
+卸下開關。 不支援該開關，並且沒有可用的替代功能。
 
-#### <a name="category"></a>分類
+#### <a name="category"></a>類別
 
-Windows 表單
+Windows Forms
 
 #### <a name="affected-apis"></a>受影響的 API
 

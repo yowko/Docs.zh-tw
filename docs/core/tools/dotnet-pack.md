@@ -3,15 +3,15 @@ title: dotnet pack 命令
 description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
 ms.date: 02/14/2020
 ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503653"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
+**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -28,12 +28,12 @@ dotnet pack [-h|--help]
 
 ## <a name="description"></a>描述
 
-`dotnet pack` 命令會建置專案，並建立 NuGet 套件。 此命令的結果是 NuGet 套件（也就是*nupkg*檔案）。
+`dotnet pack` 命令會建置專案，並建立 NuGet 套件。 此命令的結果是 NuGet 包（即 *.nupkg*檔）。
 
-如果您想要產生包含 debug 符號的封裝，您有兩個可用的選項：
+如果要生成包含調試符號的包，可以使用兩個選項：
 
-- `--include-symbols`-它會建立符號套件。
-- `--include-source`-它會在包含來源檔案的 `src` 資料夾中建立符號套件。
+- `--include-symbols`- 它創建符號包。
+- `--include-source`- 它創建符號包，其中包含包含`src`原始檔案的資料夾。
 
 封裝專案的 NuGet 相依性會新增至 *.nuspec* 檔案，因此在安裝套件時可以正確地解析它們。 專案對專案參考不會封裝到專案內。 目前，如果您有專案對專案相依性，則必須一個專案各一個套件。
 
@@ -41,7 +41,7 @@ dotnet pack [-h|--help]
 
 您可以提供 MSBuild 屬性給 `dotnet pack` 命令來壓縮程序。 如需詳細資訊，請參閱 [NuGet 中繼資料屬性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 [範例](#examples)一節示範針對數個不同案例使用 MSBuild -p 參數的方法。
 
-Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新增至您的 .csproj 檔案：
+Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新增至您的 .csproj** 檔案：
 
 ```xml
 <PropertyGroup>
@@ -55,13 +55,13 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 `PROJECT | SOLUTION`
 
-  要包裝的專案或方案。 它是[.csproj](csproj.md)檔案、方案檔或目錄的路徑。 如果未指定，命令會在目前的目錄中搜尋專案或方案檔。
+  要打包的專案或解決方案。 它要麼是[csproj 檔](csproj.md)、解決方案檔或目錄的路徑。 如果未指定，該命令將搜索目前的目錄以搜索專案或解決方案檔。
 
 ## <a name="options"></a>選項。
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  定義組建組態。 大部分專案的預設值都是 `Debug`，但您可以覆寫專案中的組建設定。
+  定義組建組態。 大多數專案的預設值為 ，`Debug`但您可以覆蓋專案中的組建組態設置。
 
 - **`--force`**
 
@@ -73,15 +73,15 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 - **`--include-source`**
 
-  除了輸出目錄中的一般 NuGet 套件外，還包含 debug 符號 NuGet 套件。 來源檔案會包含在符號套件的 [`src`] 資料夾中。
+  除了輸出目錄中的常規 NuGet 包之外，還包括調試符號 NuGet 包。 原始檔案包含在符號包中的`src`資料夾中。
 
 - **`--include-symbols`**
 
-  除了輸出目錄中的一般 NuGet 套件外，還包含 debug 符號 NuGet 套件。
+  除了輸出目錄中的常規 NuGet 包之外，還包括調試符號 NuGet 包。
 
 - **`--interactive`**
 
-  允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供使用。
+  允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供。
 
 - **`--no-build`**
 
@@ -93,11 +93,11 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 - **`--no-restore`**
 
-  執行命令時，不會執行隱含的還原。
+  執行命令時，不會執行隱含還原。
 
 - **`--nologo`**
 
-  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供使用。
+  不要顯示程式啟始橫幅或著作權訊息。 自 .NET Core 3.0 SDK 起提供。
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -145,13 +145,13 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
   dotnet pack --no-build --output nupkgs
   ```
 
-- 在 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`.csproj*檔案中將專案的版本尾碼設定為*，封裝目前的專案並使用指定尾碼更新產生的套件版本︰
+- 在 *.csproj* 檔案中將專案的版本尾碼設定為 `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`，封裝目前的專案並使用指定尾碼更新產生的套件版本︰
 
   ```dotnetcli
   dotnet pack --version-suffix "ci-1234"
   ```
 
-- 使用 `2.1.0` MSBuild 屬性將封裝版本設定為 `PackageVersion`：
+- 使用 `PackageVersion` MSBuild 屬性將封裝版本設定為 `2.1.0`：
 
   ```dotnetcli
   dotnet pack -p:PackageVersion=2.1.0
@@ -163,7 +163,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- 封裝專案，並使用特定執行時間（Windows 10）進行還原作業：
+- 打包專案並使用特定的運行時（Windows 10）進行還原操作：
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

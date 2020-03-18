@@ -3,10 +3,10 @@ title: 相等比較作業 (C#)
 ms.date: 07/20/2015
 ms.assetid: 9d9a5bf2-f211-4865-bd19-c59ffa004615
 ms.openlocfilehash: 306129c1fe0c3f0003f8be579d987edcaeb63709
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141504"
 ---
 # <a name="equality-operations-c"></a>相等比較作業 (C#)
@@ -14,12 +14,12 @@ ms.locfileid: "74141504"
   
 ## <a name="methods"></a>方法  
   
-|方法名稱|描述|C# 查詢運算式語法|更多資訊|  
+|方法名稱|描述|C# 查詢運算式語法|相關資訊|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |SequenceEqual|以成對方式比較項目，判斷兩個序列是否相等。|不適用。|<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq>
 - [標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)
-- [如何比較兩個資料夾的內容（LINQ）（C#）](./how-to-compare-the-contents-of-two-folders-linq.md)
+- [如何比較兩個資料夾 （LINQ） （C#） 的內容](./how-to-compare-the-contents-of-two-folders-linq.md)

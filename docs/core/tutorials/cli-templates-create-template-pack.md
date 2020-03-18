@@ -6,38 +6,38 @@ ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
 ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503497"
 ---
-# <a name="tutorial-create-a-template-pack"></a>教學課程：建立範本套件
+# <a name="tutorial-create-a-template-pack"></a>教程：創建範本包
 
-透過 .NET Core，您可以建立及部署能產生專案、檔案，甚至是資源的範本。 本教學課程是系列中的第三部分，會教您如何建立、安裝和卸載範本，以搭配 `dotnet new` 命令使用。
+透過 .NET Core，您可以建立及部署能產生專案、檔案，甚至是資源的範本。 本教程是一系列的第三部分，它教您如何創建、安裝和卸載範本以與`dotnet new`命令一起使用。
 
 在這部分的系列文章中，您將了解如何：
 
 > [!div class="checklist"]
 >
-> * 建立 \*.csproj 專案以建立範本套件
+> * 創建\*.csproj 專案以生成範本包
 > * 設定專案檔以用於封裝
 > * 從 NuGet 套件檔案安裝範本
 > * 依套件識別碼將範本解除安裝
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 * 完成此教學課程系列的[第 1 部分](cli-templates-create-item-template.md)和[第 2 部分](cli-templates-create-project-template.md)。
 
-  此教學課程會使用在此教學課程系列的前兩個部分中所建立的兩個範本。 只要您將範本當做資料夾複製到_working\templates\\_ 資料夾中，就可以使用不同的範本。
+  此教學課程會使用在此教學課程系列的前兩個部分中所建立的兩個範本。 只要將範本作為資料夾複製到_工作範本\\_資料夾中，就可以使用不同的範本。
 
-* 開啟終端機，並流覽至 [_工作\\_ ] 資料夾。
+* 打開終端並導航到_工作\\_資料夾。
 
 ## <a name="create-a-template-pack-project"></a>建立範本套件專案
 
 範本套件是將一或多個範本封裝到檔案內。 當您安裝或解除安裝套件時，包含在套件中的所有範本也都會相對地被新增或移除。 此教學課程系列之前的部分皆僅處理個別的範本。 若要共用未封裝的範本，您必須複製範本資料夾並透過該資料夾來安裝。 由於範本套件可以在其中具有多個範本且為單一檔案，因此共用會變得更加容易。
 
-範本套件是以 NuGet 套件 ( _.nupkg_) 檔案來代表。 此外，和任何 NuGet 套件相同，您可以將範本套件上傳至 NuGet 摘要。 `dotnet new -i` 命令支援從 NuGet 套件摘要安裝範本套件。 此外，您可以直接從 _.nupkg_ 檔案安裝範本套件。
+範本套件是以 NuGet 套件 (_.nupkg_) 檔案來代表。 此外，和任何 NuGet 套件相同，您可以將範本套件上傳至 NuGet 摘要。 `dotnet new -i` 命令支援從 NuGet 套件摘要安裝範本套件。 此外，您可以直接從 _.nupkg_ 檔案安裝範本套件。
 
 通常，您可以使用 C# 專案檔來編譯程式碼並產生二進位檔。 不過，專案也可以用來產生範本套件。 透過變更 _.csproj_ 的設定，您會防止它編譯任何程式碼，並改為使它將您範本的所有資產包含為資源。 在建置此專案之後，它會產生範本套件 NuGet 套件。
 
@@ -49,7 +49,7 @@ ms.locfileid: "77503497"
 dotnet new console -n templatepack -o .
 ```
 
-`-n` 參數會將 _.csproj_檔案名設定為_templatepack_。 `-o` 參數會在目前的目錄中建立檔案。 您應該會看到類似以下輸出的結果。
+參數`-n`將 _.csproj_檔案名設置為_範本包.csproj_。 參數`-o`在目前的目錄中創建檔。 您應該會看到類似以下輸出的結果。
 
 ```dotnetcli
 dotnet new console -n templatepack -o .
@@ -146,7 +146,7 @@ Example templates: async project                  consoleasync          [C#]    
 Class library                                     classlib              [C#], F#, VB      Common/Library
 ```
 
-如果您將 NuGet 套件上傳至 NuGet 摘要，您可以使用 `dotnet new -i PACKAGEID` 命令；其中 `PACKAGEID` 和 `<PackageId>`.csproj_檔案中的_ 設定相同。 此套件識別碼和 NuGet 套件識別碼相同。
+如果您將 NuGet 套件上傳至 NuGet 摘要，您可以使用 `dotnet new -i PACKAGEID` 命令；其中 `PACKAGEID` 和 _.csproj_ 檔案中的 `<PackageId>` 設定相同。 此套件識別碼和 NuGet 套件識別碼相同。
 
 ## <a name="uninstall-the-template-pack"></a>將範本套件解除安裝
 

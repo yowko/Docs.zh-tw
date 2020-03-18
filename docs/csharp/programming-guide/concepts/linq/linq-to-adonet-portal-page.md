@@ -3,19 +3,19 @@ title: LINQ to ADO.NET (入口網站頁面)
 ms.date: 07/20/2015
 ms.assetid: 6bd269b4-3509-4688-b672-836008704182
 ms.openlocfilehash: 84412e43a9d6b1e256e4ac8306a94126a3eaaaf4
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635544"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (入口網站頁面)
-LINQ to ADO.NET 可讓您使用語言整合式查詢（LINQ）程式設計模型，在 ADO.NET 中查詢任何可列舉物件。  
+LINQ 到 ADO.NET 使您能夠通過使用語言集成查詢 （LINQ） 程式設計模型對ADO.NET中的任何枚舉物件進行查詢。  
   
 > [!NOTE]
-> LINQ to ADO.NET 檔位於 .NET Framework SDK 的 ADO.NET 區段： [LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。  
+> LINQ 到 ADO.NET文檔位於 .NET 框架 SDK 的ADO.NET部分[：LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。  
   
- 有三種不同的 ADO.NET 語言整合式查詢（LINQ）技術： LINQ to DataSet、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]和 LINQ to Entities。 LINQ to DataSet 可提供更豐富且最佳化的 <xref:System.Data.DataSet> 查詢，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 可讓您直接查詢 SQL Server 資料庫結構描述，而 LINQ to Entities 可讓您查詢實體資料模型。  
+ 有三個獨立的ADO.NET語言集成查詢 （LINQ） 技術：LINQ 到資料集，LINQ[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]到實體。 LINQ to DataSet 可提供更豐富且最佳化的 <xref:System.Data.DataSet> 查詢，[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 可讓您直接查詢 SQL Server 資料庫結構描述，而 LINQ to Entities 可讓您查詢實體資料模型。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet> 是 ADO.NET 中最廣為使用的元件之一，也是中斷連線程式設計模型 (ADO.NET 建置於其上) 的重要元素。 雖然 <xref:System.Data.DataSet> 具有上述優點，但是它的查詢功能仍然有限。  
@@ -32,9 +32,9 @@ LINQ to ADO.NET 可讓您使用語言整合式查詢（LINQ）程式設計模型
  如需詳細資訊，請參閱 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)。  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
- 透過實體資料模型，關聯式資料會公開為 .NET 環境內的物件。 這讓物件層成為 LINQ 支援的理想目標，讓開發人員能夠根據用來建立商務邏輯的語言，為資料庫制訂查詢。 這項功能稱為 LINQ to Entities。 如需詳細資訊，請參閱 [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
+ 透過實體資料模型，關聯式資料會公開為 .NET 環境內的物件。 這使得物件層成為 LINQ 支援的理想目標，允許開發人員根據用於構建業務邏輯的語言針對資料庫編寫查詢。 這項功能稱為 LINQ to Entities。 如需詳細資訊，請參閱 [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ 和 ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)
 - [Language-Integrated Query (LINQ) (C#)](./index.md)

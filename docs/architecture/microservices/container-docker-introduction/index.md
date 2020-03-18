@@ -3,10 +3,10 @@ title: 容器和 Docker 簡介
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 容器和 Docker 簡介
 ms.date: 08/31/2018
 ms.openlocfilehash: 364cbc0ba8149be1873df628a1ca243f420e7d0b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73740059"
 ---
 # <a name="introduction-to-containers-and-docker"></a>容器和 Docker 簡介
@@ -19,14 +19,14 @@ ms.locfileid: "73740059"
 
 每個容器可以執行整個 Web 應用程式或服務，如圖 2-1 所示。 在此範例中，Docker 主機是容器主機，而 App1、App2、Svc 1 和 Svc 2 是容器化應用程式或服務。
 
-![此圖顯示在 VM 或伺服器中執行的四個容器。](./media/index/multiple-containers-single-host.png)
+![顯示在 VM 或伺服器中運行的四個容器的圖表。](./media/index/multiple-containers-single-host.png)
 
-**圖 2-1**. 在容器主機上執行的多個容器
+**圖2-1**。 在容器主機上執行的多個容器
 
 容器化的另一個優點是延展性。 您可以針對短期工作建立新的容器，以更快擴充。 從應用程式的觀點來看，具現化映像 (建立容器) 類似於具現化處理序 (例如服務或 Web 應用程式)。 不過，為了可靠起見，當您在多部主機伺服器之間執行相同映像的多個執行個體時，您通常需要在不同的主機伺服器或 VM 中，或是不同的容錯網域中，執行各個容器 (映像執行個體)。
 
 簡單來說，容器在整個應用程式生命週期工作流程中，提供隔離、可攜性、彈性、延展性和控制能力等優點。 最重要的優點是可為開發與作業提供環境的隔離。
 
 >[!div class="step-by-step"]
->[上一頁](../index.md)
->[下一頁](docker-defined.md)
+>[上一個](../index.md)
+>[下一個](docker-defined.md)

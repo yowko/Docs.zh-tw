@@ -4,10 +4,10 @@ description: 本教學課程概述如何使用 .NET Compiler SDK 來處理語意
 ms.date: 02/06/2018
 ms.custom: mvc
 ms.openlocfilehash: a6dcaeeb86acb5c0e1602f01dc5952ffd9d5e3f5
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240504"
 ---
 # <a name="get-started-with-semantic-analysis"></a>開始使用語意分析
@@ -22,7 +22,7 @@ ms.locfileid: "78240504"
 
 ## <a name="understanding-compilations-and-symbols"></a>了解編譯和符號
 
-更深入處理 .NET Compiler SDK 時，就會熟悉 Syntax API 與 Semantic API 之間的差異。 **Syntax API** 可讓您查看程式的「結構」。 不過，您通常需要程式的更豐富語意資訊或「意義」。 雖然 Visual Basic 或C#程式碼的鬆散程式碼檔案或片段可以獨立地進行語法分析，但是在清理的情況下，詢問「此變數的類型」之類的問題並不具意義。 類型名稱的意義可能依存於組件參考、命名空間匯入或其他程式碼檔。 這些問題是使用 **Semantic API** 來回答，具體來說是 <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> 類別。
+更深入處理 .NET Compiler SDK 時，就會熟悉 Syntax API 與 Semantic API 之間的差異。 **Syntax API** 可讓您查看程式的「結構」__。 不過，您通常需要程式的更豐富語意資訊或「意義」__。 雖然鬆散的代碼檔或 Visual Basic 或 C# 程式碼片段可以單獨進行語法分析，但在真空中提出諸如"此變數的類型是什麼"等問題沒有意義。 類型名稱的意義可能依存於組件參考、命名空間匯入或其他程式碼檔。 這些問題是使用 **Semantic API** 來回答，具體來說是 <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> 類別。
 
 <xref:Microsoft.CodeAnalysis.Compilation> 執行個體類似編譯器所看到的單一專案，並且代表編譯 Visual Basic 或 C# 程式所需的所有項目。 **編譯**包含要編譯的一組來源檔案、組件參考及編譯器選項。 您可以使用此內容中的所有其他資訊來理解程式碼的意義。 <xref:Microsoft.CodeAnalysis.Compilation> 可讓您尋找**符號** - 實體，例如名稱和其他運算式所參照的類型、命名空間、成員和變數。 將名稱與具有**符號**的運算式建立關聯的程序稱為**繫結**。
 
@@ -39,8 +39,8 @@ ms.locfileid: "78240504"
 
 建立新的 C# **獨立程式碼分析工具**專案：
 
-* 在 Visual Studio 中，選擇 [檔案] > [新增] > [專案] 來顯示 [新增專案] 對話方塊。
-* 在 **Visual C#**  > **擴充性**下，選擇 [獨立程式碼分析工具]。
+* 在視覺化工作室中，選擇 **"檔** > **新專案** > **Project**"以顯示新專案對話方塊。
+* 在**視覺化 C#** > **可擴充性**下，選擇**獨立代碼分析工具**。
 * 將專案命名為 "**SemanticQuickStart**"，然後按一下 [確定]。
 
 您要分析先前顯示的基本 "Hello World!" 程式。
@@ -60,19 +60,19 @@ ms.locfileid: "78240504"
 
 ## <a name="querying-the-semantic-model"></a>查詢語意模型
 
-具有 <xref:Microsoft.CodeAnalysis.Compilation> 之後，您可以要求該 <xref:Microsoft.CodeAnalysis.SemanticModel> 中所含之任何 <xref:Microsoft.CodeAnalysis.SyntaxTree> 的 <xref:Microsoft.CodeAnalysis.Compilation>。 您可以將語意模型視為通常取自 intellisense 之所有資訊的來源。 <xref:Microsoft.CodeAnalysis.SemanticModel> 可回答「這個位置範圍有哪些名稱？」、「有哪些成員可從此方法存取？」、「在這個文字區塊中使用了那些變數？」及「這個名稱/運算式的參考對象為何？」等問題。 新增此陳述式來建立語意模型：
+具有 <xref:Microsoft.CodeAnalysis.Compilation> 之後，您可以要求該 <xref:Microsoft.CodeAnalysis.Compilation> 中所含之任何 <xref:Microsoft.CodeAnalysis.SyntaxTree> 的 <xref:Microsoft.CodeAnalysis.SemanticModel>。 您可以將語意模型視為通常取自 intellisense 之所有資訊的來源。 <xref:Microsoft.CodeAnalysis.SemanticModel> 可回答「這個位置範圍有哪些名稱？」、「有哪些成員可從此方法存取？」、「在這個文字區塊中使用了那些變數？」及「這個名稱/運算式的參考對象為何？」等問題。 新增此陳述式來建立語意模型：
 
 [!code-csharp[Create the semantic model](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#4 "Create the semantic model")]
 
 ## <a name="binding-a-name"></a>繫結名稱
 
-<xref:Microsoft.CodeAnalysis.Compilation> 會從 <xref:Microsoft.CodeAnalysis.SemanticModel> 建立 <xref:Microsoft.CodeAnalysis.SyntaxTree>。 建立模型之後，您可以查詢它來尋找第一個 `using` 指示詞，並擷取 `System` 命名空間的符號資訊。 將這兩行新增至 `Main` 方法來建立語意模型，並擷取第一個 using 陳述式的符號：
+<xref:Microsoft.CodeAnalysis.Compilation> 會從 <xref:Microsoft.CodeAnalysis.SyntaxTree> 建立 <xref:Microsoft.CodeAnalysis.SemanticModel>。 建立模型之後，您可以查詢它來尋找第一個 `using` 指示詞，並擷取 `System` 命名空間的符號資訊。 將這兩行新增至 `Main` 方法來建立語意模型，並擷取第一個 using 陳述式的符號：
 
 [!code-csharp[Find the namespace symbol for the first using](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#5 "Find the namespace symbol for the first using")]
 
-上述程式碼示範了如何在第一個 `using` 指示詞中繫結名稱，以為 <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType>命名空間擷取 `System`。 上述程式碼也會說明您使用**語法模型**來尋找程式碼結構；您使用**語法模型**來了解其意義。 **語法模型**會在 using 陳述式中尋找字串 `System`。 **語法模型**具有 `System` 命名空間中所定義類型的所有資訊。
+上述程式碼示範了如何在第一個 `using` 指示詞中繫結名稱，以為 `System`命名空間擷取 <xref:Microsoft.CodeAnalysis.SymbolInfo?displayProperty=nameWithType>。 上述程式碼也會說明您使用**語法模型**來尋找程式碼結構；您使用**語法模型**來了解其意義。 **語法模型**會在 using 陳述式中尋找字串 `System`。 **語法模型**具有 `System` 命名空間中所定義類型的所有資訊。
 
-從 <xref:Microsoft.CodeAnalysis.SymbolInfo> 物件，可以使用 <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType> 屬性來取得 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType>。 此屬性會傳回這個運算式所參照的符號。 針對未參照任何項目的運算式 (例如數值常值)，此屬性為 `null`。 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> 不是 Null 時，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 表示符號的類型。 在此範例中，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 屬性為 <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>。 將下列程式碼新增至 `Main` 方法。 它會擷取 `System` 命名空間的符號，然後顯示 `System` 命名空間中所宣告的所有子命名空間：
+從 <xref:Microsoft.CodeAnalysis.SymbolInfo> 物件，可以使用 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> 屬性來取得 <xref:Microsoft.CodeAnalysis.ISymbol?displayProperty=nameWithType>。 此屬性會傳回這個運算式所參照的符號。 針對未參照任何項目的運算式 (例如數值常值)，此屬性為 `null`。 <xref:Microsoft.CodeAnalysis.SymbolInfo.Symbol?displayProperty=nameWithType> 不是 Null 時，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 表示符號的類型。 在此範例中，<xref:Microsoft.CodeAnalysis.ISymbol.Kind?displayProperty=nameWithType> 屬性為 <xref:Microsoft.CodeAnalysis.SymbolKind.Namespace?displayProperty=nameWithType>。 將下列程式碼新增至 `Main` 方法。 它會擷取 `System` 命名空間的符號，然後顯示 `System` 命名空間中所宣告的所有子命名空間：
 
 [!code-csharp[Display all the child namespaces](../../../../samples/snippets/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#6 "Display all the child namespaces from this compilation")]
 

@@ -1,38 +1,42 @@
 ---
-title: dotnet 工具還原命令
-description: Dotnet 工具 restore 命令會在您的電腦上安裝目前目錄範圍內的 .NET Core 本機工具。
+title: 點網工具還原命令
+description: dotnet 工具還原命令在您的電腦上安裝目前的目錄範圍內的 .NET Core 本地工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 2900d431987661a9232ceed10d9a424093f8be45
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: cb46f70afb58e482b6aedfddfbf5f3a0c40674f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543905"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146433"
 ---
-# <a name="dotnet-tool-restore"></a>dotnet 工具還原
+# <a name="dotnet-tool-restore"></a>dotnet tool restore
 
-**本文適用于：** ✔️ .net CORE 3.0 SDK 和更新版本
+**本文適用于：✔️** .NET Core 3.0 SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
-`dotnet tool restore`-在您的電腦上安裝目前目錄範圍內的 .NET Core 本機工具。
+`dotnet tool restore`- 在電腦上安裝目前的目錄範圍內的 .NET Core 本地工具。
 
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet tool restore <PACKAGE_NAME> [--configfile] [--add-source] [tool-manifest] [--disable-parallel] [--ignore-failed-sources] [--no-cache] [-interactive] [-v|--verbosity]
+dotnet tool restore <PACKAGE_NAME>
+    [--configfile] [--add-source] [tool-manifest]
+    [--disable-parallel] [--ignore-failed-sources]
+    [--no-cache] [-interactive] [-v|--verbosity]
+
 dotnet tool restore <-h|--help>
 ```
 
 ## <a name="description"></a>描述
 
-`dotnet tool restore` 命令會尋找位於目前目錄範圍內的工具資訊清單檔，並安裝其中列出的工具。 如需資訊清單檔的相關資訊，請參閱[安裝本機工具](global-tools.md#install-a-local-tool)和叫[用本機工具](global-tools.md#invoke-a-local-tool)。
+該`dotnet tool restore`命令查找目前的目錄範圍內的工具清單檔，並安裝其中列出的工具。 有關清單檔的資訊，請參閱[安裝本地工具和](global-tools.md#install-a-local-tool)[調用本地工具](global-tools.md#invoke-a-local-tool)。
 
 ## <a name="arguments"></a>引數
 
 - **`PACKAGE_NAME`**
 
-包含要安裝之 .NET Core 工具的 NuGet 套件的名稱/識別碼。
+包含要安裝的 .NET Core 工具的 NuGet 包的名稱/ID。
 
 ## <a name="options"></a>選項。
 
@@ -46,19 +50,19 @@ dotnet tool restore <-h|--help>
 
 - **`--tool-manifest <PATH>`**
 
-  資訊清單檔案的路徑。
+  清單檔的路徑。
 
 - **`--disable-parallel`**
 
-  防止平行還原多個專案。
+  防止並行還原多個專案。
 
 - **`--ignore-failed-sources`**
 
-  將套件來源失敗視為警告。
+  將包源故障視為警告。
 
 - **`--no-cache`**
 
-  不要快取套件和 HTTP 要求。
+  不要緩存包和 HTTP 請求。
 
 - **`--interactive`**
 
@@ -76,8 +80,9 @@ dotnet tool restore <-h|--help>
 
 - **`dotnet tool restore`**
 
-  還原目前目錄的本機工具。
+  還原目前的目錄的本地工具。
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Core 工具](global-tools.md)
+- [.NET 核心工具](global-tools.md)
+- [教程：使用 .NET 核心 CLI 安裝和使用 .NET 核心本地工具](local-tools-how-to-use.md)

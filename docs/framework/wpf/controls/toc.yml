@@ -1,4 +1,4 @@
-- name: 控制項
+- name: 控制
   href: index.md
   items:
     - name: 按分類區隔控制項
@@ -8,7 +8,7 @@
     - name: 控制項程式庫
       href: control-library.md
       items:
-        - name: Border
+        - name: 框線
           href: border.md
           items:
             - name: 建立 BorderThickness 值的動畫
@@ -20,12 +20,12 @@
           items:
             - name: 建立具有影像的按鈕
               href: how-to-create-a-button-that-has-an-image.md
-        - name: 行事曆
+        - name: Calendar
           href: calendar.md
-        - name: Canvas
+        - name: 畫布
           href: canvas.md
           items:
-            - name: HOW TO 主題
+            - name: 如何主題
               href: canvas-how-to-topics.md
               items:
                 - name: 在畫布內容周圍加上框線
@@ -38,7 +38,7 @@
                   href: how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md
                 - name: 使用指標調整畫布大小
                   href: how-to-resize-a-canvas-by-using-a-thumb.md
-        - name: 核取方塊
+        - name: CheckBox
           href: checkbox.md
         - name: ComboBox
           href: combobox.md
@@ -52,11 +52,11 @@
           items:
             - name: DataGrid 控制項中的預設鍵盤和滑鼠行為
               href: default-keyboard-and-mouse-behavior-in-the-datagrid-control.md
-            - name: 作法：將資料列詳細資料新增至 DataGrid 控制項
+            - name: 如何：將資料列詳細資料加入至 DataGrid 控制項
               href: how-to-add-row-details-to-a-datagrid-control.md
-            - name: 作法：在 DataGrid 控制項中分組、排序和篩選資料
+            - name: 如何：在 DataGrid 控制項中分組、排序和篩選資料
               href: how-to-group-sort-and-filter-data-in-the-datagrid-control.md
-            - name: 作法：使用 DataGrid 控制項實作驗證
+            - name: 如何：使用 DataGrid 控制項實作驗證
               href: how-to-implement-validation-with-the-datagrid-control.md
             - name: 逐步解說：在 DataGrid 控制項中顯示來自 SQL Server 資料庫的資料
               href: walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md
@@ -64,10 +64,10 @@
               href: sizing-options-in-the-datagrid-control.md
         - name: DatePicker
           href: datepicker.md
-        - name: DockPanel
+        - name: DockPanel 的比較
           href: dockpanel.md
           items:
-            - name: HOW TO 主題
+            - name: 如何主題
               href: dockpanel-how-to-topics.md
               items:
                 - name: 取得或設定 Dock 值
@@ -83,7 +83,7 @@
           items:
             - name: Expander 概觀
               href: expander-overview.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: expander-how-to-topics.md
               items:
                 - name: 使用 ScrollViewer 建立 Expander
@@ -96,10 +96,10 @@
           href: flowdocumentscrollviewer.md
         - name: Frame
           href: frame.md
-        - name: Grid
+        - name: 方格
           href: grid.md
           items:
-            - name: HOW TO 主題
+            - name: 如何主題
               href: grid-how-to-topics.md
               items:
                 - name: 使用 Grid 建置標準 UI 對話方塊
@@ -119,7 +119,7 @@
         - name: GridSplitter
           href: gridsplitter.md
           items:
-            - name: HOW TO 主題
+            - name: 如何主題
               href: gridsplitter-how-to-topics.md
               items:
                 - name: 使用 GridSplitter 調整資料列的大小
@@ -133,10 +133,10 @@
           items:
             - name: 定義 GroupBox 範本
               href: how-to-define-a-groupbox-template.md
-        - name: Image
+        - name: 影像
           href: image.md
           items:
-            - name: HOW TO 主題
+            - name: 如何主題
               href: image-how-to-topics.md
               items:
                 - name: 使用 Image 元素
@@ -155,7 +155,7 @@
         - name: ListBox
           href: listbox.md
           items:
-            - name: HOW TO 主題
+            - name: 如何主題
               href: listbox-how-to-topics.md
               items:
                 - name: 將 ListBox 繫結至資料
@@ -176,7 +176,7 @@
                   href: gridview-overview.md
                 - name: GridView 資料行行首樣式和範本概觀
                   href: gridview-column-header-styles-and-templates-overview.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: listview-how-to-topics.md
               items:
                 - name: 在按一下標頭時排序 GridView 資料行
@@ -213,7 +213,7 @@
           items:
             - name: 面板概觀
               href: panels-overview.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: panel-how-to-topics.md
               items:
                 - name: 建立自訂 Panel 元素
@@ -233,7 +233,7 @@
               href: popup-overview.md
             - name: 快顯功能表放置行為
               href: popup-placement-behavior.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: popup-how-to-topics.md
               items:
                 - name: 建立 Popup 的動畫
@@ -253,7 +253,7 @@
           items:
             - name: RichTextBox 概觀
               href: richtextbox-overview.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: richtextbox-how-to-topics.md
               items:
                 - name: 擷取 RichTextBox 的文字內容
@@ -274,7 +274,7 @@
           items:
             - name: ScrollViewer 概觀
               href: scrollviewer-overview.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: scrollviewer-how-to-topics.md
               items:
                 - name: 處理 ScrollChanged 事件
@@ -283,7 +283,7 @@
                   href: how-to-scroll-content-by-using-the-iscrollinfo-interface.md
                 - name: 使用 ScrollViewer 的內容捲動方法
                   href: how-to-use-the-content-scrolling-methods-of-scrollviewer.md
-        - name: Separator
+        - name: 分隔符號
           href: separator.md
         - name: 滑桿
           href: slider.md
@@ -293,7 +293,7 @@
         - name: StackPanel
           href: stackpanel.md
           items:
-            - name: HOW TO 主題
+            - name: 如何主題
               href: stackpanel-how-to-topics.md
               items:
                 - name: 在 StackPanel 和 DockPanel 之間選擇
@@ -316,7 +316,7 @@
           items:
             - name: TextBox 概觀
               href: textbox-overview.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: textbox-how-to-topics.md
               items:
                 - name: 建立多行 TextBox 控制項
@@ -357,7 +357,7 @@
           items:
             - name: ToolTip 概觀
               href: tooltip-overview.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: tooltip-how-to-topics.md
               items:
                 - name: 置放工具提示
@@ -369,7 +369,7 @@
           items:
             - name: TreeView 概觀
               href: treeview-overview.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: treeview-how-to-topics.md
               items:
                 - name: 建立簡單或複雜的 TreeView
@@ -396,7 +396,7 @@
           href: styling-and-templating.md
         - name: 使用 ControlTemplate 自訂現有的控制項
           href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
-        - name: 作法：尋找 ControlTemplate 產生的元素
+        - name: 如何：尋找 ControlTemplate 產生的項目
           href: how-to-find-controltemplate-generated-elements.md
     - name: 控制項自訂
       href: control-customization.md
@@ -412,7 +412,7 @@
           items:
             - name: 裝飾項概觀
               href: adorners-overview.md
-            - name: HOW TO 主題
+            - name: 如何主題
               href: adorners-how-to-topics.md
               items:
                 - name: 實作 Adorner

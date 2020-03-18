@@ -7,10 +7,10 @@ f1_keywords:
 helpviewer_keywords:
 - in keyword [C#]
 ms.openlocfilehash: 251a330ec327366ce458dd8066061365ab0e1dad
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713462"
 ---
 # <a name="in-c-reference"></a>in (C# 參考)
@@ -19,11 +19,11 @@ ms.locfileid: "75713462"
   
 - 泛型介面和委派的[泛型型別參數](in-generic-modifier.md)。
 - 用作[參數修飾詞](in-parameter-modifier.md)，讓您以傳址方式而非傳值方式將引數傳遞到方法。
-- [foreach](foreach-in.md) 陳述式。
+- [每個](foreach-in.md)語句。
 - LINQ 查詢運算式中的 [from 子句](from-clause.md)。
 - LINQ 查詢運算式中的 [join 子句](join-clause.md)。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 關鍵字](index.md)
 - [C# 參考](../index.md)

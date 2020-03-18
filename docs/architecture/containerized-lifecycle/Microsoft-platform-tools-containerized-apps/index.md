@@ -3,23 +3,23 @@ title: 容器化應用程式的 Microsoft 平台和工具簡介
 description: 了解支援 Docker 應用程式生命週期的 Microsoft 供應項目。
 ms.date: 02/15/2019
 ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73738102"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>容器化應用程式的 Microsoft 平台和工具簡介
 
-*願景：建立可調整的企業級容器化應用程式生命週期，橫跨您的開發、IT 營運和生產管理。*
+*願景：創建一個適應性強、企業級、容器化的應用程式生命週期，涵蓋您的開發、IT 運營和生產管理。*
 
 圖 3-1 顯示依工作類型分類的 Docker 應用程式生命週期中的主要部分，而工作類型是由多個小組 (應用程式開發、DevOps 基礎結構程序以及 IT 管理和作業) 所衍生。 通常，在企業中，負責每個區域之「人物代表」的設定檔會不同。 就是他們的技術。
 
-:::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="此圖顯示維護 Docker 應用程式所需的 Microsoft 工具。":::
-Microsoft 工具。 針對開發/設計工作負載：適用于 Windows 的 Docker 引擎、VS 和 VS Code、.NET Core Azure Kubernetes Service。 針對組建/測試/出貨工作負載： Azure DevOps、Team Foundation Server、Docker CLI Azure Kubernetes Service。 針對執行/監視/管理工作負載： Azure 監視器、Azure 入口網站 Azure Kubernetes Services、Service Fabric、其他協調器。
+:::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="顯示維護 Docker 應用所需的 Microsoft 工具的圖表。":::
+Microsoft 工具。 對於開發/設計工作負荷：用於 Windows、VS 和 VS 代碼的 Docker 引擎、.NET Core、Azure 庫伯奈斯服務。 對於生成/測試/發貨工作負荷：Azure DevOps、團隊基礎伺服器、Docker CLI、Azure 庫伯奈斯服務。 對於運行/監視/管理工作負荷：Azure 監視器、Azure 門戶 Azure 庫伯奈服務、服務結構、其他協調器。
 :::image-end:::
 
-**圖 3-1** 使用 Microsoft 平台和工具之容器化 Docker 應用程式生命週期中的主要部分
+**圖 3-1。** 使用 Microsoft 平台和工具之容器化 Docker 應用程式生命週期中的主要部分
 
 容器化 Docker 生命週期工作流程一開始是根據「預設產品選項」所規定，輕鬆地讓開發人員更快速地開始使用，但它是基礎，且實際上必須為開放式架構；因此，它會是彈性工作流程，可調整為來自每個組織或企業的不同內容。 工作流程基礎結構 (元件和產品) 必須具有足夠的彈性，才能涵蓋每家公司未來將要有的環境，即使可以將開發或 DevOps 產品切換成其他開發或 DevOps 產品也是一樣。 此彈性、開放性以及平台和基礎結構中各種技術就是容器化 Docker 應用程式的 Microsoft 優先順序，如下列各章所述。
 
@@ -27,11 +27,11 @@ Microsoft 工具。 針對開發/設計工作負載：適用于 Windows 的 Dock
 
 **表 3-1.** 開放給任何技術的 DevOps 工作流程
 
-| 主機 | Microsoft 技術 | 協力廠商 - Azure 插入式 |
+| Host | Microsoft 技術 | 協力廠商 - Azure 插入式 |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Docker 應用程式的平台   | • Microsoft Visual Studio 和 Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Kubernetes Service (AKS)<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • 任何程式碼編輯器 (例如，Sublime)<br /> • 任何語言 (Node.js、Java、Go 等等)<br /> • 任何協調器和排程器<br /> • 任何 Docker 登錄<br /> |
 | Docker 應用程式的 DevOps     | • Azure DevOps Services<br /> • Microsoft Team Foundation Server<br /> • Azure Kubernetes Service (AKS)<br /> • Azure Service Fabric<br /> | • GitHub、Git、Subversion 等等<br /> • Jenkins、Chef、Puppet、Velocity、CircleCI、TravisCI 等等<br /> • 內部部署 Docker Datacenter、Docker Swarm、Mesos DC/OS、Kubernetes 等等<br /> |
-| 管理和監視  | • Azure 監視器 | • Marathon、Chronos 等等<br />|
+| 管理與監視  | • Azure 監視器 | • Marathon、Chronos 等等<br />|
 
 表 3-1 中所定義之容器化 Docker 應用程式的 Microsoft 平台和工具，包含下列元件：
 
@@ -43,18 +43,18 @@ Microsoft 工具。 針對開發/設計工作負載：適用于 Windows 的 Dock
 
 - **管理和監視** IT 可以使用數種方法來管理及監視生產應用程式和服務，將這兩種檢視方式整合成統一的體驗。
 
-  - **Azure 入口網站** 如果您使用開放原始碼協調器，則 Azure Kubernetes Service (AKS)、Service Fabric 和其他協調器可協助您設定及維護 Docker 環境。 如果您要使用 Azure Service Fabric，則 Service Fabric Explorer 工具可讓您視覺化和設定叢集。
+  - **Azure 門戶** 如果使用開源協調器，Azure 庫伯奈斯服務 （AKS）、服務結構和其他協調器可説明您設置和維護 Docker 環境。 如果您要使用 Azure Service Fabric，則 Service Fabric Explorer 工具可讓您視覺化和設定叢集。
 
-  - **Docker 工具** 您可以使用熟悉的工具來管理容器應用程式。 不需要變更現有 Docker 管理做法，即可將容器工作負載移至雲端。 使用您已熟悉並透過所選擇協調器的標準 API 端點所連線的應用程式管理工具。 您也可以使用其他協力廠商工具來管理 Docker 應用程式 (例如 Docker Datacenter) 甚至是 CLI Docker 工具。
+  - **Docker 工具** 您可以使用熟悉的工具管理容器應用程式。 不需要變更現有 Docker 管理做法，即可將容器工作負載移至雲端。 使用您已熟悉並透過所選擇協調器的標準 API 端點所連線的應用程式管理工具。 您也可以使用其他協力廠商工具來管理 Docker 應用程式 (例如 Docker Datacenter) 甚至是 CLI Docker 工具。
 
     即使您熟悉 Linux 命令，也可以使用 Microsoft Windows 和 PowerShell 搭配 Linux 子系統命令列和在此 Linux 子系統功能上執行的產品 (Docker、Kubernetes...) 用戶端來管理容器應用程式。 您將在本書稍後進一步了解如何透過常用的 Microsoft Windows OS 使用 Linux 子系統下的這些工具。
 
-  - **開放原始碼工具** 因為 AKS 會公開協調流程引擎的標準 API 端點，所以最常用工具會與 AKS 相容，且在大部分情況下可立即使用 (包含視覺化檢視、監視、命令列工具，甚至是未來可用的工具)。
+  - **開源工具** 由於 AKS 公開了業務流程引擎的標準 API 終結點，因此最常用的工具與 AKS 相容，在大多數情況下，這些工具將開箱即用，包括視覺化檢視、監視、命令列工具，甚至將來可用的工具。
 
   - **Azure 監視器**是 Azure 的解決方案，可監視生產環境的各個方面。 您可以監視生產 Docker 應用程式，只要將其 SDK 設定至您的服務，讓您能夠從應用程式取得系統產生的記錄資料即可。
 
-因此，Microsoft 會提供端對端容器化 Docker 應用程式生命週期的完整基礎。 不過，它是「產品和技術的集合，可讓您選擇性地選取並與現有工具和處理序整合」。 廣泛方式的彈性以及功能深度的強度讓 Microsoft 十分適合進行容器化 Docker 應用程式開發。
+因此，Microsoft 會提供端對端容器化 Docker 應用程式生命週期的完整基礎。 不過，它是「產品和技術的集合，可讓您選擇性地選取並與現有工具和處理序整合」**。 廣泛方式的彈性以及功能深度的強度讓 Microsoft 十分適合進行容器化 Docker 應用程式開發。
 
 >[!div class="step-by-step"]
->[上一頁](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
->[下一頁](../design-develop-containerized-apps/index.md)
+>[上一個](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+>[下一個](../design-develop-containerized-apps/index.md)

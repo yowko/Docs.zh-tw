@@ -5,12 +5,12 @@ helpviewer_keywords:
 - anonymous types [C#]
 - C# Language, anonymous types
 ms.assetid: 59c9d7a4-3b0e-475e-b620-0ab86c088e9b
-ms.openlocfilehash: 81d97748383aa0585185176a366e6325f51688d2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 63bc5560ba19ff36764465a6b89b81c13beec97a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714984"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170334"
 ---
 # <a name="anonymous-types-c-programming-guide"></a>匿名類型 (C# 程式設計手冊)
 
@@ -28,7 +28,7 @@ var v = new { Amount = 108, Message = "Hello" };
 Console.WriteLine(v.Amount + v.Message);  
 ```  
   
- 您通常可以在查詢運算式的 [select](../../language-reference/keywords/select-clause.md) 子句中使用匿名型別，以從來源序列中的每個物件傳回屬性子集。 如需查詢的詳細資訊，請參閱[中C#的 LINQ ](../../linq/index.md)。  
+ 您通常可以在查詢運算式的 [select](../../language-reference/keywords/select-clause.md) 子句中使用匿名型別，以從來源序列中的每個物件傳回屬性子集。 有關查詢的詳細資訊，請參閱[C# 中的 LINQ。](../../linq/index.md)  
   
  匿名類型包含一個或多個公用唯讀屬性。 其他類型的類別成員 (例如方法或事件) 則無效。 用於初始化屬性的運算式不可以是 `null`、匿名函式或指標類型。  
   
@@ -38,7 +38,7 @@ Console.WriteLine(v.Amount + v.Message);
   
  [!code-csharp[csRef30Features#81](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csRef30Features/CS/csref30.cs#81)]  
   
- 一般而言，當您使用匿名型別初始化變數時，您可以使用 [var](../../language-reference/keywords/var.md) 將變數宣告為隱含型別區域變數。 由於只有編譯器可以存取匿名類型的基本名稱，因此無法在變數宣告中指定類型名稱。 如需 `var` 的詳細資訊，請參閱[隱含類型區域變數](./implicitly-typed-local-variables.md)。  
+ 一般而言，當您使用匿名型別初始化變數時，您可以使用 [var](../../language-reference/keywords/var.md) 將變數宣告為隱含型別區域變數。 由於只有編譯器可以存取匿名類型的基本名稱，因此無法在變數宣告中指定類型名稱。 有關 的詳細資訊`var`，請參閱[隱式鍵入的區域變數](./implicitly-typed-local-variables.md)。  
   
  您可以如下列範例所示，合併隱含類型區域變數和隱含類型陣列，以建立匿名類型項目的陣列。  
   
@@ -55,9 +55,9 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
   
  由於匿名類型上的 <xref:System.Object.Equals%2A> 和 <xref:System.Object.GetHashCode%2A> 方法會以屬性的 `Equals` 和 `GetHashCode` 方法來定義，相同匿名類型的兩個執行個體僅在其所有屬性都相等時，這兩個執行個體才相等。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [物件和集合初始設定式](./object-and-collection-initializers.md)
-- [開始使用 C# 中的 LINQ](/dotnet/csharp/programming-guide/concepts/linq/)
+- [在 C 中開始使用 LINQ#](../concepts/linq/index.md)
 - [C# 中的 LINQ](../../linq/index.md)

@@ -1,17 +1,17 @@
 ---
-title: Iterators
+title: Iterator
 description: 了解如何使用內建 C# 迭代器，以及如何建立您自己的自訂迭代器方法。
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
 ms.openlocfilehash: 1933ecf83e9fa234f9b88c815d8ab527997c97f2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036408"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399613"
 ---
-# <a name="iterators"></a>Iterators
+# <a name="iterators"></a>Iterator
 
 您撰寫的幾乎所有程式或多或少都需要逐一查看集合。 您將會撰寫程式碼，以查看集合中的每個項目。
 
@@ -43,7 +43,7 @@ foreach (var item in collection)
 
 ## <a name="enumeration-sources-with-iterator-methods"></a>具有迭代器方法的列舉來源
 
-C# 語言另一個很棒的功能是可讓您建立方法，以建立列舉的來源。 這些方法稱為「迭代器方法」。 迭代器方法定義如何在要求時於序列中產生物件。 您可以使用 `yield return` 內容關鍵字來定義迭代器方法。
+C# 語言另一個很棒的功能是可讓您建立方法，以建立列舉的來源。 這些方法稱為「迭代器方法」**。 迭代器方法定義如何在要求時於序列中產生物件。 您可以使用 `yield return` 內容關鍵字來定義迭代器方法。
 
 您可以撰寫這個方法，以產生從 0 到 9 的整數序列：
 

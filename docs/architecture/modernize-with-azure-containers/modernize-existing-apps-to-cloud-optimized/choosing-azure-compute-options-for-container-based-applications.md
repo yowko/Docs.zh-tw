@@ -1,44 +1,44 @@
 ---
 title: 選擇容器應用程式的 Azure 計算平台
-description: 使用 Azure 雲端和 Windows 容器現代化現有的 .NET 應用程式 |選擇適用于容器型應用程式的 Azure 計算平臺
+description: 使用 Azure 雲和 Windows 容器對現有 .NET 應用程式進行現代化 |為基於容器的應用程式選擇 Azure 計算平臺
 ms.date: 02/18/2020
 ms.openlocfilehash: 52e7cf1c5dd3a5850564bdb33ac7a4ac4904f432
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503870"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>選擇容器應用程式的 Azure 計算平台
 
-如您在閱讀前幾節所注意，Azure 是一個開放雲端，可提供多個選擇。 您可以使用最適合您的需求，不過，它也會呈現您應該針對容器化應用程式使用之產品/技術的相關問題。
+正如您在閱讀前幾節後注意到的那樣，Azure 是一個開放雲，提供多種選擇。 您可以使用最適合您的需求，但是，它也引發了有關在容器化應用程式中應該使用哪些產品/技術的問題。
 
-根據*預設*的建議，下列是本指南中建議的主要準則：
+作為*預設*建議，本指南建議的主要標準如下：
 
-- **單一整合型應用程式：** 選擇 Azure App Service
-- 多**層式應用程式：** 如果您有單一或幾個後端服務，請選擇協調器，例如 Azure Kubernetes Service （AKS）或 App Service
-- **微服務：** 選擇適用于容器的 AKS 或 Azure Web Apps
-- **無伺服器函數 & 事件處理常式：** 選擇 Azure Functions
-- **大規模批次：** 選擇 Azure Batch
+- **單片式應用程式：** 選擇 Azure 應用服務
+- **N-Tier 應用：** 如果您有單個或幾個後端服務，請選擇協調器，如 Azure 庫伯奈服務 （AKS） 或應用服務
+- **微服務：** 為容器選擇 AKS 或 Azure Web 應用
+- **無伺服器函數&事件處理常式：** 選擇 Azure 函數
+- **大型批次：** 選擇 Azure 批次處理
 
-不過，這項建議應以一種 salt 來進行，因為產品的選擇將取決於您的特定應用程式的需求和特性。 並非所有的應用程式都相同，即使一開始可能看起來像這樣的類型也一樣。
+但是，此建議應該帶有一點鹽，因為產品的選擇將取決於您的特定應用的需求和特性。 並非所有應用程式都相同，即使最初它們看起來可能相似。
 
-在更深入分析應用程式的需求之後，所選取的產品可能會不同。 但是做為起點，您可以根據特定優先順序開始評估和測試的初始指引。
+對應用程式的需求進行更深入的分析後，所選產品可能有所不同。 但是，作為起點，最好從何處獲得初始指導，以便根據某些優先順序開始評估和測試。
 
-在下表中，您可以看到不同類型的應用程式的細目，以及它們可能和建議的 Azure 裝載案例。
+在下表中，您可以看到不同類型的應用及其可能和推薦的 Azure 託管方案的細目。
 
-| 應用程式架構 | Vm-Azure 虛擬機器 | ACI-Azure 容器實例 | Azure App Service （w-w/o 容器） | AKS-Azure Kubernetes Services | Azure Functions | Azure Batch |
+| 應用程式架構 | VM - Azure 虛擬機器 | ACI - Azure 容器實例 | Azure 應用服務（ww/o 容器） | AKS - Azure 庫伯奈斯服務 | Azure Functions | Azure Batch |
 |:------------------------:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Web apps （整合型）**         | ![可以使用 Vm](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可以使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![建議使用 App Service](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![可能使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | |
-| **多層式應用程式（服務）**        | ![可以使用 Vm](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可以使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![建議使用 App Service](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![可能使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可以使用 Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | |
-| **雲端原生（微服務）**  | | ![可以使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | ![建議使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （Linux&nbsp;容器）| ![建議使用 Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （事件&#x2011;驅動） | |
-| **批次/作業（背景工作）** | ![可以使用 Vm](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可以使用 ACI](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能 App Service](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![建議使用 Azure Functions](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （背景&nbsp;工作） | ![建議使用 Azure Batch](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （大規模&#x2011;） |
+| **Web 應用（單體）**         | ![使用 VM 可能](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![與 ACI 可能](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![建議使用應用服務](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![AKS 可能](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | |
+| **N 層應用（服務）**        | ![使用 VM 可能](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![與 ACI 可能](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![建議使用應用服務](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) | ![AKS 可能](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![使用 Azure 引信可能](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | |
+| **雲原生（微服務）**  | | ![與 ACI 可能](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | | ![建議使用 AKS](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （Linux&nbsp;容器）| ![建議使用 Azure 函數](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （事件&#x2011;驅動） | |
+| **批次處理/作業（背景工作）** | ![使用 VM 可能](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![與 ACI 可能](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![可能使用應用服務](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![AKS 可能](media/choosing-azure-compute-options-for-container-based-applications/possible.png) | ![建議使用 Azure 函數](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （後臺&nbsp;任務） | ![隨 Azure 批次處理一起推薦](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) <br/> （大&#x2011;規模） |
 
-**圖例**
+**傳說**
 
-![建議圖示](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) 使用
+![推薦圖示](media/choosing-azure-compute-options-for-container-based-applications/recommended.png) 推薦 |
 ![可能的圖示](media/choosing-azure-compute-options-for-container-based-applications/possible.png) 可能
 
 > [!div class="step-by-step"]
-> [上一頁](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
-> [下一頁](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [上一個](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [下一個](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

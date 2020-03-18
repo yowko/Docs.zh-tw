@@ -1,15 +1,15 @@
 ---
-title: 如何使用命名空間建立檔（C#）（LINQ to XML）
+title: 如何使用命名空間 （C#） （LINQ 到 XML） 創建文檔
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
 ms.openlocfilehash: 429b0b0b41f2201b983f931e469b25ff406b91ac
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141331"
 ---
-# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>如何使用命名空間建立檔（C#）（LINQ to XML）
+# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>如何使用命名空間 （C#） （LINQ 到 XML） 創建文檔
 本主題顯示如何利用命名空間建立文件。  
   
 ## <a name="example"></a>範例  
@@ -142,6 +142,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [命名空間概觀 (LINQ to XML) (C#)](namespaces-overview-linq-to-xml.md)

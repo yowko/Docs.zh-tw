@@ -4,15 +4,15 @@ description: dotnet nuget locals 命令會清除或列出本機 NuGet 資源，�
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: 3fdd7d946b08b4c18cfaeb65013de259b927a7fa
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503690"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
+**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 

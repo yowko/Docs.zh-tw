@@ -2,12 +2,12 @@
 title: 共變數和反變數 (C#)
 ms.date: 07/20/2015
 ms.assetid: 066d9a3c-aab7-4ea6-826d-0b1a85399c74
-ms.openlocfilehash: 1d5a1de1825e585512f694a0cd72cee9b37cda36
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 80b4d703bb88d0bf1f7f48236c21b7698017e7f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595281"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79169866"
 ---
 # <a name="covariance-and-contravariance-c"></a>共變數和反變數 (C#)
 在 C# 中，共變數和反變數可讓您進行陣列類型、委派類型和泛型型別引數的隱含參考轉換。 共變數會保留指派相容性，而反變數則會將它反轉。  
@@ -15,25 +15,25 @@ ms.locfileid: "69595281"
  下列程式碼示範指派相容性、共變數和反變數之間的差異。  
   
 ```csharp  
-// Assignment compatibility.   
+// Assignment compatibility.
 string str = "test";  
-// An object of a more derived type is assigned to an object of a less derived type.   
+// An object of a more derived type is assigned to an object of a less derived type.
 object obj = str;  
   
-// Covariance.   
+// Covariance.
 IEnumerable<string> strings = new List<string>();  
-// An object that is instantiated with a more derived type argument   
-// is assigned to an object instantiated with a less derived type argument.   
-// Assignment compatibility is preserved.   
+// An object that is instantiated with a more derived type argument
+// is assigned to an object instantiated with a less derived type argument.
+// Assignment compatibility is preserved.
 IEnumerable<object> objects = strings;  
   
-// Contravariance.             
-// Assume that the following method is in the class:   
-// static void SetObject(object o) { }   
+// Contravariance.
+// Assume that the following method is in the class:
+// static void SetObject(object o) { }
 Action<object> actObject = SetObject;  
-// An object that is instantiated with a less derived type argument   
-// is assigned to an object instantiated with a more derived type argument.   
-// Assignment compatibility is reversed.   
+// An object that is instantiated with a less derived type argument
+// is assigned to an object instantiated with a more derived type argument.
+// Assignment compatibility is reversed.
 Action<string> actString = actObject;  
 ```  
   
@@ -81,11 +81,11 @@ IEnumerable<Object> objects = strings;
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|Title|描述|  
 |-----------|-----------------|  
-|[泛型介面中的變異數 (C#)](./variance-in-generic-interfaces.md)|討論泛型介面中的共變性與逆變性，並提供.NET Framework 中的 Variant 泛型介面清單。|  
+|[泛型介面中的差異 (C#)](./variance-in-generic-interfaces.md)|討論泛型介面中的共變性與逆變性，並提供.NET Framework 中的 Variant 泛型介面清單。|  
 |[建立 Variant 泛型介面 (C#)](./creating-variant-generic-interfaces.md)|示範如何建立自訂 Variant 介面。|  
-|[針對泛型集合使用介面中的差異 (C#)](./using-variance-in-interfaces-for-generic-collections.md)|示範 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.IComparable%601> 介面中的共變數和反變數支援如何協助您重複使用程式碼。|  
+|[針對泛型集合使用介面中的變異數 (C#)](./using-variance-in-interfaces-for-generic-collections.md)|示範 <xref:System.Collections.Generic.IEnumerable%601> 和 <xref:System.IComparable%601> 介面中的共變數和反變數支援如何協助您重複使用程式碼。|  
 |[委派中的差異 (C#)](./variance-in-delegates.md)|討論泛型和非泛型委派中的共變性和反變數，並提供 .NET Framework 中的 Variant 泛型委派清單。|  
 |[在委派中使用變異數 (C#)](./using-variance-in-delegates.md)|示範如何在非泛型委派中使用共變數和反變數支援，以比對方法簽章和委派類型。|  
 |[針對 Func 與 Action 泛型委派使用變異數 (C#)](./using-variance-for-func-and-action-generic-delegates.md)|示範 `Func` 和 `Action` 委派中的共變數和反變數支援如何協助您重複使用程式碼。|

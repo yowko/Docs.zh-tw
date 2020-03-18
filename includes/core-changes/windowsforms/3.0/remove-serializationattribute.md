@@ -1,18 +1,18 @@
 ---
 ms.openlocfilehash: d48ced9d0201a33f9149aba155ddd3d8bc04c93f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74643953"
 ---
-### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>已從某些 Windows Forms 類型中移除 SerializableAttribute
+### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>從某些 Windows 表單類型中刪除的可序列化屬性
 
-<xref:System.SerializableAttribute> 已從某些沒有已知二進位序列化案例的 Windows Forms 類別中移除。
+<xref:System.SerializableAttribute>已從某些沒有已知二進位序列化方案的 Windows 表單類中刪除。
 
 #### <a name="change-description"></a>變更描述
 
-下列型別會使用 .NET Framework 中的 <xref:System.SerializableAttribute> 裝飾，但已在 .NET Core 中移除該屬性：
+以下類型使用<xref:System.SerializableAttribute>in .NET 框架進行修飾，但在 .NET Core 中刪除了該屬性：
 
 - `System.InvariantComparer`
 - <xref:System.ComponentModel.Design.ExceptionCollection?displayProperty=nameWithType>
@@ -26,21 +26,21 @@ ms.locfileid: "74643953"
 - `System.Windows.Forms.NativeMethods.MSOCRINFOSTRUCT`
 - `System.Windows.Forms.NativeMethods.MSG`
 
-在過去，這個序列化機制已經有嚴重的維護和安全性考慮。 維護類型 `SerializableAttribute` 表示這些類型必須經過測試，才能進行版本對版本的序列化變更，以及可能的架構對架構序列化變更。 這會讓您更難演變這些類型，而且維護成本可能會很高。 這些類型沒有已知的二進位序列化案例，可將移除屬性的影響降至最低。
+從歷史上看，這種序列化機制一直有著嚴重的維護和安全問題。 保持`SerializableAttribute`類型意味著必須測試這些類型的版本到版本序列化更改和潛在的框架到框架序列化更改。 這使得發展這些類型變得更加困難，而且維護成本可能很高。 這些類型沒有已知的二進位序列化方案，這最大限度地減少了刪除屬性的影響。
 
-如需詳細資訊，請參閱[二進位序列化](~/docs/standard/serialization/binary-serialization.md)。
+有關詳細資訊，請參閱[二進位序列化](~/docs/standard/serialization/binary-serialization.md)。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
-3.0 Preview 9
+3.0 預覽 9
 
 #### <a name="recommended-action"></a>建議的動作
 
-更新可能相依于標記為 serializable 之這些類型的任何程式碼。
+更新可能依賴于標記為可序列化的任何代碼。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>類別
 
-Windows 表單
+Windows Forms
 
 #### <a name="affected-apis"></a>受影響的 API
 

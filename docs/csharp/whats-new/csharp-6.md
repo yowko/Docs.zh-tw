@@ -3,11 +3,11 @@ title: C# 6 的新功能 - C# 指南
 description: 了解 C# 第 6 版的新功能
 ms.date: 12/12/2018
 ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971389"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399389"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 的新功能
 
@@ -17,7 +17,7 @@ C# 6.0 版包含許多功能，能提升開發人員的產能。 這些功能的
 
 ## <a name="read-only-auto-properties"></a>唯讀 Auto 屬性
 
-「唯讀 Auto 屬性」  提供更簡潔的語法，來建立不可變的類型。 您只需要用 get 存取子宣告 Auto 屬性︰
+「唯讀 Auto 屬性」** 提供更簡潔的語法，來建立不可變的類型。 您只需要用 get 存取子宣告 Auto 屬性︰
 
 [!code-csharp[ReadOnlyAutoProperty](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoProperty)]
 
@@ -46,7 +46,7 @@ public class Student
 
 ## <a name="auto-property-initializers"></a>Auto 屬性初始設定式
 
-「Auto 屬性初始設定式」  可以讓您宣告 Auto 屬性的初始值作為屬性宣告的一部分。
+「Auto 屬性初始設定式」** 可以讓您宣告 Auto 屬性的初始值作為屬性宣告的一部分。
 
 [!code-csharp[Initialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#Initialization)]
 
@@ -66,7 +66,7 @@ public class Student
 
 ## <a name="using-static"></a>使用靜態
 
-「使用靜態」  增強功能可讓您匯入單一類別的靜態方法。 您指定正在使用的類別︰
+「使用靜態」** 增強功能可讓您匯入單一類別的靜態方法。 您指定正在使用的類別︰
 
 [!code-csharp[UsingStaticMath](../../../samples/snippets/csharp/new-in-6/newcode.cs#UsingStaticMath)]
 
@@ -87,13 +87,13 @@ public class Student
 
 ## <a name="null-conditional-operators"></a>Null 條件運算子
 
-「Null 條件運算子」  讓 Null 檢查更容易且流暢。 請將成員存取 `.` 取代為 `?.`：
+「Null 條件運算子」** 讓 Null 檢查更容易且流暢。 請將成員存取 `.` 取代為 `?.`：
 
 [!code-csharp[NullConditional](../../../samples/snippets/csharp/new-in-6/program.cs#NullConditional)]
 
 在上述範例中，如果 person 物件為 `null`，變數 `first` 便會被指派 `null`。 否則，會為其指派 `FirstName` 屬性的值。 最重要的是，`?.` 表示當 `person` 變數是 `null` 時，這行程式碼不會產生 `NullReferenceException`。 相反地，它會進行最少運算並傳回 `null`。 您也可以使用 Null 條件運算子來進行陣列或索引子存取。 請在索引運算式中將 `[]` 取代為 `?[]`。
 
-不論 `person` 的值為何，下列運算式都會傳回 `string`。 您經常將這個建構與「Null 聯合」  運算子一起使用，以便在其中一個屬性為 `null` 時指派預設值。 當運算式進行最少運算時，傳回的 `null` 值型別會改變以符合完整的運算式。
+不論 `person` 的值為何，下列運算式都會傳回 `string`。 您經常將這個建構與「Null 聯合」** 運算子一起使用，以便在其中一個屬性為 `null` 時指派預設值。 當運算式進行最少運算時，傳回的 `null` 值型別會改變以符合完整的運算式。
 
 [!code-csharp[NullCoalescing](../../../samples/snippets/csharp/new-in-6/program.cs#NullCoalescing)]
 
@@ -158,7 +158,7 @@ C# 5 對於您可以放置 `await` 運算式的位置有數個限制。 透過 C
 
 ## <a name="initialize-associative-collections-using-indexers"></a>使用索引子初始化關聯集合
 
-「索引初始設定式」  是讓集合初始設定式與索引使用方式更一致的兩個功能之一。 在舊版的 C# 中，您可以在索引鍵值/組前後新增大括弧，藉以搭配序列樣式集合 (包括 <xref:System.Collections.Generic.Dictionary%602>) 來使用「集合初始設定式」  ：
+「索引初始設定式」** 是讓集合初始設定式與索引使用方式更一致的兩個功能之一。 在舊版的 C# 中，您可以在索引鍵值/組前後新增大括弧，藉以搭配序列樣式集合 (包括 <xref:System.Collections.Generic.Dictionary%602>) 來使用「集合初始設定式」**：
 
 [!code-csharp[ListInitializer](../../../samples/snippets/csharp/new-in-6/initializers.cs#CollectionInitializer)]
 
@@ -170,7 +170,7 @@ C# 5 對於您可以放置 `await` 運算式的位置有數個限制。 透過 C
 
 ## <a name="extension-add-methods-in-collection-initializers"></a>集合初始設定式中的擴充 `Add` 方法
 
-能夠輕鬆進行集合初始設定的另一個功能，是可以針對 `Add` 方法使用「擴充方法」  。 新增這項功能是為了與 Visual Basic 相當。 當您的自訂集合類別具有不同名稱的方法，可以在語意上新增項目時，此功能最實用。
+能夠輕鬆進行集合初始設定的另一個功能，是可以針對 `Add` 方法使用「擴充方法」**。 新增這項功能是為了與 Visual Basic 相當。 當您的自訂集合類別具有不同名稱的方法，可以在語意上新增項目時，此功能最實用。
 
 ## <a name="improved-overload-resolution"></a>改進的多載解析
 

@@ -3,17 +3,17 @@ title: 字串插補 - C# 教學課程
 description: 此教學課程示範如何使用 C# 字串插補功能，在較大字串中包含格式化運算式結果。
 ms.date: 10/23/2018
 ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75346785"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字串插補來建構格式化的字串
 
 此教學課程將教您如何使用 C# [字串插補](../../language-reference/tokens/interpolated.md)，在單一結果字串中插入值。 您將會撰寫 C# 程式碼，並查看程式碼編譯和執行的結果。 此教學課程包含一系列的課程，示範如何將值插入至字串，並以不同的方式設定那些值的格式。
 
-此教學課程要求您必須有可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 Windows、Linux 或 macOS 上設定本機開發環境的指示。 您也可以在瀏覽器中完成此教學課程的[互動式版本](interpolated-strings.yml)。
+此教學課程要求您必須有可用於開發的電腦。 .NET 教程[Hello World 在 10 分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)提供了在 Windows、Linux 或 macOS 上設置本地開發環境的說明。 您也可以在瀏覽器中完成此教學課程的[互動式版本](interpolated-strings.yml)。
 
 ## <a name="create-an-interpolated-string"></a>建立插入字串
 
@@ -32,13 +32,13 @@ var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
 
-在主控台視窗中鍵入 `dotnet run` 來嘗試此程式碼。 當您執行程式時，它會顯示問候語中包含您名稱的單一字串。 <xref:System.Console.WriteLine%2A> 方法呼叫中所含的字串是「插入字串運算式」。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」)。 插入字串特別適用於將值插入至字串或將字串串連 (聯結在一起)。
+在主控台視窗中鍵入 `dotnet run` 來嘗試此程式碼。 當您執行程式時，它會顯示問候語中包含您名稱的單一字串。 <xref:System.Console.WriteLine%2A> 方法呼叫中所含的字串是「插入字串運算式」**。 它是一種範本，可讓您從包含內嵌程式碼的字串建構單一字串 (稱為「結果字串」**)。 插入字串特別適用於將值插入至字串或將字串串連 (聯結在一起)。
 
 這個簡單範例包含每個插入字串都必須要有的兩個項目：
 
 - 左引號字元之前開頭為 `$` 字元的字串常值。 `$` 符號與引號字元之間不能有任何空格。 (如果您想要查看包含空格時會發生什麼情況，請在 `$` 字元後面插入空格、儲存檔案，然後在主控台視窗中鍵入 `dotnet run` 以重新執行程式。 C# 編譯器會顯示錯誤訊息「錯誤 CS1056: 未預期的字元 '$'」)。
 
-- 一或多個「插入運算式」。 插入運算式是以左右大括弧 (`{` 和 `}`) 指出。 您可以放置任何 C# 運算式，以傳回大括號內的值 (包含 `null`)。
+- 一或多個「插入運算式」**。 插入運算式是以左右大括弧 (`{` 和 `}`) 指出。 您可以放置任何 C# 運算式，以傳回大括號內的值 (包含 `null`)。
 
 嘗試更多包含一些其他資料類型的字串插補範例。
 
@@ -46,19 +46,19 @@ Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 
 在上節中，您使用字串插補將某個字串插入至另一個字串內部。 不過，插入運算式的結果可以是任意資料類型。 請包含插入字串中各種資料類型的值。
 
-在下列範例中，我們會先定義具有 `Name`[屬性](../../properties.md)的[類別](../../programming-guide/classes-and-structs/classes.md)資料類型 `Vegetable`，和 `ToString`[方法](../../methods.md)，這會[覆寫](../../language-reference/keywords/override.md)<xref:System.Object.ToString?displayProperty=nameWithType> 方法的行為。 [`public` 存取修飾詞](../../language-reference/keywords/public.md)會使該方法可用於取得任何用戶端程式碼，以取得 `Vegetable` 執行個體的字串表示。 在範例中，`Vegetable.ToString` 方法會傳回[在 `Vegetable` 的](../../programming-guide/classes-and-structs/constructors.md)函式中初始化 `Name` 屬性的值：
+在下列範例中，我們先定義具有 `Name` [屬性](../../properties.md)與 `ToString` [方法](../../methods.md)的[類別](../../programming-guide/classes-and-structs/classes.md)資料類型 `Vegetable`，它會[覆寫](../../language-reference/keywords/override.md)<xref:System.Object.ToString?displayProperty=nameWithType> 方法的行為。 [ `public`訪問修改器](../../language-reference/keywords/public.md)使該方法可用於任何用戶端代碼，以獲得`Vegetable`實例的字串表示形式。 在此示例中，`Vegetable.ToString`該方法返回在`Name``Vegetable`[建構函式](../../programming-guide/classes-and-structs/constructors.md)上初始化的屬性的值：
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-接著，我們使用 [`new` 關鍵字](../../language-reference/operators/new-operator.md)並為建構函式 `Vegetable` 提供名稱來建立名為 `item` 的 `Vegetable` 類別執行個體：
+然後，我們`Vegetable`創建一個使用`item`[`new`運算子](../../language-reference/operators/new-operator.md)並為建構函式`Vegetable`的名稱命名的類的實例：
 
 ```csharp
 var item = new Vegetable("eggplant");
 ```
 
-最後，我們將 `item` 變數包含在插入字串中，其中也包含 <xref:System.DateTime> 值、<xref:System.Decimal> 值和 `Unit`[列舉](../../language-reference/builtin-types/enum.md)值。 將編輯器中的所有 C# 程式碼都取代為下列程式碼，然後使用 `dotnet run` 命令來執行此程式碼：
+最後，我們將 `item` 變數併入插入字串，而此插入字串也包含 <xref:System.DateTime> 值、<xref:System.Decimal> 值和 `Unit` [enumeration](../../language-reference/builtin-types/enum.md) 值。 將編輯器中的所有 C# 程式碼都取代為下列程式碼，然後使用 `dotnet run` 命令來執行此程式碼：
 
 ```csharp
 using System;
@@ -97,13 +97,13 @@ public class Program
 
 ## <a name="control-the-formatting-of-interpolation-expressions"></a>控制插入運算式的格式
 
-在上節中，已將兩個格式不佳的字串插入至結果字串。 其中一個是只有日期才適合的日期和時間值。 第二個是未指出其貨幣單位的價格。 這兩個問題都很容易解決。 字串插補可讓您指定「格式字串」，以控制特定類型的格式。 修改前一個範例中的 `Console.WriteLine` 呼叫，使其包含日期和價格運算式的格式字串，如下行所示：
+在上節中，已將兩個格式不佳的字串插入至結果字串。 其中一個是只有日期才適合的日期和時間值。 第二個是未指出其貨幣單位的價格。 這兩個問題都很容易解決。 字串插補可讓您指定「格式字串」**，以控制特定類型的格式。 修改前一個範例中的 `Console.WriteLine` 呼叫，使其包含日期和價格運算式的格式字串，如下行所示：
 
 ```csharp
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
 ```
 
-在插入運算式後面接著冒號 (":") 和格式字串，即可指定格式字串。 "d" 是[標準日期和時間格式字串](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)，可呈現簡短日期格式。 "C2" 是[標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)，可將數字呈現為小數點後面有兩位數的貨幣值。
+在插入運算式後面接著冒號 (":") 和格式字串，即可指定格式字串。 "d" 是[標準日期和時間格式字串](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)，可呈現簡短日期格式。 "C2"是一個[標準數位格式字串](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)，它表示數位為貨幣值，在小數點後有兩位數位。
 
 .NET 程式庫中有多種類型都支援一組預先定義的格式字串。 其中包含所有數值類型以及日期和時間類型。 如需支援格式字串之類型的完整清單，請參閱[在 .NET 中格式化類型](../../../standard/base-types/formatting-types.md)一文中的[格式字串和 .NET 類別庫類型](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)。
 
@@ -139,7 +139,7 @@ public class Example
 }
 ```
 
-作者名稱會靠左對齊，而他們所撰寫的標題會靠右對齊。 在插入運算式後面加上逗號 (",")，並指定「最小」欄位寬度，即可指定對齊方式。 如果指定的值是正數，則欄位會靠右對齊。 如果它是負數，則欄位會靠左對齊。
+作者名稱會靠左對齊，而他們所撰寫的標題會靠右對齊。 在插入運算式後面加上逗號 (",")，並指定「最小」** 欄位寬度，即可指定對齊方式。 如果指定的值是正數，則欄位會靠右對齊。 如果它是負數，則欄位會靠左對齊。
 
 嘗試移除 `{"Author",-25}` 和 `{title.Key,-25}` 程式碼中的負號，然後重新執行此範例，如下列程式碼所執行：
 

@@ -3,11 +3,11 @@ title: C# 7.1 中的新增功能
 description: C# 7.1 新功能的概觀。
 ms.date: 04/09/2019
 ms.openlocfilehash: 5d2d6f51b6422f5b4db5c6bd275b5ffce1f695f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714585"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399704"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 中的新增功能
 
@@ -17,11 +17,11 @@ C# 7.1 也新增了[語言版本選擇](../language-reference/configure-language
 
 此版本的新款語言功能包括：
 
-- [`async` `Main` 方法](#async-main)
+- [`async``Main`方法](#async-main)
   - 應用程式的進入點允許使用`async`修飾詞。
-- [`default`常值運算式](#default-literal-expressions)
+- [`default`文本運算式](#default-literal-expressions)
   - 目標類型可以推斷時，可以在預設值運算式中使用預設常值運算式。
-- [推斷的元組項目名稱](#inferred-tuple-element-names)
+- [Tuple 型別推導](#inferred-tuple-element-names)
   - 在許多情況下，Tuple 項目的名稱均可從 Tuple 初始化推斷來加以推斷。
 - [泛型型別參數的模式比對](#pattern-matching-on-generic-type-parameters)
   - 您可以對型別為泛型型別參數的變數使用模式比對運算式。
@@ -39,7 +39,7 @@ C# 7.1 也新增了[語言版本選擇](../language-reference/configure-language
 
 ## <a name="async-main"></a>非同步主要
 
-「非同步主要」方法可讓您在 `Main` 方法中使用 `await`。
+「非同步主要」** 方法可讓您在 `Main` 方法中使用 `await`。
 在過去您必須這樣寫：
 
 ```csharp
@@ -114,5 +114,5 @@ var pair = (count, label); // element names are "count" and "label"
 
 ## <a name="reference-assembly-generation"></a>參考組件產生
 
-有兩個新編譯器選項會產生「僅參考的組件」：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
+有兩個新編譯器選項會產生「僅參考的組件」**：[-refout](../language-reference/compiler-options/refout-compiler-option.md) 和 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)。
 連結的文章將更詳細地說明這些選項和參考組件。

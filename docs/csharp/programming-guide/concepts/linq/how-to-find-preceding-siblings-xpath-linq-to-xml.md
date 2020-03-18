@@ -1,15 +1,15 @@
 ---
-title: 如何尋找先前的同級（XPath-LINQ to XML）（C#）
+title: 如何查找前面的同級（XPath-LINQ 到 XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: b281ff99-d08a-43d0-bea1-eff831b2f8ae
 ms.openlocfilehash: 08fc2073f76f37bd0381a05a7969d1c7748d6252
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141054"
 ---
-# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>如何尋找先前的同級（XPath-LINQ to XML）（C#）
+# <a name="how-to-find-preceding-siblings-xpath-linq-to-xml-c"></a>如何查找前面的同級（XPath-LINQ 到 XML）（C#）
 這個主題會比較 XPath `preceding-sibling` 座標軸與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 子系 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A?displayProperty=nameWithType> 座標軸。  
   
  XPath 運算式為：  

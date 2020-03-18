@@ -3,15 +3,15 @@ title: dotnet run 命令
 description: dotnet run 命令提供方便的選項，以透過原始程式碼來執行應用程式。
 ms.date: 02/19/2020
 ms.openlocfilehash: e442ed56d676ffd189ef6d394d840cea671c2dc6
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157072"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
-**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
+**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -28,7 +28,7 @@ dotnet run [-h|--help]
 
 ## <a name="description"></a>描述
 
-`dotnet run` 命令提供方便的選項，以使用一個命令透過原始程式碼來執行應用程式。 可用於在命令列中快速進行反覆開發。 此命令仰賴 [`dotnet build`](dotnet-build.md) 命令來建置程式碼。 建置的任何需求 (例如必須先還原專案) 也同樣適用於 `dotnet run`。
+`dotnet run` 命令提供方便的選項，以使用一個命令透過原始程式碼來執行應用程式。 可用於在命令列中快速進行反覆開發。 該命令取決於生成代碼[`dotnet build`](dotnet-build.md)的命令。 建置的任何需求 (例如必須先還原專案) 也同樣適用於 `dotnet run`。
 
 輸出檔會寫入至預設位置，也就是 `bin/<configuration>/<target>`。 例如，如果您有 `netcoreapp2.1` 應用程式並執行 `dotnet run`，輸出將會放置在 `bin/Debug/netcoreapp2.1` 中。 而且會視需要覆寫檔案。 暫存檔案會放置在 `obj` 目錄中。
 
@@ -42,7 +42,7 @@ dotnet myapp.dll
 
 如需 `dotnet` 驅動程式的詳細資訊，請參閱 [.NET Core 命令列工具 (CLI)](index.md) 主題。
 
-為了執行應用程式，`dotnet run` 命令會從 NuGet 快取解析共用執行階段之外的應用程式相依性。 因為它會使用快取相依性，不建議您在生產環境中使用 `dotnet run` 執行應用程式。 相反地，使用 [](../deploying/index.md)[ 命令`dotnet publish`建立部署](dotnet-publish.md)，並部署已發佈的輸出。
+為了執行應用程式，`dotnet run` 命令會從 NuGet 快取解析共用執行階段之外的應用程式相依性。 因為它會使用快取相依性，不建議您在生產環境中使用 `dotnet run` 執行應用程式。 相反地，使用 [`dotnet publish`](dotnet-publish.md) 命令[建立部署](../deploying/index.md)，並部署已發佈的輸出。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -54,11 +54,11 @@ dotnet myapp.dll
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  定義組建組態。 大部分專案的預設值都是 `Debug`，但您可以覆寫專案中的組建設定。
+  定義組建組態。 大多數專案的預設值為 ，`Debug`但您可以覆蓋專案中的組建組態設置。
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  使用指定的[架構](../../standard/frameworks.md)建置並執行應用程式。 架構必須在專案檔中指定。
+  使用指定的[框架](../../standard/frameworks.md)生成並運行應用程式。 架構必須在專案檔中指定。
 
 - **`--force`**
 
@@ -70,11 +70,11 @@ dotnet myapp.dll
 
 - **`--interactive`**
 
-  允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供使用。
+  允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供。
 
 - **`--launch-profile <NAME>`**
 
-  啟動應用程式時使用的啟動設定檔名稱 (如果有的話)。 啟動設定檔是在 *launchSettings.json* 檔案中定義，通常稱為 `Development`、`Staging` 和 `Production`。 如需詳細資訊，請參閱[使用多個環境](/aspnet/core/fundamentals/environments)。
+  啟動應用程式時使用的啟動設定檔名稱 (如果有的話)。 啟動設定檔在*啟動設置.json*檔中定義，通常稱為`Development`和`Staging`。 `Production` 有關詳細資訊，請參閱[使用多個環境](/aspnet/core/fundamentals/environments)。
 
 - **`--no-build`**
 
@@ -90,7 +90,7 @@ dotnet myapp.dll
 
 - **`--no-restore`**
 
-  執行命令時，不會執行隱含的還原。
+  執行命令時，不會執行隱含還原。
 
 - **`-p|--project <PATH>`**
 
@@ -98,11 +98,11 @@ dotnet myapp.dll
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  指定要還原套件的目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 自 .NET Core 3.0 SDK 開始提供 `-r` short 選項。
+  指定要還原套件的目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 `-r`短選項可用，因為 .NET 核心 3.0 SDK。
 
 - **`-v|--verbosity <LEVEL>`**
 
-  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值是 `m`。 自 .NET Core 2.1 SDK 起提供。
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值是 `m`。 自 .NET 核心 2.1 SDK 以來可用。
 
 ## <a name="examples"></a>範例
 
@@ -118,7 +118,7 @@ dotnet myapp.dll
   dotnet run --project ./projects/proj1/proj1.csproj
   ```
 
-- 執行目前目錄中的專案 (因為已使用空白的 `--help` 選項，所以這個範例中的 `--` 引數會傳遞給應用程式)：
+- 執行目前目錄中的專案 (因為已使用空白的 `--` 選項，所以這個範例中的 `--help` 引數會傳遞給應用程式)：
 
   ```dotnetcli
   dotnet run --configuration Release -- --help

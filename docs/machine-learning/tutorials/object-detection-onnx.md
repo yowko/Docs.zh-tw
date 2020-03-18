@@ -1,5 +1,5 @@
 ---
-title: 教學課程：使用 ONNX 深度學習模型來偵測物件
+title: 教程：使用 ONNX 深度學習模型檢測物件
 description: 本教學課程會示範如何使用 ML.NET 中預先定型的 ONNX 深度學習模型來偵測影像中物件。
 author: luisquintanilla
 ms.author: luquinta
@@ -7,13 +7,13 @@ ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: 7ff9986c09e39f5c4d24f52c351db6455ff63e77
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092716"
 ---
-# <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教學課程：在 ML.NET 中使用 ONNX 偵測物件
+# <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>教程：在ML.NET中使用 ONNX 檢測物件
 
 了解如何使用 ML.NET 中預先定型的 ONNX 模型來偵測影像中物件。
 
@@ -30,7 +30,7 @@ ms.locfileid: "77092716"
 
 ## <a name="pre-requisites"></a>必要條件
 
-- 已安裝「.NET Core 跨平臺開發」工作負載的[Visual Studio 2017 15.6 版或更新](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)版本。
+- [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)安裝了".NET 核心跨平臺開發"工作負載。
 - [Microsoft.ML NuGet 套件](https://www.nuget.org/packages/Microsoft.ML/)
 - [Microsoft.ML.ImageAnalytics NuGet 套件](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Microsoft.ML.OnnxTransformer NuGet 套件](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)
@@ -43,9 +43,9 @@ ms.locfileid: "77092716"
 
 ## <a name="what-is-object-detection"></a>什麼是物件偵測？
 
-物件偵測是一種電腦視覺問題。 雖然與影像分類密切相關，但物件偵測會更仔細的執行影像分類。 物件偵測會尋找影像中實體的位置「並」進行分類。 當影像包含不同類型的多個物件時，請使用物件偵測。
+物件偵測是一種電腦視覺問題。 雖然與影像分類密切相關，但物件偵測會更仔細的執行影像分類。 物件偵測會尋找影像中實體的位置「並」__ 進行分類。 當影像包含不同類型的多個物件時，請使用物件偵測。
 
-![顯示影像分類與物件分類的螢幕擷取畫面。](./media/object-detection-onnx/img-classification-obj-detection.png)
+![顯示圖像分類與物件分類的螢幕截圖。](./media/object-detection-onnx/img-classification-obj-detection.png)
 
 物件偵測的一些使用案例包括：
 
@@ -64,9 +64,9 @@ ms.locfileid: "77092716"
 
 ### <a name="understand-the-model"></a>了解模型
 
-物件偵測是一項影像處理工作。 因此，大多數定型並用來解決此問題的深度學習模型都是 CNN。 本教學課程中使用的模型是微小的 YOLOv2 模型、更精簡的 YOLOv2 模型版本，如 Redmon 和 Fadhari 所述：「 [YOLO9000：更快、更快速、更強](https://arxiv.org/pdf/1612.08242.pdf)」。 Tiny YOLOv2 是使用 Pascal VOC 資料集所定型，由 15 個層組成，可預測 20 種不同的物件類別。 因為 Tiny YOLOv2 是一種原始 YOLOv2 模型的壓縮版本，所以它在速度和正確性間進行了取捨。 組成模型的不同層可使用如 Netron 等工具進行視覺化。 檢查模型之後，您可以觀察到所有組成神經網路層之間的連線對應，其中每個層將包含層名稱及個別輸入/輸出的維度。 用來描述模型輸入和輸出的資料結構則稱為 Tensor。 您可以把 Tensor 想成是將資料儲存在 N 個維度中的容器。 以 Tiny YOLOv2 為例，輸入層的名稱為 `image`，且它會預期維度為 `3 x 416 x 416` 的 Tensor。 輸出層的名稱則為 `grid`，它會產生維度為 `125 x 13 x 13` 的輸出 Tensor。
+物件檢測是一項影像處理任務。 因此，大多數定型並用來解決此問題的深度學習模型都是 CNN。 本教程中使用的模型是微小的YOLOv2模型，一個更緊湊的YOLOv2模型描述在論文中[："YOLO9000：更好，更快，更強"由雷德蒙和法達裡](https://arxiv.org/pdf/1612.08242.pdf)。 Tiny YOLOv2 是使用 Pascal VOC 資料集所定型，由 15 個層組成，可預測 20 種不同的物件類別。 因為 Tiny YOLOv2 是一種原始 YOLOv2 模型的壓縮版本，所以它在速度和正確性間進行了取捨。 組成模型的不同層可使用如 Netron 等工具進行視覺化。 檢查模型之後，您可以觀察到所有組成神經網路層之間的連線對應，其中每個層將包含層名稱及個別輸入/輸出的維度。 用來描述模型輸入和輸出的資料結構則稱為 Tensor。 您可以把 Tensor 想成是將資料儲存在 N 個維度中的容器。 以 Tiny YOLOv2 為例，輸入層的名稱為 `image`，且它會預期維度為 `3 x 416 x 416` 的 Tensor。 輸出層的名稱則為 `grid`，它會產生維度為 `125 x 13 x 13` 的輸出 Tensor。
 
-![將輸入層分割成隱藏層，然後輸出層](./media/object-detection-onnx/netron-model-map-layers.png)
+![輸入圖層被拆分為隱藏圖層，然後輸出圖層](./media/object-detection-onnx/netron-model-map-layers.png)
 
 YOLO 模型接受 `3(RGB) x 416px x 416px` 的影像。 模型會接受此輸入，並透過不同的層傳遞它來產生輸出。 輸出會將輸入影像分成 `13 x 13` 的格線，格線中的每個儲存格都由 `125` 個值組成。
 
@@ -74,11 +74,11 @@ YOLO 模型接受 `3(RGB) x 416px x 416px` 的影像。 模型會接受此輸入
 
 Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 ONNX 支援架構間的互通性。 這表示您可以在其中一個熱門的機器學習架構 (例如 PyTorch) 中定型模型、將它轉換成 ONNX 格式，然後在 ML.NET 等不同的架構中取用 ONNX 模型。 若要深入了解，請前往 [ONNX 網站](https://onnx.ai/)。
 
-![所使用之 ONNX 支援格式的圖表。](./media/object-detection-onnx/onnx-supported-formats.png)
+![正在使用的 ONNX 支援的格式圖。](./media/object-detection-onnx/onnx-supported-formats.png)
 
-預先定型的 Tiny YOLOv2 模型是以 ONNX 格式儲存，它是一種層的序列化表示和從這些層中所學習到模式。 在 ML.NET 中，與 ONNX 的互通性是透過 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 和 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) NuGet 套件來達成。 [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) 套件包含一系列的轉換，這些轉換會接受影像，並將影像編碼成可用來作為輸入以進行預測或定型管線的數值。 [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) 套件會利用 ONNX 執行階段載入 ONNX 模型，並用它來根據所提供的輸入進行預測。
+預先定型的 Tiny YOLOv2 模型是以 ONNX 格式儲存，它是一種層的序列化表示和從這些層中所學習到模式。 在ML.NET，與 ONNX 的互通性與[`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image)NuGet[`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer)包實現了。 該[`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image)包包含一系列轉換，這些轉換將圖像編碼為數值，可用作預測或訓練管道的輸入。 該[`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer)包利用 ONNX 運行時載入 ONNX 模型，並使用它根據提供的輸入進行預測。
 
-![ONNX 檔案到 ONNX 執行時間的資料流程。](./media/object-detection-onnx/onnx-ml-net-integration.png)
+![ONNX 檔的資料流程到 ONNX 運行時。](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
 ## <a name="set-up-the-net-core-project"></a>設定 .NET Core 專案
 
@@ -88,12 +88,12 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
 1. 建立稱為 "ObjectDetection" 的 **.NET Core 主控台應用程式**。
 
-1. 安裝「Microsoft.ML NuGet 套件」：
+1. 安裝「Microsoft.ML NuGet 套件」****：
 
-    - 在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]。
+    - 在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。
     - 選擇 [nuget.org] 作為 [套件來源]，選取 [瀏覽] 索引標籤，搜尋 **Microsoft.ML**。
-    - 選取 [安裝] 按鈕。
-    - 在 [預覽變更] 對話方塊上，選取 [確定] 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]。
+    - 選取 [安裝]**** 按鈕。
+    - 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。
     - 針對 **Microsoft.ML.ImageAnalytics** 和 **Microsoft.ML.OnnxTransformer** 重複這些步驟。
 
 ### <a name="prepare-your-data-and-pre-trained-model"></a>準備您的資料及預先定型模型
@@ -102,7 +102,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
 1. 將 `assets` 目錄複製到您的 *ObjectDetection* 專案目錄。 此目錄及其子目錄包含本教學課程所需的影像檔案 (Tiny YOLOv2 模型除外，您將會在下個步驟中下載並新增它)。
 
-1. 從 [ONNX Model Zoo](https://onnxzoo.blob.core.windows.net/models/opset_8/tiny_yolov2/tiny_yolov2.tar.gz) (ONNX 模型動物園) 下載 [Tiny YOLOv2 模型](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2)並將它解壓縮。
+1. 從 [ONNX Model Zoo](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2) (ONNX 模型動物園) 下載 [Tiny YOLOv2 模型](https://onnxzoo.blob.core.windows.net/models/opset_8/tiny_yolov2/tiny_yolov2.tar.gz)並將它解壓縮。
 
     開啟命令提示字元，然後輸入下列命令：
 
@@ -112,7 +112,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
 1. 將解壓縮後目錄中解壓縮後的 `model.onnx` 檔案複製到您 *ObjectDetection* 專案的 `assets\Model` 目錄，然後將它重新命名為 `TinyYolo2_model.onnx`。 此目錄包含本教學課程需要的模型。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下資產目錄及子目錄中的每個檔案，然後選取 [內容]。 在 [進階] 底下，將 [複製到輸出目錄] 的值變更為 [有更新時才複製]。
+1. 在 [方案總管] 中，以滑鼠右鍵按一下資產目錄及子目錄中的每個檔案，然後選取 [內容]****。 在 **"高級"** 下，將 **"複製到輸出目錄**"的值更改為 **"如果更新"，則將其更改為"複製**"。
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
@@ -122,7 +122,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
 接下來，請定義各種資產的路徑。
 
-1. 首先，請在 `GetAbsolutePath` 類別的 `Main` 方法下新增 `Program` 方法。
+1. 首先，請在 `Program` 類別的 `Main` 方法下新增 `GetAbsolutePath` 方法。
 
     [!code-csharp [GetAbsolutePath](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L66-L74)]
 
@@ -132,12 +132,12 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
 將新目錄新增到專案來儲存您的輸入資料和預測類別。
 
-在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新增資料夾]。 當新的資料夾出現在 [方案總管中] 時，請將它命名為 "DataStructures"。
+在 [方案總管]**** 中，以滑鼠右鍵按一下專案，然後選取 [新增]**** > [新增資料夾]****。 當新的資料夾出現在 [方案總管中] 時，請將它命名為 "DataStructures"。
 
 在新建立的 *DataStructures* 目錄中建立輸入資料類別。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 *DataStructures* 目錄，然後選取 [新增] > [新增項目]。
-1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *ImageNetData.cs*。 接著，選取 [新增] 按鈕。
+1. 在 [方案總管]**** 中，以滑鼠右鍵按一下 *DataStructures* 目錄，然後選取 [新增]**** > [新增項目]****。
+1. 在 [新增項目]**** 對話方塊中，選取 [類別]****，然後將 [名稱]**** 欄位變更為 *ImageNetData.cs*。 接著，選取 [新增]**** 按鈕。
 
     隨即在程式碼編輯器中開啟 *ImageNetData.cs* 檔案。 將下列 `using` 陳述式新增到 *ImageNetData.cs* 的頂端：
 
@@ -152,12 +152,12 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
     - `ImagePath` 包含儲存影像的路徑。
     - `Label` 包含檔案的名稱。
 
-    此外，`ImageNetData` 包含方法 `ReadFromFile`，它會載入儲存在指定 `imageFolder` 路徑中的多個影像檔案，並將它們當做 `ImageNetData` 物件的集合傳回。
+    此外，`ImageNetData`包含一個方法`ReadFromFile`，該方法載入存儲在指定路徑中的`imageFolder`多個影像檔，並將它們作為`ImageNetData`物件集合返回。
 
 在 *DataStructures* 目錄中建立您的預測類別。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 *DataStructures* 目錄，然後選取 [新增] > [新增項目]。
-1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *ImageNetPrediction.cs*。 接著，選取 [新增] 按鈕。
+1. 在 [方案總管]**** 中，以滑鼠右鍵按一下 *DataStructures* 目錄，然後選取 [新增]**** > [新增項目]****。
+1. 在 [新增項目]**** 對話方塊中，選取 [類別]****，然後將 [名稱]**** 欄位變更為 *ImageNetPrediction.cs*。 接著，選取 [新增]**** 按鈕。
 
     隨即在程式碼編輯器中開啟 *ImageNetPrediction.cs* 檔案。 將下列 `using` 陳述式新增到 *ImageNetPrediction.cs* 的頂端：
 
@@ -169,13 +169,13 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
     `ImageNetPrediction` 是預測資料類別，並具有下列 `float[]` 欄位：
 
-    - `PredictedLabel` 包含影像中所偵測到的每個周框方塊的維度、objectness 分數和課程機率。
+    - `PredictedLabel`包含圖像中檢測到的每個邊界框的尺寸、物件度分數和類概率。
 
 ### <a name="initialize-variables-in-main"></a>在 Main 中初始化變數
 
 [MLContext 類別](xref:Microsoft.ML.MLContext)是所有 ML.NET 作業的起點，且初始化 `mlContext` 會建立新的 ML.NET 環境，其可在模型建立工作流程物件之間共用。 就概念而言，類似於 Entity Framework 中的 `DBContext`。
 
-將下列程式碼新增到 `mlContext`Program.cs`MLContext` 中 `Main` 欄位下方的 *方法，使用* 的新執行個體初始化 `outputFolder` 變數。
+將下列程式碼新增到 *Program.cs* 中 `outputFolder` 欄位下方的 `Main` 方法，使用 `MLContext` 的新執行個體初始化 `mlContext` 變數。
 
 [!code-csharp [InitMLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L24)]
 
@@ -183,7 +183,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
 模型會將影像分成 `13 x 13` 的格線，其中每個格線儲存格都是 `32px x 32px`。 每個格線儲存格都包含 5 個可能的物件週框方塊。 週框方塊包含 25 個項目：
 
-![左側的方格範例和右邊的周框方塊範例](./media/object-detection-onnx/model-output-description.png)
+![左側的網格樣本和右側的邊界框示例](./media/object-detection-onnx/model-output-description.png)
 
 - `x` 週框方塊中心的 X 位置，相對於與其建立關聯的格線儲存格。
 - `y` 週框方塊中心的 Y 位置，相對於與其建立關聯的格線儲存格。
@@ -198,14 +198,14 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
 將新目錄新增到您的專案來整理剖析器類別組。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新增資料夾]。 當新的資料夾出現在 [方案總管] 中時，請將它命名為 "YoloParser"。
+1. 在 [方案總管]**** 中，以滑鼠右鍵按一下專案，然後選取 [新增]**** > [新增資料夾]****。 當新的資料夾出現在 [方案總管] 中時，請將它命名為 "YoloParser"。
 
 ### <a name="create-bounding-boxes-and-dimensions"></a>建立週框方塊和維度
 
 模型所輸出資料包含影像中物件的週框方塊座標及維度。 建立維度的基底類別。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 *YoloParser* 目錄，然後選取 [新增] > [新增項目]。
-1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *DimensionsBase.cs*。 接著，選取 [新增] 按鈕。
+1. 在 [方案總管]**** 中，以滑鼠右鍵按一下 *YoloParser* 目錄，然後選取 [新增]**** > [新增項目]****。
+1. 在 [新增項目]**** 對話方塊中，選取 [類別]****，然後將 [名稱]**** 欄位變更為 *DimensionsBase.cs*。 接著，選取 [新增]**** 按鈕。
 
     隨即在程式碼編輯器中開啟 *DimensionsBase.cs* 檔案。 移除所有 `using` 陳述式及現有的類別定義。
 
@@ -213,7 +213,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
     [!code-csharp [DimensionsBaseClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/DimensionsBase.cs#L3-L9)]
 
-    `DimensionsBase` 具有下列 `float` 屬性：
+    `DimensionsBase`具有以下`float`屬性：
 
     - `X` 包含物件的 X 軸位置。
     - `Y` 包含物件的 Y 軸位置。
@@ -222,14 +222,14 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
 接下來，請建立週框方塊的類別。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 *YoloParser* 目錄，然後選取 [新增] > [新增項目]。
-1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *YoloBoundingBox.cs*。 接著，選取 [新增] 按鈕。
+1. 在 [方案總管]**** 中，以滑鼠右鍵按一下 *YoloParser* 目錄，然後選取 [新增]**** > [新增項目]****。
+1. 在 [新增項目]**** 對話方塊中，選取 [類別]****，然後將 [名稱]**** 欄位變更為 *YoloBoundingBox.cs*。 接著，選取 [新增]**** 按鈕。
 
     隨即在程式碼編輯器中開啟 *YoloBoundingBox.cs* 檔案。 將下列 `using` 陳述式新增到 *YoloBoundingBox.cs* 的頂端：
 
     [!code-csharp [YoloBoundingBoxUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L1)]
 
-    在現有類別定義的正上方，加入名為 `BoundingBoxDimensions` 的新類別定義，而繼承自 `DimensionsBase` 類別，以包含個別周框方塊的維度。
+    在現有類定義正上方，添加一個稱為從`BoundingBoxDimensions``DimensionsBase`類繼承以包含相應邊界框的維度的新類定義。
 
     [!code-csharp [BoundingBoxDimClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L5)]
 
@@ -237,7 +237,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
 
-    `YoloBoundingBox` 具有下列屬性：
+    `YoloBoundingBox`具有以下屬性：
 
     - `Dimensions` 包含週框方塊的維度。
     - `Label` 包含在週框方塊內部所偵測到物件的類別。
@@ -249,18 +249,18 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 
 現在您已建立了維度和週框方塊的類別，是時候建立剖析器了。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下 *YoloParser* 目錄，然後選取 [新增] > [新增項目]。
-1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *YoloOutputParser.cs*。 接著，選取 [新增] 按鈕。
+1. 在 [方案總管]**** 中，以滑鼠右鍵按一下 *YoloParser* 目錄，然後選取 [新增]**** > [新增項目]****。
+1. 在 [新增項目]**** 對話方塊中，選取 [類別]****，然後將 [名稱]**** 欄位變更為 *YoloOutputParser.cs*。 接著，選取 [新增]**** 按鈕。
 
     隨即在程式碼編輯器中開啟 *YoloOutputParser.cs* 檔案。 將下列 `using` 陳述式新增到 *YoloOutputParser.cs* 的頂端：
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L1-L4)]
 
-    在現有的 `YoloOutputParser` 類別定義中，新增包含影像中每個儲存格維度的巢狀類別。 針對繼承自 `YoloOutputParser` 類別定義頂端 `DimensionsBase` 類別的 `CellDimensions` 類別，加入下列程式碼。
+    在現有的 `YoloOutputParser` 類別定義中，新增包含影像中每個儲存格維度的巢狀類別。 為從`YoloOutputParser`類定義頂部的`CellDimensions``DimensionsBase`類繼承的類添加以下代碼。
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L10)]
 
-1. 在 `YoloOutputParser` 類別定義中，加入下列常數和欄位。
+1. 在`YoloOutputParser`類定義中，添加以下常量和欄位。
 
     [!code-csharp [ParserVarDefinitions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L12-L21)]
 
@@ -274,15 +274,15 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
     - `CELL_HEIGHT` 是影像格線中單一儲存格的高度。
     - `channelStride` 是格線中目前儲存格的開始位置。
 
-    當模型進行預測 (也稱為評分) 時，它會將 `416px x 416px` 輸入影像分成大小為 `13 x 13` 的儲存格格線。 每個儲存格都包含 `32px x 32px`。 在每個儲存格中都有 5 個週框方塊，每個週框方塊都包含了 5 個特徵 (X、Y、高度、寬度、信賴度)。 此外，每個周框方塊都包含每個類別的機率，在此案例中為20。 因此，每個儲存格都包含 125 個資訊 (5 個特徵 + 20 個類別機率)。
+    當模型進行預測 (也稱為評分) 時，它會將 `416px x 416px` 輸入影像分成大小為 `13 x 13` 的儲存格格線。 每個儲存格都包含 `32px x 32px`。 在每個儲存格中都有 5 個週框方塊，每個週框方塊都包含了 5 個特徵 (X、Y、高度、寬度、信賴度)。 此外，每個邊界框包含每個類的概率，在這種情況下為 20。 因此，每個儲存格都包含 125 個資訊 (5 個特徵 + 20 個類別機率)。
 
 在 `channelStride` 的下方為 5 個週框方塊建立錨點清單：
 
 [!code-csharp [ParserAnchors](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L23-L26)]
 
-錨點是週框方塊的預先定義高度及寬度比例。 模型所偵測到的大多數物件或類別都具有類似比例。 這在建立週框方塊時會非常實用。 相較於預測週框方塊，預先定義維度的位移會藉由計算取得，因此可減少預測週框方塊時所需的計算。 通常這些錨點比例都會根據所使用的資料集進行計算。 在此情況下，因為資料集是已知的，而且值已預先計算，所以錨點可以硬式編碼。
+錨點是週框方塊的預先定義高度及寬度比例。 模型所偵測到的大多數物件或類別都具有類似比例。 這在建立週框方塊時會非常實用。 相較於預測週框方塊，預先定義維度的位移會藉由計算取得，因此可減少預測週框方塊時所需的計算。 通常這些錨點比例都會根據所使用的資料集進行計算。 在這種情況下，由於資料集已知且已預先計算值，因此錨點可以硬編碼。
 
-接下來，請定義模型將預測的標籤或類別。 此模型會預測20個類別，這是原始 YOLOv2 模型所預測之類別總數的子集。
+接下來，請定義模型將預測的標籤或類別。 此模型預測 20 個類，這是原始 YOLOv2 模型預測的類總數子集。
 
 請在 `anchors` 下方新增標籤清單。
 
@@ -302,7 +302,7 @@ Open Neural Network Exchange (ONNX) 是一種 AI 型的開放原始碼格式。 
 - `Softmax` 會將輸入向量正常化為機率分佈。
 - `GetOffset` 會將單一維度模型輸出中項目對應到 `125 x 13 x 13` Tensor 中相對應的位置。
 - `ExtractBoundingBoxes` 會使用模型輸出的 `GetOffset` 方法擷取週框方塊維度。
-- `GetConfidence` 會解壓縮信賴值，以陳述如何確保模型偵測到物件，並使用 `Sigmoid` 函數將它轉換成百分比。
+- `GetConfidence`提取置信度值，指出模型是否檢測到物件，並使用`Sigmoid`函數將其轉換為百分比。
 - `MapBoundingBoxToCell` 會使用週框方塊維度，並將它們對應到影像內的個別儲存格。
 - `ExtractClasses` 會使用 `GetOffset` 方法從模型輸出擷取週框方塊的類別預測，並使用 `Softmax` 方法將它們轉換成機率分佈。
 - `GetTopResult` 會從預測類別清單選取機率最高的類別。
@@ -384,7 +384,7 @@ for (int row = 0; row < ROW_COUNT; row++)
 
 ### <a name="filter-overlapping-boxes"></a>篩選重疊方塊
 
-現在您已從模型輸出擷取所有信賴度較高的週框方塊，您仍需要進行額外篩選才能移除重疊的影像。 在 `FilterBoundingBoxes` 方法下方新增稱為 `ParseOutputs` 的方法：
+現在您已從模型輸出擷取所有信賴度較高的週框方塊，您仍需要進行額外篩選才能移除重疊的影像。 在 `ParseOutputs` 方法下方新增稱為 `FilterBoundingBoxes` 的方法：
 
 ```csharp
 public IList<YoloBoundingBox> FilterBoundingBoxes(IList<YoloBoundingBox> boxes, int limit, float threshold)
@@ -423,7 +423,7 @@ if (isActiveBoxes[i])
 }
 ```
 
-若可以進行處理，請將週框方塊新增到結果清單。 如果結果超過要解壓縮的指定方塊限制，請中斷迴圈。 在 if 陳述式中新增下列程式碼。
+若可以進行處理，請將週框方塊新增到結果清單。 如果結果超過要提取的框的指定限制，則從迴圈中斷開。 在 if 陳述式中新增下列程式碼。
 
 [!code-csharp [AddFirstBBoxToResults](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L219-L223)]
 
@@ -436,7 +436,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 }
 ```
 
-與第一個方塊相似，若相鄰的方塊已為使用中或是準備好進行處理，請使用 `IntersectionOverUnion` 方法來檢查第一個方塊和第二個方塊是否超過指定的閾值。 將下列程式碼新增至最內層的 for 迴圈。
+與第一個方塊相似，若相鄰的方塊已為使用中或是準備好進行處理，請使用 `IntersectionOverUnion` 方法來檢查第一個方塊和第二個方塊是否超過指定的閾值。 將以下代碼添加到最內的要迴圈。
 
 [!code-csharp [IOUBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L227-L239)]
 
@@ -454,8 +454,8 @@ for (var j = i + 1; j < boxes.Count; j++)
 
 與後續處理相似，評分步驟中也有幾個步驟。 為了協助處理，請將包含評分邏輯的類別新增至專案。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選取 [新增] > [新項目]。
-1. 在 [新增項目] 對話方塊中，選取 [類別]，然後將 [名稱] 欄位變更為 *OnnxModelScorer.cs*。 接著，選取 [新增] 按鈕。
+1. 在 [方案總管]**** 中，以滑鼠右鍵按一下專案，然後選取 [新增]**** > [新項目]****。
+1. 在 [新增項目]**** 對話方塊中，選取 [類別]****，然後將 [名稱]**** 欄位變更為 *OnnxModelScorer.cs*。 接著，選取 [新增]**** 按鈕。
 
     隨即在程式碼編輯器中開啟 *OnnxModelScorer.cs* 檔案。 將下列 `using` 陳述式新增至 *OnnxModelScorer.cs* 的頂端：
 
@@ -473,11 +473,11 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     [!code-csharp [ImageNetSettingStruct](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L26-L30)]
 
-    之後，建立另一個名為 `TinyYoloModelSettings` 的結構，其中包含模型的輸入和輸出層的名稱。 若要視覺化模型輸入和輸出層的名稱，您可以使用 [Netron](https://github.com/lutzroeder/netron) 等工具。
+    之後，創建另一個結構，該`TinyYoloModelSettings`結構稱為包含模型的輸入和輸出層的名稱。 若要視覺化模型輸入和輸出層的名稱，您可以使用 [Netron](https://github.com/lutzroeder/netron) 等工具。
 
     [!code-csharp [YoloSettingsStruct](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L32-L43)]
 
-    接下來，請建立用來評分的第一組方法。 在您的 `LoadModel` 類別中建立 `OnnxModelScorer` 方法。
+    接下來，請建立用來評分的第一組方法。 在您的 `OnnxModelScorer` 類別中建立 `LoadModel` 方法。
 
     ```csharp
     private ITransformer LoadModel(string modelLocation)
@@ -490,26 +490,26 @@ for (var j = i + 1; j < boxes.Count; j++)
 
     [!code-csharp [LoadModelLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L47-L49)]
 
-    ML.NET 管線必須知道呼叫 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 方法時於其上運作所的資料結構描述。 在此案例中，我們會使用與定型相似的處理過程。 但是，由於實際上不會進行定型，因此我們也可以使用空白的 [`IDataView`](xref:Microsoft.ML.IDataView)。 從空白清單為管線建立新的 [`IDataView`](xref:Microsoft.ML.IDataView)。
+    ML.NET管道需要知道在調用[`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*)方法時要操作的資料架構。 在此案例中，我們會使用與定型相似的處理過程。 但是，由於沒有實際訓練發生，因此使用空[`IDataView`](xref:Microsoft.ML.IDataView)培訓是可以接受的。 從空清單中[`IDataView`](xref:Microsoft.ML.IDataView)為管道創建新管道。
 
     [!code-csharp [LoadEmptyIDV](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L52)]
 
     在其下方定義管線。 管線會由四個轉換組成。
 
-    - [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*) 會將影像作為點陣圖載入。
-    - [`ResizeImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*) 會將影像的大小重新調整為指定大小 (在此案例中為 `416 x 416`)。
-    - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*) 會將影像的像素表示法從點陣圖變更為數值向量。
-    - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*) 會載入 ONNX 模型並用它來對提供的資料進行評分。
+    - [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*)將圖像載入為點陣圖。
+    - [`ResizeImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.ResizeImages*)將圖像重新縮放為指定的大小（在本例中為`416 x 416`）。
+    - [`ExtractPixels`](xref:Microsoft.ML.ImageEstimatorsCatalog.ExtractPixels*)將圖像的圖元表示形式從點陣圖更改為數字向量。
+    - [`ApplyOnnxModel`](xref:Microsoft.ML.OnnxCatalog.ApplyOnnxModel*)載入 ONNX 模型，並用它來對提供的資料進行評分。
 
-    在 `LoadModel` 變數下方的 `data` 方法中定義您的管線。
+    在 `data` 變數下方的 `LoadModel` 方法中定義您的管線。
 
     [!code-csharp [ScoringPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L55-L58)]
 
-    現在是時候具現化模型以進行評分了。 請在管線上呼叫 [`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*) 方法並傳回它以進行更進一步的處理。
+    現在是時候具現化模型以進行評分了。 調用管道[`Fit`](xref:Microsoft.ML.IEstimator%601.Fit*)上的方法並返回它進行進一步處理。
 
     [!code-csharp [FitReturnModel](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L61-L63)]
 
-載入模型後，便可以用它來進行預測。 若要輔助該程序，請在 `PredictDataUsingModel` 方法的下方建立稱為 `LoadModel` 的方法。
+載入模型後，便可以用它來進行預測。 若要輔助該程序，請在 `LoadModel` 方法的下方建立稱為 `PredictDataUsingModel` 的方法。
 
 ```csharp
 private IEnumerable<float[]> PredictDataUsingModel(IDataView testData, ITransformer model)
@@ -522,7 +522,7 @@ private IEnumerable<float[]> PredictDataUsingModel(IDataView testData, ITransfor
 
 [!code-csharp [PredictDataLog](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L68-L71)]
 
-然後，請使用 [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) 方法來對資料進行評分。
+然後，使用[`Transform`](xref:Microsoft.ML.ITransformer.Transform*)方法對資料進行評分。
 
 [!code-csharp [ScoreImages](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L73)]
 
@@ -544,7 +544,7 @@ private IEnumerable<float[]> PredictDataUsingModel(IDataView testData, ITransfor
 
 ### <a name="score-and-parse-model-outputs"></a>對模型輸出進行評分和剖析
 
-請在您 `Main`Program.cs*類別的* 方法中，新增一個 try-catch 陳述式。
+請在您 *Program.cs* 類別的 `Main` 方法中，新增一個 try-catch 陳述式。
 
 ```csharp
 try
@@ -557,7 +557,7 @@ catch (Exception ex)
 }
 ```
 
-在 `try` 區塊中，開始實作物件偵測邏輯。 首先，請將資料載入 [`IDataView`](xref:Microsoft.ML.IDataView)。
+在 `try` 區塊中，開始實作物件偵測邏輯。 首先，將資料載入到 中[`IDataView`](xref:Microsoft.ML.IDataView)。
 
 [!code-csharp [LoadData](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L29-L30)]
 
@@ -573,7 +573,7 @@ catch (Exception ex)
 
 ### <a name="visualize-predictions"></a>將預測視覺化
 
-在模型對影像進行評分且輸出處理完畢後，必須在影像上繪製週框方塊。 若要執行此操作，請在 `DrawBoundingBox`Program.cs`GetAbsolutePath` 的 *方法下方新增稱為* 的方法。
+在模型對影像進行評分且輸出處理完畢後，必須在影像上繪製週框方塊。 若要執行此操作，請在 *Program.cs* 的 `GetAbsolutePath` 方法下方新增稱為 `DrawBoundingBox` 的方法。
 
 ```csharp
 private static void DrawBoundingBox(string inputImageLocation, string outputImageLocation, string imageName, IList<YoloBoundingBox> filteredBoundingBoxes)
@@ -603,11 +603,11 @@ foreach (var box in filteredBoundingBoxes)
 
 [!code-csharp [ScaleImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L92-L95)]
 
-然後，定義將出現在每個周框方塊上方的文字模板。 文字會包含個別週框方塊內部物件的類別，以及其信賴度。
+然後，為每個邊界框上方顯示的文本定義一個範本。 文字會包含個別週框方塊內部物件的類別，以及其信賴度。
 
 [!code-csharp [DefineBBoxText](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L98)]
 
-為了在影像上進行繪製，請將它轉換成 [`Graphics`](xref:System.Drawing.Graphics) 物件。
+為了在圖像上繪製，將其轉換為[`Graphics`](xref:System.Drawing.Graphics)物件。
 
 ```csharp
 using (Graphics thumbnailGraphic = Graphics.FromImage(image))
@@ -616,7 +616,7 @@ using (Graphics thumbnailGraphic = Graphics.FromImage(image))
 }
 ```
 
-在 `using` 程式碼區塊內，調整圖形的 [`Graphics`](xref:System.Drawing.Graphics) 物件設定。
+在`using`代碼塊內，調整圖形[`Graphics`](xref:System.Drawing.Graphics)的物件設置。
 
 [!code-csharp [TuneGraphicSettings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L102-L104)]
 
@@ -624,11 +624,11 @@ using (Graphics thumbnailGraphic = Graphics.FromImage(image))
 
 [!code-csharp [SetColorOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L106-L114)]
 
-使用 [`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*) 方法建立並填滿週框方塊上方的矩形，以包含文字。 這可協助提高文字的對比並改善可讀性。
+在邊界框上方創建和填充矩形，以包含使用 方法的文本[`FillRectangle`](xref:System.Drawing.Graphics.FillRectangle*)。 這可協助提高文字的對比並改善可讀性。
 
 [!code-csharp [DrawTextBackground](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L117)]
 
-接著，使用 [`DrawString`](xref:System.Drawing.Graphics.DrawString*) 和 [`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*) 方法在影像中繪製文字和週框方塊。
+然後，使用[`DrawString`](xref:System.Drawing.Graphics.DrawString*)和[`DrawRectangle`](xref:System.Drawing.Graphics.DrawRectangle*)方法繪製圖像上的文本和邊界框。
 
 [!code-csharp [DrawClassAndBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L118-L121)]
 
@@ -636,7 +636,7 @@ using (Graphics thumbnailGraphic = Graphics.FromImage(image))
 
 [!code-csharp [SaveImage](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L125-L130)]
 
-若要有關應用程式確實在執行階段期間進行預測的額外意見反應，請在 `LogDetectedObjects`Program.cs`DrawBoundingBox` 檔案的 *方法下方新增稱為* 的方法，將偵測到的物件輸出到主控台。
+若要有關應用程式確實在執行階段期間進行預測的額外意見反應，請在 *Program.cs* 檔案的 `DrawBoundingBox` 方法下方新增稱為 `LogDetectedObjects` 的方法，將偵測到的物件輸出到主控台。
 
 [!code-csharp [LogOutputs](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/Program.cs#L133-L143)]
 
@@ -703,11 +703,11 @@ person and its Confidence score: 0.5551759
 
 若要查看包含週框方塊的影像，請巡覽至 `assets/images/output/` 目錄。 以下是其中一個經處理影像的範例。
 
-![餐費室的範例處理影像](./media/object-detection-onnx/dinning-room-table-chairs.png)
+![餐廳的樣本處理圖像](./media/object-detection-onnx/dinning-room-table-chairs.png)
 
 恭喜！ 您已透過在 ML.NET 中重複使用已預先定型的 `ONNX` 模型，成功建置出可用來偵測物件的機器學習模型。
 
-您可以在[dotnet/machinelearning 範例](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)存放庫中找到本教學課程的原始程式碼。
+您可以在[dotnet/機器學習示例](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx)存儲庫中找到本教程的原始程式碼。
 
 在本教學課程中，您已了解如何：
 > [!div class="checklist"]

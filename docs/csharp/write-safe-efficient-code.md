@@ -5,28 +5,28 @@ ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
 ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78239972"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>撰寫安全且有效率的 C# 程式碼
 
 C# 中的新功能可讓您撰寫可驗證的安全程式碼，取得更佳的效能。 若您小心套用這些技術，則需要不安全程式碼的案例將減少。 這些功能可讓使用實值型別參考作為方法引數和方法傳回值的過程變得更為容易。 當以安全的方式執行時，這些技術可最小化複製實值型別的次數。 透過使用實值型別，您可以最小化傳遞的配置數及記憶體回收數。
 
-本文中的許多範例程式碼都使用了 C# 7.2 新增功能。 若要使用這些功能，您必須設定您的專案，以使用 C# 7.2 或更新版本。 如需設定語言版本的詳細資訊，請參閱[設定語言版本](language-reference/configure-language-version.md)。
+本文中的許多範例程式碼都使用了 C# 7.2 新增功能。 若要使用這些功能，您必須設定您的專案，以使用 C# 7.2 或更新版本。 有關設置語言版本的詳細資訊，請參閱[配置語言版本](language-reference/configure-language-version.md)。
 
 本文聚焦於高效率資源管理的技術。 使用實值型別的一個優點是它們通常可避免堆積配置。 相對地，缺點則是它們是以實值複製。 這種兩難的情況使得最佳化針對大量資料進行運作的演算法，變得更加困難。 C# 7.2 中新的語言功能提供一項機制，可讓您使用實值型別參考來撰寫安全且有效率的程式碼。 若能善用這些功能，即可同時最小化配置及複製作業。 本文會探討這些新功能。
 
 本文聚焦於下列資源管理技術：
 
-- 宣告 [`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example) 來表達型別為**固定**，並可讓編譯器在使用 [`in`](language-reference/keywords/in-parameter-modifier.md) 參數時儲存複本。
-- 如果類型不可為固定，請宣告 `struct` 成員 `readonly`，以指出該成員不會修改狀態。
-- 當傳回值為大於 [ 的 `ref readonly`，且儲存體存留期大於傳回值的方法時，使用 ](language-reference/keywords/ref.md#reference-return-values)`struct`<xref:System.IntPtr.Size?displayProperty=nameWithType> 傳回。
+- 聲明[`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example)表示類型不**可變**，並使編譯器能夠在使用[`in`](language-reference/keywords/in-parameter-modifier.md)參數時保存副本。
+- 如果類型不能不可變，請聲明`struct`成員`readonly`以指示成員不修改狀態。
+- 當[`ref readonly`](language-reference/keywords/ref.md#reference-return-values)傳回值`struct`大於<xref:System.IntPtr.Size?displayProperty=nameWithType>並且存儲存留期大於傳回值的方法時，請使用返回。
 - 當 `readonly struct` 的大小大於 <xref:System.IntPtr.Size?displayProperty=nameWithType> 時，基於效能原因，您應將它作為 `in` 參數傳遞。
-- 絕對不要傳遞 `struct` 做為 `in` 參數，除非它是以 `readonly` 修飾詞進行宣告，或方法只呼叫結構的 `readonly` 成員。 違反本指引可能會對效能造成負面影響，而且可能會導致不明確的行為。
-- 使用 [`ref struct`](language-reference/keywords/ref.md#ref-struct-types) 或 `readonly ref struct` (例如 <xref:System.Span%601> 或 <xref:System.ReadOnlySpan%601>) 來將記憶體作為位元組序列使用。
+- 除非使用`readonly`修改`struct`器聲明`in`參數或方法僅`readonly`調用結構的成員，否則切勿將 傳遞為參數。 違反本指南可能會對性能產生負面影響，並可能導致模糊行為。
+- 使用[`ref struct`](language-reference/keywords/ref.md#ref-struct-types)或`readonly ref struct`等<xref:System.Span%601>或<xref:System.ReadOnlySpan%601>將記憶體用作位元組序列。
 
 這些技術會強迫您考慮在**參考**及**實值**這兩個競爭目標之間取得平衡。 [參考型別](programming-guide/types/index.md#reference-types)的變數會保留記憶體位置的參考。 [實值型別](programming-guide/types/index.md#value-types)的變數則會直接包含其值。 這些差異凸顯管理記憶體資源時關鍵的不同點。 **實值型別**通常會在傳遞至方法，或是從方法傳回時複製。 此行為包含在呼叫實值型別成員時，複製 `this` 的值。 複製成本與型別的大小相關。 **參考型別**則配置在受控堆積上。 每個新物件都需要新的配置，且之後都必須進行回收。 這些作業都需要時間。 參考會在參考型別作為方法的引數或從方法傳回時複製。
 
@@ -45,7 +45,7 @@ public struct Point3D
 
 ## <a name="declare-readonly-structs-for-immutable-value-types"></a>宣告固定實值型別的唯讀結構
 
-使用 `struct` 修飾詞宣告 `readonly`，通知編譯器您的意圖是要建立固定型別。 編譯器會實行包含下列規則的設計決策：
+使用 `readonly` 修飾詞宣告 `struct`，通知編譯器您的意圖是要建立固定型別。 編譯器會實行包含下列規則的設計決策：
 
 - 所有欄位成員都必須是 `readonly`
 - 所有屬性都必須是唯讀屬性，包含自動實作的屬性。
@@ -70,9 +70,9 @@ readonly public struct ReadonlyPoint3D
 
 每當您的設計意圖是要建立固定實值型別時，請遵循此建議。 任何效能上的改善都會帶來效益。 `readonly struct` 明確表達您的設計意圖。
 
-## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>當結構不能為不可變時，宣告 readonly 成員
+## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>當結構不能不可變時，聲明唯讀成員
 
-在C# 8.0 和更新版本中，當結構類型可變動時，您應該宣告不會導致 `readonly`變動的成員。 例如，下列是3D 點結構的可變變化：
+在 C# 8.0 及更高版本中，當結構類型是可變的時，應聲明不導致突變的成員為`readonly`。 例如，以下是 3D 點結構的可變變體：
 
 ```csharp
 public struct Point3D
@@ -111,9 +111,9 @@ public struct Point3D
 }
 ```
 
-前面的範例會顯示您可以套用 `readonly` 修飾詞的許多位置：方法、屬性和屬性存取子。 如果您使用自動執行的屬性，編譯器會將 `readonly` 修飾詞加入至讀寫屬性的 `get` 存取子。 編譯器會針對只有 `get` 存取子的屬性，將 `readonly` 修飾詞加入至自動執行的屬性宣告。
+前面的示例顯示了可以應用`readonly`修改器的許多位置：方法、屬性和屬性訪問器。 如果使用自動實現的屬性，編譯器將`readonly`修改器添加到`get`讀取寫入屬性的修飾器。 編譯器將`readonly`修改器添加到僅具有`get`訪問器的屬性的自動實現屬性聲明中。
 
-將 `readonly` 修飾詞新增至不會改變狀態的成員，會提供兩個相關的優點。 首先，編譯器會強制執行您的意圖。 該成員無法改變結構的狀態，也無法存取也不會標示 `readonly`的成員。 第二，當存取 `readonly` 成員時，編譯器不會建立 `in` 參數的防禦性複本。 編譯器可以安全地進行這項優化，因為它可確保 `readonly` 成員不會修改 `struct`。
+將`readonly`修改器添加到不突變狀態的成員提供了兩個相關好處。 首先，編譯器強制執行您的意圖。 該成員無法更改結構的狀態，也不能訪問未標記`readonly`的成員。 其次，編譯器在訪問`in``readonly`成員時不會創建參數的防禦性副本。 編譯器可以安全地進行此優化，因為它保證`struct``readonly`成員不會修改 。
 
 ## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>在可能的情況下，針對大型結構使用 `ref readonly return` 陳述式
 
@@ -163,7 +163,7 @@ public struct Point3D
 編譯器會強制呼叫者不可修改該參考。 若嘗試直接指派到值，則會產生編譯時間錯誤。 但是，編譯器無法得知是否有任何成員方法修改結構的狀態。
 為確保物件未經修改，編譯器會建立複本，並使用該複本呼叫成員參考。 任何修改皆僅會修改防禦複本。
 
-## <a name="apply-the-in-modifier-to-readonly-struct-parameters-larger-than-systemintptrsize"></a>將 `in` 修飾詞套用到大於 `readonly struct` 的 `System.IntPtr.Size` 參數
+## <a name="apply-the-in-modifier-to-readonly-struct-parameters-larger-than-systemintptrsize"></a>將 `in` 修飾詞套用到大於 `System.IntPtr.Size` 的 `readonly struct` 參數
 
 `in` 關鍵字會補充現有的 `ref` 和 `out` 關鍵字，以參考型式傳遞引數。 `in` 關鍵字會指定以參考型式傳遞引數，但呼叫的方法不會修改值。
 
@@ -172,7 +172,7 @@ public struct Point3D
 
 - `out`：此方法會設定用作為此參數的引數值。
 - `ref`：此方法會設定用作為此參數的引數值。
-- `in`：這個方法不會修改當做此參數使用之引數的值。
+- `in`：此方法不修改用作此參數的參數的值。
 
 當您新增 `in` 修飾詞來利用參考傳遞引數時，即表明您的設計目的是利用參考傳遞引數，來避免不必要的複製。 您不打算修改用來作為該引數的物件。
 
@@ -192,7 +192,7 @@ public struct Point3D
 
 [!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
 
-編譯器強制 `in` 引數唯讀性質的方式有數種。  首先，呼叫的方法不可直接指派到 `in` 參數。 當該值為 `in` 類型時，該方法不可直接指派到 `struct` 參數的任何欄位。 此外，您也無法使用 `in` 或 `ref` 修飾詞，將 `out` 參數傳遞至任何方法。
+編譯器強制 `in` 引數唯讀性質的方式有數種。  首先，呼叫的方法不可直接指派到 `in` 參數。 當該值為 `struct` 類型時，該方法不可直接指派到 `in` 參數的任何欄位。 此外，您也無法使用 `ref` 或 `out` 修飾詞，將 `in` 參數傳遞至任何方法。
 這些規則適用於所有 `in` 參數的欄位，提供的欄位為 `struct` 類型，且參數也為 `struct` 類型。 實際上，這些規則適用於成員存取的多個層級，提供所有成員存取層級的類型為 `structs`。
 編譯器會強制 `struct` 類型作為 `in` 引數傳遞，且其 `struct` 成員在作為引數對其他方法使用時為唯讀變數。
 
@@ -220,23 +220,23 @@ public struct Point3D
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-`Point3D` 結構「不是」唯讀結構。 此方法的主體中有六個不同屬性存取呼叫。 在第一次檢查中，您可能會認為這些存取都是安全的。 畢竟，`get` 存取子應該不會修改物件的狀態。 但是沒有任何語言規則強制該行為。 它只是一個常見的慣例。 任何型別都可實作修改內部狀態的 `get` 存取子。 若沒有任何語言保證，編譯器必須先建立引數的暫時複本，再呼叫任何成員。 暫存位置會在堆疊上建立，引數的值則會複製到暫存位置，而該值則會針對每個成員存取，作為 `this` 引數複製到堆疊。 在許多情況下，當引數型別並非 `readonly struct` 時，這些複本會危害效能，使得以值型式傳遞的速度高於以唯讀參考型式傳遞。
+`Point3D` 結構「不是」** 唯讀結構。 此方法的主體中有六個不同屬性存取呼叫。 在第一次檢查中，您可能會認為這些存取都是安全的。 畢竟，`get` 存取子應該不會修改物件的狀態。 但是沒有任何語言規則強制該行為。 它只是一個常見的慣例。 任何型別都可實作修改內部狀態的 `get` 存取子。 若沒有任何語言保證，編譯器必須先建立引數的暫時複本，再呼叫任何成員。 暫存位置會在堆疊上建立，引數的值則會複製到暫存位置，而該值則會針對每個成員存取，作為 `this` 引數複製到堆疊。 在許多情況下，當引數型別並非 `readonly struct` 時，這些複本會危害效能，使得以值型式傳遞的速度高於以唯讀參考型式傳遞。
 
-相反地，如果距離計算使用不可變的結構，`ReadonlyPoint3D`，就不需要暫存物件：
+相反，如果距離計算使用不可變結構，`ReadonlyPoint3D`則不需要 臨時物件：
 
 [!code-csharp[readonlyInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
-當您呼叫 `readonly struct`的成員時，編譯器會產生更有效率的程式碼： `this` 參考，而不是接收者複本，一律是以傳址方式傳遞至成員方法的 `in` 參數。 當您使用 `readonly struct` 作為 `in` 引數時，這項最佳化可避免進行複製。
+當您調用`readonly struct`：`this`的成員時，編譯器會生成更高效的代碼，引用（而不是接收方的副本）始終是通過引用成員方法`in`傳遞的參數。 當您使用 `readonly struct` 作為 `in` 引數時，這項最佳化可避免進行複製。
 
-您不應該傳遞可為 null 的實值型別做為 `in` 引數。 <xref:System.Nullable%601> 類型未宣告為唯讀結構。 這表示，編譯器編譯器必須針對使用參數宣告上 `in` 修飾詞傳遞給方法之任何可為 Null 的實值型別引數來產生防禦性複本。
+不應將空數值型別作為參數傳遞`in`。 類型<xref:System.Nullable%601>未聲明為唯讀結構。 這表示，編譯器編譯器必須針對使用參數宣告上 `in` 修飾詞傳遞給方法之任何可為 Null 的實值型別引數來產生防禦性複本。
 
-您可以在 GitHub 上的[範例存放庫](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark)中查看使用[BenchmarkDotNet](https://www.nuget.org/packages/BenchmarkDotNet/)來示範效能差異的範例程式。 它會比較以值型式和以參考型式傳遞可變動結構，以及以值型式和以參考型式傳遞固定結構的差異。 使用固定結構並以參考型式傳遞的速度最快。
+您可以在 GitHub 上的[示例存儲庫](https://github.com/dotnet/samples/tree/master/csharp/safe-efficient-code/benchmark)中看到使用[基準DotNet](https://www.nuget.org/packages/BenchmarkDotNet/)演示性能差異的示常式序。 它會比較以值型式和以參考型式傳遞可變動結構，以及以值型式和以參考型式傳遞固定結構的差異。 使用固定結構並以參考型式傳遞的速度最快。
 
 ## <a name="use-ref-struct-types-to-work-with-blocks-or-memory-on-a-single-stack-frame"></a>使用 `ref struct` 型別來使用單一堆疊框架上的區塊或記憶體
 
 另一項相關語言功能是可宣告實值型別必須限制在單一堆疊框架的能力。 此限制可讓編譯器進行幾項最佳化。 此功能的主要動機是 <xref:System.Span%601> 及相關的結構。 您可以透過使用新的及已更新 .NET API，利用 <xref:System.Span%601> 型別以透過這些增強功能來改善效能。
 
-當您使用以 [`stackalloc`](language-reference/operators/stackalloc.md) 建立的記憶體，或使用來自 Interop API 的記憶體時，可能會有類似需求。 您可依照那些需求定義自己的 `ref struct` 類型。
+您可能有類似的要求，使用使用或使用[`stackalloc`](language-reference/operators/stackalloc.md)來自互通 API 的記憶體時創建的記憶體。 您可依照那些需求定義自己的 `ref struct` 類型。
 
 ## <a name="readonly-ref-struct-type"></a>`readonly ref struct` 類型
 

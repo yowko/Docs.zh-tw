@@ -4,10 +4,10 @@ description: 周遊、查詢和查核語法樹狀結構的簡介。
 ms.date: 02/05/2018
 ms.custom: mvc
 ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78240506"
 ---
 # <a name="get-started-with-syntax-analysis"></a>開始使用語法分析
@@ -51,12 +51,12 @@ Syntax API 會建立根代表編譯單位的樹狀結構。 樹狀結構中的�
 
 語法樹狀結構的四個主要建置組塊是：
 
-* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> 類別，代表整個剖析樹狀結構的執行個體。 <xref:Microsoft.CodeAnalysis.SyntaxTree> 是具有語言特定衍生的抽象類別。 您可以使用 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> （或 <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>）類別的 parse 方法來剖析或 Visual Basic 中C#的文字。
+* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> 類別，代表整個剖析樹狀結構的執行個體。 <xref:Microsoft.CodeAnalysis.SyntaxTree> 是具有語言特定衍生的抽象類別。 您可以使用<xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType>（或<xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>） 類的解析方法在 C# 或 Visual Basic 中解析文本。
 * <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> 類別，代表語法建構 (例如宣告、陳述式、子句和運算式) 的執行個體。
 * <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType> 結構，代表個別關鍵字、識別碼、運算子或標點符號。
 * 最後是 <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> 結構，代表語法無意義的資訊位元，例如權杖、前置處理指示詞與註解之間的空白字元。
 
-邏輯、權杖和節點會以階層方式組成來形成樹狀結構，以完全代表 Visual Basic 或 C# 程式碼片段中的所有資訊。 您可以使用 [Syntax Visualizer] (結構視覺化檢視) 視窗來查看這個結構。 在 Visual Studio 中，選擇 [檢視] > [Other Windows] (其他視窗) > [Syntax Visualizer] (結構視覺化檢視)。 例如，使用 [Syntax Visualizer] (結構視覺化檢視) 所檢查的先前 C# 原始程式檔就像下圖：
+邏輯、權杖和節點會以階層方式組成來形成樹狀結構，以完全代表 Visual Basic 或 C# 程式碼片段中的所有資訊。 您可以使用 [Syntax Visualizer] (結構視覺化檢視)**** 視窗來查看這個結構。 在視覺化工作室中，選擇 **"查看** > **其他 Windows** > **語法視覺化檢視**"。 例如，使用 [Syntax Visualizer] (結構視覺化檢視)**** 所檢查的先前 C# 原始程式檔就像下圖：
 
 **SyntaxNode**: Blue | **SyntaxToken**: Green | **SyntaxTrivia**: Red ![C# Code File](media/walkthrough-csharp-syntax-figure1.png)
 
@@ -77,8 +77,8 @@ Syntax API 會建立根代表編譯單位的樹狀結構。 樹狀結構中的�
 
 建立新的 C# **獨立程式碼分析工具**專案：
 
-* 在 Visual Studio 中，選擇 [檔案] > [新增] > [專案] 來顯示 [新增專案] 對話方塊。
-* 在 **Visual C#**  > **擴充性**下，選擇 [獨立程式碼分析工具]。
+* 在視覺化工作室中，選擇 **"檔** > **新專案** > **Project**"以顯示新專案對話方塊。
+* 在**視覺化 C#** > **可擴充性**下，選擇**獨立代碼分析工具**。
 * 將專案命名為 "**SyntaxTreeManualTraversal**"，然後按一下 [確定]。
 
 您要分析先前顯示的基本 "Hello World!" 程式。
@@ -86,7 +86,7 @@ Syntax API 會建立根代表編譯單位的樹狀結構。 樹狀結構中的�
 
 [!code-csharp[Declare the program text](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
-接下來，新增下列程式碼來建置  **常數中程式碼文字的**語法樹狀結構`programText`。  請將下列這一行新增到您的 `Main` 方法：
+接下來，新增下列程式碼來建置 `programText` 常數中程式碼文字的**語法樹狀結構**。  請將下列這一行新增到您的 `Main` 方法：
 
 [!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
@@ -156,7 +156,7 @@ The body text of the Main method follows:
 
 您通常會想要尋找語法樹狀結構中特定類型的所有節點，例如，檔案中的每個屬性宣告。 擴充 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker?displayProperty=nameWithType> 類別並覆寫 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitPropertyDeclaration(Microsoft.CodeAnalysis.CSharp.Syntax.PropertyDeclarationSyntax)> 方法，即可處理語法樹狀結構中的每個屬性宣告，而不需要事先知道其結構。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 是特定類型的 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor>，以遞迴瀏覽節點和其每個子系。
 
-此範例會實作 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>，以檢查語法樹狀結構。 它會收集發現到且未匯入 `using` 命名空間的 `System` 指示詞。
+此範例會實作 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker>，以檢查語法樹狀結構。 它會收集發現到且未匯入 `System` 命名空間的 `using` 指示詞。
 
 建立新的 C# **獨立程式碼分析工具**專案；將它命名為 "**SyntaxWalker**"。
 
@@ -172,9 +172,9 @@ The body text of the Main method follows:
 
 [!code-csharp[Create the Syntax tree and access the root](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
-接著，建立新類別。 在 Visual Studio 中，選擇 [專案] > [新增項目]。 在 [新增項目] 對話方塊中，將 *UsingCollector.cs* 鍵入為檔案名稱。
+接著，建立新類別。 在視覺化工作室中，選擇 **"專案** > **添加新專案**"。 在 [新增項目]**** 對話方塊中，將 *UsingCollector.cs* 鍵入為檔案名稱。
 
-您在 `using` 類別中實作 `UsingCollector` 訪客功能。 從讓 `UsingCollector` 類別衍生自 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 開始。
+您在 `UsingCollector` 類別中實作 `using` 訪客功能。 從讓 `UsingCollector` 類別衍生自 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> 開始。
 
 [!code-csharp[Declare the base class for the using collector](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 

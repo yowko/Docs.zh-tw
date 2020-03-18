@@ -1,15 +1,15 @@
 ---
-title: 如何尋找同輩節點（XPath-LINQ to XML）（C#）
+title: 如何查找同級節點（XPath-LINQ 到 XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: e2c73d10-a8ca-4e11-b5aa-d055de285874
-ms.openlocfilehash: 24bad37151f3d63b03ec28c0fbea95bef02ab614
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: c201dcea5e6d148ae0998eb27d4e42df5b15309f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141020"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169203"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>如何尋找同輩節點（XPath-LINQ to XML）（C#）
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-c"></a>如何查找同級節點（XPath-LINQ 到 XML）（C#）
 您可能想要尋找具有特定名稱之節點的所有同層級。 如果內容節點也有特定的名稱，所產生的集合可能包含內容節點。  
   
  XPath 運算式為：  
@@ -24,7 +24,7 @@ ms.locfileid: "74141020"
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
   
-XElement book =   
+XElement book =
     books  
     .Root  
     .Elements("Book")  
@@ -59,7 +59,7 @@ Results are identical
   <Genre>Computer</Genre>  
   <Price>44.95</Price>  
   <PublishDate>2000-10-01</PublishDate>  
-  <Description>An in-depth look at creating applications   
+  <Description>An in-depth look at creating applications
       with XML.</Description>  
 </Book>  
 <Book id="bk102">  
@@ -68,8 +68,8 @@ Results are identical
   <Genre>Fantasy</Genre>  
   <Price>5.95</Price>  
   <PublishDate>2000-12-16</PublishDate>  
-  <Description>A former architect battles corporate zombies,   
-      an evil sorceress, and her own childhood to become queen   
+  <Description>A former architect battles corporate zombies,
+      an evil sorceress, and her own childhood to become queen
       of the world.</Description>  
 </Book>  
 ```  

@@ -1,15 +1,15 @@
 ---
-title: 如何讀取和寫入編碼的檔（C#）
+title: 如何讀取和寫入編碼文檔 （C#）
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
 ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347669"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a>如何讀取和寫入編碼的檔（C#）
+# <a name="how-to-read-and-write-an-encoded-document-c"></a>如何讀取和寫入編碼文檔 （C#）
 若要建立編碼的 XML 文件，您可以將編碼設定為所需的字碼頁名稱，以便將 <xref:System.Xml.Linq.XDeclaration> 加入到 XML 樹狀結構中。  
   
  由 <xref:System.Text.Encoding.WebName%2A> 傳回的任何值都是有效的值。  
@@ -76,6 +76,6 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>

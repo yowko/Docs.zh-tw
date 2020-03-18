@@ -1,20 +1,20 @@
 ---
 ms.openlocfilehash: 7c39fe7ffd59fa7a5564bb45f32a6a2fbe0ddb33
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568110"
 ---
-### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a>Utf8JsonWriter 中 `(string)null` 的語義變更
+### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a>Utf8JonWriter 中語義的變化`(string)null`
 
-在 .NET Core 3.0 Preview 7 中，會將 null 字串視為 <xref:System.Text.Json.Utf8JsonWriter>中的空字串。 從 .NET Core 3.0 Preview 8 開始，當 null 字串當做屬性名稱使用時，會擲回例外狀況，並在做為值使用時發出 JSON null token。
+在 .NET Core 3.0 預覽 7 中，空字串被視為<xref:System.Text.Json.Utf8JsonWriter>中的空字串。 從 .NET Core 3.0 預覽 8 開始，空字串在用作屬性名稱時引發異常，當用作值時，它將發出 JSON null 權杖。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Core 3.0 Preview 7 中，在寫入屬性名稱和寫入值時，會將 `null` 字串視為 `""`。  
+在 .NET Core 3.0`null`預覽 7`""`中，字串在編寫屬性名稱和編寫值時都被視為兩者。  
 
-從 .NET Core 3.0 Preview 8 開始，`null` 屬性名稱會擲回 `ArgumentNullException`，而 `null` 值會被視為 <xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A?displayProperty=nameWithType> 或 <xref:System.Text.Json.Utf8JsonWriter.WriteNullValue?displayProperty=nameWithType>的呼叫。
+從 .NET Core 3.0 預覽`null`8 開始`ArgumentNullException`，屬性名稱`null`將引發 ， 並將值<xref:System.Text.Json.Utf8JsonWriter.WriteNull%2A?displayProperty=nameWithType>視為<xref:System.Text.Json.Utf8JsonWriter.WriteNullValue?displayProperty=nameWithType>對 或 的調用。
 
 請考慮下列程式碼：
 
@@ -40,35 +40,35 @@ using (Utf8JsonWriter writer = new Utf8JsonWriter(stream))
 }
 ```
 
-如果使用 .NET Core 3.0 Preview 7 執行，寫入器會產生下列輸出：
+如果使用 .NET Core 3.0 預覽 7 運行，則編寫器將生成以下輸出：
 
 ```js
 [{"":"","prop2":""},""]
 ```
 
-從 .NET Core 3.0 Preview 8 開始，`writer.WriteString(propertyName1, propertyValue1)` 的呼叫會擲回 <xref:System.ArgumentNullException>。  如果 `propertyName1 = null` 取代為 `propertyName1 = string.Empty`，則輸出現在會是：
+從 .NET 核心 3.0 預覽 8`writer.WriteString(propertyName1, propertyValue1)`開始<xref:System.ArgumentNullException>，要引發 的調用將引發 。  如果`propertyName1 = null`替換為`propertyName1 = string.Empty`，輸出現在將為：
 
 ```js
 [{"":null,"prop2":null},null]
 ```
 
-進行這種變更的方式，是為了與呼叫者對 `null` 值的期望更一致。
+進行此更改是為了更好地與調用方對值的期望`null`保持一致。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
-3.0 Preview 8
+3.0 預覽 8
 
 #### <a name="recommended-action"></a>建議的動作
 
-使用 <xref:System.Text.Json.Utf8JsonWriter> 類別來撰寫屬性名稱和值時：
+使用<xref:System.Text.Json.Utf8JsonWriter>類編寫屬性名稱和值時：
 
-- 請確定使用非`null` 的字串做為屬性名稱。
+- 確保非`null`字串用作屬性名稱。
 
-- 如果需要先前的行為，請使用 null 聯合調用;例如，`writer.WriteString(propertyName1 ?? "", propertyValue1)`。
+- 如果需要上一個行為，請使用空合併調用;如果需要上述行為，則使用空合併調用;例如， `writer.WriteString(propertyName1 ?? "", propertyValue1)`.
 
-- 如果不想要為 `null` 字串值撰寫 `null` 常值，請使用 null 聯合調用;例如，`writer.WriteString(propertyName2, propertyValue2 ?? "")`。
+- 如果不需要為`null``null`字串值編寫文本，請使用空合併調用;例如， `writer.WriteString(propertyName2, propertyValue2 ?? "")`.
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>類別
 
 CoreFx
 

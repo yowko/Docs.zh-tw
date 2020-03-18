@@ -1,17 +1,17 @@
 ---
-title: 如何執行和呼叫自訂擴充方法-程式C#設計指南
+title: 如何實現和調用自訂擴充方法 - C# 程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
 ms.openlocfilehash: 7e2092a37c1f042a087e03f4a272139b585156c8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705596"
 ---
-# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何執行和呼叫自訂擴充方法（C#程式設計手冊）
+# <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>如何實現和調用自訂擴充方法（C# 程式設計指南）
 本主題示範如何針對任何 .NET 類型實作您自己的延伸模組方法。 用戶端程式碼可以使用您的擴充方法，方法是將參考新增至包含這些方法的 DLL，然後新增 [using](../../language-reference/keywords/using-directive.md) 指示詞，以指定會在其中定義擴充方法的命名空間。  
   
 ## <a name="to-define-and-call-the-extension-method"></a>定義和呼叫擴充方法  
@@ -38,14 +38,14 @@ ms.locfileid: "75705596"
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  擴充方法沒有特定安全性弱點。 它們無法用於模擬類型上的現有方法，因為所有名稱衝突已使用類型自行定義的執行個體或靜態方法解決。 擴充方法無法存取擴充類別中的任何私用資料。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [擴充方法](./extension-methods.md)
 - [LINQ (Language-Integrated Query)](../../linq/linq-in-csharp.md)
 - [靜態類別和靜態類別成員](./static-classes-and-static-class-members.md)
-- [protected](../../language-reference/keywords/protected.md)
-- [internal](../../language-reference/keywords/internal.md)
+- [保護](../../language-reference/keywords/protected.md)
+- [內部](../../language-reference/keywords/internal.md)
 - [public](../../language-reference/keywords/public.md)
-- [this](../../language-reference/keywords/this.md)
-- [namespace](../../language-reference/keywords/namespace.md)
+- [這](../../language-reference/keywords/this.md)
+- [Namespace](../../language-reference/keywords/namespace.md)

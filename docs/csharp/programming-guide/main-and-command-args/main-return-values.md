@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
 ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503995"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 傳回值 (C# 程式設計手冊)
@@ -27,13 +27,13 @@ ms.locfileid: "77503995"
 
 此範例使用 [.NET Core](../../../core/index.md) 命令列工具。 如果您不熟悉 .NET Core 命令列工具，您可以在此[開始使用主題](../../../core/tutorials/cli-create-console-app.md)中了解這些工具。
 
-修改 `Main`program.cs*中的* 方法，如下所示：
+修改 *program.cs* 中的 `Main` 方法，如下所示：
 
  [!code-csharp[csProgGuideMain#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#14)]
 
 在 Windows 中執行程式時，任何從 `Main` 函式傳回的值，皆會儲存在環境變數中。 您可以從批次檔使用 `ERRORLEVEL` 或從 PowerShell 使用 `$LastExitCode` 來擷取此環境變數。
 
-您可以使用[DOTNET CLI](../../../core/tools/dotnet.md) `dotnet build` 命令來建立應用程式。
+您可以使用 [dotnet CLI](../../../core/tools/dotnet.md) `dotnet build` 命令來建置應用程式。
 
 接下來，建立 PowerShell 指令碼以執行此應用程式，並顯示結果。 將下列程式碼貼入文字檔，將它儲存為 `test.ps1`，並放到包含專案的資料夾中。 在 PowerShell 命令提示字元中鍵入 `test.ps1`，以執行 PowerShell 指令碼。
 
@@ -93,11 +93,11 @@ private static async Task<int> AsyncConsoleWork()
 - `static Task<int> Main(string[])` 會導致編譯器發出 `private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` 的對等項目
 
 > [!NOTE]
->如果這些範例在 `async` 方法上使用 `Main` 修飾詞，編譯器會產生相同的程式碼。
+>如果這些範例在 `Main` 方法上使用 `async` 修飾詞，編譯器會產生相同的程式碼。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [C# 參考](../index.md)
 - [Main() 和命令列引數](index.md)
-- [如何顯示命令列引數](./how-to-display-command-line-arguments.md)
+- [如何顯示命令列參數](./how-to-display-command-line-arguments.md)

@@ -4,10 +4,10 @@ description: ML.NET 自動化的 ML API 會自動化模型建置程序，並產�
 ms.date: 12/18/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75636558"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>如何使用 ML.NET 自動化的機器學習 API
@@ -37,7 +37,7 @@ using Microsoft.ML.AutoML;
 
 * 二元分類
 * 多元分類
-* 回復
+* 迴歸
 * 建議
 
 ## <a name="create-experiment-settings"></a>建立實驗設定
@@ -56,7 +56,7 @@ using Microsoft.ML.AutoML;
   var experimentSettings = new MulticlassExperimentSettings();
   ```
 
-* 回復
+* 迴歸
 
   ```csharp
   var experimentSettings = new RegressionExperimentSettings();
@@ -72,7 +72,7 @@ using Microsoft.ML.AutoML;
 
 實驗的可設定程度很高。 如需組態設定的完整清單，請參閱 [AutoML API 文件](https://docs.microsoft.com/dotnet/api/microsoft.ml.automl?view=ml-dotnet-preview)。
 
-其中某些範例包括：
+部分範例包括：
 
 1. 指定允許執行實驗的時間上限。
 
@@ -123,9 +123,9 @@ using Microsoft.ML.AutoML;
 
 最佳化度量，如上例所示，決定要在模型定型期間最佳化的計量。 您可以選取的最佳化計量由您所選工作類型決定。 以下為可用計量的清單。
 
-|[二元分類](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [多元分類](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[回歸 & 建議](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[二進位分類](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [多類分類](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[回歸&建議](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
-|準確率| LogLoss | RSquared
+|精確度| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
 |AreaUnderRocCurve | MacroAccuracy | MeanSquaredError
 |F1Score | MicroAccuracy | RootMeanSquaredError
@@ -134,28 +134,28 @@ using Microsoft.ML.AutoML;
 |PositivePrecision
 |PositiveRecall
 
-## <a name="data-pre-processing-and-featurization"></a>資料前置處理與特徵化
+## <a name="data-pre-processing-and-featurization"></a>資料預先處理與特徵化
 
 > [!NOTE]
-> [功能] 資料行僅支援 <xref:System.Boolean>、<xref:System.Single>和 <xref:System.String>的類型。
+> 要素列僅支援<xref:System.Boolean>的類型<xref:System.Single>。 <xref:System.String>
 
 根據預設，資料予以前置處理，並為您自動執行下列步驟：
 
 1. 卸除無有用資訊的特性
 
-    從定型和驗證的集合中卸除無有用資訊的特性。 其中包括遺漏所有值、所有資料列值相同，或基數 (例如雜湊、識別碼或 GUID) 極高的特性。
+    將無實用資訊的特徵從定型與驗證集合中卸除。 其中包括遺漏所有值、所有資料列之間的值相同，或具有極高基數 (例如雜湊、識別碼或 GUID) 的特徵。
 
 1. 遺漏值表示和插補
 
     以資料類型的預設值填入遺漏值資料格。 以和輸入資料行相同的插槽數附加指標特性。 如果輸入資料行中的值遺漏，則附加指標特性中的值是 `1`；否則為 `0`。
 
-1. 產生其他特性
+1. 產生其他特徵
 
-    針對文字功能：使用 unigrams 和三字元-克的字組功能。
+    對於文本功能：使用一克和三字元克的字袋功能。
 
-    針對分類功能：適用于低基數功能的一種經常性編碼，以及高基數類別功能的一種熱雜湊編碼。
+    對於分類要素：低基數要素的一熱編碼，以及高基數分類要素的一熱雜湊編碼。
 
-1. 轉換和編碼
+1. 轉換與編碼
 
     極少數唯一值轉換成類別特性的文字特性。 視類別特性的基數而定，執行 One-Hot 編碼或 One-Hot 雜湊編碼。
 
@@ -203,7 +203,7 @@ AutoML 提供多載的實驗執行方法，讓您提供定型資料。 就內部
 experiment.Execute(trainDataView);
 ```
 
-### <a name="custom-validation-dataset"></a>自訂的驗證資料集
+### <a name="custom-validation-dataset"></a>自訂驗證資料集
 
 如不接受隨機分割，請使用自訂的驗證資料集，時間序列資料通常是這種情況。 您可以指定自己的驗證資料集。 針對指定的驗證資料集評估模型，而不是一或多個隨機資料集。
 
@@ -227,8 +227,8 @@ Console.WriteLine($"Root Mean Squared Error: {metrics.RootMeanSquaredError:0.##}
 
 * [二元分類計量](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [多元分類計量](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [回歸 & 建議計量](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [回歸&建議指標](xref:Microsoft.ML.AutoML.RegressionMetric)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 如需完整的程式碼範例和更多範例，請瀏覽 GitHub 存放庫的 [ 範例](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state)。

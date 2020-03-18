@@ -7,16 +7,16 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 4f83d574357aa725b955870e3d93aa1f8222723a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ee530e981e0c85302b2b11cc739d6c51d6650ddd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714702"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170100"
 ---
 # <a name="properties-c-programming-guide"></a>屬性 (C# 程式設計手冊)
 
-屬性是提供彈性機制以讀取、寫入或計算私用欄位值的成員。 使用屬性時可將其視為公用資料成員，但實際上屬性是名為「存取子」的特殊方法。 如此可讓資料更容易存取，同時有助於提升方法的安全性和彈性。  
+屬性是提供彈性機制以讀取、寫入或計算私用欄位值的成員。 使用屬性時可將其視為公用資料成員，但實際上屬性是名為「存取子」** 的特殊方法。 如此可讓資料更容易存取，同時有助於提升方法的安全性和彈性。  
 
 ## <a name="properties-overview"></a>屬性概觀  
   
@@ -25,16 +25,16 @@ ms.locfileid: "75714702"
 - [get](../../language-reference/keywords/get.md) 屬性存取子可用來傳回屬性值，而 [set](../../language-reference/keywords/set.md) 屬性存取子則用來指派新值。 這些存取子可以有不同的存取層級。 如需詳細資訊，請參閱[限制存取子的存取範圍](./restricting-accessor-accessibility.md)。  
   
 - [value`set` 關鍵字是用來定義 ](../../language-reference/keywords/value.md) 存取子要指派的值。  
-- 屬性可以是「讀寫」(同時具有 `get` 和 `set` 存取子)、「唯讀」(具有 `get` 存取子但沒有 `set` 存取子) 或「唯寫」(具有 `set` 存取子但沒有 `get` 存取子)。 唯寫屬性很少見，而且最常用來限制對機密資料的存取。
+- 屬性可以是「讀寫」**(同時具有 `get` 和 `set` 存取子)、「唯讀」**(具有 `get` 存取子但沒有 `set` 存取子) 或「唯寫」**(具有 `set` 存取子但沒有 `get` 存取子)。 唯寫屬性很少見，而且最常用來限制對機密資料的存取。
 
 - 不需要自訂存取子程式碼的簡單屬性，則可以實作為運算式主體定義或[自動實作屬性](./auto-implemented-properties.md)。
- 
+
 ## <a name="properties-with-backing-fields"></a>含有支援欄位的屬性
 
 實作屬性的一種基本模式需要使用私用支援欄位，來設定和擷取屬性值。 `get` 存取子會傳回私用欄位的值，而 `set` 存取子則可能會執行一些資料驗證，再將值指派給私用欄位。 這兩個存取子也可能會對資料執行一些轉換或計算，再儲存或傳回資料。
 
-下列範例將示範這個模式。 在此範例中，`TimePeriod` 類別代表時間間隔。 就內部而言，此類別會將時間間隔 (秒) 儲存在名為 `_seconds` 的私用欄位中。 名為 `Hours` 的讀寫屬性可讓客戶以小時為單位指定時間間隔。 `get` 和 `set` 存取子都會執行小時與秒之間的必要轉換。 此外，`set` 存取子會驗證資料，並在小時數無效時擲回 <xref:System.ArgumentOutOfRangeException>。 
-   
+下列範例將示範這個模式。 在此範例中，`TimePeriod` 類別代表時間間隔。 就內部而言，此類別會將時間間隔 (秒) 儲存在名為 `_seconds` 的私用欄位中。 名為 `Hours` 的讀寫屬性可讓客戶以小時為單位指定時間間隔。 `get` 和 `set` 存取子都會執行小時與秒之間的必要轉換。 此外，`set` 存取子會驗證資料，並在小時數無效時擲回 <xref:System.ArgumentOutOfRangeException>。
+
  [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   
 ## <a name="expression-body-definitions"></a>運算式主體定義  
@@ -46,12 +46,12 @@ ms.locfileid: "75714702"
  [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
  從 C# 7.0 開始，可同時將 `get` 和 `set` 存取子實作為運算式主體成員。 在此情況下，必須同時有 `get` 和 `set` 關鍵字。 下列範例說明如何使用運算式主體定義來表示這兩個存取子。 請注意，`return` 關鍵字不能搭配 `get` 存取子使用。
- 
+
   [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
 ## <a name="auto-implemented-properties"></a>自動實作屬性
 
-在某些情況下，屬性 `get` 和 `set` 存取子只會指派值給支援欄位，或從支援欄位中擷取值，而不會包含任何其他邏輯。 藉由使用自動實作屬性，您可以簡化程式碼，同時讓 C# 編譯器無障礙地為您提供支援欄位。 
+在某些情況下，屬性 `get` 和 `set` 存取子只會指派值給支援欄位，或從支援欄位中擷取值，而不會包含任何其他邏輯。 藉由使用自動實作屬性，您可以簡化程式碼，同時讓 C# 編譯器無障礙地為您提供支援欄位。
 
 如果屬性具有 `get` 和 `set` 存取子，這兩者都必須自動實作。 您可以使用 `get` 和 `set` 關鍵字，但不提供任何實作，來定義自動實作屬性。 下列範例會重複上一個範例，不同之處在於 `Name` 和 `Price` 為自動實作屬性。 請注意，此範例也會移除參數化建構函式，因此 `SaleItem` 物件現在會透過呼叫無參數建構函式和[物件初始設定式](object-and-collection-initializers.md)來初始化。
 
@@ -67,13 +67,13 @@ ms.locfileid: "75714702"
   
 - [限制存取子的存取範圍](./restricting-accessor-accessibility.md)  
   
-- [自動實作的屬性](./auto-implemented-properties.md)  
+- [自動實現屬性](./auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 語言規格  
 
 如需詳細資訊，請參閱 [C# 語言規格](/dotnet/csharp/language-reference/language-specification/introduction)的[屬性](~/_csharplang/spec/classes.md#properties)。 語言規格是 C# 語法及用法的限定來源。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
 - [使用屬性](./using-properties.md)

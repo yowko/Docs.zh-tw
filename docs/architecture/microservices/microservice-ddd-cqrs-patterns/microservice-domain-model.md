@@ -3,15 +3,15 @@ title: 設計微服務領域模型
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解設計 DDD 導向領域模型時的重要概念。
 ms.date: 01/30/2020
 ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502326"
 ---
 # <a name="design-a-microservice-domain-model"></a>設計微服務領域模型
 
-為每個商務微服務或限定內容定義一個豐富領域模型。
+為每個商務微服務或限定內容定義一個豐富領域模型。**
 
 您的目標是為每個商務微服務或限定內容 (BC) 建立單一內聚領域模型。 不過請記住，BC 或商務微服務有時候可能是由共用單一領域模型的多個實體服務所組成。 領域模型必須擷取單一限定內容或其代表之商務微服務的規則、行為、商務語言和限定式。
 
@@ -25,13 +25,13 @@ ms.locfileid: "77502326"
 
 例如，購買者實體可能會在設定檔或身分識別微服務的使用者實體中定義某個人的大部分屬性，包括身分識別。 但訂購微服務中的購買者實體可能有較少的屬性，因為只有特定購買者資料會與訂購流程相關。 每個微服務或限定內容的內容會影響其領域模型。
 
-除了實作資料屬性，領域實體還必須實作行為。
+除了實作資料屬性，領域實體還必須實作行為。**
 
 DDD 中的領域實體必須實作與實體資料 (從記憶體存取的物件) 相關的領域邏輯或行為。 例如，作為訂單實體類別的一部分，您必須將商務邏輯和作業實作為工作的方法，例如新增訂單項目、資料驗證和總計算。 實體的方法會處理實體的不變式和規則，而不是跨應用程式層散佈這些規則。
 
 圖 7-8 所顯示的領域實體不只會實作資料屬性，還會實作具有相關領域邏輯的作業或方法。
 
-![顯示領域實體模式的圖表。](./media/microservice-domain-model/domain-entity-pattern.png)
+![顯示域實體模式的圖表。](./media/microservice-domain-model/domain-entity-pattern.png)
 
 **圖 7-8**。 實作資料加上行為的領域實體設計範例
 
@@ -43,7 +43,7 @@ Martin Fowler 在 [AnemicDomainModel](https://martinfowler.com/bliki/AnemicDomai
 
 Anemic 領域模型的基本特徵是，乍看之下很像實物。 其中包含物件，許多物件會以領域空間中的名詞來命名，而且這些物件會透過真實領域模型所具有的豐富關聯性和結構來連接。 從行為上會看出端倪，並了解這些物件上幾乎沒有任何行為，比較像是一組 getter 和 setter。
 
-當然，使用 Anemic 領域模型時，會從一組擷取所有領域或商務邏輯的服務物件 (傳統上稱為「商務層」) 來使用這些資料模型。 商務層位於資料模型最上層，其使用資料模型的方式就像是資料一樣。
+當然，使用 Anemic 領域模型時，會從一組擷取所有領域或商務邏輯的服務物件 (傳統上稱為「商務層」**) 來使用這些資料模型。 商務層位於資料模型最上層，其使用資料模型的方式就像是資料一樣。
 
 Anemic 領域模型只是程序樣式設計。 Anemic 實體物件不是真正的物件，因為它們缺少行為 (方法)。 它們只會保存資料屬性，因此不是物件導向設計。 藉由將所有行為放到服務物件 (商務層) 中，基本上會得到[麵條式程式碼](https://en.wikipedia.org/wiki/Spaghetti_code)或[交易指令碼](https://martinfowler.com/eaaCatalog/transactionScript.html)，因此會失去領域模型所提供的優點。
 
@@ -55,32 +55,32 @@ Anemic 領域模型只是程序樣式設計。 Anemic 實體物件不是真正�
 
 #### <a name="additional-resources"></a>其他資源
 
-- **DevIQ。網域實體** \
+- **德維克域實體** \
   <https://deviq.com/entity/>
 
-- **聖馬丁 Fowler。領域模型** \
+- **馬丁·福勒域模型** \
   <https://martinfowler.com/eaaCatalog/domainModel.html>
 
-- **聖馬丁 Fowler。Anemic 領域模型** \
+- **馬丁·福勒貧血域模型** \
   <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>值物件模式
 
 Eric Evans 提到，「許多物件沒有概念性身分識別。 這些物件會描述事件的某些特性。」
 
-實體需要身分識別，但系統中有許多物件則不需要，例如值物件模式。 值物件是描述領域層面之不具概念性身分識別的物件。 這些是您具現化來表示只與您暫時有關之設計元素的物件。 您關心這些物件的「本質」，而不是它們的「身分」。 範例包含數字和字串，但也可能是更高階的概念，例如屬性群組。
+實體需要身分識別，但系統中有許多物件則不需要，例如值物件模式。 值物件是描述領域層面之不具概念性身分識別的物件。 這些是您具現化來表示只與您暫時有關之設計元素的物件。 您關心這些物件的「本質」**，而不是它們的「身分」**。 範例包含數字和字串，但也可能是更高階的概念，例如屬性群組。
 
 微服務中的實體不一定會是另一個微服務中的實體，因為在後者中，限定內容可能代表不同的意思。 例如，電子商務應用程式中的地址可能完全沒有身分識別，因為它可能只代表個人或公司客戶設定檔的屬性群組。 在此情況下，該地址應該會分類為值物件。 不過，在電力公用事業公司的應用程式中，客戶地址對公司領域可能很重要。 因此，地址必須含有身分識別，帳務系統才能直接連結至該地址。 在此情況下，地址應該會分類為領域實體。
 
 具有名字和姓氏的一個人通常是一個實體，因為這個人具有身分識別，即使名字和姓氏與另一組值相同亦然，例如若這些姓名同時指向不同的人。
 
-值物件在關係資料庫和 Orm （例如 Entity Framework （EF））中很難管理，而在檔導向資料庫中，它們比較容易執行和使用。
+在關係資料庫和 ORM（如實體框架 （EF） 中很難管理值物件，而在面向文檔的資料庫中，它們更易於實現和使用。
 
-EF Core 2.0 和更新版本包含[擁有的實體](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)功能，可讓您更輕鬆地處理值物件，如我們稍後會詳細說明。
+EF Core 2.0 及更高版本包括["擁有實體"](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)功能，使處理值物件變得更加容易，我們將在稍後詳細介紹。
 
 #### <a name="additional-resources"></a>其他資源
 
-- **聖馬丁 Fowler。值物件模式** \
+- **馬丁·福勒值物件模式** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
 - **值物件** \
@@ -89,7 +89,7 @@ EF Core 2.0 和更新版本包含[擁有的實體](https://devblogs.microsoft.co
 - **測試驅動開發中的值物件** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans。領域驅動設計：處理軟體核心的複雜性。** (書籍；包含值物件的探討) \
+- **埃裡克·埃文斯域驅動設計：解決軟體核心的複雜性。** (書籍；包含值物件的探討) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>彙總模式
@@ -108,7 +108,7 @@ EF Core 2.0 和更新版本包含[擁有的實體](https://devblogs.microsoft.co
 
 在圖 7-9 中，您會看到購買者彙總之類的範例彙總，其中包含單一實體 (彙總根購買者)。 訂單彙總包含多個實體和值物件。
 
-![比較買方匯總和訂單匯總的圖表。](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
+![比較買方聚合和訂單聚合的圖表。](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
 
 **圖 7-9**。 具有多個或單一實體的彙總範例
 
@@ -133,24 +133,24 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>其他資源
 
-- **Vaughn Vernon。有效的匯總設計-第 I 部分：模型化單一匯總**（從 <http://dddcommunity.org/>） \
+- **沃恩·弗農有效的聚合設計 - 第 1 部分：對單個聚合建模**（來自<http://dddcommunity.org/>）
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon。有效的匯總設計-第二部分：使匯總一起工作**（從 <http://dddcommunity.org/>） \
+- **沃恩·弗農有效的聚合設計 - 第二部分：使聚合協同工作**（來自<http://dddcommunity.org/>）
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon。有效的匯總設計-第 III 部分：透過探索取得見解**（從 <http://dddcommunity.org/>） \
+- **沃恩·弗農有效的聚合設計 - 第三部分：通過發現獲得洞察**（來自<http://dddcommunity.org/>）
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
-- **Sergey Grybniak。DDD 戰術設計模式** \
+- **謝爾蓋·格裡布尼亞克DDD 戰術設計模式** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
-- **Chris Richardson。使用匯總開發交易微服務** \
+- **克裡斯·理查森使用聚合開發事務性微服務** \
   <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
-- **DevIQ。匯總模式** \
+- **德維克聚合模式** \
   <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
->[上一頁](ddd-oriented-microservice.md)
->[下一頁](net-core-microservice-domain-model.md)
+>[上一個](ddd-oriented-microservice.md)
+>[下一個](net-core-microservice-domain-model.md)

@@ -12,10 +12,10 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: 48268c6e839ae4f72aae0e872c837b153325b68b
-  ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 02/20/2020
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "77504020"
 items:
 - durationInMinutes: 1
@@ -24,7 +24,7 @@ items:
 - title: 探索整數運算
   durationInMinutes: 4
   content: >
-    在互動式視窗中執行下列程式碼。 選取 [**進入焦點模式]** 按鈕。 然後，在互動式視窗中輸入下列程式碼區塊，然後選取 [**執行**]：
+    在互動式視窗中執行下列程式碼。 選擇"**輸入對焦模式"** 按鈕。 然後，在互動式視窗中鍵入以下代碼塊，然後選擇 **"運行**：
 
 
     ```csharp
@@ -40,7 +40,7 @@ items:
     ```
 
 
-    如果您在環境中執行此程式，則應該改為遵循[本機版本](numbers-in-csharp-local.md)的指示。
+    如果在您的環境中運行此參數，則應按照[本地版本的](numbers-in-csharp-local.md)說明操作。
 
 
     您看到的只是一種基本的整數數學運算。 `int` 型別代表**整數**，也就是正整數或負整數。 您使用 `+` 符號來執行加法。 整數常用的其他數學運算包括：
@@ -58,7 +58,7 @@ items:
     > 在整個互動式教學課程中，您可以修改在互動式視窗中撰寫的程式碼，以自行探索各種變化。 本教學課程在每個步驟都有供您嘗試的範例。
 
 
-    讓我們開始探索這些不同的運算。 修改第三行來嘗試每種運算。 在每次編輯之後，選取 [**執行**] 按鈕。
+    讓我們開始探索這些不同的運算。 修改第三行來嘗試每種運算。 每次編輯後，選擇"**運行"** 按鈕。
 
 
     減法：
@@ -181,7 +181,7 @@ items:
     ```
 
 
-    再次選取 [**執行**] 以查看結果。
+    選擇"再次**運行**"以查看結果。
 
 
     > [!NOTE]
@@ -192,7 +192,7 @@ items:
   content: >
     上一個範例示範了整數除法運算會將結果截斷。
 
-    您可以使用**餘數**運算子（`%` 字元）來取得**餘數**：
+    您可以使用**其餘**運算子`%`字元獲取**剩餘部分**：
 
 
     ```csharp
@@ -256,7 +256,7 @@ items:
 - title: 使用 Double 型別
   durationInMinutes: 5
   content: >
-    `double` 數字型別代表雙精確度浮點數。 您可能不熟悉這些字詞。 **浮點數**可用以代表非常大或非常小的非整數數字。 **雙精確度**表示這些數字使用比**單精確度**更高的精確度來儲存。 在現代的電腦上，比較常使用雙精確度而非單精確度數字。
+    `double` 數字型別代表雙精確度浮點數。 您可能不熟悉這些字詞。 **浮點**數可用於表示可能非常大或小幅度的非積分數位。 **雙精確度**表示這些數字使用比**單精確度**更高的精確度來儲存。 在現代的電腦上，比較常使用雙精確度而非單精確度數字。
 
     讓我們開始探索吧。 在互動式視窗中嘗試下列程式碼並查看結果：
 
@@ -415,14 +415,14 @@ items:
 
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - content: >-
-    您已經完成＜C# 中的數字＞互動式教學課程。 您可以選取下方的 [**分支和迴圈**] 連結來啟動下一個互動式教學課程，或者您可以流覽[.net 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)來下載 .NET Core SDK、在您的電腦上建立專案，並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
+    您已經完成＜C# 中的數字＞互動式教學課程。 您可以選擇下面的**分支和迴圈**連結來啟動下一個互動式教程，也可以訪問[.NET 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下載 .NET Core SDK、在電腦上創建專案以及繼續編碼。 "後續步驟"部分將帶您回到這些教程。
 
 
     您可以在下列主題中深入了解 C# 中的數字：
 
 
-    - [整數數數值型別](../../language-reference/builtin-types/integral-numeric-types.md)
+    - [整數數值類型](../../language-reference/builtin-types/integral-numeric-types.md)
 
-    - [浮點數數值型別](../../language-reference/builtin-types/floating-point-numeric-types.md)
+    - [浮點數值類型](../../language-reference/builtin-types/floating-point-numeric-types.md)
 
     - [內建數值轉換](../../language-reference/builtin-types/numeric-conversions.md)

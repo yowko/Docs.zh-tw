@@ -3,25 +3,25 @@ title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
 ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75339211"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79399319"
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
-在本C#指南的 how to 區段中，您可以找到常見問題的快速解答。 在某些形況下，文章可能會列在多個章節內。 這是因為我們希望使用者能從多個搜尋管道輕鬆找到這些文章。
+在 C# 指南的"如何"部分中，您可以快速找到常見問題的解答。 在某些形況下，文章可能會列在多個章節內。 這是因為我們希望使用者能從多個搜尋管道輕鬆找到這些文章。
 
 ## <a name="general-c-concepts"></a>一般 C# 概念
 
-有幾個秘訣和訣竅是常見C#的開發人員作法：
+有幾個提示和技巧是常見的 C# 開發人員實踐：
 
 - [使用物件初始設定式將物件初始化](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)。
 - [了解向方法傳遞結構及類別的不同](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
 - [使用運算子多載](../language-reference/operators/operator-overloading.md)。
-- [實作和呼叫自訂擴充方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
-- 甚至C#程式設計人員可能會想要[使用來自 Visual Basic 的 `My` 命名空間](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
+- [實現並調用自訂擴充方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
+- 甚至 C# 程式師可能也想[使用`My`Visual Basic 中的命名空間](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
 - [使用擴充方法建立 `enum` 類型的新方法](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
 ### <a name="class-and-struct-members"></a>類別和結構成員
@@ -103,7 +103,7 @@ ms.locfileid: "75339211"
 LINQ 可讓您撰寫程式碼，來查詢支援 LINQ 查詢運算式模式的任何資料來源。 這些文章有助您理解模式，以及如何利用各種資料來源。
 
 - [查詢集合](../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)。
-- [在查詢中使用 Lambda 運算式](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md)。
+- [在查詢中使用 lambda 運算式](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-in-a-query.md)。
 - [在查詢運算式中使用 `var`](../programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)。
 - [從查詢傳回元素屬性的子集](../programming-guide/classes-and-structs/how-to-return-subsets-of-element-properties-in-a-query.md)。
 - [撰寫具有複雜篩選的查詢](../programming-guide/concepts/linq/how-to-write-queries-with-complex-filtering.md)。

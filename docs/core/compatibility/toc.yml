@@ -30,7 +30,7 @@
       href: aspnetcore.md
     - name: CoreFx
       href: corefx.md
-    - name: 密碼編譯
+    - name: Cryptography
       href: cryptography.md
     - name: Entity Framework Core
       href: /ef/core/what-is-new/ef-core-3.0/breaking-changes?toc=/dotnet/core/compatibility/toc.json&bc=/dotnet/breadcrumb/toc.json
@@ -38,9 +38,9 @@
       href: globalization.md
     - name: MSBuild
       href: msbuild.md
-    - name: 網路
+    - name: 網路功能
       href: networking.md
     - name: Visual Basic
       href: visualbasic.md
-    - name: Windows Forms
+    - name: Windows Form
       href: winforms.md

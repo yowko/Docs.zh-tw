@@ -1,15 +1,15 @@
 ---
-title: 如何使用 System.threading.tasks.task.whenall （C#）擴充非同步逐步解說
+title: 如何使用 Task.WhenAll （C#） 擴展非同步演練
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
 ms.openlocfilehash: afd7dda4e876b7faa54ae4a8e62d640d2b9aaf07
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73970027"
 ---
-# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何使用 System.threading.tasks.task.whenall （C#）擴充非同步逐步解說
+# <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>如何使用 Task.WhenAll （C#） 擴展非同步演練
 
 您可以使用 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 方法，來提升[逐步解說：使用 Async 和 Await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) 中非同步方案的效能。 此方法會以非同步方式等候多個非同步作業進行，這些作業是以工作集合來表示。
 
@@ -171,7 +171,7 @@ ms.locfileid: "73970027"
 
 ### <a name="to-test-the-taskwhenall-solutions"></a>測試 Task.WhenAll 方案
 
-- 針對任一方案，選擇 F5 鍵以執行程式，然後選擇 [開始] 按鈕。 輸出應類似於[逐步解說：使用 Async 和 Await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) 中的非同步方案輸出。 不過請注意，網站每次出現的順序都不同。
+- 針對任一方案，選擇 F5 鍵以執行程式，然後選擇 [開始]**** 按鈕。 輸出應類似於[逐步解說：使用 Async 和 Await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md) 中的非同步方案輸出。 不過請注意，網站每次出現的順序都不同。
 
 ## <a name="example"></a>範例
 
@@ -437,7 +437,7 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>
 - [逐步解說：使用 async 和 await 存取 Web (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)

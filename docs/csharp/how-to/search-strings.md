@@ -1,5 +1,5 @@
 ---
-title: 如何搜尋字串（C#指南）
+title: 如何搜索字串（C# 指南）
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74959698"
 ---
-# <a name="how-to-search-strings"></a>如何搜尋字串
+# <a name="how-to-search-strings"></a>如何搜索字串
 
 您可以使用兩種主要策略來搜尋字串中的文字。 <xref:System.String> 類別的方法會搜尋特定文字。 規則運算式會搜尋文字中的模式。
 
@@ -39,11 +39,11 @@ ms.locfileid: "74959698"
 
 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別可以用來搜尋字串。 這些搜尋的複雜性範圍可以從簡單到複雜文字模式。
 
-下列程式碼範例會搜尋句子中的 "the" 或 "their" 單字，但忽略大小寫。 靜態方法 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 會執行搜尋。 您為其指定要搜尋的字串和搜尋模式。 在此情況下，第三個引數指定不區分大小寫的搜尋。 如需詳細資訊，請參閱<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>。  
+下列程式碼範例會搜尋句子中的 "the" 或 "their" 單字，但忽略大小寫。 靜態方法 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 會執行搜尋。 您為其指定要搜尋的字串和搜尋模式。 在此情況下，第三個引數指定不區分大小寫的搜尋。 如需詳細資訊，請參閱 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>。  
 
-搜尋模式描述您搜尋的文字。 下表描述搜尋模式的每個項目 (下表使用單一 `\`，其在 C# 字串中必須逸出為 `\\`)。
+搜尋模式描述您搜尋的文字。 下表描述搜尋模式的每個項目  (下表使用單一 `\`，其在 C# 字串中必須逸出為 `\\`)。
 
-| pattern  | 意義     |
+| 模式  | 意義     |
 | -------- |-------------|
 | the      | 比對文字 "the" |
 | (eir)?   | 比對 "eir" 的 0 或 1 個出現次數 |
@@ -52,13 +52,13 @@ ms.locfileid: "74959698"
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> 當您搜尋完全相符的字串時，`string` 方法通常是較好的選擇。 當您在來源字串中搜尋某個模式時，正則運算式會更好。
+> 當您搜尋完全相符的字串時，`string` 方法通常是較好的選擇。 在源字串中搜索某些模式時，正則運算式更好。
 
 ## <a name="does-a-string-follow-a-pattern"></a>字串遵循模式嗎？
 
 下列程式碼使用規則運算式來驗證陣列中每個字串的格式。 驗證需要每個字串具有電話號碼的形式，其中數字的三個群組以連字號分隔、前兩個群組包含三位數，而第三個群組包含四位數。 搜尋模式使用規則運算式 `^\\d{3}-\\d{3}-\\d{4}$`。 如需詳細資訊，請參閱[規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)。
 
-| pattern  | 意義                             |
+| 模式  | 意義                             |
 | -------- |-------------------------------------|
 | ^        | 比對字串的開頭 |
 | \d{3}    | 僅比對 3 位數的字元  |
@@ -72,14 +72,14 @@ ms.locfileid: "74959698"
 
 此單一搜尋模式會比對許多有效字串。 規則運算式較適合用來搜尋或驗證模式，而不是單一文字字串。
 
-您可以查看 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的程式碼，來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
+您可以通過查看[GitHub 存儲庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的代碼來嘗試這些示例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../programming-guide/index.md)
 - [字串](../programming-guide/strings/index.md)
 - [LINQ 和字串](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [.NET Framework 規則運算式](../../standard/base-types/regular-expressions.md)
-- [規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [正則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)
 - [在 .NET 中使用字串的最佳做法](../../standard/base-types/best-practices-strings.md)

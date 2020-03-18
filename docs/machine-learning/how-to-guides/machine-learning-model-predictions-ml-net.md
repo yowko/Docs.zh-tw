@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: 182350cc5143155133385c6fd77986b271f6db91
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977038"
 ---
 # <a name="make-predictions-with-a-trained-model"></a>使用定型的模型預測
@@ -40,7 +40,7 @@ public class HousingData
 
 例如 `Features` 和 `Label` 輸入資料行名稱，ML.NET 有模型產生的預測值資料行預設名稱。 依工作不同，名稱可能不同。
 
-因為用於此範例的演算法是線性迴歸演算法，所以輸出資料行預設名稱是 `Score`，由 `PredictedPrice` 屬性的 [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 屬性所定義。
+由於此示例中使用的演算法是線性回歸演算法，因此輸出列的預設名稱是由`Score`[`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute)`PredictedPrice`屬性上的屬性定義的。
 
 ```csharp
 class HousingPrediction
@@ -65,14 +65,14 @@ ITransformer predictionPipeline = mlContext.Model.Load("model.zip", out predicti
 
 ## <a name="single-prediction"></a>單一預測
 
-若要建立單一預測，請使用載入的預測管線建立 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。
+要進行單個預測，請使用載入的預測[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)管道創建 。
 
 ```csharp
 // Create PredictionEngines
 PredictionEngine<HousingData, HousingPrediction> predictionEngine = mlContext.Model.CreatePredictionEngine<HousingData, HousingPrediction>(predictionPipeline);
 ```
 
-然後，使用 [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) 方法，並傳入您的輸入資料作為參數。 請注意，使用 [`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*) 方法不要求輸入成為 [`IDataView`](xref:Microsoft.ML.IDataView))。 這是因為它方便內化輸入資料類型操作，使您可以傳入輸入資料類型的物件。 此外，因為 `CurrentPrice` 是您想要使用新資料嘗試預測的目標或標籤，所以假設它目前沒有任何值。
+然後，使用[`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*)方法並將輸入資料作為參數傳遞。 請注意，使用[`Predict`](xref:Microsoft.ML.PredictionEngineBase%602.Predict*)方法不需要輸入為[`IDataView`](xref:Microsoft.ML.IDataView)。 這是因為它方便內化輸入資料類型操作，使您可以傳入輸入資料類型的物件。 此外，因為 `CurrentPrice` 是您想要使用新資料嘗試預測的目標或標籤，所以假設它目前沒有任何值。
 
 ```csharp
 // Input Data
@@ -90,7 +90,7 @@ HousingPrediction prediction = predictionEngine.Predict(inputData);
 
 ## <a name="multiple-predictions"></a>多個預測
 
-指定下列資料，將它載入 [`IDataView`](xref:Microsoft.ML.IDataView)。 在此案例中，[`IDataView`](xref:Microsoft.ML.IDataView) 的名稱為 `inputData`。 因為 `CurrentPrice` 是您想要使用新資料嘗試預測的目標或標籤，所以假設它目前沒有任何值。
+給定以下資料，將其載入到 中[`IDataView`](xref:Microsoft.ML.IDataView)。 在這種情況下，名稱[`IDataView`](xref:Microsoft.ML.IDataView)為`inputData`。 因為 `CurrentPrice` 是您想要使用新資料嘗試預測的目標或標籤，所以假設它目前沒有任何值。
 
 ```csharp
 // Actual data
@@ -114,14 +114,14 @@ HousingData[] housingData = new HousingData[]
 };
 ```
 
-然後，使用 [`Transform`](xref:Microsoft.ML.ITransformer.Transform*) 方法套用資料轉換並產生預測。
+然後，使用[`Transform`](xref:Microsoft.ML.ITransformer.Transform*)方法應用資料轉換並生成預測。
 
 ```csharp
 // Predicted Data
 IDataView predictions = predictionPipeline.Transform(inputData);
 ```
 
-使用 [`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*) 方法檢查預測的值。
+使用[`GetColumn`](xref:Microsoft.ML.Data.ColumnCursorExtensions.GetColumn*)方法檢查預測值。
 
 ```csharp
 // Get Predictions

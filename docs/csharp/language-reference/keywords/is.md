@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a72f3b87e7558c594ef8a94bd0eadcc4664206b9
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: e64b690482419963a92764b2c97a42dbb231fbfc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78239647"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399634"
 ---
 # <a name="is-c-reference"></a>is (C# 參考)
 
-`is` 運算子會檢查運算式的結果是否與指定的類型相容，或 (從 C# 7.0 開始) 根據模式來測試運算式。 如需型別測試 `is` 運算子的相關資訊，請參閱[型別測試和轉換運算子](../operators/type-testing-and-cast.md#is-operator)一文的 [is 運算子](../operators/type-testing-and-cast.md)小節。
+`is` 運算子會檢查運算式的結果是否與指定的類型相容，或 (從 C# 7.0 開始) 根據模式來測試運算式。 如需型別測試 `is` 運算子的相關資訊，請參閱[型別測試和轉換運算子](../operators/type-testing-and-cast.md)一文的 [is 運算子](../operators/type-testing-and-cast.md#is-operator)小節。
 
 ## <a name="pattern-matching-with-is"></a>以 `is` 進行的模式比對
 
@@ -36,15 +36,15 @@ ms.locfileid: "78239647"
    expr is type varname
 ```
 
-其中*expr*是評估為某種類型實例的運算式， *type*是*expr*的結果要轉換的目標型別名稱，而*varname*則是在 `true``is` 測試時，要將*expr*的結果轉換成的物件。 
+其中*expr*是計算到某個類型的實例的運算式，*類型*是要轉換*expr*結果的類型的名稱，並且*varname*是如果`is`測試是`true`，則*expr*結果轉換為的物件。
 
-如果 `is`expr`true` 不是 *，且下列任何一個條件成立，則*  運算式為 `null`：
+如果 *expr* 不是 `null`，且下列任何一個條件成立，則 `is` 運算式為 `true`：
 
 - *expr* 是其類型與 *type* 相同的執行個體。
 
 - *expr* 是衍生自 *type* 的類型執行個體。 換句話說，*expr* 的結果可向上轉型成 *type* 的執行個體。
 
-- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」是定義於變數宣告的變數類型。 變數的「執行階段類型」是指派給該變數的執行個體類型。
+- *expr* 的編譯時期類型為 *type* 的基底類別，而 *expr* 的執行階段類型為 *type* 或衍生自 *type*。 變數的「編譯時期類型」** 是定義於變數宣告的變數類型。 變數的「執行階段類型」** 是指派給該變數的執行個體類型。
 
 - *expr* 是實作 *type* 介面的類型執行個體。
 
@@ -94,7 +94,7 @@ ms.locfileid: "78239647"
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
 
-檢查是否可以使用常數模式來執行 `null`。 `null` 陳述式支援 `is` 關鍵字。 其語法如下：
+檢查是否可以使用常數模式來執行 `null`。 `is` 陳述式支援 `null` 關鍵字。 其語法如下：
 
 ```csharp
    expr is null
@@ -106,28 +106,28 @@ ms.locfileid: "78239647"
 
 ### <a name="var-pattern"></a>var 模式
 
-與 `var` 模式相符的模式一律會成功。 其語法如下：
+與模式匹配的模式`var`始終成功。 其語法如下：
 
 ```csharp
    expr is var varname
 ```
 
-其中， *expr*的值一律會指派給名為*varname*的本機變數。 *varname*是與*運算式*的編譯時間類型相同之類型的變數。 
+其中*expr*的值始終分配給名為*varname*的區域變數。 *varname*是同類型的變數，與*expr*的編譯時間類型相同。
 
-如果*expr*評估為 `null`，`is` 運算式會產生 `true`，並將 `null` 指派給*varname*。 Var 模式是 `is` 的幾個使用方式之一，會產生 `null` 值的 `true`。
+如果*expr*計算`null`到`is`，`true`運算式將`null`生成並分配給*varname*。 var 模式是生成`is``true`值的少數用途之一。 `null`
 
-您可以使用 `var` 模式，在布林運算式內建立暫存變數，如下列範例所示：
+可以使用 模式`var`在布林運算式中創建臨時變數，如下例所示：
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
 
-在上述範例中，暫存變數是用來儲存昂貴作業的結果。 然後，變數可以多次使用。
+在前面的示例中，臨時變數用於存儲昂貴操作的結果。 然後，變數可以多次使用。
 
 ## <a name="c-language-specification"></a>C# 語言規格
   
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/expressions.md#the-is-operator)的 [is 運算子](~/_csharplang/spec/introduction.md)一節，以及下列 C# 語言提案：
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [is 運算子](~/_csharplang/spec/expressions.md#the-is-operator)一節，以及下列 C# 語言提案：
 
 - [模式比對](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
-- [以一般項進行的模式比對](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
+- [使用泛型進行模式比對](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
 ## <a name="see-also"></a>另請參閱
 

@@ -3,10 +3,10 @@ title: 針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對開發或測試環境使用 RabbitMQ 實作整合事件的事件匯流排傳訊。
 ms.date: 10/02/2018
 ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74711191"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>針對開發或測試環境使用 RabbitMQ 實作事件匯流排
@@ -17,7 +17,7 @@ eShopOnContainers 的其中一個事件匯流排自訂實作基本上是使用 R
 
 使用 RabbitMQ 實作事件匯流排可讓微服務訂閱事件、發行事件和接收事件，如圖 6-21 所示。
 
-![顯示訊息寄件者和訊息接收者之間 RabbitMQ 的圖表。](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
+![顯示郵件發送方和郵件接收方之間的兔MQ圖。](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
 
 **圖 6-12。** 事件匯流排的 RabbitMQ 實作
 
@@ -35,7 +35,7 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>使用 RabbitMQ 實作簡單的發行方法
 
-下列程式碼是簡化版本的 RabbitMQ 事件匯流排實作，目的是展示整個情節。 您並不會真的這樣處理連線。 若要查看完整的實作，請參閱 [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) 存放庫中的實際程式碼。
+下列程式碼是簡化****** 版本的 RabbitMQ 事件匯流排實作，目的是展示整個情節。 您並不會真的這樣處理連線。 若要查看完整的實作，請參閱 [dotnet-architecture/eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) 存放庫中的實際程式碼。
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -108,20 +108,20 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 Subscribe 方法接受 IIntegrationEventHandler 物件，就像是目前微服務及其相關 IntegrationEvent 物件中的回呼方法。 此程式碼接著會將該事件處理常式新增至事件處理常式清單，每個整合事件類型可根據每個用戶端微服務擁有這些事件處理常式。 如果用戶端程式碼尚未訂閱事件，程式碼會建立事件類型的通道，以便在從任何其他服務發行該事件時，可從 RabbitMQ 接收推送樣式的事件。
 
-如先前所述，在 eShopOnContainers 中實作用的事件匯流排只會處理主要案例，而不會準備好用於生產環境。
+如上所述，在 eShopOnContainers 中實現的事件匯流排僅具有教育目的，因為它僅處理主要方案，因此尚未準備好生產。
 
-針對生產案例，請檢查下列其他資源（特定于 RabbitMQ）和[微服務區段之間的執行事件型通訊](./integration-event-based-microservice-communications.md#additional-resources)。
+對於生產方案，請檢查以下特定于 RabmQ 的其他資源以及[微服務之間基於事件的通信](./integration-event-based-microservice-communications.md#additional-resources)。
 
 ## <a name="additional-resources"></a>其他資源
 
-支援 RabbitMQ 的生產環境就緒解決方案。
+支援兔MQ的生產就緒解決方案。
 
-- **EasyNetQ** -開放原始碼 .net API Client for RabbitMQ \
+- **EasyNetQ** - 開源 .NET API 用戶端，用於兔子MQ |
   <http://easynetq.com/>
 
-- **MassTransit** \
+- **公共交通** \
   <https://masstransit-project.com/>
   
 >[!div class="step-by-step"]
->[上一頁](integration-event-based-microservice-communications.md)
->[下一頁](subscribe-events.md)
+>[上一個](integration-event-based-microservice-communications.md)
+>[下一個](subscribe-events.md)

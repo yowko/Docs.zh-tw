@@ -1,15 +1,15 @@
 ---
-title: 如何從多個來源填入物件集合（LINQ）（C#）
+title: 如何從多個源 （LINQ） （C#） 填充物件集合
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
 ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345762"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>如何從多個來源填入物件集合（LINQ）（C#）
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>如何從多個源 （LINQ） （C#） 填充物件集合
 
 此範例示範如何將不同來源的資料合併成新的類型。
 
@@ -18,7 +18,7 @@ ms.locfileid: "75345762"
 
 ## <a name="to-create-the-data-file"></a>建立資料檔
 
-將名稱 .csv 和分數 .csv 檔案複製到您的專案資料夾中，如[如何從不同的檔案聯結內容（LINQ）（C#）](./how-to-join-content-from-dissimilar-files-linq.md)中所述。
+將名稱.csv 和分數.csv 檔案複製到專案資料夾中，如[如何從不同檔 （LINQ） （C#） 中加入內容。](./how-to-join-content-from-dissimilar-files-linq.md)
 
 ## <a name="example"></a>範例
 
@@ -139,8 +139,8 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ 和字串 (C#)](./linq-and-strings.md)
 - [物件和集合初始設定式](../../classes-and-structs/object-and-collection-initializers.md)
-- [匿名類型](../../classes-and-structs/anonymous-types.md)
+- [匿名型別](../../classes-and-structs/anonymous-types.md)

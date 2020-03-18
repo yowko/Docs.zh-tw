@@ -1,15 +1,15 @@
 ---
-title: 如何使用 XSD 進行驗證（LINQ to XML）（C#）
+title: 如何使用 XSD（LINQ 到 XML）驗證 （C#）
 ms.date: 07/20/2015
 ms.assetid: 6a7f83a9-2d74-4c2b-8417-0a8595879516
 ms.openlocfilehash: 29830457b63f36dd401a412364060339344f35cb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347245"
 ---
-# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>如何使用 XSD 進行驗證（LINQ to XML）（C#）
+# <a name="how-to-validate-using-xsd-linq-to-xml-c"></a>如何使用 XSD（LINQ 到 XML）驗證 （C#）
 <xref:System.Xml.Schema> 命名空間包含的擴充方法可針對 XML 結構描述定義語言 (XSD) 檔，簡化 XML 樹狀結構的驗證。 如需詳細資訊，請參閱 <xref:System.Xml.Schema.Extensions.Validate%2A> 方法的文件。  
   
 ## <a name="example"></a>範例  
@@ -120,7 +120,7 @@ The key sequence 'AAAAA' in Keyref fails to refer to some key.
 custOrdDoc did not validate  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Schema.Extensions.Validate%2A>
 - [建立 XML 樹狀結構 (C#)](creating-xml-trees-linq-to-xml-2.md)

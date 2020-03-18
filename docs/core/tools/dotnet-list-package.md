@@ -3,15 +3,15 @@ title: dotnet list package 命令
 description: "'dotnet list package' 命令提供一個便利選項，可列出適用於專案或解決方案的套件參考。"
 ms.date: 02/14/2020
 ms.openlocfilehash: 1cb52b8de10b2eef2ef7465f04316e9446318763
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157228"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-**本文適用于：** ✔️ .net CORE 2.2 SDK 和更新版本
+**本文適用于：✔️** .NET 核心 2.2 SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -27,7 +27,7 @@ dotnet list package [-h|--help]
 
 ## <a name="description"></a>描述
 
-`dotnet list package` 命令提供一個便利選項，可列出適用於特定專案或解決方案的所有 NuGet 套件參考。 您需要先建置專案，才能具備處理此命令所需的資產。 下列範例會針對 `dotnet list package`SentimentAnalysis[ 專案顯示 ](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 命令的輸出：
+`dotnet list package` 命令提供一個便利選項，可列出適用於特定專案或解決方案的所有 NuGet 套件參考。 您需要先建置專案，才能具備處理此命令所需的資產。 下列範例會針對 [SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 專案顯示 `dotnet list package` 命令的輸出：
 
 ```output
 Project 'SentimentAnalysis' has the following package references
@@ -54,7 +54,7 @@ Project `SentimentAnalysis` has the following updates to its packages
    > Microsoft.ML         1.4.0       1.4.0      1.5.0-preview
 ```
 
-如果您需要找出專案是否有可轉移的相依性，請使用 `--include-transitive` 選項。 當您在之後將依賴另一個套件的專案中新增套件時，就會發生可轉移的相依性。 下列範例會針對 `dotnet list package --include-transitive`HelloPlugin[ 專案顯示執行 ](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) 命令的輸出，其會顯示最上層套件及其相依的套件：
+如果您需要找出專案是否有可轉移的相依性，請使用 `--include-transitive` 選項。 當您在之後將依賴另一個套件的專案中新增套件時，就會發生可轉移的相依性。 下列範例會針對 [HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) 專案顯示執行 `dotnet list package --include-transitive` 命令的輸出，其會顯示最上層套件及其相依的套件：
 
 ```output
 Project 'HelloPlugin' has the following package references
@@ -77,7 +77,7 @@ Project 'HelloPlugin' has the following package references
 
 - **`--framework <FRAMEWORK>`**
 
-  只顯示適用於所指定[目標 Framework](../../standard/frameworks.md) 的套件。 若要指定多個架構，請多次指定該選項。 例如： `--framework netcoreapp2.2 --framework netstandard2.0` 。
+  只顯示適用於所指定[目標 Framework](../../standard/frameworks.md) 的套件。 若要指定多個架構，請多次指定該選項。 例如：`--framework netcoreapp2.2 --framework netstandard2.0`。
 
 - **`-h|--help`**
 
@@ -101,7 +101,7 @@ Project 'HelloPlugin' has the following package references
 
 - **`--interactive`**
 
-  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供使用。
+  可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供。
 
 - **`--outdated`**
 

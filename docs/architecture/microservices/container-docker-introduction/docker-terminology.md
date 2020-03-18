@@ -3,10 +3,10 @@ title: Docker 術語
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 術語
 ms.date: 01/30/2020
 ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502830"
 ---
 # <a name="docker-terminology"></a>Docker 術語
@@ -27,28 +27,28 @@ ms.locfileid: "77502830"
 
 **多階段建置**：這是 Docker 17.05 或更高版本中的功能，可協助減少最終映像的大小。 簡單幾句話來說，有了多階段建置，您可以使用例如大型基底映像 (包含 SDK)，來編譯和發行應用程式，然後使用發行資料夾和小型僅執行階段基底映像，以產生更小的最終映像
 
-**存放庫 (Repository 或 Repo)** ：相關的 Docker 映像集合，已加上標記指出映像版本。 某些存放庫包含特定映射的多個變體，例如包含 Sdk （較粗）的影像、僅包含執行時間（更輕量）等的影像。這些變體可以標記標記。 一個存放庫可以包含多種平台變化，例如 Linux 映像和 Windows 映像。
+**存放庫 (Repository 或 Repo)**：相關的 Docker 映像集合，已加上標記指出映像版本。 某些存儲庫包含特定圖像的多個變體，例如包含 SDK（較重的）的圖像、僅包含運行時（較輕）的圖像等。這些變體可以使用標記進行標記。 一個存放庫可以包含多種平台變化，例如 Linux 映像和 Windows 映像。
 
 **登錄**：提供存放庫存取權的服務。 大多數公用映像的預設登錄是 [Docker Hub](https://hub.docker.com/) (以組織形式為 Docker 所擁有）。 登錄通常會包含來自多個小組的存放庫。 公司通常會有私人登錄來儲存及管理其所建立的映像。 Azure Container Registry 是另一個範例。
 
-**多架構映射**：針對多結構，這項功能可根據 Docker 執行所在的平臺，簡化適當映射的選取。 例如，當 Dockerfile 從登錄要求**mcr.microsoft.com/dotnet/core/sdk:3.1**的基底映射時，它實際上會取得**3.1-sdk-nanoserver-1909**、 **3.1-sdk-nanoserver-1809**或**3.1-sdk-buster-超薄**，視執行 Docker 的作業系統和版本而定。
+**多拱圖像**：對於多體系結構，根據 Docker 運行的平臺，它簡化了相應圖像的選擇。 例如，當 Dockerfile 從註冊表請求基本映射**FROM mcr.microsoft.com/dotnet/core/sdk:3.1**時，它實際上會獲得**3.1 sdk-nanoserver-1909、3.1** **sdk-nanoserver-1809**或**3.1-sdk-buster-slim，** 具體取決於 Docker 運行的作業系統和版本。
 
 **Docker Hub**：上傳並使用映像的公開登錄。 Docker Hub 提供 Docker 映像裝載、公開或私人登錄、組建觸發程序和 Webhook，以及與 GitHub 和 Bitbucket 的整合。
 
 **Azure Container Registry**：Azure 中使用 Docker 映像及其元件的公用資源。 這會提供接近 Azure 部署的登錄，並可讓您控制存取權，以便使用您的 Azure Active Directory 群組和權限。
 
-**Docker Trusted Registry (DTR)** ：可在內部部署安裝的 Docker 登錄服務 (來自 Docker)，以便存在於組織的資料中心和網路內。 這會方便在企業內管理私人映像。 Docker Trusted Registry 隨附於 Docker Datacenter 產品中。 如需詳細資訊，請參閱 [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/)。
+**Docker Trusted Registry (DTR)**：可在內部部署安裝的 Docker 登錄服務 (來自 Docker)，以便存在於組織的資料中心和網路內。 這會方便在企業內管理私人映像。 Docker Trusted Registry 隨附於 Docker Datacenter 產品中。 如需詳細資訊，請參閱 [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/)。
 
-**Docker Community Edition (CE)** ：適用於 Windows 和 macOS 的開發工具，可在本機建置、執行及測試容器。 Docker CE for Windows 提供適用於 Linux 和 Windows 容器的開發環境。 Windows 上的 Linux Docker 主機是以 [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 虛擬機器為基礎。 Windows 容器的主機則是直接以 Windows 為基礎。 Docker CE for Mac 是以 Apple Hypervisor 架構和 [xhyve hypervisor](https://github.com/mist64/xhyve) 為基礎，其提供 Mac OS X 版的 Linux Docker 主機虛擬機器。Docker CE for Windows 和 Docker CE for Mac 取代以 Oracle VirtualBox 為基礎的 Docker Toolbox。
+**Docker Community Edition (CE)**：適用於 Windows 和 macOS 的開發工具，可在本機建置、執行及測試容器。 Docker CE for Windows 提供適用於 Linux 和 Windows 容器的開發環境。 Windows 上的 Linux Docker 主機是以 [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 虛擬機器為基礎。 Windows 容器的主機則是直接以 Windows 為基礎。 Docker CE for Mac 是以 Apple Hypervisor 架構和 [xhyve hypervisor](https://github.com/mist64/xhyve) 為基礎，其提供 Mac OS X 版的 Linux Docker 主機虛擬機器。Docker CE for Windows 和 Docker CE for Mac 取代以 Oracle VirtualBox 為基礎的 Docker Toolbox。
 
-**Docker Enterprise Edition (EE)** ：適用於 Linux 和 Windows 開發之企業級版本的 Docker 工具。
+**Docker Enterprise Edition (EE)**：適用於 Linux 和 Windows 開發之企業級版本的 Docker 工具。
 
 **撰寫**：命令列工具和 YAML 檔案格式，其中繼資料可定義及執行多容器應用程式。 您可以使用一或多個 .yml 檔案，來定義以多個映像為基礎的單一應用程式，這些檔案可能會覆寫相依於環境的值。 建立定義之後，您可以使用單一命令 (docker-compose up) 來部署整個多容器應用程式，以在 Docker 主機上針對每個映像建立一個容器。
 
 **叢集**：以單一虛擬 Docker 主機形式公開的 Docker 主機集合，讓應用程式可以擴充為分散到叢集內多部主機的多個服務執行個體。 您可以使用 Kubernetes、Azure Service Fabric、Docker Swarm 和 Mesosphere DC/OS 來建立 Docker 叢集。
 
-**協調器**：可簡化叢集和 Docker 主機管理的工具。 協調器可讓您透過 CLI 或圖形化 UI 來管理其映射、容器和主機。 您可以管理容器網路功能、組態、負載平衡、服務探索、高可用性、Docker 主機組態等等。 協調器會負責跨節點集合執行、散發、擴充及修復工作負載。 一般而言，協調器產品與提供叢集基礎結構的產品相同，例如在市場中其他供應項目之間的 Kubernetes 和 Azure Service Fabric。
+**協調器**：可簡化叢集和 Docker 主機管理的工具。 協調器使您能夠通過 CLI 或圖形 UI 管理其圖像、容器和主機。 您可以管理容器網路功能、組態、負載平衡、服務探索、高可用性、Docker 主機組態等等。 協調器會負責跨節點集合執行、散發、擴充及修復工作負載。 一般而言，協調器產品與提供叢集基礎結構的產品相同，例如在市場中其他供應項目之間的 Kubernetes 和 Azure Service Fabric。
 
 >[!div class="step-by-step"]
->[上一頁](docker-defined.md)
->[下一頁](docker-containers-images-registries.md)
+>[上一個](docker-defined.md)
+>[下一個](docker-containers-images-registries.md)

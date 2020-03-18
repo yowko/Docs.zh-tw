@@ -9,10 +9,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: b35f0a2a5cc0b2895b491d4ee24f89955f4b8fed
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77625796"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# 參考)
@@ -29,13 +29,13 @@ ms.locfileid: "77625796"
 
 - [class](class.md)
 
-- [interface](interface.md)
+- [介面](interface.md)
 
 - [struct](../builtin-types/struct.md)
 
-- [enum](../builtin-types/enum.md)
+- [枚舉](../builtin-types/enum.md)
 
-- [delegate](../builtin-types/reference-types.md#the-delegate-type)
+- [委託](../builtin-types/reference-types.md#the-delegate-type)
 
 無論是否在 C# 來源檔案中明確宣告命名空間，編譯器都會加入預設的命名空間。 這個未命名的命名空間，有時候是指全域命名空間，會出現在每個檔案中。 全域命名空間中的任何識別項都可用於具名命名空間中。
 
@@ -53,13 +53,13 @@ ms.locfileid: "77625796"
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
-如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/namespaces.md)的[命名空間](~/_csharplang/spec/introduction.md)一節。
+如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[命名空間](~/_csharplang/spec/namespaces.md)一節。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [C# 關鍵字](index.md)
-- [using](using-directive.md)
+- [使用](using-directive.md)
 - [使用靜態](using-static.md)
 - [命名空間別名限定詞 `::`](../operators/namespace-alias-qualifier.md)
 - [命名空間](../../programming-guide/namespaces/index.md)

@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: e3cebe979b5c279ce8cb90db5510f8758c24c2b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73977000"
 ---
 # <a name="save-and-load-trained-models"></a>儲存並載入定型的模型
@@ -60,16 +60,16 @@ ITransformer trainedModel = pipelineEstimator.Fit(data);
 mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 ```
 
-因為大部分的模型和資料準備管線繼承自相同類別集，所以這些元件的儲存並載入方法簽章相同。 根據您的使用案例，您可將資料準備管線和模型結合為單一的 [`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601)，這會輸出單一的 [`ITransformer`](xref:Microsoft.ML.ITransformer)，或分開它們為各自建立個別的 [`ITransformer`](xref:Microsoft.ML.ITransformer)。
+因為大部分的模型和資料準備管線繼承自相同類別集，所以這些元件的儲存並載入方法簽章相同。 根據您的用例，您可以將資料準備管道和模型合併為單個，[`EstimatorChain`](xref:Microsoft.ML.Data.TransformerChain%601)這將輸出單個管道[`ITransformer`](xref:Microsoft.ML.ITransformer)或將它們分開，從而為每個管道創建單獨的[`ITransformer`](xref:Microsoft.ML.ITransformer)資料準備管道和模型。
 
 ## <a name="save-a-model-locally"></a>將模型儲存在本機
 
 儲存模型時您需要兩個物件：
 
-1. 模型的 [`ITransformer`](xref:Microsoft.ML.ITransformer)。
-2. [`ITransformer`](xref:Microsoft.ML.ITransformer) 之預期輸入的 [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema)。
+1. 模型[`ITransformer`](xref:Microsoft.ML.ITransformer)的 。
+2. [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema)的預期輸入的 的[`ITransformer`](xref:Microsoft.ML.ITransformer)。
 
-定型模型後，請使用 [`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) 方法，以輸入資料之 `DataViewSchema` 將已定型模型儲存至稱為 `model.zip` 的檔案。
+訓練模型後，使用 方法[`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*)將訓練的模型保存到使用`model.zip``DataViewSchema`輸入資料調用的檔。
 
 ```csharp
 // Save Trained Model
@@ -80,7 +80,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 
 儲存在本機的模型可以用在其他處理序或應用程式，例如 `ASP.NET Core` 和 `Serverless Web Applications`。 若要深入了解，請參閱[在 Web API 中使用 ML.NET](./serve-model-web-api-ml-net.md) 和[部署 ML.NET 無伺服器 Web 應用程式](./serve-model-serverless-azure-functions-ml-net.md)的操作說明文章。
 
-在個別的應用程式或處理序中，使用 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) 方法和檔案路徑，將已定型模型放入您的應用程式。
+在單獨的應用程式或進程中，[`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*)將 方法與檔路徑一起使用，將訓練的模型引入應用程式。
 
 ```csharp
 //Define DataViewSchema for data preparation pipeline and trained model
@@ -92,7 +92,7 @@ ITransformer trainedModel = mlContext.Model.Load("model.zip", out modelSchema);
 
 ## <a name="load-a-model-stored-remotely"></a>載入儲存在遠端的模型
 
-若要將儲存在遠端位置的資料準備管線和模型載入應用程式，請使用 [`Stream`](xref:System.IO.Stream)，不要使用 [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) 方法中的檔案路徑。
+要將存儲在遠端位置的資料準備管道和模型載入到應用程式中，請使用[`Stream`](xref:System.IO.Stream)[`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*)方法中的檔路徑而不是檔路徑。
 
 ```csharp
 // Create MLContext

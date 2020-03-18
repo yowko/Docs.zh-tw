@@ -3,22 +3,22 @@ title: .NET Core 2.0 的新功能
 description: 了解 .NET Core 所提供的新功能。
 ms.date: 08/13/2017
 ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801887"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398829"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 的新功能
 
 .NET Core 2.0 包含針對下列區域的增強與新功能：
 
-- [工具](#tooling)
+- [Tooling](#tooling)
 - [語言支援](#language-support)
 - [平台改善](#platform-improvements)
 - [API 變更](#api-changes-and-library-support)
-- [Visual Studio 整合](#visual-studio-integration)
-- [文件改善](#documentation-improvements)
+- [視覺化工作室集成](#visual-studio-integration)
+- [文件改進](#documentation-improvements)
 
 ## <a name="tooling"></a>Tooling
 
@@ -70,11 +70,11 @@ ms.locfileid: "74801887"
 
 1. 開啟主控台視窗，建立專案的目錄，並將其設為目前的目錄。
 
-1. 輸入 `dotnet new console -lang vb` 命令。
+1. 輸入命令 `dotnet new console -lang vb`。
 
    該命令會建立具有 `.vbproj` 副檔名的專案檔，以及名為 *Program.vb* 的 Visual Basic 原始程式碼檔。 此檔案包含將 "Hello World!" 字串寫入至主控台視窗的原始程式碼。
 
-1. 輸入 `dotnet run` 命令。 [.NET Core CLI](../tools/index.md) 會自動編譯並執行應用程式，該應用程式則會在主控台視窗中顯示 "Hello World!" 。
+1. 輸入命令 `dotnet run`。 [.NET Core CLI](../tools/index.md) 會自動編譯並執行應用程式，該應用程式則會在主控台視窗中顯示 "Hello World!" 。
 
 ### <a name="support-for-c-71"></a>針對 C# 7.1 的支援
 
@@ -110,7 +110,7 @@ ms.locfileid: "74801887"
 
 .NET Standard 2.0 類別庫也可以參考 .NET Framework 類別庫，前提是這些類別庫必須呼叫存在於 .NET Standard 2.0 中的 API。 不需要對 .NET Framework 程式庫進行任何重新編譯。
 
-如需自上次版本後已新增至 .NET Standard 的 Api 清單，.NET Standard 1.6，請參閱[.NET Standard 2.0 與 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)。
+有關自上次版本以來已添加到 .NET 標準中的 API 的清單，.NET 標準 1.6，請參閱[.NET 標準 2.0 與 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md)。
 
 ### <a name="expanded-surface-area"></a>擴展的介面區
 
@@ -122,7 +122,7 @@ ms.locfileid: "74801887"
 
 .NET Core 程式碼可以參考現有的 .NET Framework 程式庫，包括現有的 NuGet 套件。 請注意，程式庫必須使用 .NET Standard 所提供的 API。
 
-## <a name="visual-studio-integration"></a>Visual Studio 整合
+## <a name="visual-studio-integration"></a>整合 Visual Studio
 
 Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能為 .NET Core 開發人員提供數個顯著的增強功能。
 
@@ -130,13 +130,13 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 
 如果已安裝 .NET Core 2.0 SDK，您可以將 .NET Core 1.x 專案的目標重定至 .NET Core 2.0，並將 .NET Standard 1.x 程式庫的目標重定至 .NET Standard 2.0。
 
-若要在 Visual Studio 中重定專案的目標，請開啟專案屬性對話方塊的 [應用程式] 索引標籤，並將 [目標 Framework] 的值變更為 [.NET Core 2.0] 或 [.NET Standard 2.0]。 另一個變更它的方法，則是以滑鼠右鍵按一下專案並選取 [編輯 \*.csproj 檔案] 選項。 如需詳細資訊，請參閱本主題稍早的[工具](#tooling)小節。
+若要在 Visual Studio 中重定專案的目標，請開啟專案屬性對話方塊的 [應用程式]**** 索引標籤，並將 [目標 Framework]**** 的值變更為 [.NET Core 2.0]**** 或 [.NET Standard 2.0]****。 另一個變更它的方法，則是以滑鼠右鍵按一下專案並選取 [編輯 \*.csproj 檔案]**** 選項。 如需詳細資訊，請參閱本主題稍早的[工具](#tooling)小節。
 
 ### <a name="live-unit-testing-support-for-net-core"></a>.NET Core 的即時單元測試支援
 
 每當您修改程式碼時，Live Unit Testing 會在背景自動執行任何受影響的單元測試，並會在 Visual Studio 環境中呈現即時的結果和程式碼涵蓋範圍。 .NET Core 2.0 現已支援 Live Unit Testing。 先前 Live Unit Testing 僅針對 .NET Framework 應用程式提供。
 
-如需詳細資訊，請參閱[Visual Studio 的 Live Unit Testing](/visualstudio/test/live-unit-testing)和[Live Unit Testing 常見問題](/visualstudio/test/live-unit-testing-faq)。
+有關詳細資訊，請參閱[使用視覺化工作室的即時單元測試](/visualstudio/test/live-unit-testing)和[即時單元測試常見問題解答](/visualstudio/test/live-unit-testing-faq)。
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>更佳的多目標 Framework 支援
 
@@ -148,17 +148,17 @@ Visual Studio 2017 15.3 版 (以及某些情況下的 Visual Studio for Mac) 能
 
 您現在可以獨立於 Visual Studio 安裝 .NET Core SDK。 這可以讓單一版本的 Visual Studio 建置以不同 .NET Core 版本為目標的專案。 在此之前，Visual Studio 和 .NET Core SDK 必須緊密關聯，只有特定版本的 SDK 才能搭配特定版本的 Visual Studio。
 
-## <a name="documentation-improvements"></a>文件改善
+## <a name="documentation-improvements"></a>文件改進
 
 ### <a name="net-application-architecture"></a>.NET 應用程式架構
 
 [.NET 應用程式架構](https://dotnet.microsoft.com/learn/dotnet/architecture-guides)可讓您存取一系列針對使用 .NET 進行建置提供指引、最佳做法和範例應用程式的電子書：
 
 - [微服務和 Docker 容器](../../architecture/microservices/index.md)
-- [使用 ASP.NET 的 Web 應用程式](../../architecture/modern-web-apps-azure/index.md)
+- [具有ASP.NET的 Web 應用程式](../../architecture/modern-web-apps-azure/index.md)
 - [使用 Xamarin 的行動應用程式](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [使用 Azure 部署至雲端的應用程式](/azure/architecture/reference-architectures/index)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ASP.NET Core 2.0 的新功能](/aspnet/core/aspnetcore-2.0)

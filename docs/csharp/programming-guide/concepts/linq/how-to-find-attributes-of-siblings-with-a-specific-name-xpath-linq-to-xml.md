@@ -1,15 +1,15 @@
 ---
-title: 如何尋找具有特定名稱之同級的屬性（XPath-LINQ to XML）（C#）
+title: 如何查找具有特定名稱的同級屬性（XPath-LINQ 到 XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 788945232874ed5c1ba9a8a43c10eaf012320cbb
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 331e1a7f432f4d06b697180b1594106ec6842c9a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141137"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169255"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>如何尋找具有特定名稱之同級的屬性（XPath-LINQ to XML）（C#）
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>如何查找具有特定名稱的同級屬性（XPath-LINQ 到 XML）（C#）
 本主題顯示如何尋找內容節點之同層級的所有屬性。 在集合中，只會傳回具有特定名稱的屬性。  
   
  XPath 運算式為：  
@@ -24,7 +24,7 @@ ms.locfileid: "74141137"
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  
   
-XElement book =   
+XElement book =
     books  
     .Root  
     .Element("Book");  

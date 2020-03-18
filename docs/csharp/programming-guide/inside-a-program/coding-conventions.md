@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
 ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452002"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399732"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# 編碼慣例 (C# 程式設計手冊)
 
@@ -25,9 +25,9 @@ ms.locfileid: "77452002"
   
 - 示範 C# 的最佳作法。  
 
-Microsoft 會使用本文中的指導方針來開發範例和檔。  
+Microsoft 使用本文中的指南來開發示例和文檔。  
   
-## <a name="naming-conventions"></a>命名慣例  
+## <a name="naming-conventions"></a>命名規範  
   
 - 在不包含 [using 指示詞](../../language-reference/keywords/using-directive.md)的簡短範例中，使用命名空間限定。 如果您知道專案中預設會匯入命名空間，則無須完整限定該命名空間的名稱。 如果限定的名稱太長無法顯示在同一行，則可以在點 (.) 之後中斷名稱，如下範例所示。  
   
@@ -97,20 +97,20 @@ Microsoft 會使用本文中的指導方針來開發範例和檔。
   
 - 避免使用 `var` 取代 [dynamic](../../language-reference/builtin-types/reference-types.md)。  
   
-- 在[for](../../language-reference/keywords/for.md)迴圈中，使用隱含類型來判斷迴圈變數的型別。  
+- 使用隱式類型來確定[迴圈](../../language-reference/keywords/for.md)中的迴圈變數的類型。  
   
      下列範例在 `for` 陳述式中使用隱含類型。  
   
      [!code-csharp[csProgGuideCodingConventions#7](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#7)]  
 
-- 請勿使用隱含類型來判斷[foreach](../../language-reference/keywords/foreach-in.md)迴圈中迴圈變數的類型。
+- 不要使用隱式類型來確定[foreach](../../language-reference/keywords/foreach-in.md)迴圈中的迴圈變數的類型。
 
-     下列範例會在 `foreach` 語句中使用明確類型。
+     下面的示例在`foreach`語句中使用顯式鍵入。
 
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
      > [!NOTE]
-     > 請小心不要不小心變更可反復執行集合的元素類型。 例如，您可以輕鬆地從 <xref:System.Linq.IQueryable?displayProperty=nameWithType> 切換至 `foreach` 語句中的 <xref:System.Collections.IEnumerable?displayProperty=nameWithType>，這會變更查詢的執行。
+     > 請注意，不要意外更改可反覆運算集合的元素的類型。 例如，很容易在<xref:System.Linq.IQueryable?displayProperty=nameWithType><xref:System.Collections.IEnumerable?displayProperty=nameWithType>`foreach`語句中切換到 ，這將更改查詢的執行。
 
 ### <a name="unsigned-data-type"></a>不帶正負號的資料類型  
   
@@ -142,7 +142,7 @@ Microsoft 會使用本文中的指導方針來開發範例和檔。
   
 ### <a name="-and-124124-operators"></a>&& 和 &#124;&#124; 運算子  
   
-為避免發生例外狀況，並略過不必要的比較來提升效能，請在執行比較時使用 [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) 而非 [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)，並使用 [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) 而非 [&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)，如下列範例所示。  
+為了避免異常，並通過跳過不必要的比較來提高性能，請在執行[&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-)比較時[&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-)使用而不是[&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-)而不是[&#124;&#124;而不是&#124;，](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-)如以下示例所示。  
   
 [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
@@ -170,7 +170,7 @@ Microsoft 會使用本文中的指導方針來開發範例和檔。
   
 ### <a name="static-members"></a>靜態成員  
   
-使用類別名稱 [ClassName.StaticMember](../../language-reference/keywords/static.md)，呼叫 *static* 成員。 這種作法可讓靜態存取更加清晰，從而讓程式碼更易於閱讀。  請勿使用衍生類別的名稱，限定在基底類別中定義的靜態成員。  編譯該程式碼時，如果將具有相同名稱的靜態成員加入衍生類別，則會破壞程式碼的清楚程度，且程式碼之後可能會在中斷。  
+使用類別名稱 *ClassName.StaticMember*，呼叫 [static](../../language-reference/keywords/static.md) 成員。 這種作法可讓靜態存取更加清晰，從而讓程式碼更易於閱讀。  請勿使用衍生類別的名稱，限定在基底類別中定義的靜態成員。  編譯該程式碼時，如果將具有相同名稱的靜態成員加入衍生類別，則會破壞程式碼的清楚程度，且程式碼之後可能會在中斷。  
   
 ### <a name="linq-queries"></a>LINQ 查詢  
   

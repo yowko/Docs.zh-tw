@@ -1,15 +1,15 @@
 ---
-title: 如何使用 LINQ to XML （C#）處理字典
+title: 如何使用 LINQ 到 XML （C#） 的字典
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
 ms.openlocfilehash: 1a98293f208e80e969362fca27014ecd2e5c4183
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347231"
 ---
-# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>如何使用 LINQ to XML （C#）處理字典
+# <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>如何使用 LINQ 到 XML （C#） 的字典
 將各種資料結構轉換為 XML，以及將 XML 轉回其他資料結構通常很方便。 這個主題藉由來回轉換 <xref:System.Collections.Generic.Dictionary%602> 和 XML 來顯示這個一般方法的特定實作。  
   
 ## <a name="example"></a>範例  

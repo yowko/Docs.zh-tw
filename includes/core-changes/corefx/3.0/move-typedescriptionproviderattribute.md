@@ -1,36 +1,36 @@
 ---
-ms.openlocfilehash: 4d479636f41095610eaf39f92ad0dad4863ab8b5
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 57ca2ad839aab8d61da1a929660920efe1190334
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568107"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147532"
 ---
-### <a name="typedescriptionproviderattribute-moved-to-another-assembly"></a>TypeDescriptionProviderAttribute 已移至另一個元件
+### <a name="typedescriptionproviderattribute-moved-to-another-assembly"></a>類型描述提供程式屬性移動到另一個程式集
 
-已移動 <xref:System.ComponentModel.TypeDescriptionProviderAttribute> 類別。
+類<xref:System.ComponentModel.TypeDescriptionProviderAttribute>已移動。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Core 2.2 和舊版中，<xref:System.ComponentModel.TypeDescriptionProviderAttribute> 類別可在*system.workflow.componentmodel.activity. TypeConverter*元件中找到。
+在 .NET Core 2.2 和<xref:System.ComponentModel.TypeDescriptionProviderAttribute>早期版本中，該類位於*System.元件模型.TypeConverter*程式集中。
 
-從 .NET Core 3.0 開始，它會在*system.collections.objectmodel.observablecollection*元件中找到。
+從 .NET Core 3.0 開始，它位於*System.ObjectModel*程式集中。
 
-#### <a name="version-introduced"></a>引進的版本
+#### <a name="version-introduced"></a>介紹的版本
 
 3.0
 
 #### <a name="recommended-action"></a>建議的動作
 
-這項變更只會影響使用反映的應用程式，藉由呼叫方法（例如 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>）或假設該類型在特定元件中的 <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> 多載，來載入 <xref:System.ComponentModel.TypeDescriptionProviderAttribute> 類型。 如果是這種情況，則應該更新方法呼叫中所參考的元件，以反映類型的新元件位置。
+此更改僅影響使用反射來載入<xref:System.ComponentModel.TypeDescriptionProviderAttribute>類型的應用程式，方法是調用方法（如 或<xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>重載<xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>，假定類型位於特定程式集中）。 如果是這種情況，則應更新方法調用中引用的程式集以反映類型的新程式集位置。
 
-#### <a name="category"></a>Category
+#### <a name="category"></a>類別
 
-Windows 表單
+Windows Forms
 
 #### <a name="affected-apis"></a>受影響的 API
 
-- None
+無。
 
 <!--
 

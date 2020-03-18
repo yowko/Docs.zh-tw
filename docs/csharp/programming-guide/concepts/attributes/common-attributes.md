@@ -3,22 +3,22 @@ title: 常見屬性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
 ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69595455"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399753"
 ---
 # <a name="common-attributes-c"></a>常見屬性 (C#)
 本主題描述最常在 C# 程式中使用的屬性。  
   
 - [全域屬性](#Global)  
   
-- [Obsolete 屬性](#Obsolete)  
+- [過時的屬性](#Obsolete)  
   
-- [條件式屬性](#Conditional)  
+- [條件屬性](#Conditional)  
   
-- [呼叫端資訊屬性](#CallerInfo)  
+- [呼叫者資訊屬性](#CallerInfo)  
   
 ## <a name="Global"></a> 全域屬性  
  大部分屬性會套用至特定語言項目 (例如類別或方法)；不過，有些屬性是全域屬性，其套用至整個組件或模組。 例如，<xref:System.Reflection.AssemblyVersionAttribute> 屬性可以用來將版本資訊內嵌到組件，與下面類似：  
@@ -42,7 +42,7 @@ ms.locfileid: "69595455"
   
  下表顯示識別屬性。  
   
-|屬性|用途|  
+|屬性|目的|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyName>|完整描述組件的識別。|  
 |<xref:System.Reflection.AssemblyVersionAttribute>|指定組件的版本。|  
@@ -52,7 +52,7 @@ ms.locfileid: "69595455"
 ### <a name="informational-attributes"></a>資訊屬性  
  您可以使用資訊屬性，以提供組件其他的公司或產品資訊。 下表顯示 <xref:System.Reflection?displayProperty=nameWithType> 命名空間中定義的資訊屬性。  
   
-|屬性|用途|  
+|屬性|目的|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyProductAttribute>|定義自訂屬性，以指定組件資訊清單的產品名稱。|  
 |<xref:System.Reflection.AssemblyTrademarkAttribute>|定義自訂屬性，以指定組件資訊清單的商標。|  
@@ -65,14 +65,14 @@ ms.locfileid: "69595455"
 ### <a name="assembly-manifest-attributes"></a>組件資訊清單屬性。  
  您可以使用組件資訊清單屬性，在組件資訊清單中提供資訊。 這包括標題、描述、預設別名和組態。 下表顯示 <xref:System.Reflection?displayProperty=nameWithType> 命名空間中定義的資訊清單屬性。  
   
-|屬性|用途|  
+|屬性|目的|  
 |---------------|-------------|  
 |<xref:System.Reflection.AssemblyTitleAttribute>|定義自訂屬性，以指定組件資訊清單的組件標題。|  
 |<xref:System.Reflection.AssemblyDescriptionAttribute>|定義自訂屬性，以指定組件資訊清單的組件描述。|  
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|定義自訂屬性，以指定組件資訊清單的組件設定 (例如零售或偵錯)。|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|定義組件資訊清單的易記預設別名。|  
   
-## <a name="Obsolete"></a> Obsolete 屬性  
+## <a name="Obsolete"></a>過時的屬性  
  `Obsolete` 屬性會將程式實體標記為不再建議使用的標記。 每次使用標記為已淘汰的實體都會接著產生警告或錯誤 (視屬性的設定方式而定)。 例如：  
   
 ```csharp  
@@ -216,12 +216,12 @@ class SampleClass
 }  
 ```  
   
-## <a name="CallerInfo"></a> 呼叫端資訊屬性  
+## <a name="CallerInfo"></a>呼叫者資訊屬性  
  使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。  
   
  若要取得成員呼叫端資訊，請使用套用至選擇性參數的屬性。 每個選擇性參數都會指定預設值。 下表列出 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 命名空間中定義的 Caller Info 屬性：  
   
-|屬性|說明|類型|  
+|屬性|描述|類型|  
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|包含呼叫端的原始程式檔完整路徑。 這是編譯時期的路徑。|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|原始程式檔中呼叫方法的行號。|`Integer`|  
@@ -236,4 +236,4 @@ class SampleClass
 - [C# 程式設計指南](../../index.md)
 - [屬性](../../../../standard/attributes/index.md)
 - [反映 (C#)](../reflection.md)
-- [使用反射存取屬性 (C#)](./accessing-attributes-by-using-reflection.md)
+- [使用反映存取屬性 (C#)](./accessing-attributes-by-using-reflection.md)

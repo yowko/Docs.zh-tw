@@ -1,17 +1,17 @@
 ---
-title: 如何在查詢程式C#設計指南中傳回專案屬性的子集
+title: 如何返回查詢中元素屬性的子集 - C# 程式設計指南
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
 ms.openlocfilehash: 27a2626fc46307a7195040adf746d8d8757d2f82
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714862"
 ---
-# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何在查詢中傳回專案屬性的子集（C#程式設計手冊）
+# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>如何返回查詢中元素屬性的子集（C# 程式設計指南）
 如果下列兩個條件都成立，請在查詢運算式中使用匿名型別：  
   
 - 您只要傳回每個來源項目的部分屬性。  
@@ -45,8 +45,8 @@ Console.WriteLine(student.First + " " + student.Last);
   
 若要執行此程式碼，請將該類別複製貼入 System.Linq 指示詞為 `using` 的 C# 主控台應用程式。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
-- [匿名類型](./anonymous-types.md)
+- [匿名型別](./anonymous-types.md)
 - [C# 中的 LINQ](../../linq/index.md)

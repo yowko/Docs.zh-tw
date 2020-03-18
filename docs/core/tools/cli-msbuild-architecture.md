@@ -3,10 +3,10 @@ title: .NET Core 命令列工具架構
 description: 深入了解 .NET Core 工具層級，以及最新版本中已變更的內容。
 ms.date: 03/06/2017
 ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092911"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中變更的高階概觀
@@ -15,39 +15,39 @@ ms.locfileid: "77092911"
 
 ## <a name="moving-away-from-projectjson"></a>從 project.json 移開
 
-.NET Core 的工具中最大的變更，絕對是將專案系統[從 project.json 改為使用 csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/)。 命令列工具的最新版本不支援 *project.json* 檔案。 這表示它無法用來建立、執行或發行以 json 為基礎的應用程式和程式庫。 若要使用這個版本的工具，請遷移您現有的專案，或啟動新的專案。
+.NET Core 的工具中最大的變更，絕對是將專案系統[從 project.json 改為使用 csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/)。 命令列工具的最新版本不支援 *project.json* 檔案。 這意味著它不能用於構建、運行或發佈基於 project.json 的應用程式和庫。 要使用此版本的工具，請遷移現有專案或啟動新專案。
 
-做為移動的一部分，開發用來建置 project.json 專案的自訂建置引擎會以成熟且功能完整、名稱為 [MSBuild](https://github.com/Microsoft/msbuild) 的建置引擎取代。 MSBuild 是 .NET 社區中的知名引擎。 從平臺的第一版開始，這是一項重要的技術。 因為它需要建立 .NET Core 應用程式，所以 MSBuild 已移植到 .NET Core，並可在 .NET Core 執行所在的任何平臺上使用。 .NET Core 其中一個主要承諾就是跨平台開發堆疊，而我們也以確認此移動不會中斷該承諾。
+做為移動的一部分，開發用來建置 project.json 專案的自訂建置引擎會以成熟且功能完整、名稱為 [MSBuild](https://github.com/Microsoft/msbuild) 的建置引擎取代。 MSBuild 是 .NET 社區中的一個眾所周知的引擎。 自該平臺首次發佈以來，它一直是關鍵技術。 由於 MSBuild 需要構建 .NET Core 應用程式，因此 MSBuild 已移植到 .NET Core，可用於 .NET Core 運行的任何平臺上。 .NET Core 其中一個主要承諾就是跨平台開發堆疊，而我們也以確認此移動不會中斷該承諾。
 
 > [!TIP]
-> 如果您不熟悉 MSBuild，而且想要深入瞭解它，您可以從閱讀[MSBuild 概念](/visualstudio/msbuild/msbuild-concepts)一文開始。
+> 如果您是 MSBuild 的新增產品，並且希望瞭解有關它的更多內容，則可以從閱讀[MSBuild 概念](/visualstudio/msbuild/msbuild-concepts)文章開始。
 
 ## <a name="the-tooling-layers"></a>工具分層
 
-隨著組建引擎的變更，以及從現有的專案系統移開，自然會有一些問題。 其中任何一項變更都會變更 .NET Core 工具生態系統的整體「分層」功能嗎？ 有新的項目和元件嗎？
+隨著構建引擎的變化和現有專案系統的退出，一些問題自然而然地隨之而來。 這些更改中的任何一項都改變了 .NET Core 工具生態系統的整體"分層"？ 有新的項目和元件嗎？
 
 讓我們開始快速複習 Preview 2 分層，如下列圖片所示︰
 
 ![Preview 2 工具高階架構](media/cli-msbuild-architecture/p2-arch.png)
 
-Preview 2 中的工具分層是直接的。 在底部，基礎是 .NET Core CLI。 所有其他較高層級的工具，例如 Visual Studio 或 Visual Studio Code，取決於並依賴 CLI 來建立專案、還原相依性等。 例如，如果 Visual Studio 想要執行還原作業，它會呼叫 CLI 中的 `dotnet restore` （[請參閱 note](#dotnet-restore-note)）命令。
+預覽 2 中工具的分層非常簡單。 在底部，基礎是 .NET 核心 CLI。 所有其他高級工具（如 Visual Studio 或 Visual Studio 代碼）都依賴于 CLI 來生成專案、還原依賴項等。 例如，如果 Visual Studio 想要執行還原操作，它將調用 CLI`dotnet restore`中的 （[請參閱 注釋](#dotnet-restore-note)） 命令。
 
 隨著移動到新的專案系統，之前的圖表有所變更：
 
 ![.NET Core SDK 1.0.0 高階架構](media/cli-msbuild-architecture/p3-arch.png)
 
-主要差異就是 CLI 不再是基本層；此角色現在會填入「共用的 SDK 元件」。 這個共用的 SDK 元件是一組目標和相關聯的工作，負責編譯器代碼、發佈、封裝 NuGet 套件等等。 .NET Core SDK 是開放原始碼，並可在 GitHub 上的[SDK](https://github.com/dotnet/sdk)存放庫中取得。
+主要差異就是 CLI 不再是基本層；此角色現在會填入「共用的 SDK 元件」。 此共用 SDK 元件是一組目標和相關任務，負責編譯代碼、發佈代碼、打包 NuGet 包等。 .NET 核心 SDK 是開源的，可在[GitHub](https://github.com/dotnet/sdk)上獲取 SDK 存儲庫。
 
 > [!NOTE]
-> 「目標」是一個 MSBuild 詞彙，表示 MSBuild 可以叫用的已命名作業。 它通常會搭配執行目標應該要執行之某些邏輯的一或多個工作。 MSBuild 支援許多現成的目標，例如 `Copy` 或 `Execute`；它也允許使用者使用受管理程式碼撰寫自己的工作，並定義目標以執行那些工作。 如需詳細資訊，請參閱 [MSBuild 工作](/visualstudio/msbuild/msbuild-tasks)。
+> "目標"是一個 MSBuild 術語，指示 MSBuild 可以調用的命名操作。 它通常會搭配執行目標應該要執行之某些邏輯的一或多個工作。 MSBuild 支援許多現成的目標，例如 `Copy` 或 `Execute`；它也允許使用者使用受管理程式碼撰寫自己的工作，並定義目標以執行那些工作。 如需詳細資訊，請參閱 [MSBuild 工作](/visualstudio/msbuild/msbuild-tasks)。
 
-所有工具組現在使用共用的 SDK 元件及其目標，包含 CLI。 例如，Visual Studio 2019 不會呼叫 `dotnet restore` （[請參閱 note](#dotnet-restore-note)）命令來還原 .net Core 專案的相依性。 相反地，它會直接使用「還原」目標。 由於這些都是 MSBuild 目標，您也可以使用原始的 MSBuild 來使用 [dotnet msbuild](dotnet-msbuild.md) 命令執行它們。
+所有工具組現在使用共用的 SDK 元件及其目標，包含 CLI。 例如，Visual Studio 2019 不會調用`dotnet restore`（請參閱[）](#dotnet-restore-note)命令來還原 .NET Core 專案的依賴項。 相反，它直接使用"還原"目標。 由於這些都是 MSBuild 目標，您也可以使用原始的 MSBuild 來使用 [dotnet msbuild](dotnet-msbuild.md) 命令執行它們。
 
 ### <a name="cli-commands"></a>CLI 命令
 
-共用的 SDK 元件表示大部分現有的 CLI 命令都已根據重新實作為 MSBuild 工作和目標。 這對 CLI 命令和您的工具組的使用方式有什麼意義？
+共用 SDK 元件意味著大多數現有 CLI 命令已作為 MSBuild 任務和目標重新實現。 這對 CLI 命令和您的工具組的使用方式有什麼意義？
 
-從使用觀點來看，它不會變更您使用 CLI 的方式。 CLI 仍然具有 .NET Core 1.0 Preview 2 版本中存在的核心命令：
+從使用方式的角度來看，它不會更改您使用 CLI 的方式。 CLI 仍然具有 .NET Core 1.0 預覽 2 版本中存在的核心命令：
 
 - `new`
 - `restore`
@@ -57,21 +57,21 @@ Preview 2 中的工具分層是直接的。 在底部，基礎是 .NET Core CLI�
 - `test`
 - `pack`
 
-這些命令仍會執行您預期的動作（新的專案、建立、發行、封裝、封裝等等）。 您可以查閱命令的說明畫面（使用 `dotnet <command> --help`）或此網站上的檔，以瞭解其行為。
+這些命令仍然執行您希望它們執行的操作（啟動專案、生成專案、發佈它、打包它們等）。 您可以查閱命令的説明螢幕（使用`dotnet <command> --help`）或此網站上的文檔，以熟悉其行為。
 
-從執行的觀點來看，CLI 命令會採用其參數，並建立對「原始」 MSBuild 的呼叫，以設定所需的屬性，並執行所需的目標。 為進一步說明這一點，請考慮下列命令︰
+從執行的角度來看，CLI 命令獲取其參數並構造對"原始"MSBuild 的調用，該調用設置所需的屬性並運行所需的目標。 為進一步說明這一點，請考慮下列命令︰
 
    ```dotnetcli
    dotnet publish -o pub -c Release
    ```
 
-此命令會使用「發行」設定，將應用程式發佈至 `pub` 資料夾。 就內部而言，此命令會轉譯成下列 MSBuild 引動過程︰
+此命令使用"釋放"配置`pub`將應用程式發佈到資料夾中。 就內部而言，此命令會轉譯成下列 MSBuild 引動過程︰
 
    ```dotnetcli
    dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release
    ```
 
-此規則的值得注意的例外狀況是 `new` 和 `run` 命令。 它們尚未實作為 MSBuild 目標。
+此規則的顯著例外是 和`new``run`命令。 它們尚未作為 MSBuild 目標實現。
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -1,27 +1,27 @@
 ---
-title: 使用 dotnet-svcutil
+title: 使用點網-svcutil.xml 序列化器
 description: 了解如何使用 `dotnet-svcutil.xmlserializer` NuGet 套件預先產生 .NET Core 專案的序列化組件。
 author: huanwu
 ms.date: 11/27/2018
 ms.openlocfilehash: 4811647c294118cb160d25805e7d3ada97f071f9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75344893"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>在 .NET Core 上使用 dotnet-svcutil.xmlserializer
 
 `dotnet-svcutil.xmlserializer` NuGet 套件可預先產生 .NET Core 專案的序列化組件。 它會為用戶端應用程式中由 WCF 服務合約使用且可由 XmlSerializer 序列化的類型預先產生 C# 序列化程式碼。 這可改進當序列化或還原序列化那些類型的物件時的 XML 序列化啟動效能。
 
-## <a name="prerequisites"></a>必要條件：
+## <a name="prerequisites"></a>必要條件
 
-* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 或更新版本
+* [.NET 核心 2.1 SDK](https://dotnet.microsoft.com/download)或更高版本
 * 您慣用的程式碼編輯器
 
 您可以使用命令 `dotnet --info` 來檢查已安裝的 .NET Core SDK 和執行階段版本。
 
-## <a name="getting-started"></a>入門
+## <a name="getting-started"></a>開始使用
 
 若要在 .NET Core 主控台應用程式中使用 `dotnet-svcutil.xmlserializer`：
 

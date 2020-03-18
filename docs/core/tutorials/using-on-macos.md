@@ -1,48 +1,48 @@
 ---
-title: 教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
+title: 教程：使用視覺化工作室代碼在 macOS 中創建 .NET 核心解決方案
 description: 本文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。
 ms.date: 12/19/2019
 ms.openlocfilehash: f5da16d413ddc25587ff35550fe9f308dc87f4bb
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156591"
 ---
-# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>教學課程：使用 Visual Studio Code 在 macOS 中建立 .NET Core 解決方案
+# <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>教程：使用視覺化工作室代碼在 macOS 中創建 .NET 核心解決方案
 
 本文件提供建立適用於 macOS 之 .NET Core 方案的步驟及工作流程。 了解如何建立專案、建立單元測試、使用偵錯工具，以及透過 [NuGet](https://www.nuget.org/) 納入協力廠商程式庫。
 
 > [!NOTE]
 > 這篇文章會在 macOS 上使用 [Visual Studio Code](https://code.visualstudio.com)。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。 .NET Core SDK 包含 .NET Core 架構和執行階段的最新版本。
+安裝[.NET 核心 SDK](https://dotnet.microsoft.com/download)。 .NET Core SDK 包含 .NET Core 架構和執行階段的最新版本。
 
-安裝 [Visual Studio Code](https://code.visualstudio.com)。 在這篇文章的過程中，您也將安裝能改善 .NET Core 開發體驗的 Visual Studio Code 延伸模組。
+安裝[視覺化工作室代碼](https://code.visualstudio.com)。 在這篇文章的過程中，您也將安裝能改善 .NET Core 開發體驗的 Visual Studio Code 延伸模組。
 
-開啟 Visual Studio Code 並C#按<kbd>Fn</kbd>+<kbd>F1</kbd>來開啟 [Visual Studio Code] 調色板，以安裝 Visual Studio Code 擴充功能。 鍵入 **ext install** 來查看延伸模組的清單。 選取 C# 延伸模組。 重新啟動 Visual Studio Code 以啟動延伸模組。 如需詳細資訊，請參閱 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
+通過打開視覺化工作室代碼並按<kbd>Fn</kbd>+<kbd>F1</kbd>打開視覺化工作室代碼調色板，安裝視覺化工作室代碼 C# 擴展。 鍵入 **ext install** 來查看延伸模組的清單。 選取 C# 延伸模組。 重新啟動 Visual Studio Code 以啟動延伸模組。 如需詳細資訊，請參閱 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
 ## <a name="get-started"></a>開始使用
 
-在本教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 上的 dotnet/samples 存放庫中，[查看或下載](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)本文的來源。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+在本教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 上的 dotnet/示例存儲庫[中查看或下載](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)本文的源。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-啟動 Visual Studio Code。 按<kbd>Ctrl</kbd> <kbd>\`</kbd> （倒或倒引號字元），或從功能表中選取 [ **View** > **Terminal** ]，以在 Visual Studio Code 中開啟內嵌終端機。 如果您想要在 Visual Studio Code 外部工作，您仍然可以使用 Explorer [**在命令提示字元中**開啟] 命令來開啟外部 shell （在 MacOS 或 Linux 上的**終端機中開啟**）。
+啟動 Visual Studio Code。 按<kbd>Ctrl（</kbd><kbd>\`</kbd>回引或回勾符）或從功能表中選擇 **"查看** > **終端**"以在 Visual Studio 代碼中打開嵌入式終端。 如果您更喜歡在 Visual Studio 代碼之外工作，您仍可以使用"資源管理器**在命令提示符"命令提示符中打開**外部外殼（在 macOS 或 Linux 上的**終端中打開**）。
 
-請從建立方案檔開始，而方案檔是作為一或多個 .NET Core 專案的容器。 在終端機中，執行[`dotnet new`](../tools/dotnet-new.md)命令，以在名為*黃金*的新資料夾內建立新的方案*黃金*：
+請從建立方案檔開始，而方案檔是作為一或多個 .NET Core 專案的容器。 在終端中，運行[`dotnet new`](../tools/dotnet-new.md)命令以在名為 Golden 的新資料夾中創建新的解決方案*golden.sln* ： *golden*
 
 ```dotnetcli
 dotnet new sln -o golden
 ```
 
-流覽至新的 *[黃金*] 資料夾，然後執行下列命令來建立程式庫專案，這會在*library*資料夾中產生兩個檔案，即連結*庫 .csproj*和*Class1.cs*：
+導航到新的*金資料夾*並執行以下命令以創建庫專案，該專案將在*庫*資料夾中生成兩個檔，*庫.csproj*和*Class1.cs：*
 
 ```dotnetcli
 dotnet new classlib -o library
 ```
 
-執行 [`dotnet sln`](../tools/dotnet-sln.md) 命令，將新建立的 *library.csproj* 專案新增至方案：
+執行將[`dotnet sln`](../tools/dotnet-sln.md)新創建的*庫.csproj*專案添加到解決方案的命令：
 
 ```dotnetcli
 dotnet sln add library/library.csproj
@@ -60,7 +60,7 @@ dotnet sln add library/library.csproj
 </Project>
 ```
 
-我們的程式庫方法會序列化及還原序列化 JSON 格式的物件。 若要支援 JSON 序列化及還原序列化，請新增 `Newtonsoft.Json` NuGet 套件的參考。 `dotnet add` 命令會新增項目至專案。 若要新增 NuGet 套件的參考，請使用 [`dotnet add package`](../tools/dotnet-add-package.md) 命令，並指定套件的名稱：
+我們的程式庫方法會序列化及還原序列化 JSON 格式的物件。 若要支援 JSON 序列化及還原序列化，請新增 `Newtonsoft.Json` NuGet 套件的參考。 `dotnet add` 命令會新增項目至專案。 要添加對 NuGet 包的引用，請使用[`dotnet add package`](../tools/dotnet-add-package.md)命令並指定包的名稱：
 
 ```dotnetcli
 dotnet add library package Newtonsoft.Json
@@ -74,7 +74,7 @@ dotnet add library package Newtonsoft.Json
 </ItemGroup>
 ```
 
-執行 [`dotnet restore`](../tools/dotnet-restore.md) ([請參閱注意事項](#dotnet-restore-note))，以還原相依性，並在其中有三個檔案的 *library* 內建立 *obj* 資料夾，包含 *project.assets.json* 檔案：
+執行[`dotnet restore`](../tools/dotnet-restore.md)（[參見 注釋](#dotnet-restore-note)）， 它還原依賴項並在*庫*內創建一個*obj*資料夾，其中包含三個檔，包括*project.assets.json*檔：
 
 ```dotnetcli
 dotnet restore
@@ -95,9 +95,9 @@ namespace Library
 }
 ```
 
-`Thing` 類別包含一個公用方法 `Get`，這個公用方法會傳回兩個數字的總和，而做法是將總和轉換成字串，然後將它還原序列化為整數。 這會利用一些現代 C# 功能，例如 [`using static`指示詞](../../csharp/language-reference/keywords/using-static.md)、[運算式主體成員](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members)及[字串內插補點](../../csharp/language-reference/tokens/interpolated.md)。
+`Thing` 類別包含一個公用方法 `Get`，這個公用方法會傳回兩個數字的總和，而做法是將總和轉換成字串，然後將它還原序列化為整數。 這利用了許多現代 C# 功能，如[`using static`指令](../../csharp/language-reference/keywords/using-static.md)、[運算式體成員](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members)和[字串插值](../../csharp/language-reference/tokens/interpolated.md)。
 
-使用 [`dotnet build`](../tools/dotnet-build.md) 命令建置程式庫。 這會在 *golden/library/bin/Debug/netstandard1.4* 底下產生 *library.dll* 檔案：
+使用 命令[`dotnet build`](../tools/dotnet-build.md)生成庫。 這會在 *golden/library/bin/Debug/netstandard1.4* 底下產生 *library.dll* 檔案：
 
 ```dotnetcli
 dotnet build
@@ -117,7 +117,7 @@ dotnet new xunit -o test-library
 dotnet sln add test-library/test-library.csproj
 ```
 
-新增上一節中所建立之程式碼的專案參考，讓編譯器可以尋找及使用程式庫專案。 使用 [`dotnet add reference`](../tools/dotnet-add-reference.md) 命令：
+新增上一節中所建立之程式碼的專案參考，讓編譯器可以尋找及使用程式庫專案。 使用以下[`dotnet add reference`](../tools/dotnet-add-reference.md)命令：
 
 ```dotnetcli
 dotnet add test-library/test-library.csproj reference library/library.csproj
@@ -202,7 +202,7 @@ using static System.Console;
 using Library;
 ```
 
-執行下列 `dotnet run` 命令來執行可執行檔，而 `-p` 的 `dotnet run` 選項指定主要應用程式的專案。 應用程式會產生 "The answer is 42" 字串。
+執行下列 `dotnet run` 命令來執行可執行檔，而 `dotnet run` 的 `-p` 選項指定主要應用程式的專案。 應用程式會產生 "The answer is 42" 字串。
 
 ```dotnetcli
 dotnet run -p app/app.csproj
@@ -210,13 +210,13 @@ dotnet run -p app/app.csproj
 
 ## <a name="debug-the-application"></a>偵錯應用程式
 
-在 `WriteLine` 方法中的 `Main` 陳述式設定中斷點。 若要這麼做，請在游標停留在 `WriteLine` 行上時按下<kbd>Fn</kbd>+<kbd>F9</kbd>鍵，或在您要設定中斷點的那一行的左邊界按一下滑鼠。 紅色圓圈會出現在程式碼行旁邊的邊界。 到達中斷點時，會在執行中斷點行「之前」停止執行程式碼。
+在 `Main` 方法中的 `WriteLine` 陳述式設定中斷點。 為此，在游標位於`WriteLine`行上時按<kbd>Fn</kbd>+<kbd>F9</kbd>鍵，或者按一下要設置中斷點的行左距中的滑鼠。 紅色圓圈會出現在程式碼行旁邊的邊界。 到達中斷點時，會在執行中斷點行「之前」** 停止執行程式碼。
 
-開啟 [偵錯工具] 索引標籤，方法是選取 [Visual Studio Code] 工具列中的 [debug] 圖示，從功能表列選取 [ <kbd>&#8679;</kbd> <kbd>&#8984;</kbd> **View** > debug]，或使用鍵盤快速鍵<kbd>D</kbd>：
+通過在"視覺化工作室代碼"工具列中選擇調試圖示、從功能表列中選擇 **"查看** > **調試"** 或使用鍵盤快速鍵<kbd>&#8679;&#8984;</kbd> <kbd>&#8984;</kbd> <kbd>D</kbd>打開調試器選項卡：
 
 ![Visual Studio Code 偵錯工具](./media/using-on-macos/visual-studio-code-debugger.png)
 
-按下 [播放] 按鈕，在偵錯工具中啟動應用程式。 您已在此專案中建立測試專案和應用程式。 偵錯工具會詢問您想要啟動的專案。 選取 [應用程式] 專案。 應用程式會開始執行，並執行至中斷點，然後停止。 逐步執行 `Get` 方法，並確定您已傳入正確的引數。 確認答案是 42。
+按下 [播放] 按鈕，在偵錯工具中啟動應用程式。 您已在此專案中創建了測試專案和應用程式。 調試器詢問要啟動哪個專案。 選擇"應用"專案。 應用程式會開始執行，並執行至中斷點，然後停止。 逐步執行 `Get` 方法，並確定您已傳入正確的引數。 確認答案是 42。
 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

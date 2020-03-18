@@ -1,13 +1,13 @@
 ---
-title: Infer.NET 遊戲比對-應用程式-概率程式設計
-description: 探索如何搭配使用概率程式設計與 Infer.NET，以根據簡化版的 TrueSkill 來建立遊戲比對清單應用程式。
+title: Infer.NET遊戲匹配應用程式 - 概率程式設計
+description: 瞭解如何將概率程式設計與Infer.NET一起基於 TrueSkill 的簡化版本創建遊戲匹配清單應用。
 ms.date: 01/30/2020
 ms.custom: mvc,how-to
 ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092599"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程式
@@ -18,11 +18,11 @@ ms.locfileid: "77092599"
 
 概率程式設計可讓您建立真實世界處理的統計模型。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
 - 本機開發環境設定
 
-  本操作指南需要您具備可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 MacOS、Windows 或 Linux 上設定本機開發環境的指示。
+  本操作指南需要您具備可用於開發的電腦。 .NET 教程[Hello World 在 10 分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)提供了在 macOS、Windows 或 Linux 上設置本地開發環境的說明。
 
 ## <a name="create-your-app"></a>建立您的應用程式
 
@@ -33,7 +33,7 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-`dotnet` 命令會建立類型為 `new` 的 `console` 應用程式。 `-o` 參數會建立名為 `myApp` 的目錄，其中會儲存您的應用程式，並填入必要的檔案。 `cd myApp` 命令會將您帶入新建立的應用程式目錄。
+`dotnet` 命令會建立類型為 `console` 的 `new` 應用程式。 `-o` 參數會建立名為 `myApp` 的目錄，其中會儲存您的應用程式，並填入必要的檔案。 `cd myApp` 命令會將您帶入新建立的應用程式目錄。
 
 ## <a name="install-infernet-package"></a>安裝 Infer.NET 套件
 

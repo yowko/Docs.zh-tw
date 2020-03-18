@@ -1,15 +1,15 @@
 ---
-title: 如何尋找具有特定專案名稱的子系（C#）
+title: 如何查找具有特定元素名稱 （C#） 的後代
 ms.date: 07/20/2015
 ms.assetid: f684da20-bee9-47f5-9607-7e3fd7e67470
 ms.openlocfilehash: b3200a2fdf75dbf52079a2b3d27aa1a88d313406
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/16/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74141087"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>如何尋找具有特定專案名稱的子系（C#）
+# <a name="how-to-find-descendants-with-a-specific-element-name-c"></a>如何查找具有特定元素名稱 （C#） 的後代
 有時候您會想要尋找具有特定名稱的所有子代。 您可以撰寫程式碼來逐一查看所有子代，但是使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸比較容易。  
   
 ## <a name="example"></a>範例  
@@ -91,6 +91,6 @@ Console.WriteLine(str);
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>

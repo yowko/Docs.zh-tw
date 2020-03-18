@@ -4,7 +4,7 @@
   items:
     - name: 應用程式相容性
       items:
-        - name: 總覽
+        - name: 概觀
           displayName: App compatibility
           href: application-compatibility.md
         - name: 執行階段變更

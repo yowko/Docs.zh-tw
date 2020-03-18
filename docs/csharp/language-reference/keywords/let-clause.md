@@ -8,12 +8,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: 32bb5d2138c0b86bf58d26015aa208f655229129
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3ce2b663e5678de6b53db610b489f85ab1427b9d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715218"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173584"
 ---
 # <a name="let-clause-c-reference"></a>let 子句 (C# 參考)
 
@@ -29,10 +29,10 @@ ms.locfileid: "75715218"
 
 [!code-csharp[cscsrefQueryKeywords#28](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Let.cs#28)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../language-reference/index.md)
-- [查詢關鍵字 (LINQ)](query-keywords.md)
-- [Language-Integrated Query (LINQ)](../../linq/index.md)
-- [開始使用 C# 中的 LINQ](/dotnet/csharp/programming-guide/concepts/linq/)
+- [查詢關鍵字 （LINQ）](query-keywords.md)
+- [C# 中的 LINQ](../../linq/index.md)
+- [語言綜合查詢（LINQ）](../../programming-guide/concepts/linq/index.md)
 - [處理查詢運算式中的例外狀況](../../linq/handle-exceptions-in-query-expressions.md)
