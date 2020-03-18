@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: 375a6f57a867c2a11fe95753c1085d6d708db2bd
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f5ae4669c85ae4f5d57d88ab55f6e1c758a625a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568173"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147584"
 ---
-### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a><span data-ttu-id="e5902-101">JsonEncodedText 方法有額外的 JavaScriptEncoder 引數</span><span class="sxs-lookup"><span data-stu-id="e5902-101">JsonEncodedText.Encode methods have an additional JavaScriptEncoder argument</span></span>
+### <a name="jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument"></a><span data-ttu-id="30215-101">JsonEncodedText.編碼方法具有額外的JavaScriptEncoder參數</span><span class="sxs-lookup"><span data-stu-id="30215-101">JsonEncodedText.Encode methods have an additional JavaScriptEncoder argument</span></span>
 
-<span data-ttu-id="e5902-102">從 .NET Core 3.0 Preview 8 開始，<xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> 方法包含選擇性的 <xref:System.Text.Encodings.Web.JavaScriptEncoder> 引數。</span><span class="sxs-lookup"><span data-stu-id="e5902-102">Starting with .NET Core 3.0 Preview 8, the <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> methods contain an optional <xref:System.Text.Encodings.Web.JavaScriptEncoder> argument.</span></span>
+<span data-ttu-id="30215-102">從 .NET Core 3.0 預覽<xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>8 開始<xref:System.Text.Encodings.Web.JavaScriptEncoder>，這些方法包含一個可選參數。</span><span class="sxs-lookup"><span data-stu-id="30215-102">Starting with .NET Core 3.0 Preview 8, the <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> methods contain an optional <xref:System.Text.Encodings.Web.JavaScriptEncoder> argument.</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="e5902-103">變更描述</span><span class="sxs-lookup"><span data-stu-id="e5902-103">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="30215-103">變更描述</span><span class="sxs-lookup"><span data-stu-id="30215-103">Change description</span></span>
 
-<span data-ttu-id="e5902-104">.NET Core 3.0 包含新的類型 x： JsonEncodedText。編碼% 2A？ displayProperty = Namewithtype> >。</span><span class="sxs-lookup"><span data-stu-id="e5902-104">.NET Core 3.0 includes a new type, xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="e5902-105">從 .NET Core 3.0 Preview 8 開始，所有 <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> 方法多載的簽章已變更為包含選擇性的 <xref:System.Text.Encodings.Web.JavaScriptEncoder> 參數。</span><span class="sxs-lookup"><span data-stu-id="e5902-105">Starting with .NET Core 3.0 Preview 8, the signature of all <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> method overloads has changed to include an optional <xref:System.Text.Encodings.Web.JavaScriptEncoder> parameter.</span></span> <span data-ttu-id="e5902-106">已進行這種變更，以允許不同或自訂的編碼器。</span><span class="sxs-lookup"><span data-stu-id="e5902-106">This change was made to allow for a different or custom encoder.</span></span>
+<span data-ttu-id="30215-104">.NET Core 3.0 包括一種新類型，外部參照：系統.Text.Json.JsonEncodedText.Encode%2A？顯示內容_名稱與類型>。</span><span class="sxs-lookup"><span data-stu-id="30215-104">.NET Core 3.0 includes a new type, xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>.</span></span> <span data-ttu-id="30215-105">從 .NET Core 3.0 預覽 8<xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType>開始，所有方法重載的簽名已更改為<xref:System.Text.Encodings.Web.JavaScriptEncoder>包含可選參數。</span><span class="sxs-lookup"><span data-stu-id="30215-105">Starting with .NET Core 3.0 Preview 8, the signature of all <xref:System.Text.Json.JsonEncodedText.Encode%2A?displayProperty=nameWithType> method overloads has changed to include an optional <xref:System.Text.Encodings.Web.JavaScriptEncoder> parameter.</span></span> <span data-ttu-id="30215-106">進行此更改是為了允許其他編碼器或自訂編碼器。</span><span class="sxs-lookup"><span data-stu-id="30215-106">This change was made to allow for a different or custom encoder.</span></span>
 
-<span data-ttu-id="e5902-107">.NET Core 3.0 Preview 7 中 `Encode` 方法的簽章為：</span><span class="sxs-lookup"><span data-stu-id="e5902-107">The signature of the `Encode` methods in .NET Core 3.0 Preview 7 is:</span></span>
+<span data-ttu-id="30215-107">.NET Core `Encode` 3.0 預覽 7 中方法的簽名是：</span><span class="sxs-lookup"><span data-stu-id="30215-107">The signature of the `Encode` methods in .NET Core 3.0 Preview 7 is:</span></span>
 
 ```csharp
 namespace System.Text.Json
@@ -28,7 +28,7 @@ namespace System.Text.Json
 }
 ```
 
-<span data-ttu-id="e5902-108">.NET Core 3.0 Preview 8 和更新版本中相同 `Encode` 方法的簽章為：</span><span class="sxs-lookup"><span data-stu-id="e5902-108">The signature of the same `Encode` methods in .NET Core 3.0 Preview 8 and later versions is:</span></span>
+<span data-ttu-id="30215-108">在 .NET `Encode` Core 3.0 預覽版 8 和更高版本中的相同方法的簽名是：</span><span class="sxs-lookup"><span data-stu-id="30215-108">The signature of the same `Encode` methods in .NET Core 3.0 Preview 8 and later versions is:</span></span>
 
 ```csharp
 namespace System.Text.Json
@@ -42,23 +42,23 @@ namespace System.Text.Json
 }
 ```
 
-#### <a name="version-introduced"></a><span data-ttu-id="e5902-109">引進的版本</span><span class="sxs-lookup"><span data-stu-id="e5902-109">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="30215-109">介紹的版本</span><span class="sxs-lookup"><span data-stu-id="30215-109">Version introduced</span></span>
 
-<span data-ttu-id="e5902-110">.NET Core 3.0 Preview 8</span><span class="sxs-lookup"><span data-stu-id="e5902-110">.NET Core 3.0 Preview 8</span></span>
+<span data-ttu-id="30215-110">.NET 核心 3.0 預覽 8</span><span class="sxs-lookup"><span data-stu-id="30215-110">.NET Core 3.0 Preview 8</span></span>
 
-#### <a name="recommended-action"></a><span data-ttu-id="e5902-111">建議的動作</span><span class="sxs-lookup"><span data-stu-id="e5902-111">Recommended action</span></span>
+#### <a name="recommended-action"></a><span data-ttu-id="30215-111">建議的動作</span><span class="sxs-lookup"><span data-stu-id="30215-111">Recommended action</span></span>
 
-<span data-ttu-id="e5902-112">這只是二進位的重大變更;針對 .NET Core 3.0 Preview 8 或更新版本進行重新編譯將會修正任何執行時間問題。</span><span class="sxs-lookup"><span data-stu-id="e5902-112">This is a binary breaking change only; a recompile against .NET Core 3.0 Preview 8 or a later version will fix any runtime issues.</span></span>
+<span data-ttu-id="30215-112">這只是二進位中斷更改;針對 .NET Core 3.0 預覽版或更高版本重新編譯將修復任何運行時問題。</span><span class="sxs-lookup"><span data-stu-id="30215-112">This is a binary breaking change only; a recompile against .NET Core 3.0 Preview 8 or a later version will fix any runtime issues.</span></span>
 
-#### <a name="category"></a><span data-ttu-id="e5902-113">Category</span><span class="sxs-lookup"><span data-stu-id="e5902-113">Category</span></span>
+#### <a name="category"></a><span data-ttu-id="30215-113">類別</span><span class="sxs-lookup"><span data-stu-id="30215-113">Category</span></span>
 
-<span data-ttu-id="e5902-114">CoreFx</span><span class="sxs-lookup"><span data-stu-id="e5902-114">CoreFx</span></span>
+<span data-ttu-id="30215-114">CoreFx</span><span class="sxs-lookup"><span data-stu-id="30215-114">CoreFx</span></span>
 
-#### <a name="affected-apis"></a><span data-ttu-id="e5902-115">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="e5902-115">Affected APIs</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="30215-115">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="30215-115">Affected APIs</span></span>
 
-<xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Byte%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
-<xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Char%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
-<xref:System.Text.Json.JsonEncodedText.Encode(System.String,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
+- <xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Byte%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
+- <xref:System.Text.Json.JsonEncodedText.Encode(System.ReadOnlySpan%7BSystem.Char%7D,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
+- <xref:System.Text.Json.JsonEncodedText.Encode(System.String,System.Text.Encodings.Web.JavaScriptEncoder)?displayProperty=nameWithType>
 
 <!--
 

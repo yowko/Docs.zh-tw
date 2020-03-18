@@ -1,19 +1,19 @@
 ---
-title: 如何使用 XmlSerializer 進行序列化（C#）
+title: 如何使用 Xml 序列化器 （C#） 序列化
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
 ms.openlocfilehash: 0ec19e964471382c6f10f07d6d4bb25f88fd532f
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347388"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a><span data-ttu-id="018e6-102">如何使用 XmlSerializer 進行序列化（C#）</span><span class="sxs-lookup"><span data-stu-id="018e6-102">How to serialize using XmlSerializer (C#)</span></span>
-<span data-ttu-id="018e6-103">本主題顯示的範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化與還原序列化。</span><span class="sxs-lookup"><span data-stu-id="018e6-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
+# <a name="how-to-serialize-using-xmlserializer-c"></a><span data-ttu-id="da2cd-102">如何使用 Xml 序列化器 （C#） 序列化</span><span class="sxs-lookup"><span data-stu-id="da2cd-102">How to serialize using XmlSerializer (C#)</span></span>
+<span data-ttu-id="da2cd-103">本主題顯示的範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化與還原序列化。</span><span class="sxs-lookup"><span data-stu-id="da2cd-103">This topic shows an example that serializes and deserializes using <xref:System.Xml.Serialization.XmlSerializer>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="018e6-104">範例</span><span class="sxs-lookup"><span data-stu-id="018e6-104">Example</span></span>  
- <span data-ttu-id="018e6-105">下列範例會建立多個包含 <xref:System.Xml.Linq.XElement> 物件的物件。</span><span class="sxs-lookup"><span data-stu-id="018e6-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="018e6-106">接著，它會將這些物件序列化為記憶體資料流，然後從記憶體資料流還原序列化。</span><span class="sxs-lookup"><span data-stu-id="018e6-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
+## <a name="example"></a><span data-ttu-id="da2cd-104">範例</span><span class="sxs-lookup"><span data-stu-id="da2cd-104">Example</span></span>  
+ <span data-ttu-id="da2cd-105">下列範例會建立多個包含 <xref:System.Xml.Linq.XElement> 物件的物件。</span><span class="sxs-lookup"><span data-stu-id="da2cd-105">The following example creates a number of objects that contain <xref:System.Xml.Linq.XElement> objects.</span></span> <span data-ttu-id="da2cd-106">接著，它會將這些物件序列化為記憶體資料流，然後從記憶體資料流還原序列化。</span><span class="sxs-lookup"><span data-stu-id="da2cd-106">It then serializes them to a memory stream, and then deserializes them from the memory stream.</span></span>  
   
 ```csharp  
 using System;  
@@ -78,7 +78,7 @@ class XLinqTest
 }  
 ```  
   
- <span data-ttu-id="018e6-107">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="018e6-107">This example produces the following output:</span></span>  
+ <span data-ttu-id="da2cd-107">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="da2cd-107">This example produces the following output:</span></span>  
   
 ```output  
 Testing for type: XElementNullContainer  

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - '#endif directive [C#]'
 ms.assetid: 6a5fca55-5aee-441f-86f6-1c99fbe9ec05
 ms.openlocfilehash: cc344a224e2308e843328b228dd5e2466d02069f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712542"
 ---
-# <a name="endif-c-reference"></a><span data-ttu-id="9b888-102">#endif (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="9b888-102">#endif (C# Reference)</span></span>
-<span data-ttu-id="9b888-103">`#endif` 指定條件指示詞的結尾，而其開始於 [#if](./preprocessor-if.md) 指示詞。</span><span class="sxs-lookup"><span data-stu-id="9b888-103">`#endif` specifies the end of a conditional directive, which began with the [#if](./preprocessor-if.md) directive.</span></span> <span data-ttu-id="9b888-104">例如，套用至物件的</span><span class="sxs-lookup"><span data-stu-id="9b888-104">For example,</span></span>  
+# <a name="endif-c-reference"></a><span data-ttu-id="2bf64-102">#endif (C# 參考)</span><span class="sxs-lookup"><span data-stu-id="2bf64-102">#endif (C# Reference)</span></span>
+<span data-ttu-id="2bf64-103">`#endif` 指定條件指示詞的結尾，而其開始於 [#if](./preprocessor-if.md) 指示詞。</span><span class="sxs-lookup"><span data-stu-id="2bf64-103">`#endif` specifies the end of a conditional directive, which began with the [#if](./preprocessor-if.md) directive.</span></span> <span data-ttu-id="2bf64-104">例如，</span><span class="sxs-lookup"><span data-stu-id="2bf64-104">For example,</span></span>  
   
 ```csharp
 #define DEBUG  
@@ -24,11 +24,11 @@ ms.locfileid: "75712542"
 #endif  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="9b888-105">備註</span><span class="sxs-lookup"><span data-stu-id="9b888-105">Remarks</span></span>  
- <span data-ttu-id="9b888-106">以 `#if` 指示詞開頭的條件指示詞必須明確地以 `#endif` 指示詞終止。</span><span class="sxs-lookup"><span data-stu-id="9b888-106">A conditional directive, beginning with a `#if` directive, must explicitly be terminated with a `#endif` directive.</span></span> <span data-ttu-id="9b888-107">如需如何使用 `#endif` 的範例，請參閱 [#if](./preprocessor-if.md)。</span><span class="sxs-lookup"><span data-stu-id="9b888-107">See [#if](./preprocessor-if.md) for an example of how to use `#endif`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2bf64-105">備註</span><span class="sxs-lookup"><span data-stu-id="2bf64-105">Remarks</span></span>  
+ <span data-ttu-id="2bf64-106">以 `#if` 指示詞開頭的條件指示詞必須明確地以 `#endif` 指示詞終止。</span><span class="sxs-lookup"><span data-stu-id="2bf64-106">A conditional directive, beginning with a `#if` directive, must explicitly be terminated with a `#endif` directive.</span></span> <span data-ttu-id="2bf64-107">如需如何使用 `#endif` 的範例，請參閱 [#if](./preprocessor-if.md)。</span><span class="sxs-lookup"><span data-stu-id="2bf64-107">See [#if](./preprocessor-if.md) for an example of how to use `#endif`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b888-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="9b888-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2bf64-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2bf64-108">See also</span></span>
 
-- [<span data-ttu-id="9b888-109">C# 參考</span><span class="sxs-lookup"><span data-stu-id="9b888-109">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="9b888-110">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="9b888-110">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="9b888-111">C# 前置處理器指示詞</span><span class="sxs-lookup"><span data-stu-id="9b888-111">C# Preprocessor Directives</span></span>](./index.md)
+- [<span data-ttu-id="2bf64-109">C# 參考</span><span class="sxs-lookup"><span data-stu-id="2bf64-109">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="2bf64-110">C# 程式設計指南</span><span class="sxs-lookup"><span data-stu-id="2bf64-110">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="2bf64-111">C# 預處理器指令</span><span class="sxs-lookup"><span data-stu-id="2bf64-111">C# Preprocessor Directives</span></span>](./index.md)
