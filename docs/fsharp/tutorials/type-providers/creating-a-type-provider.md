@@ -1,59 +1,59 @@
 ---
-title: 教學課程：建立類型提供者
-description: 藉由檢查數個簡單F#的類型提供F#者來說明基本概念，以瞭解如何在3.0 中建立您自己的類型提供者。
+title: 教程：創建類型提供程式
+description: 通過檢查幾個簡單類型提供程式來說明基本概念，瞭解如何在 F# 3.0 中創建自己的 F# 類型提供程式。
 ms.date: 11/04/2019
-ms.openlocfilehash: 8df893669b8ee04bad366dbe42a55c83d1f5a8fe
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3b8145d4c2d8bf96b6dcf66de02e9f2d83927d74
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968377"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186116"
 ---
-# <a name="tutorial-create-a-type-provider"></a><span data-ttu-id="e62b4-103">教學課程：建立類型提供者</span><span class="sxs-lookup"><span data-stu-id="e62b4-103">Tutorial: Create a Type Provider</span></span>
+# <a name="tutorial-create-a-type-provider"></a><span data-ttu-id="7df16-103">教程：創建類型提供程式</span><span class="sxs-lookup"><span data-stu-id="7df16-103">Tutorial: Create a Type Provider</span></span>
 
-<span data-ttu-id="e62b4-104">中F#的型別提供者機制，是其對資訊豐富程式設計支援的重要部分。</span><span class="sxs-lookup"><span data-stu-id="e62b4-104">The type provider mechanism in F# is a significant part of its support for information rich programming.</span></span> <span data-ttu-id="e62b4-105">本教學課程說明如何建立您自己的型別提供者，方法是逐步執行數個簡單型別提供者的開發，以說明基本概念。</span><span class="sxs-lookup"><span data-stu-id="e62b4-105">This tutorial explains how to create your own type providers by walking you through the development of several simple type providers to illustrate the basic concepts.</span></span> <span data-ttu-id="e62b4-106">如需中F#型別提供者機制的詳細資訊，請參閱[型別提供者](index.md)。</span><span class="sxs-lookup"><span data-stu-id="e62b4-106">For more information about the type provider mechanism in F#, see [Type Providers](index.md).</span></span>
+<span data-ttu-id="7df16-104">F# 中的類型提供程式機制是其支援資訊豐富程式設計的重要組成部分。</span><span class="sxs-lookup"><span data-stu-id="7df16-104">The type provider mechanism in F# is a significant part of its support for information rich programming.</span></span> <span data-ttu-id="7df16-105">本教程介紹如何通過引導您完成幾個簡單類型提供程式的開發來說明基本概念，從而創建自己的類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-105">This tutorial explains how to create your own type providers by walking you through the development of several simple type providers to illustrate the basic concepts.</span></span> <span data-ttu-id="7df16-106">有關 F# 中的類型提供程式機制的詳細資訊，請參閱[類型提供程式](index.md)。</span><span class="sxs-lookup"><span data-stu-id="7df16-106">For more information about the type provider mechanism in F#, see [Type Providers](index.md).</span></span>
 
-<span data-ttu-id="e62b4-107">F#生態系統包含常用網際網路和企業資料服務的一系列型別提供者。</span><span class="sxs-lookup"><span data-stu-id="e62b4-107">The F# ecosystem contains a range of type providers for commonly used Internet and enterprise data services.</span></span> <span data-ttu-id="e62b4-108">例如，</span><span class="sxs-lookup"><span data-stu-id="e62b4-108">For example:</span></span>
+<span data-ttu-id="7df16-107">F# 生態系統包含一系列用於常用 Internet 和企業資料服務的類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-107">The F# ecosystem contains a range of type providers for commonly used Internet and enterprise data services.</span></span> <span data-ttu-id="7df16-108">例如：</span><span class="sxs-lookup"><span data-stu-id="7df16-108">For example:</span></span>
 
-- <span data-ttu-id="e62b4-109">[Fsharp.core：資料](https://fsharp.github.io/FSharp.Data/)報括 JSON、XML、CSV 和 HTML 檔案格式的類型提供者。</span><span class="sxs-lookup"><span data-stu-id="e62b4-109">[FSharp.Data](https://fsharp.github.io/FSharp.Data/) includes type providers for JSON, XML, CSV and HTML document formats.</span></span>
+- <span data-ttu-id="7df16-109">[FSharp.Data](https://fsharp.github.io/FSharp.Data/)包括 JSON、XML、CSV 和 HTML 文檔格式的類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-109">[FSharp.Data](https://fsharp.github.io/FSharp.Data/) includes type providers for JSON, XML, CSV and HTML document formats.</span></span>
 
-- <span data-ttu-id="e62b4-110">[SQLProvider](https://fsprojects.github.io/SQLProvider/)透過物件對應和針對這些資料來源的 LINQ 查詢， F#提供 SQL 資料庫的強型別存取。</span><span class="sxs-lookup"><span data-stu-id="e62b4-110">[SQLProvider](https://fsprojects.github.io/SQLProvider/) provides strongly-typed access to SQL databases through a object mapping and F# LINQ queries against these data sources.</span></span>
+- <span data-ttu-id="7df16-110">[SQLProvider](https://fsprojects.github.io/SQLProvider/)通過物件映射和針對這些資料來源的 F# LINQ 查詢提供對 SQL 資料庫的強型別訪問。</span><span class="sxs-lookup"><span data-stu-id="7df16-110">[SQLProvider](https://fsprojects.github.io/SQLProvider/) provides strongly-typed access to SQL databases through a object mapping and F# LINQ queries against these data sources.</span></span>
 
-- <span data-ttu-id="e62b4-111">[SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)具有一組類型提供者，適用于編譯時期已核取的 t-sql F#。</span><span class="sxs-lookup"><span data-stu-id="e62b4-111">[FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) has a set of type providers for compile-time checked embedding of T-SQL in F#.</span></span>
+- <span data-ttu-id="7df16-111">[FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/)具有一組類型提供程式，用於在 F# 中編譯時檢查的 T-SQL 嵌入。</span><span class="sxs-lookup"><span data-stu-id="7df16-111">[FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) has a set of type providers for compile-time checked embedding of T-SQL in F#.</span></span>
 
-- <span data-ttu-id="e62b4-112">[Fsharp.data.typeproviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/)是一組較舊的類型提供者，僅供用來存取 SQL、Entity Framework、ODATA 和 WSDL 資料服務的 .NET Framework 程式設計使用。</span><span class="sxs-lookup"><span data-stu-id="e62b4-112">[FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) is an older set of type providers for use only with .NET Framework programming for accessing SQL, Entity Framework, OData and WSDL data services.</span></span>
+- <span data-ttu-id="7df16-112">[FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/)是一組較舊的類型提供程式，僅用於 .NET 框架程式設計，用於訪問 SQL、實體框架、OData 和 WSDL 資料服務。</span><span class="sxs-lookup"><span data-stu-id="7df16-112">[FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) is an older set of type providers for use only with .NET Framework programming for accessing SQL, Entity Framework, OData and WSDL data services.</span></span>
 
-<span data-ttu-id="e62b4-113">必要時，您可以建立自訂類型提供者，或者您可以參考其他人建立的類型提供者。</span><span class="sxs-lookup"><span data-stu-id="e62b4-113">Where necessary, you can create custom type providers, or you can reference type providers that others have created.</span></span> <span data-ttu-id="e62b4-114">例如，您的組織可能會有一個資料服務，可提供大量且不斷成長的已命名資料集數目，而每個集合都有自己的穩定資料架構。</span><span class="sxs-lookup"><span data-stu-id="e62b4-114">For example, your organization could have a data service that provides a large and growing number of named data sets, each with its own stable data schema.</span></span> <span data-ttu-id="e62b4-115">您可以建立一個型別提供者來讀取架構，並以強型別方式將目前的資料集呈現給程式設計人員。</span><span class="sxs-lookup"><span data-stu-id="e62b4-115">You can create a type provider that reads the schemas and presents the current data sets to the programmer in a strongly typed way.</span></span>
+<span data-ttu-id="7df16-113">必要時，您可以創建自訂類型提供程式，也可以引用其他人創建的類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-113">Where necessary, you can create custom type providers, or you can reference type providers that others have created.</span></span> <span data-ttu-id="7df16-114">例如，您的組織可以有一個資料服務，該服務提供大量且不斷增加的命名資料集，每個資料集都有自己的穩定資料架構。</span><span class="sxs-lookup"><span data-stu-id="7df16-114">For example, your organization could have a data service that provides a large and growing number of named data sets, each with its own stable data schema.</span></span> <span data-ttu-id="7df16-115">您可以創建一個類型提供程式，用於讀取架構，並以強型別方式向程式師顯示當前資料集。</span><span class="sxs-lookup"><span data-stu-id="7df16-115">You can create a type provider that reads the schemas and presents the current data sets to the programmer in a strongly typed way.</span></span>
 
-## <a name="before-you-start"></a><span data-ttu-id="e62b4-116">在開始之前</span><span class="sxs-lookup"><span data-stu-id="e62b4-116">Before You Start</span></span>
+## <a name="before-you-start"></a><span data-ttu-id="7df16-116">開始之前</span><span class="sxs-lookup"><span data-stu-id="7df16-116">Before You Start</span></span>
 
-<span data-ttu-id="e62b4-117">型別提供者機制主要是設計用來在F#程式設計經驗中插入穩定的資料和服務資訊空間。</span><span class="sxs-lookup"><span data-stu-id="e62b4-117">The type provider mechanism is primarily designed for injecting stable data and service information spaces into the F# programming experience.</span></span>
+<span data-ttu-id="7df16-117">類型提供程式機制主要用於將穩定的資料和服務資訊空間注入 F# 程式設計體驗。</span><span class="sxs-lookup"><span data-stu-id="7df16-117">The type provider mechanism is primarily designed for injecting stable data and service information spaces into the F# programming experience.</span></span>
 
-<span data-ttu-id="e62b4-118">這項機制並非設計用來插入在程式執行期間架構變更的資訊空間（以與程式邏輯相關的方式）。</span><span class="sxs-lookup"><span data-stu-id="e62b4-118">This mechanism isn’t designed for injecting information spaces whose schema changes during program execution in ways that are relevant to program logic.</span></span> <span data-ttu-id="e62b4-119">此外，這種機制並不是針對語言中繼程式設計，即使該網域包含一些有效的用法。</span><span class="sxs-lookup"><span data-stu-id="e62b4-119">Also, the mechanism isn't designed for intra-language meta-programming, even though that domain contains some valid uses.</span></span> <span data-ttu-id="e62b4-120">您應該只在必要時使用此機制，而在其中開發類型提供者會產生非常高的值。</span><span class="sxs-lookup"><span data-stu-id="e62b4-120">You should use this mechanism only where necessary and where the development of a type provider yields very high value.</span></span>
+<span data-ttu-id="7df16-118">此機制不是為注入資訊空間而設計的，其架構在程式執行期間以與程式邏輯相關的方式更改。</span><span class="sxs-lookup"><span data-stu-id="7df16-118">This mechanism isn’t designed for injecting information spaces whose schema changes during program execution in ways that are relevant to program logic.</span></span> <span data-ttu-id="7df16-119">此外，該機制不是為語言內部元程式設計而設計的，即使該域包含一些有效的用途。</span><span class="sxs-lookup"><span data-stu-id="7df16-119">Also, the mechanism isn't designed for intra-language meta-programming, even though that domain contains some valid uses.</span></span> <span data-ttu-id="7df16-120">僅當必要且類型提供程式的開發產生非常高的值時，才應使用此機制。</span><span class="sxs-lookup"><span data-stu-id="7df16-120">You should use this mechanism only where necessary and where the development of a type provider yields very high value.</span></span>
 
-<span data-ttu-id="e62b4-121">您應該避免撰寫無法使用架構的類型提供者。</span><span class="sxs-lookup"><span data-stu-id="e62b4-121">You should avoid writing a type provider where a schema isn't available.</span></span> <span data-ttu-id="e62b4-122">同樣地，您應該避免撰寫一個一般（或甚至是現有） .NET 程式庫所能滿足的類型提供者。</span><span class="sxs-lookup"><span data-stu-id="e62b4-122">Likewise, you should avoid writing a type provider where an ordinary (or even an existing) .NET library would suffice.</span></span>
+<span data-ttu-id="7df16-121">應避免編寫架構不可用的類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-121">You should avoid writing a type provider where a schema isn't available.</span></span> <span data-ttu-id="7df16-122">同樣，應避免編寫普通（甚至現有）.NET 庫就足夠了的類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-122">Likewise, you should avoid writing a type provider where an ordinary (or even an existing) .NET library would suffice.</span></span>
 
-<span data-ttu-id="e62b4-123">開始之前，您可能會提出下列問題：</span><span class="sxs-lookup"><span data-stu-id="e62b4-123">Before you start, you might ask the following questions:</span></span>
+<span data-ttu-id="7df16-123">在開始之前，您可能會提出以下問題：</span><span class="sxs-lookup"><span data-stu-id="7df16-123">Before you start, you might ask the following questions:</span></span>
 
-- <span data-ttu-id="e62b4-124">您有資訊來源的架構嗎？</span><span class="sxs-lookup"><span data-stu-id="e62b4-124">Do you have a schema for your information source?</span></span> <span data-ttu-id="e62b4-125">若是如此，與 .NET 型別系統的F#對應為何？</span><span class="sxs-lookup"><span data-stu-id="e62b4-125">If so, what’s the mapping into the F# and .NET type system?</span></span>
+- <span data-ttu-id="7df16-124">您是否有資訊源的架構？</span><span class="sxs-lookup"><span data-stu-id="7df16-124">Do you have a schema for your information source?</span></span> <span data-ttu-id="7df16-125">如果是，則什麼是映射到 F# 和 .NET 類型系統？</span><span class="sxs-lookup"><span data-stu-id="7df16-125">If so, what’s the mapping into the F# and .NET type system?</span></span>
 
-- <span data-ttu-id="e62b4-126">您可以使用現有的（動態型別） API 作為您的實作為起點嗎？</span><span class="sxs-lookup"><span data-stu-id="e62b4-126">Can you use an existing (dynamically typed) API as a starting point for your implementation?</span></span>
+- <span data-ttu-id="7df16-126">能否使用現有（動態類型）API 作為實現的起點？</span><span class="sxs-lookup"><span data-stu-id="7df16-126">Can you use an existing (dynamically typed) API as a starting point for your implementation?</span></span>
 
-- <span data-ttu-id="e62b4-127">您和您的組織是否有足夠的使用型別提供者，讓他們有價值？</span><span class="sxs-lookup"><span data-stu-id="e62b4-127">Will you and your organization have enough uses of the type provider to make writing it worthwhile?</span></span> <span data-ttu-id="e62b4-128">一般的 .NET 程式庫是否符合您的需求？</span><span class="sxs-lookup"><span data-stu-id="e62b4-128">Would a normal .NET library meet your needs?</span></span>
+- <span data-ttu-id="7df16-127">您和您的組織是否有足夠的類型提供程式的使用來使編寫它是值得的？</span><span class="sxs-lookup"><span data-stu-id="7df16-127">Will you and your organization have enough uses of the type provider to make writing it worthwhile?</span></span> <span data-ttu-id="7df16-128">普通的 .NET 庫能滿足您的需求嗎？</span><span class="sxs-lookup"><span data-stu-id="7df16-128">Would a normal .NET library meet your needs?</span></span>
 
-- <span data-ttu-id="e62b4-129">您的架構變更了多少？</span><span class="sxs-lookup"><span data-stu-id="e62b4-129">How much will your schema change?</span></span>
+- <span data-ttu-id="7df16-129">架構將更改多少？</span><span class="sxs-lookup"><span data-stu-id="7df16-129">How much will your schema change?</span></span>
 
-- <span data-ttu-id="e62b4-130">在編碼期間是否會變更？</span><span class="sxs-lookup"><span data-stu-id="e62b4-130">Will it change during coding?</span></span>
+- <span data-ttu-id="7df16-130">在編碼過程中會發生變化嗎？</span><span class="sxs-lookup"><span data-stu-id="7df16-130">Will it change during coding?</span></span>
 
-- <span data-ttu-id="e62b4-131">它會在編碼會話之間變更嗎？</span><span class="sxs-lookup"><span data-stu-id="e62b4-131">Will it change between coding sessions?</span></span>
+- <span data-ttu-id="7df16-131">它會在編碼會話之間更改嗎？</span><span class="sxs-lookup"><span data-stu-id="7df16-131">Will it change between coding sessions?</span></span>
 
-- <span data-ttu-id="e62b4-132">它會在程式執行期間變更嗎？</span><span class="sxs-lookup"><span data-stu-id="e62b4-132">Will it change during program execution?</span></span>
+- <span data-ttu-id="7df16-132">在程式執行期間會更改嗎？</span><span class="sxs-lookup"><span data-stu-id="7df16-132">Will it change during program execution?</span></span>
 
-<span data-ttu-id="e62b4-133">型別提供者最適用于架構在執行時間穩定的情況，以及在已編譯器代碼的存留期間。</span><span class="sxs-lookup"><span data-stu-id="e62b4-133">Type providers are best suited to situations where the schema is stable at runtime and during the lifetime of compiled code.</span></span>
+<span data-ttu-id="7df16-133">類型提供程式最適合在運行時和編譯代碼的存留期內架構穩定的情況。</span><span class="sxs-lookup"><span data-stu-id="7df16-133">Type providers are best suited to situations where the schema is stable at runtime and during the lifetime of compiled code.</span></span>
 
-## <a name="a-simple-type-provider"></a><span data-ttu-id="e62b4-134">簡單型別提供者</span><span class="sxs-lookup"><span data-stu-id="e62b4-134">A Simple Type Provider</span></span>
+## <a name="a-simple-type-provider"></a><span data-ttu-id="7df16-134">簡單類型提供程式</span><span class="sxs-lookup"><span data-stu-id="7df16-134">A Simple Type Provider</span></span>
 
-<span data-ttu-id="e62b4-135">這個範例是 HelloWorldTypeProvider，類似于[ F#類型提供者 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)的 `examples` 目錄中的範例。</span><span class="sxs-lookup"><span data-stu-id="e62b4-135">This sample is Samples.HelloWorldTypeProvider, similar to the samples in the `examples` directory of the [F# Type Provider SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/).</span></span> <span data-ttu-id="e62b4-136">提供者提供的「類型空間」包含100已清除的類型，如下列程式碼所示， F#會使用簽章語法，並省略除了 `Type1`以外的所有詳細資料。</span><span class="sxs-lookup"><span data-stu-id="e62b4-136">The provider makes available a "type space" that contains 100 erased types, as the following code shows by using F# signature syntax and omitting the details for all except `Type1`.</span></span> <span data-ttu-id="e62b4-137">如需已清除之類型的詳細資訊，請參閱本主題稍後的已[清除之提供類型的詳細資料](#details-about-erased-provided-types)。</span><span class="sxs-lookup"><span data-stu-id="e62b4-137">For more information about erased types, see [Details About Erased Provided Types](#details-about-erased-provided-types) later in this topic.</span></span>
+<span data-ttu-id="7df16-135">此示例是示例。HelloWorldTypeProvider，類似于`examples`[F# 類型提供程式 SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)目錄中的示例。</span><span class="sxs-lookup"><span data-stu-id="7df16-135">This sample is Samples.HelloWorldTypeProvider, similar to the samples in the `examples` directory of the [F# Type Provider SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/).</span></span> <span data-ttu-id="7df16-136">提供程式提供包含 100 種擦除類型的"類型空間"，如下代碼通過使用 F# 簽名語法和省略除 之外`Type1`的所有代碼的詳細資訊來顯示的。</span><span class="sxs-lookup"><span data-stu-id="7df16-136">The provider makes available a "type space" that contains 100 erased types, as the following code shows by using F# signature syntax and omitting the details for all except `Type1`.</span></span> <span data-ttu-id="7df16-137">有關擦除類型的詳細資訊，請參閱本主題後面的[有關已擦除提供類型的詳細資訊](#details-about-erased-provided-types)。</span><span class="sxs-lookup"><span data-stu-id="7df16-137">For more information about erased types, see [Details About Erased Provided Types](#details-about-erased-provided-types) later in this topic.</span></span>
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -89,10 +89,10 @@ type Type100 =
 …
 ```
 
-<span data-ttu-id="e62b4-138">請注意，所提供的類型和成員集合是靜態已知的。</span><span class="sxs-lookup"><span data-stu-id="e62b4-138">Note that the set of types and members provided is statically known.</span></span> <span data-ttu-id="e62b4-139">這個範例不會利用提供者提供相依于架構之類型的能力。</span><span class="sxs-lookup"><span data-stu-id="e62b4-139">This example doesn't leverage the ability of providers to provide types that depend on a schema.</span></span> <span data-ttu-id="e62b4-140">下列程式碼概述型別提供者的執行，而詳細資料則會在本主題的後續章節中討論。</span><span class="sxs-lookup"><span data-stu-id="e62b4-140">The implementation of the type provider is outlined in the following code, and the details are covered in later sections of this topic.</span></span>
+<span data-ttu-id="7df16-138">請注意，提供的類型和成員集是靜態已知的。</span><span class="sxs-lookup"><span data-stu-id="7df16-138">Note that the set of types and members provided is statically known.</span></span> <span data-ttu-id="7df16-139">此示例不利用提供程式提供依賴于架構的類型的能力。</span><span class="sxs-lookup"><span data-stu-id="7df16-139">This example doesn't leverage the ability of providers to provide types that depend on a schema.</span></span> <span data-ttu-id="7df16-140">類型提供程式的實現在以下代碼中概述，本主題的後續部分將介紹詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="7df16-140">The implementation of the type provider is outlined in the following code, and the details are covered in later sections of this topic.</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="e62b4-141">此程式碼與線上範例之間可能有差異。</span><span class="sxs-lookup"><span data-stu-id="e62b4-141">There may be differences between this code and the online samples.</span></span>
+> <span data-ttu-id="7df16-141">此代碼和連線示例之間可能存在差異。</span><span class="sxs-lookup"><span data-stu-id="7df16-141">There may be differences between this code and the online samples.</span></span>
 
 ```fsharp
 namespace Samples.FSharp.HelloWorldTypeProvider
@@ -128,7 +128,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 do()
 ```
 
-<span data-ttu-id="e62b4-142">若要使用此提供者，請開啟 Visual Studio 的個別實例、 F#建立腳本，然後使用 #r，從您的腳本中新增提供者的參考，如下列程式碼所示：</span><span class="sxs-lookup"><span data-stu-id="e62b4-142">To use this provider, open a separate instance of Visual Studio, create an F# script, and then add a reference to the provider from your script by using #r as the following code shows:</span></span>
+<span data-ttu-id="7df16-142">要使用此提供程式，請打開 Visual Studio 的單獨實例，創建 F# 腳本，然後使用#r添加對提供程式的引用，如以下代碼所示：</span><span class="sxs-lookup"><span data-stu-id="7df16-142">To use this provider, open a separate instance of Visual Studio, create an F# script, and then add a reference to the provider from your script by using #r as the following code shows:</span></span>
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -146,85 +146,85 @@ obj2.InstanceProperty
 let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 ```
 
-<span data-ttu-id="e62b4-143">然後尋找類型提供者所產生之 `Samples.HelloWorldTypeProvider` 命名空間下的類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-143">Then look for the types under the `Samples.HelloWorldTypeProvider` namespace that the type provider generated.</span></span>
+<span data-ttu-id="7df16-143">然後查找類型提供程式生成的`Samples.HelloWorldTypeProvider`命名空間下的類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-143">Then look for the types under the `Samples.HelloWorldTypeProvider` namespace that the type provider generated.</span></span>
 
-<span data-ttu-id="e62b4-144">重新編譯提供者之前，請確定您已關閉所有使用提供者 DLL 的F# Visual Studio 和 Interactive 實例。</span><span class="sxs-lookup"><span data-stu-id="e62b4-144">Before you recompile the provider, make sure that you have closed all instances of Visual Studio and F# Interactive that are using the provider DLL.</span></span> <span data-ttu-id="e62b4-145">否則，會發生組建錯誤，因為輸出 DLL 會被鎖定。</span><span class="sxs-lookup"><span data-stu-id="e62b4-145">Otherwise, a build error will occur because the output DLL will be locked.</span></span>
+<span data-ttu-id="7df16-144">在重新編譯提供程式之前，請確保已關閉使用提供程式 DLL 的所有 Visual Studio 和 F# 互動式實例。</span><span class="sxs-lookup"><span data-stu-id="7df16-144">Before you recompile the provider, make sure that you have closed all instances of Visual Studio and F# Interactive that are using the provider DLL.</span></span> <span data-ttu-id="7df16-145">否則，將發生建置錯誤，因為輸出 DLL 將被鎖定。</span><span class="sxs-lookup"><span data-stu-id="7df16-145">Otherwise, a build error will occur because the output DLL will be locked.</span></span>
 
-<span data-ttu-id="e62b4-146">若要使用 print 語句來進行這項提供者的偵錯工具，請建立會向提供者公開問題的腳本，然後使用下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="e62b4-146">To debug this provider by using print statements, make a script that exposes a problem with the provider, and then use the following code:</span></span>
+<span data-ttu-id="7df16-146">要使用列印語句調試此提供程式，請製作一個顯示提供程式問題的腳本，然後使用以下代碼：</span><span class="sxs-lookup"><span data-stu-id="7df16-146">To debug this provider by using print statements, make a script that exposes a problem with the provider, and then use the following code:</span></span>
 
 ```console
 fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-<span data-ttu-id="e62b4-147">若要使用 Visual Studio 來調試此提供者，請使用系統管理認證開啟 Visual Studio 的開發人員命令提示字元，然後執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="e62b4-147">To debug this provider by using Visual Studio, open the Developer Command Prompt for Visual Studio with administrative credentials, and run the following command:</span></span>
+<span data-ttu-id="7df16-147">要使用 Visual Studio 調試此提供程式，請使用管理認證打開 Visual Studio 的開發人員命令提示符，並運行以下命令：</span><span class="sxs-lookup"><span data-stu-id="7df16-147">To debug this provider by using Visual Studio, open the Developer Command Prompt for Visual Studio with administrative credentials, and run the following command:</span></span>
 
 ```console
 devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 ```
 
-<span data-ttu-id="e62b4-148">或者，開啟 Visual Studio，開啟 [偵錯工具] 功能表，選擇 [`Debug/Attach to process…`]，然後附加至您正在編輯腳本的另一個 `devenv` 進程。</span><span class="sxs-lookup"><span data-stu-id="e62b4-148">As an alternative, open Visual Studio, open the Debug menu, choose `Debug/Attach to process…`, and attach to another `devenv` process where you’re editing your script.</span></span> <span data-ttu-id="e62b4-149">藉由使用這個方法，您可以更輕鬆地以類型提供者中的特定邏輯為目標，方法是以互動方式將運算式輸入至第二個實例（具有完整的 IntelliSense 和其他功能）。</span><span class="sxs-lookup"><span data-stu-id="e62b4-149">By using this method, you can more easily target particular logic in the type provider by interactively typing expressions into the second instance (with full IntelliSense and other features).</span></span>
+<span data-ttu-id="7df16-148">作為替代，打開 Visual Studio，打開調試功能表，選擇`Debug/Attach to process…`，並附加到編輯`devenv`腳本的其他進程。</span><span class="sxs-lookup"><span data-stu-id="7df16-148">As an alternative, open Visual Studio, open the Debug menu, choose `Debug/Attach to process…`, and attach to another `devenv` process where you’re editing your script.</span></span> <span data-ttu-id="7df16-149">通過使用此方法，您可以通過將運算式交互地鍵入第二個實例（具有完整的 IntelliSense 和其他功能）來更輕鬆地定位類型提供程式中的特定邏輯。</span><span class="sxs-lookup"><span data-stu-id="7df16-149">By using this method, you can more easily target particular logic in the type provider by interactively typing expressions into the second instance (with full IntelliSense and other features).</span></span>
 
-<span data-ttu-id="e62b4-150">您可以停用 Just My Code 的偵錯工具，以更清楚地識別產生的程式碼錯誤。</span><span class="sxs-lookup"><span data-stu-id="e62b4-150">You can disable Just My Code debugging to better identify errors in generated code.</span></span> <span data-ttu-id="e62b4-151">如需如何啟用或停用這項功能的相關資訊，請參閱[使用偵錯工具流覽程式碼](/visualstudio/debugger/navigating-through-code-with-the-debugger)。</span><span class="sxs-lookup"><span data-stu-id="e62b4-151">For information about how to enable or disable this feature, see [Navigating through Code with the Debugger](/visualstudio/debugger/navigating-through-code-with-the-debugger).</span></span> <span data-ttu-id="e62b4-152">此外，您也可以開啟 [`Debug`] 功能表，然後選擇 [`Exceptions`] 或選擇 [Ctrl + Alt + E 鍵] 來開啟 [`Exceptions`] 對話方塊，以設定第一個可能發生的例外狀況攔截。</span><span class="sxs-lookup"><span data-stu-id="e62b4-152">Also, you can also set first-chance exception catching by opening the `Debug` menu and then choosing `Exceptions` or by choosing the Ctrl+Alt+E keys to open the `Exceptions` dialog box.</span></span> <span data-ttu-id="e62b4-153">在該對話方塊的 [`Common Language Runtime Exceptions`] 底下，選取 [`Thrown`] 核取方塊。</span><span class="sxs-lookup"><span data-stu-id="e62b4-153">In that dialog box, under `Common Language Runtime Exceptions`, select the `Thrown` check box.</span></span>
+<span data-ttu-id="7df16-150">您可以禁用"僅我的代碼"調試，以便更好地識別生成的代碼中的錯誤。</span><span class="sxs-lookup"><span data-stu-id="7df16-150">You can disable Just My Code debugging to better identify errors in generated code.</span></span> <span data-ttu-id="7df16-151">有關如何啟用或禁用此功能的資訊，請參閱[使用調試器 通過代碼導航](/visualstudio/debugger/navigating-through-code-with-the-debugger)。</span><span class="sxs-lookup"><span data-stu-id="7df16-151">For information about how to enable or disable this feature, see [Navigating through Code with the Debugger](/visualstudio/debugger/navigating-through-code-with-the-debugger).</span></span> <span data-ttu-id="7df16-152">此外，您還可以通過打開`Debug`功能表，然後選擇或選擇`Exceptions`Ctrl_Alt_E 鍵來打開`Exceptions`對話方塊來設置第一次異常捕獲。</span><span class="sxs-lookup"><span data-stu-id="7df16-152">Also, you can also set first-chance exception catching by opening the `Debug` menu and then choosing `Exceptions` or by choosing the Ctrl+Alt+E keys to open the `Exceptions` dialog box.</span></span> <span data-ttu-id="7df16-153">在該對話方塊中，在`Common Language Runtime Exceptions`下，`Thrown`選擇核取方塊。</span><span class="sxs-lookup"><span data-stu-id="7df16-153">In that dialog box, under `Common Language Runtime Exceptions`, select the `Thrown` check box.</span></span>
 
-### <a name="implementation-of-the-type-provider"></a><span data-ttu-id="e62b4-154">實作為型別提供者</span><span class="sxs-lookup"><span data-stu-id="e62b4-154">Implementation of the Type Provider</span></span>
+### <a name="implementation-of-the-type-provider"></a><span data-ttu-id="7df16-154">類型提供程式的實現</span><span class="sxs-lookup"><span data-stu-id="7df16-154">Implementation of the Type Provider</span></span>
 
-<span data-ttu-id="e62b4-155">本節將逐步引導您完成類型提供者實作為的主要區段。</span><span class="sxs-lookup"><span data-stu-id="e62b4-155">This section walks you through the principal sections of the type provider implementation.</span></span> <span data-ttu-id="e62b4-156">首先，您要定義自訂類型提供者本身的類型：</span><span class="sxs-lookup"><span data-stu-id="e62b4-156">First, you define the type for the custom type provider itself:</span></span>
+<span data-ttu-id="7df16-155">本節將介紹類型提供程式實現的主要部分。</span><span class="sxs-lookup"><span data-stu-id="7df16-155">This section walks you through the principal sections of the type provider implementation.</span></span> <span data-ttu-id="7df16-156">首先，定義自訂類型提供程式本身的類型：</span><span class="sxs-lookup"><span data-stu-id="7df16-156">First, you define the type for the custom type provider itself:</span></span>
 
 ```fsharp
 [<TypeProvider>]
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-<span data-ttu-id="e62b4-157">此類型必須是公用的，而且您必須使用[TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947)屬性加以標記，如此一來，當個別F#的專案參考包含該類型的元件時，編譯器才會辨識該類型提供者。</span><span class="sxs-lookup"><span data-stu-id="e62b4-157">This type must be public, and you must mark it with the [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) attribute so that the compiler will recognize the type provider when a separate F# project references the assembly that contains the type.</span></span> <span data-ttu-id="e62b4-158">*Config*參數是選擇性的，如果存在，則會包含F#編譯器所建立之型別提供者實例的內容相關設定資訊。</span><span class="sxs-lookup"><span data-stu-id="e62b4-158">The *config* parameter is optional, and, if present, contains contextual configuration information for the type provider instance that the F# compiler creates.</span></span>
+<span data-ttu-id="7df16-157">此類型必須是公共的，並且必須使用[TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947)屬性標記它，以便編譯器在單獨的 F# 專案引用包含該類型的程式集時識別類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-157">This type must be public, and you must mark it with the [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) attribute so that the compiler will recognize the type provider when a separate F# project references the assembly that contains the type.</span></span> <span data-ttu-id="7df16-158">*配置*參數是可選的，如果存在，則包含 F# 編譯器創建的類型提供程式實例的上下文配置資訊。</span><span class="sxs-lookup"><span data-stu-id="7df16-158">The *config* parameter is optional, and, if present, contains contextual configuration information for the type provider instance that the F# compiler creates.</span></span>
 
-<span data-ttu-id="e62b4-159">接下來，您會執行[ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f)介面。</span><span class="sxs-lookup"><span data-stu-id="e62b4-159">Next, you implement the [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) interface.</span></span> <span data-ttu-id="e62b4-160">在此情況下，您會使用來自 `ProvidedTypes` API 的 `TypeProviderForNamespaces` 型別作為基底型別。</span><span class="sxs-lookup"><span data-stu-id="e62b4-160">In this case, you use the `TypeProviderForNamespaces` type from the `ProvidedTypes` API as a base type.</span></span> <span data-ttu-id="e62b4-161">此協助程式類型可以提供立即提供之命名空間的有限集合，其中每一個都直接包含有限數目的固定、立即提供的類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-161">This helper type can provide a finite collection of eagerly provided namespaces, each of which directly contains a finite number of fixed, eagerly provided types.</span></span> <span data-ttu-id="e62b4-162">在此內容中，提供者*立即*會產生類型，即使不需要或未使用它們也一樣。</span><span class="sxs-lookup"><span data-stu-id="e62b4-162">In this context, the provider *eagerly* generates types even if they aren't needed or used.</span></span>
+<span data-ttu-id="7df16-159">接下來，實現[ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f)介面。</span><span class="sxs-lookup"><span data-stu-id="7df16-159">Next, you implement the [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) interface.</span></span> <span data-ttu-id="7df16-160">在這種情況下，您將 API`TypeProviderForNamespaces`中的`ProvidedTypes`類型用作基本類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-160">In this case, you use the `TypeProviderForNamespaces` type from the `ProvidedTypes` API as a base type.</span></span> <span data-ttu-id="7df16-161">此説明器類型可以提供熱切提供的命名空間的有限集合，每個命名空間都直接包含有限數量的固定、熱切提供的類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-161">This helper type can provide a finite collection of eagerly provided namespaces, each of which directly contains a finite number of fixed, eagerly provided types.</span></span> <span data-ttu-id="7df16-162">在此上下文中，提供程式*熱切地*組建類型，即使它們不需要或使用。</span><span class="sxs-lookup"><span data-stu-id="7df16-162">In this context, the provider *eagerly* generates types even if they aren't needed or used.</span></span>
 
 ```fsharp
 inherit TypeProviderForNamespaces(config)
 ```
 
-<span data-ttu-id="e62b4-163">接下來，定義本機私用值，以指定所提供類型的命名空間，並尋找類型提供者元件本身。</span><span class="sxs-lookup"><span data-stu-id="e62b4-163">Next, define local private values that specify the namespace for the provided types, and find the type provider assembly itself.</span></span> <span data-ttu-id="e62b4-164">此元件稍後會用來做為所提供之已清除類型的邏輯父類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-164">This assembly is used later as the logical parent type of the erased types that are provided.</span></span>
+<span data-ttu-id="7df16-163">接下來，定義指定提供類型的命名空間的本地私有值，並查找類型提供程式程式集本身。</span><span class="sxs-lookup"><span data-stu-id="7df16-163">Next, define local private values that specify the namespace for the provided types, and find the type provider assembly itself.</span></span> <span data-ttu-id="7df16-164">稍後，此程式集用作提供的擦除類型的邏輯父類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-164">This assembly is used later as the logical parent type of the erased types that are provided.</span></span>
 
 ```fsharp
 let namespaceName = "Samples.HelloWorldTypeProvider"
 let thisAssembly = Assembly.GetExecutingAssembly()
 ```
 
-<span data-ttu-id="e62b4-165">接下來，建立函式來提供每個類型 Type1 。Type100.</span><span class="sxs-lookup"><span data-stu-id="e62b4-165">Next, create a function to provide each of the types Type1…Type100.</span></span> <span data-ttu-id="e62b4-166">本主題稍後將會詳細說明此函式。</span><span class="sxs-lookup"><span data-stu-id="e62b4-166">This function is explained in more detail later in this topic.</span></span>
+<span data-ttu-id="7df16-165">接下來，創建一個函數來提供 Type1...類型 100。</span><span class="sxs-lookup"><span data-stu-id="7df16-165">Next, create a function to provide each of the types Type1…Type100.</span></span> <span data-ttu-id="7df16-166">本主題稍後將更詳細地介紹此功能。</span><span class="sxs-lookup"><span data-stu-id="7df16-166">This function is explained in more detail later in this topic.</span></span>
 
 ```fsharp
 let makeOneProvidedType (n:int) = …
 ```
 
-<span data-ttu-id="e62b4-167">接下來，產生100提供的類型：</span><span class="sxs-lookup"><span data-stu-id="e62b4-167">Next, generate the 100 provided types:</span></span>
+<span data-ttu-id="7df16-167">接下來，生成 100 個提供的類型：</span><span class="sxs-lookup"><span data-stu-id="7df16-167">Next, generate the 100 provided types:</span></span>
 
 ```fsharp
 let types = [ for i in 1 .. 100 -> makeOneProvidedType i ]
 ```
 
-<span data-ttu-id="e62b4-168">接下來，新增類型做為提供的命名空間：</span><span class="sxs-lookup"><span data-stu-id="e62b4-168">Next, add the types as a provided namespace:</span></span>
+<span data-ttu-id="7df16-168">接下來，將類型添加為提供的命名空間：</span><span class="sxs-lookup"><span data-stu-id="7df16-168">Next, add the types as a provided namespace:</span></span>
 
 ```fsharp
 do this.AddNamespace(namespaceName, types)
 ```
 
-<span data-ttu-id="e62b4-169">最後，新增元件屬性，以指出您正在建立類型提供者 DLL：</span><span class="sxs-lookup"><span data-stu-id="e62b4-169">Finally, add an assembly attribute that indicates that you are creating a type provider DLL:</span></span>
+<span data-ttu-id="7df16-169">最後，添加一個程式集屬性，指示要創建類型提供程式 DLL：</span><span class="sxs-lookup"><span data-stu-id="7df16-169">Finally, add an assembly attribute that indicates that you are creating a type provider DLL:</span></span>
 
 ```fsharp
 [<assembly:TypeProviderAssembly>]
 do()
 ```
 
-### <a name="providing-one-type-and-its-members"></a><span data-ttu-id="e62b4-170">提供一種類型和其成員</span><span class="sxs-lookup"><span data-stu-id="e62b4-170">Providing One Type And Its Members</span></span>
+### <a name="providing-one-type-and-its-members"></a><span data-ttu-id="7df16-170">提供一種類型及其成員</span><span class="sxs-lookup"><span data-stu-id="7df16-170">Providing One Type And Its Members</span></span>
 
-<span data-ttu-id="e62b4-171">`makeOneProvidedType` 函數會執行提供其中一種類型的實際工作。</span><span class="sxs-lookup"><span data-stu-id="e62b4-171">The `makeOneProvidedType` function does the real work of providing one of the types.</span></span>
+<span data-ttu-id="7df16-171">函數`makeOneProvidedType`執行提供其中一種類型的實際工作。</span><span class="sxs-lookup"><span data-stu-id="7df16-171">The `makeOneProvidedType` function does the real work of providing one of the types.</span></span>
 
 ```fsharp
 let makeOneProvidedType (n:int) =
 …
 ```
 
-<span data-ttu-id="e62b4-172">此步驟說明此函式的執行方式。</span><span class="sxs-lookup"><span data-stu-id="e62b4-172">This step explains the implementation of this function.</span></span> <span data-ttu-id="e62b4-173">首先，建立提供的類型（例如，Type1，當 n = 1，或 Type57，當 n = 57 時）。</span><span class="sxs-lookup"><span data-stu-id="e62b4-173">First, create the provided type (for example, Type1, when n = 1, or Type57, when n = 57).</span></span>
+<span data-ttu-id="7df16-172">此步驟解釋了此函數的實現。</span><span class="sxs-lookup"><span data-stu-id="7df16-172">This step explains the implementation of this function.</span></span> <span data-ttu-id="7df16-173">首先，創建提供的類型（例如，類型 1，當 n = 1 時，或 Type57，當 n = 57）。</span><span class="sxs-lookup"><span data-stu-id="7df16-173">First, create the provided type (for example, Type1, when n = 1, or Type57, when n = 57).</span></span>
 
 ```fsharp
 // This is the provided type. It is an erased provided type and, in compiled code,
@@ -234,19 +234,19 @@ let t = ProvidedTypeDefinition(thisAssembly, namespaceName,
                                baseType = Some typeof<obj>)
 ```
 
-<span data-ttu-id="e62b4-174">您應該要注意下列幾點：</span><span class="sxs-lookup"><span data-stu-id="e62b4-174">You should note the following points:</span></span>
+<span data-ttu-id="7df16-174">您應該注意以下幾點：</span><span class="sxs-lookup"><span data-stu-id="7df16-174">You should note the following points:</span></span>
 
-- <span data-ttu-id="e62b4-175">已清除此提供的類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-175">This provided type is erased.</span></span>  <span data-ttu-id="e62b4-176">因為您表示基底類型為 `obj`，所以實例會在編譯的程式碼中顯示為[obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7)類型的值。</span><span class="sxs-lookup"><span data-stu-id="e62b4-176">Because you indicate that the base type is `obj`, instances will appear as values of type [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) in compiled code.</span></span>
+- <span data-ttu-id="7df16-175">此提供的類型將被刪除。</span><span class="sxs-lookup"><span data-stu-id="7df16-175">This provided type is erased.</span></span>  <span data-ttu-id="7df16-176">由於您指示基類型為`obj`，因此實例將在編譯代碼中顯示為[obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7)類型的值。</span><span class="sxs-lookup"><span data-stu-id="7df16-176">Because you indicate that the base type is `obj`, instances will appear as values of type [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) in compiled code.</span></span>
 
-- <span data-ttu-id="e62b4-177">當您指定非巢狀型別時，您必須指定元件和命名空間。</span><span class="sxs-lookup"><span data-stu-id="e62b4-177">When you specify a non-nested type, you must specify the assembly and namespace.</span></span> <span data-ttu-id="e62b4-178">若為已清除的類型，元件應該是類型提供者元件本身。</span><span class="sxs-lookup"><span data-stu-id="e62b4-178">For erased types, the assembly should be the type provider assembly itself.</span></span>
+- <span data-ttu-id="7df16-177">指定非巢狀型別時，必須指定程式集和命名空間。</span><span class="sxs-lookup"><span data-stu-id="7df16-177">When you specify a non-nested type, you must specify the assembly and namespace.</span></span> <span data-ttu-id="7df16-178">對於擦除的類型，程式集應是類型提供程式程式集本身。</span><span class="sxs-lookup"><span data-stu-id="7df16-178">For erased types, the assembly should be the type provider assembly itself.</span></span>
 
-<span data-ttu-id="e62b4-179">接下來，將 XML 檔加入至類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-179">Next, add XML documentation to the type.</span></span> <span data-ttu-id="e62b4-180">這是延遲的檔，也就是，如果主機編譯器需要，則視需要計算。</span><span class="sxs-lookup"><span data-stu-id="e62b4-180">This documentation is delayed, that is, computed on-demand if the host compiler needs it.</span></span>
+<span data-ttu-id="7df16-179">接下來，將 XML 文檔添加到類型中。</span><span class="sxs-lookup"><span data-stu-id="7df16-179">Next, add XML documentation to the type.</span></span> <span data-ttu-id="7df16-180">本文檔延遲，即，如果主機編譯器需要，則按需計算。</span><span class="sxs-lookup"><span data-stu-id="7df16-180">This documentation is delayed, that is, computed on-demand if the host compiler needs it.</span></span>
 
 ```fsharp
 t.AddXmlDocDelayed (fun () -> sprintf "This provided type %s" ("Type" + string n))
 ```
 
-<span data-ttu-id="e62b4-181">接下來，您要將提供的靜態屬性新增至類型：</span><span class="sxs-lookup"><span data-stu-id="e62b4-181">Next you add a provided static property to the type:</span></span>
+<span data-ttu-id="7df16-181">接下來，向類型添加提供的靜態屬性：</span><span class="sxs-lookup"><span data-stu-id="7df16-181">Next you add a provided static property to the type:</span></span>
 
 ```fsharp
 let staticProp = ProvidedProperty(propertyName = "StaticProperty",
@@ -255,36 +255,36 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-<span data-ttu-id="e62b4-182">取得此屬性一律會評估為字串 "Hello！"。</span><span class="sxs-lookup"><span data-stu-id="e62b4-182">Getting this property will always evaluate to the string "Hello!".</span></span> <span data-ttu-id="e62b4-183">屬性的 `GetterCode` 會使用F#引號，這代表主機編譯器為了取得屬性而產生的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e62b4-183">The `GetterCode` for the property uses an F# quotation, which represents the code that the host compiler generates for getting the property.</span></span> <span data-ttu-id="e62b4-184">如需報價的詳細資訊，請參閱程式[代碼報價（F#）](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)。</span><span class="sxs-lookup"><span data-stu-id="e62b4-184">For more information about quotations, see [Code Quotations (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).</span></span>
+<span data-ttu-id="7df16-182">獲取此屬性將始終評估到字串"你好！</span><span class="sxs-lookup"><span data-stu-id="7df16-182">Getting this property will always evaluate to the string "Hello!".</span></span> <span data-ttu-id="7df16-183">屬性`GetterCode`使用 F# 引號，它表示主機編譯器為獲取該屬性而生成的代碼。</span><span class="sxs-lookup"><span data-stu-id="7df16-183">The `GetterCode` for the property uses an F# quotation, which represents the code that the host compiler generates for getting the property.</span></span> <span data-ttu-id="7df16-184">有關報價單的詳細資訊，請參閱[代碼報價 （F#）。](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155)</span><span class="sxs-lookup"><span data-stu-id="7df16-184">For more information about quotations, see [Code Quotations (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).</span></span>
 
-<span data-ttu-id="e62b4-185">將 XML 檔加入至屬性。</span><span class="sxs-lookup"><span data-stu-id="e62b4-185">Add XML documentation to the property.</span></span>
+<span data-ttu-id="7df16-185">將 XML 文檔添加到屬性。</span><span class="sxs-lookup"><span data-stu-id="7df16-185">Add XML documentation to the property.</span></span>
 
 ```fsharp
 staticProp.AddXmlDocDelayed(fun () -> "This is a static property")
 ```
 
-<span data-ttu-id="e62b4-186">現在，將提供的屬性附加至提供的類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-186">Now attach the provided property to the provided type.</span></span> <span data-ttu-id="e62b4-187">您必須將提供的成員附加至一種類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-187">You must attach a provided member to one and only one type.</span></span> <span data-ttu-id="e62b4-188">否則，將永遠無法存取該成員。</span><span class="sxs-lookup"><span data-stu-id="e62b4-188">Otherwise, the member will never be accessible.</span></span>
+<span data-ttu-id="7df16-186">現在，將提供的屬性附加到提供的類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-186">Now attach the provided property to the provided type.</span></span> <span data-ttu-id="7df16-187">您必須將提供的成員附加到一種和僅一種類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-187">You must attach a provided member to one and only one type.</span></span> <span data-ttu-id="7df16-188">否則，該成員將永遠無法訪問。</span><span class="sxs-lookup"><span data-stu-id="7df16-188">Otherwise, the member will never be accessible.</span></span>
 
 ```fsharp
 t.AddMember staticProp
 ```
 
-<span data-ttu-id="e62b4-189">現在，請建立不採用任何參數的提供的函式。</span><span class="sxs-lookup"><span data-stu-id="e62b4-189">Now create a provided constructor that takes no parameters.</span></span>
+<span data-ttu-id="7df16-189">現在創建一個不需要參數的提供的建構函式。</span><span class="sxs-lookup"><span data-stu-id="7df16-189">Now create a provided constructor that takes no parameters.</span></span>
 
 ```fsharp
 let ctor = ProvidedConstructor(parameters = [ ],
                                invokeCode = (fun args -> <@@ "The object data" :> obj @@>))
 ```
 
-<span data-ttu-id="e62b4-190">此函式F#的 `InvokeCode` 會傳回引號，這表示呼叫此函式時，主機編譯器所產生的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e62b4-190">The `InvokeCode` for the constructor returns an F# quotation, which represents the code that the host compiler generates when the constructor is called.</span></span> <span data-ttu-id="e62b4-191">例如，您可以使用下列的函數：</span><span class="sxs-lookup"><span data-stu-id="e62b4-191">For example, you can use the following constructor:</span></span>
+<span data-ttu-id="7df16-190">構造`InvokeCode`函數返回一個 F# 引號，它表示在調用建構函式時主機編譯器生成的代碼。</span><span class="sxs-lookup"><span data-stu-id="7df16-190">The `InvokeCode` for the constructor returns an F# quotation, which represents the code that the host compiler generates when the constructor is called.</span></span> <span data-ttu-id="7df16-191">例如，可以使用以下建構函式：</span><span class="sxs-lookup"><span data-stu-id="7df16-191">For example, you can use the following constructor:</span></span>
 
 ```fsharp
 new Type10()
 ```
 
-<span data-ttu-id="e62b4-192">所提供類型的實例將會以基礎資料「物件資料」建立。</span><span class="sxs-lookup"><span data-stu-id="e62b4-192">An instance of the provided type will be created with underlying data "The object data".</span></span> <span data-ttu-id="e62b4-193">加上引號的程式碼包含對[obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7)的轉換，因為該類型是此提供類型的抹除（如同您在宣告提供的類型時所指定）。</span><span class="sxs-lookup"><span data-stu-id="e62b4-193">The quoted code includes a conversion to [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) because that type is the erasure of this provided type (as you specified when you declared the provided type).</span></span>
+<span data-ttu-id="7df16-192">使用基礎資料"物件資料"創建提供的類型的實例。</span><span class="sxs-lookup"><span data-stu-id="7df16-192">An instance of the provided type will be created with underlying data "The object data".</span></span> <span data-ttu-id="7df16-193">引號代碼包括轉換為[obj，](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7)因為該類型是此提供類型的擦除（如您聲明提供的類型時指定的）。</span><span class="sxs-lookup"><span data-stu-id="7df16-193">The quoted code includes a conversion to [obj](https://msdn.microsoft.com/library/dcf2430f-702b-40e5-a0a1-97518bf137f7) because that type is the erasure of this provided type (as you specified when you declared the provided type).</span></span>
 
-<span data-ttu-id="e62b4-194">將 XML 檔加入至此函式，並將提供的函式加入至提供的類型：</span><span class="sxs-lookup"><span data-stu-id="e62b4-194">Add XML documentation to the constructor, and add the provided constructor to the provided type:</span></span>
+<span data-ttu-id="7df16-194">將 XML 文檔添加到建構函式，並將提供的建構函式添加到提供的類型：</span><span class="sxs-lookup"><span data-stu-id="7df16-194">Add XML documentation to the constructor, and add the provided constructor to the provided type:</span></span>
 
 ```fsharp
 ctor.AddXmlDocDelayed(fun () -> "This is a constructor")
@@ -292,7 +292,7 @@ ctor.AddXmlDocDelayed(fun () -> "This is a constructor")
 t.AddMember ctor
 ```
 
-<span data-ttu-id="e62b4-195">建立第二個提供的函式，以接受一個參數：</span><span class="sxs-lookup"><span data-stu-id="e62b4-195">Create a second provided constructor that takes one parameter:</span></span>
+<span data-ttu-id="7df16-195">創建第二個提供的建構函式，該建構函式採用一個參數：</span><span class="sxs-lookup"><span data-stu-id="7df16-195">Create a second provided constructor that takes one parameter:</span></span>
 
 ```fsharp
 let ctor2 =
@@ -300,13 +300,13 @@ ProvidedConstructor(parameters = [ ProvidedParameter("data",typeof<string>) ],
                     invokeCode = (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
 ```
 
-<span data-ttu-id="e62b4-196">此函式F#的 `InvokeCode` 會再次傳回引號，代表主機編譯器為呼叫方法所產生的程式碼。</span><span class="sxs-lookup"><span data-stu-id="e62b4-196">The `InvokeCode` for the constructor again returns an F# quotation, which represents the code that the host compiler generated for a call to the method.</span></span> <span data-ttu-id="e62b4-197">例如，您可以使用下列的函數：</span><span class="sxs-lookup"><span data-stu-id="e62b4-197">For example, you can use the following constructor:</span></span>
+<span data-ttu-id="7df16-196">構造`InvokeCode`函數的 引號再次返回一個 F# 引號，它表示主機編譯器為調用 方法生成的代碼。</span><span class="sxs-lookup"><span data-stu-id="7df16-196">The `InvokeCode` for the constructor again returns an F# quotation, which represents the code that the host compiler generated for a call to the method.</span></span> <span data-ttu-id="7df16-197">例如，可以使用以下建構函式：</span><span class="sxs-lookup"><span data-stu-id="7df16-197">For example, you can use the following constructor:</span></span>
 
 ```fsharp
 new Type10("ten")
 ```
 
-<span data-ttu-id="e62b4-198">所提供類型的實例是使用基礎資料 "十" 所建立。</span><span class="sxs-lookup"><span data-stu-id="e62b4-198">An instance of the provided type is created with underlying data "ten".</span></span> <span data-ttu-id="e62b4-199">您可能已經注意到 `InvokeCode` 函式會傳回引號。</span><span class="sxs-lookup"><span data-stu-id="e62b4-199">You may have already noticed that the `InvokeCode` function returns a quotation.</span></span> <span data-ttu-id="e62b4-200">此函式的輸入是運算式的清單，每個函式參數一個。</span><span class="sxs-lookup"><span data-stu-id="e62b4-200">The input to this function is a list of expressions, one per constructor parameter.</span></span> <span data-ttu-id="e62b4-201">在此情況下，`args.[0]`中提供代表單一參數值的運算式。</span><span class="sxs-lookup"><span data-stu-id="e62b4-201">In this case, an expression that represents the single parameter value is available in `args.[0]`.</span></span> <span data-ttu-id="e62b4-202">呼叫此函式的程式碼會將傳回值強制轉型為已清除的類型 `obj`。</span><span class="sxs-lookup"><span data-stu-id="e62b4-202">The code for a call to the constructor coerces the return value to the erased type `obj`.</span></span> <span data-ttu-id="e62b4-203">將第二個提供的函式加入至類型之後，您會建立提供的實例屬性：</span><span class="sxs-lookup"><span data-stu-id="e62b4-203">After you add the second provided constructor to the type, you create a provided instance property:</span></span>
+<span data-ttu-id="7df16-198">使用基礎資料"10"創建提供的類型的實例。</span><span class="sxs-lookup"><span data-stu-id="7df16-198">An instance of the provided type is created with underlying data "ten".</span></span> <span data-ttu-id="7df16-199">您可能已經注意到函數`InvokeCode`返回引號。</span><span class="sxs-lookup"><span data-stu-id="7df16-199">You may have already noticed that the `InvokeCode` function returns a quotation.</span></span> <span data-ttu-id="7df16-200">此函數的輸入是運算式清單，每個建構函式參數一個。</span><span class="sxs-lookup"><span data-stu-id="7df16-200">The input to this function is a list of expressions, one per constructor parameter.</span></span> <span data-ttu-id="7df16-201">在這種情況下，表示單個參數值的運算式在 中`args.[0]`可用。</span><span class="sxs-lookup"><span data-stu-id="7df16-201">In this case, an expression that represents the single parameter value is available in `args.[0]`.</span></span> <span data-ttu-id="7df16-202">調用建構函式的代碼強制傳回值到擦除的類型`obj`。</span><span class="sxs-lookup"><span data-stu-id="7df16-202">The code for a call to the constructor coerces the return value to the erased type `obj`.</span></span> <span data-ttu-id="7df16-203">將第二個提供的建構函式添加到類型後，將創建一個提供的實例屬性：</span><span class="sxs-lookup"><span data-stu-id="7df16-203">After you add the second provided constructor to the type, you create a provided instance property:</span></span>
 
 ```fsharp
 let instanceProp =
@@ -318,7 +318,7 @@ instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
 ```
 
-<span data-ttu-id="e62b4-204">取得此屬性會傳回字串的長度，也就是標記法物件。</span><span class="sxs-lookup"><span data-stu-id="e62b4-204">Getting this property will return the length of the string, which is the representation object.</span></span> <span data-ttu-id="e62b4-205">`GetterCode` 屬性會傳回F#報價，指定主機編譯器所產生的程式碼，以取得屬性。</span><span class="sxs-lookup"><span data-stu-id="e62b4-205">The `GetterCode` property returns an F# quotation that specifies the code that the host compiler generates to get the property.</span></span> <span data-ttu-id="e62b4-206">如同 `InvokeCode`，`GetterCode` 函數會傳回引號。</span><span class="sxs-lookup"><span data-stu-id="e62b4-206">Like `InvokeCode`, the `GetterCode` function returns a quotation.</span></span> <span data-ttu-id="e62b4-207">主機編譯器會使用引數清單來呼叫這個函式。</span><span class="sxs-lookup"><span data-stu-id="e62b4-207">The host compiler calls this function with a list of arguments.</span></span> <span data-ttu-id="e62b4-208">在此情況下，引數只會包含單一運算式，代表要在其上呼叫 getter 的實例，您可以使用 `args.[0]`來存取它。</span><span class="sxs-lookup"><span data-stu-id="e62b4-208">In this case, the arguments include just the single expression that represents the instance upon which the getter is being called, which you can access by using `args.[0]`.</span></span> <span data-ttu-id="e62b4-209">然後，`GetterCode` 的執行會接合到已清除類型 `obj`的結果引號中，而 cast 則是用來滿足編譯器檢查物件是否為字串之類型的機制。</span><span class="sxs-lookup"><span data-stu-id="e62b4-209">The implementation of `GetterCode` then splices into the result quotation at the erased type `obj`, and a cast is used to satisfy the compiler's mechanism for checking types that the object is a string.</span></span> <span data-ttu-id="e62b4-210">`makeOneProvidedType` 的下一個部分會提供具有一個參數的實例方法。</span><span class="sxs-lookup"><span data-stu-id="e62b4-210">The next part of `makeOneProvidedType` provides an instance method with one parameter.</span></span>
+<span data-ttu-id="7df16-204">獲取此屬性將返回字串的長度，該長度是表示物件。</span><span class="sxs-lookup"><span data-stu-id="7df16-204">Getting this property will return the length of the string, which is the representation object.</span></span> <span data-ttu-id="7df16-205">該`GetterCode`屬性返回一個 F# 引號，該引號指定主機編譯器為獲取該屬性而生成的代碼。</span><span class="sxs-lookup"><span data-stu-id="7df16-205">The `GetterCode` property returns an F# quotation that specifies the code that the host compiler generates to get the property.</span></span> <span data-ttu-id="7df16-206">與`InvokeCode`一`GetterCode`樣，函數返回引號。</span><span class="sxs-lookup"><span data-stu-id="7df16-206">Like `InvokeCode`, the `GetterCode` function returns a quotation.</span></span> <span data-ttu-id="7df16-207">主機編譯器使用參數清單調用此函數。</span><span class="sxs-lookup"><span data-stu-id="7df16-207">The host compiler calls this function with a list of arguments.</span></span> <span data-ttu-id="7df16-208">在這種情況下，參數僅包括表示調用 getter 的實例的單個運算式，您可以使用 訪問 該運算式`args.[0]`。</span><span class="sxs-lookup"><span data-stu-id="7df16-208">In this case, the arguments include just the single expression that represents the instance upon which the getter is being called, which you can access by using `args.[0]`.</span></span> <span data-ttu-id="7df16-209">`GetterCode`然後在擦除類型`obj`中拼接到結果引號中的實現，以及強制轉換用於滿足編譯器檢查物件是字串的類型的機制。</span><span class="sxs-lookup"><span data-stu-id="7df16-209">The implementation of `GetterCode` then splices into the result quotation at the erased type `obj`, and a cast is used to satisfy the compiler's mechanism for checking types that the object is a string.</span></span> <span data-ttu-id="7df16-210">的下`makeOneProvidedType`一部分提供了一個實例方法，其中有一個參數。</span><span class="sxs-lookup"><span data-stu-id="7df16-210">The next part of `makeOneProvidedType` provides an instance method with one parameter.</span></span>
 
 ```fsharp
 let instanceMeth =
@@ -333,7 +333,7 @@ instanceMeth.AddXmlDocDelayed(fun () -> "This is an instance method")
 t.AddMember instanceMeth
 ```
 
-<span data-ttu-id="e62b4-211">最後，建立包含100嵌套屬性的巢狀型別。</span><span class="sxs-lookup"><span data-stu-id="e62b4-211">Finally, create a nested type that contains 100 nested properties.</span></span> <span data-ttu-id="e62b4-212">建立此巢狀型別及其屬性會延遲，也就是視需要計算。</span><span class="sxs-lookup"><span data-stu-id="e62b4-212">The creation of this nested type and its properties is delayed, that is, computed on-demand.</span></span>
+<span data-ttu-id="7df16-211">最後，創建包含 100 個嵌套屬性的巢狀型別。</span><span class="sxs-lookup"><span data-stu-id="7df16-211">Finally, create a nested type that contains 100 nested properties.</span></span> <span data-ttu-id="7df16-212">此巢狀型別的創建及其屬性延遲，即按需計算。</span><span class="sxs-lookup"><span data-stu-id="7df16-212">The creation of this nested type and its properties is delayed, that is, computed on-demand.</span></span>
 
 ```fsharp
 t.AddMembersDelayed(fun () ->
@@ -344,16 +344,16 @@ t.AddMembersDelayed(fun () ->
       [
           for i in 1 .. 100 ->
               let valueOfTheProperty = "I am string "  + string i
-    
+
               let p =
                 ProvidedProperty(propertyName = "StaticProperty" + string i,
                   propertyType = typeof<string>,
                   isStatic = true,
                   getterCode= (fun args -> <@@ valueOfTheProperty @@>))
-    
+
               p.AddXmlDocDelayed(fun () ->
                   sprintf "This is StaticProperty%d on NestedType" i)
-    
+
               p
       ]
 
@@ -362,50 +362,50 @@ t.AddMembersDelayed(fun () ->
   [nestedType])
 ```
 
-### <a name="details-about-erased-provided-types"></a><span data-ttu-id="e62b4-213">已清除之提供類型的詳細資料</span><span class="sxs-lookup"><span data-stu-id="e62b4-213">Details about Erased Provided Types</span></span>
+### <a name="details-about-erased-provided-types"></a><span data-ttu-id="7df16-213">有關已擦除提供的類型的詳細資訊</span><span class="sxs-lookup"><span data-stu-id="7df16-213">Details about Erased Provided Types</span></span>
 
-<span data-ttu-id="e62b4-214">本節中的範例只提供已*清除的提供類型*，在下列情況下特別有用：</span><span class="sxs-lookup"><span data-stu-id="e62b4-214">The example in this section provides only *erased provided types*, which are particularly useful in the following situations:</span></span>
+<span data-ttu-id="7df16-214">本節中的示例僅提供*擦除的提供類型*，這些類型在以下情況下特別有用：</span><span class="sxs-lookup"><span data-stu-id="7df16-214">The example in this section provides only *erased provided types*, which are particularly useful in the following situations:</span></span>
 
-- <span data-ttu-id="e62b4-215">當您針對只包含資料和方法的資訊空間撰寫提供者時。</span><span class="sxs-lookup"><span data-stu-id="e62b4-215">When you are writing a provider for an information space that contains only data and methods.</span></span>
+- <span data-ttu-id="7df16-215">為僅包含資料和方法的資訊空間編寫提供程式時。</span><span class="sxs-lookup"><span data-stu-id="7df16-215">When you are writing a provider for an information space that contains only data and methods.</span></span>
 
-- <span data-ttu-id="e62b4-216">當您撰寫提供者，其中正確的執行時間型別語義對資訊空間的實際使用並不重要。</span><span class="sxs-lookup"><span data-stu-id="e62b4-216">When you are writing a provider where accurate runtime-type semantics aren't critical for practical use of the information space.</span></span>
+- <span data-ttu-id="7df16-216">編寫提供程式時，準確運行時類型的語義對於實際使用資訊空間並不重要。</span><span class="sxs-lookup"><span data-stu-id="7df16-216">When you are writing a provider where accurate runtime-type semantics aren't critical for practical use of the information space.</span></span>
 
-- <span data-ttu-id="e62b4-217">當您撰寫的資訊空間提供者很大且相互關聯時，在技術上並不能為資訊空間產生真正的 .NET 類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-217">When you are writing a provider for an information space that is so large and interconnected that it isn’t technically feasible to generate real .NET types for the information space.</span></span>
+- <span data-ttu-id="7df16-217">當您為資訊空間編寫提供程式時，該提供程式非常大且相互關聯，因此在技術上為資訊空間生成真正的 .NET 類型是不可行的。</span><span class="sxs-lookup"><span data-stu-id="7df16-217">When you are writing a provider for an information space that is so large and interconnected that it isn’t technically feasible to generate real .NET types for the information space.</span></span>
 
-<span data-ttu-id="e62b4-218">在此範例中，會將每個提供的型別清除成型別 `obj`，而且該型別的所有用法都會在編譯的程式碼中顯示為型別 `obj`。</span><span class="sxs-lookup"><span data-stu-id="e62b4-218">In this example, each provided type is erased to type `obj`, and all uses of the type will appear as type `obj` in compiled code.</span></span> <span data-ttu-id="e62b4-219">事實上，這些範例中的基礎物件都是字串，但型別在 .NET 編譯器代碼中會顯示為 `System.Object`。</span><span class="sxs-lookup"><span data-stu-id="e62b4-219">In fact, the underlying objects in these examples are strings, but the type will appear as `System.Object` in .NET compiled code.</span></span> <span data-ttu-id="e62b4-220">如同抹除類型的所有用法，您可以使用明確的裝箱、取消裝箱，以及轉換成破壞清除的類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-220">As with all uses of type erasure, you can use explicit boxing, unboxing, and casting to subvert erased types.</span></span> <span data-ttu-id="e62b4-221">在此情況下，當使用物件時，可能會導致不正確轉換例外狀況。</span><span class="sxs-lookup"><span data-stu-id="e62b4-221">In this case, a cast exception that isn’t valid may result when the object is used.</span></span> <span data-ttu-id="e62b4-222">提供者執行時間可以定義自己的私用標記法類型，以協助防止 false 標記法。</span><span class="sxs-lookup"><span data-stu-id="e62b4-222">A provider runtime can define its own private representation type to help protect against false representations.</span></span> <span data-ttu-id="e62b4-223">您無法在本身定義已F#清除的類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-223">You can’t define erased types in F# itself.</span></span> <span data-ttu-id="e62b4-224">只有提供的類型可以清除。</span><span class="sxs-lookup"><span data-stu-id="e62b4-224">Only provided types may be erased.</span></span> <span data-ttu-id="e62b4-225">您必須瞭解使用類型提供者的已清除類型，或提供已清除類型之提供者的後果，包括實際和語義。</span><span class="sxs-lookup"><span data-stu-id="e62b4-225">You must understand the ramifications, both practical and semantic, of using either erased types for your type provider or a provider that provides erased types.</span></span> <span data-ttu-id="e62b4-226">已清除的類型沒有真正的 .NET 類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-226">An erased type has no real .NET type.</span></span> <span data-ttu-id="e62b4-227">因此，您無法對型別執行精確的反映，而且如果您使用執行時間轉換和其他依賴實際執行時間型別語義的技術，則可能會破壞已清除的類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-227">Therefore, you cannot do accurate reflection over the type, and you might subvert erased types if you use runtime casts and other techniques that rely on exact runtime type semantics.</span></span> <span data-ttu-id="e62b4-228">已清除類型的 Subversion 經常會在執行時間產生類型轉換例外狀況。</span><span class="sxs-lookup"><span data-stu-id="e62b4-228">Subversion of erased types frequently results in type cast exceptions at runtime.</span></span>
+<span data-ttu-id="7df16-218">在此示例中，每個提供的類型將擦除為類型`obj`，並且該類型的所有用途都將在編譯的代碼中顯示為類型`obj`。</span><span class="sxs-lookup"><span data-stu-id="7df16-218">In this example, each provided type is erased to type `obj`, and all uses of the type will appear as type `obj` in compiled code.</span></span> <span data-ttu-id="7df16-219">事實上，這些示例中的基礎物件是字串，但類型將顯示為`System.Object`.NET 編譯代碼中。</span><span class="sxs-lookup"><span data-stu-id="7df16-219">In fact, the underlying objects in these examples are strings, but the type will appear as `System.Object` in .NET compiled code.</span></span> <span data-ttu-id="7df16-220">與類型擦除的所有用途一樣，您可以使用顯式裝箱、取消裝箱和強制轉換來顛覆擦除的類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-220">As with all uses of type erasure, you can use explicit boxing, unboxing, and casting to subvert erased types.</span></span> <span data-ttu-id="7df16-221">在這種情況下，當使用物件時，可能會出現不正確強制轉換異常。</span><span class="sxs-lookup"><span data-stu-id="7df16-221">In this case, a cast exception that isn’t valid may result when the object is used.</span></span> <span data-ttu-id="7df16-222">提供程式運行時可以定義其自己的私有表示類型，以説明防止虛假陳述。</span><span class="sxs-lookup"><span data-stu-id="7df16-222">A provider runtime can define its own private representation type to help protect against false representations.</span></span> <span data-ttu-id="7df16-223">不能在 F# 本身中定義已擦除的類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-223">You can’t define erased types in F# itself.</span></span> <span data-ttu-id="7df16-224">只能擦除提供的類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-224">Only provided types may be erased.</span></span> <span data-ttu-id="7df16-225">您必須瞭解為類型提供程式或提供擦除類型的提供程式使用擦除類型的後果（無論是實際的還是語義的）。</span><span class="sxs-lookup"><span data-stu-id="7df16-225">You must understand the ramifications, both practical and semantic, of using either erased types for your type provider or a provider that provides erased types.</span></span> <span data-ttu-id="7df16-226">擦除的類型沒有實際的 .NET 類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-226">An erased type has no real .NET type.</span></span> <span data-ttu-id="7df16-227">因此，您不能對類型進行準確反射，如果使用運行時強制轉換和其他依賴于精確運行時類型語義的技術，則可能會顛覆擦除的類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-227">Therefore, you cannot do accurate reflection over the type, and you might subvert erased types if you use runtime casts and other techniques that rely on exact runtime type semantics.</span></span> <span data-ttu-id="7df16-228">擦除類型的顛覆經常導致運行時的類型強制異常。</span><span class="sxs-lookup"><span data-stu-id="7df16-228">Subversion of erased types frequently results in type cast exceptions at runtime.</span></span>
 
-### <a name="choosing-representations-for-erased-provided-types"></a><span data-ttu-id="e62b4-229">選擇已清除之提供類型的標記法</span><span class="sxs-lookup"><span data-stu-id="e62b4-229">Choosing Representations for Erased Provided Types</span></span>
+### <a name="choosing-representations-for-erased-provided-types"></a><span data-ttu-id="7df16-229">為已擦除的提供類型選擇表示形式</span><span class="sxs-lookup"><span data-stu-id="7df16-229">Choosing Representations for Erased Provided Types</span></span>
 
-<span data-ttu-id="e62b4-230">對於已清除之提供類型的某些用法，不需要任何標記法。</span><span class="sxs-lookup"><span data-stu-id="e62b4-230">For some uses of erased provided types, no representation is required.</span></span> <span data-ttu-id="e62b4-231">例如，已清除的提供類型可能只包含靜態屬性和成員，而且沒有任何方法或屬性會傳回類型的實例。</span><span class="sxs-lookup"><span data-stu-id="e62b4-231">For example, the erased provided type might contain only static properties and members and no constructors, and no methods or properties would return an instance of the type.</span></span> <span data-ttu-id="e62b4-232">如果您可以到達已清除之提供類型的實例，則必須考慮下列問題：</span><span class="sxs-lookup"><span data-stu-id="e62b4-232">If you can reach instances of an erased provided type, you must consider the following questions:</span></span>
+<span data-ttu-id="7df16-230">對於已擦除提供的類型的某些用途，不需要表示形式。</span><span class="sxs-lookup"><span data-stu-id="7df16-230">For some uses of erased provided types, no representation is required.</span></span> <span data-ttu-id="7df16-231">例如，擦除的提供類型可能僅包含靜態屬性和成員，並且不包含建構函式，並且任何方法或屬性都無法返回類型的實例。</span><span class="sxs-lookup"><span data-stu-id="7df16-231">For example, the erased provided type might contain only static properties and members and no constructors, and no methods or properties would return an instance of the type.</span></span> <span data-ttu-id="7df16-232">如果可以到達已擦除提供的類型的實例，則必須考慮以下問題：</span><span class="sxs-lookup"><span data-stu-id="7df16-232">If you can reach instances of an erased provided type, you must consider the following questions:</span></span>
 
-<span data-ttu-id="e62b4-233">**所提供類型的抹除是什麼？**</span><span class="sxs-lookup"><span data-stu-id="e62b4-233">**What is the erasure of a provided type?**</span></span>
+<span data-ttu-id="7df16-233">**提供類型的擦除是什麼？**</span><span class="sxs-lookup"><span data-stu-id="7df16-233">**What is the erasure of a provided type?**</span></span>
 
-- <span data-ttu-id="e62b4-234">所提供類型的抹除是該類型在已編譯的 .NET 程式碼中的顯示方式。</span><span class="sxs-lookup"><span data-stu-id="e62b4-234">The erasure of a provided type is how the type appears in compiled .NET code.</span></span>
+- <span data-ttu-id="7df16-234">提供類型的擦除是該類型在編譯的 .NET 代碼中的顯示方式。</span><span class="sxs-lookup"><span data-stu-id="7df16-234">The erasure of a provided type is how the type appears in compiled .NET code.</span></span>
 
-- <span data-ttu-id="e62b4-235">在類型的繼承鏈中，所提供之已清除類別類型的抹除一律是第一個未清除的基底類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-235">The erasure of a provided erased class type is always the first non-erased base type in the inheritance chain of the type.</span></span>
+- <span data-ttu-id="7df16-235">提供的擦除類類型的擦除始終是類型繼承鏈中的第一個未擦除基類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-235">The erasure of a provided erased class type is always the first non-erased base type in the inheritance chain of the type.</span></span>
 
-- <span data-ttu-id="e62b4-236">所提供之已清除介面類別型的抹除一律會 `System.Object`。</span><span class="sxs-lookup"><span data-stu-id="e62b4-236">The erasure of a provided erased interface type is always `System.Object`.</span></span>
+- <span data-ttu-id="7df16-236">提供的擦除介面類別型的擦除始終`System.Object`為 。</span><span class="sxs-lookup"><span data-stu-id="7df16-236">The erasure of a provided erased interface type is always `System.Object`.</span></span>
 
-<span data-ttu-id="e62b4-237">**提供類型的標記法為何？**</span><span class="sxs-lookup"><span data-stu-id="e62b4-237">**What are the representations of a provided type?**</span></span>
+<span data-ttu-id="7df16-237">**提供的類型的表示形式是什麼？**</span><span class="sxs-lookup"><span data-stu-id="7df16-237">**What are the representations of a provided type?**</span></span>
 
-- <span data-ttu-id="e62b4-238">已清除之提供類型的一組可能物件稱為其標記法。</span><span class="sxs-lookup"><span data-stu-id="e62b4-238">The set of possible objects for an erased provided type are called its representations.</span></span> <span data-ttu-id="e62b4-239">在本檔的範例中，所有已清除之提供類型的表示 `Type1.Type100` 一律為 string 物件。</span><span class="sxs-lookup"><span data-stu-id="e62b4-239">In the example in this document, the representations of all the erased provided types `Type1..Type100` are always string objects.</span></span>
+- <span data-ttu-id="7df16-238">擦除提供的類型的可能物件的集稱為其表示形式。</span><span class="sxs-lookup"><span data-stu-id="7df16-238">The set of possible objects for an erased provided type are called its representations.</span></span> <span data-ttu-id="7df16-239">在本文檔中的示例中，所有擦除提供的類型的`Type1..Type100`表示形式始終是字串物件。</span><span class="sxs-lookup"><span data-stu-id="7df16-239">In the example in this document, the representations of all the erased provided types `Type1..Type100` are always string objects.</span></span>
 
-<span data-ttu-id="e62b4-240">所提供類型的所有表示都必須與所提供類型的抹除相容。</span><span class="sxs-lookup"><span data-stu-id="e62b4-240">All representations of a provided type must be compatible with the erasure of the provided type.</span></span> <span data-ttu-id="e62b4-241">（否則， F#編譯器會提供使用型別提供者的錯誤，否則會產生不正確無法驗證的 .net 程式碼。</span><span class="sxs-lookup"><span data-stu-id="e62b4-241">(Otherwise, either the F# compiler will give an error for a use of the type provider, or unverifiable .NET code that isn't valid will be generated.</span></span> <span data-ttu-id="e62b4-242">如果型別提供者傳回的程式碼提供了無效的表示方式，則該型別提供者無效。</span><span class="sxs-lookup"><span data-stu-id="e62b4-242">A type provider isn’t valid if it returns code that gives a  representation that isn't valid.)</span></span>
+<span data-ttu-id="7df16-240">提供類型的所有表示形式必須與提供的類型的擦除相容。</span><span class="sxs-lookup"><span data-stu-id="7df16-240">All representations of a provided type must be compatible with the erasure of the provided type.</span></span> <span data-ttu-id="7df16-241">（否則，F# 編譯器將給出使用類型提供程式的錯誤，或者將生成不正確不可驗證的 .NET 代碼。</span><span class="sxs-lookup"><span data-stu-id="7df16-241">(Otherwise, either the F# compiler will give an error for a use of the type provider, or unverifiable .NET code that isn't valid will be generated.</span></span> <span data-ttu-id="7df16-242">如果型別提供者傳回的程式碼提供了無效的表示方式，則該型別提供者無效。</span><span class="sxs-lookup"><span data-stu-id="7df16-242">A type provider isn’t valid if it returns code that gives a  representation that isn't valid.)</span></span>
 
-<span data-ttu-id="e62b4-243">您可以使用下列其中一種方法來選擇所提供物件的標記法，這兩者都很常見：</span><span class="sxs-lookup"><span data-stu-id="e62b4-243">You can choose a representation for provided objects by using either of the following approaches, both of which are very common:</span></span>
+<span data-ttu-id="7df16-243">可以使用以下任一方法為提供的物件選擇表示形式，這兩種方法都很常見：</span><span class="sxs-lookup"><span data-stu-id="7df16-243">You can choose a representation for provided objects by using either of the following approaches, both of which are very common:</span></span>
 
-- <span data-ttu-id="e62b4-244">如果您只是在現有的 .NET 類型上提供強型別包裝函式，則您的型別會清除為該型別，請使用該型別的實例做為標記法，或兩者皆是。</span><span class="sxs-lookup"><span data-stu-id="e62b4-244">If you're simply providing a strongly typed wrapper over an existing .NET type, it often makes sense for your type to erase to that type, use instances of that type as representations, or both.</span></span> <span data-ttu-id="e62b4-245">當使用強型別版本時，該型別上大部分的現有方法仍有意義，這是適當的方法。</span><span class="sxs-lookup"><span data-stu-id="e62b4-245">This approach is appropriate when most of the existing methods on that type still make sense when using the strongly typed version.</span></span>
+- <span data-ttu-id="7df16-244">如果只是在現有 .NET 類型上提供強型別包裝，則類型通常可以擦除到該類型，使用該類型的實例作為表示，或者兩者兼而有之。</span><span class="sxs-lookup"><span data-stu-id="7df16-244">If you're simply providing a strongly typed wrapper over an existing .NET type, it often makes sense for your type to erase to that type, use instances of that type as representations, or both.</span></span> <span data-ttu-id="7df16-245">當使用強型別版本時，該類型上的大多數現有方法仍然有意義時，此方法是合適的。</span><span class="sxs-lookup"><span data-stu-id="7df16-245">This approach is appropriate when most of the existing methods on that type still make sense when using the strongly typed version.</span></span>
 
-- <span data-ttu-id="e62b4-246">如果您想要建立與任何現有 .NET API 截然不同的 API，建立執行時間類型將會是所提供類型的抹除和標記法，是合理的做法。</span><span class="sxs-lookup"><span data-stu-id="e62b4-246">If you want to create an API that differs significantly from any existing .NET API, it makes sense to create runtime types that will be the type erasure and representations for the provided types.</span></span>
+- <span data-ttu-id="7df16-246">如果要創建與任何現有 .NET API 有顯著差異的 API，則創建運行時類型是提供的類型擦除和表示形式，這是有道理的。</span><span class="sxs-lookup"><span data-stu-id="7df16-246">If you want to create an API that differs significantly from any existing .NET API, it makes sense to create runtime types that will be the type erasure and representations for the provided types.</span></span>
 
-<span data-ttu-id="e62b4-247">本檔中的範例使用字串作為所提供物件的標記法。</span><span class="sxs-lookup"><span data-stu-id="e62b4-247">The example in this document uses strings as representations of provided objects.</span></span> <span data-ttu-id="e62b4-248">通常，針對標記法使用其他物件可能是適當的方式。</span><span class="sxs-lookup"><span data-stu-id="e62b4-248">Frequently, it may be appropriate to use other objects for representations.</span></span> <span data-ttu-id="e62b4-249">例如，您可以使用字典做為屬性包：</span><span class="sxs-lookup"><span data-stu-id="e62b4-249">For example, you may use a dictionary as a property bag:</span></span>
+<span data-ttu-id="7df16-247">本文檔中的示例使用字串作為提供物件的表示形式。</span><span class="sxs-lookup"><span data-stu-id="7df16-247">The example in this document uses strings as representations of provided objects.</span></span> <span data-ttu-id="7df16-248">通常，使用其他物件進行表示可能很合適。</span><span class="sxs-lookup"><span data-stu-id="7df16-248">Frequently, it may be appropriate to use other objects for representations.</span></span> <span data-ttu-id="7df16-249">例如，您可以將字典用作屬性包：</span><span class="sxs-lookup"><span data-stu-id="7df16-249">For example, you may use a dictionary as a property bag:</span></span>
 
 ```fsharp
 ProvidedConstructor(parameters = [],
     invokeCode= (fun args -> <@@ (new Dictionary<string,obj>()) :> obj @@>))
 ```
 
-<span data-ttu-id="e62b4-250">或者，您也可以在型別提供者中定義一個類型，以便在執行時間用來形成標記法，以及一或多個執行時間作業：</span><span class="sxs-lookup"><span data-stu-id="e62b4-250">As an alternative, you may define a type in your type provider that will be used at runtime to form the representation, along with one or more runtime operations:</span></span>
+<span data-ttu-id="7df16-250">作為替代方法，您可以在類型提供程式中定義將在運行時用於形成表示的類型以及一個或多個運行時操作：</span><span class="sxs-lookup"><span data-stu-id="7df16-250">As an alternative, you may define a type in your type provider that will be used at runtime to form the representation, along with one or more runtime operations:</span></span>
 
 ```fsharp
 type DataObject() =
@@ -413,14 +413,14 @@ type DataObject() =
     member x.RuntimeOperation() = data.Count
 ```
 
-<span data-ttu-id="e62b4-251">提供的成員可以接著建立此物件類型的實例：</span><span class="sxs-lookup"><span data-stu-id="e62b4-251">Provided members can then construct instances of this object type:</span></span>
+<span data-ttu-id="7df16-251">然後，如果成員可以構造此物件類型的實例：</span><span class="sxs-lookup"><span data-stu-id="7df16-251">Provided members can then construct instances of this object type:</span></span>
 
 ```fsharp
 ProvidedConstructor(parameters = [],
     invokeCode= (fun args -> <@@ (new DataObject()) :> obj @@>))
 ```
 
-<span data-ttu-id="e62b4-252">在此情況下，您可以（選擇性地）使用此類型做為類型抹除，方法是在建立 `ProvidedTypeDefinition`時，將此類型指定為 `baseType`：</span><span class="sxs-lookup"><span data-stu-id="e62b4-252">In this case, you may (optionally) use this type as the type erasure by specifying this type as the `baseType` when constructing the `ProvidedTypeDefinition`:</span></span>
+<span data-ttu-id="7df16-252">在這種情況下，您可以（有選擇地）在構造 時`baseType``ProvidedTypeDefinition`將此類型指定為</span><span class="sxs-lookup"><span data-stu-id="7df16-252">In this case, you may (optionally) use this type as the type erasure by specifying this type as the `baseType` when constructing the `ProvidedTypeDefinition`:</span></span>
 
 ```fsharp
 ProvidedTypeDefinition(…, baseType = Some typeof<DataObject> )
@@ -428,23 +428,23 @@ ProvidedTypeDefinition(…, baseType = Some typeof<DataObject> )
 ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), …)
 ```
 
-### <a name="key-lessons"></a><span data-ttu-id="e62b4-253">重要課程</span><span class="sxs-lookup"><span data-stu-id="e62b4-253">Key Lessons</span></span>
+### <a name="key-lessons"></a><span data-ttu-id="7df16-253">重點課程</span><span class="sxs-lookup"><span data-stu-id="7df16-253">Key Lessons</span></span>
 
-<span data-ttu-id="e62b4-254">上一節說明如何建立簡單的抹除類型提供者，以提供類型、屬性和方法的範圍。</span><span class="sxs-lookup"><span data-stu-id="e62b4-254">The previous section explained how to create a simple erasing type provider that provides a range of types, properties, and methods.</span></span> <span data-ttu-id="e62b4-255">本節也說明了抹除類型的概念，包括從類型提供者提供已清除類型的一些優缺點，以及已清除類型的標記法。</span><span class="sxs-lookup"><span data-stu-id="e62b4-255">This section also explained the concept of type erasure, including some of the advantages and disadvantages of providing erased types from a type provider, and discussed representations of erased types.</span></span>
+<span data-ttu-id="7df16-254">上一節介紹了如何創建一個簡單的解排類型提供程式，該提供程式提供一系列類型、屬性和方法。</span><span class="sxs-lookup"><span data-stu-id="7df16-254">The previous section explained how to create a simple erasing type provider that provides a range of types, properties, and methods.</span></span> <span data-ttu-id="7df16-255">本節還解釋了類型擦除的概念，包括從類型提供程式提供擦除類型的一些優點和缺點，並討論了擦除類型的表示形式。</span><span class="sxs-lookup"><span data-stu-id="7df16-255">This section also explained the concept of type erasure, including some of the advantages and disadvantages of providing erased types from a type provider, and discussed representations of erased types.</span></span>
 
-## <a name="a-type-provider-that-uses-static-parameters"></a><span data-ttu-id="e62b4-256">使用靜態參數的類型提供者</span><span class="sxs-lookup"><span data-stu-id="e62b4-256">A Type Provider That Uses Static Parameters</span></span>
+## <a name="a-type-provider-that-uses-static-parameters"></a><span data-ttu-id="7df16-256">使用靜態參數的類型提供程式</span><span class="sxs-lookup"><span data-stu-id="7df16-256">A Type Provider That Uses Static Parameters</span></span>
 
-<span data-ttu-id="e62b4-257">透過靜態資料參數化型別提供者的能力，可實現許多有趣的案例，即使提供者不需要存取任何本機或遠端資料也一樣。</span><span class="sxs-lookup"><span data-stu-id="e62b4-257">The ability to parameterize type providers by static data enables many interesting scenarios, even in cases when the provider doesn't need to access any local or remote data.</span></span> <span data-ttu-id="e62b4-258">在本節中，您將瞭解將這類提供者放在一起的一些基本技巧。</span><span class="sxs-lookup"><span data-stu-id="e62b4-258">In this section, you’ll learn some basic techniques for putting together such a provider.</span></span>
+<span data-ttu-id="7df16-257">通過靜態資料對類型提供程式進行參數化的能力支援許多有趣的方案，即使提供程式不需要訪問任何本地或遠端資料也是如此。</span><span class="sxs-lookup"><span data-stu-id="7df16-257">The ability to parameterize type providers by static data enables many interesting scenarios, even in cases when the provider doesn't need to access any local or remote data.</span></span> <span data-ttu-id="7df16-258">在本節中，您將學習一些組合此類提供程式的基本技術。</span><span class="sxs-lookup"><span data-stu-id="7df16-258">In this section, you’ll learn some basic techniques for putting together such a provider.</span></span>
 
-### <a name="type-checked-regex-provider"></a><span data-ttu-id="e62b4-259">類型已核取的 Regex 提供者</span><span class="sxs-lookup"><span data-stu-id="e62b4-259">Type Checked Regex Provider</span></span>
+### <a name="type-checked-regex-provider"></a><span data-ttu-id="7df16-259">鍵入已檢查的正則運算式提供程式</span><span class="sxs-lookup"><span data-stu-id="7df16-259">Type Checked Regex Provider</span></span>
 
-<span data-ttu-id="e62b4-260">假設您想要實作為正則運算式的型別提供者，以便在提供下列編譯時間保證的介面中包裝 .NET <xref:System.Text.RegularExpressions.Regex> 程式庫：</span><span class="sxs-lookup"><span data-stu-id="e62b4-260">Imagine that you want to implement a type provider for regular expressions that wraps the .NET <xref:System.Text.RegularExpressions.Regex> libraries in an interface that provides the following compile-time guarantees:</span></span>
+<span data-ttu-id="7df16-260">假設您要為正則運算式實現類型提供程式，該正則運算式在提供以下編譯時間<xref:System.Text.RegularExpressions.Regex>保證的介面中包裝 .NET 庫：</span><span class="sxs-lookup"><span data-stu-id="7df16-260">Imagine that you want to implement a type provider for regular expressions that wraps the .NET <xref:System.Text.RegularExpressions.Regex> libraries in an interface that provides the following compile-time guarantees:</span></span>
 
-- <span data-ttu-id="e62b4-261">正在驗證正則運算式是否有效。</span><span class="sxs-lookup"><span data-stu-id="e62b4-261">Verifying whether a regular expression is valid.</span></span>
+- <span data-ttu-id="7df16-261">驗證正則運算式是否有效。</span><span class="sxs-lookup"><span data-stu-id="7df16-261">Verifying whether a regular expression is valid.</span></span>
 
-- <span data-ttu-id="e62b4-262">根據正則運算式中的任何組名，提供相符專案的命名屬性。</span><span class="sxs-lookup"><span data-stu-id="e62b4-262">Providing named properties on matches that are based on any group names in the regular expression.</span></span>
+- <span data-ttu-id="7df16-262">在基於正則運算式中的任何組名稱的匹配項上提供命名屬性。</span><span class="sxs-lookup"><span data-stu-id="7df16-262">Providing named properties on matches that are based on any group names in the regular expression.</span></span>
 
-<span data-ttu-id="e62b4-263">本節說明如何使用型別提供者來建立 `RegexTyped` 型別，讓正則運算式模式參數化以提供這些優點。</span><span class="sxs-lookup"><span data-stu-id="e62b4-263">This section shows you how to use type providers to create a `RegexTyped` type that the regular expression pattern parameterizes to provide these benefits.</span></span> <span data-ttu-id="e62b4-264">如果提供的模式無效，則編譯器會報告錯誤，而且型別提供者可以從模式中解壓縮群組，讓您可以使用相符專案上的命名屬性來存取它們。</span><span class="sxs-lookup"><span data-stu-id="e62b4-264">The compiler will report an error if the supplied pattern isn't valid, and the type provider can extract the groups from the pattern so that you can access them by using named properties on matches.</span></span> <span data-ttu-id="e62b4-265">當您設計型別提供者時，應該考慮其公開的 API 應如何向使用者顯示，以及此設計將如何轉譯為 .NET 程式碼。</span><span class="sxs-lookup"><span data-stu-id="e62b4-265">When you design a type provider, you should consider how its exposed API should look to end users and how this design will translate to .NET code.</span></span> <span data-ttu-id="e62b4-266">下列範例顯示如何使用這類 API 來取得區碼的元件：</span><span class="sxs-lookup"><span data-stu-id="e62b4-266">The following example shows how to use such an API to get the components of the area code:</span></span>
+<span data-ttu-id="7df16-263">本節介紹如何使用類型提供程式創建`RegexTyped`正則運算式模式參數化類別型以提供這些好處。</span><span class="sxs-lookup"><span data-stu-id="7df16-263">This section shows you how to use type providers to create a `RegexTyped` type that the regular expression pattern parameterizes to provide these benefits.</span></span> <span data-ttu-id="7df16-264">如果提供的模式無效，編譯器將報告錯誤，並且類型提供程式可以從模式中提取組，以便可以使用匹配上的命名屬性訪問這些組。</span><span class="sxs-lookup"><span data-stu-id="7df16-264">The compiler will report an error if the supplied pattern isn't valid, and the type provider can extract the groups from the pattern so that you can access them by using named properties on matches.</span></span> <span data-ttu-id="7df16-265">在設計類型提供程式時，應考慮其公開的 API 應如何查看最終使用者，以及此設計將如何轉換為 .NET 代碼。</span><span class="sxs-lookup"><span data-stu-id="7df16-265">When you design a type provider, you should consider how its exposed API should look to end users and how this design will translate to .NET code.</span></span> <span data-ttu-id="7df16-266">下面的示例演示如何使用此類 API 獲取區號元件：</span><span class="sxs-lookup"><span data-stu-id="7df16-266">The following example shows how to use such an API to get the components of the area code:</span></span>
 
 ```fsharp
 type T = RegexTyped< @"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)">
@@ -453,7 +453,7 @@ let result = T.IsMatch("425-555-2345")
 let r = reg.Match("425-555-2345").Group_AreaCode.Value //r equals "425"
 ```
 
-<span data-ttu-id="e62b4-267">下列範例顯示型別提供者轉譯這些呼叫的方式：</span><span class="sxs-lookup"><span data-stu-id="e62b4-267">The following example shows how the type provider translates these calls:</span></span>
+<span data-ttu-id="7df16-267">下面的示例顯示了類型提供程式如何轉換這些調用：</span><span class="sxs-lookup"><span data-stu-id="7df16-267">The following example shows how the type provider translates these calls:</span></span>
 
 ```fsharp
 let reg = new Regex(@"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)")
@@ -461,17 +461,17 @@ let result = reg.IsMatch("425-123-2345")
 let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 ```
 
-<span data-ttu-id="e62b4-268">請注意下列幾點：</span><span class="sxs-lookup"><span data-stu-id="e62b4-268">Note the following points:</span></span>
+<span data-ttu-id="7df16-268">請注意下列幾點：</span><span class="sxs-lookup"><span data-stu-id="7df16-268">Note the following points:</span></span>
 
-- <span data-ttu-id="e62b4-269">標準 Regex 類型代表參數化 `RegexTyped` 類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-269">The standard Regex type represents the parameterized `RegexTyped` type.</span></span>
+- <span data-ttu-id="7df16-269">標準 Regex 類型表示參數化`RegexTyped`類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-269">The standard Regex type represents the parameterized `RegexTyped` type.</span></span>
 
-- <span data-ttu-id="e62b4-270">`RegexTyped` 的函式會產生 Regex 函式的呼叫，並傳入模式的靜態類型引數。</span><span class="sxs-lookup"><span data-stu-id="e62b4-270">The `RegexTyped` constructor results in a call to the Regex constructor, passing in the static type argument for the pattern.</span></span>
+- <span data-ttu-id="7df16-270">構造`RegexTyped`函數會導致對 Regex 建構函式的調用，從而傳入模式的靜態類型參數。</span><span class="sxs-lookup"><span data-stu-id="7df16-270">The `RegexTyped` constructor results in a call to the Regex constructor, passing in the static type argument for the pattern.</span></span>
 
-- <span data-ttu-id="e62b4-271">`Match` 方法的結果是以標準 <xref:System.Text.RegularExpressions.Match> 型別表示。</span><span class="sxs-lookup"><span data-stu-id="e62b4-271">The results of the `Match` method are represented by the standard <xref:System.Text.RegularExpressions.Match> type.</span></span>
+- <span data-ttu-id="7df16-271">`Match`該方法的結果由標準<xref:System.Text.RegularExpressions.Match>類型表示。</span><span class="sxs-lookup"><span data-stu-id="7df16-271">The results of the `Match` method are represented by the standard <xref:System.Text.RegularExpressions.Match> type.</span></span>
 
-- <span data-ttu-id="e62b4-272">每個命名群組都會產生提供的屬性，而存取屬性會導致在相符的 `Groups` 集合上使用索引子。</span><span class="sxs-lookup"><span data-stu-id="e62b4-272">Each named group results in a provided property, and accessing the property results in a use of an indexer on a match’s `Groups` collection.</span></span>
+- <span data-ttu-id="7df16-272">每個命名組都會導致提供的屬性，訪問該屬性會導致在匹配的集合`Groups`上使用索引子。</span><span class="sxs-lookup"><span data-stu-id="7df16-272">Each named group results in a provided property, and accessing the property results in a use of an indexer on a match’s `Groups` collection.</span></span>
 
-<span data-ttu-id="e62b4-273">下列程式碼是執行這類提供者之邏輯的核心，而此範例會省略將所有成員加入至提供之類型的動作。</span><span class="sxs-lookup"><span data-stu-id="e62b4-273">The following code is the core of the logic to implement such a provider, and this example omits the addition of all members to the provided type.</span></span> <span data-ttu-id="e62b4-274">如需每個新增成員的詳細資訊，請參閱本主題稍後的適當章節。</span><span class="sxs-lookup"><span data-stu-id="e62b4-274">For information about each added member, see the appropriate section later in this topic.</span></span> <span data-ttu-id="e62b4-275">如需完整的程式碼，請從 CodePlex 網站上的[ F# 3.0 範例套件](https://archive.codeplex.com/?p=fsharp3sample)下載範例。</span><span class="sxs-lookup"><span data-stu-id="e62b4-275">For the full code, download the sample from the [F# 3.0 Sample Pack](https://archive.codeplex.com/?p=fsharp3sample) on the CodePlex website.</span></span>
+<span data-ttu-id="7df16-273">以下代碼是實現此類提供程式的邏輯的核心，此示例省略了向提供的類型添加所有成員。</span><span class="sxs-lookup"><span data-stu-id="7df16-273">The following code is the core of the logic to implement such a provider, and this example omits the addition of all members to the provided type.</span></span> <span data-ttu-id="7df16-274">有關每個添加成員的資訊，請參閱本主題後面的相應部分。</span><span class="sxs-lookup"><span data-stu-id="7df16-274">For information about each added member, see the appropriate section later in this topic.</span></span> <span data-ttu-id="7df16-275">有關完整代碼，請從 CodePlex 網站上的[F# 3.0 示例包](https://archive.codeplex.com/?p=fsharp3sample)下載示例。</span><span class="sxs-lookup"><span data-stu-id="7df16-275">For the full code, download the sample from the [F# 3.0 Sample Pack](https://archive.codeplex.com/?p=fsharp3sample) on the CodePlex website.</span></span>
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -527,21 +527,21 @@ type public CheckedRegexProvider() as this =
 do ()
 ```
 
-<span data-ttu-id="e62b4-276">請注意下列幾點：</span><span class="sxs-lookup"><span data-stu-id="e62b4-276">Note the following points:</span></span>
+<span data-ttu-id="7df16-276">請注意下列幾點：</span><span class="sxs-lookup"><span data-stu-id="7df16-276">Note the following points:</span></span>
 
-- <span data-ttu-id="e62b4-277">型別提供者會採用兩個靜態參數： `pattern`，這是必要的，而 `options`則是選擇性的（因為提供了預設值）。</span><span class="sxs-lookup"><span data-stu-id="e62b4-277">The type provider takes two static parameters: the `pattern`, which is mandatory, and the `options`, which are optional (because a default value is provided).</span></span>
+- <span data-ttu-id="7df16-277">類型提供程式採用兩個靜態參數：`pattern`必填項和 可選的`options`。（因為提供了預設值）。</span><span class="sxs-lookup"><span data-stu-id="7df16-277">The type provider takes two static parameters: the `pattern`, which is mandatory, and the `options`, which are optional (because a default value is provided).</span></span>
 
-- <span data-ttu-id="e62b4-278">提供靜態引數之後，您可以建立正則運算式的實例。</span><span class="sxs-lookup"><span data-stu-id="e62b4-278">After the static arguments are supplied, you create an instance of the regular expression.</span></span> <span data-ttu-id="e62b4-279">如果 Regex 的格式不正確，這個實例就會擲回例外狀況，而且會向使用者回報此錯誤。</span><span class="sxs-lookup"><span data-stu-id="e62b4-279">This instance will throw an exception if the Regex is malformed, and this error will be reported to users.</span></span>
+- <span data-ttu-id="7df16-278">提供靜態參數後，將創建正則運算式的實例。</span><span class="sxs-lookup"><span data-stu-id="7df16-278">After the static arguments are supplied, you create an instance of the regular expression.</span></span> <span data-ttu-id="7df16-279">如果 Regex 格式不正確，此實例將引發異常，並且此錯誤將報告給使用者。</span><span class="sxs-lookup"><span data-stu-id="7df16-279">This instance will throw an exception if the Regex is malformed, and this error will be reported to users.</span></span>
 
-- <span data-ttu-id="e62b4-280">在 `DefineStaticParameters` 回呼中，您會定義在提供引數之後將傳回的類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-280">Within the `DefineStaticParameters` callback, you define the type that will be returned after the arguments are supplied.</span></span>
+- <span data-ttu-id="7df16-280">在回檔`DefineStaticParameters`中，定義提供參數後將返回的類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-280">Within the `DefineStaticParameters` callback, you define the type that will be returned after the arguments are supplied.</span></span>
 
-- <span data-ttu-id="e62b4-281">這段程式碼會將 `HideObjectMethods` 設定為 true，如此 IntelliSense 體驗才會保持順暢。</span><span class="sxs-lookup"><span data-stu-id="e62b4-281">This code sets `HideObjectMethods` to true so that the IntelliSense experience will remain streamlined.</span></span> <span data-ttu-id="e62b4-282">這個屬性會將 `Equals`、`GetHashCode`、`Finalize`和 `GetType` 成員，從所提供物件的 IntelliSense 清單中隱藏。</span><span class="sxs-lookup"><span data-stu-id="e62b4-282">This attribute causes the `Equals`, `GetHashCode`, `Finalize`, and `GetType` members to be suppressed from IntelliSense lists for a provided object.</span></span>
+- <span data-ttu-id="7df16-281">此代碼設置`HideObjectMethods`為 true，以便 IntelliSense 體驗將保持流線型。</span><span class="sxs-lookup"><span data-stu-id="7df16-281">This code sets `HideObjectMethods` to true so that the IntelliSense experience will remain streamlined.</span></span> <span data-ttu-id="7df16-282">此屬性會導致`Equals`從提供物件的`GetHashCode` `Finalize`IntelliSense 清單中禁止 、 和`GetType`成員。</span><span class="sxs-lookup"><span data-stu-id="7df16-282">This attribute causes the `Equals`, `GetHashCode`, `Finalize`, and `GetType` members to be suppressed from IntelliSense lists for a provided object.</span></span>
 
-- <span data-ttu-id="e62b4-283">您會使用 `obj` 做為方法的基底類型，但您會使用 `Regex` 物件做為此類型的運行時程表示法，如下一個範例所示。</span><span class="sxs-lookup"><span data-stu-id="e62b4-283">You use `obj` as the base type of the method, but you’ll use a `Regex` object as the runtime representation of this type, as the next example shows.</span></span>
+- <span data-ttu-id="7df16-283">使用作為`obj`方法的基礎類型，但您將使用`Regex`物件作為此類型的運行時表示形式，如下例所示。</span><span class="sxs-lookup"><span data-stu-id="7df16-283">You use `obj` as the base type of the method, but you’ll use a `Regex` object as the runtime representation of this type, as the next example shows.</span></span>
 
-- <span data-ttu-id="e62b4-284">當正則運算式無效時，呼叫 `Regex` 的函數會擲回 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="e62b4-284">The call to the `Regex` constructor throws a <xref:System.ArgumentException> when a regular expression isn’t valid.</span></span> <span data-ttu-id="e62b4-285">編譯器會攔截此例外狀況，並在編譯時期或 Visual Studio 編輯器中，向使用者報告錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="e62b4-285">The compiler catches this exception and reports an error message to the user at compile time or in the Visual Studio editor.</span></span> <span data-ttu-id="e62b4-286">這個例外狀況可讓您驗證正則運算式，而不需要執行應用程式。</span><span class="sxs-lookup"><span data-stu-id="e62b4-286">This exception enables regular expressions to be validated without running an application.</span></span>
+- <span data-ttu-id="7df16-284">當正則運算式`Regex`無效時，對<xref:System.ArgumentException>建構函式的調用將引發 。</span><span class="sxs-lookup"><span data-stu-id="7df16-284">The call to the `Regex` constructor throws a <xref:System.ArgumentException> when a regular expression isn’t valid.</span></span> <span data-ttu-id="7df16-285">編譯器捕獲此異常，並在編譯時或在 Visual Studio 編輯器中向使用者報告錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="7df16-285">The compiler catches this exception and reports an error message to the user at compile time or in the Visual Studio editor.</span></span> <span data-ttu-id="7df16-286">此異常允許在不運行應用程式的情況下驗證正則運算式。</span><span class="sxs-lookup"><span data-stu-id="7df16-286">This exception enables regular expressions to be validated without running an application.</span></span>
 
-<span data-ttu-id="e62b4-287">上述定義的類型並不實用，因為它不包含任何有意義的方法或屬性。</span><span class="sxs-lookup"><span data-stu-id="e62b4-287">The type defined above isn't useful yet because it doesn’t contain any meaningful methods or properties.</span></span> <span data-ttu-id="e62b4-288">首先，新增靜態 `IsMatch` 方法：</span><span class="sxs-lookup"><span data-stu-id="e62b4-288">First, add a static `IsMatch` method:</span></span>
+<span data-ttu-id="7df16-287">上面定義的類型還不用，因為它不包含任何有意義的方法或屬性。</span><span class="sxs-lookup"><span data-stu-id="7df16-287">The type defined above isn't useful yet because it doesn’t contain any meaningful methods or properties.</span></span> <span data-ttu-id="7df16-288">首先，添加靜態`IsMatch`方法：</span><span class="sxs-lookup"><span data-stu-id="7df16-288">First, add a static `IsMatch` method:</span></span>
 
 ```fsharp
 let isMatch =
@@ -556,9 +556,9 @@ isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the
 ty.AddMember isMatch
 ```
 
-<span data-ttu-id="e62b4-289">先前的程式碼會定義 `IsMatch`的方法，它會採用字串做為輸入，並傳回 `bool`。</span><span class="sxs-lookup"><span data-stu-id="e62b4-289">The previous code defines a method `IsMatch`, which takes a string as input and returns a `bool`.</span></span> <span data-ttu-id="e62b4-290">唯一棘手的部分是在 `InvokeCode` 定義中使用 `args` 引數。</span><span class="sxs-lookup"><span data-stu-id="e62b4-290">The only tricky part is the use of the `args` argument within the `InvokeCode` definition.</span></span> <span data-ttu-id="e62b4-291">在此範例中，`args` 是代表這個方法之引數的報價清單。</span><span class="sxs-lookup"><span data-stu-id="e62b4-291">In this example, `args` is a list of quotations that represents the arguments to this method.</span></span> <span data-ttu-id="e62b4-292">如果方法是實例方法，第一個引數代表 `this` 引數。</span><span class="sxs-lookup"><span data-stu-id="e62b4-292">If the method is an instance method, the first argument represents the `this` argument.</span></span> <span data-ttu-id="e62b4-293">不過，對於靜態方法，引數只是方法的明確引數而已。</span><span class="sxs-lookup"><span data-stu-id="e62b4-293">However, for a static method, the arguments are all just the explicit arguments to the method.</span></span> <span data-ttu-id="e62b4-294">請注意，引號值的類型應符合指定的傳回類型（在此案例中為 `bool`）。</span><span class="sxs-lookup"><span data-stu-id="e62b4-294">Note that the type of the quoted value should match the specified return type (in this case, `bool`).</span></span> <span data-ttu-id="e62b4-295">另請注意，此程式碼會使用 `AddXmlDoc` 方法，確保提供的方法也有實用的檔，您可以透過 IntelliSense 提供此功能。</span><span class="sxs-lookup"><span data-stu-id="e62b4-295">Also note that this code uses the `AddXmlDoc` method to make sure that the provided method also has useful documentation, which you can supply through IntelliSense.</span></span>
+<span data-ttu-id="7df16-289">前面的代碼定義一個方法`IsMatch`，該方法以字串作為輸入並返回 。 `bool`</span><span class="sxs-lookup"><span data-stu-id="7df16-289">The previous code defines a method `IsMatch`, which takes a string as input and returns a `bool`.</span></span> <span data-ttu-id="7df16-290">唯一棘手的部分是在`args``InvokeCode`定義中使用參數。</span><span class="sxs-lookup"><span data-stu-id="7df16-290">The only tricky part is the use of the `args` argument within the `InvokeCode` definition.</span></span> <span data-ttu-id="7df16-291">在此示例中，`args`是表示此方法的參數的報價單清單。</span><span class="sxs-lookup"><span data-stu-id="7df16-291">In this example, `args` is a list of quotations that represents the arguments to this method.</span></span> <span data-ttu-id="7df16-292">如果該方法是實例方法，則第一個參數表示參數`this`。</span><span class="sxs-lookup"><span data-stu-id="7df16-292">If the method is an instance method, the first argument represents the `this` argument.</span></span> <span data-ttu-id="7df16-293">但是，對於靜態方法，參數都只是方法的顯式參數。</span><span class="sxs-lookup"><span data-stu-id="7df16-293">However, for a static method, the arguments are all just the explicit arguments to the method.</span></span> <span data-ttu-id="7df16-294">請注意，引號值的類型應與指定的返回類型匹配（在本例中為`bool`）。</span><span class="sxs-lookup"><span data-stu-id="7df16-294">Note that the type of the quoted value should match the specified return type (in this case, `bool`).</span></span> <span data-ttu-id="7df16-295">另請注意，此代碼使用`AddXmlDoc`方法可確保提供的方法也具有有用的文檔，您可以通過 IntelliSense 提供這些文檔。</span><span class="sxs-lookup"><span data-stu-id="7df16-295">Also note that this code uses the `AddXmlDoc` method to make sure that the provided method also has useful documentation, which you can supply through IntelliSense.</span></span>
 
-<span data-ttu-id="e62b4-296">接下來，新增實例 Match 方法。</span><span class="sxs-lookup"><span data-stu-id="e62b4-296">Next, add an instance Match method.</span></span> <span data-ttu-id="e62b4-297">不過，這個方法應該會傳回所提供之 `Match` 類型的值，以便以強型別方式來存取群組。</span><span class="sxs-lookup"><span data-stu-id="e62b4-297">However, this method should return a value of a provided `Match` type so that the groups can be accessed in a strongly typed fashion.</span></span> <span data-ttu-id="e62b4-298">因此，您必須先宣告 `Match` 類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-298">Thus, you first declare the `Match` type.</span></span> <span data-ttu-id="e62b4-299">因為此型別取決於當做靜態引數提供的模式，所以這個型別必須嵌套在參數化型別定義內：</span><span class="sxs-lookup"><span data-stu-id="e62b4-299">Because this type depends on the pattern that was supplied as a static argument, this type must be nested within the parameterized type definition:</span></span>
+<span data-ttu-id="7df16-296">接下來，添加實例匹配方法。</span><span class="sxs-lookup"><span data-stu-id="7df16-296">Next, add an instance Match method.</span></span> <span data-ttu-id="7df16-297">但是，此方法應返回提供的`Match`類型的值，以便以強型別方式訪問組。</span><span class="sxs-lookup"><span data-stu-id="7df16-297">However, this method should return a value of a provided `Match` type so that the groups can be accessed in a strongly typed fashion.</span></span> <span data-ttu-id="7df16-298">因此，您首先聲明類型`Match`。</span><span class="sxs-lookup"><span data-stu-id="7df16-298">Thus, you first declare the `Match` type.</span></span> <span data-ttu-id="7df16-299">由於此類型取決於作為靜態參數提供的模式，因此此類型必須嵌套在參數化型別定義中：</span><span class="sxs-lookup"><span data-stu-id="7df16-299">Because this type depends on the pattern that was supplied as a static argument, this type must be nested within the parameterized type definition:</span></span>
 
 ```fsharp
 let matchTy =
@@ -570,7 +570,7 @@ let matchTy =
 ty.AddMember matchTy
 ```
 
-<span data-ttu-id="e62b4-300">接著，您可以將一個屬性新增至每個群組的比對類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-300">You then add one property to the Match type for each group.</span></span> <span data-ttu-id="e62b4-301">在執行時間，比對會表示為 <xref:System.Text.RegularExpressions.Match> 值，因此定義屬性的引號必須使用 <xref:System.Text.RegularExpressions.Match.Groups> 索引屬性來取得相關的群組。</span><span class="sxs-lookup"><span data-stu-id="e62b4-301">At runtime, a match is represented as a <xref:System.Text.RegularExpressions.Match> value, so the quotation that defines the property must use the <xref:System.Text.RegularExpressions.Match.Groups> indexed property to get the relevant group.</span></span>
+<span data-ttu-id="7df16-300">然後，向每個組的"匹配"類型添加一個屬性。</span><span class="sxs-lookup"><span data-stu-id="7df16-300">You then add one property to the Match type for each group.</span></span> <span data-ttu-id="7df16-301">在運行時，匹配表示為<xref:System.Text.RegularExpressions.Match>值，因此定義屬性的報價單必須使用<xref:System.Text.RegularExpressions.Match.Groups>索引屬性來獲取相關組。</span><span class="sxs-lookup"><span data-stu-id="7df16-301">At runtime, a match is represented as a <xref:System.Text.RegularExpressions.Match> value, so the quotation that defines the property must use the <xref:System.Text.RegularExpressions.Match.Groups> indexed property to get the relevant group.</span></span>
 
 ```fsharp
 for group in r.GetGroupNames() do
@@ -585,9 +585,9 @@ for group in r.GetGroupNames() do
     matchTy.AddMember prop
 ```
 
-<span data-ttu-id="e62b4-302">同樣地，請注意，您要將 XML 檔新增至提供的屬性。</span><span class="sxs-lookup"><span data-stu-id="e62b4-302">Again, note that you’re adding XML documentation to the provided property.</span></span> <span data-ttu-id="e62b4-303">也請注意，如果提供了 `GetterCode` 函式，就可以讀取屬性，而且如果提供了 `SetterCode` 函數，就可以寫入屬性，因此產生的屬性是唯讀的。</span><span class="sxs-lookup"><span data-stu-id="e62b4-303">Also note that a property can be read if a `GetterCode` function is provided, and the property can be written if a `SetterCode` function is provided, so the resulting property is read only.</span></span>
+<span data-ttu-id="7df16-302">同樣，請注意，您將 XML 文檔添加到提供的屬性。</span><span class="sxs-lookup"><span data-stu-id="7df16-302">Again, note that you’re adding XML documentation to the provided property.</span></span> <span data-ttu-id="7df16-303">另請注意，如果提供了`GetterCode`函數，則可以讀取屬性，如果提供了`SetterCode`函數，則可以寫入該屬性，因此生成的屬性是唯讀的。</span><span class="sxs-lookup"><span data-stu-id="7df16-303">Also note that a property can be read if a `GetterCode` function is provided, and the property can be written if a `SetterCode` function is provided, so the resulting property is read only.</span></span>
 
-<span data-ttu-id="e62b4-304">現在您可以建立傳回此 `Match` 類型值的實例方法：</span><span class="sxs-lookup"><span data-stu-id="e62b4-304">Now you can create an instance method that returns a value of this `Match` type:</span></span>
+<span data-ttu-id="7df16-304">現在，您可以創建返回此`Match`類型值的實例方法：</span><span class="sxs-lookup"><span data-stu-id="7df16-304">Now you can create an instance method that returns a value of this `Match` type:</span></span>
 
 ```fsharp
 let matchMethod =
@@ -602,9 +602,9 @@ matchMeth.AddXmlDoc "Searches the specified input string for the first occurrenc
 ty.AddMember matchMeth
 ```
 
-<span data-ttu-id="e62b4-305">因為您要建立實例方法，`args.[0]` 代表呼叫方法所在的 `RegexTyped` 實例，而 `args.[1]` 則是輸入引數。</span><span class="sxs-lookup"><span data-stu-id="e62b4-305">Because you are creating an instance method, `args.[0]` represents the `RegexTyped` instance on which the method is being called, and `args.[1]` is the input argument.</span></span>
+<span data-ttu-id="7df16-305">因為您正在創建實例方法，表示`args.[0]`正在調用`RegexTyped`該方法的實例，並且`args.[1]`是輸入參數。</span><span class="sxs-lookup"><span data-stu-id="7df16-305">Because you are creating an instance method, `args.[0]` represents the `RegexTyped` instance on which the method is being called, and `args.[1]` is the input argument.</span></span>
 
-<span data-ttu-id="e62b4-306">最後，提供一個可讓您建立所提供類型之實例的函式。</span><span class="sxs-lookup"><span data-stu-id="e62b4-306">Finally, provide a constructor so that instances of the provided type can be created.</span></span>
+<span data-ttu-id="7df16-306">最後，提供一個建構函式，以便可以創建提供類型的實例。</span><span class="sxs-lookup"><span data-stu-id="7df16-306">Finally, provide a constructor so that instances of the provided type can be created.</span></span>
 
 ```fsharp
 let ctor =
@@ -617,7 +617,7 @@ ctor.AddXmlDoc("Initializes a regular expression instance.")
 ty.AddMember ctor
 ```
 
-<span data-ttu-id="e62b4-307">此函式只會清除建立標準 .NET Regex 實例，再次將其加入至物件，因為 `obj` 是所提供類型的抹除。</span><span class="sxs-lookup"><span data-stu-id="e62b4-307">The constructor merely erases to the creation of a standard .NET Regex instance, which is again boxed to an object because `obj` is the erasure of the provided type.</span></span> <span data-ttu-id="e62b4-308">隨著這項變更，稍早在本主題中指定的範例 API 使用方式會如預期般運作。</span><span class="sxs-lookup"><span data-stu-id="e62b4-308">With that change, the sample API usage that specified earlier in the topic works as expected.</span></span> <span data-ttu-id="e62b4-309">下列程式碼為 complete 和 final：</span><span class="sxs-lookup"><span data-stu-id="e62b4-309">The following code is complete and final:</span></span>
+<span data-ttu-id="7df16-307">建構函式僅擦除為創建標準 .NET Regex 實例，該實例再次盒裝到物件，因為`obj`是提供類型的擦除。</span><span class="sxs-lookup"><span data-stu-id="7df16-307">The constructor merely erases to the creation of a standard .NET Regex instance, which is again boxed to an object because `obj` is the erasure of the provided type.</span></span> <span data-ttu-id="7df16-308">通過該更改，主題前面指定的示例 API 用法將按預期方式工作。</span><span class="sxs-lookup"><span data-stu-id="7df16-308">With that change, the sample API usage that specified earlier in the topic works as expected.</span></span> <span data-ttu-id="7df16-309">以下代碼已完成且最終：</span><span class="sxs-lookup"><span data-stu-id="7df16-309">The following code is complete and final:</span></span>
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -728,37 +728,37 @@ type public CheckedRegexProvider() as this =
 do ()
 ```
 
-### <a name="key-lessons"></a><span data-ttu-id="e62b4-310">重要課程</span><span class="sxs-lookup"><span data-stu-id="e62b4-310">Key Lessons</span></span>
+### <a name="key-lessons"></a><span data-ttu-id="7df16-310">重點課程</span><span class="sxs-lookup"><span data-stu-id="7df16-310">Key Lessons</span></span>
 
-<span data-ttu-id="e62b4-311">本節說明如何建立可在其靜態參數上運作的類型提供者。</span><span class="sxs-lookup"><span data-stu-id="e62b4-311">This section explained how to create a type provider that operates on its static parameters.</span></span> <span data-ttu-id="e62b4-312">提供者會檢查靜態參數，並根據其值提供作業。</span><span class="sxs-lookup"><span data-stu-id="e62b4-312">The provider checks the static parameter and provides operations based on its value.</span></span>
+<span data-ttu-id="7df16-311">本節介紹如何創建對其靜態參數運行的類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-311">This section explained how to create a type provider that operates on its static parameters.</span></span> <span data-ttu-id="7df16-312">提供程式檢查靜態參數，並根據其值提供操作。</span><span class="sxs-lookup"><span data-stu-id="7df16-312">The provider checks the static parameter and provides operations based on its value.</span></span>
 
-## <a name="a-type-provider-that-is-backed-by-local-data"></a><span data-ttu-id="e62b4-313">由本機資料支援的類型提供者</span><span class="sxs-lookup"><span data-stu-id="e62b4-313">A Type Provider That Is Backed By Local Data</span></span>
+## <a name="a-type-provider-that-is-backed-by-local-data"></a><span data-ttu-id="7df16-313">由本地資料支援的類型提供程式</span><span class="sxs-lookup"><span data-stu-id="7df16-313">A Type Provider That Is Backed By Local Data</span></span>
 
-<span data-ttu-id="e62b4-314">通常，您可能會希望型別提供者不僅以靜態參數為基礎來呈現 Api，也會顯示來自本機或遠端系統的資訊。</span><span class="sxs-lookup"><span data-stu-id="e62b4-314">Frequently you might want type providers to present APIs based on not only static parameters but also information from local or remote systems.</span></span> <span data-ttu-id="e62b4-315">本節討論以本機資料為基礎的型別提供者，例如本機資料檔案。</span><span class="sxs-lookup"><span data-stu-id="e62b4-315">This section discusses type providers that are based on local data, such as local data files.</span></span>
+<span data-ttu-id="7df16-314">通常，您可能希望類型提供程式不僅基於靜態參數，還基於本地或遠端系統的資訊來顯示 API。</span><span class="sxs-lookup"><span data-stu-id="7df16-314">Frequently you might want type providers to present APIs based on not only static parameters but also information from local or remote systems.</span></span> <span data-ttu-id="7df16-315">本節討論基於本地資料（如本地資料檔案）的類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-315">This section discusses type providers that are based on local data, such as local data files.</span></span>
 
-### <a name="simple-csv-file-provider"></a><span data-ttu-id="e62b4-316">簡單的 CSV 檔案提供者</span><span class="sxs-lookup"><span data-stu-id="e62b4-316">Simple CSV File Provider</span></span>
+### <a name="simple-csv-file-provider"></a><span data-ttu-id="7df16-316">簡單的 CSV 檔提供程式</span><span class="sxs-lookup"><span data-stu-id="7df16-316">Simple CSV File Provider</span></span>
 
-<span data-ttu-id="e62b4-317">做為簡單的範例，請考慮使用以逗號分隔值（CSV）格式來存取科學資料的類型提供者。</span><span class="sxs-lookup"><span data-stu-id="e62b4-317">As a simple example, consider a type provider for accessing scientific data in Comma Separated Value (CSV) format.</span></span> <span data-ttu-id="e62b4-318">本節假設 CSV 檔案包含標頭資料列，後面接著浮點數據，如下表所示：</span><span class="sxs-lookup"><span data-stu-id="e62b4-318">This section assumes that the CSV files contain a header row followed by floating point data, as the following table illustrates:</span></span>
+<span data-ttu-id="7df16-317">作為一個簡單的示例，請考慮一個類型提供程式，用於以逗號分隔值 （CSV） 格式訪問科學資料。</span><span class="sxs-lookup"><span data-stu-id="7df16-317">As a simple example, consider a type provider for accessing scientific data in Comma Separated Value (CSV) format.</span></span> <span data-ttu-id="7df16-318">本節假定 CSV 檔包含標頭行，後跟浮點數據，如下表所示：</span><span class="sxs-lookup"><span data-stu-id="7df16-318">This section assumes that the CSV files contain a header row followed by floating point data, as the following table illustrates:</span></span>
 
-|<span data-ttu-id="e62b4-319">距離（計量）</span><span class="sxs-lookup"><span data-stu-id="e62b4-319">Distance (meter)</span></span>|<span data-ttu-id="e62b4-320">時間（秒）</span><span class="sxs-lookup"><span data-stu-id="e62b4-320">Time (second)</span></span>|
+|<span data-ttu-id="7df16-319">距離（米）</span><span class="sxs-lookup"><span data-stu-id="7df16-319">Distance (meter)</span></span>|<span data-ttu-id="7df16-320">時間（秒）</span><span class="sxs-lookup"><span data-stu-id="7df16-320">Time (second)</span></span>|
 |----------------|-------------|
-|<span data-ttu-id="e62b4-321">50.0</span><span class="sxs-lookup"><span data-stu-id="e62b4-321">50.0</span></span>|<span data-ttu-id="e62b4-322">3.7</span><span class="sxs-lookup"><span data-stu-id="e62b4-322">3.7</span></span>|
-|<span data-ttu-id="e62b4-323">100.0</span><span class="sxs-lookup"><span data-stu-id="e62b4-323">100.0</span></span>|<span data-ttu-id="e62b4-324">5.2</span><span class="sxs-lookup"><span data-stu-id="e62b4-324">5.2</span></span>|
-|<span data-ttu-id="e62b4-325">150.0</span><span class="sxs-lookup"><span data-stu-id="e62b4-325">150.0</span></span>|<span data-ttu-id="e62b4-326">6.4</span><span class="sxs-lookup"><span data-stu-id="e62b4-326">6.4</span></span>|
+|<span data-ttu-id="7df16-321">50.0</span><span class="sxs-lookup"><span data-stu-id="7df16-321">50.0</span></span>|<span data-ttu-id="7df16-322">3.7</span><span class="sxs-lookup"><span data-stu-id="7df16-322">3.7</span></span>|
+|<span data-ttu-id="7df16-323">100.0</span><span class="sxs-lookup"><span data-stu-id="7df16-323">100.0</span></span>|<span data-ttu-id="7df16-324">5.2</span><span class="sxs-lookup"><span data-stu-id="7df16-324">5.2</span></span>|
+|<span data-ttu-id="7df16-325">150.0</span><span class="sxs-lookup"><span data-stu-id="7df16-325">150.0</span></span>|<span data-ttu-id="7df16-326">6.4</span><span class="sxs-lookup"><span data-stu-id="7df16-326">6.4</span></span>|
 
-<span data-ttu-id="e62b4-327">本節說明如何提供一個類型，讓您用來取得具有 `float<meter>` 類型 `Distance` 屬性的資料列，以及 `float<second>`類型的 `Time` 屬性。</span><span class="sxs-lookup"><span data-stu-id="e62b4-327">This section shows how to provide a type that you can use to get rows with a `Distance` property of type `float<meter>` and a `Time` property of type `float<second>`.</span></span> <span data-ttu-id="e62b4-328">為了簡單起見，會進行下列假設：</span><span class="sxs-lookup"><span data-stu-id="e62b4-328">For simplicity, the following assumptions are made:</span></span>
+<span data-ttu-id="7df16-327">本節演示如何提供一種類型，可用於`Distance`獲取具有類型`float<meter>`屬性和類型的`Time``float<second>`屬性的行。</span><span class="sxs-lookup"><span data-stu-id="7df16-327">This section shows how to provide a type that you can use to get rows with a `Distance` property of type `float<meter>` and a `Time` property of type `float<second>`.</span></span> <span data-ttu-id="7df16-328">為簡單起見，我們做了以下假設：</span><span class="sxs-lookup"><span data-stu-id="7df16-328">For simplicity, the following assumptions are made:</span></span>
 
-- <span data-ttu-id="e62b4-329">標頭名稱不是單位或格式為 "Name （unit）"，且不包含逗號。</span><span class="sxs-lookup"><span data-stu-id="e62b4-329">Header names are either unit-less or have the form "Name (unit)" and don't contain commas.</span></span>
+- <span data-ttu-id="7df16-329">標題名稱不是無單元的，或者有"名稱（單位）"的表單，並且不包含逗號。</span><span class="sxs-lookup"><span data-stu-id="7df16-329">Header names are either unit-less or have the form "Name (unit)" and don't contain commas.</span></span>
 
-- <span data-ttu-id="e62b4-330">單位是[fsharp.core. UnitSystems. UnitNames moduleF#（）](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b)模組定義的所有系統國際（SI）單位。</span><span class="sxs-lookup"><span data-stu-id="e62b4-330">Units are all System International (SI) units as the [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames Module (F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) module defines.</span></span>
+- <span data-ttu-id="7df16-330">單位均為[Microsoft.FSharp.Data.UnitSystems.SI.單元名稱模組 （F#）](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b)模組定義的系統國際 （SI） 單元。</span><span class="sxs-lookup"><span data-stu-id="7df16-330">Units are all System International (SI) units as the [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames Module (F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) module defines.</span></span>
 
-- <span data-ttu-id="e62b4-331">單位全都簡單（例如，計量），而不是複合（例如，計量/秒）。</span><span class="sxs-lookup"><span data-stu-id="e62b4-331">Units are all simple (for example, meter) rather than compound (for example, meter/second).</span></span>
+- <span data-ttu-id="7df16-331">單位都是簡單的（例如，儀錶），而不是複合的（例如，儀錶/秒）。</span><span class="sxs-lookup"><span data-stu-id="7df16-331">Units are all simple (for example, meter) rather than compound (for example, meter/second).</span></span>
 
-- <span data-ttu-id="e62b4-332">所有資料行都包含浮點數據。</span><span class="sxs-lookup"><span data-stu-id="e62b4-332">All columns contain floating point data.</span></span>
+- <span data-ttu-id="7df16-332">所有列都包含浮點數據。</span><span class="sxs-lookup"><span data-stu-id="7df16-332">All columns contain floating point data.</span></span>
 
-<span data-ttu-id="e62b4-333">較完整的提供者會放寬這些限制。</span><span class="sxs-lookup"><span data-stu-id="e62b4-333">A more complete provider would loosen these restrictions.</span></span>
+<span data-ttu-id="7df16-333">更完整的供應商將放鬆這些限制。</span><span class="sxs-lookup"><span data-stu-id="7df16-333">A more complete provider would loosen these restrictions.</span></span>
 
-<span data-ttu-id="e62b4-334">同樣地，第一個步驟是考慮 API 的外觀。</span><span class="sxs-lookup"><span data-stu-id="e62b4-334">Again the first step is to consider how the API should look.</span></span> <span data-ttu-id="e62b4-335">假設有一個包含先前資料表內容的 `info.csv` 檔案 (採用逗號分隔的格式)，則提供者的使用者應該可以編寫類似下列範例的程式碼：</span><span class="sxs-lookup"><span data-stu-id="e62b4-335">Given an `info.csv` file with the contents from the previous table (in comma-separated format), users of the provider should be able to write code that resembles the following example:</span></span>
+<span data-ttu-id="7df16-334">同樣，第一步是考慮 API 的外觀。</span><span class="sxs-lookup"><span data-stu-id="7df16-334">Again the first step is to consider how the API should look.</span></span> <span data-ttu-id="7df16-335">假設有一個包含先前資料表內容的 `info.csv` 檔案 (採用逗號分隔的格式)，則提供者的使用者應該可以編寫類似下列範例的程式碼：</span><span class="sxs-lookup"><span data-stu-id="7df16-335">Given an `info.csv` file with the contents from the previous table (in comma-separated format), users of the provider should be able to write code that resembles the following example:</span></span>
 
 ```fsharp
 let info = new MiniCsv<"info.csv">()
@@ -767,7 +767,7 @@ let time = row.Time
 printfn "%f" (float time)
 ```
 
-<span data-ttu-id="e62b4-336">在此情況下，編譯器應該將這些呼叫轉換成類似下列範例的內容：</span><span class="sxs-lookup"><span data-stu-id="e62b4-336">In this case, the compiler should convert these calls into something like the following example:</span></span>
+<span data-ttu-id="7df16-336">在這種情況下，編譯器應將這些調用轉換為類似以下示例的內容：</span><span class="sxs-lookup"><span data-stu-id="7df16-336">In this case, the compiler should convert these calls into something like the following example:</span></span>
 
 ```fsharp
 let info = new CsvFile("info.csv")
@@ -776,9 +776,9 @@ let (time:float) = row.[1]
 printfn "%f" (float time)
 ```
 
-<span data-ttu-id="e62b4-337">最佳的轉譯會要求型別提供者在型別提供者的元件中定義真實的 `CsvFile` 型別。</span><span class="sxs-lookup"><span data-stu-id="e62b4-337">The optimal translation will require the type provider to define a real `CsvFile` type in the type provider's assembly.</span></span> <span data-ttu-id="e62b4-338">型別提供者通常依賴幾個 helper 類型和方法來包裝重要的邏輯。</span><span class="sxs-lookup"><span data-stu-id="e62b4-338">Type providers often rely on a few helper types and methods to wrap important logic.</span></span> <span data-ttu-id="e62b4-339">因為量值會在執行時間清除，所以您可以使用 `float[]` 做為資料列的已清除類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-339">Because measures are erased at runtime, you can use a `float[]` as the erased type for a row.</span></span> <span data-ttu-id="e62b4-340">編譯器會將不同的資料行視為具有不同的量數值型別。</span><span class="sxs-lookup"><span data-stu-id="e62b4-340">The compiler will treat different columns as having different measure types.</span></span> <span data-ttu-id="e62b4-341">例如，在我們的範例中，第一個資料行的型別為 `float<meter>`，而第二個數據行會 `float<second>`。</span><span class="sxs-lookup"><span data-stu-id="e62b4-341">For example, the first column in our example has type `float<meter>`, and the second has `float<second>`.</span></span> <span data-ttu-id="e62b4-342">不過，清除的標記法可以保持相當簡單。</span><span class="sxs-lookup"><span data-stu-id="e62b4-342">However, the erased representation can remain quite simple.</span></span>
+<span data-ttu-id="7df16-337">最佳轉換將要求類型提供程式在類型提供程式的程式集中定義`CsvFile`實際類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-337">The optimal translation will require the type provider to define a real `CsvFile` type in the type provider's assembly.</span></span> <span data-ttu-id="7df16-338">類型提供程式通常依賴于一些説明器類型和方法來包裝重要邏輯。</span><span class="sxs-lookup"><span data-stu-id="7df16-338">Type providers often rely on a few helper types and methods to wrap important logic.</span></span> <span data-ttu-id="7df16-339">由於度量值在運行時被擦除，因此可以使用 作為`float[]`行的擦除類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-339">Because measures are erased at runtime, you can use a `float[]` as the erased type for a row.</span></span> <span data-ttu-id="7df16-340">編譯器將不同的列視為具有不同的度量數值型別。</span><span class="sxs-lookup"><span data-stu-id="7df16-340">The compiler will treat different columns as having different measure types.</span></span> <span data-ttu-id="7df16-341">例如，我們示例中的第一列具有類型`float<meter>`，第二列具有`float<second>`。</span><span class="sxs-lookup"><span data-stu-id="7df16-341">For example, the first column in our example has type `float<meter>`, and the second has `float<second>`.</span></span> <span data-ttu-id="7df16-342">但是，擦除的表示形式可以保持非常簡單。</span><span class="sxs-lookup"><span data-stu-id="7df16-342">However, the erased representation can remain quite simple.</span></span>
 
-<span data-ttu-id="e62b4-343">下列程式碼會顯示執行的核心。</span><span class="sxs-lookup"><span data-stu-id="e62b4-343">The following code shows the core of the implementation.</span></span>
+<span data-ttu-id="7df16-343">以下代碼顯示了實現的核心。</span><span class="sxs-lookup"><span data-stu-id="7df16-343">The following code shows the core of the implementation.</span></span>
 
 ```fsharp
 // Simple type wrapping CSV data
@@ -873,27 +873,27 @@ type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
     do this.AddNamespace(ns, [csvTy])
 ```
 
-<span data-ttu-id="e62b4-344">請注意下列有關執行的要點：</span><span class="sxs-lookup"><span data-stu-id="e62b4-344">Note the following points about the implementation:</span></span>
+<span data-ttu-id="7df16-344">請注意有關實現的以下幾點：</span><span class="sxs-lookup"><span data-stu-id="7df16-344">Note the following points about the implementation:</span></span>
 
-- <span data-ttu-id="e62b4-345">多載的函式允許讀取具有相同架構的原始檔案或。</span><span class="sxs-lookup"><span data-stu-id="e62b4-345">Overloaded constructors allow either the original file or one that has an identical schema to be read.</span></span> <span data-ttu-id="e62b4-346">當您撰寫本機或遠端資料源的型別提供者時，這個模式很常見，而此模式可讓本機檔案當做遠端資料的範本使用。</span><span class="sxs-lookup"><span data-stu-id="e62b4-346">This pattern is common when you write a type provider for local or remote data sources, and this pattern allows a local file to be used as the template for remote data.</span></span>
+- <span data-ttu-id="7df16-345">重載建構函式允許讀取原始檔案或具有相同架構的檔。</span><span class="sxs-lookup"><span data-stu-id="7df16-345">Overloaded constructors allow either the original file or one that has an identical schema to be read.</span></span> <span data-ttu-id="7df16-346">當您為本地或遠端資料源編寫類型提供程式時，此模式很常見，並且此模式允許將本地檔用作遠端資料的範本。</span><span class="sxs-lookup"><span data-stu-id="7df16-346">This pattern is common when you write a type provider for local or remote data sources, and this pattern allows a local file to be used as the template for remote data.</span></span>
 
-- <span data-ttu-id="e62b4-347">您可以使用傳入型別提供者函式的[TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44)值來解析相對檔案名。</span><span class="sxs-lookup"><span data-stu-id="e62b4-347">You can use the [TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) value that’s passed in to the type provider constructor to resolve relative file names.</span></span>
+- <span data-ttu-id="7df16-347">您可以使用傳遞給類型提供程式建構函式的[TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44)值解析相對檔案名。</span><span class="sxs-lookup"><span data-stu-id="7df16-347">You can use the [TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) value that’s passed in to the type provider constructor to resolve relative file names.</span></span>
 
-- <span data-ttu-id="e62b4-348">您可以使用 `AddDefinitionLocation` 方法來定義所提供屬性的位置。</span><span class="sxs-lookup"><span data-stu-id="e62b4-348">You can use the `AddDefinitionLocation` method to define the location of the provided properties.</span></span> <span data-ttu-id="e62b4-349">因此，如果您在提供的屬性上使用 `Go To Definition`，CSV 檔案將會在 Visual Studio 中開啟。</span><span class="sxs-lookup"><span data-stu-id="e62b4-349">Therefore, if you use `Go To Definition` on a provided property, the CSV file will open in Visual Studio.</span></span>
+- <span data-ttu-id="7df16-348">可以使用 方法`AddDefinitionLocation`定義提供的屬性的位置。</span><span class="sxs-lookup"><span data-stu-id="7df16-348">You can use the `AddDefinitionLocation` method to define the location of the provided properties.</span></span> <span data-ttu-id="7df16-349">因此，如果您在提供的屬性`Go To Definition`上使用，CSV 檔將在 Visual Studio 中打開。</span><span class="sxs-lookup"><span data-stu-id="7df16-349">Therefore, if you use `Go To Definition` on a provided property, the CSV file will open in Visual Studio.</span></span>
 
-- <span data-ttu-id="e62b4-350">您可以使用 `ProvidedMeasureBuilder` 類型來查閱 SI 單位，並產生相關的 `float<_>` 類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-350">You can use the `ProvidedMeasureBuilder` type to look up the SI units and to generate the relevant `float<_>` types.</span></span>
+- <span data-ttu-id="7df16-350">您可以使用 類型`ProvidedMeasureBuilder`查找 SI 單位並生成相關`float<_>`類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-350">You can use the `ProvidedMeasureBuilder` type to look up the SI units and to generate the relevant `float<_>` types.</span></span>
 
-### <a name="key-lessons"></a><span data-ttu-id="e62b4-351">重要課程</span><span class="sxs-lookup"><span data-stu-id="e62b4-351">Key Lessons</span></span>
+### <a name="key-lessons"></a><span data-ttu-id="7df16-351">重點課程</span><span class="sxs-lookup"><span data-stu-id="7df16-351">Key Lessons</span></span>
 
-<span data-ttu-id="e62b4-352">本節說明如何使用資料來源本身包含的簡單架構，建立本機資料來源的類型提供者。</span><span class="sxs-lookup"><span data-stu-id="e62b4-352">This section explained how to create a type provider for a local data source with a simple schema that's contained in the data source itself.</span></span>
+<span data-ttu-id="7df16-352">本節介紹如何使用資料來源本身中包含的簡單架構為本地資料來源創建類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-352">This section explained how to create a type provider for a local data source with a simple schema that's contained in the data source itself.</span></span>
 
-## <a name="going-further"></a><span data-ttu-id="e62b4-353">進一步瞭解</span><span class="sxs-lookup"><span data-stu-id="e62b4-353">Going Further</span></span>
+## <a name="going-further"></a><span data-ttu-id="7df16-353">更進一步</span><span class="sxs-lookup"><span data-stu-id="7df16-353">Going Further</span></span>
 
-<span data-ttu-id="e62b4-354">下列各節包含進一步研究的建議。</span><span class="sxs-lookup"><span data-stu-id="e62b4-354">The following sections include suggestions for further study.</span></span>
+<span data-ttu-id="7df16-354">以下各節包括進一步研究的建議。</span><span class="sxs-lookup"><span data-stu-id="7df16-354">The following sections include suggestions for further study.</span></span>
 
-### <a name="a-look-at-the-compiled-code-for-erased-types"></a><span data-ttu-id="e62b4-355">查看已清除類型的已編譯器代碼</span><span class="sxs-lookup"><span data-stu-id="e62b4-355">A Look at the Compiled Code for Erased Types</span></span>
+### <a name="a-look-at-the-compiled-code-for-erased-types"></a><span data-ttu-id="7df16-355">查看已編譯的擦除類型代碼</span><span class="sxs-lookup"><span data-stu-id="7df16-355">A Look at the Compiled Code for Erased Types</span></span>
 
-<span data-ttu-id="e62b4-356">若要讓您瞭解如何使用型別提供者來對應到發出的程式碼，請使用本主題稍早所使用的 `HelloWorldTypeProvider` 來查看下列函數。</span><span class="sxs-lookup"><span data-stu-id="e62b4-356">To give you some idea of how the use of the type provider corresponds to the code that's emitted, look at the following function by using the `HelloWorldTypeProvider` that's used earlier in this topic.</span></span>
+<span data-ttu-id="7df16-356">為了讓您瞭解類型提供程式的使用如何與所發出的代碼相對應，請使用`HelloWorldTypeProvider`本主題前面使用的代碼來查看以下函數。</span><span class="sxs-lookup"><span data-stu-id="7df16-356">To give you some idea of how the use of the type provider corresponds to the code that's emitted, look at the following function by using the `HelloWorldTypeProvider` that's used earlier in this topic.</span></span>
 
 ```fsharp
 let function1 () =
@@ -901,7 +901,7 @@ let function1 () =
     obj1.InstanceProperty
 ```
 
-<span data-ttu-id="e62b4-357">以下是使用 ildasm 所產生之程式碼反向組譯的影像：</span><span class="sxs-lookup"><span data-stu-id="e62b4-357">Here’s an image of the resulting code decompiled by using ildasm.exe:</span></span>
+<span data-ttu-id="7df16-357">下面是使用 ildasm.exe 編譯的結果代碼的圖像：</span><span class="sxs-lookup"><span data-stu-id="7df16-357">Here’s an image of the resulting code decompiled by using ildasm.exe:</span></span>
 
 ```il
 .class public abstract auto ansi sealed Module1
@@ -929,30 +929,30 @@ IL_0017:  ret
 } // end of class Module1
 ```
 
-<span data-ttu-id="e62b4-358">如範例所示，所有提及的型別 `Type1` 和 `InstanceProperty` 屬性都已清除，只留下相關執行時間類型的作業。</span><span class="sxs-lookup"><span data-stu-id="e62b4-358">As the example shows, all mentions of the type `Type1` and the `InstanceProperty` property have been erased, leaving only operations on the runtime types involved.</span></span>
+<span data-ttu-id="7df16-358">如示例所示，所有提及的類型`Type1`和`InstanceProperty`屬性都已被刪除，僅保留有關運行時類型的操作。</span><span class="sxs-lookup"><span data-stu-id="7df16-358">As the example shows, all mentions of the type `Type1` and the `InstanceProperty` property have been erased, leaving only operations on the runtime types involved.</span></span>
 
-### <a name="design-and-naming-conventions-for-type-providers"></a><span data-ttu-id="e62b4-359">型別提供者的設計和命名慣例</span><span class="sxs-lookup"><span data-stu-id="e62b4-359">Design and Naming Conventions for Type Providers</span></span>
+### <a name="design-and-naming-conventions-for-type-providers"></a><span data-ttu-id="7df16-359">類型提供程式的設計和命名約定</span><span class="sxs-lookup"><span data-stu-id="7df16-359">Design and Naming Conventions for Type Providers</span></span>
 
-<span data-ttu-id="e62b4-360">撰寫型別提供者時，請觀察下列慣例。</span><span class="sxs-lookup"><span data-stu-id="e62b4-360">Observe the following conventions when authoring type providers.</span></span>
+<span data-ttu-id="7df16-360">創作類型提供程式時，請遵守以下約定。</span><span class="sxs-lookup"><span data-stu-id="7df16-360">Observe the following conventions when authoring type providers.</span></span>
 
-<span data-ttu-id="e62b4-361">**連接通訊協定的提供者**一般來說，資料和服務連線通訊協定（例如 OData 或 SQL 連接）的大部分提供者 Dll 的名稱，都應該以 `TypeProvider` 或 `TypeProviders`結束。</span><span class="sxs-lookup"><span data-stu-id="e62b4-361">**Providers for Connectivity Protocols** In general, names of most provider DLLs for data and service connectivity protocols, such as OData or SQL connections, should end in `TypeProvider` or `TypeProviders`.</span></span> <span data-ttu-id="e62b4-362">例如，使用類似下列字串的 DLL 名稱：</span><span class="sxs-lookup"><span data-stu-id="e62b4-362">For example, use a DLL name that resembles the following string:</span></span>
+<span data-ttu-id="7df16-361">**連線協定的提供程式**通常，大多數提供程式 DlL 用於資料和服務連線協定（如 OData 或 SQL 連接）的名稱應以`TypeProvider``TypeProviders`或 結尾。</span><span class="sxs-lookup"><span data-stu-id="7df16-361">**Providers for Connectivity Protocols** In general, names of most provider DLLs for data and service connectivity protocols, such as OData or SQL connections, should end in `TypeProvider` or `TypeProviders`.</span></span> <span data-ttu-id="7df16-362">例如，使用類似于以下字串的 DLL 名稱：</span><span class="sxs-lookup"><span data-stu-id="7df16-362">For example, use a DLL name that resembles the following string:</span></span>
 
 `Fabrikam.Management.BasicTypeProviders.dll`
 
-<span data-ttu-id="e62b4-363">請確定您提供的類型是對應命名空間的成員，並指出您所執行的連接通訊協定：</span><span class="sxs-lookup"><span data-stu-id="e62b4-363">Ensure that your provided types are members of the corresponding namespace, and indicate the connectivity protocol that you implemented:</span></span>
+<span data-ttu-id="7df16-363">確保您提供的類型是相應命名空間的成員，並指示您實現的連線協定：</span><span class="sxs-lookup"><span data-stu-id="7df16-363">Ensure that your provided types are members of the corresponding namespace, and indicate the connectivity protocol that you implemented:</span></span>
 
 ```fsharp
   Fabrikam.Management.BasicTypeProviders.WmiConnection<…>
   Fabrikam.Management.BasicTypeProviders.DataProtocolConnection<…>
 ```
 
-<span data-ttu-id="e62b4-364">**一般程式碼撰寫的公用程式提供者**。</span><span class="sxs-lookup"><span data-stu-id="e62b4-364">**Utility Providers for General Coding**.</span></span>  <span data-ttu-id="e62b4-365">對於類似于正則運算式的公用程式類型提供者，類型提供者可能是基底程式庫的一部分，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="e62b4-365">For a utility type provider such as that for regular expressions, the type provider may be part of a base library, as the following example shows:</span></span>
+<span data-ttu-id="7df16-364">**通用編碼提供程式**。</span><span class="sxs-lookup"><span data-stu-id="7df16-364">**Utility Providers for General Coding**.</span></span>  <span data-ttu-id="7df16-365">對於實用程式類型提供程式（如正則運算式提供程式），類型提供程式可能是基本庫的一部分，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="7df16-365">For a utility type provider such as that for regular expressions, the type provider may be part of a base library, as the following example shows:</span></span>
 
 ```fsharp
 #r "Fabrikam.Core.Text.Utilities.dll"
 ```
 
-<span data-ttu-id="e62b4-366">在此情況下，提供的類型會根據一般的 .NET 設計慣例，出現在適當的時間點：</span><span class="sxs-lookup"><span data-stu-id="e62b4-366">In this case, the provided type would appear at an appropriate point according to normal .NET design conventions:</span></span>
+<span data-ttu-id="7df16-366">在這種情況下，根據正常的 .NET 設計約定，提供的類型將顯示在適當的點：</span><span class="sxs-lookup"><span data-stu-id="7df16-366">In this case, the provided type would appear at an appropriate point according to normal .NET design conventions:</span></span>
 
 ```fsharp
   open Fabrikam.Core.Text.RegexTyped
@@ -960,7 +960,7 @@ IL_0017:  ret
   let regex = new RegexTyped<"a+b+a+b+">()
 ```
 
-<span data-ttu-id="e62b4-367">**單一資料來源**。</span><span class="sxs-lookup"><span data-stu-id="e62b4-367">**Singleton Data Sources**.</span></span> <span data-ttu-id="e62b4-368">某些類型提供者會連接到單一專用資料來源，並只提供資料。</span><span class="sxs-lookup"><span data-stu-id="e62b4-368">Some type providers connect to a single dedicated data source and provide only data.</span></span> <span data-ttu-id="e62b4-369">在此情況下，您應該卸載 `TypeProvider` 尾碼，並使用一般的 .NET 命名慣例：</span><span class="sxs-lookup"><span data-stu-id="e62b4-369">In this case, you should drop the `TypeProvider` suffix and use normal conventions for .NET naming:</span></span>
+<span data-ttu-id="7df16-367">**單頓資料來源**.</span><span class="sxs-lookup"><span data-stu-id="7df16-367">**Singleton Data Sources**.</span></span> <span data-ttu-id="7df16-368">某些類型提供程式連接到單個專用資料來源，並且僅提供資料。</span><span class="sxs-lookup"><span data-stu-id="7df16-368">Some type providers connect to a single dedicated data source and provide only data.</span></span> <span data-ttu-id="7df16-369">在這種情況下，應刪除`TypeProvider`尾碼，並使用正常的約定進行 .NET 命名：</span><span class="sxs-lookup"><span data-stu-id="7df16-369">In this case, you should drop the `TypeProvider` suffix and use normal conventions for .NET naming:</span></span>
 
 ```fsharp
 #r "Fabrikam.Data.Freebase.dll"
@@ -968,15 +968,15 @@ IL_0017:  ret
 let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 ```
 
-<span data-ttu-id="e62b4-370">如需詳細資訊，請參閱本主題稍後所述的 `GetConnection` 設計慣例。</span><span class="sxs-lookup"><span data-stu-id="e62b4-370">For more information, see the `GetConnection` design convention that's described later in this topic.</span></span>
+<span data-ttu-id="7df16-370">有關詳細資訊，請參閱本主題後面`GetConnection`介紹的設計約定。</span><span class="sxs-lookup"><span data-stu-id="7df16-370">For more information, see the `GetConnection` design convention that's described later in this topic.</span></span>
 
-### <a name="design-patterns-for-type-providers"></a><span data-ttu-id="e62b4-371">型別提供者的設計模式</span><span class="sxs-lookup"><span data-stu-id="e62b4-371">Design Patterns for Type Providers</span></span>
+### <a name="design-patterns-for-type-providers"></a><span data-ttu-id="7df16-371">類型提供程式的設計模式</span><span class="sxs-lookup"><span data-stu-id="7df16-371">Design Patterns for Type Providers</span></span>
 
-<span data-ttu-id="e62b4-372">下列各節說明您可以在撰寫型別提供者時使用的設計模式。</span><span class="sxs-lookup"><span data-stu-id="e62b4-372">The following sections describe design patterns you can use when authoring type providers.</span></span>
+<span data-ttu-id="7df16-372">以下各節介紹在創作類型提供程式時可以使用的設計模式。</span><span class="sxs-lookup"><span data-stu-id="7df16-372">The following sections describe design patterns you can use when authoring type providers.</span></span>
 
-#### <a name="the-getconnection-design-pattern"></a><span data-ttu-id="e62b4-373">GetConnection 設計模式</span><span class="sxs-lookup"><span data-stu-id="e62b4-373">The GetConnection Design Pattern</span></span>
+#### <a name="the-getconnection-design-pattern"></a><span data-ttu-id="7df16-373">獲取連接設計模式</span><span class="sxs-lookup"><span data-stu-id="7df16-373">The GetConnection Design Pattern</span></span>
 
-<span data-ttu-id="e62b4-374">大部分的類型提供者都應該撰寫成使用 Fsharp.core 中的類型提供者所使用的 `GetConnection` 模式，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="e62b4-374">Most type providers should be written to use the `GetConnection` pattern that's used by the type providers in FSharp.Data.TypeProviders.dll, as the following example shows:</span></span>
+<span data-ttu-id="7df16-374">大多數類型提供程式都應編寫用於使用 FSharp.Data.TypeProvider.dll 中類型提供程式使用的`GetConnection`模式，如下例所示：</span><span class="sxs-lookup"><span data-stu-id="7df16-374">Most type providers should be written to use the `GetConnection` pattern that's used by the type providers in FSharp.Data.TypeProviders.dll, as the following example shows:</span></span>
 
 ```fsharp
 #r "Fabrikam.Data.WebDataStore.dll"
@@ -988,31 +988,31 @@ let connection = Service.GetConnection(…dynamic connection parameters…)
 let data = connection.Astronomy.Asteroids
 ```
 
-#### <a name="type-providers-backed-by-remote-data-and-services"></a><span data-ttu-id="e62b4-375">由遠端資料和服務支援的類型提供者</span><span class="sxs-lookup"><span data-stu-id="e62b4-375">Type Providers Backed By Remote Data and Services</span></span>
+#### <a name="type-providers-backed-by-remote-data-and-services"></a><span data-ttu-id="7df16-375">由遠端資料和服務支援的類型提供程式</span><span class="sxs-lookup"><span data-stu-id="7df16-375">Type Providers Backed By Remote Data and Services</span></span>
 
-<span data-ttu-id="e62b4-376">在建立由遠端資料和服務支援的型別提供者之前，您必須考慮連線程式設計中固有的一系列問題。</span><span class="sxs-lookup"><span data-stu-id="e62b4-376">Before you create a type provider that's backed by remote data and services, you must consider a range of issues that are inherent in connected programming.</span></span> <span data-ttu-id="e62b4-377">這些問題包括下列考慮：</span><span class="sxs-lookup"><span data-stu-id="e62b4-377">These issues include the following considerations:</span></span>
+<span data-ttu-id="7df16-376">在創建由遠端資料和服務支援的類型提供程式之前，必須考慮連接程式設計中固有的一系列問題。</span><span class="sxs-lookup"><span data-stu-id="7df16-376">Before you create a type provider that's backed by remote data and services, you must consider a range of issues that are inherent in connected programming.</span></span> <span data-ttu-id="7df16-377">這些問題包括以下注意事項：</span><span class="sxs-lookup"><span data-stu-id="7df16-377">These issues include the following considerations:</span></span>
 
-- <span data-ttu-id="e62b4-378">架構對應</span><span class="sxs-lookup"><span data-stu-id="e62b4-378">schema mapping</span></span>
+- <span data-ttu-id="7df16-378">架構映射</span><span class="sxs-lookup"><span data-stu-id="7df16-378">schema mapping</span></span>
 
-- <span data-ttu-id="e62b4-379">發生架構變更時的活動和失效</span><span class="sxs-lookup"><span data-stu-id="e62b4-379">liveness and invalidation in the presence of schema change</span></span>
+- <span data-ttu-id="7df16-379">存在架構更改時的即時性和失效性</span><span class="sxs-lookup"><span data-stu-id="7df16-379">liveness and invalidation in the presence of schema change</span></span>
 
-- <span data-ttu-id="e62b4-380">架構快取</span><span class="sxs-lookup"><span data-stu-id="e62b4-380">schema caching</span></span>
+- <span data-ttu-id="7df16-380">架構緩存</span><span class="sxs-lookup"><span data-stu-id="7df16-380">schema caching</span></span>
 
-- <span data-ttu-id="e62b4-381">資料存取作業的非同步執行</span><span class="sxs-lookup"><span data-stu-id="e62b4-381">asynchronous implementations of data access operations</span></span>
+- <span data-ttu-id="7df16-381">資料訪問操作的非同步實現</span><span class="sxs-lookup"><span data-stu-id="7df16-381">asynchronous implementations of data access operations</span></span>
 
-- <span data-ttu-id="e62b4-382">支援查詢，包括 LINQ 查詢</span><span class="sxs-lookup"><span data-stu-id="e62b4-382">supporting queries, including LINQ queries</span></span>
+- <span data-ttu-id="7df16-382">支援查詢，包括 LINQ 查詢</span><span class="sxs-lookup"><span data-stu-id="7df16-382">supporting queries, including LINQ queries</span></span>
 
-- <span data-ttu-id="e62b4-383">認證和驗證</span><span class="sxs-lookup"><span data-stu-id="e62b4-383">credentials and authentication</span></span>
+- <span data-ttu-id="7df16-383">憑據和身份驗證</span><span class="sxs-lookup"><span data-stu-id="7df16-383">credentials and authentication</span></span>
 
-<span data-ttu-id="e62b4-384">本主題不會進一步探索這些問題。</span><span class="sxs-lookup"><span data-stu-id="e62b4-384">This topic doesn't explore these issues further.</span></span>
+<span data-ttu-id="7df16-384">本主題沒有進一步探討這些問題。</span><span class="sxs-lookup"><span data-stu-id="7df16-384">This topic doesn't explore these issues further.</span></span>
 
-### <a name="additional-authoring-techniques"></a><span data-ttu-id="e62b4-385">其他撰寫技巧</span><span class="sxs-lookup"><span data-stu-id="e62b4-385">Additional Authoring Techniques</span></span>
+### <a name="additional-authoring-techniques"></a><span data-ttu-id="7df16-385">其他創作技術</span><span class="sxs-lookup"><span data-stu-id="7df16-385">Additional Authoring Techniques</span></span>
 
-<span data-ttu-id="e62b4-386">當您撰寫自己的類型提供者時，您可能會想要使用下列其他技術。</span><span class="sxs-lookup"><span data-stu-id="e62b4-386">When you write your own type providers, you might want to use the following additional techniques.</span></span>
+<span data-ttu-id="7df16-386">編寫自己的類型提供程式時，可能需要使用以下附加技術。</span><span class="sxs-lookup"><span data-stu-id="7df16-386">When you write your own type providers, you might want to use the following additional techniques.</span></span>
 
-### <a name="creating-types-and-members-on-demand"></a><span data-ttu-id="e62b4-387">視需要建立類型和成員</span><span class="sxs-lookup"><span data-stu-id="e62b4-387">Creating Types and Members On-Demand</span></span>
+### <a name="creating-types-and-members-on-demand"></a><span data-ttu-id="7df16-387">按需創建類型和成員</span><span class="sxs-lookup"><span data-stu-id="7df16-387">Creating Types and Members On-Demand</span></span>
 
-<span data-ttu-id="e62b4-388">ProvidedType API 具有延遲的 AddMember 版本。</span><span class="sxs-lookup"><span data-stu-id="e62b4-388">The ProvidedType API has delayed versions of AddMember.</span></span>
+<span data-ttu-id="7df16-388">提供類型 API 已延遲添加成員版本。</span><span class="sxs-lookup"><span data-stu-id="7df16-388">The ProvidedType API has delayed versions of AddMember.</span></span>
 
 ```fsharp
   type ProvidedType =
@@ -1020,18 +1020,18 @@ let data = connection.Astronomy.Asteroids
       member AddMembersDelayed : (unit -> MemberInfo list) -> unit
 ```
 
-<span data-ttu-id="e62b4-389">這些版本是用來建立隨選的類型空間。</span><span class="sxs-lookup"><span data-stu-id="e62b4-389">These versions are used to create on-demand spaces of types.</span></span>
+<span data-ttu-id="7df16-389">這些版本用於創建類型的按需空間。</span><span class="sxs-lookup"><span data-stu-id="7df16-389">These versions are used to create on-demand spaces of types.</span></span>
 
-### <a name="providing-array-types-and-generic-type-instantiations"></a><span data-ttu-id="e62b4-390">提供陣列類型和泛型型別具現化</span><span class="sxs-lookup"><span data-stu-id="e62b4-390">Providing Array types and Generic Type Instantiations</span></span>
+### <a name="providing-array-types-and-generic-type-instantiations"></a><span data-ttu-id="7df16-390">提供陣列類型和通用類型具現化</span><span class="sxs-lookup"><span data-stu-id="7df16-390">Providing Array types and Generic Type Instantiations</span></span>
 
-<span data-ttu-id="e62b4-391">您可以在任何 <xref:System.Type>實例（包括 `ProvidedTypeDefinitions`）上使用一般 `MakeArrayType`、`MakePointerType`和 `MakeGenericType`，讓提供的成員（其簽章包含陣列類型、byref 類型和泛型型別的具現化）。</span><span class="sxs-lookup"><span data-stu-id="e62b4-391">You make provided members (whose signatures include array types, byref types, and instantiations of generic types) by using the normal `MakeArrayType`, `MakePointerType`, and `MakeGenericType` on any instance of <xref:System.Type>, including `ProvidedTypeDefinitions`.</span></span>
+<span data-ttu-id="7df16-391">通過使用`MakeArrayType`法線 和`MakePointerType`的任何`MakeGenericType`實例<xref:System.Type>（包括`ProvidedTypeDefinitions`） 使提供的成員（其簽名包括陣列類型、byref 類型和泛型型別的實例）。</span><span class="sxs-lookup"><span data-stu-id="7df16-391">You make provided members (whose signatures include array types, byref types, and instantiations of generic types) by using the normal `MakeArrayType`, `MakePointerType`, and `MakeGenericType` on any instance of <xref:System.Type>, including `ProvidedTypeDefinitions`.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e62b4-392">在某些情況下，您可能必須在 `ProvidedTypeBuilder.MakeGenericType`中使用 helper。</span><span class="sxs-lookup"><span data-stu-id="e62b4-392">In some cases you may have to use the helper in `ProvidedTypeBuilder.MakeGenericType`.</span></span>  <span data-ttu-id="e62b4-393">如需詳細資訊，請參閱[型別提供者 SDK 檔](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations)。</span><span class="sxs-lookup"><span data-stu-id="e62b4-393">See the [Type Provider SDK documentation](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) for more details.</span></span>
+> <span data-ttu-id="7df16-392">在某些情況下，您可能需要在 中使用`ProvidedTypeBuilder.MakeGenericType`協助程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-392">In some cases you may have to use the helper in `ProvidedTypeBuilder.MakeGenericType`.</span></span>  <span data-ttu-id="7df16-393">有關詳細資訊，請參閱[類型提供程式 SDK 文檔](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations)。</span><span class="sxs-lookup"><span data-stu-id="7df16-393">See the [Type Provider SDK documentation](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) for more details.</span></span>
 
-### <a name="providing-unit-of-measure-annotations"></a><span data-ttu-id="e62b4-394">提供測量單位注釋</span><span class="sxs-lookup"><span data-stu-id="e62b4-394">Providing Unit of Measure Annotations</span></span>
+### <a name="providing-unit-of-measure-annotations"></a><span data-ttu-id="7df16-394">提供度量單位注釋</span><span class="sxs-lookup"><span data-stu-id="7df16-394">Providing Unit of Measure Annotations</span></span>
 
-<span data-ttu-id="e62b4-395">ProvidedTypes API 提供 helper 來提供量值注釋。</span><span class="sxs-lookup"><span data-stu-id="e62b4-395">The ProvidedTypes API provides helpers for providing measure annotations.</span></span> <span data-ttu-id="e62b4-396">例如，若要提供 `float<kg>`類型，請使用下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="e62b4-396">For example, to provide the type `float<kg>`, use the following code:</span></span>
+<span data-ttu-id="7df16-395">提供類型 API 提供用於提供度量值注釋的説明器。</span><span class="sxs-lookup"><span data-stu-id="7df16-395">The ProvidedTypes API provides helpers for providing measure annotations.</span></span> <span data-ttu-id="7df16-396">例如，要提供類型`float<kg>`，請使用以下代碼：</span><span class="sxs-lookup"><span data-stu-id="7df16-396">For example, to provide the type `float<kg>`, use the following code:</span></span>
 
 ```fsharp
   let measures = ProvidedMeasureBuilder.Default
@@ -1040,7 +1040,7 @@ let data = connection.Astronomy.Asteroids
   let float_kg = measures.AnnotateType(typeof<float>,[kg])
 ```
 
-  <span data-ttu-id="e62b4-397">若要提供 `Nullable<decimal<kg/m^2>>`類型，請使用下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="e62b4-397">To provide the type `Nullable<decimal<kg/m^2>>`, use the following code:</span></span>
+  <span data-ttu-id="7df16-397">要提供類型`Nullable<decimal<kg/m^2>>`，請使用以下代碼：</span><span class="sxs-lookup"><span data-stu-id="7df16-397">To provide the type `Nullable<decimal<kg/m^2>>`, use the following code:</span></span>
 
 ```fsharp
   let kgpm2 = measures.Ratio(kg, measures.Square m)
@@ -1048,35 +1048,35 @@ let data = connection.Astronomy.Asteroids
   let nullableDecimal_kgpm2 = typedefof<System.Nullable<_>>.MakeGenericType [|dkgpm2 |]
 ```
 
-### <a name="accessing-project-local-or-script-local-resources"></a><span data-ttu-id="e62b4-398">存取專案本機或腳本-本機資源</span><span class="sxs-lookup"><span data-stu-id="e62b4-398">Accessing Project-Local or Script-Local Resources</span></span>
+### <a name="accessing-project-local-or-script-local-resources"></a><span data-ttu-id="7df16-398">訪問專案-本地資源或腳本本地資源</span><span class="sxs-lookup"><span data-stu-id="7df16-398">Accessing Project-Local or Script-Local Resources</span></span>
 
-<span data-ttu-id="e62b4-399">型別提供者的每個實例都可以在結構中提供 `TypeProviderConfig` 值。</span><span class="sxs-lookup"><span data-stu-id="e62b4-399">Each instance of a type provider can be given a `TypeProviderConfig` value during construction.</span></span> <span data-ttu-id="e62b4-400">此值包含提供者的「解析資料夾」（也就是編譯的專案資料夾或包含腳本的目錄）、參考的元件清單，以及其他資訊。</span><span class="sxs-lookup"><span data-stu-id="e62b4-400">This value contains the "resolution folder" for the provider (that is, the project folder for the compilation or the directory that contains a script), the list of referenced assemblies, and other information.</span></span>
+<span data-ttu-id="7df16-399">類型提供程式的每個實例都可以在構造期間給出一`TypeProviderConfig`個值。</span><span class="sxs-lookup"><span data-stu-id="7df16-399">Each instance of a type provider can be given a `TypeProviderConfig` value during construction.</span></span> <span data-ttu-id="7df16-400">此值包含提供程式的"解析資料夾"（即編譯的專案資料夾或包含腳本的目錄）、引用程式集的清單和其他資訊。</span><span class="sxs-lookup"><span data-stu-id="7df16-400">This value contains the "resolution folder" for the provider (that is, the project folder for the compilation or the directory that contains a script), the list of referenced assemblies, and other information.</span></span>
 
-### <a name="invalidation"></a><span data-ttu-id="e62b4-401">無效</span><span class="sxs-lookup"><span data-stu-id="e62b4-401">Invalidation</span></span>
+### <a name="invalidation"></a><span data-ttu-id="7df16-401">失效</span><span class="sxs-lookup"><span data-stu-id="7df16-401">Invalidation</span></span>
 
-<span data-ttu-id="e62b4-402">提供者可以引發失效信號來通知F#語言服務，架構假設可能已變更。</span><span class="sxs-lookup"><span data-stu-id="e62b4-402">Providers can raise invalidation signals to notify the F# language service that the schema assumptions may have changed.</span></span> <span data-ttu-id="e62b4-403">當發生失效時，如果提供者是在 Visual Studio 中主控，則會重做 typecheck。</span><span class="sxs-lookup"><span data-stu-id="e62b4-403">When invalidation occurs, a typecheck is redone if the provider is being hosted in Visual Studio.</span></span> <span data-ttu-id="e62b4-404">當提供者裝載于F#互動式或F#編譯器（fsc）時，將會忽略此信號。</span><span class="sxs-lookup"><span data-stu-id="e62b4-404">This signal will be ignored when the provider is hosted in F# Interactive or by the F# Compiler (fsc.exe).</span></span>
+<span data-ttu-id="7df16-402">提供程式可以引發失效信號，以通知 F# 語言服務架構假設可能已更改。</span><span class="sxs-lookup"><span data-stu-id="7df16-402">Providers can raise invalidation signals to notify the F# language service that the schema assumptions may have changed.</span></span> <span data-ttu-id="7df16-403">當發生失效時，如果提供程式在 Visual Studio 中託管，則重新檢查類型檢查。</span><span class="sxs-lookup"><span data-stu-id="7df16-403">When invalidation occurs, a typecheck is redone if the provider is being hosted in Visual Studio.</span></span> <span data-ttu-id="7df16-404">當提供程式託管在 F# 互動式或 F# 編譯器 （fsc.exe） 中時，將忽略此信號。</span><span class="sxs-lookup"><span data-stu-id="7df16-404">This signal will be ignored when the provider is hosted in F# Interactive or by the F# Compiler (fsc.exe).</span></span>
 
-### <a name="caching-schema-information"></a><span data-ttu-id="e62b4-405">快取架構資訊</span><span class="sxs-lookup"><span data-stu-id="e62b4-405">Caching Schema Information</span></span>
+### <a name="caching-schema-information"></a><span data-ttu-id="7df16-405">緩存架構資訊</span><span class="sxs-lookup"><span data-stu-id="7df16-405">Caching Schema Information</span></span>
 
-<span data-ttu-id="e62b4-406">提供者通常必須快取架構資訊的存取權。</span><span class="sxs-lookup"><span data-stu-id="e62b4-406">Providers must often cache access to schema information.</span></span> <span data-ttu-id="e62b4-407">快取的資料應該使用指定為靜態參數或使用者資料的檔案名來儲存。</span><span class="sxs-lookup"><span data-stu-id="e62b4-407">The cached data should be stored by using a file name that's given as a static parameter or as user data.</span></span> <span data-ttu-id="e62b4-408">架構快取的範例是 `FSharp.Data.TypeProviders` 元件之型別提供者中的 `LocalSchemaFile` 參數。</span><span class="sxs-lookup"><span data-stu-id="e62b4-408">An example of schema caching is the `LocalSchemaFile` parameter in the type providers in the `FSharp.Data.TypeProviders` assembly.</span></span> <span data-ttu-id="e62b4-409">在這些提供者的執行中，這個靜態參數會指示類型提供者使用指定本機檔案中的架構資訊，而不是透過網路存取資料來源。</span><span class="sxs-lookup"><span data-stu-id="e62b4-409">In the implementation of these providers, this static parameter directs the type provider to use the schema information in the specified local file instead of accessing the data source over the network.</span></span> <span data-ttu-id="e62b4-410">若要使用快取的架構資訊，您也必須將靜態參數 `ForceUpdate` 設定為 `false`。</span><span class="sxs-lookup"><span data-stu-id="e62b4-410">To use cached schema information, you must also set the static parameter `ForceUpdate` to `false`.</span></span> <span data-ttu-id="e62b4-411">您可以使用類似的技術來啟用線上和離線資料存取。</span><span class="sxs-lookup"><span data-stu-id="e62b4-411">You could use a similar technique to enable online and offline data access.</span></span>
+<span data-ttu-id="7df16-406">提供程式必須經常緩存對架構資訊的訪問。</span><span class="sxs-lookup"><span data-stu-id="7df16-406">Providers must often cache access to schema information.</span></span> <span data-ttu-id="7df16-407">緩存的資料應使用作為靜態參數或使用者資料給出的檔案名進行存儲。</span><span class="sxs-lookup"><span data-stu-id="7df16-407">The cached data should be stored by using a file name that's given as a static parameter or as user data.</span></span> <span data-ttu-id="7df16-408">架構緩存的一個示例是`LocalSchemaFile``FSharp.Data.TypeProviders`程式集類型提供程式中的參數。</span><span class="sxs-lookup"><span data-stu-id="7df16-408">An example of schema caching is the `LocalSchemaFile` parameter in the type providers in the `FSharp.Data.TypeProviders` assembly.</span></span> <span data-ttu-id="7df16-409">在實現這些提供程式時，此靜態參數指示類型提供程式在指定的本地檔中使用架構資訊，而不是通過網路訪問資料來源。</span><span class="sxs-lookup"><span data-stu-id="7df16-409">In the implementation of these providers, this static parameter directs the type provider to use the schema information in the specified local file instead of accessing the data source over the network.</span></span> <span data-ttu-id="7df16-410">要使用緩存的架構資訊，還必須將靜態參數`ForceUpdate`設置為`false`。</span><span class="sxs-lookup"><span data-stu-id="7df16-410">To use cached schema information, you must also set the static parameter `ForceUpdate` to `false`.</span></span> <span data-ttu-id="7df16-411">您可以使用類似的技術來啟用連線和離線資料訪問。</span><span class="sxs-lookup"><span data-stu-id="7df16-411">You could use a similar technique to enable online and offline data access.</span></span>
 
-### <a name="backing-assembly"></a><span data-ttu-id="e62b4-412">支援元件</span><span class="sxs-lookup"><span data-stu-id="e62b4-412">Backing Assembly</span></span>
+### <a name="backing-assembly"></a><span data-ttu-id="7df16-412">支援程式集</span><span class="sxs-lookup"><span data-stu-id="7df16-412">Backing Assembly</span></span>
 
-<span data-ttu-id="e62b4-413">當您編譯 `.dll` 或 `.exe` 檔案時，產生之類型的備份 .dll 檔案會以靜態方式連結到產生的元件。</span><span class="sxs-lookup"><span data-stu-id="e62b4-413">When you compile a `.dll` or `.exe` file, the backing .dll file for generated types is statically linked into the resulting assembly.</span></span> <span data-ttu-id="e62b4-414">建立此連結的方法是將中繼語言（IL）類型定義和任何受管理的資源從支援元件複製到最終元件。</span><span class="sxs-lookup"><span data-stu-id="e62b4-414">This link is created by copying the Intermediate Language (IL) type definitions and any managed resources from the backing assembly into the final assembly.</span></span> <span data-ttu-id="e62b4-415">當您使用F# Interactive 時，不會複製支援的 .dll 檔案，而會直接載入至F#互動式進程。</span><span class="sxs-lookup"><span data-stu-id="e62b4-415">When you use F# Interactive, the backing .dll file isn't copied and is instead loaded directly into the F# Interactive process.</span></span>
+<span data-ttu-id="7df16-413">編譯`.dll`或`.exe`檔時，生成的類型的備份 .DLL 檔案將靜態連結到生成的程式集中。</span><span class="sxs-lookup"><span data-stu-id="7df16-413">When you compile a `.dll` or `.exe` file, the backing .dll file for generated types is statically linked into the resulting assembly.</span></span> <span data-ttu-id="7df16-414">此連結是通過將中間語言 （IL） 類型定義和任何託管資源從備份程式集複製到最終程式集來創建的。</span><span class="sxs-lookup"><span data-stu-id="7df16-414">This link is created by copying the Intermediate Language (IL) type definitions and any managed resources from the backing assembly into the final assembly.</span></span> <span data-ttu-id="7df16-415">使用 F# 互動式時，不會複製支援 .DLL 檔案，而是直接載入到 F# 互動式進程中。</span><span class="sxs-lookup"><span data-stu-id="7df16-415">When you use F# Interactive, the backing .dll file isn't copied and is instead loaded directly into the F# Interactive process.</span></span>
 
-### <a name="exceptions-and-diagnostics-from-type-providers"></a><span data-ttu-id="e62b4-416">來自類型提供者的例外狀況和診斷</span><span class="sxs-lookup"><span data-stu-id="e62b4-416">Exceptions and Diagnostics from Type Providers</span></span>
+### <a name="exceptions-and-diagnostics-from-type-providers"></a><span data-ttu-id="7df16-416">來自類型提供程式的異常和診斷</span><span class="sxs-lookup"><span data-stu-id="7df16-416">Exceptions and Diagnostics from Type Providers</span></span>
 
-<span data-ttu-id="e62b4-417">所有來自所提供類型之成員的用法可能會擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="e62b4-417">All uses of all members from provided types may throw exceptions.</span></span> <span data-ttu-id="e62b4-418">在所有情況下，如果型別提供者擲回例外狀況，則主機編譯器會將錯誤屬性設為特定的型別提供者。</span><span class="sxs-lookup"><span data-stu-id="e62b4-418">In all cases, if a type provider throws an exception, the host compiler attributes the error to a specific type provider.</span></span>
+<span data-ttu-id="7df16-417">提供類型中所有成員的所有使用都可能會引發異常。</span><span class="sxs-lookup"><span data-stu-id="7df16-417">All uses of all members from provided types may throw exceptions.</span></span> <span data-ttu-id="7df16-418">在所有情況下，如果類型提供程式引發異常，主機編譯器將錯誤屬性歸因於特定類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-418">In all cases, if a type provider throws an exception, the host compiler attributes the error to a specific type provider.</span></span>
 
-- <span data-ttu-id="e62b4-419">型別提供者例外狀況不應該導致內部編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="e62b4-419">Type provider exceptions should never result in internal compiler errors.</span></span>
+- <span data-ttu-id="7df16-419">類型提供程式異常不應導致內部編譯器錯誤。</span><span class="sxs-lookup"><span data-stu-id="7df16-419">Type provider exceptions should never result in internal compiler errors.</span></span>
 
-- <span data-ttu-id="e62b4-420">型別提供者無法報告警告。</span><span class="sxs-lookup"><span data-stu-id="e62b4-420">Type providers can't report warnings.</span></span>
+- <span data-ttu-id="7df16-420">類型提供程式無法報告警告。</span><span class="sxs-lookup"><span data-stu-id="7df16-420">Type providers can't report warnings.</span></span>
 
-- <span data-ttu-id="e62b4-421">當型別提供者裝載于F#編譯器、 F#開發環境或F#互動式時，會攔截該提供者的所有例外狀況。</span><span class="sxs-lookup"><span data-stu-id="e62b4-421">When a type provider is hosted in the F# compiler, an F# development environment, or F# Interactive, all exceptions from that provider are caught.</span></span> <span data-ttu-id="e62b4-422">Message 屬性一律為錯誤文字，而且不會出現任何堆疊追蹤。</span><span class="sxs-lookup"><span data-stu-id="e62b4-422">The Message property is always the error text, and no stack trace appears.</span></span> <span data-ttu-id="e62b4-423">如果您要擲回例外狀況，您可以擲回下列範例： `System.NotSupportedException`、`System.IO.IOException``System.Exception`。</span><span class="sxs-lookup"><span data-stu-id="e62b4-423">If you’re going to throw an exception, you can throw the following examples: `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.</span></span>
+- <span data-ttu-id="7df16-421">當類型提供程式託管在 F# 編譯器、F# 開發環境或 F# 互動式中時，將捕獲該提供程式的所有異常。</span><span class="sxs-lookup"><span data-stu-id="7df16-421">When a type provider is hosted in the F# compiler, an F# development environment, or F# Interactive, all exceptions from that provider are caught.</span></span> <span data-ttu-id="7df16-422">消息屬性始終是錯誤文本，並且不顯示堆疊追蹤。</span><span class="sxs-lookup"><span data-stu-id="7df16-422">The Message property is always the error text, and no stack trace appears.</span></span> <span data-ttu-id="7df16-423">如果要引發異常，可以引發以下示例： `System.NotSupportedException`、 `System.IO.IOException`。 `System.Exception`。</span><span class="sxs-lookup"><span data-stu-id="7df16-423">If you’re going to throw an exception, you can throw the following examples: `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.</span></span>
 
-#### <a name="providing-generated-types"></a><span data-ttu-id="e62b4-424">提供產生的類型</span><span class="sxs-lookup"><span data-stu-id="e62b4-424">Providing Generated Types</span></span>
+#### <a name="providing-generated-types"></a><span data-ttu-id="7df16-424">提供生成的類型</span><span class="sxs-lookup"><span data-stu-id="7df16-424">Providing Generated Types</span></span>
 
-<span data-ttu-id="e62b4-425">到目前為止，本檔已說明如何提供已清除的類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-425">So far, this document has explained how to provide erased types.</span></span> <span data-ttu-id="e62b4-426">您也可以使用中F#的類型提供者機制來提供產生的類型，這會在使用者的程式中新增為實際的 .net 類型定義。</span><span class="sxs-lookup"><span data-stu-id="e62b4-426">You can also use the type provider mechanism in F# to provide generated types, which are added as real .NET type definitions into the users' program.</span></span> <span data-ttu-id="e62b4-427">您必須使用類型定義來參考產生的提供類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-427">You must refer to generated provided types by using a type definition.</span></span>
+<span data-ttu-id="7df16-425">到目前為止，本文檔已解釋如何提供擦除類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-425">So far, this document has explained how to provide erased types.</span></span> <span data-ttu-id="7df16-426">您還可以使用 F# 中的類型提供程式機制提供生成的類型，這些類型將作為真正的 .NET 類型定義添加到使用者的程式中。</span><span class="sxs-lookup"><span data-stu-id="7df16-426">You can also use the type provider mechanism in F# to provide generated types, which are added as real .NET type definitions into the users' program.</span></span> <span data-ttu-id="7df16-427">您必須使用類型定義來引用生成的提供類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-427">You must refer to generated provided types by using a type definition.</span></span>
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders
@@ -1084,59 +1084,59 @@ open Microsoft.FSharp.TypeProviders
 type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
-<span data-ttu-id="e62b4-428">屬於F# 3.0 版的 ProvidedTypes-0.2 helper 程式碼，只有提供所產生類型的有限支援。</span><span class="sxs-lookup"><span data-stu-id="e62b4-428">The ProvidedTypes-0.2 helper code that is part of the F# 3.0 release has only limited support for providing generated types.</span></span> <span data-ttu-id="e62b4-429">針對產生的型別定義，下列語句必須為 true：</span><span class="sxs-lookup"><span data-stu-id="e62b4-429">The following statements must be true for a generated type definition:</span></span>
+<span data-ttu-id="7df16-428">作為 F# 3.0 版本的一部分的"提供類型-0.2 説明器"代碼對提供生成的類型的支援有限。</span><span class="sxs-lookup"><span data-stu-id="7df16-428">The ProvidedTypes-0.2 helper code that is part of the F# 3.0 release has only limited support for providing generated types.</span></span> <span data-ttu-id="7df16-429">對於生成的類型定義，以下語句必須為 true：</span><span class="sxs-lookup"><span data-stu-id="7df16-429">The following statements must be true for a generated type definition:</span></span>
 
-- <span data-ttu-id="e62b4-430">`isErased` 必須設定為 `false`。</span><span class="sxs-lookup"><span data-stu-id="e62b4-430">`isErased` must be set to `false`.</span></span>
+- <span data-ttu-id="7df16-430">`isErased` 必須設為 `false`。</span><span class="sxs-lookup"><span data-stu-id="7df16-430">`isErased` must be set to `false`.</span></span>
 
-- <span data-ttu-id="e62b4-431">產生的類型必須加入至新建立的 `ProvidedAssembly()`，其代表產生之程式碼片段的容器。</span><span class="sxs-lookup"><span data-stu-id="e62b4-431">The generated type must be added to a newly constructed `ProvidedAssembly()`, which represents a container for generated code fragments.</span></span>
+- <span data-ttu-id="7df16-431">生成的類型必須添加到新構造`ProvidedAssembly()`的 ，該類型表示生成的代碼片段的容器。</span><span class="sxs-lookup"><span data-stu-id="7df16-431">The generated type must be added to a newly constructed `ProvidedAssembly()`, which represents a container for generated code fragments.</span></span>
 
-- <span data-ttu-id="e62b4-432">提供者的元件必須具有實際支援的 .NET .dll 檔案，且該檔案在磁片上具有相符的 .dll 檔案。</span><span class="sxs-lookup"><span data-stu-id="e62b4-432">The provider must have an assembly that has an actual backing .NET .dll file with a matching .dll file on disk.</span></span>
+- <span data-ttu-id="7df16-432">提供程式必須具有具有實際支援 .NET .DLL 檔案的程式集，該檔在磁片上具有匹配的 .DLL 檔案。</span><span class="sxs-lookup"><span data-stu-id="7df16-432">The provider must have an assembly that has an actual backing .NET .dll file with a matching .dll file on disk.</span></span>
 
-## <a name="rules-and-limitations"></a><span data-ttu-id="e62b4-433">規則和限制</span><span class="sxs-lookup"><span data-stu-id="e62b4-433">Rules and Limitations</span></span>
+## <a name="rules-and-limitations"></a><span data-ttu-id="7df16-433">規則和限制</span><span class="sxs-lookup"><span data-stu-id="7df16-433">Rules and Limitations</span></span>
 
-<span data-ttu-id="e62b4-434">當您撰寫型別提供者時，請記住下列規則和限制。</span><span class="sxs-lookup"><span data-stu-id="e62b4-434">When you write type providers, keep the following rules and limitations in mind.</span></span>
+<span data-ttu-id="7df16-434">編寫類型提供程式時，請記住以下規則和限制。</span><span class="sxs-lookup"><span data-stu-id="7df16-434">When you write type providers, keep the following rules and limitations in mind.</span></span>
 
-### <a name="provided-types-must-be-reachable"></a><span data-ttu-id="e62b4-435">提供的類型必須是可連線的</span><span class="sxs-lookup"><span data-stu-id="e62b4-435">Provided types must be reachable</span></span>
+### <a name="provided-types-must-be-reachable"></a><span data-ttu-id="7df16-435">提供的類型必須可到達</span><span class="sxs-lookup"><span data-stu-id="7df16-435">Provided types must be reachable</span></span>
 
-<span data-ttu-id="e62b4-436">所有提供的類型都應該可從非嵌套的類型連線。</span><span class="sxs-lookup"><span data-stu-id="e62b4-436">All provided types should be reachable from the non-nested types.</span></span> <span data-ttu-id="e62b4-437">在呼叫 `TypeProviderForNamespaces` 的函式或呼叫 `AddNamespace`時，會提供非嵌套的類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-437">The non-nested types are given in the call to the `TypeProviderForNamespaces` constructor or a call to `AddNamespace`.</span></span> <span data-ttu-id="e62b4-438">例如，如果提供者提供 `StaticClass.P : T`的類型，您必須確定 T 是非嵌套的類型，或在其底下嵌套。</span><span class="sxs-lookup"><span data-stu-id="e62b4-438">For example, if the provider provides a type `StaticClass.P : T`, you must ensure that T is either a non-nested type or nested under one.</span></span>
+<span data-ttu-id="7df16-436">所有提供的類型都應從非巢狀型別中進行。</span><span class="sxs-lookup"><span data-stu-id="7df16-436">All provided types should be reachable from the non-nested types.</span></span> <span data-ttu-id="7df16-437">非巢狀型別在對`TypeProviderForNamespaces`建構函式的調用或對`AddNamespace`的調用中給出。</span><span class="sxs-lookup"><span data-stu-id="7df16-437">The non-nested types are given in the call to the `TypeProviderForNamespaces` constructor or a call to `AddNamespace`.</span></span> <span data-ttu-id="7df16-438">例如，如果提供程式提供類型`StaticClass.P : T`，則必須確保 T 是非巢狀型別或嵌套在一個類型下。</span><span class="sxs-lookup"><span data-stu-id="7df16-438">For example, if the provider provides a type `StaticClass.P : T`, you must ensure that T is either a non-nested type or nested under one.</span></span>
 
-<span data-ttu-id="e62b4-439">例如，某些提供者具有靜態類別，例如包含這些 `T1, T2, T3, ...` 類型的 `DataTypes`。</span><span class="sxs-lookup"><span data-stu-id="e62b4-439">For example, some providers have a static class such as `DataTypes` that contain these `T1, T2, T3, ...` types.</span></span> <span data-ttu-id="e62b4-440">否則，錯誤會指出已找到元件 A 中類型 T 的參考，但在該元件中找不到類型。</span><span class="sxs-lookup"><span data-stu-id="e62b4-440">Otherwise, the error says that a reference to type T in assembly A was found, but the type couldn't be found in that assembly.</span></span> <span data-ttu-id="e62b4-441">如果出現此錯誤，請確認您的所有子類型都可以從提供者類型中取得。</span><span class="sxs-lookup"><span data-stu-id="e62b4-441">If this error appears, verify that all your subtypes can be reached from the provider types.</span></span> <span data-ttu-id="e62b4-442">注意：這些 `T1, T2, T3...` 類型稱為 *「即時」類型。*</span><span class="sxs-lookup"><span data-stu-id="e62b4-442">Note: These `T1, T2, T3...` types are referred to as the *on-the-fly* types.</span></span> <span data-ttu-id="e62b4-443">請記得將它們放在可存取的命名空間或父類型中。</span><span class="sxs-lookup"><span data-stu-id="e62b4-443">Remember to put them in an accessible namespace or a parent type.</span></span>
+<span data-ttu-id="7df16-439">例如，某些提供程式具有包含這些`DataTypes``T1, T2, T3, ...`類型的靜態類。</span><span class="sxs-lookup"><span data-stu-id="7df16-439">For example, some providers have a static class such as `DataTypes` that contain these `T1, T2, T3, ...` types.</span></span> <span data-ttu-id="7df16-440">否則，錯誤表示在程式集 A 中找到對類型 T 的引用，但在該程式集中找不到該類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-440">Otherwise, the error says that a reference to type T in assembly A was found, but the type couldn't be found in that assembly.</span></span> <span data-ttu-id="7df16-441">如果出現此錯誤，請驗證可以從提供程式類型中到達所有子類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-441">If this error appears, verify that all your subtypes can be reached from the provider types.</span></span> <span data-ttu-id="7df16-442">注意：這些`T1, T2, T3...`類型稱為*動態*類型。</span><span class="sxs-lookup"><span data-stu-id="7df16-442">Note: These `T1, T2, T3...` types are referred to as the *on-the-fly* types.</span></span> <span data-ttu-id="7df16-443">請記住將它們放在可訪問的命名空間或父類型中。</span><span class="sxs-lookup"><span data-stu-id="7df16-443">Remember to put them in an accessible namespace or a parent type.</span></span>
 
-### <a name="limitations-of-the-type-provider-mechanism"></a><span data-ttu-id="e62b4-444">型別提供者機制的限制</span><span class="sxs-lookup"><span data-stu-id="e62b4-444">Limitations of the Type Provider Mechanism</span></span>
+### <a name="limitations-of-the-type-provider-mechanism"></a><span data-ttu-id="7df16-444">類型提供程式機制的限制</span><span class="sxs-lookup"><span data-stu-id="7df16-444">Limitations of the Type Provider Mechanism</span></span>
 
-<span data-ttu-id="e62b4-445">中F#的型別提供者機制具有下列限制：</span><span class="sxs-lookup"><span data-stu-id="e62b4-445">The type provider mechanism in F# has the following limitations:</span></span>
+<span data-ttu-id="7df16-445">F# 中的類型提供程式機制具有以下限制：</span><span class="sxs-lookup"><span data-stu-id="7df16-445">The type provider mechanism in F# has the following limitations:</span></span>
 
-- <span data-ttu-id="e62b4-446">中F#類型提供者的基礎結構不支援提供的泛型型別或提供的泛型方法。</span><span class="sxs-lookup"><span data-stu-id="e62b4-446">The underlying infrastructure for type providers in F# doesn't support provided generic types or provided generic methods.</span></span>
+- <span data-ttu-id="7df16-446">F# 中類型提供程式的基礎基礎結構不支援提供泛型型別或提供泛型方法。</span><span class="sxs-lookup"><span data-stu-id="7df16-446">The underlying infrastructure for type providers in F# doesn't support provided generic types or provided generic methods.</span></span>
 
-- <span data-ttu-id="e62b4-447">此機制不支援具有靜態參數的巢狀型別。</span><span class="sxs-lookup"><span data-stu-id="e62b4-447">The mechanism doesn't support nested types with static parameters.</span></span>
+- <span data-ttu-id="7df16-447">該機制不支援具有靜態參數的巢狀型別。</span><span class="sxs-lookup"><span data-stu-id="7df16-447">The mechanism doesn't support nested types with static parameters.</span></span>
 
-## <a name="development-tips"></a><span data-ttu-id="e62b4-448">開發秘訣</span><span class="sxs-lookup"><span data-stu-id="e62b4-448">Development Tips</span></span>
+## <a name="development-tips"></a><span data-ttu-id="7df16-448">開發秘訣</span><span class="sxs-lookup"><span data-stu-id="7df16-448">Development Tips</span></span>
 
-<span data-ttu-id="e62b4-449">在開發過程中，您可能會發現下列秘訣很有説明：</span><span class="sxs-lookup"><span data-stu-id="e62b4-449">You might find the following tips helpful during the development process:</span></span>
+<span data-ttu-id="7df16-449">您可能會發現以下提示在開發過程中很有説明：</span><span class="sxs-lookup"><span data-stu-id="7df16-449">You might find the following tips helpful during the development process:</span></span>
 
-### <a name="run-two-instances-of-visual-studio"></a><span data-ttu-id="e62b4-450">執行 Visual Studio 的兩個實例</span><span class="sxs-lookup"><span data-stu-id="e62b4-450">Run two instances of Visual Studio</span></span>
+### <a name="run-two-instances-of-visual-studio"></a><span data-ttu-id="7df16-450">運行視覺化工作室的兩個實例</span><span class="sxs-lookup"><span data-stu-id="7df16-450">Run two instances of Visual Studio</span></span>
 
-<span data-ttu-id="e62b4-451">您可以在一個實例中開發類型提供者，並在另一個實例中測試該提供者，因為測試 IDE 將會鎖定 .dll 檔案，以避免重建類型提供者。</span><span class="sxs-lookup"><span data-stu-id="e62b4-451">You can develop the type provider in one instance and test the provider in the other because the test IDE will take a lock on the .dll file that prevents the type provider from being rebuilt.</span></span> <span data-ttu-id="e62b4-452">因此，在第一個實例中建立提供者時，您必須關閉 Visual Studio 的第二個實例，然後您必須在建立提供者之後重新開啟第二個實例。</span><span class="sxs-lookup"><span data-stu-id="e62b4-452">Thus, you must close the second instance of Visual Studio while the provider is built in the first instance, and then you must reopen the second instance after the provider is built.</span></span>
+<span data-ttu-id="7df16-451">您可以在一個實例中開發類型提供程式，並在另一個實例中測試提供程式，因為測試 IDE 將對 .DLL 檔案進行鎖定，以防止重新組建類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-451">You can develop the type provider in one instance and test the provider in the other because the test IDE will take a lock on the .dll file that prevents the type provider from being rebuilt.</span></span> <span data-ttu-id="7df16-452">因此，在第一個實例中生成提供程式時，必須關閉 Visual Studio 的第二個實例，然後在構建提供程式後重新打開第二個實例。</span><span class="sxs-lookup"><span data-stu-id="7df16-452">Thus, you must close the second instance of Visual Studio while the provider is built in the first instance, and then you must reopen the second instance after the provider is built.</span></span>
 
-### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a><span data-ttu-id="e62b4-453">使用 fsc 調用的 Debug 型別提供者</span><span class="sxs-lookup"><span data-stu-id="e62b4-453">Debug type providers by using invocations of fsc.exe</span></span>
+### <a name="debug-type-providers-by-using-invocations-of-fscexe"></a><span data-ttu-id="7df16-453">使用 fsc.exe 調用調試類型提供程式</span><span class="sxs-lookup"><span data-stu-id="7df16-453">Debug type providers by using invocations of fsc.exe</span></span>
 
-<span data-ttu-id="e62b4-454">您可以使用下列工具來叫用型別提供者：</span><span class="sxs-lookup"><span data-stu-id="e62b4-454">You can invoke type providers by using the following tools:</span></span>
+<span data-ttu-id="7df16-454">您可以使用以下工具調用類型提供程式：</span><span class="sxs-lookup"><span data-stu-id="7df16-454">You can invoke type providers by using the following tools:</span></span>
 
-- <span data-ttu-id="e62b4-455">fsc .exe （ F#命令列編譯器）</span><span class="sxs-lookup"><span data-stu-id="e62b4-455">fsc.exe (The F# command line compiler)</span></span>
+- <span data-ttu-id="7df16-455">fsc.exe（F# 命令列編譯器）</span><span class="sxs-lookup"><span data-stu-id="7df16-455">fsc.exe (The F# command line compiler)</span></span>
 
-- <span data-ttu-id="e62b4-456">fsi.exe .exe （ F#互動式編譯器）</span><span class="sxs-lookup"><span data-stu-id="e62b4-456">fsi.exe (The F# Interactive compiler)</span></span>
+- <span data-ttu-id="7df16-456">fsi.exe（F# 互動式編譯器）</span><span class="sxs-lookup"><span data-stu-id="7df16-456">fsi.exe (The F# Interactive compiler)</span></span>
 
-- <span data-ttu-id="e62b4-457">devenv （Visual Studio）</span><span class="sxs-lookup"><span data-stu-id="e62b4-457">devenv.exe (Visual Studio)</span></span>
+- <span data-ttu-id="7df16-457">德文夫.exe（視覺工作室）</span><span class="sxs-lookup"><span data-stu-id="7df16-457">devenv.exe (Visual Studio)</span></span>
 
-<span data-ttu-id="e62b4-458">您通常可以在測試腳本檔案（例如 run.fsx）上使用 fsc，輕鬆地對型別提供者進行最簡單的偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="e62b4-458">You can often debug type providers most easily by using fsc.exe on a test script file (for example, script.fsx).</span></span> <span data-ttu-id="e62b4-459">您可以從命令提示字元啟動偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="e62b4-459">You can launch a debugger from a command prompt.</span></span>
+<span data-ttu-id="7df16-458">通常，通過在測試指令檔（例如，腳本.fsx）上使用 fsc.exe，您通常最容易調試類型提供程式。</span><span class="sxs-lookup"><span data-stu-id="7df16-458">You can often debug type providers most easily by using fsc.exe on a test script file (for example, script.fsx).</span></span> <span data-ttu-id="7df16-459">可以從命令提示符啟動調試器。</span><span class="sxs-lookup"><span data-stu-id="7df16-459">You can launch a debugger from a command prompt.</span></span>
 
 ```console
 devenv /debugexe fsc.exe script.fsx
 ```
 
-  <span data-ttu-id="e62b4-460">您可以使用列印到 stdout 記錄。</span><span class="sxs-lookup"><span data-stu-id="e62b4-460">You can use print-to-stdout logging.</span></span>
+  <span data-ttu-id="7df16-460">您可以使用列印到列印的日誌記錄。</span><span class="sxs-lookup"><span data-stu-id="7df16-460">You can use print-to-stdout logging.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="e62b4-461">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e62b4-461">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7df16-461">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7df16-461">See also</span></span>
 
-- [<span data-ttu-id="e62b4-462">類型提供者</span><span class="sxs-lookup"><span data-stu-id="e62b4-462">Type Providers</span></span>](index.md)
-- [<span data-ttu-id="e62b4-463">型別提供者 SDK</span><span class="sxs-lookup"><span data-stu-id="e62b4-463">The Type Provider SDK</span></span>](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
+- [<span data-ttu-id="7df16-462">類型提供者</span><span class="sxs-lookup"><span data-stu-id="7df16-462">Type Providers</span></span>](index.md)
+- [<span data-ttu-id="7df16-463">類型提供程式 SDK</span><span class="sxs-lookup"><span data-stu-id="7df16-463">The Type Provider SDK</span></span>](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
