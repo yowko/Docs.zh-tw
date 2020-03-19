@@ -1,20 +1,20 @@
 ---
 title: Byrefs
-description: 深入瞭解中F#的 byref 和 byref 型別，其適用于低層級的程式設計。
+description: 瞭解 F# 中的 byref 和類似 byref 的類型，這些類型用於低級程式設計。
 ms.date: 11/04/2019
-ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 527f465ee87fe153a2deae1306b6730531dc4123
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092784"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187044"
 ---
 # <a name="byrefs"></a>Byrefs
 
-F#有兩個主要的功能領域，可應付低層級程式設計的空間：
+F# 具有在低級程式設計領域處理的兩個主要功能領域：
 
-* `byref`/`inref`/`outref` 類型，也就是 managed 指標。 它們對使用方式有限制，因此您無法編譯在執行時間不正確程式。
-* `byref`類似的結構，這是具有類似的語義和 `byref<'T>`的編譯時間限制的[結構](structures.md)。 其中一個範例是 <xref:System.Span%601>。
+* `byref` /類型`inref`，/託管`outref`指標。 它們對使用有限制，因此您不能編譯在運行時不正確程式。
+* 類似`byref`結構的結構，它是具有與 相似的語義和相同的編譯時間限制[的結構](structures.md)`byref<'T>`。 一個例子是<xref:System.Span%601>。
 
 ## <a name="syntax"></a>語法
 
@@ -39,17 +39,17 @@ type S(count1: int, count2: int) =
 
 ## <a name="byref-inref-and-outref"></a>Byref、inref 和 outref
 
-有三種形式的 `byref`：
+有三種形式： `byref`
 
-* `inref<'T>`，這是用來讀取基礎值的 managed 指標。
-* `outref<'T>`，用於寫入基礎值的 managed 指標。
-* `byref<'T>`，這是用來讀取和寫入基礎值的 managed 指標。
+* `inref<'T>`，用於讀取基礎值的託管指標。
+* `outref<'T>`，用於寫入基礎值的託管指標。
+* `byref<'T>`，用於讀取和寫入基礎值的託管指標。
 
-`byref<'T>` 可以在預期 `inref<'T>` 的情況下傳遞。 同樣地，您可以在預期 `outref<'T>` 的位置傳遞 `byref<'T>`。
+`byref<'T>`可以傳遞預期 為`inref<'T>`的 。 同樣，`byref<'T>`可以傳遞預期 為`outref<'T>`的 。
 
-## <a name="using-byrefs"></a>使用 byref
+## <a name="using-byrefs"></a>使用參考
 
-若要使用 `inref<'T>`，您需要取得具有 `&`的指標值：
+要使用`inref<'T>`， 需要獲取具有 的`&`指標值：
 
 ```fsharp
 open System
@@ -62,7 +62,7 @@ let usage =
     f &dt // Pass a pointer to 'dt'
 ```
 
-若要使用 `outref<'T>` 或 `byref<'T>`來寫入指標，您也必須將此值設為您抓取 `mutable`的指標。
+要使用`outref<'T>`或`byref<'T>`寫入指標，還必須使獲取指向`mutable`的指標的值。
 
 ```fsharp
 open System
@@ -78,9 +78,9 @@ let mutable dt = DateTime.Now
 f &dt
 ```
 
-如果您只是要撰寫指標，而不是讀取它，請考慮使用 `outref<'T>`，而不是 `byref<'T>`。
+如果只編寫指標而不是讀取指標，請考慮使用`outref<'T>`而不是`byref<'T>`。
 
-### <a name="inref-semantics"></a>Inref 的語義
+### <a name="inref-semantics"></a>Inref 語義
 
 請考慮下列程式碼：
 
@@ -88,53 +88,53 @@ f &dt
 let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
-就語義而言，這表示下列各項：
+從語義上講，這意味著以下內容：
 
-* `x` 指標的持有者可能只會使用它來讀取值。
-* 取得至 `SomeStruct` 中的 `struct` 欄位的任何指標都會提供類型 `inref<_>`。
+* 指標的`x`持有者只能使用它讀取該值。
+* 任何獲取到`struct`嵌套在其中`SomeStruct`的欄位的指標都是`inref<_>`給定的類型。
 
-以下也是 true：
+以下內容也是如此：
 
-* 不會隱含其他執行緒或別名不具有 `x`的寫入存取權。
-* 這並不表示 `SomeStruct` 不會因為 `inref``x` 而變。
+* 其他執行緒或別名對 沒有寫入存取權限，這沒有任何含義`x`。
+* 沒有任何暗示是`SomeStruct`不變的`x`，因為是一個。 `inref`
 
-不過，如果F# **是不**變的實值型別，則會將 `this` 指標推斷為 `inref`。
+但是，**對於不可變**的 F# 數值型別，`this`將指標推斷為`inref`。
 
-所有這些規則都表示 `inref` 指標的持有者可能不會修改所指向之記憶體的立即內容。
+所有這些規則加在一`inref`起意味著指標的持有者不能修改指向的記憶體的即時內容。
 
-### <a name="outref-semantics"></a>Outref 的語義
+### <a name="outref-semantics"></a>外部參照語義
 
-`outref<'T>` 的目的是要指出指標應該只寫入至。 不預期地，`outref<'T>` 允許讀取基礎值，而不論其名稱。 這是為了相容性之故。 就語義而言，`outref<'T>` 與 `byref<'T>`不同。
+的目的是`outref<'T>`指示指標應只寫入。 出乎意料的是`outref<'T>`，允許讀取基礎值，儘管它的名稱。 這是出於相容性目的。 從語義上講`outref<'T>`，與 沒有什麼`byref<'T>`不同。
 
-### <a name="interop-with-c"></a>與 C\# 的 Interop
+### <a name="interop-with-c"></a>與 C 的互通\#
 
-C#除了 `ref` 傳回以外，支援 `in ref` 和 `out ref` 關鍵字。 下表顯示如何F#解讀發出的C#內容：
+除了`in ref``ref`返回之外，C# 還支援 和`out ref`關鍵字。 下表顯示了 F# 如何解釋 C# 發出的內容：
 
-|C#建構|F#推測|
+|C# 構造|F# 推斷|
 |------------|---------|
-|`ref` 傳回值|`outref<'T>`|
-|`ref readonly` 傳回值|`inref<'T>`|
+|`ref`傳回值|`outref<'T>`|
+|`ref readonly`傳回值|`inref<'T>`|
 |`in ref` 參數|`inref<'T>`|
 |`out ref` 參數|`outref<'T>`|
 
-下表顯示發出的F#內容：
+下表顯示了 F# 發出的內容：
 
-|F#建構|發出的結構|
+|F# 構造|已發出構造|
 |------------|-----------------|
-|`inref<'T>` 引數|在引數上 `[In]` 屬性|
-|`inref<'T>` 傳回|值 `modreq` 屬性|
-|抽象位置或執行中的 `inref<'T>`|`modreq` 引數或傳回|
-|`outref<'T>` 引數|在引數上 `[Out]` 屬性|
+|`inref<'T>` 引數|`[In]`參數上的屬性|
+|`inref<'T>`返回|`modreq`值的屬性|
+|`inref<'T>`抽象插槽或實現|`modreq`在參數或返回|
+|`outref<'T>` 引數|`[Out]`參數上的屬性|
 
-### <a name="type-inference-and-overloading-rules"></a>型別推斷和多載規則
+### <a name="type-inference-and-overloading-rules"></a>型別推斷和重載規則
 
-在下列情況下， F#編譯器會推斷 `inref<'T>` 型別：
+在`inref<'T>`以下情況下，F# 編譯器會推斷類型：
 
-1. 具有 `IsReadOnly` 屬性的 .NET 參數或傳回型別。
-2. 結構型別上沒有可變欄位的 `this` 指標。
-3. 衍生自另一個 `inref<_>` 指標之記憶體位置的位址。
+1. 具有`IsReadOnly`屬性的 .NET 參數或返回類型。
+2. 沒有`this`可變欄位的結構類型的指標。
+3. 從其他`inref<_>`指標派生的記憶體位置的位址。
 
-當取得 `inref` 的隱含位址時，會慣用具有類型 `SomeType` 引數的多載，而此多載具有類型 `inref<SomeType>`的引數。 例如：
+當採用 隱式位址`inref`時，具有類型`SomeType`參數的重載優先于具有類型`inref<SomeType>`類型的重載。 例如：
 
 ```fsharp
 type C() =
@@ -148,11 +148,11 @@ let v =  C.M(res)
 let v2 =  C.M2(res, 4)
 ```
 
-在這兩種情況下，會解析採用 `System.DateTime` 的多載，而不是採用 `inref<System.DateTime>`的多載。
+在這兩種情況下，重`System.DateTime`載將得到解決，而不是重載。 `inref<System.DateTime>`
 
 ## <a name="byref-like-structs"></a>類似 Byref 的結構
 
-除了 `byref`/`inref`/`outref` 三個以外，您還可以定義自己的結構，以符合類似 `byref`的語義。 這會透過 <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> 屬性來完成：
+`byref` /除了`outref``byref`三者組之外，您還可以定義自己的結構，這些結構可以遵循類似語義。 `inref` / 這與屬性一<xref:System.Runtime.CompilerServices.IsByRefLikeAttribute>起完成：
 
 ```fsharp
 open System
@@ -164,31 +164,31 @@ type S(count1: Span<int>, count2: Span<int>) =
     member x.Count2 = count2
 ```
 
-`IsByRefLike` 不表示 `Struct`。 這兩者都必須存在於類型上。
+`IsByRefLike`並不意味著`Struct`. 兩者都必須存在於類型上。
 
-中F#的「`byref`贊」結構是堆疊系結的實值型別。 它永遠不會在受控堆積上配置。 `byref`類似的結構對高效能程式設計很有用，因為它會強制執行一組有關存留期和非捕捉的強式檢查。 規則包括：
+F#`byref`中的"類似"結構是一種堆疊綁定數值型別。 它永遠不會在託管堆上分配。 `byref`類似結構對於高性能程式設計非常有用，因為它通過一組有關存留期和非捕獲的強檢查強制執行。 規則包括：
 
-* 它們可用來做為函式參數、方法參數、區域變數、方法傳回。
-* 它們不能是類別或一般結構的靜態或實例成員。
-* 它們無法由任何結束結構（`async` 方法或 lambda 運算式）來捕捉。
-* 它們不能用來做為泛型參數。
+* 它們可用作函數參數、方法參數、區域變數、方法返回。
+* 它們不能是類的靜態或實例成員或正常結構。
+* 它們不能被任何閉包構造（`async`方法或 lambda 運算式）捕獲。
+* 它們不能用作泛型參數。
 
-這最後一點對F#管線型程式設計很重要，因為 `|>` 是參數化其輸入類型的泛型函式。 這項限制可能會在未來 `|>` 放寬，因為它是內嵌的，而且不會對其主體中的非內嵌泛型函式進行任何呼叫。
+最後一點對於 F# 管道樣式程式設計至關重要，用於`|>`參數化其輸入類型的泛型函數也是如此。 將來可能會放寬`|>`此限制，因為它是內聯的，並且不會對其正文中的非內聯泛型函數進行任何調用。
 
-雖然這些規則會嚴格限制使用方式，但它們會以安全的方式滿足高效能計算的承諾。
+儘管這些規則嚴格限制使用，但它們這樣做是為了以安全的方式實現高性能計算的承諾。
 
-## <a name="byref-returns"></a>Byref 傳回
+## <a name="byref-returns"></a>Byref 返回
 
-可以產生和F#取用來自函數或成員的 Byref 回傳。 使用 `byref`傳回的方法時，會隱含地取值此值。 例如：
+可以生成和使用 F# 函數或成員的 Byref 返回。 使用`byref`-返回方法時，將隱式取消引用該值。 例如：
 
 ```fsharp
-let squareAndPrint (data : byref<int>) = 
+let squareAndPrint (data : byref<int>) =
     let squared = data*data    // data is implicitly dereferenced
     printfn "%d" squared
 ```
 
-若要傳回值 byref，包含值的變數必須比目前的範圍長。
-此外，若要傳回 byref，請使用 `&value` （其中 value 是存留時間超過目前範圍的變數）。
+要傳回值 byref，包含該值的變數必須比當前作用域長。
+此外，要返回 byref，`&value`請使用 （其中值是比當前作用域長的變數）。
 
 ```fsharp
 let mutable sum = 0
@@ -198,9 +198,9 @@ let safeSum (bytes: Span<byte>) =
     &sum  // sum lives longer than the scope of this function.
 ```
 
-若要避免隱含取值，例如透過多個連鎖呼叫傳遞參考，請使用 `&x` （其中 `x` 是值）。
+為了避免隱式取消引用（例如通過多個連結調用傳遞引用），請使用`&x`（值在哪裡）。 `x`
 
-您也可以直接指派給 return `byref`。 請考慮下列（高度命令式）程式：
+您也可以直接分配給返回`byref`。 請考慮以下（高度必要）計畫：
 
 ```fsharp
 type C() =
@@ -236,9 +236,9 @@ Original sequence: 1 3 7 15 31 63 127 255 511 1023
 New sequence:      1 3 7 30 31 63 127 255 511 1023
 ```
 
-## <a name="scoping-for-byrefs"></a>Byref 的範圍
+## <a name="scoping-for-byrefs"></a>位元組範圍
 
-`let`系結的值不能有超過其定義範圍的參考。 例如，不允許下列情況：
+`let`綁定值不能使其引用超過定義該值的範圍。 例如，不允許使用以下內容：
 
 ```fsharp
 let test2 () =
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-這會根據您是否使用優化進行編譯，而無法取得不同的結果。
+這可以防止您獲得不同的結果，具體取決於是否使用優化進行編譯。

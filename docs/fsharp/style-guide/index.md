@@ -1,48 +1,48 @@
 ---
-title: F#風格指南
-description: 了解的良好的五個原則F#程式碼。
+title: F# 樣式指南
+description: 瞭解良好 F# 代碼的五個原則。
 ms.date: 12/10/2018
 ms.openlocfilehash: 9f47257626e04b09b546de2ae315d48d791678be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901845"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400264"
 ---
-# <a name="f-style-guide"></a>F#風格指南
+# <a name="f-style-guide"></a>F# 樣式指南
 
-下列文章描述格式的指導方針F#程式碼和主題的指導方針的語言功能及如何使用它們。
+以下文章介紹了 F# 代碼的格式設置指南以及語言功能的專題指南以及如何使用它們。
 
-本指南已編寫，以使用F#在大型程式碼基底與各種程式設計人員組成的群組。 本指導方針通常會導致成功使用F#，而且經過一段時間的程式的需求變更時，減少挫折。
+本指南是根據在具有不同程式師組的大型代碼庫中使用 F# 制定的。 本指南通常會導致 F# 的成功使用，並最大限度地減少程式要求隨時間變化時的挫折感。
 
-## <a name="five-principles-of-good-f-code"></a>為 「 好的五個原則F#程式碼
+## <a name="five-principles-of-good-f-code"></a>良好 F# 代碼的五個原則
 
-請記住您撰寫的任何時間的下列原則F#程式碼，尤其是會隨著時間而變更的系統。 在其他文章中的指引的每個片段，源自於這些五個點。
+在編寫 F# 代碼時，請記住以下原則，尤其是在隨時間變化的系統中。 進一步文章中的每一條指導都源于這五點。
 
-1. **良好F#程式碼是簡潔、 易懂且可組合**
+1. **好的 F# 代碼簡潔、富有表現力且可組合**
 
-    F#有許多功能可讓您在短短幾行程式碼的動作，並重複使用的一般功能。 F#核心程式庫也包含許多有用的型別及使用資料的常見集合功能。 撰寫您自己的函式和中的F#核心程式庫 （或其他程式庫） 是慣用的例行工作F#程式設計。 一般而言，如果您可以在短短幾行程式碼的問題的解決方案來表示其他開發人員 （或您未來的自助） 會令人激賞。 此外，強烈建議您使用的程式庫，例如 FSharp.Core， [vast 的.NET 程式庫](../../../api/index.md)，F#上，執行或第三方封裝上的[NuGet](https://www.nuget.org/)當您需要執行重要工作。
+    F# 具有許多功能，允許您以更少的程式碼表示操作並重用通用功能。 F# 核心庫還包含許多有用的類型和函數，用於處理常見的資料集合。 您自己的函數和 F# 核心庫（或其他庫）中的函數的組成是常規慣用 F# 程式設計的一部分。 通常，如果能夠用更少的程式碼來表達問題的解決方案，其他開發人員（或您未來的自我）將非常感激。 強烈建議您使用 FSharp.Core、F# 運行[的龐大 .NET 庫](../../../api/index.md)等庫，或者當您需要執行一項不平凡的任務時，使用[NuGet](https://www.nuget.org/)上的協力廠商包。
 
-2. **良好F#程式碼可互通**
+2. **好的 F# 代碼是可交互操作的**
 
-    交互操作可能需要多個表單，包括使用不同語言的程式碼。 與交互操作的其他呼叫端程式碼的界限是關鍵的部分，以取得正確的即使呼叫端也會在F#。 在撰寫F#，您應該一律認為關於如何其他程式碼會呼叫您要撰寫，包括如果從另一個語言，例如程式碼C#。 [ F#元件的設計指導方針](component-design-guidelines.md)說明詳細的互通性。
+    交互操作可以採取多種形式，包括使用不同語言的代碼。 其他調用方交互操作的代碼邊界是正確獲取的關鍵區段，即使調用方也位於 F#中也是如此。 編寫 F#時，應始終考慮如何將其他代碼調用您編寫的代碼，包括它們是否從其他語言（如 C#）調用。 [F# 元件設計指南](component-design-guidelines.md)詳細介紹了互通性。
 
-3. **良好F#程式碼會建立物件程式設計使用，不物件方向**
+3. **好的 F# 代碼使用物件程式設計，而不是物件導向**
 
-    F#提供完整的支援，使用物件進行程式設計，在.NET 中，包括[類別](../language-reference/classes.md)，[介面](../language-reference/interfaces.md)，[存取修飾詞](../language-reference/access-control.md)，[抽象類別](../language-reference/abstract-classes.md)等等。 針對更複雜功能的程式碼，例如函式，必須了解內容，物件可以輕鬆地將封裝內容資訊的函式不能的方式。 這類功能[選擇性參數](../language-reference/members/methods.md#optional-arguments)小心地使用並[多載](../language-reference/members/methods.md#overloaded-methods)可以取用這項功能的更輕鬆地進行呼叫端。
+    F# 完全支援使用 .NET 中的物件進行程式設計，包括[類](../language-reference/classes.md)、[介面](../language-reference/interfaces.md)、[訪問修改器](../language-reference/access-control.md)、[抽象類別](../language-reference/abstract-classes.md)等。 對於更複雜的功能代碼（如必須具有上下文感知功能的函數），物件可以輕鬆地以函數無法的方式封裝上下文資訊。 [可選參數](../language-reference/members/methods.md#optional-arguments)和謹慎使用[重載](../language-reference/members/methods.md#overloaded-methods)等功能可以使調用方更輕鬆地使用此功能。
 
-4. **良好F#程式碼會執行也不暴露變動**
+4. **良好的 F# 代碼在未暴露突變的情況下表現良好**
 
-    它是大家撰寫高效能的程式碼，您必須使用變化。 它是電腦的運作方式，畢竟。 這類程式碼通常是容易出錯且很難取得正確的。 避免公開給呼叫端的變化。 相反地，[建置功能的介面，它會隱藏的變化型實作](conventions.md#performance)效能至關重要。
+    編寫高性能代碼，必須使用突變，這已不為人有。 畢竟，這是電腦的工作原理。 此類代碼通常容易出錯，難以正確。 避免向呼叫者公開突變。 相反，[構建一個功能介面，在性能至關重要時隱藏基於突變的實現](conventions.md#performance)。
 
-5. **良好F#程式碼是靈活**
+5. **好的 F# 代碼是可工具的**
 
-    工具很寶貴，針對在大型程式碼基底，而且您可以撰寫F#程式碼，它可更有效地與F#語言的工具。 其中一個範例確保您不要濫用它使用點自由樣式的程式設計，以便偵錯工具可以進行檢查的中繼值。 另一個範例使用[XML 文件註解](../language-reference/xml-documentation.md)描述建構，使得在呼叫站台，在編輯器中的工具提示可以顯示這些註解。 一定會想要如何您的程式碼來讀取、 巡覽、 偵錯，並操作其工具與其他程式設計人員。
+    工具對於在大型代碼庫中工作非常寶貴，您可以編寫 F# 代碼，以便可以更有效地將其用於 F# 語言工具。 一個例子是確保您不會使用無點程式設計樣式過度使用，以便可以使用調試器檢查中間值。 另一個示例是使用[XML 文檔注釋](../language-reference/xml-documentation.md)來描述構造，以便編輯器中的工具提示可以在調用網站顯示這些注釋。 始終思考如何被其他程式師使用他們的工具讀取、導航、調試和操作代碼。
 
 ## <a name="next-steps"></a>後續步驟
 
-[ F#程式碼格式設定指導方針](formatting.md)指導您如何格式化程式碼，使其易於閱讀。
+[F# 代碼格式設置指南](formatting.md)提供有關如何設置代碼格式以便易於閱讀的指導。
 
-[ F#程式碼撰寫慣例](conventions.md)提供的指引F#程式設計慣用語有助於長期維護較大的F#程式碼基底。
+[F# 編碼約定](conventions.md)為 F# 程式設計習慣用語提供指導，這將有助於對較大的 F# 代碼庫進行長期維護。
 
-[ F#元件的設計指導方針](component-design-guidelines.md)提供撰寫指引F#元件，例如程式庫。
+[F# 元件設計指南](component-design-guidelines.md)為編寫 F# 元件（如庫）提供了指南。

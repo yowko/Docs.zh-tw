@@ -1,21 +1,21 @@
 ---
 title: 匿名記錄
-description: 瞭解如何使用「結構和使用匿名記錄」，這是一種可協助運算元據的語言功能。
+description: 瞭解如何使用構造和使用匿名記錄，匿名記錄是説明處理資料的語言功能。
 ms.date: 06/12/2019
-ms.openlocfilehash: 061fd3279c84b9a3161c687d9392947ee7ce9c83
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ef3aa8fccdb6ff406542932816e4138040845a59
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453022"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187486"
 ---
 # <a name="anonymous-records"></a>匿名記錄
 
-匿名記錄是不需要在使用前宣告之命名值的簡單匯總。 您可以將它們宣告為結構或參考型別。 它們預設是參考型別。
+匿名記錄是命名值的簡單聚合，在使用前不需要聲明。 您可以將它們聲明為結構類型或參考型別。 預設情況下，它們是參考型別。
 
 ## <a name="syntax"></a>語法
 
-下列範例示範匿名記錄語法。 以 `[item]` 分隔的專案是選擇性的。
+以下示例演示了匿名記錄語法。 項分隔為`[item]`可選。
 
 ```fsharp
 // Construct an anonymous record
@@ -30,9 +30,9 @@ let function-name (arg-name: [struct] {| Label1: Type1; Label2: Type2; ...|}) ..
 
 ## <a name="basic-usage"></a>基本使用方式
 
-匿名記錄最好視為不需要在F#具現化之前宣告的記錄類型。
+匿名記錄最好視為 F# 記錄類型，不需要在具現化之前聲明。
 
-例如，在這裡您可以如何與產生匿名記錄的函式互動：
+例如，在這裡，如何與生成匿名記錄的函數進行交互：
 
 ```fsharp
 open System
@@ -50,7 +50,7 @@ printfn "Circle with radius: %f has diameter %f, area %f, and circumference %f"
     r stats.Diameter stats.Area stats.Circumference
 ```
 
-下列範例會使用接受匿名記錄做為輸入的 `printCircleStats` 函式，在前一個程式中展開：
+下面的示例擴展了上一`printCircleStats`個示例，該函數將匿名記錄作為輸入：
 
 ```fsharp
 open System
@@ -71,7 +71,7 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-使用任何匿名記錄類型呼叫 `printCircleStats`，而不具有與輸入類型相同的「圖形」，將無法編譯：
+使用`printCircleStats`與輸入類型沒有相同"形狀"的任何匿名記錄類型的調用將無法編譯：
 
 ```fsharp
 printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
@@ -81,7 +81,7 @@ printCircleStats r {| Diameter = 2.0; Area = 4.0; MyCircumference = 12.566371 |}
 
 ## <a name="struct-anonymous-records"></a>結構匿名記錄
 
-匿名記錄也可以定義為具有選擇性 `struct` 關鍵字的結構。 下列範例會藉由產生和取用結構匿名記錄來增強前一個：
+匿名記錄也可以定義為使用可選`struct`關鍵字進行結構。 以下示例通過生成和使用結構匿名記錄來增強前一個示例：
 
 ```fsharp
 open System
@@ -104,9 +104,9 @@ let stats = getCircleStats r
 printCircleStats r stats
 ```
 
-### <a name="structness-inference"></a>Structness 推斷
+### <a name="structness-inference"></a>結構推理
 
-結構匿名記錄也允許「structness 推斷」，您不需要在呼叫位置指定 `struct` 關鍵字。 在此範例中，您會在呼叫 `printCircleStats`時省略 `struct` 關鍵字：
+結構匿名記錄還允許"結構推理"，其中不需要在呼叫網站指定`struct`關鍵字。 在此示例中，在調用`struct``printCircleStats`時刪除關鍵字：
 
 ```fsharp
 
@@ -117,11 +117,11 @@ let printCircleStats r (stats: struct {| Area: float; Circumference: float; Diam
 printCircleStats r {| Area = 4.0; Circumference = 12.6; Diameter = 12.6 |}
 ```
 
-反向模式-指定當輸入類型不是結構匿名記錄時 `struct`，將無法編譯。
+反向模式 （指定`struct`輸入類型何時不是結構匿名記錄 ） 將無法編譯。
 
-## <a name="embedding-anonymous-records-within-other-types"></a>在其他類型中內嵌匿名記錄
+## <a name="embedding-anonymous-records-within-other-types"></a>將匿名記錄嵌入其他類型的
 
-宣告其案例為記錄的[區分](discriminated-unions.md)等位是很有用的。 但是，如果記錄中的資料與「區分聯集」屬於相同類型，您就必須將所有類型定義為「相互遞迴」。 使用匿名記錄可避免這種限制。 以下是模式比對的範例型別和函式：
+聲明案例為記錄[的受歧視工會](discriminated-unions.md)是很有用的。 但是，如果記錄中的資料與受區別的聯合類型相同，則必須將所有類型定義為互遞迴。 使用匿名記錄可避免此限制。 以下是模式與它匹配的示例類型和函數：
 
 ```fsharp
 type FullName = { FirstName: string; LastName: string }
@@ -141,21 +141,21 @@ let getFirstName e =
 
 ## <a name="copy-and-update-expressions"></a>複製和更新運算式
 
-匿名記錄支援具有[複製和更新運算式](copy-and-update-record-expressions.md)的結構。 例如，以下說明如何建立可複製現有資料的匿名記錄新實例：
+匿名記錄支援使用[複製和更新運算式構建](copy-and-update-record-expressions.md)。 例如，下面介紹如何構造複製現有資料的匿名記錄的新實例：
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let data' = {| data with Y = 3 |}
 ```
 
-不過，與命名記錄不同的是，匿名記錄可讓您使用複製和更新運算式來建立完全不同的表單。 下列範例會採用先前範例中的相同匿名記錄，並將它展開為新的匿名記錄：
+但是，與命名記錄不同，匿名記錄允許您使用複製和更新運算式構造完全不同的表單。 以下示例採用上一示例中的相同匿名記錄，並將其擴展到新的匿名記錄：
 
 ```fsharp
 let data = {| X = 1; Y = 2 |}
 let expandedData = {| data with Z = 3 |} // Gives {| X=1; Y=2; Z=3 |}
 ```
 
-您也可以從命名的記錄實例中，建立匿名記錄：
+還可以從命名記錄實例構造匿名記錄：
 
 ```fsharp
 type R = { X: int }
@@ -163,7 +163,7 @@ let data = { X = 1 }
 let data' = {| data with Y = 2 |} // Gives {| X=1; Y=2 |}
 ```
 
-您也可以將資料複製到參考和結構匿名記錄：
+您還可以將資料複製到引用和結構匿名記錄：
 
 ```fsharp
 // Copy data from a reference record into a struct anonymous record
@@ -185,20 +185,20 @@ let data3 = struct {| data2 with Z = r2.X |}
 
 ## <a name="properties-of-anonymous-records"></a>匿名記錄的屬性
 
-匿名記錄具有許多特性，完全瞭解其使用方式是不可或缺的。
+匿名記錄具有許多特徵，這些特徵對於完全理解如何使用這些特徵至關重要。
 
-### <a name="anonymous-records-are-nominal"></a>匿名記錄為名義
+### <a name="anonymous-records-are-nominal"></a>匿名記錄是名義上的
 
-匿名記錄是[名義類型](https://en.wikipedia.org/wiki/Nominal_type_system)。 它們最好視為不需要前期宣告的命名[記錄](records.md)類型（也就是名義）。
+匿名記錄是[名義類型](https://en.wikipedia.org/wiki/Nominal_type_system)。 它們最好視為不需要預先聲明的命名[記錄](records.md)類型（也是名義上的）。
 
-請考慮下列包含兩個匿名記錄宣告的範例：
+請考慮以下包含兩個匿名記錄聲明的示例：
 
 ```fsharp
 let x = {| X = 1 |}
 let y = {| Y = 1 |}
 ```
 
-`x` 和 `y` 值的類型不同，而且彼此不相容。 它們不會 equatable，而且也無法比較。 為了說明這一點，請考慮名為的記錄對等用法：
+`x`和`y`值的類型不同，並且彼此不相容。 它們不相等，也不可比擬。 為了說明這一點，請考慮命名的記錄等效項：
 
 ```fsharp
 type X = { X: int }
@@ -208,11 +208,11 @@ let x = { X = 1 }
 let y = { Y = 1 }
 ```
 
-與匿名記錄相比，與對應的類型相等或比較時，與其命名的記錄對等專案之間，沒有任何本質上的差異。
+與命名的記錄等效項相比，匿名記錄在類型等效性或比較方面沒有任何內在區別。
 
-### <a name="anonymous-records-use-structural-equality-and-comparison"></a>匿名記錄使用結構相等和比較
+### <a name="anonymous-records-use-structural-equality-and-comparison"></a>匿名記錄使用結構相等性和比較
 
-就像記錄類型，匿名記錄在結構上是 equatable 且可比較的。 只有當所有組成型別都支援相等和比較（例如記錄類型）時，才會出現這種情況。 若要支援相等或比較，兩個匿名記錄必須具有相同的「圖形」。
+與記錄類型一樣，匿名記錄在結構上是等同的，並且具有可比性。 僅當所有組成類型都支援相等性和比較性（如記錄類型）時，才如此。 為了支援相等或比較，兩個匿名記錄必須具有相同的"形狀"。
 
 ```fsharp
 {| a = 1+1 |} = {| a = 2 |} // true
@@ -224,23 +224,23 @@ let y = { Y = 1 }
 
 ### <a name="anonymous-records-are-serializable"></a>匿名記錄可序列化
 
-您可以序列化匿名記錄，就像您可以使用命名的記錄一樣。 以下是使用[Newtonsoft](https://www.nuget.org/packages/Newtonsoft.Json/)的範例：
+您可以像使用命名記錄一樣序列化匿名記錄。 下面是一個使用[牛頓軟的示例。](https://www.nuget.org/packages/Newtonsoft.Json/)
 
 ```fsharp
 open Newtonsoft.Json
 
 let phillip' = {| name="Phillip"; age=28 |}
-let philStr = JsonConvert.SerializeObject(phillip') 
+let philStr = JsonConvert.SerializeObject(phillip')
 
 let phillip = JsonConvert.DeserializeObject<{|name: string; age: int|}>(philStr)
 printfn "Name: %s Age: %d" phillip.name phillip.age
 ```
 
-匿名記錄適用于透過網路傳送輕量資料，而不需要事先定義序列化/還原序列化類型的網域。
+匿名記錄可用於通過網路發送羽量級資料，而無需預先為序列化/反序列化類型定義域。
 
-### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a>匿名記錄與C#匿名型別相交互操作
+### <a name="anonymous-records-interoperate-with-c-anonymous-types"></a>匿名記錄與 C# 匿名型別交互操作
 
-您可以使用需要使用[ C#匿名型別](../../csharp/programming-guide/classes-and-structs/anonymous-types.md)的 .net API。 C#匿名型別是使用匿名記錄來與相交互操作的簡單類型。 下列範例顯示如何使用匿名記錄來呼叫需要匿名型別的[LINQ](../../csharp/programming-guide/concepts/linq/index.md)多載：
+可以使用需要使用[C# 匿名型別的](../../csharp/programming-guide/classes-and-structs/anonymous-types.md).NET API。 使用匿名記錄進行交互操作的 C# 匿名型別微不足道。 下面的示例演示如何使用匿名記錄來調用需要匿名型別的[LINQ](../../csharp/programming-guide/concepts/linq/index.md)重載：
 
 ```fsharp
 open System.Linq
@@ -251,26 +251,26 @@ for ng in nameGrouping do
     printfn "%s has first letter %c" ng.Name ng.FirstLetter
 ```
 
-在 .NET 中，有許多其他應用程式開發介面需要使用傳入匿名型別。 匿名記錄是您用來處理它們的工具。
+在 .NET 中使用許多其他 API 需要使用匿名型別傳遞。 匿名記錄是您處理這些記錄的工具。
 
 ## <a name="limitations"></a>限制
 
-匿名記錄的使用方式有一些限制。 有些是其設計的固有部分，但其他則適合變更。
+匿名記錄的使用有一些限制。 有些是其設計固有的，但另一些是可以改變的。
 
-### <a name="limitations-with-pattern-matching"></a>模式比對的限制
+### <a name="limitations-with-pattern-matching"></a>模式匹配的限制
 
-匿名記錄不支援模式比對，不同于命名的記錄。 有三個原因：
+匿名記錄不支援模式匹配，與命名記錄不同。 有三個原因：
 
-1. 模式必須考慮匿名記錄的每個欄位，而不像命名的記錄類型。 這是因為匿名記錄不支援結構化 subtyping –它們是名義類型。
-2. 由於（1），模式比對運算式中沒有其他模式的功能，因為每個不同的模式都代表不同的匿名記錄類型。
-3. 由於（3），任何匿名記錄模式會比使用「點」標記法更為詳細。
+1. 模式必須考慮匿名記錄的每個欄位，這與命名的記錄類型不同。 這是因為匿名記錄不支援結構子類型 - 它們是標稱類型。
+2. 由於 （1），無法在模式匹配運算式中具有其他模式，因為每個不同的模式都意味著不同的匿名記錄類型。
+3. 由於 （3），任何匿名記錄模式將比使用"點"標記法更詳細。
 
-有一個開放語言建議，可[在有限的內容中允許模式](https://github.com/fsharp/fslang-suggestions/issues/713)比對。
+有一個開放語言建議，[允許在有限的上下文中進行模式匹配](https://github.com/fsharp/fslang-suggestions/issues/713)。
 
-### <a name="limitations-with-mutability"></a>可變動性的限制
+### <a name="limitations-with-mutability"></a>具有可變性的限制
 
-目前無法定義具有 `mutable` 資料的匿名記錄。 有開放的[語言建議](https://github.com/fsharp/fslang-suggestions/issues/732)可允許變動的資料。
+當前無法使用`mutable`資料定義匿名記錄。 有一個[開放語言建議](https://github.com/fsharp/fslang-suggestions/issues/732)，以允許可變數據。
 
 ### <a name="limitations-with-struct-anonymous-records"></a>結構匿名記錄的限制
 
-不可能將結構匿名記錄宣告為 `IsByRefLike` 或 `IsReadOnly`。 `IsByRefLike` 和 `IsReadOnly` 匿名記錄都有[開放的語言建議](https://github.com/fsharp/fslang-suggestions/issues/712)。
+無法將結構匿名記錄聲明為`IsByRefLike`或`IsReadOnly`。 對於`IsByRefLike`和`IsReadOnly`匿名記錄，有一個[開放語言建議](https://github.com/fsharp/fslang-suggestions/issues/712)。
