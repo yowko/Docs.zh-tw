@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: 50a58a83-6287-40a4-b315-47823cea0a5c
 topic_type:
 - apiref
-ms.openlocfilehash: f1262181fa745e1b6d3fc48a4ad728c1020705b5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d02943f28435fc00aad8e319aa260a24cca5e307
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434323"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177594"
 ---
-# <a name="imetadataemitgettokenfromsig-method"></a><span data-ttu-id="f82b3-102">IMetaDataEmit::GetTokenFromSig 方法</span><span class="sxs-lookup"><span data-stu-id="f82b3-102">IMetaDataEmit::GetTokenFromSig Method</span></span>
-<span data-ttu-id="f82b3-103">取得指定之中繼資料簽章的 token。</span><span class="sxs-lookup"><span data-stu-id="f82b3-103">Gets a token for the specified metadata signature.</span></span>  
+# <a name="imetadataemitgettokenfromsig-method"></a><span data-ttu-id="3038e-102">IMetaDataEmit::GetTokenFromSig 方法</span><span class="sxs-lookup"><span data-stu-id="3038e-102">IMetaDataEmit::GetTokenFromSig Method</span></span>
+<span data-ttu-id="3038e-103">獲取指定中繼資料簽名的權杖。</span><span class="sxs-lookup"><span data-stu-id="3038e-103">Gets a token for the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f82b3-104">語法</span><span class="sxs-lookup"><span data-stu-id="f82b3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3038e-104">語法</span><span class="sxs-lookup"><span data-stu-id="3038e-104">Syntax</span></span>  
   
 ```cpp  
-HRESULT GetTokenFromSig (   
-    [in]  PCCOR_SIGNATURE pvSig,   
-    [in]  ULONG       cbSig,   
-    [out] mdSignature *pmsig   
+HRESULT GetTokenFromSig (
+    [in]  PCCOR_SIGNATURE pvSig,
+    [in]  ULONG       cbSig,
+    [out] mdSignature *pmsig
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="f82b3-105">參數</span><span class="sxs-lookup"><span data-stu-id="f82b3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3038e-105">參數</span><span class="sxs-lookup"><span data-stu-id="3038e-105">Parameters</span></span>  
  `pvSig`  
- <span data-ttu-id="f82b3-106">在要保存並儲存的簽章。</span><span class="sxs-lookup"><span data-stu-id="f82b3-106">[in] The signature to be persisted and stored.</span></span>  
+ <span data-ttu-id="3038e-106">[在]要保留和存儲的簽名。</span><span class="sxs-lookup"><span data-stu-id="3038e-106">[in] The signature to be persisted and stored.</span></span>  
   
  `cbSig`  
- <span data-ttu-id="f82b3-107">在`pvSig`中的位元組計數。</span><span class="sxs-lookup"><span data-stu-id="f82b3-107">[in] The count of bytes in `pvSig`.</span></span>  
+ <span data-ttu-id="3038e-107">[在]中的`pvSig`位元組計數。</span><span class="sxs-lookup"><span data-stu-id="3038e-107">[in] The count of bytes in `pvSig`.</span></span>  
   
  `pmsig`  
- <span data-ttu-id="f82b3-108">脫銷指派的 `mdSignature` token。</span><span class="sxs-lookup"><span data-stu-id="f82b3-108">[out] The `mdSignature` token assigned.</span></span>  
+ <span data-ttu-id="3038e-108">[出]分配的`mdSignature`權杖。</span><span class="sxs-lookup"><span data-stu-id="3038e-108">[out] The `mdSignature` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f82b3-109">需求</span><span class="sxs-lookup"><span data-stu-id="f82b3-109">Requirements</span></span>  
- <span data-ttu-id="f82b3-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f82b3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3038e-109">需求</span><span class="sxs-lookup"><span data-stu-id="3038e-109">Requirements</span></span>  
+ <span data-ttu-id="3038e-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3038e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f82b3-111">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="f82b3-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3038e-111">**標題：** 科爾赫</span><span class="sxs-lookup"><span data-stu-id="3038e-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f82b3-112">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="f82b3-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="3038e-112">**庫：** 用作 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="3038e-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f82b3-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f82b3-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3038e-113">**.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3038e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f82b3-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="f82b3-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3038e-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3038e-114">See also</span></span>
 
-- [<span data-ttu-id="f82b3-115">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="f82b3-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="f82b3-116">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="f82b3-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="3038e-115">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="3038e-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="3038e-116">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="3038e-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

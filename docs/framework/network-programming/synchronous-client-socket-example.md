@@ -9,15 +9,15 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 70c4f26e3b4fc1c3dcb4c34e8858525b7f1660c3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: d55d875546ff34bc38b13f792668cd00309c6e34
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047191"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180679"
 ---
-# <a name="synchronous-client-socket-example"></a><span data-ttu-id="e5e0b-102">同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="e5e0b-102">Synchronous Client Socket Example</span></span>
-<span data-ttu-id="e5e0b-103">下列範例程式會建立連線到伺服器的用戶端。</span><span class="sxs-lookup"><span data-stu-id="e5e0b-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="e5e0b-104">伺服器已內建非同步通訊端，因此在伺服器傳回回應之前，會暫停執行用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="e5e0b-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="e5e0b-105">應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="e5e0b-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="synchronous-client-socket-example"></a><span data-ttu-id="1abba-102">同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="1abba-102">Synchronous Client Socket Example</span></span>
+<span data-ttu-id="1abba-103">下列範例程式會建立連線到伺服器的用戶端。</span><span class="sxs-lookup"><span data-stu-id="1abba-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="1abba-104">伺服器已內建非同步通訊端，因此在伺服器傳回回應之前，會暫停執行用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="1abba-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="1abba-105">應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="1abba-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -90,7 +90,7 @@ public class SynchronousSocketClient {
             IPEndPoint remoteEP = new IPEndPoint(ipAddress,11000);  
   
             // Create a TCP/IP  socket.  
-            Socket sender = new Socket(ipAddress.AddressFamily,   
+            Socket sender = new Socket(ipAddress.AddressFamily,
                 SocketType.Stream, ProtocolType.Tcp );  
   
             // Connect the socket to the remote endpoint. Catch any errors.  
@@ -135,8 +135,8 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e5e0b-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e5e0b-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1abba-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1abba-106">See also</span></span>
 
-- [<span data-ttu-id="e5e0b-107">同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="e5e0b-107">Synchronous Server Socket Example</span></span>](synchronous-server-socket-example.md)
-- [<span data-ttu-id="e5e0b-108">使用同步用戶端通訊端</span><span class="sxs-lookup"><span data-stu-id="e5e0b-108">Using a Synchronous Client Socket</span></span>](using-a-synchronous-client-socket.md)
-- [<span data-ttu-id="e5e0b-109">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="e5e0b-109">Socket Code Examples</span></span>](socket-code-examples.md)
+- [<span data-ttu-id="1abba-107">同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="1abba-107">Synchronous Server Socket Example</span></span>](synchronous-server-socket-example.md)
+- [<span data-ttu-id="1abba-108">使用同步用戶端通訊端</span><span class="sxs-lookup"><span data-stu-id="1abba-108">Using a Synchronous Client Socket</span></span>](using-a-synchronous-client-socket.md)
+- [<span data-ttu-id="1abba-109">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="1abba-109">Socket Code Examples</span></span>](socket-code-examples.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f838d5c812842e2a637065b25182b6a12609231
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108002"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176548"
 ---
-# <a name="identity_attribute_blob-structure"></a><span data-ttu-id="b0def-102">IDENTITY_ATTRIBUTE_BLOB 結構</span><span class="sxs-lookup"><span data-stu-id="b0def-102">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>
-<span data-ttu-id="b0def-103">包含元件中單一屬性的相關資訊，並由三個 `DWORD`組成。</span><span class="sxs-lookup"><span data-stu-id="b0def-103">Contains information about a single attribute in an assembly, and consists of three `DWORD`s.</span></span> <span data-ttu-id="b0def-104">每個 `DWORD` 都是由[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)介面的 `CurrentIntoBuffer` 方法所產生之字元緩衝區的位移。</span><span class="sxs-lookup"><span data-stu-id="b0def-104">Each `DWORD` is an offset into a character buffer produced by the `CurrentIntoBuffer` method of the [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) interface</span></span>  
+# <a name="identity_attribute_blob-structure"></a><span data-ttu-id="29f7e-102">IDENTITY_ATTRIBUTE_BLOB 結構</span><span class="sxs-lookup"><span data-stu-id="29f7e-102">IDENTITY_ATTRIBUTE_BLOB Structure</span></span>
+<span data-ttu-id="29f7e-103">包含有關程式集中單個屬性的資訊，並且由三`DWORD`個 s 組成。</span><span class="sxs-lookup"><span data-stu-id="29f7e-103">Contains information about a single attribute in an assembly, and consists of three `DWORD`s.</span></span> <span data-ttu-id="29f7e-104">每個`DWORD`都是`CurrentIntoBuffer`[IEnumIDENTITY_ATTRIBUTE介面方法](ienumidentity-attribute-interface.md)生成的字元緩衝區的偏移量</span><span class="sxs-lookup"><span data-stu-id="29f7e-104">Each `DWORD` is an offset into a character buffer produced by the `CurrentIntoBuffer` method of the [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) interface</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0def-105">語法</span><span class="sxs-lookup"><span data-stu-id="b0def-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="29f7e-105">語法</span><span class="sxs-lookup"><span data-stu-id="29f7e-105">Syntax</span></span>  
   
 ```cpp  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
@@ -36,24 +36,24 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="b0def-106">Members</span><span class="sxs-lookup"><span data-stu-id="b0def-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="29f7e-106">成員</span><span class="sxs-lookup"><span data-stu-id="29f7e-106">Members</span></span>  
   
-|<span data-ttu-id="b0def-107">成員</span><span class="sxs-lookup"><span data-stu-id="b0def-107">Member</span></span>|<span data-ttu-id="b0def-108">描述</span><span class="sxs-lookup"><span data-stu-id="b0def-108">Description</span></span>|  
+|<span data-ttu-id="29f7e-107">member</span><span class="sxs-lookup"><span data-stu-id="29f7e-107">Member</span></span>|<span data-ttu-id="29f7e-108">描述</span><span class="sxs-lookup"><span data-stu-id="29f7e-108">Description</span></span>|  
 |------------|-----------------|  
-|`ofsNamespace`|<span data-ttu-id="b0def-109">字元緩衝區的第一個位移。</span><span class="sxs-lookup"><span data-stu-id="b0def-109">The first offset into the character buffer.</span></span> <span data-ttu-id="b0def-110">這個位移後面不接屬性的命名空間，而是一系列的 null 字元。</span><span class="sxs-lookup"><span data-stu-id="b0def-110">This offset is not followed by the attribute's namespace, but by a series of null characters.</span></span> <span data-ttu-id="b0def-111">因此，不會使用它。</span><span class="sxs-lookup"><span data-stu-id="b0def-111">Therefore, it is not used.</span></span>|  
-|`ofsName`|<span data-ttu-id="b0def-112">字元緩衝區的第二個位移。</span><span class="sxs-lookup"><span data-stu-id="b0def-112">The second offset into the character buffer.</span></span> <span data-ttu-id="b0def-113">這個位置會標示屬性名稱的開頭。</span><span class="sxs-lookup"><span data-stu-id="b0def-113">This location marks the start of the attribute's name.</span></span>|  
-|`ofsValue`|<span data-ttu-id="b0def-114">字元緩衝區中的第三個位移。</span><span class="sxs-lookup"><span data-stu-id="b0def-114">The third offset into the character buffer.</span></span> <span data-ttu-id="b0def-115">這個位置會標示屬性值的開頭。</span><span class="sxs-lookup"><span data-stu-id="b0def-115">This location marks the start of the attribute's value.</span></span>|  
+|`ofsNamespace`|<span data-ttu-id="29f7e-109">字元緩衝區中的第一個偏移量。</span><span class="sxs-lookup"><span data-stu-id="29f7e-109">The first offset into the character buffer.</span></span> <span data-ttu-id="29f7e-110">此偏移後不跟屬性的命名空間，而是一系列空字元。</span><span class="sxs-lookup"><span data-stu-id="29f7e-110">This offset is not followed by the attribute's namespace, but by a series of null characters.</span></span> <span data-ttu-id="29f7e-111">因此，不使用它。</span><span class="sxs-lookup"><span data-stu-id="29f7e-111">Therefore, it is not used.</span></span>|  
+|`ofsName`|<span data-ttu-id="29f7e-112">字元緩衝區中的第二個偏移量。</span><span class="sxs-lookup"><span data-stu-id="29f7e-112">The second offset into the character buffer.</span></span> <span data-ttu-id="29f7e-113">此位置標記屬性名稱的開始。</span><span class="sxs-lookup"><span data-stu-id="29f7e-113">This location marks the start of the attribute's name.</span></span>|  
+|`ofsValue`|<span data-ttu-id="29f7e-114">字元緩衝區中的第三個偏移量。</span><span class="sxs-lookup"><span data-stu-id="29f7e-114">The third offset into the character buffer.</span></span> <span data-ttu-id="29f7e-115">此位置標記屬性值的開始。</span><span class="sxs-lookup"><span data-stu-id="29f7e-115">This location marks the start of the attribute's value.</span></span>|  
   
-## <a name="sample"></a><span data-ttu-id="b0def-116">範例</span><span class="sxs-lookup"><span data-stu-id="b0def-116">Sample</span></span>  
- <span data-ttu-id="b0def-117">下列範例說明數個基本步驟，最後會產生 `IDENTITY_ATTRIBUTE_BLOB` 結構的擴展：</span><span class="sxs-lookup"><span data-stu-id="b0def-117">The following example illustrates several basic steps, which eventually result in a populated `IDENTITY_ATTRIBUTE_BLOB` structure:</span></span>  
+## <a name="sample"></a><span data-ttu-id="29f7e-116">範例</span><span class="sxs-lookup"><span data-stu-id="29f7e-116">Sample</span></span>  
+ <span data-ttu-id="29f7e-117">下面的示例說明了幾個基本步驟，這些步驟最終導致填充`IDENTITY_ATTRIBUTE_BLOB`結構：</span><span class="sxs-lookup"><span data-stu-id="29f7e-117">The following example illustrates several basic steps, which eventually result in a populated `IDENTITY_ATTRIBUTE_BLOB` structure:</span></span>  
   
-1. <span data-ttu-id="b0def-118">取得元件的[IReferenceIdentity](ireferenceidentity-interface.md) 。</span><span class="sxs-lookup"><span data-stu-id="b0def-118">Obtain an [IReferenceIdentity](ireferenceidentity-interface.md) for the assembly.</span></span>  
+1. <span data-ttu-id="29f7e-118">獲取程式集的[IReference 標識](ireferenceidentity-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="29f7e-118">Obtain an [IReferenceIdentity](ireferenceidentity-interface.md) for the assembly.</span></span>  
   
-2. <span data-ttu-id="b0def-119">呼叫 `IReferenceIdentity::EnumAttributes` 方法，並取得[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="b0def-119">Call the `IReferenceIdentity::EnumAttributes` method, and obtain an [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).</span></span>  
+2. <span data-ttu-id="29f7e-119">調用`IReferenceIdentity::EnumAttributes`方法，並獲取[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="29f7e-119">Call the `IReferenceIdentity::EnumAttributes` method, and obtain an [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md).</span></span>  
   
-3. <span data-ttu-id="b0def-120">建立字元緩衝區，並將它轉換為 `IDENTITY_ATTRIBUTE_BLOB` 結構。</span><span class="sxs-lookup"><span data-stu-id="b0def-120">Create a character buffer, and cast it as an `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
+3. <span data-ttu-id="29f7e-120">創建字元緩衝區，並將其轉換為`IDENTITY_ATTRIBUTE_BLOB`結構。</span><span class="sxs-lookup"><span data-stu-id="29f7e-120">Create a character buffer, and cast it as an `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
   
-4. <span data-ttu-id="b0def-121">呼叫 `IEnumIDENTITY_ATTRIBUTE` 介面的 `CurrentIntoBuffer` 方法。</span><span class="sxs-lookup"><span data-stu-id="b0def-121">Call the `CurrentIntoBuffer` method of the `IEnumIDENTITY_ATTRIBUTE` interface.</span></span> <span data-ttu-id="b0def-122">這個方法會將 `Namespace`、`Name`和 `Value` 的屬性複製到字元緩衝區中。</span><span class="sxs-lookup"><span data-stu-id="b0def-122">This method copies the attributes `Namespace`, `Name`, and `Value` into the character buffer.</span></span> <span data-ttu-id="b0def-123">這些字串的三個位移會在 `IDENTITY_ATTRIBUTE_BLOB` 結構中變成可用。</span><span class="sxs-lookup"><span data-stu-id="b0def-123">The three offsets to those strings will become available in the `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
+4. <span data-ttu-id="29f7e-121">調用`IEnumIDENTITY_ATTRIBUTE`介面`CurrentIntoBuffer`的方法。</span><span class="sxs-lookup"><span data-stu-id="29f7e-121">Call the `CurrentIntoBuffer` method of the `IEnumIDENTITY_ATTRIBUTE` interface.</span></span> <span data-ttu-id="29f7e-122">此方法將屬性`Namespace`、`Name`和`Value`複製到字元緩衝區中。</span><span class="sxs-lookup"><span data-stu-id="29f7e-122">This method copies the attributes `Namespace`, `Name`, and `Value` into the character buffer.</span></span> <span data-ttu-id="29f7e-123">這些字串的三個偏移將在`IDENTITY_ATTRIBUTE_BLOB`結構中可用。</span><span class="sxs-lookup"><span data-stu-id="29f7e-123">The three offsets to those strings will become available in the `IDENTITY_ATTRIBUTE_BLOB` structure.</span></span>  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -97,7 +97,7 @@ bool Init()
                                 (VOID **)&g_pfnGetIdentityAuthority);  
     }  
   
-    if (!g_pfnGetAssemblyIdentityFromFile ||   
+    if (!g_pfnGetAssemblyIdentityFromFile ||
         !g_pfnGetIdentityAuthority)  
     {  
         printf("Error: Cannot get required APIs from fusion.dll!\n");  
@@ -120,7 +120,7 @@ void Shutdown()
   
 void Usage()  
 {  
-    printf("EnumAssemblyAttributes: A tool to enumerate the identity   
+    printf("EnumAssemblyAttributes: A tool to enumerate the identity
             attributes of a given assembly.\n\n");  
     printf("Usage: EnumAssemblyAttributes AssemblyFilePath\n");  
     printf("\n");  
@@ -131,7 +131,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
     int     iResult = 1;  
     IUnknown                    *pUnk  = NULL;  
     IReferenceIdentity          *pRef  = NULL;  
-    HRESULT                     hr     = S_OK;     
+    HRESULT                     hr     = S_OK;
     IEnumIDENTITY_ATTRIBUTE     *pEnum = NULL;  
     BYTE                        abData[1024];  
     DWORD                       cbAvailable;  
@@ -148,16 +148,16 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
         goto Exit;  
     }  
   
-    hr = g_pfnGetAssemblyIdentityFromFile(argv[1],   
+    hr = g_pfnGetAssemblyIdentityFromFile(argv[1],
                             __uuidof(IReferenceIdentity), &pUnk);  
   
     if (FAILED(hr)) {  
-        printf("GetAssemblyIdentityFromFile failed with hr = 0x%x",   
+        printf("GetAssemblyIdentityFromFile failed with hr = 0x%x",
                 hr);  
         goto Exit;  
     }  
   
-    hr = pUnk->QueryInterface(__uuidof(IReferenceIdentity),   
+    hr = pUnk->QueryInterface(__uuidof(IReferenceIdentity),
                               (void**)&pRef);  
     if (FAILED(hr)) {  
         goto Exit;  
@@ -165,7 +165,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
   
     hr = pRef->EnumAttributes(&pEnum);  
     if (FAILED(hr)) {  
-        printf("IReferenceIdentity::EnumAttributes failed with hr =   
+        printf("IReferenceIdentity::EnumAttributes failed with hr =
                 0x%x", hr);  
         goto Exit;  
     }  
@@ -175,7 +175,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
         cbAvailable = sizeof(abData);  
         hr = pEnum->CurrentIntoBuffer(cbAvailable, abData, &cbUsed);  
         if (FAILED(hr)) {  
-            printf("IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer failed   
+            printf("IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer failed
                     with hr = 0x%x", hr);  
             goto Exit;  
         }  
@@ -191,7 +191,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
   
         hr = pEnum->Skip(1);  
         if (FAILED(hr)) {  
-            printf("IEnumIDENTITY_ATTRIBUTE::Skip failed with hr =   
+            printf("IEnumIDENTITY_ATTRIBUTE::Skip failed with hr =
                     0x%x", hr);  
             goto Exit;  
         }  
@@ -219,30 +219,30 @@ Exit:
 }  
 ```  
   
-### <a name="to-run-the-sample"></a><span data-ttu-id="b0def-124">若要執行範例</span><span class="sxs-lookup"><span data-stu-id="b0def-124">To run the sample</span></span>  
- <span data-ttu-id="b0def-125">C：\\> EnumAssemblyAttributes .exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span><span class="sxs-lookup"><span data-stu-id="b0def-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span></span>  
+### <a name="to-run-the-sample"></a><span data-ttu-id="29f7e-124">執行範例</span><span class="sxs-lookup"><span data-stu-id="29f7e-124">To run the sample</span></span>  
+ <span data-ttu-id="29f7e-125">C：>EnumAssemblyattributes.exe\\ C：_WINDOWS_微軟.NET_Framework_v2.0.50727_System.dll</span><span class="sxs-lookup"><span data-stu-id="29f7e-125">C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll</span></span>  
   
-### <a name="sample-output"></a><span data-ttu-id="b0def-126">範例輸出</span><span class="sxs-lookup"><span data-stu-id="b0def-126">Sample output</span></span>  
- <span data-ttu-id="b0def-127">文化特性 = 中性</span><span class="sxs-lookup"><span data-stu-id="b0def-127">Culture = neutral</span></span>  
+### <a name="sample-output"></a><span data-ttu-id="29f7e-126">範例輸出</span><span class="sxs-lookup"><span data-stu-id="29f7e-126">Sample output</span></span>  
+ <span data-ttu-id="29f7e-127">文化 = 中性</span><span class="sxs-lookup"><span data-stu-id="29f7e-127">Culture = neutral</span></span>  
   
- <span data-ttu-id="b0def-128">名稱 = 系統</span><span class="sxs-lookup"><span data-stu-id="b0def-128">name = System</span></span>  
+ <span data-ttu-id="29f7e-128">名稱 = 系統</span><span class="sxs-lookup"><span data-stu-id="29f7e-128">name = System</span></span>  
   
- <span data-ttu-id="b0def-129">processorArchitecture = MSIL</span><span class="sxs-lookup"><span data-stu-id="b0def-129">processorArchitecture = MSIL</span></span>  
+ <span data-ttu-id="29f7e-129">處理器架構 = MSIL</span><span class="sxs-lookup"><span data-stu-id="29f7e-129">processorArchitecture = MSIL</span></span>  
   
- <span data-ttu-id="b0def-130">PublicKeyToken = b77a5c561934e089</span><span class="sxs-lookup"><span data-stu-id="b0def-130">PublicKeyToken = b77a5c561934e089</span></span>  
+ <span data-ttu-id="29f7e-130">公開金鑰權杖 = b77a5c561934e089</span><span class="sxs-lookup"><span data-stu-id="29f7e-130">PublicKeyToken = b77a5c561934e089</span></span>  
   
- <span data-ttu-id="b0def-131">Version = 2.0.0.0</span><span class="sxs-lookup"><span data-stu-id="b0def-131">Version = 2.0.0.0</span></span>  
+ <span data-ttu-id="29f7e-131">版本 = 2.0.0.0</span><span class="sxs-lookup"><span data-stu-id="29f7e-131">Version = 2.0.0.0</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b0def-132">需求</span><span class="sxs-lookup"><span data-stu-id="b0def-132">Requirements</span></span>  
- <span data-ttu-id="b0def-133">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b0def-133">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="29f7e-132">需求</span><span class="sxs-lookup"><span data-stu-id="29f7e-132">Requirements</span></span>  
+ <span data-ttu-id="29f7e-133">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="29f7e-133">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0def-134">**標頭：** 隔離。h</span><span class="sxs-lookup"><span data-stu-id="b0def-134">**Header:** Isolation.h</span></span>  
+ <span data-ttu-id="29f7e-134">**標題：** 隔離.h</span><span class="sxs-lookup"><span data-stu-id="29f7e-134">**Header:** Isolation.h</span></span>  
   
- <span data-ttu-id="b0def-135">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b0def-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="29f7e-135">**.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="29f7e-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0def-136">請參閱</span><span class="sxs-lookup"><span data-stu-id="b0def-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="29f7e-136">另請參閱</span><span class="sxs-lookup"><span data-stu-id="29f7e-136">See also</span></span>
 
-- [<span data-ttu-id="b0def-137">IReferenceIdentity 介面</span><span class="sxs-lookup"><span data-stu-id="b0def-137">IReferenceIdentity Interface</span></span>](ireferenceidentity-interface.md)
-- [<span data-ttu-id="b0def-138">IEnumIDENTITY_ATTRIBUTE 介面</span><span class="sxs-lookup"><span data-stu-id="b0def-138">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](ienumidentity-attribute-interface.md)
-- [<span data-ttu-id="b0def-139">IDENTITY_ATTRIBUTE 結構</span><span class="sxs-lookup"><span data-stu-id="b0def-139">IDENTITY_ATTRIBUTE Structure</span></span>](identity-attribute-structure.md)
-- [<span data-ttu-id="b0def-140">融合結構</span><span class="sxs-lookup"><span data-stu-id="b0def-140">Fusion Structures</span></span>](fusion-structures.md)
+- [<span data-ttu-id="29f7e-137">IReferenceIdentity 介面</span><span class="sxs-lookup"><span data-stu-id="29f7e-137">IReferenceIdentity Interface</span></span>](ireferenceidentity-interface.md)
+- [<span data-ttu-id="29f7e-138">IEnumIDENTITY_ATTRIBUTE 介面</span><span class="sxs-lookup"><span data-stu-id="29f7e-138">IEnumIDENTITY_ATTRIBUTE Interface</span></span>](ienumidentity-attribute-interface.md)
+- [<span data-ttu-id="29f7e-139">IDENTITY_ATTRIBUTE 結構</span><span class="sxs-lookup"><span data-stu-id="29f7e-139">IDENTITY_ATTRIBUTE Structure</span></span>](identity-attribute-structure.md)
+- [<span data-ttu-id="29f7e-140">融合結構</span><span class="sxs-lookup"><span data-stu-id="29f7e-140">Fusion Structures</span></span>](fusion-structures.md)
