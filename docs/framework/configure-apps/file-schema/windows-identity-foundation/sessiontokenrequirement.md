@@ -3,24 +3,24 @@ title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 968c48df9e92a1dfbfb6e248b06cf4f97cece8b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ade55a5b26826633faf2e7ef7598a4071d613bbc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251821"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152537"
 ---
-# <a name="sessiontokenrequirement"></a><span data-ttu-id="9ce3b-101">\<sessionTokenRequirement></span><span class="sxs-lookup"><span data-stu-id="9ce3b-101">\<sessionTokenRequirement></span></span>
-<span data-ttu-id="9ce3b-102"><xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>提供類別或衍生類別的設定。</span><span class="sxs-lookup"><span data-stu-id="9ce3b-102">Provides configuration for the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class or derived classes.</span></span>  
+# <a name="sessiontokenrequirement"></a><span data-ttu-id="c5caa-101">\<會話權杖要求></span><span class="sxs-lookup"><span data-stu-id="c5caa-101">\<sessionTokenRequirement></span></span>
+<span data-ttu-id="c5caa-102">提供類或派生<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>類的配置。</span><span class="sxs-lookup"><span data-stu-id="c5caa-102">Provides configuration for the <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> class or derived classes.</span></span>  
   
-<span data-ttu-id="9ce3b-103">[ **\<configuration>** ](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="9ce3b-103">[**\<configuration>**](../configuration-element.md)</span></span>\
-<span data-ttu-id="9ce3b-104">&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel.md)</span><span class="sxs-lookup"><span data-stu-id="9ce3b-104">&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)</span></span>\
-<span data-ttu-id="9ce3b-105">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)</span><span class="sxs-lookup"><span data-stu-id="9ce3b-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)</span></span>\
-<span data-ttu-id="9ce3b-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)</span><span class="sxs-lookup"><span data-stu-id="9ce3b-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)</span></span>\
-<span data-ttu-id="9ce3b-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<新增 >** ](add.md)</span><span class="sxs-lookup"><span data-stu-id="9ce3b-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add.md)</span></span>\
-<span data-ttu-id="9ce3b-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sessiontokenrequirement lifetime >**</span><span class="sxs-lookup"><span data-stu-id="9ce3b-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sessionTokenRequirement>**</span></span>  
+<span data-ttu-id="c5caa-103">[**\<配置>**](../configuration-element.md)</span><span class="sxs-lookup"><span data-stu-id="c5caa-103">[**\<configuration>**](../configuration-element.md)</span></span>\
+<span data-ttu-id="c5caa-104">&nbsp;&nbsp;[**\<系統.身份模型>**](system-identitymodel.md)</span><span class="sxs-lookup"><span data-stu-id="c5caa-104">&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)</span></span>\
+<span data-ttu-id="c5caa-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<身份配置>**](identityconfiguration.md)</span><span class="sxs-lookup"><span data-stu-id="c5caa-105">&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)</span></span>\
+<span data-ttu-id="c5caa-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<安全權杖處理常式>**](securitytokenhandlers.md)</span><span class="sxs-lookup"><span data-stu-id="c5caa-106">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)</span></span>\
+<span data-ttu-id="c5caa-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<添加>**](add.md)</span><span class="sxs-lookup"><span data-stu-id="c5caa-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add.md)</span></span>\
+<span data-ttu-id="c5caa-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<會話權杖要求>**</span><span class="sxs-lookup"><span data-stu-id="c5caa-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<sessionTokenRequirement>**</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9ce3b-109">語法</span><span class="sxs-lookup"><span data-stu-id="9ce3b-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5caa-109">語法</span><span class="sxs-lookup"><span data-stu-id="c5caa-109">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
@@ -35,28 +35,28 @@ ms.locfileid: "70251821"
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9ce3b-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="9ce3b-110">Attributes and Elements</span></span>  
- <span data-ttu-id="9ce3b-111">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="9ce3b-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c5caa-110">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c5caa-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="c5caa-111">下列章節說明屬性、子元素和父元素。</span><span class="sxs-lookup"><span data-stu-id="c5caa-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9ce3b-112">屬性</span><span class="sxs-lookup"><span data-stu-id="9ce3b-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c5caa-112">屬性</span><span class="sxs-lookup"><span data-stu-id="c5caa-112">Attributes</span></span>  
   
-|<span data-ttu-id="9ce3b-113">屬性</span><span class="sxs-lookup"><span data-stu-id="9ce3b-113">Attribute</span></span>|<span data-ttu-id="9ce3b-114">說明</span><span class="sxs-lookup"><span data-stu-id="9ce3b-114">Description</span></span>|  
+|<span data-ttu-id="c5caa-113">屬性</span><span class="sxs-lookup"><span data-stu-id="c5caa-113">Attribute</span></span>|<span data-ttu-id="c5caa-114">描述</span><span class="sxs-lookup"><span data-stu-id="c5caa-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="9ce3b-115">存留期</span><span class="sxs-lookup"><span data-stu-id="9ce3b-115">lifetime</span></span>|<span data-ttu-id="9ce3b-116">指定會話權杖的存留期。</span><span class="sxs-lookup"><span data-stu-id="9ce3b-116">Specifies the lifetime of session tokens.</span></span>|  
+|<span data-ttu-id="c5caa-115">lifetime</span><span class="sxs-lookup"><span data-stu-id="c5caa-115">lifetime</span></span>|<span data-ttu-id="c5caa-116">指定會話權杖的存留期。</span><span class="sxs-lookup"><span data-stu-id="c5caa-116">Specifies the lifetime of session tokens.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9ce3b-117">子元素</span><span class="sxs-lookup"><span data-stu-id="9ce3b-117">Child Elements</span></span>  
- <span data-ttu-id="9ce3b-118">無</span><span class="sxs-lookup"><span data-stu-id="9ce3b-118">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c5caa-117">子元素</span><span class="sxs-lookup"><span data-stu-id="c5caa-117">Child Elements</span></span>  
+ <span data-ttu-id="c5caa-118">None</span><span class="sxs-lookup"><span data-stu-id="c5caa-118">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="9ce3b-119">父項目</span><span class="sxs-lookup"><span data-stu-id="9ce3b-119">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c5caa-119">父項目</span><span class="sxs-lookup"><span data-stu-id="c5caa-119">Parent Elements</span></span>  
   
-|<span data-ttu-id="9ce3b-120">項目</span><span class="sxs-lookup"><span data-stu-id="9ce3b-120">Element</span></span>|<span data-ttu-id="9ce3b-121">描述</span><span class="sxs-lookup"><span data-stu-id="9ce3b-121">Description</span></span>|  
+|<span data-ttu-id="c5caa-120">元素</span><span class="sxs-lookup"><span data-stu-id="c5caa-120">Element</span></span>|<span data-ttu-id="c5caa-121">描述</span><span class="sxs-lookup"><span data-stu-id="c5caa-121">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9ce3b-122">\<add></span><span class="sxs-lookup"><span data-stu-id="9ce3b-122">\<add></span></span>](add.md)|<span data-ttu-id="9ce3b-123">將指定的安全性權杖處理常式加入至權杖處理常式集合。</span><span class="sxs-lookup"><span data-stu-id="9ce3b-123">Adds the specified security token handler to the token handler collection.</span></span>|  
+|[<span data-ttu-id="c5caa-122">\<添加></span><span class="sxs-lookup"><span data-stu-id="c5caa-122">\<add></span></span>](add.md)|<span data-ttu-id="c5caa-123">將指定的安全權杖處理常式添加到權杖處理常式集合。</span><span class="sxs-lookup"><span data-stu-id="c5caa-123">Adds the specified security token handler to the token handler collection.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="9ce3b-124">範例</span><span class="sxs-lookup"><span data-stu-id="9ce3b-124">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c5caa-124">範例</span><span class="sxs-lookup"><span data-stu-id="c5caa-124">Example</span></span>  
   
 ```xml  
-<add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">           
+<add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">
     <sessionTokenRequirement lifetime="10:00" />  
 </add>  
 ```
