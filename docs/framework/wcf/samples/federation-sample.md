@@ -2,30 +2,30 @@
 title: 聯合範例
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: c143ad9315df94a2d836a2c2c742ffa9a7728511
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 9ec462f88c0e3a039b7f288554be3e28f13ece08
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837879"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144665"
 ---
-# <a name="federation-sample"></a><span data-ttu-id="5fb31-102">聯合範例</span><span class="sxs-lookup"><span data-stu-id="5fb31-102">Federation Sample</span></span>
-<span data-ttu-id="5fb31-103">這個範例將示範聯合安全性。</span><span class="sxs-lookup"><span data-stu-id="5fb31-103">This sample demonstrates federated security.</span></span>  
+# <a name="federation-sample"></a><span data-ttu-id="bdb5c-102">聯合範例</span><span class="sxs-lookup"><span data-stu-id="bdb5c-102">Federation Sample</span></span>
+<span data-ttu-id="bdb5c-103">這個範例將示範聯合安全性。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-103">This sample demonstrates federated security.</span></span>  
   
-## <a name="sample-details"></a><span data-ttu-id="5fb31-104">範例詳細資料</span><span class="sxs-lookup"><span data-stu-id="5fb31-104">Sample Details</span></span>  
- <span data-ttu-id="5fb31-105">Windows Communication Foundation （WCF）提供透過 `wsFederationHttpBinding`部署同盟安全性架構的支援。</span><span class="sxs-lookup"><span data-stu-id="5fb31-105">Windows Communication Foundation (WCF) provides support for deploying federated security architectures through the `wsFederationHttpBinding`.</span></span> <span data-ttu-id="5fb31-106">`wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。</span><span class="sxs-lookup"><span data-stu-id="5fb31-106">The `wsFederationHttpBinding` provides a secure, reliable, and interoperable binding that involves the use of HTTP as the underlying transport mechanism for request/reply communication, and Text/XML as the wire format for encoding.</span></span> <span data-ttu-id="5fb31-107">如需 WCF 中同盟的詳細資訊，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。</span><span class="sxs-lookup"><span data-stu-id="5fb31-107">For more information about Federation in WCF, see [Federation](../../../../docs/framework/wcf/feature-details/federation.md).</span></span>  
+## <a name="sample-details"></a><span data-ttu-id="bdb5c-104">範例詳細資料</span><span class="sxs-lookup"><span data-stu-id="bdb5c-104">Sample Details</span></span>  
+ <span data-ttu-id="bdb5c-105">Windows 通信基礎 （WCF） 支援通過 部署聯合安全體系結構`wsFederationHttpBinding`。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-105">Windows Communication Foundation (WCF) provides support for deploying federated security architectures through the `wsFederationHttpBinding`.</span></span> <span data-ttu-id="bdb5c-106">`wsFederationHttpBinding` 提供安全、可靠以及可互通的繫結，其中包括使用 HTTP 做為要求/回覆通訊的基礎傳輸機制，以及採用文字/XML 做為編碼的 Wire 格式。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-106">The `wsFederationHttpBinding` provides a secure, reliable, and interoperable binding that involves the use of HTTP as the underlying transport mechanism for request/reply communication, and Text/XML as the wire format for encoding.</span></span> <span data-ttu-id="bdb5c-107">有關 WCF 中的聯合的詳細資訊，請參閱[聯合](../../../../docs/framework/wcf/feature-details/federation.md)。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-107">For more information about Federation in WCF, see [Federation](../../../../docs/framework/wcf/feature-details/federation.md).</span></span>  
   
- <span data-ttu-id="5fb31-108">本案例由 4 個部分組成：</span><span class="sxs-lookup"><span data-stu-id="5fb31-108">The scenario is made up of 4 pieces:</span></span>  
+ <span data-ttu-id="bdb5c-108">本案例由 4 個部分組成：</span><span class="sxs-lookup"><span data-stu-id="bdb5c-108">The scenario is made up of 4 pieces:</span></span>  
   
-- <span data-ttu-id="5fb31-109">BookStore 服務</span><span class="sxs-lookup"><span data-stu-id="5fb31-109">BookStore service</span></span>  
+- <span data-ttu-id="bdb5c-109">BookStore 服務</span><span class="sxs-lookup"><span data-stu-id="bdb5c-109">BookStore service</span></span>  
   
-- <span data-ttu-id="5fb31-110">BookStore STS</span><span class="sxs-lookup"><span data-stu-id="5fb31-110">BookStore STS</span></span>  
+- <span data-ttu-id="bdb5c-110">BookStore STS</span><span class="sxs-lookup"><span data-stu-id="bdb5c-110">BookStore STS</span></span>  
   
-- <span data-ttu-id="5fb31-111">HomeRealm STS</span><span class="sxs-lookup"><span data-stu-id="5fb31-111">HomeRealm STS</span></span>  
+- <span data-ttu-id="bdb5c-111">HomeRealm STS</span><span class="sxs-lookup"><span data-stu-id="bdb5c-111">HomeRealm STS</span></span>  
   
-- <span data-ttu-id="5fb31-112">BookStore 用戶端</span><span class="sxs-lookup"><span data-stu-id="5fb31-112">BookStore Client</span></span>  
+- <span data-ttu-id="bdb5c-112">BookStore 用戶端</span><span class="sxs-lookup"><span data-stu-id="bdb5c-112">BookStore Client</span></span>  
   
- <span data-ttu-id="5fb31-113">BookStore 服務支援兩項作業：`BrowseBooks` 和 `BuyBook`。</span><span class="sxs-lookup"><span data-stu-id="5fb31-113">The BookStore service supports two operations, `BrowseBooks` and `BuyBook`.</span></span> <span data-ttu-id="5fb31-114">它允許匿名存取 `BrowseBooks` 作業，但是要求必須有通過驗證的存取權才能存取 `BuyBooks` 作業。</span><span class="sxs-lookup"><span data-stu-id="5fb31-114">It allows anonymous access to the `BrowseBooks` operation, but requires authenticated access to access the `BuyBooks` operation.</span></span> <span data-ttu-id="5fb31-115">驗證的形式採用 BookStore STS 所發行的權杖。</span><span class="sxs-lookup"><span data-stu-id="5fb31-115">The authentication takes the form of a token issued by the BookStore STS.</span></span> <span data-ttu-id="5fb31-116">BookStore 服務的組態檔會使用 `wsFederationHttpBinding`，將用戶端指向 BookStore STS。</span><span class="sxs-lookup"><span data-stu-id="5fb31-116">The configuration file for the BookStore Service points clients to the BookStore STS using the `wsFederationHttpBinding`.</span></span>  
+ <span data-ttu-id="bdb5c-113">BookStore 服務支援兩項作業：`BrowseBooks` 和 `BuyBook`。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-113">The BookStore service supports two operations, `BrowseBooks` and `BuyBook`.</span></span> <span data-ttu-id="bdb5c-114">它允許匿名存取 `BrowseBooks` 作業，但是要求必須有通過驗證的存取權才能存取 `BuyBooks` 作業。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-114">It allows anonymous access to the `BrowseBooks` operation, but requires authenticated access to access the `BuyBooks` operation.</span></span> <span data-ttu-id="bdb5c-115">驗證的形式採用 BookStore STS 所發行的權杖。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-115">The authentication takes the form of a token issued by the BookStore STS.</span></span> <span data-ttu-id="bdb5c-116">BookStore 服務的組態檔會使用 `wsFederationHttpBinding`，將用戶端指向 BookStore STS。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-116">The configuration file for the BookStore Service points clients to the BookStore STS using the `wsFederationHttpBinding`.</span></span>  
   
 ```xml  
 <wsFederationHttpBinding>  
@@ -45,7 +45,7 @@ ms.locfileid: "74837879"
 </wsFederationHttpBinding>  
 ```  
   
- <span data-ttu-id="5fb31-117">BookStore STS 接著會要求用戶端使用 HomeRealm STS 所發行的權杖進行驗證。</span><span class="sxs-lookup"><span data-stu-id="5fb31-117">The BookStore STS then requires that clients authenticate using a token issued by the HomeRealm STS.</span></span> <span data-ttu-id="5fb31-118">同樣地，BookStore STS 的組態檔也會使用 `wsFederationHttpBinding`，將用戶端指向 HomeRealm STS。</span><span class="sxs-lookup"><span data-stu-id="5fb31-118">Again, the configuration file for the BookStore STS points clients to the HomeRealm STS using the `wsFederationHttpBinding`.</span></span>  
+ <span data-ttu-id="bdb5c-117">BookStore STS 接著會要求用戶端使用 HomeRealm STS 所發行的權杖進行驗證。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-117">The BookStore STS then requires that clients authenticate using a token issued by the HomeRealm STS.</span></span> <span data-ttu-id="bdb5c-118">同樣地，BookStore STS 的組態檔也會使用 `wsFederationHttpBinding`，將用戶端指向 HomeRealm STS。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-118">Again, the configuration file for the BookStore STS points clients to the HomeRealm STS using the `wsFederationHttpBinding`.</span></span>  
   
 ```xml  
 <wsFederationHttpBinding>  
@@ -65,54 +65,54 @@ ms.locfileid: "74837879"
 </wsFederationHttpBinding>  
 ```  
   
- <span data-ttu-id="5fb31-119">在存取 `BuyBook` 作業時，事件的順序如下：</span><span class="sxs-lookup"><span data-stu-id="5fb31-119">The sequence of events when accessing the `BuyBook` operation is as follows:</span></span>  
+ <span data-ttu-id="bdb5c-119">在存取 `BuyBook` 作業時，事件的順序如下：</span><span class="sxs-lookup"><span data-stu-id="bdb5c-119">The sequence of events when accessing the `BuyBook` operation is as follows:</span></span>  
   
-1. <span data-ttu-id="5fb31-120">用戶端使用 Windows 認證，向 HomeRealm STS 驗證。</span><span class="sxs-lookup"><span data-stu-id="5fb31-120">The client authenticates to the HomeRealm STS using Windows credentials.</span></span>  
+1. <span data-ttu-id="bdb5c-120">用戶端使用 Windows 認證，向 HomeRealm STS 驗證。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-120">The client authenticates to the HomeRealm STS using Windows credentials.</span></span>  
   
-2. <span data-ttu-id="5fb31-121">HomeRealm STS 發行可用來向 BookStore STS 進行驗證的權杖。</span><span class="sxs-lookup"><span data-stu-id="5fb31-121">The HomeRealm STS issues a token that can be used to authenticate to the BookStore STS.</span></span>  
+2. <span data-ttu-id="bdb5c-121">HomeRealm STS 發行可用來向 BookStore STS 進行驗證的權杖。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-121">The HomeRealm STS issues a token that can be used to authenticate to the BookStore STS.</span></span>  
   
-3. <span data-ttu-id="5fb31-122">用戶端使用 HomeRealm STS 所發行的權杖，向 BookStore STS 驗證。</span><span class="sxs-lookup"><span data-stu-id="5fb31-122">The client authenticates to the BookStore STS using the token issued by the HomeRealm STS.</span></span>  
+3. <span data-ttu-id="bdb5c-122">用戶端使用 HomeRealm STS 所發行的權杖，向 BookStore STS 驗證。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-122">The client authenticates to the BookStore STS using the token issued by the HomeRealm STS.</span></span>  
   
-4. <span data-ttu-id="5fb31-123">BookStore STS 發行可用來向 BookStore 服務進行驗證的權杖。</span><span class="sxs-lookup"><span data-stu-id="5fb31-123">The BookStore STS issues a token that can be used to authenticate to the BookStore Service.</span></span>  
+4. <span data-ttu-id="bdb5c-123">BookStore STS 發行可用來向 BookStore 服務進行驗證的權杖。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-123">The BookStore STS issues a token that can be used to authenticate to the BookStore Service.</span></span>  
   
-5. <span data-ttu-id="5fb31-124">用戶端使用 BookStore STS 所發行的權杖，向 BookStore 服務驗證。</span><span class="sxs-lookup"><span data-stu-id="5fb31-124">The client authenticates to the BookStore service using the token issued by the BookStore STS.</span></span>  
+5. <span data-ttu-id="bdb5c-124">用戶端使用 BookStore STS 所發行的權杖，向 BookStore 服務驗證。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-124">The client authenticates to the BookStore service using the token issued by the BookStore STS.</span></span>  
   
-6. <span data-ttu-id="5fb31-125">用戶端會存取 `BuyBook` 作業。</span><span class="sxs-lookup"><span data-stu-id="5fb31-125">The client accesses the `BuyBook` operation.</span></span>  
+6. <span data-ttu-id="bdb5c-125">用戶端會存取 `BuyBook` 作業。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-125">The client accesses the `BuyBook` operation.</span></span>  
   
- <span data-ttu-id="5fb31-126">請參閱下列指示，以了解如何安裝和執行這個範例。</span><span class="sxs-lookup"><span data-stu-id="5fb31-126">See the following instructions about how to set up and run this sample.</span></span>  
+ <span data-ttu-id="bdb5c-126">請參閱下列指示，以了解如何安裝和執行這個範例。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-126">See the following instructions about how to set up and run this sample.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="5fb31-127">您必須具有**wwwroot**目錄的寫入權限，才能執行此範例。</span><span class="sxs-lookup"><span data-stu-id="5fb31-127">You must have Write permissions to the **wwwroot** directory to run this sample.</span></span>  
+> <span data-ttu-id="bdb5c-127">您必須具有**對 wwwroot**目錄的寫入權限才能運行此示例。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-127">You must have Write permissions to the **wwwroot** directory to run this sample.</span></span>  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="5fb31-128">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="5fb31-128">To set up, build, and run the sample</span></span>  
+#### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="bdb5c-128">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="bdb5c-128">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="5fb31-129">開啟 SDK 命令視窗。</span><span class="sxs-lookup"><span data-stu-id="5fb31-129">Open the SDK command window.</span></span> <span data-ttu-id="5fb31-130">在範例的路徑中，執行 Setup.bat。</span><span class="sxs-lookup"><span data-stu-id="5fb31-130">In the sample path, run Setup.bat.</span></span> <span data-ttu-id="5fb31-131">這會建立範例所需的虛擬目錄，並安裝具有適當權限的必要憑證。</span><span class="sxs-lookup"><span data-stu-id="5fb31-131">This creates the virtual directories required for the sample and installs the required certificates with appropriate permissions.</span></span>  
-  
-    > [!NOTE]
-    > <span data-ttu-id="5fb31-132">Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。</span><span class="sxs-lookup"><span data-stu-id="5fb31-132">The Setup.bat batch file is designed to be run from a Windows SDK Command Prompt.</span></span> <span data-ttu-id="5fb31-133">它要求 MSSDK 環境變數指向安裝 SDK 的目錄。</span><span class="sxs-lookup"><span data-stu-id="5fb31-133">It requires that the MSSDK environment variable point to the directory where the SDK is installed.</span></span> <span data-ttu-id="5fb31-134">這個環境變數是自動在 Windows SDK 命令提示字元中設定。</span><span class="sxs-lookup"><span data-stu-id="5fb31-134">This environment variable is automatically set within a Windows SDK Command Prompt.</span></span> <span data-ttu-id="5fb31-135">在 Windows Vista 上，您必須確定已安裝 IIS 6.0 管理相容性，因為設定會使用 IIS 系統管理員腳本。</span><span class="sxs-lookup"><span data-stu-id="5fb31-135">On Windows Vista, you must ensure that IIS 6.0 Management Compatibility is installed because the set up uses IIS administrator scripts.</span></span> <span data-ttu-id="5fb31-136">在 Windows Vista 上執行安裝腳本需要系統管理員許可權。</span><span class="sxs-lookup"><span data-stu-id="5fb31-136">Running the set-up script on Windows Vista requires administrator privileges.</span></span>  
-  
-2. <span data-ttu-id="5fb31-137">在 Visual Studio 中開啟 FederationSample，然後從 [**建立**] 功能表中選取 [**建立方案**]。</span><span class="sxs-lookup"><span data-stu-id="5fb31-137">Open FederationSample.sln in Visual Studio and select **Build Solution** from the **Build** menu.</span></span> <span data-ttu-id="5fb31-138">這會建置通用專案檔、Bookstore 服務、Bookstore STS、HomeRealm STS，然後將它們部署在 IIS 中。</span><span class="sxs-lookup"><span data-stu-id="5fb31-138">This builds the common project files, Bookstore service, Bookstore STS, HomeRealm STS, and deploys them in IIS.</span></span> <span data-ttu-id="5fb31-139">還會建置 Bookstore 用戶端應用程式，並將可執行檔 BookStoreClient.exe 放置在 FederationSample\BookStoreClient\bin\Debug 資料夾中。</span><span class="sxs-lookup"><span data-stu-id="5fb31-139">This also builds the Bookstore client application and places the executable BookStoreClient.exe in the FederationSample\BookStoreClient\bin\Debug folder.</span></span>  
-  
-3. <span data-ttu-id="5fb31-140">按兩下 BookStoreClient.exe。</span><span class="sxs-lookup"><span data-stu-id="5fb31-140">Double-click BookStoreClient.exe.</span></span> <span data-ttu-id="5fb31-141">BookStoreClient 視窗隨即顯示。</span><span class="sxs-lookup"><span data-stu-id="5fb31-141">The BookStoreClient window is displayed.</span></span>  
-  
-4. <span data-ttu-id="5fb31-142">您可以按一下 **[流覽書籍**]，流覽書店中提供的書籍。</span><span class="sxs-lookup"><span data-stu-id="5fb31-142">You can browse the books available in the bookstore by clicking **Browse Books**.</span></span>  
-  
-5. <span data-ttu-id="5fb31-143">若要購買特定書籍，請在清單中選取該書籍，然後按一下 [**購買書籍**]。</span><span class="sxs-lookup"><span data-stu-id="5fb31-143">To purchase a particular book, select the book in the list and click **Buy Book**.</span></span> <span data-ttu-id="5fb31-144">應用程式隨即啟動，然後會使用 Windows 驗證向 HomeRealm 安全性權杖服務進行驗證。</span><span class="sxs-lookup"><span data-stu-id="5fb31-144">The application starts up and authenticates using Windows authentication with the HomeRealm Security Token Service.</span></span>  
-  
-     <span data-ttu-id="5fb31-145">此範例已設定為允許使用者購買價值在 $15 (含) 以下的書籍。</span><span class="sxs-lookup"><span data-stu-id="5fb31-145">The sample is configured to allow users to purchase books that cost $15 or less.</span></span> <span data-ttu-id="5fb31-146">嘗試購買價值超過 15 美元的書籍，會導致用戶端從「書店服務」(Book Store Service) 收到「拒絕存取」訊息。</span><span class="sxs-lookup"><span data-stu-id="5fb31-146">Attempting to buy books that cost more than $15 results in the client getting an Access Denied message from the Book Store Service.</span></span>  
+1. <span data-ttu-id="bdb5c-129">開啟 SDK 命令視窗。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-129">Open the SDK command window.</span></span> <span data-ttu-id="bdb5c-130">在範例的路徑中，執行 Setup.bat。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-130">In the sample path, run Setup.bat.</span></span> <span data-ttu-id="bdb5c-131">這會建立範例所需的虛擬目錄，並安裝具有適當權限的必要憑證。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-131">This creates the virtual directories required for the sample and installs the required certificates with appropriate permissions.</span></span>  
   
     > [!NOTE]
-    > <span data-ttu-id="5fb31-147">此範例不會在使用者購買之後更新其信用額度限制。</span><span class="sxs-lookup"><span data-stu-id="5fb31-147">The sample does not update the user’s credit limit after a purchase.</span></span> <span data-ttu-id="5fb31-148">您可以在使用者的 (固定) 信用額度限制以內重複購買書籍。</span><span class="sxs-lookup"><span data-stu-id="5fb31-148">You can repeatedly purchase books within the user’s (fixed) credit limit.</span></span>  
+    > <span data-ttu-id="bdb5c-132">Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-132">The Setup.bat batch file is designed to be run from a Windows SDK Command Prompt.</span></span> <span data-ttu-id="bdb5c-133">它要求 MSSDK 環境變數指向安裝 SDK 的目錄。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-133">It requires that the MSSDK environment variable point to the directory where the SDK is installed.</span></span> <span data-ttu-id="bdb5c-134">這個環境變數是自動在 Windows SDK 命令提示字元中設定。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-134">This environment variable is automatically set within a Windows SDK Command Prompt.</span></span> <span data-ttu-id="bdb5c-135">在 Windows Vista 上，必須確保安裝了 IIS 6.0 管理相容性，因為設置使用 IIS 管理員腳本。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-135">On Windows Vista, you must ensure that IIS 6.0 Management Compatibility is installed because the set up uses IIS administrator scripts.</span></span> <span data-ttu-id="bdb5c-136">在 Windows Vista 上回合設定腳本需要管理員許可權。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-136">Running the set-up script on Windows Vista requires administrator privileges.</span></span>  
   
-#### <a name="to-clean-up"></a><span data-ttu-id="5fb31-149">若要清除</span><span class="sxs-lookup"><span data-stu-id="5fb31-149">To clean up</span></span>  
+2. <span data-ttu-id="bdb5c-137">在視覺化工作室中打開聯合樣本.sln，並從 **"生成"** 功能表中選擇 **"生成解決方案**"。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-137">Open FederationSample.sln in Visual Studio and select **Build Solution** from the **Build** menu.</span></span> <span data-ttu-id="bdb5c-138">這會建置通用專案檔、Bookstore 服務、Bookstore STS、HomeRealm STS，然後將它們部署在 IIS 中。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-138">This builds the common project files, Bookstore service, Bookstore STS, HomeRealm STS, and deploys them in IIS.</span></span> <span data-ttu-id="bdb5c-139">還會建置 Bookstore 用戶端應用程式，並將可執行檔 BookStoreClient.exe 放置在 FederationSample\BookStoreClient\bin\Debug 資料夾中。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-139">This also builds the Bookstore client application and places the executable BookStoreClient.exe in the FederationSample\BookStoreClient\bin\Debug folder.</span></span>  
   
-1. <span data-ttu-id="5fb31-150">執行 Cleanup.bat。</span><span class="sxs-lookup"><span data-stu-id="5fb31-150">Run Cleanup.bat.</span></span> <span data-ttu-id="5fb31-151">這會刪除安裝期間建立的虛擬目錄，也會移除安裝期間所安裝的憑證。</span><span class="sxs-lookup"><span data-stu-id="5fb31-151">This deletes the virtual directories that were created during set up and also removes the certificates installed during setup.</span></span>  
+3. <span data-ttu-id="bdb5c-140">按兩下 BookStoreClient.exe。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-140">Double-click BookStoreClient.exe.</span></span> <span data-ttu-id="bdb5c-141">BookStoreClient 視窗隨即顯示。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-141">The BookStoreClient window is displayed.</span></span>  
+  
+4. <span data-ttu-id="bdb5c-142">您可以通過按一下"**流覽書籍"** 來流覽書店中提供的書籍。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-142">You can browse the books available in the bookstore by clicking **Browse Books**.</span></span>  
+  
+5. <span data-ttu-id="bdb5c-143">要購買特定書籍，請挑選清單中的圖書，然後按一下"**購買書籍**"。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-143">To purchase a particular book, select the book in the list and click **Buy Book**.</span></span> <span data-ttu-id="bdb5c-144">應用程式隨即啟動，然後會使用 Windows 驗證向 HomeRealm 安全性權杖服務進行驗證。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-144">The application starts up and authenticates using Windows authentication with the HomeRealm Security Token Service.</span></span>  
+  
+     <span data-ttu-id="bdb5c-145">此範例已設定為允許使用者購買價值在 $15 (含) 以下的書籍。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-145">The sample is configured to allow users to purchase books that cost $15 or less.</span></span> <span data-ttu-id="bdb5c-146">嘗試購買價值超過 15 美元的書籍，會導致用戶端從「書店服務」(Book Store Service) 收到「拒絕存取」訊息。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-146">Attempting to buy books that cost more than $15 results in the client getting an Access Denied message from the Book Store Service.</span></span>  
+  
+    > [!NOTE]
+    > <span data-ttu-id="bdb5c-147">此範例不會在使用者購買之後更新其信用額度限制。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-147">The sample does not update the user’s credit limit after a purchase.</span></span> <span data-ttu-id="bdb5c-148">您可以在使用者的 (固定) 信用額度限制以內重複購買書籍。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-148">You can repeatedly purchase books within the user’s (fixed) credit limit.</span></span>  
+  
+#### <a name="to-clean-up"></a><span data-ttu-id="bdb5c-149">若要清除</span><span class="sxs-lookup"><span data-stu-id="bdb5c-149">To clean up</span></span>  
+  
+1. <span data-ttu-id="bdb5c-150">執行 Cleanup.bat。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-150">Run Cleanup.bat.</span></span> <span data-ttu-id="bdb5c-151">這會刪除安裝期間建立的虛擬目錄，也會移除安裝期間所安裝的憑證。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-151">This deletes the virtual directories that were created during set up and also removes the certificates installed during setup.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="5fb31-152">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="5fb31-152">The samples may already be installed on your machine.</span></span> <span data-ttu-id="5fb31-153">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="5fb31-153">Check for the following (default) directory before continuing.</span></span>  
->   
+> <span data-ttu-id="bdb5c-152">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-152">The samples may already be installed on your machine.</span></span> <span data-ttu-id="bdb5c-153">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-153">Check for the following (default) directory before continuing.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> <span data-ttu-id="5fb31-154">如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="5fb31-154">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="5fb31-155">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="5fb31-155">This sample is located in the following directory.</span></span>  
->   
+>
+> <span data-ttu-id="bdb5c-154">如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-154">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="bdb5c-155">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="bdb5c-155">This sample is located in the following directory.</span></span>  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

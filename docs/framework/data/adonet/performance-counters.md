@@ -5,42 +5,42 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: 985951180a5c8ee09460b7fe4bf3213b986c3bb6
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: b68787980a8b64d9ee90ed8d834fab2c5c69006b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980063"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149332"
 ---
-# <a name="performance-counters-in-adonet"></a><span data-ttu-id="099bb-102">ADO.NET 中的效能計數器</span><span class="sxs-lookup"><span data-stu-id="099bb-102">Performance Counters in ADO.NET</span></span>
-<span data-ttu-id="099bb-103">ADO.NET 2.0 導入了對效能計數器的擴充支援，其中包含對 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 的支援。</span><span class="sxs-lookup"><span data-stu-id="099bb-103">ADO.NET 2.0 introduced expanded support for performance counters that includes support for both <xref:System.Data.SqlClient> and <xref:System.Data.OracleClient>.</span></span> <span data-ttu-id="099bb-104">舊版 ADO.NET 中提供的 <xref:System.Data.SqlClient> 效能計數器已被本主題中討論的新效能計數器取代。</span><span class="sxs-lookup"><span data-stu-id="099bb-104">The <xref:System.Data.SqlClient> performance counters available in previous versions of ADO.NET have been deprecated and replaced with the new performance counters discussed in this topic.</span></span> <span data-ttu-id="099bb-105">您可以使用 ADO.NET 效能計數器來監控應用程式的狀態及其使用的連接資源。</span><span class="sxs-lookup"><span data-stu-id="099bb-105">You can use ADO.NET performance counters to monitor the status of your application and the connection resources that it uses.</span></span> <span data-ttu-id="099bb-106">效能計數器可藉由「Windows 效能監視器」來進行監視，或可藉由 <xref:System.Diagnostics.PerformanceCounter> 命名空間 (Namespace) 中的 <xref:System.Diagnostics> 類別以程式設計的方式存取。</span><span class="sxs-lookup"><span data-stu-id="099bb-106">Performance counters can be monitored by using Windows Performance Monitor or can be accessed programmatically using the <xref:System.Diagnostics.PerformanceCounter> class in the <xref:System.Diagnostics> namespace.</span></span>  
+# <a name="performance-counters-in-adonet"></a><span data-ttu-id="1834e-102">ADO.NET 中的效能計數器</span><span class="sxs-lookup"><span data-stu-id="1834e-102">Performance Counters in ADO.NET</span></span>
+<span data-ttu-id="1834e-103">ADO.NET 2.0 導入了對效能計數器的擴充支援，其中包含對 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 的支援。</span><span class="sxs-lookup"><span data-stu-id="1834e-103">ADO.NET 2.0 introduced expanded support for performance counters that includes support for both <xref:System.Data.SqlClient> and <xref:System.Data.OracleClient>.</span></span> <span data-ttu-id="1834e-104">舊版 ADO.NET 中提供的 <xref:System.Data.SqlClient> 效能計數器已被本主題中討論的新效能計數器取代。</span><span class="sxs-lookup"><span data-stu-id="1834e-104">The <xref:System.Data.SqlClient> performance counters available in previous versions of ADO.NET have been deprecated and replaced with the new performance counters discussed in this topic.</span></span> <span data-ttu-id="1834e-105">您可以使用 ADO.NET 效能計數器來監控應用程式的狀態及其使用的連接資源。</span><span class="sxs-lookup"><span data-stu-id="1834e-105">You can use ADO.NET performance counters to monitor the status of your application and the connection resources that it uses.</span></span> <span data-ttu-id="1834e-106">效能計數器可藉由「Windows 效能監視器」來進行監視，或可藉由 <xref:System.Diagnostics.PerformanceCounter> 命名空間 (Namespace) 中的 <xref:System.Diagnostics> 類別以程式設計的方式存取。</span><span class="sxs-lookup"><span data-stu-id="1834e-106">Performance counters can be monitored by using Windows Performance Monitor or can be accessed programmatically using the <xref:System.Diagnostics.PerformanceCounter> class in the <xref:System.Diagnostics> namespace.</span></span>  
   
-## <a name="available-performance-counters"></a><span data-ttu-id="099bb-107">可用的效能計數器</span><span class="sxs-lookup"><span data-stu-id="099bb-107">Available Performance Counters</span></span>  
- <span data-ttu-id="099bb-108">目前有 14 種不同的效能計數器可供 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 使用 (如下表所述)。</span><span class="sxs-lookup"><span data-stu-id="099bb-108">Currently there are 14 different performance counters available for <xref:System.Data.SqlClient> and <xref:System.Data.OracleClient> as described in the following table.</span></span> <span data-ttu-id="099bb-109">請注意，個別計數器的名稱並未在 Microsoft .NET Framework 的區域版本中當地語系化。</span><span class="sxs-lookup"><span data-stu-id="099bb-109">Note that the names for the individual counters are not localized across regional versions of the Microsoft .NET Framework.</span></span>  
+## <a name="available-performance-counters"></a><span data-ttu-id="1834e-107">可用的效能計數器</span><span class="sxs-lookup"><span data-stu-id="1834e-107">Available Performance Counters</span></span>  
+ <span data-ttu-id="1834e-108">目前有 14 種不同的效能計數器可供 <xref:System.Data.SqlClient> 和 <xref:System.Data.OracleClient> 使用 (如下表所述)。</span><span class="sxs-lookup"><span data-stu-id="1834e-108">Currently there are 14 different performance counters available for <xref:System.Data.SqlClient> and <xref:System.Data.OracleClient> as described in the following table.</span></span> <span data-ttu-id="1834e-109">請注意，個別計數器的名稱並未在 Microsoft .NET Framework 的區域版本中當地語系化。</span><span class="sxs-lookup"><span data-stu-id="1834e-109">Note that the names for the individual counters are not localized across regional versions of the Microsoft .NET Framework.</span></span>  
   
-|<span data-ttu-id="099bb-110">效能計數器</span><span class="sxs-lookup"><span data-stu-id="099bb-110">Performance counter</span></span>|<span data-ttu-id="099bb-111">描述</span><span class="sxs-lookup"><span data-stu-id="099bb-111">Description</span></span>|  
+|<span data-ttu-id="1834e-110">效能計數器</span><span class="sxs-lookup"><span data-stu-id="1834e-110">Performance counter</span></span>|<span data-ttu-id="1834e-111">描述</span><span class="sxs-lookup"><span data-stu-id="1834e-111">Description</span></span>|  
 |-------------------------|-----------------|  
-|`HardConnectsPerSecond`|<span data-ttu-id="099bb-112">每秒鐘對資料庫伺服器所建立的連接數目。</span><span class="sxs-lookup"><span data-stu-id="099bb-112">The number of connections per second that are being made to a database server.</span></span>|  
-|`HardDisconnectsPerSecond`|<span data-ttu-id="099bb-113">每秒鐘對資料庫伺服器所進行的中斷連接數目。</span><span class="sxs-lookup"><span data-stu-id="099bb-113">The number of disconnects per second that are being made to a database server.</span></span>|  
-|`NumberOfActiveConnectionPoolGroups`|<span data-ttu-id="099bb-114">使用中的唯一連接集區群組的數目。</span><span class="sxs-lookup"><span data-stu-id="099bb-114">The number of unique connection pool groups that are active.</span></span> <span data-ttu-id="099bb-115">這個計數器是由 AppDomain 中找到的唯一連接字串數目所控制。</span><span class="sxs-lookup"><span data-stu-id="099bb-115">This counter is controlled by the number of unique connection strings that are found in the AppDomain.</span></span>|  
-|`NumberOfActiveConnectionPools`|<span data-ttu-id="099bb-116">連接集區的總數。</span><span class="sxs-lookup"><span data-stu-id="099bb-116">The total number of connection pools.</span></span>|  
-|`NumberOfActiveConnections`|<span data-ttu-id="099bb-117">目前使用中的現用連接的數目。</span><span class="sxs-lookup"><span data-stu-id="099bb-117">The number of active connections that are currently in use.</span></span> <span data-ttu-id="099bb-118">**注意：** 預設不會啟用此效能計數器。</span><span class="sxs-lookup"><span data-stu-id="099bb-118">**Note:**  This performance counter is not enabled by default.</span></span> <span data-ttu-id="099bb-119">若要啟用此效能計數器，請參閱啟動[依預設關閉的計數器](#ActivatingOffByDefault)。</span><span class="sxs-lookup"><span data-stu-id="099bb-119">To enable this performance counter, see [Activating Off-By-Default Counters](#ActivatingOffByDefault).</span></span>|  
-|`NumberOfFreeConnections`|<span data-ttu-id="099bb-120">連接集區中可用的連接數目。</span><span class="sxs-lookup"><span data-stu-id="099bb-120">The number of connections available for use in the connection pools.</span></span> <span data-ttu-id="099bb-121">**注意：** 預設不會啟用此效能計數器。</span><span class="sxs-lookup"><span data-stu-id="099bb-121">**Note:**  This performance counter is not enabled by default.</span></span> <span data-ttu-id="099bb-122">若要啟用此效能計數器，請參閱啟動[依預設關閉的計數器](#ActivatingOffByDefault)。</span><span class="sxs-lookup"><span data-stu-id="099bb-122">To enable this performance counter, see [Activating Off-By-Default Counters](#ActivatingOffByDefault).</span></span>|  
-|`NumberOfInactiveConnectionPoolGroups`|<span data-ttu-id="099bb-123">標示為清除的唯一連接集區群組的數目。</span><span class="sxs-lookup"><span data-stu-id="099bb-123">The number of unique connection pool groups that are marked for pruning.</span></span> <span data-ttu-id="099bb-124">這個計數器是由 AppDomain 中找到的唯一連接字串數目所控制。</span><span class="sxs-lookup"><span data-stu-id="099bb-124">This counter is controlled by the number of unique connection strings that are found in the AppDomain.</span></span>|  
-|`NumberOfInactiveConnectionPools`|<span data-ttu-id="099bb-125">最近未有任何活動且正等候處置 (Dispose) 的非現用連接集區數目。</span><span class="sxs-lookup"><span data-stu-id="099bb-125">The number of inactive connection pools that have not had any recent activity and are waiting to be disposed.</span></span>|  
-|`NumberOfNonPooledConnections`|<span data-ttu-id="099bb-126">尚未共用的現用連接的數目。</span><span class="sxs-lookup"><span data-stu-id="099bb-126">The number of active connections that are not pooled.</span></span>|  
-|`NumberOfPooledConnections`|<span data-ttu-id="099bb-127">正由連接共用基礎結構所管理的現用連接的數目。</span><span class="sxs-lookup"><span data-stu-id="099bb-127">The number of active connections that are being managed by the connection pooling infrastructure.</span></span>|  
-|`NumberOfReclaimedConnections`|<span data-ttu-id="099bb-128">已透過記憶體回收作業回收的連接數目，其中 `Close` 或 `Dispose` 並非由應用程式呼叫。</span><span class="sxs-lookup"><span data-stu-id="099bb-128">The number of connections that have been reclaimed through garbage collection where `Close` or `Dispose` was not called by the application.</span></span> <span data-ttu-id="099bb-129">未明確關閉或處置連接都會損及效能。</span><span class="sxs-lookup"><span data-stu-id="099bb-129">Not explicitly closing or disposing connections hurts performance.</span></span>|  
-|`NumberOfStasisConnections`|<span data-ttu-id="099bb-130">目前正等候動作完成因此無法提供應用程式使用的連接數目。</span><span class="sxs-lookup"><span data-stu-id="099bb-130">The number of connections currently awaiting completion of an action and which are therefore unavailable for use by your application.</span></span>|  
-|`SoftConnectsPerSecond`|<span data-ttu-id="099bb-131">正從連接集區提取的現用連接的數目。</span><span class="sxs-lookup"><span data-stu-id="099bb-131">The number of active connections being pulled from the connection pool.</span></span> <span data-ttu-id="099bb-132">**注意：** 預設不會啟用此效能計數器。</span><span class="sxs-lookup"><span data-stu-id="099bb-132">**Note:**  This performance counter is not enabled by default.</span></span> <span data-ttu-id="099bb-133">若要啟用此效能計數器，請參閱啟動[依預設關閉的計數器](#ActivatingOffByDefault)。</span><span class="sxs-lookup"><span data-stu-id="099bb-133">To enable this performance counter, see [Activating Off-By-Default Counters](#ActivatingOffByDefault).</span></span>|  
-|`SoftDisconnectsPerSecond`|<span data-ttu-id="099bb-134">正傳回至連接集區的現用連接的數目。</span><span class="sxs-lookup"><span data-stu-id="099bb-134">The number of active connections that are being returned to the connection pool.</span></span> <span data-ttu-id="099bb-135">**注意：** 預設不會啟用此效能計數器。</span><span class="sxs-lookup"><span data-stu-id="099bb-135">**Note:**  This performance counter is not enabled by default.</span></span> <span data-ttu-id="099bb-136">若要啟用此效能計數器，請參閱啟動[依預設關閉的計數器](#ActivatingOffByDefault)。</span><span class="sxs-lookup"><span data-stu-id="099bb-136">To enable this performance counter, see [Activating Off-By-Default Counters](#ActivatingOffByDefault).</span></span>|  
+|`HardConnectsPerSecond`|<span data-ttu-id="1834e-112">每秒鐘對資料庫伺服器所建立的連接數目。</span><span class="sxs-lookup"><span data-stu-id="1834e-112">The number of connections per second that are being made to a database server.</span></span>|  
+|`HardDisconnectsPerSecond`|<span data-ttu-id="1834e-113">每秒鐘對資料庫伺服器所進行的中斷連接數目。</span><span class="sxs-lookup"><span data-stu-id="1834e-113">The number of disconnects per second that are being made to a database server.</span></span>|  
+|`NumberOfActiveConnectionPoolGroups`|<span data-ttu-id="1834e-114">使用中的唯一連接集區群組的數目。</span><span class="sxs-lookup"><span data-stu-id="1834e-114">The number of unique connection pool groups that are active.</span></span> <span data-ttu-id="1834e-115">這個計數器是由 AppDomain 中找到的唯一連接字串數目所控制。</span><span class="sxs-lookup"><span data-stu-id="1834e-115">This counter is controlled by the number of unique connection strings that are found in the AppDomain.</span></span>|  
+|`NumberOfActiveConnectionPools`|<span data-ttu-id="1834e-116">連接集區的總數。</span><span class="sxs-lookup"><span data-stu-id="1834e-116">The total number of connection pools.</span></span>|  
+|`NumberOfActiveConnections`|<span data-ttu-id="1834e-117">目前使用中的現用連接的數目。</span><span class="sxs-lookup"><span data-stu-id="1834e-117">The number of active connections that are currently in use.</span></span> <span data-ttu-id="1834e-118">**注：** 預設情況下，不會啟用此效能計數器。</span><span class="sxs-lookup"><span data-stu-id="1834e-118">**Note:**  This performance counter is not enabled by default.</span></span> <span data-ttu-id="1834e-119">要啟用此效能計數器，請參閱[啟動非預設計數器](#ActivatingOffByDefault)。</span><span class="sxs-lookup"><span data-stu-id="1834e-119">To enable this performance counter, see [Activating Off-By-Default Counters](#ActivatingOffByDefault).</span></span>|  
+|`NumberOfFreeConnections`|<span data-ttu-id="1834e-120">連接集區中可用的連接數目。</span><span class="sxs-lookup"><span data-stu-id="1834e-120">The number of connections available for use in the connection pools.</span></span> <span data-ttu-id="1834e-121">**注：** 預設情況下，不會啟用此效能計數器。</span><span class="sxs-lookup"><span data-stu-id="1834e-121">**Note:**  This performance counter is not enabled by default.</span></span> <span data-ttu-id="1834e-122">要啟用此效能計數器，請參閱[啟動非預設計數器](#ActivatingOffByDefault)。</span><span class="sxs-lookup"><span data-stu-id="1834e-122">To enable this performance counter, see [Activating Off-By-Default Counters](#ActivatingOffByDefault).</span></span>|  
+|`NumberOfInactiveConnectionPoolGroups`|<span data-ttu-id="1834e-123">標示為清除的唯一連接集區群組的數目。</span><span class="sxs-lookup"><span data-stu-id="1834e-123">The number of unique connection pool groups that are marked for pruning.</span></span> <span data-ttu-id="1834e-124">這個計數器是由 AppDomain 中找到的唯一連接字串數目所控制。</span><span class="sxs-lookup"><span data-stu-id="1834e-124">This counter is controlled by the number of unique connection strings that are found in the AppDomain.</span></span>|  
+|`NumberOfInactiveConnectionPools`|<span data-ttu-id="1834e-125">最近未有任何活動且正等候處置 (Dispose) 的非現用連接集區數目。</span><span class="sxs-lookup"><span data-stu-id="1834e-125">The number of inactive connection pools that have not had any recent activity and are waiting to be disposed.</span></span>|  
+|`NumberOfNonPooledConnections`|<span data-ttu-id="1834e-126">尚未共用的現用連接的數目。</span><span class="sxs-lookup"><span data-stu-id="1834e-126">The number of active connections that are not pooled.</span></span>|  
+|`NumberOfPooledConnections`|<span data-ttu-id="1834e-127">正由連接共用基礎結構所管理的現用連接的數目。</span><span class="sxs-lookup"><span data-stu-id="1834e-127">The number of active connections that are being managed by the connection pooling infrastructure.</span></span>|  
+|`NumberOfReclaimedConnections`|<span data-ttu-id="1834e-128">已透過記憶體回收作業回收的連接數目，其中 `Close` 或 `Dispose` 並非由應用程式呼叫。</span><span class="sxs-lookup"><span data-stu-id="1834e-128">The number of connections that have been reclaimed through garbage collection where `Close` or `Dispose` was not called by the application.</span></span> <span data-ttu-id="1834e-129">未明確關閉或處置連接都會損及效能。</span><span class="sxs-lookup"><span data-stu-id="1834e-129">Not explicitly closing or disposing connections hurts performance.</span></span>|  
+|`NumberOfStasisConnections`|<span data-ttu-id="1834e-130">目前正等候動作完成因此無法提供應用程式使用的連接數目。</span><span class="sxs-lookup"><span data-stu-id="1834e-130">The number of connections currently awaiting completion of an action and which are therefore unavailable for use by your application.</span></span>|  
+|`SoftConnectsPerSecond`|<span data-ttu-id="1834e-131">正從連接集區提取的現用連接的數目。</span><span class="sxs-lookup"><span data-stu-id="1834e-131">The number of active connections being pulled from the connection pool.</span></span> <span data-ttu-id="1834e-132">**注：** 預設情況下，不會啟用此效能計數器。</span><span class="sxs-lookup"><span data-stu-id="1834e-132">**Note:**  This performance counter is not enabled by default.</span></span> <span data-ttu-id="1834e-133">要啟用此效能計數器，請參閱[啟動非預設計數器](#ActivatingOffByDefault)。</span><span class="sxs-lookup"><span data-stu-id="1834e-133">To enable this performance counter, see [Activating Off-By-Default Counters](#ActivatingOffByDefault).</span></span>|  
+|`SoftDisconnectsPerSecond`|<span data-ttu-id="1834e-134">正傳回至連接集區的現用連接的數目。</span><span class="sxs-lookup"><span data-stu-id="1834e-134">The number of active connections that are being returned to the connection pool.</span></span> <span data-ttu-id="1834e-135">**注：** 預設情況下，不會啟用此效能計數器。</span><span class="sxs-lookup"><span data-stu-id="1834e-135">**Note:**  This performance counter is not enabled by default.</span></span> <span data-ttu-id="1834e-136">要啟用此效能計數器，請參閱[啟動非預設計數器](#ActivatingOffByDefault)。</span><span class="sxs-lookup"><span data-stu-id="1834e-136">To enable this performance counter, see [Activating Off-By-Default Counters](#ActivatingOffByDefault).</span></span>|  
   
-### <a name="connection-pool-groups-and-connection-pools"></a><span data-ttu-id="099bb-137">連接集區群組和連接集區</span><span class="sxs-lookup"><span data-stu-id="099bb-137">Connection Pool Groups and Connection Pools</span></span>  
- <span data-ttu-id="099bb-138">在使用「Windows 驗證」(整合式安全性) 時，必須同時監控 `NumberOfActiveConnectionPoolGroups` 和 `NumberOfActiveConnectionPools` 效能計數器。</span><span class="sxs-lookup"><span data-stu-id="099bb-138">When using Windows Authentication (integrated security), you must monitor both the `NumberOfActiveConnectionPoolGroups` and `NumberOfActiveConnectionPools` performance counters.</span></span> <span data-ttu-id="099bb-139">原因是連接集區群組會對應至唯一的連接字串。</span><span class="sxs-lookup"><span data-stu-id="099bb-139">The reason is that connection pool groups map to unique connection strings.</span></span> <span data-ttu-id="099bb-140">使用整合式安全性時，連接集區會對應至連接字串，並針對個別的 Windows 識別 (Identity) 額外建立獨立的集區。</span><span class="sxs-lookup"><span data-stu-id="099bb-140">When integrated security is used, connection pools map to connection strings and additionally create separate pools for individual Windows identities.</span></span> <span data-ttu-id="099bb-141">例如，如果 Fred 和 Julie 位於相同的 AppDomain 內，且兩者都使用連接字串 `"Data Source=MySqlServer;Integrated Security=true"`，則會針對連接字串建立連接集區群組，並針對 Fred 和 Julie 建立兩個額外的集區。</span><span class="sxs-lookup"><span data-stu-id="099bb-141">For example, if Fred and Julie, each within the same AppDomain, both use the connection string `"Data Source=MySqlServer;Integrated Security=true"`, a connection pool group is created for the connection string, and two additional pools are created, one for Fred and one for Julie.</span></span> <span data-ttu-id="099bb-142">如果 John 和 Martha 使用具有相同 SQL Server 登入 `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`的連接字串，則只會針對**lowPrivUser**身分識別建立單一集區。</span><span class="sxs-lookup"><span data-stu-id="099bb-142">If John and Martha use a connection string with an identical SQL Server login, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`, then only a single pool is created for the **lowPrivUser** identity.</span></span>  
+### <a name="connection-pool-groups-and-connection-pools"></a><span data-ttu-id="1834e-137">連接集區群組和連接集區</span><span class="sxs-lookup"><span data-stu-id="1834e-137">Connection Pool Groups and Connection Pools</span></span>  
+ <span data-ttu-id="1834e-138">在使用「Windows 驗證」(整合式安全性) 時，必須同時監控 `NumberOfActiveConnectionPoolGroups` 和 `NumberOfActiveConnectionPools` 效能計數器。</span><span class="sxs-lookup"><span data-stu-id="1834e-138">When using Windows Authentication (integrated security), you must monitor both the `NumberOfActiveConnectionPoolGroups` and `NumberOfActiveConnectionPools` performance counters.</span></span> <span data-ttu-id="1834e-139">原因是連接集區群組會對應至唯一的連接字串。</span><span class="sxs-lookup"><span data-stu-id="1834e-139">The reason is that connection pool groups map to unique connection strings.</span></span> <span data-ttu-id="1834e-140">使用整合式安全性時，連接集區會對應至連接字串，並針對個別的 Windows 識別 (Identity) 額外建立獨立的集區。</span><span class="sxs-lookup"><span data-stu-id="1834e-140">When integrated security is used, connection pools map to connection strings and additionally create separate pools for individual Windows identities.</span></span> <span data-ttu-id="1834e-141">例如，如果 Fred 和 Julie 位於相同的 AppDomain 內，且兩者都使用連接字串 `"Data Source=MySqlServer;Integrated Security=true"`，則會針對連接字串建立連接集區群組，並針對 Fred 和 Julie 建立兩個額外的集區。</span><span class="sxs-lookup"><span data-stu-id="1834e-141">For example, if Fred and Julie, each within the same AppDomain, both use the connection string `"Data Source=MySqlServer;Integrated Security=true"`, a connection pool group is created for the connection string, and two additional pools are created, one for Fred and one for Julie.</span></span> <span data-ttu-id="1834e-142">如果 John 和 Martha 使用具有相同 SQL Server`"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`登錄名的連接字串 ，則僅為**lowPrivUser**標識創建單個池。</span><span class="sxs-lookup"><span data-stu-id="1834e-142">If John and Martha use a connection string with an identical SQL Server login, `"Data Source=MySqlServer;User Id=lowPrivUser;Password=Strong?Password"`, then only a single pool is created for the **lowPrivUser** identity.</span></span>  
   
-<a name="ActivatingOffByDefault"></a>   
-### <a name="activating-off-by-default-counters"></a><span data-ttu-id="099bb-143">啟動依預設關閉的計數器</span><span class="sxs-lookup"><span data-stu-id="099bb-143">Activating Off-By-Default Counters</span></span>  
- <span data-ttu-id="099bb-144">效能計數器 `NumberOfFreeConnections`、`NumberOfActiveConnections`、`SoftDisconnectsPerSecond` 和 `SoftConnectsPerSecond` 預設會關閉。</span><span class="sxs-lookup"><span data-stu-id="099bb-144">The performance counters `NumberOfFreeConnections`, `NumberOfActiveConnections`, `SoftDisconnectsPerSecond`, and `SoftConnectsPerSecond` are off by default.</span></span> <span data-ttu-id="099bb-145">請將下列資訊加入至應用程式的組態檔加以啟用：</span><span class="sxs-lookup"><span data-stu-id="099bb-145">Add the following information to the application's configuration file to enable them:</span></span>  
+<a name="ActivatingOffByDefault"></a>
+### <a name="activating-off-by-default-counters"></a><span data-ttu-id="1834e-143">啟動依預設關閉的計數器</span><span class="sxs-lookup"><span data-stu-id="1834e-143">Activating Off-By-Default Counters</span></span>  
+ <span data-ttu-id="1834e-144">效能計數器 `NumberOfFreeConnections`、`NumberOfActiveConnections`、`SoftDisconnectsPerSecond` 和 `SoftConnectsPerSecond` 預設會關閉。</span><span class="sxs-lookup"><span data-stu-id="1834e-144">The performance counters `NumberOfFreeConnections`, `NumberOfActiveConnections`, `SoftDisconnectsPerSecond`, and `SoftConnectsPerSecond` are off by default.</span></span> <span data-ttu-id="1834e-145">請將下列資訊加入至應用程式的組態檔加以啟用：</span><span class="sxs-lookup"><span data-stu-id="1834e-145">Add the following information to the application's configuration file to enable them:</span></span>  
   
 ```xml  
 <system.diagnostics>  
@@ -51,13 +51,13 @@ ms.locfileid: "76980063"
 </system.diagnostics>  
 ```  
   
-## <a name="retrieving-performance-counter-values"></a><span data-ttu-id="099bb-146">擷取效能計數器值</span><span class="sxs-lookup"><span data-stu-id="099bb-146">Retrieving Performance Counter Values</span></span>  
- <span data-ttu-id="099bb-147">下列主控台應用程式顯示如何在應用程式中擷取效能計數器值。</span><span class="sxs-lookup"><span data-stu-id="099bb-147">The following console application shows how to retrieve performance counter values in your application.</span></span> <span data-ttu-id="099bb-148">連接必須為開啟及使用中，才能傳回所有 ADO.NET 效能計數器的資訊。</span><span class="sxs-lookup"><span data-stu-id="099bb-148">Connections must be open and active for information to be returned for all of the ADO.NET performance counters.</span></span>  
+## <a name="retrieving-performance-counter-values"></a><span data-ttu-id="1834e-146">擷取效能計數器值</span><span class="sxs-lookup"><span data-stu-id="1834e-146">Retrieving Performance Counter Values</span></span>  
+ <span data-ttu-id="1834e-147">下列主控台應用程式顯示如何在應用程式中擷取效能計數器值。</span><span class="sxs-lookup"><span data-stu-id="1834e-147">The following console application shows how to retrieve performance counter values in your application.</span></span> <span data-ttu-id="1834e-148">連接必須為開啟及使用中，才能傳回所有 ADO.NET 效能計數器的資訊。</span><span class="sxs-lookup"><span data-stu-id="1834e-148">Connections must be open and active for information to be returned for all of the ADO.NET performance counters.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="099bb-149">這個範例會使用 SQL Server 隨附的**AdventureWorks**範例資料庫。</span><span class="sxs-lookup"><span data-stu-id="099bb-149">This example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="099bb-150">範例程式碼中提供的連接字串假設該資料庫已安裝且可用於具有 SqlExpress 執行個體名稱的本機電腦上，而且您已建立符合連接字串中所提供登入的 SQL Server 登入。</span><span class="sxs-lookup"><span data-stu-id="099bb-150">The connection strings provided in the sample code assume that the database is installed and available on the local computer with an instance name of SqlExpress, and that you have created SQL Server logins that match those supplied in the connection strings.</span></span> <span data-ttu-id="099bb-151">如果伺服器是使用僅允許「Windows 驗證」的預設安全性設定而設定，則可能需要啟用 SQL Server 登入。</span><span class="sxs-lookup"><span data-stu-id="099bb-151">You may need to enable SQL Server logins if your server is configured using the default security settings which allow only Windows Authentication.</span></span> <span data-ttu-id="099bb-152">請視環境需要修改連接字串。</span><span class="sxs-lookup"><span data-stu-id="099bb-152">Modify the connection strings as necessary to suit your environment.</span></span>  
+> <span data-ttu-id="1834e-149">此示例使用 SQL Server 附帶的示例**AdventureWorks**資料庫。</span><span class="sxs-lookup"><span data-stu-id="1834e-149">This example uses the sample **AdventureWorks** database included with SQL Server.</span></span> <span data-ttu-id="1834e-150">範例程式碼中提供的連接字串假設該資料庫已安裝且可用於具有 SqlExpress 執行個體名稱的本機電腦上，而且您已建立符合連接字串中所提供登入的 SQL Server 登入。</span><span class="sxs-lookup"><span data-stu-id="1834e-150">The connection strings provided in the sample code assume that the database is installed and available on the local computer with an instance name of SqlExpress, and that you have created SQL Server logins that match those supplied in the connection strings.</span></span> <span data-ttu-id="1834e-151">如果伺服器是使用僅允許「Windows 驗證」的預設安全性設定而設定，則可能需要啟用 SQL Server 登入。</span><span class="sxs-lookup"><span data-stu-id="1834e-151">You may need to enable SQL Server logins if your server is configured using the default security settings which allow only Windows Authentication.</span></span> <span data-ttu-id="1834e-152">請視環境需要修改連接字串。</span><span class="sxs-lookup"><span data-stu-id="1834e-152">Modify the connection strings as necessary to suit your environment.</span></span>  
   
-### <a name="example"></a><span data-ttu-id="099bb-153">範例</span><span class="sxs-lookup"><span data-stu-id="099bb-153">Example</span></span>  
+### <a name="example"></a><span data-ttu-id="1834e-153">範例</span><span class="sxs-lookup"><span data-stu-id="1834e-153">Example</span></span>  
   
 ```vb  
 Option Explicit On  
@@ -74,7 +74,7 @@ Class Program
   
     Public Shared Sub Main()  
         Dim prog As Program = New Program  
-        ' Open a connection and create the performance counters.   
+        ' Open a connection and create the performance counters.
         prog.connection.ConnectionString = _  
            GetIntegratedSecurityConnectionString()  
         prog.SetUpPerformanceCounters()  
@@ -171,17 +171,17 @@ Class Program
     Private Declare Function GetCurrentProcessId Lib "kernel32.dll" () As Integer  
   
     Private Function GetInstanceName() As String  
-        'This works for Winforms apps.   
+        'This works for Winforms apps.
         Dim instanceName As String = _  
            System.Reflection.Assembly.GetEntryAssembly.GetName.Name  
   
-        ' Must replace special characters like (, ), #, /, \\   
+        ' Must replace special characters like (, ), #, /, \\
         Dim instanceName2 As String = _  
            AppDomain.CurrentDomain.FriendlyName.ToString.Replace("(", "[") _  
            .Replace(")", "]").Replace("#", "_").Replace("/", "_").Replace("\\", "_")  
   
-        'For ASP.NET applications your instanceName will be your CurrentDomain's   
-        'FriendlyName. Replace the line above that sets the instanceName with this:   
+        'For ASP.NET applications your instanceName will be your CurrentDomain's
+        'FriendlyName. Replace the line above that sets the instanceName with this:
         'instanceName = AppDomain.CurrentDomain.FriendlyName.ToString.Replace("(", "[") _  
         '    .Replace(")", "]").Replace("#", "_").Replace("/", "_").Replace("\\", "_")  
   
@@ -201,22 +201,22 @@ Class Program
     End Sub  
   
     Private Shared Function GetIntegratedSecurityConnectionString() As String  
-        ' To avoid storing the connection string in your code,   
-        ' you can retrieve it from a configuration file.   
-        Return ("Data Source=.\SqlExpress;Integrated Security=True;" &   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
+        Return ("Data Source=.\SqlExpress;Integrated Security=True;" &
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionString() As String  
-        ' To avoid storing the connection string in your code,   
-        ' you can retrieve it from a configuration file.   
-        Return ("Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" &   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
+        Return ("Data Source=.\SqlExpress;User Id=LowPriv;Password=Data!05;" &
           "Initial Catalog=AdventureWorks")  
     End Function  
   
     Private Shared Function GetSqlConnectionStringDifferent() As String  
-        ' To avoid storing the connection string in your code,   
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
         Return ("Initial Catalog=AdventureWorks;Data Source=.\SqlExpress;" & _  
           "User Id=LowPriv;Password=Data!05;")  
     End Function  
@@ -347,7 +347,7 @@ class Program
             AppDomain.CurrentDomain.FriendlyName.ToString().Replace('(', '[')  
             .Replace(')', ']').Replace('#', '_').Replace('/', '_').Replace('\\', '_');  
   
-        // For ASP.NET applications your instanceName will be your CurrentDomain's   
+        // For ASP.NET applications your instanceName will be your CurrentDomain's
         // FriendlyName. Replace the line above that sets the instanceName with this:  
         // instanceName = AppDomain.CurrentDomain.FriendlyName.ToString().Replace('(','[')  
         // .Replace(')',']').Replace('#','_').Replace('/','_').Replace('\\','_');  
@@ -394,11 +394,11 @@ class Program
 }  
 ```  
 
-## <a name="see-also"></a><span data-ttu-id="099bb-154">請參閱</span><span class="sxs-lookup"><span data-stu-id="099bb-154">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1834e-154">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1834e-154">See also</span></span>
 
-- [<span data-ttu-id="099bb-155">連接至資料來源</span><span class="sxs-lookup"><span data-stu-id="099bb-155">Connecting to a Data Source</span></span>](connecting-to-a-data-source.md)
-- [<span data-ttu-id="099bb-156">OLE DB、ODBC 和 Oracle 連接共用</span><span class="sxs-lookup"><span data-stu-id="099bb-156">OLE DB, ODBC, and Oracle Connection Pooling</span></span>](ole-db-odbc-and-oracle-connection-pooling.md)
-- <span data-ttu-id="099bb-157">[ASP.NET 的效能計數器](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="099bb-157">[Performance Counters for ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))</span></span>
-- [<span data-ttu-id="099bb-158">執行階段分析</span><span class="sxs-lookup"><span data-stu-id="099bb-158">Runtime Profiling</span></span>](../../debug-trace-profile/runtime-profiling.md)
-- <span data-ttu-id="099bb-159">[監視效能閾值的簡介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="099bb-159">[Introduction to Monitoring Performance Thresholds](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))</span></span>
-- [<span data-ttu-id="099bb-160">ADO.NET 概觀</span><span class="sxs-lookup"><span data-stu-id="099bb-160">ADO.NET Overview</span></span>](ado-net-overview.md)
+- [<span data-ttu-id="1834e-155">連接到資料來源</span><span class="sxs-lookup"><span data-stu-id="1834e-155">Connecting to a Data Source</span></span>](connecting-to-a-data-source.md)
+- [<span data-ttu-id="1834e-156">OLE DB、ODBC 和 Oracle 連接共用</span><span class="sxs-lookup"><span data-stu-id="1834e-156">OLE DB, ODBC, and Oracle Connection Pooling</span></span>](ole-db-odbc-and-oracle-connection-pooling.md)
+- <span data-ttu-id="1834e-157">[ASP.NET 的效能計數器](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="1834e-157">[Performance Counters for ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))</span></span>
+- [<span data-ttu-id="1834e-158">運行時分析</span><span class="sxs-lookup"><span data-stu-id="1834e-158">Runtime Profiling</span></span>](../../debug-trace-profile/runtime-profiling.md)
+- <span data-ttu-id="1834e-159">[監控效能閾值簡介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="1834e-159">[Introduction to Monitoring Performance Thresholds](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bd20x32d(v=vs.90))</span></span>
+- <span data-ttu-id="1834e-160">[ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)</span><span class="sxs-lookup"><span data-stu-id="1834e-160">[ADO.NET Overview](ado-net-overview.md)</span></span>

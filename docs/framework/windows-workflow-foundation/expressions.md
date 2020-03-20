@@ -1,25 +1,25 @@
 ---
-title: 運算式-WF
+title: 運算式 - WF
 ms.date: 03/30/2017
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
-ms.openlocfilehash: 62b278825de6242075e89e3b243b6d6d8ef4d599
-ms.sourcegitcommit: 1e72e2990220b3635cebc39586828af9deb72d8c
+ms.openlocfilehash: 93fe449e8fa6c50f715d842c2ef6a9ecbd31aff2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71306198"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182933"
 ---
-# <a name="expressions"></a><span data-ttu-id="ad83c-102">運算式</span><span class="sxs-lookup"><span data-stu-id="ad83c-102">Expressions</span></span>
+# <a name="expressions"></a><span data-ttu-id="68bad-102">運算式</span><span class="sxs-lookup"><span data-stu-id="68bad-102">Expressions</span></span>
 
-<span data-ttu-id="ad83c-103">Windows Workflow Foundation （WF）運算式是傳回結果的任何活動。</span><span class="sxs-lookup"><span data-stu-id="ad83c-103">A Windows Workflow Foundation (WF) expression is any activity that returns a result.</span></span> <span data-ttu-id="ad83c-104">所有運算式活動會間接自 <xref:System.Activities.Activity%601> 衍生，其包含名為 <xref:System.Activities.OutArgument> 的 <xref:System.Activities.Activity%601.Result%2A> 做為活動的傳回值。</span><span class="sxs-lookup"><span data-stu-id="ad83c-104">All expression activities derive indirectly from <xref:System.Activities.Activity%601>, which contains an <xref:System.Activities.OutArgument> property named <xref:System.Activities.Activity%601.Result%2A> as the activity’s return value.</span></span> [!INCLUDE[wf1](../../../includes/wf1-md.md)] <span data-ttu-id="ad83c-105">隨附範圍廣大的運算式活動，包括簡單的活動 (例如 <xref:System.Activities.Expressions.VariableValue%601> 和 <xref:System.Activities.Expressions.VariableReference%601>，可透過運算子活動存取單一工作流程變數) 及複雜的活動 (例如 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，可存取完整範圍的 Visual Basic 語言以產生結果)。</span><span class="sxs-lookup"><span data-stu-id="ad83c-105">ships with a wide range of expression activities from simple ones like <xref:System.Activities.Expressions.VariableValue%601> and <xref:System.Activities.Expressions.VariableReference%601>, which provide access to single workflow variable through operator activities, to complex activities such as <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> that offer access to the full breadth of Visual Basic language to produce the result.</span></span> <span data-ttu-id="ad83c-106">其他運算式活動可從 <xref:System.Activities.CodeActivity%601> 或 <xref:System.Activities.NativeActivity%601> 來衍生建立。</span><span class="sxs-lookup"><span data-stu-id="ad83c-106">Additional expression activities can be created by deriving from <xref:System.Activities.CodeActivity%601> or <xref:System.Activities.NativeActivity%601>.</span></span>
+<span data-ttu-id="68bad-103">Windows 工作流基礎 （WF） 運算式是返回結果的任何活動。</span><span class="sxs-lookup"><span data-stu-id="68bad-103">A Windows Workflow Foundation (WF) expression is any activity that returns a result.</span></span> <span data-ttu-id="68bad-104">所有運算式活動會間接自 <xref:System.Activities.Activity%601> 衍生，其包含名為 <xref:System.Activities.OutArgument> 的 <xref:System.Activities.Activity%601.Result%2A> 做為活動的傳回值。</span><span class="sxs-lookup"><span data-stu-id="68bad-104">All expression activities derive indirectly from <xref:System.Activities.Activity%601>, which contains an <xref:System.Activities.OutArgument> property named <xref:System.Activities.Activity%601.Result%2A> as the activity’s return value.</span></span> [!INCLUDE[wf1](../../../includes/wf1-md.md)] <span data-ttu-id="68bad-105">隨附範圍廣大的運算式活動，包括簡單的活動 (例如 <xref:System.Activities.Expressions.VariableValue%601> 和 <xref:System.Activities.Expressions.VariableReference%601>，可透過運算子活動存取單一工作流程變數) 及複雜的活動 (例如 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，可存取完整範圍的 Visual Basic 語言以產生結果)。</span><span class="sxs-lookup"><span data-stu-id="68bad-105">ships with a wide range of expression activities from simple ones like <xref:System.Activities.Expressions.VariableValue%601> and <xref:System.Activities.Expressions.VariableReference%601>, which provide access to single workflow variable through operator activities, to complex activities such as <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> that offer access to the full breadth of Visual Basic language to produce the result.</span></span> <span data-ttu-id="68bad-106">其他運算式活動可從 <xref:System.Activities.CodeActivity%601> 或 <xref:System.Activities.NativeActivity%601> 來衍生建立。</span><span class="sxs-lookup"><span data-stu-id="68bad-106">Additional expression activities can be created by deriving from <xref:System.Activities.CodeActivity%601> or <xref:System.Activities.NativeActivity%601>.</span></span>
 
-## <a name="using-expressions"></a><span data-ttu-id="ad83c-107">使用運算式</span><span class="sxs-lookup"><span data-stu-id="ad83c-107">Using Expressions</span></span>
- <span data-ttu-id="ad83c-108">工作流程設計工具會將 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 用於 Visual Basic 專案中的所有運算式，並將 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 和 <xref:Microsoft.CSharp.Activities.CSharpReference%601> 用於 C# 工作流程專案中的運算式。</span><span class="sxs-lookup"><span data-stu-id="ad83c-108">Workflow designer uses <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> for all expressions in Visual Basic projects, and <xref:Microsoft.CSharp.Activities.CSharpValue%601> and <xref:Microsoft.CSharp.Activities.CSharpReference%601> for expressions in C# workflow projects.</span></span>
+## <a name="using-expressions"></a><span data-ttu-id="68bad-107">使用運算式</span><span class="sxs-lookup"><span data-stu-id="68bad-107">Using Expressions</span></span>
+ <span data-ttu-id="68bad-108">工作流程設計工具會將 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 和 <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> 用於 Visual Basic 專案中的所有運算式，並將 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 和 <xref:Microsoft.CSharp.Activities.CSharpReference%601> 用於 C# 工作流程專案中的運算式。</span><span class="sxs-lookup"><span data-stu-id="68bad-108">Workflow designer uses <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> and <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> for all expressions in Visual Basic projects, and <xref:Microsoft.CSharp.Activities.CSharpValue%601> and <xref:Microsoft.CSharp.Activities.CSharpReference%601> for expressions in C# workflow projects.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="ad83c-109">工作流程C#專案中的運算式支援是在 .NET Framework 4.5 中引進。</span><span class="sxs-lookup"><span data-stu-id="ad83c-109">Support for C# expressions in workflow projects was introduced in .NET Framework 4.5.</span></span> <span data-ttu-id="ad83c-110">如需詳細資訊，請參閱[ C#運算式](csharp-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="ad83c-110">For more information, see [C# Expressions](csharp-expressions.md).</span></span>
+> <span data-ttu-id="68bad-109">在 .NET 框架 4.5 中引入了對工作流專案中 C# 運算式的支援。</span><span class="sxs-lookup"><span data-stu-id="68bad-109">Support for C# expressions in workflow projects was introduced in .NET Framework 4.5.</span></span> <span data-ttu-id="68bad-110">有關詳細資訊，請參閱[C# 運算式](csharp-expressions.md)。</span><span class="sxs-lookup"><span data-stu-id="68bad-110">For more information, see [C# Expressions](csharp-expressions.md).</span></span>
 
- <span data-ttu-id="ad83c-111">由設計工具產生的工作流程會儲存為 XAML，其中會以方括號括住運算式，如以下範例所示。</span><span class="sxs-lookup"><span data-stu-id="ad83c-111">Workflows produced by designer are saved in XAML, where expressions appear enclosed in square brackets, as in the following example.</span></span>
+ <span data-ttu-id="68bad-111">由設計工具產生的工作流程會儲存為 XAML，其中會以方括號括住運算式，如以下範例所示。</span><span class="sxs-lookup"><span data-stu-id="68bad-111">Workflows produced by designer are saved in XAML, where expressions appear enclosed in square brackets, as in the following example.</span></span>
 
 ```xml
 <Sequence xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
@@ -40,7 +40,7 @@ ms.locfileid: "71306198"
 </Sequence>
 ```
 
- <span data-ttu-id="ad83c-112">當以程式碼定義工作流程時，可使用任何運算式活動。</span><span class="sxs-lookup"><span data-stu-id="ad83c-112">When defining a workflow in code, any expression activities can be used.</span></span> <span data-ttu-id="ad83c-113">下列範例示範如何使用運算子活動的組合來新增三個數字：</span><span class="sxs-lookup"><span data-stu-id="ad83c-113">The following example shows the usage of a composition of operator activities to add three numbers:</span></span>
+ <span data-ttu-id="68bad-112">當以程式碼定義工作流程時，可使用任何運算式活動。</span><span class="sxs-lookup"><span data-stu-id="68bad-112">When defining a workflow in code, any expression activities can be used.</span></span> <span data-ttu-id="68bad-113">下面的示例顯示了運算子活動組合用於添加三個數字的用法：</span><span class="sxs-lookup"><span data-stu-id="68bad-113">The following example shows the usage of a composition of operator activities to add three numbers:</span></span>
 
 ```csharp
 Variable<int> a = new Variable<int>("a", 1);
@@ -69,7 +69,7 @@ Sequence w = new Sequence
 };
 ```
 
- <span data-ttu-id="ad83c-114">相同的工作流程可以使用C# lambda 運算式來表示更簡潔地，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="ad83c-114">The same workflow can be expressed more compactly by using C# lambda expressions, as shown in the following example:</span></span>
+ <span data-ttu-id="68bad-114">使用 C# lambda 運算式可以更緊湊地表示相同的工作流，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="68bad-114">The same workflow can be expressed more compactly by using C# lambda expressions, as shown in the following example:</span></span>
   
 ```csharp
 Variable<int> a = new Variable<int>("a", 1);
@@ -80,7 +80,7 @@ Variable<int> r = new Variable<int>("r", 0);
 Sequence w = new Sequence
 {
     Variables = { a, b, c, r },
-    Activities = 
+    Activities =
     {
         new Assign {
             To = new OutArgument<int>(r),
@@ -90,9 +90,9 @@ Sequence w = new Sequence
 };
 ```
 
-## <a name="extending-available-expressions-with-custom-expression-activities"></a><span data-ttu-id="ad83c-115">使用自訂運算式活動延伸可用的運算式</span><span class="sxs-lookup"><span data-stu-id="ad83c-115">Extending Available Expressions with Custom Expression Activities</span></span>
+## <a name="extending-available-expressions-with-custom-expression-activities"></a><span data-ttu-id="68bad-115">使用自訂運算式活動延伸可用的運算式</span><span class="sxs-lookup"><span data-stu-id="68bad-115">Extending Available Expressions with Custom Expression Activities</span></span>
 
- <span data-ttu-id="ad83c-116">[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中的運算式可延伸，以便建立其他的運算式活動。</span><span class="sxs-lookup"><span data-stu-id="ad83c-116">Expressions in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] are extensible allowing for additional expression activities to be created.</span></span> <span data-ttu-id="ad83c-117">下列程式碼範例示範會傳回三個整數值加總的活動。</span><span class="sxs-lookup"><span data-stu-id="ad83c-117">The following example shows an activity that returns a sum of three integer values.</span></span>
+ <span data-ttu-id="68bad-116">[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中的運算式可延伸，以便建立其他的運算式活動。</span><span class="sxs-lookup"><span data-stu-id="68bad-116">Expressions in [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] are extensible allowing for additional expression activities to be created.</span></span> <span data-ttu-id="68bad-117">下列程式碼範例示範會傳回三個整數值加總的活動。</span><span class="sxs-lookup"><span data-stu-id="68bad-117">The following example shows an activity that returns a sum of three integer values.</span></span>
 
 ```csharp
 using System;
@@ -119,7 +119,7 @@ namespace ExpressionsDemo
 }
 ```
 
- <span data-ttu-id="ad83c-118">透過這個新活動，您可以重寫先前新增三個值的工作流程，如下列範例所示：</span><span class="sxs-lookup"><span data-stu-id="ad83c-118">With this new activity you can rewrite the previous workflow that added three values as shown in the following example:</span></span>
+ <span data-ttu-id="68bad-118">使用此新活動，您可以重寫添加三個值的上一個工作流，如以下示例所示：</span><span class="sxs-lookup"><span data-stu-id="68bad-118">With this new activity you can rewrite the previous workflow that added three values as shown in the following example:</span></span>
 
 ```csharp
 Variable<int> a = new Variable<int>("a", 1);
@@ -146,4 +146,4 @@ Sequence w = new Sequence
 };
 ```
 
- <span data-ttu-id="ad83c-119">如需在程式碼中使用運算式的詳細資訊，請參閱[使用命令式程式碼撰寫工作流程、活動和運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)。</span><span class="sxs-lookup"><span data-stu-id="ad83c-119">For more information about using expressions in code, see [Authoring Workflows, Activities, and Expressions Using Imperative Code](authoring-workflows-activities-and-expressions-using-imperative-code.md).</span></span>
+ <span data-ttu-id="68bad-119">有關在代碼中使用運算式的詳細資訊，請參閱[使用命令代碼創作工作流、活動和運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)。</span><span class="sxs-lookup"><span data-stu-id="68bad-119">For more information about using expressions in code, see [Authoring Workflows, Activities, and Expressions Using Imperative Code](authoring-workflows-activities-and-expressions-using-imperative-code.md).</span></span>

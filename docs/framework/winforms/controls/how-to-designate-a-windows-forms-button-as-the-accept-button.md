@@ -1,5 +1,5 @@
 ---
-title: 將按鈕指定為 [接受] 按鈕
+title: 將按鈕指定為"接受按鈕"
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: 22cc9da6-b913-4e04-9554-dee443ac5c3a
-ms.openlocfilehash: 1063f649768cac2c866390718b261a21e18ec4d3
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ca5f691fb26db5c4adcb48405c9600b54827104c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743277"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142143"
 ---
-# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a><span data-ttu-id="9bdf1-102">如何：將 Windows Form 中的 Button 指定為接受按鈕</span><span class="sxs-lookup"><span data-stu-id="9bdf1-102">How to: Designate a Windows Forms Button as the Accept Button</span></span>
-<span data-ttu-id="9bdf1-103">在任何 Windows Form 上，您都可以將 <xref:System.Windows.Forms.Button> 控制項指定為 [接受] 按鈕，也稱為 [預設] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="9bdf1-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the accept button, also known as the default button.</span></span> <span data-ttu-id="9bdf1-104">每當使用者按下 ENTER 鍵時，不論表單上的其他控制項有焦點，都會按一下 [預設] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="9bdf1-104">Whenever the user presses the ENTER key, the default button is clicked regardless of which other control on the form has the focus.</span></span>  
+# <a name="how-to-designate-a-windows-forms-button-as-the-accept-button"></a><span data-ttu-id="a5fe3-102">如何：將 Windows Form 中的 Button 指定為接受按鈕</span><span class="sxs-lookup"><span data-stu-id="a5fe3-102">How to: Designate a Windows Forms Button as the Accept Button</span></span>
+<span data-ttu-id="a5fe3-103">在任何 Windows 表單上，都可以將<xref:System.Windows.Forms.Button>控制項指定為接受按鈕，也稱為預設按鈕。</span><span class="sxs-lookup"><span data-stu-id="a5fe3-103">On any Windows Form, you can designate a <xref:System.Windows.Forms.Button> control to be the accept button, also known as the default button.</span></span> <span data-ttu-id="a5fe3-104">每當使用者按下 ENTER 鍵時，無論表單上哪個其他控制項具有焦點，都會按一下預設按鈕。</span><span class="sxs-lookup"><span data-stu-id="a5fe3-104">Whenever the user presses the ENTER key, the default button is clicked regardless of which other control on the form has the focus.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="9bdf1-105">這種情況的例外狀況是當具有焦點的控制項是另一個按鈕時，在此情況下，將會按一下具有焦點的按鈕（或多行文字方塊），或陷印 ENTER 鍵的自訂控制項。</span><span class="sxs-lookup"><span data-stu-id="9bdf1-105">The exceptions to this are when the control with focus is another button — in that case, the button with the focus will be clicked — or a multiline text box, or a custom control that traps the ENTER key.</span></span>  
+> <span data-ttu-id="a5fe3-105">例外情況是，具有焦點的控制項是另一個按鈕（在這種情況下，將按一下具有焦點的按鈕）或多行文字方塊或捕獲 ENTER 鍵的自訂控制項。</span><span class="sxs-lookup"><span data-stu-id="a5fe3-105">The exceptions to this are when the control with focus is another button — in that case, the button with the focus will be clicked — or a multiline text box, or a custom control that traps the ENTER key.</span></span>  
   
-### <a name="to-designate-the-accept-button"></a><span data-ttu-id="9bdf1-106">若要指定接受按鈕</span><span class="sxs-lookup"><span data-stu-id="9bdf1-106">To designate the accept button</span></span>  
+### <a name="to-designate-the-accept-button"></a><span data-ttu-id="a5fe3-106">指定接受按鈕</span><span class="sxs-lookup"><span data-stu-id="a5fe3-106">To designate the accept button</span></span>  
   
-1. <span data-ttu-id="9bdf1-107">將表單的 <xref:System.Windows.Forms.Form.AcceptButton%2A> 屬性設定為適當的 <xref:System.Windows.Forms.Button> 控制項。</span><span class="sxs-lookup"><span data-stu-id="9bdf1-107">Set the form's <xref:System.Windows.Forms.Form.AcceptButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
+1. <span data-ttu-id="a5fe3-107">將表單的屬性<xref:System.Windows.Forms.Form.AcceptButton%2A>設置為相應的<xref:System.Windows.Forms.Button>控制項。</span><span class="sxs-lookup"><span data-stu-id="a5fe3-107">Set the form's <xref:System.Windows.Forms.Form.AcceptButton%2A> property to the appropriate <xref:System.Windows.Forms.Button> control.</span></span>  
   
     ```vb  
     Private Sub SetDefault(ByVal myDefaultBtn As Button)  
-      Me.AcceptButton = myDefaultBtn   
+      Me.AcceptButton = myDefaultBtn
     End Sub  
     ```  
   
@@ -49,11 +49,11 @@ ms.locfileid: "76743277"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="9bdf1-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9bdf1-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a5fe3-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a5fe3-108">See also</span></span>
 
 - <xref:System.Windows.Forms.Form.AcceptButton%2A>
-- [<span data-ttu-id="9bdf1-109">Button 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="9bdf1-109">Button Control Overview</span></span>](button-control-overview-windows-forms.md)
-- [<span data-ttu-id="9bdf1-110">選取 Windows Forms Button 控制項的方法</span><span class="sxs-lookup"><span data-stu-id="9bdf1-110">Ways to Select a Windows Forms Button Control</span></span>](ways-to-select-a-windows-forms-button-control.md)
-- [<span data-ttu-id="9bdf1-111">操作說明：回應 Windows Forms Button 按一下動作</span><span class="sxs-lookup"><span data-stu-id="9bdf1-111">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
-- [<span data-ttu-id="9bdf1-112">操作說明：將 Windows Forms 中的 Button 指定為取消按鈕</span><span class="sxs-lookup"><span data-stu-id="9bdf1-112">How to: Designate a Windows Forms Button as the Cancel Button</span></span>](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
-- [<span data-ttu-id="9bdf1-113">Button 控制項</span><span class="sxs-lookup"><span data-stu-id="9bdf1-113">Button Control</span></span>](button-control-windows-forms.md)
+- [<span data-ttu-id="a5fe3-109">Button 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="a5fe3-109">Button Control Overview</span></span>](button-control-overview-windows-forms.md)
+- [<span data-ttu-id="a5fe3-110">選取 Windows Forms Button 控制項的方法</span><span class="sxs-lookup"><span data-stu-id="a5fe3-110">Ways to Select a Windows Forms Button Control</span></span>](ways-to-select-a-windows-forms-button-control.md)
+- [<span data-ttu-id="a5fe3-111">如何：回應 Windows Form Button 按一下動作</span><span class="sxs-lookup"><span data-stu-id="a5fe3-111">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
+- [<span data-ttu-id="a5fe3-112">如何：將 Windows Form 中的 Button 指定為取消按鈕</span><span class="sxs-lookup"><span data-stu-id="a5fe3-112">How to: Designate a Windows Forms Button as the Cancel Button</span></span>](how-to-designate-a-windows-forms-button-as-the-cancel-button.md)
+- [<span data-ttu-id="a5fe3-113">Button 控制項</span><span class="sxs-lookup"><span data-stu-id="a5fe3-113">Button Control</span></span>](button-control-windows-forms.md)

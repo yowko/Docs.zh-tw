@@ -2,19 +2,19 @@
 title: HOW TO：使用 ASP.NET 授權管理員角色提供者搭配服務
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
-ms.openlocfilehash: 20955578ce4d344c2057036c0944557edf737389
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 009b96defdf27591ddb98afaa684745b5fcbe0d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212228"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184804"
 ---
-# <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a><span data-ttu-id="35a45-102">HOW TO：使用 ASP.NET 授權管理員角色提供者搭配服務</span><span class="sxs-lookup"><span data-stu-id="35a45-102">How to: Use the ASP.NET Authorization Manager Role Provider with a Service</span></span>
-<span data-ttu-id="35a45-103">當 ASP.NET 裝載 Web 服務時，您可以將授權管理員整合至應用程式，以提供服務的授權。</span><span class="sxs-lookup"><span data-stu-id="35a45-103">When ASP.NET hosts a Web service, you can integrate Authorization Manager into the application to provide authorization to the service.</span></span> <span data-ttu-id="35a45-104">授權管理員可讓應用程式開發人員定義個別作業，以便將作業分組，進而形成工作。</span><span class="sxs-lookup"><span data-stu-id="35a45-104">Authorization Manager enables an application developer to define individual operations, which can be grouped together to form tasks.</span></span> <span data-ttu-id="35a45-105">接著，系統管理員可以授權角色來執行特定工作或個別作業。</span><span class="sxs-lookup"><span data-stu-id="35a45-105">An administrator can then authorize roles to perform specific tasks or individual operations.</span></span> <span data-ttu-id="35a45-106">授權管理員會以 Microsoft Management Console (MMC) 嵌入式管理單元的形式提供系統管理工具，以管理角色、工作、作業和使用者。</span><span class="sxs-lookup"><span data-stu-id="35a45-106">Authorization Manager provides an administration tool as a Microsoft Management Console (MMC) snap-in to manage roles, tasks, operations, and users.</span></span> <span data-ttu-id="35a45-107">系統管理員會在 XML 檔案、Active Directory 或「Active Directory 應用程式模式」(ADAM) 存放區中設定授權管理員原則存放區。</span><span class="sxs-lookup"><span data-stu-id="35a45-107">Administrators configure an Authorization Manager policy store in an XML file, Active Directory, or in an Active Directory Application Mode (ADAM) store.</span></span>  
+# <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a><span data-ttu-id="7b145-102">HOW TO：使用 ASP.NET 授權管理員角色提供者搭配服務</span><span class="sxs-lookup"><span data-stu-id="7b145-102">How to: Use the ASP.NET Authorization Manager Role Provider with a Service</span></span>
+<span data-ttu-id="7b145-103">當ASP.NET託管 Web 服務時，可以將授權管理員集成到應用程式中，以向服務提供授權。</span><span class="sxs-lookup"><span data-stu-id="7b145-103">When ASP.NET hosts a Web service, you can integrate Authorization Manager into the application to provide authorization to the service.</span></span> <span data-ttu-id="7b145-104">授權管理員可讓應用程式開發人員定義個別作業，以便將作業分組，進而形成工作。</span><span class="sxs-lookup"><span data-stu-id="7b145-104">Authorization Manager enables an application developer to define individual operations, which can be grouped together to form tasks.</span></span> <span data-ttu-id="7b145-105">接著，系統管理員可以授權角色來執行特定工作或個別作業。</span><span class="sxs-lookup"><span data-stu-id="7b145-105">An administrator can then authorize roles to perform specific tasks or individual operations.</span></span> <span data-ttu-id="7b145-106">授權管理員會以 Microsoft Management Console (MMC) 嵌入式管理單元的形式提供系統管理工具，以管理角色、工作、作業和使用者。</span><span class="sxs-lookup"><span data-stu-id="7b145-106">Authorization Manager provides an administration tool as a Microsoft Management Console (MMC) snap-in to manage roles, tasks, operations, and users.</span></span> <span data-ttu-id="7b145-107">系統管理員會在 XML 檔案、Active Directory 或「Active Directory 應用程式模式」(ADAM) 存放區中設定授權管理員原則存放區。</span><span class="sxs-lookup"><span data-stu-id="7b145-107">Administrators configure an Authorization Manager policy store in an XML file, Active Directory, or in an Active Directory Application Mode (ADAM) store.</span></span>  
   
- <span data-ttu-id="35a45-108">授權管理員會藉由為裝載 Web 服務的 ASP.NET 應用程式設定授權管理員 ASP.NET 角色提供者，整合到應用程式中。</span><span class="sxs-lookup"><span data-stu-id="35a45-108">Authorization Manager is Integrated into the application by configuring the Authorization Manager ASP.NET role provider for the ASP.NET application that is hosting the Web service.</span></span> <span data-ttu-id="35a45-109">就像其他 ASP.NET 角色提供者，授權管理員 ASP.NET 角色提供者是使用 <`providers`> 元素來設定。</span><span class="sxs-lookup"><span data-stu-id="35a45-109">Like other ASP.NET role providers, the Authorization Manager ASP.NET role provider is configured using the <`providers`> element.</span></span>  
+ <span data-ttu-id="7b145-108">授權管理員通過為託管 Web 服務ASP.NET應用程式佈建授權管理員ASP.NET角色提供程式集成到應用程式中。</span><span class="sxs-lookup"><span data-stu-id="7b145-108">Authorization Manager is Integrated into the application by configuring the Authorization Manager ASP.NET role provider for the ASP.NET application that is hosting the Web service.</span></span> <span data-ttu-id="7b145-109">與其他ASP.NET角色提供程式一樣，授權管理員ASP.NET角色提供程式使用<>`providers`元素進行配置。</span><span class="sxs-lookup"><span data-stu-id="7b145-109">Like other ASP.NET role providers, the Authorization Manager ASP.NET role provider is configured using the <`providers`> element.</span></span>  
   
- <span data-ttu-id="35a45-110">下列程式碼範例是將授權管理員整合至應用程式之 Web 服務組態檔的一部分。</span><span class="sxs-lookup"><span data-stu-id="35a45-110">The following code example is a portion of a configuration file for a Web service that is integrating Authorization Manager into the application.</span></span>  
+ <span data-ttu-id="7b145-110">下列程式碼範例是將授權管理員整合至應用程式之 Web 服務組態檔的一部分。</span><span class="sxs-lookup"><span data-stu-id="7b145-110">The following code example is a portion of a configuration file for a Web service that is integrating Authorization Manager into the application.</span></span>  
   
 ```xml  
 <system.web>  
@@ -22,15 +22,15 @@ ms.locfileid: "76212228"
       <providers>  
         <add name="AzManRoleProvider"  
              type="System.Web.Security.AuthorizationStoreRoleProvider, System.Web, Version=2.0.0.0, Culture=neutral, publicKeyToken=b03f5f7f11d50a3a"  
-             connectionStringName="AzManPolicyStoreConnectionString"   
+             connectionStringName="AzManPolicyStoreConnectionString"
              applicationName="SecureService"/>  
       </providers>  
     </roleManager>  
 </system.web>  
 ```  
   
- <span data-ttu-id="35a45-111">如需整合 ASP.NET 角色提供者與 WCF 應用程式的詳細資訊，請參閱[如何：搭配服務使用 ASP.NET 角色提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)。</span><span class="sxs-lookup"><span data-stu-id="35a45-111">For more information about integrating an ASP.NET role provider with a WCF application, see [How to: Use the ASP.NET Role Provider with a Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).</span></span> <span data-ttu-id="35a45-112">如需有關搭配 ASP.NET 使用授權管理員的詳細資訊，請參閱[如何：搭配 ASP.NET 2.0 使用授權管理員（AzMan）](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10))。</span><span class="sxs-lookup"><span data-stu-id="35a45-112">For more information about using Authorization Manager with ASP.NET, see [How to: Use Authorization Manager (AzMan) with ASP.NET 2.0](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10)).</span></span>  
+ <span data-ttu-id="7b145-111">有關將ASP.NET角色提供程式與 WCF 應用程式集成的詳細資訊，請參閱[：將ASP.NET角色提供程式與服務一起](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)使用。</span><span class="sxs-lookup"><span data-stu-id="7b145-111">For more information about integrating an ASP.NET role provider with a WCF application, see [How to: Use the ASP.NET Role Provider with a Service](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).</span></span> <span data-ttu-id="7b145-112">有關將授權管理員與ASP.NET一起使用的詳細資訊，請參閱[：將授權管理員 （AzMan） 與 2.0 ASP.NET 。](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10))</span><span class="sxs-lookup"><span data-stu-id="7b145-112">For more information about using Authorization Manager with ASP.NET, see [How to: Use Authorization Manager (AzMan) with ASP.NET 2.0](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10)).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="35a45-113">請參閱</span><span class="sxs-lookup"><span data-stu-id="35a45-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b145-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7b145-113">See also</span></span>
 
-- [<span data-ttu-id="35a45-114">如何：使用 ASP.NET 角色提供者搭配服務</span><span class="sxs-lookup"><span data-stu-id="35a45-114">How to: Use the ASP.NET Role Provider with a Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [<span data-ttu-id="7b145-114">HOW TO：使用 ASP.NET 角色提供者搭配服務</span><span class="sxs-lookup"><span data-stu-id="7b145-114">How to: Use the ASP.NET Role Provider with a Service</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)

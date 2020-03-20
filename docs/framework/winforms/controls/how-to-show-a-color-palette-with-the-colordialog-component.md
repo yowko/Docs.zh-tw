@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 ColorDialog 元件顯示調色盤
+title: 如何：使用 ColorDialog 元件顯示色板
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,25 +14,25 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: ff29df4ecfc90eabe8e3be0e5a6a126858799c16
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 0406ef7a32678bd149c0024348a7adf1f0b72926
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053430"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141779"
 ---
-# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a><span data-ttu-id="d5df3-102">HOW TO：使用 ColorDialog 元件顯示調色盤</span><span class="sxs-lookup"><span data-stu-id="d5df3-102">How to: Show a Color Palette with the ColorDialog Component</span></span>
-<span data-ttu-id="d5df3-103">[ColorDialog](colordialog-component-windows-forms.md)元件會顯示色的調色盤，並傳回包含使用者選取的色彩屬性。</span><span class="sxs-lookup"><span data-stu-id="d5df3-103">The [ColorDialog](colordialog-component-windows-forms.md) component displays a palette of colors and returns a property containing the color the user has selected.</span></span>  
+# <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a><span data-ttu-id="60016-102">如何：使用 ColorDialog 元件顯示色板</span><span class="sxs-lookup"><span data-stu-id="60016-102">How to: Show a Color Palette with the ColorDialog Component</span></span>
+<span data-ttu-id="60016-103">[ColorDialog](colordialog-component-windows-forms.md)元件顯示顏色調色板，並返回包含使用者選擇的顏色的屬性。</span><span class="sxs-lookup"><span data-stu-id="60016-103">The [ColorDialog](colordialog-component-windows-forms.md) component displays a palette of colors and returns a property containing the color the user has selected.</span></span>  
   
-### <a name="to-choose-a-color-using-the-colordialog-component"></a><span data-ttu-id="d5df3-104">若要選擇色彩，其使用 ColorDialog 元件</span><span class="sxs-lookup"><span data-stu-id="d5df3-104">To choose a color using the ColorDialog component</span></span>  
+### <a name="to-choose-a-color-using-the-colordialog-component"></a><span data-ttu-id="60016-104">使用 ColorDialog 元件選擇顏色</span><span class="sxs-lookup"><span data-stu-id="60016-104">To choose a color using the ColorDialog component</span></span>  
   
-1. <span data-ttu-id="d5df3-105">顯示對話方塊方塊中，使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="d5df3-105">Display the dialog box using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
+1. <span data-ttu-id="60016-105">使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法顯示對話方塊。</span><span class="sxs-lookup"><span data-stu-id="60016-105">Display the dialog box using the <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> method.</span></span>  
   
-2. <span data-ttu-id="d5df3-106">使用<xref:System.Windows.Forms.DialogResult>屬性來決定對話方塊關閉的方式。</span><span class="sxs-lookup"><span data-stu-id="d5df3-106">Use the <xref:System.Windows.Forms.DialogResult> property to determine how the dialog box was closed.</span></span>  
+2. <span data-ttu-id="60016-106">使用<xref:System.Windows.Forms.DialogResult>屬性確定對話方塊的關閉方式。</span><span class="sxs-lookup"><span data-stu-id="60016-106">Use the <xref:System.Windows.Forms.DialogResult> property to determine how the dialog box was closed.</span></span>  
   
-3. <span data-ttu-id="d5df3-107">使用<xref:System.Windows.Forms.ColorDialog.Color%2A>屬性<xref:System.Windows.Forms.ColorDialog>元件來設定選擇的色彩。</span><span class="sxs-lookup"><span data-stu-id="d5df3-107">Use the <xref:System.Windows.Forms.ColorDialog.Color%2A> property of the <xref:System.Windows.Forms.ColorDialog> component to set the chosen color.</span></span>  
+3. <span data-ttu-id="60016-107"><xref:System.Windows.Forms.ColorDialog.Color%2A>使用元件的屬性<xref:System.Windows.Forms.ColorDialog>設置所選顏色。</span><span class="sxs-lookup"><span data-stu-id="60016-107">Use the <xref:System.Windows.Forms.ColorDialog.Color%2A> property of the <xref:System.Windows.Forms.ColorDialog> component to set the chosen color.</span></span>  
   
-     <span data-ttu-id="d5df3-108">在下列範例中，<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式會開啟<xref:System.Windows.Forms.ColorDialog>元件。</span><span class="sxs-lookup"><span data-stu-id="d5df3-108">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens a <xref:System.Windows.Forms.ColorDialog> component.</span></span> <span data-ttu-id="d5df3-109">色彩選擇和使用者時按下 **[確定]**，則<xref:System.Windows.Forms.Button>控制項的背景色彩會設為選擇的色彩。</span><span class="sxs-lookup"><span data-stu-id="d5df3-109">When a color is chosen and the user clicks **OK**, the <xref:System.Windows.Forms.Button> control's background color is set to the chosen color.</span></span> <span data-ttu-id="d5df3-110">此範例假設您的表單具有<xref:System.Windows.Forms.Button>控制項和<xref:System.Windows.Forms.ColorDialog>元件。</span><span class="sxs-lookup"><span data-stu-id="d5df3-110">The example assumes your form has a <xref:System.Windows.Forms.Button> control and a <xref:System.Windows.Forms.ColorDialog> component.</span></span>  
+     <span data-ttu-id="60016-108">在下面的示例中，<xref:System.Windows.Forms.Button>控制項<xref:System.Windows.Forms.Control.Click>的事件處理常式將打開一個<xref:System.Windows.Forms.ColorDialog>元件。</span><span class="sxs-lookup"><span data-stu-id="60016-108">In the example below, the <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event handler opens a <xref:System.Windows.Forms.ColorDialog> component.</span></span> <span data-ttu-id="60016-109">當選擇顏色並且使用者按一下 **"確定"** 時，<xref:System.Windows.Forms.Button>控制項的背景顏色將設置為所選顏色。</span><span class="sxs-lookup"><span data-stu-id="60016-109">When a color is chosen and the user clicks **OK**, the <xref:System.Windows.Forms.Button> control's background color is set to the chosen color.</span></span> <span data-ttu-id="60016-110">該示例假定表單具有控制項<xref:System.Windows.Forms.Button>和<xref:System.Windows.Forms.ColorDialog>元件。</span><span class="sxs-lookup"><span data-stu-id="60016-110">The example assumes your form has a <xref:System.Windows.Forms.Button> control and a <xref:System.Windows.Forms.ColorDialog> component.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -55,7 +55,7 @@ ms.locfileid: "66053430"
   
     ```cpp  
     private:  
-       void button1_Click(System::Object ^ sender,   
+       void button1_Click(System::Object ^ sender,
           System::EventArgs ^ e)  
        {  
           if(colorDialog1->ShowDialog() == DialogResult::OK)  
@@ -65,18 +65,18 @@ ms.locfileid: "66053430"
        }  
     ```  
   
-     <span data-ttu-id="d5df3-111">(Visual C#、 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="d5df3-111">(Visual C#, Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="60016-111">（視覺 C#，視覺C++）將以下代碼放在表單的建構函式中以註冊事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="60016-111">(Visual C#, Visual C++) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
     ```  
   
     ```cpp  
-    this->button1->Click +=   
+    this->button1->Click +=
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d5df3-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d5df3-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60016-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="60016-112">See also</span></span>
 
 - <xref:System.Windows.Forms.ColorDialog>
-- [<span data-ttu-id="d5df3-113">ColorDialog 元件</span><span class="sxs-lookup"><span data-stu-id="d5df3-113">ColorDialog Component</span></span>](colordialog-component-windows-forms.md)
+- [<span data-ttu-id="60016-113">ColorDialog 元件</span><span class="sxs-lookup"><span data-stu-id="60016-113">ColorDialog Component</span></span>](colordialog-component-windows-forms.md)
