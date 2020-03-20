@@ -1,13 +1,13 @@
 ---
-title: 設定 Use 和 Style 屬性範例
+title: 設置"使用"和"樣式"屬性示例
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
-ms.openlocfilehash: 36111aa05680fb8b369cde6b42d22c9c3b8474ad
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f400c0bc08588afa951ae33f221663b47b37602c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345137"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144028"
 ---
 # <a name="setting-the-use-and-style-properties"></a>設定 Use 與 Style 屬性
 
@@ -16,7 +16,7 @@ ms.locfileid: "75345137"
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
 
-<xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 樣式屬性會判斷該服務之 WSDL 中繼資料格式化的方式。 可能的值為 <xref:System.ServiceModel.OperationFormatStyle.Document> 和 <xref:System.ServiceModel.OperationFormatStyle.Rpc>。 RPC 表示為某個作業交換之訊息的 WSDL 表示法，如同遠端程序呼叫一般含有參數。 範例如下。
+<xref:System.ServiceModel.DataContractFormatAttribute.Style%2A> 樣式屬性會判斷該服務之 WSDL 中繼資料格式化的方式。 可能的值為 <xref:System.ServiceModel.OperationFormatStyle.Document> 和 <xref:System.ServiceModel.OperationFormatStyle.Rpc>。 RPC 表示為某個作業交換之訊息的 WSDL 表示法，如同遠端程序呼叫一般含有參數。 以下是一個範例。
 
 ```xml
 <wsdl:message name="IUseAndStyleCalculator_Add_InputMessage">
@@ -53,13 +53,13 @@ Encoded 表示 WSDL 中的結構描述是根據 SOAP 1.1 第 5 節的規則編�
 
 WS-I Basic Profile 1.0 禁止使用 <xref:System.ServiceModel.OperationFormatUse.Encoded>，只有在舊版服務需要時才使用這個項目。 此 `Encoded` 訊息格式只會在使用 XmlSerializer 時才會提供。
 
-為了讓您查看傳送和接收的訊息，此範例是以[追蹤和訊息記錄](tracing-and-message-logging.md)為基礎。 服務組態與原始程式碼已修改成啟用並利用追蹤以及訊息記錄。 此外，<xref:System.ServiceModel.WSHttpBinding> 已經設定成不使用安全性，因此已記錄的訊息可以用未加密的格式檢視。 您應該使用[服務追蹤檢視器工具（svctraceviewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)來查看產生的追蹤記錄檔（system.servicemodel. E2e 和 Message .log）。 這些追蹤已設定為建立在 C:\LOGS 資料夾中。 先建立資料夾，再執行此範例。 若要在追蹤檢視器工具中查看訊息內容，請選取工具左側和右側窗格中的 [**訊息**]。
+為了允許您查看正在發送和接收的消息，此示例基於[跟蹤和消息日誌記錄](tracing-and-message-logging.md)。 服務組態與原始程式碼已修改成啟用並利用追蹤以及訊息記錄。 此外，<xref:System.ServiceModel.WSHttpBinding> 已經設定成不使用安全性，因此已記錄的訊息可以用未加密的格式檢視。 生成的跟蹤日誌（系統.ServiceModel.e2e 和 Message.log）應使用[服務跟蹤檢視器工具 （SvcTraceViewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)進行查看。 這些追蹤已設定為建立在 C:\LOGS 資料夾中。 先建立資料夾，再執行此範例。 要查看"跟蹤檢視器"工具中的消息內容，請選擇工具的左側和右側窗格中**的消息**。
 
 下列程式碼會示範 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 屬性已設為 <xref:System.ServiceModel.OperationFormatUse>，而訊息本文格式已從預設的 <xref:System.ServiceModel.OperationFormatStyle> 變更為 <xref:System.ServiceModel.OperationFormatStyle.Document> 的服務合約。
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),
-XmlSerializerFormat(Style = OperationFormatStyle.Rpc, 
+XmlSerializerFormat(Style = OperationFormatStyle.Rpc,
                                  Use = OperationFormatUse.Encoded)]
 public interface IUseAndStyleCalculator
 {
@@ -74,23 +74,23 @@ public interface IUseAndStyleCalculator
 }
 ```
 
-若要檢視不同 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 設定之間的差異，請修改服務中的這些設定，接著重新產生用戶端、執行範例，然後使用服務追蹤檢視器工具檢查 c:\logs\message.logs 檔。 也請查看 `http://localhost/ServiceModelSamples/service.svc?wsdl`來觀察對中繼資料的影響。 服務的中繼資料通常會分成好幾頁。 主要 wsdl 頁面包含 WSDL 系結，但 view `http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0` 以觀察訊息定義。
+若要檢視不同 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Use%2A> 和 <xref:System.ServiceModel.XmlSerializerFormatAttribute.Style%2A> 設定之間的差異，請修改服務中的這些設定，接著重新產生用戶端、執行範例，然後使用服務追蹤檢視器工具檢查 c:\logs\message.logs 檔。 還要通過查看`http://localhost/ServiceModelSamples/service.svc?wsdl`來觀察對中繼資料的影響。 服務的中繼資料通常會分成好幾頁。 主 wsdl 頁包含 WSDL 綁定，但視圖`http://localhost/ServiceModelSamples/service.svc?wsdl=wsdl0`以觀察消息定義。
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 確保已為 Windows[通信基礎示例執行一次性設置過程](one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 建立用於記錄訊息的 C:\LOGS 目錄。 給予使用者這個目錄的網路服務寫入權限。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
-4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](running-the-samples.md)中的指示。
+4. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](running-the-samples.md)說明操作。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
-> 
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\UseAndStyle`

@@ -1,5 +1,5 @@
 ---
-title: 教學課程：定義 Windows Communication Foundation 服務合約
+title: 教程：定義 Windows 通信基礎服務協定
 ms.date: 03/19/2019
 helpviewer_keywords:
 - service contracts [WCF], defining
@@ -7,55 +7,55 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: 49526808a65b68c6df734bd7f3e76eff1e4a6bc5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7c1c42c4f22a1a9627c147440e8e198551470b7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338289"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184098"
 ---
-# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>教學課程：定義 Windows Communication Foundation 服務合約
+# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>教程：定義 Windows 通信基礎服務協定
 
-本教學課程說明建立基本 Windows Communication Foundation （WCF）應用程式所需的五個工作中的第一個。 如需教學課程的總覽，請參閱[教學課程：開始使用 Windows Communication Foundation 應用程式](getting-started-tutorial.md)。
+本教程介紹創建基本 Windows 通信基礎 （WCF） 應用程式所需的五項任務中的第一個。 有關教程的概述，請參閱[教程：開始使用 Windows 通信基礎應用程式](getting-started-tutorial.md)。
 
-當您建立 WCF 服務時，您的第一項工作是定義服務合約。 服務合約會指定服務所支援的作業。 作業可以視為一種 Web 服務方法。 您可以藉由定義C#或 Visual Basic 介面來建立服務合約。 介面具有下列特性：
+創建 WCF 服務時，您的第一個任務是定義服務協定。 服務合約會指定服務所支援的作業。 作業可以視為一種 Web 服務方法。 通過定義 C# 或視覺化基本介面來創建服務協定。 介面具有以下特徵：
 
-- 介面中的每一個方法都會對應到一個特定的服務作業。 
-- 您必須針對每個介面套用 <xref:System.ServiceModel.ServiceContractAttribute> 屬性。
-- 針對每個作業/方法，您都必須套用 <xref:System.ServiceModel.OperationContractAttribute> 屬性。 
+- 介面中的每個方法會對應一個特定服務作業。
+- 對於每個介面，必須應用該<xref:System.ServiceModel.ServiceContractAttribute>屬性。
+- 對於每個操作/方法，必須應用該<xref:System.ServiceModel.OperationContractAttribute>屬性。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 > [!div class="checklist"]
 >
-> - 建立**WCF 服務程式庫**專案。
-> - 定義服務合約介面。
+> - 創建**WCF 服務庫**專案。
+> - 定義服務協定介面。
 
-## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>建立 WCF 服務程式庫專案和定義服務合約介面
+## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>創建 WCF 服務庫專案並定義服務協定介面
 
-1. 以系統管理員身分開啟 Visual Studio。 若要這麼做，請在 [**開始**] 功能表中選取 [Visual Studio] 程式，然後從快捷方式功能表選取 [**更多** > 以**系統管理員身分執行**]。
+1. 以系統管理員身分開啟 Visual Studio。 為此，請在 **"開始"** 功能表中選擇 Visual Studio 程式，然後從快顯功能表中選擇 **"以管理員** > **身份運行**"。
 
-2. 建立**WCF 服務程式庫**專案。
+2. 創建**WCF 服務庫**專案。
 
-   1. 從 [檔案] 功能表選取 [新增] >  [專案]。
+   1. 從 [檔案]**** 功能表選取 [新增]**** > [專案]****。
 
-   2. 在 [**新增專案**] 對話方塊左側，展開 [**視覺效果C#**  ] 或 [ **Visual Basic**]，然後選取 [ **WCF** ] 分類。 Visual Studio 會在視窗的中間區段顯示專案範本清單。 選取 [ **WCF 服務程式庫**]。
-
-      > [!NOTE]
-      > 如果您沒有看到 [ **WCF**專案範本] 類別目錄，您可能需要安裝 Visual Studio 的**Windows Communication Foundation**元件。 在 [**新增專案**] 對話方塊中，選取左側的 [**開啟 Visual Studio 安裝程式**] 連結。 選取 [**個別元件**] 索引標籤，然後尋找並選取 [**開發活動**] 類別底下的 [ **Windows Communication Foundation** ]。 選擇 [**修改**] 開始安裝元件。
-
-   3. 在視窗的下方區段中，針對 [**名稱**] 輸入*GettingStartedLib* ，然後在 [**方案名稱**] 中輸入*GettingStarted* 。 
-
-   4. 選取 [確定]。
-
-      Visual Studio 會建立專案，其中包含三個檔案： *IService1.cs* （或 Visual Basic 專案的*IService1* ）、 *Service1.cs* （或 Visual Basic 專案的*Service1* ）和*app.config*。Visual Studio 定義這些檔案，如下所示： 
-      - *IService1*檔案包含服務合約的預設定義。 
-      - *Service1*檔案包含服務合約的預設執行。 
-      - *App.config*檔案包含使用 Visual Studio WCF 服務主機工具載入預設服務時所需的設定資訊。 如需 WCF 服務主機工具的詳細資訊，請參閱[Wcf 服務主機（WcfSvcHost .exe）](wcf-service-host-wcfsvchost-exe.md)。
+   2. 在左側的 **"新專案**"對話方塊中，展開**視覺化 C#** 或**視覺化基本**，然後選擇**WCF**類別。 Visual Studio 在視窗的中心部分顯示專案範本的清單。 選擇**WCF 服務庫**。
 
       > [!NOTE]
-      > 如果您已使用 Visual Basic 的開發人員環境設定來安裝 Visual Studio，解決方案可能會隱藏起來。 如果是這種情況，請從 **工具** 功能表中選取 **選項**，然後在 **選項** 視窗中選取 **專案和方案** > **一般**。 選取 [**永遠顯示方案**]。 此外，請確認已選取 [**建立時儲存新專案**]。
+      > 如果您沒有看到**WCF**專案範本類別，則可能需要安裝 Visual Studio 的**Windows 通信基礎**元件。 在 **"新專案**"對話方塊中，選擇左側的 **"打開視覺化工作室安裝程式"** 連結。 選擇 **"單個元件**"選項卡，然後在 **"開發活動**"類別下查找並選擇**Windows 通信基礎**。 選擇 **"修改"** 以開始安裝元件。
 
-3. 從**方案總管**開啟**IService1.cs**或**IService1**檔案，並將其程式碼取代為下列程式碼：
+   3. 在視窗的底部部分，輸入"獲取*入門Lib"***以**獲取**解決方案名稱的名稱**和*入門*。
+
+   4. 選取 [確定]****。
+
+      Visual Studio 創建的專案有三個檔 *：IService1.cs（* 或用於視覺化基礎專案的*IService1.vb）、Service1.cs（* 或 Visual Basic 專案的*Service1.vb）* 和*App.config*。 *Service1.cs*Visual Studio 定義這些檔如下所示：
+      - *IService1*檔包含服務協定的預設定義。
+      - *Service1*檔包含服務協定的預設實現。
+      - *App.config*檔包含使用 Visual Studio WCF 服務主機工具載入預設服務所需的配置資訊。 有關 WCF 服務主機工具的詳細資訊，請參閱[WCF 服務主機 （WcfSvcHost.exe）。](wcf-service-host-wcfsvchost-exe.md)
+
+      > [!NOTE]
+      > 如果安裝了具有視覺化基本開發人員環境設置的 Visual Studio，則解決方案可能已隱藏。 如果是這種情況，請從 **"工具"** 功能表中選擇 **"選項**"，然後在 **"選項"** 視窗中選擇"**專案和解決方案** > **常規**"。 選擇 **"始終顯示解決方案**"。 此外，驗證是否選擇了**創建時保存新專案**。
+
+3. 從**解決方案資源管理器**中打開**IService1.cs**或**IService1.vb**檔，並將其代碼替換為以下代碼：
 
     ```csharp
     using System;
@@ -98,17 +98,17 @@ ms.locfileid: "75338289"
     End Namespace
     ```
 
-     本合約定義了線上計算機。 請注意，`ICalculator` 介面會標示 <xref:System.ServiceModel.ServiceContractAttribute> 屬性（簡化為 `ServiceContract`）。 這個屬性會定義命名空間來區分合約名稱。 程式碼會使用 <xref:System.ServiceModel.OperationContractAttribute> 屬性來標示每個計算機作業（簡化為 `OperationContract`）。
+     本合約定義了線上計算機。 請注意，`ICalculator`介面用<xref:System.ServiceModel.ServiceContractAttribute>屬性標記（簡化為`ServiceContract`）。 此屬性定義命名空間以消除協定名稱的歧義。 代碼使用<xref:System.ServiceModel.OperationContractAttribute>屬性標記每個計算機操作（簡化為`OperationContract`）。
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您已了解如何：
 > [!div class="checklist"]
 >
-> - 建立 WCF 服務程式庫專案。
-> - 定義服務合約介面。
+> - 創建 WCF 服務庫專案。
+> - 定義服務協定介面。
 
-請前進到下一個教學課程，以瞭解如何執行 WCF 服務合約。
+進入下一個教程，瞭解如何實現 WCF 服務協定。
 
 > [!div class="nextstepaction"]
-> [教學課程：執行 WCF 服務合約](how-to-implement-a-wcf-contract.md)
+> [教程：實現 WCF 服務協定](how-to-implement-a-wcf-contract.md)

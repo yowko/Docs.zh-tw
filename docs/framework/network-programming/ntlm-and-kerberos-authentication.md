@@ -19,12 +19,12 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-ms.openlocfilehash: ca9e1b9bf6235fdaeea25b8975155af429848ae3
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 372101763bdd84b454e6e2db3ec6cf0ebdf3f991
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047532"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180693"
 ---
 # <a name="ntlm-and-kerberos-authentication"></a>NTLM 與 Kerberos 驗證
 預設 NTLM 驗證和 Kerberos 驗證使用與呼叫端應用程式建立關聯的 Microsoft Windows NT 使用者認證，以嘗試向伺服器進行驗證。 使用非預設 NTLM 驗證時，應用程式會將驗證類型設為 NTLM，並使用 <xref:System.Net.NetworkCredential> 物件將使用者名稱、密碼和網域傳遞給主機，如下列範例所示。  
@@ -39,7 +39,7 @@ WReq.Credentials = _
 ```csharp  
 String MyURI = "http://www.contoso.com/";  
 WebRequest WReq = WebRequest.Create (MyURI);  
-WReq.Credentials =   
+WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
@@ -64,5 +64,5 @@ WReq.Credentials = CredentialCache.DefaultCredentials;
   
 ## <a name="see-also"></a>另請參閱
 
-- [基本和摘要式驗證](basic-and-digest-authentication.md)
+- [基本和摘要身份驗證](basic-and-digest-authentication.md)
 - [網際網路驗證](internet-authentication.md)

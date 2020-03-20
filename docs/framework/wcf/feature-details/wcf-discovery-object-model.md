@@ -2,12 +2,12 @@
 title: WCF 探索物件模型
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
-ms.openlocfilehash: d305528c379bd4ded339854ee1f9fa55c76b40c0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: debcb08802894a34e16d9aa65bbbb1b0282794f6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614785"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184217"
 ---
 # <a name="wcf-discovery-object-model"></a>WCF 探索物件模型
 WCF 探索是由一組型別所組成，可提供統一的程式設計模型，讓您撰寫可在執行階段探索的服務，以及尋找和使用這些服務的用戶端。  
@@ -61,7 +61,7 @@ WCF 探索是由一組型別所組成，可提供統一的程式設計模型，�
 - <xref:System.ServiceModel.Discovery.ResolveResponse>  
   
 - <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
- 
+
 - <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 - <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  

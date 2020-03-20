@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
-ms.openlocfilehash: a9c81c8554c0fb393c10ed69f84c8b2d936ec1e6
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 6380dd0512bd7834f50b87f90f445cb01b7a8b95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040120"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151555"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>DataAdapter DataTable 和 DataColumn 對應
-**DataAdapter**在其**TableMappings**屬性中包含零個或多個 <xref:System.Data.Common.DataTableMapping> 物件的集合。 **DataTableMapping**會在針對資料來源查詢所傳回的資料與 <xref:System.Data.DataTable>之間提供主要的對應。 **DataTableMapping**名稱可以代替**DataTable**名稱傳遞到**DataAdapter**的**Fill**方法。 下列範例會為**作者**資料表建立名為**AuthorsMapping**的**DataTableMapping** 。  
+**DataAdapter**在其**表映射**屬性中包含零個或多個<xref:System.Data.Common.DataTableMapping>物件的集合。 **DataTableMapping**在從針對資料來源的查詢返回的資料和 之間提供主映射<xref:System.Data.DataTable>。 **資料表映射**名稱可以代替**資料表**名稱傳遞給**資料配接器**的**填充**方法。 下面的示例為 **"作者"** 表創建名為 **"作者映射"****的資料表映射**。  
   
 ```vb  
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors")  
@@ -23,11 +23,11 @@ workAdapter.TableMappings.Add("AuthorsMapping", "Authors")
 workAdapter.TableMappings.Add("AuthorsMapping", "Authors");  
 ```  
   
- **DataTableMapping**可讓您在**DataTable**中使用與資料庫中不同的資料行名稱。 當更新資料表時， **DataAdapter**會使用對應來比對資料行。  
+ **DataTable 映射**使您能夠在**DataTable**中使用與資料庫中不同的列名稱。 **資料配接器**在更新表時使用映射與列匹配。  
   
- 如果您在呼叫**DataAdapter**的**Fill**或**Update**方法時未指定**TableName**或**DataTableMapping**名稱， **dataadapter**會尋找名為 "Table" 的**DataTableMapping** 。 如果該**DataTableMapping**不存在， **DataTable**的**TableName**就是 "Table"。 您可以藉由建立名為 "Table" 的**DataTableMapping**來指定預設**DataTableMapping** 。  
+ 如果在調用**DataAdapter**的**填充**或**更新**方法時未指定**表名**或**DataTable 映射**名稱，**則資料配接器**將查找名為"表"**的資料表映射**。 如果**資料表映射**不存在，**則資料表**的**表名稱**為"表"。 您可以通過創建名稱為"表"**的資料表映射**來指定預設**資料表映射**。  
   
- 下列程式碼範例會建立**DataTableMapping** （從 <xref:System.Data.Common> 命名空間），並將它命名為 "Table"，使其成為指定**DataAdapter**的預設對應。 然後，此範例會將查詢結果（ **northwind**資料庫的**Customers**資料表）中第一個資料表的資料行對應至 <xref:System.Data.DataSet>中**Northwind Customers**資料表內的一組更好的使用者名稱。 未被對應的資料行會使用來自資料來源的資料行名稱。  
+ 以下代碼示例創建**DataTable 映射**（從<xref:System.Data.Common>命名空間），並通過將其命名為"表"使其成為指定**DataAdapter**的預設映射。 然後，該示例將查詢結果中的第一個表（**北風**資料庫**的客戶**表）中的列映射到<xref:System.Data.DataSet>中的**北風客戶**表中的一組更方便使用的名稱。 未被對應的資料行會使用來自資料來源的資料行名稱。  
   
 ```vb  
 Dim mapping As DataTableMapping = _  
@@ -40,7 +40,7 @@ adapter.Fill(custDS)
 ```  
   
 ```csharp  
-DataTableMapping mapping =   
+DataTableMapping mapping =
   adapter.TableMappings.Add("Table", "NorthwindCustomers");  
 mapping.ColumnMappings.Add("CompanyName", "Company");  
 mapping.ColumnMappings.Add("ContactName", "Contact");  
@@ -49,11 +49,11 @@ mapping.ColumnMappings.Add("PostalCode", "ZIPCode");
 adapter.Fill(custDS);  
 ```  
   
- 在更先進的情況下，您可能會決定您想要讓相同的**DataAdapter**支援使用不同的對應來載入不同的資料表。 若要這樣做，只需新增額外的**DataTableMapping**物件即可。  
+ 在更高級的情況下，您可以決定希望相同的**DataAdapter**支援使用不同的映射載入不同的表。 為此，只需添加其他**DataTable 映射**物件即可。  
   
- 將**資料集**的實例和**DataTableMapping**名稱傳遞給**Fill**方法時，如果使用該名稱的對應存在，則會使用它;否則，會使用具有該名稱的**DataTable** 。  
+ 當**填充**方法傳遞**DataSet**實例和**DataTable 映射**名稱時，如果存在具有該名稱的映射，則使用該映射;如果使用填充方法。否則，將使用具有該名稱**的資料表**。  
   
- 下列範例會建立**DataTableMapping** ，其名稱為**Customers** ，而**DataTable**名稱為**BizTalkSchema**。 然後，此範例會將 SELECT 語句所傳回的資料列對應至**BizTalkSchema** **DataTable**。  
+ 以下示例創建一個**資料表映射**，其名稱為**客戶**，資料**表**名稱為**BizTalkSchema**。 然後，該示例將 SELECT 語句返回的行映射到**BizTalkSchema** **資料表**。  
   
 ```vb  
 Dim mapping As ITableMapping = _  
@@ -67,7 +67,7 @@ adapter.Fill(custDS, "Customers")
 ```  
   
 ```csharp  
-ITableMapping mapping =   
+ITableMapping mapping =
   adapter.TableMappings.Add("Customers", "BizTalkSchema");  
 mapping.ColumnMappings.Add("CustomerID", "ClientID");  
 mapping.ColumnMappings.Add("CompanyName", "ClientName");  
@@ -78,13 +78,13 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 > [!NOTE]
-> 若未提供來源資料行名稱給資料行對應，或是未提供來源資料表名稱給資料表對應，便會自動產生預設名稱。 如果未提供資料行對應的來源資料行，則會從**SourceColumn1**開始，資料行對應會提供一個增量預設名稱**SourceColumn** *N* 。 如果沒有為資料表對應提供來源資料表名稱，則會為數據表對應提供**SourceTable** *N*的累加預設名稱，從**SourceTable1**開始。  
+> 若未提供來源資料行名稱給資料行對應，或是未提供來源資料表名稱給資料表對應，便會自動產生預設名稱。 如果未為列映射提供源列，則為列映射指定一個增量預設名稱**SourceColumn** *N，* 從**SourceColumn1**開始。 如果表映射未提供源表名稱，則表映射將給出**源表** *N*的增量預設名稱，從**SourceTable1**開始。  
   
 > [!NOTE]
-> 我們建議您避免資料行對應使用**SourceColumn** *N*的命名慣例，或針對資料表對應來**SourceTable** *N* ，因為您所提供的名稱可能會與中**現有的預設資料行對應名稱衝突。** **衝突**中的 ColumnMappingCollection 或資料表對應名稱。 如果提供的名稱已經存在，便會擲回例外狀況。  
+> 我們建議您避免為列映射而避免**SourceColumn** *N*的命名約定，或者為表映射保留**SourceTable** *N，* 因為提供的名稱可能與**DataTableMapping 集合**中的**列映射集合**或表映射名稱中的現有預設列映射名稱衝突。 如果提供的名稱已經存在，便會擲回例外狀況。  
   
 ## <a name="handling-multiple-result-sets"></a>處理多重結果集  
- 如果您的**SelectCommand**傳回多個資料表， **Fill**會自動針對**資料集**內的資料表產生具有累加值的資料表名稱，並以指定的資料表名稱作為開頭，並在表單**TableName**中繼續進行。*N*，從**TableName1**開始。 您可以使用資料表對應，將自動產生的資料表名稱對應至您想要在**資料集中**為數據表指定的名稱。 例如，針對傳回兩個數據表（ **Customers**和**Orders**）的**SelectCommand** ，請發出下列呼叫以進行**填滿**。  
+ 如果**SelectCommand**返回多個表，**則填充**將自動生成具有**DataSet**中表的增量值的表名稱，從指定的表名稱開始，並在表**Name** *N*表單中繼續，從**表Name1**開始。 可以使用表映射將自動生成的表名稱映射到您希望在**DataSet**中為表指定的名稱。 例如，對於返回兩個表"**客戶**和**訂單**"的**SelectCommand，** 發出以下調用**Fill**。  
   
 ```vb  
 adapter.Fill(customersDataSet, "Customers")  
@@ -94,7 +94,7 @@ adapter.Fill(customersDataSet, "Customers")
 adapter.Fill(customersDataSet, "Customers");  
 ```  
 
- **資料集**內會建立兩個數據表： **Customers**和**Customers1**。 您可以使用資料表對應來確保第二個數據表的名稱是**Orders** ，而不是**Customers1**。 若要這樣做，請將**Customers1**的來源資料表對應至**資料集**資料表**訂單**，如下列範例所示。  
+ 在**DataSet**中創建了兩個表：**客戶**和**客戶1**。 可以使用表映射來確保第二個表名為 **"訂單"** 而不是 **"客戶1"。** 為此，將**客戶 1**的源表映射到**DataSet**表**訂單**，如以下示例所示。  
   
 ```vb  
 adapter.TableMappings.Add("Customers1", "Orders")  
@@ -106,8 +106,8 @@ adapter.TableMappings.Add("Customers1", "Orders");
 adapter.Fill(customersDataSet, "Customers");  
 ```
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DataAdapter 和 DataReader](dataadapters-and-datareaders.md)
 - [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

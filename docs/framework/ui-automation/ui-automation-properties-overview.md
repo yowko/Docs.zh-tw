@@ -5,32 +5,32 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: 2f96f3c7261882af58cd10038d729c4e723d6fa0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8a44fd89017002ae51d9b15a22bac97668d0ff90
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447949"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179861"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 自動化屬性概觀
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  使用者介面自動化提供者會公開 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 項目上的屬性。 這些屬性可讓使用者介面自動化用戶端應用程式找到 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)](特別是控制項) 的資訊，包括靜態和動態資料。  
   
  本節提供 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 屬性的概觀說明。 下列各主題提供更詳細的資訊：  
   
-- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)  
+- [用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)  
   
 - [伺服器端 UI 自動化提供者實作](server-side-ui-automation-provider-implementation.md)  
   
-<a name="Property_Identifiers"></a>   
+<a name="Property_Identifiers"></a>
 ## <a name="property-identifiers"></a>屬性識別項  
- 每一個屬性都是由一個編號及名稱所識別。 屬性名稱僅用於偵錯及診斷作業。 提供者會使用數值識別碼來識別傳入的屬性要求。 但是，用戶端應用程式只使用 <xref:System.Windows.Automation.AutomationProperty>(會封裝編號及名稱) 以識別它們要擷取的屬性。  
+ 每一個屬性都是由一個編號及名稱所識別。 屬性名稱僅用於偵錯及診斷作業。 提供程式使用數位 ID 來標識傳入的屬性請求。 但是，用戶端應用程式只使用 <xref:System.Windows.Automation.AutomationProperty>(會封裝編號及名稱) 以識別它們要擷取的屬性。  
   
  <xref:System.Windows.Automation.AutomationProperty> 物件代表特定屬性，其在許多類別中可做為欄位使用。 基於安全性考量，使用者介面自動化提供者會從 Uiautomationtypes.dll 內含的不同類別集之中取得這些物件。  
   
- 下表依包含 <xref:System.Windows.Automation.AutomationProperty>識別碼的類別來分類屬性。  
+ 下表按包含指示的<xref:System.Windows.Automation.AutomationProperty>類對屬性進行分類。  
   
 |屬性的種類|用戶端取得 ID 的來源|提供者取得 ID 的來源|  
 |-------------------------|--------------------------|----------------------------|  
@@ -51,18 +51,18 @@ ms.locfileid: "74447949"
 |具有值之項目的值以及讀取/寫入功能|<xref:System.Windows.Automation.ValuePattern>|<xref:System.Windows.Automation.ValuePatternIdentifiers>|  
 |視窗的功能與狀態|<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.WindowPatternIdentifiers>|  
   
-<a name="Properties_by_Category"></a>   
-## <a name="properties-by-category"></a>按類別分類屬性  
- 下表會將 <xref:System.Windows.Automation.AutomationElement> 和 <xref:System.Windows.Automation.AutomationElementIdentifiers>中找到其識別碼的屬性分類。 所有控制項都有這些屬性。 大部分動態屬性都與控制項模式相關，除了少數幾個在提供者應用程式的存留期可能是靜態的。  
+<a name="Properties_by_Category"></a>
+## <a name="properties-by-category"></a>依類別列出屬性  
+ 下表對 在 和<xref:System.Windows.Automation.AutomationElement><xref:System.Windows.Automation.AutomationElementIdentifiers>中找到其指示的屬性進行分類。 所有控制項都有這些屬性。 大部分動態屬性都與控制項模式相關，除了少數幾個在提供者應用程式的存留期可能是靜態的。  
   
- [屬性存取] 資料行中，除了 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 及 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>以外，還列出每個屬性的任何其他存取子。 如需取得用戶端應用程式屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
+ [屬性存取] **** 資料行中，除了 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 及 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>以外，還列出每個屬性的任何其他存取子。 如需取得用戶端應用程式屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
   
 > [!NOTE]
-> 如需每一個屬性的特定資訊，請按一下 [屬性存取] 資料行中的連結。  
+> 如需每一個屬性的特定資訊，請按一下 [屬性存取] **** 資料行中的連結。  
   
 ### <a name="display-characteristics"></a>顯示特性  
   
-|屬性識別項|屬性存取|  
+|屬性識別碼|屬性存取|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.BoundingRectangle%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.CultureProperty>|n/a|  
@@ -70,9 +70,9 @@ ms.locfileid: "74447949"
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsOffscreen%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.OrientationProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Orientation%2A>|  
   
-### <a name="element-type"></a>Type 項目  
+### <a name="element-type"></a>項目類型  
   
-|屬性識別項|屬性存取|  
+|屬性識別碼|屬性存取|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.ControlTypeProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsContentElementProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>|  
@@ -82,7 +82,7 @@ ms.locfileid: "74447949"
   
 ### <a name="identification"></a>識別  
   
-|屬性識別項|屬性存取|  
+|屬性識別碼|屬性存取|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ClassNameProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ClassName%2A>|  
@@ -95,7 +95,7 @@ ms.locfileid: "74447949"
   
 ### <a name="interaction"></a>互動  
   
-|屬性識別項|屬性存取|  
+|屬性識別碼|屬性存取|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.AcceleratorKeyProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AcceleratorKey%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.AccessKeyProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AccessKey%2A>|  
@@ -106,7 +106,7 @@ ms.locfileid: "74447949"
   
 ### <a name="support-for-patterns"></a>模式支援  
   
-|屬性識別項|屬性存取|  
+|屬性識別碼|屬性存取|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsExpandCollapsePatternAvailableProperty>|<xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>|  
@@ -129,13 +129,13 @@ ms.locfileid: "74447949"
   
 ### <a name="miscellaneous"></a>其他  
   
-|屬性識別項|屬性存取|  
+|屬性識別碼|屬性存取|  
 |-------------------------|---------------------|  
 |<xref:System.Windows.Automation.AutomationElement.IsRequiredForFormProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsRequiredForForm%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsPassword%2A>|  
 |<xref:System.Windows.Automation.AutomationElement.ItemStatusProperty>|<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ItemStatus%2A>|  
   
-<a name="Localization"></a>   
+<a name="Localization"></a>
 ## <a name="localization"></a>當地語系化  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者應該以作業系統所使用的語言來顯示下列屬性：  
   
@@ -149,7 +149,7 @@ ms.locfileid: "74447949"
   
 - <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
-<a name="Properties_and_Events"></a>   
+<a name="Properties_and_Events"></a>
 ## <a name="properties-and-events"></a>屬性和事件  
  屬性變更事件的概念是要與 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 做緊密的繫結。 如果是動態屬性，用戶端應用程式需要一個知道屬性值已變更的方法，以更新快取的資訊或根據新資料做出回應。  
   
@@ -161,8 +161,8 @@ ms.locfileid: "74447949"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Caching in UI Automation Clients](caching-in-ui-automation-clients.md)
-- [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)
+- [UI 自動化用戶端中的快取](caching-in-ui-automation-clients.md)
+- [用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)
 - [伺服器端 UI 自動化提供者實作](server-side-ui-automation-provider-implementation.md)
 - [根據屬性條件尋找 UI 自動化項目](find-a-ui-automation-element-based-on-a-property-condition.md)
 - [從 UI 自動化提供者傳回屬性](return-properties-from-a-ui-automation-provider.md)

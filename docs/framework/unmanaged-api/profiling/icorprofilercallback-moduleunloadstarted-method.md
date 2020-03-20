@@ -15,29 +15,29 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-ms.openlocfilehash: 7e43f58f619aaa63fa2294dd3e989026dcdfc604
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: fcfdddbd5316c098754ea7b0d4714b050c64fe55
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866126"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175144"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted 方法
-通知分析工具，模組正在卸載。  
+通知探測器正在卸載模組。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT ModuleUnloadStarted(  
-    [in] ModuleID moduleId);   
+    [in] ModuleID moduleId);
 ```  
   
 ## <a name="parameters"></a>參數  
  `moduleId`  
- 在要卸載之模組的識別碼。  
+ [在]正在卸載的模組的 ID。  
   
 ## <a name="remarks"></a>備註  
- `ModuleUnloadStarted` 方法傳回之後，`moduleId` 的值對資訊要求無效，這是分析工具的最後機會取得此模組的相關資訊。  
+ 返回`ModuleUnloadStarted`後，`moduleId`值對資訊請求無效 - 這是探測器獲取有關此模組資訊的最後機會。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -46,9 +46,9 @@ HRESULT ModuleUnloadStarted(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
 - [ModuleUnloadFinished 方法](icorprofilercallback-moduleunloadfinished-method.md)

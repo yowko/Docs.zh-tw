@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget2::GetImageFromPointer 方法
 ms.date: 03/30/2017
 ms.assetid: 939cabe1-b647-4090-b662-eeec23c6c58d
-ms.openlocfilehash: 55c87731399cf1e7a6747720b8bb33de7e01906c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 3ac1f8ab98583357a3aa622b5032d9ae121ebdf2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788837"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178925"
 ---
 # <a name="icordebugdatatarget2getimagefrompointer-method"></a>ICorDebugDataTarget2::GetImageFromPointer 方法
 從模組中的位址傳回模組基底位址和大小。  
@@ -16,18 +16,18 @@ ms.locfileid: "76788837"
   
 ```cpp  
 HRESULT GetImageFromPointer(  
-   [in] CORDB_ADDRESS addr,   
-   [out] CORDB_ADDRESS *pImageBase,   
+   [in] CORDB_ADDRESS addr,
+   [out] CORDB_ADDRESS *pImageBase,
    [out] ULONG32 *pSize  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `addr`  
- [CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值，表示模組中的位址。  
+ 表示模組中位址[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值。  
   
  `pImageBase`  
- 脫銷[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值，表示模組的基底位址。  
+ [出]表示模組基本位址[的CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)值。  
   
  `pSize`  
  模組大小的指標。  
@@ -44,9 +44,9 @@ HRESULT GetImageFromPointer(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugDataTarget2 介面](icordebugdatatarget2-interface.md)
 - [偵錯介面](debugging-interfaces.md)

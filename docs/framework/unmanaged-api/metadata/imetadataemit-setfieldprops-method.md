@@ -15,52 +15,52 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-ms.openlocfilehash: efc627619d9abf9cfa6010e1c0ca709989b9cad3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b921118f7c43edef3c07cbb34cbbd9119d36ce51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445459"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177557"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps 方法
-設定或更新指定欄位標記所參考之欄位的預設值。  
+設置或更新指定欄位權杖引用的欄位的預設值。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT SetFieldProps (  
-    [in]  mdFieldDef  fd,   
-    [in]  DWORD       dwFieldFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue   
+    [in]  mdFieldDef  fd,
+    [in]  DWORD       dwFieldFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `fd`  
- 在目標欄位的 token。  
+ [在]目標欄位的權杖。  
   
  `dwFieldFlags`  
- 在欄位屬性。 這是 `CorFieldAttr` 值的位元遮罩。  
+ [在]欄位屬性。 這是值的`CorFieldAttr`位元遮罩。  
   
  `dwCPlusTypeFlag`  
- 在常數值的 `ELEMENT_TYPE_` *\** 。 這是 `CorElementType` 值。 如果沒有定義常數，請將此值設定為 `ELEMENT_TYPE_END`。  
+ [在]常`ELEMENT_TYPE_`*\** 量值的 。 這是一個`CorElementType`值。 如果未定義常量，則將此值設置為`ELEMENT_TYPE_END`。  
   
  `pValue`  
- 在欄位的常數值。  
+ [在]欄位的常量值。  
   
  `cchValue`  
- 在`pValue`的大小，以 Unicode 字元為單位。  
+ [在]的大小（以 Unicode 字元表示`pValue`）  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

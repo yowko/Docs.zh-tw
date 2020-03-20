@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 050e77ee-3014-45c0-9e29-2ebe29347b0d
 topic_type:
 - apiref
-ms.openlocfilehash: dfbc10bdbe633450dee2e27524c29ead21fb739e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5a8442b1f0869e1592a05dfeeb0f5e6d583f3ea8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445542"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179380"
 ---
 # <a name="setpekind-method"></a>SetPEKind 方法
-決定可移植的可執行檔案類型，可能是電腦特定或電腦中立。  
+確定可移植可執行類型，無論是特定于機器還是與機器無關。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,27 +32,27 @@ HRESULT SetPEKind(
     mdToken FileToken,  
     DWORD dwPEKind,  
     DWORD dwMachine  
-) PURE;   
+) PURE;
 ```  
   
 ## <a name="parameters"></a>參數  
  `AssemblyID`  
- 元件的識別碼。  
+ 程式集的 ID。  
   
  `FileToken`  
- 要設定 PE 類型的檔案標記。 如果 `AssemblyID` 未指出未系結的 .netmodule，則可以是 Null。  
+ 要為其設置 PE 類型的檔權杖。 如果未`AssemblyID`指示未綁定網路模組，則可以為 Null。  
   
  `dwPEKind`  
- PE 的類型，如[CorPEKind 列舉](../metadata/corpekind-enumeration.md)所表示。  
+ PE 的類型，如[CorPEKind 枚舉](../metadata/corpekind-enumeration.md)所示。  
   
  `dwMachine`  
- 如 NT 標頭所示的目的電腦架構。  
+ 目的電腦體系結構，如 NT 標頭中所示。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則傳回 S_OK。  
+ 如果方法成功，則返回S_OK。  
   
 ## <a name="requirements"></a>需求  
- 需要 alink. h。  
+ 需要 alink.h.  
   
 ## <a name="see-also"></a>另請參閱
 

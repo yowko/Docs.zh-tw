@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 462512fd2c2b33905b45bb67599b23b301fc71f7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438003"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177239"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps 方法
 取得與指定 FieldDef 語彙基元所參考欄位相關聯的中繼資料。  
@@ -29,15 +29,15 @@ ms.locfileid: "74438003"
   
 ```cpp  
 HRESULT GetFieldProps (  
-   [in]  mdFieldDef        mb,   
+   [in]  mdFieldDef        mb,
    [out] mdTypeDef         *pClass,  
    [out] LPWSTR            szField,  
-   [in]  ULONG             cchField,   
+   [in]  ULONG             cchField,
    [out] ULONG             *pchField,  
    [out] DWORD             *pdwAttr,  
-   [in]  PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pcbSigBlob,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [in]  PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pcbSigBlob,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppValue,  
    [out] ULONG             *pcchValue  
 );  
@@ -45,46 +45,46 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>參數  
  `mb`  
- 在FieldDef token，表示要取得相關聯中繼資料的欄位。  
+ [在]表示要為其獲取關聯的中繼資料的欄位的 FieldDef 權杖。  
   
  `pClass`  
- 脫銷TypeDef token 的指標，代表欄位所屬類別的型別。  
+ [出]指向 TypeDef 權杖的指標，表示欄位所屬的類的類型。  
   
  `szField`  
- 脫銷欄位的名稱。  
+ [出]欄位的名稱。  
   
  `cchField`  
- 在*SzField*緩衝區的大小（以寬字元為單位）。  
+ [在]*szField*緩衝區的大小以寬字元表示。  
   
  `pchField`  
- 脫銷所傳回緩衝區的實際大小。  
+ [出]返回的緩衝區的實際大小。  
   
  `pdwAttr`  
- 脫銷與欄位的中繼資料相關聯的旗標。  
+ [出]與欄位的中繼資料關聯的標誌。  
   
  `ppvSigBlob`  
- 在描述欄位之二進位中繼資料值的指標。  
+ [在]指向描述欄位的二進位中繼資料值的指標。  
   
  `pcbSigBlob`  
- 脫銷`ppvSigBlob`的大小（以位元組為單位）。  
+ [出]的大小（以位元組為單位）。 `ppvSigBlob`  
   
  `pdwCPlusTypeFlag`  
- 脫銷指定欄位之數值型別的旗標。  
+ [出]指定欄位的數值型別的標誌。  
   
  `ppValue`  
- 脫銷欄位的常數值。  
+ [出]欄位的常量值。  
   
  `pcchValue`  
- 脫銷`ppValue`的大小（以字元為單位），如果不存在任何字串，則為零。  
+ [出]如果不存在字串，則大小`ppValue`以 的 字元表示或零。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,15 +2,15 @@
 title: DataContract Surrogate
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 3246466f9268fc920fd58d4f1ba2c06c3627c88e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 7ef78c4361c055d7be35c03a3c8717e86aceddab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715363"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183826"
 ---
 # <a name="datacontract-surrogate"></a>DataContract Surrogate
-這個範例示範如何使用資料合約 Surrogate 類別來自訂像是序列化 (Serialization)、還原序列化 (Deserialization)、結構描述匯出以及結構描述匯入等程序。 這個範例示範如何在用戶端和伺服器案例中使用代理，其中資料會在 Windows Communication Foundation （WCF）用戶端和服務之間進行序列化和傳輸。  
+這個範例示範如何使用資料合約 Surrogate 類別來自訂像是序列化 (Serialization)、還原序列化 (Deserialization)、結構描述匯出以及結構描述匯入等程序。 此示例演示如何在用戶端和伺服器方案中使用代理項，其中資料在 Windows 通信基礎 （WCF） 用戶端和服務之間進行序列化和傳輸。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -121,7 +121,7 @@ public object GetObjectToSerialize(object obj, Type targetType)
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> 方法會提供反向對應以進行還原序列化，如下列範例程式碼所示。  
   
 ```csharp
-public object GetDeserializedObject(object obj,   
+public object GetDeserializedObject(object obj,
 Type targetType)  
 {  
     if (obj is PersonSurrogated)  
@@ -140,7 +140,7 @@ Type targetType)
  為了在結構描述匯入期間將 `PersonSurrogated` 資料合約對應至現有 `Person` 類別，範例會實作 <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> 方法，如下列範例程式碼所示。  
   
 ```csharp
-public Type GetReferencedTypeOnImport(string typeName,   
+public Type GetReferencedTypeOnImport(string typeName,
                string typeNamespace, object customData)  
 {  
 if (  
@@ -160,12 +160,12 @@ typeNamespace.Equals("http://schemas.datacontract.org/2004/07/DCSurrogateSample"
   
 ```csharp
 public System.CodeDom.CodeTypeDeclaration ProcessImportedType(  
-          System.CodeDom.CodeTypeDeclaration typeDeclaration,   
+          System.CodeDom.CodeTypeDeclaration typeDeclaration,
           System.CodeDom.CodeCompileUnit compileUnit)  
 {  
     return typeDeclaration;  
 }  
-public object GetCustomDataToExport(Type clrType,   
+public object GetCustomDataToExport(Type clrType,
                                Type dataContractType)  
 {  
     return null;  
@@ -220,7 +220,7 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
   
  此外，還必須執行其他步驟，才能將 Surrogate 插入以供中繼資料產生期間使用。 有一個機制可以用來達到這個目的，即提供 `IWsdlExportExtension`，而這也是本範例所示範的。 另一個方法則是直接修改 `WsdlExporter`。  
   
- `AllowNonSerializableTypesAttribute` 屬性會執行 `IWsdlExportExtension` 和 `IContractBehavior`。 在此情況下，此延伸模組可以是 `IContractBehavior` 或 `IEndpointBehavior`。 `IWsdlExportExtension.ExportContract` 方法實作會將此延伸新增至 DataContract 結構描述產生期間所使用的 `XsdDataContractExporter`，以啟用 Surrogate。 下列程式碼片段示範如何執行這項操作。  
+ 屬性`AllowNonSerializableTypesAttribute`實現`IWsdlExportExtension`和`IContractBehavior`。 在這種情況下，擴展可以是 或`IContractBehavior``IEndpointBehavior`。 `IWsdlExportExtension.ExportContract` 方法實作會將此延伸新增至 DataContract 結構描述產生期間所使用的 `XsdDataContractExporter`，以啟用 Surrogate。 下列程式碼片段示範如何執行這項操作。  
   
 ```csharp
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -247,24 +247,24 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }  
 ```  
   
- 當您執行範例時，用戶端會在呼叫 AddEmployee 之後接著呼叫 GetEmployee，以檢查第一項呼叫是否成功。 GetEmployee 作業要求的結果會顯示在用戶端主控台視窗中。 GetEmployee 作業必須成功尋找員工並列印「找到」。  
+ 當您執行範例時，用戶端會在呼叫 AddEmployee 之後接著呼叫 GetEmployee，以檢查第一項呼叫是否成功。 GetEmployee 作業要求的結果會顯示在用戶端主控台視窗中。 GetEmployee 操作必須成功找到員工並列印"已找到"。  
   
 > [!NOTE]
-> 這個範例示範如何插入 Surrogate 以進行序列化、還原序列化和中繼資料產生作業， 但是不示範如何插入 Surrogate，以從中繼資料產生程式碼。 若要查看如何使用代理外掛程式來加入用戶端程式代碼產生的範例，請參閱[自訂 WSDL 發行](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)集範例。  
+> 這個範例示範如何插入 Surrogate 以進行序列化、還原序列化和中繼資料產生作業， 但是不示範如何插入 Surrogate，以從中繼資料產生程式碼。 要查看如何使用代理項插入用戶端代碼生成的示例，請參閱[自訂 WSDL 發佈](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)示例。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建立C#解決方案的版本，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
+2. 要構建解決方案的 C# 版本，請按照[生成 Windows 通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的說明進行操作。  
   
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  

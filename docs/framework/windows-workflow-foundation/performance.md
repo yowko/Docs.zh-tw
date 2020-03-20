@@ -2,26 +2,26 @@
 title: Windows Workflow Foundation 4 效能
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 6e6669cd41795c356e4b7b30f19d93bd8dfa917a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5fec41baacca0f35618dd5bc409b88ac792ad125
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802644"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182970"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 效能
 
- .NET Framework 4 包括 Windows Workflow Foundation （WF）的主要修訂版，其效能有大量的投資。 這個新的修訂引進了舊版 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 的重大設計變更，此版本隨附于 .NET Framework 3.0 和 .NET Framework 3.5 的一部分。 在此版本中，程式設計模型、執行階段及工具的核心已重新架構，以大幅改善效能和可用性。 本主題說明這些修訂的重要效能特性，並且與其舊版進行比較。
+ .NET 框架 4 包括 Windows 工作流基礎 （WF） 的重大修訂，對性能進行大量投資。 此新修訂版引入了與作為 .NET 框架[!INCLUDE[wf1](../../../includes/wf1-md.md)]3.0 和 .NET Framework 3.5 一部分提供的早期版本的重大設計更改。 在此版本中，程式設計模型、執行階段及工具的核心已重新架構，以大幅改善效能和可用性。 本主題說明這些修訂的重要效能特性，並且與其舊版進行比較。
 
- WF3 與 WF4 之間個別工作流程元件效能提升的速度很快。  這讓手動編碼 Windows Communication Foundation （WCF）服務和 WCF 工作流程服務之間的差距變得相當小。  在 WF4 中，工作流程延遲已大幅降低。  持續性效能已提升 2.5 至 3.0 倍。  透過工作流程追蹤進行健康監視的負荷已明顯減少。  這些都是移轉至 WF4 或在應用程式中採用 WF4 的絕佳理由。
+ WF3 與 WF4 之間個別工作流程元件效能提升的速度很快。  這使得手動編碼的 Windows 通信基礎 （WCF） 服務和 WCF 工作流服務之間的差距非常小。  在 WF4 中，工作流程延遲已大幅降低。  持續性效能已提升 2.5 至 3.0 倍。  透過工作流程追蹤進行健康監視的負荷已明顯減少。  這些都是移轉至 WF4 或在應用程式中採用 WF4 的絕佳理由。
 
-## <a name="terminology"></a>用語
+## <a name="terminology"></a>詞彙
 
- 本主題的其餘部分將 .NET Framework 4 中引進的 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 版本稱為 WF4。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 是在 .NET Framework 3.0 中引進，而且已透過 .NET Framework 3.5 SP1 進行一些次要的修訂。 本主題的其餘部分將 .NET Framework 3.5 版的 Workflow Foundation 稱為 WF3。 WF3 隨附于 .NET Framework 4 與 WF4 並存。 如需將 WF3 構件遷移至 WF4 的詳細資訊，請參閱： [Windows Workflow Foundation 4 遷移指南](migration-guidance.md)。
+ .NET[!INCLUDE[wf1](../../../includes/wf1-md.md)]框架 4 中引入的版本將稱為 WF4，用於本主題的其餘部分。 [!INCLUDE[wf1](../../../includes/wf1-md.md)]在 .NET 框架 3.0 仲介紹，並通過 .NET 框架 3.5 SP1 進行了一些小的修訂。 對於本主題的其餘部分，工作流基礎的 .NET 框架 3.5 版本將稱為 WF3。 WF3 與 WF4 並行在 .NET 框架 4 中。 有關將 WF3 專案遷移到 WF4 的詳細資訊，請參閱[：Windows 工作流基礎 4 遷移指南](migration-guidance.md)。
 
- Windows Communication Foundation （WCF）是 Microsoft 的統一程式設計模型，用來建立服務導向的應用程式。 第一次將它與 WF3 一起引進為 .NET 3.0 的一部分，現在是 .NET Framework 的主要元件之一。
+ Windows 通信基礎 （WCF） 是 Microsoft 用於構建面向服務的應用程式的統一程式設計模型。 它最初作為 .NET 3.0 的一部分與 WF3 一起引入，現在是 .NET 框架的關鍵元件之一。
 
- Windows Server AppFabric 是一組整合技術，可用來輕鬆建置、調整和管理在 IIS 上執行的 Web 及複合應用程式。 它提供了監視及管理服務和工作流程的工具。 如需詳細資訊，請參閱[Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))。
+ Windows Server AppFabric 是一組整合式技術，可讓您更輕鬆地建置、調整及管理 IIS 上執行的 Web 與複合應用程式。 它提供了監視及管理服務和工作流程的工具。 有關詳細資訊，請參閱[Windows 伺服器 AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))。
 
 ## <a name="goals"></a>目標
  本主題的目標在於說明 WF4 的效能特性，其中包含的資料會針對不同的案例加以計算。 此外也會提供 WF4 與 WF3 之間的詳細比較，藉此說明這個新修訂中所做的優越改良。 本文的案例和資料會將 WF4 和 WF3 各層面的基礎成本加以量化。 這項資料除了能讓您充分了解 WF4 的效能特性之外，同時有助於規劃從 WF3 移轉至 WF4 的作業，或是在應用程式開發的過程中使用 WF4。 不過，應用本文資料得出的結論時，務必謹慎考慮。 複合工作流程應用程式的效能主要取決於工作流程的實作方式以及不同元件的整合方式。 因此必須謹慎評估每一個應用程式，才能判斷出該應用程式的效能特性。
@@ -32,41 +32,41 @@ ms.locfileid: "74802644"
 ### <a name="wf-runtime"></a>WF 執行階段
  [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段的核心擁有非同步的排程器，可讓工作流程中的活動執行。 它提供了高效能且可預測的活動執行環境。 這個環境具備妥善定義的執行、接續、完成、取消、例外狀況合約，以及可預測的執行緒模型。
 
- 與 WF3 相較之下，WF4 執行階段的排程器更有效率。 它會利用用於 WCF 的相同 i/o 執行緒集區，這在執行批次工作專案時非常有效率。 內部工作項目排程器佇列已針對最常見的使用模式完成最佳化。 WF4 執行時間也會以非常輕量的方式管理執行狀態，並以最少的同步處理和事件處理邏輯來進行，而 WF3 則取決於繁重的事件註冊和調用，來執行狀態轉換的複雜同步處理。
+ 與 WF3 相較之下，WF4 執行階段的排程器更有效率。 它利用用於 WCF 的相同 I/O 執行緒池，該池在執行批次處理的工作項時非常有效。 內部工作項目排程器佇列已針對最常見的使用模式完成最佳化。 WF4 運行時還以非常羽量級的方式管理執行狀態，只需極少的同步和事件處理邏輯，而 WF3 則依賴于重量級事件註冊和調用，以便對狀態轉換執行複雜的同步。
 
 ### <a name="data-storage-and-flow"></a>資料儲存和流程
- 在 WF3 中，與活動相關聯的資料會透過 <xref:System.Windows.DependencyProperty> 型別所實作的相依性屬性模型化。 相依性屬性模式是在 Windows Presentation Foundation （WPF）中引進。 一般而言，此模式相當富彈性，可支援簡單的資料繫結和其他 UI 功能。 不過，此模式需要將屬性定義為工作流程定義中的靜態欄位。 每當 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段設定或取得屬性值，就會涉及相當大量的查詢邏輯。
+ 在 WF3 中，與活動相關聯的資料會透過 <xref:System.Windows.DependencyProperty> 型別所實作的相依性屬性模型化。 依賴項屬性模式在 Windows 演示文稿基礎 （WPF） 中引入。 一般而言，此模式相當富彈性，可支援簡單的資料繫結和其他 UI 功能。 不過，此模式需要將屬性定義為工作流程定義中的靜態欄位。 每當 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段設定或取得屬性值，就會涉及相當大量的查詢邏輯。
 
- WF4 使用清楚的資料範圍邏輯，大幅改善了在工作流程中處理資料的方式。 它會使用兩種不同的概念：變數和引數，將儲存於活動中的資料與在活動界限之間流動的資料加以區分。 藉由針對變數和 "In/Out/InOut" 引數使用明確的階層式範圍，活動的資料使用複雜度會大幅降低，而且資料的存留期也會自動設定範圍。 活動都具有妥善定義的特徵標記，而此特徵標記由其引數所描述。 只要檢查活動，您就可以判斷活動應接收的資料為何，以及活動執行後會產生哪些資料。
+ WF4 使用清楚的資料範圍邏輯，大幅改善了在工作流程中處理資料的方式。 它會使用兩種不同的概念：變數和引數，將儲存於活動中的資料與在活動界限之間流動的資料加以區分。 通過使用變數的明確分層範圍和"進出/退出"參數，活動的資料使用複雜性大大降低，資料的存留期也自動限定。 活動都具有妥善定義的特徵標記，而此特徵標記由其引數所描述。 只要檢查活動，您就可以判斷活動應接收的資料為何，以及活動執行後會產生哪些資料。
 
  在 WF3 中，活動會在建立工作流程時初始化。 在 WF 4 中，活動只會在對應的活動執行時初始化。 這樣會讓活動的生命週期更為簡單，不必在新的工作流程執行個體建立時執行初始化/取消初始化作業，也因而更有效率。
 
 ### <a name="control-flow"></a>控制流程
  就像任何程式語言一樣，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 透過導入一組用於順序、迴圈、分支和其他模式的控制流程活動，支援工作流程定義的控制流程。 在 WF3 中，當需要重新執行相同的活動時，就會建立新的 <xref:System.Workflow.ComponentModel.ActivityExecutionContext>，而該活動會透過以 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 為基礎的大量序列化和還原序列化邏輯進行複製。 通常反覆執行之控制流程的效能會比執行一系列活動的效能慢很多。
 
- WF4 處理的方式則大為不同。 它會採用活動範本、建立新的 ActivityInstance 物件，並且將該物件加入至排程器佇列。 這個完整的程式只牽涉到明確的物件建立，而且非常輕量。
+ WF4 處理的方式則大為不同。 它會採用活動範本、建立新的 ActivityInstance 物件，並且將該物件加入至排程器佇列。 整個過程僅涉及顯式物件創建，非常輕量。
 
 ### <a name="asynchronous-programming"></a>非同步程式設計
  應用程式針對長時間執行的封鎖作業 (例如 I/O) 或分散式運算作業採用非同步程式設計時，通常可展現較佳的效能和延展性。 WF4 會透過基礎活動型別 <xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.AsyncCodeActivity%601> 提供非同步支援。 執行階段原本即了解非同步活動，因此可以在非同步工作未處理完畢時，自動將執行個體放入不保存區域中。 您可以從這些類型衍生自訂活動，以執行非同步工作；如此就不會佔用工作流程排程器執行緒，也不會阻擋任何可平行執行的活動。
 
-### <a name="messaging"></a>訊息
- WF3 一開始僅透過外部事件或叫用 Web 服務提供相當有限的傳訊支援。 在 .NET 3.5 中，工作流程可以實作為 WCF 用戶端，或透過 <xref:System.Workflow.Activities.SendActivity> 和 <xref:System.Workflow.Activities.ReceiveActivity>公開為 WCF 服務。 在 WF4 中，以工作流程為基礎的訊息程式設計概念，透過將 WCF 訊息邏輯緊密整合到 WF 中，進一步加強。
+### <a name="messaging"></a>Messaging (傳訊)
+ WF3 一開始僅透過外部事件或叫用 Web 服務提供相當有限的傳訊支援。 在 .NET 3.5 中，工作流可以作為 WCF 用戶端實現，也可以作為<xref:System.Workflow.Activities.SendActivity> <xref:System.Workflow.Activities.ReceiveActivity>WCF 服務通過 和 公開。 在 WF4 中，通過將 WCF 消息傳遞邏輯緊密集成到 WF 中，基於工作流的消息程式設計的概念得到了進一步加強。
 
- .NET 4 中 WCF 提供的整合訊息處理管線，可協助 WF4 服務比 WF3 明顯更佳的效能和擴充性。 WF4 還提供更豐富的傳訊程式設計支援，可建立複雜的訊息交換模式 (MEP) 模型。 開發人員可以使用具型別的服務合約輕鬆進行程式設計，或使用不具型別的服務合約獲得更佳的效能，而不必付出序列化成本。 WF4 中透過 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 類別提供的用戶端通道快取支援，可幫助開發人員執行最少的工作來建置快速的應用程式。 如需詳細資訊，請參閱[變更傳送活動的快取共用層級](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)。
+ .NET 4 中的 WCF 中提供的整合通訊處理管道可説明 WF4 服務具有比 WF3 更好的性能和可擴充性。 WF4 還提供更豐富的傳訊程式設計支援，可建立複雜的訊息交換模式 (MEP) 模型。 開發人員可以使用具型別的服務合約輕鬆進行程式設計，或使用不具型別的服務合約獲得更佳的效能，而不必付出序列化成本。 WF4 中透過 <xref:System.ServiceModel.Activities.SendMessageChannelCache> 類別提供的用戶端通道快取支援，可幫助開發人員執行最少的工作來建置快速的應用程式。 有關詳細資訊，請參閱[更改"發送活動的緩存共用級別](../wcf/feature-details/changing-the-cache-sharing-levels-for-send-activities.md)"。
 
 ### <a name="declarative-programming"></a>宣告式程式設計
- WF4 提供清楚且簡單的宣告式程式設計架構來建立商務程序和服務的模型。 程式設計模型支援完全以宣告的方式撰寫活動，沒有任何 Code-Beside，因而大幅簡化了工作流程的撰寫。 在 .NET Framework 4 中，以 XAML 為基礎的宣告式程式設計架構已經整合到單一元件 system.string 中，以支援 WPF 和 WF。
+ WF4 提供清楚且簡單的宣告式程式設計架構來建立商務程序和服務的模型。 程式設計模型支援完全以宣告的方式撰寫活動，沒有任何 Code-Beside，因而大幅簡化了工作流程的撰寫。 在 .NET 框架 4 中，基於 XAML 的宣告式程式設計框架已統一到單個程式集系統.Xaml.dll 中，以支援 WPF 和 WF。
 
- 在 WF4 中，XAML 提供了真正的宣告式體驗，而且允許使用 XML 標記定義工作流程的整個定義，並參考使用 .NET 建置的活動和型別。 這種方式在採用 XOML 格式的 WF3 中不容易達成，因為沒有自訂的程式碼後置邏輯。 .NET 4 中新的 XAML 堆疊在序列化/還原序列化工作流程成品方面有更好的效能，讓宣告式程式設計更具吸引力且穩固。
+ 在 WF4 中，XAML 提供了真正的宣告式體驗，而且允許使用 XML 標記定義工作流程的整個定義，並參考使用 .NET 建置的活動和型別。 這種方式在採用 XOML 格式的 WF3 中不容易達成，因為沒有自訂的程式碼後置邏輯。 .NET 4 中新的 XAML 堆疊在序列化/反序列化工作流工件方面具有更好的性能，使宣告式程式設計更具吸引力和實體性。
 
 ### <a name="workflow-designer"></a>工作流程設計工具
  WF4 的完全宣告式程式設計支援對於大型工作流程在設計階段的效能要求明顯更高。 與 WF3 相較之下，WF4 中的工作流程設計工具對於大型工作流程擁有較佳的延展性。 有了 UI 虛擬化支援，設計工具只要幾秒鐘就能輕鬆載入包含 1000 個活動的大型工作流程，而 WF3 設計工具則幾乎不可能載入擁有幾百個活動的工作流程。
 
 ## <a name="component-level-performance-comparisons"></a>元件層級的效能比較
- 本節包含在 WF3 和 WF4 工作流程中個別活動之間進行直接比較的相關資料。  像是持續性等重要方面，對於效能的影響就比個別活動元件的影響更為深遠。  不過，WF4 中個別元件的效能改進也相當重要，因為現在元件的速度已經迎頭趕上手動編碼的協調流程邏輯。  下一節涵蓋的範例如下：「服務組合案例」。
+ 本節包含在 WF3 和 WF4 工作流程中個別活動之間進行直接比較的相關資料。  像是持續性等重要方面，對於效能的影響就比個別活動元件的影響更為深遠。  不過，WF4 中個別元件的效能改進也相當重要，因為現在元件的速度已經迎頭趕上手動編碼的協調流程邏輯。  下一節將介紹其示例："服務組合方案"。
 
 ### <a name="environment-setup"></a>環境設定
- ![工作流程效能測量的環境設定](./media/performance/performance-test-environment.gif)
+ ![用於工作流性能測量的環境設置](./media/performance/performance-test-environment.gif)
 
  上圖顯示用於測量元件層級效能的電腦組態。 一部伺服器和五個用戶端透過單一 1 Gbps 乙太網路的網路介面連接。 為了輕鬆進行測量，伺服器會設定為使用執行 Windows Server 2008 x86 雙處理器/四核心伺服器的單一核心。 系統 CPU 使用率幾乎維持在 100%。
 
@@ -109,7 +109,7 @@ ms.locfileid: "74802644"
 
  下圖顯示這項測試所使用的工作流程。 左邊為 WF3 工作流程，右邊為 WF4 工作流程。
 
- ![WF3 ReplicatorActivity 及 WF4 ParallelForEach](./media/performance/replicator-parallel-wf3-wf4.gif)
+ ![WF3 ReplicatorActivity 和 WF4 ParallelForEach](./media/performance/replicator-parallel-wf3-wf4.gif)
 
 ### <a name="sequential-workflow-with-five-activities"></a>包含五個活動的循序工作流程
  這項測試的目的在於顯示依序執行數個活動的效果。  序列中有五個活動。
@@ -139,7 +139,7 @@ class WorkScope :
     }
 ```
 
- 錯誤處理常式會以 `WorkScope` 活動為目標。 WF4 工作流程同樣簡單。  <xref:System.Activities.Statements.CompensableActivity> 包含主體和補償處理常式。  序列中的下一個會是明確補償。  主體活動和補償處理常式活動都是空白實作：
+ 故障處理常式以`WorkScope`活動為目標。 WF4 工作流同樣簡單化。  <xref:System.Activities.Statements.CompensableActivity> 包含主體和補償處理常式。  序列中的下一個會是明確補償。  主體活動和補償處理常式活動都是空白實作：
 
 ```csharp
 public sealed class CompensableActivityEmptyCompensation : CodeActivity
@@ -162,86 +162,86 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
     }
 ```
 
-下圖顯示基本補償工作流程。 左邊為 WF3 工作流程，右邊為 WF4 工作流程。
+下圖顯示了基本薪酬工作流。 左邊為 WF3 工作流程，右邊為 WF4 工作流程。
 
-![WF3 和 WF4 基本補償工作流程](./media/performance/basic-compensation-workflows-wf3-wf4.gif)
+![WF3 和 WF4 基本補償工作流](./media/performance/basic-compensation-workflows-wf3-wf4.gif)
 
 ### <a name="performance-test-results"></a>效能測試結果
 
- ![顯示效能測試結果資料的資料表](./media/performance/performance-test-data.gif)
+ ![顯示效能測試結果資料的表](./media/performance/performance-test-data.gif)
 
  ![比較 WF3 和 WF4 效能測試資料的直條圖](./media/performance/performance-test-chart.gif)
 
  工作流程的所有測試都是以秒為測量單位，但是異動範圍測試除外。  如上面所示，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段效能已全面提升，尤其是在需要多次執行相同活動 (如 while 迴圈) 的區域中。
 
 ## <a name="service-composition-scenario"></a>服務撰寫案例
- 如上一節「元件層級的效能比較」中所示，WF3 和 WF4 之間已大幅減少額外負荷。  WCF 工作流程服務現在幾乎可以符合手動編碼 WCF 服務的效能，但仍然擁有 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行時間的所有優點。  此測試案例會比較 WCF 服務與 WF4 中的 WCF 工作流程服務。
+ 如上一節"元件級性能比較"所示，WF3 和 WF4 之間的開銷已顯著降低。  WCF 工作流服務現在幾乎可以匹配手動編碼的 WCF 服務的性能，但仍具有[!INCLUDE[wf1](../../../includes/wf1-md.md)]運行時的所有優勢。  此測試方案將 WCF 服務與 WF4 中的 WCF 工作流服務進行比較。
 
 ### <a name="online-store-service"></a>線上存放服務
- Windows Workflow Foundation 的優點之一，就是能夠使用數個服務來撰寫處理常式。  這個優點的範例為線上存放服務，該服務會協調兩個服務呼叫以採購訂單。  第一個步驟是使用訂單驗證服務驗證訂單。  第二個步驟是使用倉儲服務填寫訂單。
+ Windows 工作流基礎的優勢之一是能夠使用多個服務撰寫進程。  這個優點的範例為線上存放服務，該服務會協調兩個服務呼叫以採購訂單。  第一個步驟是使用訂單驗證服務驗證訂單。  第二個步驟是使用倉儲服務填寫訂單。
 
- 在兩項測驗中，訂單驗證服務和倉儲服務這兩項後端服務保持不變。  變更的部分是執行協調流程的線上存放服務。  在其中一種情況下，服務會手動編碼為 WCF 服務。  若是另一種情況，則會將服務撰寫為 WF4 中的 WCF 工作流程服務。 在這項測試中，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 的專屬功能像是追蹤和持續性都會關閉。
+ 在兩項測驗中，訂單驗證服務和倉儲服務這兩項後端服務保持不變。  變更的部分是執行協調流程的線上存放服務。  在一種情況下，該服務被手動編碼為 WCF 服務。  對於另一種情況，該服務在 WF4 中編寫為 WCF 工作流服務。 在這項測試中，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 的專屬功能像是追蹤和持續性都會關閉。
 
 ### <a name="environment"></a>環境
-![效能測量的環境設定](./media/performance/performance-test-environment.gif)
+![用於性能測量的環境設置](./media/performance/performance-test-environment.gif)
 
- 從多部電腦透過 HTTP 對線上存放服務發出用戶端要求。  這三項服務全裝載於單一電腦。  線上存放服務和後端服務之間的傳輸層是 TCP 或 HTTP。  對作業/秒的測量是以完成的 `PurchaseOrder` 呼叫數目為基礎，這些呼叫的目標是線上存放服務。  通道共用是 WF4 提供的新功能。  在此測試通道共用的 WCF 部分中，不會提供現成的功能，因此在線上商店服務中使用簡單共用技術的手動編碼實。
+ 從多部電腦透過 HTTP 對線上存放服務發出用戶端要求。  這三項服務全裝載於單一電腦。  線上存放服務和後端服務之間的傳輸層是 TCP 或 HTTP。  對作業/秒的測量是以完成的 `PurchaseOrder` 呼叫數目為基礎，這些呼叫的目標是線上存放服務。  通道共用是 WF4 提供的新功能。  在此測試通道池的 WCF 部分中，不會開箱即用，因此線上商店服務中使用了簡單池技術的手編碼實現。
 
 ### <a name="performance"></a>效能
-![顯示線上商店服務效能的直條圖](./media/performance/online-store-performance-graph.gif)
+![顯示線上商店服務績效的直條圖](./media/performance/online-store-performance-graph.gif)
 
  不透過通道共用連線到後端 TCP 服務時，[!INCLUDE[wf1](../../../includes/wf1-md.md)] 服務的輸送量會有 17.2% 的影響。  若透過通道共用，則影響約 23.8%。  若為 HTTP，則影響相對較低：不透過共用為 4.3%，透過共用則為 8.1%。  另外要特別注意的是，使用 HTTP 時通道共用的效用不大。
 
- 雖然在這項測試中，WF4 執行時間與手動編碼的 WCF 服務相較之下有額外負荷，但可能會被視為最糟的情況。  在這項測試中，兩個後端服務執行的工作相當少。  在實際的端對端案例中，這些服務會執行更耗費資源的作業，像是資料庫呼叫，傳輸層效能的影響即變得較不重要。  再加上 WF4 所提供的功能優勢，使得 Workflow Foundation 成為一項建立協調流程服務的可行選擇。
+ 雖然與此測試中手動編碼的 WCF 服務相比，WF4 運行時存在開銷，但可以將其視為最壞情況。  在這項測試中，兩個後端服務執行的工作相當少。  在實際的端對端案例中，這些服務會執行更耗費資源的作業，像是資料庫呼叫，傳輸層效能的影響即變得較不重要。  再加上 WF4 所提供的功能優勢，使得 Workflow Foundation 成為一項建立協調流程服務的可行選擇。
 
 ## <a name="key-performance-considerations"></a>重要的效能考量
  本節中提到的功能 (Interop 除外) 在 WF3 和 WF4 之間已有大幅變更。  這會影響工作流程應用程式的設計以及效能。
 
 #### <a name="workflow-activation-latency"></a>工作流程啟動延遲
- 在 WCF 工作流程服務應用程式中，啟動新工作流程或載入現有工作流程的延遲很重要，因為它可能會被封鎖。  這項測試案例會評估一般案例中的 WF3 XOML 主機與 WF4 XAMLX 主機。
+ 在 WCF 工作流服務應用程式中，啟動新工作流或載入現有工作流的延遲非常重要，因為它可能會阻塞。  這項測試案例會評估一般案例中的 WF3 XOML 主機與 WF4 XAMLX 主機。
 
 ##### <a name="environment-setup"></a>環境設定
- ![為延遲及輸送量測試而設定的環境](./media/performance/latency-throughput-environment-setup.gif)
+ ![延遲和輸送量測試的環境設定](./media/performance/latency-throughput-environment-setup.gif)
 
 ##### <a name="test-setup"></a>測試設定
- 在此案例中，用戶端電腦會使用以內容為基礎的相互關聯來聯絡 WCF 工作流程服務。  內容相互關聯需要特殊的內容繫結，並使用內容標頭或 Cookie 將訊息與正確的工作流程產生關聯。  這樣做有益於效能，因為相互關聯 ID 位於訊息標頭中，因此訊息本文不需要進行剖析。
+ 在這種情況下，用戶端電腦使用基於上下文的相關性與 WCF 工作流服務聯繫。  內容相互關聯需要特殊的內容繫結，並使用內容標頭或 Cookie 將訊息與正確的工作流程產生關聯。  這樣做有益於效能，因為相互關聯 ID 位於訊息標頭中，因此訊息本文不需要進行剖析。
 
  服務將根據要求建立新的工作流程，並且傳送立即回應，如此對延遲的測量就不會包括執行工作流程所花的時間。  WF3 工作流程是包含程式碼後置的 XOML，而 WF4 工作流程完全是 XAML。  WF4 工作流程看起來像這樣：
 
- ![WF4 相互關聯範圍工作流程](./media/performance/wf4-correlationscope-workflow.gif)
+ ![WF4 關聯範圍工作流](./media/performance/wf4-correlationscope-workflow.gif)
 
- <xref:System.ServiceModel.Activities.Receive> 活動會建立工作流程執行個體。  接收的訊息中傳遞的值會重複在回覆訊息中。  回覆之後的序列包含工作流程的其餘部分。  上述案例中只會顯示一個註解活動。  註解活動的數量會變更，以模擬工作流程的複雜度。  註解活動相當於不執行任何工作的 WF3 <xref:System.Workflow.Activities.CodeActivity>。 如需批註活動的詳細資訊，請參閱本文稍早的「元件層級效能比較」一節。
+ <xref:System.ServiceModel.Activities.Receive> 活動會建立工作流程執行個體。  接收的訊息中傳遞的值會重複在回覆訊息中。  回覆之後的序列包含工作流程的其餘部分。  上述案例中只會顯示一個註解活動。  註解活動的數量會變更，以模擬工作流程的複雜度。  註解活動相當於不執行任何工作的 WF3 <xref:System.Workflow.Activities.CodeActivity>。 有關注釋活動的詳細資訊，請參閱本文前面"元件級性能比較"部分。
 
 ##### <a name="test-results"></a>測試結果
 
- WCF 工作流程服務的冷和暖延遲：
+ WCF 工作流服務的冷熱延遲：
 
- ![直條圖，顯示使用 WF3 和 WF4 之 WCF 工作流程服務的冷和暖延遲](./media/performance/latency-results-graph.gif)
+ ![顯示使用 WF3 和 WF4 的 WCF 工作流服務的冷熱延遲的直條圖](./media/performance/latency-results-graph.gif)
 
- 在上圖中，「冷」指的是指定的工作流程沒有現有 <xref:System.ServiceModel.WorkflowServiceHost> 的情況。  換句話說，冷延遲指的是第一次使用工作流程，而需要編譯 XOML 或 XAML 的時間。  暖延遲是指在已經編譯工作流程類型時建立新工作流程執行個體的時間。  工作流程的複雜度在 WF4 案例中只有相當些微的差異，但是在 WF3 案例中則呈現直線進展。
+ 在前面的圖表中，冷是指給定工作流不存在<xref:System.ServiceModel.WorkflowServiceHost>的情況。  換句話說，冷延遲意謂第一次使用此工作流程，XOML 或 XAML 需要進行編譯。  暖延遲則意謂所建立的新工作流程執行個體，其工作流程類型已完成編譯。  工作流程的複雜度在 WF4 案例中只有相當些微的差異，但是在 WF3 案例中則呈現直線進展。
 
 #### <a name="correlation-throughput"></a>相互關聯輸送量
- WF4 採用新的內容架構相互關聯 (Content-Based Correlation) 功能。  WF3 僅提供以內容為主的相互關聯 (Context-Based Correlation)。  以內容為基礎的相互關聯只能透過特定的 WCF 通道系結來完成。  使用這些繫結時，工作流程 ID 會插入至訊息標頭。  WF3 執行時間只能依其識別碼來識別工作流程。 使用以內容為基礎的相互關聯，工作流程作者可以從相關的資料片段（例如帳戶號碼或客戶識別碼）建立相互關聯索引鍵。
+ WF4 採用新的內容架構相互關聯 (Content-Based Correlation) 功能。  WF3 僅提供以內容為主的相互關聯 (Context-Based Correlation)。  僅通過特定的 WCF 通道綁定才能完成基於上下文的關聯。  使用這些繫結時，工作流程 ID 會插入至訊息標頭。  WF3 運行時只能通過其 Id 標識工作流。 使用基於內容的相關性，工作流作者可以從相關資料（如帳號或客戶 ID）中創建相關金鑰。
 
  以內容為主的相互關聯擁有的效能優勢在於，相互關聯索引鍵位於訊息標頭內。  索引鍵可以從訊息讀取，而不需進行還原序列化/訊息複製。  在內容架構的相互關聯中，相互關聯索引鍵是儲存在訊息主體中。  XPath 運算式會用來尋找該索引鍵。  這項額外處理的成本取決於訊息的大小、索引鍵在主體中的深度，以及索引鍵的數量。  這項測試會比較以內容為主的相互關聯與內容架構的相互關聯，另外還會顯示使用多個索引鍵時效能降低的情況。
 
 #### <a name="environment-setup"></a>環境設定
-![工作流程效能測試的環境設定](./media/performance/performance-test-environment.gif)
+![工作流效能測試的環境設置](./media/performance/performance-test-environment.gif)
 
 #### <a name="test-setup"></a>測試設定
-![相互關聯輸送量工作流程測試](./media/performance/correlation-throughput-workflow.gif "相互關聯輸送量工作流程測試設定")
+![相互關聯輸送量工作流程測試](./media/performance/correlation-throughput-workflow.gif "關聯輸送量工作流測試設定")
 
- 先前的工作流程與 [[持續](#persistence)性] 區段中使用的相同。 針對沒有持續性的相互關聯測試，執行時間中不會安裝持續性提供者。 相互關聯會在兩處發生：CreateOrder 和 CompleteOrder。
+ 上一個工作流與["持久性"](#persistence)部分中使用的工作流相同。 對於沒有持久性的相關測試，運行時沒有安裝持久性提供程式。 相互關聯會在兩處發生：CreateOrder 和 CompleteOrder。
 
 #### <a name="test-results"></a>測試結果
-![相互關聯輸送量](./media/performance/correlation-throughput-graph.gif "相互關聯輸送量圖表")
+![相互關聯輸送量](./media/performance/correlation-throughput-graph.gif "相關輸送量圖")
 
  此圖顯示效能會隨著內容架構相互關聯中使用的索引鍵數目增加而降低。  TCP 和 HTTP 之間曲線的相似度，表示與這兩種通訊協定相關聯的負荷。
 
 #### <a name="correlation-with-persistence"></a>具備持續性的相互關聯
  使用已保存的工作流程時，來自內容架構相互關聯的 CPU 壓力會從工作流程執行階段轉移至 SQL 資料庫。  SQL 持續性提供者中的預存程序會進行比對索引鍵的工作，以找出適當的工作流程。
 
- ![顯示相互關聯和持續性結果的折線圖](./media/performance/correlation-persistence-graph.gif)
+ ![顯示相關性和持久性結果的折線圖](./media/performance/correlation-persistence-graph.gif)
 
  以內容為主的相互關聯速度仍然比內容架構的相互關聯快。  然而差異較不明顯，因為持續性對於效能的影響比相互關聯還要大。
 
@@ -255,72 +255,72 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
 
  指定之測試中活動的數目取決於深度和每個序列的活動數目。  下列方程式會計算 WF4 測試中的活動數目：
 
- ![計算活動數目的方程式](./media/performance/number-activities-equation.gif)
+ ![用來計算活動數的方程式](./media/performance/number-activities-equation.gif)
 
  由於有額外的序列，WF3 測試的活動計數可以藉由稍為不同的方程式計算：
 
- ![計算 WF3 活動數目的方程式](./media/performance/wf3-number-activities-equation.gif)
+ ![計算 WF3 活動數的方程](./media/performance/wf3-number-activities-equation.gif)
 
  其中 d 代表深度，a 代表每個序列的活動數目。  這些方程式背後的邏輯在於，第一個常數乘以 a 得出序列的數目，而第二個常數是目前層級中的靜態活動數目。  每一個流程圖中會有三個流程圖子活動。  這些流程圖在最下層會是空的，但是在其他層級中則會是主要流程圖的複本。  下表針對每個經變化的測試，顯示其工作流程定義中的活動數目：
 
- ![顯示每個測試中使用的活動數目的資料表](./media/performance/workflow-variation-compare-table.gif)
+ ![顯示每個測試中使用的活動數的表](./media/performance/workflow-variation-compare-table.gif)
 
  工作流程定義中的活動數目會隨著深度加深而大幅增加。  但是，在指定的工作流程執行個體中，每個決策點只會執行一個路徑，因此只會執行實際活動的一小部分。
 
- ![複雜輸送量工作流程的流程圖](./media/performance/complex-workflow-throughput-workflow.gif)
+ ![複雜輸送量工作流的流程圖](./media/performance/complex-workflow-throughput-workflow.gif)
 
  WF3 中會建立對等的工作流程。 WF3 設計工具會在設計區域中顯示整個工作流程，而非巢狀結構，因此超出本主題所能顯示的範圍。 下面顯示工作流程的片段。
 
- ![WF3 工作流程的流程圖程式碼片段](./media/performance/wf3-workflow-snippet.gif)
+ ![WF3 工作流的流程圖程式碼片段](./media/performance/wf3-workflow-snippet.gif)
 
  為了練習極端案例中的巢狀結構，這項測試包含的另一個工作流程會使用 100 個巢狀序列。  最內層的序列是單一 `Comment` 或 <xref:System.Workflow.Activities.CodeActivity>。
 
- ![嵌套順序的流程圖](./media/performance/nested-sequence-workflow.gif)
+ ![嵌套序列的流程圖](./media/performance/nested-sequence-workflow.gif)
 
  這項測試中不會使用追蹤和持續性。
 
 ### <a name="test-results"></a>測試結果
- ![顯示輸送量效能結果的直條圖](./media/performance/throughput-performance-results.gif)
+ ![顯示輸送量性能結果的直條圖](./media/performance/throughput-performance-results.gif)
 
  即使是擁有多層深度和大量活動的複雜工作流程，其效能與本文前段所示的其他輸送量數字一致。  WF4 的輸送量增加的速度較快，而且必須在對數刻度上進行比較。
 
 ### <a name="memory"></a>記憶體
- Windows Workflow Foundation 的記憶體負荷是從兩個重要的方面加以測量：工作流程複雜度和工作流程定義的數目。  記憶體測量作業是在 Windows 7 64 位元工作站上進行。  有許多方法可以取得工作集大小的測量，例如監視效能計數器、輪詢環境，或使用存取 vmmap 提供的工具（如[存取 vmmap](/sysinternals/downloads/vmmap)）。 您可以結合各種方式來取得和驗證每項測試的結果。
+ Windows Workflow Foundation 的記憶體負荷是從兩個重要的方面加以測量：工作流程複雜度和工作流程定義的數目。  記憶體測量作業是在 Windows 7 64 位元工作站上進行。  有許多方法可以測量工作集大小，例如監視效能計數器、輪詢環境.工作集或使用[VMMap](/sysinternals/downloads/vmmap)等工具。 您可以結合各種方式來取得和驗證每項測試的結果。
 
 ### <a name="workflow-complexity-test"></a>工作流程複雜度測試
  工作流程複雜度測試會依據工作流程的複雜度測量工作集的差異。  除了上節中使用的複雜工作流程之外，還加入了新的變化以涵蓋兩個基本案例：單一活動工作流程，以及包含 1000 個活動的序列。  在這些測試中，工作流程會在單一序列迴圈中初始化並且完整執行 (為時一分鐘)。  每一個經變化的測試都會執行三次，而記錄的資料會是這三個回合的平均值。
 
  兩項新基本測試中的工作流程如下所示：
 
- ![WF3 和 WF4 的複雜工作流程](./media/performance/complex-workflow-wf3-wf4.gif)
+ ![WF3 和 WF4 的複雜工作流](./media/performance/complex-workflow-wf3-wf4.gif)
 
  在上面所示的 WF3 工作流程中，會使用空的 <xref:System.Workflow.Activities.CodeActivity> 活動。  上面的 WF4 工作流程則會使用 `Comment` 活動。  `Comment` 活動已在本文前段的＜元件層級的效能比較＞一節中說明。
 
- ![顯示 WF3 和 WF4 工作流程之複雜工作流程記憶體使用量的直條圖](./media/performance/complex-memory-usage-wf3-wf4.gif)
+ ![顯示 WF3 和 WF4 工作流複雜工作流記憶體使用方式的直條圖](./media/performance/complex-memory-usage-wf3-wf4.gif)
 
  此圖中其中一個值得注意的明顯趨勢為：巢狀結構對於 WF3 和 WF4 的記憶體使用量相對來說影響較小。  指定之工作流程中的活動數目對記憶體的影響程度最大。  若查看序列 1000、複雜深度 5 序列 5 及複雜深度 7 序列 1 這些變化的資料，就能清楚得知，活動數目增加到千位數時，記憶體使用量也會更明顯地增加。  在有將近 29000 個活動的極端案例中 (深度 7 序列 1)，WF4 使用的記憶體幾乎比 WF3 少 79%。
 
 ### <a name="multiple-workflow-definitions-test"></a>多個工作流程定義測試
- 由於 WF3 和 WF4 中可用於裝載工作流程的選項有所不同，因此會分成兩項不同的測試來測量每個工作流程定義的記憶體使用量。  這兩項測試執行的方式與工作流程複雜度測試不同，因為根據定義初始化和執行指定之工作流程的次數只有一次。  這是因為工作流程定義及其主機在 AppDomain 的存留期會保留在記憶體中。  為執行指定之工作流程執行個體而使用的記憶體應該在記憶體回收期間清除。  WF4 的移轉指引包含有關裝載選項的詳細資訊。 如需詳細資訊，請參閱[WF 遷移操作手冊：工作流程裝載](migration-guidance.md)。
+ 由於 WF3 和 WF4 中可用於裝載工作流程的選項有所不同，因此會分成兩項不同的測試來測量每個工作流程定義的記憶體使用量。  這兩項測試執行的方式與工作流程複雜度測試不同，因為根據定義初始化和執行指定之工作流程的次數只有一次。  這是因為工作流程定義及其主機在 AppDomain 的存留期會保留在記憶體中。  為執行指定之工作流程執行個體而使用的記憶體應該在記憶體回收期間清除。  WF4 的移轉指引包含有關裝載選項的詳細資訊。 有關詳細資訊，請參閱[WF 遷移說明書：工作流託管](migration-guidance.md)。
 
  您可以透過使用幾種方式建立許多工作流程定義，以進工作流程定義測試。  例如，您可以使用程式碼產生建立一組除了名稱之外完全相同的 1000 個工作流程，然後將每一個工作流程儲存到不同的檔案中。  這種方式原本是用於主控台裝載的測試。  在 WF3 中，<xref:System.Workflow.Runtime.WorkflowRuntime> 類別是用來執行工作流程定義。  WF4 可使用 <xref:System.Activities.WorkflowApplication> 來建立單一工作流程執行個體，也可以直接使用 <xref:System.Activities.WorkflowInvoker> 來執行活動，就像使用方法呼叫一樣。  <xref:System.Activities.WorkflowApplication> 是單一工作流程執行個體的主機，其功能與 <xref:System.Workflow.Runtime.WorkflowRuntime> 相近，因此在這項測試中使用。
 
- 在 IIS 中裝載工作流程時，可以使用 <xref:System.Web.Hosting.VirtualPathProvider> 建立新的 <xref:System.ServiceModel.WorkflowServiceHost>，而不產生所有 XAMLX 或 XOML 檔案。  <xref:System.Web.Hosting.VirtualPathProvider> 會處理連入要求，並以可從資料庫載入或在此情況下即時產生的「虛擬檔案」回應。  因此不需要建立 1000 個實體檔案。
+ 在 IIS 中裝載工作流程時，可以使用 <xref:System.Web.Hosting.VirtualPathProvider> 建立新的 <xref:System.ServiceModel.WorkflowServiceHost>，而不產生所有 XAMLX 或 XOML 檔案。  處理<xref:System.Web.Hosting.VirtualPathProvider>傳入請求，並回應一個"虛擬檔案"，該檔可以從資料庫載入，或者（在這種情況下）動態生成。  因此不需要建立 1000 個實體檔案。
 
  主控台測試中所使用的工作流程定義是包含單一活動的簡單循序工作流程。  單一活動在 WF3 案例中是空的 <xref:System.Workflow.Activities.CodeActivity>，在 WF4 案例中則是 `Comment` 活動。  IIS 裝載的案例使用的工作流程是從接收訊息開始，於傳送回覆時結束：
 
-下圖顯示具有 ReceiveActivity 的 WF3 工作流程，以及具有要求/回應模式的 WF4 工作流程：
+下圖顯示了具有"接收活動"的 WF3 工作流和具有請求/回應模式的 WF4 工作流：
 
- ![WF3 及 WF4 中的工作流程服務](./media/performance/workflow-receive-activity.gif)
+ ![WF3 和 WF4 中的工作流程服務](./media/performance/workflow-receive-activity.gif)
 
- 下表顯示單一工作流程定義與1001定義之間工作集中的差異：
+ 下表顯示了單個工作流定義和 1001 定義之間的工作集中的增量：
 
 |裝載選項|WF3 工作集差異|WF4 工作集差異|
 |---------------------|---------------------------|---------------------------|
 |主控台應用程式裝載的工作流程|18 MB|9 MB|
 |IIS 裝載的工作流程服務|446 MB|364 MB|
 
- 在 IIS 中裝載工作流程定義會因為 <xref:System.ServiceModel.WorkflowServiceHost>、詳細的 WCF 服務成品，以及與主機相關聯的訊息處理邏輯，而耗用更多記憶體。
+ 由於<xref:System.ServiceModel.WorkflowServiceHost>詳細的 WCF 服務專案以及與主機關聯的消息處理邏輯，IIS 中的託管工作流定義會消耗更多的記憶體。
 
  針對 WF3 中的主控台裝載作業，工作流程會以程式碼實作，而不是 XOML。  在 WF4 中，預設為使用 XAML。  XAML 會在組件中儲存為內嵌資源，並且在執行階段期間編譯，以提供工作流程的實作。  此程序會產生一些負荷。  為了在 WF3 和 WF4 之間進行公平的比較，會使用以程式碼 (而非 XAML) 撰寫的工作流程。  以下顯示其中一個 WF4 工作流程的範例：
 
@@ -349,7 +349,7 @@ public class Workflow1 : Activity
 }
 ```
 
- 還有許多其他的因素可能會影響記憶體消耗。 針對所有 Managed 程式的相同建議仍適用。  在 IIS 裝載環境中，針對工作流程定義建立的 <xref:System.ServiceModel.WorkflowServiceHost> 物件會保留在記憶體中，直到回收應用程式集區為止。  撰寫延伸模組時，務必記住這點。  此外，最好避免「全域」變數（範圍為整個工作流程的變數），並盡可能限制變數的範圍。
+ 還有許多其他的因素可能會影響記憶體消耗。 針對所有 Managed 程式的相同建議仍適用。  在 IIS 裝載環境中，針對工作流程定義建立的 <xref:System.ServiceModel.WorkflowServiceHost> 物件會保留在記憶體中，直到回收應用程式集區為止。  撰寫延伸模組時，務必記住這點。  此外，最好避免"全域"變數（範圍可限定在整個工作流中的變數），並盡可能限制變數的範圍。
 
 ## <a name="workflow-runtime-services"></a>工作流程執行階段服務
 
@@ -359,17 +359,17 @@ public class Workflow1 : Activity
  WF4 SQL 持續性提供者已嘗試解決部分問題。  持續性資料表會公開特定資訊，例如使用中書籤和可提升的屬性。  WF4 中新的內容架構相互關聯功能使用 WF3 SQL 持續性方法的話，可能無法正常執行，該功能已對保存的工作流程執行個體進行一些組織上的變更。  這樣會使持續性提供者的工作更為複雜，並帶給資料庫額外的壓力。
 
 ### <a name="environment-setup"></a>環境設定
-![工作流程效能測試的環境設定](./media/performance/performance-test-environment.gif)
+![工作流效能測試的環境設置](./media/performance/performance-test-environment.gif)
 
 ### <a name="test-setup"></a>測試設定
  即使有了改良的功能集和更優越的並行處理，WF4 中 SQL 持續性提供者的速度還是比 WF3 中的提供者快。  為了展示這個情況，以下將比較 WF3 和 WF4 中執行本質相同之作業的兩個工作流程。
 
- ![WF3 左側和 WF4 右側的持續性工作流程](./media/performance/persist-workflow-wf3-wf4.gif)
+ ![左側的 WF3 中的持久性工作流和右側的 WF4 中的持久性工作流](./media/performance/persist-workflow-wf3-wf4.gif)
 
- 兩個工作流程都是透過收到的訊息所建立。  傳送初始回覆之後，會保存工作流程。  WF3 案例中會使用空的 <xref:System.Workflow.ComponentModel.TransactionScopeActivity> 啟始持續性。  將活動標示為「關閉時保存」，即可在 WF3 中達成相同的目的。  另一個相互關聯的訊息會完成工作流程。  工作流程會保存，但是不會卸載。
+ 兩個工作流程都是透過收到的訊息所建立。  傳送初始回覆之後，會保存工作流程。  WF3 案例中會使用空的 <xref:System.Workflow.ComponentModel.TransactionScopeActivity> 啟始持續性。  在 WF3 中，通過將主動標記為"持續關閉"，也可以實現同樣的目標。  另一個相互關聯的訊息會完成工作流程。  工作流程會保存，但是不會卸載。
 
 ### <a name="test-results"></a>測試結果
- ![顯示輸送量持續性的直條圖](./media/performance/throughput-persistence-graph.gif)
+ ![顯示輸送量持久性的直條圖](./media/performance/throughput-persistence-graph.gif)
 
  當用戶端和中介層之間的傳輸為 HTTP 時，WF4 中的持續性就會提升 2.6 倍。  TCP 傳輸會將該係數增加為 3.0 倍。  在所有案例中，中介層的 CPU 使用率都會是 98% 或更高。  WF4 輸送量較大的原因在於，工作流程執行階段的速度較快。  這兩個案例的序列化執行個體都不大，所以在此情況下並不是主要影響因素。
 
@@ -377,17 +377,17 @@ public class Workflow1 : Activity
 
  請注意，WF4 SQL 持續性提供者在資料庫層中會執行較多工作。  由於 SQL 資料庫可能變成瓶頸，因此務必監視該處的 CPU 和磁碟使用量。  效能測試工作流程應用程式時，務必包括以下 SQL 資料庫中的效能計數器：
 
-- PhysicalDisk\\% 磁片讀取時間
+- 物理磁片\\%磁片讀取時間
 
-- PhysicalDisk\\% 磁片時間
+- 物理磁片\\% 磁片時間
 
-- PhysicalDisk\\% 磁片寫入時間
+- 物理磁片\\% 磁片寫入時間
 
-- PhysicalDisk\\% 平均磁片佇列長度
+- 物理磁片\\% 平均磁片佇列長度
 
-- PhysicalDisk\Avg. 磁片讀取佇列長度
+- 物理磁片\平均磁片讀取佇列長度
 
-- PhysicalDisk\Avg. 磁片寫入佇列長度
+- 物理磁片\平均磁片寫入佇列長度
 
 - PhysicalDisk\Current Disk Queue Length
 
@@ -397,12 +397,12 @@ public class Workflow1 : Activity
 
 - SQLServer:Latches\Latch Waits/sec
 
-### <a name="tracking"></a>Tracking
+### <a name="tracking"></a>追蹤
  工作流程追蹤可以用來追蹤工作流程的進度。  追蹤事件中包含的資訊是由追蹤設定檔所決定。  追蹤設定檔越複雜，追蹤所耗用的資源就愈多。
 
  WF3 隨附 SQL 架構追蹤服務。  這項服務可以在批次和非批次模式下運作。  在非批次模式中，追蹤事件會直接寫入資料庫。  在批次模式中，追蹤事件會收集到與工作流程執行個體狀態相同的批次中。  針對最廣泛的工作流程設計，批次模式可提供最佳效能。  不過，如果工作流程執行許多活動而未保存，而且這些活動都會加以追蹤，則批次處理可能對效能產生負面影響。  這種情況常發生在迴圈中，而避免這種情況發生的最佳方式，就是設計大型迴圈來包含保存點。  在迴圈中導入保存點同樣可能對效能造成負面影響，因此務必計算各項的成本並找出平衡。
 
- WF4 沒有隨附 SQL 追蹤服務。  將追蹤資訊記錄到 SQL database 的處理方式，可以從應用程式伺服器進行，而不是內建在 .NET Framework 中。 因此，SQL 追蹤現在是由 AppFabric 處理。  WF4 中現成的追蹤提供者是以 Windows 事件追蹤 (ETW) 為基礎。
+ WF4 沒有隨附 SQL 追蹤服務。  從應用程式伺服器（而不是內置到 .NET 框架）可以更好地處理將跟蹤資訊記錄到 SQL 資料庫。 因此，SQL 追蹤現在是由 AppFabric 處理。  WF4 中現成的追蹤提供者是以 Windows 事件追蹤 (ETW) 為基礎。
 
  ETW 是核心層級的低延遲事件系統，內建於 Windows。  它使用提供者/消費者模型，如此在實際上有消費者時，就只有事件追蹤會產生負面影響。  除了核心事件 (像是處理器、磁碟、記憶體和網路使用量) 之外，許多應用程式也都會運用 ETW。  ETW 事件的功能比效能計數器強大，因為可以針對應用程式自訂事件。  事件可以包含像是工作流程 ID 或資訊訊息這類文字。  此外，事件還會依位元遮罩分類，如此一來，使用特定事件子集對效能的影響就會比擷取所有事件低。
 
@@ -410,7 +410,7 @@ public class Workflow1 : Activity
 
 - 追蹤事件的收集工作可以分割到另一個處理序。  如此就能在事件記錄方式上獲得更大的彈性。
 
-- ETW 追蹤事件可輕鬆地與 WCF ETW 事件或其他 ETW 提供者（例如 SQL Server 或核心提供者）結合。
+- ETW 跟蹤事件可輕鬆與 WCF ETW 事件或其他 ETW 提供程式（如 SQL Server 或內核提供程式）結合使用。
 
 - 工作流程作者不需要修改工作流程，就能更充分地運用特定追蹤實作，例如 WF3 SQL 追蹤服務的批次模式。
 
@@ -420,28 +420,28 @@ public class Workflow1 : Activity
 
  雖然 WF4 沒有 SQL 追蹤提供者，但是 AppFabric 有。  AppFabric 的 SQL 追蹤方法是使用 Windows 服務訂閱 ETW 事件，此服務會批次處理事件並將事件寫入可快速插入的 SQL 資料表中。  另一項工作會從這個資料表取出資料，然後重新製成可在 AppFabric 儀表板上檢視的報告資料表。  這表示一批追蹤事件會與其來源的工作流程分開處理，因此不必等待保存點即可加以記錄。
 
- ETW 事件可以使用 logman 或 xperf 這類工具記錄。  壓縮的 ETL 檔案可以使用 xperfview 這類工具檢視，或是使用 tracerpt 轉換成更容易閱讀的格式，例如 XML。  在 WF3 中，若要不使用 SQL 資料庫來取得追蹤事件，唯一的方法就是建立自訂追蹤服務。 如需 ETW 的詳細資訊，請參閱適用于 Windows 和事件追蹤的[WCF 服務和事件追蹤](../wcf/samples/wcf-services-and-event-tracing-for-windows.md) [-windows 應用程式](/windows/desktop/etw/event-tracing-portal)。
+ ETW 事件可以使用 logman 或 xperf 這類工具記錄。  壓縮的 ETL 檔案可以使用 xperfview 這類工具檢視，或是使用 tracerpt 轉換成更容易閱讀的格式，例如 XML。  在 WF3 中，若要不使用 SQL 資料庫來取得追蹤事件，唯一的方法就是建立自訂追蹤服務。 有關 ETW 的詳細資訊，請參閱 Windows 和[事件跟蹤的](/windows/desktop/etw/event-tracing-portal) [WCF 服務和事件跟蹤](../wcf/samples/wcf-services-and-event-tracing-for-windows.md)- Windows 應用程式 。
 
  啟用工作流程追蹤對效能會有不同程度的影響。  下列基準會使用 logman 工具取用 ETW 追蹤事件，並且將事件記錄到 ETL 檔案。  AppFabric 中 SQL 追蹤的成本不在本文的討論範圍內。  此基準中會顯示基本追蹤設定檔 (也會在 AppFabric 中使用)。  另外還包括僅追蹤健康監視事件的成本。  這些事件有助於問題的疑難排解，以及判斷系統的平均輸送量。
 
 ### <a name="environment-setup"></a>環境設定
- ![工作流程效能測試的環境設定](./media/performance/performance-test-environment.gif)
+ ![工作流效能測試的環境設置](./media/performance/performance-test-environment.gif)
 
 ### <a name="test-results"></a>測試結果
 
- ![顯示工作流程追蹤成本的直條圖](./media/performance/workflow-tracking-costs.gif)
+ ![顯示工作流跟蹤成本的直條圖](./media/performance/workflow-tracking-costs.gif)
 
  健康監視對於輸送量的影響約為 3%。  基本設定檔的成本約為 8%。
 
 ## <a name="interop"></a>Interop
- WF4 幾乎是完全重新撰寫 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 的結果，因此 WF3 工作流程和活動無法與 WF4 直接相容。  許多採用 Windows Workflow Foundation 早期的客戶會有內部或協力廠商工作流程定義，以及 WF3 的自訂活動。  其中一種輕鬆轉換至 WF4 的方式就是使用 Interop 活動，該活動可以從 WF4 工作流程內執行 WF3 活動。  建議必要時才使用 <xref:System.Activities.Statements.Interop> 活動。 如需遷移至 WF4 的詳細資訊，請參閱[WF4 遷移指引](migration-guidance.md)。
+ WF4 幾乎是完全重新撰寫 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 的結果，因此 WF3 工作流程和活動無法與 WF4 直接相容。  許多早期採用 Windows 工作流基礎的客戶將具有 WF3 的內部或協力廠商工作流定義和自訂活動。  其中一種輕鬆轉換至 WF4 的方式就是使用 Interop 活動，該活動可以從 WF4 工作流程內執行 WF3 活動。  建議必要時才使用 <xref:System.Activities.Statements.Interop> 活動。 有關遷移到 WF4 的詳細資訊，請查看[WF4 遷移指南](migration-guidance.md)。
 
 ### <a name="environment-setup"></a>環境設定
- ![工作流程效能測試的環境設定](./media/performance/performance-test-environment.gif)
+ ![工作流效能測試的環境設置](./media/performance/performance-test-environment.gif)
 
 ### <a name="test-results"></a>測試結果
- 
-下表顯示在各種設定中，執行包含五個活動之工作流程的結果。
+
+下表顯示了在各種配置中按序列運行包含五個活動的工作流的結果。
 
 |測試|輸送量 (工作流程/秒)|
 |----------|-----------------------------------|
@@ -451,5 +451,5 @@ public class Workflow1 : Activity
 
  直接透過 WF3 使用 Interop 在效能上有顯著提升。  不過，與 WF4 活動相較之下，這項提升就顯得微不足道。
 
-## <a name="summary"></a>總結
- WF4 中對效能的大量投資已在許多重要的方面獲得成效。  在某些情況下，WF4 中個別工作流程元件的效能比 WF3 快上數百倍，因為 WF4 擁有較精簡的 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段。  延遲數據同樣大為改善。  這表示使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 而不是手動編碼 WCF 協調流程服務的效能會受到很小的影響，考慮使用 [!INCLUDE[wf1](../../../includes/wf1-md.md)]的額外優點。  持續性效能已提升 2.5 至 3.0 倍。  現在透過工作流程追蹤進行健康監視的負荷已相當低。  若您考慮從 WF3 移至 WF4，我們提供了一套完整的移轉指南。  這些都將使 WF4 成為撰寫複雜應用程式的理想選擇。
+## <a name="summary"></a>摘要
+ WF4 中對效能的大量投資已在許多重要的方面獲得成效。  在某些情況下，WF4 中個別工作流程元件的效能比 WF3 快上數百倍，因為 WF4 擁有較精簡的 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 執行階段。  延遲數據同樣大為改善。  這意味著，考慮到使用[!INCLUDE[wf1](../../../includes/wf1-md.md)][!INCLUDE[wf1](../../../includes/wf1-md.md)]的附加好處，使用 WCF 業務流程服務的性能損失非常小。  持續性效能已提升 2.5 至 3.0 倍。  現在透過工作流程追蹤進行健康監視的負荷已相當低。  若您考慮從 WF3 移至 WF4，我們提供了一套完整的移轉指南。  這些都將使 WF4 成為撰寫複雜應用程式的理想選擇。

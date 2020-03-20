@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb95ce39-5688-43c1-a34d-578794b32faa
 topic_type:
 - apiref
-ms.openlocfilehash: 0f870d9d7d1bc292b213d690df508a6c28bac2ab
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 13a4364244f7d0076d77d14c3e3ef161e3872bcb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450094"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176132"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize 列舉
 包含值，這些值表示在查詢儲存作業的大小時所需的精確度等級。  
@@ -28,28 +28,28 @@ ms.locfileid: "74450094"
   
 ```cpp  
 typedef enum CorSaveSize {  
-    cssAccurate                = 0x0000,   
-    cssQuick                   = 0x0001,   
+    cssAccurate                = 0x0000,
+    cssQuick                   = 0x0001,
     cssDiscardTransientCAs     = 0x0002  
 } CorSaveSize;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`cssAccurate`|指定傳回值應該是精確的。|  
+|`cssAccurate`|指定傳回值應精確。|  
 |`cssQuick`|指定應估計傳回值。|  
-|`cssDiscardTransientCAs`|指定應該移除可捨棄類型。|  
+|`cssDiscardTransientCAs`|指定應刪除可丟棄的類型。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Corhdr.h。h  
+ **標題：** 科爾赫德  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

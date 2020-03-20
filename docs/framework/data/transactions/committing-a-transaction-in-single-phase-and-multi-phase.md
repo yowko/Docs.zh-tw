@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: 2abb9c13e9b0cb394546252e0e51e53c8ff9eefb
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
+ms.openlocfilehash: 8d6c51249f104d35573507a9477a24d66d770693
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70206008"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174429"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>在單一階段和多重階段中認可交易
-交易所使用的每項資源都會受到資源管理員 (RM) 的管理，而這些資源管理員在採取行動時必須經過交易管理員 (TM) 的協調。 在[交易中將資源登記為參與者](enlisting-resources-as-participants-in-a-transaction.md)主題會討論如何在交易中登記資源 (或多個資源)。 本主題討論如何在眾多登記的資源中協調要認可的交易。  
+交易所使用的每項資源都會受到資源管理員 (RM) 的管理，而這些資源管理員在採取行動時必須經過交易管理員 (TM) 的協調。 [在事務主題中登記資源作為參與者](enlisting-resources-as-participants-in-a-transaction.md)討論如何在事務中登記資源（或多個資源）。 本主題討論如何在眾多登記的資源中協調要認可的交易。  
   
- 在交易結束時，應用程式會要求認可或復原交易。 交易管理員必須消除某些資源管理員投票決定認可，而其他資源管理員卻投票決定復原交易之類的風險。  
+ 交易結束時，應用程式便要求認可或回復交易。 交易管理員必須消除某些資源管理員投票決定認可，而其他資源管理員卻投票決定復原交易之類的風險。  
   
- 如果您的交易涉及一個以上的資源，則您必須執行兩階段交易認可 (2PC)。 兩階段交易認可通訊協定 (準備階段與認可階段) 可確保當交易結束時，對全部資源的所有變更都能全部經過認可，或是全部復原回來。 接著所有參與者都會收到最後結果的通知。 如需兩階段認可通訊協定的詳細討論, 請參閱「*交易處理」一書:概念和技術 (資料管理系統中的 Morgan Kaufmann 系列) ISBN:* 1558601902 ", Jim 灰色。  
+ 如果您的交易涉及一個以上的資源，則您必須執行兩階段交易認可 (2PC)。 兩階段交易認可通訊協定 (準備階段與認可階段) 可確保當交易結束時，對全部資源的所有變更都能全部經過認可，或是全部復原回來。 接著所有參與者都會收到最後結果的通知。 有關兩階段提交協定的詳細討論，請參閱吉姆·格雷的《*交易處理：概念和技術》（資料管理系統中的Morgan Kaufmann系列）ISBN：1558601902》* 一書。  
   
- 您也可以藉由參與單一階段交易認可通訊協定來最佳化您的交易效能。 如需詳細資訊, 請參閱[使用單一階段交易認可和可提升單一階段通知的優化](optimization-spc-and-promotable-spn.md)。  
+ 您也可以藉由參與單一階段交易認可通訊協定來最佳化您的交易效能。 有關詳細資訊，請參閱[使用單階段提交和可促銷單階段通知進行優化](optimization-spc-and-promotable-spn.md)。  
   
  如果您只是想要知道交易的結果，但不想參與投票，則應該註冊 <xref:System.Transactions.Transaction.TransactionCompleted> 事件。  
   
@@ -88,8 +88,8 @@ public void Rollback (Enlistment enlistment)
 {  
      // Do any work necessary when rollback notification is received  
   
-     // Declare done on the enlistment    
-     enlistment.Done();    
+     // Declare done on the enlistment
+     enlistment.Done();
 }  
 ```  
   
@@ -107,9 +107,9 @@ public void InDoubt (Enlistment enlistment)
 ```  
   
 ## <a name="single-phase-commit-optimization"></a>單一階段交易認可最佳化  
- 在執行階段使用單一階段交易認可通訊協定會比較有效率，因為所有的更新不需要任何個別的協調作業就可完成。 如需此通訊協定的詳細資訊, 請參閱[使用單一階段認可和可提升單一階段通知的優化](optimization-spc-and-promotable-spn.md)。  
+ 在執行階段使用單一階段交易認可通訊協定會比較有效率，因為所有的更新不需要任何個別的協調作業就可完成。 有關此協定的詳細資訊，請參閱[使用單階段提交和可促銷單階段通知進行優化](optimization-spc-and-promotable-spn.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [使用單一階段認可和可提升單一階段通知進行最佳化](optimization-spc-and-promotable-spn.md)
-- [將資源登記為異動中的參與者](enlisting-resources-as-participants-in-a-transaction.md)
+- [將資源登記成為交易中的參與者](enlisting-resources-as-participants-in-a-transaction.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - JIT compilation, 64-bit
 - RyuJIT compiler
 ms.assetid: 0332dabc-72c5-4bdc-8975-20d717802b17
-ms.openlocfilehash: dd8c2c6b3cfa919970f68f2faae2044568f6c9ac
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 883aaf032bde632b08f965d3450cfbea4feb8e65
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457908"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181260"
 ---
 # <a name="mitigation-new-64-bit-jit-compiler"></a>風險降低：新的 64 位元 JIT 編譯器
 從 .NET Framework 4.6 開始，執行階段包含新的 64 位元 JIT 編譯器，用於 Just-In-Time 編譯。 這項變更不會影響使用 32 位元 JIT 編譯器的編譯。  
@@ -36,7 +36,7 @@ ms.locfileid: "73457908"
   
 - 某些狀況下，如果使用 `if` 陳述式在進入 `try` 區塊之前和自 `try` 區塊退出時測試某項條件，而且也在 `catch` 或 `finally` 區塊中評估該條件時，新版 64 位元 JIT 編譯器在最佳化程式碼時會將 `if` 條件自 `catch` 或 `finally` 區塊中移除。 因此，`catch` 或 `finally` 區塊的 `if` 陳述式中的程式碼會無條件執行。  
   
-<a name="General"></a>   
+<a name="General"></a>
 ## <a name="mitigation-of-known-issues"></a>降低已知問題的風險  
  如果您遇到上述問題，可以採取以下任一種方式來解決︰  
   
@@ -46,11 +46,11 @@ ms.locfileid: "73457908"
   
 - 使用舊版 64 位元 JIT 編譯器編譯。 如需如何進行的詳細資訊，請參閱[降低其他問題的風險](#Other)一節。  
   
-<a name="Other"></a>   
+<a name="Other"></a>
 ## <a name="mitigation-of-other-issues"></a>降低其他問題的風險  
  如果舊版和新版 64 位元 JIT 編譯器編譯的程式碼之間有任何差異，或是使用新版 64 位元 JIT 編譯器編譯的應用程式偵錯版本和發行版本之間有任何差異，您可以使用舊版 64 位元 JIT 編譯器搭配下列方式來編譯應用程式：  
   
-- 若以每一應用程式為基礎，您可以將 [\<useLegacyJIT>](../configure-apps/file-schema/runtime/uselegacyjit-element.md) 項目新增至應用程式的組態檔。 下列程式碼會停止以新版 64 位元 JIT 編譯器進行編譯，改用舊版 64 位元 JIT 編譯器。  
+- 根據每個應用程式，您可以將[\<使用LegacyJit>](../configure-apps/file-schema/runtime/uselegacyjit-element.md)元素添加到應用程式的設定檔中。 下列程式碼會停止以新版 64 位元 JIT 編譯器進行編譯，改用舊版 64 位元 JIT 編譯器。  
   
     ```xml  
     <?xml version ="1.0"?>  
@@ -67,7 +67,7 @@ ms.locfileid: "73457908"
   
  您也可以前往 [Microsoft Connect](https://connect.microsoft.com/VisualStudio) 回報錯誤，讓我們知道問題所在。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [應用程式相容性](application-compatibility.md)
-- [\<useLegacyJit> 項目](../configure-apps/file-schema/runtime/uselegacyjit-element.md)
+- [\<使用傳統jit>元素](../configure-apps/file-schema/runtime/uselegacyjit-element.md)

@@ -2,26 +2,26 @@
 title: XML 結構描述條件約束和關聯性
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
-ms.openlocfilehash: 47b1a3e81cfbc4eb58531b1633dd29becbe497a2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2388d7c277ba1f01bea8d419e5aedf487b843ed7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040038"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150710"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>XML 結構描述條件約束和關聯性
-在 XML 架構定義語言（XSD）架構中，您可以指定條件約束（unique、key 和 keyref 條件約束）和關聯性（使用**msdata： Relationship**注釋）。 這個主題會說明 XML 結構描述中指定的條件約束和關聯性如何經過解譯以產生 <xref:System.Data.DataSet>。  
+在 XML 架構定義語言 （XSD） 架構中，您可以指定約束（唯一、鍵和鍵ref約束）和關係（使用**msdata：關係**注釋）。 這個主題會說明 XML 結構描述中指定的條件約束和關聯性如何經過解譯以產生 <xref:System.Data.DataSet>。  
   
- 一般來說，在 XML 架構中，如果您只想要在**資料集中**產生關聯性，您可以指定**msdata： Relationship**注釋。 如需詳細資訊，請參閱[從 XML 架構（XSD）產生資料集](generating-dataset-relations-from-xml-schema-xsd.md)關聯。 如果您想要在**資料集中**產生條件約束，您可以指定條件約束（unique、key 和 keyref）。 請注意，索引鍵條件約束和 keyref 條件約束也用於產生關聯性，詳情請見這個主題的後續說明。  
+ 通常，在 XML 架構中，如果只想在**DataSet**中生成關係，請指定**msdata：關係**注釋。 有關詳細資訊，請參閱從[XML 架構 （XSD） 生成資料集關係](generating-dataset-relations-from-xml-schema-xsd.md)。 如果要在**DataSet**中生成約束，請指定約束（唯一、鍵和鍵ref）。 請注意，索引鍵條件約束和 keyref 條件約束也用於產生關聯性，詳情請見這個主題的後續說明。  
   
 ## <a name="generating-a-relationship-from-key-and-keyref-constraints"></a>從索引鍵條件約束和 keyref 條件約束產生關聯性  
- 您可以指定**msdata： Relationship**注釋，而不是指定 [索引鍵] 和 [keyref 條件約束]，而在 XML 架構對應進程期間，它不僅會產生條件約束，也會產生**資料集**內的關聯性。 不過，如果您在**keyref**專案中指定 `msdata:ConstraintOnly="true"`，**資料集**就只會包含條件約束，而且不會包含關聯性。  
+ 您可以指定鍵和鍵ref約束，這些約束在 XML 架構映射過程中不僅用於生成約束，而且生成**DataSet**中的關係，而不是指定**msdata：關係**注釋。 但是，如果在`msdata:ConstraintOnly="true"`**keyref**元素中指定 **，DataSet**將僅包含約束，並且不包括關係。  
   
- 下列範例顯示的 XML 架構包含不是嵌套的**Order**和**OrderDetail**元素。 結構描述也指定索引鍵條件約束和 keyref 條件約束。  
+ 下面的示例顯示了一個 XML 架構，該架構包括**未嵌套的訂單**和**訂單詳細資訊**元素。 結構描述也指定索引鍵條件約束和 keyref 條件約束。  
   
 ```xml  
-<xs:schema id="MyDataSet" xmlns=""   
-            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="MyDataSet" xmlns=""
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
@@ -59,7 +59,7 @@ ms.locfileid: "73040038"
 </xs:schema>  
 ```  
   
- XML 架構對應進程期間所產生的**資料集**包含**Order**和**OrderDetail**資料表。 此外，**資料集**還包含關聯性和條件約束。 下列範例會顯示這些關聯性和條件約束。 請注意，此架構不會指定**msdata： Relationship**注釋;相反地，key 和 keyref 條件約束是用來產生關聯。  
+ 在 XML 架構映射過程中生成的**資料集**包括**訂單**和**訂單詳細資訊**表。 此外，**資料集**還包括關係和約束。 下列範例會顯示這些關聯性和條件約束。 請注意，架構未指定**msdata：關係**注釋;相反，鍵和鍵ref約束用於生成關係。  
   
 ```text
 ....ConstraintName: OrderNumberKey  
@@ -85,11 +85,11 @@ ms.locfileid: "73040038"
 ..Nested: False  
 ```  
   
- 在先前的架構範例中， **Order**和**OrderDetail**元素不是嵌套的。 下列的結構描述範例中，這些項目則為巢狀化。 不過，未指定**msdata： Relationship**注釋;因此，會假設使用隱含關聯。 如需詳細資訊，請參閱[對應嵌套架構元素之間的隱含](map-implicit-relations-between-nested-schema-elements.md)關聯。 結構描述也指定索引鍵條件約束和 keyref 條件約束。  
+ 在前面的架構示例中，**順序**和**訂單詳細資訊**元素不嵌套。 下列的結構描述範例中，這些項目則為巢狀化。 但是，未指定**msdata：關係**注釋指定;因此，假定了隱式關係。 有關詳細資訊，請參閱[嵌套架構元素之間的映射隱式關係](map-implicit-relations-between-nested-schema-elements.md)。 結構描述也指定索引鍵條件約束和 keyref 條件約束。  
   
 ```xml  
-<xs:schema id="MyDataSet" xmlns=""   
-            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="MyDataSet" xmlns=""
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
@@ -129,14 +129,14 @@ ms.locfileid: "73040038"
 </xs:schema>  
 ```  
   
- XML 架構對應進程所產生的**資料集**包含兩個數據表：  
+ XML 架構映射過程產生的**資料集**包括兩個表：  
   
 ```text  
 Order(OrderNumber, EmpNumber, Order_Id)  
 OrderDetail(OrderNumber, ItemNumber, Order_Id)  
 ```  
   
- **DataSet**也包含兩個關聯性（一個以**msdata： relationship**注釋為基礎，另一個依據索引鍵和 keyref 條件約束）和各種條件約束。 下列範例顯示關聯和條件約束。  
+ **DataSet**還包括兩個關係（一個基於**msdata：關係**注釋，另一個基於鍵和鍵ref約束）和各種約束。 下列範例顯示關聯和條件約束。  
   
 ```text
 ..RelationName: Order_OrderDetail  
@@ -184,9 +184,9 @@ OrderDetail(OrderNumber, ItemNumber, Order_Id)
 ..RelatedColumns: OrderNumber  
 ```  
   
- 如果參考嵌套資料表的 keyref 條件約束包含**msdata： IsNested = "true"** 注釋，**資料集**將會建立以 keyref 條件約束和相關 unique/key 條件約束為基礎的單一嵌套關聯性。  
+ 如果引用巢狀表格的 keyref 約束包含**msdata：IsNested_"true"** 注釋 **，DataSet**將創建基於 keyref 約束和相關唯一/鍵約束的單個嵌套關係。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [從 XML 結構描述 (XSD) 衍生資料集關聯式結構](deriving-dataset-relational-structure-from-xml-schema-xsd.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

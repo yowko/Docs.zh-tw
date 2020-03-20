@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-ms.openlocfilehash: dce9b9c20cbc73c6a70a34afa6c348c23164ed9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f46033b9e643ef6b4a0063c4995b8c024b8c1f7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437326"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175352"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps 方法
 取得指定中繼資料語彙基元所參考的模組名稱。  
@@ -30,33 +30,33 @@ ms.locfileid: "74437326"
 ```cpp  
 HRESULT GetModuleRefProps (  
    [in]  mdModuleRef         mur,  
-   [out] LPWSTR              szName,   
-   [in]  ULONG               cchName,   
-   [out] ULONG               *pchName   
+   [out] LPWSTR              szName,
+   [in]  ULONG               cchName,
+   [out] ULONG               *pchName
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `mur`  
- 在參考模組以取得中繼資料資訊的 ModuleRef 中繼資料 token。  
+ [在]ModuleRef 中繼資料權杖，用於引用模組以獲取中繼資料資訊。  
   
  `szName`  
- 脫銷用來存放模組名稱的緩衝區。  
+ [出]保存模組名稱的緩衝區。  
   
  `cchName`  
- 在所要求的 `szName` 大小，以寬字元為單位。  
+ [在]以寬字元表示`szName`請求的大小。  
   
  `pchName`  
- 脫銷以寬字元傳回的 `szName` 大小。  
+ [出]以寬字元返回`szName`的大小。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

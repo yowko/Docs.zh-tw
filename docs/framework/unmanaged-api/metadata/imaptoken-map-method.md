@@ -15,43 +15,43 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-ms.openlocfilehash: fd362beb9f8fd7a1f2076eb6490a96c0358520e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 428b022ed560648f59798154d5987d382938c280
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432145"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176067"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map 方法
-使用中繼資料簽章來對應元件之間的關聯性。  
+使用中繼資料簽名對應程式集之間的關係。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT Map (  
-    [in]  mdToken tkImp,   
+    [in]  mdToken tkImp,
     [in]  mdToken tkEmit  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `tkImp`  
- 在表示已匯入之程式碼物件的元資料標記。  
+ [在]表示導入的代碼物件的中繼資料權杖。  
   
  `tkEmit`  
- 在表示發出的程式碼物件的元資料標記。  
+ [在]表示已發出的代碼物件的中繼資料權杖。  
   
 ## <a name="remarks"></a>備註  
- 在合併期間發生權杖重新對應時，會將原始權杖的範圍限定在匯入的（來源）中繼資料範圍內，而新的 token 會限定在發出的（目標）中繼資料範圍中。  
+ 當令牌重新映射在合併期間發生時，原始權杖在導入的（源）中繼資料作用域中作用域，新權杖在已發出（目標）中繼資料作用域中作用域。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

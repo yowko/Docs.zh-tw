@@ -3,18 +3,18 @@ title: <system.identityModel.services>
 ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
-ms.openlocfilehash: e9488c0681e1a5f0fe94112a36b65ec73bf9fd09
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 57757aaec39bc5c552e7ba12c9779cb3a92a9025
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251814"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152500"
 ---
-# <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
-使用 WS-同盟通訊協定進行驗證的設定區段。  
+# <a name="systemidentitymodelservices"></a>\<系統.身份模型.服務>
+使用 WS-聯合協定進行身份驗證的配置部分。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp; **\<Microsoft.identitymodel >**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<系統.身份模型.服務>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,30 +26,30 @@ ms.locfileid: "70251814"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
- 無  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|說明|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](federationconfiguration.md)|包含設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) <xref:System.IdentityModel.Services.SessionAuthenticationModule>和 (SAM) HTTP 模組的設定。|  
+|[\<聯合配置>](federationconfiguration.md)|包含配置<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>（WSFAM） 和 （SAM） <xref:System.IdentityModel.Services.SessionAuthenticationModule> HTTP 模組的設置。|  
   
 ### <a name="parent-elements"></a>父項目  
  None  
   
 ## <a name="remarks"></a>備註  
- `<system.identityModel.services>`將區段新增至應用程式的設定檔, 以提供 SAM 和 WSFAM 的設定。  
+ 向應用程式的`<system.identityModel.services>`設定檔添加一節，以提供 SAM 和 WSFAM 的設置。  
   
 > [!IMPORTANT]
-> 當使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission> <xref:System.Security.Claims.ClaimsAuthorizationManager>或類別在您的程式碼中提供宣告型存取控制時, 宣告授權管理員 () 和用`<identityConfiguration>`來進行授權決策的原則會透過<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>從這個區段的`<federationConfiguration>`元素隱含或明確參考的專案。 如需詳細資訊, 請參閱[ \<federationConfiguration >](federationconfiguration.md)元素底下的**備註**。  
+> 當使用<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類在代碼中提供基於聲明的存取控制時，用於做出授權決策的聲明授權<xref:System.Security.Claims.ClaimsAuthorizationManager>管理器 （ ） 和策略通過從本節中`<identityConfiguration>``<federationConfiguration>`的元素隱式或顯式引用的元素進行配置。 有關詳細資訊，請參閱[\<聯合配置>](federationconfiguration.md)元素下的**備註**。  
   
- `<system.identityModel.services>`區段是<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection>由類別表示。 區段中所設定`<federationConfiguration>`之子專案的集合是<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection>由類別表示。  
+ 該`<system.identityModel.services>`節由類<xref:System.IdentityModel.Services.Configuration.SystemIdentityModelServicesSection>表示。 在節中配置的`<federationConfiguration>`子項目的集合由類<xref:System.IdentityModel.Services.Configuration.FederationConfigurationElementCollection>表示。  
   
 ## <a name="example"></a>範例  
- 下列 XML 顯示如何將`<system.identityModel.services>`區段新增至設定檔。 您必須先為`<system.identityModel.services>`區段`<system.identityModel>`和區段新增區段宣告。 (當您新增`<system.identityModel.services>`區段時, 您也應該新增`<system.identityModel>`區段的宣告, 以確保執行時間可以視`<identityConfiguration>`需要建立預設區段)。新增區段宣告之後, 您可以在`<system.identityModel.services>`元素下設定同盟驗證設定。  
+ 以下 XML 演示如何向設定檔添加`<system.identityModel.services>`節。 必須首先為`<system.identityModel.services>`節和`<system.identityModel>`節添加節聲明。 （添加`<system.identityModel.services>`節時，還應為`<system.identityModel>`節添加聲明，以確保運行時在必要時可以創建預設`<identityConfiguration>`節。添加節聲明後，可以在`<system.identityModel.services>`元素下配置識別身分同盟設置。  
   
 ```xml  
 <configuration>  
@@ -62,12 +62,12 @@ ms.locfileid: "70251814"
   
   <system.identityModel.services>  
     <federationConfiguration>  
-      <wsFederation passiveRedirectEnabled="true"   
-        issuer="http://localhost:15839/wsFederationSTS/Issue"   
-        realm="http://localhost:50969/" reply="http://localhost:50969/"   
-        requireHttps="false"   
-        signOutReply="http://localhost:50969/SignedOutPage.html"   
-        signOutQueryString="Param1=value2&Param2=value2"   
+      <wsFederation passiveRedirectEnabled="true"
+        issuer="http://localhost:15839/wsFederationSTS/Issue"
+        realm="http://localhost:50969/" reply="http://localhost:50969/"
+        requireHttps="false"
+        signOutReply="http://localhost:50969/SignedOutPage.html"
+        signOutQueryString="Param1=value2&Param2=value2"
         persistentCookiesOnPassiveRedirects="true" />  
       <cookieHandler requireSsl="false" />  
     </federationConfiguration>  

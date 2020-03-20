@@ -2,40 +2,40 @@
 title: Windows Workflow Foundation 功能內容
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 197b2e0d6586e001a4970cf8cb3f8e6b2a372af2
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 11bde5edea44f09ef1a5658cdf0e20ec1349c84b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936789"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182928"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能內容
 
-.NET Framework 4 新增一些功能來 Windows Workflow Foundation。 本文件將描述一些新功能，並且詳細說明適合使用這些功能的案例。
+.NET 框架 4 向 Windows 工作流基礎添加了許多功能。 本文件將描述一些新功能，並且詳細說明適合使用這些功能的案例。
 
 ## <a name="messaging-activities"></a>傳訊活動
 
-訊息活動（<xref:System.ServiceModel.Activities.Receive>、<xref:System.ServiceModel.Activities.SendReply>、<xref:System.ServiceModel.Activities.Send>、<xref:System.ServiceModel.Activities.ReceiveReply>）是用來從您的工作流程傳送和接收 WCF 訊息。 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 活動是用來形成透過 WSDL 公開的 Windows Communication Foundation （WCF）服務作業，就像標準的 WCF web 服務一樣。 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.ReceiveReply> 用來取用類似于 WCF <xref:System.ServiceModel.ChannelFactory>的 web 服務;產生預先設定活動的 Workflow Foundation 也會有**加入服務參考**體驗。
+消息傳遞活動<xref:System.ServiceModel.Activities.Receive>（ <xref:System.ServiceModel.Activities.SendReply> <xref:System.ServiceModel.Activities.Send>、 <xref:System.ServiceModel.Activities.ReceiveReply>、 、 ， ） 用於從工作流發送和接收 WCF 消息。 <xref:System.ServiceModel.Activities.Receive>和<xref:System.ServiceModel.Activities.SendReply>活動用於形成 Windows 通信基礎 （WCF） 服務操作，該操作通過 WSDL 公開，就像標準 WCF Web 服務一樣。 <xref:System.ServiceModel.Activities.Send>並<xref:System.ServiceModel.Activities.ReceiveReply>用於使用類似于 WCF<xref:System.ServiceModel.ChannelFactory>的 Web 服務;對於生成預配置活動的工作流基礎，還存在**添加服務參考**體驗。
 
 ### <a name="getting-started-with-messaging-activities"></a>傳訊活動使用者入門
 
-- 在 Visual Studio 2012 中，建立 WCF 工作流程服務應用程式專案。 一組 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 將置於畫布上。
+- 在 Visual Studio 2012 中，創建 WCF 工作流服務應用程式專案。 一組 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 將置於畫布上。
 
-- 以滑鼠右鍵按一下專案，然後選取 [**加入服務參考**]。 指向現有的 web 服務 WSDL，然後按一下 **[確定]** 。 建立您的專案，以在工具箱中顯示產生的活動（使用 <xref:System.ServiceModel.Activities.Send> 和 <xref:System.ServiceModel.Activities.ReceiveReply>來執行）。
+- 按右鍵專案並選擇 **"添加服務參考**"。 指向現有的 Web 服務 WSDL，然後按一下 **"確定**"。 生成專案以在工具箱中顯示生成的活動（<xref:System.ServiceModel.Activities.Send>使用<xref:System.ServiceModel.Activities.ReceiveReply>和 ） 實現。
 
-- [工作流程服務檔](../wcf/feature-details/workflow-services.md)
+- [工作流服務文件](../wcf/feature-details/workflow-services.md)
 
 ### <a name="messaging-activities-example-scenario"></a>傳訊活動範例案例
 
-`BestPriceFinder` 服務會呼叫多個航空公司服務，以找出特定路線的最佳票證價格。 若要執行此案例，您必須使用訊息活動來接收價格要求、從後端服務取得價格，並以最佳價格回復價格要求。 它也會要求您使用其他現成可用的活動，來建立用來計算最佳價格的商務邏輯。
+一`BestPriceFinder`項服務需要多種航空公司服務，以查找特定航線的最佳票價。 實現此方案需要您使用消息活動來接收價格請求、從後端服務檢索價格以及以最佳價格回復價格請求。 它還要求您使用其他開箱即用的活動來創建用於計算最優惠價格的業務邏輯。
 
 ## <a name="workflowservicehost"></a>WorkflowServiceHost
 
-<xref:System.ServiceModel.WorkflowServiceHost> 是現成的工作流程主機，可支援多個實例、設定和 WCF 訊息（雖然工作流程不需要使用訊息來主控）。 此外，它也會透過一組服務行為，與持續性、追蹤和執行個體控制項整合。 就像 WCF 的 <xref:System.ServiceModel.ServiceHost>，<xref:System.ServiceModel.WorkflowServiceHost> 可以在主控台/WinForms/WPF 應用程式或 Windows 服務中自我裝載，或是在 IIS 或 WAS 中由 web 裝載（如 service1.xamlx 檔案）。
+是<xref:System.ServiceModel.WorkflowServiceHost>支援多個實例、配置和 WCF 消息傳遞的開箱即用工作流主機（儘管工作流不需要使用消息傳遞才能託管）。 此外，它也會透過一組服務行為，與持續性、追蹤和執行個體控制項整合。 與 WCF 一<xref:System.ServiceModel.ServiceHost>樣，<xref:System.ServiceModel.WorkflowServiceHost>可以在主控台/WinForms/WPF 應用程式或 Windows 服務中自託管，也可以在 IIS 或 WAS 中以 Web 託管（作為 .xamlx 檔）自承載。
 
 ### <a name="getting-started-with-workflow-service-host"></a>工作流程服務主機使用者入門
 
-- 在 Visual Studio 2010 中，建立 WCF 工作流程服務應用程式專案：此專案將設定為在 web 主機環境中使用 <xref:System.ServiceModel.WorkflowServiceHost>。
+- 在 Visual Studio 2010 中，創建一個 WCF 工作流服務應用程式專案：<xref:System.ServiceModel.WorkflowServiceHost>該專案將設置為在 Web 主機環境中使用。
 
 - 若要裝載非傳訊工作流程，請加入會根據訊息建立執行個體的自訂 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>。
 
@@ -45,15 +45,15 @@ ms.locfileid: "75936789"
 
   - [執行](./samples/execution.md)
 
-  - 應用程式：[擱置的實例管理](./samples/suspended-instance-management.md)
+  - 應用程式：[掛起的實例管理](./samples/suspended-instance-management.md)
 
-- [主控工作流程服務總覽](../wcf/feature-details/hosting-workflow-services-overview.md)
+- [託管工作流服務概述](../wcf/feature-details/hosting-workflow-services-overview.md)
 
 ### <a name="workflowservicehost-scenario"></a>WorkflowServiceHost 案例
 
-BestPriceFinder 服務會呼叫多個航空公司服務，以找出特定路線的最佳票證價格。 執行此案例需要您在 <xref:System.ServiceModel.WorkflowServiceHost>中裝載工作流程。 它也會使用訊息活動來接收價格要求、從後端服務中取出價格，並以最佳價格回復價格要求。
+BestPriceFinder 服務向多個航空公司提供服務，以查找特定航線的最佳票價。 實現此方案將需要在 中<xref:System.ServiceModel.WorkflowServiceHost>託管工作流。 它還將使用消息活動接收價格請求，從後端服務檢索價格，並使用最優惠的價格回復價格請求。
 
-## <a name="correlation"></a>關聯
+## <a name="correlation"></a>Correlation
 
 相互關聯是指下列其中一種情況：
 
@@ -61,53 +61,53 @@ BestPriceFinder 服務會呼叫多個航空公司服務，以找出特定路線�
 
 - 將資料片段對應至服務執行個體的方式。
 
-### <a name="getting-started"></a>使用者入門
+### <a name="getting-started"></a>開始使用
 
 - 若要開始使用相互關聯，請在 Visual Studio 中建立新的專案。 建立型別為 <xref:System.ServiceModel.Activities.CorrelationHandle> 的變數。
 
 - 用來將訊息群組在一起之相互關聯的範例就是，將訊息群組在一起的要求-回覆相互關聯。
 
-  - 在 <xref:System.ServiceModel.Activities.Receive> 活動上，按一下 [<xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>] 屬性，並使用上述第一個步驟中建立的 CorrelationHandle 來新增 <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>。
+  - 在<xref:System.ServiceModel.Activities.Receive>活動上，按一下 屬性<xref:System.ServiceModel.Activities.Receive.CorrelationInitializers%2A>並使用上面第一<xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>步中創建的關聯控制碼添加 。
 
-  - 以滑鼠右鍵按一下 <xref:System.ServiceModel.Activities.Receive>，然後按一下 [建立 SendReply]，以建立 <xref:System.ServiceModel.Activities.SendReply> 活動。 接著，將它貼入工作流程中 <xref:System.ServiceModel.Activities.Receive> 活動的後面。
+  - 通過右<xref:System.ServiceModel.Activities.SendReply>鍵按一下<xref:System.ServiceModel.Activities.Receive>並按一下"創建發送回復"來創建活動。 接著，將它貼入工作流程中 <xref:System.ServiceModel.Activities.Receive> 活動的後面。
 
 - 將資料片段對應至服務執行個體的範例就是內容架構的相互關聯，它會將資料片段 (例如訂單 ID) 對應至特定工作流程執行個體。
 
   - 在任何傳訊活動上，按一下 `CorrelationInitializers` 屬性，然後使用您在上述步驟中建立的 <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> 變數來加入 <xref:System.ServiceModel.Activities.CorrelationHandle>。 在下拉式功能表中，按兩下所需的訊息屬性 (例如 OrderID)。 接著，將 `CorrelatesWith` 屬性設定為上述使用的 <xref:System.ServiceModel.Activities.CorrelationHandle> 變數。
 
-- [相互關聯概念檔](../wcf/feature-details/correlation.md)
+- [相互關聯概念文件](../wcf/feature-details/correlation.md)
 
 ### <a name="correlation-scenario"></a>相互關聯案例
 
-訂單處理工作流程是用來處理新訂單的建立，並更新正在處理的現有訂單。 執行此案例需要您在 <xref:System.ServiceModel.WorkflowServiceHost> 中裝載工作流程，並使用訊息活動。 它也會要求根據 `orderId` 的相互關聯，以確保會對正確的工作流程進行更新。
+訂單處理工作流用於處理新訂單創建和更新正在處理的現有訂單。 實現此方案需要您在 其中<xref:System.ServiceModel.WorkflowServiceHost>託管工作流並使用消息傳遞活動。 它還需要基於 的`orderId`關聯，以確保對正確的工作流進行更新。
 
 ## <a name="simplified-configuration"></a>簡化的組態
 
-WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]中，我們著重于協助 WCF 使用者使用下列功能來設定其服務：
+WCF 配置架構非常複雜，為使用者提供了許多難以查找的功能。 在[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]中，我們專注于説明 WCF 使用者配置其服務，具有以下功能：
 
-- 移除每項服務明確組態的需求。 如果您沒有為服務設定任何 \<服務 > 專案，而且您的服務並未以程式設計方式定義任何端點，則會自動將一組端點新增至您的服務，每個服務基底位址和服務所執行的每個合約各一個。
+- 移除每項服務明確組態的需求。 如果不為服務配置任何\<服務>元素，並且服務沒有以程式設計方式定義任何終結點，則一組終結點將自動添加到服務中，每個服務基底位址和每個服務實現的合同一個。
 
 - 讓使用者定義 WCF 繫結和行為的預設值，以便套用至沒有明確組態的服務。
 
 - 標準端點會定義可重複使用的預先設定端點，其中一個或多個端點屬性 (位址、繫結和合約) 具有固定的值，而且允許定義自訂屬性。
 
-- 最後，<xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> 可讓您執行 WCF 用戶端設定的集中管理，在應用程式域載入時間之後選取或變更設定的案例中很有用。
+- 最後，<xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>允許您對 WCF 用戶端配置進行集中管理，這在應用程式域載入時間後選擇或更改配置的方案中非常有用。
 
-### <a name="getting-started"></a>使用者入門
+### <a name="getting-started"></a>開始使用
 
-- [WCF 4.0 的開發人員指南](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
+- [WCF 4.0 開發人員指南](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
 - [組態通道處理站](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
-- [標準端點元素](xref:System.ServiceModel.Configuration.StandardEndpointElement)
+- [標準端點項目](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [.NET Framework 4 中的服務設定改良功能](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
+- [.NET 框架 4 中的服務配置改進](https://docs.microsoft.com/archive/blogs/endpoint/service-configuration-improvements-in-net-4)
 
-- [.NET 4 中常見的使用者錯誤： WF/WCF 服務設定名稱不鍵入](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
+- [.NET 4 的常見使用者錯誤：WF/WCF 服務組態名稱拼錯](https://docs.microsoft.com/archive/blogs/endpoint/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name)
 
 ### <a name="simplified-configuration-scenarios"></a>簡化的組態案例
 
-- 有經驗的 .ASMX 開發人員想要開始使用 WCF。 不過，WCF 似乎太複雜了！ 我需要在組態檔中寫入哪些資訊？ 在 .NET 4 中，您甚至可以決定完全不使用組態檔。
+- 經驗豐富的 ASMX 開發人員希望開始使用 WCF。 然而，WCF似乎太複雜了！ 我需要在組態檔中寫入哪些資訊？ 在 .NET 4 中，您甚至可以決定完全不使用組態檔。
 
 - 現有的 WCF 服務集非常難以設定和維護。 組態檔具有數千行 XML 程式碼，任意修改可能會非常危險。 因此需要相關協助，以便將程式碼數量減少至較容易管理的數量。
 
@@ -121,11 +121,11 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 - 使用者無法指定想要顯示在 Wire 上的 xsi:type，以便降低 Wire 上序列化執行個體的大小。
 
-[DataContractResolver](../wcf/samples/datacontractresolver.md)解決了 .net 4.5 中的這些問題。
+[資料合同解決程式](../wcf/samples/datacontractresolver.md)在 .NET 4.5 中解決了這些問題。
 
-### <a name="getting-started"></a>使用者入門
+### <a name="getting-started"></a>開始使用
 
-- [資料合約解析程式 API 檔](xref:System.Runtime.Serialization.DataContractResolver)
+- [資料合約解析程式 API 文件](xref:System.Runtime.Serialization.DataContractResolver)
 
 - [資料合約解析程式簡介](https://docs.microsoft.com/archive/blogs/youssefm/configuring-known-types-dynamically-introducing-the-datacontractresolver)
 
@@ -143,11 +143,11 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 ## <a name="flowchart"></a>流程圖
 
-流程圖是已知的開發架構，可以視覺化方式表示網域問題。 它是我們在 .NET 4 中導入的新控制流程樣式。 流程圖的核心特性在於，一次只能執行一項活動。 流程圖可以表達迴圈和替代的結果，但本身無法表示同時執行的多個節點。
+流程圖是已知的開發架構，可以視覺化方式表示網域問題。 它是我們在 .NET 4 中引入的一種新的控制流樣式。 流程圖的核心特性在於，一次只能執行一項活動。 流程圖可以表達迴圈和替代的結果，但本身無法表示同時執行的多個節點。
 
-### <a name="getting-started"></a>使用者入門
+### <a name="getting-started"></a>開始使用
 
-- 在 Visual Studio 2012 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入流程圖。
+- 在 Visual Studio 2012 中，創建工作流主控台應用程式。 在工作流程設計工具中加入流程圖。
 
 - 流程圖功能會使用下列類別：
 
@@ -173,7 +173,7 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 ### <a name="flowchart-scenarios"></a>流程圖案例
 
-流程圖活動可用來實作猜測遊戲。 猜測遊戲非常簡單：電腦會選取一個隨機數字，而玩家必須猜測該數字。 當玩家送出每項猜測時，電腦會向他顯示一個提示（也就是「試試看較小的數位」）。 如果玩家在 7 次內猜到數字，電腦會對使用者顯示特別的恭賀畫面。 您可以透過組合下列程序性活動來實作此遊戲：
+流程圖活動可用來實作猜測遊戲。 猜測遊戲非常簡單：電腦會選取一個隨機數字，而玩家必須猜測該數字。 當玩家提交每個猜測時，電腦會向他們顯示一個提示（即"嘗試較低的數位"）。 如果玩家在不到 7 次嘗試中找到該數位，他們會從電腦收到特殊的祝賀。 您可以透過組合下列程序性活動來實作此遊戲：
 
 - <xref:System.Activities.Statements.Sequence>
 
@@ -189,11 +189,11 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 ## <a name="procedural-activities-sequence-if-foreach-switch-assign-dowhile-while"></a>程序性活動 (Sequence、If、ForEach、Switch、Assign、DoWhile 和 While)
 
-程序性活動會使用程式設計人員所熟悉的概念來提供模型循序控制流程的機制。 這些活動會啟用傳統結構化的程式設計語言結構，並在適當的情況下，提供與C#一般程式語言（如和 Visual Basic）的語言同位。
+程序性活動會使用程式設計人員所熟悉的概念來提供模型循序控制流程的機制。 這些活動支援傳統的結構化程式設計語言構造，並在適當時提供與常見程式語言（如 C# 和 Visual Basic）的語言同位。
 
-### <a name="getting-started"></a>使用者入門
+### <a name="getting-started"></a>開始使用
 
-- 在 Visual Studio 2012 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入程序性活動。
+- 在 Visual Studio 2012 中，創建工作流主控台應用程式。 在工作流程設計工具中加入程序性活動。
 
 - 範例：
 
@@ -205,23 +205,23 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
   - [Parallel 活動設計工具](/visualstudio/workflow-designer/parallel-activity-designer)
 
-  - [ParallelForEach\<T > 活動設計工具](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
+  - [並行\<為每個 T>活動設計器](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)
 
 ### <a name="procedural-activity-scenarios"></a>程序性活動案例
 
-- <xref:System.Activities.Statements.Parallel>：內部網路檔管理系統有檔核准工作流程。 文件必須先由數個部門的人員核准，然後才能發行至內部網路。 沒有已建立的核准順序。當檔處於「待核准」階段時，可以隨時執行這些工作。 當使用者送出文件以供檢閱時，其直屬經理、內部網路管理員和內部通訊經理就必須核准該份文件。
+- <xref:System.Activities.Statements.Parallel>：內部網文件管理系統具有文檔審批工作流。 文件必須先由數個部門的人員核准，然後才能發行至內部網路。 沒有既定的審批訂單;當文檔處於"待審批"階段時，它們可以隨時發生。 當使用者提交文檔以供審閱時，必須由其直接經理、Intranet 管理員和內部通信管理器批准。
 
-- <xref:System.Activities.Statements.ParallelForEach%601>：WF 應用程式可管理大型公司內部的企業採購。 企業規則表示，規劃任何採購作業之前，需要三家不同廠商的估價。 採購部門的員工會從公司的廠商清單中選取三家廠商。 選取並通知這些廠商之後，公司將等候其經濟提案。 這些提案可以按照任何順序提出。 為了在 WF 中實作此案例，我們使用了 <xref:System.Activities.Statements.ParallelForEach%601>，以便逐一查看廠商的集合並且要求其經濟提案。 蒐集所有供應項目之後，系統會選取並顯示最佳提案。
+- <xref:System.Activities.Statements.ParallelForEach%601>：WF 應用程式可管理大型公司內部的企業採購。 企業規則表示，規劃任何採購作業之前，需要三家不同廠商的估價。 採購部門的一名員工從公司的供應商清單中選擇三個供應商。 選取並通知這些廠商之後，公司將等候其經濟提案。 這些提案可以按照任何順序提出。 為了在 WF 中實作此案例，我們使用了 <xref:System.Activities.Statements.ParallelForEach%601>，以便逐一查看廠商的集合並且要求其經濟提案。 蒐集所有供應項目之後，系統會選取並顯示最佳提案。
 
 ## <a name="invokemethod"></a>InvokeMethod
 
 <xref:System.Activities.Statements.InvokeMethod> 活動允許叫用範圍內物件或型別的公用方法。 它支援叫用包含或不包含參數 (包括參數陣列) 的執行個體和靜態方法，以及泛型方法。 此外，它也允許以同步和非同步方式執行方法。
 
-### <a name="getting-started"></a>使用者入門
+### <a name="getting-started"></a>開始使用
 
-- 在 Visual Studio 2012 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.InvokeMethod> 活動，並且針對此活動設定靜態和執行個體方法。
+- 在 Visual Studio 2012 中，創建工作流主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.InvokeMethod> 活動，並且針對此活動設定靜態和執行個體方法。
 
-- 設計工具檔： [InvokeMethod 活動設計](/visualstudio/workflow-designer/invokemethod-activity-designer)工具
+- 設計器文檔：[調用方法活動設計器](/visualstudio/workflow-designer/invokemethod-activity-designer)
 
 ### <a name="invokemethod-scenarios"></a>InvokeMethod 案例
 
@@ -231,15 +231,15 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 ## <a name="error-handling-activities"></a>錯誤處理活動
 
-<xref:System.Activities.Statements.TryCatch> 活動提供一種機制，可攔截執行一組包含的活動期間發生的例外狀況（類似于和 Visual Basic 中C#的 Try/Catch 結構）。 <xref:System.Activities.Statements.TryCatch> 提供工作流程層級的例外狀況處理。 當系統擲回未處理的例外狀況時，就會中止工作流程，而且不會執行 Finally 區塊。 這種行為與 C# 一致。
+該活動<xref:System.Activities.Statements.TryCatch>提供了一種機制，用於捕獲在執行一組包含的活動期間發生的異常（類似于 C# 和 Visual Basic 中的 Try/Catch 構造）。 <xref:System.Activities.Statements.TryCatch> 提供工作流程層級的例外狀況處理。 引發未處理的異常時，工作流將中止，並且不會執行 Finally 塊。 這種行為與 C# 一致。
 
-### <a name="getting-started"></a>使用者入門
+### <a name="getting-started"></a>開始使用
 
-- 在 Visual Studio 2012 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.TryCatch> 活動。
+- 在 Visual Studio 2012 中，創建工作流主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.TryCatch> 活動。
 
-- 範例：[使用 TryCatch 在流程圖活動中處理錯誤](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+- 示例：[使用 TryCatch 在流程圖活動中處理故障](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-- 設計工具檔：[錯誤處理活動設計](/visualstudio/workflow-designer/error-handling-activity-designers)工具
+- 設計器文檔：[錯誤處理活動設計器](/visualstudio/workflow-designer/error-handling-activity-designers)
 
 ### <a name="error-handling-scenarios"></a>錯誤處理案例
 
@@ -249,21 +249,21 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 <xref:System.Activities.Statements.Pick> 活動會提供 WF 中以事件為主的控制流程模型。 <xref:System.Activities.Statements.Pick> 包含許多分支，每個分支會先等待特定事件發生後，再開始執行。 在此設定中，<xref:System.Activities.Statements.Pick> 的行為與 <xref:System.Activities.Statements.Switch%601> 很相似，因為此活動只會執行它所接聽的其中一個事件集。 每個分支都是由事件驅動，而發生的事件會先執行對應的分支。 所有其他的分支都會取消並停止接聽事件。
 
-### <a name="getting-started"></a>使用者入門
+### <a name="getting-started"></a>開始使用
 
-- 在 Visual Studio 2012 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.Pick> 活動。
+- 在 Visual Studio 2012 中，創建工作流主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.Pick> 活動。
 
-- 範例：[使用 Pick 活動](./samples/using-the-pick-activity.md)
+- 示例：[使用選取活動](./samples/using-the-pick-activity.md)
 
-- 設計工具檔： [Pick 活動設計](/visualstudio/workflow-designer/pick-activity-designer)工具
+- 設計器文檔：[選取活動設計器](/visualstudio/workflow-designer/pick-activity-designer)
 
 ### <a name="pick-scenario"></a>Pick 案例
 
-系統需要提示使用者輸入。 在一般情況下，開發人員會使用 <xref:System.Console.ReadLine%2A> 之類的方法呼叫來提示使用者輸入。 這種設定的問題在於，直到使用者輸入某些內容為止，程式都會處於等候狀態。 在此案例中，您需要使用逾時將封鎖的活動解除封鎖。 常見的案例就是要求在指定的一段時間內完成工作。 讓封鎖的活動逾時則為 Pick 發揮功能的案例。
+系統需要提示使用者輸入。 在正常情況下，開發人員將使用方法調用，如<xref:System.Console.ReadLine%2A>提示使用者輸入。 這種設定的問題在於，直到使用者輸入某些內容為止，程式都會處於等候狀態。 在此案例中，您需要使用逾時將封鎖的活動解除封鎖。 常見的案例就是要求在指定的一段時間內完成工作。 讓封鎖的活動逾時則為 Pick 發揮功能的案例。
 
 ## <a name="wcf-routing-service"></a>WCF 路由服務
 
-路由服務是設計成一般軟體路由器，可讓您控制 WCF 訊息在用戶端和服務之間的流動方式。 路由服務可讓您將用戶端與服務分離，讓您可以支援的設定，以及您在考慮如何裝載服務時所擁有的彈性，提供更多的自由度。 在 .NET 3.5 中，用戶端和服務已緊密結合;用戶端必須知道所需的所有服務，以及其所在位置。 此外，.NET Framework 3.5 中的 WCF 具有下列限制：
+路由服務設計為通用軟體路由器，允許您控制 WCF 消息在用戶端和服務之間的流入方式。 路由服務允許您將用戶端與服務分離，這樣，在考慮如何託管服務時，您可以支援配置以及靈活性方面更加自由。 在 .NET 3.5 中，用戶端和服務緊密耦合;客戶必須瞭解它需要與之交談的所有服務以及他們所處的位置。 此外，.NET 框架 3.5 中的 WCF 具有以下限制：
 
 - 錯誤處理很複雜，因為此邏輯必須透過硬式編碼寫入用戶端。
 
@@ -271,23 +271,23 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 - 很少妥善分解服務：讓用戶端與實作所有功能的單一服務通訊會比在多個服務之間選擇更簡單。
 
-.NET 4 中的路由服務的設計，是為了讓這些問題更容易解決。 新的路由服務具有下列功能：
+.NET 4 中的路由服務旨在使這些問題更易於解決。 新的路由服務具有下列功能：
 
 1. 以內容為基礎的路由 (<xref:System.ServiceModel.Dispatcher.MessageFilter> 物件會檢查訊息來判斷應該傳送的目的地)。
 
-2. 通訊協定橋接（傳輸 & 訊息）
+2. 協定橋接（傳輸&消息）
 
 3. 錯誤處理 (路由器會攔截通訊例外狀況並容錯移轉至備份端點)。
 
 4. <xref:System.ServiceModel.Dispatcher.MessageFilterTable%601> 和路由組態的動態 (記憶體中) 更新。
 
-### <a name="getting-started"></a>使用者入門
+### <a name="getting-started"></a>開始使用
 
-1. 檔：[路由](../wcf/feature-details/routing.md)
+1. 文檔：[路由](../wcf/feature-details/routing.md)
 
-2. 範例：[路由服務&#91;WCF 範例&#93; ](../wcf/samples/routing-services.md)
+2. 示例：[路由服務&#91;WCF 樣本&#93;](../wcf/samples/routing-services.md)
 
-3. Blog：[路由規則！](https://docs.microsoft.com/archive/blogs/RoutingRules/)
+3. 博客：[路由規則！](https://docs.microsoft.com/archive/blogs/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>路由案例
 
@@ -305,31 +305,31 @@ WCF 設定架構很複雜，可讓使用者有許多難以找到的功能。 在
 
 ## <a name="wcf-discovery"></a>WCF 探索
 
-WCF 探索是一種架構技術，可讓您將探索機制併入應用程式基礎結構。 您可以使用這項技術，讓服務成為可探索的服務，並且設定用戶端來搜尋服務。 用戶端不再需要對端點進行硬式編碼，讓應用程式更健全並提高容錯能力。 探索是在應用程式中建置自動組態功能的完美平台。
+WCF 發現是一種框架技術，允許您將發現機制合併到應用程式基礎結構中。 您可以使用這項技術，讓服務成為可探索的服務，並且設定用戶端來搜尋服務。 用戶端不再需要對端點進行硬式編碼，讓應用程式更健全並提高容錯能力。 探索是在應用程式中建置自動組態功能的完美平台。
 
-此產品是以 WS-Discovery 標準為建置基礎。 其設計目的是要成為可互通、可擴充且泛型的產品。 此產品支援兩種作業模式：
+此產品是以 WS-Discovery 標準為建置基礎。 它設計為可交互操作、可擴展和通用。 此產品支援兩種作業模式：
 
 1. 受管理：網路上有一個了解現有服務的實體，因此用戶端會直接查詢此實體以取得資訊。 這種模式類似於 Active Directory。
 
 2. 臨機操作：用戶端會使用多點傳送訊息來找出服務。
 
-此外，探索訊息無從驗證網路通訊協定。您可以在支援模式需求的任何通訊協定上使用這些訊息。 例如，您可以透過 UDP 通道或任何其他支援多播訊息的網路來傳送探索多播訊息。 這些設計重點與功能彈性結合，可讓您特別針對您的解決方案調整探索。
+此外，探索訊息無從驗證網路通訊協定。您可以在支援模式需求的任何通訊協定上使用這些訊息。 例如，可以通過 UDP 通道或任何其他支援多播消息傳遞的網路發送發現多播消息。 這些設計點與功能靈活性相結合，使您能夠根據解決方案專門調整發現。
 
-### <a name="getting-started"></a>使用者入門
+### <a name="getting-started"></a>開始使用
 
-- 檔： [WCF 探索](../wcf/feature-details/wcf-discovery.md)
+- 文檔[：WCF 發現](../wcf/feature-details/wcf-discovery.md)
 
-- 範例：[探索（範例）](../wcf/samples/discovery-samples.md)
+- 樣品：[發現（樣品）](../wcf/samples/discovery-samples.md)
 
 ### <a name="discovery-scenarios"></a>探索案例
 
 開發人員不想要對端點進行硬式編碼，因為它在服務可用時處於未知狀態。 不過，開發人員想要在執行階段選擇服務。 因此，應用程式的元件之間需要降低耦合、提高健全度，以及自動組態功能。
 
-## <a name="tracking"></a>Tracking
+## <a name="tracking"></a>追蹤
 
-工作流程追蹤可讓您深入瞭解工作流程實例的執行。 追蹤事件是在工作流程實例層級，以及工作流程中的活動執行時發出。 您必須將工作流程追蹤參與者加入至工作流程主機，才能訂閱追蹤記錄。 系統會使用追蹤設定檔來篩選追蹤記錄。 .NET Framework 提供 ETW （Windows 事件追蹤）追蹤參與者，而基本設定檔則安裝在 machine.config 檔案中。
+工作流跟蹤提供了對工作流實例執行的見解。 跟蹤事件從工作流實例級別的工作流發出，並在工作流中的活動執行時發出。 您必須將工作流程追蹤參與者加入至工作流程主機，才能訂閱追蹤記錄。 系統會使用追蹤設定檔來篩選追蹤記錄。 .NET 框架提供 ETW（Windows 事件跟蹤）追蹤參與者，並在電腦中安裝基本設定檔。
 
-### <a name="getting-started"></a>使用者入門
+### <a name="getting-started"></a>開始使用
 
 1. 在 Visual Studio 2010 中，建立 WCF 工作流程服務應用程式專案。 一組 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 將置於畫布上，以便開始。
 
@@ -337,24 +337,24 @@ WCF 探索是一種架構技術，可讓您將探索機制併入應用程式基�
 
     1. 系統會使用預設設定檔。
 
-    2. 開啟 [事件檢視器] 並啟用下列節點中的分析通道： [**事件檢視器**]、[**應用程式及服務記錄**檔]、[ **Microsoft**、 **Windows**、**應用程式伺服器-應用程式**]。 以滑鼠右鍵按一下 [**分析**]，然後選取 [**啟用記錄**]。
+    2. 打開事件檢視器並在以下節點中啟用分析通道：**事件檢視器**、**應用程式和服務日誌**、**微軟****、Windows、****應用程式伺服器應用程式**。 按右鍵 **"分析"** 並選擇**啟用日誌**。
 
     3. 執行工作流程服務。
 
     4. 在事件檢視器中查看工作流程追蹤事件。
 
-3. 範例：[追蹤](./samples/tracking.md)
+3. 示例：[跟蹤](./samples/tracking.md)
 
-4. 概念檔：[工作流程追蹤和追蹤](workflow-tracking-and-tracing.md)
+4. 概念文檔：[工作流跟蹤和跟蹤](workflow-tracking-and-tracing.md)
 
 ## <a name="sql-workflow-instance-store"></a>SQL 工作流程執行個體存放區
 
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 是以 SQL Server 為基礎的執行個體存放區實作。 執行個體存放區會儲存執行中執行個體的狀態以及載入和繼續該執行個體所需的所有資料。 如果工作流程會保存，服務主機就會指示執行個體存放區儲存執行個體狀態，而且當該執行個體的訊息送達或延遲活動過期時，它就會指示執行個體存放區載入執行個體狀態。
 
-### <a name="getting-started"></a>使用者入門
+### <a name="getting-started"></a>開始使用
 
-1. 在 Visual Studio 2012 中，建立包含隱含或明確 <xref:System.Activities.Statements.Persist> 活動的工作流程。 將 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 行為加入至工作流程服務主機。 您可以在程式碼或應用程式組態檔中進行這項作業。
+1. 在 Visual Studio 2012 中，創建包含隱式或<xref:System.Activities.Statements.Persist>顯式活動的工作流。 將 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 行為加入至工作流程服務主機。 您可以在程式碼或應用程式組態檔中進行這項作業。
 
-2. 範例：[持續](/previous-versions/dotnet/netframework-4.0/dd699769(v%3dvs.100))性
+2. 示例：[持久性](/previous-versions/dotnet/netframework-4.0/dd699769(v%3dvs.100))
 
-3. 概念檔： [SQL 工作流程實例存放區](sql-workflow-instance-store.md)。
+3. 概念文檔[：SQL 工作流實例存儲](sql-workflow-instance-store.md)。

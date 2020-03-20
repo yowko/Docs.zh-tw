@@ -9,27 +9,27 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 50036f5bef323368b4970a080ca7a70cf94252d6
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c68c8c88376cfe7295962264c466030115f2f3db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966491"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182015"
 ---
 # <a name="user-drawn-controls"></a>使用者自訂描繪控制項
-.NET Framework 提供您輕鬆開發自己的控制項的能力。 您可以建立一個使用者控制項, 這是一組由程式碼系結在一起的標準控制項, 您也可以從頭開始設計自己的控制項。 您甚至可以使用繼承來建立繼承自現有控制項的控制項, 並加入其固有的功能。 無論您使用哪種方法, .NET Framework 都會提供功能, 為您所建立的任何控制項繪製自訂的圖形化介面。  
+.NET 框架使您能夠輕鬆開發自己的控制項。 您可以創建使用者控制項，這是一組由代碼綁定在一起的標準控制項，也可以從零開始設計自己的控制項。 您甚至可以使用繼承創建從現有控制項繼承的控制項，並添加到其固有功能。 無論您使用何種方法，.NET Framework 都提供了為創建的任何控制項繪製自訂圖形介面的功能。  
   
- 控制項的繪製是藉由在控制項的<xref:System.Windows.Forms.Control.OnPaint%2A>方法中執行程式碼來完成。 <xref:System.Windows.Forms.Control.OnPaint%2A>方法的單一引數<xref:System.Windows.Forms.PaintEventArgs>是物件, 可提供呈現控制項所需的所有資訊和功能。 會<xref:System.Windows.Forms.PaintEventArgs>提供兩個主要物件的屬性, 以用於呈現控制項:  
+ 控制項的繪製是通過在控制項方法中執行代碼來完成的<xref:System.Windows.Forms.Control.OnPaint%2A>。 <xref:System.Windows.Forms.Control.OnPaint%2A>方法的單個參數是一個<xref:System.Windows.Forms.PaintEventArgs>物件，該物件提供呈現控制項所需的所有資訊和功能。 提供<xref:System.Windows.Forms.PaintEventArgs>將在呈現控制項時使用的兩個主體物件作為屬性：  
   
-- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>物件-代表將繪製之控制項部分的矩形。 這可以是整個控制項, 或是控制項的一部分, 視控制項繪製的方式而定。  
+- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>物件 - 表示將繪製的控制項部分的矩形。 這可以是整個控制項，也可以是控制項的一部分，具體取決於控制項的繪製方式。  
   
-- <xref:System.Drawing.Graphics>物件-封裝數個圖形導向的物件和方法, 以提供繪製控制項所需的功能。  
+- <xref:System.Drawing.Graphics>物件 - 封裝多個面向圖形的物件和方法，這些物件和方法提供了繪製控制項所需的功能。  
   
- 如需<xref:System.Drawing.Graphics>物件和其使用方式的詳細資訊, 請參閱[如何:建立繪圖](../advanced/how-to-create-graphics-objects-for-drawing.md)的繪圖物件。  
+ 有關<xref:System.Drawing.Graphics>物件以及如何使用它的詳細資訊，請參閱[如何：為繪圖創建繪圖物件](../advanced/how-to-create-graphics-objects-for-drawing.md)。  
   
- 每當在螢幕上繪製或重新整理控制項時, 就會引發<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> 事件,而物件則代表繪製將會發生的矩形。<xref:System.Windows.Forms.Control.OnPaint%2A> 如果需要重新整理整個控制項, 則<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>會代表整個控制項的大小。 不過, <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>如果只需要重新整理控制項的一部分, 物件只會代表需要重新繪製的區域。 例如, 當控制項在使用者介面中由另一個控制項或表單部分遮蔽時, 就會發生這種情況。  
+ 每當<xref:System.Windows.Forms.Control.OnPaint%2A>在螢幕上繪製或刷新控制項時，都會觸發該事件，並且<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>物件表示將在其中進行繪製的矩形。 如果需要刷新整個控制項，將<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>表示整個控制項的大小。 但是，如果只需要刷新控制項的一部分，則<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>物件將僅表示需要重繪的區域。 這種情況的一個示例是，當控制項被使用者介面中的另一個控制項或表單部分遮蓋時。  
   
- 從<xref:System.Windows.Forms.Control>類別繼承時, 您必須覆<xref:System.Windows.Forms.Control.OnPaint%2A>寫方法, 並在內提供圖形呈現程式碼。 如果您想要提供自訂的圖形介面給使用者控制項或繼承的控制項, 您也可以藉由覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法來執行這項操作。 範例如下所示:  
+ 從<xref:System.Windows.Forms.Control>類繼承時，必須重寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法並在 其中提供圖形呈現代碼。 如果要向使用者控制項或繼承的控制項提供自訂圖形介面，還可以重寫<xref:System.Windows.Forms.Control.OnPaint%2A>該方法。 範例如下所示：  
   
 ```vb  
 Protected Overrides Sub OnPaint(ByVal e As PaintEventArgs)  
@@ -54,15 +54,15 @@ protected override void OnPaint(PaintEventArgs e)
    using (System.Drawing.Pen myPen = new System.Drawing.Pen(Color.Aqua))  
    {
       // Draw an aqua rectangle in the rectangle represented by the control.  
-      e.Graphics.DrawRectangle(myPen, new Rectangle(this.Location,   
+      e.Graphics.DrawRectangle(myPen, new Rectangle(this.Location,
          this.Size));  
    }
 }  
 ```  
   
- 上述範例示範如何使用非常簡單的圖形表示來呈現控制項。 它會呼叫<xref:System.Windows.Forms.Control.OnPaint%2A>基類的方法, 它會<xref:System.Drawing.Pen>建立要繪製的物件, 最後在控制項的<xref:System.Windows.Forms.Control.Location%2A>和<xref:System.Windows.Forms.Control.Size%2A>所決定的矩形中繪製橢圓形。 雖然大部分的轉譯程式碼會明顯複雜, 但此範例會示範<xref:System.Drawing.Graphics> <xref:System.Windows.Forms.PaintEventArgs>物件中包含的物件使用方式。 請注意, 如果您要繼承的類別已經有圖形化標記法 (例如<xref:System.Windows.Forms.UserControl>或<xref:System.Windows.Forms.Button>), 而且您不想將該標記法併入轉譯中, 則不應該呼叫基類的<xref:System.Windows.Forms.Control.OnPaint%2A>方法.  
+ 前面的示例演示如何使用非常簡單的圖形表示形式呈現控制項。 它調用基<xref:System.Windows.Forms.Control.OnPaint%2A>類的方法，它創建一個<xref:System.Drawing.Pen>要用來繪製的物件，最後在由 和<xref:System.Windows.Forms.Control.Location%2A><xref:System.Windows.Forms.Control.Size%2A>的 控制項確定的矩形中繪製橢圓。 儘管大多數呈現代碼將明顯比這更複雜，但此示例演示了<xref:System.Drawing.Graphics><xref:System.Windows.Forms.PaintEventArgs>物件中包含的物件的使用。 請注意，如果要從已具有圖形表示形式（如<xref:System.Windows.Forms.UserControl>或<xref:System.Windows.Forms.Button>）的類繼承，並且不希望將該表示形式合併到渲染中，則不應調用基類<xref:System.Windows.Forms.Control.OnPaint%2A>的方法。  
   
- 當第一次<xref:System.Windows.Forms.Control.OnPaint%2A>繪製控制項時, 以及每次重新整理時, 控制項的方法中的程式碼就會執行。 若要確保每次調整控制項的大小時都會重新繪製控制項, 請將下列程式程式碼新增至控制項的函式:  
+ 控制項方法中<xref:System.Windows.Forms.Control.OnPaint%2A>的代碼將在首次繪製控制項時以及刷新控制項時執行。 為確保每次調整控制項大小時重新繪製控制項，請向控制項的建構函式添加以下行：  
   
 ```vb  
 SetStyle(ControlStyles.ResizeRedraw, True)  
@@ -73,7 +73,7 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 ```  
   
 > [!NOTE]
-> <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType>使用屬性來執行非矩形的控制項。  
+> 使用<xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType>屬性實現非矩形控制項。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -82,6 +82,6 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [如何：建立繪圖的繪圖物件](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [如何：建立繪製的圖形物件](../advanced/how-to-create-graphics-objects-for-drawing.md)
 - [組成控制項](constituent-controls.md)
 - [各種自訂控制項](varieties-of-custom-controls.md)

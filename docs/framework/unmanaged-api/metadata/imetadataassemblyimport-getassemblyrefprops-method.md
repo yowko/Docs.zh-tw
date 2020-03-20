@@ -15,75 +15,75 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-ms.openlocfilehash: 4149db74adfa26df221eed5c590766a023bb105e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9aef471c1155070af0e9bcca14975a65bc5dc763
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448233"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175963"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>IMetaDataAssemblyImport::GetAssemblyRefProps 方法
-取得具有指定的中繼資料簽章之元件參考的屬性集。  
+使用指定的中繼資料簽名獲取程式集引用的屬性集。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT GetAssemblyRefProps (  
-    [in]  mdAssemblyRef        mdar,   
-    [out] const void          **ppbPublicKeyOrToken,   
-    [out] ULONG                *pcbPublicKeyOrToken,   
-    [out] LPWSTR               szName,   
-    [in]  ULONG                cchName,   
-    [out] ULONG                *pchName,   
-    [out] ASSEMBLYMETADATA     *pMetaData,   
-    [out] const void           **ppbHashValue,   
-    [out] ULONG                *pcbHashValue,   
+    [in]  mdAssemblyRef        mdar,
+    [out] const void          **ppbPublicKeyOrToken,
+    [out] ULONG                *pcbPublicKeyOrToken,
+    [out] LPWSTR               szName,
+    [in]  ULONG                cchName,
+    [out] ULONG                *pchName,
+    [out] ASSEMBLYMETADATA     *pMetaData,
+    [out] const void           **ppbHashValue,
+    [out] ULONG                *pcbHashValue,
     [out] DWORD                *pdwAssemblyRefFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `mdar`  
- 在`mdAssemblyRef` 元資料標記，代表要取得其屬性的元件參考。  
+ [在]表示`mdAssemblyRef`要獲取屬性的程式集引用的中繼資料權杖。  
   
  `ppbPublicKeyOrToken`  
- 脫銷公用金鑰或元資料標記的指標。  
+ [出]指向公開金鑰或中繼資料權杖的指標。  
   
  `pcbPublicKeyOrToken`  
- 脫銷傳回的公開金鑰或 token 中的位元組數目。  
+ [出]返回的公開金鑰或權杖中的位元組數。  
   
  `szName`  
- 脫銷元件的簡單名稱。  
+ [出]程式集的簡單名稱。  
   
  `cchName`  
- 在`szName`的大小（以寬字元為單位）。  
+ [在]大字元的大小`szName`。  
   
  `pchName`  
- 脫銷`szName`中實際傳回的寬字元數指標。  
+ [出]指向 中實際返回的寬字元數的指標`szName`。  
   
  `pMetaData`  
- 脫銷包含元件中繼資料之 ASSEMBLYMETADATA 結構的指標。  
+ [出]指向包含組件中繼資料的裝配元資料結構的指標。  
   
  `ppbHashValue`  
- 脫銷雜湊值的指標。 這是要參考之元件的 `PublicKey` 屬性的雜湊（使用 SHA-1 演算法），除非已設定[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)列舉的 arfFullOriginator 旗標。  
+ [出]指向雜湊值的指標。 這是使用 SHA-1 演算法引用的程式集`PublicKey`屬性的雜湊值，除非設置了[AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md)枚舉的 arfFullOriginator 標誌。  
   
  `pcbHashValue`  
- 脫銷傳回的雜湊值中的寬字元數。  
+ [出]返回的雜湊值中的寬字元數。  
   
  `pdwAssemblyRefFlags`  
- 脫銷旗標的指標，描述套用至元件的中繼資料。 旗標值是一個或多個[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值的組合。  
+ [出]指向用於描述應用於程式集的中繼資料的標誌的指標。 標誌值是一個或多個[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)值的組合。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功，這個方法會傳回 S_OK;否則，它會傳回 Winerror.h 標頭檔中所定義的其中一個錯誤碼。  
+ 此方法如果成功，將返回S_OK;否則，它將返回 Winerror.h 標標頭檔中定義的錯誤代碼之一。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

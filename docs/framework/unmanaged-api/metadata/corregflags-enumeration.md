@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 8d3080ee-39fe-4c57-8950-51323632d045
 topic_type:
 - apiref
-ms.openlocfilehash: 79a9e4513a98a29edc11cc76c599f03c9c3a72b4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8fe6216e11a64ea182d796247d888b862b1e8377
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450107"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177933"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags 列舉
-提供安裝模組或複合影像時，用來註冊的旗標值。  
+提供安裝模組或複合映射時用於註冊的標誌值。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-typedef enum   
+typedef enum
 {  
     regNoCopy  = 0x00000001,  
     regConfig  = 0x00000002,  
@@ -35,23 +35,23 @@ typedef enum
 } CorRegFlags;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`regNoCopy`|指定不應該將檔案複製到目的地。|  
-|`regConfig`|指定模組或複合為設定。|  
-|`regHasRefs`|指定模組或複合具有類別參考。|  
+|`regNoCopy`|指定不應將檔案複製到目標。|  
+|`regConfig`|指定模組或複合是配置。|  
+|`regHasRefs`|指定模組或複合具有類引用。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

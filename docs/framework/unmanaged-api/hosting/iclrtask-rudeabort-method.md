@@ -15,46 +15,46 @@ helpviewer_keywords:
 ms.assetid: b5785468-fcd7-4cc3-8a5d-8796337b53fc
 topic_type:
 - apiref
-ms.openlocfilehash: 69e3ecfc82985d52bd5b14e9faf2566e395b622b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aacf9de36dc39b63ed36b672e31f40704413d608
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124648"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176327"
 ---
 # <a name="iclrtaskrudeabort-method"></a>ICLRTask::RudeAbort 方法
-指示 common language runtime （CLR）立即且無條件地中止目前[ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)實例所代表的工作。  
+指示通用語言運行時 （CLR） 立即無條件中止由當前[ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)實例表示的任務。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT RudeAbort ();   
+HRESULT RudeAbort ();
 ```  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `RudeAbort`。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|S_OK|`RudeAbort`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到進程中，或者 CLR 處於無法成功運行託管代碼或成功處理調用的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
-|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
-|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
-|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_NOT_OWNER|調用方不擁有鎖。|  
+|HOST_E_ABANDONED|當阻塞的執行緒或光纖等待事件時，事件已被取消。|  
+|E_FAIL|發生了未知的災難性故障。 當方法返回E_FAIL時，CLR 在進程中不再可用。 對託管方法的後續調用返回HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- 主機會呼叫 `RudeAbort` 以立即中止工作。 不保證會執行完成項和例外狀況處理常式。  
+ 主機調用`RudeAbort`以立即中止任務。 不保證執行終結者和異常處理常式。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標題：** MSCorEE.h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MSCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)

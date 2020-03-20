@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27f6d295-0fe9-4cda-b77e-6e7d5c53df09
 topic_type:
 - apiref
-ms.openlocfilehash: 83170815f4aa65988bb6a6394bd466a0ba376ebf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5aa5d78faa8ca9261594e2a649b11088e1d78ee7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432061"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177862"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>IMetaDataAssemblyEmit::DefineManifestResource 方法
 為指定的資訊清單資源，建立包含其中繼資料的 `ManifestResource` 結構，並且傳回關聯的中繼資料語彙基元。  
@@ -29,9 +29,9 @@ ms.locfileid: "74432061"
   
 ```cpp  
 HRESULT DefineManifestResource (  
-    [in] LPCWSTR                szName,   
-    [in] mdToken                tkImplementation,   
-    [in] DWORD                  dwOffset,   
+    [in] LPCWSTR                szName,
+    [in] mdToken                tkImplementation,
+    [in] DWORD                  dwOffset,
     [in] DWORD                  dwResourceFlags,  
     [out] mdManifestResource    *pmdmr  
 );  
@@ -39,32 +39,32 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>參數  
  `szName`  
- 在資源的名稱。  
+ [在]資源的名稱。  
   
  `tkImplementation`  
- 在對應至資源提供者 `mdtFile` 或 `mdtAssemblyRef` 類型的元資料標記。 Null 值表示內嵌中繼資料的檔案是資源提供者。  
+ [在]類型的`mdtFile`中繼資料權杖或`mdtAssemblyRef`映射到資來源提供者的中繼資料權杖。 Null 值表示嵌入中繼資料的檔是資來源提供者。  
   
  `dwOffset`  
- 在檔案內資源開頭的位移。 對於獨立檔案中的資源，這一律會是零。 如果資源內嵌在 PE （可移植的可執行檔）檔案中，這就是資源 BLOB 的位移，它會從 cor 標頭檔中指定的位置開始。  
+ [在]檔中資源開頭的偏移量。 對於獨立檔中的資源，這始終為零。 如果資源嵌入到 PE（可攜式可執行檔）檔中，這是資源 BLOB 的偏移量，它從 cor.h 標標頭檔中指定的位置開始。  
   
  `dwResourceFlags`  
- 在旗標值的位元組合，這個組合會指定資源定義的屬性設定。  
+ [在]指定資源定義的屬性設置的標誌值的位組合。  
   
  `pmdmr`  
- 脫銷傳回之元資料標記的指標。  
+ [出]指向返回的中繼資料權杖的指標。  
   
 ## <a name="remarks"></a>備註  
- 您必須針對每個元件檔案中所實作為的每個資源，定義一個 `ManifestResource` 元資料結構。  
+ 必須`ManifestResource`為每個程式集檔中實現的每個資源定義一個元資料結構。  
   
 ## <a name="requirements"></a>需求  
- **平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平臺：** 請參閱[系統要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

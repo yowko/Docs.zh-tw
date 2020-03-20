@@ -15,38 +15,38 @@ helpviewer_keywords:
 ms.assetid: 35991289-f389-495d-8caa-a6384fb1d557
 topic_type:
 - apiref
-ms.openlocfilehash: b9cad4c9647983e5b39f9b7a5d03736f2848e1c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f876187624d066b9e672fbf44a984d6d02a54c43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432691"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175872"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue 方法
-使用在指定的中繼資料中所做的變更，更新目前的元件範圍。  
+使用在指定的中繼資料中所做的更改更新當前程式集範圍。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT ApplyEditAndContinue (   
+HRESULT ApplyEditAndContinue (
     [in]  IUnknown    *pImport  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `pImport`  
- \[的[IUnknown](/cpp/atl/iunknown)物件\] 指標，其代表可移植執行檔（PE）中的差異中繼資料。
+ \[在\]指向[IUnknown](/cpp/atl/iunknown)物件的指標中，該物件表示來自可攜式可執行檔 （PE） 檔中的增量中繼資料。
   
- 差異中繼資料是中繼資料的區塊，其中包含對模組的實際中繼資料之複本所做的變更。  
+ 增量中繼資料是中繼資料塊，包括對模組實際中繼資料副本所做的更改。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

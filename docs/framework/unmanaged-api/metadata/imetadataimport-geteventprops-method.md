@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-ms.openlocfilehash: 18fe0c834506d0ac4cd15fd7af4c4f15904b0f81
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 306c1748b4997309ee15fb7751bc818b0287aaf0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437582"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177262"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps 方法
-取得指定的事件 token 所代表之事件的中繼資料資訊，包括宣告類型、委派的加入和移除方法，以及任何旗標和其他相關聯的資料。  
+獲取由指定事件權杖表示的事件的中繼資料資訊，包括聲明類型、代理的添加和刪除方法以及任何標誌和其他關聯資料。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT GetEventProps (  
    [in]  mdEvent       ev,  
-   [out] mdTypeDef     *pClass,   
-   [out] LPCWSTR       szEvent,   
-   [in]  ULONG         cchEvent,   
-   [out] ULONG         *pchEvent,   
+   [out] mdTypeDef     *pClass,
+   [out] LPCWSTR       szEvent,
+   [in]  ULONG         cchEvent,
+   [out] ULONG         *pchEvent,
    [out] DWORD         *pdwEventFlags,  
    [out] mdToken       *ptkEventType,  
-   [out] mdMethodDef   *pmdAddOn,   
-   [out] mdMethodDef   *pmdRemoveOn,   
-   [out] mdMethodDef   *pmdFire,   
-   [out] mdMethodDef   rmdOtherMethod[],   
+   [out] mdMethodDef   *pmdAddOn,
+   [out] mdMethodDef   *pmdRemoveOn,
+   [out] mdMethodDef   *pmdFire,
+   [out] mdMethodDef   rmdOtherMethod[],
    [in]  ULONG         cMax,  
    [out] ULONG         *pcOtherMethod  
 );  
@@ -47,49 +47,49 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>參數  
  `ev`  
- 在事件元資料標記，代表要取得中繼資料的事件。  
+ [在]表示要獲取其中繼資料的事件中繼資料權杖。  
   
  `pClass`  
- 脫銷TypeDef token 的指標，代表宣告事件的類別。  
+ [出]指向表示聲明事件的類的 TypeDef 權杖的指標。  
   
  `szEvent`  
- 脫銷`ev`所參考的事件名稱。  
+ [出]引用`ev`的事件的名稱。  
   
  `pchEvent`  
- 在要求的 `szEvent`長度（以寬字元為單位）。  
+ [在]請求的長度以寬字元。 `szEvent`  
   
  `pdwEventFlags`  
- 脫銷以 `szEvent`的寬字元傳回的長度。  
+ [出]返回的長度以寬字元。 `szEvent`  
   
  `ptkEventType`  
- 脫銷表示事件之 <xref:System.Delegate> 類型的 TypeRef 或 TypeDef 元資料標記的指標。  
+ [出]指向表示事件<xref:System.Delegate>類型的 TypeRef 或 TypeDef 中繼資料權杖的指標。  
   
  `pmdAddOn`  
- 脫銷元資料標記的指標，表示新增事件處理常式的方法。  
+ [出]指向中繼資料權杖的指標，表示為事件添加處理常式的方法。  
   
  `pmdRemoveOn`  
- 脫銷元資料標記的指標，表示移除事件處理常式的方法。  
+ [出]指向表示刪除事件處理常式的方法的中繼資料權杖的指標。  
   
  `pmdFire`  
- 脫銷元資料標記的指標，表示引發事件的方法。  
+ [出]指向表示引發事件的方法的中繼資料權杖的指標。  
   
  `rmdOtherMethod`  
- 脫銷與事件相關聯之其他方法的 token 指標陣列。  
+ [出]指向與事件關聯的其他方法的權杖指標陣列。  
   
  `cMax`  
  [in] `rmdOtherMethod` 陣列的大小上限。  
   
  `pcOtherMethod`  
- 脫銷`rmdOtherMethod`中傳回的權杖數目。  
+ [出]在 中`rmdOtherMethod`返回的權杖數。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

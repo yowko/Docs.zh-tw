@@ -8,50 +8,50 @@ helpviewer_keywords:
 - assemblyBinding element
 - container tags, <assemblyBinding> element
 ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
-ms.openlocfilehash: c688353583f5e452950d63b7d02c48505b6ae999
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 202b063ad3f0f9696cdc12aff434d61fe5a813e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118137"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154318"
 ---
-# <a name="assemblybinding-element-for-runtime"></a>\<執行時間的 \<assemblyBinding > 元素 >
+# <a name="assemblybinding-element-for-runtime"></a>\<用於\<運行時>的程式集綁定>元素
 包含有關組件版本重新導向和組件位置的資訊。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<assemblyBinding >**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<運行時>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<程式集綁定>**  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-      <assemblyBinding    
+      <assemblyBinding
    xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
 </assemblyBinding>  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
 |**xmlns**|必要屬性。<br /><br /> 指定組件繫結所需的 XML 命名空間。 使用字串 "urn:schemas-microsoft-com:asm.v1" 做為值。|  
-|**appliesTo**|指定 .NET Framework 組件重新導向適用的執行階段版本。 這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它適用於哪一個版本。 如果未指定 **appliesTo** 屬性，則 **\<assemblyBinding>** 項目會套用至所有的 .NET Framework 版本。 **AppliesTo**屬性是在 .NET Framework 版本1.1 中引進.NET Framework 版本1.0 會忽略它。 這表示在使用 .NET Framework 1.0 版時，會套用所有 **\<assemblyBinding>** 項目，即使已指定 **appliesTo** 屬性時也是如此。|  
+|**適用于**|指定 .NET Framework 組件重新導向適用的執行階段版本。 這個選擇性屬性會使用 .NET Framework 版本號碼，以表示它適用於哪一個版本。 如果未指定 **appliesTo** 屬性，則 **\<assemblyBinding>** 項目會套用至所有的 .NET Framework 版本。 **應用到**屬性在 .NET 框架版本 1.1 中引入;.NET 框架版本 1.0 會忽略它。 這意味著在使用 .NET Framework 版本 1.0 時應用所有**\<程式集綁定>** 元素，即使指定了**應用To**屬性也是如此。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<dependentAssembly>](dependentassembly-element.md)|封裝組件的繫結原則和組件位置。 針對每個元件使用一個 **\<dependentAssembly >** 標記。|  
-|[\<probing>](probing-element.md)|指定載入組件時，Common Language Runtime 會搜尋的子目錄。|  
-|[\<publisherPolicy>](publisherpolicy-element.md)|指定執行階段是否套用發行者原則。|  
-|[\<qualifyAssembly>](qualifyassembly-element.md)|指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。|  
+|[\<從屬裝配>](dependentassembly-element.md)|封裝組件的繫結原則和組件位置。 為每個程式集使用一個**\<依存性程式集>** 標記。|  
+|[\<探測>](probing-element.md)|指定載入組件時，Common Language Runtime 會搜尋的子目錄。|  
+|[\<發行者策略>](publisherpolicy-element.md)|指定執行階段是否套用發行者原則。|  
+|[\<符合條件>](qualifyassembly-element.md)|指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
@@ -77,12 +77,12 @@ ms.locfileid: "73118137"
 </configuration>  
 ```  
   
- 下列範例顯示如何使用**appliesTo**屬性重新導向 .NET Framework 元件的系結。  
+ 下面的示例演示如何使用**應用 To**屬性重定向 .NET 框架程式集的綁定。  
   
 ```xml  
 <runtime>  
    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1" appliesTo="v1.0.3705">  
-      <dependentAssembly>   
+      <dependentAssembly>
          <assemblyIdentity name="mscorcfg" publicKeyToken="b03f5f7f11d50a3a" culture=""/>  
          <bindingRedirect oldVersion="0.0.0.0-65535.65535.65535.65535" newVersion="1.0.3300.0"/>  
       </dependentAssembly>  
@@ -90,7 +90,7 @@ ms.locfileid: "73118137"
 </runtime>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)

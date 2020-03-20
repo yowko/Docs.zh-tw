@@ -1,5 +1,5 @@
 ---
-title: <listeners> 的 <source> 項目
+title: <source> 的 <listeners> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -7,49 +7,49 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: d7641611e5d8257b49bc6a6abd0a2fadfde66e91
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 0eee325e01b41a15a19e4f40f479596f9d70f73b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697295"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153408"
 ---
-# <a name="listeners-element-for-source"></a>\<來源的 \<接聽程式 > 元素 >
-在 <xref:System.Diagnostics.TraceSource>的 <xref:System.Diagnostics.TraceSource.Listeners%2A> 集合中加入或移除接聽程式。 接聽程式會將追蹤輸出導向至適當的目標，例如記錄檔、視窗或文字檔。  
+# <a name="listeners-element-for-source"></a>\<源>的偵\<聽器>元素
+添加或刪除 集合中的<xref:System.Diagnostics.TraceSource.Listeners%2A>攔截器。 <xref:System.Diagnostics.TraceSource> 攔截器將跟蹤輸出定向到適當的目標，如日誌、視窗或文字檔。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<系統診斷 >** ](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<來源 >** ](sources-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**來源 >** ](source-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<** 接聽程式 >  
+[**\<配置>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<系統.診斷>**](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<來源>**](sources-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<源>**](source-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<聽眾>**  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<listeners>   
+<listeners>
   <add>...</add>  
   <remove ... />  
   <clear/>  
 </listeners>  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和元素  
+## <a name="attributes-and-elements"></a>屬性和項目  
  下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
- None。  
+ 無。  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<add>](add-element-for-listeners-for-source.md)|將接聽項新增至 `Listeners` 集合。|  
-|[\<remove>](remove-element-for-listeners-for-source.md)|從 `Listeners` 集合中移除接聽程式。|  
-|[\<clear>](clear-element-for-listeners-for-source.md)|清除追蹤來源的 `Listeners` 集合。|  
+|[\<添加>](add-element-for-listeners-for-source.md)|將接聽項新增至 `Listeners` 集合。|  
+|[\<刪除>](remove-element-for-listeners-for-source.md)|從`Listeners`集合中刪除攔截器。|  
+|[\<明確>](clear-element-for-listeners-for-source.md)|清除追蹤來源的 `Listeners` 集合。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
@@ -59,21 +59,21 @@ ms.locfileid: "71697295"
 ## <a name="remarks"></a>備註  
   
 ## <a name="configuration-file"></a>組態檔  
- 此元素可用於電腦設定檔（Machine.config）和應用程式佈建檔。  
+ 此元素可用於電腦設定檔 （Machine.config） 和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 `<listeners>` 專案，將主控台追蹤接聽程式加入至 `mySource` 來源，以及移除預設的追蹤接聽程式。  
+ 下面的示例演示如何使用 元素`<listeners>`向`mySource`源添加主控台跟蹤攔截器並刪除預設跟蹤攔截器。  
   
 ```xml  
 <configuration>  
   <system.diagnostics>  
     <sources>  
-      <source name="mySource" switchName="sourceSwitch"   
+      <source name="mySource" switchName="sourceSwitch"
         switchType="System.Diagnostics.SourceSwitch">  
         <listeners>  
-          <add name="console"   
+          <add name="console"
             type="System.Diagnostics.ConsoleTraceListener">  
-            <filter type="System.Diagnostics.EventTypeFilter"   
+            <filter type="System.Diagnostics.EventTypeFilter"
               initializeData="Error"/>  
           </add>  
           <remove name="Default"/>  
@@ -90,5 +90,5 @@ ms.locfileid: "71697295"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.TraceListener>
-- [追蹤和偵錯設定結構描述](index.md)
-- [追蹤接聽項](../../../debug-trace-profile/trace-listeners.md)
+- [跟蹤和調試設置架構](index.md)
+- [追蹤接聽程式](../../../debug-trace-profile/trace-listeners.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-ms.openlocfilehash: b240be3e5b0127de42cea43dd8e89a2cc656b28e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bb8b531a884c9d3c2f33aa4aec5c4dbeaafe2b66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449521"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177346"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>IMetaDataImport::EnumFieldsWithName 方法
 列舉具有指定名稱之指定類型的 FieldDef 語彙基元。  
@@ -29,52 +29,52 @@ ms.locfileid: "74449521"
   
 ```cpp  
 HRESULT EnumFieldsWithName (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]  mdTypeDef       cl,   
-   [in]  LPCWSTR         szName,   
-   [out] mdFieldDef      rFields[],   
-   [in]  ULONG           cMax,   
-   [out] ULONG           *pcTokens   
+   [in, out] HCORENUM    *phEnum,
+   [in]  mdTypeDef       cl,
+   [in]  LPCWSTR         szName,
+   [out] mdFieldDef      rFields[],
+   [in]  ULONG           cMax,
+   [out] ULONG           *pcTokens
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in、out]列舉值的指標。  
+ [進出]指向枚舉器的指標。  
   
  `cl`  
- 在要列舉其欄位之類型的 token。  
+ [在]要枚舉其欄位的類型的權杖。  
   
  `szName`  
- 在限制列舉範圍的功能變數名稱。  
+ [在]限制枚舉範圍的欄位名稱。  
   
  `rFields`  
- 脫銷用來儲存 FieldDef 標記的陣列。  
+ [出]用於存儲 FieldDef 權杖的陣列。  
   
  `cMax`  
  [in] `rFields` 陣列的大小上限。  
   
  `pcTokens`  
- 脫銷`rFields`中傳回的實際 FieldDef token 數目。  
+ [出]在 中`rFields`返回的實際欄位Def 權杖數。  
   
 ## <a name="remarks"></a>備註  
- 不同于[IMetaDataImport：： EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md)，`EnumFieldsWithName` 捨棄所有沒有指定名稱的欄位標記。  
+ 與[IMetaDataImport：：enumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md)不同，`EnumFieldsWithName`則丟棄所有沒有指定名稱的欄位權杖。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|已成功傳回 `EnumFieldsWithName`。|  
-|`S_FALSE`|沒有可列舉的欄位。 在此情況下，`pcTokens` 為零。|  
+|`S_OK`|`EnumFieldsWithName`已成功返回。|  
+|`S_FALSE`|沒有要枚舉的欄位。 在這種情況下，`pcTokens`為零。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

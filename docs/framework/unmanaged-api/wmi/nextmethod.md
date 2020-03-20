@@ -1,6 +1,6 @@
 ---
-title: NextMethod 函式（非受控 API 參考）
-description: NextMethod 函數會抓取列舉中的下一個方法。
+title: NextMethod 函數（非託管 API 引用）
+description: NextMethod 函數檢索枚舉中的下一個方法。
 ms.date: 11/06/2017
 api_name:
 - NextMethod
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - NextMethod function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 1c20fe5b4a081bd41f51365a36ab5f8f8cfb71ed
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 36acd6135110a8865bd8efdda628c352c01b4f26
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127365"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174923"
 ---
 # <a name="nextmethod-function"></a>NextMethod 函式
-抓取列舉中的下一個方法，其開頭為[BeginMethodEnumeration](beginmethodenumeration.md)的呼叫。  
+檢索枚舉中的下一個方法，該方法以調用[BeginMethodEa）](beginmethodenumeration.md)開頭。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -30,62 +30,62 @@ ms.locfileid: "73127365"
   
 ```cpp  
 HRESULT NextMethod (
-   [in] int                 vFunc, 
-   [in] IWbemClassObject*   ptr, 
+   [in] int                 vFunc,
+   [in] IWbemClassObject*   ptr,
    [in] LONG                lFlags,
    [out] BSTR*              pName,
    [out] IWbemClassObject** ppInSignature,
-   [out] IWbemClassObject** ppOutSignature   
-); 
+   [out] IWbemClassObject** ppOutSignature
+);
 ```  
 
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-在未使用此參數。
+[在]此參數未使用。
 
 `ptr`  
-在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
+[在]指向[IWbem ClassObject 實例](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標。
 
 `lFlags`  
-[in] 保留。 這個參數必須是0。
+[in] 保留。 此參數必須為 0。
 
 `pName`  
-脫銷指標，指向呼叫之前的 `null`。 當函式傳回時，就是包含方法名稱的新 `BSTR` 位址。 
+[出]指向調用`null`之前的指標。 當函數返回時，包含方法名稱的新位址`BSTR`。
 
 `ppSignatureIn`  
-脫銷指標，接收[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標，其中包含方法的 `in` 參數。 
+[出]接收指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標的指標，其中包含方法的`in`參數。
 
 `ppSignatureOut`  
-脫銷指標，接收[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標，其中包含方法的 `out` 參數。 
+[出]接收指向[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標的指標，其中包含方法的`out`參數。
 
 ## <a name="return-value"></a>傳回值
 
-這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
+此函數返回的以下值在*WbemCli.h*標標頭檔中定義，或者您可以在代碼中將它們定義為常量：
 
-|常數  |值  |描述  |
+|持續性  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_UNEXPECTED` | 0x8004101d | 沒有[`BeginEnumeration`](beginenumeration.md)函數的呼叫。 |
+| `WBEM_E_UNEXPECTED` | 0x8004101d | 沒有調用該[`BeginEnumeration`](beginenumeration.md)函數。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
-| `WBEM_S_NO_MORE_DATA` | 0x40005 | 列舉中沒有其他屬性。 |
+| `WBEM_S_NO_MORE_DATA` | 0x40005 | 枚舉中沒有更多的屬性。 |
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝對[IWbemClassObject：： NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod)方法的呼叫。
+此函數包裝對[IWbemClassObject：：NextMethod 方法](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod)的調用。
 
-呼叫端會藉由呼叫[BeginMethodEnumeration](beginmethodenumeration.md)函數來開始列舉序列，然後呼叫 [NextMethod] 函式，直到函式傳回 `WBEM_S_NO_MORE_DATA`。 呼叫端（選擇性）呼叫[EndMethodEnumeration](endmethodenumeration.md)來完成序列。 呼叫端可以隨時藉由呼叫[EndMethodEnumeration](endmethodenumeration.md)來終止列舉。
+調用方通過調用[BeginMethod 枚舉](beginmethodenumeration.md)函數來開始枚舉序列，然後調用 [NextMethod] 函數，直到函數返回`WBEM_S_NO_MORE_DATA`。 或者，調用方通過調用[EndMethod 枚舉](endmethodenumeration.md)來完成序列。 調用方可以隨時調用[EndMethodEa 枚舉](endmethodenumeration.md)，從而提前終止枚舉。
 
 ## <a name="example"></a>範例
 
-如需C++範例，請參閱[IWbemClassObject：： NextMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod)方法。
+有關C++示例，請參閱[IWbemClassObject：：NextMethod 方法](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-nextmethod)。
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** WMINet_Utils .idl  
+ **標題：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器（非受控 API 參考）](index.md)
+- [WMI 與效能計數器 (非受控 API 參考)](index.md)

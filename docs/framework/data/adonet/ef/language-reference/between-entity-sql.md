@@ -2,20 +2,20 @@
 title: BETWEEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-ms.openlocfilehash: 611e90f362bbc0eac521e1e1998fb85200169c19
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a0f5dd19c439861451b1e88c3ae35f9f265288fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039940"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150489"
 ---
 # <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
-判斷運算式是否會產生所指定範圍內的值。 運算式之間的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 與 expression 之間的 Transact-sql 具有相同的功能。  
+判斷運算式是否會產生所指定範圍內的值。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] "之間"運算式具有與"轉單-SQL-BETWEEN"運算式相同的功能。  
   
 ## <a name="syntax"></a>語法  
   
 ```csharp  
-expression [ NOT ] BETWEEN begin_expression AND end_expression    
+expression [ NOT ] BETWEEN begin_expression AND end_expression
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -38,7 +38,7 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
  如果 `true` 是在 `expression` 和 `begin_expression` 所指定的範圍內則為 `end_expression`；否則為 `false`。 如果 `null` 為 `expression`，或者 `null` 或 `begin_expression` 為 `end_expression`，便會傳回 `null`。  
   
 ## <a name="remarks"></a>備註  
- 若要指定獨佔範圍，請使用大於（>）和小於（<）運算子，而不是介於之間。  
+ 要指定獨佔範圍，請使用大於 （>） 和小於 （<） 運算子而不是"之間"。  
   
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 BETWEEN 運算子來判斷運算式是否會產生所指定範圍內的值。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
@@ -49,6 +49,6 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
   
  [!code-csharp[DP EntityServices Concepts 2#BETWEEN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#between)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Entity SQL 參考](entity-sql-reference.md)

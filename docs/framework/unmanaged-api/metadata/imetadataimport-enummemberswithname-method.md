@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-ms.openlocfilehash: ed193aab8beb0de1321aa1d52ec9f963b08b316c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7410f91a853f3a677a105dc2e12a86d723c9fad6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441657"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177324"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName 方法
 列舉 MemberDef 語彙基元，其代表具有指定名稱之指定類型成員。  
@@ -29,52 +29,52 @@ ms.locfileid: "74441657"
   
 ```cpp  
 HRESULT EnumMembersWithName (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   cl,   
-   [in]      LPCWSTR     szName,   
-   [out]     mdToken     rMembers[],   
-   [in]      ULONG       cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   cl,
+   [in]      LPCWSTR     szName,
+   [out]     mdToken     rMembers[],
+   [in]      ULONG       cMax,
    [out]     ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in、out]列舉值的指標。  
+ [進出]指向枚舉器的指標。  
   
  `cl`  
- 在TypeDef token，代表具有要列舉之成員的類型。  
+ [在]表示要枚舉的成員的類型的類型的類型的類型類型。  
   
  `szName`  
- 在限制列舉值範圍的成員名稱。  
+ [在]限制枚舉器範圍的成員名稱。  
   
  `rMembers`  
- 脫銷用來儲存 MemberDef 標記的陣列。  
+ [出]用於存儲成員Def權杖的陣列。  
   
  `cMax`  
  [in] `rMembers` 陣列的大小上限。  
   
  `pcTokens`  
- 脫銷`rMembers`中傳回的實際 MemberDef token 數目。  
+ [出]在 中`rMembers`返回的會員Def權杖的實際數量。  
   
 ## <a name="remarks"></a>備註  
- 這個方法會列舉欄位和方法，而不是屬性或事件。 不同于[IMetaDataImport：： EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)，`EnumMembersWithName` 捨棄所有沒有指定名稱的欄位和成員 token。  
+ 此方法枚舉欄位和方法，但不枚舉屬性或事件。 與[IMetaDataImport：：enum成員](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)不同，`EnumMembersWithName`請丟棄沒有指定名稱的所有欄位和成員權杖。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|已成功傳回 `EnumTypeDefs`。|  
-|`S_FALSE`|沒有要列舉的 MemberDef token。 在此情況下，`pcTokens` 為零。|  
+|`S_OK`|`EnumTypeDefs`已成功返回。|  
+|`S_FALSE`|沒有要枚舉的會員Def權杖。 在這種情況下，`pcTokens`為零。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

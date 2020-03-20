@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-ms.openlocfilehash: 83e2d1231b85086c2e65813cf427df3de36405b7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0332fae46d6a65cfb7cc0b929cc2fd0d97e1790e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785304"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179150"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual 方法
-將資料從指定的虛擬記憶體位址讀入指定的緩衝區。  
+將資料從指定的虛擬記憶體位址讀取到指定的緩衝區中。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT ReadVirtual (  
     [in] CLRDATA_ADDRESS    address,  
-    [out, size_is(bytesRequested), length_is(*bytesRead)]   
+    [out, size_is(bytesRequested), length_is(*bytesRead)]
         BYTE                *buffer,  
     [in] ULONG32            bytesRequested,  
     [out] ULONG32           *bytesRead  
@@ -39,26 +39,26 @@ HRESULT ReadVirtual (
   
 ## <a name="parameters"></a>參數  
  `address`  
- 在儲存虛擬記憶體位址的 CLRDATA_ADDRESS。  
+ [在]存儲虛擬記憶體位址的CLRDATA_ADDRESS。  
   
  `buffer`  
- 脫銷接收資料之緩衝區的指標。  
+ [出]指向接收資料的緩衝區的指標。  
   
  `bytesRequested`  
- 在緩衝區的長度。  
+ [在]緩衝區的長度。  
   
  `bytesRead`  
- 脫銷傳回位元組數的指標。  
+ [出]指向返回的位元組數的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** ClrData .idl，ClrData。h  
+ **標題：** ClrData.idl， ClrData.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICLRDataTarget 介面](iclrdatatarget-interface.md)

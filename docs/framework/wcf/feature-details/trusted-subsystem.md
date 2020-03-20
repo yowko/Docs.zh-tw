@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 4f3166b8f1e59a100f54574ab548f5dae88eb5cd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b226eed9218207cde99add61ef1f3eb64b459009
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742631"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184298"
 ---
 # <a name="trusted-subsystem"></a>受信任的子系統
 用戶端會存取分散在網路上的一或多個 Web 服務。 Web 服務的設計會將對其他資源 (例如資料庫或其他 Web 服務) 的存取封裝在 Web 服務的商務邏輯中。 這些資源必須受到保護，以避免未經授權的存取。 下圖說明受信任的子系統處理序。  
   
- ![信任的子系統](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
+ ![受信任的子系統](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
   
  下列步驟說明受信任的子系統處理序，如圖所示：  
   
@@ -32,13 +32,13 @@ ms.locfileid: "76742631"
 |特性|描述|  
 |--------------------|-----------------|  
 |安全性模式|訊息|  
-|互通性|僅 Windows Communication Foundation （WCF）。|  
+|互通性|僅限 Windows 通信基礎 （WCF）。|  
 |驗證 (服務)|安全性權杖服務會驗證並授權用戶端。|  
 |驗證 (用戶端)|受信任的子系統會驗證用戶端，而資源會驗證受信任的子系統服務。|  
 |完整性|是|  
 |保密|是|  
 |傳輸|用戶端與受信任子系統服務之間的 HTTP。<br /><br /> 受信任子系統服務與資源 (後端服務) 之間的 NET.TCP。|  
-|繫結|<xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|繫結|<xref:System.ServiceModel.WSHttpBinding><xref:System.ServiceModel.NetTcpBinding>[和\<ws聯邦HTTP綁定>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>資源 (後端服務)  
   
@@ -122,7 +122,7 @@ ms.locfileid: "76742631"
       </service>  
     </services>  
     <client>  
-      <endpoint name=""   
+      <endpoint name=""
                 address="net.tcp://contoso.com:8001/BackendService"  
                 binding="customBinding"  
                 bindingConfiguration="ClientBinding"  
@@ -163,7 +163,7 @@ ms.locfileid: "76742631"
 </configuration>  
 ```  
   
-## <a name="client"></a>用戶端  
+## <a name="client"></a>Client  
   
 ### <a name="code"></a>程式碼  
  下列程式碼示範如何建立用戶端，這個用戶端會透過 HTTP 通訊協定使用訊息安全性，並且使用使用者名稱和密碼進行驗證，藉此與受信任的子系統進行通訊。  
@@ -179,7 +179,7 @@ ms.locfileid: "76742631"
 <configuration>  
   <system.serviceModel>  
     <client>  
-        <endpoint name=""   
+        <endpoint name=""
                   address="http://www.cohowinery.com:8000/FacadeService"  
                   binding="wsHttpBinding"  
                   bindingConfiguration="Binding1"  
@@ -212,5 +212,5 @@ ms.locfileid: "76742631"
   
 ## <a name="see-also"></a>另請參閱
 
-- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

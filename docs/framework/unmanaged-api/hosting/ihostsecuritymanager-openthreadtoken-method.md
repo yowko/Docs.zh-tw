@@ -15,62 +15,62 @@ helpviewer_keywords:
 ms.assetid: d5999052-8bf0-4a9e-8621-da6284406b18
 topic_type:
 - apiref
-ms.openlocfilehash: 2ced153798355aff882f0244f3dd946c39dea2bd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11d042ea9eecc8d428761da6eaa15f7c2907ebd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121474"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176262"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken 方法
-開啟與目前執行中線程相關聯的任意存取權杖。  
+打開與當前正在執行的執行緒關聯的可自由訪問權杖。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT OpenThreadToken (  
-    [in]  DWORD    dwDesiredAccess,   
-    [in]  BOOL     bOpenAsSelf,   
+    [in]  DWORD    dwDesiredAccess,
+    [in]  BOOL     bOpenAsSelf,
     [out] HANDLE   *phThreadToken  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `dwDesiredAccess`  
- 在存取值的遮罩，指定對執行緒 token 所要求的存取類型。 這些值是在 Win32 `OpenThreadToken` 函數中定義。 要求的存取類型會與權杖的任意存取控制清單（DACL）進行協調，以決定要授與或拒絕哪些類型的存取權。  
+ [在]指定對執行緒權杖的請求訪問類型的訪問值的遮罩。 這些值在 Win32`OpenThreadToken`函數中定義。 請求的訪問類型與權杖的任意存取控制清單 （DACL） 協調，以確定授予或拒絕的訪問類型。  
   
  `bOpenAsSelf`  
- [in] `true` 指定應該使用呼叫執行緒之進程的安全性內容來進行存取檢查;`false`，指定應該使用呼叫執行緒本身的安全性內容來執行存取檢查。 如果執行緒正在模擬用戶端，則安全性內容可以是用戶端進程的其中一個。  
+ [在]`true`指定應使用調用執行緒的進程的安全上下文進行訪問檢查;`false`指定應使用調用執行緒本身的安全上下文執行訪問檢查。 如果執行緒正在類比用戶端，則安全上下文可以是用戶端進程的安全上下文。  
   
  `phThreadToken`  
- 脫銷新開啟之存取權杖的指標。  
+ [出]指向新打開的訪問權杖的指標。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `OpenThreadToken`。|  
-|HOST_E_CLRNOTAVAILABLE|Common language runtime （CLR）尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|S_OK|`OpenThreadToken`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|公共語言運行時 （CLR） 尚未載入到進程中，或者 CLR 處於無法運行託管代碼或成功處理調用的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
-|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
-|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
-|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_NOT_OWNER|調用方不擁有鎖。|  
+|HOST_E_ABANDONED|當阻塞的執行緒或光纖等待事件時，事件已被取消。|  
+|E_FAIL|發生了未知的災難性故障。 當方法返回E_FAIL時，CLR 在進程中不再可用。 對託管方法的後續調用返回HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `IHostSecurityManager::OpenThreadToken` 的行為類似于相同名稱的對應 Win32 函式，不同之處在于 Win32 函式允許呼叫端將控制碼傳入任意執行緒，而 `IHostSecurityManager::OpenThreadToken` 只會開啟與呼叫執行緒相關聯的 token。  
+ `IHostSecurityManager::OpenThreadToken`行為行為類似于同名的相應 Win32 函數，只不過 Win32 函數允許調用方在控制碼中傳遞到任意執行緒，同時`IHostSecurityManager::OpenThreadToken`僅打開與調用執行緒關聯的權杖。  
   
- `HANDLE` 類型不符合 COM 標準，也就是說，它的大小是作業系統特有的，而且需要自訂封送處理。 因此，此權杖僅適用于在進程內的 CLR 與主控制項之間使用。  
+ 類型`HANDLE`不符合 COM，即其大小特定于作業系統，並且需要自訂封送。 因此，此權杖僅用於進程，在 CLR 和主機之間。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標題：** MSCorEE.h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MSCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IHostSecurityContext 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
 - [IHostSecurityManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)

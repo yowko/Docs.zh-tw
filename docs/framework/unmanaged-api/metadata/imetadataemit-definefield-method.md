@@ -15,68 +15,68 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: 40f24a4ea628ce92a27ab1bfe97fc87a57dfa4f0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8ca5ab70f60de4d783800fb18612a8f04cb9cee1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432554"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177707"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 方法
-使用指定的中繼資料簽章建立欄位的定義，並取得該欄位定義的 token。  
+為具有指定中繼資料簽名的欄位創建定義，並獲取該欄位定義的權杖。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT DefineField (   
-    [in]  mdTypeDef   td,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwFieldFlags,   
-    [in]  PCCOR_SIGNATURE pvSigBlob,   
-    [in]  ULONG       cbSigBlob,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue,   
-    [out] mdFieldDef  *pmd   
+HRESULT DefineField (
+    [in]  mdTypeDef   td,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwFieldFlags,
+    [in]  PCCOR_SIGNATURE pvSigBlob,
+    [in]  ULONG       cbSigBlob,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue,
+    [out] mdFieldDef  *pmd
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `td`  
- 在封入類別或介面的 `mdTypeDef` token。  
+ [在]封閉`mdTypeDef`類或介面的權杖。  
   
  `szName`  
- 在Unicode 中的功能變數名稱。  
+ [在]Unicode 中的欄位名稱。  
   
  `dwFieldFlags`  
- 在欄位屬性。 這是 `CorFieldAttr` 值的位元遮罩。  
+ [在]欄位屬性。 這是值的`CorFieldAttr`位元遮罩。  
   
  `pvSigBlob`  
- 在做為 BLOB 的欄位簽章。  
+ [在]欄位簽名作為 BLOB。  
   
  `cbSigBlob`  
- 在`pvSigBlob`中的位元組計數。  
+ [在]中的`pvSigBlob`位元組計數。  
   
  `dwCPlusTypeFlag`  
- 在常數值的 `ELEMENT_TYPE_` *\** 。 這是 `CorElementType` 值。 如果未定義欄位的常數值，請使用 `ELEMENT_TYPE_END`。  
+ [在]常`ELEMENT_TYPE_`*\** 量值的 。 這是一個`CorElementType`值。 如果未為欄位定義常量值，請使用`ELEMENT_TYPE_END`。  
   
  `pValue`  
- 在欄位的常數值。  
+ [在]欄位的常量值。  
   
  `cchValue`  
- 在`pValue`的（Unicode）字元大小。  
+ [在]的大小（Unicode）字元。 `pValue`  
   
  `pmd`  
- 脫銷指派的 `mdFieldDef` token。  
+ [出]分配的`mdFieldDef`權杖。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

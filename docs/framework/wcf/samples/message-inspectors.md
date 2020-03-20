@@ -2,12 +2,12 @@
 title: 訊息偵測器
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 29c7fd9729cbdcc99a05d01f717c1cc548e8d9ea
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 705401a182d5d816bc2682f5f21ff09ca95f21c7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714819"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144444"
 ---
 # <a name="message-inspectors"></a>訊息偵測器
 這個範例會示範如何實作與設定用戶端和服務訊息偵測器。  
@@ -16,7 +16,7 @@ ms.locfileid: "74714819"
   
  這個範例會實作基本用戶端和服務的訊息驗證機制，而這個驗證機制會對一組可設定的 XML 結構描述文件驗證傳入的訊息。 請注意，這個範例不會對每個作業驗證訊息。 這個作用則是針對簡化而設計。  
   
-## <a name="message-inspector"></a>訊息偵測器  
+## <a name="message-inspector"></a>訊息檢查  
  用戶端訊息偵測器會實作 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> 介面，而服務訊息偵測器會實作 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> 介面。 該實作可以從用於兩端的訊息偵測器結合至單一類別。 這個範例就會實作這類結合的訊息偵測器。 對已驗證之傳入和傳出訊息傳遞一組結構描述而建構偵測器，該偵測器並可讓開發人員指定是否要驗證傳入或傳出訊息，以及偵測器是否處於分派或用戶端模式，而這都會影響本主題之後會討論的錯誤處理方式。  
   
 ```csharp
@@ -65,7 +65,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
 {  
     if (validateReply)  
     {  
-        // Inspect the reply, catch a possible validation error   
+        // Inspect the reply, catch a possible validation error
         try  
         {  
             ValidateMessageBody(ref reply, false);  
@@ -74,7 +74,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
         {  
             // if a validation error occurred, the message is replaced  
             // with the validation fault.  
-            reply = Message.CreateMessage(reply.Version,   
+            reply = Message.CreateMessage(reply.Version,
                     fault.CreateMessageFault(), reply.Headers.Action);  
         }  
     }  
@@ -120,20 +120,20 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 {  
     if (!message.IsFault)  
     {  
-        XmlDictionaryReaderQuotas quotas =   
+        XmlDictionaryReaderQuotas quotas =
                 new XmlDictionaryReaderQuotas();  
-        XmlReader bodyReader =   
+        XmlReader bodyReader =
             message.GetReaderAtBodyContents().ReadSubtree();  
-        XmlReaderSettings wrapperSettings =   
+        XmlReaderSettings wrapperSettings =
                               new XmlReaderSettings();  
         wrapperSettings.CloseInput = true;  
         wrapperSettings.Schemas = schemaSet;  
-        wrapperSettings.ValidationFlags =   
+        wrapperSettings.ValidationFlags =
                                 XmlSchemaValidationFlags.None;  
         wrapperSettings.ValidationType = ValidationType.Schema;  
-        wrapperSettings.ValidationEventHandler += new   
+        wrapperSettings.ValidationEventHandler += new
            ValidationEventHandler(InspectionValidationHandler);  
-        XmlReader wrappedReader = XmlReader.Create(bodyReader,   
+        XmlReader wrappedReader = XmlReader.Create(bodyReader,
                                             wrapperSettings);  
   
         // pull body into a memory backed writer to validate  
@@ -143,11 +143,11 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
               XmlDictionaryWriter.CreateBinaryWriter(memStream);  
         xdw.WriteNode(wrappedReader, false);  
         xdw.Flush(); memStream.Position = 0;  
-        XmlDictionaryReader xdr =   
+        XmlDictionaryReader xdr =
         XmlDictionaryReader.CreateBinaryReader(memStream, quotas);  
   
         // reconstruct the message with the validated body  
-        Message replacedMessage =   
+        Message replacedMessage =
             Message.CreateMessage(message.Version, null, xdr);  
         replacedMessage.Headers.CopyHeadersFrom(message.Headers);  
         replacedMessage.Properties.CopyProperties(message.Properties);  
@@ -186,7 +186,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
         {  
             if (isRequest)  
             {  
-                // this fault is caught by the ServiceModel   
+                // this fault is caught by the ServiceModel
                 // infrastructure and turned into a fault reply.  
                 throw new RequestValidationFault(e.Message);  
              }  
@@ -202,18 +202,18 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>行為  
- 訊息偵測器為用戶端執行階段或分派執行階段的延伸項目。 這類延伸模組是使用*行為*來設定。 行為就是類別，而這個類別會透過變更預設組態或新增延伸項目 (例如訊息偵測器)，來變更服務模型執行階段的行為。  
+ 訊息偵測器為用戶端執行階段或分派執行階段的延伸項目。 此類擴展使用*行為*進行配置。 行為就是類別，而這個類別會透過變更預設組態或新增延伸項目 (例如訊息偵測器)，來變更服務模型執行階段的行為。  
   
  下列 `SchemaValidationBehavior` 類別是用來將此範例的訊息偵測器新增至用戶端或分派執行階段的行為。 在這兩個例子中，實作都相當基本。 在 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> 和 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> 中，會建立訊息偵測器並新增至相對之執行階段的 <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> 集合中。  
   
 ```csharp
 public class SchemaValidationBehavior : IEndpointBehavior  
 {  
-    XmlSchemaSet schemaSet;   
-    bool validateRequest;   
+    XmlSchemaSet schemaSet;
+    bool validateRequest;
     bool validateReply;  
   
-    public SchemaValidationBehavior(XmlSchemaSet schemaSet, bool   
+    public SchemaValidationBehavior(XmlSchemaSet schemaSet, bool
                            inspectRequest, bool inspectReply)  
     {  
         this.schemaSet = schemaSet;  
@@ -222,27 +222,27 @@ public class SchemaValidationBehavior : IEndpointBehavior
     }  
     #region IEndpointBehavior Members  
   
-    public void AddBindingParameters(ServiceEndpoint endpoint,   
-       System.ServiceModel.Channels.BindingParameterCollection   
+    public void AddBindingParameters(ServiceEndpoint endpoint,
+       System.ServiceModel.Channels.BindingParameterCollection
                                             bindingParameters)  
     {  
     }  
   
-    public void ApplyClientBehavior(ServiceEndpoint endpoint,   
+    public void ApplyClientBehavior(ServiceEndpoint endpoint,
             System.ServiceModel.Dispatcher.ClientRuntime clientRuntime)  
     {  
-        SchemaValidationMessageInspector inspector =   
-           new SchemaValidationMessageInspector(schemaSet,   
+        SchemaValidationMessageInspector inspector =
+           new SchemaValidationMessageInspector(schemaSet,
                       validateRequest, validateReply, true);  
             clientRuntime.MessageInspectors.Add(inspector);  
     }  
   
-    public void ApplyDispatchBehavior(ServiceEndpoint endpoint,   
-         System.ServiceModel.Dispatcher.EndpointDispatcher   
+    public void ApplyDispatchBehavior(ServiceEndpoint endpoint,
+         System.ServiceModel.Dispatcher.EndpointDispatcher
                                           endpointDispatcher)  
     {  
-        SchemaValidationMessageInspector inspector =   
-           new SchemaValidationMessageInspector(schemaSet,   
+        SchemaValidationMessageInspector inspector =
+           new SchemaValidationMessageInspector(schemaSet,
                         validateRequest, validateReply, false);  
    endpointDispatcher.DispatchRuntime.MessageInspectors.Add(inspector);  
     }  
@@ -259,7 +259,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 > 此特定行為不會兼做屬性，因此無法以宣告方式新增至服務類型的合約類型。 這是根據設計所做的決策，因為結構描述集合無法載入屬性宣告，而參考至此屬性中額外的組態位置 (例如，應用程式設定) 則表示所建立的組態項目，會與其他服務模型組態不一致。 因此，您只能以命令方式，透過程式碼和服務模型組態延伸項目新增此行為。  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>透過組態新增訊息偵測器  
- 若要在應用程式佈建檔中的端點上設定自訂行為，服務模型會要求實施者建立由衍生自 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>之類別所代表的設定*延伸元素*。 針對如本節所討論之下列延伸項目所示的延伸項目，此延伸項目必須新增至服務模型的組態區段。  
+ 為了在應用程式佈建檔中的終結點上配置自訂行為，服務模型要求實現者創建由 派生的<xref:System.ServiceModel.Configuration.BehaviorExtensionElement>類表示的配置*擴展元素*。 針對如本節所討論之下列延伸項目所示的延伸項目，此延伸項目必須新增至服務模型的組態區段。  
   
 ```xml  
 <system.serviceModel>  
@@ -285,7 +285,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
         <behavior name="HelloServiceEndpointBehavior">  
           <schemaValidator validateRequest="True" validateReply="True">  
             <schemas>  
-              <add location="messages.xsd" />    
+              <add location="messages.xsd" />
             </schemas>  
           </schemaValidator>  
         </behavior>  
@@ -306,12 +306,12 @@ public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement
     {  
     }  
   
-    public override Type BehaviorType   
-    {   
+    public override Type BehaviorType
+    {
         get  
         {  
             return typeof(SchemaValidationBehavior);  
-        }   
+        }
     }  
   
     protected override object CreateBehavior()  
@@ -319,15 +319,15 @@ public class SchemaValidationBehaviorExtensionElement : BehaviorExtensionElement
         XmlSchemaSet schemaSet = new XmlSchemaSet();  
         foreach (SchemaConfigElement schemaCfg in this.Schemas)  
         {  
-            Uri baseSchema = new   
+            Uri baseSchema = new
                 Uri(AppDomain.CurrentDomain.BaseDirectory);  
-            string location = new   
+            string location = new
                 Uri(baseSchema,schemaCfg.Location).ToString();  
-            XmlSchema schema =   
+            XmlSchema schema =
                 XmlSchema.Read(new XmlTextReader(location), null);  
             schemaSet.Add(schema);  
         }  
-     return new   
+     return new
      SchemaValidationBehavior(schemaSet,ValidateRequest,ValidateReply);  
     }  
   
@@ -346,8 +346,8 @@ public bool ValidateRequest
         }  
   
      //Declare the Schema collection property.  
-     //Note: the "IsDefaultCollection = false" instructs   
-     //.NET Framework to build a nested section of   
+     //Note: the "IsDefaultCollection = false" instructs
+     //.NET Framework to build a nested section of
      //the kind <Schema> ...</Schema>.  
     [ConfigurationProperty("schemas", IsDefaultCollection = true)]  
     [ConfigurationCollection(typeof(SchemasCollection),  
@@ -376,11 +376,11 @@ try
     GenericClient client = new GenericClient();  
   
     // Configure client programmatically, adding behavior  
-    XmlSchema schema = XmlSchema.Read(new StreamReader("messages.xsd"),   
+    XmlSchema schema = XmlSchema.Read(new StreamReader("messages.xsd"),
                                                           null);  
     XmlSchemaSet schemaSet = new XmlSchemaSet();  
     schemaSet.Add(schema);  
-    client.Endpoint.Behaviors.Add(new   
+    client.Endpoint.Behaviors.Add(new
                 SchemaValidationBehavior(schemaSet, true, true));  
   
     Console.WriteLine("--- Sending valid client request:");  
@@ -398,17 +398,17 @@ catch (Exception e)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
+2. 要生成解決方案，請按照生成 Windows[通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的說明進行操作。  
   
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

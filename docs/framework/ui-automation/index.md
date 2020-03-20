@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 49d2988cbad33497f2214098bcde68f7d5434b5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965863"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180029"
 ---
 # <a name="microsoft-ui-automation"></a>Microsoft UI 自動化
 
 > [!NOTE]
-> 本檔適用于想要使用 <xref:System.Windows.Automation> 命名空間中所定義之受控 UI 自動化類別的 .NET 開發人員。 如需 UI 自動化的最新資訊，請參閱[Windows AUTOMATION API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。
+> 本文檔適用于希望使用命名空間中定義的託管 UI 自動化類的<xref:System.Windows.Automation>.NET 開發人員。 有關 UI 自動化的最新資訊，請參閱[Windows 自動化 API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。
 
- Microsoft 使用者介面自動化是適用于 Microsoft Windows 的協助工具架構。 它藉由提供以程式設計方式存取使用者介面（UI）的相關資訊，滿足輔助技術產品和自動化測試架構的需求。 此外，使用者介面自動化可讓控制項和應用程式開發人員將其產品設為可存取。
+ 微軟 UI 自動化是微軟 Windows 的協助工具框架。 它通過提供對使用者介面 （UI） 資訊的程式設計訪問，滿足輔助技術產品和自動化測試框架的需求。 此外，UI 自動化使控制和應用程式開發人員能夠使其產品易於訪問。
 
- 本檔說明適用于 managed 程式碼的 UI 自動化 API。 如需中C++Ui 自動化程式設計的詳細資訊，請參閱[Win32 應用程式的 ui 自動化](/windows/desktop/winauto/windows-automation-api-portal)。
+ 本文檔介紹託管代碼的 UI 自動化 API。 有關C++ UI 自動化程式設計的資訊，請參閱[Win32 應用程式的 UI 自動化](/windows/desktop/winauto/windows-automation-api-portal)。
 
 ## <a name="in-this-section"></a>本節內容
 
 - [協助工具最佳做法](accessibility-best-practices.md)
-- [使用者介面自動化基礎觀念](ui-automation-fundamentals.md)
-- [Managed 程式碼的使用者介面自動化提供者](ui-automation-providers-for-managed-code.md)
+- [UI 自動化基礎知識](ui-automation-fundamentals.md)
+- [使用 Managed 程式碼的 UI 自動化提供者](ui-automation-providers-for-managed-code.md)
 - [Managed 程式碼的使用者介面自動化用戶端](ui-automation-clients-for-managed-code.md)
 - [使用者介面自動化控制項模式](ui-automation-control-patterns.md)
-- [使用者介面自動化文字模式](ui-automation-text-pattern.md)
-- [UI Automation Control Types](ui-automation-control-types.md)
+- [UI 自動化的文字模式](ui-automation-text-pattern.md)
+- [UI 自動化控制項類型](ui-automation-control-types.md)
 
 ## <a name="related-sections"></a>相關章節
 
-- [協助工具範例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [協助工具範例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)

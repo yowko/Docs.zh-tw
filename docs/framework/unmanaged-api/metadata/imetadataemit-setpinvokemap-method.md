@@ -15,48 +15,48 @@ helpviewer_keywords:
 ms.assetid: c6bfd574-1da3-4ba7-82f2-46ca5efcbaba
 topic_type:
 - apiref
-ms.openlocfilehash: 4e2a78e2d049e952aa1be0b3a8fd640eb18d0320
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4c68754bc44fe035fd8e7143c52895928beae395
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440577"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175586"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>IMetaDataEmit::SetPinvokeMap 方法
-設定或變更方法之 PInvoke 簽章的功能，如先前的 IMetaDataEmit 呼叫所定義[：:D 的 efinepinvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)。  
+設置或更改方法的 PInvoke 簽名的功能，由之前調用[IMetaDataEmit：:DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md)定義。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT SetPinvokeMap (   
-    [in]  mdToken      tk,   
+HRESULT SetPinvokeMap (
+    [in]  mdToken      tk,
     [in]  DWORD        dwMappingFlags,  
-    [in]  LPCWSTR      szImportName,   
-    [in]  mdModuleRef  mrImportDLL   
+    [in]  LPCWSTR      szImportName,
+    [in]  mdModuleRef  mrImportDLL
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `tk`  
- 在套用對應資訊的 `mdToken`。  
+ [在]映射`mdToken`資訊應用於的。  
   
  `dwMappingFlags`  
- 在PInvoke 用來執行對應的旗標。 這是 `CorPinvokeMap` 值的位元遮罩。  
+ [在]PInvoke 用於執行映射的標誌。 這是值的`CorPinvokeMap`位元遮罩。  
   
  `szImportName`  
- 在原生 DLL 中的目標匯出名稱。  
+ [在]本機 DLL 中的目標匯出的名稱。  
   
  `mrImportDLL`  
- 在目標非受控 DLL 的 `mdModuleRef` token。  
+ [在]目標`mdModuleRef`非託管 DLL 的權杖。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

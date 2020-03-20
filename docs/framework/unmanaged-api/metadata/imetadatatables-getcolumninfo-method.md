@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-ms.openlocfilehash: 854d3ad28cc00c03e903b9e1d2ce3863e3ceef17
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cc8aac32149fed952737d928e16a8f6efc448c79
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436102"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177127"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo 方法
-取得指定資料表中指定之資料行的相關資料。  
+獲取有關指定表中指定列的資料。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT GetColumnInfo (   
+HRESULT GetColumnInfo (
     [in]  ULONG        ixTbl,  
     [in]  ULONG        ixCol,  
     [out] ULONG        *poCol,  
@@ -42,59 +42,59 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- 在所需資料表的索引。  
+ [在]所需表的索引。  
   
  `ixCol`  
- 在所需資料行的索引。  
+ [在]所需列的索引。  
   
  `poCol`  
- 脫銷資料列中資料行位移的指標。  
+ [出]指向行中列偏移的指標。  
   
  `pcbCol`  
- 脫銷資料行大小的指標，以位元組為單位。  
+ [出]指向列的大小（以位元組為單位）的指標。  
   
  `pType`  
- 脫銷資料行中數值型別的指標。  
+ [出]指向列中數值型別的指標。  
   
  `ppName`  
- 脫銷指向資料行名稱之指標的指標。  
- 
+ [出]指向列名稱的指標。  
+
 ## <a name="remarks"></a>備註
 
-傳回的資料行類型落在值的範圍內：
+返回的列類型在值範圍內：
 
-| pType                    | 描述   | Helper 函式                   |
+| p類型                    | 描述   | 説明器功能                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`。`iRidMax`<br>（0到63）   | 掉           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`。`iCodedTokenMax`<br>（64. 95） | 程式碼標記 | **IsCodedTokenType** <br>**IsRidOrToken** |
-| `iSHORT` （96）            | Int16         | **IsFixedType**                   |
-| `iUSHORT` （97）           | UInt16        | **IsFixedType**                   |
-| `iLONG` （98）             | Int32         | **IsFixedType**                   |
-| `iULONG` （99）            | UInt32        | **IsFixedType**                   |
-| `iBYTE` （100）            | 位元組          | **IsFixedType**                   |
-| `iSTRING` （101）          | 字串        | **IsHeapType**                    |
-| `iGUID` （102）            | GUID          | **IsHeapType**                    |
-| `iBLOB` （103）            | Blob          | **IsHeapType**                    |
+| `0`..`iRidMax`<br>(0..63)   | 擺脫           | **IsRidType**<br>**IsRidorToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | 編碼權杖 | **已編碼權杖類型** <br>**IsRidorToken** |
+| `iSHORT`(96)            | Int16         | **固定類型**                   |
+| `iUSHORT`(97)           | UInt16        | **固定類型**                   |
+| `iLONG`(98)             | Int32         | **固定類型**                   |
+| `iULONG`(99)            | UInt32        | **固定類型**                   |
+| `iBYTE`(100)            | Byte          | **固定類型**                   |
+| `iSTRING`(101)          | String        | **IsHeap 類型**                    |
+| `iGUID`(102)            | Guid          | **IsHeap 類型**                    |
+| `iBLOB`(103)            | Blob          | **IsHeap 類型**                    |
 
-您可以使用下列方式來讀取儲存在*堆積*中的值（也就是 `IsHeapType == true`）：
+可以使用以下方式讀取堆中存儲*的值（即* `IsHeapType == true`），
 
-- `iSTRING`： **IMetadataTables. GetString**
-- `iGUID`： **IMetadataTables. GetGUID**
-- `iBLOB`： **IMetadataTables. GetBlob**
+- `iSTRING`**：IMetadatatables.GetString**
+- `iGUID`**：IMetadatatables.GetGUID**
+- `iBLOB`**：IMetadatatables.獲取Blob**
 
 > [!IMPORTANT]
-> 若要使用上表中所定義的常數，請包含*cor*標頭檔所提供的指示詞 `#define _DEFINE_META_DATA_META_CONSTANTS`。
+> 要使用上表中定義的常量，請包括`#define _DEFINE_META_DATA_META_CONSTANTS`*cor.h*標標頭檔提供的指令。
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

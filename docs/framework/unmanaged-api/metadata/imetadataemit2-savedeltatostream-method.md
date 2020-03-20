@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: ecd786e8-f9a4-4190-a6ef-af18e8c6d654
 topic_type:
 - apiref
-ms.openlocfilehash: b5da781f148c23efcc909ad65e198e4f3c6fe5b5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7e8376f3a029b0e3ec51a1e7587dd14b3e7530ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447880"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177418"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream 方法
-將目前的「編輯後繼續」會話的變更儲存至指定的資料流程。  
+將更改從當前編輯和繼續會話保存到指定的流。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT SaveDeltaToStream (  
-    [in] IStream     *pIStream,   
+    [in] IStream     *pIStream,
     [in] DWORD       dwSaveFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `pIStream`  
- 在要儲存變更之可寫入資料流程的介面指標。  
+ [在]指向要保存到的可寫流的介面指標。  
   
  `dwSaveFlags`  
- [in] 保留。 這個值必須是零。  
+ [in] 保留。 這個值必須為零。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

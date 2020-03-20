@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 63d8260c-fb32-4f8f-a357-768afd570f68
 topic_type:
 - apiref
-ms.openlocfilehash: 834292192aa447a113372bc8807041954b39a115
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 93afe1afd9ea9637d039a8b4a4e81267d49c08b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937763"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176223"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx 方法
-從公開/私密金鑰組取得公開金鑰，並指定雜湊演算法和簽章演算法。  
+從公開金鑰/私密金鑰對獲取公開金鑰，並指定雜湊演算法和簽名演算法。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT StrongNameGetPublicKey (   
+HRESULT StrongNameGetPublicKey (
     [in]  LPCWSTR   pwzKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  
     [in]  ULONG     cbKeyBlob,  
@@ -41,43 +41,43 @@ HRESULT StrongNameGetPublicKey (
   
 ## <a name="parameters"></a>參數  
  `pwzKeyContainer`  
- 在包含公開/私密金鑰組的金鑰容器名稱。 如果 `pbKeyBlob` 為 null，`szKeyContainer` 必須在密碼編譯服務提供者（CSP）內指定有效的容器。 在此情況下，`StrongNameGetPublicKeyEx` 方法會從儲存在容器中的金鑰組中，抽取出公開金鑰。  
+ [在]包含公開金鑰/私密金鑰對的金鑰容器的名稱。 如果`pbKeyBlob`為 null，`szKeyContainer`則必須在加密服務提供者 （CSP） 中指定有效的容器。 在這種情況下，`StrongNameGetPublicKeyEx`該方法從存儲在容器中的金鑰組中提取公開金鑰。  
   
- 如果 `pbKeyBlob` 不是 null，則會假設金鑰組包含在金鑰二進位大型物件（BLOB）中。  
+ 如果`pbKeyBlob`不是空，則假定金鑰組包含在金鑰二進位大型物件 （BLOB） 中。  
   
- 金鑰必須是 1024-bit Rivest-Shamir-Adleman （RSA）簽署金鑰。 目前不支援其他類型的金鑰。  
+ 金鑰必須是 1024 位裡維斯-沙米爾-阿德爾曼 （RSA） 簽名金鑰。 目前不支援其他類型的金鑰。  
   
  `pbKeyBlob`  
- 在公開/私密金鑰組的指標。 這組會使用 Win32 `CryptExportKey` 函式所建立的格式。 如果 `pbKeyBlob` 是 null，則會假設 `szKeyContainer` 指定的金鑰容器包含金鑰組。  
+ [在]指向公開金鑰/私密金鑰對的指標。 此對採用 Win32`CryptExportKey`函數創建的格式。 如果`pbKeyBlob`為 null，則假定 指定的`szKeyContainer`鍵容器包含金鑰組。  
   
  `cbKeyBlob`  
- 在`pbKeyBlob`的大小（以位元組為單位）。  
+ [在]的大小（以位元組為單位）的大小`pbKeyBlob`。  
   
  `ppbPublicKeyBlob`  
- 脫銷傳回的公開金鑰 BLOB。 `ppbPublicKeyBlob` 參數是由 common language runtime 所配置，並會傳回給呼叫者。 呼叫端必須使用[ICLRStrongName：： StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法來釋放記憶體。  
+ [出]返回的公開金鑰 BLOB。 參數`ppbPublicKeyBlob`由通用語言運行時分配並返回到調用方。 調用方必須使用[ICLRStrongNameName：：StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)方法釋放記憶體。  
   
  `pcbPublicKeyBlob`  
- 脫銷傳回的公開金鑰 BLOB 的大小。  
+ [出]返回的公開金鑰 BLOB 的大小。  
   
  `uHashAlgId`  
- 在元件雜湊演算法。 如需接受值的清單，請參閱備註一節。  
+ [在]程式集雜湊演算法。 有關已接受值的清單，請參閱備註部分。  
   
  `uReserved`  
- 在保留供日後使用;預設值為 null。  
+ [在]保留供將來使用;預設值為 null。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法順利完成，`S_OK`;否則，就是表示失敗的 HRESULT 值（請參閱清單的[一般 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
+ `S_OK`如果方法成功完成;如果方法成功完成;否則，指示失敗的 HRESULT 值（請參閱清單[的常用 HRESULT 值](/windows/win32/seccrypto/common-hresult-values)）。  
   
 ## <a name="remarks"></a>備註  
  公開金鑰包含在[PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)結構中。  
   
 ## <a name="remarks"></a>備註  
- 下表顯示 `uHashAlgId` 參數的可接受值集。  
+ 下表顯示了`uHashAlgId`參數的接受值集。  
   
-|Name|{2&gt;值&lt;2}|  
+|名稱|值|  
 |----------|-----------|  
 |None|0|  
-|SHA-1|0x8004|  
+|SHA-1|0 x8004|  
 |SHA-256|0x800c|  
 |SHA-384|0x800d|  
 |SHA-512|0x800e|  
@@ -85,13 +85,13 @@ HRESULT StrongNameGetPublicKey (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** MetaHost。h  
+ **標題：** MetaHost.h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MSCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [StrongNameTokenFromPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
 - [PublicKeyBlob 結構](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)

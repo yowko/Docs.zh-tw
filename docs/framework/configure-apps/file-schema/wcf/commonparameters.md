@@ -2,23 +2,23 @@
 title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: ab21be7b5e2738ac6a7c9bea676d8180c69d1afd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 73d8549f68e8ca77115619431c857c4a2aac3fdf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968559"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153018"
 ---
-# <a name="commonparameters"></a>\<commonParameters >
+# <a name="commonparameters"></a>\<共同參數>
 代表參數集合，這些參數可跨多項服務全域使用。 這個集合通常會包含資料庫連線字串，這個字串可能會由長期服務所共用。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<system system.servicemodel >** ](system-servicemodel.md) \
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<行為 >** ](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowRuntime >** ](workflowruntime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**commonParameters >**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<系統.服務模式>**](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<行為>**](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<服務行為>**](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<行為>**](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<工作流運行時>**](workflowruntime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<公共參數>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,22 +32,22 @@ ms.locfileid: "73968559"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<add>](add-of-commonparameters.md)|將服務所使用的一般名稱/值組參數加入至集合。|  
+|[\<添加>](add-of-commonparameters.md)|將服務所使用的一般名稱/值組參數加入至集合。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<workflowRuntime >](workflowruntime.md)|指定 <xref:System.Workflow.Runtime.WorkflowRuntime> 的實例設定，以裝載以工作流程為基礎的 Windows Communication Foundation （WCF）服務。|  
+|[\<工作流運行時>](workflowruntime.md)|指定<xref:System.Workflow.Runtime.WorkflowRuntime>託管基於工作流的 Windows 通信基礎 （WCF） 服務的實例的設置。|  
   
 ## <a name="remarks"></a>備註  
  `<commonParameters>` 項目定義全球多種服務間使用的所有參數，例如在使用 `ConnectionString` 時的 <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>。  
@@ -57,7 +57,7 @@ ms.locfileid: "73968559"
 
 ```xml  
 <add
-type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" 
+type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
 ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />
 ```  
   
@@ -80,9 +80,9 @@ ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated
 </workflowRuntime>
 ```  
   
- 請注意，您可以在全域層級（如*CommonParameters*一節所示），或針對支援 `EnableRetries` 的個別服務（如 [*服務*] 區段中所示），設定 `EnableRetries` 參數。  
+ 請注意，`EnableRetries`參數可以在全域級別設置（如 *"通用參數*"部分所示），也可以設置支援`EnableRetries`的各個服務（如 *"服務*"部分所示）。  
   
- 下列範例程式碼示範如何以程式設計方式變更一般參數：
+ 以下示例代碼演示如何以程式設計方式更改公共參數：
   
 ```csharp  
 Configuration config = WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");
@@ -92,7 +92,7 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- 如需使用設定檔來控制 Windows Workflow Foundation 主應用程式之 <xref:System.Workflow.Runtime.WorkflowRuntime> 物件行為的詳細資訊，請參閱[工作流程設定檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
+ 有關使用設定檔控制 Windows 工作流基礎主機應用程式<xref:System.Workflow.Runtime.WorkflowRuntime>物件的行為的詳細資訊，請參閱[工作流設定檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))。  
   
 ## <a name="example"></a>範例  
   
@@ -105,12 +105,12 @@ config.Save();
 </commonParameters>
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
 - <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
 - <xref:System.Workflow.Runtime.WorkflowRuntime>
 - <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>
 - <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>
-- [工作流程設定檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
-- [\<add>](add-of-commonparameters.md)
+- [工作流程組態檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+- [\<添加>](add-of-commonparameters.md)

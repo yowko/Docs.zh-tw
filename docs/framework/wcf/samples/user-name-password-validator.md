@@ -2,23 +2,23 @@
 title: 使用者名稱密碼驗證程式
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 5e128c8dde14d67a77eeb6f33a99723ddbdfbd9a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 202c7bfc7f60afbad8220950e46c08c0a71eb001
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715311"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183241"
 ---
 # <a name="user-name-password-validator"></a>使用者名稱密碼驗證程式
 這個範例會示範如何實作自訂的 UserNamePassword 驗證程式。 當內建 UserNamePassword 驗證模式都不符合應用程式需求時，這個驗證程式就很有用；例如，當使用者名稱/密碼組儲存在某些外部存放區時，例如資料庫中。 這個範例示範的服務具有可檢查兩組特定使用者名稱/密碼組的自訂驗證程式。 用戶端會使用這些使用者名稱/密碼組來向服務驗證。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "74715311"
 
 - 伺服器是使用該伺服器的 X.509 憑證來驗證的。
 
- 服務會公開單一端點，以便與使用設定檔 App.config 定義的服務進行通訊。端點是由位址、系結和合約所組成。 系結是以標準 `wsHttpBinding` 設定，預設為使用 WS-安全性和使用者名稱驗證。 服務行為會指定 `Custom` 模式，以驗證用戶端使用者名稱/密碼組以及該驗證程式類別的類型。 行為也會使用 `serviceCertificate` 項目來指定伺服器憑證。 伺服器憑證必須包含相同的 `SubjectName` 值，做為[\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)中的 `findValue`。
+ 該服務公開了用於與服務通信的單個終結點，該終結點使用設定檔 App.config 進行定義。終結點由位址、綁定和協定組成。 綁定配置的標準`wsHttpBinding`預設使用 WS-安全和使用者名身份驗證。 服務行為會指定 `Custom` 模式，以驗證用戶端使用者名稱/密碼組以及該驗證程式類別的類型。 行為也會使用 `serviceCertificate` 項目來指定伺服器憑證。 伺服器憑證必須包含`SubjectName`與`findValue`[\<服務證書中的](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)相同的值，>。
 
 ```xml
 <system.serviceModel>
@@ -278,22 +278,22 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例
 
-1. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。
+1. 要生成解決方案，請按照生成 Windows[通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的說明進行操作。
 
 2. 若要在單一或跨電腦的組態中執行本範例，請使用下列指示。
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例
 
-1. 在 Visual Studio 2012 命令提示字元中，從範例安裝資料夾執行安裝程式 .bat。 這會安裝執行範例所需的所有憑證。
+1. 在 Visual Studio 2012 命令提示符中從示例安裝資料夾中運行安裝程式.bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
-    > 安裝 .bat 批次檔是設計用來從 Visual Studio 2012 命令提示字元執行。 在 Visual Studio 2012 命令提示字元中設定的 PATH 環境變數會指向包含安裝程式 .bat 腳本所需之可執行檔的目錄。  
+    > Setup.bat 批次檔旨在從視覺化工作室 2012 命令提示符運行。 Visual Studio 2012 命令提示器中設置的 PATH 環境變數指向包含安裝程式.bat 腳本所需的可執行檔的目錄。  
   
 2. 從 service\bin 啟動 Service.exe。  
   
 3. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端和服務無法通信，請參閱[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
@@ -315,7 +315,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 9. 在用戶端機器上，從命令提示字元視窗啟動 Client.exe。  
   
-10. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+10. 如果用戶端和服務無法通信，請參閱[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

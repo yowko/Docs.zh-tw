@@ -15,56 +15,56 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 5d985e22ba77053127610445374b8c13ca6b97f1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3b8fd9876563bace52a6088747d1ca4ed26ea872
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431699"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175807"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType 方法
-建立類型定義的中繼資料簽章、傳回該類型的 `mdTypeDef` token，並指定定義的類型是由 `tdEncloser` 參數所參考之類型的成員。  
+創建類型定義的中繼資料簽名，返回該類型的`mdTypeDef`權杖，並指定定義的類型是`tdEncloser`參數引用的類型的成員。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT DefineNestedType (   
+HRESULT DefineNestedType (
     [in]  LPCWSTR     szTypeDef,  
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
-    [in]  mdTypeDef   tdEncloser,   
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
+    [in]  mdTypeDef   tdEncloser,
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `szTypeDef`  
- 在Unicode 中的類型名稱。  
+ [在]Unicode 中類型的名稱。  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` 屬性。 這是 `CorTypeAttr` 值的位元遮罩。  
+ [在]`TypeDef`屬性。 這是值的`CorTypeAttr`位元遮罩。  
   
  `tkExtends`  
- 在基類的 token。 這可以是 `mdTypeDef` 或 `mdTypeRef` token。  
+ [在]基類的權杖。 這是 或`mdTypeDef``mdTypeRef`標記。  
   
  `rtkImplements`[]  
- 在權杖的陣列，指定此類別或介面所執行的介面。  
+ [在]指定此類或介面實現的介面的權杖陣列。  
   
  `tdEncloser`  
- 在封入類型的 token。 陣列的最後一個元素必須 `mdTokenNil`。  
+ [在]封閉類型的標記。 陣列的最後一個元素必須是`mdTokenNil`。  
   
  `ptd`  
- 脫銷指派的 `mdTypeDef` token。  
+ [出]分配的`mdTypeDef`權杖。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

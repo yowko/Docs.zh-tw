@@ -3,22 +3,22 @@ title: <x509SecurityTokenHandlerRequirement>
 ms.date: 03/30/2017
 ms.assetid: aca22c2c-5ae7-42af-9bbd-15c2524692ce
 author: BrucePerlerMS
-ms.openlocfilehash: 76eeea635fd65486a1c16bea15a49018876dae99
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 30ce69a35cfdd34e0dfea5c682347eb9187e04ed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251685"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152446"
 ---
-# <a name="x509securitytokenhandlerrequirement"></a>\<x509SecurityTokenHandlerRequirement>
-提供<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>類別或衍生類別的選擇性設定。  
+# <a name="x509securitytokenhandlerrequirement"></a>\<x509 安全權杖處理常式要求>
+為<xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>類或派生類提供可選配置。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<新增 >** ](add.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<x509SecurityTokenHandlerRequirement >**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<系統.身份模型>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<身份配置>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<安全權杖處理常式>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<添加>**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<x509 安全權杖處理常式要求>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,34 +41,34 @@ ms.locfileid: "70251685"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode>值, 指定要用於 x.509 憑證的驗證模式。 預設值為 "PeerOrChainTrust"。|  
-|mapToWindows|指定權杖處理常式是否應使用傳入的 UPN 宣告, 將驗證權杖對應至 Windows 帳戶。 預設值為 "false"。|  
-|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>值, 指定要用於 x.509 憑證的撤銷模式。 預設值為 "Online"。|  
-|trustedStoreLocation|<xref:System.Security.Cryptography.X509Certificates.StoreLocation>值, 指定 x.509 憑證存放區。 預設值為 "LocalMachine"。|  
-|certificateValidator|衍生自的自訂類型<xref:System.IdentityModel.Selectors.X509CertificateValidator>。 `certificateValidationMode`如果屬性為 "Custom", 則會使用此類型的實例進行簽發者憑證驗證。|  
+|certificateValidationMode|指定<xref:System.ServiceModel.Security.X509CertificateValidationMode>要用於 X.509 憑證的驗證模式的值。 預設值為"對等或鏈信任"。|  
+|地圖到視窗|指定權杖處理常式是否應通過使用傳入的 UPN 聲明將驗證權杖映射到 Windows 帳戶。 預設值為 "false"。|  
+|revocationMode|指定<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>要用於 X.509 憑證的吊銷模式的值。 預設值為"連線"。|  
+|trustedStoreLocation|指定<xref:System.Security.Cryptography.X509Certificates.StoreLocation>X.509 憑證存儲的值。 預設值為"本地電腦"。|  
+|證書驗證器|派生自<xref:System.IdentityModel.Selectors.X509CertificateValidator>的自訂類型。 如果`certificateValidationMode`屬性為"自訂"，則此類型的實例用於頒發者證書驗證。|  
   
 ### <a name="child-elements"></a>子元素  
  None  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<add>](add.md)|將指定的安全性權杖處理常式加入至權杖處理常式集合。|  
+|[\<添加>](add.md)|將指定的安全權杖處理常式添加到權杖處理常式集合。|  
   
 ## <a name="example"></a>範例  
   
 ```xml  
 <add type="System.IdentityModel.Tokens.X509SecurityTokenHandler, System.IdentityModel">  
-    <x509SecurityTokenHandlerRequirement mapToWindows="true"   
-                                         certificateValidationMode="PeerOrChainTrust"   
-                                         revocationMode="Online"   
+    <x509SecurityTokenHandlerRequirement mapToWindows="true"
+                                         certificateValidationMode="PeerOrChainTrust"
+                                         revocationMode="Online"
                                          trustedStoreLocation="LocalMachine" />  
 </add>  
 ```

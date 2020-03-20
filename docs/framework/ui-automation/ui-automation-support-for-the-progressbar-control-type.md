@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ProgressBar control type
 - UI Automation, Progress Bar control type
 ms.assetid: 302e778c-24b0-4789-814a-c8d37cf53a5f
-ms.openlocfilehash: b066aef5e716683503210ca20721cfaf3e0492d9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5c21bbae1db1c2bbb6c4bbf04cb2aa386907dcc2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794029"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179636"
 ---
 # <a name="ui-automation-support-for-the-progressbar-control-type"></a>ProgressBar 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -21,23 +21,23 @@ ms.locfileid: "76794029"
   
  進度列控制項是實作進度列控制項類型的控制項範例。 進度列控制項可用來表示長時間作業的進度。 此控制項包含一個矩形，隨著作業的進度，會逐漸填滿系統的醒目提示色彩。  
   
- 下列章節會定義進度列控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求適用于所有清單控制項，無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 或 Windows Forms。  
+ 下列章節會定義進度列控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有清單控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
+<a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
- 下表描述進度列控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Properties Overview](ui-automation-tree-overview.md)需求都適用於所有清單控制項。  
+ 下表描述進度列控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](ui-automation-tree-overview.md)。  
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|ProgressBar|ProgressBar|  
+|進度列|進度列|  
   
  進度列控制項在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項或內容檢視中沒有任何子系。  
   
-<a name="Required_UI_Automation_Properties"></a>   
+<a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
- 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與進度列控制項特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。  
+ 下表列出 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與進度列控制項特別有關。 有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]屬性的詳細資訊，請參閱[用戶端的 UI 自動化屬性](ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|{2&gt;值&lt;2}|注意事項|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|請參閱備註。|包含整個控制項的最外層矩形。|  
@@ -45,41 +45,41 @@ ms.locfileid: "76794029"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|進度列控制項的名稱通常來自靜態文字標籤。 如果沒有靜態文字標籤，應用程式開發人員就必須公開 `Name` 屬性的值。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|請參閱備註。|如果有靜態文字標籤，那麼這個屬性必須公開該控制項的參考。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ProgressBar|此值與所有使用者介面架構的值相同。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|進度列|此值與所有使用者介面架構的值相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「進度列」|對應到進度列控制項類型的當地語系化字串。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|True|此進度列控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|True|此進度列控制項一律包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視。|  
   
-<a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>   
+<a name="Required_UI_Automation_Control_Patterns_and_Properties"></a>
 ## <a name="required-ui-automation-control-patterns-and-properties"></a>必要的使用者介面自動化控制項模式和屬性  
  下表列出進度列控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
-|控制項模式/模式屬性|支援/值|注意事項|  
+|控制項模式/模式屬性|支援/值|注意|  
 |---------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|視情況而定|以文字表示進度的進度列控制項必須實作 <xref:System.Windows.Automation.Provider.IValueProvider>。|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|相依|以文字表示進度的進度列控制項必須實作 <xref:System.Windows.Automation.Provider.IValueProvider>。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider.IsReadOnly%2A>|True|這個屬性的值一律為 True。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>|請參閱備註。|此屬性會公開進度列控制項的文字進度。|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|視情況而定|使用數值範圍的進度列控制項必須實作 <xref:System.Windows.Automation.Provider.IRangeValueProvider>。|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|相依|使用數值範圍的進度列控制項必須實作 <xref:System.Windows.Automation.Provider.IRangeValueProvider>。|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Minimum%2A>|0.0|這個屬性的值是控制項可以設定的最小值。|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Maximum%2A>|100.0|這個屬性的值是控制項可以設定的最大值。|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange%2A>|NaN|這個屬性不是必要項，因為進度列控制項是唯讀的。|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.LargeChange%2A>|NaN|這個屬性不是必要項，因為進度列控制項是唯讀的。|  
   
-<a name="Required_UI_Automation_Events"></a>   
+<a name="Required_UI_Automation_Events"></a>
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
- 下表列出所有進度列控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](ui-automation-events-overview.md)。  
+ 下表列出所有進度列控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需 [UI Automation Events Overview](ui-automation-events-overview.md)事件的詳細資訊，請參閱  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意事項|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 屬性變更事件。|必要|None|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性變更事件。|視情況而定|None|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> 屬性變更事件。|相依|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|None|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Automation.ControlType.ProgressBar>
 - [UI 自動化控制項類型概觀](ui-automation-control-types-overview.md)

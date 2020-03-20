@@ -11,12 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: f04b40edde0755315f3b4fd4284fc7c804a54313
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11eb4c9bc4ba1b1fe9051a04d12f893e693fb175
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130036"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180466"
 ---
 # <a name="security-issues-in-reflection-emit"></a>反映發出中的安全性問題
 .NET Framework 提供三種發出 Microsoft 中繼語言 (MSIL) 的方式，每種都有它自己的安全性問題：  
@@ -25,16 +25,16 @@ ms.locfileid: "73130036"
   
 - [匿名裝載的動態方法](#Anonymously_Hosted_Dynamic_Methods)  
   
-- [與現有組件建立關聯的動態方法](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
+- [與現有組件相關聯的動態方法](#Dynamic_Methods_Associated_with_Existing_Assemblies)  
   
  無論您產生動態程式碼的方式為何，執行產生的程式碼需要所有權限，這些是產生的程式碼所使用之類型和方法所需的。  
   
 > [!NOTE]
 > 針對程式碼進行反射及發出程式碼所需權限已在後續發行的 .NET Framework 中變更。 請參閱本主題稍後的[版本資訊](#Version_Information)。  
   
-<a name="Dynamic_Assemblies"></a>   
+<a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>動態組件  
- 使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的多載來建立動態組件。 由於刪除全機器安全性原則，因此這個方法的大部分多載已在 .NET Framework 4 中遭取代。 （請參閱[安全性變更](../security/security-changes.md)。）無論信任層級為何，其餘的多載都可以由任何程式碼執行。 這些多載可分為兩個群組：當建立動態組件時，指定要套用至動態組件的屬性清單，以及不套用至動態組件的屬性清單。 當您建立組件時，如果您未套用 <xref:System.Security.SecurityRulesAttribute> 屬性來指定組件的透明度模型，則透明度模型會繼承自發出的組件。  
+ 使用 <xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> 方法的多載來建立動態組件。 由於刪除全機器安全性原則，因此這個方法的大部分多載已在 .NET Framework 4 中遭取代。 （請參閱[安全更改](../security/security-changes.md)。無論信任層級如何，其餘重載都可以由任何代碼執行。 這些多載可分為兩個群組：當建立動態組件時，指定要套用至動態組件的屬性清單，以及不套用至動態組件的屬性清單。 當您建立組件時，如果您未套用 <xref:System.Security.SecurityRulesAttribute> 屬性來指定組件的透明度模型，則透明度模型會繼承自發出的組件。  
   
 > [!NOTE]
 > 動態組件建立後，使用 <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> 方法套用至動態組件的屬性並不會生效，直到組件已儲存至磁碟並再次載入記憶體中。  
@@ -57,7 +57,7 @@ ms.locfileid: "73130036"
   
 - 不會產生偵錯符號。 (`Internet` 和 `LocalIntranet` 權限集合不包含必要的權限。)  
   
-<a name="Anonymously_Hosted_Dynamic_Methods"></a>   
+<a name="Anonymously_Hosted_Dynamic_Methods"></a>
 ## <a name="anonymously-hosted-dynamic-methods"></a>匿名裝載的動態方法  
  匿名裝載的動態方法可用兩個 <xref:System.Reflection.Emit.DynamicMethod> 建構函式建立，該函式並未指定相關聯的類型或模組、<xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%29> 和 <xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29>。 這些建構函式會將動態方法置於系統提供、完全受信任的安全性透明組件中。 使用這些建構函式，或發出動態方法的程式碼不需要權限。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "73130036"
 > [!NOTE]
 > 動態方法並不支援偵錯符號。  
   
-<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>   
+<a name="Dynamic_Methods_Associated_with_Existing_Assemblies"></a>
 ## <a name="dynamic-methods-associated-with-existing-assemblies"></a>與現有組件相關聯的動態方法  
  若要將動態方法和現有組件中的類型或模組相關聯，請使用任何一種指定相關聯的類型或模組的 <xref:System.Reflection.Emit.DynamicMethod> 建構函式。 呼叫這些建構函式所需的權限有所不同，因為將動態方法與現有類型或模組產生關聯會讓動態方法存取非公用類型和成員：  
   
@@ -135,7 +135,7 @@ ms.locfileid: "73130036"
 > [!NOTE]
 > 動態方法並不支援偵錯符號。  
   
-<a name="Version_Information"></a>   
+<a name="Version_Information"></a>
 ## <a name="version-information"></a>版本資訊  
  從 .NET Framework 4 開始，已消除全機器的安全性原則，且安全性透明度變成預設強制機制。 請參閱[安全性變更](../security/security-changes.md)。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "73130036"
 ### <a name="obtaining-information-on-types-and-members"></a>取得類型和成員資訊  
  從 .NET Framework 2.0 開始，取得非公開型別和成員的相關資訊不需要權限。 反映會用來取得發出動態方法需要的資訊。 例如，<xref:System.Reflection.MethodInfo> 物件會用來發出方法呼叫。 .NET Framework 先前版本需要具備 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。 如需詳細資訊，請參閱[反映的安全性考量](security-considerations-for-reflection.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [反映的安全性考量](security-considerations-for-reflection.md)
 - [發出動態方法和組件](emitting-dynamic-methods-and-assemblies.md)

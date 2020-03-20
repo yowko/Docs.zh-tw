@@ -1,15 +1,15 @@
 ---
-title: <Subtypes> 元素（.NET Native）
+title: <Subtypes>元素（.NET 本機）
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-ms.openlocfilehash: 9f090e7d1558d31111345e2c9b8dabb55b7122c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128099"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180928"
 ---
-# <a name="subtypes-element-net-native"></a>\<子類型 > 元素（.NET Native）
+# <a name="subtypes-element-net-native"></a>\<子類型>元素（.NET 本機）
 將執行階段原則套用至從包含類型繼承的所有類別。  
   
 ## <a name="syntax"></a>語法  
@@ -18,7 +18,7 @@ ms.locfileid: "73128099"
 <Subtypes Activate="policy_type"  
           Browse="policy_type"  
           Dynamic="policy_type"  
-          Serialize="policy_type"   
+          Serialize="policy_type"
           DataContractSerializer="policy_setting"  
           DataContractJsonSerializer="policy_setting"  
           XmlSerializer="policy_setting"  
@@ -28,7 +28,7 @@ ms.locfileid: "73128099"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -51,14 +51,14 @@ ms.locfileid: "73128099"
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<鍵入>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  `<Subtypes>` 元素將原則套用至其包含類型的所有子類型。 當您想將不同的原則套用至衍生類型及其基底類別時，可使用這個元素。  
@@ -87,9 +87,9 @@ ms.locfileid: "73128099"
   
  [!code-csharp[ProjectN_Reflection#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/subtypes.cs#5)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [\<類型 > 元素](type-element-net-native.md)
+- [\<類型>元素](type-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)
 - [執行階段指示詞原則設定](runtime-directive-policy-settings.md)

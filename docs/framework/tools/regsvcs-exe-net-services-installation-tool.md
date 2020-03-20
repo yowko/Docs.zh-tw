@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type libraries
 - registering assemblies
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
-ms.openlocfilehash: 1af93ae89d027bccdd52b9cd9c49f8e620303677
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aecd2f6894558b45898c7f22dd333617d9e2e327
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104935"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180367"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET 服務安裝工具)
 .NET 服務安裝工具會執行下列動作：  
@@ -25,16 +25,16 @@ ms.locfileid: "73104935"
   
 - 設定您以程式設計方式加入至類別的服務。  
   
- 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
+ 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
- 在命令提示字元下輸入下列命令：  
+ 在命令提示字元中，請輸入下列項目：  
   
 ## <a name="syntax"></a>語法  
   
 ```console  
       regsvcs [/c | /fc | /u] [/tlb:typeLibraryFile] [/extlb]  
 [/reconfig] [/componly] [/appname:applicationName]  
-[/nologo] [/quiet]assemblyFile.dll   
+[/nologo] [/quiet]assemblyFile.dll
 ```  
   
 ## <a name="parameters"></a>參數  
@@ -45,21 +45,21 @@ ms.locfileid: "73104935"
   
 |選項|描述|  
 |------------|-----------------|  
-|**/appdir:<路徑>** |指定應用程式的根目錄。|  
-|**/appname:<應用程式名稱>** |指定要尋找或建立之 COM+ 應用程式的名稱。|  
+|**/appdir:<路徑>** **|指定應用程式的根目錄。|  
+|**/appname:<應用程式名稱>** **|指定要尋找或建立之 COM+ 應用程式的名稱。|  
 |**/c**|建立目標應用程式。|  
 |**/componly**|只設定元件，忽略方法和介面。|  
 |**/exapp**|指定需要現有應用程式的工具。|  
 |**/extlb**|使用現有的類型程式庫。|  
 |**/fc**|尋找或建立目標應用程式。|  
-|**/help**|顯示工具的命令語法和選項。|  
+|**/説明**|顯示工具的命令語法和選項。|  
 |**/noreconfig**|不要重新設定現有的目標應用程式。|  
-|**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
+|**/諾戈戈**|隱藏 Microsoft 程式啟始資訊顯示。|  
 |**/parname:** *name*|指定要尋找或建立之 COM+ 應用程式的名稱或 ID。|  
 |**/reconfig**|重新設定現有的目標應用程式。 這是預設值。|  
-|**/tlb:<型別程式庫檔案>** |指定要安裝的類型程式庫檔案。|  
+|**/tlb:<型別程式庫檔案>** **|指定要安裝的類型程式庫檔案。|  
 |**/u**|解除安裝目標應用程式。|  
-|**/quiet**|指定安靜模式，隱藏標誌或成功訊息顯示。|  
+|**/安靜**|指定安靜模式，隱藏標誌或成功訊息顯示。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
 ## <a name="remarks"></a>備註  
@@ -84,8 +84,8 @@ regsvcs /appname:myTargetApp myTest.dll
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
-- [操作說明：使用強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)
+- [如何：使用強式名稱簽署組件](../../standard/assembly/sign-strong-name.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

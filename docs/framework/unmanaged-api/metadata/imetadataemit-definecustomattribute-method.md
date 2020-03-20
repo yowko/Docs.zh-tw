@@ -15,52 +15,52 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-ms.openlocfilehash: e6a732b98ae02ba2b273b45921b7de61ab4fd29f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9c4ed282e259aa46fc0cb0175214dc51d3d5fbee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432647"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175885"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>IMetaDataEmit::DefineCustomAttribute 方法
-使用指定的中繼資料簽章，建立自訂屬性的定義，以附加至指定的物件，並取得該自訂屬性定義的 token。  
+為具有指定中繼資料簽名的自訂屬性創建要附加到指定物件的定義，並獲取該自訂屬性定義的權杖。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT DefineCustomAttribute (   
-    [in]  mdToken     tkObj,   
-    [in]  mdToken     tkType,   
-    [in]  void const  *pCustomAttribute,   
-    [in]  ULONG       cbCustomAttribute,   
-    [out] mdCustomAttribute *pcv   
+HRESULT DefineCustomAttribute (
+    [in]  mdToken     tkObj,
+    [in]  mdToken     tkType,
+    [in]  void const  *pCustomAttribute,
+    [in]  ULONG       cbCustomAttribute,
+    [out] mdCustomAttribute *pcv
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `tkObj`  
- 在擁有者專案的 token。  
+ [在]擁有者項的權杖。  
   
  `tkType`  
- 在識別自訂屬性的標記。  
+ [在]標識自訂屬性的權杖。  
   
  `pCustomAttribute`  
- 在自訂屬性的指標。  
+ [在]指向自訂屬性的指標。  
   
  `cbCustomAttribute`  
- 在`pCustomAttribute`中的位元組計數。  
+ [在]中的`pCustomAttribute`位元組計數。  
   
  `pcv`  
- 脫銷指派的 `mdCustomAttribute` token。  
+ [出]分配的`mdCustomAttribute`權杖。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

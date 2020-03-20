@@ -15,42 +15,42 @@ helpviewer_keywords:
 ms.assetid: f2833594-d90b-4a71-9a53-34b12470c64a
 topic_type:
 - apiref
-ms.openlocfilehash: c736eccfd5d05ec9b65e6ed26187e7c7b4387c5d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 94261b7796166cf482a7de990551890e4722dd3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431725"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177729"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>IMetaDataEmit::DefineModuleRef 方法
-建立具有指定名稱之模組的中繼資料簽章。  
+為具有指定名稱的模組創建中繼資料簽名。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT DefineModuleRef (     
-    [in]  LPCWSTR           szName,   
-    [out] mdModuleRef       *pmur   
+HRESULT DefineModuleRef (
+    [in]  LPCWSTR           szName,
+    [out] mdModuleRef       *pmur
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `szName`  
- 在其他中繼資料檔案的名稱，通常是 DLL。 此為檔案名。 請勿使用完整路徑名稱。  
+ [在]其他元資料檔案（通常是 DLL）的名稱。 這只是檔案名。 不要使用完整路徑名稱。  
   
  `pmur`  
- 脫銷指派的 `mdModuleRef` token。  
+ [出]分配的`mdModuleRef`權杖。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

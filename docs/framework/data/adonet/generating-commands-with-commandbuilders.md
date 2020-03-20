@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: 7cc8ff5391fca7c3315dda433785a182f476bca7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76c2a6cb0661a0e39fc3a0dd599fcbb3c046f382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783872"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149608"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>使用 CommandBuilder 產生命令
 當 `SelectCommand` 屬性是在執行階段時以動態方式指定 (例如透過能接收使用者下達文字命令的查詢工具)，則您可能無法於設計階段指定適當的 `InsertCommand`、`UpdateCommand` 或 `DeleteCommand`。 如果您的 <xref:System.Data.DataTable> 對應至或產生自單一資料庫資料表，則可以利用 <xref:System.Data.Common.DbCommandBuilder> 物件來自動產生 `DeleteCommand` 的 `InsertCommand`、`UpdateCommand` 和 <xref:System.Data.Common.DbDataAdapter>。  
@@ -23,21 +23,21 @@ ms.locfileid: "70783872"
   
  與 `DataAdapter` 產生關聯時，<xref:System.Data.Common.DbCommandBuilder> 會自動產生 `InsertCommand` 的 `UpdateCommand`、`DeleteCommand` 和 `DataAdapter` 屬性 (如果它們是 Null 參考)。 如果屬性的 `Command` 已經存在，則會使用現有的 `Command`。  
   
- 您不能將兩個或多個資料表合併所建立的資料庫檢視視為單一資料庫資料表。 在這個執行個體中，您無法使用 <xref:System.Data.Common.DbCommandBuilder> 自動產生命令，而且必須明確指定命令。 如需明確設定命令以將更新`DataSet`解析回資料來源的詳細資訊，請參閱[使用 dataadapter 更新資料來源](updating-data-sources-with-dataadapters.md)。  
+ 您不能將兩個或多個資料表合併所建立的資料庫檢視視為單一資料庫資料表。 在這個執行個體中，您無法使用 <xref:System.Data.Common.DbCommandBuilder> 自動產生命令，而且必須明確指定命令。 有關顯式設置命令以解析回`DataSet`資料來源的更新的資訊，請參閱[使用資料配接器更新資料來源](updating-data-sources-with-dataadapters.md)。  
   
- 您可能想要把輸出參數對應回 `DataSet` 已更新的資料列。 一項通用工作便是從資料來源擷取自動產生的識別欄位值或時間戳記值。 <xref:System.Data.Common.DbCommandBuilder> 預設不會將輸出參數對應到已更新資料列中的資料行。 在這種情形下，您必須明確地指定命令。 如需將自動產生的識別欄位對應回已插入資料列之資料行的範例，請參閱抓取[識別或自動編號值](retrieving-identity-or-autonumber-values.md)。  
+ 您可能想要把輸出參數對應回 `DataSet` 已更新的資料列。 一項通用工作便是從資料來源擷取自動產生的識別欄位值或時間戳記值。 <xref:System.Data.Common.DbCommandBuilder> 預設不會將輸出參數對應到已更新資料列中的資料行。 在這種情形下，您必須明確地指定命令。 有關將自動生成的識別欄位映射回插入行的列的示例，請參閱[檢索標識或自動編號值](retrieving-identity-or-autonumber-values.md)。  
   
 ## <a name="rules-for-automatically-generated-commands"></a>自動產生命令的規則  
  下列表格顯示產生自動產生命令的規則。  
   
-|命令|規則|  
+|Command|規則|  
 |-------------|----------|  
 |`InsertCommand`|針對含 <xref:System.Data.DataRow.RowState%2A> 的 <xref:System.Data.DataRowState.Added> 之資料表的所有資料列，插入資料來源上的資料列。 插入所有可更新的資料行值 (但非識別、運算式或時間籤記等資料行)。|  
 |`UpdateCommand`|針對含 `RowState` 的 <xref:System.Data.DataRowState.Modified> 之資料表的所有資料列，更新資料來源上的資料列。 除了無法更新的資料行 (例如識別或運算式) 之外，更新所有可更新的資料行值。 並且在資料來源中，找出資料行值與資料列主索引鍵資料行值相符的資料列，以及剩餘資料行與資料列原始資料相符的資料列，將這些資料列全都更新。 如需詳細資訊，請參閱這個主題稍後的＜更新和刪除的開放式同步存取模式＞。|  
 |`DeleteCommand`|針對含 `RowState` 的 <xref:System.Data.DataRowState.Deleted> 之資料表的所有資料列，刪除資料來源上的資料列。 在資料來源中，找出其資料行值與資料列的主索引鍵資料行值相符的所有資料列，以及剩餘資料行與原始資料列值相符的所有資料列，並將這些資料列全都刪除。 如需詳細資訊，請參閱這個主題稍後的＜更新和刪除的開放式同步存取模式＞。|  
   
 ## <a name="optimistic-concurrency-model-for-updates-and-deletes"></a>更新和刪除開放式同步存取模式  
- 自動針對 UPDATE 和 DELETE 子句產生命令的邏輯是以*開放式並行*存取為基礎--也就是說，記錄不會鎖定進行編輯，而且可以隨時由其他使用者或進程修改。 記錄從 SELECT 陳述式傳回後可能已經修改，但是發出 UPDATE 或 DELETE 陳述式之前，自動產生的 UPDATE 或 DELETE 陳述式會包含 WHERE 子句，指定只有資料列包含所有原始值且尚未從資料來源刪除時，才會更新該資料列。 這樣是為了避免覆寫新資料。 自動產生的更新嘗試更新已刪除的資料列或未包含 <xref:System.Data.DataSet> 中所找到之原始值的資料列時，該命令不會影響任何記錄，且會擲回 <xref:System.Data.DBConcurrencyException>。  
+ 自動為 UPDATE 和 DELETE 子句生成命令的邏輯基於*樂觀併發*-即記錄不會鎖定以進行編輯，並且可以隨時由其他使用者或進程修改。 記錄從 SELECT 陳述式傳回後可能已經修改，但是發出 UPDATE 或 DELETE 陳述式之前，自動產生的 UPDATE 或 DELETE 陳述式會包含 WHERE 子句，指定只有資料列包含所有原始值且尚未從資料來源刪除時，才會更新該資料列。 這樣是為了避免覆寫新資料。 自動產生的更新嘗試更新已刪除的資料列或未包含 <xref:System.Data.DataSet> 中所找到之原始值的資料列時，該命令不會影響任何記錄，且會擲回 <xref:System.Data.DBConcurrencyException>。  
   
  如果您想完成 UPDATE 或 DELETE (不管是否為原始值)，則您必須明確設定 `UpdateCommand` 的 `DataAdapter`，而不是依賴自動命令產生功能。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "70783872"
  自動命令產生邏輯為獨立資料表產生 INSERT、UPDATE 或 DELETE 陳述式，而不顧及任何與資料來源中其他資料表的關聯性。 所以，如果呼叫 `Update` 將變更送出至資料行，而這個資料行又擔任資料庫的外部索引鍵條件約束，則可能會發生錯誤。 為了避免發生這種例外狀況，請勿使用 <xref:System.Data.Common.DbCommandBuilder> 來更新外部索引鍵條件約束所牽涉的資料行，而應該明確地指定用於執行作業的陳述式。  
   
 ### <a name="table-and-column-names"></a>資料表和資料行名稱  
- 如果資料行名稱或資料表名稱包含任何特殊字元，例如空格、句號、引號或其他非英數的字元，則即使以括弧分隔，自動命令產生邏輯仍可能會失敗。 根據提供者而定，設定 QuotePrefix 和 QuoteSuffix 參數可能會允許產生邏輯以處理空格，不過，卻不能逸出特殊字元。 支援*目錄. schema. 資料表*格式的完整資料表名稱。  
+ 如果資料行名稱或資料表名稱包含任何特殊字元，例如空格、句號、引號或其他非英數的字元，則即使以括弧分隔，自動命令產生邏輯仍可能會失敗。 根據提供者而定，設定 QuotePrefix 和 QuoteSuffix 參數可能會允許產生邏輯以處理空格，不過，卻不能逸出特殊字元。 支援*目錄.schema.表*形式的完全限定的表名稱。  
   
 ## <a name="using-the-commandbuilder-to-automatically-generate-an-sql-statement"></a>使用 CommandBuilder 自動產生 SQL 陳述式  
  若要自動產生 `DataAdapter` 的 SQL 陳述式，請首先設定 `SelectCommand` 的 `DataAdapter` 屬性，然後建立 `CommandBuilder` 物件，再指定為引數，該引數則是 `DataAdapter` 將自動為其產生 SQL 陳述式的 `CommandBuilder`。  
   
 ```vb  
-' Assumes that connection is a valid SqlConnection object   
+' Assumes that connection is a valid SqlConnection object
 ' inside of a Using block.  
 Dim adapter As SqlDataAdapter = New SqlDataAdapter( _  
   "SELECT * FROM dbo.Customers", connection)  
@@ -90,7 +90,7 @@ Console.WriteLine(builder.GetUpdateCommand().CommandText)
 Console.WriteLine(builder.GetUpdateCommand().CommandText);
 ```
   
- 下列範例會在 `Customers` 資料集中重新建立 `custDS` 資料表。 呼叫**RefreshSchema**方法以使用這個新的資料行資訊來重新整理自動產生的命令。  
+ 下列範例會在 `Customers` 資料集中重新建立 `custDS` 資料表。 調用**RefreshSchema**方法以使用此新列資訊刷新自動生成的命令。  
   
 ```vb  
 ' Assumes an open SqlConnection and SqlDataAdapter inside of a Using block.  
@@ -104,7 +104,7 @@ adapter.Fill(custDS, "Customers")
   
 ```csharp  
 // Assumes an open SqlConnection and SqlDataAdapter inside of a using block.  
-adapter.SelectCommand.CommandText =   
+adapter.SelectCommand.CommandText =
   "SELECT CustomerID, ContactName FROM dbo.Customers";  
 builder.RefreshSchema();  
   
@@ -117,4 +117,4 @@ adapter.Fill(custDS, "Customers");
 - [命令和參數](commands-and-parameters.md)
 - [執行命令](executing-a-command.md)
 - [DbConnection、DbCommand 和 DbException](dbconnection-dbcommand-and-dbexception.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

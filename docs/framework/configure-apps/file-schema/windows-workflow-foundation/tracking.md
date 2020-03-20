@@ -3,21 +3,21 @@ title: <tracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-ms.openlocfilehash: 28d73bb74c4a49052589040adc26194b1300668c
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 968cfa8e5402458afd6f13545ed999a472adf2e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70397596"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151906"
 ---
-# <a name="tracking"></a>\<追蹤 >
+# <a name="tracking"></a>\<跟蹤>
 代表定義工作流程服務之追蹤設定的組態區段。  
   
- 如需工作流程追蹤及其設定的詳細資訊，請參閱工作流程[追蹤和](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)追蹤和設定[工作流程的追蹤](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
+ 有關工作流跟蹤及其配置的詳細資訊，請參閱工作流[的工作流跟蹤和跟蹤](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)和[配置跟蹤](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<筆記本電腦.System.servicemodel >** ](system-servicemodel-of-workflow.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<追蹤 >**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<系統。服務模式>**](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<跟蹤>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -26,14 +26,14 @@ ms.locfileid: "70397596"
   <tracking>
     <profiles>
       <participants>
-        <add name="String" 
-             profileName="String" 
+        <add name="String"
+             profileName="String"
              type="String" />
       </participants>
       <trackingProfile name="String">
         <workflow activityDefinitionId="String">
           <activityScheduledQueries>
-            <activityScheduledQuery activityName="String" 
+            <activityScheduledQuery activityName="String"
                                     childActivityName="String"/>
           </activityScheduledQueries>
           <activityStateQueries>
@@ -52,15 +52,15 @@ ms.locfileid: "70397596"
             <bookmarkResumptionQuery name="String" />
           </bookmarkResumptionQueries>
           <cancelRequestQueries>
-            <cancelRequestQuery activityName="String" 
+            <cancelRequestQuery activityName="String"
                                 childActivityName="String"/>
           </cancelRequestQueries>
           <customTrackingQueries>
-            <customTrackingQuery activityName="String" 
+            <customTrackingQuery activityName="String"
                                  name="String"/>
           </customTrackingQueries>
           <faultPropagationQueries>
-            <faultPropagationQuery activityName="String" 
+            <faultPropagationQuery activityName="String"
                                    faultHandlerActivityName="String" />
           </faultPropagationQueries>
           <workflowInstanceQueries>
@@ -78,21 +78,21 @@ ms.locfileid: "70397596"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<participants>](participants.md)|定義訂閱追蹤記錄之參與者的 configuration 專案集合。 追蹤參與者包含處理來自追蹤記錄之裝載的邏輯 (例如，他們可以選擇寫入檔案)。|  
-|[\<trackingProfile>](trackingprofile.md)|篩選工作流程執行個體發出之追蹤記錄的追蹤設定檔。|  
+|[\<參與者>](participants.md)|組態項目的集合，這些項目會定義訂閱追蹤記錄的參與者。 追蹤參與者包含處理來自追蹤記錄之裝載的邏輯 (例如，他們可以選擇寫入檔案)。|  
+|[\<跟蹤設定檔>](trackingprofile.md)|篩選工作流程執行個體發出之追蹤記錄的追蹤設定檔。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |system.ServiceModel|所有工作流程組態項目的根項目。|  
   

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: e9e85729b10d1c992a22f6c0bea65dfd1e21e7e4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 10a8d243b3f053879f183864e955d9260c07865b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742562"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183617"
 ---
 # <a name="impersonating-the-client"></a>模擬用戶端
 此模擬範例會示範如何在服務端模擬呼叫者應用程式，以便讓服務能夠代表該呼叫者存取系統資源。  
   
- 這個範例是以[自我裝載](../../../../docs/framework/wcf/samples/self-host.md)範例為基礎。 服務和用戶端設定檔與[自我裝載](../../../../docs/framework/wcf/samples/self-host.md)範例的檔案相同。  
+ 此示例基於[自主機](../../../../docs/framework/wcf/samples/self-host.md)示例。 服務和用戶端設定檔與[自主機](../../../../docs/framework/wcf/samples/self-host.md)示例相同。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -44,7 +44,7 @@ static void DisplayIdentityInformation()
 {  
     Console.WriteLine("\t\tThread Identity            :{0}",  
          WindowsIdentity.GetCurrent().Name);  
-    Console.WriteLine("\t\tThread Identity level  :{0}",   
+    Console.WriteLine("\t\tThread Identity level  :{0}",
          WindowsIdentity.GetCurrent().ImpersonationLevel);  
     Console.WriteLine("\t\thToken                     :{0}",  
          WindowsIdentity.GetCurrent().Token.ToString());  
@@ -69,8 +69,8 @@ public double Subtract(double n1, double n2)
         // Impersonate.  
         using (ServiceSecurityContext.Current.WindowsIdentity.Impersonate())  
         {  
-            // Make a system call in the caller's context and ACLs   
-            // on the system resource are enforced in the caller's context.   
+            // Make a system call in the caller's context and ACLs
+            // on the system resource are enforced in the caller's context.
             Console.WriteLine("Impersonating the caller imperatively");  
             DisplayIdentityInformation();  
         }  
@@ -102,18 +102,18 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  當您執行範例時，作業要求和回應會顯示在服務與用戶端主控台視窗中。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。  
   
 > [!NOTE]
-> 服務必須在系統管理帳戶下執行，或是在其下執行的帳戶必須被授與許可權，才能向 HTTP 層註冊 `http://localhost:8000/ServiceModelSamples` URI。 您可以使用[HTTPcfg.exe](/windows/win32/http/httpcfg-exe)來設定[命名空間保留](/windows/win32/http/namespace-reservations-registrations-and-routing)區，以授與這類許可權。  
+> 服務必須在管理帳戶下運行，或者必須授予其運行的帳戶向 HTTP 層註冊`http://localhost:8000/ServiceModelSamples`URI 的許可權。 可以使用[Httpcfg.exe 工具](/windows/win32/http/httpcfg-exe)設置[命名空間保留](/windows/win32/http/namespace-reservations-registrations-and-routing)來授予此類許可權。  
   
 > [!NOTE]
-> 在執行 Windows Server 2003 的電腦上，只有當 setup.exe 應用程式具有模擬許可權時，才支援模擬。 （根據預設，只有系統管理員具有此許可權）。若要將此許可權新增至服務執行身分的帳戶，請移至 [系統**管理工具**]，開啟 [**本機安全性原則**]，開啟 [**本機原則**]，按一下 [**使用者權限指派**]，然後選取 [**在驗證後模擬用戶端**]，**再按兩下 [內容] 以新增**使用者或群組。  
+> 在運行 Windows Server 2003 的電腦上，僅當 Host.exe 應用程式具有類比許可權時，才支援類比。 （預設情況下，只有管理員具有此許可權。要將此許可權添加到服務運行的帳戶，請轉到**管理工具**、打開**本地安全性原則**、打開**本地策略**、按一下 **"使用者許可權分配**"，然後選擇 **"身份驗證後類比用戶端**"和"按兩下**屬性**"以添加使用者或組。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
   
 4. 若要示範此服務模擬呼叫者，請使用與執行服務之帳戶不同的帳戶執行用戶端。 若要這麼做，請在命令提示字元輸入：  
   

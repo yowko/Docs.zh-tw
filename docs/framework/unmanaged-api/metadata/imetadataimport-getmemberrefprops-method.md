@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: 1d6d66ea62cbf679f722f830b3638455001aedd6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a61254ba751e47b0089a3f7528aca337a32e2db3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437485"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175365"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps 方法
 取得與指定語彙基元所參考成員相關聯的中繼資料。  
@@ -29,48 +29,48 @@ ms.locfileid: "74437485"
   
 ```cpp  
 HRESULT GetMemberRefProps (  
-   [in]  mdMemberRef       mr,   
-   [out] mdToken           *ptk,   
-   [out] LPWSTR            szMember,   
-   [in]  ULONG             cchMember,   
-   [out] ULONG             *pchMember,   
-   [out] PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pbSig   
+   [in]  mdMemberRef       mr,
+   [out] mdToken           *ptk,
+   [out] LPWSTR            szMember,
+   [in]  ULONG             cchMember,
+   [out] ULONG             *pchMember,
+   [out] PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pbSig
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `mr`  
- 在要為其傳回相關聯中繼資料的 MemberRef token。  
+ [在]要為其返回關聯的中繼資料的會員Ref 權杖。  
   
  `ptk`  
- 脫銷TypeDef 或 TypeRef 或 TypeSpec token，代表宣告成員的類別，或是代表宣告成員之模組類別的 ModuleRef token，或代表該成員的 MethodDef。  
+ [出]表示成員聲明的類的 TypeDef 或 TypeRef 或 TypeSpec 權杖，或表示聲明成員的模組類的 ModuleRef 權杖，或表示成員的 MethodDef。  
   
  `szMember`  
- 脫銷成員名稱的字串緩衝區。  
+ [出]成員名稱的字串緩衝區。  
   
  `cchMember`  
- 在要求的大小，以 `szMember`的寬字元為單位。  
+ [在]請求的大小以寬字元表示`szMember`。  
   
  `pchMember`  
- 脫銷`szMember`的寬字元傳回大小。  
+ [出]返回的大小以寬字元。 `szMember`  
   
  `ppvSibBlob`  
- 脫銷成員之二進位中繼資料簽章的指標。  
+ [出]指向成員的二進位中繼資料簽名的指標。  
   
  `pbSig`  
- 脫銷`ppvSigBlob`的大小（以位元組為單位）。  
+ [出]的大小（以位元組為單位）。 `ppvSigBlob`  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

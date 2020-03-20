@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-ms.openlocfilehash: c37f039d9636854c464e7981693c573bd60deab9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4c79d0e4e37f3f884651e49c8fff6db72fac4f50
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132349"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179298"
 ---
 # <a name="cor_il_map-structure"></a>COR_IL_MAP 結構
 指定函式相關位移中的變更。  
@@ -28,67 +28,67 @@ ms.locfileid: "73132349"
   
 ```cpp  
 typedef struct _COR_IL_MAP {  
-    ULONG32 oldOffset;   
-    ULONG32 newOffset;   
+    ULONG32 oldOffset;
+    ULONG32 newOffset;
     BOOL    fAccurate;  
 } COR_IL_MAP;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`oldOffset`|相對於函數開頭的舊 Microsoft 中繼語言（MSIL）位移。|  
-|`newOffset`|相對於函數開頭的新 MSIL 位移。|  
-|`fAccurate`|如果已知對應是正確的，則 `true`。否則，`false`。|  
+|`oldOffset`|舊的 Microsoft 中間語言 （MSIL） 相對於函數的開頭偏移。|  
+|`newOffset`|新的 MSIL 相對於函數的開頭偏移。|  
+|`fAccurate`|`true`如果已知映射準確;如果映射準確;否則， `false`.|  
   
 ## <a name="remarks"></a>備註  
- 對應的格式如下所示：偵錯工具會假設 `oldOffset` 指的是原始、未修改的 MSIL 程式碼內的 MSIL 位移。 `newOffset` 參數會參考新檢測的程式碼內對應的 MSIL 位移。  
+ 地圖的格式如下：調試器將假定引用`oldOffset`原始未修改的 MSIL 代碼中的 MSIL 偏移量。 該`newOffset`參數是指新檢測代碼中的相應 MSIL 偏移量。  
   
- 若要讓逐步執行正常運作，應符合下列需求：  
+ 為了正常工作，應滿足以下要求：  
   
-- 對應應該以遞增順序排序。  
+- 地圖應按昇冪排序。  
   
-- 不應將已檢測的 MSIL 程式碼重新排序。  
+- 不應重新排序已檢測的 MSIL 代碼。  
   
-- 不應該移除原始的 MSIL 程式碼。  
+- 不應刪除原始 MSIL 代碼。  
   
-- 對應應該包含專案，以對應程式資料庫（PDB）檔案中的所有序列點。  
+- 地圖應包括用於對應程式資料庫 （PDB） 檔中的所有序列點的條目。  
   
- 對應不會插補遺漏的專案。 下列範例會顯示地圖和其結果。  
+ 地圖不會插值缺少的條目。 下面的示例顯示地圖及其結果。  
   
- 地圖  
+ 地圖：  
   
-- 0個舊位移，0個新位移  
+- 0 舊偏移，0 新偏移  
   
-- 5個舊位移，10個新位移  
+- 5 個舊偏移，10 個新偏移  
   
-- 9個舊的位移，20個新的位移  
+- 9 個舊偏移，20 個新偏移  
   
- 更  
+ 結果：  
   
-- 舊的位移為0、1、2、3或4，將會對應至新的位移0。  
+- 舊偏移 0、1、2、3 或 4 將映射到新的偏移量 0。  
   
-- 舊的位移5、6、7或8會對應到新的位移10。  
+- 舊偏移 5、6、7 或 8 將映射到新的偏移量 10。  
   
-- 舊的位移9或更高版本會對應到新的位移20。  
+- 舊偏移量為 9 或更高，將映射到新的偏移量 20。  
   
-- 新的位移為0、1、2、3、4、5、6、7、8或9，將會對應到舊的位移0。  
+- 新的偏移量為 0、1、2、3、4、5、6、7、8 或 9 將映射到舊偏移 0。  
   
-- 10、11、12、13、14、15、16、17、18或19的新位移會對應到舊的位移5。  
+- 10、11、12、13、14、15、16、17、18 或 19 的新偏移將映射到舊偏移 5。  
   
-- 新的位移20或以上會對應到舊的位移9。  
+- 新的偏移量為 20 或更高，將映射到舊偏移 9。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** Cordebug.h .idl，Corprof.idl .idl  
+ **標題：** 科爾科調試.idl， 科爾普羅芬.伊德爾  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯結構](debugging-structures.md)
 - [偵錯](index.md)

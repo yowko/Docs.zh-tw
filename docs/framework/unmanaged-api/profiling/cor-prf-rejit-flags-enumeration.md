@@ -15,21 +15,21 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 3b4f85072b9dcf87d696b979fa6cbf4e59393f82
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8fc5f1a488826d8adc6aecb8ef122609bebbe813
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453035"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177104"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS 列舉
-包含值，指出[ICorProfilerInfo10：： RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) API 的行為。  
+包含指示[ICorProfilerInfo10：：請求 ReJITWithinliners](icorprofilerinfo10-requestrejitwithinliners-method.md) API 應如何使用的值。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 typedef enum  
-{      
+{
     COR_PRF_REJIT_BLOCK_INLINING = 0x1,
     COR_PRF_REJIT_INLINING_CALLBACKS    = 0x2
 } COR_PRF_REJIT_FLAGS;  
@@ -39,17 +39,17 @@ typedef enum
   
 |member|描述|  
 |------------|-----------------|  
-|`COR_PRF_REJIT_BLOCK_INLINING`| ReJITted 方法將會被封鎖，而無法在其他方法中內嵌。 |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| 針對內嵌要求 ReJITted 之方法的任何方法，接收 `GetFunctionParameters` 回呼。 |  
+|`COR_PRF_REJIT_BLOCK_INLINING`| 重新 JITed 方法將阻止在其他方法中內聯。 |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| 接收`GetFunctionParameters`任何內聯請求重新JITted的方法的方法的回檔。 |  
 
 ## <a name="requirements"></a>需求  
- **平臺：** 請參閱[.Net Core 支援的作業系統](../../../core/install/dependencies.md?pivots=os-windows)。  
+ **平臺：** 請參閱[.NET Core 支援的作業系統](../../../core/install/dependencies.md?pivots=os-windows)。  
   
  **標頭：** CorProf.idl、CorProf.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)] 
+ **.NET 框架版本：**[!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
   
 ## <a name="see-also"></a>另請參閱
 

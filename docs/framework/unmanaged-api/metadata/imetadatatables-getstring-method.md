@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 895c35cf-b95d-4e3b-93b5-cfc1cf9044fc
 topic_type:
 - apiref
-ms.openlocfilehash: 055499230f500cb7249746e1acbf46b4548d25bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 216a1f7bd2ff5a596fa7abf7874b5e603d5a9f7b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426806"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175235"
 ---
 # <a name="imetadatatablesgetstring-method"></a>IMetaDataTables::GetString 方法
-從目前參考範圍的資料表資料行中，取得位於指定索引位置的字串。  
+從當前引用作用域中的表列獲取指定索引處的字串。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT GetString (   
+HRESULT GetString (
     [in]  ULONG       ixString,  
     [out] const char  **ppString  
 );  
@@ -36,19 +36,19 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>參數  
  `ixString`  
- 在要開始搜尋下一個值的索引。  
+ [在]開始搜索下一個值的索引。  
   
  `ppString`  
- 脫銷傳回之字串值指標的指標。  
+ [出]指向返回的字串值的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

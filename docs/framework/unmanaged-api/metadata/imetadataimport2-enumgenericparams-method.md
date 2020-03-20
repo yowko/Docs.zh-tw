@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: b50488a5-3cf0-483c-82dc-2892a3ec61ac
 topic_type:
 - apiref
-ms.openlocfilehash: d0377ade5265bba9b313d6ed2e91c446497fac6e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 55709e79cd8bdb36fe1e32ee8a699fccb1b1bbc8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428313"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175300"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams 方法
-取得與指定的 TypeDef 或 MethodDef token 相關聯之泛型參數標記陣列的列舉值。  
+獲取與指定 TypeDef 或 MethodDef 權杖關聯的泛型參數權杖陣列的枚舉器。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp
 HRESULT EnumGenericParams (  
-   [in, out] HCORENUM     *phEnum,   
+   [in, out] HCORENUM     *phEnum,
    [in]  mdToken          tk,  
-   [out] mdGenericParam   rGenericParams[],   
-   [in]  ULONG            cMax,   
+   [out] mdGenericParam   rGenericParams[],
+   [in]  ULONG            cMax,
    [out] ULONG            *pcGenericParams  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in、out]列舉值的指標。  
+ [進出]指向枚舉器的指標。  
   
  `tk`  
- 在要列舉其泛型參數的 TypeDef 或 MethodDef token。  
+ [在]要枚舉泛型參數的 TypeDef 或 MethodDef 權杖。  
   
  `rGenericParams`  
- 脫銷要列舉的泛型參數陣列。  
+ [出]要枚舉的泛型參數陣列。  
   
  `cMax`  
- 在要在 `rGenericParams`中放置的最大權杖數目。  
+ [在]要放置在 中`rGenericParams`的最大權杖數。  
   
  `pcGenericParams`  
- 脫銷放在 `rGenericParams`中的傳回權杖數目。  
+ [出]放置在 的`rGenericParams`返回的權杖數。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|已成功傳回 `EnumGenericParams`。|  
-|`S_FALSE`|`phEnum` 沒有成員元素。 在此情況下，`pcGenericParams` 會設定為0（零）。|  
+|`S_OK`|`EnumGenericParams`已成功返回。|  
+|`S_FALSE`|`phEnum`沒有成員元素。 在這種情況下，`pcGenericParams`設置為 0（零）。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

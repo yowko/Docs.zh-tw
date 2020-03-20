@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: abb8b507b21ca8f40461192c37e6c2fbe73b684e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18282d14540027e4fae4fe152d3867ad8c223c37
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123607"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181474"
 ---
 # <a name="default-marshaling-behavior"></a>預設的封送處理行為
 Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫者是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
@@ -42,7 +42,7 @@ BSTR MethodOne (BSTR b) {
  執行階段一律會使用 **CoTaskMemFree** 方法來釋放記憶體。 如果您正在使用的記憶體不是使用 **CoTaskMemAlloc** 方法配置，則必須使用 **IntPtr**，並使用適當方法手動釋放記憶體。 同樣地，您可以在絕不應該釋放記憶體的情況下避免自動釋放記憶體；例如，從 Kernel32.dll 使用 **GetCommandLine** 函式，該函式會傳回核心記憶體的指標。 如需手動釋放記憶體的詳細資訊，請參閱[緩衝區範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))。  
   
 ## <a name="default-marshaling-for-classes"></a>類別的預設封送處理  
- 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 如需以您選擇的介面來覆寫類別介面的相關資訊，請參閱[類別介面簡介](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。  
+ 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 有關使用您選擇的介面重寫類介面的資訊，請參閱[介紹類介面](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。  
   
 ### <a name="passing-classes-to-com"></a>將類別傳遞給 COM  
  將 Managed 類別傳遞給 COM 時，Interop 封送處理器會自動使用 COM Proxy 來包裝類別，並將 Proxy 產生的類別介面傳遞給 COM 方法呼叫。 Proxy 接著會將類別介面上的所有呼叫重新委派給 Managed 物件。 Proxy 也會公開類別未明確實作的其他介面。 Proxy 會代表類別自動實作 **IUnknown** 和 **IDispatch** 這類介面。  
@@ -90,10 +90,10 @@ using System.Runtime.InteropServices;
   
 public interface DelegateTest {  
 void m1(Delegate d);  
-void m2([MarshalAs(UnmanagedType.Interface)] Delegate d);     
-void m3([MarshalAs(UnmanagedType.Interface)] ref Delegate d);    
-void m4([MarshalAs(UnmanagedType.FunctionPtr)] Delegate d);   
-void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);     
+void m2([MarshalAs(UnmanagedType.Interface)] Delegate d);
+void m3([MarshalAs(UnmanagedType.Interface)] ref Delegate d);
+void m4([MarshalAs(UnmanagedType.FunctionPtr)] Delegate d);
+void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
 }  
 ```  
   
@@ -132,10 +132,10 @@ public class CallBackClass {
 internal class DelegateTest {  
    public static void Test() {  
       CallBackClass cb = new CallBackClass();  
-      // Caution: The following reference on the cb object does not keep the   
-      // object from being garbage collected after the Main method   
+      // Caution: The following reference on the cb object does not keep the
+      // object from being garbage collected after the Main method
       // executes.  
-      ExternalAPI.SetChangeHandler(new ChangeDelegate(cb.OnChange));     
+      ExternalAPI.SetChangeHandler(new ChangeDelegate(cb.OnChange));
    }  
 }  
 ```  
@@ -152,7 +152,7 @@ internal class DelegateTest {
    }  
    // Called after using the callback function for the last time.  
    public static void RemoveChangeHandler() {  
-      // The cb object can be collected now. The unmanaged code is   
+      // The cb object can be collected now. The unmanaged code is
       // finished with the callback function.  
       cb = null;  
    }  
@@ -166,7 +166,7 @@ internal class DelegateTest {
   
 - [在平台叫用中使用的實值型別](#value-types-used-in-platform-invoke)  
   
-- [在 COM Interop 中使用的實值型別](#value-types-used-in-com-interop)  
+- [在 COM Interop 中使用的實值類型](#value-types-used-in-com-interop)  
   
  本主題除了描述格式化類型之外，還指出具有獨特封送處理行為的[系統實值型別](#system-value-types)。  
   
@@ -207,7 +207,7 @@ using System.Runtime.InteropServices;
 public struct Point {  
    public int x;  
    public int y;  
-}     
+}
   
 [StructLayout(LayoutKind.Explicit)]  
 public struct Rect {  
@@ -269,14 +269,14 @@ End Class
 ```csharp  
 [StructLayout(LayoutKind.Sequential)]  
    public class SystemTime {  
-   public ushort wYear;   
+   public ushort wYear;
    public ushort wMonth;  
-   public ushort wDayOfWeek;   
-   public ushort wDay;   
-   public ushort wHour;   
-   public ushort wMinute;   
-   public ushort wSecond;   
-   public ushort wMilliseconds;   
+   public ushort wDayOfWeek;
+   public ushort wDay;
+   public ushort wHour;
+   public ushort wMinute;
+   public ushort wSecond;
+   public ushort wMilliseconds;
 }  
 ```  
   
@@ -321,7 +321,7 @@ End Class
 [StructLayout(LayoutKind.Sequential)]  
 public class Point {  
    int x, y;  
-   public void SetXY(int x, int y){   
+   public void SetXY(int x, int y){
       this.x = x;  
       this.y = y;  
    }  
@@ -349,7 +349,7 @@ interface _Graphics {
  當透過 COM 介面進行封送處理時，會使用與封送處理平台叫用呼叫的值和參考時相同的規則。 例如，將 `Point` 實值類型的執行個體從 .NET Framework 傳遞至 COM 時，會以傳值方式傳遞 `Point`。 如果以傳址方式傳遞 `Point` 實值類型，則會在堆疊上傳遞 `Point` 的指標。 Interop 封送處理器不支援任一方向中更高層級的間接取值 (**Point** \*\*)。  
   
 > [!NOTE]
-> 由於匯出的型別程式庫無法表示明確的配置，因此不可在 COM Interop 中使用將 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值設定為 [明確] 的結構。  
+> 由於匯出的型別程式庫無法表示明確的配置，因此不可在 COM Interop 中使用將 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值設定為 [明確]**** 的結構。  
   
 ### <a name="system-value-types"></a>系統實值類型  
  <xref:System> 命名空間具有數個實值類型，代表執行階段基本類型的 Boxed 格式。 例如，實值型別 <xref:System.Int32?displayProperty=nameWithType> 結構代表 **ELEMENT_TYPE_I4** 的 Boxed 格式。 如同其他格式化類型，封送處理這些類型的方式與這些類型 Box 處理基本類型的方式相同，而不是將其封送處理為結構。 因此會將 **System.Int32** 封送處理為 **ELEMENT_TYPE_I4**，而不是封送處理為包含 **long** 類型之單一成員的結構。 下表包含 **System** 命名空間中的實值型別清單，這些類型是基本類型的 Boxed 表示。  
@@ -376,9 +376,9 @@ interface _Graphics {
   
 |系統實值類型|IDL 類型|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**日期**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**十進位**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**Guid**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  下列程式碼示範 Stdole2 型別程式庫中 Unmanaged 類型 **DATE**、**GUID**、**DECIMAL** 和 **OLE_COLOR** 的定義。  
@@ -437,7 +437,7 @@ interface IValueTypes : IDispatch {
 };  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)
 - [複製和 Pin](copying-and-pinning.md)
