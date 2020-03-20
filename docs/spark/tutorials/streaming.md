@@ -1,45 +1,45 @@
 ---
-title: 適用于 Apache Spark 的 .NET 的結構化串流教學課程
-description: 在本教學課程中，您將瞭解如何使用適用于 Spark 結構化串流的 .NET 進行 Apache Spark。
+title: 結構化流與 .NET 的 Apache Spark 教程
+description: 在本教程中，您將瞭解如何將 .NET 用於 Apache Spark 進行 Spark 結構化流式處理。
 author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 125ef834da8e42c99c8080a3d5414a7927ce7636
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504038"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79186504"
 ---
-# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>教學課程：使用適用于 Apache Spark 的 .NET 進行結構化串流 
+# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>教程：結構化流與 .NET 的 Apache Spark
 
-本教學課程會教您如何使用 .NET 為 Apache Spark 叫用 Spark 結構化串流。 Spark 結構化串流是 Apache Spark 支援處理即時資料流。 串流處理表示在即時資料產生時進行分析。
+本教程教您如何使用 .NET 為 Apache Spark 調用 Spark 結構化流。 Spark 結構化流是 Apache Spark 對處理即時資料流的支援。 流處理意味著在生成即時資料時對其進行分析。
 
 在本教學課程中，您會了解如何：
 
 > [!div class="checklist"]
 >
-> * 建立並執行適用于 Apache Spark 應用程式的 .NET
-> * 使用 netcat 建立資料流程
-> * 使用使用者定義函數和 SparkSQL 分析串流資料
+> * 為 Apache Spark 應用程式創建和運行 .NET
+> * 使用 netcat 創建資料流程
+> * 使用使用者定義的函數和 SparkSQL 分析流資料
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件
 
-如果這是您 Apache Spark 應用程式的第一個 .NET，請從[消費者入門教學](get-started.md)課程開始，以熟悉基本概念。
+如果這是您的第一個 .NET 用於 Apache Spark 應用程式，請從[入門教程](get-started.md)開始，瞭解基礎知識。
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
-1. 在命令提示字元中，執行下列命令以建立新的主控台應用程式：
+1. 在命令提示符中，運行以下命令以創建新的主控台應用程式：
 
    ```dotnetcli
    dotnet new console -o mySparkStreamingApp
    cd mySparkStreamingApp
    ```
 
-   `dotnet` 命令會為您建立類型為 `console` 的 `new` 應用程式。 `-o` 參數會建立名為*mySparkStreamingApp*的目錄，其中儲存您的應用程式，並填入所需的檔案。 `cd mySparkStreamingApp` 命令會將目錄變更為您剛才建立的應用程式目錄。
+   該`dotnet`命令為您創建`new`類型`console`應用程式。 該`-o`參數創建一個名為*mySparkStreamingApp*的目錄，其中存儲你的應用，並將其填充到所需的檔中。 該`cd mySparkStreamingApp`命令將目錄更改為您剛剛創建的應用目錄。
 
-1. 若要在應用程式中使用 .NET 進行 Apache Spark，請安裝 Microsoft Spark 套件。 在您的主控台中，執行下列命令：
+1. 要在應用中使用的阿帕奇 Spark 的 .NET，請安裝 Microsoft.Spark 包。 在主控台中，運行以下命令：
 
    ```dotnetcli
    dotnet add package Microsoft.Spark
@@ -47,13 +47,13 @@ ms.locfileid: "77504038"
 
 ## <a name="establish-and-connect-to-a-data-stream"></a>建立並連接到資料流程
 
-測試串流處理的其中一個常用方式是透過**netcat**。 netcat （也稱為*nc*）可讓您讀取和寫入網路連接。 您可以透過終端機視窗來建立與 netcat 的網路連線。 
+測試流處理的一種流行方法是通過**netcat。** netcat（也稱為*nc*）允許您從網路連接讀取和寫入網路連接。 通過終端視窗與網貓建立網路連接。
 
-### <a name="create-a-data-stream-with-netcat"></a>使用 netcat 建立資料流程
+### <a name="create-a-data-stream-with-netcat"></a>使用網貓創建資料流程
 
-1. [下載 netcat](https://sourceforge.net/projects/nc110/files/)。 然後，從 zip 下載解壓縮檔案，並將您解壓縮的目錄附加至 "PATH" 環境變數。
+1. [下載網貓](https://sourceforge.net/projects/nc110/files/)。 然後，從 zip 下載中提取檔，並將提取的目錄追加到"PATH"環境變數。
 
-2. 若要啟動新的連線，請開啟新的主控台，然後執行下列命令，以連線至埠9999上的 localhost。
+2. 要啟動新連接，請打開一個新主控台並運行以下命令，該命令連接到埠 9999 上的本地主機。
 
    在 Windows 上：
 
@@ -67,11 +67,11 @@ ms.locfileid: "77504038"
    nc -lk 9999
    ```
 
-   您的 Spark 程式會接聽您在此命令提示字元中鍵入的輸入。
+   Spark 程式偵聽您在此命令提示符中鍵入的輸入。
 
-### <a name="create-a-sparksession"></a>建立 SparkSession
+### <a name="create-a-sparksession"></a>創建火花會話
 
-1. 在*mySparkStreamingApp*中，將下列額外的 `using` 語句新增至*Program.cs*檔案的頂端：
+1. 將以下附加`using`語句添加到*mySparkStreamingApp*中*Program.cs*檔的頂部 ：
 
    ```csharp
    using System;
@@ -80,7 +80,7 @@ ms.locfileid: "77504038"
    using static Microsoft.Spark.Sql.Functions;
    ```
 
-1. 將下列程式碼新增至您的 `Main` 方法，以建立新的 `SparkSession`。 Spark 會話是使用 Dataset 和資料框架 API 來程式設計 Spark 的進入點。
+1. 將以下代碼添加到方法`Main`以創建新的`SparkSession`。 Spark 會話是使用資料集和資料幀 API 程式設計 Spark 的進入點。
 
    ```csharp
    SparkSession spark = SparkSession
@@ -89,11 +89,11 @@ ms.locfileid: "77504038"
         .GetOrCreate();
    ```
 
-   呼叫上述所建立的*spark*物件，可讓您在整個程式中存取 Spark 和資料框架功能。
+   調用上面創建的*火花*物件允許您在整個程式中訪問 Spark 和 DataFrame 功能。
 
-### <a name="connect-to-a-stream-with-readstream"></a>使用 ReadStream （）連接到資料流程
+### <a name="connect-to-a-stream-with-readstream"></a>使用 ReadStream 連接到流（）
 
-`ReadStream()` 方法會傳回可用來以 `DataFrame`的形式讀取串流資料的 `DataStreamReader`。 包含主機和埠資訊，告訴您的 Spark 應用程式在何處預期其串流資料。
+該方法`ReadStream()`返回 可用於`DataStreamReader`讀取流資料作為`DataFrame`的 。 包括主機和埠資訊，告訴 Spark 應用在何處預期其流資料。
 
 ```csharp
 DataFrame lines = spark
@@ -104,37 +104,37 @@ DataFrame lines = spark
     .Load();
 ```
 
-## <a name="register-a-user-defined-function"></a>註冊使用者定義函數
+## <a name="register-a-user-defined-function"></a>註冊使用者定義的函數
 
-您可以在 Spark 應用程式中使用 Udf、*使用者定義*的函式，對您的資料執行計算和分析。
+您可以在 Spark 應用程式中使用*使用者定義的函數*UdF 對資料執行計算和分析。
 
-將下列程式碼新增至您的 `Main` 方法，以註冊名為 `udfArray`的 UDF。 
+將以下代碼添加到方法`Main`以註冊稱為`udfArray`的 UDF。
 
 ```csharp
 Func<Column, Column> udfArray =
     Udf<string, string[]>((str) => new string[] { str, $"{str} {str.Length}" });
 ```
 
-此 UDF 會處理它從 netcat 終端機接收的每個字串，以產生陣列，其中包含原始字串（包含在*str*中），後面接著以原始字串長度串連的原始字串。 
+此 UDF 處理它從 netcat 終端接收的每個字串以生成包含原始字串（包含在*str*中）的陣列，然後是與原始字串長度串聯的原始字串。
 
-例如，在 netcat 終端機中輸入*Hello world*會產生一個陣列，其中：
+例如，在 netcat 終端中輸入*Hello 世界*會產生一個陣列，其中：
 
-* 陣列\[0] = Hello world
-* 陣列\[1] = Hello world 11
+* 陣列\[0+ = 你好世界
+* 陣列\[1] = 您世界 11
 
 ## <a name="use-sparksql"></a>使用 SparkSQL
 
-使用 SparkSQL 對儲存在資料框架中的資料執行各種功能。 結合 Udf 和 SparkSQL 以將 UDF 套用至資料框架的每個資料列是很常見的。
+使用 SparkSQL 對存儲在資料幀中的資料執行各種功能。 通常將 UDF 和 SparkSQL 組合在一起，將 UDF 應用於 DataFrame 的每一行。
 
 ```csharp
 DataFrame arrayDF = lines.Select(Explode(udfArray(lines["value"])));
 ```
 
-此程式碼片段會將*udfArray*套用至資料框架中的每個值，這代表從您的 netcat 終端機讀取的每個字串。 套用 SparkSQL 方法 <xref:Microsoft.Spark.Sql.Functions.Explode%2A>，將陣列的每個專案放在它自己的資料列中。 最後，使用 <xref:Microsoft.Spark.Sql.DataFrame.Select%2A>，將您在新的資料框架 ArrayDF 中所產生的資料行放在其中 *。*
+此程式碼片段將*udfArray*應用於 DataFrame 中的每個值，該值表示從 netcat 終端讀取的每個字串。 應用 SparkSQL<xref:Microsoft.Spark.Sql.Functions.Explode%2A>方法將陣列的每個條目放在自己的行中。 最後，使用<xref:Microsoft.Spark.Sql.DataFrame.Select%2A>將已生成的列放在新的 DataFrame*陣列DF*中。
 
-## <a name="display-your-stream"></a>顯示您的串流
+## <a name="display-your-stream"></a>顯示流
 
-使用 <xref:Microsoft.Spark.Sql.DataFrame.WriteStream> 來建立輸出的特性，例如將結果列印到主控台，以及只顯示最新的輸出。
+用於<xref:Microsoft.Spark.Sql.DataFrame.WriteStream>建立輸出的特徵，例如將結果列印到主控台並僅顯示最新的輸出。
 
 ```csharp
 StreamingQuery query = arrayDf
@@ -143,31 +143,31 @@ StreamingQuery query = arrayDf
     .Start();
 ```
 
-## <a name="run-your-code"></a>執行您的程式碼
+## <a name="run-your-code"></a>運行代碼
 
-Spark 中的結構化串流會透過一系列的小型**批次**來處理資料。  當您執行程式時，您建立 netcat 連接的命令提示字元可讓您開始輸入。 每次您在該命令提示字元中輸入資料後按下 Enter 鍵，Spark 就會將您的輸入視為批次並執行 UDF。
+Spark 中的結構化流通過一系列小**批量**處理資料。  運行程式時，建立 netcat 連接的命令提示允許您開始鍵入。 每次在命令提示符中鍵入資料後按 Enter 鍵時，Spark 都會將您的條目視為一個批次處理並運行 UDF。
 
-### <a name="use-spark-submit-to-run-your-app"></a>使用 spark-提交來執行您的應用程式
+### <a name="use-spark-submit-to-run-your-app"></a>使用火花提交運行應用
 
-啟動新的 netcat 會話之後，請開啟新的終端機，然後執行您的 `spark-submit` 命令，類似下列命令：
+啟動新的 netcat 會話後，打開一個新終端並運行`spark-submit`命令，類似于以下命令：
 
 ```powershell
 spark-submit --class org.apache.spark.deploy.dotnet.DotnetRunner --master local /path/to/microsoft-spark-<version>.jar Microsoft.Spark.CSharp.Examples.exe Sql.Streaming.StructuredNetworkCharacterCount localhost 9999
 ```
 
 > [!NOTE]
-> 請務必使用 Microsoft Spark jar 檔案的實際路徑來更新上述命令。 上述命令也會假設您的 netcat 伺服器正在 localhost 通訊埠9999上執行。
+> 請務必使用 Microsoft Spark jar 檔的實際路徑更新上述命令。 上述命令還假定您的 netcat 伺服器正在本地主機埠 9999 上運行。
 
 ## <a name="get-the-code"></a>取得程式碼
 
-本教學課程使用[StructuredNetworkCharacterCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkCharacterCount.cs)範例，但 GitHub 上有其他三個完整的串流處理範例：
+本教程使用[StructuredNetworkCharacterCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkCharacterCount.cs)示例，但 GitHub 上還有三個完整的流處理示例：
 
-* [StructuredNetworkWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)：從任何來源串流處理的資料字數統計
-* [StructuredNetworkWordCountWindowed.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCountWindowed.cs)：使用視窗化邏輯對資料進行字數統計
-* [StructuredKafkaWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)：從 Kafka 串流處理的資料字數統計
+* [StructuredNetworkWordCount.cs：](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCount.cs)字計數從任何源資料流的資料
+* [StructuredNetworkWordCountWindowed.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredNetworkWordCountWindowed.cs)： 具有視窗邏輯的資料的字數
+* [StructuredKafkaWordCount.cs](https://github.com/dotnet/spark/blob/master/examples/Microsoft.Spark.CSharp.Examples/Sql/Streaming/StructuredKafkaWordCount.cs)： 字計數從卡夫卡流的資料
 
 ## <a name="next-steps"></a>後續步驟
 
-前往下一篇文章，以瞭解如何將您的 .NET for Apache Spark 應用程式部署至 Databricks。
+進入下一篇文章，瞭解如何將用於 Apache Spark 的 .NET 應用程式部署到 Databricks。
 > [!div class="nextstepaction"]
-> [教學課程：將適用于 Apache Spark 應用程式的 .NET 部署至 Databricks](databricks-deployment.md)
+> [教程：將用於 Apache Spark 應用程式的 .NET 部署到資料磚塊](databricks-deployment.md)

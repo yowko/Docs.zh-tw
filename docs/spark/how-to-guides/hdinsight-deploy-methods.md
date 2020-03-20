@@ -1,29 +1,29 @@
 ---
-title: 將適用于 Apache Spark 作業的 .NET 提交至 Azure HDInsight
-description: 瞭解如何使用 Spark-submit 和 Apache Livy，將 Apache Spark 作業的 .NET 提交至 Azure HDInsight。
+title: 將阿帕奇 Spark 作業的 .NET 提交到 Azure HDInsight
+description: 瞭解如何使用火花提交和 Apache Livy 將 Apache Spark 作業提交 .NET 到 Azure HDInsight。
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: d558234a53cc22d65540a380ac7f5b3ac03ba0ae
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 83359f7f613b500a4ce121ce1612cda0ad1191ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868014"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185790"
 ---
-# <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>將適用于 Apache Spark 作業的 .NET 提交至 Azure HDInsight
+# <a name="submit-a-net-for-apache-spark-job-to-azure-hdinsight"></a>將阿帕奇 Spark 作業的 .NET 提交到 Azure HDInsight
 
-有兩種方式可將適用于 Apache Spark 作業的 .NET 部署至 HDInsight： `spark-submit` 和 Apache Livy。
+有兩種方法可以將用於 Apache Spark 的 .NET 作業部署到`spark-submit`HDInsight：和 Apache Livy。
 
-## <a name="deploy-using-spark-submit"></a>使用 spark 部署-提交
+## <a name="deploy-using-spark-submit"></a>使用火花提交進行部署
 
 您可以使用 [spark-submit](https://spark.apache.org/docs/latest/submitting-applications.html) 命令將適用於 Apache Spark 的 .NET 作業提交到 Azure HDInsight。
- 
-1. 在 Azure 入口網站中，流覽至您的 HDInsight Spark 叢集，然後選取 **[SSH + 叢集登**入]。
 
-2. 複製 ssh 登入資訊，並將登入貼入終端機。 使用您在叢集建立期間所設定的密碼來登入您的叢集。 您應該會看到歡迎您前往 Ubuntu 和 Spark 的訊息。
+1. 導航到 Azure 門戶中的 HDInsight Spark 群集，然後選擇**SSH + 群集登錄**。
 
-3. 使用**spark-submit**命令在 HDInsight 叢集上執行您的應用程式。 請記得以您的 blob 容器和儲存體帳戶的實際名稱取代範例腳本中的**mycontainer**和**mystorageaccount** 。 此外，請務必將 `microsoft-spark-2.3.x-0.6.0.jar` 取代為您要用於部署的適當 jar 檔案。 `2.3.x` 代表 Apache Spark 的版本，而 `0.6.0` 則代表[Apache Spark worker 的 .net](https://github.com/dotnet/spark/releases)版本。
+2. 複製 ssh 登錄資訊並將登錄粘貼到終端中。 使用在群集創建期間設置的密碼登錄到群集。 您應該會看到歡迎您訪問 Ubuntu 和 Spark 的消息。
+
+3. 使用**火花提交**命令在 HDInsight 群集上運行應用。 請記住，在示例腳本中用 blob 容器和存儲帳戶的實際名稱替換**我的容器**和**我的存儲帳戶**。 此外，請確保`microsoft-spark-2.3.x-0.6.0.jar`替換為用於部署的相應 jar 檔。 `2.3.x`表示 Apache Spark 的版本，`0.6.0`表示 Apache Spark 工作人員的[.NET](https://github.com/dotnet/spark/releases)版本。
 
    ```bash
    $SPARK_HOME/bin/spark-submit \
@@ -33,7 +33,7 @@ ms.locfileid: "76868014"
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
 
-## <a name="deploy-using-apache-livy"></a>使用 Apache Livy 進行部署
+## <a name="deploy-using-apache-livy"></a>使用阿帕奇利維部署
 
 您可以使用 [Apache Livy](https://livy.incubator.apache.org/) (Apache Spark REST API) 來將適用於 Apache Spark 的 .NET 作業提交到 Azure HDInsight Spark 叢集。 如需詳細資訊，請參閱 [Remote jobs with Apache Livy](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-livy-rest-interface) (使用 Apache Livy 的遠端作業)。
 
@@ -58,4 +58,4 @@ EOF
 
 * [開始使用 .NET for Apache Spark](../tutorials/get-started.md)
 * [將 .NET for Apache Spark 應用程式部署到 Azure HDInsight](../tutorials/hdinsight-deployment.md)
-* [HDInsight 檔](https://docs.microsoft.com/azure/hdinsight/)
+* [HDInsight 文檔](https://docs.microsoft.com/azure/hdinsight/)
