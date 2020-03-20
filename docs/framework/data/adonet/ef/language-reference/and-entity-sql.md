@@ -1,15 +1,15 @@
 ---
-title: '&amp;&amp; （和）（Entity SQL）'
+title: '&amp;&amp;（和）（實體 SQL）'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
-ms.openlocfilehash: be6e7120e6c19714f151aa38a8b9a1355de29d1a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eccad616de287a39c42e986cea84dc22feec7f70
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039959"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150504"
 ---
-# <a name="ampamp-and-entity-sql"></a>&amp;&amp; （和）（Entity SQL）
+# <a name="ampamp-and-entity-sql"></a>&amp;&amp;（和）（實體 SQL）
 如果兩個運算式都是 `true` 則傳回 `true`，否則為 `false` 或 `NULL`。  
   
 ## <a name="syntax"></a>語法  
@@ -17,7 +17,7 @@ ms.locfileid: "73039959"
 ```csharp  
 boolean_expression AND boolean_expression
 ```
- 
+
 或  
 
 ```csharp
@@ -35,9 +35,9 @@ boolean_expression && boolean_expression
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|true|false|NULL|  
-|`FALSE`|false|false|false|  
-|`NULL`|NULL|false|NULL|  
+|`TRUE`|TRUE|FALSE|NULL|  
+|`FALSE`|FALSE|FALSE|FALSE|  
+|`NULL`|NULL|FALSE|NULL|  
   
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會示範如何使用 AND 運算子。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
@@ -48,6 +48,6 @@ boolean_expression && boolean_expression
   
  [!code-csharp[DP EntityServices Concepts 2#AND](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#and)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Entity SQL 參考](entity-sql-reference.md)

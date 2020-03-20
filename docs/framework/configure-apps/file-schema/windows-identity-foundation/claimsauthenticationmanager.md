@@ -3,20 +3,20 @@ title: <claimsAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
-ms.openlocfilehash: c901daf4d442a206345301795c7a4bdc076329cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: a54fc2cea84bb9d08a9725d846fe38efd7b5475a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252096"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152745"
 ---
-# <a name="claimsauthenticationmanager"></a>\<claimsAuthenticationManager>
-為傳入宣告註冊宣告驗證管理員。  
+# <a name="claimsauthenticationmanager"></a>\<聲明身份驗證管理器>
+註冊傳入聲明的聲明身份驗證管理器。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<claimsAuthenticationManager >**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<系統.身份模型>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<身份配置>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<聲明身份驗證管理器>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,34 +31,34 @@ ms.locfileid: "70252096"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|型別|指定衍生<xref:System.Security.Claims.ClaimsAuthenticationManager>自類別的自訂類型。 如需如何指定屬性的`type`詳細資訊，請參閱 [自訂類型參考]。|  
+|type|指定派生自類的<xref:System.Security.Claims.ClaimsAuthenticationManager>自訂類型。 有關如何指定屬性的詳細資訊，`type`請參閱 [自訂類型引用]。|  
   
 ### <a name="child-elements"></a>子元素  
- <xref:System.Security.Claims.ClaimsAuthenticationManager> `<claimsAuthenticationManager>` <xref:System.Security.Claims.ClaimsAuthenticationManager>如果沒有`type`屬性，或屬性參考類別，則專案不會採用子項目; 不過，衍生自的類別可以定義子設定元素。 `type`  
+ 如果沒有`type`屬性，或者該`type`屬性引用該<xref:System.Security.Claims.ClaimsAuthenticationManager>類，則`<claimsAuthenticationManager>`元素不會採用子項目;如果該屬性引用該類，則元素不會採用子項目。但是，派生自的<xref:System.Security.Claims.ClaimsAuthenticationManager>類可以定義子配置元素。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<identityConfiguration>](identityconfiguration.md)|指定服務層級的身分識別設定。|  
+|[\<身份配置>](identityconfiguration.md)|指定服務等級標識設置。|  
   
 ## <a name="remarks"></a>備註  
- 透過<xref:System.Security.Claims.ClaimsAuthenticationManager>類別提供的預設行為會回顯傳入宣告。 如果未`type`指定任何屬性，或`type`屬性指定了<xref:System.Security.Claims.ClaimsAuthenticationManager>類別，則`<claimsAuthenticationManager>`專案不會採用子項目。 您可以指定`type`屬性來註冊衍生自類別的<xref:System.Security.Claims.ClaimsAuthenticationManager>型別，以執行自訂行為。 衍生類別可以藉由覆`<claimsAuthenticationManager>` <xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A>寫方法來處理這些專案，藉以支援透過專案的子專案進行設定。 為子專案定義的架構是由類別的設計工具所組成。  
+ 通過<xref:System.Security.Claims.ClaimsAuthenticationManager>類提供的預設行為與傳入的聲明相呼應。 如果未`type`指定屬性或`type`屬性指定類，<xref:System.Security.Claims.ClaimsAuthenticationManager>則`<claimsAuthenticationManager>`元素不會採用子項目。 可以指定屬性`type`以註冊從<xref:System.Security.Claims.ClaimsAuthenticationManager>類派生的類型以實現自訂行為。 派生類可以通過重寫`<claimsAuthenticationManager>`<xref:System.Security.Claims.ClaimsAuthenticationManager.LoadCustomConfiguration%2A>處理這些元素的方法來支援通過元素的子項目進行配置。 為子項目定義的架構由類的設計器決定。  
   
- `<claimsAuthenticationManager>`元素會<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType>設定屬性。  
+ 元素`<claimsAuthenticationManager>`設置<xref:System.IdentityModel.Configuration.IdentityConfiguration.ClaimsAuthenticationManager%2A?displayProperty=nameWithType>屬性。  
   
 ## <a name="example"></a>範例  
   
 ```xml  
 <system.identityModel>  
     <identityConfiguration name="MyIdentity">  
-      <claimsAuthenticationManager type="MyNamespace.CustomClaimsAuthenticationManager, MyAssembly"/>          
+      <claimsAuthenticationManager type="MyNamespace.CustomClaimsAuthenticationManager, MyAssembly"/>
     </identityConfiguration>  
 </system.identityModel>  
 ```

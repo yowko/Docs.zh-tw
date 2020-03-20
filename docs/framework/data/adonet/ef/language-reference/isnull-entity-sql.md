@@ -2,12 +2,12 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 9066f9fb68ce2c50e9523881cfa0dd930cd0b52e
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: b3fc2484e80b637ed5841375985f7bae476bbbf7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319723"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150196"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 判斷查詢運算式是否為 null。  
@@ -32,9 +32,9 @@ expression IS [ NOT ] NULL
  使用 `IS NULL` 判斷外部連結的項目是否為 null：  
   
 ```sql  
-select c   
-      from LOB.Customers as c left outer join LOB.Orders as o   
-                              on c.ID = o.CustomerID    
+select c
+      from LOB.Customers as c left outer join LOB.Orders as o
+                              on c.ID = o.CustomerID
       where o is not null and o.OrderQuantity = @x  
 ```  
   
@@ -57,7 +57,7 @@ select c from LOB.Customer as c where c.DOB is not null
 |RowType IS NULL|擲回錯誤。|  
   
 ## <a name="example"></a>範例  
- 下列 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢會使用 IS NOT Null 運算子來判斷查詢運算式是否不是 null。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
+ 以下[!INCLUDE[esql](../../../../../../includes/esql-md.md)]查詢使用 IS NOT Null 運算子來確定查詢運算式是否為空。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
 1. 遵循 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)中的程序進行。  
   
@@ -65,6 +65,6 @@ select c from LOB.Customer as c where c.DOB is not null
   
  [!code-sql[DP EntityServices Concepts#ISNULL](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#isnull)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Entity SQL 參考](entity-sql-reference.md)

@@ -2,33 +2,33 @@
 title: 訊息佇列上的訊息安全性
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: 03f4bd3f580163868920622a74ae4f34d7a1a97a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2048b27f15787c70abda65ae582849276469c763
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714792"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144431"
 ---
 # <a name="message-security-over-message-queuing"></a>訊息佇列上的訊息安全性
 這個範例示範如何實作應用程式，該應用程式會針對用戶端使用具有 X.509v3 憑證驗證的 WS-Security，並透過 MSMQ 使用伺服器的 X.509v3 憑證來要求伺服器驗證。 有時候，為了確保 MSMQ 存放區中的訊息持續加密，並且讓應用程式可以執行其本身的訊息驗證，使用訊息安全性所產生的效果更為理想。
 
- 這個範例是以交易式[MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)系結範例為基礎。 訊息會經過加密和簽署。
+ 此示例基於[交易 MSMQ 綁定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例。 訊息會經過加密和簽署。
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
 2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
-    1. 在 Visual Studio 2012 中開啟伺服器管理員。
+    1. 2012 年在視覺化工作室中打開伺服器管理員。
 
-    2. 展開 [**功能**] 索引標籤。
+    2. 展開 **"功能"** 選項卡。
 
-    3. 以滑鼠右鍵按一下 [**私人訊息佇列**]，然後選取 [**新增**]、[**私用佇列**]。
+    3. 按右鍵 **"專用訊息佇列**"，然後選擇 **"新建**"**私用佇列**。
 
-    4. 選取 [**交易**式] 方塊。
+    4. 選中 **"事務"** 框。
 
-    5. 輸入 `ServiceModelSamplesTransacted` 做為新佇列的名稱。
+    5. 輸入`ServiceModelSamplesTransacted`為新佇列的名稱。
 
 3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
@@ -45,7 +45,7 @@ ms.locfileid: "74714792"
   
 4. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-5. 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+5. 如果用戶端和服務無法通信，請參閱[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
@@ -55,9 +55,9 @@ ms.locfileid: "74714792"
   
 3. 將用戶端程式檔複製到用戶端電腦上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
   
-4. 在伺服器上執行 `setup.bat service`。 使用 `service` 引數執行 `setup.bat`，會建立具有電腦完整功能變數名稱的服務憑證，並將服務憑證匯出至名為 .cer 的檔案。  
+4. 在伺服器上執行 `setup.bat service`。 使用`setup.bat``service`參數運行將創建具有電腦完全限定功能變數名稱的服務證書，並將服務證書匯出到名為 Service.cer 的檔。  
   
-5. 編輯服務的 app.config 以反映新的憑證名稱（在[\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)中的 `findValue` 屬性中），這與電腦的完整功能變數名稱相同。  
+5. 編輯服務.exe.config 以反映與電腦完全限定的功能變數名稱相同的新證書名稱`findValue`（在[\<服務證書>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)的屬性中）。  
   
 6. 從服務目錄中將 Service.cer 檔案複製至用戶端電腦上的用戶端目錄。  
   
@@ -73,14 +73,14 @@ ms.locfileid: "74714792"
   
 12. 在服務電腦上，從命令提示字元啟動 Service.exe。  
   
-13. 在用戶端電腦上，從命令提示字元啟動 Client.exe。 如果用戶端和服務無法通訊，請參閱[WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+13. 在用戶端電腦上，從命令提示字元啟動 Client.exe。 如果用戶端和服務無法通信，請參閱[WCF 示例的故障排除提示](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 - 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
     > [!NOTE]
-    > 跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果您已在電腦上執行使用憑證的 Windows Communication Foundation （WCF）範例，請務必清除已安裝在 CurrentUser-TrustedPeople 存放區中的服務憑證。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
+    > 跨電腦執行此範例時，這個指令碼不會移除用戶端上的服務憑證。 如果已運行跨電腦使用證書的 Windows 通信基礎 （WCF） 示例，請確保清除已安裝在 CurrentUser - TrustedPeople 存儲中的服務證書。 若要這麼做，請使用下列命令：`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`，例如：`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`。
 
 ## <a name="requirements"></a>需求
  這個範例需要安裝並執行 MSMQ。
@@ -88,12 +88,12 @@ ms.locfileid: "74714792"
 ## <a name="demonstrates"></a>示範
  用戶端會使用服務的公開金鑰對訊息加密，再使用它自己的憑證來簽署訊息。 從佇列讀取訊息的服務會使用其受信任人存放區中的憑證來驗證用戶端憑證， 然後解密訊息，並將它分派至服務作業。
 
- 因為 Windows Communication Foundation （WCF）訊息會在 MSMQ 訊息的主體中攜帶為承載，所以本文會在 MSMQ 存放區中保持加密。 這可以保護訊息，避免不該發生的洩漏風險。 請注意，MSMQ 本身並不知道它所攜帶的訊息是否有加密。
+ 由於 Windows 通信基礎 （WCF） 消息作為有效負載在 MSMQ 消息的正文中傳輸，因此正文在 MSMQ 存儲中保持加密。 這可以保護訊息，避免不該發生的洩漏風險。 請注意，MSMQ 本身並不知道它所攜帶的訊息是否有加密。
 
  此範例示範如何將訊息層級上的相互驗證與 MSMQ 搭配使用。 憑證是透過超出範圍之外的方式進行交換。 對佇列應用程式而言，一定都會採用這種方式，因為服務和用戶端並不需要同時啟動和執行。
 
 ## <a name="description"></a>描述
- 範例用戶端和服務程式代碼與[交易式 MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)系結範例相同，但有一項差異。 作業合約附有保護層級的標註，這表示訊息必須經過簽署並加密。
+ 示例用戶端和服務代碼與具有一個區別[的"交易 MSMQ 綁定"](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)示例相同。 作業合約附有保護層級的標註，這表示訊息必須經過簽署並加密。
 
 ```csharp
 // Define a service contract.
@@ -167,7 +167,7 @@ public interface IOrderProcessor
 
  請注意，安全性模式是設定為 Message，而 ClientCredentialType 則設定為 Certificate。
 
- 服務組態會包含服務行為，以指定用戶端驗證服務時所使用的服務認證。 伺服器憑證主體名稱是在 [ [\<serviceCredentials] >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)的 [`findValue`] 屬性中指定。
+ 服務組態會包含服務行為，以指定用戶端驗證服務時所使用的服務認證。 伺服器憑證主題名稱在[\<服務憑據>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)的屬性`findValue`中指定。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -300,7 +300,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 
 - 將用戶端憑證安裝至伺服器的受信任憑證存放區中。
 
-     批次檔中的下列程式行會將用戶端憑證複製到伺服器的 TrustedPeople 存放區，讓伺服器可以做出相關的信任或不信任決定。 若要讓 TrustedPeople 存放區中安裝的憑證受 Windows Communication Foundation （WCF）服務信任，用戶端憑證驗證模式必須設定為 `PeerOrChainTrust` 或 `PeerTrust` 值。 請參閱先前的服務組態範例，以了解如何使用組態檔完成這個工作。
+     批次檔中的下列程式行會將用戶端憑證複製到伺服器的 TrustedPeople 存放區，讓伺服器可以做出相關的信任或不信任決定。 對於安裝在 TrustedPeople 存儲中的證書，Windows 通信基礎 （WCF） 服務受信任的證書，必須將用戶端憑證驗證模式`PeerOrChainTrust`設置為`PeerTrust`或 值。 請參閱先前的服務組態範例，以了解如何使用組態檔完成這個工作。
 
     ```bat
     echo ************
@@ -323,7 +323,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-     %SERVER_NAME% 變數會指定伺服器名稱。 憑證是儲存在 LocalMachine 存放區中。 如果使用服務的引數執行安裝批次檔（例如，`setup.bat service`），% SERVER_NAME% 就會包含電腦的完整功能變數名稱。否則，預設為 localhost
+     %SERVER_NAME% 變數會指定伺服器名稱。 憑證是儲存在 LocalMachine 存放區中。 如果使用服務參數（如`setup.bat service`）回合設定批次檔，%SERVER_NAME% 包含電腦完全限定的功能變數名稱。否則，它將預設為本地主機
 
 - 將伺服器憑證安裝到用戶端的受信任憑證存放區中。
 
@@ -334,13 +334,13 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     ```
 
     > [!NOTE]
-    > 如果您使用非美國英文版的 Microsoft Windows，就必須編輯 .bat 檔案，並將 "NT AUTHORITY\NETWORK SERVICE" 帳戶名稱取代為您的對等區域。
+    > 如果您使用的是 Microsoft Windows 的非美國英語版本，則必須編輯安裝程式.bat 檔，並將"NT AUTHORITY_NETWORK SERVICE"帳戶名稱替換為區域等效項。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  

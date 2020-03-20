@@ -2,12 +2,12 @@
 title: 自訂尋找準則
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
-ms.openlocfilehash: a7f1b5996f3aefe1ccd77d3ddc117bc7c53ed2aa
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3bafe89f5c114106eece02c41599cf485591c1cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715454"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183853"
 ---
 # <a name="custom-find-criteria"></a>自訂尋找準則
 此範例示範如何使用邏輯建立自訂範圍比對，以及如何實作自訂探索服務。 用戶端使用自訂範圍比對功能來精簡並進一步建立在 WCF 探索之系統提供的尋找功能之上。 此範例包含的案例如下：  
@@ -24,8 +24,8 @@ ms.locfileid: "74715454"
   
 - 透過演算法實作自訂範圍比對。  
   
-## <a name="discussion"></a>討論  
- 用戶端正在尋找「或」型別符合條件。 如果端點上的範圍符合用戶端提供的任何範圍，服務就會回應。 在此情況下，用戶端會在下列清單中尋找擁有任何範圍的計算機服務：  
+## <a name="discussion"></a>討論區  
+ 用戶端正在查找"OR"類型匹配條件。 如果端點上的範圍符合用戶端提供的任何範圍，服務就會回應。 在此情況下，用戶端會在下列清單中尋找擁有任何範圍的計算機服務：  
   
 1. `net.tcp://Microsoft.Samples.Discovery/RedmondLocation`  
   
@@ -39,13 +39,13 @@ ms.locfileid: "74715454"
   
  開啟服務專案。 實作自訂探索服務要使用三個檔案：  
   
-1. **AsyncResult.cs**：這是探索方法所需的 `AsyncResult` 的執行。  
+1. **AsyncResult.cs**：這是探索方法所需的實現`AsyncResult`。  
   
-2. **CustomDiscoveryService.cs**：此檔案會執行自訂探索服務。 此實作會擴充 <xref:System.ServiceModel.Discovery.DiscoveryService> 類別並覆寫必要的方法。 請注意 <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> 方法的實作。 此方法會檢查用戶端是否依照規則指定自訂範圍比對。 這是用戶端先前指定的相同自訂 URI。 如果指定了自訂規則，則會遵循執行 "OR" 比對邏輯的程式碼路徑。  
+2. **CustomDiscoveryService.cs**： 此檔實現自訂發現服務。 此實作會擴充 <xref:System.ServiceModel.Discovery.DiscoveryService> 類別並覆寫必要的方法。 請注意 <xref:System.ServiceModel.Discovery.DiscoveryService.OnBeginFind%2A> 方法的實作。 此方法會檢查用戶端是否依照規則指定自訂範圍比對。 這是用戶端先前指定的相同自訂 URI。 如果指定了自訂規則，則遵循實現"OR"匹配邏輯的代碼路徑。  
   
      這個自訂邏輯會通過服務所擁有之每個端點上的所有範圍。 如果有任何端點的範圍符合用戶端提供的任何範圍，探索服務會將該端點加入至傳回用戶端的回應中。  
   
-3. **CustomDiscoveryExtension.cs**：執行探索服務的最後一個步驟是將此自訂探索服務的執行連接到服務主機。 此處所使用的協助程式類別為 `CustomDiscoveryExtension` 類別。 此類別會擴充 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 類別。 使用者必須覆寫 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 方法。 在此情況下，方法會傳回之前建立之自訂探索服務的執行個體。 `PublishedEndpoints` 是 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>，其中包含加入至 <xref:System.ServiceModel.ServiceHost> 的所有應用程式端點。 自訂探索服務使用這個端點填入其內部清單。 使用者也可以加入其他端點中繼資料。  
+3. **CustomDiscoveryExtension.cs**： 實現發現服務的最後一步是將自訂發現服務的此實現連接到服務主機。 此處所使用的協助程式類別為 `CustomDiscoveryExtension` 類別。 此類別會擴充 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 類別。 使用者必須覆寫 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 方法。 在此情況下，方法會傳回之前建立之自訂探索服務的執行個體。 `PublishedEndpoints` 是 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>，其中包含加入至 <xref:System.ServiceModel.ServiceHost> 的所有應用程式端點。 自訂探索服務使用這個端點填入其內部清單。 使用者也可以加入其他端點中繼資料。  
   
  最後，開啟 Program.cs。 請注意，<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 和 `CustomDiscoveryExtension` 都會加入至主機中。 一旦完成這個動作，而且主機所擁有的端點可用來接收探索訊息之後，應用程式就可以使用自訂探索服務。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "74715454"
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\CustomFindCriteria`

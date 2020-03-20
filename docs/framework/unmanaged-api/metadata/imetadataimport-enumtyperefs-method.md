@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e5d4ddd43b27d733a63c2e0dc5e92ffd2ba94a7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449977"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175430"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs 方法
 列舉在目前中繼資料範圍中定義的 TypeRef 語彙基元。  
@@ -29,44 +29,44 @@ ms.locfileid: "74449977"
   
 ```cpp  
 HRESULT EnumTypeRefs (  
-   [in, out] HCORENUM    *phEnum,   
+   [in, out] HCORENUM    *phEnum,
    [out] mdTypeRef       rTypeRefs[],  
-   [in]  ULONG           cMax,   
+   [in]  ULONG           cMax,
    [out] ULONG           *pcTypeRefs  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `phEnum`  
- [in、out]列舉值的指標。 第一次呼叫此方法時，此值必須為 Null。  
+ [進出]指向枚舉器的指標。 對於此方法的第一次調用，這必須為 Null。  
   
  `rTypeRefs`  
- 脫銷用來儲存 TypeRef 標記的陣列。  
+ [出]用於存儲 TypeRef 權杖的陣列。  
   
  `cMax`  
  [in] `rTypeRefs` 陣列的大小上限。  
   
  `pcTypeRefs`  
- 脫銷`rTypeRefs`中傳回之 TypeRef token 數目的指標。  
+ [出]指向 在 中`rTypeRefs`返回的 TypeRef 權杖數的指標。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|`S_OK`|已成功傳回 `EnumTypeRefs`。|  
-|`S_FALSE`|沒有要列舉的權杖。 在此情況下，`pcTypeRefs` 為零。|  
+|`S_OK`|`EnumTypeRefs`已成功返回。|  
+|`S_FALSE`|沒有要枚舉的權杖。 在這種情況下，`pcTypeRefs`為零。|  
   
 ## <a name="remarks"></a>備註  
- TypeRef 標記代表類型的參考。  
+ TypeRef 權杖表示對類型的引用。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

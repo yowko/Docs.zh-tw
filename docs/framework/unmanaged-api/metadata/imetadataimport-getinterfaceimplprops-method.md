@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-ms.openlocfilehash: e5eb735acac73d694a0719c206bd22711a8c0333
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4b8ddf7fec12d175f030c0ea0ed982c6fb334aee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437546"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175378"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps 方法
-取得執行指定方法之 <xref:System.Type> 的元資料標記指標，以及宣告該方法之介面的指標。
+獲取實現指定方法的 的 中繼資料<xref:System.Type>權杖以及聲明該方法的介面的指標。
   
 ## <a name="syntax"></a>語法  
   
@@ -37,27 +37,27 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>參數  
  `iiImpl`  
- 在元資料標記，代表要傳回其類別和介面標記的方法。  
+ [在]表示要返回類和介面權杖的方法的中繼資料權杖。  
   
  `pClass`  
- 脫銷元資料標記，代表可執行方法的類別。  
+ [出]表示實現方法的類的中繼資料權杖。  
   
  `ptkIface`  
- 脫銷元資料標記，代表定義已執行之方法的介面。  
+ [出]表示定義已實現方法的介面的中繼資料權杖。  
 
 ## <a name="remarks"></a>備註
 
- 您可以藉由呼叫[EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md)方法來取得 `iImpl` 的值。
- 
- 例如，假設類別具有0x02000007 的 `mdTypeDef` token 值，而且它會實作為類型具有權杖的三個介面： 
+ 通過調用`iImpl`[EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md)方法，可以獲取 的值。
 
-- 0x02000003 （TypeDef）
-- 0x0100000A （TypeRef）
-- 0x0200001C （TypeDef）
+ 例如，假設一個類的`mdTypeDef`權杖值為 0x02000007，並且它實現了三個介面，其類型具有權杖：
 
-就概念而言，這種資訊會儲存在介面執行資料表中，如下所示：
+- 0x0200003 （類型定義）
+- 0x0100000A （類型參考）
+- 0x0200001C （類型定義）
 
-| 資料列編號 | 類別 token | 介面 token |
+從概念上講，此資訊存儲在介面實現表中，如：
+
+| 行號 | 類權杖 | 介面權杖 |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -65,21 +65,21 @@ HRESULT GetInterfaceImplProps (
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-回想一下，權杖是4個位元組的值：
+回想，權杖是 4 位元組的值：
 
-- 較低的3個位元組會保存資料列編號或 RID。
-- 大小上限會保存 `mdtInterfaceImpl`的 token 類型-0x09。
+- 較低的 3 個位元組保留行號或 RID。
+- 上位元組保存的權杖類型 = 0x09。 `mdtInterfaceImpl`
 
-`GetInterfaceImplProps` 會傳回您在 `iImpl` 引數中提供之權杖的資料列中所保存的資訊。 
+`GetInterfaceImplProps`返回您在`iImpl`參數中提供的權杖行中持有的資訊。
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

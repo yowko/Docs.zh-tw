@@ -7,18 +7,18 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: 397a78514dc5878e83708882ceeb4d92160d9a78
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975663"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181598"
 ---
-# <a name="overview-of-the-net-framework"></a>.NET Framework 的概觀
+# <a name="overview-of-net-framework"></a>.NET 框架概述
 
-.NET Framework 是支援建置和執行新一代應用程式及 XML Web Service 的技術。 .NET Framework 是專為實現以下目標所設計的：
+.NET 框架是一種支援構建和運行 Windows 應用和 Web 服務的技術。 .NET 框架旨在實現以下目標：
 
-- 提供一致的物件導向程式設計環境，不論目的碼 (Object Code) 是在本機中儲存及執行、在本機執行但分散至網際網路或在遠端執行。
+- 提供一致的物件導向程式設計環境，無論是在本機存放區和執行、在本地執行還是 Web 分發，還是遠端執行。
 
 - 提供可減少軟體部署和版本控制衝突的程式碼執行環境。
 
@@ -28,16 +28,16 @@ ms.locfileid: "73975663"
 
 - 使開發人員在開發各類應用程式 (例如 Windows 架構應用程式和 Web 架構應用程式) 時享有一致的體驗。
 
-- 根據業界標準建構所有通訊，確保以 .NET Framework 為基礎的程式碼能與任何其他程式碼整合。
+- 根據行業標準構建所有通信，以確保基於 .NET 框架的代碼與任何其他代碼集成。
 
 > [!NOTE]
-> 如需適用於使用者和開發人員的 .NET Framework 一般簡介，請參閱[使用者入門](index.md)。
+> 有關 .NET 框架的一般介紹，請參閱[入門](index.md)。
 
-.NET Framework 是由 Common Language Runtime (CLR) 和 .NET Framework 類別庫所組成。 Common Language Runtime 是 .NET Framework 的基礎。 請將執行階段視為在執行階段管理程式碼的代理程式，可提供記憶體管理、執行緒管理和遠端作業等核心服務，並同時強制執行嚴格的型別安全及其他形式的程式碼精確度，以提升安全性和穩定性。 事實上，程式碼管理的概念是此執行階段的基本原則。 針對執行階段所開發的程式碼稱為 Managed 程式碼，而不針對執行階段所開發的程式碼稱為 Unmanaged 程式碼。 類別庫是範圍廣泛、物件導向、可重複使用類型的集合，您可用它來開發應用程式，範圍從傳統命令列或圖形使用者介面 (GUI) 應用程式到以 ASP.NET 所提供最新創新方式為基礎的應用程式，例如 Web Form 和 XML Web Service，都包括在內。
+.NET 框架由通用語言運行時 （CLR） 和 .NET 框架類庫組成。 通用語言運行時是 .NET 框架的基礎。 請將執行階段視為在執行階段管理程式碼的代理程式，可提供記憶體管理、執行緒管理和遠端作業等核心服務，並同時強制執行嚴格的型別安全及其他形式的程式碼精確度，以提升安全性和穩定性。 事實上，程式碼管理的概念是此執行階段的基本原則。 針對執行階段所開發的程式碼稱為 Managed 程式碼，而不針對執行階段所開發的程式碼稱為 Unmanaged 程式碼。 類庫是一個全面的物件導向的可重用類型集合，用於開發應用，從傳統的命令列或圖形化使用者介面 （GUI） 應用到基於 ASP.NET（如 Web）提供的最新創新的應用表單和 XML Web 服務。
 
-.NET Framework 可由 Unmanaged 元件裝載，此類元件會將 Common Language Runtime 載入其處理序並初始化 Managed 程式碼的執行，因此建立出能同時運用 Managed 和 Unmanaged 功能的軟體環境。 .NET Framework 不只提供數個執行階段主機，也支援協力廠商執行階段主機的開發。
+.NET 框架可以由非託管元件託管，這些元件將通用語言運行時載入到其進程中並啟動託管代碼的執行，從而創建利用託管和非託管功能的軟體環境。 .NET 框架不僅提供多個執行階段主機，而且還支援協力廠商執行階段主機的開發。
 
-例如，ASP.NET 裝載執行階段以提供可擴充、伺服器端的 Managed 程式碼環境。 ASP.NET 可直接搭配執行階段作業，以啟用 ASP.NET 應用程式和 XML Web Service，本主題稍後將討論這兩者。
+例如，ASP.NET 裝載執行階段以提供可擴充、伺服器端的 Managed 程式碼環境。 ASP.NET直接與運行時配合使用，以啟用ASP.NET應用和 XML Web 服務，本文稍後將討論這兩種服務。
 
 Internet Explorer 是裝載執行階段的 Unmanaged 應用程式範例 (採用 MIME 類型擴充的形式)。 使用 Internet Explorer 裝載執行階段，讓您能夠將 Managed 元件或 Windows Form 控制項嵌入 HTML 文件。 以這種方式裝載執行階段，就會讓 Managed 行動程式碼變得可行，不過只有 Managed 程式碼才能提供明顯的改善，例如非完全信任執行和隔離檔案儲存。
 
@@ -45,7 +45,7 @@ Internet Explorer 是裝載執行階段的 Unmanaged 應用程式範例 (採用 
 
 ![下圖也顯示受控碼是如何在較大的架構中運作。](./media/overview/language-runtime-class-library-relationship.gif)
 
-下列章節將更詳細說明 .NET Framework 的主要功能。
+以下各節將更詳細地介紹 .NET 框架的主要功能。
 
 ## <a name="features-of-the-common-language-runtime"></a>Common Language Runtime 的功能
 
@@ -89,10 +89,10 @@ Runtime 是為增強效能所設計的。 雖然 Common Language Runtime 提供�
 
 Windows Forms 類別是一組完整且可重複使用的類型，可大幅簡化 Windows GUI 的開發。 如果要撰寫 ASP.NET Web Form 應用程式，即可使用 Web Form 類別。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [系統需求](system-requirements.md)
-- [安裝指南 (英文)](../install/index.md)
+- [系統要求](system-requirements.md)
+- [安裝指南](../install/index.md)
 - [開發指南](../development-guide.md)
 - [工具](../tools/index.md)
 - [.NET 範例與教學課程](../../samples-and-tutorials/index.md)

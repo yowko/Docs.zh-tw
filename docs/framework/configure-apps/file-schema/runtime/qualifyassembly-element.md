@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <qualifyAssembly> element
 - qualifyAssembly element
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
-ms.openlocfilehash: 17cfe9fc39d65f146beef5d02c701f5e3e2fbbe1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 74e83900c68ab4b3fe01beb3f97657b0140d78ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115776"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153915"
 ---
-# <a name="qualifyassembly-element"></a>\<qualifyAssembly > 元素
+# <a name="qualifyassembly-element"></a>\<限定裝配>元素
 指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<qualifyAssembly >**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<運行時>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<程式集綁定>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<符合條件>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,39 +33,39 @@ ms.locfileid: "73115776"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`partialName`|必要屬性。<br /><br /> 指定元件出現在程式碼中的部分名稱。|  
-|`fullName`|必要屬性。<br /><br /> 指定元件出現在全域組件快取中的完整名稱。|  
+|`partialName`|必要屬性。<br /><br /> 指定程式集的部分名稱，因為它出現在代碼中。|  
+|`fullName`|必要屬性。<br /><br /> 指定程式集的全名，因為它出現在全域組件快取中。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="remarks"></a>備註  
- 使用部分元件名稱呼叫 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法，會導致 common language runtime 只在應用程式基底目錄中尋找元件。 使用應用程式佈建檔中的 **\<qualifyAssembly >** 元素，以提供完整的元件資訊（名稱、版本、公開金鑰標記和文化特性），並導致 common language runtime 在全域中搜尋元件組件快取。  
+ 使用部分<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>程式集名稱調用 方法會導致公共語言運行時僅在應用程式基目錄中查找程式集。 使用應用程式佈建檔中的**\<限定程式集>** 元素提供完整的程式集資訊（名稱、版本、公開金鑰權杖和區域性），並導致通用語言運行時在全域組件快取中搜索程式集。  
   
- **FullName**屬性必須包含元件識別的四個欄位：名稱、版本、公開金鑰標記和文化特性。 **PartialName**屬性必須部分參考元件。 您至少必須指定元件的文字名稱（最常見的情況），但您也可以包含版本、公開金鑰標記或文化特性（或四個（但不是全部四個）的任何組合。 **PartialName**必須符合您的呼叫中所指定的名稱。 例如，您無法將 `"math"` 指定為設定檔中的**partialName**屬性，並在您的程式碼中呼叫 `Assembly.Load("math, Version=3.3.3.3")`。  
+ **fullName**屬性必須包括程式集標識的四個欄位：名稱、版本、公開金鑰權杖和區域性。 **部分名稱**屬性必須部分引用程式集。 必須至少指定程式集的文本名稱（最常見的情況），但還可以包括版本、公開金鑰權杖或區域性（或四者中的任何組合，但不是全部四個）。 **部分名稱**必須與呼叫中指定的名稱匹配。 例如，您不能在設定檔中`"math"`指定為**部分Name**屬性，並在代碼中調用`Assembly.Load("math, Version=3.3.3.3")`。  
   
 ## <a name="example"></a>範例  
- 下列範例會以邏輯方式將呼叫 `Assembly.Load("math")` 變成 `Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`。  
+ 以下示例從邏輯上將調用`Assembly.Load("math")`轉換為`Assembly.Load("math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral")`。  
   
 ```xml  
 <configuration>  
    <runtime>  
       <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">  
-         <qualifyAssembly partialName="math"   
+         <qualifyAssembly partialName="math"
                          fullName=  
 "math,version=1.0.0.0,publicKeyToken=a1690a5ea44bab32,culture=neutral"/>  
       </assemblyBinding>  
@@ -73,8 +73,8 @@ ms.locfileid: "73115776"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段設定結構描述](index.md)
 - [執行階段如何找出組件](../../../deployment/how-the-runtime-locates-assemblies.md)
-- [部分元件參考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))
+- [部分組件參考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

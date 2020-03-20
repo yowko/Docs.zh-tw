@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 2641637d176b411108aeb2fa00ef4268584e9cb3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3f066f29b99ade6e92a263110fed8079208567b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834276"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151490"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>將 XSLT 轉換套用至 DataSet
 
-@No__t-1 的**WriteXml**方法可讓您將**資料集**的內容撰寫為 XML 資料。 接下來，通用工作會使用 XML 轉換 (XSLT)，將這個 XML 轉換為另一種格式。 不過，使用 <xref:System.Xml.XmlDataDocument> 同步處理**資料集**，可讓您將 XSLT 樣式表單套用至**資料集**的內容，而不需要先使用**WriteXml**將**資料集**的內容寫入為 XML 資料。  
+的**WriteXml**方法<xref:System.Data.DataSet>使您能夠將**資料集**的內容寫入 XML 資料。 接下來，通用工作會使用 XML 轉換 (XSLT)，將這個 XML 轉換為另一種格式。 但是，將**資料集**與 同步<xref:System.Xml.XmlDataDocument>資料集使您能夠將 XSLT 樣式表應用於**DataSet**的內容，而無需首先使用**WriteXml**將**資料集**的內容寫入 XML 資料。  
   
- 下列範例會以資料表和關聯性填入**資料集**、使用**XmlDataDocument**同步處理**資料集**，並使用 XSLT 樣式表單將部分**資料集**寫入為 HTML 檔案。 以下是 XSLT 樣式表單的內容：
+ 下面的示例使用表和關係填充**DataSet，** 將**資料集**與**XmlDataDocument**同步，並使用 XSLT 樣式表將**DataSet**的一部分寫入 HTML 檔案。 以下是 XSLT 樣式表的內容：
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -57,10 +57,10 @@ ms.locfileid: "71834276"
 </xsl:stylesheet>  
 ```  
   
- 下列程式碼會填入**資料集**，並套用 XSLT 樣式表單。  
+ 以下代碼填充**DataSet**並應用 XSLT 樣式表。  
   
 > [!NOTE]
-> 如果您要將 XSLT 樣式表單套用至包含關聯性的**資料集**，如果您將每個嵌套關聯的 <xref:System.Data.DataRelation> 的**Nested**屬性設定為**true** ，就能達到最佳效能。 這樣您就可以使用一般由上往下執行的 XSLT 樣式表，而不使用增強效能的 XPath 位置軸 (例如，樣式表中之前和之後同層級節點測試運算式)，來巡覽階層並轉換資料。 如需有關嵌套關聯的詳細資訊，請參閱 nested [datarelation](nesting-datarelations.md)。  
+> 如果要將 XSLT 樣式表應用於包含關係的**DataSet，** 則如果為每個嵌套關係將<xref:System.Data.DataRelation>的**嵌套**屬性設置為**true，** 則實現最佳性能。 這樣您就可以使用一般由上往下執行的 XSLT 樣式表，而不使用增強效能的 XPath 位置軸 (例如，樣式表中之前和之後同層級節點測試運算式)，來巡覽階層並轉換資料。 有關嵌套關係的詳細資訊，請參閱[嵌套資料關係](nesting-datarelations.md)。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -80,7 +80,7 @@ dataSet.Relations.Add("CustOrders", _
 dataSet.Tables("Customers").Columns("CustomerID"), _  
 dataSet.Tables("Orders").Columns("CustomerID")).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim xslTran As XslTransform = New XslTransform  
 xslTran.Load("transform.xsl")  
@@ -112,12 +112,12 @@ custDS.Relations.Add("CustOrders",
   custDS.Tables["Customers"].Columns["CustomerID"],  
                      custDS.Tables["Orders"].Columns["CustomerID"]).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(custDS);   
+XmlDataDocument xmlDoc = new XmlDataDocument(custDS);
   
 XslTransform xslTran = new XslTransform();  
 xslTran.Load("transform.xsl");  
   
-XmlTextWriter writer = new XmlTextWriter("xslt_output.html",   
+XmlTextWriter writer = new XmlTextWriter("xslt_output.html",
   System.Text.Encoding.UTF8);  
   
 xslTran.Transform(xmlDoc, null, writer);  
@@ -127,4 +127,4 @@ writer.Close();
 ## <a name="see-also"></a>另請參閱
 
 - [資料集和 XmlDataDocument 同步處理](dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

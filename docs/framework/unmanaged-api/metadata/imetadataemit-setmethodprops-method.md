@@ -15,48 +15,48 @@ helpviewer_keywords:
 ms.assetid: e0c6ac12-22ea-43f5-b799-8cda0faf3336
 topic_type:
 - apiref
-ms.openlocfilehash: 1fb3f4486bc0ee7a85975770f94a8241999f10e0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9662a14b4ea97aed16968083489324d46c38dda2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442124"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177516"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>IMetaDataEmit::SetMethodProps 方法
-設定或更新先前呼叫 IMetaDataEmit 時所定義之方法的功能（儲存在指定的相對虛擬位址） [：:D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)。  
+設置或更新由之前調用[IMetaDataEmit：:DefineMethod）](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)定義的方法的要素（存儲在指定的相對虛擬位址）  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT SetMethodProps (   
-    [in]  mdMethodDef md,   
+HRESULT SetMethodProps (
+    [in]  mdMethodDef md,
     [in]  DWORD       dwMethodFlags,  
-    [in]  ULONG       ulCodeRVA,   
-    [in]  DWORD       dwImplFlags   
+    [in]  ULONG       ulCodeRVA,
+    [in]  DWORD       dwImplFlags
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `md`  
- 在要變更之方法的 token。  
+ [在]要更改的方法的權杖。  
   
  `dwMethodFlags`  
- 在成員屬性。  
+ [在]成員屬性。  
   
  `ulCodeRVA`  
- 在程式碼的位址。  
+ [在]代碼的位址。  
   
  `dwImplFlags`  
- 在方法的執行旗標。  
+ [在]方法的實現標誌。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -6,22 +6,22 @@ helpviewer_keywords:
 - unmanaged enumerations [.NET Framework], debugging
 - enumerations [.NET Framework debugging]
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
-ms.openlocfilehash: a83b1aa0b2cc068ed2f73dca04083b1085d45201
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c37b6ff42b428184d301d63b6dbbd9d80a72bf3f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789164"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179133"
 ---
 # <a name="debugging-enumerations"></a>偵錯列舉
 本節說明偵錯 API 所使用的 Unmanaged 列舉。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [CLR_DEBUGGING_PROCESS_FLAGS 列舉](clr-debugging-process-flags-enumeration.md)  
- 提供[ICLRDebugging：： OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md)方法所使用的值。  
+ 提供[ICLR 調試中使用的值：：打開虛擬進程](iclrdebugging-openvirtualprocess-method.md)方法。  
   
  [CLRDataEnumMemoryFlags 列舉](clrdataenummemoryflags-enumeration.md)  
- 指出[ICLRDataEnumMemoryRegions：： EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)方法的呼叫應包含的記憶體區域。  
+ 指示調用[ICLRDataEnum 記憶區域：：枚舉記憶區域](iclrdataenummemoryregions-enummemoryregions-method.md)方法應包括哪些記憶體區域。  
   
  [COR_PUB_ENUMPROCESS 列舉](cor-pub-enumprocess-enumeration.md)  
  識別所要列舉的類型。  
@@ -39,16 +39,16 @@ ms.locfileid: "76789164"
  描述匯出函式呼叫 Managed 程式碼的原因。  
   
  CorDebugCreateProcessFlags  
- 提供可在[ICorDebug：： CreateProcess](icordebug-createprocess-method.md)方法的呼叫中使用的其他偵錯工具選項。  
+ 提供可在調用[ICorDebug：：：createProcess](icordebug-createprocess-method.md)方法時使用的其他調試選項。  
   
  [CorDebugDebugEventKind 列舉](cordebugdebugeventkind-enumeration.md)  
- 表示[DecodeEvent](icordebugprocess6-decodeevent-method.md)方法解碼其資訊的事件種類。  
+ 指示其資訊由[解碼事件](icordebugprocess6-decodeevent-method.md)方法解碼的事件種類。  
   
  [CorDebugDecodeEventFlagsWindows 列舉](cordebugdecodeeventflagswindows-enumeration.md)  
  提供 Windows 平台上之偵錯事件的其他資訊。  
   
  CorDebugExceptionCallbackType  
- 表示從[ICorDebugManagedCallback2：： Exception](icordebugmanagedcallback2-exception-method.md)事件進行的回呼類型。  
+ 指示從[ICorDebug 託管回檔 2：：異常](icordebugmanagedcallback2-exception-method.md)事件進行的回檔類型。  
   
  [CorDebugExceptionFlags 列舉](cordebugexceptionflags-enumeration.md)  
  提供例外狀況的其他資訊。  
@@ -81,7 +81,7 @@ ms.locfileid: "76789164"
  包含會影響 Managed Just-In-Time (JIT) 編譯器行為的值。  
   
  [CorDebugJITCompilerFlagsDeprecated 列舉](cordebugjitcompilerflagsdeprecated-enumeration.md)  
- 已過時。 請改用[CorDebugJITCompilerFlags](cordebugjitcompilerflags-enumeration.md)列舉的 `CORDEBUG_JIT_DEFAULT` 成員。  
+ 已過時。 改用`CORDEBUG_JIT_DEFAULT` [CorDebugJIT 編譯器標誌](cordebugjitcompilerflags-enumeration.md)枚舉的成員。  
   
  CorDebugMappingResult  
  提供如何取得指令指標 (IP) 值的詳細資料。  
@@ -93,7 +93,7 @@ ms.locfileid: "76789164"
  提供用來判定偵錯工具是否從原生影像快取載入原生 (NGen) 影像的值。  
   
  [CorDebugPlatform 列舉](cordebugplatform-enumeration.md)  
- 提供[ICorDebugDataTarget：： GetPlatform](icordebugdatatarget-getplatform-method.md)方法所使用的目標平臺值。  
+ 提供[ICorDebugDataTarget：：getPlatform](icordebugdatatarget-getplatform-method.md)方法使用的目標平臺值。  
   
  [CorDebugRecordFormat 列舉](cordebugrecordformat-enumeration.md)  
  描述包含原生例外狀況偵錯事件相關資訊之位元組陣列中的資料格式。  
@@ -113,7 +113,7 @@ ms.locfileid: "76789164"
  CorDebugThreadState  
  指定要偵錯的執行緒狀態。  
   
- \>CorDebugUnmappedStop  
+ \>科調試未映射停止  
  指定可在步進器執行程式碼時觸發暫止的未對應程式碼類型。  
   
  CorDebugUserState  
@@ -132,12 +132,12 @@ ms.locfileid: "76789164"
  指出在切換偵錯/追蹤時所執行的作業。  
   
  [VariableLocationType 列舉](variablelocationtype-enumeration.md)  
- 表示變數的原生位置類型。  
+ 指示變數的本機位置類型。  
   
  [WriteableMetadataUpdateMode 列舉](writeablemetadataupdatemode-enumeration.md)  
- 提供值來指定偵錯工具是否可以看見對中繼資料的記憶體中更新。 
+ 提供值來指定偵錯工具是否可以看見對中繼資料的記憶體中更新。
 
- [ClrDataSourceType 列舉](clrdatasourcetype-enumeration.md)提供 CLRDATA_IL_ADDRESS_MAP 結構所使用的值。
+ [ClrDataSource 類型枚舉](clrdatasourcetype-enumeration.md)提供CLRDATA_IL_ADDRESS_MAP結構使用的值。
 
 ## <a name="related-sections"></a>相關章節  
  [偵錯 Coclass](debugging-coclasses.md)  

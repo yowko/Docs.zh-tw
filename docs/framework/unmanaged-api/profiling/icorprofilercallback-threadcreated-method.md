@@ -15,29 +15,29 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-ms.openlocfilehash: 6514606290bf006443d7011c1a428bebb4cca0f6
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 7fb58c0eb2446253bd658434fc9d68bb857fe0e6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865825"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175118"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated 方法
-通知分析工具已建立執行緒。  
+通知探測器已創建執行緒。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT ThreadCreated(  
-    [in] ThreadID threadId);   
+    [in] ThreadID threadId);
 ```  
   
 ## <a name="parameters"></a>參數  
  `threadId`  
- 在已建立之執行緒的識別碼。  
+ [在]已創建的執行緒的 ID。  
   
 ## <a name="remarks"></a>備註  
- `threadId` 值會立即生效。  
+ 該`threadId`值立即有效。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -46,9 +46,9 @@ HRESULT ThreadCreated(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerCallback 介面](icorprofilercallback-interface.md)
 - [ThreadDestroyed 方法](icorprofilercallback-threaddestroyed-method.md)

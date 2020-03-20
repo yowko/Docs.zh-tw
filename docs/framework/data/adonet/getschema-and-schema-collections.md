@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: 4ac0216ce2965d555f7283ba66a085ea9d7cac3c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e18c23e9bbec97a64110aba6eb7241761ecece06
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783833"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149553"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema 和結構描述集合
-每個 .NET Framework managed 提供者中的**連接**類別都會執行**GetSchema**方法，用來抓取目前連接之資料庫的架構資訊，以及傳回**的架構資訊。GetSchema**方法的形式<xref:System.Data.DataTable>為。 **GetSchema**方法是一種多載的方法，它會提供選擇性參數來指定要傳回的架構集合，以及限制傳回的資訊量。  
+每個 .NET 框架託管提供程式中的**Connect**類實現**GetSchema**方法，該方法用於檢索有關當前連接的資料庫的架構資訊，並且從**GetSchema**方法返回的架構資訊以 形式<xref:System.Data.DataTable>出現。 **GetSchema**方法是一種重載方法，它提供了用於指定要返回的架構集合和限制返回的資訊量的可選參數。  
   
 ## <a name="specifying-the-schema-collections"></a>指定結構描述集合  
- **GetSchema**方法的第一個選擇性參數是指定為字串的集合名稱。 結構描述集合有兩種型別：通用於所有提供者的通用結構描述集合與每個提供者特有的特定結構描述集合。  
+ **GetSchema**方法的第一個可選參數是指定為字串的集合名稱。 結構描述集合有兩種型別：通用於所有提供者的通用結構描述集合與每個提供者特有的特定結構描述集合。  
   
- 您可以查詢 .NET Framework 的 managed 提供者，以判斷支援的架構集合清單，方法是呼叫不含引數的**GetSchema**方法，或使用架構集合名稱 "MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
+ 您可以查詢 .NET Framework 託管提供程式，通過調用沒有參數的**GetSchema**方法或使用架構集合名稱"MetaDataCollection"來確定支援的架構集合的清單。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
   
 ### <a name="retrieving-schema-collections-example"></a>擷取結構描述集合範例  
- 下列範例示範如何使用<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> SQL Server <xref:System.Data.SqlClient.SqlConnection>類別之 .NET Framework Data Provider 的方法，來抓取**AdventureWorks**範例資料庫中包含之所有資料表的架構資訊：  
+ 以下示例演示如何使用 SQL Server<xref:System.Data.SqlClient.SqlConnection.GetSchema%2A><xref:System.Data.SqlClient.SqlConnection>類的 .NET 框架資料提供程式的方法檢索有關**AdventureWorks**示例資料庫中包含的所有表的架構資訊：  
   
 ```vb  
 Imports System.Data.SqlClient  
@@ -42,7 +42,7 @@ Module Module1
    End Sub  
   
    Private Function GetConnectionString() As String  
-      ' To avoid storing the connection string in your code,    
+      ' To avoid storing the connection string in your code,
       ' you can retrieve it from a configuration file.  
       Return "Data Source=(local);Database=AdventureWorks;" _  
          & "Integrated Security=true;"  
@@ -107,4 +107,4 @@ class Program
 ## <a name="see-also"></a>另請參閱
 
 - [擷取資料庫結構描述資訊](retrieving-database-schema-information.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

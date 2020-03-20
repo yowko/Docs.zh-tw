@@ -15,47 +15,47 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: edfe5de9c9d7ef9607a2eea5146194bbd4393a92
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449455"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175989"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName 方法
-取得匯出類型的指標，並指定其名稱和封入類型。  
+獲取指向匯出類型的指標，給定其名稱和封閉類型。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT FindExportedTypeByName (  
-    [in]  LPCWSTR           szName,   
-    [in]  mdToken           mdtExportedType,   
+    [in]  LPCWSTR           szName,
+    [in]  mdToken           mdtExportedType,
     [out] mdExportedType    *ptkExportedType  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `szName`  
- 在匯出之類型的名稱。  
+ [在]匯出類型的名稱。  
   
  `mdtExportedType`  
- 在已匯出類型之封入類別的元資料標記。 如果要求的匯出型別不是嵌套型別，這個值就會 `mdExportedTypeNil`。  
+ [在]匯出類型的封閉類的中繼資料權杖。 此值是`mdExportedTypeNil`請求的匯出類型不是巢狀型別。  
   
  `ptkExportedType`  
- 脫銷表示已匯出類型之 `mdExportedType` token 的指標。  
+ [出]指向表示匯出類型的`mdExportedType`權杖的指標。  
   
 ## <a name="remarks"></a>備註  
- `FindExportedTypeByName` 方法會使用 common language runtime 所採用的標準規則來解析參考。  
+ 該方法`FindExportedTypeByName`使用通用語言運行時採用的標準規則來解決引用。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

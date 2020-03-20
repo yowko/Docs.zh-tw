@@ -12,12 +12,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-ms.openlocfilehash: ae8451089dc645c925848489a61c5fb55c468032
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 29c649abb7ff5db74cadfdbe5b7c11f9322f75f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047311"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180685"
 ---
 # <a name="security-in-network-programming"></a>網路程式設計的安全性
 
@@ -27,7 +27,7 @@ ms.locfileid: "71047311"
 
 [.NET Framework 的傳輸層安全性 (TLS) 最佳做法](tls.md)  
 描述 .NET Framwork 的 TLS 最佳做法。
- 
+
 [使用安全通訊端層](using-secure-sockets-layer.md)  
 描述如何使用安全通訊端層 (SSL) 連線。  
   
@@ -39,5 +39,5 @@ ms.locfileid: "71047311"
   
 ## <a name="related-sections"></a>相關章節
 
-[以 .NET Framework 進行網路程式設計](index.md)  
+[.NET 框架中的網路程式設計](index.md)  
 介紹 <xref:System.Net> 和 <xref:System.Net.Sockets> 命名空間中的類別。

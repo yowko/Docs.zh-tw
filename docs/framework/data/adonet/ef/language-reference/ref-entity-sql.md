@@ -2,12 +2,12 @@
 title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: 08bcaad4fdc0cf5324ff9976fcf48c23b206e72f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 40a5afd7eb99dba7cae8fe14ed0a45213fda94a0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319385"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149943"
 ---
 # <a name="ref-entity-sql"></a>REF (Entity SQL)
 傳回實體執行個體的參考。  
@@ -15,7 +15,7 @@ ms.locfileid: "72319385"
 ## <a name="syntax"></a>語法  
   
 ```sql  
-REF( expression )   
+REF( expression )
 ```  
   
 ## <a name="arguments"></a>引數  
@@ -33,16 +33,16 @@ REF( expression )
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 REF 運算子，傳回輸入實體引數的參考。 相同查詢會為參考取值，因為我們使用屬性引出運算子 (.) 存取 Product 實體的屬性。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 依照[如何：執行傳回 PrimitiveType 結果的查詢](../how-to-execute-a-query-that-returns-primitivetype-results.md)中的程式進行。  
+1. 按照["如何執行"中的過程：執行返回基元類型結果的查詢](../how-to-execute-a-query-that-returns-primitivetype-results.md)。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   
  [!code-sql[DP EntityServices Concepts#REF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#ref)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [DEREF](deref-entity-sql.md)
 - [CREATEREF](createref-entity-sql.md)
-- [KEY](key-entity-sql.md)
+- [關鍵](key-entity-sql.md)
 - [Entity SQL 參考](entity-sql-reference.md)
-- [型別定義](type-definitions-entity-sql.md)
+- [類型定義](type-definitions-entity-sql.md)

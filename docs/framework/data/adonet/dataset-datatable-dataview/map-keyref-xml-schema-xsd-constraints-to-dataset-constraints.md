@@ -2,33 +2,33 @@
 title: 將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: 93f766003326fd41357581196015fd58c71d7508
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 902b79b73f494ced0f54b29babff1b2e767bd47a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040375"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150879"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
-**Keyref**元素可讓您在檔內的元素之間建立連結。 這與關聯式資料庫中的外部索引鍵關聯性很類似。 如果架構指定**keyref**專案，則在架構對應進程期間，專案會轉換為 <xref:System.Data.DataSet>資料表中資料行上對應的外鍵條件約束。 根據預設， **keyref**元素也會產生關聯性，並在關聯上指定**ParentTable**、 **ChildTable**、 **ParentColumn**和**ChildColumn**屬性。  
+**keyref**元素允許您在文檔中的元素之間建立連結。 這與關聯式資料庫中的外部索引鍵關聯性很類似。 如果架構指定**keyref**元素，則在架構映射過程中將元素轉換為 對<xref:System.Data.DataSet>表中的列的相應外鍵約束。 預設情況下 **，keyref**元素還會生成一個關係，該關係在關係上指定了**父表**、**子表**、**父列**和**子列**屬性。  
   
- 下表列出您可以在**keyref**元素中指定的**msdata**屬性。  
+ 下表概述了可在**keyref**元素中指定的**msdata**屬性。  
   
 |屬性名稱|描述|  
 |--------------------|-----------------|  
-|**msdata： ConstraintOnly**|如果在架構的**keyref**元素上指定**ConstraintOnly = "true"** ，則會建立條件約束，但不會建立關聯性。 如果未指定這個屬性（或設定為**False**），則會在**資料集中**建立條件約束和關聯性。|  
-|**msdata： ConstraintName**|如果已指定**ConstraintName**屬性，則會使用其值做為條件約束的名稱。 否則，在架構中， **keyref**元素的**name**屬性會提供**資料集**內的條件約束名稱。|  
-|**msdata： UpdateRule**|如果在架構的**keyref**專案中指定了**UpdateRule**屬性，其值會指派給**DataSet**中的**UpdateRule**條件約束屬性。 否則， **UpdateRule**屬性會設定為**Cascade**。|  
-|**msdata： DeleteRule**|如果在架構的**keyref**專案中指定了**DeleteRule**屬性，其值會指派給**DataSet**中的**DeleteRule**條件約束屬性。 否則， **DeleteRule**屬性會設定為**Cascade**。|  
-|**msdata： AcceptRejectRule**|如果在架構的**keyref**專案中指定了**AcceptRejectRule**屬性，其值會指派給**DataSet**中的**AcceptRejectRule**條件約束屬性。 否則， **AcceptRejectRule**屬性會設定為**None**。|  
+|**msdata:ConstraintOnly**|如果在架構中的**keyref**元素上指定了 **"約束唯一""true"，** 則將創建約束，但不創建任何關係。 如果未指定此屬性（或設置為**False），** 則約束和關係都在**DataSet 中**創建。|  
+|**msdata:ConstraintName**|如果指定了 **"約束名稱"** 屬性，則其值將用作約束的名稱。 否則，架構中**keyref**元素**的名稱**屬性在**DataSet**中提供約束名稱。|  
+|**msdata:UpdateRule**|如果在架構中的**keyref**元素中指定**了 UpdateRule**屬性，則其值將分配給**DataSet**中的**UpdateRule**約束屬性。 否則 **，UpdateRule**屬性將設置為**級聯**。|  
+|**msdata:DeleteRule**|如果在架構中的**keyref**元素中指定**了 DeleteRule**屬性，則其值將分配給**DataSet**中的**DeleteRule**約束屬性。 否則 **，DeleteRule**屬性將設置為**級聯**。|  
+|**msdata:AcceptRejectRule**|如果在架構中的**keyref**元素中指定了**AcceptRejectRule 屬性**，則其值將分配給**DataSet**中的**AcceptRejectRule**約束屬性。 否則，"**接受拒絕規則"** 屬性將設置為 **"無**"。|  
   
- 下列範例包含的架構，會指定**Order**元素的**OrderNumber**子專案與**OrderDetail**的**OrderNo**子項目之間的索引**鍵**和**keyref**關聯性。元素.  
+ 下面的示例包含一個架構，該架構指定**Order**元素的**OrderNumber**子項目和**OrderDetail**元素的**OrderNo**子項目之間的**鍵**和**鍵 ref**關係。  
   
- 在範例中， **OrderDetail**元素的**OrderNumber**子項目會參考**Order**元素的**OrderNo** key 子項目。  
+ 在此示例中，"**訂單詳細資訊"** 元素的**OrderNumber**子項目引用**訂單**元素的 **"訂單無**"鍵子項目。  
   
 ```xml  
-<xs:schema id="MyDataSet" xmlns=""   
-            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="MyDataSet" xmlns=""
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
@@ -66,16 +66,16 @@ ms.locfileid: "73040375"
 </xs:schema>  
 ```  
   
- XML 架構定義語言（XSD）架構對應進程會產生具有兩個數據表的下列**資料集**：  
+ XML 架構定義語言 （XSD） 架構映射過程生成具有兩個表的以下**DataSet：**  
   
 ```text  
 OrderDetail(OrderNo, ItemNo) and  
 Order(OrderNumber, EmpNumber)  
 ```  
   
- 此外，**資料集會**定義下列條件約束：  
+ 此外，**資料集**定義以下約束：  
   
-- **Order**資料表上的 unique 條件約束。  
+- **訂單**表上的唯一約束。  
   
     ```text
               Table: Order  
@@ -85,20 +85,20 @@ Order(OrderNumber, EmpNumber)
     IsPrimaryKey: False  
     ```  
   
-- **Order**和**OrderDetail**資料表之間的關聯性。 **Nested**屬性會設定為**False** ，因為這兩個元素並未嵌套在架構中。  
+- **訂單**和**訂單詳細資訊**表之間的關係。 **嵌套**屬性設置為**False，** 因為兩個元素未嵌套在架構中。  
   
     ```text
               ParentTable: Order  
-    ParentColumns: OrderNumber   
+    ParentColumns: OrderNumber
     ChildTable: OrderDetail  
-    ChildColumns: OrderNo   
+    ChildColumns: OrderNo
     ParentKeyConstraint: OrderNumberKey  
     ChildKeyConstraint: OrderNoRef  
     RelationName: OrderNoRef  
     Nested: False  
     ```  
   
-- **OrderDetail**資料表上的 foreign key 條件約束。  
+- **"訂單詳細資訊**"表上的外鍵約束。  
   
     ```text  
               ConstraintName: OrderNoRef  
@@ -109,8 +109,8 @@ Order(OrderNumber, EmpNumber)
     RelatedColumns: OrderNumber
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [從 XML 結構描述 (XSD) 產生資料集關聯](generating-dataset-relations-from-xml-schema-xsd.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

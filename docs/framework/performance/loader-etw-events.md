@@ -5,12 +5,12 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-ms.openlocfilehash: 73665915a70225c2b1da47c7b60347b089564884
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0f8f96cf73882ef6556e5b9e64cf9adf389a2318
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716036"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180555"
 ---
 # <a name="loader-etw-events"></a>載入器 ETW 事件
 這些事件收集載入及卸載應用程式定義域、組件和模組的相關資訊。  
@@ -20,7 +20,7 @@ ms.locfileid: "75716036"
 ## <a name="application-domain-events"></a>應用程式定義域事件
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|Event|Level|  
+|引發事件的關鍵字|事件|層級|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` 和 `AppDomainUnLoad_V1`|告知性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|告知性 (4)|  
@@ -28,7 +28,7 @@ ms.locfileid: "75716036"
   
  下表說明事件資訊。  
   
-|Event|事件 ID|描述|  
+|事件|事件識別碼|描述|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (針對所有應用程式定義域記錄)|156|每當在處理序的存留期間建立應用程式定義域時引發。|  
 |`AppDomainUnLoad_V1`|157|每當在處理序的存留期間終結應用程式定義域時引發。|  
@@ -48,7 +48,7 @@ ms.locfileid: "75716036"
 ## <a name="clr-loader-assembly-events"></a>CLR 載入器組件事件  
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|Event|Level|  
+|引發事件的關鍵字|事件|層級|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` 和 `AssemblyUnload`|告知性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|告知性 (4)|  
@@ -56,7 +56,7 @@ ms.locfileid: "75716036"
   
  下表說明事件資訊。  
   
-|Event|事件 ID|描述|  
+|事件|事件識別碼|描述|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|載入組件時引發。|  
 |`AssemblyUnload_V1`|155|卸載組件時引發。|  
@@ -72,12 +72,12 @@ ms.locfileid: "75716036"
 |BindingID|win:UInt64|可唯一識別組件繫結的 ID。|  
 |AssemblyFlags|win:UInt32|0x1：定義域中性組件。<br /><br /> 0x2：動態組件。<br /><br /> 0x4：組件具有原生映像。<br /><br /> 0x8：可回收組件。|  
 |AssemblyName|win:UnicodeString|完整的組件名稱。|  
-|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|   
+|ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|
 
 ## <a name="module-events"></a>模組事件
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|Event|Level|  
+|引發事件的關鍵字|事件|層級|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` 和 `ModuleUnload_V2`|告知性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|告知性 (4)|  
@@ -86,7 +86,7 @@ ms.locfileid: "75716036"
   
  下表說明事件資訊。  
   
-|Event|事件 ID|描述|  
+|事件|事件識別碼|描述|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|在處理序的存留期間載入模組時引發。|  
 |`ModuleUnload_V2`|153|在處理序的存留期間卸載模組時引發。|  
@@ -122,7 +122,7 @@ ms.locfileid: "75716036"
 ## <a name="clr-domain-module-events"></a>CLR 定義域模組事件
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|Event|Level|  
+|引發事件的關鍵字|事件|層級|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|告知性 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|告知性 (4)|  
@@ -130,7 +130,7 @@ ms.locfileid: "75716036"
   
  下表說明事件資訊。  
   
-|Event|事件 ID|描述|  
+|事件|事件識別碼|描述|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|針對應用程式定義域載入模組時引發。|  
 |`DomainModuleDCStart_V1`|151|在開始取消期間列舉針對應用程式定義域所載入的模組，並且針對所有應用程式定義域記錄。|  
@@ -152,7 +152,7 @@ ms.locfileid: "75716036"
 ## <a name="module-range-events"></a>模組範圍事件
  下表說明關鍵字和層級。  
   
-|引發事件的關鍵字|Event|Level|  
+|引發事件的關鍵字|事件|層級|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|告知性 (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|告知性 (4)|  
@@ -160,7 +160,7 @@ ms.locfileid: "75716036"
   
  下表說明事件資訊。  
   
-|Event|事件 ID|描述|  
+|事件|事件識別碼|描述|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|如果已載入的原生映像產生器 (NGen) 已使用 IBC 最佳化，就會出現這個事件，其中包含有關 NGen 映像作用範圍的資訊。|  
 |`ModuleRangeDCStart`|160|在開始取消期間引發的 `ModuleRange` 事件。|  
@@ -185,6 +185,6 @@ ms.locfileid: "75716036"
   
  模組範圍事件會在任何 ETW 層級大於或等於 4 且分類為告知性事件時引發。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [CLR ETW 事件](clr-etw-events.md)

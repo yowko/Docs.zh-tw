@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 6e3708fb386760ae067de0e86e4315114c85113c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1a94acde3d0726808deebcae1437e7318f5392df
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714895"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183564"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 此範例示範如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 類別來自訂序列化和還原序列化程序。 此範例示範如何在序列化和還原序列化期間動態加入已知的型別。  
@@ -245,7 +245,7 @@ public class MyDataContractResolver : DataContractResolver
        }  
   
        // Used at deserialization  
-        // Allows users to map xsi:type name to any Type   
+        // Allows users to map xsi:type name to any Type
         public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)  
        {  
            XmlDictionaryString tName;  
@@ -277,7 +277,7 @@ public class MyDataContractResolver : DataContractResolver
   
  此範例中所使用之類型的程式庫會顯示在以下範例中。  
   
-```csharp 
+```csharp
  [DataContract]  
  public class ComplexNumber  
  {  
@@ -346,27 +346,27 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>若要設定、執行及建立範例  
   
-1. 以滑鼠右鍵按一下 [方案**KnownAssemblyAttribute** ]，然後選取 [**屬性**]。  
+1. 按右鍵"**已知程式集屬性"** 並選擇**屬性**。  
   
-2. 在 [**通用屬性**] 中，選取 [**啟始專案**]，然後按一下 [**多個啟始專案**]。  
+2. 在 **"通用屬性**"中，選擇**啟動專案**，然後按一下**多個啟動專案**。  
   
-3. 將 [**啟動**] 動作加入至**服務**和**用戶端**專案。  
+3. 將 **"開始"** 操作添加到**服務和****用戶端**專案。  
   
-4. 按一下 **[確定]** ，然後按**F5**執行範例。  
+4. 按一下 **"確定**"，然後按**F5**以運行示例。  
   
 5. 如果應用程式沒有正確執行，請遵循下列步驟確認您的環境已正確設定：  
   
-6. 請確定您已執行[Windows Communication Foundation 範例的一次性設定程式](https://go.microsoft.com/fwlink/?LinkId=150774)。  
+6. 確保已為 Windows[通信基礎示例執行一次性設置過程](https://go.microsoft.com/fwlink/?LinkId=150774)。  
   
-7. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](https://go.microsoft.com/fwlink/?LinkId=150775)中的指示進行。  
+7. 要生成解決方案，請按照生成 Windows[通信基礎示例](https://go.microsoft.com/fwlink/?LinkId=150775)中的說明進行操作。  
   
-8. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](https://go.microsoft.com/fwlink/?LinkId=150776)中的指示。  
+8. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](https://go.microsoft.com/fwlink/?LinkId=150776)說明操作。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  

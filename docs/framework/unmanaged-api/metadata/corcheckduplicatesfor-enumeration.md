@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d8ec8d3c-70f7-4cc6-9957-68068fd8f49c
 topic_type:
 - apiref
-ms.openlocfilehash: 6b551743227dc1c6069796038782a515e6dbe8c4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 04dc12ab4d7d178ebf1575a3260f9f4981972782
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443783"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176184"
 ---
 # <a name="corcheckduplicatesfor-enumeration"></a>CorCheckDuplicatesFor 列舉
-指定將檢查是否有重複的元資料標記。  
+指定將檢查重複項的中繼資料權杖。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,51 +57,51 @@ typedef enum CorCheckDuplicatesFor {
   
     MDDupAssembly               = 0x10000000,  
   
-    MDDupDefault =   
-        MDNoDupChecks | MDDupTypeRef | MDDupMemberRef |   
+    MDDupDefault =
+        MDNoDupChecks | MDDupTypeRef | MDDupMemberRef |
         MDDupSignature | MDDupTypeSpec | MDDupMethodSpec  
   
 } CorCheckDuplicatesFor;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`MDDupAll`|檢查所有元資料標記的重複專案。|  
+|`MDDupAll`|檢查所有中繼資料權杖的重複項。|  
 |`MDDupENC`|未使用。|  
-|`MDNoDupChecks`|請勿檢查元資料標記是否有重複的專案。|  
-|`MDDupTypeDef`|檢查 `mdTypeDef` token 的重複專案。|  
-|`MDDupInterfaceImpl`|檢查 `mdInterfaceImpl` token 的重複專案。|  
-|`MDDupMethodDef`|檢查 `mdMethodDef` token 的重複專案。|  
-|`MDDupTypeRef`|檢查 `mdTypeRef` token 的重複專案。|  
-|`MDDupMemberRef`|檢查 `mdMemberRef` token 的重複專案。|  
-|`MDDupCustomAttribute`|檢查 `mdCustomAttribute` token 的重複專案。|  
-|`MDDupParamDef`|檢查 `mdParamDef` token 的重複專案。|  
-|`MDDupPermission`|檢查 `mdPermission` token 的重複專案。|  
-|`MDDupProperty`|檢查 `mdProperty` token 的重複專案。|  
-|`MDDupEvent`|檢查 `mdEvent` token 的重複專案。|  
-|`MDDupFieldDef`|檢查 `mdFieldDef` token 的重複專案。|  
-|`MDDupSignature`|檢查 `mdSignature` token 的重複專案。|  
-|`MDDupModuleRef`|檢查 `mdModuleRef` token 的重複專案。|  
-|`MDDupTypeSpec`|檢查 `mdTypeSpec` token 的重複專案。|  
-|`MDDupImplMap`|檢查 `mdImplMap` token 的重複專案。|  
-|`MDDupAssemblyRef`|檢查 `mdAssemblyRef` token 的重複專案。|  
-|`MDDupFile`|檢查 `mdFile` token 的重複專案。|  
-|`MDDupExportedType`|檢查 `mdExportedType` token 的重複專案。|  
-|`MDDupManifestResource`|檢查 `mdManifestResource` token 的重複專案。|  
-|`MDDupGenericParam`|檢查 `mdGenericParam` token 的重複專案。|  
-|`MDDupMethodSpec`|檢查 `mdMethodSpec` token 的重複專案。|  
-|`MDDupGenericParamConstraint`|檢查 `mdGenericParamConstraint` token 的重複專案。|  
-|`MDDupAssembly`|檢查 `mdAssembly` token 的重複專案。|  
-|`MDDupDefault`|檢查 `mdMemberRef`、`mdTypeRef`、`mdSignature`、`mdTypeSpec`和 `mdMethodSpec` 權杖的重複專案。|  
+|`MDNoDupChecks`|不要檢查中繼資料權杖的重複項。|  
+|`MDDupTypeDef`|檢查權杖的`mdTypeDef`重複項。|  
+|`MDDupInterfaceImpl`|檢查權杖的`mdInterfaceImpl`重複項。|  
+|`MDDupMethodDef`|檢查權杖的`mdMethodDef`重複項。|  
+|`MDDupTypeRef`|檢查權杖的`mdTypeRef`重複項。|  
+|`MDDupMemberRef`|檢查權杖的`mdMemberRef`重複項。|  
+|`MDDupCustomAttribute`|檢查權杖的`mdCustomAttribute`重複項。|  
+|`MDDupParamDef`|檢查權杖的`mdParamDef`重複項。|  
+|`MDDupPermission`|檢查權杖的`mdPermission`重複項。|  
+|`MDDupProperty`|檢查權杖的`mdProperty`重複項。|  
+|`MDDupEvent`|檢查權杖的`mdEvent`重複項。|  
+|`MDDupFieldDef`|檢查權杖的`mdFieldDef`重複項。|  
+|`MDDupSignature`|檢查權杖的`mdSignature`重複項。|  
+|`MDDupModuleRef`|檢查權杖的`mdModuleRef`重複項。|  
+|`MDDupTypeSpec`|檢查權杖的`mdTypeSpec`重複項。|  
+|`MDDupImplMap`|檢查權杖的`mdImplMap`重複項。|  
+|`MDDupAssemblyRef`|檢查權杖的`mdAssemblyRef`重複項。|  
+|`MDDupFile`|檢查權杖的`mdFile`重複項。|  
+|`MDDupExportedType`|檢查權杖的`mdExportedType`重複項。|  
+|`MDDupManifestResource`|檢查權杖的`mdManifestResource`重複項。|  
+|`MDDupGenericParam`|檢查權杖的`mdGenericParam`重複項。|  
+|`MDDupMethodSpec`|檢查權杖的`mdMethodSpec`重複項。|  
+|`MDDupGenericParamConstraint`|檢查權杖的`mdGenericParamConstraint`重複項。|  
+|`MDDupAssembly`|檢查權杖的`mdAssembly`重複項。|  
+|`MDDupDefault`|檢查`mdMemberRef`、、、`mdTypeRef``mdSignature``mdTypeSpec`和`mdMethodSpec`權杖的重複項。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Corhdr.h。h  
+ **標題：** 科爾赫德  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

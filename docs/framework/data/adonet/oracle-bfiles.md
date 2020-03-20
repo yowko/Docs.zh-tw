@@ -2,36 +2,36 @@
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 214140bb8fcf43154b014ea3db609d355a27af7c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 40060a7ea8576e08140d972072d086606d640366
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794623"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149436"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 Oracle 的 .NET Framework 資料提供者包括 <xref:System.Data.OracleClient.OracleBFile> 類別，可用來與 Oracle <xref:System.Data.OracleClient.OracleType.BFile> 資料型別搭配使用。  
   
- Oracle **BFILE**資料類型是 oracle **LOB**資料類型，其中包含大小上限為 4 gb 之二進位資料的參考。 Oracle **BFILE**與其他 oracle **LOB**資料類型不同之處在于，其資料儲存于作業系統的實體檔案中，而不是存放在伺服器上。 請注意， **BFILE**資料類型提供資料的唯讀存取。  
+ Oracle **BFILE**資料類型是 Oracle **LOB**資料類型，其中包含對最大大小為 4 GB 的二進位資料的引用。 Oracle **BFILE**與其他 Oracle **LOB**資料類型不同，其資料存儲在作業系統中的物理檔中，而不是存儲在伺服器上。 請注意 **，BFILE**資料類型提供對資料的唯讀訪問。  
   
- **BFILE**資料類型的其他特性與**LOB**資料類型的區別如下：  
+ **BFILE**資料類型區別于**LOB**資料類型的其他特徵是：  
   
 - 包含非結構化資料。  
   
 - 支援伺服器端區塊。  
   
-- 使用參考複製語意。 例如，如果您在**BFILE**上執行複製作業，則只會複製**bfile**定位器（也就是檔案的參考）。 而不會複製檔案中的資料。  
+- 使用參考複製語意。 例如，如果對**BFILE**執行複製操作，則僅複製**BFILE**定位器（即對檔的引用）。 而不會複製檔案中的資料。  
   
- **BFILE**資料型別應該用來參考大小大的 lob，因此，儲存在資料庫中並不實用。 使用與**LOB**資料類型相較之下的**BFILE**資料類型時，會涉及更多的用戶端、伺服器和通訊額外負荷。 如果您只需要取得少量的資料，存取**BFILE**會更有效率。 如果您需要取得整個物件，則存取常駐於資料庫的 LOB 會更有效率。  
+ **BFILE**資料類型應用於引用大尺寸的 LOB，因此，在資料庫中存儲起來不可行。 與**LOB**資料類型相比，使用**BFILE**資料類型時，涉及更多的用戶端、伺服器和通信開銷。 如果您只需要獲取少量資料，則訪問**BFILE**會更有效。 如果您需要取得整個物件，則存取常駐於資料庫的 LOB 會更有效率。  
   
- 每個非 Null 的**OracleBFile**物件都會與定義基礎實體檔案位置的兩個實體相關聯：  
+ 每個非 Null **OracleBFile**物件都與定義基礎物理檔位置的兩個實體相關聯：  
   
 1. Oracle DIRECTORY 物件 (檔案系統中目錄的資料庫別名) 及  
   
 2. 基礎實體檔案的檔名 (位於與 DIRECTORY 物件相關聯的目錄中)。  
   
 ## <a name="example"></a>範例  
- 下列C#範例示範如何在 Oracle 資料表中建立**BFILE** ，然後以**OracleBFile**物件的形式來抓取它。 此範例示範如何使用<xref:System.Data.OracleClient.OracleDataReader>物件和**OracleBFile** **Seek**和**Read**方法。 請注意，若要使用此範例，您必須先在 Oracle 伺服器上建立名為\\"c： \bfiles" 的目錄和名為 "myfile.txt" 的檔案。  
+ 以下 C# 示例演示如何在 Oracle 表中創建**BFILE，** 然後以**OracleBFile**物件的形式檢索它。 該示例演示了使用<xref:System.Data.OracleClient.OracleDataReader>物件和**OracleBFile** **查找**和**讀取**方法。 請注意，要使用此示例，必須首先在 Oracle 伺服器上創建名為"c：\\\bfile"的目錄和名為"MyFile.jpg"的檔。  
   
 ```csharp  
 using System;  
@@ -48,20 +48,20 @@ public class Sample
       connection.Open();  
   
       OracleCommand command = connection.CreateCommand();  
-      command.CommandText =   
+      command.CommandText =
         "CREATE or REPLACE DIRECTORY MyDir as 'c:\\bfiles'";  
       command.ExecuteNonQuery();  
-      command.CommandText =   
+      command.CommandText =
         "DROP TABLE MyBFileTable";  
       try {  
         command.ExecuteNonQuery();  
       }  
       catch {  
       }  
-      command.CommandText =   
+      command.CommandText =
         "CREATE TABLE MyBFileTable(col1 number, col2 BFILE)";  
       command.ExecuteNonQuery();  
-      command.CommandText =   
+      command.CommandText =
         "INSERT INTO MyBFileTable values ('2', BFILENAME('MyDir', " +  
         "'MyFile.jpg'))";  
       command.ExecuteNonQuery();  
@@ -89,4 +89,4 @@ public class Sample
 ## <a name="see-also"></a>另請參閱
 
 - [Oracle 和 ADO.NET](oracle-and-adonet.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

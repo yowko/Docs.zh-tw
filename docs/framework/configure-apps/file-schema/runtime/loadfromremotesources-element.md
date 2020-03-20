@@ -5,45 +5,45 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: 454314bf1002a9648f669cc708c8ac42461fccaf
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: a0dcffe378cdd09de0fbd8f0a6ef0635c033fd9c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452262"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154058"
 ---
-# <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 元素
-指定是否應將 .NET Framework 4 和更新版本中的完全信任授與從遠端來源載入的元件。
+# <a name="loadfromremotesources-element"></a>\<負載從遠端源>元素
+指定是否應授予從遠端源載入的程式集對 .NET 框架 4 和更高版本完全信任。
   
 > [!NOTE]
-> 如果您因為 Visual Studio 專案錯誤清單中的錯誤訊息或組建錯誤而被導向本文，請參閱[如何：在 Visual Studio 中使用 Web 元件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))。  
+> 如果您因為 Visual Studio 專案錯誤清單中的錯誤訊息或建置錯誤而被定向到本文，請參閱["如何：在視覺化工作室中的 Web 中使用程式集](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))"。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<執行時間 >** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<loadFromRemoteSources >**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<運行時>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<負載從遠端源>**  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<loadFromRemoteSources    
+<loadFromRemoteSources
    enabled="true|false"/>  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和元素
- 下列章節說明屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`enabled`|必要屬性。<br /><br /> 指定是否應授與從遠端來源載入的元件完全信任。|  
+|`enabled`|必要屬性。<br /><br /> 指定是否應授予從遠端源載入的程式集完全信任。|  
   
-## <a name="enabled-attribute"></a>enabled 屬性  
+## <a name="enabled-attribute"></a>啟用的屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|`false`|請勿將完全信任授與遠端來源的應用程式。 這是預設值。|  
-|`true`|授與從遠端來源對應用程式的完全信任。|  
+|`false`|不要對來自遠端源的應用程式授予完全信任。 這是預設值。|  
+|`true`|完全信任來自遠端源的應用程式。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -57,53 +57,53 @@ ms.locfileid: "77452262"
   
 ## <a name="remarks"></a>備註
 
-在 .NET Framework 3.5 和更早版本中，如果您從遠端位置載入元件，則元件中的程式碼會以部分信任的方式執行，而該授權集是根據載入它的區域而定。 例如，如果您從網站載入元件，則會將它載入至網際網路區域並授與網際網路許可權集合。 換句話說，它會在網際網路沙箱中執行。
+在 .NET Framework 3.5 和早期版本中，如果從遠端位置載入程式集，則程式集中的代碼將部分信任地運行，授予集取決於載入該程式集的區域。 例如，如果從網站載入程式集，則程式集將載入到 Internet 區域並授予 Internet 許可權集。 換句話說，它在一個互聯網沙箱中執行。
 
-從 .NET Framework 4 開始，會停用代碼啟用安全性（CAS）原則，並以完全信任的方式載入元件。 一般來說，這會授與完全信任給以先前已沙箱化的 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法所載入的元件。 為了避免這種情況，預設會停用在從遠端來源載入的元件中執行程式碼的功能。 根據預設，如果您嘗試載入遠端元件，則會擲回含有例外狀況訊息的 <xref:System.IO.FileLoadException>，如下所示：
+從 .NET 框架 4 開始，代碼訪問安全 （CAS） 策略被禁用，程式集完全信任地載入。 通常，這將完全信任載入以前已沙箱<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>的方法的程式集。 為了防止這種情況，預設情況下禁用在從遠端源載入的程式集中運行代碼的能力。 預設情況下，如果嘗試載入遠端程式集，則會引發如下所示的<xref:System.IO.FileLoadException>異常消息：
 
 ```text
-System.IO.FileNotFoundException: Could not load file or assembly 'file:assem.dll' or one of its dependencies. Operation is not supported. 
+System.IO.FileNotFoundException: Could not load file or assembly 'file:assem.dll' or one of its dependencies. Operation is not supported.
 (Exception from HRESULT: 0x80131515)
-File name: 'file:assem.dll' ---> 
-System.NotSupportedException: An attempt was made to load an assembly from a network location which would have caused the assembly 
-to be sandboxed in previous versions of the .NET Framework. This release of the .NET Framework does not enable CAS policy by default, 
-so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. 
+File name: 'file:assem.dll' --->
+System.NotSupportedException: An attempt was made to load an assembly from a network location which would have caused the assembly
+to be sandboxed in previous versions of the .NET Framework. This release of the .NET Framework does not enable CAS policy by default,
+so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch.
 ```
 
-若要載入元件並執行其程式碼，您必須執行下列其中一項：
+要載入程式集並執行其代碼，必須：
 
-- 明確建立元件的沙箱（請參閱[如何：在沙箱中執行部分信任](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)的程式碼）。
+- 顯式為程式集創建沙箱（[請參閱如何：在沙箱中運行部分受信任的代碼](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)）。
 
-- 以完全信任的方式執行元件的程式碼。 您可以藉由設定 `<loadFromRemoteSources>` 元素來完成此動作。 它可讓您指定在舊版 .NET Framework 中以部分信任方式執行的元件，現在會在 .NET Framework 4 和更新版本中以完全信任的方式執行。
+- 完全信任運行程式集的代碼。 通過配置元素來`<loadFromRemoteSources>`執行此操作。 它允許您指定在 .NET Framework 的早期版本中以部分信任方式運行的程式集現在完全信任 .NET 框架 4 和更高版本。
 
 > [!IMPORTANT]
-> 如果元件不應在完全信任中執行，請不要設定此 configuration 元素。 相反地，請建立要在其中載入元件的沙箱化 <xref:System.AppDomain>。
+> 如果程式集不應完全信任地運行，請不要設置此配置元素。 相反，請創建一個裝沙<xref:System.AppDomain>盒以載入程式集。
 
-只有在停用代碼啟用安全性（CAS）時，`<loadFromRemoteSources>` 元素的 `enabled` 屬性才有效。 預設會停用 .NET Framework 4 和更新版本中的 CAS 原則。 如果您將 `enabled` 設定為 `true`，遠端元件會被授與完全信任。
+僅當`enabled`禁用代碼訪問`<loadFromRemoteSources>`安全性 （CAS） 時，元素的屬性才有效。 預設情況下，在 .NET 框架 4 和更高版本中禁用 CAS 策略。 如果設置為`enabled``true`，則遠端程式集將被授予完全信任。
 
-如果 `enabled` 未設定為 `true`，則會在下列任一情況下擲回 <xref:System.IO.FileLoadException>：
+如果未`enabled`設置為`true`，<xref:System.IO.FileLoadException>則 在以下任一條件下引發 ：
 
-- 目前網域的沙箱行為與其在 .NET Framework 3.5 中的行為不同。 這需要停用 CAS 原則，而目前的網域則不會進行沙箱處理。
+- 當前域的沙箱行為不同于其在 .NET 框架 3.5 中的行為。 這要求禁用 CAS 策略，並且當前域不得沙箱化。
 
-- 正在載入的元件不是來自 `MyComputer` 區域。
+- 正在載入的程式集不來自`MyComputer`區域。
 
-將 `<loadFromRemoteSources>` 專案設定為 `true` 可避免擲回此例外狀況。 它可讓您指定您不依賴 common language runtime 將載入的元件沙箱處理為安全性，而且可以允許在完全信任的情況下執行。
+設置元素`<loadFromRemoteSources>`以防止`true`引發此異常。 它使您能夠指定您不依賴通用語言運行時來對載入的程式集進行沙箱，以確保安全性，並且可以允許它們完全信任地執行。
 
 ## <a name="notes"></a>注意
 
-- 在 .NET Framework 4.5 和更新版本中，本機網路共用上的元件預設會以完全信任的方式執行;您不需要啟用 `<loadFromRemoteSources>` 元素。
+- 在 .NET 框架 4.5 和更高版本中，本地網路共用上的程式集預設完全信任運行;您不必啟用該`<loadFromRemoteSources>`元素。
 
-- 如果已從網路複製應用程式，即使該應用程式位於本機電腦上，Windows 仍會將它標示為 Web 應用程式。 您可以藉由變更其檔案屬性來變更該指定，也可以使用 `<loadFromRemoteSources>` 專案來授與元件完全信任。 或者，您可以使用 <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> 方法載入作業系統標示為從 Web 載入的本機組件。
+- 如果已從網路複製應用程式，即使該應用程式位於本機電腦上，Windows 仍會將它標示為 Web 應用程式。 您可以通過更改其檔案屬性來更改該名稱，也可以使用 元素`<loadFromRemoteSources>`授予程式集完全信任。 或者，您可以使用 <xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> 方法載入作業系統標示為從 Web 載入的本機組件。
 
-- 您可能會在 Windows Virtual PC 應用程式中執行的應用程式中取得 <xref:System.IO.FileLoadException>。 當您嘗試從主控電腦上的連結資料夾載入檔案時，就會發生這種情況。 當您嘗試從連結于[遠端桌面服務](/windows/win32/termserv/terminal-services-portal)（終端機服務）的資料夾載入檔案時，也可能會發生此問題。 若要避免例外狀況，請將 `enabled` 設定為 `true`。
+- 您可以在 Windows<xref:System.IO.FileLoadException>虛擬 PC 應用程式中運行的 應用程式中獲取 。 當您嘗試從託管電腦上的連結資料夾中載入檔時，可能會發生這種情況。 當您嘗試從通過[遠端桌面服務](/windows/win32/termserv/terminal-services-portal)（終端服務）連結的資料夾中載入檔時，也會發生這種情況。 為了避免異常，請設置為`enabled``true`。
 
 ## <a name="configuration-file"></a>組態檔
 
-此項目通常用於應用程式組態檔，不過可以根據內容用於其他組態檔。 如需詳細資訊，請參閱 .NET 安全性 blog 中的 < [CAS 原則的更多隱含用法： loadFromRemoteSources 一](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)文。  
+此項目通常用於應用程式組態檔，不過可以根據內容用於其他組態檔。 有關詳細資訊，請參閱文章["CAS 策略的更多隱式使用：在](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources).NET 安全博客中載入從遠端資源"。  
 
 ## <a name="example"></a>範例
 
-下列範例顯示如何將完全信任授與從遠端來源載入的元件。
+下面的示例演示如何對從遠端源載入的程式集授予完全信任。
 
 ```xml
 <configuration>  
@@ -115,7 +115,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 ## <a name="see-also"></a>另請參閱
 
-- [CAS 原則的更多隱含用法： loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
+- [CAS 策略的更多隱式使用：從遠端源載入](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
 - [如何：在沙箱中執行部分信任的程式碼](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)

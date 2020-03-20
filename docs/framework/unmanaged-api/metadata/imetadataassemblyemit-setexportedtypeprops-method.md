@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-ms.openlocfilehash: ae682c354a7a5188611b103008a3e18f8d821260
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dd1d6f1da6e49837eebd9356500f403c199b011b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431937"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177857"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps 方法
 修改指定的 `ExportedType` 中繼資料結構。  
@@ -29,7 +29,7 @@ ms.locfileid: "74431937"
   
 ```cpp  
 HRESULT SetExportedTypeProps (  
-    [in] mdExportedType   ct,   
+    [in] mdExportedType   ct,
     [in] mdToken          tkImplementation,  
     [in] mdTypeDef        tkTypeDef,  
     [in] DWORD            dwExportedTypeFlags  
@@ -38,28 +38,28 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>參數  
  `ct`  
- 在元資料標記，指定要修改的 `ExportedType` 元資料結構。  
+ [在]指定要修改的`ExportedType`元資料結構的中繼資料權杖。  
   
  `tkImplementation`  
- 在類型 `File`、`AssemblyRef`或 `ExportedType`的標記，指定此類型的實作為方式。  
+ [在]指定如何實現此類型的`File`權杖`AssemblyRef`的類型`ExportedType`。  
   
  `tkTypeDef`  
- 在程式碼檔案中參考的 `TypeDef` token。  
+ [在]代碼`TypeDef`檔中引用的權杖。  
   
  `dwExportedTypeFlags`  
- 在值的位元組合，這個組合會指定類型的屬性。  
+ [在]指定類型屬性的值的位組合。  
   
 ## <a name="remarks"></a>備註  
- 若要建立 `ExportedType` 元資料結構，請使用[IMetaDataAssemblyEmit：:D efineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)方法。  
+ 要創建`ExportedType`元資料結構，請使用[IMetaDataAssemblyEmit：:Defineexportetype 方法](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

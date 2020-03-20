@@ -3,22 +3,22 @@ title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 968c48df9e92a1dfbfb6e248b06cf4f97cece8b4
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: ade55a5b26826633faf2e7ef7598a4071d613bbc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251821"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152537"
 ---
-# <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement>
-<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>提供類別或衍生類別的設定。  
+# <a name="sessiontokenrequirement"></a>\<會話權杖要求>
+提供類或派生<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>類的配置。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<Microsoft.identitymodel >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<新增 >** ](add.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Sessiontokenrequirement lifetime >**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<系統.身份模型>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<身份配置>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<安全權杖處理常式>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<添加>**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<會話權杖要求>**  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,27 +36,27 @@ ms.locfileid: "70251821"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
-|存留期|指定會話權杖的存留期。|  
+|lifetime|指定會話權杖的存留期。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<add>](add.md)|將指定的安全性權杖處理常式加入至權杖處理常式集合。|  
+|[\<添加>](add.md)|將指定的安全權杖處理常式添加到權杖處理常式集合。|  
   
 ## <a name="example"></a>範例  
   
 ```xml  
-<add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">           
+<add type="System.IdentityModel.Tokens.SessionSecurityTokenHandler, System.IdentityModel">
     <sessionTokenRequirement lifetime="10:00" />  
 </add>  
 ```
