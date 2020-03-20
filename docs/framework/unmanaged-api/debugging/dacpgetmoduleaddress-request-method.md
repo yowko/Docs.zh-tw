@@ -1,5 +1,5 @@
 ---
-title: DacpGetModuleAddress::Request Method
+title: DacpGetModule 位址：請求方法
 ms.date: 01/16/2019
 api.name:
 - DacpGetModuleAddress::Request Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 07ad83da2bc608e3c5925664a68eec4a548860e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6850dc256a70e0c0343104b3904e9eda62d11e7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739225"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179204"
 ---
-# <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request Method
+# <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModule 位址：請求方法
 
-會執行要求，以填入指定的執行階段結構中的結構。
+執行請求，從給定的運行時結構填充結構。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -39,22 +39,21 @@ HRESULT Request(
 ## <a name="parameters"></a>參數
 
 `pDataModule`\
-[in]種子資料模組指標。
+[在]指向種子資料模組的指標。
 
 ## <a name="remarks"></a>備註
 
-此結構內執行階段，而且不會公開透過任何標頭或程式庫檔案。 若要使用它，最簡單的方法是模擬的實作：
+此結構位於運行時內，不會通過任何標頭或庫檔公開。 要使用它，最簡單的方法是類比實現：
 
-- 傳回從呼叫取得的值`Request`方法`IXCLRDataModule*`參數搭配下列參數： `((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
+- 使用以下參數返回從調用`Request``IXCLRDataModule*`參數上的方法獲得的值：`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** 無     
-**LIBRARY:** 無  
-**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**標題：** 無**庫：** 無  
+**.NET 框架版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
 
 - [偵錯](index.md)
-- [DacpGetModuleAddress Interface](dacpgetmoduleaddress-structure.md)
+- [達格格獲取模組位址介面](dacpgetmoduleaddress-structure.md)

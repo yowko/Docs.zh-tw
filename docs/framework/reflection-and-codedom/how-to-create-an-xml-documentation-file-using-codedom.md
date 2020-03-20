@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-ms.openlocfilehash: cdd1f173274b6bd33c4a67ed8eb0974c4c8e8e70
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a0ccb469a43c3a21a76eaf24fa7ce7b490dd5c4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130181"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180514"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>如何：使用 CodeDOM 建立 XML 文件檔案
 CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建立包含 XML 文件註解的 CodeDOM 圖表、產生程式碼，以及編譯可建立 XML 文件輸出的以編譯器選項產生的程式碼。  
@@ -51,22 +51,22 @@ CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建
  程式碼範例會在 HelloWorldDoc.xml 檔案中建立下列 XML 文件。  
   
 ```xml  
-<?xml version="1.0" ?>   
+<?xml version="1.0" ?>
 <doc>  
   <assembly>  
-    <name>HelloWorld</name>   
+    <name>HelloWorld</name>
   </assembly>  
   <members>  
     <member name="T:Samples.Class1">  
       <summary>  
-        Create a Hello World application.   
-        <seealso cref="M:Samples.Class1.Main" />   
+        Create a Hello World application.
+        <seealso cref="M:Samples.Class1.Main" />
       </summary>  
     </member>  
     <member name="M:Samples.Class1.Main">  
       <summary>  
-        Main method for HelloWorld application.   
-        <para>Add a new paragraph to the description.</para>   
+        Main method for HelloWorld application.
+        <para>Add a new paragraph to the description.</para>
       </summary>  
     </member>  
   </members>  
@@ -77,8 +77,8 @@ CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建
   
 - 此程式碼範例需要設定 `FullTrust` 權限，才能順利執行。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 XML 加入程式碼註解](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [XML 文件註解](../../csharp/programming-guide/xmldoc/index.md)
+- [XML 文檔注釋](../../csharp/programming-guide/xmldoc/index.md)
 - [XML 文件](/cpp/ide/xml-documentation-visual-cpp)

@@ -15,60 +15,60 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 82302124828a2dab73b445128d7d847e112edd36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 15b58e01d4ce99f19f510c760819471b84380b45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448215"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177764"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps 方法
-取得具有指定的中繼資料簽章之已匯出類型的屬性集。  
+使用指定的中繼資料簽名獲取匯出類型的屬性集。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT GetExportedTypeProps (  
-    [in]  mdExportedType    mdct,   
-    [out] LPWSTR            szName,   
-    [in]  ULONG             cchName,   
-    [out] ULONG             *pchName,   
-    [out] mdToken           *ptkImplementation,   
-    [out] mdTypeDef         *ptkTypeDef,   
+    [in]  mdExportedType    mdct,
+    [out] LPWSTR            szName,
+    [in]  ULONG             cchName,
+    [out] ULONG             *pchName,
+    [out] mdToken           *ptkImplementation,
+    [out] mdTypeDef         *ptkTypeDef,
     [out] DWORD             *pdwExportedTypeFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `mdct`  
- 在表示已匯出類型的 `mdExportedType` 元資料標記。  
+ [在]表示`mdExportedType`匯出類型的中繼資料權杖。  
   
  `szName`  
- 脫銷匯出之類型的名稱。  
+ [出]匯出類型的名稱。  
   
  `cchName`  
- 在`szName`的大小（以寬字元為單位）。  
+ [在]的大小（以寬字元表示`szName`）  
   
  `pchName`  
- 脫銷`szName` 中實際傳回的寬字元數  
+ [出]實際返回的寬字元數`szName`  
   
  `ptkImplementation`  
- 脫銷`mdFile`、`mdAssemblyRef`或 `mdExportedType` 元資料標記，其中包含或允許存取匯出類型的屬性。  
+ [出]包含`mdFile`或`mdAssemblyRef`允許訪問`mdExportedType`匯出類型的屬性的 中繼資料權杖。  
   
  `ptkTypeDef`  
- 脫銷`mdTypeDef` token 的指標，表示檔案中的類型。  
+ [出]指向表示檔中類型的`mdTypeDef`權杖的指標。  
   
  `pdwExportedTypeFlags`  
- 脫銷旗標的指標，描述套用至已匯出類型的中繼資料。 Flags 值可以是一或多個[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)值。  
+ [出]指向用於應用於匯出類型的中繼資料的標誌的指標。 標誌值可以是一個或多個[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)值。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

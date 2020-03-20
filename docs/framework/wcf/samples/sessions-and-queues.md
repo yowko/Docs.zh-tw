@@ -2,12 +2,12 @@
 title: 工作階段和佇列
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: 719212d908b9d5b5207dd5b4e7701ef903de31a0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 8a342b185c7965e9ee0ff9941a09e00fc392ad4b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715072"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144095"
 ---
 # <a name="sessions-and-queues"></a>工作階段和佇列
 這個範例示範如何透過訊息佇列 (MSMQ) 傳輸，傳送和接收佇列通訊中的一組相關訊息。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -17,11 +17,11 @@ ms.locfileid: "74715072"
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Session`  
   
  在佇列通訊中，用戶端會使用佇列與服務通訊。 更精確地說，用戶端會傳送訊息至佇列。 服務會接收來自佇列的訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。  
@@ -55,7 +55,7 @@ public class OrderTakerService : IOrderTaker
 {  
     PurchaseOrder po;  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                  TransactionAutoComplete = false)]  
     public void OpenPurchaseOrder(string customerId)  
     {  
@@ -63,16 +63,16 @@ public class OrderTakerService : IOrderTaker
         po = new PurchaseOrder(customerId);  
     }  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                   TransactionAutoComplete = false)]  
     public void AddProductLineItem(string productId, int quantity)  
     {  
         po.AddProductLineItem(productId, quantity);  
-        Console.WriteLine("Product " + productId + " quantity " +   
+        Console.WriteLine("Product " + productId + " quantity " +
                             quantity + " added to purchase order");  
     }  
   
-    [OperationBehavior(TransactionScopeRequired = true,   
+    [OperationBehavior(TransactionScopeRequired = true,
                                   TransactionAutoComplete = true)]  
     public void EndPurchaseOrder()  
     {  
@@ -109,7 +109,7 @@ public static void Main()
         Console.ReadLine();  
   
         // Close the ServiceHost to shutdown the service.  
-        serviceHost.Close();   
+        serviceHost.Close();
     }  
 }  
 ```
@@ -162,7 +162,7 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     client.EndPurchaseOrder();  
   
     //Closing the client gracefully closes the connection and cleans up resources.  
-    client.Close();                  
+    client.Close();
   
     // Complete the transaction.  
     scope.Complete();  
@@ -207,13 +207,13 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建立C#方案C++的、或 Visual Basic .net 版本，請遵循[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 要生成解決方案的 C#、C++ 或 Visual Basic .NET 版本，請按照[生成 Windows 通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的說明操作。  
   
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
   
- 根據預設，傳輸安全性會透過 <xref:System.ServiceModel.NetMsmqBinding> 啟用。 MSMQ 傳輸安全性有兩個相關的屬性，也就是 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 和 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` 根據預設，驗證模式會設定為 `Windows`，而保護層級會設定為 [`Sign`]。 若要 MSMQ 提供驗證及簽署功能，MSMQ 必須是網域的一部分，而且必須安裝 MSMQ 的 Active Directory 整合選項。 如果您在不符合這些條件的電腦上執行這個範例，就會收到錯誤。  
+ 根據預設，傳輸安全性會透過 <xref:System.ServiceModel.NetMsmqBinding> 啟用。 MSMQ 傳輸安全性有兩個相關<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>屬性，即，<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`預設情況下，身份驗證模式設置為`Windows`，保護層級設置為`Sign`。 若要 MSMQ 提供驗證及簽署功能，MSMQ 必須是網域的一部分，而且必須安裝 MSMQ 的 Active Directory 整合選項。 如果您在不符合這些條件的電腦上執行這個範例，就會收到錯誤。  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>若要在加入工作群組，或是沒有 Active Directory 整合的電腦上執行這個範例  
   
@@ -237,7 +237,7 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
               binding="netMsmqBinding"  
               bindingConfiguration="Binding1"  
            contract="Microsoft.ServiceModel.Samples.IOrderTaker" />  
-          <!-- The mex endpoint is exposed at-->      
+          <!-- The mex endpoint is exposed at-->
           <!--http://localhost:8000/ServiceModelSamples/service/mex. -->  
           <endpoint address="mex"  
                     binding="mexHttpBinding"  

@@ -8,49 +8,49 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: ca0a9a4b37f28eb03f58de4fd9b120cb7e654e0c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: fe6de09213c6f980e8eb205a318aae50033b2a84
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088647"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155228"
 ---
-# <a name="cryptographysettings-element"></a>\<cryptographySettings > 元素
+# <a name="cryptographysettings-element"></a>\<密碼設置>元素
 包含密碼編譯設定。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptographySettings >**
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<姆斯科利布>**](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<密碼設置>**
 
 ## <a name="syntax"></a>語法  
   
 ```xml  
-      <cryptographySettings>   
+      <cryptographySettings>
 </cryptographySettings>  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping >](cryptonamemapping-element.md)|包含易記名稱的類別對應。|  
-|[\<oidMap >](oidmap-element.md)|包含對類別的 asn.1 物件識別元（OID）對應。|  
+|[\<加密名稱映射>](cryptonamemapping-element.md)|包含易記名稱的類別對應。|  
+|[\<oidMap>](oidmap-element.md)|包含 ASN.1 物件識別碼 （OID） 映射到類。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
-|`mscorlib`|包含 `cryptographySettings` 元素。|  
+|`mscorlib`|包含元素`cryptographySettings`。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用\<的**cryptographySettings >** 元素來包含密碼編譯名稱對應和 OID 對應。 這個範例會設定執行時間，讓 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 傳回 `MyHashClass` 物件，而 `MyCryptoClass` 類別則會對應至物件識別碼1.3.36.2.1。  
+ 下面的示例演示如何使用**\<加密設定>** 元素來包含加密名稱映射和 OID 映射。 此示例配置運行時，<xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>以便返回`MyHashClass`物件，`MyCryptoClass`並且類映射到物件識別碼 1.3.36.2.1。  
   
 ```xml  
 <configuration>  
@@ -76,8 +76,8 @@ ms.locfileid: "74088647"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [組態檔結構描述](../index.md)
-- [密碼編譯設定結構描述](index.md)
-- [密碼編譯服務](../../../../standard/security/cryptographic-services.md)
+- [加密設定架構](index.md)
+- [The signature is valid](../../../../standard/security/cryptographic-services.md)

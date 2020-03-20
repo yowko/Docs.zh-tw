@@ -15,53 +15,53 @@ helpviewer_keywords:
 ms.assetid: 071e73bd-4795-470f-9373-cfaef553b7f2
 topic_type:
 - apiref
-ms.openlocfilehash: cdf0a720ac440d156b5b8bdc8dc2c78d3bb5ba86
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d987614c1a5a2c90ccb3faa11c605767ae5cfda
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128566"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178027"
 ---
 # <a name="ihostpolicymanagerondefaultaction-method"></a>IHostPolicyManager::OnDefaultAction 方法
-通知主機 common language runtime （CLR）即將採取[ICLRPolicyManager：： SetDefaultAction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md)方法呼叫所設定的預設動作，以回應執行緒中止或 <xref:System.AppDomain> 卸載。  
+通知主機通用語言運行時 （CLR） 即將採取由調用[ICLRPolicyManager：：：SetDefaultAction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md)方法以回應執行緒中止或<xref:System.AppDomain>卸載而設置的預設操作。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT OnDefaultAction (  
-    [in] EClrOperation  operation,   
+    [in] EClrOperation  operation,
     [in] EPolicyAction  action  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `operation`  
- 在其中一個[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)值，表示 CLR 回應的事件種類。  
+ [在][EClr操作](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)值之一，指示 CLR 正在回應的事件種類。  
   
  `action`  
- 在其中一個[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值，表示 CLR 為了回應事件而採取的動作。  
+ [在][EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值之一，指示 CLR 為回應事件而執行的操作。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `OnDefaultAction`。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或處理呼叫的狀態。 能夠|  
+|S_OK|`OnDefaultAction`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到進程中，或者 CLR 處於無法運行託管代碼或處理調用的狀態。 成功|  
 |HOST_E_TIMEOUT|呼叫超時。|  
-|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
-|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
-|E_FAIL|發生不明的嚴重失敗。 當方法傳回 E_FAIL 時，CLR 就無法在進程內使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_NOT_OWNER|調用方不擁有鎖。|  
+|HOST_E_ABANDONED|當阻塞的執行緒或光纖等待事件時，事件已被取消。|  
+|E_FAIL|發生了未知的災難性故障。 當方法返回E_FAIL時，CLR 在進程中不再可用。 對託管方法的後續調用返回HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標題：** MSCorEE.h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MSCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [EClrOperation 列舉](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
 - [EPolicyAction 列舉](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)

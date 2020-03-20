@@ -1,6 +1,6 @@
 ---
-title: GetCurrentApartmentType 函式（非受控 API 參考）
-description: GetCurrentApartmentType 函數會抓取呼叫者執行所在的公寓類型。
+title: 獲取當前公寓類型函數（非託管 API 參考）
+description: GetCurrent公寓類型函數檢索調用方正在其中執行的公寓類型。
 ms.date: 11/06/2017
 api_name:
 - GetCurrentApartmentType
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - GetCurrentApartmentType function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 6ecd2b49d6850a8fae25ddca54f855fdda2ccabb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3fc88f7997ee5a6c25359243e1ee97a041050eb7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120345"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176821"
 ---
 # <a name="getcurrentapartmenttype-function"></a>GetCurrentApartmentType 函式
-擷取呼叫者在其中執行之 Apartment 的型別。   
+擷取呼叫者在其中執行之 Apartment 的型別。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -30,41 +30,41 @@ ms.locfileid: "73120345"
   
 ```cpp  
 HRESULT GetCurrentApartmentType (
-   [in] int                   vFunc, 
-   [in] IComThreadingInfo*    ptr, 
+   [in] int                   vFunc,
+   [in] IComThreadingInfo*    ptr,
    [out] APTTYPE*             aptType
-); 
+);
 ```  
 
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-在未使用此參數。
+[在]此參數未使用。
 
 `ptr`  
-在[IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo)實例的指標。
+[在]指向[IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo)實例的指標。
 
 `aptType`  
-脫銷[APTTYPE](/windows/win32/api/objidlbase/ne-objidlbase-apttype)列舉值的指標，指出呼叫端的單元。
+[出]指向[APTTYPE](/windows/win32/api/objidlbase/ne-objidlbase-apttype)枚舉值的指標，指示調用方的公寓。
 
 ## <a name="return-value"></a>傳回值
 
-|常數  |值  |描述  |
+|持續性  |值  |描述  |
 |---------|---------|---------|
-| `S_OK` | 0 | 函數已順利完成。 |
-| `E_FAIL` | 0x80000008 | 呼叫端不是在單元中執行。 |
+| `S_OK` | 0 | 功能已成功完成。 |
+| `E_FAIL` | 0x80000008 | 調用方未在公寓中執行。 |
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝對[IComThreadingInfo：： GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法的呼叫。
+此函數將調用包起來到[IComThreadingInfo：：獲取當前公寓類型](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法。
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** WMINet_Utils .idl  
+ **標題：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器（非受控 API 參考）](index.md)
+- [WMI 與效能計數器 (非受控 API 參考)](index.md)

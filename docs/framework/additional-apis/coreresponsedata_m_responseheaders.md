@@ -1,5 +1,5 @@
 ---
-title: CoreResponseData。 m_ResponseHeaders 欄位
+title: 核心回應資料.m_ResponseHeaders欄位
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: df0b592a5f85d4c99dee4ecb60963f4abb560a13
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 723df6dc2de978695608d106e3a01bde286fc4fe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741014"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156099"
 ---
-# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData\_ResponseHeaders 欄位
+# <a name="coreresponsedatam_responseheaders-field"></a>核心回應資料.m\_回應標題欄位
 
-`CoreResponseData.m_ResponseHeaders` 是與伺服器回應相關聯的標頭 <xref:System.Net.WebHeaderCollection>。
+`CoreResponseData.m_ResponseHeaders`是與<xref:System.Net.WebHeaderCollection>伺服器回應關聯的標頭。
 
 ## <a name="syntax"></a>語法
   
@@ -28,14 +28,14 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> 此 API 不適合直接在您的程式碼中使用。 相反地，您應該使用 <xref:System.Diagnostics.DiagnosticSource> 來攔截網路程式碼。 請參閱[DiagnosticSource 使用者手冊](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
-> 
-> 在任何情況下，Microsoft 不支援在生產應用程式中使用此類別。
+> 此 API 不應直接用於代碼。 相反，您應該使用 掛鉤<xref:System.Diagnostics.DiagnosticSource>網路代碼。 請參閱[診斷源使用者指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
+>
+> 在任何情況下，Microsoft 都不支援在生產應用程式中使用此類。
 
 ## <a name="requirements"></a>需求
 
-**命名空間：** <xref:System.Net>
+**命名空間：**<xref:System.Net>
 
-**元件：** 系統（在 System .dll 中）
+**裝配：** 系統（系統中）
 
-**.NET Framework 版本：** 自2.0 開始提供。
+**.NET 框架版本：** 自 2.0 起可用。

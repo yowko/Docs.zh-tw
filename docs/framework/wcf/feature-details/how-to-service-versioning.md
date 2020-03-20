@@ -1,15 +1,15 @@
 ---
-title: 如何：服務版本控制
+title: HOW TO：服務版本控制
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 5ce9e7fc896f1ebc46dd25777fc629532339cbe2
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 3cd52e1f52a93e408ebed846894cc5686652cc91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988704"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184848"
 ---
-# <a name="how-to-service-versioning"></a>如何：服務版本控制
+# <a name="how-to-service-versioning"></a>HOW TO：服務版本控制
 本主題概要說明建立路由組態服務時所需的基本步驟，該組態可傳送訊息至相同服務的不同版本。 在此範例中，會將訊息傳送至兩個不同版本的計算器服務，`roundingCalc` (v1) 和 `regularCalc` (v2)。 兩項實作都支援相同的作業，不過較舊的服務 `roundingCalc` 會在傳回之前將所有的計算結果捨入至最接近的整數值。 用戶端應用程式必須能夠表示是否可使用較新的 `regularCalc` 服務。  
   
 > [!WARNING]
@@ -17,13 +17,13 @@ ms.locfileid: "69988704"
   
  由這兩項服務公開的作業為：  
   
-- 新增  
+- 加  
   
-- 差集  
+- 減  
   
-- 乘法  
+- 乘  
   
-- 分割  
+- 除  
   
  因為這兩項服務實作會處理相同的作業，而且它們與不是由其傳回的資料完全相同，所以包含在來自用戶端應用程式之訊息中的基底資料的唯一性質不足，無法藉此判斷路由要求方式。 例如，無法使用動作篩選條件，因為兩項服務的預設動作均相同。  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. 定義用於傳送訊息至目的地端點的篩選條件。  在此範例中, XPath 篩選準則是用來偵測 "CalcVer" 自訂標頭的值, 以決定應將訊息路由傳送至哪個版本。 XPath 篩選也會用來偵測不包含 "CalcVer" 標頭的訊息。 下列範例定義必要的篩選條件和命名空間資料表。  
+2. 定義用於傳送訊息至目的地端點的篩選條件。  在此示例中，XPath 篩選器用於檢測"CalcVer"自訂標頭的值，以確定消息應路由到哪個版本。 XPath 篩選器還用於檢測不包含"CalcVer"標頭的消息。 下列範例定義必要的篩選條件和命名空間資料表。  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > S12 命名空間前置詞預設會定義在命名空間資料表中, 代表命名空間`http://www.w3.org/2003/05/soap-envelope`。
+    > s12 命名空間首碼在命名空間表中預設定義，並表示命名空間`http://www.w3.org/2003/05/soap-envelope`。
   
-3. 定義篩選資料表，其使用用戶端端點關聯每個篩選條件。 如果訊息包含值為1的 "CalcVer" 標頭, 則會將它傳送至 regularCalc 服務。 如果標頭包含的值為 2，便會傳送標頭至 roundingCalc 服務。 如果沒有標頭，則訊息會傳送至 regularCalc。  
+3. 定義篩選資料表，其使用用戶端端點關聯每個篩選條件。 如果消息包含值為 1 的"CalcVer"標頭，則會將其發送到常規Calc服務。 如果標頭包含的值為 2，便會傳送標頭至 roundingCalc 服務。 如果沒有標頭，則訊息會傳送至 regularCalc。  
   
      下列範例定義篩選資料表並加入先前定義的篩選條件。  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. 若要針對包含在篩選資料表之篩選條件的傳入訊息加以評估，您必須使用路由行為產生篩選資料表與服務端點的關聯。 下列範例示範如何與`filterTable1`服務端點產生關聯:  
+4. 若要針對包含在篩選資料表之篩選條件的傳入訊息加以評估，您必須使用路由行為產生篩選資料表與服務端點的關聯。 下面的示例演示`filterTable1`了與服務終結點關聯的操作：  
   
     ```xml  
     <behaviors>  
@@ -269,7 +269,7 @@ namespace Microsoft.Samples.AdvancedFilters
                     //if they wanted to create the header, go ahead and add it to the outgoing message  
                     if (header != null && (header=="1" || header=="2"))  
                     {  
-                        //create a new header "RoundingCalculator", no specific namespace, and set the value to   
+                        //create a new header "RoundingCalculator", no specific namespace, and set the value to
                         //the value of header.  
                         //the Routing Service will look for this header in order to determine if the message  
                         //should be routed to the RoundingCalculator  

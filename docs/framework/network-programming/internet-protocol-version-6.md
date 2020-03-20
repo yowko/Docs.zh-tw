@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
 ms.openlocfilehash: 367db4fa4e585d6066009dbd1afacb154829319a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047883"
 ---
 # <a name="internet-protocol-version-6"></a>網際網路通訊協定第 6 版

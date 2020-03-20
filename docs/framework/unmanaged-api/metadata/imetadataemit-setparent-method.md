@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 02a02ff7-ae0e-4692-a20e-372405f23052
 topic_type:
 - apiref
-ms.openlocfilehash: a73afaebc2943190eeeee50367ecd31f1fb59df1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7389e9233fd946cdb2c810bec01cfbfffc8b707d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432448"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175599"
 ---
 # <a name="imetadataemitsetparent-method"></a>IMetaDataEmit::SetParent 方法
-建立指定的成員（如先前呼叫[IMetaDataEmit：:D efinememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)所定義）是指定類型的成員，如先前的[IMetaDataEmit：:D efinetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)呼叫所定義。  
+確定由之前對[IMetaDataEmit：:DefineOfRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)的調用定義的指定成員是指定類型的成員，由之前對[IMetaDataEmit：:DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)的調用定義。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT SetParent (   
-    [in]  mdMemberRef mr,   
-    [in]  mdToken     tk   
+HRESULT SetParent (
+    [in]  mdMemberRef mr,
+    [in]  mdToken     tk
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `mr`  
- 在要接收新父系的 `mdMemberRef` token。  
+ [在]用於`mdMemberRef`接收新父項的權杖。  
   
  `tk`  
- 在新父系的 `mdToken`。  
+ [在]為新`mdToken`父父的 。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

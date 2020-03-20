@@ -1,6 +1,6 @@
 ---
-title: SpawnInstance 函式（非受控 API 參考）
-description: SpawnInstance 函數會建立類別的新實例。
+title: 生成實例函數（非託管 API 引用）
+description: SpawnInstance 函數創建類的新實例。
 ms.date: 11/06/2017
 api_name:
 - SpawnInstance
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SpawnInstance function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: f93b4fbd5429ed2bdae8fb707e61df024cd8fd6e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a15eb8123c1ee807444bdb4c6fe71cdccc08f434
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73107519"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176717"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 函式
-建立類別的新執行個體。    
+建立類別的新執行個體。
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -30,52 +30,52 @@ ms.locfileid: "73107519"
   
 ```cpp  
 HRESULT SpawnInstance (
-   [in] int                  vFunc, 
-   [in] IWbemClassObject*    ptr, 
+   [in] int                  vFunc,
+   [in] IWbemClassObject*    ptr,
    [in] LONG                 lFlags,
-   [out] IWbemClassObject**  ppNewInstance); 
+   [out] IWbemClassObject**  ppNewInstance);
 ```  
 
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-在未使用此參數。
+[在]此參數未使用。
 
 `ptr`  
-在[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)實例的指標。
+[在]指向[IWbem ClassObject 實例](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)的指標。
 
 `lFlags`  
-[in] 保留。 這個參數必須是0。
+[in] 保留。 此參數必須為 0。
 
 `ppNewInstance`  
-脫銷接收類別之新實例的指標。 如果發生錯誤，則不會傳回新的物件，`ppNewInstance` 會保留不修改的狀態。
+[出]接收指向類新實例的指標。 如果發生錯誤，則不會返回新物件，並且`ppNewInstance`未修改。
 
 ## <a name="return-value"></a>傳回值
 
-這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
+此函數返回的以下值在*WbemCli.h*標標頭檔中定義，或者您可以在代碼中將它們定義為常量：
 
-|常數  |值  |描述  |
+|持續性  |值  |描述  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 不是有效的類別定義，因此無法產生新的實例。 可能是未完成，或未透過呼叫[PutClassWmi](putclasswmi.md)向 Windows 管理註冊。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成作業。 |
+| `WBEM_E_INCOMPLETE_CLASS` | 0 x80041020 | `ptr`不是有效的類定義，不能生成新實例。 要麼不完整，要麼沒有通過調用[PutClassWmi](putclasswmi.md)在 Windows 管理中註冊。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 可用的記憶體不足，無法完成作業。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` 為 `null`。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
 ## <a name="remarks"></a>備註
 
-此函式會包裝對[IWbemClassObject：： SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)方法的呼叫。
+此函數將調用包起來到[IWbem ClassObject：：spawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance)方法。
 
-`ptr` 必須是從 Windows 管理取得的類別定義。 （請注意，支援從實例產生實例，但傳回的實例是空的）。接著，您可以使用此類別定義來建立新的實例。 如果您想要將實例寫入 Windows 管理，則需要呼叫[PutInstanceWmi](putinstancewmi.md)函數。
+`ptr`必須是從 Windows 管理獲取的類定義。 （請注意，支援從實例生成實例，但返回的實例為空。然後，使用此類定義創建新實例。 如果要將實例寫入 Windows 管理，則需要調用[PutInstanceWmi](putinstancewmi.md)函數。
 
-在 `ppNewClass` 中傳回的新物件會自動成為目前物件的子類別。 無法覆寫此行為。 沒有其他方法可建立子類別（衍生類別）。
+返回`ppNewClass`的新物件將自動成為當前物件的子類。 無法重寫此行為。 沒有其他方法可以創建子類（派生類）。
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** WMINet_Utils .idl  
+ **標題：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器（非受控 API 參考）](index.md)
+- [WMI 與效能計數器 (非受控 API 參考)](index.md)

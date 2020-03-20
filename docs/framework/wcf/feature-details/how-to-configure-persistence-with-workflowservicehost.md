@@ -2,39 +2,39 @@
 title: HOW TO：以 WorkflowServiceHost 設定持續性
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
-ms.openlocfilehash: 7b65b89db674a624f7dfbf8ca816e0f0c2d2ff80
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 2974b6bcbb94c5b54d91025aeabe7c2d2e94c7e8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963471"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185060"
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>HOW TO：以 WorkflowServiceHost 設定持續性
-本主題描述如何設定 SQL 工作流程執行個體存放區功能，透過使用組態檔以啟用裝載於 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中之工作流程的持續性。 使用 SQL 工作流程執行個體存放區功能前，您必須建立一個用於保存工作流程執行個體的 SQL 資料庫。 如需詳細資訊，請參閱[如何：啟用工作流程和工作流程服務的 SQL 持續](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)性。  
+本主題描述如何設定 SQL 工作流程執行個體存放區功能，透過使用組態檔以啟用裝載於 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 中之工作流程的持續性。 使用 SQL 工作流程執行個體存放區功能前，您必須建立一個用於保存工作流程執行個體的 SQL 資料庫。 有關詳細資訊，請參閱[如何：為工作流和工作流服務啟用 SQL 持久性](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-configuration"></a>若要在組態中設定 SQL 工作流程執行個體存放區  
   
-1. 您可以透過 <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> 設定 SQL 工作流程執行個體存放區的屬性，這個服務行為可以讓您透過 XML 組態變更設定。 下列設定範例示範如何使用設定檔中的 <`sqlWorkflowInstanceStore`> 行為專案來設定 SQL 工作流程實例存放區。  
+1. 您可以透過 <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> 設定 SQL 工作流程執行個體存放區的屬性，這個服務行為可以讓您透過 XML 組態變更設定。 以下配置示例演示如何使用設定檔中的<>`sqlWorkflowInstanceStore`行為元素配置 SQL 工作流實例存儲。  
   
     ```xml  
     <serviceBehaviors>  
         <behavior name="">  
-            <sqlWorkflowInstanceStore   
+            <sqlWorkflowInstanceStore
                  connectionString="provider=System.Data.SqlClient;Data Source=(local);Initial Catalog=DefaultPersistenceProviderDb;Integrated Security=True;Async=true"  
                  instanceEncodingOption="GZip | None"  
                  instanceCompletionAction="DeleteAll | DeleteNothing"  
                  instanceLockedExceptionAction="NoRetry | SimpleRetry | AggressiveRetry"  
-                 hostLockRenewalPeriod="00:00:30"   
+                 hostLockRenewalPeriod="00:00:30"
                  runnableInstancesDetectionPeriod="00:00:05">  
             <sqlWorkflowInstanceStore/>  
         </behavior>  
     </serviceBehaviors>  
     ```  
   
-     如需有關如何設定 SQL 工作流程實例存放區的詳細資訊，請參閱[如何：啟用工作流程和工作流程服務的 SQL 持續](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)性。 如需 <`sqlWorkflowInstanceStore`> 行為元素之個別設定的詳細資訊，請參閱[SQL 工作流程實例存放區](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。 Windows Server App Fabric 會提供它自己的持續性存放區。 如需詳細資訊，請參閱[Windows Server App Fabric 持續](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))性。  
+     有關如何配置 SQL 工作流實例存儲的詳細資訊，請參閱[如何：為工作流和工作流服務啟用 SQL 持久性](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。 有關<>`sqlWorkflowInstanceStore`行為元素的各個設置的詳細資訊，請參閱[SQL 工作流實例存儲](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。 Windows Server App Fabric 會提供它自己的持續性存放區。 有關詳細資訊，請參閱[Windows 伺服器應用結構持久性](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))。  
   
     > [!NOTE]
-    > 上述組態範例會使用簡化的組態。 如需詳細資訊，請參閱[簡化](../../../../docs/framework/wcf/simplified-configuration.md)的設定  
+    > 上述組態範例會使用簡化的組態。 有關詳細資訊，請參閱[簡化配置](../../../../docs/framework/wcf/simplified-configuration.md)  
   
 ### <a name="to-configure-the-sql-workflow-instance-store-in-code"></a>若要在程式碼中設定 SQL 工作流程執行個體存放區  
   
@@ -52,15 +52,15 @@ ms.locfileid: "75963471"
     });  
     ```  
   
-     如需有關如何設定 SQL 工作流程實例存放區的詳細資訊，請參閱[如何：啟用工作流程和工作流程服務的 SQL 持續](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)性。 如需 <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> 行為元素之個別設定的詳細資訊，請參閱[SQL 工作流程實例存放區](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。 Windows Server App Fabric 會提供它自己的持續性存放區。 如需詳細資訊，請參閱[Windows Server App Fabric 持續](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))性。  
+     有關如何配置 SQL 工作流實例存儲的詳細資訊，請參閱[如何：為工作流和工作流服務啟用 SQL 持久性](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)。 有關<xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior>行為元素的各個設置的詳細資訊，請參閱[SQL 工作流實例存儲](../../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。 Windows Server App Fabric 會提供它自己的持續性存放區。 有關詳細資訊，請參閱[Windows 伺服器應用結構持久性](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))。  
   
     > [!NOTE]
-    > 上述組態範例會使用簡化的組態。 如需詳細資訊，請參閱[簡化](../../../../docs/framework/wcf/simplified-configuration.md)的設定  
+    > 上述組態範例會使用簡化的組態。 有關詳細資訊，請參閱[簡化配置](../../../../docs/framework/wcf/simplified-configuration.md)  
   
-     如需如何以程式設計方式設定持續性的範例，請參閱[如何：啟用工作流程和工作流程服務的持續](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md)性。  
+     有關如何以程式設計方式配置持久性的示例，請參閱[如何：為工作流和工作流服務啟用持久性](../../../../docs/framework/windows-workflow-foundation/how-to-enable-persistence-for-workflows-and-workflow-services.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)
+- [工作流服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [工作流程持續性](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)
-- [Windows Server App Fabric 持續性](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))
+- [Windows Server App Fabric 持續性概念](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))

@@ -12,32 +12,32 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 72dc443e5653b9871c3f67b003bd1af0536d5993
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: dd42af77300a7a93bbcbfa4c8f1fc365fc3f5da1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291483"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185995"
 ---
 # <a name="drag-and-drop-overview"></a>拖放概觀
 本主題提供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中的拖放功能支援概觀。 拖放功能一般是指資料傳送的方法，這種方法需要使用滑鼠 (或其他一些指標裝置) 選取一或多個物件，將這些物件拖曳到 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中一些想要的置放目標上，然後置放這些物件。  
 
-<a name="Drag_and_Drop_Support"></a>   
+<a name="Drag_and_Drop_Support"></a>
 ## <a name="drag-and-drop-support-in-wpf"></a>WPF 中的拖放功能支援  
  拖放作業通常涉及兩方：一方是拖曳之物件所源自的拖曳來源，另一方是接收置放之物件的置放目標。  拖曳來源和置放目標可能是相同應用程式或不同應用程式中的 UI 項目。  
   
  您可以透過拖放功能，操作任意類型和數目的物件。 例如，檔案、資料夾和選取的內容是一些可透過拖放作業來操作的較常見物件。  
   
- 拖放作業期間所執行的特定動作是針對應用程式的動作，而且這些動作通常會取決於內容。  例如，將選取的檔案從某個資料夾拖曳至相同儲存裝置上的另一個資料夾時，預設會移動檔案，而從通用命名慣例（UNC）共用將檔案拖曳到本機資料夾，預設會複製檔案。  
+ 拖放作業期間所執行的特定動作是針對應用程式的動作，而且這些動作通常會取決於內容。  例如，將檔選擇從同一存放裝置上的一個資料夾拖動到另一個資料夾，預設情況下會移動檔，而將檔從通用命名慣例 （UNC） 共用拖動到本地資料夾，預設情況下複製檔。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的拖放功能是為了提高彈性和可自訂性所設計，以便支援各種拖放案例。  拖放功能支援在單一應用程式中，或在不同的應用程式之間操作物件； 同時也完全支援 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式與其他 Windows 應用程式之間的拖放。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所提供的拖放功能是為了提高彈性和可自訂性所設計，以便支援各種拖放案例。  拖放功能支援在單一應用程式中，或在不同的應用程式之間操作物件； 還完全支援在應用程式和其他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows 應用程式之間進行拖放。  
   
  在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，任何 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 都可以參與拖放。 拖放作業所需的事件和方法會在 <xref:System.Windows.DragDrop> 類別中定義。 <xref:System.Windows.UIElement> 和 <xref:System.Windows.ContentElement> 類別包含 <xref:System.Windows.DragDrop> 附加事件的別名，因此當繼承 <xref:System.Windows.UIElement> 或 <xref:System.Windows.ContentElement> 做為基底項目時，便會在類別成員清單中顯示這些事件。 附加至這些事件的事件處理常式會附加至基礎 <xref:System.Windows.DragDrop> 附加事件，並接收相同的事件資料執行個體。 如需詳細資訊，請參閱 <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> 事件。  
   
 > [!IMPORTANT]
 > 您無法在網際網路區域中執行 OLE 拖放作業。  
   
-<a name="Data_Transfer"></a>   
+<a name="Data_Transfer"></a>
 ## <a name="data-transfer"></a>資料傳輸  
  拖放功能是範圍較廣之資料傳輸的一部分。 資料傳輸包括拖放以及複製和貼上作業。 拖放作業類似複製和貼上或剪下和貼上作業，後者使用系統剪貼簿，將資料從某個物件或應用程式傳送到另一個物件或應用程式。 這兩種作業類型都需要：  
   
@@ -54,13 +54,13 @@ ms.locfileid: "72291483"
  拖放作業的來源和目標是 UI 項目；不過，實際上要傳送的資料通常並沒有視覺表示。 您可以撰寫程式碼，提供拖曳之資料的視覺表示，例如在 Windows 檔案總管中拖曳檔案時所發生的視覺表示。 根據預設，當變更游標時，系統會提供回饋給使用者，以表示這項拖放作業會對資料產生何種效果，例如是否要移動或複製資料。  
   
 ### <a name="drag-and-drop-effects"></a>拖放效果  
- 拖放作業對傳送的資料可以有不同的效果。 例如，您可以複製或移動資料。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定義 <xref:System.Windows.DragDropEffects> 列舉，您可以用來指定拖放作業的效果。 在拖曳來源中，您可以指定來源將在 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法中允許的效果。 在置放目標中，您可以指定目標預期用於 <xref:System.Windows.DragEventArgs.Effects%2A> 類別之 <xref:System.Windows.DragEventArgs> 屬性的效果。 當置放目標在 <xref:System.Windows.DragDrop.DragOver> 事件中指定其預期效果時，該資訊會在 <xref:System.Windows.DragDrop.GiveFeedback> 事件中傳回拖曳來源。 拖曳來源會使用這項資訊，來通知使用者置放目標預期用於資料的效果。 置放資料之後，置放目標會在 <xref:System.Windows.DragDrop.Drop> 事件中指定其實際效果。 該資訊會當做 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法的傳回值傳回拖曳來源。 如果置放目標傳回的效果不在 `allowedEffects` 的拖曳來源清單中，則會取消拖放作業，而不傳送任何資料。  
+ 拖放作業對傳送的資料可以有不同的效果。 例如，您可以複製或移動資料。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定義 <xref:System.Windows.DragDropEffects> 列舉，可供您用來指定拖放作業的效果。 在拖曳來源中，您可以指定來源將在 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法中允許的效果。 在置放目標中，您可以指定目標預期用於 <xref:System.Windows.DragEventArgs.Effects%2A> 類別之 <xref:System.Windows.DragEventArgs> 屬性的效果。 當置放目標在 <xref:System.Windows.DragDrop.DragOver> 事件中指定其預期效果時，該資訊會在 <xref:System.Windows.DragDrop.GiveFeedback> 事件中傳回拖曳來源。 拖曳來源會使用這項資訊，來通知使用者置放目標預期用於資料的效果。 置放資料之後，置放目標會在 <xref:System.Windows.DragDrop.Drop> 事件中指定其實際效果。 該資訊會當做 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法的傳回值傳回拖曳來源。 如果置放目標傳回的效果不在 `allowedEffects` 的拖曳來源清單中，則會取消拖放作業，而不傳送任何資料。  
   
  請務必記住，在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，<xref:System.Windows.DragDropEffects> 值只能用來提供拖曳來源和置放目標之間有關拖放作業效果的通訊。 拖放作業的實際效果取決於您在應用程式中撰寫的適當程式碼。  
   
  例如，置放目標可能指定資料資料的效果是移動資料。 不過，若要移動資料，該資料必須同時加入目標項目並從來源項目中移除。 來源項目可能指定允許移動資料，但如果您未提供將資料從來源項目中移除的程式碼，最後結果會是複製資料，而不是移動資料。  
   
-<a name="Drag_and_Drop_Events"></a>   
+<a name="Drag_and_Drop_Events"></a>
 ## <a name="drag-and-drop-events"></a>拖放事件  
  拖放作業支援事件驅動模型。  拖曳來源和置放目標都是使用一組標準的事件來處理拖放作業。  下表摘要說明這些標準的拖放事件。 這些事件是 <xref:System.Windows.DragDrop> 類別上的附加事件。 如需附加事件的詳細資訊，請參閱[附加事件概觀](attached-events-overview.md)。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "72291483"
   
  若要處理物件執行個體的拖放事件，請針對上表所列的事件加入處理常式。 若要在類別層級處理拖放事件，請覆寫對應的虛擬 On*Event 和 On\*PreviewEvent 方法。 如需詳細資訊，請參閱[控制項基底類別的路由事件類別處理](marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events)。  
   
-<a name="Implementing_Drag_And_Drop"></a>   
+<a name="Implementing_Drag_And_Drop"></a>
 ## <a name="implementing-drag-and-drop"></a>實作拖放功能  
  UI 項目可以是拖曳來源和 (或) 置放目標。 若要實作基本拖放功能，您可以撰寫程式碼來啟始拖放作業並處理置放的資料。 您可以藉由處理選擇性拖放事件，來增強拖放體驗。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "72291483"
   
 - 若要變更拖放作業的取消方式，請處理拖曳來源上的 <xref:System.Windows.DragDrop.QueryContinueDrag> 事件。  
   
-<a name="Drag_And_Drop_Example"></a>   
+<a name="Drag_And_Drop_Example"></a>
 ## <a name="drag-and-drop-example"></a>拖放功能範例  
  本節說明如何實作 <xref:System.Windows.Shapes.Ellipse> 項目的拖放功能。 <xref:System.Windows.Shapes.Ellipse> 同時為拖曳來源和置放目標。 傳送的資料是橢圓形之 <xref:System.Windows.Shapes.Shape.Fill%2A> 屬性的字串表示。 下列 XAML 顯示 <xref:System.Windows.Shapes.Ellipse> 項目及其處理的拖放相關事件。 如需如何實作拖放功能的完整步驟，請參閱[逐步解說：在使用者控制項上啟用拖放功能](walkthrough-enabling-drag-and-drop-on-a-user-control.md)。  
   
@@ -146,11 +146,11 @@ ms.locfileid: "72291483"
   
  在 <xref:System.Windows.UIElement.MouseMove> 事件處理常式中，呼叫 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法來啟始拖放作業。 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法採用三個參數：  
   
-- `dragSource` –相依性物件的參考，這是所傳送資料的來源;這通常是 <xref:System.Windows.UIElement.MouseMove> 事件的來源。  
+- `dragSource` - 所傳送之資料來源的相依性物件參考，通常是 <xref:System.Windows.UIElement.MouseMove> 事件的來源。  
   
-- `data`-包含已傳輸資料（包裝在 <xref:System.Windows.DataObject>中）的物件。  
+- `data` - 包含所傳送之資料的物件，該資料會包裝在 <xref:System.Windows.DataObject> 中。  
   
-- `allowedEffects`-其中一個 <xref:System.Windows.DragDropEffects> 列舉值，指定拖放作業所允許的效果。  
+- `allowedEffects` - <xref:System.Windows.DragDropEffects> 列舉值之一，指定允許的拖放作業效果。  
   
  所有可序列化的物件都可以 `data` 參數傳遞。 如果資料尚未包裝在 <xref:System.Windows.DataObject>  中，則會自動包裝在新的 <xref:System.Windows.DataObject> 中。 若要傳遞多個資料項目，您必須自行建立 <xref:System.Windows.DataObject>，並傳遞給 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法。 如需詳細資訊，請參閱[資料和資料物件](data-and-data-objects.md)。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "72291483"
   
  <xref:System.Windows.DragDrop.DragLeave> 事件會在將資料拖曳出目標的界限但未置放時發生。 您可以處理這個事件，以復原您在 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中執行的任何動作。  
   
- 下列範例示範 <xref:System.Windows.DragDrop.DragLeave> 項目的 <xref:System.Windows.Shapes.Ellipse> 事件處理常式。 這個程式碼透過將儲存的 <xref:System.Windows.DragDrop.DragEnter> 套用至橢圓形，來復原在 <xref:System.Windows.Media.Brush> 事件處理常式中執行的預覽。  
+ 下列範例示範 <xref:System.Windows.DragDrop.DragLeave> 項目的 <xref:System.Windows.Shapes.Ellipse> 事件處理常式。 這個程式碼透過將儲存的 <xref:System.Windows.Media.Brush> 套用至橢圓形，來復原在 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中執行的預覽。  
   
  [!code-csharp[DragDropSnippets#DragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
  [!code-vb[DragDropSnippets#DragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
@@ -219,5 +219,5 @@ ms.locfileid: "72291483"
 
 - <xref:System.Windows.Clipboard>
 - [逐步解說：在使用者控制項上啟用拖放功能](walkthrough-enabling-drag-and-drop-on-a-user-control.md)
-- [HOW-TO 主題](drag-and-drop-how-to-topics.md)
+- [如何使用主題](drag-and-drop-how-to-topics.md)
 - [拖放](drag-and-drop.md)

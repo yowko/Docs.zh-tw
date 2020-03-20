@@ -2,15 +2,15 @@
 title: 評估使用 .NET Native 的啟動改善
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 453159c3fd0590a1ed549bb7e6f8c171aac7d064
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 41a693f18ffea0e5ce0ca742bc251d147e8e3784
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937743"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181003"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>評估使用 .NET Native 的啟動改善
-.NET Native 大幅改善了應用程式的啟動時間。 在可攜式、低電源的裝置上，以及用於複雜的應用程式時，這項改良功能尤其明顯。 本主題將協助您著手進行測量這項啟動改良功能所需的基本檢測。  
+.NET 本機顯著提高了應用程式的啟動時間。 在可攜式、低電源的裝置上，以及用於複雜的應用程式時，這項改良功能尤其明顯。 本主題將協助您著手進行測量這項啟動改良功能所需的基本檢測。  
   
  為加速效能調查，.NET Framework 和 Windows 使用一個名為 Windows 事件追蹤 (ETW) 的事件架構，可讓您的應用程式在事件發生時通知工具。 然後您可以使用名為 PerfView 的工具，輕鬆檢視及分析 ETW 事件。 本主題將說明如何：  
   
@@ -60,7 +60,7 @@ ms.locfileid: "75937743"
  您也可以從命令列叫用 PerfView。 如果只要從您的提供者記錄事件，請開啟 [命令提示字元] 視窗，並輸入命令：  
   
 ```console
-perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile   
+perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile
 ```  
   
  其中：  
@@ -82,19 +82,19 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
 - Windows 會使用多個快取策略來加速應用程式啟動時間。 如果您的應用程式目前快取在記憶體中，而且不必從磁碟載入，則啟動速度會較快。 若要確保一致性，請在開始測量之前，將您的應用程式開始並關閉數次。  
   
- 如果您已經執行您的應用程式，而 PerfView 可以收集發出的事件，請選擇 [停止收集] 按鈕。 一般而言，您應該先停止收集，再關閉應用程式，這樣才不會收集到無關的事件。 不過，如果您要測量關機或暫停效能，您就會想要繼續收集。  
+ 如果您已經執行您的應用程式，而 PerfView 可以收集發出的事件，請選擇 [停止收集]**** 按鈕。 一般而言，您應該先停止收集，再關閉應用程式，這樣才不會收集到無關的事件。 不過，如果您要測量關機或暫停效能，您就會想要繼續收集。  
   
 ## <a name="displaying-the-events"></a>顯示事件  
- 若要檢視已收集的事件，請使用 PerfView 來開啟您建立的 .etl 或 .etl.zip 檔案，然後選擇 [事件]。 ETW 將已經收集大量事件的相關資訊，包括來自其他處理序的事件。 若要專注您的調查，請在 [事件] 檢視中填寫下列文字方塊：  
+ 若要檢視已收集的事件，請使用 PerfView 來開啟您建立的 .etl 或 .etl.zip 檔案，然後選擇 [事件]****。 ETW 將已經收集大量事件的相關資訊，包括來自其他處理序的事件。 若要專注您的調查，請在 [事件] 檢視中填寫下列文字方塊：  
   
-- 在 [Process Filter] (處理序篩選) 方塊中，指定您的應用程式名稱 (不含 ".exe")。  
+- 在 [Process Filter] (處理序篩選)**** 方塊中，指定您的應用程式名稱 (不含 ".exe")。  
   
-- 在 [Event Types Filter] (事件類型篩選) 方塊中，指定 `Process/Start | MyCompany-MyApp`。 這會從 MyCompany-MyApp 和 Windows 核心/處理/開始事件設定事件的篩選。  
+- 在 [Event Types Filter] (事件類型篩選)**** 方塊中，指定 `Process/Start | MyCompany-MyApp`。 這會從 MyCompany-MyApp 和 Windows 核心/處理/開始事件設定事件的篩選。  
   
  選取左窗格中列出的所有事件 (Ctrl-A)，然後選擇 **Enter** 鍵。 現在，您應該可以看到每個事件的時間戳記。 這些時間戳記相對於追蹤的開始，所以您必須處理序的開始時間減去每個事件的時間，以識別自啟動後所耗用的時間。 如果您使用 Ctrl+按一下的方式來選取兩個時間戳記，您會看到其之間的差異顯示在頁面底部的狀態列中。 這樣可以讓您很容易在顯示器中查看任何兩個事件之間的經歷時間 (包括處理開始)。 您可以開啟檢視的快顯功能表，並從一些有用的選項中選取，像是匯出至 CSV 檔案，或是開啟 Microsoft Excel 來儲存或處理資料。  
   
- 藉由針對您的原始應用程式和使用 .NET Native 工具鏈所建立的版本來重複此程式，您可以比較效能差異。   .NET Native 應用程式的啟動速度通常比 non-.NET 原生應用程式更快。 如果您有挖掘更深入的資料，PerfView 也可以識別出程式碼中最耗時間的部分。 如需詳細資訊，請觀看 [PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)或閱讀 [Vance Morrison 的部落格文章](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)。  
+ 通過使用 .NET 本機工具鏈對原始應用和構建的版本重複此過程，可以比較性能差異。   .NET 本機應用通常比 non-.NET本機應用的啟動速度快。 如果您有挖掘更深入的資料，PerfView 也可以識別出程式碼中最耗時間的部分。 如需詳細資訊，請觀看 [PerfView 教學課程](https://channel9.msdn.com/Series/PerfView-Tutorial)或閱讀 [Vance Morrison 的部落格文章](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.Tracing.EventSource>

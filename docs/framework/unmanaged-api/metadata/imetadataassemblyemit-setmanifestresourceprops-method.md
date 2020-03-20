@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef77efd1-849c-4e51-ba92-7ee3d2bf0339
 topic_type:
 - apiref
-ms.openlocfilehash: f6b5e12df60663b75e10b04eaa008a75d720d753
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9370b27fd385b0223b354365d64aa57048f4ec69
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434438"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177834"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps 方法
 修改指定的 `ManifestResource` 中繼資料結構。  
@@ -30,7 +30,7 @@ ms.locfileid: "74434438"
 ```cpp  
 HRESULT SetManifestResourceProps (  
     [in] mdManifestResource  mr,  
-    [in] mdToken             tkImplementation,   
+    [in] mdToken             tkImplementation,
     [in] DWORD               dwOffset,  
     [in] DWORD               dwResourceFlags  
 );  
@@ -38,28 +38,28 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>參數  
  `mr`  
- 在Token，指定要修改的 `ManifestResource` 元資料結構。  
+ [在]指定要修改的`ManifestResource`元資料結構的權杖。  
   
  `tkImplementation`  
- 在對應至資源提供者之 `File` 或 `AssemblyRef`類型的 token。  
+ [在]映射到資來源提供者的權杖`File`類型`AssemblyRef`或 。  
   
  `dwOffset`  
- 在檔案內資源開頭的位移。  
+ [在]檔中資源開頭的偏移量。  
   
  `dwResourceFlags`  
- 在旗標值的位元組合，指定資源的屬性。  
+ [在]指定資源屬性的標誌值的位組合。  
   
 ## <a name="remarks"></a>備註  
- 若要建立 `ManifestResource` 元資料結構，請使用[IMetaDataAssemblyEmit：:D efinemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)方法。  
+ 要創建`ManifestResource`元資料結構，請使用[IMetaDataAssemblyEmit：:DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

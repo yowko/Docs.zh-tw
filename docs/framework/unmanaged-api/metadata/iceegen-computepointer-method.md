@@ -15,47 +15,47 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-ms.openlocfilehash: 01be6c30e16e4abdd6002fc8207b33a9c76a2eef
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9587bbe8f087fd9a51bba67492af1d5acb53ae4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448750"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176093"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer 方法
-判斷指定之程式碼區段的緩衝區。  
+確定指定代碼部分的緩衝區。  
   
- 這個方法已過時，不應使用。  
+ 此方法已過時，不應使用。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT ComputePointer (  
     [in]  HCEESECTION  section,  
-    [in]  ULONG        RVA,   
+    [in]  ULONG        RVA,
     [out] UCHAR        **lpBuffer  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `section`  
- 在要傳回緩衝區的程式碼區段。  
+ [在]要為其返回緩衝區的代碼部分。  
   
  `RVA`  
- 在要取得指標之方法的相對虛擬位址。  
+ [在]要為其獲取指標的方法的相對虛擬位址。  
   
  `lpBuffer`  
- 脫銷傳回之緩衝區的指標。  
+ [出]指向返回的緩衝區的指標。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

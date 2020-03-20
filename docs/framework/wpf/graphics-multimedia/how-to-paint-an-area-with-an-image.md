@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用影像繪製區域
+title: 操作說明：使用影像繪製區域
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - painting [WPF], with images
 - brushes [WPF], painting with images
 ms.assetid: 3432c533-1fc7-492d-94ee-0b13d60125ae
-ms.openlocfilehash: 2b88982e7a8d196c31869dc74aac636d78f68386
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92969778c04c6ac634a2964c402d6c3439b96b49
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921650"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186058"
 ---
-# <a name="how-to-paint-an-area-with-an-image"></a>HOW TO：使用影像繪製區域
-此範例示範如何使用<xref:System.Windows.Media.ImageBrush>類別來使用影像繪製區域。 <xref:System.Windows.Media.ImageBrush>會顯示單一的映像，以指定其<xref:System.Windows.Media.ImageBrush.ImageSource%2A>屬性。  
+# <a name="how-to-paint-an-area-with-an-image"></a>操作說明：使用影像繪製區域
+此示例演示如何使用 類<xref:System.Windows.Media.ImageBrush>使用圖像繪製區域。 顯示<xref:System.Windows.Media.ImageBrush>由其<xref:System.Windows.Media.ImageBrush.ImageSource%2A>屬性指定的單個圖像。  
   
 ## <a name="example"></a>範例  
- 下列範例繪製<xref:System.Windows.Controls.Control.Background%2A>的按鈕，以使用<xref:System.Windows.Media.ImageBrush>。  
+ 下面的示例<xref:System.Windows.Controls.Control.Background%2A>使用 繪製按鈕的 。 <xref:System.Windows.Media.ImageBrush>  
   
  [!code-csharp[UsingImageBrush_snip#ImageBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/PaintingWithImagesExample.cs#imagebrushexamplewholepage)]  
   
- 根據預設，<xref:System.Windows.Media.ImageBrush>會自動縮放其影像來填滿您所繪製的區域。 在上一個範例中，已自動縮放影像來填滿按鈕，且可能造成影像扭曲。 您可以設定來控制此行為<xref:System.Windows.Media.TileBrush.Stretch%2A>的屬性<xref:System.Windows.Media.TileBrush>要<xref:System.Windows.Media.Stretch.Uniform>或<xref:System.Windows.Media.Stretch.UniformToFill>，這樣會使筆刷維持影像的外觀比例。  
+ 預設情況下，拉伸<xref:System.Windows.Media.ImageBrush>其圖像以完全填充要繪製的區域。 在上一個範例中，已自動縮放影像來填滿按鈕，且可能造成影像扭曲。 可以通過<xref:System.Windows.Media.TileBrush.Stretch%2A>設置<xref:System.Windows.Media.TileBrush>的 屬性 來<xref:System.Windows.Media.Stretch.Uniform>控制此行為<xref:System.Windows.Media.Stretch.UniformToFill>，這將導致畫筆保留圖像的縱橫比。  
   
- 如果您設定<xref:System.Windows.Media.TileBrush.Viewport%2A>並<xref:System.Windows.Media.TileBrush.TileMode%2A>的屬性<xref:System.Windows.Media.ImageBrush>，您可以建立重複的圖樣。 下列範例使用從影像建立的圖樣來繪製按鈕。  
+ 如果設置 的<xref:System.Windows.Media.TileBrush.Viewport%2A><xref:System.Windows.Media.TileBrush.TileMode%2A>和 屬性<xref:System.Windows.Media.ImageBrush>，則可以創建重複模式。 下列範例使用從影像建立的圖樣來繪製按鈕。  
   
  [!code-csharp[UsingImageBrush_snip#TiledImageBrushExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TiledImageBrushExample.cs#tiledimagebrushexamplewholepage)]
  [!code-vb[UsingImageBrush_snip#TiledImageBrushExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UsingImageBrush_snip/VisualBasic/TiledImageBrushExample.vb#tiledimagebrushexamplewholepage)]  
   
- 如需詳細資訊<xref:System.Windows.Media.ImageBrush>類別，請參閱[使用影像、 繪圖和視覺效果繪製](painting-with-images-drawings-and-visuals.md)。  
+ 有關該類的詳細資訊，<xref:System.Windows.Media.ImageBrush>請參閱[使用圖像、繪圖和視覺物件進行繪畫](painting-with-images-drawings-and-visuals.md)。  
   
- 此程式碼範例是針對所提供之較大範例的一部分<xref:System.Windows.Media.ImageBrush>類別。 如需完整的範例，請參閱[ImageBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160005)。  
+ 此代碼示例是為類提供的較大示例的<xref:System.Windows.Media.ImageBrush>一部分。 有關完整示例，請參閱[影像筆刷示例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ImageBrush)。  
   
 ## <a name="see-also"></a>另請參閱
 
