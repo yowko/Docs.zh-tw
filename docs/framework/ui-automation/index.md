@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 49d2988cbad33497f2214098bcde68f7d5434b5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965863"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180029"
 ---
-# <a name="microsoft-ui-automation"></a><span data-ttu-id="df97d-102">Microsoft UI 自動化</span><span class="sxs-lookup"><span data-stu-id="df97d-102">Microsoft UI Automation</span></span>
+# <a name="microsoft-ui-automation"></a><span data-ttu-id="58eae-102">Microsoft UI 自動化</span><span class="sxs-lookup"><span data-stu-id="58eae-102">Microsoft UI Automation</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="df97d-103">本檔適用于想要使用 <xref:System.Windows.Automation> 命名空間中所定義之受控 UI 自動化類別的 .NET 開發人員。</span><span class="sxs-lookup"><span data-stu-id="df97d-103">This documentation is intended for .NET developers who want to use the managed UI Automation classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="df97d-104">如需 UI 自動化的最新資訊，請參閱[Windows AUTOMATION API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。</span><span class="sxs-lookup"><span data-stu-id="df97d-104">For the latest information about UI Automation, see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>
+> <span data-ttu-id="58eae-103">本文檔適用于希望使用命名空間中定義的託管 UI 自動化類的<xref:System.Windows.Automation>.NET 開發人員。</span><span class="sxs-lookup"><span data-stu-id="58eae-103">This documentation is intended for .NET developers who want to use the managed UI Automation classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="58eae-104">有關 UI 自動化的最新資訊，請參閱[Windows 自動化 API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。</span><span class="sxs-lookup"><span data-stu-id="58eae-104">For the latest information about UI Automation, see [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32).</span></span>
 
- <span data-ttu-id="df97d-105">Microsoft 使用者介面自動化是適用于 Microsoft Windows 的協助工具架構。</span><span class="sxs-lookup"><span data-stu-id="df97d-105">Microsoft UI Automation is an accessibility framework for Microsoft Windows.</span></span> <span data-ttu-id="df97d-106">它藉由提供以程式設計方式存取使用者介面（UI）的相關資訊，滿足輔助技術產品和自動化測試架構的需求。</span><span class="sxs-lookup"><span data-stu-id="df97d-106">It addresses the needs of assistive technology products and automated test frameworks by providing programmatic access to information about the user interface (UI).</span></span> <span data-ttu-id="df97d-107">此外，使用者介面自動化可讓控制項和應用程式開發人員將其產品設為可存取。</span><span class="sxs-lookup"><span data-stu-id="df97d-107">In addition, UI Automation enables control and application developers to make their products accessible.</span></span>
+ <span data-ttu-id="58eae-105">微軟 UI 自動化是微軟 Windows 的協助工具框架。</span><span class="sxs-lookup"><span data-stu-id="58eae-105">Microsoft UI Automation is an accessibility framework for Microsoft Windows.</span></span> <span data-ttu-id="58eae-106">它通過提供對使用者介面 （UI） 資訊的程式設計訪問，滿足輔助技術產品和自動化測試框架的需求。</span><span class="sxs-lookup"><span data-stu-id="58eae-106">It addresses the needs of assistive technology products and automated test frameworks by providing programmatic access to information about the user interface (UI).</span></span> <span data-ttu-id="58eae-107">此外，UI 自動化使控制和應用程式開發人員能夠使其產品易於訪問。</span><span class="sxs-lookup"><span data-stu-id="58eae-107">In addition, UI Automation enables control and application developers to make their products accessible.</span></span>
 
- <span data-ttu-id="df97d-108">本檔說明適用于 managed 程式碼的 UI 自動化 API。</span><span class="sxs-lookup"><span data-stu-id="df97d-108">This documentation describes the UI Automation API for managed code.</span></span> <span data-ttu-id="df97d-109">如需中C++Ui 自動化程式設計的詳細資訊，請參閱[Win32 應用程式的 ui 自動化](/windows/desktop/winauto/windows-automation-api-portal)。</span><span class="sxs-lookup"><span data-stu-id="df97d-109">For information on programming for UI Automation in C++, see [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal).</span></span>
+ <span data-ttu-id="58eae-108">本文檔介紹託管代碼的 UI 自動化 API。</span><span class="sxs-lookup"><span data-stu-id="58eae-108">This documentation describes the UI Automation API for managed code.</span></span> <span data-ttu-id="58eae-109">有關C++ UI 自動化程式設計的資訊，請參閱[Win32 應用程式的 UI 自動化](/windows/desktop/winauto/windows-automation-api-portal)。</span><span class="sxs-lookup"><span data-stu-id="58eae-109">For information on programming for UI Automation in C++, see [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal).</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="df97d-110">本節內容</span><span class="sxs-lookup"><span data-stu-id="df97d-110">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="58eae-110">本節內容</span><span class="sxs-lookup"><span data-stu-id="58eae-110">In this section</span></span>
 
-- [<span data-ttu-id="df97d-111">協助工具最佳做法</span><span class="sxs-lookup"><span data-stu-id="df97d-111">Accessibility Best Practices</span></span>](accessibility-best-practices.md)
-- [<span data-ttu-id="df97d-112">使用者介面自動化基礎觀念</span><span class="sxs-lookup"><span data-stu-id="df97d-112">UI Automation Fundamentals</span></span>](ui-automation-fundamentals.md)
-- [<span data-ttu-id="df97d-113">Managed 程式碼的使用者介面自動化提供者</span><span class="sxs-lookup"><span data-stu-id="df97d-113">UI Automation Providers for Managed Code</span></span>](ui-automation-providers-for-managed-code.md)
-- [<span data-ttu-id="df97d-114">Managed 程式碼的使用者介面自動化用戶端</span><span class="sxs-lookup"><span data-stu-id="df97d-114">UI Automation Clients for Managed Code</span></span>](ui-automation-clients-for-managed-code.md)
-- [<span data-ttu-id="df97d-115">使用者介面自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="df97d-115">UI Automation Control Patterns</span></span>](ui-automation-control-patterns.md)
-- [<span data-ttu-id="df97d-116">使用者介面自動化文字模式</span><span class="sxs-lookup"><span data-stu-id="df97d-116">UI Automation Text Pattern</span></span>](ui-automation-text-pattern.md)
-- [<span data-ttu-id="df97d-117">UI Automation Control Types</span><span class="sxs-lookup"><span data-stu-id="df97d-117">UI Automation Control Types</span></span>](ui-automation-control-types.md)
+- [<span data-ttu-id="58eae-111">協助工具最佳做法</span><span class="sxs-lookup"><span data-stu-id="58eae-111">Accessibility Best Practices</span></span>](accessibility-best-practices.md)
+- [<span data-ttu-id="58eae-112">UI 自動化基礎知識</span><span class="sxs-lookup"><span data-stu-id="58eae-112">UI Automation Fundamentals</span></span>](ui-automation-fundamentals.md)
+- [<span data-ttu-id="58eae-113">使用 Managed 程式碼的 UI 自動化提供者</span><span class="sxs-lookup"><span data-stu-id="58eae-113">UI Automation Providers for Managed Code</span></span>](ui-automation-providers-for-managed-code.md)
+- [<span data-ttu-id="58eae-114">Managed 程式碼的使用者介面自動化用戶端</span><span class="sxs-lookup"><span data-stu-id="58eae-114">UI Automation Clients for Managed Code</span></span>](ui-automation-clients-for-managed-code.md)
+- [<span data-ttu-id="58eae-115">使用者介面自動化控制項模式</span><span class="sxs-lookup"><span data-stu-id="58eae-115">UI Automation Control Patterns</span></span>](ui-automation-control-patterns.md)
+- [<span data-ttu-id="58eae-116">UI 自動化的文字模式</span><span class="sxs-lookup"><span data-stu-id="58eae-116">UI Automation Text Pattern</span></span>](ui-automation-text-pattern.md)
+- [<span data-ttu-id="58eae-117">UI 自動化控制項類型</span><span class="sxs-lookup"><span data-stu-id="58eae-117">UI Automation Control Types</span></span>](ui-automation-control-types.md)
 
-## <a name="related-sections"></a><span data-ttu-id="df97d-118">相關章節</span><span class="sxs-lookup"><span data-stu-id="df97d-118">Related sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="58eae-118">相關章節</span><span class="sxs-lookup"><span data-stu-id="58eae-118">Related sections</span></span>
 
-- [<span data-ttu-id="df97d-119">協助工具範例</span><span class="sxs-lookup"><span data-stu-id="df97d-119">Accessibility Samples</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [<span data-ttu-id="58eae-119">協助工具範例</span><span class="sxs-lookup"><span data-stu-id="58eae-119">Accessibility Samples</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)

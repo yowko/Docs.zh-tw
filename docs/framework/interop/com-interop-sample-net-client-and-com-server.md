@@ -9,20 +9,20 @@ helpviewer_keywords:
 - interoperation with unmanaged code, samples
 - COM interop, samples
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
-ms.openlocfilehash: 721e94c0f7a83de8a70942272e7c31374f7004a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d854f474845322ae6df1da5788890a69720a5272
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123687"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181495"
 ---
-# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="8cc50-102">COM Interop 範例：.NET 用戶端與 COM 伺服器</span><span class="sxs-lookup"><span data-stu-id="8cc50-102">COM Interop Sample: .NET Client and COM Server</span></span>
-<span data-ttu-id="8cc50-103">此範例示範建置來存取 [COM 伺服器](#cpconcominteropsamplenetclientcomserveranchor2)的 [.NET 用戶端](#cpconcominteropsamplenetclientcomserveranchor1)如何建立 COM coclass 的執行個體，以及呼叫類別成員來執行貸款計算。</span><span class="sxs-lookup"><span data-stu-id="8cc50-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
+# <a name="com-interop-sample-net-client-and-com-server"></a><span data-ttu-id="a1c1d-102">COM Interop 範例：.NET 用戶端與 COM 伺服器</span><span class="sxs-lookup"><span data-stu-id="a1c1d-102">COM Interop Sample: .NET Client and COM Server</span></span>
+<span data-ttu-id="a1c1d-103">此範例示範建置來存取 [COM 伺服器](#cpconcominteropsamplenetclientcomserveranchor2)的 [.NET 用戶端](#cpconcominteropsamplenetclientcomserveranchor1)如何建立 COM coclass 的執行個體，以及呼叫類別成員來執行貸款計算。</span><span class="sxs-lookup"><span data-stu-id="a1c1d-103">This sample demonstrates how a [.NET client](#cpconcominteropsamplenetclientcomserveranchor1), built to access a [COM server](#cpconcominteropsamplenetclientcomserveranchor2), creates an instance of a COM coclass and calls class members to perform mortgage calculations.</span></span>  
   
- <span data-ttu-id="8cc50-104">在此範例中，用戶端會建立和呼叫 **Loan** coclass 執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。</span><span class="sxs-lookup"><span data-stu-id="8cc50-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="8cc50-105">這個範例的程式碼片段會出現在本節中。</span><span class="sxs-lookup"><span data-stu-id="8cc50-105">Code fragments from this sample appear throughout this section.</span></span>  
+ <span data-ttu-id="a1c1d-104">在此範例中，用戶端會建立和呼叫 **Loan** coclass 執行個體，並將四個引數 (這四個的其中一個等於零) 傳遞給執行個體，然後顯示運算。</span><span class="sxs-lookup"><span data-stu-id="a1c1d-104">In this example, the client creates and calls an instance of the **Loan** coclass, passes four arguments (one of those four being equal to zero) to the instance, and displays the computations.</span></span> <span data-ttu-id="a1c1d-105">這個範例的程式碼片段會出現在本節中。</span><span class="sxs-lookup"><span data-stu-id="a1c1d-105">Code fragments from this sample appear throughout this section.</span></span>  
   
-<a name="cpconcominteropsamplenetclientcomserveranchor1"></a>   
-## <a name="net-client"></a><span data-ttu-id="8cc50-106">.NET 用戶端</span><span class="sxs-lookup"><span data-stu-id="8cc50-106">.NET Client</span></span>  
+<a name="cpconcominteropsamplenetclientcomserveranchor1"></a>
+## <a name="net-client"></a><span data-ttu-id="a1c1d-106">.NET 用戶端</span><span class="sxs-lookup"><span data-stu-id="a1c1d-106">.NET Client</span></span>  
   
 ```vb  
 Imports System  
@@ -60,7 +60,7 @@ Public Class LoanApp
         End If  
         If ln.Payment = 0.0 Then  
             ln.ComputePayment()  
-        End If   
+        End If
         Console.WriteLine("Balance = {0,10:0.00}", ln.OpeningBalance)  
         Console.WriteLine("Rate    = {0,10:0.0%}", ln.Rate)  
         Console.WriteLine("Term    = {0,10:0.00}", ln.Term)  
@@ -104,10 +104,10 @@ public class LoanApp {
   
       Loan ln = new Loan();  
   
-      if (Args.Length < 4)   
+      if (Args.Length < 4)
       {  
          Console.WriteLine("Usage: ConLoan Balance Rate Term Payment");  
-         Console.WriteLine("    Either Balance, Rate, Term, or Payment   
+         Console.WriteLine("    Either Balance, Rate, Term, or Payment
             must be 0");  
          return;  
       }  
@@ -137,22 +137,22 @@ public class LoanApp {
       Console.WriteLine("{0,4}{1,10}{2,12}{3,10}{4,12}", "---", "-------",  
         "---------", "--------", "-------");  
   
-      MorePmts = ln.GetFirstPmtDistribution(ln.Payment, out Balance,   
+      MorePmts = ln.GetFirstPmtDistribution(ln.Payment, out Balance,
         out Principal, out Interest);  
   
       for (short PmtNbr = 1; MorePmts; PmtNbr++) {  
          Console.WriteLine("{0,4}{1,10:0.00}{2,12:0.00}{3,10:0.00}  
            {4,12:0.00}", PmtNbr, ln.Payment, Principal, Interest,  
             Balance);  
-         MorePmts = ln.GetNextPmtDistribution(ln.Payment, ref Balance,   
-           out Principal, out Interest);   
+         MorePmts = ln.GetNextPmtDistribution(ln.Payment, ref Balance,
+           out Principal, out Interest);
       }  
     }  
 }  
 ```  
   
-<a name="cpconcominteropsamplenetclientcomserveranchor2"></a>   
-## <a name="com-server"></a><span data-ttu-id="8cc50-107">COM 伺服器</span><span class="sxs-lookup"><span data-stu-id="8cc50-107">COM Server</span></span>  
+<a name="cpconcominteropsamplenetclientcomserveranchor2"></a>
+## <a name="com-server"></a><span data-ttu-id="a1c1d-107">COM 伺服器</span><span class="sxs-lookup"><span data-stu-id="a1c1d-107">COM Server</span></span>  
   
 ```cpp  
 // Loan.cpp : Implementation of CLoan  
@@ -161,7 +161,7 @@ public class LoanApp {
 #include "LoanLib.h"  
 #include "Loan.h"  
   
-static double Round(double value, short digits);   
+static double Round(double value, short digits);
   
 STDMETHODIMP CLoan::get_OpeningBalance(double *pVal)  
 {  
@@ -213,7 +213,7 @@ STDMETHODIMP CLoan::put_Term(short newVal)
   
 STDMETHODIMP CLoan::ComputePayment(double *pVal)  
 {  
-    Payment = Round(OpeningBalance * (Rate /   
+    Payment = Round(OpeningBalance * (Rate /
         (1 - pow((1 + Rate), -Term))),2);  
     *pVal = Payment;  
     return S_OK;  
@@ -221,7 +221,7 @@ STDMETHODIMP CLoan::ComputePayment(double *pVal)
   
 STDMETHODIMP CLoan::ComputeOpeningBalance(double *pVal)  
 {  
-    OpeningBalance = Round(Payment / (Rate /   
+    OpeningBalance = Round(Payment / (Rate /
         (1 - pow((1 + Rate), -Term))),2);  
     *pVal = OpeningBalance ;  
     return S_OK;  
@@ -233,14 +233,14 @@ STDMETHODIMP CLoan::ComputeRate(double *pVal)
   
     for (Rate = 0.001; Rate < 28.0; Rate += 0.001)  
     {  
-        Payment = Round(OpeningBalance * (Rate /   
+        Payment = Round(OpeningBalance * (Rate /
          (1 - pow((1 + Rate), -Term))),2);  
   
         if (Payment >= DesiredPayment)  
             break;  
     }  
   
-    *pVal = Rate;     
+    *pVal = Rate;
     return S_OK;  
 }  
   
@@ -249,19 +249,19 @@ STDMETHODIMP CLoan::ComputeTerm(short *pVal)
     double DesiredPayment = Payment;  
     for (Term = 1; Term < 480 ; Term ++)  
     {  
-        Payment = Round(OpeningBalance * (Rate /   
+        Payment = Round(OpeningBalance * (Rate /
          (1 - pow((1 + Rate), -Term))),2);  
         if (Payment <= DesiredPayment)  
             break;  
     }  
-    *pVal = Term;     
+    *pVal = Term;
     return S_OK;  
 }  
   
 STDMETHODIMP CLoan::GetFirstPmtDistribution(double PmtAmt, double *Balance, double *PrinPortion, double *IntPortion, VARIANT_BOOL *pVal)  
 {  
     *Balance = OpeningBalance;  
-    GetNextPmtDistribution(PmtAmt, Balance, PrinPortion, IntPortion,   
+    GetNextPmtDistribution(PmtAmt, Balance, PrinPortion, IntPortion,
       pVal);  
     return S_OK;  
 }  
@@ -290,13 +290,13 @@ STDMETHODIMP CLoan::put_RiskRating(BSTR newVal)
     RiskRating = newVal;  
     return S_OK;  
 }  
-static double Round(double value, short digits)   
+static double Round(double value, short digits)
 {  
     double factor = pow(10, digits);  
     return floor(value * factor + 0.5)/factor;  
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8cc50-108">請參閱</span><span class="sxs-lookup"><span data-stu-id="8cc50-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a1c1d-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a1c1d-108">See also</span></span>
 
-- [<span data-ttu-id="8cc50-109">將 COM 元件公開給 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="8cc50-109">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)
+- [<span data-ttu-id="a1c1d-109">將 COM 元件公開給 .NET Framework</span><span class="sxs-lookup"><span data-stu-id="a1c1d-109">Exposing COM Components to the .NET Framework</span></span>](exposing-com-components.md)

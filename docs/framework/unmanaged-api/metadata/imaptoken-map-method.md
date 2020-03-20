@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-ms.openlocfilehash: fd362beb9f8fd7a1f2076eb6490a96c0358520e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 428b022ed560648f59798154d5987d382938c280
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432145"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176067"
 ---
-# <a name="imaptokenmap-method"></a><span data-ttu-id="a9779-102">IMapToken::Map 方法</span><span class="sxs-lookup"><span data-stu-id="a9779-102">IMapToken::Map Method</span></span>
-<span data-ttu-id="a9779-103">使用中繼資料簽章來對應元件之間的關聯性。</span><span class="sxs-lookup"><span data-stu-id="a9779-103">Maps a relationship between the assemblies using metadata signatures.</span></span>  
+# <a name="imaptokenmap-method"></a><span data-ttu-id="a87a1-102">IMapToken::Map 方法</span><span class="sxs-lookup"><span data-stu-id="a87a1-102">IMapToken::Map Method</span></span>
+<span data-ttu-id="a87a1-103">使用中繼資料簽名對應程式集之間的關係。</span><span class="sxs-lookup"><span data-stu-id="a87a1-103">Maps a relationship between the assemblies using metadata signatures.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a9779-104">語法</span><span class="sxs-lookup"><span data-stu-id="a9779-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a87a1-104">語法</span><span class="sxs-lookup"><span data-stu-id="a87a1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT Map (  
-    [in]  mdToken tkImp,   
+    [in]  mdToken tkImp,
     [in]  mdToken tkEmit  
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a9779-105">參數</span><span class="sxs-lookup"><span data-stu-id="a9779-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a87a1-105">參數</span><span class="sxs-lookup"><span data-stu-id="a87a1-105">Parameters</span></span>  
  `tkImp`  
- <span data-ttu-id="a9779-106">在表示已匯入之程式碼物件的元資料標記。</span><span class="sxs-lookup"><span data-stu-id="a9779-106">[in] The metadata token that represents the imported code object.</span></span>  
+ <span data-ttu-id="a87a1-106">[在]表示導入的代碼物件的中繼資料權杖。</span><span class="sxs-lookup"><span data-stu-id="a87a1-106">[in] The metadata token that represents the imported code object.</span></span>  
   
  `tkEmit`  
- <span data-ttu-id="a9779-107">在表示發出的程式碼物件的元資料標記。</span><span class="sxs-lookup"><span data-stu-id="a9779-107">[in] The metadata token that represents the emitted code object.</span></span>  
+ <span data-ttu-id="a87a1-107">[在]表示已發出的代碼物件的中繼資料權杖。</span><span class="sxs-lookup"><span data-stu-id="a87a1-107">[in] The metadata token that represents the emitted code object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a9779-108">備註</span><span class="sxs-lookup"><span data-stu-id="a9779-108">Remarks</span></span>  
- <span data-ttu-id="a9779-109">在合併期間發生權杖重新對應時，會將原始權杖的範圍限定在匯入的（來源）中繼資料範圍內，而新的 token 會限定在發出的（目標）中繼資料範圍中。</span><span class="sxs-lookup"><span data-stu-id="a9779-109">When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a87a1-108">備註</span><span class="sxs-lookup"><span data-stu-id="a87a1-108">Remarks</span></span>  
+ <span data-ttu-id="a87a1-109">當令牌重新映射在合併期間發生時，原始權杖在導入的（源）中繼資料作用域中作用域，新權杖在已發出（目標）中繼資料作用域中作用域。</span><span class="sxs-lookup"><span data-stu-id="a87a1-109">When the token re-map occurs during a merge, the original token is scoped in the imported (source) metadata scope and the new token is scoped in the emitted (target) metadata scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a9779-110">需求</span><span class="sxs-lookup"><span data-stu-id="a9779-110">Requirements</span></span>  
- <span data-ttu-id="a9779-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a9779-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a87a1-110">需求</span><span class="sxs-lookup"><span data-stu-id="a87a1-110">Requirements</span></span>  
+ <span data-ttu-id="a87a1-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a87a1-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a9779-112">**標頭：** Cor。h</span><span class="sxs-lookup"><span data-stu-id="a9779-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="a87a1-112">**標題：** 科爾赫</span><span class="sxs-lookup"><span data-stu-id="a87a1-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="a9779-113">連結**庫：** 做為 Mscoree.dll 中的資源使用</span><span class="sxs-lookup"><span data-stu-id="a9779-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="a87a1-113">**庫：** 用作 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="a87a1-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="a9779-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a9779-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="a87a1-114">**.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a87a1-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a9779-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a9779-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a87a1-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a87a1-115">See also</span></span>
 
-- [<span data-ttu-id="a9779-116">IMapToken 介面</span><span class="sxs-lookup"><span data-stu-id="a9779-116">IMapToken Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
+- [<span data-ttu-id="a87a1-116">IMapToken 介面</span><span class="sxs-lookup"><span data-stu-id="a87a1-116">IMapToken Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)
