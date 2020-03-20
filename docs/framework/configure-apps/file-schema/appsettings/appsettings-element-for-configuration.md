@@ -1,5 +1,5 @@
 ---
-title: <appSettings> 的 <configuration> 項目
+title: <configuration> 的 <appSettings> 項目
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -7,21 +7,20 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-ms.openlocfilehash: e1f285aae10a89fa49846534d5b47e15920294ea
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ea341d562f4b163a3a1771da0f20903b7d64bcdf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452275"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155527"
 ---
-# <a name="appsettings-element-for-configuration"></a><span data-ttu-id="ade18-102">\<設定的 \<appSettings > 元素 ></span><span class="sxs-lookup"><span data-stu-id="ade18-102">\<appSettings> element for \<configuration></span></span>
+# <a name="appsettings-element-for-configuration"></a><span data-ttu-id="ed233-102">\<用於\<配置>的應用設置>元素</span><span class="sxs-lookup"><span data-stu-id="ed233-102">\<appSettings> element for \<configuration></span></span>
 
-<span data-ttu-id="ade18-103">包含自訂應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="ade18-103">Contains custom application settings.</span></span> <span data-ttu-id="ade18-104">這是 .NET Framework 所提供的預先定義設定區段。</span><span class="sxs-lookup"><span data-stu-id="ade18-104">This is a predefined configuration section provided by the .NET Framework.</span></span>
+<span data-ttu-id="ed233-103">包含自訂應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="ed233-103">Contains custom application settings.</span></span> <span data-ttu-id="ed233-104">這是由 .NET 框架提供的預定義配置部分。</span><span class="sxs-lookup"><span data-stu-id="ed233-104">This is a predefined configuration section provided by the .NET Framework.</span></span>
 
-<span data-ttu-id="ade18-105">[ **\<configuration>** ](../configuration-element.md) </span><span class="sxs-lookup"><span data-stu-id="ade18-105">[**\<configuration>**](../configuration-element.md) </span></span>  
-<span data-ttu-id="ade18-106">&nbsp;&nbsp; **\<appSettings >**</span><span class="sxs-lookup"><span data-stu-id="ade18-106">&nbsp;&nbsp;**\<appSettings>**</span></span>
+<span data-ttu-id="ed233-105">&nbsp; [\*\* \<配置>\*\*](../configuration-element.md)&nbsp;**應用設置>\<**</span><span class="sxs-lookup"><span data-stu-id="ed233-105">[**\<configuration>**](../configuration-element.md) &nbsp;&nbsp;**\<appSettings>**</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="ade18-107">語法</span><span class="sxs-lookup"><span data-stu-id="ade18-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="ed233-106">語法</span><span class="sxs-lookup"><span data-stu-id="ed233-106">Syntax</span></span>
 
 ```xml
 <appSettings>
@@ -29,37 +28,37 @@ ms.locfileid: "77452275"
 </appSettings>
 ```
 
-## <a name="attribute"></a><span data-ttu-id="ade18-108">屬性</span><span class="sxs-lookup"><span data-stu-id="ade18-108">Attribute</span></span>
+## <a name="attribute"></a><span data-ttu-id="ed233-107">屬性</span><span class="sxs-lookup"><span data-stu-id="ed233-107">Attribute</span></span>
 
-|           | <span data-ttu-id="ade18-109">描述</span><span class="sxs-lookup"><span data-stu-id="ade18-109">Description</span></span> |
+|           | <span data-ttu-id="ed233-108">描述</span><span class="sxs-lookup"><span data-stu-id="ed233-108">Description</span></span> |
 | --------- | ----------- |
-| <span data-ttu-id="ade18-110">**file**</span><span class="sxs-lookup"><span data-stu-id="ade18-110">**file**</span></span>  | <span data-ttu-id="ade18-111">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="ade18-111">Optional attribute.</span></span><br><br><span data-ttu-id="ade18-112">指定包含自訂應用程式設定之外部檔案的相對路徑。</span><span class="sxs-lookup"><span data-stu-id="ade18-112">Specifies a relative path to an external file containing custom application configuration settings.</span></span> <span data-ttu-id="ade18-113">指定的檔案所包含的設定類型與 **\<加入 >** 、 **\<移除 >** ，以及 **\<清除 >** 元素中所指定的相同，並使用與這些專案相同的索引鍵/值組格式。</span><span class="sxs-lookup"><span data-stu-id="ade18-113">The specified file contains the same kind of settings that are specified in the **\<add>**, **\<remove>**, and **\<clear>** elements and uses the same key/value pair format as those elements.</span></span><br><br><span data-ttu-id="ade18-114">指定的路徑是相對於主要設定檔。</span><span class="sxs-lookup"><span data-stu-id="ade18-114">The path specified is relative to the main configuration file.</span></span> <span data-ttu-id="ade18-115">對於 Windows Forms 應用程式，這是二進位檔案夾（例如 */bin/debug*），而不是應用程式佈建檔的位置。</span><span class="sxs-lookup"><span data-stu-id="ade18-115">For a Windows Forms application, this is the binary folder (such as */bin/debug*), not the location of the application configuration file.</span></span> <span data-ttu-id="ade18-116">若是 Web Forms 應用程式，路徑會相對於*web.config*檔案所在的應用程式根目錄。</span><span class="sxs-lookup"><span data-stu-id="ade18-116">For Web Forms applications, the path is relative to the application root, where the *web.config* file is located.</span></span><br><br><span data-ttu-id="ade18-117">如果找不到指定的檔案，執行時間會忽略屬性。</span><span class="sxs-lookup"><span data-stu-id="ade18-117">The runtime ignores the attribute if the specified file can't be found.</span></span> |
+| <span data-ttu-id="ed233-109">**檔**</span><span class="sxs-lookup"><span data-stu-id="ed233-109">**file**</span></span>  | <span data-ttu-id="ed233-110">選擇性屬性。</span><span class="sxs-lookup"><span data-stu-id="ed233-110">Optional attribute.</span></span><br><br><span data-ttu-id="ed233-111">指定包含自訂應用程式佈建設置的外部檔的相對路徑。</span><span class="sxs-lookup"><span data-stu-id="ed233-111">Specifies a relative path to an external file containing custom application configuration settings.</span></span> <span data-ttu-id="ed233-112">指定的檔包含在**\<添加>、\*\*\*\*\<刪除>** 和**\<清除>** 元素中指定的相同類型的設置，並使用與這些元素相同的鍵/值對格式。</span><span class="sxs-lookup"><span data-stu-id="ed233-112">The specified file contains the same kind of settings that are specified in the **\<add>**, **\<remove>**, and **\<clear>** elements and uses the same key/value pair format as those elements.</span></span><br><br><span data-ttu-id="ed233-113">指定的路徑與主設定檔相關。</span><span class="sxs-lookup"><span data-stu-id="ed233-113">The path specified is relative to the main configuration file.</span></span> <span data-ttu-id="ed233-114">對於 Windows 表單應用程式，這是二進位檔案夾（如 */bin/調試*），而不是應用程式佈建檔的位置。</span><span class="sxs-lookup"><span data-stu-id="ed233-114">For a Windows Forms application, this is the binary folder (such as */bin/debug*), not the location of the application configuration file.</span></span> <span data-ttu-id="ed233-115">對於 Web 表單應用程式，路徑相對於*Web.config*檔所在的應用程式根。</span><span class="sxs-lookup"><span data-stu-id="ed233-115">For Web Forms applications, the path is relative to the application root, where the *web.config* file is located.</span></span><br><br><span data-ttu-id="ed233-116">如果找不到指定的檔，運行時將忽略該屬性。</span><span class="sxs-lookup"><span data-stu-id="ed233-116">The runtime ignores the attribute if the specified file can't be found.</span></span> |
 
-## <a name="parent-element"></a><span data-ttu-id="ade18-118">父元素</span><span class="sxs-lookup"><span data-stu-id="ade18-118">Parent element</span></span>
+## <a name="parent-element"></a><span data-ttu-id="ed233-117">父元素</span><span class="sxs-lookup"><span data-stu-id="ed233-117">Parent element</span></span>
 
-|     | <span data-ttu-id="ade18-119">描述</span><span class="sxs-lookup"><span data-stu-id="ade18-119">Description</span></span> |
+|     | <span data-ttu-id="ed233-118">描述</span><span class="sxs-lookup"><span data-stu-id="ed233-118">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="ade18-120"> **\<設定 >** 元素</span><span class="sxs-lookup"><span data-stu-id="ade18-120">**\<configuration>** Element</span></span>](../configuration-element.md) | <span data-ttu-id="ade18-121">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="ade18-121">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
+| [<span data-ttu-id="ed233-119">\*\* \<配置>\*\* 元素</span><span class="sxs-lookup"><span data-stu-id="ed233-119">**\<configuration>** Element</span></span>](../configuration-element.md) | <span data-ttu-id="ed233-120">通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。</span><span class="sxs-lookup"><span data-stu-id="ed233-120">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span> |
 
-## <a name="child-elements"></a><span data-ttu-id="ade18-122">子元素</span><span class="sxs-lookup"><span data-stu-id="ade18-122">Child elements</span></span>
+## <a name="child-elements"></a><span data-ttu-id="ed233-121">子元素</span><span class="sxs-lookup"><span data-stu-id="ed233-121">Child elements</span></span>
 
-|     | <span data-ttu-id="ade18-123">描述</span><span class="sxs-lookup"><span data-stu-id="ade18-123">Description</span></span> |
+|     | <span data-ttu-id="ed233-122">描述</span><span class="sxs-lookup"><span data-stu-id="ed233-122">Description</span></span> |
 | --- | ----------- |
-| [<span data-ttu-id="ade18-124"> **\<add>** </span><span class="sxs-lookup"><span data-stu-id="ade18-124">**\<add>**</span></span>](add-element-for-appsettings.md) | <span data-ttu-id="ade18-125">新增自訂應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="ade18-125">Adds a custom application setting.</span></span> |
-| [<span data-ttu-id="ade18-126"> **\<clear>** </span><span class="sxs-lookup"><span data-stu-id="ade18-126">**\<clear>**</span></span>](clear-element-for-appsettings.md) | <span data-ttu-id="ade18-127">清除所有先前定義的應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="ade18-127">Clears all previously defined application settings.</span></span> |
-| [<span data-ttu-id="ade18-128"> **\<remove>** </span><span class="sxs-lookup"><span data-stu-id="ade18-128">**\<remove>**</span></span>](remove-element-for-appsettings.md) | <span data-ttu-id="ade18-129">移除先前定義的應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="ade18-129">Removes a previously defined application setting.</span></span> |
+| [<span data-ttu-id="ed233-123">**\<添加>**</span><span class="sxs-lookup"><span data-stu-id="ed233-123">**\<add>**</span></span>](add-element-for-appsettings.md) | <span data-ttu-id="ed233-124">添加自訂應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="ed233-124">Adds a custom application setting.</span></span> |
+| [<span data-ttu-id="ed233-125">**\<明確>**</span><span class="sxs-lookup"><span data-stu-id="ed233-125">**\<clear>**</span></span>](clear-element-for-appsettings.md) | <span data-ttu-id="ed233-126">清除以前定義的所有應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="ed233-126">Clears all previously defined application settings.</span></span> |
+| [<span data-ttu-id="ed233-127">**\<刪除>**</span><span class="sxs-lookup"><span data-stu-id="ed233-127">**\<remove>**</span></span>](remove-element-for-appsettings.md) | <span data-ttu-id="ed233-128">刪除以前定義的應用程式設定。</span><span class="sxs-lookup"><span data-stu-id="ed233-128">Removes a previously defined application setting.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="ade18-130">備註</span><span class="sxs-lookup"><span data-stu-id="ade18-130">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="ed233-129">備註</span><span class="sxs-lookup"><span data-stu-id="ed233-129">Remarks</span></span>
 
-<span data-ttu-id="ade18-131">**\<AppSettings>** 項目會儲存自訂的應用程式組態資訊，例如資料庫連接字串、 檔案路徑、 XML Web 服務 Url 或任何其他自訂組態資訊應用程式。</span><span class="sxs-lookup"><span data-stu-id="ade18-131">The **\<appSettings>** element stores custom application configuration information, such as database connection strings, file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> <span data-ttu-id="ade18-132">**\<appSettings >** 元素中指定的索引鍵/值組，會在程式碼中使用 <xref:System.Configuration.ConfigurationSettings> 類別來存取。</span><span class="sxs-lookup"><span data-stu-id="ade18-132">The key/value pairs specified in the **\<appSettings>** element are accessed in code using the <xref:System.Configuration.ConfigurationSettings> class.</span></span>
+<span data-ttu-id="ed233-130">appSettings>元素存儲自訂應用程式佈建資訊，如資料庫連接字串、檔路徑、XML Web 服務 URL 或應用程式的任何其他自訂配置資訊。 \*\* \< \*\*</span><span class="sxs-lookup"><span data-stu-id="ed233-130">The **\<appSettings>** element stores custom application configuration information, such as database connection strings, file paths, XML Web service URLs, or any other custom configuration information for an application.</span></span> <span data-ttu-id="ed233-131">使用<xref:System.Configuration.ConfigurationSettings>類在代碼中訪問**\<appSettings>** 元素中指定的鍵/值對。</span><span class="sxs-lookup"><span data-stu-id="ed233-131">The key/value pairs specified in the **\<appSettings>** element are accessed in code using the <xref:System.Configuration.ConfigurationSettings> class.</span></span>
 
-<span data-ttu-id="ade18-133">您可以在*web.config 和應用*程式設定檔的 **\<appSettings >** 元素中使用**file**屬性。</span><span class="sxs-lookup"><span data-stu-id="ade18-133">You can use the **file** attribute in the **\<appSettings>** element of the *Web.config* and application configuration files.</span></span> <span data-ttu-id="ade18-134">這個屬性會指定提供其他設定的設定檔，或覆寫 **\<appSettings >** 元素中指定的設定。</span><span class="sxs-lookup"><span data-stu-id="ade18-134">This attribute specifies a configuration file that provides additional settings or overrides the settings specified in the **\<appSettings>** element.</span></span> <span data-ttu-id="ade18-135">**檔**屬性可用於原始檔控制小組開發案例，例如當使用者想要覆寫應用程式佈建檔中指定的專案設定時。</span><span class="sxs-lookup"><span data-stu-id="ade18-135">The **file** attribute can be used in source control team development scenarios, such as when a user wants to override the project settings specified in an application configuration file.</span></span>
+<span data-ttu-id="ed233-132">您可以在**\<AppSettings>** *Web.config*和應用程式佈建檔的元素中使用**檔**屬性。</span><span class="sxs-lookup"><span data-stu-id="ed233-132">You can use the **file** attribute in the **\<appSettings>** element of the *Web.config* and application configuration files.</span></span> <span data-ttu-id="ed233-133">此屬性指定提供其他設置或覆蓋**\<appSettings>** 元素中指定的設置的設定檔。</span><span class="sxs-lookup"><span data-stu-id="ed233-133">This attribute specifies a configuration file that provides additional settings or overrides the settings specified in the **\<appSettings>** element.</span></span> <span data-ttu-id="ed233-134">**檔**屬性可用於原始程式碼管理團隊開發方案，例如當使用者想要覆蓋應用程式佈建檔中指定的專案設置時。</span><span class="sxs-lookup"><span data-stu-id="ed233-134">The **file** attribute can be used in source control team development scenarios, such as when a user wants to override the project settings specified in an application configuration file.</span></span>
 
-<span data-ttu-id="ade18-136">**檔**屬性所指定的設定檔，必須具有 **\<appSettings >** 的根節點，而不是 **\<設定 >** 。</span><span class="sxs-lookup"><span data-stu-id="ade18-136">Configuration files specified by the **file** attribute must have a root node of **\<appSettings>** rather than **\<configuration>**.</span></span>
+<span data-ttu-id="ed233-135">**檔**屬性指定的設定檔必須具有**\<appSettings>** 的根節點，而不是**\<配置>。**</span><span class="sxs-lookup"><span data-stu-id="ed233-135">Configuration files specified by the **file** attribute must have a root node of **\<appSettings>** rather than **\<configuration>**.</span></span>
 
-## <a name="example"></a><span data-ttu-id="ade18-137">範例</span><span class="sxs-lookup"><span data-stu-id="ade18-137">Example</span></span>
+## <a name="example"></a><span data-ttu-id="ed233-136">範例</span><span class="sxs-lookup"><span data-stu-id="ed233-136">Example</span></span>
 
-<span data-ttu-id="ade18-138">下列範例會顯示定義自訂應用程式設定的外部應用程式設定檔 (*custom.config*)：</span><span class="sxs-lookup"><span data-stu-id="ade18-138">The following example shows an external application settings file (*custom.config*) that defines a custom application setting:</span></span>
+<span data-ttu-id="ed233-137">下列範例會顯示定義自訂應用程式設定的外部應用程式設定檔 (*custom.config*)：</span><span class="sxs-lookup"><span data-stu-id="ed233-137">The following example shows an external application settings file (*custom.config*) that defines a custom application setting:</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -68,7 +67,7 @@ ms.locfileid: "77452275"
 </appSettings>
 ```
 
-<span data-ttu-id="ade18-139">下列範例會顯示應用程式組態檔，該檔案會取用外部設定檔中的設定，並設定其專屬的應用程式設定：</span><span class="sxs-lookup"><span data-stu-id="ade18-139">The following example shows an application configuration file that consumes the setting in the external settings file and sets an application setting of its own:</span></span>
+<span data-ttu-id="ed233-138">下列範例會顯示應用程式組態檔，該檔案會取用外部設定檔中的設定，並設定其專屬的應用程式設定：</span><span class="sxs-lookup"><span data-stu-id="ed233-138">The following example shows an application configuration file that consumes the setting in the external settings file and sets an application setting of its own:</span></span>
 
 ```xml
 <configuration>
@@ -78,10 +77,10 @@ ms.locfileid: "77452275"
 </configuration>
 ```
 
-## <a name="configuration-file"></a><span data-ttu-id="ade18-140">組態檔</span><span class="sxs-lookup"><span data-stu-id="ade18-140">Configuration file</span></span>
+## <a name="configuration-file"></a><span data-ttu-id="ed233-139">組態檔</span><span class="sxs-lookup"><span data-stu-id="ed233-139">Configuration file</span></span>
 
-<span data-ttu-id="ade18-141">此元素可用於應用程式佈建檔案 *、電腦設定檔案（machine.config*），以及不在應用程式目錄層級*的 web.config 檔案*。</span><span class="sxs-lookup"><span data-stu-id="ade18-141">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
+<span data-ttu-id="ed233-140">此元素可用於應用程式佈建檔、電腦設定檔 *（Machine.config*） 和*Web.config*檔，這些檔不在應用程式目錄級別。</span><span class="sxs-lookup"><span data-stu-id="ed233-140">This element can be used in the application configuration file, machine configuration file (*Machine.config*), and *Web.config* files that are not at the application directory level.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="ade18-142">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ade18-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ed233-141">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ed233-141">See also</span></span>
 
-- [<span data-ttu-id="ade18-143">.NET Framework 的設定檔架構</span><span class="sxs-lookup"><span data-stu-id="ade18-143">Configuration file schema for the .NET Framework</span></span>](../index.md)
+- [<span data-ttu-id="ed233-142">.NET 框架的設定檔架構</span><span class="sxs-lookup"><span data-stu-id="ed233-142">Configuration file schema for the .NET Framework</span></span>](../index.md)

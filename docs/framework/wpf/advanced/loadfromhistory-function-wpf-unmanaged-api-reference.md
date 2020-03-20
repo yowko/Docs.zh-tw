@@ -1,5 +1,5 @@
 ---
-title: LoadFromHistory 函式-WPF 非受控 API 參考
+title: 負載從歷史函數 - WPF 非託管 API 引用
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
@@ -9,45 +9,45 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: 7807e073d1f09ac6a6213aee6d86d53cc75a3c56
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: be9b8658614e678b4370044a753554859d230fed
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727937"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141571"
 ---
-# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="5bd5e-102">LoadFromHistory 函式（WPF 非受控 API 參考）</span><span class="sxs-lookup"><span data-stu-id="5bd5e-102">LoadFromHistory Function (WPF Unmanaged API Reference)</span></span>
-<span data-ttu-id="5bd5e-103">這個 API 支援 Windows Presentation Foundation （WPF）基礎結構，但不適合直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="5bd5e-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="13953-102">從歷史載入函數（WPF 非託管 API 引用）</span><span class="sxs-lookup"><span data-stu-id="13953-102">LoadFromHistory Function (WPF Unmanaged API Reference)</span></span>
+<span data-ttu-id="13953-103">此 API 支援 Windows 演示基礎 （WPF） 基礎結構，不用於直接從代碼中使用。</span><span class="sxs-lookup"><span data-stu-id="13953-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  
   
- <span data-ttu-id="5bd5e-104">由適用于 Windows 管理的 Windows Presentation Foundation （WPF）基礎結構使用。</span><span class="sxs-lookup"><span data-stu-id="5bd5e-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
+ <span data-ttu-id="13953-104">由 Windows 演示基礎 （WPF） 基礎結構用於視窗管理。</span><span class="sxs-lookup"><span data-stu-id="13953-104">Used by the Windows Presentation Foundation (WPF) infrastructure for windows management.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5bd5e-105">語法</span><span class="sxs-lookup"><span data-stu-id="5bd5e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13953-105">語法</span><span class="sxs-lookup"><span data-stu-id="13953-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT LoadFromHistory_export(  
-        IStream* pHistoryStream,   
+        IStream* pHistoryStream,
         IBindCtx* pBindCtx  
 )  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5bd5e-106">參數</span><span class="sxs-lookup"><span data-stu-id="5bd5e-106">Parameters</span></span>  
- <span data-ttu-id="5bd5e-107">pHistoryStream</span><span class="sxs-lookup"><span data-stu-id="5bd5e-107">pHistoryStream</span></span>  
- <span data-ttu-id="5bd5e-108">歷程記錄資訊資料流程的指標。</span><span class="sxs-lookup"><span data-stu-id="5bd5e-108">A pointer to a stream of history information.</span></span>  
+## <a name="parameters"></a><span data-ttu-id="13953-106">參數</span><span class="sxs-lookup"><span data-stu-id="13953-106">Parameters</span></span>  
+ <span data-ttu-id="13953-107">p歷史流</span><span class="sxs-lookup"><span data-stu-id="13953-107">pHistoryStream</span></span>  
+ <span data-ttu-id="13953-108">指向歷史記錄資訊流的指標。</span><span class="sxs-lookup"><span data-stu-id="13953-108">A pointer to a stream of history information.</span></span>  
   
- <span data-ttu-id="5bd5e-109">pBindCtx</span><span class="sxs-lookup"><span data-stu-id="5bd5e-109">pBindCtx</span></span>  
- <span data-ttu-id="5bd5e-110">系結內容的指標。</span><span class="sxs-lookup"><span data-stu-id="5bd5e-110">A pointer to a bind context.</span></span>  
+ <span data-ttu-id="13953-109">pBindCtx</span><span class="sxs-lookup"><span data-stu-id="13953-109">pBindCtx</span></span>  
+ <span data-ttu-id="13953-110">指向綁定上下文的指標。</span><span class="sxs-lookup"><span data-stu-id="13953-110">A pointer to a bind context.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5bd5e-111">需求</span><span class="sxs-lookup"><span data-stu-id="5bd5e-111">Requirements</span></span>  
- <span data-ttu-id="5bd5e-112">**平臺：** 請參閱[.NET Framework 系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5bd5e-112">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13953-111">需求</span><span class="sxs-lookup"><span data-stu-id="13953-111">Requirements</span></span>  
+ <span data-ttu-id="13953-112">**平臺：** 請參閱[.NET 框架系統要求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="13953-112">**Platforms:** See [.NET Framework System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5bd5e-113">**URLMON.DLL**</span><span class="sxs-lookup"><span data-stu-id="5bd5e-113">**DLL:**</span></span>  
+ <span data-ttu-id="13953-113">**Dll：**</span><span class="sxs-lookup"><span data-stu-id="13953-113">**DLL:**</span></span>  
   
- <span data-ttu-id="5bd5e-114">在 .NET Framework 3.0 和3.5： PresentationHostDLL 中</span><span class="sxs-lookup"><span data-stu-id="5bd5e-114">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
+ <span data-ttu-id="13953-114">在 .NET 框架 3.0 和 3.5 中：演示HostDLL.dll</span><span class="sxs-lookup"><span data-stu-id="13953-114">In the .NET Framework 3.0 and 3.5: PresentationHostDLL.dll</span></span>  
   
- <span data-ttu-id="5bd5e-115">在 .NET Framework 4 和更新版本中： PresentationHost_v0400 .dll</span><span class="sxs-lookup"><span data-stu-id="5bd5e-115">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
+ <span data-ttu-id="13953-115">在 .NET 框架 4 及更高版本：PresentationHost_v0400.dll</span><span class="sxs-lookup"><span data-stu-id="13953-115">In the .NET Framework 4 and later: PresentationHost_v0400.dll</span></span>  
   
- <span data-ttu-id="5bd5e-116">**.NET Framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5bd5e-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
+ <span data-ttu-id="13953-116">**.NET 框架版本：**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13953-116">**.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5bd5e-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5bd5e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="13953-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="13953-117">See also</span></span>
 
-- [<span data-ttu-id="5bd5e-118">WPF Unmanaged API 參考</span><span class="sxs-lookup"><span data-stu-id="5bd5e-118">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)
+- [<span data-ttu-id="13953-118">WPF 非受控 API 參考</span><span class="sxs-lookup"><span data-stu-id="13953-118">WPF Unmanaged API Reference</span></span>](wpf-unmanaged-api-reference.md)

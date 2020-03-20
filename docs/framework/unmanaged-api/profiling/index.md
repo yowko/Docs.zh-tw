@@ -7,30 +7,30 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework], profiling
 ms.assetid: 14c68e84-657e-49c2-aa8b-4978dbaf4454
 ms.openlocfilehash: 40c464a6070ad7fd4c21ad4ea366e907ca1e4a31
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76868157"
 ---
-# <a name="profiling-unmanaged-api-reference"></a><span data-ttu-id="37083-102">分析 (Unmanaged API 參考)</span><span class="sxs-lookup"><span data-stu-id="37083-102">Profiling (Unmanaged API Reference)</span></span>
+# <a name="profiling-unmanaged-api-reference"></a><span data-ttu-id="69df4-102">分析 (Unmanaged API 參考)</span><span class="sxs-lookup"><span data-stu-id="69df4-102">Profiling (Unmanaged API Reference)</span></span>
 
-<span data-ttu-id="37083-103">分析 API 可讓分析工具透過通用語言執行平台 (CLR) 監視程式的執行。</span><span class="sxs-lookup"><span data-stu-id="37083-103">The profiling API enables a profiler to monitor a program's execution by the common language runtime (CLR).</span></span>
+<span data-ttu-id="69df4-103">分析 API 可讓分析工具透過通用語言執行平台 (CLR) 監視程式的執行。</span><span class="sxs-lookup"><span data-stu-id="69df4-103">The profiling API enables a profiler to monitor a program's execution by the common language runtime (CLR).</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="37083-104">本章節內容</span><span class="sxs-lookup"><span data-stu-id="37083-104">In This Section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="69df4-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="69df4-104">In This Section</span></span>
 
- <span data-ttu-id="37083-105">[分析概觀](profiling-overview.md) 說明 CLR 提供來支援在 .NET Framework 環境中進行分析的服務與介面。</span><span class="sxs-lookup"><span data-stu-id="37083-105">[Profiling Overview](profiling-overview.md) Describes the services and interfaces that the CLR provides to support profiling in the .NET Framework environment.</span></span>
+ <span data-ttu-id="69df4-105">[分析概觀](profiling-overview.md) 說明 CLR 提供來支援在 .NET Framework 環境中進行分析的服務與介面。</span><span class="sxs-lookup"><span data-stu-id="69df4-105">[Profiling Overview](profiling-overview.md) Describes the services and interfaces that the CLR provides to support profiling in the .NET Framework environment.</span></span>
 
- <span data-ttu-id="37083-106">[分析介面](profiling-interfaces.md) 說明分析 API 所使用的非受控介面。</span><span class="sxs-lookup"><span data-stu-id="37083-106">[Profiling Interfaces](profiling-interfaces.md) Describes the unmanaged interfaces that the profiling API uses.</span></span>
+ <span data-ttu-id="69df4-106">[分析介面](profiling-interfaces.md) 說明分析 API 所使用的非受控介面。</span><span class="sxs-lookup"><span data-stu-id="69df4-106">[Profiling Interfaces](profiling-interfaces.md) Describes the unmanaged interfaces that the profiling API uses.</span></span>
 
- <span data-ttu-id="37083-107">[設定分析環境](setting-up-a-profiling-environment.md) 說明您必須採取以分析 .NET Framework 應用程式的步驟。</span><span class="sxs-lookup"><span data-stu-id="37083-107">[Setting Up a Profiling Environment](setting-up-a-profiling-environment.md) Describes the steps you must take to profile a .NET Framework application.</span></span>
+ <span data-ttu-id="69df4-107">[設定分析環境](setting-up-a-profiling-environment.md) 說明您必須採取以分析 .NET Framework 應用程式的步驟。</span><span class="sxs-lookup"><span data-stu-id="69df4-107">[Setting Up a Profiling Environment](setting-up-a-profiling-environment.md) Describes the steps you must take to profile a .NET Framework application.</span></span>
 
- <span data-ttu-id="37083-108">[CLR 分析工具與 Windows Store 應用程式](clr-profilers-and-windows-store-apps.md) 討論如何移植取用 CLR 分析 API 的診斷工具移植以成功搭配 Windows Store 應用程式使用。</span><span class="sxs-lookup"><span data-stu-id="37083-108">[CLR Profilers and Windows Store Apps](clr-profilers-and-windows-store-apps.md) Discusses how to port diagnostic tools that consume the CLR Profiling API to work successfully with Windows Store apps.</span></span>
+ <span data-ttu-id="69df4-108">[CLR 分析工具與 Windows Store 應用程式](clr-profilers-and-windows-store-apps.md) 討論如何移植取用 CLR 分析 API 的診斷工具移植以成功搭配 Windows Store 應用程式使用。</span><span class="sxs-lookup"><span data-stu-id="69df4-108">[CLR Profilers and Windows Store Apps](clr-profilers-and-windows-store-apps.md) Discusses how to port diagnostic tools that consume the CLR Profiling API to work successfully with Windows Store apps.</span></span>
 
- <span data-ttu-id="37083-109">[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](corprof-e-unsupported-call-sequence-hresult.md) 記錄方法呼叫傳回 `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT 的情況。</span><span class="sxs-lookup"><span data-stu-id="37083-109">[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](corprof-e-unsupported-call-sequence-hresult.md) Documents the conditions under which a method call returns the `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.</span></span>
+ <span data-ttu-id="69df4-109">[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](corprof-e-unsupported-call-sequence-hresult.md) 記錄方法呼叫傳回 `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT 的情況。</span><span class="sxs-lookup"><span data-stu-id="69df4-109">[CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](corprof-e-unsupported-call-sequence-hresult.md) Documents the conditions under which a method call returns the `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.</span></span>
 
- <span data-ttu-id="37083-110">[分析全域靜態函式](profiling-global-static-functions.md) 說明分析 API 所使用的非受控全域靜態函式。</span><span class="sxs-lookup"><span data-stu-id="37083-110">[Profiling Global Static Functions](profiling-global-static-functions.md) Describes the unmanaged global static functions that the profiling API uses.</span></span>
+ <span data-ttu-id="69df4-110">[分析全域靜態函式](profiling-global-static-functions.md) 說明分析 API 所使用的非受控全域靜態函式。</span><span class="sxs-lookup"><span data-stu-id="69df4-110">[Profiling Global Static Functions](profiling-global-static-functions.md) Describes the unmanaged global static functions that the profiling API uses.</span></span>
 
- <span data-ttu-id="37083-111">[分析列舉](profiling-enumerations.md) 說明分析 API 所使用的非受控列舉。</span><span class="sxs-lookup"><span data-stu-id="37083-111">[Profiling Enumerations](profiling-enumerations.md) Describes the unmanaged enumerations that the profiling API uses.</span></span>
+ <span data-ttu-id="69df4-111">[分析列舉](profiling-enumerations.md) 說明分析 API 所使用的非受控列舉。</span><span class="sxs-lookup"><span data-stu-id="69df4-111">[Profiling Enumerations](profiling-enumerations.md) Describes the unmanaged enumerations that the profiling API uses.</span></span>
 
- <span data-ttu-id="37083-112">[分析結構](profiling-structures.md) 說明分析 API 所使用的非受控結構。</span><span class="sxs-lookup"><span data-stu-id="37083-112">[Profiling Structures](profiling-structures.md) Describes the unmanaged structures that the profiling API uses.</span></span>
+ <span data-ttu-id="69df4-112">[分析結構](profiling-structures.md) 說明分析 API 所使用的非受控結構。</span><span class="sxs-lookup"><span data-stu-id="69df4-112">[Profiling Structures](profiling-structures.md) Describes the unmanaged structures that the profiling API uses.</span></span>

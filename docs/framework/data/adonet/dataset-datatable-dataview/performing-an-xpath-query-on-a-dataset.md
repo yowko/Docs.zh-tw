@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 6082a171d24c55ea52c153bbd920bb7486be78a7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5e9a00ab78a57c3c1686d7c87ed8b45d9b2649af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784369"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150827"
 ---
-# <a name="performing-an-xpath-query-on-a-dataset"></a><span data-ttu-id="a8afd-102">對資料集執行 XPath 查詢</span><span class="sxs-lookup"><span data-stu-id="a8afd-102">Performing an XPath Query on a DataSet</span></span>
-<span data-ttu-id="a8afd-103">已同步<xref:System.Data.DataSet>處理之和<xref:System.Xml.XmlDataDocument>之間的關聯性可讓您使用 xml 服務（例如 xml 路徑語言（XPath）查詢）來存取**XmlDataDocument** ，並可更方便地執行特定功能直接存取**資料集**。</span><span class="sxs-lookup"><span data-stu-id="a8afd-103">The relationship between a synchronized <xref:System.Data.DataSet> and <xref:System.Xml.XmlDataDocument> allows you to make use of XML services, such as the XML Path Language (XPath) query, that access the **XmlDataDocument** and can perform certain functionality more conveniently than accessing the **DataSet** directly.</span></span> <span data-ttu-id="a8afd-104">例如，您可以在與**資料**集同步處理的<xref:System.Data.DataTable> **XmlDataDocument**上執行 XPath 查詢，而不是使用的**Select**方法來導覽**資料集**內其他資料表的關聯性，以取得格式為的 XML 元素清單<xref:System.Xml.XmlNodeList>。</span><span class="sxs-lookup"><span data-stu-id="a8afd-104">For example, rather than using the **Select** method of a <xref:System.Data.DataTable> to navigate relationships to other tables in a **DataSet**, you can perform an XPath query on an **XmlDataDocument** that is synchronized with the **DataSet**, to get a list of XML elements in the form of an <xref:System.Xml.XmlNodeList>.</span></span> <span data-ttu-id="a8afd-105">**XmlNodeList**中的節點（轉型為<xref:System.Xml.XmlElement>節點）接著可以傳遞至 XmlDataDocument 的**GetRowFromElement**方法，以將相符<xref:System.Data.DataRow>的參考傳回給已同步**處理之資料表中的資料列資料集**。</span><span class="sxs-lookup"><span data-stu-id="a8afd-105">The nodes in the **XmlNodeList**, cast as <xref:System.Xml.XmlElement> nodes, can then be passed to the **GetRowFromElement** method of the **XmlDataDocument**, to return matching <xref:System.Data.DataRow> references to the rows of the table in the synchronized **DataSet**.</span></span>  
+# <a name="performing-an-xpath-query-on-a-dataset"></a><span data-ttu-id="1311d-102">對資料集執行 XPath 查詢</span><span class="sxs-lookup"><span data-stu-id="1311d-102">Performing an XPath Query on a DataSet</span></span>
+<span data-ttu-id="1311d-103">同步<xref:System.Data.DataSet>和<xref:System.Xml.XmlDataDocument>之間的關係允許您使用 XML 服務（如 XML 路徑語言 （XPath） 查詢），這些服務可以訪問**XmlDataDocument，** 並且可以比直接存取**DataSet**更方便地執行某些功能。</span><span class="sxs-lookup"><span data-stu-id="1311d-103">The relationship between a synchronized <xref:System.Data.DataSet> and <xref:System.Xml.XmlDataDocument> allows you to make use of XML services, such as the XML Path Language (XPath) query, that access the **XmlDataDocument** and can perform certain functionality more conveniently than accessing the **DataSet** directly.</span></span> <span data-ttu-id="1311d-104">例如，可以使用**Select**方法<xref:System.Data.DataTable>將關係導航到**DataSet**中的其他表，而是可以在與**DataSet**同步的**XmlDataDocument**上執行 XPath 查詢，以獲取 XML 元素的清單。 <xref:System.Xml.XmlNodeList></span><span class="sxs-lookup"><span data-stu-id="1311d-104">For example, rather than using the **Select** method of a <xref:System.Data.DataTable> to navigate relationships to other tables in a **DataSet**, you can perform an XPath query on an **XmlDataDocument** that is synchronized with the **DataSet**, to get a list of XML elements in the form of an <xref:System.Xml.XmlNodeList>.</span></span> <span data-ttu-id="1311d-105">然後，將**XmlNodeList**中的節點<xref:System.Xml.XmlElement>作為節點強制轉換，可以傳遞給**XmlDataDocument**的**GetRowFromElement**方法，以<xref:System.Data.DataRow>返回對同步**DataSet**中表行的匹配引用。</span><span class="sxs-lookup"><span data-stu-id="1311d-105">The nodes in the **XmlNodeList**, cast as <xref:System.Xml.XmlElement> nodes, can then be passed to the **GetRowFromElement** method of the **XmlDataDocument**, to return matching <xref:System.Data.DataRow> references to the rows of the table in the synchronized **DataSet**.</span></span>  
   
- <span data-ttu-id="a8afd-106">例如，下列程式碼範例執行「孫代」XPath 查詢。</span><span class="sxs-lookup"><span data-stu-id="a8afd-106">For example, the following code sample performs a "grandchild" XPath query.</span></span> <span data-ttu-id="a8afd-107">**資料集會**填入三個數據表：**Customers**、 **Orders**和**OrderDetails**。</span><span class="sxs-lookup"><span data-stu-id="a8afd-107">The **DataSet** is filled with three tables: **Customers**, **Orders**, and **OrderDetails**.</span></span> <span data-ttu-id="a8afd-108">在此範例中，會先在**Customers**和**orders**資料表之間，以及**Orders**和**OrderDetails**資料表之間建立父子式關聯。</span><span class="sxs-lookup"><span data-stu-id="a8afd-108">In the sample, a parent-child relation is first created between the **Customers** and **Orders** tables, and between the **Orders** and **OrderDetails** tables.</span></span> <span data-ttu-id="a8afd-109">接著會執行 XPath 查詢以傳回**Customers**節點的**XmlNodeList** ，其中孫**OrderDetails**節點具有值為43的**ProductID**節點。</span><span class="sxs-lookup"><span data-stu-id="a8afd-109">An XPath query is then performed to return an **XmlNodeList** of **Customers** nodes where a grandchild **OrderDetails** node has a **ProductID** node with the value of 43.</span></span> <span data-ttu-id="a8afd-110">基本上，此範例使用 XPath 查詢來判斷哪些客戶已訂購**ProductID**為43的產品。</span><span class="sxs-lookup"><span data-stu-id="a8afd-110">In essence, the sample is using the XPath query to determine which customers have ordered the product that has the **ProductID** of 43.</span></span>  
+ <span data-ttu-id="1311d-106">例如，下列程式碼範例執行「孫代」XPath 查詢。</span><span class="sxs-lookup"><span data-stu-id="1311d-106">For example, the following code sample performs a "grandchild" XPath query.</span></span> <span data-ttu-id="1311d-107">**資料集**由三個表填充：**客戶**、**訂單**和**訂單詳細資訊**。</span><span class="sxs-lookup"><span data-stu-id="1311d-107">The **DataSet** is filled with three tables: **Customers**, **Orders**, and **OrderDetails**.</span></span> <span data-ttu-id="1311d-108">在此示例中，首先在 **"客戶**"和 **"訂單"** 表之間以及 **"訂單\*\*\*\*詳細資訊**"表之間創建父子關係。</span><span class="sxs-lookup"><span data-stu-id="1311d-108">In the sample, a parent-child relation is first created between the **Customers** and **Orders** tables, and between the **Orders** and **OrderDetails** tables.</span></span> <span data-ttu-id="1311d-109">然後執行 XPath 查詢以返回**客戶**節點的**XmlNodeList，** 其中孫**訂單詳細資訊**節點具有值為 43**的 ProductID**節點。</span><span class="sxs-lookup"><span data-stu-id="1311d-109">An XPath query is then performed to return an **XmlNodeList** of **Customers** nodes where a grandchild **OrderDetails** node has a **ProductID** node with the value of 43.</span></span> <span data-ttu-id="1311d-110">實質上，該示例使用 XPath 查詢來確定哪些客戶訂購了產品**ID**為 43 的產品。</span><span class="sxs-lookup"><span data-stu-id="1311d-110">In essence, the sample is using the XPath query to determine which customers have ordered the product that has the **ProductID** of 43.</span></span>  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -43,7 +43,7 @@ dataSet.Relations.Add("OrderDetail", _
   dataSet.Tables("Orders").Columns("OrderID"), _  
 dataSet.Tables("OrderDetails").Columns("OrderID"), false).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim nodeList As XmlNodeList = xmlDoc.DocumentElement.SelectNodes( _  
   "descendant::Customers[*/OrderDetails/ProductID=43]")  
@@ -84,10 +84,10 @@ dataSet.Relations.Add("CustOrders",
   
 dataSet.Relations.Add("OrderDetail",  
   dataSet.Tables["Orders"].Columns["OrderID"],  
-  dataSet.Tables["OrderDetails"].Columns["OrderID"],   
+  dataSet.Tables["OrderDetails"].Columns["OrderID"],
   false).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);   
+XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);
   
 XmlNodeList nodeList = xmlDoc.DocumentElement.SelectNodes(  
   "descendant::Customers[*/OrderDetails/ProductID=43]");  
@@ -101,7 +101,7 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a8afd-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a8afd-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1311d-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1311d-111">See also</span></span>
 
-- [<span data-ttu-id="a8afd-112">資料集和 XmlDataDocument 同步處理</span><span class="sxs-lookup"><span data-stu-id="a8afd-112">DataSet and XmlDataDocument Synchronization</span></span>](dataset-and-xmldatadocument-synchronization.md)
-- [<span data-ttu-id="a8afd-113">ADO.NET 概觀</span><span class="sxs-lookup"><span data-stu-id="a8afd-113">ADO.NET Overview</span></span>](../ado-net-overview.md)
+- [<span data-ttu-id="1311d-112">資料集和 XmlDataDocument 同步處理</span><span class="sxs-lookup"><span data-stu-id="1311d-112">DataSet and XmlDataDocument Synchronization</span></span>](dataset-and-xmldatadocument-synchronization.md)
+- <span data-ttu-id="1311d-113">[ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)</span><span class="sxs-lookup"><span data-stu-id="1311d-113">[ADO.NET Overview](../ado-net-overview.md)</span></span>
