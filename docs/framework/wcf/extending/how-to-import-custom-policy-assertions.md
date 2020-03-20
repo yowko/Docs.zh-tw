@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: 4510eac2d9c1b3bb64420b0678b3a47a90887188
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ed8aae30875e3b17f65be5857c7d93af98db9b3e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795615"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185560"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>HOW TO：匯入自訂原則判斷提示
 原則判斷提示描述服務端點的功能與需求。  用戶端應用程式可使用服務中繼資料中的原則判斷提示，來設定用戶端繫結或自訂服務端點的服務合約。  
   
- 您可以藉由實作 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 介面並將該物件傳遞至中繼資料系統，或藉由在應用程式組態檔中註冊實作類型，來匯入自訂原則判斷提示。  <xref:System.ServiceModel.Description.IPolicyImportExtension>介面的實現必須提供無參數的函式。  
+ 您可以藉由實作 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 介面並將該物件傳遞至中繼資料系統，或藉由在應用程式組態檔中註冊實作類型，來匯入自訂原則判斷提示。  介面的<xref:System.ServiceModel.Description.IPolicyImportExtension>實現必須提供無參數建構函式。  
   
 ### <a name="to-import-custom-policy-assertions"></a>若要匯入自訂原則判斷提示  
   
@@ -25,7 +25,7 @@ ms.locfileid: "70795615"
   
 3. 使用組態檔。 請參閱下列程序。  
   
-4. 使用設定檔案搭配[System.servicemodel 中繼資料公用程式工具（Svcutil .exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)。 請參閱下列程序。  
+4. 使用與[ServiceModel 中繼資料實用程式工具 （Svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)一起使用的設定檔。 請參閱下列程序。  
   
 5. 以程式設計方式插入原則匯入工具。 請參閱下列程序。  
   
@@ -40,13 +40,13 @@ ms.locfileid: "70795615"
   
 3. 對支援原則判斷提示所指定能力或需求的繫結程序或合約執行自訂。 判斷提示通常會指出繫結需要特別的組態或特定的繫結項目。 透過存取 <xref:System.ServiceModel.Description.PolicyConversionContext.BindingElements%2A?displayProperty=nameWithType> 屬性進行這些修改。 其他判斷提示需要您修改合約。  您可以使用 <xref:System.ServiceModel.Description.PolicyConversionContext.Contract%2A?displayProperty=nameWithType> 屬性存取和修改合約。  請注意，您的原則匯入工具可以為同樣的繫結和合約呼叫多次，但如果無法匯入原則替代選項，則會以不同的原則替代。 您的程式碼應回復到此行為。  
   
-4. 從判斷提示集合移除自訂原則判斷提示。 如果您沒有移除判斷提示 Windows Communication Foundation （WCF）會假設原則匯入不成功，而且不會匯入相關聯的系結。 如果您使用 <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> 方法找到自訂原則判斷提示，並用一個步驟將它從集合中移除，就不必執行這個步驟。  
+4. 從判斷提示集合移除自訂原則判斷提示。 如果不刪除斷言 Windows 通信基礎 （WCF） 假定策略導入不成功，並且不導入關聯的綁定。 如果您使用 <xref:System.ServiceModel.Description.PolicyAssertionCollection.Remove%2A?displayProperty=nameWithType> 方法找到自訂原則判斷提示，並用一個步驟將它從集合中移除，就不必執行這個步驟。  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-a-configuration-file"></a>若要使用組態檔將自訂原則匯入工具插入中繼資料系統  
   
-1. 將匯入工具類型新增`<extensions>`至用戶端設定檔中[ \<policyImporters >](../../configure-apps/file-schema/wcf/policyimporters.md)元素內的元素。  
+1. 將導入器類型添加到用戶端`<extensions>`設定檔中[\<的策略導入器>](../../configure-apps/file-schema/wcf/policyimporters.md)元素中的元素。  
   
-     [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]   
+     [!code-xml[CustomPolicySample#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/custompolicysample/cs/client.exe.config#7)]
   
 2. 在用戶端應用程式中，使用 <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> 來解析中繼資料，匯入工具會自動叫用。  
   
@@ -55,9 +55,9 @@ ms.locfileid: "70795615"
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-using-svcutilexe"></a>若要使用 Svcutil.exe 將自訂原則匯入工具插入中繼資料系統  
   
-1. 將匯入工具類型新增`<extensions>`至 Svcutil 設定檔中[ \<policyImporters >](../../configure-apps/file-schema/wcf/policyimporters.md)元素內的元素。 您也可以使用 `/svcutilConfig` 選項指示 Svcutil.exe 載入在不同組態檔中註冊的原則匯入工具。  
+1. 將導入器類型添加到`<extensions>`[\<策略導入器>](../../configure-apps/file-schema/wcf/policyimporters.md) Svcutil.exe.config 設定檔中的元素。 您也可以使用 `/svcutilConfig` 選項指示 Svcutil.exe 載入在不同組態檔中註冊的原則匯入工具。  
   
-2. 使用[System.servicemodel 中繼資料公用程式工具（Svcutil）](../servicemodel-metadata-utility-tool-svcutil-exe.md)來匯入中繼資料，並自動叫用匯入工具。  
+2. 使用[ServiceModel 中繼資料實用程式工具 （Svcutil.exe）](../servicemodel-metadata-utility-tool-svcutil-exe.md)導入中繼資料，並自動調用導入程式。  
   
 ### <a name="to-insert-the-custom-policy-importer-into-the-metadata-system-programmatically"></a>若要以程式設計方式將自訂原則匯入工具插入中繼資料系統  
   

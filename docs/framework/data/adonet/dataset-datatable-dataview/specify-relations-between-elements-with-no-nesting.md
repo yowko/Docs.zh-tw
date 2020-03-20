@@ -2,21 +2,21 @@
 title: 指定未巢狀放置之項目間的關聯
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: 3aa9976ccde426eeda1d869164409c5235a629fe
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: bee427c6cdf76792773ea827c8772b276ff29c31
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040043"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150814"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>指定未巢狀放置之項目間的關聯
-項目未巢狀化時，不會建立任何隱含關聯， 不過，您可以使用**msdata： Relationship**注釋，明確指定不是以嵌套的元素之間的關聯性。  
+項目未巢狀化時，不會建立任何隱含關聯， 但是，可以使用**msdata：關係**注釋顯式指定未嵌套的元素之間的關係。  
   
- 下列範例顯示的 XML 架構中， **msdata： Relationship**注釋是在**Order**和**OrderDetail**元素之間指定，而這些專案不是嵌套的。 **Msdata： Relationship**注釋會指定為**Schema**專案的子項目。  
+ 下面的示例顯示了一個 XML 架構，其中**msdata：關係**注釋在未嵌套的 **"訂單"** 和"**訂單詳細資訊"** 元素之間指定。 **msdata：關係**注釋被指定為**架構**元素的子項目。  
   
 ```xml  
-<xs:schema id="MyDataSet" xmlns=""   
-             xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="MyDataSet" xmlns=""
+             xmlns:xs="http://www.w3.org/2001/XMLSchema"
              xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
  <xs:element name="MyDataSet" msdata:IsDataSet="true">  
   <xs:complexType>  
@@ -44,28 +44,28 @@ ms.locfileid: "73040043"
    <xs:annotation>  
      <xs:appinfo>  
        <msdata:Relationship name="OrdOrderDetailRelation"  
-                            msdata:parent="Order"   
-                            msdata:child="OrderDetail"   
-                            msdata:parentkey="OrderNumber"   
+                            msdata:parent="Order"
+                            msdata:child="OrderDetail"
+                            msdata:parentkey="OrderNumber"
                             msdata:childkey="OrderNo"/>  
      </xs:appinfo>  
   </xs:annotation>  
 </xs:schema>  
 ```  
   
- XML 架構定義語言（XSD）架構對應進程會建立具有**Order**和**OrderDetail**資料表的 <xref:System.Data.DataSet>，以及這兩個數據表之間指定的關聯性，如下所示。  
+ XML 架構定義語言 （XSD） 架構映射過程<xref:System.Data.DataSet>創建一個帶有**訂單**和**訂單詳細資訊**的表以及這兩個表之間指定的關係，如下所示。  
   
 ```text  
 RelationName: OrdOrderDetailRelation  
 ParentTable: Order  
-ParentColumns: OrderNumber   
+ParentColumns: OrderNumber
 ChildTable: OrderDetail  
-ChildColumns: OrderNo   
+ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [從 XML 結構描述 (XSD) 產生資料集關聯](generating-dataset-relations-from-xml-schema-xsd.md)
 - [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

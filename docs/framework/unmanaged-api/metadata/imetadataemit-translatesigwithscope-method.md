@@ -15,76 +15,76 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2662af41fbd2cdc3ce8a6df1e036dfc5b22ff6a3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440469"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175547"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope 方法
-將元件匯入到目前的範圍，並為合併的範圍取得新的中繼資料簽章。  
+將程式集導入當前作用域，並為合併作用域獲取新的中繼資料簽名。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT TranslateSigWithScope (   
-    [in]  IMetaDataAssemblyImport   *pAssemImport,   
-    [in]  const void                *pbHashValue,   
-    [in]  ULONG                     cbHashValue,   
-    [in]  IMetaDataImport           *import,   
-    [in]  PCCOR_SIGNATURE           pbSigBlob,   
+HRESULT TranslateSigWithScope (
+    [in]  IMetaDataAssemblyImport   *pAssemImport,
+    [in]  const void                *pbHashValue,
+    [in]  ULONG                     cbHashValue,
+    [in]  IMetaDataImport           *import,
+    [in]  PCCOR_SIGNATURE           pbSigBlob,
     [in]  ULONG                     cbSigBlob,  
-    [in]  IMetaDataAssemblyEmit     *pAssemEmit,   
-    [in]  IMetaDataEmit             *emit,   
-    [out] PCOR_SIGNATURE            pvTranslatedSig,   
-    [in]  ULONG                     cbTranslatedSigMax,   
-    [out] ULONG                     *pcbTranslatedSig   
+    [in]  IMetaDataAssemblyEmit     *pAssemEmit,
+    [in]  IMetaDataEmit             *emit,
+    [out] PCOR_SIGNATURE            pvTranslatedSig,
+    [in]  ULONG                     cbTranslatedSigMax,
+    [out] ULONG                     *pcbTranslatedSig
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `pAssemImport`  
- 在匯入元件的介面（定義簽章的位置）。  
+ [在]導入程式集的介面（定義簽名的位置）。  
   
  `pbHashValue`  
- 在元件的雜湊 blob。  
+ [在]程式集的雜湊 blob。  
   
  `cbHashValue`  
- 在`pbHashValue`中的位元組計數。  
+ [在]中的`pbHashValue`位元組計數。  
   
  `import`  
- 在匯入中繼資料範圍的介面。  
+ [在]導入中繼資料作用域的介面。  
   
  `pbSigBlob`  
- 在要匯入的簽章。  
+ [在]要導入的簽名。  
   
  `cbSigBlob`  
- 在`pbSigBlob`的大小（以位元組為單位）。  
+ [在]的大小（以位元組為單位）的大小`pbSigBlob`。  
   
  `pAssemEmit`  
- 在匯出元件的介面。  
+ [在]匯出程式集的介面。  
   
  `emit`  
- 在用於匯出中繼資料範圍的介面。  
+ [在]匯出中繼資料作用域的介面。  
   
  `pvTranslatedSig`  
- 脫銷保存已轉譯之簽章 blob 的緩衝區。  
+ [出]用於保存已翻譯的簽名 blob 的緩衝區。  
   
  `cbTranslatedSigMax`  
- 在`pvTranslatedSig`的容量（以位元組為單位）。  
+ [在]的容量（以位元組為單位`pvTranslatedSig`）。  
   
  `pcbTranslatedSig`  
- 脫銷翻譯簽章中的實際位元組數。  
+ [出]翻譯簽名中的實際位元組數。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

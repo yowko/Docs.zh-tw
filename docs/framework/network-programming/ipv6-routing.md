@@ -3,10 +3,10 @@ title: IPv6 路由
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
 ms.openlocfilehash: 93300107710164d755d578633b7fa6651f984987
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047780"
 ---
 # <a name="ipv6-routing"></a>IPv6 路由
@@ -35,5 +35,5 @@ IPv6 的優點是彈性的路由機制。 因為 IPv4 網路識別碼過去和�
   
 ## <a name="see-also"></a>另請參閱
 
-- [網際網路通訊協定第 6 版](internet-protocol-version-6.md)
+- [互聯網協定版本 6](internet-protocol-version-6.md)
 - [通訊端](sockets.md)

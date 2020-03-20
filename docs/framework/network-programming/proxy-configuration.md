@@ -12,10 +12,10 @@ helpviewer_keywords:
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
 ms.openlocfilehash: 1fbfe25b90e810ff96924a2341582ff3f5ee5e5d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047363"
 ---
 # <a name="proxy-configuration"></a>Proxy 組態
@@ -28,7 +28,7 @@ Proxy 伺服器可處理資源的用戶端要求。 Proxy 可從其快取傳回�
   
  網路環境的變更可能會要求系統使用一組新的 Proxy。 如果網路連線中斷或已初始化新的網路連線，系統必須在新環境中找出組態指令碼的適當來源，並執行新的指令碼。  
   
- 您可以在組態檔中使用 [`<proxy>`](../configure-apps/file-schema/network/proxy-element-network-settings.md) 項目的 `usesystemdefault` 屬性。 `usesystemdefault` 屬性控制是否應該從使用者的 Internet Explorer Proxy 設定讀取靜態 Proxy 設定 (Proxy 位址、略過清單和在本機上略過)。 如果這個值設定為 `true`，則會使用來自 Internet Explorer 的靜態 Proxy 設定。 如果這個值為 `false` 或未設定，則可以在組態中指定靜態 Proxy 設定，並且這個設定將覆寫 Internet Explorer Proxy 設定。 若要啟用調適型 Proxy，也必須將這個值設定為 `false` 或不設定。  
+ 您可以使用設定檔中[`<proxy>`](../configure-apps/file-schema/network/proxy-element-network-settings.md)元素`usesystemdefault`的屬性。 `usesystemdefault` 屬性控制是否應該從使用者的 Internet Explorer Proxy 設定讀取靜態 Proxy 設定 (Proxy 位址、略過清單和在本機上略過)。 如果這個值設定為 `true`，則會使用來自 Internet Explorer 的靜態 Proxy 設定。 如果這個值為 `false` 或未設定，則可以在組態中指定靜態 Proxy 設定，並且這個設定將覆寫 Internet Explorer Proxy 設定。 若要啟用調適型 Proxy，也必須將這個值設定為 `false` 或不設定。  
   
  下列範例示範一般調適型 Proxy 組態。  
   

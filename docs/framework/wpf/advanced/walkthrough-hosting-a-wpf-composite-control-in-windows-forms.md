@@ -1,23 +1,23 @@
 ---
-title: 在 Windows Forms 中裝載 WPF 複合控制項
+title: 在 Windows 表單中託管 WPF 複合控制項
 titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 05ba8120c90175801aa2cb61499c48133853e8f7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e3326f654e05ef7d487a76f076f8ad0da3637096
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794174"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187239"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Form 中裝載 WPF 複合控制項
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，當您對 Windows Forms 程式碼進行大量投資時，使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 擴充現有的 Windows Forms 應用程式，而不是從頭重新撰寫，可能會更有效率。 常見的案例是當您想要在 Windows Forms 應用程式中內嵌一個或多個使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所執行的控制項。 如需自訂 WPF 控制項的詳細資訊，請參閱[控制項自訂](../controls/control-customization.md)。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 但是，當您對 Windows 表單代碼進行大量投資時，使用擴展現有 Windows 表單應用程式比從頭開始[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]重寫應用程式更有效。 常見方案是，您希望在 Windows 表單應用程式中嵌入一個或多個實現[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的控制項。 有關自訂 WPF 控制項的詳細資訊，請參閱[控制項自訂](../controls/control-customization.md)。  
   
- 本逐步解說會引導您完成裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項的應用程式，以在 Windows Forms 應用程式中執行資料輸入。 複合控制項會封裝在 DLL 中。 這個一般程序可以延伸到更複雜的應用程式和控制項。 這個逐步解說的設計，與[逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)的外觀和功能幾乎相同。 主要差異在於裝載案例相反。  
+ 本演練將引導您完成承載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項以在 Windows 表單應用程式中執行資料輸入的應用程式。 複合控制項會封裝在 DLL 中。 這個一般程序可以延伸到更複雜的應用程式和控制項。 本演練設計為外觀和功能幾乎相同，演練[：在 WPF 中託管 Windows 表單複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)。 主要差異在於裝載案例相反。  
   
- 本逐步解說分為兩節。 第一節簡要描述 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項的執行。 第二節詳細討論如何在 Windows Forms 應用程式中裝載複合控制項、接收來自控制項的事件，以及存取控制項的某些屬性。  
+ 本逐步解說分為兩節。 第一部分簡要介紹了複合控制項的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]實現。 第二部分將詳細討論如何在 Windows 表單應用程式中託管複合控制項、從控制項接收事件以及訪問控制項的某些屬性。  
   
  這個逐步解說中所述的工作包括：  
   
@@ -25,33 +25,33 @@ ms.locfileid: "76794174"
   
 - 實作 Windows Form 主應用程式。  
   
- 如需本逐步解說中所述工作的完整程式代碼清單，請參閱[在 Windows Forms 範例中裝載 WPF 複合控制項](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl)。  
+ 有關本演練中說明的任務的完整代碼清單，請參閱在 Windows[表單示例中託管 WPF 複合控制項](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl)。  
   
-## <a name="prerequisites"></a>必要條件：  
+## <a name="prerequisites"></a>必要條件  
 
 若要完成這個逐步解說，您必須具有 Visual Studio。  
   
 ## <a name="implementing-the-wpf-composite-control"></a>實作 WPF 複合控制項  
- 此範例中使用的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項，是採用使用者名稱和位址的簡單資料輸入表單。 使用者按一下兩個按鈕中的其中一個來表示工作已完成時，控制項會引發自訂事件，以將該資訊傳回給主應用程式。 下圖顯示轉譯的控制項。 
+ 此示例[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中使用的複合控制項是一個簡單的資料輸入表單，它採用使用者的名稱和位址。 使用者按一下兩個按鈕中的其中一個來表示工作已完成時，控制項會引發自訂事件，以將該資訊傳回給主應用程式。 下圖顯示轉譯的控制項。
 
- 下圖顯示 WPF 複合控制項： 
+ 下圖顯示了 WPF 複合控制項：
 
- ![顯示簡單 WPF 控制項的螢幕擷取畫面。](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-presentation-foundation-composite-control.png)  
+ ![顯示簡單 WPF 控制項的螢幕截圖。](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-presentation-foundation-composite-control.png)  
   
 ### <a name="creating-the-project"></a>建立專案  
  啟動專案：  
   
-1. 啟動 Visual Studio，然後開啟 [**新增專案**] 對話方塊。  
+1. 啟動視覺化工作室，然後打開 **"新專案**"對話方塊。  
   
-2. 在 [ C#視覺效果] 和 [Windows 分類] 中，選取 [ **WPF 使用者控制項程式庫**] 範本。  
+2. 在 Visual C# 和 Windows 類別中，選擇**WPF 使用者控制庫**範本。  
   
 3. 將新專案命名為 `MyControls`。  
   
-4. 在 [位置] 中，指定一個方便命名的最上層資料夾，例如 [`WindowsFormsHostingWpfControl`]。 稍後，您會將主應用程式放在此資料夾中。  
+4. 對於位置，指定一個方便命名的頂級資料夾，如`WindowsFormsHostingWpfControl`。 稍後，您會將主應用程式放在此資料夾中。  
   
-5. 按一下 [確定] 建立專案。 預設專案包含名為 `UserControl1`的單一控制項。  
+5. 按一下 [確定]**** 建立專案。 預設專案包含名為 的`UserControl1`單個控制項。  
   
-6. 在方案總管中，將 `UserControl1` 重新命名為 `MyControl1`。  
+6. 在解決方案資源管理器中，`UserControl1`重命名為`MyControl1`。  
   
  您的專案應該有下列系統 DLL 的參考。 如果預設未包括所有這些 DLL，則請將它們新增至專案。  
   
@@ -59,17 +59,17 @@ ms.locfileid: "76794174"
   
 - PresentationFramework  
   
-- System  
+- 系統  
   
 - WindowsBase  
   
 ### <a name="creating-the-user-interface"></a>建立使用者介面  
- 複合控制項的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 會使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]來執行。 複合控制項 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 是由五個 <xref:System.Windows.Controls.TextBox> 元素所組成。 每個 <xref:System.Windows.Controls.TextBox> 元素都有相關聯的 <xref:System.Windows.Controls.TextBlock> 元素，可做為標籤。 底部有兩個 <xref:System.Windows.Controls.Button> 元素： **[確定] 和 [** **取消**]。 使用者按一下任一個按鈕時，控制項會引發自訂事件，以將資訊傳回給主應用程式。  
+ 複合[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]控制項的 。 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 複合控制項[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]由五<xref:System.Windows.Controls.TextBox>個元素組成。 每個<xref:System.Windows.Controls.TextBox>元素都有一個<xref:System.Windows.Controls.TextBlock>用作標籤的關聯元素。 底部有兩<xref:System.Windows.Controls.Button>個元素，**確定**和**取消**。 使用者按一下任一個按鈕時，控制項會引發自訂事件，以將資訊傳回給主應用程式。  
   
 #### <a name="basic-layout"></a>基本版面配置  
- <xref:System.Windows.Controls.Grid> 元素中包含各種 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素。 您可以使用 <xref:System.Windows.Controls.Grid> 來排列複合控制項的內容，就像在 HTML 中使用 `Table` 元素一樣。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也有 <xref:System.Windows.Documents.Table> 元素，但 <xref:System.Windows.Controls.Grid> 較輕量，且更適合用於簡單的版面配置工作。  
+ 元素中[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]包含各種<xref:System.Windows.Controls.Grid>元素。 可以使用 以<xref:System.Windows.Controls.Grid>在 HTML 中使用`Table`元素的方式排列複合控制項的內容。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]也有一個<xref:System.Windows.Documents.Table>元素，但<xref:System.Windows.Controls.Grid>更輕量，更適合簡單的佈局任務。  
   
- 下列 XAML 顯示基本版面配置。 此 XAML 會藉由指定 <xref:System.Windows.Controls.Grid> 元素中的資料行和資料列數目，來定義控制項的整體結構。  
+ 下列 XAML 顯示基本版面配置。 此 XAML 通過指定<xref:System.Windows.Controls.Grid>元素中的列和行數來定義控制項的整體結構。  
   
  在 MyControl1.xaml 中，將現有的 XAML 取代為下列 XAML。  
   
@@ -77,45 +77,45 @@ ms.locfileid: "76794174"
 [!code-xaml[WindowsFormsHostingWpfControl#102](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#102)]  
   
 #### <a name="adding-textblock-and-textbox-elements-to-the-grid"></a>將 TextBlock 和 TextBox 項目新增至格線  
- 您可以藉由將專案的 <xref:System.Windows.Controls.Grid.RowProperty> 和 <xref:System.Windows.Controls.Grid.ColumnProperty> 屬性設定為適當的資料列和資料行編號，將 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素放在方格中。 請記住，資料列和資料行編號是以零起始。 您可以藉由設定其 <xref:System.Windows.Controls.Grid.ColumnSpanProperty> 屬性，讓元素跨越多個資料行。 如需 <xref:System.Windows.Controls.Grid> 元素的詳細資訊，請參閱[建立 Grid 元素](../controls/how-to-create-a-grid-element.md)。  
+ 通過將[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素和<xref:System.Windows.Controls.Grid.RowProperty>屬性設置為相應的行號和<xref:System.Windows.Controls.Grid.ColumnProperty>列號，在網格中放置元素。 請記住，資料列和資料行編號是以零起始。 可以通過設置元素<xref:System.Windows.Controls.Grid.ColumnSpanProperty>的屬性來使元素跨越多個列。 有關<xref:System.Windows.Controls.Grid>元素的詳細資訊，請參閱[創建網格元素](../controls/how-to-create-a-grid-element.md)。  
   
- 下列 XAML 會顯示覆合控制項的 <xref:System.Windows.Controls.TextBox> 和 <xref:System.Windows.Controls.TextBlock> 元素及其 <xref:System.Windows.Controls.Grid.RowProperty> 和 <xref:System.Windows.Controls.Grid.ColumnProperty> 屬性，這些專案是設定為將元素正確地放在方格中。  
+ 以下 XAML 顯示了<xref:System.Windows.Controls.TextBox>複合控制項及其<xref:System.Windows.Controls.TextBlock><xref:System.Windows.Controls.Grid.RowProperty>和<xref:System.Windows.Controls.Grid.ColumnProperty>屬性的元素，這些屬性設置為將元素正確放置在網格中。  
   
- 在 Mycontrol1.xaml 中，于 <xref:System.Windows.Controls.Grid> 專案內加入下列 XAML。  
+ 在 MyControl1.xaml 中，在<xref:System.Windows.Controls.Grid>元素中添加以下 XAML。  
   
  [!code-xaml[WindowsFormsHostingWpfControl#103](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#103)]  
   
 #### <a name="styling-the-ui-elements"></a>設定 UI 項目的樣式  
- 資料輸入表單上的許多項目都會有類似的外觀，表示它們具有數個屬性的相同設定。 先前的 XAML 不會分別設定每個專案的屬性，而是使用 <xref:System.Windows.Style> 元素來定義專案類別的標準屬性設定。 此方法會減少控制項的複雜度，並可讓您透過單一樣式屬性來變更多個項目的外觀。  
+ 資料輸入表單上的許多項目都會有類似的外觀，表示它們具有數個屬性的相同設定。 前面的 XAML 使用<xref:System.Windows.Style>元素為元素類定義標準屬性設置，而不是單獨設置每個元素的屬性。 此方法會減少控制項的複雜度，並可讓您透過單一樣式屬性來變更多個項目的外觀。  
   
- <xref:System.Windows.Style> 元素會包含在 <xref:System.Windows.Controls.Grid> 元素的 <xref:System.Windows.FrameworkElement.Resources%2A> 屬性中，因此控制項中的所有專案都可以使用這些專案。 如果樣式名為，您可以藉由將 <xref:System.Windows.Style> 專案設定為樣式的名稱，將它套用至元素。 未命名的樣式會成為項目的預設樣式。 如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 樣式的詳細資訊，請參閱設定樣式[和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。  
+ 元素<xref:System.Windows.Style>包含在元素的屬性<xref:System.Windows.Controls.Grid><xref:System.Windows.FrameworkElement.Resources%2A>中，因此它們可以由控制項中的所有元素使用。 如果命名了樣式，則可以通過將<xref:System.Windows.Style>元素集添加到樣式的名稱來將其應用於元素。 未命名的樣式會成為項目的預設樣式。 有關[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]樣式的詳細資訊，請參閱[樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)化。  
   
- 下列 XAML 會顯示覆合控制項的 <xref:System.Windows.Style> 元素。 若要查看如何將樣式套用至項目，請參閱先前的 XAML。 例如，最後一個 <xref:System.Windows.Controls.TextBlock> 元素具有 `inlineText` 樣式，而最後一個 <xref:System.Windows.Controls.TextBox> 元素則使用預設樣式。  
+ 以下 XAML 顯示了<xref:System.Windows.Style>複合控制項的元素。 若要查看如何將樣式套用至項目，請參閱先前的 XAML。 例如，最後一<xref:System.Windows.Controls.TextBlock>`inlineText`個元素具有樣式，最後一<xref:System.Windows.Controls.TextBox>個元素使用預設樣式。  
   
- 在 Mycontrol1.xaml 中，將下列 XAML 加入 <xref:System.Windows.Controls.Grid> start 元素的正後方。  
+ 在 MyControl1.xaml 中，在<xref:System.Windows.Controls.Grid>開始元素之後添加以下 XAML。  
   
  [!code-xaml[WindowsFormsHostingWpfControl#104](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#104)]  
   
 #### <a name="adding-the-ok-and-cancel-buttons"></a>新增 OK 和 Cancel 按鈕  
- 複合控制項上的最後一個元素是 **[確定] 和 [** **取消**]<xref:System.Windows.Controls.Button> 專案，其會佔用 <xref:System.Windows.Controls.Grid>最後一個資料列的前兩個數據行。 這些元素會使用常見的事件處理常式、`ButtonClicked`，以及上一個 XAML 中定義的預設 <xref:System.Windows.Controls.Button> 樣式。  
+ 複合控制項上的最後一個元素是**OK**和**Cancel**<xref:System.Windows.Controls.Button>元素，它們佔據 的最後一行的前兩列<xref:System.Windows.Controls.Grid>。 這些元素使用公共事件處理常式`ButtonClicked`和在以前的 XAML 中定義的預設<xref:System.Windows.Controls.Button>樣式。  
   
- 在 Mycontrol1.xaml 中，于最後一個 <xref:System.Windows.Controls.TextBox> 元素之後加入下列 XAML。 複合控制項的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 部分現在已完成。  
+ 在 MyControl1.xaml 中，在最後一個<xref:System.Windows.Controls.TextBox>元素之後添加以下 XAML。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]複合控制項的部分現已完成。  
   
  [!code-xaml[WindowsFormsHostingWpfControl#105](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml#105)]  
   
 ### <a name="implementing-the-code-behind-file"></a>實作程式碼後置檔案  
- 程式碼後置檔案 MyControl1.xaml.cs 會執行三個基本工作：
+ 代碼落後檔MyControl1.xaml.cs實現三個基本任務：
   
 1. 處理使用者按一下其中一個按鈕時所發生的事件。  
   
-2. 從 <xref:System.Windows.Controls.TextBox> 的元素抓取資料，並將其封裝在自訂事件引數物件中。  
+2. 從<xref:System.Windows.Controls.TextBox>元素檢索資料，並將其打包到自訂事件參數物件中。  
   
-3. 引發自訂 `OnButtonClick` 事件，它會通知主機使用者已完成，並將資料傳回給主機。  
+3. 引發自訂`OnButtonClick`事件，該事件通知主機使用者已完成並將資料傳回主機。  
   
- 此控制項也會公開一些可讓您變更外觀的色彩和字型屬性。 不同于用來裝載 Windows Forms 控制項的 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 類別，<xref:System.Windows.Forms.Integration.ElementHost> 類別只會公開控制項的 <xref:System.Windows.Controls.Panel.Background%2A> 屬性。 若要維護此程式碼範例與[逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)中所討論之範例的相似性，控制項會直接公開其餘的屬性。  
+ 此控制項也會公開一些可讓您變更外觀的色彩和字型屬性。 與用於<xref:System.Windows.Forms.Integration.WindowsFormsHost>承載 Windows 表單控制項的類不同，<xref:System.Windows.Forms.Integration.ElementHost>類僅公開控制項的屬性。 <xref:System.Windows.Controls.Panel.Background%2A> 為了保持此代碼示例與演練中討論的示例（[在 WPF 中託管 Windows 表單複合控制項）](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)之間的相似性，該控制項將直接公開其餘屬性。  
   
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>程式碼後置檔案的基本結構  
- 程式碼後置檔案是由單一命名空間（`MyControls`）所組成，其中包含兩個類別，`MyControl1` 和 `MyControlEventArgs`。  
+ 代碼背後的檔由單個命名空間組成，`MyControls`它將包含兩個類`MyControl1`和`MyControlEventArgs`。  
   
 ```csharp  
 namespace MyControls  
@@ -131,82 +131,82 @@ namespace MyControls
 }  
 ```  
   
- 第一個類別（`MyControl1`）是部分類別，其中包含的程式碼會執行 Mycontrol1.xaml 中所定義之 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。 剖析 Mycontrol1.xaml 時，會將 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 轉換成相同的部分類別，併合並兩個部分類別以形成編譯的控制項。 因此，程式碼後置檔案中的類別名稱必須符合指派給 MyControl1.xaml 的類別名稱，而且必須繼承自控制項的根項目。 第二個類別（`MyControlEventArgs`）是用來將資料傳送回主機的事件引數類別。  
+ 第一個類`MyControl1`是包含實現 MyControl1.xaml 中[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]定義的功能的代碼的部分類。 分析 MyControl1.xaml 時，[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]將 轉換為同一部分類，並將兩個部分類合併為編譯控制項。 因此，程式碼後置檔案中的類別名稱必須符合指派給 MyControl1.xaml 的類別名稱，而且必須繼承自控制項的根項目。 第二個類`MyControlEventArgs`是一個事件參數類，用於將資料發送回主機。  
   
- 開啟 MyControl1.xaml.cs。 變更現有的類別宣告，使其具有下列名稱，並繼承自 <xref:System.Windows.Controls.Grid>。  
+ 開啟 MyControl1.xaml.cs。 更改現有類聲明，使其具有以下名稱並從 繼承<xref:System.Windows.Controls.Grid>。  
   
  [!code-csharp[WindowsFormsHostingWpfControl#21](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#21)]  
   
 #### <a name="initializing-the-control"></a>初始化控制項  
  下例程式碼實作數個基本工作︰  
   
-- 宣告私用事件、`OnButtonClick`和其相關聯的委派，`MyControlEventHandler`。  
+- 聲明私有事件`OnButtonClick`及其關聯的委託`MyControlEventHandler`。  
   
 - 建立可儲存使用者資料的數個私用全域變數。 這項資料是透過對應的屬性所公開。  
   
-- 針對控制項的 <xref:System.Windows.FrameworkElement.Loaded> 事件，執行處理常式 `Init`。 此處理常式會初始化全域變數，方法是將 MyControl1.xaml 中所定義的值指派給它們。 若要這樣做，它會使用指派給一般 <xref:System.Windows.Controls.TextBlock> 元素 `nameLabel`的 <xref:System.Windows.FrameworkElement.Name%2A> 來存取該元素的屬性設定。  
+- 實現控制項<xref:System.Windows.FrameworkElement.Loaded>事件的處理常式`Init`， 此處理常式會初始化全域變數，方法是將 MyControl1.xaml 中所定義的值指派給它們。 為此，它使用<xref:System.Windows.FrameworkElement.Name%2A>分配給的典型<xref:System.Windows.Controls.TextBlock>元素`nameLabel`， 訪問該元素的屬性設置。  
   
- 刪除現有的函式，並將下列程式碼新增至您的 `MyControl1` 類別。  
+ 刪除現有建構函式並將以下代碼添加到類`MyControl1`。  
   
  [!code-csharp[WindowsFormsHostingWpfControl#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#11)]  
   
 #### <a name="handling-the-buttons-click-events"></a>處理 Buttons 的 Click 事件  
- 使用者可以按一下 [**確定]** 按鈕或 [**取消**] 按鈕，來指出資料輸入工作已完成。 這兩個按鈕都使用相同的 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 事件處理常式，`ButtonClicked`。 這兩個按鈕都有名稱 `btnOK` 或 `btnCancel`，可讓處理常式藉由檢查 `sender` 引數的值來判斷按下的按鈕。 此處理常式會執行下列動作︰  
+ 使用者指示通過按一下 **"確定"** 按鈕或 **"取消"** 按鈕完成資料輸入任務。 這兩個按鈕使用相同的<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式 。 `ButtonClicked` 這兩個按鈕都有一個`btnOK`名稱`btnCancel`或 ，使處理常式能夠通過檢查`sender`參數的值來確定按一下了哪個按鈕。 此處理常式會執行下列動作︰  
   
-- 建立 `MyControlEventArgs` 物件，其中包含來自 <xref:System.Windows.Controls.TextBox> 元素的資料。  
+- 創建`MyControlEventArgs`包含<xref:System.Windows.Controls.TextBox>元素資料的物件。  
   
-- 如果使用者按一下 [**取消**] 按鈕，則會將 `MyControlEventArgs` 物件的 `IsOK` 屬性設定為 `false`。  
+- 如果使用者按一下"**取消"** 按鈕，則將`MyControlEventArgs`物件的`IsOK`屬性設置到`false`。  
   
-- 引發 `OnButtonClick` 事件，向主機表示使用者已完成，並傳回所收集的資料。  
+- 引發`OnButtonClick`事件以向主機指示使用者已完成，並傳遞收集的資料。  
   
- 將下列程式碼新增至 `MyControl1` 類別中的 `Init` 方法之後。  
+ 在`Init`方法之後將以下代碼`MyControl1`添加到類中。  
   
  [!code-csharp[WindowsFormsHostingWpfControl#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#12)]  
   
 #### <a name="creating-properties"></a>建立屬性  
  類別的其餘部分只會公開對應至先前所討論之全域變數的屬性。 屬性變更時，set 存取子會變更對應的項目屬性以及更新基礎全域變數來修改控制項的外觀。  
   
- 將下列程式碼新增至您的 `MyControl1` 類別。  
+ 將以下代碼添加到類`MyControl1`。  
   
  [!code-csharp[WindowsFormsHostingWpfControl#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#13)]  
   
 #### <a name="sending-the-data-back-to-the-host"></a>將資料傳回主應用程式  
- 檔案中的最後一個元件是 `MyControlEventArgs` 類別，用來將收集的資料傳送回主機。  
+ 檔中的最後一個元件是`MyControlEventArgs`類，用於將收集的資料發送回主機。  
   
- 將下列程式碼新增至您的 `MyControls` 命名空間。 此實作十分簡單，未來不會進行討論。  
+ 將以下代碼添加到命名`MyControls`空間。 此實作十分簡單，未來不會進行討論。  
   
  [!code-csharp[WindowsFormsHostingWpfControl#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/MyControls/Page1.xaml.cs#14)]  
   
  建置方案。 組置將會產生名為 MyControls.dll 的 DLL。  
   
-<a name="winforms_host_section"></a>   
+<a name="winforms_host_section"></a>
 ## <a name="implementing-the-windows-forms-host-application"></a>實作 Windows Forms 主應用程式  
- Windows Forms 主應用程式會使用 <xref:System.Windows.Forms.Integration.ElementHost> 物件來裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項。 應用程式會處理 `OnButtonClick` 事件，以接收來自複合控制項的資料。 應用程式也會有一組選項按鈕，可用來修改控制項的外觀。 下圖顯示應用程式。  
+ Windows 表單主機應用程式使用物件<xref:System.Windows.Forms.Integration.ElementHost>承載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。 應用程式處理事件`OnButtonClick`以從複合控制項接收資料。 應用程式也會有一組選項按鈕，可用來修改控制項的外觀。 下圖顯示應用程式。  
 
-下圖顯示裝載于 Windows Forms 應用程式中的 WPF 複合控制項」  
+下圖顯示了託管在 Windows 表單應用程式中的 WPF 複合控制項"  
 
- ![Scteenshot，其中顯示裝載 Avalon 控制項的 Windows Form。](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
+ ![顯示 Windows 表單託管 Avalon 控制項的 Scteenshot。](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>建立專案  
  啟動專案：  
   
-1. 啟動 Visual Studio，然後開啟 [**新增專案**] 對話方塊。  
+1. 啟動視覺化工作室，然後打開 **"新專案**"對話方塊。  
   
-2. 在 [ C#視覺效果] 和 [Windows 分類] 中，選取 [ **Windows Forms 應用程式**] 範本。  
+2. 在 Visual C# 和 Windows 類別中，選擇**Windows 表單應用程式**範本。  
   
 3. 將新專案命名為 `WFHost`。  
   
 4. 針對位置，指定包含 MyControls 專案的相同最上層資料夾。  
   
-5. 按一下 [確定] 建立專案。  
+5. 按一下 [確定]**** 建立專案。  
   
- 您也需要加入包含 `MyControl1` 和其他元件之 DLL 的參考。  
+ 您還需要添加對包含和其他程式集的 DLL 的`MyControl1`引用。  
   
-1. 以滑鼠右鍵按一下方案總管中的專案名稱，然後選取 [**新增參考**]。  
+1. 按右鍵解決方案資源管理器中的專案名稱，然後選擇 **"添加參考**"。  
   
-2. 按一下 [**流覽**] 索引標籤，然後流覽至包含 mycontrols.dll 的資料夾。 在此逐步解說中，這個資料夾是 MyControls\bin\Debug。  
+2. 按一下"**流覽"** 選項卡，然後流覽到包含 MyControls.dll 的資料夾。 在此逐步解說中，這個資料夾是 MyControls\bin\Debug。  
   
-3. 選取 [Mycontrols.dll]，然後按一下 **[確定]** 。  
+3. 選擇"我的控制項.dll"，然後按一下"**確定**"。  
   
 4. 加入下列組件的參考。  
   
@@ -227,11 +227,11 @@ namespace MyControls
   
 2. 放大表單，以容納控制項。  
   
-3. 在表單的右上角，加入 <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> 控制項來保存 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的複合控制項。  
+3. 在表單的右上角，添加控制項<xref:System.Windows.Forms.Panel?displayProperty=nameWithType>以保存[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。  
   
-4. 將下列 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 控制項新增至表單。  
+4. 將以下<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控制項添加到表單中。  
   
-    |Name|文字|  
+    |名稱|Text|  
     |----------|----------|  
     |groupBox1|背景色彩|  
     |groupBox2|前景色彩|  
@@ -241,9 +241,9 @@ namespace MyControls
     |groupBox6|字型粗細|  
     |groupBox7|來自控制項的資料|  
   
-5. 將下列 <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> 控制項加入至 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> 控制項。  
+5. 將以下<xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType>控制項添加到<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控制項。  
   
-    |GroupBox|Name|文字|  
+    |GroupBox|名稱|Text|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|原始|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -257,76 +257,76 @@ namespace MyControls
     |groupBox4|radioFamilyOriginal|原始|  
     |groupBox4|radioFamilyTimes|Tw Cen MT Condensed|  
     |groupBox4|radioFamilyWingDings|WingDings|  
-    |groupBox5|radioStyleOriginal|一般|  
-    |groupBox5|radioStyleItalic|Italic|  
+    |groupBox5|radioStyleOriginal|正常|  
+    |groupBox5|radioStyleItalic|斜體|  
     |groupBox6|radioWeightOriginal|原始|  
-    |groupBox6|radioWeightBold|粗體|  
+    |groupBox6|radioWeightBold|粗體字|  
   
-6. 將下列 <xref:System.Windows.Forms.Label?displayProperty=nameWithType> 控制項加入至最後一個 <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。 這些控制項會顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項所傳回的資料。  
+6. 將以下<xref:System.Windows.Forms.Label?displayProperty=nameWithType>控制項添加到最後一個<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。 這些控制項顯示[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項返回的資料。  
   
-    |GroupBox|Name|文字|  
+    |GroupBox|名稱|Text|  
     |--------------|----------|----------|  
     |groupBox7|lblName|名稱：|  
     |groupBox7|lblAddress|街道地址：|  
-    |groupBox7|lblCity|鄉鎮市區：|  
+    |groupBox7|lblCity|城市：|  
     |groupBox7|lblState|狀態：|  
     |groupBox7|lblZip|郵遞區號︰|  
   
 ### <a name="initializing-the-form"></a>初始化表單  
- 您通常會在表單的 <xref:System.Windows.Forms.Form.Load> 事件處理常式中，執行裝載程式碼。 下列程式碼會顯示 <xref:System.Windows.Forms.Form.Load> 事件處理常式、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項的 <xref:System.Windows.FrameworkElement.Loaded> 事件的處理常式，以及稍後使用的數個全域變數的宣告。  
+ 通常，在表單<xref:System.Windows.Forms.Form.Load>的事件處理常式中實現託管代碼。 以下代碼顯示<xref:System.Windows.Forms.Form.Load>事件處理常式、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項<xref:System.Windows.FrameworkElement.Loaded>事件的處理常式以及以後使用的多個全域變數的聲明。  
   
- 在 Windows Form 設計工具中，按兩下表單以建立 <xref:System.Windows.Forms.Form.Load> 事件處理常式。 在 Form1.cs 的頂端，新增下列 `using` 語句。  
+ 在 Windows 表單設計器中，按兩下表單以創建<xref:System.Windows.Forms.Form.Load>事件處理常式。 在Form1.cs的頂部，添加以下`using`語句。  
   
  [!code-csharp[WindowsFormsHostingWpfControl#10](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#10)]  
   
- 使用下列程式碼取代現有 `Form1` 類別的內容。  
+ 將現有`Form1`類的內容替換為以下代碼。  
   
  [!code-csharp[WindowsFormsHostingWpfControl#2](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#2)]  
   
- 上述程式碼中的 `Form1_Load` 方法會顯示裝載 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項的一般程式：  
+ 前面的`Form1_Load`代碼中的方法顯示了託管控制項的一[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]般過程：  
   
 1. 建立新的 <xref:System.Windows.Forms.Integration.ElementHost> 物件。  
   
-2. 將控制項的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 [<xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>]。  
+2. 將控制項的屬性<xref:System.Windows.Forms.Control.Dock%2A>設置為<xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>。  
   
-3. 將 <xref:System.Windows.Forms.Integration.ElementHost> 控制項加入至 <xref:System.Windows.Forms.Panel> 控制項的 <xref:System.Windows.Forms.Control.Controls%2A> 集合。  
+3. 將<xref:System.Windows.Forms.Integration.ElementHost>控制項添加到<xref:System.Windows.Forms.Panel>控制項的集合。 <xref:System.Windows.Forms.Control.Controls%2A>  
   
-4. 建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項的實例。  
+4. 創建控制項的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]實例。  
   
-5. 藉由將控制項指派給 <xref:System.Windows.Forms.Integration.ElementHost> 控制項的 <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> 屬性，將複合控制項裝載在表單上。  
+5. 通過將控制項分配給<xref:System.Windows.Forms.Integration.ElementHost>控制項的屬性<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>，在表單上承載複合控制項。  
   
- `Form1_Load` 方法中剩餘的兩行會將處理常式附加至兩個控制項事件：  
+ `Form1_Load`方法中的其餘兩行將處理常式附加到兩個控制事件：  
   
-- `OnButtonClick` 是當使用者按一下 **[確定]** 或 [**取消**] 按鈕時，由複合控制項引發的自訂事件。 您可以處理事件以取得使用者回應，以及收集使用者所指定的任何資料。  
+- `OnButtonClick`是當使用者按一下 **"確定"** 或 **"取消"** 按鈕時由複合控制項觸發的自訂事件。 您可以處理事件以取得使用者回應，以及收集使用者所指定的任何資料。  
   
-- <xref:System.Windows.FrameworkElement.Loaded> 是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項完全載入時所引發的標準事件。 因為此範例需要使用控制項中的屬性來初始化數個全域變數，所以在這裡使用這個事件。 在表單的 <xref:System.Windows.Forms.Form.Load> 事件時，不會完全載入控制項，而且這些值仍會設定為 `null`。 您必須等到控制項的 <xref:System.Windows.FrameworkElement.Loaded> 事件發生之後，才能存取這些屬性。  
+- <xref:System.Windows.FrameworkElement.Loaded>是[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項在完全載入時引發的標準事件。 因為此範例需要使用控制項中的屬性來初始化數個全域變數，所以在這裡使用這個事件。 在表單<xref:System.Windows.Forms.Form.Load>事件時，控制項未完全載入，並且這些值仍設置為`null`。 您需要等待控制項的事件<xref:System.Windows.FrameworkElement.Loaded>發生，然後才能訪問這些屬性。  
   
- <xref:System.Windows.FrameworkElement.Loaded> 事件處理常式會顯示在前面的程式碼中。 下一節將討論 `OnButtonClick` 處理常式。  
+ 事件<xref:System.Windows.FrameworkElement.Loaded>處理常式顯示在前面的代碼中。 下`OnButtonClick`一節將討論處理程式。  
   
 ### <a name="handling-onbuttonclick"></a>處理 OnButtonClick  
- 當使用者按一下 [**確定]** 或 [**取消**] 按鈕時，就會發生 `OnButtonClick` 事件。  
+ 當使用者`OnButtonClick`按一下 **"確定"** 或 **"取消"** 按鈕時，將發生該事件。  
   
- 事件處理常式會檢查事件引數的 `IsOK` 欄位，以判斷按一下哪一個按鈕。 `lbl`的*資料*變數會對應至稍早所討論的 <xref:System.Windows.Forms.Label> 控制項。 如果使用者按一下 [**確定]** 按鈕，控制項的 <xref:System.Windows.Controls.TextBox> 控制項中的資料就會指派給對應的 <xref:System.Windows.Forms.Label> 控制項。 如果使用者按一下 [**取消**]，<xref:System.Windows.Forms.Label.Text%2A> 值會設為預設字串。  
+ 事件處理常式檢查事件參數的`IsOK`欄位以確定按一下了哪個按鈕。 `lbl`*資料*變數與前面討論的<xref:System.Windows.Forms.Label>控制項相對應。 如果使用者按一下 **"確定"** 按鈕，則控制項<xref:System.Windows.Controls.TextBox>控制項中的資料將分配給相應的<xref:System.Windows.Forms.Label>控制項。 如果使用者按一下 **"取消"，** 則<xref:System.Windows.Forms.Label.Text%2A>值將設置為預設字串。  
   
- 將下列按鈕 click 事件處理常式程式碼新增至 `Form1` 類別。  
+ 將以下按鈕按一下事件處理常式代碼添加到`Form1`類。  
   
  [!code-csharp[WindowsFormsHostingWpfControl#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#3)]  
   
- 建置並執行應用程式。 在 WPF 複合控制項中新增一些文字，然後按一下 **[確定]** 。 文字會顯示在標籤中。 此時，尚未新增程式碼來處理選項按鈕。  
+ 建置並執行應用程式。 在 WPF 複合控制項中添加一些文本，然後按一下 **"確定**"。 文字會顯示在標籤中。 此時，尚未新增程式碼來處理選項按鈕。  
   
 ### <a name="modifying-the-appearance-of-the-control"></a>修改控制項的外觀  
- 表單上的 <xref:System.Windows.Forms.RadioButton> 控制項可讓使用者變更 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合控制項的前景和背景色彩，以及數個字型屬性。 背景色彩是由 <xref:System.Windows.Forms.Integration.ElementHost> 物件所公開。 其餘的屬性會公開為控制項的自訂屬性。  
+ 表單<xref:System.Windows.Forms.RadioButton>上的控制項將使使用者能夠更改[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項的前景和背景顏色以及多個字體屬性。 背景顏色由<xref:System.Windows.Forms.Integration.ElementHost>物件公開。 其餘的屬性會公開為控制項的自訂屬性。  
   
- 按兩下表單上的每個 <xref:System.Windows.Forms.RadioButton> 控制項，以建立 <xref:System.Windows.Forms.RadioButton.CheckedChanged> 事件處理常式。 將 <xref:System.Windows.Forms.RadioButton.CheckedChanged> 的事件處理常式取代為下列程式碼。  
+ 按兩下表單上<xref:System.Windows.Forms.RadioButton>的每個控制項以創建<xref:System.Windows.Forms.RadioButton.CheckedChanged>事件處理常式。 將<xref:System.Windows.Forms.RadioButton.CheckedChanged>事件處理常式替換為以下代碼。  
   
  [!code-csharp[WindowsFormsHostingWpfControl#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsFormsHostingWpfControl/CSharp/WFHost/Form1.cs#4)]  
   
  建置並執行應用程式。 按一下不同的選項按鈕，以查看在 WPF 複合控制項上的效果。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中設計 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [逐步解說：在 Windows Forms 中裝載立體 WPF 複合控制項](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+- [逐步解說：在 Windows Form 中裝載立體 WPF 複合控制項](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

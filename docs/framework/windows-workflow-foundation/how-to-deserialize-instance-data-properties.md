@@ -1,15 +1,15 @@
 ---
-title: 作法：將執行個體資料屬性還原序列化
+title: HOW TO：還原序列化執行個體資料屬性
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
-ms.openlocfilehash: e037d5f8d0b221aa0eb8fdc6eceabf6efb2dc387
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 8142671fc1bc154337019e025d8443f0570106b3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989627"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143079"
 ---
-# <a name="how-to-deserialize-instance-data-properties"></a>HOW TO：將執行個體資料屬性還原序列化
+# <a name="how-to-deserialize-instance-data-properties"></a>HOW TO：還原序列化執行個體資料屬性
 有時候，使用者或工作流程管理員可能會想要手動檢查持續工作流程執行個體的狀態。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 提供公開下列四個資料行的執行個體資料表檢視：  
   
 - ReadWritePrimitiveDataProperties  
@@ -20,11 +20,11 @@ ms.locfileid: "70989627"
   
 - WriteOnlyComplexDataProperties  
   
- 基本資料屬性會參考其 .NET Framework 類型視為「通用」（例如，Int32 和 String）的屬性，而複雜的資料屬性則是指所有其他類型。 稍後在這個程式碼範例中可找到完整的基本類型列舉。  
+ 原始資料屬性是指其 .NET 框架類型被視為"常見"（例如 Int32 和 String）的屬性，而複雜資料屬性引用所有其他類型。 稍後在這個程式碼範例中可找到完整的基本類型列舉。  
   
  讀/寫屬性是指在執行個體載入時傳回至工作流程執行階段的屬性。 WriteOnly 屬性寫入至資料庫，絕不再次讀取。  
   
- 這個範例提供可讓使用者還原序列化基本資料屬性的程式碼。 指定從 ReadWritePrimitiveDataProperties 或 WriteOnlyPrimitiveDataProperties 資料行讀取的位元組陣列時，此程式碼會將二進位大型物件（BLOB）轉換成<xref:System.Collections.Generic.Dictionary%602>類型\<XName，物件 >，其中每個索引鍵值配對代表屬性名稱及其對應的值。  
+ 這個範例提供可讓使用者還原序列化基本資料屬性的程式碼。 給定從 ReadWrite 原始資料屬性或 WriteOnly原始資料屬性列讀取的位元組陣列，此代碼將二進位大物件 （BLOB） 轉換為<xref:System.Collections.Generic.Dictionary%602>XName 類型\<的物件，物件>每個鍵值對表示屬性名稱及其相應值。  
   
  這個範例不示範如何還原序列化複雜資料屬性，因為目前不支援此作業。  
   
@@ -104,7 +104,7 @@ namespace PropertyReader
                     // if the instance state is compressed using GZip algorithm  
                     if (isCompressed)  
                     {  
-                        // decompress the data using the GZip   
+                        // decompress the data using the GZip
                         using (GZipStream stream = new GZipStream(memoryStream, CompressionMode.Decompress))  
                         {  
                             // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
@@ -117,7 +117,7 @@ namespace PropertyReader
                     }  
                     else  
                     {  
-                        // if the instance data is not compressed   
+                        // if the instance data is not compressed
                         // create an XmlReader object and pass it on to the helper method ReadPrimitiveDataProperties  
                         using (XmlReader reader = XmlDictionaryReader.CreateBinaryReader(memoryStream, XmlDictionaryReaderQuotas.Max))  
                         {  

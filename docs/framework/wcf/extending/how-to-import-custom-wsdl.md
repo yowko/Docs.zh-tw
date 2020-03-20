@@ -2,12 +2,12 @@
 title: HOW TO：匯入自訂 WSDL
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
-ms.openlocfilehash: 10fc3282560d35e61044a367f8172571096d76bd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 614842f2d77d967e0a6d4841e5e5e4fcc8805580
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975894"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185553"
 ---
 # <a name="how-to-import-custom-wsdl"></a>HOW TO：匯入自訂 WSDL
 這個主題會描述如何匯入自訂 WSDL。 若要處理自訂 WSDL，您必須實作 <xref:System.ServiceModel.Description.IWsdlImportExtension> 介面。  
@@ -57,8 +57,8 @@ ms.locfileid: "73975894"
     ```xml  
     <system.serviceModel>  
           <client>  
-            <endpoint   
-              address="http://localhost:8000/Fibonacci"   
+            <endpoint
+              address="http://localhost:8000/Fibonacci"
               binding="wsHttpBinding"  
               contract="IFibonacci"  
             />  
@@ -78,8 +78,8 @@ ms.locfileid: "73975894"
     System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [中繼資料](../feature-details/metadata.md)
+- [元](../feature-details/metadata.md)
 - [匯出和匯入中繼資料](../feature-details/exporting-and-importing-metadata.md)
 - [自訂 WSDL 發行集](../samples/custom-wsdl-publication.md)

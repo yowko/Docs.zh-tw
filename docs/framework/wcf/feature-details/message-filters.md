@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-ms.openlocfilehash: b8de58b6935ee59fc8c787dfcf7445afcd0774b9
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a953dea9224d75907c593d87f06a0b0888f0af2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912692"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184666"
 ---
 # <a name="message-filters"></a>訊息篩選條件
 為了實作內容架構路由，路由服務會使用 <xref:System.ServiceModel.Dispatcher.MessageFilter> 實作，該實作會檢查訊息的特定區段，例如位址、端點名稱或特定 XPath 陳述式。 如果 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 提供的訊息篩選都不符合您的需要，您可以建立透過建立新的基底 <xref:System.ServiceModel.Dispatcher.MessageFilter> 類別實作來建立自訂篩選。  
   
- 設定路由服務時, 您必須定義篩選元素 (<xref:System.ServiceModel.Routing.Configuration.FilterElement>物件) 來描述**MessageFilter**的類型, 以及建立篩選所需的任何支援資料, 例如要在訊息內搜尋的特定字串值. 請注意，建立篩選項目只會定義個別訊息篩選，若要使用篩選評估和路由傳送訊息，您還必須定義篩選資料表 (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>)。  
+ 配置路由服務時，必須定義篩選器元素（物件），這些<xref:System.ServiceModel.Routing.Configuration.FilterElement>元素描述**MessageFilter**的類型和創建篩選器所需的任何支援資料，例如要在消息中搜索的特定字串值。 請注意，建立篩選項目只會定義個別訊息篩選，若要使用篩選評估和路由傳送訊息，您還必須定義篩選資料表 (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>)。  
   
  篩選資料表中的每個項目都會參考篩選項目，並且指定將路由傳送訊息的目標用戶端端點 (如果訊息符合篩選的話)。 篩選資料表項目還可讓您指定備份端點的集合 (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>)，該集合會定義端點清單，當傳送至主要端點期間發生傳輸失敗事件時，會將訊息傳送至這些端點。 這些端點會依指定的順序嘗試，直到其中一個成功為止。  
   
@@ -25,30 +25,30 @@ ms.locfileid: "69912692"
   
 |篩選條件類型|描述|篩選資料意義|範例篩選|  
 |------------------|-----------------|-------------------------|--------------------|  
-|動作|使用 <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 類別比對包含特定動作的訊息。|要進行篩選的動作。|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
-|EndpointAddress|<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>使用類別<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A> 搭配來比對包含特定位址的訊息。 ==  `true`|要篩選的位址 (在 [收件者] 標頭中)。|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
-|EndpointAddressPrefix|<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>使用類別<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A> 搭配來比對包含特定位址前置詞的訊息。 ==  `true`|要使用最長的前置詞比對篩選的位址。|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|和|使用固定在傳回之前評估兩項條件的 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 類別。|未使用 filterData;相反地, filter1 和 filter2 會有對應的訊息篩選器名稱 (也在資料表中), 這應該是**和**ed。|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
-|自訂|使用者定義類型，該類型會延伸 <xref:System.ServiceModel.Dispatcher.MessageFilter> 類別並且擁有取用字串的建構函式。|customType 屬性是要建立之類別的完整類型名稱；filterData 則是建立篩選時，要傳遞至建構函式的字串。|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
-|EndpointName|使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 類別，根據訊息到達的服務端點名稱比對訊息。|服務端點的名稱, 例如: "serviceEndpoint1"。  這應該是在路由服務上公開的其中一個端點。|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
-|MatchAll|使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 類別。 此篩選會比對所有抵達的訊息。|不會使用 filterData。 此篩選將固定比對所有訊息。|\<filter name="matchAll1" filterType="MatchAll" />|  
-|XPath|使用 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 類別比對訊息內的特定 XPath 查詢。|比對訊息時使用的 XPath 查詢。|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
+|動作|使用 <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> 類別比對包含特定動作的訊息。|要進行篩選的動作。|\<篩選器名稱="操作 1"篩選器類型="操作"篩選器資料*"http://namespace/contract/operation/>|  
+|EndpointAddress|使用<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>類，用於<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A> == `true`匹配包含特定位址的消息。|要篩選的位址 (在 [收件者] 標頭中)。|\<篩選器名稱="位址1"篩選器類型="端點位址"篩選器資料="http://host/vdir/s.svc/b/>|  
+|EndpointAddressPrefix|使用<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>類，用於<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A> == `true`匹配包含特定位址首碼的消息。|要使用最長的前置詞比對篩選的位址。|\<篩選器名稱="首碼1"篩選器類型="端點位址首碼"篩選器http://host/資料=" />|  
+|And|使用固定在傳回之前評估兩項條件的 <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> 類別。|不使用篩選器資料;相反，filter1 和 filter2 具有相應的消息篩選器的名稱（也位於表中），它們應**並**結合使用。|\<篩選器名稱="和1"篩選器類型="和"篩選器1="位址1"篩選器2="操作1"/>|  
+|Custom|使用者定義類型，該類型會延伸 <xref:System.ServiceModel.Dispatcher.MessageFilter> 類別並且擁有取用字串的建構函式。|customType 屬性是要建立之類別的完整類型名稱；filterData 則是建立篩選時，要傳遞至建構函式的字串。|\<篩選器名稱="自訂 1"篩選器類型="自訂"自訂類型="自訂程式集.自訂Msg篩選，自訂程式集"篩選器資料="自訂資料"/>|  
+|EndpointName|使用 <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> 類別，根據訊息到達的服務端點名稱比對訊息。|服務終結點的名稱，例如："服務終結點1"。  這應該是在路由服務上公開的其中一個端點。|\<篩選器名稱="庫存1"篩選器類型="端點"篩選器資料="Svc終結點"/>|  
+|MatchAll|使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 類別。 此篩選會比對所有抵達的訊息。|不會使用 filterData。 此篩選將固定比對所有訊息。|\<篩選器名稱="匹配All1"篩選器類型="匹配All"/>|  
+|XPath|使用 <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> 類別比對訊息內的特定 XPath 查詢。|比對訊息時使用的 XPath 查詢。|\<篩選器名稱="XPath1"篩選器類型="XPath"篩選器資料="//ns：元素"/>|  
   
  下列範例會定義使用 XPath、EndpointName 和 PrefixEndpointAddress 訊息篩選的篩選項目。 此範例也會示範針對 RoundRobinFilter1 和 RoundRobinFilter2 項目使用自訂篩選。  
   
 ```xml  
 <filters>  
-     <filter name="XPathFilter" filterType="XPath"   
+     <filter name="XPathFilter" filterType="XPath"
              filterData="/s12:Envelope/s12:Header/custom:RoundingCalculator = 1"/>  
-     <filter name="EndpointNameFilter" filterType="EndpointName"   
+     <filter name="EndpointNameFilter" filterType="EndpointName"
              filterData="calculatorEndpoint"/>  
-     <filter name="PrefixAddressFilter" filterType="PrefixEndpointAddress"   
+     <filter name="PrefixAddressFilter" filterType="PrefixEndpointAddress"
              filterData="http://localhost/routingservice/router/rounding/"/>  
-     <filter name="RoundRobinFilter1" filterType="Custom"   
-             customType="RoutingServiceFilters.RoundRobinMessageFilter,   
+     <filter name="RoundRobinFilter1" filterType="Custom"
+             customType="RoutingServiceFilters.RoundRobinMessageFilter,
              RoutingService" filterData="group1"/>  
-     <filter name="RoundRobinFilter2" filterType="Custom"   
-             customType="RoutingServiceFilters.RoundRobinMessageFilter,   
+     <filter name="RoundRobinFilter2" filterType="Custom"
+             customType="RoutingServiceFilters.RoundRobinMessageFilter,
              RoutingService" filterData="group1"/>  
 </filters>  
 ```  
@@ -71,7 +71,7 @@ ms.locfileid: "69912692"
 |tempuri|`http://tempuri.org`|  
 |ser|`http://schemas.microsoft.com/2003/10/Serialization`|  
   
- 如果您事先知道將會在 XPath 查詢中使用特定命名空間，可以將它與唯一的命名空間前置詞一起加入至命名空間資料表，並且在任何 XPath 查詢中使用該前置詞，而不要使用完整的命名空間。 下列範例會針對命名空間`"http://my.custom.namespace"`定義 "custom" 的前置詞, 然後用於 filterData 中包含的 XPath 查詢。  
+ 如果您事先知道將會在 XPath 查詢中使用特定命名空間，可以將它與唯一的命名空間前置詞一起加入至命名空間資料表，並且在任何 XPath 查詢中使用該前置詞，而不要使用完整的命名空間。 下面的示例為命名空間`"http://my.custom.namespace"`定義"自訂"的首碼，然後在篩選器資料中包含的 XPath 查詢中使用。  
   
 ```xml  
 <namespaceTable>  
@@ -98,7 +98,7 @@ ms.locfileid: "69912692"
            <add filterName="SubtractAction" endpointName="Subtraction" />  
          </filters>  
        </table>  
-     </filterTables>      
+     </filterTables>
 </routing>  
 ```  
   
@@ -115,13 +115,13 @@ ms.locfileid: "69912692"
 ```xml  
 <filterTables>  
      <filterTable name="filterTable1">  
-          <add filterName="XPathFilter" endpointName="roundingCalcEndpoint"   
+          <add filterName="XPathFilter" endpointName="roundingCalcEndpoint"
                priority="2"/>  
-          <add filterName="EndpointNameFilter" endpointName="regularCalcEndpoint"   
+          <add filterName="EndpointNameFilter" endpointName="regularCalcEndpoint"
                priority="1"/>  
-          <add filterName="PrefixAddressFilter" endpointName="roundingCalcEndpoint"   
+          <add filterName="PrefixAddressFilter" endpointName="roundingCalcEndpoint"
                priority="1"/>  
-          <add filterName="MatchAllMessageFilter" endpointName="defaultCalcEndpoint"   
+          <add filterName="MatchAllMessageFilter" endpointName="defaultCalcEndpoint"
                priority="0"/>  
      </filterTable>  
 </filterTables>  
@@ -133,7 +133,7 @@ ms.locfileid: "69912692"
 > 如果可行，請使用互斥的篩選，而不要指定優先權，因為優先權評估可能導致效能降低。  
   
 ### <a name="backup-lists"></a>備份清單  
- 篩選資料表中的每一個篩選可以選擇性地指定備份清單，也就是具名的端點集合 (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>)。 此集合包含依順序排列的端點清單，訊息將在傳送至 <xref:System.ServiceModel.CommunicationException> 中指定的主要端點期間發生 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A> 時，傳輸至這些端點。 下列範例會定義名為 "backupServiceEndpoints" 的備份清單, 其中包含兩個端點。  
+ 篩選資料表中的每一個篩選可以選擇性地指定備份清單，也就是具名的端點集合 (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>)。 此集合包含依順序排列的端點清單，訊息將在傳送至 <xref:System.ServiceModel.CommunicationException> 中指定的主要端點期間發生 <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement.EndpointName%2A> 時，傳輸至這些端點。 下面的示例定義一個名為"備份服務終結點"的備份清單，其中包含兩個終結點。  
   
 ```xml  
 <filterTables>  
@@ -149,4 +149,4 @@ ms.locfileid: "69912692"
 </backupLists>  
 ```  
   
- 在上述範例中, 如果傳送至主要端點「目的地」失敗, 則路由服務會嘗試以列出的順序將每個端點傳送到每個端點, 先傳送至 backupServiceQueue, 然後在傳送至 backupServiceQueue 失敗。 如果所有備份端點都失敗，則會傳回錯誤。
+ 在前面的示例中，如果發送到主終結點"目標"失敗，路由服務將嘗試按列出的順序發送到每個終結點，首先發送到備份服務佇列，然後發送到備用服務佇列（如果發送到備份服務佇列失敗。 如果所有備份端點都失敗，則會傳回錯誤。

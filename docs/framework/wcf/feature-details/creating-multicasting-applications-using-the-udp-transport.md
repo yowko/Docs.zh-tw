@@ -2,12 +2,12 @@
 title: 使用 UDP 傳輸建立多點傳送應用程式
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
-ms.openlocfilehash: b65a277b6e76767d1e3bfdbebbac5051759986e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6825aaafe87ae362fd9266f7c7a82a36d054a69f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857190"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185246"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>使用 UDP 傳輸建立多點傳送應用程式
 多點傳送應用程式會在同一時間將小量訊息發送給大量的收件人，而無需建立點對點連接。 這類應用程式著重速度勝於可靠性。 換句話說，及時發送資料要比確保任何特定訊息實際送達來得更重要。 WCF 現在支援使用 <xref:System.ServiceModel.UdpBinding> 撰寫多點傳送應用程式。 這種傳輸適用於服務需要將出小量訊息同時傳送給許多用戶端的情節。 股票行情指示器應用程式是這類服務的範例。  
@@ -71,7 +71,7 @@ string serviceAddress = "soap.udp://224.0.0.1:40000";
 UdpBinding myBinding = new UdpBinding();
 
 // Channel factory
-ChannelFactory<IStockTicker> factory 
+ChannelFactory<IStockTicker> factory
     = new ChannelFactory<IStockTicker>(myBinding,
                 new EndpointAddress(serviceAddress));
 
@@ -91,7 +91,7 @@ while (true)
  這個程式碼會產生股票資訊，然後使用服務合約 IStockTicker 發送多點傳送訊息以呼叫接聽正確 UDP 位址的服務。  
   
 ### <a name="udp-and-reliable-messaging"></a>UDP 和可靠傳訊  
- 因為 UDP 通訊協定的性質屬於輕量型，所以 UDP 繫結不支援可靠傳訊。 如果您需要確認遠端端點已收到訊息，請使用支援可靠傳訊的運輸，例如 HTTP 或 TCP。 如需可靠傳訊，請參閱 https://go.microsoft.com/fwlink/?LinkId=231830  
+ 因為 UDP 通訊協定的性質屬於輕量型，所以 UDP 繫結不支援可靠傳訊。 如果您需要確認遠端端點已收到訊息，請使用支援可靠傳訊的運輸，例如 HTTP 或 TCP。 有關可靠消息傳遞的詳細資訊，請參閱https://go.microsoft.com/fwlink/?LinkId=231830  
   
 ### <a name="two-way-multicast-messaging"></a>雙向多點傳送訊息  
  雖然多點傳送訊息通常為單向，但 UdpBinding 確實可支援要求/回覆訊息交換。 使用 UDP 傳輸傳送的訊息會同時包含寄件者和收件者位址。 使用寄件者位址時必須多加小心，因為它可能會在傳送途中遭到惡意變更。  可以使用下列程式碼來檢查位址：  

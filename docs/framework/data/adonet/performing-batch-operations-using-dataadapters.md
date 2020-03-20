@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: 8667cffb032daf0043915d3bee7127ef9b70756b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 62a61051e5b9d896f8a89ed3d2745859fc07a7ec
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794514"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149254"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>使用 DataAdapter 執行批次作業
 ADO.NET 中的批次支援可讓 <xref:System.Data.Common.DataAdapter> 針對從 <xref:System.Data.DataSet> 或 <xref:System.Data.DataTable> 至伺服器的 INSERT、UPDATE 與 DELETE 作業進行分組，而非一次傳送一個作業。 如此可降低往返於伺服器的次數，因此一般都能夠大幅提升作業效能。 SQL Server (<xref:System.Data.SqlClient>) 和 Oracle (<xref:System.Data.OracleClient>) 的 .NET 資料提供者都支援批次更新。  
@@ -24,7 +24,7 @@ ADO.NET 中的批次支援可讓 <xref:System.Data.Common.DataAdapter> 針對從
 ## <a name="using-the-updatebatchsize-property"></a>使用 UpdateBatchSize 屬性  
  啟用批次更新時，應該將 DataAdapter 的 <xref:System.Data.IDbCommand.UpdatedRowSource%2A>、`UpdateCommand` 和 `InsertCommand` 的 `DeleteCommand` 屬性值設為 <xref:System.Data.UpdateRowSource.None> 或 <xref:System.Data.UpdateRowSource.OutputParameters>。 執行批次更新時，命令之 <xref:System.Data.IDbCommand.UpdatedRowSource%2A> 或 <xref:System.Data.UpdateRowSource.FirstReturnedRecord> 的 <xref:System.Data.UpdateRowSource.Both> 屬性值無效。  
   
- 下列程序示範 `UpdateBatchSize` 屬性的用法。 此程式會採用兩個自<xref:System.Data.DataSet>變數，也就是具有資料行的物件，其**代表 ProductCategory**資料表中的**ProductCategoryID**和**Name**欄位，以及代表批次大小的整數（批次中的資料列）。 程式碼會建立新的 <xref:System.Data.SqlClient.SqlDataAdapter> 物件，並設定其 <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 和 <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> 屬性。 程式碼假設 <xref:System.Data.DataSet> 物件具有已修改過的資料列。 它會設定 `UpdateBatchSize` 屬性並執行更新。  
+ 下列程序示範 `UpdateBatchSize` 屬性的用法。 該過程採用兩個參數，一個<xref:System.Data.DataSet>物件具有表示**ProductCategoryID**和**名稱**欄位的物件在 **"生產.ProductCategory"** 表中，另一個表示批次處理大小的整數（批次處理中的行數）。 程式碼會建立新的 <xref:System.Data.SqlClient.SqlDataAdapter> 物件，並設定其 <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> 和 <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> 屬性。 程式碼假設 <xref:System.Data.DataSet> 物件具有已修改過的資料列。 它會設定 `UpdateBatchSize` 屬性並執行更新。  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -82,7 +82,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
     string connectionString = GetConnectionString();  
   
     // Connect to the AdventureWorks database.  
-    using (SqlConnection connection = new   
+    using (SqlConnection connection = new
       SqlConnection(connectionString))  
     {  
   
@@ -92,19 +92,19 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
         // Set the UPDATE command and parameters.  
         adapter.UpdateCommand = new SqlCommand(  
             "UPDATE Production.ProductCategory SET "  
-            + "Name=@Name WHERE ProductCategoryID=@ProdCatID;",   
+            + "Name=@Name WHERE ProductCategoryID=@ProdCatID;",
             connection);  
-        adapter.UpdateCommand.Parameters.Add("@Name",   
+        adapter.UpdateCommand.Parameters.Add("@Name",
            SqlDbType.NVarChar, 50, "Name");  
-        adapter.UpdateCommand.Parameters.Add("@ProdCatID",   
+        adapter.UpdateCommand.Parameters.Add("@ProdCatID",
            SqlDbType.Int, 4, "ProductCategoryID");  
          adapter.UpdateCommand.UpdatedRowSource = UpdateRowSource.None;  
   
         // Set the INSERT command and parameter.  
         adapter.InsertCommand = new SqlCommand(  
-            "INSERT INTO Production.ProductCategory (Name) VALUES (@Name);",   
+            "INSERT INTO Production.ProductCategory (Name) VALUES (@Name);",
             connection);  
-        adapter.InsertCommand.Parameters.Add("@Name",   
+        adapter.InsertCommand.Parameters.Add("@Name",
           SqlDbType.NVarChar, 50, "Name");  
         adapter.InsertCommand.UpdatedRowSource = UpdateRowSource.None;  
   
@@ -112,7 +112,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
         adapter.DeleteCommand = new SqlCommand(  
             "DELETE FROM Production.ProductCategory "  
             + "WHERE ProductCategoryID=@ProdCatID;", connection);  
-        adapter.DeleteCommand.Parameters.Add("@ProdCatID",   
+        adapter.DeleteCommand.Parameters.Add("@ProdCatID",
           SqlDbType.Int, 4, "ProductCategoryID");  
         adapter.DeleteCommand.UpdatedRowSource = UpdateRowSource.None;  
   
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>處理批次更新的相關事件和錯誤  
- **DataAdapter**有兩個與更新相關的事件：**RowUpdating**和**RowUpdated**。 停用舊版 ADO.NET 的批次處理時，會針對已處理的每個資料列產生其中一個事件。 **RowUpdating**會在更新發生之前產生，而**RowUpdated**則是在完成資料庫更新後產生。  
+ **資料配接器**有兩個與更新相關的事件：**行更新**和**行更新**。 停用舊版 ADO.NET 的批次處理時，會針對已處理的每個資料列產生其中一個事件。 在更新發生之前生成**行更新**，並在資料庫更新完成後生成**行更新**。  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>批次更新時所變更的事件行為  
  啟用批次處理時，會在單一資料庫作業中更新多個資料列。 因此，每個批次作業只會發生一個 `RowUpdated` 事件，而每個已處理的資料列則會發生 `RowUpdating` 事件。 停用批次處理時，會以一對一交錯的方式引發這兩個事件，即針對一個資料列引發一個 `RowUpdating` 事件和一個 `RowUpdated` 事件，再針對下一個資料列引發一個 `RowUpdating` 事件和一個 `RowUpdated` 事件，直到處理完所有資料列為止。  
@@ -136,7 +136,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
   
  啟用批次處理時，會針對多個資料列產生單一 `RowUpdated` 事件。 因此，每個資料列的 `Row` 屬性值都是 null。 但仍會針對每個資料列產生 `RowUpdating` 事件。 您可以使用 <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 類別的 <xref:System.Data.Common.RowUpdatedEventArgs> 方法，將處理的資料列參考複製至陣列，以存取這些資料列。 如果目前未處理任何資料列，則 `CopyToRows` 會擲回 <xref:System.ArgumentNullException>。 呼叫 <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> 方法前，請使用 <xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> 屬性傳回已處理的資料列數。  
   
-### <a name="handling-data-errors"></a>處理資料錯誤  
+### <a name="handling-data-errors"></a>處理資料錯誤   
  批次執行與執行每個獨立陳述式具有相同的效果。 系統會以陳述式加入至批次的順序執行它們。 批次模式下所發生的錯誤，與停用批次模式所發生的錯誤，擁有相同的處理方式。 每個資料列是分開處理的。 在 <xref:System.Data.DataRow> 內的對應 <xref:System.Data.DataTable> 中，只會更新資料庫中已成功處理的資料列。  
   
  資料提供者和後端資料庫伺服器決定批次執行能使用哪些 SQL 建構。 如果要求執行不受支援的陳述式，則可能擲回例外狀況。  
@@ -145,5 +145,5 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 
 - [DataAdapter 和 DataReader](dataadapters-and-datareaders.md)
 - [使用 DataAdapter 更新資料來源](updating-data-sources-with-dataadapters.md)
-- [處理 DataAdapter 事件](handling-dataadapter-events.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [處理 DataAdapter 的事件](handling-dataadapter-events.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 WebRequest 類別傳送資料
+title: 如何：使用 WebRequest 類發送資料
 ms.date: 03/25/2019
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
 ms.openlocfilehash: 2467b289df7a0361b51ad91d4458d32742c42275
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/27/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70040834"
 ---
-# <a name="how-to-send-data-by-using-the-webrequest-class"></a>作法：使用 WebRequest 類別傳送資料
+# <a name="how-to-send-data-by-using-the-webrequest-class"></a>如何：使用 WebRequest 類發送資料
 
 下列程序描述將資料傳送到伺服器的步驟。 本程序通常用於在網頁上張貼資料。
 
@@ -32,7 +32,7 @@ ms.locfileid: "70040834"
     ```
 
     > [!NOTE]
-    > .NET Framework 針對以 *http:* 、*https:* 、*ftp:* 和 *file:* 開頭的 URI，提供了衍生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別的通訊協定專用類別。
+    > .NET Framework 針對以 *http:*、*https:*、*ftp:* 和 *file:* 開頭的 URI，提供了衍生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別的通訊協定專用類別。
 
     如果您需要設定或讀取通訊協定專用屬性，必須將 <xref:System.Net.WebRequest> 或 <xref:System.Net.WebResponse> 物件轉換為通訊協定專用物件類型。 如需詳細資訊，請參閱[可插式通訊協定程式設計](programming-pluggable-protocols.md)。
 
@@ -157,8 +157,8 @@ ms.locfileid: "70040834"
 
 ## <a name="see-also"></a>另請參閱
 
-- [建立網際網路要求](creating-internet-requests.md)
-- [在網路上使用資料流](using-streams-on-the-network.md)
+- [創建互聯網請求](creating-internet-requests.md)
+- [在網路上使用流](using-streams-on-the-network.md)
 - [透過 Proxy 存取網際網路](accessing-the-internet-through-a-proxy.md)
-- [要求資料](requesting-data.md)
-- [如何：使用 WebRequest 類別要求資料](how-to-request-data-using-the-webrequest-class.md)
+- [請求資料](requesting-data.md)
+- [如何：使用 WebRequest 類請求資料](how-to-request-data-using-the-webrequest-class.md)

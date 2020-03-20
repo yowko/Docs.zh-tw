@@ -17,10 +17,10 @@ helpviewer_keywords:
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
 ms.openlocfilehash: fe2ad55c3f60347369c0e92bc834d81d98f3870e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71046949"
 ---
 # <a name="using-client-sockets"></a>使用用戶端通訊端

@@ -2,12 +2,12 @@
 title: 設定繫結上的逾時值
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-ms.openlocfilehash: f323dfff338f8a3ba24caab6df3b3916d3ae0d13
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 968e80bbd4b50d72d089a325f8e3fe498de2eac2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779323"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185292"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>設定繫結上的逾時值
 WCF 繫結有一些逾時設定可供使用。 正確設定這些逾時設定可以改善服務的效能，但也會對服務的可用性和安全性造成影響。 可在 WCF 繫結上使用的逾時如下：  
@@ -27,20 +27,20 @@ WCF 繫結有一些逾時設定可供使用。 正確設定這些逾時設定可
 public static void Main()
 {
     Uri baseAddress = new Uri("http://localhost/MyServer/MyService");
-    
+
     try
     {
         ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService));
-        
+
         WSHttpBinding binding = new WSHttpBinding();
         binding.OpenTimeout = new TimeSpan(0, 10, 0);
         binding.CloseTimeout = new TimeSpan(0, 10, 0);
         binding.SendTimeout = new TimeSpan(0, 10, 0);
         binding.ReceiveTimeout = new TimeSpan(0, 10, 0);
-        
+
         serviceHost.AddServiceEndpoint("ICalculator", binding, baseAddress);
         serviceHost.Open();
-        
+
         // The service can now be accessed.
         Console.WriteLine("The service is ready.");
         Console.WriteLine("Press <ENTER> to terminate service.");
@@ -61,9 +61,9 @@ public static void Main()
   <system.serviceModel>
     <bindings>
       <wsHttpBinding>
-        <binding openTimeout="00:10:00" 
-                 closeTimeout="00:10:00" 
-                 sendTimeout="00:10:00" 
+        <binding openTimeout="00:10:00"
+                 closeTimeout="00:10:00"
+                 sendTimeout="00:10:00"
                  receiveTimeout="00:10:00">
         </binding>
       </wsHttpBinding>
@@ -79,15 +79,15 @@ public static void Main()
   
 1. SendTimeout – 用來初始化 OperationTimeout，這會控制整個傳送訊息程序，包括接收要求/回覆服務作業的回覆訊息。 從合約回呼方法傳送回覆郵件時，也適用這個逾時。  
   
-2. OpenTimeout – 使用開啟通道時未不指定任何明確的逾時的值。  
+2. OpenTimeout – 在未指定顯式超時值時打開通道時使用。  
   
-3. CloseTimeout – 使用關閉通道時未不指定任何明確的逾時的值。  
+3. 關閉超時 – 在未指定顯式超時值時關閉通道時使用。  
   
-4. ReceiveTimeout – 不在使用中。  
+4. 不使用接收超時 = 。  
   
-### <a name="service-side-timeouts"></a>服務端逾時  
+### <a name="service-side-timeouts"></a>服務端超時  
  在服務端：  
   
-1. SendTimeout、 OpenTimeout、 CloseTimeout 是用戶端上的相同。  
+1. 發送超時、打開超時、關閉超時與用戶端相同。  
   
 2. ReceiveTimeout – 由服務架構層用來初始化工作階段閒置逾時，這會控制工作階段在逾時前可以處於閒置狀態多久。

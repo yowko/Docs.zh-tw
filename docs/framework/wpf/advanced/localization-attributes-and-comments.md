@@ -5,25 +5,25 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 4f9c2700d8163988b7ea1e75bec1427778cf571c
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 7281ca6d76f0d2ffb5020feba236b4e4cf948bdd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004901"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141584"
 ---
 # <a name="localization-attributes-and-comments"></a>當地語系化屬性和註解
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化批註是 XAML 原始程式碼內的屬性，由開發人員提供，以提供當地語系化的規則和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊︰可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]當地語系化注釋是 XAML 原始程式碼中的屬性，由開發人員提供，用於提供當地語系化的規則和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊︰可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  
 
-<a name="Localizer_Comments_"></a>   
+<a name="Localizer_Comments_"></a>
 ## <a name="localization-comments"></a>當地語系化註解  
- 如果標記應用程式作者有 XAML 中特定元素的需求，例如文字長度、字型系列或字型大小的條件約束，則可以將此資訊傳達給當地語系化人員，並在 XAML 程式碼中加上批註。 將註解新增至原始程式碼的程序如下︰  
+ 如果標記應用程式作者對 XAML 中的特定元素有要求（例如文本長度、字型家族或字體大小的約束），則可以在 XAML 代碼中使用注釋向當地語系化人員傳達此資訊。 將註解新增至原始程式碼的程序如下︰  
   
-1. 應用程式開發人員會將當地語系化批註新增至 XAML 原始程式碼。  
+1. 應用程式開發人員將當地語系化注釋添加到 XAML 原始程式碼中。  
   
 2. 在建置過程，您可以於 .proj 檔案中指定是否要保留組件中的自由格式當地語系化註解、去除註解的一部分，或去除所有註解。 去除的註解會放在不同的檔案中。 您可以使用 `LocalizationDirectivesToLocFile` 標記來指定選項，例如︰  
   
-     `<LocalizationDirectivesToLocFile>` <值> `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>`*值*`</LocalizationDirectivesToLocFile>`  
   
 3. 可以指派的值如下︰  
   
@@ -33,11 +33,11 @@ ms.locfileid: "72004901"
   
     - **All** - 去除組件中的註解和屬性，並將它們放在個別 LocFile 中。  
   
-4. 從 BAML 解壓縮可當地語系化的資源時，BAML 當地語系化 API 會遵守可當地語系化的屬性。  
+4. 從 BAML 提取可當地語系化資源時，BAML 當地語系化 API 會尊重可當地語系化屬性。  
   
 5. 稍後，只包含自由格式註解的當地語系化註解檔案會併入當地語系化程序。  
   
- 下列範例顯示如何將當地語系化批註加入至 XAML 檔案。  
+ 下面的示例演示如何向 XAML 檔添加當地語系化注釋。  
   
  `<TextBlock x:Id = "text01"`  
   
@@ -74,32 +74,32 @@ ms.locfileid: "72004901"
   
  屬性有三種類型：  
   
-- **分類**. 這指定是否應該可以從當地語系化人員工具修改值。 請參閱 <xref:System.Windows.LocalizabilityAttribute.Category%2A>。  
+- **類別**。 這指定是否應該可以從當地語系化人員工具修改值。 請參閱＜<xref:System.Windows.LocalizabilityAttribute.Category%2A>＞。  
   
-- **可讀性**. 這指定當地語系化人員工具是否應該讀取 (和顯示) 值。 請參閱 <xref:System.Windows.LocalizabilityAttribute.Readability%2A>。  
+- **可讀性**。 這指定當地語系化人員工具是否應該讀取 (和顯示) 值。 請參閱＜<xref:System.Windows.LocalizabilityAttribute.Readability%2A>＞。  
   
-- **可修改性**. 這指定當地語系化人員工具是否允許修改值。 請參閱 <xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>。  
+- **可修改性**。 這指定當地語系化人員工具是否允許修改值。 請參閱＜<xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>＞。  
   
  這些屬性可以依任何順序指定，並以空格分隔。 如果指定重複屬性，則最後一個屬性會覆寫先前的屬性。 例如，Localization.Attributes = "Unmodifiable Modifiable" 會將「可修改性」設定為「可修改」，因為它是最後一個值。  
   
- 可修改性和可讀性一看就懂。 分類屬性提供預先定義的分類，以在翻譯文字時協助當地語系化人員。 文字、標籤和標題這類分類會將如何翻譯文字的資訊提供給當地語系化人員。 另外還有特殊類別：[無]、[繼承]、[忽略] 和 [NeverLocalize]。  
+ 可修改性和可讀性一看就懂。 分類屬性提供預先定義的分類，以在翻譯文字時協助當地語系化人員。 文字、標籤和標題這類分類會將如何翻譯文字的資訊提供給當地語系化人員。 也會有特殊分類︰無、繼承、略過和 NeverLocalize。  
   
  下表顯示特殊分類的意義。  
   
-|Category|意義|  
+|類別|意義|  
 |--------------|-------------|  
 |None|目標值沒有已定義的分類。|  
 |繼承|目標值會從其父代繼承其分類。|  
-|Ignore|會略過當地語系化程序中的目標值。 略過只會影響目前值。 它不會影響子節點。|  
+|略過|會略過當地語系化程序中的目標值。 略過只會影響目前值。 它不會影響子節點。|  
 |NeverLocalize|無法當地語系化目前值。 項目的子系會繼承此分類。|  
   
-<a name="Localization_Comments"></a>   
+<a name="Localization_Comments"></a>
 ## <a name="localization-comments"></a>當地語系化註解  
  Localization.Comments 包含有關目標值的自由格式字串。 應用程式開發人員可以新增資訊，提供當地語系化人員如何翻譯應用程式文字的提示。 註解的格式可以是用 "()" 括住的任何字串。 使用 '\\' 來逸出字元。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [WPF 的全球化](globalization-for-wpf.md)
-- [使用自動版面配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)
-- [針對自動版面配置使用方格](how-to-use-a-grid-for-automatic-layout.md)
+- [使用自動配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)
+- [針對自動版面配置使用格線](how-to-use-a-grid-for-automatic-layout.md)
 - [將應用程式當地語系化](how-to-localize-an-application.md)

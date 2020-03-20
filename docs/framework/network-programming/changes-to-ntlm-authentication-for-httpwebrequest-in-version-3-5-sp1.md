@@ -3,17 +3,17 @@ title: 3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 ms.openlocfilehash: 388e6dc648e1fd68e24a852cb08de107f09f9c9f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64754886"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更
 
 已在 .NET Framework 版本 3.5 SP1 和更新版本中進行安全性變更，這些變更會影響 <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Security.NegotiateStream> 以及 System.Net 命名空間中的相關類別處理整合式 Windows 驗證的方式。 這些變更可能會影響使用這些類別提出 Web 要求並接收回應的應用程式，而且其中使用根據 NTLM 的整合式 Windows 驗證。 這項變更可能會影響設定成使用整合式 Windows 驗證的網頁伺服器和用戶端應用程式。
 
-## <a name="overview"></a>總覽
+## <a name="overview"></a>概觀
 
 整合式 Windows 驗證的設計可讓某些認證回應成為通用，這表示可以重複使用或轉寄它們。 如果不需要此特定設計功能，則驗證通訊協定應該執行目標特定資訊，以及通道特定資訊。 服務隨後可以提供延伸保護，確保認證回應包含服務特定資訊 (例如服務主體名稱 (SPN))。 在認證交換時利用此資訊，服務就能進一步免於惡意使用可能未正確取得的認證回應。
 
@@ -43,7 +43,7 @@ ms.locfileid: "64754886"
 
 3. 以滑鼠右鍵按一下 MSV1_0，並指向 [新增]，然後按一下 [多字串值]。
 
-4. 鍵入 `BackConnectionHostNames`，然後按 ENTER。
+4. 輸入 `BackConnectionHostNames`，然後按 ENTER。
 
 5. 以滑鼠右鍵按一下 `BackConnectionHostNames`，然後按一下 [修改]。
 

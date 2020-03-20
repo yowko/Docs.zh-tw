@@ -9,19 +9,19 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: a903d009f2056e65414c1792494fbbd20e224413
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 2a76816ee73f516b3c7544877a77531acaa8e09c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088808"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153265"
 ---
-# <a name="sources-element"></a>\<來源 > 元素
-指定起始追蹤訊息的追蹤來源。  
+# <a name="sources-element"></a>\<源>元素
+指定啟動跟蹤消息的跟蹤源。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<系統診斷 >** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<來源 >**
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<系統.診斷>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<來源>**
 
 ## <a name="syntax"></a>語法  
   
@@ -32,40 +32,40 @@ ms.locfileid: "74088808"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<source>](source-element.md)|必要項目。<br /><br /> 指定起始追蹤訊息的追蹤來源。|  
+|[\<源>](source-element.md)|必要元素。<br /><br /> 指定起始追蹤訊息的追蹤來源。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`system.diagnostics`|指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。|  
   
 ## <a name="remarks"></a>備註  
- 此元素可用於電腦設定檔（Machine.config）和應用程式佈建檔。  
+ 此元素可用於電腦設定檔 （Machine.config） 和應用程式佈建檔。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 `<sources>` 專案來新增追蹤來源 `mySource` 並設定名為 `sourceSwitch`之來源交換器的層級。 隨即加入主控台追蹤接聽程式，將追蹤資訊寫入主控台。  
+ 下面的示例演示如何使用 元素`<sources>`添加跟蹤源`mySource`，並為名為 的`sourceSwitch`源交換器設置級別。 添加了將跟蹤資訊寫入主控台的主控台跟蹤攔截器。  
   
 ```xml  
 <configuration>  
    <system.diagnostics>  
       <sources>  
-         <source name="mySource" switchName="sourceSwitch"   
+         <source name="mySource" switchName="sourceSwitch"
             switchType="System.Diagnostics.SourceSwitch"  >  
             <listeners>  
-               <add name="console"   
+               <add name="console"
                   type="System.Diagnostics.ConsoleTraceListener" >  
-                  <filter type="System.Diagnostics.EventTypeFilter"   
+                  <filter type="System.Diagnostics.EventTypeFilter"
                      initializeData="Error" />  
                </add>  
                <remove name="Default" />  
@@ -74,12 +74,12 @@ ms.locfileid: "74088808"
       </sources>  
       <switches>  
          <add name="sourceSwitch" value="Warning" />  
-      </switches>    
-   </system.diagnostics>   
+      </switches>
+   </system.diagnostics>
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
@@ -87,5 +87,5 @@ ms.locfileid: "74088808"
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
-- [追蹤和偵錯設定結構描述](index.md)
-- [\<source>](source-element.md)
+- [跟蹤和調試設置架構](index.md)
+- [\<源>](source-element.md)

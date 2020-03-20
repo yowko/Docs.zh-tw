@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: e1f8d636e793b2d8b984fe1aa0b823fa58a4981d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8cadeac0bcbf301f7d973e93435885de82052603
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040172"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151659"
 ---
 # <a name="connection-string-builders"></a>連接字串產生器
-在舊版的 ADO.NET 中，不會發生具有串連字號串值之連接字串的編譯階段檢查，因此在執行時間，不正確的關鍵字會產生 <xref:System.ArgumentException>。 .NET Framework 的每個資料提供者都支援不同的連接字串關鍵字語法，這會在手動完成時，讓建立有效的連接字串變得不容易。 為了解決這個問題，ADO.NET 2.0 為每個 .NET Framework Data Provider 引進了新的連接字串產生器。 每個資料提供者都具有繼承自 <xref:System.Data.Common.DbConnectionStringBuilder> 強型別連接字串產生器類別。 下表列出 .NET Framework 資料提供者及其相關聯的連接字串產生器類別。  
+在ADO.NET的早期版本中，未對連接字串的編譯時間檢查與串聯字串值進行，因此在運行時生成了不正確的關鍵字<xref:System.ArgumentException>。 每個 .NET Framework 資料提供程式都支援連接字串關鍵字的不同語法，這使得手動構造有效連接字串變得困難。 為了解決此問題，ADO.NET 2.0 為每個 .NET Framework 資料提供程式引入了新的連接字串產生器。 每個資料提供者都具有繼承自 <xref:System.Data.Common.DbConnectionStringBuilder> 強型別連接字串產生器類別。 下表列出了 .NET Framework 資料提供程式及其關聯的連接字串產生器類。  
   
-|Provider|ConnectionStringBuilder 類別|  
+|提供者|ConnectionStringBuilder 類別|  
 |--------------|-----------------------------------|  
 |<xref:System.Data.SqlClient>|<xref:System.Data.SqlClient.SqlConnectionStringBuilder?displayProperty=nameWithType>|  
 |<xref:System.Data.OleDb>|<xref:System.Data.OleDb.OleDbConnectionStringBuilder?displayProperty=nameWithType>|  
@@ -59,7 +59,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  連接字串產生器其中一個多載建構函式會採用 <xref:System.String> 做為引數，這可讓您先提供部分連接字串，然後藉由使用者輸入完成。 部分連接字串可以儲存在組態檔中，並在執行階段進行擷取。  
   
 > [!NOTE]
-> <xref:System.Configuration> 命名空間可讓您以程式設計方式存取使用 <xref:System.Web.Configuration.WebConfigurationManager> (Web 應用程式) 和 <xref:System.Configuration.ConfigurationManager> (Windows 應用程式) 的組態檔。 如需使用連接字串和設定檔的詳細資訊，請參閱[連接字串和設定檔](connection-strings-and-configuration-files.md)。  
+> <xref:System.Configuration> 命名空間可讓您以程式設計方式存取使用 <xref:System.Web.Configuration.WebConfigurationManager> (Web 應用程式) 和 <xref:System.Configuration.ConfigurationManager> (Windows 應用程式) 的組態檔。 有關使用連接字串和設定檔的詳細資訊，請參閱[連接字串和設定檔](connection-strings-and-configuration-files.md)。  
   
 ### <a name="example"></a>範例  
  這個範例示範如何從組態檔擷取部分的連接字串，然後藉由設定 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> 的 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A>、<xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> 和 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 屬性加以完成。 組態檔的定義如下。  
@@ -67,7 +67,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ```xml  
 <connectionStrings>  
   <clear/>  
-  <add name="partialConnectString"   
+  <add name="partialConnectString"
     connectionString="Initial Catalog=Northwind;"  
     providerName="System.Data.SqlClient" />  
 </connectionStrings>  
@@ -79,8 +79,8 @@ initial catalog="AdventureWorks;NewValue=Bad"
  [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/CS/source.cs#1)]
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [連接字串](connection-strings.md)
 - [隱私權和資料安全性](privacy-and-data-security.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

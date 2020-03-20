@@ -1,16 +1,16 @@
 ---
-title: HOW TO：存取 WCF 服務使用單向和要求-回覆合約
+title: HOW TO：使用單向和要求-回覆合約來存取 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 533b97892b15c9034679efba6e4da5e72b56099b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855110"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185148"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>HOW TO：存取 WCF 服務使用單向和要求-回覆合約
-下列程序說明如何存取 Windows Communication Foundation (WCF) 服務，定義單向合約與要求-回覆合約，並不使用雙工通訊模式。  
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>HOW TO：使用單向和要求-回覆合約來存取 WCF 服務
+以下過程介紹如何訪問定義單向協定和請求-回復協定且不使用雙工通訊模式的 Windows 通信基礎 （WCF） 服務。  
   
 ### <a name="to-define-the-service"></a>若要定義服務  
   
@@ -109,7 +109,7 @@ ms.locfileid: "61855110"
   
 ### <a name="to-access-the-service"></a>若要存取服務  
   
-1. 執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用中繼資料交換端點位址來建立使用下列命令列的服務的用戶端類別：`Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生一組介面和類別，如下列範例程式碼所示。  
+1. 使用中繼資料交換終結點位址運行[服務模型中繼資料實用程式工具 （Svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用以下命令列為服務創建用戶端類：`Svcutil http://localhost:8000/Service`[服務模型中繼資料實用程式工具 （Svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成一組介面和類，如以下示例代碼所示。  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -147,22 +147,22 @@ ms.locfileid: "61855110"
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName) :   
+        public OneWayCalculatorClient(string endpointConfigurationName) :
                 base(endpointConfigurationName)  
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName, string remoteAddress) :   
+        public OneWayCalculatorClient(string endpointConfigurationName, string remoteAddress) :
                 base(endpointConfigurationName, remoteAddress)  
         {  
         }  
   
-        public OneWayCalculatorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :   
+        public OneWayCalculatorClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(endpointConfigurationName, remoteAddress)  
         {  
         }  
   
-        public OneWayCalculatorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :   
+        public OneWayCalculatorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(binding, remoteAddress)  
         {  
         }  
@@ -258,7 +258,7 @@ using System.ServiceModel.Description;
   
 namespace Microsoft.ServiceModel.Samples  
 {  
-    // Define a service contract.   
+    // Define a service contract.
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
     public interface IOneWayCalculator  
     {  
@@ -341,7 +341,7 @@ namespace Microsoft.ServiceModel.Samples
             }  
         }  
     }  
-} 
+}
 ```
 
 ```csharp

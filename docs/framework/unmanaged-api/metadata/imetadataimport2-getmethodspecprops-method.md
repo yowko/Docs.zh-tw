@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-ms.openlocfilehash: 6b5b3b3b5a3613668f4470f48083ae010cc9d336
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0bfbfec930c193ea05a01bd5bd9f46d2ec6714b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445248"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175287"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps 方法
-取得指定的 MethodSpec token 所參考之方法的中繼資料簽章。  
+獲取指定方法Spec權杖引用的方法的中繼資料簽名。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,32 +31,32 @@ ms.locfileid: "74445248"
 HRESULT GetMethodSpecProps (  
    [in]  mdMethodSpec     mi,  
    [out] mdToken          *tkParent,  
-   [out] PCCOR_SIGNATURE  *ppvSigBlob,   
+   [out] PCCOR_SIGNATURE  *ppvSigBlob,
    [out] ULONG            *pcbSigBlob  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>參數  
  `mi`  
- 在一個 MethodSpec token，代表方法的具現化。  
+ [在]表示方法具現化的 MethodSpec 權杖。  
   
  `tkParent`  
- 脫銷MethodDef 或 MethodRef token 的指標，表示方法定義。  
+ [出]指向表示方法定義的方法Def 或方法Ref 權杖的指標。  
   
  `ppvSigBlob`  
- 脫銷方法之二進位中繼資料簽章的指標。  
+ [出]指向方法的二進位中繼資料簽名的指標。  
   
  `pcbSigBlob`  
- 脫銷`ppvSigBlob`的大小（以位元組為單位）。  
+ [出]的大小（以位元組為單位）的大小`ppvSigBlob`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -1,19 +1,19 @@
 ---
-title: 作法：設定 Windows Communication Foundation 服務以使用埠共用
+title: HOW TO：將 Windows Communication Foundation 服務設為使用連接埠共用
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: e92ce3468bd43456ac3f838cfc44ea7c6624502b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: cd8d76137ac195e452a7d66fb6ddbeda405a922f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912212"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185094"
 ---
-# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>HOW TO：設定 Windows Communication Foundation 服務以使用埠共用
-在您的 Windows Communication Foundation (WCF) 應用程式中使用 net.tcp://埠共用的最簡單方式, 就是使用<xref:System.ServiceModel.NetTcpBinding>來公開服務。  
+# <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>HOW TO：將 Windows Communication Foundation 服務設為使用連接埠共用
+在 Windows 通信基礎 （WCF） 應用程式中使用 net.tcp：// 埠共用的最簡單方法是使用 公開<xref:System.ServiceModel.NetTcpBinding>服務。  
   
  這項繫結會提供 <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> 屬性，以控制是否針對使用此繫結進行設定的服務啟用 net.tcp:// 連接埠共用。  
   
@@ -21,7 +21,7 @@ ms.locfileid: "69912212"
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>若要使用程式碼啟用 NetTcpBinding 上的 net.tcp:// 連接埠共用  
   
-1. 建立服務來執行名`IMyService`為的合約, 並呼叫它。 `MyService`  
+1. 創建一個服務來實現稱為`IMyService`的協定並調用它`MyService`。  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -46,7 +46,7 @@ ms.locfileid: "69912212"
 ```xml  
 <system.serviceModel>  
   <bindings>  
-    <netTcpBinding name="portSharingBinding"   
+    <netTcpBinding name="portSharingBinding"
                    portSharingEnabled="true" />  
   </bindings>  
   <services>  
@@ -63,4 +63,4 @@ ms.locfileid: "69912212"
 ## <a name="see-also"></a>另請參閱
 
 - [Net.TCP 連接埠共用](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [如何：啟用 Net.tcp 埠共用服務](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [如何：啟用 Net.TCP 連接埠共用服務](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

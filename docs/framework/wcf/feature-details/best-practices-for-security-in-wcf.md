@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: b3f2eabad3a6ef8e8fd5cc8f44f3132a3f5d8427
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c8c0c084ac3b1cf06fc5f2b3df85fa979744e17b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755225"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185424"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
 下列各節將列出在使用 Windows Communication Foundation (WCF) 建立安全應用程式時，應該考慮採用的最佳做法。 如需安全性的詳細資訊，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)、[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)和[中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
@@ -24,14 +24,14 @@ ms.locfileid: "64755225"
  WS-SecurityPolicy 允許服務以中繼資料發佈關於本身身分識別的資訊。 透過 `svcutil` 或如 <xref:System.ServiceModel.Description.WsdlImporter> 的其他方法擷取時，身分識別資訊會轉譯為 WCF 服務端點位址的身分識別屬性。 沒有驗證這些服務的用戶端屬於正確且有效的略過服務驗證。 但是，惡意的服務會利用這類用戶端，變更 WSDL 中聲稱的身分，執行認證轉送或其他的中間人攻擊。  
   
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>使用 X509 憑證取代 NTLM  
- WCF 提供兩個對等驗證機制：X509 憑證 （對等通道所使用） 和從 Kerberos SSPI 交涉降級至 NTLM 所在的 Windows 驗證。  相較於 NTLM，使用 1024 位元以上的金鑰進行的憑證式驗證較為理想，因為：  
+ WCF 提供兩種對等驗證機制，分別是 X509 憑證 (用於對等通道) 以及 Windows 驗證，後者的使用案例中，SSPI 交涉會從 Kerberos 降級為 NTLM。  相較於 NTLM，使用 1024 位元以上的金鑰進行的憑證式驗證較為理想，因為：  
   
 - 雙向驗證的可用性  
   
 - 使用更強的密碼編譯演算法  
   
 - 更不容易利用轉送的 X509 憑證  
-   
+
 ## <a name="always-revert-after-impersonation"></a>在模擬完畢後一律還原  
  在使用可啟用用戶端模擬的 API 時，請務必還原成原始身分識別。 例如，在使用 <xref:System.Security.Principal.WindowsIdentity> 和 <xref:System.Security.Principal.WindowsImpersonationContext> 時，請使用 C# `using` 陳述式或 Visual Basic `Using` 陳述式，如下列程式碼所示。 <xref:System.Security.Principal.WindowsImpersonationContext> 類別會實作 <xref:System.IDisposable> 介面，因此 Common Language Runtime (CLR) 會在程式碼離開 `using` 區塊後，自動還原成原始身分識別。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "64755225"
  請務必信任您的中繼資料來源，並確認中繼資料未遭受任何竄改。 使用 HTTP 通訊協定擷取的中繼資料會以純文字傳送出去且可以竄改。 如果服務使用 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> 和 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A> 屬性，請以服務建立者提供的 URL 來使用 HTTPS 通訊協定下載資料。  
   
 ## <a name="publish-metadata-using-security"></a>使用安全性發行中繼資料  
- 若要預防服務的已發行中繼資料遭到竄改，請使用傳輸或訊息層級的安全性來保護中繼資料交換端點的安全。 如需詳細資訊，請參閱 <<c0> [ 發行中繼資料端點](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)和[How to:發行服務，使用程式碼的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。  
+ 若要預防服務的已發行中繼資料遭到竄改，請使用傳輸或訊息層級的安全性來保護中繼資料交換端點的安全。 如需詳細資訊，請參閱[發行中繼資料端點](../../../../docs/framework/wcf/publishing-metadata-endpoints.md)和[如何：使用程式碼發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。  
   
 ## <a name="ensure-use-of-local-issuer"></a>確定本機簽發者的用途  
  如果已指定特定繫結的簽發者位址和繫結，這時使用該繫結的端點就不會使用該本機簽發者。 預期一定要使用該本機簽發者的用戶端應該要確定自己沒有使用這類繫結，否則它們就會修改繫結，進而使得簽發者位址成為 null。  
@@ -58,6 +58,6 @@ ms.locfileid: "64755225"
   
 ## <a name="see-also"></a>另請參閱
 
-- [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
+- [安全注意事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
+- [資料的安全注意事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
 - [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

@@ -2,12 +2,12 @@
 title: '! (NOT) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: a1447a34-df06-4393-93c3-0612ebd41abc
-ms.openlocfilehash: 7755219c5238f78e59332c508643fe2ae1f5096f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 0b69d4cb64adc1f9232631d50ec42af0d1ba47e3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319524"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150125"
 ---
 # <a name="-not-entity-sql"></a>! (NOT) (Entity SQL)
 執行 `Boolean` 運算式的否定運算。  
@@ -18,7 +18,7 @@ ms.locfileid: "72319524"
 NOT boolean_expression  
 -- or  
 ! boolean_expression  
-``` 
+```
   
 ## <a name="arguments"></a>引數  
  `boolean_expression`  
@@ -36,6 +36,6 @@ NOT boolean_expression
   
  [!code-sql[DP EntityServices Concepts#NOT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#not)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Entity SQL 參考](entity-sql-reference.md)

@@ -2,12 +2,12 @@
 title: 工作流程探索範例
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: eafe031b71836eae8de5ce15cd669459c866e89f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: b3a2d88028f3854746d4e1d2fad80aae4f6be7be
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094757"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143482"
 ---
 # <a name="workflow-discovery-sample"></a>工作流程探索範例
 此範例示範如何讓工作流程服務可以探索，以及如何撰寫可搜尋特定服務的自訂程式碼活動。  
@@ -20,15 +20,15 @@ ms.locfileid: "77094757"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 這個範例使用 HTTP 端點，其必須具有適當的 URL Acl 才能執行（如需詳細資訊，請參閱設定[HTTP 和 HTTPS](../feature-details/configuring-http-and-https.md) ）。 以更高的命令提示字元執行下列命令應該就能加入適當的 ACL。 如果您的 shell 不了解變數格式，請以您的網域和使用者名稱取代下列引數。  
+1. 此示例使用 HTTP 終結點，這些終結點必須具有正確的 URL ACL 才能運行（有關詳細資訊[，請參閱配置 HTTP 和 HTTPS）。](../feature-details/configuring-http-and-https.md) 以更高的命令提示字元執行下列命令應該就能加入適當的 ACL。 如果您的 shell 不了解變數格式，請用域和使用者名替換以下參數。  
   
-     **netsh HTTP add urlacl url =http://+:8000/ 使用者 =% DOMAIN%\\% UserName%**  
+     **netsh HTTP 添加 urlacl url=http://+:8000/ \\使用者\%域% %使用者名%**  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\WorkflowDiscovery`

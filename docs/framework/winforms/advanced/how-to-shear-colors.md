@@ -1,5 +1,5 @@
 ---
-title: 作法：分歧色彩
+title: 如何：切變色彩
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: b390caf644b86de0001387b2c3f41503fd34759a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 825e5a90ebb0d9df3b894ce7bd353e917b676939
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593204"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142390"
 ---
-# <a name="how-to-shear-colors"></a>作法：分歧色彩
-切變增加，或另一個色彩元件等比例的量減少色彩元件。 例如，請考慮其中紅色元件會增加一倍的藍色元件值的轉換。 在這類轉換 （0.7，0.5，1），就會變成 （0.2，0.5，1） 的色彩。 新的紅色元件是 0.2 版 + (1/2)(1) = 0.7。  
+# <a name="how-to-shear-colors"></a>如何：切變色彩
+剪切會增加或減少顏色分量，以與另一種顏色分量成正比。 例如，考慮紅色分量增加藍色分量值一半的轉換。 在這樣的轉換下，顏色（0.2，0.5，1）將成為（0.7，0.5，1）。 新的紅色分量為 0.2 = （1/2）（1） = 0.7。  
   
 ## <a name="example"></a>範例  
- 下列範例會建構<xref:System.Drawing.Image>ColorBars4.bmp 檔案中的物件。 然後程式碼會套用至映像中的每個像素上的一段所述的切變轉換。  
+ 下面的示例從檔 ColorBars4.bmp 構造物件<xref:System.Drawing.Image>。 然後，代碼將前一段中描述的剪切變換應用於圖像中的每個圖元。  
   
- 下圖顯示原始的映像，在左邊和分歧的映像，在右側： 
+ 下圖顯示了左側的原始圖像和右側的謝線圖像：
   
- ![使用彩色的等量分散-並存說明原始映像和分歧的映像的兩個正方形。](./media/how-to-shear-colors/original-image-sheared-image.png)  
+ ![兩個正方形，帶彩色條紋並排顯示原始圖像和謝線圖像。](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
- 下表列出四個橫條的色彩向量之前, 和之後切變的轉換。  
+ 下表列出了剪切變換前後四個條形的顏色向量。  
   
-|原始|修剪|  
+|原始|剪切|  
 |--------------|-------------|  
 |(0, 0, 1, 1)|(0.5, 0, 1, 1)|  
 |(0.5, 1, 0.5, 1)|(0.75, 1, 0.5, 1)|  
@@ -38,11 +38,11 @@ ms.locfileid: "65593204"
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。 取代`ColorBars.bmp`映像名稱和您系統上有效的路徑。  
+ 前面的示例設計用於 Windows 表單，它需要<xref:System.Windows.Forms.PaintEventArgs>`e`，這是事件處理常式的<xref:System.Windows.Forms.Control.Paint>參數。 替換為`ColorBars.bmp`系統上有效的圖像名稱和路徑。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
-- [為影像重新著色](recoloring-images.md)
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [將影像重新著色](recoloring-images.md)

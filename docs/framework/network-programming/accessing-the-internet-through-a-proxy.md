@@ -13,18 +13,18 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 ms.openlocfilehash: 76566d06cac81d8ba4138369c6ee3ef807a99634
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71049053"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>透過 Proxy 存取網際網路
 如果您的網站使用 Proxy 來提供網際網路存取，則您必須設定 Proxy 執行個體，使您的應用程式能夠與 Web Proxy 進行通訊。  
   
- 本節包括下列主題：  
+ 本節包含下列主題：  
   
-- [Proxy 組態](proxy-configuration.md)  
+- [代理配置](proxy-configuration.md)  
   
 - [自動 Proxy 偵測](automatic-proxy-detection.md)  
   
@@ -35,4 +35,4 @@ ms.locfileid: "71049053"
 ## <a name="see-also"></a>另請參閱
 
 - [使用應用程式通訊協定](using-application-protocols.md)
-- [以 .NET Framework 進行網路程式設計](index.md)
+- [.NET 框架中的網路程式設計](index.md)

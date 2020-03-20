@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 143cc0f4566d86f1d42ebd11063f9af3c1ec331f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 75a585efcdf316f407f3617fef8e1e279dcd922d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802436"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143209"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -59,15 +59,15 @@ ms.locfileid: "74802436"
  工作架構非同步模式是實作非同步作業的慣用方式，因為這是最簡單且最直接的方式。 若要使用這個方法，只需實作服務作業並指定 Task\<T> 的傳回類型，其中 T 是由邏輯作業傳回的類型。 例如：  
   
 ```csharp  
-public class SampleService:ISampleService   
-{   
+public class SampleService:ISampleService
+{
    // ...  
-   public async Task<string> SampleMethodTaskAsync(string msg)   
-   {   
-      return Task<string>.Factory.StartNew(() =>   
-      {   
-         return msg;   
-      });   
+   public async Task<string> SampleMethodTaskAsync(string msg)
+   {
+      return Task<string>.Factory.StartNew(() =>
+      {
+         return msg;
+      });
    }  
    // ...  
 }  
@@ -110,7 +110,7 @@ public class AsyncExample
  如需事件架構非同步模式的詳細資訊，請參閱[事件架構非同步模式](../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)。  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>IAsyncResult 非同步模式  
- 服務作業可以使用 .NET Framework 非同步程式設計模式來以非同步方式執行，並將 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 屬性設定為 `true`來標記 `<Begin>` 的方法。 在此情況下，會使用和同步作業相同的形式，在中繼資料中公開非同步作業：非同步作業會公開為具有要求訊息和相關聯之回應訊息的單一作業。 用戶端程式設計模型接著就會做出選擇。 只要在叫用服務時發生要求/回應訊息交換，這些程式設計模型就會將此模式表示為同步作業或非同步作業。  
+ 可以使用 .NET Framework 非同步程式設計模式以非同步方式實現服務操作，`<Begin>`並使用<xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>屬性設置為`true`標記方法。 在此情況下，會使用和同步作業相同的形式，在中繼資料中公開非同步作業：非同步作業會公開為具有要求訊息和相關聯之回應訊息的單一作業。 用戶端程式設計模型接著就會做出選擇。 只要在叫用服務時發生要求/回應訊息交換，這些程式設計模型就會將此模式表示為同步作業或非同步作業。  
   
  一般而言，基於系統的非同步本質，您不應該相依於執行緒。  將資料傳遞至作業分派處理之各種階段最可靠的方式就是使用延伸模組。  
   
@@ -174,25 +174,25 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  當完成時，Svcutil.exe 會產生 WCF 用戶端類別，其中的事件基礎結構能夠呼叫應用程式去實作與指派事件處理常式，以接收回應並採取適當的動作。 如需完整範例，請參閱[如何：以非同步方式呼叫服務作業](./feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
- 不過，事件架構非同步模型僅適用于 .NET Framework 3.5。 此外，在使用 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>建立 WCF 用戶端通道時，即使在 .NET Framework 3.5 中也不支援。 透過 WCF 用戶端通道物件，您必須使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 物件以非同步方式叫用您的作業。 若要使用此方法，請使用 [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 指定 **/async** 命令選項，如下列範例所示。  
+ 但是，基於事件的非同步模型僅在 .NET 框架 3.5 中可用。 此外，即使在 .NET 框架 3.5 中，使用 創建 WCF 用戶端通道也不受<xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>支援。 透過 WCF 用戶端通道物件，您必須使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 物件以非同步方式叫用您的作業。 若要使用此方法，請使用 [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) 指定 **/async** 命令選項，如下列範例所示。  
   
 ```console  
-svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
+svcutil http://localhost:8000/servicemodelsamples/service/mex /async
 ```  
   
  這會產生服務合約，其中的每個作業會模型化為其 `<Begin>` 屬性會設為 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 的 `true` 方法，和對應的 `<End>` 方法。 如需使用 <xref:System.ServiceModel.ChannelFactory%601> 的完整範例，請參閱[如何：使用通道處理站以非同步方式呼叫作業](./feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)。  
   
- 無論何種情況下，即使是以同步方式實作服務，應用程式仍可以使用非同步方式叫用作業，而透過相同的方式，應用程式可以使用相同的模式，以非同步方式叫用本機同步方法。 執行作業的方式對用戶端來說並不重要;回應訊息抵達時，其內容會分派至用戶端的非同步 <`End`> 方法，而用戶端則會抓取資訊。  
+ 無論何種情況下，即使是以同步方式實作服務，應用程式仍可以使用非同步方式叫用作業，而透過相同的方式，應用程式可以使用相同的模式，以非同步方式叫用本機同步方法。 操作的實現方式對用戶端沒有重要意義;當回應訊息到達時，其內容將發送到用戶端的非同步<>`End`方法，用戶端檢索資訊。  
   
 ### <a name="one-way-message-exchange-patterns"></a>單向訊息交換模式  
- 您也可以建立非同步訊息交換模式，而在這個模式中，用戶端或服務可以不管另一端，以任何方向傳送單向作業 (這是 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 為 `true` 的作業，而且沒有相關聯的回應) （這會搭配使用雙工訊息交換模式與單向訊息）。在此情況下，服務合約會指定單向訊息交換，其中任一端都可以適當地實作為非同步呼叫或執行。 一般來說，當合約為單向訊息交換時，就可以大量地非同步實作，因為一旦傳送訊息時，應用程式不會等待回覆就可繼續執行其他工作。  
+ 您也可以建立非同步訊息交換模式，而在這個模式中，用戶端或服務可以不管另一端，以任何方向傳送單向作業 (這是 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 為 `true` 的作業，而且沒有相關聯的回應)  （這使用雙工消息交換模式與單向消息。在這種情況下，服務協定指定一個單向消息交換，任何一方都可以根據需要實現非同步調用或實現。 一般來說，當合約為單向訊息交換時，就可以大量地非同步實作，因為一旦傳送訊息時，應用程式不會等待回覆就可繼續執行其他工作。  
   
 ### <a name="event-based-asynchronous-clients-and-message-contracts"></a>事件架構非同步用戶端和訊息合約  
  事件架構非同步模型的設計方針指出，如果傳回多個值，則其中一個值會傳回做為 `Result` 屬性，其他值則傳回做為 <xref:System.EventArgs> 物件上的屬性。 這麼做的結果就是，如果用戶端使用事件架構非同步命令選項匯入中繼資料，且作業傳回多個值，則預設 <xref:System.EventArgs> 物件會傳回一個值做為 `Result` 屬性，而其餘則做為 <xref:System.EventArgs> 物件的屬性。  
   
  如果您要以 `Result` 屬性的形式接收訊息物件，並讓傳回值以該物件屬性的形式呈現，請使用 **/messageContract** 命令選項。 這會產生一個簽章，此簽章會將回應訊息傳回做為 `Result` 物件的 <xref:System.EventArgs> 屬性。 然後，所有的內部傳回值都成為回應訊息物件的屬性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

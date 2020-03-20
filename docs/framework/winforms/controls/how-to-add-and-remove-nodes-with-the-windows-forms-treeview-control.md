@@ -1,5 +1,5 @@
 ---
-title: 使用 TreeView 控制項加入和移除節點
+title: 使用樹狀檢視控制項添加和刪除節點
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: 02b3a7286798c6f2a6426e09c8fc6c18b74a6bf0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f1e74e6d2f827167c32a6955b3010b59cb2f85b8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731956"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142208"
 ---
 # <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>如何：使用 Windows Form TreeView 控制項加入和移除節點
-Windows Forms <xref:System.Windows.Forms.TreeView> 控制項會在其 <xref:System.Windows.Forms.TreeView.Nodes%2A> 集合中儲存最上層節點。 每個 <xref:System.Windows.Forms.TreeNode> 也有自己的 <xref:System.Windows.Forms.TreeNode.Nodes%2A> 集合，用來儲存其子節點。 這兩個集合屬性都屬於 <xref:System.Windows.Forms.TreeNodeCollection>類型，它提供標準集合成員，可讓您在節點階層的單一層級上新增、移除和重新排列節點。  
+Windows 表單<xref:System.Windows.Forms.TreeView>控制項在其<xref:System.Windows.Forms.TreeView.Nodes%2A>集合中存儲頂級節點。 每個<xref:System.Windows.Forms.TreeNode>都有自己的<xref:System.Windows.Forms.TreeNode.Nodes%2A>集合來存儲其子節點。 這兩個集合屬性都是<xref:System.Windows.Forms.TreeNodeCollection>類型的 ，它提供標準集合成員，使您能夠在節點層次結構的單個級別添加、刪除和重新排列節點。  
   
-### <a name="to-add-nodes-programmatically"></a>以程式設計方式加入節點  
+### <a name="to-add-nodes-programmatically"></a>以程式設計方式添加節點  
   
-1. 使用樹狀檢視之 <xref:System.Windows.Forms.TreeView.Nodes%2A> 屬性的 <xref:System.Windows.Forms.TreeNodeCollection.Add%2A> 方法。  
+1. 使用樹<xref:System.Windows.Forms.TreeNodeCollection.Add%2A>視圖<xref:System.Windows.Forms.TreeView.Nodes%2A>屬性的方法。  
   
     ```vb  
     ' Adds new node as a child node of the currently selected node.  
@@ -43,9 +43,9 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 控制項會在其 <xref:Syst
     treeView1->SelectedNode->Nodes->Add(newNode);  
     ```  
   
-### <a name="to-remove-nodes-programmatically"></a>以程式設計方式移除節點  
+### <a name="to-remove-nodes-programmatically"></a>以程式設計方式刪除節點  
   
-1. 使用樹狀檢視之 <xref:System.Windows.Forms.TreeView.Nodes%2A> 屬性的 <xref:System.Windows.Forms.TreeNodeCollection.Remove%2A> 方法來移除單一節點，或 <xref:System.Windows.Forms.TreeNodeCollection.Clear%2A> 方法來清除所有節點。  
+1. 使用樹<xref:System.Windows.Forms.TreeNodeCollection.Remove%2A>視圖<xref:System.Windows.Forms.TreeView.Nodes%2A>屬性的方法刪除單個節點，或者<xref:System.Windows.Forms.TreeNodeCollection.Clear%2A>使用 方法清除所有節點。  
   
     ```vb  
     ' Removes currently selected node, or root if nothing is selected.  
@@ -55,7 +55,7 @@ Windows Forms <xref:System.Windows.Forms.TreeView> 控制項會在其 <xref:Syst
     ```  
   
     ```csharp  
-    // Removes currently selected node, or root if nothing   
+    // Removes currently selected node, or root if nothing
     // is selected.  
     treeView1.Nodes.Remove(treeView1.SelectedNode);  
     // Clears all nodes.  

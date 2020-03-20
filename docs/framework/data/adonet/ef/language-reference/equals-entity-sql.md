@@ -2,12 +2,12 @@
 title: = (等號) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
-ms.openlocfilehash: 5cdfd35450514a9699a39cf78f64c0fa6b7d5f39
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 101dccd40e9197c7cf0795ccb80ded367676842d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833844"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150308"
 ---
 # <a name="-equals-entity-sql"></a>= (等號) (Entity SQL)
 比較兩個運算式是否相等。  
@@ -16,15 +16,15 @@ ms.locfileid: "71833844"
   
 ```sql  
 expression = expression  
--- or   
+-- or
 expression == expression  
 ```  
   
 ## <a name="arguments"></a>引數  
  `expression`  
- 任何有效的運算式。 兩個運算式都必須有可隱含轉換的資料型別。  
+ 任何有效的運算式。 這兩個運算式的類型，都必須是可以隱含轉換的資料類型。  
   
-## <a name="result-types"></a>結果型別  
+## <a name="result-types"></a>結果類型  
  如果左運算式等於右運算式則為`true` ；否則為 `false`。  
   
 ## <a name="remarks"></a>備註  

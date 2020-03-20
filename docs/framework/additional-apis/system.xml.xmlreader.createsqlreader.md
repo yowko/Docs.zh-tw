@@ -1,5 +1,5 @@
 ---
-title: XmlReader. CreateSqlReader 方法（system.string）
+title: XmlReader.createSqlReader 方法（系統.Xml）
 ms.date: 10/17/2019
 topic_type:
 - apiref
@@ -9,19 +9,19 @@ api_location:
 - system.xml.dll
 api_type:
 - Assembly
-ms.openlocfilehash: c65ef7c073175488c11c5e912a44d46fd4319209
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 7bd2ef5158516acede47f73f9937d06159bc16c9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215455"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155735"
 ---
 # <a name="xmlreadercreatesqlreader-method"></a>XmlReader.CreateSqlReader 方法
 
 使用剖析用的指定資料流、設定和內容資訊，建立新的 <xref:System.Xml.XmlReader> 執行個體。
 
 ```csharp
-internal static XmlReader CreateSqlReader(Stream input, 
+internal static XmlReader CreateSqlReader(Stream input,
   XmlReaderSettings settings, XmlParserContext inputContext)
 ```
 
@@ -44,14 +44,14 @@ internal static XmlReader CreateSqlReader(Stream input,
 ## <a name="remarks"></a>備註
 
 > [!WARNING]
-> `XmlReader.CreateSqlReader` 方法是內部的，而且不適合直接在程式碼中使用。
+> 該方法`XmlReader.CreateSqlReader`是內部的，不用於直接在代碼中使用。
 >
-> 在任何情況下，Microsoft 不支援在生產應用程式中使用此方法。
+> 在任何情況下，Microsoft 都不支援在生產應用程式中使用此方法。
 
 ## <a name="requirements"></a>需求
 
-**命名空間：** <xref:System.Xml>
+**命名空間：**<xref:System.Xml>
 
-**元件：** .Xml .dll
+**裝配：** 系統.Xml.dll
 
-**.NET Framework 版本：** 自2.0 開始提供。
+**.NET 框架版本：** 自 2.0 起可用。

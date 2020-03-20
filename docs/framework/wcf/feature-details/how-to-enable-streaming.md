@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: bd1a52f1ce0f656af79928a20e3badc73661e89a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d1eaa1ebf41ef86478dda795b3b199239cd37b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635309"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184937"
 ---
 # <a name="how-to-enable-streaming"></a>HOW TO：啟用資料流
-Windows Communication Foundation (WCF) 可以傳送使用緩衝或資料流傳輸的訊息。 在預設的緩衝傳輸模式中，必須完整傳遞訊息，接收者才能讀取。 在資料流傳輸模式中，接收者不需等到訊息完全送達，就可以開始處理訊息。 當資訊的傳遞很漫長，但是可依序列處理時，使用資料流模式將十分有幫助。 當訊息太龐大而無法完整加以緩衝時，資料流模式也很有用處。  
+Windows 通信基礎 （WCF） 可以使用緩衝傳輸或資料流發送消息。 在預設的緩衝傳輸模式中，必須完整傳遞訊息，接收者才能讀取。 在資料流傳輸模式中，接收者不需等到訊息完全送達，就可以開始處理訊息。 當資訊的傳遞很漫長，但是可依序列處理時，使用資料流模式將十分有幫助。 當訊息太龐大而無法完整加以緩衝時，資料流模式也很有用處。  
   
  若要啟用資料流處理，請適當定義 `OperationContract` 並在傳輸層級啟用資料流處理。  
   
@@ -48,7 +48,7 @@ Windows Communication Foundation (WCF) 可以傳送使用緩衝或資料流傳�
   
     1. 範例中的下列組態片段示範將 `TransferMode` 屬性設定為會在 `basicHttpBinding` 和自訂 HTTP 繫結上進行資料流處理。  
   
-         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
+         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]
   
     2. 下列程式碼片段示範將 `TransferMode` 屬性設定為會在 `basicHttpBinding` 和自訂 HTTP 繫結上進行資料流處理。  
   
@@ -76,5 +76,5 @@ Windows Communication Foundation (WCF) 可以傳送使用緩衝或資料流傳�
   
 ## <a name="see-also"></a>另請參閱
 
-- [大型資料和資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
-- [資料流](../../../../docs/framework/wcf/samples/stream.md)
+- [大資料和流式處理](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+- [流](../../../../docs/framework/wcf/samples/stream.md)

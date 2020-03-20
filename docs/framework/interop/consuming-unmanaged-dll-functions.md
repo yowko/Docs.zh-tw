@@ -14,11 +14,11 @@ helpviewer_keywords:
 - DLL functions
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 ms.openlocfilehash: 7ec1f129dcc19300dd5a4e7c5e627d9e0edf29a1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123656"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79399970"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用 Unmanaged DLL 函式
 平台叫用服務，可讓受控碼呼叫實作在動態連結程式庫 (DLL) 中的非受控函式，如 Windows API 中的函式。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
@@ -39,7 +39,7 @@ ms.locfileid: "73123656"
   
      [Visual Basic] 搭配使用**宣告**陳述式與**函式**和 **Lib** 關鍵字。 在某些罕見的情況下，您可以搭配使用 **DllImportAttribute** 與**共用函式**關鍵字。 關於這種情況本節會於稍後加以說明。  
   
-     [C#] 使用 **DllImportAttribute** 來識別 DLL 和函式。 以**靜態**和**外部**修飾詞來標記方法。  
+     [C]使用**DllImport屬性**標識 DLL 和函數。 以**靜態**和**外部**修飾詞來標記方法。  
   
      [C#] 使用 **DllImportAttribute** 來識別 DLL 和函式。 以**外部 "C"** 來標記包裝函式方法或函式。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73123656"
  如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)。  
   
 ## <a name="a-closer-look-at-platform-invoke"></a>進一步了解平台叫用  
- 平台叫用依賴中繼資料來找出被匯出的函式，並在執行階段封送處理其引數。 下圖顯示這個程序。  
+ 平台叫用依賴中繼資料來找出被匯出的函式，並在執行階段封送處理其引數。 下圖顯示這項程序。  
   
  ![顯示平台叫用呼叫的圖表。](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   
@@ -69,8 +69,8 @@ ms.locfileid: "73123656"
   
  平台叫用會擲回由 Unmanaged 函式產生的例外狀況給 Managed 呼叫端。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [與 Unmanaged 程式碼互通](index.md)
+- [與非託管代碼交互操作](index.md)
 - [平台叫用範例](platform-invoke-examples.md)
 - [Interop 封送處理](interop-marshaling.md)

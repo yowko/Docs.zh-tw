@@ -16,10 +16,10 @@ helpviewer_keywords:
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
 ms.openlocfilehash: 3e0b5cd58270cec758db5d4dad6f3ad48962921a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047911"
 ---
 # <a name="internet-authentication"></a>網際網路驗證
@@ -41,6 +41,6 @@ ms.locfileid: "71047911"
   
 ## <a name="see-also"></a>另請參閱
 
-- [基本和摘要式驗證](basic-and-digest-authentication.md)
-- [NTLM 與 Kerberos 驗證](ntlm-and-kerberos-authentication.md)
+- [基本和摘要身份驗證](basic-and-digest-authentication.md)
+- [NTLM 和 Kerberos 身份驗證](ntlm-and-kerberos-authentication.md)
 - [網路程式設計的安全性](security-in-network-programming.md)

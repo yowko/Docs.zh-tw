@@ -9,21 +9,21 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 71dbf395f43c8028a703a342c032f2b8d022a61c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 14f2242ab55795c74fa169382fef846bc0e60ace
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921287"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184901"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>HOW TO：讓 WCF 能夠存取 X.509 憑證
-若要讓 Windows Communication Foundation （WCF）可以存取 x.509 憑證，應用程式代碼必須指定憑證存放區名稱和位置。 在某些狀況下，處理序身分識別必須能夠存取包含與 X.509 憑證相關聯之私密金鑰的檔案。 若要取得與憑證存放區中的 x.509 憑證相關聯的私密金鑰，WCF 必須擁有執行這項操作的許可權。 根據預設，只有擁有人和系統帳戶能夠存取憑證的私密金鑰。  
+要使 X.509 憑證可供 Windows 通信基礎 （WCF） 訪問，應用程式代碼必須指定憑證存放區名稱和位置。 在某些狀況下，處理序身分識別必須能夠存取包含與 X.509 憑證相關聯之私密金鑰的檔案。 要獲取憑證存放區中與 X.509 憑證關聯的私密金鑰，WCF 必須具有執行此操作的許可權。 根據預設，只有擁有人和系統帳戶能夠存取憑證的私密金鑰。  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>讓 WCF 能夠存取 X.509 憑證  
   
-1. 授與執行 WCF 所用的帳戶，其中包含與 x.509 憑證相關聯的私密金鑰之檔案的讀取權限。  
+1. 向 WCF 運行對包含與 X.509 憑證關聯的私密金鑰的檔的讀取存取許可權的帳戶。  
   
-    1. 判斷 WCF 是否需要 x.509 憑證之私密金鑰的讀取權限。  
+    1. 確定 WCF 是否需要對 X.509 憑證的私密金鑰進行讀取存取。  
   
          下表詳細列出在使用 X.509 憑證時是否必須要提供私密金鑰。  
   
@@ -41,37 +41,37 @@ ms.locfileid: "76921287"
          [!code-csharp[x509Accessible#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/x509accessible/cs/source.cs#1)]
          [!code-vb[x509Accessible#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/x509accessible/vb/source.vb#1)]  
   
-    3. 使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具，判斷憑證的私密金鑰位於電腦上的哪個位置。  
+    3. 使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具確定證書的私密金鑰位於電腦上的位置。  
   
-         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具需要憑證存放區名稱、憑證存放區位置，以及可唯一識別憑證的內容。 此工具會接受憑證的主體名稱或是其指紋來做為唯一識別項。 如需如何判斷憑證指紋的詳細資訊，請參閱[如何：取出憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
+         [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具需要憑證存放區名稱、憑證存放區位置以及唯一標識證書的內容。 此工具會接受憑證的主體名稱或是其指紋來做為唯一識別項。 有關如何確定證書的指紋的詳細資訊，請參閱[如何：檢索證書的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
   
-         下列程式碼範例會使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具，以 `46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`指紋的 `CurrentUser`，來判斷憑證在 `My` 存放區中的私密金鑰位置。  
+         以下代碼示例使用[FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)工具確定`My``CurrentUser`存儲中的證書的私密金鑰的位置，並帶有 的`46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d`指紋。  
   
         ```console
         findprivatekey.exe My CurrentUser -t "46 dd 0e 7a ed 0b 7a 31 9b 02 a3 a0 43 7a d8 3f 60 40 92 9d" -a  
         ```  
   
-    4. 判斷正在執行 WCF 的帳戶。  
+    4. 確定 WCF 正在運行的帳戶。  
   
-         下表詳細說明針對指定案例執行 WCF 所使用的帳戶。  
+         下表詳細介紹了為給定方案運行 WCF 的帳戶。  
   
-        |情節|程序識別|  
+        |狀況|處理序身分識別|  
         |--------------|----------------------|  
         |用戶端 (主控台或 WinForms 應用程式)。|目前登入的使用者。|  
         |自我裝載的服務。|目前登入的使用者。|  
-        |裝載于 IIS 6.0 （Windows Server 2003）或 IIS 7.0 （Windows Vista）中的服務。|網路服務|  
-        |裝載于 IIS 5.x （Windows XP）中的服務。|由 Machine.config 檔中的 `<processModel>` 項目控制。 預設帳戶是 ASPNET。|  
+        |託管在 IIS 6.0（Windows 伺服器 2003）或 IIS 7.0（Windows Vista）中的服務。|NETWORK SERVICE|  
+        |在 IIS 5.X （Windows XP） 中託管的服務。|由 Machine.config 檔中的 `<processModel>` 項目控制。 預設帳戶是 ASPNET。|  
   
-    5. 使用像是 icacls 的工具，將包含私密金鑰之檔案的讀取權限授與執行 WCF 的帳戶。  
+    5. 使用 icacls.exe 等工具授予對包含 WCF 運行帳戶的私密金鑰的檔的讀取存取許可權。  
   
-         下列程式碼範例會編輯指定檔案的任意存取控制清單（DACL），以將檔案的讀取（： R）存取權授與網路服務帳戶。  
+         以下代碼示例編輯指定檔的可自由存取控制清單 （DACL）， 以授予網路服務帳戶對該檔的讀取 （：R） 存取權限。  
   
-        ```console 
+        ```console
         icacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /grant "NETWORK SERVICE":R  
         ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [如何：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
-- [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [HOW TO：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: a29f0ca6d235250ac1f41e686178b2d6affcd8a0
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: 9ec5fa379556dedeaa7a35e34f004340ab47a39c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804446"
 ---
 ### <a name="calling-createdefaultauthorizationcontext-with-a-null-argument-has-changed"></a>使用 Null 引數呼叫 CreateDefaultAuthorizationContext 已變更
@@ -12,8 +12,7 @@ ms.locfileid: "67804446"
 |---|---|
 |詳細資料|使用 Null authorizationPolicies 引數呼叫 <xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=name> 所傳回的 <xref:System.IdentityModel.Policy.AuthorizationContext?displayProperty=name> 實作，已變更其在 .NET Framework 4.6 中的實作。|
 |建議|在少數情況下，使用自訂驗證的 WCF 應用程式，在行為上可能會有些許差異。 在此情況下，您可使用下列兩種方式之一還原舊版行為：<ol><li>以 .NET Framework 4.6 之前的舊版為目標，重新編譯您的應用程式。 對於裝載在 IIS 上的服務，請使用 &lt;httpRuntime targetFramework=&quot;x.x&quot; /&gt; 項目，將目標設為舊版 .NET Framework。</li><li>將下列行新增至 app.config 檔案中的 <code>&lt;appSettings&gt;</code> 區段：<code>&lt;add key=&quot;appContext.SetSwitch:Switch.System.IdentityModel.EnableCachedEmptyDefaultAuthorizationContext&quot; value=&quot;true&quot; /&gt;</code></li></ol>|
-|範圍|次要|
+|影響範圍|Minor|
 |版本|4.6|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.IdentityModel.Policy.AuthorizationContext.CreateDefaultAuthorizationContext(System.Collections.Generic.IList{System.IdentityModel.Policy.IAuthorizationPolicy})?displayProperty=nameWithType></li></ul>|
-

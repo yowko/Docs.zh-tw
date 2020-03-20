@@ -2,21 +2,21 @@
 title: 內容交換通訊協定
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: 19780cccc74f8c3615dc844e47be7613ca5f8bc1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 00adb68d96f77ce0953811d13b5377ec4ed1e0ea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69911197"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185256"
 ---
 # <a name="context-exchange-protocol"></a>內容交換通訊協定
-本節說明 Windows Communication Foundation (WCF) release .NET Framework 3.5 版中引進的內容交換通訊協定。 這項通訊協定可讓用戶端通道接受服務所提供的內容，並透過相同的用戶端通道執行個體將之套用到該服務的後續所有要求。 內容交換通訊協定的執行可以使用下列兩種機制的其中一種, 在伺服器與用戶端之間傳播內容:HTTP cookie 或 SOAP 標頭。  
+本節介紹 Windows 通信基礎 （WCF） 版本 .NET 框架版本 3.5 中引入的上下文切換式通訊協定。 這項通訊協定可讓用戶端通道接受服務所提供的內容，並透過相同的用戶端通道執行個體將之套用到該服務的後續所有要求。 內容交換通訊協定的實作可透過 HTTP Cookie 或 SOAP 標頭這兩種機制，在伺服器與用戶端之間傳播內容。  
   
  內容交換通訊協定可在自訂通道層中實作。 通道會透過 <xref:System.ServiceModel.Channels.ContextMessageProperty> 屬性，在應用程式層來回傳送內容。 至於端點之間的傳輸，內容值將在通道層上序列化為 SOAP 標頭，或是在代表 HTTP 要求和回應的訊息屬性之間來回轉換。 在第二個情況中，我們預期其中一個基礎通道層會將 HTTP 要求和回應訊息屬性個別轉換至 HTTP Cookie，反之亦然。 您可透過 <xref:System.ServiceModel.Channels.ContextExchangeMechanism> 上的 <xref:System.ServiceModel.Channels.ContextBindingElement> 屬性，選擇用來交換內容的機制。 有效值為 `HttpCookie` 或 `SoapHeader`。  
   
  在用戶端上，通道的執行個體可以依據通道屬性 <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> 上的設定，以兩種模式來運作。  
   
-## <a name="mode-1-channel-context-management"></a>模式 1:通道內容管理  
+## <a name="mode-1-channel-context-management"></a>模式 1：通道內容管理  
  當 <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> 設定為 `true` 時，這就是預設的模式。 在此模式中，內容通道會管理內容，並在其存留期間快取內容。 您可以呼叫 `IContextManager` 方法，透過通道屬性 `GetContext` 從通道擷取內容。 您也可以呼叫通道屬性上的 `SetContext` 方法，在開啟通道之前，使用特定內容預先初始化通道。 一旦通道透過內容初始化完畢，就無法重設。  
   
  下列為此模式中的不變量清單：  
@@ -32,7 +32,7 @@ ms.locfileid: "69911197"
   
 - 傳入訊息上的 <xref:System.ServiceModel.Channels.ContextMessageProperty> 一律為 null。  
   
-## <a name="mode-2-application-context-management"></a>模式 2:應用程式內容管理  
+## <a name="mode-2-application-context-management"></a>模式 2：應用程式內容管理  
  當 <xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> 設為 `false` 的時候，會變成這個模式。 在此模式中，內容通道不會管理內容。 應用程式需負責透過 <xref:System.ServiceModel.Channels.ContextMessageProperty> 來擷取、管理與套用內容。 任何嘗試呼叫 `GetContext` 或 `SetContext` 的行為都會導致 <xref:System.InvalidOperationException>。  
   
  不管選擇了哪一種模式，用戶端通道處理站都會支援 <xref:System.ServiceModel.Channels.IRequestChannel>、<xref:System.ServiceModel.Channels.IRequestSessionChannel> 和 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 訊息交換模式。  
@@ -56,7 +56,7 @@ ms.locfileid: "69911197"
 - 對 <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader> 來說，會產生下列判斷提示：  
   
     ```xml  
-    <IncludeContext   
+    <IncludeContext
     xmlns="http://schemas.microsoft.com/ws/2006/05/context"  
     protectionLevel="Sign" />  
     ```  

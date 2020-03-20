@@ -5,39 +5,39 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 460d4420d5faf849a8d05a94e0170aea384f69b4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b5498b8b88c7403ffe51256a57544261de3ace08
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452691"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186619"
 ---
 # <a name="toolbar-overview"></a>ToolBar 概觀
-<xref:System.Windows.Controls.ToolBar> 控制項是一組命令或控制項的容器，它們通常都是在其功能中相關。 <xref:System.Windows.Controls.ToolBar> 通常包含可叫用命令的按鈕。  
+<xref:System.Windows.Controls.ToolBar>控制項是一組命令或控制項的容器，這些命令或控制項通常與其功能相關。 通常<xref:System.Windows.Controls.ToolBar>包含調用命令的按鈕。  
 
-<a name="ToolBarControl"></a>   
+<a name="ToolBarControl"></a>
 ## <a name="toolbar-control"></a>ToolBar 控制項  
- <xref:System.Windows.Controls.ToolBar> 控制項將其名稱從類似橫條圖的按鈕或其他控制項的相片順序，改為單一資料列或資料行。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> 控制項提供溢位機制，其會將無法在大小限制的 <xref:System.Windows.Controls.ToolBar> 中自然符合的任何專案放入特殊的溢位區域中。 此外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> 控制項通常會與相關的 <xref:System.Windows.Controls.ToolBarTray> 控制項搭配使用，這會提供特殊的版面配置行為，並支援使用者起始的大小調整和排列工具列。  
+ 控制項<xref:System.Windows.Controls.ToolBar>將其名稱從類似條形的按鈕或其他控制項排列到單個行或列中。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.ToolBar>控制項提供溢出機制，將任何不自然適合在大小約束<xref:System.Windows.Controls.ToolBar>中的項放入特殊溢位區域域。 此外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.Controls.ToolBar>控制項通常與相關<xref:System.Windows.Controls.ToolBarTray>控制項一起使用，後者提供特殊的佈局行為，並支援使用者啟動的工具列大小調整和排列。  
   
-<a name="Creating_ToolBars"></a>   
+<a name="Creating_ToolBars"></a>
 ## <a name="specifying-the-position-of-toolbars-in-a-toolbartray"></a>指定 ToolBar 在 ToolBarTray 中的位置  
- 使用 [<xref:System.Windows.Controls.ToolBar.Band%2A>] 和 [<xref:System.Windows.Controls.ToolBar.BandIndex%2A> 屬性]，將 <xref:System.Windows.Controls.ToolBar> 放置在 <xref:System.Windows.Controls.ToolBarTray>中。 <xref:System.Windows.Controls.ToolBar.Band%2A> 表示 <xref:System.Windows.Controls.ToolBar> 放在其父 <xref:System.Windows.Controls.ToolBarTray>中的位置。 <xref:System.Windows.Controls.ToolBar.BandIndex%2A> 表示 <xref:System.Windows.Controls.ToolBar> 放在其寬線中的順序。 下列範例顯示如何使用這個屬性，將 <xref:System.Windows.Controls.ToolBar> 控制項放在 <xref:System.Windows.Controls.ToolBarTray>內。  
+ 使用<xref:System.Windows.Controls.ToolBar.Band%2A>和<xref:System.Windows.Controls.ToolBar.BandIndex%2A>屬性將<xref:System.Windows.Controls.ToolBar>放置在<xref:System.Windows.Controls.ToolBarTray>中。 <xref:System.Windows.Controls.ToolBar.Band%2A>指示 放置在其父<xref:System.Windows.Controls.ToolBar><xref:System.Windows.Controls.ToolBarTray>項 中的位置。 <xref:System.Windows.Controls.ToolBar.BandIndex%2A>指示 在其波段中放置<xref:System.Windows.Controls.ToolBar>的順序。 下面的示例演示如何使用此屬性將控制項放置在<xref:System.Windows.Controls.ToolBar>中。 <xref:System.Windows.Controls.ToolBarTray>  
   
  [!code-xaml[ToolBarExample#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#2)]  
   
-<a name="ToolBars_with_Overflow_Items"></a>   
+<a name="ToolBars_with_Overflow_Items"></a>
 ## <a name="toolbars-with-overflow-items"></a>具有溢位項目的 ToolBar  
- 通常 <xref:System.Windows.Controls.ToolBar> 控制項所包含的專案數超過工具列大小所能容納的數量。 當發生這種情況時，<xref:System.Windows.Controls.ToolBar> 會顯示溢位按鈕。 若要查看溢位專案，使用者可以按一下 [溢位] 按鈕，專案就會顯示在 <xref:System.Windows.Controls.ToolBar>底下的快顯視窗中。 下圖顯示具有溢位專案的 <xref:System.Windows.Controls.ToolBar>：  
+ 控制項<xref:System.Windows.Controls.ToolBar>包含的專案數通常超過工具列大小。 發生這種情況時，<xref:System.Windows.Controls.ToolBar>將顯示溢出按鈕。 要查看溢出項，使用者按一下溢出按鈕，這些專案將顯示在 下面的快顯視窗中<xref:System.Windows.Controls.ToolBar>。 下圖顯示了具有溢出項<xref:System.Windows.Controls.ToolBar>的：  
   
- ![顯示具有溢位專案之工具列的螢幕擷取畫面。](./media/toolbar-overview/toolbar-overflow-items.png)  
+ ![顯示具有溢出項的工具列的螢幕截圖。](./media/toolbar-overview/toolbar-overflow-items.png)  
   
- 您可以藉由將 [<xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType>] 附加屬性設定為 [<xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>]、[<xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>] 或 [<xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>]，指定將工具列上的專案放在溢位面板上的時機。 下列範例指定工具列上的最後四個按鈕應該一律位於溢位面板上。  
+ 通過將<xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType>附加屬性<xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType><xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>設置為 或，可以指定工具列上的項何時放置在溢出面板上。 <xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType> 下列範例指定工具列上的最後四個按鈕應該一律位於溢位面板上。  
   
  [!code-xaml[ToolBarExample#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBarExample/CS/Pane1.xaml#3)]  
   
- <xref:System.Windows.Controls.ToolBar> 在其 <xref:System.Windows.Controls.ControlTemplate>中使用 <xref:System.Windows.Controls.Primitives.ToolBarPanel> 和 <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>。  <xref:System.Windows.Controls.Primitives.ToolBarPanel> 會負責工具列上專案的版面配置。  <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel> 會負責 <xref:System.Windows.Controls.ToolBar>不符合的專案配置。 如需 <xref:System.Windows.Controls.ToolBar>的 <xref:System.Windows.Controls.ControlTemplate> 範例，請參閱  
+ 中的<xref:System.Windows.Controls.ToolBar>使用<xref:System.Windows.Controls.Primitives.ToolBarPanel>和<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>在其<xref:System.Windows.Controls.ControlTemplate>中 。  <xref:System.Windows.Controls.Primitives.ToolBarPanel>負責工具列上項的佈局。  <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>負責不適合 的項的佈局<xref:System.Windows.Controls.ToolBar>。 有關 的 。 <xref:System.Windows.Controls.ControlTemplate> <xref:System.Windows.Controls.ToolBar>  
   
- [ToolBar 樣式和範本](toolbar-styles-and-templates.md)。  
+ [工具列樣式和範本](toolbar-styles-and-templates.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

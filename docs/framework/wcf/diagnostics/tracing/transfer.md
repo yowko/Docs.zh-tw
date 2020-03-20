@@ -2,18 +2,18 @@
 title: 傳輸
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: c3f9420ac798bf2722f825d14ca64653127432b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0ebfff97cd33e7a588a1ab92399a97a0fbec039
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662877"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185698"
 ---
 # <a name="transfer"></a>傳輸
-本主題說明 Windows Communication Foundation (WCF) 的活動追蹤模型中的傳輸。  
+本主題介紹 Windows 通信基礎 （WCF） 活動跟蹤模型中的傳輸。  
   
 ## <a name="transfer-definition"></a>傳輸定義  
- 活動之間的傳輸表示在端點內相關活動中事件之間的因果關係。 當控制在這些活動之間流動時 (例如跨活動界限的方法呼叫)，有兩個活動會與傳輸相關。 在 WCF 中，當位元組傳入服務時，接聽活動會傳送到接收位元組活動在建立訊息物件。 如需端對端追蹤案例，以及其個別活動與追蹤設計的清單，請參閱 <<c0> [ 端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  
+ 活動之間的傳輸表示在端點內相關活動中事件之間的因果關係。 當控制在這些活動之間流動時 (例如跨活動界限的方法呼叫)，有兩個活動會與傳輸相關。 在 WCF 中，當服務上傳入位元組時，偵聽活動將傳輸到創建消息物件的接收位元組活動。 有關端到端跟蹤方案及其各自的活動和跟蹤設計的清單，請參閱端到端[跟蹤方案](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)。  
   
  若要發出傳輸追蹤，請使用追蹤來源的 `ActivityTracing` 設定，如同下列組態程式碼所示。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "64662877"
   
  當 M 和 N 之間具有控制流程時，就會從活動 M 將傳輸追蹤發出至活動 N。例如，由於跨活動界限的方法呼叫，N 就會執行 M 的部分工作。 N 可能已存在或已建立。 當 N 是執行 M 之部分工作的新活動時，M 就會繁衍 (Spawn) N。  
   
- 從 N 傳輸回 M 之後可能不會從 M 傳輸至 N。這是因為當 N 完成該工作時，M 可以繁衍 N 中的部分工作並且不會進行追蹤。 實際上，M 可以在 N 完成其工作之前就終止。 發生這種情況中的"Open ServiceHost"活動 (M) 會繁衍接聽項活動 (N)，並終止。 從 N 傳輸回 M 表示 N 已完成與 M 相關的工作。  
+ 從 N 傳輸回 M 之後可能不會從 M 傳輸至 N。這是因為當 N 完成該工作時，M 可以繁衍 N 中的部分工作並且不會進行追蹤。 實際上，M 可以在 N 完成其工作之前就終止。 這將發生在生成攔截器活動 （N） 然後終止的"打開服務主機"活動 （M） 中。 從 N 傳輸回 M 表示 N 已完成與 M 相關的工作。  
   
  N 則可以繼續執行其他與 M 不相關的處理，例如持續從不同登入活動接收登入要求 (M) 的現有驗證器活動 (N)。  
   
@@ -67,7 +67,7 @@ TraceSource ts = new TraceSource("myTS");
 // 1. remember existing ("ambient") activity for clean up  
 Guid oldGuid = Trace.CorrelationManager.ActivityId;  
 // this will be our new activity  
-Guid newGuid = Guid.NewGuid();   
+Guid newGuid = Guid.NewGuid();
 
 // 2. call transfer, indicating that we are switching to the new AID  
 ts.TraceTransfer(667, "Transferring.", newGuid);  
@@ -87,7 +87,7 @@ ts.TraceEvent(TraceEventType.Information, 667, "Hello from activity " + i);
 // Perform Work  
 // some work.  
 // Return  
-ts.TraceEvent(TraceEventType.Information, 667, "Work complete on activity " + i);   
+ts.TraceEvent(TraceEventType.Information, 667, "Work complete on activity " + i);
 
 // 6. Emit the transfer returning to the original activity  
 ts.TraceTransfer(667, "Transferring Back.", oldGuid);  
@@ -96,7 +96,7 @@ ts.TraceTransfer(667, "Transferring Back.", oldGuid);
 ts.TraceEvent(TraceEventType.Stop, 667, "Boundary: Activity " + i);  
 
 // 8. Change the tls variable to the original AID  
-Trace.CorrelationManager.ActivityId = oldGuid;    
+Trace.CorrelationManager.ActivityId = oldGuid;
 
 // 9. Resume the old activity  
 ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);  

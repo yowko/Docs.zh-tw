@@ -9,10 +9,10 @@ helpviewer_keywords:
 - connection pooling
 ms.assetid: 2ec502e8-4ba0-4c22-9410-f28eaf4eee63
 ms.openlocfilehash: 007366764a7b8e1208e22ef5895e6a9093b090e4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048649"
 ---
 # <a name="connection-grouping"></a>連接群組
@@ -22,5 +22,5 @@ ms.locfileid: "71048649"
   
 ## <a name="see-also"></a>另請參閱
 
-- [管理連線](managing-connections.md)
+- [管理連接](managing-connections.md)
 - [如何：將使用者資訊指派給群組連線](how-to-assign-user-information-to-group-connections.md)

@@ -2,17 +2,17 @@
 title: 查詢計畫快取 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 020b2b3f08262fc15ace8603c26e2d6c059baafd
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: a0e84f40aed2cff146e4e203cca73a9110de0e2f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319399"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149982"
 ---
 # <a name="query-plan-caching-entity-sql"></a>查詢計畫快取 (Entity SQL)
 每當嘗試執行查詢時，查詢管線就會查閱它的查詢快取計畫，以查看精確的查詢是否已編譯且可用。 如果確實如此，它會重複使用快取的計畫，而不是建立新的計畫。 如果查詢計畫快取中找不到相符項目，就會編譯及快取此查詢。 查詢是由它的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 文字和參數集合 (名稱和型別) 所識別。 所有的文字比較都會區分大小寫。  
   
-## <a name="configuration"></a>Configuration  
+## <a name="configuration"></a>組態  
  查詢計畫快取可透過 <xref:System.Data.EntityClient.EntityCommand> 來設定。  
   
  若要透過 <xref:System.Data.EntityClient.EntityCommand.EnablePlanCaching%2A?displayProperty=nameWithType> 來啟用或停用查詢計畫快取，請將此屬性設定為 `true` 或 `false`。 針對不太可能使用一次以上的個別動態查詢停用計畫快取時，將會提升效能。  
@@ -25,7 +25,7 @@ ms.locfileid: "72319399"
  ```csharp
  var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp WHERE sp.EmployeeID = " + employeeTextBox.Text;  
  ```
- 
+
  如果您使用動態產生的查詢，請考慮停用查詢計畫快取，避免針對不太可能重複使用的快取項目產生不必要的記憶體耗用量。  
   
  靜態查詢和參數化查詢上的查詢計畫快取可提供效能方面的優點。 下列是靜態查詢的範例：  
@@ -50,6 +50,6 @@ var query = "SELECT sp.SalesYTD FROM AdventureWorksEntities.SalesPerson as sp";
   
 - 變更為註解內的文字。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Entity SQL 概觀](entity-sql-overview.md)

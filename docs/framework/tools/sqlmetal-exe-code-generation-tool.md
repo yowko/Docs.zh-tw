@@ -10,10 +10,10 @@ helpviewer_keywords:
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
 ms.openlocfilehash: d5b4c2b59b585b3d3a3584ef9055e70c9d998e85
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71044083"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (程式碼產生工具)
@@ -38,26 +38,26 @@ SqlMetal 命令列工具會為 .NET Framework 的 [!INCLUDE[vbtecdlinq](../../..
 sqlmetal [options] [<input file>]  
 ```  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
  若要檢視最新的選項清單，請進入安裝位置，並在命令提示字元輸入 `sqlmetal /?` 。  
   
- **連接選項**  
+ **連線選項**  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
-|**/server:** *\<名稱>*|指定資料庫伺服器名稱。|  
-|**/database:** *\<名稱>*|指定伺服器上的資料庫目錄。|  
-|**/user:** *\<名稱>*|指定登入使用者識別碼。預設值：使用 Windows 驗證。|  
-|**/password:** *\<密碼>*|指定登入密碼。 預設值：使用 Windows 驗證。|  
-|**/conn:** *\<連接字串>*|指定資料庫連接字串。 不可配合 **/server**、 **/database**、 **/user**或 **/password** 選項使用。<br /><br /> 不要在連接字串中包含檔案名稱。 而是在命令列中加入檔名來做為輸入檔案。 例如，下行指定 "c:\northwnd.mdf" 作為輸入檔案： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"** 。|  
-|**/timeout:** *\<秒>*|指定 SqlMetal 存取資料庫時的逾時值。 預設值：0 (也就是沒有時間限制)。|  
+|**/伺服器：***\<名稱>*|指定資料庫伺服器名稱。|  
+|**/資料庫：***\<名稱>*|指定伺服器上的資料庫目錄。|  
+|**/使用者：***\<名稱>*|指定登錄使用者 ID。預設值：使用 Windows 身份驗證。|  
+|**/密碼：***\<密碼>*|指定登入密碼。 預設值：使用 Windows 驗證。|  
+|**/conn：***\<連接字串>*|指定資料庫連接字串。 不可配合 **/server**、 **/database**、 **/user**或 **/password** 選項使用。<br /><br /> 不要在連接字串中包含檔案名稱。 而是在命令列中加入檔名來做為輸入檔案。 例如，下行指定 "c:\northwnd.mdf" 作為輸入檔案： **sqlmetal /code:"c:\northwind.cs" /language:csharp "c:\northwnd.mdf"**。|  
+|**/超時：***\<秒>*|指定 SqlMetal 存取資料庫時的逾時值。 預設值：0 (也就是沒有時間限制)。|  
   
  **擷取選項**  
   
 |選項|描述|  
 |------------|-----------------|  
-|**/views**|擷取資料庫檢視。|  
-|**/functions**|擷取資料庫函式。|  
+|**/視圖**|擷取資料庫檢視。|  
+|**/功能**|擷取資料庫函式。|  
 |**/sprocs**|擷取預存程序。|  
   
  **輸出選項**  
@@ -72,14 +72,14 @@ sqlmetal [options] [<input file>]
   
 |選項|描述|  
 |------------|-----------------|  
-|**/language:** *\<語言>*|指定原始程式碼語言。<br /><br /> 有效的 *\<語言>* ：vb、csharp。<br /><br /> 預設值：衍生自程式碼檔案名稱的副檔名。|  
-|**/namespace:** *\<名稱>*|指定所產生程式碼的命名空間。 預設值：沒有命名空間。|  
-|**/context:** *\<類型>*|指定資料庫內容類別的名稱。 預設值：衍生自資料庫名稱。|  
-|**/entitybase:** *\<類型>*|指定所產生程式碼中實體類別的基底類別。 預設值：實體沒有基底類別。|  
+|**/語言：***\<語言>*|指定原始程式碼語言。<br /><br /> 有效*\<語言*>：vb，csharp。<br /><br /> 預設值：衍生自程式碼檔案名稱的副檔名。|  
+|**/命名空間：***\<名稱>*|指定所產生程式碼的命名空間。 預設值：沒有命名空間。|  
+|**/上下文：***\<鍵入>*|指定資料庫內容類別的名稱。 預設值：衍生自資料庫名稱。|  
+|**/實體庫：***\<鍵入>*|指定所產生程式碼中實體類別的基底類別。 預設值：實體沒有基底類別。|  
 |**/pluralize**|自動複數化或單數化類別和成員名稱。<br /><br /> 這個選項功能僅適用於美國英文版本。|  
-|**/serialization:** *\<選項>*|產生可序列化的類別。<br /><br /> 有效的 *\<選項 >* ：無、單向。 預設值：無。<br /><br /> 如需詳細資訊，請參閱[序列化](../data/adonet/sql/linq/serialization.md)。|  
+|**/序列化：***\<選項>*|產生可序列化的類別。<br /><br /> 有效*\<選項>*：無，單向。 預設值：None。<br /><br /> 如需詳細資訊，請參閱[序列化](../data/adonet/sql/linq/serialization.md)。|  
   
- **輸入檔案**  
+ **輸入檔**  
   
 |選項|描述|  
 |------------|-----------------|  

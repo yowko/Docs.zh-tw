@@ -1,5 +1,5 @@
 ---
-title: 作法：透過 FTP 下載檔案
+title: 如何：透過 FTP 下載檔案
 description: 這篇文章顯示如何從 FTP 伺服器下載檔案的範例。
 ms.date: 06/26/2018
 dev_langs:
@@ -7,13 +7,13 @@ dev_langs:
 - vb
 ms.assetid: 892548b8-954a-4f6a-9bca-2ae620c3700f
 ms.openlocfilehash: a0941d42de71029be9aab2fdbc69f8434fb73e2d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "65632974"
 ---
-# <a name="how-to-download-files-with-ftp"></a>作法：透過 FTP 下載檔案
+# <a name="how-to-download-files-with-ftp"></a>如何：透過 FTP 下載檔案
 
 這個範例示範如何從 FTP 伺服器下載檔案。
 

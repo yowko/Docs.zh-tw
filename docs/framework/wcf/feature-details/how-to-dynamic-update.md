@@ -1,15 +1,15 @@
 ---
-title: 如何：動態更新
+title: HOW TO：動態更新
 ms.date: 03/30/2017
 ms.assetid: 9b8f6e0d-edab-4a7e-86e3-8c66bebc64bb
-ms.openlocfilehash: 95d99afd09daf4d9bf3937a71d7773332ff1bc14
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: aaeb4d9d42c289cf34a6aee9212fc2d74b8f8c01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834726"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184957"
 ---
-# <a name="how-to-dynamic-update"></a>如何：動態更新
+# <a name="how-to-dynamic-update"></a>HOW TO：動態更新
 本主題概要說明建立和動態更新路由組態所需的基本步驟。 在此範例中，初始路由組態是從組態檔取得，並且會將所有訊息路由傳送至 regularCalc 計算機服務。不過，該組態接著會以程式設計的方式更新，以變更 roundingCalc 服務的目的端點。  
   
 > [!NOTE]
@@ -64,7 +64,7 @@ ms.locfileid: "71834726"
     </filterTables>  
     ```  
   
-3. 若要針對包含在篩選資料表之篩選條件的傳入訊息加以評估，您必須使用路由行為產生篩選資料表與服務端點的關聯。 下列範例示範如何將 "filterTable1" 與服務端點產生關聯。  
+3. 若要針對包含在篩選資料表之篩選條件的傳入訊息加以評估，您必須使用路由行為產生篩選資料表與服務端點的關聯。 下面的示例演示了將"篩選器表1"與服務終結點相關聯。  
   
     ```xml  
     <behaviors>  
@@ -102,7 +102,7 @@ ms.locfileid: "71834726"
         using (ServiceHost serviceHost =  
             new ServiceHost(typeof(RoutingService)))  
         {  
-            // Open the ServiceHost to create listeners           
+            // Open the ServiceHost to create listeners
             // and start listening for messages.  
             Console.WriteLine("The Routing Service configured, opening....");  
             serviceHost.Open();  
@@ -164,7 +164,7 @@ ms.locfileid: "71834726"
   
 ## <a name="example"></a>範例  
 
-以下是此範例中所使用主控台應用程式的完整清單：
+以下是本示例中使用的主控台應用程式的完整清單：
   
 ```csharp
 //-----------------------------------------------------------------  
@@ -185,12 +185,12 @@ namespace Microsoft.Samples.AdvancedFilters
     {  
         // Host the service within this EXE console application.  
         public static void Main()  
-        {             
+        {
             // Create a ServiceHost for the CalculatorService type.  
             using (ServiceHost serviceHost =  
                 new ServiceHost(typeof(RoutingService)))  
             {  
-                // Open the ServiceHost to create listeners           
+                // Open the ServiceHost to create listeners
                 // and start listening for messages.  
                 Console.WriteLine("The Routing Service configured, opening....");  
                 serviceHost.Open();  
@@ -242,8 +242,8 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="example"></a>範例  
- 
-以下是此範例中所使用之設定檔的完整清單：
+
+以下是本示例中使用的設定檔的完整清單：
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

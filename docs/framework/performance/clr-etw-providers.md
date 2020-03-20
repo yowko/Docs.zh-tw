@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ETW, CLR providers
 - CLR ETW providers
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
-ms.openlocfilehash: dbdd4ad862ae300c330dc56a82fcd65b866855b6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 33ef7491c2bffeda4ef737ed8f826cdfbfbb119d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716175"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400075"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 提供者
 Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取消提供者。  
   
  執行階段提供者會根據啟用哪些關鍵字 (事件的類別) 來引發事件。 例如，您可以啟用 `LoaderKeyword` 關鍵字來收集載入器事件。  
   
- Windows 事件追蹤（ETW）事件會記錄到具有 .etl 副檔名的檔案中，稍後可以視需要以逗號分隔值（.csv）檔案進行後續處理。 如需如何將 .etl 檔案轉換成 .csv 檔案的資訊，請參閱[控制 .NET Framework 記錄](controlling-logging.md)。  
+ Windows （ETW） 事件事件跟蹤將登錄到具有 .etl 副檔名的檔，該檔以後可以根據需要以逗號分隔的值 （.csv） 檔進行後處理。 如需如何將 .etl 檔案轉換成 .csv 檔案的資訊，請參閱[控制 .NET Framework 記錄](controlling-logging.md)。  
   
 ## <a name="the-runtime-provider"></a>執行階段提供者  
  執行階段提供者是主要 CLR ETW 提供者。  
@@ -35,7 +35,7 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
   
  一般來說，會在啟動處理序之前啟用 ETW 記錄，並在處理序結束之後關閉記錄。 不過，如果在處理序執行時開啟 ETW 記錄，則需要處理序的額外資訊。 例如，進行符號解析時，您必須針對已在開啟記錄之前載入的方法，來記錄方法事件。  
   
- `DCStart` 和 `DCEnd` 事件會擷取啟動和停止資料收集時的處理序狀態 （狀態指的是高階資訊，包括已編譯的一次性（JIT）和已載入元件的方法）。這兩個事件可以提供處理常式中已發生之內容的相關資訊;例如，哪些方法已進行 JIT 編譯，依此類推。  
+ `DCStart` 和 `DCEnd` 事件會擷取啟動和停止資料收集時的處理序狀態 （國家是指高級別的資訊，包括已編譯的及時 （JIT） 的方法和載入的程式集。這兩個事件可以提供有關過程中已經發生的情況的資訊;例如，哪些方法是 JIT 編譯的，等等。  
   
  在取消提供者下，只會引發其名稱含有 `DC`、`DCStart`、`DCEnd` 或 `DCInit` 的事件。 此外，只會在取消提供者下引發這些事件。  
   
@@ -59,7 +59,7 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
 1. 使用 CLR 執行階段提供者開啟 ETW 記錄：  
   
     ```console
-    xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
+    xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl
     ```  
   
      記錄會儲存至 clr1.etl 檔案。  
@@ -67,7 +67,7 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
 2. 若要在處理序繼續執行時停止分析，請啟動取消提供者來擷取 `DCEnd` 事件：  
   
     ```console
-    xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
+    xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl
     ```  
   
      這會啟用 `DCEnd` 事件的收集來啟動取消工作階段。 您可能需要等待 30 到 60 秒的時間，以收集所有事件。 記錄會儲存至 clr1.et2 檔案。  
@@ -75,7 +75,7 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
 3. 關閉所有 ETW 分析：  
   
     ```console
-    xperf -stop clrRundown   
+    xperf -stop clrRundown
     xperf -stop clr  
     ```  
   
@@ -89,6 +89,6 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
   
  工具可以執行步驟 2 和 3 (啟動取消工作階段，然後終止分析)，而不是在使用者要求停止分析時立即關閉分析。 工具也可以執行步驟 4。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Common Language Runtime 中的 ETW 事件](etw-events-in-the-common-language-runtime.md)

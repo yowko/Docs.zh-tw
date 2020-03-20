@@ -8,60 +8,60 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 7a6c1282c9ca8381d2dbb21ffdc82f95732c42b3
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 97e69a4978aa4700d13a994619a65312cf70aeaa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74087515"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154942"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<bypasslist > 元素（網路設定）
-提供一組正則運算式，描述不使用 proxy 的位址。  
+# <a name="bypasslist-element-network-settings"></a>\<繞過清單>元素（網路設置）
+提供一組常規運算式，用於描述不使用代理的位址。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bypasslist >**
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<預設代理>**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<繞過清單>**
 
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<bypasslist>   
+<bypasslist>
 </bypasslist>  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|**目**|**說明**|  
+|**Element**|**描述**|  
 |-----------------|---------------------|  
-|[add](add-element-for-bypasslist-network-settings.md)|將 IP 位址或 DNS 名稱新增至 proxy 略過清單。|  
-|[clear](clear-element-for-bypasslist-network-settings.md)|清除略過清單。|  
-|[remove](remove-element-for-bypasslist-network-settings.md)|從 proxy 略過清單中移除 IP 位址或 DNS 名稱。|  
+|[新增](add-element-for-bypasslist-network-settings.md)|將 IP 位址或 DNS 名稱添加到代理繞過清單中。|  
+|[清楚](clear-element-for-bypasslist-network-settings.md)|清除旁路清單。|  
+|[移除](remove-element-for-bypasslist-network-settings.md)|從代理繞過清單中刪除 IP 位址或 DNS 名稱。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**Element**|**描述**|  
 |-----------------|---------------------|  
-|[defaultProxy](defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
+|[預設代理](defaultproxy-element-network-settings.md)|設定超文字傳輸協定 (HTTP) 的 Proxy 伺服器。|  
   
 ## <a name="remarks"></a>備註  
- [略過清單] 包含正則運算式，描述 <xref:System.Net.WebRequest> 實例直接存取而不是透過 proxy 伺服器存取的 Uri。  
+ 旁路清單包含常規運算式，用於描述<xref:System.Net.WebRequest>實例直接存取而不是通過代理伺服器訪問的 URI。  
   
- 為此元素指定正則運算式時，請務必小心。 正則運算式 "[a-z] +\\. contoso\\.com" 符合 contoso.com 網域中的任何主機，但也符合 contoso.com.cpandl.com 網域中的任何主機。 若只要比對 contoso.com 網域中的主機，請使用錨點（"$"）： "[a-z] +\\. contoso\\.com $"。  
+ 為此元素指定正則運算式時應小心謹慎。 正則運算式"[a-z].contoso\\\\.com"與contoso.com域中的任何主機匹配，但它也與contoso.com.cpandl.com域中的任何主機匹配。 要僅匹配contoso.com域中的主機，請使用錨點（"$"）："[a-z].contoso.com$"。\\ \\  
   
- 如需正則運算式的詳細資訊，請參閱。[.NET Framework 正則運算式](../../../../standard/base-types/regular-expressions.md)。  
+ 有關正則運算式的詳細資訊，請參閱。[.NET 框架正則運算式](../../../../standard/base-types/regular-expressions.md)。  
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會將兩個位址新增至略過清單。 第一個會略過 contoso.com 網域中所有伺服器的 proxy;第二個會略過其 IP 位址開頭為192.168 的所有伺服器的 proxy。  
+ 下面的示例將兩個位址添加到旁路清單中。 第一個繞過contoso.com域中所有伺服器的代理;第二個伺服器繞過其 IP 位址以 192.168 開頭的所有伺服器的代理。  
   
 ```xml  
 <configuration>  
@@ -76,7 +76,7 @@ ms.locfileid: "74087515"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [網路設定結構描述](index.md)
+- [網路設置架構](index.md)

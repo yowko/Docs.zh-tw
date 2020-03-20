@@ -3,10 +3,10 @@ title: IPv6 自動設定
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
 ms.openlocfilehash: 95d9dce36c70b8f6c6b9f963c0842305a111d436
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047813"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 自動設定
@@ -22,9 +22,9 @@ IPv6 的一個重要目標是支援節點隨插即用。 亦即，節點應該�
  無論以何方式判斷位址，節點都必須確認其潛在位址對本機連結而言是唯一的。 這是透過將芳鄰請求訊息傳送給潛在位址所完成。 如果節點收到任何回應，它會知道位址已在使用中，必須判斷另一個位址。  
   
 ## <a name="ipv6-mobility"></a>IPv6 行動性  
- 行動裝置的大量增加帶來了新的需求：裝置必須能夠在 IPv6 網際網路上任意變更位置，同時仍保有現有的連線。 為提供這項功能，要指派給行動節點一個隨時可以連線的主目錄位址。 當行動節點在主目錄時，它會連接到主目錄連結，並使用主目錄位址。 當行動節點離開主目錄時，主目錄代理程式 (通常是路由器)，會在行動節點和它通訊的節點之間轉送訊息。  
+ 行動裝置的激增造成了新的需求：裝置必須能夠在 IPv6 網際網路上任意變更位置，但卻仍然能維持現有的連線。 為提供這項功能，要指派給行動節點一個隨時可以連線的主目錄位址。 當行動節點在主目錄時，它會連接到主目錄連結，並使用主目錄位址。 當行動節點離開主目錄時，主目錄代理程式 (通常是路由器)，會在行動節點和它通訊的節點之間轉送訊息。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [網際網路通訊協定第 6 版](internet-protocol-version-6.md)
+- [互聯網協定版本 6](internet-protocol-version-6.md)
 - [通訊端](sockets.md)

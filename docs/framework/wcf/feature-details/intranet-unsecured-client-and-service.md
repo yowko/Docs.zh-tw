@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 1ffd0421195b0339ad966b661c229e5a5ebb94ec
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 2fa13a12a377cc16a95318367605d8b5d92769a7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212091"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184692"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>沒有安全保障的內部網路用戶端與服務
-下圖說明一個簡單的 Windows Communication Foundation （WCF）服務，其開發目的是要將安全的私人網路資訊提供給 WCF 應用程式。 安全性不是必要的，因為資料的重要性較低、網路應原本就安全，或由 WCF 基礎結構底下的一層提供安全性。  
+下圖描述了為向 WCF 應用程式提供有關安全私人網路絡的資訊而開發的簡單 Windows 通信基礎 （WCF） 服務。 不需要安全性，因為資料的重要性較低，網路預期具有固有的安全性，或者安全性由 WCF 基礎結構下面的層提供。  
   
- ![內部網路不安全的用戶端和服務案例。](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
+ ![內聯網不安全的用戶端和服務方案。](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |特性|描述|  
 |--------------------|-----------------|  
 |安全性模式|None|  
-|Transport|TCP|  
+|傳輸|TCP|  
 |繫結|<xref:System.ServiceModel.NetTcpBinding>|  
 |互通性|僅限 WCF|  
-|驗證  (可能為英文網頁)|None|  
+|驗證|None|  
 |完整性|None|  
-|機密性|None|  
+|保密|None|  
   
 ## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
+ 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "76212091"
   <system.serviceModel>  
     <behaviors />  
     <services>  
-      <service behaviorConfiguration=""   
+      <service behaviorConfiguration=""
                name="ServiceModel.Calculator">  
-        <endpoint address="net.tcp://localhost:8008/Calculator"   
+        <endpoint address="net.tcp://localhost:8008/Calculator"
                   binding="netTcpBinding"  
-                  bindingConfiguration="tcp_Unsecured"   
+                  bindingConfiguration="tcp_Unsecured"
                   name="netTcp_ICalculator"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -71,7 +71,7 @@ ms.locfileid: "76212091"
 ```  
   
 ## <a name="client"></a>Client  
- 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
+ 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "76212091"
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>程式碼  
- 下列程式碼顯示使用 TCP 通訊協定來存取不安全端點的基本 WCF 用戶端。  
+ 以下代碼顯示使用 TCP 協定訪問不安全終結點的基本 WCF 用戶端。  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
@@ -103,17 +103,17 @@ ms.locfileid: "76212091"
     </bindings>  
     <client>  
       <endpoint address="net.tcp://machineName:8008/Calculator "  
-                binding="netTcpBinding"   
+                binding="netTcpBinding"
                 bindingConfiguration="NetTcpBinding_ICalculator"  
-                contract="ICalculator"   
+                contract="ICalculator"
                 name="NetTcpBinding_ICalculator" />  
     </client>  
   </system.serviceModel>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.NetTcpBinding>
-- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 ms.openlocfilehash: 1f367caf7656a83597b6262a5746686df15d33b4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047320"
 ---
 # <a name="requesting-data"></a>要求資料
@@ -54,6 +54,6 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
   
 ## <a name="see-also"></a>另請參閱
 
-- [以 .NET Framework 進行網路程式設計](index.md)
+- [.NET 框架中的網路程式設計](index.md)
 - [如何：要求網頁並擷取結果當作資料流](how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
 - [如何：擷取符合 WebRequest 的通訊協定特定 WebResponse](how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

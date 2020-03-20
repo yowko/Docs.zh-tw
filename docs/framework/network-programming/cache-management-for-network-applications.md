@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
 ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048880"
 ---
 # <a name="cache-management-for-network-applications"></a>網路應用程式的快取管理
@@ -23,18 +23,18 @@ ms.locfileid: "71048880"
  基於安全性考量，**不**建議針對中介層案例進行快取。  
   
 ## <a name="in-this-section"></a>本節內容  
- [快取原則](cache-policy.md)  
+ [緩存策略](cache-policy.md)  
  說明快取原則是什麼，以及如何定義快取原則。  
   
  [以位置為基礎的快取原則](location-based-cache-policies.md)  
  定義可用於超文字傳輸通訊協定 (http 和 https) 資源的每種以位置為基礎的快取原則。  
   
- [以時間為基礎的快取原則](time-based-cache-policies.md)  
+ [Time-Based Cache Policies](time-based-cache-policies.md)  
  描述可用來自訂以時間為基礎的快取原則的條件。  
   
  [設定網路應用程式的快取功能](configuring-caching-in-network-applications.md)  
  描述如何以程式設計方式建立快取原則以及使用快取的要求。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Net.Cache>  
  可定義類型和列舉，這些類型和列舉是用來定義使用 <xref:System.Net.WebRequest>、<xref:System.Net.HttpWebRequest> 和 <xref:System.Net.FtpWebRequest> 類別所取得之資源的快取原則。

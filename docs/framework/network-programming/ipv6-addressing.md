@@ -27,10 +27,10 @@ helpviewer_keywords:
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
 ms.openlocfilehash: 1bad43b96fc6f66724e5e40cdf0ae6d76b46d867
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047845"
 ---
 # <a name="ipv6-addressing"></a>IPv6 定址
@@ -67,7 +67,7 @@ IPv6 會定義下列位址類型：
 
   - **網站-本機位址**。 這些位址是用在單一網站，且具有下列格式：FEC0::*SubnetID*:*InterfaceID*。 網站-本機位址可用來在網站中定址，不需要全域前置詞。
 
-  - **全域 IPv6 單點傳播位址**。 這些位址可以用在整個網際網路上，且具有下列格式：010(FP，3 位元) TLA ID (13 位元) 保留項目 (8 位元) NLA ID (24 位元) SLA ID (16 位元) *InterfaceID* (64 位元)。
+  - **全域 IPv6 單點傳播位址**。 這些位址可以用在整個網際網路上，而且具有下列格式：010(FP，3 位元) TLA ID (13 位元) 保留項目 (8 位元) NLA ID (24 位元) SLA ID (16 位元) *InterfaceID* (64 位元)。
 
 - **多點傳送位址**。 一組介面 (通常屬於不同的節點) 的識別碼。 傳送到此位址的封包會被傳遞到該位址所識別的所有介面。 多點傳送位址類型取代 IPv4 廣播位址。
 
@@ -77,5 +77,5 @@ IPv6 會定義下列位址類型：
 
 ## <a name="see-also"></a>另請參閱
 
-- [網際網路通訊協定第 6 版](internet-protocol-version-6.md)
+- [互聯網協定版本 6](internet-protocol-version-6.md)
 - [通訊端](sockets.md)

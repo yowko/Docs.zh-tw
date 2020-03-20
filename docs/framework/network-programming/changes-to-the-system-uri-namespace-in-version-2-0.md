@@ -3,11 +3,11 @@ title: 2.0 版中 System.Uri 命名空間的變更
 ms.date: 03/30/2017
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 ms.openlocfilehash: 987010b8367069e8089df3f809d23f258bb68f2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188428"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61642759"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>2.0 版中 System.Uri 命名空間的變更
 

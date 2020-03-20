@@ -5,11 +5,11 @@ helpviewer_keywords:
 - FTP
 ms.assetid: 9b43f8b4-89d7-46a7-89fc-71aca916dd32
 ms.openlocfilehash: d945f03077a863d9e1baa6b59fe8a908566aba5a
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186146"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61642876"
 ---
 # <a name="ftp"></a>FTP
 
@@ -17,7 +17,7 @@ ms.locfileid: "54186146"
 
 ## <a name="examples"></a>範例
 
-如需詳細資訊，請參閱下列主題：[如何：透過 FTP 下載檔案](how-to-download-files-with-ftp.md)、[如何：透過 FTP 上傳檔案](how-to-upload-files-with-ftp.md)，以及[如何：以 FTP 列出目錄內容](how-to-list-directory-contents-with-ftp.md)。
+如需詳細資訊，請參閱下列主題：[如何：透過 FTP 下載檔案](how-to-download-files-with-ftp.md)、[如何：透過 FTP 上傳檔案](how-to-upload-files-with-ftp.md)和[如何：以 FTP 列出目錄內容](how-to-list-directory-contents-with-ftp.md)。
 
 ## <a name="ftp-and-proxies"></a>FTP 和 Proxy
 
@@ -25,6 +25,6 @@ ms.locfileid: "54186146"
 
 ## <a name="see-also"></a>另請參閱
 
-- [透過 Proxy 存取網際網路](accessing-the-internet-through-a-proxy.md)
+- [通過代理訪問互聯網](accessing-the-internet-through-a-proxy.md)
 - [網路程式設計範例](network-programming-samples.md)
 - [使用應用程式通訊協定](using-application-protocols.md)

@@ -2,17 +2,17 @@
 title: 獨立診斷摘要範例
 ms.date: 03/30/2017
 ms.assetid: d31c6c1f-292c-4d95-8e23-ed8565970ea5
-ms.openlocfilehash: 4520883b5db19c28544a5576ca600b83e37eede3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 29d8caee48925040db9f1812f015870e3a1272bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787924"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144002"
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>獨立診斷摘要範例
-這個範例會示範如何使用 Windows Communication Foundation （WCF）來建立新聞訂閱的 RSS/Atom 摘要。 這是一個基本的「Hello World」程式，會顯示物件模型的基本概念，以及如何在 Windows Communication Foundation （WCF）服務上進行設定。  
+此示例演示如何創建 RSS/原子源，以便與 Windows 通信基礎 （WCF） 聯合使用。 它是一個基本的"Hello World"程式，它顯示了物件模型的基礎知識以及如何在 Windows 通信基礎 （WCF） 服務上設置它。  
   
- WCF 會將新聞訂閱摘要當做傳回特殊資料類型的服務作業來模型，<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的執行個體可將摘要序列化至 RSS 2.0 和 Atom 1.0 格式。 下列範例程式碼會顯示使用的合約。  
+ WCF 將聯合饋送建模為返回特殊資料類型的服務操作<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>。 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 的執行個體可將摘要序列化至 RSS 2.0 和 Atom 1.0 格式。 下列範例程式碼會顯示使用的合約。  
   
 ```csharp  
 [ServiceContract(Namespace = "")]  
@@ -24,7 +24,7 @@ ms.locfileid: "76787924"
         //(the part of the request URI after the endpoint address)  
         //using the HTTP GET method. The UriTemplate specifies a relative  
         //path of 'feed', and specifies that the format is  
-        //supplied using a query string.   
+        //supplied using a query string.
         [WebGet(UriTemplate="feed?format={format}")]  
         [ServiceKnownType(typeof(Atom10FeedFormatter))]  
         [ServiceKnownType(typeof(Rss20FeedFormatter))]  
@@ -32,9 +32,9 @@ ms.locfileid: "76787924"
     }  
 ```  
   
- `GetProcesses` 作業會以 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標注，讓您能夠控制 WCF 將 HTTP GET 要求分派至服務作業的方式，以及指定所傳送訊息的格式。  
+ 該`GetProcesses`操作使用<xref:System.ServiceModel.Web.WebGetAttribute>屬性進行批號，該屬性使您能夠控制 WCF 如何向服務操作發送 HTTP GET 請求並指定所發送消息的格式。  
   
- 就像任何 WCF 服務一樣，新聞訂閱摘要可以自我裝載于任何受控應用程式中。 新聞訂閱服務需要指定的繫結 (<xref:System.ServiceModel.WebHttpBinding>) 和指定的端點行為 (<xref:System.ServiceModel.Description.WebHttpBehavior>) 才能正常運作。 新的 <xref:System.ServiceModel.Web.WebServiceHost> 類別提供方便的 API，不需特定的組態即可建立這類端點。  
+ 與任何 WCF 服務一樣，聯合饋送可以在任何託管應用程式中自行託管。 新聞訂閱服務需要指定的繫結 (<xref:System.ServiceModel.WebHttpBinding>) 和指定的端點行為 (<xref:System.ServiceModel.Description.WebHttpBehavior>) 才能正常運作。 新的 <xref:System.ServiceModel.Web.WebServiceHost> 類別提供方便的 API，不需特定的組態即可建立這類端點。  
   
 ```csharp  
 WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http://localhost:8000/diagnostics"));  
@@ -49,9 +49,9 @@ WebServiceHost host = new WebServiceHost(typeof(ProcessService), new Uri("http:/
 <%@ ServiceHost Language="C#|VB" Debug="true" Service="ProcessService" %>
 ```
   
- 因為這個服務使用標準 HTTP GET 接收要求，所以您可以使用任何 RSS 或 ATOM 感知用戶端來存取服務。 例如，您可以流覽至 RSS 感知瀏覽器中 `http://localhost:8000/diagnostics/feed/?format=atom` 或 `http://localhost:8000/diagnostics/feed/?format=rss`，來查看此服務的輸出。
+ 因為這個服務使用標準 HTTP GET 接收要求，所以您可以使用任何 RSS 或 ATOM 感知用戶端來存取服務。 例如，您可以通過導航到`http://localhost:8000/diagnostics/feed/?format=atom`RSS 感知瀏覽器或在`http://localhost:8000/diagnostics/feed/?format=rss`RSS 感知瀏覽器中查看此服務的輸出。
   
- 您也可以使用 WCF 新聞訂閱[物件模型對應到 Atom 和 RSS 的方式](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)來讀取同步發行的資料，並使用命令式程式碼處理它。  
+ 您還可以使用[WCF 聯合物件模型如何映射到 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md)來讀取聯合資料並使用命令代碼處理資料。  
   
 ```csharp
 XmlReader reader = XmlReader.Create( "http://localhost:8000/diagnostics/feed/?format=rss",
@@ -74,26 +74,26 @@ foreach (SyndicationItem i in feed.Items)
 }
 ```
   
-## <a name="set-up-build-and-run-the-sample"></a>設定、建立和執行範例
+## <a name="set-up-build-and-run-the-sample"></a>設置、生成和運行示例
   
-1. 請確定您擁有電腦上 HTTP 和 HTTPS 的正確位址註冊許可權，如[Windows Communication Foundation 範例的一次性設定程式](one-time-setup-procedure-for-the-wcf-samples.md)中所述。
+1. 確保電腦上具有 HTTP 和 HTTPS 的正確位址註冊許可權，如[Windows 通信基礎示例的一次性設置過程](one-time-setup-procedure-for-the-wcf-samples.md)中的設置說明中所述。
 
 2. 建置方案。
 
-3. 執行主控台應用程式 (Console Application)。
+3. 執行主控台應用程式。
 
-4. 當主控台應用程式正在執行時，請流覽至 `http://localhost:8000/diagnostics/feed/?format=atom` 或使用 RSS 感知瀏覽器 `http://localhost:8000/diagnostics/feed/?format=rss`。
+4. 在主控台應用程式運行時，導航到`http://localhost:8000/diagnostics/feed/?format=atom`或使用`http://localhost:8000/diagnostics/feed/?format=rss`RSS 感知瀏覽器。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF Web HTTP 程式設計模型](../feature-details/wcf-web-http-programming-model.md)
-- [WCF 摘要整合](../feature-details/wcf-syndication.md)
+- [WCF 新聞訂閱](../feature-details/wcf-syndication.md)

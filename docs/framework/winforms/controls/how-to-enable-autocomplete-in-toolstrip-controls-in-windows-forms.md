@@ -12,22 +12,22 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: db411023ad624e4c3d60b09bdbd588c85f8e22d1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 18b17aaea9d2354c03bb43f3fdd8d3779697cf58
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745513"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142014"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>如何：啟用 Windows Form 中 ToolStrip 控制項的 AutoComplete
-下列程式會將 <xref:System.Windows.Forms.ToolStripLabel> 與可以下拉的 <xref:System.Windows.Forms.ToolStripComboBox> 結合，以顯示專案清單，例如最近造訪的網站。 如果使用者輸入的字元符合清單中其中一個專案的第一個字元，則會立即顯示該專案。  
+以下過程將 和<xref:System.Windows.Forms.ToolStripLabel><xref:System.Windows.Forms.ToolStripComboBox>可以向下刪除的 將 合併為 顯示專案清單（如最近訪問的網站）。 如果使用者鍵入與清單中某一項的第一個字元匹配的字元，則該項將立即顯示。  
   
 > [!NOTE]
-> 自動完成功能可與 `ToolStrip` 控制項搭配使用，其方式與傳統控制項（例如 <xref:System.Windows.Forms.ComboBox> 和 <xref:System.Windows.Forms.TextBox>）相同。  
+> 自動完成的工作方式`ToolStrip`與使用傳統控制項（如 和<xref:System.Windows.Forms.ComboBox><xref:System.Windows.Forms.TextBox>） 相同。  
   
-### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a>若要啟用 ToolStrip 控制項中的自動完成功能  
+### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a>在工具條控制項中啟用自動完成  
   
-1. 建立 <xref:System.Windows.Forms.ToolStrip> 控制項，並在其中新增專案。  
+1. 創建控制項<xref:System.Windows.Forms.ToolStrip>並將其添加項。  
   
     ```vb  
     ToolStrip1 = New System.Windows.Forms.ToolStrip  
@@ -37,11 +37,11 @@ ms.locfileid: "76745513"
   
     ```csharp  
     toolStrip1 = new System.Windows.Forms.ToolStrip();  
-    toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]   
+    toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]
         {toolStripLabel1, toolStripComboBox1});  
     ```  
   
-2. 將標籤和下拉式方塊的 [<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>] 屬性設定為 [<xref:System.Windows.Forms.ToolStripItemOverflow.Never>]，讓清單一律可供使用，不論表單的大小為何。  
+2. 將<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>標籤和下拉式列示方塊的屬性設置為<xref:System.Windows.Forms.ToolStripItemOverflow.Never>，以便無論表單的大小如何，清單始終可用。  
   
     ```vb  
     ToolStripLabel1.Overflow = _  
@@ -56,7 +56,7 @@ ms.locfileid: "76745513"
     toolStripComboBox1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never  
     ```  
   
-3. 將文字加入至 <xref:System.Windows.Forms.ToolStripComboBox> 控制項的 Items 集合。  
+3. 向<xref:System.Windows.Forms.ToolStripComboBox>控制項的"項"集合添加單詞。  
   
     ```vb  
     ToolStripComboBox1.Items.AddRange(New Object() {"First Item", _  
@@ -67,7 +67,7 @@ ms.locfileid: "76745513"
     toolStripComboBox1.Items.AddRange(new object[] {"First item", "Second item", "Third item"});  
     ```  
   
-4. 將下拉式方塊的 [<xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A>] 屬性設定為 [<xref:System.Windows.Forms.AutoCompleteMode.Append>]。  
+4. 將<xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A>下拉式列示方塊的屬性設置為<xref:System.Windows.Forms.AutoCompleteMode.Append>。  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteMode = _  
@@ -78,7 +78,7 @@ ms.locfileid: "76745513"
     toolStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;  
     ```  
   
-5. 將下拉式方塊的 [<xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A>] 屬性設定為 [<xref:System.Windows.Forms.AutoCompleteSource.ListItems>]。  
+5. 將<xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A>下拉式列示方塊的屬性設置為<xref:System.Windows.Forms.AutoCompleteSource.ListItems>。  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteSource = _  

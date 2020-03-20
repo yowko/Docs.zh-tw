@@ -5,12 +5,12 @@ helpviewer_keywords:
 - in-process side-by-side execution
 - side-by-side execution, in-process
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
-ms.openlocfilehash: 0c699f90143a87b7e7bee24c892efe2936a9399e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5ca2f03576946a23b3133bbe7532d46c4ad758ab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716485"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181655"
 ---
 # <a name="in-process-side-by-side-execution"></a>同處理序並存執行
 從 .NET Framework 4 開始，您可以使用同處理序並存裝載，在單一處理序中執行多個 Common Language Runtime (CLR) 版本。 根據預設，Managed COM 元件會與建置它們的 .NET Framework 版本一起執行，不論針對程序所載入的 .NET Framework 版本為何。  
@@ -45,18 +45,18 @@ ms.locfileid: "75716485"
 > [!NOTE]
 > .NET Framework 3.0 和 3.5 版是根據 2.0 版透過累加方式所建置，不需要並存執行。 這些本質上是相同的版本。  
   
-<a name="scenarios"></a>   
+<a name="scenarios"></a>
 ## <a name="common-side-by-side-hosting-scenarios"></a>常見並存裝載案例  
   
 - **情節 1：** 使用舊版 .NET Framework 所建置之 COM 元件的原生應用程式。  
   
-     已安裝的 .NET Framework 版本： .NET Framework 4 和 COM 元件所使用的所有其他版本的 .NET Framework。  
+     已安裝 .NET 框架版本：.NET 框架 4 和 COM 元件使用的 .NET 框架的所有其他版本。  
   
      處理方式：在此情節中，不執行任何動作。 COM 元件會與註冊它們的 .NET Framework 版本一起執行。  
   
-- **案例 2**：使用 .NET FRAMEWORK 2.0 SP1 建立的受控應用程式，您希望以 .NET Framework 2.0 執行，但如果沒有2.0 版本，則願意在 .NET Framework 4 上執行。  
+- **方案 2：** 使用 .NET 框架 2.0 SP1 構建的託管應用程式，您希望使用 .NET 框架 2.0 運行，但如果 2.0 版本不存在，則願意在 .NET 框架 4 上運行。  
   
-     安裝的 .NET Framework 版本：舊版的 .NET Framework 和 .NET Framework 4。  
+     已安裝 .NET 框架版本：.NET 框架的早期版本和 .NET 框架 4。  
   
      處理方式：在應用程式目錄的[應用程式組態檔](../configure-apps/index.md)中，使用 [\<startup> 項目](../configure-apps/file-schema/startup/startup-element.md)和 [\<supportedRuntime> 項目](../configure-apps/file-schema/startup/supportedruntime-element.md)，其設定方式如下：  
   
@@ -69,9 +69,9 @@ ms.locfileid: "75716485"
     </configuration>  
     ```  
   
-- **案例3：** 原生應用程式，其使用以舊版 .NET Framework 建立的 COM 元件，而您想要使用 .NET Framework 4 來執行。  
+- **方案 3：** 使用使用早期版本的 .NET Framework 構建的 COM 元件的本機應用程式，您希望使用 .NET 框架 4 運行。  
   
-     已安裝的 .NET Framework 版本： .NET Framework 4。  
+     已安裝 .NET 框架版本：.NET 框架 4。  
   
      處理方式：在應用程式目錄的應用程式組態檔中，搭配使用 `<startup>` 項目與設為 `true` 的 `useLegacyV2RuntimeActivationPolicy` 屬性以及設定如下的 `<supportedRuntime>` 項目：  
   
@@ -86,7 +86,7 @@ ms.locfileid: "75716485"
 ## <a name="example"></a>範例  
  下列範例示範執行 Managed COM 元件的 Unmanaged COM 主機，方法是使用編譯元件使用的 .NET Framework 版本。  
   
- 若要執行下列範例，請編譯並註冊下列使用 .NET Framework 3.5 的受控 COM 元件。 若要註冊元件，請在 [專案] 功能表上按一下 [屬性]，再按一下 [組建] 索引標籤，然後選取 [註冊 COM Interop] 核取方塊。  
+ 若要執行下列範例，請編譯並註冊下列使用 .NET Framework 3.5 的受控 COM 元件。 若要註冊元件，請在 [專案]**** 功能表上按一下 [屬性]****，再按一下 [組建]**** 索引標籤，然後選取 [註冊 COM Interop]**** 核取方塊。  
   
 ```csharp
 using System;  
@@ -151,7 +151,7 @@ int _tmain(int argc, _TCHAR* argv[])
     IDispatch* pPrintInfo;  
     pUnk->QueryInterface(IID_IDispatch, (void**)&pPrintInfo);  
     OLECHAR FAR* szMethod[1];  
-    szMethod[0]=OLESTR("PrintInfo");   
+    szMethod[0]=OLESTR("PrintInfo");
     hr = pPrintInfo->GetIDsOfNames(IID_NULL,szMethod, 1, LOCALE_SYSTEM_DEFAULT, &dispid);  
     DISPPARAMS dispparams;  
     dispparams.cNamedArgs = 0;  
@@ -171,7 +171,7 @@ int _tmain(int argc, _TCHAR* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [\<startup> 項目](../configure-apps/file-schema/startup/startup-element.md)
-- [\<supportedRuntime> 項目](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<啟動>元素](../configure-apps/file-schema/startup/startup-element.md)
+- [\<支援的運行時>元素](../configure-apps/file-schema/startup/supportedruntime-element.md)

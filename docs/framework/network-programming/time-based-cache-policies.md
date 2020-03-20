@@ -18,14 +18,14 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 74f0bcaf-5c95-40c1-9967-f3bbf1d2360a
 ms.openlocfilehash: 0edde8e716d5ce3b1444e994234def5835341475
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047118"
 ---
 # <a name="time-based-cache-policies"></a>以時間為基礎的快取原則
-以時間為基礎的快取原則會使用擷取資源的時間、與資源一起傳回的標頭，以及目前時間，定義快取項目的有效期限。 設定以時間為基礎的快取原則時，您可以使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 時間基礎原則，或建立自訂的時間基礎原則。 為使用超文字傳輸通訊協定 (HTTP) 取得的資源，使用以時間為基礎的預設原則時，確切的快取行為是由快取回應中包含的標頭，以及 RFC 2616 的 13 與 14 一節中所指定的行為來，RFC 2616 可在[網際網路工程任務推動小組 (IETF)](https://www.ietf.org/) 網站取得。 如需程式碼範例來示範如何為 HTTP 資源設定以時間為基礎的預設原則，請參閱[如何：為應用程式設定以時間為基礎的預設快取原則](how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 如需示範如何建立和使用快取原則的程式碼範例，請參閱[設定網路應用程式的快取功能](configuring-caching-in-network-applications.md)。  
+以時間為基礎的快取原則會使用擷取資源的時間、與資源一起傳回的標頭，以及目前時間，定義快取項目的有效期限。 設定以時間為基礎的快取原則時，您可以使用 <xref:System.Net.Cache.HttpRequestCacheLevel.Default> 時間基礎原則，或建立自訂的時間基礎原則。 為使用超文字傳輸通訊協定 (HTTP) 取得的資源，使用以時間為基礎的預設原則時，確切的快取行為是由快取回應中包含的標頭，以及 RFC 2616 的 13 與 14 一節中所指定的行為來，RFC 2616 可在[網際網路工程任務推動小組 (IETF)](https://www.ietf.org/) 網站取得。 如需示範如何為 HTTP 資源設定以時間為基礎之預設原則的程式碼範例，請參閱[如何：為應用程式設定以時間為基礎的預設快取原則](how-to-set-the-default-time-based-cache-policy-for-an-application.md)。 如需示範如何建立和使用快取原則的程式碼範例，請參閱[設定網路應用程式的快取功能](configuring-caching-in-network-applications.md)。  
   
 ## <a name="criteria-to-determine-freshness-of-cached-entries"></a>判斷快取項目有效期限的準則  
  若要自訂以時間為基礎的快取原則，您可以指定要使用下列一或多個準則來判斷快取項目的有效期限：  
@@ -41,7 +41,7 @@ ms.locfileid: "71047118"
 > [!NOTE]
 > 使用時間為基礎的預設快取原則不應與設定應用程式的預設快取原則混淆。 以時間為基礎的預設原則是可以用於要求或應用程式層級的特定原則。 應用程式的預設快取原則是在要求上未設定原則時生效的原則 (以位置為基礎或以時間為基礎)。 如需設定應用程式之預設快取原則的詳細資料，請參閱<xref:System.Net.WebRequest.DefaultCachePolicy%2A>。  
   
-### <a name="maximum-age"></a>最長使用期限  
+### <a name="maximum-age"></a>Maximum Age  
  最長使用期限原則準則指定可以使用資源快取複本的時間量。 如果資源的快取複本超過指定的時間量，則必須藉由針對伺服器上的內容檢查資源，來重新驗證資源。 如果最長使用期限允許在資源到期後還使用它，則除非同時指定最長過時值，否則不會採用此準則。  
   
 ### <a name="maximum-staleness"></a>最長過時  
@@ -59,12 +59,12 @@ ms.locfileid: "71047118"
   
 - [快取原則互動 — 最長使用期限和最長過時](cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
-- [快取原則互動 - 最長使用期限和最小有效期限](cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+- [快取原則互動 — 最長使用期限和最小有效期限](cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>另請參閱
 
 - [網路應用程式的快取管理](cache-management-for-network-applications.md)
-- [快取原則](cache-policy.md)
+- [緩存策略](cache-policy.md)
 - [以位置為基礎的快取原則](location-based-cache-policies.md)
 - [設定網路應用程式的快取功能](configuring-caching-in-network-applications.md)
-- [\<requestCaching> 項目 (網路設定)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [\<請求緩存>元素（網路設置）](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

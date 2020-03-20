@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 448eef6ea147b725600b774026155acc1fca6d36
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9ffb7a99540b953fc93a22d2296caf86f294d25d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094861"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143820"
 ---
 # <a name="tracing-and-message-logging"></a>追蹤和訊息記錄
-這個範例示範如何啟用追蹤和訊息記錄。 系統會使用[服務追蹤檢視器工具（svctraceviewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)來查看產生的追蹤和訊息記錄。 這個範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。  
+這個範例示範如何啟用追蹤和訊息記錄。 使用[服務跟蹤檢視器工具 （SvcTraceViewer.exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)查看生成的跟蹤和消息日誌。 此示例基於[入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
   
 ## <a name="tracing"></a>追蹤  
- Windows Communication Foundation （WCF）使用 <xref:System.Diagnostics> 命名空間中定義的追蹤機制。 在這個追蹤模型中，應用程式實作的追蹤來源會產生追蹤資料。 每個來源都是以名稱來識別。 追蹤消費者會為他們要擷取資訊的追蹤來源建立追蹤接聽項。 若要接收追蹤資料，就必須建立追蹤來源的接聽項。 在 WCF 中，您可以藉由設定服務模型追蹤來源 `switchValue`，將下列程式碼新增至服務或用戶端的設定檔來完成這項作業：  
+ Windows 通信基礎 （WCF） 使用命名空間中<xref:System.Diagnostics>定義的跟蹤機制。 在這個追蹤模型中，應用程式實作的追蹤來源會產生追蹤資料。 每個來源都是以名稱來識別。 追蹤消費者會為他們要擷取資訊的追蹤來源建立追蹤接聽項。 若要接收追蹤資料，就必須建立追蹤來源的接聽項。 在 WCF 中，可以通過設置服務模型跟蹤源`switchValue`將以下代碼添加到服務的設定檔或用戶端的設定檔中來實現：  
   
 ```xml  
 <system.diagnostics>  
@@ -43,12 +43,12 @@ ms.locfileid: "77094861"
 </system.diagnostics>  
 ```  
   
- 如需追蹤來源的詳細資訊，請參閱設定[追蹤主題中](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)的追蹤來源一節。  
+ 有關跟蹤源的詳細資訊，請參閱["配置跟蹤"](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)主題中的跟蹤源部分。  
   
 ## <a name="activity-tracing-and-propagation"></a>活動追蹤和傳播  
- 將 `ActivityTracing` 啟用並 `propagateActivity` 設定為 `system.ServiceModel` 追蹤來源中的 `true`，用戶端和服務會在處理邏輯單位（活動）、端點內的活動（透過活動傳輸），以及跨越多個端點的活動之間（透過活動識別碼傳播）提供追蹤的相互關聯。  
+ 在`ActivityTracing`用戶端和服務`propagateActivity`的`system.ServiceModel`跟蹤`true`源中啟用並設置為後，在邏輯處理單元（活動）、終結點內的活動（通過活動傳輸）以及跨多個終結點的活動（通過活動 ID 傳播）中提供跟蹤的相關性。  
   
- 這三種機制 (活動、傳輸和傳播) 可以協助您使用 [服務追蹤檢閱器] 工具，迅速找到錯誤的根本原因。 如需詳細資訊，請參閱[使用服務追蹤檢視器來查看相互關聯的追蹤和疑難排解](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
+ 這三種機制 (活動、傳輸和傳播) 可以協助您使用 [服務追蹤檢閱器] 工具，迅速找到錯誤的根本原因。 有關詳細資訊，請參閱[使用服務跟蹤檢視器查看相關跟蹤和故障排除](../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)。  
   
  您可以建立使用者定義的活動追蹤，來延伸 ServiceModel 所提供的追蹤。 使用者定義的活動追蹤允許使用者建立追蹤活動，以進行下列工作：  
   
@@ -56,12 +56,12 @@ ms.locfileid: "77094861"
   
 - 透過傳輸和傳播將活動相互關聯。  
   
-- 減少 WCF 追蹤的效能成本（例如，記錄檔的磁碟空間成本）。  
+- 降低 WCF 跟蹤的性能成本（例如，日誌檔的磁碟空間成本）。  
   
- 如需使用者定義活動追蹤的詳細資訊，請參閱[擴充追蹤](../../../../docs/framework/wcf/samples/extending-tracing.md)範例。  
+ 有關使用者定義的活動跟蹤的詳細資訊，請參閱[擴展跟蹤](../../../../docs/framework/wcf/samples/extending-tracing.md)示例。  
   
 ## <a name="message-logging"></a>訊息記錄  
- 可以在任何 WCF 應用程式的用戶端和服務上啟用訊息記錄。 若要啟用訊息記錄，您必須將下列程式碼新增至用戶端或服務：  
+ 可以在任何 WCF 應用程式的用戶端和服務上啟用消息日誌記錄。 若要啟用訊息記錄，您必須將下列程式碼新增至用戶端或服務：  
   
 ```xml  
 <configuration>  
@@ -111,28 +111,28 @@ ms.locfileid: "77094861"
 > [!NOTE]
 > 如果一開始並未建立記錄目錄，就不會建立追蹤檔。 請確定目錄 C:\logs\ 存在，不然就在接聽項組態中指定其他記錄目錄。 如需詳細資訊，請參閱本文件結尾的初始安裝指示。  
   
- 如需訊息記錄的詳細資訊，請參閱設定[訊息記錄](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)主題。  
+ 有關郵件日誌記錄的詳細資訊，請參閱[配置消息日誌記錄](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)主題。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 在執行追蹤和訊息記錄範例前，請先建立可供服務將 .svclog 檔寫入的 C:\logs\ 目錄。 這個目錄名稱會在組態檔中定義為所要記錄之追蹤和訊息的路徑，而您可以變更此名稱。 請提供使用者對記錄目錄的網路服務寫入權限。  
   
-3. 若要建立C#方案C++的、或 Visual Basic .net 版本，請遵循[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+3. 要生成解決方案的 C#、C++ 或 Visual Basic .NET 版本，請按照[生成 Windows 通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的說明操作。  
   
-4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+4. 要在單電腦或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
 ## <a name="see-also"></a>另請參閱
 
 - [追蹤](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [AppFabric 監視範例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
+- [AppFabric 監控範例](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

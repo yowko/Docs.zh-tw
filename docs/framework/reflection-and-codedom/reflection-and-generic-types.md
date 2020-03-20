@@ -16,12 +16,12 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-ms.openlocfilehash: 0a7d38c8177aa8f2c5f45dcc62a0ae6e5aaca2a7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4894b5cc64dca431c8d05b638847dd6cb7017bde
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975444"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180485"
 ---
 # <a name="reflection-and-generic-types"></a>反映和泛用類型
 從反映的的觀點來看，泛型類型與一般類型間的差異在於泛型類型具有與其相關聯的一組類型參數 (若其定義為泛型類型) 或類型引數 (若其為建構類型)。 泛型方法與一般方法的差異也如同上述。  
@@ -50,7 +50,7 @@ ms.locfileid: "73975444"
  泛型類型與方法定義為建立執行個體類型的範本。 .NET Framwork 類別庫中的泛型類型 (例如 <xref:System.Collections.Generic.Dictionary%602>) 是泛型類型定義。  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>類型 (或方法) 為開放式或是封閉式？  
- 如果可具現化類型已取代其所有類型參數 (包括所有封入類型的類型參數)，則泛型類型或方法為封閉式。 如果類型為封閉式，則您僅能建立泛型類型的執行個體。 如果類型為開放式，則 <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> 屬性會傳回 `true` 。 若是方法，則 <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> 方法會執行相同的函式。   
+ 如果可具現化類型已取代其所有類型參數 (包括所有封入類型的類型參數)，則泛型類型或方法為封閉式。 如果類型為封閉式，則您僅能建立泛型類型的執行個體。 如果類型為開放式，則 <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> 屬性會傳回 `true` 。 若是方法，則 <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> 方法會執行相同的函式。
 
 ## <a name="generating-closed-generic-types"></a>產生封閉式泛型類型  
  若您有泛型類型或方法定義，使用 <xref:System.Type.MakeGenericType%2A> 方法可建立封閉式泛型類型，而使用 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> 方法則會為封閉式泛型方法建立 <xref:System.Reflection.MethodInfo> 。  
@@ -60,7 +60,7 @@ ms.locfileid: "73975444"
   
  例如，如果您有代表 <xref:System.Type> (在 Visual Basic 中為 `Dictionary<int, string>` ) 的`Dictionary(Of Integer, String)` 物件，而想要建立類型 `Dictionary<string, MyClass>`，可以使用 <xref:System.Type.GetGenericTypeDefinition%2A> 方法來取得代表 <xref:System.Type> 的 `Dictionary<TKey, TValue>` ，然後使用 <xref:System.Type.MakeGenericType%2A> 方法以產生代表 <xref:System.Type> 的 `Dictionary<int, MyClass>`。  
   
- 以不是泛型類型的開放式泛型類型為例，請參閱本主題稍後的＜類型參數或類型引數＞。   
+ 以不是泛型類型的開放式泛型類型為例，請參閱本主題稍後的＜類型參數或類型引數＞。
 
 ## <a name="examining-type-arguments-and-type-parameters"></a>檢查類型引數與類型參數  
  使用 <xref:System.Type.GetGenericArguments%2A?displayProperty=nameWithType> 方法可取得代表泛型類型之類型參數或類型引數之 <xref:System.Type> 物件的陣列，若是泛型方法則請使用 <xref:System.Reflection.MethodInfo.GetGenericArguments%2A?displayProperty=nameWithType> 方法以相同的方式取得陣列。  
@@ -114,16 +114,16 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  若要判斷類型參數是共變數或是反變數，請套用 <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> 遮罩至由 <xref:System.Reflection.GenericParameterAttributes> 屬性所傳回的 <xref:System.Type.GenericParameterAttributes%2A> 值。 如果結果為 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>，則類型參數為非變異值。 請參閱 [共變數和反變數](../../standard/generics/covariance-and-contravariance.md)。  
   
 #### <a name="special-constraints"></a>特殊條件約束  
- 若要判斷類型參數的特殊條件約束，請套用 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> 遮罩至 <xref:System.Reflection.GenericParameterAttributes> 屬性所傳回的 <xref:System.Type.GenericParameterAttributes%2A> 值。 如果結果是 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>，則沒有特殊條件約束。 型別參數可以限制為參考型別、非 Null 實值型別，以及具有無參數建構函式。    
+ 若要判斷類型參數的特殊條件約束，請套用 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> 遮罩至 <xref:System.Reflection.GenericParameterAttributes> 屬性所傳回的 <xref:System.Type.GenericParameterAttributes%2A> 值。 如果結果是 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>，則沒有特殊條件約束。 型別參數可以限制為參考型別、非 Null 實值型別，以及具有無參數建構函式。
 
 ## <a name="invariants"></a>非變異值  
  若要了解反映中泛型類型非變異條件hapi 一般條款表，請參閱 <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>。 與泛型方法相關的其他條款，請參閱 <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>。  
 
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|Title|描述|  
 |-----------|-----------------|  
-|[如何：使用反映檢視和執行個體化泛型型別](how-to-examine-and-instantiate-generic-types-with-reflection.md)|示範如何使用 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的屬性及方法，來檢查泛型類型。|  
+|[如何：使用反映檢視和執行個體化泛型類型](how-to-examine-and-instantiate-generic-types-with-reflection.md)|示範如何使用 <xref:System.Type> 和 <xref:System.Reflection.MethodInfo> 的屬性及方法，來檢查泛型類型。|  
 |[泛型](../../standard/generics/index.md)|說明泛型功能，及在 .NET Framework 下如何加以支援。|  
 |[操作說明：使用反映發出定義泛型型別](how-to-define-a-generic-type-with-reflection-emit.md)|示範如何在動態組件中使用反映發出以產生泛型類型。|  
-|[檢視類型資訊](viewing-type-information.md)|描述 <xref:System.Type> 類別，並提供程式碼範例以說明如何搭配不同的反映類別來使用 <xref:System.Type>，以取得建構函式、方法、欄位、屬性與事件的相關資訊。|
+|[檢視類型資訊](viewing-type-information.md)|描述 <xref:System.Type> 類別，並提供程式碼範例以說明如何搭配不同的反映類別來使用 <xref:System.Type> ，以取得建構函式、方法、欄位、屬性與事件的相關資訊。|

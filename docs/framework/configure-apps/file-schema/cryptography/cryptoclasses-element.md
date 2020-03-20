@@ -8,40 +8,40 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: 6601417f0b80f623b7698c4b072c35eca44343b7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c93fadf51297d59ab499e25de283700364903049
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732885"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155242"
 ---
-# <a name="cryptoclasses-element"></a>\<cryptoClasses > 元素
-包含密碼編譯類別清單，其具有 [\<nameEntry>](nameentry-element.md) 項目中易記名稱的對應。  
+# <a name="cryptoclasses-element"></a>\<加密類>元素
+包含具有映射到[\<nameentry>](nameentry-element.md)元素中的易記名稱的加密類的清單。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptoClasses >**  
+[**\<配置>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<姆斯科利布>**](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<密碼設置>**](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<加密名稱映射>**](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<加密類>**  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<cryptoClasses>   
+<cryptoClasses>
 </cryptoClasses>  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和元素  
- 下列各節描述屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
- None。  
+ 無。  
   
 ### <a name="child-elements"></a>子元素  
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<cryptoClass >](cryptoclass-element.md)|包含密碼編譯類別，其具有 **\<nameEntry>** 項目中易記名稱的對應。|  
+|[\<加密類>](cryptoclass-element.md)|包含一個加密類，該類具有與**\<nameentry>** 元素中的易記名稱的映射。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -50,10 +50,10 @@ ms.locfileid: "76732885"
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`cryptographySettings`|包含密碼編譯設定。|  
 |`cryptoNameMapping`|包含易記名稱的類別對應。|  
-|`mscorlib`|包含 `cryptographySettings` 元素。|  
+|`mscorlib`|包含元素`cryptographySettings`。|  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用\<的**cryptoClass >** 元素來參考密碼編譯類別，以及設定執行時間。 接著，您可以將字串 "RSA" 傳遞給 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 方法，然後使用 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 方法來傳回 `MyCryptoRSAClass` 物件。  
+ 下面的示例演示如何使用**\<cryptoclass>** 元素來引用加密類和配置運行時。 然後，可以將字串"RSA"傳遞給 方法，<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>並使用 方法<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>返回物件`MyCryptoRSAClass`。  
   
 ```xml  
 <configuration>  
@@ -80,7 +80,7 @@ ms.locfileid: "76732885"
 
 - <xref:System.Security.Cryptography>
 - [組態檔結構描述](../index.md)
-- [密碼編譯設定結構描述](index.md)
-- [密碼編譯服務](../../../../standard/security/cryptographic-services.md)
-- [Cryptoconfig.createfromname. CreateFromName。](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
+- [加密設定架構](index.md)
+- [The signature is valid](../../../../standard/security/cryptographic-services.md)
+- [系統.安全.加密.加密配置.創建從名稱](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [設定密碼編譯類別](../../configure-cryptography-classes.md)

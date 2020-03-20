@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: c1d97ed04de25d4db0fbf17e26a1d169d356a72c
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d354dda05e8353a33c3a64440e5c2bad390743b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794400"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79148851"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>使用 Wait 控制代碼的 ASP.NET 應用程式
-當應用程式一次只處理一個非同步作業時，用於處理非同步作業的回呼及輪詢模式會很有用。 等候模式可提供更靈活的方式來處理多個非同步作業。 有兩種等候模式，這兩種模式都是針對用於實作它們的 <xref:System.Threading.WaitHandle> 方法而命名：等候 (任何) 模式及等候 (所有) 模式。  
+當您的應用程式一次只處理一個非同步作業時，用於處理非同步作業的回呼和輪詢模型就很實用。 等候模型提供更有彈性的方式來處理多個非同步作業。 等候模型有兩種，這兩者都是針對用於實作它們的 <xref:System.Threading.WaitHandle> 方法而命名：等候 (任何) 模型和等候 (全部) 模型。  
   
- 若要使用其中一種等候模式，您需要使用由 <xref:System.IAsyncResult.AsyncWaitHandle%2A>、<xref:System.IAsyncResult> 或 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 方法傳回之 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 物件的 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 屬性。 <xref:System.Threading.WaitHandle.WaitAny%2A> 與 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法都會要求您傳送 <xref:System.Threading.WaitHandle> 物件做為引數，一起群組在陣列中。  
+ 若要使用任一種等候模型，您必須使用 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 或 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 方法所傳回之 <xref:System.IAsyncResult> 物件的 <xref:System.IAsyncResult.AsyncWaitHandle%2A> 屬性。 <xref:System.Threading.WaitHandle.WaitAny%2A> 和 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法都會要求您傳送 <xref:System.Threading.WaitHandle> 物件作為引數，並於陣列中群組在一起。  
   
- 這兩種等候方法都會監視非同步作業，並且等候作業完成。 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法會等候任意一項作業完成或逾時。一旦您知道某項特定作業已完成，就可處理其結果，然後繼續等候下一項作業完成或逾時。<xref:System.Threading.WaitHandle.WaitAll%2A> 方法會等候 <xref:System.Threading.WaitHandle> 執行個體陣列中的所有處理序完成或逾時後才繼續。  
+ 這兩種等候方法都會監視非同步作業，等待完成。 該方法<xref:System.Threading.WaitHandle.WaitAny%2A>等待任何操作完成或超時。知道特定操作已完成後，可以處理其結果，然後繼續等待下一個操作完成或超時。該方法<xref:System.Threading.WaitHandle.WaitAll%2A>等待<xref:System.Threading.WaitHandle>實例陣列中的所有進程完成或超時，然後再繼續。  
   
- 當您需要在不同伺服器上執行一定長度的多項作業，或您的伺服器功能足以同時處理所有查詢時，最可以突顯出等候模型的優點。 在此處顯示的範例中，三個查詢藉由將不同長度的 WAITFOR 命令加入不連貫的 SELECT 查詢，模擬長處理序。  
+ 當您需要在不同伺服器上執行某個長度的多個作業時，或者，當您伺服器的功能強大到足以同時處理所有查詢時，等候模型的優點最為顯著。 在這裡顯示的範例中，三個查詢會藉由將不同長度的 WAITFOR 命令新增到無關緊要的 SELECT 查詢來模擬較長的處理序。  
   
 ## <a name="example-wait-any-model"></a>範例：等候 (任何) 模式  
- 下列範例說明等候 (任何) 模式。 啟動三個非同步處理序後，會呼叫 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法，以等候其中任何一項處理序完成。 每個處理序完成時，都會呼叫 <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 方法，並讀取產生的 <xref:System.Data.SqlClient.SqlDataReader> 物件。 此時，實際應用程式很可能使用 <xref:System.Data.SqlClient.SqlDataReader> 來填入一部分頁面。 在此簡單範例中，會將處理序完成的時間加入與該處理序對應的文字方塊中。 統一來看，文字方塊中的時間可說明：每次處理序完成時，都會執行程式碼。  
+ 下列範例說明等候 (任何) 模型。 一旦啟動三個非同步處理序之後，即會呼叫 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法，以等候其中任一個處理序完成。 當每個處理序完成時，即會呼叫 <xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> 方法，並讀取產生的 <xref:System.Data.SqlClient.SqlDataReader> 物件。 此時，真實世界的應用程式可能會使用 <xref:System.Data.SqlClient.SqlDataReader> 來填入頁面的一部分。 在這個簡單範例中，會將處理序完成的時間新增至對應到該處理序的文字方塊。 整體而言，文字方塊中的時間可說明：每次處理序完成時，都會執行程式碼。  
   
- 若要設定此範例，請建立新的 ASP.NET 網站專案。 將一個 <xref:System.Web.UI.WebControls.Button> 控制項與四個 <xref:System.Web.UI.WebControls.TextBox> 控制項置於頁面上 (接受每個控制項的預設名稱)。  
+ 若要設定此範例，請建立新的 ASP.NET 網站專案。 在頁面上放置一個 <xref:System.Web.UI.WebControls.Button> 控制項和四個 <xref:System.Web.UI.WebControls.TextBox> 控制項 (接受每個控制項的預設名稱)。  
   
- 將下列程式碼加入表單類別，並視環境需要修改連接字串。  
+ 將下列程式碼新增至表單的類別，並視您的環境需要修改連接字串。  
   
 ```vb  
 ' Add these to the top of the class  
@@ -37,28 +37,28 @@ Imports System.Threading
   
 ' Add this code to the page's class:  
     Private Function GetConnectionString() As String  
-        ' To avoid storing the connection string in your code,              
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
   
-        ' If you have not included "Asynchronous Processing=true"   
+        ' If you have not included "Asynchronous Processing=true"
         ' in the connection string, the command will not be able  
         ' to execute asynchronously.  
         Return "Data Source=(local);Integrated Security=SSPI;" & _  
           "Initial Catalog=AdventureWorks;" & _  
           "Asynchronous Processing=true"  
-    End Function    
+    End Function
   
     Sub Button1_Click( _  
      ByVal sender As Object, ByVal e As System.EventArgs)  
   
-        ' In a real-world application, you might be connecting to   
+        ' In a real-world application, you might be connecting to
         '  three different servers or databases. For the example,  
         '  we connect to only one.  
         Dim connection1 As New SqlConnection(GetConnectionString())  
         Dim connection2 As New SqlConnection(GetConnectionString())  
         Dim connection3 As New SqlConnection(GetConnectionString())  
   
-        ' To keep the example simple, all three asynchronous   
+        ' To keep the example simple, all three asynchronous
         ' processes select a row from the same table. WAITFOR  
         ' commands are used to emulate long-running processes  
         ' that complete after different periods of time.  
@@ -80,7 +80,7 @@ Imports System.Threading
         Dim waitHandles(2) As WaitHandle  
         Try  
             ' For each process, open a connection and begin execution.  
-            ' Use the IAsyncResult object returned by   
+            ' Use the IAsyncResult object returned by
             ' BeginExecuteReader to add a WaitHandle for the process  
             ' to the array.  
             connection1.Open()  
@@ -108,10 +108,10 @@ Imports System.Threading
                 ' array element whose process just completed, or  
                 ' the WaitTimeout value.  
                 index = WaitHandle.WaitAny(waitHandles, 60000, False)  
-                ' This example doesn't actually do anything with the   
-                ' data returned by the processes, but the code opens   
+                ' This example doesn't actually do anything with the
+                ' data returned by the processes, but the code opens
                 ' readers for each just to demonstrate the concept.  
-                ' Instead of using the returned data to fill the   
+                ' Instead of using the returned data to fill the
                 ' controls on the page, the example adds the time  
                 ' the process was completed to the corresponding  
                 ' text box.  
@@ -175,9 +175,9 @@ using System.Data.SqlClient;
   
 // Add this code to the page's class  
 string GetConnectionString()  
-     //  To avoid storing the connection string in your code,              
-     //  you can retrieve it from a configuration file.   
-     //  If you have not included "Asynchronous Processing=true"   
+     //  To avoid storing the connection string in your code,
+     //  you can retrieve it from a configuration file.
+     //  If you have not included "Asynchronous Processing=true"
      //  in the connection string, the command will not be able  
      //  to execute asynchronously.  
 {  
@@ -187,34 +187,34 @@ string GetConnectionString()
 }  
 void Button1_Click(object sender, System.EventArgs e)  
 {  
-     //  In a real-world application, you might be connecting to   
+     //  In a real-world application, you might be connecting to
      //   three different servers or databases. For the example,  
      //   we connect to only one.  
   
-     SqlConnection connection1 =   
+     SqlConnection connection1 =
           new SqlConnection(GetConnectionString());  
-     SqlConnection connection2 =   
+     SqlConnection connection2 =
           new SqlConnection(GetConnectionString());  
-     SqlConnection connection3 =   
+     SqlConnection connection3 =
           new SqlConnection(GetConnectionString());  
-     //  To keep the example simple, all three asynchronous   
+     //  To keep the example simple, all three asynchronous
      //  processes select a row from the same table. WAITFOR  
      //  commands are used to emulate long-running processes  
      //  that complete after different periods of time.  
   
-     string commandText1 = "WAITFOR DELAY '0:0:01';" +   
-          "SELECT * FROM Production.Product " +   
+     string commandText1 = "WAITFOR DELAY '0:0:01';" +
+          "SELECT * FROM Production.Product " +
           "WHERE ProductNumber = 'BL-2036'";  
-     string commandText2 = "WAITFOR DELAY '0:0:05';" +   
-          "SELECT * FROM Production.Product " +   
+     string commandText2 = "WAITFOR DELAY '0:0:05';" +
+          "SELECT * FROM Production.Product " +
           "WHERE ProductNumber = 'BL-2036'";  
-     string commandText3 = "WAITFOR DELAY '0:0:10';" +   
-          "SELECT * FROM Production.Product " +   
+     string commandText3 = "WAITFOR DELAY '0:0:10';" +
+          "SELECT * FROM Production.Product " +
           "WHERE ProductNumber = 'BL-2036'";  
      try  
-          //  For each process, open a connection and begin   
-          //  execution. Use the IAsyncResult object returned by   
-          //  BeginExecuteReader to add a WaitHandle for the   
+          //  For each process, open a connection and begin
+          //  execution. Use the IAsyncResult object returned by
+          //  BeginExecuteReader to add a WaitHandle for the
           //  process to the array.  
      {  
           connection1.Open();  
@@ -242,18 +242,18 @@ void Button1_Click(object sender, System.EventArgs e)
           int index;  
           for (int countWaits = 0; countWaits <= 2; countWaits++)  
           {  
-               //  WaitAny waits for any of the processes to   
-               //  complete. The return value is either the index   
-               //  of the array element whose process just   
+               //  WaitAny waits for any of the processes to
+               //  complete. The return value is either the index
+               //  of the array element whose process just
                //  completed, or the WaitTimeout value.  
   
-               index = WaitHandle.WaitAny(waitHandles,   
+               index = WaitHandle.WaitAny(waitHandles,
                     60000, false);  
-               //  This example doesn't actually do anything with   
-               //  the data returned by the processes, but the   
-               //  code opens readers for each just to demonstrate       
+               //  This example doesn't actually do anything with
+               //  the data returned by the processes, but the
+               //  code opens readers for each just to demonstrate
                //  the concept.  
-               //  Instead of using the returned data to fill the   
+               //  Instead of using the returned data to fill the
                //  controls on the page, the example adds the time  
                //  the process was completed to the corresponding  
                //  text box.  
@@ -262,11 +262,11 @@ void Button1_Click(object sender, System.EventArgs e)
                {  
                     case 0:  
                          SqlDataReader reader1;  
-                         reader1 =   
+                         reader1 =
                               command1.EndExecuteReader(result1);  
                          if (reader1.Read())  
                          {  
-                           TextBox1.Text =   
+                           TextBox1.Text =
                            "Completed " +  
                            System.DateTime.Now.ToLongTimeString();  
                          }  
@@ -274,11 +274,11 @@ void Button1_Click(object sender, System.EventArgs e)
                          break;  
                     case 1:  
                          SqlDataReader reader2;  
-                         reader2 =   
+                         reader2 =
                               command2.EndExecuteReader(result2);  
                          if (reader2.Read())  
                          {  
-                           TextBox2.Text =   
+                           TextBox2.Text =
                            "Completed " +  
                            System.DateTime.Now.ToLongTimeString();  
                          }  
@@ -286,11 +286,11 @@ void Button1_Click(object sender, System.EventArgs e)
                          break;  
                     case 2:  
                          SqlDataReader reader3;  
-                         reader3 =   
+                         reader3 =
                               command3.EndExecuteReader(result3);  
                          if (reader3.Read())  
                          {  
-                           TextBox3.Text =   
+                           TextBox3.Text =
                            "Completed " +  
                            System.DateTime.Now.ToLongTimeString();  
                          }  
@@ -313,13 +313,13 @@ void Button1_Click(object sender, System.EventArgs e)
 ```  
   
 ## <a name="example-wait-all-model"></a>範例：等候 (所有) 模式  
- 下列範例說明等候 (所有) 模式。 啟動三個非同步處理序後，會呼叫 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法，以等候所有處理序完成或逾時。  
+ 下列範例說明等候 (全部) 模型。 一旦啟動三個非同步處理序之後，即會呼叫 <xref:System.Threading.WaitHandle.WaitAll%2A> 方法，以等候處理序完成或逾時。  
   
- 像等候 (任何) 模式的範例一樣，會將處理序完成的時間加入與該處理序對應的文字方塊中。 同樣地，文字方塊中的時間可說明：只有當所有處理序都完成之後，才會執行 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法後的程式碼。  
+ 如同等候 (任何) 模型的範例，會將處理序完成的時間新增至對應到該處理序的文字方塊。 同樣地，文字方塊中的時間可說明：只有當所有處理序都完成之後，才會執行 <xref:System.Threading.WaitHandle.WaitAny%2A> 方法後面的程式碼。  
   
- 若要設定此範例，請建立新的 ASP.NET 網站專案。 將一個 <xref:System.Web.UI.WebControls.Button> 控制項與四個 <xref:System.Web.UI.WebControls.TextBox> 控制項置於頁面上 (接受每個控制項的預設名稱)。  
+ 若要設定此範例，請建立新的 ASP.NET 網站專案。 在頁面上放置一個 <xref:System.Web.UI.WebControls.Button> 控制項和四個 <xref:System.Web.UI.WebControls.TextBox> 控制項 (接受每個控制項的預設名稱)。  
   
- 將下列程式碼加入表單類別，並視環境需要修改連接字串。  
+ 將下列程式碼新增至表單的類別，並視您的環境需要修改連接字串。  
   
 ```vb  
 ' Add these to the top of the class  
@@ -330,27 +330,27 @@ Imports System.Threading
   
 ' Add this code to the page's class:  
     Private Function GetConnectionString() As String  
-        ' To avoid storing the connection string in your code,              
-        ' you can retrieve it from a configuration file.   
+        ' To avoid storing the connection string in your code,
+        ' you can retrieve it from a configuration file.
   
-        ' If you have not included "Asynchronous Processing=true"   
+        ' If you have not included "Asynchronous Processing=true"
         ' in the connection string, the command will not be able  
         ' to execute asynchronously.  
         Return "Data Source=(local);Integrated Security=SSPI;" & _  
           "Initial Catalog=AdventureWorks;" & _  
           "Asynchronous Processing=true"  
-    End Function    
+    End Function
     Sub Button1_Click( _  
      ByVal sender As Object, ByVal e As System.EventArgs)  
   
-        ' In a real-world application, you might be connecting to   
+        ' In a real-world application, you might be connecting to
         '  three different servers or databases. For the example,  
         '  we connect to only one.  
         Dim connection1 As New SqlConnection(GetConnectionString())  
         Dim connection2 As New SqlConnection(GetConnectionString())  
         Dim connection3 As New SqlConnection(GetConnectionString())  
   
-        ' To keep the example simple, all three asynchronous   
+        ' To keep the example simple, all three asynchronous
         ' processes select a row from the same table. WAITFOR  
         ' commands are used to emulate long-running processes  
         ' that complete after different periods of time.  
@@ -385,7 +385,7 @@ Imports System.Threading
   
         Try  
             ' For each process, open a connection and begin execution.  
-            ' Use the IAsyncResult object returned by   
+            ' Use the IAsyncResult object returned by
             ' BeginExecuteReader to add a WaitHandle for the process  
             ' to the array.  
             connection1.Open()  
@@ -407,7 +407,7 @@ Imports System.Threading
             waitHandles(2) = result3.AsyncWaitHandle  
   
             ' WaitAll waits for all of the processes to complete.  
-            ' The return value is True if all processes completed,   
+            ' The return value is True if all processes completed,
             ' False if any process timed out.  
             Dim result As Boolean = _  
              WaitHandle.WaitAll(waitHandles, 60000, False)  
@@ -458,9 +458,9 @@ using System.Data.SqlClient;
   
 // Add this code to the page's class  
 string GetConnectionString()  
-    //  To avoid storing the connection string in your code,              
-    //  you can retrieve it from a configuration file.   
-    //  If you have not included "Asynchronous Processing=true"   
+    //  To avoid storing the connection string in your code,
+    //  you can retrieve it from a configuration file.
+    //  If you have not included "Asynchronous Processing=true"
     //  in the connection string, the command will not be able  
     //  to execute asynchronously.  
 {  
@@ -470,23 +470,23 @@ string GetConnectionString()
 }  
 void Button1_Click(object sender, System.EventArgs e)  
 {  
-    //  In a real-world application, you might be connecting to   
+    //  In a real-world application, you might be connecting to
     //   three different servers or databases. For the example,  
     //   we connect to only one.  
   
-    SqlConnection connection1 =   
+    SqlConnection connection1 =
         new SqlConnection(GetConnectionString());  
-    SqlConnection connection2 =   
+    SqlConnection connection2 =
         new SqlConnection(GetConnectionString());  
-    SqlConnection connection3 =   
+    SqlConnection connection3 =
         new SqlConnection(GetConnectionString());  
-    //  To keep the example simple, all three asynchronous   
+    //  To keep the example simple, all three asynchronous
     //  processes execute UPDATE queries that result in  
       //  no change to the data. WAITFOR  
     //  commands are used to emulate long-running processes  
     //  that complete after different periods of time.  
   
-    string commandText1 =   
+    string commandText1 =
         "UPDATE Production.Product " +  
         "SET ReorderPoint = ReorderPoint + 1 " +  
         "WHERE ReorderPoint Is Not Null;" +  
@@ -495,7 +495,7 @@ void Button1_Click(object sender, System.EventArgs e)
         "SET ReorderPoint = ReorderPoint - 1 " +  
         "WHERE ReorderPoint Is Not Null";  
   
-    string commandText2 =   
+    string commandText2 =
       "UPDATE Production.Product " +  
       "SET ReorderPoint = ReorderPoint + 1 " +  
       "WHERE ReorderPoint Is Not Null;" +  
@@ -513,9 +513,9 @@ void Button1_Click(object sender, System.EventArgs e)
        "SET ReorderPoint = ReorderPoint - 1 " +  
        "WHERE ReorderPoint Is Not Null";  
     try  
-        //  For each process, open a connection and begin   
-        //  execution. Use the IAsyncResult object returned by   
-        //  BeginExecuteReader to add a WaitHandle for the   
+        //  For each process, open a connection and begin
+        //  execution. Use the IAsyncResult object returned by
+        //  BeginExecuteReader to add a WaitHandle for the
         //  process to the array.  
     {  
         connection1.Open();  
@@ -541,7 +541,7 @@ void Button1_Click(object sender, System.EventArgs e)
         };  
   
         bool result;  
-        //  WaitAll waits for all of the processes to   
+        //  WaitAll waits for all of the processes to
         //  complete. The return value is True if the processes  
         //  all completed successfully, False if any process  
         //  timed out.  
@@ -549,16 +549,16 @@ void Button1_Click(object sender, System.EventArgs e)
         result = WaitHandle.WaitAll(waitHandles, 60000, false);  
         if(result)  
         {  
-            long rowCount1 =   
+            long rowCount1 =
                 command1.EndExecuteNonQuery(result1);  
             TextBox1.Text = "Completed " +  
                 System.DateTime.Now.ToLongTimeString();  
-            long rowCount2 =   
+            long rowCount2 =
                 command2.EndExecuteNonQuery(result2);  
             TextBox2.Text = "Completed " +  
                 System.DateTime.Now.ToLongTimeString();  
   
-            long rowCount3 =   
+            long rowCount3 =
                 command3.EndExecuteNonQuery(result3);  
             TextBox3.Text = "Completed " +  
                 System.DateTime.Now.ToLongTimeString();  
@@ -582,4 +582,4 @@ void Button1_Click(object sender, System.EventArgs e)
 ## <a name="see-also"></a>另請參閱
 
 - [非同步作業](asynchronous-operations.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

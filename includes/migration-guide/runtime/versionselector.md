@@ -1,12 +1,12 @@
 ---
 ms.openlocfilehash: 45107e0754d6b13c92146201a97b2dd08d840df7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70927116"
 ---
-> [!div class="op_multi_selector" title1="從 .NET Framework 版本" title2="若要 .NET Framework 版本"]
+> [!div class="op_multi_selector" title1="從 .NET 框架版本" title2="到 .NET 框架版本"]
 >
 > - [(4.0 | 4.5)](~/docs/framework/migration-guide/runtime/4.0-4.5.md)
 > - [(4.0 | 4.5.1)](~/docs/framework/migration-guide/runtime/4.0-4.5.1.md)

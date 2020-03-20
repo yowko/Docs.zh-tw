@@ -2,12 +2,12 @@
 title: 自訂訊息攔截器
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: 53005212bc834d73ab5cbb4545d1477112f29c75
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 433b14433a7e2dd6edad551a2732e9049a9861ea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716806"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145082"
 ---
 # <a name="custom-message-interceptor"></a>自訂訊息攔截器
 這個範例示範通道擴充性模型的使用方式。 尤其，這個範例會示範如何實作建立通道處理站和通道接聽程式的自訂繫結項目，以攔截執行階段堆疊中特定點的所有傳入與傳出訊息。 範例也包含用戶端和伺服器，以示範這些自訂處理站的使用方式。  
@@ -19,14 +19,14 @@ ms.locfileid: "74716806"
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- 此範例說明在 Windows Communication Foundation （WCF）中建立自訂分層式通道的建議程式，方法是使用通道架構並遵循 WCF 最佳作法。 建立自訂層次通道的步驟如下：  
+ 該示例介紹了通過使用通道框架並遵循 WCF 最佳實踐，在 Windows 通信基礎 （WCF） 中創建自訂分層通道的建議過程。 建立自訂層次通道的步驟如下：  
   
 1. 決定通道處理站和通道接聽項所要支援的通道類型。  
   
@@ -46,18 +46,18 @@ ms.locfileid: "74716806"
   
 ```csharp
 class InterceptingChannelFactory<TChannel> : ChannelFactoryBase<TChannel>  
-{ 
-    //... 
+{
+    //...
 }
 
 class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>  
-{ 
+{
     //...
 }  
 ```  
   
 ## <a name="adding-a-binding-element"></a>新增繫結項目  
- 範例會定義自訂繫結項目：`InterceptingBindingElement`。 `InterceptingBindingElement` 會以 `ChannelMessageInterceptor` 做為輸入，並使用此 `ChannelMessageInterceptor` 來管理通過它的訊息。 這是唯一必須為公用的類別。 處理站、接聽項和通道全部都可以是公用執行階段介面的內部實作。  
+ 範例會定義自訂繫結項目：`InterceptingBindingElement`。 `InterceptingBindingElement`將`ChannelMessageInterceptor`作為輸入，並用它來`ChannelMessageInterceptor`操作通過它的消息。 這是唯一必須為公用的類別。 處理站、接聽項和通道全部都可以是公用執行階段介面的內部實作。  
   
 ```csharp
 public class InterceptingBindingElement : BindingElement
@@ -69,9 +69,9 @@ public class InterceptingBindingElement : BindingElement
  為了與繫結組態整合，程式庫會將組態區段處理常式定義為繫結項目延伸區段。 用戶端和伺服器組態檔必須向組態系統註冊繫結項目延伸。 想要將其繫結項目公開給組態系統的實作器都可以衍生自這個類別。  
   
 ```csharp
-public abstract class InterceptingElement : BindingElementExtensionElement 
-{ 
-    //... 
+public abstract class InterceptingElement : BindingElementExtensionElement
+{
+    //...
 }
 ```  
   
@@ -100,7 +100,7 @@ class DroppingServerElement : InterceptingElement
         ...  
         <extensions>  
             <bindingElementExtensions>  
-                <add name="droppingInterceptor"   
+                <add name="droppingInterceptor"
                    type=  
           "Microsoft.ServiceModel.Samples.DroppingServerElement, library"/>  
             </bindingElementExtensions>  
@@ -157,16 +157,16 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 使用下列命令安裝 ASP.NET 4.0。  
+1. 使用以下命令安裝ASP.NET 4.0。  
   
     ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
+3. 要生成解決方案，請按照生成 Windows[通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的說明進行操作。  
   
-4. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+4. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
   
 5. 先執行 Service.exe，然後執行 Client.exe，再查看兩個主控台視窗上的輸出。  

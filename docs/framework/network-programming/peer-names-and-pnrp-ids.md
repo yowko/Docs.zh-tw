@@ -3,10 +3,10 @@ title: 對等名稱和 PNRP 識別碼
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
 ms.openlocfilehash: 15b74317507f69d2339a2e5e49b54ae72cda1a7b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71047496"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>對等名稱和 PNRP 識別碼
@@ -20,7 +20,7 @@ ms.locfileid: "71047496"
  安全的對等名稱只能由其擁有者註冊，並以公開金鑰加密進行保護。 安全的對等名稱是為由具有對應私密金鑰的對等實體所擁有。 擁有權可以透過使用私密金鑰簽署的認證對等位址 (CPA) 進行證明。 惡意使用者沒有對應的私密金鑰，就無法偽造對等名稱的擁有權。  
   
 ## <a name="pnrp-ids"></a>PNRP 識別碼  
- ![PNRP 識別碼](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+ ![PNRP ID](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  PNRP 識別碼由下列各項所組成：  
   

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
 ms.openlocfilehash: 2d3d85ebd80f417ebd0fa0e619097e15f2a6a39b
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048779"
 ---
 # <a name="cache-policy"></a>快取原則
@@ -32,7 +32,7 @@ ms.locfileid: "71048779"
 |<xref:System.Net.Cache.HttpRequestCacheLevel>|指定值，用來建立以位置為基礎和以時間為基礎之 <xref:System.Net.Cache.HttpRequestCachePolicy> 物件。|  
 |<xref:System.Net.Cache.RequestCacheLevel>|指定值，用來建立以位置為基礎或 <xref:System.Net.Cache.RequestCacheLevel.Default> 以時間為基礎的 <xref:System.Net.Cache.RequestCachePolicy> 物件。|  
   
- 您可以定義應用程式所提出之所有要求或個別要求的快取原則。 當您同時指定應用程式層級快取原則和要求層級快取原則時，會使用要求層級原則。 您可以透過程式設計方式或是使用應用程式或電腦組態檔，來指定應用程式層級快取原則。 如需詳細資訊，請參閱 [\<requestCaching> 項目 (網路設定)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
+ 您可以定義應用程式所提出之所有要求或個別要求的快取原則。 當您同時指定應用程式層級快取原則和要求層級快取原則時，會使用要求層級原則。 您可以透過程式設計方式或是使用應用程式或電腦組態檔，來指定應用程式層級快取原則。 有關詳細資訊，請參閱[\<請求緩存>元素（網路設置）](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
   
  若要建立快取原則，您必須建立 <xref:System.Net.Cache.RequestCachePolicy> 或 <xref:System.Net.Cache.HttpRequestCachePolicy> 類別的執行個體來建立原則物件。 若要在要求上指定原則，請將要求的 <xref:System.Net.WebRequest.CachePolicy%2A> 屬性設定為原則物件。 以程式設計方式設定應用程式層級原則時，請將 <xref:System.Net.HttpWebRequest.DefaultCachePolicy%2A> 屬性設定為原則物件。  
   
@@ -42,5 +42,5 @@ ms.locfileid: "71048779"
 
 - [網路應用程式的快取管理](cache-management-for-network-applications.md)
 - [以位置為基礎的快取原則](location-based-cache-policies.md)
-- [以時間為基礎的快取原則](time-based-cache-policies.md)
+- [Time-Based Cache Policies](time-based-cache-policies.md)
 - [設定網路應用程式的快取功能](configuring-caching-in-network-applications.md)

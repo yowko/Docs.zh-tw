@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: f007a2b81820a1d25a2d101b35f3a49e7794fec1
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: 0b42e320ba439a4cfc196471fc6dd4b3c15cd9d2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67859088"
 ---
 ### <a name="workflow-checksums-changed-from-md5-to-sha1"></a>工作流程總和檢查碼從 MD5 變更為 SHA1
@@ -12,7 +12,6 @@ ms.locfileid: "67859088"
 |---|---|
 |詳細資料|為了支援使用 Visual Studio 進行偵錯，工作流程執行階段會使用雜湊演算法為工作流程執行個體產生總和檢查碼。 在 .NET Framework 4.6.2 和更早版本中，工作流程總和檢查碼雜湊使用 MD5 演算法，它會在啟用 FIPS 的系統上造成問題。 從 .NET Framework 4.7 開始，演算法是 SHA1。 如果您的程式碼已保存這些總和檢查碼，就會不相容。|
 |建議|如果您的程式碼因為總和檢查碼失敗而無法載入工作流程執行個體，請嘗試將 <code>AppContext</code> 參數 &quot;Switch.System.Activities.UseMD5ForWFDebugger&quot; 設為 true。在程式碼中：<pre><code class="lang-csharp">System.AppContext.SetSwitch(&quot;Switch.System.Activities.UseMD5ForWFDebugger&quot;, true);&#13;&#10;</code></pre>或者，在組態中：<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;runtime&gt;&#13;&#10;&lt;AppContextSwitchOverrides value=&quot;Switch.System.Activities.UseMD5ForWFDebugger=true&quot; /&gt;&#13;&#10;&lt;/runtime&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>|
-|範圍|次要|
+|影響範圍|Minor|
 |版本|4.7|
 |類型|正在重定目標|
-

@@ -3,11 +3,11 @@ title: 使用 IPv6 和 Teredo 的 NAT 周遊
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
 ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768172"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "61642167"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>使用 IPv6 和 Teredo 的 NAT 周遊
 已進行支援網路位址轉譯 (NAT) 周遊的增強功能。 這些變更設計成與 IPv6 和 Teredo 搭配使用，但也適用於其他 IP 通道技術。 這些增強功能會影響 <xref:System.Net> 和相關命名空間中的類別。  
@@ -16,7 +16,7 @@ ms.locfileid: "59768172"
   
  支援 NAT 周遊的變更只適用於使用 .NET Framework 第 4 版的應用程式。 舊版 .NET Framework 無法使用這些功能。  
   
-## <a name="overview"></a>總覽  
+## <a name="overview"></a>概觀  
  網際網路通訊協定第 4 版 (IPv4) 已將 IPv4 位址的長度定義為 32 位元。 因此，IPv4 大約支援 40 億個唯一 IP 位址 (2^32)。 因為網際網路上的電腦和網路裝置數目已在 1990 年代擴充，所以 IPv4 位址空間限制變得明顯。  
   
  數個用來擴充 IPv4 存留期的其中一個技術是部署 NAT，以允許單一唯一公用 IP 位址代表大量私人 IP 位址 (私人內部網路)。 受 NAT 裝置保護的私人 IP 位址會共用單一公用 IPv4 位址。 NAT 裝置可能是專用硬體裝置 (例如，便宜的無線存取點和路由器) 或執行服務來提供 NAT 的電腦。 此公用 IP 位址的裝置或服務會在公用網際網路與私人內部網路之間轉譯 IP 位址封包。  

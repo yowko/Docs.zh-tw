@@ -2,15 +2,15 @@
 title: 設定用於 Windows Communication Foundation 的 Windows Process Activation Service
 ms.date: 03/30/2017
 ms.assetid: 1d50712e-53cd-4773-b8bc-a1e1aad66b78
-ms.openlocfilehash: 5533393f759408002b83ba8ff485ba8229e921dd
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 2da2653f3d2bd3d998b0ebbe87ea33760315f7df
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964637"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185297"
 ---
 # <a name="configuring-the-windows-process-activation-service-for-use-with-windows-communication-foundation"></a>設定用於 Windows Communication Foundation 的 Windows Process Activation Service
-本主題說明在 Windows Vista 中設定 Windows 進程啟用服務（也稱為 WAS）來裝載無法透過 HTTP 網路通訊協定進行通訊的 Windows Communication Foundation （WCF）服務時，所需執行的步驟。 下列各節將概述此組態的各項步驟：  
+本主題介紹在 Windows Vista 中設置 Windows 進程啟動服務（也稱為 WAS）以託管不通過 HTTP 網路通訊協定進行通信的 Windows 通信基礎 （WCF） 服務所需的步驟。 下列各節將概述此組態的各項步驟：  
   
 - 安裝（或確認安裝）所需的 WCF 啟動元件。  
   
@@ -18,12 +18,12 @@ ms.locfileid: "75964637"
   
 - 建立應用程式來裝載服務，並啟用該應用程式來使用所需的網路通訊協定。  
   
-- 建立會公開非 HTTP 端點的 WCF 服務。  
+- 生成公開非 HTTP 終結點的 WCF 服務。  
   
 ## <a name="configuring-a-site-with-non-http-bindings"></a>使用非 HTTP 繫結來設定網站  
  若要以非 HTTP 繫結來搭配 WAS 一起使用，必須將網站繫結新增至 WAS 組態。 WAS 的組態存放區就是 applicationHost.config 檔 (位於 %windir%\system32\inetsrv\config 目錄)。 這個組態存取區可由 WAS 和 IIS 7.0 同時共用。  
   
- applicationHost.config 是一個可使用任何標準文字編輯器 (例如 [記事本]) 來開啟的 XML 文字檔。 不過，IIS 7.0 命令列設定工具（appcmd.exe）是新增非 HTTP 網站系結的慣用方式。  
+ applicationHost.config 是一個可使用任何標準文字編輯器 (例如 [記事本]) 來開啟的 XML 文字檔。 但是，IIS 7.0 命令列組態工具 （appcmd.exe） 是添加非 HTTP 網站綁定的首選方式。  
   
  下列命令會使用 appcmd.exe 將 net.tcp 網站繫結新增至預設的網站 (此命令需以單行方式輸入)。  
   
@@ -46,13 +46,13 @@ appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInf
 ```  
   
 ## <a name="enabling-an-application-to-use-non-http-protocols"></a>啟用應用程式來使用非 HTTP 通訊協定  
- 您可以啟用或停用應用層級的個別網路 protocolsat。 下列命令說明如何針對在 `Default Web Site` 中執行的應用程式同時啟用 HTTP 和 net.tcp 通訊協定。  
+ 您可以在應用程式級別啟用或禁用單個網路通訊協定。 下列命令說明如何針對在 `Default Web Site` 中執行的應用程式同時啟用 HTTP 和 net.tcp 通訊協定。  
   
 ```console  
 appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp  
 ```  
   
- 已啟用的通訊協定清單也可以在儲存于 Applicationhost.config 之網站 XML 設定的 \<s > 元素中設定。  
+ 還可以在\<應用程式中設置已啟用的協定清單，>存儲在應用程式Host.config中的網站 XML 配置的元素。  
   
  下列來自 applicationHost.config 的 XML 程式碼說明同時繫結至 HTTP 和非 HTTP 通訊協定的網站。 支援非 HTTP 通訊協定所需的額外組態可以藉由註解來呼叫。  
   
@@ -69,14 +69,14 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
        </bindings>  
     </site>  
     <siteDefaults>  
-        <logFile   
+        <logFile
         customLogPluginClsid="{FF160663-DE82-11CF-BC0A-00AA006111E0}"  
           directory="D:\inetpub\logs\LogFiles" />  
-        <traceFailedRequestsLogging   
+        <traceFailedRequestsLogging
           directory="D:\inetpub\logs\FailedReqLogFiles" />  
     </siteDefaults>  
-    <applicationDefaults   
-      applicationPool="DefaultAppPool"   
+    <applicationDefaults
+      applicationPool="DefaultAppPool"
       //The following line is inserted by the command.  
       enabledProtocols="http, net.tcp" />  
     <virtualDirectoryDefaults allowSubDirConfig="true" />  
@@ -89,14 +89,14 @@ appcmd.exe set app "Default Web Site/appOne" /enabledProtocols:net.tcp
 [InvalidOperationException: The protocol 'net.tcp' does not have an implementation of HostedTransportConfiguration type registered.]   System.ServiceModel.AsyncResult.End(IAsyncResult result) +15778592   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.End(IAsyncResult result) +15698937   System.ServiceModel.Activation.HostedHttpRequestAsyncResult.ExecuteSynchronous(HttpApplication context, Boolean flowContext) +265   System.ServiceModel.Activation.HttpModule.ProcessRequest(Object sender, EventArgs e) +227   System.Web.SyncEventExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute() +80   System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously) +171  
 ```  
   
- 如果您收到這個錯誤，請確認已安裝並正確設定適用於非 HTTP 啟用的 WAS。 如需詳細資訊，請參閱[如何：安裝和設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
+ 如果您收到這個錯誤，請確認已安裝並正確設定適用於非 HTTP 啟用的 WAS。 有關詳細資訊，請參閱[如何：安裝和配置 WCF 啟動元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)。  
   
 ## <a name="building-a-wcf-service-that-uses-was-for-non-http-activation"></a>針對非 HTTP 啟動建置使用 WAS 的 WCF 服務  
- 一旦您執行安裝和設定 WAS 的步驟（請參閱[如何：安裝和設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)），設定服務以使用 WAS 來進行啟用，類似于設定裝載于 IIS 的服務。  
+ 執行安裝和配置 WAS 的步驟（請參閱[：安裝和配置 WCF 啟動元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)），將服務配置為使用 WAS 進行啟動類似于配置 IIS 中託管的服務。  
   
- 如需有關建立已啟動之 WCF 服務的詳細指示，請參閱[如何：在 WAS 中裝載 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
+ 有關構建 WAS 啟動的 WCF 服務的詳細說明，請參閱[如何：在 WAS 中託管 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 Windows 處理序啟用服務中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)
 - [Windows Server AppFabric 裝載功能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

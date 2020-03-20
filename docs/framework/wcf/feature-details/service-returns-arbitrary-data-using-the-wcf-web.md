@@ -2,15 +2,15 @@
 title: HOW TO：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 41d9f0e53401bcd6b57b04a38e76af5ddb9fb4cc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c85ab6725876a2d523a18c817ce3fd89f0d2285a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976093"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184488"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>HOW TO：使用 WCF Web HTTP 程式設計模型建立傳回任意資料的服務
-有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 當服務作業必須以 WCF 不支援的格式傳回資料時，就會發生這種情況。 本主題討論如何使用 WCF WEB HTTP 程式設計模型來建立這類服務。 該項服務提供一種會傳回資料流的作業。  
+有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 當服務操作必須以 WCF 不支援的格式返回資料時，就是這種情況。 本主題討論使用 WCF WEB HTTP 程式設計模型創建此類服務。 該項服務提供一種會傳回資料流的作業。  
   
 ### <a name="to-implement-the-service-contract"></a>若要實作服務合約  
   
@@ -25,7 +25,7 @@ ms.locfileid: "73976093"
         }  
     ```  
   
-     因為方法會傳回 <xref:System.IO.Stream>，所以 WCF 會假設作業對於從服務作業傳回的位元組有完整的控制權，而且它不會對傳回的資料套用任何格式。  
+     由於 該方法返回<xref:System.IO.Stream>A WCF 假定該操作對從服務操作返回的位元組具有完全控制，並且它不對返回的資料應用任何格式。  
   
 2. 實作服務合約。 該合約只能有一項作業 (`GetImage`)。 這個方法會產生一張點陣圖，然後以 JPG 格式儲存為 <xref:System.IO.MemoryStream>。 然後，這個作業會將該資料流傳回給呼叫者。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73976093"
   
      請注意程式碼的倒數第二行：`WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     這會將內容類型標頭設定為 `"image/jpeg"`。 雖然本範例示範的是如何傳回 JPG 檔案，但是您可以修改範例內容，使其傳回您所需的任何資料類型。 該作業必須要擷取或產生資料，然後將資料寫入資料流中。  
+     這將內容類型標頭設置到`"image/jpeg"`。 雖然本範例示範的是如何傳回 JPG 檔案，但是您可以修改範例內容，使其傳回您所需的任何資料類型。 該作業必須要擷取或產生資料，然後將資料寫入資料流中。  
   
 ### <a name="to-host-the-service"></a>若要裝載服務  
   
@@ -64,7 +64,7 @@ ms.locfileid: "73976093"
     {  
         static void Main(string[] args)  
         {  
-        }   
+        }
     }  
     ```  
   
@@ -175,6 +175,6 @@ namespace RawImageService
   
 - 編譯範例程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

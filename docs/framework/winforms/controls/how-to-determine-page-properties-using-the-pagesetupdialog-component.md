@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 PageSetupDialog 元件決定頁面屬性
+title: 如何：使用 PageSetupDialog 元件決定頁面屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 306e0dbf7fb819d1214d7d5d93d335b5d2db75e6
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 8a015c199193dfd9c43bec53cc93cbf9dc201413
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053622"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142039"
 ---
-# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>作法：使用 PageSetupDialog 元件決定頁面屬性
+# <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>如何：使用 PageSetupDialog 元件決定頁面屬性
 [PageSetupDialog](pagesetupdialog-component-windows-forms.md) 元件會向文件使用者呈現配置、紙張大小和其他頁面配置選項。  
   
  您需要指定 <xref:System.Drawing.Printing.PrintDocument> 類別執行個體，這是要列印文件。 此外，使用者必須在其電腦上安裝印表機 (本機或透過網路)，因為這有一部分是 <xref:System.Windows.Forms.PageSetupDialog> 元件如何決定呈現給使用者的頁面格式選項。  
@@ -30,7 +30,7 @@ ms.locfileid: "66053622"
   
      在下列範例中， <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Click> 事件處理常式會開啟 <xref:System.Windows.Forms.PageSetupDialog> 元件執行個體。 現有的文件指定於 <xref:System.Windows.Forms.PageSetupDialog.Document%2A> 屬性中，而且其 <xref:System.Drawing.Printing.PageSettings.Color%2A?displayProperty=nameWithType> 屬性設定為 `false`。  
   
-     此範例假設您的表單具有<xref:System.Windows.Forms.Button>控制<xref:System.Drawing.Printing.PrintDocument>名元件`myDocument`，和<xref:System.Windows.Forms.PageSetupDialog>元件。  
+     該示例<xref:System.Windows.Forms.Button>假定表單具有控制項、名為 的<xref:System.Drawing.Printing.PrintDocument>`myDocument`元件和元件。 <xref:System.Windows.Forms.PageSetupDialog>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, _  
@@ -76,14 +76,14 @@ ms.locfileid: "66053622"
        }  
     ```  
   
-     (VisualC#和 Visual C++)下列程式碼置於表單的建構函式，以註冊事件處理常式。  
+     （視覺 C# 和視覺C++）將以下代碼放在表單的建構函式中以註冊事件處理常式。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
     ```  
   
     ```cpp  
-    this->button1->Click += gcnew   
+    this->button1->Click += gcnew
        System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
@@ -91,4 +91,4 @@ ms.locfileid: "66053622"
 
 - <xref:System.Windows.Forms.PageSetupDialog>
 - [如何：建立標準的 Windows Forms 列印工作](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
-- [PageSetupDialog 元件](pagesetupdialog-component-windows-forms.md)
+- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)

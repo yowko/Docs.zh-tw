@@ -1,29 +1,29 @@
 ---
-title: HOW TO：平移元素
+title: 操作說明：平移元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: 9c1b873a89820e85efb99789f483c4832fb23cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba6bda09a4ee189cdd1a32eed8f65b32d1a9abe4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051438"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187309"
 ---
-# <a name="how-to-translate-an-element"></a>HOW TO：平移元素
-此範例示範如何平移 （移動） 項目使用<xref:System.Windows.Media.TranslateTransform>。  
+# <a name="how-to-translate-an-element"></a>操作說明：平移元素
+此示例演示如何使用 轉換（移動）元素<xref:System.Windows.Media.TranslateTransform>。  
   
- <xref:System.Windows.Media.TranslateTransform>類別是特別適用於不支援絕對位置的面板內移動元素。 例如，藉由套用<xref:System.Windows.Media.TranslateTransform>要<xref:System.Windows.UIElement.RenderTransform%2A>元素的屬性，您可以移動中的項目<xref:System.Windows.Controls.StackPanel>或<xref:System.Windows.Controls.DockPanel>。  
+ 該<xref:System.Windows.Media.TranslateTransform>類對於在不支援絕對位置的面板內移動元素特別有用。 例如，<xref:System.Windows.Media.TranslateTransform>通過將 應用於元素的屬性<xref:System.Windows.UIElement.RenderTransform%2A>，可以在<xref:System.Windows.Controls.StackPanel>或<xref:System.Windows.Controls.DockPanel>中移動元素。  
   
- 使用<xref:System.Windows.Media.TranslateTransform.X%2A>屬性<xref:System.Windows.Media.TranslateTransform>來指定，單位為像素元素沿著 x 軸移動。 使用<xref:System.Windows.Media.TranslateTransform.Y%2A>屬性來指定，單位為像素元素沿著 y 軸移動。 最後，套用<xref:System.Windows.Media.TranslateTransform>至<xref:System.Windows.UIElement.RenderTransform%2A>項目的屬性。  
+ 使用<xref:System.Windows.Media.TranslateTransform.X%2A>屬性<xref:System.Windows.Media.TranslateTransform>指定以圖元為單位的數量沿 X 軸移動元素。 使用<xref:System.Windows.Media.TranslateTransform.Y%2A>屬性指定沿 y 軸移動元素的數量（以圖元為單位）。 最後，將<xref:System.Windows.Media.TranslateTransform>應用<xref:System.Windows.UIElement.RenderTransform%2A>到 元素的屬性。  
   
- 下列範例會使用<xref:System.Windows.Media.TranslateTransform>向下移元素 50 像素為右到 50 個像素。  
+ 下面的示例使用<xref:System.Windows.Media.TranslateTransform>將元素向右移動 50 圖元，向下移動 50 圖元。  
   
 ## <a name="example"></a>範例  
  [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
- 如需完整範例，請參閱 [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)。  
+ 如需完整範例，請參閱 [2D 轉換範例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
   
 ## <a name="see-also"></a>另請參閱
 

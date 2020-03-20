@@ -2,31 +2,31 @@
 title: 追蹤類型摘要
 ms.date: 03/30/2017
 ms.assetid: e639410b-d1d1-479c-b78e-a4701d4e4085
-ms.openlocfilehash: 8f54f71ef63338708a29fac5557c7c7e8f257f58
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 8ed6dceb19caa52f928f285064c60337e3f15a87
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856006"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674832"
 ---
 # <a name="trace-type-summary"></a>追蹤類型摘要
-[來源層級](https://go.microsoft.com/fwlink/?LinkID=94943)會定義各種不同的追蹤層級：[重大]、[錯誤]、[警告]、[資訊] 和 [ `ActivityTracing`詳細資料]，以及提供旗標的描述，以切換追蹤界限與活動傳輸事件的輸出。  
+[源級別](xref:System.Diagnostics.SourceLevels)定義各種跟蹤級別：嚴重、錯誤、警告、資訊和詳細，並提供`ActivityTracing`標誌的說明，該標誌可切換跟蹤邊界和活動傳輸事件的輸出。  
   
- 您也可以參閱[TraceEventType](https://go.microsoft.com/fwlink/?LinkId=95169) ，以取得可從<xref:System.Diagnostics>發出的追蹤類型。  
+ 您還可以查看<xref:System.Diagnostics.TraceEventType>可以從 中釋放的跟蹤類型<xref:System.Diagnostics>。  
   
  下表列出最重要的幾個。  
   
 |追蹤類型|描述|  
 |----------------|-----------------|  
 |重大|嚴重錯誤或應用程式損毀。|  
-|Error|可修復錯誤。|  
+|錯誤|可修復錯誤。|  
 |警告|參考資訊。|  
-|內容|非嚴重問題。|  
-|詳細資訊|偵錯追蹤。|  
-|啟動|開始邏輯處理單位。|  
+|資訊|非嚴重問題。|  
+|「詳細資訊」|偵錯追蹤。|  
+|Start|開始邏輯處理單位。|  
 |暫止|暫停邏輯處理單位。|  
 |繼續|繼續邏輯處理單位。|  
-|停止|停止邏輯處理單位。|  
+|Stop|停止邏輯處理單位。|  
 |傳輸|相互關聯身分識別變更。|  
   
  活動會定義為上述追蹤類型的組合。  

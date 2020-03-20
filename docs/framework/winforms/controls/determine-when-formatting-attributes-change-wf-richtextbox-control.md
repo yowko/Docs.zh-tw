@@ -1,5 +1,5 @@
 ---
-title: 判斷在 RichTextBox 控制項中格式化屬性何時變更
+title: 確定"格式設置屬性在富文本盒"控制項中何時更改
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: f9b2a1028f79059ec7d4d6bf3683100455bb5dea
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a190c3479b58464763e0eefdd32d14e88a1f05e1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746044"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142260"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>如何：判斷 Windows Form RichTextBox 控制項中的格式屬性何時變更
-Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項的常見用法是使用字型選項或段落樣式等屬性來格式化文字。 您的應用程式可能需要追蹤文字格式的任何變更，以顯示工具列，如同許多文字處理應用程式一樣。  
+Windows 表單<xref:System.Windows.Forms.RichTextBox>控制項的常見用途是使用字體選項或段落樣式等屬性設置文本格式。 應用程式可能需要跟蹤文本格式的任何更改，以便顯示工具列，如許多文字處理應用程式中。  
   
-### <a name="to-respond-to-changes-in-formatting-attributes"></a>若要回應格式化屬性的變更  
+### <a name="to-respond-to-changes-in-formatting-attributes"></a>回應格式屬性的更改  
   
-1. 在 <xref:System.Windows.Forms.RichTextBox.SelectionChanged> 事件處理常式中撰寫程式碼，以根據屬性的值執行適當的動作。 下列範例會根據 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 屬性的值來變更工具列按鈕的外觀。 只有當插入點在控制項中移動時，工具列按鈕才會更新。  
+1. 在事件處理常式中<xref:System.Windows.Forms.RichTextBox.SelectionChanged>編寫代碼以執行適當的操作，具體取決於屬性的值。 下面的示例根據屬性的值更改工具列按鈕的外觀<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>。 僅當插入點在控制項中移動時，才會更新工具列按鈕。  
   
-     下列範例假設有一個表單具有 <xref:System.Windows.Forms.RichTextBox> 控制項，以及一個包含工具列按鈕的 <xref:System.Windows.Forms.ToolBar> 控制項。 如需工具列和工具列按鈕的詳細資訊，請參閱[如何：將按鈕加入至工具列控制項](how-to-add-buttons-to-a-toolbar-control.md)。  
+     下面的示例假定表單具有<xref:System.Windows.Forms.RichTextBox>控制項和包含工具列按鈕的<xref:System.Windows.Forms.ToolBar>控制項。 有關工具列和工具列按鈕的詳細資訊，請參閱[如何：將按鈕添加到工具列控制項](how-to-add-buttons-to-a-toolbar-control.md)。  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -47,12 +47,12 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項的常見用法�
     private void richTextBox1_SelectionChanged(object sender,  
     System.EventArgs e)  
     {  
-       if (richTextBox1.SelectionBullet == true)   
+       if (richTextBox1.SelectionBullet == true)
        {  
           // Bullet button on toolbar should appear pressed  
           toolBarButton1.Pushed = true;  
        }  
-       else   
+       else
        {  
           // Bullet button on toolbar should appear unpressed  
           toolBarButton1.Pushed = false;  
@@ -85,4 +85,4 @@ Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項的常見用法�
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 控制項](richtextbox-control-windows-forms.md)
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)

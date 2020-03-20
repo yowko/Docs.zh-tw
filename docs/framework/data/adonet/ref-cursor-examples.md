@@ -2,12 +2,12 @@
 title: REF CURSOR 範例
 ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
-ms.openlocfilehash: 24830452e6d1ab11605ffa88a925fbc55c80b9bf
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: dc82648ff5a565c9b4d6fa593433ee1e22249d93
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794702"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149131"
 ---
 # <a name="ref-cursor-examples"></a>REF CURSOR 範例
 REF CURSOR 範例包括下列三個 Microsoft Visual Basic 範例，示範如何使用 REF CURSOR：  
@@ -15,8 +15,8 @@ REF CURSOR 範例包括下列三個 Microsoft Visual Basic 範例，示範如何
 |範例|描述|  
 |------------|-----------------|  
 |[OracleDataReader 中的 REF CURSOR 參數](ref-cursor-parameters-in-an-oracledatareader.md)|此範例執行可傳回 REF CURSOR 參數的 PL/SQL 預存程序，並以 <xref:System.Data.OracleClient.OracleDataReader> 讀取值。|  
-|[使用 OracleDataReader 從多個 REF CURSOR 擷取資料](retrieving-data-from-multiple-ref-cursors.md)|這個範例會執行會傳回兩個 REF CURSOR 參數的 PL/SQL 預存程式，並使用**OracleDataReader**來讀取值。|  
-|[使用一或多個 REF CURSOR 填入資料集](filling-a-dataset-using-one-or-more-ref-cursors.md)|此範例執行可傳回兩個 REF CURSOR 參數的 PL/SQL 預存程序，並使用傳回的資料列填入 <xref:System.Data.DataSet>。|  
+|[使用 OracleDataReader 從多個 REF CURSOR 擷取資料](retrieving-data-from-multiple-ref-cursors.md)|本示例執行 PL/SQL 預存程序，該過程返回兩個 REF CURSOR 參數，並使用**OracleDataReader**讀取值。|  
+|[使用一個或多個 REF CURSOR 填入資料集](filling-a-dataset-using-one-or-more-ref-cursors.md)|此範例執行可傳回兩個 REF CURSOR 參數的 PL/SQL 預存程序，並使用傳回的資料列填入 <xref:System.Data.DataSet>。|  
   
  若要使用這些範例，您可能需要建立 Oracle 資料表，且必須建立 PL/SQL 封裝及封裝主體。  
   
@@ -27,14 +27,14 @@ REF CURSOR 範例包括下列三個 Microsoft Visual Basic 範例，示範如何
  這些範例需要伺服器上的下列 PL/SQL 封裝及封裝主體。 在 Oracle 伺服器上建立下列 Oracle 封裝。  
   
 ```sql
-CREATE OR REPLACE PACKAGE CURSPKG AS   
-    TYPE T_CURSOR IS REF CURSOR;   
-    PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,   
-                               IO_CURSOR IN OUT T_CURSOR);   
-    PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   
+CREATE OR REPLACE PACKAGE CURSPKG AS
+    TYPE T_CURSOR IS REF CURSOR;
+    PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,
+                               IO_CURSOR IN OUT T_CURSOR);
+    PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,
                                 DEPTCURSOR OUT T_CURSOR);  
 END CURSPKG;  
-/   
+/
 ```  
   
  在 Oracle 伺服器上建立下列 Oracle Package 內容。  
@@ -43,38 +43,38 @@ END CURSPKG;
 CREATE OR REPLACE PACKAGE BODY CURSPKG AS  
     PROCEDURE OPEN_ONE_CURSOR (N_EMPNO IN NUMBER,  
                                IO_CURSOR IN OUT T_CURSOR)  
-    IS   
-        V_CURSOR T_CURSOR;   
-    BEGIN   
-        IF N_EMPNO <> 0   
+    IS
+        V_CURSOR T_CURSOR;
+    BEGIN
+        IF N_EMPNO <> 0
         THEN  
-             OPEN V_CURSOR FOR   
-             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME   
-                  FROM EMP, DEPT   
-                  WHERE EMP.DEPTNO = DEPT.DEPTNO   
+             OPEN V_CURSOR FOR
+             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME
+                  FROM EMP, DEPT
+                  WHERE EMP.DEPTNO = DEPT.DEPTNO
                   AND EMP.EMPNO = N_EMPNO;  
   
-        ELSE   
-             OPEN V_CURSOR FOR   
-             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME   
-                  FROM EMP, DEPT   
+        ELSE
+             OPEN V_CURSOR FOR
+             SELECT EMP.EMPNO, EMP.ENAME, DEPT.DEPTNO, DEPT.DNAME
+                  FROM EMP, DEPT
                   WHERE EMP.DEPTNO = DEPT.DEPTNO;  
   
         END IF;  
-        IO_CURSOR := V_CURSOR;   
-    END OPEN_ONE_CURSOR;   
+        IO_CURSOR := V_CURSOR;
+    END OPEN_ONE_CURSOR;
   
     PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,  
                                 DEPTCURSOR OUT T_CURSOR)  
-    IS   
-        V_CURSOR1 T_CURSOR;   
-        V_CURSOR2 T_CURSOR;   
-    BEGIN   
+    IS
+        V_CURSOR1 T_CURSOR;
+        V_CURSOR2 T_CURSOR;
+    BEGIN
         OPEN V_CURSOR1 FOR SELECT * FROM EMP;  
         OPEN V_CURSOR2 FOR SELECT * FROM DEPT;  
-        EMPCURSOR  := V_CURSOR1;   
-        DEPTCURSOR := V_CURSOR2;   
-    END OPEN_TWO_CURSORS;   
+        EMPCURSOR  := V_CURSOR1;
+        DEPTCURSOR := V_CURSOR2;
+    END OPEN_TWO_CURSORS;
 END CURSPKG;  
 /  
 ```  
@@ -82,4 +82,4 @@ END CURSPKG;
 ## <a name="see-also"></a>另請參閱
 
 - [Oracle REF CURSOR](oracle-ref-cursors.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

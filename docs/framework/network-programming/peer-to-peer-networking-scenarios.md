@@ -3,10 +3,10 @@ title: 對等網路案例
 ms.date: 03/30/2017
 ms.assetid: d23b1a64-2e08-4014-882a-c1dd766bdcc2
 ms.openlocfilehash: 9b5d4d35085585fe04f2f0c0a105e6dff4b1fcc0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "64623076"
 ---
 # <a name="peer-to-peer-networking-scenarios"></a>對等網路案例
@@ -37,9 +37,9 @@ ms.locfileid: "64623076"
 
   無線連線變得更為普遍之後，對等網路可讓您在一組對等中連線而且可以共用您所發生的體驗 (例如日落、搖滾音樂會或郵輪假期)。
 
-## <a name="content-distribution"></a>內容散發
+## <a name="content-distribution"></a>內容發佈
 
-- 文字訊息
+- 簡訊
 
   對等網路可以允許以檔案或訊息形式將文字型資訊散佈給一大群使用者。 範例是新聞清單。
 

@@ -2,12 +2,12 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1233971b172079aa48227d0ec520068afbdf0952
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319438"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150065"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 指定 SELECT 陳述式所傳回物件使用的排序順序。  
@@ -15,13 +15,13 @@ ms.locfileid: "72319438"
 ## <a name="syntax"></a>語法  
   
 ```sql  
-[ ORDER BY   
+[ ORDER BY
    {  
       order_by_expression [SKIP n] [LIMIT n]  
       [ COLLATE collation_name ]  
       [ ASC | DESC ]  
    }  
-   [ ,…n ]   
+   [ ,…n ]
 ]  
 ```  
   
@@ -53,7 +53,7 @@ ms.locfileid: "72319438"
   
  如果程式碼要在最上層投影以外的排序集上重複執行，輸出不一定會保持原排序。  
 
-在下列範例中，保證會保留訂單：
+在以下示例中，訂單保證保留：
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -61,7 +61,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-在下列查詢中，會忽略巢狀查詢的順序：  
+在以下查詢中，將忽略巢狀查詢的順序：  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -97,12 +97,12 @@ ORDER BY ...
   
 - ROW  
   
-- VALUE  
+- 值  
   
 ## <a name="ordering-nested-queries"></a>排序巢狀查詢  
  在 Entity Framework 中，巢狀運算式可放在查詢中的任何地方；巢狀查詢的順序並不會保留。  
 
-下列查詢會依姓氏排序結果：  
+以下查詢按姓氏對結果排序：  
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -110,7 +110,7 @@ SELECT C1.FirstName, C1.LastName
         ORDER BY C1.LastName  
 ```  
 
-在下列查詢中，會忽略巢狀查詢的順序：  
+在以下查詢中，將忽略巢狀查詢的順序：  
 
 ```sql  
 SELECT C2.FirstName, C2.LastName  
@@ -128,10 +128,10 @@ SELECT C2.FirstName, C2.LastName
   
  [!code-sql[DP EntityServices Concepts#ORDERBY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#orderby)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [查詢運算式](query-expressions-entity-sql.md)
 - [Entity SQL 參考](entity-sql-reference.md)
-- [SKIP](skip-entity-sql.md)
-- [LIMIT](limit-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [跳](skip-entity-sql.md)
+- [限制](limit-entity-sql.md)
+- [返回頁首](top-entity-sql.md)
