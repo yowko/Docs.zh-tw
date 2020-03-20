@@ -18,51 +18,51 @@ helpviewer_keywords:
 ms.assetid: 58ba42c0-4857-43bf-a039-73a4dc6544c2
 topic_type:
 - apiref
-ms.openlocfilehash: 4e672030ae83b57da6f9ab66630513d79f28b8f1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7fbe0cf3e93d75749fa3f463f3f97dbd1bfe27a0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131994"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176535"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance 函式
-建立指定之 managed 類型的實例。  
+創建指定託管類型的實例。  
   
- 此函式在 .NET Framework 4 中已被取代。 使用 COM 啟動來建立 managed 類型的實例，或使用裝載（請參閱[在 .NET Framework 4 和4.5 中新增的 CLR 裝載介面](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)）。  
+ 此功能已在 .NET 框架 4 中棄用。 使用 COM 啟動創建託管類型的實例，或使用託管（請參閱[在 .NET 框架 4 和 4.5 中添加的 CLR 託管介面](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)）。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 STDAPI ClrCreateManagedInstance (  
-    [in]  LPCWSTR  pTypeName,   
-    [in]  REFIID   riid,   
+    [in]  LPCWSTR  pTypeName,
+    [in]  REFIID   riid,
     [out] void     **ppObject  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `pTypeName`  
- 在所要求之實例類型名稱的指標。  
+ [在]指向要請求的實例類型的名稱的指標。  
   
  `riid`  
- 在所要求之實例類型的 `IID`。  
+ [在]要`IID`請求的實例類型的 。  
   
  `ppObject`  
- 脫銷呼叫端所要求之 managed 型別的實例指標。  
+ [出]指向調用方請求的託管類型的實例的指標。  
   
 ## <a name="remarks"></a>備註  
- 通用語言執行平臺應該已經載入進程中。 例如，您可以在呼叫 `ClrCreateManagedInstance` 函式之前，使用[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函數的呼叫來載入它。 如果未載入執行時間，`ClrCreateManagedInstance` 會先嘗試載入執行時間的 v v1.0.3705。 如果失敗，則會嘗試載入最新版本的執行時間。  
+ 公共語言運行時應已載入到進程中。 例如，在調用`ClrCreateManagedInstance`函數之前，可以使用對[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函數的調用來載入它。 如果未載入運行時，`ClrCreateManagedInstance`則首先嘗試載入運行時的 v1.0.3705。 如果失敗，它將嘗試載入最新版本的運行時。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標題：** MSCorEE.h  
   
- 連結**庫：** Mscoree.dll .dll  
+ **庫：** MSCorEE.dll  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
 - [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

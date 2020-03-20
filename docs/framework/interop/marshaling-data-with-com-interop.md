@@ -4,12 +4,12 @@ ms.date: 09/07/2017
 helpviewer_keywords:
 - COM interop, data marshaling
 - marshaling data, COM interop
-ms.openlocfilehash: 24fa390c94baaa0fe009ebe513f2eb7aa34d34fa
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae41713d5349321725599c0c38d7c6fc515c374b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114003"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181377"
 ---
 # <a name="marshaling-data-with-com-interop"></a>使用 COM Interop 封送處理資料
 COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和公開 Managed 物件給 COM 的支援。 廣泛支援封送處理資料至 COM 或對來自 COM 的資料封送處理，幾乎一律會提供正確的封送處理行為。  
@@ -23,9 +23,8 @@ COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和
  下列各節會連結到各個主題，以描述當您可以 (或必須) 提供具有其他類型資訊的封送處理器時，自訂 Interop 包裝函式的程序。  
   
 ## <a name="in-this-section"></a>本節內容  
-[如何：手動建立包裝函式](how-to-create-wrappers-manually.md)   
-描述如何在受控原始程式碼中手動建立 COM 包裝函式。 
- 
+[如何：手動創建包裝器](how-to-create-wrappers-manually.md)描述如何在託管原始程式碼中手動創建 COM 包裝器。
+
  [如何：將 Managed 程式碼 DCOM 移轉至 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  描述如何將受控的 DCOM 程式碼移轉至 WCF 的最安全解決方案。  
   

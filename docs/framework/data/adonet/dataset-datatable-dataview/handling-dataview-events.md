@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
-ms.openlocfilehash: c36c68b0375e7d03aac36de7d02b2c9579ea9316
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: b625fad846c4c6cf008843bff1f6b0eabe0e1de4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784595"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151100"
 ---
 # <a name="handling-dataview-events"></a>處理 DataView 的事件
-您可以使用 <xref:System.Data.DataView.ListChanged> 的 <xref:System.Data.DataView> 事件，判斷是否已更新檢視。 會引發事件的更新包括：加入、刪除或修改基底資料表中的資料列、在基底資料表的結構描述中加入或刪除資料行，以及在父關聯性或子關聯性中進行變更。 如果您要查看的資料列清單因為應用新的排序次序或篩選而大幅變更， **ListChanged**事件也會通知您。  
+您可以使用 <xref:System.Data.DataView.ListChanged> 的 <xref:System.Data.DataView> 事件，判斷是否已更新檢視。 會引發事件的更新包括：加入、刪除或修改基底資料表中的資料列、在基底資料表的結構描述中加入或刪除資料行，以及在父關聯性或子關聯性中進行變更。 如果由於應用了新的排序次序或篩選器，您正在查看的行清單已發生重大變化，則 **"List更改"** 事件也會通知您。  
   
- **ListChanged**事件會實作為 <xref:System.ComponentModel> <xref:System.ComponentModel.ListChangedEventArgs>命名空間的 ListChangedEventHandler 委派，並接受物件的輸入。 您可以使用<xref:System.ComponentModel.ListChangedType> **ListChangedEventArgs**物件的**system.componentmodel.listchangedtype>** 屬性中的列舉值，判斷已發生的變更類型。 對於涉及加入、刪除或移動資料列的變更，您可以使用**ListChangedEventArgs**物件的**NewIndex**屬性來存取已加入或移動之資料列的新索引，以及已刪除之資料列的先前索引。 在移動的資料列案例中，您可以使用**ListChangedEventArgs**物件的**OldIndex**屬性來存取已移動之資料列的先前索引。  
+ **List"更改"** 事件實現<xref:System.ComponentModel>命名空間的<xref:System.ComponentModel.ListChangedEventArgs>**ListChanged 事件處理常式**委託，並將作為輸入物件。 您可以使用<xref:System.ComponentModel.ListChangedType> **ListChangeEventArgs**物件的**ListChangeType**屬性中的枚舉值確定發生了哪些類型的更改。 對於涉及添加、刪除或移動行的更改，可以使用**ListChangesEventArgs**物件的**NewIndex**屬性訪問添加或移動行的新索引和已刪除行的上一個索引。 在移動行的情況下，可以使用**ListChangedEventArgs**物件的**OldIndex**屬性訪問移動行的前一個索引。  
   
- **DataViewManager**也會公開**ListChanged**事件，以在資料表已加入或移除，或者基礎**資料集**的**關聯集合已**進行變更時通知您。  
+ **DataViewManager**還會公開**ListChange**事件，以通知您是否已添加或刪除表，或者對基礎**DataSet**的 **"關係"** 集合進行了更改。  
   
- 下列程式碼範例顯示如何加入**ListChanged**事件處理常式。  
+ 以下代碼示例演示如何添加**ListChanged**事件處理常式。  
   
 ```vb  
 AddHandler custView.ListChanged, _  
@@ -38,10 +38,10 @@ End Sub
 ```  
   
 ```csharp  
-custView.ListChanged  += new   
+custView.ListChanged  += new
   System.ComponentModel.ListChangedEventHandler(OnListChanged);  
   
-protected static void OnListChanged(object sender,   
+protected static void OnListChanged(object sender,
   System.ComponentModel.ListChangedEventArgs args)  
 {  
   Console.WriteLine("ListChanged:");  
@@ -56,4 +56,4 @@ protected static void OnListChanged(object sender,
 - <xref:System.Data.DataView>
 - <xref:System.ComponentModel.ListChangedEventHandler>
 - [DataView](dataviews.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

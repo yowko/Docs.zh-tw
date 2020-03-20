@@ -1,15 +1,15 @@
 ---
-title: <ImpliesType> 元素（.NET Native）
+title: <ImpliesType>元素（.NET 本機）
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
-ms.openlocfilehash: 2f0ce1a1587e190627212cba07db298c12f4b30e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 57f4208233cd5e8544b4f1c254e3b0e0eaacd508
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128396"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181008"
 ---
-# <a name="impliestype-element-net-native"></a>\<ImpliesType > 元素（.NET Native）
+# <a name="impliestype-element-net-native"></a>\<隱含類型>元素（.NET 本機）
 如果原則已套用至包含類型或方法，則會將該原則套用至類型。  
   
 ## <a name="syntax"></a>語法  
@@ -19,7 +19,7 @@ ms.locfileid: "73128396"
              Activate="policy_type"  
              Browse="policy_type"  
              Dynamic="policy_type"  
-             Serialize="policy_type"   
+             Serialize="policy_type"
              DataContractSerializer="policy_setting"  
              DataContractJsonSerializer="policy_setting"  
              XmlSerializer="policy_setting"  
@@ -29,7 +29,7 @@ ms.locfileid: "73128396"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -59,16 +59,16 @@ ms.locfileid: "73128396"
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
-|[\<Method>](method-element-net-native.md)|將反映原則套用至方法。|  
+|[\<鍵入>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<類型即時>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
+|[\<方法>](method-element-net-native.md)|將反映原則套用至方法。|  
   
 ## <a name="remarks"></a>備註  
  `<ImpliesType>` 元素的主要目的是要供程式庫使用。 它可以解決下列情況：  
@@ -89,7 +89,7 @@ ms.locfileid: "73128396"
   
  除非 `Explicit` 的具現化具有已定義的 `Dynamic` 原則設定，否則這個指示詞沒有任何作用。 例如，如果 `Explicit<Int32>` 是這種情形，則會以其公用成員為基礎來將 `Implicit<Int32>` 具現化，並使其中繼資料可供存取來進行動態程式設計。  
   
- 下列是套用到至少一個序列化程式的真實世界範例。 指示詞擷取到下列需求：反映在輸入為 `IList<`*something*`>` 的某個項目上，也需要反映在相對應的 `List<`*something*`>` 類型上，但不需要任何個別應用程式註釋。  
+ 下列是套用到至少一個序列化程式的真實世界範例。 指令捕獲了以下要求：對類型化`IList<`*的東西*`>`進行反射也涉及對相應的`List<`*事物*`>`類型進行反思，而無需任何每個應用程式注釋。  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -97,7 +97,7 @@ ms.locfileid: "73128396"
 </Type>  
 ```  
   
- `<ImpliesType>` 元素也會出現在 `<Method>` 元素中，因為在某些情況下，具現化泛型方法表示要反映在類型具現化上。 例如，假設有一個泛型方法 `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` 指定的程式庫將會隨著相關聯的 <xref:System.Collections.Generic.List%601> 和 <xref:System.Array> 類型動態存取。 這可以表示成：  
+ `<ImpliesType>` 元素也會出現在 `<Method>` 元素中，因為在某些情況下，具現化泛型方法表示要反映在類型具現化上。 例如，想像一個給定程式庫將會隨著相關聯的  和  類型動態存取的泛型方法 `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)`<xref:System.Collections.Generic.List%601><xref:System.Array>。 這可以表示成：  
   
 ```xml  
 <Type Name="MyType">  
@@ -108,7 +108,7 @@ ms.locfileid: "73128396"
 </Type>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)

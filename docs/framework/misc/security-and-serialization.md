@@ -10,12 +10,12 @@ helpviewer_keywords:
 - secure coding, serialization
 - security [.NET Framework], serialization
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
-ms.openlocfilehash: cb0ba120eeb57788c0525d45b714ad8edd2c39ed
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 634388e3920e0b9dbee85aa3ea555471cee604ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216969"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181109"
 ---
 # <a name="security-and-serialization"></a>安全性和序列化
 由於序列化可允許其他程式碼看到或修改在其他情況下無法存取的物件執行個體資料，因此執行序列化的程式碼需要特殊權限： <xref:System.Security.Permissions.SecurityPermission> ，並指定 <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 旗標。 依照預設原則，這個使用權限不會授與給網際網路下載或內部網路的程式碼；只有本機電腦上的程式碼才會被授與這個使用權限。  
@@ -26,7 +26,7 @@ ms.locfileid: "77216969"
   
  <xref:System.Runtime.Serialization.ISerializable> 介面只應該由序列化基礎結構所使用。 不過，如果未受保護，它可能會釋出機密資訊。 如果您藉由實作 ISerializable **M:System.Runtime.Serialization.ISerializable.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)** 提供自訂序列化，請確認您採取下列預防措施：  
   
-- <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> 方法應該藉著要求 **SecurityPermission** 並指定 **SerializationFormatter** 權限，或是確定不會隨著方法輸出釋出任何機密資訊，明確地進行保護。 例如，  
+- <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> 方法應該藉著要求 **SecurityPermission** 並指定 **SerializationFormatter** 權限，或是確定不會隨著方法輸出釋出任何機密資訊，明確地進行保護。 例如：  
   
     ```vb  
     Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
@@ -35,9 +35,9 @@ ms.locfileid: "77216969"
     ```  
   
     ```csharp  
-    [SecurityPermissionAttribute(SecurityAction.Demand,SerializationFormatter   
+    [SecurityPermissionAttribute(SecurityAction.Demand,SerializationFormatter
     =true)]  
-    public override void GetObjectData(SerializationInfo info,   
+    public override void GetObjectData(SerializationInfo info,
     StreamingContext context)  
     {  
     }  

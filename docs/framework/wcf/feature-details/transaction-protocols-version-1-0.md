@@ -2,15 +2,15 @@
 title: 異動通訊協定 1.0 版
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 5ca0210c15afd6a3fc2e05bc3b9016a1fcd929b7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a19329b56bb569a04195b38877a42d635996ff1f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460285"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184380"
 ---
 # <a name="transaction-protocols-version-10"></a>異動通訊協定 1.0 版
-Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成交易和 WS 協調通訊協定的1.0 版。 如需1.1 版的詳細資訊，請參閱[交易通訊協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
+Windows 通信基礎 （WCF） 版本 1 實現 WS-原子事務和 WS-協調協定的 1.0 版本。 有關版本 1.1 的詳細資訊，請參閱[事務協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
   
 |規格/文件|連結|  
 |-----------------------------|----------|  
@@ -21,25 +21,25 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
   
  此主題描述 WS-Atomic 異動 (WS-AT) 安全性規格的組成，並且描述使用在異動管理員之間通訊的安全繫結程序。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試，其中包含 IBM、IONA、Sun Microsystems 和其他實作。  
   
- 下圖說明兩個交易管理員、交易管理員1和交易管理員2之間的互通性，以及應用程式1和應用程式2這兩個應用程式：  
+ 下圖描述了兩個交易管理員（交易管理員 1 和交易管理員 2）以及兩個應用程式（應用程式 1 和應用程式 2）之間的互通性：  
   
- ![顯示交易管理員之間互動的螢幕擷取畫面。](./media/transaction-protocols/transaction-managers-flow.gif)  
+ ![顯示交易管理員之間交互的螢幕截圖。](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  使用一個啟動器 (I) 和一個參與者 (P) 考量一般的 WS-Coordination/WS-Atomic Transaction 案例。 啟動器和參與者都有異動管理員 (分別是 ITM 和 PTM)。 在此主題中，兩階段交易認可會稱為 2PC。  
   
 |||  
 |-|-|  
-|1. CreateCoordinationCoNtext|12. 應用程式訊息回應|  
-|2. CreateCoordinationCoNtextResponse|13. Commit （完成）|  
-|3. 註冊（完成）|14. 準備（2PC）|  
-|4. RegisterResponse|15. 準備（2PC）|  
-|5. 應用程式訊息|16. 備妥（2PC）|  
-|6. CreateCoordinationCoNtext 與內容|17. 準備（2PC）|  
-|7. Register （耐用）|18. 已認可（完成）|  
-|8. RegisterResponse|19. 認可（2PC）|  
-|9. CreateCoordinationCoNtextResponse|20. 認可（2PC）|  
-|10. Register （耐用）|21. 已認可（2PC）|  
-|11. RegisterResponse|22. 已認可（2PC）|  
+|1. 創建協調上下文|12. 應用程式消息回應|  
+|2. 創建協調上下文回應|13. 承諾（完成）|  
+|3. 註冊（完成）|14. 準備 （2PC）|  
+|4. 寄存器回復|15. 準備 （2PC）|  
+|5. 應用程式消息|16. 已編制 （2PC）|  
+|6. 使用上下文創建協調上下文|17. 已編制 （2PC）|  
+|7. 註冊（耐用）|18. 承諾（完成）|  
+|8. 註冊回復|19. 承諾 （2PC）|  
+|9. 創建協調上下文回應|20. 提交 （2PC）|  
+|10. 登記（持久）|21. 承諾 （2PC）|  
+|11. 登記冊回復|22. 承諾 （2PC）|  
   
  此文件描述 WS-AtomicTransaction 安全性規格的組成，並且描述使用在異動管理員之間通訊的安全繫結程序。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試。  
   
@@ -53,7 +53,7 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
   
 - 應用程式訊息  
   
- 前三個訊息類別會視為異動管理員訊息，並且在此主題稍後的「應用程式訊息交換」中會描述其繫結程序組態。 第四個訊息類別是應用程式對應用程式訊息，並且在此主題稍後的「訊息範例」一節中會描述。 本節說明 WCF 每個類別所使用的通訊協定系結。  
+ 前三個訊息類別會視為異動管理員訊息，並且在此主題稍後的「應用程式訊息交換」中會描述其繫結程序組態。 第四個訊息類別是應用程式對應用程式訊息，並且在此主題稍後的「訊息範例」一節中會描述。 本節介紹 WCF 為每個類使用的協定綁定。  
   
  下列 XML 命名空間與關聯的前置詞會使用在整份文件中。  
   
@@ -83,15 +83,15 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
 - B1112：在系統中每個傳送者與接收者組之間的 DNS 都必須正常運作，X.509 主體名稱檢查才會成功。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>啟動和登錄繫結組態  
- WCF 需要透過 HTTPS 相互關聯的要求/回復雙工系結。 (如需有關相互關聯與要求/回覆訊息交換模式描述的詳細資訊，請參閱第 8 節的「WS-Atomic 交易」)。  
+ WCF 需要請求/答覆雙工綁定，並且通過 HTTPS 具有相關性。 (如需有關相互關聯與要求/回覆訊息交換模式描述的詳細資訊，請參閱第 8 節的「WS-Atomic 交易」)。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 通訊協定繫結組態  
- WCF 支援透過 HTTPS 的單向（資料包）訊息。 訊息間的相互關聯則留待實作詳細資料中說明。  
+ WCF 通過 HTTPS 支援單向（資料格拉姆）消息。 訊息間的相互關聯則留待實作詳細資料中說明。  
   
- B2131：執行程式必須支援如 WS-ADDRESSING 中所述 `wsa:ReferenceParameters`，以達成 WCF 的2PC 訊息相互關聯。  
+ B2131：實現必須支援`wsa:ReferenceParameters`WS 定址中所述，以實現 WCF 2PC 消息的相關性。  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>異動管理員混合安全性繫結程序  
- 這是替代的（混合模式）系結，它會針對身分識別的建立使用傳輸安全性，並結合 WS-協調發行的權杖模型。  啟動與登錄是兩個繫結之間唯一不同的項目。  
+ 這是一個備用（混合模式）綁定，它使用傳輸安全與 WS-協調頒發權杖模型結合使用，用於標識建立目的。  啟動與登錄是兩個繫結之間唯一不同的項目。  
   
 #### <a name="https-transport-configuration"></a>HTTPS 傳輸組態  
  X.509 憑證會用來建立交易管理員身分識別。 需要用戶端/伺服器驗證，而用戶端/伺服器授權則留待實作詳細資料中說明。  
@@ -99,7 +99,7 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
 #### <a name="activation-message-binding-configuration"></a>啟動訊息繫結組態  
  啟動訊息通常不會參與互通性，因為啟動訊息一般會發生在應用程式與其本機異動管理員之間。  
   
- B1221： WCF 使用雙工 HTTPS 系結（如[訊息通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)中所述）來啟用訊息。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
+ B1221：WCF使用雙工 HTTPS 綁定（在[消息協定中](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)描述）來啟動消息。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
   
  第 8 節的 WS-Atomic 異動規格進一步描述有關相互關聯與訊息交換模式的詳細資料。  
   
@@ -107,21 +107,21 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
   
 - R1223：如果啟動發生在現有的協調內容中，則使用與現有內容關聯之 `t:IssuedTokens` 的 `SecurityContextToken` 標頭就必須在 `CreateCoordinationContext` 訊息上流通。  
   
- 應產生新的 `t:IssuedTokens` 標頭，以附加至傳出的 `wscoor:CreateCoordinationContextResponse` 訊息。  
+ 應生成`t:IssuedTokens`一個新標頭以附加到傳出`wscoor:CreateCoordinationContextResponse`消息。  
   
 #### <a name="registration-message-binding-configuration"></a>登錄訊息繫結組態  
- B1231： WCF 使用雙工 HTTPS 系結（如[訊息通訊協定](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)中所述）。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
+ B1231：WCF使用雙工HTTPS綁定（在[消息協定中](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)描述）。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
   
  第 8 節的 WS-AtomicTransaction 進一步描述有關相互關聯與訊息交換模式描述的詳細資料。  
   
- R1232：外寄 `wscoor:Register` 訊息必須使用[安全性通訊協定](../../../../docs/framework/wcf/feature-details/security-protocols.md)中所述的 `IssuedTokenOverTransport` 驗證模式。  
+ R1232：傳出`wscoor:Register`消息必須使用`IssuedTokenOverTransport`[安全協定](../../../../docs/framework/wcf/feature-details/security-protocols.md)中描述的身份驗證模式。  
   
- `wsse:Timestamp` 的元素必須使用發行的 `SecurityContextToken STx` 進行簽署。 這個簽章是證明與特定異動關聯之權杖的所有權，並且用來驗證異動中登錄的參與者。 RegistrationResponse 訊息會透過 HTTPS 傳回。  
+ 必須`wsse:Timestamp`使用已頒發的元素`SecurityContextToken STx`對元素進行簽名。 這個簽章是證明與特定異動關聯之權杖的所有權，並且用來驗證異動中登錄的參與者。 RegistrationResponse 訊息會透過 HTTPS 傳回。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 通訊協定繫結組態  
- WCF 支援透過 HTTPS 的單向（資料包）訊息。 訊息間的相互關聯則留待實作詳細資料中說明。  
+ WCF 通過 HTTPS 支援單向（資料格拉姆）消息。 訊息間的相互關聯則留待實作詳細資料中說明。  
   
- B2131：執行程式必須支援如 WS-ADDRESSING 中所述 `wsa:ReferenceParameters`，以達成 WCF 的2PC 訊息相互關聯。  
+ B2131：實現必須支援`wsa:ReferenceParameters`WS 定址中所述，以實現 WCF 2PC 消息的相關性。  
   
 ## <a name="application-message-exchange"></a>應用程式訊息交換  
  應用程式可以隨意使用應用程式之間訊息的任何特定繫結程序，只要繫結程序符合下列安全性需求：  
@@ -130,9 +130,9 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
   
 - R2002：必須提供 `t:IssuedToken` 的完整性與機密性。  
   
- `CoordinationContext` 標頭包含 `wscoor:Identifier`。 雖然 `xsd:AnyURI` 的定義允許同時使用絕對和相對 Uri，但 WCF 只支援 `wscoor:Identifiers`，這是絕對 Uri。  
+ `CoordinationContext` 標頭包含 `wscoor:Identifier`。 雖然 的定義`xsd:AnyURI`允許使用絕對和相對 URI，但 WCF 僅`wscoor:Identifiers`支援 ，這是絕對 URI。  
   
- 如果 `wscoor:CoordinationContext` 的 `wscoor:Identifier` 是相對 URI，則會從交易式 WCF 服務傳回錯誤。  
+ 如果`wscoor:Identifier`中的`wscoor:CoordinationContext`是相對 URI，則將從事務性 WCF 服務返回故障。  
   
 ## <a name="message-examples"></a>訊息範例  
   
@@ -176,9 +176,9 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
     <a:RelatesTo>urn:uuid:069f5104-fd88-4264-9f99-60032a82854e</a:RelatesTo>  
     <a:To s:mustUnderstand="1">https://... </a:To>  
     <t:IssuedTokens>  
- <wst:RequestSecurityTokenResponse     
+ <wst:RequestSecurityTokenResponse
     xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"  
-    xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"   
+    xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
     xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
     xmlns:wsc="http://schemas.xmlsoap.org/ws/2005/02/sc"  
     xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">  
@@ -188,27 +188,27 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
         <wssu:Identifier>  
           http://fabrikam123.com/SCTi  
         </wssu:Identifier>  
-      </wsc:SecurityContextToken>   
+      </wsc:SecurityContextToken>
     </wst:RequestedSecurityToken>  
     <wsp:AppliesTo>  
         http://fabrikam123.com/CCi  
-    </wsp:AppliesTo>    
+    </wsp:AppliesTo>
     <wst:RequestedAttachedReference>  
       <wsse:SecurityTokenReference >  
-        <wsse:Reference   
+        <wsse:Reference
            ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct"  
            URI="http://fabrikam123.com/SCTi"/>  
       </wsse:SecurityTokenReference>  
     </wst:RequestedAttachedReference>  
     <wst:RequestedUnattachedReference>  
       <wsse:SecurityTokenReference>  
-        <wsse:Reference   
+        <wsse:Reference
           ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct"  
           URI="http://fabrikam123.com/SCTi"/>  
       </wsse:SecurityTokenReference>  
     </wst:RequestedUnattachedReference>  
     <wst:RequestedProofToken>  
-      <wst:BinarySecret   
+      <wst:BinarySecret
         Type="http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey">  
         <!-- base64 encoded value -->  
       </wst:BinarySecret>  
@@ -250,7 +250,7 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
 ### <a name="registration-messages"></a>登錄訊息  
  下列訊息是登錄訊息。  
   
-#### <a name="register"></a>登錄  
+#### <a name="register"></a>註冊  
   
 ```xml  
 <s:Envelope>  
@@ -258,11 +258,11 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
     <a:Action>http://schemas.xmlsoap.org/ws/2004/10/wscoor/Register</a:Action>  
     <a:MessageID>urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088e</a:MessageID>  
     <a:ReplyTo>  
-      <a:Address>https://...</a:Address>        
+      <a:Address>https://...</a:Address>
     </a:ReplyTo>  
     <a:To>https://...</a:To>  
-    <wsse:Security   
-      s:mustUnderstand="1"   
+    <wsse:Security
+      s:mustUnderstand="1"
       xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"  
       xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
       <wssu:Timestamp wssu:Id="_0" >  
@@ -293,7 +293,7 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
         <ds:KeyInfo>  
           <wsse:SecurityTokenReference  
             xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">  
-            <wsse:Reference   
+            <wsse:Reference
               URI="http://fabrikam123.com/SCTi"/>  
           </wsse:SecurityTokenReference>  
         </ds:KeyInfo>  
@@ -321,11 +321,11 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
     </a:Action>  
     <a:MessageID>urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088d</a:MessageID>  
     <a:RelatesTo>  
-      urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088e        
+      urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088e
     </a:RelatesTo>  
     <a:To>https://...</a:To>  
-    <wsse:Security   
-      s:mustUnderstand="1"   
+    <wsse:Security
+      s:mustUnderstand="1"
       xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"  
       xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
       <wssu:Timestamp>  
@@ -350,15 +350,15 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
 ### <a name="two-phase-commit-protocol-messages"></a>兩階段交易認可通訊協定訊息  
  下列訊息與兩階段交易認可 (2PC) 通訊協定有關。  
   
-#### <a name="commit"></a>認可  
+#### <a name="commit"></a>Commit  
   
 ```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wsat/Commit</a:Action>  
     <a:To>https://...</a:To>  
-    <wsse:Security   
-      s:mustUnderstand="1"   
+    <wsse:Security
+      s:mustUnderstand="1"
       xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"  
       xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
       <wssu:Timestamp wssu:Id="_0" >  
@@ -383,18 +383,18 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
   <s:Header>  
 <!-- Addressing headers, all signed-->  
     <wsse:Security s:mustUnderstand="1">  
-      <wssu:Timestamp wssu:Id="timestamp">   
+      <wssu:Timestamp wssu:Id="timestamp">
         <wssu:Created>2005-10-25T06:29:18.703Z</wssu:Created>  
         <wssu:Expires>2005-10-25T06:34:18.703Z</wssu:Expires>  
       </wssu:Timestamp>  
-      <wsse:BinarySecurityToken   
-          wssu:Id="IA_Certificate"   
-          ValueType="...#X509v3"   
+      <wsse:BinarySecurityToken
+          wssu:Id="IA_Certificate"
+          ValueType="...#X509v3"
           EncodingType="...#Base64Binary">  
         <!-- IA certificate -->  
       </wsse:BinarySecurityToken>  
       <e:EncryptedKey Id="encrypted_key">  
-            <!-- ephemeral key encrypted for PA certificate -->    
+            <!-- ephemeral key encrypted for PA certificate -->
         <e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#">  
           <e:DataReference URI="#encrypted_body"/>  
           <e:DataReference URI="#encrypted_CCi"/>  
@@ -408,15 +408,15 @@ Windows Communication Foundation （WCF）第1版會執行 WS-不可部分完成
     <wsse11:EncryptedHeader >  
      <!-- encrypted wscoor:CoordinationContext header containing CCi -->  
     </wsse11:EncryptedHeader>  
-    <wsse11:EncryptedHeader   
+    <wsse11:EncryptedHeader
       <!-- encrypted wst:IssuedTokens header containing SCTi -->  
       <!-- wst:IssuedTokens header is taken verbatim from message #2 above, omitted for brevity -->  
     </wsse11:EncryptedHeader>  
   </s:Header>  
   <s:Body wssu:Id="body">  
-    <!-- encrypted content of the Body element of the application message -->      
-    <e:EncryptedData Id="encrypted_body"   
-           Type="http://www.w3.org/2001/04/xmlenc#Content"   
+    <!-- encrypted content of the Body element of the application message -->
+    <e:EncryptedData Id="encrypted_body"
+           Type="http://www.w3.org/2001/04/xmlenc#Content"
            xmlns:e="http://www.w3.org/2001/04/xmlenc#">  
 ...  
     </e:EncryptedData>  

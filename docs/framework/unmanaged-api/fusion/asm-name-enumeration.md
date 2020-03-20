@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-ms.openlocfilehash: 355f9da29a435a02d929cc01f28e95c4e04cdfcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb77fe470829570d5abe291249eb7ef9023e6b14
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109147"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178304"
 ---
 # <a name="asm_name-enumeration"></a>ASM_NAME 列舉
-指出元件的版本、組建、文化特性、簽章等，其屬性將由[IAssemblyName](iassemblyname-interface.md)方法抓取或設定。  
+指示程式集的版本、生成、區域性、簽名等，其屬性將由[IAssemblyName](iassemblyname-interface.md)方法檢索或設置。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +47,7 @@ typedef enum {
     ASM_NAME_NULL_PUBLIC_KEY,  
     ASM_NAME_NULL_PUBLIC_KEY_TOKEN,  
     ASM_NAME_CUSTOM,  
-    ASM_NAME_NULL_CUSTOM,   
+    ASM_NAME_NULL_CUSTOM,
     ASM_NAME_MVID,  
     ASM_NAME_FILE_MAJOR_VERSION,  
     ASM_NAME_FILE_MINOR_VERSION,  
@@ -65,13 +65,13 @@ typedef enum {
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** 融合。h  
+ **標題：** 融合.h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IAssemblyName 介面](iassemblyname-interface.md)
 - [融合列舉](fusion-enumerations.md)

@@ -2,12 +2,12 @@
 title: 風險降低︰路徑冒號檢查
 ms.date: 03/30/2017
 ms.assetid: a0bb52de-d279-419d-8f23-4b12d1a3f36e
-ms.openlocfilehash: e88643fea3bd507289436f41880a2de34117884f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c6e1106b6f5d8457417992941b9f28712d484442
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457904"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181251"
 ---
 # <a name="mitigation-path-colon-checks"></a>風險降低︰路徑冒號檢查
 從以 .NET Framework 4.6.2 為目標的應用程式開始，為了支援先前不支援的路徑 (就長度和格式兩方面) 而有數項變更。 特別是提供更正確的適當磁碟機分隔符號語法 (冒號) 檢查。  
@@ -15,7 +15,7 @@ ms.locfileid: "73457904"
 ## <a name="impact"></a>影響  
  這些變更會封鎖 <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> 和 <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> 方法先前支援的一些 URI 路徑。  
   
-## <a name="mitigation"></a>風險降低  
+## <a name="mitigation"></a>降低  
  若要解決 <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> 和 <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> 方法不再支援的先前可接受路徑問題，您可以執行下列動作：  
   
 - 從 URL 手動移除配置。 例如，從 URL 移除 `file://`。  
@@ -26,10 +26,10 @@ ms.locfileid: "73457904"
   
     ```xml  
     <runtime>  
-        <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
+        <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />
     </runtime>  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [應用程式相容性](application-compatibility.md)

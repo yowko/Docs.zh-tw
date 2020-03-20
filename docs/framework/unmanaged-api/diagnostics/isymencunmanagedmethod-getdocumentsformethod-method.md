@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: bd6ccde5-d578-48d8-abed-b474fbd48d13
 topic_type:
 - apiref
-ms.openlocfilehash: 49023424c21fced1c49b16ecdbea93c654b5e883
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 97f0d81c389ffd0bd8a69df2ca39322d726f98bc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448378"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176626"
 ---
 # <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a>ISymENCUnmanagedMethod::GetDocumentsForMethod 方法
-取得此方法在中具有行的檔。  
+獲取此方法中具有行的文檔。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT GetDocumentsForMethod(  
     [in]  ULONG32  cDocs,  
-    [out] ULONG32  *pcDocs,   
+    [out] ULONG32  *pcDocs,
     [in, size_is(cDocs)] ISymUnmanagedDocument* documents[]);  
 ```  
   
 ## <a name="parameters"></a>參數  
  `cDocs`  
- 在`pcDocs`所指向之緩衝區的長度。  
+ [在]指向 的緩衝區的長度`pcDocs`。  
   
  `pcDocs`  
- 脫銷`ULONG32` 的指標，接收包含檔所需的緩衝區大小（以字元為單位）。  
+ [出]指向 的指標`ULONG32`，該指標接收包含文檔所需的緩衝區的大小（以字元表示）。  
   
  `documents`  
- 在包含檔的緩衝區。  
+ [在]包含文檔的緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，錯誤碼為。  
+ 如果方法成功，S_OK;否則，錯誤代碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+ **標題：** 科西姆.伊德爾，科西姆.h  
   
 ## <a name="see-also"></a>另請參閱
 

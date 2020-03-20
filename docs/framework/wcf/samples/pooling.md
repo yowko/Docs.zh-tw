@@ -2,27 +2,27 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: d2962004376cf6f0752067d4e03828cd894efd01
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 46abc2c9c667ea7614581d7fafaa8e174db7f14f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716508"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183397"
 ---
 # <a name="pooling"></a>Pooling
-這個範例會示範如何擴充 Windows Communication Foundation （WCF）以支持對象共用。 此範例會示範如何建立語法上及語意上與 Enterprise Services 的 `ObjectPoolingAttribute` 屬性功能相似的屬性。 物件共用可以大幅提升應用程式的效能。 不過，如果不當使用，可能會產生反效果。 物件共用有助於避免重複建立常用物件的煩瑣工作，這些物件往往需要大量的初始設定。 不過，如果呼叫共用物件上的方法要花費相當長的時間才能完成，而一旦到達集區的大小上限，物件共用就得將多出的要求加入佇列中。 它可能因此無法受理某個建立物件的要求，而擲回逾時例外狀況。  
+此示例演示如何擴展 Windows 通信基礎 （WCF） 以支持對象池。 此範例會示範如何建立語法上及語意上與 Enterprise Services 的 `ObjectPoolingAttribute` 屬性功能相似的屬性。 物件共用可以大幅提升應用程式的效能。 不過，如果不當使用，可能會產生反效果。 物件共用有助於避免重複建立常用物件的煩瑣工作，這些物件往往需要大量的初始設定。 不過，如果呼叫共用物件上的方法要花費相當長的時間才能完成，而一旦到達集區的大小上限，物件共用就得將多出的要求加入佇列中。 它可能因此無法受理某個建立物件的要求，而擲回逾時例外狀況。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 建立 WCF 延伸模組的第一個步驟是決定要使用的擴充點。  
+ 創建 WCF 擴展的第一步是確定要使用的擴充點。  
   
- 在 WCF 中，「*發送器*」一詞指的是執行時間元件，負責將傳入訊息轉換成使用者服務上的方法調用，以及將該方法的傳回值轉換成外寄訊息。 WCF 服務會為每個端點建立發送器。 如果與該用戶端相關聯的合約是雙工合約，WCF 用戶端就必須使用發送器。  
+ 在 WCF 中，術語*調度程式*是指一個運行時元件，負責將傳入消息轉換為使用者服務上的方法調用，並將傳回值從該方法轉換為傳出消息。 WCF 服務為每個終結點創建一個調度程式。 如果與該用戶端關聯的協定是雙工協定，則 WCF 用戶端必須使用調度程式。  
   
  通道和端點發送器可以公開各種控制發送器行為的屬性，提供適用於整個通道及合約範圍的擴充性。 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> 屬性同時可讓您檢查、修改或自訂分派程序。 此範例著重於 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 屬性，這個屬性會指向提供服務類別之執行個體的物件。  
   
 ## <a name="the-iinstanceprovider"></a>IInstanceProvider  
- 在 WCF 中，發送器會使用執行 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 介面的 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>來建立服務類別的實例。 這個介面有三個方法：  
+ 在 WCF 中，調度程式使用 創建服務類的實例<xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>，該實例實現<xref:System.ServiceModel.Dispatcher.IInstanceProvider>介面。 這個介面有三個方法：  
   
 - <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>：訊息送達時，發送器會呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29> 方法來建立服務類別的執行個體，以便處理訊息。 呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall>，則會建立服務類別的執行個體來處理送達的每個訊息，所以只要訊息一送達就會呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%28System.ServiceModel.InstanceContext%2CSystem.ServiceModel.Channels.Message%29>。  
   
@@ -55,7 +55,7 @@ object IInstanceProvider.GetInstance(InstanceContext instanceContext, Message me
   
     idleTimer.Stop();  
   
-    return obj;            
+    return obj;
 }  
 ```  
   
@@ -72,15 +72,15 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
         WritePoolMessage(  
         ResourceHelper.GetString("MsgObjectPooled"));  
   
-        // When the service goes completely idle (no requests   
+        // When the service goes completely idle (no requests
         // are being processed), the idle timer is started  
         if (activeObjectsCount == 0)  
-            idleTimer.Start();                       
+            idleTimer.Start();
     }  
 }  
 ```  
   
- `ReleaseInstance` 方法提供「清除初始化」功能。 集區通常會在集區的存留期中保留最低限度數目的物件。 不過，可能有些時段會出現過度使用的情形，因而需要在集區中建立其他物件以達到組態中指定的上限。 最後當集區的活動變少時，這些多餘的物件可能會變成額外的負荷。 因此，當 `activeObjectsCount` 成為零時，閒置計時器就會啟動，以觸發並執行清除循環。  
+ 該方法`ReleaseInstance`提供了"清理初始化"功能。 集區通常會在集區的存留期中保留最低限度數目的物件。 不過，可能有些時段會出現過度使用的情形，因而需要在集區中建立其他物件以達到組態中指定的上限。 最後當集區的活動變少時，這些多餘的物件可能會變成額外的負荷。 因此，當 `activeObjectsCount` 成為零時，閒置計時器就會啟動，以觸發並執行清除循環。  
   
 ## <a name="adding-the-behavior"></a>新增行為  
  您可以使用下列行為來連結發送器層延伸：  
@@ -101,7 +101,7 @@ void IInstanceProvider.ReleaseInstance(InstanceContext instanceContext, object i
   
  這個範例會使用自訂屬性。 建構 <xref:System.ServiceModel.ServiceHost> 時，它會檢查服務型別定義中使用的屬性，然後將可用的行為加入至服務描述的行為集合。  
   
- <xref:System.ServiceModel.Description.IServiceBehavior> 介面中有三個方法：<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>、<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 和 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 方法是用來確保行為可以套用至服務。 在這個範例中，此實作會確認服務不是透過 <xref:System.ServiceModel.InstanceContextMode.Single> 所設定。 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 方法是用來設定服務的繫結。 這在本案例中不是必要項。 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 是用來設定服務的發送器。 當初始化 <xref:System.ServiceModel.ServiceHost> 時，WCF 會呼叫這個方法。 傳遞至這個方法中的參數如下：  
+ <xref:System.ServiceModel.Description.IServiceBehavior> 介面中有三個方法：<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>、<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 和 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> 方法是用來確保行為可以套用至服務。 在這個範例中，此實作會確認服務不是透過 <xref:System.ServiceModel.InstanceContextMode.Single> 所設定。 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> 方法是用來設定服務的繫結。 這在本案例中不是必要項。 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A> 是用來設定服務的發送器。 在初始化 時，WCF<xref:System.ServiceModel.ServiceHost>會調用此方法。 傳遞至這個方法中的參數如下：  
   
 - `Description`：這個引數會為整個服務提供服務描述。 這可以用來檢查有關服務之端點、合約、繫結程序及其他資料的描述資料。  
   
@@ -114,7 +114,7 @@ void IServiceBehavior.ApplyDispatchBehavior(ServiceDescription description, Serv
 {  
     // Create an instance of the ObjectPoolInstanceProvider.  
     ObjectPoolingInstanceProvider instanceProvider = new  
-           ObjectPoolingInstanceProvider(description.ServiceType,   
+           ObjectPoolingInstanceProvider(description.ServiceType,
                                                     minPoolSize);  
   
     // Forward the call if we created a ServiceThrottlingBehavior.  
@@ -123,29 +123,29 @@ void IServiceBehavior.ApplyDispatchBehavior(ServiceDescription description, Serv
         ((IServiceBehavior)this.throttlingBehavior).ApplyDispatchBehavior(description, serviceHostBase);  
     }  
   
-    // In case there was already a ServiceThrottlingBehavior   
-    // (this.throttlingBehavior==null), it should have initialized   
-    // a single ServiceThrottle on all ChannelDispatchers.    
-    // As we loop through the ChannelDispatchers, we verify that   
+    // In case there was already a ServiceThrottlingBehavior
+    // (this.throttlingBehavior==null), it should have initialized
+    // a single ServiceThrottle on all ChannelDispatchers.
+    // As we loop through the ChannelDispatchers, we verify that
     // and modify the ServiceThrottle to guard MaxPoolSize.  
     ServiceThrottle throttle = null;  
   
-    foreach (ChannelDispatcherBase cdb in   
+    foreach (ChannelDispatcherBase cdb in
             serviceHostBase.ChannelDispatchers)  
     {  
         ChannelDispatcher cd = cdb as ChannelDispatcher;  
         if (cd != null)  
         {  
-            // Make sure there is exactly one throttle used by all   
-            // endpoints. If there were others, we could not enforce   
+            // Make sure there is exactly one throttle used by all
+            // endpoints. If there were others, we could not enforce
             // MaxPoolSize.  
-            if ((this.throttlingBehavior == null) &&   
+            if ((this.throttlingBehavior == null) &&
                         (this.maxPoolSize != Int32.MaxValue))  
             {  
                 throttle ??= cd.ServiceThrottle;
                 if (cd.ServiceThrottle == null)  
                 {  
-                    throw new   
+                    throw new
 InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));  
                 }  
                 if (throttle != cd.ServiceThrottle)  
@@ -157,15 +157,15 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
              foreach (EndpointDispatcher ed in cd.Endpoints)  
              {  
                  // Assign it to DispatchBehavior in each endpoint.  
-                 ed.DispatchRuntime.InstanceProvider =   
+                 ed.DispatchRuntime.InstanceProvider =
                                       instanceProvider;  
              }  
          }  
      }  
   
-     // Set the MaxConcurrentInstances to limit the number of items   
+     // Set the MaxConcurrentInstances to limit the number of items
      // that will ever be requested from the pool.  
-     if ((throttle != null) && (throttle.MaxConcurrentInstances >   
+     if ((throttle != null) && (throttle.MaxConcurrentInstances >
                                       this.maxPoolSize))  
      {  
          throttle.MaxConcurrentInstances = this.maxPoolSize;  
@@ -175,10 +175,10 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
   
  除了 <xref:System.ServiceModel.Description.IServiceBehavior> 實作之外，<xref:System.EnterpriseServices.ObjectPoolingAttribute> 類別還有數個可以使用屬性引數來自訂物件集區的成員。 這些成員包括 <xref:System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize%2A>、<xref:System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize%2A> 和 <xref:System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout%2A>，可以用來配合 .NET Enterprise Services 提供的物件共用功能集。  
   
- 藉由使用新建立的自訂 `ObjectPooling` 屬性來標注服務執行，現在可以將物件共用行為新增至 WCF 服務。  
+ 現在，可以通過使用新創建的自訂`ObjectPooling`屬性對服務實現進行批號批號，將物件集區行為添加到 WCF 服務中。  
   
 ```csharp  
-[ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]      
+[ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]
 public class PoolService : IPoolService  
 {  
   // …  
@@ -203,7 +203,7 @@ public class ObjectPooledWorkService : IDoWork
     public void DoWork()  
     {  
         ColorConsole.WriteLine(ConsoleColor.Blue, "ObjectPooledWorkService.GetData() completed.");  
-    }          
+    }
 }  
 ```  
   
@@ -234,20 +234,20 @@ Press <ENTER> to exit.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
+2. 要生成解決方案，請按照生成 Windows[通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的說明進行操作。  
   
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
   
 > [!NOTE]
 > 如果您使用 Svcutil.exe 重新產生這個範例的組態，請務必修改用戶端組態中的端點名稱，以符合用戶端程式碼。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Pooling`  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fad01d7a-3178-4c8c-9f0a-4641e3701c9b
 topic_type:
 - apiref
-ms.openlocfilehash: 44f97ef498eb8e64c55fc86b9f290b9e088293f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 388f227377ddf73fe1297e1c777bb1c0607c13d2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432063"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177873"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType 方法
 為指定的已匯出類型，建立包含其中繼資料的 `ExportedType` 結構，並且傳回關聯的中繼資料語彙基元。  
@@ -30,7 +30,7 @@ ms.locfileid: "74432063"
 ```cpp  
 HRESULT DefineExportedType (  
     [in]  LPCWSTR             szName,  
-    [in]  mdToken             tkImplementation,   
+    [in]  mdToken             tkImplementation,
     [in]  mdTypeDef           tkTypeDef,  
     [in]  DWORD               dwExportedTypeFlags,  
     [out] mdExportedType      *pmdct  
@@ -39,39 +39,39 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>參數  
  `szName`  
- 在要匯出之類型的名稱。 若是 common language runtime 的版本1.1，匯出類型的名稱必須完全符合類型的 `TypeDef` 中指定的名稱。  
+ [在]要匯出的類型的名稱。 對於通用語言運行時的版本 1.1，匯出類型的名稱必須與 類型中`TypeDef`給出的名稱完全符合。  
   
  `tkImplementation`  
- 在指定匯出類型的實作為位置的 token。 有效值和其相關意義如下：  
+ [在]指定匯出類型的實現位置的權杖。 有效值及其相關含義包括：  
   
-- `mdFile` 類型是在此元件內的不同檔案中執行。  
+- `mdFile`該類型在此程式集中的其他檔中實現。  
   
-- `mdAssemblyRef` 類型是在不同的元件中執行。  
+- `mdAssemblyRef`該類型在不同的程式集中實現。  
   
-- `mdExportedTYpe` 類型會在其他類型內嵌套。  
+- `mdExportedTYpe`類型嵌套在某種其他類型中。  
   
-- `mdFileNil` 類型與資訊清單位於相同的檔案中，而且不是嵌套的類型。  
+- `mdFileNil`類型與清單位於同一檔中，不是巢狀型別。  
   
  `tkTypeDef`  
- 在中繼資料的 token，指定要匯出的類型。 這個值會在執行類型之檔案的 `TypeDef` 資料表中輸入，而且只有在該檔案位於此元件中時，才會相關。  
+ [在]指定要匯出的類型的中繼資料的權杖。 此值在檔中實現該類型的`TypeDef`表中輸入，並且僅當該檔位於此程式集中時才相關。  
   
  `dwExportedTypeFlags`  
- 在[CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)列舉值的位元組合，這個組合會定義匯出類型的屬性設定。  
+ [在][CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)枚舉值的位組合，用於定義匯出類型的屬性設置。  
   
  `pmdct`  
- 脫銷傳回之元資料標記的指標，表示匯出的類型。  
+ [出]指向返回的中繼資料權杖的指標，指示匯出的類型。  
   
 ## <a name="remarks"></a>備註  
- 您必須針對此元件所公開的每個類型定義 `ExportedType` 元資料結構，並在包含資訊清單的模組以外的模組中執行。  
+ 必須`ExportedType`為此程式集公開的並且在包含清單的模組以外的模組中實現的每一種類型定義元資料結構。  
   
 ## <a name="requirements"></a>需求  
- **平臺：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平臺：** 請參閱[系統要求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

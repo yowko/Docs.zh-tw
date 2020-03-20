@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: af14ae5f-d226-47dd-ba90-8fc6e6605d4d
 topic_type:
 - apiref
-ms.openlocfilehash: 212a9f46dd33f98abd31e7a78c7a830cb3386cb6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f838d5c812842e2a637065b25182b6a12609231
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73108002"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176548"
 ---
 # <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 結構
-包含元件中單一屬性的相關資訊，並由三個 `DWORD`組成。 每個 `DWORD` 都是由[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)介面的 `CurrentIntoBuffer` 方法所產生之字元緩衝區的位移。  
+包含有關程式集中單個屬性的資訊，並且由三`DWORD`個 s 組成。 每個`DWORD`都是`CurrentIntoBuffer`[IEnumIDENTITY_ATTRIBUTE介面方法](ienumidentity-attribute-interface.md)生成的字元緩衝區的偏移量  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,24 +36,24 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 }   IDENTITY_ATTRIBUTE_BLOB;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`ofsNamespace`|字元緩衝區的第一個位移。 這個位移後面不接屬性的命名空間，而是一系列的 null 字元。 因此，不會使用它。|  
-|`ofsName`|字元緩衝區的第二個位移。 這個位置會標示屬性名稱的開頭。|  
-|`ofsValue`|字元緩衝區中的第三個位移。 這個位置會標示屬性值的開頭。|  
+|`ofsNamespace`|字元緩衝區中的第一個偏移量。 此偏移後不跟屬性的命名空間，而是一系列空字元。 因此，不使用它。|  
+|`ofsName`|字元緩衝區中的第二個偏移量。 此位置標記屬性名稱的開始。|  
+|`ofsValue`|字元緩衝區中的第三個偏移量。 此位置標記屬性值的開始。|  
   
 ## <a name="sample"></a>範例  
- 下列範例說明數個基本步驟，最後會產生 `IDENTITY_ATTRIBUTE_BLOB` 結構的擴展：  
+ 下面的示例說明了幾個基本步驟，這些步驟最終導致填充`IDENTITY_ATTRIBUTE_BLOB`結構：  
   
-1. 取得元件的[IReferenceIdentity](ireferenceidentity-interface.md) 。  
+1. 獲取程式集的[IReference 標識](ireferenceidentity-interface.md)。  
   
-2. 呼叫 `IReferenceIdentity::EnumAttributes` 方法，並取得[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。  
+2. 調用`IReferenceIdentity::EnumAttributes`方法，並獲取[IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)。  
   
-3. 建立字元緩衝區，並將它轉換為 `IDENTITY_ATTRIBUTE_BLOB` 結構。  
+3. 創建字元緩衝區，並將其轉換為`IDENTITY_ATTRIBUTE_BLOB`結構。  
   
-4. 呼叫 `IEnumIDENTITY_ATTRIBUTE` 介面的 `CurrentIntoBuffer` 方法。 這個方法會將 `Namespace`、`Name`和 `Value` 的屬性複製到字元緩衝區中。 這些字串的三個位移會在 `IDENTITY_ATTRIBUTE_BLOB` 結構中變成可用。  
+4. 調用`IEnumIDENTITY_ATTRIBUTE`介面`CurrentIntoBuffer`的方法。 此方法將屬性`Namespace`、`Name`和`Value`複製到字元緩衝區中。 這些字串的三個偏移將在`IDENTITY_ATTRIBUTE_BLOB`結構中可用。  
   
 ```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
@@ -97,7 +97,7 @@ bool Init()
                                 (VOID **)&g_pfnGetIdentityAuthority);  
     }  
   
-    if (!g_pfnGetAssemblyIdentityFromFile ||   
+    if (!g_pfnGetAssemblyIdentityFromFile ||
         !g_pfnGetIdentityAuthority)  
     {  
         printf("Error: Cannot get required APIs from fusion.dll!\n");  
@@ -120,7 +120,7 @@ void Shutdown()
   
 void Usage()  
 {  
-    printf("EnumAssemblyAttributes: A tool to enumerate the identity   
+    printf("EnumAssemblyAttributes: A tool to enumerate the identity
             attributes of a given assembly.\n\n");  
     printf("Usage: EnumAssemblyAttributes AssemblyFilePath\n");  
     printf("\n");  
@@ -131,7 +131,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
     int     iResult = 1;  
     IUnknown                    *pUnk  = NULL;  
     IReferenceIdentity          *pRef  = NULL;  
-    HRESULT                     hr     = S_OK;     
+    HRESULT                     hr     = S_OK;
     IEnumIDENTITY_ATTRIBUTE     *pEnum = NULL;  
     BYTE                        abData[1024];  
     DWORD                       cbAvailable;  
@@ -148,16 +148,16 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
         goto Exit;  
     }  
   
-    hr = g_pfnGetAssemblyIdentityFromFile(argv[1],   
+    hr = g_pfnGetAssemblyIdentityFromFile(argv[1],
                             __uuidof(IReferenceIdentity), &pUnk);  
   
     if (FAILED(hr)) {  
-        printf("GetAssemblyIdentityFromFile failed with hr = 0x%x",   
+        printf("GetAssemblyIdentityFromFile failed with hr = 0x%x",
                 hr);  
         goto Exit;  
     }  
   
-    hr = pUnk->QueryInterface(__uuidof(IReferenceIdentity),   
+    hr = pUnk->QueryInterface(__uuidof(IReferenceIdentity),
                               (void**)&pRef);  
     if (FAILED(hr)) {  
         goto Exit;  
@@ -165,7 +165,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
   
     hr = pRef->EnumAttributes(&pEnum);  
     if (FAILED(hr)) {  
-        printf("IReferenceIdentity::EnumAttributes failed with hr =   
+        printf("IReferenceIdentity::EnumAttributes failed with hr =
                 0x%x", hr);  
         goto Exit;  
     }  
@@ -175,7 +175,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
         cbAvailable = sizeof(abData);  
         hr = pEnum->CurrentIntoBuffer(cbAvailable, abData, &cbUsed);  
         if (FAILED(hr)) {  
-            printf("IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer failed   
+            printf("IEnumIDENTITY_ATTRIBUTE::CurrentIntoBuffer failed
                     with hr = 0x%x", hr);  
             goto Exit;  
         }  
@@ -191,7 +191,7 @@ int _cdecl wmain(int argc, LPCWSTR argv[])
   
         hr = pEnum->Skip(1);  
         if (FAILED(hr)) {  
-            printf("IEnumIDENTITY_ATTRIBUTE::Skip failed with hr =   
+            printf("IEnumIDENTITY_ATTRIBUTE::Skip failed with hr =
                     0x%x", hr);  
             goto Exit;  
         }  
@@ -219,28 +219,28 @@ Exit:
 }  
 ```  
   
-### <a name="to-run-the-sample"></a>若要執行範例  
- C：\\> EnumAssemblyAttributes .exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+### <a name="to-run-the-sample"></a>執行範例  
+ C：>EnumAssemblyattributes.exe\\ C：_WINDOWS_微軟.NET_Framework_v2.0.50727_System.dll  
   
 ### <a name="sample-output"></a>範例輸出  
- 文化特性 = 中性  
+ 文化 = 中性  
   
  名稱 = 系統  
   
- processorArchitecture = MSIL  
+ 處理器架構 = MSIL  
   
- PublicKeyToken = b77a5c561934e089  
+ 公開金鑰權杖 = b77a5c561934e089  
   
- Version = 2.0.0.0  
+ 版本 = 2.0.0.0  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** 隔離。h  
+ **標題：** 隔離.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IReferenceIdentity 介面](ireferenceidentity-interface.md)
 - [IEnumIDENTITY_ATTRIBUTE 介面](ienumidentity-attribute-interface.md)

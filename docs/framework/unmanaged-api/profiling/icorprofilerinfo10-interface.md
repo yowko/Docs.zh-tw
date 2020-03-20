@@ -3,32 +3,32 @@ title: ICorProfilerInfo10 介面
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 30179c7c198a343baa3fa01ae64f6d580a3f9e7e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 4c5d553744008734037975d6e63e1b07b89cf886
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452197"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175066"
 ---
 # <a name="icorprofilerinfo10-interface"></a>ICorProfilerInfo10 介面
 
-[ICorProfilerInfo9](icorprofilerinfo9-interface.md)的子類別，提供修改函式 IL 的方法、從執行時間查詢資訊，以及暫停和繼續執行時間。
+[ICorProfilerInfo9](icorprofilerinfo9-interface.md)的子類，它提供修改函數 IL、查詢運行時資訊以及掛起和恢復運行時的方法。
 
 ## <a name="methods"></a>方法  
 
 | 方法|描述|  
 | ------------|-----------------|  
-|[EnumerateObjectReferences 方法](icorprofilerinfo10-enumerateobjectreferences-method.md)|假設有 ObjectID、callback 和 clientData，會列舉每個物件參考（如果有的話）。 |
-|[IsFrozenObject 方法](icorprofilerinfo10-isfrozenobject-method.md)|給定 ObjectID，判斷物件是否在唯讀區段中。 |
-|[GetLOHObjectSizeThreshold 方法](icorprofilerinfo10-getlohobjectsizethreshold-method.md)|取得設定的 LOH 臨界值。 |
-|[RequestReJITWithInliners 方法](icorprofilerinfo10-requestrejitwithinliners-method.md)| ReJITs 要求的方法，以及所要求之方法的任何 inliners。  |
-|[SuspendRuntime 方法](icorprofilerinfo10-suspendruntime-method.md)| 暫停執行時間，而不執行 GC。 |
-|[ResumeRuntime 方法](icorprofilerinfo10-resumeruntime-method.md)| 繼續執行時間，而不執行 GC。 |
+|[EnumerateObjectReferences 方法](icorprofilerinfo10-enumerateobjectreferences-method.md)|給定 ObjectID、回檔和用戶端資料，枚舉每個物件引用（如果有）。 |
+|[IsFrozenObject 方法](icorprofilerinfo10-isfrozenobject-method.md)|給定 ObjectID，確定物件是否位於唯讀段中。 |
+|[GetLOHObjectSizeThreshold 方法](icorprofilerinfo10-getlohobjectsizethreshold-method.md)|獲取配置的 LOH 閾值。 |
+|[RequestReJITWithInliners 方法](icorprofilerinfo10-requestrejitwithinliners-method.md)| 重新執行請求的方法，以及所請求方法的任何內襯。  |
+|[SuspendRuntime 方法](icorprofilerinfo10-suspendruntime-method.md)| 在不執行 GC 的情況下掛起運行時。 |
+|[ResumeRuntime 方法](icorprofilerinfo10-resumeruntime-method.md)| 在不執行 GC 的情況下恢復運行時。 |
 
 ## <a name="requirements"></a>需求  
-**平臺：** 請參閱[.Net Core 支援的作業系統](../../../core/install/dependencies.md?pivots=os-windows)。  
+**平臺：** 請參閱[.NET Core 支援的作業系統](../../../core/install/dependencies.md?pivots=os-windows)。  
 **標頭：** CorProf.idl、CorProf.h  
-**.Net 版本：** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)] 
+**.NET 版本：**[!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>另請參閱
 

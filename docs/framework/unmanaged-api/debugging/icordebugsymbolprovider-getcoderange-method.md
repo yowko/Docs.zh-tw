@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider::GetCodeRange 方法
 ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
-ms.openlocfilehash: dbe042641cadae182efac30502a70631be359bbe
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 81babade2ba499ce9326c664e83fa582abbd216f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791645"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178473"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange 方法
 提供方法中的相對虛擬位址 (RVA)，以取得方法起始位址和大小。  
@@ -16,8 +16,8 @@ ms.locfileid: "76791645"
   
 ```cpp  
 HRESULT GetCodeRange(  
-   [in] ULONG32 codeRva,   
-   [out] ULONG32* pCodeStartAddress,   
+   [in] ULONG32 codeRva,
+   [out] ULONG32* pCodeStartAddress,
    [out] ULONG32* pCodeSize  
 );  
 ```  
@@ -44,9 +44,9 @@ HRESULT GetCodeRange(
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugSymbolProvider 介面](icordebugsymbolprovider-interface.md)
 - [偵錯介面](debugging-interfaces.md)

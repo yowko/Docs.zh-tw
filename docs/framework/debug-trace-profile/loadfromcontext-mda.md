@@ -7,28 +7,28 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-ms.openlocfilehash: 28ef6e12c82cf5ca56962756b9ea964d0ae9baaa
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d0090a0272d1c3b6175b351175689df1e1e4fdbd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216164"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181801"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
-如果組件載入到 `loadFromContext` 內容中，就會啟動 `LoadFrom` Managed 偵錯助理 (MDA)。 這種情況可能是因為呼叫 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 或其他類似方法而發生。  
+如果組件載入到 `LoadFrom` 內容中，就會啟動 `loadFromContext` Managed 偵錯助理 (MDA)。 這種情況可能是因為呼叫 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 或其他類似方法而發生。  
   
 ## <a name="symptoms"></a>徵狀  
  使用某些載入器方法可能會將組件載入到 `LoadFrom` 內容中。 使用這個內容可能會導致序列化、轉型和相依性解析的未預期行為。 一般情況下，建議將組件載入至 `Load` 內容，以避免這些問題發生。 無此 MDA，難以判斷哪些內容已載入組件。  
   
 ## <a name="cause"></a>原因  
- 一般而言，如果組件是從 `LoadFrom` 內容的外部路徑載入，例如全域組件快取或 `Load` 屬性，就會載入至 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> 內容。  
+ 一般而言，如果組件是從 `Load` 內容的外部路徑載入，例如全域組件快取或 <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> 屬性，就會載入至 `LoadFrom` 內容。  
   
 ## <a name="resolution"></a>解決方案  
  設定應用程式，因此不再需要 <xref:System.Reflection.Assembly.LoadFrom%2A> 呼叫。 您可以使用下列技巧執行該作業：  
   
 - 在全域組件快取中安裝組件。  
   
-- 將組件放置在 <xref:System.AppDomainSetup.ApplicationBase%2A> 的 <xref:System.AppDomain>目錄中。 如果是預設網域，<xref:System.AppDomainSetup.ApplicationBase%2A> 目錄會包含啟動處理序的可執行檔。 如果移動組件不方便，可能也需要建立新的 <xref:System.AppDomain>。  
+- 將組件放置在 <xref:System.AppDomain> 的 <xref:System.AppDomainSetup.ApplicationBase%2A>目錄中。 如果是預設網域，<xref:System.AppDomainSetup.ApplicationBase%2A> 目錄會包含啟動處理序的可執行檔。 如果移動組件不方便，可能也需要建立新的 <xref:System.AppDomain>。  
   
 - 如果相依組件位在可執行檔的相對子目錄中，請將探查路徑新增至應用程式組態檔 (.config) 或次要應用程式網域。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "77216164"
 ```  
   
 ## <a name="example"></a>範例  
- 下列程式碼範例示範可啟用此 MDA 的情況：  
+ 下列程式碼範例示範可以啟動此 MDA 的情況：  
   
 ```csharp
 using System.Reflection;  
@@ -62,8 +62,8 @@ namespace ConsoleApplication1
         static void Main(string[] args)  
         {  
             // The following call caused the LoadFrom context to be used  
-            // because the assembly is loaded using LoadFrom and the path is   
-            // located outside of the Load context probing path.   
+            // because the assembly is loaded using LoadFrom and the path is
+            // located outside of the Load context probing path.
             Assembly.LoadFrom(@"C:\Text\Test.dll");  
         }  
     }  

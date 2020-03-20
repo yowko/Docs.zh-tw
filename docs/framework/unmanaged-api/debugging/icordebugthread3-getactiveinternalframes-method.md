@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: 25cd3e05bc80dd39d2ca558bb4dd5fb77d255f5a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 680af5afa3ebef5bcaf9e34580e421dcc8093aaf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791402"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178458"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames 方法
-傳回堆疊上的內部框架（[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)物件）陣列。  
+返回堆疊上的內部幀陣列[（ICorDebug內部Frame2](icordebuginternalframe2-interface.md)物件）。  
   
 ## <a name="syntax"></a>語法  
   
-```cpp 
+```cpp
 HRESULT GetActiveInternalFrames  
       (  
       [in] ULONG32 cInternalFrames,  
@@ -39,33 +39,33 @@ HRESULT GetActiveInternalFrames
   
 ## <a name="parameters"></a>參數  
  `cInternalFrames`  
- 在`ppInternalFrames`中預期的內部框架數目。  
+ [在]中預期的內部幀數`ppInternalFrames`。  
   
  `pcInternalFrames`  
- 脫銷`ULONG32` 的指標，其中包含堆疊上的內部框架數目。  
+ [出]指向`ULONG32`包含堆疊上內部幀數的 指標。  
   
  `ppInternalFrames`  
- [in、out]堆疊上內部框架陣列位址的指標。  
+ [進出]指向堆疊上內部幀陣列位址的指標。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功建立[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)物件。|  
-|E_INVALIDARG|`cInternalFrames` 不是零，而且 `ppInternalFrames` `null`，或 `pcInternalFrames` 是 `null`。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames` 小於內部框架的計數。|  
+|S_OK|已成功創建[ICorDebug 內部Frame2](icordebuginternalframe2-interface.md)物件。|  
+|E_INVALIDARG|`cInternalFrames``ppInternalFrames`不是零，`null`是 ，`pcInternalFrames`或`null`是 。|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames`小於內部幀的計數。|  
   
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- 內部框架是執行時間推送至堆疊的資料結構，用來儲存暫存資料。  
+ 內部幀是運行時推送到堆疊以存儲臨時資料的資料結構。  
   
- 當您第一次呼叫 `GetActiveInternalFrames`時，您應該將 `cInternalFrames` 參數設定為0（零），並將 `ppInternalFrames` 參數設為 null。 當 `GetActiveInternalFrames` 第一次傳回時，`pcInternalFrames` 包含堆疊上的內部框架計數。  
+ 首次調用`GetActiveInternalFrames`時，應將`cInternalFrames`參數設置為 0（零），並將`ppInternalFrames`參數設置為 null。 首次`GetActiveInternalFrames`返回時，`pcInternalFrames`包含堆疊上內部幀的計數。  
   
- 接著，應該再次呼叫 `GetActiveInternalFrames`。 您應該在 `cInternalFrames` 參數中傳遞適當的計數（`pcInternalFrames`），並在 `ppInternalFrames`中指定適當大小陣列的指標。  
+ `GetActiveInternalFrames`然後，應調用第二次。 應在`pcInternalFrames``cInternalFrames`參數中傳遞正確的計數 （ ），並在 中指定指向適當大小的陣列的`ppInternalFrames`指標。  
   
- 請使用[ICorDebugStackWalk：： GetFrame](icordebugthread3-getactiveinternalframes-method.md)方法來傳回實際的堆疊框架。  
+ 使用[ICorDebugStackWalk：getFrame](icordebugthread3-getactiveinternalframes-method.md)方法返回實際堆疊幀。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -74,9 +74,9 @@ HRESULT GetActiveInternalFrames
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯介面](debugging-interfaces.md)
 - [偵錯](index.md)

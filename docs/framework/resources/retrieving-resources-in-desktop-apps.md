@@ -18,18 +18,18 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: 39bb518306b6e76aea1ae4a791fca79fbbb1b6c8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 17795db2cdec419a31fe862793c88506f9535ff9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445751"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180454"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>擷取桌面應用程式中的資源
 
-當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的[從 .resources 檔擷取資源](#from_file)一節中所述。  若要取出 Windows 8.x 存放區應用程式中的資源，請參閱[在 Windows store 應用程式中建立和抓取資源](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))。  
+當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的[從 .resources 檔擷取資源](#from_file)一節中所述。  若要檢索 Windows 8.x 應用商店應用中的資源，請參閱[在 Windows 應用商店應用中創建和檢索資源](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))。  
   
-<a name="from_assembly"></a>   
+<a name="from_assembly"></a>
 ## <a name="retrieving-resources-from-assemblies"></a>從組件擷取資源  
  <xref:System.Resources.ResourceManager> 類別提供對執行階段資源的存取。 您可以使用 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> 方法來擷取字串資源，以及使用 <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> 或 <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> 方法來擷取非字串資源。 每個方法都有兩個多載：  
   
@@ -37,7 +37,7 @@ ms.locfileid: "74445751"
   
 - 具有兩個參數的多載︰一個包含資源名稱的字串，以及一個代表所擷取資源之文化特性的 <xref:System.Globalization.CultureInfo> 物件。 如果找不到為該文化特性設定的資源，資源管理員會使用後援規則來擷取適當的資源。 如需詳細資訊，請參閱 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法。  
   
- 資源管理員使用資源後援處理序，來控制應用程式如何擷取文化特性專屬資源。 如需詳細資訊，請參閱[封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)中的＜資源後援處理序＞一節。 如需具現化 <xref:System.Resources.ResourceManager> 物件的資訊，請參閱 <xref:System.Resources.ResourceManager> 類別主題中的＜Instantiating a ResourceManager Object＞(具現化 ResourceManager 物件) 一節。  
+ 資源管理員使用資源後援處理序，來控制應用程式如何擷取文化特性專屬資源。 如需詳細資訊，請參閱 [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)中的＜Resource Fallback Process＞一節。 如需具現化 <xref:System.Resources.ResourceManager> 物件的資訊，請參閱 <xref:System.Resources.ResourceManager> 類別主題中的＜Instantiating a ResourceManager Object＞(具現化 ResourceManager 物件) 一節。  
   
 ### <a name="retrieving-string-data-an-example"></a>擷取字串資料︰範例  
  下列範例會呼叫 <xref:System.Resources.ResourceManager.GetString%28System.String%29> 方法來擷取目前 UI 文化特性的字串資源。 其中包含英文 (美國) 文化特性的中性字串資源，以及法文 (法國) 和俄文 (俄羅斯) 文化特性的當地語系化資源。 下列英文 (美國) 資源是在名為 Strings.txt 的檔案中：  
@@ -104,7 +104,7 @@ resgen AppResources.resx
 csc GetStream.cs -resource:AppResources.resources  
 ```  
   
- 下列範例使用 <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> 方法來還原序列化自訂物件。 此範例包含名為 UIElements.cs (若是 Visual Basic 則為 UIElements.vb) 的原始程式碼檔，其中包含名為 `PersonTable` 的下列結構。 此結構是為了供一般資料表顯示常式使用，以顯示資料表資料行的當地語系化名稱。 請注意，`PersonTable` 結構會以 <xref:System.SerializableAttribute> 屬性標記。  
+ 下列範例使用 <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> 方法來還原序列化自訂物件。 此範例包含名為 UIElements.cs (若是 Visual Basic 則為 UIElements.vb) 的原始程式碼檔，其中包含名為 `PersonTable` 的下列結構。 此結構是為了供一般資料表顯示常式使用，以顯示資料表資料行的當地語系化名稱。 請注意， `PersonTable` 結構會以 <xref:System.SerializableAttribute> 屬性標記。  
   
  [!code-csharp[Conceptual.Resources.Retrieving#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example.cs#6)]
  [!code-vb[Conceptual.Resources.Retrieving#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#6)]  
@@ -143,13 +143,13 @@ GetObject.exe
   
  如需組件版本控制的詳細資訊，請參閱 [組件版本控制](../../standard/assembly/versioning.md) 和 [執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)。  
   
-<a name="from_file"></a>   
+<a name="from_file"></a>
 ## <a name="retrieving-resources-from-resources-files"></a>從 .resources 檔擷取資源  
  如果您選擇不要部署附屬組件中的資源，您仍然可以使用 <xref:System.Resources.ResourceManager> 物件直接從 .resources 檔存取資源。 若要這樣做，您必須正確部署 .resources 檔。 然後您可以使用 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> 方法具現化 <xref:System.Resources.ResourceManager> 物件，並指定包含獨立 .resources 檔的目錄。  
   
 ### <a name="deploying-resources-files"></a>部署 .resources 檔  
- 當您將 .resources 檔嵌入應用程式組件和附屬組件時，每個附屬組件都有相同的檔案名稱，但會放在反映附屬組件之文化特性的子目錄中。 相反地，當您直接從 .resources 檔存取資源時，您可以將所有 .resources 檔放在單一目錄中，通常是應用程式目錄的子目錄。 應用程式之預設 .resources 檔的名稱只包含根目錄名稱，而不會有其文化特性指示 (例如 strings.resources)。 每個當地語系化文化特性的資源會儲存在其名稱包含根目錄名稱後面接著文化特性的檔案 (例如 strings.ja.resources 或 strings.de-DE.resources)。 
- 
+ 當您將 .resources 檔嵌入應用程式組件和附屬組件時，每個附屬組件都有相同的檔案名稱，但會放在反映附屬組件之文化特性的子目錄中。 相反地，當您直接從 .resources 檔存取資源時，您可以將所有 .resources 檔放在單一目錄中，通常是應用程式目錄的子目錄。 應用程式之預設 .resources 檔的名稱只包含根目錄名稱，而不會有其文化特性指示 (例如 strings.resources)。 每個當地語系化文化特性的資源會儲存在其名稱包含根目錄名稱後面接著文化特性的檔案 (例如 strings.ja.resources 或 strings.de-DE.resources)。
+
  下圖顯示資源檔在目錄結構中的位置。 它也會提供 .resource 檔案的命名慣例。  
 
  ![顯示您應用程式主目錄的圖例。](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
@@ -158,7 +158,7 @@ GetObject.exe
  建立資源並放在適當目錄之後，您可以呼叫 <xref:System.Resources.ResourceManager> 方法，建立 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> 物件來使用資源。 第一個參數指定應用程式預設 .resources 檔的根目錄名稱 (這會是上一節範例中的 "strings")。 第二個參數指定資源的位置 (上一個範例中的 "Resources")。 第三個參數指定要使用的 <xref:System.Resources.ResourceSet> 實作。 如果第三個參數是 `null`，則會使用預設執行階段 <xref:System.Resources.ResourceSet> 。  
   
 > [!NOTE]
-> 請勿使用獨立 .resources 檔部署 ASP.NET 應用程式。 這會造成鎖定問題並中斷 XCOPY 部署。 建議您部署附屬組件中的 ASP.NET 資源。 如需詳細資訊，請參閱 [ASP.NET 網頁資源概觀](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))。  
+> 請勿使用獨立 .resources 檔部署 ASP.NET 應用程式。 這會造成鎖定問題並中斷 XCOPY 部署。 建議您部署附屬組件中的 ASP.NET 資源。 如需詳細資訊，請參閱 [ASP.NET Web Page Resources Overview](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))。  
   
  具現化 <xref:System.Resources.ResourceManager> 物件之後，您可以使用稍早所述的 <xref:System.Resources.ResourceManager.GetString%2A>、 <xref:System.Resources.ResourceManager.GetObject%2A>和 <xref:System.Resources.ResourceManager.GetStream%2A> 方法來擷取資源。 不過，直接從 .resources 檔擷取資源，與從組件擷取內嵌資源不同。 當您從 .resources 檔擷取資源時， <xref:System.Resources.ResourceManager.GetString%28System.String%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>和 <xref:System.Resources.ResourceManager.GetStream%28System.String%29> 方法一律會擷取預設文化特性的資源，而不論目前的文化特性為何。 若要擷取應用程式之目前文化特性或特定文化特性的資源，您必須呼叫 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>或 <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> 方法，並指定所要擷取之資源的文化特性。 若要擷取目前文化特性的資源，請將 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> 屬性的值指定為 `culture` 引數。 如果資源管理員無法擷取 `culture` 的資源，則會使用標準資源後援規則來擷取適當的資源。  
   
@@ -172,7 +172,7 @@ Prompt=What is your name?
   
  法文 (法國) 文化特性的資源會儲存在以下名為 Strings.fr-FR.txt 的檔案中：  
   
-```text 
+```text
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  

@@ -1,5 +1,5 @@
 ---
-title: 教學課程：執行 Windows Communication Foundation 服務合約
+title: 教程：實現 Windows 通信基礎服務協定
 ms.date: 03/19/2019
 dev_langs:
 - csharp
@@ -7,28 +7,28 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-ms.openlocfilehash: 05923dc0a2223da5e5fcda483abc1ee1dd2d643f
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: debdeeac7064f5bae21622b2d9de84a4d8a0e66f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928702"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184060"
 ---
-# <a name="tutorial-implement-a-windows-communication-foundation-service-contract"></a>教學課程：執行 Windows Communication Foundation 服務合約
+# <a name="tutorial-implement-a-windows-communication-foundation-service-contract"></a>教程：實現 Windows 通信基礎服務協定
 
-本教學課程說明建立基本 Windows Communication Foundation （WCF）應用程式所需的五個工作中的第二個。 如需教學課程的總覽，請[參閱教學課程：Windows Communication Foundation 應用程式](getting-started-tutorial.md)入門。
+本教程介紹創建基本 Windows 通信基礎 （WCF） 應用程式所需的五項任務中的第二個。 有關教程的概述，請參閱[教程：開始使用 Windows 通信基礎應用程式](getting-started-tutorial.md)。
 
-建立 WCF 應用程式的下一個步驟是加入程式碼，以執行您在上一個步驟中建立的 WCF 服務介面。 在此步驟中，您會建立名`CalculatorService`為的類別，以執行`ICalculator`使用者定義的介面。 下列程式碼中的每個方法都會呼叫計算機作業，並將文字寫入主控台以進行測試。 
+創建 WCF 應用程式的下一步是添加代碼以實現您在上一步中創建的 WCF 服務介面。 在此步驟中，您將創建一個名為`CalculatorService`實現使用者定義的`ICalculator`介面的類。 以下代碼中的每個方法調用計算機操作，並將文本寫入主控台以進行測試。
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您會了解如何：
 > [!div class="checklist"]
 >
-> - 加入程式碼來執行 WCF 服務合約。
+> - 添加代碼以實現 WCF 服務協定。
 > - 建置方案。
 
-## <a name="add-code-to-implement-the-wcf-service-contract"></a>加入程式碼來執行 WCF 服務合約
+## <a name="add-code-to-implement-the-wcf-service-contract"></a>添加代碼以實現 WCF 服務協定
 
-在**GettingStartedLib**中，開啟**Service1.cs**或**Service1**檔案，並將其程式碼取代為下列程式碼：
+在**入門計畫中**，打開**Service1.cs**或**Service1.vb**檔，並將其代碼替換為以下代碼：
 
 ```csharp
 using System;
@@ -117,33 +117,33 @@ Namespace GettingStartedLib
 End Namespace
 ```
 
-## <a name="edit-appconfig"></a>編輯 App.config
+## <a name="edit-appconfig"></a>編輯應用程式.配置
 
-編輯**GettingStartedLib**中的 app.config，以反映您對**程式**代碼所做的變更。
+在**入門Lib**中編輯**App.config，** 以反映對代碼所做的更改。
 
-- 針對 Visual C#專案：
-  - 將第14行變更為`<service name="GettingStartedLib.CalculatorService">`
-  - 將第17行變更為`<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
-  - 將第22行變更為`<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+- 對於視覺化 C# 專案：
+  - 將行 14 更改為`<service name="GettingStartedLib.CalculatorService">`
+  - 將行 17 更改為`<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+  - 將行 22 更改為`<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
 
 - 如果是 Visual Basic 專案：
-  - 將第14行變更為`<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`
-  - 將第17行變更為`<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
-  - 將第22行變更為`<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`
+  - 將行 14 更改為`<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`
+  - 將行 17 更改為`<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+  - 將行 22 更改為`<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`
 
 ## <a name="compile-the-code"></a>編譯程式碼
 
-建立解決方案，以確認沒有任何編譯錯誤。 如果您使用 Visual Studio，請在 [**建立**] 功能表上選取 [**建立方案**] （或按**Ctrl** + **Shift** + **B**）。
+生成解決方案以驗證沒有任何編譯錯誤。 如果您使用的是視覺化工作室，請在 **"生成"** 功能表上選擇 **"生成解決方案**"（或按**Ctrl**+**Shift**+**B**）。
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您將了解如何：
+在本教學課程中，您已了解如何：
 > [!div class="checklist"]
 >
-> - 加入程式碼來執行 WCF 服務合約。
+> - 添加代碼以實現 WCF 服務協定。
 > - 建置方案。
 
-請前進到下一個教學課程，以瞭解如何執行 WCF 服務。
+請先到下一教程，瞭解如何運行 WCF 服務。
 
 > [!div class="nextstepaction"]
-> [教學課程：裝載和執行基本 WCF 服務](how-to-host-and-run-a-basic-wcf-service.md)
+> [教程：託管並運行基本的 WCF 服務](how-to-host-and-run-a-basic-wcf-service.md)

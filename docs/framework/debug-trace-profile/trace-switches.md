@@ -12,12 +12,12 @@ helpviewer_keywords:
 - trace switches
 - trace switches, creating custom
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
-ms.openlocfilehash: c164e26c6757094b9820af14a098229ab11eb137
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: a8ce4ee5de4d330b88e98e85cce4b6547e969613
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217202"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181723"
 ---
 # <a name="trace-switches"></a>追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。 它們是存在於您的程式碼中的物件，並可透過 .config 檔案在外部設定。 .NET Framework 中提供三種類型的追蹤參數： <xref:System.Diagnostics.BooleanSwitch> 類別、 <xref:System.Diagnostics.TraceSwitch> 類別和 <xref:System.Diagnostics.SourceSwitch> 類別。 <xref:System.Diagnostics.BooleanSwitch> 類別是做為切換參數，可啟用或停用各種追蹤陳述式。 <xref:System.Diagnostics.TraceSwitch> 和 <xref:System.Diagnostics.SourceSwitch> 類別可讓您針對特定追蹤層級啟用追蹤參數，以顯示針對該層級及其下所有層級指定的 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.TraceSource> 訊息。 如果您停用此參數，就不會顯示追蹤訊息。 所有這些類別都是衍生自抽象 (**MustInherit**) 類別 **Switch**，如同任何使用者開發的參數。  
@@ -47,15 +47,15 @@ ms.locfileid: "77217202"
   
 |列舉值|整數值|顯示的訊息類型 (或寫入至指定的輸出目標)|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|關閉|0|無|  
+|關閉|0|None|  
 |錯誤|1|只有錯誤訊息|  
 |警告|2|警告訊息和錯誤訊息|  
-|Info|3|告知性訊息、警告訊息和錯誤訊息|  
+|資訊|3|告知性訊息、警告訊息和錯誤訊息|  
 |「詳細資訊」|4|詳細資訊訊息、告知性訊息、警告訊息和錯誤訊息|  
   
  **TraceSwitch** 屬性會指出參數的最大追蹤層級。 也就是說，會針對所指定的層級以及其下所有層級寫入追蹤資訊。 例如，如果 **TraceInfo** 是 **true**，則 **TraceError** 和 **TraceWarning** 也是 **true** ，但 **TraceVerbose** 很可能是 **false**。  
   
- 這些屬性是唯讀的。 設定 **TraceLevel** 屬性時， **TraceSwitch** 物件會自動設定這些屬性。 例如，  
+ 這些屬性是唯讀的。 設定 **TraceLevel** 屬性時， **TraceSwitch** 物件會自動設定這些屬性。 例如：  
   
 ```vb  
 Dim myTraceSwitch As New TraceSwitch("SwitchOne", "The first switch")  
@@ -68,10 +68,10 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString())
 ```  
   
 ```csharp  
-System.Diagnostics.TraceSwitch myTraceSwitch =   
+System.Diagnostics.TraceSwitch myTraceSwitch =
    new System.Diagnostics.TraceSwitch("SwitchOne", "The first switch");  
 myTraceSwitch.Level = System.Diagnostics.TraceLevel.Info;  
-// This message box displays true, because setting the level to   
+// This message box displays true, because setting the level to
 // TraceLevel.Info sets all lower levels to true as well.  
 MessageBox.Show(myTraceSwitch.TraceWarning.ToString());  
 // This message box displays false.  
@@ -84,5 +84,5 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
 ## <a name="see-also"></a>另請參閱
 
 - [追蹤接聽程式](trace-listeners.md)
-- [如何：將追蹤陳述式新增至應用程式碼](how-to-add-trace-statements-to-application-code.md)
-- [追蹤和檢測應用程式](tracing-and-instrumenting-applications.md)
+- [如何：將追蹤陳述式加入至應用程式程式碼](how-to-add-trace-statements-to-application-code.md)
+- [追蹤和稽核應用程式](tracing-and-instrumenting-applications.md)

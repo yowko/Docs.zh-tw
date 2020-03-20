@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 22e7c670f93293bd37edcb181c8130cdbe9ceb26
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 748745ca6799005dccdbfcbcc37a8c2a38f2a88e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047054"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180643"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>使用非同步用戶端通訊端
 非同步用戶端通訊端等待網路作業完成時，不會暫停應用程式。 相反地，它會使用標準 .NET Framework 非同步程式設計模型，在一個執行緒上處理網路連線，同時應用程式繼續在原始執行緒上執行。 非同步通訊端適用於大量使用網路的應用程式，或是無法等候網路作業完成再繼續進行的應用程式。  
@@ -46,7 +46,7 @@ End Sub 'Connect
   
 ```csharp  
 public static void Connect(EndPoint remoteEP, Socket client) {  
-    client.BeginConnect(remoteEP,   
+    client.BeginConnect(remoteEP,
         new AsyncCallback(ConnectCallback), client );  
   
    connectDone.WaitOne();  
@@ -162,11 +162,11 @@ private static void SendCallback(IAsyncResult ar) {
 ```vb  
 Public Class StateObject  
     ' Client socket.  
-    Public workSocket As Socket = Nothing   
+    Public workSocket As Socket = Nothing
     ' Size of receive buffer.  
     Public BufferSize As Integer = 256  
     ' Receive buffer.  
-    Public buffer(256) As Byte   
+    Public buffer(256) As Byte
     ' Received data string.  
     Public sb As New StringBuilder()  
 End Class 'StateObject  
@@ -226,7 +226,7 @@ private static void Receive(Socket client) {
 ```vb  
 Private Shared Sub ReceiveCallback(ar As IAsyncResult)  
     Try  
-        ' Retrieve the state object and the client socket   
+        ' Retrieve the state object and the client socket
         ' from the asynchronous state object.  
         Dim state As StateObject = CType(ar.AsyncState, StateObject)  
         Dim client As Socket = state.workSocket  
@@ -259,7 +259,7 @@ End Sub 'ReceiveCallback
 ```csharp  
 private static void ReceiveCallback( IAsyncResult ar ) {  
     try {  
-        // Retrieve the state object and the client socket   
+        // Retrieve the state object and the client socket
         // from the asynchronous state object.  
         StateObject state = (StateObject) ar.AsyncState;  
         Socket client = state.workSocket;  

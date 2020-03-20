@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: ba2619354403793aea7ca15d43649da9637079a6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 36e552475334c25b9d5a6fafb82155c6ebcba266
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744738"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182101"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>如何：設定 Windows Form 面板的背景
-Windows Forms <xref:System.Windows.Forms.Panel> 控制項可以同時顯示背景色彩和背景影像。 <xref:System.Windows.Forms.Control.BackColor%2A> 屬性會設定包含控制項的背景色彩，例如標籤和選項按鈕。 如果未設定 [<xref:System.Windows.Forms.Control.BackgroundImage%2A>] 屬性，<xref:System.Windows.Forms.Control.BackColor%2A> 選取專案就會填滿整個面板。 如果已設定 [<xref:System.Windows.Forms.Control.BackgroundImage%2A>] 屬性，則影像會顯示在包含的控制項後方。  
+Windows 表單<xref:System.Windows.Forms.Panel>控制項可以同時顯示背景顏色和背景圖像。 屬性<xref:System.Windows.Forms.Control.BackColor%2A>設置包含控制項（如標籤和選項按鈕）的背景顏色。 如果未設置<xref:System.Windows.Forms.Control.BackgroundImage%2A>該屬性，<xref:System.Windows.Forms.Control.BackColor%2A>則所選內容將填充整個面板。 如果設置了<xref:System.Windows.Forms.Control.BackgroundImage%2A>該屬性，則圖像將顯示在包含的控制項後面。  
   
-### <a name="to-set-the-background-programmatically"></a>以程式設計方式設定背景  
+### <a name="to-set-the-background-programmatically"></a>以程式設計方式設置背景  
   
-1. 將面板的 [<xref:System.Windows.Forms.Control.BackColor%2A>] 屬性設定為 [<xref:System.Drawing.Color?displayProperty=nameWithType>類型] 的值。  
+1. 將面板的屬性<xref:System.Windows.Forms.Control.BackColor%2A>設置為 類型<xref:System.Drawing.Color?displayProperty=nameWithType>的值 。  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,10 +37,10 @@ Windows Forms <xref:System.Windows.Forms.Panel> 控制項可以同時顯示背�
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2. 使用 <xref:System.Drawing.Image?displayProperty=nameWithType> 類別的 <xref:System.Drawing.Image.FromFile%2A> 方法，設定面板的 <xref:System.Windows.Forms.Control.BackgroundImage%2A> 屬性。  
+2. 使用<xref:System.Windows.Forms.Control.BackgroundImage%2A><xref:System.Drawing.Image?displayProperty=nameWithType>類<xref:System.Drawing.Image.FromFile%2A>的方法設置面板的屬性。  
   
     ```vb  
-    ' You should replace the bolded image   
+    ' You should replace the bolded image
     ' in the sample below with an image of your own choosing.  
     Panel1.BackgroundImage = Image.FromFile _  
         (System.Environment.GetFolderPath _  
@@ -49,7 +49,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> 控制項可以同時顯示背�
     ```  
   
     ```csharp  
-    // You should replace the bolded image   
+    // You should replace the bolded image
     // in the sample below with an image of your own choosing.  
     // Note the escape character used (@) when specifying the path.  
     panel1.BackgroundImage = Image.FromFile  
@@ -59,7 +59,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> 控制項可以同時顯示背�
     ```  
   
     ```cpp  
-    // You should replace the bolded image   
+    // You should replace the bolded image
     // in the sample below with an image of your own choosing.  
     panel1->BackgroundImage = Image::FromFile(String::Concat(  
        System::Environment::GetFolderPath  

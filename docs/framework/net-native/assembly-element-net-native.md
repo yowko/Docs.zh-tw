@@ -1,21 +1,21 @@
 ---
-title: <Assembly> 元素（.NET Native）
+title: <Assembly>元素（.NET 本機）
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-ms.openlocfilehash: bad2286c5306b9f8a8955ebef12e5e99aec5bb89
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f3cf65b185b1db3289a0dbb785c2b91431951cc2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128502"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181073"
 ---
-# <a name="assembly-element-net-native"></a>\<元件 > 元素（.NET Native）
+# <a name="assembly-element-net-native"></a>\<程式集>元素（.NET 本機）
 將執行階段反映原則套用至指定組件中的所有類型。  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<Assembly Name="assembly_name"   
+<Assembly Name="assembly_name"
           Activate="policy_setting"  
           Browse="policy_setting"  
           Dynamic="policy_setting"  
@@ -29,7 +29,7 @@ ms.locfileid: "73128502"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -59,37 +59,37 @@ ms.locfileid: "73128502"
 |-----------|-----------------|  
 |*policy_setting*|針對組件中的所有類型，要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<Namespace>](namespace-element-net-native.md)|將反映原則套用至子命名空間中的所有類型。|  
-|[\<Type>](type-element-net-native.md)|將反映原則套用至類型。|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型。|  
+|[\<命名空間>](namespace-element-net-native.md)|將反映原則套用至子命名空間中的所有類型。|  
+|[\<鍵入>](type-element-net-native.md)|將反映原則套用至類型。|  
+|[\<類型即時>](typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<Application>](application-element-net-native.md)|做為容器，以包含整個應用程式的類型，以及中繼資料可在執行階段用於反映的類型成員。 [\<Application>](application-element-net-native.md) 元素可以有零、一或多個 `<Assembly>` 元素。|  
-|[\<Library>](library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。 [\<Library>](library-element-net-native.md) 元素可以有零或一個 `<Assembly>` 元素。|  
+|[\<應用>](application-element-net-native.md)|做為容器，以包含整個應用程式的類型，以及中繼資料可在執行階段用於反映的類型成員。 [ \<應用程式>](application-element-net-native.md)元素可以具有零、一個或多個`<Assembly>`元素。|  
+|[\<圖書館>](library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。 [ \<庫>](library-element-net-native.md)元素可以有零或一個`<Assembly>`元素。|  
   
 ## <a name="remarks"></a>備註  
- `<Assembly>` 元素可定義組件中所有類型的執行階段原則。 其不同於 [\<Library>](library-element-net-native.md) 元素，後者會指定程式庫，但會依據其子元素來定義執行階段反映原則。 `<Assembly>` 元素會套用至組件中的所有類型，除非是被子元素覆寫。  
+ `<Assembly>` 元素可定義組件中所有類型的執行階段原則。 它與[\<庫>](library-element-net-native.md)元素不同，該元素指定庫，但依賴于其子項目來定義運行時反射策略。 `<Assembly>` 元素會套用至組件中的所有類型，除非是被子元素覆寫。  
   
- 下列範例顯示如何為 `Name` 屬性指定 "*Application\*" 的值，以在您的應用程式套件中，將執行階段原則套用至組件中的所有類型。 `<Assembly>` 元素必須是 [\<Application>](application-element-net-native.md) 元素的子項。  
+ 下列範例顯示如何為 `Name` 屬性指定 "*Application\*" 的值，以在您的應用程式套件中，將執行階段原則套用至組件中的所有類型。 該`<Assembly>`元素必須是[\<應用程式>](application-element-net-native.md)元素的子項目。  
   
 ```xml  
-<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">   
-  <Application>   
-     <Assembly Name="*Application*" Dynamic="Required All" />   
-  </Application>   
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
+  <Application>
+     <Assembly Name="*Application*" Dynamic="Required All" />
+  </Application>
 </Directives>  
 ```  
   
  `Activate`、`Browse`、`Dynamic` 和 `Serialize` 都是選用屬性。 不過，`<Assembly>` 元素必須包含至少其中一個屬性。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段指示詞原則設定](runtime-directive-policy-settings.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)

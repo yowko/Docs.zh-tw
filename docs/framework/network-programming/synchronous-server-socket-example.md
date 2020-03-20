@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
-ms.openlocfilehash: eee533e87c868fadc04e26b374b36a0256dcf38e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e8924051a7087ac26793722457f934e58a75f23d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047134"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180654"
 ---
 # <a name="synchronous-server-socket-example"></a>同步伺服器通訊端範例
 下列範例程式會建立從用戶端接收連線要求的伺服器。 伺服器已內建非同步通訊端，因此在其等候來自用戶端的連接時，會暫停執行伺服器應用程式。 應用程式會從用戶端收到一個字串，在主控台中顯示字串，然後將字串回應回用戶端。 用戶端的字串必須包含字串 "\<EOF>" 來表示訊息結束。  
@@ -36,7 +36,7 @@ Public Class SynchronousSocketListener
         Dim bytes() As Byte = New [Byte](1024) {}  
   
         ' Establish the local endpoint for the socket.  
-        ' Dns.GetHostName returns the name of the   
+        ' Dns.GetHostName returns the name of the
         ' host running the application.  
         Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
         Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
@@ -46,7 +46,7 @@ Public Class SynchronousSocketListener
         Dim listener As New Socket(ipAddress.AddressFamily, _  
             SocketType.Stream, ProtocolType.Tcp)  
   
-        ' Bind the socket to the local endpoint and   
+        ' Bind the socket to the local endpoint and
         ' listen for incoming connections.  
   
         listener.Bind(localEndPoint)  
@@ -96,7 +96,7 @@ public class SynchronousSocketListener {
         byte[] bytes = new Byte[1024];  
   
         // Establish the local endpoint for the socket.  
-        // Dns.GetHostName returns the name of the   
+        // Dns.GetHostName returns the name of the
         // host running the application.  
         IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());  
         IPAddress ipAddress = ipHostInfo.AddressList[0];  
@@ -106,7 +106,7 @@ public class SynchronousSocketListener {
         Socket listener = new Socket(ipAddress.AddressFamily,  
             SocketType.Stream, ProtocolType.Tcp );  
   
-        // Bind the socket to the local endpoint and   
+        // Bind the socket to the local endpoint and
         // listen for incoming connections.  
         try {  
             listener.Bind(localEndPoint);  

@@ -2,12 +2,12 @@
 title: 風險降低︰路徑正規化
 ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
-ms.openlocfilehash: 1e7b540975b84320d099ca004df5b6a87aa60f6a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 61c8eec2043aa2fb9309ee6052e27fc2c91c6c6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457893"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181226"
 ---
 # <a name="mitigation-path-normalization"></a>風險降低︰路徑正規化
 從以 .NET Framework 4.6.2 為目標的應用程式開始，.NET Framework 中的路徑正規化已有所變更。  
@@ -42,23 +42,23 @@ ms.locfileid: "73457893"
   
 此變更不會影響以 .NET Framework 4.6.1 和舊版為目標但執行於 .NET Framework 4.6.2 或更新版本下的應用程式。  
   
-## <a name="mitigation"></a>風險降低  
- 以 .NET Framework 4.6.2 或更新版本為目標的應用程式，可透過在應用程式組態檔的[\<執行階段>](../configure-apps/file-schema/runtime/runtime-element.md) 區段中新增下列內容來選擇退出此變更，並使用舊版行為：  
+## <a name="mitigation"></a>降低  
+ 面向 .NET Framework 4.6.2 或更高版本的應用可以退出宣告此更改，並通過將以下內容添加到應用程式佈建檔的[\<運行時>](../configure-apps/file-schema/runtime/runtime-element.md)部分來使用舊版化：  
   
 ```xml  
 <runtime>  
-    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />    
+    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=true" />
 </runtime>  
 ```  
   
-以 .NET Framework 4.6.1 或更早版本為目標，但在 .NET Framework 4.6.2 或更新版本上執行的應用程式，可以藉由在應用程式組態檔的[\<執行階段>](../configure-apps/file-schema/runtime/runtime-element.md) 區段新增下行，就能啟用路徑正規化的變更：  
+以 .NET Framework 4.6.1 或更早版本為目標但在 .NET Framework 4.6.2 或更高版本上運行的應用可以通過將以下行添加到應用程式 .設定檔的[\<運行時>](../configure-apps/file-schema/runtime/runtime-element.md)部分，從而啟用路徑正常化的更改：  
   
 ```xml  
 <runtime>  
-    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />    
+    <AppContextSwitchOverrides value="Switch.System.IO.UseLegacyPathHandling=false" />
 </runtime>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [應用程式相容性](application-compatibility.md)

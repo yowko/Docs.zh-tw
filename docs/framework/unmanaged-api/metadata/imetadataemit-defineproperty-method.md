@@ -15,82 +15,82 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431529"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175781"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 方法
-使用指定的 `get` 和 `set` 方法存取子，為指定的類型建立屬性定義，並取得該屬性定義的 token。  
+使用指定的`get`和方法`set`訪問器為指定類型創建屬性定義，並獲取該屬性定義的權杖。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT DefineProperty (   
-    [in]  mdTypeDef          td,   
-    [in]  LPCWSTR            szProperty,   
-    [in]  DWORD              dwPropFlags,   
-    [in]  PCCOR_SIGNATURE    pvSig,   
-    [in]  ULONG              cbSig,   
-    [in]  DWORD              dwCPlusTypeFlag,   
-    [in]  void const         *pValue,   
-    [in]  ULONG              cchValue,   
-    [in]  mdMethodDef        mdSetter,   
-    [in]  mdMethodDef        mdGetter,   
-    [in]  mdMethodDef        rmdOtherMethods[],   
-    [out] mdProperty         *pmdProp   
+HRESULT DefineProperty (
+    [in]  mdTypeDef          td,
+    [in]  LPCWSTR            szProperty,
+    [in]  DWORD              dwPropFlags,
+    [in]  PCCOR_SIGNATURE    pvSig,
+    [in]  ULONG              cbSig,
+    [in]  DWORD              dwCPlusTypeFlag,
+    [in]  void const         *pValue,
+    [in]  ULONG              cchValue,
+    [in]  mdMethodDef        mdSetter,
+    [in]  mdMethodDef        mdGetter,
+    [in]  mdMethodDef        rmdOtherMethods[],
+    [out] mdProperty         *pmdProp
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `td`  
- 在要在其上定義屬性之類別或介面的 token。  
+ [在]正在定義屬性的類或介面的權杖。  
   
  `szProperty`  
- 在屬性的名稱。  
+ [在]屬性的名稱。  
   
  `dwPropFlags`  
- 在屬性旗標。  
+ [在]屬性標誌。  
   
  `pvSig`  
- 在屬性簽章。  
+ [在]屬性簽名。  
   
  `cbSig`  
- 在`pvSig`中的位元組計數。  
+ [在]中的`pvSig`位元組計數。  
   
  `dwCPlusTypeFlag`  
- 在屬性的預設值類型。  
+ [在]屬性的預設值的類型。  
   
  `pValue`  
- 在屬性的預設值。  
+ [在]屬性的預設值。  
   
  `cchValue`  
- 在`pValue`中的（Unicode）字元計數。  
+ [在]中的（Unicode） 字元的`pValue`計數。  
   
  `mdSetter`  
- 在設定屬性值的方法。  
+ [在]設置屬性值的方法。  
   
  `mdGetter`  
- 在取得屬性值的方法。  
+ [在]獲取屬性值的方法。  
   
  `rmdOtherMethods[]`  
- 在與屬性相關聯之其他方法的陣列。 使用 `mdTokenNil`終止陣列。  
+ [在]與 屬性關聯的其他方法的陣列。 使用 終止陣列`mdTokenNil`。  
   
  `pmdProp`  
- 脫銷指派的 `mdProperty` token。  
+ [出]分配的`mdProperty`權杖。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

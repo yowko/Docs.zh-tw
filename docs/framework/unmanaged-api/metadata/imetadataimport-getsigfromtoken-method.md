@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab894dc4-f7b6-4afc-bfcb-582a4b7e53a2
 topic_type:
 - apiref
-ms.openlocfilehash: 205f48fb417365565695c72095187d349127e536
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5af59e158a34b06d304a98db1dfaa46585b22eb6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436858"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177200"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken 方法
 取得與指定語彙基元相關聯的二進位中繼資料簽章。  
@@ -28,31 +28,31 @@ ms.locfileid: "74436858"
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT GetSigFromToken (   
-   [in]   mdSignature        mdSig,   
-   [out]  PCCOR_SIGNATURE    *ppvSig,   
-   [out]  ULONG              *pcbSig   
+HRESULT GetSigFromToken (
+   [in]   mdSignature        mdSig,
+   [out]  PCCOR_SIGNATURE    *ppvSig,
+   [out]  ULONG              *pcbSig
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `mdSig`  
- 在要為其傳回二進位中繼資料簽章的 token。  
+ [在]要返回的二進位中繼資料簽名的權杖。  
   
  `ppvSig`  
- 脫銷傳回之中繼資料簽章的指標。  
+ [出]指向返回的中繼資料簽名的指標。  
   
  `pcbSig`  
- 脫銷二進位中繼資料簽章的大小（以位元組為單位）。  
+ [出]二進位中繼資料簽名的大小（以位元組為單位）。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Button control type
 - Button control type
 ms.assetid: 057c983a-da83-4c50-86c7-26fe381076a6
-ms.openlocfilehash: e17a5d9278a235a5c25bb53c68f15b95d1d9177f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e98e027559be8c3e8ccdb4ac4369c09fd13805e5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789588"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179835"
 ---
 # <a name="ui-automation-support-for-the-button-control-type"></a>Button 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -19,23 +19,23 @@ ms.locfileid: "76789588"
   
  本主題提供按鈕控制項類型的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 支援相關資訊。 在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]中，控制項類型是一組控制項條件，控制項必須符合條件才能使用 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 屬性。 這些條件包括 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性值、控制項模式和 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的特定指導方針。  
   
- 按鈕是可供使用者互動的物件，能在對話方塊執行如 [確定] 和 [取消] 按鈕等動作。 按鈕控制項的公開方式很簡單，因為它對應的是使用者想要完成的單一命令。  
+ 按鈕是可供使用者互動的物件，能在對話方塊執行如 [確定] **** 和 [取消] **** 按鈕等動作。 按鈕控制項的公開方式很簡單，因為它對應的是使用者想要完成的單一命令。  
   
- 下列章節會定義按鈕控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 無論是 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32 或 Windows Forms，[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 需求都適用于所有按鈕控制項。  
+ 下列章節會定義按鈕控制項類型所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構、屬性、控制項模式和事件。 這些要求[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]適用于所有按鈕控制項，無論是[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Win32 還是 Windows 表單。  
   
-<a name="Required_UI_Automation_Tree_Structure"></a>   
+<a name="Required_UI_Automation_Tree_Structure"></a>
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
  下表描述按鈕控制項之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Properties Overview](ui-automation-tree-overview.md)需求都適用於所有文件控制項。  
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|按鈕<br /><br /> -影像（0個以上）<br />-Text （0或更多）|按鈕|  
+|按鈕<br /><br /> - 圖像（0 或更多）<br />- 文本（0 或更多）|按鈕|  
   
-<a name="Required_UI_Automation_Properties"></a>   
+<a name="Required_UI_Automation_Properties"></a>
 ## <a name="required-ui-automation-properties"></a>必要的使用者介面自動化屬性  
  下表列出的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性，其值或定義與實作按鈕控制項類型的控制項 (例如按鈕控制項) 特別有關。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性的詳細資訊，請參閱 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|{2&gt;值&lt;2}|注意事項|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 屬性|值|注意|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>|請參閱備註。|按鈕控制項一般必須支援快速鍵，讓使用者可以從鍵盤快速執行它所代表的動作。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|請參閱備註。|此屬性的值在應用程式中的所有控制項都不得重複。|  
@@ -50,21 +50,21 @@ ms.locfileid: "76789588"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「按鈕」|對應到按鈕控制項類型的當地語系化字串。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|按鈕控制項的名稱是用來設定其標籤的文字。 若使用影像設定按鈕的標籤，則必須為按鈕的 Name 屬性提供替代文字。|  
   
-<a name="Required_UI_Automation_Control_Patterns"></a>   
+<a name="Required_UI_Automation_Control_Patterns"></a>
 ## <a name="required-ui-automation-control-patterns"></a>必要的使用者介面自動化控制項模式  
  下表列出所有按鈕控制項必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 控制項模式。 如需控制項模式的詳細資訊，請參閱 [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)。  
   
-|控制項模式|支援|注意事項|  
+|控制項模式|支援|注意|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|請參閱備註。|所有按鈕都應該支援叫用控制項模式或切換控制項模式。 當按鈕執行使用者要求的命令時，便會支援叫用。 此命令對應於如「剪下」、「複製」、「貼上」或「刪除」等單一作業。|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|請參閱備註。|所有按鈕都應該支援叫用控制項模式或切換控制項模式。 若按鈕可以循環多達三種狀態時，則會支援切換。 這通常是指特定功能的開關切換。|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|請參閱備註。|當按鈕裝載為分割按鈕的子系時，子按鈕可能支援 ExpandCollapse 模式，而不是叫用或切換模式。 ExpandCollapse 模式可用來開啟或關閉功能表，或是與按鈕項目相關聯的其他子結構。|  
   
-<a name="Required_UI_Automation_Events"></a>   
+<a name="Required_UI_Automation_Events"></a>
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
- 下表列出所有按鈕控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](ui-automation-events-overview.md)。  
+ 下表列出所有按鈕控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需 [UI Automation Events Overview](ui-automation-events-overview.md)事件的詳細資訊，請參閱  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意事項|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|None|  
@@ -72,10 +72,10 @@ ms.locfileid: "76789588"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> 屬性變更事件。|必要|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|None|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|視情況而定|如果此控制項支援叫用控制項模式，就必須支援這個事件。|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 屬性變更事件。|視情況而定|如果此控制項支援切換控制項模式，就必須支援這個事件。|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|相依|如果此控制項支援叫用控制項模式，就必須支援這個事件。|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> 屬性變更事件。|相依|如果此控制項支援切換控制項模式，就必須支援這個事件。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Automation.ControlType.Button>
 - [UI 自動化控制項類型概觀](ui-automation-control-types-overview.md)

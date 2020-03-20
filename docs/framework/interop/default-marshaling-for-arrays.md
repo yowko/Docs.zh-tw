@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interop marshaling, arrays
 - arrays, interop marshaling
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
-ms.openlocfilehash: 8505f4c742fb002be249ab069708f7f768c672df
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f0094ac572834b2cf0d74fb53c94877da55669e2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123569"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181453"
 ---
 # <a name="default-marshaling-for-arrays"></a>陣列的預設封送處理
 在包含整個 Managed 程式碼的應用程式中，Common Language Runtime 會將陣列類型傳遞為 In/Out 參數。 相較之下，Interop 封送處理器預設會將陣列傳遞為 In 參數。  
@@ -29,11 +29,11 @@ ms.locfileid: "73123569"
   
  如下表所示，任何 Managed 陣列執行個體都必須是特定項目類型、順位和下限。  
   
-|Managed 陣列類型|項目類型|順位|下限|簽章標記法|  
+|Managed 陣列類型|項目類型|Rank|下限|簽章標記法|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|依類型指定。|依順位指定。|選擇性依界限指定。|*type* **[** *n*,*m* **]**|  
-|**ELEMENT_TYPE_CLASS**|不明|不明|不明|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|依類型指定。|1|0|*type* **[** *n* **]**|  
+|**ELEMENT_TYPE_ARRAY**|依類型指定。|依順位指定。|選擇性依界限指定。|*類型* **[** *n*，*m* **]**|  
+|**ELEMENT_TYPE_CLASS**|Unknown|Unknown|Unknown|**System.Array**|  
+|**ELEMENT_TYPE_SZARRAY**|依類型指定。|1|0|*類型* **=** *n* **|**|  
   
 ## <a name="unmanaged-arrays"></a>Unmanaged 陣列  
  Unmanaged 陣列是具有固定或變動長度的 COM 樣式安全陣列或 C 樣式陣列。 安全陣列是自我描述陣列，具有關聯陣列資料的類型、順位和界限。 C 樣式陣列是固定下限為 0 的一維類型陣列。 封送處理服務具有這兩種類型之陣列的有限支援。  
@@ -43,8 +43,8 @@ ms.locfileid: "73123569"
   
 |Unmanaged 類型|匯入的類型|  
 |--------------------|-------------------|  
-|**SafeArray(** *Type* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。 不是順位 = 1 或下限 = 0 的安全陣列無法封送處理為 **SZARRAY**。|  
-|*Type*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。|  
+|**安全陣列（***類型***）**|**ELEMENT_TYPE_SZARRAY****\<***轉換類型***>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。 不是順位 = 1 或下限 = 0 的安全陣列無法封送處理為 **SZARRAY**。|  
+|*類型*  **|**|**ELEMENT_TYPE_SZARRAY****\<***轉換類型***>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。|  
   
 ### <a name="safe-arrays"></a>安全陣列  
  將安全陣列從型別程式庫匯入至 .NET 組件時，會將陣列轉換成一維已知類型陣列 (例如 **int**)。 套用至參數的相同類型轉換規則也會套用至陣列項目。 例如，**BSTR** 類型的安全陣列變成 Managed 字串陣列，而變異值的安全陣列變成 Managed 物件陣列。 **SAFEARRAY** 項目類型擷取自型別程式庫，並儲存至 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉的 **SAFEARRAY** 值中。  
@@ -64,21 +64,21 @@ HRESULT New3([in, out] SAFEARRAY( BSTR ) *ar);
 ```vb  
 Sub New1(<MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_I4)> _  
    ar() As Integer)  
-Sub New2(<MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_DATE)> _   
+Sub New2(<MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_DATE)> _
    ar() As DateTime)  
-Sub New3(ByRef <MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_BSTR)> _   
+Sub New3(ByRef <MarshalAs(UnmanagedType.SafeArray, SafeArraySubType:=VT_BSTR)> _
    ar() As String)  
 ```  
   
 ```csharp  
 void New1([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_I4)] int[] ar) ;  
-void New2([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_DATE)]   
+void New2([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_DATE)]
    DateTime[] ar);  
-void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]   
+void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- 如果修改 Tlbimp.exe 所產生的方法簽章以指出項目類型為 **ELEMENT_TYPE_ARRAY** 而非 **ELEMENT_TYPE_SZARRAY**，則可以將多維度或非零繫結的安全陣列封送處理至 Managed 程式碼。 或者，您可以搭配使用 **/sysarray** 參數與 Tlbimp.exe，以將所有陣列匯入為 <xref:System.Array?displayProperty=nameWithType> 物件。 如果所傳遞的陣列已知為多維度，您可以編輯 Tlbimp.exe 所產生的 Microsoft Intermediate Language (MSIL) 程式碼，然後重新進行編譯。 如需如何修改 MSIL 程式碼的詳細資料，請參閱[自訂執行階段可呼叫包裝函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))。  
+ 如果修改 Tlbimp.exe 所產生的方法簽章以指出項目類型為 **ELEMENT_TYPE_ARRAY** 而非 **ELEMENT_TYPE_SZARRAY**，則可以將多維度或非零繫結的安全陣列封送處理至 Managed 程式碼。 或者，您可以搭配使用 **/sysarray** 參數與 Tlbimp.exe，以將所有陣列匯入為 <xref:System.Array?displayProperty=nameWithType> 物件。 如果所傳遞的陣列已知為多維度，您可以編輯 Tlbimp.exe 所產生的 Microsoft Intermediate Language (MSIL) 程式碼，然後重新進行編譯。 如需如何修改 MSIL 程式碼的詳細資訊，請參閱[自訂執行階段可呼叫包裝函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))。  
   
 ### <a name="c-style-arrays"></a>C 樣式陣列  
  將 C 樣式陣列從型別程式庫匯入至 .NET 組件時，會將陣列轉換成 **ELEMENT_TYPE_SZARRAY**。  
@@ -114,11 +114,11 @@ Sub New2(<MarshalAs(UnmanagedType.LPArray, _
 ```csharp  
 void New1([MarshalAs(UnmanagedType.LPArray, SizeConst=10)] int[] ar);  
 void New2([MarshalAs(UnmanagedType.LPArray, SizeConst=200)] double[] ar);  
-void New2([MarshalAs(UnmanagedType.LPArray,   
+void New2([MarshalAs(UnmanagedType.LPArray,
    ArraySubType=UnmanagedType.LPWStr, SizeConst=10)] String[] ar);  
 ```  
   
- 雖然您可以將 **size_is** 或 **length_is** 屬性套用至介面定義語言 (IDL) 來源中的陣列以將大小傳送至用戶端，但是 Microsoft 介面定義語言 (MIDL) 編譯器不會將該資訊傳播至型別程式庫。 如果不知道大小，Interop 封送處理服務無法封送處理陣列項目。 因此，會將可變長度的陣列匯入為參考引數。 例如:  
+ 雖然您可以將 **size_is** 或 **length_is** 屬性套用至介面定義語言 (IDL) 來源中的陣列以將大小傳送至用戶端，但是 Microsoft 介面定義語言 (MIDL) 編譯器不會將該資訊傳播至型別程式庫。 如果不知道大小，Interop 封送處理服務無法封送處理陣列項目。 因此，會將可變長度的陣列匯入為參考引數。 例如：  
   
  **Unmanaged 簽章**  
   
@@ -137,14 +137,14 @@ Sub New3(ByRef ar As String)
 ```  
   
 ```csharp  
-void New1(ref int ar);    
-void New2(ref double ar);    
-void New3(ref String ar);   
+void New1(ref int ar);
+void New2(ref double ar);
+void New3(ref String ar);
 ```  
   
- 您可以編輯 Tlbimp.exe 所產生的 Microsoft Intermediate Language (MSIL) 程式碼，然後重新進行編譯，以提供具有陣列大小的封送處理器。 如需如何修改 MSIL 程式碼的詳細資料，請參閱[自訂執行階段可呼叫包裝函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))。 若要指出陣列中的項目數，請使用下列其中一種方式，將 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 類型套用至 Managed 方法定義的陣列參數：  
+ 您可以編輯 Tlbimp.exe 所產生的 Microsoft Intermediate Language (MSIL) 程式碼，然後重新進行編譯，以提供具有陣列大小的封送處理器。 如需如何修改 MSIL 程式碼的詳細資訊，請參閱[自訂執行階段可呼叫包裝函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))。 若要指出陣列中的項目數，請使用下列其中一種方式，將 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 類型套用至 Managed 方法定義的陣列參數：  
   
-- 識別包含陣列中項目數的另一個參數。 參數是以位置進行識別，而第一個參數開始於數字 0。     
+- 識別包含陣列中項目數的另一個參數。 參數是以位置進行識別，而第一個參數開始於數字 0。
   
     ```vb  
     Sub [New](ElemCnt As Integer, _  
@@ -154,11 +154,11 @@ void New3(ref String ar);
   
     ```csharp  
     void New(  
-       int ElemCnt,   
+       int ElemCnt,
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
-- 將陣列的大小定義為常數。 例如:  
+- 將陣列的大小定義為常數。 例如：  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  
@@ -182,14 +182,14 @@ void New3(ref String ar);
   
 |Managed 陣列類型|匯出為|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 類型是在簽章中提供。 順位一律為 1，下限一律為 0。 在執行階段，一律會知道大小。|  
-|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 在簽章中，提供類型、順位和界限。 在執行階段，一律會知道大小。|  
-|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 在執行階段，一律可辨識類型、順位、界限和大小。|  
+|**ELEMENT_TYPE_SZARRAY****\<***類型***>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 類型是在簽章中提供。 順位一律為 1，下限一律為 0。 在執行階段，一律會知道大小。|  
+|**ELEMENT_TYPE_ARRAY****\<***類型***>****>***bounds**rank*排名**\<**= 邊界**>****\<**||**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 在簽章中，提供類型、順位和界限。 在執行階段，一律會知道大小。|  
+|**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 在執行階段，一律可辨識類型、順位、界限和大小。|  
   
- 與包含 LPSTR 或 LPWSTR 之結構陣列有關的 OLE Automation 限制。  因此，必須將 [字串] 欄位封送處理為 **UnmanagedType.BSTR**。 否則便會擲回例外狀況。  
+ 與包含 LPSTR 或 LPWSTR 之結構陣列有關的 OLE Automation 限制。  因此，必須將 [字串]**** 欄位封送處理為 **UnmanagedType.BSTR**。 否則便會擲回例外狀況。  
   
 ### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
- 將包含 **ELEMENT_TYPE_SZARRAY** 參數 (一維陣列) 的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成指定類型的 **SAFEARRAY**。 相同的轉換規則會套用至陣列項目類型。 Managed 陣列的內容會自動從 Managed 記憶體複製至 **SAFEARRAY**。 例如:  
+ 將包含 **ELEMENT_TYPE_SZARRAY** 參數 (一維陣列) 的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成指定類型的 **SAFEARRAY**。 相同的轉換規則會套用至陣列項目類型。 Managed 陣列的內容會自動從 Managed 記憶體複製至 **SAFEARRAY**。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
   
@@ -212,7 +212,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  安全陣列的順位一律為 1，而下限一律為 0。 在執行階段，大小取決於所傳遞 Managed 陣列的大小。  
   
- 使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將陣列封送處理為 C 樣式陣列。 例如:  
+ 使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將陣列封送處理為 C 樣式陣列。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
   
@@ -227,12 +227,12 @@ Sub [New](<MarshalAs(UnmanagedType.LPArray, _
 ```  
   
 ```csharp  
-void New([MarshalAs(UnmanagedType.LPArray, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPArray, SizeParamIndex=1)]
    long [] ar, int size );  
-void New([MarshalAs(UnmanagedType.LPArray, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPArray, SizeParamIndex=1)]
    String [] ar, int size );  
-void New([MarshalAs(UnmanagedType.LPArray, ArraySubType=   
-   UnmanagedType.LPStr, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPArray, ArraySubType=
+   UnmanagedType.LPStr, SizeParamIndex=1)]
    String [] ar, int size );  
 ```  
   
@@ -247,7 +247,7 @@ HRESULT New(LPStr ar[]);
  雖然封送處理器具有封送處理陣列所需的長度資訊，但是陣列長度通常會傳遞為個別引數，以將長度傳遞給被呼叫者。  
   
 ### <a name="element_type_array"></a>ELEMENT_TYPE_ARRAY  
- 將包含 **ELEMENT_TYPE_ARRAY** 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成指定類型的 **SAFEARRAY**。 Managed 陣列的內容會自動從 Managed 記憶體複製至 **SAFEARRAY**。 例如:  
+ 將包含 **ELEMENT_TYPE_ARRAY** 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成指定類型的 **SAFEARRAY**。 Managed 陣列的內容會自動從 Managed 記憶體複製至 **SAFEARRAY**。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
   
@@ -270,7 +270,7 @@ HRESULT New([in] SAFEARRAY( BSTR ) ar);
   
  在執行階段，安全陣列的順位、大小和界限是取決於 Managed 陣列的特性。  
   
- 套用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將陣列封送處理為 C 樣式陣列。 例如:  
+ 套用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將陣列封送處理為 C 樣式陣列。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
   
@@ -283,10 +283,10 @@ Sub [New](<MarshalAs(UnmanagedType.LPARRAY, _
 ```  
   
 ```csharp  
-void New([MarshalAs(UnmanagedType.LPARRAY, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPARRAY, SizeParamIndex=1)]
    long [,] ar, int size );  
-void New([MarshalAs(UnmanagedType.LPARRAY,   
-   ArraySubType= UnmanagedType.LPStr, SizeParamIndex=1)]   
+void New([MarshalAs(UnmanagedType.LPARRAY,
+   ArraySubType= UnmanagedType.LPStr, SizeParamIndex=1)]
    String [,] ar, int size );  
 ```  
   
@@ -310,7 +310,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- 將包含 <xref:System.Array?displayProperty=nameWithType> 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成 **_Array** 介面。 Managed 陣列的內容只能透過 **_Array** 介面的方法和屬性進行存取。 使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將 **System.Array** 封送處理為 **SAFEARRAY**。 封送處理為安全陣列時，會將陣列項目封送處理為變異值。 例如:  
+ 將包含 <xref:System.Array?displayProperty=nameWithType> 參數的方法從 .NET 組件匯出至型別程式庫時，會將陣列參數轉換成 **_Array** 介面。 Managed 陣列的內容只能透過 **_Array** 介面的方法和屬性進行存取。 使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，也可以將 **System.Array** 封送處理為 **SAFEARRAY**。 封送處理為安全陣列時，會將陣列項目封送處理為變異值。 例如：  
   
 #### <a name="managed-signature"></a>Managed 簽章  
   
@@ -358,7 +358,7 @@ public struct MyStruct {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [預設的封送處理行為](default-marshaling-behavior.md)
 - [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)

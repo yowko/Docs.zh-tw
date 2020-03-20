@@ -2,12 +2,12 @@
 title: 追蹤設定檔
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 9217f25ba4499e7ff75020642be387aa79ba27bf
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 9723b8fbb0bb8f24e8c9544d8bac8252b2fc763a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837619"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182732"
 ---
 # <a name="tracking-profiles"></a>追蹤設定檔
 
@@ -17,7 +17,7 @@ ms.locfileid: "74837619"
 
 追蹤設定檔可用來指定要為工作流程執行個體發出哪些追蹤資訊。 如果未指定任何設定檔，則會發出所有追蹤事件。 如果有指定設定檔，則會發出設定檔中指定的追蹤事件。 根據您的監控需求，您可以寫入非常廣泛的設定檔，使其訂閱工作流程上的一組小型高階狀態變更。 反之，您也可以建立非常詳細的設定檔，取得充分的結果事件，以便在日後重新建構為詳細的執行流程。
 
-追蹤設定檔的資訊清單本身是標準 .NET Framework 設定檔中的 XML 元素，或在程式碼中指定。 下列範例是組態檔中的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 追蹤設定檔，可允許追蹤參與者訂閱 `Started` 和 `Completed` 工作流程事件。
+跟蹤設定檔在標準 .NET Framework 設定檔中或代碼中指定，以 XML 元素表示。 下列範例是組態檔中的 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 追蹤設定檔，可允許追蹤參與者訂閱 `Started` 和 `Completed` 工作流程事件。
 
 ```xml
 <system.serviceModel>
@@ -59,13 +59,13 @@ TrackingProfile profile = new TrackingProfile()
 };
 ```
 
-追蹤記錄是利用 <xref:System.Activities.Tracking.ImplementationVisibility> 屬性，透過追蹤設定檔內的可見性模式所篩選的。 複合活動是最上層的活動，其中包含構成其實作的其他活動。 可見性模式會透過指定從工作流程活動內的複合活動發出的追蹤記錄，指定是否要追蹤形成實作的活動。 可見性模式會在追蹤設定檔層級套用。 工作流程中個別活動的追蹤記錄篩選，是由追蹤設定檔中的查詢進行控制。 如需詳細資訊，請參閱本檔中的**追蹤設定檔查詢類型**一節。
+追蹤記錄是利用 <xref:System.Activities.Tracking.ImplementationVisibility> 屬性，透過追蹤設定檔內的可見性模式所篩選的。 複合活動是最上層的活動，其中包含構成其實作的其他活動。 可見性模式會透過指定從工作流程活動內的複合活動發出的追蹤記錄，指定是否要追蹤形成實作的活動。 可見性模式會在追蹤設定檔層級套用。 工作流程中個別活動的追蹤記錄篩選，是由追蹤設定檔中的查詢進行控制。 有關詳細資訊，請參閱本文檔中的 **"跟蹤設定檔查詢類型"** 部分。
 
 追蹤設定檔中，以 `implementationVisibility` 屬性指定的兩個可見性模式為 `RootScope` 和 `All`。 若複合活動不是工作流程的根，使用 `RootScope` 模式會隱藏形成活動之實作的追蹤記錄。 也就是說，將使用其他活動實作的活動加入至工作流程中，且 `implementationVisibility` 設定為 RootScope 時，只會追蹤該複合活動內的最上層活動。 若活動是工作流程的根，則該活動的實作會是工作流程本身，且會針對形成實作的活動發出追蹤記錄。 使用 All 模式可發出根活動及所有其複合活動的全部追蹤記錄。
 
-例如，假設*MyActivity*是一個複合活動，其實作為包含兩個活動： *Activity1*和*Activity2*。 當此活動新增至工作流程，並以追蹤設定檔啟用追蹤時，`implementationVisibility` 設定為 `RootScope`時，只會發出*MyActivity*的追蹤記錄。 不過， *Activity1*和*Activity2*活動不會發出任何記錄。
+例如，假設*MyActivity*是一個複合活動，其實現包含兩個活動，*活動 1*和*活動 2*。 當此活動添加到工作流中，並且使用設置為`implementationVisibility`的跟蹤設定檔啟用跟蹤時`RootScope`，僅為*MyActivity*發出追蹤記錄。 但是，不會為*活動活動 1*和*活動 2*發出任何記錄。
 
-不過，如果追蹤設定檔的 `implementationVisibility` 屬性設定為 `All`，則追蹤記錄不僅會針對*MyActivity*發出，也會針對*Activity1*和*Activity2*活動。
+但是，如果跟蹤`implementationVisibility`設定檔`All`的屬性設置為 ，則追蹤記錄不僅針對*MyActivity，* 而且還為*活動活動活動 1*和*Activity2*發出。
 
 `implementationVisibility` 旗標適用於下列追蹤記錄類型：
 
@@ -150,7 +150,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   };
   ```
 
-- <xref:System.Activities.Tracking.ActivityStateQuery> - 使用這個查詢，即可追蹤組成工作流程執行個體之活動的生命週期變更。 例如，您可能想要追蹤在工作流程實例中完成「傳送電子郵件」活動的每次。 <xref:System.Activities.Tracking.TrackingParticipant> 訂閱 <xref:System.Activities.Tracking.ActivityStateRecord> 物件時，必須要有這個查詢。 可供訂閱的狀態可於 <xref:System.Activities.Tracking.ActivityStates> 中指定。
+- <xref:System.Activities.Tracking.ActivityStateQuery> - 使用這個查詢，即可追蹤組成工作流程執行個體之活動的生命週期變更。 例如，您可能希望跟蹤工作流實例中每次完成"發送電子郵件"活動的時間。 <xref:System.Activities.Tracking.TrackingParticipant> 訂閱 <xref:System.Activities.Tracking.ActivityStateRecord> 物件時，必須要有這個查詢。 可供訂閱的狀態可於 <xref:System.Activities.Tracking.ActivityStates> 中指定。
 
   下列範例示範訂閱使用 <xref:System.Activities.Tracking.ActivityStateQuery> 做為 `SendEmailActivity` 活動之活動狀態追蹤記錄的組態和程式碼。
 
@@ -234,7 +234,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 
 - <xref:System.Activities.Tracking.CancelRequestedQuery> - 使用這個查詢，即可追蹤父活動取消子活動的要求。 <xref:System.Activities.Tracking.TrackingParticipant> 訂閱 <xref:System.Activities.Tracking.CancelRequestedRecord> 物件時，必須要有這個查詢。
 
-  下列範例顯示用來訂閱與活動取消相關之記錄的設定和程式碼（使用 <xref:System.Activities.Tracking.CancelRequestedQuery>）。
+  用於訂閱與使用<xref:System.Activities.Tracking.CancelRequestedQuery>的活動取消相關的記錄的配置和代碼顯示在以下示例中。
 
   ```xml
   <cancelRequestedQueries>
@@ -306,9 +306,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   };
   ```
 
-### <a name="annotations"></a>標註
+### <a name="annotations"></a>註解
 
-附註可讓您使用值任意標記追蹤記錄，該值可在建置階段後設定。 例如，您可能會想要將數個工作流程中的多個追蹤記錄標記為 "Mail Server" = = "Mail Server1"。 當您稍後查詢追蹤記錄時，就可以更輕鬆地找到所有具有這個標記的記錄。
+附註可讓您使用值任意標記追蹤記錄，該值可在建置階段後設定。 例如，您可能希望使用"郵件伺服器"="郵件伺服器1"標記多個工作流中的多個追蹤記錄。 當您稍後查詢追蹤記錄時，就可以更輕鬆地找到所有具有這個標記的記錄。
 
 若要完成這個目的，就需要將附註加入至追蹤查詢，如下列範例所示。
 
@@ -325,7 +325,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 
 ### <a name="how-to-create-a-tracking-profile"></a>如何建立追蹤設定檔
 
-追蹤查詢元素可讓您使用 XML 組態檔或 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 程式碼來建立追蹤設定檔。 以下是使用組態檔建立的追蹤設定檔範例。
+跟蹤查詢元素用於使用 XML 設定檔或[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]代碼創建跟蹤設定檔。 以下是使用組態檔建立的追蹤設定檔範例。
 
 ```xml
 <system.serviceModel>
@@ -344,9 +344,9 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 > [!WARNING]
 > 針對使用工作流程服務主機的 WF，追蹤設定檔通常會使用組態檔建立。 您也可以使用追蹤設定檔和追蹤查詢 API，以程式碼建立追蹤設定檔。
 
-設定為 XML 組態檔的設定檔會使用行為擴充套用至追蹤參與者。 這會新增至 WorkflowServiceHost，如後續設定[工作流程的追蹤](configuring-tracking-for-a-workflow.md)一節中所述。
+設定為 XML 組態檔的設定檔會使用行為擴充套用至追蹤參與者。 這將添加到工作流服務主機中，如後面的"[配置工作流跟蹤"中](configuring-tracking-for-a-workflow.md)所述。
 
-主機發出之追蹤記錄的詳細資訊取決於追蹤設定檔內的組態設定。 追蹤參與者可將查詢加入至追蹤設定檔，以訂閱追蹤記錄。 若要訂閱所有追蹤記錄，追蹤設定檔必須在每個查詢的 [名稱] 欄位中，指定使用 "\*" 的所有追蹤查詢。
+主機發出之追蹤記錄的詳細資訊取決於追蹤設定檔內的組態設定。 追蹤參與者可將查詢加入至追蹤設定檔，以訂閱追蹤記錄。 要訂閱所有追蹤記錄，跟蹤設定檔需要在每個查詢的名稱欄位中使用""\*指定所有跟蹤查詢。
 
 以下是追蹤設定檔的一些通用範例。
 
@@ -385,8 +385,8 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
   </trackingProfile>
   ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [SQL 追蹤](./samples/sql-tracking.md)
-- [Windows Server App Fabric 監視](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
-- [使用 App Fabric 監視應用程式](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))
+- [Windows 伺服器應用結構監視](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [使用應用交換矩陣監視應用程式](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

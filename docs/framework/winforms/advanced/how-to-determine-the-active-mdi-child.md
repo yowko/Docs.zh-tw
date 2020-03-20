@@ -1,5 +1,5 @@
 ---
-title: HOW TO：決定作用中的 MDI 子系
+title: 如何：決定作用中的 MDI 子系
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,26 +11,26 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 91100b37e4cae9041479b209e40034efe376df5b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 57491faa10c182630d41565ba236d65e393929b3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69946225"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182551"
 ---
-# <a name="how-to-determine-the-active-mdi-child"></a>作法：決定作用中的 MDI 子系
-在某些情況下, 您會想要提供一個命令, 以在焦點放在目前使用中子表單的控制項上操作。 例如, 假設您想要從子表單的文字方塊中, 將選取的文字複製到剪貼簿。 您會建立一個程式, 使用<xref:System.Windows.Forms.Control.Click>標準 [編輯] 功能表上 [複製] 功能表項目的事件, 將選取的文字複製到剪貼簿。  
+# <a name="how-to-determine-the-active-mdi-child"></a>如何：決定作用中的 MDI 子系
+有時，您需要提供一個命令，該命令對側重于當前活動子表單的控制項進行操作。 例如，假設您要將所選文本從子表單的文字方塊複製到剪貼簿。 您將創建一個過程，使用標準"編輯"功能表上的"複製<xref:System.Windows.Forms.Control.Click>"功能表項目事件將所選文本複製到剪貼簿。  
   
- 由於 MDI 應用程式可以有多個相同子表單的實例, 因此程式需要知道要使用哪一個表單。 若要指定正確的格式, 請<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>使用屬性, 它會傳回具有焦點或最近使用中的子表單。  
+ 由於 MDI 應用程式可以具有同一子表單的許多實例，因此該過程需要知道要使用的表單。 要指定正確的表單，請使用 屬性<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>，該屬性返回具有焦點或最近處于活動狀態的子表單。  
   
- 當您在表單上有數個控制項時, 您也必須指定要使用哪一個控制項。 <xref:System.Windows.Forms.Form.ActiveMdiChild%2A>如同屬性<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A> , 屬性會將焦點放在使用中子表單上的控制項。 下列程式說明可從子表單功能表、MDI 表單上的功能表或工具列按鈕呼叫的複製程式。  
+ 當表單上有多個控制項時，還需要指定哪個控制項處於活動狀態。 與<xref:System.Windows.Forms.Form.ActiveMdiChild%2A>屬性一樣<xref:System.Windows.Forms.ContainerControl.ActiveControl%2A>，屬性返回控制項，重點放在活動子表單上。 下面的過程演示了可以從子表單功能表、MDI 表單上的功能表或工具列按鈕調用的複製過程。  
   
-### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>判斷現用 MDI 子系 (將其文字複製到剪貼簿)  
+### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>確定活動 MDI 子級（將其文本複製到剪貼簿）  
   
-1. 在方法內, 將現用子表單的作用中控制項文字複製到剪貼簿。  
+1. 在方法中，將活動子表單的活動控制項的文本複製到剪貼簿。  
   
     > [!NOTE]
-    > 這個範例假設有一個 mdi 父表單 (`Form1`), 其中有一個或多個<xref:System.Windows.Forms.RichTextBox>包含控制項的 mdi 子視窗。 如需詳細資訊, 請參閱[建立 MDI 父表單](how-to-create-mdi-parent-forms.md)。  
+    > 此示例假定有一個 MDI 父表單`Form1`（ ） 具有一個或多個包含控制項的<xref:System.Windows.Forms.RichTextBox>MDI 子視窗。 有關詳細資訊，請參閱創建[MDI 父表單](how-to-create-mdi-parent-forms.md)。  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -64,7 +64,7 @@ ms.locfileid: "69946225"
        // If there is an active child form, find the active control, which  
        // in this example should be a RichTextBox.  
        if (activeChild != null)  
-       {    
+       {
           try  
           {  
              RichTextBox theBox = (RichTextBox)activeChild.ActiveControl;  
@@ -88,5 +88,5 @@ ms.locfileid: "69946225"
 - [多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)
 - [如何：建立 MDI 父表單](how-to-create-mdi-parent-forms.md)
 - [如何：建立 MDI 子表單](how-to-create-mdi-child-forms.md)
-- [如何：將資料傳送至作用中的 MDI 子系](how-to-send-data-to-the-active-mdi-child.md)
-- [如何：排列 MDI 子表單](how-to-arrange-mdi-child-forms.md)
+- [如何：傳送資料至作用中的 MDI 子系](how-to-send-data-to-the-active-mdi-child.md)
+- [如何：安排 MDI 子表單](how-to-arrange-mdi-child-forms.md)

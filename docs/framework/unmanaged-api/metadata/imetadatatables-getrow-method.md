@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: a7408d51-0bce-45a2-b58f-da4660bbc039
 topic_type:
 - apiref
-ms.openlocfilehash: 9ac6eba18ae23dc80a8dc90383aa67cfe41b39ff
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 71f6c496816fec1a7537f5ccdfdc1b47d17da871
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937411"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177109"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow 方法
-在指定之資料表索引的資料表中，取得位於指定資料列索引處的資料列。  
+在指定的表索引的表中獲取指定行索引處的行。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT GetRow (   
+HRESULT GetRow (
     [in]  ULONG   ixTbl,  
     [in]  ULONG   rid,  
     [out] void    **ppRow  
@@ -37,28 +37,28 @@ HRESULT GetRow (
   
 ## <a name="parameters"></a>參數  
  `ixTbl`  
- 在將從中抓取資料列的資料表索引。  
+ [在]將從中檢索行的表的索引。  
   
  `rid`  
- 在要取得的資料列索引。  
+ [在]要獲取的行的索引。  
   
  `ppRow`  
- 脫銷資料列指標的指標。  
+ [出]指向行的指標。  
   
 ## <a name="remarks"></a>備註  
 
-  我們不建議使用這個方法，因為它不會傳回一致的結果。 如需 GUID 資料表的詳細資訊，請參閱通用語言基礎結構（CLI）檔，特別是「分割區 II：元資料定義和語法」。 檔可從線上取得;請[參閱C# ECMA 和通用語言基礎結構標準](../../../standard/components.md#applicable-standards)和[標準 Ecma-335-通用語言基礎結構（CLI）](http://www.ecma-international.org/publications/standards/Ecma-335.htm)。  
+  我們不建議使用此方法，因為它不返回一致的結果。 有關 GUID 表的資訊，請參閱通用語言基礎結構 （CLI） 文檔，尤其是"分區 II：元資料定義和語義"。 文檔可線上獲取;請參閱[ECMA C# 和通用語言基礎結構標準和](../../../standard/components.md#applicable-standards)[標準 ECMA-335 - 通用語言基礎結構 （CLI）。](http://www.ecma-international.org/publications/standards/Ecma-335.htm)  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET Framework 版本**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

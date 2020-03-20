@@ -2,12 +2,12 @@
 title: 按本文項目分派
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 307d6bbbab118392ef079942eae367a4c6792c22
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 754151f856dfe09b8fd12912ab06d1d8720be016
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712022"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183716"
 ---
 # <a name="dispatch-by-body-element"></a>按本文項目分派
 這個範例會示範如何實作將傳入訊息指派至作業的替代演算法。  
@@ -59,7 +59,7 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
  使用 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> 或其他可存取訊息本文內容的方法來存取訊息本文時，會導致訊息標示為「已讀取」，這表示無法對該訊息進行進一步的處理。 因此，作業選取器會使用下列程式碼中顯示的方法，建立傳入訊息的複本。 由於讀取器的位置在檢查期間並未變更，新建立的訊息便可用它來參考也複製的訊息屬性和訊息標頭，因此會對原始訊息進行完整複製：  
   
 ```csharp
-private Message CreateMessageCopy(Message message,   
+private Message CreateMessageCopy(Message message,
                                      XmlDictionaryReader body)  
 {  
     Message copy = Message.CreateMessage(message.Version,message.Headers.Action,body);  
@@ -70,9 +70,9 @@ private Message CreateMessageCopy(Message message,
 ```  
   
 ## <a name="adding-an-operation-selector-to-a-service"></a>將作業選取器新增至服務  
- 服務分派作業選取器是 Windows Communication Foundation （WCF）發送器的延伸模組。 若要選取雙工合約之回呼通道上的方法，也會使用用戶端作業選取器，其運作相當類似於此處描述的分派作業選取器，不過並沒有明確涵蓋在本範例中。  
+ 服務調度操作選擇器是 Windows 通信基礎 （WCF） 調度程式的擴展。 若要選取雙工合約之回呼通道上的方法，也會使用用戶端作業選取器，其運作相當類似於此處描述的分派作業選取器，不過並沒有明確涵蓋在本範例中。  
   
- 和大多數服務模型延伸項目一樣，分派作業選取器也會使用行為新增至發送器。 「*行為*」（behavior）是一個設定物件，可將一或多個擴充功能加入至分派執行時間（或用戶端執行時間），或變更其設定。  
+ 和大多數服務模型延伸項目一樣，分派作業選取器也會使用行為新增至發送器。 *行為*是設定物件，它向調度運行時（或用戶端運行時）添加一個或多個擴展，或者更改其設置。  
   
  由於作業選取器具有合約範圍，在這裡可適當實作的行為則是 <xref:System.ServiceModel.Description.IContractBehavior>。 由於會在 <xref:System.Attribute> 衍生類別上實作介面 (如下列程式碼所示)，可以透過宣告方式將行為新增至服務合約。 每次開啟 <xref:System.ServiceModel.ServiceHost> 以及建置分派執行階段時，所有找到的行為便會做為合約上的屬性、作業和服務實作或者服務組態中的項目，接著自動新增這些行為並要求它們做為延伸項目或修改預設組態。  
   
@@ -82,7 +82,7 @@ private Message CreateMessageCopy(Message message,
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
 class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior  
 {  
-    // public void AddBindingParameters(...)   
+    // public void AddBindingParameters(...)
     // public void ApplyClientBehavior(...)  
     // public void Validate(...)  
 ```  
@@ -96,22 +96,22 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
 ```csharp
 public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime)  
 {  
-    Dictionary<XmlQualifiedName,string> dispatchDictionary =   
+    Dictionary<XmlQualifiedName,string> dispatchDictionary =
                      new Dictionary<XmlQualifiedName,string>();  
-    foreach( OperationDescription operationDescription in   
+    foreach( OperationDescription operationDescription in
                               contractDescription.Operations )  
     {  
-        DispatchBodyElementAttribute dispatchBodyElement =   
+        DispatchBodyElementAttribute dispatchBodyElement =
    operationDescription.Behaviors.Find<DispatchBodyElementAttribute>();  
         if ( dispatchBodyElement != null )  
         {  
-             dispatchDictionary.Add(dispatchBodyElement.QName,   
+             dispatchDictionary.Add(dispatchBodyElement.QName,
                               operationDescription.Name);  
         }  
     }  
-    dispatchRuntime.OperationSelector =   
+    dispatchRuntime.OperationSelector =
             new DispatchByBodyElementOperationSelector(  
-               dispatchDictionary,   
+               dispatchDictionary,
                dispatchRuntime.UnhandledDispatchOperation.Name);  
     }  
 }  
@@ -120,19 +120,19 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
 ## <a name="implementing-the-service"></a>實作服務  
  在此範例中實作的行為會直接影響解譯和分派網路訊息的方式，也就是服務合約的函式。 最後，應該在選擇要使用該行為的服務實作中，於服務合約層級宣告行為。  
   
- 範例專案服務會將 `DispatchByBodyElementBehaviorAttribute` 合約行為套用至 `IDispatchedByBody` 服務合約，並將這兩項作業的每一個標記 `OperationForBodyA()`，並 `OperationForBodyB()` `DispatchBodyElementAttribute` 操作行為。 已開啟實作此合約之服務的服務主機時，發送器產生器 (Builder) 會如前所述挑選此中繼資料。  
+ 示例專案`DispatchByBodyElementBehaviorAttribute`服務將協定行為應用於`IDispatchedByBody`服務協定，並標記兩個操作`OperationForBodyA()`中的每一個`OperationForBodyB()``DispatchBodyElementAttribute`操作以及操作行為。 已開啟實作此合約之服務的服務主機時，發送器產生器 (Builder) 會如前所述挑選此中繼資料。  
   
- 由於作業選取器只會根據訊息本文項目進行分派，而忽略 "Action"，因此需要告知執行階段不要在傳回的回覆上檢查 "Action" 標頭，方法是將萬用字元 "*" 指派給 `ReplyAction` 的 <xref:System.ServiceModel.OperationContractAttribute> 屬性即可。 此外，必須有預設作業，將 "Action" 屬性設定為萬用字元 "\*"。 預設作業會接收無法分派也沒有 `DispatchBodyElementAttribute` 的所有訊息：  
+ 由於作業選取器只會根據訊息本文項目進行分派，而忽略 "Action"，因此需要告知執行階段不要在傳回的回覆上檢查 "Action" 標頭，方法是將萬用字元 "*" 指派給 `ReplyAction` 的 <xref:System.ServiceModel.OperationContractAttribute> 屬性即可。 此外，需要具有預設操作，該操作將"操作"屬性設置為萬用字元""。\* 預設作業會接收無法分派也沒有 `DispatchBodyElementAttribute` 的所有訊息：  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
                             DispatchByBodyElementBehavior]  
 public interface IDispatchedByBody  
 {  
-    [OperationContract(ReplyAction="*"),   
+    [OperationContract(ReplyAction="*"),
      DispatchBodyElement("bodyA","http://tempuri.org")]  
     Message OperationForBodyA(Message msg);  
-    [OperationContract(ReplyAction = "*"),   
+    [OperationContract(ReplyAction = "*"),
      DispatchBodyElement("bodyB", "http://tempuri.org")]  
     Message OperationForBodyB(Message msg);  
     [OperationContract(Action="*", ReplyAction="*")]  
@@ -164,17 +164,17 @@ public interface IDispatchedByBody
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
+2. 要生成解決方案，請按照生成 Windows[通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的說明進行操作。  
   
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  

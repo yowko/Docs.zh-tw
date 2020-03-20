@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: e2146726-0084-4c9e-a2d2-e8d461b13b21
 topic_type:
 - apiref
-ms.openlocfilehash: d0718ff9a7e288ffc6a856032aa47949fda443f5
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5ec4fe2a8e949cf6e9aa0ce68f4d4e49b72170b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447896"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177442"
 ---
 # <a name="imetadataemit2savedeltatomemory-method"></a>IMetaDataEmit2::SaveDeltaToMemory 方法
-將目前的「編輯後繼續」會話的變更儲存至記憶體。  
+將更改從當前編輯和繼續會話保存到記憶體。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT SaveDeltaToMemory (  
-    [out] void        *pbData,   
+    [out] void        *pbData,
     [in]  ULONG       cbData  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `pbData`  
- 脫銷要開始寫入中繼資料差異的位址。  
+ [出]開始寫入中繼資料增量的位址。  
   
  `cbData`  
- 在變更的大小。 請使用[IMetaDataEmit2：： GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)來判斷大小。  
+ [在]更改的大小。 使用[IMetaDataEmit2：：獲取增量保存大小](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)以確定大小。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

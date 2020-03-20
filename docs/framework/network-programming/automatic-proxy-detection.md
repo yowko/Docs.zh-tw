@@ -14,20 +14,20 @@ helpviewer_keywords:
 - network
 - WPAD (Web Proxy Auto-Discovery)
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
-ms.openlocfilehash: 6a52a38473e339b892673e7c1a2f9e1f58dad359
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4c5bc9e0efb39032d388d141e8bccf3e520ebd45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048937"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180888"
 ---
 # <a name="automatic-proxy-detection"></a>自動 Proxy 偵測
 自動 Proxy 偵測是一種程序，透過此程序，系統會識別 Web Proxy 伺服器，並用來代表用戶端傳送要求。 這項功能也稱為「Web Proxy 自動探索 (WPAD)」。 啟用自動 Proxy 偵測時，系統會嘗試找出負責傳回可用於要求之這組 Proxy 的 Proxy 組態指令碼。 如果找到 Proxy 組態指令碼，則會在針對使用 <xref:System.Net.WebProxy> 執行個體的要求取得 Proxy 資訊、要求資料流或回應時，在本機電腦上下載、編譯和執行指令碼。  
   
- 自動 Proxy 偵測是透過 <xref:System.Net.WebProxy> 類別所執行，而且可以利用要求層級設定、組態檔中的設定，以及使用 Internet Explorer [區域網路 (LAN)] 對話方塊所指定的設定。  
+ 自動 Proxy 偵測是透過 <xref:System.Net.WebProxy> 類別所執行，而且可以利用要求層級設定、組態檔中的設定，以及使用 Internet Explorer [區域網路 (LAN)]**** 對話方塊所指定的設定。  
   
 > [!NOTE]
-> 從 Internet Explorer 主功能表中選取 [工具]，然後選取 [網際網路選項]，即可顯示 Internet Explorer [區域網路 (LAN) 設定] 對話方塊。 接下來，選取 [連線] 索引標籤，然後按一下 [區域網路設定]。  
+> 從 Internet Explorer 主功能表中選取 [工具]****，然後選取 [網際網路選項]****，即可顯示 Internet Explorer [區域網路 (LAN) 設定]**** 對話方塊。 接下來，選取 [連線]**** 索引標籤，然後按一下 [區域網路設定]****。  
   
  啟用自動 Proxy 偵測時，<xref:System.Net.WebProxy> 類別會嘗試找到 Proxy 組態指令碼，如下所示：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "71048937"
   
  Proxy 是根據 connectoid 所設定。 connectoid 是網路連線對話方塊中的項目，而且可以是實體網路裝置 (數據機或乙太網路卡) 或虛擬介面 (例如透過網路裝置執行的 VPN 連線)。 connectoid 變更時 (例如，無線連線變更存取點，或啟用 VPN)，會再次執行 Proxy 偵測演算法。  
   
- 預設會使用 Internet Explorer Proxy 設定來偵測 Proxy。 如果您的應用程式是透過非互動式帳戶執行 (沒有方便的方式可以設定 IE Proxy 設定)，或者您使用的 Proxy 設定與 IE 設定不同，則可以建立已定義 [\<defaultProxy> 項目 (網路設定)](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md) 和 [\<roxy> 項目 (網路設定)](../configure-apps/file-schema/network/proxy-element-network-settings.md) 項目的組態檔，來設定 Proxy。  
+ 預設會使用 Internet Explorer Proxy 設定來偵測 Proxy。 如果應用程式在非互動式帳戶下運行（無需方便的方式配置 IE 代理設置），或者想要使用與 IE 設置不同的代理設置，則可以通過創建包含[\<預設代理>元素（網路設置）](../configure-apps/file-schema/network/defaultproxy-element-network-settings.md)和[\<代理>元素（網路設置）](../configure-apps/file-schema/network/proxy-element-network-settings.md)元素的設定檔來配置代理。  
   
  針對您建立的要求，您可以搭配使用 Null <xref:System.Net.WebRequest.Proxy%2A> 與您的要求來停用要求層級的自動 Proxy 偵測，如下列程式碼範例所示。  
   
@@ -62,7 +62,7 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
     Dim request As WebRequest = WebRequest.Create(resource)  
     request.Proxy = Nothing  
     Dim response As WebResponse = request.GetResponse()  
-    End Sub   
+    End Sub
 ```  
   
  沒有 Proxy 的要求會使用應用程式定義域的預設 Proxy，而其可在 <xref:System.Net.WebRequest.DefaultWebProxy%2A> 屬性中取得。  
@@ -71,4 +71,4 @@ Public Shared Sub DisableForMyRequest(ByVal resource As Uri)
 
 - <xref:System.Net.WebProxy>
 - <xref:System.Net.WebRequest>
-- [\<system.Net> 項目 (網路設定)](../configure-apps/file-schema/network/system-net-element-network-settings.md)
+- [\<system.Net>元素（網路設置）](../configure-apps/file-schema/network/system-net-element-network-settings.md)

@@ -5,50 +5,50 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: b6fa4207531e86cbde8657d0c47596f22c886f89
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 5e37a04ff731a99664d636e0d4175f99214c2646
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791878"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174507"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server 的提供者統計資料
-從 .NET Framework 2.0 版開始，.NET Framework Data Provider for SQL Server 便支援執行階段統計資料。 建立有效的連接物件後，您必須藉由將 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 屬性設為 `True`，以啟用統計資料。 統計資料啟用後，透過 <xref:System.Collections.IDictionary> 物件的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法擷取 <xref:System.Data.SqlClient.SqlConnection> 參考，可以將它們做為「某時間的快照集」進行檢閱。 您可使用一組名稱/值配對字典項目的形式透過清單列舉。 這些名稱/值配對沒有排列順序。 您可以隨時呼叫 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 方法，以重設計數器。 如果尚未啟用統計資料蒐集，則不會產生例外狀況。 此外，如果呼叫 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 時未先呼叫 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>，則擷取的值會是每個項目的初始值。 如果啟用統計資料，並執行應用程式一段時間，然後停用統計資料，則擷取的值會反映到停用統計資料時所收集的值。 蒐集的所有統計資料值都是以每個連接為基礎。  
+從 .NET Framework 2.0 版開始，.NET Framework Data Provider for SQL Server 便支援執行階段統計資料。 您必須在建立有效的連線物件之後，將 <xref:System.Data.SqlClient.SqlConnection> 物件的 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 屬性設定為 `True`，以啟用統計資料。 啟用統計資料之後，您可以透過 <xref:System.Data.SqlClient.SqlConnection> 物件的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法來擷取 <xref:System.Collections.IDictionary> 參考，以「及時快照集」方式加以檢閱。 您可以將清單列舉為一組名稱/值對字典項目。 這些名稱/值對並未排序。 您隨時都可以呼叫 <xref:System.Data.SqlClient.SqlConnection> 物件的 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 方法來重設計數器。 如果尚未啟用統計資料收集功能，就不會產生例外狀況。 此外，如果在未先呼叫 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 的情況下呼叫 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>，擷取的值會是每個項目的初始值。 如果您啟用統計資料、執行應用程式一段時間，然後停用統計資料，擷取的值將會反映出直到停用統計資料那一刻為止，所收集到的值。 所有收集到的統計值都是以個別連線為基礎。  
   
 ## <a name="statistical-values-available"></a>可用的統計值  
- Microsoft SQL Server 提供者目前有 18 個不同的可用項目。 您可以透過所傳回之<xref:System.Collections.IDictionary> <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>介面參考的**Count**屬性來存取可用的專案數。 提供者統計資料的所有計數器都會使用 common language runtime <xref:System.Int64>類型（**long** in C#和 Visual Basic），這是64位寬。 **Int64 資料類型**的最大值，如 int64 所定義 **。Int32.maxvalue 欄位是**（（2 ^ 63）-1））。 計數器的值達到此最大值時，則不應再將其視為精確值。 這表示**int64。Int32.maxvalue-1**（（2 ^ 63）-2）實際上是任何統計資料最有效的值。  
+ Microsoft SQL Server 提供者目前提供了 18 個不同的項目。 可以透過 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 傳回之 <xref:System.Collections.IDictionary> 介面參考的 **Count** 屬性，存取可用的項目數目。 提供者統計資料的所有計數器均使用 Common Language Runtime <xref:System.Int64> 類型 (C# 及 Visual Basic 中的 **long**)，寬度為 64 位元。 如 **int64.MaxValue** 欄位所定義，**int64** 資料類型的最大值是 ((2^63)-1))。 當計數器的值達到此最大值時，應該就不會再被視為準確的值。 這表示 **int64.MaxValue**-1((2^63)-2) 實際上是任何統計資料的最大有效值。  
   
 > [!NOTE]
-> 因為傳回之統計資料的數目、名稱及順序將來可能會變更，所以會使用字典來傳回提供者統計資料。 應用程式不應依賴在字典中發現的特定值，而應檢查該值是否存在，並相應地進行分支。  
+> 字典是用來傳回提供者統計資料，因為未來所傳回統計資料的數目、名稱與順序可能會變更。 應用程式不應該依賴在字典中找到的特定值，而應該改為檢查值是否存在，並據以進行分支處理。  
   
  下表說明目前可用的統計值。 請注意，個別值的索引鍵名稱並未在 Microsoft .NET Framework 的區域版本中當地語系化。  
   
-|索引鍵名稱|描述|  
+|金鑰名稱|描述|  
 |--------------|-----------------|  
-|`BuffersReceived`|傳回在應用程式已開始使用提供者並啟用統計資料後，提供者從 SQL Server 接收之表格式資料流 (TDS) 封包的數目。|  
-|`BuffersSent`|傳回在已啟用統計資料後，提供者傳送到 SQL Server 的 TDS 封包數目。 較大的命令會需要多個緩衝區。 例如，如果將較大的命令傳送至伺服器且其需要六個封包，則 `ServerRoundtrips` 數目會遞增一，而 `BuffersSent` 數目會遞增六。|  
-|`BytesReceived`|傳回在應用程式已開始使用提供者並啟用統計資料後，提供者從 SQL Server 接收之 TDS 封包中的資料位元組數目。|  
-|`BytesSent`|傳回在應用程式已開始使用提供者並啟用統計資料後，TDS 封包中傳送至 SQL Server 之資料的位元組數目。|  
-|`ConnectionTime`|在啟用統計資料後連接已開啟的時間量 (以毫秒為單位；如果統計資料是在開啟連接之前啟用的，則為總連接時間)。|  
-|`CursorOpens`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回透過連接開啟游標的次數。<br /><br /> 請注意，不會將 SELECT 陳述式傳回的唯讀/順向結果視為游標，因此不會影響此計數器。|  
-|`ExecutionTime`|一旦啟用統計資料後，傳回提供者在處理作業所耗用的累計時間量 (以毫秒為單位)，包括等待伺服器回覆的時間，以及提供者自身執行程式碼的時間。<br /><br /> 包含執行時間程式碼的類別有：<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> 為了讓對效能有關鍵作用的成員數目儘可能最小，不會對下列成員計時：<br /><br /> SqlDataReader<br /><br /> this[] 運算子 (全部多載)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
-|`IduCount`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回透過連接執行之 INSERT、DELETE 及 UPDATE 陳述式的總數。|  
-|`IduRows`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回透過連接執行的 INSERT、DELETE 及 UPDATE 陳述式所影響的資料列總數。|  
+|`BuffersReceived`|傳回應用程式開始使用提供者並啟用統計資料之後，提供者從 SQL Server 接收到的表格式資料流 (TDS) 封包數目。|  
+|`BuffersSent`|傳回啟用統計資料之後，提供者傳送給 SQL Server 的 TDS 封包數目。 大型命令可能會需要多個緩衝區。 例如，如果將大型命令傳送至伺服器，而且該命令需要 6 個封包，`ServerRoundtrips` 就會遞增 1，`BuffersSent` 會遞增 6。|  
+|`BytesReceived`|傳回應用程式開始使用提供者並啟用統計資料之後，提供者從 SQL Server 接收到的 TDS 封包中所包含資料的位元組數目。|  
+|`BytesSent`|傳回應用程式開始使用提供者並啟用統計資料之後，TDS 封包中傳送給 SQL Server 之資料的位元組數目。|  
+|`ConnectionTime`|在啟用統計資料後連線處於開啟的時間量 (如果統計資料是在開啟連線之前啟用的，則為總連線時間)。|  
+|`CursorOpens`|傳回應用程式開始使用提供者並啟用統計資料之後，透過連線開啟的資料指標次數。<br /><br /> 請注意，SELECT 陳述式傳回的唯讀/順向結果不會被視為資料指標，因此不會影響此計數器。|  
+|`ExecutionTime`|傳回啟用統計資料後，提供者在處理作業所耗用的累計時間量 (以毫秒為單位)，包括等待伺服器回覆的時間，以及提供者本身執行程式碼的時間。<br /><br /> 包含計時程式碼的類別如下：<br /><br /> SqlConnection<br /><br /> SqlCommand<br /><br /> SqlDataReader<br /><br /> SqlDataAdapter<br /><br /> SqlTransaction<br /><br /> SqlCommandBuilder<br /><br /> 為了盡可能減少需要高效能才能正常運作的成員數，不會針對下列成員計時：<br /><br /> SqlDataReader<br /><br /> this[] 運算子 (所有多載)<br /><br /> GetBoolean<br /><br /> GetChar<br /><br /> GetDateTime<br /><br /> GetDecimal<br /><br /> GetDouble<br /><br /> GetFloat<br /><br /> GetGuid<br /><br /> GetInt16<br /><br /> GetInt32<br /><br /> GetInt64<br /><br /> GetName<br /><br /> GetOrdinal<br /><br /> GetSqlBinary<br /><br /> GetSqlBoolean<br /><br /> GetSqlByte<br /><br /> GetSqlDateTime<br /><br /> GetSqlDecimal<br /><br /> GetSqlDouble<br /><br /> GetSqlGuid<br /><br /> GetSqlInt16<br /><br /> GetSqlInt32<br /><br /> GetSqlInt64<br /><br /> GetSqlMoney<br /><br /> GetSqlSingle<br /><br /> GetSqlString<br /><br /> GetString<br /><br /> IsDBNull|  
+|`IduCount`|傳回應用程式開始使用提供者並啟用統計資料之後，透過連線執行的 INSERT、DELETE 與 UPDATE 陳述式總數。|  
+|`IduRows`|傳回應用程式開始使用提供者並啟用統計資料之後，受透過連線執行的 INSERT、DELETE 與 UPDATE 陳述式所影響的資料列總數。|  
 |`NetworkServerTime`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回提供者等待伺服器回覆的累計時間量 (以毫秒為單位)。|  
-|`PreparedExecs`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回透過連接執行之預備命令的數目。|  
-|`Prepares`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回透過連接預備的陳述式數目。|  
-|`SelectCount`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回透過連接執行之 SELECT 陳述式的數目。 這包含從游標擷取資料列的 FETCH 陳述式，且會在達到 <xref:System.Data.SqlClient.SqlDataReader> 的結尾時更新 SELECT 陳述式的計數。|  
-|`SelectRows`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回選取的資料列數目。 此計數器會反映 SQL 陳述式產生的所有資料列，甚至包含呼叫端實際上並未使用的資料列。 例如，在讀取整個結果集之前關閉資料讀取器不會影響計數。 這會包含透過 FETCH 陳述式從游標擷取的資料列。|  
-|`ServerRoundtrips`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回連接傳送命令至伺服器並取得回覆的次數。|  
-|`SumResultSets`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回已使用的結果集數目。 例如，這會包含傳回至用戶端的任何結果集。 對於游標，會將每個擷取或封鎖擷取作業視為獨立的結果集。|  
-|`Transactions`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回已啟動的使用者異動數目，包括復原。 如果連接執行時已啟用自動認可，則會將每個命令視為異動。<br /><br /> 一旦執行 BEGIN TRAN 陳述式，此計數器便會遞增異動計數，而不論是否會認可或稍後復原異動。|  
-|`UnpreparedExecs`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回透過連接執行之取消準備的陳述式數目。|  
+|`PreparedExecs`|傳回應用程式開始使用提供者並啟用統計資料後，透過連線所執行的備妥命令數目。|  
+|`Prepares`|傳回應用程式開始使用提供者並啟用統計資料之後，透過連線所備妥陳述式的數目。|  
+|`SelectCount`|傳回應用程式已開始使用提供者並啟用統計資料之後，透過連線所執行的 SELECT 陳述式數目。 這包括用來從資料指標取出資料列的 FETCH 陳述式，而且在到達 <xref:System.Data.SqlClient.SqlDataReader> 的結尾時，會更新 SELECT 陳述式的計數。|  
+|`SelectRows`|傳回應用程式開始使用提供者並啟用統計資料之後，已選取的資料列數目。 此計數器會反映 SQL 陳述式產生的所有資料列，即使呼叫者並未實際取用的資料列也算在內。 例如，在讀取整個結果集之前關閉資料讀取器並不會影響計數。 這包括透過 FETCH 陳述式從資料指標擷取的資料列。|  
+|`ServerRoundtrips`|傳回應用程式開始使用提供者並啟用統計資料之後，連線傳送命令至伺服器並收到回覆的次數。|  
+|`SumResultSets`|傳回應用程式開始使用提供者並啟用統計資料之後，已使用的結果集數目。 例如，這會包含傳回給用戶端的任何結果集。 針對資料指標，系統會將每個擷取或區塊擷取作業都視為獨立結果集。|  
+|`Transactions`|傳回應用程式開始使用提供者並啟用統計資料 (包括復原) 之後，已啟動的使用者交易數目。 如果是使用自動認可來執行連線，系統會將每個命令都視為一個交易。<br /><br /> 只要 BEGIN TRAN 陳述式一執行，此計數器就會遞增交易計數，無論交易之後獲認可或遭復原。|  
+|`UnpreparedExecs`|傳回應用程式已開始使用提供者並啟用統計資料之後，透過連線所執行的未備妥陳述式數目。|  
   
 ### <a name="retrieving-a-value"></a>擷取值  
- 下列主控台應用程式會顯示如何在連接上啟用統計資料、如何擷取四個個別的統計資料值，以及如何將它們寫入至主控台視窗。  
+ 下列主控台應用程式會顯示如何在連線上啟用統計資料、擷取四個獨立統計資料值，並將其寫到主控台視窗。  
   
 > [!NOTE]
-> 下列範例會使用 SQL Server 隨附的**AdventureWorks**範例資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
+> 下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串會假設資料庫安裝在本機電腦且可供使用。 請依據環境需求修改連接字串。  
   
 ```vb  
 Option Strict On  
@@ -65,7 +65,7 @@ Module Module1
   
     Using awConnection As New SqlConnection(connectionString)  
       ' StatisticsEnabled is False by default.  
-      ' It must be set to True to start the   
+      ' It must be set to True to start the
       ' statistic collection process.  
       awConnection.StatisticsEnabled = True  
   
@@ -136,16 +136,16 @@ namespace CS_Stats_Console_GetValue
     {  
       string connectionString = GetConnectionString();  
   
-      using (SqlConnection awConnection =   
+      using (SqlConnection awConnection =
         new SqlConnection(connectionString))  
       {  
         // StatisticsEnabled is False by default.  
-        // It must be set to True to start the   
+        // It must be set to True to start the
         // statistic collection process.  
         awConnection.StatisticsEnabled = true;  
   
         string productSQL = "SELECT * FROM Production.Product";  
-        SqlDataAdapter productAdapter =   
+        SqlDataAdapter productAdapter =
           new SqlDataAdapter(productSQL, awConnection);  
   
         DataSet awDataSet = new DataSet();  
@@ -193,7 +193,7 @@ namespace CS_Stats_Console_GetValue
     {  
       // To avoid storing the connection string in your code,  
       // you can retrieve it from a configuration file.  
-      return "Data Source=localhost;Integrated Security=SSPI;" +   
+      return "Data Source=localhost;Integrated Security=SSPI;" +
         "Initial Catalog=AdventureWorks";  
     }  
   }  
@@ -201,10 +201,10 @@ namespace CS_Stats_Console_GetValue
 ```  
   
 ### <a name="retrieving-all-values"></a>擷取所有值  
- 下列主控台應用程式會顯示如何在連接上啟用統計資料、如何使用列舉值擷取所有可用的統計資料值，以及如何將它們寫入至主控台視窗。  
+ 下列主控台應用程式會顯示如何在連線上啟用統計資料、使用列舉程式擷取所有可用的統計資料值，並將其寫到主控台視窗。  
   
 > [!NOTE]
-> 下列範例會使用 SQL Server 隨附的**AdventureWorks**範例資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
+> 下列範例使用包含於 SQL Server 的 **AdventureWorks** 範例資料庫。 範例程式碼中提供的連接字串會假設資料庫安裝在本機電腦且可供使用。 請依據環境需求修改連接字串。  
   
 ```vb  
 Option Strict On  
@@ -220,7 +220,7 @@ Module Module1
   
     Using awConnection As New SqlConnection(connectionString)  
       ' StatisticsEnabled is False by default.  
-      ' It must be set to True to start the   
+      ' It must be set to True to start the
       ' statistic collection process.  
       awConnection.StatisticsEnabled = True  
   
@@ -284,11 +284,11 @@ namespace CS_Stats_Console_GetAll
     {  
       string connectionString = GetConnectionString();  
   
-      using (SqlConnection awConnection =   
+      using (SqlConnection awConnection =
         new SqlConnection(connectionString))  
       {  
         // StatisticsEnabled is False by default.  
-        // It must be set to True to start the   
+        // It must be set to True to start the
         // statistic collection process.  
         awConnection.StatisticsEnabled = true;  
   
@@ -331,7 +331,7 @@ namespace CS_Stats_Console_GetAll
     {  
       // To avoid storing the connection string in your code,  
       // you can retrieve it from a configuration file.  
-      return "Data Source=localhost;Integrated Security=SSPI;" +   
+      return "Data Source=localhost;Integrated Security=SSPI;" +
         "Initial Catalog=AdventureWorks";  
     }  
   }  
@@ -341,4 +341,4 @@ namespace CS_Stats_Console_GetAll
 ## <a name="see-also"></a>另請參閱
 
 - [SQL Server 和 ADO.NET](index.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

@@ -1,15 +1,15 @@
 ---
-title: <AttributeImplies> 元素（.NET Native）
+title: <AttributeImplies>元素（.NET 本機）
 ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
-ms.openlocfilehash: 94f7813938e2179a2355e6ab2eff22479122d4b1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2ab1fdc71bc43f61f69a0d9b7bea7acb35e14ea5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128488"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181068"
 ---
-# <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > 元素（.NET Native）
+# <a name="attributeimplies-element-net-native"></a>\<屬性>元素（.NET 本機）
 定義套用包含屬性之程式碼元素的原則。  
   
 ## <a name="syntax"></a>語法  
@@ -18,7 +18,7 @@ ms.locfileid: "73128488"
 <AttributeImplies Activate="policy_type"  
                   Browse="policy_type"  
                   Dynamic="policy_type"  
-                  Serialize="policy_type"   
+                  Serialize="policy_type"
                   DataContractSerializer="policy_setting"  
                   DataContractJsonSerializer="policy_setting"  
                   XmlSerializer="policy_setting"  
@@ -28,7 +28,7 @@ ms.locfileid: "73128488"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -51,23 +51,23 @@ ms.locfileid: "73128488"
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<鍵入>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  如果 `<AttributeImplies>` 元素的包含類型是屬性 (也就是衍生自 <xref:System.Attribute?displayProperty=nameWithType> 的類別)，就會使用此元素。 如果屬性套用至特定的程式元素，則 `<AttributeImplies>` 元素所定義的原則會套用至該程式元素。  
   
  反映、序列化和 interop 屬性都是選用性，但至少要有一個屬性存在。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [\<類型 > 元素](type-element-net-native.md)
+- [\<類型>元素](type-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)
 - [執行階段指示詞原則設定](runtime-directive-policy-settings.md)

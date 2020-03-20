@@ -1,5 +1,5 @@
 ---
-title: 作法：建立通訊端
+title: 如何：建立通訊端
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,21 +17,21 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: 54706293784d77e535cac582c99b1dd21a12e380
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e71e7e235048361580c65bdb551919fe3038130b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048390"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180829"
 ---
-# <a name="how-to-create-a-socket"></a>作法：建立通訊端
+# <a name="how-to-create-a-socket"></a>如何：建立通訊端
 在您使用通訊端與遠端裝置進行通訊之前，必須先使用通訊協定和網路位址資訊初始化通訊端。 <xref:System.Net.Sockets.Socket> 類別的建構函式所擁有的參數，可指定通訊端用來建立連線的位址家族、通訊端類型和通訊協定類型。  
   
 ## <a name="example"></a>範例  
  下列範例會建立可在 TCP/IP 網路 (例如網際網路) 上用於通訊的通訊端。  
   
 ```csharp  
-Socket s = new Socket(AddressFamily.InterNetwork,   
+Socket s = new Socket(AddressFamily.InterNetwork,
    SocketType.Stream, ProtocolType.Tcp);  
 ```  
   
@@ -43,7 +43,7 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  若要使用 UDP 而不是 TCP，請變更通訊協定類型，如下列範例所示：  
   
 ```csharp  
-Socket s = new Socket(AddressFamily.InterNetwork,   
+Socket s = new Socket(AddressFamily.InterNetwork,
    SocketType.Dgram, ProtocolType.Udp);  
 ```  
   

@@ -1,6 +1,6 @@
 ---
-title: SetSecurity 函式（非受控 API 參考）
-description: SetSecurity 函數會抓取目前線程的模擬 token。
+title: 設置安全功能（非託管 API 引用）
+description: SetSecurity 函數檢索當前執行緒的類比權杖。
 ms.date: 11/06/2017
 api_name:
 - SetSecurity
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - SetSecurity function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: 6d27779bcfc97e1c4156b8782896e83d4754491b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 809f6a95fdd6854b3a591b496877838c48d52199
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120218"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176730"
 ---
 # <a name="setsecurity-function"></a>SetSecurity 函式
 
-擷取與目前執行緒關聯的模擬權杖。 
+擷取與目前執行緒關聯的模擬權杖。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
@@ -31,33 +31,33 @@ ms.locfileid: "73120218"
 
 ```cpp
 HRESULT SetSecurity (
-   [out] boolean* pNeedToReset, 
+   [out] boolean* pNeedToReset,
    [out] HANDLE* pCurrentThreadToken
-); 
+);
 ```
 
 ## <a name="parameters"></a>參數
 
 `pNeedToReset`\
-脫銷當函式傳回時，會包含 `boolean` 的指標，指出是否應該藉由呼叫[ResetSecurity](resetsecurity.md)函數來重設權杖。
+[出]當函數返回時，包含指向 的`boolean`指標，指示是否應通過調用[ResetSecurity](resetsecurity.md)函數重置權杖。
 
 `token`\
-脫銷當函式傳回時，會包含與目前線程相關聯之模擬標記的控制碼指標。 如果沒有與目前線程相關聯的 token，則其值可以 `null`。 
+[出]當函數返回時，包含指向與當前執行緒關聯的類比權杖控制碼的指標。 如果沒有與當前執行緒`null`關聯的權杖，則其值可以是。
 
 ## <a name="return-value"></a>傳回值
 
-如果函式成功，則傳回值會是 `S_OK` （0）。
+如果函數成功，則傳回值為`S_OK`（0）。
 
-如果函式失敗，則傳回值為非零的錯誤碼。 若要取得擴充的錯誤資訊，請呼叫[GetErrorInfo](geterrorinfo.md)函式。
+如果函數失敗，傳回值是非零錯誤代碼。 要獲取擴展的錯誤資訊，請致電[GetErrorInfo](geterrorinfo.md)函數。
 
 ## <a name="requirements"></a>需求
 
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
- **標頭：** WMINet_Utils .idl
+ **標題：** WMINet_Utils.idl
 
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器（非受控 API 參考）](index.md)
+- [WMI 與效能計數器 (非受控 API 參考)](index.md)

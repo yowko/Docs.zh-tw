@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: 88fb7ef3-bbdf-429c-b678-c9c153456461
 topic_type:
 - apiref
-ms.openlocfilehash: aa5d66d2408010d7a7b52ec68a18f667097795ae
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a71d8694ec8c5bd35ecd3e98ed32e05bc7b382fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450182"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177624"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString 方法
-取得指定之文字字串的元資料標記。  
+獲取指定文本字串的中繼資料權杖。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT DefineUserString (   
-    [in]  LPCWSTR     szString,   
-    [in]  ULONG       cchString,   
-    [out] mdString    *pstk   
+HRESULT DefineUserString (
+    [in]  LPCWSTR     szString,
+    [in]  ULONG       cchString,
+    [out] mdString    *pstk
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `szString`  
- 在要儲存的使用者字串。  
+ [在]要存儲的使用者字串。  
   
  `cchString`  
- 在`szString`中寬字元的計數。  
+ [在]中的`szString`寬字元的計數。  
   
  `pstk`  
- 脫銷指派的字串 token。  
+ [出]分配的字串權杖。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

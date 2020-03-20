@@ -2,12 +2,12 @@
 title: 標準端點
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 880601664d7602e279c5d022fa37c44914a58772
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747767"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184410"
 ---
 # <a name="standard-endpoints"></a>標準端點
 端點會由位址、繫結和合約指定。 其他可能會在端點上設定的參數包括行為組態、標頭和接聽 URI。  某些端點類型的這些值不會改變。 例如，中繼資料交換端點一律會使用 <xref:System.ServiceModel.Description.IMetadataExchange> 合約。 其他端點，例如 <xref:System.ServiceModel.Description.WebHttpEndpoint>，則一律會要求指定的端點行為。 您可以讓端點針對常用的端點屬性使用預設值，以藉此提升端點的可用性。 標準端點可讓開發人員定義具有預設值的端點，或定義一個或多個端點屬性未改變的位置。  這些端點可讓您不需指定靜態性質的資訊即可使用端點。 標準端點可用於基礎結構和應用程式端點。  
@@ -24,11 +24,11 @@ public class CustomEndpoint : ServiceEndpoint
     public CustomEndpoint()
         : this(string.Empty)
     { }  
-    
+
     public CustomEndpoint(string address)
         : this(address, ContractDescription.GetContract(typeof(ICalculator)))
     { }  
-    
+
     // Create the custom endpoint with a fixed binding
     public CustomEndpoint(string address, ContractDescription contract)
         : base(contract)
@@ -36,13 +36,13 @@ public class CustomEndpoint : ServiceEndpoint
         this.Binding = new BasicHttpBinding();
         this.IsSystemEndpoint = false;
     }
-    
+
     // Definition of the additional property of this endpoint
     public bool Property { get; set; }
 }
 ```
   
- 若要在組態檔中使用使用者定義的自訂端點，您必須自 <xref:System.ServiceModel.Configuration.StandardEndpointElement> 衍生類別、自 <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602> 衍生類別，然後在 app.config 或 machine.config 中的延伸區段註冊新的標準端點。<xref:System.ServiceModel.Configuration.StandardEndpointElement> 會針對標準端點提供組態支援，如下列範例所示。  
+ 要在設定檔中使用使用者定義的自訂終結點，必須從<xref:System.ServiceModel.Configuration.StandardEndpointElement>派生類，並從 派生<xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>類，並在 app.config 或 machine.config 中的擴展部分中註冊新的標準終結點。 為<xref:System.ServiceModel.Configuration.StandardEndpointElement>標準終結點提供配置支援，如以下示例所示。  
   
 ```csharp
 public class CustomEndpointElement : StandardEndpointElement
@@ -103,7 +103,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```  
   
- <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>之下的集合提供的支援類型 <`standardEndpoints`> 標準端點的組態中的區段。  下列範例示範如何實作這個類別。  
+ 為<xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>標準終結點配置中<>`standardEndpoints`部分下顯示的集合提供了支援類型。  下列範例示範如何實作這個類別。  
   
 ```csharp
 public class CustomEndpointCollectionElement : StandardEndpointCollectionElement<CustomEndpoint, CustomEndpointElement>
@@ -130,7 +130,7 @@ public class CustomEndpointCollectionElement : StandardEndpointCollectionElement
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
 ```  
   
- 若要加入的標準端點組態中，加入 <`endpoint`> 項目至 <`service`> 項目和任何必要的組態設定，在 <`standardEndpoints`> 項目。 下列範例會示範如何加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，此為與 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 一起發行的標準端點之一。  
+ 要在配置中添加標準終結點`endpoint``service`，<>元素和<>`standardEndpoints`元素中所需的任何配置設置中添加<>元素。 下列範例會示範如何加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>，此為與 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 一起發行的標準端點之一。  
   
 ```xml  
 <services>  
@@ -138,14 +138,14 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
     <endpoint isSystemEndpoint="true" kind="udpDiscoveryEndpoint" />  
   </service>  
 </services>  
-<standardEndpoints>    
+<standardEndpoints>
   <udpDiscoveryEndpoint>  
      <standardEndpoint multicastAddress="soap.udp://239.255.255.250:3702" />
   </udpDiscoveryEndpoint>
 </standardEndpoints>
 ```  
   
- 標準端點的型別會指定使用中的類別屬性 <`endpoint`> 項目。 此端點設定內 <`standardEndpoints`> 項目。 在上述範例中，<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 端點已加入且設定完成。 <`udpDiscoveryEndpoint`> 元素包含 <`standardEndpoint`>，設定<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A>屬性<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>。  
+ 使用<>`endpoint`元素中的類型屬性指定標準終結點的類型。 終結點配置在<>`standardEndpoints`元素中。 在上述範例中，<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 端點已加入且設定完成。 <>`udpDiscoveryEndpoint`元素包含設置 屬性`standardEndpoint`<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A><xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint><>。  
   
 ## <a name="standard-endpoints-shipped-with-the-net-framework"></a>隨附於 .NET Framework 的標準端點  
  下表列出隨附於 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 的標準端點。  

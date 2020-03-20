@@ -9,21 +9,21 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: b8ef4fa05b2107247181e82b72389f9503507135
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 62f67002bfbaf46e73bae06fdaff26efde865c06
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746499"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182603"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>如何：完成 Windows Form 列印工作
-經常，包含列印的文字處理器和其他應用程式將會提供選項，讓使用者顯示列印工作已完成的訊息。 您可以藉由處理 <xref:System.Drawing.Printing.PrintDocument> 元件的 <xref:System.Drawing.Printing.PrintDocument.EndPrint> 事件，在您的 Windows Forms 中提供這項功能。  
+通常，文字處理器和其他涉及列印的應用程式將提供向使用者顯示列印工作已完成的消息的選項。 您可以通過處理<xref:System.Drawing.Printing.PrintDocument.EndPrint><xref:System.Drawing.Printing.PrintDocument>元件的事件在 Windows 表單中提供此功能。  
   
- 下列程式需要您建立一個具有 <xref:System.Drawing.Printing.PrintDocument> 元件的 Windows 應用程式，這是從 Windows 應用程式啟用列印的標準方式。 如需使用 <xref:System.Drawing.Printing.PrintDocument> 元件從 Windows Forms 列印的詳細資訊，請參閱[如何：建立標準 Windows Forms 列印工作](how-to-create-standard-windows-forms-print-jobs.md)。  
+ 以下過程要求您創建了一個帶有<xref:System.Drawing.Printing.PrintDocument>元件的基於 Windows 的應用程式，這是啟用從基於 Windows 的應用程式進行列印的標準方法。 有關使用<xref:System.Drawing.Printing.PrintDocument>該元件從 Windows 表單列印的詳細資訊，請參閱[：創建標準 Windows 表單列印工作](how-to-create-standard-windows-forms-print-jobs.md)。  
   
 ### <a name="to-complete-a-print-job"></a>完成列印工作  
   
-1. 設定 <xref:System.Drawing.Printing.PrintDocument> 元件的 <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> 屬性。  
+1. 設置<xref:System.Drawing.Printing.PrintDocument.DocumentName%2A>元件的屬性<xref:System.Drawing.Printing.PrintDocument>。  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -39,7 +39,7 @@ ms.locfileid: "76746499"
   
 2. 撰寫程式碼來處理 <xref:System.Drawing.Printing.PrintDocument.EndPrint> 事件。  
   
-     在下列程式碼範例中，會顯示訊息方塊，指出檔已完成列印。  
+     在下面的代碼示例中，將顯示一個訊息方塊，指示文檔已完成列印。  
   
     ```vb  
     Private Sub PrintDocument1_EndPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.EndPrint  
@@ -48,10 +48,10 @@ ms.locfileid: "76746499"
     ```  
   
     ```csharp  
-    private void printDocument1_EndPrint(object sender,   
+    private void printDocument1_EndPrint(object sender,
     System.Drawing.Printing.PrintEventArgs e)  
     {  
-       MessageBox.Show(printDocument1.DocumentName +   
+       MessageBox.Show(printDocument1.DocumentName +
           " has finished printing.");  
     }  
     ```  
@@ -66,7 +66,7 @@ ms.locfileid: "76746499"
        }  
     ```  
   
-     （視覺C#效果和C++視覺效果）將下列程式碼放在表單的函式中，以註冊事件處理常式。  
+     （視覺 C# 和視覺C++）將以下代碼放在表單的建構函式中以註冊事件處理常式。  
   
     ```csharp  
     this.printDocument1.EndPrint += new  

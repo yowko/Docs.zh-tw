@@ -15,37 +15,37 @@ helpviewer_keywords:
 ms.assetid: 9afd0e04-a403-41e2-9528-a6dcbcdcbd4d
 topic_type:
 - apiref
-ms.openlocfilehash: 55d0b40bbdb5628f60090d9d70f7dccbebe9d58f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e5fd1730bbe5b6f2905691dce41a7f503227534a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785004"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179075"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypes-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypes 方法
-取得所有快取 Windows 執行階段類型的列舉值。  
+獲取所有緩存的 Windows 運行時類型的枚舉器。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT GetCachedWinRTTypes (   
+HRESULT GetCachedWinRTTypes (
     [out] ICorDebugGuidToTypeEnum **ppGuidToTypeEnum)  
 ;  
 ```  
   
 ## <a name="parameters"></a>參數  
  `ppGuidToTypeEnum`  
- 脫銷[ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md)介面物件的指標，可列舉目前載入應用程式域之 Windows 執行階段類型的 managed 標記法。  
+ [出]指向[ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md)介面物件的指標，該物件可以枚舉當前在應用程式域中載入的 Windows 運行時類型的託管表示形式。  
   
 ## <a name="requirements"></a>需求  
- **平臺：** Windows 執行階段  
+ **平臺：** 視窗運行時  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebugAppDomain3 介面](icordebugappdomain3-interface.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123871"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181399"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>如何：對應 HRESULT 和例外狀況
 COM 方法是藉由傳回 HRESULT 來報告錯誤；.NET 方法則是藉由擲回例外狀況來報告錯誤。 執行階段則負責處理兩者之間的轉換。 .NET Framework 的每一個例外狀況類別都會對應到一個 HRESULT。  
@@ -35,7 +35,7 @@ COM 方法是藉由傳回 HRESULT 來報告錯誤；.NET 方法則是藉由擲�
     Class NoAccessException : public ApplicationException  
     {  
         NoAccessException () {  
-        HResult = E_ACCESSDENIED;   
+        HResult = E_ACCESSDENIED;
     }  
     }  
     CMyClass::MethodThatThrows  
@@ -73,7 +73,7 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**例外狀況**|  
+|**COR_E_EXCEPTION**|**例外**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND 或 ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -107,7 +107,7 @@ CMyClass::MethodThatThrows
 |**COR_E_SERIALIZATION**|**SerializationException**|  
 |**COR_E_STACKOVERFLOW 或 ERROR_STACK_OVERFLOW**|**StackOverflowException**|  
 |**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
-|**COR_E_SYSTEM**|**SystemException**|  
+|**COR_E_SYSTEM**|**系統例外**|  
 |**COR_E_TARGET**|**TargetException**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
 |**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
@@ -130,17 +130,17 @@ CMyClass::MethodThatThrows
   
 |例外狀況欄位|來自 COM 的資訊來源|  
 |---------------------|------------------------------------|  
-|**ErrorCode**|從呼叫傳回的 HRESULT。|  
+|**錯誤代碼**|從呼叫傳回的 HRESULT。|  
 |**HelpLink**|如果 **IErrorInfo->HelpContext** 是非零值，則字串是由串連 **IErrorInfo->GetHelpFile**、"#" 和 **IErrorInfo->GetHelpContext** 所構成。 否則，字串是從 **IErrorInfo->GetHelpFile** 所傳回。|  
-|**InnerException**|一律為 Null 參考 (在 Visual Basic 中為 **Nothing**)。|  
-|**訊息**|從 **IErrorInfo->GetDescription** 傳回的字串。|  
-|**Source**|從 **IErrorInfo->GetSource** 傳回的字串。|  
-|**StackTrace**|堆疊追蹤。|  
+|**InnerException**|始終為空引用（視覺基本值中**無內容**）。|  
+|**消息**|從 **IErrorInfo->GetDescription** 傳回的字串。|  
+|**來源**|從 **IErrorInfo->GetSource** 傳回的字串。|  
+|**堆疊追蹤**|堆疊追蹤。|  
 |**TargetSite**|傳回失敗 HRESULT 之方法的名稱。|  
   
  如 **Message**、**Source** 和 **StackTrace** 之類的例外狀況欄位，並不適用於 **StackOverflowException**。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
-- [例外狀況](../../standard/exceptions/index.md)
+- [異常](../../standard/exceptions/index.md)

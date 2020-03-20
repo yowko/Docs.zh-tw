@@ -1,6 +1,6 @@
 ---
-title: QualifierSet_Delete 函式（非受控 API 參考）
-description: QualifierSet_Delete 函數會依名稱刪除限定詞。
+title: QualifierSet_Delete功能（非託管 API 引用）
+description: QualifierSet_Delete函數按名稱刪除限定詞。
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_Delete
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - QualifierSet_Delete function [.NET WMI and performance counters]
 topic_type:
 - Reference
-ms.openlocfilehash: e7bedcb5c56f9976f8dfd2619081971075d0d809
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0d2a02ba9d89ba16e776bb73563eaebf8a92f1fd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127305"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174897"
 ---
 # <a name="qualifierset_delete-function"></a>QualifierSet_Delete 函式
 依名稱刪除指定的限定詞。  
@@ -30,48 +30,46 @@ ms.locfileid: "73127305"
   
 ```cpp  
 HRESULT QualifierSet_Delete (
-   [in] int                  vFunc, 
-   [in] IWbemQualifierSet*   ptr, 
+   [in] int                  vFunc,
+   [in] IWbemQualifierSet*   ptr,
    [in] LPCWSTR              wszName
-); 
+);
 ```  
 
 ## <a name="parameters"></a>參數
 
 `vFunc`  
-在未使用此參數。
+[在]此參數未使用。
 
-`ptr`   
-在[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)實例的指標。
+`ptr`[在]指向[IWbem 限定詞集實例的](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)指標。
 
-`wszName`   
-在要刪除的限定詞名稱。
+`wszName`[在]要刪除的限定詞的名稱。
 
 ## <a name="return-value"></a>傳回值
 
-這個函式所傳回的下列值會定義在*WbemCli*標頭檔中，您也可以在程式碼中將它們定義為常數：
+此函數返回的以下值在*WbemCli.h*標標頭檔中定義，或者您可以在代碼中將它們定義為常量：
 
-|常數  |值  |描述  |
+|持續性  |值  |描述  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` 參數無效。 |
-|`WBEM_E_INVALID_OPERATION` | 0x80041016 | 刪除這個限定詞是不合法的。 |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的限定詞。 |
+|`WBEM_E_INVALID_OPERATION` | 0 x80041016 | 刪除此限定詞是非法的。 |
+|`WBEM_E_NOT_FOUND` | 0 x80041002 | 未找到指定的限定詞。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
-| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | 已刪除本機覆寫，且父物件的原始辨識符號已恢復範圍。 |
+| `WBEM_S_RESET_TO_DEFAULT` | 0 x40002 | 本地重寫已被刪除，父物件的原始限定詞已恢復作用域。 |
 
 ## <a name="remarks"></a>備註
 
-此函式會包裝對[IWbemQualifierSet：:D 刪除](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete)方法的呼叫。
+此函數包裝對[IWbem 限定詞集：:Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete)方法的調用。
 
-由於限定詞傳播規則的緣故，特定的辨識符號可能已經繼承自另一個物件，而且只會在目前的類別或實例中覆寫。 在此情況下，`QualifierSet_Delete` 方法會將限定詞重設為其原始的繼承值。 在此情況下，函式會傳回狀態碼 `WBEM_S_RESET_TO_DEFAULT`。
+由於限定詞傳播規則，特定限定詞可能從另一個物件繼承，並且只是在當前類或實例中重寫。 在這種情況下，`QualifierSet_Delete`該方法將限定詞重置為其原始繼承的值。 在這種情況下，函數返回狀態碼`WBEM_S_RESET_TO_DEFAULT`。
 
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** WMINet_Utils .idl  
+ **標題：** WMINet_Utils.idl  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器（非受控 API 參考）](index.md)
+- [WMI 與效能計數器 (非受控 API 參考)](index.md)

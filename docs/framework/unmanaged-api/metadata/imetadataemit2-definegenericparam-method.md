@@ -15,62 +15,62 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-ms.openlocfilehash: 3898b095809e2b84f71aba2036f4d7a294dfdf6a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1868d13a9dbb73dbdf64e49c395bdbff02ce89d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444647"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177446"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam 方法
-建立泛型型別參數的定義，並取得該泛型型別參數的 token。  
+為泛型型別參數創建定義，並獲取該泛型型別參數的權杖。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT DefineGenericParam (   
-    [in]  mdToken         tk,   
-    [in]  ULONG           ulParamSeq,   
-    [in]  DWORD           dwParamFlags,   
-    [in]  LPCWSTR         szname,   
-    [in]  DWORD           reserved,   
-    [in]  mdToken         rtkConstraints[],   
+HRESULT DefineGenericParam (
+    [in]  mdToken         tk,
+    [in]  ULONG           ulParamSeq,
+    [in]  DWORD           dwParamFlags,
+    [in]  LPCWSTR         szname,
+    [in]  DWORD           reserved,
+    [in]  mdToken         rtkConstraints[],
     [out] mdGenericParam  *pgp  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `tk`  
- 在`mdTypeDef` 或 `mdMethodDef` token，表示要定義泛型參數的方法或函式。  
+ [在]`mdTypeDef`表示為其`mdMethodDef`定義泛型參數的方法或建構函式的或權杖。  
   
  `ulParamSeq`  
- 在泛型參數的索引。  
+ [在]泛型參數的索引。  
   
  `dwParamFlags`  
- 在[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)列舉的值，描述泛型參數的類型。  
+ [在]描述泛型參數類型的[CorgenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)枚舉的值。  
   
  `szname`  
- 在參數的名稱。  
+ [在]參數的名稱。  
   
  `reserved`  
- 在此參數保留供未來擴充性之用。  
+ [在]此參數保留為將來的可擴充性。  
   
  `rtkConstraints`  
- 在類型條件約束之以零結束的陣列。 陣列成員必須是 `mdTypeDef`、`mdTypeRef`或 `mdTypeSpec` 的元資料標記。  
+ [在]類型約束的零端接陣列。 陣列成員必須是`mdTypeDef`，`mdTypeRef`或`mdTypeSpec`中繼資料權杖。  
   
  `pgp`  
- 脫銷表示泛型參數的 token。  
+ [出]表示泛型參數的權杖。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

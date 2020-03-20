@@ -2,15 +2,15 @@
 title: 變數與引數
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 251641c924bbf33c176f519f8fc4f9dec59e2eb8
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: f975f46a1858d204d12588f7570b7ea5a365e650
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962201"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182689"
 ---
 # <a name="variables-and-arguments"></a>變數與引數
-在 Windows Workflow Foundation (WF) 中, 變數代表資料的儲存和引數代表進出活動的資料流程。 活動有一組引數，且它們會構成活動的簽章。 此外，活動也包含變數的清單，開發人員可在設計工作流程時加入或移除其中的變數。 引數會使用傳回值的運算式來繫結。  
+在 Windows 工作流基礎 （WF） 中，變數表示資料的存儲，參數表示進出活動的資料流程。 活動有一組引數，且它們會構成活動的簽章。 此外，活動也包含變數的清單，開發人員可在設計工作流程時加入或移除其中的變數。 引數會使用傳回值的運算式來繫結。  
   
 ## <a name="variables"></a>變數  
  變數是資料的儲存位置。 變數會宣告為工作流程定義的一部分， 並負責執行階段的值，而這些值會儲存成工作流程執行個體狀態的一部分。 變數定義會指定變數的型別，以及選擇性地指定名稱。 下列程式碼顯示如何使用 <xref:System.Activities.Statements.Assign%601> 活動來宣告變數、將值指派至變數，然後使用 <xref:System.Activities.Statements.WriteLine> 活動在主控台上顯示其值。  
@@ -67,7 +67,7 @@ Variable<string> var = new Variable<string>
   
 2. 當呼叫 <xref:System.Activities.InOutArgument%601.Set%2A> 時，執行階段會立即設定值。  
   
-3. 引數可以選擇是否要指定它們的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 是指定評估引數順序之以零為起始的值。 根據預設，引數的預設評估順序未指定，而且等於 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 設定 <xref:System.Activities.Argument.EvaluationOrder%2A> 為大於或等於零的值，以指定這個引數的評估順序。 Windows Workflow Foundation 會依照指定的評估順序, 以遞增順序來評估引數。 請注意，未指定評估順序的引數會在有指定評估順序的引數之前先進行評估。  
+3. 引數可以選擇是否要指定它們的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 是指定評估引數順序之以零為起始的值。 根據預設，引數的預設評估順序未指定，而且等於 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 設定 <xref:System.Activities.Argument.EvaluationOrder%2A> 為大於或等於零的值，以指定這個引數的評估順序。 Windows 工作流基礎以昇冪計算具有指定計算順序的參數。 請注意，未指定評估順序的引數會在有指定評估順序的引數之前先進行評估。  
   
  活動作者可使用強型別的機制來公開其引數。 藉由宣告型別 <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601> 與 <xref:System.Activities.InOutArgument%601> 的屬性，即可完成此動作。 這可讓活動作者建立資料進出活動的相關特定合約。  
   
@@ -102,7 +102,7 @@ Variable<string> var3 = new Variable<string>();
 Activity wf = new Sequence  
 {  
     Variables = { var1, var2, var3 },  
-    Activities =   
+    Activities =
     {  
         new Assign<string>()  
         {  
@@ -141,4 +141,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- 如需在程式碼中使用引數、變數和運算式的詳細資訊, 請參閱使用命令式程式碼和[必要的引數](required-arguments-and-overload-groups.md)和多載群組來[撰寫工作流程、活動和運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)。
+ 有關在代碼中使用參數、變數和運算式的詳細資訊，請參閱使用命令性代碼和[必需參數和重載組](required-arguments-and-overload-groups.md)[創作工作流、活動和運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)。

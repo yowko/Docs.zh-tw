@@ -15,39 +15,39 @@ helpviewer_keywords:
 ms.assetid: c2321f17-f46f-4815-ae41-b28678753613
 topic_type:
 - apiref
-ms.openlocfilehash: 5de522c00da76e7c01369c706cb7f9e2bdad4b3b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f840438e175790a2b4c97302963b910f98dffb7d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134509"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176561"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit 方法
-認可記憶體的快取元件參考。  
+將緩存的程式集引用提交到記憶體。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT Commit (  
-    [in] DWORD dwFlags,   
+    [in] DWORD dwFlags,
     [out, optional] ULONG *pulDisposition  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `dwFlags`  
- 在在融合 .idl 中定義的旗標。  
+ [在]在 Fusion.idl 中定義的標誌。  
   
  `pulDisposition`  
- [out，optional]值，指出作業的結果。  
+ [退出，可選]指示操作結果的值。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** 融合。h  
+ **標題：** 融合.h  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IAssemblyCacheItem 介面](iassemblycacheitem-interface.md)

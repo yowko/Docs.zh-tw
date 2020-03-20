@@ -15,60 +15,60 @@ helpviewer_keywords:
 ms.assetid: 3b039e50-63ec-4730-99ff-2327408de477
 topic_type:
 - apiref
-ms.openlocfilehash: 506e13ad956a01b16e36d8c71737fe0efce4c01b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f664e694303691fb1132150037dcbcdb5549539a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450327"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177533"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 方法
-設定或更新先前呼叫[IMetaDataEmit：:D efineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)所定義之事件的指定功能。  
+設置或更新由之前調用[IMetaDataEmit：:DefineEvent）](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)定義的事件的指定功能。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT SetEventProps (  
-    [in]  mdEvent     ev,   
-    [in]  DWORD       dwEventFlags,   
-    [in]  mdToken     tkEventType,   
-    [in]  mdMethodDef mdAddOn,   
-    [in]  mdMethodDef mdRemoveOn,   
-    [in]  mdMethodDef mdFire,   
-    [in]  mdMethodDef rmdOtherMethods[]   
+    [in]  mdEvent     ev,
+    [in]  DWORD       dwEventFlags,
+    [in]  mdToken     tkEventType,
+    [in]  mdMethodDef mdAddOn,
+    [in]  mdMethodDef mdRemoveOn,
+    [in]  mdMethodDef mdFire,
+    [in]  mdMethodDef rmdOtherMethods[]
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `ev`  
- 在事件 token。  
+ [在]事件權杖。  
   
  `dwEventFlags`  
- 在事件旗標。 這是 `CorEventAttr` 值的位元遮罩。  
+ [在]事件標誌。 這是值的`CorEventAttr`位元遮罩。  
   
  `tkEventType`  
- 在事件類別的 token。 這可以是 `mdTypeDef` 或 `mdTypeRef` token。  
+ [在]事件類的權杖。 這是 或`mdTypeDef``mdTypeRef`標記。  
   
  `mdAddOn`  
- 在用來訂閱事件的方法，或 null。  
+ [在]用於訂閱事件或 null 的方法。  
   
  `mdRemoveOn`  
- 在用來取消訂閱事件的方法，或 null。  
+ [在]用於取消訂閱事件或 null 的方法。  
   
  `mdFire`  
- 在用來引發事件的方法（由衍生類別）。  
+ [在]用於（由派生類）引發事件的方法。  
   
  `rmdOtherMethods[]`  
- 在與事件相關聯之其他方法的權杖陣列。 陣列的最後一個元素必須 `mdMethodDefNil`。  
+ [在]與事件關聯的其他方法的權杖陣列。 陣列的最後一個元素必須是`mdMethodDefNil`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

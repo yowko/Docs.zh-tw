@@ -21,16 +21,16 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 42944d8267d2e99fd9eb1a2cb28c0c81d3e9af75
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 90d9cf4c473d73d1eeeb5f2a1098f8626c20359f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744577"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180480"
 ---
 # <a name="reflection-in-net"></a>.NET 中的反映
 
-<xref:System.Reflection> 命名空間中的類別連同 <xref:System.Type?displayProperty=nameWithType>，可讓您取得已載入[元件](../../standard/assembly/index.md)和其中所定義類型的相關資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和實數值型別（也就是[結構](../../standard/base-types/common-type-system.md#structures)和列舉） [enumerations](../../standard/base-types/common-type-system.md#enumerations)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
+<xref:System.Reflection>命名空間中的類以及<xref:System.Type?displayProperty=nameWithType>以及 ， 使您能夠獲取有關載入[程式集](../../standard/assembly/index.md)及其內定義的類型的資訊，例如[類](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和數值型別（即[結構和](../../standard/base-types/common-type-system.md#structures)[枚舉](../../standard/base-types/common-type-system.md#enumerations)）。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
   
 [Common Language Runtime](../../standard/clr.md) 載入器會管理[應用程式定義域](../app-domains/application-domains.md)，這會在有相同應用程式範圍的物件周圍構成定義的界限。 這個管理包含載入每個組件至適當的應用程式定義域和控制每個組件內類型階層的記憶體配置。  
   
@@ -40,9 +40,9 @@ ms.locfileid: "76744577"
   
 - 使用 <xref:System.Reflection.Module> 來探索資訊，例如包含模組的組件以及模組中的類別。 您也可以取得所有全域方法，或在模組上所定義的其他特定非全域方法。  
   
-- 使用 <xref:System.Reflection.ConstructorInfo> 來探索資訊，例如名稱、參數、存取修飾詞 (例如 `public` 或 `private`)，以及建構函式的實作詳細資料 (例如 `abstract` 或 `virtual`)。 使用 <xref:System.Type.GetConstructors%2A> 的 <xref:System.Type.GetConstructor%2A> 或 <xref:System.Type> 方法來叫用特定的建構函式。  
+- 使用 <xref:System.Reflection.ConstructorInfo> 來探索資訊，例如名稱、參數、存取修飾詞 (例如 `public` 或 `private`)，以及建構函式的實作詳細資料 (例如 `abstract` 或 `virtual`)。 使用 <xref:System.Type> 的 <xref:System.Type.GetConstructors%2A> 或 <xref:System.Type.GetConstructor%2A> 方法來叫用特定的建構函式。  
   
-- 使用 <xref:System.Reflection.MethodInfo> 來探索資訊，例如名稱、傳回類型、參數、存取修飾詞 (例如 `public` 或 `private`)，以及方法的實作詳細資料 (例如 `abstract` 或 `virtual`)。 使用 <xref:System.Type.GetMethods%2A> 的 <xref:System.Type.GetMethod%2A> 或 <xref:System.Type> 方法來叫用特定的方法。  
+- 使用 <xref:System.Reflection.MethodInfo> 來探索資訊，例如名稱、傳回類型、參數、存取修飾詞 (例如 `public` 或 `private`)，以及方法的實作詳細資料 (例如 `abstract` 或 `virtual`)。 使用 <xref:System.Type> 的 <xref:System.Type.GetMethods%2A> 或 <xref:System.Type.GetMethod%2A> 方法來叫用特定的方法。  
   
 - 使用 <xref:System.Reflection.FieldInfo> 來探索資訊，例如名稱、存取修飾詞 (例如 `public` 或 `private`)，以及欄位的實作詳細資料 (例如 `static`)，並取得或設定欄位值。  
   
@@ -67,14 +67,14 @@ ms.locfileid: "76744577"
   
 這些執行階段類別是 `internal` (在 Visual Basic 中為 `Friend`)。 它們不會分別從其基底類別記錄，因為它們的行為由基底類別的文件所描述。  
   
-<a name="related_topics"></a>   
+<a name="related_topics"></a>
 
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[檢視類型資訊](viewing-type-information.md)|描述 <xref:System.Type> 類別，並提供程式碼範例說明如何搭配幾個反映類別來使用 <xref:System.Type>，以取得建構函式、方法、欄位、屬性和事件的相關資訊。|  
-|[反映和泛用類型](reflection-and-generic-types.md)|說明反映如何處理泛型類型和泛型方法的型別參數和型別引數。|  
+|[反映和泛型型別](reflection-and-generic-types.md)|說明反映如何處理泛型類型和泛型方法的型別參數和型別引數。|  
 |[反映的安全性考量](security-considerations-for-reflection.md)|描述判斷可使用哪種程度的反映之規則，以探索類型資訊和存取類型。|  
 |[動態載入和使用類型](dynamically-loading-and-using-types.md)|描述支援晚期繫結的反映自訂繫結介面。|  
 |[操作說明：將組件載入僅限反映的內容](how-to-load-assemblies-into-the-reflection-only-context.md)|描述僅限反映的載入內容。 示範如何載入組件、如何測試內容，以及如何檢查套用至僅限反映的內容中組件的屬性。|  

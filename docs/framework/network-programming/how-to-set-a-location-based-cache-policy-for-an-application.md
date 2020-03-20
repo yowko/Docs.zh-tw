@@ -1,5 +1,5 @@
 ---
-title: 作法：為應用程式設定以位置為基礎的快取原則
+title: 如何：為應用程式設定以位置為基礎的快取原則
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - request cache policies
 - cache [.NET Framework], location-based policies
 ms.assetid: 683bb88e-3411-4f46-9686-3411b6ba511c
-ms.openlocfilehash: 150198c2bda220e4b37981e461e19b8e4e30e483
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 6fe569e781b005461ea41e3d6b90859666f9601a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048126"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180772"
 ---
-# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>HOW TO：為應用程式設定以位置為基礎的快取原則
-以位置為基礎的快取原則，可讓應用程式明確地定義根據所要求資源位置的快取行為。 本主題將示範如何以程式設計方式設定快取原則。 如需使用組態檔為應用程式設定原則的詳細資訊，請參閱 [\<requestCaching> 項目 (網路設定)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)。  
+# <a name="how-to-set-a-location-based-cache-policy-for-an-application"></a>如何：為應用程式設定以位置為基礎的快取原則
+以位置為基礎的快取原則，可讓應用程式明確地定義根據所要求資源位置的快取行為。 本主題將示範如何以程式設計方式設定快取原則。 有關使用設定檔為應用程式設定策略的資訊，請參閱[\<請求緩存>元素（網路設置）。](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)  
   
 ### <a name="to-set-a-location-based-cache-policy-for-an-application"></a>為應用程式設定以位置為基礎的快取原則  
   
@@ -55,7 +55,7 @@ ms.locfileid: "71048126"
     ```csharp  
     public static void DoNotUseCache()  
     {  
-    HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+    HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.NoCacheNoStore);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -76,7 +76,7 @@ ms.locfileid: "71048126"
     ```csharp  
     public static void OnlyUseCache()  
     {  
-        HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+        HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.CacheOnly);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -97,7 +97,7 @@ ms.locfileid: "71048126"
     ```csharp  
     public static void DoNotUseLocalCache()  
     {  
-     HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+     HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.Refresh);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -118,7 +118,7 @@ ms.locfileid: "71048126"
     ```csharp  
     public static void SendToServer()  
     {  
-    HttpRequestCachePolicy policy = new HttpRequestCachePolicy   
+    HttpRequestCachePolicy policy = new HttpRequestCachePolicy
             (HttpRequestCacheLevel.Reload);  
         HttpWebRequest.DefaultCachePolicy = policy;  
     }  
@@ -156,7 +156,7 @@ ms.locfileid: "71048126"
 ## <a name="see-also"></a>另請參閱
 
 - [網路應用程式的快取管理](cache-management-for-network-applications.md)
-- [快取原則](cache-policy.md)
+- [緩存策略](cache-policy.md)
 - [以位置為基礎的快取原則](location-based-cache-policies.md)
-- [以時間為基礎的快取原則](time-based-cache-policies.md)
-- [\<requestCaching> 項目 (網路設定)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Time-Based Cache Policies](time-based-cache-policies.md)
+- [\<請求緩存>元素（網路設置）](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
