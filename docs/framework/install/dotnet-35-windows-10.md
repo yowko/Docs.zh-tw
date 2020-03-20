@@ -1,12 +1,12 @@
 ---
-title: 在 Windows 10、8.1、8上安裝 .NET Framework 3。5
+title: 在 Windows 10、8.1、8 上安裝 .NET 框架 3.5
 description: 了解如何在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5。
 ms.date: 07/16/2018
 ms.openlocfilehash: cfe21c0821b8f3223301dcc802533e1aaf024a79
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965941"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5
@@ -15,13 +15,13 @@ ms.locfileid: "76965941"
 
 ## <a name="download-the-offline-installer"></a>下載離線安裝程式
 
-.NET Framework 3.5 SP1 離線安裝程式可在[.NET Framework 3.5 Sp1 下載頁面](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1)上取得，適用于 windows 10 之前的 windows 版本。
+.NET 框架 3.5 SP1 離線安裝程式在[.NET 框架 3.5 SP1 下載頁面上](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1)可用，並且可用於 Windows 10 之前的 Windows 版本。
 
 ## <a name="install-the-net-framework-35-on-demand"></a>視需要安裝 .NET Framework 3.5
 
-如果您嘗試執行需要 .NET Framework 3.5 的應用程式，可能會看到下列設定對話方塊。 請選擇 [安裝此功能] 來啟用 .NET Framework 3.5。 這個選項需要網際網路連線。
+如果您嘗試執行需要 .NET Framework 3.5 的應用程式，可能會看到下列設定對話方塊。 請選擇 [安裝此功能]**** 來啟用 .NET Framework 3.5。 這個選項需要網際網路連線。
 
-![[.NET Framework 安裝] 對話方塊的螢幕擷取畫面。](./media/dotnet-35-windows-10/dotnet-framework-installation-dialog.png)
+![.NET 框架安裝對話方塊的螢幕截圖。](./media/dotnet-35-windows-10/dotnet-framework-installation-dialog.png)
 
 ### <a name="why-am-i-getting-this-pop-up"></a>為什麼我會收到這個快顯？
 
@@ -31,13 +31,13 @@ ms.locfileid: "76965941"
 
 您可以透過 Windows 的 [控制台] 啟用 .NET Framework 3.5。 這個選項需要網際網路連線。
 
-1. 按 Windows 鍵 ![Windows 按鍵標誌的螢幕擷取畫面。](./media/dotnet-35-windows-10/windows-keyboard-logo.png) 在您的鍵盤上輸入「Windows 功能」，然後按 Enter 鍵。 [開啟或關閉 Windows 功能] 對話方塊隨即出現。
+1. 按 Windows![金鑰徽標的 Windows 金鑰螢幕截圖。](./media/dotnet-35-windows-10/windows-keyboard-logo.png) 在鍵盤上，鍵入"Windows 功能"，然後按 Enter。 [開啟或關閉 Windows 功能]**** 對話方塊隨即出現。
 
-2. 選取 [.NET Framework 3.5 (包括 .NET 2.0 和 3.0)] 核取方塊，選取 [確定]，然後在出現提示時重新啟動電腦。
+2. 選取 [.NET Framework 3.5 (包括 .NET 2.0 和 3.0)]**** 核取方塊，選取 [確定]****，然後在出現提示時重新啟動電腦。
 
-   ![螢幕擷取畫面：顯示使用 [控制台] 安裝 .NET。](./media/dotnet-35-windows-10/dotnet-control-panel.png)
+   ![顯示使用控制台安裝 .NET 的螢幕截圖。](./media/dotnet-35-windows-10/dotnet-control-panel.png)
 
-   您不需要選取 [Windows Communication Foundation (WCF) HTTP 啟用] 和 [Windows Communication Foundation (WCF) 非 HTTP 啟用] 的子項目，除非您是需要這項功能的開發人員或伺服器系統管理員。
+   您不需要選取 [Windows Communication Foundation (WCF) HTTP 啟用]**** 和 [Windows Communication Foundation (WCF) 非 HTTP 啟用]**** 的子項目，除非您是需要這項功能的開發人員或伺服器系統管理員。
 
 ## <a name="troubleshoot-the-installation-of-the-net-framework-35"></a>進行 .NET Framework 3.5 安裝的疑難排解
 

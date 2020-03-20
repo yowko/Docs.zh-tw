@@ -7,18 +7,18 @@ helpviewer_keywords:
 - portable executable files, CorFlags section
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 ms.openlocfilehash: e1251b6660db45f3af4f6e57114b1b10da18bd0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129854"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags 轉換工具)
 CorFlags 轉換工具可讓您設定可攜式執行映像標頭的 CorFlags 區段。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
- 在命令提示字元下輸入下列命令：  
+ 在命令提示字元中，請輸入下列項目：  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,8 +50,8 @@ CorFlags.exe assembly [options]
 ## <a name="remarks"></a>備註  
  如果未指定任何選項，則 CorFlags 轉換工具會針對所指定組件顯示旗標。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
-- [64 位元應用程式](../64-bit-apps.md)
+- [64 位應用程式](../64-bit-apps.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

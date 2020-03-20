@@ -12,10 +12,10 @@ helpviewer_keywords:
 - .resx files
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 ms.openlocfilehash: 2cfb2d9874b34eef78fe462e0270fd70307a9f61
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715699"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows 資源當地語系化編輯器)
@@ -31,7 +31,7 @@ winres resourceFile
 winres /?
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>引數
 
 |引數|描述|
 |--------------|-----------------|
@@ -55,9 +55,9 @@ Windows Form 專案中表單的 UI 項目狀態通常儲存在資源檔內，它
 
 Winres.exe 無法將 .resx 檔案轉換成對應的 .resources 檔案，請改用 Resgen.exe 工具。 如需 Resgen.exe 的詳細資訊，請參閱 [Resgen.exe (資源檔產生器)](resgen-exe-resource-file-generator.md)。
 
-Winres.exe 是圖形應用程式，只需從資源檔即可重新建立設計階段版本的 Windows Form 表單，不需要存取原始程式碼。 Winres.exe 可裝載 Visual Studio 的 **Windows Form 表單設計工具**和 [屬性] 視窗。 這些功能可以對內含 Windows Form 表單的 .resources 或 .resx 檔案進行視覺化編輯。 當地語系化人員通常會使用 Winres.exe 來編輯控制項標籤，並調整控制項的位置和大小，以納入目標文化特性的標籤。
+Winres.exe 是圖形應用程式，只需從資源檔即可重新建立設計階段版本的 Windows Form 表單，不需要存取原始程式碼。 Winres.exe 可裝載 Visual Studio 的 **Windows Form 表單設計工具**和 [屬性]**** 視窗。 這些功能可以對內含 Windows Form 表單的 .resources 或 .resx 檔案進行視覺化編輯。 當地語系化人員通常會使用 Winres.exe 來編輯控制項標籤，並調整控制項的位置和大小，以納入目標文化特性的標籤。
 
-如果 Winres.exe 無法解析控制項的類型，它會在已當地語系化的 .resx 或 .resources 檔案中建立預留位置控制項。 預留位置控制項在 Windows Form 表單上會顯示為規劃視窗。 規劃視窗的大小和位置與實際控制項的大小和位置相符。 預留位置控制項能使用的所有可當地語系化屬性都會出現在 [屬性] 視窗中。 您對預留位置控制項所做的任何變更都會儲存起來，供實際的控制項使用。
+如果 Winres.exe 無法解析控制項的類型，它會在已當地語系化的 .resx 或 .resources 檔案中建立預留位置控制項。 預留位置控制項在 Windows Form 表單上會顯示為規劃視窗。 規劃視窗的大小和位置與實際控制項的大小和位置相符。 預留位置控制項能使用的所有可當地語系化屬性都會出現在 [屬性]**** 視窗中。 您對預留位置控制項所做的任何變更都會儲存起來，供實際的控制項使用。
 
 ## <a name="winresexe-versus-visual-studio"></a>Winres.exe 與 Visual Studio 比較
 
@@ -82,7 +82,7 @@ Winres.exe 具有以下的特性和功能：
 
 - 錯誤報告視窗，停駐於主視窗左下角。
 
-- 可以使用熱鍵來檢查是否有重複：從 [格式] 功能表，按一下 [檢查熱鍵] 命令。
+- 可以使用熱鍵來檢查是否有重複：從 [格式]**** 功能表，按一下 [檢查熱鍵]**** 命令。
 
 ## <a name="version-compatibility"></a>版本相容性
 
@@ -106,7 +106,7 @@ Winres.exe 具有以下的特性和功能：
 
 1. 在開發人員命令提示字元中輸入 `winres`，執行 Winres.exe。
 
-2. 若要開啟要當地語系化之表單的預設資源，請按一下 [檔案] 功能表上的 [開啟] 命令，並巡覽至檔案將它開啟。
+2. 若要開啟要當地語系化之表單的預設資源，請按一下 [檔案]**** 功能表上的 [開啟]**** 命令，並巡覽至檔案將它開啟。
 
      -或-
 
@@ -129,13 +129,13 @@ Winres.exe 具有以下的特性和功能：
 
 3. 選取表單上的控制項，並且變更這些控制項的 <xref:System.Windows.Forms.Control.Text%2A> 和其他屬性，以反映當地語系化的文化特性及其語言。 視需要移動或調整控制項大小，以容納當地語系化的文字。
 
-4. 若要儲存 .resx 或 .resources 檔案的當地語系化版本，請按一下**儲存**圖示或 [檔案] 功能表上的相同命令。 工具會顯示 [選取文化特性] 視窗。
+4. 若要儲存 .resx 或 .resources 檔案的當地語系化版本，請按一下**儲存**圖示或 [檔案]**** 功能表上的相同命令。 工具會顯示 [選取文化特性]**** 視窗。
 
-5. 選取適當的文化特性和檔案模式，然後按一下 [確定]。
+5. 選取適當的文化特性和檔案模式，然後按一下 [確定]****。
 
    工具會使用執行階段所需的當地語系化資源檔命名規範來儲存檔案。 例如，如果您針對德國境內的德國人當地語系化 `TestApp.resources`，則工具會將檔案儲存為 `TestApp.de-DE.resources`。 如果您針對德國境內的德國人當地語系化 `TestApp.resx`，則工具會將檔案儲存為 `TestApp.de-DE.resx`。 如需資源命名慣例的詳細資訊，請參閱[封裝和部署資源](../resources/packaging-and-deploying-resources-in-desktop-apps.md)。 如需執行階段所使用之預先定義的文化特性名稱清單，請參閱 <xref:System.Globalization.CultureInfo> 類別。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ComponentModel.LocalizableAttribute>
 - <xref:System.Globalization.CultureInfo>

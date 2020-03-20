@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: 6e066bcbe02fa9cf498e11af431b9f6dcd4432ab
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e5135aca49a63aafa3330832c54f2d28d31d60d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785522"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151347"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>從 DataView 建立 DataTable
-從資料來源擷取資料並將資料填入 <xref:System.Data.DataTable> 後，您可能想要排序、篩選，或限制所傳回的資料，而不想再次擷取該資料。 <xref:System.Data.DataView> 類別使這成為可行。 此外<xref:System.Data.DataTable> ，如果您需要<xref:System.Data.DataView>從建立新的<xref:System.Data.DataView.ToTable%2A> ，您可以使用方法，將所有資料列和資料行，或資料的子集複製到新<xref:System.Data.DataTable>的。 <xref:System.Data.DataView.ToTable%2A> 方法提供多載，以進行下列作業：  
+從資料來源擷取資料並將資料填入 <xref:System.Data.DataTable> 後，您可能想要排序、篩選，或限制所傳回的資料，而不想再次擷取該資料。 <xref:System.Data.DataView> 類別使這成為可行。 此外<xref:System.Data.DataTable>，如果需要從<xref:System.Data.DataView>創建新項，可以使用<xref:System.Data.DataView.ToTable%2A>方法將所有行和列或資料的子集複製到新的<xref:System.Data.DataTable>中。 <xref:System.Data.DataView.ToTable%2A> 方法提供多載，以進行下列作業：  
   
 - 建立含有資料行的 <xref:System.Data.DataTable>，其中的資料行是 <xref:System.Data.DataView> 之資料行的子集。  
   
-- 建立， <xref:System.Data.DataView>其中只包含來自的相異資料列，類似至 transact-sql 中的 distinct 關鍵字。 <xref:System.Data.DataTable>  
+- 創建一<xref:System.Data.DataTable>個僅包含 從<xref:System.Data.DataView>中不同的行，類似于 Transact-SQL 中的 DISTINCT 關鍵字。  
   
 ## <a name="example"></a>範例  
- 下列主控台應用程式範例<xref:System.Data.DataTable>會建立，其中包含**AdventureWorks**範例資料庫中**Person**資料表內的資料。 接下來，此範例會根據，建立<xref:System.Data.DataView>已排序和<xref:System.Data.DataTable>已篩選的。 <xref:System.Data.DataTable>在顯示<xref:System.Data.DataTable> <xref:System.Data.DataView> <xref:System.Data.DataView.ToTable%2A>和的內容之後，此範例會呼叫方法，只選取可用資料行的子集，以從建立新的。<xref:System.Data.DataView> 最後，此範例會顯示新 <xref:System.Data.DataTable> 的內容。  
+ 下面的主控台應用程式示例創建一個<xref:System.Data.DataTable>，其中包含**來自 AdventureWorks**示例資料庫中的**Person.連絡人**表的資料。 接下來，該示例創建基於 的<xref:System.Data.DataView><xref:System.Data.DataTable>排序和篩選。 顯示<xref:System.Data.DataTable>和 的內容<xref:System.Data.DataView>後，示例<xref:System.Data.DataTable><xref:System.Data.DataView>通過調用<xref:System.Data.DataView.ToTable%2A>方法，僅選擇可用列的子集，從 創建一個 new。 最後，此範例會顯示新 <xref:System.Data.DataTable> 的內容。  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -114,7 +114,7 @@ private static void DemonstrateDataView()
 // connectionString is assumed to be a valid connection string.  
 SqlDataAdapter adapter = new SqlDataAdapter(  
     "SELECT FirstName, LastName, EmailAddress " +  
-    "FROM Person.Contact WHERE FirstName LIKE 'Mich%'",   
+    "FROM Person.Contact WHERE FirstName LIKE 'Mich%'",
        GetConnectionString());  
 DataTable table = new DataTable();  
   
@@ -209,4 +209,4 @@ Console.WriteLine();
 
 - <xref:System.Data.DataView.ToTable%2A>
 - [DataView](dataviews.md)
-- [ADO.NET 概觀](../ado-net-overview.md)
+- [ADO.NET 概觀](../ado-net-overview.md) \(部分機器翻譯\)

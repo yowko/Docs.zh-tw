@@ -9,10 +9,10 @@ helpviewer_keywords:
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
 ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457729"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>風險降低：ZipArchiveEntry.FullName 路徑分隔符號
@@ -25,8 +25,8 @@ ms.locfileid: "73457729"
   
  對於 Windows 作業系統上由 .NET Framework <xref:System.IO> 命名空間中的 API 解壓縮的 .ZIP 檔案而言，此變更的影響應該很小，因為這些 API 可以將斜線 ("/") 或反斜線 ("\\") 當做路徑分隔符號字元順利地處理。  
   
-## <a name="mitigation"></a>風險降低  
- 如果不需要此行為，您可以在應用程式組態檔的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 區段加入一個組態設定以選擇退出。 下圖顯示 `<runtime>` 區段及選擇退出參數。  
+## <a name="mitigation"></a>降低  
+ 如果此行為不可取，則可以通過將配置設置添加到應用程式佈建檔的[\<運行時>](../configure-apps/file-schema/runtime/runtime-element.md)部分來退出宣告。 下圖顯示 `<runtime>` 區段及選擇退出參數。  
   
 ```xml  
 <runtime>  
@@ -34,7 +34,7 @@ ms.locfileid: "73457729"
 </runtime>  
 ```  
   
- 此外，以舊版 .NET Framework 為目標但在 .NET Framework 4.6.1 和更新版本下執行的應用程式，可以藉由將組態設定新增到應用程式設定檔的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 區段，以選擇加入這項行為。 下圖顯示 `<runtime>` 區段及選擇加入參數。  
+ 此外，針對 .NET Framework 的早期版本並在 .NET Framework 4.6.1 和更高版本上運行的應用可以通過將配置設置添加到應用程式佈建檔的[\<運行時>](../configure-apps/file-schema/runtime/runtime-element.md)部分來加入宣告此行為。 下圖顯示 `<runtime>` 區段及選擇加入參數。  
   
 ```xml  
 <runtime>  
@@ -42,7 +42,7 @@ ms.locfileid: "73457729"
 </runtime>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [重定目標變更](retargeting-changes-in-the-net-framework-4-6-1.md)
 - [應用程式相容性](application-compatibility.md)

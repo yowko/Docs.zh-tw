@@ -7,10 +7,10 @@ helpviewer_keywords:
 - installation [.NET Framework]
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 ms.openlocfilehash: 6261a883e7b99b7fd38da2a17ab4820c81552506
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716421"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數
@@ -19,7 +19,7 @@ ms.locfileid: "75716421"
 ## <a name="reasons-for-a-restart"></a>重新啟動的原因  
  如果安裝期間正在使用 .NET Framework 4 應用程式，則 .NET Framework 4.5 安裝需要重新啟動系統。 這是因為 .NET Framework 4.5 會取代 .NET Framework 4 檔案，因此這些檔案必須在安裝期間可供使用。 在許多情況下，事先偵測和關閉正在使用的 .NET Framework 4 應用程式，即可避免重新啟動。 不過，不應該關閉部分系統應用程式。 在這些情況下，無法避免重新啟動。  
   
-## <a name="end-user-experience"></a>使用者經驗  
+## <a name="end-user-experience"></a>一般使用者體驗  
  如果安裝程式偵測到正在使用 .NET Framework 4 應用程式，則執行完整 .NET Framework 4.5 安裝的終端使用者就有機會可以避免重新啟動系統。 訊息會列出所有執行中 .NET Framework 4 應用程式，並提供選項來關閉這些應用程式，再進行安裝。 如果使用者確認，則安裝程式會關閉這些應用程式，並避免重新啟動系統。 如果使用者在一段時間內未回應訊息，則會繼續安裝，而不需要關閉任何應用程式。  
   
  如果 [重新啟動管理員] 偵測到即使關閉執行中應用程式也需要重新啟動系統的情況，則不會顯示訊息。  
@@ -31,7 +31,7 @@ ms.locfileid: "75716421"
   
  如果您要使用鏈結的安裝程式，但不想要提供關閉應用程式的專屬訊息方塊，則可以在鏈結 .NET Framework 安裝程序時，於命令列上使用 `/showrmui` 和 `/passive` 選項。 當您一起使用這些選項時，安裝程式會顯示關閉可關閉之應用程式的訊息方塊，以避免重新啟動系統。 被動模式下之這個訊息方塊的行為與完整使用者介面的作用相同。 如需 .NET Framework 可轉散發套件的完整一組命令列選項，請參閱[開發人員部署手冊](deployment-guide-for-developers.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [部署](index.md)
 - [開發人員部署手冊](deployment-guide-for-developers.md)

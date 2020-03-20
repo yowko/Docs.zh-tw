@@ -2,19 +2,19 @@
 title: WebContentTypeMapper 範例
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: ad10444593c69808b86edd5dfdaf6d2aa86f6b1b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 540e5e775cf7b2a5a5b585d98772415653fa833a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715028"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143560"
 ---
 # <a name="webcontenttypemapper-sample"></a>WebContentTypeMapper 範例
-這個範例會示範如何將新的內容類型對應至 Windows Communication Foundation （WCF）訊息內文格式。  
+此示例演示如何將新內容類型映射到 Windows 通信基礎 （WCF） 郵件內文格式。  
   
- <xref:System.ServiceModel.Description.WebHttpEndpoint> 元素會插入 Web 訊息編碼器，讓 WCF 能夠在相同的端點上接收 JSON、XML 或原始二進位訊息。 此編碼器會藉由尋找要求的 HTTP 內容型別來判定訊息的本文格式。 這個範例會介紹 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 類別，以允許使用者控制內容型別與本文格式之間的對應。  
+ 元素<xref:System.ServiceModel.Description.WebHttpEndpoint>插入 Web 消息編碼器，它允許 WCF 在同一終結點接收 JSON、XML 或原始二進位消息。 此編碼器會藉由尋找要求的 HTTP 內容型別來判定訊息的本文格式。 這個範例會介紹 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 類別，以允許使用者控制內容型別與本文格式之間的對應。  
   
- WCF 提供一組內容類型的預設對應。 例如，`application/json` 會對應至 JSON，而 `text/xml` 會對應至 XML。 未對應至 JSON 或 XML 的任何內容型別都會對應至原始二進位格式。  
+ WCF 為內容類型提供了一組預設映射。 例如，`application/json` 會對應至 JSON，而 `text/xml` 會對應至 XML。 未對應至 JSON 或 XML 的任何內容型別都會對應至原始二進位格式。  
   
  在某些案例中 (例如，Push-Style API)，服務開發人員不會控制由用戶端傳回的內容型別。 例如，用戶端可能會以 `text/javascript` 方式傳回 JSON，而不是以 `application/json` 方式。 在這種情況中，服務開發人員必須提供衍生自 <xref:System.ServiceModel.Channels.WebContentTypeMapper> 的型別來正確地處理指定的內容型別，如下列範例程式碼所示。  
   
@@ -54,17 +54,17 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2. 如[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中所述，建立方案 WebContentTypeMapperSample。  
+2. 生成解決方案 WebContentTypeMapperSample.sln，如[構建 Windows 通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中所述。  
   
-3. 流覽至 `http://localhost/ServiceModelSamples/JCTMClientPage.htm` （請勿在瀏覽器中從專案目錄開啟 JCTMClientPage）。  
+3. 導航到`http://localhost/ServiceModelSamples/JCTMClientPage.htm`（不要從專案目錄中在瀏覽器中打開 JCTMClientPage.htm）。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Ajax\WebContentTypeMapper`  

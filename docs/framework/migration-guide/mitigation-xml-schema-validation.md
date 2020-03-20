@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 ms.openlocfilehash: 99cc1eae08697909d89e5c1e46cd604c7da543bc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457747"
 ---
 # <a name="mitigation-xml-schema-validation"></a>風險降低：XML 結構描述驗證
@@ -18,7 +18,7 @@ ms.locfileid: "73457747"
 ## <a name="impact"></a>影響  
  此變更的影響很小：根據結構描述規格的規定，因使用內含空白索引鍵的複合索引鍵而造成 `xsd:unique` 違規時，會出現結構描述驗證錯誤。  
   
-## <a name="mitigation"></a>風險降低  
+## <a name="mitigation"></a>降低  
  當複合索引鍵包含一個空白索引鍵時，可設定是否要偵測結構描述驗證錯誤：  
   
 - 自目標為 .NET Framework 4.6 的應用程式開始，預設值為啟用結構描述驗證錯誤偵測；但您也可以選擇不使用，如此便不會偵測結構描述驗證錯誤。  
@@ -35,6 +35,6 @@ ms.locfileid: "73457747"
  [!code-csharp[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/cs/program.cs#2)]
  [!code-vb[AppCompat.IgnoreEmptyKeySequences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/appcompat.ignoreemptykeysequences/vb/module1.vb#2)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [應用程式相容性](application-compatibility.md)

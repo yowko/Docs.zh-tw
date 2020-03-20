@@ -6,10 +6,10 @@ helpviewer_keywords:
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715790"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR 版本工具)
@@ -17,7 +17,7 @@ CLR 版本工具 (Clrver.exe) 會報告電腦上已安裝的所有通用語言�
   
  此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
- 在命令提示字元下輸入下列命令：  
+ 在命令提示字元中，請輸入下列項目：  
   
 ## <a name="syntax"></a>語法  
   
@@ -25,7 +25,7 @@ CLR 版本工具 (Clrver.exe) 會報告電腦上已安裝的所有通用語言�
 clrver [option]  
 ```  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 |選項|描述|  
 |------------|-----------------|  
@@ -54,7 +54,7 @@ clrver [option]
   
  `Clrver -all`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
 - [命令提示字元](developer-command-prompt-for-vs.md)

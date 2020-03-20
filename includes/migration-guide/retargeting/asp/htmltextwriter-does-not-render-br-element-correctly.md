@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 0ab6be6f2c6d8ebbe67051e4e3f967a325e654c8
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: e600b8249096eecb13f63ea00343a771a8c12b60
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67804432"
 ---
 ### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter 無法正確轉譯 `<br/>` 項目
@@ -12,8 +12,7 @@ ms.locfileid: "67804432"
 |---|---|
 |詳細資料|從 .NET Framework 4.6 開始，使用 <code>&lt;BR /&gt;</code> 項目呼叫 <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)> 和 <xref:System.Web.UI.HtmlTextWriter.RenderEndTag> 將會正確地只插入一個 <code>&lt;BR /&gt;</code> (而不是兩個)|
 |建議|如果應用程式需要額外的 <code>&lt;BR /&gt;</code> 標籤，則應該再次呼叫 <xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)>。 請注意，這項行為變更只會影響以 .NET Framework 4.6 或更新版本為目標的應用程式，因此另一個做法是以舊版 .NET Framework 為目標，以取得舊版行為。|
-|範圍|Edge|
+|影響範圍|Edge|
 |版本|4.6|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)?displayProperty=nameWithType></li></ul>|
-

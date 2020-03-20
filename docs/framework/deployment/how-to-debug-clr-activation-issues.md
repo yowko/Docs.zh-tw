@@ -5,10 +5,10 @@ helpviewer_keywords:
 - CLR activation, debugging issues
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 ms.openlocfilehash: 602ee3c88237a902d48339836fbe25f636ae9705
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716500"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>如何對 CLR 啟用問題進行偵錯
@@ -116,7 +116,7 @@ CLR 啟動記錄檔會提供大量有關 CLR 啟動的資料和裝載 API 的 CL
     532,205950.398,Launching feature-on-demand installation. CmdLine: C:\Windows\system32\fondue.exe /enable-feature:NetFx3
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [部署](index.md)
-- [如何：將應用程式設定為支援 .NET Framework 4 或更新版本](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [如何：將應用配置為支援 .NET 框架 4 或更高版本](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

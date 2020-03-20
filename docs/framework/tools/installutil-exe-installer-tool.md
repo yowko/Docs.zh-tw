@@ -14,19 +14,19 @@ helpviewer_keywords:
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 ms.openlocfilehash: caca946617c681ce6516b7184a9ea506cc67158d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105066"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (安裝程式工具)
 
 安裝程式工具是一種命令列公用程式，可讓您透過執行指定之組件中的安裝程式元件，來安裝和解除安裝伺服器資源。 這個工具可以與 <xref:System.Configuration.Install> 命名空間中的類別一起使用。
 
-此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
+此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
-在命令提示字元下輸入下列命令：
+在命令提示字元中，請輸入下列項目：
 
 ## <a name="syntax"></a>語法
 
@@ -42,15 +42,15 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 
 <a name="options"></a>
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 |選項|描述|
 |------------|-----------------|
 |`/h[elp]`<br /><br /> -或-<br /><br /> `/?`|顯示工具的命令語法和選項。|
-|`/help` *assembly*<br /><br /> -或-<br /><br /> `/?` *assembly*|顯示指定之組件中的個別安裝程式所辨識的其他選項，以及 InstallUtil.exe 的指令語法和選項。 這個選項會將每個安裝程式元件之 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 屬性所傳回的文字加入至 InstallUtil.exe 的説明文字。|
-|`/AssemblyName` "*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|指定組件的強式名稱，必須在全域組件快取中登錄此名稱。 您必須利用組件的版本、文化特性 (Culture) 和公開金鑰語彙基元 (Token) 以完整限定組件名稱。 必須以引號括住完整名稱。<br /><br /> 例如，"myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" 就是完整的組件名稱。|
-|`/InstallStateDir=[` *directoryName* `]`|指定 .InstallState 檔案的目錄，其中包含用於解除安裝組件的資料。 預設是包含組件的目錄。|
-|`/LogFile=`[*filename*]|指定記錄安裝進度的記錄檔名稱。 預設情況下，如果省略 `/LogFile` 選項，則會建立名為 *assemblyname*.InstallLog 的記錄檔。 如果省略 *filename*，則不會產生任何記錄檔。|
+|`/help`*程式集*<br /><br /> -或-<br /><br /> `/?`*程式集*|顯示指定之組件中的個別安裝程式所辨識的其他選項，以及 InstallUtil.exe 的指令語法和選項。 這個選項會將每個安裝程式元件之 <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> 屬性所傳回的文字加入至 InstallUtil.exe 的説明文字。|
+|`/AssemblyName`"*程式集名稱*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> ,Culture=*locale*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|指定組件的強式名稱，必須在全域組件快取中登錄此名稱。 您必須利用組件的版本、文化特性 (Culture) 和公開金鑰語彙基元 (Token) 以完整限定組件名稱。 必須以引號括住完整名稱。<br /><br /> 例如，"myAssembly, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0" 就是完整的組件名稱。|
+|`/InstallStateDir=[`*目錄名稱*`]`|指定 .InstallState 檔案的目錄，其中包含用於解除安裝組件的資料。 預設是包含組件的目錄。|
+|`/LogFile=`[*檔案名*]|指定記錄安裝進度的記錄檔名稱。 預設情況下，如果省略 `/LogFile` 選項，則會建立名為 *assemblyname*.InstallLog 的記錄檔。 如果省略 *filename*，則不會產生任何記錄檔。|
 |`/LogToConsole`={`true`&#124;`false`}|如果為 `true`，則會在主控台顯示輸出。 如果為 `false` (預設值)，則隱藏對主控台的輸出。|
 |`/ShowCallStack`|如果在安裝期間的任何時間點上發生例外狀況，則將呼叫堆疊輸出到記錄檔。|
 |`/u`[`ninstall`]|解除安裝指定的組件。 不同於其他選項，`/u` 會套用至所有組件 (與選項出現在命令列上的位置無關)。|
@@ -165,7 +165,7 @@ installutil /LogFile= /email=admin@mycompany.com myAssembly.exe
 installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallLog myTestAssembly.exe
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Configuration.Install>
 - [工具](index.md)

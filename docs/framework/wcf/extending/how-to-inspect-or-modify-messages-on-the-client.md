@@ -1,24 +1,24 @@
 ---
-title: 作法：檢查或修改用戶端上的訊息
+title: HOW TO：檢查或修改用戶端上的訊息
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 14c24c16a36be600881de402de50086dd18b30b4
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db1a99d2ed1f765e39815e6b6c70d6ada1db1d15
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70796980"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185531"
 ---
-# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>作法：檢查或修改用戶端上的訊息
-您可以藉由執行<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>並將其插入用戶端執行時間中，檢查或修改 WCF 用戶端上的傳入或傳出訊息。 如需詳細資訊，請參閱[擴充用戶端](extending-clients.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 如需完整的程式碼範例，請參閱[訊息](../samples/message-inspectors.md)偵測器範例。  
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>HOW TO：檢查或修改用戶端上的訊息
+您可以通過實現 並將 傳入<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>或傳出消息插入到用戶端運行時，檢查或修改 WCF 用戶端的傳入或傳出消息。 有關詳細資訊，請參閱[擴展用戶端](extending-clients.md)。 服務上對等的功能為 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>。 有關完整的代碼示例，請參閱[消息檢查器](../samples/message-inspectors.md)示例。  
   
 ### <a name="to-inspect-or-modify-messages"></a>檢查或修改訊息  
   
 1. 實作 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> 介面。  
   
-2. 根據您要插入用戶端訊息偵測器的範圍，實作 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>可讓您變更端點層級的行為。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>可讓您變更合約層級的行為。  
+2. 根據您要插入用戶端訊息偵測器的範圍，實作 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>。 <xref:System.ServiceModel.Description.IEndpointBehavior?displayProperty=nameWithType>允許您更改終結點級別的行為。 <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType>允許您更改合同級別的行為。  
   
-3. 在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，請先插入行為。 如需詳細資訊，請參閱[使用行為設定和擴充運行](configuring-and-extending-the-runtime-with-behaviors.md)時間。  
+3. 在 <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 上呼叫 <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 方法前，請先插入行為。 有關詳細資訊，請參閱[使用行為配置和擴展運行時](configuring-and-extending-the-runtime-with-behaviors.md)。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會依序顯示：  
@@ -38,13 +38,13 @@ public class SimpleMessageInspector : IClientMessageInspector
     public void AfterReceiveReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
     {  
         // Implement this method to inspect/modify messages after a message  
-        // is received but prior to passing it back to the client   
+        // is received but prior to passing it back to the client
         Console.WriteLine("AfterReceiveReply called");  
     }  
   
     public object BeforeSendRequest(ref System.ServiceModel.Channels.Message request, IClientChannel channel)  
     {  
-        // Implement this method to inspect/modify messages before they   
+        // Implement this method to inspect/modify messages before they
         // are sent to the service  
         Console.WriteLine("BeforeSendRequest called");  
         return null;  
@@ -79,7 +79,7 @@ public class SimpleEndpointBehavior : IEndpointBehavior
 ```  
   
 ```csharp  
-// Configuration element   
+// Configuration element
 public class SimpleBehaviorExtensionElement : BehaviorExtensionElement  
 {  
     public override Type BehaviorType  
@@ -101,7 +101,7 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
 <configuration>  
     <system.serviceModel>  
         <client>  
-            <endpoint address="http://localhost:8080/SimpleService/"   
+            <endpoint address="http://localhost:8080/SimpleService/"
                       binding="wsHttpBinding"
                       behaviorConfiguration="clientInspectorsAdded"
                       contract="ServiceReference1.IService1"  

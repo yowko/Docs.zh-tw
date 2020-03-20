@@ -10,48 +10,48 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 19ebbfba477eeba253a7af0742953cc6a4d45a0e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 093b68d31e03094bedefa96a2f2d53eb3d84edf0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088524"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155007"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<為 Connectionmanagement 專案新增 > 元素（網路設定）
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<添加連接管理>元素（網路設置）
 將 IP 位址或 DNS 名稱加入連線管理清單中。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionmanagement 專案 >** ](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**新增 >**
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<連接管理>**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<添加>**
 
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<add   
-  address="address expression"   
-  maxconnection="integer"   
+<add
+  address="address expression"
+  maxconnection="integer"
 />  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**說明**|  
+|**屬性**|**描述**|  
 |-------------------|---------------------|  
 |`address`|描述 IP 位址或 DNS 名稱的字串。|  
 |`maxconnection`|允許連接到伺服器的連線數目上限。 如果未提供，預設值為 2。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**Element**|**描述**|  
 |-----------------|---------------------|  
-|[Connectionmanagement 專案](connectionmanagement-element-network-settings.md)|指定連接至網路主機的連線數目上限。|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|指定連接至網路主機的連線數目上限。|  
   
 ## <a name="remarks"></a>備註  
  `address` 屬性的值應該是表示所有連線的星號，或是 `<schema>://<idn_hostname>[:<port>]` 格式的字串。  
@@ -62,7 +62,7 @@ ms.locfileid: "74088524"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會將應用程式設定為使用伺服器 `www.contoso.com` 的四個連接，以及與其他所有伺服器之間的兩個連接。  
+ 下面的示例將應用程式佈建為使用到伺服器`www.contoso.com`的四個連接和到所有其他伺服器的兩個連接。  
   
 ```xml  
 <configuration>  
@@ -75,8 +75,8 @@ ms.locfileid: "74088524"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [網路設定結構描述](index.md)
+- [網路設置架構](index.md)

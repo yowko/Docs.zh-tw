@@ -9,53 +9,53 @@ helpviewer_keywords:
 - dependentAssembly element
 - <dependentAssembly> element
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
-ms.openlocfilehash: 33309ed89b4d31580da5de3aeb38e9e1fd8ae4d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2de8c752867d00708173d11d1851f415a2e8518d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73117589"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154201"
 ---
-# <a name="dependentassembly-element"></a>\<dependentAssembly > 元素
-封裝每一個組件的繫結原則和組件位置。 針對每個元件使用一個 `dependentAssembly` 元素。  
+# <a name="dependentassembly-element"></a>\<依存性程式集>元素
+封裝每一個組件的繫結原則和組件位置。 為每個程式集`dependentAssembly`使用一個元素。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<dependentAssembly >**  
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<運行時>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<程式集綁定>**](assemblybinding-element-for-runtime.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<從屬裝配>**  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<dependentAssembly>   
+<dependentAssembly>
 </dependentAssembly>  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
  無。  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|`assemblyIdentity`|包含元件的識別資訊。 此元素必須包含在每個 `dependentAssembly` 元素中。|  
-|`codeBase`|指定如果電腦上未安裝共用元件，執行時間可以在何處找到。|  
+|`assemblyIdentity`|包含有關程式集的標識資訊。 此元素必須包含在每個`dependentAssembly`元素中。|  
+|`codeBase`|指定運行時在未在電腦上安裝共用組件時可以找到共用組件的位置。|  
 |`bindingRedirect`|將一個組件版本重新導向至另一個版本。|  
-|`publisherPolicy`|指定執行時間是否套用此元件的發行者原則。|  
+|`publisherPolicy`|指定運行時是否為此程式集應用發行者策略。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`assemblyBinding`|包含有關組件版本重新導向和組件位置的資訊。|  
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`runtime`|包含有關組件繫結和記憶體回收的資訊。|  
   
 ## <a name="example"></a>範例  
- 下列範例顯示如何封裝兩個元件的元件資訊。  
+ 下面的示例演示如何封裝兩個程式集的程式集資訊。  
   
 ```xml  
 <configuration>  
@@ -78,7 +78,7 @@ ms.locfileid: "73117589"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段設定結構描述](index.md)
 - [組態檔結構描述](../index.md)

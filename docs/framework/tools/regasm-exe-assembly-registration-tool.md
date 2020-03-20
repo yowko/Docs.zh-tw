@@ -8,10 +8,10 @@ helpviewer_keywords:
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104955"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (組件登錄工具)
@@ -20,7 +20,7 @@ ms.locfileid: "73104955"
 
 若要執行此工具，請使用 Visual Studio 的開發人員命令提示字元。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
-在命令提示字元下輸入下列命令：
+在命令提示字元中，請輸入下列項目：
 
 ## <a name="syntax"></a>語法
 
@@ -32,19 +32,19 @@ regasm assemblyFile [options]
 
 |參數|描述|
 |---------------|-----------------|
-|*assemblyFile*|要向 COM 註冊的組件。|
+|*程式集檔*|要向 COM 註冊的組件。|
 
 |選項|描述|
 |------------|-----------------|
-|**/codebase**|在登錄中建立一個程式碼基底項目。 程式碼基底項目會指定未安裝於全域組件快取中之組件的檔案路徑。 如果您將接著安裝要在全域組件快取中註冊的組件，則不應該指定這個選項。 您使用 **/codebase** 選項指定的 *assemblyFile* 引數必須是[強式名稱組件](../../standard/assembly/strong-named.md)。|
-|**/registered**|指定這個工具只會參考已註冊的類型程式庫。|
+|**/代碼庫**|在登錄中建立一個程式碼基底項目。 程式碼基底項目會指定未安裝於全域組件快取中之組件的檔案路徑。 如果您將接著安裝要在全域組件快取中註冊的組件，則不應該指定這個選項。 您使用 **/codebase** 選項指定的 *assemblyFile* 引數必須是[強式名稱組件](../../standard/assembly/strong-named.md)。|
+|**/註冊**|指定這個工具只會參考已註冊的類型程式庫。|
 |**/asmpath:directory**|指定包含組件參考的目錄。 必須與 **/regfile** 選項一起使用。|
-|**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|
-|**/regfile** [**:** *regFile*]|產生組件的指定 .reg 檔，其中包含所需的登錄項目。 指定這個選項並不會變更登錄。 這個選項不可與 **/u** 或 **/tlb** 選項一起使用。|
+|**/諾戈戈**|隱藏 Microsoft 程式啟始資訊顯示。|
+|**/註冊檔*****：** *正月檔*||產生組件的指定 .reg 檔，其中包含所需的登錄項目。 指定這個選項並不會變更登錄。 這個選項不可與 **/u** 或 **/tlb** 選項一起使用。|
 |**/silent** 或 **/s**|隱藏顯示成功訊息。|
-|**/tlb** [**:** *typeLibFile*]|從指定的組件中產生類型程式庫，其中包含組件內所定義之可存取類型的定義。|
+|**/tlb** =**：** *類型 LibFile*||從指定的組件中產生類型程式庫，其中包含組件內所定義之可存取類型的定義。|
 |**/unregister** 或 **/u**|移除註冊 *assemblyFile* 中所找到的可建立類別。 省略這個選項會造成 Regasm.exe 註冊組件中可建立的類別。|
-|**/verbose**|指定詳細資訊模式，與 **/tlb** 選項一起指定時，顯示需要產生型別程式庫之任何參考組件的清單。|
+|**/詳細**|指定詳細資訊模式，與 **/tlb** 選項一起指定時，顯示需要產生型別程式庫之任何參考組件的清單。|
 |**/?** 或 **/help**|顯示工具的命令語法和選項。|
 
 > [!NOTE]
@@ -82,7 +82,7 @@ regasm myTest.dll /regfile:myTest.reg
 regasm myTest.dll /tlb:myTest.tlb
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
 - [Tlbexp.exe (類型程式庫匯出工具)](tlbexp-exe-type-library-exporter.md)

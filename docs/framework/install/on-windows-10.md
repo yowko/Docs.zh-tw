@@ -4,10 +4,10 @@ description: 了解如何在 Windows 10 或 Windows Server 2016 上安裝 .NET F
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: eed15b9088d6ba46d8f5bc6d16ba779dd6115b0d
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965967"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>在 Windows 10 和 Windows Server 2016 以及更新版本上安裝 .NET Framework
@@ -72,12 +72,12 @@ ms.locfileid: "76965967"
 
 如需所有所有可下載之 .NET Framework 版本的清單，請參閱 [.NET 下載](https://dotnet.microsoft.com/download)頁面。
 
-## <a name="help"></a>說明
+## <a name="help"></a>説明
 
 若無法安裝正確的 .NET Framework 版本，可[連絡 Microsoft 取得協助](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [NET Downloads](https://dotnet.microsoft.com/download) (.NET 下載)
+- [.NET 下載](https://dotnet.microsoft.com/download)
 - [疑難排解 .NET Framework 安裝和解除安裝遭封鎖的問題](troubleshoot-blocked-installations-and-uninstallations.md)
 - [安裝適用於開發人員的 .NET Framework](guide-for-developers.md)

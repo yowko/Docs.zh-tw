@@ -8,21 +8,21 @@ helpviewer_keywords:
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73974961"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework 的版本相容性
 
 回溯相容性表示針對特定平台版本開發的應用程式將會在該平台的較新版本上執行。 .NET Framework 嘗試最大化回溯相容性：針對某一個 .NET Framework 版本撰寫的原始程式碼應該在較新版本的 .NET Framework 上編譯，而且在某一個 .NET Framework 版本上執行之二進位檔的行為應該與較新版本的 .NET Framework 相同。
 
-## <a name="Apps"></a> 應用程式的版本相容性
+## <a name="version-compatibility-for-apps"></a><a name="Apps"></a>應用的版本相容性
 
 根據預設，應用程式會在其建置所針對的 .NET Framework 版本上執行。 如果該版本不存在，且應用程式組態檔不會定義支援的版本，則可能會發生 .NET Framework 初始化錯誤。 在此例中，嘗試執行應用程式的作業將會失敗。
 
-若要定義應用程式執行所在的特定版本，請將一個或多個 [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) 項目新增至應用程式的組態檔。 每一個 `<supportedRuntime>` 項目都會列出支援的執行階段版本，最先指定的是最優先的版本，而最後指定的則是優先順序最低的版本。
+要定義應用運行的特定版本，請向應用的設定檔中添加一個或多個[\<受支援的 Runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md)元素。 每一個 `<supportedRuntime>` 項目都會列出支援的執行階段版本，最先指定的是最優先的版本，而最後指定的則是優先順序最低的版本。
 
 ```xml
 <configuration>
@@ -49,7 +49,7 @@ ms.locfileid: "73974961"
 
 如果您的應用程式或元件在 .NET Framework 4.5 (包括其點版本，.NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8) 上無法如預期運作，請使用下列檢查清單：
 
-- 如果您的應用程式是在從 .NET Framework 4.0 開始的任何 .NET Framework 版本上執行，請參閱[應用程式相容性](application-compatibility.md)，以產生目標 .NET Framework 版本與執行應用程式的版本之間的變更清單。
+- 如果應用已開發為以 .NET 框架 4.0 開頭的任何版本的 .NET Framework 上運行，請參閱[應用程式相容性](application-compatibility.md)，以在目標 .NET Framework 版本和應用運行的版本之間生成更改清單。
 
 - 如果您有 .NET Framework 3.5 應用程式，另請參閱 [.NET Framework 4 移轉問題](../migration-guide/net-framework-4-migration-issues.md)。
 
@@ -67,10 +67,10 @@ ms.locfileid: "73974961"
 
 如果您找不到適當的因應措施來解決問題，請記得 .NET Framework 4.5 (或其點版本其中之一) 與版本 1.1、2.0 和 3.5 並存執行，且是取代第 4 版的就地更新。 若是以 1.1、2.0 和 3.5 版為目標的應用程式，您可以在目標電腦上安裝適當的 .NET Framework 版本，以便在最佳環境中執行應用程式。 如需並存執行的詳細資訊，請參閱[並存執行](../deployment/side-by-side-execution.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [新功能](../whats-new/index.md)
-- [類別庫中已淘汰的功能](../whats-new/whats-obsolete.md)
+- [類別庫中的過時功能](../whats-new/whats-obsolete.md)
 - [應用程式相容性](../migration-guide/application-compatibility.md)
-- [.NET Framework 官方支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
+- [.NET 框架官方支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [.NET Framework 4 移轉問題](../migration-guide/net-framework-4-migration-issues.md)

@@ -2,12 +2,12 @@
 title: KEY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cbaa97a8-c89c-4460-8c74-00474695789f
-ms.openlocfilehash: 14c0b5d273b26c71c9c63e8bbbcef863ac95a5f3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 894a9d41aa3a14ad66b537433aa315823a299f95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319705"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150165"
 ---
 # <a name="key-entity-sql"></a>KEY (Entity SQL)
 擷取參考的索引鍵，或實體運算式的索引鍵。  
@@ -24,7 +24,7 @@ KEY(createref_expression)
  在下列範例中，Key 運算子會傳遞 BadOrder 實體的參考，並傳回那個參考的索引鍵部分。 在上述情形中，單一個欄位的資料錄類型對應至 `Id` 屬性。  
   
 ```sql  
-select Key( CreateRef(LOB.BadOrders, row(o.Id)) )   
+select Key( CreateRef(LOB.BadOrders, row(o.Id)) )
 from LOB.Orders as o  
 ```  
   
@@ -37,9 +37,9 @@ from LOB.Orders as o
   
  [!code-sql[DP EntityServices Concepts#KEY](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#key)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Entity SQL 參考](entity-sql-reference.md)
 - [CREATEREF](createref-entity-sql.md)
-- [REF](ref-entity-sql.md)
+- [裁判](ref-entity-sql.md)
 - [DEREF](deref-entity-sql.md)

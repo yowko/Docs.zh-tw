@@ -1,5 +1,5 @@
 ---
-title: CoreResponseData。 m_StatusCode 欄位
+title: 核心回應資料.m_StatusCode欄位
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 8abe619a57cc61fc3502807f60deccbbd578f382
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: dfed9a748e959f0f751408566c7cbb4d2fa13e3c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740998"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156069"
 ---
-# <a name="coreresponsedatam_statuscode-field"></a>CoreResponseData\_StatusCode 欄位
+# <a name="coreresponsedatam_statuscode-field"></a>核心回應資料.m\_狀態碼欄位
 
-`CoreResponseData.m_StatusCode` 是包含回應狀態的 <xref:System.Net.HttpStatusCode>。
+`CoreResponseData.m_StatusCode`包含<xref:System.Net.HttpStatusCode>回應的狀態。
 
 ## <a name="syntax"></a>語法
   
@@ -28,14 +28,14 @@ public HttpStatusCode m_StatusCode
 ```
 
 > [!WARNING]
-> 此 API 不適合直接在您的程式碼中使用。 相反地，您應該使用 <xref:System.Diagnostics.DiagnosticSource> 來攔截網路程式碼。 請參閱[DiagnosticSource 使用者手冊](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
-> 
-> 在任何情況下，Microsoft 不支援在生產應用程式中使用此類別。
+> 此 API 不應直接用於代碼。 相反，您應該使用 掛鉤<xref:System.Diagnostics.DiagnosticSource>網路代碼。 請參閱[診斷源使用者指南](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)。
+>
+> 在任何情況下，Microsoft 都不支援在生產應用程式中使用此類。
 
 ## <a name="requirements"></a>需求
 
-**命名空間：** <xref:System.Net>
+**命名空間：**<xref:System.Net>
 
-**元件：** 系統（在 System .dll 中）
+**裝配：** 系統（系統中）
 
-**.NET Framework 版本：** 自2.0 開始提供。
+**.NET 框架版本：** 自 2.0 起可用。

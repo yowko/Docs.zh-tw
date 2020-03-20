@@ -8,19 +8,19 @@ helpviewer_keywords:
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 ms.openlocfilehash: 4503e2cff18f4aa901d20c76cfe4076a7fed3600
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715771"
 ---
 # <a name="net-framework-tools"></a>.NET Framework 工具
 
 .NET Framework 工具可讓您更輕鬆地建立、部署和管理以 .NET Framework 為目標的應用程式和元件。
 
-本節提及的大部分 .NET Framework 工具會隨 Visual Studio 自動安裝 若要下載 Visual Studio，請前往 [Visual Studio 下載](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)頁面。
+本節提及的大部分 .NET Framework 工具會隨 Visual Studio 自動安裝  若要下載 Visual Studio，請前往 [Visual Studio 下載](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)頁面。
 
-您可以從命令列執行所有工具，但組件快取檢視器（*shfusion.dll*）除外。 您必須從 [檔案瀏覽器] 存取*shfusion.dll* 。
+除了組件快取檢視器 *（Shfusion.dll*） 之外，可以從命令列運行所有工具。 您必須從檔資源管理器訪問*Shfusion.dll。*
   
 執行命令列工具的最佳方式，是使用 Visual Studio 的 [開發人員命令提示字元]。 這些公用程式可讓您輕鬆執行工具，而不必巡覽至安裝資料夾。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
@@ -36,7 +36,7 @@ ms.locfileid: "75715771"
 將 COM 類型程式庫中的類型定義轉換為 Windows Form 控制項中的 ActiveX 控制項。
 
 - [Caspol.exe (程式碼存取安全性原則工具)](caspol-exe-code-access-security-policy-tool.md)  
-可讓您檢視和設定電腦原則層級、使用者原則層級和企業原則層級的安全性原則。 在 .NET Framework 4 與更新版本中，除非將 [\<legacyCasPolicy> 元素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)設定為 `true`，否則此工具並不會影響程式碼存取安全性 (CAS) 原則。 如需詳細資訊，請參閱[安全性變更](../security/security-changes.md)。
+可讓您檢視和設定電腦原則層級、使用者原則層級和企業原則層級的安全性原則。 在 .NET 框架 4 及更高版本中，此工具不會影響代碼訪問安全 （CAS） 策略，`true`[\<除非舊 CasPolicy> 元素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)設置為 。 如需詳細資訊，請參閱[安全性變更](../security/security-changes.md)。
 
 - [Cert2spc.exe (軟體發行者憑證測試工具)](cert2spc-exe-software-publisher-certificate-test-tool.md)  
 從一個或多個 X.509 憑證建立軟體發行者憑證 (SPC)。 這個工具僅供測試用。
@@ -45,10 +45,10 @@ ms.locfileid: "75715771"
 管理憑證、憑證信任清單 (CTL) 和憑證廢止清單 (CRL)。
 
 - [Clrver.exe (CLR 版本工具)](clrver-exe-clr-version-tool.md)  
-報告電腦上所有已安裝的 common language runtime （CLR）版本。
+報告電腦上通用語言運行時 （CLR） 的所有已安裝版本。
 
 - [命令提示字元](developer-command-prompt-for-vs.md)  
-可讓您更輕鬆地使用 .NET Framework 工具。 它是命令提示字元，可自動設定特定的環境變數。
+使您能夠更輕鬆地使用 .NET 框架工具。 它是命令提示字元，可自動設定特定的環境變數。
 
 - [CorFlags.exe (CorFlags 轉換工具)](corflags-exe-corflags-conversion-tool.md)  
 可讓您設定可攜式執行檔 (PE) 影像之標頭的 CorFlags 區段。
@@ -56,7 +56,7 @@ ms.locfileid: "75715771"
 - [Fuslogvw.exe (組件繫結記錄檔檢視器)](fuslogvw-exe-assembly-binding-log-viewer.md)  
 顯示有關組件繫結的資訊，可以協助您診斷 .NET Framework 為何不能在執行階段時找到組件。
 
-- [Gacutil.exe (全域組件快取工具)](gacutil-exe-gac-tool.md)  
+- [Gacutil.exe（全球裝配緩存工具）](gacutil-exe-gac-tool.md)  
 可讓您檢視和操作全域組件快取的內容並下載快取。
 
 - [Ilasm.exe (IL 組譯工具)](ilasm-exe-il-assembler.md)  
@@ -66,16 +66,16 @@ ms.locfileid: "75715771"
 使用包含中繼語言 (IL) 程式碼的可攜式執行檔 (PE)，並建立可以輸入至 IL 組譯工具 (Ilasm.exe) 的文字檔。
 
 - [Installutil.exe (安裝程式工具)](installutil-exe-installer-tool.md)  
-可讓您藉由執行所指定組件的 Installer 元件，來安裝和解除安裝伺服器資源 (使用 <xref:System.Configuration.Install> 命名空間中的類別)。
+可讓您藉由執行所指定組件的 Installer 元件，來安裝和解除安裝伺服器資源  (使用 <xref:System.Configuration.Install> 命名空間中的類別)。
 
 - [Lc.exe (授權編譯器)](lc-exe-license-compiler.md)  
-讀取包含授權資訊的文字檔，並產生可以內嵌在 common language runtime 可執行檔中做為資源的*許可證*檔。
+讀取包含許可資訊的文字檔，並生成可以嵌入作為資源的常見語言運行時可*執行檔的文本*檔。
 
 - [Mage.exe (資訊清單產生和編輯工具)](mage-exe-manifest-generation-and-editing-tool.md)  
 可讓您建立、編輯和簽署應用程式以及部署資訊清單。 由於 *Mage.exe* 是命令列工具，因此可以從批次指令碼及其他 Windows 應用程式 (包括 ASP.NET 應用程式) 中執行。
 
-- [MageUI.exe (資訊清單產生和編輯工具、圖形用戶端)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
-支援與命令列工具 Mage.exe 相同的功能，但使用 Windows 架構使用者介面 (UI)。 支援與命令列工具*mage.exe*相同的功能，但使用以 Windows 為基礎的使用者介面（UI）。
+- [MageUI.exe (資訊清單產生和編輯工具，圖形化用戶端)](mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)  
+支援與命令列工具 Mage.exe 相同的功能，但使用 Windows 架構使用者介面 (UI)。 支援與命令列工具*Mage.exe*相同的功能，但使用基於 Windows 的使用者介面 （UI）。
 
 - [MDbg.exe (.NET Framework 命令列偵錯工具)](mdbg-exe.md)  
 協助工具廠商和應用程式開發人員尋找並修復以 .NET Framework 通用語言執行平台為目標的程式中的 Bug。 這個工具使用執行階段偵錯 API 來提供偵錯服務。
@@ -99,7 +99,7 @@ ms.locfileid: "75715771"
 載入並註冊組件、產生並安裝類型程式庫至指定的 COM+ 1.0 版應用程式，以及設定您已利用程式設計方式加入至類別的服務。
 
 - [Resgen.exe (資源檔產生器)](resgen-exe-resource-file-generator.md)  
-將文字檔（ *.txt*或 *. .restext*）和 XML 架構資源格式（ *.resx*）檔案轉換為 common language runtime 二進位（ *.resources*）檔案，這些檔案可以內嵌在執行時間二進位可執行檔中，或編譯成附屬元件。
+將文本 *（.txt*或 *.restext）* 檔和基於 XML 的資源格式 *（.resx*） 檔轉換為可嵌入到運行時二進位可執行檔或編譯到附屬程式集中的通用語言運行時二進位檔案 *（.resource）* 檔。
 
 - [SecAnnotate.exe (.NET Security Annotator 工具)](secannotate-exe-net-security-annotator-tool.md)  
 識別組件的 `SecurityCritical` 和 `SecuritySafeCritical` 的部分。
@@ -110,7 +110,7 @@ ms.locfileid: "75715771"
 - [Sn.exe (強式名稱工具)](sn-exe-strong-name-tool.md)  
 幫助以強式名稱 (Strong Name) 建立組件。 這個工具提供了金鑰管理、簽章產生和簽章驗證的選項。
 
-- [SOS.dll (SOS 偵錯延伸模組)](sos-dll-sos-debugging-extension.md)  
+- [SOS.dll (SOS 偵錯擴充功能)](sos-dll-sos-debugging-extension.md)  
 提供內部通用語言執行平台環境的相關資訊，以協助您在 WinDbg.exe 偵錯工具和 Visual Studio 中偵錯 Managed 程式。
 
 - [SqlMetal.exe (程式碼產生工具)](sqlmetal-exe-code-generation-tool.md)  
@@ -126,10 +126,10 @@ ms.locfileid: "75715771"
 將 COM 類型程式庫中找到的類型定義轉換為通用語言執行平台組件中的等效定義。
 
 - [Winmdexp.exe (Windows 執行階段中繼資料匯出工具)](winmdexp-exe-windows-runtime-metadata-export-tool.md)  
-將編譯為*winmdobj*檔案的 .NET Framework 元件匯出到 Windows 執行階段元件中，該元件會封裝為包含 Windows 執行階段中繼資料和執行資訊的*winmd*檔案。
+將編譯為 *.winmdobj*檔的 .NET Framework 程式集匯出到 Windows 運行時元件中，該元件打包為包含 Windows 運行時中繼資料和實現資訊的 *.winmd*檔。
 
 - [Winres.exe (Windows Forms 資源編輯器)](winres-exe-windows-forms-resource-editor.md)  
-協助您將 Windows Forms 所使用的使用者介面（UI）資源（ *.resx*或 *.resources*檔案）當地語系化。 您可以解譯字串，然後調整大小、移動和隱藏控制項來容納當地語系化的字串。
+説明您當地語系化 Windows 表單使用的使用者介面 *（UI） 資源（.resx*或 *.resource*檔）。 您可以解譯字串，然後調整大小、移動和隱藏控制項來容納當地語系化的字串。
 
 ## <a name="related-sections"></a>相關章節
 

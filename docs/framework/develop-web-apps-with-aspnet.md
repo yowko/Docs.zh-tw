@@ -7,10 +7,10 @@ helpviewer_keywords:
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
 ms.openlocfilehash: 9f939fa0f03aa00ea35405ce569d762486f4cb33
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73975647"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>使用 ASP.NET 開發 Web 應用程式
@@ -35,10 +35,10 @@ ASP.NET Core 是 ASP.NET 4.x 的重新設計。 ASP.NET Core 透過 ASP.NET 提�
 
 如需 ASP.NET Core](/aspnet/core) 的詳細資訊，請參閱：
 
-- [開始使用 Razor 頁面](/aspnet/core/tutorials/razor-pages/razor-pages-start)
-- [建立 Web API](/aspnet/core/tutorials/first-web-api)
+- [開始使用 Razor Pages](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+- [創建 Web API](/aspnet/core/tutorials/first-web-api)
 - [在 Azure 中建立 ASP.NET Core Web 應用程式](/azure/app-service/app-service-web-get-started-dotnet)
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [開發指南](development-guide.md)

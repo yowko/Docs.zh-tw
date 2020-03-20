@@ -2,12 +2,12 @@
 title: 使用 Pick 活動
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: b0997254615ca962fd386dea70c67a8edb36c90a
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 7ca4527cc1d5bc90ed1ec4df3eef6cf2d8b93b4e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715519"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142611"
 ---
 # <a name="using-the-pick-activity"></a>使用 Pick 活動
 這個範例示範如何使用 <xref:System.Activities.Statements.Pick> 活動。
@@ -19,10 +19,10 @@ ms.locfileid: "74715519"
 ## <a name="demonstrates"></a>示範
  <xref:System.Activities.Statements.Pick> 活動。
 
-## <a name="discussion"></a>討論
+## <a name="discussion"></a>討論區
  此範例包含設計工具工作流程和程式碼工作流程。
 
- 設計工具工作流程範例的設計工具版本會示範如何在設計工具中建立工作流程。 包含下列檔案：
+ 設計器工作流 示例的設計器版本演示如何在設計器中創建工作流。 包含下列檔案：
 
 - Program.cs：包含執行範例工作流程的 `Main` 函數。
 
@@ -30,7 +30,7 @@ ms.locfileid: "74715519"
 
 - Sequence1.xaml：在使用 Pick 的設計工具中建立工作流程。
 
- 自動程式碼工作流程範例的程式碼版本示範如何在設計工具中建立工作流程。 包含下列檔案：
+ 編碼工作流 示例的編碼版本演示如何在設計器中創建工作流。 包含下列檔案：
 
 - Program.cs：包含執行範例工作流程的 `Main` 函數。
 
@@ -38,7 +38,7 @@ ms.locfileid: "74715519"
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1. 使用 Visual Studio 2010，開啟 [挑選 .sln 方案檔]。
+1. 使用 Visual Studio 2010，打開 Pick.sln 解決方案檔。
 
 2. 若要建置此方案，請按 CTRL+SHIFT+B。
 
@@ -46,9 +46,9 @@ ms.locfileid: "74715519"
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

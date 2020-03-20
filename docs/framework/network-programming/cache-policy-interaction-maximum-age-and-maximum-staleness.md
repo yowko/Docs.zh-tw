@@ -10,10 +10,10 @@ helpviewer_keywords:
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
 ms.openlocfilehash: e21cfc28407ba67afdce8d72e5e52c12ab359059
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048833"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>快取原則互動 — 最長使用期限和最長過時
@@ -38,8 +38,8 @@ ms.locfileid: "71048833"
 ## <a name="see-also"></a>另請參閱
 
 - [網路應用程式的快取管理](cache-management-for-network-applications.md)
-- [快取原則](cache-policy.md)
+- [緩存策略](cache-policy.md)
 - [以位置為基礎的快取原則](location-based-cache-policies.md)
-- [以時間為基礎的快取原則](time-based-cache-policies.md)
+- [Time-Based Cache Policies](time-based-cache-policies.md)
 - [設定網路應用程式的快取功能](configuring-caching-in-network-applications.md)
-- [快取原則互動 - 最長使用期限和最小有效期限](cache-policy-interaction-maximum-age-and-minimum-freshness.md)
+- [快取原則互動 — 最長使用期限和最小有效期限](cache-policy-interaction-maximum-age-and-minimum-freshness.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 ms.openlocfilehash: ffc275c588775fb79da276be904ada90a5a31bad
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75937920"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Security Annotator 工具)
@@ -35,13 +35,13 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/d:`*目錄*<br /><br /> 或<br /><br /> `/referencedir:`*目錄*|指定要在註釋期間搜尋相依組件的目錄。|  
 |`/i`<br /><br /> 或<br /><br /> `/includesignatures`|在註釋報告檔中包含延伸的簽章資訊。|  
 |`/n`<br /><br /> 或<br /><br /> `/nogac`|撤銷對全域組件快取中參考組件的搜尋。|  
-|`/o:`*輸出 .xml*<br /><br /> 或<br /><br /> `/out:`*輸出 .xml*|指定輸出的註釋檔案。|  
+|`/o:` *output.xml*<br /><br /> 或<br /><br /> `/out:` *output.xml*|指定輸出的註釋檔案。|  
 |`/p:` *maxpasses*<br /><br /> 或<br /><br /> `/maximumpasses:` *maxpasses*|指定停止產生新註釋前，嘗試傳遞組件註釋的最大值。|  
 |`/q`<br /><br /> 或<br /><br /> `/quiet`|指定無訊息模式，在此模式中，註釋工具不會輸出狀態訊息，只會輸出錯誤訊息。|  
-|`/r:`*元件*<br /><br /> 或<br /><br /> `/referenceassembly:`*元件*|註釋期間解析相依組件時包含指定的組件。 參考組件的優先順序高於參考路徑中的組件。|  
-|`/s:` *rulename*<br /><br /> 或<br /><br /> `/suppressrule:` *rulename*|隱藏執行輸入組件上的指定透明度規則。|  
+|`/r:`*程式集*<br /><br /> 或<br /><br /> `/referenceassembly:`*程式集*|註釋期間解析相依組件時包含指定的組件。 參考組件的優先順序高於參考路徑中的組件。|  
+|`/s:`*規則名稱*<br /><br /> 或<br /><br /> `/suppressrule:`*規則名稱*|隱藏執行輸入組件上的指定透明度規則。|  
 |`/t`<br /><br /> 或<br /><br /> `/forcetransparent`|強制 Annotator 工具將所有不具透明度註釋的組件視為完全透明。|  
-|`/t`:*組件*<br /><br /> 或<br /><br /> `/forcetransparent`:*組件*|強制指定的組件呈現透明，無論目前組件層級註釋為何。|  
+|`/t`：*程式集*<br /><br /> 或<br /><br /> `/forcetransparent`：*程式集*|強制指定的組件呈現透明，無論目前組件層級註釋為何。|  
 |||  
 |`/v`<br /><br /> 或<br /><br /> `/verify`|只用於驗證組件的註釋是否正確，如果組件並未驗證，請勿為了找出所有必要的註釋而嘗試多次傳遞。|  
 |`/x`<br /><br /> 或<br /><br /> `/verbose`|指定標註提供詳細輸出。|  

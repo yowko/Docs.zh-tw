@@ -3,10 +3,10 @@ title: 應用程式開發中的 PNRP
 ms.date: 03/30/2017
 ms.assetid: 265615d6-4423-4b5d-8626-752e456f4f4e
 ms.openlocfilehash: f9a408fbd7fbbb77c0fd5208926f4b06fcf23b38
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74428201"
 ---
 # <a name="pnrp-in-application-development"></a>應用程式開發中的 PNRP

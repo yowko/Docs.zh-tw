@@ -7,17 +7,17 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework], profiling
 ms.assetid: 14c68e84-657e-49c2-aa8b-4978dbaf4454
 ms.openlocfilehash: 40c464a6070ad7fd4c21ad4ea366e907ca1e4a31
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76868157"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>分析 (Unmanaged API 參考)
 
 分析 API 可讓分析工具透過通用語言執行平台 (CLR) 監視程式的執行。
 
-## <a name="in-this-section"></a>本章節內容
+## <a name="in-this-section"></a>本節內容
 
  [分析概觀](profiling-overview.md) 說明 CLR 提供來支援在 .NET Framework 環境中進行分析的服務與介面。
 

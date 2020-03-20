@@ -7,10 +7,10 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework], strong naming
 ms.assetid: 428c68b6-a7b4-44be-b280-75905f46612c
 ms.openlocfilehash: 7d18513450111d58b5d26fd834addd465cfc4267
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140640"
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>強式命名 (Unmanaged API 參考)
@@ -18,7 +18,7 @@ ms.locfileid: "73140640"
   
  使用強式名稱簽署組件，就會將公開金鑰加密加入含有組件資訊清單的檔案中。 強式名稱簽署可協助驗證名稱唯一性，防止名稱冒用，並且在解析參考時為呼叫者提供唯一身分識別。 但是，並沒有任何信任等級與強式名稱關聯。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 > [!NOTE]
 > 從 .NET Framework 4 開始，所有這些函式都已過時。 如需建議的替代函式，請參閱 [ICLRStrongName](../hosting/iclrstrongname-interface.md) 介面。  
@@ -104,7 +104,7 @@ ms.locfileid: "73140640"
  [PublicKeyBlob 結構](publickeyblob-structure.md)  
  代表公開/私密金鑰組的公開金鑰 (二進位格式)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICLRStrongName 介面](../hosting/iclrstrongname-interface.md)
-- [Unmanaged API 參考](../index.md)
+- [非託管 API 引用](../index.md)

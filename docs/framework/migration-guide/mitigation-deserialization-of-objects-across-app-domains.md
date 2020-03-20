@@ -3,10 +3,10 @@ title: 緩和：在應用程式定義域之間還原序列化物件
 ms.date: 03/30/2017
 ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 ms.openlocfilehash: e2d90a77cab699646bd31eaa162d1bd1744fd51b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457920"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>緩和：在應用程式定義域之間還原序列化物件
@@ -35,7 +35,7 @@ ms.locfileid: "73457920"
   
 6. 由於邏輯呼叫內容中的類型無法在預設應用程式定義域中解析，因此會擲回例外狀況。  
   
-## <a name="mitigation"></a>風險降低  
+## <a name="mitigation"></a>降低  
  若要解決這個問題，請執行下列動作  
   
 1. 尋找擲回例外狀況時，在呼叫堆疊上的 `get_Evidence` 呼叫。 例外狀況可以是例外狀況的任一個大型子集，包括 <xref:System.IO.FileNotFoundException> 和 <xref:System.Runtime.Serialization.SerializationException>。  
@@ -46,6 +46,6 @@ ms.locfileid: "73457920"
     System.Configuration.ConfigurationManager.GetSection("system.xml/xmlReader");  
     ```
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [應用程式相容性](application-compatibility.md)

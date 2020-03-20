@@ -6,10 +6,10 @@ helpviewer_keywords:
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 ms.openlocfilehash: 42d0e2d85517d4a8fb443db9b63e6b893267caca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121591"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>建立並存執行元件的方針
@@ -60,7 +60,7 @@ ms.locfileid: "73121591"
   
  當只有檔案版本號碼是新的時，[全域組件快取工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) 可讓您替換組件。 除非組件版本號碼比較高，否則安裝程式通常不會在組件上執行覆寫安裝。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [並存執行](side-by-side-execution.md)
 - [如何：啟用和停用自動繫結重新導向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

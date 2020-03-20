@@ -1,16 +1,16 @@
 ---
-title: 具有延伸保護的整合式 Windows 驗證
+title: '具有擴充保護的整合式 Windows 驗證 '
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
 ms.openlocfilehash: c4afc008f600c9be0040f8d7623f5e20623dfd7d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74444240"
 ---
-# <a name="integrated-windows-authentication-with-extended-protection"></a>具有延伸保護的整合式 Windows 驗證
-已建立的增強功能會影響 <xref:System.Net.HttpWebRequest> 中的 <xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream>、<xref:System.Net> 和相關類別以及相關命名空間處理整合式 Windows 驗證的方式。 為加強安全性，擴充保護已新增支援。  
+# <a name="integrated-windows-authentication-with-extended-protection"></a>具有擴充保護的整合式 Windows 驗證 
+已建立的增強功能會影響 <xref:System.Net> 中的 <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream> 和相關類別以及相關命名空間處理整合式 Windows 驗證的方式。 為加強安全性，擴充保護已新增支援。  
   
  這些變更可能會影響使用這些類別提出 Web 要求並接收回應的應用程式，它們使用整合式 Windows 驗證。 這項變更也會影響設定成使用整合式 Windows 驗證的網頁伺服器和用戶端應用程式。  
   
@@ -84,32 +84,32 @@ ms.locfileid: "74444240"
   
  <xref:System.Security.Authentication.ExtendedProtection.Configuration> 命名空間支援應用程式使用擴充保護的驗證組態。  
   
- 已進行一些功能變更，以支援現有 <xref:System.Net> 命名空間中的擴充保護。 這些變更包括下列項目：  
+ 已進行一些功能變更，以支援現有 <xref:System.Net> 命名空間中的擴充保護。 這些變更包括下列幾項：  
   
 - 新的 <xref:System.Net.TransportContext> 類別新增至表示傳輸內容的 <xref:System.Net> 命名空間。  
   
-- <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> 類別中的新 <xref:System.Net.HttpWebRequest.GetRequestStream%2A> 和 <xref:System.Net.HttpWebRequest> 多載方法，可讓您擷取 <xref:System.Net.TransportContext> 以支援用戶端應用程式的擴充保護。  
+- <xref:System.Net.HttpWebRequest> 類別中的新 <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> 和 <xref:System.Net.HttpWebRequest.GetRequestStream%2A> 多載方法，可讓您擷取 <xref:System.Net.TransportContext> 以支援用戶端應用程式的擴充保護。  
   
 - 新增 <xref:System.Net.HttpListener> 和 <xref:System.Net.HttpListenerRequest> 類別以支援伺服器應用程式。  
   
  已進行一項功能變更，以支援現有 <xref:System.Net.Mail> 命名空間中的 SMTP 用戶端應用程式的擴充保護：  
   
-- <xref:System.Net.Mail.SmtpClient.TargetName%2A> 類別中的 <xref:System.Net.Mail.SmtpClient> 屬性，代表使用 SMTP 用戶端應用程式的擴充保護時，用於驗證的 SPN。  
+- <xref:System.Net.Mail.SmtpClient> 類別中的 <xref:System.Net.Mail.SmtpClient.TargetName%2A> 屬性，代表使用 SMTP 用戶端應用程式的擴充保護時，用於驗證的 SPN。  
   
- 已進行一些功能變更，以支援現有 <xref:System.Net.Security> 命名空間中的擴充保護。 這些變更包括下列項目：  
+ 已進行一些功能變更，以支援現有 <xref:System.Net.Security> 命名空間中的擴充保護。 這些變更包括下列幾項：  
   
-- <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> 類別中的新 <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> 和 <xref:System.Net.Security.NegotiateStream> 多載方法，允許傳送 CBT 以支援用戶端應用程式的擴充保護。  
+- <xref:System.Net.Security.NegotiateStream> 類別中的新 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> 和 <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> 多載方法，允許傳送 CBT 以支援用戶端應用程式的擴充保護。  
   
-- <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> 類別中的新 <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> 和 <xref:System.Net.Security.NegotiateStream> 多載方法，允許傳送 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 以支援伺服器應用程式的擴充保護。  
+- <xref:System.Net.Security.NegotiateStream> 類別中的新 <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> 和 <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> 多載方法，允許傳送 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 以支援伺服器應用程式的擴充保護。  
   
-- <xref:System.Net.Security.SslStream.TransportContext%2A> 類別的新 <xref:System.Net.Security.SslStream> 屬性，支援用戶端和伺服器應用程式的擴充保護。  
+- <xref:System.Net.Security.SslStream> 類別的新 <xref:System.Net.Security.SslStream.TransportContext%2A> 屬性，支援用戶端和伺服器應用程式的擴充保護。  
   
  已新增 <xref:System.Net.Configuration.SmtpNetworkElement> 屬性，支援 <xref:System.Net.Security> 命名空間中 SMTP 用戶端擴充保護的組態。  
   
 ## <a name="extended-protection-for-client-applications"></a>用戶端應用程式的擴充保護  
  大部分用戶端應用程式的擴充保護支援都會自動發生。 只要 Windows 基礎版本支援擴充保護，<xref:System.Net.HttpWebRequest> 和 <xref:System.Net.Mail.SmtpClient> 類別就支援擴充保護。 <xref:System.Net.HttpWebRequest> 執行個體傳送從 <xref:System.Uri> 建構的 SPN。 根據預設，<xref:System.Net.Mail.SmtpClient> 執行個體會傳送從 SMTP 郵件伺服器主機名稱建構的 SPN。  
   
- 針對自訂驗證，用戶端應用程式可以使用 <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> 類別的 <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> 或 <xref:System.Net.HttpWebRequest> 方法，允許擷取 <xref:System.Net.TransportContext> 和使用 <xref:System.Net.TransportContext.GetChannelBinding%2A> 方法的 CBT。  
+ 針對自訂驗證，用戶端應用程式可以使用 <xref:System.Net.HttpWebRequest> 類別的 <xref:System.Net.HttpWebRequest.EndGetRequestStream%28System.IAsyncResult%2CSystem.Net.TransportContext%40%29?displayProperty=nameWithType> 或 <xref:System.Net.HttpWebRequest.GetRequestStream%28System.Net.TransportContext%40%29?displayProperty=nameWithType> 方法，允許擷取 <xref:System.Net.TransportContext> 和使用 <xref:System.Net.TransportContext.GetChannelBinding%2A> 方法的 CBT。  
   
  <xref:System.Net.HttpWebRequest> 執行個體傳送至指定服務用於整合式 Windows 驗證的 SPN，可藉由設定 <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A> 屬性予以覆寫。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "74444240"
 ## <a name="extended-protection-for-server-applications"></a>伺服器應用程式的擴充保護  
  <xref:System.Net.HttpListener> 會在執行 HTTP 驗證時，自動提供驗證服務繫結的機制。  
   
- 最安全的案例是啟用 HTTPS:// 前置詞的擴充保護。 在本例中，將 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> 設定成將 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 設成 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 或 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 的 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>，以及 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 設成 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>。值 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 會將 <xref:System.Net.HttpListener> 置於部分強化模式中，而 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 則對應到完全強化模式。  
+ 最安全的案例是啟用 HTTPS:// 前置詞的擴充保護。 在本例中，將 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> 設定成將 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 設成 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 或 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 的 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>，以及 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 設成 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>。值 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 會將 <xref:System.Net.HttpListener> 置於部分強化模式中，而 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 則對應到完全強化模式。  
   
  在此組態中，當透過外部安全通道向伺服器提出要求時，會查詢外部通道是否有通道繫結。 此通道繫結會傳遞給驗證 SSPI 呼叫，確認驗證 Blob 中的通道繫結是否相符。 有三個可能的結果：  
   
@@ -128,9 +128,9 @@ ms.locfileid: "74444240"
   
 3. 用戶端指定了正確的通道繫結，或允許連接但未指定通道繫結，因為伺服器上使用 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 設定擴充保護原則。要求會傳回應用程式處理。 不會自動執行服務名稱檢查。 應用程式可選擇執行它自己使用 <xref:System.Net.HttpListenerRequest.ServiceName%2A> 屬性的服務名稱驗證，但在這些情況下會重複。  
   
- 如果應用程式進行自己的 SSPI 呼叫，執行以在 HTTP 要求主體內來回傳遞的 Blob 為基礎的驗證，而且想要支援通道繫結，它需要從使用 <xref:System.Net.HttpListener> 的外部安全通道擷取預期的通道繫結，才能將它傳遞給原生的 Win32 [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) 函式。 若要這樣做，請使用 <xref:System.Net.HttpListenerRequest.TransportContext%2A> 屬性並呼叫 <xref:System.Net.TransportContext.GetChannelBinding%2A> 方法來擷取 CBT。 僅支援端點繫結。 如指定任何其他 <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>，就會擲回 <xref:System.NotSupportedException>。 如果基礎作業系統支援通道繫結，<xref:System.Net.TransportContext.GetChannelBinding%2A> 方法會將 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> 包裝的指標傳回給通道繫結，此通道繫結適合傳遞給 [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) 函式作為傳入 `pInput` 參數之 SecBuffer 結構的 pvBuffer 成員。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> 屬性包含通道繫結的長度，以位元組為單位。 如果基礎作業系統不支援通道繫結，此函式會傳回 `null`。  
+ 如果應用程式進行自己的 SSPI 呼叫，執行以在 HTTP 要求主體內來回傳遞的 Blob 為基礎的驗證，而且想要支援通道繫結，它需要從使用 <xref:System.Net.HttpListener> 的外部安全通道擷取預期的通道繫結，才能將它傳遞給原生的 Win32 [AcceptSecurityContext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext) 函式。 若要這樣做，請使用 <xref:System.Net.HttpListenerRequest.TransportContext%2A> 屬性並呼叫 <xref:System.Net.TransportContext.GetChannelBinding%2A> 方法來擷取 CBT。 僅支援端點繫結。 如指定任何其他 <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint>，就會擲回 <xref:System.NotSupportedException>。 如果基礎作業系統支援通道<xref:System.Net.TransportContext.GetChannelBinding%2A>綁定，該方法將返回一個<xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle>指向通道綁定的包裝指標，該指標適用于作為`pInput`在參數中傳遞的 SecBuffer 結構的 pvBuffer 成員傳遞到[AcceptSecurityCoNtext](/windows/win32/api/sspi/nf-sspi-acceptsecuritycontext)函數。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> 屬性包含通道繫結的長度，以位元組為單位。 如果基礎作業系統不支援通道繫結，此函式會傳回 `null`。  
   
- 另一個可能的案例是，在不使用 Proxy 的情況下，啟用 HTTP:// 前置詞的擴充保護。 在本例中，將 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> 設定成將 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 設成 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 或 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 的 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>，以及 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 設成 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>。值 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 會將 <xref:System.Net.HttpListener> 置於部分強化模式中，而 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 則對應到完全強化模式。  
+ 另一個可能的案例是，在不使用 Proxy 的情況下，啟用 HTTP:// 前置詞的擴充保護。 在本例中，將 <xref:System.Net.HttpListener.ExtendedProtectionPolicy%2A?displayProperty=nameWithType> 設定成將 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 設成 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 或 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 的 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>，以及 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 設成 <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario.TransportSelected>。值 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 會將 <xref:System.Net.HttpListener> 置於部分強化模式中，而 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 則對應到完全強化模式。  
   
  會根據已向 <xref:System.Net.HttpListener> 登錄的前置詞建立所允許服務名稱的預設清單。 此預設清單可透過 <xref:System.Net.HttpListener.DefaultServiceNames%2A> 屬性檢查。 如果這份清單不完整，應用程式可以在建構函式中針對會使用的 <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> 類別指定自訂的服務名稱集合，而不是預設的服務名稱清單。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "74444240"
   
  伺服器應用程式也可以使用這些擴充的保護功能，搭配其他類型的要求進行驗證，以及在使用受信任的 Proxy 時進行驗證。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Authentication.ExtendedProtection>
 - <xref:System.Security.Authentication.ExtendedProtection.Configuration>

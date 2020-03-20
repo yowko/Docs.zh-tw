@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716468"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>部署 .NET Framework 和應用程式
@@ -30,13 +30,13 @@ ms.locfileid: "75716468"
 
   - 安裝程式選項：
 
-    - [Web installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Web 安裝程式](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
     - [Offline installer](../install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - 安裝模式：
 
-    - [無訊息安裝](deployment-guide-for-developers.md#chaining_custom)
+    - [靜默安裝](deployment-guide-for-developers.md#chaining_custom)
 
     - [顯示 UI](deployment-guide-for-developers.md#chaining_default)
 
@@ -64,7 +64,7 @@ ms.locfileid: "75716468"
 
 **服務**
 
-- 如需一般資訊，請參閱[.NET Framework 的 blog](https://devblogs.microsoft.com/dotnet/)。
+- 有關一般資訊，請參閱[.NET 框架博客](https://devblogs.microsoft.com/dotnet/)。
 
 - [偵測版本](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
@@ -118,7 +118,7 @@ ms.locfileid: "75716468"
 
 文件的其他章節將說明 .NET Framework 的一些封裝和部署資訊。 那些小節針對下列內容提供相關資訊：稱為[組件](../../standard/assembly/index.md)的自我描述單位 (不需要登錄項目)、[強式名稱的組件](../../standard/assembly/strong-named.md) (能確保名稱唯一性並防止名稱冒用)，以及[組件版本控制](../../standard/assembly/versioning.md) (能處理許多與 DLL 衝突相關的問題)。 下列章節提供封裝和散發 .NET Framework 應用程式的相關資訊。
 
-### <a name="packaging"></a>封裝
+### <a name="packaging"></a>包裝
 
 .NET Framework 提供下列封裝應用程式的選項：
 
@@ -134,7 +134,7 @@ ms.locfileid: "75716468"
 
      使用這個選項時，您將會建立搭配 Windows Installer 使用的 .msi 檔，或封裝您的應用程式以搭配另一個安裝程式使用。
 
-### <a name="distribution"></a>發佈
+### <a name="distribution"></a>散發
 
 .NET Framework 提供下列散發應用程式的選項：
 
@@ -158,12 +158,12 @@ ms.locfileid: "75716468"
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
 |[執行階段如何找出組件](how-the-runtime-locates-assemblies.md)|描述 Common Language Runtime 如何決定要用哪個組件來實現繫結要求。|
 |[組件載入的最佳做法](best-practices-for-assembly-loading.md)|討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型識別的問題。|
-|[在 .NET Framework 4.5 安裝期間減少系統重新啟動的次數](reducing-system-restarts.md)|描述可防止在任何可能的情況下重新開機的重新啟動管理員，並說明安裝 .NET Framework 的應用程式如何利用 .NET Framework。|
-|[系統管理員部署手冊](guide-for-administrators.md)|說明系統管理員如何使用 Microsoft 端點 Configuration Manager，在網路上部署 .NET Framework 及其系統相依性。|
+|[在 .NET 框架 4.5 安裝期間減少系統重新開機](reducing-system-restarts.md)|描述可防止在任何可能的情況下重新開機的重新啟動管理員，並說明安裝 .NET Framework 的應用程式如何利用 .NET Framework。|
+|[系統管理員部署手冊](guide-for-administrators.md)|說明系統管理員如何使用 Microsoft 終結點組態管理員通過網路部署 .NET 框架及其系統依賴項。|
 |[開發人員部署手冊](deployment-guide-for-developers.md)|說明開發人員如何將 .NET Framework 隨使用者的應用程式安裝在其電腦上。|
 |[部署應用程式、服務和元件](/visualstudio/deployment/deploying-applications-services-and-components)|討論 Visual Studio 中的部署選項，包括使用 ClickOnce 和 Windows Installer 技術發行應用程式的指示。|
 |[發行 ClickOnce 應用程式](/visualstudio/deployment/publishing-clickonce-applications)|描述如何封裝 Windows Forms 應用程式，並使用 ClickOnce 將它部署到網路上的用戶端電腦。|
@@ -171,6 +171,6 @@ ms.locfileid: "75716468"
 |[部署 Interop 應用程式](../interop/deploying-an-interop-application.md)|描述如何交付及安裝 Interop 應用程式，這類應用程式通常包含 .NET Framework 用戶端組件、代表各種不同 COM 類型程式庫的一或多個 Interop 組件，以及一或多個已註冊的 COM 元件。|
 |[如何：取得 .NET Framework 4.5 安裝程式的進度](how-to-get-progress-from-the-dotnet-installer.md)|描述如何以無訊息模式啟動並追蹤 .NET Framework 安裝程序，並同時顯示您自己的安裝進度檢視。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [開發指南](../development-guide.md)

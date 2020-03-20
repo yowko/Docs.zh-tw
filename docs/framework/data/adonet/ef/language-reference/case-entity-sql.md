@@ -2,12 +2,12 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 7c1e02d44c674bf262f92df1c43bec6e9f2143c5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 58b21d3be8e13a0a2204a4fd6d355f734207c509
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039933"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150463"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 評估一組 `Boolean` 運算式，以便判斷結果。  
@@ -16,11 +16,11 @@ ms.locfileid: "73039933"
   
 ```csharp  
 CASE  
-     WHEN Boolean_expression THEN result_expression   
-    [ ...n ]   
-     [   
-    ELSE else_result_expression   
-     ]   
+     WHEN Boolean_expression THEN result_expression
+    [ ...n ]
+     [
+    ELSE else_result_expression
+     ]
 END  
 ```  
   
@@ -41,7 +41,7 @@ END
  從 `result_expression` 和選擇性 `else_result_expression`的型別集中，傳回優先順序最高的型別。  
   
 ## <a name="remarks"></a>備註  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 案例運算式類似 Transact-sql case 運算式。 您可以使用 CASE 運算式來進行一連串條件式測試，以便判斷哪一個運算式會產生適當的結果。 這種 CASE 運算式形式會套用至一個或多個 `Boolean` 運算式，以便判斷正確的結果運算式。  
+ 大小[!INCLUDE[esql](../../../../../../includes/esql-md.md)]寫運算式類似于 Transact-SQL 大小寫運算式。 您可以使用 CASE 運算式來進行一連串條件式測試，以便判斷哪一個運算式會產生適當的結果。 這種 CASE 運算式形式會套用至一個或多個 `Boolean` 運算式，以便判斷正確的結果運算式。  
   
  CASE 函式會按照指定的順序針對每個 WHEN 子句評估 `Boolean_expression` ，然後傳回評估為 `result_expression` 之第一個 `Boolean_expression` 的 `true`。 此時，系統就不會評估其餘運算式。 如果沒有任何 `Boolean_expression` 評估為 `true`，Database Engine 就會傳回 `else_result_expression` (如果指定了 ELSE 子句) 或 null 值 (如果沒有指定任何 ELSE 子句)。  
   
@@ -50,14 +50,14 @@ END
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 CASE 運算式來評估一組 `Boolean` 運算式，以便判斷結果。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1. 依照[如何：執行傳回 PrimitiveType 結果的查詢](../how-to-execute-a-query-that-returns-primitivetype-results.md)中的程式進行。  
+1. 按照["如何執行"中的過程：執行返回基元類型結果的查詢](../how-to-execute-a-query-that-returns-primitivetype-results.md)。  
   
 2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [THEN](then-entity-sql.md)
-- [SELECT](select-entity-sql.md)
+- [然後](then-entity-sql.md)
+- [選擇](select-entity-sql.md)
 - [Entity SQL 參考](entity-sql-reference.md)

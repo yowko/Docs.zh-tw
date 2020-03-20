@@ -2,15 +2,15 @@
 title: 傳輸：自訂跨 UDP 異動範例
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 00e6d593e185cd09ea66e88f38cf1d8e71785704
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: ba9fb91623606d3aaba5ba56784b20bb92d343a7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960417"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143794"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>傳輸：自訂跨 UDP 異動範例
-這個範例是以 Windows Communication Foundation （WCF）[傳輸](../../../../docs/framework/wcf/samples/transport-extensibility.md)擴充性中的[transport： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例為基礎。 它會延伸 UDP 傳輸範例以支援自訂異動流程，並示範 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 屬性的使用方式。  
+此示例基於 Windows 通信基礎 （WCF）[傳輸可擴充性](../../../../docs/framework/wcf/samples/transport-extensibility.md)中的[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例。 它會延伸 UDP 傳輸範例以支援自訂異動流程，並示範 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 屬性的使用方式。  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>變更 UDP 傳輸範例中的程式碼  
  為了示範交易流程，此範例變更了服務合約，讓 `ICalculatorContract` 可以要求 `CalculatorService.Add()` 的交易範圍。 範例還另外將 `System.Guid` 參數新增至 `Add` 作業的合約。 這個參數是用來將用戶端異動識別碼傳遞給服務。  
@@ -30,7 +30,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
      Console.WriteLine("The client transaction has NOT flowed to the service");  
     }  
   
-    Console.WriteLine("   adding {0} + {1}", x, y);              
+    Console.WriteLine("   adding {0} + {1}", x, y);
     return (x + y);  
     }  
   
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- [Transport： udp](../../../../docs/framework/wcf/samples/transport-udp.md)範例會使用 udp 封包來傳遞用戶端和服務之間的訊息。 [傳輸：自訂傳輸範例](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)會使用與傳輸訊息相同的機制，但當交易流動時，它就會連同編碼的訊息一起插入 UDP 封包中。  
+ [傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例使用 UDP 資料包在用戶端和服務之間傳遞消息。 [傳輸：自訂傳輸示例](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)使用相同的機制來傳輸消息，但當事務流動時，它將與編碼消息一起插入到 UDP 資料包中。  
   
 ```csharp  
 byte[] txmsgBuffer = TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -48,7 +48,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer` 是 Helper 方法，其中包含的新功能可以將目前交易的傳播權杖與訊息實體 (Entity) 合併，再將它放在緩衝區中。  
   
- 若為自訂交易流程傳輸，用戶端執行必須知道哪些服務作業需要交易流程，並將此資訊傳遞給 WCF。 其中也必須有可以用來傳輸使用者交易至傳輸層的機制。 這個範例會使用「WCF 訊息偵測器」來取得此資訊。 此處實作的用戶端訊息偵測器稱為 `TransactionFlowInspector`，它會執行下列工作：  
+ 對於自訂事務流傳輸，用戶端實現必須知道哪些服務操作需要事務流，並將此資訊傳遞給 WCF。 其中也必須有可以用來傳輸使用者交易至傳輸層的機制。 此示例使用"WCF 消息檢查器"來獲取此資訊。 此處實作的用戶端訊息偵測器稱為 `TransactionFlowInspector`，它會執行下列工作：  
   
 - 判斷交易是否必須針對指定的訊息動作流動 (這會在 `IsTxFlowRequiredForThisOperation()` 中進行)。  
   
@@ -64,7 +64,7 @@ public class TransactionFlowInspector : IClientMessageInspector
    public object BeforeSendRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel)  
    {  
        // obtain the tx propagation token  
-       byte[] propToken = null;             
+       byte[] propToken = null;
        if (Transaction.Current != null && IsTxFlowRequiredForThisOperation(request.Headers.Action))  
        {  
            try  
@@ -80,7 +80,7 @@ public class TransactionFlowInspector : IClientMessageInspector
       // set the propToken on the message in a TransactionFlowProperty  
        TransactionFlowProperty.Set(propToken, request);  
   
-       return null;              
+       return null;
     }  
   }  
   
@@ -121,7 +121,7 @@ public class TransactionFlowBehavior : IEndpointBehavior
   
 ```csharp  
 CalculatorContractClient calculatorClient = new CalculatorContractClient("SampleProfileUdpBinding_ICalculatorContract");  
-calculatorClient.Endpoint.Behaviors.Add(new TransactionFlowBehavior());               
+calculatorClient.Endpoint.Behaviors.Add(new TransactionFlowBehavior());
   
 try  
 {  
@@ -133,7 +133,7 @@ try
         [...]  
         Console.WriteLine(calculatorClient.Add(i, i * 2));  
          }  
-      }               
+      }
        calculatorClient.Close();  
 }  
 catch (TimeoutException)  
@@ -176,9 +176,9 @@ if (transaction != null)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 若要建立方案，請依照[建立 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示進行。  
+1. 要生成解決方案，請按照生成 Windows[通信基礎示例](../../../../docs/framework/wcf/samples/building-the-samples.md)中的說明進行操作。  
   
-2. 目前的範例應該以類似[Transport： UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例的方式執行。 若要執行，請使用 UdpTestService.exe 啟動服務。 如果您執行的是 Windows Vista，就必須以較高的許可權來啟動服務。 若要這樣做，請以滑鼠右鍵按一下檔案瀏覽器中的 Udptestservice.exe，然後按一下 [**以系統管理員身分執行**]。  
+2. 當前示例應與[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)示例類似運行。 若要執行，請使用 UdpTestService.exe 啟動服務。 如果您正在運行 Windows Vista，則必須使用較高的權限啟動服務。 為此，請按右鍵檔資源管理器中的 UdpTestService.exe，然後按一下"**以管理員身份運行**"。  
   
 3. 此程序產生以下輸出。  
   
@@ -190,7 +190,7 @@ if (transaction != null)
   
 4. 此時，您可以執行 UdpTestClient.exe 以啟動用戶端。 用戶端所產生的輸出如下所示。  
   
-    ```console 
+    ```console
     0  
     3  
     6  
@@ -201,7 +201,7 @@ if (transaction != null)
   
 5. 服務輸出如下。  
   
-    ```console 
+    ```console
     Hello, world!  
     Hello, world!  
     Hello, world!  
@@ -241,7 +241,7 @@ if (transaction != null)
   
     ```xml  
     <configuration>  
-        <system.serviceModel>      
+        <system.serviceModel>
             …  
             <extensions>  
                 <!-- This was added manually because svcutil.exe does not add this extension to the file -->  
@@ -255,13 +255,13 @@ if (transaction != null)
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

@@ -2,15 +2,15 @@
 title: HOW TO：在組態中建立服務端點
 ms.date: 06/16/2016
 ms.assetid: f474e25d-2a27-4f31-84c5-395c442b8e70
-ms.openlocfilehash: 63a40576b805952197cec5af2f89a5dc4b5d3545
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9687d9537d6f166a02b79261743050168f677261
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787643"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185004"
 ---
 # <a name="how-to-create-a-service-endpoint-in-configuration"></a>HOW TO：在組態中建立服務端點
-端點可讓用戶端存取的 Windows Communication Foundation (WCF) 服務所提供的功能。 您可以使用相對與絕對端點位址的組合，定義一個或多個端點，如果您沒有定義任何服務端點，執行階段預設會提供一些服務端點。 本主題說明如何使用包含相對與絕對位址的組態檔來加入端點。  
+端點使用戶端可以訪問 Windows 通信基礎 （WCF） 服務提供的功能。 您可以使用相對與絕對端點位址的組合，定義一個或多個端點，如果您沒有定義任何服務端點，執行階段預設會提供一些服務端點。 本主題說明如何使用包含相對與絕對位址的組態檔來加入端點。  
   
 ## <a name="example"></a>範例  
  下列服務組態會指定一個基底位址與五個端點。  
@@ -73,7 +73,7 @@ ms.locfileid: "61787643"
  基底位址會透過 `add` 項目來指定，而此項目位於 service/host/baseAddresses 底下，如下列範例所示。  
   
 ```xml  
-<service   
+<service
     name="Microsoft.ServiceModel.Samples.CalculatorService">  
   <host>  
     <baseAddresses>  
@@ -83,16 +83,16 @@ ms.locfileid: "61787643"
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例中的第一個端點定義會指定相對位址，表示端點位址是符合統一資源識別元 (URI) 撰寫規則的基底位址與相對位址組合。 相對位址為空白位址 ("")，因此端點位址與基底位址是同一個。 實際的端點位址是`http://localhost:8000/servicemodelsamples/service`。  
+ 下列範例中的第一個端點定義會指定相對位址，表示端點位址是符合統一資源識別元 (URI) 撰寫規則的基底位址與相對位址組合。 相對位址為空白位址 ("")，因此端點位址與基底位址是同一個。 實際終結點位址為`http://localhost:8000/servicemodelsamples/service`。  
   
 ```xml  
-<endpoint address=""   
+<endpoint address=""
     binding="wsHttpBinding"  
     contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
 ## <a name="example"></a>範例  
- 第二個端點定義也是指定相對位址，如下列範例組態所示。 此相對位址 "test" 會附加在基底位址。 實際的端點位址是`http://localhost:8000/servicemodelsamples/service/test`。  
+ 第二個端點定義也是指定相對位址，如下列範例組態所示。 此相對位址 "test" 會附加在基底位址。 實際終結點位址為`http://localhost:8000/servicemodelsamples/service/test`。  
   
 ```xml  
 <endpoint address="/test"  
@@ -101,7 +101,7 @@ ms.locfileid: "61787643"
 ```  
   
 ## <a name="example"></a>範例  
- 第三個端點定義是指定絕對位址，如下列範例組態所示。 位址中不需要基底位址。 實際的端點位址是`http://localhost:8001/hello/servicemodelsamples`。  
+ 第三個端點定義是指定絕對位址，如下列範例組態所示。 位址中不需要基底位址。 實際終結點位址為`http://localhost:8001/hello/servicemodelsamples`。  
   
 ```xml  
 <endpoint address="http://localhost:8001/hello/servicemodelsamples"  

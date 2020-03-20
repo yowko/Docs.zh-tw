@@ -11,10 +11,10 @@ helpviewer_keywords:
 - components [.NET Framework], interoperation with unmanaged code
 ms.assetid: ccb68ce7-b0e9-4ffb-839d-03b1cd2c1258
 ms.openlocfilehash: 12183f390a5178f038c6dd2122a72a33e31ae0ee
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457963"
 ---
 # <a name="interoperating-with-unmanaged-code"></a>與非受控程式碼交互操作
@@ -57,5 +57,5 @@ ms.locfileid: "73457963"
 
 ## <a name="related-sections"></a>相關章節
 
-[COM 包裝函式](../../standard/native-interop/com-wrappers.md)  
+[COM 包裝器](../../standard/native-interop/com-wrappers.md)  
 描述由 COM Interop 所提供的包裝函式。

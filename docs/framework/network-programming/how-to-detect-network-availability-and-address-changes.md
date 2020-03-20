@@ -1,17 +1,17 @@
 ---
-title: 作法：偵測網路可用性和位址變更
+title: 如何：偵測網路可用性和位址變更
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
 ms.openlocfilehash: 9e265a97d339da59bb9d0af6ab6757e16af00e06
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "70894956"
 ---
-# <a name="how-to-detect-network-availability-and-address-changes"></a>作法：偵測網路可用性和位址變更
+# <a name="how-to-detect-network-availability-and-address-changes"></a>如何：偵測網路可用性和位址變更
 這個範例示範如何偵測介面的網路位址變更。  
   
 ## <a name="example"></a>範例  

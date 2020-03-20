@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
-ms.openlocfilehash: 9620eb25837a5cf6dd592f4222e0fa5a13751278
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8ebc97112d2044efca85520ee942ed0f587529ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214926"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156151"
 ---
 # <a name="connectiongroup-class"></a>ConnectionGroup 類別
 
-`ConnectionGroup` 類別會將 <xref:System.Net.ServicePoint> 內容中的連線清單分組，並用來維護網路資源的內容（例如，proxy 和不同的用戶端）。
+類`ConnectionGroup`對<xref:System.Net.ServicePoint>上下文中的連接清單進行分組，用於維護網路資源的上下文（例如，代理和單獨的用戶端）。
 
 ## <a name="syntax"></a>語法
   
@@ -28,14 +28,14 @@ internal class ConnectionGroup
 ```
 
 > [!WARNING]
-> `ConnectionGroup` 類別是內部的，而且不適合直接在程式碼中使用。
-> 
-> 在任何情況下，Microsoft 不支援在生產應用程式中使用此類別。
+> 該`ConnectionGroup`類是內部的，不應直接在代碼中使用。
+>
+> 在任何情況下，Microsoft 都不支援在生產應用程式中使用此類。
 
 ## <a name="requirements"></a>需求
 
-**命名空間：** <xref:System.Net>
+**命名空間：**<xref:System.Net>
 
-**元件：** 系統（在 System .dll 中）
+**裝配：** 系統（系統中）
 
-**.NET Framework 版本：** 自2.0 開始提供。
+**.NET 框架版本：** 自 2.0 起可用。

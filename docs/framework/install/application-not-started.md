@@ -1,65 +1,65 @@
 ---
-title: 疑難排解「無法啟動此應用程式」
-description: 如果您看到 [無法啟動此應用程式] 對話方塊，請瞭解該怎麼辦。
+title: 故障排除"無法啟動此應用程式"
+description: 瞭解如果看到"無法啟動此應用程式"對話方塊該怎麼辦。
 ms.date: 09/05/2019
 ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965902"
 ---
-# <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>疑難排解「此應用程式無法啟動」錯誤訊息
+# <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>排除"無法啟動此應用程式"錯誤訊息
 
-針對 .NET Framework 所開發的應用程式通常需要在您的系統上安裝特定版本的 .NET Framework。 在某些情況下，您可能會嘗試執行應用程式，而不需要有已安裝的版本或所需的 .NET Framework 版本。 這通常會產生如下的錯誤對話方塊：
+為 .NET 框架開發的應用程式通常需要在系統上安裝 .NET 框架的特定版本。 在某些情況下，您可能嘗試在沒有已安裝版本或 .NET Framework 的預期版本的情況下運行應用程式。 這通常會生成如下所示的錯誤對話方塊：
 
 ![無法啟動這個應用程式](media/application-not-started/app-could-not-be-started.png)
 
-這通常表示下列其中一種情況：
+這通常表示以下條件之一：
 
-- 系統上的 .NET Framework 安裝已損毀。
+- 系統上的 .NET 框架安裝已損壞。
 
-- 無法偵測到您的應用程式所需的 .NET Framework 版本。
+- 無法檢測到應用程式所需的 .NET 框架版本。
 
-若要解決此問題，讓您能夠執行應用程式，請執行下列動作：
+要解決此問題，以便運行應用程式，請執行以下操作：
 
-1. 下載[.NET Framework Repair Tool （NetFxRepairTool）](https://www.microsoft.com/download/details.aspx?id=30135)。 此工具會在下載完成時自動執行。
+1. 下載[.NET 框架修復工具 （NetFx 修復工具.exe）。](https://www.microsoft.com/download/details.aspx?id=30135) 下載完成後，該工具將自動運行。
 
-1. 如果 .NET Framework 修復工具建議任何其他動作（例如下圖所示的動作），請選取 **[下一步]** 。
+1. 如果 .NET 框架修復工具建議執行任何其他操作（如下圖所示的操作），請選擇"**下一步**"。
 
    ![建議變更](media/application-not-started/repair-tool-recommended-changes.png)
 
-1. [.NET Framework 修復工具] 會顯示如下圖所示的對話方塊，指出變更已完成。 在您嘗試重新執行應用程式時，讓對話方塊保持開啟。 如果 .NET Framework 修復工具已識別並更正損毀的 .NET Framework 安裝，這應該會成功。
+1. .NET 框架修復工具顯示下圖中顯示的對話方塊，以指示更改已完成。 嘗試重新運行應用程式時，請保持對話方塊打開狀態。 如果 .NET 框架修復工具已識別並更正損壞的 .NET 框架安裝，則此成功。
 
    ![建議變更](media/application-not-started/repair-tool-changes-complete.png)
 
-1. 如果您的應用程式順利執行，請選取 [**完成]** 按鈕。 否則，請選取 [**下一步]** 按鈕。
+1. 如果應用程式成功運行，請選擇 **"完成"** 按鈕。 否則，選擇"**下一步**"按鈕。
 
-1. 如果您選取 [**下一步]** 按鈕，[.NET Framework Repair] 工具就會顯示如下所示的對話方塊。 選取 [**完成]** 按鈕，將診斷資訊傳送給 Microsoft。
+1. 如果選擇了"**下一步"** 按鈕，.NET 框架修復工具將顯示一個對話方塊，如下所示。 選擇 **"完成"** 按鈕以向 Microsoft 發送診斷資訊。
 
    ![無法解決問題](media/application-not-started/repair-tool-no-resolution.png)
 
-1. 如果您仍然無法執行應用程式，請安裝您的 Windows 版本所支援的最新版本 .NET Framework，如下表所示。
+1. 如果仍然無法運行該應用程式，請安裝 Windows 版本支援的 .NET 框架的最新版本，如下表所示。
 
-   |Windows 版本|.NET Framework 安裝|
+   |Windows 版本|.NET 框架安裝|
    |---|---|
-   |Windows 10 年度更新版和更新版本|[.NET Framework 4.8 執行時間](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows 10，Windows 10 11 月更新|[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)|
-   |Windows 8.1|[.NET Framework 4.8 執行時間](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
+   |Windows 10 周年更新和更高版本|[.NET 框架 4.8 運行時](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
+   |視窗 10， Windows 10 11 月更新|[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)|
+   |Windows 8.1|[.NET 框架 4.8 運行時](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
    |Windows 8|[.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)|
-   |Windows 7 SP1|[.NET Framework 4.8 執行時間](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows Vista SP2|[.NET Framework 4。6](https://dotnet.microsoft.com/download/dotnet-framework/net46)|
+   |Windows 7 SP1|[.NET 框架 4.8 運行時](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
+   |Windows Vista SP2|[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)|
 
    > [!NOTE]
-   > .NET Framework 4.8 已預先安裝在 Windows 10 5 月2019更新。
+   > .NET 框架 4.8 預先安裝在 2019 年 5 月 10 日的 Windows 更新中。
 
 1. 嘗試啟動應用程式。
 
-1. 在某些情況下，您可能會看到如下所示的對話方塊，這會要求您安裝 .NET Framework 3.5。 選取 [**下載並安裝此功能**] 以安裝 .NET Framework 3.5，然後再次啟動應用程式。
+1. 在某些情況下，您可能會看到如下所示的對話方塊，該對話方塊要求您安裝 .NET 框架 3.5。 選擇 **"下載並安裝此功能**"以安裝 .NET 框架 3.5，然後再次啟動該應用程式。
 
    ![無法解決問題](media/application-not-started/install-3-5.png)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 系統需求](../get-started/system-requirements.md)
 - [.NET Framework 安裝指南](index.md)

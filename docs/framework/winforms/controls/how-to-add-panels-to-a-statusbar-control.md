@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將面板新增至 StatusBar 控制項
+title: 如何：將面板加入至 StatusBar 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 27d65c07f0a6ec4a25d057e2c16a8b59933bb8fd
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 386c8cae425c458ddf4c446a454ae4213761e651
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69925102"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142195"
 ---
-# <a name="how-to-add-panels-to-a-statusbar-control"></a>HOW TO：將面板新增至 StatusBar 控制項
+# <a name="how-to-add-panels-to-a-statusbar-control"></a>如何：將面板加入至 StatusBar 控制項
 > [!IMPORTANT]
-> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBarPanel>和控制項會取代和加入和<xref:System.Windows.Forms.StatusBarPanel>控制項的功能; 不過, 如果您這樣做, 和控制項就會保留, 以提供回溯相容性及未來使用。 <xref:System.Windows.Forms.ToolStripStatusLabel> <xref:System.Windows.Forms.StatusStrip>決定.  
+> <xref:System.Windows.Forms.StatusStrip>和<xref:System.Windows.Forms.ToolStripStatusLabel>控制項將 功能替換並添加到<xref:System.Windows.Forms.StatusBar><xref:System.Windows.Forms.StatusBarPanel>和 控制項;但是，如果<xref:System.Windows.Forms.StatusBar>願意<xref:System.Windows.Forms.StatusBarPanel>，將保留 和 控制項以進行向後相容性和未來使用。  
   
- [狀態列控制項](statusbar-control-windows-forms.md)控制項中的可程式化區域是由<xref:System.Windows.Forms.StatusBarPanel>類別的實例所組成。 這些會透過新增至<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>類別來新增。  
+ [StatusBar 控制項](statusbar-control-windows-forms.md)中的可程式設計區域由<xref:System.Windows.Forms.StatusBarPanel>類的實例組成。 這些通過添加到類添加<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。  
   
-### <a name="to-add-panels-to-a-status-bar"></a>將面板新增至狀態列  
+### <a name="to-add-panels-to-a-status-bar"></a>將面板添加到狀態列  
   
-1. 在程式中, 藉由將狀態列面板新增至來<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>建立它們。 藉由使用透過<xref:System.Windows.Forms.StatusBar.Panels%2A>屬性傳遞的索引, 指定個別面板的屬性設定。  
+1. 在此過程中，通過將狀態列面板添加到 中<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>，創建狀態列面板。 使用通過<xref:System.Windows.Forms.StatusBar.Panels%2A>屬性傳遞的索引為各個面板指定屬性設置。  
   
-     在下列程式碼範例中, 為圖示的位置設定的路徑是 [**我的文件**] 資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦都包含此資料夾, 所以會使用這個位置。 選擇此位置也可讓具有最低系統存取層級的使用者安全地執行應用程式。 下列範例需要已加入<xref:System.Windows.Forms.StatusBar>控制項的表單。  
+     在下面的代碼示例中，為圖示的位置設置的路徑是 **"我的文件"** 資料夾。 使用此位置是因為您可以假定運行 Windows 作業系統的大多數電腦都將包含此資料夾。 選擇此位置還允許系統存取層級最低的使用者安全地運行應用程式。 下面的示例需要已添加控制項的<xref:System.Windows.Forms.StatusBar>表單。  
   
     > [!NOTE]
-    > <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>是以零為基底的集合, 因此程式碼應據此繼續進行。  
+    > <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>是一個基於零的集合，因此代碼應相應地繼續。  
   
     ```vb  
     Public Sub CreateStatusBarPanels()  
@@ -49,7 +49,7 @@ ms.locfileid: "69925102"
        StatusBar1.Panels(2).BorderStyle = StatusBarPanelBorderStyle.Raised  
     ' Set Icon property of third panel. You should replace the bolded  
     ' icon in the sample below with an icon of your own choosing.  
-       StatusBar1.Panels(2).Icon = New _   
+       StatusBar1.Panels(2).Icon = New _
        System.Drawing.Icon(System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        & "\Icon.ico")  
@@ -77,7 +77,7 @@ ms.locfileid: "69925102"
        // Set Icon property of third panel. You should replace the bolded  
        // icon in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
-       statusBar1.Panels[2].Icon =   
+       statusBar1.Panels[2].Icon =
           new System.Drawing.Icon (System.Environment.GetFolderPath _  
        (System.Environment.SpecialFolder.Personal) _  
        + @"\Icon.ico");  
@@ -109,7 +109,7 @@ ms.locfileid: "69925102"
           statusBar1->Panels[2]->BorderStyle =  
              StatusBarPanelBorderStyle::Raised;  
           // Set Icon property of third panel.  
-          // You should replace the bolded image   
+          // You should replace the bolded image
           // in the sample below with an icon of your own choosing.  
           statusBar1->Panels[2]->Icon =  
              gcnew System::Drawing::Icon(String::Concat(  
@@ -126,6 +126,6 @@ ms.locfileid: "69925102"
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [集合編輯器對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
 - [如何：設定狀態列面板的大小](how-to-set-the-size-of-status-bar-panels.md)
-- [逐步解說：在執行時間更新狀態列資訊](walkthrough-updating-status-bar-information-at-run-time.md)
-- [如何：判斷按一下 Windows Forms 狀態列控制項中的哪一個面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [逐步解說：在執行階段更新狀態列資訊](walkthrough-updating-status-bar-information-at-run-time.md)
+- [如何：判斷在 Windows Forms StatusBar 控制項中按下的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar 控制項概觀](statusbar-control-overview-windows-forms.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Type Library Exporter
 ms.assetid: 5c0a3d14-5f26-4267-94a9-82c30f8db09a
 ms.openlocfilehash: cbde2af9c8a03e6c41f571120027030713f1b8d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104118"
 ---
 # <a name="tlbexp-helper-functions-unmanaged-api-reference"></a>Tlbexp Helper 函式 (Unmanaged API 參考)
 [型別程式庫匯出工具](../../tools/tlbexp-exe-type-library-exporter.md) (Tlbexp.exe) 會載入名為 TlbRef.dll 的˙動態連結程式庫。 此 DLL 包含兩個協助程式函式，以及匯出工具在「組件-至-型別-程式庫」轉換程序期間使用的介面。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [GetTypeLibInfo 函式](gettypelibinfo-function.md)  
  提供型別程式庫的當地語系化與作業系統資訊。  
   

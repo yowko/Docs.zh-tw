@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
-ms.openlocfilehash: 8438a7b54ca19625687ab96386384cf62ae62d11
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d01198d158c4e1c64f12e8a0756c3d4e599fce74
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783806"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149540"
 ---
 # <a name="handling-dataadapter-events"></a>處理 DataAdapter 的事件
 ADO.NET <xref:System.Data.Common.DataAdapter> 公開 (Expose) 的三個事件可讓您用來回應資料來源中的資料變更。 下表說明 `DataAdapter` 事件。  
   
-|Event - 事件|描述|  
+|事件|描述|  
 |-----------|-----------------|  
 |`RowUpdating`|資料列上的 UPDATE、INSERT 或 DELETE 作業 (呼叫其中一個 `Update` 方法) 即將開始。|  
 |`RowUpdated`|資料列上的 UPDATE、INSERT 或 DELETE 作業 (呼叫其中一個 `Update` 方法) 已經完成。|  
@@ -39,7 +39,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> 公開 (Expose) 的三個事件可
   
  您也可以使用 `ContinueUpdateOnError` 屬性來處理更新資料列的錯誤。 如果 `DataAdapter.ContinueUpdateOnError` 為 `true`，則當資料列的更新造成擲回例外狀況時，會將例外狀況的文字放入特定資料列的 `RowError` 資訊中，並繼續作業，而不擲回例外狀況。 這樣一來，您就可以在完成 `Update` 後才回應錯誤，而 `RowUpdated` 事件則是讓您在發生錯誤時立即回應該錯誤。  
   
- 下列程式碼範例顯示如何加入和移除事件處理常式。 `RowUpdating` 事件處理常式將所有的刪除記錄和時間戳記寫入記錄檔。 `ContinueUpdateOnError` `DataSet` `RowError` `true`  = 事件處理常式會將錯誤資訊加入至中資料列的屬性，並隱藏例外狀況，並繼續處理（鏡像的行為）。 `RowUpdated`  
+ 下列程式碼範例顯示如何加入和移除事件處理常式。 `RowUpdating` 事件處理常式將所有的刪除記錄和時間戳記寫入記錄檔。 事件`RowUpdated`處理常式將錯誤資訊添加到 中的`RowError``DataSet`行的屬性，禁止異常並繼續處理（鏡像 的行為`ContinueUpdateOnError` = `true`）。  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection object.  
@@ -107,7 +107,7 @@ protected static void OnRowUpdating(
   {  
     System.IO.TextWriter tw = System.IO.File.AppendText("Deletes.log");  
     tw.WriteLine(  
-      "{0}: Customer {1} Deleted.", DateTime.Now,   
+      "{0}: Customer {1} Deleted.", DateTime.Now,
        args.Row["CustomerID", DataRowVersion.Original]);  
     tw.Close();  
   }  
@@ -178,7 +178,7 @@ protected static void FillError(object sender, FillErrorEventArgs args)
     DataRow myRow = args.DataTable.Rows.Add(new object[]  
        {args.Values[0], args.Values[1], DBNull.Value});  
     //Set the RowError containing the value for the third column.  
-    myRow.RowError =   
+    myRow.RowError =
        "OverflowException Encountered. Value from data source: " +  
        args.Values[2];  
     args.Continue = true;  
@@ -192,4 +192,4 @@ protected static void FillError(object sender, FillErrorEventArgs args)
 - [處理 DataSet 的事件](./dataset-datatable-dataview/handling-dataset-events.md)
 - [處理 DataTable 事件](./dataset-datatable-dataview/handling-datatable-events.md)
 - [事件](../../../standard/events/index.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

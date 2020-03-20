@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: ddb53c9224d56803c3528d79c5ccdf5534b9ab03
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e8d24a3998ca97fdf45e647bc40c1f7d6018ec20
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039809"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149449"
 ---
 # <a name="optimistic-concurrency"></a>開放式並行存取
 在多使用者環境中，更新資料庫中的資料時，有兩種模型可供使用：開放式並行存取和封閉式並行存取。 <xref:System.Data.DataSet> 物件的設計是要鼓勵使用者在進行長時間的活動 (如遠端處理資料以及與資料進行互動) 時，採用開放式同步存取。  
@@ -30,48 +30,48 @@ ms.locfileid: "73039809"
   
  在下午 1:00 時，User1 從資料庫讀取出資料列，取得下列的值：  
   
- **CustID LastName FirstName**  
+ **CustID     LastName     FirstName**  
   
- 101 Smith Bob  
+ 101          Smith             Bob  
   
-|欄名|原始值|目前值|資料庫中的值|  
+|資料行名稱|原始值|目前值|資料庫中的值|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|LastName|Smith|Smith|Smith|  
-|FirstName|Bob|Bob|Bob|  
+|姓氏|Smith|Smith|Smith|  
+|名字|Bob|Bob|Bob|  
   
  在下午 1:01 時，User2 讀取同一資料列。  
   
- 在下午1:03，人員會將**FirstName**從 "Bob" 變更為 "Robert"，並更新資料庫。  
+ 下午 1：03，User2 將 **"名字"** 從"Bob"更改為"Robert"並更新資料庫。  
   
-|欄名|原始值|目前值|資料庫中的值|  
+|資料行名稱|原始值|目前值|資料庫中的值|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|LastName|Smith|Smith|Smith|  
-|FirstName|Bob|Robert|Bob|  
+|姓氏|Smith|Smith|Smith|  
+|名字|Bob|Robert|Bob|  
   
  更新成功，因為更新時資料庫中的值符合 User2 擁有的原始值。  
   
  在下午 1:05 時，User1 將 "Bob" 的名字變更為 "James"，並嘗試更新資料列。  
   
-|欄名|原始值|目前值|資料庫中的值|  
+|資料行名稱|原始值|目前值|資料庫中的值|  
 |-----------------|--------------------|-------------------|-----------------------|  
 |CustID|101|101|101|  
-|LastName|Smith|Smith|Smith|  
-|FirstName|Bob|James|Robert|  
+|姓氏|Smith|Smith|Smith|  
+|名字|Bob|James|Robert|  
   
  此時，User1 發生了開放式並行存取違規的情況，因為資料庫中的值 ("Robert") 不再符合 User1 原先預期的原始值 ("Bob")。 並行違規只是讓您瞭解更新失敗。 現在必須決定要用 User1 所做的變更覆寫 User2 的變更，或是取消 User1 做的變更。  
   
 ## <a name="testing-for-optimistic-concurrency-violations"></a>測試開放式同步存取違規  
  有數種技巧可測試開放式同步存取違規。 其中一種是將時間戳記資料行納入資料表中。 資料庫一般會提供時間戳記功能，可用來辨識記錄上回更新的日期和時間。 採用這項技巧時，資料表定義會包含時間戳記資料行。 只要記錄一更新，時間戳記便會隨之更新以反映目前的日期和時間。 開放式同步存取違規測試中，時間戳記資料行會隨著資料表的任何內容查詢傳回。 嘗試更新時，資料庫中時間戳記的值便會與修改過之資料列中所含的原始時間戳記值比較。 若兩值相符，就會執行更新，並以目前的時間來更新時間戳記資料行的值以反映更新。 若兩值不符，就會發生開放式同步存取違規。  
   
- 另一個測試開放式同步存取違規的技巧，是驗證資料列內所有原始資料行的值是否仍然符合資料庫中的值。 例如，請考量下列查詢：  
+ 另一個測試開放式同步存取違規的技巧，是驗證資料列內所有原始資料行的值是否仍然符合資料庫中的值。 例如，請考慮下列查詢：  
   
 ```sql
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- 若要在更新**Table1**中的資料列時測試開放式平行存取違規，您會發出下列 UPDATE 語句：  
+ 要在更新**表 1**中的行時測試樂觀併發衝突，請發出以下 UPDATE 語句：  
   
 ```sql
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  使用開放式同步存取模型時，您也可以選擇套用較寬鬆的準則。 例如，在 WHERE 子句中僅使用主索引鍵資料行時，不論另一個資料行在上次查詢後是否曾更新，都會覆寫資料。 您也可以只在特定資料行套用 WHERE 子句，以覆寫資料 (除非特定欄位在上次查詢後已經更新)。  
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated 事件  
- <xref:System.Data.Common.DataAdapter> 物件的**RowUpdated**事件可以與先前所述的技術搭配使用，以向您的應用程式提供開放式平行存取違規的通知。 **RowUpdated**會在每次嘗試從**資料集**更新**修改過**的資料列之後發生。 如此可讓您加入特殊處理程式碼，包括發生例外狀況時的處理、加入自訂錯誤資訊、加入重試邏輯等等。 <xref:System.Data.Common.RowUpdatedEventArgs> 物件會傳回**RecordsAffected**屬性，其中包含資料表中修改過的資料列之特定 update 命令所影響的資料列數目。 藉由將 update 命令設定為測試開放式平行存取， **RecordsAffected**屬性會在發生開放式平行存取違規時傳回0的值，因為未更新任何記錄。 若發生這種情況，就會發生例外狀況。 **RowUpdated**事件可讓您處理這種情況，並藉由設定適當的**RowUpdatedEventArgs**來避免例外狀況，例如**即. 發生**。 如需**RowUpdated**事件的詳細資訊，請參閱[處理 DataAdapter 事件](handling-dataadapter-events.md)。  
+ 物件的 RowUpdated 事件可與前面描述的技術結合使用，以便向應用提供樂觀併發衝突的通知。 **RowUpdated** <xref:System.Data.Common.DataAdapter> 每次嘗試從**DataSet**更新**修改**行後，都會發生**行更新**。 如此可讓您加入特殊處理程式碼，包括發生例外狀況時的處理、加入自訂錯誤資訊、加入重試邏輯等等。 該<xref:System.Data.Common.RowUpdatedEventArgs>物件返回**一個"記錄影響"** 屬性，其中包含受表中已修改行的特定更新命令影響的行數。 通過將更新命令設置為測試樂觀併發，由於未更新任何記錄，因此，在發生樂觀併發衝突時 **，Records影響**屬性將傳回值 0。 若發生這種情況，就會發生例外狀況。 **RowUpdate**事件使您能夠處理此事件，並通過設置相應的**RowUpdateEventArgs 來**避免異常。 **UpdateStatus.SkipCurrentRow** 有關 **"行更新事件"** 的詳細資訊，請參閱[處理資料配接器事件](handling-dataadapter-events.md)。  
   
- （選擇性）您可以在呼叫**update**之前，將**ContinueUpdateOnError**設定為**true**，然後在**更新**完成時回應儲存于特定資料列之**RowError**屬性中的錯誤資訊。 如需詳細資訊，請參閱資料[列錯誤資訊](./dataset-datatable-dataview/row-error-information.md)。  
+ 或者，在調用**Update**之前，您可以將**DataAdapter.繼續UpdateOnError**設置為**true**，並在**更新**完成後回應存儲在特定行的**RowError**屬性中的錯誤資訊。 有關詳細資訊，請參閱[行錯誤資訊](./dataset-datatable-dataview/row-error-information.md)。  
   
 ## <a name="optimistic-concurrency-example"></a>開放式同步存取範例  
- 以下是一個簡單的範例，它會設定**DataAdapter**的**UpdateCommand**以測試開放式平行存取，然後使用**RowUpdated**事件來測試開放式平行存取違規。 遇到開放式同步存取違規時，應用程式會設定已發出更新之資料列的**RowError** ，以反映開放式平行存取違規。  
+ 下面是一個簡單的示例，用於設置**DataAdapter**的**UpdateCommand**以測試樂觀併發，然後使用**RowUpdate**事件來測試樂觀併發衝突。 遇到樂觀併發衝突時，應用程式將設置更新發出的行的**RowError，** 以反映樂觀的併發衝突。  
   
- 請注意，傳遞給 UPDATE 命令之 WHERE 子句的參數值會對應到其各自資料行的**原始**值。  
+ 請注意，傳遞給 UPDATE 命令的 WHERE 子句的參數值將映射到其各自列**的原始**值。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -143,7 +143,7 @@ adapter.Update(dataSet, "Customers")
 Dim dataRow As DataRow  
   
 For Each dataRow In dataSet.Tables("Customers").Rows  
-    If dataRow.HasErrors Then   
+    If dataRow.HasErrors Then
        Console.WriteLine(dataRow (0) & vbCrLf & dataRow.RowError)  
     End If  
 Next  
@@ -198,7 +198,7 @@ foreach (DataRow dataRow in dataSet.Tables["Customers"].Rows)
   
 protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)  
 {  
-  if (args.RecordsAffected == 0)   
+  if (args.RecordsAffected == 0)
   {  
     args.Row.RowError = "Optimistic Concurrency Violation Encountered";  
     args.Status = UpdateStatus.SkipCurrentRow;  
@@ -206,10 +206,10 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [在 ADO.NET 中擷取和修改資料](retrieving-and-modifying-data.md)
 - [使用 DataAdapter 更新資料來源](updating-data-sources-with-dataadapters.md)
 - [資料列錯誤資訊](./dataset-datatable-dataview/row-error-information.md)
 - [異動和並行存取](transactions-and-concurrency.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

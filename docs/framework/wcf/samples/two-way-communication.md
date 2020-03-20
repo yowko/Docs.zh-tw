@@ -2,12 +2,12 @@
 title: 雙向通訊
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 9cf8d3746cea5746bee186a8a68a515c8503cb85
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 56f789fe185cb2885c215e9512e82ae2fbb64a36
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715904"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143755"
 ---
 # <a name="two-way-communication"></a>雙向通訊
 這個範例會示範如何透過 MSMQ 來執行交易雙向佇列通訊。 這個範例會使用 `netMsmqBinding` 繫結。 在此範例中，服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -15,7 +15,7 @@ ms.locfileid: "74715904"
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 這個範例是以交易式[MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)系結為基礎。  
+ 此示例基於[交易 MSMQ 綁定](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)。  
   
  在佇列通訊中，用戶端會使用佇列與服務通訊。 用戶端會將訊息傳送至佇列，而服務會從佇列接收訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "74715904"
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
-    void SubmitPurchaseOrder(PurchaseOrder po, string   
+    void SubmitPurchaseOrder(PurchaseOrder po, string
                                   reportOrderStatusTo);  
 }
 ```
@@ -73,9 +73,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
  MSMQ 佇列名稱是指定在組態檔的 appSettings 區段中。 服務端點會定義在組態檔的 System.ServiceModel 區段中。  
   
 > [!NOTE]
-> MSMQ 佇列名稱與端點位址會使用稍微不同的定址慣例。 MSMQ 佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 Windows Communication Foundation （WCF）端點位址會指定一個 net.tcp：配置、使用 "localhost" 代表本機電腦，並在其路徑中使用正斜線。 若要讀取裝載於遠端電腦的佇列，請將 "." 和 "localhost" 取代成遠端電腦名稱。  
+> MSMQ 佇列名稱與端點位址會使用稍微不同的定址慣例。 MSMQ 佇列名稱會使用點 (.) 來代表本機電腦，並在其路徑中使用反斜線分隔符號。 Windows 通信基礎 （WCF） 終結點位址指定 net.msmq：方案，對本地電腦使用"本地主機"，並在其路徑中使用正向斜杠。 若要讀取裝載於遠端電腦的佇列，請將 "." 和 "localhost" 取代成遠端電腦名稱。  
   
- 服務會自我裝載。 使用 MSMQ 傳輸時，必須事先建立使用的佇列。 這個動作可手動或透過程式碼完成。 在這個範例中，服務會檢查佇列是否存在，並在需要時建立佇列。 佇列名稱會從組態檔中讀取。 [System.servicemodel 中繼資料公用程式工具（Svcutil）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)會使用基底位址來產生服務的 proxy。  
+ 服務會自我裝載。 使用 MSMQ 傳輸時，必須事先建立使用的佇列。 這個動作可手動或透過程式碼完成。 在這個範例中，服務會檢查佇列是否存在，並在需要時建立佇列。 佇列名稱會從組態檔中讀取。 [服務模型中繼資料實用程式工具 （Svcutil.exe）](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用基本位址生成服務的代理。  
 
 ```csharp
 // Host the service within this EXE console application.  
@@ -149,11 +149,11 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
 [ServiceBehavior]  
 public class OrderStatusService : IOrderStatus  
 {  
-    [OperationBehavior(TransactionAutoComplete = true,   
+    [OperationBehavior(TransactionAutoComplete = true,
                         TransactionScopeRequired = true)]  
     public void OrderStatus(string poNumber, string status)  
     {  
-        Console.WriteLine("Status of order {0}:{1} ", poNumber ,   
+        Console.WriteLine("Status of order {0}:{1} ", poNumber ,
                                                            status);  
     }  
 }  
@@ -170,7 +170,7 @@ public class OrderStatusService : IOrderStatus
 <system.serviceModel>  
   
   <services>  
-    <service   
+    <service
        name="Microsoft.ServiceModel.Samples.OrderStatusService">  
       <!-- Define NetMsmqEndpoint -->  
       <endpoint address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderStatus"  
@@ -182,8 +182,8 @@ public class OrderStatusService : IOrderStatus
   <client>  
     <!-- Define NetMsmqEndpoint -->  
     <endpoint name="OrderProcessorEndpoint"  
-              address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"   
-              binding="netMsmqBinding"   
+              address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"
+              binding="netMsmqBinding"
               contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />  
   </client>  
   
@@ -218,16 +218,16 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3. 若要在單一或跨電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3. 要在單機或跨電腦配置中運行示例，請按照[運行 Windows 通信基礎示例中的](../../../../docs/framework/wcf/samples/running-the-samples.md)說明操作。  
   
     > [!NOTE]
     > 如果您使用 Svcutil.exe 重新產生這個範例的組態，請務必修改用戶端組態中的端點名稱，以配合用戶端節點。  
   
- 根據預設，傳輸安全性會透過 <xref:System.ServiceModel.NetMsmqBinding> 啟用。 MSMQ 傳輸安全性有兩個相關的屬性，<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 和 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` 預設會將 [驗證模式] 設定為 [`Windows`]，而 [保護等級] 設定為 [`Sign`]。 若要 MSMQ 提供驗證及簽署功能，MSMQ 必須是網域的一部分，而且必須安裝 MSMQ 的 Active Directory 整合選項。 如果您在不符合這些條件的電腦上執行這個範例，就會收到錯誤。  
+ 根據預設，傳輸安全性會透過 <xref:System.ServiceModel.NetMsmqBinding> 啟用。 MSMQ 傳輸安全性有兩個相關屬性，<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A><xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`預設情況下，身份驗證模式設置為`Windows`，保護層級設置為`Sign`。 若要 MSMQ 提供驗證及簽署功能，MSMQ 必須是網域的一部分，而且必須安裝 MSMQ 的 Active Directory 整合選項。 如果您在不符合這些條件的電腦上執行這個範例，就會收到錯誤。  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>若要在加入工作群組，或是沒有 Active Directory 整合的電腦上執行這個範例  
   
@@ -243,12 +243,12 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
       <system.serviceModel>  
         <services>  
-          <service   
+          <service
               name="Microsoft.ServiceModel.Samples.OrderProcessorService">  
             <!-- Define NetMsmqEndpoint -->  
             <endpoint address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"  
                       binding="netMsmqBinding"  
-                      bindingConfiguration="TransactedBinding"   
+                      bindingConfiguration="TransactedBinding"
                       contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />  
           </service>  
         </services>  
@@ -279,7 +279,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
       <system.serviceModel>  
   
         <services>  
-          <service   
+          <service
              name="Microsoft.ServiceModel.Samples.OrderStatusService">  
             <!-- Define NetMsmqEndpoint -->  
             <endpoint address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderStatus"  
@@ -291,8 +291,8 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
         <client>  
           <!-- Define NetMsmqEndpoint -->  
           <endpoint name="OrderProcessorEndpoint"  
-                    address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"   
-                    binding="netMsmqBinding"   
+                    address="net.msmq://localhost/private/ServiceModelSamplesTwo-way/OrderProcessor"
+                    binding="netMsmqBinding"
                     bindingConfiguration="TransactedBinding"  
                     contract="Microsoft.ServiceModel.Samples.IOrderProcessor" />  
         </client>  
@@ -324,9 +324,9 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  

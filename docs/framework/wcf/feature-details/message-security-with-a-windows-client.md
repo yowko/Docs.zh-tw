@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: d3c1661acf4d4aa2de8b6eca7015c74ba7f80af1
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: bcfeb5f863b1dd6cf9171a7fc53c8984ea68ecb3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212020"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184621"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows 用戶端的訊息安全性
-此案例顯示由訊息安全性模式保護的 Windows Communication Foundation （WCF）用戶端和伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  
+此方案顯示受消息安全模式保護的 Windows 通信基礎 （WCF） 用戶端和伺服器。 此用戶端和伺服器會以 Windows 認證進行驗證。  
   
- ![Windows 用戶端的訊息安全性](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Windows 用戶端的消息安全性](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |特性|描述|  
 |--------------------|-----------------|  
@@ -24,12 +24,12 @@ ms.locfileid: "76212020"
 |驗證 (伺服器)|交互驗證伺服器和用戶端|  
 |驗證 (用戶端)|交互驗證伺服器和用戶端|  
 |完整性|是，使用共用安全性內容|  
-|機密性|是，使用共用安全性內容|  
-|Transport|NET.TCP|  
+|保密|是，使用共用安全性內容|  
+|傳輸|NET.TCP|  
 |繫結|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>服務  
- 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
+ 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "76212020"
 ```  
   
 ## <a name="client"></a>Client  
- 下列程式碼和組態要獨立執行。 請執行下列其中一項動作：  
+ 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
@@ -105,18 +105,18 @@ ms.locfileid: "76212020"
       </netTcpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="net.tcp://machineName:8008/Calculator"   
+      <endpoint address="net.tcp://machineName:8008/Calculator"
                 binding="netTcpBinding"  
                 bindingConfiguration="NetTcpBinding_ICalculator"  
                 contract="ICalculator"  
-                name="NetTcpBinding_ICalculator">          
+                name="NetTcpBinding_ICalculator">
       </endpoint>  
     </client>  
   </system.serviceModel>  
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

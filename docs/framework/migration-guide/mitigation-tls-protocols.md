@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 33f97d13-3022-43da-8b18-cdb5c88df9c2
 ms.openlocfilehash: 45225d73ac60564d3e22c73270faab6b4e04d697
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73457833"
 ---
 # <a name="mitigation-tls-protocols"></a>風險降低：TLS 通訊協定
@@ -22,8 +22,8 @@ ms.locfileid: "73457833"
   
 - 無法升級到支援 Tls1.0、Tls1.1 或 Tls 1.2 的任何伺服器端應用程式。  
   
-## <a name="mitigation"></a>風險降低  
- 建議的緩和措施是將伺服器端應用程式升級至 Tls1.0、Tls1.1 或 Tls 1.2。 如果這並不可行，或是用戶端應用程式已中斷，則可使用 <xref:System.AppContext> 類別搭配下列兩種方式之一，停用這項功能：  
+## <a name="mitigation"></a>降低  
+ 建議的風險降低措施是將伺服器端應用程式升級至 Tls1.0、Tls1.1 或 Tls 1.2。 如果這並不可行，或是用戶端應用程式已中斷，則可使用 <xref:System.AppContext> 類別搭配下列兩種方式之一，停用這項功能：  
   
 - 以程式設計方式，利用如下所示的程式碼片段：  
   
@@ -32,7 +32,7 @@ ms.locfileid: "73457833"
   
      因為 <xref:System.Net.ServicePointManager> 物件只能初始化一次，因此應用程式必須優先定義這些相容性設定。  
   
-- 將下列程式行加入至 app.config 檔案的 [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) 區段：  
+- 通過將以下行添加到應用的[\<運行時>](../configure-apps/file-schema/runtime/runtime-element.md)部分：  
   
     ```xml  
     <AppContextSwitchOverrides value="Switch.System.Net.DontEnableSchUseStrongCrypto=true"/>  
@@ -40,6 +40,6 @@ ms.locfileid: "73457833"
   
  但是請注意，我們並不建議您停用這項預設行為，因為這樣會讓應用程式較不安全。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [應用程式相容性](application-compatibility.md)

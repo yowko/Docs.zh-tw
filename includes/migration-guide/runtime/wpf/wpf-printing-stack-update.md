@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: e613f0c52c77efebf250f5935d5cbfc29bc09a6b
-ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
-ms.translationtype: HT
+ms.openlocfilehash: 6fafb689af5d50b31b19f5d1fe7090a6c256ca45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "67802479"
 ---
 ### <a name="wpf-printing-stack-update"></a>WPF 列印堆疊更新
@@ -12,7 +12,6 @@ ms.locfileid: "67802479"
 |---|---|
 |詳細資料|使用 <xref:System.Printing.PrintQueue?displayProperty=name> 的 WPF 列印 API 現在會呼叫 Windows 的列印文件套件 API，以支援目前已淘汰的 XPS 列印 API。 進行這項變更是考慮到服務能力；使用者和開發人員都不應該會看到行為或 API 使用方式中有任何變更。 在 Windows 10 Creators Update 中執行時，預設會啟用新的列印堆疊。 舊版 Windows 上的舊列印堆疊仍會繼續如往常一般運作。|
 |建議|若要在 Windows 10 Creators Update 中使用舊堆疊，請將 <code>HKEY_CURRENT_USER\Software\Microsoft\.NETFramework\Windows Presentation Foundation\Printing</code> 登錄機碼的 <code>UseXpsOMPrinting</code> REG_DWORD 值設為 <code>1</code>。|
-|範圍|Edge|
+|影響範圍|Edge|
 |版本|4.7|
 |類型|執行階段|
-

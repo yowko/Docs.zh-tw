@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
 ms.openlocfilehash: 1e7f0123ab07fd4e83eea957b72bf79eeeecef2b
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74204687"
 ---
 # <a name="network-programming-in-the-net-framework"></a>以 .NET Framework 進行網路程式設計
@@ -31,7 +31,7 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  [使用應用程式通訊協定](using-application-protocols.md)  
  說明如何設計使用網路通訊協定 (例如 TCP、UDP 和 HTTP) 的應用程式。  
   
- [網際網路通訊協定第 6 版](internet-protocol-version-6.md)  
+ [互聯網協定版本 6](internet-protocol-version-6.md)  
  說明在目前版本的網際網路通訊協定組合 (IPv4) 之上網際網路通訊協定第 6 版 (IPv6) 的優點，描述 IPv6 位址、路由和自動設定，以及如何啟用和停用 IPv6。  
   
  [設定網際網路應用程式](configuring-internet-applications.md)  
@@ -49,13 +49,13 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  [System.Net 類別的最佳做法](best-practices-for-system-net-classes.md)  
  提供可讓您善用網際網路應用程式的祕訣和訣竅。  
   
- [透過 Proxy 存取網際網路](accessing-the-internet-through-a-proxy.md)  
+ [通過代理訪問互聯網](accessing-the-internet-through-a-proxy.md)  
  描述如何設定 Proxy。  
   
  [NetworkInformation](networkinformation.md)  
  描述如何蒐集網路事件、變更、統計資料和屬性的相關資訊，以及說明如何判斷遠端主機是否可以使用 <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> 類別取得聯繫。  
   
- [2.0 版中 System.Uri 命名空間的變更](changes-to-the-system-uri-namespace-in-version-2-0.md)  
+ [版本 2.0 中對系統.Uri 命名空間的更改](changes-to-the-system-uri-namespace-in-version-2-0.md)  
  說明在版本 2.0 中對 <xref:System.Uri?displayProperty=nameWithType> 類別所做的幾個變更，以修正不正確的行為、提高可用性，以及增強安全性。  
   
  [System.Uri 的國際資源識別項支援](international-resource-identifier-support-in-system-uri.md)  
@@ -73,14 +73,14 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  [3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更](changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
  說明在版本 3.5 SP1 中所做的安全性變更，這些變更會影響 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>、 <xref:System.Net.HttpListener?displayProperty=nameWithType>、 <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>以及 System.Net 命名空間中的相關類別處理整合式 Windows 驗證的方式。  
   
- [具有延伸保護的整合式 Windows 驗證](integrated-windows-authentication-with-extended-protection.md)  
+ [Integrated Windows Authentication with Extended Protection](integrated-windows-authentication-with-extended-protection.md)  
  說明延伸保護的增強功能，這些增強功能會影響 <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>、 <xref:System.Net.HttpListener?displayProperty=nameWithType>、 <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>、 <xref:System.Net.Security.SslStream?displayProperty=nameWithType>、 <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>以及 <xref:System.Net?displayProperty=nameWithType> 和相關命名空間中的相關類別處理整合式 Windows 驗證的方式。  
   
  [使用 IPv6 和 Teredo 的 NAT 周遊](nat-traversal-using-ipv6-and-teredo.md)  
  說明 <xref:System.Net?displayProperty=nameWithType>、 <xref:System.Net.NetworkInformation?displayProperty=nameWithType>和 <xref:System.Net.Sockets?displayProperty=nameWithType> 命名空間所新增的增強功能，以支援使用 IPv6 和 Teredo 進行 NAT 周遊。  
   
  [Windows 市集應用程式的網路隔離](network-isolation-for-windows-store-apps.md)  
- 說明在 Windows 8.x 存放區應用程式中使用 <xref:System.Net>、<xref:System.Net.Http>和 <xref:System.Net.Http.Headers> 命名空間中的類別時，網路隔離的影響。  
+ 描述在 Windows 8.x 應用商店<xref:System.Net>應用中<xref:System.Net.Http>使用<xref:System.Net.Http.Headers>中的 類和命名空間時網路隔離的影響。  
   
  [網路程式設計範例](network-programming-samples.md)  
  可供下載的網路程式設計範例的連結，這些範例會使用 <xref:System.Net>、 <xref:System.Net.Cache>、 <xref:System.Net.Configuration>、 <xref:System.Net.Mail>、 <xref:System.Net.Mime>、 <xref:System.Net.NetworkInformation>、 <xref:System.Net.PeerToPeer>、 <xref:System.Net.Security>以及 <xref:System.Net.Sockets> 命名空間中的類別。  
@@ -126,7 +126,7 @@ Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Man
  為開發人員提供 WebSocket 介面的 Managed 實作。  
   
  <xref:System.Uri?displayProperty=nameWithType>  
- 提供統一資源識別元 (URI) 的物件表示，以及對 URI 各部分的簡易存取。  
+ 提供以物件表示屬性的統一資源識別碼 (URI)，而且可以輕鬆存取 URI 的部分。  
   
  <xref:System.Security.Authentication.ExtendedProtection?displayProperty=nameWithType>  
  為應用程式提供使用延伸保護進行驗證的支援。  

@@ -3,10 +3,10 @@ title: WMI 與效能計數器 (非受控 API 參考)
 description: 摘要說明適用於 WMI 與效能計數器的 .NET Framework 非受控 API 資訊。
 ms.date: 11/06/2017
 ms.openlocfilehash: f28cd25ee6c3511dc5ac8a6dd4076c81f43fe74a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73127413"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) 與效能計數器 (非受控 API 參考)
@@ -17,7 +17,7 @@ ms.locfileid: "73127413"
 
 該 API 包括下列功能：
 
-| 功能 | 描述 |
+| 函式 | 描述 |
 |---------|---------|
 | [BeginEnumeration 函式](beginenumeration.md) | 將列舉程式設定為開始列舉 WMI 物件屬性的狀態。 |
 | [BeginMethodEnumeration 函式](beginmethodenumeration.md) |  開始列舉物件上的可用方法。 |
@@ -71,6 +71,6 @@ ms.locfileid: "73127413"
 | [VerifyClient 函式](verifyclientkey.md) | 確定用戶端金鑰有正確的安全性。 |
 | [WritePropertyValue 函式](writepropertyvalue.md) | 將指定的位元組數目寫入到屬性控制代碼所指定的屬性中。 |
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [非受控 API 參考](../index.md)

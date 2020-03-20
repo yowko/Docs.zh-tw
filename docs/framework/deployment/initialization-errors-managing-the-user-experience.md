@@ -1,5 +1,5 @@
 ---
-title: .NET Framework 初始化錯誤：管理使用者體驗
+title: .NET 框架初始化錯誤：管理使用者體驗
 ms.date: 03/30/2017
 helpviewer_keywords:
 - no framework found experience
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716458"
 ---
-# <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework 初始化錯誤：管理使用者體驗
+# <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET 框架初始化錯誤：管理使用者體驗
 
 Common Language Runtime (CLR) 啟用系統會決定將用來執行 Managed 應用程式碼的 CLR 版本。 在某些情況下，啟用系統可能找不到要載入的 CLR 版本。 應用程式需要無效或未安裝在指定電腦上的 CLR 版本時，通常會發生這種情況。 如果找不到要求的版本，CLR 啟用系統會從已呼叫的函式或介面傳回 HRESULT 錯誤碼，而且可能會向執行應用程式的使用者顯示錯誤訊息。 本文提供 HRESULT 代碼清單，並說明如何防止顯示錯誤訊息。
 
@@ -37,7 +37,7 @@ CLR 啟用 API 會傳回 HRESULT 代碼，以向主機報告啟用作業的結�
 
 ## <a name="ui-for-initialization-errors"></a>初始化錯誤的 UI
 
-如果 CLR 啟用系統無法載入應用程式所需執行階段的正確版本，則會向使用者顯示錯誤訊息，通知他們的電腦未正確設定成執行應用程式，並提供機會來修正這個狀況。 在此情況下，通常會顯示下列錯誤訊息。 使用者可以選擇 [是] 前往 Microsoft 網站，以在其中下載應用程式的正確 .NET Framework 版本。
+如果 CLR 啟用系統無法載入應用程式所需執行階段的正確版本，則會向使用者顯示錯誤訊息，通知他們的電腦未正確設定成執行應用程式，並提供機會來修正這個狀況。 在此情況下，通常會顯示下列錯誤訊息。 使用者可以選擇 [是]**** 前往 Microsoft 網站，以在其中下載應用程式的正確 .NET Framework 版本。
 
 ![[.NET Framework 初始化錯誤] 對話方塊](./media/initialization-errors-managing-the-user-experience/initialization-error-dialog.png "初始化錯誤的一般錯誤訊息")
 
@@ -47,7 +47,7 @@ CLR 啟用 API 會傳回 HRESULT 代碼，以向主機報告啟用作業的結�
 
 若要解決基礎問題，並提供最佳使用者體驗 (錯誤訊息較少)，建議使用下列各項：
 
-- 針對 .NET Framework 3.5 （及更舊版本）的應用程式：設定您的應用程式以支援 .NET Framework 4 或更新版本（請參閱[指示](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)）。
+- 對於 .NET 框架 3.5（和更早版本）的應用程式：將應用程式佈建為支援 .NET 框架 4 或更高版本（請參閱[說明](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)）。
 
 - .NET Framework 4 應用程式：在應用程式安裝期間安裝 .NET Framework 4 可轉散發套件。 請參閱[開發人員部署手冊](deployment-guide-for-developers.md)。
 
@@ -78,20 +78,20 @@ CLR 會針對各種情況包括一組主機，而且這些主機只要在載入�
 
 ## <a name="windows-8-behavior-and-ui"></a>Windows 8 行為和 UI
 
-CLR 啟用系統在 Windows 8 上提供的行為和 UI 與其他版本的 Windows 作業系統相同，但在載入 CLR 2.0 時發生問題除外。 Windows 8 包括使用 CLR 4.5 的 .NET Framework 4.5。 不過，Windows 8 不包含 .NET Framework 2.0、3.0 或3.5，全都使用 CLR 2.0。 因此，依賴 CLR 2.0 的應用程式預設不會在 Windows 8 上執行。 相反地，它們會顯示下列對話方塊，讓使用者可以安裝 .NET Framework 3.5。 使用者也可以在控制台中啟用 .NET Framework 3.5。 [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../install/dotnet-35-windows-10.md) 文章討論這兩個選項。
+CLR 啟動系統在 Windows 8 上提供的行為和 UI 與 Windows 作業系統的其他版本相同，除非遇到載入 CLR 2.0 的問題。 Windows 8 包括 .NET 框架 4.5，它使用 CLR 4.5。 但是，Windows 8 不包括 .NET 框架 2.0、3.0 或 3.5，它們都使用 CLR 2.0。 因此，預設情況下，依賴于 CLR 2.0 的應用程式不會在 Windows 8 上運行。 相反地，它們會顯示下列對話方塊，讓使用者可以安裝 .NET Framework 3.5。 使用者也可以在控制台中啟用 .NET Framework 3.5。 [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../install/dotnet-35-windows-10.md) 文章討論這兩個選項。
 
 ![在 Windows 8 安裝 3.5 時顯示的對話方塊](./media/initialization-errors-managing-the-user-experience/install-framework-on-demand-dialog.png "視需要提示安裝 .NET Framework 3.5")
 
 > [!NOTE]
-> .NET Framework 4.5 會取代使用者電腦上的 .NET Framework 4 (CLR 4)。 因此，.NET Framework 4 應用程式會順暢地執行，而不會在 Windows 8 上顯示此對話方塊。
+> .NET Framework 4.5 會取代使用者電腦上的 .NET Framework 4 (CLR 4)。 因此，.NET 框架 4 應用程式在 Windows 8 上無縫運行，而不顯示此對話方塊。
 
-安裝 .NET Framework 3.5 時，使用者可以在其 Windows 8 電腦上執行相依于 .NET Framework 2.0、3.0 或3.5 的應用程式。 他們也可以執行 .NET Framework 1.0 和 1.1 應用程式，但前提是這些應用程式未明確地設定成只在 .NET Framework 1.0 或 1.1 上執行。 請參閱[從 .NET Framework 1.1 移轉](../migration-guide/migrating-from-the-net-framework-1-1.md)。
+安裝 .NET 框架 3.5 後，使用者可以在其 Windows 8 電腦上運行依賴于 .NET 框架 2.0、3.0 或 3.5 的應用程式。 他們也可以執行 .NET Framework 1.0 和 1.1 應用程式，但前提是這些應用程式未明確地設定成只在 .NET Framework 1.0 或 1.1 上執行。 請參閱[從 .NET Framework 1.1 移轉](../migration-guide/migrating-from-the-net-framework-1-1.md)。
 
 從 .NET Framework 4.5 開始，已改善 CLR 啟用記錄，其中包含初始化錯誤訊息顯示時間和原因的記錄項目。 如需詳細資訊，請參閱[如何：偵錯 CLR 啟用問題](how-to-debug-clr-activation-issues.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [開發人員部署手冊](deployment-guide-for-developers.md)
-- [如何：將應用程式設定為支援 .NET Framework 4 或更新版本](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [如何：將應用配置為支援 .NET 框架 4 或更高版本](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
 - [如何：偵錯 CLR 啟用問題](how-to-debug-clr-activation-issues.md)
 - [在 Windows 10、Windows 8.1 及 Windows 8 上安裝 .NET Framework 3.5](../install/dotnet-35-windows-10.md)

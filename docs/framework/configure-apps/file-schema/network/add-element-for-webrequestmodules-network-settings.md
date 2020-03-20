@@ -10,63 +10,63 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: 76dad0c0b75d20627e9f57fd1bb467bf17c9294c
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: f4edce948033478aab59a2aff61abadc55a327ce
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088506"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155020"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>\<為 Webrequestmodules 專案新增 > 元素（網路設定）
-將自訂 Web 要求模組加入至應用程式。  
+# <a name="add-element-for-webrequestmodules-network-settings"></a>\<為 Web 請求模組添加>元素（網路設置）
+向應用程式添加自訂 Web 請求模組。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webrequestmodules 專案 >** ](webrequestmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**新增 >**
+[**\<配置>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<web 請求模組>**](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<添加>**
 
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<add   
-  prefix="URI prefix"   
-  type="type_fullname, assembly_fullname"   
+<add
+  prefix="URI prefix"
+  type="type_fullname, assembly_fullname"
 />  
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
-|**屬性**|**說明**|  
+|**屬性**|**描述**|  
 |-------------------|---------------------|  
-|`prefix`|此 Web 要求模組所處理之要求的 URI 前置詞。|  
-|`type`|完整型別名稱（由 <xref:System.Type.FullName%2A> 屬性所表示）和元件名稱（由 <xref:System.Reflection.Assembly.FullName%2A> 屬性工作表示），並以逗號分隔，以執行此 Web 要求模組。|  
+|`prefix`|此 Web 請求模組處理的請求的 URI 首碼。|  
+|`type`|實現此 Web 請求模組的完全<xref:System.Type.FullName%2A>限定類型名稱（由屬性指示）和程式集<xref:System.Reflection.Assembly.FullName%2A>名稱（由屬性工作表示），由逗號分隔。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**說明**|  
+|**Element**|**描述**|  
 |-----------------|---------------------|  
-|[Webrequestmodules 專案](webrequestmodules-element-network-settings.md)|指定要用來要求網路主機資訊的模組。|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|指定用於從網路主機請求資訊的模組。|  
   
 ## <a name="remarks"></a>備註  
- `prefix` 屬性會定義使用指定 Web 要求模組的 URI 前置詞。 Web 要求模組通常會註冊來處理特定的通訊協定（例如 HTTP 或 FTP），但是可以註冊以處理對伺服器上特定伺服器或路徑的要求。  
+ 該`prefix`屬性定義使用指定的 Web 請求模組的 URI 首碼。 Web 請求模組通常註冊以處理特定協定（如 HTTP 或 FTP），但可以註冊以處理對伺服器上的特定伺服器或路徑的請求。  
   
- 當 URI 符合前置詞傳遞至 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 方法時，就會建立 Web 要求模組。  
+ 當 URI 匹配首碼傳遞給 方法時，<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>將創建 Web 請求模組。  
   
- `prefix` 屬性的值應該是有效 URI 的前置字元。 例如，`http` 或 `http://www.contoso.com`。
+ `prefix`屬性的值應為有效 URI 的前導字元。 例如，`http` 或 `http://www.contoso.com`。
   
- `type` 屬性的值應該是有效的型別名稱和對應的元件名稱，並以逗號分隔。
+ `type`屬性的值應是有效的類型名稱和相應的程式集名稱，用逗號分隔。
   
 ## <a name="configuration-files"></a>組態檔  
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="example"></a>範例  
- 下列範例會註冊 HTTP 的自訂 Web 要求模組。 您應該將 Version 和 PublicKeyToken 的值取代為指定模組的正確值。  
+ 以下示例註冊用於 HTTP 的自訂 Web 請求模組。 應將版本和 PublicKeyToken 的值替換為指定模組的正確值。  
   
 ```xml  
 <configuration>  
@@ -81,7 +81,7 @@ ms.locfileid: "74088506"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Net.WebRequest>
-- [網路設定結構描述](index.md)
+- [網路設置架構](index.md)

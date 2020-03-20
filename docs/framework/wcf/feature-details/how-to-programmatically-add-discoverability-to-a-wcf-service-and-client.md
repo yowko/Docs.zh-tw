@@ -2,21 +2,21 @@
 title: HOW TO：以程式設計方式將探索能力加入 WCF 服務與用戶端
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: a139eb4a15486be329bc6853ee6b3a3be06b0619
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291566"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184891"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>HOW TO：以程式設計方式將探索能力加入 WCF 服務與用戶端
-本主題說明如何讓 Windows Communication Foundation （WCF）服務可供探索。 它是以[自我裝載](https://go.microsoft.com/fwlink/?LinkId=145523)範例為基礎。  
+本主題介紹如何使 Windows 通信基礎 （WCF） 服務可發現。 它基於[自主機](https://go.microsoft.com/fwlink/?LinkId=145523)示例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>若要為探索設定現有的自我裝載服務範例  
   
-1. 在 Visual Studio 2012 中開啟自我裝載解決方案。 範例位於 TechnologySamples\Basic\Service\Hosting\SelfHost 目錄中。  
+1. 在 Visual Studio 2012 中打開自主機解決方案。 範例位於 TechnologySamples\Basic\Service\Hosting\SelfHost 目錄中。  
   
-2. 將 `System.ServiceModel.Discovery.dll`的參考加入至服務專案。 您可能會看到指出「系統」的錯誤訊息。 System.servicemodel 或它的其中一個相依性需要較新版本的 .NET Framework，而不是專案中所指定的版本 ...」如果您看到此訊息，請以滑鼠右鍵按一下 方案總管中的專案，然後選擇 **屬性**。 在 [**專案屬性**] 視窗中，確定已 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)][**目標 Framework** ]。  
+2. 將 `System.ServiceModel.Discovery.dll`的參考加入至服務專案。 您可能會看到一條錯誤訊息，指出"系統"。 ServiceModel.Discovery.dll 或其依賴項之一需要比專案中指定的版本更新版本的 .NET 框架......"如果看到此消息，請按右鍵解決方案資源管理器中的專案並選擇 **"屬性**"。 在 **"專案屬性"** 視窗中，請確保**目標框架**為[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
   
 3. 開啟 Service.cs 檔案，然後加入下列 `using` 陳述式。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "72291566"
         using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService)))  
         {  
             // Add a ServiceDiscoveryBehavior  
-            serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());                  
+            serviceHost.Description.Behaviors.Add(new ServiceDiscoveryBehavior());
   
             // ...  
         }  
@@ -60,11 +60,11 @@ ms.locfileid: "72291566"
   
 2. 將參考加入至 `System.ServiceModel.dll` 和 `System.ServiceModel.Discovery.dll`  
   
-3. 從現有的用戶端專案複製 GeneratedClient.cs 和 App.config 檔案並貼上至 DiscoveryClientApp 專案。 若要這麼做，請以滑鼠右鍵按一下**方案總管**中的檔案，選取 [**複製**]，然後選取**discoveryclientapp.exe**專案，按一下滑鼠右鍵並選取 [**貼**上]。  
+3. 從現有的用戶端專案複製 GeneratedClient.cs 和 App.config 檔案並貼上至 DiscoveryClientApp 專案。 為此，請按右鍵**解決方案資源管理器**中的檔，選擇 **"複製**"，然後選擇 **"發現用戶端應用"** 專案，按右鍵並選擇"**粘貼**"。  
   
 4. 開啟 Program.cs。  
   
-5. 加入下列 `using` 陳述式。  
+5. 新增下列 `using` 陳述式。  
   
     ```csharp  
     using System.ServiceModel;  
@@ -92,12 +92,12 @@ ms.locfileid: "72291566"
     }  
     ```  
   
-     這會告訴 WCF <xref:System.ServiceModel.Discovery.DiscoveryClient> 類別應該使用標準 UDP 探索端點來傳送和接收探索訊息。  
+     這告訴 WCF<xref:System.ServiceModel.Discovery.DiscoveryClient>類應使用標準的 UDP 發現終結點發送和接收發現消息。  
   
 8. 在下一行，呼叫 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法並指定包含要搜尋之服務合約的 <xref:System.ServiceModel.Discovery.FindCriteria> 執行個體。 在此情況下，指定 `ICalculator`。  
   
     ```csharp  
-    // Find ICalculatorService endpoints              
+    // Find ICalculatorService endpoints
     FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
     ```  
   
@@ -124,7 +124,7 @@ ms.locfileid: "72291566"
   
      此方法使用自 `FindCalculatorServiceAddress` 傳回的端點位址來呼叫計算機服務。  
   
-11. 在 `InvokeCalculatorService` 方法中，建立 `CalculatorServiceClient` 類別的執行個體。 此類別是由[自我裝載](https://go.microsoft.com/fwlink/?LinkId=145523)範例所定義。 它是使用 Svcutil.exe 來產生的。  
+11. 在 `InvokeCalculatorService` 方法中，建立 `CalculatorServiceClient` 類別的執行個體。 此類由[自主機](https://go.microsoft.com/fwlink/?LinkId=145523)示例定義。 它是使用 Svcutil.exe 來產生的。  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ ms.locfileid: "72291566"
     ```  
   
 ## <a name="example"></a>範例  
- 以下是本範例的程式碼清單。 因為此程式碼是以[自我裝載](https://go.microsoft.com/fwlink/?LinkId=145523)範例為基礎，所以只會列出已變更的檔案。 如需有關自我裝載範例的詳細資訊，請參閱[設定指示](https://go.microsoft.com/fwlink/?LinkId=145522)。  
+ 以下是本範例的程式碼清單。 由於此代碼基於[自主機](https://go.microsoft.com/fwlink/?LinkId=145523)示例，因此僅列出已更改的檔。 有關自主機示例的詳細資訊，請參閱[設置說明](https://go.microsoft.com/fwlink/?LinkId=145522)。  
   
 ```csharp  
 // Service.cs  
@@ -277,7 +277,7 @@ namespace DiscoveryClientApp
             // Create DiscoveryClient  
             DiscoveryClient discoveryClient = new DiscoveryClient(new UdpDiscoveryEndpoint());  
   
-            // Find ICalculatorService endpoints              
+            // Find ICalculatorService endpoints
             FindResponse findResponse = discoveryClient.Find(new FindCriteria(typeof(ICalculator)));  
   
             if (findResponse.Endpoints.Count > 0)  

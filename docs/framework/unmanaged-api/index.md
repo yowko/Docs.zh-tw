@@ -8,16 +8,16 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 ms.openlocfilehash: f7dd78b889129998dee31a22f5dd23325613b8ea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73092019"
 ---
 # <a name="unmanaged-api-reference"></a>Unmanaged API 參考
 本節包含與 Managed 程式碼相關之應用程式 (例如執行階段主機、編譯器、反組譯工具、模糊化工具、偵錯工具和分析工具) 可用的 Unmanaged API 的資訊。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [一般資料類型](common-data-types-unmanaged-api-reference.md)  
  列出使用的一般資料類型 (特別是用於 Unmanaged 分析及偵錯 API 中)。  
   
@@ -45,13 +45,13 @@ ms.locfileid: "73092019"
  [裝載](./hosting/index.md)  
  描述裝載 API，其可讓 Unmanaged 主機將 CLR 整合至其應用程式。  
   
- [中繼資料](./metadata/index.md)  
+ [元](./metadata/index.md)  
  描述中繼資料 API，其可讓編譯器之類的用戶端無需由 CLR 載入類型，即可產生或存取元件的中繼資料。  
   
- [程式碼剖析](./profiling/index.md)  
+ [分析](./profiling/index.md)  
  描述分析 API，其可讓分析工具透過 CLR 監視程式的執行。  
   
- [強式命名](./strong-naming/index.md)  
+ [強命名](./strong-naming/index.md)  
  描述強式命名 API，其可讓用戶端管理組件的強式命名簽署。  
 
  [WMI 和效能計數器](wmi/index.md)  

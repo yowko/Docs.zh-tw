@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Assembly Binding Log Viewer
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 ms.openlocfilehash: 2f0018dca6e5add2c5bc531103a4078307a8c8c6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73129853"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (組件繫結記錄檔檢視器)
@@ -25,7 +25,7 @@ ms.locfileid: "73129853"
 
 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請透過系統管理員認證使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。
 
-在命令提示字元下輸入下列命令：
+在命令提示字元中，請輸入下列項目：
 
 ```console
 fuslogvw
@@ -35,18 +35,18 @@ fuslogvw
 
 ### <a name="to-change-the-log-location-view"></a>若要變更記錄檔位置檢視
 
-1. 選取 [預設值] 選項按鈕，可檢視所有應用程式類型的繫結失敗。 根據預設，記錄項目會存放在 wininet 快取中磁碟上的每個使用者目錄中。
+1. 選取 [預設值]**** 選項按鈕，可檢視所有應用程式類型的繫結失敗。 根據預設，記錄項目會存放在 wininet 快取中磁碟上的每個使用者目錄中。
 
-2. 選取 [自訂] 選項按鈕，可檢視您指定之自訂目錄中的繫結失敗。 您必須透過將 [記錄檔設定] 對話方塊中的自訂記錄檔路徑設為有效的目錄名稱，指定要讓執行階段存放記錄檔的自訂位置。 這個目錄應該是乾淨的，只包含執行階段產生的檔案。 如果它包含會產生失敗記錄的可執行檔，則失敗將不會記錄下來，因為工具會嘗試使用與該可執行檔相同的名稱建立目錄。 此外，嘗試從記錄檔位置執行可執行檔將會失敗。
+2. 選取 [自訂]**** 選項按鈕，可檢視您指定之自訂目錄中的繫結失敗。 您必須透過將 [記錄檔設定]**** 對話方塊中的自訂記錄檔路徑設為有效的目錄名稱，指定要讓執行階段存放記錄檔的自訂位置。 這個目錄應該是乾淨的，只包含執行階段產生的檔案。 如果它包含會產生失敗記錄的可執行檔，則失敗將不會記錄下來，因為工具會嘗試使用與該可執行檔相同的名稱建立目錄。 此外，嘗試從記錄檔位置執行可執行檔將會失敗。
 
     > [!NOTE]
-    > 預設繫結位置要比自訂繫結位置更合適。 執行時間會將預設系結位置儲存在 wininet 快取中，因此會自動將其清除。如果您指定自訂系結位置，就會負責將它清除。
+    > 預設繫結位置要比自訂繫結位置更合適。 運行時將預設綁定位置存儲在 wininet 緩存中，因此會自動將其清理乾淨。如果指定自訂綁定位置，則負責清理它。
 
 ### <a name="to-view-details-about-a-specific-failure"></a>若要檢視特定失敗的詳細資料
 
 1. 在檢視器中選取所需項目的應用程式名稱。
 
-2. 按一下 [檢視記錄檔] 按鈕。 或者，您也可以按兩下選取的項目。
+2. 按一下 [檢視記錄檔]**** 按鈕。 或者，您也可以按兩下選取的項目。
 
     工具便會顯示有關所選取繫結失敗的下列詳細資料：
 
@@ -100,23 +100,23 @@ LOG: All probing URLs attempted and failed.
 
 1. 在檢視器中選取項目。
 
-2. 按一下 [刪除項目] 按鈕。
+2. 按一下 [刪除項目]**** 按鈕。
 
 ### <a name="to-delete-all-entries-from-the-log"></a>若要從記錄檔刪除所有項目
 
-- 按一下 [全部刪除] 按鈕。
+- 按一下 [全部刪除]**** 按鈕。
 
 ### <a name="to-refresh-the-user-interface"></a>若要重新整理使用者介面
 
-- 按一下 [重新整理] 按鈕。 檢視器在執行時不會自動偵測新的記錄項目。 您必須使用 [重新整理] 按鈕才能顯示新項目。
+- 按一下 **"刷新"** 按鈕。 檢視器在執行時不會自動偵測新的記錄項目。 您必須使用 [重新整理]**** 按鈕才能顯示新項目。
 
 ### <a name="to-change-the-log-settings"></a>若要變更記錄檔設定
 
-- 按一下 [設定] 按鈕，開啟 [記錄檔設定] 對話方塊。
+- 按一下 [設定]**** 按鈕，開啟 [記錄檔設定]**** 對話方塊。
 
 ### <a name="to-view-the-about-dialog"></a>若要檢視關於對話方塊
 
-- 按一下 [關於] 按鈕。
+- 按一下 [關於]**** 按鈕。
 
 ## <a name="binding-logs-for-native-images"></a>原生映像的繫結記錄檔
 
@@ -124,7 +124,7 @@ LOG: All probing URLs attempted and failed.
 
 #### <a name="to-log-assembly-binds-for-native-images"></a>若要記錄原生映像的組件繫結
 
-- 在 [記錄檔分類] 群組中，選取 [原生映像] 選項按鈕。
+- 在 [記錄檔分類]**** 群組中，選取 [原生映像]**** 選項按鈕。
 
 下列記錄將顯示建立應用程式的原生影像時，不存在的相依性所造成的失敗。 如果執行階段的相依性與 Ngen.exe 執行時的相依性不同，則不允許繫結至原生映像。
 
@@ -182,27 +182,27 @@ Discarding native image.
 
 ## <a name="the-log-settings-dialog"></a>[記錄檔設定] 對話方塊
 
-您可以使用 [記錄檔設定] 對話方塊執行下列動作。
+您可以使用 [記錄檔設定]**** 對話方塊執行下列動作。
 
 #### <a name="to-disable-logging"></a>若要停用記錄
 
-- 選取 [停用記錄] 選項按鈕。  請注意，這個選項預設為選取狀態。
+- 選取 [停用記錄]**** 選項按鈕。  請注意，這個選項預設為選取狀態。
 
 #### <a name="to-log-assembly-binds-in-exceptions"></a>若要記錄例外狀況中的組件繫結
 
-- 選取 [在例外狀況文字中記錄] 選項按鈕。 例外狀況文字中只會記錄最簡要的融合記錄資訊。 若要檢視完整資訊，請使用其中一項其他設定。
+- 選取 [在例外狀況文字中記錄]**** 選項按鈕。 例外狀況文字中只會記錄最簡要的融合記錄資訊。 若要檢視完整資訊，請使用其中一項其他設定。
 
   請參閱有關以定義域中性方式載入之組件的＜重要事項＞。
 
 #### <a name="to-log-assembly-bind-failures"></a>若要記錄組件繫結失敗
 
-- 選取 [在磁碟中記錄失敗的繫結] 選項按鈕。
+- 選取 [在磁碟中記錄失敗的繫結]**** 選項按鈕。
 
   請參閱有關以定義域中性方式載入之組件的＜重要事項＞。
 
 #### <a name="to-log-all-assembly-binds"></a>若要記錄所有組件繫結
 
-- 選取 [在磁碟中記錄所有繫結] 選項按鈕。
+- 選取 [在磁碟中記錄所有繫結]**** 選項按鈕。
 
   請參閱有關以定義域中性方式載入之組件的＜重要事項＞。
 
@@ -211,12 +211,12 @@ Discarding native image.
 
 #### <a name="to-enable-a-custom-log-path"></a>若要啟用自訂記錄檔路徑
 
-1. 選取 [啟用自訂的記錄檔路徑] 選項按鈕。
+1. 選取 [啟用自訂的記錄檔路徑]**** 選項按鈕。
 
-2. 在 [自訂的記錄檔路徑] 文字方塊中輸入路徑。
+2. 在 [自訂的記錄檔路徑]**** 文字方塊中輸入路徑。
 
 > [!NOTE]
-> [組件繫結記錄檔檢視器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 使用 Internet Explorer (IE) 快取來儲存其繫結記錄檔。 由於 IE 快取偶爾會損毀，因此[組件繫結記錄檔檢視器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 有時可能會停止在檢視視窗內顯示新的繫結記錄檔。 這種損毀導致 .NET 繫結基礎結構 (融合) 無法寫入繫結記錄檔或從繫結記錄檔讀取 （如果您使用自訂記錄檔路徑，就不會發生此問題）。 若要修正損毀，並允許融合再次顯示系結記錄檔，請從 [IE 網際網路選項] 對話方塊中刪除 [網際網路上的暫存檔案]，以清除 IE 快取。
+> [組件繫結記錄檔檢視器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 使用 Internet Explorer (IE) 快取來儲存其繫結記錄檔。 由於 IE 快取偶爾會損毀，因此[組件繫結記錄檔檢視器 (Fuslogvw.exe)](fuslogvw-exe-assembly-binding-log-viewer.md) 有時可能會停止在檢視視窗內顯示新的繫結記錄檔。 這種損毀導致 .NET 繫結基礎結構 (融合) 無法寫入繫結記錄檔或從繫結記錄檔讀取  （如果使用自訂日誌路徑，則不會遇到此問題。 要修復損壞並允許融合再次顯示綁定日誌，請通過從 IE Internet 選項對話方塊中刪除臨時 Internet 檔來清除 IE 緩存。
 >
 > 如果 Unmanaged 應用程式藉由實作 `IHostAssemblyManager` 和 `IHostAssemblyStore` 介面裝載 Common Language Runtime，則無法將記錄項目儲存在 wininet 快取中。  若要檢視實作這些介面之自訂主機的記錄項目，則必須指定替代的記錄檔路徑。
 
@@ -224,12 +224,12 @@ Discarding native image.
 
 1. 啟用自訂的記錄檔路徑，如上述程序所述。 根據預設，在 Windows 應用程式容器中執行的應用程式對硬碟的存取權會受到限制。 您指定的目錄將可以對應用程式容器中的所有應用程式進行讀取/寫入。
 
-2. 選取 [啟用擬真記錄] 核取方塊。
+2. 選取 [啟用擬真記錄]**** 核取方塊。
 
     > [!NOTE]
     > 只有在 Windows 8 (含) 以後版本中才會啟用這個方塊。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.TypeLoadException>
 - [工具](index.md)
