@@ -15,40 +15,40 @@ helpviewer_keywords:
 ms.assetid: 6dc37f9d-87ee-4cb3-9216-ced600184ce8
 topic_type:
 - apiref
-ms.openlocfilehash: 501199bedec3b7a65d95c80cdef178831a65fd01
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7648a1b3d219ee5d2b1ddc6b26f7b65c9ac85105
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428413"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175638"
 ---
 # <a name="imetadataemitsetfieldrva-method"></a>IMetaDataEmit::SetFieldRVA 方法
-針對指定之標記所參考的欄位，設定其相對虛擬位址的全域變數值。  
+為指定權杖引用的欄位的相對虛擬位址設置全域變數值。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT SetFieldRVA (   
-    [in]  mdFieldDef  fd,   
-    [in]  ULONG       ulRVA   
+HRESULT SetFieldRVA (
+    [in]  mdFieldDef  fd,
+    [in]  ULONG       ulRVA
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `fd`  
- 在目標欄位的 token。  
+ [在]目標欄位的權杖。  
   
  `ulRVA`  
- 在程式碼或資料區域的位址。  
+ [在]代碼或資料區域的位址。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

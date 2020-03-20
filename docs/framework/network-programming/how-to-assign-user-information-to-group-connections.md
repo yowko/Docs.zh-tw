@@ -1,18 +1,18 @@
 ---
-title: 作法：將使用者資訊指派給群組連線
+title: 如何：將使用者資訊指派給群組連接
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 8e104de891d72e709ae20055737540516109da68
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 01b686702250c68131e8a46b410ce05e67e7c950
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048418"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180837"
 ---
-# <a name="how-to-assign-user-information-to-group-connections"></a>作法：將使用者資訊指派給群組連線
+# <a name="how-to-assign-user-information-to-group-connections"></a>如何：將使用者資訊指派給群組連接
 
  下列範例示範如何將使用者資訊指派給群組連線，並假設應用程式會在呼叫這段程式碼之前設定 *UserName*、*SecurelyStoredPassword* 和 *Domain* 變數，且 *UserName* 為唯一。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "71048418"
 3. 設定 Web 要求的認證和連線群組名稱，並呼叫 **GetResponse** 來擷取 **WebResponse** 物件。  
   
     ```csharp  
-    myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
+    myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);
     myWebRequest.ConnectionGroupName = secureGroupName;  
   
     WebResponse myWebResponse=myWebRequest.GetResponse();  
@@ -79,7 +79,7 @@ String secureGroupName = Encoding.Default.GetString(updHash);
 // Create a request for a specific URL.  
 WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
   
-myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
+myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);
 myWebRequest.ConnectionGroupName = secureGroupName;  
   
 WebResponse myWebResponse=myWebRequest.GetResponse();  
@@ -109,5 +109,5 @@ MyWebResponse.Close()
   
 ## <a name="see-also"></a>另請參閱
 
-- [管理連線](managing-connections.md)
+- [管理連接](managing-connections.md)
 - [連線群組](connection-grouping.md)

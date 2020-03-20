@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: 5904a5b61c0cc472c40eb2b4967815d5e6add195
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: da54a835fd32efe4f53a80701465d2d7d8adba7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714664"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183470"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
-此範例示範 `netNamedPipeBinding` 繫結，這會在相同電腦上提供跨處理序通訊。 具名通道不會跨電腦作業。 這個範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)計算機服務為基礎。  
+此範例示範 `netNamedPipeBinding` 繫結，這會在相同電腦上提供跨處理序通訊。 具名通道不會跨電腦作業。 此示例[基於入門計算機](../../../../docs/framework/wcf/samples/getting-started-sample.md)服務。  
   
  在此範例中，服務會自我裝載。 用戶端和服務都是主控台應用程式。  
   
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 用戶端和服務的組態檔中會指定繫結。 系結類型是在[\<端點 >](../../configure-apps/file-schema/wcf/endpoint-element.md)的 `binding` 屬性或[> 用戶端 \<元素的\<端點 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)中指定，如下列範例設定所示：  
+ 用戶端和服務的組態檔中會指定繫結。 綁定類型在`binding`[\<用戶端>元素的終結點>或終結點>的屬性中指定，如以下示例配置\<](../../configure-apps/file-schema/wcf/endpoint-of-client.md)所示： [ \< ](../../configure-apps/file-schema/wcf/endpoint-element.md)  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -32,7 +32,7 @@ ms.locfileid: "74714664"
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
           binding="netNamedPipeBinding"  
-          bindingConfiguration="Binding1"   
+          bindingConfiguration="Binding1"
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
@@ -45,18 +45,18 @@ ms.locfileid: "74714664"
         Each property is configured with the default value.  
      -->  
   <netNamedPipeBinding>  
-    <binding name="Binding1"   
+    <binding name="Binding1"
              closeTimeout="00:01:00"  
-             openTimeout="00:01:00"   
-             receiveTimeout="00:10:00"   
+             openTimeout="00:01:00"
+             receiveTimeout="00:10:00"
              sendTimeout="00:01:00"  
-             transactionFlow="false"   
-             transferMode="Buffered"   
+             transactionFlow="false"
+             transferMode="Buffered"
              transactionProtocol="OleTransactions"  
-             hostNameComparisonMode="StrongWildcard"   
+             hostNameComparisonMode="StrongWildcard"
              maxBufferPoolSize="524288"  
-             maxBufferSize="65536"   
-             maxConnections="10"   
+             maxBufferSize="65536"
+             maxConnections="10"
              maxReceivedMessageSize="65536">  
       <security mode="Transport">  
         <transport protectionLevel="EncryptAndSign" />  
@@ -79,17 +79,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確保已為 Windows[通信基礎示例執行一次性設置過程](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
 2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3. 若要在單一電腦設定中執行範例，請遵循執行[Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的指示。  
+3. 要在單個電腦配置中運行示例，請按照運行 Windows[通信基礎示例](../../../../docs/framework/wcf/samples/running-the-samples.md)中的說明操作。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  

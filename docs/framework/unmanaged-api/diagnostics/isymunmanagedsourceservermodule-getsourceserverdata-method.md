@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: 20bdf8ff-2d15-4c64-8950-6888f642d6c0
 topic_type:
 - apiref
-ms.openlocfilehash: f25150d037a2f6fabb700f2c4bf2191e8e402a8e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6904271ed90cf733b9221178927bc680d76b58a6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446215"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176574"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData 方法
-傳回模組的來源伺服器資料。 呼叫端必須使用 `CoTaskMemFree`來釋放資源。  
+返回模組的源伺服器資料。 調用方必須使用`CoTaskMemFree`釋放資源。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT GetSourceServerData(  
-    [out] ULONG* pDataByteCount,   
+    [out] ULONG* pDataByteCount,
     [out, size_is (, *pDataByteCount)] BYTE** ppData);  
 ```  
   
 ## <a name="parameters"></a>參數  
  `pDataByteCount`  
- 脫銷接收來源伺服器資料大小（以位元組為單位）之 `ULONG32` 的指標。  
+ [出]指向`ULONG32`接收源伺服器資料的大小（以位元組為單位）的指標。  
   
  `ppData`  
- 脫銷傳回之 `pDataByteCount` 值的指標。  
+ [出]指向返回`pDataByteCount`值的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果方法成功，則 S_OK;否則，E_FAIL 或一些其他錯誤碼。  
+ 如果方法成功，S_OK;否則，E_FAIL或其他錯誤代碼。  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorSym .idl，CorSym。h  
+ **標題：** 科西姆.伊德爾，科西姆.h  
   
 ## <a name="see-also"></a>另請參閱
 

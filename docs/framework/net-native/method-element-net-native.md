@@ -1,15 +1,15 @@
 ---
-title: <Method> 元素（.NET Native）
+title: <Method>元素（.NET 本機）
 ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
-ms.openlocfilehash: 7b0e77e6dea29cbd5218ab3f6f992002efd51656
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8db32c660846b4f4071fff2a40c760a3d1ef2489
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128341"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180980"
 ---
-# <a name="method-element-net-native"></a>\<方法 > 元素（.NET Native）
+# <a name="method-element-net-native"></a>\<方法>元素（.NET 本機）
 將執行階段反映原則套用到建構函式或方法。  
   
 ## <a name="syntax"></a>語法  
@@ -22,7 +22,7 @@ ms.locfileid: "73128341"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73128341"
   
 |值|描述|  
 |-----------|-----------------|  
-|*method_name*|方法名稱。 方法的類型是由父 [\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 項目所定義。|  
+|*method_name*|方法名稱。 該方法的類型由父[\<類型>](type-element-net-native.md)或[\<類型即時>](typeinstantiation-element-net-native.md)元素定義。|  
   
 ## <a name="signature-attribute"></a>簽章屬性  
   
@@ -51,28 +51,28 @@ ms.locfileid: "73128341"
 |-----------|-----------------|  
 |*policy_setting*|要套用到此原則類型的設定。 可能的值為 `Auto`、`Excluded`、`Included` 和 `Required`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<Parameter>](parameter-element-net-native.md)|將原則套用到傳遞至方法的引數類型。|  
-|[\<GenericParameter>](genericparameter-element-net-native.md)|將原則套用到泛型類型或方法的參數類型。|  
-|[\<ImpliesType>](impliestype-element-net-native.md)|如果原則已套用至包含 `<Method>` 元素所表示的方法，則會將該原則套用至類型。|  
-|[\<TypeParameter>](typeparameter-element-net-native.md)|將原則套用至傳遞給方法之 <xref:System.Type> 引數所表示的類型。|  
+|[\<參數>](parameter-element-net-native.md)|將原則套用到傳遞至方法的引數類型。|  
+|[\<泛型參數>](genericparameter-element-net-native.md)|將原則套用到泛型類型或方法的參數類型。|  
+|[\<暗示類型>](impliestype-element-net-native.md)|如果原則已套用至包含 `<Method>` 元素所表示的方法，則會將該原則套用至類型。|  
+|[\<類型參數>](typeparameter-element-net-native.md)|將原則套用至傳遞給方法之 <xref:System.Type> 引數所表示的類型。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
+|[\<鍵入>](type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
+|[\<類型即時>](typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  泛型方法的 `<Method>` 的元素會將其原則套用至沒有自己原則的所有具現化。  
   
  您可以使用 `Signature` 屬性來指定適用於特定方法多載的原則。 否則，如果 `Signature` 屬性不存在，執行階段指示詞就會套用到方法的所有多載。  
   
- 您不能使用 `<Method>` 元素來為建構函式定義執行階段反映原則， 而是要使用 [\<Assembly>](assembly-element-net-native.md)、[\<Namespace>](namespace-element-net-native.md)、[\<Type>](type-element-net-native.md) 或 [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 項目的 `Activate` 屬性。  
+ 您不能使用 `<Method>` 元素來為建構函式定義執行階段反映原則， `Activate`而是使用[\<程式集>、](assembly-element-net-native.md)[\<命名空間>、](namespace-element-net-native.md)[\<類型>](type-element-net-native.md)或[\<類型即時性>](typeinstantiation-element-net-native.md)元素的屬性。  
   
 ## <a name="example"></a>範例  
  下列範例中的 `Stringify` 方法是一般用途的格式化方法，它會使用反映將物件轉換成其字串表示法。 除了呼叫物件的預設 `ToString` 方法，此方法還可以將格式字串及/或 `ToString` 實作傳遞給物件的 <xref:System.IFormatProvider> 方法，以產生格式化的結果字串。 它也可以呼叫其中一個 <xref:System.Convert.ToString%2A?displayProperty=nameWithType> 多載，將數字轉換成二進位、十六進位或八進位表示法。  
@@ -85,7 +85,7 @@ ms.locfileid: "73128341"
   
  不過，以 .NET Native 來編譯時，此範例可能會在執行階段擲回一些例外狀況，包括 <xref:System.NullReferenceException> 和 [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 例外狀況。這是因為 `Stringify` 方法主要的目的是支援將 .NET Framework Class Library 中的基本類型動態格式化。 不過，預設指示詞檔案並沒有提供其中繼資料。 但是，即使其中繼資料可供使用，範例還是會擲回 [MissingRuntimeArtifactException](missingruntimeartifactexception-class-net-native.md) 例外狀況，因為適當的 `ToString` 實作尚未包含在機器碼中。  
   
- 若要將這些例外狀況全部消除，可以使用 [\<Type>](type-element-net-native.md) 項目來定義中繼資料必須存在的類型，並可新增 `<Method>` 項目來確保可動態呼叫的方法多載也存在。 以下是可消除這些例外狀況，並可讓範例執行而不會發生錯誤的 default.rd.xml 檔案。  
+ 通過使用[\<Type>](type-element-net-native.md)元素定義其中繼資料必須存在的類型，以及添加`<Method>`元素以確保存在可動態調用的方法重載的實現，可以全部消除這些異常。 以下是可消除這些例外狀況，並可讓範例執行而不會發生錯誤的 default.rd.xml 檔案。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -124,10 +124,10 @@ ms.locfileid: "73128341"
            <Method Name="ToString" Dynamic="Required" />  
         </Type>  
         <Type Name="Single" Browse="Required Public" >  
-          <Method Name="ToString" Dynamic="Required" />           
+          <Method Name="ToString" Dynamic="Required" />
         </Type>  
         <Type Name="TimeSpan" Browse="Required Public" >  
-          <Method Name="ToString" Dynamic="Required" />           
+          <Method Name="ToString" Dynamic="Required" />
         </Type>  
         <Type Name="UInt16" Browse="Required Public" >  
            <Method Name="ToString" Dynamic="Required" />  
@@ -143,9 +143,9 @@ ms.locfileid: "73128341"
 </Directives>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)
 - [執行階段指示詞原則設定](runtime-directive-policy-settings.md)
-- [\<MethodInstantiation> 項目](methodinstantiation-element-net-native.md)
+- [\<方法具現化>元素](methodinstantiation-element-net-native.md)

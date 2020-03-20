@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - callback function, implementing
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
-ms.openlocfilehash: 23355e16127b45c26a1d950c6a8b3cc27e265781
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7aae1e70ac736d60bed1e79291235db1c220281
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123892"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181408"
 ---
 # <a name="how-to-implement-callback-functions"></a>如何：實作回呼函式
 下列程序及範例示範 Managed 應用程式 (使用平台叫用) 如何將每個視窗的控制碼值列印到本機電腦上。 具體而言，程序和範例會使用 **EnumWindows** 函式以逐步執行視窗的清單，並使用 Managed 回呼函式 (具名回呼) 以列印視窗控制代碼的值。  
@@ -74,16 +74,16 @@ public delegate bool CallBack(int hwnd, int lParam);
 public class EnumReportApp  
 {  
     [DllImport("user32")]  
-    public static extern int EnumWindows(CallBack x, int y);   
+    public static extern int EnumWindows(CallBack x, int y);
   
-    public static void Main()   
+    public static void Main()
     {  
         CallBack myCallBack = new CallBack(EnumReportApp.Report);  
         EnumWindows(myCallBack, 0);  
     }  
   
     public static bool Report(int hwnd, int lParam)  
-    {   
+    {
         Console.Write("Window handle is ");  
         Console.WriteLine(hwnd);  
         return true;  
@@ -127,7 +127,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [回呼函式](callback-functions.md)
 - [呼叫 DLL 函式](calling-a-dll-function.md)

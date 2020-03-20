@@ -6,22 +6,22 @@ helpviewer_keywords:
 - control patterns, Toggle
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-ms.openlocfilehash: c25f2d3b73e90adb3299ff8c4ff7c8a77fc5fc5e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5f64842d31d46af3d648b9b570d1cfb210e2910a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447069"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180068"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>實作 UI 自動化 Toggle 控制項模式
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
- 本主題將介紹實作 <xref:System.Windows.Automation.Provider.IToggleProvider>的方針和慣例，包括方法和屬性的相關資訊。 其他參考的連結列於此主題的結尾部分。  
+ 本主題將介紹實作 <xref:System.Windows.Automation.Provider.IToggleProvider>的方針和慣例，包括方法和屬性的相關資訊。 其他參考的連結列於主題的結尾。  
   
  <xref:System.Windows.Automation.TogglePattern> 控制項模式是用來支援可循環顯示一組狀態，並在設定之後維持狀態的控制項。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)。  
   
-<a name="Implementation_Guidelines_and_Conventions"></a>   
+<a name="Implementation_Guidelines_and_Conventions"></a>
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
  實作切換控制項模式時，請注意下列方針和慣例：  
   
@@ -33,26 +33,26 @@ ms.locfileid: "74447069"
   
 - RadioButton 控制項不會實作 <xref:System.Windows.Automation.Provider.IToggleProvider>，因為它無法循環其有效狀態。  
   
-<a name="Required_Members_for_IToggleProvider"></a>   
+<a name="Required_Members_for_IToggleProvider"></a>
 ## <a name="required-members-for-itoggleprovider"></a>IToggleProvider 的必要成員  
  以下是實作 <xref:System.Windows.Automation.Provider.IToggleProvider>的必要屬性和方法。  
   
-|必要成員|成員類型|注意事項|  
+|必要成員|成員類型|注意|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|方法|無|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|屬性|無|  
+|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|方法|None|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|屬性|None|  
   
  此控制項模式沒有任何相關聯的事件。  
   
-<a name="Exceptions"></a>   
+<a name="Exceptions"></a>
 ## <a name="exceptions"></a>例外狀況  
  此控制項模式沒有任何相關聯的例外狀況。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化控制項模式概觀](ui-automation-control-patterns-overview.md)
+- [UI Automation Control Patterns Overview](ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](support-control-patterns-in-a-ui-automation-provider.md)
-- [UI Automation Control Patterns for Clients](ui-automation-control-patterns-for-clients.md)
-- [Get the Toggle State of a Check Box Using UI Automation](get-the-toggle-state-of-a-check-box-using-ui-automation.md)
-- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](use-caching-in-ui-automation.md)
+- [用戶端的 UI 自動化控制項模式](ui-automation-control-patterns-for-clients.md)
+- [使用 UI 自動化取得核取方塊的切換狀態](get-the-toggle-state-of-a-check-box-using-ui-automation.md)
+- [UI Automation Tree Overview](ui-automation-tree-overview.md)
+- [使用 UI 自動化中的快取](use-caching-in-ui-automation.md)

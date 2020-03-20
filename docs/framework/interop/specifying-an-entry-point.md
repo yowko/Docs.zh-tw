@@ -6,18 +6,18 @@ helpviewer_keywords:
 - platform invoke, attribute fields
 - attribute fields in platform invoke, EntryPoint
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
-ms.openlocfilehash: a55e460f565c33731c5b0b29ab42b8263d3690e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c5f8f735dd3e8c359f88044a532c29303237acc8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125162"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181316"
 ---
 # <a name="specifying-an-entry-point"></a>指定進入點
 
 進入點可識別函式在 DLL 中的位置。 在 Managed 專案中，目標函式的原始名稱或序數進入點可跨越交互操作界限識別該函式。 此外，您可以將進入點對應到不同的名稱，有效地重新命名函式。  
   
- 以下是重新命名 DLL 函式的可能原因清單：  
+ 以下是重命名 DLL 函數的可能原因的清單：  
   
 - 避免使用區分大小寫的 API 函式名稱  
   
@@ -30,7 +30,7 @@ ms.locfileid: "73125162"
  本主題示範如何在 Managed 程式碼中重新命名 DLL 函式。  
   
 ## <a name="renaming-a-function-in-visual-basic"></a>在 Visual Basic 中重新命名函式  
- 
+
 Visual Basic 使用 **Function** 關鍵字在 **Declare** 陳述式中設定 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint?displayProperty=nameWithType> 欄位。 下列範例示範基本宣告。  
   
 ```vb
@@ -90,7 +90,7 @@ extern "C" int MsgBox(
     HWND hWnd, String* lpText, String* lpCaption, unsigned int uType);
 ```
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - [在 Managed 程式碼中建立原型](creating-prototypes-in-managed-code.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d1e6cd9-2a15-41c6-9b68-008705a4ed90
 topic_type:
 - apiref
-ms.openlocfilehash: 70d9ee06d64cc80306a1988aa6e28859cadb9ecf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5ebbbf01bc27974850c7e0bb3591b8f050fd0579
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778409"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179265"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 列舉
 指定介面、.NET Framework 版本，或是已引進介面的 .NET Framework 版本。  
@@ -79,9 +79,9 @@ typedef enum CorDebugInterfaceVersion {
     ver_ICorDebugErrorInfoEnum        = CorDebugVersion_1_0,  
     ver_ICorDebugAppDomainEnum        = CorDebugVersion_1_0,  
     ver_ICorDebugAssemblyEnum         = CorDebugVersion_1_0,  
-    ver_ICorDebugEditAndContinueErrorInfo   
+    ver_ICorDebugEditAndContinueErrorInfo
                                       = CorDebugVersion_1_0,  
-    ver_ICorDebugEditAndContinueSnapshot   
+    ver_ICorDebugEditAndContinueSnapshot
                                       = CorDebugVersion_1_0,  
   
     CorDebugVersion_1_1               = CorDebugVersion_1_0 + 1,  
@@ -130,10 +130,10 @@ typedef enum CorDebugInterfaceVersion {
 } CorDebugInterfaceVersion;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
  下表提供從每個列舉值到對應介面的連結。 此外，該資料表也會指出支援介面的第一個 .NET Framework 版本。  
   
-|成員|指定|.NET Framework 版本|  
+|member|指定|.NET Framework 版本|  
 |------------|---------------|----------------------------|  
 |`CorDebugInvalidVersion`|.NET Framework 版本無效。|-|  
 |`CorDebugVersion_1_0`|.NET Framework 的版本 (包括其所有 Service Pack) 為 1.0。|1.0|  
@@ -158,7 +158,7 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugChain`|[ICorDebugChain](icordebugchain-interface.md)|1.0|  
 |`ver_ICorDebugFrame`|[ICorDebugFrame](icordebugframe-interface.md)|1.0|  
 |`ver_ICorDebugILFrame`|[ICorDebugILFrame](icordebugilframe-interface.md)|1.0|  
-|`ver_ICorDebugNativeFrame`|[ICorDebugNativeFrame](icordebugnativeframe-interface.md)|1.0|  
+|`ver_ICorDebugNativeFrame`|[ICorDebug 本機框架](icordebugnativeframe-interface.md)|1.0|  
 |`ver_ICorDebugModule`|[ICorDebugModule](icordebugmodule-interface.md)|1.0|  
 |`ver_ICorDebugFunction`|[ICorDebugFunction](icordebugfunction-interface1.md)|1.0|  
 |`ver_ICorDebugCode`|[ICorDebugCode](icordebugcode-interface1.md)|1.0|  
@@ -172,13 +172,13 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugBoxValue`|[ICorDebugBoxValue](icordebugboxvalue-interface.md)|1.0|  
 |`ver_ICorDebugStringValue`|[ICorDebugStringValue](icordebugstringvalue-interface.md)|1.0|  
 |`ver_ICorDebugArrayValue`|[ICorDebugArrayValue](icordebugarrayvalue-interface.md)|1.0|  
-|`ver_ICorDebugContext`|[ICorDebugCoNtext](icordebugcontext-interface.md)|1.0|  
+|`ver_ICorDebugContext`|[ICorDebugContext](icordebugcontext-interface.md)|1.0|  
 |`ver_ICorDebugEnum`|[ICorDebugEnum](icordebugenum-interface1.md)|1.0|  
 |`ver_ICorDebugObjectEnum`|[ICorDebugObjectEnum](icordebugobjectenum-interface.md)|1.0|  
 |`ver_ICorDebugBreakpointEnum`|[ICorDebugBreakpointEnum](icordebugbreakpointenum-interface.md)|1.0|  
 |`ver_ICorDebugStepperEnum`|[ICorDebugStepperEnum](icordebugstepperenum-interface.md)|1.0|  
 |`ver_ICorDebugProcessEnum`|[ICorDebugProcessEnum](icordebugprocessenum-interface.md)|1.0|  
-|`ver_ICorDebugThreadEnum`|[ICorDebugThreadEnum](icordebugthreadenum-interface1.md)|1.0|  
+|`ver_ICorDebugThreadEnum`|[ICorDebugThreadenum](icordebugthreadenum-interface1.md)|1.0|  
 |`ver_ICorDebugFrameEnum`|[ICorDebugFrameEnum](icordebugframeenum-interface.md)|1.0|  
 |`ver_ICorDebugChainEnum`|[ICorDebugChainEnum](icordebugchainenum-interface.md)|1.0|  
 |`ver_ICorDebugModuleEnum`|[ICorDebugModuleEnum](icordebugmoduleenum-interface.md)|1.0|  
@@ -189,7 +189,7 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugAppDomainEnum`|[ICorDebugAppDomainEnum](icordebugappdomainenum-interface.md)|1.0|  
 |`ver_ICorDebugAssemblyEnum`|[ICorDebugAssemblyEnum](icordebugassemblyenum-interface.md)|1.0|  
 |`ver_ICorDebugEditAndContinueErrorInfo`|[ICorDebugEditAndContinueErrorInfo](icordebugeditandcontinueerrorinfo-interface.md)|1.0|  
-|`ver_ICorDebugEditAndContinueSnapshot`|[ICorDebugEditAndContinueSnapshot](icordebugeditandcontinuesnapshot-interface.md)|1.0|  
+|`ver_ICorDebugEditAndContinueSnapshot`|[ICordebugedit 和繼續快照](icordebugeditandcontinuesnapshot-interface.md)|1.0|  
 |`ver_ICorDebugManagedCallback2`|[ICorDebugManagedCallback2](icordebugmanagedcallback2-interface.md)|2.0|  
 |`ver_ICorDebugAppDomain2`|[ICorDebugAppDomain2](icordebugappdomain2-interface.md)|2.0|  
 |`ver_ICorDebugProcess2`|[ICorDebugProcess2](icordebugprocess2-interface1.md)|2.0|  
@@ -200,10 +200,10 @@ typedef enum CorDebugInterfaceVersion {
 |`ver_ICorDebugModule2`|[ICorDebugModule2](icordebugmodule2-interface.md)|2.0|  
 |`ver_ICorDebugFunction2`|[ICorDebugFunction2](icordebugfunction2-interface.md)|2.0|  
 |`ver_ICorDebugCode2`|[ICorDebugCode2](icordebugcode2-interface.md)|2.0|  
-|`ver_ICorDebugClass2`|ICorDebugClass2|2.0|  
-|`ver_ICorDebugValue2`|ICorDebugValue2|2.0|  
-|`ver_ICorDebugEval2`|"ICorDebugEval2"。|2.0|  
-|`ver_ICorDebugObjectValue2`|ICorDebugObjectValue2|2.0|  
+|`ver_ICorDebugClass2`|"ICorDebugClass2"|2.0|  
+|`ver_ICorDebugValue2`|"ICorDebugValue2"|2.0|  
+|`ver_ICorDebugEval2`|"ICordebugeval2"。|2.0|  
+|`ver_ICorDebugObjectValue2`|"ICorDebugObjectValue2"|2.0|  
 |`ver_ICorDebugThread3`|[ICorDebugThread3](icordebugthread3-interface.md)|4|  
 |`ver_ICorDebugThread4`|[ICorDebugThread4](icordebugthread4-interface.md)|4|  
 |`ver_ICorDebugStackWalk`|[ICorDebugStackWalk](icordebugstackwalk-interface.md)|4|  
@@ -220,7 +220,7 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugLatestVersion`|.NET Framework 的版本 (包括其所有 Service Pack) 為最新版本。|-|  
   
 ## <a name="remarks"></a>備註  
- 偵錯工具可以在[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函式中使用 `CorDebugInterfaceVersion` 列舉，以指定偵錯工具支援之 .NET Framework 的最高版本。  
+ 調試器可以使用`CorDebugInterfaceVersion`[CreateDebugInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函數中的枚舉來指定調試器支援的 .NET 框架的最高版本。  
   
 ## <a name="interface-names"></a>介面名稱  
  在偵錯 API (例如，`ICorDebugThread3` 中的 "3") 中，出現在介面名稱結尾的號碼是指定介面版本，而不是 .NET Framework 的版本。 偵錯 API 中的所有介面名稱都有包含版本號碼，但 .NET Framework 第 1 版中導入的介面除外。 介面版本號碼與 .NET Framework 版本號碼之間的任何對應都是巧合。  
@@ -233,7 +233,7 @@ typedef enum CorDebugInterfaceVersion {
   
 - .NET Framework 3.0 和 3.5 版使用現有的 .NET Framework 2.0 介面，而且沒有導入任何新介面。  
   
-- .NET Framework 4 引進了介面版本的混合。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 會以 `ICorDebugThread` 介面的第三和第四版出現。 .NET Framework 4 也引進第一版的 `ICorDebugStackWalk` 介面和第二版的 `ICorDebugNativeFrame` 介面（`ICorDebugNativeFrame2`）。  
+- .NET 框架 4 引入了介面版本的組合。 例如，`ICorDebugThread3` 和 `ICorDebugThread4` 會以 `ICorDebugThread` 介面的第三和第四版出現。 .NET 框架 4 還引入了`ICorDebugStackWalk`介面的第一個版本和`ICorDebugNativeFrame`介面的第二個版本 （）。`ICorDebugNativeFrame2`  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -242,8 +242,8 @@ typedef enum CorDebugInterfaceVersion {
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯列舉](debugging-enumerations.md)

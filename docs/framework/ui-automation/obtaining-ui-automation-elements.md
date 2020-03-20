@@ -5,33 +5,33 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 0ae4694e2efb6f6c51b279adf2851baf38785c8b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eab4e59ee219808a4c0ae9ca5331a14928b66b5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446894"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179991"
 ---
 # <a name="obtaining-ui-automation-elements"></a>取得 UI 自動化項目
 > [!NOTE]
-> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：使用者介面自動化](/windows/win32/winauto/entry-uiauto-win32)。  
+> 這份文件適用於想要使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 命名空間中定義之 Managed <xref:System.Windows.Automation> 類別的 .NET Framework 開發人員。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]的最新資訊，請參閱 [Windows Automation API：UI 自動化](/windows/win32/winauto/entry-uiauto-win32)。  
   
  本主題描述取得 <xref:System.Windows.Automation.AutomationElement> 項目之 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 物件的各種方式。  
   
 > [!CAUTION]
 > 如果用戶端應用程式可能會嘗試尋找本身使用者介面中的項目，您就必須在個別執行緒上進行所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 呼叫。 如需詳細資訊，請參閱 [UI Automation Threading Issues](ui-automation-threading-issues.md)。  
   
-<a name="The_Root_Element"></a>   
-## <a name="root-element"></a>Root 元素  
+<a name="The_Root_Element"></a>
+## <a name="root-element"></a>根項目  
  對於 <xref:System.Windows.Automation.AutomationElement> 物件的所有搜尋都必須有一個開始位置。 這可以是任何項目，包括桌面、應用程式視窗或控制項。  
   
  受所有項目繼承的桌面根項目取自靜態 <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> 屬性。  
   
 > [!CAUTION]
-> 一般而言，您應該試著取得 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子系。 如果搜尋子系可能會逐一查看數百或甚至數千個項目，就很有可能會造成堆疊溢位。 如果您嘗試取得較低層級的特定項目，您就應該要從應用程式視窗或較低層級的容器開始搜尋。  
+> 一般而言，您應該試著取得 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>的直接子系。 如果搜尋子系可能會逐一查看數百或甚至數千個項目，就很有可能會造成堆疊溢位。 如果您嘗試取得較低層級的特定項目，您應該從應用程式視窗或較低層級的容器開始搜尋。  
   
-<a name="Using_Conditions"></a>   
-## <a name="conditions"></a>Conditions  
+<a name="Using_Conditions"></a>
+## <a name="conditions"></a>條件  
  對於可用來擷取 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目的大部分技術，您都必須指定 <xref:System.Windows.Automation.Condition>，這是一組準則，定義您想要擷取哪些項目。  
   
  最簡單的條件是 <xref:System.Windows.Automation.Condition.TrueCondition>，是一種預先定義的物件，會指定要傳回之搜尋範圍內的所有項目。 <xref:System.Windows.Automation.Condition.FalseCondition>，也就是 <xref:System.Windows.Automation.Condition.TrueCondition>的反向，並不是很有用，原因在於它可能會讓任何項目都無法被找到。  
@@ -42,7 +42,7 @@ ms.locfileid: "74446894"
   
  條件可以使用布林邏輯加以組合，方法是建構 <xref:System.Windows.Automation.AndCondition>、 <xref:System.Windows.Automation.OrCondition>和 <xref:System.Windows.Automation.NotCondition>類型的物件。  
   
-<a name="Search_Scope"></a>   
+<a name="Search_Scope"></a>
 ## <a name="search-scope"></a>搜尋範圍  
  使用 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 或 <xref:System.Windows.Automation.AutomationElement.FindAll%2A> 完成的搜尋必須具備範圍以及開始位置。  
   
@@ -50,17 +50,17 @@ ms.locfileid: "74446894"
   
  此搜尋範圍由 <xref:System.Windows.Automation.TreeScope> 列舉值的位元組合所定義。  
   
-<a name="Finding_a_Known_Element"></a>   
+<a name="Finding_a_Known_Element"></a>
 ## <a name="finding-a-known-element"></a>尋找已知的項目  
  若要尋找已知的項目，且該項目由其 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>、 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.AutomationId%2A>或某些其他屬性或屬性組合所識別，則使用 <xref:System.Windows.Automation.AutomationElement.FindFirst%2A> 方法最為容易。 如果要搜尋的項目是應用程式視窗，則搜尋開始點可以是 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>。  
   
  用這種方式在自動化測試情節中尋找 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目最好用。  
   
-<a name="Finding_Elements_in_a_Subtree"></a>   
+<a name="Finding_Elements_in_a_Subtree"></a>
 ## <a name="finding-elements-in-a-subtree"></a>在子樹狀結構中尋找項目  
  若要尋找符合與已知項目相關之特定準則的所有項目，您可以使用 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>。 例如，您或許可以使用這個方法，從清單或功能表上擷取清單項目或功能表項目，或識別在對話方塊中的所有控制項。  
   
-<a name="Walking_a_Subtree"></a>   
+<a name="Walking_a_Subtree"></a>
 ## <a name="walking-a-subtree"></a>逐一查看子樹狀結構  
  如果您事先不知道您的用戶端可搭配使用的應用程式，您可以建構所需所有項目的子樹狀結構，方法是使用 <xref:System.Windows.Automation.TreeWalker> 類別。 您的應用程式可能會執行這項操作以回應焦點變更的事件；也就是當應用程式或控制項收到輸入的焦點時，使用者介面自動化用戶端會檢查子系，也可能檢查已取得焦點之項目的所有子系。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "74446894"
   
  <xref:System.Windows.Automation.TreeWalker.Normalize%2A> 方法可用來瀏覽至項目，該項目位於另一個不屬於該檢視之項目的子樹狀結構中。 例如，假設您已使用 <xref:System.Windows.Automation.TreeWalker.ContentViewWalker>建立子樹狀結構檢視。 您的應用程式接著會收到通知，指出捲軸已接收輸入焦點。 因為捲軸不是內容項目，所以不會出現在子樹狀結構檢視中。 不過，您可以將代表此捲軸的 <xref:System.Windows.Automation.AutomationElement> 傳遞至 <xref:System.Windows.Automation.TreeWalker.Normalize%2A> ，並擷取內容檢視中最接近的祖系。  
   
-<a name="Other_Ways_to_Retrieve_an_Element"></a>   
+<a name="Other_Ways_to_Retrieve_an_Element"></a>
 ## <a name="other-ways-to-retrieve-an-element"></a>擷取項目的其他方式  
  除了搜尋和瀏覽以外，您也可以用下列方式擷取 <xref:System.Windows.Automation.AutomationElement> 。  
   
@@ -100,4 +100,4 @@ ms.locfileid: "74446894"
 
 - [根據屬性條件尋找 UI 自動化項目](find-a-ui-automation-element-based-on-a-property-condition.md)
 - [使用 TreeWalker 導覽 UI 自動化項目](navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI 自動化樹狀目錄概觀](ui-automation-tree-overview.md)
+- [UI Automation Tree Overview](ui-automation-tree-overview.md)

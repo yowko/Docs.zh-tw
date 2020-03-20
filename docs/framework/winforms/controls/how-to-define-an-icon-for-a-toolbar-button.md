@@ -1,5 +1,5 @@
 ---
-title: 作法：定義工具列按鈕的圖示
+title: 如何：定義工具列按鈕的圖示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,30 +13,30 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: 2b85f734a5f8b31531cfe48f87681d98304db09b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 84c67c7d2584390ba3e48cb83820c65c6bb45d1f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69929635"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182201"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>作法：定義工具列按鈕的圖示
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>如何：定義工具列按鈕的圖示
 > [!NOTE]
 > <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
   
- <xref:System.Windows.Forms.ToolBar>按鈕可以在其中顯示圖示, 供使用者輕鬆識別。 這可以透過將影像加入至[ImageList 元件](imagelist-component-windows-forms.md)元件, 然後將<xref:System.Windows.Forms.ImageList>元件與<xref:System.Windows.Forms.ToolBar>控制項建立關聯來達成。  
+ <xref:System.Windows.Forms.ToolBar>按鈕能夠顯示其中的圖示，以便使用者輕鬆識別。 這是通過向[ImageList 元件](imagelist-component-windows-forms.md)添加圖像，然後將<xref:System.Windows.Forms.ImageList>該元件與控制項相關聯來實現的。 <xref:System.Windows.Forms.ToolBar>  
   
-### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>以程式設計方式設定工具列按鈕的圖示  
+### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>以程式設計方式設置工具列按鈕的圖示  
   
-1. 在程式中, 將<xref:System.Windows.Forms.ImageList>元件<xref:System.Windows.Forms.ToolBar>和控制項具現化。  
+1. 在此過程中，具現化<xref:System.Windows.Forms.ImageList>元件和<xref:System.Windows.Forms.ToolBar>控制項。  
   
-2. 在相同的程式中, 將影像指派給<xref:System.Windows.Forms.ImageList>元件。  
+2. 在同一過程中，為<xref:System.Windows.Forms.ImageList>元件分配映射。  
   
-3. 在相同的程式中, 將<xref:System.Windows.Forms.ImageList>控制項指派<xref:System.Windows.Forms.ToolBar>給控制項, 並指派<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>個別工具列按鈕的屬性。  
+3. 在同一過程中，將<xref:System.Windows.Forms.ImageList>控制項分配給<xref:System.Windows.Forms.ToolBar>控制項並分配各個工具列按鈕<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>的屬性。  
   
-     在下列程式碼範例中, 為影像位置設定的路徑是 [我的**文檔**] 資料夾。 這是因為您可以假設大部分執行 Windows 作業系統的電腦都包含此目錄。 也可讓具備最小系統存取層級的使用者安全地執行應用程式。 下列範例假設已加入<xref:System.Windows.Forms.PictureBox>控制項的表單。  
+     在下面的代碼示例中，為圖像位置設置的路徑是 **"我的文件"** 資料夾。 此操作已完成，因為您可以假定運行 Windows 作業系統的大多數電腦都將包含此目錄。 也可讓具備最小系統存取層級的使用者安全地執行應用程式。 下面的示例假定已添加控制項的<xref:System.Windows.Forms.PictureBox>表單。  
   
-     遵循上述步驟, 您應該已撰寫如下所示的程式碼。  
+     按照上述步驟，您應該編寫類似于下面顯示的代碼。  
   
     ```vb  
     Public Sub InitializeMyToolBar()  
@@ -46,7 +46,7 @@ ms.locfileid: "69929635"
     ' Assign an image to the ImageList component.  
     ' You should replace the bold image  
     ' in the sample below with an icon of your own choosing.  
-       Dim myImage As System.Drawing.Image = _   
+       Dim myImage As System.Drawing.Image = _
           Image.FromFile Image.FromFile _  
           (System.Environment.GetFolderPath _  
           (System.Environment.SpecialFolder.Personal) _  
@@ -67,10 +67,10 @@ ms.locfileid: "69929635"
     public void InitializeMyToolBar()  
     {  
        // Instantiate an ImageList component and a ToolBar control.  
-       ToolBar toolBar1 = new  ToolBar();   
+       ToolBar toolBar1 = new  ToolBar();
        ImageList imageList1 = new ImageList();  
        // Assign an image to the ImageList component.  
-       // You should replace the bold image   
+       // You should replace the bold image
        // in the sample below with an icon of your own choosing.  
        // Note the escape character used (@) when specifying the path.  
        Image myImage = Image.FromFile  
@@ -94,10 +94,10 @@ ms.locfileid: "69929635"
        void InitializeMyToolBar()  
        {  
           // Instantiate an ImageList component and a ToolBar control.  
-          ToolBar ^ toolBar1 = gcnew  ToolBar();   
+          ToolBar ^ toolBar1 = gcnew  ToolBar();
           ImageList ^ imageList1 = gcnew ImageList();  
           // Assign an image to the ImageList component.  
-          // You should replace the bold image   
+          // You should replace the bold image
           // in the sample below with an icon of your own choosing.  
           Image ^ myImage = Image::FromFile(String::Concat  
              (System::Environment::GetFolderPath  

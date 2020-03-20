@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: 7de6447a-a751-49d8-87e2-951cee77b536
 topic_type:
 - apiref
-ms.openlocfilehash: 6e73160fb1927560ad381dbb85d03796296ba9a4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c609d730297881c0ac20dca8569f0e9492638e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74434298"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175716"
 ---
 # <a name="imetadataemitgettokenfromtypespec-method"></a>IMetaDataEmit::GetTokenFromTypeSpec 方法
-取得具有指定之中繼資料簽章之類型的元資料標記。  
+使用指定的中繼資料簽名獲取類型的中繼資料權杖。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT GetTokenFromTypeSpec (   
-    [in]  PCCOR_SIGNATURE       pvSig,   
-    [in]  ULONG                 cbSig,   
-    [out] mdTypeSpec            *ptypespec   
+HRESULT GetTokenFromTypeSpec (
+    [in]  PCCOR_SIGNATURE       pvSig,
+    [in]  ULONG                 cbSig,
+    [out] mdTypeSpec            *ptypespec
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `pvSig`  
- 在要定義的簽章。  
+ [在]正在定義的簽名。  
   
  `cbSig`  
- 在`pvSig`中的位元組計數。  
+ [在]中的`pvSig`位元組計數。  
   
  `ptypespec`  
- 脫銷指派的 `mdTypeSpec` token。  
+ [出]分配的`mdTypeSpec`權杖。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -15,48 +15,48 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-ms.openlocfilehash: b98fab6c6127c3f78151d3b84160d4ca0434b6cd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: fadd1974cd4fa8a51a06700835f46df24e37d7fd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428241"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175768"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet 方法
-建立一組安全性許可權，以附加至指定之標記所參考的物件。  
+創建一組安全許可權以附加到指定權杖引用的物件。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT DefineSecurityAttributeSet (   
-    [in]  mdToken       tkObj,   
-    [in]  COR_SECATTR   rSecAttrs[],   
-    [in]  ULONG         cSecAttrs,   
-    [out] ULONG         *pulErrorAttr   
+HRESULT DefineSecurityAttributeSet (
+    [in]  mdToken       tkObj,
+    [in]  COR_SECATTR   rSecAttrs[],
+    [in]  ULONG         cSecAttrs,
+    [out] ULONG         *pulErrorAttr
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `tkObj`  
- 在安全性資訊所附加的 token。  
+ [在]附加安全資訊的權杖。  
   
  `rSecAttrs`  
- 在`COR_SECATTR` 結構的陣列。  
+ [在]結構陣列`COR_SECATTR`。  
   
  `cSecAttrs`  
- 在`rSecAttrs`中的元素數目。  
+ [在]中`rSecAttrs`的元素數。  
   
  `pulErrorAttr`  
- 脫銷如果方法失敗，會在導致問題的元素 `rSecAttrs` 中指定索引。  
+ [出]如果方法失敗，則指定導致問題的元素`rSecAttrs`中的索引。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

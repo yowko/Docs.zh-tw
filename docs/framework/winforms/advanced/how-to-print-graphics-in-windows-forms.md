@@ -9,23 +9,23 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: 2435b3bc14747a00d2a0fc03a9ebd21ae43c5369
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 15f3a507839430ce058302e7f5abd317ef84626f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740651"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182528"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>如何：列印 Windows Form 中的圖形
-通常，您會想要在以 Windows 為基礎的應用程式中列印圖形。 <xref:System.Drawing.Graphics> 類別提供將物件繪製至裝置的方法，例如螢幕或印表機。  
+通常，您需要在基於 Windows 的應用程式中列印圖形。 類<xref:System.Drawing.Graphics>提供將物件繪製到設備（如螢幕或印表機）的方法。  
   
 ### <a name="to-print-graphics"></a>列印圖形  
   
-1. 將 <xref:System.Drawing.Printing.PrintDocument> 元件新增至您的表單。  
+1. 向表單<xref:System.Drawing.Printing.PrintDocument>添加元件。  
   
-2. 在 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件處理常式中，使用 <xref:System.Drawing.Printing.PrintPageEventArgs> 類別的 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 屬性，指示印表機要列印的圖形類型。  
+2. 在<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件處理常式中<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>，使用<xref:System.Drawing.Printing.PrintPageEventArgs>類的屬性指示印表機列印的圖形類型。  
   
-     下列程式碼範例顯示用來在周框矩形內建立藍色橢圓形的事件處理常式。 矩形具有下列位置和維度：從100、150開始，寬度為250，高度為250。  
+     下面的代碼示例顯示了用於在邊界矩形內創建藍色橢圓的事件處理常式。 矩形具有以下位置和尺寸：從 100 開始，150 開頭，寬度為 250，高度為 250。  
   
     ```vb  
     Private Sub PrintDocument1_PrintPage(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage  
@@ -34,10 +34,10 @@ ms.locfileid: "76740651"
     ```  
   
     ```csharp  
-    private void printDocument1_PrintPage(object sender,   
+    private void printDocument1_PrintPage(object sender,
     System.Drawing.Printing.PrintPageEventArgs e)  
     {  
-       e.Graphics.FillRectangle(Brushes.Blue,   
+       e.Graphics.FillRectangle(Brushes.Blue,
          new Rectangle(100, 150, 250, 250));  
     }  
     ```  
@@ -52,7 +52,7 @@ ms.locfileid: "76740651"
        }  
     ```  
   
-     （視覺C#效果和C++視覺效果）將下列程式碼放在表單的函式中，以註冊事件處理常式。  
+     （視覺 C# 和視覺C++）將以下代碼放在表單的建構函式中以註冊事件處理常式。  
   
     ```csharp  
     this.printDocument1.PrintPage += new  

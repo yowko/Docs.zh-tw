@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, streams
 - streams
 ms.assetid: 02b05fba-7235-45ce-94e5-060436ee0875
-ms.openlocfilehash: aa3fc56dc461d4fe22e2ff391f3561d8834128d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7d5a2e3eec9b49731a09f6eb41a8d8500a59b45c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046882"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180616"
 ---
 # <a name="using-streams-on-the-network"></a>在網路上使用資料流
 網路資源在 .NET Framework 中是以資料流的形式呈現。 因為對資料流沒有任何特殊待遇，.NET Framework 提供下列功能：  
@@ -35,10 +35,10 @@ ms.locfileid: "71046882"
   
  <xref:System.Net.Sockets> 命名空間包含 **NetworkStream** 類別，其可特別實作用於網路資源的 <xref:System.IO.Stream> 類別。 <xref:System.Net.Sockets> 命名空間中的類別會使用 **NetworkStream** 類別來代表資料流。  
   
- 若要使用傳回的資料流將資料傳送到網路上，請在 <xref:System.Net.WebRequest> 上呼叫 <xref:System.Net.WebRequest.GetRequestStream%2A>。 **WebRequest** 會將要求標題傳送至伺服器；然後您即可在傳回的資料流上呼叫 <xref:System.IO.Stream.BeginWrite%2A>、<xref:System.IO.Stream.EndWrite%2A> 或 <xref:System.IO.Stream.Write%2A> 方法，將資料傳送到網路資源。 有些通訊協定 (例如 HTTP) 可能會要求您先設定特定通訊協定屬性，再傳送資料。 下列程式碼範例示範如何設定用於傳送資料的特定 HTTP 屬性。 它假設變數 `sendData` 包含要傳送的資料，而變數 `sendLength` 則是要傳送資料的位元組數。  
+ 若要使用傳回的資料流將資料傳送到網路上，請在 <xref:System.Net.WebRequest> 上呼叫 <xref:System.Net.WebRequest.GetRequestStream%2A>。 **Web 請求**將向伺服器發送請求標頭;然後，您可以通過調用 返回的流上的<xref:System.IO.Stream.BeginWrite%2A>、<xref:System.IO.Stream.EndWrite%2A>或<xref:System.IO.Stream.Write%2A>方法將資料發送到網路資源。 有些通訊協定 (例如 HTTP) 可能會要求您先設定特定通訊協定屬性，再傳送資料。 下列程式碼範例示範如何設定用於傳送資料的特定 HTTP 屬性。 它假設變數 `sendData` 包含要傳送的資料，而變數 `sendLength` 則是要傳送資料的位元組數。  
   
 ```csharp  
-HttpWebRequest request =   
+HttpWebRequest request =
    (HttpWebRequest) WebRequest.Create("http://www.contoso.com/");  
 request.Method = "POST";  
 request.ContentLength = sendLength;  
@@ -86,7 +86,7 @@ End Try
 // Create a response object.  
 WebResponse response = request.GetResponse();  
 // Get a readable stream from the server.  
-StreamReader sr =   
+StreamReader sr =
    new StreamReader(response.GetResponseStream(), Encoding.ASCII);  
 // Use the stream. Remember when you are through with the stream to close it.  
 sr.Close();  
@@ -96,7 +96,7 @@ sr.Close();
 ' Create a response object.  
 Dim response As WebResponse = request.GetResponse()  
 ' Get a readable stream from the server.  
-Dim sr As _   
+Dim sr As _
    New StreamReader(response.GetResponseStream(), Encoding.ASCII)  
 ' Use the stream. Remember when you are through with the stream to close it.  
 sr.Close()  

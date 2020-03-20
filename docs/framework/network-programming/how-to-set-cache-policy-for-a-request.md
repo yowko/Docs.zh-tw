@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定要求的快取原則
+title: 如何：設定要求的快取原則
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 7b28cf6e27fa6f5a5d255621d8e21e9a565ddbc4
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 4ad74d69391da0e815faf9c278f2d9bea03937d4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048107"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180758"
 ---
-# <a name="how-to-set-cache-policy-for-a-request"></a>作法：設定要求的快取原則
+# <a name="how-to-set-cache-policy-for-a-request"></a>如何：設定要求的快取原則
 下列範例示範如何設定要求的快取原則。 範例的輸入是如 `http://www.contoso.com/` 之類的 URI。  
   
 ## <a name="example"></a>範例  
@@ -29,12 +29,12 @@ using System.IO;
 namespace Examples.System.Net.Cache  
 {  
     public class CacheExample  
-    {     
+    {
         public static void UseCacheForOneDay(Uri resource)  
         {  
             // Create a policy that allows items in the cache  
             // to be used if they have been cached one day or less.  
-            HttpRequestCachePolicy requestPolicy =   
+            HttpRequestCachePolicy requestPolicy =
                 new HttpRequestCachePolicy (HttpCacheAgeControl.MaxAge,  
                 TimeSpan.FromDays(1));  
   
@@ -108,7 +108,7 @@ End Namespace
 ## <a name="see-also"></a>另請參閱
 
 - [網路應用程式的快取管理](cache-management-for-network-applications.md)
-- [快取原則](cache-policy.md)
+- [緩存策略](cache-policy.md)
 - [以位置為基礎的快取原則](location-based-cache-policies.md)
-- [以時間為基礎的快取原則](time-based-cache-policies.md)
-- [\<requestCaching> 項目 (網路設定)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+- [Time-Based Cache Policies](time-based-cache-policies.md)
+- [\<請求緩存>元素（網路設置）](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

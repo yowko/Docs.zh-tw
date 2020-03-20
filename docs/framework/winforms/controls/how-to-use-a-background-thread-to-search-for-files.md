@@ -10,31 +10,31 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: db9be1f57e15baac4820d33f6f245d69bd1ab430
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a58792ef6356c84d7d0c195eed21269e4036aacc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351961"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182086"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>如何：使用背景執行緒搜尋檔案
-<xref:System.ComponentModel.BackgroundWorker> 元件會取代 <xref:System.Threading> 命名空間，並將其加入功能;不過，如果您選擇，<xref:System.Threading> 命名空間會保留供回溯相容性及未來使用。 如需詳細資訊，請參閱[BackgroundWorker 元件總覽](backgroundworker-component-overview.md)。
+元件<xref:System.ComponentModel.BackgroundWorker>將替換<xref:System.Threading>命名空間並添加功能;但是，如果<xref:System.Threading>願意，命名空間將保留，以便向後相容性和未來使用。 有關詳細資訊，請參閱[後臺輔助角色元件概述](backgroundworker-component-overview.md)。
 
- Windows Forms 使用單一執行緒的單元（STA）模型，因為 Windows Forms 是以原本為執行緒的原生 Win32 視窗為基礎。 STA 模型意指可以在任何執行緒上建立視窗，但它無法在建立執行緒後進行切換，而且所有對它的函式呼叫都必須在其建立執行緒上發生。 在 Windows Forms 外部，.NET Framework 中的類別會使用免費的執行緒模型。 如需 .NET Framework 中線程的詳細資訊，請參閱[執行緒](../../../standard/threading/index.md)。
+ Windows 表單使用單線程單元 （STA） 模型，因為 Windows 表單基於本機 Win32 視窗，這些視窗本質上是單元執行緒的。 STA 模型意味著可以在任何執行緒上創建視窗，但它在創建執行緒後無法切換執行緒，並且對其的所有函式呼叫都必須在其創建執行緒上發生。 在 Windows 表單之外，.NET 框架中的類使用免費執行緒模型。 有關 .NET 框架中線程化的資訊，請參閱[執行緒](../../../standard/threading/index.md)。
 
- STA 模型要求必須從控制項的建立執行緒外部呼叫之控制項上的所有方法，都必須封送處理至控制項的建立執行緒（在上執行）。 基類 <xref:System.Windows.Forms.Control> 會針對此目的提供數個方法（<xref:System.Windows.Forms.Control.Invoke%2A>、<xref:System.Windows.Forms.Control.BeginInvoke%2A>和 <xref:System.Windows.Forms.Control.EndInvoke%2A>）。 <xref:System.Windows.Forms.Control.Invoke%2A> 進行同步方法呼叫;<xref:System.Windows.Forms.Control.BeginInvoke%2A> 進行非同步方法呼叫。
+ STA 模型要求需要從控制項的創建執行緒外部調用控制項上的任何方法都必須封送到（在）控制項的創建執行緒上執行。 基類<xref:System.Windows.Forms.Control>為此提供了多種方法<xref:System.Windows.Forms.Control.Invoke%2A>（、<xref:System.Windows.Forms.Control.BeginInvoke%2A>和<xref:System.Windows.Forms.Control.EndInvoke%2A>）。 <xref:System.Windows.Forms.Control.Invoke%2A>進行同步方法調用;<xref:System.Windows.Forms.Control.BeginInvoke%2A>進行非同步方法調用。
 
- 如果您在控制項中針對耗用大量資源的工作使用多執行緒處理，使用者介面可以在背景執行緒上執行需要大量資源的計算時維持回應。
+ 如果在控制項中使用多執行緒處理資源密集型任務，使用者介面可以在資源密集型計算在後臺執行緒上執行時保持回應。
 
- 下列範例（`DirectorySearcher`）顯示多執行緒 Windows Forms 控制項，其使用背景執行緒以遞迴方式搜尋目錄中是否有符合指定搜尋字串的檔案，然後在清單方塊中填入搜尋結果。 範例所說明的重要概念如下：
+ 下面的示例 （`DirectorySearcher`） 顯示了一個多執行緒 Windows 表單控制項，該控制項使用後臺執行緒遞迴地搜索與指定搜索字串匹配的檔，然後使用搜尋結果填充清單方塊。 示例說明的關鍵概念如下：
 
-- `DirectorySearcher` 會啟動新的執行緒來執行搜尋。 執行緒會執行 `ThreadProcedure` 方法，接著呼叫 helper `RecurseDirectory` 方法來執行實際的搜尋，並填入清單方塊。 不過，填入清單方塊需要跨執行緒呼叫，如接下來兩個點符專案中所述。
+- `DirectorySearcher`啟動新執行緒以執行搜索。 執行緒執行的方法`ThreadProcedure`，該方法反過來調用説明器`RecurseDirectory`方法執行實際搜索並填充清單方塊。 但是，填充清單方塊需要交叉執行緒調用，如以下兩個專案中所述。
 
-- `DirectorySearcher` 定義將檔案新增至清單方塊的 `AddFiles` 方法;不過，`RecurseDirectory` 無法直接叫用 `AddFiles`，因為 `AddFiles` 只能在建立 `DirectorySearcher`的 STA 執行緒中執行。
+- `DirectorySearcher`定義將`AddFiles`檔添加到清單方塊的方法;但是，`RecurseDirectory`不能直接調用`AddFiles`，`AddFiles`因為只能在創建的`DirectorySearcher`STA 執行緒中執行。
 
-- `RecurseDirectory` 可以呼叫 `AddFiles` 的唯一方式是透過跨執行緒呼叫，也就是藉由呼叫 <xref:System.Windows.Forms.Control.Invoke%2A> 或 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 將 `AddFiles` 封送處理至 `DirectorySearcher`的建立執行緒。 `RecurseDirectory` 會使用 <xref:System.Windows.Forms.Control.BeginInvoke%2A>，以便以非同步方式進行呼叫。
+- 調用`RecurseDirectory``AddFiles`的唯一方法是通過跨執行緒調用，即通過調用<xref:System.Windows.Forms.Control.Invoke%2A><xref:System.Windows.Forms.Control.BeginInvoke%2A>或封送`AddFiles`到 的`DirectorySearcher`創建執行緒。 `RecurseDirectory`使用<xref:System.Windows.Forms.Control.BeginInvoke%2A>以便可以非同步進行調用。
 
-- 封送處理方法需要對等的函式指標或回呼。 這項作業是使用 .NET Framework 中的委派來完成。 <xref:System.Windows.Forms.Control.BeginInvoke%2A> 接受委派做為引數。 因此 `DirectorySearcher` 會定義委派（`FileListDelegate`），將 `AddFiles` 系結至其在其程式中的 `FileListDelegate` 實例，並將這個委派實例傳遞至 <xref:System.Windows.Forms.Control.BeginInvoke%2A>。 `DirectorySearcher` 也會定義在完成搜尋時封送處理的事件委派。
+- 封送方法需要等效于函數指標或回檔。 這是使用 .NET 框架中的委託實現的。 <xref:System.Windows.Forms.Control.BeginInvoke%2A>將委託視為參數。 `DirectorySearcher`因此定義`FileListDelegate`委託 （ ），`AddFiles`綁定到其建構函式中的`FileListDelegate`實例，並將此委託實例傳遞給<xref:System.Windows.Forms.Control.BeginInvoke%2A>。 `DirectorySearcher`還定義在搜索完成時封送的事件委託。
 
 ```vb
 Option Strict
@@ -569,7 +569,7 @@ namespace Microsoft.Samples.DirectorySearcher
 ```
 
 ## <a name="using-the-multithreaded-control-on-a-form"></a>在表單上使用多執行緒控制項
- 下列範例會顯示如何在表單上使用多執行緒 `DirectorySearcher` 控制項。
+ 下面的示例演示如何在表單上使用多執行緒`DirectorySearcher`控制項。
 
 ```vb
 Option Explicit
@@ -669,7 +669,7 @@ namespace SampleUsage
    using System.Drawing;
    using System.Windows.Forms;
    using Microsoft.Samples.DirectorySearcher;
-   
+
    /// <summary>
    ///      Summary description for Form1.
    /// </summary>
@@ -760,7 +760,7 @@ namespace SampleUsage
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)

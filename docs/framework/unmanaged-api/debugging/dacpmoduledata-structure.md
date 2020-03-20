@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: b46a04d67f59c5031b5bd195cef4cc2275e1e5e0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: c24bdce64eb7e208bf3830940d7beab1ebf92e78
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793802"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179193"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpMethodData 結構
 
-定義模組執行時間資訊的傳輸緩衝區。
+為模組的運行時資訊定義傳輸緩衝區。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -34,32 +34,32 @@ ms.locfileid: "76793802"
 struct DacpModuleData
 {
     CLRDATA_ADDRESS Address;
-    CLRDATA_ADDRESS File; 
+    CLRDATA_ADDRESS File;
     CLRDATA_ADDRESS  ilBase;
     char payLoad[132];
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
-| 成員    | 描述                                                             |
+| member    | 描述                                                             |
 | --------- | ----------------------------------------------------------------------- |
 | `Address` | 模組物件的位址。                                           |
-| `File`    | 可移植執行檔（PE）的指標。                       |
-| `ilBase`  | 載入影像基底的位址。                                 |
-| `payLoad` | 執行時間所使用之其他模組資訊的承載緩衝區。 |
+| `File`    | 指向可攜式可執行檔 （PE） 檔的指標。                       |
+| `ilBase`  | 載入圖像的基的位址。                                 |
+| `payLoad` | 用於運行時使用的其他模組資訊的有效負載緩衝區。 |
 
 ## <a name="remarks"></a>備註
 
-這個結構存在於執行時間中，而且不會透過任何標頭或程式庫檔案來公開。 若要使用它，請依照上面的指定定義結構。
+此結構位於運行時內，不會通過任何標頭或庫檔公開。 要使用它，請定義上面指定的結構。
 
 ## <a name="requirements"></a>需求
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** 無  
-連結**庫：** 無  
-**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**標題：** 沒有  
+**庫：** 沒有  
+**.NET 框架版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯](index.md)
 - [偵錯結構](debugging-structures.md)

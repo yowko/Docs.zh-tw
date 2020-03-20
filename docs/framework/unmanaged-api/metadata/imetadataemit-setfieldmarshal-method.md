@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: be232314-7f69-4855-bfab-63361bd22307
 topic_type:
 - apiref
-ms.openlocfilehash: cdbcdb9359d295ad9bed2050ed36499feba74d9e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 1037cd4210605192870d43d88979b89af6536380
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442270"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175651"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>IMetaDataEmit::SetFieldMarshal 方法
-針對指定之標記所參考的欄位、方法傳回或方法參數，設定 PInvoke 封送處理資訊。  
+為指定權杖引用的欄位、方法返回或方法參數設置 PInvoke 封送資訊。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT SetFieldMarshal (  
-    [in]  mdToken          tk,   
-    [in]  PCCOR_SIGNATURE  pvNativeType,   
-    [in]  ULONG            cbNativeType   
+    [in]  mdToken          tk,
+    [in]  PCCOR_SIGNATURE  pvNativeType,
+    [in]  ULONG            cbNativeType
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `tk`  
- 在目標資料項目的 token。 這可以是 `mdFieldDef` 或 `mdParamDef` token。  
+ [在]目標資料項目的權杖。 這是 或`mdFieldDef``mdParamDef`標記。  
   
  `pvNativeType`  
- 在非受控類型的簽章。  
+ [在]非託管類型的簽名。  
   
  `cbNativeType`  
- 在`pvNativeType`中的位元組計數。  
+ [在]中的`pvNativeType`位元組計數。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

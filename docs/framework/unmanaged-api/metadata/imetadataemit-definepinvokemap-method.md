@@ -15,48 +15,48 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-ms.openlocfilehash: 9d4ea16a212ac5f0120d63510f07eaee69af739e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e414bc5a7d537e8d153541f05b22dd91578e8739
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431482"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177745"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap 方法
-設定指定之標記所參考之方法的 PInvoke 簽章功能。  
+設置指定權杖引用的方法的 PInvoke 簽名的功能。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
-HRESULT DefinePinvokeMap (   
-    [in]  mdToken            tk,   
-    [in]  DWORD              dwMappingFlags,   
-    [in]  LPCWSTR            szImportName,   
-    [in]  mdModuleRef        mrImportDLL   
+HRESULT DefinePinvokeMap (
+    [in]  mdToken            tk,
+    [in]  DWORD              dwMappingFlags,
+    [in]  LPCWSTR            szImportName,
+    [in]  mdModuleRef        mrImportDLL
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `tk`  
- 在目標方法的 token。  
+ [在]目標方法的權杖。  
   
  `dwMappingFlags`  
- 在PInvoke 用來執行對應的旗標。  
+ [在]PInvoke 用於執行映射的標誌。  
   
  `szImportName`  
- 在非受控 DLL 中的目標匯出方法名稱。  
+ [在]非託管 DLL 中的目標匯出方法的名稱。  
   
  `mrImportDLL`  
- 在目標原生 DLL 的 token。  
+ [在]目標本機 DLL 的權杖。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 做為 Mscoree.dll 中的資源使用  
+ **庫：** 用作 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

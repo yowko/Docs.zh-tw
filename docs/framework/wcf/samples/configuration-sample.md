@@ -2,26 +2,26 @@
 title: 組態範例
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: eb02b5d01b3f95ef741aa689cc66616fd598577b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5ac72db1fce0862381cd614499b5db4b9d95b2d0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741964"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183908"
 ---
 # <a name="configuration-sample"></a>組態範例
 此範例示範如何使用組態檔讓服務變成可搜尋的。  
   
 > [!NOTE]
-> 這個範例會在組態中實作探索。 如需在程式碼中執行探索的範例，請參閱[基本](../../../../docs/framework/wcf/samples/basic-sample.md)。  
+> 這個範例會在組態中實作探索。 有關在代碼中實現發現的示例，請參閱[基本](../../../../docs/framework/wcf/samples/basic-sample.md)。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> 如果此目錄不存在，請移至[.NET Framework 4 的 Windows Communication Foundation （wcf）和 Windows Workflow Foundation （WF）範例](https://www.microsoft.com/download/details.aspx?id=21459)，以下載所有 WINDOWS COMMUNICATION FOUNDATION （wcf）和 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 範例。 此範例位於下列目錄。  
->   
+>
+> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
 ## <a name="service-configuration"></a>服務組態  
@@ -47,8 +47,8 @@ ms.locfileid: "76741964"
                     binding="wsHttpBinding"  
                     contract="Microsoft.Samples.Discovery.ICalculatorService"  
                     behaviorConfiguration="endpointBehaviorConfiguration" />  
-          <endpoint name="udpDiscovery"   
-                    kind="udpDiscoveryEndpoint"   
+          <endpoint name="udpDiscovery"
+                    kind="udpDiscoveryEndpoint"
                 endpointConfiguration="adhocDiscoveryEndpointConfiguration"/>        </service>  
       </services>  
 ```  
@@ -81,18 +81,18 @@ ms.locfileid: "76741964"
               </scopes>  
             </endpointDiscovery>  
   
-          </behavior>            
+          </behavior>
         </endpointBehaviors>  
 ```  
   
- 如需有關範圍的詳細資訊，請參閱[探索尋找和尋找準則](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。  
+ 有關作用域的詳細資訊，請參閱[發現查找和查找條件](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。  
   
  您也可以控制探索端點的特定詳細資料。 這是透過 <xref:System.ServiceModel.Configuration.StandardEndpointsSection> 達成。 在此範例中，所使用的通訊協定版本會經過修改，而且會加入 `maxResponseDelay` 屬性，如下列程式碼範例所示。  
   
 ```xml  
 <standardEndpoints>  
    <udpDiscoveryEndpoint>  
-      <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />    
+      <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />
    </udpDiscoveryEndpoint>  
 </standardEndpoints>  
 ```  
@@ -110,7 +110,7 @@ ms.locfileid: "76741964"
                     binding="wsHttpBinding"  
                     contract="Microsoft.Samples.Discovery.ICalculatorService"  
                     behaviorConfiguration="endpointBehaviorConfiguration" />  
-         <!-- Define the discovery endpoint -->            
+         <!-- Define the discovery endpoint -->
 <endpoint name="udpDiscovery" kind="udpDiscoveryEndpoint" endpointConfiguration="adhocDiscoveryEndpointConfiguration"/>        </service>  
       </services>  
   
@@ -138,7 +138,7 @@ ms.locfileid: "76741964"
               </scopes>  
             </endpointDiscovery>  
   
-          </behavior>            
+          </behavior>
         </endpointBehaviors>  
   
       </behaviors>  
@@ -146,7 +146,7 @@ ms.locfileid: "76741964"
       <standardEndpoints>  
         <udpDiscoveryEndpoint>  
          <!-- Configure the UDP discovery endpoint -->  
-          <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />    
+          <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11" maxResponseDelay="00:00:00.600" />
         </udpDiscoveryEndpoint>  
       </standardEndpoints>  
   
@@ -154,7 +154,7 @@ ms.locfileid: "76741964"
 </configuration>  
 ```  
   
-## <a name="client-configuration"></a>用戶端設定  
+## <a name="client-configuration"></a>用戶端組態  
  在用戶端的應用程式組態檔中，`standardEndpoint` 型別的 `dynamicEndpoint` 會用來使用探索，如下列組態程式碼片段所示。  
   
 ```xml  
@@ -193,14 +193,14 @@ ms.locfileid: "76741964"
  此範例會延伸這個功能，並修改用戶端所使用的 <xref:System.ServiceModel.Discovery.FindCriteria>，以及用於探索之標準 `updDiscoveryEndpoint` 的部分屬性。 <xref:System.ServiceModel.Discovery.FindCriteria> 會修改為使用範圍與特定的 `scopeMatchBy` 演算法，以及自訂終止準則。 此外，此範例也會示範用戶端如何使用 `Probe` 訊息傳送 XML 項目。 最後，您必須對 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 進行某些變更，例如所使用的通訊協定版本以及 UDP 專屬設定，如下列組態檔所示。  
   
 ```xml  
-<udpDiscoveryEndpoint>    
-        <!-- Specify the discovery protocol version and UDP transport settings. -->   
+<udpDiscoveryEndpoint>
+        <!-- Specify the discovery protocol version and UDP transport settings. -->
         <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11">  
           <transportSettings duplicateMessageHistoryLength="2048"  
                              maxPendingMessageCount="5"  
                              maxReceivedMessageSize="8192"  
                              maxBufferPoolSize="262144"/>  
-        </standardEndpoint>        
+        </standardEndpoint>
       </udpDiscoveryEndpoint>  
 ```  
   
@@ -222,7 +222,7 @@ ms.locfileid: "76741964"
   
     <standardEndpoints>  
   
-      <dynamicEndpoint>        
+      <dynamicEndpoint>
         <standardEndpoint name="dynamicEndpointConfiguration">  
           <discoveryClientSettings>  
             <!-- Controls where the discovery happens. In this case, Probe message is sent over UdpDiscoveryEndpoint. -->  
@@ -239,17 +239,17 @@ ms.locfileid: "76741964"
               </extensions>  
             </findCriteria>  
           </discoveryClientSettings>  
-        </standardEndpoint>     
+        </standardEndpoint>
       </dynamicEndpoint>  
   
-      <udpDiscoveryEndpoint>    
-        <!-- Specify the discovery protocol version and UDP transport settings. -->   
+      <udpDiscoveryEndpoint>
+        <!-- Specify the discovery protocol version and UDP transport settings. -->
         <standardEndpoint name="adhocDiscoveryEndpointConfiguration" discoveryVersion="WSDiscovery11">  
           <transportSettings duplicateMessageHistoryLength="2048"  
                              maxPendingMessageCount="5"  
                              maxReceivedMessageSize="8192"  
                              maxBufferPoolSize="262144"/>  
-        </standardEndpoint>        
+        </standardEndpoint>
       </udpDiscoveryEndpoint>  
   
     </standardEndpoints>  
@@ -259,7 +259,7 @@ ms.locfileid: "76741964"
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1. 這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 如需詳細資訊，請參閱設定[HTTP 和 HTTPS](../feature-details/configuring-http-and-https.md)。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 有關詳細資訊，請參閱配置[HTTP 和 HTTPS](../feature-details/configuring-http-and-https.md)。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. 建置方案。  
   

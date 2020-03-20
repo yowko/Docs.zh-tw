@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: 497c05740fd9e1c05d877cfdb72881168fff6e2e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d7105e9211c35e7d6125c3017e8b4b829a25b128
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778758"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179911"
 ---
 # <a name="ui-automation-events-for-clients"></a>用戶端的 UI 自動化事件
 > [!NOTE]
@@ -23,11 +23,11 @@ ms.locfileid: "76778758"
  同時也因為能夠只接聽定義範圍內的事件，而改善效率。 例如，用戶端可以接聽樹狀結構中所有 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目的焦點變更事件，或是只接聽一個項目和其下階的焦點變更事件。  
   
 > [!NOTE]
-> 請勿假設所有可能的事件都由 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供者引發。 例如，並非所有屬性變更都會導致 Windows Forms 和 Win32 控制項的標準 proxy 提供者引發事件。  
+> 請勿假設所有可能的事件都由 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 提供者引發。 例如，並非所有屬性更改都會導致 Windows 表單和 Win32 控制項的標準代理提供程式引發事件。  
   
- 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件的更廣泛觀點，請參閱[UI 自動化事件總覽](ui-automation-events-overview.md)。  
+ 有關[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]事件的更廣泛視圖，請參閱[UI 自動化事件概述](ui-automation-events-overview.md)。  
   
-<a name="Subscribing_to_Events"></a>   
+<a name="Subscribing_to_Events"></a>
 ## <a name="subscribing-to-events"></a>訂閱事件  
  用戶端應用程式藉由使用下列方法之一註冊事件處理常式，來訂閱特定種類的事件。  
   
@@ -55,11 +55,11 @@ ms.locfileid: "76778758"
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|移除註冊使用 <xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> 註冊的事件處理常式。|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|移除註冊所有已註冊的事件處理常式。|  
   
- 如需範例程式碼，請參閱[訂閱使用者介面自動化事件](subscribe-to-ui-automation-events.md)。  
+ 例如，請參閱訂閱[UI 自動化事件](subscribe-to-ui-automation-events.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [訂閱 UI 自動化事件](subscribe-to-ui-automation-events.md)
 - [UI 自動化事件概觀](ui-automation-events-overview.md)
 - [UI 自動化屬性概觀](ui-automation-properties-overview.md)
-- [TrackFocus 範例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
+- [跟蹤焦點示例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

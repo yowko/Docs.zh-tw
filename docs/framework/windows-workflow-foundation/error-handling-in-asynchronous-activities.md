@@ -2,12 +2,12 @@
 title: 非同步活動中的錯誤處理
 ms.date: 03/30/2017
 ms.assetid: e8f8ce2b-50c9-4e44-b187-030e0cf30a5d
-ms.openlocfilehash: 7a1db144e4738870d3ff5fe68df11b2fb06ef3d7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c63ce231687b03bdba57edd38c32270eabeff834
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64640953"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182942"
 ---
 # <a name="error-handling-in-asynchronous-activities"></a>非同步活動中的錯誤處理
 提供 <xref:System.Activities.AsyncCodeActivity> 中的錯誤處理包含在活動回呼系統中路由錯誤。 此主題描述如何使用 SendMail 活動範例取得在非同步作業中擲回主機的錯誤。  
@@ -27,7 +27,7 @@ ms.locfileid: "64640953"
 class SendMailAsyncResult : IAsyncResult  
         {  
             …  
-            public Exception Error { get; set; }   
+            public Exception Error { get; set; }
             …  
             void SendCompleted(object sender, AsyncCompletedEventArgs e)  
             {  
@@ -44,7 +44,7 @@ class SendMailAsyncResult : IAsyncResult
         {  
             SendMailAsyncResult sendMailResult = result as SendMailAsyncResult;  
             if (sendMailResult != null && sendMailResult.Error != null)  
-                throw sendMailResult.Error;   
+                throw sendMailResult.Error;
         }  
     }  
 ```

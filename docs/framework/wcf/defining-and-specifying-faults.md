@@ -8,17 +8,17 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 840d26e4543d2c90c99ebba05b5bca7a48cbdeda
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 10fc045cab995cca8d78e470d74ec9341e167308
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320038"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176691"
 ---
 # <a name="defining-and-specifying-faults"></a>定義並指定錯誤
-SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。 本主題討論何時及如何定義自訂錯誤內容，並指定可以傳回它們的作業。 如需服務或雙工用戶端如何傳送這些錯誤，以及用戶端或服務應用程式如何處理這些錯誤的詳細資訊，請參閱傳送[和接收錯誤](sending-and-receiving-faults.md)。 如需 Windows Communication Foundation （WCF）應用程式中錯誤處理的總覽，請參閱[指定和處理合約和服務中](specifying-and-handling-faults-in-contracts-and-services.md)的錯誤。  
+SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。 本主題討論何時及如何定義自訂錯誤內容，並指定可以傳回它們的作業。 有關服務或雙工用戶端如何發送這些故障以及用戶端或服務應用程式如何處理這些故障的詳細資訊，請參閱[發送和接收故障](sending-and-receiving-faults.md)。 有關 Windows 通信基礎 （WCF） 應用程式中的錯誤處理的概述，請參閱[在合同和服務中指定和處理錯誤](specifying-and-handling-faults-in-contracts-and-services.md)。  
   
-## <a name="overview"></a>總覽  
+## <a name="overview"></a>概觀  
  已宣告的 SOAP 錯誤是其中作業具有指定自訂 SOAP 錯誤類型之 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>的 SOAP 錯誤。 未宣告的 SOAP 錯誤則是在作業的合約中未指定的 SOAP 錯誤。 本主題將協助您識別這些錯誤狀況，並為您的服務建立錯誤合約，讓用戶端在收到自訂 SOAP 錯誤的通知時，可以用於正確處理這些錯誤狀況。 基本的工作依序為：  
   
 1. 定義您服務的用戶端應該知道的錯誤狀況。  
@@ -28,7 +28,7 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
 3. 標示您的作業，讓其擲回的特定 SOAP 錯誤以 WSDL 格式對用戶端公開。  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>定義用戶端應知道的錯誤狀況  
- SOAP 錯誤是公開描述的訊息，具有特定作業的錯誤資訊。 由於它們是和其他作業訊息一起以 WSDL 描述的，因此用戶端知道並預期在叫用作業時處理這類錯誤。 但是，因為 WCF 服務是以 managed 程式碼撰寫，所以決定要將受控碼中的哪些錯誤條件轉換成錯誤，並傳回給用戶端，讓您有機會將錯誤狀況和服務中的 bug 與正式錯誤分開與用戶端的交談。  
+ SOAP 錯誤是公開描述的訊息，具有特定作業的錯誤資訊。 由於它們是和其他作業訊息一起以 WSDL 描述的，因此用戶端知道並預期在叫用作業時處理這類錯誤。 但是，由於 WCF 服務是在託管代碼中編寫的，因此確定託管代碼中的哪些錯誤條件要轉換為錯誤並返回到用戶端，因此您有機會將服務中的錯誤條件和錯誤與正式錯誤分開您與客戶的對話。  
   
  例如，下列程式碼範例顯示採用兩個整數並傳回另一個整數的作業。 此處可擲回數個例外狀況，因此當設計錯誤合約時，您必須決定哪些錯誤狀況對您的用戶端是重要的。 在此案例中，服務應會偵測到 <xref:System.DivideByZeroException?displayProperty=nameWithType> 例外狀況。  
   
@@ -36,7 +36,7 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
 [ServiceContract]  
 public class CalculatorService  
 {  
-    [OperationContract]   
+    [OperationContract]
     int Divide(int a, int b)  
     {  
       if (b==0) throw new Exception("Division by zero!");  
@@ -64,7 +64,7 @@ End Class
  [!code-csharp[Faults#2](../../../samples/snippets/csharp/VS_Snippets_CFX/faults/cs/service.cs#2)]
  [!code-vb[Faults#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faults/vb/service.vb#2)]  
   
- 如需如何確保您的資料可序列化的詳細資訊，請參閱[在服務合約中指定資料傳輸](./feature-details/specifying-data-transfer-in-service-contracts.md)。 如需 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> 所提供之序列化支援的清單，請參閱[資料合約序列化程式支援的類型](./feature-details/types-supported-by-the-data-contract-serializer.md)。  
+ 有關如何確保資料可序列化的詳細資訊，請參閱[在服務協定中指定資料傳輸](./feature-details/specifying-data-transfer-in-service-contracts.md)。 有關提供的序列化支援的清單，<xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>請參閱[資料協定序列化器支援的類型](./feature-details/types-supported-by-the-data-contract-serializer.md)。  
   
 ### <a name="mark-operations-to-establish-the-fault-contract"></a>標示作業以建立錯誤合約  
  在定義傳回做為自訂 SOAP 錯誤一部分的可序列化資料之後，最後一個步驟就是將您的作業合約標示為擲回該類型的 SOAP 錯誤。 如果要執行這項操作，請使用 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType> 屬性，並傳遞您所建構之自訂資料型別的型別。 下列程式碼範例將示範如何使用 <xref:System.ServiceModel.FaultContractAttribute> 屬性來指定 `Divide` 作業可以傳回型別 `MathFault` 的 SOAP 錯誤。 其他以數學為基礎的作業現在也可以指定它們可以傳回 `MathFault`。  
@@ -74,7 +74,7 @@ End Class
   
  作業可以使用一個以上的 <xref:System.ServiceModel.FaultContractAttribute> 屬性來標示該作業，以指定傳回一個以上的自訂錯誤。  
   
- 下一步，若要在您的作業執行中執行錯誤合約，請參閱傳送[和接收錯誤](sending-and-receiving-faults.md)主題。  
+ 下一步，為了在操作實現中實現故障協定，在主題["發送和接收故障](sending-and-receiving-faults.md)"仲介紹了這一步驟。  
   
 #### <a name="soap-wsdl-and-interoperability-considerations"></a>SOAP、WSDL 和互通性考量  
  在某些情況中，特別是在與其他平台互通時，控制錯誤在 SOAP 訊息中出現的方式或在 WSDL 中繼資料中描述的方式可能會很重要。  
@@ -83,9 +83,9 @@ End Class
   
  根據 SOAP 標準，錯誤可以有 `Action`、`Code` 和 `Reason`。 `Action` 是由 <xref:System.ServiceModel.FaultContractAttribute.Action%2A> 屬性控制的。 <xref:System.ServiceModel.FaultException.Code%2A> 屬性和 <xref:System.ServiceModel.FaultException.Reason%2A> 屬性都是 <xref:System.ServiceModel.FaultException?displayProperty=nameWithType> 類別的屬性，而該類別是一般 <xref:System.ServiceModel.FaultException%601?displayProperty=nameWithType> 的父類別。 `Code` 屬性包括 <xref:System.ServiceModel.FaultCode.SubCode%2A> 成員。  
   
- 當存取產生錯誤的非服務時，會有特定限制。 WCF 僅支援架構所描述且與資料合約相容之詳細類型的錯誤。 例如，如上所述，WCF 不支援在其詳細資料類型中使用 XML 屬性的錯誤，或在詳細資料區段中具有多個最上層元素的錯誤。  
+ 當存取產生錯誤的非服務時，會有特定限制。 WCF 僅支援架構描述且與資料協定相容的詳細資訊類型的故障。 例如，如上所述，WCF 不支援在其詳細資訊類型中使用 XML 屬性的故障，也不支援詳細資訊部分中具有多個頂級元素的錯誤。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
@@ -95,4 +95,4 @@ End Class
 - [如何：在服務合約中宣告錯誤](how-to-declare-faults-in-service-contracts.md)
 - [了解保護層級](understanding-protection-level.md)
 - [如何：設定 ProtectionLevel 屬性](how-to-set-the-protectionlevel-property.md)
-- [指定服務合約中的資料傳輸](./feature-details/specifying-data-transfer-in-service-contracts.md)
+- [Specifying Data Transfer in Service Contracts](./feature-details/specifying-data-transfer-in-service-contracts.md)

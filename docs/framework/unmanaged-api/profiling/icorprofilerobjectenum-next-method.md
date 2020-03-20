@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: b420433c-5ebe-4986-bba1-97902e6db819
 topic_type:
 - apiref
-ms.openlocfilehash: 0c833416cca965f2655266152c5bdf5f11624d14
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b6e26d1538cab30db66e887aee89b8fbae501bdb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861134"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177003"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>ICorProfilerObjectEnum::Next 方法
-從序列中列舉值的目前位置開始，從物件的連續集合中取得指定的連續物件數目。  
+從物件的循序集合中獲取指定數量的連續物件，從枚舉器在序列中的當前位置開始。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG                    celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]    
+    [out, size_is(celt), length_is(*pceltFetched)]
         ObjectID                  objects[],  
     [out] ULONG                   *pceltFetched  
 );  
@@ -41,7 +41,7 @@ HRESULT Next (
  [in] 要擷取的物件數目。  
   
  `objects`  
- 脫銷`ObjectID` 值的陣列，其中每一個都代表抓取的物件。  
+ [出]值陣列`ObjectID`，每個值表示檢索的物件。  
   
  `pceltFetched`  
  [out] `objects` 陣列中實際傳回之項目數目的指標。  
@@ -53,8 +53,8 @@ HRESULT Next (
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorProfilerObjectEnum 介面](icorprofilerobjectenum-interface.md)

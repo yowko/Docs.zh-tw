@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: e2b0e2db-3fae-4b56-844e-d30a125a660c
 topic_type:
 - apiref
-ms.openlocfilehash: c847f177f48d72f28192d1efabe93c65a7b3f4b8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c012e4e2b5e41737f7bbe6a0fb887693b0ba22c8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120497"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176418"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain 方法
-指定要在其中執行指定 managed 程式碼的 <xref:System.AppDomain>。  
+指定<xref:System.AppDomain>在其中執行指定託管代碼的用中。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT ExecuteInAppDomain(  
-    [in] DWORD AppDomainId,   
-    [in] FExecuteInDomainCallback pCallback,   
+    [in] DWORD AppDomainId,
+    [in] FExecuteInDomainCallback pCallback,
     [in] void* cookie  
 );  
 ```  
   
 ## <a name="parameters"></a>參數  
  `AppDomainId`  
- 在要在其中執行指定方法之 <xref:System.AppDomain> 的數值識別碼。  
+ [在]要在<xref:System.AppDomain>其中執行指定方法的數位 ID。  
   
  `pCallback`  
- 在要在指定的 <xref:System.AppDomain>內執行之函式的指標。  
+ [在]指向要在指定<xref:System.AppDomain>時間內執行的函數的指標。  
   
  `cookie`  
- 在不透明呼叫端所配置記憶體的指標。 這個參數是由 common language runtime （CLR）傳遞至網域回呼。 這不是運行時間管理的堆積記憶體;這個記憶體的配置和存留期都是由呼叫者所控制。  
+ [在]指向不透明調用方分配的記憶體的指標。 此參數由通用語言運行時 （CLR） 傳遞給域回檔。 它不是運行時管理的堆記憶體;它不是運行時管理的堆記憶體。此記憶體的分配和存留期都由調用方控制。  
   
 ## <a name="return-value"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|已成功傳回 `ExecuteInAppDomain`。|  
-|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入進程中，或 CLR 處於無法執行 managed 程式碼或成功處理呼叫的狀態。|  
+|S_OK|`ExecuteInAppDomain`已成功返回。|  
+|HOST_E_CLRNOTAVAILABLE|CLR 尚未載入到進程中，或者 CLR 處於無法成功運行託管代碼或成功處理調用的狀態。|  
 |HOST_E_TIMEOUT|呼叫超時。|  
-|HOST_E_NOT_OWNER|呼叫端沒有擁有鎖定。|  
-|HOST_E_ABANDONED|已封鎖的執行緒或光纖在等候時取消了事件。|  
-|E_FAIL|發生不明的嚴重失敗。 如果方法傳回 E_FAIL，則 CLR 在進程內將無法再使用。 對裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。|  
+|HOST_E_NOT_OWNER|調用方不擁有鎖。|  
+|HOST_E_ABANDONED|當阻塞的執行緒或光纖等待事件時，事件已被取消。|  
+|E_FAIL|發生了未知的災難性故障。 如果方法返回E_FAIL，則 CLR 在進程中不再可用。 對託管方法的後續調用返回HOST_E_CLRNOTAVAILABLE。|  
   
 ## <a name="remarks"></a>備註  
- `ExecuteInAppDomain` 可讓主機控制要在哪一個 managed <xref:System.AppDomain> 中執行指定的 managed 方法。 您可以藉由呼叫[GetCurrentAppDomainId 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)，取得應用程式域識別碼的值，其對應至 <xref:System.AppDomain.Id%2A> 屬性的值。  
+ `ExecuteInAppDomain`允許主機控制應執行指定託管方法的<xref:System.AppDomain>託管方法。 通過調用[GetCurrentAppDomainId 方法](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)，可以獲取應用程式域識別碼的值，該識別碼<xref:System.AppDomain.Id%2A>對應于屬性的值。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Mscoree.dll. h  
+ **標題：** MSCorEE.h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MSCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICLRRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

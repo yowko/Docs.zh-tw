@@ -2,15 +2,15 @@
 title: 網路程式設計範例
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 1c3dc630f8675084d434431fbe227cf373c54b62
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 860ee2ee766a4c0c1ea158662f195e6e29628687
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047598"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180707"
 ---
 # <a name="network-programming-samples"></a>網路程式設計範例
-本節包含可下載網路程式設計範例的描述和連結，而這些範例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相關命名空間中的類別。 
+本節包含可下載網路程式設計範例的描述和連結，而這些範例使用 <xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets> 和相關命名空間中的類別。
   
 > [!NOTE]
 > 所有範例均可從 [.NET Framework SDK 2.0 版範例下載](https://www.microsoft.com/download/confirmation.aspx?id=22181)中取得，此連結是針對 .NET Framework 2.0 所發行，且可能會過時。
@@ -24,9 +24,8 @@ ms.locfileid: "71047598"
   
  [HttpListener 技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/y7cbb2y2(v=vs.85))  
  示範如何處理應用程式中的 HTTP 要求。  
- 
- [HttpListener ASPX 主機應用程式範例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
- 示範如何使用 <xref:System.Net.HttpListener?displayProperty=nameWithType> 類別的功能來建立 HTTP 伺服器，以將呼叫路由傳送至裝載的 ASP.NET 應用程式。
+
+ [HttpListener ASPX 主機應用程式示例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))演示如何使用<xref:System.Net.HttpListener?displayProperty=nameWithType>類的功能創建將調用路由到託管ASP.NET應用程式的 HTTP 伺服器。
   
  [Mailer 技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/whw7xbk2(v=vs.85))  
  示範如何從用戶端應用程式傳送電子郵件訊息。  
@@ -34,7 +33,7 @@ ms.locfileid: "71047598"
  [NetStat 工具技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ks32hs88(v=vs.85))  
  示範 NCLNetStat 網路資訊工具。  
   
- [Network Information Technology Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/2xatedhd(v=vs.85)) (網路資訊技術範例)  
+ [網路資訊技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/2xatedhd(v=vs.85))  
  示範如何監視和顯示網路資訊。  
   
  [Ping 用戶端技術範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/5253acs7(v=vs.85))  
@@ -59,5 +58,5 @@ ms.locfileid: "71047598"
   
 ## <a name="see-also"></a>另請參閱
 
-- [以 .NET Framework 進行網路程式設計](index.md)
+- [.NET 框架中的網路程式設計](index.md)
 - [網路程式設計「如何」主題](network-programming-how-to-topics.md)

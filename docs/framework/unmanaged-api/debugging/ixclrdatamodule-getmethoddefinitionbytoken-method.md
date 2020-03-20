@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataModule::GetMethodDefinitionByToken 方法
+title: IXCLRData模組：獲取方法定義權杖方法
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetMethodDefinitionByToken Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2c0cf56f108396226b7c7399f6da75e5f47d36f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 294c5340caf2217f9337d654a11a63a43d46febd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67744678"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176665"
 ---
-# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule::GetMethodDefinitionByToken 方法
+# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRData模組：獲取方法定義權杖方法
 
-取得對應至指定的中繼資料語彙基元的方法定義。
+獲取與給定中繼資料權杖對應的方法定義。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,22 +40,22 @@ HRESULT GetMethodDefinitionByToken(
 ## <a name="parameters"></a>參數
 
 `token`\
-[in]方法的語彙基元。
+[在]方法權杖。
 
 `methodDefinition`\
-[out]方法定義。
+[出]方法定義。
 
 ## <a name="remarks"></a>備註
 
-提供的方法是一部分`IXCLRDataModule`介面，並對應至的虛擬方法表 25 的位置。
+提供的方法是介面的一`IXCLRDataModule`部分，對應于虛擬方法表的第 25 個插槽。
 
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** None  
-**LIBRARY:** None  
-**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
- 
+**標題：** 沒有  
+**庫：** 沒有  
+**.NET 框架版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+
 ## <a name="see-also"></a>另請參閱
 
 - [偵錯](index.md)

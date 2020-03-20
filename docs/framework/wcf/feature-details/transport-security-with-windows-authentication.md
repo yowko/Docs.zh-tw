@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 6392ea0f17596406a8671a039bd78777d9e11e42
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d335cd47de68dccdbb6af7f402d1182fcd811a7d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742641"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184307"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows 驗證的傳輸安全性
-下列案例顯示由 Windows 安全性保護的 Windows Communication Foundation （WCF）用戶端和服務。 如需程式設計的詳細資訊，請參閱[如何：使用 Windows 認證保護服務](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
+以下方案顯示了由 Windows 安全保護的 Windows 通信基礎 （WCF） 用戶端和服務。 有關程式設計的詳細資訊，請參閱[：使用 Windows 憑據保護服務](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
   
  內部網路 Web 服務顯示人力資源資訊。 用戶端為 Windows Form 應用程式。 應用程式部署於由 Kerberos 控制站負責網域安全的網域內。  
   
- ![Windows 驗證的傳輸安全性](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
+ ![使用 Windows 驗證的傳輸安全性](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
 |特性|描述|  
 |--------------------|-----------------|  
@@ -29,8 +29,8 @@ ms.locfileid: "76742641"
 |傳輸|NET.TCP|  
 |繫結|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a>Service  
- 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
+## <a name="service"></a>服務  
+ 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
   
 - 使用不含組態的程式碼建立獨立服務。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "76742641"
     <behaviors />  
     <services>  
       <service behaviorConfiguration="" name="ServiceModel.Calculator">  
-        <endpoint address="net.tcp://localhost:8008/Calculator"   
+        <endpoint address="net.tcp://localhost:8008/Calculator"
                   binding="netTcpBinding"  
-          bindingConfiguration="WindowsClientOverTcp"   
+          bindingConfiguration="WindowsClientOverTcp"
                   name="WindowsClientOverTcp"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -73,12 +73,12 @@ ms.locfileid: "76742641"
 </configuration>  
 ```  
   
-## <a name="client"></a>用戶端  
- 下列程式碼和組態要獨立執行。 執行下列任一步驟：  
+## <a name="client"></a>Client  
+ 下列程式碼和組態要獨立執行。 執行下列其中一個動作：  
   
 - 使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
-- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如，  
+- 建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如：  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -106,9 +106,9 @@ ms.locfileid: "76742641"
       </netTcpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="net.tcp://localhost:8008/Calculator"   
-                binding="netTcpBinding"            
-                bindingConfiguration="NetTcpBinding_ICalculator"   
+      <endpoint address="net.tcp://localhost:8008/Calculator"
+                binding="netTcpBinding"
+                bindingConfiguration="NetTcpBinding_ICalculator"
                 contract="ICalculator"  
                 name="NetTcpBinding_ICalculator">  
       </endpoint>  
@@ -119,6 +119,6 @@ ms.locfileid: "76742641"
   
 ## <a name="see-also"></a>另請參閱
 
-- [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [安全概述](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [如何：利用 Windows 認證保護服務的安全](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Windows Server App Fabric 的安全性模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric 的資訊安全模型](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

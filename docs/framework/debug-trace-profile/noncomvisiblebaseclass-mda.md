@@ -9,15 +9,15 @@ helpviewer_keywords:
 - QueryInterface call failures
 - MDAs (managed debugging assistants), COM visible classes
 ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
-ms.openlocfilehash: b46d5c6ffbf12efbae113a95bbfccd5742ec9ec9
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 4c16432df201d19b65c91206ec529d07605e979a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217293"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181794"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>nonComVisibleBaseClass MDA
-在由 COM 可見 Managed 類別 (衍生自不是 COM 可見的基底類別) 的可呼叫包裝函式 (CCW) 上的原生或 Unmanaged 程式碼呼叫 `nonComVisibleBaseClass` 時，會啟動 `QueryInterface` Managed 偵錯助理 (MDA)。  `QueryInterface` 呼叫會導致只有在呼叫要求類別介面或預設 COM 可見 Managed 類別的 `IDispatch` 情況下才啟用 MDA。  當 `QueryInterface` 是套用 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 屬性且會由 COM 可見的類別明確實作的明確介面時，則不啟動 MDA。  
+在由 COM 可見 Managed 類別 (衍生自不是 COM 可見的基底類別) 的可呼叫包裝函式 (CCW) 上的原生或 Unmanaged 程式碼呼叫 `QueryInterface` 時，會啟動 `nonComVisibleBaseClass` Managed 偵錯助理 (MDA)。  `QueryInterface` 呼叫會導致只有在呼叫要求類別介面或預設 COM 可見 Managed 類別的 `IDispatch` 情況下才啟用 MDA。  當 `QueryInterface` 是套用 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> 屬性且會由 COM 可見的類別明確實作的明確介面時，則不啟動 MDA。  
   
 ## <a name="symptoms"></a>徵狀  
  `QueryInterface` 會由使用 COR_E_INVALIDOPERATION HRESULT 失敗的原生程式碼所呼叫。  HRESULT 可能是因為執行階段不允許會導致此 MDA 啟動的 `QueryInterface` 呼叫。  
@@ -32,14 +32,14 @@ ms.locfileid: "77217293"
  此 MDA 對 CLR 沒有影響。  
   
 ## <a name="output"></a>輸出  
- 下列是在 COM 可見類別 `QueryInterface` (衍生自不是 COM 可見的類別 `Derived` ) 上呼叫 `Base` 的範例訊息。  
+ 下列是在 COM 可見類別 `Derived` (衍生自不是 COM 可見的類別 `Base` ) 上呼叫 `QueryInterface` 的範例訊息。  
   
 ```output
-A QueryInterface call was made requesting the class interface of COM   
-visible managed class 'Derived'. However since this class derives from   
-non COM visible class 'Base', the QueryInterface call will fail. This   
-is done to prevent the non COM visible base class from being   
-constrained by the COM versioning rules.   
+A QueryInterface call was made requesting the class interface of COM
+visible managed class 'Derived'. However since this class derives from
+non COM visible class 'Base', the QueryInterface call will fail. This
+is done to prevent the non COM visible base class from being
+constrained by the COM versioning rules.
 ```  
   
 ## <a name="configuration"></a>組態  

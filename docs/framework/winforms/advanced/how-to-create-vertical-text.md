@@ -1,5 +1,5 @@
 ---
-title: 作法：建立垂直文字
+title: 如何：建立垂直文字
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing vertical
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
-ms.openlocfilehash: 009e8e392841ac6b846007a88efc33ef79f56967
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 86401342625f593945b801f7619ef9ca9681317c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582690"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182553"
 ---
-# <a name="how-to-create-vertical-text"></a>作法：建立垂直文字
-您可以使用<xref:System.Drawing.StringFormat>物件來指定，垂直而非水平繪製文字。  
+# <a name="how-to-create-vertical-text"></a>如何：建立垂直文字
+可以使用<xref:System.Drawing.StringFormat>物件指定垂直而不是水準繪製文本。  
   
 ## <a name="example"></a>範例  
- 下列範例會將值指派<xref:System.Drawing.StringFormatFlags.DirectionVertical>要<xref:System.Drawing.StringFormat.FormatFlags%2A>屬性<xref:System.Drawing.StringFormat>物件。 該<xref:System.Drawing.StringFormat>物件會傳遞給<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>類別。 該值<xref:System.Drawing.StringFormatFlags.DirectionVertical>隸屬<xref:System.Drawing.StringFormatFlags>列舉型別。  
+ 下面的示例將該值<xref:System.Drawing.StringFormatFlags.DirectionVertical>分配給<xref:System.Drawing.StringFormat.FormatFlags%2A><xref:System.Drawing.StringFormat>物件的屬性。 該<xref:System.Drawing.StringFormat>物件傳遞給<xref:System.Drawing.Graphics.DrawString%2A><xref:System.Drawing.Graphics>類的方法。 該值<xref:System.Drawing.StringFormatFlags.DirectionVertical>是枚舉的成員<xref:System.Drawing.StringFormatFlags>。  
   
- 下圖顯示垂直的文字： 
+ 下圖顯示了垂直文本：
   
- ![圖形： 顯示文字垂直字型。](./media/how-to-create-vertical-text/vertical-font-text-graphic.png)  
+ ![顯示垂直字體文本的圖形。](./media/how-to-create-vertical-text/vertical-font-text-graphic.png)  
   
  [!code-csharp[System.Drawing.FontsAndText#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.FontsAndText#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
-- 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e` ，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
+- 前面的示例設計用於 Windows 表單，它要求<xref:System.Windows.Forms.PaintEventArgs>`e`. <xref:System.Windows.Forms.PaintEventHandler>  
   
 ## <a name="see-also"></a>另請參閱
 

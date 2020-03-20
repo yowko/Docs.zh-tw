@@ -8,19 +8,19 @@ helpviewer_keywords:
 - Type Library Exporter
 - type libraries [.NET Framework], exporting
 ms.assetid: a487d61b-d166-467b-a7ca-d8b52fbff42d
-ms.openlocfilehash: f421a9865e457a4e8e08644671efb55c731db28b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d2380ff607836b5dc15e7194b90dd3a53d1d2c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104337"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180276"
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (類型程式庫匯出工具)
 類型程式庫匯出工具可以產生類型程式庫，這個類型程式庫描述定義在通用語言執行平台組件中的類型。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](developer-command-prompt-for-vs.md)。  
   
- 在命令提示字元下輸入下列命令：  
+ 在命令提示字元中，請輸入下列項目：  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,27 +32,27 @@ tlbexp assemblyName [options]
   
 |引數|描述|  
 |--------------|-----------------|  
-|*assemblyName*|要匯出類型程式庫的組件。|  
+|*程式集名稱*|要匯出類型程式庫的組件。|  
   
 |選項|描述|  
 |------------|-----------------|  
-|**/asmpath:** *目錄*|指定要搜尋組件的位置。 如果使用這個選項，則必須明確指定要搜尋參考組件的位置，包括目前的目錄在內。<br /><br /> 當您使用 **asmpath** 選項時，型別程式庫匯出工具不會在全域組件快取 (GAC) 中尋找組件。|  
-|**/help**|顯示工具的命令語法和選項。|  
+|**/asmpath：** *目錄*|指定要搜尋組件的位置。 如果使用這個選項，則必須明確指定要搜尋參考組件的位置，包括目前的目錄在內。<br /><br /> 當您使用 **asmpath** 選項時，型別程式庫匯出工具不會在全域組件快取 (GAC) 中尋找組件。|  
+|**/説明**|顯示工具的命令語法和選項。|  
 |**/names:** *filename*|指定類型程式庫中名稱的大小寫。 *filename* 引數是一個文字檔。 檔案中的每一行指定了類型程式庫中一個名稱的大小寫。|  
-|**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
+|**/諾戈戈**|隱藏 Microsoft 程式啟始資訊顯示。|  
 |**/oldnames**|在發生類型名稱衝突時，強制 Tlbexp.exe 匯出裝飾類型名稱。 請注意，此為 .NET Framework 2.0 版之前版本中的預設行為。|  
 |**/out:** *file*|指定要產生的類型程式庫檔案的名稱。 如果省略這個選項，Tlbexp.exe 會產生一個與組件名稱 (指實際組件名稱，不一定和包含組件的檔案同名) 相同的類型程式庫和 .tlb 副檔名。|  
 |**/silence:** `warningnumber`|隱藏顯示指定的警告。 此選項無法搭配 **/silent** 使用。|  
-|**/silent**|隱藏顯示成功訊息。 此選項無法搭配 **/silence** 使用。|  
+|**/靜音**|隱藏顯示成功訊息。 此選項無法搭配 **/silence** 使用。|  
 |**/tlbreference:** *typelibraryname*|強制 Tlbexp.exe 明確解析類型程式庫參考，而不需查閱登錄。 例如，如果組件 B 參考組件 A，您就可以使用這個選項提供明確的類型程式庫參考，而不需依賴登錄中所指定的類型程式庫。 Tlbexp.exe 會執行版本檢查，以確定類型程式庫版本是否與組件版本相符；如果不符，便會產生錯誤。<br /><br /> 請注意，如果將 <xref:System.Runtime.InteropServices.ComImportAttribute> 屬性套用至介面，然後又由其他類型實作，則 **tlbreference** 選項仍然會查閱登錄。|  
 |**/tlbrefpath:** *path*|參考類型程式庫的完整路徑。|  
-|**/win32**|在 64 位元電腦上編譯時，這個選項會指定 Tlbexp.exe 產生 32 位元的類型程式庫。|  
+|**/贏32**|在 64 位元電腦上編譯時，這個選項會指定 Tlbexp.exe 產生 32 位元的類型程式庫。|  
 |**/win64**|在 32 位元電腦上編譯時，這個選項會指定 Tlbexp.exe 產生 64 位元的型別程式庫。|  
-|**/verbose**|指定詳細資訊模式，顯示需要產生類型程式庫的任何參考組件的清單。|  
+|**/詳細**|指定詳細資訊模式，顯示需要產生類型程式庫的任何參考組件的清單。|  
 |**/?**|顯示工具的命令語法和選項。|  
   
 > [!NOTE]
-> Tlbexp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。 您只需要指定足夠的選項來唯一識別它。 例如， **/n** 相當於 **/nologo**，且 **/o:** *outfile.tlb* 相當於 **/out:** *outfile.tlb*。  
+> Tlbexp.exe 的命令列選項不區分大小寫，而且可以依任何順序提供。 您只需要指定足夠的選項來唯一識別它。 例如，**/n** 相當於 **/nologo**，且 **/o:** *outfile.tlb* 相當於 **/out:** *outfile.tlb*。  
   
 ## <a name="remarks"></a>備註  
  Tlbexp.exe 會產生一個類型程式庫，其含有組件中所定義的類型定義。 應用程式 (例如 Visual Basic 6.0) 可以使用產生的類型程式庫來繫結至組件中所定義的 .NET 類型。  
@@ -79,7 +79,7 @@ tlbexp assemblyName [options]
   
  會產生下列類型程式庫：  
   
-```cpp 
+```cpp
 [id(0x60020004)]  
 HRESULT StructUnkSafe([out, retval] SAFEARRAY(IUnknown*)* pRetVal);  
 [id(0x60020005)]  
@@ -127,7 +127,7 @@ CSC Sample.cs /reference:myLib.dll /out:Sample.dll
 tlbexp Sample.dll  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.InteropServices.TypeLibExporterFlags>
 - [工具](index.md)

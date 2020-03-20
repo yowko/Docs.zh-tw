@@ -1,5 +1,5 @@
 ---
-title: 組件載入的最佳做法
+title: 組件載入的最佳作法
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies,binding
@@ -12,29 +12,29 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-ms.openlocfilehash: d1b6c2cd9f96a4acf48cbced48a86bc3e3409562
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7575c40edf47e977335bcc34fcd9e49debab0980
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716580"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181694"
 ---
-# <a name="best-practices-for-assembly-loading"></a>組件載入的最佳做法
+# <a name="best-practices-for-assembly-loading"></a>組件載入的最佳作法
 本文討論如何避免發生可能造成 <xref:System.InvalidCastException>、<xref:System.MissingMethodException> 和其他錯誤之類型身分識別的問題。 本文討論下列建議：  
   
 - [了解載入內容的優缺點](#load_contexts)  
   
-- [避免部分組件名稱上的繫結](#avoid_partial_names)  
+- [避免對部分程式集名稱綁定](#avoid_partial_names)  
   
 - [避免將組件載入多個內容](#avoid_loading_into_multiple_contexts)  
   
-- [避免將多個版本的組件載入相同的內容](#avoid_loading_multiple_versions)  
+- [避免將程式集的多個版本載入到同一上下文中](#avoid_loading_multiple_versions)  
   
 - [考慮切換成預設載入內容](#switch_to_default)  
   
  第一個建議 ([了解載入內容的優缺點](#load_contexts)) 提供其他建議的背景資訊，因為它們都取決於載入內容的知識。  
   
-<a name="load_contexts"></a>   
+<a name="load_contexts"></a>
 ## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>了解載入內容的優缺點  
  在應用程式定義域內，可以將組件載入三個內容之一，或是載入時沒有內容：  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75716580"
   
 - 在 .NET Framework 1.0 和 1.1 版中，不會套用原則。  
   
-<a name="avoid_partial_names"></a>   
+<a name="avoid_partial_names"></a>
 ## <a name="avoid-binding-on-partial-assembly-names"></a>避免部分組件名稱上的繫結  
  如果您在載入組件時指定組件顯示名稱的唯一部分，就會發生部分名稱繫結 (<xref:System.Reflection.Assembly.FullName%2A>)。 例如，您可能會呼叫只具有組件簡單名稱的 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法，並省略版本、文化特性和公開金鑰權杖。 或者，您可能會呼叫 <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType> 方法，此方法會先呼叫 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法，並在找不到組件時搜尋全域組件快取，並載入組件的最新可用版本。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "75716580"
   
  如果您因可以更輕鬆地載入組件而想要使用 <xref:System.Reflection.Assembly.LoadWithPartialName%2A> 方法，請考慮讓應用程式失敗時具有識別遺漏組件的錯誤訊息，而其提供的使用者體驗可能優於自動使用未知版本的組件，這可能會造成無法預期的行為和安全性漏洞。  
   
-<a name="avoid_loading_into_multiple_contexts"></a>   
+<a name="avoid_loading_into_multiple_contexts"></a>
 ## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>避免將組件載入多個內容  
  將載入組件多個內容，可能會造成類型身分識別問題。 如果將相同類型從相同的組件載入兩個不同的內容，就像已載入具有相同名稱的兩個不同類型一樣。 如果您嘗試將某種類型轉換為另一種類型，則會擲回 <xref:System.InvalidCastException>，以及讓人混淆的訊息：無法將 `MyType` 類型轉換為 `MyType` 類型。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "75716580"
   
  [考慮切換成預設載入內容](#switch_to_default)一節討論使用 <xref:System.Reflection.Assembly.LoadFile%2A> 和 <xref:System.Reflection.Assembly.LoadFrom%2A> 這類檔案路徑載入的替代方式。  
   
-<a name="avoid_loading_multiple_versions"></a>   
+<a name="avoid_loading_multiple_versions"></a>
 ## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a>避免將多個版本的組件載入相同的內容  
  將組件的多個版本載入一個載入內容可能會造成類型身分識別問題。 如果從相同組件的兩個版本載入相同類型，就像已載入具有相同名稱的兩個不同類型一樣。 如果您嘗試將某種類型轉換為另一種類型，則會擲回 <xref:System.InvalidCastException>，以及讓人混淆的訊息：無法將 `MyType` 類型轉換為 `MyType` 類型。  
   
@@ -145,7 +145,7 @@ ms.locfileid: "75716580"
   
  請仔細檢閱您的程式碼，確保只載入組件的一個版本。 您可以使用 <xref:System.AppDomain.GetAssemblies%2A?displayProperty=nameWithType> 方法，判斷在任何指定時間載入的組件。  
   
-<a name="switch_to_default"></a>   
+<a name="switch_to_default"></a>
 ## <a name="consider-switching-to-the-default-load-context"></a>考慮切換成預設載入內容  
  檢查您應用程式的組件載入和部署模式。 您可以排除從位元組陣列載入的組件嗎？ 您可以將組件移到探查路徑嗎？ 如果組件位在全域組件快取或應用程式定義域的探查路徑中 (即其 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A>)，您可以依其身分識別來載入組件。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "75716580"
   
  請注意，您可以使用 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 方法來載入這些組件。 因為它們現在是在探查路徑中，所以會將其載入到預設載入內容，而非載入來源內容。 不過，建議您切換成 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 方法，並提供完整組件顯示名稱，確保一律使用正確版本。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

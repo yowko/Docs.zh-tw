@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: 1d190c5b558c7c523be09267e59eab7c5611563a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2716adcc8c79c8003202561ea2011c2469a6bc5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793863"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179224"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject 函式
-建立偵錯工具介面（[ICorDebug](icordebug-interface.md)），以提供在遠端進程上具現化 managed 偵錯工具的功能。  
+創建調試器介面 （[ICorDebug](icordebug-interface.md)）， 提供在遠端進程上具現化託管調試會話的功能。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 HRESULT CordbCreateObject (  
-       [in]  int         iDebuggerVersion,   
+       [in]  int         iDebuggerVersion,
        [out] IUnknown**  ppCordb  
 );  
 ```  
@@ -40,7 +40,7 @@ HRESULT CordbCreateObject (
  [in] 目標處理序的偵錯工具版本。 這個參數必須是 CorDebugVersion_2_0，才能進行遠端偵錯。  
   
  `ppCordb`  
- 脫銷指向物件指標的指標，將轉換成[ICorDebug](icordebug-interface.md)介面並傳回。  
+ [出]指向將強制轉換為[ICorDebug](icordebug-interface.md)介面並返回的物件的指標。  
   
 ## <a name="return-value"></a>傳回值  
  S_OK  
@@ -56,13 +56,13 @@ HRESULT CordbCreateObject (
  其他失敗。  
   
 ## <a name="remarks"></a>備註  
- `ppCordb` 中傳回的[ICorDebug](icordebug-interface.md)介面是所有 managed 偵錯工具的最上層偵錯工具介面。  
+ 返回的`ppCordb` [ICorDebug](icordebug-interface.md)介面是所有託管調試服務的頂級調試介面。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CoreClrRemoteDebuggingInterfaces。h  
+ **標題：** 核心Clr遠端偵錯介面.h  
   
- 連結**庫：** mscordbi_macx86 .dll  
+ **資料庫：** mscordbi_macx86.dll  
   
- **.NET Framework 版本：** 3.5 SP1
+ **.NET 框架版本：** 3.5 SP1

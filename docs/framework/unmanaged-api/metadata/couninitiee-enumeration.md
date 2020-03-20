@@ -14,41 +14,41 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-ms.openlocfilehash: 57054bdb7e3b991bc81985c02ec72a4110f31d60
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e5cbd8c5b1bb048088fe137b1359d0bb9e29af20
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436443"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176119"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE 列舉
-指定初始化 common language runtime 時， [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)所使用的常數。  
+指定[CoUn初始化 EE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)在初始化通用語言運行時使用的常量。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
 typedef enum tagCOUNINITEE  
 {  
-    COUNINITEE_DEFAULT  = 0x0,   
+    COUNINITEE_DEFAULT  = 0x0,
     COUNINITEE_DLL      = 0x1  
 } COUNINITIEE;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|描述|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|表示預設解除初始化模式。|  
-|`COUNINITEE_DLL`|表示卸載元件的解除初始化模式。|  
+|`COUNINITEE_DEFAULT`|指示預設的未初始化模式。|  
+|`COUNINITEE_DLL`|指示卸載程式集的未初始化模式。|  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** Cor。h  
+ **標題：** 科爾赫  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

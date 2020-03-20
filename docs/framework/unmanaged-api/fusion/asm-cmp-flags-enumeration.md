@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4d1e6700-d4be-4fbd-8796-bfb4c07abbc8
 topic_type:
 - apiref
-ms.openlocfilehash: aae122b6cf94e1205671dc7bbc0231c7d265b932
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ca4d7fe32b71401c16e64314bd8b4a9eb0f7766
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73109319"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178339"
 ---
 # <a name="asm_cmp_flags-enumeration"></a>ASM_CMP_FLAGS 列舉
-指出要由[IAssemblyName：： IsEqual](iassemblyname-isequal-method.md)方法比較的兩個元件版本、組建、文化特性、簽章等。  
+指示要由[IAssemblyname：：isEqual](iassemblyname-isequal-method.md)方法比較的兩個程式集的版本、生成、區域性、簽名等。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,10 +35,10 @@ typedef enum {
     ASM_CMPF_BUILD_NUMBER           = 0x8,  
     ASM_CMPF_REVISION_NUMBER        = 0x10,  
   
-    ASM_CMPF_VERSION                =   
-                 ASM_CMPF_MAJOR_VERSION |   
-                 ASM_CMPF_MINOR_VERSION |   
-                 ASM_CMPF_BUILD_NUMBER  |   
+    ASM_CMPF_VERSION                =
+                 ASM_CMPF_MAJOR_VERSION |
+                 ASM_CMPF_MINOR_VERSION |
+                 ASM_CMPF_BUILD_NUMBER  |
                  ASM_CMPF_REVISION_NUMBER,  
   
     ASM_CMPF_PUBLIC_KEY_TOKEN       = 0x20,  
@@ -51,15 +51,15 @@ typedef enum {
     ASM_CMPF_MVID                   = 0x1000,  
     ASM_CMPF_SIGNATURE              = 0x2000,  
   
-    ASM_CMPF_IL_ALL                 =   
-                 ASM_CMPF_NAME             |   
-                 ASM_CMPF_VERSION          |   
-                 ASM_CMPF_PUBLIC_KEY_TOKEN |   
+    ASM_CMPF_IL_ALL                 =
+                 ASM_CMPF_NAME             |
+                 ASM_CMPF_VERSION          |
+                 ASM_CMPF_PUBLIC_KEY_TOKEN |
                  ASM_CMPF_CULTURE,  
   
-    ASM_CMPF_IL_NO_VERSION          =   
-                 ASM_CMPF_NAME             |   
-                 ASM_CMPF_PUBLIC_KEY_TOKEN |   
+    ASM_CMPF_IL_NO_VERSION          =
+                 ASM_CMPF_NAME             |
+                 ASM_CMPF_PUBLIC_KEY_TOKEN |
                  ASM_CMPF_CULTURE  
   
 } ASM_CMP_FLAGS;  
@@ -68,13 +68,13 @@ typedef enum {
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標頭：** 融合。h  
+ **標題：** 融合.h  
   
- 連結**庫：** 包含為 Mscoree.dll 中的資源  
+ **庫：** 作為資源包含在 MsCorEE.dll 中  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [IAssemblyName 介面](iassemblyname-interface.md)
 - [融合列舉](fusion-enumerations.md)

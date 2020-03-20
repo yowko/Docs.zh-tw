@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-ms.openlocfilehash: 5202e4c26220bc9ea08d6d941ee5a7821cbbdefd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e965702943149d3ed34be39bb2923ad52dcf90ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122242"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181651"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework 並存執行
 
@@ -28,7 +28,7 @@ ms.locfileid: "73122242"
 並存執行提供更多控制權，供您控制應用程式所繫結之元件版本，以及應用程式所使用的執行階段版本。  
   
 ## <a name="benefits-of-side-by-side-execution"></a>並存執行的優點  
- 
+
 在 Windows XP 和 .NET Framework 推出之前，由於應用程式無法辨別相同程式碼的不相容版本，因此會發生 DLL 衝突的狀況。 DLL 中包含的類型資訊只繫結至檔案名稱， 故應用程式無從得知 DLL 中包含的類型是否與應用程式建置時所用的類型相同。 因此，新版元件可能會覆寫舊版元件並破壞應用程式。  
   
 並存執行和 .NET Framework 提供下列功能以消除 DLL 的衝突：  
@@ -41,13 +41,13 @@ ms.locfileid: "73122242"
   
      .NET Framework 在全域組件快取中提供版本感知程式碼儲存區。 全域組件快取是一種全電腦程式碼快取，存在於已經安裝 .NET Framework 的所有電腦上。 它是依據版本、文化特性和發行者資訊來儲存組件，並且可以支援多個版本的元件和應用程式。 如需詳細資訊，請參閱[全域組件快取](../app-domains/gac.md)。  
   
-- 隔離性。  
+- 隔離。  
   
      使用 .NET Framework，您可以建立隔離執行的應用程式和元件。 這種隔離執行的功能是並存執行的基本構成要素。 隔離的主要因素在於能夠掌握您要使用的資源，並且能放心地在應用程式或元件的多個版本之間共用資源。 隔離也包括使用版本特定的方式儲存檔案。 如需隔離的詳細資訊，請參閱[建立並存執行元件的方針](guidelines-for-creating-components-for-side-by-side-execution.md)。  
   
 ## <a name="version-compatibility"></a>版本相容性  
 
-.NET Framework 的 1.0 和 1.1 版設計成可彼此相容。 用 .NET Framework 1.0 版建置的應用程式應該可以在 1.1 版上執行，而用 .NET Framework 1.1 版建置的應用程式也應該可以在 1.0 版上執行。 但請注意，.NET Framework 1.1 版中加入的 API 功能無法在 1.0 版的 .NET Framework 中使用。 以 2.0 版建立的應用程式僅能在 2.0 版上執行。 2\.0 版的應用程式在 1.1 或之前的版本上無法執行。  
+.NET Framework 的 1.0 和 1.1 版設計成可彼此相容。 用 .NET Framework 1.0 版建置的應用程式應該可以在 1.1 版上執行，而用 .NET Framework 1.1 版建置的應用程式也應該可以在 1.0 版上執行。 但請注意，.NET Framework 1.1 版中加入的 API 功能無法在 1.0 版的 .NET Framework 中使用。 以 2.0 版建立的應用程式僅能在 2.0 版上執行。 2.0 版的應用程式在 1.1 或之前的版本上無法執行。  
   
 .NET Framework 的版本被視為一個由執行階段及其關聯的 .NET Framework 組件組成的單一單位 (這個概念稱為「組件的版本對應轉換」)。 您可以將組件繫結重新導向，以包含 .NET Framework 組件的其他版本，但是覆寫預設組件繫結可能會有風險，因此部署之前必須經過棈密的測試。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "73122242"
   
 ### <a name="runtime-version-information-in-the-application-configuration-file"></a>應用程式組態檔中的執行階段版本資訊  
 
-除了 PE 檔標頭中的資訊之外，還可使用提供執行階段版本資訊的應用程式組態檔來部署應用程式。 應用程式組態檔是以 XML 為基礎的檔案，它是由應用程式開發人員所設計，並與應用程式一起發行。 如果這個檔案中有 [\<startup> 區段](../configure-apps/file-schema/startup/startup-element.md)的 [\<requiredRuntime> 項目](../configure-apps/file-schema/startup/requiredruntime-element.md)，則會指定該應用程式支援哪個版本的執行階段和元件。 您也可以在測試中使用這個檔案測試應用程式與各種執行階段版本的相容性。  
+除了 PE 檔標頭中的資訊之外，還可使用提供執行階段版本資訊的應用程式組態檔來部署應用程式。 應用程式組態檔是以 XML 為基礎的檔案，它是由應用程式開發人員所設計，並與應用程式一起發行。 啟動>部分[\<的所需 Runtime> 元素](../configure-apps/file-schema/startup/requiredruntime-element.md)（如果存在）指定運行時的哪些版本以及應用程式支援的元件版本。 [ \< ](../configure-apps/file-schema/startup/startup-element.md) 您也可以在測試中使用這個檔案測試應用程式與各種執行階段版本的相容性。  
   
 Unmanaged 程式碼 (包括 COM 和 COM+ 應用程式) 可以有應用程式組態檔，以供執行階段用來與 Managed 程式碼互動。 應用程式組態檔會影響您透過 COM 啟動的任何 Managed 程式碼。 這個檔案可以指定程式碼支援的執行階段版本，以及組件重新導向。 根據預設，呼叫 Managed 程式碼的 COM Interop 應用程式會使用電腦上安裝的最新版執行階段。  
   
@@ -81,7 +81,7 @@ Common Language Runtime 使用下列資訊來決定要為應用程式載入的�
   
 如果應用程式組態檔存在，執行階段會根據下列程序的結果來決定要載入的適當執行階段版本：  
   
-1. 執行階段檢查應用程式組態檔中的 [\<supportedRuntime> 項目](../configure-apps/file-schema/startup/supportedruntime-element.md)項目。 如果 **\<supportedRuntime>** 項目中指定了一或多個支援的執行階段版本，執行階段會載入第一個 **\<supportedRuntime>** 項目所指定的執行階段版本。 如果無法使用這個版本，執行階段會檢查下一個 **\<supportedRuntime>** 項目並嘗試載入指定的執行階段版本。 如果這個執行階段版本不能使用，則會檢查後面的 **\<supportedRuntime>** 項目。 如果沒有可用的受支援執行階段版本，執行階段便無法載入執行階段版本並顯示訊息給使用者 (請參閱步驟 3)。  
+1. 運行時檢查應用程式佈建檔中[\<支援的 runtime>元素](../configure-apps/file-schema/startup/supportedruntime-element.md)元素。 如果存在**\<受支援的 Runtime>** 元素中指定的一個或多個受支援的執行階段版本，則運行時將載入由第一個**\<受支援的 Runtime>** 元素指定的執行階段版本。 如果此版本不可用，運行時將檢查下一個**\<受支援的 Runtime>** 元素，並嘗試載入指定的執行階段版本。 如果此執行階段版本不可用，則檢查後續**\<支援的 Runtime>** 元素。 如果沒有可用的受支援執行階段版本，執行階段便無法載入執行階段版本並顯示訊息給使用者 (請參閱步驟 3)。  
   
 2. 執行階段讀取應用程式可執行檔的 PE 檔標頭。 如果有 PE 檔標頭指定的執行階段版本可用，執行階段便會載入該版本。 如果無法使用指定的執行階段版本，執行階段會搜尋 Microsoft 判斷可與 PE 標頭中的執行階段版本相容的執行階段版本。 如果找不到該版本，則會繼續進行本程序中的步驟 3。  
   
@@ -97,18 +97,18 @@ Common Language Runtime 使用下列資訊來決定要為應用程式載入的�
 
 由於不完整的組件參考可能會造成並存問題，因此只能用來繫結至應用程式目錄中的組件。 請避免在您的程式碼中使用不完整的組件參考。  
   
-若要減少程式碼中不完整的組件參考，您可以在應用程式組態檔中使用 [\<qualifyAssembly>](../configure-apps/file-schema/runtime/qualifyassembly-element.md) 項目，讓程式碼中不完整的組件參考變完整。 請使用 **\<qualifyAssembly>** 項目，只指定不完整參考中未設定的欄位。 以 **fullName** 屬性列出的組件識別必須包含使組件名稱完整的所有必要資訊：組件名稱、公開金鑰、文化特性和版本。  
+要緩解代碼中部分限定的程式集引用，可以使用應用程式佈建檔中的[\<限定程式集>](../configure-apps/file-schema/runtime/qualifyassembly-element.md)元素完全限定代碼中發生的部分限定程式集引用。 使用**\<限定程式集>** 元素僅指定未在部分引用中設置的欄位。 以 **fullName** 屬性列出的組件識別必須包含使組件名稱完整的所有必要資訊：組件名稱、公開金鑰、文化特性和版本。  
   
  下列範例示範使組件 `myAssembly` 完整的應用程式組態檔項目。  
   
 ```xml  
-<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">   
-<qualifyAssembly partialName="myAssembly"   
+<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+<qualifyAssembly partialName="myAssembly"
 fullName="myAssembly,  
-      version=1.0.0.0,   
-publicKeyToken=...,   
-      culture=neutral"/>   
-</assemblyBinding>   
+      version=1.0.0.0,
+publicKeyToken=...,
+      culture=neutral"/>
+</assemblyBinding>
 ```  
   
  當組件載入陳述式參考 `myAssembly` 時，這些組態檔設定便會使執行階段自動將不完整的 `myAssembly` 參考轉譯成完整的參考。 例如，Assembly.Load("myAssembly") 會變成 Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral")。  
@@ -118,14 +118,14 @@ publicKeyToken=...,
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|Title|描述|  
 |-----------|-----------------|  
 |[如何：啟用和停用自動繫結重新導向](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|說明如何將應用程式繫結至組件的特定版本。|  
 |[設定組件繫結重新導向](configuring-assembly-binding-redirection.md)|說明如何將組件繫結參考重新導向至 .NET Framework 組件的特定版本。|  
 |[同處理序並存執行](in-process-side-by-side-execution.md)|討論如何使用同處理序並存執行階段主機啟用，在單一處理序中執行多個版本的 CLR。|  
 |[.NET 中的組件](../../standard/assembly/index.md)|提供組件的概觀。|  
-|[應用程式定義域](../app-domains/application-domains.md)|提供應用程式定義域的概觀。|  
+|[應用程式域](../app-domains/application-domains.md)|提供應用程式定義域的概觀。|  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
 
-[\<supportedRuntime> 項目](../configure-apps/file-schema/startup/supportedruntime-element.md)
+[\<支援的運行時>元素](../configure-apps/file-schema/startup/supportedruntime-element.md)

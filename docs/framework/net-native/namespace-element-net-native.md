@@ -1,22 +1,22 @@
 ---
-title: <Namespace> 元素（.NET Native）
+title: <Namespace>元素（.NET 本機）
 ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
-ms.openlocfilehash: b6d7a45de14d0fb8eb2e27a02c86510f630be9e1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 06d88a7b0f95c7c1dbe98818b847c92e08a57a19
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128257"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180960"
 ---
-# <a name="namespace-element-net-native"></a>\<命名空間 > 元素（.NET Native）
+# <a name="namespace-element-net-native"></a>\<命名空間>元素（.NET 本機）
 將執行階段反映原則套用至指定命名空間中的所有類型。  
   
 ## <a name="syntax"></a>語法  
   
 ```xml  
-<Namespace Name="namespace_name"   
-           Activate="policy_type"   
+<Namespace Name="namespace_name"
+           Activate="policy_type"
            Browse="policy_type"  
            Dynamic="policy_setting"  
            Serialize="policy_setting"  
@@ -29,7 +29,7 @@ ms.locfileid: "73128257"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -51,7 +51,7 @@ ms.locfileid: "73128257"
   
 |值|描述|  
 |-----------|-----------------|  
-|*namespace_name*|命名空間名稱。 如果 \<Namespace> 項目是 [\<Application>](application-element-net-native.md)、[\<Library>](library-element-net-native.md) 或 [\<Assembly>](assembly-element-net-native.md) 項目的子項，則 *namespace_name* 必須是完整命名空間名稱。 如果 \<Namespace> 項目是另一個 \<Namespace> 項目的子項，則 *namespace_name* 必須是相對的命名空間名稱。|  
+|*namespace_name*|命名空間名稱。 如果\<Namespace>元素是[\<應用程式>、](application-element-net-native.md)[\<庫>](library-element-net-native.md)或[\<程式集>](assembly-element-net-native.md)元素的子項目，*則namespace_name*必須是完全限定的命名空間名稱。 如果 \<Namespace> 項目是另一個 \<Namespace> 項目的子項，則 *namespace_name* 必須是相對的命名空間名稱。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
@@ -59,29 +59,29 @@ ms.locfileid: "73128257"
 |-----------|-----------------|  
 |*policy_setting*|針對命名空間中的所有類型，要套用到此原則類型的設定。 可能的值為 `All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal` 和 `Required All`。 如需詳細資訊，請參閱[執行階段指示詞原則設定](runtime-directive-policy-settings.md)。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |`<Namespace>`|將執行階段反映原則套用至父命名空間中的所有類型。|  
-|[\<Type>](type-element-net-native.md)|將反映原則套用至類型。|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型。|  
+|[\<鍵入>](type-element-net-native.md)|將反映原則套用至類型。|  
+|[\<類型即時>](typeinstantiation-element-net-native.md)|將反映原則套用至建構的泛型類型。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
-|[\<Application>](application-element-net-native.md)|做為容器，以包含整個應用程式的類型，以及中繼資料可在執行階段用於反映的類型成員。 [\<Application>](application-element-net-native.md) 項目可以有零、一或多個 [\<Assembly>](assembly-element-net-native.md) 項目。|  
-|[\<Assembly>](assembly-element-net-native.md)|將執行階段反映原則套用至指定組件中的所有類型。|  
-|[\<Library>](library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。 [\<Library>](library-element-net-native.md) 項目可以有零或一個 [\<Assembly>](assembly-element-net-native.md) 項目。|  
+|[\<應用>](application-element-net-native.md)|做為容器，以包含整個應用程式的類型，以及中繼資料可在執行階段用於反映的類型成員。 [ \<應用程式>](application-element-net-native.md)元素可以具有零、一個或多個[\<程式集>](assembly-element-net-native.md)元素。|  
+|[\<裝配>](assembly-element-net-native.md)|將執行階段反映原則套用至指定組件中的所有類型。|  
+|[\<圖書館>](library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。 [ \<庫>](library-element-net-native.md)元素可以具有零或一個[\<程式集>](assembly-element-net-native.md)元素。|  
 |`<Namespace>`|將反映原則套用至父命名空間中的所有類型。|  
   
 ## <a name="remarks"></a>備註  
  `Activate`、`Browse`、`Dynamic` 和 `Serialize` 都是選用屬性。 如果都不存在，`<Namespace>` 元素只會用來做為子元素的容器。 如果存在，則 `<Namespace>` 元素會將執行階段反映原則套用至指定命名空間中的所有類型。  
   
- 當它是 [\<Assembly>](assembly-element-net-native.md) 項目的子項時，`<Namespace>` 項目會覆寫 [\<Assembly>](assembly-element-net-native.md) 項目定義的執行階段反映原則。  
+ 當它是[\<程式集>](assembly-element-net-native.md)元素的子級時，該`<Namespace>`元素將覆蓋[\<大會>](assembly-element-net-native.md)元素定義的運行時反射策略。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段指示詞原則設定](runtime-directive-policy-settings.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)

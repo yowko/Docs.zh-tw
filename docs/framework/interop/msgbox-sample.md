@@ -9,12 +9,12 @@ helpviewer_keywords:
 - marshaling, MsgBox sample
 - data marshaling, MsgBox sample
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
-ms.openlocfilehash: 9f1e6d58742f60b6043a4be9218b80b323cd523e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b970a5a193f82ca141c030491febce5ef352eb70
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124103"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181351"
 ---
 # <a name="msgbox-sample"></a>MsgBox 範例
 此範例示範如何以傳值方式將字串類型傳遞為 In 參數，以及何時使用 <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>、<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 和 <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> 欄位。  
@@ -24,7 +24,7 @@ ms.locfileid: "73124103"
 - 從 User32.dll 匯出的 **MessageBox**。  
   
     ```cpp
-    int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,   
+    int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,
        UINT uType);  
     ```  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73124103"
  [!code-csharp[Conceptual.Interop.Marshaling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/msgbox.cs#6)]
  [!code-vb[Conceptual.Interop.Marshaling#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/msgbox.vb#6)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [封送處理字串](marshaling-strings.md)
 - [字串的預設封送處理](default-marshaling-for-strings.md)

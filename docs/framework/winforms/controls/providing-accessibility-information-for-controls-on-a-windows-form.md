@@ -10,12 +10,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 791944bd9e8f5520a571e6fb415d69022aa0bead
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 672104db94826cfbe113a7ae0ea29546b0c3b9da
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991718"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182005"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>為 Windows Form 上的控制項提供可及性資訊
 協助工具是特製化的程式和裝置，可以協助殘障人士更有效地使用電腦。 範例包括針對視障人士的螢幕助讀程式，以及提供口頭指令，而不是使用滑鼠或鍵盤的人所適用的語音輸入公用程式。 這些協助工具會與 Windows Forms 控制項所公開的協助工具屬性互動。 這些屬性是：  
@@ -39,10 +39,10 @@ ms.locfileid: "70991718"
 ```vb  
 Button1.AccessibleDefaultActionDescription = _  
    "Closes the application."  
-``` 
+```
 
 ```csharp  
-Button1.AccessibleDefaultActionDescription =   
+Button1.AccessibleDefaultActionDescription =
    "Closes the application.";  
 ```
 
@@ -84,7 +84,7 @@ button1->AccessibleName = "Order";
 ## <a name="accessiblerole-property"></a>AccessibleRole 屬性  
  此屬性，其中包含 <xref:System.Windows.Forms.AccessibleRole> 列舉，描述控制項的使用者介面角色。 新控制項的值會設定為 `Default`。 這表示，根據預設， **Button** 控制項可當做 **Button**。 如果控制項具有另一個角色，您可能會想重設這個屬性。 例如，您可能使用 **PictureBox** 控制項作為 **Chart**，而您想要協助工具輔助將角色報告為 **Chart**，不是 **PictureBox**。 您也可能想要為您開發的自訂控制項指定這個屬性。 這個屬性可能在 [屬性] 視窗或在程式碼中設定，如下所示：  
   
-```vb 
+```vb
 PictureBox1.AccessibleRole = AccessibleRole.Chart  
 ```
 

@@ -11,48 +11,48 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: 7f25e21008c77ebf5e55e7affbb4cf07db377c5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db32b3ec88a07747ea3e286af9f04edce3f1ba3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623302"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182065"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>逐步解說：使用 MaskedTextBox 控制項
 這個逐步解說中所述的工作包括：  
   
-- 初始化<xref:System.Windows.Forms.MaskedTextBox>控制項  
+- 初始化控制項<xref:System.Windows.Forms.MaskedTextBox>  
   
-- 使用<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>來提醒使用者，當不符合一個字元，這是遮罩的事件處理常式  
+- 當字元<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>不符合遮罩時，使用事件處理常式提醒使用者  
   
-- 指派的型別<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>屬性和使用<xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>來提醒使用者，當他們嘗試認可的值不是有效類型的事件處理常式  
+- 將類型分配給<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>屬性，<xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>並使用事件處理常式在使用者嘗試提交的值對類型無效時提醒使用者  
   
-## <a name="creating-the-project-and-adding-a-control"></a>建立專案並加入控制項  
+## <a name="creating-the-project-and-adding-a-control"></a>創建專案和添加控制項  
   
-#### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>將 MaskedTextBox 控制項新增至您的表單  
+#### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>向表單添加蒙版文字方塊控制項  
   
-1. 開啟您想要放置的表單<xref:System.Windows.Forms.MaskedTextBox>控制項。  
+1. 打開要在其上放置控制項的<xref:System.Windows.Forms.MaskedTextBox>表單。  
   
-2. 拖曳<xref:System.Windows.Forms.MaskedTextBox>控制項從**工具箱**至您的表單。  
+2. 將<xref:System.Windows.Forms.MaskedTextBox>控制項從**工具箱**拖動到表單。  
   
-3. 以滑鼠右鍵按一下控制項，然後選擇 **屬性**。 在 **屬性**視窗中，選取**遮罩**屬性，然後按一下 **...** （省略符號） 按鈕旁的屬性名稱。  
+3. 按右鍵控制項並選擇 **"屬性**"。 在 **"屬性"** 視窗中，選擇 **"蒙版"** 屬性，然後按一下屬性名稱旁邊的 **..."（** 省略號）按鈕。  
   
-4. 在 **輸入遮罩**對話方塊中，選取**簡短日期**加上遮罩，然後按一下 **確定**。  
+4. 在 **"輸入遮罩"** 對話方塊中，選擇 **"短日期**"蒙版，然後按一下 **"確定**"。  
   
-5. 在 [**屬性**] 視窗中設定<xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A>屬性設`true`。 這個屬性會導致每次使用者嘗試輸入違反遮罩定義的字元時發出嗶的短嗶聲。  
+5. 在 **"屬性"** 視窗中將<xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A>屬性設置為`true`。 每次使用者嘗試輸入違反遮罩定義的字元時，此屬性都會發出短促的蜂鳴音。  
   
- 如需摘要的遮罩屬性支援的字元，請參閱 < 備註 > 一節<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>屬性。  
+ 有關蒙版屬性支援的字元的摘要，請參閱<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>該屬性的備註部分。  
   
-## <a name="alert-the-user-to-input-errors"></a>警示使用者輸入錯誤  
+## <a name="alert-the-user-to-input-errors"></a>提醒使用者輸入錯誤  
   
-#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>新增拒絕的遮罩輸入的汽球提示  
+#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>為被拒絕的蒙版輸入添加氣球提示  
   
-1. 返回**工具箱**，並新增<xref:System.Windows.Forms.ToolTip>至您的表單。  
+1. 返回到**工具箱**並將 添加到<xref:System.Windows.Forms.ToolTip>表單中。  
   
-2. 建立事件處理常式<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>引發的事件<xref:System.Windows.Forms.ToolTip>發生輸入的錯誤時。 5 秒，或直到使用者按一下它，仍會顯示汽球提示。  
+2. 為<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>發生輸入錯誤時引發 的事件<xref:System.Windows.Forms.ToolTip>創建事件處理常式。 氣球提示保持可見五秒，或直到使用者按一下它。  
   
     ```csharp  
-    public void Form1_Load(Object sender, EventArgs e)   
+    public void Form1_Load(Object sender, EventArgs e)
     {  
         ... // Other initialization code  
         maskedTextBox1.Mask = "00/00/0000";  
@@ -78,11 +78,11 @@ ms.locfileid: "64623302"
     End Sub  
     ```  
   
-## <a name="alert-the-user-to-a-type-that-is-not-valid"></a>通知使用者有不是有效的類型  
+## <a name="alert-the-user-to-a-type-that-is-not-valid"></a>提醒使用者輸入無效類型  
   
-#### <a name="add-a-balloon-tip-for-invalid-data-types"></a>無效的資料類型建立汽球提示  
+#### <a name="add-a-balloon-tip-for-invalid-data-types"></a>為無效資料類型添加氣球提示  
   
-1. 在您的表單<xref:System.Windows.Forms.Form.Load>事件處理常式，指派<xref:System.Type>物件，代表<xref:System.DateTime>輸入到<xref:System.Windows.Forms.MaskedTextBox>控制項的<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>屬性：  
+1. 在<xref:System.Windows.Forms.Form.Load>表單的事件處理常式中，將表示<xref:System.Type><xref:System.DateTime>該類型的物件分配給<xref:System.Windows.Forms.MaskedTextBox>控制項的屬性： <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  

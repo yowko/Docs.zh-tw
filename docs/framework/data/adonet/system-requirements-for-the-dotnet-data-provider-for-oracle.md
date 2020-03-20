@@ -2,12 +2,12 @@
 title: .NET Framework Data Provider for Oracle 的系統需求
 ms.date: 03/30/2017
 ms.assetid: 054f76b9-1737-43f0-8160-84a00a387217
-ms.openlocfilehash: 664357fb08a6100b8b69d2b4e11edc77cdb81ac7
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: dab3378d3022c01c674640201a67f3bdbb4f571f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833643"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174247"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle 的系統需求
 
@@ -18,8 +18,8 @@ Oracle 的 .NET Framework 資料提供者需要 Microsoft Data Access Components
  Oracle 9i 版之前的 Oracle 用戶端軟體無法存取 UTF16 資料庫，因為 UTF16 是 Oracle 9i 的新功能。 若要使用此功能，您必須將用戶端軟體升級至 Oracle 9i (含) 以後版本。  
   
 ## <a name="working-with-the-data-provider-for-oracle-and-unicode-data"></a>使用 Oracle 及 Unicode 資料的資料提供者  
- 
-以下是您在使用 Oracle 和 Oracle 用戶端程式庫的 .NET Framework Data Provider 時，應該考慮的 Unicode 相關問題清單。 如需詳細資訊，請參閱 Oracle 文件。  
+
+以下是在使用 Oracle 和 Oracle 用戶端庫的 .NET 框架資料提供程式時應考慮的與 Unicode 相關的問題的清單。 如需詳細資訊，請參閱 Oracle 文件。  
   
 ### <a name="setting-the-unicode-value-in-a-connection-string-attribute"></a>設定連接字串屬性中的 Unicode 值  
 
@@ -27,11 +27,11 @@ Oracle 的 .NET Framework 資料提供者需要 Microsoft Data Access Components
   
 `Unicode=True`
   
-以 UTF-16 模式初始化 Oracle 用戶端程式庫。 這會導致 Oracle 用戶端程式庫接受 UTF-16 (與 UCS-2 非常類似)，而不接受多位元組的字串。 這可讓 Oracle 的資料提供者一律使用 Oracle 字碼頁，而無需進行其他轉譯工作。 僅在您使用 Oracle 9i 用戶端與具有 AL16UTF16 替代字元集的 Oracle 9i 資料庫通訊時，此組態才會運作。 當 Oracle 9i 用戶端與 Oracle 9i 伺服器通訊時，需要額外的資源，才能將 Unicode **CommandText**值轉換成 Oracle9i 伺服器所使用的適當多位元組字元集。 如果您知道將 `Unicode=True` 加入連接字串會得到安全的組態，便可避免此問題。  
+以 UTF-16 模式初始化 Oracle 用戶端程式庫。 這會導致 Oracle 用戶端程式庫接受 UTF-16 (與 UCS-2 非常類似)，而不接受多位元組的字串。 這可讓 Oracle 的資料提供者一律使用 Oracle 字碼頁，而無需進行其他轉譯工作。 僅在您使用 Oracle 9i 用戶端與具有 AL16UTF16 替代字元集的 Oracle 9i 資料庫通訊時，此組態才會運作。 當 Oracle 9i 用戶端與 Oracle 9i 伺服器通信時，需要其他資源將 Unicode **CommandText**值轉換為 Oracle9i 伺服器使用的相應多位元組字元集。 如果您知道將 `Unicode=True` 加入連接字串會得到安全的組態，便可避免此問題。  
   
 ### <a name="mixing-versions-of-oracle-client-and-oracle-server"></a>Oracle 用戶端及 Oracle 伺服器的混合版本  
 
-將伺服器的國家字元集指定為 AL16UTF16 （Oracle 9i 的預設設定）時，oracle 8i 用戶端無法存取 Oracle 9i 資料庫中的**NCHAR**、 **NVARCHAR2**或**NCLOB**資料。 因為 Oracle 9i 之前的版本未引入對 UTF-16 字元集的支援，所以 Oracle 8i 用戶端無法讀取它。  
+當伺服器的國家字元集指定為AL16UTF16（Oracle 9i的預設設置）時，Oracle 8i用戶端無法訪問 Oracle 9i 資料庫中的**NCHAR、NVARCHAR2**或**NCLOB**資料。 **NCHAR** 因為 Oracle 9i 之前的版本未引入對 UTF-16 字元集的支援，所以 Oracle 8i 用戶端無法讀取它。  
   
 ### <a name="working-with-utf-8-data"></a>使用 UTF-8 資料  
 
@@ -39,9 +39,9 @@ Oracle 的 .NET Framework 資料提供者需要 Microsoft Data Access Components
   
 ### <a name="oraclelob-can-only-update-full-characters"></a>OracleLob 僅能更新完整的字元。  
 
-基於可用性的理由， <xref:System.Data.OracleClient.OracleLob>物件會繼承自 .NET Framework Stream 類別，並提供**ReadByte**和**WriteByte**方法。 它也會實作用於 Oracle **LOB**物件區段的方法，例如**CopyTo**和**Erase**。 相反地，Oracle 用戶端軟體會提供一些 Api 來使用字元**LOB**s （**CLOB**和**NCLOB**）。 但是，這些 API 僅適用於完整字元。 因為這項差異，所以 Oracle 的 Data Provider 會以位元組取向的方式來執行**讀取**和**ReadByte**的支援，以處理 utf-16 資料。 不過， **OracleLob**物件的其他方法僅允許完整字元作業。  
+出於可用性原因，<xref:System.Data.OracleClient.OracleLob>物件從 .NET 框架流類繼承，並提供**ReadByte**和**WriteByte**方法。 它還實現適用于 Oracle **LOB**物件部分的方法，如 **"複製到"** 和 **"擦除**"。 相反，Oracle 用戶端軟體提供了許多 API 來使用字元**LOBs****（CLOB**和**NCLOB）。** 但是，這些 API 僅適用於完整字元。 由於這種差異，Oracle 的資料提供程式實現了對**讀取**和**ReadByte**的支援，以便以位元組的方式處理 UTF-16 資料。 但是 **，OracleLob**物件的其他方法僅允許全字元操作。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [Oracle 和 ADO.NET](oracle-and-adonet.md)
-- [ADO.NET 概觀](ado-net-overview.md)
+- [ADO.NET 概觀](ado-net-overview.md) \(部分機器翻譯\)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reflection, adding event-handler delegates
 - delegates [.NET Framework], adding event handlers with reflection
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
-ms.openlocfilehash: 14a9694708b36b23ecef453d530ad3b939a046ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d748d9f8bdd0b4d831880548d4aceb1c77a0b0c4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130122"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180510"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>如何：使用反映連結委派
 當您使用反映來載入和執行組件時，無法使用 C# `+=` 運算子或 Visual Basic [AddHandler 陳述式](../../visual-basic/language-reference/statements/addhandler-statement.md)這類語言功能來連結事件。 下列程序示範如何透過反映取得所有必要類型以將現有方法連結至事件，以及如何使用反映發出建立動態方法並將它連結至事件。  
@@ -67,7 +67,7 @@ ms.locfileid: "73130122"
      [!code-csharp[HookUpDelegate#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#12)]
      [!code-vb[HookUpDelegate#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#12)]  
   
-<a name="procedureSection1"></a>   
+<a name="procedureSection1"></a>
 ### <a name="to-generate-an-event-handler-at-run-time-by-using-a-dynamic-method"></a>使用動態方法以在執行階段產生事件處理常式  
   
 1. 使用輕量型動態方法和反映發出，可以在執行階段產生事件處理常式方法。 若要建構事件處理常式，您需要委派的傳回型別和參數類型。 這些可以透過檢查委派的 `Invoke` 方法取得。 下列程式碼使用 `GetDelegateReturnType` 和 `GetDelegateParameterTypes` 方法來取得這項資訊。 這些方法的程式碼位於本主題稍後的＜範例＞一節中。  
@@ -103,11 +103,11 @@ ms.locfileid: "73130122"
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Emit.DynamicMethod>
 - <xref:System.Activator.CreateInstance%2A>
 - <xref:System.Delegate.CreateDelegate%2A>
 - [如何：定義和執行動態方法](how-to-define-and-execute-dynamic-methods.md)
-- [反映](reflection.md)
+- [反射](reflection.md)
