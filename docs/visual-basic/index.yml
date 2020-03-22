@@ -1,31 +1,31 @@
 ### YamlMime:Landing
-title: Visual Basic 檔
-summary: Visual Basic 的設計可協助您有效率地建立型別安全和麵向物件的應用程式。 Visual Basic 是建立 .NET 應用程式的快速且簡單的方式。
+title: 視覺化基本文檔
+summary: Visual Basic 旨在説明您高效地構建型別安全和麵向物件的應用程式。 視覺化基礎是創建 .NET 應用的快速簡便方法。
 metadata:
-  title: Visual Basic 檔-開始使用、教學課程、參考。
-  description: 瞭解在 .NET 中 Visual Basic 程式設計-適用于開發人員、Visual Basic 的開發人員，以及經驗豐富的 Visual Basic 開發人員
+  title: 視覺化基本文檔 - 入門，教程，參考。
+  description: 在 .NET 中學習視覺化基本程式設計 - 面向初級開發人員、新到 Visual Basic 的開發人員和經驗豐富的視覺化基本開發人員
   ms.topic: landing-page
   ms.date: 11/27/2019
   ms.openlocfilehash: 9019ed13a6e9a02710ec063a6538a406f4940e21
-  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 12/05/2019
+  ms.lasthandoff: 03/15/2020
   ms.locfileid: "74838334"
 landingContent:
 - title: 開始使用
   linkLists:
   - linkListType: get-started
     links:
-    - text: 使用 .NET Core 建立「Hello World」應用程式
+    - text: 使用 .NET 核心構建"你好世界"應用程式
       url: ../core/tutorials/vb-with-visual-studio.md
-    - text: 使用 .NET Standard 建立類別庫
+    - text: 使用 .NET 標準構建類庫
       url: ../core/tutorials/vb-library-with-visual-studio.md
     - text: 其他資源
       url: getting-started/additional-resources.md
     - text: 逐步解說
       url: walkthroughs.md
-- title: Visual Basic 基本概念
+- title: 視覺基礎知識
   linkLists:
   - linkListType: overview
     links:
@@ -35,7 +35,7 @@ landingContent:
     links:
     - text: 程式結構和程式碼慣例
       url: programming-guide/program-structure/program-structure-and-code-conventions.md
-    - text: 使用 Visual Basic 開發應用程式
+    - text: 使用視覺化基礎知識開發應用
       url: developing-apps/index.md
     - text: 程式結構和程式碼慣例
       url: programming-guide/program-structure/program-structure-and-code-conventions.md
@@ -47,23 +47,23 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Windows Forms 自訂委派和事件
+    - text: Windows 表單自訂委託和事件
       url: https://social.technet.microsoft.com/wiki/contents/articles/53470.vb-net-windows-forms-custom-delegates-and-events.aspx
-    - text: 透過 WPF DataGrid 編輯資料庫資料表值
+    - text: 通過 WPF 資料網格編輯資料庫表值
       url: https://social.msdn.microsoft.com/Forums/vstudio/10a3dd61-7dcc-48f3-a6e0-f7386d06f9f1/edit-database-table-values-via-wpf-datagrid-visual-basic?forum=wpf
-    - text: Windows Forms ListView：使用 SQL Server 檢查詳細資料檢視
+    - text: Windows 表單清單視圖：使用 SQL 伺服器檢查詳細資訊視圖
       url: https://social.technet.microsoft.com/wiki/contents/articles/53356.windows-forms-listview-examining-detail-view-with-sql-server.aspx
-    - text: 如何透過 OleDbConnection 開啟 Excel 2016 活頁簿
+    - text: 如何通過 OleDbConnect 打開 Excel 2016 活頁簿
       url: https://social.msdn.microsoft.com/Forums/vstudio/70a45808-9aaf-4320-a5fc-04cbbabf6e4d/how-to-open-excel-2016-workbook-through-oledbconnection?forum=vbgeneral
 - title: Visual Basic 語言參考
   linkLists:
   - linkListType: reference
     links:
-    - text: 語言參考
+    - text: 程式設計語言參考
       url: language-reference/index.md
     - text: 關鍵字
       url: language-reference/keywords/index.md
-    - text: 運算子
+    - text: 操作員
       url: language-reference/operators/index.md
-    - text: 語言規格
+    - text: 語言規範
       url: reference/language-specification/index.md
