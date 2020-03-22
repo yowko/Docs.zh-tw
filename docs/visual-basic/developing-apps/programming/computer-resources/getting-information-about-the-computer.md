@@ -5,10 +5,10 @@ helpviewer_keywords:
 - My.Computer.Info object [Visual Basic], tasks
 ms.assetid: 13c145bc-5c85-4fea-a5dd-2ca8681a0252
 ms.openlocfilehash: fd5b49cd053d70e752352e2b050f9202564ee7d7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348114"
 ---
 # <a name="getting-information-about-the-computer-visual-basic"></a>取得電腦的相關資訊 (Visual Basic)
@@ -19,7 +19,7 @@ ms.locfileid: "74348114"
 
 此表列出經常透過 `My.Computer.Info` 物件完成的工作，並指向示範各執行方式的主題。
 
-|若要|請參閱|
+|至|請參閱|
 |---|---|
 |判斷已安裝應用程式的電腦有多少虛擬位址空間可用。|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
 |判斷應用程式執行所在電腦的平台類型。|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|
@@ -27,6 +27,6 @@ ms.locfileid: "74348114"
 |判斷應用程式執行所在電腦上已安裝的 Service Pack。|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSVersion%2A>|
 |判斷應用程式執行所在電腦上已安裝的 `UICulture`。|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.InstalledUICulture%2A>|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>

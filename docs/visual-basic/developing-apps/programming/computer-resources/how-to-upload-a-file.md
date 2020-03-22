@@ -9,10 +9,10 @@ helpviewer_keywords:
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
 ms.openlocfilehash: 52b731606c74ab7ff06a42dfdbe078616ba33d88
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345564"
 ---
 # <a name="how-to-upload-a-file-in-visual-basic"></a>如何：在 Visual Basic 中上載檔案
@@ -37,7 +37,7 @@ ms.locfileid: "74345564"
   
      [!code-vb[VbResourceTasks#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#8)]  
   
-## <a name="robust-programming"></a>最佳化程式設計  
+## <a name="robust-programming"></a>穩固程式設計  
 
  下列條件可能會擲回例外狀況：  
   

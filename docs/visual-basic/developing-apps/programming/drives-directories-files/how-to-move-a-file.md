@@ -5,10 +5,10 @@ helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
 ms.openlocfilehash: 29c64a7a81028d47bf489212e6d8faec5e8dda75
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74335362"
 ---
 # <a name="how-to-move-a-file-in-visual-basic"></a>如何：在 Visual Basic 中移動檔案
@@ -27,7 +27,7 @@ ms.locfileid: "74335362"
   
      [!code-vb[VbVbcnMyFileSystem#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#25)]  
   
-## <a name="robust-programming"></a>最佳化程式設計  
+## <a name="robust-programming"></a>穩固程式設計  
 
  以下條件可能會造成例外狀況：  
   

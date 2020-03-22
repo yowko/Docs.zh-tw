@@ -2,14 +2,14 @@
 title: 如何：依副檔名分組檔案 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 67beec0d3681bf7f0b04d9a402566076fd27ceba
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4d2c51fa62b3ec144bc5ad51b4a9f8305476645e
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347487"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78267024"
 ---
-# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>如何：依副檔名分組檔案（LINQ）（Visual Basic）
+# <a name="how-to-group-files-by-extension-linq-visual-basic"></a>如何：按副檔名分組檔 （LINQ） （可視基本）
 此範例示範如何使用 LINQ，對檔案或資料庫清單執行進階群組和排序作業。 它也示範如何使用 <xref:System.Linq.Enumerable.Skip%2A> 和 <xref:System.Linq.Enumerable.Take%2A> 方法在主控台視窗中分頁輸出。  
   
 ## <a name="example"></a>範例  
@@ -39,7 +39,7 @@ Module GroupByExtension
         ' page the display with good performance.  
         Dim groupByExtList = queryGroupByExt.ToList()  
   
-        ' Display one group at a time. If the number of   
+        ' Display one group at a time. If the number of
         ' entries is greater than the number of lines  
         ' in the console window, then page the output.  
         Dim trimLength = startFolder.Length  
@@ -94,9 +94,9 @@ End Module
  根據本機檔案系統的詳細資料及 `startFolder` 的設定，此程式的輸出可能很長。 為了能夠檢視所有結果，此範例示範如何將結果分頁。 您可以將相同的技術應用到 Windows 和 Web 應用程式。 請注意，因為程式碼會將群組中的項目分頁，所以需要使用巢狀 `For Each` 迴圈。 此外還需要一些額外的邏輯來計算清單中目前的位置，以及讓使用者停止分頁並結束程式。 在這種特殊情況下，會對原始查詢的快取結果執行分頁查詢。 在其他內容中 (例如 LINQ to SQL)，則不需要這類快取。  
   
 ## <a name="compile-the-code"></a>編譯程式碼  
-建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+創建視覺化基本主控台應用程式專案，包含 System.Linq 命名空間的`Imports`語句。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

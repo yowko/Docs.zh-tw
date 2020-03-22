@@ -12,15 +12,15 @@ helpviewer_keywords:
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
 ms.openlocfilehash: 459c4b3f971009ee4b6b669c55bc058db0826595
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349193"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>如何：在 Visual Basic 中建立登錄機碼並設定其值
 
-`CreateSubKey` 物件的 `My.Computer.Registry` 方法可以用來建立登錄機碼。
+`My.Computer.Registry` 物件的 `CreateSubKey` 方法可以用來建立登錄機碼。
 
 ## <a name="procedure"></a>程序
 
@@ -46,7 +46,7 @@ ms.locfileid: "74349193"
 
 [!code-vb[VbResourceTasks#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#15)]
 
-## <a name="robust-programming"></a>最佳化程式設計
+## <a name="robust-programming"></a>穩固程式設計
 
 檢查登錄結構以找出適合索引鍵的位置。 例如，您可能想要開啟目前使用者的 HKEY_CURRENT_USER\Software 機碼，並以貴公司的名稱來建立機碼。 請將登錄值新增至貴公司的索引鍵。
 

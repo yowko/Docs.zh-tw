@@ -7,10 +7,10 @@ helpviewer_keywords:
 - applications [Visual Basic], Web services
 ms.assetid: 8ad5405b-e771-42b1-82d3-ce97af2cea9e
 ms.openlocfilehash: ad616bd46f92261ec5ad6ae81d0db48138631ed1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349231"
 ---
 # <a name="accessing-application-web-services-visual-basic"></a>存取應用程式 Web 服務 (Visual Basic)
@@ -21,7 +21,7 @@ ms.locfileid: "74349231"
 
 下表列出存取應用程式所參考之 Web 服務的可能方式。
 
-|進行|請參閱|
+|至|請參閱|
 |---|---|
 |呼叫 Web 服務|[My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
 |以非同步方式呼叫 Web 服務並於完成時處理事件|[操作說明：非同步呼叫 Web 服務](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|

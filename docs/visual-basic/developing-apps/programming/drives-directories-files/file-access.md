@@ -15,10 +15,10 @@ helpviewer_keywords:
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
 ms.openlocfilehash: 22bcd0f1f3acb0c0ad899b83ad2d879ead948f12
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348902"
 ---
 # <a name="file-access-with-visual-basic"></a>使用 Visual Basic 存取檔案
@@ -30,7 +30,7 @@ ms.locfileid: "74348902"
  [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  列出主題，說明如何使用 `My.Computer.FileSystem` 物件從檔案讀取  
   
- [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [寫入檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  列出主題，說明如何使用 `My.Computer.FileSystem` 物件寫入檔案  
   
  [建立、刪除和移動檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  

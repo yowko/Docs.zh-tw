@@ -8,21 +8,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: 309d0e5214897675e1758bd98b964392b379ca1b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 73d3f999e95c484dff3f5409f2cdb9032b64fe38
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346113"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266855"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>結構和其他程式設計項目 (Visual Basic)
-您可以搭配使用結構與陣列、物件和程式，以及彼此結合。 互動會使用與這些元素個別使用相同的語法。  
+您可以將結構與陣列、物件和過程結合使用，也可以彼此結合使用。 交互使用與這些元素單獨使用的語法相同。  
   
 > [!NOTE]
-> 您無法初始化結構宣告中的任何結構元素。 您只能將值指派給已宣告為結構類型之變數的元素。  
+> 不能初始化結構聲明中的任何結構元素。 只能將值分配給已聲明為結構類型的變數的元素。  
   
 ## <a name="structures-and-arrays"></a>結構和陣列  
- 結構可以包含陣列做為它的一個或多個元素。 下列範例將說明這點。  
+ 結構可以包含陣列作為其一個或多個元素。 下列範例將說明這點。  
   
 ```vb  
 Public Structure systemInfo  
@@ -30,10 +30,10 @@ Public Structure systemInfo
     Public memory As Long  
     Public diskDrives() As String  
     Public purchaseDate As Date  
-End Structure   
+End Structure
 ```  
   
- 在結構中存取陣列的值，與存取物件上屬性的方式相同。 下列範例將說明這點。  
+ 訪問結構中陣列的值的方式與訪問物件的屬性的方式相同。 下列範例將說明這點。  
   
 ```vb  
 Dim mySystem As systemInfo  
@@ -41,13 +41,13 @@ ReDim mySystem.diskDrives(3)
 mySystem.diskDrives(0) = "1.44 MB"  
 ```  
   
- 您也可以宣告結構的陣列。 下列範例將說明這點。  
+ 您還可以聲明結構陣列。 下列範例將說明這點。  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
 ```  
   
- 您會遵循相同的規則來存取此資料結構的元件。 下列範例將說明這點。  
+ 您可以遵循相同的規則來訪問此資料體系結構的元件。 下列範例將說明這點。  
   
 ```vb  
 ReDim allSystems(5).diskDrives(3)  
@@ -56,7 +56,7 @@ allSystems(5).diskDrives(2) = "100M SCSI"
 ```  
   
 ## <a name="structures-and-objects"></a>結構和物件  
- 結構可以包含物件做為其一個或多個元素。 下列範例將說明這點。  
+ 結構可以包含物件作為其一個或多個元素。 下列範例將說明這點。  
   
 ```vb  
 Protected Structure userInput  
@@ -66,10 +66,10 @@ Protected Structure userInput
 End Structure  
 ```  
   
- 您應該在這類宣告中使用特定的物件類別，而不是 `Object`。  
+ 應在此類聲明中使用特定物件類，而不是`Object`。  
   
 ## <a name="structures-and-procedures"></a>結構和程式  
- 您可以將結構當做程式引數來傳遞。 下列範例將說明這點。  
+ 可以將結構作為過程參數傳遞。 下列範例將說明這點。  
   
 ```vb  
 Public currentCPUName As String = "700MHz Pentium compatible"  
@@ -81,9 +81,9 @@ Public Sub fillSystem(ByRef someSystem As systemInfo)
 End Sub  
 ```  
   
- 上述範例會以傳*址方式*傳遞結構，讓程式可以修改其專案，讓變更在呼叫程式碼中生效。 如果您想要針對這類修改來保護結構，請以傳值方式傳遞。  
+ 前面的示例*通過 引用*傳遞結構，這允許過程修改其元素，以便更改在調用代碼中生效。 如果要保護結構免受此類修改，則按值傳遞它。  
   
- 您也可以從 `Function` 程式傳回結構。 下列範例將說明這點。  
+ 您還可以從`Function`過程返回結構。 下列範例將說明這點。  
   
 ```vb  
 Dim allSystems(100) As systemInfo  
@@ -96,7 +96,7 @@ Function findByDate(ByVal searchDate As Date) As systemInfo
 End Function  
 ```  
   
-## <a name="structures-within-structures"></a>結構內的結構  
+## <a name="structures-within-structures"></a>結構內部的結構  
  結構可以包含其他結構。 下列範例將說明這點。  
   
 ```vb  
@@ -118,11 +118,11 @@ ReDim allSystems(1).diskDrives(3)
 allSystems(1).diskDrives(0).type = "Floppy"  
 ```  
   
- 您也可以使用這項技術，將一個模組中定義的結構封裝在不同模組中定義的結構內。  
+ 您還可以使用此技術封裝在不同模組中定義的結構中一個模組中定義的結構。  
   
  結構可以包含任意深度的其他結構。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)

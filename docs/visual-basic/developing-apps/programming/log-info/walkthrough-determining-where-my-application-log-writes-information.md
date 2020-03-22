@@ -10,10 +10,10 @@ helpviewer_keywords:
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
 ms.openlocfilehash: f3fd0ed0388276f1400bf77d0abfb488634a45a5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353612"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>逐步解說：判斷 My.Application.Log 寫入資訊的位置 (Visual Basic)
@@ -24,7 +24,7 @@ ms.locfileid: "74353612"
 
 ### <a name="to-determine-the-listeners-for-myapplicationlog"></a>判斷 My.Application.Log 的接聽程式
 
-1. 找出組件的組態檔。 如果您正在開發組件，則可以從 [方案總管] 存取 Visual Studio 中的 app.config。 否則組態檔名稱會是組件的名稱加上 ".config"，而且會位於與組件相同的目錄內。
+1. 找出組件的組態檔。 如果您正在開發組件，則可以從 [方案總管]**** 存取 Visual Studio 中的 app.config。 否則組態檔名稱會是組件的名稱加上 ".config"，而且會位於與組件相同的目錄內。
 
     > [!NOTE]
     > 並非每個組件都有組態檔。
@@ -45,7 +45,7 @@ ms.locfileid: "74353612"
 
         如果這些區段不存在的話，則 `My.Application.Log` 只具有預設記錄檔接聽程式。
 
-3. 找出 <`add>` 區段中的 <`listeners>` 項目。
+3. 找出 <`listeners>` 區段中的 <`add>` 項目。
 
      這些項目將已命名的記錄檔接聽程式加入至 `My.Application.Log` 來源。
 
@@ -53,13 +53,13 @@ ms.locfileid: "74353612"
 
 5. 對於許多共用接聽項的類型，接聽程式的初始化資料包含接聽程式將資料導向何處的描述︰
 
-    - 如簡介中所述，<xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 接聽程式會寫入檔案記錄檔。
+    - 如簡介中所述， <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 接聽程式寫入至檔案記錄檔。
 
-    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 接聽程式會將資訊寫入由 `initializeData` 參數所指定的電腦事件記錄檔。 若要檢視事件記錄檔，您可以使用 [伺服器總管] 或 [Windows 事件檢視器]。 如需詳細資訊，請參閱 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
+    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 接聽程式將資訊寫入至由 `initializeData` 參數所指定的電腦事件記錄檔。 若要檢視事件記錄檔，您可以使用 [伺服器總管] **** 或 [Windows 事件檢視器] ****。 如需詳細資訊，請參閱 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
 
-    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 接聽程式會寫入 `initializeData` 參數中指定的檔案。
+    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 和 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 接聽程式寫入至 `initializeData` 參數中指定的檔案。
 
-    - <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 接聽程式會寫入命令列主控台。
+    - <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 接聽程式寫入至命令列主控台。
 
     - 如需其他記錄檔接聽程式類型在何處寫入資訊的相關資訊，請查閱該類型的文件。
 

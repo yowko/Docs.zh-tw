@@ -1,15 +1,15 @@
 ---
-title: 編制
+title: 程式設計
 ms.date: 07/20/2015
 helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
 ms.openlocfilehash: 048bc70c2b5416d4377c5abcfdaf18a9312068db
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352112"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic 中的程式設計
@@ -33,7 +33,7 @@ ms.locfileid: "74352112"
  [存取應用程式 Web 服務](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  包含的文件說明如何使用 `My.WebServices` 物件來存取應用程式所參考的 Web 服務。  
   
- [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [存取應用程式設定](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  包含的文件說明如何使用 `My.Settings` 物件來存取應用程式的設定。  
   
  [處理磁碟機、目錄和檔案](drives-directories-files/index.md)  

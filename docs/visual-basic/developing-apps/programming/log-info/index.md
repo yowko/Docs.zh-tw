@@ -10,10 +10,10 @@ helpviewer_keywords:
 - examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
 ms.openlocfilehash: dace4bac3bf7529b8c50a492a092ad478f4d9e2d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353261"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>記錄來自應用程式的資訊 (Visual Basic)
@@ -26,7 +26,7 @@ ms.locfileid: "74353261"
   
 ## <a name="tasks"></a>工作  
   
-|進行|請參閱|  
+|至|請參閱|  
 |--------|---------|  
 |將事件資訊寫入應用程式的記錄檔。|[如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
 |將例外狀況資訊寫入應用程式的記錄檔。|[如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  

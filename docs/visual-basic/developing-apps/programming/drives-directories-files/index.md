@@ -10,10 +10,10 @@ helpviewer_keywords:
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
 ms.openlocfilehash: 790cf5aa2d3fde779fcc24c0c9f1fc9c4c42331b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333956"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>處理磁碟機、目錄和檔案 (Visual Basic)

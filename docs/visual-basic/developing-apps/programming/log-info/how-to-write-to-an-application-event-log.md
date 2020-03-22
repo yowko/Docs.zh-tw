@@ -8,10 +8,10 @@ helpviewer_keywords:
 - event logs, writing to
 ms.assetid: cadbc8c1-87af-4746-934e-55b79a4f6e2b
 ms.openlocfilehash: 511bb8fb16851872c1a16ae7627ed0fc6594337c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352052"
 ---
 # <a name="how-to-write-to-an-application-event-log-visual-basic"></a>如何：寫入應用程式事件記錄檔 (Visual Basic)
@@ -20,21 +20,21 @@ ms.locfileid: "74352052"
 
 您無法寫入至安全性記錄檔。 要寫入至系統記錄檔，您必須是 LocalSystem 或 Administrator 帳戶的成員。
 
-若要檢視事件記錄檔，您可以使用 [伺服器總管] 或 [Windows 事件檢視器]。 如需詳細資訊，請參閱 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
+若要檢視事件記錄檔，您可以使用 [伺服器總管] **** 或 [Windows 事件檢視器] ****。 如需詳細資訊，請參閱 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)。
 
 ## <a name="to-add-and-configure-the-event-log-listener"></a>加入及設定事件記錄檔接聽程式
 
-1. 在 **方案總管** 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。
+1. 在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。********
 
-    \-或-
+    \- 或 -
 
     如果沒有 app.config 檔案，
 
     1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。
 
-    2. 在 [加入新項目] 對話方塊中，選擇 [應用程式組態檔]。
+    2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
 
-    3. 按一下 [加入]。
+    3. 按一下 **[新增]**。
 
 2. 在應用程式組態檔中找出 `<listeners>` 區段。
 

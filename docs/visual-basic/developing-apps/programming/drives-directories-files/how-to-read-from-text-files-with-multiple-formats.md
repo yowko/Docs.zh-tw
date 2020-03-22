@@ -1,5 +1,5 @@
 ---
-title: 如何：從具有多種格式的文字檔讀取
+title: 如何：從具有多種格式的文字檔中讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
 ms.openlocfilehash: b36c781d5f8333749d346bb8f19540f0d1bd1692
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334577"
 ---
-# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>如何：在 Visual Basic 中使用多種格式從 fext 檔案讀取
+# <a name="how-to-read-from-fext-files-with-multiple-formats-in-visual-basic"></a>如何：在視覺基礎中從具有多種格式的 fext 檔中讀取
 
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件可讓您輕鬆有效率地剖析結構化文字檔，例如記錄檔。 您可以使用 `PeekChars` 方法來處理具有多種格式的檔案，以在剖析整個檔案時判斷每行格式。
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>剖析具有多種格式的文字檔
 
-1. 將名為*testfile.txt*的文字檔新增至您的專案。 將下列內容新增至文字檔：
+1. 將名為*testfile.txt*的文字檔添加到專案中。 將以下內容添加到文字檔：
 
     ```text
     Err  1001 Cannot access resource.
@@ -53,7 +53,7 @@ ms.locfileid: "74334577"
 
 ## <a name="example"></a>範例
 
-以下是從檔案讀取 `testfile.txt`的完整範例：
+下面是從檔`testfile.txt`讀取的完整示例：
 
  [!code-vb[VbFileIORead#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#8)]
 
@@ -63,11 +63,11 @@ ms.locfileid: "74334577"
   
 - 無法使用指定格式剖析資料列 (<xref:Microsoft.VisualBasic.FileIO.MalformedLineException>)。 例外狀況訊息指出造成例外狀況的文字行，而 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.ErrorLine%2A> 屬性被指派至包含於該文字行中的文字。
 - 指定的檔案不存在 (<xref:System.IO.FileNotFoundException>)。
-- 發生使用者權限不足而無法存取檔案的部分信任狀況 (<xref:System.Security.SecurityException>)
+- 發生使用者權限不足而無法存取檔案的部分信任狀況 (<xref:System.Security.SecurityException>).
 - 路徑太長 (<xref:System.IO.PathTooLongException>)。
 - 使用者沒有足夠權限以存取檔案 (<xref:System.UnauthorizedAccessException>)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.PeekChars%2A>

@@ -16,51 +16,51 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333812"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>逐步解說：在 Visual Basic 中管理檔案和目錄
 
 本逐步解說提供 Visual Basic 中檔案 I/O 的基本概念簡介。 其中說明如何建立一個小型應用程式，以提列並檢查目錄中的文字檔案。 針對每個選取的文字檔案，應用程式會提供檔案屬性和第一行內容。 您也可以選擇將資訊寫入記錄檔。  
   
- 本逐步解說使用 Visual Basic 所提供的 `My.Computer.FileSystem Object` 成員。 如需詳細資訊，請參閱 <xref:Microsoft.VisualBasic.FileIO.FileSystem>。 本逐步解說最後會提供使用來自 <xref:System.IO> 命名空間之類別的對等範例。  
+ 本逐步解說使用 Visual Basic 所提供的 `My.Computer.FileSystem Object` 成員。 如需相關資訊，請參閱 <xref:Microsoft.VisualBasic.FileIO.FileSystem>。 本逐步解說最後會提供使用來自 <xref:System.IO> 命名空間之類別的對等範例。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-create-the-project"></a>若要建立專案  
   
-1. 按一下 [檔案] 功能表上的 [新增專案]。  
+1. 按一下 [檔案] 功能表上的 [新增專案]。********  
   
-     此時會出現 [新增專案] 對話方塊。  
+     此時會出現 [新增專案]**** 對話方塊。  
   
-2. 在 [已安裝的範本] 窗格中，展開 [Visual Basic]，然後按一下 [Windows]。 在中間的 [範本] 窗格中，按一下 [Windows Forms 應用程式]。  
+2. 在 [已安裝的範本] 窗格中，展開 [Visual Basic]，然後按一下 [Windows]。************ 在中間的 [範本] 窗格中，按一下 [Windows Forms 應用程式]。********  
   
-3. 在 [名稱] 方塊中，輸入  **以設定專案名稱，然後按一下 [確定]。** `FileExplorer`  
+3. 在 [名稱] 方塊中，輸入 `FileExplorer` 以設定專案名稱，然後按一下 [確定]。********  
   
-     Visual Studio 即會將專案新增至 [方案總管]，並開啟 [Windows Forms 設計工具]。  
+     Visual Studio 即會將專案新增至 [方案總管]****，並開啟 [Windows Forms 設計工具]。  
   
 4. 將下表的控制項新增至表單，並設定其屬性的對應值。  
   
-    |控制項|屬性|值|  
+    |控制|屬性|值|  
     |-------------|--------------|-----------|  
-    |**ListBox**|**Name**|`filesListBox`|  
-    |**Button**|**Name**<br /><br /> **文字**|`browseButton`<br /><br /> **瀏覽**|  
-    |**Button**|**Name**<br /><br /> **文字**|`examineButton`<br /><br /> **檢查**|  
-    |**CheckBox**|**Name**<br /><br /> **文字**|`saveCheckBox`<br /><br /> **儲存結果**|  
-    |**FolderBrowserDialog**|**Name**|`FolderBrowserDialog1`|  
+    |**ListBox**|**名稱**|`filesListBox`|  
+    |**Button**|**名稱**<br /><br /> **文本**|`browseButton`<br /><br /> **瀏覽**|  
+    |**Button**|**名稱**<br /><br /> **文本**|`examineButton`<br /><br /> **檢查**|  
+    |**核取方塊**|**名稱**<br /><br /> **文本**|`saveCheckBox`<br /><br /> **儲存結果**|  
+    |**FolderBrowserDialog**|**名稱**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>若要選取資料夾，並列出資料夾中的檔案  
   
-1. 按兩下表單上的控制項，以建立 `Click` 的 `browseButton` 事件處理常式。 [程式碼編輯器] 隨即開啟。  
+1. 按兩下表單上的控制項，以建立 `browseButton` 的 `Click` 事件處理常式。 [程式碼編輯器] 隨即開啟。  
   
 2. 將下列程式碼加入至 `Click` 事件處理常式。  
   
      [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
-     `FolderBrowserDialog1.ShowDialog` 呼叫會開啟 [瀏覽資料夾] 對話方塊。 使用者按一下 [確定] 之後，系統會以引數形式將 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 屬性傳送給 `ListFiles` 方法，以在下一個步驟中加入。  
+     `FolderBrowserDialog1.ShowDialog` 呼叫會開啟 [瀏覽資料夾] 對話方塊。**** 使用者按一下 [確定]**** 之後，系統會以引數形式將 <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> 屬性傳送給 `ListFiles` 方法，以在下一個步驟中加入。  
   
 3. 新增下列 `ListFiles` 方法。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "74333812"
   
      隨即將 `GetFiles` 方法所傳回的字串新增至 **ListBox**。  
   
-4. 執行應用程式。 按一下 [瀏覽] 按鈕。 在 [瀏覽資料夾] 對話方塊中，瀏覽至包含 .txt 檔案的資料夾，然後選取資料夾並按一下 [確定]。  
+4. 執行應用程式。 按一下 [ **瀏覽** ] 按鈕。 在 [瀏覽資料夾] 對話方塊中，瀏覽至包含 .txt 檔案的資料夾，然後選取資料夾並按一下 [確定]。********  
   
      `ListBox` 包含所選資料夾中的 .txt 檔案清單。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "74333812"
   
 ### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>若要取得檔案的屬性以及文字檔案的內容  
   
-1. 按兩下表單上的控制項，以建立 `Click` 的 `examineButton` 事件處理常式。  
+1. 按兩下表單上的控制項，以建立 `examineButton` 的 `Click` 事件處理常式。  
   
 2. 將下列程式碼加入至 `Click` 事件處理常式。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "74333812"
   
      <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 方法會將檔案內容讀入 <xref:System.IO.StreamReader>。 系統會由 `StreamReader` 取得第一行的內容，並將其新增至 `StringBuilder`。  
   
-4. 執行應用程式。 按一下 [瀏覽]，並瀏覽至包含 .txt 檔案的資料夾。 按一下 [確定]。  
+4. 執行應用程式。 按一下 [瀏覽]，並瀏覽至包含 .txt 檔案的資料夾。**** 按一下 [確定]****。  
   
-     選取 `ListBox` 中的檔案，然後按一下 [檢查]。 `MessageBox` 隨即顯示檔案資訊。  
+     選取 `ListBox` 中的檔案，然後按一下 [檢查]****。 `MessageBox` 隨即顯示檔案資訊。  
   
 5. 停止執行應用程式。  
   
@@ -112,9 +112,9 @@ ms.locfileid: "74333812"
   
      程式碼會將記錄檔路徑設為將記錄檔放入所選檔案的相同目錄中。 記錄項目的文字則會設為目前的日期和時間，後面接著檔案資訊。  
   
-     將 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 引數設定為 `append` 的 `True` 方法用來建立記錄項目。  
+     將 `append` 引數設定為 `True` 的 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法用來建立記錄項目。  
   
-2. 執行應用程式。 瀏覽至文字檔案，在 `ListBox` 中加以選取，並選取 [儲存結果] 核取方塊，然後按一下 [檢查]。 確認記錄項目已寫入 `log.txt` 檔案。  
+2. 執行應用程式。 瀏覽至文字檔案，在 `ListBox` 中加以選取，並選取 [儲存結果] 核取方塊，然後按一下 [檢查]。******** 確認記錄項目已寫入 `log.txt` 檔案。  
   
 3. 停止執行應用程式。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "74333812"
   
      此程式碼會將資料夾瀏覽器的預設目錄設為目前的目錄。  
   
-3. 執行應用程式。 當您首次按一下 [瀏覽] 時，[瀏覽資料夾] 對話方塊即會開啟至目前目錄。  
+3. 執行應用程式。 當您首次按一下 [瀏覽] 時，[瀏覽資料夾] 對話方塊即會開啟至目前目錄。********  
   
 4. 停止執行應用程式。  
   
@@ -140,15 +140,15 @@ ms.locfileid: "74333812"
   
      `SetEnabled` 方法會依據 `ListBox` 中是否選取項目，來啟用或停用控制項。  
   
-2. 按兩下表單的 `SelectedIndexChanged` 控制項，以建立 `filesListBox` 的 `ListBox` 事件處理常式。  
+2. 按兩下表單的 `ListBox` 控制項，以建立 `filesListBox` 的 `SelectedIndexChanged` 事件處理常式。  
   
-3. 在新的 `SetEnabled` 事件處理常式中，新增 `filesListBox_SelectedIndexChanged` 的呼叫。  
+3. 在新的 `filesListBox_SelectedIndexChanged` 事件處理常式中，新增 `SetEnabled` 的呼叫。  
   
-4. 在 `SetEnabled` 事件處理常式結尾，新增 `browseButton_Click` 的呼叫。  
+4. 在 `browseButton_Click` 事件處理常式結尾，新增 `SetEnabled` 的呼叫。  
   
-5. 在 `SetEnabled` 事件處理常式結尾，新增 `Form1_Load` 的呼叫。  
+5. 在 `Form1_Load` 事件處理常式結尾，新增 `SetEnabled` 的呼叫。  
   
-6. 執行應用程式。 如果  **中未選取項目，則會停用 [儲存結果] 核取方塊和 [檢查] 按鈕。** `ListBox`  
+6. 執行應用程式。 如果 `ListBox` 中未選取項目，則會停用 [儲存結果] 核取方塊和 [檢查] 按鈕。********  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>使用 My.Computer.FileSystem 的完整範例  
 

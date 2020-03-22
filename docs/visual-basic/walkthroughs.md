@@ -1,6 +1,6 @@
 ---
-title: 語言逐步解說
-description: Visual Basic 開發的常見案例逐步指示
+title: 語言演練
+description: 視覺化基礎開發中常見方案的分步說明
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, walkthroughs
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 ms.openlocfilehash: 76f9b428bc5f613296e24d893f49f124bb13c089
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75636038"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 語言逐步解說
@@ -35,7 +35,7 @@ ms.locfileid: "75636038"
  描述如何宣告類別及其欄位、屬性、方法和事件。
 
 - [在 Visual Basic 中撰寫查詢](programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- 示範如何使用 Visual Basic 語言功能來撰寫語言整合式查詢（LINQ）查詢運算式。
+ 演示如何使用 Visual Basic 語言功能編寫語言集成查詢 （LINQ） 查詢運算式。
 
 - [在 Visual Basic 中實作 IEnumerable(Of T)](programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
  示範如何建立實作 `IEnumerable(Of String)` 介面的類別和實作 `IEnumerator(Of String)` 介面的類別，以逐行讀取文字檔案。
@@ -49,19 +49,19 @@ ms.locfileid: "75636038"
 - [實作 COM 物件的繼承](programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  示範如何使用 Visual Basic 6.0 以建立包含類別的 COM 物件，並將它作為 Visual Basic 中的基底類別。
 
-- [判斷 My.Application.Log 寫入資訊的位置](developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+- [確定我的應用程式.Log 寫入資訊的位置](developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
  說明預設的 `My.Application.Log` 設定，以及如何判斷應用程式的設定。
 
-- [變更 My.Application.Log 寫入資訊的位置](developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+- [更改我的應用程式.Log 寫入資訊的位置](developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
  示範如何覆寫記錄事件資訊的預設 `My.Application.Log` 和 `My.Log` 設定，並使 `Log` 物件寫入至其他記錄檔接聽程式。
 
-- [篩選 My.Application.Log 輸出](developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)  
+- [篩選我的應用程式.日誌輸出](developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)  
  示範如何變更 `My.Application.Log` 物件的預設記錄檔篩選。
 
 - [建立自訂的記錄檔接聽程式](developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  示範如何建立自訂記錄檔接聽程式，並將它設定為接聽 `My.Application.Log` 物件的輸出。
 
-- [從 Managed 組件內嵌類型](../standard/assembly/embed-types-visual-studio.md)  
+- [從受控組件內嵌類型](../standard/assembly/embed-types-visual-studio.md)  
  描述如何建立內嵌類型的組件和用戶端程式。
 
 - [驗證密碼確實複雜 (Visual Basic)](programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  

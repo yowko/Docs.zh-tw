@@ -1,5 +1,5 @@
 ---
-title: 使用 TextFieldParser 物件剖析文字檔
+title: 使用 TextFieldParser 物件分析文字檔
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, using
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
 ms.openlocfilehash: f3239184beb58312a8e3598545fc37423ff85287
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333850"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>使用 TextFieldParser 物件剖析文字檔 (Visual Basic)
@@ -33,9 +33,9 @@ ms.locfileid: "74333850"
   
 ## <a name="parsing-files-with-multiple-formats"></a>剖析有多種格式的檔案  
 
- `PeekChars` 物件的 `TextFieldParser` 方法可用來先檢查，然後再讀取每個欄位，讓您定義多種欄位格式，並據以採取動作。 如需詳細資訊，請參閱[如何：讀取多種格式的文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)。  
+ `TextFieldParser` 物件的 `PeekChars` 方法可用來先檢查，然後再讀取每個欄位，讓您定義多種欄位格式，並據以採取動作。 如需詳細資訊，請參閱[如何：讀取多種格式的文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>

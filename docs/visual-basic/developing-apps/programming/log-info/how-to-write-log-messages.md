@@ -5,10 +5,10 @@ helpviewer_keywords:
 - My.Application.Log object, writing log messages
 ms.assetid: 972a3e0c-2996-4623-a7a9-d7ebc4d207f8
 ms.openlocfilehash: 38570047db48e009aea2af376304430db1ec29f4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352061"
 ---
 # <a name="how-to-write-log-messages-visual-basic"></a>如何：寫入記錄訊息 (Visual Basic)

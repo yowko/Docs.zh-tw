@@ -6,15 +6,15 @@ helpviewer_keywords:
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
 ms.openlocfilehash: 20533ec01d3198d499312ed0c15ec8cca2ff70bd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348802"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>如何：在 Visual Basic 中建立檔案
 
-這個範例會在 <xref:System.IO.File.Create%2A> 類別中使用 <xref:System.IO.File> 方法，以在指定的路徑中建立空白文字檔。  
+這個範例會在 <xref:System.IO.File> 類別中使用 <xref:System.IO.File.Create%2A> 方法，以在指定的路徑中建立空白文字檔。  
   
 ## <a name="example"></a>範例  
 
@@ -24,7 +24,7 @@ ms.locfileid: "74348802"
 
  使用 `file` 變數，以寫入檔案。  
   
-## <a name="robust-programming"></a>最佳化程式設計  
+## <a name="robust-programming"></a>穩固程式設計  
 
  如果檔案已存在，則會予以取代。  
   

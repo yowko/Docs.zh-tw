@@ -7,10 +7,10 @@ helpviewer_keywords:
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
 ms.openlocfilehash: c3c81e331eb3d8ee450ba0cac38e57976846ee63
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352077"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>如何：將事件資訊寫入至文字檔 (Visual Basic)
@@ -19,17 +19,17 @@ ms.locfileid: "74352077"
 
 ### <a name="to-add-and-configure-the-file-log-listener"></a>新增和設定檔案記錄檔接聽程式
 
-1. 在 **方案總管** 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。
+1. 在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。********
 
-     \-或-
+     \- 或 -
 
      如果沒有 app.config 檔案︰
 
     1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。
 
-    2. 在 [加入新項目] 對話方塊中，選擇 [應用程式組態檔]。
+    2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
 
-    3. 按一下 [加入]。
+    3. 按一下 **[新增]**。
 
 2. 在應用程式組態檔中找出 `<listeners>` 區段。
 
@@ -41,7 +41,7 @@ ms.locfileid: "74352077"
     <add name="FileLogListener" />
     ```
 
-4. 找出巢狀於最上層 `<sharedListeners>` 區段中 `<system.diagnostics>` 區段的 `<configuration>` 區段。
+4. 找出巢狀於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<sharedListeners>` 區段。
 
 5. 將此項目加入至該 `<sharedListeners>` 區段︰
 

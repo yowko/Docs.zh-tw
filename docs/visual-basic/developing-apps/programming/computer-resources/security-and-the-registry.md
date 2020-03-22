@@ -6,10 +6,10 @@ helpviewer_keywords:
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
 ms.openlocfilehash: 454180207d6432e80d87941d1f329f2a4ea7a801
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345477"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>安全性和登錄 (Visual Basic)
@@ -30,7 +30,7 @@ ms.locfileid: "74345477"
 |-----------|----------------------------------|  
 |`AllAccess`|建立、讀取和寫入|  
 |`Create`|建立|  
-|`NoAccess`|不允許存取|  
+|`NoAccess`|沒有存取權|  
 |`Read`|讀取|  
 |`Write`|寫入|  
   

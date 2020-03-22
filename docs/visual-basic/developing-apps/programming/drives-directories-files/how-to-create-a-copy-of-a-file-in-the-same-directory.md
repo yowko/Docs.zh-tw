@@ -10,10 +10,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], copying files
 ms.assetid: b2fdda86-e666-42c2-9706-9527e9fa68ff
 ms.openlocfilehash: 33a4f5424ac50de7b5dc988034ca15127dc1ed02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348828"
 ---
 # <a name="how-to-create-a-copy-of-a-file-in-the-same-directory-in-visual-basic"></a>如何：在 Visual Basic 中於相同目錄內建立檔案複本
@@ -22,17 +22,17 @@ ms.locfileid: "74348828"
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>在相同資料夾中建立檔案複本  
   
-- 使用 `CopyFile` 方法，並提供目標檔案和位置。 下列範例會建立稱為 `test.txt` 的 `test2.txt` 複本。  
+- 使用 `CopyFile` 方法，並提供目標檔案和位置。 下列範例會建立稱為 `test2.txt` 的 `test.txt` 複本。  
   
      [!code-vb[VbVbcnMyFileSystem#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#51)]  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>在相同資料夾中建立檔案複本，以覆寫現有檔案  
   
-- 使用 `CopyFile` 方法，並提供目標檔案和位置，以及將 `overwrite` 設定為 `True`。 下列範例會建立稱為 `test.txt` 的 `test2.txt` 複本，並以該名稱覆寫任何現有檔案。  
+- 使用 `CopyFile` 方法，並提供目標檔案和位置，以及將 `overwrite` 設定為 `True`。 下列範例會建立稱為 `test2.txt` 的 `test.txt` 複本，並以該名稱覆寫任何現有檔案。  
   
      [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   
-## <a name="robust-programming"></a>最佳化程式設計  
+## <a name="robust-programming"></a>穩固程式設計  
 
  下列條件可能會造成擲回例外狀況：  
   

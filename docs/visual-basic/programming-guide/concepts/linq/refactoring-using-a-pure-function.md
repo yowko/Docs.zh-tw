@@ -2,20 +2,20 @@
 title: 使用純虛擬函式進行重構
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: ce07622a030f291bbbee54dc342562ffecd3258c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a0365c79b8283fef242ecf8f2b68ea4de780049
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341662"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266933"
 ---
-# <a name="refactoring-using-a-pure-function-visual-basic"></a>使用純虛擬函式（Visual Basic）進行重構
-下列範例會重構先前的範例，[使用擴充方法（Visual Basic）進行重構](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)，以使用此範例中的純虛擬函式，尋找段落文字的程式碼會移到純靜態方法 `ParagraphText`。  
+# <a name="refactoring-using-a-pure-function-visual-basic"></a>使用純虛擬函式進行重構 (Visual Basic)
+下面的示例重構前面的示例"[使用擴充方法（Visual Basic）重構"，](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)以使用純函數 在此示例中，查找段落文本的代碼將移動到純靜態方法`ParagraphText`。  
   
 ## <a name="example"></a>範例  
  此範例會處理 WordprocessingML 文件，並從 WordprocessingML 文件擷取段落節點。 它也可以識別每個段落的樣式。 此範例在這個教學課程中，會在先前的範例上建置。 重構的程式碼會在以下程式碼的註解中叫出。  
   
- 如需建立此範例之來源文件的指示，請參閱[建立來源 Office OPEN XML 檔（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)。  
+ 有關為此示例創建來源文件的說明，請參閱[創建源辦公室開放 XML 文檔（可視基本文檔）。](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)  
   
  這個範例會使用 WindowsBase 組件的類別。 它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。  
   
@@ -144,7 +144,7 @@ Module Module1
             Console.WriteLine("StyleName:{0} >{1}<", p.StyleName, p.Text)  
         Next  
     End Sub  
-End Module   
+End Module
 ```  
   
  此範例會產生與重構前相同的輸出：  
@@ -170,10 +170,10 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>後續步驟  
  下一個範例顯示如何將 XML 規劃為不同的組織結構：  
   
-- [以不同的形狀投射 XML （Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [以不同形狀投影 XML（視覺基本）](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [教學課程：操作 WordprocessingML 檔中的內容（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
-- [使用擴充方法（Visual Basic）進行重構](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
-- [重構為純虛擬函式（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [教程：在文字處理ML文檔中操作內容（視覺基礎）](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [使用擴充方法重構（可視基本）](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
+- [重構為純函數（視覺基本）](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

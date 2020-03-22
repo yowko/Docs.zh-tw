@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
 ms.openlocfilehash: 9e55910573b3aa3aecf9082f1b77659a45f883a1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73196989"
 ---
 # <a name="additional-resources"></a>其他資源
@@ -44,14 +44,14 @@ ms.locfileid: "73196989"
 
 |URL|描述|
 |----------|----------------|
-|[Channel9](https://channel9.msdn.com/)|透過視訊、Wiki 和論壇，提供連續的社群。|
+|[Channel9 (英文)](https://channel9.msdn.com/)|透過視訊、Wiki 和論壇，提供連續的社群。|
 
 ### <a name="support"></a>支援
 
 |URL|描述|
 |----------|----------------|
 |[Microsoft 支援服務](https://support.microsoft.com)|提供知識庫文件、資源下載和更新、支援網路廣播及其他服務的存取。|
-|[Visual Studio 問題](https://developercommunity.visualstudio.com)|可讓您提報 .NET 和 Visual Studio 相關的錯誤給 Microsoft，或提供建議。 您也可以在 Visual Studio 中選取 [說明] > [傳送意見] > [回報問題]，來回報錯誤。|
+|[Visual Studio 問題](https://developercommunity.visualstudio.com)|可讓您提報 .NET 和 Visual Studio 相關的錯誤給 Microsoft，或提供建議。 您還可以通過選擇 **"説明** > **發送回饋** > **報告**視覺工作室中的問題"來報告 Bug。|
 
 ## <a name="third-party-resources"></a>協力廠商資源
 
@@ -59,9 +59,9 @@ ms.locfileid: "73196989"
 |----------|----------------|
 |[VBForums](http://www.vbforums.com/)|提供可討論 Visual Basic、.NET 等的論壇。|
 |[vbCity](http://vbcity.com/)|可讓使用者了解 Visual Basic 和 .NET 及詢問 相關問題的社群網站。|
-|[堆疊溢位](https://stackoverflow.com/questions/tagged/vb.net)|堆疊溢位是適用於開發人員的問與答網站。|
+|[Stack Overflow](https://stackoverflow.com/questions/tagged/vb.net)|堆疊溢位是適用於開發人員的問與答網站。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [開始使用 Visual Basic](../../visual-basic/getting-started/index.md)
-- [告訴我們](/visualstudio/ide/feedback-options)
+- [聯繫我們](/visualstudio/ide/feedback-options)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
 ms.openlocfilehash: 5faaa16615f52714db3de6853786990265716501
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348762"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>如何：在 Visual Basic 中尋找具有特定模式的檔案
@@ -20,7 +20,7 @@ ms.locfileid: "74348762"
  如果找不到符合指定模式的檔案，會傳回空的集合。  
   
 > [!NOTE]
-> 如需使用 `DirectoryInfo` 命名空間的 `System.IO` 類別來傳回檔案清單的資訊，請參閱 <xref:System.IO.DirectoryInfo.GetFiles%2A>。  
+> 如需使用 `System.IO` 命名空間的 `DirectoryInfo` 類別來傳回檔案清單的資訊，請參閱 <xref:System.IO.DirectoryInfo.GetFiles%2A>。  
   
 ### <a name="to-find-files-with-a-specified-pattern"></a>尋找具有所指定模式的檔案  
   
@@ -48,7 +48,7 @@ ms.locfileid: "74348762"
   
 - 使用者缺乏必要的權限 (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
 - [如何：尋找具有特定模式的子目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
 ms.openlocfilehash: 463d3bc77237482d4cd568b9558bb72cd19e7216
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74349208"
 ---
 # <a name="accessing-user-data-visual-basic"></a>存取使用者資料 (Visual Basic)
@@ -26,7 +26,7 @@ ms.locfileid: "74349208"
   
 ## <a name="tasks"></a>工作  
   
-|進行|請參閱|  
+|至|請參閱|  
 |--------|---------|  
 |取得使用者的登入名稱|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
 |如果應用程式使用 Windows 驗證即可取得使用者的網域名稱|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  

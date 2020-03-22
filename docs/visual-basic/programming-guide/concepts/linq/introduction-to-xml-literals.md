@@ -1,20 +1,20 @@
 ---
-title: Visual Basic2 中的 XML 常值簡介
+title: 視覺化基礎2中的XML文本簡介
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 5355a3c0f01bb247e38e52816693ee47d7d50556
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 9f5c54574e51c537d9ea58d307afda10736d0d88
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834998"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266946"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic 中的 XML 常值簡介
-本節提供在 Visual Basic 中建立 XML 樹狀結構的相關資訊。  
+本節提供有關在視覺化基本創建 XML 樹的資訊。  
   
- 如需將 LINQ 查詢的結果當做 XML 樹狀結構之內容使用的詳細資訊，請參閱[功能性結構（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
+ 有關使用 LINQ 查詢的結果作為 XML 樹的內容的資訊，請參閱[功能構造（LINQ 到 XML）（可視基本）。](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)  
   
- 如需 Visual Basic 中 XML 常值的詳細資訊，請參閱[Visual Basic 中 LINQ to XML 的總覽](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
+ 有關視覺化基礎中的 XML 文本的詳細資訊，請參閱[Visual Basic 中的 LINQ 到 XML 概述](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)。  
   
 ## <a name="creating-xml-trees"></a>建立 XML 樹狀結構  
  下列範例顯示如何在此案例 <xref:System.Xml.Linq.XElement> 中建立 `contacts`：  
@@ -40,7 +40,7 @@ Dim contacts As XElement = _
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
-Console.WriteLine(n)   
+Console.WriteLine(n)
 ```  
   
  這個範例會產生下列輸出：  
@@ -157,7 +157,7 @@ Console.WriteLine(n)
 </Root>  
 ```  
   
-### <a name="cloning-vs-attaching"></a>複製與正在附加  
+### <a name="cloning-vs-attaching"></a>複製和附加的比較  
  如先前所述，如果您使用內嵌的運算式，將現有的節點 (包括項目) 和屬性加入到新的 XML 樹狀，而且如果現有的節點已經成為父代，這些節點就會遭到複製，而新複製的節點會附加到新的 XML 樹狀中。 如果現有的節點沒有成為父代，這些節點只會附加到新的 XML 樹狀結構。  
   
 ```vb  
@@ -197,4 +197,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>另請參閱
 
-- [建立 XML 樹狀結構（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [創建 XML 樹（視覺化基本）](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

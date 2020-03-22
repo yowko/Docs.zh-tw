@@ -8,38 +8,38 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 ms.openlocfilehash: 347d7e7d0f09e089886bc81bd0be659deaca9b46
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344083"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400740"
 ---
-# <a name="byte-data-type-visual-basic"></a>Byte 資料類型（Visual Basic）
+# <a name="byte-data-type-visual-basic"></a>位元組資料類型（可視基本）
 
-保存不帶正負號的8位（1個位元組）整數，其值介於0到255之間。
+保存未簽名的 8 位（1 位元組）整數，其值範圍為 0 到 255。
 
 ## <a name="remarks"></a>備註
 
-請使用 `Byte` 資料類型來包含二進位資料。  
+使用`Byte`資料類型包含二進位資料。  
   
 `Byte` 的預設值為 0。
 
-## <a name="literal-assignments"></a>常值指派
+## <a name="literal-assignments"></a>文本分配
 
-您可以藉由指派十進位常值、十六進位常值、八進位常值，或二進位常值（從 Visual Basic 2017）來宣告和初始化 `Byte` 變數。 如果整數常值超出 `Byte` 的範圍（亦即，如果小於 <xref:System.Byte.MinValue?displayProperty=nameWithType> 或大於 <xref:System.Byte.MaxValue?displayProperty=nameWithType>），就會發生編譯錯誤。
+您可以通過為其分配十進位文本、`Byte`十六進位文本、八進位文本或（從 Visual Basic 2017 開頭）二進位文本來聲明和初始化變數。 如果積分文本超出 的範圍`Byte`（即，如果它小於<xref:System.Byte.MinValue?displayProperty=nameWithType>或大於<xref:System.Byte.MaxValue?displayProperty=nameWithType>），則會發生編譯錯誤。
 
-在下列範例中，等於201的整數（以十進位、十六進位和二進位常值表示）會從[整數](integer-data-type.md)隱含地轉換成 `byte` 值。
+在下面的示例中，等於 201 的整數表示為十進位、十六進位和二進位文本，從[整數](integer-data-type.md)隱式轉換為`byte`值。
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Byte)]
 
 > [!NOTE]
-> 您可以使用前置詞 `&h` 或 `&H` 來表示十六進位常值、前置詞 `&b` 或 `&B` 來表示二進位常值，而前置詞 `&o` 或 `&O` 表示八進位常值。 十進位常值沒有前置詞。
+> `&h`您可以使用首碼或`&H`表示十六進位文本、首碼`&b`或`&B`表示二進位文本和首碼`&o`或`&O`表示八進位文本。 十進位常值沒有前置詞。
 
-從 Visual Basic 2017 開始，您也可以使用底線字元（`_`）做為數位分隔符號，以增強可讀性，如下列範例所示。
+從 Visual Basic 2017 開始，您還可以使用底線`_`字元 ，作為數位分隔符號來增強可讀性，如下例所示。
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
-從 Visual Basic 15.5 開始，您也可以使用底線字元（`_`）做為前置詞和十六進位、二進位或八進位數位之間的前置分隔符號。 例如：
+從 Visual Basic 15.5 開始，您還可以使用底線`_`字元 （ ） 作為首碼和十六進位、二進位或八進位數位之間的前導分隔符號。 例如：
 
 ```vb
 Dim number As Byte = &H_6A
@@ -49,23 +49,23 @@ Dim number As Byte = &H_6A
 
 ## <a name="programming-tips"></a>程式設計提示
 
-- **負數。** 因為 `Byte` 是不帶正負號的類型，所以不能代表負數。 如果您在評估為類型 `Byte`的運算式上使用一元減號（`-`）運算子，Visual Basic 會先將運算式轉換成 `Short`。
+- **負數。** 因為它是`Byte`無符號類型，它不能表示負數。 如果在計算為鍵入`-``Byte`的運算式上使用一元減號 （ ） 運算子，Visual Basic 將運算式轉換為`Short`第一個運算式。
   
-- **格式轉換。** 當 Visual Basic 讀取或寫入檔案時，或當它呼叫 Dll、方法和屬性時，可以在資料格式之間自動轉換。 在這類格式轉換期間，會保留儲存在 `Byte` 變數和陣列中的二進位資料。 您不應該使用二進位資料的 `String` 變數，因為在 ANSI 和 Unicode 格式之間轉換時，其內容可能會損毀。
+- **格式轉換。** 當 Visual Basic 讀取或寫入檔時，或者當它調用 DLL、方法和屬性時，它可以在資料格式之間自動轉換。 存儲在變數和陣列`Byte`中的二進位資料在此類格式轉換期間保留。 不應將`String`變數用於二進位資料，因為其內容在 ANSI 和 Unicode 格式之間的轉換過程中可能會損壞。
 
-- **加寬.** `Byte` 資料類型會擴大至 `Short`、`UShort`、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`或 `Double`。 這表示您可以將 `Byte` 轉換成這些類型的任何一種，而不會遇到 <xref:System.OverflowException?displayProperty=nameWithType> 錯誤。
+- **擴大。** 資料類型`Byte``Short`擴展到 、 `UShort` `Integer`、 、 `UInteger`、 `Long` `ULong`、 `Decimal` `Single`、 `Double`、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 這意味著您可以轉換為`Byte`任何這些類型的，而不會遇到<xref:System.OverflowException?displayProperty=nameWithType>錯誤。
   
-- **輸入字元。** `Byte` 沒有常數值型別字元或識別項型別字元。
+- **鍵入字元。** `Byte`沒有常值型別字元或識別項型別字元。
 
-- **架構類型。** 在 .NET Framework 中對應的類型為 <xref:System.Byte?displayProperty=nameWithType> 結構。
+- **架構類型：** 在 .NET Framework 中對應的類型為 <xref:System.Byte?displayProperty=nameWithType> 結構。
 
 ## <a name="example"></a>範例
 
- 在下列範例中，`b` 是 `Byte` 變數。 語句會示範變數的範圍，以及對其進行位移位運算子的應用。
+ 在下面的示例中，`b`是一個`Byte`變數。 這些語句演示了變數的範圍以及位移位運算子對變數的應用。
 
  [!code-vb[VbVbalrDataTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#16)]  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Byte?displayProperty=nameWithType>
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)

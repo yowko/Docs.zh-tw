@@ -2,14 +2,14 @@
 title: 如何：查詢一組資料夾中的位元組總數 (LINQ)
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: c32985d7b1d87a45107159726d6ee24aea0b59b7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 25e2c2894d9feccf42ee92bdddd17d8558779e6c
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346031"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266972"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>如何：查詢一組資料夾中的總位元組數（LINQ）（Visual Basic）
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>如何：查詢一組資料夾 （LINQ） 中的位元組總數（可視基本）
 此範例示範如何擷取所指定資料夾及其所有子資料夾中之所有檔案使用的位元組總數。  
   
 ## <a name="example"></a>範例  
@@ -58,7 +58,7 @@ Module QueryTotalBytes
             retval = fi.Length  
         Catch ex As System.IO.FileNotFoundException  
             ' If a file is no longer present,  
-            ' just return zero bytes.   
+            ' just return zero bytes.
             retval = 0  
         End Try  
   
@@ -72,9 +72,9 @@ End Module
  查詢會呼叫外面另一個方法來取得檔案長度。 這麼做是要解決可能會因下列狀況引發的例外狀況：自呼叫 `GetFiles` 而建立 <xref:System.IO.FileInfo> 物件後，有另一個執行緒刪除了檔案。 即使已建立 <xref:System.IO.FileInfo> 物件，還是可能會發生這個例外狀況，原因是 <xref:System.IO.FileInfo> 物件會在它的 <xref:System.IO.FileInfo.Length%2A> 屬性第一次受到存取時，嘗試用目前最新的長度來重新整理這個屬性。 讓這個作業進入查詢外部的 try-catch 區塊，程式碼就會遵循規則，以避免查詢中會造成副作業的作業。 一般而言，處理例外狀況時需要十分小心，以確定應用程式不是處於未知狀態。  
   
 ## <a name="compile-the-code"></a>編譯程式碼  
-建立 Visual Basic 的主控台應用程式專案，其中包含 System. Linq 命名空間的 `Imports` 語句。
+創建視覺化基本主控台應用程式專案，包含 System.Linq 命名空間的`Imports`語句。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

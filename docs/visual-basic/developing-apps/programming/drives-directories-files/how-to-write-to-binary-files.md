@@ -7,10 +7,10 @@ helpviewer_keywords:
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
 ms.openlocfilehash: 72d019f5f49868bd84d0507535e8ebc547b50e25
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334437"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>如何：在 Visual Basic 中寫入二進位檔案
@@ -25,11 +25,11 @@ ms.locfileid: "74334437"
 
 [!code-vb[VbVbcnMyFileSystem#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#27)]
 
-## <a name="robust-programming"></a>最佳化程式設計
+## <a name="robust-programming"></a>穩固程式設計
 
 以下條件可能會造成例外狀況：
 
-- 因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元，或者它包含無效的字元。 (<xref:System.ArgumentException>)
+- 因下列其中一項原因而導致路徑無效：它是長度為零的字串、它只包含空白字元，或者它包含無效的字元。 (<xref:System.ArgumentException>).
 
 - 路徑無效，因為它是 `Nothing` (<xref:System.ArgumentNullException>)。
 

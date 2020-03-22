@@ -1,5 +1,5 @@
 ---
-title: 如何：從固定寬度的文字檔讀取
+title: 如何：從固定寬度文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fixed-width text file
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 ms.assetid: 99be5692-967a-4e85-993e-cd18139a5a69
 ms.openlocfilehash: 3cea9bfe2388f0ca510b15cb020f899b81c4603c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334631"
 ---
 # <a name="how-to-read-from-fixed-width-text-files-in-visual-basic"></a>如何：在 Visual Basic 中從固定寬度的文字檔讀取
@@ -23,7 +23,7 @@ ms.locfileid: "74334631"
   
 ### <a name="to-parse-a-fixed-width-text-file"></a>剖析固定寬度的文字檔  
   
-1. 建立新的 `TextFieldParser`。 下列程式碼會建立名為 `TextFieldParser` 的 `Reader`，並開啟檔案 `test.log`。  
+1. 建立新的 `TextFieldParser`。 下列程式碼會建立名為 `Reader` 的 `TextFieldParser`，並開啟檔案 `test.log`。  
   
      [!code-vb[VbFileIORead#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#9)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "74334631"
   
      [!code-vb[VbFileIORead#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#11)]  
   
-4. 使用 `While` 和 `Using` 關閉 `End While` 和 `End Using` 區塊。  
+4. 使用 `End While` 和 `End Using` 關閉 `While` 和 `Using` 區塊。  
   
      [!code-vb[VbFileIORead#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#12)]  
   
@@ -53,7 +53,7 @@ ms.locfileid: "74334631"
   
 - 指定的檔案不存在 (<xref:System.IO.FileNotFoundException>)。  
   
-- 發生使用者權限不足而無法存取檔案的部分信任狀況 (<xref:System.Security.SecurityException>)  
+- 發生使用者權限不足而無法存取檔案的部分信任狀況 (<xref:System.Security.SecurityException>).  
   
 - 路徑太長 (<xref:System.IO.PathTooLongException>)。  
   

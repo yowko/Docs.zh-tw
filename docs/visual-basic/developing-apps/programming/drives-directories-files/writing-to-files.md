@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
 ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74352143"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>在 Visual Basic 中寫入檔案
@@ -31,7 +31,7 @@ ms.locfileid: "74352143"
  示範如何寫入二進位檔案。  
   
  [如何：將文字寫入我的文件目錄中的檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-in-the-my-documents-directory.md)  
- 示範如何在 [我的文件] 目錄中建立和寫入新的文字檔。  
+ 示範如何在 [我的文件]**** 目錄中建立和寫入新的文字檔。  
   
  [如何：以 StreamWriter 將文字寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files-with-a-streamwriter.md)  
  示範如何使用 <xref:System.IO.StreamWriter?displayProperty=nameWithType> 物件寫入檔案。  

@@ -23,65 +23,65 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: b6588335f7634cc87a9fc14cbfc4ba80baad1abb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352612"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79400852"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>依位置和名稱傳遞引數 (Visual Basic)
 
-當您呼叫 `Sub` 或 `Function` 程式時，您可以*依位置*傳遞引數（以它們出現在程式定義中的順序），也可以*依名稱*傳遞它們，而不考慮位置。
+調用`Sub`或`Function`過程時，可以*按位置*傳遞參數（按程序定義中顯示參數的順序）傳遞參數，也可以*按名稱*傳遞參數，而不考慮位置。
 
-當您依名稱傳遞引數時，您可以指定引數的宣告名稱，後面接著冒號和等號（`:=`），後面接著引數值。 您可以依任何順序提供具名引數。
+按名稱傳遞參數時，指定參數聲明的名稱後跟冒號和等號 （`:=`），後跟參數值。 您可以按任意順序提供具名引數。
 
-例如，下列 `Sub` 程式會採用三個引數：
+例如，以下`Sub`過程採用三個參數：
 
 [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]
 
-當您呼叫此程式時，您可以依位置、名稱或混合使用兩者來提供引數。
+調用此過程時，可以按位置、名稱或使用兩者的混合物提供參數。
 
-## <a name="passing-arguments-by-position"></a>依位置傳遞引數
+## <a name="passing-arguments-by-position"></a>按位置傳遞參數
 
-您可以呼叫 `Display` 方法，其其引數是由位置傳遞，並以逗號分隔，如下列範例所示：
+可以調用`Display`該方法，其參數通過位置，並通過逗號分隔，如以下示例所示：
 
 [!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)]
 
-如果您省略位置引數清單中的選擇性引數，則必須使用逗號來保存其位置。 下列範例會呼叫不含 `age` 引數的 `Display` 方法：
+如果在位置參數清單中省略可選參數，則必須使用逗號保留其位置。 下面的示例調用沒有`Display``age`參數的方法：
 
 [!code-vb[ByPositionWithOptionalArgument](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#3)]
 
-## <a name="passing-arguments-by-name"></a>依名稱傳遞引數
+## <a name="passing-arguments-by-name"></a>按名稱傳遞參數
 
-或者，您可以使用以名稱傳遞的引數（也以逗號分隔）來呼叫 `Display`，如下列範例所示：
+或者，可以使用通過名稱`Display`傳遞的參數進行調用，也可以用逗號分隔，如以下示例所示：
 
 [!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)]
 
-當您呼叫具有多個選擇性引數的程式時，以這種方式依名稱傳遞引數特別有用。 如果您依名稱提供引數，則不需要使用連續的逗號來表示遺漏的位置引數。 以名稱傳遞引數也能讓您更輕鬆地追蹤您要傳遞的引數，以及您要省略哪一個。
+以這種方式按名稱傳遞參數在調用具有多個可選參數的過程時特別有用。 如果按名稱提供參數，則不必使用連續逗號來表示缺少的位置參數。 按名稱傳遞參數還便於跟蹤您傳遞的參數以及省略的參數。
 
-## <a name="mixing-arguments-by-position-and-by-name"></a>依位置和名稱來混合引數
+## <a name="mixing-arguments-by-position-and-by-name"></a>按位置和名稱混合參數
 
-您可以在單一程序呼叫中，依位置和名稱提供引數，如下列範例所示：
+您可以在單個程序呼叫中按位置和名稱提供參數，如以下示例所示：
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)]
 
-在上述範例中，不需要額外的逗號來保存省略之 `age` 引數的位置，因為 `birth` 是以名稱傳遞。
+在前面的示例中，不需要額外的逗號來保留省略`age`的參數的位置，因為`birth`是按名稱傳遞的。
 
-在15.5 之前的 Visual Basic 版本中，當您以位置和名稱的混合來提供引數時，位置引數必須全部排在最前面。 當您依名稱提供引數之後，所有剩餘的引數都必須以名稱傳遞。  例如，下列對 `Display` 方法的呼叫會顯示編譯器錯誤[BC30241：預期的具名引數](../../../misc/bc30241.md)。
+在 15.5 之前的 Visual Basic 版本中，當您通過位置和名稱的混合提供參數時，位置參數必須都放在第一位。 按名稱提供參數後，所有剩餘的參數都必須按名稱傳遞。  例如，對`Display`該方法的以下調用顯示編譯器錯誤[BC30241：具名引數預期](../../../misc/bc30241.md)。
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)]
 
-從 Visual Basic 15.5 開始，如果結束位置引數位於正確的位置，位置引數就可以跟隨具名引數。 如果在 Visual Basic 15.5 下編譯，則先前對 `Display` 方法的呼叫會編譯成功，且不再產生編譯器錯誤[BC30241](../../../misc/bc30241.md)。
+從 Visual Basic 15.5 開始，如果結束位置參數位於正確的位置，則位置參數可以遵循具名引數。 如果在 Visual Basic 15.5 下編譯，則對`Display`該方法的上一個調用將成功編譯，不再生成編譯器錯誤[BC30241](../../../misc/bc30241.md)。
 
-當您想要使用具名引數，讓程式碼更容易閱讀時，這項混合和比對名稱和位置引數的功能特別有用。 例如，下列 `Person` 類別的函式需要 `Person`類型的兩個引數，兩者都可以 `Nothing`。
+當您希望使用具名引數使代碼更具可讀性時，這種以任意順序混合和匹配具名引數和位置參數的能力特別有用。 例如，以下`Person`類建構函式需要兩個類型的`Person`參數，這兩個參數都可以。 `Nothing`
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)]
 
-當 `father` 和 `mother` 引數的值 `Nothing`時，使用混合名稱和位置引數有助於讓程式碼的意圖清楚明瞭：
+使用混合命名和位置參數有助於在 和`father``mother`參數的值為`Nothing`時明確代碼的意圖：
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)]
 
-若要遵循具有具名引數的位置引數，您必須將下列專案加入至您的 Visual Basic 專案（\*. vbproj）檔案：
+要遵循具有具名引數的位置參數，必須向 Visual Basic 專案 （.vbproj）\*檔添加以下元素：
 
 ```xml
 <PropertyGroup>
@@ -89,21 +89,21 @@ ms.locfileid: "74352612"
 </PropertyGroup>
 ```
 
-如需詳細資訊，請參閱[設定 Visual Basic 語言版本](../../../language-reference/configure-language-version.md)。
+有關詳細資訊[，請參閱設置視覺化基礎語言版本](../../../language-reference/configure-language-version.md)。
 
-## <a name="restrictions-on-supplying-arguments-by-name"></a>依名稱提供引數的限制
+## <a name="restrictions-on-supplying-arguments-by-name"></a>按名稱提供參數的限制
 
-您無法依名稱傳遞引數，以避免輸入必要的引數。 您只能省略選擇性的引數。
+不能按名稱傳遞參數以避免輸入所需的參數。 只能省略可選參數。
 
-您無法依名稱傳遞參數陣列。 這是因為當您呼叫程式時，會為參數陣列提供不限數目的逗點分隔引數，而且編譯器無法將多個引數與單一名稱建立關聯。
+不能按名稱傳遞參數陣列。 這是因為當您調用 過程時，為參數陣列提供無限數量的逗號分隔參數，並且編譯器不能將多個參數與單個名稱相關聯。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [如何：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)
 - [以傳值和傳址方式傳遞引數](./passing-arguments-by-value-and-by-reference.md)
-- [選擇性參數](./optional-parameters.md)
+- [可選參數](./optional-parameters.md)
 - [參數陣列](./parameter-arrays.md)
-- [Optional](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [選](../../../../visual-basic/language-reference/modifiers/optional.md)
 - [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

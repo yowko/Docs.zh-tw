@@ -8,15 +8,15 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 ms.assetid: 384033c6-18f9-4d59-9610-36371226558f
 ms.openlocfilehash: 572463d1f03d768fb133f2dac59b012051f053bb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74334555"
 ---
 # <a name="how-to-read-text-from-files-with-a-streamreader-visual-basic"></a>如何：以 StreamReader 從檔案讀取文字 (Visual Basic)
 
-`My.Computer.FileSystem` 物件提供方法來開啟 <xref:System.IO.TextReader> 和 <xref:System.IO.TextWriter>。 除非您選取 [全部]`OpenTextFileWriter``OpenTextFileReader` 索引標籤，否則 **和** 這兩種方法是未出現在 IntelliSense 中的進階方法。  
+`My.Computer.FileSystem` 物件提供方法來開啟 <xref:System.IO.TextReader> 和 <xref:System.IO.TextWriter>。 除非您選取 [全部]**** 索引標籤，否則 `OpenTextFileWriter` 和 `OpenTextFileReader` 這兩種方法是未出現在 IntelliSense 中的進階方法。  
   
 ### <a name="to-read-a-line-from-a-file-with-a-text-reader"></a>使用文字讀取器從檔案讀取一行  
   
@@ -24,7 +24,7 @@ ms.locfileid: "74334555"
   
      [!code-vb[VbFileIORead#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#1)]  
   
-## <a name="robust-programming"></a>最佳化程式設計  
+## <a name="robust-programming"></a>穩固程式設計  
 
  讀取的檔案必須是文字檔。  
   

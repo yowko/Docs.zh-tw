@@ -7,17 +7,17 @@ helpviewer_keywords:
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
 ms.openlocfilehash: f18556bbe1ca2d77925482319246d403892d31ef
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74353595"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>逐步解說：篩選 My.Application.Log 輸出 (Visual Basic)
 
 本逐步解說示範如何變更 `My.Application.Log` 物件的預設記錄檔篩選，以控制哪些資訊會從 `Log` 物件傳遞至接聽程式，而哪些資訊會由接聽程式寫入。 由於組態資訊是儲存在應用程式的組態檔中，因此即使在建置應用程式之後，您仍可以變更記錄行為。
 
-## <a name="getting-started"></a>使用者入門
+## <a name="getting-started"></a>開始使用
 
 `My.Application.Log` 寫入的每個訊息都有相關聯的嚴重性層級，而篩選機制會使用這個層級來控制記錄檔輸出。 此範例應用程式會使用 `My.Application.Log` 方法，寫入數個不同嚴重性層級的記錄檔訊息。
 
@@ -52,7 +52,7 @@ ms.locfileid: "74353595"
 
 ## <a name="filtering-for-all-myapplicationlog-listeners"></a>篩選所有 My.Application.Log 接聽程式
 
-`My.Application.Log` 物件會使用名為 <xref:System.Diagnostics.SourceSwitch> 的 `DefaultSwitch`，來控制要將 `WriteEntry` 和 `WriteException` 方法的哪些訊息傳遞給記錄檔接聽程式。 您可以將 `DefaultSwitch` 的值設定為 <xref:System.Diagnostics.SourceLevels> 列舉值之一，以在應用程式的組態檔中設定它。 根據預設，其值為 "Information"。
+`My.Application.Log` 物件會使用名為 `DefaultSwitch` 的 <xref:System.Diagnostics.SourceSwitch>，來控制要將 `WriteEntry` 和 `WriteException` 方法的哪些訊息傳遞給記錄檔接聽程式。 您可以將 `DefaultSwitch` 的值設定為 <xref:System.Diagnostics.SourceLevels> 列舉值之一，以在應用程式的組態檔中設定它。 根據預設，其值為 "Information"。
 
 下表顯示依據特定 `DefaultSwitch` 設定的假設，記錄檔要將訊息寫入接聽程式所需的嚴重性層級。
 
@@ -61,7 +61,7 @@ ms.locfileid: "74353595"
 |`Critical`|`Critical`|
 |`Error`|`Critical` 或 `Error`|
 |`Warning`|`Critical`、`Error` 或 `Warning`|
-|`Information`|`Critical`、 `Error`、 `Warning`或 `Information`|
+|`Information`|`Critical`、`Error`、`Warning` 或 `Information`|
 |`Verbose`|`Critical`、`Error`、`Warning`、`Information` 或 `Verbose`|
 |`ActivityTracing`|`Start`、`Stop`、`Suspend`、`Resume` 或 `Transfer`|
 |`All`|允許所有訊息。|
@@ -74,7 +74,7 @@ ms.locfileid: "74353595"
 
 #### <a name="to-log-only-activity-tracing-events"></a>若只要記錄活動追蹤事件
 
-1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選取 [開啟]。
+1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選取 [開啟]。********
 
      -或-
 
@@ -82,11 +82,11 @@ ms.locfileid: "74353595"
 
     1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。
 
-    2. 在 [加入新項目] 對話方塊中，選擇 [應用程式組態檔]。
+    2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
 
-    3. 按一下 [加入]。
+    3. 按一下 **[新增]**。
 
-2. 找出位於最上層 `<switches>` 區段中 `<system.diagnostics>` 區段的 `<configuration>` 區段。
+2. 找出位於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<switches>` 區段。
 
 3. 尋找可將 `DefaultSwitch` 新增至參數集合的項目。 該項目應該與下列項目類似：
 
@@ -150,7 +150,7 @@ ms.locfileid: "74353595"
 
 #### <a name="to-log-only-activity-tracing-events"></a>若只要記錄活動追蹤事件
 
-1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。
+1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。********
 
      \-或-
 
@@ -158,13 +158,13 @@ ms.locfileid: "74353595"
 
     1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。
 
-    2. 在 [加入新項目] 對話方塊中，選擇 [應用程式組態檔]。
+    2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
 
-    3. 按一下 [加入]。
+    3. 按一下 **[新增]**。
 
-2. 在方案總管中，以滑鼠右鍵按一下 app.config。 選擇 [開啟]。
+2. 在方案總管中，以滑鼠右鍵按一下 app.config。**** 選擇 [開啟]****。
 
-3. 找出 `<listeners>` 區段，其位於具有 `<source>` 屬性 "DefaultSource" 之 `name` 區段中的 `<sources>` 區段下方。 `<sources>` 區段位於最上層 `<system.diagnostics>` 區段中的 `<configuration>` 區段下方。
+3. 找出 `<listeners>` 區段，其位於具有 `name` 屬性 "DefaultSource" 之 `<source>` 區段中的 `<sources>` 區段下方。 `<sources>` 區段位於最上層 `<configuration>` 區段中的 `<system.diagnostics>` 區段下方。
 
 4. 將此項目新增至 `<listeners>` 區段：
 

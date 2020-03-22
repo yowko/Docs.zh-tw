@@ -10,10 +10,10 @@ helpviewer_keywords:
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348937"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)
@@ -55,17 +55,17 @@ ms.locfileid: "74348937"
 
 - <xref:System.IO.MemoryStream>
 
-- <xref:System.Net.Sockets.NetworkStream>
+- <xref:System.Net.Sockets.NetworkStream>.
 
 下表列出一般會使用資料流來完成的工作︰
 
-|進行|請參閱|
+|至|請參閱|
 |---|---|
 |讀取和寫入資料檔案|[操作說明：讀取和寫入新建立的資料檔案](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
-|讀取檔案中的文字|[操作說明：從檔案讀取文字](../../../../standard/io/how-to-read-text-from-a-file.md)|
-|將文字寫入檔案中|[操作說明：將文字寫入檔案](../../../../standard/io/how-to-write-text-to-a-file.md)|
-|讀取字串中的字元|[操作說明：從字串中讀取字元](../../../../standard/io/how-to-read-characters-from-a-string.md)|
-|將字元寫入字串中|[操作說明：將字元寫入至字串](../../../../standard/io/how-to-write-characters-to-a-string.md)|
+|讀取檔案中的文字|[如何：從檔案讀取文字](../../../../standard/io/how-to-read-text-from-a-file.md)|
+|將文字寫入檔案中|[如何：將文字寫入檔案](../../../../standard/io/how-to-write-text-to-a-file.md)|
+|讀取字串中的字元|[如何：從字串中讀取字元](../../../../standard/io/how-to-read-characters-from-a-string.md)|
+|將字元寫入字串中|[如何：將字元寫入至字串](../../../../standard/io/how-to-write-characters-to-a-string.md)|
 |加密資料|[加密資料](../../../../standard/security/encrypting-data.md)|
 |解密資料|[解密資料](../../../../standard/security/decrypting-data.md)|
 
@@ -77,9 +77,9 @@ ms.locfileid: "74348937"
 
 下表列出與檔案存取和檔案屬性有關的工作︰
 
-|進行|請參閱|
+|至|請參閱|
 |---|---|
-|開啟文字並將其附加至記錄檔|[操作說明：開啟並附加至記錄檔](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
+|開啟文字並將其附加至記錄檔|[如何：開啟並附加至記錄檔](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |判斷檔案的屬性|<xref:System.IO.FileAttributes>|
 
 ## <a name="file-permissions"></a>檔案權限
@@ -92,15 +92,15 @@ ms.locfileid: "74348937"
 
 下表列出一般與隔離檔案儲存區相關聯的工作。
 
-|進行|請參閱|
+|至|請參閱|
 |---|---|
 |建立隔離存放區|[操作說明：取得隔離儲存區的存放區](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
-|列舉隔離存放區|[操作說明：列舉隔離儲存區的存放區](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
+|列舉隔離存放區|[如何：列舉隔離儲存區的存放區](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
 |刪除隔離存放區|[操作說明：刪除隔離儲存區中的存放區](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|
 |在隔離儲存區中建立檔案或目錄|[操作說明：在隔離儲存區中建立檔案和目錄](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
 |在隔離儲存區中尋找檔案|[操作說明：尋找隔離儲存區中的現有檔案和目錄](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
-|讀取或寫入隔離儲存區中的檔案|[操作說明：讀取和寫入隔離儲存區中的檔案](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
-|刪除隔離儲存區中的檔案或目錄|[操作說明：刪除隔離儲存區中的檔案和目錄](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|
+|讀取或寫入隔離儲存區中的檔案|[如何：讀取和寫入離儲存區中的檔案](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
+|刪除隔離儲存區中的檔案或目錄|[如何：刪除隔離儲存區中的檔案和目錄](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|
 
 ## <a name="file-events"></a>檔案事件
 
@@ -109,6 +109,6 @@ ms.locfileid: "74348937"
 ## <a name="see-also"></a>另請參閱
 
 - [撰寫資料流](../../../../standard/io/composing-streams.md)
-- [檔案和資料流 I/O](../../../../standard/io/index.md)
+- [檔和流 I/O](../../../../standard/io/index.md)
 - [非同步檔案 I/O](../../../../standard/io/asynchronous-file-i-o.md)
 - [用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

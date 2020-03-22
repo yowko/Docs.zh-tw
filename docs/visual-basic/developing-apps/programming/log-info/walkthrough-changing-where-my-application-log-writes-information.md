@@ -6,10 +6,10 @@ helpviewer_keywords:
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
 ms.openlocfilehash: bdee0a91360580b156c1734ef4c82139b18ce2b5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74336726"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>逐步解說：變更 My.Application.Log 寫入資訊的位置 (Visual Basic)
@@ -18,23 +18,23 @@ ms.locfileid: "74336726"
 
 ## <a name="prerequisites"></a>必要條件
 
-`Log` 物件可以將資訊寫入數個記錄檔接聽程式。 在變更設定前，您需要判斷目前的記錄檔接聽程式設定。 如需詳細資訊，請參閱 [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。
+`Log` 物件可以將資訊寫入數個記錄檔接聽程式。 在變更設定前，您需要判斷目前的記錄檔接聽程式設定。 如需詳細資訊，請參閱[逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。
 
 您也可以檢閱[如何：將事件資訊寫入至文字檔](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)，或[如何：寫入應用程式事件記錄檔](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)。
 
 ### <a name="to-add-listeners"></a>加入接聽程式
 
-1. 在 **方案總管** 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。
+1. 在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。********
 
-     \-或-
+     \- 或 -
 
      如果沒有 app.config 檔案︰
 
     1. 在 [ **專案** ] 功能表中，選擇 [ **加入新項目**]。
 
-    2. 在 [加入新項目] 對話方塊中，選取 [應用程式組態檔]。
+    2. 在 [加入新項目] **** 對話方塊中，選取 [應用程式組態檔] ****。
 
-    3. 按一下 [加入]。
+    3. 按一下 **[新增]**。
 
 2. 找出 `<listeners>` 區段，其位於 `<source>` 區段中具有 `name` 屬性 "DefaultSource" 的 `<sources>` 區段下。 `<sources>` 區段位於最上層 `<system.diagnostics>` 區段中的 `<configuration>` 區段。
 
@@ -155,13 +155,13 @@ ms.locfileid: "74336726"
 
      您可以使用的類型如下︰
 
-    - 寫入檔案記錄檔的 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 接聽程式。
+    - 寫入至檔案記錄檔的 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> 接聽程式。
 
-    - 將資訊寫入由 <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 參數指定之電腦事件記錄檔的 `initializeData` 接聽程式。
+    - 將資訊寫入至由 <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> 參數指定之電腦事件記錄檔的 `initializeData` 接聽程式。
 
-    - 寫入由 <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 參數中指定之檔案的 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 和 `initializeData` 接聽程式。
+    - 寫入至由 <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> 參數中指定之檔案的 <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> 和 `initializeData` 接聽程式。
 
-    - 寫入命令列主控台的 <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 接聽程式。
+    - 寫入至命令列主控台的 <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> 接聽程式。
 
      如需其他記錄檔接聽程式類型在何處寫入資訊的相關資訊，請查閱該類型的文件。
 

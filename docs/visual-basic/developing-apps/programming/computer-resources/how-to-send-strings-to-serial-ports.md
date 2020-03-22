@@ -8,10 +8,10 @@ helpviewer_keywords:
 - serial ports, sending strings to
 ms.assetid: 6ebf46cd-b2d0-4b2c-9a1f-be177b22ad52
 ms.openlocfilehash: b2051451142a7818a3b7d1bc564c5ae36b2579fe
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345591"
 ---
 # <a name="how-to-send-strings-to-serial-ports-in-visual-basic"></a>如何：在 Visual Basic 中將字串傳送至序列埠
@@ -34,11 +34,11 @@ ms.locfileid: "74345591"
   
 - 此範例假設電腦使用的是 `COM1`。  
   
-## <a name="robust-programming"></a>最佳化程式設計  
+## <a name="robust-programming"></a>穩固程式設計  
 
  此範例假設電腦使用的是 `COM1`；為了具有更大的彈性，程式碼應該允許使用者從可用序列埠清單中選取想要的序列埠。 如需詳細資訊，請參閱[如何：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)。  
   
- 此範例使用 `Using` 區塊以確保應用程式即使擲回例外狀況，也可關閉序列埠。 如需詳細資訊，請參閱 [Using 陳述式](../../../../visual-basic/language-reference/statements/using-statement.md)。  
+ 此範例使用 `Using` 區塊以確保應用程式即使擲回例外狀況，也可關閉序列埠。 有關詳細資訊，請參閱[使用語句](../../../../visual-basic/language-reference/statements/using-statement.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
