@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: 3ab8028062402e33b787a5a8649d93d975918393
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 42bde0b1843e52bbc16118bb056ade791591904e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665699"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249496"
 ---
-# <a name="nullable-type-inference-is-not-supported-in-this-context"></a><span data-ttu-id="2d86f-102">在此內容中不支援可為 Null 的類型推斷</span><span class="sxs-lookup"><span data-stu-id="2d86f-102">Nullable type inference is not supported in this context</span></span>
-<span data-ttu-id="2d86f-103">實值型別和結構可以宣告為可為 null。</span><span class="sxs-lookup"><span data-stu-id="2d86f-103">Value types and structures can be declared nullable.</span></span>  
+# <a name="nullable-type-inference-is-not-supported-in-this-context"></a><span data-ttu-id="017a4-102">在此內容中不支援可為 Null 的類型推斷</span><span class="sxs-lookup"><span data-stu-id="017a4-102">Nullable type inference is not supported in this context</span></span>
+<span data-ttu-id="017a4-103">數值型別和結構可以聲明為空。</span><span class="sxs-lookup"><span data-stu-id="017a4-103">Value types and structures can be declared nullable.</span></span>  
   
 ```vb  
 Dim a? As Integer  
 Dim b As Integer?  
 ```  
   
- <span data-ttu-id="2d86f-104">不過，您無法使用可為 null 的宣告型別推斷的結合。</span><span class="sxs-lookup"><span data-stu-id="2d86f-104">However, you cannot use the nullable declaration in combination with type inference.</span></span> <span data-ttu-id="2d86f-105">下列範例會造成這個錯誤。</span><span class="sxs-lookup"><span data-stu-id="2d86f-105">The following examples cause this error.</span></span>  
+ <span data-ttu-id="017a4-104">但是，不能將可無效聲明與型別推斷結合使用。</span><span class="sxs-lookup"><span data-stu-id="017a4-104">However, you cannot use the nullable declaration in combination with type inference.</span></span> <span data-ttu-id="017a4-105">以下示例導致此錯誤。</span><span class="sxs-lookup"><span data-stu-id="017a4-105">The following examples cause this error.</span></span>  
   
 ```vb  
 ' Not valid.  
@@ -30,13 +30,13 @@ Dim b As Integer?
 ' Dim d? = a  
 ```  
   
- <span data-ttu-id="2d86f-106">**錯誤 ID:** BC36629</span><span class="sxs-lookup"><span data-stu-id="2d86f-106">**Error ID:** BC36629</span></span>  
+ <span data-ttu-id="017a4-106">**錯誤 ID：** BC36629</span><span class="sxs-lookup"><span data-stu-id="017a4-106">**Error ID:** BC36629</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="2d86f-107">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="2d86f-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="017a4-107">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="017a4-107">To correct this error</span></span>  
   
-- <span data-ttu-id="2d86f-108">使用`As`子句來將變數宣告為可為 null。</span><span class="sxs-lookup"><span data-stu-id="2d86f-108">Use an `As` clause to declare the variable as nullable.</span></span>  
+- <span data-ttu-id="017a4-108">使用`As`子句將變數聲明為空數值型別。</span><span class="sxs-lookup"><span data-stu-id="017a4-108">Use an `As` clause to declare the variable as a nullable value type.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2d86f-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2d86f-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="017a4-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="017a4-109">See also</span></span>
 
-- [<span data-ttu-id="2d86f-110">可為 Null 的值類型</span><span class="sxs-lookup"><span data-stu-id="2d86f-110">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [<span data-ttu-id="2d86f-111">區域類型推斷</span><span class="sxs-lookup"><span data-stu-id="2d86f-111">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [<span data-ttu-id="017a4-110">空數值型別</span><span class="sxs-lookup"><span data-stu-id="017a4-110">Nullable Value Types</span></span>](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [<span data-ttu-id="017a4-111">區域型別推斷</span><span class="sxs-lookup"><span data-stu-id="017a4-111">Local Type Inference</span></span>](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

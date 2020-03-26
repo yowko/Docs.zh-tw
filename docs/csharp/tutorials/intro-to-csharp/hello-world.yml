@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 6e3742991820a8805b3c9b57767079940899d8fc
+  ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "73969414"
+  ms.lasthandoff: 03/18/2020
+  ms.locfileid: "79507005"
 items:
 - durationInMinutes: 1
   content: >
@@ -250,7 +250,7 @@ items:
     ```
 
 
-    <xref:System.String.Contains%2A> 方法會傳回一個**布林**值，告訴您是否已找到您要搜尋的字串。 **布林值**會儲存 `true` 或 `false` 值。 您將在稍後的課程中深入了解**布林值**。
+    <xref:System.String.Contains%2A> 方法會傳回一個**布林**值，告訴您是否已找到您要搜尋的字串。 **布林值**會儲存 `true` 或 `false` 值。 當顯示為文本輸出時，它們將大寫： `True` `False`和 。 您將在稍後的課程中深入了解**布林值**。
 
 
     ***挑戰***
