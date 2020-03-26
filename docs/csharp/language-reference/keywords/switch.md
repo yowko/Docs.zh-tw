@@ -12,14 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345397"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249314"
 ---
 # <a name="switch-c-reference"></a>switch (C# 參考)
+
+本文介紹該語句`switch`。 有關`switch`運算式的資訊（在 C# 8.0 仲介紹），請參閱[運算式和運算子](../operators/index.md)部分中有關[`switch`運算式](../operators/switch-expression.md)的文章。
 
 `switch` 是一個選取範圍陳述式，可根據使用「比對運算式」** 的模式比對，從候選項清單中選擇要執行的單一「參數區段」**。
 
@@ -106,7 +108,7 @@ switch (caseSwitch)
 
 `default` case 可以依任何順序出現在 `switch` 陳述式中。 不論它在原始程式碼中的順序為何，一律都會在評估過所有 `case` 標籤之後最後才進行評估。
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>使用 `switch` 陳述式進行的 <a name="pattern" /> 模式比對
+## <a name="pattern-matching-with-the-switch-statement"></a>使用 `switch` 陳述式進行的 <a name="pattern" /> 模式比對
 
 每個 `case` 陳述式都會定義一個模式，並在模式符合比對運算式時，執行其包含參數區段。 所有版本的 C# 都支援常數模式。 從 C# 7.0 開始，支援其餘的模式。
 
@@ -183,7 +185,7 @@ case null:
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" />`case` 陳述式和 `when` 子句
+## <a name="the-case-statement-and-the-when-clause"></a><a name="when" />`case` 陳述式和 `when` 子句
 
 從 C# 7.0 開始，因為 case 陳述式不需要互斥，所以您可以新增 `when` 子句來指定其他條件，您必須滿足這些條件，case 陳述式才會評估為 true。 `when` 子句可以是任何傳回布林值的運算式。
 

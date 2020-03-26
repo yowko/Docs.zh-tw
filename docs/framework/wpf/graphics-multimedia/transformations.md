@@ -8,27 +8,27 @@ helpviewer_keywords:
 - transformations [WPF], about transformations
 - transformations [WPF]
 - graphics [WPF], transformations
-- transform classes [WPF], 2-D
+- transform classes [WPF], 2D
 - scaling objects [WPF]
 - translating objects [WPF]
-- 2-D transform classes
+- 2D transform classes
 - rotating objects [WPF]
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26956b8ae692d6092a1c81643b94d05e297ef130
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925985"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111903"
 ---
 # <a name="transformations"></a>轉換
-轉換用來旋轉、 縮放、 轉譯，或扭曲<xref:System.Windows.FrameworkElement>物件。  
+變換用於旋轉、縮放、平移或傾斜<xref:System.Windows.FrameworkElement>物件。  
   
 ## <a name="in-this-section"></a>本節內容  
  [轉換概觀](transforms-overview.md)  
- [HOW-TO 主題](transformations-how-to-topics.md)  
+ [如何使用主題](transformations-how-to-topics.md)  
   
 ## <a name="see-also"></a>另請參閱
 

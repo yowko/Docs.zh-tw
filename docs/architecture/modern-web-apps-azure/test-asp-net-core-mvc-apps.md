@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 2b347442c4a9b7b6cf912ec461248f901dc45417
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa87fdba830398786cce8951d353e86bc4ff7491
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147487"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111045"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
@@ -64,7 +64,7 @@ Martin Fowler 撰寫了測試金字塔相關事項，其中的一個範例如圖
 
 可以使用最適合您的方式來組織測試專案。 依照類型 (單元測試、整合測試) 和測試內容 (依照專案、命名空間) 來分隔測試是不錯的做法。 此分隔該由單一測試專案中的資料夾組成，或是由多個測試專案組成，是設計上的決策。 單一專案是最簡單的，但針對有大量測試的大型專案，或為了能更容易執行不同的測試集，您可能需要有幾個不同的測試專案。 許多小組根據正在測試的專案來組織測試專案；對於具有許多專案的應用程式，這可能會導致大量測試專案，尤其是如果您仍然根據每個專案中的測試種類來分隔測試專案。 折衷方法是讓每個應用程式的每種測試都有一個專案，在測試專案中包含資料夾以指出正在測試的專案 (和類別)。
 
-常用的方法是在 'src' 資料夾下組織應用程式專案，並在平行的 ‘tests' 資料夾下組織應用程式測試專案。 如果您覺得這樣的組織很有用，您可以在 Visual Studio 中建立相符的解決方案資料夾。
+常見方法是在"src"資料夾下組織應用程式專案，並在並行"測試"資料夾下組織應用程式的測試專案。 如果您覺得這樣的組織很有用，您可以在 Visual Studio 中建立相符的解決方案資料夾。
 
 ![解決方案中的測試組織](./media/image9-2.png)
 
@@ -145,7 +145,7 @@ public IActionResult GetImage(int id)
 
 `_logger`並`_imageService`都作為依賴項注入。 現在，您可以測試傳遞給操作方法的相同 ID 是否傳遞給`_imageService`，並且生成的位元組是否作為 FileResult 的一部分返回。 您還可以測試錯誤日誌記錄按預期進行，如果缺少映射，則返回`NotFound`結果，假設這是重要的應用程式行為（即，不僅僅是開發人員為診斷問題而添加的臨時代碼）。 實際的檔案邏輯已移至另一個實作服務中，並且已擴大為針對遺失檔案情況來傳回應用程式特定的例外狀況。 您可以使用整合測試來獨立測試此實作。
 
-在多數情況下，建議您在控制器中使用全域例外處理常式，以便其使用最少邏輯數量，而可能用不著進行單元測試。 您應該使用功能測試及下方說明的 `TestServer` 類別來進行大部分的控制器動作測試。
+在大多數情況下，您需要在控制器中使用全域例外處理常式，因此它們中的邏輯量應該最小，可能不值得單位測試。 使用功能測試和下面描述的`TestServer`類對控制器操作進行大多數測試。
 
 ## <a name="integration-testing-aspnet-core-apps"></a>對 ASP.NET Core 應用程式進行整合測試
 
@@ -153,7 +153,7 @@ public IActionResult GetImage(int id)
 
 ## <a name="functional-testing-aspnet-core-apps"></a>對 ASP.NET Core 應用程式進行功能測試
 
-對 ASP.NET Core 應用程式來說，`TestServer` 類別使功能測試變得相當易於撰寫。 直接使用`TestServer``WebHostBuilder`（或 ）`HostBuilder`配置 （或 ） （與應用程式通常一樣`WebApplicationFactory`），或使用類型（自版本 2.1 起可用）。 您應該盡可能讓測試主機幾乎與生產主機完全一樣，以便測試的執行行為與應用程式在生產環境中的執行行為類似。 `WebApplicationFactory` 類別有助於設定 TestServer 的 ContentRoot，ASP.NET Core 用它來尋找靜態資源 (如檢視)。
+對 ASP.NET Core 應用程式來說，`TestServer` 類別使功能測試變得相當易於撰寫。 直接使用`TestServer``WebHostBuilder`（或 ）`HostBuilder`配置 （或 ） （與應用程式通常一樣`WebApplicationFactory`），或使用類型（自版本 2.1 起可用）。 嘗試盡可能將測試主機與生產主機匹配，以便測試練習行為類似于應用在生產中將執行的行為。 `WebApplicationFactory` 類別有助於設定 TestServer 的 ContentRoot，ASP.NET Core 用它來尋找靜態資源 (如檢視)。
 
 建立簡單功能測試的方法是，建立實作 IClassFixture\<WebApplicationFactory\<TEntry>> 的測試類別，其中 TEntry 是 Web 應用程式的啟動類別。 準備好測試類別之後，測試固件可以使用處理站的 CreateClient 方法來建立用戶端：
 
@@ -290,7 +290,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.WebRazorPages
 }
 ```
 
-此功能測試將執行完整的 ASP.NET Core MVC / Razor Pages 應用程式堆疊，包括可能存在的所有中介軟體、篩選器、繫結器等等。 它會確認指定的路由 ("/") 會傳回預期的成功狀態碼和 HTML 輸出。 因並未設定真實的網頁伺服器，所以避免了使用真實的網頁伺服器進行測試之脆弱度 (例如防火牆設定的問題)。 針對 TestServer 執行的功能測試通常比整合與單元測試要慢，但比在網路上執行測試之網頁伺服器的測試要快得多。 您應該使用功能測試確保應用程式的前端堆疊可如預期般運作。 當您在控制器或頁面中找到重複項目並透過新增篩選器來處理這些項目時，這些測試會特別有用。 在理想情況下，這種重構不會變更應用程式的行為，而一整套功能測試會確認合乎該情況。
+此功能測試將執行完整的 ASP.NET Core MVC / Razor Pages 應用程式堆疊，包括可能存在的所有中介軟體、篩選器、繫結器等等。 它會確認指定的路由 ("/") 會傳回預期的成功狀態碼和 HTML 輸出。 因並未設定真實的網頁伺服器，所以避免了使用真實的網頁伺服器進行測試之脆弱度 (例如防火牆設定的問題)。 針對 TestServer 執行的功能測試通常比整合與單元測試要慢，但比在網路上執行測試之網頁伺服器的測試要快得多。 使用功能測試確保應用程式的前端堆疊按預期工作。 當您在控制器或頁面中找到重複項目並透過新增篩選器來處理這些項目時，這些測試會特別有用。 在理想情況下，這種重構不會變更應用程式的行為，而一整套功能測試會確認合乎該情況。
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>參考 - 測試 ASP.NET Core MVC 應用程式
 >

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: 3cf0d98c40e71a380b218c76d6e52d00cdd05342
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ceb831057a9a92aa7319d2004f04d7cf5ac820e
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186356"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111825"
 ---
 # <a name="custom-rendering-ink"></a>自訂呈現筆墨
 描<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>邊的屬性允許您指定描邊的外觀，例如其大小、顏色和形狀，但有時可能需要自訂超出<xref:System.Windows.Ink.Stroke.DrawingAttributes%2A>允許的外觀。 您可能想要自訂筆跡外觀，轉譯具噴槍、油畫及許多其他效果的外觀。 Windows 演示文稿基礎 （WPF） 允許您通過實現自訂<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>和<xref:System.Windows.Ink.Stroke>物件來自訂渲染墨蹟。  
@@ -62,7 +62,7 @@ ms.locfileid: "79186356"
   
  該<xref:System.Windows.Ink.Stroke>類還可以執行點擊測試。 您還可以通過重寫當前類中<xref:System.Windows.Ink.Stroke.HitTest%2A>的方法來實現您自己的點擊測試演算法。  
   
- 以下 C# 代碼演示了<xref:System.Windows.Ink.Stroke>將<xref:System.Windows.Input.StylusPoint>資料呈現為三維描邊的自訂類。  
+ 以下 C# 代碼演示了<xref:System.Windows.Ink.Stroke>將<xref:System.Windows.Input.StylusPoint>資料呈現為 3D 描邊的自訂類。  
   
  [!code-csharp[AdvancedInkTopicsSamples#19](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/DynamicRenderer.cs#19)]
  [!code-vb[AdvancedInkTopicsSamples#19](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdvancedInkTopicsSamples/VisualBasic/DynamicRenderer.vb#19)]  

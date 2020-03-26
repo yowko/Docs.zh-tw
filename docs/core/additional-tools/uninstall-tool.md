@@ -3,12 +3,12 @@ title: 卸載工具
 description: .NET 核心卸載工具的概述，該工具是一種引導式工具，可控制清理 .NET 核心 SDK 和運行時。
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: bd20cba133cbb754dcca48e48b76a391a9efacba
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 816aef6ab8bc0e51bb8befb14fde60513d4fadfc
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847012"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507317"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core 解除安裝工具
 
@@ -44,6 +44,9 @@ ms.locfileid: "78847012"
 ### <a name="step-1---display-installed-net-core-sdks-and-runtimes"></a>步驟 1 - 顯示已安裝的 .NET 核心 SDK 和運行時
 
 該`dotnet-core-uninstall list`命令列出了可使用此工具刪除的已安裝的 .NET Core SDK 和運行時。 Visual Studio 可能需要某些 SDK 和運行時，並且顯示它們時會記下為什麼不建議卸載它們。
+
+> [!NOTE]
+> 在大多數情況下，`dotnet-core-uninstall list`命令的輸出與 已`dotnet --info`安裝版本的清單不匹配。 具體來說，此工具不會顯示由 ZIP 檔案安裝或由 Visual Studio 管理的版本（任何與 Visual Studio 2019 16.3 或更高版本一起安裝的版本）。 檢查版本是否由 Visual Studio 管理的方法之一是在 中`Add or Remove Programs`查看它，其中 Visual Studio 託管版本在其顯示名稱中標記為此類版本。
 
 **點網核心卸載清單**
 

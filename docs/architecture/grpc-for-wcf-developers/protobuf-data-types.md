@@ -2,12 +2,12 @@
 title: 原型純量資料型別 - gRPC，適用于 WCF 開發人員
 description: 瞭解 Protobuf 和 gRPC 在 .NET Core 中支援的基本和眾所周知的資料類型。
 ms.date: 09/09/2019
-ms.openlocfilehash: a40f51fa32ddb97ba417ec01f31e1f0187f0d544
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea3b53426ecf6f50f3bae22a537e227b07248508
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148123"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249431"
 ---
 # <a name="protobuf-scalar-data-types"></a>Protobuf 純量資料類型
 
@@ -125,7 +125,7 @@ Protobuf 將使用生成的消息`T?`屬性的簡單 （`int?`例如 ， ） 。
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-已知類型`Timestamp`，並在`Duration`.NET 中表示為類，因此不需要空版本。 但是，在轉換為`DateTimeOffset`或`TimeSpan`時，請務必檢查這些類型的屬性的 null。
+已知類型`Timestamp`，並在`Duration`.NET 中表示為類。 在 C# 8 及以後，可以使用可無參考型別。 但是，在轉換為`DateTimeOffset`或`TimeSpan`時，請務必檢查這些類型的屬性的 null。
 
 ## <a name="decimals"></a>小數位數
 

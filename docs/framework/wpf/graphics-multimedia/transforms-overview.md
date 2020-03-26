@@ -3,24 +3,24 @@ title: 轉換概觀
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transformations [WPF], about transformations
-- classes [WPF], 2-D transform
-- transform classes [WPF], 2-D
-- 2-D transform classes
+- classes [WPF], 2D transform
+- transform classes [WPF], 2D
+- 2D transform classes
 - FrameworkElement objects [WPF], rotating
 - FrameworkElement objects [WPF], skewing
 - FrameworkElement objects [WPF], translating
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 49fb0109e1d7db065f7e241955f30cb038699020
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5f29404a301eb023ff24b2890531dede6440ec4
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187459"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111955"
 ---
 # <a name="transforms-overview"></a>轉換概觀
-本主題介紹如何使用二維<xref:System.Windows.Media.Transform>類來旋轉、縮放、移動（平移）和傾斜<xref:System.Windows.FrameworkElement>物件。  
+本主題介紹如何使用 2D<xref:System.Windows.Media.Transform>類旋轉、縮放、移動（平移）和傾斜<xref:System.Windows.FrameworkElement>物件。  
 
 <a name="whatIsATransformSection"></a>
 ## <a name="what-is-a-transform"></a>什麼是轉換？  
@@ -31,7 +31,7 @@ ms.locfileid: "79187459"
   
  下表顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 矩陣的結構。  
   
-### <a name="a-2-d-transformation-matrix"></a>2D 轉換矩陣  
+### <a name="a-2d-transformation-matrix"></a>二維變換矩陣  
   
 ||||  
 |-|-|-|  
@@ -45,7 +45,7 @@ ms.locfileid: "79187459"
   
 <a name="transformClassesSection"></a>
 ## <a name="transform-classes"></a>轉換類別  
- Windows 演示基礎 （WPF） 為常見轉換<xref:System.Windows.Media.Transform>操作提供以下二維類：  
+ Windows 演示基礎 （WPF） 為常見<xref:System.Windows.Media.Transform>轉換操作提供以下 2D 類：  
   
 |類別|描述|範例|圖例|  
 |-----------|-----------------|-------------|------------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "79187459"
 |<xref:System.Windows.Media.TransformGroup>|將多個<xref:System.Windows.Media.TransformGroup>物件分組為單個<xref:System.Windows.Media.Transform>物件，然後可以應用於轉換屬性。|[將多個轉換套用至物件](how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|創建其他<xref:System.Windows.Media.Transform>類未提供的自訂轉換。 使用 時<xref:System.Windows.Media.MatrixTransform>，將直接操作矩陣。|[使用 MatrixTransform 建立自訂轉換](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- Windows 演示基礎 （WPF） 還提供三維轉換。 如需詳細資訊，請參閱 <xref:System.Windows.Media.Media3D.Transform3D> 類別。  
+ Windows 演示基礎 （WPF） 還提供 3D 轉換。 如需詳細資訊，請參閱 <xref:System.Windows.Media.Media3D.Transform3D> 類別。  
   
 <a name="transformationproperties"></a>
 ## <a name="common-transformation-properties"></a>常見轉換屬性  
@@ -142,7 +142,7 @@ ms.locfileid: "79187459"
   
  [!code-xaml[Transforms_snip#GraphicsMMAnimatedRotateButtonExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/ButtonAnimatedRotateTransformExample.xaml#graphicsmmanimatedrotatebuttonexamplewholepage)]  
   
- 如需完整範例，請參閱 [2D 轉換範例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。 如需動畫的詳細資訊，請參閱[動畫概觀](animation-overview.md)。  
+ 有關完整示例，請參閱[2D 變換示例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。 如需動畫的詳細資訊，請參閱[動畫概觀](animation-overview.md)。  
   
 <a name="freezable_features"></a>
 ## <a name="freezable-features"></a>Freezable 功能  
@@ -153,4 +153,4 @@ ms.locfileid: "79187459"
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
 - [如何使用主題](transformations-how-to-topics.md)
-- [2D 轉換範例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)
+- [2D 變換示例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181468"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291760"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>如何：設定免註冊啟用的 .NET Framework 架構 COM 元件
 .NET Framework 型元件的免註冊啟用，只比 COM 元件的免註冊啟用略為複雜。 安裝程式需要兩個資訊清單：  
@@ -24,7 +24,7 @@ ms.locfileid: "79181468"
   
  本主題描述如何建立應用程式資訊清單與應用程式的關聯、建立元件資訊清單與元件的關聯，以及將元件資訊清單內嵌在組件中。  
   
-### <a name="to-create-an-application-manifest"></a>建立應用程式資訊清單  
+## <a name="create-an-application-manifest"></a>創建應用程式清單  
   
 1. 使用 XML 編輯器，建立 (或修改) COM 應用程式所擁有的應用程式資訊清單，而其與一或多個 Managed 元件交互操作。  
   
@@ -32,7 +32,8 @@ ms.locfileid: "79181468"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
      如需資訊清單元素及其屬性的相關資訊，請參閱[應用程式資訊清單](/windows/desktop/SbsCs/application-manifests) \(英文\)。  
@@ -46,7 +47,8 @@ ms.locfileid: "79181468"
                         name="myOrganization.myDivision.myComApp"
                         version="1.0.0.0"
                         processorArchitecture="msil"
-      />  
+      />
+    </assembly>  
     ```  
   
 4. 識別相依組件。 在下列範例中，`myComApp` 取決於 `myManagedComp`。  
@@ -75,9 +77,9 @@ ms.locfileid: "79181468"
   
 5. 儲存並命名資訊清單檔。 應用程式資訊清單的名稱就是後接 .manifest 副檔名的組件可執行檔名稱。 例如，myComApp.exe 的應用程式資訊清單檔案名稱是 myComApp.exe.manifest。  
   
- 您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 如需詳細資訊，請參閱[關於並存組件](/windows/desktop/SbsCs/about-side-by-side-assemblies-) \(英文\)。  
+您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 有關詳細資訊，請參閱[關於並行程式集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)。  
   
-#### <a name="to-create-a-component-manifest"></a>建立元件資訊清單  
+## <a name="create-a-component-manifest"></a>創建元件清單  
   
 1. 使用 XML 編輯器，建立元件資訊清單以描述 Managed 組件。  
   
@@ -85,7 +87,8 @@ ms.locfileid: "79181468"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
 3. 識別檔案的擁有者。 應用程式資訊清單檔中 `<dependentAssembly>` 項目的 `<assemblyIdentity>` 項目必須符合元件資訊清單中的項目。 在下列範例中，`myManagedComp` 版本 1.2.3.4 擁有資訊清單檔。  
@@ -98,7 +101,8 @@ ms.locfileid: "79181468"
                         version="1.2.3.4"  
                         publicKeyToken="8275b28176rcbbef"  
                         processorArchitecture="msil"  
-           />  
+           />
+    </assembly>
     ```  
   
 4. 識別組件中的每個類別。 使用 `<clrClass>` 項目，唯一識別 Managed 組件中的每個類別。 項目 (即 `<assembly>` 項目的子項目) 具有下表所述的屬性。  

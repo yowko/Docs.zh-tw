@@ -3,12 +3,12 @@ title: 使用預設介面方法創建混合類型
 description: 使用預設介面成員，您可以擴展具有實現器可選預設實現的介面。
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: aaf8d34e27c9c56d95560656eb7a7b24b152c053
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee0536ef51f9bea3e6851be23cc19fa28cc6916b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240102"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134380"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>教程：使用預設介面方法創建類時，在 中混合功能
 
@@ -22,7 +22,7 @@ ms.locfileid: "78240102"
 > * 創建使用預設實現的類。
 > * 創建覆蓋部分或全部預設實現的類。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 您需要設置電腦以運行 .NET Core，包括 C# 8.0 編譯器。 C# 8.0 編譯器可從[Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core)或更高版本開始。
 
@@ -117,7 +117,7 @@ public class OverheadLight : ITimerLight { }
 
 [!code-csharp[Enumeration for power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetPowerStatus)]
 
-預設實現假定交流電源：
+預設實現不假定電源：
 
 [!code-csharp[Report a default power status](~/samples/snippets/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 

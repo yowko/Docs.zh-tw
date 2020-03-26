@@ -4,40 +4,40 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - imaging
 - graphics [Windows Forms], categories
-- 2-D vector graphics
+- 2D vector graphics
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: a69fa7a1ccad353c879731de05dc47f0d6ae8795
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: fa7391ef0f7170ddb9d9d24aa5a1a03635bf46e0
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505227"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291731"
 ---
 # <a name="three-categories-of-graphics-services"></a>圖形服務的三個分類
-在 Windows Form 中的圖形供應項目可分為下列三個廣泛的類別：  
+Windows 表單中的圖形產品分為以下三大類：  
   
-- 二維 (2-d) 向量圖形  
+- 二維 （二-D） 向量圖形  
   
-- 映像  
+- 建立映像  
   
 - 印刷樣式  
   
-## <a name="2-d-vector-graphics"></a>2d 向量圖形  
- 二維向量圖形是基本型別;例如線條、 曲線和圖形;由組點座標系統上所指定。 比方說，一條直線由其兩個端點，並讓其左上角，以及提供其寬度和高度的數字的一組的位置點所指定的矩形。 連接的直線，線條的點陣列所指定簡單的路徑。 貝茲曲線是由四個控制點的複雜的曲線。  
+## <a name="2d-vector-graphics"></a>2D 向量圖形  
+ 二維向量圖形（如直線、曲線和圖形）是由坐標系上的點集指定的基元。 例如，直線由其兩個端點指定，矩形由一個點指定，該點給出其左上角的位置，以及一對表示其寬度和高度的數位。 簡單路徑由由直線連接的點陣列指定。 貝塞爾樣條線是由四個控制點指定的複雜曲線。  
   
- GDI + 提供儲存原始物件的相關資訊的類別和結構本身，儲存有關如何將繪製基本項目，資訊的類別和類別，實際進行繪製。 比方說，<xref:System.Drawing.Rectangle>結構會儲存的位置和大小的矩形<xref:System.Drawing.Pen>類別會儲存有關線條色彩、 線條寬度和線條樣式，和<xref:System.Drawing.Graphics>類別有方法來繪製線條、 矩形、 路徑和其他數字。 有數個也<xref:System.Drawing.Brush>儲存方式的相關資訊的類別會關閉數字，而且路徑會填滿色彩或圖樣。  
+ GDI+ 提供類和結構，這些類和結構存儲有關基元本身的資訊、存儲有關基元繪製方式的資訊的類以及實際執行繪圖的類。 例如，結構存儲<xref:System.Drawing.Rectangle>矩形的位置和大小;例如，該結構存儲矩形的位置和大小。類<xref:System.Drawing.Pen>存儲有關線顏色、線寬和線樣式的資訊;<xref:System.Drawing.Graphics>類具有繪製線條、矩形、路徑和其他圖形的方法。 還有幾個<xref:System.Drawing.Brush>類存儲有關如何用顏色或圖案填充閉合的數位和路徑的資訊。  
   
- 您可以記錄向量映像，也就是一連串的圖形命令，在中繼檔中。 GDI + 提供<xref:System.Drawing.Imaging.Metafile>記錄、 顯示及儲存的中繼檔的類別。 具有<xref:System.Drawing.Imaging.MetafileHeader>和<xref:System.Drawing.Imaging.MetaHeader>類別，您可以檢查儲存在中繼檔標頭中的資料。  
+ 您可以在中繼檔中記錄向量圖像（即圖形命令序列）。 GDI+ 提供<xref:System.Drawing.Imaging.Metafile>用於錄製、顯示和保存中繼檔的類。 使用<xref:System.Drawing.Imaging.MetafileHeader>和<xref:System.Drawing.Imaging.MetaHeader>類，可以檢查存儲在中繼檔標頭中的資料。  
   
-## <a name="imaging"></a>映像  
- 某些類型的圖片會很難或無法以顯示與向量圖形的技術。 比方說，在工具列按鈕上的圖片，會顯示為圖示的圖片很難進行指定為直線和曲線的集合。 太過擁擠的棒球最高解析度數位相片是更難以建立與向量技巧。 此類型的映像會儲存為點陣圖，也就是數字，代表在螢幕上的每個點的色彩的陣列。 GDI + 提供<xref:System.Drawing.Bitmap>以便顯示、 管理，以及將點陣圖儲存的類別。  
+## <a name="imaging"></a>建立映像  
+ 使用向量圖形技術很難或不可能顯示某些類型的圖片。 例如，工具列按鈕上的圖片和顯示為圖示的圖片很難指定為線條和曲線的集合。 使用向量技術，製作擁擠的棒球場的高解析度數位照片就更加困難了。 此類型的圖像存儲為點陣圖，即表示螢幕上單個點顏色的數位陣列。 GDI+ 提供<xref:System.Drawing.Bitmap>用於顯示、操作和保存點陣圖的類。  
   
 ## <a name="typography"></a>印刷樣式  
- 印刷樣式是文字的以各種不同的字型、 大小和樣式的顯示。 GDI + 提供這項複雜工作的廣泛支援。 GDI + 中的新功能之一是子像素反鋸齒功能，可讓文字 LCD 螢幕上呈現較平滑的外觀。  
+ 排版是文本以各種字體、大小和樣式顯示的。 GDI+ 為這一複雜任務提供了廣泛的支援。 GDI+ 中的新功能之一是子圖元抗鋸齒，它使在 LCD 螢幕上呈現的文本外觀更平滑。  
   
- 此外，Windows Forms 會提供選項來繪製文字中的 GDI 功能其<xref:System.Windows.Forms.TextRenderer>類別。  
+ 此外，Windows 表單還提供使用類<xref:System.Windows.Forms.TextRenderer>中的 GDI 功能繪製文本的選項。  
   
 ## <a name="see-also"></a>另請參閱
 

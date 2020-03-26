@@ -3,19 +3,21 @@ title: 在 Linux RHEL 7 套裝軟體管理器上安裝 .NET 核心 - .NET 核心
 description: 使用包管理器在 RHEL 7 上安裝 .NET 核心 SDK 和運行時。
 author: thraka
 ms.author: adegeo
-ms.date: 12/03/2019
-ms.openlocfilehash: 4f85ed3da8a434fcd5b6ee88491daf623c3c8b31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: d1f1372b32c7b2471a96492d48aab5533dadb64a
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76980180"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134207"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>RHEL 7 套裝軟體管理器 - 安裝 .NET 核心
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
 本文介紹如何使用包管理器在 RHEL 7 上安裝 .NET Core。
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-your-red-hat-subscription"></a>註冊您的紅帽訂閱
 

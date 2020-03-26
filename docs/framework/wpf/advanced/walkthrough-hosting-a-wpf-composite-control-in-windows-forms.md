@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: e3326f654e05ef7d487a76f076f8ad0da3637096
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88efab8adf36989938ba5aa887a28b41eb8820f3
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187239"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291627"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Form 中裝載 WPF 複合控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 但是，當您對 Windows 表單代碼進行大量投資時，使用擴展現有 Windows 表單應用程式比從頭開始[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]重寫應用程式更有效。 常見方案是，您希望在 Windows 表單應用程式中嵌入一個或多個實現[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]的控制項。 有關自訂 WPF 控制項的詳細資訊，請參閱[控制項自訂](../controls/control-customization.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "79187239"
   
  有關本演練中說明的任務的完整代碼清單，請參閱在 Windows[表單示例中託管 WPF 複合控制項](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
 
 若要完成這個逐步解說，您必須具有 Visual Studio。  
   
@@ -181,11 +181,11 @@ namespace MyControls
   
 <a name="winforms_host_section"></a>
 ## <a name="implementing-the-windows-forms-host-application"></a>實作 Windows Forms 主應用程式  
- Windows 表單主機應用程式使用物件<xref:System.Windows.Forms.Integration.ElementHost>承載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。 應用程式處理事件`OnButtonClick`以從複合控制項接收資料。 應用程式也會有一組選項按鈕，可用來修改控制項的外觀。 下圖顯示應用程式。  
+ Windows 表單主機應用程式使用物件<xref:System.Windows.Forms.Integration.ElementHost>承載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。 應用程式處理事件`OnButtonClick`以從複合控制項接收資料。 該應用程式還有一組選項按鈕，可用於修改控制項的外觀。 下圖顯示應用程式。  
 
 下圖顯示了託管在 Windows 表單應用程式中的 WPF 複合控制項"  
 
- ![顯示 Windows 表單託管 Avalon 控制項的 Scteenshot。](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
+ ![顯示 Windows 表單託管 Avalon 控制項的螢幕截圖。](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>建立專案  
  啟動專案：  
@@ -329,4 +329,4 @@ namespace MyControls
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中設計 XAML](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [逐步解說：在 Windows Form 中裝載立體 WPF 複合控制項](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+- [演練：在 Windows 表單中託管 3D WPF 複合控制項](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

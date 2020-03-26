@@ -3,18 +3,18 @@ title: C# 與 Visual Studio Code 使用者入門
 description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您的第一個 .NET Core 應用程式。
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: 8eaf1ba2314dcab96db615a8691afed82c5011a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49a1271f2bf74224e189e70bebf0d22c49408e5d
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398878"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111058"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 
 .NET Core 提供快速且模組化的平台，可建立在 Windows、Linux 和 macOS 上執行的應用程式。 搭配使用 Visual Studio Code 與 C# 擴充功能，以取得具備 C# IntelliSense (智慧型程式碼完成) 與偵錯完整支援的強大編輯體驗。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 1. 安裝[視覺化工作室代碼](https://code.visualstudio.com/)。
 2. 安裝[.NET 核心 SDK](https://dotnet.microsoft.com/download)。
@@ -79,7 +79,7 @@ ms.locfileid: "79398878"
     ![設定中斷點](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. 要開始調試，請按<kbd>F5</kbd>或選擇綠色箭頭。 當偵錯程式到達您在上一個步驟中設定的中斷點時，它會停止您程式的執行。
-    - 進行偵錯時，您可以在左上角窗格中檢視您的本機變數或使用偵錯主控台。
+    - 調試時，您可以在左上角窗格中查看本地變數或使用調試主控台。
 
 7. 選取頂端的藍色箭頭以繼續偵錯，或選取頂端的紅色正方形以停止偵錯。
 
@@ -90,7 +90,7 @@ ms.locfileid: "79398878"
 
 ## <a name="add-a-class"></a>新增類別
 
-1. 要添加新類，請按右鍵 VSCode 資源管理器並選擇 **"新檔**"。 這會在您於 VSCode 中開啟的資料夾內新增檔案。
+1. 要添加新類，請在 VSCode 資源管理器中按右鍵並選擇 **"新檔**"。 這會在您於 VSCode 中開啟的資料夾內新增檔案。
 2. *MyClass.cs*命名檔。 您必須在結尾加上 `.cs` 副檔名來儲存它，系統才能將它辨識為 csharp 檔案。
 3. 新增下方程式碼來建立您的第一個類別。 請確保包含正確的命名空間，以便可以從*Program.cs*檔中引用它：
 

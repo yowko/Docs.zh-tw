@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: fa7138127379b069b646c4b2488d1973a3ddd628
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143313"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249691"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET 框架中的新增功能
 
@@ -427,14 +427,14 @@ c.SameSite = SameSiteMode.Lax
       <forms cookieSameSite="Lax">
          <!-- ...   -->
       </forms>
-   <authentication />
+   </authentication>
    <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
 
 <a name="net472" />
 
-#### <a name="networking"></a>網路功能
+#### <a name="networking"></a>網路
 
 **實作 HttpClientHandler 屬性**
 
@@ -500,7 +500,7 @@ NET Framework 4.7.2 會新增飛地式 Always Encrypted 的支援。 Always Encr
 從 .NET Framework 4.7.2 開始，診斷小幫手可以找出從指定來源 URI 建立的  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries>。（此功能供診斷助理使用，而不是生產應用程式使用。Visual Studio 的"編輯和繼續"功能等診斷助理允許使用者編輯資源詞典，目的是將更改應用於正在運行的應用程式。 達到這個目標的其中一個步驟，就是尋找執行中應用程式已從所編輯之字典建立的所有 ResourceDictionary。 例如，應用程式可以宣告其內容是從指定來源 URI 複製而來的 ResourceDictionary：
 
 ```xml
-<ResourceDictionary Source="MyRD.xaml">
+<ResourceDictionary Source="MyRD.xaml" />
 ```
 
 在*MyRD.xaml* 中編輯原始標記的診斷助理可以使用新功能查找字典。此功能是透過新的靜態方法 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType> 來實作。 診斷小幫手會使用可識別原始標記的絕對 URI 來呼叫新方法，如下列程式碼所示：
@@ -630,7 +630,7 @@ End Class
 
 <a name="net471"/>
 
-#### <a name="networking"></a>網路功能
+#### <a name="networking"></a>網路
 
 **Message.HashAlgorithm 的 SHA-2 支援**
 
@@ -699,7 +699,7 @@ ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。 ASP.NET
 
 <a name="net47" />
 
-#### <a name="networking"></a>網路功能
+#### <a name="networking"></a>網路
 
 .NET Framework 4.7 新增與網路有關的下列功能︰
 
@@ -788,7 +788,7 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中
 
 - [SqlClient](#SQLClient)
 
-- [視窗通信基金會](#WCF)
+- [Windows Communication Foundation](#WCF)
 
 - [Windows Presentation Foundation (WPF)](#WPF462)
 
@@ -901,7 +901,7 @@ End Interface
 
 <a name="Crypto462" />
 
-### <a name="cryptography"></a>Cryptography
+### <a name="cryptography"></a>密碼編譯
 
 **支援包含 FIPS 186-3 DSA 的 X509 憑證**
 
@@ -1256,7 +1256,7 @@ Windows 現在提供將現有 Windows 傳統型應用程式 (包括 WPF 和 Wind
 
 - [Windows Workflow Foundation](#WWF461)
 
-- [分析](#Profile461)
+- [程式碼剖析](#Profile461)
 
 - [NGen](#NGEN461)
 
@@ -1371,7 +1371,7 @@ WPF 包含 [NuGet 套件](https://www.nuget.org/packages/Microsoft.Wpf.Interop.D
 
 <a name="Profile461" />
 
-### <a name="profiling"></a>分析
+### <a name="profiling"></a>程式碼剖析
 
 非受控分析 API 增強了下列功能：
 

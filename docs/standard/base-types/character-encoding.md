@@ -1,6 +1,6 @@
 ---
-title: .NET 中的字元編碼
-description: 了解 .NET 中的編碼及解碼字元。
+title: 如何在 .NET 中使用字元編碼類
+description: 瞭解如何在 .NET 中使用字元編碼類。
 ms.date: 12/22/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,76 +11,53 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 3cd461d8c56c3f31bf3ffe04acf239ecd32fe328
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 063cac1de6634125d7dabad9d627bceff877e567
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711437"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546733"
 ---
-# <a name="character-encoding-in-net"></a>.NET 中的字元編碼
+# <a name="how-to-use-character-encoding-classes-in-net"></a>如何在 .NET 中使用字元編碼類
 
-字元是可以用許多不同的方式來表示的抽象實體。 字元編碼是一套系統，可將所支援之字元集中的每個字元與代表該字元的特定值配對。 例如，摩斯密碼就是一種字元編碼，可將羅馬字母中的每個字元與適合透過電報線路傳輸的點和虛線圖樣配對。 電腦的字元編碼可將所支援之字元集中的每個字元與代表該字元的數值配對。 字元編碼包含兩個不同的元件：
+本文介紹如何使用 .NET 提供的類來使用各種編碼方案對文本進行編碼和解碼。 說明假定您已閱讀[.NET 中字元編碼簡介](character-encoding-introduction.md)。
 
-- 編碼器，可將字元序列轉譯成數值 (位元組) 序列。
+## <a name="encoders-and-decoders"></a>編碼器和解碼器
 
-- 解碼器，可將位元組序列轉譯成字元序列。
+.NET 提供編碼類，這些類使用各種編碼系統對文本進行編碼和解碼。 例如，<xref:System.Text.UTF8Encoding>類描述編碼到 UTF-8 和解碼的規則。 .NET 對`string`實例使用 UTF-16<xref:System.Text.UnicodeEncoding>編碼（由類表示）。 編碼器和解碼器可用於其他編碼方案。
 
-字元編碼描述編碼器和解碼器運作時所依據的規則。 例如， <xref:System.Text.UTF8Encoding> 類別描述編碼和解碼 8 位元 Unicode 轉換格式 (UTF-8) 的規則，該格式使用一到四個位元組來表示單一 Unicode 字元。 編碼和解碼也可包含驗證。 例如， <xref:System.Text.UnicodeEncoding> 類別會檢查所有 Surrogate，確定它們是由有效的 Surrogate 字組所組成。 （代理項對由代碼點的字元組成，該字元的範圍從 U+D800 到 U+DBFF，後跟一個代碼點的字元，代碼點範圍從 U+DC00 到 U_DFFF。 回退策略確定編碼器如何處理無效字元或解碼器如何處理無效位元組。
+編碼和解碼也可包含驗證。 例如，<xref:System.Text.UnicodeEncoding>類檢查代理項範圍內`char`的所有實例，以確保它們處於有效的代理項對中。 後援策略決定編碼器如何處理無效的字元，或解碼器如何處理無效的位元組。
 
 > [!WARNING]
 > .NET 編碼類別提供儲存和轉換字元資料的方法。 這些類別不應用來儲存字串格式的二進位資料。 根據使用的編碼方式，使用編碼類別將二進位資料轉換成字串格式可能會導致未預期的行為，並且產生不正確或損毀的資料。 若要將二進位資料轉換成字串格式，請使用 <xref:System.Convert.ToBase64String%2A?displayProperty=nameWithType> 方法。
 
-.NET 使用 UTF-16 編碼 (以 <xref:System.Text.UnicodeEncoding> 類別表示) 來表示字元和字串。 以 Common Language Runtime 為目標的應用程式使用編碼器將 Common Language Runtime 所支援的 Unicode 字元表示對應至其他編碼配置， 並使用解碼器將非 Unicode 編碼的字元對應至 Unicode。
-
-本主題包含下列章節：
-
-- [.NET 中的編碼](../../../docs/standard/base-types/character-encoding.md#Encodings)
-
-- [選取編碼類別](../../../docs/standard/base-types/character-encoding.md#Selecting)
-
-- [使用編碼物件](../../../docs/standard/base-types/character-encoding.md#Using)
-
-- [選擇後援策略](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)
-
-- [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)
-
-<a name="Encodings"></a>
-
-## <a name="encodings-in-net"></a>.NET 中的編碼
-
 .NET 中的所有字元編碼類別都會繼承自 <xref:System.Text.Encoding?displayProperty=nameWithType> 類別，這是定義所有字元編碼共通功能的抽象類別。 若要存取 .NET 中實作的個別編碼物件，請執行下列作業：
 
-- 使用 <xref:System.Text.Encoding> 類別的靜態屬性，這些屬性會傳回代表 .NET 中可用之標準字元編碼 (ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32) 的物件。 例如， <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Text.UnicodeEncoding> 物件。 每個物件會使用取代後援，來處理無法編碼的字串和無法解碼的位元組。 (如需詳細資訊，請參閱 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 一節。)
+- 使用 <xref:System.Text.Encoding> 類別的靜態屬性，這些屬性會傳回代表 .NET 中可用之標準字元編碼 (ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32) 的物件。 例如， <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Text.UnicodeEncoding> 物件。 每個物件會使用取代後援，來處理無法編碼的字串和無法解碼的位元組。 有關詳細資訊，請參閱[替換回退](../../../docs/standard/base-types/character-encoding.md#Replacement)。
 
-- 呼叫編碼的類別建構函式。 ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32 編碼的物件可以透過這種方式執行個體化。 每個物件預設會使用取代後援，來處理無法編碼的字串和無法解碼的位元組，不過您可以指定改為擲回例外狀況  (如需詳細資訊，請參閱 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 和 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 一節。)
+- 呼叫編碼的類別建構函式。 ASCII、UTF-7、UTF-8、UTF-16 和 UTF-32 編碼的物件可以透過這種方式執行個體化。 每個物件預設會使用取代後援，來處理無法編碼的字串和無法解碼的位元組，不過您可以指定改為擲回例外狀況  有關詳細資訊，請參閱[替換回退](../../../docs/standard/base-types/character-encoding.md#Replacement)和[異常回退](../../../docs/standard/base-types/character-encoding.md#Exception)。
 
-- 呼叫 <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 建構函式，並將代表編碼的整數傳遞給該建構函式。 標準編碼物件使用取代後援，來處理無法編碼的字串和無法解碼的位元組，而字碼頁和雙位元組字元集 (DBCS) 編碼物件則是使用自動調整後援。 (如需詳細資訊，請參閱 [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) 一節。)
+- 呼叫 <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> 建構函式，並將代表編碼的整數傳遞給該建構函式。 標準編碼物件使用取代後援，來處理無法編碼的字串和無法解碼的位元組，而字碼頁和雙位元組字元集 (DBCS) 編碼物件則是使用自動調整後援。 有關詳細資訊，請參閱[最佳貼裝回退](../../../docs/standard/base-types/character-encoding.md#BestFit)。
 
 - 呼叫 <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> 方法，這個方法會傳回 .NET 中可用的任何標準、字碼頁或 DBCS 編碼。 多載可讓您同時為編碼器和解碼器指定後援物件。
 
-> [!NOTE]
-> Unicode 標準會對每個受支援字集中的每個字元，指派一個字碼指標 (數字) 和一個名稱。 例如，字元 "A" 是由字碼指標 U+0041 和名稱 "LATIN CAPITAL LETTER A" 來表示。 Unicode 轉換格式 (UTF) 編碼定義將字碼指標編碼為一或多個位元組序列的方式。 Unicode 編碼配置簡化全球化應用程式的開發作業，因為它能夠以單一編碼表示任何字元集的字元。 應用程式開發人員不再需要追蹤用來產生特定語言或書寫系統字元的編碼配置，同時資料可在各國系統之間共用，而不會損毀。
->
-> .NET 支援由 Unicode 標準定義的三種編碼：UTF-8、UTF-16 和 UTF-32。 如需詳細資訊，請參閱 [Unicode 首頁](https://www.unicode.org/) \(英文\) 的＜Unicode 標準＞。
+您可以藉由呼叫 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 方法，來擷取 .NET 中所有可用編碼的相關資訊。 .NET 支援下表中列出的字元編碼方案。
 
-您可以藉由呼叫 <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> 方法，來擷取 .NET 中所有可用編碼的相關資訊。 .NET 支援下表所列的字元編碼系統。
-
-|編碼|類別|描述|優點/缺點|
-|--------------|-----------|-----------------|-------------------------------|
-|ASCII|<xref:System.Text.ASCIIEncoding>|使用位元組較低的七個位元編碼有限範圍的字元。|由於這個編碼僅支援 U+0000 到 U+007F 之間的字元值，因此大部分的情況下並不適用於國際化的應用程式。|
-|UTF-7|<xref:System.Text.UTF7Encoding>|以 7 位元 ASCII 字元序列表示字元。 非 ASCII 的 Unicode 字元則以 ASCII 字元的逸出序列表示。|UTF-7 支援電子郵件和新聞群組通訊協定之類的通訊協定。 不過，UTF-7 並沒有特別安全或穩固。 在某些情況下，變更一個位元便可能會徹底改變整個 UTF-7 字串的解譯。 而在其他情況下，不同的 UTF-7 字串可能會編碼為相同的文字。 對於包含非 ASCII 字元的序列而言，UTF-7 比 UTF-8 需要更多空間，而且編碼/解碼的速度比較慢。 因此，您應該盡可能使用 UTF-8，而不是 UTF-7。|
-|UTF-8|<xref:System.Text.UTF8Encoding>|以一到四個位元組的序列表示每個 Unicode 字碼指標。|UTF-8 支援 8 位元的資料大小，而且適用於許多現有的作業系統。 對於 ASCII 字元範圍而言，UTF-8 與 ASCII 編碼完全相同，而且允許範圍更廣的字元集。 不過，針對中日韓 (CJK) 字集，UTF-8 可能要求每個字元需有三個位元組，而且造成的資料大小可能比 UTF-16 還大。 請注意，ASCII 資料量 (例如 HTML 標記) 有時可能是 CJK 範圍大小增加的原因。|
-|UTF-16|<xref:System.Text.UnicodeEncoding>|以一個或兩個 16 位元整數的序列表示每個 Unicode 字碼指標。 雖然 Unicode 補充字元 (U+10000 及以上) 需要兩個 UTF-16 Surrogate 字碼指標，但最常用的 Unicode 字元只需要一個 UTF-16 字碼指標。 同時支援位元組由小到大和位元組由大到小的位元組順序。|Common Language Runtime 會使用 UTF-16 編碼表示 <xref:System.Char> 和 <xref:System.String> 值，而 Windows 作業系統會使用該編碼表示 `WCHAR` 值。|
-|UTF-32|<xref:System.Text.UTF32Encoding>|以 32 位元整數表示每個 Unicode 字碼指標。 同時支援位元組由小到大和位元組由大到小的位元組順序。|當編碼空間對作業系統十分重要，而應用程式想要在作業系統上避免 UTF-16 編碼的 Surrogate 字碼指標行為時，可以使用 UTF-32 編碼。 畫面上呈現的單一字符仍然可以使用一個以上的 UTF-32 字元編碼。|
-|ANSI/ISO 編碼||提供各種字碼頁的支援。 在 Windows 作業系統上，字碼頁是用來支援特定語言或語言群組。 如需列出 .NET 所支援之字碼頁的表格，請參閱 <xref:System.Text.Encoding> 類別。 您可以藉由呼叫 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法，為特定字碼頁擷取編碼物件。|字碼頁包含 256 個字碼指標，並且以零起始。 在大部分的字碼頁中，0 到 127 的字碼指標代表 ASCII 字元集，而各字碼頁的 128 到 255 字碼指標則有很大的差異。 例如，字碼頁 1252 提供拉丁書寫系統 (包括英文、德文和法文) 的字元。 字碼頁 1252 中的最後 128 個字碼指標含有強調文字字元。 字碼頁 1253 提供希臘文書寫系統所需的字元碼。 字碼頁 1253 中的最後 128 個字碼指標含有希臘文字元。 因此，採用 ANSI 字碼頁的應用程式無法將希臘文和德文儲存在相同的文字資料流中，除非它包含了表示參考字碼頁的識別項。|
-|雙位元組字元集 (DBCS) 編碼||支援包含超過 256 個字元的語言，例如中文、日文和韓文。 在 DBCS 中，一組字碼指標 (一個雙位元組) 會代表一個字元。 <xref:System.Text.Encoding.IsSingleByte%2A?displayProperty=nameWithType> 屬性會針對 DBCS 編碼傳回 `false` 。 您可以藉由呼叫 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法，為特定 DBCS 擷取編碼物件。|在 DBCS 中，一組字碼指標 (一個雙位元組) 會代表一個字元。 當應用程式處理 DBCS 資料時，DBCS 字元的第一個位元組 (前導位元組) 會與緊接在它後面的後隨位元組一起處理。 由於單獨一組雙位元組字碼指標可依據字碼頁表示不同的字元，因此這個配置仍然不允許在相同資料流中結合兩種語言，例如日文和中文。|
+|編碼類|描述|
+|--------------|-----------|
+|[Ascii](xref:System.Text.ASCIIEncoding)|使用位元組較低的七個位元編碼有限範圍的字元。 由於這個編碼僅支援 U+0000 到 U+007F 之間的字元值，因此大部分的情況下並不適用於國際化的應用程式。|
+|[UTF-7](xref:System.Text.UTF7Encoding)|以 7 位元 ASCII 字元序列表示字元。 非 ASCII 的 Unicode 字元則以 ASCII 字元的逸出序列表示。 UTF-7 支援電子郵件和新聞群組等協定。 不過，UTF-7 並沒有特別安全或穩固。 在某些情況下，變更一個位元便可能會徹底改變整個 UTF-7 字串的解譯。 而在其他情況下，不同的 UTF-7 字串可能會編碼為相同的文字。 對於包含非 ASCII 字元的序列而言，UTF-7 比 UTF-8 需要更多空間，而且編碼/解碼的速度比較慢。 因此，您應該盡可能使用 UTF-8，而不是 UTF-7。|
+|[UTF-8](xref:System.Text.UTF8Encoding)|以一到四個位元組的序列表示每個 Unicode 字碼指標。 UTF-8 支援 8 位元的資料大小，而且適用於許多現有的作業系統。 對於 ASCII 字元範圍而言，UTF-8 與 ASCII 編碼完全相同，而且允許範圍更廣的字元集。 但是，對於中日韓文 （CJK） 腳本，UTF-8 每個字元可能需要三個位元組，並且可能導致大於 UTF-16 的資料大小。 有時，ASCII 資料（如 HTML 標籤）的數量可以保證 CJK 範圍的大小增加。|
+|[UTF-16](xref:System.Text.UnicodeEncoding)|以一個或兩個 16 位元整數的序列表示每個 Unicode 字碼指標。 雖然 Unicode 補充字元 (U+10000 及以上) 需要兩個 UTF-16 Surrogate 字碼指標，但最常用的 Unicode 字元只需要一個 UTF-16 字碼指標。 同時支援位元組由小到大和位元組由大到小的位元組順序。 Common Language Runtime 會使用 UTF-16 編碼表示 <xref:System.Char> 和 <xref:System.String> 值，而 Windows 作業系統會使用該編碼表示 `WCHAR` 值。|
+|[UTF-32](xref:System.Text.UTF32Encoding)|以 32 位元整數表示每個 Unicode 字碼指標。 同時支援位元組由小到大和位元組由大到小的位元組順序。 當編碼空間對作業系統十分重要，而應用程式想要在作業系統上避免 UTF-16 編碼的 Surrogate 字碼指標行為時，可以使用 UTF-32 編碼。 畫面上呈現的單一字符仍然可以使用一個以上的 UTF-32 字元編碼。|
+|ANSI/ISO 編碼|提供各種字碼頁的支援。 在 Windows 作業系統上，字碼頁是用來支援特定語言或語言群組。 如需列出 .NET 所支援之字碼頁的表格，請參閱 <xref:System.Text.Encoding> 類別。 您可以藉由呼叫 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法，為特定字碼頁擷取編碼物件。 字碼頁包含 256 個字碼指標，並且以零起始。 在大部分的字碼頁中，0 到 127 的字碼指標代表 ASCII 字元集，而各字碼頁的 128 到 255 字碼指標則有很大的差異。 例如，字碼頁 1252 提供拉丁書寫系統 (包括英文、德文和法文) 的字元。 字碼頁 1252 中的最後 128 個字碼指標含有強調文字字元。 字碼頁 1253 提供希臘文書寫系統所需的字元碼。 字碼頁 1253 中的最後 128 個字碼指標含有希臘文字元。 因此，採用 ANSI 字碼頁的應用程式無法將希臘文和德文儲存在相同的文字資料流中，除非它包含了表示參考字碼頁的識別項。|
+|雙位元組字元集 (DBCS) 編碼|支援包含超過 256 個字元的語言，例如中文、日文和韓文。 在 DBCS 中，一組字碼指標 (一個雙位元組) 會代表一個字元。 <xref:System.Text.Encoding.IsSingleByte%2A?displayProperty=nameWithType> 屬性會針對 DBCS 編碼傳回 `false` 。 您可以藉由呼叫 <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> 方法，為特定 DBCS 擷取編碼物件。 當應用程式處理 DBCS 資料時，DBCS 字元的第一個位元組 (前導位元組) 會與緊接在它後面的後隨位元組一起處理。 由於單獨一組雙位元組字碼指標可依據字碼頁表示不同的字元，因此這個配置仍然不允許在相同資料流中結合兩種語言，例如日文和中文。|
 
 這些編碼可讓您處理 Unicode 字元，以及舊版應用程式中最常用的編碼。 此外，您可以藉由定義衍生自 <xref:System.Text.Encoding> 的類別及覆寫其成員，來建立自訂編碼。
 
-### <a name="platform-notes-net-core"></a>平台注意事項：.NET Core
+## <a name="net-core-encoding-support"></a>.NET 核心編碼支援
 
-根據預設，除了字碼頁 28591 以及UTF-8 和 UTF-16 等 Unicode 編碼之外，.NET Core 不會提供任何字碼頁編碼。 不過，您可將在以 .NET 為目標的標準 Windows 應用程式中找到的字碼頁編碼，加入至您的應用程式。 如需完整資訊，請參閱 <xref:System.Text.CodePagesEncodingProvider> 主題。
+根據預設，除了字碼頁 28591 以及UTF-8 和 UTF-16 等 Unicode 編碼之外，.NET Core 不會提供任何字碼頁編碼。 不過，您可將在以 .NET 為目標的標準 Windows 應用程式中找到的字碼頁編碼，加入至您的應用程式。 如需詳細資訊，請參閱 <xref:System.Text.CodePagesEncodingProvider> 主題。
 
 <a name="Selecting"></a>
 
@@ -285,9 +262,10 @@ ms.locfileid: "75711437"
 
 ## <a name="see-also"></a>另請參閱
 
+- [.NET 中的字元編碼簡介](character-encoding-introduction.md)
 - <xref:System.Text.Encoder>
 - <xref:System.Text.Decoder>
 - <xref:System.Text.DecoderFallback>
 - <xref:System.Text.Encoding>
 - <xref:System.Text.EncoderFallback>
-- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)
+- [全球化與當地語系化](../../../docs/standard/globalization-localization/index.md)

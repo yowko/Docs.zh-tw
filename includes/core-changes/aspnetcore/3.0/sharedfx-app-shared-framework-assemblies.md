@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937263"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79549595"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>共用框架：從 Microsoft 中刪除程式集. AspNetCore.App
 
@@ -36,7 +36,7 @@ ms.locfileid: "75937263"
 
 有關詳細資訊，請參閱[點網/阿斯平核心#3612](https://github.com/dotnet/aspnetcore/issues/3612)。
 
-實體框架核心作為 NuGet 包提供。 此更改使發貨模型與 .NET 上的所有其他資料訪問庫對齊。 它為實體框架核心提供了最簡單的路徑，以繼續創新，同時支援各種 .NET 平臺。 實體框架核心從共用框架中移出不會影響其作為 Microsoft 開發、支援和服務庫的狀態。 [.NET 核心支援策略](https://www.microsoft.com/net/platform/support-policy)繼續涵蓋它。
+實體框架核心作為 NuGet 包提供。 此更改使發貨模型與 .NET 上的所有其他資料訪問庫對齊。 它為實體框架核心提供了最簡單的路徑，以繼續創新，同時支援各種 .NET 平臺。 實體框架核心從共用框架中移出不會影響其作為 Microsoft 開發、支援和服務庫的狀態。 [.NET 核心支援策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)繼續涵蓋它。
 
 Json.NET和實體框架核心繼續與ASP.NET核心合作。 但是，它們不會包含在共用框架中。
 

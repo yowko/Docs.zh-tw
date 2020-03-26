@@ -4,12 +4,12 @@ description: 在本教程中，您將學習如何使用 Docker 對 .NET Core 應
 ms.date: 01/09/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e1904430a591b0e74a69d50a53869a130fc0a248
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8be12792e4a9e8511dba87e657f700cc4ec97a16
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157826"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546571"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>教程：容器化 .NET 核心應用
 
@@ -26,10 +26,10 @@ ms.locfileid: "78157826"
 
 您將了解 .NET Core 應用程式的 Docker 容器建置及部署工作。 *Docker 平臺*使用*Docker 引擎*快速構建和打包應用程式作為 Docker*映射*。 這些映像是以 *Dockerfile* 格式所撰寫，可在分層式容器中部署及執行。
 
-> [!TIP]
-> 如果您正在使用現有的ASP.NET核心應用程式，請參閱[瞭解如何將ASP.NET核心應用程式教程容器化](/aspnet/core/host-and-deploy/docker/building-net-docker-images)。
+> [!WARNING]
+> **本教程不適合ASP.NET核心應用。** 如果您使用的是ASP.NET核心，請閱讀[瞭解如何ASP.NET核心應用程式教程進行容器化](/aspnet/core/host-and-deploy/docker/building-net-docker-images)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 安裝下列先決條件：
 

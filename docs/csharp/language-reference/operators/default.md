@@ -1,25 +1,30 @@
 ---
-title: 預設運算子 - C# 參考
-description: 使用預設運算子組建類型的預設值
-ms.date: 08/01/2019
+title: 預設值運算式 - C# 引用
+description: 使用預設值運算式獲取類型的預設值
+ms.date: 03/13/2020
+f1_keywords:
+- default_CSharpKeyword
+- default
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 0d37fe952e71e74f014872231a2e58663dea9d18
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2adfd8d24066e9dad50c3c18407d3ade71b4b68e
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399480"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507174"
 ---
-# <a name="default-operator-c-reference"></a>預設運算子 (C# 參考)
+# <a name="default-value-expressions-c-reference"></a>預設值運算式（C# 引用）
 
-`default` 運算子會產生型別的[預設值](../builtin-types/default-values.md)。 `default` 運算子的引數必須是型別或或型別參數的名稱。
-
-下列範例會示範 `default` 運算子的使用方式：
-
-[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
+預設值運算式組建類型的[預設值](../builtin-types/default-values.md)。 有兩種類型的預設值運算式：[預設運算子](#default-operator)調用和[預設文本](#default-literal)。
 
 您還將關鍵字`default`用作[`switch`語句](../keywords/switch.md)中的預設大小寫標籤。
+
+## <a name="default-operator"></a>default 運算子
+
+`default` 運算子的引數必須是型別名稱或型別參數，如下列範例所示：
+
+[!code-csharp-interactive[default of T](snippets/DefaultOperator.cs#WithOperand)]
 
 ## <a name="default-literal"></a>預設常值
 

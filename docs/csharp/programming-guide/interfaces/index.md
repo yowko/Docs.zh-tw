@@ -5,16 +5,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: f4ee269f41e79562c113a7627816f797b083095e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79157074"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249177"
 ---
 # <a name="interfaces-c-programming-guide"></a>介面 (C# 程式設計手冊)
 
-介面包含非抽象[類](../../language-reference/keywords/class.md)或[結構](../../language-reference/builtin-types/struct.md)必須實現的一組相關功能的定義。 介面可以定義`static`方法，這些方法必須具有實現。 介面可以為其聲明的任何或所有實例成員提供預設實現。 介面不得聲明實例資料，如欄位、自動實現的屬性或類似屬性的事件。
+介面包含非抽象[類](../../language-reference/keywords/class.md)或[結構](../../language-reference/builtin-types/struct.md)必須實現的一組相關功能的定義。 介面可以定義`static`方法，這些方法必須具有實現。 從 C# 8.0 開始，介面可以定義成員的預設實現。 介面不得聲明實例資料，如欄位、自動實現的屬性或類似屬性的事件。
 
 例如，您可以藉由使用介面，在類別中包含多個來源的行為。 這項功能在 C# 中是很重要的，因為語言不支援類別的多重繼承。 此外，如果您要模擬結構繼承，則必須使用介面，因為它們實際上無法繼承自另一個結構或類別。
 
@@ -54,12 +54,12 @@ ms.locfileid: "79157074"
 - 介面無法直接具現化。 其成員是由實作介面的任何類別或結構實作。
 - 類別或結構可以實作多個介面。 類別可以繼承基底類別，也會實作一或多個介面。
 
-## <a name="BKMK_RelatedSections"></a>相關部分
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a>相關部分
 
 - [介面屬性](../classes-and-structs/interface-properties.md)  
 - [介面中的索引子](../indexers/indexers-in-interfaces.md)  
 - [如何實作介面事件](../events/how-to-implement-interface-events.md)
-- [類別和結構](../classes-and-structs/index.md)  
+- [類和結構](../classes-and-structs/index.md)  
 - [繼承](../classes-and-structs/inheritance.md)  
 - [方法](../classes-and-structs/methods.md)  
 - [Polymorphism](../classes-and-structs/polymorphism.md)  

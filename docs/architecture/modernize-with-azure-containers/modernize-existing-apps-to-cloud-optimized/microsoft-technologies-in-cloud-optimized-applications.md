@@ -2,12 +2,12 @@
 title: 雲優化應用程式中的微軟技術
 description: 使用 Azure 雲和 Windows 容器對現有 .NET 應用程式進行現代化 |雲優化應用程式中的微軟技術
 ms.date: 04/28/2018
-ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5222ba13258f9c8a40ca3b9ce240aeb9f41da63
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69578221"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546506"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>雲優化應用程式中的微軟技術
 
@@ -19,7 +19,7 @@ ms.locfileid: "69578221"
 
 - **託管雲**：當您選擇託管雲選項時，可以避免管理和支援底層基礎結構、VM、作業系統修補程式和網路設定的費用和複雜性。 如果選擇使用 IaaS 進行遷移，則負責所有這些任務以及相關成本。 在託管雲選項中，您只管理開發的應用程式和服務。 雲服務提供者通常管理其他所有內容。 Azure 中託管雲服務的示例包括[Azure SQL 資料庫](https://azure.microsoft.com/services/sql-database)[、Azure Redis 緩存](https://azure.microsoft.com/services/cache/)[、Azure 宇宙資料庫](https://azure.microsoft.com/services/cosmos-db/)[、Azure 存儲](https://azure.microsoft.com/services/storage/)[、MySQL Azure 資料庫](https://azure.microsoft.com/services/mysql/)[、PostgreSQL Azure 資料庫](https://azure.microsoft.com/services/postgresql/)[、Azure 活動目錄](https://azure.microsoft.com/services/active-directory/)以及[VM 規模集](https://azure.microsoft.com/services/virtual-machine-scale-sets/)[、Azure 應用服務和](https://azure.microsoft.com/services/app-service/) [Azure Kubernetes 服務](https://azure.microsoft.com/services/container-service/)等託管計算服務。
 
-- **應用程式開發**：在生成在容器中運行的應用程式時，可以從多種語言中進行選擇。 本指南重點介紹[.NET](https://www.microsoft.com/net)，但是，您可以使用其他語言（如 Node.js、Python、Spring/JAVA 或 Go）開發基於容器的應用。
+- **應用程式開發**：在生成在容器中運行的應用程式時，可以從多種語言中進行選擇。 本指南重點介紹[.NET](https://dotnet.microsoft.com)，但是，您可以使用其他語言（如 Node.js、Python、Spring/JAVA 或 Go）開發基於容器的應用。
 
 - **監視、遙測、日誌記錄和審核**：監視和審核在雲中運行的應用程式和容器的能力對於任何雲優化應用程式都至關重要。 [Azure 應用程式見解](https://azure.microsoft.com/services/application-insights/)和[Microsoft 操作管理套件](https://www.microsoft.com/cloud-platform/operations-management-suite)是 Microsoft 的主要工具，為雲優化應用提供監視和審核。
 

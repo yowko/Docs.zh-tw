@@ -4,12 +4,12 @@ description: 最近對 C# 語言的增強功能，可讓您撰寫可驗證的安
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb53264f61192c042da469ba687da6c472e8c6d4
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239972"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79506979"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>撰寫安全且有效率的 C# 程式碼
 
@@ -72,7 +72,7 @@ readonly public struct ReadonlyPoint3D
 
 ## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>當結構不能不可變時，聲明唯讀成員
 
-在 C# 8.0 及更高版本中，當結構類型是可變的時，應聲明不導致突變的成員為`readonly`。 例如，以下是 3D 點結構的可變變體：
+在 C# 8.0 及更高版本中，當結構類型是可變的時，應聲明不導致突變的成員為`readonly`。 考慮需要 3D 點結構但必須支援可變性的不同應用程式。 以下版本的 3D 點結構僅將`readonly`修改器添加到不修改結構的成員。 請按照此示例操作，此時您的設計必須支援某些成員對結構的修改，但您仍希望對某些成員強制實施唯讀的好處：
 
 ```csharp
 public struct Point3D
@@ -214,13 +214,13 @@ public struct Point3D
 
 參考型別或數值也可使用 `in` 參數指定。 但這兩種用法的優點皆不彰顯 (若有的話)。
 
-## <a name="never-use-mutable-structs-as-in-in-argument"></a>請永遠不要像在 `in` 引數中一樣使用可變動的結構
+## <a name="avoid-mutable-structs-as-an-in-argument"></a>避免將可變結構作為`in`參數
 
 以上所述的技術解釋了如何透過傳回參考及以參考型式傳遞值來避免複製。 這些技術在引數型別宣告為 `readonly struct` 型別時的效果最佳。 否則，編譯器必須在許多情況中建立**防禦性複本**，強制實施任何引數的唯讀性。 請考慮下列範例，該範例會計算原點至 3D 點的距離：
 
 [!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-`Point3D` 結構「不是」** 唯讀結構。 此方法的主體中有六個不同屬性存取呼叫。 在第一次檢查中，您可能會認為這些存取都是安全的。 畢竟，`get` 存取子應該不會修改物件的狀態。 但是沒有任何語言規則強制該行為。 它只是一個常見的慣例。 任何型別都可實作修改內部狀態的 `get` 存取子。 若沒有任何語言保證，編譯器必須先建立引數的暫時複本，再呼叫任何成員。 暫存位置會在堆疊上建立，引數的值則會複製到暫存位置，而該值則會針對每個成員存取，作為 `this` 引數複製到堆疊。 在許多情況下，當引數型別並非 `readonly struct` 時，這些複本會危害效能，使得以值型式傳遞的速度高於以唯讀參考型式傳遞。
+`Point3D` 結構「不是」** 唯讀結構。 此方法的主體中有六個不同屬性存取呼叫。 在第一次檢查中，您可能會認為這些存取都是安全的。 畢竟，`get` 存取子應該不會修改物件的狀態。 但是沒有任何語言規則強制該行為。 它只是一個常見的慣例。 任何型別都可實作修改內部狀態的 `get` 存取子。 如果沒有某些語言保證，編譯器必須先創建參數的臨時副本，然後才能調用未標記`readonly`修改器的任何成員。 暫存位置會在堆疊上建立，引數的值則會複製到暫存位置，而該值則會針對每個成員存取，作為 `this` 引數複製到堆疊。 在許多情況下，這些副本對性能的損害足夠大，當參數類型不是 ，`readonly struct`並且方法調用未標記`readonly`的成員 時，逐個值傳遞比逐讀引用更快。 如果將不修改結構狀態的所有方法標記為`readonly`，編譯器可以安全地確定結構狀態未修改，並且不需要防禦性副本。
 
 相反，如果距離計算使用不可變結構，`ReadonlyPoint3D`則不需要 臨時物件：
 

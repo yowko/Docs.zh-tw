@@ -2,12 +2,12 @@
 title: 處理例外狀況和錯誤
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
-ms.openlocfilehash: bca77b575be65513f9a792352e14e3f9bd7b4904
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7fa045dc6fd6e31eccf29e22ae2e212f59dfaec0
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185621"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111864"
 ---
 # <a name="handling-exceptions-and-faults"></a>處理例外狀況和錯誤
 例外狀況是用來在本機上傳送服務或用戶端實作內發生的錯誤。 另一方面，錯誤 (Fault) 是用來傳送跨越服務界限 (例如從伺服器到用戶端，反之亦然) 發生的錯誤 (Error)。 除了錯誤 (Fault) 以外，傳輸通道也經常會使用傳輸特定的機制來傳送傳輸層級的錯誤 (Error)。 例如，HTTP 傳輸會使用 404 等狀態碼來傳送不存在的端點 URL (表示沒有端點可傳回錯誤)。 本文件包含的三個章節都提供指引給自訂通道作者。 第一個章節會提供關於何時與如何定義及擲回例外狀況的指引， 而第二個章節會提供關於產生和使用錯誤的指引， 第三個章節則會說明如何提供追蹤資訊，以協助自訂通道的使用者針對執行中的應用程式進行疑難排解。  
@@ -23,9 +23,9 @@ ms.locfileid: "79185621"
 |<xref:System.ServiceModel.AddressAlreadyInUseException>|指定用於接聽的端點位址已在使用中。|如果有的話，則提供造成此例外狀況之傳輸錯誤的詳細資料。 例如， <xref:System.IO.PipeException>、<xref:System.Net.HttpListenerException> 或 <xref:System.Net.Sockets.SocketException>。|嘗試不同的位址。|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|此處理序不可以存取指定用於接聽的端點位址。|如果有的話，則提供造成此例外狀況之傳輸錯誤的詳細資料。 例如，<xref:System.IO.PipeException> 或 <xref:System.Net.HttpListenerException>。|嘗試使用不同的認證。|  
 |<xref:System.ServiceModel.CommunicationObjectFaultedException>|正在<xref:System.ServiceModel.ICommunicationObject>使用的狀態為"故障"狀態（有關詳細資訊，請參閱[瞭解狀態更改](understanding-state-changes.md)）。 請注意，當具有多個擱置呼叫的物件轉換為「錯誤」狀態時，只有一個呼叫會擲回與該失敗相關的例外狀況，而其餘的呼叫會擲回 <xref:System.ServiceModel.CommunicationObjectFaultedException>。 這個例外狀況的擲回原因，通常是因為應用程式忽略某個例外狀況，而且嘗試在可能不同於攔截原始例外狀況之執行緒上使用已經出錯的物件。|如果有的話，則提供此內部例外狀況的詳細資料。|建立新的物件。 請注意，視當初造成 <xref:System.ServiceModel.ICommunicationObject> 出錯的原因而定，可能會需要進行其他工作來復原。|  
-|<xref:System.ServiceModel.CommunicationObjectAbortedException>|<xref:System.ServiceModel.ICommunicationObject>正在使用的狀態已中止（有關詳細資訊，請參閱[瞭解狀態更改](understanding-state-changes.md)）。 類似於 <xref:System.ServiceModel.CommunicationObjectFaultedException>，此例外狀況表示應用程式已對可能來自其他執行緒的物件呼叫 <xref:System.ServiceModel.ICommunicationObject.Abort%2A>，該物件因此而無法再使用。|如果有的話，則提供此內部例外狀況的詳細資料。|建立新的物件。 請注意，視當初造成 <xref:System.ServiceModel.ICommunicationObject> 中止的原因而定，可能會需要進行其他工作來復原。|  
+|<xref:System.ServiceModel.CommunicationObjectAbortedException>|<xref:System.ServiceModel.ICommunicationObject>正在使用的狀態已中止（有關詳細資訊，請參閱[瞭解狀態更改](understanding-state-changes.md)）。 與<xref:System.ServiceModel.CommunicationObjectFaultedException>類似 ，此異常表示應用程式調用<xref:System.ServiceModel.ICommunicationObject.Abort%2A>了物件，可能來自另一個執行緒，並且該物件由於這個原因不再可用。|如果有的話，則提供此內部例外狀況的詳細資料。|建立新的物件。 請注意，視當初造成 <xref:System.ServiceModel.ICommunicationObject> 中止的原因而定，可能會需要進行其他工作來復原。|  
 |<xref:System.ServiceModel.EndpointNotFoundException>|目標遠端端點未接聽。 這可能是由於端點位址的某個部分不正確、無法解析，或是端點已關閉。 範例包括 DNS 錯誤、無法使用佇列管理員，以及未執行服務。|內部例外狀況會提供詳細資料 (通常是透過基礎傳輸)。|嘗試不同的位址。 或者，如果服務已關閉，傳送者可以稍後再試一次|  
-|<xref:System.ServiceModel.ProtocolException>|端點原則所描述的通訊協定在端點之間彼此不相符。 例如，框架處理內容類型不符，或是超出最大的訊息大小。|如果有的話，則提供特定通訊協定錯誤的詳細資料。 例如，如果錯誤原因是超過 MaxReceivedMessageSize，則 <xref:System.ServiceModel.QuotaExceededException> 是內部例外狀況。|復原：確定傳送者和接收的通訊協定設定相符。 若要這麼做，其中一個方法就是重新匯入服務端點的中繼資料 (原則)，並使用產生的繫結來重新建立通道。|  
+|<xref:System.ServiceModel.ProtocolException>|正如終結點的策略所述，通訊協定在終結點之間不匹配。 例如，框架處理內容類型不符，或是超出最大的訊息大小。|如果有的話，則提供特定通訊協定錯誤的詳細資料。 例如，如果錯誤原因是超過 MaxReceivedMessageSize，則 <xref:System.ServiceModel.QuotaExceededException> 是內部例外狀況。|復原：確定傳送者和接收的通訊協定設定相符。 執行此操作的一種方法是重新導入服務終結點的中繼資料（策略），並使用生成的綁定重新創建通道。|  
 |<xref:System.ServiceModel.ServerTooBusyException>|遠端端點正在接聽，但是尚未準備進行處理訊息。|如果有的話，內部例外狀況就會提供 SOAP 錯誤 (Fault) 或傳輸層級錯誤 (Error) 的詳細資料。|復原：稍候並重新嘗試進行作業。|  
 |<xref:System.TimeoutException>|作業無法在逾時期限內完成。|可提供逾時的詳細資料。|稍候並重新嘗試進行作業。|  
   
@@ -34,7 +34,7 @@ ms.locfileid: "79185621"
 ### <a name="exception-messages"></a>例外狀況訊息  
  例外狀況訊息的對象是使用者而不是程式，所以這類訊息應該提供充分的資訊，協助使用者瞭解並解決問題。 良好的例外狀況訊息包括三個重要部分：  
   
- 發生的情況。 使用與使用者切身操作相關的術語，提供清楚的問題描述。 例如，「無效的組態區段」就是不好的例外狀況訊息。 這個訊息會讓使用者猜測究竟是哪個組態區段不正確，以及為什麼不正確。 改進的消息是"無效配置部分\<自訂>"。 而更好的訊息會是「無法將名為 myTransport 的傳輸新增至名為 myBinding 的繫結，因為該繫結已經具有名為 myTransport 的傳輸」。 這是非常仔細的訊息，使用者可以在應用程式組態檔中輕鬆識別這個訊息使用的術語和名稱。 不過，這個訊息還漏掉了一些關鍵部分。  
+ 發生的情況。 使用與使用者體驗相關的術語提供問題的明確描述。 例如，「無效的組態區段」就是不好的例外狀況訊息。 這個訊息會讓使用者猜測究竟是哪個組態區段不正確，以及為什麼不正確。 改進的消息是"無效配置部分\<自訂>"。 而更好的訊息會是「無法將名為 myTransport 的傳輸新增至名為 myBinding 的繫結，因為該繫結已經具有名為 myTransport 的傳輸」。 這是一條非常具體的消息，使用使用者可以在應用程式的設定檔中輕鬆識別的術語和名稱。 不過，這個訊息還漏掉了一些關鍵部分。  
   
  錯誤的重要性。 除非訊息清楚表示錯誤的意義，不然使用者可能會猜想這個錯誤是否為嚴重錯誤，或者是否可以忽略。 一般而言，訊息的開頭應該要提供錯誤的意義或重要性。 若要改進先前的範例，訊息可以改成「ServiceHost 無法開啟，這是因為發生以下組態錯誤：無法將名為 myTransport 的傳輸新增到名為 myBinding 的繫結，因為繫結已經具有名為 myTransport 的傳輸」。  
   
@@ -94,7 +94,7 @@ public class FaultCode
 }  
 ```  
   
- `Reason` 屬性會對應至 `env:Reason` (或是 SOAP 1.1 的 `faultString`)，這是人們可讀取的 (Human-Readable) 錯誤條件描述，類似於例外狀況的訊息。 `FaultReason` 類別 (以及 SOAP 的 `env:Reason/faultString`) 內建的支援適用在全球化時進行多種翻譯。  
+ 該`Reason`屬性對應于`env:Reason`（或`faultString`SOAP 1.1 中）與異常消息類似的錯誤條件的人類可讀描述。 `FaultReason` 類別 (以及 SOAP 的 `env:Reason/faultString`) 內建的支援適用在全球化時進行多種翻譯。  
   
 ```csharp
 public class FaultReason  
@@ -132,7 +132,7 @@ public class FaultConverter
 }  
 ```  
   
- 每個產生自訂錯誤的通道都必須實作 `FaultConverter`，並藉由呼叫 `GetProperty<FaultConverter>` 來傳回它。 自訂的 `OnTryCreateFaultMessage` 實作必須將例外狀況轉換成錯誤，或是委派到內部通道的 `FaultConverter`。 如果通道是傳輸，則必須將異常或委託給編碼器`FaultConverter`或 WCF 中提供的預設值。 `FaultConverter` 預設的 `FaultConverter` 會轉換與 WS-Addressing 和 SOAP 指定之錯誤 (Fault) 訊息相對應的錯誤 (Error)。 以下是 `OnTryCreateFaultMessage` 實作的範例。  
+ 每個產生自訂錯誤的通道都必須實作 `FaultConverter`，並藉由呼叫 `GetProperty<FaultConverter>` 來傳回它。 自訂`OnTryCreateFaultMessage`實現必須將異常轉換為故障或委託給內部通道的`FaultConverter`。 如果通道是傳輸，則必須將異常或委託給編碼器`FaultConverter`或 WCF 中提供的預設值。 `FaultConverter` 預設的 `FaultConverter` 會轉換與 WS-Addressing 和 SOAP 指定之錯誤 (Fault) 訊息相對應的錯誤 (Error)。 以下是 `OnTryCreateFaultMessage` 實作的範例。  
   
 ```csharp
 public override bool OnTryCreateFaultMessage(Exception exception,
@@ -196,9 +196,9 @@ public override bool OnTryCreateFaultMessage(Exception exception,
 ### <a name="interpreting-received-faults"></a>解譯收到的錯誤  
  本節提供在接收錯誤訊息時產生適當例外狀況的指引。 以下是在堆疊中處理各層訊息的決策樹：  
   
-1. 如果此層將訊息視為無效，則應該進行其「無效訊息」處理。 這類處理專用於此層，不過可以包含捨棄訊息、追蹤，或是擲回轉換為錯誤的例外狀況。 範例包括接收未適當保護安全之訊息的安全性，或是接收具序號錯誤之訊息的 RM。  
+1. 如果圖層認為消息無效，則圖層應執行其"無效消息"處理。 這類處理專用於此層，不過可以包含捨棄訊息、追蹤，或是擲回轉換為錯誤的例外狀況。 範例包括接收未適當保護安全之訊息的安全性，或是接收具序號錯誤之訊息的 RM。  
   
-2. 否則，如果訊息是專門套用至此層的錯誤訊息，而且訊息在此層的互動範圍以外不具任何意義，則此層應該要處理錯誤條件。 「RM 序列遭拒」錯誤就是一個範例，這個錯誤對 RM 通道上面的層級沒有任何意義，這表示將 RM 通道判定為失敗並將從擱置作業擲回。  
+2. 否則，如果消息是專門應用於圖層的錯誤訊息，並且該消息在圖層的交互之外沒有意義，則圖層應處理錯誤條件。 「RM 序列遭拒」錯誤就是一個範例，這個錯誤對 RM 通道上面的層級沒有任何意義，這表示將 RM 通道判定為失敗並將從擱置作業擲回。  
   
 3. 否則，訊息應該從 Request() 或 Receive() 傳回。 例如，此層辨識出該錯誤，但錯誤只表示要求失敗，沒有表示將通道判定為失敗並將從擱置作業擲回。 若要改進這種情況下的可用性，此層應該實作 `GetProperty<FaultConverter>` 並傳回 `FaultConverter` 衍生類別，此類別可藉由覆寫 `OnTryCreateException` 將錯誤轉換成例外狀況。  
   
@@ -334,7 +334,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 > 強烈建議您指定自訂通道的唯一追蹤來源名稱，以利追蹤輸出讀取器瞭解輸出的來源。  
   
 #### <a name="integrating-with-the-trace-viewer"></a>整合追蹤檢視器  
- 通道生成的跟蹤可以通過用作<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>跟蹤攔截器以[服務跟蹤檢視器工具 （SvcTraceViewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)可讀的格式輸出。 這並不是身為通道開發人員的您所需要做的事情， 反而是需要在應用程式組態檔中設定這個追蹤接聽項的應用程式使用者 (或是針對應用程式進行疑難排解的人員)，才需要做這件事。 例如，下列組態會從 <xref:System.ServiceModel?displayProperty=nameWithType> 和 `Microsoft.Samples.Udp` 兩者，將追蹤資訊輸出到名為 `TraceEventsFile.e2e` 的檔案中：  
+ 通道生成的跟蹤可以通過用作<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>跟蹤攔截器以[服務跟蹤檢視器工具 （SvcTraceViewer.exe）](../service-trace-viewer-tool-svctraceviewer-exe.md)可讀的格式輸出。 這並不是身為通道開發人員的您所需要做的事情， 相反，需要在應用程式的設定檔中配置此跟蹤攔截器的應用程式使用者（或對應用程式進行故障排除的人員）。 例如，下列組態會從 <xref:System.ServiceModel?displayProperty=nameWithType> 和 `Microsoft.Samples.Udp` 兩者，將追蹤資訊輸出到名為 `TraceEventsFile.e2e` 的檔案中：  
   
 ```xml  
 <configuration>  

@@ -3,12 +3,12 @@ title: 歡迎使用 .NET
 description: 開始使用 .NET 系列的技術。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfc9b55f06a5830c13df52f992d2630f1f45d8be
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124217"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228789"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -34,7 +34,7 @@ ms.locfileid: "77124217"
 如需新增至 .NET 實作的最新功能與支援語言的相關資訊，請參閱以下文章：
 
 - [.NET Core 的新功能](core/whats-new/index.md)
-- [.NET 框架中的新增功能](framework/whats-new/index.md)
+- [.NET Framework 中的新功能](framework/whats-new/index.md)
 - [C# 的新功能](csharp/whats-new/index.md)
 - [Visual Basic 的新功能](visual-basic/getting-started/whats-new.md)
 
@@ -43,11 +43,11 @@ ms.locfileid: "77124217"
 這份文件涵蓋各種平台和語言的 .NET 範圍。 您可以在下列任何各節中開始使用 .NET 和其語言：
 
 - [.NET 指南](standard/index.md)
-- [.NET Core 指南](core/index.md)
-- [.NET 框架指南](framework/index.md)
+- [.NET 核心指南](core/index.md)
+- [.NET 框架指南](framework/index.yml)
 - [C# 指南](csharp/index.yml)
 - [F# 指南](fsharp/index.yml)
-- [Visual Basic 指南](visual-basic/index.yml)
+- [視覺基本指南](visual-basic/index.yml)
 - [ML.NET指南](machine-learning/index.yml)
 - [.NET for Apache Spark](spark/index.yml)
 - [.NET 應用程式架構](architecture/index.yml)
@@ -69,7 +69,7 @@ ms.locfileid: "77124217"
 - [.NET 核心 SDK](https://github.com/dotnet/sdk)
 - [Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools](https://github.com/dotnet/roslyn) (Roslyn (C# 和 Visual Basic) 編譯器平台和 IDE 工具)
 - [F# Compiler and IDE Tools](https://github.com/dotnet/fsharp) (F# 編譯器和 IDE 工具)
-- [Windows Forms](https://github.com/dotnet/winforms) \(英文\)
+- [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
 您可以加入已在[.NET 社區中](https://dotnet.microsoft.com/platform/community)活動的其他人，瞭解新增功能或尋求説明。

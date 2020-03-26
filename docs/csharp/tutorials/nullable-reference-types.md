@@ -4,12 +4,12 @@ description: 本進階教學課程提供可為 Null 的參考類型簡介。 您
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: b00050c1d151b95e330f94eb9393a4031e47d5a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 54cf9d812999cae837483b48cdedd89d9dc40fc9
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240063"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249125"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教學課程：使用可為 Null 與不可為 Null 的參考類型更清楚地表達您的設計意圖
 
@@ -24,7 +24,7 @@ C# 8.0 引入了[可空參考型別](../nullable-references.md)，它以同樣�
 > - 撰寫程式碼，以使編譯器強制執行這些設計決策。
 > - 在您自己的設計中使用可為 Null 的參考功能
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 您需要設置電腦以運行 .NET Core，包括 C# 8.0 編譯器。 C# 8.0 編譯器可用於[Visual Studio 2019，](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
 
@@ -72,7 +72,7 @@ C# 8.0 引入了[可空參考型別](../nullable-references.md)，它以同樣�
 1. 在已完成的調查規模達到目標編號之前與受訪者聯繫。
 1. 寫出關於調查回應的重要統計資料。
 
-## <a name="build-the-survey-with-nullable-and-non-nullable-types"></a>使用可為 Null 與不可為 Null 的類型建置問卷
+## <a name="build-the-survey-with-nullable-and-non-nullable-reference-types"></a>使用可空和不可取消的參考型別生成調查
 
 您將撰寫的第一個程式碼會建立問卷。 您會撰寫類別來將問卷問題和問卷執行模型化。 您的問卷具有三種類型的問題，其會依答案的格式來區別：是/否的答案、數字答案，以及文字答案。 創建類`public SurveyQuestion`：
 

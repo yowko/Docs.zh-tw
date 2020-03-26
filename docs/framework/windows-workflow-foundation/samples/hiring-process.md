@@ -2,12 +2,12 @@
 title: 招聘程序
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: c7e99d41d009ee9ab9ccf322f082d3e253ca03ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ade72422d29d170e9c80f602f151ce765a1a00f7
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182832"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291692"
 ---
 # <a name="hiring-process"></a>招聘程序
 此範例示範如何使用傳訊活動和裝載為工作流程服務的兩個工作流程來實作商務程序。 這些工作流程是虛擬公司 Contoso, Inc. 的 IT 基礎結構的一部分。  
@@ -62,7 +62,7 @@ ms.locfileid: "79182832"
   
 1. 員工 (申請者) 起始招聘程序申請。  
   
-2. 申請者的經理必須核准申請：  
+2. 要求者的經理必須批准請求：  
   
     1. 經理可以拒絕申請。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "79182832"
   
     3. 經理可以核准申請。  
   
-3. 當申請者的經理核准之後，部門主管必須核准申請：  
+3. 要求者的經理批准後，部門擁有者必須批准請求：  
   
     1. 部門主管可以拒絕申請。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "79182832"
   
 |隨附此逐步解說的專案|描述|  
 |-------------|-----------------|  
-|ContosoHR|包含資料合約、商務物件和儲存機制類別。|  
+|ContosoHR|包含資料協定、業務物件和存儲庫類。|  
 |HiringRequestService|包含招聘申請程序工作流程的定義。<br /><br /> 這個專案會實作為主控台應用程式，該應用程式會自行裝載此工作流程 (xaml 檔案) 當做服務。|  
 |ResumeRequestService|這是一個工作流程服務，它會在到期之前或是某人決定要停止程序之前收集求職者的履歷表。<br /><br /> 此專案會實作為宣告式工作流程服務 (xamlx)。|  
 |OrgService|這是公開組織資訊 (員工、職位、職位類型和部門) 的服務。 您可以將這項服務視為企業資源規劃 (ERP) 的公司組織模組。<br /><br /> 此專案作為主控台應用程式實現，該應用程式公開 Windows 通信基礎 （WCF） 服務。|  
@@ -113,7 +113,7 @@ ms.locfileid: "79182832"
 |流程圖|商務程序以流程圖來表示。 此流程圖說明所代表的程序與公司在白板上所畫的程序相同。|HiringRequestService|  
 |工作流程服務|包含流程定義的流程圖會裝載於服務中 (在此範例中，此服務會裝載於主控台應用程式內)。|HiringRequestService|  
 |訊息活動|此流程圖會以兩種方式使用訊息活動：<br /><br /> - 從使用者獲取資訊（在每個審批步驟中接收決策和相關資訊）。<br />- 與其他現有服務（收件匣服務與組織資料服務，通過服務引用使用）進行交互。|HiringRequestService|  
-|以內容為主的相互關聯|核准訊息會依招聘申請的 ID 屬性建立相互關聯性：<br /><br /> - 啟動進程時，使用請求的 ID 初始化相關控制碼。<br />- 傳入審批消息與其 ID 相關聯（每個審批消息的第一個參數是請求的 ID）。|HiringRequestService / ResumeRequestService|  
+|基於內容的相關性|核准訊息會依招聘申請的 ID 屬性建立相互關聯性：<br /><br /> - 啟動進程時，使用請求的 ID 初始化相關控制碼。<br />- 傳入審批消息與其 ID 相關聯（每個審批消息的第一個參數是請求的 ID）。|HiringRequestService / ResumeRequestService|  
 |自訂活動 (宣告式和以程式碼為主)|此範例中有幾個自訂活動：<br /><br /> -   `SaveActionTracking`： 此活動發出自訂<xref:System.Activities.Tracking.TrackingRecord>（使用<xref:System.Activities.NativeActivityContext.Track%2A>）。 這個活動已經使用命令式程式碼擴充 <xref:System.Activities.NativeActivity> 來撰寫。<br />-   `GetEmployeesByPositionTypes`：此活動接收位置類型 ID 的清單，並返回在 Contoso 中具有該位置的人的清單。 此活動已經以宣告方式撰寫 (使用活動設計工具)。<br />-   `SaveHiringRequestInfo`： 此活動保存`HiringRequest`（使用`HiringRequestRepository.Save`） 的資訊。 這個活動已經使用命令式程式碼擴充 <xref:System.Activities.CodeActivity> 來撰寫。|HiringRequestService|  
 |系統提供的 SQL Server 持續性|裝載流程圖流程定義的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 執行個體會設定為使用系統提供的 SQL Server 持續性。|HiringRequestService / ResumeRequestService|  
 |自訂追蹤|此範例包含的自訂追蹤參與者會儲存 `HiringRequestProcess` 的記錄 (這樣會記錄已經執行的動作、動作執行者與執行時間)。 原始程式碼位於 HiringRequestService 的 Tracking 資料夾中。|HiringRequestService|  
@@ -122,7 +122,7 @@ ms.locfileid: "79182832"
 |平行活動|-   <xref:System.Activities.Statements.ParallelForEach%601>用於並行在 CEO 和 HR 經理的收件匣中註冊（等待兩個人力資源經理的批准步驟）。<br />-   <xref:System.Activities.Statements.Parallel>用於在"已完成"和"已拒絕"步驟中執行一些清理任務|HiringRequestService|  
 |模型取消|此流程圖會使用 <xref:System.Activities.Statements.CancellationScope> 建立取消行為 (在此案例中，它會執行某些清除工作)。|HiringRequestService|  
 |客戶持續性參與者|`HiringRequestPersistenceParticipant` 會將工作流程變數中的資料儲存到 Contoso HR 資料庫內所儲存的資料表中。|HiringRequestService|  
-|工作流程服務|`ResumeRequestService` 是使用工作流程服務所實作。 工作流程定義和服務資訊會包含在 ResumeRequestService.xamlx 中。 此服務會設定為使用持續性與追蹤。|ResumeRequestService|  
+|工作流程服務|`ResumeRequestService` 是使用工作流程服務所實作。 工作流定義和服務資訊包含在簡歷請求服務.xamlx 中。 此服務會設定為使用持續性與追蹤。|ResumeRequestService|  
 |永久性計時器|`ResumeRequestService` 會使用永久性計時器來定義刊登工作的期間 (一旦過了期限之後，刊登就會結束)。|ResumeRequestService|  
 |交易|<xref:System.Activities.Statements.TransactionScope> 是用來確保數個活動執行內的資料都是一致的 (當收到新的履歷表時)。|ResumeRequestService|  
 |交易|自訂持續性參與者 (`HiringRequestPersistenceParticipant`) 和自訂追蹤參與者 (`HistoryFileTrackingParticipant`) 會使用相同的交易。|HiringRequestService|  
@@ -181,17 +181,17 @@ ms.locfileid: "79182832"
   
 2. 創建後，請求將顯示在 Michael 的收件匣中（如果未看到請求，請按一下 **"刷新**"），等待彼得·佈雷姆的批准，他是 Michael 的經理。  
   
-3. Peter 想要針對 Michael 的申請採取行動。 他認為這個職位需要五年的 C# 經驗而不是三年，所以傳回他的意見以供審查。  
+3. 彼得想按照邁克爾的要求行事。 他認為這個職位需要五年的 C# 經驗而不是三年，所以傳回他的意見以供審查。  
   
 4. Michael 在他的收件匣中看到了經理髮來的消息，並想採取行動。Michael 看到了職位請求的歷史，並同意彼得。 Michael 於是將職位描述修改為需要五年的 C# 經驗，並接受修改。  
   
-5. Peter 針對 Michael 修改過的申請採取行動，並接受申請。 現在此申請必須由工程部門總監 Tsvi Reiter 核准。  
+5. 彼得對邁克爾的修改請求採取行動並接受。 現在此申請必須由工程部門總監 Tsvi Reiter 核准。  
   
 6. Tsvi Reiter 想要加快申請的腳步，所以他加入一項註解表示此申請非常緊急，並接受申請。  
   
 7. 現在此申請必須由兩位人力資源部門經理或 CEO 核准。 CEO Brian Richard Goldstein 看到 Tsvi 發出的緊急申請。 他採取的動作是接受此申請，因此跳過兩位人力資源部門經理的核准步驟。  
   
-8. 此申請從 Michael 的收件匣中移除，現在會開始招聘 SDET 的程序。  
+8. 請求從 Michael 的收件匣中刪除，並且雇用 SDET 的過程現已開始。  
   
 ### <a name="start-resume-request"></a>開始請求履歷表  
   

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 51b3c1b3e3d61b23a0511ca807afef0269ac9ee4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4340ed7444681b4601dea50c93926b0ee0c07eec
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77465977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134123"
 ---
 
 添加到包管理器源的包以可破解的格式命名： `{product}-{type}-{version}`。
@@ -34,7 +34,7 @@ ms.locfileid: "77465977"
 
 - 安裝ASP.NET核心 3.1 運行時：`aspnetcore-runtime-3.1`
 - 安裝 .NET 核心 2.1 運行時：`dotnet-runtime-2.1`
-- 安裝 .NET 核心 3.0 SDK：`dotnet-sdk-3.0`
+- 安裝 .NET 核心 3.1 SDK：`dotnet-sdk-3.1`
 
 ### <a name="package-missing"></a>缺少包
 

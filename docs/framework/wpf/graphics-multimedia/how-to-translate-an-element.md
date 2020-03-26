@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: ba6bda09a4ee189cdd1a32eed8f65b32d1a9abe4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: addff0e22fb3f27ea924887809c0635aeb3ad67d
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187309"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111968"
 ---
 # <a name="how-to-translate-an-element"></a>操作說明：平移元素
 此示例演示如何使用 轉換（移動）元素<xref:System.Windows.Media.TranslateTransform>。  
@@ -23,7 +23,7 @@ ms.locfileid: "79187309"
 ## <a name="example"></a>範例  
  [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
- 如需完整範例，請參閱 [2D 轉換範例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
+ 有關完整示例，請參閱[2D 變換示例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
   
 ## <a name="see-also"></a>另請參閱
 

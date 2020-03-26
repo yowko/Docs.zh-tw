@@ -2,12 +2,12 @@
 title: 自託管 gRPC 應用程式 - 適用于 WCF 開發人員的 gRPC
 description: 將 ASP.NET核心 gRPC 應用程式部署為自託管服務。
 ms.date: 09/02/2019
-ms.openlocfilehash: 00fb1453e19a02469f80af79672e0c1f72c7280f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69f70e4077247fd07eba7abeee82f257dd1f4f90
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147798"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110902"
 ---
 # <a name="self-hosted-grpc-applications"></a>自託管 gRPC 應用程式
 
@@ -107,7 +107,7 @@ ExecStart=/usr/sbin/myapp
 WantedBy=multi-user.target
 ```
 
-該`Type=notify`屬性告訴`systemd`應用程式將在啟動和關閉時通知它。 當`WantedBy=multi-user.target`Linux 系統達到"執行層級 2"時，該設置將導致服務啟動，這意味著非圖形多使用者外殼處於活動狀態。
+該`Type=notify`屬性告訴`systemd`應用程式將在啟動和關閉時通知它。 當`WantedBy=multi-user.target`Linux 系統達到"執行層級 2"時，該設置將導致服務啟動，這意味著非圖形的多使用者外殼處於活動狀態。
 
 在`systemd`識別服務之前，它需要重新載入其配置。 您可以使用`systemd`命令`systemctl`進行控制。 重新載入後，`status`使用子命令確認應用程式已成功註冊。
 
@@ -152,7 +152,7 @@ sudo journalctl -u myapp
 > [!TIP]
 > 如果您的主機上有可用的 GUI 環境，則一些圖形日誌檢視器可用於 Linux，例如*QJournalctl*和*gnome 日誌*。
 
-要瞭解有關使用`journalctl`從 命令`systemd`行查詢日誌的更多內容，請參閱[man 頁](https://manpages.debian.org/buster/systemd/journalctl.1)。
+要瞭解有關使用`journalctl`從 命令`systemd`行查詢日誌的更多內容，請參閱[manpages](https://manpages.debian.org/buster/systemd/journalctl.1)。
 
 ## <a name="https-certificates-for-self-hosted-applications"></a>用於自託管應用程式的 HTTPS 證書
 

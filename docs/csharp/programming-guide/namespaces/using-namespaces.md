@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0947e597da93d6db1c5965b3685a509961778586
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75700194"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507044"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>使用命名空間 (C# 程式設計手冊)
 
@@ -42,7 +42,7 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
   
 ## <a name="using-namespaces-to-control-scope"></a>使用命名空間來控制範圍
 
- `namespace` 關鍵字用來宣告範圍。 在專案內建立範圍的能力有助於組織程式碼，並可讓您建立全域唯一類型。 在下列範例中，標題為 `SampleClass` 的類別定義於兩個命名空間中，而其中一個命名空間巢狀於另一個命名空間內。 [成員存取運算子 `.`](../../language-reference/operators/member-access-operators.md#member-access-operator-) 用來區分呼叫的方法。  
+ `namespace` 關鍵字用來宣告範圍。 在專案內建立範圍的能力有助於組織程式碼，並可讓您建立全域唯一類型。 在下列範例中，標題為 `SampleClass` 的類別定義於兩個命名空間中，而其中一個命名空間巢狀於另一個命名空間內。 [ `.`權杖](../../language-reference/operators/member-access-operators.md#member-access-expression-)用於區分調用的方法。  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -94,6 +94,6 @@ C# 程式內大量使用命名空間的原因有兩個。 首先，.NET Framewor
 
 - [C# 程式設計指南](../index.md)
 - [命名空間](./index.md)
-- [.運算元](../../language-reference/operators/member-access-operators.md#member-access-operator-)
+- [成員訪問運算式](../../language-reference/operators/member-access-operators.md#member-access-expression-)
 - [* 操作員](../../language-reference/operators/namespace-alias-qualifier.md)
 - [外部別名](../../language-reference/keywords/extern-alias.md)

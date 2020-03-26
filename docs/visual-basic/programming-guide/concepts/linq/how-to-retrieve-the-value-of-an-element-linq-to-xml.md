@@ -2,14 +2,14 @@
 title: 如何：擷取項目的值 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
-ms.openlocfilehash: cc0ddb9c4fc6364d4b10ebac378ab47cc38e508f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b1a61091dc59b403c5d967609e8870492c24347f
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352429"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248930"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>如何：取出元素的值（LINQ to XML）（Visual Basic）
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>如何：檢索元素的值（LINQ 到 XML）（可視基本）
 本主題顯示如何取得項目的值。 以下有兩種主要的方式可達成此目標。 其中一種方式為，將 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 轉型為所需的型別。 然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別，並將其指派給您的變數。 或者，您可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 屬性。  
   
  使用 Visual Basic 時，最好的方法是使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性。  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>範例  
- 即使您不確定項目是否存在，您有時候還是會嘗試擷取項目的值。 在這個情況下，當您將已轉換項目指派給可為 Null 的型別 (`string` 或 .NET Framework 其中一個可為 Null 的型別) 時，如果項目不存在，則被指派的變數只會設定為 `Nothing`。 下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。  
+ 即使您不確定項目是否存在，您有時候還是會嘗試擷取項目的值。 在這種情況下，當您將強制轉換的元素分配給可 null 類型（或`string`.NET Framework 中的一種空數值型別）時，如果該元素不存在，則分配的變數只是設置為`Nothing`。 下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。  
   
 ```vb  
 Dim root As XElement = <Root>  

@@ -2,15 +2,15 @@
 title: ASP.NET核心突破性更改
 titleSuffix: ''
 description: 列出ASP.NET核心中的重大更改。
-ms.date: 01/10/2020
+ms.date: 03/25/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: c54735cd53fb9cb48eb84045791ccc559fe683cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb80be54da8ac0b15d854304e53a7ade7f42da1b
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093171"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291722"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET核心突破性更改
 
@@ -18,7 +18,6 @@ ASP.NET核心提供 .NET Core 使用的 Web 應用開發功能。
 
 此頁面將記錄以下重大更改：
 
-- [HTTP： 瀏覽器同網站更改影響身份驗證](#http-browser-samesite-changes-impact-authentication)
 - [已刪除的過期反偽造、CORS、診斷、MVC 和路由 API](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [身份驗證：Google+ 棄用](#authentication-google-deprecated-and-replaced)
 - [身份驗證：HTTPCoNtext.身份驗證屬性已刪除](#authentication-httpcontextauthentication-property-removed)
@@ -27,6 +26,7 @@ ASP.NET核心提供 .NET Core 使用的 Web 應用開發功能。
 - [授權：將授權重載移動到不同的程式集](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [授權：從授權篩選器上下文中刪除 IAllowAnonymous。篩檢程式](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [授權：I授權策略提供程式實現需要新方法](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Azure：已刪除 Microsoft 預固定的 Azure 集成包](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [緩存：已刪除 CompactOn 記憶體壓力屬性](#caching-compactonmemorypressure-property-removed)
 - [緩存：微軟.擴展.緩存.SqlServer 使用新的 SqlClient 包](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [緩存：回應緩存"公共"類型更改為內部](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -36,6 +36,7 @@ ASP.NET核心提供 .NET Core 使用的 Web 應用開發功能。
 - [託管：為 IIS 進程外應用啟用 HTTPS 重定向](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
 - [託管：已替換 IHosting 環境和 I應用程式生命週期類型](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
 - [託管：從 WebHostBuilder 依賴項中刪除物件集區提供程式](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP： 瀏覽器同網站更改影響身份驗證](#http-browser-samesite-changes-impact-authentication)
 - [HTTP： 預設 HttpCoNtext 擴充性已被刪除](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP：標題名稱欄位更改為靜態唯讀](#http-headernames-constants-changed-to-static-readonly)
 - [HTTP：回應正文基礎結構更改](#http-response-body-infrastructure-changes)
@@ -66,9 +67,20 @@ ASP.NET核心提供 .NET Core 使用的 Web 應用開發功能。
 - [信號R：中心連接上下文建構函式已更改](#signalr-hubconnectioncontext-constructors-changed)
 - [信號R：JavaScript用戶端包名稱更改](#signalr-javascript-client-package-name-changed)
 - [信號R：過時的 API](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
+- [信號R：使用信號R和使用連接方法被刪除](#signalr-usesignalr-and-useconnections-methods-removed)
 - [Spa 服務：標記為過時的 Spa 服務和節點服務](#spas-spaservices-and-nodeservices-marked-obsolete)
 - [Spa服務和節點服務主控台記錄器回退預設更改](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
 - [目標框架： .NET 框架不支援](#target-framework-net-framework-support-dropped)
+
+## <a name="aspnet-core-50"></a>ASP.NET核心 5.0
+
+[!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
 
 ## <a name="aspnet-core-31"></a>ASP.NET核心 3.1
 

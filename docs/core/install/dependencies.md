@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 023b8fdf029dd6b17fe2186296d87dd7507c60b5
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157802"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546558"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET 核心依賴關係和要求
 
@@ -41,6 +41,8 @@ ms.locfileid: "78157802"
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
+*.NET 核心 3.0 當前已無支援。有關詳細資訊，請參閱[.NET 核心支援策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。*
+
 .NET Core 3.0 支援以下 Windows 版本：
 
 > [!NOTE]
@@ -56,6 +58,8 @@ ms.locfileid: "78157802"
 有關 .NET Core 3.0 支援的作業系統、分發和生命週期策略的詳細資訊，請參閱[.NET Core 3.0 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)。
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+
+*.NET 核心 2.2 當前已無支援。有關詳細資訊，請參閱[.NET 核心支援策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。*
 
 .NET Core 2.2 支援以下 Windows 版本：
 
@@ -132,7 +136,7 @@ ms.locfileid: "78157802"
 | Red Hat Enterprise Linux       | 6, 7, 8               | x64 |
 | CentOS                         | 7+                    | x64 |
 | Oracle Linux                   | 7+                    | x64 |
-| Fedora                         | 29°                   | x64 |
+| Fedora                         | 30€                   | x64 |
 | Debian                         | 9+                    | x64、ARM32、ARM64 |
 | Ubuntu                         | 16.04+                | x64、ARM32、ARM64 |
 | Linux Mint                     | 18€                   | x64 |
@@ -148,6 +152,8 @@ ms.locfileid: "78157802"
 > ARM64 支援需要 Linux 內核 4.14 或更高版本。 某些 linux 發行版本滿足此要求，而其他發行版本則不滿足此要求。 例如，Ubuntu 18.04 受支援，但 Ubuntu 16.04 不支援。
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
+
+*.NET 核心 3.0 當前已無支援。有關詳細資訊，請參閱[.NET 核心支援策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。*
 
 .NET Core 3.0 將 Linux 視為單個作業系統。 支援 Linux 發行版本只有一個 Linux 版本（每個晶片體系結構）。
 
@@ -174,6 +180,8 @@ ms.locfileid: "78157802"
 如需如何在 ARM64 上安裝 .NET Core 3.0 的詳細資訊，請參閱 [Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213) (在 Linux ARM64 上安裝 .NET Core 3.0)。
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+
+*.NET 核心 2.2 當前已無支援。有關詳細資訊，請參閱[.NET 核心支援策略](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)。*
 
 .NET Core 2.2 將 Linux 視為單個作業系統。 支援 Linux 發行版本只有一個 Linux 版本（每個晶片體系結構）。
 
@@ -211,7 +219,7 @@ ms.locfileid: "78157802"
 | Red Hat Enterprise Linux       |  6, 7, 8                | x64 |
 | CentOS                         |  7+                     | x64 |
 | Oracle Linux                   |  7+                     | x64 |
-| Fedora                         |  29°                    | x64 |
+| Fedora                         |  30€                    | x64 |
 | Debian                         |  9                      | x64， ARM32 |
 | Ubuntu                         |  16.04, 18.04, 19.04, 19.10    | x64， ARM32 |
 | Linux Mint                     |  17+                    | x64 |

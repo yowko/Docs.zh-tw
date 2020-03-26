@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 0fffbb2f1b58d8ba65d9c5ca8b7c8edc583af2da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cd27f2fb893def9e186504cc9973bae71473f005
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400012"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248904"
 ---
 # <a name="get-started-with-net-framework"></a>開始使用 .NET 框架
 
 .NET 框架是管理目標 .NET 框架的應用的運行時執行環境。 其由通用語言執行平台及廣大的類別庫組成，前者提供記憶體管理和其他系統服務，後者則能讓程式設計人員將強固、可靠的程式碼善用於應用程式開發的所有主要領域。
 
 > [!NOTE]
-> .NET 框架僅在 Windows 系統上可用。 您可以在 Windows、MacOS 和 Linux 上使用 [.NET Core](../../core/index.md) 來執行應用程式。
+> .NET 框架僅在 Windows 系統上可用。 您可以使用[.NET Core](../../core/index.md)在 Windows、MacOS 和 Linux 上開發和運行應用。
 
 ## <a name="what-is-net-framework"></a>什麼是 .NET 框架？
 
@@ -85,7 +85,7 @@ ms.locfileid: "79400012"
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET 框架指南](../index.md)
+- [.NET Framework 指南](../index.yml)
 - [新功能](../whats-new/index.md)
 - [.NET API 瀏覽器](../../../api/index.md)
 - [開發指南](../development-guide.md)

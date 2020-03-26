@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bbfa6b2238458d3248da830cf9d6ac36551b431
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627706"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507031"
 ---
 # <a name="pointer-types-c-programming-guide"></a>指標類型 (C# 程式設計手冊)
 
@@ -72,7 +72,7 @@ int* myVariable;
 |`++` 和 `--`|遞增和遞減指標。|
 |`+` 和 `-`|執行指標算術。|
 |`==`、`!=`、`<`、`>`、`<=` 和 `>=`|比較指標。|
-|[`stackalloc`運算元](../../language-reference/operators/stackalloc.md)|在堆疊上配置記憶體。|
+|[`stackalloc`](../../language-reference/operators/stackalloc.md)|在堆疊上配置記憶體。|
 |[`fixed`聲明](../../language-reference/keywords/fixed-statement.md)|暫時固定變數以便找到其位址。|
 
 如需指標相關運算子的詳細資訊，請參閱[指標相關運算子](../../language-reference/operators/pointer-related-operators.md)。
@@ -84,7 +84,7 @@ int* myVariable;
 ## <a name="see-also"></a>另請參閱
 
 - [C# 程式設計指南](../index.md)
-- [Unsafe 程式碼和指標](index.md)
+- [不安全的代碼和指標](index.md)
 - [指標轉換](pointer-conversions.md)
 - [參考型別](../../language-reference/keywords/reference-types.md)
 - [實值型別](../../language-reference/builtin-types/value-types.md)

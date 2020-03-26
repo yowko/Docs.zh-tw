@@ -8,19 +8,19 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: 1329f26e588b90fcd25052fb805058915b8825e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff42e59edd9d98b0b52dc3bdd3ace0c35df60878
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186466"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112371"
 ---
 # <a name="geometry-overview"></a>幾何概觀
 本概述介紹如何使用類[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Media.Geometry>來描述形狀。 本主題還對比物件和<xref:System.Windows.Media.Geometry><xref:System.Windows.Shapes.Shape>元素之間的差異。  
 
 <a name="wcpsdk_graphics_geometry_introduction"></a>
 ## <a name="what-is-a-geometry"></a>什麼是幾何？  
- 類<xref:System.Windows.Media.Geometry>和派生自它的類（如<xref:System.Windows.Media.EllipseGeometry>、<xref:System.Windows.Media.PathGeometry>和<xref:System.Windows.Media.CombinedGeometry>）使您能夠描述二維形狀的幾何體。 這些幾何描繪有許多用途，像是定義圖形來繪製到螢幕或定義點擊測試和裁剪區域。 您甚至可以使用幾何來定義動畫路徑。  
+ 類<xref:System.Windows.Media.Geometry>和派生自它的類（如<xref:System.Windows.Media.EllipseGeometry>、<xref:System.Windows.Media.PathGeometry>和<xref:System.Windows.Media.CombinedGeometry>）使您能夠描述 2D 形狀的幾何體。 這些幾何描繪有許多用途，像是定義圖形來繪製到螢幕或定義點擊測試和裁剪區域。 您甚至可以使用幾何來定義動畫路徑。  
   
  <xref:System.Windows.Media.Geometry>物件可以是簡單的，例如矩形和圓，或從兩個或多個幾何物件創建的綜合物件。  可以使用<xref:System.Windows.Media.PathGeometry>和<xref:System.Windows.Media.StreamGeometry>類創建更複雜的幾何體，這使您能夠描述弧和曲線。  
   
@@ -28,11 +28,11 @@ ms.locfileid: "79186466"
   
 <a name="wcpsdk_graphics_geometry_geometryandshapes"></a>
 ## <a name="geometries-vs-shapes"></a>幾何形狀與形狀  
- <xref:System.Windows.Media.Geometry>和<xref:System.Windows.Shapes.Shape>類看起來相似，因為它們都描述了二維形狀（例如比較<xref:System.Windows.Media.EllipseGeometry>和<xref:System.Windows.Shapes.Ellipse>，但存在重要差異）。  
+ <xref:System.Windows.Media.Geometry>和<xref:System.Windows.Shapes.Shape>類看起來相似，因為它們都描述了 2D 形狀（<xref:System.Windows.Media.EllipseGeometry>例如<xref:System.Windows.Shapes.Ellipse>比較和），但存在重要差異。  
   
  首先，<xref:System.Windows.Media.Geometry>類從<xref:System.Windows.Freezable>類繼承，<xref:System.Windows.Shapes.Shape>而類從<xref:System.Windows.FrameworkElement>繼承。 由於它們是元素，<xref:System.Windows.Shapes.Shape>因此物件可以渲染自己並參與佈局系統，而<xref:System.Windows.Media.Geometry>物件不能。  
   
- 儘管<xref:System.Windows.Shapes.Shape>物件比<xref:System.Windows.Media.Geometry>物件更容易使用，但<xref:System.Windows.Media.Geometry>物件更通用。 當<xref:System.Windows.Shapes.Shape>物件用於渲染二維圖形時，<xref:System.Windows.Media.Geometry>物件可用於定義二維圖形的幾何區域、定義用於剪切的區域或定義用於點擊測試的區域。  
+ 儘管<xref:System.Windows.Shapes.Shape>物件比<xref:System.Windows.Media.Geometry>物件更容易使用，但<xref:System.Windows.Media.Geometry>物件更通用。 當<xref:System.Windows.Shapes.Shape>物件用於渲染 2D 圖形時，<xref:System.Windows.Media.Geometry>物件可用於定義 2D 圖形的幾何區域、定義用於剪切的區域或定義用於點擊測試的區域。例如。  
   
 ### <a name="the-path-shape"></a>路徑圖形  
  一<xref:System.Windows.Shapes.Shape>個，<xref:System.Windows.Shapes.Path>類，實際上使用來描述<xref:System.Windows.Media.Geometry>其內容。 通過設置<xref:System.Windows.Shapes.Path.Data%2A><xref:System.Windows.Shapes.Path>的 屬性<xref:System.Windows.Media.Geometry>和<xref:System.Windows.Shapes.Shape.Fill%2A>和<xref:System.Windows.Shapes.Shape.Stroke%2A>屬性，可以呈現 。 <xref:System.Windows.Media.Geometry>  

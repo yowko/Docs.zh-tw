@@ -5,22 +5,22 @@ helpviewer_keywords:
 - graphics [WPF], spinning elements
 - spinning elements [WPF]
 ms.assetid: 1f011976-8b07-4c31-9faf-019e0ddaa24c
-ms.openlocfilehash: 2e72389a11e48629c2763fcbd9f7b1945ffff5dd
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: a1b515822391de08ec8ed8ff0ff1f0086874dc02
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452788"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112072"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a>如何：使項目就地旋轉
-這個範例示範如何使用 <xref:System.Windows.Media.RotateTransform> 和 <xref:System.Windows.Media.Animation.DoubleAnimation>，讓元素微調。  
+此示例演示如何使用 和<xref:System.Windows.Media.RotateTransform>使元素旋轉。 <xref:System.Windows.Media.Animation.DoubleAnimation>  
   
- 下列範例會將 <xref:System.Windows.Media.RotateTransform> 套用至元素的 <xref:System.Windows.UIElement.RenderTransform%2A> 屬性。 此範例會使用 <xref:System.Windows.Media.Animation.DoubleAnimation> 來建立 <xref:System.Windows.Media.RotateTransform><xref:System.Windows.Media.RotateTransform.Angle%2A> 的動畫。 為了讓元素就地旋轉，此範例會將元素的 <xref:System.Windows.UIElement.RenderTransformOrigin%2A> 屬性設定為點（0.5、0.5）。  
+ 下面的示例將 應用於<xref:System.Windows.Media.RotateTransform><xref:System.Windows.UIElement.RenderTransform%2A>元素的屬性。 該示例使用<xref:System.Windows.Media.Animation.DoubleAnimation> <xref:System.Windows.Media.RotateTransform.Angle%2A> <xref:System.Windows.Media.RotateTransform> 要使元素就位旋轉，該示例將元素的屬性設置<xref:System.Windows.UIElement.RenderTransformOrigin%2A>到點 （0.5， 0.5）。  
   
 ## <a name="example"></a>範例  
  [!code-xaml[transformanimations_snip#11](~/samples/snippets/xaml/VS_Snippets_Wpf/transformanimations_snip/XAML/RotateAboutCenterExample.xaml#11)]  
   
- 如需包含更多轉換範例的完整範例，請參閱[2D 轉換範例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
+ 有關包含更多變換示例的完整示例，請參閱[2D 變換示例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
   
 ## <a name="see-also"></a>另請參閱
 

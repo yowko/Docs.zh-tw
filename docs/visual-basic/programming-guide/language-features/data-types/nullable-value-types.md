@@ -10,61 +10,61 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 0d259e11a969f4eb7e64626a4adf498db06ece06
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: beed8262c50dc68330b8f03aa3d864ed2f8df0d5
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347830"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249678"
 ---
 # <a name="nullable-value-types-visual-basic"></a>可為 Null 的實值類型 (Visual Basic)
 
-有時候，您在某些情況下會使用沒有已定義值的實值型別。 例如，資料庫中的欄位可能必須區別具有有意義且沒有指派值的指派值。 實值型別可以擴充以接受其一般值或 null 值。 這種延伸模組稱為*可為 null 的型*別。
+有時，使用在某些情況下沒有定義值的數值型別。 例如，資料庫中的欄位可能必須區分具有有意義的賦值和沒有賦值。 可以擴展數值型別以獲取其正常值或空值。 這種擴展稱為*空類型*。
 
-每個可為 null 的型別都是從泛型 <xref:System.Nullable%601> 結構來構成。 請考慮一個追蹤工作相關活動的資料庫。 下列範例會建立可為 null 的 `Boolean` 型別，並宣告該型別的變數。 您可以用三種方式撰寫宣告：
+每個空數值型別都是從泛型<xref:System.Nullable%601>結構構造的。 考慮跟蹤與工作相關的活動的資料庫。 下面的示例構造一個可`Boolean`null 的類型，並聲明該類型的變數。 您可以通過三種方式編寫聲明：
 
 [!code-vb[VbVbalrNullableValue#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#1)]
 
-變數 `ridesBusToWork` 可以保留 `True`的值、`False`的值，或完全不包含任何值。 其初始預設值完全沒有值，在此情況下可能表示尚未取得此人員的資訊。 相反地，`False` 可能表示已取得資訊，而且該人員不會使匯流排運作。
+變數`ridesBusToWork`可以保存`True`值 ，`False`或根本不值。 其初始預設值根本沒有值，在這種情況下，這可能意味著尚未為此人獲取資訊。 相反，`False`可能意味著資訊已經獲得，並且此人不坐公共汽車去上班。
 
-您可以使用可為 null 的型別來宣告變數和屬性，也可以宣告具有可為 null 類型之元素的陣列。 您可以使用可為 null 的類型來宣告具有參數的程式，而且可以從 `Function` 程式傳回可為 null 的類型。
+可以使用空值型別宣告變數和屬性，也可以聲明具有空數值型別的元素的陣列。 您可以將具有空數值型別的過程聲明為參數，也可以從`Function`過程返回空數值型別。
 
-您無法在參考型別（例如陣列、`String`或類別）上，建立可為 null 的型別。 基礎類型必須是實數值型別。 如需詳細資訊，請參閱 [Value Types and Reference Types](value-types-and-reference-types.md)。
+不能在參考型別（如陣列、a`String`或 類）上構造可 null 類型。 基礎類型必須是數值型別。 如需詳細資訊，請參閱 [Value Types and Reference Types](value-types-and-reference-types.md)。
 
-## <a name="using-a-nullable-type-variable"></a>使用可為 Null 的型別變數
+## <a name="using-a-nullable-type-variable"></a>使用可空類型變數
 
-可為 null 型別的最重要成員是其 <xref:System.Nullable%601.HasValue%2A> 和 <xref:System.Nullable%601.Value%2A> 屬性。 對於可為 null 之型別的變數，<xref:System.Nullable%601.HasValue%2A> 會告訴您該變數是否包含已定義的值。 如果 `True`<xref:System.Nullable%601.HasValue%2A>，您可以從 <xref:System.Nullable%601.Value%2A>讀取此值。 請注意，<xref:System.Nullable%601.HasValue%2A> 和 <xref:System.Nullable%601.Value%2A> 都是 `ReadOnly` 的屬性。
+空數值型別最重要的成員是其<xref:System.Nullable%601.HasValue%2A>和<xref:System.Nullable%601.Value%2A>屬性。 對於空數值型別的變數，<xref:System.Nullable%601.HasValue%2A>告訴您該變數是否包含定義的值。 如果是<xref:System.Nullable%601.HasValue%2A>`True`，則可以從<xref:System.Nullable%601.Value%2A>讀取 值。 請注意，兩<xref:System.Nullable%601.HasValue%2A>者<xref:System.Nullable%601.Value%2A>都是`ReadOnly`屬性。
 
 ### <a name="default-values"></a>預設值
 
-當您宣告具有可為 null 之類型的變數時，其 <xref:System.Nullable%601.HasValue%2A> 屬性的預設值為 `False`。 這表示根據預設，變數沒有已定義的值，而不是其基礎數值型別的預設值。 在下列範例中，`numberOfChildren` 一開始的變數沒有已定義的值，即使 `Integer` 類型的預設值為0也一樣。
+當您聲明具有空數值型別的變數時，其<xref:System.Nullable%601.HasValue%2A>屬性的預設值為`False`。 這意味著預設情況下，變數沒有定義的值，而不是其基礎數值型別的預設值。 在下面的示例中，變數`numberOfChildren`最初沒有定義的值，即使`Integer`類型的預設值為 0。
 
 [!code-vb[VbVbalrNullableValue#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#2)]
 
-Null 值適用于表示未定義或未知的值。 如果 `numberOfChildren` 已宣告為 `Integer`，則不會有任何可能表示資訊目前無法使用的值。
+空值可用於指示未定義或未知值。 如果`numberOfChildren`已聲明為`Integer`，則沒有任何值可以指示資訊當前不可用。
 
-### <a name="storing-values"></a>儲存值
+### <a name="storing-values"></a>存儲值
 
-您可以用一般方式，將值儲存在可為 null 之型別的變數或屬性中。 下列範例會將值指派給變數 `numberOfChildren` 在上一個範例中宣告。
+以典型方式將值存儲在可 null 數值型別的變數或屬性中。 下面的示例將值分配給上一個示例中聲明`numberOfChildren`的變數。
 
 [!code-vb[VbVbalrNullableValue#3](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#3)]
 
-如果可為 null 之型別的變數或屬性包含已定義的值，您可以將它還原成其初始狀態，而不會指派值。 若要這麼做，請將變數或屬性設定為 `Nothing`，如下列範例所示。
+如果空數值型別的變數或屬性包含已定義的值，則可能導致它恢復到未分配值的初始狀態。 為此，通過將變數或屬性設置為`Nothing`（）來執行此操作，如下例所示。
 
 [!code-vb[VbVbalrNullableValue#4](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#4)]
 
 > [!NOTE]
-> 雖然您可以將 `Nothing` 指派給可為 null 之型別的變數，但是您無法使用等號來測試 `Nothing`。 使用等號、`someVar = Nothing`的比較，一律會評估為 `Nothing`。 您可以測試變數的 <xref:System.Nullable%601.HasValue%2A> 屬性以進行 `False`，或使用 `Is` 或 `IsNot` 運算子進行測試。
+> 儘管可以分配給`Nothing`null 數值型別的變數，但不能`Nothing`使用等號來測試它。 使用等號`someVar = Nothing`的比較， 始終計算為`Nothing`。 可以使用<xref:System.Nullable%601.HasValue%2A>或`False``Is``IsNot`運算子測試變數的屬性， 或測試。
 
-### <a name="retrieving-values"></a>正在抓取值
+### <a name="retrieving-values"></a>檢索值
 
-若要取出可為 null 之型別的變數值，您應該先測試其 <xref:System.Nullable%601.HasValue%2A> 屬性，以確認它有值。 如果您嘗試在 `False`<xref:System.Nullable%601.HasValue%2A> 時讀取值，Visual Basic 會擲回 <xref:System.InvalidOperationException> 例外狀況。 下列範例顯示讀取先前範例 `numberOfChildren` 變數的建議方式。
+若要檢索 null 數值型別的變數的值，應首先測試其<xref:System.Nullable%601.HasValue%2A>屬性以確認其具有值。 如果嘗試讀取值時<xref:System.Nullable%601.HasValue%2A>為`False`，Visual Basic 將引發異常<xref:System.InvalidOperationException>。 下面的示例顯示了讀取前面示例變數`numberOfChildren`的建議方法。
 
 [!code-vb[VbVbalrNullableValue#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#5)]
 
-## <a name="comparing-nullable-types"></a>比較可為 Null 的類型
+## <a name="comparing-nullable-types"></a>比較可消除類型
 
-當可為 null 的 `Boolean` 變數用於布林運算式時，結果可以是 `True`、`False`或 `Nothing`。 以下是 `And` 和 `Or`的事實資料表。 因為 `b1` 和 `b2` 現在有三個可能的值，所以有九個組合可供評估。
+當布林運算式`Boolean`中使用空變數時，結果可以是`True`，`False`或`Nothing`。 下面是`And`和`Or`的真情況表。 因為`b1`現在有`b2`三個可能的值，因此有九個組合需要計算。
 
 |b1|b2|b1 和 b2|b1 或 b2|
 |--------|--------|---------------|--------------|
@@ -78,43 +78,43 @@ Null 值適用于表示未定義或未知的值。 如果 `numberOfChildren` 已
 |`False`|`True`|`False`|`True`|
 |`False`|`False`|`False`|`False`|
 
-當布林變數或運算式的值是 `Nothing`時，就不會 `true` 也不會 `false`。 請參考下列範例。
+當布林變數或運算式的值為`Nothing`時，它既不是 ，`true`也不是`false`。 請思考一下下列範例。
 
 [!code-vb[VbVbalrNullableValue#6](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#6)]
 
-在此範例中，`b1 And b2` 會評估為 `Nothing`。 因此，`Else` 子句會在每個 `If` 語句中執行，而輸出如下所示：
+在此示例中，`b1 And b2`計算 到`Nothing`。 因此，子`Else`句在每個`If`語句中執行，輸出如下所示：
 
 `Expression is not true`
 
 `Expression is not false`
 
 > [!NOTE]
-> 當第一個評估為 `Nothing`時，`AndAlso` 和 `OrElse`（使用最少線路評估）必須評估其第二個運算元。
+> `AndAlso`和`OrElse`，使用短路評估時，必須評估其第二個運算元， 當第一個`Nothing`計算到 。
 
 ## <a name="propagation"></a>傳播
 
-如果算術、比較、移位或類型運算的其中一個或兩個運算元可為 null，則作業的結果也會是可為 null。 如果兩個運算元都有不 `Nothing`的值，則會在運算元的基礎值上執行運算，就如同兩者都是可為 null 的型別一樣。 在下列範例中，`compare1` 和 `sum1` 的變數是隱含類型。 如果您將滑鼠指標停留在其上方，您會看到編譯器會為這兩個專案推斷可為 null 的類型。
+如果算術、比較、移位或類型操作的一個或兩個運算元是空數值型別，則操作的結果也是空數值型別。 如果兩個運算元的值都不是`Nothing`，則對運算元的基礎值執行操作，就像兩者都不是空數值型別一樣。 在下面的示例中，變數`compare1`和`sum1`隱式類型。 如果將滑鼠指標放在滑鼠指標上，您將看到編譯器推斷它們兩個指標的空數值型別。
 
 [!code-vb[VbVbalrNullableValue#7](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#7)]
 
-如果其中一個或兩個運算元的值為 `Nothing`，則會 `Nothing`結果。
+如果一個或兩個運算元的值`Nothing`為 ， 則結果將為`Nothing`。
 
 [!code-vb[VbVbalrNullableValue#8](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#8)]
 
-## <a name="using-nullable-types-with-data"></a>搭配資料使用可為 Null 的類型
+## <a name="using-nullable-types-with-data"></a>將可空類型與資料一起使用
 
-資料庫是使用可為 null 類型的其中一個最重要的地方。 並非所有資料庫物件目前都支援可為 null 的類型，但設計工具產生的資料表介面卡。 [如需可為 null 的類型，請參閱 TableAdapter 支援](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types)。
+資料庫是使用空數值型別的最重要位置之一。 並非所有資料庫物件當前都支援空數值型別，但設計器生成的表配接器支援。 有關[空類型的表配接器支援，請參閱表配接器支援](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [資料類型](index.md)
-- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [值類型和參考類型](value-types-and-reference-types.md)
 - [資料類型的疑難排解](troubleshooting-data-types.md)
 - [使用 TableAdapter 填入資料集](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [If 運算子](../../../language-reference/operators/if-operator.md)
-- [區域類型推斷](../variables/local-type-inference.md)
+- [區域型別推斷](../variables/local-type-inference.md)
 - [Is 運算子](../../../language-reference/operators/is-operator.md)
 - [IsNot 運算子](../../../language-reference/operators/isnot-operator.md)
-- [可為 null 的C#實數值型別（）](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)
+- [空數值型別 （C#）](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)

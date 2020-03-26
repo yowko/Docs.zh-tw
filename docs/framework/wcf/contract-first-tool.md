@@ -2,29 +2,31 @@
 title: Contract-First 工具
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 7ddc3b2c733c73808d17b6e0f45129cc19d7527c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 36e1a3e19f802ca5b74cf50f5bcd57c167e31e33
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380378"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291709"
 ---
 # <a name="contract-first-tool"></a>Contract-First 工具
-服務合約通常必須從現有的服務來建立。 在.NET Framework 4.5 中，資料合約類別可以自動建立從現有的服務使用合約優先工具。 若要使用合約優先工具，必須將 XML 結構描述定義 (XSD) 檔案下載至本機，這個工具無法透過 HTTP 匯入遠端資料合約。
+服務合約通常必須從現有的服務來建立。 在 .NET 框架 4.5 及更高版本中，可以使用協定優先工具從現有服務自動創建資料協定類。 若要使用合約優先工具，必須將 XML 結構描述定義 (XSD) 檔案下載至本機，這個工具無法透過 HTTP 匯入遠端資料合約。
 
- 合約優先工具已整合到 Visual Studio 2012 中，做為建置工作。 每當建置專案時就會建立建置工作所產生的程式碼檔案，讓專案可以輕鬆採用基礎服務合約中的變更。
+ 合同優先工具作為構建任務集成到 Visual Studio 2012 中。 每當建置專案時就會建立建置工作所產生的程式碼檔案，讓專案可以輕鬆採用基礎服務合約中的變更。
 
  合約優先工具可以匯入的結構描述型別包括下列各項：
 
 ```xml
 <xsd:complexType>
-<xsd:simpleType>
+ <xsd:simpleType>
+ </xsd:simpleType>
+</xsd:complexType>
 ```
 
  如果這些型別是基本型別 (例如 `Int16` 或 `String`) 則不產生簡單型別，如果是 `Collection` 型別則不產生複雜類型。 如果這些型別是其他 `xsd:complexType` 的一部分，也不會產生型別。 在所有這些情況下，型別會改為參考專案中的現有型別。
 
 ## <a name="adding-a-data-contract-to-a-project"></a>將資料合約加入至專案
- 在使用合約優先工具之前，必須先將服務合約 (XSD) 加入至專案。 為了便於說明本概觀，將會使用下列合約來解釋合約優先功能。 這項服務定義是 Bing 的搜尋應用程式開發介面所使用之服務合約的一個小型子集合。
+ 在使用合約優先工具之前，必須先將服務合約 (XSD) 加入至專案。 為了便於說明本概觀，將會使用下列合約來解釋合約優先功能。 此服務定義是必應的搜索 API 所使用的服務協定的一小部分。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -56,61 +58,61 @@ ms.locfileid: "66380378"
 </xs:schema>
 ```
 
- 將上述服務合約加入至專案，以滑鼠右鍵按一下專案，然後選取**加入新...** . 從 [範本] 對話方塊的 [WCF] 窗格中選取 [結構描述定義]，並命名新的檔案 SampleContract.xsd。 複製上面的程式碼，將其貼入新檔案的程式碼檢視中。
+ 要將上述服務協定添加到專案中，請按右鍵專案並選擇"**添加新..."** 從 [範本] 對話方塊的 [WCF] 窗格中選取 [結構描述定義]，並命名新的檔案 SampleContract.xsd。 複製上面的程式碼，將其貼入新檔案的程式碼檢視中。
 
 ## <a name="configuring-contract-first-options"></a>設定合約優先選項
- 合約優先選項可以設定的內容功能表中的 WCF 專案。 若要啟用合約優先開發，請選取**將 XSD 啟用為型別定義語言**專案的 [屬性] 視窗的 [WCF] 頁面中核取方塊。
+ 可以在 WCF 專案的"屬性"功能表中配置合同優先選項。 要啟用合同優先開發，請在專案屬性視窗的 WCF 頁中選擇**啟用 XSD 作為類型定義語言**核取方塊。
 
- ![啟用合約優先開發 WCF 選項的螢幕擷取畫面。](./media/contract-first-tool/contract-first-options.png)
+ ![啟用合同優先開發的 WCF 選項的螢幕截圖。](./media/contract-first-tool/contract-first-options.png)
 
  若要設定進階屬性，請按一下 [進階] 按鈕。
 
- ![進階的合約程式碼產生設定對話方塊。](./media/contract-first-tool/advanced-contract-settings.png)
+ ![高級合同代碼生成設置對話方塊。](./media/contract-first-tool/advanced-contract-settings.png)
 
  您可以設定下列適用於從合約產生程式碼的進階設定。 這些設定只能針對專案中的所有檔案進行，目前尚無法對個別檔案進行設定。
 
-- **序列化程式模式**:此設定會決定哪種序列化程式用來讀取服務合約檔案。 當**XML 序列化程式**選取時，**集合型別**並**重複使用型別**選項已停用。 這些選項僅適用於**資料合約序列化程式**。
+- **序列化器模式**：此設置確定用於讀取服務協定檔的序列化器。 選擇**XML 序列化器**後，將禁用**集合類型**和**重用類型**選項。 這些選項僅適用于**資料合同序列化器**。
 
-- **重複使用型別**:此設定指定哪些程式庫會用於型別重複使用。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
+- **重用類型**：此設置指定用於類型重用的庫。 僅當**序列化器模式**設置為**資料協定序列化程式**時，此設置才適用。
 
-- **集合型別**:此設定會指定要使用集合資料型別的完整限定或組件限定的類型。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
+- **集合類型**：此設置指定用於集合資料類型的完全限定或程式集限定類型。 僅當**序列化器模式**設置為**資料協定序列化程式**時，此設置才適用。
 
-- **字典型別**:此設定會指定完整限定或組件限定型別，用於字典資料型別。
+- **字典類型**：此設置指定用於字典資料類型的完全限定或程式集限定類型。
 
-- **EnableDataBinding**:此設定指定是否要實作<xref:System.ComponentModel.INotifyPropertyChanged>實作資料繫結的所有資料型別上的介面。
+- **啟用資料繫結**：此設置指定是否在所有資料類型上實現<xref:System.ComponentModel.INotifyPropertyChanged>介面以實現資料繫結。
 
-- **ExcludedTypes**： 此設定會指定要排除參考的組件的完整限定或組件限定類型的清單。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
+- **排除類型**：此設置指定從引用的程式集中排除的完全限定類型或程式集限定類型的清單。 僅當**序列化器模式**設置為**資料協定序列化程式**時，此設置才適用。
 
-- **GenerateInternalTypes**:此設定指定是否要產生標示為內部的類別。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
+- **生成內部類型**：此設置指定是否生成標記為內部的類。 僅當**序列化器模式**設置為**資料協定序列化程式**時，此設置才適用。
 
-- **GenerateSerializableTypes**:此設定指定是否要產生類別<xref:System.SerializableAttribute>屬性。 此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
+- **生成可序列化類型**：此設置指定是否使用 屬性<xref:System.SerializableAttribute>生成類。 僅當**序列化器模式**設置為**資料協定序列化程式**時，此設置才適用。
 
-- **/Importxmltypes**:此設定指定是否要將設定資料合約序列化程式，套用<xref:System.SerializableAttribute>屬性設定為不具類別<xref:System.Runtime.Serialization.DataContractAttribute>屬性。  此設定僅適用於**序列化程式模式**設為**資料合約序列化程式**。
+- **ImportXMLType**：此設置指定是否配置資料協定序列化器以將<xref:System.SerializableAttribute>屬性應用於沒有該屬性的<xref:System.Runtime.Serialization.DataContractAttribute>類。  僅當**序列化器模式**設置為**資料協定序列化程式**時，此設置才適用。
 
-- **SupportFx35TypedDataSets**:此設定指定是否要建立適用於.NET Framework 3.5 的具類型資料集提供額外的功能。 當**序列化程式模式**設為**XML 序列化程式**，則<xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35>延伸模組會新增至 XML 結構描述匯入工具，當此值設定為 True。 當**序列化程式模式**設為**資料合約序列化程式**，型別<xref:System.DateTimeOffset>時這個值設為 False，會從參考排除以便<xref:System.DateTimeOffset>一定會產生對於較舊 framework 版本。
+- **SupportFx35TypedDataSet：** 此設置指定是否為為 .NET 框架 3.5 創建的類型資料集提供其他功能。 當**序列化器模式**設置為**XML 序列化器**時，當此值設置為 True 時，擴展<xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35>將添加到 XML 架構導入器中。 當**序列化器模式**設置為**資料協定序列化程式**時，當<xref:System.DateTimeOffset>此值設置為 False 時，該類型將從引用中排除，以便始終為<xref:System.DateTimeOffset>較舊的框架版本生成 。
 
-- **InputXsdFiles**:此設定指定輸入檔清單。 每個檔案都必須包含有效的 XML 結構描述。
+- **InputXsd檔**：此設置指定輸入檔的清單。 每個檔案都必須包含有效的 XML 結構描述。
 
-- **語言**:此設定會指定產生的合約程式碼語言。 這個設定必須可以由 <xref:System.CodeDom.Compiler.CodeDomProvider> 辨識。
+- **語言**：此設置指定生成的協定代碼的語言。 這個設定必須可以由 <xref:System.CodeDom.Compiler.CodeDomProvider> 辨識。
 
-- **NamespaceMappings**:此設定會指定從 XSD 目標命名空間到 CLR 命名空間的對應。 每個對應都要使用下列格式：
+- **命名空間映射**：此設置指定從 XSD 目標命名空間到 CLR 命名空間的映射。 每個對應都要使用下列格式：
 
     ```xml
-    "<Schema Namespace>, <CLR Namespace>"
+    "Schema Namespace, CLR Namespace"
     ```
 
      XML 序列化程式只接受一個使用下列格式的對應：
 
     ```xml
-    "*, <CLR Namespace>"
+    "*, CLR Namespace"
     ```
 
-- **OutputDirectory**:此設定會指定將產生的程式碼檔案的目錄。
+- **輸出目錄**：此設置指定將生成代碼檔的目錄。
 
  建置專案時，將會使用這些設定從服務合約檔案產生服務合約型別。
 
 ## <a name="using-contract-first-development"></a>使用合約優先開發
- 將服務合約加入至專案，並確認組建設定中，則在按下建置專案後**F6**。 服務合約中定義的型別接著就可以在專案中使用。
+ 將服務協定添加到專案並確認生成設置後，請按**F6**生成專案。 服務合約中定義的型別接著就可以在專案中使用。
 
  若要使用服務合約中定義的型別，請在目前命名空間之下加入 `ContractTypes` 的參考：
 
@@ -118,11 +120,11 @@ ms.locfileid: "66380378"
 using MyProjectNamespace.ContractTypes;
 ```
 
- 如下所示，如此便可解析在專案中，服務合約中定義的類型：
+ 然後，服務協定中定義的類型將在專案中解析，如下所示：
 
- ![顯示在 IntelliSense 中，輸入前幾個字母之後 SearchRequest 類別。](./media/contract-first-tool/service-contract-types.png)
+ ![鍵入前幾個字母后，在 IntelliSense 中顯示的搜索請求類。](./media/contract-first-tool/service-contract-types.png)
 
- 工具所產生的型別會建立在 GeneratedXSDTypes.cs 檔案中。 在 建立檔案\<專案目錄 > j\<組建組態 > /XSDGeneratedCode/ 目錄預設。 本主題開頭的範例結構描述轉換如下：
+ 工具所產生的型別會建立在 GeneratedXSDTypes.cs 檔案中。 預設情況下，\<該檔在專案目錄中>/obj/\<組建組態>/XSD生成代碼/目錄中創建。 本文開頭的示例架構將轉換為如下：
 
 ```csharp
 //------------------------------------------------------------------------------

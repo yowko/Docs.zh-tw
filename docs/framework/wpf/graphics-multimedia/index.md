@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 56a69c10a420e399478a0d617d30380ff5217e9c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8636afcc5b63b71dc729812a7f3eb4945ba49494
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186736"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112033"
 ---
 # <a name="graphics-and-multimedia"></a>圖形和多媒體
 
@@ -55,11 +55,11 @@ ms.locfileid: "79186736"
 
 ## <a name="graphics-and-rendering"></a>圖形和轉譯
 
-WPF 可支援高品質的 2D 圖形。 這些功能包括筆刷、幾何、影像、圖形及轉換。 如需詳細資訊，請參閱[圖形](graphics.md)。 圖形元素的呈現基於類<xref:System.Windows.Media.Visual>。 螢幕上視覺物件的結構是由視覺化樹狀結構描繪。 如需詳細資訊，請參閱 [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)。
+WPF 支援高品質 2D 圖形。 這些功能包括筆刷、幾何、影像、圖形及轉換。 如需詳細資訊，請參閱[圖形](graphics.md)。 圖形元素的呈現基於類<xref:System.Windows.Media.Visual>。 螢幕上視覺物件的結構是由視覺化樹狀結構描繪。 如需詳細資訊，請參閱 [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)。
 
-### <a name="2-d-shapes"></a>2D 圖案
+### <a name="2d-shapes"></a>2D 形狀
 
-WPF 提供了常用的向量繪製的二維形狀（如矩形和橢圓）的庫，下圖顯示了這些形狀。
+WPF 提供了常用的向量繪製的 2D 形狀（如矩形和橢圓）的庫，下圖顯示了這些形狀。
 
 ![顯示橢圓和矩形的圖表。](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -99,17 +99,17 @@ End Class
 
 有關詳細資訊，請參閱[WPF 概述中的形狀和基本圖形](shapes-and-basic-drawing-in-wpf-overview.md)。 如需簡介範例，請參閱[圖形元素範例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/ShapeElements)。
 
-### <a name="2-d-geometries"></a>2D 幾何
+### <a name="2d-geometries"></a>2D 幾何
 
-當 WPF 提供的二維形狀不足時，可以使用 WPF 支援幾何體和路徑創建自己的形狀和路徑。 下圖顯示了如何使用幾何圖形創建形狀（作為繪圖畫筆）和剪輯其他 WPF 元素。
+當 WPF 提供的 2D 形狀不足時，可以使用 WPF 支援幾何體和路徑創建自己的形狀和路徑。 下圖顯示了如何使用幾何圖形創建形狀（作為繪圖畫筆）和剪輯其他 WPF 元素。
 
 ![顯示如何使用幾何圖形創建形狀的螢幕截圖。](./media/index/use-geometries-create-shapes.png)
 
 有關詳細資訊，請參閱[幾何概述](geometry-overview.md)。 如需簡介範例，請參閱[幾何範例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/Geometry)。
 
-### <a name="2-d-effects"></a>2D 效果
+### <a name="2d-effects"></a>2D 效果
 
-WPF 提供了一個二維類庫，可用於創建各種效果。 WPF 的二維渲染功能提供了繪製[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]具有漸變、點陣圖、繪圖和視頻的元素的能力;並使用旋轉、縮放和傾斜來操作它們。 下圖舉例說明了使用 WPF 畫筆可以實現的許多效果。
+WPF 提供了一個包含 2D 類的庫，可用於創建各種效果。 WPF 的 2D 渲染功能提供了繪製[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]具有漸變、點陣圖、繪圖和視頻的元素的功能;並使用旋轉、縮放和傾斜來操作它們。 下圖舉例說明了使用 WPF 畫筆可以實現的許多效果。
 
 ![顯示不同 WPF 畫筆和油漆元素的插圖。](./media/index/brushes-paint-elements.png)
 
@@ -117,13 +117,13 @@ WPF 提供了一個二維類庫，可用於創建各種效果。 WPF 的二維�
 
 <a name="rendering"></a>
 
-## <a name="3-d-rendering"></a>3D 轉譯
+## <a name="3d-rendering"></a>3D 渲染
 
-WPF 提供一組三維渲染功能，這些功能與 WPF 中的二維圖形支援集成，以便創建更令人興奮的佈局、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]和資料視覺化。 在頻譜的一端，WPF 使您能夠將二維圖像渲染到三維形狀的表面上，下圖演示了這一點。
+WPF 提供一組 3D 渲染功能，這些功能與 WPF 中的 2D 圖形支援集成，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]以便創建更令人興奮的佈局、和資料視覺化。 在頻譜的一端，WPF 使您能夠將 2D 圖像渲染到 3D 形狀的表面，下圖演示了這一點。
 
-![顯示具有不同紋理的三維形狀的示例螢幕截圖。](./media/index/visual-three-dimensional-shape.png)
+![顯示具有不同紋理的 3D 形狀的示例螢幕截圖。](./media/index/visual-three-dimensional-shape.png)
 
-有關詳細資訊，請參閱[三維圖形概述](3-d-graphics-overview.md)。 如需簡介範例，請參閱 [3D 單色範例](https://go.microsoft.com/fwlink/?LinkID=159964)。
+有關詳細資訊，請參閱[3D 圖形概述](3-d-graphics-overview.md)。 有關介紹性示例，請參閱[3D 實體示例](https://go.microsoft.com/fwlink/?LinkID=159964)。
 
 <a name="animation"></a>
 
@@ -171,5 +171,5 @@ WPF 圖形功能的核心功能是提供用於多媒體（包括視頻和音訊�
 - [使用純色和漸層繪製的概觀](painting-with-solid-colors-and-gradients-overview.md)
 - [使用影像、繪圖和視覺效果繪製](painting-with-images-drawings-and-visuals.md)
 - [動畫和計時 HOW TO 主題](animation-and-timing-how-to-topics.md)
-- [立體圖形概觀](3-d-graphics-overview.md)
+- [3D 圖形概述](3-d-graphics-overview.md)
 - [多媒體概觀](multimedia-overview.md)

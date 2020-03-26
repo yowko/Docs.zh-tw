@@ -3,12 +3,12 @@ title: 使用 .NET Core 來建立 REST 用戶端
 description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156853"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249164"
 ---
 # <a name="rest-client"></a>REST 用戶端
 
@@ -27,7 +27,7 @@ ms.locfileid: "79156853"
 
 如果您偏好追蹤本主題的[最終範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)，則可以下載它。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 您將必須設定電腦以執行 .NET Core。 您可以在[.NET 核心下載](https://dotnet.microsoft.com/download)頁面上找到安裝說明。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。
 您將必須安裝慣用的程式碼編輯器。 下面的描述使用[Visual Studio代碼](https://code.visualstudio.com/)，這是一個開源的跨平臺編輯器。 不過，您可以使用您熟悉的任何工具。
@@ -163,7 +163,7 @@ JSON 序列化程式將會忽略未包含在所要使用之類別型別中的資
 
 現在您已經建立型別，讓我們來將它還原序列化。
 
-接著，您將使用序列化程式將 JSON 轉換成 C# 物件。 將方法<xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>`ProcessRepositories`中的調用替換為以下三行：
+接著，您將使用序列化程式將 JSON 轉換成 C# 物件。 將方法<xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>`ProcessRepositories`中的調用替換為以下行：
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
@@ -288,23 +288,16 @@ foreach (var repo in repositories)
 2016-02-08T21:27:00Z
 ```
 
-該格式並不符合任何標準 .NET <xref:System.DateTime> 格式。 因此，您將需要撰寫一個自訂的轉換方法。 您可能也不會想要對 `Repository` 類別的使用者公開原始字串。 屬性也可以幫助控制該行為。 首先，定義一`public`個屬性，該屬性將保存`Repository`類中日期和時間的字串表示形式，並定義`LastPush``readonly`返回表示返回日期的格式化字串的屬性：
+該格式在協調通用時間 （UTC） 中，因此您將獲得其<xref:System.DateTime><xref:System.DateTime.Kind%2A>屬性為<xref:System.DateTimeKind.Utc>的值。 如果您更喜歡在時區中表示的日期，則需要編寫自訂轉換方法。 首先，定義一`public`個屬性，該屬性將保存`Repository`類中的日期和時間的 UTC 表示形式，`LastPush``readonly`以及返回轉換為本地時間的日期的屬性：
 
 ```csharp
 [JsonPropertyName("pushed_at")]
-public string JsonDate { get; set; }
+public DateTime LastPushUtc { get; set; }
 
-public DateTime LastPush =>
-    DateTime.ParseExact(JsonDate, "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture);
+public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-讓我們來討論一下我們剛剛定義的新構造。 屬性`LastPush`使用`get`訪問器的*運算式體成員*定義。 沒有 `set` 存取子。 省略`set`訪問器是在 C# 中定義*唯讀*屬性的方式。 （是的，您可以在 C# 中創建*僅寫入*屬性，但其值是有限的。該方法<xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)>分析字串並使用提供的日期格式創建<xref:System.DateTime>物件，並使用`DateTime``CultureInfo`物件向 添加其他中繼資料。 如果剖析作業失敗，屬性存取子就會擲回例外狀況。
-
-要使用<xref:System.Globalization.CultureInfo.InvariantCulture>，您需要將<xref:System.Globalization>命名空間添加到 中的`using`指令： `repo.cs`
-
-```csharp
-using System.Globalization;
-```
+讓我們來討論一下我們剛剛定義的新構造。 屬性`LastPush`使用`get`訪問器的*運算式體成員*定義。 沒有 `set` 存取子。 省略`set`訪問器是在 C# 中定義*唯讀*屬性的方式。 (是的，您可以用 C# 來建立「唯寫」** 屬性，但其值會受到限制)。
 
 最後，請在主控台中再多新增一個輸出陳述式，這樣您便已準備好來重新建置及執行此應用程式：
 

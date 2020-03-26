@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: 02d8144c28b7a4e54fb86fea5abb694cf7af34af
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e17d3b7b9986b477df198480129edaf4c139c6bc
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185958"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112059"
 ---
 # <a name="how-to-rotate-an-object"></a>操作說明：旋轉物件
 此範例會顯示如何旋轉物件。 該示例首先創建<xref:System.Windows.Media.RotateTransform>a，然後指定<xref:System.Windows.Media.RotateTransform.Angle%2A>其以度表示。  
@@ -42,7 +42,7 @@ ms.locfileid: "79185958"
   
  前面的<xref:System.Windows.Shapes.Polyline>示例中是 。 <xref:System.Windows.UIElement> 將 應用<xref:System.Windows.Media.Transform>到<xref:System.Windows.UIElement.RenderTransform%2A>的屬性時<xref:System.Windows.UIElement>，可以使用 屬性<xref:System.Windows.UIElement.RenderTransformOrigin%2A>為應用於元素的每個<xref:System.Windows.Media.Transform>屬性指定原點。 由於屬性<xref:System.Windows.UIElement.RenderTransformOrigin%2A>使用相對座標，因此即使不知道元素的大小，也可以對元素的中心應用變換。 有關詳細資訊，請參閱[使用相對值指定變換的原點](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)。  
   
- 如需完整範例，請參閱 [2D 轉換範例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
+ 有關完整示例，請參閱[2D 變換示例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
   
 ## <a name="see-also"></a>另請參閱
 

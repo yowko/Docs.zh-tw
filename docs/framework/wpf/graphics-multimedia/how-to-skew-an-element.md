@@ -6,15 +6,15 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: 370ac28b07427345b52822133b5414b45d4462eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10b00044c1c518641281e2e72cdb5a68474b5170
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187654"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112020"
 ---
 # <a name="how-to-skew-an-element"></a>操作說明：扭曲元素
-此示例演示如何使用<xref:System.Windows.Media.SkewTransform>傾斜元素。 扭曲也稱為傾斜，這種轉換會以非一致的方式延伸座標空間。 一<xref:System.Windows.Media.SkewTransform>個典型的用途是類比二維物件中的三維深度。  
+此示例演示如何使用<xref:System.Windows.Media.SkewTransform>傾斜元素。 扭曲也稱為傾斜，這種轉換會以非一致的方式延伸座標空間。 一<xref:System.Windows.Media.SkewTransform>個典型的用途是類比 2D 物件中的 3D 深度。  
   
  使用<xref:System.Windows.Media.SkewTransform.CenterX%2A>和<xref:System.Windows.Media.SkewTransform.CenterY%2A>屬性指定 的中心<xref:System.Windows.Media.SkewTransform>點。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "79187654"
  ![SkewTransform 範例](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
 三個 SkewTransform 範例的示意圖  
   
- 如需完整範例，請參閱 [2D 轉換範例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
+ 有關完整示例，請參閱[2D 變換示例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,12 +2,12 @@
 title: WCF Web HTTP 程式設計模型概觀
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: fb6ef0fdcefbc6ceec75ce30db3abf5896d85c61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f2350b58e3cb33613ebc8e2c3cda1e234bcde25
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184177"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291738"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 程式設計模型概觀
 Windows 通信基礎 （WCF） WEB HTTP 程式設計模型提供了使用 WCF 構建 WEB HTTP 服務所需的基本元素。 WCF WEB HTTP 服務旨在由最廣泛的用戶端（包括 Web 瀏覽器）訪問，並且具有以下獨特要求：  
@@ -135,7 +135,7 @@ interface ICustomer
   
  這意味著 WCF WEB HTTP 程式設計模型可以處理任何類型的資料，但您可能正在針對<xref:System.IO.Stream>進行程式設計。  
   
- .NET 框架 3.5 支援 JSON 資料 （AJAX） 以及聯合饋送（包括 ATOM 和 RSS）。 有關這些功能的詳細資訊，請參閱[WCF Web 格式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 聯合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)和[AJAX 集成和 JSON 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
+ .NET 框架 3.5 支援 JSON 資料 （AJAX） 以及聯合饋送（包括 ATOM 和 RSS）。 有關這些功能的詳細資訊，請參閱[WCF Web HTTP 格式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[、WCF 聯合概述](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) [、AJAX 集成和 JSON 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP 程式設計模型和安全性  
 

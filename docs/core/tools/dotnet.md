@@ -2,12 +2,12 @@
 title: dotnet 命令
 description: 瞭解 dotnet 命令（.NET Core CLI 的通用驅動程式）及其用法。
 ms.date: 02/13/2020
-ms.openlocfilehash: da37c5cc3b019851e245fa3f65ae9dfb8a3fef54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398892"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134081"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -193,8 +193,14 @@ Command | 函式
 Command | 函式
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | 從伺服器刪除或取消列出套件。
-[dotnet nuget locals](dotnet-nuget-locals.md) | 清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。
 [dotnet nuget push](dotnet-nuget-push.md) | 將套件推送至伺服器並發行。
+[dotnet nuget locals](dotnet-nuget-locals.md) | 清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。
+[點網 nuget 添加源](dotnet-nuget-add-source.md) | 添加 NuGet 源。
+[點網 nuget 禁用源](dotnet-nuget-disable-source.md) | 禁用 NuGet 源。
+[點網 nuget 啟用源](dotnet-nuget-enable-source.md) | 啟用 NuGet 源。
+[點網 nuget 清單源](dotnet-nuget-list-source.md) | 列出所有配置的 NuGet 源。
+[點網 nuget 刪除源](dotnet-nuget-remove-source.md) | 刪除 NuGet 源。
+[點網 nuget 更新源](dotnet-nuget-update-source.md) | 更新 NuGet 源。
 
 ### <a name="global-tool-path-and-local-tools-commands"></a>全域、工具路徑和本地工具命令
 
@@ -255,6 +261,10 @@ dotnet myapp.dll
 
   指定載入執行階段時，共用主機所使用的服務索引位置。
 
+- `DOTNET_NOLOGO`
+
+  指定第一次運行時是否顯示 .NET Core 歡迎消息和遙測消息。 `true`設置為將這些消息靜音（值`true`、`1`或`yes`已接受）或設置為`false`允許（值`false`、`0`或`no`已接受）。 如果未設置，則預設值為`false`，並且消息將在首次運行時顯示。 請注意，此標誌對遙測沒有影響（請參閱`DOTNET_CLI_TELEMETRY_OPTOUT`選擇不發送遙測）。
+
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 
   指定是否收集 .NET Core 工作使用資料，並將其傳送給 Microsoft。 設為 `true` 以選擇加入遙測功能 (可接受的值為 `true`、`1` 或 `yes`)。 否則，請設為 `false` 以選擇退出遙測功能 (可接受的值為 `false`、`0` 或 `no`)。 如果未設定，預設值為 `false`，且遙測功能會處於作用狀態。
@@ -277,7 +287,7 @@ dotnet myapp.dll
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 
-  對於啟用 GUI 生成的可執行檔 - 禁用通常顯示某些類別錯誤的對話方塊快顯視窗。 在這種情況下，它只寫入`stderr`和退出。
+  對於啟用 GUI 生成的可執行檔 - 禁用對話方塊快顯視窗，該對話方塊通常顯示某些類別的錯誤。 在這種情況下，它只寫入`stderr`和退出。
   
 - `DOTNET_ADDITIONAL_DEPS`
 

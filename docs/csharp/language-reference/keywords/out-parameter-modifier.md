@@ -1,15 +1,15 @@
 ---
 title: out 參數修飾詞 - C# 參考
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: f963188d77685bb81f7dc9fb3794e343114fe3c0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c713aa929673e51e8e9986c536bae782121c7756
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173558"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249340"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 參數修飾詞 (C# 參考)
 `out` 關鍵字會導致引數由參考傳遞。 它會使形式參數成為引數的別名，其必須為變數。 換句話說，參數上的任何作業都會在引數上進行。 它類似於 [ref](ref.md) 關鍵字，只是 `ref` 需要在傳遞之前，先初始化變數。 其類似於 [in](in-parameter-modifier.md) 關鍵字，但不同處在於 `in` 不允許呼叫的方法來修改引數的值。 若要使用 `out` 參數，方法定義和呼叫方法都必須明確地使用 `out` 關鍵字。 例如：  
@@ -46,6 +46,12 @@ class CS0663_Example
 - 使用 [async](./async.md) 修飾詞定義的 async 方法。  
   
 - 迭代器方法，其包括 [yield return](./yield.md) 或 `yield break` 陳述式。  
+
+此外，[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)具有以下限制：
+
+- 不能`out`對擴充方法的第一個參數使用 keywoard。
+- `ref`當參數不是結構，或者泛型型別不受約束為結構時，關鍵字不能用於擴充方法的第一個參數。
+- 除非`in`第一個參數是結構，否則無法使用關鍵字。 `in`關鍵字不能在任何泛型型別上使用，即使約束為結構。
 
 ## <a name="declaring-out-parameters"></a>宣告 `out` 參數
 

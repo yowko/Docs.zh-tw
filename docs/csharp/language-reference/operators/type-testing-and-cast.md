@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399466"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507083"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>型別測試和轉換運算子 (C# 參考)
 
@@ -113,7 +113,7 @@ E is T ? (T)(E) : (T)null
 
 ### <a name="other-usages-of-"></a>() 的其他用法
 
-您也使用括號來[呼叫方法或叫用委派](member-access-operators.md#invocation-operator-)。
+您也使用括號來[呼叫方法或叫用委派](member-access-operators.md#invocation-expression-)。
 
 括弧的其他用法是調整評估運算式中作業的順序。 如需詳細資訊，請參閱 [C# 運算子](index.md)。
 

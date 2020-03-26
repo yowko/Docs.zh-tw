@@ -2,17 +2,17 @@
 title: 如何檢索元素的值（LINQ 到 XML）（C#）
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 6f2d355eac9914cd4c03d3a4521992b346b92f0b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17a7dac464e1ec40db357194000f5745cdf2f3a8
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168683"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249203"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>如何檢索元素的值（LINQ 到 XML）（C#）
 本主題顯示如何取得項目的值。 以下有兩種主要的方式可達成此目標。 其中一種方式為，將 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 轉型為所需的型別。 然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別，並將其指派給您的變數。 或者，您可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 屬性。  
   
- 不過，使用 C# 時，轉型 (Casting) 通常是較好的方法。 如果您要將項目或屬性轉型為可為 Null 的型別 (Nullable Type)，擷取可能存在或可能不存在之項目 (或屬性) 的值時，較容易撰寫程式碼。 本主題中的最後一個範例會示範這個情況。 不過，您無法像透過 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性般，透過轉型設定項目的內容。  
+ 不過，使用 C# 時，轉型 (Casting) 通常是較好的方法。 如果將元素或屬性強制轉換為可 null 數值型別，則在檢索可能存在或不存在的元素（或屬性）的值時，代碼的編寫更簡單。 本主題中的最後一個範例會示範這個情況。 不過，您無法像透過 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性般，透過轉型設定項目的內容。  
   
 ## <a name="example"></a>範例  
  若要擷取項目的值，您只要將 <xref:System.Xml.Linq.XElement> 物件轉型為所需的型別即可。 您永遠可以將項目轉型為字串，如下所示：  
@@ -67,7 +67,7 @@ Value of e:abcde
 ```  
   
 ## <a name="example"></a>範例  
- 即使您不確定項目是否存在，您有時候還是會嘗試擷取項目的值。 在這個情況下，當您將已轉換項目指派給可為 Null 的型別 (`string` 或 .NET Framework 其中一個可為 Null 的型別) 時，如果項目不存在，則被指派的變數只會設定為 `null`。 下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。  
+ 即使您不確定項目是否存在，您有時候還是會嘗試擷取項目的值。 在這種情況下，如果將強制轉換的元素分配給可作投的元素類型或空數值型別（如果該元素不存在）時，分配的變數將僅設置為`null`。 下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。  
   
 ```csharp  
 XElement root = new XElement("Root",  

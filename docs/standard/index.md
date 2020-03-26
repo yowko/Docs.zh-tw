@@ -5,16 +5,16 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7856cbb12ac78830ceace6ad44214ca32444a82
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76730784"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228807"
 ---
 # <a name="net-guide"></a>.NET 指南
 
-.NET 指南提供有關 .NET 的資訊。 根據您的熟悉 .NET，您可能希望流覽本指南的不同部分和其他指南，如[.NET Core](../core/index.md)或[.NET 框架](../framework/index.md)。
+.NET 指南提供有關 .NET 的資訊。 根據您的熟悉 .NET，您可能希望流覽本指南的不同部分和其他指南，如[.NET Core](../core/index.md)或[.NET 框架](../framework/index.yml)。
 
 ## <a name="new-to-net"></a>.NET 新手
 
@@ -55,8 +55,8 @@ ms.locfileid: "76730784"
 
 * [C# 指南](../csharp/index.yml)
 * [F# 指南](../fsharp/index.yml)
-* [視覺基本指南](../visual-basic/index.yml)
+* [Visual Basic 指南](../visual-basic/index.yml)
 
-## <a name="api-reference"></a>API 參考資料
+## <a name="api-reference"></a>應用程式開發介面參考
 
 有關 .NET 中提供的所有 API 的詳細資訊，請參閱[.NET API 引用](../../api/index.md)。

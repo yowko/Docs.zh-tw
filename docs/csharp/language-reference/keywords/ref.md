@@ -1,18 +1,18 @@
 ---
 title: ref 關鍵字 - C# 參考
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 61ee0e320f85925e4d804a6032e01c0485a31451
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399361"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249327"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -25,7 +25,7 @@ ms.locfileid: "79399361"
 
 ## <a name="passing-an-argument-by-reference"></a>以傳址方式傳遞引數
 
-用於方法的參數清單時，`ref` 關鍵字指出以傳參考方式傳遞引數，而不是以傳值方式。 `ref` 關鍵字會使形式參數成為引數的別名，其必須為變數。 換句話說，參數上的任何作業都會在引數上進行。 例如，如果呼叫者傳遞區域變數運算式或陣列元素存取運算式，而且已呼叫方法取代 ref 參數所參考的物件，則在傳回方法時，呼叫者的區域變數或陣列元素現在會參考新的物件。
+用於方法的參數清單時，`ref` 關鍵字指出以傳參考方式傳遞引數，而不是以傳值方式。 `ref` 關鍵字會使形式參數成為引數的別名，其必須為變數。 換句話說，參數上的任何作業都會在引數上進行。 例如，如果調用方傳遞區域變數運算式或陣列元素訪問運算式，並且被調用的方法替換 ref 參數引用的物件，則調用方的區域變數或陣列元素現在引用新物件，方法返回。
 
 > [!NOTE]
 > 請勿將參考傳遞的概念與參考類型的概念相混淆。 兩個概念並不相同。 方法參數可以由 `ref` 修改，而不論其是否為實值類型或參考類型。 當實值類型由參考傳遞時，沒有 boxing。  
@@ -59,7 +59,13 @@ class CS0663_Example
  您不可為下列幾種方法使用 `ref`、`in` 和 `out` 關鍵字：  
   
 - 使用 [async](async.md) 修飾詞定義的 async 方法。  
-- 迭代器方法，其包括 [yield return](yield.md) 或 `yield break` 陳述式。  
+- 迭代器方法，其包括 [yield return](yield.md) 或 `yield break` 陳述式。
+
+此外，[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)具有以下限制：
+
+- 不能`out`對擴充方法的第一個參數使用 keywoard。
+- `ref`當參數不是結構，或者泛型型別不受約束為結構時，關鍵字不能用於擴充方法的第一個參數。
+- 除非`in`第一個參數是結構，否則無法使用關鍵字。 `in`關鍵字不能在任何泛型型別上使用，即使約束為結構。
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>以傳址方式傳遞引數：範例
 

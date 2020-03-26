@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - BC32128
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
-ms.openlocfilehash: 06dc6f1532fecefba4e507bd0cc24aadc936d137
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1660971e2a1a11d7a2d14f222cd149edf4aa4c7b
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524379"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249509"
 ---
 # <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>類型 'typename' 的 'IsNot' 運算元只能與 'Nothing' 比較，因為 'typename' 是可為 Null 的類型
 
-宣告為 nullable 的變數已經與使用 `IsNot` 運算子的 `Nothing` 以外的運算式進行比較。
+聲明為空數值型別的變數已與使用`Nothing``IsNot`運算子以外的運算式進行比較。
 
-**錯誤識別碼：** BC32128
+**錯誤 ID：** BC32128
 
 ## <a name="to-correct-this-error"></a>更正這個錯誤
 
@@ -34,7 +34,7 @@ If number IsNot Nothing Then
 End If
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [可為 Null 的值類型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [空數值型別](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
 - [IsNot 運算子](../../../visual-basic/language-reference/operators/isnot-operator.md)

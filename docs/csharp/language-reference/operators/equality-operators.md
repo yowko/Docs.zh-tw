@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 079522b18afdf86a942d502672174516d45d37fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7dd3e544dc03fb94577892b42aecd1a15a6621ac
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399564"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110915"
 ---
 # <a name="equality-operators-c-reference"></a>等號比較運算子 (C# 參考)
 
@@ -83,7 +83,7 @@ ms.locfileid: "79399564"
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義類型可以[多載](operator-overloading.md)`==` 和 `!=` 運算子。 如果某個型別多載這兩個運算子之一，它也必須多載另一個運算子。
+使用者定義類型可以[多載](operator-overloading.md)`==` 和 `!=` 運算子。 如果類型重載兩個運算子之一，則還必須重載另一個運算子。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

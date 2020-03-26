@@ -7,12 +7,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-ms.openlocfilehash: de9cbdab5d5786b9d59d23ba675fa3f78f807716
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ace42738118cde4bcda4b78607d7bdb045d3501e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181598"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248917"
 ---
 # <a name="overview-of-net-framework"></a>.NET 框架概述
 
@@ -31,7 +31,7 @@ ms.locfileid: "79181598"
 - 根據行業標準構建所有通信，以確保基於 .NET 框架的代碼與任何其他代碼集成。
 
 > [!NOTE]
-> 有關 .NET 框架的一般介紹，請參閱[入門](index.md)。
+> 有關 .NET 框架的使用者和開發人員的一般介紹，請參閱[入門](index.md)。
 
 .NET 框架由通用語言運行時 （CLR） 和 .NET 框架類庫組成。 通用語言運行時是 .NET 框架的基礎。 請將執行階段視為在執行階段管理程式碼的代理程式，可提供記憶體管理、執行緒管理和遠端作業等核心服務，並同時強制執行嚴格的型別安全及其他形式的程式碼精確度，以提升安全性和穩定性。 事實上，程式碼管理的概念是此執行階段的基本原則。 針對執行階段所開發的程式碼稱為 Managed 程式碼，而不針對執行階段所開發的程式碼稱為 Unmanaged 程式碼。 類庫是一個全面的物件導向的可重用類型集合，用於開發應用，從傳統的命令列或圖形化使用者介面 （GUI） 應用到基於 ASP.NET（如 Web）提供的最新創新的應用表單和 XML Web 服務。
 
@@ -71,7 +71,7 @@ Runtime 是為增強效能所設計的。 雖然 Common Language Runtime 提供�
 
 例如，.NET Framework 集合類別會實作一組介面，以開發您自己的集合類別。 您的集合類別會與 .NET Framework 中的類別完美結合。
 
-如同您對物件導向類別庫的期望，.NET Framework 型別讓您完成許多常見的程式設計工作，包括字串管理、資料收集、資料庫連接和檔案存取等。 除了通用工作，類別庫還包括能夠支援各種特定開發案例的型別。 您可以使用 .NET Framework 開發下列類型的應用程式和服務：
+正如您期望從物件導向的類庫中期望的那樣，.NET Framework 類型使您能夠完成一系列常見的程式設計任務，包括字串管理、資料收集、資料庫連接和檔訪問。 除了通用工作，類別庫還包括能夠支援各種特定開發案例的型別。 您可以使用 .NET 框架開發以下類型的應用和服務：
 
 - 主控台應用程式。 請參閱[建置主控台應用程式](../../standard/building-console-apps.md)。
 

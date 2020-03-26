@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 7c95fe07220a78b388a5c6850e4123feb029d951
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd25cd419f8c3bfe905850e6a252f4a8cf65478c
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399543"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507096"
 ---
 # <a name="pointer-related-operators-c-reference"></a>指標相關運算子 (C# 參考)
 
@@ -42,7 +42,7 @@ ms.locfileid: "79399543"
 > [!NOTE]
 > 任何具有指標的作業都需要 [unsafe](../keywords/unsafe.md) 內容。 包含不安全塊的代碼必須使用[`-unsafe`](../compiler-options/unsafe-compiler-option.md)編譯器選項進行編譯。
 
-## <a name="address-of-operator-"></a>位址運算子&amp;
+## <a name="address-of-operator-amp"></a><a name="address-of-operator-"></a>位址運算子&amp;
 
 一元 `&` 運算子會傳回其運算元的位址：
 
@@ -70,7 +70,7 @@ ms.locfileid: "79399543"
 
 ## <a name="pointer-member-access-operator--"></a>指標成員存取運算子 ->
 
-`->` 運算子結合[指標間接](#pointer-indirection-operator-)和[成員存取](member-access-operators.md#member-access-operator-)。 `x`也就是說，如果是`T*`類型的指標，並且`y`是類型的`T`可訪問成員，則是表單的運算式
+`->` 運算子結合[指標間接](#pointer-indirection-operator-)和[成員存取](member-access-operators.md#member-access-expression-)。 `x`也就是說，如果是`T*`類型的指標，並且`y`是類型的`T`可訪問成員，則是表單的運算式
 
 ```csharp
 x->y
@@ -96,7 +96,7 @@ x->y
 
 [!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
 
-該示例使用[`stackalloc`運算子](stackalloc.md)在堆疊上分配區塊。
+在前面的示例中，[`stackalloc`運算式](stackalloc.md)在堆疊上分配一個區塊。
 
 > [!NOTE]
 > 指標元素存取運算子不會檢查超出範圍的錯誤。
@@ -192,5 +192,5 @@ x->y
 - [指標類型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [unsafe 關鍵字](../keywords/unsafe.md)
 - [固定關鍵字](../keywords/fixed-statement.md)
-- [stackalloc 運算子](stackalloc.md)
+- [stackalloc](stackalloc.md)
 - [sizeof 運算子](sizeof.md)

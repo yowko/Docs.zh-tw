@@ -4,12 +4,12 @@ description: .NET Core 是 .NET 的模組化高性能實現，用於創建 Windo
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3db98d21a7cdc80d8a98b23782a81ffa37520937
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d2ce5951fa01ca3945ce0e64aa58fbadc8ab5af
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75740754"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546545"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
@@ -21,7 +21,7 @@ ms.locfileid: "75740754"
 
 ## <a name="download-net-core"></a>下載 .NET Core
 
-下載[.NET 核心 SDK，](https://www.microsoft.com/net/download)在 Windows、macOS 或 Linux 電腦上嘗試 .NET 酷睿。 如果您更喜歡使用 Docker 容器，請訪問[.NET 核心 Docker 集線器 。](https://hub.docker.com/_/microsoft-dotnet-core/)
+下載[.NET 核心 SDK，](https://dotnet.microsoft.com/download)在 Windows、macOS 或 Linux 電腦上嘗試 .NET 酷睿。 如果您更喜歡使用 Docker 容器，請訪問[.NET 核心 Docker 集線器 。](https://hub.docker.com/_/microsoft-dotnet-core/)
 
 若您要尋找另一個 .NET Core 版本，所有 .NET Core 版本都可以在 [.NET Core 下載 ](https://dotnet.microsoft.com/download/dotnet-core)找到。
 

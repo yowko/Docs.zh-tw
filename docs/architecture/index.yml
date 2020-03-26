@@ -1,31 +1,55 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: .NET 應用程式架構指導
+### YamlMime:Landing
+title: .NET 應用程式體系結構文檔
+summary: 瞭解如何構建生產就緒的 .NET 應用或將現有應用遷移到雲。
 metadata:
-  title: .NET 應用程式架構指導
-  meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
+  title: .NET 應用程式體系結構文檔
+  description: 瞭解用於構建、構建和遷移 .NET 應用的建議做法。
   ms.topic: landing-page
-  ms.date: 10/22/2019
-abstract:
-  description: 了解如何使用免費的應用程式架構指導，建置可以直接在生產環境中執行的 .NET 應用程式。
-sections:
-  - title: 已出版的電子書
-    items:
-      - html: <ul><li><p><a href="grpc-for-wcf-developers/index">適用於 WCF 開發人員的 ASP.NET Core gRPC</a></p>
-      - html: <p>本指南解釋了什麼是 gRPC，將每個概念與 WCF 的等效功能相關聯，並為將現有的 WCF 應用遷移到 gRPC 提供了指南。</p></li></ul>
-      - html: <ul><li><p><a href="containerized-lifecycle/index">使用 Microsoft 平臺和工具實現容器化 Docker 應用程式生命週期</a></p>
-      - html: <p>本指南是建議之端對端生命週期處理程序的簡介，您將使用這些程序來開發、驗證與使用 Visual Studio 和 Microsoft Azure 部署容器化 Docker 應用程式。</p></li></ul>
-      - html: <ul><li><p><a href="modernize-with-azure-containers/index">使用 Azure 雲和 Windows 容器對現有 .NET 應用程式進行現代化</a></p>
-      - html: <p>本指南是您將現有 Web 應用程式移轉至 Azure 雲端和 Windows 容器所需之策略的簡介。 您將了解程式碼策略、資料移轉、協調器以及 CI/CD 處理程序的相關資訊。</p></li></ul>
-      - html: <ul><li><p><a href="modern-web-apps-azure/index">使用ASP.NET核心和 Azure 構建現代 Web 應用程式</a></p>
-      - html: <p>本指南是建議之架構、設計與部署處理程序的簡介，您將使用這些程序來建置 ASP.NET 與 ASP.NET Core 應用程式並在 Azure 中裝載那些應用程式。</p></li></ul>
-      - html: <ul><li><p><a href="microservices/index">架構容器與微服務應用程式</a></p>
-      - html: <p>本指南介紹如何開發微服務應用程式及使用容器進行管理， 並討論使用 .NET Core 和 Docker 容器的架構設計和實作方法。</p></li></ul>
-      - html: <ul><li><p><a href="serverless/index">無伺服器應用程式：架構、模式和 Azure 實作</a></p>
-      - html: <p>這是使用 Azure 透過範例建置無伺服器應用程式的指南。 其中討論各種架構和設計方法、來自無伺服器的優點和挑戰，並提供無伺服器應用程式的情節和使用案例。</p></li></ul>
-  - title: 預覽電子書
-    items:
-      - html: <ul><li><p><a href="cloud-native/index">建構適用於 Azure 的雲端原生 .NET 應用程式</a></p>
-      - html: <p>本指南定義什麼是雲本機，介紹了使用雲原生原則構建的示例應用，並介紹了大多數雲原生應用程式共有的主題。</p></li></ul>
-      - html: <ul><li><p><a href="blazor-for-web-forms-developers/index">適用於 ASP.NET Web Forms 的 Blazor 開發人員</a></p>
-      - html: <p>有關 ASP.NET Web 表單開發人員的 Blazor 簡介。 瞭解如何使用 Blazor 和 .NET Core 以簡單和熟悉的方式使用 .NET 構建全堆疊 Web 應用程式。</p></li></ul>
+  ms.date: 03/19/2020
+  ms.openlocfilehash: 6e3573416191603e1e166979f955eaae6b74022c
+  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 03/24/2020
+  ms.locfileid: "80228591"
+landingContent:
+- title: 開發 ASP.NET Core 應用程式
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 使用ASP.NET核心和 Azure 構建現代 Web 應用
+      url: modern-web-apps-azure/index.md
+    - text: 布拉佐爾ASP.NET Web 表單開發人員（預覽）
+      url: blazor-for-web-forms-developers/index.md
+    - text: 適用於 WCF 開發人員的 ASP.NET Core gRPC
+      url: grpc-for-wcf-developers/index.md
+- title: 為 Azure 開發雲原生 .NET 應用
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 為 Azure 構建雲原生 .NET 應用（預覽）
+      url: cloud-native/index.md
+    - text: 無伺服器應用程式：架構、模式和 Azure 實作
+      url: serverless/index.md
+    - text: .NET 微服務：容器化 .NET 應用程式的體系結構
+      url: microservices/index.md
+  - linkListType: learn
+    links:
+    - text: 您好世界微服務教程
+      url: https://dotnet.microsoft.com/learn/aspnet/microservice-tutorial/intro
+- title: 將 .NET 應用遷移到 Azure
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 使用 Azure 雲和 Windows 容器對現有 .NET 應用進行現代化
+      url: modernize-with-azure-containers/index.md
+    - text: 將 .NET 應用遷移到 Azure
+      url: https://dotnet.microsoft.com/apps/cloud/migrate-to-azure
+- title: 瞭解 .NET 的 DevOps
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: 採用 Microsoft 平台與工具容器化之 Docker 應用程式的生命週期
+      url: containerized-lifecycle/index.md
+    - text: 使用 Azure ASP.NET核心開發人員
+      url: /aspnet/core/azure/devops/

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: a383ad84f1db4d937469943092a03517f68777ec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34d954f68747be9eedc0ef71634e0c18b411d260
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187442"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112046"
 ---
 # <a name="how-to-scale-an-element"></a>操作說明：縮放元素
 此示例演示如何使用<xref:System.Windows.Media.ScaleTransform>縮放元素。  
@@ -35,7 +35,7 @@ ms.locfileid: "79187442"
  ![採用不同中心點的 2 倍縮放](./media/wcpsdk-graphicsmm-scalecenter.gif "wcpsdk_graphicsmm_scalecenter")  
 兩個有相同 ScaleX 和 ScaleY 值，但不同中心的 ScaleTransform 作業  
   
- 如需完整範例，請參閱 [2D 轉換範例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
+ 有關完整示例，請參閱[2D 變換示例](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)。  
   
 ## <a name="see-also"></a>另請參閱
 

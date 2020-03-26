@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b61d079a86bdd4a809d44ad128f19a7b358c8384
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156501"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228670"
 ---
 # <a name="assemblies-in-net"></a>.NET 中的組件
 
@@ -104,7 +104,7 @@ ms.locfileid: "78156501"
 |[發出動態方法和組件](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|如何創建動態程式集。|
 |[運行時如何定位程式集](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|.NET 框架如何在運行時解析程式集引用。|
 
-## <a name="reference"></a>參考
+## <a name="reference"></a>參考資料
 
 <xref:System.Reflection.Assembly?displayProperty=nameWithType>
 
@@ -116,3 +116,4 @@ ms.locfileid: "78156501"
 - [如何：載入和卸載程式集](load-unload.md)
 - [如何：在 .NET Core 中使用和偵錯工具集卸載](unloadability.md)
 - [如何：確定檔是否為程式集](identify.md)
+- [如何：使用中繼資料載入上下文檢查程式集內容](inspect-contents-using-metadataloadcontext.md)

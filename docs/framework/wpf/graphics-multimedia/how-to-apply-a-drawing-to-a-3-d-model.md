@@ -1,37 +1,37 @@
 ---
-title: 如何：套用繪圖至立體模型
+title: 如何：將繪圖應用於 3D 模型
 ms.date: 03/30/2017
 helpviewer_keywords:
-- drawings [WPF], applying to 3-D models
-- 3-D models [WPF], applying drawings to
+- drawings [WPF], applying to 3D models
+- 3D models [WPF], applying drawings to
 ms.assetid: 68357577-b7fc-446e-8be9-a8cc7df3a350
-ms.openlocfilehash: 311a3ac1d9fa219a3a365d506d9d0c3e8b6bc229
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5b10630ab674fa9489cdf7ad53516a680f19da08
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459363"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112176"
 ---
-# <a name="how-to-apply-a-drawing-to-a-3-d-model"></a>如何：套用繪圖至立體模型
+# <a name="how-to-apply-a-drawing-to-a-3d-model"></a>如何：將繪圖應用於 3D 模型
 
-這個範例示範如何使用 <xref:System.Windows.Media.DrawingBrush> 做為 <xref:System.Windows.Media.Media3D.Material> 套用至3D 模型的方式。
+此示例演示如何將<xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.Media3D.Material>
 
-下列程式碼會將 <xref:System.Windows.Media.DrawingGroup> 定義為 <xref:System.Windows.Media.DrawingBrush>的內容。  <xref:System.Windows.Media.DrawingBrush> 會設定為套用至立體平面之 <xref:System.Windows.Media.Media3D.DiffuseMaterial> 的 <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A> 屬性。
+以下代碼將 定義為<xref:System.Windows.Media.DrawingGroup>的內容。 <xref:System.Windows.Media.DrawingBrush>  <xref:System.Windows.Media.DrawingBrush> <xref:System.Windows.Media.Media3D.DiffuseMaterial.Brush%2A>設置為<xref:System.Windows.Media.Media3D.DiffuseMaterial>應用於 3D 平面的屬性。
 
 > [!NOTE]
-> 您通常會想要定義複雜的物件和值，如下圖所示，做為可重複使用並簡化程式碼的資源。 如需詳細資訊，請參閱[XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)。
+> 通常，最好將複雜的物件和值（如下圖）定義為可以重用和簡化代碼的資源。 有關詳細資訊，請參閱[XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)。
 
 [!code-xaml[3DGallery_snip#ApplyDrawingToMaterialInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialinline1)]
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示整個範例。
+以下代碼顯示整個示例。
 
 [!code-xaml[3DGallery_snip#ApplyDrawingToMaterialExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/3DGallery_snip/CS/ApplyDrawingToMaterialExample.xaml#applydrawingtomaterialexamplewholepage)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
-- [建立立體場景](how-to-create-a-3-d-scene.md)
+- [創建 3D 場景](how-to-create-a-3-d-scene.md)
 - [繪圖物件概觀](drawing-objects-overview.md)
-- [立體圖形概觀](3-d-graphics-overview.md)
+- [3D 圖形概述](3-d-graphics-overview.md)

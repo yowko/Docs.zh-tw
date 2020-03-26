@@ -9,15 +9,15 @@ helpviewer_keywords:
 - drawing [WPF], optimizing performance
 - imaging [WPF], optimizing performance
 - shapes [WPF], optimizing performance
-- 2-D graphics [WPF]
+- 2D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 03b2b64736407bf54c9bf957fe93d2d3d6e343f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb3686367873276587572addda436471cd1abf27
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186772"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291795"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>最佳化效能：2D 圖形和影像處理
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供各種 2D 圖形和影像處理功能，可以針對您的應用程式需求最佳化。 本主題提供下列領域的效能最佳化相關資訊。  
@@ -42,9 +42,9 @@ ms.locfileid: "79186772"
   
 - <xref:System.Windows.Media.DrawingGroup>繪製其他圖形。 您可以使用繪圖群組，將其他繪圖結合為單一複合繪圖。  
   
- 該<xref:System.Windows.Media.GeometryDrawing>物件用於渲染幾何內容。 從<xref:System.Windows.Media.Geometry>它派生的類和具體類（如<xref:System.Windows.Media.CombinedGeometry>和<xref:System.Windows.Media.EllipseGeometry> <xref:System.Windows.Media.PathGeometry>）提供了一種渲染 2D 圖形以及提供點擊測試和剪切支援的方法。 舉例來說，Geometry 物件可用來定義控制項的區域，或定義要套用至影像的裁剪區域。 Geometry 物件可以是矩形和圓形之類的簡單區域，或從兩個或多個 Geometry 物件建立的複合區域。 可以通過組合<xref:System.Windows.Media.PathSegment>派生物件（如<xref:System.Windows.Media.ArcSegment>、<xref:System.Windows.Media.BezierSegment>和<xref:System.Windows.Media.QuadraticBezierSegment>）來創建更複雜的幾何區域。  
+ 該<xref:System.Windows.Media.GeometryDrawing>物件用於渲染幾何內容。 從<xref:System.Windows.Media.Geometry>它派生的類和具體類（如<xref:System.Windows.Media.CombinedGeometry>和<xref:System.Windows.Media.EllipseGeometry> <xref:System.Windows.Media.PathGeometry>）提供了一種渲染 2D 圖形並提供點擊測試和剪輯支援的方法。 舉例來說，Geometry 物件可用來定義控制項的區域，或定義要套用至影像的裁剪區域。 Geometry 物件可以是矩形和圓形之類的簡單區域，或從兩個或多個 Geometry 物件建立的複合區域。 可以通過組合<xref:System.Windows.Media.PathSegment>派生物件（如<xref:System.Windows.Media.ArcSegment>、<xref:System.Windows.Media.BezierSegment>和<xref:System.Windows.Media.QuadraticBezierSegment>）來創建更複雜的幾何區域。  
   
- 從表面上看，<xref:System.Windows.Media.Geometry>類和<xref:System.Windows.Shapes.Shape>類非常相似。 兩者都用於 2D 圖形的渲染，並且都有從它們派生的類似具體類，例如 和<xref:System.Windows.Media.EllipseGeometry><xref:System.Windows.Shapes.Ellipse>。 不過，這兩組類別之間有非常重要的差異。 首先，<xref:System.Windows.Media.Geometry>類缺乏<xref:System.Windows.Shapes.Shape>類的某些功能，例如繪製自身的能力。 若要繪製 Geometry 物件，必須使用 DrawingContext、Drawing 或 Path (注意，Path 也是一種 Shape) 等其他類別來執行繪製作業。 填滿、筆觸以及筆觸粗細等呈現屬性位於可繪製 Geometry 物件的類別中，而 Shape 物件則包含這些屬性。 針對這項差異的其中一個理解方式是：Geometry 物件可定義區域 (例如圓形)；而 Shape 物件則可定義區域、該區域的填滿方式和外框方式，並參與版面配置系統。  
+ 從表面上看，<xref:System.Windows.Media.Geometry>類和<xref:System.Windows.Shapes.Shape>類是相似的。 兩者都用於 2D 圖形的渲染，並且都有從它們派生的類似具體類，例如 和<xref:System.Windows.Media.EllipseGeometry><xref:System.Windows.Shapes.Ellipse>。 不過，這兩組類別之間有非常重要的差異。 首先，<xref:System.Windows.Media.Geometry>類缺乏<xref:System.Windows.Shapes.Shape>類的某些功能，例如繪製自身的能力。 若要繪製 Geometry 物件，必須使用 DrawingContext、Drawing 或 Path (注意，Path 也是一種 Shape) 等其他類別來執行繪製作業。 渲染屬性（如填充、描邊和描邊粗細）位於繪製幾何物件的類上，而形狀物件包含這些屬性。 考慮這種差異的一種方法是幾何物件定義區域（例如，圓，而形狀物件定義區域、定義該區域填滿和輪廓的方式以及參與佈局系統）。  
   
  由於<xref:System.Windows.Shapes.Shape>物件派生自類<xref:System.Windows.FrameworkElement>，因此使用它們可以在應用程式中顯著增加更多的記憶體消耗。 如果真的不需要圖形內容的功能，<xref:System.Windows.FrameworkElement>請考慮使用較輕<xref:System.Windows.Media.Drawing>的物件。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "79186772"
   
 <a name="Images"></a>
 ## <a name="images"></a>影像  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]與早期版本的 Windows 中的映射功能相比，映射提供了顯著改進。 以往，影像處理功能 (例如顯示點陣圖或使用通用控制項上的影像) 主要是由 Microsoft Windows 圖形裝置介面 (GDI) 或 Microsoft Windows GDI+ 應用程式開發介面 (API) 進行處理。 這些 API 提供基本影像處理功能，但無法支援轉碼器擴充性和高畫質影像等功能。 WPF 影像處理 API 的設計目的是克服 GDI 和 GDI+ 的缺點，並提供一組新的 API 以在應用程式內顯示及使用影像。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]與早期版本的 Windows 中的映射功能相比，映射提供了顯著改進。 映射功能（如顯示點陣圖或使用公共控制項上的圖像）主要由 Microsoft Windows 圖形裝置介面 （GDI） 或 Microsoft Windows GDI+ 應用程式開發介面 （API） 處理。 這些 API 提供了基線成像功能，但缺少支援編解碼器可擴充性和高保真圖像支援等功能。 WPF 成像 API 已重新設計，以克服 GDI 和 GDI® 的缺點，並提供一組新的 API 來在應用程式中顯示和使用圖像。  
   
  使用影像時，請考慮下列建議事項以取得較佳的效能：  
   
@@ -79,7 +79,7 @@ ms.locfileid: "79186772"
 - 有關詳細資訊，請參閱[映射概述](../graphics-multimedia/imaging-overview.md)。  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
- 建立任何點陣圖的比例動畫時，預設的高品質影像重新取樣演算法有時會耗用過多系統資源，導致畫面播放速率降低，從而造成動畫中斷。 通過將<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A><xref:System.Windows.Media.RenderOptions>物件的屬性設置為，<xref:System.Windows.Media.BitmapScalingMode.LowQuality>您可以在縮放點陣圖時創建更平滑的動畫。 <xref:System.Windows.Media.BitmapScalingMode.LowQuality>模式告訴渲[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]染引擎在處理圖像時從品質優化演算法切換到速度優化演算法。  
+ 為任何點陣圖的比例設置動畫時，預設的高品質圖像重採樣演算法有時會消耗足夠的系統資源，從而導致畫面播放速率下降，從而有效地導致動畫斷斷續續。 通過將<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A><xref:System.Windows.Media.RenderOptions>物件的屬性設置為<xref:System.Windows.Media.BitmapScalingMode.LowQuality>，可以在縮放點陣圖時創建更平滑的動畫。 <xref:System.Windows.Media.BitmapScalingMode.LowQuality>模式告訴渲[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]染引擎在處理圖像時從品質優化演算法切換到速度優化演算法。  
   
  下面的示例演示如何為影像物件設置<xref:System.Windows.Media.BitmapScalingMode>。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "79186772"
  [!code-vb[RenderOptions#RenderOptionsSnippet2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet2)]  
   
 ### <a name="cachinghint"></a>CachingHint  
- 預設情況下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]不緩存<xref:System.Windows.Media.TileBrush>物件的呈現內容，如<xref:System.Windows.Media.DrawingBrush>和<xref:System.Windows.Media.VisualBrush>。 在場景中的內容或使用<xref:System.Windows.Media.TileBrush>都不在變化的靜態方案中，這是有道理的，因為它可以節省視頻記憶體。 當以非靜態方式使用<xref:System.Windows.Media.TileBrush>具有靜態內容的內容時，例如，當靜態<xref:System.Windows.Media.DrawingBrush>或<xref:System.Windows.Media.VisualBrush>映射到旋轉 3D 物件的表面時，則沒有意義。 的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]預設行為是重新呈現<xref:System.Windows.Media.DrawingBrush>或<xref:System.Windows.Media.VisualBrush>每個幀的整個內容，即使內容不變。  
+ 預設情況下，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]不緩存<xref:System.Windows.Media.TileBrush>物件的呈現內容，如<xref:System.Windows.Media.DrawingBrush>和<xref:System.Windows.Media.VisualBrush>。 在場景中的內容或使用<xref:System.Windows.Media.TileBrush>不變的靜態方案中，這是有道理的，因為它可以節省視頻記憶體。 當以非靜態方式使用<xref:System.Windows.Media.TileBrush>具有靜態內容的內容時，例如，當靜態<xref:System.Windows.Media.DrawingBrush>或<xref:System.Windows.Media.VisualBrush>映射到旋轉 3D 物件的表面時，則沒有意義。 的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]預設行為是重新呈現<xref:System.Windows.Media.DrawingBrush>或<xref:System.Windows.Media.VisualBrush>每個幀的整個內容，即使內容不變。  
   
  通過將<xref:System.Windows.Media.RenderOptions.CachingHint%2A><xref:System.Windows.Media.RenderOptions>物件的屬性設置為<xref:System.Windows.Media.CachingHint.Cache>，可以使用拼貼筆刷物件的緩存版本來提高性能。  
   

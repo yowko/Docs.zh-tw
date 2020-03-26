@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 341d5a2e62ca7f94a8448fa0c1286cf7e599c759
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74552469"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546662"
 ---
 # <a name="c-operators-c-reference"></a>C# 運算子 (C# 參考)
 
@@ -40,11 +40,12 @@ Console.WriteLine(a); //  output: 8
 
 下表列出 C# 運算子，從最高優先順序開始到最低優先順序。 每個資料列中的運算子都具有相同的優先順序。
 
-| 操作員 | 類別或名稱 |
+| 運算子 | 類別或名稱 |
 | --------- | ---------------- |
-| [x.y](member-access-operators.md#member-access-operator-)、[x?.y](member-access-operators.md#null-conditional-operators--and-)、[x?[y]](member-access-operators.md#null-conditional-operators--and-)、[f(x)](member-access-operators.md#invocation-operator-)、[a&#91;i&#93;](member-access-operators.md#indexer-operator-)、[x++](arithmetic-operators.md#increment-operator-)、[x--](arithmetic-operators.md#decrement-operator---)、[new](new-operator.md)、[typeof](type-testing-and-cast.md#typeof-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[nameof](nameof.md)、[delegate](delegate-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[x->y](pointer-related-operators.md#pointer-member-access-operator--) | Primary |
+| [x.y](member-access-operators.md#member-access-expression-)、[x?.y](member-access-operators.md#null-conditional-operators--and-)、[x?[y]](member-access-operators.md#null-conditional-operators--and-)、[f(x)](member-access-operators.md#invocation-expression-)、[a&#91;i&#93;](member-access-operators.md#indexer-operator-)、[x++](arithmetic-operators.md#increment-operator-)、[x--](arithmetic-operators.md#decrement-operator---)、[new](new-operator.md)、[typeof](type-testing-and-cast.md#typeof-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[nameof](nameof.md)、[delegate](delegate-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[x->y](pointer-related-operators.md#pointer-member-access-operator--) | Primary |
 | [+x，](arithmetic-operators.md#unary-plus-and-minus-operators) [-x](arithmetic-operators.md#unary-plus-and-minus-operators)， [ \!x](boolean-logical-operators.md#logical-negation-operator-)， [+x](bitwise-and-shift-operators.md#bitwise-complement-operator-)， x [++x](arithmetic-operators.md#increment-operator-) [，](member-access-operators.md#index-from-end-operator-) [x](arithmetic-operators.md#decrement-operator---)， [（T）x](type-testing-and-cast.md#cast-operator-)，[等待](await.md)， [&x](pointer-related-operators.md#address-of-operator-)， [*x，](pointer-related-operators.md#pointer-indirection-operator-)[真假](true-false-operators.md) | 一元 (Unary) |
 | [Ⅹ。。Y](member-access-operators.md#range-operator-) | 範圍 |
+| [開關](../../whats-new/csharp-8.md#switch-expressions) | `switch` 運算式 |
 | [x * y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-) | 乘法|
 | [x + y](arithmetic-operators.md#addition-operator-)、[x – y](arithmetic-operators.md#subtraction-operator--) | 加法 |
 | [ \< x \< y](bitwise-and-shift-operators.md#left-shift-operator-)， [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | Shift |

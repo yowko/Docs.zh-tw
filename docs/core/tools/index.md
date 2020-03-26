@@ -3,14 +3,14 @@ title: .NET Core CLI
 titleSuffix: ''
 description: .NET 核心 CLI 及其功能的概述。
 ms.date: 02/13/2020
-ms.openlocfilehash: 45a40063f70a621e807abf5e01ceecb125aecd7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac5988bacbef41326f2501a2cff6c3f5aa0be798
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399116"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110837"
 ---
-# <a name="net-core-cli-overview"></a>.NET 核心 CLI 概述
+# <a name="net-core-cli-overview"></a>.NET Core CLI 概觀
 
 **本文適用于：✔️** .NET 核心 2.1 SDK 和更高版本
 
@@ -95,11 +95,11 @@ dotnet build
 
 ### <a name="arguments"></a>引數
 
-您在命令列上傳遞的引數即為叫用命令的引數。 例如當您執行 `dotnet publish my_app.csproj` 時，`my_app.csproj` 引數表示要發佈的專案，並且會傳遞給 `publish` 命令。
+您在命令列上傳遞的引數即為叫用命令的引數。 例如，執行`dotnet publish my_app.csproj`時，`my_app.csproj`參數指示要發佈的專案，並將其傳遞給命令。 `publish`
 
 ### <a name="options"></a>選項。
 
-您在命令列上傳遞的選項即為叫用命令的選項。 例如當您執行 `dotnet publish --output /build_output`，`--output` 選項及其值會傳遞給 `publish` 命令。
+您在命令列上傳遞的選項即為叫用命令的選項。 例如，執行 時`dotnet publish --output /build_output`，`--output`選項及其值將傳遞給命令。 `publish`
 
 ## <a name="see-also"></a>另請參閱
 

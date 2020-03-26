@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 85e32c99674cc95f670a4cb483b55865b996cb31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 642dfdd784af4b85672cf5b0c8e60079763f4c47
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186417"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112280"
 ---
 # <a name="graphics-rendering-registry-settings"></a>圖形轉譯登錄設定
 本主題會概略說明會影響 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形轉譯登錄設定。  
@@ -33,7 +33,7 @@ ms.locfileid: "79186417"
 |設定|描述|  
 |-------------|-----------------|  
 |**停用硬體加速選項**|指定是否應該啟用硬體加速。|  
-|**最大多重取樣值**|指定用於抗鋸齒的三維內容的多採樣程度。|  
+|**最大多重取樣值**|指定用於抗鋸齒 3D 內容的多採樣程度。|  
 |**需要的視訊驅動程式日期設定**|指定系統是否停用 2004 年 11 月之前所發行驅動程式的硬體加速。|  
 |**使用軟體模擬轉譯器選項**|指定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是否應該使用軟體模擬轉譯器。|  
   
@@ -57,9 +57,9 @@ ms.locfileid: "79186417"
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
- 最大**多採樣值**使您能夠調整三維內容的最大抗鋸齒量。 使用此級別可禁用 Windows Vista 中的三維防鋸齒。  
+ 最大**多採樣值**使您能夠調整 3D 內容的最大抗鋸齒量。 使用此級別可禁用 Windows Vista 中的 3D 反鋸齒。  
   
- 「最大多重取樣值」**** 是範圍介於 0 到 16 之間的 DWORD 值。 值為 0 指定應該停用 3D 內容的多重取樣消除鋸齒功能，而值為 16 會嘗試使用最多 16x 多重取樣消除鋸齒功能 (如果視訊卡支援的話)。 請注意，在使用 XPDM 驅動程式的電腦上設置此登錄機碼值將導致應用程式使用大量額外的視頻記憶體，降低三維渲染的性能，並可能導致呈現錯誤和穩定性問題。  
+ 「最大多重取樣值」**** 是範圍介於 0 到 16 之間的 DWORD 值。 值 0 指定應禁用 3D 內容的多樣本抗鋸齒，如果視訊卡支援，值 16 將嘗試使用多達 16 倍的多採樣抗鋸齒。 請注意，在使用 XPDM 驅動程式的電腦上設置此登錄機碼值將導致應用程式使用大量額外的視頻記憶體，降低 3D 渲染的性能，並可能導致呈現錯誤和穩定性問題。  
   
  未設定此登錄機碼時，XPDM 驅動程式的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 預設值為 0，而 WDDM 驅動程式的預設值為 4。  
   

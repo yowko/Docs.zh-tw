@@ -2,12 +2,12 @@
 title: 使用資料合同Jon序列化器實現獨立JSON序列化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 36945f2d42f22ef3aa4f27bcbe403466f124a279
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 614776a905ec319624f76876762c25bfca15a357
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184415"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249444"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>使用資料合同Jon序列化器實現獨立JSON序列化
 
@@ -42,7 +42,7 @@ JSON (JavaScript 物件標記法) 是專為在瀏覽器內的網頁上執行的 
 |集合、字典與陣列|Array|請參閱本主題的＜集合、字典與陣列＞一節。|
 |複雜型別 (已套用 <xref:System.Runtime.Serialization.DataContractAttribute> 或 <xref:System.SerializableAttribute>)|複雜類型|資料成員成為 JavaScript 複雜類型的成員。|
 |實作 <xref:System.Runtime.Serialization.ISerializable> 介面的複雜型別)|複雜類型|與其他複雜型別相同，但不支援某些 <xref:System.Runtime.Serialization.ISerializable> 型別，請參閱本主題的「進階資訊」一節中有關 ISerializable 支援的部分。|
-|任何型別的 `Null` 值|Null|可為 Null 的型別也受支援，並且會以和不可為 Null 的型別相同的方式對應至 JSON。|
+|任何型別的 `Null` 值|Null|還支援空數值型別，並且以與非空數值型別相同的方式映射到 JSON。|
 
 ### <a name="enumerations-and-json"></a>列舉與 JSON
 

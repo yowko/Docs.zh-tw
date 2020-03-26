@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: dotnet 發佈命令將 .NET Core 專案或解決方案發佈到目錄。
 ms.date: 02/24/2020
-ms.openlocfilehash: c34618409c9a539043c84c7e03daa8aa249d64f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed5b87b3343210ca81486ef4b9a9d70d1b534464
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146551"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110967"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -168,5 +168,5 @@ dotnet publish [-h|--help]
 - [使用 .NET 核心 CLI 發佈 .NET 核心應用](../deploying/deploy-with-cli.md)
 - [目標框架](../../standard/frameworks.md)
 - [執行階段識別項 (RID) 目錄](../rid-catalog.md)
-- [使用 macOS Catalina 公證](../install/macos-notarization-issues.md)有關詳細資訊，請參閱他關注以下資源：
+- [使用 macOS Catalina 公證](../install/macos-notarization-issues.md)
 - [已發佈應用程式的目錄結構](/aspnet/core/hosting/directory-structure)

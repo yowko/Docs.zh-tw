@@ -4,14 +4,14 @@ description: 從範例資料集自動產生 ML 模型和相關的 C# 程式碼
 author: cesardl
 ms.author: cesardl
 ms.date: 12/23/2019
-ms.custom: mvc
-ms.topic: tutorial,mlnet-tooling
-ms.openlocfilehash: d817e173239d2848fb16e94cca8ead563bc900a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.custom: mvc,mlnet-tooling
+ms.topic: tutorial
+ms.openlocfilehash: 2243aad0e787a3a594bde3dfa9884f104eab74e8
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187616"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546688"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>使用 ML.NET CLI 分析情感
 

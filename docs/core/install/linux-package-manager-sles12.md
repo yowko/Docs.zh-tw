@@ -3,19 +3,21 @@ title: 在 SLES 12 上安裝 .NET 內核 - 包管理器 - .NET 內核
 description: 使用包管理器在 SLES 12 上安裝 .NET 核心 SDK 和運行時。
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: a6c10c6b11bc57ae4bbe814c66c563b85ce3c22b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: 8358107c682274fc2b75bf72689eaa4b168a86c5
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920744"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134224"
 ---
 # <a name="sles-12-package-manager---install-net-core"></a>SLES 12 套裝軟體管理器 - 安裝 .NET 內核
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-本文介紹如何使用包管理器在 SLES 12 上安裝 .NET Core。 如果要安裝運行時，我們建議您安裝[ASP.NET核心運行時](#install-the-aspnet-core-runtime)，因為它包括 .NET Core 和 ASP.NET核心運行時。
+本文介紹如何使用包管理器在 SLES 12 上安裝 .NET Core。
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>註冊 Microsoft 金鑰和摘要
 

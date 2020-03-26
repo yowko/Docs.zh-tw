@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: d2fd879203932ea3f2211e38a2efdd626928962b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 828543b95ed82f465c92212748c6250b7fc84051
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713916"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249379"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET 框架簡介
 
@@ -22,7 +22,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
 ## <a name="c-language"></a>C# 語言
 
-C# 語法的表達能力相當高，同時也很簡單且易於了解。 熟悉 C、C++ 或 JAVA 的任何人都可以立即識別 C# 的捲曲式語法。 了解上述任何一種語言的開發人員一般都能在極短時間內開始用 C# 有效率地工作。 C# 語法簡化了C++的許多複雜性，並提供了強大的功能，如空數值型別、枚舉、委託、lambda 運算式和直接記憶體存取。 C# 支援泛型方法和型別，提供更高的型別安全和效能。C# 也支援迭代器，讓集合類別的實作者定義自訂的反覆項目表現方式，使得用戶端程式碼可以容易地使用。 語言集成查詢 （LINQ） 運算式使強型別查詢成為一流語言構造。  
+C# 語法的表達能力相當高，同時也很簡單且易於了解。 熟悉 C、C++ 或 JAVA 的任何人都可以立即識別 C# 的捲曲式語法。 了解上述任何一種語言的開發人員一般都能在極短時間內開始用 C# 有效率地工作。 C# 語法簡化了C++的許多複雜性，並提供了強大的功能，如可撤銷類型、枚舉、委託、lambda 運算式和直接記憶體存取。 C# 支援泛型方法和型別，提供更高的型別安全和效能。C# 也支援迭代器，讓集合類別的實作者定義自訂的反覆項目表現方式，使得用戶端程式碼可以容易地使用。 語言集成查詢 （LINQ） 運算式使強型別查詢成為一流語言構造。  
   
  C# 為物件導向語言，支援封裝、繼承和多型的概念。 包括應用程式的進入點 `Main` 方法在內，所有變數和方法都會封裝在類別定義內。 類別可直接繼承自一個父類別，但可以實作數目不拘的介面。 覆寫父類別中虛擬方法的方法需要利用 `override` 關鍵字，避免意外重複定義。 在 C# 中，結構就像輕量型的類別。它是堆疊配置型別，可以實作介面，但不支援繼承。  
   

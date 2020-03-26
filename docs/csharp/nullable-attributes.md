@@ -3,12 +3,12 @@ title: 使用定義對空值的預期的屬性升級可空參考型別的 API
 description: 瞭解如何使用描述性屬性"允許無效"、可能無效、無虛無等來完全描述 API 的空狀態。
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: a4b1f851bcbe27dd4884d45eb6d1209ab54271d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ca04db800271b9b01b5b9f1482dd5a0db2cc1c35
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79170359"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249241"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>更新庫以使用空參考型別，並將無效規則傳達給調用方
 
@@ -30,7 +30,7 @@ bool TryGetMessage(string key, out string message)
 
 這項工作需要時間。 讓我們從使庫或應用程式具有空感知性的策略開始，同時平衡其他要求和可交付成果。 您將看到如何平衡支援空參考型別的持續開發。 您將瞭解泛型型別定義的挑戰。 您將學習應用屬性來描述單個 API 的預置和後置條件。
 
-## <a name="choose-a-nullable-strategy"></a>選擇空策略
+## <a name="choose-a-strategy-for-nullable-reference-types"></a>為空參考型別選擇策略
 
 第一種選擇是預設是可空參考型別應打開還是關閉。 您有兩種策略：
 
@@ -41,7 +41,7 @@ bool TryGetMessage(string key, out string message)
 
 遵循第一個策略，執行以下操作：
 
-1. 通過將元素添加到`<Nullable>enable</Nullable>`*csproj*檔，為整個專案啟用可不正確類型。
+1. 通過將元素添加到`<Nullable>enable</Nullable>`*csproj*檔，為整個專案啟用可不正確參考型別。
 1. 將`#nullable disable`實用方案添加到專案中的每個原始檔案。
 1. 處理每個檔時，請刪除雜注並解決任何警告。
 
@@ -129,7 +129,7 @@ private string screenName = GenerateRandomScreenName();
 
 通常，屬性或`in`或 或`out`. 和`ref`參數需要此屬性。 當`AllowNull`變數通常是非空的，但您需要作為先決條件允許`null`時，該屬性是最佳選擇。
 
-與使用`DisallowNull`： 的方案相比，使用此屬性指定 null 類型的輸入變數不應為`null`。 請考慮一個屬性`null`，其中是預設值，但用戶端只能將其設置為非 null 值。 請考慮下列程式碼：
+與使用`DisallowNull`： 的方案相比，使用此屬性指定 null 參考型別的輸入變數不應為`null`。 請考慮一個屬性`null`，其中是預設值，但用戶端只能將其設置為非 null 值。 請考慮下列程式碼：
 
 ```csharp
 public string ReviewComment
@@ -189,7 +189,7 @@ public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)
 
 前面的代碼通知調用方協定意味著一種不可空的類型，但傳回值*實際上可能*為空。  當`MaybeNull`API 應為非空類型（通常是泛型型別參數），但可能存在返回的`null`實例時，請使用該屬性。
 
-還可以指定傳回值或 或`out`或 參數`ref`不為空，即使類型為空類型也是如此。 考慮一種確保陣列足夠大以容納多個元素的方法。 如果輸入參數沒有容量，常式將分配一個新陣列並將所有現有元素複製到其中。 如果輸入參數為`null`，常式將分配新的存儲。 如果容量充足，常式將不執行任何操作：
+還可以指定傳回值或 或`out`或 參數`ref`不為空，即使類型為空參考型別。 考慮一種確保陣列足夠大以容納多個元素的方法。 如果輸入參數沒有容量，常式將分配一個新陣列並將所有現有元素複製到其中。 如果輸入參數為`null`，常式將分配新的存儲。 如果容量充足，常式將不執行任何操作：
 
 ```csharp
 public void EnsureCapacity<T>(ref T[] storage, int size)
@@ -219,7 +219,7 @@ public void EnsureCapacity<T>([NotNull]ref T[]? storage, int size)
 
 ## <a name="specify-conditional-post-conditions-notnullwhen-maybenullwhen-and-notnullifnotnull"></a>指定條件後條件： `NotNullWhen`、`MaybeNullWhen`和`NotNullIfNotNull`
 
-你可能熟悉這種方法`string`<xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>。 當參數為`true`空字串或空字串時，此方法將返回。 它是一種 null 檢查形式：如果方法返回`false`，調用方不需要對參數進行空檢查。 要使此類方法具有 null 感知，您需要將參數設置為可 null 類型，並添加屬性`NotNullWhen`：
+你可能熟悉這種方法`string`<xref:System.String.IsNullOrEmpty(System.String)?DisplayProperty=nameWithType>。 當參數為`true`空字串或空字串時，此方法將返回。 它是一種 null 檢查形式：如果方法返回`false`，調用方不需要對參數進行空檢查。 要使此類方法具有 null 感知，您需要將參數設置為可 null 參考型別，並添加屬性`NotNullWhen`：
 
 ```csharp
 bool IsNullOrEmpty([NotNullWhen(false)]string? value);

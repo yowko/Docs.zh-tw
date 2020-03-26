@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 3c21ae3d00aa9f1b48a89650430b89ceccb2a1b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 05847271cf82739a6a0b609771043c02a7ffc0e9
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186018"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291581"
 ---
 # <a name="graphics-rendering-tiers"></a>圖形轉譯層
 轉譯層定義執行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式之裝置的圖形硬體及效能層級。  
@@ -45,7 +45,7 @@ ms.locfileid: "79186018"
 ### <a name="rendering-tier-0"></a>轉譯層 0  
  轉譯層值 0 表示裝置上的應用程式沒有任何圖形硬體加速。 在此層級，您應該假設軟體將會在沒有硬體加速的情況下轉譯所有圖形。 此層的功能對應于小於 9.0 的 DirectX 版本。  
   
-### <a name="rendering-tier-1-and-rendering-tier-2"></a>轉譯層 1 和轉譯層 2  
+### <a name="rendering-tier-1-and-rendering-tier-2"></a>轉譯層 1 和轉譯層 2
   
 > [!NOTE]
 > 從 .NET 框架 4 開始，渲染層 1 已重新定義為僅包括支援 DirectX 9.0 或更高級別的圖形硬體。 支援 DirectX 7 或 8 的圖形硬體現在定義為呈現層 0。  
@@ -72,7 +72,7 @@ ms.locfileid: "79186018"
 |3D MIP 對應|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 嘗試在轉譯 3D 內容時使用 MIP 對應。 當紋理佔用 中的較小視圖場時，MIP 映射可提高紋理渲染的品質<xref:System.Windows.Controls.Viewport3D>。|  
 |放射狀漸層|雖然支援，但避免<xref:System.Windows.Media.RadialGradientBrush>在大型物件上使用。|  
 |3D 光源計算|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 會執行每個頂點光線，這表示必須計算每個套用至網狀結構之資料的每個頂點的光源強度。|  
-|文字轉譯|子像素字型轉譯會在圖形硬體上使用可用的像素著色器。|  
+|文字轉譯|子圖元字體渲染在圖形硬體上使用可用的圖元底影。|  
   
  下列是僅針對轉譯層 2 提供硬體加速的功能：  
   
@@ -101,7 +101,7 @@ ms.locfileid: "79186018"
 |設定|描述|  
 |-------------|-----------------|  
 |**停用硬體加速選項**|指定是否應該啟用硬體加速。|  
-|**最大多重取樣值**|指定用於抗鋸齒的三維內容的多採樣程度。|  
+|**最大多重取樣值**|指定用於抗鋸齒 3D 內容的多採樣程度。|  
 |**需要的視訊驅動程式日期設定**|指定系統是否停用 2004 年 11 月之前所發行驅動程式的硬體加速。|  
 |**使用軟體模擬轉譯器選項**|指定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是否應該使用軟體模擬轉譯器。|  
   
@@ -124,7 +124,7 @@ ms.locfileid: "79186018"
   
  運行 DirectX 診斷工具時，主視窗包含一組選項卡，允許您顯示和診斷與 DirectX 相關的資訊。 例如，"**系統**"選項卡提供有關您的電腦的系統資訊，並指定電腦上安裝的 DirectX 版本。  
   
- ![螢幕擷取畫面：DirectX 診斷工具](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![螢幕截圖：DirectX 診斷工具](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 DirectX 診斷工具主要視窗  
   
 ## <a name="see-also"></a>另請參閱

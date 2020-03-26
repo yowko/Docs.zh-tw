@@ -4,12 +4,12 @@ description: 描述 .NET 架構元件，例如 .NET Standard、.NET 實作、.NE
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4329830d6cec5032517ea3fa02cb24dd7322e23f
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79400474"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291775"
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
@@ -17,11 +17,11 @@ ms.locfileid: "79400474"
 
 ## <a name="net-standard"></a>.NET Standard
 
-.NET Standard 是由 .NET 實作的基底類別庫所實作的一組 API。 正式地說，它是構成制式協定的 .NET API 規格，讓您據以編譯程式碼。 各個 .NET 實作中都會實作這些協定。 這會跨不同的 .NET 實作啟用可攜性，以有效地讓您的程式碼在任何地方執行。
+.NET 標準是由 .NET 實現的基類庫實現的一組 API。 正式地說，它是構成制式協定的 .NET API 規格，讓您據以編譯程式碼。 各個 .NET 實作中都會實作這些協定。 這會跨不同的 .NET 實作啟用可攜性，以有效地讓您的程式碼在任何地方執行。
 
-.NET Standard 也是[目標 Framework](glossary.md#target-framework)。 如果您的程式碼以某個 .NET Standard 版本為目標，就可以在支援該版 .NET Standard 的任何 .NET 實作上執行。
+.NET 標準也是[一個目標框架](glossary.md#target-framework)。 如果代碼面向 .NET 標準版本，則可以在支援 .NET 標準版本的任何 .NET 實現上運行。
 
-若要了解 .NET Standard 及如何將其設為目標，請參閱 [.NET Standard](net-standard.md) 主題。
+要瞭解有關 .NET 標準以及如何定位它的更多，請參閱[.NET 標準](net-standard.md)。
 
 ## <a name="net-implementations"></a>.NET 實作
 
@@ -42,9 +42,9 @@ Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.
 
 ### <a name="net-framework"></a>.NET Framework
 
-.NET Framework 是自 2002年以來已存在的原始 .NET 實作。 它就是現有 .NET 開發人員一律會使用的同一個 .NET Framework。 4.5 和更新版本會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在這些 .NET Framework 版本上執行。 它包含其他 Windows 特定的 API，例如，使用 Windows Form 和 WPF 進行適用於 Windows 桌面開發的 API。 .NET Framework 最適合用來建置 Windows 傳統型應用程式。
+.NET 框架是自 2002 年以來存在的原始 .NET 實現。 版本 4.5 和更高版本實現 .NET 標準，因此目標 .NET 標準的代碼可以在 .NET 框架的這些版本上運行。 它包含其他 Windows 特定的 API，例如，使用 Windows Form 和 WPF 進行適用於 Windows 桌面開發的 API。 .NET Framework 最適合用來建置 Windows 傳統型應用程式。
 
-若要深入了解 .NET Framework，請參閱 [.NET Framework 指南](../framework/index.md)。
+要瞭解有關 .NET 框架的更多內容，請參閱[.NET 框架指南](../framework/index.yml)。
 
 ### <a name="mono"></a>Mono
 
@@ -60,7 +60,7 @@ Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS �
 
 ### <a name="universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP)
 
-UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 其設計目的是為了整合您可能想要設為目標的不同裝置類型，包括電腦、平板電腦、平板手機、手機，甚至是 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 應用可以用C++、C#、可視基本版和 JavaScript 編寫。 使用 C# 和視覺化基本時，.NET API 由 .NET Core 提供。
+UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用程式和軟體的 .NET 實作。 它旨在統一您可能想要定位的不同類型的設備，包括 PC、平板電腦、手機，甚至 Xbox。 UWP 提供許多服務 (例如集中式應用程式存放區)、一個執行環境 (AppContainer)，以及用來取代 Win32 (WinRT) 的一組 Windows API。 應用可以用C++、C#、可視基本版和 JavaScript 編寫。 使用 C# 和視覺化基本時，.NET API 由 .NET Core 提供。
 
 若要深入了解 UWP，請參閱[通用 Windows 平台簡介](/windows/uwp/get-started/universal-application-platform-guide)。
 
@@ -75,7 +75,7 @@ UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET 工具和通用基礎結構
 
-您可以存取一組詳盡的工具和基礎結構元件，以搭配各種 .NET 實作使用。 這些包括 (但不限於) 下列項目：
+您可以存取一組詳盡的工具和基礎結構元件，以搭配各種 .NET 實作使用。 這些工具和元件包括：
 
 - .NET 語言及其編譯器
 - .NET 專案系統 (以 *.csproj*、*.vbproj* 和 *.fsproj* 檔案為基礎)
@@ -85,7 +85,7 @@ UWP 是用於建置適用於物聯網 (IoT) 之現代化觸控式 Windows 應用
 
 ## <a name="applicable-standards"></a>適用標準
 
-C# 語言和通用語言基礎設施 （CLI） 規範通過[Ecma 國際®](https://www.ecma-international.org/)標準化。 Ema于2001年12月出版了這些標準的第一版。
+C# 語言和通用語言基礎設施 （CLI） 規範通過[Ecma 國際&reg;](https://www.ecma-international.org/)標準化。 Ema于2001年12月出版了這些標準的第一版。
 
 隨後對標準的修訂由TC49-TG2（C#）和TC49-TG3（CLI）工作組在程式設計語言技術委員會[（TC49）](https://www.ecma-international.org/memento/tc49.htm)內制定，並經歐共體大會通過，隨後由ISO/IEC JTC 1通過ISO快速跟蹤進程。
 
@@ -94,8 +94,8 @@ C# 語言和通用語言基礎設施 （CLI） 規範通過[Ecma 國際®](https
 以下官方 Ecma 檔可用於[C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm)和[CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) （[TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)）：
 
 - **C# 語言標準（版本 5.0）：** [ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **通用語言基礎結構**：這以[pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf)形式和[zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip)形式提供。
-- **從分區 IV XML 檔派生的資訊**：這以[pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf)和[zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip)格式提供。
+- **通用語言基礎結構**：提供[pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf)格式和[zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip)形式。
+- **從分區 IV XML 檔派生的資訊**：提供[pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf)和[zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip)格式。
 
 ISO/IEC 官方檔可從 ISO/IEC[公開版標準頁面獲得](https://standards.iso.org/ittf/PubliclyAvailableStandards/)。 這些連結是直接從該頁面：
 
@@ -107,8 +107,8 @@ ISO/IEC 官方檔可從 ISO/IEC[公開版標準頁面獲得](https://standards.i
 
 - [針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
-- [.NET Core 指南](../core/index.md)
-- [.NET 框架指南](../framework/index.md)
+- [.NET 核心指南](../core/index.md)
+- [.NET 框架指南](../framework/index.yml)
 - [C# 指南](../csharp/index.yml)
 - [F# 指南](../fsharp/index.yml)
-- [Visual Basic 指南](../visual-basic/index.yml)
+- [視覺基本指南](../visual-basic/index.yml)

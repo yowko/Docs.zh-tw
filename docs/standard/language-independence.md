@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: e1f419dd57c1e90d7ebb57ef572f338a34d1c509
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03751fa3758c239cb9eea5fe826dff66c1c1605b
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73423628"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249574"
 ---
 # <a name="language-independence-and-language-independent-components"></a>語言獨立性以及與語言無關的元件
 
@@ -35,7 +35,7 @@ ms.locfileid: "73423628"
 
   * [類型轉換](#type-conversion)
 
-  * [陣 列](#arrays)
+  * [陣列](#arrays)
 
   * [介面](#interfaces)
 
@@ -156,7 +156,7 @@ End Class
 -------- | --- | ---- | -----------
 Accessibility | [成員存取範圍](#member-accessibility) | 在覆寫繼承的方法時，不得變更其存取範圍；但覆寫繼承自具有 `family-or-assembly` 存取範圍之不同組件的方法除外。 在這種情況下，覆寫應具有 `family` 存取範圍。 | 10
 Accessibility | [成員存取範圍](#member-accessibility) | 類型和成員應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中的類型也應該是可見和可存取的。 例如，在組件外部是可見的公用方法不得有引數，其類型只有在組件內可見。 構成類型應該有可視性和存取範圍，以致每當成員本身為可見和可存取時，任何成員簽章中所用的具現化泛型類型也應該是可見和可存取的。 例如，存在於組件外部可見成員的簽章中的具現化泛型類型，不得有類型只能在組件內可見的泛型引數。 | 12
-陣列 | [陣 列](#arrays) | 陣列必須有符合 CLS 規範之類型的項目，而且陣列所有維度的下限必須為零。 只有項目是陣列以及陣列的項目類型是需要在多載之間區別的事實。 當多載根據兩個或多個陣列類型時，項目類型應該是具名類型。 | 16
+陣列 | [陣列](#arrays) | 陣列必須有符合 CLS 規範之類型的項目，而且陣列所有維度的下限必須為零。 只有項目是陣列以及陣列的項目類型是需要在多載之間區別的事實。 當多載根據兩個或多個陣列類型時，項目類型應該是具名類型。 | 16
 屬性 | [屬性](#attributes) | 屬性的類型必須為 [System.Attribute](xref:System.Attribute) 或繼承自它的類型。 | 41
 屬性 | [屬性](#attributes) | CLS 只允許自訂屬性編碼的子集。 只有以下這些類型允許出現在這些編碼中 (請參閱第四篇)：[System.Type](xref:System.Type)、[System.String](xref:System.String)、[System.Char](xref:System.Char)、[System.Boolean](xref:System.Boolean)、[System.Byte](xref:System.Byte)、[System.Int16](xref:System.Int16)、[System.Int32](xref:System.Int32)、[System.Int64](xref:System.Int64)、[System.Single](xref:System.Single)、[System.Double](xref:System.Double)，以及以符合 CLS 規範之基底整數類型為基礎的所有列舉類型。 | 34
 屬性 | [屬性](#attributes) | CLS 不允許公開可見的必要修飾詞 (`modreq`，請參閱第二篇)，不過，允許它不了解的選擇性修飾詞 (`modopt`，請參閱第二篇)。 | 35
@@ -191,7 +191,7 @@ Accessibility | [成員存取範圍](#member-accessibility) | 類型和成員應
 多載化 | [重載](#overloads) |屬性和方法只可以根據其參數數目和類型多載，除了名為 `op_Implicit` 和 `op_Explicit` 的轉換運算子，也可以根據其傳回類型多載。 | 38
 多載化 | -- | 如果在有相同名稱的類型中宣告兩個或更多符合 CLS 標準的方法，則對一組特定的類型具現化來說，它們具有相同的參數和傳回型別，而且所有這些方法在語意上與這些類型具現化相等。 | 48
 屬性 | [屬性](#properties) | 實作屬性之 getter 和 setter 方法的方法在中繼資料中應標記為 `SpecialName`。 | 24
-屬性 | [屬性](#properties) | 屬性的存取子必須全部為 static、全部為 virtual 或全部為 instance。 | 26
+屬性 | [屬性](#properties) | 屬性的訪問器應都是靜態的，全部為虛擬的，或者全部為實例。 | 26
 屬性 | [屬性](#properties) | 屬性的類型應是 getter 的傳回型別和 setter 最後一個引數的類型。 屬性參數的類型必須是 getter 參數的類型和 setter 除了最後一個參數之外的所有參數類型。 所有這些類型都必須符合 CLS 規範，而且不能是 Managed 指標 (也就是，不能以傳址方式傳遞)。 | 27
 屬性 | [屬性](#properties) | 屬性必須遵守特定的命名模式。 在適當的名稱比較中應忽略 CLS 第 24 條規則中所提及的 `SpecialName` 屬性，並且應遵循識別項規則。 屬性必須有 getter 方法、setter 方法或兩者皆有。 | 28
 類型轉換 | [類型轉換](#type-conversion) | 如果有提供 op_Implicit 或 op_Explicit，則必須提供替代方式來提供強制型轉。 | 39

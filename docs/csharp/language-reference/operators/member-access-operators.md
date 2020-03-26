@@ -1,5 +1,5 @@
 ---
-title: 成員存取運算子 - C# 參考
+title: 成員訪問運算子和運算式 - C# 引用
 description: 了解可用於存取類型成員的 C# 運算子。
 ms.date: 09/18/2019
 author: pkulikov
@@ -32,25 +32,25 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 4d4bc0c192912b5fa87a8e91bc5ba0e1d4ce3598
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399508"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546636"
 ---
-# <a name="member-access-operators-c-reference"></a>成員存取運算子 (C# 參考)
+# <a name="member-access-operators-and-expressions-c-reference"></a>成員訪問運算子和運算式（C# 引用）
 
-訪問類型成員時，可以使用以下運算子：
+訪問類型成員時，可以使用以下運算子和運算式：
 
-- （成員訪問）：訪問命名空間或類型的成員[`.` ](#member-access-operator-)
+- （成員訪問）：訪問命名空間或類型的成員[`.` ](#member-access-expression-)
 - [（陣列元素或索引子訪問）： 訪問陣列元素或類型索引子`[]` ](#indexer-operator-)
 - [和`?[]`空條件運算子）：僅在運算元為非空時執行成員或元素`?.`](#null-conditional-operators--and-)訪問操作
-- （調用） ：調用被訪問的方法或調用委託[`()` ](#invocation-operator-)
+- （調用） ：調用被訪問的方法或調用委託[`()` ](#invocation-expression-)
 - [（索引從末尾）：指示元素位置來自序列的末尾`^` ](#index-from-end-operator-)
 - （範圍）：指定可用於獲取序列元素範圍的索引範圍[`..` ](#range-operator-)
 
-## <a name="member-access-operator-"></a>成員存取運算子 .
+## <a name="member-access-expression-"></a>成員訪問運算式 .
 
 您會使用 `.` 語彙基元來存取命名空間或類型的成員，如下列範例所示：
 
@@ -109,7 +109,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null 條件運算子 ?. 和 ?[]
 
-在 C# 6 和更高版本中可用，null 條件運算子僅當該`?.`運算元計算為非`?[]`null 時，才會將[成員訪問](#member-access-operator-)、或[元素訪問](#indexer-operator-)操作應用於其運算元;否則，它將返回`null`。 那是
+在 C# 6 和更高版本中可用，null 條件運算子僅當該`?.`運算元計算為非`?[]`null 時，才會將[成員訪問](#member-access-expression-)、或[元素訪問](#indexer-operator-)操作應用於其運算元;否則，它將返回`null`。 那是
 
 - 如果`a`計算 到`null`，`a?.x`的結果`a?[x]`為`null`。
 - 如果`a`計算為`a?.x`非空，則 或`a?[x]`的結果與`a.x`或`a[x]`的結果相同。
@@ -150,7 +150,7 @@ if (handler != null)
 }
 ```
 
-## <a name="invocation-operator-"></a>引動過程運算子 ()
+## <a name="invocation-expression-"></a>調用運算式 （）
 
 使用括弧 `()` 來呼叫[方法](../../programming-guide/classes-and-structs/methods.md)或叫用[委派](../../programming-guide/delegates/index.md)。
 

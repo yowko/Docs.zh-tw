@@ -5,15 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 8a0a7c6166bb4cfc8064faa20056fda16b593e81
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e0c34e1db50030c78db295f26fcc25b431d3dde
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151763"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111799"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET代碼示例
-本主題的程式碼清單示範如何使用下列 ADO.NET 技術來擷取資料庫中的資料：
+
+此頁上的代碼清單演示如何使用以下ADO.NET技術從資料庫檢索資料：
 
 - ADO.NET 資料提供者：
 

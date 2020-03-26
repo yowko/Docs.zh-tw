@@ -7,12 +7,12 @@ ms.assetid: b8d7cf43-d1f2-4f3d-adb0-4f3a6428edc0
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 511ea04a522804b4b2ea2ff173d6cdd738e5c7bc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 759c1ca20ac139ef856df08ec42fb259fc3920d1
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186227"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112007"
 ---
 # <a name="wpf-overview"></a>WPF 概觀
 
@@ -141,7 +141,7 @@ End Namespace
 
 ![MessageBox](media/introduction-to-wpf/wpfintrofigure25.png)
 
-## <a name="controls"></a>控制
+## <a name="controls"></a>控制項
 
 應用程式模型所傳遞的使用者體驗是已建構的控制項。 在 WPF 中，「控制項」** 是一個籠統的名詞，泛指裝載於視窗或頁面上之具有使用者介面並實作一些行為的某種 WPF 類別。
 
@@ -309,7 +309,7 @@ WPF 2D 功能子集包含漸層、點陣圖、繪圖、利用視訊繪製、旋�
 
 ### <a name="3d-rendering"></a>3D 轉譯
 
-WPF 也包含可與 2D 圖形互動的 3D 轉譯功能，以便建立更生動有趣的使用者介面。 例如，下圖顯示了渲染到 3D 形狀的 2D 圖像：
+WPF 還包括與 2D 圖形集成的 3D 渲染功能，以便創建更令人興奮和有趣的使用者介面。 例如，下圖顯示了渲染到 3D 形狀的 2D 圖像：
 
 ![Visual3D 範例螢幕擷取畫面](media/introduction-to-wpf/wpfintrofigure13.png)
 

@@ -9,31 +9,33 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
-ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
+ms.openlocfilehash: f2ed51a2ad757fe29e70c0930e962d22add8de75
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68710217"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248182"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>進階 (Windows Presentation Foundation)
-本節說明 WPF 中的一些進階區域。  
-  
+
+本節說明 WPF 中的一些進階區域。
+
 ## <a name="in-this-section"></a>本節內容
 
-[WPF 架構](wpf-architecture.md)  
-[WPF 中的 XAML](xaml-in-wpf.md)  
-[基底元素類別](base-elements.md)  
-[項目樹狀結構和序列化](element-tree-and-serialization.md)  
-[WPF 屬性系統](properties-wpf.md)  
-[WPF 中的事件](events-wpf.md)  
-[輸入](input-wpf.md)  
-[拖放](drag-and-drop.md)  
-[資源](resources-wpf.md)  
-[文件](documents.md)  
-[全球化和當地語系化](globalization-and-localization.md)  
-[版面配置](layout.md)  
-[移轉和互通性](migration-and-interoperability.md)  
-[效能](performance.md)  
-[執行緒模型](threading-model.md)  
-[Unmanaged WPF API 參考](wpf-unmanaged-api-reference.md)  
+[WPF 架構](wpf-architecture.md)\
+[WPF 中的 XAML](xaml-in-wpf.md)\
+[基本元素類](base-elements.md)\
+[元素樹和序列化](element-tree-and-serialization.md)\
+[WPF 屬性系統](properties-wpf.md)\
+[WPF 中的事件](events-wpf.md)\
+[輸入](input-wpf.md)\
+[拖放](drag-and-drop.md)\
+[資源](resources-wpf.md)\
+[檔](documents.md)\
+[全球化與當地語系化](globalization-and-localization.md)\
+[佈局](layout.md)\
+[從 WPF 遷移到 System.Xaml 的類型](types-migrated-from-wpf-to-system.md)\
+[遷移和互通性](migration-and-interoperability.md)\
+[性能](performance.md)\
+[執行緒模型](threading-model.md)\
+[非託管 WPF API 參考](wpf-unmanaged-api-reference.md)\

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: c64f11c00174981925342f1493ef0b809a57ecb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c45c6672983866df6c47ec84981cc7bd11637c0c
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148643"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249073"
 ---
 # <a name="handling-null-values"></a>處理 Null 值
 在關聯式資料庫中，當資料行中的值為未知或遺漏時，就會使用 Null 值。 Null 不是空字串 (針對字元或日期時間資料類型)，也不是零值 (針對數值資料類型)。 ANSI SQL-92 規格指出，所有資料類型的 Null 都必須相同，因此，所有 Null 都會以一致的方式來處理。 <xref:System.Data.SqlTypes> 命名空間會藉由實作 <xref:System.Data.SqlTypes.INullable> 介面來提供 Null 語意。 <xref:System.Data.SqlTypes> 中的每個資料類型都有自己的 `IsNull` 屬性，以及可指派給該資料類型之執行個體的 `Null` 值。  
   
 > [!NOTE]
-> .NET Framework 2.0 版開始支援可為 Null 型別，這讓程式設計人員得以擴充實值型別，以表示基礎型別所有的值。 這些可為 Null 的 CLR 類型代表 <xref:System.Nullable> 結構的執行個體。 已將數值類型 Boxed 和 Unboxed 時，此功能特別有用，可提供與物件類型的增強相容性。 可為 Null 的 CLR 類型不適合用來儲存資料庫 Null，因為 ANSI SQL Null 的行為與 `null` 參考 (或 Visual Basic 中的 `Nothing`) 的運作方式不同。 若要使用資料庫 ANSI SQL Null 值，請使用 <xref:System.Data.SqlTypes> Null，而不是 <xref:System.Nullable>。 有關在視覺化基本版中使用 CLR 可空類型的詳細資訊，請參閱[空數值型別](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)，有關 C#，請參閱[空數值型別](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)。  
+> .NET Framework 版本 2.0 引入了對空數值型別的支援，它允許程式師擴展數值型別以表示基礎類型的所有值。 這些 CLR 可 null 數值型別表示<xref:System.Nullable>結構的實例。 已將數值類型 Boxed 和 Unboxed 時，此功能特別有用，可提供與物件類型的增強相容性。 CLR 可空數值型別不用於存儲資料庫 null，因為 ANSI SQL null 的表示方式與`null`引用（或`Nothing`Visual Basic 中）不同。 若要使用資料庫 ANSI SQL Null 值，請使用 <xref:System.Data.SqlTypes> Null，而不是 <xref:System.Nullable>。 有關在 Visual Basic 中使用 CLR 值空類型的詳細資訊，請參閱[空數值型別](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)，有關 C# 請參閱[空數值型別](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)。  
   
 ## <a name="nulls-and-three-valued-logic"></a>Null 及三種值的邏輯  
  在資料行定義中允許 Null 值，會在您的應用程式中引進三值邏輯。 比較可以評估為三個條件的其中一個：  

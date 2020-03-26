@@ -5,12 +5,12 @@ ms.date: 12/18/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e34d291ec15c738f3bc9409df321ede454b6710
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625861"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507252"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>C# 類型的預設值（C# 引用）
 
@@ -27,7 +27,7 @@ ms.locfileid: "77625861"
 |[struct](struct.md)|這個值是藉由將所有實值型別欄位設定為其預設值，並將所有參考型別欄位設定為 `null` 所產生。|
 |任何[可為 Null 的值型別](nullable-value-types.md)|<xref:System.Nullable%601.HasValue%2A> 屬性是 `false` 且未定義 <xref:System.Nullable%601.Value%2A> 屬性的執行個體。 該預設值也稱為空數值型別的*空*值。|
 
-使用[預設運算子](../operators/default.md)產生型別的預設值，如下列範例所示：
+使用[`default`運算子](../operators/default.md#default-operator)組建類型的預設值，如以下示例所示：
 
 ```csharp
 int a = default(int);

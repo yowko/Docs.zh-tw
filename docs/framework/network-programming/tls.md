@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: 81ac469f75f925ea00c02ff94ade0e8793e7efff
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: d1218e5db2ee4fc0ec044c6e0aa16187390708b0
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546707"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134392"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework 的傳輸層安全性 (TLS) 最佳做法
 
@@ -121,7 +121,7 @@ WCF 架構會自動選擇可用的最高版本通訊協定 (最高版本為 TLS 
 
 ### <a name="for-net-framework-35---452-and-not-wcf"></a>針對 .NET Framework 3.5 至 4.5.2 且非 WCF
 
-我們建議您將應用程式升級至 .NET Framework 4.7 或更新版本。 如果您無法升級，請採取下列步驟。 在未來的某個時間點，若不將您的應用程式升級至 .NET Framework 4.7 或更新版本，該應用程式可能會失敗。
+我們建議您將應用程式升級至 .NET Framework 4.7 或更新版本。 如果您無法升級，請採取下列步驟。
 
 將 [SchUseStrongCrypto](#schusestrongcrypto) 和 [SystemDefaultTlsVersions](#systemdefaulttlsversions) 登錄機碼設定為 1。 請參閱[透過 Windows 登錄來設定安全性](#configuring-security-via-the-windows-registry)。 .NET Framework 3.5 版只有在傳遞明確 TLS 值時，才會支援 `SchUseStrongCrypto` 旗標。
 

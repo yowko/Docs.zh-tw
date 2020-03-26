@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: c82b2c4599f14f55b51587407a7d96b3e2be9d5f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9d58aa973f7de6c073611e13f2889913ff26dd55
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186599"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111916"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 圖形轉譯概觀
 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視覺圖層的概觀。 它側重于<xref:System.Windows.Media.Visual>類在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型中呈現支援的角色。  
@@ -54,7 +54,7 @@ ms.locfileid: "79186599"
  是<xref:System.Windows.Media.DrawingVisual>用於渲染形狀、圖像或文本的羽量級繪圖類。 此類別之所以被視為輕量型，是因為它不提供版面配置或事件處理，而這會改善其執行階段效能。 基於此原因，它適合用於背景或美工圖案繪圖。 <xref:System.Windows.Media.DrawingVisual>可用於創建自訂可視物件。 如需詳細資訊，請參閱[使用 DrawingVisual 物件](using-drawingvisual-objects.md)。  
   
 ### <a name="viewport3dvisual-class"></a>Viewport3DVisual 類別  
- 在<xref:System.Windows.Media.Media3D.Viewport3DVisual>2D<xref:System.Windows.Media.Visual>和<xref:System.Windows.Media.Media3D.Visual3D>物件之間提供橋接器。 類<xref:System.Windows.Media.Media3D.Visual3D>是所有 3D 可視元素的基類。 要求<xref:System.Windows.Media.Media3D.Viewport3DVisual>定義<xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A>值和<xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A>值。 相機可讓您檢視場景。 檢視區會建立投影到 2D 平面上的對應位置。 如需 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 3D 的詳細資訊，請參閱 [3D 圖形概觀](3-d-graphics-overview.md)。  
+ 在<xref:System.Windows.Media.Media3D.Viewport3DVisual>2D<xref:System.Windows.Media.Visual>和<xref:System.Windows.Media.Media3D.Visual3D>物件之間提供橋接器。 類<xref:System.Windows.Media.Media3D.Visual3D>是所有 3D 可視元素的基類。 要求<xref:System.Windows.Media.Media3D.Viewport3DVisual>定義<xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A>值和<xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A>值。 相機可讓您檢視場景。 檢視區會建立投影到 2D 平面上的對應位置。 有關 3D 的更多資訊[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，請參閱[3D 圖形概述](3-d-graphics-overview.md)。  
   
 ### <a name="containervisual-class"></a>ContainerVisual 類別  
  類<xref:System.Windows.Media.ContainerVisual>用作物件集合的<xref:System.Windows.Media.Visual>容器。 類<xref:System.Windows.Media.DrawingVisual>派生自類<xref:System.Windows.Media.ContainerVisual>，允許它包含可視物件的集合。  

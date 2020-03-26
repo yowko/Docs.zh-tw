@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: 3ab8028062402e33b787a5a8649d93d975918393
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 42bde0b1843e52bbc16118bb056ade791591904e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665699"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249496"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>在此內容中不支援可為 Null 的類型推斷
-實值型別和結構可以宣告為可為 null。  
+數值型別和結構可以聲明為空。  
   
 ```vb  
 Dim a? As Integer  
 Dim b As Integer?  
 ```  
   
- 不過，您無法使用可為 null 的宣告型別推斷的結合。 下列範例會造成這個錯誤。  
+ 但是，不能將可無效聲明與型別推斷結合使用。 以下示例導致此錯誤。  
   
 ```vb  
 ' Not valid.  
@@ -30,13 +30,13 @@ Dim b As Integer?
 ' Dim d? = a  
 ```  
   
- **錯誤 ID:** BC36629  
+ **錯誤 ID：** BC36629  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-- 使用`As`子句來將變數宣告為可為 null。  
+- 使用`As`子句將變數聲明為空數值型別。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [可為 Null 的值類型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [空數值型別](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [區域型別推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

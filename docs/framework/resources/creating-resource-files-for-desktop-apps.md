@@ -10,22 +10,22 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-ms.openlocfilehash: 92e52fb130adecd6acdbeb8eac8d624d3c291094
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b679539be1aeb593124eb35a235bcc578decb4c0
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129983"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111773"
 ---
 # <a name="create-resource-files-for-net-apps"></a>建立 .NET 應用程式的資源檔
 
 您可以在資源檔中包括資源 (例如字串、影像或物件資料)，以讓應用程式輕鬆地使用它們。 .NET Framework 提供五種方式來建立資源檔：
 
-- 建立包含字串資源的文字檔。 您必須使用[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 將文字檔轉換成二進位資源 (.resources) 檔案。 您接著可以使用語言編譯器將二進位資源檔內嵌在應用程式可執行檔或應用程式程式庫中，或使用[組件連結器 (Al.exe)](../tools/al-exe-assembly-linker.md) 將它內嵌在附屬組件中。 如需詳細資訊，請參閱[文字檔中的資源](creating-resource-files-for-desktop-apps.md#TextFiles)一節。
+- 建立包含字串資源的文字檔。 您必須使用[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 將文字檔轉換成二進位資源 (.resources) 檔案。 然後，可以使用語言編譯器將二進位資源檔嵌入到應用程式可執行檔或應用程式庫中，也可以使用[程式集連結器 （Al.exe）](../tools/al-exe-assembly-linker.md)將其嵌入到附屬程式集中。 如需詳細資訊，請參閱[文字檔中的資源](creating-resource-files-for-desktop-apps.md#TextFiles)一節。
 
 - 建立包含字串、影像或物件資料的 XML 資源 (.resx) 檔案。 您必須使用[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 將 .resx 檔案轉換成二進位資源檔 (.resources)。 您接著可以使用語言編譯器將二進位資源檔內嵌在應用程式可執行檔或應用程式程式庫中，或使用[組件連結器 (Al.exe)](../tools/al-exe-assembly-linker.md) 將它內嵌在附屬組件中。 如需詳細資訊，請參閱 [.resx 檔案中的資源](creating-resource-files-for-desktop-apps.md#ResxFiles)一節。
 
-- 使用 <xref:System.Resources> 命名空間中的類型，以程式設計方式建立 XML 資源檔 (.resx)。 您可以建立 .resx 檔案、列舉其資源，並依名稱擷取特定資源。 如需詳細資訊，請參閱[以程式設計方式使用 .resx 檔案](working-with-resx-files-programmatically.md)主題。
+- 使用 <xref:System.Resources> 命名空間中的類型，以程式設計方式建立 XML 資源檔 (.resx)。 您可以建立 .resx 檔案、列舉其資源，並依名稱擷取特定資源。 如需詳細資訊，請參閱[以程式設計方式使用 .resx 檔案](working-with-resx-files-programmatically.md)。
 
 - 以程式設計方式建立二進位資源檔 (.resources)。 您接著可以使用語言編譯器將檔案內嵌在應用程式可執行檔或應用程式程式庫中，或使用[組件連結器 (Al.exe)](../tools/al-exe-assembly-linker.md) 將它內嵌在附屬組件中。 如需詳細資訊，請參閱 [.resources 檔案中的資源](creating-resource-files-for-desktop-apps.md#ResourcesFiles)一節。
 
@@ -58,7 +58,7 @@ name2=value2
 
  .txt 和 .restext 檔案的資源檔格式完全相同。 .restext 副檔名只提供可立即將文字檔識別為文字資源檔。
 
- 字串資源會以「名稱/值」配對的形式出現，其中「名稱」是識別資源的字串，「值」則是當您將「名稱」傳遞至資源擷取方法 (例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>) 時所傳回的資源字串。 「名稱」和「值」必須以等號 (=) 分隔。 例如:
+ 字串資源會以「名稱/值」** 配對的形式出現，其中「名稱」** 是識別資源的字串，「值」** 則是當您將「名稱」** 傳遞至資源擷取方法 (例如 <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType>) 時所傳回的資源字串。 「名稱」** 和「值」** 必須以等號 (=) 分隔。 例如：
 
 ```text
 FileMenuName=File
@@ -70,13 +70,13 @@ HelpMenuName=Help
 > [!CAUTION]
 > 請勿使用資源檔儲存密碼、安全機密資訊或私用資料。
 
- 文字檔中允許空字串 (即其值為 <xref:System.String.Empty?displayProperty=nameWithType> 的資源)。 例如:
+ 文字檔中允許空字串 (即其值為 <xref:System.String.Empty?displayProperty=nameWithType> 的資源)。 例如：
 
 ```text
 EmptyString=
 ```
 
- 從 .NET Framework 4.5 及所有版本的 .NET Core 開始，文字檔案支援使用 `#ifdef` 符號... `#endif` 及 `#if !` 符號... `#endif` 建構的條件式編譯。 您接著可以搭配使用 `/define` 切換參數與[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 來定義符號。 每個資源都需要自己的 `#ifdef`*symbol*... `#endif` 或 `#if !`*symbol*... `#endif` 建構。 如果您使用 `#ifdef` 陳述式而且已定義 *symbol*，則 .resources 檔案中會包括相關聯的資源；否則就不會包括該資源。 如果您使用 `#if !` 陳述式而且未定義 *symbol*，則 .resources 檔案中會包括相關聯的資源；否則就不會包括該資源。
+ 從 .NET 框架 4.5 開始，在所有版本的 .NET Core 中，文本`#ifdef`檔支援使用*符號*進行條件編譯...`#endif`和`#if !`*符號*...`#endif`構造。 您接著可以搭配使用 `/define` 切換參數與[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 來定義符號。 每個資源都需要自己的`#ifdef`*符號*...`#endif`或`#if !`*符號*...`#endif`構造。 如果您使用 `#ifdef` 陳述式而且已定義 *symbol*，則 .resources 檔案中會包括相關聯的資源；否則就不會包括該資源。 如果您使用 `#if !` 陳述式而且未定義 *symbol*，則 .resources 檔案中會包括相關聯的資源；否則就不會包括該資源。
 
  註解在文字檔中是選擇性的，並在行首加上分號 (;) 或井字號 (#)。 包含註解的程式行可以放在檔案中的任何地方。 使用[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 建立的已編譯 .resources 檔案中未包括註解。
 
@@ -90,15 +90,15 @@ OKButton=OK
 CancelButton=Cancel
 ```
 
- 如果文字檔包含重複出現的「名稱」，則[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 會顯示警告，並忽略另一個名稱。
+ 如果文字檔包含重複出現的「名稱」**，則[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 會顯示警告，並忽略另一個名稱。
 
- *值*不能包含分行符號，但是您可以使用 C 語言樣式的 escape 字元（例如 `\n`）來代表新的一行，並 `\t` 來表示索引標籤。您也可以包含反斜線字元（如果已進行轉義）（例如，"\\\\"）。 此外，也允許空字串。
+ *值*不能包含新的行字元，但可以使用 C 語言樣式逸出字元，如`\n`表示新行和`\t`表示選項卡。如果反斜線字元被轉義（例如，""），\\\\也可以包括它。 此外，也允許空字串。
 
- 您應該在位元組由小到大或由大到小的位元組順序中使用 UTF-8 編碼或 UTF-16 編碼，以將資源儲存為文字檔格式。 不過，可將 .txt 檔案轉換為 .resources 檔案的[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)，預設會將檔案視為 UTF-8。 如果您想要 Resgen.exe 辨識使用 UTF-16 所編碼的檔案，必須在檔案開頭包括 Unicode 位元組順序標記 (U+FEFF)。
+ 使用 UTF-8 編碼或 UTF-16 編碼以小端編碼或大位元組順序保存文本檔案格式的資源。 不過，可將 .txt 檔案轉換為 .resources 檔案的[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)，預設會將檔案視為 UTF-8。 如果您想要 Resgen.exe 辨識使用 UTF-16 所編碼的檔案，必須在檔案開頭包括 Unicode 位元組順序標記 (U+FEFF)。
 
  若要將文字格式的資源檔內嵌至 .NET 組件，您必須使用[資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)，將檔案轉換成二進位資源 (.resource) 檔。 您接著可以使用語言編譯器將 .resources 檔案內嵌在 .NET 組件中，或使用[組件連結器 (Al.exe)](../tools/al-exe-assembly-linker.md) 將它內嵌在附屬組件中。
 
- 下列範例針對簡單 "Hello World" 主控台應用程式使用名為 GreetingResources.txt 且為文字格式的資源檔。 文字檔會定義 `prompt` 和 `greeting` 這兩個字串，提示使用者輸入其名稱並顯示問候語。
+ 下列範例針對簡單 "Hello World" 主控台應用程式使用名為 GreetingResources.txt 且為文字格式的資源檔。 文字檔定義兩個字串 和`prompt``greeting`，提示使用者輸入其名稱並顯示問候語。
 
 ```text
 # GreetingResources.txt
@@ -186,7 +186,7 @@ csc greeting.cs -resource:GreetingResources.resources
 > [!NOTE]
 > 請勿使用資源檔儲存密碼、安全機密資訊或私用資料。
 
- 下列範例會以程式設計方式建立名為 CarResources.resources 的 .resources 檔案，其中儲存六個字串、一個圖示和兩個應用程式定義的物件 (兩個 `Automobile` 物件)。 請注意，在此範例中定義和執行個體化的 `Automobile` 類別會標上 <xref:System.SerializableAttribute> 屬性，以讓二進位序列化格式子保存它。
+ 下列範例會以程式設計方式建立名為 CarResources.resources 的 .resources 檔案，其中儲存六個字串、一個圖示和兩個應用程式定義的物件 (兩個 `Automobile` 物件)。 在`Automobile`示例中定義和具現化的類使用<xref:System.SerializableAttribute>屬性標記，該屬性允許該屬性由二進位序列化 formatter 進行持久化。
 
  [!code-csharp[Conceptual.Resources.Resources#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resources/cs/resources1.cs#1)]
  [!code-vb[Conceptual.Resources.Resources#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resources/vb/resources1.vb#1)]
@@ -198,12 +198,12 @@ csc greeting.cs -resource:GreetingResources.resources
 
 當您將資源檔新增至 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 專案時，Visual Studio 會在專案目錄中建立 .resx 檔案。 Visual Studio 提供可讓您新增字串、影像和二進位物件的資源編輯器。 因為編輯器設計成只處理靜態資料，所以無法使用它們來儲存程式化物件；您必須以程式設計方式將物件資料寫入 .resx 檔案或 .resources 檔案。 如需詳細資訊，請參閱[以程式設計方式使用 .resx 檔案](working-with-resx-files-programmatically.md)和 [.resources 檔案中的資源](creating-resource-files-for-desktop-apps.md#ResourcesFiles)章節。
 
-若您要新增當地語系化的資源，請提供它們與主要資源檔相同的根檔案名稱。 您也應在檔案名稱中指定它們的文化特性 (Culture)。 例如，如果您新增名為 Resources.resx 的資源檔，也可能會建立名為 Resources.en-US.resx 和 Resources.fr-FR.resx 的資源檔，來分別保留英文 (美國) 和法文 (法國) 文化特性的當地語系化資源。 您也應該指定應用程式的預設文化特性。 如果找不到特定文化特性的當地語系化資源，則這是使用其資源的文化特性。 若要指定預設文化特性，請在 Visual Studio 的方案總管中以滑鼠右鍵按一下專案名稱、指向 [應用程式]、按一下 [組件資訊]，然後在 [中性語言] 清單中選取適當語言/文化特性。
+若您要新增當地語系化的資源，請提供它們與主要資源檔相同的根檔案名稱。 您也應在檔案名稱中指定它們的文化特性 (Culture)。 例如，如果您新增名為 Resources.resx 的資源檔，也可能會建立名為 Resources.en-US.resx 和 Resources.fr-FR.resx 的資源檔，來分別保留英文 (美國) 和法文 (法國) 文化特性的當地語系化資源。 您也應該指定應用程式的預設文化特性。 如果找不到特定文化特性的當地語系化資源，則這是使用其資源的文化特性。 若要指定預設文化特性，請在 Visual Studio 的方案總管中以滑鼠右鍵按一下專案名稱、指向 [應用程式]、按一下 [組件資訊]****，然後在 [中性語言]**** 清單中選取適當語言/文化特性。
 
 在編譯時間，Visual Studio 先將專案中的 .resx 檔案轉換成二進位資源檔 (.resources)，並將它們儲存在專案 *obj* 目錄的子目錄中。 Visual Studio 會將未包含當地語系化資源的任何資源檔內嵌在專案所產生的主要組件中。 如果任何資源檔包含當地語系化資源，Visual Studio 會將其內嵌在每個當地語系化文化特性的個別附屬組件中。 它接著會將每個附屬組件儲存在名稱對應至當地語系化文化特性的目錄中。 例如，當地語系化的英文 (美國) 資源會儲存在 en-US 子目錄的附屬組件中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Resources>
-- [桌面應用程式中的資源](index.md)
+- [桌面應用中的資源](index.md)
 - [封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)
