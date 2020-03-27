@@ -30,17 +30,17 @@
         - name: 執行格式化作業
           href: performing-formatting-operations.md
           items:
-            - name: 如何：以前置字元零來填補數字
+            - name: 作法：以前置字元零來填補數字
               href: how-to-pad-a-number-with-leading-zeros.md
-            - name: 如何：從特定日期擷取一星期的哪一日
+            - name: 作法：從特定日期擷取一星期的哪一日
               href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
-            - name: 如何：定義和使用自訂數值格式提供者
+            - name: 作法：定義和使用自訂數值格式提供者
               href: how-to-define-and-use-custom-numeric-format-providers.md
-            - name: 如何：反覆存取日期和時間值
+            - name: 作法：反覆存取日期和時間值
               href: how-to-round-trip-date-and-time-values.md
-            - name: 如何：在日期與時間值中顯示毫秒
+            - name: 作法：在日期與時間值中顯示毫秒
               href: how-to-display-milliseconds-in-date-and-time-values.md
-            - name: 如何：在非西曆中顯示日期
+            - name: 作法：在非西曆中顯示日期
               href: how-to-display-dates-in-non-gregorian-calendars.md
     - name: 操作字串
       href: manipulating-strings.md
@@ -62,7 +62,7 @@
               href: changing-case.md
             - name: 使用 StringBuilder 類別
               href: stringbuilder.md
-            - name: 如何：執行基本字串操作
+            - name: 作法：執行基本字串操作
               href: basic-manipulations.md
         - name: .NET 中的規則運算式
           href: regular-expressions.md
@@ -76,7 +76,7 @@
                   href: character-classes-in-regular-expressions.md
                 - name: 錨點
                   href: anchors-in-regular-expressions.md
-                - name: 群組建構
+                - name: 分組建構
                   href: grouping-constructs-in-regular-expressions.md
                 - name: 數量詞
                   href: quantifiers-in-regular-expressions.md
@@ -101,7 +101,7 @@
                   href: backtracking-in-regular-expressions.md
                 - name: 編譯和重複使用
                   href: compilation-and-reuse-in-regular-expressions.md
-                - name: 執行緒安全性
+                - name: 執行緒安全
                   href: thread-safety-in-regular-expressions.md
             - name: 規則運算式範例
               href: regular-expression-examples.md
@@ -110,14 +110,16 @@
                   href: regular-expression-example-scanning-for-hrefs.md
                 - name: 範例：變更日期格式
                   href: regular-expression-example-changing-date-formats.md
-                - name: 如何：從 URL 擷取通訊協定和通訊埠編號
+                - name: 作法：從 URL 擷取通訊協定和連接埠號碼
                   href: how-to-extract-a-protocol-and-port-number-from-a-url.md
-                - name: 如何：從字串中刪除無效的字元
+                - name: 作法：從字串中刪除無效的字元
                   href: how-to-strip-invalid-characters-from-a-string.md
                 - name: 如何確認字串是否為有效的電子郵件格式
                   href: how-to-verify-that-strings-are-in-valid-email-format.md
-        - name: .NET 中的字元編碼
-          href: character-encoding.md
+    - name: .NET 中的字元編碼
+      href: character-encoding-introduction.md
+    - name: 如何使用字元編碼類別
+      href: character-encoding.md
     - name: 剖析字串
       href: parsing-strings.md
       items:

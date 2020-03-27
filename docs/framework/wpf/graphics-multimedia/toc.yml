@@ -26,7 +26,7 @@
               href: painting-with-images-drawings-and-visuals.md
             - name: TileBrush 概觀
               href: tilebrush-overview.md
-            - name: 如何主題
+            - name: HOW TO 主題
               href: brushes-how-to-topics.md
               items:
                 - name: 建立 SolidColorBrush 色彩或不透明效果的動畫
@@ -70,7 +70,7 @@
           items:
             - name: 繪圖物件概觀
               href: drawing-objects-overview.md
-            - name: 如何主題
+            - name: HOW TO 主題
               href: drawings-how-to-topics.md
               items:
                 - name: 對繪圖套用 GuidelineSet
@@ -92,7 +92,7 @@
               href: path-markup-syntax.md
             - name: 幾何概觀
               href: geometry-overview.md
-            - name: 如何主題
+            - name: HOW TO 主題
               href: geometries-how-to-topics.md
               items:
                 - name: 建立 EllipseGeometry 的動畫
@@ -130,7 +130,7 @@
           items:
             - name: 影像處理概觀
               href: imaging-overview.md
-            - name: 如何主題
+            - name: HOW TO 主題
               href: imaging-how-to-topics.md
               items:
                 - name: 在 XAML 中使用 BitmapImage
@@ -172,7 +172,7 @@
           items:
             - name: WPF 中圖案和基本繪圖概觀
               href: shapes-and-basic-drawing-in-wpf-overview.md
-            - name: 如何主題
+            - name: HOW TO 主題
               href: shapes-how-to-topics.md
               items:
                 - name: 使用多邊形元素繪製封閉的圖形
@@ -192,7 +192,7 @@
           items:
             - name: 轉換概觀
               href: transforms-overview.md
-            - name: 如何主題
+            - name: HOW TO 主題
               href: transformations-how-to-topics.md
               items:
                 - name: 在事件發生時將轉換套用至元素
@@ -215,7 +215,7 @@
                   href: how-to-use-a-matrixtransform-to-create-custom-transforms.md
         - name: 圖形轉譯登錄設定
           href: graphics-rendering-registry-settings.md
-        - name: 如何主題
+        - name: HOW TO 主題
           href: graphics-how-to-topics.md
           items:
             - name: 建立矩形動畫
@@ -226,49 +226,49 @@
               href: how-to-transform-points-and-vectors.md
             - name: 將玻璃框架擴充至 WPF 應用程式中
               href: extend-glass-frame-into-a-wpf-application.md
-            - name: 如何：透過快取項目改善轉譯效能
+            - name: 作法：透過快取項目改善轉譯效能
               href: how-to-improve-rendering-performance-by-caching-an-element.md
-            - name: 如何：將快取的項目當做筆刷使用
+            - name: 作法：使用快取的項目作為筆刷
               href: how-to-use-a-cached-element-as-a-brush.md
-    - name: 立體圖形概觀
+    - name: 3D 圖形概觀
       href: 3-d-graphics-overview.md
       items:
-        - name: 立體轉換概觀
+        - name: 3D 轉換概觀
           href: 3-d-transformations-overview.md
         - name: 最大化 WPF 3D 效能
           href: maximize-wpf-3d-performance.md
-        - name: 如何主題
+        - name: HOW TO 主題
           href: 3-d-graphics-how-to-topics.md
           items:
-            - name: 建立立體場景
+            - name: 建立 3D 場景
               href: how-to-create-a-3-d-scene.md
-            - name: 對立體模型套用繪圖
+            - name: 對 3D 模型套用繪圖
               href: how-to-apply-a-drawing-to-a-3-d-model.md
-            - name: 對立體物件的前後套用材質
+            - name: 對 3D 物件的前後套用材質
               href: how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md
-            - name: 對立體物件套用放射材質
+            - name: 對 3D 物件套用放射材質
               href: how-to-apply-emissive-material-to-a-3-d-object.md
-            - name: 轉換立體模型的比例
+            - name: 轉換 3D 模型的比例
               href: how-to-transform-the-scale-of-a-3-d-model.md
-            - name: 對立體模型套用多個轉換
+            - name: 對 3D 模型套用多重轉換
               href: how-to-apply-multiple-transformations-to-a-3-d-model.md
-            - name: 建立立體平移的動畫
+            - name: 製作 3D 平移的動畫
               href: how-to-animate-3-d-translations.md
-            - name: 使用分鏡腳本建立立體旋轉的動畫
+            - name: 使用分鏡腳本製作 3D 旋轉的動畫
               href: how-to-animate-a-3-d-rotation-using-storyboards.md
-            - name: 使用 Rotation3DAnimation 建立立體旋轉的動畫
+            - name: 使用 Rotation3DAnimation 製作 3D 旋轉的動畫
               href: how-to-animate-a-3-d-rotation-using-rotation3danimation.md
-            - name: 使用四元數建立立體旋轉的動畫
+            - name: 使用四元數製作 3D 旋轉的動畫
               href: how-to-animate-a-3-d-rotation-using-quaternions.md
-            - name: 使用主要畫面格建立立體旋轉的動畫 (Rotation3DAnimationUsingKeyFrames)
+            - name: 使用主要畫面製作 3D 旋轉的動畫 (Rotation3DAnimationUsingKeyFrames)
               href: how-to-animate-a-3-d-rotation-using-key-frames.md
-            - name: 使用主要畫面格建立立體旋轉的動畫 (QuaternionAnimationUsingKeyFrames)
+            - name: 使用主要畫面製作 3D 旋轉的動畫 (QuaternionAnimationUsingKeyFrames)
               href: animate-a-3-d-rotation-quaternionanimationusingkeyframes.md
             - name: 在立體場景中建立鏡頭位置和方向的動畫
               href: how-to-animate-camera-position-and-direction-in-a-3d-scene.md
             - name: 使用主要畫面格建立鏡頭位置和方向的動畫
               href: how-to-animate-camera-position-and-direction-using-key-frames.md
-            - name: 在立體場景中建立材質屬性的動畫
+            - name: 在 3D 場景中製作材質屬性的動畫
               href: how-to-animate-material-properties-in-a-3-d-scene.md
             - name: Viewport3D 中的點擊測試
               href: how-to-hit-test-in-a-viewport3d.md
@@ -299,7 +299,7 @@
           href: timing-behaviors-overview.md
         - name: 計時事件概觀
           href: timing-events-overview.md
-        - name: 如何主題
+        - name: HOW TO 主題
           href: animation-and-timing-how-to-topics.md
           items:
             - name: 動畫加速或減速
@@ -402,7 +402,7 @@
     - name: 多媒體概觀
       href: multimedia-overview.md
       items:
-        - name: 如何主題
+        - name: HOW TO 主題
           href: audio-and-video-how-to-topics.md
           items:
             - name: 控制 MediaElement (播放、暫停、停止、音量和速度)
@@ -426,7 +426,7 @@
           href: using-drawingvisual-objects.md
         - name: 教學課程：在 Win32 應用程式中裝載視覺物件
           href: tutorial-hosting-visual-objects-in-a-win32-application.md
-        - name: 如何主題
+        - name: HOW TO 主題
           href: visual-layer-programming-how-to-topics.md
           items:
             - name: 取得視覺物件的位移

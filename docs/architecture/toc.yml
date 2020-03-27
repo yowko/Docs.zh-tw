@@ -9,9 +9,9 @@
       href: grpc-for-wcf-developers/
     - name: 使用 Azure 雲端及 Windows 容器將現有 .NET 應用程式現代化
       href: modernize-with-azure-containers/
-    - name: Microsoft 平台與工具上已容器化的 Docker 應用程式生命週期
+    - name: 採用 Microsoft 平台與工具容器化之 Docker 應用程式的生命週期
       href: containerized-lifecycle/
-    - name: .NET 微服務：容器化 .NET 應用程式的架構
+    - name: .NET 微服務：容器化之 .NET 應用程式的架構
       href: microservices/
     - name: 無伺服器應用程式：架構、模式和 Azure 實作
       href: serverless/

@@ -10,7 +10,7 @@
           href: container-docker-introduction/docker-terminology.md
         - name: Docker 容器、映像和登錄
           href: container-docker-introduction/docker-containers-images-registries.md
-    - name: 針對 Docker 容器在 .NET Core 和 .NET Framework 之間進行選擇
+    - name: 為 Docker 容器選擇 .NET Core 或 .NET Framework
       href: net-core-net-framework-containers/index.md
       items:
         - name: 一般指引
@@ -25,7 +25,7 @@
           href: net-core-net-framework-containers/net-container-os-targets.md
         - name: 官方 .NET Docker 映像
           href: net-core-net-framework-containers/official-net-docker-images.md
-    - name: 架構容器和微服務應用程式
+    - name: 架構容器型與微服務型應用程式
       href: architect-microservice-container-applications/index.md
       items:
         - name: 容器化整合型應用程式
@@ -60,12 +60,12 @@
           href: architect-microservice-container-applications/resilient-high-availability-microservices.md
         - name: 協調微服務和多容器應用程式的高延展性和可用性
           href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
-    - name: Docker 應用程式的開發程序
+    - name: Docker 型應用程式的開發程序
       href: docker-application-development-process/index.md
       items:
         - name: Docker 應用程式的開發工作流程
           href: docker-application-development-process/docker-app-development-workflow.md
-    - name: 設計和開發多容器和微服務 .NET 應用程式
+    - name: 設計與開發多容器與微服務型 .NET 應用程式
       href: multi-container-microservice-net-applications/index.md
       items:
         - name: 設計微服務導向應用程式
@@ -88,7 +88,7 @@
           href: multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md
         - name: 使用 Ocelot 實作 API 閘道
           href: multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md
-    - name: 利用 DDD 和 CQRS 模式解決微服務中的商務複雜度
+    - name: 使用 DDD 與 CQRS 模式解決微服務中的商務複雜度
       href: microservice-ddd-cqrs-patterns/index.md
       items:
         - name: 在微服務中套用簡化的 CQRS 和 DDD 模式
@@ -144,7 +144,7 @@
           href: implement-resilient-applications/implement-circuit-breaker-pattern.md
         - name: 健康狀態監視
           href: implement-resilient-applications/monitor-app-health.md
-    - name: 保護 .NET 微服務和 Web 應用程式
+    - name: 保護 .NET 微服務與 Web 應用程式的安全
       href: secure-net-microservices-web-applications/index.md
       items:
         - name: 關於 .NET 微服務和 Web 應用程式中的授權
