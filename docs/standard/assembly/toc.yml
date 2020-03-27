@@ -64,3 +64,5 @@
   href: load-unload.md
 - name: 逐步解說：在 Visual Studio 中內嵌來自受控組件的類型
   href: embed-types-visual-studio.md
+- name: 使用 MetadataLoadCoNtext 檢查組件內容
+  href: inspect-contents-using-metadataloadcontext.md
