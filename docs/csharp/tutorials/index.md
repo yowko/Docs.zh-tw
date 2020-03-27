@@ -2,12 +2,12 @@
 title: C# 教學課程
 description: 探索這些 C# 教學課程以了解如何建置 C# 程式，並了解 C# 語言功能。
 ms.date: 10/25/2018
-ms.openlocfilehash: 8adbec3311c7a0e88475734312ecc3621042c3f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57d2471ef8ad06eb821a1d1d88210dfbb8dc732e
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346790"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345099"
 ---
 # <a name="c-tutorials"></a>C# 教學課程
 
@@ -56,7 +56,7 @@ ms.locfileid: "75346790"
 
 ## <a name="general-tutorials"></a>一般教學課程
 
-下列教學課程可讓您使用 [.NET Core](../../core/index.md) 建置 C# 程式：
+下列教學課程可讓您使用 [.NET Core](../../core/index.yml) 建置 C# 程式：
 
 * [主控台應用程式](console-teleprompter.md)：示範主控台 I/O、主控台應用程式的結構，以及以工作為基礎之非同步程式設計模型的基本概念。
 * [REST 用戶端](console-webapiclient.md)：示範 Web 通訊、JSON 序列化，以及 C# 語言中的物件導向功能。

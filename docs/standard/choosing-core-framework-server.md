@@ -3,12 +3,12 @@ title: 針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行�
 description: 本指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 實作。
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: 0b6bf4c2eb66aa4de497923a0a16b65a955ba6fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 393d6d89fb299e87edf55cf50991537e8afe9753
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159971"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344155"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
@@ -105,7 +105,7 @@ ms.locfileid: "78159971"
 - [在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework)
 - [將目標指向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
 - [目標框架](frameworks.md)
-- [.NET Core 指南](../core/index.md)
+- [.NET 核心指南](../core/index.yml)
 - [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)
 - [.NET 和 Docker 簡介](../core/docker/introduction.md)
 - [.NET 偵錯概觀](components.md)

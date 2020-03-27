@@ -4,12 +4,12 @@ description: 了解如何使用.NET Portability Analyzer 工具來評估程式�
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: e0a5c791926b36fe5a35c5446471c3dcdb75cd7b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 397d9f08a0dd28f80d653ac5044d6acfa2418727
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "72774382"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344302"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -19,7 +19,7 @@ ms.locfileid: "72774382"
 
 ## <a name="common-targets"></a>常見目標
 
-- [.NET core](../../core/index.md)︰具有模組化的設計，採用並存，並且適合在跨平台的情況下使用。 並存可讓您採用新的 .NET Core 版本，而不會中斷其他應用程式。 如果您的目標，是要將應用程式移植到 .NET Core 來支援跨平台，這是建議的目標。
+- [.NET core](../../core/index.yml)︰具有模組化的設計，採用並存，並且適合在跨平台的情況下使用。 並存可讓您採用新的 .NET Core 版本，而不會中斷其他應用程式。 如果您的目標，是要將應用程式移植到 .NET Core 來支援跨平台，這是建議的目標。
 - .[NET 標準](../../standard/net-standard.md)： 包括所有 .NET 實現上可用的 .NET 標準 API。 如果您的目標，是讓程式庫在所有支援 .NET 的平台上執行，這是建議的目標。
 - [ASP.NET核心](/aspnet/core)：建立在 .NET 核心之上的現代 Web 框架。 如果您的目標，是要將 Web 應用程式移植到 .NET Core 來支援多平台，這是建議的目標。
 - .NET 核心 +[平臺擴展](../../core/porting/windows-compat-pack.md)： 除了 Windows 相容性包之外，還包括 .NET 核心 API，它提供了許多 .NET 框架可用的技術。 如需將您的應用程式從 .NET Framework 移植到 Windows 上的 .NET Core，這是建議的目標。

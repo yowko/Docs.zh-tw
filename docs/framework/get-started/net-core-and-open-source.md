@@ -2,16 +2,16 @@
 title: .NET 的核心和開放原始碼
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: b5aa42d0460d743bffe8f17a2603773c03c09ce0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a8f44eedddc4424b39f7aedceb4bb8f02c6feb42
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181615"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345038"
 ---
-# <a name="net-core-and-open-source"></a>.NET 核心和開源
+# <a name="net-core-and-open-source"></a>.NET Core 與開放原始碼
 
-本文簡要概述了什麼是 .NET Core，並展示了如何找到更多資訊。 要查找 .NET Core 的完整文檔清單，請訪問[.NET 核心指南](../../core/index.md)。
+本文簡要概述了什麼是 .NET Core，並展示了如何找到更多資訊。 要查找 .NET Core 的完整文檔清單，請訪問[.NET 核心指南](../../core/index.yml)。
 
 ## <a name="what-is-net-core"></a>什麼是 .NET Core？  
 
@@ -46,5 +46,5 @@ ms.locfileid: "79181615"
 ## <a name="see-also"></a>另請參閱
 
 - [.NET 教程 - 10 分鐘內的"你好世界"](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)
-- [.NET 核心指南](../../core/index.md)
+- [.NET Core 指南](../../core/index.yml)
 - [ASP.NET核心文檔](/aspnet/core/)

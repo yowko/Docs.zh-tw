@@ -3,12 +3,12 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 590d44ac64bc2b86ed0a082ae5185cf60b28c36c
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291556"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344196"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -161,7 +161,7 @@ Mono 通常可搭配 Just-In-Time 編譯器使用，但也提供適用於 iOS �
 
 .NET 的跨平臺、高性能開源實現。 包括 Core Common Language Runtime (CoreCLR)、Core AOT 執行階段 (CoreRT 開發中)、Core 基底類別庫，以及 Core SDK。
 
-請參閱 [.NET Core](../core/index.md)。
+請參閱 [.NET Core](../core/index.yml)。
 
 ## <a name="net-core-cli"></a>.NET Core CLI
 
@@ -275,6 +275,6 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 
 - [.NET 指南](index.md)
 - [.NET 框架指南](../framework/index.yml)
-- [.NET Core](../core/index.md)
+- [.NET Core](../core/index.yml)
 - [ASP.NET概述](/aspnet/index#pivot=aspnet)
 - [ASP.NET Core 概觀](/aspnet/index#pivot=core)

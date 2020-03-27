@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Regasm.exe
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
-ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0a1658e57f4a236e4bdd29c3ca224275c25ea727
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73104955"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345012"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (組件登錄工具)
 
@@ -54,7 +54,7 @@ regasm assemblyFile [options]
 
 您可以使用 **/regfile** 選項產生包含登錄項目的 .reg 檔，而不是直接變更登錄。 您可以使用登錄編輯程式工具 (Regedit.exe) 匯入 .reg 檔，藉此更新電腦上的登錄。 請注意，.reg 檔並不包含任何可以藉由使用者定義的註冊功能處理的登錄更新。  請注意，**/regfile** 選項只會發出 Managed 類別的登錄項目。  這個選項不會發出 `TypeLibID` 或 `InterfaceID` 的項目。
 
-當您指定 **/tlb** 選項時，Regasm.exe 會產生及註冊型別程式庫，描述組件中找到的類型。 Regasm.exe 會將產生的類型程式庫放入目前的工作目錄中，或是為輸出檔指定的目錄中。 為參考其他組件的組件產生類型程式庫可能導致一次產生多個類型程式庫。 您可以使用型別程式庫提供型別資訊給 Visual Studio 這類開發工具。 如果您要註冊的組件是由型別程式庫匯入工具 ([Tlbimp.exe](tlbimp-exe-type-library-importer.md)) 所產生，則不應該使用 **/tlb** 選項。 您無法從原本自類型程式庫匯入的組件匯出類型程式庫。 使用 **/tlb** 選項與使用類型程式庫匯出工具 ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) 和 Regasm.exe 的效果相同，但是有一點除外，就是 Tlbexp.exe 不會註冊本身所產生的類型資料庫。  如果您使用 **/tlb** 選項註冊型別程式庫，就可以使用 **/tlb** 選項搭配 **/unregister** 選項將型別程式庫的註冊移除。 這兩個選項一起使用時，將會移除類型程式庫和介面項目的註冊，因而大幅清除登錄。
+當您指定 **/tlb** 選項時，Regasm.exe 會產生及註冊型別程式庫，描述組件中找到的類型。 Regasm.exe 會將產生的類型程式庫放入目前的工作目錄中，或是為輸出檔指定的目錄中。 為參考其他組件的組件產生類型程式庫可能導致一次產生多個類型程式庫。 您可以使用型別程式庫提供型別資訊給 Visual Studio 這類開發工具。 如果您要註冊的組件是由型別程式庫匯入工具 ([Tlbimp.exe](tlbimp-exe-type-library-importer.md)) 所產生，則不應該使用 **/tlb** 選項。 您無法從原本自類型程式庫匯入的組件匯出類型程式庫。 使用 **/tlb** 選項與使用類型程式庫匯出工具 ([Tlbexp.exe](tlbexp-exe-type-library-exporter.md)) 和 Regasm.exe 的效果相同，但是有一點除外，就是 Tlbexp.exe 不會註冊本身所產生的類型資料庫。  如果使用 **/tlb**選項註冊型別程式庫，則可以使用 **/tlb**選項與 **/un寄存器**選項取消註冊型別程式庫。 這兩個選項一起使用時，將會移除類型程式庫和介面項目的註冊，因而大幅清除登錄。
 
 當您註冊 COM 要使用的組件時，Regasm.exe 會將項目加入至本機電腦上的登錄。 更精確地說，它會建立與版本相關的登錄機碼，允許相同組件的多個版本在電腦上並存執行。 第一次註冊組件時，系統會針對組件建立一個最上層機碼，並針對這個特定版本建立一個唯一子機碼。 每次您註冊新的組件版本時，Regasm.exe 就會為這個新的版本建立一個子機碼。
 
@@ -85,7 +85,7 @@ regasm myTest.dll /tlb:myTest.tlb
 ## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
-- [Tlbexp.exe (類型程式庫匯出工具)](tlbexp-exe-type-library-exporter.md)
-- [Tlbimp.exe (類型程式庫匯入工具)](tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe（型別程式庫匯出器）](tlbexp-exe-type-library-exporter.md)
+- [Tlbimp.exe（型別程式庫導入器）](tlbimp-exe-type-library-importer.md)
 - [向 COM 註冊組件](../interop/registering-assemblies-with-com.md)
-- [命令提示字元](developer-command-prompt-for-vs.md)
+- [命令提示](developer-command-prompt-for-vs.md)

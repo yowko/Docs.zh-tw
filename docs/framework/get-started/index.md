@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: cd27f2fb893def9e186504cc9973bae71473f005
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8708fbd21967c5acb548e0e77ba5d9e060336c50
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248904"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345040"
 ---
 # <a name="get-started-with-net-framework"></a>開始使用 .NET 框架
 
 .NET 框架是管理目標 .NET 框架的應用的運行時執行環境。 其由通用語言執行平台及廣大的類別庫組成，前者提供記憶體管理和其他系統服務，後者則能讓程式設計人員將強固、可靠的程式碼善用於應用程式開發的所有主要領域。
 
 > [!NOTE]
-> .NET 框架僅在 Windows 系統上可用。 您可以使用[.NET Core](../../core/index.md)在 Windows、MacOS 和 Linux 上開發和運行應用。
+> .NET 框架僅在 Windows 系統上可用。 您可以使用[.NET Core](../../core/index.yml)在 Windows、MacOS 和 Linux 上開發和運行應用。
 
 ## <a name="what-is-net-framework"></a>什麼是 .NET 框架？
 
@@ -80,7 +80,7 @@ ms.locfileid: "80248904"
 | [.NET 框架和帶外版本](the-net-framework-and-out-of-band-releases.md) | 描述 .NET Framework 不定期發行以及如何在您的應用程式中使用它們。 |
 | [系統要求](system-requirements.md) | 列出運行 .NET 框架的硬體和軟體要求。 |
 | [.NET 的核心和開放原始碼](net-core-and-open-source.md) | 描述 .NET 核心與 .NET 框架的關係以及如何訪問開源 .NET Core 專案。 |
-| [.NET Core 文件](../../core/index.md) | 提供適用於 .NET Core 的概念性及 API 參考文件。 |
+| [.NET Core 文件](../../core/index.yml) | 提供適用於 .NET Core 的概念性及 API 參考文件。 |
 | [.NET Standard](../../standard/net-standard.md) | 討論 .NET 標準，這是單個 .NET 實現支援的版本化規範，可確保在多個平臺上提供一組一致的 API。
 
 ## <a name="see-also"></a>另請參閱

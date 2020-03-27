@@ -4,12 +4,12 @@ description: 最近對 C# 語言的增強功能，可讓您撰寫可驗證的安
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: bb53264f61192c042da469ba687da6c472e8c6d4
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79506979"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345087"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>撰寫安全且有效率的 C# 程式碼
 
@@ -17,11 +17,11 @@ C# 中的新功能可讓您撰寫可驗證的安全程式碼，取得更佳的�
 
 本文中的許多範例程式碼都使用了 C# 7.2 新增功能。 若要使用這些功能，您必須設定您的專案，以使用 C# 7.2 或更新版本。 有關設置語言版本的詳細資訊，請參閱[配置語言版本](language-reference/configure-language-version.md)。
 
-本文聚焦於高效率資源管理的技術。 使用實值型別的一個優點是它們通常可避免堆積配置。 相對地，缺點則是它們是以實值複製。 這種兩難的情況使得最佳化針對大量資料進行運作的演算法，變得更加困難。 C# 7.2 中新的語言功能提供一項機制，可讓您使用實值型別參考來撰寫安全且有效率的程式碼。 若能善用這些功能，即可同時最小化配置及複製作業。 本文會探討這些新功能。
+本文聚焦於高效率資源管理的技術。 使用實值型別的一個優點是它們通常可避免堆積配置。 相對地，缺點則是它們是以實值複製。 這種權衡使得優化對大量資料操作的演算法變得更加困難。 C# 7.2 中新的語言功能提供一項機制，可讓您使用實值型別參考來撰寫安全且有效率的程式碼。 若能善用這些功能，即可同時最小化配置及複製作業。 本文會探討這些新功能。
 
 本文聚焦於下列資源管理技術：
 
-- 聲明[`readonly struct`](language-reference/keywords/readonly.md#readonly-struct-example)表示類型不**可變**，並使編譯器能夠在使用[`in`](language-reference/keywords/in-parameter-modifier.md)參數時保存副本。
+- 聲明[`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct)以表示類型不**可變**。 這使編譯器能夠在使用[`in`](language-reference/keywords/in-parameter-modifier.md)參數時保存防禦性副本。
 - 如果類型不能不可變，請聲明`struct`成員`readonly`以指示成員不修改狀態。
 - 當[`ref readonly`](language-reference/keywords/ref.md#reference-return-values)傳回值`struct`大於<xref:System.IntPtr.Size?displayProperty=nameWithType>並且存儲存留期大於傳回值的方法時，請使用返回。
 - 當 `readonly struct` 的大小大於 <xref:System.IntPtr.Size?displayProperty=nameWithType> 時，基於效能原因，您應將它作為 `in` 參數傳遞。

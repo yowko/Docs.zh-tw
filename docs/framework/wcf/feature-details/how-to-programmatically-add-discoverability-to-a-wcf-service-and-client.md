@@ -2,15 +2,15 @@
 title: HOW TO：以程式設計方式將探索能力加入 WCF 服務與用戶端
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf89c793cbd72a0a3980e6ec8e42c688dcedec26
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184891"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344969"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>HOW TO：以程式設計方式將探索能力加入 WCF 服務與用戶端
-本主題介紹如何使 Windows 通信基礎 （WCF） 服務可發現。 它基於[自主機](https://go.microsoft.com/fwlink/?LinkId=145523)示例。  
+本主題介紹如何使 Windows 通信基礎 （WCF） 服務可發現。 它基於[自主機](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)示例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>若要為探索設定現有的自我裝載服務範例  
   
@@ -124,7 +124,7 @@ ms.locfileid: "79184891"
   
      此方法使用自 `FindCalculatorServiceAddress` 傳回的端點位址來呼叫計算機服務。  
   
-11. 在 `InvokeCalculatorService` 方法中，建立 `CalculatorServiceClient` 類別的執行個體。 此類由[自主機](https://go.microsoft.com/fwlink/?LinkId=145523)示例定義。 它是使用 Svcutil.exe 來產生的。  
+11. 在 `InvokeCalculatorService` 方法中，建立 `CalculatorServiceClient` 類別的執行個體。 此類由[自主機](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)示例定義。 它是使用 Svcutil.exe 來產生的。  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ ms.locfileid: "79184891"
     ```  
   
 ## <a name="example"></a>範例  
- 以下是本範例的程式碼清單。 由於此代碼基於[自主機](https://go.microsoft.com/fwlink/?LinkId=145523)示例，因此僅列出已更改的檔。 有關自主機示例的詳細資訊，請參閱[設置說明](https://go.microsoft.com/fwlink/?LinkId=145522)。  
+ 以下是本範例的程式碼清單。 由於此代碼基於[自主機](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)示例，因此僅列出已更改的檔。 有關自主機示例的詳細資訊，請參閱[設置說明](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions)。  
   
 ```csharp  
 // Service.cs  

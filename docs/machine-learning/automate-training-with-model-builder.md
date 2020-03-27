@@ -1,14 +1,14 @@
 ---
 title: 什麼是模型建立器且其如何運作？
 description: 如何使用 ML.NET 模型建立器來自動定型機器學習服務模型
-ms.date: 01/07/2020
+ms.date: 03/25/2020
 ms.custom: overview, mlnet-tooling
-ms.openlocfilehash: cff4601843ec9ca7201ea7dbdbfbcfa18f50e46e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9cf66455109908ebd9fc10e62cf4f067609b57d9
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399221"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344778"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>什麼是模型建立器且其如何運作？
 
@@ -23,7 +23,7 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 > [!NOTE]
 > 模型產生器目前為預覽版。
 
-## <a name="scenarios"></a>案例
+## <a name="scenario"></a>狀況
 
 您可以在模型建立器中放入許多不同的案例，以產生應用程式的機器學習模型。
 
@@ -38,47 +38,41 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 在模型產生器中，您需要選擇方案。 方案的類型取決於您嘗試進行的預測類型。
 
-#### <a name="predict-a-category-when-there-are-only-two-categories"></a>預測類別 (當只有兩個類別時)
+#### <a name="text-classification"></a>文字分類
 
-二元分類用來將資料分類為兩個類別 (是/否、通過/失敗、true/false、正/負)。
+分類用於將資料分類為類別。
 
 ![顯示二元分類範例的圖表，包括詐騙偵測、風險降低和應用程式檢測](media/binary-classification-examples.png)
 
-情感分析可用來預測客戶意見反應的正面或負面人氣。 它是二進位分類機器學習任務的一個示例。
-
-如果您的案例需要分類成兩種類別，您可以使用此範本處理您的資料集。
-
-#### <a name="predict-a-category-when-there-are-three-or-more-categories"></a>預測類別 (當有三個或多個類別時)
-
-多元分類可用來將資料分類為三或多個類別。
-
 ![多元分類的範例，包括文件和產品分類、支援票證路由，以及客戶問題優先順序](media/multiclass-classification-examples.png)
 
-問題分類可使用問題標題和描述來分類客戶意見反應問題 (例如，針對 GitHub)。 它是多類分類機器學習任務的一個示例。
-
-如果您想要將資料分類為三或多個類別，您可以使用問題分類範本處理您的案例。
-
-#### <a name="predict-a-number"></a>預測數字
+#### <a name="value-prediction"></a>價值預測
 
 迴歸用來預測數字。
 
 ![顯示迴歸範例的圖表，例如價格預測、銷售預測和預測性維護](media/regression-examples.png)
 
-價格預測可使用位置、大小和其他房屋特性來預測房價。 它是回歸機器學習任務的一個示例。
-
-如果您想要使用自己的資料集來預測數值，針對您的案例您可以使用價格預測範本。
-
-#### <a name="classify-images-into-categories"></a>將圖像分類為類別
-
-此方案是多類分類的特殊情況，其中要分類的輸入資料是一組圖像。
+#### <a name="image-classification"></a>影像分類
 
 圖像分類可用於識別不同類別的圖像。 例如，不同類型的地形或動物或製造缺陷。
 
-如果您有一組圖像，並且希望將圖像分類為不同的類別，則可以為方案使用圖像分類範本。
+如果您有一組圖像，並且希望將圖像分類為不同的類別，則可以使用圖像分類方案。
 
-#### <a name="custom-scenario"></a>自訂方案
+#### <a name="recommendation"></a>建議
 
-自訂方案允許您手動選擇方案。
+建議方案根據特定使用者的喜歡和不喜歡程度預測特定使用者的建議專案清單。
+
+當您有一組使用者和一組"產品"（如要購買的專案、電影、書籍或電視節目）以及一組使用者的"評分"時，可以使用推薦方案。
+
+## <a name="environment"></a>環境
+
+您可以在電腦或 Azure 上的雲中本地訓練機器學習模型。
+
+在本地訓練時，您可以在電腦資源（CPU、記憶體和磁片）的約束下工作。 在雲中訓練時，可以擴展資源以滿足方案的需求，尤其是大型資料集。
+
+支援針對所有方案進行本地培訓。
+
+支援映射分類的 Azure 培訓。
 
 ## <a name="data"></a>資料
 
@@ -113,14 +107,15 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 如果您還沒有自己的資料，請嘗試下列資料集之一：
 
-|狀況|ML 任務|資料|標籤|特性|
+|狀況|範例|資料|標籤|特性|
 |-|-|-|-|-|
-|價格預測|迴歸|[計程車費用資料](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|費用|行車時間、距離|
-|異常偵測|二進位分類|[產品銷售資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|產品銷售|Month|
-|情感分析|二進位分類|[網站留言資料](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|標籤 (負面人氣時為 0，正面人氣時為 1)|留言、年度|
-|詐騙偵測|二進位分類|[信用卡資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|類別 (詐騙時為 1，否則為 0)|數量、V1-V28 (匿名特性)|
-|文字分類|多元分類|[GitHub 問題資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|區域|標題、描述|
-|影像分類|多元分類|[鮮花圖像](http://download.tensorflow.org/example_images/flower_photos.tgz)|花的類型：雛菊、蒲公英、玫瑰、向日葵、鬱金香|圖像資料本身|
+|分類|預測銷售異常|[產品銷售資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|產品銷售|Month|
+||預測網站評論的情緒|[網站留言資料](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|標籤 (負面人氣時為 0，正面人氣時為 1)|留言、年度|
+||預測欺詐性信用卡交易|[信用卡資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|類別 (詐騙時為 1，否則為 0)|數量、V1-V28 (匿名特性)|
+||預測 GitHub 存儲庫中的問題類型|[GitHub 問題資料](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|區域|標題、描述|
+|價值預測|預測出租車票價|[計程車費用資料](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|費用|行車時間、距離|
+|影像分類|預測問題的類別|[花圖像](http://download.tensorflow.org/example_images/flower_photos.tgz)|花的類型：雛菊、蒲公英、玫瑰、向日葵、鬱金香|圖像資料本身|
+|建議|預測某人喜歡的電影|[電影分級](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip)|使用者， 電影|評等|
 
 ## <a name="train"></a>定型
 
@@ -165,13 +160,13 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 方案映射到機器學習任務。 每個 ML 任務都有自己的評估指標集。
 
-#### <a name="regression-for-example-price-prediction"></a>回歸（例如，價格預測）
+#### <a name="value-prediction"></a>價值預測
 
-回歸問題的預設指標為 RSquared，RSquared 的值介於 0 和 1 之間。 1 是最佳值，換句話說，RSquared 的值越接近 1，您的模型性能就越好。
+值預測問題的預設指標為 RSquared，RSquared 的值介於 0 和 1 之間。 1 是最佳值，換句話說，RSquared 的值越接近 1，您的模型性能就越好。
 
-報告的其他指標（如絕對損失、平方損失和 RMS 損失）是其他指標，可用於瞭解模型的性能並將其與其他回歸模型進行比較。
+報告的其他指標（如絕對損失、平方損失和 RMS 損失）是其他指標，可用於瞭解模型的性能並將其與其他值預測模型進行比較。
 
-#### <a name="binary-classification-for-example-sentiment-analysis"></a>二進位分類（例如，情緒分析）
+#### <a name="classification-2-categories"></a>分類（2個類別）
 
 分類問題的預設指標是準確性。 準確性定義模型在測試資料集上進行的正確預測的比例。 接近 100% 或 1.0 越好。
 
@@ -179,7 +174,7 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 其他指標（如 F1 分數）可用於控制精度和召回之間的平衡。
 
-#### <a name="multi-class-classification-for-example-issue-classification-image-classification"></a>多類分類（例如，問題分類、圖像分類）
+#### <a name="classification-3-categories"></a>分類（3+類別）
 
 多類分類的預設指標是"微精度"。 微精度越接近 100% 或 1.0 越好。
 
@@ -196,7 +191,7 @@ ML.NET 模型建立器是直覺式圖形化 Visual Studio 延伸模組，其用�
 
 如果您的模型效能分數不如預期，您可以：
 
-- 延長定型時間。 時間較長，自動化的機器學習引擎就會嘗試更多演算法及設定。
+- 延長定型時間。 隨著更多的時間，自動化機器學習引擎實驗與更多的演算法和設置。
 
 - 新增更多資料。 有時資料數量不足，無法定型高品質的機器學習模型。
 

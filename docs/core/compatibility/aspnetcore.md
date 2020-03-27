@@ -2,15 +2,15 @@
 title: ASP.NET核心突破性更改
 titleSuffix: ''
 description: 列出ASP.NET核心中的重大更改。
-ms.date: 03/25/2020
+ms.date: 03/26/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: eb80be54da8ac0b15d854304e53a7ade7f42da1b
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 05272032f2b93c8ae89377a20e6fdafc2ff0eb7b
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291722"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345332"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET核心突破性更改
 
@@ -66,15 +66,20 @@ ASP.NET核心提供 .NET Core 使用的 Web 應用開發功能。
 - [信號R：已刪除集線器連接方法](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
 - [信號R：中心連接上下文建構函式已更改](#signalr-hubconnectioncontext-constructors-changed)
 - [信號R：JavaScript用戶端包名稱更改](#signalr-javascript-client-package-name-changed)
+- [信號R：MessagePack集線器協定移動到消息包 2.x 包](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
 - [信號R：過時的 API](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
 - [信號R：使用信號R和使用連接方法被刪除](#signalr-usesignalr-and-useconnections-methods-removed)
-- [Spa 服務：標記為過時的 Spa 服務和節點服務](#spas-spaservices-and-nodeservices-marked-obsolete)
 - [Spa服務和節點服務主控台記錄器回退預設更改](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
+- [Spa 服務：標記為過時的 Spa 服務和節點服務](#spas-spaservices-and-nodeservices-marked-obsolete)
 - [目標框架： .NET 框架不支援](#target-framework-net-framework-support-dropped)
 
 ## <a name="aspnet-core-50"></a>ASP.NET核心 5.0
 
 [!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE[SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-package.md)]
 
 ***
 

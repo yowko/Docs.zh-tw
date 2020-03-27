@@ -1,18 +1,18 @@
 ---
 title: readonly 關鍵字 - C# 參考
-ms.date: 06/21/2018
+ms.date: 03/26/2020
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 344d5e54fcd500e283c52fa7953c6366823f13f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399354"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345155"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# 參考)
 
@@ -28,7 +28,7 @@ ms.locfileid: "79399354"
   > [!WARNING]
   > 包含外部可見唯讀欄位（即可變參考型別）的外部可見類型可能是安全性漏洞，可能會觸發警告[CA2104："](/visualstudio/code-quality/ca2104)不要聲明唯讀可變參考型別。
 
-- 在[`readonly struct`定義](#readonly-struct-example)`readonly`中 ，`struct`表示 不可變。
+- 在類型`readonly struct`定義中，`readonly`指示結構類型不可變。 有關詳細資訊，請參閱[`readonly`](../builtin-types/struct.md#readonly-struct)[結構類型](../builtin-types/struct.md)文章的結構部分。
 - 在[`readonly`成員定義](#readonly-member-examples)中`readonly`，指示 的成員`struct`不會更改結構的內部狀態。
 - 在[`ref readonly`方法返回](#ref-readonly-return-example)中，`readonly`修飾符指示該方法返回引用，並且不允許寫入該引用。
 
@@ -71,28 +71,6 @@ p2.y = 66;        // Error
 你會得到編譯器錯誤訊息：
 
 **不能將唯讀欄位分配給（建構函式或變數初始化器除外）**
-
-## <a name="readonly-struct-example"></a>唯讀結構範例
-
-`struct` 定義上的 `readonly` 修飾詞會宣告 struct 是**不可變**。 `struct` 的每個執行個體欄位必須標記為 `readonly`，如下列範例所示：
-
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
-
-上述範例會使用[唯讀自動屬性](../../properties.md#read-only)來宣告其儲存體。 它會指示編譯器建立 `readonly` 支援這些屬性的欄位。 您也可以直接宣告 `readonly` 欄位：
-
-```csharp
-public readonly struct Point
-{
-    public readonly double X;
-    public readonly double Y;
-
-    public Point(double x, double y) => (X, Y) = (x, y);
-
-    public override string ToString() => $"({X}, {Y})";
-}
-```
-
-新增未標記 `readonly` 的欄位會產生編譯器錯誤 `CS8340`：「唯讀結構的執行個體欄位必須為唯讀。」
 
 ## <a name="readonly-member-examples"></a>唯讀成員示例
 
@@ -144,6 +122,7 @@ public string Message { readonly get; set; }
 上的`readonly`修飾符`ref return`指示無法修改返回的引用。 下列範例會傳回對來源的參考。 它使用`readonly`修改器指示調用方無法修改原點：
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+
 傳回的型別不一定得是 `readonly struct`。 可由 `ref` 傳回的任何類型，都可以由 `ref readonly` 傳回。
 
 ## <a name="c-language-specification"></a>C# 語言規格
@@ -162,4 +141,4 @@ public string Message { readonly get; set; }
 - [C# 關鍵字](index.md)
 - [修飾詞](index.md)
 - [const](const.md)
-- [領域](../../programming-guide/classes-and-structs/fields.md)
+- [欄位](../../programming-guide/classes-and-structs/fields.md)

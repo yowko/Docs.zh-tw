@@ -4,12 +4,12 @@ description: 描述 .NET 架構元件，例如 .NET Standard、.NET 實作、.NE
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4329830d6cec5032517ea3fa02cb24dd7322e23f
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 027fdb4cec47550f88f6930a4bbdff4ab5cdfb36
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291775"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344156"
 ---
 # <a name="net-architectural-components"></a>.NET 架構元件
 
@@ -38,7 +38,7 @@ Microsoft 會主動開發和維護的主要 .NET 實作有四個︰.NET Core、.
 
 .NET Core 是 .NET 的跨平台實作，目的是處理大規模的伺服器與雲端工作負載。 它在 Windows、macOS 和 Linux 上運行。 它會實作 .NET Standard，讓以 .NET Standard 為目標的程式碼可以在 .NET Core 上執行。 [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core)、[Windows Forms](../framework/winforms/windows-forms-overview.md) 和 [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) 都是在 .NET Core 上執行。
 
-若要深入了解 .NET Core，請參閱 [.NET Core 指南](../core/index.md)及[為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md)。
+若要深入了解 .NET Core，請參閱 [.NET Core 指南](../core/index.yml)及[為伺服器應用程式選擇 .NET Core 或 .NET Framework](choosing-core-framework-server.md)。
 
 ### <a name="net-framework"></a>.NET Framework
 
@@ -107,7 +107,7 @@ ISO/IEC 官方檔可從 ISO/IEC[公開版標準頁面獲得](https://standards.i
 
 - [針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
-- [.NET 核心指南](../core/index.md)
+- [.NET 核心指南](../core/index.yml)
 - [.NET 框架指南](../framework/index.yml)
 - [C# 指南](../csharp/index.yml)
 - [F# 指南](../fsharp/index.yml)

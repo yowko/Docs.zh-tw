@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 30198930a260b7370d061e85efe4935e88ad4d8a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8862aa34c2d2677f5bc3e737c01cc61036c243e1
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151623"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345064"
 ---
 # <a name="connection-strings-and-configuration-files"></a>連接字串和組態檔
+
 在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。 編譯到應用程式原始程式碼中的未加密連接字串，可使用 [Ildasm.exe (IL 反組譯工具)](../../tools/ildasm-exe-il-disassembler.md) 工具進行檢視。 此外，如果連接字串變更，應用程式就必須重新編譯。 基於上述理由，建議您將連接字串儲存在應用程式組態檔中。  
   
 ## <a name="working-with-application-configuration-files"></a>使用應用程式組態檔  
@@ -125,9 +126,9 @@ ms.locfileid: "79151623"
 <configProtectedData defaultProvider="RsaProtectedConfigurationProvider">  
   <providers>  
     <add name="RsaProtectedConfigurationProvider"
-      type="System.Configuration.RsaProtectedConfigurationProvider, ... />  
+      type="System.Configuration.RsaProtectedConfigurationProvider" />  
     <add name="DataProtectionConfigurationProvider"
-      type="System.Configuration.DpapiProtectedConfigurationProvider, ... />  
+      type="System.Configuration.DpapiProtectedConfigurationProvider" />  
   </providers>  
 </configProtectedData>  
 ```  

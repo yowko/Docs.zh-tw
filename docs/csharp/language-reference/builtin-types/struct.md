@@ -1,6 +1,6 @@
 ---
 title: 結構類型 - C# 引用
-ms.date: 02/24/2020
+ms.date: 03/26/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: b126706ff9c881e5c2d5cc7ee4833ac8896e3fcc
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 6a2c97b93a8f6d1d62bd8a96865a4fe6587f55d3
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507239"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345137"
 ---
 # <a name="structure-types-c-reference"></a>結構類型（C# 參考）
 
@@ -24,6 +24,24 @@ ms.locfileid: "79507239"
 結構類型具有*值語義*。 也就是說，結構類型的變數包含類型的實例。 預設情況下，在賦值時複製變數值，將參數傳遞給方法，並返回方法結果。 對於結構類型變數，將複製類型的實例。 有關詳細資訊，請參閱[數值型別](value-types.md)。
 
 通常，使用結構類型來設計提供很少或沒有行為的小型以資料為中心的類型。 例如，.NET 使用結構類型來表示數位（[整數](integral-numeric-types.md)和[實數](floating-point-numeric-types.md)）、[布林值](bool.md)[、Unicode 字元](char.md)、[時間實例](xref:System.DateTime)。 如果您專注于類型的行為，請考慮定義[類](../keywords/class.md)。 類類型具有*引用語義*。 也就是說，類類型的變數包含對類型實例的引用，而不是實例本身。
+
+由於結構類型具有值語義，因此我們建議您定義*不可變*結構類型。
+
+## <a name="readonly-struct"></a>`readonly`結構
+
+從 C# 7.2 開始，`readonly`使用修飾符聲明結構類型不可變：
+
+[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+
+`readonly`結構的所有資料成員必須唯讀如下：
+
+- 任何欄位聲明都必須具有[`readonly`修改器](../keywords/readonly.md)
+- 任何屬性（包括自動實現的屬性）都必須是唯讀的
+
+這保證了`readonly`結構的成員不會修改結構的狀態。
+
+> [!NOTE]
+> 在`readonly`結構中，可變參考型別的資料成員仍然可以更改其自己的狀態。 例如，不能替換<xref:System.Collections.Generic.List%601>實例，但可以向實例添加新元素。
 
 ## <a name="limitations-with-the-design-of-a-structure-type"></a>結構類型設計的限制
 
@@ -63,9 +81,11 @@ ms.locfileid: "79507239"
 
 有關詳細資訊，請參閱[C# 語言規範](~/_csharplang/spec/introduction.md)的["結構"](~/_csharplang/spec/structs.md)部分。
 
+有關`readonly`結構的詳細資訊，請參閱[功能建議注釋](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs)。
+
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
 - [設計指南 - 在類和結構之間進行選擇](../../../standard/design-guidelines/choosing-between-class-and-struct.md)
 - [設計指南 - 結構設計](../../../standard/design-guidelines/struct.md)
-- [類別和結構](../../programming-guide/classes-and-structs/index.md)
+- [類和結構](../../programming-guide/classes-and-structs/index.md)

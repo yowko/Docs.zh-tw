@@ -6,18 +6,18 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: be815ca522cf18ea2403ea7af5549ceaf922854e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8eb590b07eae3b76b3a206b9731997a6bc2c90d7
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186675"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344899"
 ---
 # <a name="key-frame-animations-overview"></a>主要畫面格動畫概觀
 本主題介紹主要畫面格動畫。 主要畫面格動畫可讓您使用兩個以上的目標值來建立動畫，並且控制動畫的插補方法。  
   
 <a name="prerequisites"></a>
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  若要了解本概觀，您應該熟悉 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 動畫和時間軸。 如需動畫的簡介，請參閱[動畫概觀](animation-overview.md)。 它也有助於熟悉 From/To/By 動畫。 如需詳細資訊，請參閱 From/To/By 動畫概觀。  
   
 <a name="whatisakeyframeanimation"></a>
@@ -289,8 +289,8 @@ ms.locfileid: "79186675"
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>
 - [主要曲線動畫範例](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations)
-- [主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)
+- [主要畫面格動畫範例](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation)
 - [動畫概觀](animation-overview.md)
 - [分鏡腳本概觀](storyboards-overview.md)
-- [主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)
+- [關於主要畫面格操作說明的主題](key-frame-animation-how-to-topics.md)
 - [計時行為概觀](timing-behaviors-overview.md)

@@ -2,12 +2,12 @@
 title: 針對 Docker 容器選擇 .NET Framework 的時機
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對 Docker 容器選擇 .NET Framework 的時機
 ms.date: 01/30/2020
-ms.openlocfilehash: dfb1e8883fc9c3d9235672bc2885858bfb64afa5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2697ae56eda104a0ee8e7bfcd79d3972943d1f79
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501966"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344998"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>針對 Docker 容器選擇 .NET Framework 的時機
 
@@ -50,7 +50,7 @@ ms.locfileid: "77501966"
 ### <a name="additional-resources"></a>其他資源
 
 - **.NET 核心指南** \
-  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
+  [https://docs.microsoft.com/dotnet/core/index](../../../core/index.yml)
 
 - **從 .NET 框架移植到 .NET 核心** \
   [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
