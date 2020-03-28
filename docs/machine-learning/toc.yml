@@ -3,18 +3,28 @@
 - name: 總覽
   expanded: true
   items:
-    - name: API
-      items:
-        - name: ML.NET API
-          href: how-does-mldotnet-work.md
     - name: 模型建立器與 CLI
       items:
         - name: ML.NET 模型建立器工具
           href: automate-training-with-model-builder.md
         - name: ML.NET 命令列介面
           href: automate-training-with-cli.md
+    - name: API
+      items:
+        - name: ML.NET API
+          href: how-does-mldotnet-work.md
 - name: 教學課程
   items:
+    - name: 模型建立器與 CLI
+      items:
+        - name: 預測價格 (模型建立器與迴歸)
+          href: tutorials/predict-prices-with-model-builder.md
+        - name: 使用 ML.NET CLI 分析情感
+          href: tutorials/sentiment-analysis-cli.md
+        - name: 在 Razor Pages 中分析情感 (模型建立器與二元分類)
+          href: tutorials/sentiment-analysis-model-builder.md
+        - name: 分類健康狀態違規 (模型建立器與多元分類)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: API
       items:
         - name: 總覽
@@ -41,16 +51,6 @@
           href: tutorials/object-detection-onnx.md
         - name: 使用 TensorFlow 將情感分類 (文字分類)
           href: tutorials/text-classification-tf.md
-    - name: 模型建立器與 CLI
-      items:
-        - name: 預測價格 (模型建立器與迴歸)
-          href: tutorials/predict-prices-with-model-builder.md
-        - name: 使用 ML.NET CLI 分析情感
-          href: tutorials/sentiment-analysis-cli.md
-        - name: 在 Razor Pages 中分析情感 (模型建立器與二元分類)
-          href: tutorials/sentiment-analysis-model-builder.md
-        - name: 分類健康狀態違規 (模型建立器與多元分類)
-          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: 使用 Infer.NET 進行機率性程式設計
@@ -69,6 +69,16 @@
       href: resources/improve-machine-learning-model-ml-net.md
 - name: 作法指南
   items:
+    - name: 模型建立器與 CLI
+      items:
+        - name: 將資料載入到模型建立器
+          href: how-to-guides/load-data-model-builder.md
+        - name: 安裝模型建立器
+          href: how-to-guides/install-model-builder.md
+        - name: 安裝 CLI
+          href: how-to-guides/install-ml-net-cli.md
+        - name: 使用自動化的 ML API
+          href: how-to-guides/how-to-use-the-automl-api.md
     - name: API
       items:
         - name: 載入資料
@@ -97,16 +107,6 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: 將模型部署到 Web API
               href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: 模型建立器與 CLI
-      items:
-        - name: 將資料載入到模型建立器
-          href: how-to-guides/load-data-model-builder.md
-        - name: 安裝模型建立器
-          href: how-to-guides/install-model-builder.md
-        - name: 安裝 CLI
-          href: how-to-guides/install-ml-net-cli.md
-        - name: 使用自動化的 ML API
-          href: how-to-guides/how-to-use-the-automl-api.md
 - name: 參考資料
   items:
     - name: ML.NET API 參考
