@@ -4,18 +4,18 @@ description: 了解如何使用 C# 程式庫和應用程式中的繼承。
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156749"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391145"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
 
 本教學課程將介紹 C# 中的繼承。 繼承是一種物件導向程式設計語言的功能，可讓您定義基底類別，提供特定功能 (資料和行為)，以及定義繼承或覆寫該功能的衍生類別。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 本教程假定您已安裝 .NET 核心 SDK。 訪問[.NET 核心下載](https://dotnet.microsoft.com/download)頁面下載。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
 
@@ -28,7 +28,7 @@ ms.locfileid: "79156749"
 1. 將範例程式碼複製並貼到您的程式碼編輯器。
 1. 從命令列輸入 [dotnet restore](../../core/tools/dotnet-restore.md)命令來載入或還原專案的相依性。
 
-  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. 輸入 [dotnet run](../../core/tools/dotnet-run.md) 命令來編譯和執行範例。
 
@@ -141,7 +141,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 | 型別分類 | 隱含繼承自                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
-| class         | <xref:System.Object>                                                          |
+| Class - 類別         | <xref:System.Object>                                                          |
 | struct        | <xref:System.ValueType>, <xref:System.Object>                                 |
 | 列舉          | <xref:System.Enum>, <xref:System.ValueType>, <xref:System.Object>             |
 | 委派      | <xref:System.MulticastDelegate>, <xref:System.Delegate>, <xref:System.Object> |
@@ -297,5 +297,5 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="see-also"></a>另請參閱
 
-- [類和物件](../tour-of-csharp/classes-and-objects.md)
+- [類別與物件](../tour-of-csharp/classes-and-objects.md)
 - [繼承 (C# 程式設計手冊)](../programming-guide/classes-and-structs/inheritance.md)

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 0abcc73e31eab89c422513acf778bc8bd092e788
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 34bfa4c6007ec771f784e927675f4e24d52e194f
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75345545"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391230"
 ---
 # <a name="delegates-and-lambdas"></a>委派和 Lambda
 
@@ -46,9 +46,9 @@ public class Program
 
 為了簡化開發程序，.NET 包含一組委派類型，程式設計人員可重複使用這些類型，而不需要建立新的類型。 這些類型包括 `Func<>`、`Action<>` 和 `Predicate<>`，可用於 .NET API 中的不同位置，而不需要定義新的委派類型。 當然，這三種類型彼此有些不同，如您在其簽章中所見，大部分與其預定使用方式相關：
 
-* 使用委派的引數時如需執行動作，會使用 `Action<>`。
-* `Func<>` 通常會在需要轉換時使用，亦即您必須將委派的引數轉換成其他結果。 預測就是一個主要範例。
-* `Predicate<>` 會在需要判斷引數是否符合委派的條件時使用。 它也可以寫成 `Func<T, bool>`。
+* 使用委派的引數時如需執行動作，會使用 `Action<>`。 它封裝的方法不會傳回值。
+* `Func<>` 通常會在需要轉換時使用，亦即您必須將委派的引數轉換成其他結果。 預測就是一個主要範例。 它封裝的方法返回指定的值。
+* `Predicate<>` 會在需要判斷引數是否符合委派的條件時使用。 也可以編寫為 ，`Func<T, bool>`這意味著 該方法返回布林值。
 
 我們現在可以使用 `Func<>` 委派取代自訂類型，針對上述範例進行重寫。 程式會以完全相同的方式繼續執行。
 
@@ -110,7 +110,7 @@ public class Program
 
 不過，即使使用此方法，還是有許多程式碼可以捨棄。 此時就需要 **Lambda 運算式**。
 
-Lambda 運算式 (簡稱 "Lambda") 最先是在 C# 3.0 中，當作 Language Integrated Query (LINQ) 的其中一個核心建置組塊所引入。 這是更方便使用委派的語法。 這些運算式可宣告簽章和方法主體，但除非指派給委派，否則並沒有自己的正式身分識別。 不同於委派，這些運算式可在事件註冊左邊，或在各種 LINQ 子句和方法中直接指派。
+Lambda 運算式 (簡稱 "Lambda") 最先是在 C# 3.0 中，當作 Language Integrated Query (LINQ) 的其中一個核心建置組塊所引入。 這是更方便使用委派的語法。 它們聲明簽名和方法體，但自身沒有正式標識，除非它們分配給委託。 不同於委派，這些運算式可在事件註冊左邊，或在各種 LINQ 子句和方法中直接指派。
 
 因為 Lambda 運算式不過是指定委派的另一種方式，所以我們應該能夠重寫上述範例，使用 Lambda 運算式取代匿名委派。
 
@@ -160,5 +160,5 @@ public MainWindow()
 ## <a name="further-reading-and-resources"></a>延伸閱讀和資源
 
 * [委派](../../docs/csharp/programming-guide/delegates/index.md)
-* [匿名函式](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-* [蘭姆達運算式](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [匿名功能](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+* [Lambda 運算式](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

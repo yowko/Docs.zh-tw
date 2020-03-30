@@ -2,15 +2,15 @@
 title: ASP.NET核心突破性更改
 titleSuffix: ''
 description: 列出ASP.NET核心中的重大更改。
-ms.date: 03/26/2020
+ms.date: 03/27/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 05272032f2b93c8ae89377a20e6fdafc2ff0eb7b
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 95057425614d7c717154ecfb687db2b9a6ca4a18
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345332"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391243"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET核心突破性更改
 
@@ -71,6 +71,7 @@ ASP.NET核心提供 .NET Core 使用的 Web 應用開發功能。
 - [信號R：使用信號R和使用連接方法被刪除](#signalr-usesignalr-and-useconnections-methods-removed)
 - [Spa服務和節點服務主控台記錄器回退預設更改](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
 - [Spa 服務：標記為過時的 Spa 服務和節點服務](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [靜態檔：CSV 內容類型更改為符合標準](#static-files-csv-content-type-changed-to-standards-compliant)
 - [目標框架： .NET 框架不支援](#target-framework-net-framework-support-dropped)
 
 ## <a name="aspnet-core-50"></a>ASP.NET核心 5.0
@@ -84,6 +85,10 @@ ASP.NET核心提供 .NET Core 使用的 Web 應用開發功能。
 ***
 
 [!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
+
+[!INCLUDE[Static files: CSV content type changed to standards-compliant](~/includes/core-changes/aspnetcore/5.0/static-files-csv-content-type-changed.md)]
 
 ***
 
