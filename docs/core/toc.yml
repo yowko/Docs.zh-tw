@@ -1,6 +1,8 @@
-- name: .NET Core 指南
-  href: index.md
-- name: 關於 .NET Core
+- name: .NET Core 文件
+  href: index.yml
+- name: .NET Core 簡介
+  href: introduction.md
+- name: .NET Core 概觀
   href: about.md
 - name: 安裝
   items:
