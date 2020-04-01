@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89d3eb709bb22913b9539d6ad384384ee701385f
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091595"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523280"
 ---
 # <a name="numerics-in-net"></a>.NET 中的數值
 
@@ -95,5 +95,4 @@ ms.locfileid: "73091595"
 
 ## <a name="see-also"></a>另請參閱
 
-- [應用程式基本概念](application-essentials.md)
-- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)
+- [標準數值格式字串](base-types/standard-numeric-format-strings.md)

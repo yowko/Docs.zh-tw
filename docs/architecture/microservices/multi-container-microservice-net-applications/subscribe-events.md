@@ -2,12 +2,12 @@
 title: 訂閱事件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解發佈及訂閱整合事件的詳細資料。
 ms.date: 01/30/2020
-ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bfcdb1766a15b1a8e8deab46055f14e1791c2cc
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501803"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523599"
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
@@ -32,7 +32,7 @@ eventBus.Subscribe<OrderStartedIntegrationEvent,
 
 ## <a name="publishing-events-through-the-event-bus"></a>透過事件匯流排發行事件
 
-最後，訊息傳送者 (來源微服務) 會使用類似下列範例的程式碼發行整合事件 （這是一個不考慮原子性的簡化示例。每當事件必須跨多個微服務傳播時，您就會實現類似的代碼，通常是在從源微服務提交資料或事務之後。
+最後，訊息傳送者 (來源微服務) 會使用類似下列範例的程式碼發行整合事件 (這是一個不考慮原子性的簡化範例。每當事件必須跨多個微服務傳播時,您就會實現類似的代碼,通常是在從源微服務提交數據或事務之後。
 
 首先，事件匯流排實作物件 (採用 RabbitMQ 或採用服務匯流排) 會插入控制器建構函式，如下列程式碼所示：
 
@@ -139,7 +139,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 圖 6-22 顯示這些方法中第一個方法的架構。
 
-![在沒有輔助角色微服務的情況下發布時的原子性圖。](./media/subscribe-events/atomicity-publish-event-bus.png)
+![在沒有輔助角色微服務的情況下發佈時的原子性圖。](./media/subscribe-events/atomicity-publish-event-bus.png)
 
 **圖 6-22**。 將事件發行至事件匯流排時的不可部分完成性
 
@@ -211,7 +211,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
       // Publish the integration event through the event bus
       _eventBus.Publish(priceChangedEvent);
 
-      integrationEventLogService.MarkEventAsPublishedAsync(
+      _integrationEventLogService.MarkEventAsPublishedAsync(
                                                 priceChangedEvent);
   }
 
@@ -279,7 +279,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 事件處理常式需要確認產品是否存在於任何購物籃執行個體中。 它也會更新每個相關購物籃明細項目的項目價格。 最後，其會建立一個警示，向使用者顯示價格變更，如圖 6-24 所示。
 
-![顯示使用者購物車上價格更改通知的瀏覽器的螢幕截圖。](./media/subscribe-events/display-item-price-change.png)
+![顯示用戶購物車上價格更改通知的瀏覽器的螢幕截圖。](./media/subscribe-events/display-item-price-change.png)
 
 **圖 6-24**。 顯示購物籃中的項目價格變更，如整合事件所傳達
 
@@ -301,7 +301,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
-- **榮譽消息不信** \
+- **榮譽訊息不信** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>刪除重複的整合事件訊息
@@ -322,28 +322,28 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
-- **使用 NServiceBus（特定軟體）叉式電子購物容器** \
+- **使用 NServiceBus(特定軟體)叉式電子購物容器** \
     <https://go.particular.net/eShopOnContainers>
 
-- **事件驅動消息** \
+- **事件驅動訊息** \
     <https://patterns.arcitura.com/soa-patterns/design_patterns/event_driven_messaging>
 
-- **吉米·博加德重構對復原力：評估耦合** \
+- **吉米·博加德重構對復原力:評估耦合** \
     <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 - **發佈-訂閱頻道** \
     <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
-- **邊界上下文之間的通信** \
+- **邊界上下文之間的通訊** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **最終一致性** \
     <https://en.wikipedia.org/wiki/Eventual_consistency>
 
-- **菲力浦·布朗集成邊界上下文的策略** \
+- **菲力浦布朗整合式邊界內容** \
     <https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/>
 
-- **克裡斯·理查森使用聚合、事件源和 CQRS 開發交易微服務 - 第 2 部分** \
+- **克裡斯·理查森使用集合、事件來源與 CQRS 開發交易微服務 - 第 2 部分** \
     <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson>
 
 - **克裡斯·理查森事件採購模式** \
@@ -367,18 +367,18 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 - **資料一致性引引器** \
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
-- **裡克·薩林CAP定理：為什麼雲和互聯網"一切都不同"** \
+- **里克·薩林CAP定理:為什麼雲和互聯網"一切都不同"** \
     <https://docs.microsoft.com/archive/blogs/rickatmicrosoft/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
-- **埃裡克·布魯爾十二年後的CAP："規則"是如何變化的** \
+- **埃裡克·布魯爾十二年後的CAP:「規則」是如何變化的** \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>
 
-- **Azure 服務匯流排。代理消息：重複檢測**  \
+- **Azure 服務總線。代理訊息:重複偵測**  \
     <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
 
 - **可靠性指南** (RabbitMQ 文件) \
     <https://www.rabbitmq.com/reliability.html#consumer>
 
 > [!div class="step-by-step"]
-> [上一個](rabbitmq-event-bus-development-test-environment.md)
+> [前一個](rabbitmq-event-bus-development-test-environment.md)
 > [下一個](test-aspnet-core-services-web-apps.md)

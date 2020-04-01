@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 61ee0e320f85925e4d804a6032e01c0485a31451
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 8d04f888befae2cad815c88a0d27bd836f458c63
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249327"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523781"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -25,7 +25,7 @@ ms.locfileid: "80249327"
 
 ## <a name="passing-an-argument-by-reference"></a>以傳址方式傳遞引數
 
-用於方法的參數清單時，`ref` 關鍵字指出以傳參考方式傳遞引數，而不是以傳值方式。 `ref` 關鍵字會使形式參數成為引數的別名，其必須為變數。 換句話說，參數上的任何作業都會在引數上進行。 例如，如果調用方傳遞區域變數運算式或陣列元素訪問運算式，並且被調用的方法替換 ref 參數引用的物件，則調用方的區域變數或陣列元素現在引用新物件，方法返回。
+用於方法的參數清單時，`ref` 關鍵字指出以傳參考方式傳遞引數，而不是以傳值方式。 `ref` 關鍵字會使形式參數成為引數的別名，其必須為變數。 換句話說，參數上的任何作業都會在引數上進行。 例如,如果調用方傳遞局部變數運算式或陣列元素訪問表達式,並且被調用的方法替換ref參數引用的物件,則調用方的局部變數或數位元素現在在方法返回時引用新物件。
 
 > [!NOTE]
 > 請勿將參考傳遞的概念與參考類型的概念相混淆。 兩個概念並不相同。 方法參數可以由 `ref` 修改，而不論其是否為實值類型或參考類型。 當實值類型由參考傳遞時，沒有 boxing。  
@@ -61,11 +61,11 @@ class CS0663_Example
 - 使用 [async](async.md) 修飾詞定義的 async 方法。  
 - 迭代器方法，其包括 [yield return](yield.md) 或 `yield break` 陳述式。
 
-此外，[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)具有以下限制：
+此外,[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)具有以下限制:
 
-- 不能`out`對擴充方法的第一個參數使用 keywoard。
-- `ref`當參數不是結構，或者泛型型別不受約束為結構時，關鍵字不能用於擴充方法的第一個參數。
-- 除非`in`第一個參數是結構，否則無法使用關鍵字。 `in`關鍵字不能在任何泛型型別上使用，即使約束為結構。
+- 關鍵字`out`不能用於擴充方法的第一個參數。
+- `ref`當參數不是結構,或者泛型類型不受約束為結構時,關鍵字不能用於擴展方法的第一個參數。
+- 除非`in`第一個參數是結構,否則無法使用關鍵字。 `in`關鍵字不能在任何泛型類型上使用,即使約束為結構。
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>以傳址方式傳遞引數：範例
 
@@ -121,7 +121,7 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 從 C# 7.3 開始，`foreach` 陳述式的反覆運算變數可以是 ref 區域變數或 ref readonly 區域變數。 如需詳細資訊，請參閱 [foreach 陳述式](foreach-in.md)一文。
 
-此外，從 C# 7.3 開始，可以使用[ref 指派運算子](../operators/assignment-operator.md#ref-assignment-operator)重新分配 ref 區域變數或 ref 唯讀區域變數。
+此外,從 C# 7.3 開始,可以使用[ref 賦值運算符](../operators/assignment-operator.md#ref-assignment-operator)重新分配 ref 局部變數或 ref 只讀局部變數。
 
 ## <a name="ref-readonly-locals"></a>ref readonly 區域變數
 
@@ -160,11 +160,11 @@ ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref re
   
 ## <a name="see-also"></a>另請參閱
 
-- [撰寫安全、有效率的程式碼](../../write-safe-efficient-code.md)
+- [編寫安全高效的代碼](../../write-safe-efficient-code.md)
 - [ref 傳回值和 ref 區域變數](../../programming-guide/classes-and-structs/ref-returns.md)
 - [條件 ref 運算式](../operators/conditional-operator.md#conditional-ref-expression)
 - [傳遞參數](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [方法參數](method-parameters.md)
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 編程指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-ms.openlocfilehash: 8acf0886215c2d31f949e38401c4705ac9e2aef5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b553f44ebc512ffd1194254fe8ebc90bcb2f763
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124308"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523914"
 ---
 # <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
 
@@ -27,7 +27,7 @@ ms.locfileid: "77124308"
 
 此快速參考中的每一節都列出您可以用於定義規則運算式的特定某類字元、運算子和建構。
 
-我們還以兩種格式提供了此資訊，您可以下載和列印這些資訊，以便於參考：
+我們還以兩種格式提供了此資訊,您可以下載和列印這些資訊,以便於參考:
 
 - [下載 Word (.docx) 格式](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
 - [以 PDF (.pdf) 格式下載](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
@@ -48,13 +48,13 @@ ms.locfileid: "77124308"
 |`\e`|比對逸出字元 \u001B。|`\e`|`"\x001B"` 中的 `"\x001B"`|
 |`\` *nnn*|使用八進位表示法指定字元 (*nnn* 由兩位數或三位數組成)。|`\w\040\w`|`"a bc d"` 中的 `"a b"`、`"c d"`|
 |`\x`*nn*|使用十六進位表示指定字元 (*nn* 由剛好兩位數組成)。|`\w\x20\w`|`"a bc d"` 中的 `"a b"`、`"c d"`|
-|`\c`*X*<br /><br /> `\c`*x*|比對 *X* 或 *x* 所指定的 ASCII 控制字元，其中 *X* 或 *x* 是控制字元的字母。|`\cC`|`"\x0003"` 中的 `"\x0003"` (Ctrl-C)|
+|`\c` *X*<br /><br /> `\c`*x*|比對 *X* 或 *x* 所指定的 ASCII 控制字元，其中 *X* 或 *x* 是控制字元的字母。|`\cC`|`"\x0003"` 中的 `"\x0003"` (Ctrl-C)|
 |`\u` *nnnn*|使用十六進位表示比對 Unicode 字元 (剛好四位數，如 *nnnn* 所表示)。|`\w\u0020\w`|`"a bc d"` 中的 `"a b"`、`"c d"`|
 |`\`|當後面加上的字元不是這張表和本主題其他表格中指出的逸出字元時，則比對該字元。 例如，`\*` 與 `\x2A` 相同，而 `\.` 與 `\x2E` 相同。 這可讓規則運算式引擎釐清語言元素 (例如 \* 或 ?) 和字元常值 (以 `\*` 或 `\?` 表示)。|`\d+[\+-x\*]\d+`|`"(2+2) * 3*9"` 中的 `"2+2"` 和 `"3*9"`|
 
 ## <a name="character-classes"></a>字元類別
 
-字元類別會比對一組字元中的任何一個字元。 字元類別包含下表列出的語言項目。 有關詳細資訊，請參閱[字元類](character-classes-in-regular-expressions.md)。
+字元類別會比對一組字元中的任何一個字元。 字元類別包含下表列出的語言項目。 有關詳細資訊,請參閱[字元類別](character-classes-in-regular-expressions.md)。
 
 |字元類別|描述|模式|比對|
 |---------------------|-----------------|-------------|-------------|
@@ -86,7 +86,7 @@ ms.locfileid: "77124308"
 |`\b`|比對必須發生在 `\w` (英數) 和 `\W` (非英數) 字元之間的界限上。|`\b\w+\s\w+\b`|`"them theme them them"` 中的 `"them theme"`、`"them them"`|
 |`\B`|比對不可以發生在 `\b` 界限上。|`\Bend\w*\b`|`"end sends endure lender"` 中的 `"ends"`、`"ender"`|
 
-## <a name="grouping-constructs"></a>群組建構
+## <a name="grouping-constructs"></a>分組建構
 
 分組建構會描寫規則運算式的子運算式，而且通常會擷取輸入字串的子字串。 分組建構包含下表列出的語言元素。 如需詳細資訊，請參閱[群組建構](grouping-constructs-in-regular-expressions.md)。
 
@@ -96,7 +96,7 @@ ms.locfileid: "77124308"
 |`(?<` *名稱* `>` *子運算式* `)`|將符合的子運算式擷取到具名群組中。|`(?<double>\w)\k<double>`|`"deep"` 中的 `"ee"`|
 |`(?<` *name1* `-` *name2* `>` *subexpression* `)`|定義對稱群組定義。 如需詳細資訊，請參閱[群組建構](grouping-constructs-in-regular-expressions.md)中的＜平衡群組定義＞一節。|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|`"3+2^((1-3)*(3-1))"` 中的 `"((1-3)*(3-1))"`|
 | subexpression`(?:` ** `)`|定義非擷取型群組。|`Write(?:Line)?`|`"Console.WriteLine()"` 中的 `"WriteLine"`<br /><br /> `"Console.Write(value)"` 中的 `"Write"`|
-| subexpression`(?imnsx-imnsx:` ** `)`|套用或停用 *subexpression* 內指定的選項。 有關詳細資訊，請參閱[正則運算式選項](regular-expression-options.md)。|`A\d{2}(?i:\w+)\b`|`"A12xl A12XL a12xl"` 中的 `"A12xl"`、`"A12XL"`|
+| subexpression`(?imnsx-imnsx:` ** `)`|套用或停用 *subexpression* 內指定的選項。 有關詳細資訊,請參閱[正規表示式選項](regular-expression-options.md)。|`A\d{2}(?i:\w+)\b`|`"A12xl A12XL a12xl"` 中的 `"A12xl"`、`"A12XL"`|
 | subexpression`(?=` ** `)`|零寬度右合樣 (Positive Lookahead) 判斷提示。|`\w+(?=\.)`|`"He is. The dog ran. The sun is out."` 中的 `"is"`、`"ran"` 和 `"out"`|
 | subexpression`(?!` ** `)`|零寬度右不合樣 (Negative Lookahead) 判斷提示。|`\b(?!un)\w+\b`|`"unsure sure unity used"` 中的 `"sure"`、`"used"`|
 | subexpression`(?<=` ** `)`|零寬度左合樣 (Positive Lookbehind) 判斷提示。|`(?<=19)\d{2}\b`|`"1851 1999 1950 1905 2003"` 中的 `"99"`、`"50"`、`"05"`|
@@ -112,14 +112,14 @@ ms.locfileid: "77124308"
 |`*`|比對上一個項目零次或多次。|`\d*\.\d`|`".0"`, `"19.9"`, `"219.9"`|
 |`+`|比對上一個項目一次或多次。|`"be+"`|`"been"` 中的 `"bee"`、`"bent"` 中的 `"be"`|
 |`?`|比對上一個項目零次或一次。|`"rai?n"`|`"ran"`, `"rain"`|
-|`{`*n*`}`|比對上一個項目剛好 *n* 次。|`",\d{3}"`|`"1,043.6"` 中的 `",043"`、`"9,876,543,210"` 中的 `",876"`、`",543"` 和 `",210"`|
-|`{`*n*`,}`|比對上一個項目至少 *n* 次。|`"\d{2,}"`|`"166"`, `"29"`, `"1930"`|
+|`{` *n* `}`|比對上一個項目剛好 *n* 次。|`",\d{3}"`|`"1,043.6"` 中的 `",043"`、`"9,876,543,210"` 中的 `",876"`、`",543"` 和 `",210"`|
+|`{` *n* `,}`|比對上一個項目至少 *n* 次。|`"\d{2,}"`|`"166"`, `"29"`, `"1930"`|
 |`{`*n* `,` *m*`}`|比對上一個項目至少 *n* 次，但不超過 *m* 次。|`"\d{3,5}"`|`"166"`, `"17668"`<br /><br /> `"193024"` 中的 `"19302"`|
 |`*?`|比對上一個項目零次以上，但越少次越好。|`\d*?\.\d`|`".0"`, `"19.9"`, `"219.9"`|
 |`+?`|比對上一個項目一次或多次，但越少次越好。|`"be+?"`|`"been"` 中的 `"be"`、`"bent"` 中的 `"be"`|
 |`??`|比對上一個項目零次或一次，但越少次越好。|`"rai??n"`|`"ran"`, `"rain"`|
-|`{`*n*`}?`|比對前一個項目剛好 *n* 次。|`",\d{3}?"`|`"1,043.6"` 中的 `",043"`、`"9,876,543,210"` 中的 `",876"`、`",543"` 和 `",210"`|
-|`{`*n*`,}?`|比對前一個項目至少 *n* 次，但愈少次愈好。|`"\d{2,}?"`|`"166"`, `"29"`, `"1930"`|
+|`{` *n* `}?`|比對前一個項目剛好 *n* 次。|`",\d{3}?"`|`"1,043.6"` 中的 `",043"`、`"9,876,543,210"` 中的 `",876"`、`",543"` 和 `",210"`|
+|`{` *n* `,}?`|比對前一個項目至少 *n* 次，但愈少次愈好。|`"\d{2,}?"`|`"166"`, `"29"`, `"1930"`|
 |`{`*n* `,` *m*`}?`|比對前一個項目*n* 到 *m* 次，但次數愈少愈好。|`"\d{3,5}?"`|`"166"`, `"17668"`<br /><br /> `"193024"` 中的 `"193"`、`"024"`|
 
 ## <a name="backreference-constructs"></a>反向參考建構
@@ -163,16 +163,16 @@ ms.locfileid: "77124308"
 您可以透過兩種方式指定內嵌選項：
 
 - 使用[其他建構](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`，其中選項或選項集合前面的減號 (-) 會關閉這些選項。 例如，`(?i-mn)` 會開啟不區分大小寫的比對 (`i`)、關閉多行模式 (`m`)，以及關閉未命名的群組擷取 (`n`)。 選項會從定義該選項的位置開始套用至規則運算式模式並且保持生效，直到模式結尾或出現另一個建構反轉選項為止。
-- 通過使用[分組構造](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*子運算式*`)`，僅定義指定組的選項。
+- 通過使用[分組構造](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*子運算*`)`式,僅定義指定組的選項。
 
-.NET 正則運算式引擎支援以下內聯選項：
+.NET 正規表示式引擎支援以下內聯選項:
 
 |選項|描述|模式|比對|
 |------------|-----------------|-------------|-------------|
 |`i`|使用不區分大小寫的比對方式。|`\b(?i)a(?-i)a\w+\b`|`"aardvark AAAuto aaaAuto Adam breakfast"` 中的 `"aardvark"`、`"aaaAuto"`|
-|`m`|使用多行模式。 `^` 和 `$` 會比對行的開頭與結尾，而不是字串的開始和結尾。|例如，請參閱[正則運算式選項](regular-expression-options.md)中的"多行模式"部分。||
-|`n`|不擷取未命名的群組。|例如，請參閱[正則運算式選項](regular-expression-options.md)中的"僅顯式捕獲"部分。||
-|`s`|使用單行模式。|例如，請參閱[正則運算式選項](regular-expression-options.md)中的"單行模式"部分。||
+|`m`|使用多行模式。 `^` 和 `$` 會比對行的開頭與結尾，而不是字串的開始和結尾。|例如,請參閱[正則表達式選項](regular-expression-options.md)中的「多行模式」 部分。||
+|`n`|不擷取未命名的群組。|例如,請參閱[正則表達式選項](regular-expression-options.md)中的"僅顯式捕獲"部分。||
+|`s`|使用單行模式。|例如,請參閱[正則表達式選項](regular-expression-options.md)中的「單行模式」 部分。||
 |`x`|忽略規則運算式模式中未逸出的空白字元。|`\b(?x) \d+ \s \w+`|`"1 aardvark 2 cats IV centurions"` 中的 `"1 aardvark"`、`"2 cats"`|
 
 ## <a name="miscellaneous-constructs"></a>其他建構
@@ -189,8 +189,7 @@ ms.locfileid: "77124308"
 
 - <xref:System.Text.RegularExpressions?displayProperty=nameWithType>
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
-- [正則運算式](regular-expressions.md)
+- [正規表示式](regular-expressions.md)
 - [規則運算式類別](the-regular-expression-object-model.md)
-- [規則運算式範例](regular-expression-examples.md)
 - [規則運算式 - 快速參考 (以 Word 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)
 - [規則運算式 - 快速參考 (以 PDF 格式下載)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

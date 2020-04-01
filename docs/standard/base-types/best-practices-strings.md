@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: c88776ea9d8ba17d86767b704e8b0eaff5b6cb89
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e633b6c1d03a3d1cd70e277395da10f70f315f16
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711476"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523979"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>在 .NET 中使用字串的最佳做法
 
@@ -91,7 +91,7 @@ ms.locfileid: "75711476"
 > [!NOTE]
 > 您可以下載[排序權數資料表](https://www.microsoft.com/download/details.aspx?id=10921)，該文字檔集合包含在 Windows 作業系統排序及比較作業中使用的字元權數資訊，以及下載[預設 Unicode 定序元素資料表](https://www.unicode.org/Public/UCA/latest/allkeys.txt) (適用於 Linux 和 macOS 的最新版本排序權數資料表)。 Linux 和 macOS 上的特定版本排序權數資料表，取決於在系統上安裝的 [International Components for Unicode](http://site.icu-project.org/) 程式庫。 如需其實作的 ICU 版本及 Unicode 版本詳細資訊，請參閱[下載 ICU](http://site.icu-project.org/download)。
 
-不過，評估兩個字串是否相等或決定排序順序不會產生單一的正確結果，而要取決於用來比較字串的準則而定。 特別是，基於目前範圍性或[不變區域性](xref:System.Globalization.CultureInfo.InvariantCulture)（基於英語的局部與無關區域性）的套管和排序約定的帶形或基於序列的字串比較可能會產生不同的結果。
+不過，評估兩個字串是否相等或決定排序順序不會產生單一的正確結果，而要取決於用來比較字串的準則而定。 特別是,基於當前區域性或[不變區域性](xref:System.Globalization.CultureInfo.InvariantCulture)(基於英語的局部與無關區域性)的套管和排序約定的帶形或基於序列的字串比較可能會產生不同的結果。
 
 此外，使用不同版本 .NET 或使用不同作業系統或作業系統版本上 .NET 所做的字串比較，可能會傳回不同的結果。 如需詳細資訊，請參閱[字串及 Unicode 標準](xref:System.String#Unicode)。
 
@@ -131,7 +131,7 @@ ms.locfileid: "75711476"
 [!code-csharp[Conceptual.Strings.BestPractices#12](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#12)]
 [!code-vb[Conceptual.Strings.BestPractices#12](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#12)]
 
-在這種情況下，由於"file："旨在解釋為非語言、不區分區域性的識別碼，因此代碼應編寫如下示例所示：
+在這種情況下,由於「file」旨在解釋為非語言、不區分區域性的標識符,因此代碼應編寫如下示例所示:
 
 [!code-csharp[Conceptual.Strings.BestPractices#13](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/turkish1.cs#13)]
 [!code-vb[Conceptual.Strings.BestPractices#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/turkish1.vb#13)]
@@ -147,12 +147,12 @@ ms.locfileid: "75711476"
 > [!IMPORTANT]
 > 雖然字串比較方法可以忽略內嵌的 Null 字元，但 <xref:System.String.Contains%2A?displayProperty=nameWithType>、 <xref:System.String.EndsWith%2A?displayProperty=nameWithType>、 <xref:System.String.IndexOf%2A?displayProperty=nameWithType>、 <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>和 <xref:System.String.StartsWith%2A?displayProperty=nameWithType> 之類的字串搜尋方法就不能這麼做了。
 
-下面的示例對字串"Aa"執行區分區域性的比較，該字串與包含"A"和"a"之間的多個嵌入空字元的類似字串進行了比較，並顯示了兩個字串的相等性：
+下面的範例對字串「Aa」執行區分區域性的比較,該字串與包含「A」和「a」之間的多個嵌入空字元的類似字串進行了比較,並顯示了兩個字串的相等性:
 
 [!code-csharp[Conceptual.Strings.BestPractices#19](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls1.cs#19)]
  [!code-vb[Conceptual.Strings.BestPractices#19](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls1.vb#19)]
 
-但是，當您使用元數比較時，字串不被視為相等，如下例所示：
+但是,當您使用元數比較時,字串不被視為相等,如下例所示:
   
 [!code-csharp[Conceptual.Strings.BestPractices#20](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/embeddednulls2.cs#20)]
 [!code-vb[Conceptual.Strings.BestPractices#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/embeddednulls2.vb#20)]
@@ -197,7 +197,7 @@ InvariantCulture: a + ̊ = å
 
 ## <a name="choosing-a-stringcomparison-member-for-your-method-call"></a>為您的方法呼叫選擇 StringComparison 成員
 
-下表概述了從語義字串上下文到枚舉成員的<xref:System.StringComparison>映射：
+下表概述了從語義字串上下文到枚舉成員的<xref:System.StringComparison>映射:
 
 |資料|行為|對應的 System.StringComparison<br /><br /> value|
 |----------|--------------|-----------------------------------------------------|
@@ -295,7 +295,7 @@ InvariantCulture: a + ̊ = å
 [!code-csharp[Conceptual.Strings.BestPractices#9](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
 [!code-vb[Conceptual.Strings.BestPractices#9](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]
 
-### <a name="collections-example-hashtable-constructor"></a>集合示例：雜湊表建構函式
+### <a name="collections-example-hashtable-constructor"></a>集合範例:哈希表建構函數
 
 第二個受到字串比較方式而影響作業的範例是雜湊字串。
 
@@ -341,7 +341,7 @@ InvariantCulture: a + ̊ = å
 [!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
 [!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
 
-但是，如果在 調用<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>和<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType><xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType><xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>中將 屬性替換為 ，則持久化日期和時間資料將成功還原，如下輸出所示：
+但是,如果在調用<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType><xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType><xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType><xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>和 中將 屬性替換為 ,則持久化日期和時間數據將成功還原,如下輸出所示:
 
 ```console
 06.05.1758 21:26
@@ -350,7 +350,3 @@ InvariantCulture: a + ̊ = å
 08.09.1890 06:47
 18.02.1905 15:12
 ```
-
-## <a name="see-also"></a>另請參閱
-
-- [操作字串](manipulating-strings.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：反覆存取日期和時間值
+title: 作法：反覆存取日期和時間值
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-ms.openlocfilehash: 2e3a58ffe8332e0afec62461f6897d673e1da09f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fc38b6b852f8a7b8f268fd9e8624bdf350744c8
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73132011"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523813"
 ---
-# <a name="how-to-round-trip-date-and-time-values"></a>如何：反覆存取日期和時間值
+# <a name="how-to-round-trip-date-and-time-values"></a>作法：反覆存取日期和時間值
 
 在許多應用程式中，日期和時間值的用途都是要明確地識別單一時間點。 本主題說明如何儲存並還原 <xref:System.DateTime> 值、<xref:System.DateTimeOffset> 值，以及具有時區資訊的日期和時間值，讓還原值能夠識別出與儲存值相同的時間。
 
-### <a name="to-round-trip-a-datetime-value"></a>若要反覆存取 DateTime 值
+## <a name="round-trip-a-datetime-value"></a>往返日期時間值
 
 1. 搭配 "o" 格式規範呼叫 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 方法，以將 <xref:System.DateTime> 值轉換為其字串表示。
 
@@ -40,7 +40,7 @@ ms.locfileid: "73132011"
 
 反覆存取 <xref:System.DateTime> 值時，這項技術可以成功保留所有當地和全球通用時間的時間。 例如，如果本地 <xref:System.DateTime> 值是儲存在美國太平洋標準時間時區系統中，並且還原為美國中央標準時間時區系統中，則還原的日期和時間會比原始時間多兩小時，反映出兩個時區之間的時差。 不過，針對未指定的時間，這項技術並不一定準確。 所有 <xref:System.DateTime.Kind%2A> 屬性為 <xref:System.DateTimeKind.Unspecified> 的 <xref:System.DateTime> 值，都會被視為當地時間。 如果不是這種狀況，<xref:System.DateTime> 就無法成功識別出正確的時間點。 這項限制的因應措施，是將日期和時間值與其儲存和還原作業的時區緊密結合。
 
-### <a name="to-round-trip-a-datetimeoffset-value"></a>若要反覆存取 DateTimeOffset 值
+## <a name="round-trip-a-datetimeoffset-value"></a>往返日期時間偏移值
 
 1. 搭配 "o" 格式規範呼叫 <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> 方法，以將 <xref:System.DateTimeOffset> 值轉換為其字串表示。
 
@@ -57,7 +57,7 @@ ms.locfileid: "73132011"
 
 這項技術一律會明確地將 <xref:System.DateTimeOffset> 值識別為單一時間點。 接著可呼叫 <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> 方法來將值轉換為國際標準時間 (UTC)，或者可以呼叫 <xref:System.DateTimeOffset.ToOffset%2A?displayProperty=nameWithType> 或 <xref:System.TimeZoneInfo.ConvertTime%28System.DateTimeOffset%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> 方法來將它轉換為特定時區的時間。 這項技術有個主要限制：在表示特定時區之時間的 <xref:System.DateTimeOffset> 值上執行日期和時間算術時，可能不會產生該時區的精確結果。 這是因為在將 <xref:System.DateTimeOffset> 值具現化時，就會解除它與其時區的關聯。 因此，當您執行日期和時間計算時，就無法再套用該時區的調整規則。 若要解決這個問題，您可以定義自訂類型，以包含日期與時間值及其隨附的時區。
 
-### <a name="to-round-trip-a-date-and-time-value-with-its-time-zone"></a>使用其時區反覆存取日期和時間值
+## <a name="round-trip-a-date-and-time-value-with-its-time-zone"></a>帶時區的日期與時間值的往返日期和時間值
 
 1. 定義包含兩個欄位的類別或結構。 第一個欄位是 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 物件，而第二個是 <xref:System.TimeZoneInfo> 物件。 下列範例是這種類型的簡單版本。
 
@@ -79,26 +79,25 @@ ms.locfileid: "73132011"
 
 假如組合的日期和時間及時區物件的實作不允許日期值變得與時區值不同步，這項技術應該在其儲存和還原前後，一律明確地反映正確的時間點。
 
-## <a name="compiling-the-code"></a>編譯程式碼
+## <a name="compile-the-code"></a>編譯程式碼
 
-這些範例需要：
+這些範例要求:
 
-- 使用 C# `using` 陳述式或 Visual Basic `Imports` 陳述式匯入下列命名空間：
+- 使用 C#`using`指令或視覺`Imports`基本 語句匯入以下命名空間:
 
-  - <xref:System> (僅限 C#)。
+  - <xref:System>(僅限 C#)
 
-  - <xref:System.Globalization?displayProperty=nameWithType>.
+  - <xref:System.Globalization?displayProperty=nameWithType>
 
-  - <xref:System.IO?displayProperty=nameWithType>.
+  - <xref:System.IO?displayProperty=nameWithType>
 
-  - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.
+  - <xref:System.Runtime.Serialization?displayProperty=nameWithType>
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.
+  - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>
 
-- 每個程式碼範例 (`DateInTimeZone` 類別除外) 都應包含於類別或 Visual Basic 模組中，並從 `Main` 方法進行呼叫。
+- 每個代碼示例(類以外的`DateInTimeZone`)都包含在類或 Visual Basic 模組中,以方法包裝`Main`,並從方法調用。
 
 ## <a name="see-also"></a>另請參閱
 
-- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)
 - [在 DateTime、DateTimeOffset、TimeSpan 和 TimeZoneInfo 之間選擇](../../../docs/standard/datetime/choosing-between-datetime.md)
 - [標準日期和時間格式字串](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

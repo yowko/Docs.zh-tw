@@ -6,37 +6,37 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: ccb987944af29c170b8d960d7112a13078b67dd1
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 7e879a44bd8056ac8753c1e86464fe14fd6b9e50
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291542"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523587"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
 本文介紹了 .NET Core 3.0 中的新增功能。 其中一個最大的增強功能是對 Windows 傳統型應用程式的支援 (僅限 Windows)。 您可以使用 .NET Core 3.0 SDK 元件「Windows 傳統型」來移植 Windows Forms 和 Windows Presentation Foundation (WPF) 應用程式。 具體而言，只有在 Windows 上才支援並包含「Windows 傳統型」元件。 如需詳細資訊，請參閱本文稍後的 [Windows 傳統型](#windows-desktop)一節。
 
-.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您使用 Visual Studio [2019 版本 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新[，Visual Studio 用於 Mac 8.3](/visualstudio/mac/install-preview)或更新，或使用最新的**C# 擴展**[功能的視覺化工作室代碼](https://code.visualstudio.com/)。
+.NET Core 3.0 新增 C# 8.0 支援。 強烈建議您使用 Visual Studio [2019 版本 16.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更新[,Visual Studio 用於 Mac 8.3](/visualstudio/mac/install-preview)或更新,或使用最新的**C# 擴充**[功能的視覺化工作室代碼](https://code.visualstudio.com/)。
 
-立即在 Windows、macOS 或 Linux 上[下載並開始使用 .NET 酷睿 3.0。](https://aka.ms/netcore3download)
+立即在 Windows、macOS 或 Linux[上 下載並開始使用 .NET 酷睿 3.0。](https://aka.ms/netcore3download)
 
-有關該版本的詳細資訊，請參閱[.NET Core 3.0 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/)。
+有關該版本的詳細資訊,請參閱[.NET Core 3.0 公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/)。
 
-.NET 核心 RC1 被 Microsoft 視為生產就緒，並得到充分支援。 如果您使用的是預覽版本，則必須轉到 RTM 版本以繼續提供支援。
+.NET 核心 RC1 被 Microsoft 視為生產就緒,並得到充分支援。 如果您使用的是預覽版本,則必須轉到 RTM 版本以繼續提供支援。
 
 ## <a name="language-improvements-c-80"></a>語言改進 C# 8.0
 
-C# 8.0 也是此版本的一部分，其中包括[可無可參考型別](../../csharp/tutorials/nullable-reference-types.md)功能、[非同步流](../../csharp/tutorials/generate-consume-asynchronous-stream.md)[和更多模式](../../csharp/tutorials/pattern-matching.md)。 如需 C# 8.0 功能的詳細資訊，請參閱 [C# 8.0 的新功能](../../csharp/whats-new/csharp-8.md)。
+C# 8.0 也是此版本的一部分,其中包括[可無可參考類型](../../csharp/tutorials/nullable-reference-types.md)功能、[非同步串](../../csharp/tutorials/generate-consume-asynchronous-stream.md)[流和更多模式](../../csharp/tutorials/pattern-matching.md)。 如需 C# 8.0 功能的詳細資訊，請參閱 [C# 8.0 的新功能](../../csharp/whats-new/csharp-8.md)。
 
-添加了語言增強功能以支援以下 API 功能，詳見以下內容：
+新增了語言增強功能以支援以下 API 功能,詳見以下內容:
 
 - [範圍和索引](#ranges-and-indices)
 - [非同步流](#async-streams)
 
 ## <a name="net-standard-21"></a>.NET Standard 2.1
 
-.NET 核心 3.0 實現 **.NET 標準 2.1**。 但是，預設`dotnet new classlib`範本生成的專案仍然以 **.NET 標準 2.0**為目標。 若要以 **.NET Standard 2.1** 為目標，請編輯您的專案檔並將 `TargetFramework` 屬性變更為 `netstandard2.1`：
+.NET 核心 3.0 實現 **.NET 標準 2.1**。 但是,預設`dotnet new classlib`範本生成的專案仍然以 **.NET 標準 2.0**為目標。 若要以 **.NET Standard 2.1** 為目標，請編輯您的專案檔並將 `TargetFramework` 屬性變更為 `netstandard2.1`：
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -54,24 +54,24 @@ C# 8.0 也是此版本的一部分，其中包括[可無可參考型別](../../c
 
 ### <a name="default-executables"></a>預設可執行檔
 
-.NET Core 現在預設生成[與運行時相關的可執行檔](../deploying/index.md#publish-runtime-dependent)。 這對於使用 .NET Core 全域安裝版本的應用程式來說，是一項新行為。 先前，只有[獨立式部署](../deploying/index.md#publish-self-contained)會產生可執行檔。
+.NET Core 現在預設產生[與執行時相關的執行檔](../deploying/index.md#publish-runtime-dependent)。 這對於使用 .NET Core 全域安裝版本的應用程式來說，是一項新行為。 先前，只有[獨立式部署](../deploying/index.md#publish-self-contained)會產生可執行檔。
 
-在`dotnet build``dotnet publish`或 期間，將創建一個可執行檔（稱為**appHost），** 該可執行檔與您正在使用的 SDK 的環境和平臺相匹配。 針對這些可執行檔，您可以預期能夠進行與其他原生可執行檔相同的操作，例如：
+在`dotnet build``dotnet publish`或期間,將創建一個可執行檔(稱為**appHost),** 該可執行檔與您正在使用的 SDK 的環境和平臺相匹配。 針對這些可執行檔，您可以預期能夠進行與其他原生可執行檔相同的操作，例如：
 
 - 您可以按兩下可執行檔。
 - 您可以直接從命令提示字元啟動應用程式，例如在 Windows 上為 `myapp.exe`，在 Linux 和 macOS 上為 `./myapp`。
 
 ### <a name="macos-apphost-and-notarization"></a>macOS 應用程式Host 和公證
 
-*僅限 macOS*
+*只限 macOS*
 
-從 macOS 的經公證的 .NET Core SDK 3.0 開始，預設情況下將禁用生成預設可執行檔（稱為 appHost）的設置。 有關詳細資訊，請參閱[macOS Catalina 公證及其對 .NET 核心下載和專案的影響](../install/macos-notarization-issues.md)。
+從 macOS 的經公證的 .NET Core SDK 3.0 開始,默認情況下將禁用生成預設可執行檔(稱為 appHost)的設置。 有關詳細資訊,請參閱[macOS Catalina 公證及其對 .NET 核心下載和項目的影響](../install/macos-notarization-issues.md)。
 
-啟用應用Host設置後，.NET Core 會在生成或發佈時生成本機 Mach-O 可執行檔。 當應用從帶有`dotnet run`該命令的原始程式碼運行時，或者直接啟動 Mach-O 可執行檔，則應用在 appHost 的上下文中運行。
+啟用應用Host設置後,.NET Core 會在生成或發佈時生成本機 Mach-O 可執行檔。 當應用從帶有`dotnet run`該命令的原始程式碼運行時,或者直接啟動 Mach-O 可執行檔,則應用在 appHost 的上下文中運行。
 
-如果沒有 appHost，使用者可以啟動[與運行時相關的](../deploying/index.md#publish-runtime-dependent)應用的唯一方法是使用 該`dotnet <filename.dll>`命令。 發佈應用[自包含](../deploying/index.md#publish-self-contained)時，始終會創建應用Host。
+如果沒有 appHost,用戶可以啟動[與運行時相關的](../deploying/index.md#publish-runtime-dependent)應用的唯一方法`dotnet <filename.dll>`是使用 該 命令。 發佈應用[自包含](../deploying/index.md#publish-self-contained)時,始終會創建應用Host。
 
-您可以在專案級別配置 appHost，也可以使用`dotnet``-p:UseAppHost`參數切換特定命令的應用Host：
+您可以在項目等級設定 appHost,也可以`dotnet``-p:UseAppHost`使用 參數切換特定命令的應用Host:
 
 - 專案檔
 
@@ -87,7 +87,7 @@ C# 8.0 也是此版本的一部分，其中包括[可無可參考型別](../../c
   dotnet run -p:UseAppHost=true
   ```
 
-有關該`UseAppHost`設置的詳細資訊，請參閱[Microsoft.NET.Sdk 的 MSBuild 屬性](../project-sdk/msbuild-props.md#useapphost)。
+有關該`UseAppHost`設定的詳細資訊,請參閱[Microsoft.NET.Sdk 的 MSBuild 屬性](../project-sdk/msbuild-props.md#useapphost)。
 
 ### <a name="single-file-executables"></a>單一檔案可執行檔
 
@@ -108,7 +108,7 @@ C# 8.0 也是此版本的一部分，其中包括[可無可參考型別](../../c
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
-如需單一檔案發佈的詳細資訊，請參閱[單一檔案搭配程式設計文件](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design_3_0.md)。
+如需單一檔案發佈的詳細資訊，請參閱[單一檔案搭配程式設計文件](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)。
 
 ### <a name="assembly-linking"></a>組件連結
 
@@ -116,7 +116,7 @@ dotnet publish -r win10-x64 -p:PublishSingleFile=true
 
 自封式應用程式包含執行程式碼所需的一切項目，因此不需要在主機電腦上安裝 .NET。 不過，應用程式經常只需要一小部分的架構子集便能運作，而其他未使用的程式庫則可以被移除。
 
-.NET Core 現在包含會使用 [IL 連結器](https://github.com/mono/linker) \(英文\) 工具來掃描應用程式 IL 的設定。 此工具檢測需要的代碼，然後修剪未使用的庫。 此工具可以大幅減少某些應用程式的部署大小。
+.NET Core 現在包含會使用 [IL 連結器](https://github.com/mono/linker) \(英文\) 工具來掃描應用程式 IL 的設定。 此工具檢測需要的代碼,然後修剪未使用的庫。 此工具可以大幅減少某些應用程式的部署大小。
 
 若要啟用此工具，請在專案中新增 `<PublishTrimmed>` 設定，並發佈獨立式應用程式：
 
@@ -140,20 +140,20 @@ dotnet publish -r <rid> -c Release
 
 ### <a name="tiered-compilation"></a>階層式編譯
 
-.NET Core 3.0 預設會開啟[階層式編譯](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC)。 此功能使運行時能夠更自我調整地使用及時 （JIT） 編譯器來實現更好的性能。
+.NET Core 3.0 預設會開啟[階層式編譯](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC)。 此功能使運行時能夠更自適應地使用及時 (JIT) 編譯器來實現更好的性能。
 
-分層編譯的主要好處是提供兩種分字方法：在品質較低但速度更快的層或品質更高但較慢的層中。 品質是指方法的優化程度。 TC 有助於提高應用程式的性能，因為它經歷了從啟動到穩定狀態的各個執行階段。 禁用分層編譯後，每種方法的編譯方式都偏向于穩態性能而不是啟動性能。
+分層編譯的主要好處是提供兩種分字方法:在品質較低但速度更快的層或品質更高但較慢的層中。 品質是指方法的優化程度。 TC有助於提高應用程式的性能,因為它經歷了從啟動到穩定狀態的各個執行階段。 禁用分層編譯后,每種方法的編譯方式都偏向於穩態性能而不是啟動性能。
 
-啟用 TC 後，應用啟動時，以下行為將應用於方法編譯：
+啟用 TC 後,應用啟動時,以下行為將應用於方法編譯:
 
-- 如果該方法具有提前編譯的代碼或[ReadyToRun，](#readytorun-images)則使用預生成的代碼。
-- 否則，將分分。 通常，這些方法是泛型數值型別。
-  - *快速 JIT*可更快地生成品質較低（或優化程度較低的）代碼。 在 .NET Core 3.0 中，預設情況下，對於不包含迴圈且在啟動期間首選的方法啟用快速 JIT。
-  - 完全優化的 JIT 可更慢地生成更高品質的（或更多優化）代碼。 對於不使用快速 JIT 的方法（例如，如果方法與<xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>屬性化），則使用完全優化的 JIT。
+- 如果該方法具有提前編譯的代碼或[ReadyToRun,](#readytorun-images)則使用預生成的代碼。
+- 否則,將分分。 通常,這些方法是泛型值類型。
+  - *快速 JIT*可更快地生成品質較低(或優化程度較低的)代碼。 在 .NET Core 3.0 中,默認情況下,對於不包含迴圈且在啟動期間首選的方法啟用快速 JIT。
+  - 完全優化的 JIT 可更慢地生成更高品質的(或更多優化)代碼。 對於不使用快速 JIT 的方法(例如,如果<xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>方法與 屬性化),則使用完全優化的 JIT。
 
-對於頻繁調用的方法，及時編譯器最終在後臺創建完全優化的代碼。 然後，優化的代碼將替換該方法的預編譯代碼。
+對於頻繁調用的方法,及時編譯器最終在後台創建完全優化的代碼。 然後,優化的代碼將替換該方法的預編譯代碼。
 
-快速 JIT 生成的代碼可能會運行速度變慢、分配更多記憶體或使用更多堆疊空間。 如果出現問題，可以使用專案檔案中的此 MSBuild 屬性禁用快速 JIT：
+快速 JIT 生成的代碼可能會運行速度變慢、分配更多記憶體或使用更多堆疊空間。 如果出現問題,可以使用專案檔中的此 MSBuild 屬性禁用快速 JIT:
 
 ```xml
 <PropertyGroup>
@@ -161,7 +161,7 @@ dotnet publish -r <rid> -c Release
 </PropertyGroup>
 ```
 
-要完全禁用 TC，請在此 MSBuild 屬性（專案檔案中）：
+要完全關閉 TC,請在此 MSBuild 屬性(專案檔中):
 
 ```xml
 <PropertyGroup>
@@ -170,9 +170,9 @@ dotnet publish -r <rid> -c Release
 ```
 
 > [!TIP]
-> 如果在專案檔案中更改這些設置，則可能需要執行乾淨生成才能反映新設置（刪除 和`obj``bin`目錄並重新生成）。
+> 如果在專案檔中更改這些設置,則可能需要執行乾淨生成才能反映新設置(刪除和`obj``bin`目錄並重新生成)。
 
-有關在運行時配置編譯的詳細資訊，請參閱[編譯的運行時配置選項](../run-time-config/compilation.md)。
+關於執行時設定編譯的詳細資訊,請參考[編譯的執行時設定選項](../run-time-config/compilation.md)。
 
 ### <a name="readytorun-images"></a>ReadyToRun 映像
 
@@ -182,7 +182,7 @@ R2R 二進位檔會透過減少 Just-In-Time (JIT) 編譯器在應用程式載�
 
 若要將您的專案編譯為 ReadyToRun，請執行下列操作：
 
-01. 將`<PublishReadyToRun>`設置添加到專案：
+01. 將`<PublishReadyToRun>`設定新增到專案:
 
     ```xml
     <PropertyGroup>
@@ -206,14 +206,14 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 - Windows x86 可以用來編譯 Windows ARM32 映像。
 - Linux x64 可以用來編譯 Linux ARM32 和 ARM64 映像。
 
-## <a name="runtimesdk"></a>運行時/SDK
+## <a name="runtimesdk"></a>執行時/SDK
 
-### <a name="major-version-runtime-roll-forward"></a>主要版本運行時向前滾動
+### <a name="major-version-runtime-roll-forward"></a>主要版本執行時向前捲動
 
 .NET Core 3.0 引進選擇性功能，可讓您的應用程式向前復原到 .NET Core 最新主要版本。 此外，也已新增設定來控制如何將向前復原套用至您的應用程式。 這可透過下列方式進行設定：
 
 - 專案檔屬性：`RollForward`
-- 運行時配置檔案屬性：`rollForward`
+- 執行時設定檔屬性:`rollForward`
 - 環境變數：`DOTNET_ROLL_FORWARD`
 - 命令列引數：`--roll-forward`
 
@@ -229,7 +229,7 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 向前復原到最高的次要版本，即使要求的次要版本存在也一樣。 適用於裝載案例的元件。
 - **最新主要**\
 向前復原到最高主要版本和最高次要版本，即使要求的主要版本存在也一樣。 適用於裝載案例的元件。
-- **禁用**\
+- **關閉**\
 不會向前復原。 只會繫結至指定的版本。 此原則不建議一般用途，因為它會停用向前復原到最新修補程式的功能。 只有測試時才建議使用這個值。
 
 除了 **Disable** 設定，所有設定都會使用最高可用的修補程式版本。
@@ -242,7 +242,7 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 
 ### <a name="local-tools"></a>本機工具
 
-.NET Core 3.0 引進本機工具。 本地工具類似于[全域工具](../tools/global-tools.md)，但與磁片上的特定位置相關聯。 本機工具並非全域可用，而是以 NuGet 套件形式散發。
+.NET Core 3.0 引進本機工具。 本地工具類似於[全域工具](../tools/global-tools.md),但與磁碟上的特定位置相關聯。 本機工具並非全域可用，而是以 NuGet 套件形式散發。
 
 > [!WARNING]
 > 如果您在 .NET Core 3.0 Preview 1 中嘗試本機工具 (例如執行 `dotnet tool restore` 或 `dotnet tool install`)，請刪除本機工具快取資料夾。 否則，本機工具將無法在任何較新版本中運作。 此資料夾位於：
@@ -257,12 +257,12 @@ ReadyToRun 編譯器目前不支援跨目標。 您必須在指定的目標上�
 
 ### <a name="new-globaljson-options"></a>新的 global.json 選項
 
-*global.json*檔具有新的選項，當您嘗試定義使用 .NET Core SDK 的哪個版本時，可提供更大的靈活性。 新選項包括：
+*global.json*檔具有新的選項,當您嘗試定義使用 .NET Core SDK 的哪個版本時,可提供更大的靈活性。 新選項包括:
 
-- `allowPrerelease`： 指示 SDK 解析器在選擇要使用的 SDK 版本時是否應考慮預發佈版本。
-- `rollForward`：指示選擇 SDK 版本時要使用的前滾策略，在缺少特定 SDK 版本時作為回退策略，或者作為使用更高版本的指令。
+- `allowPrerelease`: 指示 SDK 解析器在選擇要使用的 SDK 版本時是否應考慮預先發佈版本。
+- `rollForward`:指示選擇 SDK 版本時要使用的前滾策略,在缺少特定 SDK 版本時作為回退策略,或者作為使用更高版本的指令。
 
-有關更改的詳細資訊，包括預設值、支援的值和新的匹配規則，請參閱[global.json 概述](../tools/global-json.md)。
+有關更改的詳細資訊,包括預設值、支援的值和新的匹配規則,請參閱[global.json 概述](../tools/global-json.md)。
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>較小的記憶體回收堆積大小
 
@@ -311,9 +311,9 @@ Visual Studio 2019 會新增 [新增專案]**** 範本，供 .NET Core 3.0 Windo
 - `PerMonitorV2`
 - `DpiUnawareGdiScaled`
 
-有關高 DPI 模式的詳細資訊，請參閱[Windows 上的高 DPI 桌面應用程式開發](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)。
+有關高 DPI 模式的詳細資訊,請參閱[Windows 上的高 DPI 桌面應用程式開發](/windows/desktop/hidpi/high-dpi-desktop-application-development-on-windows)。
 
-### <a name="create-com-components"></a>創建 COM 元件
+### <a name="create-com-components"></a>建立 COM 元件
 
 您現在可以在 Windows 上建立 COM 可呼叫受控元件。 此功能對於搭配 COM 增益集模型使用 .NET Core 很重要，也提供 .NET Framework 同位。
 
@@ -349,7 +349,7 @@ Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.
 
 ### <a name="docker-and-cgroup-memory-limits"></a>Docker 和 cgroup 記憶體限制
 
-在 Linux 上運行 .NET Core 3.0 與 Docker 配合使用，可以更好地使用 cgroup 記憶體限制。 使用記憶體限制 (例如使用 `docker run -m`) 執行 Docker 容器會變更 .NET Core 的運作方式。
+在 Linux 上運行 .NET Core 3.0 與 Docker 配合使用,可以更好地使用 cgroup 記憶體限制。 使用記憶體限制 (例如使用 `docker run -m`) 執行 Docker 容器會變更 .NET Core 的運作方式。
 
 - 預設記憶體回收行程 (GC) 堆積大小：上限為 20 MB，或容器上 75% 的記憶體限制。
 - 可將明確大小設定為 cgroup 限制的絕對數目或百分比。
@@ -469,7 +469,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 ### <a name="ieee-floating-point"></a>IEEE 浮點
 
-正在更新浮點 API，以遵守 [IEEE 754-2008 修訂](https://en.wikipedia.org/wiki/IEEE_754-2008_revision)。 這些更改的目標是公開所有**必需**的操作，並確保它們在行為上符合 IEEE 規範。有關浮點改進的詳細資訊，請參閱[.NET Core 3.0 博客文章中的浮點解析和格式改進](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)。
+正在更新浮點 API，以遵守 [IEEE 754-2008 修訂](https://en.wikipedia.org/wiki/IEEE_754-2008_revision)。 這些更改的目標是公開所有**必需**的操作,並確保它們在行為上符合 IEEE 規範。有關浮點改進的詳細資訊,請參閱[.NET Core 3.0 部落格文章中的浮點解析和格式改進](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)。
 
 剖析與格式化修正包括：
 
@@ -495,7 +495,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 對應至 `log2` IEEE 作業，它會傳回 2 為底數的對數。 它會將捨入錯誤減至最少。
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-對應至 `fma` IEEE 作業，它會執行融合的乘積和。 亦即，它會將 `(x * y) + z` 當作單一作業來執行，藉此將捨入錯誤減至最少。 例如`FusedMultiplyAdd(1e308, 2.0, -1e308)`， 返回`1e308`。 一般 `(1e308 * 2.0) - 1e308` 會傳回 `double.PositiveInfinity`。
+對應至 `fma` IEEE 作業，它會執行融合的乘積和。 亦即，它會將 `(x * y) + z` 當作單一作業來執行，藉此將捨入錯誤減至最少。 例如`FusedMultiplyAdd(1e308, 2.0, -1e308)`,`1e308`傳回 。 一般 `(1e308 * 2.0) - 1e308` 會傳回 `double.PositiveInfinity`。
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
 對應至 `copySign` IEEE 作業，它會傳回 `x` 的值，但具有 `y` 的符號。
@@ -537,9 +537,9 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>快速的內建 JSON 支援
 
-.NET 使用者主要依賴于[牛頓軟.Json](https://www.newtonsoft.com/json)和其他流行的 JSON 庫，這些庫仍然是不錯的選擇。 `Newtonsoft.Json`使用 .NET 字串作為其基本資料類型，即罩下的 UTF-16。
+.NET 使用者主要依賴於[牛頓軟.Json](https://www.newtonsoft.com/json)和其他流行的 JSON 庫,這些庫仍然是不錯的選擇。 `Newtonsoft.Json`使用 .NET 字串作為其基本數據類型,即罩下的 UTF-16。
 
-新的內置 JSON 支援是高性能、低分配，適用于 UTF-8 編碼的 JSON 文本。 有關<xref:System.Text.Json>命名空間和類型的詳細資訊，請參閱以下文章：
+新的內建 JSON 支援是高性能、低分配,適用於 UTF-8 編碼的 JSON 文本。 有關<xref:System.Text.Json>命名空間和類型的詳細資訊,請參閱以下文章:
 
 * [.NET 中的 JSON 序列化 - 概述](../../standard/serialization/system-text-json-overview.md)
 * [如何在 .NET 中序列化和反序列化 JSON。](../../standard/serialization/system-text-json-how-to.md)
@@ -564,4 +564,4 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 ## <a name="next-steps"></a>後續步驟
 
 - [查看 .NET 核心 2.2 和 3.0 之間的重大更改。](../compatibility/2.2-3.0.md)
-- [查看 .NET Core 3.0 中 Windows 表單應用的重大變化。](../compatibility/winforms.md#net-core-30)
+- [查看 .NET Core 3.0 中 Windows 窗體應用的重大變化。](../compatibility/winforms.md#net-core-30)

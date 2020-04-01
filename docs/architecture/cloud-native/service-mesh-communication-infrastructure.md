@@ -1,77 +1,77 @@
 ---
 title: 服務網格通訊基礎結構
-description: 瞭解服務網格技術如何簡化雲端原生微服務通訊
+description: 瞭解服務網格技術如何簡化雲原生微服務通信
 author: robvet
-ms.date: 09/10/2019
-ms.openlocfilehash: 66bc69580cc56efe725683c16a047aeb07e7e840
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 03/03/2020
+ms.openlocfilehash: 6b177ef33b804ec35f3acb919539a97683e5a487
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76780925"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523525"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>服務網格通訊基礎結構
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-在本章中，我們探討了微服務通訊的挑戰。 我們說過，開發小組必須區分後端服務彼此通訊的方式。 在理想的情況下，服務間的通訊越少越好。 不過，不一定可以避免這種情況，因為後端服務通常會依賴另一個來完成作業。
+在本章中,我們探討了微服務通信的挑戰。 我們說過,開發團隊需要對後端服務如何相互溝通敏感。 理想情況下,服務間通信越少越好。 但是,由於後端服務通常相互依賴來完成操作,因此並非始終能夠避免。
 
-我們探索了不同的方法來執行同步 HTTP 通訊和非同步訊息。 在每個案例中，開發人員都有執行通訊程式碼的負擔。 通訊程式碼既複雜又耗費時間。 不正確的決策可能會導致嚴重的效能問題。
+我們探討了實現同步 HTTP 通信和非同步訊息傳遞的不同方法。 在每種情況下,開發人員都肩負著實現通信代碼的負擔。 通信代碼複雜且耗時。 不正確的決策可能會導致嚴重的性能問題。
 
-一種更現代化的方法，可微服務通訊中心，這是一項新的快速發展技術，以*服務網格*為依據。 [服務網格](https://www.nginx.com/blog/what-is-a-service-mesh/)是可設定的基礎結構層，具有內建功能，可處理服務對服務的通訊、復原，以及許多跨領域考慮。 它會將這些顧慮的責任移出微服務和服務網格層。 通訊會從您的微服務中抽象化出來。
+一種更現代的微服務通信方法圍繞一種名為 *「服務網格*」的新的、快速發展的技術。 [服務網格](https://www.nginx.com/blog/what-is-a-service-mesh/)是一個可配置的基礎結構層,具有處理服務到服務的通信、恢復能力和許多交叉問題的能力。 它將這些問題的責任從微服務轉移到服務網格層中。 通信從微服務中抽象出來。
 
-服務網格的主要元件是 proxy。 在雲端原生應用程式中，proxy 的實例通常會與每個微服務共存。 當它們在不同的進程中執行時，這兩個會緊密連結，並共用相同的生命週期。 此模式稱為[側車模式](https://docs.microsoft.com/azure/architecture/patterns/sidecar)，如圖4-23 所示。
+服務網格的關鍵元件是代理。 在雲本機應用程式中,代理的實例通常與每個微服務共存。 當它們在單獨的進程中執行時,兩者是緊密相連的,並且共用相同的生命週期。 此模式稱為[側車模式](https://docs.microsoft.com/azure/architecture/patterns/sidecar),如圖 4-24 所示。
 
-![具有側車的服務網格](./media/service-mesh-with-side-car.png)
+![帶側車的服務網](./media/service-mesh-with-side-car.png)
 
-**圖 4-23**： 具有側車的服務網格
+**圖 4-24**： 帶側車的服務網
 
-請注意，在上圖中，每個微服務一起執行的 proxy 會攔截訊息。 每個 proxy 都可以使用微服務特定的流量規則來設定。 它瞭解訊息，並可在您的服務和外部世界之間路由傳送。
+請注意,在上圖中,與每個微服務一起運行的代理如何截獲消息。 每個代理都可以配置特定於微服務的流量規則。 它瞭解消息,並可以路由它們跨越您的服務和外部世界。
 
-除了管理服務對服務的通訊，服務網格也提供服務探索和負載平衡的支援。
+除了管理服務到服務的通信外,服務網格還提供對服務發現和負載平衡的支援。
 
-設定好之後，服務網格就能發揮高功能。 網格會從服務探索端點抓取對應的實例集區。 它會將要求傳送至特定的服務實例，並記錄結果的延遲和回應類型。 它會根據不同的因素（包括最近要求的觀察延遲），選擇最有可能傳回快速回應的實例。
+配置後,服務網格功能極致。 網格從服務發現終結點檢索相應的實例池。 它將請求發送到特定的服務實例,記錄結果的延遲和回應類型。 它根據不同因素(包括最近請求的觀察延遲)選擇最有可能返回快速回應的實例。
 
-服務網格會管理應用層級的流量、通訊和網路問題。 它瞭解訊息和要求。 服務網格通常會與容器協調器整合。 Kubernetes 支援可在其中加入服務網格的可擴充架構。
+服務網格在應用程式級別管理流量、通信和網路問題。 它瞭解消息和請求。 服務網格通常與容器協調器集成。 Kubernetes 支援一種可擴展的體系結構,可以在其中添加服務網格。
 
-在第6章中，我們深入探討服務網格技術，包括對其架構和可用開放原始碼的整合進行討論。
+在第 6 章中,我們深入探討了服務網格技術,包括討論其體系結構和可用的開源實現。
 
-## <a name="summary"></a>總結
+## <a name="summary"></a>摘要
 
-在本章中，我們討論了雲端原生通訊模式。 我們一開始先檢查前端用戶端如何與後端微服務通訊。 在過程中，我們討論了 API 閘道平臺和即時通訊。 接著，我們探討了微服務如何與其他後端服務通訊。 我們探討了同步 HTTP 通訊，以及跨服務的非同步訊息。 我們涵蓋了 gRPC，這是雲端原生世界中即將推出的技術。 最後，我們引進了一項新的、快速發展的技術，其服務網格可簡化微服務通訊。
+在本章中,我們討論了雲原生通信模式。 我們首先研究前端用戶端如何與後端微服務通信。 在此過程中,我們討論了 API 閘道平臺和即時通信。 然後,我們研究了微服務如何與其他後端服務通信。 我們研究了同步 HTTP 通信和跨服務的非同步訊息傳遞。 我們介紹了 gRPC,這是雲原生世界中即將推出的技術。 最後,我們推出了一種名為"服務網格"的快速發展的新技術,該技術可以簡化微服務通信。
 
-特別著重于受控 Azure 服務，可協助您在雲端原生系統中執行通訊：
+特別強調託管 Azure 服務,這些服務可説明在雲本機系統中實現通信:
 
 - [Azure 應用程式閘道](https://docs.microsoft.com/azure/application-gateway/overview)
 - [Azure API 管理](https://azure.microsoft.com/services/api-management/)
-- [Azure SignalR Service](https://azure.microsoft.com/services/signalr-service/)
+- [Azure SignalR 服務](https://azure.microsoft.com/services/signalr-service/)
 - [Azure 儲存體佇列](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction)
 - [Azure 服務匯流排](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Azure 事件格線](https://docs.microsoft.com/azure/event-grid/overview)
-- [Azure 事件中樞](https://azure.microsoft.com/services/event-hubs/)
+- [Azure 事件網格](https://docs.microsoft.com/azure/event-grid/overview)
+- [Azure 事件中心](https://azure.microsoft.com/services/event-hubs/)
 
-接下來，移至雲端原生系統中的分散式資料，以及它所呈現的優點和挑戰。
+接下來,我們將轉向雲原生系統中的分散式數據及其帶來的益處和挑戰。
 
 ### <a name="references"></a>參考
 
-- [.NET 微服務：容器化 .NET 應用程式的架構](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
+- [.NET 微服務:容器化 .NET 應用程式的體系結構](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)
 
-- [設計微服務的服務間通訊](https://docs.microsoft.com/azure/architecture/microservices/design/interservice-communication)
+- [為微服務設計服務間通訊](https://docs.microsoft.com/azure/architecture/microservices/design/interservice-communication)
 
-- [Azure SignalR Service，這是一種完全受控的服務，可新增即時功能](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
+- [Azure SignalR 服務,一個完全託管的服務,用於新增即時功能](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
 
-- [Azure API 閘道輸入控制器](https://azure.github.io/application-gateway-kubernetes-ingress/)
+- [Azure API 閘道閘道控制器](https://azure.github.io/application-gateway-kubernetes-ingress/)
 
-- [關於 Azure Kubernetes Service 中的輸入（AKS）](https://vincentlauzon.com/2018/10/10/about-ingress-in-azure-kubernetes-service-aks/)
+- [關於 Azure 庫伯內斯服務 (AKS) 中的入口](https://vincentlauzon.com/2018/10/10/about-ingress-in-azure-kubernetes-service-aks/)
 
-- [實際 gRPC](https://www.worldcat.org/title/practical-grpc/oclc/1042342319)
+- [gRPC 文件](https://grpc.io/docs/guides/)
 
-- [gRPC 檔](https://grpc.io/docs/guides/)
+- [適用於 WCF 開發人員的 gRPC](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/)
 
-- [WCF 開發人員的 gRPC](https://bing.com) [Mark 的 gRPC 書籍]
+- [將 gRPC 服務與 HTTP API 進行比較](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
 
-- [比較 gRPC 服務與 HTTP Api](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
+- [使用 .NET 視訊建構 gRPC 服務](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 
 >[!div class="step-by-step"]
->[上一頁](rest-grpc.md)
->[下一頁](Database-per-microservice.md)
+>[前一個](grpc.md)
+>[下一個](Database-per-microservice.md)

@@ -1,13 +1,13 @@
 ---
 title: 使用 Entity Framework Core 實作基礎結構持續層
-description: .NET 適用于容器化的微服務體系結構 . NET 應用程式 |使用實體框架核心流覽基礎結構持久性層的實現詳細資訊。
+description: .NET 適用於容器化的微服務體系結構 . NET 應用程式 |使用實體框架核心流覽基礎結構持久性層的實現詳細資訊。
 ms.date: 01/30/2020
-ms.openlocfilehash: 63579dc74ba52551bc1ee02a57337c1b17fdf396
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2d28d9246be3e102625ed5bb67ee1ccede03c942
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401624"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523329"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>使用 Entity Framework Core 實作基礎結構持續層
 
@@ -29,7 +29,7 @@ Entity Framework (EF) Core 是常見 Entity Framework 資料存取技術的輕�
 - **使用視覺化工作室開始使用ASP.NET核心和實體框架核心** \
   [https://docs.microsoft.com/aspnet/core/data/ef-mvc/](/aspnet/core/data/ef-mvc/)
 
-- **DbCoNtext 類** \
+- **DbContext 類別** \
   [https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext](xref:Microsoft.EntityFrameworkCore.DbContext)
 
 - **比較 EF 核心& EF6.x** \
@@ -141,11 +141,11 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
             return _context.Buyers.Add(buyer).Entity;
         }
 
-        public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
+        public async Task<Buyer> FindAsync(string buyerIdentityGuid)
         {
             var buyer = await _context.Buyers
                 .Include(b => b.Payments)
-                .Where(b => b.FullName == BuyerIdentityGuid)
+                .Where(b => b.FullName == buyerIdentityGuid)
                 .SingleOrDefaultAsync();
 
             return buyer;
@@ -174,11 +174,11 @@ Entity Framework DbContext 類別是根據工作單位和存放庫模式，並�
 
 在圖 7-18 中，您可以看到不使用存放庫 (直接使用 EF DbContext)，與使用存放庫來簡單模擬存放庫，這二種方式之間的差異。
 
-![顯示兩個存儲庫中的元件和資料流程的圖表。](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
+![顯示兩個儲存庫中的元件和數據流的圖表。](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
 **圖 7-18**。 使用自訂存放庫與一般 DbContext
 
-圖 7-18 顯示了使用自訂存儲庫添加抽象層，可用於通過類比存儲庫來簡化測試。 在模擬時有多種替代方式。 您可以只模擬存放庫，或是模擬整個工作單位。 通常只模擬存放庫便已足夠，通常不需要抽象與模擬整個工作單位的複雜性。
+圖 7-18 顯示了使用自定義存儲庫添加抽象層,可用於通過類比儲存庫來簡化測試。 在模擬時有多種替代方式。 您可以只模擬存放庫，或是模擬整個工作單位。 通常只模擬存放庫便已足夠，通常不需要抽象與模擬整個工作單位的複雜性。
 
 稍後，當我們將重點放在應用程式層上，您會看到相依性插入在 ASP.NET Core 中的運作方式，以及在使用存放庫時的實作方式。
 
@@ -232,10 +232,10 @@ builder.RegisterType<OrderRepository>()
 
 ### <a name="additional-resources"></a>其他資源
 
-- **在 mVC 應用程式中實現ASP.NET的存儲庫和工作模式單元** \
+- **在 mVC 應用程式中實現 ASP.NET 的儲存庫和工作模式單元** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
-- **喬納森·艾倫具有實體框架、Dapper 和鏈的存儲庫模式的實現策略** \
+- **喬納森·艾倫具有實體架構、Dapper 和鏈的儲存庫模式的實現策略** \
   <https://www.infoq.com/articles/repository-implementation-strategies>
 
 - **塞薩爾·德拉托雷將ASP.NET核心 IoC 容器服務存留期與 Autofac IoC 容器實例作用域進行比較** \
@@ -339,7 +339,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 }
 ```
 
-您可以在同一`OnModelCreating`方法中設置所有 Fluent API 映射，但建議對該代碼進行分區，並具有多個配置類（每個實體一個配置類），如示例所示。 尤其對於大型模型，建議具有單獨的配置類以配置不同的實體類型。
+您可以在同一`OnModelCreating`方法中設置所有 Fluent API 映射,但建議對該代碼進行分區,並具有多個配置類(每個實體一個配置類),如示例所示。 尤其對於大型模型,建議具有單獨的配置類以配置不同的實體類型。
 
 範例中的程式碼顯示一些明確宣告和對應。 不過，EF Core 慣例會自動執行許多對應，因此在您的案例中需要的實際程式碼可能會較小。
 
@@ -357,7 +357,7 @@ Hi/Lo 演算法描述從相關的料庫序列取得一批唯一識別碼的機�
 
 - 它會產生人類可閱讀的識別碼，而不像使用 GUID 的技術。
 
-EF Core 支援使用`UseHiLo`方法的[HiLo，](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)如前面的示例所示。
+EF Core`UseHiLo`支援使用 方法的[HiLo,](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm)如前面的範例所示。
 
 ### <a name="map-fields-instead-of-properties"></a>對應欄位，而不是對應屬性
 
@@ -470,14 +470,14 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 除了封裝篩選邏輯，規格還可以指定要傳回的資料形式，包括要填入的屬性。
 
-儘管我們不建議從存儲庫返回`IQueryable`，但最好在存儲庫中使用它們來構建一組結果。 您可以看到上述 List 方法中使用的此方法，該方法使用中間`IQueryable`運算式在使用最後一行上的規範條件執行查詢之前構建包含的查詢清單。
+儘管我們不建議從存儲庫返回`IQueryable`,但最好在存儲庫中使用它們來構建一組結果。 您可以看到上述 List 方法中使用的此方法,該方法`IQueryable`使用中間 運算式在使用最後一行上的規範條件執行查詢之前構建包含的查詢清單。
 
 ### <a name="additional-resources"></a>其他資源
 
-- **表映射** \
+- **表對應** \
   [https://docs.microsoft.com/ef/core/modeling/relational/tables](/ef/core/modeling/relational/tables)
 
-- **使用 HiLo 生成具有實體框架核心的金鑰** \
+- **使用 HiLo 產生具有實體框架核心的金鑰** \
   <https://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/>
 
 - **備份欄位** \
@@ -493,5 +493,5 @@ public IEnumerable<T> List(ISpecification<T> spec)
   <https://deviq.com/specification-pattern/>
 
 > [!div class="step-by-step"]
-> [上一個](infrastructure-persistence-layer-design.md)
+> [前一個](infrastructure-persistence-layer-design.md)
 > [下一個](nosql-database-persistence-infrastructure.md)

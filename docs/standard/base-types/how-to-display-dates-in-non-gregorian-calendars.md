@@ -1,5 +1,5 @@
 ---
-title: 如何：在非西曆中顯示日期
+title: 作法：在非西曆中顯示日期
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-ms.openlocfilehash: 455996d091f92367667e7077a4524898cd8face6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d02b74f63ec5b6260679ae4cea04791681ec238
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138745"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523919"
 ---
-# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>如何：在非西曆中顯示日期
+# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>作法：在非西曆中顯示日期
 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 類型使用西曆作為其預設月曆。 這表示即使該日期和時間是使用其他月曆所建立，呼叫日期和時間值的 `ToString` 方法仍會使用西曆顯示該日期和時間的字串表示。 以下範例將說明這種情況，其中使用兩種不同方式來建立波斯曆的日期和時間值，但在呼叫 <xref:System.DateTime.ToString%2A> 方法時，仍以西曆顯示這些日期和時間值。 此範例反映兩種常用來顯示特殊月曆之日期，但不正確的技術。  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
@@ -81,8 +81,4 @@ ms.locfileid: "73138745"
   
 - `DisplayDate` 是要傳入兩個參數的多載公用方法：要在 `CalendarUtility` 物件所代表之月曆中表示的 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值，以及要使用之格式化規則所屬的文化特性。 在傳回日期的字串表示時，其行為會根據文化特性是否支援要使用其格式化規則的目標月曆而定。  
   
- 不論此範例中用來建立 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值的月曆為何，該值通常會以西曆日期來表示。 這是因為 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 類型不會保留任何月曆資訊。 這兩個值會在內部表示為自 0001 年 1 月 1 日午夜開始經過的刻度數。 該數字的轉譯會根據月曆而定。 大部分文化特性的預設月曆是西曆。  
-  
-## <a name="see-also"></a>另請參閱
-
-- [執行格式化作業](../../../docs/standard/base-types/performing-formatting-operations.md)
+ 不論此範例中用來建立 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 值的月曆為何，該值通常會以西曆日期來表示。 這是因為 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 類型不會保留任何月曆資訊。 這兩個值會在內部表示為自 0001 年 1 月 1 日午夜開始經過的刻度數。 該數字的轉譯會根據月曆而定。 大部分文化特性的預設月曆是西曆。

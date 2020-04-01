@@ -1,5 +1,5 @@
 ---
-title: 正則運算式行為
+title: 正規表示式行為
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 288bf4256670d34c600e23618b62ad81866daadf
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124347"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523842"
 ---
 # <a name="details-of-regular-expression-behavior"></a>規則運算式行為的詳細資訊
 
@@ -28,7 +28,7 @@ ms.locfileid: "77124347"
 
  POSIX NFA 引擎很像傳統 NFA 引擎，只是它們會繼續回溯直到能夠保證已經找到最長的可能符合項目。 結果，POSIX NFA 引擎比傳統 NFA 引擎更緩慢，而且當您使用 POSIX NFA 引擎時，您不能變更回溯搜尋的順序，讓較短的符合項目優先於較長的符合項目。
 
- 程式設計人員偏愛傳統 NFA 引擎，因為它們比 DFA 或 POSIX NFA 引擎更能夠掌控字串比對。 雖然最壞的情況是它們可能執行緩慢，但您可以使用減低模稜兩可並限制回溯的模式，操縱它們以線性或多項式時間尋找符合項目。 換句話說，儘管 NFA 引擎將性能用於功率和靈活性，但在大多數情況下，如果正則運算式編寫良好，並且避免了回溯會呈指數級下降的性能，則它們可提供良好到可接受的性能。
+ 程式設計人員偏愛傳統 NFA 引擎，因為它們比 DFA 或 POSIX NFA 引擎更能夠掌控字串比對。 雖然最壞的情況是它們可能執行緩慢，但您可以使用減低模稜兩可並限制回溯的模式，操縱它們以線性或多項式時間尋找符合項目。 換句話說,儘管 NFA 引擎將性能用於功率和靈活性,但在大多數情況下,如果正則表達式編寫良好,並且避免了回溯會呈指數級下降的性能,則它們可提供良好到可接受的性能。
 
 > [!NOTE]
 > 如需大量回溯所造成效能影響的詳細資訊，以及撰寫規則運算式來解決問題的方式，請參閱[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)。
@@ -39,7 +39,7 @@ ms.locfileid: "77124347"
 
  .NET Framework 規則運算式引擎包含下列其他功能：
 
-- 懶惰的限定詞： `??` `*?`， `+?` `{`， ， *， n*`,`*m*`}?`. 這些建構告訴回溯引擎要先搜尋最小數目的重複。 相反地，一般 Greedy (窮盡) 數量詞會先嘗試比對最多的重複 項目。 下例會說明兩者間的差異。 規則運算式會比對以數字結尾的句子，以及用來擷取該數字的擷取群組。 規則運算式 `.+(\d+)\.` 包含 Greedy (窮盡) 數量詞 `.+`，這導致規則運算式引擎只會擷取數字的最後一個位數。 相反地，規則運算式 `.+?(\d+)\.` 包含 Lazy (最少) 數量詞 `.+?`，這導致規則運算式引擎會擷取整個數字。
+- 懶惰的限定符: `??` `*?` `+?` `{`, , , *, n*`,`*m*`}?`. 這些建構告訴回溯引擎要先搜尋最小數目的重複。 相反地，一般 Greedy (窮盡) 數量詞會先嘗試比對最多的重複 項目。 下例會說明兩者間的差異。 規則運算式會比對以數字結尾的句子，以及用來擷取該數字的擷取群組。 規則運算式 `.+(\d+)\.` 包含 Greedy (窮盡) 數量詞 `.+`，這導致規則運算式引擎只會擷取數字的最後一個位數。 相反地，規則運算式 `.+?(\d+)\.` 包含 Lazy (最少) 數量詞 `.+?`，這導致規則運算式引擎會擷取整個數字。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lazy1.cs#1)]
      [!code-vb[Conceptual.RegularExpressions.Design#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lazy1.vb#1)]
@@ -55,7 +55,7 @@ ms.locfileid: "77124347"
 
      如需 Lazy (最少) 數量詞的詳細資訊，請參閱[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)。
 
-- 正面向前看：`(?=`*子運算式*`)`。 此功能允許回溯引擎在比對子運算式之後返回到文字的相同地方。 這對自相同位置開始驗證多個模式，以全面搜尋文字，很有用處。 它也可以讓引擎驗證子字串是否存在於符合項目的結尾，而不需在相符的文字中包含該子字串。 下例使用右合樣在句子中擷取後面未接標點符號的文字。
+- 正面向前看:`(?=`*子表示式*`)`。 此功能允許回溯引擎在比對子運算式之後返回到文字的相同地方。 這對自相同位置開始驗證多個模式，以全面搜尋文字，很有用處。 它也可以讓引擎驗證子字串是否存在於符合項目的結尾，而不需在相符的文字中包含該子字串。 下例使用右合樣在句子中擷取後面未接標點符號的文字。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead1.cs#2)]
      [!code-vb[Conceptual.RegularExpressions.Design#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead1.vb#2)]
@@ -71,7 +71,7 @@ ms.locfileid: "77124347"
 
      如需右合樣判斷提示的詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
-- 負前視：`(?!`*子運算式*`)`。 此功能加入了只有子運算式無法比對時才會比對運算式的功能。 這在刪除搜尋時特別有功用，因為提供應該排除情況的運算式通常會比指供必須包含情況的運算式簡單。 例如，針對開頭不是 "non" 的單字撰寫運算式很困難。 下例使用右不合樣進行排除。
+- 負前視:`(?!`*子表示式*`)`。 此功能加入了只有子運算式無法比對時才會比對運算式的功能。 這在刪除搜尋時特別有功用，因為提供應該排除情況的運算式通常會比指供必須包含情況的運算式簡單。 例如，針對開頭不是 "non" 的單字撰寫運算式很困難。 下例使用右不合樣進行排除。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]
@@ -87,7 +87,7 @@ ms.locfileid: "77124347"
 
      如需右不合樣判斷提示的詳細資訊，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
-- 條件計算：`(?(`*運算式*`)`*是*`|`*否*`)`，`(?(`*名稱*`|``)`*expression**yes**no**name**yes**expression**name**no*為"是否"，其中運算式是匹配的子運算式，名稱是捕獲組的名稱，如果運算式匹配或 name 是有效、非空捕獲的組，則為匹配的字串，則否是要匹配的子運算式（如果運算式）`)` *expression*不匹配或*名稱*不是有效、非空捕獲的組。 此功能可讓引擎根據前一個子運算式比對的結果或零寬度判斷提示的結果，使用一個以上的替代模式進行搜尋。 這允許更強大的反向參考形式，例如允許根據前一個子運算式是否相符來比對子運算式。 下例中的規則運算式會比對同時可供公用和內部使用的段落。 僅供內部使用的段落會以 `<PRIVATE>` 標記開頭。 規則運算式模式 `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` 會使用條件式評估，將可供公用和內部使用的段落內容指派給個別的擷取群組。 再以不同的方式來處理這些段落。
+- 條件計算:`(?(`*運算式*`)`*是*`|`*否*`)`,`(?(`*名稱*`|``)`*expression**yes**no**expression*`)`為"是否",其中表達式是匹配的子表達式,名稱是捕獲組的名稱,如果表達式匹配或名稱為有效、非空捕獲的組,則為匹配的字串,如果表達式不匹配或名稱不是有效、非空捕獲的組,則不為匹配子表達式。*name**name**name**expression**no**yes* 此功能可讓引擎根據前一個子運算式比對的結果或零寬度判斷提示的結果，使用一個以上的替代模式進行搜尋。 這允許更強大的反向參考形式，例如允許根據前一個子運算式是否相符來比對子運算式。 下例中的規則運算式會比對同時可供公用和內部使用的段落。 僅供內部使用的段落會以 `<PRIVATE>` 標記開頭。 規則運算式模式 `^(?<Pvt>\<PRIVATE\>\s)?(?(Pvt)((\w+\p{P}?\s)+)|((\w+\p{P}?\s)+))\r?$` 會使用條件式評估，將可供公用和內部使用的段落內容指派給個別的擷取群組。 再以不同的方式來處理這些段落。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/conditional1.cs#4)]
      [!code-vb[Conceptual.RegularExpressions.Design#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/conditional1.vb#4)]
@@ -104,9 +104,9 @@ ms.locfileid: "77124347"
 
      如需條件式評估的詳細資訊，請參閱[替代建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)。
 
-- 平衡組定義`(?<`*：name1*`-`*name2* `>` *子運算式*`)`。 此功能可讓規則運算式引擎追蹤巢狀建構，例如括號或左右中括弧。 如需範例，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
+- 平衡組定義`(?<`*:name1*`-`*name2* `>` *子表示式*`)`。 此功能可讓規則運算式引擎追蹤巢狀建構，例如括號或左右中括弧。 如需範例，請參閱[群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
-- 原子組：`(?>`*子運算式*`)`。 此功能可讓回溯引擎保證子運算式只比對為該子運算式找到的第一個相符項目，就好像運算式的執行不受其包含運算式的影響。 如果不使用此建構，較大型運算式中的回溯搜尋可以變更子運算式的行為。 例如，正則運算式`(a+)\w`匹配一個或多個"a"字元，以及遵循"a"字元序列的單詞字元，並將"a"字元序列分配給第一個捕獲組。 但是，如果輸入字串的最終字元也是"a"，則它由`\w`語言元素匹配，並且不包括在捕獲的組中。
+- 原子群組:`(?>`*子表示式*`)`。 此功能可讓回溯引擎保證子運算式只比對為該子運算式找到的第一個相符項目，就好像運算式的執行不受其包含運算式的影響。 如果不使用此建構，較大型運算式中的回溯搜尋可以變更子運算式的行為。 例如,正則表達式`(a+)\w`匹配一個或多個"a"字元,以及遵循"a"字元序列的單詞字元,並將"a"字元序列分配給第一個捕獲組。 但是,如果輸入字串的最終字元也是"a",則它由`\w`語言元素匹配,並且不包括在捕獲的組中。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]
@@ -116,16 +116,16 @@ ms.locfileid: "77124347"
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]
 
-     有關原子組的詳細資訊，請參閱[分組構造](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
+     有關原子組的詳細資訊,請參閱[分組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。
 
-- 從右至左比對，將 <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 選項提供給 <xref:System.Text.RegularExpressions.Regex> 類別建構函式或靜態執行個體比對方法，即可指定此種比對。 當從右至左搜尋取代從左至右搜尋時，或在從右邊部分 (而非自左邊) 開始比對模式較有效率的情況中，這項功能很有用處。 如下例所示，使用由右至左比對會變更 Greedy (窮盡) 數量詞的行為。 此範例會搜尋兩次以數字結尾的句子。 使用 Greedy (窮盡) 數量詞 `+` 的由左至右搜尋，會比對句子中的六個數字其中一個，而由右至左搜尋會比對全部六個數字。 有關正則運算式模式的說明，請參閱本節前面說明惰性限定詞的示例。
+- 從右至左比對，將 <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 選項提供給 <xref:System.Text.RegularExpressions.Regex> 類別建構函式或靜態執行個體比對方法，即可指定此種比對。 當從右至左搜尋取代從左至右搜尋時，或在從右邊部分 (而非自左邊) 開始比對模式較有效率的情況中，這項功能很有用處。 如下例所示，使用由右至左比對會變更 Greedy (窮盡) 數量詞的行為。 此範例會搜尋兩次以數字結尾的句子。 使用 Greedy (窮盡) 數量詞 `+` 的由左至右搜尋，會比對句子中的六個數字其中一個，而由右至左搜尋會比對全部六個數字。 有關正則表達式模式的說明,請參閱本節前面說明惰性限定符的示例。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/rtl1.cs#6)]
      [!code-vb[Conceptual.RegularExpressions.Design#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/rtl1.vb#6)]
 
-     有關從右至左匹配的詳細資訊，請參閱[正則運算式選項](../../../docs/standard/base-types/regular-expression-options.md)。
+     有關從右至左符合的詳細資訊,請參閱[正規表示式選項](../../../docs/standard/base-types/regular-expression-options.md)。
 
-- 正和負查找後：`(?<=`正查找後面的*子運算式*`)`，`(?<!`負後看的*子運算式*`)`。 此功能類似於本主題前文中所討論的向右合樣。 因為規則運算式引擎允許完整的由右至左比對，規則運算式允許無限制的向左合樣。 當巢狀子運算式為外部運算式的超集時，左合樣和左不合樣也可以用來避免產生巢狀數量詞。 具有此種巢狀數量詞的規則運算式通常效能不佳。 例如，下例會驗證字串是否以英數字元開頭和結尾，以及字串中的任何其他字元是否為較大子集之一。 它會構成用來驗證電子郵件地址之規則運算式的一部分；如需詳細資訊，請參閱[如何：確認字串是否為有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。
+- 將`(?<=`負搜尋後: 正搜尋後, 您可以找到的*子表示式*`)`,`(?<!`負後看的*子表示式*`)`。 此功能類似於本主題前文中所討論的向右合樣。 因為規則運算式引擎允許完整的由右至左比對，規則運算式允許無限制的向左合樣。 當巢狀子運算式為外部運算式的超集時，左合樣和左不合樣也可以用來避免產生巢狀數量詞。 具有此種巢狀數量詞的規則運算式通常效能不佳。 例如，下例會驗證字串是否以英數字元開頭和結尾，以及字串中的任何其他字元是否為較大子集之一。 它會構成用來驗證電子郵件地址之規則運算式的一部分；如需詳細資訊，請參閱[如何：確認字串是否為有效的電子郵件格式](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookbehind1.cs#5)]
      [!code-vb[Conceptual.RegularExpressions.Design#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookbehind1.vb#5)]
@@ -136,7 +136,7 @@ ms.locfileid: "77124347"
     |-------------|-----------------|
     |`^`|從字串的開頭開始比對。|
     |`[A-Z0-9]`|比對任何數值或英數字元。 (此比較不區分大小寫。)|
-    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|匹配任何單詞字元的零個或多個發生次數，或以下任何字元：-, !, 、$、%）&、'、...、、/、*、*、{、&#96;、{、}、&#124;\*或 *"。|
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])\*</code>|匹配任何單詞字元的零個或多個發生次數,或以下任何字元:-, !, 、$、%)&、'、...、、/、*、*、{、&#96;、{、}、&#124;\*或 *"。|
     |`(?<=[A-Z0-9])`|向左合樣前一個字元，而該字元必須是數值或英數字元。 (此比較不區分大小寫。)|
     |`$`|在字串的結尾結束比對。|
 
@@ -147,12 +147,11 @@ ms.locfileid: "77124347"
 |Title|描述|
 |-----------|-----------------|
 |[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|提供規則運算式回溯如何擴展以尋找替代符合項目的相關資訊。|
-|[編譯及重複使用](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|提供編譯和重複使用規則運算式以提升效能的相關資訊。|
-|[執行緒安全性](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|提供規則運算式執行緒安全的相關資訊，並說明何時應該同步處理規則運算式物件的存取。|
+|[編譯和重複使用](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|提供編譯和重複使用規則運算式以提升效能的相關資訊。|
+|[執行緒安全](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|提供規則運算式執行緒安全的相關資訊，並說明何時應該同步處理規則運算式物件的存取。|
 |[.NET Framework 規則運算式](../../../docs/standard/base-types/regular-expressions.md)|提供規則運算式的程式設計語言方面的概觀。|
-|[正則運算式物件模型](../../../docs/standard/base-types/the-regular-expression-object-model.md)|提供說明規則運算式類別使用方式的資訊和程式碼範例。|
-|[規則運算式範例](../../../docs/standard/base-types/regular-expression-examples.md)|包含程式碼範例，說明規則運算式在常見應用程式中的使用方式。|
-|[正則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|提供您可以用來定義規則運算式之字元、運算子和建構組合的資訊。|
+|[規則運算式物件模型](../../../docs/standard/base-types/the-regular-expression-object-model.md)|提供說明規則運算式類別使用方式的資訊和程式碼範例。|
+|[規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|提供您可以用來定義規則運算式之字元、運算子和建構組合的資訊。|
 
 ## <a name="reference"></a>參考
 

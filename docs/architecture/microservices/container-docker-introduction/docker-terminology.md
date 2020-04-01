@@ -2,12 +2,12 @@
 title: Docker 術語
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 術語
 ms.date: 01/30/2020
-ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdcc5ec3603579c36d7339bd3ff651713b8eba88
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502830"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523339"
 ---
 # <a name="docker-terminology"></a>Docker 術語
 
@@ -17,7 +17,9 @@ ms.locfileid: "77502830"
 
 **Dockerfile**：文字檔，其中包含有關如何建立 Docker 映像的指示。 就像批次指令碼，第一行說明開始的基底映像，然後依照指示來安裝必要的程式、複製檔案等等，直到取得您需要的工作環境。
 
-**建立**：建立容器映像的動作，該映像會以其 Dockerfile 及建立映像之資料夾中其他檔案所提供的資訊和內容為依據。 您可以使用 Docker 的 **docker build** 命令來建立映像。
+**建立**：建立容器映像的動作，該映像會以其 Dockerfile 及建立映像之資料夾中其他檔案所提供的資訊和內容為依據。 您可以使用 Docker 指令產生映像:
+
+> `docker build`
 
 **容器**：Docker 映像的執行個體。 容器代表單一應用程式、處理序或服務的執行。 其中包含 Docker 映像的內容、執行環境和一組標準的指示。 擴充服務時，您會從同一個映像建立容器的多個執行個體。 或者，一個批次工作可以從同一個映像建立多個容器，並將不同的參數傳遞至每個執行個體。
 
@@ -25,13 +27,13 @@ ms.locfileid: "77502830"
 
 **標記**：您可以套用至映像的標記或標籤，以便識別相同映像的不同映像版本 (視版本號碼或目標環境而定)。
 
-**多階段建置**：這是 Docker 17.05 或更高版本中的功能，可協助減少最終映像的大小。 簡單幾句話來說，有了多階段建置，您可以使用例如大型基底映像 (包含 SDK)，來編譯和發行應用程式，然後使用發行資料夾和小型僅執行階段基底映像，以產生更小的最終映像
+**多階段建置**：這是 Docker 17.05 或更高版本中的功能，可協助減少最終映像的大小。 在幾句話中,使用多階段生成,例如,使用包含 SDK 的大型基本映射來編譯和發佈應用程式,然後使用具有少量僅運行時基本映射的發佈資料夾來生成小得多的最終映射。
 
-**存放庫 (Repository 或 Repo)**：相關的 Docker 映像集合，已加上標記指出映像版本。 某些存儲庫包含特定圖像的多個變體，例如包含 SDK（較重的）的圖像、僅包含運行時（較輕）的圖像等。這些變體可以使用標記進行標記。 一個存放庫可以包含多種平台變化，例如 Linux 映像和 Windows 映像。
+**存放庫 (Repository 或 Repo)**：相關的 Docker 映像集合，已加上標記指出映像版本。 某些儲存庫包含特定圖像的多個變體,例如包含 SDK(較重的)的圖像、僅包含運行時(較輕)的圖像等。這些變體可以使用標記進行標記。 一個存放庫可以包含多種平台變化，例如 Linux 映像和 Windows 映像。
 
 **登錄**：提供存放庫存取權的服務。 大多數公用映像的預設登錄是 [Docker Hub](https://hub.docker.com/) (以組織形式為 Docker 所擁有）。 登錄通常會包含來自多個小組的存放庫。 公司通常會有私人登錄來儲存及管理其所建立的映像。 Azure Container Registry 是另一個範例。
 
-**多拱圖像**：對於多體系結構，根據 Docker 運行的平臺，它簡化了相應圖像的選擇。 例如，當 Dockerfile 從註冊表請求基本映射**FROM mcr.microsoft.com/dotnet/core/sdk:3.1**時，它實際上會獲得**3.1 sdk-nanoserver-1909、3.1** **sdk-nanoserver-1809**或**3.1-sdk-buster-slim，** 具體取決於 Docker 運行的作業系統和版本。
+**多拱圖像**:對於多體系結構,根據 Docker 運行的平臺,它簡化了相應圖像的選擇。 例如,當 Dockerfile 從註冊表請求基本映射**FROM mcr.microsoft.com/dotnet/core/sdk:3.1**時,它實際上會獲得**3.1 sdk-nanoserver-1909、3.1** **sdk-nanoserver-1809**或**3.1-sdk-buster-slim,** 具體取決於 Docker 運行的操作系統和版本。
 
 **Docker Hub**：上傳並使用映像的公開登錄。 Docker Hub 提供 Docker 映像裝載、公開或私人登錄、組建觸發程序和 Webhook，以及與 GitHub 和 Bitbucket 的整合。
 
@@ -47,8 +49,8 @@ ms.locfileid: "77502830"
 
 **叢集**：以單一虛擬 Docker 主機形式公開的 Docker 主機集合，讓應用程式可以擴充為分散到叢集內多部主機的多個服務執行個體。 您可以使用 Kubernetes、Azure Service Fabric、Docker Swarm 和 Mesosphere DC/OS 來建立 Docker 叢集。
 
-**協調器**：可簡化叢集和 Docker 主機管理的工具。 協調器使您能夠通過 CLI 或圖形 UI 管理其圖像、容器和主機。 您可以管理容器網路功能、組態、負載平衡、服務探索、高可用性、Docker 主機組態等等。 協調器會負責跨節點集合執行、散發、擴充及修復工作負載。 一般而言，協調器產品與提供叢集基礎結構的產品相同，例如在市場中其他供應項目之間的 Kubernetes 和 Azure Service Fabric。
+**協調器**：可簡化叢集和 Docker 主機管理的工具。 協調器使您能夠透過 CLI 或圖形 UI 管理其圖像、容器和主機。 您可以管理容器網路功能、組態、負載平衡、服務探索、高可用性、Docker 主機組態等等。 協調器會負責跨節點集合執行、散發、擴充及修復工作負載。 一般而言，協調器產品與提供叢集基礎結構的產品相同，例如在市場中其他供應項目之間的 Kubernetes 和 Azure Service Fabric。
 
 >[!div class="step-by-step"]
->[上一個](docker-defined.md)
+>[前一個](docker-defined.md)
 >[下一個](docker-containers-images-registries.md)
