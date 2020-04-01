@@ -8,41 +8,23 @@ helpviewer_keywords:
 - custom strings
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 ms.custom: seadec18
-ms.openlocfilehash: 05cdf399e104fc9e528c954adb19634a5c136664
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ce1b148a2b1605b5b1283bdc3398409661f3f83
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73132918"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523981"
 ---
-# <a name="basic-string-operations-in-net"></a><span data-ttu-id="ec7c5-103">.NET 中的基本字串作業</span><span class="sxs-lookup"><span data-stu-id="ec7c5-103">Basic String Operations in .NET</span></span>
-<span data-ttu-id="ec7c5-104">應用程式通常是以根據使用者輸入建構訊息的方式來回應使用者。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-104">Applications often respond to users by constructing messages based on user input.</span></span> <span data-ttu-id="ec7c5-105">例如，網站就經常以包含使用者姓名的特殊問候語來回應新登入的使用者。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-105">For example, it is not uncommon for Web sites to respond to a newly logged-on user with a specialized greeting that includes the user's name.</span></span> <span data-ttu-id="ec7c5-106"><xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別中有數個方法，可讓您以動態方式建構要在使用者介面中顯示的自訂字串。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-106">Several methods in the <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes allow you to dynamically construct custom strings to display in your user interface.</span></span> <span data-ttu-id="ec7c5-107">這些方法也可協助您執行一些基本字串作業，例如從位元組陣列建立新的字串、比較字串值，以及修改現有的字串。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-107">These methods also help you perform a number of basic string operations like creating new strings from arrays of bytes, comparing the values of strings, and modifying existing strings.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="ec7c5-108">本節內容</span><span class="sxs-lookup"><span data-stu-id="ec7c5-108">In This Section</span></span>  
- [<span data-ttu-id="ec7c5-109">建立新字串</span><span class="sxs-lookup"><span data-stu-id="ec7c5-109">Creating New Strings</span></span>](../../../docs/standard/base-types/creating-new.md)  
- <span data-ttu-id="ec7c5-110">描述將物件轉換為字串和組合字串的基本方式。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-110">Describes basic ways to convert objects into strings and to combine strings.</span></span>  
-  
- [<span data-ttu-id="ec7c5-111">修剪和移除字元</span><span class="sxs-lookup"><span data-stu-id="ec7c5-111">Trimming and Removing Characters</span></span>](../../../docs/standard/base-types/trimming.md)  
- <span data-ttu-id="ec7c5-112">描述如何修剪或移除字串中的字元。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-112">Describes how to trim or remove characters in a string.</span></span>  
-  
- [<span data-ttu-id="ec7c5-113">填補字串</span><span class="sxs-lookup"><span data-stu-id="ec7c5-113">Padding Strings</span></span>](../../../docs/standard/base-types/padding.md)  
- <span data-ttu-id="ec7c5-114">描述如何將字元或空格插入字串中。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-114">Describes how to insert characters or empty spaces into a string.</span></span>  
-  
- [<span data-ttu-id="ec7c5-115">比較字串</span><span class="sxs-lookup"><span data-stu-id="ec7c5-115">Comparing Strings</span></span>](../../../docs/standard/base-types/comparing.md)  
- <span data-ttu-id="ec7c5-116">描述如何比較兩個或多個字串的內容。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-116">Describes how to compare the contents of two or more strings.</span></span>  
-  
- [<span data-ttu-id="ec7c5-117">更改案例</span><span class="sxs-lookup"><span data-stu-id="ec7c5-117">Changing Case</span></span>](../../../docs/standard/base-types/changing-case.md)  
- <span data-ttu-id="ec7c5-118">描述如何變更字串內的字元大小寫。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-118">Describes how to change the case of characters within a string.</span></span>  
-  
- [<span data-ttu-id="ec7c5-119">使用 StringBuilder 類別</span><span class="sxs-lookup"><span data-stu-id="ec7c5-119">Using the StringBuilder Class</span></span>](../../../docs/standard/base-types/stringbuilder.md)  
- <span data-ttu-id="ec7c5-120">描述如何使用 <xref:System.Text.StringBuilder> 類別來建立及修改動態字串物件。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-120">Describes how to create and modify dynamic string objects with the <xref:System.Text.StringBuilder> class.</span></span>  
-  
- [<span data-ttu-id="ec7c5-121">操作說明：執行基本字串操作</span><span class="sxs-lookup"><span data-stu-id="ec7c5-121">How to: Perform Basic String Manipulations</span></span>](../../../docs/standard/base-types/basic-manipulations.md)  
- <span data-ttu-id="ec7c5-122">示範如何使用基本字串作業。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-122">Demonstrates the use of basic string operations.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="ec7c5-123">相關章節</span><span class="sxs-lookup"><span data-stu-id="ec7c5-123">Related Sections</span></span>  
- [<span data-ttu-id="ec7c5-124">.NET 中的類型轉換</span><span class="sxs-lookup"><span data-stu-id="ec7c5-124">Type Conversion in .NET</span></span>](../../../docs/standard/base-types/type-conversion.md)  
- <span data-ttu-id="ec7c5-125">描述如何將一個類型轉換為另一個類型。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-125">Describes how to convert one type into another type.</span></span>  
-  
- [<span data-ttu-id="ec7c5-126">格式化類型</span><span class="sxs-lookup"><span data-stu-id="ec7c5-126">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
- <span data-ttu-id="ec7c5-127">描述如何使用格式規範來將字串格式化。</span><span class="sxs-lookup"><span data-stu-id="ec7c5-127">Describes how to format strings using format specifiers.</span></span>
+# <a name="basic-string-operations-in-net"></a><span data-ttu-id="80a85-103">.NET 中的基本字串操作</span><span class="sxs-lookup"><span data-stu-id="80a85-103">Basic string operations in .NET</span></span>
+
+<span data-ttu-id="80a85-104">應用程式通常是以根據使用者輸入建構訊息的方式來回應使用者。</span><span class="sxs-lookup"><span data-stu-id="80a85-104">Applications often respond to users by constructing messages based on user input.</span></span> <span data-ttu-id="80a85-105">例如,網站使用包含使用者名的專用問候語回應新登錄的用戶的情況並不少見。</span><span class="sxs-lookup"><span data-stu-id="80a85-105">For example, it is not uncommon for websites to respond to a newly logged-on user with a specialized greeting that includes the user's name.</span></span>
+
+<span data-ttu-id="80a85-106"><xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別中有數個方法，可讓您以動態方式建構要在使用者介面中顯示的自訂字串。</span><span class="sxs-lookup"><span data-stu-id="80a85-106">Several methods in the <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes allow you to dynamically construct custom strings to display in your user interface.</span></span> <span data-ttu-id="80a85-107">這些方法也可協助您執行一些基本字串作業，例如從位元組陣列建立新的字串、比較字串值，以及修改現有的字串。</span><span class="sxs-lookup"><span data-stu-id="80a85-107">These methods also help you perform a number of basic string operations like creating new strings from arrays of bytes, comparing the values of strings, and modifying existing strings.</span></span>
+
+## <a name="related-sections"></a><span data-ttu-id="80a85-108">相關章節</span><span class="sxs-lookup"><span data-stu-id="80a85-108">Related sections</span></span>
+
+<span data-ttu-id="80a85-109">[在 .NET 中鍵入轉換](../../../docs/standard/base-types/type-conversion.md)</span><span class="sxs-lookup"><span data-stu-id="80a85-109">[Type Conversion in .NET](../../../docs/standard/base-types/type-conversion.md)</span></span>\
+<span data-ttu-id="80a85-110">描述如何將一個類型轉換為另一個類型。</span><span class="sxs-lookup"><span data-stu-id="80a85-110">Describes how to convert one type into another type.</span></span>  
+
+<span data-ttu-id="80a85-111">[格式類型](../../../docs/standard/base-types/formatting-types.md)</span><span class="sxs-lookup"><span data-stu-id="80a85-111">[Formatting Types](../../../docs/standard/base-types/formatting-types.md)</span></span>\
+<span data-ttu-id="80a85-112">描述如何使用格式規範來將字串格式化。</span><span class="sxs-lookup"><span data-stu-id="80a85-112">Describes how to format strings using format specifiers.</span></span>
