@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14159ff9a6ca39108aec14b0ad46004e95fa3cf2
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75936848"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588422"
 ---
 # <a name="using-threads-and-threading"></a>使用執行緒和執行緒處理
 
@@ -20,7 +20,7 @@ ms.locfileid: "75936848"
 使用多執行緒的應用程式回應使用者輸入會更快，因為當處理器密集工作在另外的執行緒上執行時，使用者介面會保持使用中。 當您建立可擴充的應用程式時，多執行緒也很有幫助，因為您可以隨著工作負載增加而新增執行緒。
 
 > [!NOTE]
-> 如果您需要對應用程式執行緒行為有更大的掌控力，您可以自行管理執行緒。 但是，從 .NET Framework 4 開始，多執行緒的程式設計已透過 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別、[平行 LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的新並行集合類別，以及以工作 (而非執行緒) 概念為基礎的新程式設計模型，而做出簡化。 如需詳細資訊，請參閱[平行程式設計](../parallel-programming/index.md)和[工作平行程式庫 (TPL)](../parallel-programming/task-parallel-library-tpl.md)。
+> 如果您需要對應用程式執行緒行為有更大的掌控力，您可以自行管理執行緒。 但是，從 .NET Framework 4 開始，多執行緒的程式設計已透過 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別、[平行 LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 命名空間中的新並行集合類別，以及以工作 (而非執行緒) 概念為基礎的新程式設計模型，而做出簡化。 如需詳細資訊，請參閱[平行程式設計](../parallel-programming/index.md)和[工作平行程式庫 (TPL)](../parallel-programming/task-parallel-library-tpl.md)。
 
 ## <a name="how-to-create-and-start-a-new-thread"></a>如何：建立及啟動新的執行緒
 
@@ -28,13 +28,13 @@ ms.locfileid: "75936848"
 
 ## <a name="how-to-stop-a-thread"></a>如何：停止執行緒
 
-要終止執行緒的執行，請使用 。 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 它提供了一種以協作方式停止執行緒的統一方法。 有關詳細資訊，請參閱[在託管執行緒中取消](cancellation-in-managed-threads.md)。
+要終止線緒的執行,請使用<xref:System.Threading.CancellationToken?displayProperty=nameWithType>。 它提供了一種以協作方式停止線程的統一方法。 有關詳細資訊,請參閱[在託管線程中取消](cancellation-in-managed-threads.md)。
 
-有時無法以協作方式停止執行緒，因為它運行的協力廠商代碼不是為協作取消而設計的。 在這種情況下，您可能希望強制終止其執行。 要強制終止執行緒的執行，可以在 .NET 框架中使用 方法<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 該方法會在叫用該方法的執行緒上引發 <xref:System.Threading.ThreadAbortException>。 如需詳細資訊，請參閱[終結執行緒](destroying-threads.md)。 .NET Core 中不支援該方法<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>。 如果需要在 .NET Core 中強制終止協力廠商代碼的執行，請在單獨的進程中運行它並使用<xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>。
+有時無法以協作方式停止線程,因為它運行的第三方代碼不是為協作取消而設計的。 在這種情況下,您可能希望強制終止其執行。 要強制終止線程的執行,可以在 .NET 框架中<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>使用 方法 。 該方法會在叫用該方法的執行緒上引發 <xref:System.Threading.ThreadAbortException>。 如需詳細資訊，請參閱[終結執行緒](destroying-threads.md)。 .NET Core 中不支援<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>該方法 。 如果需要在 .NET Core 中強制終止第三方代碼的執行,請在單獨的程序中執行<xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType>它並使用 。
 
-在<xref:System.Threading.CancellationToken?displayProperty=nameWithType>.NET 框架 4 之前不可用。 要停止舊版 .NET Framework 版本中的執行緒，應使用執行緒同步技術手動實現協作取消。 例如，您可以創建易失性布林欄位`shouldStop`，並用它來請求執行緒執行的代碼停止。 有關詳細資訊，請參閱 C# 參考和<xref:System.Threading.Volatile?displayProperty=nameWithType>中的[易失性](../../csharp/language-reference/keywords/volatile.md)。
+在<xref:System.Threading.CancellationToken?displayProperty=nameWithType>.NET 框架 4 之前不可用。 要停止舊版 .NET Framework 版本中的線程,應使用線程同步技術手動實現協作取消。 例如,您可以創建易失性布林欄`shouldStop`位,並用它來請求線程執行的代碼停止。 有關詳細資訊,請參閱 C#<xref:System.Threading.Volatile?displayProperty=nameWithType>參考與 中的[易失性](../../csharp/language-reference/keywords/volatile.md)。
 
-使用<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>方法使調用執行緒等待中的執行緒停止的終止。
+使用<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>方法使調用線程等待線程停止的終止。
 
 ## <a name="how-to-pause-or-interrupt-a-thread"></a>如何：暫停或插斷執行緒
 
@@ -56,4 +56,4 @@ ms.locfileid: "75936848"
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
 - [執行緒和執行緒處理](threads-and-threading.md)
-- [並行程式設計](../parallel-programming/index.md)
+- [平行編程式](../parallel-programming/index.md)

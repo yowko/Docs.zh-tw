@@ -2,18 +2,20 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 9de4a195f34b0daedcfb3687dbb36495b985092d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: cd017eb1866fff2ce8fd7a858b184351ef13e815
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775264"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588354"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
 XML 結構描述定義工具 (Xsd.exe) 可以從 XDR、XML 和 XSD 檔案或從執行階段組件的類別中，產生 XML 結構描述或 Common Language Runtime 類別。
 
 ## <a name="syntax"></a>語法
+
+從命令行運行該工具。
 
 ```console
 xsd file.xdr [-outputdir:directory][/parameters:file.xml]
@@ -24,50 +26,53 @@ xsd file.xsd {/classes | /dataset} [/element:element]
                           [/parameters:file.xml]
 xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/parameters:file.xml]
 ```
+  
+> [!TIP]
+> 對於 .NET 框架工具要正常運行,必須`Path``Include`正確`Lib`設置、和環境變數。 執行位於 \<SDK>\v2.0\Bin 目錄中的 SDKVars.bat，即可設定這些環境變數。 SDKVars.bat 必須在每一個命令提示字元中執行。
 
 ## <a name="argument"></a>引數
 
 |引數|描述|
 |--------------|-----------------|
-|*file.extension*|指定要轉換的輸入檔。 您必須將此延伸模組指定為下列其中一項： xdr、.xml、.xsd、.dll 或 .exe。<br /><br /> 如果指定 XDR 結構描述檔 (副檔名為 .xdr )，Xsd.exe 會將 XDR 結構描述轉換成 XSD 結構描述。 輸出檔有和 XDR 結構描述一樣的名稱，但是具有 .xsd 副檔名。<br /><br /> 如果指定 XML 檔 (副檔名為 .xml )，Xsd.exe 會從檔案中的資料推斷結構描述，然後產生 XSD 結構描述。 輸出檔有和 XML 檔一樣的名稱，但是具有 .xsd 副檔名。<br /><br /> 如果指定 XML 結構描述檔 (.xsd 副檔名)，Xsd.exe 會產生對應到 XML 結構描述之 Runtime 物件的原始程式碼。<br /><br /> 如果指定執行階段組件檔 (.exe 或 .dll 副檔名)，Xsd.exe 會產生該組件中一個或多個型別的結構描述。 您可以使用 `/type` 選項來指定要產生結構描述的型別。 輸出結構描述被命名為 schema0.xsd、schema1.xsd 等等。 只有在指定的型別使用 `XMLRoot` 自訂屬性來指定命名空間 (Namespace) 時，Xsd.exe 才能產生多個結構描述。|
+|*檔案副檔名*|指定要轉換的輸入檔。 必須將擴展指定為以下項之一:.xdr、.xml、.xsd、.dll 或 .exe。<br /><br /> 如果指定 XDR 結構描述檔 (副檔名為 .xdr )，Xsd.exe 會將 XDR 結構描述轉換成 XSD 結構描述。 輸出檔有和 XDR 結構描述一樣的名稱，但是具有 .xsd 副檔名。<br /><br /> 如果指定 XML 檔 (副檔名為 .xml )，Xsd.exe 會從檔案中的資料推斷結構描述，然後產生 XSD 結構描述。 輸出檔有和 XML 檔一樣的名稱，但是具有 .xsd 副檔名。<br /><br /> 如果指定 XML 結構描述檔 (.xsd 副檔名)，Xsd.exe 會產生對應到 XML 結構描述之 Runtime 物件的原始程式碼。<br /><br /> 如果指定執行階段組件檔 (.exe 或 .dll 副檔名)，Xsd.exe 會產生該組件中一個或多個型別的結構描述。 您可以使用 `/type` 選項來指定要產生結構描述的型別。 輸出結構描述被命名為 schema0.xsd、schema1.xsd 等等。 只有在指定的型別使用 `XMLRoot` 自訂屬性來指定命名空間 (Namespace) 時，Xsd.exe 才能產生多個結構描述。|
 
 ## <a name="general-options"></a>一般選項
 
 |選項|描述|
 |------------|-----------------|
-|**/h \[elp \]**|顯示工具的命令語法和選項。|
-|**/o \[utputdir \]：** _目錄_|指定輸出檔的目錄。 這個引數只可以使用一次。 預設為目前的目錄。|
+|**/h\[埃爾普\]**|顯示工具的命令語法和選項。|
+|**/o\[烏普\]特 迪爾 :**_目錄_|指定輸出檔的目錄。 這個引數只可以使用一次。 預設值是目前的目錄。|
 |**/?**|顯示工具的命令語法和選項。|
-|**/p \[arameters \]：** _file .xml_|從指定的 .xml 檔案，讀取各種作業模式的選項。 簡短形式為 `/p:`。 如需詳細資訊，請參閱[備註](#remarks)一節。|
+|**/p\[\]阿拉 米 :**_檔案.xml_|從指定的 .xml 檔案，讀取各種作業模式的選項。 簡短形式為 `/p:`。 有關詳細資訊,請參閱[備註](#remarks)部分。|
 
 ## <a name="xsd-file-options"></a>XSD 檔案選項
  您只能為 .xsd 檔指定下列其中一個選項：
 
 |選項|描述|
 |------------|-----------------|
-|**/c \[lasses \]**|產生對應到指定的結構描述的類別。 若要將 XML 資料讀入物件，請使用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> 方法。|
-|**/d \[ataset \]**|產生衍生自 <xref:System.Data.DataSet> 的類別，對應到指定的結構描述。 若要將 XML 資料讀入衍生類別，請使用 <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> 方法。|
+|**/c\[拉塞斯\]**|產生對應到指定的結構描述的類別。 若要將 XML 資料讀入物件，請使用 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> 方法。|
+|**/d\[ataset\]**|產生衍生自 <xref:System.Data.DataSet> 的類別，對應到指定的結構描述。 若要將 XML 資料讀入衍生類別，請使用 <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> 方法。|
 
  您也可以為 .xsd 檔指定下列任何選項：
 
 |選項|描述|
 |------------|-----------------|
-|**/e \[lement \]：** _元素_|指定所要產生程式碼的結構描述中的項目。 根據預設，會輸入所有項目。 您可以多次指定這個引數。|
+|**/e\[\]娛樂 :**_元素_|指定所要產生程式碼的結構描述中的項目。 根據預設，會輸入所有項目。 您可以多次指定這個引數。|
 |**/enableDataBinding**|在所有產生的型別上實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，以啟用資料繫結 (Data Binding)。 簡短形式為 `/edb`。|
-|**/enableLinqDataSet**|（簡短形式： `/eld`）。指定所產生的資料集可以使用 LINQ to DataSet 來查詢。 如果也指定了 /dataset 選項，就會使用這個選項。 如需詳細資訊，請參閱 [LINQ to DataSet 概觀](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查詢具類型資料集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 如需使用 LINQ 的一般資訊，請參閱[語言整合式查詢（linq C# ）-](../../csharp/programming-guide/concepts/linq/index.md)或[語言整合式查詢（linq）-Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)。|
-|**/f \[ields \]**|產生欄位，而不是產生屬性。 根據預設，會產生屬性。|
-|**/l \[anguage \]：** _language_|指定要使用的程式語言。 可以選擇 `CS` (C#，此為預設值)、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#)。 您也可以對實作 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的類別指定完整名稱。|
-|**/n \[amespace \]：** _命名空間_|指定產生的型別的執行階段命名空間。 預設命名空間是 `Schemas`。|
-|**/nologo**|隱藏產品啟始畫面。|
-|**/order**|在所有物件成員上產生明確順序識別項。|
-|**/o \[ut \]：** _directoryName_|指定要在其中放置檔案的輸出目錄。 預設為目前的目錄。|
-|**/u \[ri \]：** _uri_|指定所要產生程式碼的結構描述中項目的 URI。 這個 URI 如果存在，會套用到所有以 `/element` 選項指定的項目。|
+|**/enableLinqDataSet**|(短形式: `/eld`.)指定可以使用 LINQ 到資料集查詢生成的資料集。 如果也指定了 /dataset 選項，就會使用這個選項。 如需詳細資訊，請參閱 [LINQ to DataSet 概觀](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)和[查詢具類型資料集](../../../docs/framework/data/adonet/querying-typed-datasets.md)。 有關使用 LINQ 的一般資訊,請參考[語言整合查詢 (LINQ) - C#](../../csharp/programming-guide/concepts/linq/index.md)或[語言整合查詢 (LINQ) - 視覺基本](../../visual-basic/programming-guide/concepts/linq/index.md)。|
+|**/f\[埃爾德斯\]**|產生欄位，而不是產生屬性。 根據預設，會產生屬性。|
+|**/l\[\]aguage :**_語言_|指定要使用的程式語言。 可以選擇 `CS` (C#，此為預設值)、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#)。 您也可以對實作 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 的類別指定完整名稱。|
+|**/n\[amespace\]:**_命名空間_|指定產生的型別的執行階段命名空間。 預設命名空間是 `Schemas`。|
+|**/諾戈戈**|隱藏產品啟始畫面。|
+|**/訂單**|在所有物件成員上產生明確順序識別項。|
+|**/o\[\]ut :**_目錄名稱_|指定要在其中放置檔案的輸出目錄。 預設值是目前的目錄。|
+|**/u\[\]ri :**_uri_|指定所要產生程式碼的結構描述中項目的 URI。 這個 URI 如果存在，會套用到所有以 `/element` 選項指定的項目。|
 
 ## <a name="dll-and-exe-file-options"></a>DLL 和 EXE 檔案選項
 
 |選項|描述|
 |------------|-----------------|
-|**/t \[ype \]：** _typename_|指定所要建立結構描述的型別名稱。 您可以指定多個型別引數。 如果 *typename* 沒有指定命名空間，Xsd.exe 會以指定的類型比對組件中的所有類型。 如果 *typename* 指定命名空間，只有該類型會被比對。 如果 *typename* 結尾為星號字元 (\*)，則工具會比對 \* 之前以這個字串為開頭的所有類型。 如果省略 `/type` 選項，Xsd.exe 會產生組件中所有型別的結構描述。|
+|**/t\[ype\]:**_類型名稱_|指定所要建立結構描述的型別名稱。 您可以指定多個型別引數。 如果 *typename* 沒有指定命名空間，Xsd.exe 會以指定的類型比對組件中的所有類型。 如果 *typename* 指定命名空間，只有該類型會被比對。 如果 *typename* 結尾為星號字元 (\*)，則工具會比對 \* 之前以這個字串為開頭的所有類型。 如果省略 `/type` 選項，Xsd.exe 會產生組件中所有型別的結構描述。|
 
 ## <a name="remarks"></a>備註
 
@@ -79,9 +84,9 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |XML 轉換成 XSD|從 XML 檔案中產生 XML 結構描述。|
 |XSD 轉換成 DataSet|從 XSD 結構描述檔中產生 Common Language Runtime <xref:System.Data.DataSet> 類別。 產生的類別為一般 XML 資料提供了豐富的物件模型。|
 |XSD 轉換成類別|從 XSD 結構描述檔中產生執行階段類別。 產生的類別可以配合 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> 使用，以讀取和寫入遵循結構描述的 XML 程式碼。|
-|類別轉換成 XSD| 從型別或執行階段組件檔中的型別中產生 XML 結構描述。 產生的架構會定義 <xref:System.Xml.Serialization.XmlSerializer> 所使用的 XML 格式。|
+|類別轉換成 XSD| 從型別或執行階段組件檔中的型別中產生 XML 結構描述。 生成的架構定義的<xref:System.Xml.Serialization.XmlSerializer>XML 格式。|
 
- Xsd.exe 只允許您操作遵循 XML 結構描述定義 (XSD) 語言的 XML 結構描述，而這個 XSD 語言是由全球資訊網協會 (W3C) 所提出的。 如需 XML 架構定義提案或 XML 標準的詳細資訊，請參閱 <https://w3.org>。
+ Xsd.exe 只允許您操作遵循 XML 結構描述定義 (XSD) 語言的 XML 結構描述，而這個 XSD 語言是由全球資訊網協會 (W3C) 所提出的。 有關 XML 架構定義建議或 XML 標準的詳細資訊<https://w3.org>,請參閱 。
 
 ## <a name="setting-options-with-an-xml-file"></a>設定 XML 檔案的選項
 
@@ -96,7 +101,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 </xsd>
 ```
 
-如果前一個 XML 內含在名為 GenerateSchemas.xml 的檔案中，則在命令提示字元中鍵入下列命令，並按 ENTER 鍵，就可以使用 `/parameters` 參數：
+如果前面的 XML 包含在名為 GenerateSchemas.xml 的檔案中`/parameters`,則透過在指令提示符處鍵入以下內容並按**Enter**:
 
 ```console
  xsd /p:GenerateSchemas.xml
@@ -113,7 +118,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 </xsd>
 ```
 
-但是若要使用之前的程式碼，您也必須在命令提示字元中提供組件的名稱。 在命令提示字元中輸入下列命令 (假設 XML 檔案的名稱為 GenerateSchemaFromType.xml)：
+但是若要使用之前的程式碼，您也必須在命令提示字元中提供組件的名稱。 在指令提示符號輸入以下內容 (假定 XML 檔名為 GenerateSchema FromType.xml):
 
 ```console
 xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
@@ -121,7 +126,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 您只能為 `<generateSchemas>` 項目指定下列其中一個選項。
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |\<assembly>|指定要產生結構描述的組件。|
 |\<type>|指定在組件中找到的型別，以用於產生結構描述。|
@@ -140,7 +145,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
  您可以對 `<generateClasses>` 項目設定的選項包括下列各項。
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |\<element>|指定要產生程式碼之 .xsd 檔案中的項目。|
 |\<schemaImporterExtensions>|指定衍生自 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> 類別的型別。|
@@ -154,7 +159,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |namespace|指定產生之程式碼的命名空間。 命名空間必須符合 CLR 標準 (例如，沒有空白或反斜線字元)。|
 |選項|下列其中一個值：`none`、`properties` (產生屬性而非公用欄位)、`order` 或 `enableDataBinding` (請參閱先前＜XSD 檔案選項＞一節中的 `/order` 和 `/enableDataBinding` 參數)。|
 
- 您也可以使用 `DataSet` 項目，控制產生 `<generateDataSet>` 程式碼的方法。 下列 XML 會指定產生的程式碼會使用 `DataSet` 結構（例如 <xref:System.Data.DataTable> 類別）來建立所指定專案的 Visual Basic 程式碼。 所產生的 DataSet 結構將會支援 LINQ 查詢。
+ 您也可以使用 `DataSet` 項目，控制產生 `<generateDataSet>` 程式碼的方法。 以下 XML 指定生成的`DataSet`代碼使用結構<xref:System.Data.DataTable>(如類)為指定元素創建 Visual Basic 代碼。 所產生的 DataSet 結構將會支援 LINQ 查詢。
 
  ```xml
  <xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>
@@ -165,7 +170,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 您可以對 `<generateDataSet>` 項目設定的選項包括下列各項。
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |\<schema>|指定用於產生程式碼的 XML 結構描述檔案。 多個 XML 結構描述檔案可以使用多個 \<schema> 元素指定。|
 
@@ -220,13 +225,13 @@ xsd /dataset /language:CS XSDSchemaFile.xsd
 xsd myAssembly.dll
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Data.DataSet>
 - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
 - [工具](../../../docs/framework/tools/index.md)
-- [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+- [指令提示](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [LINQ to DataSet 概觀](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
 - [查詢具類型資料集](../../../docs/framework/data/adonet/querying-typed-datasets.md)
-- [LINQ （語言整合式查詢）（C#）](../../csharp/programming-guide/concepts/linq/index.md)
-- [LINQ （語言整合式查詢）（Visual Basic）](../../visual-basic/programming-guide/concepts/linq/index.md)
+- [LINQ(語言整合查詢)(C#)](../../csharp/programming-guide/concepts/linq/index.md)
+- [LINQ(語言整合查詢-視覺基礎)](../../visual-basic/programming-guide/concepts/linq/index.md)

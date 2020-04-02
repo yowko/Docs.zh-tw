@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e9b4510757fc0f98b2edfbe1c656cdb5f6bce72
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138212"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588640"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ 中的順序保留
 在 PLINQ 中，目標是在達到最佳效能的同時維持正確性。 查詢應以最快的速度執行，但仍應產生正確的結果。 在某些情況下，需要保留來源序列的順序以保持正確性；不過，排序可能需要大量計算。 因此，根據預設，PLINQ 不會保留來源序列的順序。 在這方面，PLINQ 類似於 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)]，但是有別於會保留順序的 LINQ to Objects。  
@@ -122,5 +122,5 @@ ms.locfileid: "73138212"
   
 ## <a name="see-also"></a>另請參閱
 
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
-- [並行程式設計](../../../docs/standard/parallel-programming/index.md)
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [平行編程式](../../../docs/standard/parallel-programming/index.md)

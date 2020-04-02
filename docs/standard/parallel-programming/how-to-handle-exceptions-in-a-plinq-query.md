@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to handle exceptions
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
-ms.openlocfilehash: 3645f5dc470ef53710aa7f4c78c60431fb27ecfa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ccddfb01d6b173900dfffc465292c7812626ddc
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123096"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587980"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>如何：處理 PLINQ 查詢中的例外狀況
 
@@ -53,4 +53,4 @@ ms.locfileid: "73123096"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.ParallelEnumerable>
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: 1004a2f9a0594d9150d147dec1e16b56205e0d13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc590d712a49ea27fcc61181e0b8c9b3349e74e5
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711398"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588331"
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合類型
 集合類型是資料集合 (例如雜湊表、佇列、堆疊、封包、字典和清單) 最常見的一些呈現方式。  
@@ -28,7 +28,7 @@ ms.locfileid: "75711398"
   
  集合會視儲存項目、排序項目、執行搜尋以及進行比較等方式，而有所不同。 <xref:System.Collections.Queue> 類別和 <xref:System.Collections.Generic.Queue%601> 泛型類別提供先進先出清單，而 <xref:System.Collections.Stack> 類別和 <xref:System.Collections.Generic.Stack%601> 泛型類別則提供後進先出清單。 <xref:System.Collections.SortedList> 類別和 <xref:System.Collections.Generic.SortedList%602> 泛型類別提供排序版本的 <xref:System.Collections.Hashtable> 類別與 <xref:System.Collections.Generic.Dictionary%602> 泛型類別。 <xref:System.Collections.Hashtable> 或 <xref:System.Collections.Generic.Dictionary%602> 的項目只能依項目的索引鍵加以存取，但 <xref:System.Collections.SortedList> 或 <xref:System.Collections.ObjectModel.KeyedCollection%602> 的項目則可依項目的索引鍵或索引加以存取。 所有集合中的索引都以零起始，<xref:System.Array> 除外，它能允許不是以零起始的陣列。  
   
- 只要物件類型實作 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 介面，LINQ to Objects 功能就可讓您使用 LINQ 查詢以存取記憶體內的物件。 LINQ 查詢提供一般模式以存取資料，比標準的 `foreach` 迴圈 (Loop) 更精簡、可讀性更高，並提供篩選、排序和群組功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) 和 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
+ 只要物件類型實作 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 介面，LINQ to Objects 功能就可讓您使用 LINQ 查詢以存取記憶體內的物件。 LINQ 查詢提供一般模式以存取資料，比標準的 `foreach` 迴圈 (Loop) 更精簡、可讀性更高，並提供篩選、排序和群組功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) 和 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)。  
   
 ## <a name="related-topics"></a>相關主題  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-ms.openlocfilehash: 665490601cad9ccd7881042aed576b95bbc07115
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7189c478e132a41971a364b833f0fabda6ff84d4
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139724"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588403"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>如何：使用 Parallel.Invoke 執行平行作業
 
@@ -38,6 +38,6 @@ ms.locfileid: "73139724"
 
 ## <a name="see-also"></a>另請參閱
 
-- [並行程式設計](../../../docs/standard/parallel-programming/index.md)
+- [平行編程式](../../../docs/standard/parallel-programming/index.md)
 - [如何：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

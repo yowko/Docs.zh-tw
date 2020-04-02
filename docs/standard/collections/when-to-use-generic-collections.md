@@ -6,12 +6,12 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: 7d59259c1cab6842ef62888bf5326225394d8d44
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 131787c30e5249111f86f2793981e2b75e8f3862
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711203"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588536"
 ---
 # <a name="when-to-use-generic-collections"></a>何時使用泛型集合
 通常建議使用泛型集合，因為這樣可以得到類型安全的立即好處，而無須衍生自基底集合類型同時實作類型專屬的成員。 當集合元素為實值類型時，泛型集合類型也通常會優於對應的非泛型集合類型 (且優於衍生自非泛型基底集合類型的類型)，因為有了泛型，就不需要對這些元素進行 box。  
@@ -44,7 +44,7 @@ ms.locfileid: "75711203"
 - <xref:System.Collections.Concurrent.ConcurrentBag%601> 提供未排序項目的快速插入和移除。  
   
 ## <a name="linq-to-objects"></a>LINQ to Objects  
- 只要物件類型實作 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 介面，LINQ to Objects 功能就可讓您使用 LINQ 查詢以存取記憶體中的物件。 LINQ 查詢提供一般模式以存取資料，比標準的 `foreach` 迴圈 (Loop) 更精簡、可讀性更高，並提供篩選、排序和群組功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) 和 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)。  
+ 只要物件類型實作 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 介面，LINQ to Objects 功能就可讓您使用 LINQ 查詢以存取記憶體中的物件。 LINQ 查詢提供一般模式以存取資料，比標準的 `foreach` 迴圈 (Loop) 更精簡、可讀性更高，並提供篩選、排序和群組功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) 和 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)。  
   
 ## <a name="additional-functionality"></a>其他功能  
  某些泛型類型具有非泛型集合類型中找不到的功能。 例如， <xref:System.Collections.Generic.List%601> 類別 (對應至非泛型 <xref:System.Collections.ArrayList> 類別) 有許多接受泛型委派的方法，例如 <xref:System.Predicate%601> 委派 (允許您指定方法來搜尋清單)、 <xref:System.Action%601> 委派 (代表對清單每個項目採取動作的方法)，以及 <xref:System.Converter%602> 委派 (可定義類型之間的轉換)。  

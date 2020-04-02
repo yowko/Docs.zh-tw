@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 339365381b1fa2c777cead3c75bfe783f7af800e
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139867"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588278"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>逐步解說：建立資料流程管線
 雖然您可以使用 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>、<xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> 方法從來源區塊接收訊息，但是也可以將訊息區連接起來，形成「資料流程管線」**。 資料流程管線是一系列的元件，或稱為「資料流程區塊」**，各個元件分別執行一項特定工作，以便共同完成整體目標。 資料流程管線中的每個資料流程區塊會在收到來自其他資料流程區塊的訊息時，開始執行工作。 以汽車製造的裝配線做比喻。 當每輛汽車通過裝配線時，某一站會組裝車架，下一站會安裝引擎，以此類推。 由於裝配線能夠同時組裝多輛車，因此裝配線的生產量會優於一次將一輛車從頭到尾組裝完成的生產量。
@@ -34,7 +34,7 @@ ms.locfileid: "73139867"
   
 6. 等候管線完成所有工作。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>Prerequisites  
  在開始進行這個逐步解說之前，請先閱讀[資料流程](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)。  
   
 ## <a name="creating-a-console-application"></a>建立主控台應用程式  
@@ -104,7 +104,7 @@ ms.locfileid: "73139867"
 ## <a name="next-steps"></a>後續步驟  
  這個範例會藉由資料流程管線傳送要處理的 URL。 如果您透過管線傳送多個輸入值，則可以在應用程式中引入某種形式的平行處理原則，這種形式類似組件汽車工廠內零件移動的流程。 當管線中的第一個成員將其結果傳送給第二個成員時，可以在第二個成員處理第一個結果時平行處理另一個項目。  
   
- 使用資料流程管線達成的平行處理原則稱為「粗略平行處理原則」**(Coarse-grained Parallelism)，因為它通常包含數量較少的大型工作。 您也可以在資料流程管線中使用「精細平行處理原則」**(Fine-grained Parallelism) 來處理一些較小且執行時間較短的工作。 在這個範例中，管線的 `findReversedWords` 成員會使用 [PLINQ](parallel-linq-plinq.md) 來平行處理工作清單中的多個項目。 在粗略管線中使用精細平行處理原則可以改善整體生產量。  
+ 使用資料流程管線達成的平行處理原則稱為「粗略平行處理原則」**(Coarse-grained Parallelism)，因為它通常包含數量較少的大型工作。 您也可以在資料流程管線中使用「精細平行處理原則」**(Fine-grained Parallelism) 來處理一些較小且執行時間較短的工作。 在這個範例中，管線的 `findReversedWords` 成員會使用 [PLINQ](introduction-to-plinq.md) 來平行處理工作清單中的多個項目。 在粗略管線中使用精細平行處理原則可以改善整體生產量。  
   
  您也可以將來源資料流程區塊連接到多個目標區塊，藉此建立「資料流程網路」**。 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> 方法的多載版本採用 <xref:System.Predicate%601> 物件定義目標區塊是否依據其值接受每個訊息。 大部分做為來源的資料流程區塊類型都會依照連接的順序，對所有連接的目標區塊提供訊息，直到其中一個區塊接受該訊息為止。 使用這個篩選機制就可以建立連接資料流程區塊的系統，透過不同的路徑導引不同的資料。 如需使用篩選來建立資料流程網路的範例，請參閱[逐步解說：在 Windows Forms 應用程式中使用資料流程](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)。  
   

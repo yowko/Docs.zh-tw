@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 623466e0e960ea991ae92e5de432171b70bad1d2
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74203992"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588625"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ 中的合併選項
 當查詢平行執行時，PLINQ 會分割來源序列，讓多個執行緒可以在不同的組件上同時工作，通常是在個別的執行緒上。 如果結果是在一個執行緒上使用，例如在 `foreach` (Visual Basic 中的 `For Each`) 迴圈中，則必須將每個執行緒中的結果合併回單一序列。 PLINQ 執行的合併類型，取決於存在查詢中的運算子。 比方說，對結果強制執行新順序的運算子，必須緩衝所有執行緒中的所有元素。 就使用執行緒的角度而言 (也是應用程式使用者的觀點)，完整緩衝的查詢在產生其第一個結果前可能會執行不算短的一段時間。 其他運算子預設會部分進行緩衝；會批次產生其結果。 有一個運算子 (<xref:System.Linq.ParallelEnumerable.ForAll%2A>) 預設不會進行緩衝。 它會立即產生所有執行緒中的所有元素。  
@@ -32,7 +32,7 @@ ms.locfileid: "74203992"
   
 - `Not Buffered`  
   
-     <xref:System.Linq.ParallelMergeOptions.NotBuffered> 選項會讓每個處理過的元素一產生就從每個執行緒傳回。 此行為類似「串流處理」輸出。 如果 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 運算子存在查詢中，`NotBuffered` 會保留來源元素的順序。 儘管在`NotBuffered`結果可用時就開始生成結果，但生成所有結果的總時間可能仍比使用其他合併選項之一長。  
+     <xref:System.Linq.ParallelMergeOptions.NotBuffered> 選項會讓每個處理過的元素一產生就從每個執行緒傳回。 此行為類似「串流處理」輸出。 如果 <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 運算子存在查詢中，`NotBuffered` 會保留來源元素的順序。 儘管在`NotBuffered`結果可用時就開始生成結果,但生成所有結果的總時間可能仍比使用其他合併選項之一長。  
   
 - `Auto Buffered`  
   
@@ -65,5 +65,5 @@ ms.locfileid: "74203992"
   
 ## <a name="see-also"></a>另請參閱
 
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [操作說明：在 PLINQ 中指定合併選項](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

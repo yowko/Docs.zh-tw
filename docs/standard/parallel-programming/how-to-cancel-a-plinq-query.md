@@ -9,12 +9,12 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: 272f25d62cb63c60209be3bc54dc5e76fb30df54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b34f0c1785c1a1c007db97f04c799a4b4bd0f8f
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134222"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588566"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>如何：取消 PLINQ 查詢
 下列範例說明取消 PLINQ 查詢的兩種方式。 第一個範例示範如何取消大部分由資料周遊所組成的查詢。 第二個範例示範如何取消包含需要大量計算之使用者函式的查詢。
@@ -53,5 +53,5 @@ PLINQ 架構不會將單一 <xref:System.OperationCanceledException> 累計到 <
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.ParallelEnumerable>
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [Managed 執行緒中的取消作業](../../../docs/standard/threading/cancellation-in-managed-threads.md)

@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: dotnet 發佈命令將 .NET Core 專案或解決方案發佈到目錄。
 ms.date: 02/24/2020
-ms.openlocfilehash: 7e57a7b3cfe72653cc64c90055735795e4616260
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523762"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588273"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -38,7 +38,23 @@ dotnet publish [-h|--help]
 - 一個 *.runtimeconfig.json*檔,用於指定應用程式期望的共用運行時以及運行時的其他配置選項(例如,垃圾回收類型)。
 - 應用程式的相依性，這些相依性會從 NuGet 快取複製到輸出資料夾。
 
-`dotnet publish`　命令的輸出已準備好部署到裝載系統 (例如伺服器、電腦、Mac、膝上型電腦) 以供執行。 這是準備應用程式以供部署的唯一正式支援的方法。 根據專案指定的部署類型，主機系統上可能會安裝 (或不安裝) .NET Core 共用執行階段。
+`dotnet publish`　命令的輸出已準備好部署到裝載系統 (例如伺服器、電腦、Mac、膝上型電腦) 以供執行。 這是準備應用程式以供部署的唯一正式支援的方法。 根據專案指定的部署類型，主機系統上可能會安裝 (或不安裝) .NET Core 共用執行階段。 有關詳細資訊,請參閱發佈[.NET 核心應用 ,以及 .NET 核心 CLI](../deploying/deploy-with-cli.md)。
+
+### <a name="msbuild"></a>MSBuild
+
+`dotnet publish` 命令會呼叫 MSBuild，這會叫用 `Publish` 目標。 所有傳遞給 `dotnet publish` 的參數都會傳遞給 MSBuild。 `-c` 和 `-o` 參數會分別對應至 MSBuild 的 `Configuration` 和 `OutputPath` 屬性。
+
+該`dotnet publish`指令接受 MSBuild`-p`選項,`-l`例如用於設定屬性 和定義記錄器。 例如,可以使用: 設定 MSBuild 屬性`-p:<NAME>=<VALUE>`。 還可以透過參考 *.pubxml*檔來設定與發佈相關的屬性,例如:
+
+```dotnetcli
+dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+```
+
+如需詳細資訊，請參閱下列資源：
+
+- [MSBuild 指令列參考](/visualstudio/msbuild/msbuild-command-line-reference)
+- [視覺化工作室發佈設定檔 (.pubxml) ASP.NET核心應用部署](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
+- [dotnet msbuild](dotnet-msbuild.md)
 
 ## <a name="arguments"></a>引數
 
@@ -112,7 +128,9 @@ dotnet publish [-h|--help]
 
 - **`--self-contained [true|false]`**
 
-  使用您的應用程式發行 .NET Core 執行階段，讓目標電腦不需要安裝執行階段。 預設值為`true`指定運行時識別碼。 有關詳細資訊,請參閱[.NET 核心應用程式發佈](../deploying/index.md)和[發佈 .NET 核心應用程式與 .NET 核心 CLI](../deploying/deploy-with-cli.md)。
+  使用您的應用程式發行 .NET Core 執行階段，讓目標電腦不需要安裝執行階段。 預設值是`true`指定運行時識別碼,並且專案是可執行專案(不是庫專案)。 有關詳細資訊,請參閱[.NET 核心應用程式發佈](../deploying/index.md)和[發佈 .NET 核心應用程式與 .NET 核心 CLI](../deploying/deploy-with-cli.md)。
+
+  如果使用這個選項不指定`true``false`或 ,則預設`true`值為 。 在這種情況下,不要立即將解決方案或專案參數放在`--self-contained`之後,`true`因為`false`或預期處於該位置。
 
 - **`--no-self-contained`**
 
@@ -182,3 +200,6 @@ dotnet publish [-h|--help]
 - [執行時識別器 (RID) 目錄](../rid-catalog.md)
 - [使用 macOS Catalina 公證](../install/macos-notarization-issues.md)
 - [已發布應用程式的目錄結構](/aspnet/core/hosting/directory-structure)
+- [MSBuild 指令列參考](/visualstudio/msbuild/msbuild-command-line-reference)
+- [視覺化工作室發佈設定檔 (.pubxml) ASP.NET核心應用部署](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
+- [dotnet msbuild](dotnet-msbuild.md)

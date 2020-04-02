@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use execution mode
 ms.assetid: e52ff26c-c5d3-4fab-9fec-c937fb387963
-ms.openlocfilehash: c602aba6e18f80b007b15cd61dfd2b48a36dd2c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6ef813937b731b417be31e189d89b81cccc75280
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139248"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588542"
 ---
 # <a name="how-to-specify-the-execution-mode-in-plinq"></a>如何：在 PLINQ 中指定執行模式
 這個範例示範如何強制 PLINQ 略過其預設啟發學習法並以平行方式處理查詢，而不考慮查詢的種類。  
@@ -33,4 +33,4 @@ ms.locfileid: "73139248"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.ParallelEnumerable.AsSequential%2A>
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

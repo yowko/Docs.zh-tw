@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: 90afc767e422515c6122b8a6ef0e63ffc07caf3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de33561e2ef8e8fe62e8179272abe8adfffecd6f
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73091374"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587764"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>如何：使用 PLINQ 逐一查看檔案目錄
 此範例示範兩個簡單的方式來平行處理檔案目錄的作業。 第一個查詢使用 <xref:System.IO.Directory.GetFiles%2A> 方法來填入目錄和所有子目錄中的檔案名稱陣列。 這個方法在整個陣列填入之前不會傳回，因此在作業開始時可能會延遲。 不過，在填入陣列之後，PLINQ 可以平行方式非常快速地處理它。  
@@ -36,4 +36,4 @@ ms.locfileid: "73091374"
   
 ## <a name="see-also"></a>另請參閱
 
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

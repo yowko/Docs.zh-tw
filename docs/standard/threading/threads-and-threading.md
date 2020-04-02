@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: ad36789579b95e0129e402765194b9f5e45a4cc1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e29c131f8459179d0641ac9a0cb8234fbba0e7d0
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127509"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588435"
 ---
 # <a name="threads-and-threading"></a>執行緒與執行緒處理
 
@@ -23,9 +23,9 @@ ms.locfileid: "73127509"
 「處理序」** 是正在執行的程式。 作業系統使用處理序來分隔正在執行的應用程式。 「執行緒」** 是要作業系統配置處理器時間的基本單位。 每個執行緒都有[排程優先順序](scheduling-threads.md)，並保有系統在執行緒執行暫停時用來儲存執行緒內容的一組結構。 執行緒內容包括執行緒順暢繼續執行所需的所有資訊，包括執行緒的一組 CPU 暫存器和堆疊。 多個執行緒可在一個處理序中執行。 一個處理序的所有執行緒都共用該處理序的虛擬位址空間。 執行緒可以執行任一部分的程式碼，包括另一個執行緒目前正在執行的部分。
 
 > [!NOTE]
-> .NET Framework 提供使用「應用程式定義域」** 來隔離處理序內應用程式的方式  （應用程式域在 .NET Core 上不可用。有關詳細資訊，請參閱[應用程式域](../../framework/app-domains/application-domains.md)一文[中的應用程式域和執行緒](../../framework/app-domains/application-domains.md#application-domains-and-threads)部分。
+> .NET Framework 提供使用「應用程式定義域」** 來隔離處理序內應用程式的方式  (應用程式域在 .NET Core 上不可用。有關詳細資訊,請參閱[應用程式域](../../framework/app-domains/application-domains.md)一文[中的應用程序域和線程](../../framework/app-domains/application-domains.md#application-domains-and-threads)部分。
 
-根據預設，.NET 程式會從單一執行緒開始，通常稱為「主」** 執行緒。 不過，它可以建立額外的執行緒與主執行緒平行或同時執行程式碼。 這些執行緒通常稱為*輔助執行緒*。
+根據預設，.NET 程式會從單一執行緒開始，通常稱為「主」** 執行緒。 不過，它可以建立額外的執行緒與主執行緒平行或同時執行程式碼。 這些緒通常是*輔助線程*。
 
 ## <a name="when-to-use-multiple-threads"></a>使用多執行緒的時機
 
@@ -37,7 +37,7 @@ ms.locfileid: "73127509"
 
 ## <a name="how-to-use-multithreading-in-net"></a>如何在 .NET 中使用多執行緒處理。
 
-從 .NET Framework 4 開始，建議使用[工作平行程式庫 (TPL)](../parallel-programming/task-parallel-library-tpl.md) 和[平行 LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md) 來利用多執行緒處理。 如需詳細資訊，請參閱[平行程式設計](../parallel-programming/index.md)。
+從 .NET Framework 4 開始，建議使用[工作平行程式庫 (TPL)](../parallel-programming/task-parallel-library-tpl.md) 和[平行 LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md) 來利用多執行緒處理。 如需詳細資訊，請參閱[平行程式設計](../parallel-programming/index.md)。
 
 TPL 和 PLINQ 都憑藉 <xref:System.Threading.ThreadPool> 執行緒來運作。 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 類別會為 .NET 應用程式提供背景工作執行緒集區。 您也可以使用執行緒集區執行緒。 如需詳細資訊，請參閱[受控執行緒集區](the-managed-thread-pool.md)。
 

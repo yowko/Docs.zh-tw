@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-ms.openlocfilehash: 3ddc0c013335e6a7b4708a5dd8be0b2247b2f60c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44f40d6caad9187376a790f9a0ed09e22c861e37
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74716259"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588592"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ 的潛在陷阱
 
@@ -23,13 +23,13 @@ ms.locfileid: "74716259"
 
 有時平行處理會導致 PLINQ 查詢的執行速度比其 LINQ to Objects 對等項慢。 基本的經驗法則是，來源元素不多且使用者委派速度很快的查詢不太可能加快多少速度。 不過，因為效能牽涉到許多因素，建議您先測量實際的結果後再決定是否要使用 PLINQ。 如需詳細資訊，請參閱[認識 PLINQ 中的加速](understanding-speedup-in-plinq.md)。
 
-## <a name="avoid-writing-to-shared-memory-locations"></a>避免寫入共用記憶體位置
+## <a name="avoid-writing-to-shared-memory-locations"></a>避免寫入分享記憶體位置
 
 循序程式碼經常會讀取或寫入靜態變數或類別欄位。 不過，每當有多個執行緒同時存取這類變數時，就很可能產生競爭情形。 即便您可以使用鎖定來同步處理變數的存取，同步處理的成本也會減損效能。 因此，建議您盡可能避免在 PLINQ 查詢中存取共用狀態，或至少做出限制。
 
 ## <a name="avoid-over-parallelization"></a>避免過度並行化
 
-通過使用 方法`AsParallel`，會產生分區源集合和同步工作執行緒的開銷成本。 電腦上的處理器數目則會進一步限制平行處理的好處。 多個計算繫結執行緒若只在一個處理器上執行，系統並不會獲得任何加速效果。 因此，您必須注意不要過度平行處理查詢。
+通過使用方法`AsParallel`,會產生分區源集合和同步工作線程的開銷成本。 電腦上的處理器數目則會進一步限制平行處理的好處。 多個計算繫結執行緒若只在一個處理器上執行，系統並不會獲得任何加速效果。 因此，您必須注意不要過度平行處理查詢。
 
 最常發生過度平行處理的情況是在巢狀查詢中，如下列程式碼片段所示。
 
@@ -46,7 +46,7 @@ ms.locfileid: "74716259"
 
 在上述所有情況下，若要判斷最佳的查詢形狀，最好的方式是測試和測量。 如需詳細資訊，請參閱[如何：測量 PLINQ 查詢效能](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)。
 
-## <a name="avoid-calls-to-non-thread-safe-methods"></a>避免調用非執行緒安全方法
+## <a name="avoid-calls-to-non-thread-safe-methods"></a>避免呼叫非線程安全方法
 
 從 PLINQ 查詢寫入到非安全執行緒執行個體方法的作業，可能會導致資料損毀，而您的程式不一定會偵測到。 這樣的作業也可能會導致例外狀況。 在下列範例中，多個執行緒會嘗試同時呼叫 `FileStream.Write` 方法，但該類別並不支援這麼做。
 
@@ -60,7 +60,7 @@ FileStream fs = File.OpenWrite(...);
 a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
 ```
 
-## <a name="limit-calls-to-thread-safe-methods"></a>限制對執行緒安全方法的調用
+## <a name="limit-calls-to-thread-safe-methods"></a>限制對線程安全方法的呼叫
 
 .NET Framework 中的大部分靜態方法都是安全執行緒，並可從多個執行緒同時呼叫。 不過，即使在這些情況下，所牽涉到的同步處理作業也可能會導致查詢速度顯著變慢。
 
@@ -71,19 +71,19 @@ a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
 
 當 PLINQ 以平行方式執行查詢時，它會將來源序列分割成可在多個執行緒同時運作的分割區。 根據預設，處理分割區和傳送結果的順序是無法預測的 (除了 `OrderBy` 之類的運算子以外)。 您可以指示 PLINQ 保留任一來源序列的順序，但這對效能有負面影響。 可能的話，最佳做法是建構查詢，讓它們不會依賴順序保留。 如需詳細資訊，請參閱 [PLINQ 中的順序保留](order-preservation-in-plinq.md)。
 
-## <a name="prefer-forall-to-foreach-when-it-is-possible"></a>盡可能選擇"一切"，選擇"為每個人"
+## <a name="prefer-forall-to-foreach-when-it-is-possible"></a>盡可能選擇"一切",選擇"為每個人"
 
 雖然 PLINQ 會在多個執行緒上執行查詢，如果您在 `foreach` 迴圈 (Visual Basic 中的 `For Each`) 中使用結果，則必須將查詢結果合併回一個執行緒，並由列舉程式依序存取。 在某些情況下，這是無法避免的；不過，您應該盡可能使用 `ForAll` 方法讓每個執行緒輸出其結果，例如，透過寫入安全執行緒集合 (例如 <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>)。
 
-同樣的問題也適用于<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>。 換句話說，`source.AsParallel().Where().ForAll(...)`應強烈傾向于`Parallel.ForEach(source.AsParallel().Where(), ...)`。
+同樣的問題也適用於<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>。 換句話說,`source.AsParallel().Where().ForAll(...)`應強烈`Parallel.ForEach(source.AsParallel().Where(), ...)`傾向於 。
 
-## <a name="be-aware-of-thread-affinity-issues"></a>注意執行緒關聯問題
+## <a name="be-aware-of-thread-affinity-issues"></a>注意線程關聯問題
 
-有些技術 (例如，適用於單一執行緒 Apartment (STA) 元件、Windows Forms 和 Windows Presentation Foundation (WPF) 的 COM 互通性) 會施加執行緒相似性限制，以要求程式碼在特定執行緒上執行。 例如，在 Windows Forms 和 WPF 中，只有用來建立控制項的執行緒能夠存取該控制項。 如果您嘗試存取 PLINQ 查詢中 Windows Forms 控制項的共用狀態，在偵錯工具中執行時會引發例外狀況。 （此設置可以關閉。但是，如果在 UI 執行緒上使用查詢，則可以從枚舉查詢結果的`foreach`逐一查看控制項，因為該代碼只在一個執行緒上執行。
+有些技術 (例如，適用於單一執行緒 Apartment (STA) 元件、Windows Forms 和 Windows Presentation Foundation (WPF) 的 COM 互通性) 會施加執行緒相似性限制，以要求程式碼在特定執行緒上執行。 例如，在 Windows Forms 和 WPF 中，只有用來建立控制項的執行緒能夠存取該控制項。 如果您嘗試存取 PLINQ 查詢中 Windows Forms 控制項的共用狀態，在偵錯工具中執行時會引發例外狀況。 (此設置可以關閉。但是,如果在 UI 線程上使用查詢,則可以從枚舉查詢`foreach`結果的 循環訪問控制件,因為該代碼只在一個線程上執行。
 
-## <a name="dont-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>不要假定 ForEach、for 和 ForAll 的反覆運算始終並存執行
+## <a name="dont-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>不要假定 ForEach、for 和 ForAll 的迭代始終並行執行
 
-請務必記住，<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>在 、<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>或<xref:System.Linq.ParallelEnumerable.ForAll%2A>迴圈中的單個反覆運算可能但不必須並存執行。 因此，您所撰寫的程式碼不應依靠系統是否有正確地平行執行反覆項目，也不應依靠系統是否有正確地以特定順序執行反覆項目。
+請務必記住,<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>在<xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType><xref:System.Linq.ParallelEnumerable.ForAll%2A>、 或迴圈中的單個反覆運算可能但不必須並行執行。 因此，您所撰寫的程式碼不應依靠系統是否有正確地平行執行反覆項目，也不應依靠系統是否有正確地以特定順序執行反覆項目。
 
 例如，下列程式碼有可能會發生死結︰
 
@@ -123,4 +123,4 @@ Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll((j) =>
 
 ## <a name="see-also"></a>另請參閱
 
-- [平行 LINQ (PLINQ)](parallel-linq-plinq.md)
+- [平行 LINQ (PLINQ)](introduction-to-plinq.md)

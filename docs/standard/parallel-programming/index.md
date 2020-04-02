@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
-ms.openlocfilehash: ae129ef0cb2b331c1eb0220282f21fec6f6fb77d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 75f5ded48acfb82b0327ead3880ee23e6ef4bc2f
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134152"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588156"
 ---
 # <a name="parallel-programming-in-net"></a>.NET 的平行程式設計
 
@@ -27,7 +27,7 @@ ms.locfileid: "73134152"
 |技術|描述|
 |----------------|-----------------|
 |[工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|提供 <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> 類別 (包含平行版本的 `For` 和 `ForEach` 迴圈) 及 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別 (表示表達非同步作業較好的方式) 的文件。|
-|[平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|平行實作的 LINQ to Objects，在許多情節中可大幅改善效能。|
+|[平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)|平行實作的 LINQ to Objects，在許多情節中可大幅改善效能。|
 |[適用於平行程式設計的資料結構](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|提供安全執行緒集合類別、輕量型同步處理類型和延遲初始設定類型的文件連結。|
 |[平行診斷工具](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|提供工作與平行堆疊的 Visual Studio 偵錯工具視窗文件連結，以及[並行視覺化工具](/visualstudio/profiling/concurrency-visualizer)的連結。|
 |[PLINQ 和 TPL 的自訂 Partitioner](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|說明 Partitioner 的運作方式，以及如何設定預設 Partitioner 或建立新的 Partitioner。|
@@ -38,4 +38,4 @@ ms.locfileid: "73134152"
 ## <a name="see-also"></a>另請參閱
 
 - [非同步總覽](../async.md)
-- [受控執行緒處理](../threading/index.md)
+- [託管線程](../threading/index.md)

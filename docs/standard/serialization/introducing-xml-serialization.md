@@ -1,5 +1,5 @@
 ---
-title: XML 序列化簡介
+title: XML 序列化詳細資訊
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: b1d91306c9cc9788046d19cc5de9e4712cdaa7e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d644e80cbf5ac17fca4df039d915c847a1936217
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772542"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588447"
 ---
-# <a name="introducing-xml-serialization"></a>XML 序列化簡介
+# <a name="xml-serialization"></a>XML 序列化
 
 序列化是將物件轉換成可輕易傳輸之形式的程序。 例如，您可序列化物件並透過網際網路以 HTTP 在用戶端與伺服器之間傳輸。 另一方面，還原序列化從資料流重建物件。
 
@@ -28,7 +28,7 @@ ms.locfileid: "67772542"
 > [!NOTE]
 > XML 序列化不會轉換方法、索引子、私用欄位或唯讀屬性 (唯讀集合除外)。 若要序列化物件的所有欄位與屬性，無論是公用或私用，請使用 <xref:System.Runtime.Serialization.DataContractSerializer>，而非 XML 序列化。
 
- XML 序列化的核心類別為 <xref:System.Xml.Serialization.XmlSerializer> 類別，此類別中最重要的方法為**序列化**和**還原序列化**方法。 <xref:System.Xml.Serialization.XmlSerializer> 建立 C# 檔案並將它們編譯成為 .dll 檔案以執行此序列化。 在 .NET Framework 2.0 中，[XML 序列化程式產生器工具 (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) 的設計是用來預先產生要與您應用程式一起部署的這些序列化組件，並改善啟動效能。 產生的 XML 資料流**XmlSerializer** World Wide Web Consortium (W3C) 符合[XML 結構描述定義語言 (XSD) 1.0 建議](https://www.w3.org/TR/xslt)。 此外，產生的資料型別是符合規範與文件標題為 「 XML 結構描述第 2 部分：資料類型。 」
+ XML 序列化的核心類別為 <xref:System.Xml.Serialization.XmlSerializer> 類別，此類別中最重要的方法為**序列化**和**還原序列化**方法。 <xref:System.Xml.Serialization.XmlSerializer> 建立 C# 檔案並將它們編譯成為 .dll 檔案以執行此序列化。 在 .NET Framework 2.0 中，[XML 序列化程式產生器工具 (Sgen.exe)](xml-serializer-generator-tool-sgen-exe.md) 的設計是用來預先產生要與您應用程式一起部署的這些序列化組件，並改善啟動效能。 **XmlSerializer**產生的XML串流符合萬維網聯盟 (W3C) [XML 架構定義語言 (XSD) 1.0 建議](https://www.w3.org/TR/xslt)。 除此之外，產生的資料型別符合＜XML Schema Part 2: Datatypes＞文件的規範。
 
  您物件中的資料是用程式語言來描述的，該程式語言會建構如類別、欄位、屬性、基本類型、陣列，甚至是以 **XmlElement** 或 **XmlAttribute** 物件為格式的內嵌 XML。 您可以選擇以屬性註解建立自己的類別，或使用 XML 結構描述定義工具來依據現有 XML 結構描述產生類別。
 
@@ -36,13 +36,13 @@ ms.locfileid: "67772542"
 
  屬性會控制 **XmlSerializer** 類別產生的 XML 資料流，允許您設定 XML 資料流的 XML 命名空間、項目名稱、屬性名稱等等。 如需這些屬性的詳細資訊以及它們控制 XML 序列化的方式，請參閱[使用屬性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)。 如需控制產生的 XML 所用的那些屬性資料表，請參閱[控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)。
 
- **XmlSerializer** 類別可更進一步序列化物件並且產生編碼的 SOAP XML 資料流。 產生的 XML 符合全球資訊網協會之＜Simple Object Access Protocol (SOAP) 1.1＞文件中的第 5 節。 如需有關此程序的詳細資訊，請參閱[How to:物件序列化為 SOAP 編碼的 XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)。 如需控制產生之 XML 的屬性資料表，請參閱[控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)。
+ **XmlSerializer** 類別可更進一步序列化物件並且產生編碼的 SOAP XML 資料流。 產生的 XML 符合全球資訊網協會之＜Simple Object Access Protocol (SOAP) 1.1＞文件中的第 5 節。 如需此程序的詳細資訊，請參閱[如何：將物件序列化為 SOAP 編碼的 XML 資料流](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)。 如需控制產生之 XML 的屬性資料表，請參閱[控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)。
 
- **XmlSerializer** 類別產生 XML Web 服務所建立以及傳遞的 SOAP 訊息。 若要控制 SOAP 訊息，可套用屬性至類別、傳回值、參數以及 XML Web 服務檔案 (.asmx) 中的欄位。 您可使用列在＜控制 XML 序列化的屬性＞和＜控制編碼 SOAP 序列化的屬性＞中的屬性，因為 XML Web 服務可使用常值或編碼的 SOAP 樣式。 如需使用屬性控制 XML Web 服務產生之 XML 的詳細資訊，請參閱[以 XML Web 服務進行 XML 序列化](xml-serialization-with-xml-web-services.md)。 如需有關 SOAP 與 XML Web 服務的詳細資訊，請參閱[自訂 SOAP 訊息格式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))。
+ **XmlSerializer** 類別產生 XML Web 服務所建立以及傳遞的 SOAP 訊息。 若要控制 SOAP 訊息，可套用屬性至類別、傳回值、參數以及 XML Web 服務檔案 (.asmx) 中的欄位。 您可使用列在＜控制 XML 序列化的屬性＞和＜控制編碼 SOAP 序列化的屬性＞中的屬性，因為 XML Web 服務可使用常值或編碼的 SOAP 樣式。 如需使用屬性控制 XML Web 服務產生之 XML 的詳細資訊，請參閱[以 XML Web 服務進行 XML 序列化](xml-serialization-with-xml-web-services.md)。 有關 SOAP 與 XML Web 服務的詳細資訊,請參閱[自訂 SOAP 訊息格式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))。
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>XmlSerializer 應用程式的安全性考量
 
-建立使用 **XmlSerializer** 的應用程式時，您應留意下列項目及其含意：
+建立**Xml 序列化器**的應用程式時,請注意以下項及其含義:
 
 - **XmlSerializer** 建立 C# (.cs) 檔案並在以 TEMP 環境變數命名的目錄中，將它們編譯成為 .dll 檔案；那些 DLL 會發生序列化。
 
@@ -61,7 +61,7 @@ ms.locfileid: "67772542"
 
 - 序列化敏感資料可能會易受攻擊。
 
-  在後**XmlSerializer**擁有序列化資料，可以將它儲存為 XML 檔案或其他資料存放區。 若您的資料存放區可由其他處理序存取，或是在內部網路或網際網路上看得到，那資料就可能遭竊取和惡意使用。 例如，若您建立了可序列化包含信用卡號碼之訂單的應用程式，這種資料就是高度敏感。 若想要防止它的發生，時時保護資料存放區並採取步驟保持它的私密性。
+  **Xml序列化器**具有序列化數據後,可以將其儲存為 XML 檔或其他數據儲存。 若您的資料存放區可由其他處理序存取，或是在內部網路或網際網路上看得到，那資料就可能遭竊取和惡意使用。 例如，若您建立了可序列化包含信用卡號碼之訂單的應用程式，這種資料就是高度敏感。 若想要防止它的發生，時時保護資料存放區並採取步驟保持它的私密性。
 
 ## <a name="serialization-of-a-simple-class"></a>簡單類別序列化
 
@@ -107,11 +107,11 @@ public class OrderForm
 
 - **DataSet** 物件。
 
- 如需序列化或還原序列化物件的詳細資訊，請參閱[How to:將物件序列化](how-to-serialize-an-object.md)和[How to:將物件還原序列化](how-to-deserialize-an-object.md)。
+ 如需序列化或還原序列化物件的詳細資訊，請參閱[如何：序列化物件](how-to-serialize-an-object.md)和[如何：還原序列化物件](how-to-deserialize-an-object.md)。
 
 ## <a name="advantages-of-using-xml-serialization"></a>使用 XML 序列化的優點
 
-**XmlSerializer**類別可讓您完整而靈活地控制當您序列化物件為 XML。 若您建立 XML Web 服務，可套用控制序列化的屬性至類別與成員，以確保 XML 輸出符合特定結構描述。
+將物件序列化為 XML 時 **,Xml 序列化器**類為您提供了完整且靈活的控制。 若您建立 XML Web 服務，可套用控制序列化的屬性至類別與成員，以確保 XML 輸出符合特定結構描述。
 
 例如， **XmlSerializer** 可讓您：
 
@@ -133,7 +133,7 @@ XML 序列化的另一項優點是對於您開發的應用程式沒有限制，�
 
 - 只可以序列化公用 (Public) 屬性和欄位。 屬性必須有公用存取子 (get 與 set 方法)。 若您必須對非公用資料序列化，請使用 <xref:System.Runtime.Serialization.DataContractSerializer> 類別，而非 XML 序列化。
 
-- 類別必須具有要序列化的無參數建構函式**XmlSerializer**。
+- 類必須有一個無參數建構函數才能由**XmlSerializer**序列化。
 
 - 無法將方法序列化。
 
@@ -147,7 +147,7 @@ XML 序列化的另一項優點是對於您開發的應用程式沒有限制，�
 
 ## <a name="xsd-data-type-mapping"></a>XSD 資料型別對應
 
-W3C 文件[XML 結構描述第 2 部分：資料型別](https://www.w3.org/TR/xmlschema-2/)XML 結構描述定義語言 (XSD) 結構描述中指定允許的簡單資料類型。 許多這些資料類型 (例如，**int** 和 **decimal**)，在 .NET Framework 都有對應的資料類型。 然而，某些 XML 資料類型在 .NET Framework 中並無對應的資料類型 (例如 **NMTOKEN** 資料類型)。 在這種情況下，若您使用 XML 結構描述定義工具 ([XML 結構描述定義工具 (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)) 從結構描述產生類別，將套用適當的屬性至類型字串的成員，且它的 **DataType** 屬性會設為 XML 資料類型名稱。 例如，若結構描述包括具有 XML 資料類型 **NMTOKEN** 之名為 "MyToken" 的項目，產生的類別可能包含下列範例所示的成員。
+W3C 文件名為[XML 架構第 2 部分:數據類型](https://www.w3.org/TR/xmlschema-2/)指定 XML 架構定義語言 (XSD) 架構中允許的簡單數據類型。 許多這些資料類型 (例如，**int** 和 **decimal**)，在 .NET Framework 都有對應的資料類型。 然而，某些 XML 資料類型在 .NET Framework 中並無對應的資料類型 (例如 **NMTOKEN** 資料類型)。 在這種情況下，若您使用 XML 結構描述定義工具 ([XML 結構描述定義工具 (Xsd.exe)](xml-schema-definition-tool-xsd-exe.md)) 從結構描述產生類別，將套用適當的屬性至類型字串的成員，且它的 **DataType** 屬性會設為 XML 資料類型名稱。 例如，若結構描述包括具有 XML 資料類型 **NMTOKEN** 之名為 "MyToken" 的項目，產生的類別可能包含下列範例所示的成員。
 
 ```vb
 <XmlElement(DataType:="NMTOKEN")> _
@@ -185,5 +185,5 @@ public string MyToken;
 - [序列化](index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML 序列化範例](examples-of-xml-serialization.md)
-- [如何：將物件序列化](how-to-serialize-an-object.md)
+- [HOW TO：序列化物件](how-to-serialize-an-object.md)
 - [如何：還原序列化物件](how-to-deserialize-an-object.md)

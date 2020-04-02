@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, how to use merge options
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
-ms.openlocfilehash: 40abe2f101f6fa23d804ef30e27d642a36908196
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e98ede3664a8815c60a490239a789c69fa557895
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139270"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588551"
 ---
 # <a name="how-to-specify-merge-options-in-plinq"></a>如何：在 PLINQ 中指定合併選項
 此範例示範如何指定將套用到 PLINQ 查詢中所有後續運算子的合併選項。 您不需明確地設定合併選項，但這樣做可改善效能。 如需合併選項的詳細資訊，請參閱 [PLINQ 中的合併選項](../../../docs/standard/parallel-programming/merge-options-in-plinq.md)。  
@@ -32,4 +32,4 @@ ms.locfileid: "73139270"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq.ParallelMergeOptions>
-- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)

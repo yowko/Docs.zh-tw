@@ -4,12 +4,12 @@ description: 了解委派和事件的差異，以及何時使用 .NET Core 的�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0fdc8629-2fdb-4a7c-a433-5b9d04eaf911
-ms.openlocfilehash: 04738ac2dd82da9c577e88598d0bb737a93333c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4179330fe5e88da5d5034a150a057f63e31b178b
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146174"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588264"
 ---
 # <a name="distinguishing-delegates-and-events"></a>區別委派和事件
 
@@ -37,6 +37,11 @@ UX 控制項仍然會正常運作，即使沒有任何訂閱者接聽事件也�
 另一個考量是您要用於委派方法的方法原型。 如您所見，用於事件的委派都會有 void 傳回型別。 您也已看到有慣用語可建立事件處理常式，以透過修改事件引數物件的屬性，將資訊傳回給事件來源。 雖然這些慣用語確實可以運作，但不像從方法傳回值一樣自然。
 
 請注意，這兩種啟發學習法可能通常都存在︰如果委派方法傳回值，則在某個方面可能會影響演算法。
+
+## <a name="events-have-private-invocation"></a>事件具有專用呼叫
+
+包含事件的類以外的類只能添加和刪除事件偵聽器;只有包含該事件的類才能調用該事件。 事件通常是公共類成員。
+相比之下,委託通常作為參數傳遞,並存儲為私有類成員(如果它們全部存儲)。
 
 ## <a name="event-listeners-often-have-longer-lifetimes"></a>事件接聽程式通常會有較長的存留期
 

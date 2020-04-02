@@ -10,17 +10,17 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec14cf30159dda1f2c67ef0c0f5f0a3e52000c45
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160387"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588650"
 ---
 # <a name="collections-and-data-structures"></a>集合和資料結構
 使用集合進行儲存與管理時，通常可以更有效率地處理類似的資料。 您可以使用 <xref:System.Array?displayProperty=nameWithType> 類別或 <xref:System.Collections>、<xref:System.Collections.Generic>、<xref:System.Collections.Concurrent> 和 System.Collections.Immutable 命名空間中的類別，來新增、移除和修改集合中的個別項目或某個範圍項目。  
   
- 有兩種主要的集合類型；泛型集合和非泛型集合。 泛型集合已加入.NET Framework 2.0 中，且會在編譯階段提供類型安全的集合。 因此，泛型集合通常會有較佳的效能。 建構泛型集合後，泛型集合可接受類型參數，且當您加入或移除集合中的項目時，不需要轉換成 <xref:System.Object> 類型或從該類型進行轉換。  此外，Windows 應用商店應用中支援大多數通用集合。 非泛型集合將項存儲<xref:System.Object>為 ，需要強制轉換，並且大多數專案不支援 Windows 應用商店應用開發。 但您可能會在較舊的程式碼中看到非泛型集合。  
+ 有兩種主要的集合類型；泛型集合和非泛型集合。 泛型集合已加入.NET Framework 2.0 中，且會在編譯階段提供類型安全的集合。 因此，泛型集合通常會有較佳的效能。 建構泛型集合後，泛型集合可接受類型參數，且當您加入或移除集合中的項目時，不需要轉換成 <xref:System.Object> 類型或從該類型進行轉換。  此外,Windows 應用商店應用中支援大多數通用集合。 非泛型集合將項存儲<xref:System.Object>為 ,需要強制轉換,並且大多數專案不支援 Windows 應用商店應用開發。 但您可能會在較舊的程式碼中看到非泛型集合。  
   
  從 .NET Framework 4 開始，<xref:System.Collections.Concurrent> 命名空間中的集合提供了有效率的安全執行緒作業，可從多個執行緒存取集合項目。 System.Collections.Immutable 命名空間 ([NuGet 套件](https://www.nuget.org/packages/System.Collections.Immutable)) 中不可變的集合類別，原本就是安全執行緒，因為作業會在原始集合的複本上執行，且不能修改原始集合。  
 
@@ -30,7 +30,7 @@ ms.locfileid: "78160387"
   
 - **列舉集合的能力**  
   
-     .NET Framework 集合實作 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>，可重複查看集合。 列舉程式可視為集合中任何元素可移動的指標。 [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) 陳述式和 [For Each...Next 陳述式](../../visual-basic/language-reference/statements/for-each-next-statement.md)，會使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法所公開的列舉程式，並會隱藏管理列舉程式的複雜程度。 此外，實作 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 的任何集合，會視為「可查詢類型」**，且可使用 LINQ 進行查詢。 LINQ 查詢提供存取資料的常見模式。 且通常比標準 `foreach` 迴圈更簡潔易懂，並提供篩選、排序和分組的功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)、[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、[LINQ 查詢簡介 (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) 及[基本查詢作業 (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
+     .NET Framework 集合實作 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>，可重複查看集合。 列舉程式可視為集合中任何元素可移動的指標。 [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) 陳述式和 [For Each...Next 陳述式](../../visual-basic/language-reference/statements/for-each-next-statement.md)，會使用 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法所公開的列舉程式，並會隱藏管理列舉程式的複雜程度。 此外，實作 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 的任何集合，會視為「可查詢類型」**，且可使用 LINQ 進行查詢。 LINQ 查詢提供存取資料的常見模式。 且通常比標準 `foreach` 迴圈更簡潔易懂，並提供篩選、排序和分組的功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)、[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)、[LINQ 查詢簡介 (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md) 及[基本查詢作業 (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
   
 - **將集合內容複製到陣列的能力**  
   
@@ -48,9 +48,9 @@ ms.locfileid: "78160387"
   
 - **一致的下限**  
   
-     集合的下限是其第一個元素的索引。 <xref:System.Collections> 命名空間中的所有索引集合下限皆為零，表示它們為 0 索引。 <xref:System.Array>預設情況下，其下限為零，但在使用<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>創建**Array**類的實例時，可以定義不同的下限。  
+     集合的下限是其第一個元素的索引。 <xref:System.Collections> 命名空間中的所有索引集合下限皆為零，表示它們為 0 索引。 <xref:System.Array>默認情況下,其下限為零,但在使用<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>創建**Array**類的實例時,可以定義不同的下限。  
   
-- **從多個執行緒進行訪問的同步**（<xref:System.Collections>僅限類）。  
+- **從多個線程進行訪問的同步**<xref:System.Collections>( 僅限類)。  
   
      <xref:System.Collections> 命名空間中的非泛型集合類型，提供一些同步處理的執行緒安全性；通常會透過 <xref:System.Collections.ICollection.SyncRoot%2A> 和 <xref:System.Collections.ICollection.IsSynchronized%2A> 成員公開。 這些集合不是預設的安全執行緒。 如果您需要可調整且有效地以多執行緒存取集合，請使用 <xref:System.Collections.Concurrent> 命名空間中的其中一個類別，或考慮使用不可變的集合。 如需詳細資訊，請參閱[安全執行緒集合](../../../docs/standard/collections/thread-safe/index.md)。  
   
