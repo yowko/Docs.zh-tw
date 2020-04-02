@@ -1,9 +1,0 @@
-- name: 屬性
-  href: index.md
-  items:
-    - name: 套用屬性
-      href: applying-attributes.md
-    - name: 撰寫自訂屬性
-      href: writing-custom-attributes.md
-    - name: 擷取儲存於屬性中的資訊
-      href: retrieving-information-stored-in-attributes.md
