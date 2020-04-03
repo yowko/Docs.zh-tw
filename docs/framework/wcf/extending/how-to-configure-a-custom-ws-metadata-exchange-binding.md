@@ -5,15 +5,16 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6459e3f0cf0ab72af8027bd6802a0e7aa574aece
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345273"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635789"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>HOW TO：設定自訂 WS-Metadata Exchange 繫結
-本主題說明如何設定自訂的 WS-Metadata Exchange 繫結。 Windows 通信基礎 （WCF） 包括四個系統定義的元資料繫結，但您可以使用所需的任何綁定發佈中繼資料。 這個主題會告訴您如何使用 `wsHttpBinding` 發行中繼資料。 這個繫結會提供讓您以安全的方法公開中繼資料的選項。 本文中的代碼基於[入門](../samples/getting-started-sample.md)。  
+
+本文介紹如何配置自定義 WS-元數據交換綁定。 Windows 通訊基礎 (WCF) 包括四個系統定義的元數據綁定,但您可以使用所需的任何綁定發佈元數據。 本文介紹如何使用 發佈中`wsHttpBinding`繼資料 。 這個繫結會提供讓您以安全的方法公開中繼資料的選項。 本文的代碼基於[入門](../samples/getting-started-sample.md)。  
   
 ### <a name="using-a-configuration-file"></a>使用組態檔  
   
@@ -44,7 +45,7 @@ ms.locfileid: "80345273"
               contract="IMetadataExchange" />  
     ```  
   
-4. 若要驗證中繼資料交換端點是否正常運作，請在用戶端組態檔中新增端點標記：  
+4. 要驗證中繼資料交換終結點是否正常工作,請在用戶端設定檔中新增終結點標記:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -117,6 +118,6 @@ ms.locfileid: "80345273"
 
 - [中繼資料發行行為](../samples/metadata-publishing-behavior.md)
 - [擷取中繼資料](../samples/retrieve-metadata.md)
-- [元](../feature-details/metadata.md)
+- [中繼資料](../feature-details/metadata.md)
 - [發行中繼資料](../feature-details/publishing-metadata.md)
 - [發行中繼資料端點](../publishing-metadata-endpoints.md)

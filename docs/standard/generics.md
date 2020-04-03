@@ -4,12 +4,12 @@ description: 了解泛型如何作為程式碼範本，讓您定義型別安全�
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 0188e620a45462e7cc31391406ade9d57b1b0220
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: f51d69088b0d5c798f3aa3a6c1f5b62b3ea81d39
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588474"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635276"
 ---
 # <a name="generic-types-overview"></a>泛型型別概觀
 
@@ -17,9 +17,9 @@ ms.locfileid: "80588474"
 
 在 .NET Framework 2.0 中首次引進，泛型基本上是「程式碼範本」，可讓開發人員定義[型別安全](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100))資料結構，而不需要認可至實際資料類型。 <xref:System.Collections.Generic.List%601>例如,是一個[泛型集合](xref:System.Collections.Generic),可以聲明和用於任何類型的`List<int>` `List<string>` `List<Person>` ,如 。
 
-若要了解為什麼泛型十分實用，讓我們看看加入泛型前後的特定類別：<xref:System.Collections.ArrayList>。 在 .NET Framework 1.0 中，`ArrayList` 元素的型別為 <xref:System.Object>。 這表示任何加入的元素都會以無訊息模式轉換成 `Object`。 從清單中讀取元素時會發生同樣的情況。 此程序稱為 [Boxing 和 Unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md)，它會影響效能。 但更重要的是，在編譯時無法判斷清單中的資料型別。 因此很容易產生一些易損壞的程式碼。 泛型可以透過定義每個清單執行個體將包含之資料的型別解決這個問題。 例如，您只能將整數加入 `List<int>`，以及只能將 Persons 加入 `List<Person>`。
+若要了解為什麼泛型十分實用，讓我們看看加入泛型前後的特定類別：<xref:System.Collections.ArrayList>。 在 .NET Framework 1.0 中，`ArrayList` 元素的型別為 <xref:System.Object>。 新增到集合的元素都已靜默轉換為`Object`。 從清單中讀取元素時也會發生同樣的情況。 此程序稱為 [Boxing 和 Unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md)，它會影響效能。 但是,除了性能之外,無法確定編譯時列表中的數據類型,這會使代碼變得脆弱。 泛型可以透過定義每個清單執行個體將包含之資料的型別解決這個問題。 例如，您只能將整數加入 `List<int>`，以及只能將 Persons 加入 `List<Person>`。
 
-泛型在運行時也可用。 這表示執行階段知道您要使用的資料結構類型，因此可更有效率地將它儲存在記憶體中。
+泛型在運行時也可用。 運行時知道您正在使用哪種類型的數據結構,並可以更有效地將其存儲在記憶體中。
 
 下面的範例是一個小程式,它說明了在運行時瞭解數據類型的效率:
 

@@ -3,12 +3,12 @@ title: 使用集合 - C# 教學課程簡介
 description: 在此教學課程中探索 List 集合來了解 C#。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 25d20de2eae8ad1f544fa17553c173a6141ae464
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156685"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635656"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>了解如何使用一般清單類型管理資料收集
 
@@ -224,10 +224,10 @@ foreach (var item in fibonacciNumbers)
 
 ## <a name="complete-challenge"></a>完成挑戰
 
-通過[查看 GitHub 上已完成的示例代碼，](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)可以查看示例解決方案。
+通過[查看 GitHub 上已完成的範例代碼,](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)可以查看範例解決方案。
 
 在迴圈每次反覆運算時，您都必須取清單中的最後兩個整數，將它們加總，並將該值新增至清單。 迴圈會持續重複，直到將 20 個項目新增至清單為止。
 
 恭喜，您已完成清單的教學課程。 您可以在自己的開發環境中，繼續完成[類別簡介](introduction-to-classes.md)教學課程中的內容。
 
-您可以在關於[集合](../../../standard/collections/index.md)的 [.NET 指南](../../../standard/index.md)主題中，深入了解 `List` 類型的使用方式。 您也能學習到許多其他的集合類型。
+您可以瞭解有關使用[.NET](../../../standard/index.yml)指南`List`文章中有關[集合的類型的更多內容](../../../standard/collections/index.md)。 您也能學習到許多其他的集合類型。

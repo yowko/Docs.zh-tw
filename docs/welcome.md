@@ -3,12 +3,12 @@ title: 歡迎使用 .NET
 description: 開始使用 .NET 系列的技術。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5673f91545b98fb706d8f1cc03ef7746f1b19b8
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345311"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635956"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -42,7 +42,7 @@ ms.locfileid: "80345311"
 
 這份文件涵蓋各種平台和語言的 .NET 範圍。 您可以在下列任何各節中開始使用 .NET 和其語言：
 
-- [.NET 指南](standard/index.md)
+- [.NET 指南](standard/index.yml)
 - [.NET 核心指南](core/index.yml)
 - [.NET 框架指南](framework/index.yml)
 - [C# 指南](csharp/index.yml)
@@ -56,20 +56,20 @@ ms.locfileid: "80345311"
 
 ## <a name="videos"></a>影片
 
-流覽 Web、移動、桌面、C#、機器學習、容器/Docker、資料訪問等視頻：
+瀏覽 Web、移動、桌面、C#、機器學習、容器/Docker、資料存取等視頻:
 
-[.NET 101 視頻系列](https://dotnet.microsoft.com/learn/videos)
+[.NET 101 影片系列](https://dotnet.microsoft.com/learn/videos)
 
 ## <a name="open-source"></a>開放原始碼
 
 這份文件是完全[開放原始檔](https://github.com/dotnet/docs)。 您可以透過任何想要的方式參與，包括建立文件撰寫問題。 此外，.NET 的大多部分本身也是開放原始碼。 下列清單顯示主要的 .NET GitHub 存放庫：
 
 - [.NET Core Home](https://github.com/dotnet/core) (.NET Core 首頁)
-- [.NET 核心運行時](https://github.com/dotnet/runtime)
+- [.NET 核心執行時](https://github.com/dotnet/runtime)
 - [.NET 核心 SDK](https://github.com/dotnet/sdk)
 - [Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools](https://github.com/dotnet/roslyn) (Roslyn (C# 和 Visual Basic) 編譯器平台和 IDE 工具)
 - [F# Compiler and IDE Tools](https://github.com/dotnet/fsharp) (F# 編譯器和 IDE 工具)
 - [Windows Forms](https://github.com/dotnet/winforms)
 - [WPF](https://github.com/dotnet/wpf)
 
-您可以加入已在[.NET 社區中](https://dotnet.microsoft.com/platform/community)活動的其他人，瞭解新增功能或尋求説明。
+您可以加入已在[.NET 社群中](https://dotnet.microsoft.com/platform/community)活動的其他人,瞭解新增功能或尋求説明。

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.openlocfilehash: ec078ea89befedd26ce205c724193935dd08b82a
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: f079613f790121c000a312132e7135121ca721a6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523963"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635901"
 ---
 # <a name="common-type-system"></a>一般類型系統
 
@@ -78,7 +78,7 @@ ms.locfileid: "80523963"
   
 ### <a name="structures"></a>結構
 
- 結構是自 <xref:System.ValueType?displayProperty=nameWithType> (衍生自 <xref:System.Object?displayProperty=nameWithType>) 隱含繼承的實質型別。 在表示記憶體需求相當小的實質型別時，以及將值當做傳值參考傳遞給具有強型別參數的方法時，結構將相當實用。 在 .NET 中，會將所有基本資料類型 (<xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32> 及 <xref:System.UInt64>) 定義為結構。  
+ 結構是自 <xref:System.ValueType?displayProperty=nameWithType> (衍生自 <xref:System.Object?displayProperty=nameWithType>) 隱含繼承的實質型別。 結構可用於表示記憶體要求較小的值,以及將值作為按值參數傳遞給具有強類型參數的方法非常有用。 在 .NET 中，會將所有基本資料類型 (<xref:System.Boolean>、<xref:System.Byte>、<xref:System.Char>、<xref:System.DateTime>、<xref:System.Decimal>、<xref:System.Double>、<xref:System.Int16>、<xref:System.Int32>、<xref:System.Int64>、<xref:System.SByte>、<xref:System.Single>、<xref:System.UInt16>、<xref:System.UInt32> 及 <xref:System.UInt64>) 定義為結構。  
   
  與類別一樣，結構會定義資料 (結構的欄位) 以及可以在該資料上定義的作業 (結構的方法)。 這表示您可以在結構上呼叫方法，包括在 <xref:System.Object?displayProperty=nameWithType> 和 <xref:System.ValueType?displayProperty=nameWithType> 類別上定義的虛擬方法，以及在實值型別本身定義的任何方法。 換言之，除了靜態與非靜態方法之外，結構還可以具有欄位、屬性和事件。 您可以建立結構的執行個體，將它們當做參數傳遞，並將它們當做區域變數儲存或將它們儲存到其他實值型別或參考型別的欄位中。 結構也可以實作介面。  
   

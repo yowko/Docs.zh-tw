@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587800"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80636021"
 ---
 # <a name="dependency-properties-overview"></a>相依性屬性概觀
 
@@ -128,7 +128,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 ### <a name="styles"></a>樣式
 樣式和範本是使用相依性屬性的兩大激勵案例。 樣式特別適用於設定定義應用程式 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的屬性。 樣式通常會定義為 XAML 中的資源。 樣式與屬性系統互動，因為它們通常包含特定屬性的 "setter"，以及根據另一個屬性的即時值變更屬性值的「觸發程序」。
 
-下列範例會建立非常簡單的樣式 (該樣式將在 <xref:System.Windows.FrameworkElement.Resources%2A> 字典內部中定義，未顯示)，然後將該樣式直接套用於 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.FrameworkElement.Style%2A> 屬性。 樣式中的 setter 會將樣式 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A> 屬性設定為綠色。
+下面的範例創建一個簡單的樣式(將在<xref:System.Windows.FrameworkElement.Resources%2A>字典中定義,不顯示),然後將該樣式直接<xref:System.Windows.FrameworkElement.Style%2A>應用於 屬性<xref:System.Windows.Controls.Button>。 樣式中的 setter 會將樣式 <xref:System.Windows.Controls.Button> 的 <xref:System.Windows.Controls.Control.Background%2A> 屬性設定為綠色。
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
@@ -146,7 +146,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 如需可動畫顯示屬性的詳細資訊，請參閱[動畫概觀](../graphics-multimedia/animation-overview.md)及[腳本概觀](../graphics-multimedia/storyboards-overview.md)。
 
 ### <a name="metadata-overrides"></a>中繼資料覆寫
-當您衍生自最初登錄相依性屬性的類別時，您可以覆寫該屬性的中繼資料，變更相依性屬性的特定行為。 覆寫依賴於 <xref:System.Windows.DependencyProperty> 識別碼的中繼資料。 覆寫中繼資料不需要重新實作屬性。 屬性系統會以原生方式處理中繼資料變更。每個類別都可能依每個類型，保存繼承自基底類別之所有屬性的個別中繼資料。
+當您衍生自最初登錄相依性屬性的類別時，您可以覆寫該屬性的中繼資料，變更相依性屬性的特定行為。 覆寫依賴於 <xref:System.Windows.DependencyProperty> 識別碼的中繼資料。 重寫元數據不需要重新實現該屬性。 屬性系統會以原生方式處理中繼資料變更。每個類別都可能依每個類型，保存繼承自基底類別之所有屬性的個別中繼資料。
 
 下列範例會覆寫相依性屬性的中繼資料 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>。 覆寫此特定相依性屬性中繼資料，是建立可使用佈景主題預設樣式控制項之實作模式的一部分。
 
@@ -183,18 +183,18 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
 ### <a name="why-does-dependency-property-precedence-exist"></a>為什麼會有相依性屬性優先順序？
-通常您不會希望樣式一律套用樣式，甚至隱藏個別項目的本機設定值 (否則一般很難使用樣式或項目)。 因此，來自樣式的值運作優先順序比本機設定值低。 如需更完整的相依性屬性清單及相依性屬性有效值的可能來源，請參閱[相依性屬性值優先順序](dependency-property-value-precedence.md)。
+通常,您不希望樣式始終應用和遮蓋單個元素的本地設置值(否則,通常很難使用樣式或元素)。 因此，來自樣式的值運作優先順序比本機設定值低。 如需更完整的相依性屬性清單及相依性屬性有效值的可能來源，請參閱[相依性屬性值優先順序](dependency-property-value-precedence.md)。
 
 > [!NOTE]
 > 許多屬性是定義在相依性屬性的 WPF 項目上。 大體上，屬性過去只有在需要支援至少一個屬性系統啟用的案例時，才會實作為相依性屬性︰資料繫結、樣式、動畫、預設值支援、繼承、附加屬性或失效。
 
 ## <a name="learning-more-about-dependency-properties"></a>深入了解相依性屬性  
 
-- 附加屬性是支援 XAML 特殊語法的屬性類型。 附加屬性通常與通用語言運行時 (CLR) 屬性沒有 1:1 的對應關係,不一定是依賴項屬性。 附加屬性的一般用途是允許子項目向父項目回報屬性值，即使父項目和子項目未同時擁有列為類別成員的該屬性。 一個主要案例是使子項目能夠告知父系應如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中將其呈現；如需範例，請參閱 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 如需詳細資訊，請參閱[附加屬性概觀](attached-properties-overview.md)。
+- 附加屬性是支援 XAML 特殊語法的屬性類型。 附加屬性通常與通用語言運行時 (CLR) 屬性沒有 1:1 的對應關係,不一定是依賴項屬性。 附加屬性的典型目的是允許子元素將屬性值報告給父元素,即使父元素和子元素都不具備該屬性作為類成員清單的一部分。 一個主要案例是使子項目能夠告知父系應如何在 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 中將其呈現；如需範例，請參閱 <xref:System.Windows.Controls.DockPanel.Dock%2A> 或 <xref:System.Windows.Controls.Canvas.Left%2A>。 如需詳細資訊，請參閱[附加屬性概觀](attached-properties-overview.md)。
 
 - 元件開發人員或應用程式開發人員可能希望建立自己的相依性屬性，以便啟用資料繫結或樣式支援等功能，或用於失效和值的強制型轉支援。 如需詳細資訊，請參閱[自訂相依性屬性](custom-dependency-properties.md)。
 
-- 相依性屬性通常應該視為公用屬性，任何可存取執行個體的呼叫端皆可存取或至少可探索它們。 如需詳細資訊，請參閱[相依性屬性的安全性](dependency-property-security.md)。
+- 將依賴項屬性視為公共屬性,可訪問或至少可供有權訪問實例的任何調用方發現。 如需詳細資訊，請參閱[相依性屬性的安全性](dependency-property-security.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,19 +1,19 @@
 ---
 title: lock 陳述式 - C# 參考
 description: 使用 C# lock 陳述式，來同步處理執行緒對共用資源的存取
-ms.date: 10/01/2018
+ms.date: 04/02/2020
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f2d42ae02a07a5e1b82cefd004f4d03b2a16dff
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713393"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635386"
 ---
 # <a name="lock-statement-c-reference"></a>lock 陳述式 (C# 參考)
 
@@ -48,13 +48,15 @@ finally
 
 您不能在 `lock` 陳述式主體中使用 [await 運算子](../operators/await.md)。
 
-## <a name="remarks"></a>備註
+## <a name="guidelines"></a>指導方針
 
 當您同步處理執行緒對共用資源的存取時，請鎖定專用物件執行個體 (例如 `private readonly object balanceLock = new object();`) 或另一個不太可能由程式碼不相關的部分用作鎖定物件的執行個體。 避免對不同的共用資源使用相同的鎖定物件執行個體，因為其可能導致鎖死或鎖定爭用。 尤其要避免使用下列項目當作鎖定物件：
 
 - `this`，呼叫者可能會將其作為鎖定。
 - <xref:System.Type> 執行個體，因為這些可能會由 [typeof](../operators/type-testing-and-cast.md#typeof-operator) 運算子或反映取得。
 - 字串執行個體 (包括字串常值)，因為那些可能會[暫留](/dotnet/api/system.string.intern#remarks)。
+
+盡可能短的時間保持鎖,以減少鎖爭用。
 
 ## <a name="example"></a>範例
 
@@ -68,9 +70,9 @@ finally
 
 ## <a name="see-also"></a>另請參閱
 
+- [C# 參考](../index.md)
+- [C# 關鍵字](index.md)
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
-- [C# 參考](../index.md)
-- [C# 關鍵字](index.md)
 - [同步處理原始物件概觀](../../../standard/threading/overview-of-synchronization-primitives.md)

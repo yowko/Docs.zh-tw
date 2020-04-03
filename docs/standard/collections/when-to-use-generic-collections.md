@@ -6,15 +6,16 @@ helpviewer_keywords:
 - collections [.NET Framework], generic
 - generic collections [.NET Framework]
 ms.assetid: e7b868b1-11fe-4ac5-bed3-de68aca47739
-ms.openlocfilehash: 131787c30e5249111f86f2793981e2b75e8f3862
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: bbf8ec7f61981332b6984488b369fee62959b92a
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588536"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635892"
 ---
 # <a name="when-to-use-generic-collections"></a>何時使用泛型集合
-通常建議使用泛型集合，因為這樣可以得到類型安全的立即好處，而無須衍生自基底集合類型同時實作類型專屬的成員。 當集合元素為實值類型時，泛型集合類型也通常會優於對應的非泛型集合類型 (且優於衍生自非泛型基底集合類型的類型)，因為有了泛型，就不需要對這些元素進行 box。  
+
+使用泛型集合可自動利用類型安全,而無需從基集合類型派生並實現特定於類型的成員。 當集合元素為值類型時,泛型集合類型通常也比相應的非泛型集合類型(優於從非泛型基集合類型派生的類型更好),因為使用泛型,無需為元素添加框。  
   
  對於目標為 .NET Framework 4 或更新版本的程式，當多個執行緒可能同時在新增或移除集合中的項目時，您應該使用 <xref:System.Collections.Concurrent> 命名空間中的泛型集合類別。  
   
@@ -24,7 +25,7 @@ ms.locfileid: "80588536"
   
 - <xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 是對應至 <xref:System.Collections.Hashtable>的泛型類別。  
   
-- <xref:System.Collections.ObjectModel.Collection%601> 是對應至 <xref:System.Collections.CollectionBase>的泛型類別。 <xref:System.Collections.ObjectModel.Collection%601> 可以用做為基底類別，但不同於 <xref:System.Collections.CollectionBase>，它並非抽象。 這可讓您更容易使用。  
+- <xref:System.Collections.ObjectModel.Collection%601> 是對應至 <xref:System.Collections.CollectionBase>的泛型類別。 <xref:System.Collections.ObjectModel.Collection%601>可用作基類,但與不同<xref:System.Collections.CollectionBase>,它不是抽象的,這使得它更易於使用。  
   
 - <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 是對應至 <xref:System.Collections.ReadOnlyCollectionBase>的泛型類別。 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> 並非抽象，且具有一個建構函式，能輕鬆地將現有的 <xref:System.Collections.Generic.List%601> 公開為唯讀的集合。  
   
@@ -44,7 +45,7 @@ ms.locfileid: "80588536"
 - <xref:System.Collections.Concurrent.ConcurrentBag%601> 提供未排序項目的快速插入和移除。  
   
 ## <a name="linq-to-objects"></a>LINQ to Objects  
- 只要物件類型實作 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 介面，LINQ to Objects 功能就可讓您使用 LINQ 查詢以存取記憶體中的物件。 LINQ 查詢提供一般模式以存取資料，比標準的 `foreach` 迴圈 (Loop) 更精簡、可讀性更高，並提供篩選、排序和群組功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) 和 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)。  
+ 只要物件類型實作 <xref:System.Collections.IEnumerable?displayProperty=nameWithType> 或 <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> 介面，LINQ to Objects 功能就可讓您使用 LINQ 查詢以存取記憶體中的物件。 LINQ 查詢提供了訪問數據的常見模式;通常比標準`foreach`迴圈更簡潔、更可讀;並提供篩選、排序和分組功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) 和 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)。  
   
 ## <a name="additional-functionality"></a>其他功能  
  某些泛型類型具有非泛型集合類型中找不到的功能。 例如， <xref:System.Collections.Generic.List%601> 類別 (對應至非泛型 <xref:System.Collections.ArrayList> 類別) 有許多接受泛型委派的方法，例如 <xref:System.Predicate%601> 委派 (允許您指定方法來搜尋清單)、 <xref:System.Action%601> 委派 (代表對清單每個項目採取動作的方法)，以及 <xref:System.Converter%602> 委派 (可定義類型之間的轉換)。  

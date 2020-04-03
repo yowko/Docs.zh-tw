@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 89d3eb709bb22913b9539d6ad384384ee701385f
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523280"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635147"
 ---
 # <a name="numerics-in-net"></a>.NET 中的數值
 
@@ -60,11 +60,11 @@ ms.locfileid: "80523280"
   
 <xref:System.Single> 和 <xref:System.Double> 類型皆支援代表非數字和無限大的特殊值。 例如，<xref:System.Double> 類型能提供下列值：<xref:System.Double.NaN?displayProperty=nameWithType>、<xref:System.Double.NegativeInfinity?displayProperty=nameWithType> 及 <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>。 您會使用 <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>、<xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>、<xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> 及 <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> 方法來測試這些特殊值。
 
-每個浮點類型皆支援一組標準算術運算子。 <xref:System.Math?displayProperty=nameWithType> 類別能提供適用於更廣泛數學函式的方法。 .NET Core 2.0 和更新版本會包含 <xref:System.MathF?displayProperty=nameWithType> 類別，其能提供可以接受 <xref:System.Single> 類型之引數的方法。
+每個浮點類型皆支援一組標準算術運算子。 <xref:System.Math?displayProperty=nameWithType> 類別能提供適用於更廣泛數學函式的方法。 .NET Core 2.0 及<xref:System.MathF?displayProperty=nameWithType>更高版本包括類,<xref:System.Single>該類提供接受 類型參數的方法。
 
 藉由使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別，您也可使用 <xref:System.Double> 和 <xref:System.Single> 中的個別位元。 <xref:System.Decimal?displayProperty=nameWithType> 結構有它自己的方法，為 <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 和 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>，用於使用十進位值的個別位元，而且還有一組自己的方法，用於執行一些額外的數學運算。
   
-<xref:System.Double> 和 <xref:System.Single> 類型主要供本質上並不精確的值使用 (例如兩個行星之間的距離)，並且供不需較高有效位數和較小進位誤差的應用程式使用。 在需要較高精確度並將進位誤差降到最低的情況下，您應該使用 <xref:System.Decimal?displayProperty=nameWithType> 類型。
+和<xref:System.Double><xref:System.Single>類型用於按其性質而言不精確的值(例如,兩個星之間的距離)和不需要高精度和小舍入誤差的應用。 對於需要<xref:System.Decimal?displayProperty=nameWithType>更高精度且應最小化舍入誤差的情況,請使用該類型。
 
 > [!NOTE]
 > <xref:System.Decimal> 類型並不會消除進位的需求。 它會將因進位而產生的錯誤降到最低。

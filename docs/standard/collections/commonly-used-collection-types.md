@@ -12,23 +12,23 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-ms.openlocfilehash: dc590d712a49ea27fcc61181e0b8c9b3349e74e5
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 04ad3c8d8ea076e881e27e295d87572a51cbc128
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588331"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635971"
 ---
 # <a name="commonly-used-collection-types"></a>常用的集合類型
 集合類型是資料集合 (例如雜湊表、佇列、堆疊、封包、字典和清單) 最常見的一些呈現方式。  
   
- 集合取決於 <xref:System.Collections.ICollection> 介面、<xref:System.Collections.IList> 介面、<xref:System.Collections.IDictionary> 介面或其泛型對應項目。 <xref:System.Collections.IList> 介面和 <xref:System.Collections.IDictionary> 介面都衍生自 <xref:System.Collections.ICollection> 介面；因此，所有集合都直接或間接地以 <xref:System.Collections.ICollection> 介面為依據。 在依據 <xref:System.Collections.IList> 介面的集合中 (例如 <xref:System.Array>、<xref:System.Collections.ArrayList> 或 <xref:System.Collections.Generic.List%601>) 或直接依據 <xref:System.Collections.ICollection> 介面的集合中 (例如 <xref:System.Collections.Queue>、<xref:System.Collections.Concurrent.ConcurrentQueue%601>、<xref:System.Collections.Stack>、<xref:System.Collections.Concurrent.ConcurrentStack%601> 或 <xref:System.Collections.Generic.LinkedList%601>)，每個項目都只包含一個值。 在依據 <xref:System.Collections.IDictionary> 介面的集合中 (例如 <xref:System.Collections.Hashtable> 和 <xref:System.Collections.SortedList> 類別、<xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型類別)，或 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別中，每個項目都包含索引鍵和值。  <xref:System.Collections.ObjectModel.KeyedCollection%602> 類別的獨特之處在於它是將索引鍵內嵌於值的值清單，因此它的行為類似於清單和字典。  
+ 集合取決於 <xref:System.Collections.ICollection> 介面、<xref:System.Collections.IList> 介面、<xref:System.Collections.IDictionary> 介面或其泛型對應項目。 <xref:System.Collections.IList> 介面和 <xref:System.Collections.IDictionary> 介面都衍生自 <xref:System.Collections.ICollection> 介面；因此，所有集合都直接或間接地以 <xref:System.Collections.ICollection> 介面為依據。 在基於<xref:System.Collections.IList>介面(如<xref:System.Array>、<xref:System.Collections.ArrayList><xref:System.Collections.Generic.List%601>或) 或<xref:System.Collections.ICollection>直接位於介面<xref:System.Collections.Queue>(如<xref:System.Collections.Concurrent.ConcurrentQueue%601><xref:System.Collections.Stack><xref:System.Collections.Concurrent.ConcurrentStack%601>、<xref:System.Collections.Generic.LinkedList%601>或)的集合中,每個元素僅包含一個值。 在依據 <xref:System.Collections.IDictionary> 介面的集合中 (例如 <xref:System.Collections.Hashtable> 和 <xref:System.Collections.SortedList> 類別、<xref:System.Collections.Generic.Dictionary%602> 和 <xref:System.Collections.Generic.SortedList%602> 泛型類別)，或 <xref:System.Collections.Concurrent.ConcurrentDictionary%602> 類別中，每個項目都包含索引鍵和值。  <xref:System.Collections.ObjectModel.KeyedCollection%602> 類別的獨特之處在於它是將索引鍵內嵌於值的值清單，因此它的行為類似於清單和字典。  
   
  泛型集合是強式類型的最佳解決方案。 不過，如果您的語言不支援泛型，<xref:System.Collections> 命名空間就會包含基底集合，例如 <xref:System.Collections.CollectionBase>、<xref:System.Collections.ReadOnlyCollectionBase> 和 <xref:System.Collections.DictionaryBase>，這些是可以延伸以建立強式類型之集合類別的抽象基底類別。 需要有效率的多執行緒集合存取時，請在 <xref:System.Collections.Concurrent> 命名空間中使用泛型集合。  
   
  集合會視儲存項目、排序項目、執行搜尋以及進行比較等方式，而有所不同。 <xref:System.Collections.Queue> 類別和 <xref:System.Collections.Generic.Queue%601> 泛型類別提供先進先出清單，而 <xref:System.Collections.Stack> 類別和 <xref:System.Collections.Generic.Stack%601> 泛型類別則提供後進先出清單。 <xref:System.Collections.SortedList> 類別和 <xref:System.Collections.Generic.SortedList%602> 泛型類別提供排序版本的 <xref:System.Collections.Hashtable> 類別與 <xref:System.Collections.Generic.Dictionary%602> 泛型類別。 <xref:System.Collections.Hashtable> 或 <xref:System.Collections.Generic.Dictionary%602> 的項目只能依項目的索引鍵加以存取，但 <xref:System.Collections.SortedList> 或 <xref:System.Collections.ObjectModel.KeyedCollection%602> 的項目則可依項目的索引鍵或索引加以存取。 所有集合中的索引都以零起始，<xref:System.Array> 除外，它能允許不是以零起始的陣列。  
   
- 只要物件類型實作 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 介面，LINQ to Objects 功能就可讓您使用 LINQ 查詢以存取記憶體內的物件。 LINQ 查詢提供一般模式以存取資料，比標準的 `foreach` 迴圈 (Loop) 更精簡、可讀性更高，並提供篩選、排序和群組功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) 和 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)。  
+ 只要物件類型實作 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 介面，LINQ to Objects 功能就可讓您使用 LINQ 查詢以存取記憶體內的物件。 LINQ 查詢提供了訪問數據的常見模式;通常比標準`foreach`迴圈更簡潔、更可讀;並提供篩選、排序和分組功能。 LINQ 查詢也可以提升效能。 如需詳細資訊，請參閱 [LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md) 和 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)。  
   
 ## <a name="related-topics"></a>相關主題  
   

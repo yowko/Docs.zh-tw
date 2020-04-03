@@ -9,12 +9,12 @@ helpviewer_keywords:
 - PLINQ queries, how to cancel
 - cancellation, PLINQ
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
-ms.openlocfilehash: 1b34f0c1785c1a1c007db97f04c799a4b4bd0f8f
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 312c71b787ac7b4aa092f1517d2ed5af314a22e4
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588566"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635884"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>如何：取消 PLINQ 查詢
 下列範例說明取消 PLINQ 查詢的兩種方式。 第一個範例示範如何取消大部分由資料周遊所組成的查詢。 第二個範例示範如何取消包含需要大量計算之使用者函式的查詢。
@@ -33,9 +33,9 @@ PLINQ 架構不會將單一 <xref:System.OperationCanceledException> 累計到 <
 
 取消作業的一般指引如下：
 
-1. 如果您執行使用者委派取消作業，您應該告知 PLINQ 有關外部 <xref:System.Threading.CancellationToken> 並擲回 <xref:System.OperationCanceledException> (externalCT)。
+1. 如果執行使用者委託取消,則應將外部<xref:System.Threading.CancellationToken>通知 PLINQ 並<xref:System.OperationCanceledException>引發 (外部 CT)。
 
-2. 如果發生取消作業，並且未擲回任何例外狀況，則您應該處理 <xref:System.OperationCanceledException> 而不是 <xref:System.AggregateException>。
+2. 如果發生取消,並且未引發其他異常,則處理<xref:System.OperationCanceledException>而不是<xref:System.AggregateException>。
 
 ## <a name="example"></a>範例
 
@@ -44,11 +44,11 @@ PLINQ 架構不會將單一 <xref:System.OperationCanceledException> 累計到 <
 [!code-csharp[PLINQ#17](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#17)]
 [!code-vb[PLINQ#17](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinqsnippets1.vb#17)]
 
-處理使用者程式碼中的取消作業時，不需在查詢定義中使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>。 不過，我們建議您這麼做，因為 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A> 對查詢效能沒有任何影響，並能藉由查詢運算子和您的使用者程式碼來處理取消作業。
+處理使用者程式碼中的取消作業時，不需在查詢定義中使用 <xref:System.Linq.ParallelEnumerable.WithCancellation%2A>。 但是,我們建議您使用<xref:System.Linq.ParallelEnumerable.WithCancellation%2A>,<xref:System.Linq.ParallelEnumerable.WithCancellation%2A>因為不會影響查詢性能,並且它允許查詢運算符和用戶代碼處理取消。
 
 為確保系統回應能力，建議您每毫秒檢查一次是否有取消作業；不過，系統可以接受最多 10 毫秒的任何週期。 此頻率對您的程式碼效能應該沒有負面影響。
 
-處置列舉程式時，例如當程式碼在逐一查看結果的 foreach (Visual Basic 中為 For Each) 迴圈中斷時，查詢就會取消，但不會擲回任何例外狀況。
+釋放枚舉器時(例如,當代碼從迴圈查詢結果的 foreach(Visual Basic 中每個迴圈)中斷開時,將取消查詢,但不會引發異常。
 
 ## <a name="see-also"></a>另請參閱
 
