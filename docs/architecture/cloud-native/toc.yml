@@ -39,8 +39,8 @@
           href: front-end-communication.md
         - name: 服務對服務通訊
           href: service-to-service-communication.md
-        - name: REST 和 gRPC
-          href: rest-grpc.md
+        - name: gRPC
+          href: grpc.md
         - name: 服務網格通訊基礎結構
           href: service-mesh-communication-infrastructure.md
     - name: 分散式資料
