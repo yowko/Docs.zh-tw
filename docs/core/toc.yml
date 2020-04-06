@@ -290,6 +290,8 @@
       href: deploying/creating-nuget-packages.md
     - name: 獨立式部署執行階段向前復原
       href: deploying/runtime-patch-selection.md
+    - name: 修剪獨立式部署及可執行檔
+      href: deploying/trim-self-contained.md
     - name: 執行階段套件存放區
       href: deploying/runtime-store.md
 - name: Docker
