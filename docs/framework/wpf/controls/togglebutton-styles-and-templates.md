@@ -9,46 +9,46 @@ helpviewer_keywords:
 - templates [WPF], ToggleButton
 - parts [WPF], ToggleButton
 ms.assetid: 54f23f30-4bcb-4f09-8ce4-376a13a255a1
-ms.openlocfilehash: a4c449a561017659db7f54fd3cdb8964742650de
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e055dcbd557f9b90eb2fe99ad15a05b6f229fd28
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283667"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805918"
 ---
 # <a name="togglebutton-styles-and-templates"></a>ToggleButton 樣式和範本
 
-本主題描述 <xref:System.Windows.Controls.Primitives.ToggleButton> 控制項的樣式和範本。 您可以修改預設 <xref:System.Windows.Controls.ControlTemplate>，為控制項提供獨特的外觀。 如需詳細資訊，請參閱[建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)。
+本主題介紹控件的<xref:System.Windows.Controls.Primitives.ToggleButton>樣式和範本。 您可以修改預設值<xref:System.Windows.Controls.ControlTemplate>,為控制項提供唯一的外觀。 有關詳細資訊,請參閱為[控制項建立樣本](../../../desktop-wpf/themes/how-to-create-apply-template.md)。
 
-## <a name="togglebutton-parts"></a>切換按鈕部分
+## <a name="togglebutton-parts"></a>切換按鈕零件
 
-<xref:System.Windows.Controls.Primitives.ToggleButton> 控制項沒有任何已命名的元件。
+該<xref:System.Windows.Controls.Primitives.ToggleButton>控件沒有任何命名部件。
 
 ## <a name="togglebutton-states"></a>切換按鈕狀態
 
-下表列出 <xref:System.Windows.Controls.Primitives.ToggleButton> 控制項的視覺狀態。
+下表列出了控件的<xref:System.Windows.Controls.Primitives.ToggleButton>可視狀態。
 
 |VisualState 名稱|VisualStateGroup 名稱|描述|
 |-|-|-|
-|一般|CommonStates|預設狀態。|
+|正常|CommonStates|預設狀態。|
 |MouseOver|CommonStates|滑鼠指標移到控制項上。|
 |按下|CommonStates|已按下控制項。|
 |已停用|CommonStates|已停用控制項。|
 |已取得焦點|FocusStates|控制項已取得焦點。|
 |未取得焦點|FocusStates|控制項未取得焦點。|
-|已核取|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `true`。|
-|選定|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `false`。|
-|處於|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> 為 `true`，<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> `null`。|
-|有效|ValidationStates|控制項使用 <xref:System.Windows.Controls.Validation> 類別，而 <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性則 `false`。|
-|InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是控制項具有焦點 `true`。|
-|InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> 附加屬性是 `true` 控制項沒有焦點。|
+|已檢查|檢查狀態|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `true`。|
+|未核取|檢查狀態|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `false`。|
+|定|檢查狀態|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> 為 `true`，而 <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `null`。|
+|有效|ValidationStates|控制項使用<xref:System.Windows.Controls.Validation>類別<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>, 附加`false`屬性為 。|
+|InvalidFocused|ValidationStates|附加<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>屬性`true`是 ,控件具有焦點。|
+|InvalidUnfocused|ValidationStates|附加<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>屬性`true`為 ,控件沒有焦點。|
 
 > [!NOTE]
-> 如果您的控制項範本中沒有未定的視覺狀態，則會使用未核取的視覺狀態做為預設的視覺狀態。
+> 如果控件範本中不存在不確定的可視狀態,則"未選中的可視狀態"將用作預設可視狀態。
 
-## <a name="togglebutton-controltemplate-example"></a>切換按鈕 ControlTemplate 範例
+## <a name="togglebutton-controltemplate-example"></a>切換按鈕控制樣本範例
 
-下列範例顯示如何定義 <xref:System.Windows.Controls.Primitives.ToggleButton> 控制項的 <xref:System.Windows.Controls.ControlTemplate>。
+下面的範例展示如何為<xref:System.Windows.Controls.ControlTemplate><xref:System.Windows.Controls.Primitives.ToggleButton>控制項定義 。
 
 [!code-xaml[ControlTemplateExamples#ToggleButton](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/combobox.xaml#togglebutton)]
 
@@ -65,4 +65,4 @@ ms.locfileid: "74283667"
 - [控制項的樣式和範本](control-styles-and-templates.md)
 - [控制項自訂](control-customization.md)
 - [設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [建立控制項的範本](../../../desktop-wpf/themes/how-to-create-apply-template.md)
+- [為控制項建立樣本](../../../desktop-wpf/themes/how-to-create-apply-template.md)

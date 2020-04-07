@@ -2,12 +2,12 @@
 title: 使用 docker-compose.yml 定義多容器應用程式
 description: 如何使用 docker-compose.yml 指定多容器應用程式的微服務組合。
 ms.date: 01/30/2020
-ms.openlocfilehash: 9143801fbbffbdc5b795a232b3333edf71f05c7c
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 66775b573c46041475e9cddc622bbde78ae44bc4
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523643"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805600"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式
 
@@ -115,11 +115,11 @@ services:
 
 此容器化服務具有下列基本組態：
 
-- 它基於自訂**電子商店/目錄 api**映射。 為求簡化，檔案中沒有 build: 金鑰設定。 這表示必須先前已建置映像 (使用 docker build) 或已從任何 Docker 登錄下載映像 (使用 docker pull 命令)。
+- 它基於自訂**電子商店/目錄 api**映射。 為簡單起見,檔中沒有生成:鍵設置。 這表示必須先前已建置映像 (使用 docker build) 或已從任何 Docker 登錄下載映像 (使用 docker pull 命令)。
 
 - 它會使用 Entity Framework 用來存取包含目錄資料模型之 SQL Server 執行個體的連接字串，來定義名為 ConnectionString 的環境變數。 在此情況下，相同的 SQL Server 容器會保留多個資料庫。 因此，您需要 Docker 的開發電腦中有較少的記憶體。 不過，您也可以為每個微服務資料庫部署一個 SQL Server 容器。
 
-- SQL Server 名稱是**sqldata**,它是運行 Linux SQL Server 實例的容器使用的相同名稱。 這樣十分方便；可使用此名稱解析 (Docker 主機內部) 將會解析網路位址，因此您不需要知道從其他容器存取之容器的內部 IP。
+- SQL Server 名稱是**sqldata**,它是運行 Linux SQL Server 實例的容器使用的相同名稱。 這很方便;能夠使用此名稱解析(Docker 主機的內部)將解析網路位址,因此您不需要知道從其他容器訪問的容器的內部 IP。
 
 因為連接字串是透過環境變數所定義，所以您可以透過不同的機制並在不同的時間來設定該變數。 例如，在最終主機中部署至生產環境時，您可以設定不同的連接字串，或是從 Azure DevOps Services 或偏好 DevOps 系統中的 CI/CD 管道進行。
 
@@ -143,13 +143,13 @@ services:
 
 當您開發應用程式時，務必要能夠在隔離開發環境中執行應用程式。 您可以使用 Docker-compose CLI 命令建立該環境或可視化工作室,該環境或可視化工作室在封面下使用 docker-compose。
 
-docker-compose.yml 檔案可讓您設定和記載所有應用程式的服務相依性 (其他服務、快取、資料庫、佇列等等)。 使用 docker-compose CLI 命令，您可以使用單一命令 (docker-compose up) 來建立和啟動每個相依性的一或多個容器。
+docker-compose.yml 檔案允許您設定和記錄應用程式的所有服務依賴項(其他服務、緩存、資料庫、佇列等)。 使用 docker-compose CLI 命令，您可以使用單一命令 (docker-compose up) 來建立和啟動每個相依性的一或多個容器。
 
 docker-compose.yml 檔案不只是 Docker 引擎所解譯的組態檔，也是組合多容器應用程式的便利文件檔案。
 
 #### <a name="testing-environments"></a>測試環境
 
-任何持續部署 (CD) 或持續整合 (CI) 程序的重要部分都是單元測試和整合測試。 這些自動化測試需要隔離環境，因此它們不受使用者或應用程式資料中的任何其他變更所影響。
+任何持續部署 (CD) 或持續整合 (CI) 程序的重要部分都是單元測試和整合測試。 這些自動化測試需要一個孤立的環境,因此它們不受使用者或應用程序數據的任何其他更改的影響。
 
 使用 Docker Compose,您可以從命令提示符或文稿(如以下命令)中輕鬆地從命令提示符或文稿建立和銷毀該隔離環境:
 
@@ -177,7 +177,7 @@ docker-compose -f docker-compose.yml -f docker-compose-test.override.yml down
 
 Compose 預設會讀取兩個檔案、docker-compose.yml 和選擇性 docker-compose.override.yml 檔案。 如圖 6-11 中所示，當您在使用 Visual Studio 並啟用 Docker 支援時，Visual Studio 也會另外建立 docker-compose.vs.debug.g.yml 檔案以供偵錯應用程式，您可以在主要解決方案資料夾中的資料夾 obj\\Docker\\查看此檔案。
 
-![Docker 撰寫專案中的檔案的螢幕截圖。](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
+![Docker 撰寫專案中的檔案。](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **圖 6-11**。 在視覺工作室 2019 中寫檔
 
@@ -269,7 +269,7 @@ services:
 
 - 服務名稱：webmvc。
 
-- 容器的自訂映像：eshop/webmvc。
+- 容器的自定義圖像:電子商店/webmvc。
 
 - 建置自訂 Docker 映像的命令，指出要使用的 Dockerfile。
 
@@ -448,22 +448,22 @@ ENTRYPOINT ["dotnet", "run"]
 
 這類 Dockerfile 將會運作。 不過，您可以持續最佳化映像，特別是生產映像。
 
-在容器和微服務模型中，您將會不斷地啟動容器。 因為容器是可處置的，所以容器的一般使用方式不會重新啟動睡眠中容器。 協調器 (例如 Kubernetes 和 Azure Service Fabric) 只會建立映像的新執行個體。 這表示您需要在建置應用程式時對其先行編譯來進行最佳化，讓具現化程序更為快速。 容器在啟動時，應該就已準備好執行。 您不應該在執行階段從 dotnet CLI 使用 `dotnet restore` 和 `dotnet build` 命令進行還原和編譯，如許多 .NET Core 和 Docker 部落格文章中所見。
+在容器和微服務模型中，您將會不斷地啟動容器。 因為容器是可處置的，所以容器的一般使用方式不會重新啟動睡眠中容器。 協調器 (例如 Kubernetes 和 Azure Service Fabric) 只會建立映像的新執行個體。 這表示您需要在建置應用程式時對其先行編譯來進行最佳化，讓具現化程序更為快速。 容器在啟動時，應該就已準備好執行。 不要在運行時使用`dotnet restore``dotnet build`和 CLI 命令還原和編譯,正如您在有關 .NET Core 和 Docker 的部落格文章中看到的那樣。
 
 .NET 小組已執行重要工作，讓 .NET Core 和 ASP.NET Core 成為容器最佳化架構。 .NET Core 不僅已是磁碟使用量低的輕量型架構，從 2.1 版起，小組還將重點放在針對三大情境將 Docker 映像最佳化，以便於 *dotnet/core*的 Docker Hub 登錄中加以發佈：
 
-1. **開發**:其中優先順序是快速反覆運算和調試更改的能力,以及大小是次要的。
+1. **開發**:優先權是能夠快速反覆運算和調試更改,以及大小是次要的。
 
-2. **建置**：最優先事項是編譯應用程式，以及包含二進位檔和其他相依性來將二進位檔最佳化。
+2. **生成**:優先順序是編譯應用程式,映射包括二進位檔和其他依賴項,以優化二進位檔。
 
-3. **生產**:其中焦點是快速部署和啟動容器,因此這些映射僅限於二進位檔以及運行應用程式所需的內容。
+3. **生產**:重點是快速部署和啟動容器,因此這些映射僅限於運行應用程式所需的二進位檔和內容。
 
-為達到這項目標，.NET 小組目前在 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (Docker Hub) 提供 四種基本變體：
+.NET 團隊在[dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)中提供了四個基本變體(在 Docker Hub):
 
 1. **sdk**：適用於開發與建置環節
 1. **aspnet**：ASP.NET 生產環境案例
 1. **aspnet**：.NET 生產環境案例
-1. **runtime-deps**：適用於[獨立式應用程式](../../../core/deploying/index.md#publish-self-contained)的生產環節。
+1. **執行時-deps**:[用於自包含應用程式的](../../../core/deploying/index.md#publish-self-contained)生產方案
 
 為了啟動更快，執行階段映像也會將 spnetcore\_urls 自動設定為連接埠 80，並使用 Ngen 建立組件的原生映像快取。
 

@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 3d97ab2b3f53179cb184f2ad3944ea29ff5566a2
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 7061b6c1988da9f6dfac115ee555a914531df863
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345119"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805922"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() 傳回值 (C# 程式設計手冊)
 
@@ -21,11 +21,11 @@ ms.locfileid: "80345119"
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-如果未使用來自 `Main` 的傳回值，則傳回 `void` 可允許使用比較簡單的程式碼。 不過，若是傳回一個整數，可讓程式將狀態資訊傳達給其他會叫用可執行檔的程式或指令碼。 從 `Main` 傳回的值會視為處理序的結束代碼。 如果 `void` 從 `Main` 傳回，結束程式碼會隱含為 `0`。 下列範例示範如何存取來自 `Main` 的傳回值。
+如果未使用來自 `Main` 的傳回值，則傳回 `void` 可允許使用比較簡單的程式碼。 不過，若是傳回一個整數，可讓程式將狀態資訊傳達給其他會叫用可執行檔的程式或指令碼。 從 `Main` 傳回的值會視為處理序的結束代碼。 如果`void`從`Main`傳回,則離開代碼將隱`0`式 為 。 下列範例示範如何存取來自 `Main` 的傳回值。
 
 ## <a name="example"></a>範例
 
-此範例使用 [.NET Core](../../../core/index.yml) 命令列工具。 如果您不熟悉 .NET Core 命令列工具，您可以在此[開始使用主題](../../../core/tutorials/cli-create-console-app.md)中了解這些工具。
+此範例使用[.NET Core](../../../core/index.yml)命令列工具。 如果您不熟悉 .NET Core 命令列工具,您可以在本文入門[文章中](../../../core/tutorials/cli-create-console-app.md)瞭解這些工具。
 
 修改 *program.cs* 中的 `Main` 方法，如下所示：
 
@@ -37,7 +37,7 @@ ms.locfileid: "80345119"
 
 接下來，建立 PowerShell 指令碼以執行此應用程式，並顯示結果。 將下列程式碼貼入文字檔，將它儲存為 `test.ps1`，並放到包含專案的資料夾中。 在 PowerShell 命令提示字元中鍵入 `test.ps1`，以執行 PowerShell 指令碼。
 
-由於程式碼會傳回零，因為批次檔會報告成功。 不過，如果您將 MainReturnValTest.cs 變更為傳回非零值，並重新編譯程式，則 PowerShell 指令碼的後續執行會報告失敗。
+由於程式碼會傳回零，因為批次檔會報告成功。 但是,如果更改MainReturnValTest.cs返回非零值,然後重新編譯程式,則後續執行 powershell 腳本將報告失敗。
 
 ```dotnetcli
 dotnet run
@@ -83,7 +83,7 @@ private static async Task<int> AsyncConsoleWork()
 
 新語法的優點是編譯器一律會產生正確的程式碼。
 
-## <a name="compiler-generated-code"></a>編譯器產生的程式碼
+## <a name="compiler-generated-code"></a>編譯器產生的代碼
 
 當應用程式進入點傳回 `Task` 或 `Task<int>` 時，編譯器會產生新的進入點，以呼叫應用程式程式碼中宣告的進入點方法。 假設此進入點稱為 `$GeneratedMain`，編譯器會為這些進入點產生下列程式碼：
 
@@ -97,7 +97,7 @@ private static async Task<int> AsyncConsoleWork()
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C# 編程指南](../index.md)
 - [C# 參考](../index.md)
-- [主（）和命令列參數](index.md)
+- [主()和指令列參數](index.md)
 - [如何顯示命令列參數](./how-to-display-command-line-arguments.md)

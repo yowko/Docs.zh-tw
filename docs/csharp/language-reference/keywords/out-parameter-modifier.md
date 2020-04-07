@@ -4,14 +4,15 @@ ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: c713aa929673e51e8e9986c536bae782121c7756
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 57308992268e1285cfeb82b28e2abf213e7a831b
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249340"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805865"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out 參數修飾詞 (C# 參考)
+
 `out` 關鍵字會導致引數由參考傳遞。 它會使形式參數成為引數的別名，其必須為變數。 換句話說，參數上的任何作業都會在引數上進行。 它類似於 [ref](ref.md) 關鍵字，只是 `ref` 需要在傳遞之前，先初始化變數。 其類似於 [in](in-parameter-modifier.md) 關鍵字，但不同處在於 `in` 不允許呼叫的方法來修改引數的值。 若要使用 `out` 參數，方法定義和呼叫方法都必須明確地使用 `out` 關鍵字。 例如：  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#1)]  
@@ -47,15 +48,15 @@ class CS0663_Example
   
 - 迭代器方法，其包括 [yield return](./yield.md) 或 `yield break` 陳述式。  
 
-此外，[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)具有以下限制：
+此外,[擴充方法](../../programming-guide/classes-and-structs/extension-methods.md)具有以下限制:
 
-- 不能`out`對擴充方法的第一個參數使用 keywoard。
-- `ref`當參數不是結構，或者泛型型別不受約束為結構時，關鍵字不能用於擴充方法的第一個參數。
-- 除非`in`第一個參數是結構，否則無法使用關鍵字。 `in`關鍵字不能在任何泛型型別上使用，即使約束為結構。
+- 關鍵字`out`不能用於擴充方法的第一個參數。
+- `ref`當參數不是結構,或者泛型類型不受約束為結構時,關鍵字不能用於擴展方法的第一個參數。
+- 除非`in`第一個參數是結構,否則無法使用關鍵字。 `in`關鍵字不能在任何泛型類型上使用,即使約束為結構。
 
 ## <a name="declaring-out-parameters"></a>宣告 `out` 參數
 
-使用 `out` 引數來宣告方法是傳回多個值的傳統因應措施。 從 C# 7.0 開始，針對類似案例請考慮使用 [tuple](../../tuples.md)。 下列範例使用 `out`，在單一方法呼叫中，傳回三個變數。 請注意，第三個引數指派為 null。 這可讓方法能選擇性地傳回值。  
+使用 `out` 引數來宣告方法是傳回多個值的傳統因應措施。 從 C# 7.0 開始，針對類似案例請考慮使用 [tuple](../../tuples.md)。 下列範例使用 `out`，在單一方法呼叫中，傳回三個變數。 第三個參數分配給 null。 這可讓方法能選擇性地傳回值。  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 
@@ -79,6 +80,6 @@ class CS0663_Example
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 編程指南](../../programming-guide/index.md)
 - [C# 關鍵字](./index.md)
 - [方法參數](./method-parameters.md)

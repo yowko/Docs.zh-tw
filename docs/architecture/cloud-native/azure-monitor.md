@@ -1,38 +1,38 @@
 ---
 title: Azure 監視器
-description: 使用 Azure 監視器來取得系統的可見度。
+description: 使用 Azure 監視器來查看系統正在運行。
 ms.date: 02/05/2020
-ms.openlocfilehash: 87ffca186346c3356c0277809d1d67145d1dd17b
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 4e5ddba6c1c13dc65662a7748d4ae3a58a6a6f68
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628029"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805626"
 ---
 # <a name="azure-monitor"></a>Azure 監視器
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-沒有其他雲端提供者的雲端應用程式監視解決方案成熟，如同在 Azure 中找到的一樣。 Azure 監視器是一組工具集合的資訊，其設計目的是要提供系統狀態的可見度、任何問題的深入解析，以及應用程式的優化。
+沒有其他雲端供應商像 Azure 中那樣成熟雲端應用程式監視解決方案。 Azure 監視器是一系列工具的一個總括名稱,旨在提供對系統狀態的可見性、對任何問題的見解以及應用程式的優化。
 
-![Azure 監視器，這是工具的集合，可讓您深入瞭解雲端原生應用程式的運作方式。](./media/azure-monitor.png)
-**圖 7-12**。 Azure 監視器，這是工具的集合，可讓您深入瞭解雲端原生應用程式的運作方式。
+![Azure 監視器,一個工具的集合,用於深入瞭解雲原生應用程式的工作原理。](./media/azure-monitor.png)
+**圖7-12**。 Azure 監視器,一個工具的集合,用於深入瞭解雲原生應用程式的工作原理。
 
-## <a name="gathering-logs-and-metrics"></a>收集記錄和計量
+## <a name="gathering-logs-and-metrics"></a>收集記錄和指標
 
-任何監視解決方案中的第一個步驟，是盡可能收集最多的資料。 可以收集的資料愈多，可取得的深入解析就愈深入。 在傳統上，檢測系統並不容易。 簡易網路管理通訊協定（SNMP）是用來收集機器層級資訊的黃金標準通訊協定，但它需要大量的知識和設定。 幸好，大部分的這項困難的工作都已消除，因為最常見的計量會由 Azure 監視器自動收集。
+任何監視解決方案的第一步是收集盡可能多的數據。 可以收集的數據越多,獲得的見解就越深。 傳統上,檢測系統很困難。 簡單網路管理協定(SNMP)是收集機器級資訊的黃金標準協定,但它需要大量的知識和配置。 幸運的是,由於 Azure 監視器會自動收集最常見的指標,因此許多辛勤工作已消除。
 
-應用層級的計量和事件無法自動檢測，因為它們是所要部署之應用程式的特定。 為了收集這些計量，有可用來直接報告這類資訊的[sdk 和 api](https://docs.microsoft.com/azure/azure-monitor/app/api-custom-events-metrics) ，例如當客戶註冊或完成訂單時。 例外狀況也可以透過 Application Insights 加以捕捉並回報給 Azure 監視器。 Sdk 支援最多在雲端原生應用程式（包括 Go、Python、JavaScript 和 .NET 語言）中找到的所有語言。
+應用程式等級指標和事件無法自動檢測,因為它們特定於要部署的應用程式。 為了收集這些指標,可以使用[SDK 和 API](https://docs.microsoft.com/azure/azure-monitor/app/api-custom-events-metrics)直接報告此類資訊,例如客戶註冊或完成訂單時。 還可以捕獲異常,並通過應用程式見解報告回 Azure 監視器。 SDK 支援雲本機應用程式中找到的大多數語言,包括 Go、Python、JAvaScript 和 .NET 語言。
 
-收集應用程式狀態相關資訊的最終目標，是要確保您的終端使用者擁有良好的體驗。 判斷使用者是否遇到問題的更好方法，比[在外部 web 測試中](https://docs.microsoft.com/azure/azure-monitor/app/monitor-web-app-availability)執行？ 這些測試可以像是從世界各地的網站 ping，或讓代理程式登入網站並模擬使用者動作一樣簡單。
+收集有關應用程式狀態資訊的最終目標是確保您的最終用戶獲得良好的體驗。 還有什麼比進行[外部 Web 測試](https://docs.microsoft.com/azure/azure-monitor/app/monitor-web-app-availability)更好的方法來判斷使用者是否遇到問題? 這些測試可以像從世界各地的位置 ping 網站一樣簡單,也可以像讓代理登錄到網站並類比使用者操作一樣簡單。
 
 ## <a name="reporting-data"></a>報告資料
 
-收集資料之後，就可以操作、摘要，並將其繪製成圖表，讓使用者可以在發生問題時立即查看。 這些圖表可以收集到儀表板或活頁簿中，這是一種多頁報表，設計用來告訴有關系統某些層面的故事。
+收集數據后,可以對其進行操作、匯總和繪製成圖表,從而允許使用者在出現問題時立即查看。 這些圖表可以收集到儀錶板或工作簿中,這是一個多頁報告,旨在講述有關系統某些方面的故事。
 
-不需要某些人工智慧或機器學習，即可完成現代化應用程式。 為此，您[可以將資料傳遞](https://www.youtube.com/watch?v=Cuza-I1g9tw)至 Azure 中的各種機器學習工具，讓您可以將其他隱藏的趨勢和資訊解壓縮。
+沒有人工智慧或機器學習,任何現代應用都不完整。 為此,[可以將資料傳遞到](https://www.youtube.com/watch?v=Cuza-I1g9tw)Azure 中的各種機器學習工具,以允許您提取其他將隱藏的趨勢和資訊。
 
-Application Insights 提供一種強大的查詢語言，稱為 Kusto，可用來尋找記錄、匯總它們，甚至繪製圖表。 例如，此查詢會找出2007年11月的所有記錄、依州/省分組，然後將前10個圖繪製為圓形圖。
+應用程式見解提供了一種稱為 Kusto 的強大查詢語言,可用於查找記錄、匯總記錄甚至繪圖圖表。 例如,此查詢將查找 2007 年 11 月的所有記錄,按狀態對其進行分組,並將前 10 條列印為餅圖。
 
 ```kusto
 StormEvents
@@ -42,26 +42,26 @@ StormEvents
 | render piechart
 ```
 
-![Application Insights 查詢的結果](./media/azure-monitor.png)
-**圖 7-13**。 Application Insights 查詢的結果。
+![應用程式見解查詢](./media/azure-monitor.png)
+**圖圖 7-13**的結果。 應用程式見解查詢的結果。
 
-有一個[遊樂場可用於實驗 Kusto](https://dataexplorer.azure.com/clusters/help/databases/Samples)查詢，這是一個很棒的地方來花上一小時或兩個。 閱讀[範例查詢](https://docs.microsoft.com/azure/kusto/query/samples)也會有意義。
+有一個[操場,嘗試Kusto](https://dataexplorer.azure.com/clusters/help/databases/Samples)查詢,這是一個夢幻般的地方,花一兩個小時。 閱讀[示例查詢](https://docs.microsoft.com/azure/kusto/query/samples)也可以具有指導意義。
 
 ## <a name="dashboards"></a>儀表板
 
-有數種不同的儀表板技術可用來呈現 Azure 監視器的資訊。 最簡單的方式，就是只在 Application Insights 中執行查詢，並將[資料繪製到圖表](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)中。
+有幾種不同的儀錶板技術可用於顯示 Azure 監視器中的資訊。 也許最簡單的方法是在應用程式見解中執行查詢[,並將資料繪製到圖表中](https://docs.microsoft.com/azure/azure-monitor/learn/tutorial-app-dashboards)。
 
-![在主要 Azure 儀表板中內嵌 Application Insights 圖表的範例](./media/azure-monitor.png)
-**圖 7-14**。 內嵌在主要 Azure 儀表板中 Application Insights 圖表的範例。
+![嵌入在主 Azure 儀](./media/azure-monitor.png)
+表板**圖 7-14**中的應用程式見解圖表的範例。 嵌入在主 Azure 儀表板中的應用程式見解圖表的範例。
 
-然後您可以使用儀表板功能，將這些圖表內嵌在 Azure 入口網站中。 對於具有更嚴格需求的使用者（例如能夠向下切入到數個資料層），Azure 監視器資料可供[Power BI](https://powerbi.microsoft.com/)。 Power BI 是業界領先的企業級商業智慧工具，可以從許多不同的資料來源匯總資料。
+然後,這些圖表可以通過使用儀錶板功能適當地嵌入 Azure 門戶中。 對於具有更嚴格要求(如能夠向下鑽取到多個資料層)的使用者[,Azure](https://powerbi.microsoft.com/)監視器資料可用於 Power BI 。 Power BI 是一種行業領先的企業級商業智慧工具,可以聚合來自許多不同的數據源的數據。
 
-![Power BI 儀表板範例](./media/azure-monitor.png)
-**圖 7-15**。 Power BI 儀表板範例。
+![例如 Power](./media/azure-monitor.png)
+BI 儀表板**圖 7-15**。 例如 Power BI 儀錶板。
 
 ## <a name="alerts"></a>警示
 
-有時候，擁有資料儀表板的空間不足。 如果沒有人進行喚醒來監看儀表板，則在問題解決或甚至偵測到之前，仍然可能需要數小時的時間。 為此，Azure 監視器也會提供最高的槽口[警示解決方案](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)。 警示可由各種不同的條件觸發，包括：
+有時,數據儀錶板不足。 如果沒有人醒著觀看儀錶板,則問題處理甚至檢測到仍可能需要數小時。 此選項,Azure 監視器還提供一流的[警示解決方案](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)。 警示可以由多種條件觸發,包括:
 
 - 計量值
 - 記錄搜尋查詢
@@ -69,17 +69,16 @@ StormEvents
 - 基礎 Azure 平台健康情況
 - 網站可用性測試
 
-觸發時，警示可以執行各種不同的工作。 在簡單的情況下，警示可能只會傳送電子郵件通知給郵寄清單或文字訊息給個人。 更多相關警示可能會在 PagerDuty 之類的工具中觸發工作流程，這知道誰正在呼叫特定應用程式。 警示可以在[Microsoft Flow](https://flow.microsoft.com/)解除鎖定工作流程幾乎無限制的可能性中觸發動作。
+觸發時,警報可以執行各種任務。 簡單一方面,警報可能只是向郵件清單發送電子郵件通知或向個人發送簡訊。 涉及的警報越多,可能會觸發 PagerDuty 等工具中的工作流,因為 PagerDuty 知道誰正在呼叫特定應用程式。 警報可以在[Microsoft Flow](https://flow.microsoft.com/)中觸發操作,從而在工作流中釋放幾乎無限的可能性。
 
-當識別出常見的警示原因時，可以利用警示的常見原因和解決這些警示的步驟，來增強警示。 高成熟的雲端原生應用程式部署可能會選擇啟動自我修復工作，這會執行動作，例如從擴展集移除失敗的節點或觸發自動調整活動。 最後，您可能不再需要在12AM-2AM 喚醒待命人員以解決即時網站問題，因為系統能夠自行調整以補償或至少 limp，直到有人在下一個早上抵達工作為止。
+當識別警報的常見原因時,可以通過有關警報的常見原因以及解決這些問題的步驟的詳細資訊來增強警報。 高度成熟的雲原生應用程式部署可能會選擇啟動自我修復任務,這些任務執行操作,例如從縮放集中刪除故障節點或觸發自動縮放活動。 最終,可能不再需要在淩晨 2 點叫醒待命人員來解決現場問題,因為系統將能夠調整自身以補償或至少跛行,直到第二天早上有人到達工作崗位。
 
-Azure 監視器會自動利用機器學習服務來瞭解已部署應用程式的一般指令引數。 這可讓它偵測在其一般參數之外運作的服務。 例如，網站上的一般工作日流量可能是每分鐘10000個要求。 然後，在指定的一周，突然要求數達到每分鐘非常不尋常的20000要求。 [智慧型偵測](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics)會注意到此偏差與標準，並觸發警示。 同時，趨勢分析的智慧足以避免在預期流量負載時引發誤報。
+Azure 監視器自動利用機器學習來瞭解已部署應用程式的正常操作參數。 這使它能夠檢測在其正常參數之外運行的服務。 例如,網站上典型的工作日流量可能是每分鐘 10,000 個請求。 然後,在給定的一周內,請求數量突然達到每分鐘非常不尋常的 20,000 個請求。 [智慧檢測](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics)將注意到這種偏離規範並觸發警報。 同時,趨勢分析足夠聰明,以避免在流量負載預期時觸發誤報。
 
 ## <a name="references"></a>參考
 
 - [Azure 監視器](https://docs.microsoft.com/azure/azure-monitor/overview)
-- [智慧型警示管理-MS Ignite-影片](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]
->[上一頁](monitoring-azure-kubernetes.md)
->[下一頁](identity.md)
+>[前一個](monitoring-azure-kubernetes.md)
+>[下一個](identity.md)

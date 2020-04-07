@@ -2,12 +2,12 @@
 title: 訂閱事件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解發佈及訂閱整合事件的詳細資料。
 ms.date: 01/30/2020
-ms.openlocfilehash: 3bfcdb1766a15b1a8e8deab46055f14e1791c2cc
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 7e78970933fdad27d2be74e7d498b0797fc09bc0
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523599"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805505"
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
@@ -15,7 +15,7 @@ ms.locfileid: "80523599"
 
 下列簡單程式碼顯示每個接收者微服務在啟動服務時必須實作的項目 (也就是在 `Startup` 類別中)，以便訂閱所需的事件。 在本例中，`basket-api` 微服務需要訂閱 `ProductPriceChangedIntegrationEvent` 和 `OrderStartedIntegrationEvent` 訊息。
 
-例如，訂閱 `ProductPriceChangedIntegrationEvent` 事件時，可讓購物籃微服務注意到產品價格的任何變更，並在使用者的購物籃中有該項產品時，警告使用者有此變更。
+例如,在訂閱`ProductPriceChangedIntegrationEvent`事件時,它使購物籃微服務知道產品價格的任何變化,並允許使用者在使用者購物籃中時通知使用者有關更改的情況。
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
@@ -56,7 +56,7 @@ public class CatalogController : ControllerBase
 }
 ```
 
-然後，您可以從控制器的方法使用它，就像是在 UpdateProduct 方法中一樣：
+然後,從控制器的方法使用它,如在 UpdateProduct 方法中:
 
 ```csharp
 [Route("items")]
@@ -95,9 +95,9 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 基本上，您可以使用微服務來建置可擴充且高度可用的系統。 簡單來說，CAP 定理指出您無法建置持續可用、極為一致「且」** 容許任何分割的 (分散式) 資料庫 (或擁有自己模型的微服務)。 您必須從這三個屬性中選擇兩個。
 
-在微服務架構中，您應該選擇可用性和容錯，而且您應該不要強調強式一致性。 因此，在大多數現代化微服務架構應用程式中，您通常不想要在傳訊中使用分散式交易 (就像是使用 [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 實作以 Windows Distributed Transaction Coordinator (DTC) 為基礎的[分散式交易](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))時一樣)。
+在基於微服務的體系結構中,應選擇可用性和容差,並且應淡化強一致性。 因此，在大多數現代化微服務架構應用程式中，您通常不想要在傳訊中使用分散式交易 (就像是使用 [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 實作以 Windows Distributed Transaction Coordinator (DTC) 為基礎的[分散式交易](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))時一樣)。
 
-讓我們回到一開始的問題及其範例。 如果服務損毀發生在更新資料庫之後 (在本例中會是具有 \_context.SaveChangesAsync() 的程式碼行之後)，但在發行整合事件之前，整體系統可能會變成不一致。 視您正在處理的特定商務作業而定，這可能具商務關鍵性。
+讓我們回到初始問題及其示例。 如果服務在資料庫更新后崩潰(在本例中,在代碼行后使用`_context.SaveChangesAsync()`),但在發佈集成事件之前,整個系統可能會變得不一致。 視您正在處理的特定商務作業而定，這可能具商務關鍵性。
 
 如稍早的＜架構＞一節中所述，您有數個方法可解決這個問題：
 
@@ -109,15 +109,15 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 在此案例中，使用完整的事件溯源 (ES) 模式即使不是「最佳」** 方法，也是最佳方法之一。 不過，在許多應用程式案例中，您可能無法實作完整的 ES 系統。 ES 表示只會將領域事件儲存在您的交易式資料庫中，而不會儲存目前的狀態資料。 只儲存領域事件可能有許多好處，例如提供系統歷程記錄，以及能夠判斷過去任何時間的系統狀態。 不過，實作完整的 ES 系統需要您重新架構大部分的系統，因而引進許多其他的複雜度和需求。 例如，您會想要使用專為事件溯源所建立的資料庫 (例如[事件存放區](https://eventstore.org/))，或文件導向資料庫 (例如 Azure Cosmos DB、MongoDB、Cassandra、CouchDB 或 RavenDB)。 ES 是解決這個問題的最好方法，但除非您已熟悉事件溯源，否則並不是最簡單的解決方法。
 
-使用交易記錄採礦的選項一開始看起來很簡單。 不過，若要使用此方法，微服務必須與 RDBMS 交易記錄結合，例如 SQL Server 交易記錄。 這可能不適當。 另一個缺點是，交易記錄中記錄的低層級更新可能不會與高層級整合事件位於相同層級。 如果是這樣，可能會很難處理這些交易記錄作業的反向工程。
+使用事務日誌挖掘的選項最初看起來透明。 不過，若要使用此方法，微服務必須與 RDBMS 交易記錄結合，例如 SQL Server 交易記錄。 這可能不適當。 另一個缺點是，交易記錄中記錄的低層級更新可能不會與高層級整合事件位於相同層級。 如果是這樣，可能會很難處理這些交易記錄作業的反向工程。
 
-一個平衡的方法是混合交易式資料庫資料表和簡化的 ES 模式。 您可以使用「準備發行事件」等狀態，當您將它認可至整合事件資料表時，會在原始事件中設定此狀態。 然後，您可以嘗試將事件發行至事件匯流排。 如果發行事件動作成功，您可以啟動來源服務中的另一個交易，並將狀態從「準備發行事件」移至「事件已發行」。
+一個平衡的方法是混合交易式資料庫資料表和簡化的 ES 模式。 可以使用「準備發佈事件」等狀態,在將事件提交到集成事件表時在原始事件中設置該狀態。 然後，您可以嘗試將事件發行至事件匯流排。 如果發佈事件操作成功,則在源服務中啟動另一個事務,並將狀態從「準備發佈事件」移動到「已發布的事件」。
 
-如果事件匯流排中的發行事件動作失敗，來源微服務中的資料不會一直處於不一致的狀態 (它仍標示為「準備發行事件」，但對於其餘服務而言，它最終將會一致)。 您一律可以讓背景工作檢查整合事件的交易狀態。 如果工作發現事件處於「準備發行事件」狀態，它可以嘗試將該事件重新發行至事件匯流排。
+如果事件總線中的發佈事件操作失敗,則數據在源微服務中仍不會不一致 - 它仍然標記為「準備發佈事件」,對於其餘服務,數據最終將一致。 您一律可以讓背景工作檢查整合事件的交易狀態。 如果作業發現事件處於「準備發佈事件」狀態,則可以嘗試將該事件重新發佈到事件總線。
 
 請注意，使用此方法，您只會保存每個來源微服務的整合事件，以及您要傳達給其他微服務或外部系統的事件。 相較之下，在完整的 ES 系統中，您也會儲存所有領域事件。
 
-因此，此平衡的方法是簡化的 ES 系統。 您需要一份整合事件及其目前狀態 (「準備發行」與「已發行」) 的清單。 但是，您只需要實作整合事件的這些狀態。 此外，在此方法中，您不需要如同在完整的 ES 系統中，將所有領域資料儲存為交易式資料庫中的事件。
+因此，此平衡的方法是簡化的 ES 系統。 您需要包含其當前狀態的集成事件的清單("準備發佈"與"已發佈" 但是，您只需要實作整合事件的這些狀態。 此外，在此方法中，您不需要如同在完整的 ES 系統中，將所有領域資料儲存為交易式資料庫中的事件。
 
 如果您已使用關聯式資料庫，您可以使用交易式資料表來儲存整合事件。 若要達到應用程式中的不可部分完成性，您可以使用以本機交易為基礎的雙步驟程序。 基本上，您在具有領域實體的相同資料庫中會有 IntegrationEvent 資料表。 該資料表可確保達到不可部分完成性，讓您在認可領域資料的相同交易中包含持續性整合事件。
 
@@ -157,9 +157,9 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 下列程式碼示範如何建立涉及多個 DbContext 物件的單一交易：一個內容與要更新的原始資料相關，第二個內容與 IntegrationEventLog 資料表相關。
 
-請注意，如果資料庫連接在執行程式碼時發生任何問題，下列範例程式碼中的交易將不會復原。 在 Azure SQL DB 等雲端式系統中，由於可能會在伺服器之間移動資料庫，因此可能會發生此情況。 若要在多個內容之間實作復原交易，請參閱本指南稍後的[實作具有恢復功能的 Entity Framework Core SQL 連接](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md)一節。
+如果與資料庫的連接在運行代碼時出現任何問題,則下面示例代碼中的事務將不能恢復。 在 Azure SQL DB 等雲端式系統中，由於可能會在伺服器之間移動資料庫，因此可能會發生此情況。 若要在多個內容之間實作復原交易，請參閱本指南稍後的[實作具有恢復功能的 Entity Framework Core SQL 連接](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md)一節。
 
-為了清楚起見，下列範例會在單一程式碼片段中顯示整個程序。 不過，eShopOnContainers 實作實際上已重構，並將此邏輯分割成多個類別，因此很容易維護。
+為了清楚起見，下列範例會在單一程式碼片段中顯示整個程序。 但是,eShopOnContainers 實現是重構的,並將此邏輯拆分為多個類,以便更易於維護。
 
 ```csharp
 // Update Product from the Catalog microservice
@@ -285,7 +285,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ## <a name="idempotency-in-update-message-events"></a>更新訊息事件中的等冪性
 
-更新訊息事件的一個重點是，通訊期間任何時間失敗都應該導致重試訊息。 否則，背景工作可能會嘗試發行已發行的事件，並建立競爭條件。 您需要確定更新為等冪或提供足夠的資訊，以確保您可以偵測重複項、將它捨棄，並只傳回一個回應。
+更新訊息事件的一個重點是，通訊期間任何時間失敗都應該導致重試訊息。 否則，背景工作可能會嘗試發行已發行的事件，並建立競爭條件。 確保更新是冪等的,或者它們提供足夠的資訊,以確保可以檢測到重複項、丟棄更新,並且僅發送一個回應。
 
 如稍早所述，等冪性表示作業可執行多次而不會變更結果。 在傳訊環境中，當傳達事件時，如果可傳遞事件多次而不會變更接收者微服務的結果，事件會是等冪。 由於事件本身的本質，或由於系統處理事件的方式，這可能會是必要條件。 訊息等冪性在使用傳訊的任何應用程式中都很重要，不是只有在實作事件匯流排模式的應用程式中才重要。
 
@@ -293,7 +293,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 您可以設計等冪訊息。 舉例來說，您可以建立事件，指出「將產品價格設定為美金 $25 元」，而非「將產品價格增加美金 $5 元。」 您可以安全地處理第一則訊息不限次數，結果會相同。 第二則訊息則不然。 但即使是在第一個案例中，您可能不想要處理第一個事件，因為系統也可能已傳送較新的價格變更事件，而且您將覆寫新價格。
 
-另一個範例可能是將訂單已完成事件傳播至多個訂閱者。 請確保只在其他系統中更新訂單資訊一次，即使同一個訂單已完成事件有重複的訊息事件亦然。
+另一個範例可能是將訂單已完成事件傳播至多個訂閱者。 請務必在其他系統中只更新一次訂單資訊,即使同一訂單完成事件存在重複的消息事件也是如此。
 
 讓每個事件有某種識別會方便您建立邏輯，以強制每個接收者只處理每個事件一次。
 
@@ -306,19 +306,19 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ## <a name="deduplicating-integration-event-messages"></a>刪除重複的整合事件訊息
 
-您可以確保不同層級的每個訂閱者只傳送及處理一次訊息事件。 一個方法是使用您正在使用之傳訊基礎結構所提供的重複資料刪除功能。 另一個方法是在您的目的地微服務中實作自訂邏輯。 最好是在傳輸層和應用程式層都有驗證。
+您可以確保消息事件僅在不同級別每個訂閱者發送和處理一次。 一個方法是使用您正在使用之傳訊基礎結構所提供的重複資料刪除功能。 另一個方法是在您的目的地微服務中實作自訂邏輯。 最好是在傳輸層和應用程式層都有驗證。
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>在 EventHandler 層級刪除重複的訊息事件
 
-若要確定任何接收者只處理一次事件，一個方式是在處理事件處理常式中的訊息事件時實作特定邏輯。 舉例來說，eShopOnContainers 應用程式就使用了這個方法，就如其在接收到 UserCheckoutAcceptedIntegrationEvent 整合事件時，在 [UserCheckoutAcceptedIntegrationEventHandler 類別的原始程式碼](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)中所示。 (在此案例中，在把 CreateOrderCommand 傳送至命令處理常式前，我們使用 eventMsg.RequestId 作為識別碼，用 IdentifiedCommand 加以包裝)。
+確保事件僅由任何接收方處理一次的一種方法是在事件處理程式中處理消息事件時實現某些邏輯。 舉例來說，eShopOnContainers 應用程式就使用了這個方法，就如其在接收到 UserCheckoutAcceptedIntegrationEvent 整合事件時，在 [UserCheckoutAcceptedIntegrationEventHandler 類別的原始程式碼](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)中所示。 (在此案例中，在把 CreateOrderCommand 傳送至命令處理常式前，我們使用 eventMsg.RequestId 作為識別碼，用 IdentifiedCommand 加以包裝)。
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>使用 RabbitMQ 時刪除重複的訊息
 
 發生間歇性網路失敗時，訊息可能會重複，因此訊息接收者必須準備處理這些重複的訊息。 可能的話，接收者應該以等冪方式來處理這些訊息，這會比使用重複資料刪除功能來明確處理這些訊息還要理想。
 
-根據 [RabbitMQ 文件](https://www.rabbitmq.com/reliability.html#consumer)，「如果將訊息傳遞給取用者，然後要求訊息 (例如因為取用者在中斷連線之前未認可訊息)，則 RabbitMQ 會在再次傳遞訊息時 (不論是對相同的取用者或不同的取用者)，設定訊息的 redelivered 旗標。
+根據[RabmQ 文檔](https://www.rabbitmq.com/reliability.html#consumer),"如果消息傳遞到消費者,然後重新排隊(例如,由於在使用者連接斷開之前未確認),則 RabmQ 將在再次傳遞消息時(無論是發送給同一使用者還是另一個消費者)上設置重新傳遞的標誌。
 
-如果設定了 “redelivered” 旗標，接收者必須將此列入考量，因為可能已處理訊息。 但不保證一定如此，訊息在離開訊息代理程式之後可能從未抵達接收者 (或許因為網路問題)。 相反地，如果未設定 “redelivered” 旗標，就會保證訊息不會多次傳送。 因此，只有訊息中已設定 “redelivered” 旗標時，接收者才必須刪除重複的訊息或以等冪方式處理訊息。
+如果設置了"重新送達"標誌,則接收方必須考慮這一點,因為消息可能已處理。 但不保證一定如此，訊息在離開訊息代理程式之後可能從未抵達接收者 (或許因為網路問題)。 另一方面,如果未設置"重新傳遞"標誌,則保證郵件未發送多次。 因此,僅當在消息中設置了"重新傳遞"標誌時,接收方才需要以不可執行的方式對消息進行重複數據消除或處理消息。
 
 ### <a name="additional-resources"></a>其他資源
 

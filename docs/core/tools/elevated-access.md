@@ -3,12 +3,12 @@ title: Dotnet 命令的提升存取權限
 description: 了解適用於需要提升存取權限的 dotnet 命令最佳做法。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f99e0b257772e0a73d4945f1129997d1d3308ed2
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156760"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805786"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>Dotnet 命令的提升存取權限
 
@@ -18,6 +18,7 @@ ms.locfileid: "78156760"
 
 - `dotnet tool` 命令，例如 [dotnet tool install](dotnet-tool-install.md)。
 - `dotnet run --no-build`
+- `dotnet-core-uninstall`
 
 我們不建議執行其他提升的權限命令。 特別是，我們不建議針對使用 MSBuild 的命令提升權限，例如 [dotnet restore](dotnet-restore.md)、[dotnet build](dotnet-build.md) 和 [dotnet run](dotnet-run.md)。 主要問題是使用者在發出 dotnet 命令後，在根及限制帳戶之間來回轉換時的權限管理問題。 您可能會發現作為限制的使用者，您無法存取由根使用者建置的檔案。 雖然有數種方法可以解決這種情況，但您從一開始其實就可以避免它們。
 
@@ -35,8 +36,8 @@ ms.locfileid: "78156760"
 
 若資料夾 `%ProgramFiles%\dotnet-tools` 已存在，請執行下列操作來檢查 "Users" 群組是否有寫入或修改該目錄的權限：
 
-- 按右鍵`%ProgramFiles%\dotnet-tools`資料夾並選擇 **"屬性**"。 [通用屬性]**** 對話方塊隨即開啟。
-- 選擇"**安全**"選項卡。在 **"組"或"使用者名**"下，檢查"使用者"組是否具有寫入或修改目錄的許可權。
+- 右鍵按一`%ProgramFiles%\dotnet-tools`下 資料夾並選擇 **「屬性**」。 [通用屬性]**** 對話方塊隨即開啟。
+- 選擇「**安全**」選項卡。在 **「群組」或「使用者名**」下,檢查「使用者」組是否具有寫入或修改目錄的許可權。
 - 若 "Users" 群組可以寫入或修改目錄，請在安裝工具時使用不同的目錄名稱，而非 *dotnet-tools*。
 
 若要安裝工具，請以提升權限的命令提示字元來執行下列命令。 它會在安裝期間建立 *dotnet-tools* 資料夾。

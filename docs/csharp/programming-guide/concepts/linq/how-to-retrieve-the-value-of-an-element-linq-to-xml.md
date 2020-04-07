@@ -1,21 +1,26 @@
 ---
-title: 如何檢索元素的值（LINQ 到 XML）（C#）
+title: 如何檢索元素的值(LINQ 到 XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 17a7dac464e1ec40db357194000f5745cdf2f3a8
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: c4bb78e937fe0de08242923cdd7cd638abf571c7
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249203"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805828"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>如何檢索元素的值（LINQ 到 XML）（C#）
-本主題顯示如何取得項目的值。 以下有兩種主要的方式可達成此目標。 其中一種方式為，將 <xref:System.Xml.Linq.XElement> 或 <xref:System.Xml.Linq.XAttribute> 轉型為所需的型別。 然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別，並將其指派給您的變數。 或者，您可以使用 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性或 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 屬性。  
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>如何檢索元素的值(LINQ 到 XML)(C#)
+
+本文演示如何獲取元素的值。 有兩種主要取得值的方法:
+
+- 將<xref:System.Xml.Linq.XElement><xref:System.Xml.Linq.XAttribute>或轉換為所需的類型。 然後，明確的轉換運算子會將項目或屬性的內容轉換為指定的型別，並將其指派給您的變數。
+
+- 使用<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>或<xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>屬性。 您還可以使用這些屬性設置值。
+
+使用 C# 時,鑄件通常是更好的方法。 如果將元素或屬性強制轉換為可 null 值類型,則在檢索可能存在或不存在的元素(或屬性)的值時,代碼的編寫更簡單。 本文[的最後一個示例](#element-might-not-exist-example)演示,在元素可能不存在的情況下,強制轉換更簡單。 不過，您無法像透過 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性般，透過轉型設定項目的內容。  
   
- 不過，使用 C# 時，轉型 (Casting) 通常是較好的方法。 如果將元素或屬性強制轉換為可 null 數值型別，則在檢索可能存在或不存在的元素（或屬性）的值時，代碼的編寫更簡單。 本主題中的最後一個範例會示範這個情況。 不過，您無法像透過 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 屬性般，透過轉型設定項目的內容。  
-  
-## <a name="example"></a>範例  
- 若要擷取項目的值，您只要將 <xref:System.Xml.Linq.XElement> 物件轉型為所需的型別即可。 您永遠可以將項目轉型為字串，如下所示：  
+## <a name="string-cast-example"></a>字串強制轉換範例  
+ 要檢索元素的值,請將<xref:System.Xml.Linq.XElement>物件強制轉換為所需的類型。 可以將元素轉換為字串,如下所示:  
   
 ```csharp  
 XElement e = new XElement("StringElement", "abcde");  
@@ -30,7 +35,7 @@ Console.WriteLine("Value of e:" + (string)e);
 Value of e:abcde  
 ```  
   
-## <a name="example"></a>範例  
+## <a name="integer-cast-example"></a>整數強制轉換範例  
  您也可以將項目轉型為非字串的型別。 例如，如果您有包含整數的項目，您可以將其轉型為 `int`，如下列程式碼所示：  
   
 ```csharp  
@@ -50,7 +55,7 @@ Value of e:44
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會提供 <xref:System.Xml.Linq.XAttribute> 物件相同的轉換運算子。  
   
-## <a name="example"></a>範例  
+## <a name="value-property-example"></a>值屬性範例  
  您可以使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性來擷取項目的內容：  
   
 ```csharp  
@@ -66,8 +71,8 @@ Console.WriteLine("Value of e:" + e.Value);
 Value of e:abcde  
 ```  
   
-## <a name="example"></a>範例  
- 即使您不確定項目是否存在，您有時候還是會嘗試擷取項目的值。 在這種情況下，如果將強制轉換的元素分配給可作投的元素類型或空數值型別（如果該元素不存在）時，分配的變數將僅設置為`null`。 下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。  
+## <a name="element-might-not-exist-example"></a>元素可能不存在範例
+ 有時,即使不確定元素是否存在,您也會嘗試檢索該元素的值。 在這種情況下,如果將強制轉換的元素分配給可 null 引用類型或空值類型時,如果該元素不存在,則分配的變數將設定`null`為 。 下列程式碼顯示，項目可能存在或可能不存在時，使用轉型比使用 <xref:System.Xml.Linq.XElement.Value%2A> 屬性更為容易。  
   
 ```csharp  
 XElement root = new XElement("Root",  

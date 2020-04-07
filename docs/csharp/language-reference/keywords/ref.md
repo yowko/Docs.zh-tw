@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 8d04f888befae2cad815c88a0d27bd836f458c63
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523781"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805856"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -101,7 +101,7 @@ return ref DecimalArray[0];
 
 ## <a name="ref-locals"></a>ref 區域變數
 
-ref 區域變數用來參考使用 `return ref` 所傳回的值。 ref 區域變數無法初始化至非 ref 傳回值。 換句話說，初始化的右側必須是參考。 任何對 ref 區域變數值進行的修改，都會反映在其方法以傳址方式傳回值之物件的狀態。
+ref 區域變數用來參考使用 `return ref` 所傳回的值。 ref 區域變數無法初始化至非 ref 傳回值。 換句話說,初始化的右側必須是引用。 任何對 ref 區域變數值進行的修改，都會反映在其方法以傳址方式傳回值之物件的狀態。
 
 定義 ref 區域變數的方式是在變數宣告前面使用 `ref` 關鍵字，並且緊接在以傳參考方式傳回值的方法呼叫前面。
 
@@ -117,7 +117,7 @@ ref decimal estValue = ref Building.GetEstimatedValue();
 ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
-請注意，在這兩個範例中，`ref` 關鍵字必須用在兩個位置，否則編譯器會產生錯誤 CS8172「無法使用值將傳址變數初始化」。
+在這兩個示例中`ref`,關鍵字必須在兩個位置使用,或者編譯器生成錯誤 CS8172,"無法用值初始化引用變數"。
 
 從 C# 7.3 開始，`foreach` 陳述式的反覆運算變數可以是 ref 區域變數或 ref readonly 區域變數。 如需詳細資訊，請參閱 [foreach 陳述式](foreach-in.md)一文。
 
@@ -145,8 +145,8 @@ ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref re
 
 - 您無法分隔 `ref struct`。 您不可為類型是 `object`、`dynamic` 或任何介面類型的變數，指派 `ref struct` 類型。
 - `ref struct` 型別無法實作介面。
-- 您不可將 `ref struct` 宣告為類別或一般結構的欄位成員。 這包括宣告自動實作屬性，其會建立編譯器產生的支援欄位。
-- 您不可在非同步方法中宣告類型為 `ref struct` 的區域變數。 但可以在傳回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `Task` 之類型別的同步方法中，宣告這些區域變數。
+- 您不可將 `ref struct` 宣告為類別或一般結構的欄位成員。 這包括聲明自動實現的屬性,該屬性將創建編譯器生成的備份欄位。
+- 您不可在非同步方法中宣告類型為 `ref struct` 的區域變數。 您可以在傳<xref:System.Threading.Tasks.Task>回的同步方法中聲明,<xref:System.Threading.Tasks.Task%601>`Task`或類似類型。
 - 您不可在迭代器中宣告 `ref struct` 區域變數。
 - 您不可在 Lambda 運算式或區域函式中擷取 `ref struct` 變數。
 
