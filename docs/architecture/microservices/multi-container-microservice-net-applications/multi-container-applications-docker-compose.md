@@ -2,12 +2,12 @@
 title: 使用 docker-compose.yml 定義多容器應用程式
 description: 如何使用 docker-compose.yml 指定多容器應用程式的微服務組合。
 ms.date: 01/30/2020
-ms.openlocfilehash: 66775b573c46041475e9cddc622bbde78ae44bc4
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 029fad8bb912457872dd5817a2f76aed57dc53c6
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805600"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888224"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式
 
@@ -201,7 +201,7 @@ docker-compose.override.yml 檔案，如其名所示，包含可覆寫基底組�
 
 **圖 6-12**。 覆寫基底 docker-compose.yml 檔案中值的多個 docker-compose 檔案
 
-可以組合多個 docker-compose_.yml 檔來處理不同的環境。 您可以開始使用基底 docker-compose.yml 檔案。 此基底檔案必須包含不會根據環境而變更的基底或靜態組態設定。 例如,eShopOnContainers 具有以下 docker-compose.yml 檔(簡化服務較少)作為基本檔。
+可以組合多個 docker-compose_.yml 檔來處理不同的環境。 您可以開始使用基底 docker-compose.yml 檔案。 此基本檔包含基本或靜態配置設置,這些設置不會根據環境更改。 例如,eShopOnContainers 應用具有以下 docker-compose.yml 檔(簡化服務較少)作為基本檔。
 
 ```yml
 #docker-compose.yml (Base)

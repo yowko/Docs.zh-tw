@@ -2,12 +2,12 @@
 title: 訂閱事件
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解發佈及訂閱整合事件的詳細資料。
 ms.date: 01/30/2020
-ms.openlocfilehash: 7e78970933fdad27d2be74e7d498b0797fc09bc0
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 426dcebe175e9db9a02bcdb2f21ad039154a7bda
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805505"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888211"
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
@@ -93,7 +93,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 當您透過分散式傳訊系統 (例如您的事件匯流排) 發佈整合事件時，會發生以不可部分完成方式更新原始資料庫及發佈事件的問題 (也就是兩個作業皆完成或皆未完成)。 例如，在稍早所示的簡化範例中，程式碼會在產品價格變更時將資料認可至資料庫，然後發行 ProductPriceChangedIntegrationEvent 訊息。 乍看之下，以不可分割方式執行這兩個作業可能很重要。 不過，如果您使用涉及資料庫和訊息代理程式的分散式交易，如同您在 [Microsoft Message Queuing (MSMQ)](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 等較舊系統中的做法，則不建議這樣做，原因如 [CAP 定理](https://www.quora.com/What-Is-CAP-Theorem-1)所述。
 
-基本上，您可以使用微服務來建置可擴充且高度可用的系統。 簡單來說，CAP 定理指出您無法建置持續可用、極為一致「且」** 容許任何分割的 (分散式) 資料庫 (或擁有自己模型的微服務)。 您必須從這三個屬性中選擇兩個。
+基本上，您可以使用微服務來建置可擴充且高度可用的系統。 在某種簡化上,CAP 定理表示,您不能構建一個(分散式)資料庫(或擁有其模型的微服務),該資料庫始終可用、非常一致*且*可容忍任何分區。 您必須從這三個屬性中選擇兩個。
 
 在基於微服務的體系結構中,應選擇可用性和容差,並且應淡化強一致性。 因此，在大多數現代化微服務架構應用程式中，您通常不想要在傳訊中使用分散式交易 (就像是使用 [MSMQ](https://msdn.microsoft.com/library/windows/desktop/ms711472(v=vs.85).aspx) 實作以 Windows Distributed Transaction Coordinator (DTC) 為基礎的[分散式交易](https://docs.microsoft.com/previous-versions/windows/desktop/ms681205(v=vs.85))時一樣)。
 
@@ -151,7 +151,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 **圖 6-23**。 使用背景工作微服務將事件發行至事件匯流排時的不可部分完成性
 
-為了簡化起見，eShopOnContainers 範例使用第一個方法 (沒有額外的處理序或檢查微服務) 再加上事件匯流排。 不過，eShopOnContainers 並不會處理所有可能的失敗案例。 在部署至雲端的實際應用程式中，您必須體認到該問題終究會發生，而且您必須實作該檢查並重新傳送邏輯。 如果當您透過事件匯流排發佈事件 (使用背景工作) 時，有該資料表作為單一事件來源，使用資料表作為佇列可能會比第一個方法更有效。
+為了簡化起見，eShopOnContainers 範例使用第一個方法 (沒有額外的處理序或檢查微服務) 再加上事件匯流排。 但是,eShopOn容器示例未處理所有可能的故障案例。 在部署至雲端的實際應用程式中，您必須體認到該問題終究會發生，而且您必須實作該檢查並重新傳送邏輯。 如果當您透過事件匯流排發佈事件 (使用背景工作) 時，有該資料表作為單一事件來源，使用資料表作為佇列可能會比第一個方法更有效。
 
 ### <a name="implementing-atomicity-when-publishing-integration-events-through-the-event-bus"></a>透過事件匯流排發行整合事件時實作不可部分完成性
 
@@ -293,7 +293,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 您可以設計等冪訊息。 舉例來說，您可以建立事件，指出「將產品價格設定為美金 $25 元」，而非「將產品價格增加美金 $5 元。」 您可以安全地處理第一則訊息不限次數，結果會相同。 第二則訊息則不然。 但即使是在第一個案例中，您可能不想要處理第一個事件，因為系統也可能已傳送較新的價格變更事件，而且您將覆寫新價格。
 
-另一個範例可能是將訂單已完成事件傳播至多個訂閱者。 請務必在其他系統中只更新一次訂單資訊,即使同一訂單完成事件存在重複的消息事件也是如此。
+另一個示例可能是已傳播到多個訂閱者的訂單完成的事件。 應用必須確保在其他系統中僅更新一次訂單資訊,即使同一訂單完成事件存在重複的消息事件也是如此。
 
 讓每個事件有某種識別會方便您建立邏輯，以強制每個接收者只處理每個事件一次。
 
@@ -310,7 +310,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>在 EventHandler 層級刪除重複的訊息事件
 
-確保事件僅由任何接收方處理一次的一種方法是在事件處理程式中處理消息事件時實現某些邏輯。 舉例來說，eShopOnContainers 應用程式就使用了這個方法，就如其在接收到 UserCheckoutAcceptedIntegrationEvent 整合事件時，在 [UserCheckoutAcceptedIntegrationEventHandler 類別的原始程式碼](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)中所示。 (在此案例中，在把 CreateOrderCommand 傳送至命令處理常式前，我們使用 eventMsg.RequestId 作為識別碼，用 IdentifiedCommand 加以包裝)。
+確保事件僅由任何接收方處理一次的一種方法是在事件處理程式中處理消息事件時實現某些邏輯。 例如,這是 eShopOnContainers 應用程式中使用的方法,正如在[UserCheckout 接受整合事件處理程式類](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)收到`UserCheckoutAcceptedIntegrationEvent`整合事件時在原始碼中看到的。 ( 在這種情況下`CreateOrderCommand`, 在將信件傳送到命令`IdentifiedCommand`處理程式`eventMsg.RequestId`之前, 使用「 識別子」 用 包包 。
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>使用 RabbitMQ 時刪除重複的訊息
 

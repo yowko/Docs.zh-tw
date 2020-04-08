@@ -2,12 +2,12 @@
 title: .NET 的核心和開放原始碼
 ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
-ms.openlocfilehash: bed5bb6aad5f3e651f7c4c0651a2365f17eb8a0b
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 4d9d42304c58c631020d8b12bec5c038bc0c07ab
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635299"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888237"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 與開放原始碼
 
@@ -23,9 +23,9 @@ ms.locfileid: "80635299"
   
 - **跨平台：**.NET Core 的主要功能是實作您所需要的應用程式功能，並不分平台地重複使用此程式碼。 它目前支援三個主要作業系統 (OS):Windows、Linux 和 macOS。 您可以撰寫應用程式和程式庫，未經修改即可在支援的作業系統上執行。 若要查看支援的作業系統清單，請瀏覽 [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md) (.NET Core 藍圖)。
   
-- **開放原始碼︰**.NET Core 是 [.NET Foundation](https://www.dotnetfoundation.org/) 監管下之許多專案的其中一個，並且會在 [GitHub](https://github.com/) 上提供。  以 .NET Core 作為開放原始碼專案可促進更透明的開發程序，以及主動參與的社群。  
+- **開放原始碼︰**.NET Core 是 [.NET Foundation](https://www.dotnetfoundation.org/) 監管下之許多專案的其中一個，並且會在 [GitHub](https://github.com/) 上提供。 作為一個開源專案,.NET Core 促進更加透明的開發過程和積極和參與的社區。  
   
-- **彈性的部署︰** 部署應用程式的方式主要有兩種︰架構相依部署或獨立部署。 在架構相依部署中，只會安裝您的應用程式和協力廠商相依性，而且您的應用程式需要有 .NET Core 的全系統版本。 在獨立部署中，用來建置應用程式的 .NET Core 版本也會隨應用程式和協力廠商相依性一起部署，而且可以與其他版本並存執行。 有關詳細資訊,請參閱[.NET 核心應用程式部署](../../core/deploying/index.md)。
+- **彈性的部署︰** 部署應用程式的方式主要有兩種︰架構相依部署或獨立部署。 在架構相依部署中，只會安裝您的應用程式和協力廠商相依性，而且您的應用程式需要有 .NET Core 的全系統版本。 使用自包含部署時,用於構建應用程式的.NET Core版本也會與應用和第三方依賴項一起部署,並可以與其他版本並行運行。 有關詳細資訊,請參閱[.NET 核心應用程式部署](../../core/deploying/index.md)。
 
 - **模組化：**.NET Core 因為是透過 NuGet 以較小型的組件套件發行，所以稱為模組化版本。 .NET Core 不是包含大多數核心功能的大型程式集,而是作為更小、以功能為中心的包提供。 這種模組化為我們提供了一個更靈活的開發模式,並允許您優化你的應用,只包括您需要的 NuGet 包。 應用程式介面區較小的優點包括更嚴密的安全性、減少維護工作、提升效能，以及降低依使用內容付費模型的成本。  
   
