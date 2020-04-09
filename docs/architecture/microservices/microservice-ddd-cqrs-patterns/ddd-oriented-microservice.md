@@ -2,12 +2,12 @@
 title: 設計 DDD 導向微服務
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 DDD 導向的訂購微服務及其應用程式層的設計。
 ms.date: 10/08/2018
-ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 583e103c8bd9d828731a658ea2fd2aa0758e7a12
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401694"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988735"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>設計 DDD 導向微服務
 
@@ -43,7 +43,7 @@ ms.locfileid: "79401694"
 
 訂購等 DDD 微服務中的三層。 每一層都是 VS 專案：應用程式層是 Ordering.API、領域層是 Ordering.Domain，而基礎結構層是 Ordering.Infrastructure。 您會希望將系統設計成每一個層都只會跟特定的其他層通訊。 若層是作為不同的類別程式庫實作的，這會比較容易強制執行，因為您可以清楚的識別程式庫之間設定了哪些相依性。 例如，領域模型層不應該相依於任何其他的層 (領域模型類別應為簡單的 CLR 物件 ([POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)) 類別)。 如圖 7-6 所示，**Ordering.Domain** 層程式庫只在 .NET Core 程式庫或 NuGet 套件上具有相依性，在任何其他自訂程式庫 (例如資料程式庫或永續性程式庫) 上則不具有相依性。
 
-![排序.域依賴項的螢幕截圖。](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
+![排序.域依賴項的屏幕截圖。](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **圖 7-6**。 作為程式庫實作的層允許對層之間的相依性進行更佳的控制
 
@@ -71,7 +71,7 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 
 **應用程式層：** 定義軟體應執行的工作，並指示表達性領域物件解決問題。 此層負責的工作對於商務來說是有意義的，或是對與其他系統應用程式層進行的互動來說是必要的。 此圖層會保持精簡。 它並不會包含商務規則或知識，而只負責協調工作並將工作委派給下一層領域物件的共同作業。 它不具有反映商務情況的狀態，但可以擁有反映使用者或程式工作進度的狀態。
 
-.NET 中微服務的應用程式層通常會編碼為 ASP.NET Core Web API 專案。 專案會實作微服務的互動、遠端網路存取，以及 UI 或用戶端應用程式使用的外部 Web API。 若使用的是 CQRS 方法，它便會包含查詢、微服務接受的命令，甚至是微服務之間的事件驅動通訊 (整合事件)。 代表應用程式層的 ASP.NET Core Web API 不可包含商務規則或領域知識 (尤其是交易或更新的領域規則)。這些內容應該由領域模型類別庫擁有。 應用程式層應僅負責協調工作，而不可保有或定義任何領域狀態 (領域模型)。 它會將商務規則的執行委派給領域模型類別自身 (彙總根及領域實體)，而後者最後便會在那些領域實體中更新資料。
+.NET 中的微服務應用程式層通常編碼為ASP.NET核心 Web API 專案。 該項目實現微服務的交互、遠端網路存取以及從 UI 或用戶端應用使用的外部 Web API。 若使用的是 CQRS 方法，它便會包含查詢、微服務接受的命令，甚至是微服務之間的事件驅動通訊 (整合事件)。 代表應用程式層的 ASP.NET Core Web API 不可包含商務規則或領域知識 (尤其是交易或更新的領域規則)。這些內容應該由領域模型類別庫擁有。 應用程式層應僅負責協調工作，而不可保有或定義任何領域狀態 (領域模型)。 它會將商務規則的執行委派給領域模型類別自身 (彙總根及領域實體)，而後者最後便會在那些領域實體中更新資料。
 
 基本上，應用程式邏輯便是您實作所有相依於指定前端之使用案例的地方。 例如，與 Web API 服務相關的實作。
 
@@ -81,7 +81,7 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 
 基礎結構層是一開始保有在領域實體 (記憶體中) 中的資料永續保存在資料庫或其他永續性存放區的方式。 其中一個範例便是使用 Entity Framework Core 程式碼來實作使用 DBContext 來將資料永續存放在關聯式資料庫中的存放庫模式類別。
 
-根據先前提到的[永續性無知](https://deviq.com/persistence-ignorance/)與[基礎結構無知](https://ayende.com/blog/3137/infrastructure-ignorance)準則，基礎結構層不可「污染」領域模型層。 您必須透過使其對架構不具有硬式相依性，來讓領域模型實體類別保持無從得知您用來永續保存資料的基礎結構 (EF 或其他任何架構)。 您的領域模型層類別庫應僅具有您的領域程式碼，即只有實作您軟體核心的 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)，並且完全與基礎技術分開。
+根據前面提到的[持久性無知](https://deviq.com/persistence-ignorance/)[和基礎結構無知](https://ayende.com/blog/3137/infrastructure-ignorance)原則,基礎結構層不得"污染"域模型層。 您必須透過使其對架構不具有硬式相依性，來讓領域模型實體類別保持無從得知您用來永續保存資料的基礎結構 (EF 或其他任何架構)。 您的領域模型層類別庫應僅具有您的領域程式碼，即只有實作您軟體核心的 [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)，並且完全與基礎技術分開。
 
 因此，您的層或類別庫及專案最後應相依於您的領域模型層 (程式庫)，而不是反過來也一樣，如圖 7-7 所示。
 
@@ -99,9 +99,9 @@ DDD 服務中的相依性，應用程式層相依於領域和基礎結構，基�
 - **奧倫·艾尼基礎設施無知** \
   <https://ayende.com/blog/3137/infrastructure-ignorance>
 
-- **安琪爾·洛佩茲域驅動設計中的分層體系結構** \
+- **安琪爾·洛佩茲網域驅動程式架構中的分割層式架構結構** \
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]
->[上一個](cqrs-microservice-reads.md)
+>[前一個](cqrs-microservice-reads.md)
 >[下一個](microservice-domain-model.md)

@@ -2,12 +2,12 @@
 title: 處理部分失敗的策略
 description: 了解適當處理部分失敗的幾個策略。
 ms.date: 10/16/2018
-ms.openlocfilehash: e96fe99ab44b924460e01abaad30aa3e2432117a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: abf87df5afed02b4d794a1307a0ed943cafb4db3
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68674505"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988800"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>處理部分失敗的策略
 
@@ -19,7 +19,7 @@ ms.locfileid: "68674505"
 
 **網路逾時的因應措施**。 一般情況下，用戶端應設計成不會無限期的進行封鎖，並在等待回應時總是使用逾時。 使用逾時可確保資源不會無限期的遭到繫結。
 
-**使用斷路器模式**。 在這種方法中，用戶端處理序會追蹤失敗要求的次數。 若錯誤率超過設定的限制，則「斷路器」便會進行往返，使得更進一步的嘗試都會立即失敗。 （如果大量請求失敗，則表明服務不可用，並且發送請求毫無意義。超時後，用戶端應重試，如果新請求成功，請關閉斷路器。
+**使用斷路器模式**。 在這種方法中，用戶端處理序會追蹤失敗要求的次數。 如果錯誤率超過配置限制,「斷路器」跳閘,以便進一步嘗試立即失敗。 (如果大量請求失敗,則表明服務不可用,並且發送請求毫無意義。超時后,客戶端應重試,如果新請求成功,請關閉斷路器。
 
 **提供後援**。 在這種方法中，用戶端處理序會在要求失敗時執行後援邏輯，例如傳回快取資料或預設值。 這是一種適合查詢的方法，而針對更新或命令會更為複雜。
 
@@ -30,10 +30,10 @@ ms.locfileid: "68674505"
 - **恢復能力模式**\
   [https://docs.microsoft.com/azure/architecture/patterns/category/resiliency](/azure/architecture/patterns/category/resiliency)
 
-- **增加彈性和優化性能**\
+- **增加彈性和最佳化效能**\
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
-- **艙 壁。** GitHub 存放庫。 Polly 原則的實作。\
+- **艙壁。** GitHub 存放庫。 Polly 原則的實作。\
   <https://github.com/App-vNext/Polly/wiki/Bulkhead>
 
 - **為 Azure 設計彈性應用程式**\
@@ -43,5 +43,5 @@ ms.locfileid: "68674505"
   [https://docs.microsoft.com/azure/architecture/best-practices/transient-faults](/azure/architecture/best-practices/transient-faults)
 
 >[!div class="step-by-step"]
->[上一個](handle-partial-failure.md)
+>[前一個](handle-partial-failure.md)
 >[下一個](implement-retries-exponential-backoff.md)

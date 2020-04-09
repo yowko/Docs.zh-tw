@@ -2,26 +2,26 @@
 title: Seedwork (網域模型的可重複使用基底類別和介面)
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用 seedwork 概念作為起點，開始實作 DDD 導向的領域模型。
 ms.date: 10/08/2018
-ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 545be2723ba468a5fd65f81978799328234ca113
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116577"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988306"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (網域模型的可重複使用基底類別和介面)
 
-方案資料夾中包含了一個 *SeedWork* 資料夾。 此資料夾包含自訂基底類別，您可以使用它們作為您領域實體和值物件的基底。 使用這些基類，這樣每個域的物件類中沒有冗餘碼。 這些類別類型的資料夾名為 *SeedWork*，而非 *Framework*。 它被稱為*SeedWork，* 因為該資料夾只包含一小部分不可重用的類，這些類不能真正被視為框架。 *SeedWork* 是一個由 [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) 引入的字詞，並由 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) 進一步推廣，但您也可以將資料夾命名為 Common、SharedKernel 或其他相似名稱。
+方案資料夾中包含了一個 *SeedWork* 資料夾。 此資料夾包含自訂基底類別，您可以使用它們作為您領域實體和值物件的基底。 使用這些基類,這樣每個域的物件類中沒有冗餘代碼。 這些類別類型的資料夾名為 *SeedWork*，而非 *Framework*。 它被稱為*SeedWork,* 因為該資料夾只包含一小部分不可重用的類,這些類不能真正被視為框架。 *SeedWork* 是一個由 [Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) 引入的字詞，並由 [Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) 進一步推廣，但您也可以將資料夾命名為 Common、SharedKernel 或其他相似名稱。
 
 圖 7-12 顯示了組成 Ordering 微服務中領域模型 seedwork 的類別。 它有幾個自訂的基底類別，像是 Entity、ValueObject 及 Enumeration，以及其他幾個介面。 這些介面 (IRepository 和 IUnitOfWork) 會通知基礎結構層需要實作的內容。 這些介面也會透過來自應用程式層的相依性插入使用。
 
-:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="種子工作資料夾中包含的類的螢幕截圖。":::
-SeedWork 資料夾的詳細內容，其中包含基本類和介面：Entity.cs、Enumeration.cs、IAggregateRoot.cs、IRepository.cs、IUnitOfWork.cs和ValueObject.cs。
+:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="種子工作資料夾中包含的類的屏幕截圖。":::
+SeedWork 資料夾的詳細內容,其中包含基本類和介面:Entity.cs、Enumeration.cs、IAggregateRoot.cs、IRepository.cs、IUnitOfWork.cs和ValueObject.cs。
 :::image-end:::
 
-**圖 7-12**。 領域模型 “seedwork" 基底類別與介面的範例組
+**圖 7-12**。 網域模型「種子工作」基類和介面的範例集
 
-這是一種許多開發人員在物件之間共用的複製及貼上重複使用內容，而非正式的架構。 您可以在任何層或程式庫中具有 seedwork。 但是，如果類和介面集足夠大，則可能需要創建單個類庫。
+這是一種許多開發人員在物件之間共用的複製及貼上重複使用內容，而非正式的架構。 您可以在任何層或程式庫中具有 seedwork。 但是,如果類和介面集足夠大,則可能需要創建單個類庫。
 
 ## <a name="the-custom-entity-base-class"></a>自訂 Entity 基底類別
 
@@ -113,7 +113,7 @@ public abstract class Entity
 
 存放庫本身，包含 EF Core 程式碼或任何其他的基礎結構相依性和程式碼 (Linq、SQL 等) 都不可在領域模型中實作。存放庫應僅實作您在領域模型中定義的介面。
 
-與這種做法 (將存放庫介面放置在領域模型層中) 有關的模式便是分離介面 (Separated Interface) 模式。 如同 Martin Fowler 所[解釋](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)的，「使用分離介面來在一個套件中定義介面，但在另外一個套件中實作它。 如此一來，需要相依於介面的用戶端便可以完全無須了解實作。」
+與這種做法 (將存放庫介面放置在領域模型層中) 有關的模式便是分離介面 (Separated Interface) 模式。 正如 Martin Fowler[所解釋](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)的,"使用分離介面在一個包中定義介面,但在另一個包中實現它。 這樣,需要介面依賴項的用戶端可能完全不知道實現。
 
 遵循分離介面模式可讓應用程式層 (在此案例中為微服務的 Web API 專案) 相依於領域模型中定義的需求，但不會直接相依於基礎結構/永續性層。 此外，您可以使用相依性插入來隔離使用存放庫在基礎結構/永續層中實作的實作。
 
@@ -143,5 +143,5 @@ public interface IRepository<T> where T : IAggregateRoot
   <https://www.martinfowler.com/eaaCatalog/separatedInterface.html>
 
 >[!div class="step-by-step"]
->[上一個](net-core-microservice-domain-model.md)
+>[前一個](net-core-microservice-domain-model.md)
 >[下一個](implement-value-objects.md)

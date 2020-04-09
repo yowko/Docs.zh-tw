@@ -1,75 +1,75 @@
 ---
 title: 利用容器和協調器
-description: 在 Azure 中利用 Docker 容器和 Kubernetes 協調器
+description: 使用 Azure 中的 Docker 容器和庫伯內特協調器
 ms.date: 06/30/2019
-ms.openlocfilehash: 7b136ed2760ea471f42ff82d20298ff8714c6dee
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 44b2fff8c9c88717d83e41a421b9817e2cc68135
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087227"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989034"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>利用容器和協調器
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-容器和協調器的設計是為了解決整合型部署方法常見的問題。
+容器和協調器旨在解決單一部署方法中常見的問題。
 
-## <a name="challenges-with-monolithic-deployments"></a>整合型部署的挑戰
+## <a name="challenges-with-monolithic-deployments"></a>整體部署的挑戰
 
-傳統上，大部分的應用程式都已部署為單一單位。 這類應用程式稱為單體。 這種將應用程式部署為單一單位的一般方法，即使它們是由多個模組或元件所組成，也稱為整合型架構，如圖3-1 所示。
+傳統上,大多數應用程式都部署為單個單元。 此類應用程式稱為單體。 這種將應用程式部署為單個單元的一般方法,即使它們由多個模組或程式集組成,也稱為單片架構,如圖 3-1 所示。
 
-![整合型架構。](./media/monolithic-architecture.png)
+![單體架構。](./media/monolithic-architecture.png)
 
-**圖 3-1**。 整合型架構。
+**圖3-1**。 單體架構。
 
-雖然它們具有簡單的優點，但是整合型架構也面臨一些挑戰：
+儘管單片式架構具有簡單性的優點,但它們面臨著許多挑戰:
 
 ### <a name="deployments"></a>部署
 
-部署到整合型應用程式通常需要重新開機整個應用程式，即使只更換一個小模組也一樣。 視裝載應用程式的機器數目而定，這可能會導致部署期間的停機時間。
+部署到單一應用程式通常需要重新啟動整個應用程式,即使只替換一個小型模組也是如此。 根據託管應用程式的計算機數,這可能導致部署期間的停機時間。
 
-### <a name="hosting"></a>主控
+### <a name="hosting"></a>裝載
 
-整合型應用程式完全裝載于單一機器實例上。 這可能需要更高功能的硬體，而不是分散式應用程式所需的任何模組。 此外，如果應用程式有任何部分變成瓶頸，則整個應用程式必須部署到其他電腦節點，才能相應放大。
+單片應用程式完全託管在單個計算機實例上。 這可能需要比分布式應用程式中任何模組所需的更高功能的硬體。 此外,如果應用的任何部分成為瓶頸,則必須將整個應用程式部署到其他計算機節點才能橫向擴展。
 
 ### <a name="environment"></a>環境
 
-整合型應用程式通常會部署到現有的裝載環境（作業系統、已安裝的架構等）。 此環境可能不符合開發或測試應用程式的環境。 應用程式環境中的不一致是整合型部署問題的常見來源。
+單片應用程式通常部署到現有的託管環境(作業系統、已安裝的框架等)。 此環境可能與開發或測試應用程式的環境不匹配。 應用程序環境中的不一致是單一部署的常見問題來源。
 
-### <a name="coupling"></a>緊密
+### <a name="coupling"></a>耦合
 
-整合型應用程式的不同元件之間，以及應用程式與其環境之間，可能會有很多的結合。 這可能會使它難以分解特定的服務，或在稍後考慮，以便增加其擴充性或交換替代的執行方式。 這種結合也會導致對系統變更有更大的潛在影響，需要在較大型的應用程式中進行大量測試。
+單片應用程式在應用程式的不同部分之間以及應用程式與其環境之間可能有很大的耦合。 這會使以後難以分解特定服務或問題,以便增加其可伸縮性或在替代實現中交換。 這種耦合還會導致對系統更改產生更大的潛在影響,需要在較大的應用中進行廣泛的測試。
 
 ### <a name="technology-choice"></a>技術選擇
 
-整合型應用程式會建立並部署為一個單位。 這提供簡化和一致性，但可能是創新的障礙。 雖然系統中的新功能或模組可能較適合較新式的平臺或架構，但可能會使用應用程式目前的方法來建立，以達成一致性以及輕鬆的開發和部署。
+單片應用程序作為一個單元構建和部署。 這提供了簡單性和統一性,但可能是創新的障礙。 儘管系統中的新功能或模組可能更適合更現代的平臺或框架,但為了一致性以及易於開發和部署,可能會使用應用程式的當前方法構建它。
 
-## <a name="what-are-the-benefits-of-containers-and-orchestrators"></a>容器和協調器的優點為何？
+## <a name="what-are-the-benefits-of-containers-and-orchestrators"></a>容器和協調器有什麼好處?
 
-Docker 是最受歡迎的容器管理和映射處理平臺，可讓您快速使用 Linux 和 Windows 上的容器。 容器提供不同但可重現的應用程式環境，在任何系統上執行相同的方式。 這讓它們適合用來在雲端原生應用程式中開發和裝載應用程式和應用程式元件。 容器會彼此隔離，因此相同主機硬體上的兩個容器可以有不同版本的軟體，甚至是安裝作業系統，而不會造成衝突。
+Docker 是最受歡迎的容器管理和映射平台,允許您快速處理 Linux 和 Windows 上的容器。 容器提供單獨但可重現的應用程式環境,這些環境在任何系統上以相同的方式運行。 這使得它們非常適合在雲原生應用程式中開發和託管應用程式和應用程式元件。 容器彼此隔離,因此同一主機硬體上的兩個容器可以安裝不同版本的軟體,甚至操作系統,而不會造成依賴項衝突。
 
-更多的是，容器是由可簽入原始檔控制的簡單檔案所定義。 不同于完整伺服器，甚至是虛擬機器，通常需要手動執行工作來套用更新或安裝其他服務，容器基礎結構很容易受到版本控制。 因此，建立在容器中執行的應用程式可以使用自動化工具來進行開發、測試及部署，以作為組建管線的一部分。
+此外,容器由可簽入原始程式碼管理的簡單檔定義。 與完整伺服器(甚至虛擬機器)不同,通常需要手動工作才能應用更新或安裝其他服務,因此容器基礎結構很容易被版本控制。 因此,在容器中運行構建的應用可以使用自動工具作為生成管道的一部分進行開發、測試和部署。
 
-容器是不可變的。 一旦有了容器的定義，您就可以重新建立該容器，而且它會以完全相同的方式執行。 這種不會將其本身用於以元件為基礎的設計。 如果應用程式的某些部分不會經常變更，當您可以直接部署最常變更的元件時，為什麼要重新部署整個應用程式？ 應用程式的不同功能和跨領域考慮可能會分成不同的單位。 圖3-2 顯示單一應用程式如何藉由委派特定的功能來利用容器和微服務。 應用程式本身的其餘功能也已容器化。
+容器是不可改變的。 獲得容器的定義後,可以重新創建該容器,並且它將以完全相同的方式運行。 這種不變性適用於基於元件的設計。 如果應用程式的某些部分更改頻率不如其他部分頻繁,那麼為什麼當您只需部署更改次數最多的部分時,才能重新部署整個應用程式? 應用的不同功能和交叉問題可以分解為單獨的單元。 圖 3-2 顯示了單片應用如何通過委派某些功能或功能來利用容器和微服務。 應用本身的剩餘功能也已容器化。
 
-![中斷整合型應用程式，以在後端使用微服務。](./media/breaking-up-monolith-with-backend-microservices.png)
-**圖 3-2**。 將整合型應用程式分解成在後端使用微服務。
+![分解單片應用,在後端使用微服務。](./media/breaking-up-monolith-with-backend-microservices.png)
+**圖3-2**. 分解單片應用,在後端使用微服務。
 
-使用個別容器所建立的雲端原生應用程式，可讓您視需要部署最多或最少的應用程式。 個別服務可以裝載于節點上，並具有適用于每個服務的資源。 在中執行的每個服務都是不可變的，可以在開發、測試和生產環境之間共用，而且可以輕鬆地進行版本設定。 應用程式的不同區域之間的結合，會明確成為服務之間的呼叫或訊息，而不是單體內的編譯時間相依性。 整體應用程式的任何特定部分都可以選擇最適合該功能或功能的技術，而不需要變更應用程式的其餘部分。
+使用單獨的容器構建的雲原生應用可根據需要部署盡可能多的或很少的應用程式。 單個服務可以託管在具有適合每個服務的節點上。 每個服務運行的環境是不可變的,可以在開發、測試和生產之間共用,並且可以輕鬆進行版本控制。 應用程式不同區域之間的耦合作為服務之間的調用或消息顯式發生,而不是單體中的編譯時間依賴項。 整個應用的任何給定部分都可以選擇對該功能或功能最有意義的技術,而無需更改應用的其餘部分。
 
-## <a name="what-are-the-scaling-benefits"></a>什麼是調整優點？
+## <a name="what-are-the-scaling-benefits"></a>擴展優勢是什麼?
 
-以容器為基礎的服務可以利用協調流程工具（例如 Kubernetes）所提供的調整優勢。 根據設計，容器只知道自己的關係。 一旦您開始有多個需要共同作業的容器，就可以在較高的層級進行組織。 組織大量的容器及其共用的相依性（例如網路設定）就是協調流程工具的儲存時間！ Kubernetes 是一種容器協調流程平臺，專門設計來自動化部署、調整和管理容器化應用程式。 它會在容器群組之上建立抽象層，並將其*組織成 pod*。 Pod 會在稱為*節點*的工作者機器上執行。 整個組織的群組稱為「叢集」（ *cluster*）。 圖3-3 顯示 Kubernetes 叢集的不同元件。
+構建在容器上的服務可以利用庫伯奈斯等業務流程工具提供的擴展優勢。 根據設計,容器只知道自己。 一旦開始有多個容器需要協同工作,就可以在更高的級別組織它們。 組織大量容器及其共享依賴項(如網路配置)是業務流程工具用於節省一天的位置! Kubernetes 是一個容器編排平臺,旨在自動部署、擴展和管理容器化應用程式。 在容器群組之上建立抽象層,並將它們組織到*窗格中*。 在稱為*節點*的工作電腦上運行的 Pod。 整個有組織的群組稱為*群組*。 圖 3-3 顯示了庫伯內斯群集的不同元件。
 
-![Kubernetes 叢集元件。](./media/kubernetes-cluster-components.png)
-**圖 3-3**。 Kubernetes 叢集元件。
+![庫伯內斯集群組。](./media/kubernetes-cluster-components.png)
+**圖3-3**. 庫伯內斯集群組。
 
-Kubernetes 有內建支援，可調整叢集以符合需求。 相較于容器化微服務，這可讓雲端原生應用程式能夠快速且有效率地回應需求尖峰，並在需要時使用其他資源。
+Kubernetes 內置支援擴展群集以滿足需求。 結合容器化微服務,這為雲原生應用程式提供了在需要時和任何地方使用額外資源快速高效地回應需求高峰的能力。
 
-### <a name="declarative-versus-imperative"></a>宣告式與命令式
+### <a name="declarative-versus-imperative"></a>宣告性與命令性
 
-Kubernetes 支援宣告式和命令式物件設定。 命令式方法牽涉到執行各種命令，告訴 Kubernetes 該怎麼做的每個步驟。 *執行*此映射。 *刪除*此 pod。 *公開*此埠。 使用宣告式方法時，您可以使用設定檔來描述*您想要的內容*，而不是*要執行*的動作，並 Kubernetes 瞭解要怎麼做才能達成所要的結束狀態。 如果您已經使用命令式命令來設定叢集，您可以使用 `kubectl get svc SERVICENAME -o yaml > service.yaml`匯出宣告式資訊清單。 這會產生資訊清單檔案，如下所示：
+庫伯內斯支援聲明性物件和命令性物件配置。 命令性方法涉及運行各種命令,告訴 Kubernetes 如何執行每一步。 *運行*此映射。 *刪除*此窗格。 *公開*此埠。 使用聲明性方法,您可以使用一個配置檔來描述*您想要做什麼*而不是*做什麼*,Kubernetes 會找出要做什麼來實現所需的結束狀態。 如果已經使用指令命令設定群集,則可以使用 匯出宣告性`kubectl get svc SERVICENAME -o yaml > service.yaml`清單 。 這會產生以下的清單檔:
 
 ```yaml
 apiVersion: v1
@@ -97,69 +97,69 @@ status:
   loadBalancer: {}
 ```
 
-使用宣告式設定時，您可以使用 `kubectl diff -f FOLDERNAME` 針對設定檔所在的資料夾，來預覽將在認可之前進行的變更。 一旦您確定要套用變更，請執行 `kubectl apply -f FOLDERNAME`。 新增 `-R` 以遞迴方式處理資料夾階層。
+使用聲明性配置時,可以通過對配置檔所在的資料夾進行`kubectl diff -f FOLDERNAME`引用 之前預覽這些更改。 確定要套用變更後,`kubectl apply -f FOLDERNAME`請執行 。 添加到`-R`遞歸處理資料夾層次結構。
 
-除了服務以外，您還可以針對其他 Kubernetes 功能（例如*部署*）使用宣告式設定。 部署控制器會使用宣告式部署來更新叢集資源。 部署是用來推出新的變更、相應增加以支援更多負載，或復原到先前的修訂版本。 如果叢集不穩定，宣告式部署會提供一種機制，讓叢集自動復原成所需的狀態。
+除了服務之外,還可以對其他 Kubernetes 功能(如*部署*)使用聲明性配置。 聲明性部署由部署控制器用於更新群集資源。 部署用於添加新更改、向上擴展以支援更多負載或回滾到以前的修訂版。 如果群集不穩定,聲明性部署提供了自動將群集恢復到所需狀態的機制。
 
-使用宣告式設定可讓基礎結構以程式碼的形式來表示，並可簽入和設定版本。 這可讓您使用組建和部署管線（系結至原始檔控制變更）來改善持續部署的變更控制和更好的支援。
+使用聲明性配置可以將基礎結構表示為代碼,該代碼可以簽入並隨著應用程式代碼進行版本控制。 這提供了改進的更改控制,並更好地支援使用與原始程式碼管理更改關聯的生成和部署管道進行持續部署。
 
-## <a name="what-scenarios-are-ideal-for-containers-and-orchestrators"></a>什麼是適用于容器和協調器的案例？
+## <a name="what-scenarios-are-ideal-for-containers-and-orchestrators"></a>哪些方案非常適合容器和協調器?
 
-下列案例適用于使用容器和協調器。
+以下方案非常適合使用容器和協調器。
 
-### <a name="applications-requiring-high-uptime-and-scalability"></a>需要高執行時間和擴充性的應用程式
+### <a name="applications-requiring-high-uptime-and-scalability"></a>需要高停機時間和可擴充性的應用程式
 
-具有高執行時間和擴充性需求的個別應用程式，是使用微服務、容器和協調器之雲端原生架構的理想候選項目。 這些應用程式可以在使用已建立版本環境的容器中開發，可以在進入生產階段之前進行廣泛的測試，而且可以部署到生產環境，而不會發生任何停機時間。 使用 Kubernetes 叢集可確保這類應用程式也可以根據需求進行調整，並自動從節點失敗中復原。
+具有高高高高高高高擴展性和可擴充性要求的各個應用程式是使用微服務、容器和協調器的雲原生體系結構的理想選擇。 這些應用程式可以使用版本化環境在容器中開發,可以在生產前進行廣泛測試,並且可以以零停機時間部署到生產中。 使用 Kubernetes 群集可確保此類應用還可以按需擴展,並從節點故障中自動恢復。
 
-### <a name="large-numbers-of-applications"></a>大量應用程式
+### <a name="large-numbers-of-applications"></a>大量應用
 
-部署和之後必須維護大量應用程式的組織，可從容器和協調器獲益。 設定容器化環境和 Kubernetes 叢集的前期工作，主要是固定成本。 部署、維護和更新個別應用程式的成本，會因必須維護的應用程式數目而異。 除了特定相當少的應用程式，維護自訂應用程式的複雜性也超出了使用容器和協調器來執行解決方案的成本。
+部署並隨後必須維護大量應用程式的組織受益於容器和協調器。 設置容器化環境和 Kubernetes 群集的前期工作主要是固定成本。 部署、維護和更新單個應用程式的成本隨必須維護的應用程序數量而異。 除了數量相當少的應用程式之外,手動維護自定義應用程式的複雜性超過了使用容器和協調器實現解決方案的成本。
 
-## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>何時應避免使用容器和協調器？
+## <a name="when-should-you-avoid-using-containers-and-orchestrators"></a>何時應避免使用容器和協調器?
 
-如果您不願意或無法遵循12因素應用程式原則來建立應用程式，您可能會更有效地避免容器和協調器。 在這些情況下，最好是使用以 VM 為基礎的裝載平臺，或可能是一些混合式系統，您可以在其中將特定功能關閉到個別容器或甚至無伺服器功能。
+如果您不願意或無法按照十二因子應用原則構建應用程式,則最好避免容器和協調器。 在這些情況下,最好使用基於 VM 的託管平臺,或者可能採用一些混合系統,您可以在其中將某些功能引入單獨的容器甚至無伺服器功能。
 
 ## <a name="development-resources"></a>開發資源
 
-本節顯示的開發資源簡短清單，可協助您開始使用容器和協調器來進行下一個應用程式。 如果您要尋找如何設計雲端原生微服務架構應用程式的指引，請閱讀這本書隨附的[.Net 微服務：容器化 .Net 應用程式的架構](https://aka.ms/microservicesebook)。
+本節顯示一個開發資源的簡短清單,這些資源可説明您開始為下一個應用程式使用容器和協調器。 如果您要尋找有關如何設計雲原生微服務體系結構應用的指導,請閱讀本書的配套書[.NET 微服務:容器化 .NET 應用程式的體系結構](https://aka.ms/microservicesebook)。
 
-### <a name="local-kubernetes-development"></a>本機 Kubernetes 開發
+### <a name="local-kubernetes-development"></a>當地庫伯內斯開發
 
-Kubernetes 部署在生產環境中提供絕佳價值，但您也可以在本機執行。 雖然大部分的時間都可以單獨處理個別應用程式或微服務，但有時最好能夠在本機執行整個系統，就像是部署到生產環境時執行的一樣。 有幾種方式可以達到這個目的，其中兩個是 Minikube 和 Docker Desktop。 Visual Studio 也提供 Docker 開發的工具。
+Kubernetes 部署在生產環境中提供了巨大的價值,但您也可以在本地運行它們。 儘管大部分時間都能夠獨立處理單個應用或微服務是件好事,但有時能夠像部署到生產時一樣在本地運行整個系統是件好事。 有幾種方法可以實現此目的,其中兩種方法是 Minikube 和 Docker 桌面。 Visual Studio 還為 Docker 開發提供工具。
 
 ### <a name="minikube"></a>Minikube
 
-什麼是 Minikube？ Minikube 專案指出「Minikube 在 macOS、Linux 和 Windows 上執行本機 Kubernetes 叢集」。 其主要目標是「作為本機 Kubernetes 應用程式開發的最佳工具，並支援所有符合的 Kubernetes 功能」。 安裝 Minikube 與 Docker 分開，但是 Minikube 支援不同于 Docker Desktop 支援的虛擬機器。 Minikube 目前支援下列 Kubernetes 功能：
+什麼是米尼庫貝? Minikube 專案說:「Minikube 在 macOS、Linux 和 Windows 上實現了本地 Kubernetes 群集。 其主要目標是"成為本地Kubernetes應用程式開發的最佳工具,並支援所有適合的Kubernetes功能。 安裝 Minikube 與 Docker 是分開的,但 Minikube 支援與 Docker 桌面支援不同的虛擬機器管理程式。 Minikube 目前支援以下庫伯奈斯功能:
 
 - DNS
-- NodePorts
-- ConfigMaps 和秘密
+- 節點連接埠
+- 設定對應及機密
 - 儀表板
-- 容器執行時間： Docker、rkt、CRI-O 和 containerd
-- 啟用容器網路介面（CNI）
-- 站
+- 容器執行時:碼頭、rkt、CRI-O 和容器
+- 開啟容器網路介面 (CNI)
+- 輸入
 
-安裝 Minikube 之後，您可以藉由執行 `minikube start` 命令快速開始使用它，這會下載映射並啟動本機 Kubernetes 叢集。 啟動叢集之後，您可以使用標準的 Kubernetes `kubectl` 命令來與它互動。
+安裝 Minikube 後,`minikube start`可以通過運行 命令快速開始使用它,該命令下載映射並啟動本地 Kubernetes 叢集。 群集啟動后,您將使用標準的 Kubernetes`kubectl`命令與其交互。
 
 ### <a name="docker-desktop"></a>Docker Desktop
 
-您也可以直接從 Windows 上的 Docker Desktop 使用 Kubernetes。 如果您使用的是 Windows 容器，這是您唯一的選項，而且也是非 Windows 容器的絕佳選擇。 標準 Docker 桌面設定應用程式是用來設定從 Docker Desktop 執行的 Kubernetes。
+您還可以直接從 Windows 上的 Docker 桌面使用 Kubernetes。 如果您使用的是 Windows 容器,這是您唯一的選擇,也是非 Windows 容器的絕佳選擇。 標準 Docker 桌面設定應用用於設定從 Docker 桌面執行的庫伯內特。
 
-![在 Docker Desktop 中設定 Kubernetes](./media/docker-desktop-kubernetes.png)
+![Docker 桌面中設定庫伯內斯](./media/docker-desktop-kubernetes.png)
 
-**圖 3-4**。 在 Docker Desktop 中設定 Kubernetes。
+**圖3-4**。 在 Docker 桌面中配置庫伯內斯。
 
-Docker Desktop 已經是最受歡迎的工具，可在本機設定和執行容器化應用程式。 當您使用 Docker Desktop 時，可以針對您要部署到生產環境的完全相同 Docker 容器映射，在本機進行開發。 Docker Desktop 是設計成在本機「建立、測試及傳送」容器化應用程式。 映射一旦送出至映射登錄（例如 Azure Container Registry 或 Docker Hub）之後，Azure Kubernetes Service （AKS）之類的服務就會在生產環境中管理應用程式。
+Docker 桌面已經是本地配置和運行容器化應用的最常見工具。 使用 Docker Desktop 時,可以針對要部署到生產的完全相同的 Docker 容器映射集在本地進行開發。 Docker 桌面旨在"在本地構建、測試和發貨"容器化應用。 將映射發送到映像註冊表(如 Azure 容器註冊表或 Docker Hub)後,Azure Kubernetes 服務 (AKS) 等服務將管理生產中的應用程式。
 
-### <a name="visual-studio-docker-tooling"></a>Visual Studio Docker 工具
+### <a name="visual-studio-docker-tooling"></a>視覺工作室碼頭工具
 
-Visual Studio 支援 web 應用程式的 Docker 開發。 當您建立新的 ASP.NET Core 應用程式時，您可以選擇使用 Docker 支援來設定它，做為專案建立過程的一部分，如圖3-5 所示。
+Visual Studio 支援 Web 應用程式的 Docker 開發。 建立新的ASP.NET核心應用程式時,您可以選擇使用 Docker 支援來設定該應用程式,作為專案創建過程的一部分,如圖 3-5 所示。
 
-![Visual Studio 啟用 Docker 支援](./media/visual-studio-enable-docker-support.png)
+![視覺化工作室啟用 Docker 支援](./media/visual-studio-enable-docker-support.png)
 
-**圖 3-5**。 Visual Studio 啟用 Docker 支援
+**圖3-5**。 視覺化工作室啟用 Docker 支援
 
-選取此選項時，會使用其根目錄中的 `Dockerfile` 建立專案，這可用來在 Docker 容器中建立和裝載應用程式。 範例 Dockerfile 如圖3-6 所示。
+選擇此選項後,將使用 root`Dockerfile`中的專案創建專案,可用於在 Docker 容器中生成和託管應用。 如圖 3-6 所示有一個範例 Dockerfile。
 
 ```docker
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
@@ -184,35 +184,35 @@ COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "WebApplication3.dll"]
 ```
 
-**圖 3-6**。 Visual Studio 產生的 Dockerfile
+**圖3-6**. 視覺化工作室產生的 Dockerfile
 
-應用程式執行時的預設行為也會設定為使用 Docker。 圖3-7 顯示新的 ASP.NET Core 專案提供的不同執行選項，並已新增 Docker 支援。
+應用執行時的預設行為也配置為使用 Docker。 圖 3-7 顯示了添加了 Docker 支援後創建的新ASP.NET核心專案中可用的不同運行選項。
 
-![Visual Studio Docker 執行選項](./media/visual-studio-docker-run-options.png)
+![視覺化工作室 Docker 執行選項](./media/visual-studio-docker-run-options.png)
 
-**圖 3-7**。 Visual Studio Docker 執行選項
+**圖3-7**。 視覺化工作室 Docker 執行選項
 
-除了本機開發以外， [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/)提供便利的方式讓多個開發人員在 Azure 內使用自己的 Kubernetes 設定。 如 [圖 3-7] 所示，您也可以在 Azure Dev Spaces 中執行應用程式。
+除了本地開發之外[,Azure 開發人員空間](https://docs.microsoft.com/azure/dev-spaces/)還為多個開發人員提供了一種在 Azure 中處理其自己的 Kubernets 配置的便捷方法。 如圖 3-7 所示,您還可以在 Azure 開發空間中運行應用程式。
 
-如果您在建立時未將 Docker 支援新增至 ASP.NET Core 應用程式，您可以隨時將其新增。 在 Visual Studio 方案總管中，以滑鼠右鍵按一下專案，然後選取 **新增** >  **Docker 支援**，如圖3-8 所示。
+如果在創建ASP.NET酷應用程式時未將 Docker 支援添加到該應用程式,則始終可以在以後添加它。 在可視化工作室解決方案資源管理器中,右鍵單擊專案並選擇 **「添加** > **Docker 支援**」,如圖 3-8 所示。
 
-![Visual Studio 新增 Docker 支援](./media/visual-studio-add-docker-support.png)
+![視覺化工作室加入 Docker 支援](./media/visual-studio-add-docker-support.png)
 
-**圖 3-8**。 Visual Studio 新增 Docker 支援
+**圖3-8**。 視覺化工作室加入 Docker 支援
 
-除了 Docker 支援以外，您也可以新增容器協調流程支援，如圖3-8 所示。 根據預設，orchestrator 會使用 Kubernetes 和 Helm。 選擇協調器之後，會將 `azds.yaml` 檔案新增至專案根目錄，並加入 `charts` 資料夾，其中包含用來設定應用程式並將其部署至 Kubernetes 的 Helm 圖表。 圖3-9 顯示新專案中產生的檔案。
+除了 Docker 支援之外,您還可以添加容器業務流程支援,如圖 3-8 所示。 默認情況下,協調器使用庫伯奈斯和赫爾姆。 選擇協調器後,將`azds.yaml`檔添加到專案根,並添加一個`charts`資料夾,其中包含用於配置應用程式並將應用程式部署到 Kubernetes 的 Helm 圖表。 圖 3-9 顯示了新專案中生成的檔。
 
-![Visual Studio 新增協調器支援](./media/visual-studio-add-orchestrator-support.png)
+![視覺化工作室新增協調器支援](./media/visual-studio-add-orchestrator-support.png)
 
-**圖 3-9**。 Visual Studio 新增協調器支援
+**圖3-9**. 視覺化工作室新增協調器支援
 
 ## <a name="references"></a>參考
 
 - [什麼是 Kubernetes？](https://blog.newrelic.com/engineering/what-is-kubernetes/)
-- [使用 Minikube 安裝 Kubernetes](https://kubernetes.io/docs/setup/learning-environment/minikube/)
-- [MiniKube 與 Docker Desktop](https://medium.com/containers-101/local-kubernetes-for-windows-minikube-vs-docker-desktop-25a1c6d3b766)
+- [安裝庫伯內斯與米尼庫貝](https://kubernetes.io/docs/setup/learning-environment/minikube/)
+- [迷你庫貝 vs Docker 桌面](https://medium.com/containers-101/local-kubernetes-for-windows-minikube-vs-docker-desktop-25a1c6d3b766)
 - [Visual Studio Tools for Docker](https://docs.microsoft.com/dotnet/standard/containerized-lifecycle-architecture/design-develop-containerized-apps/visual-studio-tools-for-docker)
 
 >[!div class="step-by-step"]
->[上一頁](scale-applications.md)
->[下一頁](leverage-serverless-functions.md)
+>[前一個](scale-applications.md)
+>[下一個](leverage-serverless-functions.md)

@@ -4,12 +4,12 @@ description: 本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: c19e5e90cfb96463f744cfb064abe72ee5db2e9f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18449ea02b7f9e89744a0f3088f80b7a51a807da
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77449320"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80987890"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 
@@ -31,7 +31,7 @@ Redmond, Washington 98052-6399
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
 
-本書是以「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路網站參考) 可能會隨時變更，恕不另行通知。
+本書依照「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路網站參考) 可能會隨時變更，恕不另行通知。
 
 此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。
 
@@ -39,7 +39,7 @@ Microsoft 與列於 https://www.microsoft.com「商標」網頁的商標是 Micr
 
 Mac 與 macOS 是 Apple Inc. 的商標。
 
-Docker 鯨魚標誌是 Docker， Inc. 經許可使用的注冊商標。
+Docker 鯨魚標誌是 Docker, Inc. 經許可使用的註冊商標。
 
 所有其他商標和標誌屬於其各自擁有者的財產。
 
@@ -85,13 +85,13 @@ Docker 鯨魚標誌是 Docker， Inc. 經許可使用的注冊商標。
 
 本指南提供有關使用 ASP.NET核心和 Azure 構建*單片*Web 應用程式提供的端到端指南。 此處的「整合型」是指這些應用程式會部署為單一單位，而不是互動服務和應用程式的集合。
 
-本指南是對[_".NET 微服務"的補充。容器化 .NET 應用程式的體系結構_"，](../microservices/index.md)它更側重于 Docker、微服務和容器部署以承載企業應用程式。
+本指南是對[_「.NET 微服務」的補充。容器化 .NET 應用程式的體系結構_",](../microservices/index.md)它更側重於 Docker、微服務和容器部署以承載企業應用程式。
 
 ### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務。 容器化 .NET 應用程式的架構
 
 - **電子書**  
   <https://aka.ms/MicroservicesEbook>
-- **示例應用**  
+- **範例應用程式**  
   <https://aka.ms/microservicesarchitecture>
 
 ## <a name="who-should-use-this-guide"></a>誰應該使用本指南

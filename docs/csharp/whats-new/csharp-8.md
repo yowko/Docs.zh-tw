@@ -1,17 +1,17 @@
 ---
 title: C# 8.0 - C# 指南中的新增功能
 description: 大致了解 C# 8.0 中可用的新功能。
-ms.date: 09/20/2019
-ms.openlocfilehash: 0013f621268e2a4f1b916b226d83d18c68445ed1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/07/2020
+ms.openlocfilehash: 1a005750751129969f2d1e9caf156330dbe61cb2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399676"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989203"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
-C# 8.0 向 C# 語言添加了以下功能和增強功能：
+C# 8.0 向 C# 語言新增了以下功能和增強功能:
 
 - [唯讀成員](#readonly-members)
 - [預設介面方法](#default-interface-methods)
@@ -25,13 +25,14 @@ C# 8.0 向 C# 語言添加了以下功能和增強功能：
 - [可處置的 ref struct](#disposable-ref-structs)
 - [可為 Null 的參考型別](#nullable-reference-types)
 - [非同步資料流](#asynchronous-streams)
+- [非同步一次性](#asynchronous-disposable)
 - [索引和範圍](#indices-and-ranges)
-- [空合併分配](#null-coalescing-assignment)
-- [非託管構造類型](#unmanaged-constructed-types)
-- [嵌套運算式中的 Stackalloc](#stackalloc-in-nested-expressions)
-- [增強插值逐字字串](#enhancement-of-interpolated-verbatim-strings)
+- [空合併配置](#null-coalescing-assignment)
+- [非託管建構類型](#unmanaged-constructed-types)
+- [巢狀式的 Stackalloc](#stackalloc-in-nested-expressions)
+- [增強插值逐字串](#enhancement-of-interpolated-verbatim-strings)
 
-C# 8.0 在 **.NET Core 3.x**和 **.NET 標準 2.1**上受支援。 有關詳細資訊，請參閱[C# 語言版本控制](../language-reference/configure-language-version.md)。
+C# 8.0 在 **.NET Core 3.x**和 **.NET 標準 2.1**上受支援。 有關詳細資訊,請參閱[C# 語言版本控制](../language-reference/configure-language-version.md)。
 
 本文的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。 您可以使用 `dotnet try` 全域工具，在您的環境中探索這些功能：
 
@@ -56,28 +57,28 @@ public struct Point
 }
 ```
 
-與大多數結構一樣，`ToString()`該方法不會修改狀態。 您可以透過新增 `readonly` 修飾詞到 `ToString()` 的宣告來指出此情況：
+與大多數結構一樣,`ToString()`該方法不會修改狀態。 您可以透過新增 `readonly` 修飾詞到 `ToString()` 的宣告來指出此情況：
 
 ```csharp
 public readonly override string ToString() =>
     $"({X}, {Y}) is {Distance} from the origin";
 ```
 
-前面的更改將生成編譯器警告，因為`ToString`訪問`Distance`屬性，該屬性未標記為`readonly`：
+前面的變更將產生編譯器警告,因為`ToString``Distance`存取屬性,該屬性未標`readonly`記為 :
 
 ```console
 warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
 ```
 
-當它需要建立防禦性複本時，編譯器會警告您。  屬性`Distance`不會更改狀態，因此可以通過將`readonly`修改器添加到聲明來修復此警告：
+當它需要建立防禦性複本時，編譯器會警告您。  屬性`Distance`不會更改狀態,因此可以通過`readonly`將 修改器添加到聲明來修復此警告:
 
 ```csharp
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-請注意，`readonly`在唯讀屬性上需要修改器。 編譯器不假定`get`訪問器不修改狀態，但您必須顯式聲明`readonly`。 自動實現的屬性是一個例外;編譯器將所有自動實現的 getter 視為唯讀，因此此處無需將`readonly`修飾符添加到 和`X``Y`屬性。
+請注意,`readonly`在唯讀屬性上需要修改器。 編譯器不假定`get`訪問器不修改狀態,但您必須顯示式聲明`readonly`。 自動實現的屬性是一個例外;編譯器將所有自動實現的 getter 視為唯讀,因此此處`readonly`無需將修飾符添加`X``Y`到 和 屬性。
 
-編譯器強制實施`readonly`成員不修改狀態的規則。 除非刪除修改器，`readonly`否則以下方法不會編譯：
+編譯器強制實施`readonly`成員不修改狀態的規則。 除非刪除變更器,`readonly`否則以下方法不會編譯:
 
 ```csharp
 public readonly void Translate(int xOffset, int yOffset)
@@ -87,17 +88,17 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-此功能可讓您指定您的設計意圖，以便編譯器可以強制套用，並根據該意圖進行最佳化。 您可以在 上[`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples)的語言參考文章中瞭解有關唯讀成員的更多內容。
+此功能可讓您指定您的設計意圖，以便編譯器可以強制套用，並根據該意圖進行最佳化。 您可以在上[`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples)的語言參考文章中瞭解有關唯讀成員的更多內容。
 
 ## <a name="default-interface-methods"></a>預設介面方法
 
-您現在可以新增成員到介面並提供那些成員的實作。 此語言功能可讓 API 作者在較新的版本中新增方法到介面中，而不會因為該介面的現有實作造成原始程式碼或二進位檔案相容性受影響。 現有實作會「繼承」** 預設實作。 此功能也會讓 C# 與以 Android 或 Swift 為目標的 API 相互操作，這些 API 支援類似的功能。 預設介面方法還啟用類似于"traits"語言功能的方案。
+您現在可以新增成員到介面並提供那些成員的實作。 此語言功能可讓 API 作者在較新的版本中新增方法到介面中，而不會因為該介面的現有實作造成原始程式碼或二進位檔案相容性受影響。 現有實作會「繼承」** 預設實作。 此功能也會讓 C# 與以 Android 或 Swift 為目標的 API 相互操作，這些 API 支援類似的功能。 默認介面方法還啟用類似於"traits"語言功能的方案。
 
-預設介面方法會影響許多方案和語言元素。 我們的第一個教學課程涵蓋[使用預設實作更新介面](../tutorials/default-interface-methods-versions.md)。 其他教學課程與參考更新即將在正式發行時推出。
+默認介面方法會影響許多方案和語言元素。 我們的第一個教學課程涵蓋[使用預設實作更新介面](../tutorials/default-interface-methods-versions.md)。 其他教學課程與參考更新即將在正式發行時推出。
 
 ## <a name="more-patterns-in-more-places"></a>在更多位置使用更多的模式
 
-**模式比對**讓您能夠使用提供相關但不同種類資料間圖形相依功能的工具。 C# 7.0 使用[`is`](../language-reference/keywords/is.md)運算式和 語句引入了類型模式和常量[`switch`](../language-reference/keywords/switch.md)模式的語法。 這些功能代表達成支援程式設計範例 (資料及功能分開) 的暫訂步驟。 隨著業界趨勢轉向微服務及其他雲端式架構，也產生其他語言工具的需求。
+**模式比對**讓您能夠使用提供相關但不同種類資料間圖形相依功能的工具。 C# 7.0[`is`](../language-reference/keywords/is.md)使用 運算式和 語句引入了類型[`switch`](../language-reference/keywords/switch.md)模式和常量 模式的語法。 這些功能代表達成支援程式設計範例 (資料及功能分開) 的暫訂步驟。 隨著業界趨勢轉向微服務及其他雲端式架構，也產生其他語言工具的需求。
 
 C# 8.0 可展開此詞彙，讓您能夠在程式碼中的更多位置，使用更多的模式運算式。 當您的資料與功能分開時，請考慮使用這些功能。 當您的演算法取決於物件執行階段類型外的事實時，請考慮使用模式比對。 這些技術提供表達設計的另一種方式。
 
@@ -105,7 +106,7 @@ C# 8.0 可展開此詞彙，讓您能夠在程式碼中的更多位置，使用�
 
 ### <a name="switch-expressions"></a>switch 運算式
 
-通常，語句[`switch`](../language-reference/keywords/switch.md)在其`case`每個塊中生成值。 **Switch 運算式**讓您能夠使用更精簡的運算式語法。 重複的 `case` 及 `break` 關鍵字和大括號都減少了。  例如，請考慮以下列出彩虹色彩的列舉：
+通常,語句[`switch`](../language-reference/keywords/switch.md)在其`case`每個塊中生成值。 **Switch 運算式**讓您能夠使用更精簡的運算式語法。 重複的 `case` 及 `break` 關鍵字和大括號都減少了。  例如，請考慮以下列出彩虹色彩的列舉：
 
 ```csharp
 public enum Rainbow
@@ -256,7 +257,7 @@ static Quadrant GetQuadrant(Point point) => point switch
 };
 ```
 
-當 `x` 或 `y` 為 0 (非兩者) 時，上述 switch 中的捨棄模式就會符合。 switch 運算式必須產生值或者擲回例外狀況。 若沒有任何案例符合，則 switch 運算式會擲回例外狀況。 如果未涵蓋交換器運算式中的所有可能情況，編譯器將為您生成警告。
+當 `x` 或 `y` 為 0 (非兩者) 時，上述 switch 中的捨棄模式就會符合。 switch 運算式必須產生值或者擲回例外狀況。 若沒有任何案例符合，則 switch 運算式會擲回例外狀況。 如果未涵蓋交換機表達式中的所有可能情況,編譯器將為您生成警告。
 
 您可以在此[模式比對進階教學課程](../tutorials/pattern-matching.md)中探索模式比對技巧。
 
@@ -315,7 +316,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 
 在上述範例中，到達與 `using` 陳述式相關的結尾右大括號時，就會處置檔案。
 
-在這兩個案例中，編譯器皆會產生對 `Dispose()` 的呼叫。 如果語句中的運算式不是一次性的，`using`編譯器將建置錯誤。
+在這兩個案例中，編譯器皆會產生對 `Dispose()` 的呼叫。 如果語句中的表示式不是一次性的,`using`編譯器將生成錯誤。
 
 ## <a name="static-local-functions"></a>靜態區域函式
 
@@ -349,13 +350,13 @@ int M()
 
 ## <a name="disposable-ref-structs"></a>可處置的 ref struct
 
-使用`struct``ref`修飾符聲明的不能實現任何介面，因此無法實現<xref:System.IDisposable>。 因此，若要讓 `ref struct` 可處置，其必須具有可存取的 `void Dispose()` 方法。 此功能也適用于`readonly ref struct`聲明。
+使用`struct``ref`修飾符聲明的無法實現任何介面,因此無法<xref:System.IDisposable>實現 。 因此，若要讓 `ref struct` 可處置，其必須具有可存取的 `void Dispose()` 方法。 此功能也適用於`readonly ref struct`聲明。
 
 ## <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
 在可為 Null 的註解內容中，參考型別的任何變數皆視為**不可為 Null 的參考型別**。 若您要表示變數可能為 Null，則必須使用 `?` 來附加類型名稱，以將變數宣告為**可為 Null 的參考型別**。
 
-對於不可為 Null 的參考型別，編譯器會使用流程分析來確保將區域變數在宣告時，初始化為非 Null 的值。 必須在建構期間將欄位初始化。 如果變數不是通過調用任何可用的建構函式或初始化器設置，編譯器將生成警告。 此外，也不能對不可為 Null 的參考型別指派可為 Null 的值。
+對於不可為 Null 的參考型別，編譯器會使用流程分析來確保將區域變數在宣告時，初始化為非 Null 的值。 必須在建構期間將欄位初始化。 如果變數不是通過調用任何可用的構造函數或初始化器設置,編譯器將生成警告。 此外，也不能對不可為 Null 的參考型別指派可為 Null 的值。
 
 系統不會檢查可為 Null 的參考型別，來確保其不會指派或初始化為 Null。 不過，編譯器會在將變數存取或指派至不可為 Null 的參考型別之前，使用流程分析來確保已對可為 Null 參考型別的所有變數檢查可 Null 性。
 
@@ -391,22 +392,26 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-您可在我們有關[建立及取用非同步資料流](../tutorials/generate-consume-asynchronous-stream.md)的教學課程中，親自試用非同步資料流。 預設情況元素在捕獲的上下文中處理。 如果要禁用上下文捕獲，請使用<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>擴充方法。 有關同步上下文和捕獲當前上下文的詳細資訊，請參閱有關[使用基於任務的非同步模式](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)的文章。
+您可在我們有關[建立及取用非同步資料流](../tutorials/generate-consume-asynchronous-stream.md)的教學課程中，親自試用非同步資料流。 默認情況元素在捕獲的上下文中處理。 如果要禁用上下文捕獲,請使用<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>擴展方法。 有關同步上下文和捕獲當前上下文的詳細資訊,請參閱有關[使用基於任務的非同步模式](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)的文章。
+
+## <a name="asynchronous-disposable"></a>非同步一次性
+
+從 C# 8.0 開始,該語言支援<xref:System.IAsyncDisposable?displayProperty=nameWithType>實現介面的 非同步一次性類型。 `using`表示式的操作數可以實現<xref:System.IDisposable><xref:System.IAsyncDisposable>或 。 在`IAsyncDisposable`中,編譯器將代碼生成`await`到<xref:System.Threading.Tasks.Task><xref:System.IAsyncDisposable.DisposeAsync%2A?displayProperty=nameWithType>從返回的代碼。 有關詳細資訊,請參閱[`using`語句](../language-reference/keywords/using-statement.md)。
 
 ## <a name="indices-and-ranges"></a>索引和範圍
 
-索引和範圍提供了簡潔的語法，用於按循序存取單個元素或範圍。
+索引和範圍提供了簡潔的語法,用於按順序訪問單個元素或範圍。
 
-此語言支援依賴于兩種新類型和兩個新運算子：
+此語言支援相依於兩種新類型和兩個新運算符號:
 
 - <xref:System.Index?displayProperty=nameWithType> 代表序列的索引。
-- 來自結束運算子`^`的索引 ，它指定索引相對於序列的末尾。
+- 來自結束運算符`^`的索引 ,它指定索引相對於序列的末尾。
 - <xref:System.Range?displayProperty=nameWithType> 代表序列的子範圍。
-- 範圍運算子`..`， 指定範圍的開始和結束作為其運算元。
+- 範圍運算子`..`, 指定範圍的開始與結束作為其操作數。
 
 讓我們從索引的規則開始。 假設有一個陣列 `sequence`。 `0` 索引與 `sequence[0]` 相同。 `^0` 索引與 `sequence[sequence.Length]` 相同。 請注意，`sequence[^0]` 會擲回例外狀況，就樣 `sequence[sequence.Length]` 會這樣做一樣。 針對任何數字 `n`，索引 `^n` 與 `sequence.Length - n` 相同。
 
-指定範圍「開頭」** 與「結尾」** 的範圍。 範圍的開頭是包羅萬象的，但範圍的結束是獨佔的，這意味著*起始項*包含在範圍內，但範圍中不包括*結束*。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。
+指定範圍「開頭」** 與「結尾」** 的範圍。 範圍的開頭是包羅萬象的,但範圍的結束是獨佔的,這意味著*起始項*包含在範圍內,但範圍中不包括*結束*。 範圍 `[0..^0]` 代整個範圍，就像 `[0..sequence.Length]` 代表整個範圍一樣。
 
 讓我們來看以下幾個範例。 試想下列使用其索引從開頭或從結尾標註的陣列：
 
@@ -439,7 +444,7 @@ Console.WriteLine($"The last word is {words[^1]}");
 var quickBrownFox = words[1..4];
 ```
 
-下列程式碼會建立具有 "lazy" 和 "dog" 的子範圍。 其包含 `words[^2]` 及 `words[^1]`。 不包括最終索引`words[^0]`：
+下列程式碼會建立具有 "lazy" 和 "dog" 的子範圍。 其包含 `words[^2]` 及 `words[^1]`。 不包括最終索引`words[^0]`:
 
 ```csharp
 var lazyDog = words[^2..^0];
@@ -465,13 +470,13 @@ Range phrase = 1..4;
 var text = words[phrase];
 ```
 
-不僅陣列支援索引和範圍。 您還可以使用索引和範圍與[字串](../language-reference/builtin-types/reference-types.md#the-string-type)、<xref:System.Span%601>或<xref:System.ReadOnlySpan%601>。 有關詳細資訊，請參閱[索引和範圍的類型支援](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)。
+不僅陣組支援索引和範圍。 您可以使用索引與範圍與[字串](../language-reference/builtin-types/reference-types.md#the-string-type),<xref:System.Span%601>或<xref:System.ReadOnlySpan%601>。 有關詳細資訊,請參閱[索引和範圍的類型支援](../tutorials/ranges-indexes.md#type-support-for-indices-and-ranges)。
 
 您可以在[索引及範圍](../tutorials/ranges-indexes.md)上的教學課程中探索更多關於索引及範圍的資訊。
 
-## <a name="null-coalescing-assignment"></a>空合併分配
+## <a name="null-coalescing-assignment"></a>空合併配置
 
-C# 8.0 引入了空聚聚指派運算子`??=`。 僅當左側運算元`??=`計算到`null`時，才能使用運算子將其右側運算元的值分配給其左側運算元。
+C# 8.0 引入了空聚集合賦值運算`??=`子 。 僅當左側操作數`??=`計算`null`到 時,才能使用運算符將其右側操作數的值分配給其左側操作數。
 
 ```csharp
 List<int> numbers = null;
@@ -485,13 +490,13 @@ Console.WriteLine(string.Join(" ", numbers));  // output: 17 17
 Console.WriteLine(i);  // output: 17
 ```
 
-有關詳細資訊，請參閱[？和？？• 運算子](../language-reference/operators/null-coalescing-operator.md)文章。
+有關詳細資訊,請參閱[?和??• 運算符](../language-reference/operators/null-coalescing-operator.md)文章。
 
-## <a name="unmanaged-constructed-types"></a>非託管構造類型
+## <a name="unmanaged-constructed-types"></a>非託管建構類型
 
-在 C# 7.3 和更早版本中，構造類型（至少包含一個類型參數的類型）不能為[非託管類型](../language-reference/builtin-types/unmanaged-types.md)。 從 C# 8.0 開始，如果構造的數值型別僅包含非託管類型的欄位，則該數值型別將處於非託管類型。
+在 C# 7.3 與更早版本中,建構類型(至少包含一個類型參數的類型)不能為[非託管類型](../language-reference/builtin-types/unmanaged-types.md)。 從 C# 8.0 開始,如果建構的值類型僅包含非託管類型的欄位,則該值類型將處於非託管類型。
 
-例如，給定泛型`Coords<T>`類型的以下定義：
+例如,給定泛型`Coords<T>`型態的以下定義:
 
 ```csharp
 public struct Coords<T>
@@ -501,7 +506,7 @@ public struct Coords<T>
 }
 ```
 
-類型`Coords<int>`是 C# 8.0 及更高版本中的非託管類型。 與任何非託管類型一樣，您可以創建指向此類型的變數的指標，或在[堆疊上為此類實例分配區塊](../language-reference/operators/stackalloc.md)：
+類型`Coords<int>`是 C# 8.0 及更高版本中的非託管類型。 與任何非託管型態一樣,您可以建立指向此類型的變數的指標,或在[堆疊上為此類實體分配記憶體區](../language-reference/operators/stackalloc.md)塊 :
 
 ```csharp
 Span<Coords<int>> coordinates = stackalloc[]
@@ -512,11 +517,11 @@ Span<Coords<int>> coordinates = stackalloc[]
 };
 ```
 
-有關詳細資訊，請參閱[非託管類型](../language-reference/builtin-types/unmanaged-types.md)。
+有關詳細資訊,請參閱[非託管類型](../language-reference/builtin-types/unmanaged-types.md)。
 
-## <a name="stackalloc-in-nested-expressions"></a>嵌套運算式中的 Stackalloc
+## <a name="stackalloc-in-nested-expressions"></a>巢狀式的 Stackalloc
 
-從 C# 8.0 開始，如果[stackalloc](../language-reference/operators/stackalloc.md)運算式的結果為<xref:System.Span%601?displayProperty=nameWithType><xref:System.ReadOnlySpan%601?displayProperty=nameWithType>或 類型，則可以在其他`stackalloc`運算式中使用運算式：
+從 C# 8.0 開始,如果[stackalloc](../language-reference/operators/stackalloc.md)運算式的結果為<xref:System.Span%601?displayProperty=nameWithType><xref:System.ReadOnlySpan%601?displayProperty=nameWithType>`stackalloc`或 類型,則可以在其他 運算式中使用運算式:
 
 ```csharp
 Span<int> numbers = stackalloc[] { 1, 2, 3, 4, 5, 6 };
@@ -524,6 +529,6 @@ var ind = numbers.IndexOfAny(stackalloc[] { 2, 4, 6 ,8 });
 Console.WriteLine(ind);  // output: 1
 ```
 
-## <a name="enhancement-of-interpolated-verbatim-strings"></a>增強插值逐字字串
+## <a name="enhancement-of-interpolated-verbatim-strings"></a>增強插值逐字串
 
-插值逐`$`字`@`字串中的[interpolated](../language-reference/tokens/interpolated.md)和 標記的順序可以是任意：兩`$@"..."``@$"..."`者都是有效插值逐字字串。 在早期的 C# 版本中`$`，權杖必須出現在權杖`@`之前。
+插值逐`$``@`字字串中的[interpolated](../language-reference/tokens/interpolated.md)和 標記的順序可以是任意:`$@"..."``@$"..."`兩 者都是有效插值逐字字串。 在早期的 C#`$`版本中 ,權杖必須`@`出現在權杖之前。

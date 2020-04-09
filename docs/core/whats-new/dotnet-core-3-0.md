@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 7e879a44bd8056ac8753c1e86464fe14fd6b9e50
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: be5c26c81480dc2854b849dd7f2b1c46ee3e526a
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523587"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989164"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 的新功能
 
@@ -140,7 +140,7 @@ dotnet publish -r <rid> -c Release
 
 ### <a name="tiered-compilation"></a>階層式編譯
 
-.NET Core 3.0 預設會開啟[階層式編譯](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md) (TC)。 此功能使運行時能夠更自適應地使用及時 (JIT) 編譯器來實現更好的性能。
+.NET Core 3.0 預設會開啟[階層式編譯](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md) (TC)。 此功能使運行時能夠更自適應地使用及時 (JIT) 編譯器來實現更好的性能。
 
 分層編譯的主要好處是提供兩種分字方法:在品質較低但速度更快的層或品質更高但較慢的層中。 品質是指方法的優化程度。 TC有助於提高應用程式的性能,因為它經歷了從啟動到穩定狀態的各個執行階段。 禁用分層編譯后,每種方法的編譯方式都偏向於穩態性能而不是啟動性能。
 
@@ -506,7 +506,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 
 .NET 程式庫 (如果適用) 已開始使用這些指令來提升效能。
 
-如需詳細資訊，請參閱 [.NET Platform Dependent Intrinsics](https://github.com/dotnet/designs/blob/master/accepted/platform-intrinsics.md) (.NET 平台相依內建)。
+有關詳細資訊,請參閱[.NET 平台相關內部函數](https://github.com/dotnet/designs/blob/master/accepted/2018/platform-intrinsics.md)。
 
 ### <a name="improved-net-core-version-apis"></a>改善的 .NET Core 版本 API
 

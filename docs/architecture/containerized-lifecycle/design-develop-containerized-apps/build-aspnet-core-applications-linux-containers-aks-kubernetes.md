@@ -2,12 +2,12 @@
 title: 建置以 Linux 容器部署到 AKS/Kubernetes 叢集的 ASP.NET Core 2.2 應用程式
 description: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
 ms.date: 02/25/2019
-ms.openlocfilehash: ab64a0423ceceb8285c159af276d6d97e12379d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83d4d0a60db4bdc112bb35bfbf61c0396646ad31
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "70848749"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989021"
 ---
 # <a name="build-aspnet-core-22-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>建置以 Linux 容器部署到 AKS/Kubernetes 協調器的 ASP.NET Core 2.2 應用程式
 
@@ -33,7 +33,7 @@ ASP.NET Core 是一般用途的開發平台，由 Microsoft 和 GitHub 上的 .N
 
 **圖 4-36**. 建立 ASP.NET Core 應用程式
 
-要在 Visual Studio 中創建示例**專案**，請選擇 **"檔** > **新專案** > "，在左側窗格中選擇**Web**專案類型，然後**選擇ASP.NET核心 Web 應用程式**。
+您可以在 Visual Studio 建立範例**專案**,請選擇 **「檔案** > **新專案** > 」,在左邊窗格中選擇**Web**專案類型,然後**選擇 ASP.NET 核心 Web 應用程式**。
 
 Visual Studio 會列出適用於 Web 專案的範本。 在我們的範例中，選取 [API]**** 以建立 ASP.NET Web API 應用程式。
 
@@ -45,13 +45,13 @@ Visual Studio 會列出適用於 Web 專案的範本。 在我們的範例中，
 
 如果您有任何舊版 .NET Core，您可以從 <https://dotnet.microsoft.com/download> 下載並安裝 2.2 版。
 
-您可以在建立專案期間或之後新增 Docker 支援，以便可隨時將您的專案「Docker 化」。 要在專案創建後添加 Docker 支援，請按右鍵解決方案資源管理器中的專案節點，並在內容功能表上選擇 **"添加** > **Docker 支援**"。
+您可以在建立專案期間或之後新增 Docker 支援，以便可隨時將您的專案「Docker 化」。 要在項目創建後添加 Docker 支援,請右鍵單擊解決方案資源管理器中的專案節點,並在上下文菜單上選擇 **「添加** > **Docker 支援**」。
 
-![將 Docker 支援添加到現有專案的內容功能表選項：按右鍵（在專案上）>添加> Docker 支援。](media/add-docker-support-to-project.png)
+![將 Docker 支援添加到現有專案的上下文選單選項:右鍵單擊(在專案上)>添加> Docker 支援。](media/add-docker-support-to-project.png)
 
 **圖 4-38**. 將 Docker 支援新增至現有的專案
 
-若要完成新增 Docker 支援，您可以選擇 [Windows] 或 [Linux]。 在此案例中，請選取 [Linux]****，因為 AKS 不支援 Windows 容器 (自 2018 年起)。
+若要完成新增 Docker 支援，您可以選擇 [Windows] 或 [Linux]。 在這種情況下,選擇**Linux**,因為 AKS 不支援 Windows 容器(截至 2018 年末)。
 
 ![用於選取 Dockerfile 目標 OS 的選項對話方塊。](media/select-linux-docker-support.png)
 
@@ -59,7 +59,7 @@ Visual Studio 會列出適用於 Web 專案的範本。 在我們的範例中，
 
 透過這些簡單的步驟，您就會有在 Linux 容器上執行的 ASP.NET Core 2.2 應用程式。
 
-如您所見，Visual Studio 2017 與 Docker 之間的整合完全取決於開發人員生產力。
+正如您所看到的,Visual Studio 2017 和 Docker 之間的整合完全面向開發人員的工作效率。
 
 現在，您可以按 **F5** 鍵或使用 [播放]**** 按鈕來執行應用程式。
 
@@ -69,13 +69,13 @@ Visual Studio 會列出適用於 Web 專案的範本。 在我們的範例中，
 docker images
 ```
 
-![來自 Docker 映射命令的主控台輸出顯示具有：存儲庫、標記、圖像 ID、已創建（日期）和大小的清單。](media/docker-images-command.png)
+![來自 Docker 映像命令的主控台輸出顯示具有:儲存庫、標記、圖像 ID、已創建(日期)和大小的清單。](media/docker-images-command.png)
 
 **圖 4-40**. Docker 映像檢視
 
 ## <a name="register-the-solution-in-the-azure-container-registry"></a>在 Azure Container Registry 中註冊方案
 
-將映像上傳到任何 Docker 登錄 (例如 [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) 或 Docker Hub)，以便將映像從該登錄部署到 AKS 叢集。 在此案例中，我們會將映像上傳到 Azure Container Registry。
+將映像上傳到任何 Docker 登錄 (例如 [Azure Container Registry (ACR)](https://azure.microsoft.com/services/container-registry/) 或 Docker Hub)，以便將映像從該登錄部署到 AKS 叢集。 在這種情況下,我們將映射上載到 Azure 容器註冊表。
 
 ### <a name="create-the-image-in-release-mode"></a>在 [發行] 模式中建立映像
 
@@ -190,7 +190,7 @@ spec:
 az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-![來自上述命令的主控台輸出：合併的"MSSampleK8Cluster 作為 /root/.kube/config 中的當前上下文](media/getting-aks-credentials.png)
+![來自上述指令的主控台輸出:合併的「MSSampleK8Cluster」為 /root/.kube/config 中的目前上下文](media/getting-aks-credentials.png)
 
 **圖 4-47**. 取得認證
 
@@ -222,5 +222,5 @@ az aks browse --resource-group MSSampleResourceGroupAKS --name mssampleclusterk8
 > 您可以在本指南的[**部署到 Azure Kubernetes Service (AKS)**](deploy-azure-kubernetes-service.md) 一節中，了解如何為此範例建立 AKS 叢集。
 
 >[!div class="step-by-step"]
->[上一個](set-up-windows-containers-with-powershell.md)
+>[前一個](set-up-windows-containers-with-powershell.md)
 >[下一個](../docker-devops-workflow/index.md)

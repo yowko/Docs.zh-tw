@@ -2,16 +2,16 @@
 title: Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 description: 了解 DevOps 工作流程的「外部迴圈」步驟
 ms.date: 02/15/2019
-ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fdda1b6a2deb08ed97867583fcc8048d4dba880c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75936786"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988969"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 
-圖 5-1 顯示 DevOps 外部迴圈工作流程中所包含步驟的端對端描述。 它顯示了 DevOps 的"外部迴圈"。 將程式碼推送到存放庫之後會啟動 CI 管線，然後開始 CD 管線以將應用程式部署在其中。 從已部署應用程式收集的計量會回饋給開發工作負載，其中會出現「內部迴圈」，讓開發小組有實際資料可回應使用者和商務需求。
+圖 5-1 顯示 DevOps 外部迴圈工作流程中所包含步驟的端對端描述。 它顯示了 DevOps 的「外部迴圈」。 將程式碼推送到存放庫之後會啟動 CI 管線，然後開始 CD 管線以將應用程式部署在其中。 從已部署應用程式收集的計量會回饋給開發工作負載，其中會出現「內部迴圈」，讓開發小組有實際資料可回應使用者和商務需求。
 
 ![顯示 DevOps 外部迴圈工作流的 6 個步驟的圖表。](./media/docker-application-outer-loop-devops-workflow/overview-dev-ops-outter-loop-workflow.png)
 
@@ -19,11 +19,11 @@ ms.locfileid: "75936786"
 
 現在，讓我們更詳細地探討每個步驟。
 
-## <a name="step-1-inner-loop-development-workflow"></a>第 1 步：內部迴圈開發工作流
+## <a name="step-1-inner-loop-development-workflow"></a>第一步:內部循環開發工作流
 
 此步驟會在第 4 章中詳細說明，但概括而言，這是外部迴圈開始的位置，此時開發人員會將程式碼推送到原始檔控制管理系統 (例如 Git) 以起始 CI 管線動作。
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>第 2 步：原始程式碼控制與 Azure DevOps 服務和 Git 集成和管理
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>第二步:原始碼控制與 Azure DevOps 服務和 Git 整合及管理
 
 在此步驟中，您需要有版本控制系統，才能收集來自小組中不同開發人員的所有程式碼合併版本。
 
@@ -33,7 +33,7 @@ ms.locfileid: "75936786"
 
 Azure DevOps Services 和 Team Foundation Server 支援 Git 和 Team Foundation 版本控制。 您可以在兩者之間進行選擇，並用於端對端 Microsoft 體驗。 不過，您也可以在外部存放庫 (例如 GitHub、內部部署 Git 存放庫或 Subversion) 中管理您的程式碼，且仍然能夠與其連線，並取得程式碼作為 DevOps CI 管線的起點。
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>第 3 步：使用 Azure DevOps 服務和 Docker 構建、CI、集成和測試
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>第三步:使用 Azure DevOps 服務和 Docker 建構、CI、整合和測試
 
 CI 已脫穎而出成為現代軟體測試和傳遞的標準。 Docker 解決方案會在開發小組與作業小組之間維持清楚的關注點分離。 Docker 映像的不變性確保在已開發、已透過 CI 測試並在生產環境中執行的項目之間可重複部署。 跨開發人員膝上型電腦與測試基礎結構部署的 Docker 引擎，可讓容器移植到不同的環境。
 
@@ -45,7 +45,7 @@ CI 已脫穎而出成為現代軟體測試和傳遞的標準。 Docker 解決方
 
 使用 Docker 進行部署時，所要部署的「最終成品」是 Docker 映像，其中內嵌您的應用程式或服務。 這些映像會推送或發佈到「Docker 登錄」**(例如您可以在 Azure Container Registry 中擁有的私人存放庫，或 Docker Hub Registry 之類的公用存放庫，後者通常會用於官方基底映像)。
 
-下面是基本概念：CI 管道將通過提交到 Git 等 SCC 存儲庫來啟動。 認可會使 Azure DevOps Services 在 Docker 容器中執行組建作業，並在該作業成功完成時，將 Docker 映像推送到 Docker 登錄，如圖 5-2 示。 外部迴圈的第一部分涉及步驟 1 到 3，從代碼、運行、調試和驗證，然後代碼回購到生成和測試 CI 步驟。
+下面是基本概念:CI 管道將通過提交到 Git 等 SCC 存儲庫來啟動。 認可會使 Azure DevOps Services 在 Docker 容器中執行組建作業，並在該作業成功完成時，將 Docker 映像推送到 Docker 登錄，如圖 5-2 示。 外部迴圈的第一部分涉及步驟 1 到 3,從代碼、運行、調試和驗證,然後代碼回購到生成和測試 CI 步驟。
 
 ![顯示 CI 工作流中涉及的三個步驟的圖表。](./media/docker-application-outer-loop-devops-workflow/continuous-integration-steps.png)
 
@@ -104,7 +104,7 @@ Visual Studio Azure DevOps Services 包含組建與發行範本，您可以在 C
 
 如果您使用單一主機，您可以使用 Docker 命令 (例如 docker-compose) 來建置及部署相關容器，以測試及驗證單一 VM 中的 Docker 環境。 但如果您使用協調器叢集 (例如 DC/OS、Kubernetes 或 Docker Swarm)，則需要根據您所選取的叢集/排程器，透過不同機制或協調器來部署您的容器。
 
-以下是您可以針對 Docker 容器運行的幾種類型的測試：
+以下是您可以針對 Docker 容器執行的幾種類型的測試:
 
 - Docker 容器的單元測試
 
@@ -124,7 +124,7 @@ Visual Studio Azure DevOps Services 包含組建與發行範本，您可以在 C
 
 一般而言，您可能想要有存放自訂映像的私人存放庫，可以存放在 Azure Container Registry 或內部部署登錄 (例如 Docker Trusted Registry) 的私人存放庫中，也可以存放在限制存取的公用雲端登錄中 (例如 Docker Hub)；但在後者的情況下，如果您的程式碼不是開放原始碼，您必須信任廠商的安全性。 無論如何，所使用的方法都很類似且會採用 `docker push` 命令，如圖 5-4 所示。
 
-![顯示將自訂映射推送到容器註冊表的圖表。](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
+![顯示將自定義映射推送到容器註冊表的圖表。](./media/docker-application-outer-loop-devops-workflow/docker-push-custom-images.png)
 
 **圖5-4**。 將自訂映像發佈到 Docker 登錄
 
@@ -132,13 +132,13 @@ Visual Studio Azure DevOps Services 包含組建與發行範本，您可以在 C
 
 使用 Docker 工作，您可以將 `docker-compose.yml` 檔案所定義並具有多個標記的一組服務映像，推送到已驗證的 Docker 登錄 (例如 Azure Container Registry)，如圖 5-5 所示。
 
-![顯示將圖像發佈到註冊表的步驟的螢幕截圖。](./media/docker-application-outer-loop-devops-workflow/publish-custom-image-to-docker-registry.png)
+![顯示將圖像發佈到註冊表的步驟的屏幕截圖。](./media/docker-application-outer-loop-devops-workflow/publish-custom-image-to-docker-registry.png)
 
 **圖5-5**. 使用 Azure DevOps Services 將自訂映像發佈到 Docker 登錄
 
 > [!INFORMATION] 如需 Azure Container Registry 的詳細資訊，請參閱 <https://aka.ms/azurecontainerregistry>。
 
-## <a name="step-4-cd-deploy"></a>第 4 步：CD，部署
+## <a name="step-4-cd-deploy"></a>第四步:CD,部署
 
 Docker 映像的不變性確保可重複部署已開發、已透過 CI 測試並在生產環境中執行的項目。 當您在 Docker 登錄 (私人或公用) 中發佈應用程式 Docker 映像之後，您可以使用 Azure DevOps Services 管線工作或 Azure DevOps Services Release Management，從您的 CD 管線將這些映像部署到您可能擁有的數個環境 (生產環境、QA、預備環境等)。
 
@@ -148,13 +148,13 @@ Docker 映像的不變性確保可重複部署已開發、已透過 CI 測試並
 
 首先討論較不複雜的案例：部署到單一環境或多個環境 (QA、預備環境和生產環境) 中的簡單 Docker 主機 (VM 或伺服器)。 在此案例中，CD 管線可以在內部使用 docker-compose (從您的 Azure DevOps Services 部署工作)，來部署 Docker 應用程式及一組相關容器或服務，如圖 5-6 所示。
 
-![顯示部署到三個環境的 CD 部署步驟的圖表。](./media/docker-application-outer-loop-devops-workflow/deploy-app-containers-to-docker-host-environments.png)
+![顯示部署到三個環境的CD部署步驟的圖表。](./media/docker-application-outer-loop-devops-workflow/deploy-app-containers-to-docker-host-environments.png)
 
 **圖5-6**. 將應用程式容器部署到簡單的 Docker 主機環境登錄
 
 圖 5-7 顯示您如何按一下 [新增工作] 對話方塊中的 [Docker Compose]，透過 Azure DevOps Services 將您的組建 CI 連線到 QA/測試環境。 不過，部署到預備環境或生產環境時，您通常會使用 Release Management 功能來處理多個環境 (例如 QA、預備環境和生產環境)。 如果您要部署到單一 Docker 主機，它會使用 Azure DevOps Services "Docker Compose" 工作 (這會在幕後叫用 `docker-compose up` 命令)。 如果您要部署到 Azure Kubernetes Service (AKS)，它會使用 Docker 部署工作，如下一節中所述。
 
-![顯示"添加任務"任務的螢幕截圖。](./media/docker-application-outer-loop-devops-workflow/add-tasks-docker-compose.png)
+![顯示「添加任務」任務的螢幕截圖。](./media/docker-application-outer-loop-devops-workflow/add-tasks-docker-compose.png)
 
 **圖5-7**. 在 Azure DevOps Services 管線中新增 Docker Compose 工作
 
@@ -180,34 +180,34 @@ Azure DevOps Services 範本可讓您產生包含特定登錄映像摘要的組�
 
 從 CD 觀點來看，特別是 Azure DevOps Services，您可以從 Azure DevOps Services Release Management 環境執行特別建立的部署工作，這會將容器化應用程式部署到 Container Service 中的分散式叢集，如圖 5-9 所示。
 
-![顯示將部署到協調器的 CD 部署步驟的圖表。](./media/docker-application-outer-loop-devops-workflow/cd-deploy-to-orchestrators.png)
+![顯示將部署到協調器的CD部署步驟的圖表。](./media/docker-application-outer-loop-devops-workflow/cd-deploy-to-orchestrators.png)
 
 **圖5-9**. 將分散式應用程式部署到 Container Service
 
-一開始，當部署到特定叢集或協調器時，傳統上會使用每個協調器的特定部署指令碼和機制 (亦即，Kubernetes 與 Service Fabric 會有不同的部署機制)，而不是更簡單且便於使用的 `docker-compose` 工具 (以 `docker-compose.yml` 定義檔為基礎)。 不過，幸好有 Azure DevOps Services Docker 部署工作 (如圖 5-10 所示)，您現在也可以直接使用熟悉的 `docker-compose.yml` 檔案部署到支援的協調器，因為此工具會為您執行該「轉譯」(從您的 `docker-compose.yml` 檔案轉譯為協調器所需的格式)。
+一開始，當部署到特定叢集或協調器時，傳統上會使用每個協調器的特定部署指令碼和機制 (亦即，Kubernetes 與 Service Fabric 會有不同的部署機制)，而不是更簡單且便於使用的 `docker-compose` 工具 (以 `docker-compose.yml` 定義檔為基礎)。 但是,由於圖 5-10 所示的 Azure DevOps 服務 Docker 部署`docker-compose.yml`任務,現在還可以僅使用熟悉的 檔案部署到受支援的協調器,因為該工具為您`docker-compose.yml`執行該「翻譯」(從檔案 到協調器所需的格式)。
 
-![顯示"部署到庫伯奈斯"任務的螢幕截圖。](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
+![顯示「部署到庫伯奈斯」任務的螢幕截圖。](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 
 **圖 5-10**。 將 [部署至 Kubernetes] 工作新增至您的環境
 
 圖 5-11 示範如何使用可設定的區段來編輯 [部署至 Kubernetes] 工作。 此工作會擷取可供使用的自訂 Docker 映像，以部署為叢集中的容器。
 
-![顯示"部署到庫伯奈斯"任務配置的螢幕截圖。](./media/docker-application-outer-loop-devops-workflow/edit-deploy-to-kubernetes-task.png)
+![顯示「部署到庫伯奈斯」任務配置的螢幕截圖。](./media/docker-application-outer-loop-devops-workflow/edit-deploy-to-kubernetes-task.png)
 
 **圖 5-11**。 部署到 ACS DC/OS 的 Docker 部署工作定義
 
 > [!INFORMATION] 若要深入了解使用 Azure DevOps Services 和 Docker 的 CD 管線，請瀏覽 <https://azure.microsoft.com/services/devops/pipelines>
 
-## <a name="step-5-run-and-manage"></a>第 5 步：運行和管理
+## <a name="step-5-run-and-manage"></a>第 5 步:執行與管理
 
 由於在企業生產層級執行和管理應用程式本身就是個重要的主題，且由於在該層級執行之作業和人員類型 (IT 作業) 及此領域的廣大範圍，因此下一章將全部用來說明該主題。
 
-## <a name="step-6-monitor-and-diagnose"></a>第 6 步：監控和診斷
+## <a name="step-6-monitor-and-diagnose"></a>第 6 步:監控和診斷
 
 本主題也會在下一章中討論，這是 IT 人員在生產系統中執行工作的一部分；不過，值得注意的是，此步驟中取得的見解必須回饋給開發小組，以便持續改善應用程式。 從該觀點來看，這也是 DevOps 的一部分，但通常會由 IT 人員來執行工作和作業。
 
 只有在監視和診斷 100% 位於 DevOps 領域內時，開發小組才會對測試或搶鮮版 (Beta) 環境執行監視程序和分析。 這會藉由執行負載測試，或是藉由監視搶鮮版 (Beta) 或 QA 環境來完成，其中搶鮮版 (Beta) 測試人員會嘗試新版本。
 
 >[!div class="step-by-step"]
->[上一個](index.md)
+>[前一個](index.md)
 >[下一個](create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md)

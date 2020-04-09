@@ -2,18 +2,18 @@
 title: Docker 應用程式的內部迴圈開發工作流程
 description: 了解用於開發 Docker 應用程式的「內部迴圈」工作流程。
 ms.date: 02/15/2019
-ms.openlocfilehash: 3d2fc889d22dbf02acccfbf9231ad98fca224cff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75936804"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989008"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 
 在觸發跨越整個 DevOps 循環的外部迴圈工作流程之前，所有項目都從每個開發人員的機器開始，使用其慣用語言或平台對應用程式本身編碼，並在本機進行測試 (圖 4-21)。 但不論何種情況，不論您選擇何種語言、架構或平台，您都會有一個重要的共同點。 在此特定的工作流程中，您將一律開發並測試 Docker 容器，但僅在本機。
 
-![顯示內部迴圈開發環境概念的圖表。](./media/docker-apps-inner-loop-workflow/inner-loop-development-context.png)
+![顯示內部循環開發環境概念的圖表。](./media/docker-apps-inner-loop-workflow/inner-loop-development-context.png)
 
 **圖 4-21**： 內部迴圈開發內容
 
@@ -39,7 +39,7 @@ Docker 映像的容器或執行個體將包含這些元件：
 
 **圖 4-22**。 使用 Docker CLI 之 Docker 容器化應用程式的生命週期工作流程概要
 
-### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>第 1 步：在視覺化工作室代碼中開始編碼，並創建初始應用/服務基線
+### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>第 1 步:在可視化工作室代碼中開始編碼,並建立初始應用/服務基線
 
 開發 Docker 應用程式的方式，與不使用 Docker 開發應用程式的方式類似。 差別在於，在開發時，您要部署並測試放置於本機環境之 Docker 容器 (例如 Linux VM 或 Windows) 中正在執行的應用程式或服務。
 
@@ -54,10 +54,10 @@ Docker 映像的容器或執行個體將包含這些元件：
 
 此外，您也需要程式碼編輯器，讓您可在使用 Docker CLI 時實際開發應用程式。
 
-微軟提供Visual Studio代碼，它是 Windows、Linux 和 macOS 支援的羽量級代碼編輯器，並為 IntelliSense 提供了[對多種語言](https://code.visualstudio.com/docs/languages/overview)（JavaScript、.NET、Go、JAVA、Ruby、Python 和大多數現代語言）、[調試](https://code.visualstudio.com/Docs/editor/debugging)、與[Git 的集成](https://code.visualstudio.com/Docs/editor/versioncontrol)以及[擴展支援](https://code.visualstudio.com/docs/extensions/overview)的支援。 此編輯器非常適合 macOS 和 Linux 開發人員。 在 Windows 中，您還可以使用視覺化工作室。
+微軟提供Visual Studio代碼,它是Windows、Linux和macOS支援的輕量級代碼編輯器,並為IntelliSense提供了[對多種語言](https://code.visualstudio.com/docs/languages/overview)(JAVAScript、.NET、Go、Java、Ruby、Python 和大多數現代語言)、[調試](https://code.visualstudio.com/Docs/editor/debugging)、與[Git的整合](https://code.visualstudio.com/Docs/editor/versioncontrol)以及[擴展支援](https://code.visualstudio.com/docs/extensions/overview)的支援。 此編輯器非常適合 macOS 和 Linux 開發人員。 在 Windows 中,您還可以使用可視化工作室。
 
 > [!TIP]
-> 有關為 Windows、Linux 或 macOS 安裝視覺化工作室代碼的說明，請<https://code.visualstudio.com/docs/setup/setup-overview/>轉到 。
+> 有關為 Windows、Linux 或 macOS 安裝視覺化工作室碼的<https://code.visualstudio.com/docs/setup/setup-overview/>說明,請轉到 。
 >
 > 如需設定適用於 Mac 之 Docker 的指示，請瀏覽 <https://docs.docker.com/docker-for-mac/>。
 
@@ -85,7 +85,7 @@ Docker 映像的容器或執行個體將包含這些元件：
 
 **圖 4-23**： 在 Visual Studio Code 中安裝 Docker 延伸模組
 
-### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>第 2 步：創建與現有映射相關的 DockerFile（普通作業系統或開發環境，如 .NET Core、Node.js 和 Ruby）
+### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>第二步:建立與現有映像相關的 DockerFile(一般作業系統或開發環境,如 .NET Core、Node.js 與 Ruby)
 
 針對每個要建置的自訂映像，以及每個要部署的容器，您都需要一個 `DockerFile`。 如果您的應用程式由單一自訂服務所組成，您將需要單一 `DockerFile`。 但如果您的應用程式由多個服務所組成 (如同在微服務架構中)，針對每項服務您將需要一個 `Dockerfile`。
 
@@ -100,7 +100,7 @@ Docker 映像的容器或執行個體將包含這些元件：
 
 **圖 4-24**： 使用**將 Docker 檔案新增至工作區命令**新增的 Docker 檔案
 
-新增 DockerFile 時，您將指定您要使用哪些基礎 Docker 映像 (例如使用 `FROM mcr.microsoft.com/dotnet/core/aspnet`)。 您通常會在基底映像之上建置自訂映像，該基底映像可從 [Docker Hub登錄](https://hub.docker.com/)的任何官方存放庫取得 (例如 [.NET Core 的映像](https://hub.docker.com/_/microsoft-dotnet-core/)或 [Node.js](https://hub.docker.com/_/node/) 的映像)。
+添加 DockerFile 時,可以指定將使用的基本 Docker 映`FROM mcr.microsoft.com/dotnet/core/aspnet`射(如使用 )。 您通常會在基底映像之上建置自訂映像，該基底映像可從 [Docker Hub登錄](https://hub.docker.com/)的任何官方存放庫取得 (例如 [.NET Core 的映像](https://hub.docker.com/_/microsoft-dotnet-core/)或 [Node.js](https://hub.docker.com/_/node/) 的映像)。
 
 ***使用現有的官方 Docker 映像***
 
@@ -145,7 +145,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 您可以從頭建立您自己的 Docker 基底映像，如 Docker 的此[文章](https://docs.docker.com/engine/userguide/eng-image/baseimages/)中所述。 如果您是 Docker 新手，此方案可能不適合您，但如果您想要設定專屬基底映像的特點，您可以這樣做。
 
-### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>第 3 步：創建自訂 Docker 映射，將服務嵌入其中
+### <a name="step-3-create-your-custom-docker-images-embedding-your-service-in-it"></a>第三步:建立自訂 Docker 映像,將服務嵌入其中
 
 針對每個包含您應用程式的自訂服務，您需要建立相關映像。 如果您的應用程式組成為單一的服務或 Web 應用程式，則您只需要單一映像。
 
@@ -172,7 +172,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 **圖 4-26**。 使用 docker images 檢視現有的映像
 
-### <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>步驟 4：在使用多個服務構建組合 Docker 應用時，在 docker-compose.yml 中定義服務
+### <a name="step-4-define-your-services-in-docker-composeyml-when-building-a-composed-docker-app-with-multiple-services"></a>步驟 4:在使用多個服務建構群組 Docker 應用程式時,在 docker-compose.yml 中定義服務
 
 透過 `docker-compose.yml` 檔案，您可以定義一組相關服務，部署為具有部署命令 (將於下一節解釋) 的組成應用程式。
 
@@ -205,11 +205,11 @@ services:
 
 Redis 服務會使用從 Docker Hub 登錄提取的[最新公用 redis 映像](https://hub.docker.com/_/redis/)。 [redis](https://redis.io/) 是伺服器端應用程式的熱門快取系統。
 
-### <a name="step-5-build-and-run-your-docker-app"></a>第 5 步：構建並運行 Docker 應用
+### <a name="step-5-build-and-run-your-docker-app"></a>第 5 步:建立並執行 Docker 應用
 
 如果您的應用程式只有單一容器，您只需要將其部署至您的 Docker 主機 (VM 或實體伺服器) 來執行。 不過，如果您的應用程式由多個服務組成，您也需要「撰寫」** 該應用程式。 讓我們看看不同的選項。
 
-***選項 A：運行單個容器或服務***
+***選項 A:執行單個容器或服務***
 
 您可以使用 docker run 命令執行 Docker 映像，如下所示：
 
@@ -219,7 +219,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 針對此特定的部署，我們將會將傳送至連接埠 80 的要求重新導向至內部連接埠 5000。 現在應用程式正在主機層級的外部連接埠 80 上接聽。
 
-***選項 B：撰寫並運行多容器應用程式***
+***選項 B:撰寫並執行多容器應用程式***
 
 在大部分的企業案例中，Docker 應用程式由多個服務組成。 在這些案例中，您可以執行 `docker-compose up` 命令 (圖 4-27)，會使用您先前可能已建立的 docker compose.yml 檔案。 執行此命令會部署組成應用程式及其所有相關容器。
 
@@ -233,7 +233,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 **圖 4-28**。 部署了 Docker 容器的 VM
 
-### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>第 6 步：測試 Docker 應用程式（本地本地本地 CD VM 中）
+### <a name="step-6-test-your-docker-application-locally-in-your-local-cd-vm"></a>第六步:測試 Docker 應用程式 (本地本地端 CD VM)
 
 此步驟會隨應用程式執行的作業而異。
 
@@ -266,8 +266,8 @@ Visual Studio Code 支援對 Docker 的偵錯，如果您使用 Node.js 和像�
 在使用適用於 Windows 或 Mac 的 Visual Studio 時，您也可以對 Docker 中的 .NET Core 或 .NET Framework 容器進行偵錯，如下一節中所述。
 
 > [!TIP]
-> 要瞭解有關調試 Node.js Docker 容器的更多<https://blog.docker.com/2016/07/live-debugging-docker/>，<https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more>請參閱 和 。
+> 要瞭解有關除錯 Node.js Docker<https://blog.docker.com/2016/07/live-debugging-docker/>容器<https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more>的更多 , 請參考與 。
 
 >[!div class="step-by-step"]
->[上一個](docker-apps-development-environment.md)
+>[前一個](docker-apps-development-environment.md)
 >[下一個](visual-studio-tools-for-docker.md)

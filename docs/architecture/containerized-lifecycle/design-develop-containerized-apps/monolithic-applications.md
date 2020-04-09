@@ -2,12 +2,12 @@
 title: 整合型應用程式
 description: 了解如何將整合型應用程式容器化的核心概念。
 ms.date: 02/15/2019
-ms.openlocfilehash: 8664153ee2e9d1d253164e43ac13105f6dbf476c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3c186f6a300588816916886927f93e0c06ebd6bc
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72771038"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988982"
 ---
 # <a name="monolithic-applications"></a>整合型應用程式
 
@@ -17,7 +17,7 @@ ms.locfileid: "72771038"
 
 當您遵循「容器僅執行一項動作並在一個處理序中執行該動作」的原則時，整合型模式可能會產生衝突。 您可以在每個容器中包含多個元件/程式庫或內部層級，如圖 4-1 所示。
 
-![顯示通過克隆應用進行擴展的單片應用的圖表。](./media/monolithic-applications/monolithic-application-architecture-example.png)
+![顯示通過複製應用進行擴展的單片應用的圖表。](./media/monolithic-applications/monolithic-application-architecture-example.png)
 
 **圖 4-1。** 整合型應用程式的架構範例
 
@@ -45,7 +45,7 @@ ms.locfileid: "72771038"
 
 ![顯示整體應用擴展到不同主機的圖表。](./media/monolithic-applications/multiple-hosts-from-single-docker-container.png)
 
-**圖4-3**。 多個主機擴展單個 Docker 應用程式
+**圖4-3**。 多個主機延伸單個 Docker 應用程式
 
 您可以透過傳統部署技術來管理主機本身的部署。
 
@@ -61,7 +61,7 @@ ms.locfileid: "72771038"
 
 雖然整合型應用程式可以從 Docker 獲益，但這只是一小部分優點。 管理容器的主要優點來自於使用容器協調器進行部署，透過此方式來管理各種執行個體和每個容器執行個體的生命週期。 將整合型應用程式分成可個別擴充、開發及部署的多個子系統，是您開始使用微服務的不錯起點。
 
-要瞭解如何使用容器"提升和移動"整體應用程式以及如何實現應用程式現代化，請閱讀此附加 Microsoft 指南，[即使用 Azure 雲和 Windows 容器對現有 .NET 應用程式進行現代化改造](../../modernize-with-azure-containers/index.md)，還可以從 中<https://aka.ms/LiftAndShiftWithContainersEbook>下載 PDF。
+要瞭解如何使用容器"提升和移動"整體應用程式以及如何實現應用程式現代化,請閱讀此附加 Microsoft 指南,[即使用 Azure 雲和 Windows 容器對現有 .NET 應用程式進行現代化改造](../../modernize-with-azure-containers/index.md),還可以從 中<https://aka.ms/LiftAndShiftWithContainersEbook>下載 PDF。
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>將單一 Docker 容器應用程式發佈至 Azure App Service
 
@@ -71,12 +71,12 @@ Azure App Service 提供與 Git 的絕佳整合，讓您可以輕鬆地取得程
 
 現在，當您使用 Visual Studio 2017 時，Azure App Service 的容器支援可讓您在應用程式環境中包含所想要任何項目，如圖 4-4 所示。 如果您已將相依性新增至應用程式，並在容器中加以執行，即可在 Dockerfile 或 Docker 映像中包括這些相依性。
 
-![顯示容器註冊表的"創建應用服務"對話方塊的螢幕截圖。](./media/monolithic-applications/publish-azure-app-service-container.png)
+![顯示容器註冊表的「創建應用服務」對話框的螢幕截圖。](./media/monolithic-applications/publish-azure-app-service-container.png)
 
 **圖4-4**。 將容器從 Visual Studio 應用程式/容器發佈至 Azure App Service
 
 如圖 4-4 所示，發佈流程會透過容器登錄推送映像，而這可能是 Azure Container Registry (接近您 Azure 部署並受到 Azure Active Directory 群組和帳戶保護的登錄)，或任何其他 Docker 登錄，例如 Docker Hub 或內部部署登錄。
 
 >[!div class="step-by-step"]
->[上一個](common-container-design-principles.md)
+>[前一個](common-container-design-principles.md)
 >[下一個](state-and-data-in-docker-applications.md)

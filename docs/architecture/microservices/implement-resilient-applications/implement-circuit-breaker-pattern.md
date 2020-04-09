@@ -2,12 +2,12 @@
 title: 實作斷路器模式
 description: 了解如何實作斷路器模式作為 Http 重試的互補系統。
 ms.date: 03/03/2020
-ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bebe0b4a622db928175f78f8d3e303d3d7adf170
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847241"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988881"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>實作斷路器模式
 
@@ -25,11 +25,11 @@ ms.locfileid: "78847241"
 
 斷路器模式的目的與「重試模式」不同。 「重試模式」可讓應用程式重試作業，期望該作業最終會成功。 斷路器模式可防止應用程式執行可能失敗的作業。 應用程式可以結合這兩種模式。 不過，重試邏輯應該會受到斷路器所傳回之任何例外狀況的影響，而且如果斷路器指出錯誤不是暫時的，就應該放棄重試嘗試。
 
-## <a name="implement-circuit-breaker-pattern-with-ihttpclientfactory-and-polly"></a>實現帶`IHttpClientFactory`和波莉的斷路器模式
+## <a name="implement-circuit-breaker-pattern-with-ihttpclientfactory-and-polly"></a>實現帶`IHttpClientFactory`與波莉的斷路器模式
 
-與實現重試時一樣，斷路器推薦的方法是利用經過驗證的 .NET 庫（如 Polly）及其與`IHttpClientFactory`的本機集成。
+與實現重試時一樣,斷路器推薦的方法是利用經過驗證的 .NET 庫(如 Polly)及其與`IHttpClientFactory`的本機集成。
 
-將斷路器策略添加到`IHttpClientFactory`傳出中介軟體管道中非常簡單，只需將單個增量代碼添加到使用`IHttpClientFactory`時已有的代碼。
+將斷路器策略添加到`IHttpClientFactory`傳出中間件管道中非常簡單,只需將單個增量代碼添加到`IHttpClientFactory`使用 時已有的代碼。
 
 此處用於 HTTP 呼叫重試之程式碼的唯一新增項目，就是用來將斷路器原則新增至所要使用之原則清單的程式碼，如下列程式碼增量所示 (屬於 ConfigureServices() 方法一部分)。
 
@@ -61,13 +61,13 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 相對於由 Azure 為您自動管理，上述所有功能適用於從 .NET 程式碼管理容錯移轉的情況，並提供位置透明度。
 
-從使用的角度來看，使用 HttpClient 時，無需在此處添加任何新內容，因為代碼與 使用`HttpClient``IHttpClientFactory`時的代碼相同，如前幾節所示。
+從使用的角度來看,使用 HttpClient 時,無需在此處添加任何新內容,因為代碼`HttpClient``IHttpClientFactory`與 使用 時的代碼相同,如前幾節所示。
 
 ## <a name="test-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>在 eShopOnContainers 中測試 Http 重試和斷路器
 
-只要您在 Docker 主機中啟動 eShopOnContainers 解決方案，就需要啟動多個容器。 某些容器的啟動和初始化速度會比較慢，例如 SQL Server 容器。 特別是當您第一次將 eShopOnContainers 應用程式部署至 Docker 時更是如此，因為需要設定映像和資料庫。 某些容器的啟動速度會比其他容器慢，而導致其餘服務一開始擲回 HTTP 例外狀況，即使在 docker-compose 層級設定容器之間的相依性亦然，如先前章節所述。 容器之間的這些 docker-compose 相依性只會在處理序層。 容器的進入點處理序可能已啟動，但 SQL Server 可能尚未就緒而無法查詢。 結果可能是一連串的錯誤，而且嘗試取用該特定容器時，應用程式可能會收到例外狀況。
+只要您在 Docker 主機中啟動 eShopOnContainers 解決方案，就需要啟動多個容器。 某些容器的啟動和初始化速度會比較慢，例如 SQL Server 容器。 特別是當您第一次將 eShopOnContainers 應用程式部署至 Docker 時更是如此，因為需要設定映像和資料庫。 某些容器的啟動速度會比其他容器慢，而導致其餘服務一開始擲回 HTTP 例外狀況，即使在 docker-compose 層級設定容器之間的相依性亦然，如先前章節所述。 容器之間的這些 docker-compose 相依性只會在處理序層。 容器的入口點進程可能已啟動,但 SQL Server 可能尚未準備好進行查詢。 結果可能是一連串的錯誤，而且嘗試取用該特定容器時，應用程式可能會收到例外狀況。
 
-當應用程式正在部署至雲端時，您也可能會在啟動時看到這種錯誤類型。 在此情況下，平衡叢集節點之間的容器數目時，協調器可能會將容器從一個節點或 VM 移至另一個 (也就是啟動新的執行個體)。
+當應用程式正在部署至雲端時，您也可能會在啟動時看到這種錯誤類型。 在這種情況下,協調器在平衡群集節點上的容器數量時,可能會將容器從一個節點或 VM 移動到另一個節點(即啟動新實例)。
 
 啟動所有容器時，'eShopOnContainers' 解決這些問題的方法是使用稍早所述的重試模式。
 
@@ -94,9 +94,9 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 您可以接著使用 URI `http://localhost:5103/failing` 來檢查狀態，如圖 8-5 所示。
 
-![檢查中介軟體類比失敗狀態的螢幕截圖。](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
+![檢查中間件類比失敗狀態的屏幕截圖。](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
-**圖 8-5**。 檢查「失敗」的 ASP.NET 中介軟體狀態 (在本例中已停用)
+**圖 8-5**。 檢查"失敗"ASP.NET中間件的狀態 – 在這種情況下,禁用。
 
 此時，只要您呼叫/叫用它，購物籃微服務就會以狀態碼 500 回應。
 
@@ -132,9 +132,9 @@ public class CartController : Controller
 }
 ```
 
-以下摘要說明。 重試原則嘗試提出 HTTP 要求幾次，並收到 HTTP 錯誤。 當重試次數達到針對斷路器原則設定的最大數目時 (在本例中為 5)，應用程式會擲回 BrokenCircuitException。 結果是易懂訊息，如圖 8-6 所示。
+摘要如下。 重試原則嘗試提出 HTTP 要求幾次，並收到 HTTP 錯誤。 當重試次數達到針對斷路器原則設定的最大數目時 (在本例中為 5)，應用程式會擲回 BrokenCircuitException。 結果是易懂訊息，如圖 8-6 所示。
 
-![MVC Web 應用程式的螢幕截圖，帶有購物籃服務失效錯誤。](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
+![MVC Web 應用程式的螢幕截圖,帶有購物籃服務失效錯誤。](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 
 **圖 8-6**。 斷路器傳回錯誤至 UI
 
@@ -148,5 +148,5 @@ public class CartController : Controller
   [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
->[上一個](implement-http-call-retries-exponential-backoff-polly.md)
+>[前一個](implement-http-call-retries-exponential-backoff-polly.md)
 >[下一個](monitor-app-health.md)

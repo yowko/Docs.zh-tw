@@ -2,12 +2,12 @@
 title: 在 CQRS 微服務中實作讀取/查詢
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 CQRS 查詢端使用 Dapper 在 eShopOnContainers 訂購微服務上的實作。
 ms.date: 10/08/2018
-ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49f42a5035bab38f800f3ec5ea24b01fde0d2964
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73972079"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988748"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>在 CQRS 微服務中實作讀取/查詢
 
@@ -15,7 +15,7 @@ ms.locfileid: "73972079"
 
 方法很簡單，如圖 7-3 所示。 API 介面是由 Web API 控制器實作，這些控制器會使用任何基礎結構，例如 Dapper 等微物件關聯式對應 (ORM)，並根據 UI 應用程式的需求傳回動態 ViewModel。
 
-![在簡化的 CQRS 中顯示高級查詢端的圖表。](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
+![在簡化的 CQRS 中顯示進階查詢端的圖表。](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
 **圖 7-3**. CQRS 微服務中最簡單的查詢方法
 
@@ -23,7 +23,7 @@ ms.locfileid: "73972079"
 
 因為這是簡單的方法，所以查詢端需要的程式碼 (例如使用 [Dapper](https://github.com/StackExchange/Dapper) 等微 ORM 的程式碼) 可在[相同的 Web API 專案](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs)中實作。 如圖 7-4 所示。 查詢是在 eShopOnContainers 解決方案內的 **Ordering.API** 微服務專案中所定義。
 
-![排序.API 專案的查詢資料夾的螢幕截圖。](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
+![排序.API 項目的查詢資料夾的屏幕截圖。](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **圖 7-4**. eShopOnContainers 訂購微服務中的查詢
 
@@ -41,7 +41,7 @@ ViewModel 可以是在類別中定義的靜態類型。 或者，您可以根據
 
 Dapper 是開放原始碼專案 (原創者為 Sam Saffron)，屬於 [Stack Overflow](https://stackoverflow.com/) (堆疊溢位) 的建置組塊。 若要使用 Dapper，您只需要透過 [Dapper NuGet 套件](https://www.nuget.org/packages/Dapper)安裝它即可，如下圖所示：
 
-![NuGet 包視圖中的 Dapper 包螢幕截圖。](./media/cqrs-microservice-reads/drapper-package-nuget.png)
+![NuGet 包檢視中的 Dapper 包螢幕截圖。](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
 您也需要新增 using 陳述式，以便您的程式碼存取 Dapper 擴充方法。
 
@@ -93,13 +93,13 @@ public class OrderQueries : IOrderQueries
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>ViewModel 作為預先定義的 DTO 類別
 
-**優點：** 擁有靜態預先定義的 ViewModel 類別，例如以明確 DTO 類別為基礎的「合約」，絕對適合公用 API，但也適用於長期的微服務，即使只有相同的應用程式使用它們。
+**優點**:具有靜態預定義的 ViewModel 類(如基於顯式 DTO 類的"協定")肯定更適合公共 API,也更適合長期微服務,即使它們僅由同一應用程式使用。
 
 如要指定 Swagger 的回應類型，您需要使用明確的 DTO 類別作為傳回型別。 因此，預先定義的 DTO 類別可讓您提供更豐富的 Swagger 資訊。 這會在使用 API 時改善 API 文件和相容性。
 
 **缺點：** 如前所述，更新程式碼時，它會採用更多步驟來更新 DTO 類別。
 
-經驗提示：** 在 eShopOnContainers 訂購微服務實作的查詢中，我們就開始使用動態 ViewModel 進行開發，因為它在早期開發階段非常簡單靈活。 但是，一旦開發趨於穩定，我們會選擇重構 API 並使用靜態或預先定義的 DTO 取代 ViewModel，因為這樣可讓微服務取用者更清楚知道用作「合約」的明確 DTO 類型。
+經驗提示：** 在 eShopOnContainers 訂購微服務實作的查詢中，我們就開始使用動態 ViewModel 進行開發，因為它在早期開發階段非常簡單靈活。 但是,一旦開發穩定下來,我們選擇重構 API,併為 ViewModel 使用靜態或預定義的 DTO,因為微服務的消費者更清楚地知道用作"合同"的顯式 DTO 類型。
 
 在下例中，您會看到查詢如何使用明確的 ViewModel DTO 類別：OrderSummary 類別，傳回資料。
 
@@ -188,12 +188,12 @@ public class OrderSummary
 - **Dapper**  
  <https://github.com/StackExchange/dapper-dot-net>
 
-- **朱莉·萊曼資料點 - Dapper、實體框架和混合應用（MSDN 雜誌文章）**  
+- **朱莉·萊曼資料點 - Dapper、實體框架和混合應用(MSDN 雜誌文章)**  
   <https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps>
 
-- **使用斯瓦格ASP.NET核心 Web API 説明頁**  
+- **使用斯瓦格ASP.NET核心 Web API 說明頁**  
   <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
->[上一個](eshoponcontainers-cqrs-ddd-microservice.md)
+>[前一個](eshoponcontainers-cqrs-ddd-microservice.md)
 >[下一個](ddd-oriented-microservice.md)

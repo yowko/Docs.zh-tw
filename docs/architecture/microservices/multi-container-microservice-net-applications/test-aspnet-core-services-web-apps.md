@@ -2,12 +2,12 @@
 title: 測試 ASP.NET Core 服務和 Web 應用程式
 description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索在容器中用於測試 ASP.NET Core 服務和 Web 應用程式的架構。
 ms.date: 01/30/2020
-ms.openlocfilehash: ab3ae6276ea4e4c741731f050913d956046271ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f66d6184d913405c9372904f8072dda1dbfbe6ac
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501975"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988228"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>測試 ASP.NET Core 服務和 Web 應用程式
 
@@ -19,7 +19,7 @@ ms.locfileid: "77501975"
 
 - 整合測試。 這些可確保針對外部成品 (如資料庫) 的元件互動會如預期般運作。 判斷提示可以測試元件 API、UI 或資料庫 I/O、記錄之類的動作副作用。
 
-- 每個微服務的功能測試。 這些可確保應用程式從使用者的觀點來看如預期般運作。
+- 每個微服務的功能測試。 從使用者的角度來看,這些確保應用程式按預期工作。
 
 - 服務測試。 這些可確保會測試端對端的服務使用案例，包括在相同的時間測試多個服務。 針對這種測試，您需要先準備環境。 在此情況下，這表示啟動服務 (例如，使用 docker-compose up)。
 
@@ -68,7 +68,7 @@ public async Task Get_order_detail_success()
 
 因為整合測試會執行比單元測試大的程式碼區段，且整合測試會依賴基礎結構項目，所以它們的速度通常和單元測試相比，會呈數量級地變慢。 因此，最好限制您撰寫和執行多少整合測試。
 
-ASP.NET酷睿包括一個內置的測試 Web 主機，可用於處理 HTTP 要求而不帶網路開銷，這意味著您可以比使用實際 Web 主機時更快地運行這些測試。 測試 Web 主機 (TestServer) 可透過 Microsoft.AspNetCore.TestHost NuGet 元件取得。 它可以新增至整合測試專案，並用於裝載 ASP.NET Core 應用程式。
+ASP.NET酷睿包括一個內置的測試 Web 主機,可用於處理 HTTP 請求而不帶網路開銷,這意味著您可以比使用實際 Web 主機時更快地運行這些測試。 測試 Web 主機 (TestServer) 可透過 Microsoft.AspNetCore.TestHost NuGet 元件取得。 它可以新增至整合測試專案，並用於裝載 ASP.NET Core 應用程式。
 
 您可以在下列程式碼中看到，當您建立 ASP.NET Core 控制器的整合測試時，您會透過測試主機將控制器具現化。 這相當於 HTTP 要求，但執行速度較快。
 
@@ -101,10 +101,10 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>其他資源
 
-- **史蒂夫·史密斯測試控制器**（ASP.NET核心） |
+- **史蒂夫·史密斯測試控制器**(ASP.NET核心) |
     [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
 
-- **史蒂夫·史密斯集成測試**（ASP.NET核心） |
+- **史蒂夫·史密斯集成測試**(ASP.NET核心) |
     [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
 - **使用點網測試在 .NET Core 中的單元測試** \
@@ -138,7 +138,7 @@ compose 應用程式啟動且執行之後，如果您正在執行 Visual Studio�
 
 2. **微服務功能/整合測試**，其中測試案例涉及每個微服務的基礎結構，但會與其他項目隔離，且包含在 **{MicroserviceName}.FunctionalTests** 專案中。
 
-3. **應用程式功能/集成測試**，側重于微服務集成，測試案例具有多個微服務。 這些測試位於 **Application.FunctionalTests** 專案中。
+3. **應用程式功能/整合測試**,側重於微服務整合,測試案例具有多個微服務。 這些測試位於 **Application.FunctionalTests** 專案中。
 
 每個微服務的單元測試和整合測試都包含在每個微服務和應用程式中測試資料夾中。負載測試則包含在解決方案資料夾中的測試資料夾中，如圖 6-25 所示。
 
@@ -205,5 +205,5 @@ docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
     <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
 
 > [!div class="step-by-step"]
-> [上一個](subscribe-events.md)
+> [前一個](subscribe-events.md)
 > [下一個](background-tasks-with-ihostedservice.md)

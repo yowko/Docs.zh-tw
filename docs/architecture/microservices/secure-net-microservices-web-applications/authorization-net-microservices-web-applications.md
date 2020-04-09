@@ -3,18 +3,18 @@ title: 關於 .NET 微服務和 Web 應用程式中的授權
 description: .NET 微服務和 Web 應用程式中的安全性 - 取得 ASP.NET Core 應用程式中主要授權選項 (以角色為基礎和以原則為基礎) 的概觀。
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27936a33ea2bb46cedb9d10ee47a2117e1843e14
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501771"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988202"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>關於 .NET 微服務和 Web 應用程式中的授權
 
-在驗證之後，ASP.NET Core Web API 需要授與存取權。 這個程序允許服務讓 API 可供某些已驗證的使用者使用，而不是所有使用者都可使用。 [授權](/aspnet/core/security/authorization/introduction)可以根據使用者的角色或自訂原則來完成，這可能包含檢查宣告或其他啟發學習法。
+在驗證之後，ASP.NET Core Web API 需要授與存取權。 這個程序允許服務讓 API 可供某些已驗證的使用者使用，而不是所有使用者都可使用。 [授權](/aspnet/core/security/authorization/introduction)可以基於使用者的角色或自定義策略完成,其中可能包括檢查聲明或其他啟發式。
 
-限制對 ASP.NET Core MVC 路由的存取，就像將 Authorize 屬性套用至動作方法一樣簡單 (或套用至控制器類別，如果所有控制器動作都需要授權)，如下例所示：
+限制對ASP.NET酷睿 MVC 路由的訪問與將授權屬性應用於操作方法(如果控制器的所有操作都需要授權)一樣簡單,如以下範例所示:
 
 ```csharp
 public class AccountController : Controller
@@ -36,7 +36,7 @@ public class AccountController : Controller
 
 ASP.NET Core 身分識別具有內建的角色概念。 除使用者之外，ASP.NET Core 身分識別還會儲存應用程式所用之不同角色的資訊，並追蹤哪些使用者獲指派哪些角色。 您可以使用 `RoleManager` 型別 (它會更新持續性儲存體中的角色) 和 `UserManager` 型別 (它可授與或撤銷使用者角色)，以程式設計方式來變更這些指派。
 
-如果您要使用 JWT 持有人權杖進行驗證，ASP.NET Core JWT 持有人驗證中介軟體會根據權杖中找到的角色宣告，填入使用者的角色。 若要限制僅有特定角色的使用者可以存取 MVC 動作或控制器，您可以在授權註解 (屬性) 中包含 Roles 參數，如下列程式碼片段所示：
+如果使用 JWT 承載權杖進行身份驗證,則 ASP.NET 酷睿 JWT 承載身份驗證中間件將根據權杖中找到的角色聲明填充使用者的角色。 若要限制僅有特定角色的使用者可以存取 MVC 動作或控制器，您可以在授權註解 (屬性) 中包含 Roles 參數，如下列程式碼片段所示：
 
 ```csharp
 [Authorize(Roles = "Administrator, PowerUser")]
@@ -94,7 +94,7 @@ services.AddAuthorization(options =>
 });
 ```
 
-如範例所示，原則可與不同類型的需求建立關聯性。 註冊原則之後，即可套用到動作或控制器，只要將原則的名稱傳遞為 Authorize 屬性的 Policy 引數 (例如，`[Authorize(Policy="EmployeesOnly")]`)。原則可有多個需求，不是只有一個 (如這些範例所示)。
+如範例所示，原則可與不同類型的需求建立關聯性。 註冊策略後,可以通過將策略的名稱傳遞給"授權"屬性(`[Authorize(Policy="EmployeesOnly")]`例如 )策略參數,從而將其應用於操作或控制器,例如,策略可以有多個要求,而不僅僅是一個要求(如這些示例所示)。
 
 在前例中，第一個 AddPolicy 呼叫只是根據角色授權的替代方式。 若 `[Authorize(Policy="AdministratorsOnly")]` 已套用至 API，只有系統管理員角色的使用者才能夠存取它。
 
@@ -110,7 +110,7 @@ services.AddAuthorization(options =>
 
 除了使用 `AddPolicy` 呼叫來註冊自訂原則需求，您也需要透過相依性插入 (`services.AddTransient<IAuthorizationHandler, MinimumAgeHandler>()`) 來註冊自訂需求處理常式。
 
-自訂授權需求和檢查使用者存留期處理常式 (以 `DateOfBirth` 宣告為基礎) 的範例，可自 ASP.NET Core [授權文件](https://docs.asp.net/en/latest/security/authorization/policies.html)取得。
+檢查使用者的使用者的使用者`DateOfBirth`的使用者的使用者的使用者的使用者的使用者授權要求與處理程式的範例ASP.NET Core[授權文件](https://docs.asp.net/en/latest/security/authorization/policies.html)中提供 。
 
 ## <a name="additional-resources"></a>其他資源
 
@@ -127,5 +127,5 @@ services.AddAuthorization(options =>
   [https://docs.microsoft.com/aspnet/core/security/authorization/policies](/aspnet/core/security/authorization/policies)
 
 >[!div class="step-by-step"]
->[上一個](index.md)
+>[前一個](index.md)
 >[下一個](developer-app-secrets-storage.md)

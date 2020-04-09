@@ -2,18 +2,18 @@
 title: 針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對開發或測試環境使用 RabbitMQ 實作整合事件的事件匯流排傳訊。
 ms.date: 10/02/2018
-ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12e37fabfe915b4d2089d27f7852528a9a037d3c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74711191"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988293"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>針對開發或測試環境使用 RabbitMQ 實作事件匯流排
 
 首先您應該知道，如果您根據容器中所執行的 RabbitMQ 來建立自訂事件匯流排 (如同 eShopOnContainers 應用程式的做法)，則只能用於開發和測試環境。 除非您將它當做準備好用於生產環境之服務匯流排的一部分來建置，否則不應該用於生產環境中。 簡單的自訂事件匯流排可能會遺失許多商業服務匯流排所具備並可供生產環境使用的重要功能。
 
-eShopOnContainers 的其中一個事件匯流排自訂實作基本上是使用 RabbitMQ API 的程式庫 (另一個實作是以 Azure 服務匯流排為依據)。
+eShopOn 容器中的事件總線自定義實現之一基本上是使用 RabbitMQ API 的庫。 (還有一個基於 Azure 服務總線的實現。
 
 使用 RabbitMQ 實作事件匯流排可讓微服務訂閱事件、發行事件和接收事件，如圖 6-21 所示。
 
@@ -108,20 +108,20 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 
 Subscribe 方法接受 IIntegrationEventHandler 物件，就像是目前微服務及其相關 IntegrationEvent 物件中的回呼方法。 此程式碼接著會將該事件處理常式新增至事件處理常式清單，每個整合事件類型可根據每個用戶端微服務擁有這些事件處理常式。 如果用戶端程式碼尚未訂閱事件，程式碼會建立事件類型的通道，以便在從任何其他服務發行該事件時，可從 RabbitMQ 接收推送樣式的事件。
 
-如上所述，在 eShopOnContainers 中實現的事件匯流排僅具有教育目的，因為它僅處理主要方案，因此尚未準備好生產。
+如上所述,在 eShopOnContainers 中實現的事件總線僅具有教育目的,因為它僅處理主要方案,因此尚未準備好生產。
 
-對於生產方案，請檢查以下特定于 RabmQ 的其他資源以及[微服務之間基於事件的通信](./integration-event-based-microservice-communications.md#additional-resources)。
+對於生產方案,請檢查以下特定於 RabmQ 的其他資源以及[微服務之間基於事件的通訊](./integration-event-based-microservice-communications.md#additional-resources)。
 
 ## <a name="additional-resources"></a>其他資源
 
 支援兔MQ的生產就緒解決方案。
 
-- **EasyNetQ** - 開源 .NET API 用戶端，用於兔子MQ |
+- **EasyNetQ** - 開源 .NET API 用戶端,用於兔子MQ |
   <http://easynetq.com/>
 
 - **公共交通** \
   <https://masstransit-project.com/>
   
->[!div class="step-by-step"]
->[上一個](integration-event-based-microservice-communications.md)
->[下一個](subscribe-events.md)
+> [!div class="step-by-step"]
+> [前一個](integration-event-based-microservice-communications.md)
+> [下一個](subscribe-events.md)

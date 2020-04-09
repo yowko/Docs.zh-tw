@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: 18282d14540027e4fae4fe152d3867ad8c223c37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181474"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989216"
 ---
 # <a name="default-marshaling-behavior"></a>預設的封送處理行為
 Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫者是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
@@ -42,7 +42,7 @@ BSTR MethodOne (BSTR b) {
  執行階段一律會使用 **CoTaskMemFree** 方法來釋放記憶體。 如果您正在使用的記憶體不是使用 **CoTaskMemAlloc** 方法配置，則必須使用 **IntPtr**，並使用適當方法手動釋放記憶體。 同樣地，您可以在絕不應該釋放記憶體的情況下避免自動釋放記憶體；例如，從 Kernel32.dll 使用 **GetCommandLine** 函式，該函式會傳回核心記憶體的指標。 如需手動釋放記憶體的詳細資訊，請參閱[緩衝區範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))。  
   
 ## <a name="default-marshaling-for-classes"></a>類別的預設封送處理  
- 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 有關使用您選擇的介面重寫類介面的資訊，請參閱[介紹類介面](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。  
+ 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 有關使用您選擇的介面重寫類介面的資訊,請參閱[介紹類介面](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。  
   
 ### <a name="passing-classes-to-com"></a>將類別傳遞給 COM  
  將 Managed 類別傳遞給 COM 時，Interop 封送處理器會自動使用 COM Proxy 來包裝類別，並將 Proxy 產生的類別介面傳遞給 COM 方法呼叫。 Proxy 接著會將類別介面上的所有呼叫重新委派給 Managed 物件。 Proxy 也會公開類別未明確實作的其他介面。 Proxy 會代表類別自動實作 **IUnknown** 和 **IDispatch** 這類介面。  
@@ -172,7 +172,7 @@ internal class DelegateTest {
   
  格式化類型是複雜類型，其中包含在記憶體中明確控制其成員配置的資訊。 這項成員配置資訊會透過 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來提供。 配置可以是下列其中一個 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值：  
   
-- **LayoutKind.Automatic**  
+- **佈局金德.自動**  
   
      表示 Common Language Runtime 可以為了更高的效率隨意重新排列類型的成員。 不過，當實值類型傳遞至 Unmanaged 程式碼時，成員的配置是可以預測的。 嘗試封送處理這類結構會自動造成例外狀況。  
   
