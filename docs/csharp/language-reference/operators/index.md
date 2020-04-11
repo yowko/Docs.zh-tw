@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 341d5a2e62ca7f94a8448fa0c1286cf7e599c759
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: f0ca111000033f9db84145a38e8d567f96b75d1d
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546662"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121083"
 ---
 # <a name="c-operators-c-reference"></a>C# 運算子 (C# 參考)
 
@@ -40,17 +40,17 @@ Console.WriteLine(a); //  output: 8
 
 下表列出 C# 運算子，從最高優先順序開始到最低優先順序。 每個資料列中的運算子都具有相同的優先順序。
 
-| 運算子 | 類別或名稱 |
+| 操作員 | 類別或名稱 |
 | --------- | ---------------- |
 | [x.y](member-access-operators.md#member-access-expression-)、[x?.y](member-access-operators.md#null-conditional-operators--and-)、[x?[y]](member-access-operators.md#null-conditional-operators--and-)、[f(x)](member-access-operators.md#invocation-expression-)、[a&#91;i&#93;](member-access-operators.md#indexer-operator-)、[x++](arithmetic-operators.md#increment-operator-)、[x--](arithmetic-operators.md#decrement-operator---)、[new](new-operator.md)、[typeof](type-testing-and-cast.md#typeof-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[nameof](nameof.md)、[delegate](delegate-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[x->y](pointer-related-operators.md#pointer-member-access-operator--) | Primary |
-| [+x，](arithmetic-operators.md#unary-plus-and-minus-operators) [-x](arithmetic-operators.md#unary-plus-and-minus-operators)， [ \!x](boolean-logical-operators.md#logical-negation-operator-)， [+x](bitwise-and-shift-operators.md#bitwise-complement-operator-)， x [++x](arithmetic-operators.md#increment-operator-) [，](member-access-operators.md#index-from-end-operator-) [x](arithmetic-operators.md#decrement-operator---)， [（T）x](type-testing-and-cast.md#cast-operator-)，[等待](await.md)， [&x](pointer-related-operators.md#address-of-operator-)， [*x，](pointer-related-operators.md#pointer-indirection-operator-)[真假](true-false-operators.md) | 一元 (Unary) |
-| [Ⅹ。。Y](member-access-operators.md#range-operator-) | 範圍 |
-| [開關](../../whats-new/csharp-8.md#switch-expressions) | `switch` 運算式 |
+| [+x,](arithmetic-operators.md#unary-plus-and-minus-operators) [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [ \!x](boolean-logical-operators.md#logical-negation-operator-), [++x](arithmetic-operators.md#increment-operator-) [+x](bitwise-and-shift-operators.md#bitwise-complement-operator-), x [,](member-access-operators.md#index-from-end-operator-) [x](arithmetic-operators.md#decrement-operator---), x , [(T)x](type-testing-and-cast.md#cast-expression),[等待](await.md), [&x](pointer-related-operators.md#address-of-operator-), [*x,](pointer-related-operators.md#pointer-indirection-operator-)[真假](true-false-operators.md) | 一元 (Unary) |
+| [X.。。Y](member-access-operators.md#range-operator-) | 範圍 |
+| [switch](../../whats-new/csharp-8.md#switch-expressions) | `switch` 運算式 |
 | [x * y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-) | 乘法|
 | [x + y](arithmetic-operators.md#addition-operator-)、[x – y](arithmetic-operators.md#subtraction-operator--) | 加法 |
-| [ \< x \< y](bitwise-and-shift-operators.md#left-shift-operator-)， [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | Shift |
+| x y , [x >> y](bitwise-and-shift-operators.md#right-shift-operator-) [ \< \< ](bitwise-and-shift-operators.md#left-shift-operator-) | Shift |
 | [x \< y](comparison-operators.md#less-than-operator-)、[x > y](comparison-operators.md#greater-than-operator-)、[x \<= y](comparison-operators.md#less-than-or-equal-operator-)、[x >= y](comparison-operators.md#greater-than-or-equal-operator-)、[is](type-testing-and-cast.md#is-operator)、[as](type-testing-and-cast.md#as-operator) | 關聯性和型別測試 |
-| [x = y](equality-operators.md#equality-operator-)， [x ！](equality-operators.md#inequality-operator-) | 等式 |
+| [x = y](equality-operators.md#equality-operator-), [x !](equality-operators.md#inequality-operator-) | 等式 |
 | `x & y` | [布林值邏輯 AND](boolean-logical-operators.md#logical-and-operator-) 或[位元邏輯 AND](bitwise-and-shift-operators.md#logical-and-operator-) |
 | `x ^ y` | [布林值邏輯 XOR](boolean-logical-operators.md#logical-exclusive-or-operator-) 或[位元邏輯 XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) |
 | <code>x &#124; y</code> | [布林值邏輯 OR](boolean-logical-operators.md#logical-or-operator-) 或[位元邏輯 OR](bitwise-and-shift-operators.md#logical-or-operator-) |
@@ -58,14 +58,14 @@ Console.WriteLine(a); //  output: 8
 | [x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) | 條件式 OR |
 | [x ?? y](null-coalescing-operator.md) | Null 聯合運算子 |
 | [c ? t : f](conditional-operator.md) | 條件運算子 |
-| [x = y，](assignment-operator.md) [x = y](arithmetic-operators.md#compound-assignment)， x [-y](arithmetic-operators.md#compound-assignment)， [x = y](arithmetic-operators.md#compound-assignment)， [x](arithmetic-operators.md#compound-assignment)x % [= y](arithmetic-operators.md#compound-assignment)， x &[= y](boolean-logical-operators.md#compound-assignment)， x &#124;[= y](boolean-logical-operators.md#compound-assignment)， x = y ， x = [y](boolean-logical-operators.md#compound-assignment)， x <<[= y](bitwise-and-shift-operators.md#compound-assignment)， x >>[= y](bitwise-and-shift-operators.md#compound-assignment)， [x ？= y](null-coalescing-operator.md)，[=>](lambda-operator.md) | 指派和 Lambda 宣告 |
+| [x = y,](assignment-operator.md) [x = y](arithmetic-operators.md#compound-assignment), x [-y](arithmetic-operators.md#compound-assignment), x = [y](arithmetic-operators.md#compound-assignment), [x](arithmetic-operators.md#compound-assignment)x % [= y](arithmetic-operators.md#compound-assignment), x &= [y](boolean-logical-operators.md#compound-assignment), x &#124;[= y](boolean-logical-operators.md#compound-assignment), x = y , x = [y](boolean-logical-operators.md#compound-assignment), x <<[= y](bitwise-and-shift-operators.md#compound-assignment), x >>= [y](bitwise-and-shift-operators.md#compound-assignment), [x ?= y](null-coalescing-operator.md),[=>](lambda-operator.md) | 指派和 Lambda 宣告 |
 
 ## <a name="operator-associativity"></a>運算子關聯性
 
 當運算子具有相同的優先順序時，運算子的關聯性會決定作業的執行順序：
 
-- 從左至右按順序計算*左關聯*運算子。 除了[指派運算子](assignment-operator.md)和[空合併運算子](null-coalescing-operator.md)外，所有二進位運算子都是左關聯的。 例如，`a + b - c` 會判斷值為 `(a + b) - c`。
-- *右關聯*運算子按從右至左的順序進行評估。 指派運算子、空合併運算子和[條件運算子`?:`](conditional-operator.md)是右關聯的。 例如，`x = y = z` 會判斷值為 `x = (y = z)`。
+- 從左至右按順序計算*左關聯*運算符。 除了[賦值運算符](assignment-operator.md)和[空合併運算符](null-coalescing-operator.md)外,所有二進位運算符都是左關聯的。 例如，`a + b - c` 會判斷值為 `(a + b) - c`。
+- *右關聯*運算符按從右到左的順序進行評估。 賦值運算符、空合併運算符和[條件運算符`?:`](conditional-operator.md)是右關聯的。 例如，`x = y = z` 會判斷值為 `x = (y = z)`。
 
 使用括弧來變更由運算子關聯性強制執行的評估順序：
 
@@ -86,7 +86,7 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 |`a / b + c * d`|a，b，/，c，d，*，+|
 |`a / (b + c) * d`|a，b，c，+，/，d，*|
 
-通常會評估所有運算子運算元。 但是，某些運算子有條件地評估運算元。 也就是說，此類運算子的最左側運算元的值定義是否應（或哪個）其他運算元。 這些運算子是條件邏輯[AND`&&`（ ）](boolean-logical-operators.md#conditional-logical-and-operator-)和[OR`||`（ ）](boolean-logical-operators.md#conditional-logical-or-operator-)運算子、[空合併運算子`??`和`??=`](null-coalescing-operator.md)、[空`?.`條件`?[]`運算子和](member-access-operators.md#null-conditional-operators--and-)以及[條件`?:`運算子](conditional-operator.md)。 有關詳細資訊，請參閱每個運算子的說明。
+通常會評估所有運算子運算元。 但是,某些運算元有條件地評估操作數。 也就是說,此類運算符的最左側操作數的值定義是否應(或哪個)其他操作數。 這些運算子是條件邏輯[AND`&&`( )](boolean-logical-operators.md#conditional-logical-and-operator-)與[`||`OR ( )](boolean-logical-operators.md#conditional-logical-or-operator-)運算子、[空白合併`??`運算子與`??=`](null-coalescing-operator.md)、[空白`?.`條件`?[]`運算子與](member-access-operators.md#null-conditional-operators--and-)與[條件`?:`運算子](conditional-operator.md)。 有關詳細資訊,請參閱每個運算符的說明。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

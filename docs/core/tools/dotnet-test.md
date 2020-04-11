@@ -2,16 +2,16 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 02/27/2020
-ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 359e4522b26e2b59092d55eea3fca575d2afaf1f
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507304"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121033"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-**本文適用于：✔️** .NET 核心 2.1 SDK 和更高版本
+**本文適用於:✔️** .NET 核心 2.1 SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -85,15 +85,15 @@ dotnet test [-h|--help]
 
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
-  指定測試結果的記錄器。
+  指定測試結果的記錄器。 與 MSBuild 不同,dotnet 測試不接受縮`-l "console;v=d"`寫`-l "console;verbosity=detailed"`:而不是使用 。
 
 - **`--no-build`**
 
-  不會在執行前建置測試專案。 它還隱式設置 -`--no-restore`標誌。
+  不會在執行前建置測試專案。 它還隱式設置`--no-restore`- 標誌。
 
 - **`--nologo`**
 
-  在不顯示 Microsoft 測試平臺橫幅的情況下運行測試。 自 .NET Core 3.0 SDK 起提供。
+  在不顯示 Microsoft 測試平台橫幅的情況下運行測試。 自 .NET Core 3.0 SDK 起提供。
 
 - **`--no-restore`**
 
@@ -121,7 +121,7 @@ dotnet test [-h|--help]
 
 - **`-v|--verbosity <LEVEL>`**
 
-  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。 如需詳細資訊，請參閱 <xref:Microsoft.Build.Framework.LoggerVerbosity>。
 
 - `RunSettings`參數
 
@@ -129,7 +129,7 @@ dotnet test [-h|--help]
 
   範例： `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  有關詳細資訊，請參閱[vstest.console.exe： 傳遞回合設定 args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
+  有關詳細資訊,請參閱[vstest.console.exe: 傳遞執行設定 args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 
 ## <a name="examples"></a>範例
 
@@ -145,10 +145,16 @@ dotnet test [-h|--help]
   dotnet test ~/projects/test1/test1.csproj
   ```
 
-- 在目前目錄中的專案中執行測試，並以 trx 格式產生測試結果檔案：
+- 在目前的目錄中執行項目中的測試,並產生 trx 格式的測試結果檔:
 
   ```dotnetcli
   dotnet test --logger trx
+  ```
+
+- 在目前目錄中的項目中執行測試,並記錄到主控台的詳細詳細詳細內容:
+
+  ```dotnetcli
+  dotnet test --logger "console;verbosity=detailed"
   ```
 
 ## <a name="filter-option-details"></a>篩選選項詳細資料
@@ -190,5 +196,6 @@ dotnet test [-h|--help]
 
 ## <a name="see-also"></a>另請參閱
 
-- [框架和目標](../../standard/frameworks.md)
+- [框架與目標](../../standard/frameworks.md)
 - [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)
+- [以命令列傳遞執行設定參數](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

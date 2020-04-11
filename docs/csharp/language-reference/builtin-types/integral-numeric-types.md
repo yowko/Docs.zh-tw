@@ -32,16 +32,16 @@ helpviewer_keywords:
 - uint keyword [C#]
 - long keyword [C#]
 - ulong keyword [C#]
-ms.openlocfilehash: 394a809a9a2f45f4aee652d0eca892f62f0f2e54
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b2506f48c3e72ff838a07087c8c5d9ea63bb46c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093197"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121473"
 ---
 # <a name="integral-numeric-types--c-reference"></a>整數的數字型別 (C# 參考)
 
-*積分數數值型別*表示整數。 所有積分數數值型別都是[數值型別](value-types.md)。 它們也是[簡單的類型](value-types.md#built-in-value-types)，可以使用[文本](#integer-literals)初始化。 所有積分數數值型別都支援[算術](../operators/arithmetic-operators.md)、[位邏輯](../operators/bitwise-and-shift-operators.md)、[比較](../operators/comparison-operators.md)和[相等](../operators/equality-operators.md)運算子。
+*積分數值類型*表示整數。 所有積分數值類型都是[值型](value-types.md)態 。 它們也是[簡單的類型](value-types.md#built-in-value-types),可以使用[文本](#integer-literals)初始化。 所有積分數值類型都支援[算術](../operators/arithmetic-operators.md)、[位邏輯](../operators/bitwise-and-shift-operators.md)、[比較](../operators/comparison-operators.md)和[相等](../operators/equality-operators.md)運算元。
 
 ## <a name="characteristics-of-the-integral-types"></a>整數型別的特性
 
@@ -71,13 +71,13 @@ System.Int32 b = 123;
 
 ## <a name="integer-literals"></a>整數常值
 
-整數文本可以是
+整數文字可以是
 
-- *十進位*：沒有任何首碼
-- *十六進位*：帶`0x`或`0X`首碼
-- *二進位*： `0b` `0B`帶 或 首碼（在 C# 7.0 及更高版本中提供）
+- *十進位*:沒有任何前置字串
+- *十六進位*:`0x`帶`0X`或 前置字
+- *二進位* `0b` `0B`: 帶 或 前置字串(在 C# 7.0 及更高版本中提供 )
 
-以下代碼演示了每個示例：
+以下代碼展示每個範例:
 
 ```csharp
 var decimalLiteral = 42;
@@ -85,31 +85,31 @@ var hexLiteral = 0x2A;
 var binaryLiteral = 0b_0010_1010;
 ```
 
-前面的示例還顯示`_`用作*數位分隔符號*的用途，該分隔符號支援從 C# 7.0 開始。 您可以將數位分隔符號用於所有類型的數位文本。
+前面的範例還顯示`_`用作*數位分隔符*的用途,該分隔符支援從 C# 7.0 開始。 您可以將數字分隔符用於所有類型的數字文本。
 
-整數文本的類型由其後綴確定，如下所示：
+整數文字的類型由其後綴確定,如下所示:
 
-- 如果文本`int`沒有尾碼，則其類型是可以表示其值的以下類型中的第一個： 、 `uint`、 `long`、 `ulong`、 、 、 、 、 、 、 、 、 、 、 、 、 、
-- 如果文本`U`尾碼于 或`u`，其類型是可以表示其值的以下類型中的第一個： `uint`。 `ulong`
-- 如果文本`L`尾碼于 或`l`，其類型是可以表示其值的以下類型中的第一個： `long`。 `ulong`
+- 如果文字`int`沒有後綴,則其類型是可以表示其值的以下類型中的第一個: `uint` `long`、 `ulong`、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、 、
+- 如果文字`U`後置字`u`串或或 ,其類型是可以表示其值的以下類型中的`uint`第`ulong`一個: 。
+- 如果文字`L`後置字`l`串或或 ,其類型是可以表示其值的以下類型中的`long`第`ulong`一個: 。
 
   > [!NOTE]
-  > 您可以將小寫字母`l`用作尾碼。 但是，這將生成編譯器警告，因為字母`l`可能會與數位`1`混淆。 用於`L`清楚。
+  > 您可以將小寫字母`l`用作後綴。 但是,這將生成編譯器警告,因為字母`l`可能會與`1`數位 混淆。 用於`L`清楚。
 
-- 如果文本`UL`尾碼為 、 `Ul`、 `uL`、、、、、、、、、`ul``LU``Lu``lU`其類型為`lu`。 `ulong`
+- 如果文字`UL`後置置為`Ul`, `uL``ul``LU``Lu``lU`、、、、、、、、、 的`lu`一`ulong`個類型為 。
 
 如果整數常值所代表的值超出 <xref:System.UInt64.MaxValue?displayProperty=nameWithType>，就會發生編譯錯誤 [CS1021](../../misc/cs1021.md)。
 
-如果整數文本的確定類型為`int`，並且文本表示的值在目標型別的範圍內，則可以隱式轉換為`sbyte`、、、、、、、、、、、、、`short``ushort``uint``ulong``byte`或 ：
+如果整數文字的確定類型為`int`,並且文字表示的值在目標類型的範圍內,則可以隱式轉換`sbyte`為`short``ushort``uint``ulong``byte`、、、、、、、、、、、、、 或 :
 
 ```csharp
 byte a = 17;
 byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
 ```
 
-如前面的示例所示，如果文本的值不在目標型別範圍內，則會發生編譯器錯誤[CS0031。](../../misc/cs0031.md)
+如前面的示例所示,如果文本的值不在目標類型範圍內,則會發生編譯器錯誤[CS0031。](../../misc/cs0031.md)
 
-您還可以使用強制轉換將整數文本表示的值轉換為文本的確定類型以外的類型：
+您可以使用強制轉換將整數文字表示的值轉換為文字的決定類型以外的類型:
 
 ```csharp
 var signedByte = (sbyte)42;
@@ -118,7 +118,7 @@ var longVariable = (long)42;
 
 ## <a name="conversions"></a>轉換
 
-您可以將任何積分數數值型別轉換為任何其他積分數數值型別。 如果目標型別可以存儲源類型的所有值，則轉換是隱式轉換。 否則，您需要使用[強制轉換運算子`()`](../operators/type-testing-and-cast.md#cast-operator-)調用顯式轉換。 有關詳細資訊，請參閱[內置數位轉換](numeric-conversions.md)。
+您可以將任何積分數值類型轉換為任何其他積分數值類型。 如果目標類型可以儲存源類型的所有值,則轉換是隱式轉換。 否則,您需要使用[強制轉換表達式](../operators/type-testing-and-cast.md#cast-expression)執行顯式轉換。 有關詳細資訊,請參閱[內建數位轉換](numeric-conversions.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -130,7 +130,7 @@ var longVariable = (long)42;
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [實值型別](value-types.md)
-- [浮點類型](floating-point-numeric-types.md)
-- [標準數位格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
+- [值類型](value-types.md)
+- [浮點型態](floating-point-numeric-types.md)
+- [標準數值格式字串](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET 中的數值](../../../standard/numerics.md)

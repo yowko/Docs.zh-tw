@@ -1,16 +1,16 @@
 ---
-title: 如何修改字串內容 - C# 指南
+title: 如何變更字串內容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543257"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121130"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>如何修改 C 中的字串內容\#
+# <a name="how-to-modify-string-contents-in-c"></a>如何變更 C 字串內容\#
 
 本文示範多種技術，會藉由修改現有的 `string`來產生 `string`。 所有示範的技術均會傳回修改結果，作為新的 `string` 物件。 為明確示範此做法，所有的範例都會將結果儲存到新的變數。 接著，您可在執行各個範例時，對原本的 `string` 與修改後產生的 `string` 進行檢查。
 
@@ -62,17 +62,17 @@ ms.locfileid: "77543257"
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="programmatically-build-up-string-content"></a>以程式設計方式構建字串內容
+## <a name="programmatically-build-up-string-content"></a>以程式設計方式建構字串內容
 
-由於字串是不可變的，前面的示例都創建臨時字串或字元陣列。 在高性能方案中，最好避免這些堆分配。 .NET Core<xref:System.String.Create%2A?displayProperty=nameWithType>提供了一種方法，允許您通過回檔以程式設計方式填補字元串的字元內容，同時避免中間臨時字串分配。
+由於字串是不可變的,前面的示例都創建臨時字串或字元陣列。 在高性能方案中,最好避免這些堆分配。 .NET Core<xref:System.String.Create%2A?displayProperty=nameWithType>提供了一種方法,允許您通過回調以程式設計方式填充字串的字元內容,同時避免中間臨時字串分配。
 
 [!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
-您可以使用不安全的代碼修改固定塊中的字串，但**強烈建議**在創建字串後修改字串內容。 這樣做會以不可預知的方式破壞事情。 例如，如果有人實習生的內容與您的相同，他們會獲取您的副本，並且根本不希望您修改其字串。
+您可以使用不安全的程式碼修改固定塊中的字串,但**強烈建議**在創建字串後修改字串內容。 這樣做會以不可預知的方式破壞事情。 例如,如果有人實習生的內容與您的相同,他們會獲取您的副本,並且根本不希望您修改其字串。
 
-您可以通過查看[GitHub 存儲庫](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)中的代碼來嘗試這些示例。 或者，您可以將範例下載[為 ZIP 檔案](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)。
+您可以通過查看[GitHub 儲存庫](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)中的代碼來嘗試這些範例。 或者，您可以將範例下載[為 ZIP 檔案](../../../samples/snippets/csharp/how-to/strings.zip)。
 
 ## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 規則運算式](../../standard/base-types/regular-expressions.md)
-- [正則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)

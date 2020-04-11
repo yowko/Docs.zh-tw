@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae8f18deff5e96d7e475df8814ad64b38d14d585
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711892"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121395"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>轉型和類型轉換 (C# 程式設計指南)
 
@@ -29,11 +29,11 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **隱含轉換**︰因為轉換為型別安全，所以不需要特殊語法，因此將不會造成資料遺失。 範例包括從較小到較大整數型別的轉換，以及從衍生類別到基底類別的轉換。  
   
-- **顯式轉換（強制轉換）：** 顯式轉換需要[強制轉換運算子`()`](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)。 如果資訊可能會在轉換時遺失，或轉換因其他原因而失敗，則需要轉換。 一般範例包括將數字轉換為較少有效位數或較小範圍的類型，以及將基底類別執行個體轉換為衍生類別。  
+- **明確轉換(強制轉換):** 顯示式轉換需要[強制轉換表示式](../../language-reference/operators/type-testing-and-cast.md#cast-expression)。 如果資訊可能會在轉換時遺失，或轉換因其他原因而失敗，則需要轉換。 一般範例包括將數字轉換為較少有效位數或較小範圍的類型，以及將基底類別執行個體轉換為衍生類別。  
   
 - **使用者定義的轉換**：使用者定義的轉換是透過特殊方法所執行，而您可以定義特殊方法來啟用沒有基底類別/衍生類別關聯性之自訂類型間的明確和隱含轉換。 如需詳細資訊，請參閱[使用者定義轉換運算子](../../language-reference/operators/user-defined-conversion-operators.md)。  
   
-- **使用協助程式類別轉換**：若要轉換不相容類型 (例如，整數和 <xref:System.DateTime?displayProperty=nameWithType> 物件，或十六進位字串和位元組陣列)，您可以使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別、<xref:System.Convert?displayProperty=nameWithType> 類別，以及內建數字類型的 `Parse` 方法 (例如，<xref:System.Int32.Parse%2A?displayProperty=nameWithType>)。 有關詳細資訊，請參閱[如何將位元組陣列轉換為 int，](./how-to-convert-a-byte-array-to-an-int.md)[如何將字串轉換為數字](./how-to-convert-a-string-to-a-number.md)，[以及如何在十六進位字串和數位類型之間進行轉換](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。
+- **使用協助程式類別轉換**：若要轉換不相容類型 (例如，整數和 <xref:System.DateTime?displayProperty=nameWithType> 物件，或十六進位字串和位元組陣列)，您可以使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別、<xref:System.Convert?displayProperty=nameWithType> 類別，以及內建數字類型的 `Parse` 方法 (例如，<xref:System.Int32.Parse%2A?displayProperty=nameWithType>)。 有關詳細資訊,請參閱[如何將位元組轉換為 int,](./how-to-convert-a-byte-array-to-an-int.md)[如何將字串轉換為數位](./how-to-convert-a-string-to-a-number.md),[以及如何在十六進位元字串和數位類型之間進行轉換](./how-to-convert-between-hexadecimal-strings-and-numeric-types.md)。
   
 ## <a name="implicit-conversions"></a>隱含的轉換
 
@@ -41,7 +41,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
  [!code-csharp[csProgGuideTypes#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#34)]  
   
- 有關所有隱式數位轉換的完整清單，請參閱[內置數位轉換](../../language-reference/builtin-types/numeric-conversions.md)一文的[隱式數值轉換](../../language-reference/builtin-types/numeric-conversions.md#implicit-numeric-conversions)部分。
+ 有關所有隱式數位轉換的完整清單,請參閱[內置數位轉換](../../language-reference/builtin-types/numeric-conversions.md)一文的[隱式數值轉換](../../language-reference/builtin-types/numeric-conversions.md#implicit-numeric-conversions)部分。
   
  針對參考型別，一律會執行從某個類別到其任何一個直接或間接基底類別或介面的隱含轉換。 因為衍生類別一律會包含基底類別的所有成員，所以不需要特殊語法。  
   
@@ -52,11 +52,11 @@ Base b = d; // Always OK.
   
 ## <a name="explicit-conversions"></a>明確轉換
 
- 不過，如果進行轉換，而有遺失資訊的風險，則編譯器需要您執行稱為「轉換」** 的明確轉換。 轉換是一種方式，可明確通知編譯器，您想要進行轉換並且了解可能發生資料遺失。 若要執行轉換，請在要轉換的值或變數前面的括弧中指定要轉換為的類型。 以下程式將[雙精度轉換為](../../language-reference/builtin-types/floating-point-numeric-types.md) [int](../../language-reference/builtin-types/integral-numeric-types.md)。沒有強制轉換，程式無法編譯。  
+ 不過，如果進行轉換，而有遺失資訊的風險，則編譯器需要您執行稱為「轉換」** 的明確轉換。 轉換是一種方式，可明確通知編譯器，您想要進行轉換並且了解可能發生資料遺失。 若要執行轉換，請在要轉換的值或變數前面的括弧中指定要轉換為的類型。 以下程式將[雙精度轉換為](../../language-reference/builtin-types/floating-point-numeric-types.md) [int](../../language-reference/builtin-types/integral-numeric-types.md)。沒有強制轉換,程式無法編譯。  
   
  [!code-csharp[csProgGuideTypes#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#2)]  
   
- 有關支援的顯式數位轉換的完整清單，請參閱[內置數位轉換](../../language-reference/builtin-types/numeric-conversions.md)文章的[顯式數位轉換](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)部分。
+ 有關支援的顯式數位轉換的完整清單,請參閱[內置數位轉換](../../language-reference/builtin-types/numeric-conversions.md)文章的[顯式數位轉換](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)部分。
   
  針對參考型別，如果您需要將基底類型轉換為衍生類型，則需要明確轉換︰  
   
@@ -82,7 +82,7 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#41)]  
   
- C# 提供 [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) 運算子，可讓您先測試相容性，再實際執行轉換。 有關詳細資訊，請參閱[如何使用模式匹配和 as 和 運算子安全地強制轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。  
+ C# 提供 [is](../../language-reference/operators/type-testing-and-cast.md#is-operator) 運算子，可讓您先測試相容性，再實際執行轉換。 有關詳細資訊,請參閱[如何使用模式符合與 as 和 運算子安全地強制轉換](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。  
   
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -90,9 +90,9 @@ Giraffe g2 = (Giraffe) a;
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C# 編程指南](../index.md)
 - [型別](./index.md)
-- [() 轉換運算子](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
+- [轉換運算式](../../language-reference/operators/type-testing-and-cast.md#cast-expression)
 - [使用者定義轉換運算子](../../language-reference/operators/user-defined-conversion-operators.md)
 - [產生的類型轉換](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
-- [如何將字串轉換為數字](./how-to-convert-a-string-to-a-number.md)
+- [如何將字串轉換為數值](./how-to-convert-a-string-to-a-number.md)
