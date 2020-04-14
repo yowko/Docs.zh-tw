@@ -1,18 +1,18 @@
 ---
-title: 教程：對虹膜花進行分類 - k 表示聚類
+title: 教程:對虹膜花進行分類 - k 表示聚類
 description: 了解如何在群集案例中使用 ML.NET
 author: pkulikov
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 174907adac5741d5cc7d02cb134921debc586061
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03ce1a5f3ef4d4da01f848cac0c520a5a6aaf4bf
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241087"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242786"
 ---
-# <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>教程：使用 k-手段聚類ML.NET對虹膜花進行分類
+# <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>教程:使用 k-手段聚類ML.NET對虹膜花進行分類
 
 本教學課程說明如何使用 ML.NET 為[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)建立一個[群集模型](../resources/tasks.md#clustering)。
 
@@ -27,9 +27,9 @@ ms.locfileid: "78241087"
 > - 將模型定型
 > - 使用模型來進行預測
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-- [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)安裝了".NET 核心跨平臺開發"工作負載。
+- [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)安裝了".NET 核心跨平台開發"工作負載。
 
 ## <a name="understand-the-problem"></a>了解問題
 
@@ -41,28 +41,28 @@ ms.locfileid: "78241087"
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
-1. 開啟 Visual Studio。 **從功能表**欄中選擇 **"檔** > **新專案** > "。 在 [新增專案]**** 對話方塊中，選取 [Visual C#]**** 節點，然後選取 [.NET Core]**** 節點。 然後選取 [主控台應用程式 (.NET Core)]**** 專案範本。 在 [名稱]**** 文字方塊中，鍵入 "IrisFlowerClustering"，然後選取 [確定]**** 按鈕。
+1. 開啟 Visual Studio。 **從選單**列中選擇 **「檔** > **新專案** > 」。 在 [新增專案]**** 對話方塊中，選取 [Visual C#]**** 節點，然後選取 [.NET Core]**** 節點。 然後選取 [主控台應用程式 (.NET Core)]**** 專案範本。 在 [名稱]**** 文字方塊中，鍵入 "IrisFlowerClustering"，然後選取 [確定]**** 按鈕。
 
-1. 在專案中創建名為*Data*的目錄以存儲資料集和模型檔：
+1. 在項目建立名為*Data*的目錄以儲存資料集與模型檔:
 
     在 [方案總管]**** 中，以滑鼠右鍵按一下專案，然後選取 [新增]**** > [新增資料夾]****。 輸入 "Data"，然後按 Enter。
 
-1. 安裝**Microsoft.ML** NuGet 包：
+1. 安裝**Microsoft.ML** NuGet 套件:
 
-    在**解決方案資源管理器**中，按右鍵專案並選擇 **"管理 NuGet 包**"。 選擇"nuget.org"作為"包"源，選擇 **"流覽**"選項卡，搜索**Microsoft.ML**並選擇"**安裝**"按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。
+    在**解決方案資源管理員**中,右鍵單擊專案並選擇 **「管理 NuGet 包**」 。。 選擇'nuget.org"作為「包」源,選擇 **「瀏覽**」選項卡,搜索**Microsoft.ML**並選擇「**安裝**」按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。
 
 ## <a name="prepare-the-data"></a>準備資料
 
-1. 下載 [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 資料集，並將它儲存到上一個步驟中建立的 *Data* 資料夾。 如需有關鳶尾花資料集的詳細資訊，請參閱[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)維基百科頁面和[鳶尾花資料集](https://archive.ics.uci.edu/ml/datasets/Iris)頁面 (也就是資料集的來源)。
+1. 下載 [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) 資料集，並將它儲存到上一個步驟中建立的 *Data* 資料夾。 如需有關鳶尾花資料集的詳細資訊，請參閱[鳶尾花資料集](https://en.wikipedia.org/wiki/Iris_flower_data_set)維基百科頁面和[鳶尾花資料集](http://archive.ics.uci.edu/ml/datasets/Iris)頁面 (也就是資料集的來源)。
 
-1. 以滑鼠右鍵按一下 [方案總管]**** 中的 *iris.data* 檔案，然後選取 [內容]****。 在 **"高級"** 下，將 **"複製到輸出目錄**"的值更改為 **"如果更新"，則將其更改為"複製**"。
+1. 以滑鼠右鍵按一下 [方案總管]**** 中的 *iris.data* 檔案，然後選取 [內容]****。 在 **「進階」** 下,將 **「複製到輸出目錄**」的值更改為 **「如果更新」,則將其更改為"複製**"。
 
 *Iris.data* 檔案包含五個資料行，分別表示：
 
-- 萼片長度 (以公分為單位)
-- 萼片寬度 (以公分為單位)
-- 花瓣長度 (以公分為單位)
-- 花瓣寬度 (以公分為單位)
+- 皮瓣長度(公分)
+- 皮條寬度(公分)
+- 花瓣長度(公分)
+- 花瓣寬度(公分)
 - 鳶尾花的類型
 
 為了示範群集方法，本教學課程會略過最後一個資料行。
@@ -118,13 +118,13 @@ ms.locfileid: "78241087"
 
 <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> 類別表示機器學習環境，並為資料載入、模型定型、預測和其他工作提供記錄機制和進入點。 這在概念上類似於在 Entity Framework 中使用的 `DbContext`。
 
-## <a name="set-up-data-loading"></a>設置資料載入
+## <a name="set-up-data-loading"></a>設定資料載入
 
-將以下代碼添加到方法以`Main`設置載入資料的方式：
+將以下代碼加入方法以`Main`設定載入資料的方式:
 
 [!code-csharp[Create text loader](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#CreateDataView)]
 
-泛型[`MLContext.Data.LoadFromTextFile`擴充方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)從提供`IrisData`的類型推斷資料集架構，返回<xref:Microsoft.ML.IDataView>該模式可用作變壓器的輸入。
+泛型[`MLContext.Data.LoadFromTextFile`擴充方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)從提供`IrisData`的類型推斷資料集<xref:Microsoft.ML.IDataView>架構,傳回 該模式可用作變壓器的輸入。
 
 ## <a name="create-a-learning-pipeline"></a>建立學習管線
 
@@ -157,7 +157,7 @@ ms.locfileid: "78241087"
 
 [!code-csharp[Create predictor](~/samples/snippets/machine-learning/IrisFlowerClustering/csharp/Program.cs#Predictor)]
 
-[預測引擎](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，它允許您對單個資料實例執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是執行緒安全的。 在單線程或原型環境中使用是可以接受的。 為提高生產環境中的性能和執行緒安全性，請使用`PredictionEnginePool`該服務，該服務創建一個[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件，供整個應用程式使用。 請參閱有關如何[`PredictionEnginePool`在 ASP.NET核心 Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)的本指南。
+[預測引擎](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API,它允許您對單個數據實例執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是線程安全的。 在單線程或原型環境中使用是可以接受的。 為提高生產環境中的性能和線程安全性,請使用`PredictionEnginePool`該服務,該服務創建一[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)個 物件,供整個應用程式使用。 請參閱有關如何[`PredictionEnginePool`在 ASP.NET核心 Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)的本指南。
 
 > [!NOTE]
 > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。

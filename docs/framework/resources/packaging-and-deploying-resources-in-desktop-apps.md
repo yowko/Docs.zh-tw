@@ -26,12 +26,12 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-ms.openlocfilehash: 9c8d459195693e8eb084f7e87427a3ea37dd63ba
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129921"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243046"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>在 .NET 應用程式中封裝和部署資源
 
@@ -50,10 +50,10 @@ ms.locfileid: "73129921"
 
 ## <a name="resource-naming-conventions"></a>資源命名慣例
 
-當您封裝應用程式的資源時，必須使用 Common Language Runtime 所預期的資源命名慣例來命名它們。 執行階段會依文化特性名稱識別資源。 每個文化特性都會獲指定唯一名稱，此名稱通常是下列項目的組合：與語言建立關聯的兩個字母小寫文化特性名稱以及與國家或地區建立關聯的兩個字母大寫子文化特性名稱 (必要時)。 子文化特性名稱遵循文化特性名稱，以破折號 (-) 分隔。 範例包括 ja-JP (代表在日本日文)、en-US (美式英文)、de-DE (德國德文)，或 de-AT (奧地利德文)。 請參閱 [Windows 支援的語言/地區名稱清單](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)中的 [語言標記] 資料行。 文化名稱遵循 [BCP 47](https://tools.ietf.org/html/bcp47) 定義的標準。
+當您封裝應用程式的資源時，必須使用 Common Language Runtime 所預期的資源命名慣例來命名它們。 執行階段會依文化特性名稱識別資源。 每個文化特性都會獲指定唯一名稱，此名稱通常是下列項目的組合：與語言建立關聯的兩個字母小寫文化特性名稱以及與國家或地區建立關聯的兩個字母大寫子文化特性名稱 (必要時)。 子文化特性名稱遵循文化特性名稱，以破折號 (-) 分隔。 範例包括 ja-JP (代表在日本日文)、en-US (美式英文)、de-DE (德國德文)，或 de-AT (奧地利德文)。 請參閱 [Windows 支援的語言/地區名稱清單](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)中的 [語言標記]**** 資料行。 文化名稱遵循 [BCP 47](https://tools.ietf.org/html/bcp47) 定義的標準。
 
 > [!NOTE]
-> 兩個字母的文化特性名稱有一些例外，例如中文（簡體）的 `zh-Hans`。
+> 兩個字母區域性名稱有一些例外,例如`zh-Hans`中文(簡體版)。
 
 > [!NOTE]
 > 如需建立資源檔的資訊，請參閱[建立資源檔](creating-resource-files-for-desktop-apps.md)和[建立附屬組件](creating-satellite-assemblies-for-desktop-apps.md)。
@@ -71,7 +71,7 @@ ms.locfileid: "73129921"
 .NET Framework 資源後援處理序包含下列步驟：
 
 > [!TIP]
-> 您可以使用 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 組態項目最佳化資源後援處理序，以及執行階段探查資源組件的處理序。 如需詳細資訊，請參閱[最佳化資源後援處理序](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一節。
+> 您可以使用[\<相對 BindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md)配置元素來優化資源回退過程和資源程式集的運行時探測過程。 如需詳細資訊，請參閱[最佳化資源後援處理序](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一節。
 
 1. 執行階段會先檢查[全域組件快取](../app-domains/gac.md)是否有符合應用程式之所要求文化特性的組件。
 
@@ -116,7 +116,7 @@ ms.locfileid: "73129921"
 
 - 應用程式碼不會處理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。
 
-如下列範例所示，您將藉由在應用程式組態檔中加入 [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 項目並且將其 `enabled` 屬性設定為 `true` 的方式，最佳化附屬組件的探查工作。
+通過將[\<相對 BindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md)`enabled`元素`true`並將其 屬性設置為應用程式配置檔來優化附屬程式集的探測,如以下示例所示。
 
 ```xml
 <configuration>
@@ -170,7 +170,7 @@ ms.locfileid: "73129921"
 
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>附屬組件的最終後援
 
-您可以選擇性地從主要組件中移除資源，並指定執行階段應該從對應至特定文化特性的附屬組件中載入最終後援資源。 若要控制後援程序，請使用 <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> 建構函式，並提供 <xref:System.Resources.UltimateResourceFallbackLocation> 參數的值，而此參數指定 Resource Manager 應該從主要組件還是附屬組件擷取後援資源。
+您可以選擇性地從主要組件中移除資源，並指定執行階段應該從對應至特定文化特性的附屬組件中載入最終後援資源。 若要控制後援程序，請使用 <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29> 建構函式，並提供 <xref:System.Resources.UltimateResourceFallbackLocation> 參數的值，而此參數指定 Resource Manager 應該從主要組件還是附屬組件擷取後援資源。
 
 下列 .NET Framework 範例會使用 <xref:System.Resources.NeutralResourcesLanguageAttribute> 屬性，將應用程式的後援資源儲存在法文 (`fr`) 語言的附屬組件中。 此範例有兩個文字型資源檔案定義名為 `Greeting` 的單一字串資源。 首先，resources.fr.txt 包含法文語言資源。
 
@@ -229,9 +229,9 @@ Bon jour!
 
 時間或預算限制可能會讓您無法針對應用程式所支援的每個子文化特性建立一組資源。 相反地，您可以建立所有相關子文化特性可使用之父文化特性的單一附屬組件。 例如，您可以提供要求地區特定英文資源之使用者所擷取的單一英文附屬組件 (en)，以及要求地區特定德文資源之使用者的單一德文附屬組件 (de)。 例如，德國德文 (de-DE)、奧地利德文 (de-AT) 和瑞士德文 (de-CH) 的要求會改為使用德文附屬組件 (de)。 預設資源是最終後援，因此應該是大部分應用程式使用者所要求的資源，請小心選擇這些資源。 這種方式所部署的資源具有較少的特定文化特性，但可以大幅減少您應用程式的當地語系化成本。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [桌面應用程式中的資源](index.md)
-- [全域組件快取](../app-domains/gac.md)
+- [桌面應用中的資源](index.md)
+- [全域程式集快取](../app-domains/gac.md)
 - [建立資源檔](creating-resource-files-for-desktop-apps.md)
 - [建立附屬組件](creating-satellite-assemblies-for-desktop-apps.md)

@@ -8,26 +8,27 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-ms.openlocfilehash: 2bbca5712639e14370d090e95b78bb89eba134e4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b84d77e4ac9b9889d1bc2f08e5ead6b81deecb0
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129914"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243033"
 ---
-# <a name="working-with-resx-files-programmatically"></a>以程式設計方式使用 .resx 檔案
-因為 XML 資源 (.resx) 檔必須由妥善定義的 XML 組成，而其中所包含的標頭，需遵循特定結構描述且後面接著名稱/值組的資料，可能您會認為以手動方式建立這些檔案容易出錯。 另一種方法是，您可以使用 .NET Class Library 中的型別和成員，透過程式設計的方式建立 .resx 檔案。 您也可以使用 .NET Class Library 擷取儲存在 .resx 檔案中的資源。 本主題說明如何使用 <xref:System.Resources> 命名空間中的型別和成員，來處理 .resx 檔。
+# <a name="work-with-resx-files-programmatically"></a>以程式設計方式使用 .resx 檔案
 
- 請注意，本文探討的是含有資源之 XML (.resx) 檔的運用。 如需使用已內嵌於組件的二進位資源檔相關資訊，請參閱 <xref:System.Resources.ResourceManager> 主題。
+因為 XML 資源 (.resx) 檔必須由妥善定義的 XML 組成，而其中所包含的標頭，需遵循特定結構描述且後面接著名稱/值組的資料，可能您會認為以手動方式建立這些檔案容易出錯。 另一種方法是，您可以使用 .NET Class Library 中的型別和成員，透過程式設計的方式建立 .resx 檔案。 您也可以使用 .NET Class Library 擷取儲存在 .resx 檔案中的資源。 本文介紹如何使用<xref:System.Resources>命名空間中的類型和成員處理 .resx 檔。
+
+本文討論使用包含資源的 XML (.resx) 檔案。 有關使用已嵌入到程式集中的二進位資源檔案的資訊,請參<xref:System.Resources.ResourceManager>閱 。
 
 > [!WARNING]
-> 除了透過程式設計之外，還有其他運用 .resx 檔的方法。 當您將資源檔新增到 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 專案時，Visual Studio 會提供介面讓您建立和維護 .resx 檔案，並於編譯時間自動將 .resx 檔案轉換成 .resources 檔案。 您也可以使用文字編輯器直接操作 .resx 檔。 不過，為避免損毀檔案，請小心別更動任何儲存在檔案中的二進位資訊。
+> 除了透過程式設計之外，還有其他運用 .resx 檔的方法。 將資源檔案添加到[Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)專案時,Visual Studio 提供了用於建立和維護 .resx 檔案的介面,並在編譯時自動將 .resx 檔案轉換為 .resource 檔案。 您也可以使用文字編輯器直接操作 .resx 檔。 不過，為避免損毀檔案，請小心別更動任何儲存在檔案中的二進位資訊。
 
 ## <a name="create-a-resx-file"></a>建立.resx 檔案
 
 您可以使用 <xref:System.Resources.ResXResourceWriter?displayProperty=nameWithType> 類別執行下列步驟，以程式設計方式建立 .resx 檔：
 
-1. 呼叫 <xref:System.Resources.ResXResourceWriter> 方法並提供 .resx 檔的名稱，具現化 <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=nameWithType> 物件。 檔案名稱必須包含 .resx 這個副檔名。 如果您是在 <xref:System.Resources.ResXResourceWriter> 區塊中具現化 `using` 物件，則您不必非得呼叫步驟 3 的 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> 方法。
+1. 呼叫 <xref:System.Resources.ResXResourceWriter> 方法並提供 .resx 檔的名稱，具現化 <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29> 物件。 檔案名稱必須包含 .resx 這個副檔名。 如果您是在 <xref:System.Resources.ResXResourceWriter> 區塊中具現化 `using` 物件，則您不必非得呼叫步驟 3 的 <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> 方法。
 
 2. 針對您要加入檔案的每個資源呼叫 <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> 方法。 使用此方法的多載功能加入字串、物件和二進位檔 (位元組陣列) 資料。 如果資源是物件，它必須可以序列化。
 
@@ -38,13 +39,13 @@ ms.locfileid: "73129914"
 > [!WARNING]
 > 請勿使用資源檔儲存密碼、安全機密資訊或私用資料。
 
-下列範例會建立名為 CarResources.resx 的.resx 檔，其中儲存六個字串、一個圖示和兩個應用程式定義的物件 (兩個 `Automobile` 物件)。 請注意，範例中所定義和具現化的 `Automobile` 類別，會標記為 <xref:System.SerializableAttribute> 屬性。
+下列範例會建立名為 CarResources.resx 的.resx 檔，其中儲存六個字串、一個圖示和兩個應用程式定義的物件 (兩個 `Automobile` 物件)。 在`Automobile`範例中定義和實例化的類使用<xref:System.SerializableAttribute>屬性 標記。
 
 [!code-csharp[Conceptual.Resources.ResX#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
 
 > [!TIP]
-> 您也可以使用 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 建立 .resx 檔案。 Visual Studio 會在編譯時期使用 [資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 將 .resx 檔轉換成二進位資源 (.resources) 檔，並將其內嵌在應用程式組件或附屬組件中。
+> 您還可以使用 Visual [Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)創建 .resx 檔案。 Visual Studio 會在編譯時期使用 [資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) 將 .resx 檔轉換成二進位資源 (.resources) 檔，並將其內嵌在應用程式組件或附屬組件中。
 
 您無法將 .resx 檔內嵌於執行階段可執行檔，或將其編譯至附屬組件中。 您必須使用 [資源檔產生器 (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)將 .resx 檔轉換成二進位資源 (.resources) 檔。 產生的 .resources 檔接著可內嵌於應用程式組件或附屬組件中。 如需詳細資訊，請參閱 [Creating Resource Files](creating-resource-files-for-desktop-apps.md)。
 
@@ -81,10 +82,10 @@ ms.locfileid: "73129914"
 
  您也可以利用 [組件連結器 (AL.exe)](../tools/al-exe-assembly-linker.md)將 .resources 檔內嵌於附屬組件中，其基本語法如下：
 
- **al** *resourcesFilename* **-out:** *assemblyFilename*
+ **al** *資源檔案名稱* **─出:***程式集檔名*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [建立資源檔](creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe (資源檔產生器)](../tools/resgen-exe-resource-file-generator.md)
-- [Al.exe (組件連結器)](../tools/al-exe-assembly-linker.md)
+- [Resgen.exe(資源檔案產生器)](../tools/resgen-exe-resource-file-generator.md)
+- [Al.exe(裝接連結器)](../tools/al-exe-assembly-linker.md)

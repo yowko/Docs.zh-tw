@@ -3,12 +3,12 @@ title: 如何變更字串內容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f31fa94501ac2120e22e229dfc11babb8b8cc0f3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121130"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242851"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何變更 C 字串內容\#
 
@@ -58,7 +58,7 @@ ms.locfileid: "81121130"
 
 您可從字串產生字元陣列、修改陣列內容，然後從陣列中修改的內容建立新的字串。
 
-下列範例示範了如何在字串中取代一組字元。 首先，使用 <xref:System.String.ToCharArray?displayProperty=nameWithName> 方法來建立字元陣列。 這會用到 <xref:System.String.IndexOf%2A> 方法來尋找字組 "fox" 的起始索引。 下三個字元會以不同字組取代。 最後，會從更新的字元陣列建構新字串。
+下列範例示範了如何在字串中取代一組字元。 首先，使用 <xref:System.String.ToCharArray?displayProperty=nameWithType> 方法來建立字元陣列。 這會用到 <xref:System.String.IndexOf%2A> 方法來尋找字組 "fox" 的起始索引。 下三個字元會以不同字組取代。 最後，會從更新的字元陣列建構新字串。
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 

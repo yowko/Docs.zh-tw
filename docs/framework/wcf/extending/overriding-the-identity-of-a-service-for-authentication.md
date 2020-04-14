@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: e7273c1e140e52eb37a30b6cabeb9e9a83a6fa2d
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 5649ef4cc05c9c16b1f8f626ba5e2e584b0e52eb
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121564"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278908"
 ---
 # <a name="override-the-identity-of-a-service-for-authentication"></a>重寫服務識別以進行身份驗證
 
 一般來說，您不需要在服務上設定身分識別，因為選擇用戶端認證類型，即表示服務中繼資料中公開的身分識別類型。 例如,以下配置代碼使用[\<wsHding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)`clientCredentialType`元素並將 屬性設置到 Windows。  
 
- 下列 Web 服務描述語言 (WSDL) 片段會顯示端點先前定義的身分識別。 在此示例中,服務作為自託管服務在特定使用者帳戶(username@contoso.com) 下運行,因此用戶主體名稱 (UPN) 標識包含帳戶名稱。 UPN 在 Windows 網域中也稱為使用者登入名稱。  
+ 下列 Web 服務描述語言 (WSDL) 片段會顯示端點先前定義的身分識別。 在此示例中,服務作為自託管服務在特定使用者帳戶(username@contoso.com) 下運行,因此用戶主體名稱 (UPN) 標識包含帳戶名稱。 UPN 也稱為 Windows 功能變數中的使用者登錄名稱。  
 
  有關展示識別設定的範例應用程式,請參考[服務識別範例](../samples/service-identity-sample.md)。 有關服務識別的詳細資訊,請參閱[服務識別和身份驗證](../feature-details/service-identity-and-authentication.md)。  
   
@@ -41,19 +41,19 @@ ms.locfileid: "81121564"
   
 - 如果您使用訊息層級安全性，驗證可能會失敗，依驗證模式而定：  
   
-- 如果您正在使用 `spnego` 模式並且將 `AllowNtlm` 屬性設定為 `false`，則驗證失敗。  
+- 如果使用`spnego`模式,並且`AllowNtlm`屬性設置`false`為 ,身份驗證將失敗。  
   
-- 如果您正在使用 `spnego` 模式並且將 `AllowNtlm` 屬性設定為 `true`，則若 UPN 為空時驗證失敗，而若 SPN 為空時驗證成功。  
+- 如果使用`spnego`模式,並且`AllowNtlm`屬性設置`true`為 ,如果 UPN 為空,則身份驗證將失敗,但如果 SPN 為空,則身份驗證將成功。  
   
 - 如果您正在直接使用 Kerberos (也就是「單次」)，則驗證失敗。  
   
-### <a name="using-the-identity-element-in-configuration"></a>在\<設定中使用識別>元素  
- 如果您在先前對 Certificate`,` 顯示的繫結中變更用戶端認證類型，則產生的 WSDL 會包含 Base64 序列化 X.509 憑證，這個憑證可用於身分識別值，其值如以下程式碼所示。 這是 Windows 以外所有用戶端認證類型的預設值。  
+### <a name="use-the-identity-element-in-configuration"></a>在\<設定中使用識別>元素  
+ 如果在以前顯示的綁定中更改客戶端憑據`Certificate`類型 ,則生成的 WSDL 包含標識值的 Base64 序列化 X.509 證書,如下代碼所示。 這是 Windows 以外所有用戶端認證類型的預設值。  
 
  您可以透過在設定中使用<>`identity`元素或在代碼中設置標識來更改預設服務標識的值或更改標識的類型。 下列組態程式碼會以 `contoso.com` 這個值來設定網域名稱系統 (DNS) 身分識別。  
 
-### <a name="setting-identity-programmatically"></a>以程式設計方式設定身分識別  
- 服務不必顯式指定標識,因為 WCF 會自動確定它。 但是,如果需要,WCF 允許您在終結點上指定標識。 下列程式碼會新增具有特定 DNS 身分識別的新服務端點。  
+### <a name="set-identity-programmatically"></a>以程式設計方式設定識別  
+ 服務不必顯式指定標識,因為 WCF 會自動確定它。 但是,如有必要,WCF 允許您在終結點上指定標識。 下列程式碼會新增具有特定 DNS 身分識別的新服務端點。  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  

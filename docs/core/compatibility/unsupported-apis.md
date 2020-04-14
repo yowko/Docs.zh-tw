@@ -3,23 +3,23 @@ title: .NET 內核上不受支援的 API
 titleSuffix: ''
 description: 瞭解在 .NET 核心上始終引發異常的 .NET 框架中的哪些 API。
 ms.date: 12/23/2019
-ms.openlocfilehash: c4b94321d30cacd90d5c2ee23c258681683a6faa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bd3516d9480ef42b6ea89825ba64867a3ca104e3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092963"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242942"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>始終在 .NET 內核上引發異常的 API
 
-以下 API 將始終在所有<xref:System.PlatformNotSupportedException>平臺或平臺子集上引發 .NET Core。
+以下 API 將始終<xref:System.PlatformNotSupportedException>在所有 平台或平臺子集上引發 .NET Core。
 
 本文按命名空間組織受影響的 API 成員。
 
 > [!NOTE]
 >
 > - 本文正在進行中。 它不是在 .NET Core 上引發異常的完整 API 清單。
-> - 本文不包括在 .NET Core 上拋出的二進位序列化的明確介面實作。 有關詳細資訊，請參閱[.NET 核心 中的二進位序列化](../../standard/serialization/binary-serialization.md#net-core)。
+> - 本文不包括在 .NET Core 上拋出的二進位序列化的顯式介面實現。 有關詳細資訊,請參閱[.NET 核心 中的二進位序列化](../../standard/serialization/binary-serialization.md#net-core)。
 
 ## <a name="system"></a>系統
 
@@ -48,7 +48,7 @@ ms.locfileid: "77092963"
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.OnDeserialization(System.Object)?displayProperty=nameWithType> | 全部 |
 
@@ -56,38 +56,38 @@ ms.locfileid: "77092963"
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.Configuration.RsaProtectedConfigurationProvider?displayProperty=nameWithType>（所有成員） | 全部 |
+| <xref:System.Configuration.RsaProtectedConfigurationProvider?displayProperty=nameWithType>(所有成員) | 全部 |
 
 ## <a name="systemconsole"></a>System.Console
 
 | member | 投擲的平臺 |
 | - | - |
 | <xref:System.Console.Beep?displayProperty=nameWithType> | Linux 與 macOS |
-| <xref:System.Console.BufferHeight?displayProperty=nameWithType>（僅限設置） | Linux 與 macOS |
-| <xref:System.Console.BufferWidth?displayProperty=nameWithType>（僅限設置） | Linux 與 macOS |
-| <xref:System.Console.CursorSize?displayProperty=nameWithType>（僅限設置） | Linux 與 macOS |
-| <xref:System.Console.CursorVisible?displayProperty=nameWithType>（僅獲取） | Linux 與 macOS |
+| <xref:System.Console.BufferHeight?displayProperty=nameWithType>(僅限設定) | Linux 與 macOS |
+| <xref:System.Console.BufferWidth?displayProperty=nameWithType>(僅限設定) | Linux 與 macOS |
+| <xref:System.Console.CursorSize?displayProperty=nameWithType>(僅限設定) | Linux 與 macOS |
+| <xref:System.Console.CursorVisible?displayProperty=nameWithType>(僅取得) | Linux 與 macOS |
 | <xref:System.Console.MoveBufferArea%2A?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.Console.SetWindowPosition%2A?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.Console.SetWindowSize%2A?displayProperty=nameWithType> | Linux 與 macOS |
-| <xref:System.Console.Title?displayProperty=nameWithType>（僅獲取） | Linux 與 macOS |
-| <xref:System.Console.WindowHeight?displayProperty=nameWithType>（僅限設置） | Linux 與 macOS |
-| <xref:System.Console.WindowLeft?displayProperty=nameWithType>（僅限設置） | Linux 與 macOS |
-| <xref:System.Console.WindowTop?displayProperty=nameWithType>（僅限設置） | Linux 與 macOS |
-| <xref:System.Console.WindowWidth?displayProperty=nameWithType>（僅限設置） | Linux 與 macOS |
+| <xref:System.Console.Title?displayProperty=nameWithType>(僅取得) | Linux 與 macOS |
+| <xref:System.Console.WindowHeight?displayProperty=nameWithType>(僅限設定) | Linux 與 macOS |
+| <xref:System.Console.WindowLeft?displayProperty=nameWithType>(僅限設定) | Linux 與 macOS |
+| <xref:System.Console.WindowTop?displayProperty=nameWithType>(僅限設定) | Linux 與 macOS |
+| <xref:System.Console.WindowWidth?displayProperty=nameWithType>(僅限設定) | Linux 與 macOS |
 
 ## <a name="systemdatacommon"></a>System.Data.Common
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A?displayProperty=nameWithType>（投擲<xref:System.NotSupportedException>） | 全部 |
+| <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A?displayProperty=nameWithType>( 投<xref:System.NotSupportedException>擲 ) | 全部 |
 
 ## <a name="systemdiagnosticsprocess"></a>System.Diagnostics.Process
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.Diagnostics.Process.MaxWorkingSet?displayProperty=nameWithType>（僅限設置） | Linux |
-| <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType>（僅限設置） | Linux |
+| <xref:System.Diagnostics.Process.MaxWorkingSet?displayProperty=nameWithType>(僅限設定) | Linux |
+| <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType>(僅限設定) | Linux |
 | <xref:System.Diagnostics.Process.ProcessorAffinity?displayProperty=nameWithType> | macOS |
 | <xref:System.Diagnostics.Process.MainWindowHandle?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> | Linux 與 macOS |
@@ -95,15 +95,15 @@ ms.locfileid: "77092963"
 | <xref:System.Diagnostics.ProcessStartInfo.PasswordInClearText?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.Domain?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.Diagnostics.ProcessStartInfo.LoadUserProfile?displayProperty=nameWithType> | Linux 與 macOS |
-| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType>（僅限設置） | Linux 與 macOS |
-| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType>（僅獲取） | macOS |
-| <xref:System.Diagnostics.ProcessThread.ProcessorAffinity?displayProperty=nameWithType>（僅限設置） | Linux 與 macOS |
+| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType>(僅限設定) | Linux 與 macOS |
+| <xref:System.Diagnostics.ProcessThread.BasePriority?displayProperty=nameWithType>(僅取得) | macOS |
+| <xref:System.Diagnostics.ProcessThread.ProcessorAffinity?displayProperty=nameWithType>(僅限設定) | Linux 與 macOS |
 
 ## <a name="systemio"></a>System.IO
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.IO.FileSystemInfo.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.IO.FileSystemInfo.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.IO.FileSystemInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
 
 ## <a name="systemiopipes"></a>System.IO.Pipes
@@ -114,14 +114,14 @@ ms.locfileid: "77092963"
 | <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.IO.Pipes.PipeStream.InBufferSize?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.IO.Pipes.PipeStream.OutBufferSize?displayProperty=nameWithType> | Linux 與 macOS |
-| <xref:System.IO.Pipes.PipeStream.ReadMode?displayProperty=nameWithType>（僅限設置） | Linux 與 macOS |
+| <xref:System.IO.Pipes.PipeStream.ReadMode?displayProperty=nameWithType>(僅限設定) | Linux 與 macOS |
 | <xref:System.IO.Pipes.PipeStream.WaitForPipeDrain?displayProperty=nameWithType> | Linux 與 macOS |
 
 ## <a name="systemmedia"></a>系統.媒體
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.Media.SoundPlayer.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Media.SoundPlayer.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 
 ## <a name="systemnet"></a>System.Net
 
@@ -129,33 +129,33 @@ ms.locfileid: "77092963"
 | - | - |
 | <xref:System.Net.AuthenticationManager.Authenticate(System.String,System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | 全部 |
 | <xref:System.Net.AuthenticationManager.PreAuthenticate(System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | 全部 |
-| <xref:System.Net.FileWebRequest.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Net.FileWebRequest.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Net.FileWebRequest.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
-| <xref:System.Net.FileWebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Net.FileWebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Net.FileWebResponse.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
-| <xref:System.Net.HttpWebRequest.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Net.HttpWebRequest.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Net.HttpWebRequest.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
-| <xref:System.Net.HttpWebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Net.HttpWebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Net.HttpWebResponse.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
-| <xref:System.Net.WebProxy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Net.WebProxy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Net.WebProxy.GetDefaultProxy?displayProperty=nameWithType> | 全部 |
 | <xref:System.Net.WebProxy.GetObjectData%2A?displayProperty=nameWithType> | 全部 |
-| <xref:System.Net.WebRequest.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Net.WebRequest.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Net.WebRequest.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
-| <xref:System.Net.WebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Net.WebResponse.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Net.WebResponse.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
 
 ## <a name="systemnetnetworkinformation"></a>System.Net.NetworkInformation
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.Net.NetworkInformation.Ping.Send%2A?displayProperty=nameWithType> | 視窗 （UWP） |
+| <xref:System.Net.NetworkInformation.Ping.Send%2A?displayProperty=nameWithType> | 視窗 (UWP) |
 
 ## <a name="systemnetsockets"></a>System.Net.Sockets
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.Net.Sockets.Socket.%23ctor(System.Net.Sockets.SocketInformation)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Net.Sockets.Socket.%23ctor(System.Net.Sockets.SocketInformation)> | 全部 |
 | <xref:System.Net.Sockets.Socket.DuplicateAndClose(System.Int32)?displayProperty=nameWithType> | 全部 |
 
 ## <a name="systemnetwebsockets"></a>System.Net.WebSockets
@@ -172,8 +172,8 @@ ms.locfileid: "77092963"
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom(System.String)?displayProperty=nameWithType> | 全部 |
 | <xref:System.Reflection.AssemblyName.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
 | <xref:System.Reflection.AssemblyName.OnDeserialization(System.Object)?displayProperty=nameWithType> | 全部 |
-| <xref:System.Reflection.StrongNameKeyPair.%23ctor(System.String)?displayProperty=nameWithType> | 全部 |
-| <xref:System.Reflection.StrongNameKeyPair.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Reflection.StrongNameKeyPair.%23ctor(System.String)> | 全部 |
+| <xref:System.Reflection.StrongNameKeyPair.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Reflection.StrongNameKeyPair.PublicKey?displayProperty=nameWithType> | 全部 |
 
 ## <a name="systemruntimecompilerservices"></a>System.Runtime.CompilerServices
@@ -223,10 +223,10 @@ ms.locfileid: "77092963"
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.Security.Claims.ClaimsPrincipal.%23ctor?displayProperty=nameWithType> | 全部 |
+| <xref:System.Security.Claims.ClaimsPrincipal.%23ctor> | 全部 |
 | <xref:System.Security.Claims.ClaimsPrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
-| <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo)?displayProperty=nameWithType> | 全部 |
-| <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo)> | 全部 |
+| <xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Security.Claims.ClaimsIdentity.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
 
 ## <a name="systemsecuritycryptography"></a>System.Security.Cryptography
@@ -234,7 +234,7 @@ ms.locfileid: "77092963"
 | member | 投擲的平臺 |
 | - | - |
 | <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create(System.String)?displayProperty=nameWithType> | 全部 |
-| <xref:System.Security.Cryptography.CspKeyContainerInfo.%23ctor%2A?displayProperty=nameWithType> | Linux 與 macOS |
+| <xref:System.Security.Cryptography.CspKeyContainerInfo.%23ctor%2A> | Linux 與 macOS |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.Accessible?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.Exportable?displayProperty=nameWithType> | Linux 與 macOS |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.HardwareDevice?displayProperty=nameWithType> | Linux 與 macOS |
@@ -266,7 +266,7 @@ ms.locfileid: "77092963"
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)> | 全部 |
 | <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> | 全部 |
 | <xref:System.Security.Cryptography.Pkcs.SignerInfo.ComputeCounterSignature?displayProperty=nameWithType> | 全部 |
 
@@ -274,16 +274,16 @@ ms.locfileid: "77092963"
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Import%2A?displayProperty=nameWithType> | 全部 |
-| <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
-| <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType>（僅限設置） | 全部 |
+| <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
+| <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.PrivateKey?displayProperty=nameWithType>(僅限設定) | 全部 |
 
 ## <a name="systemsecurityauthenticationextendedprotection"></a>System.Security.Authentication.ExtendedProtection
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 
 ## <a name="systemsecuritypolicy"></a>系統.安全.政策
 
@@ -295,7 +295,7 @@ ms.locfileid: "77092963"
 
 | member | 投擲的平臺 |
 | - | - |
-| <xref:System.ServiceProcess.TimeoutException.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | 全部 |
+| <xref:System.ServiceProcess.TimeoutException.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)> | 全部 |
 
 ## <a name="systemtextregularexpressions"></a>System.Text.RegularExpressions
 
@@ -324,6 +324,6 @@ ms.locfileid: "77092963"
 
 ## <a name="see-also"></a>另請參閱
 
-- [從 .NET 框架遷移到 .NET 核心的中斷更改](../compatibility/fx-core.md)
+- [從 .NET 框架移轉到 .NET 核心的中斷變更](../compatibility/fx-core.md)
 - [.NET Core 中的二進位序列化](../../standard/serialization/binary-serialization.md#net-core)
-- [.NET 可攜性分析儀](../../standard/analyzers/portability-analyzer.md)
+- [.NET 可移植性分析儀](../../standard/analyzers/portability-analyzer.md)

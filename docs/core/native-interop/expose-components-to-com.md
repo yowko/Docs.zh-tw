@@ -1,5 +1,5 @@
 ---
-title: 向 COM 公開 .NET 核心元件
+title: Com 公開 .NET 核心元件
 description: 本教程演示如何從 .NET Core 向 COM 公開類。 為無註冊表的 COM 生成 COM 伺服器和並行伺服器清單。
 ms.date: 07/12/2019
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17d85b9e9734fae0bb69f94da8c08669216ab0ae
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146654"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242864"
 ---
-# <a name="exposing-net-core-components-to-com"></a>向 COM 公開 .NET 核心元件
+# <a name="exposing-net-core-components-to-com"></a>Com 公開 .NET 核心元件
 
 在 .NET Core 中，相較於 .NET Framework，向 COM 公開您 .NET 物件的流程已大幅簡化。 下列流程將逐步解說如何向 COM 公開類別。 本教學課程說明如何：
 
@@ -24,7 +24,7 @@ ms.locfileid: "79146654"
 - 在建置您的 .NET Core 程式庫時，一併產生 COM 伺服器。
 - 自動為 Registry-Free COM 產生並存伺服器資訊清單。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 - 安裝[.NET 核心 3.0 SDK](https://dotnet.microsoft.com/download)或較新版本。
 
@@ -32,7 +32,7 @@ ms.locfileid: "79146654"
 
 第一步是建立程式庫。
 
-1. 創建新資料夾，該資料夾中運行以下命令：
+1. 建立新資料夾,該資料夾中執行以下指令:
 
     ```dotnetcli
     dotnet new classlib
@@ -93,4 +93,6 @@ GitHub 上的 dotnet/samples 存放庫提供功能完整的 [COM 伺服器範例
 
 不同於 .NET Framework，.NET Core 不支援從 .NET Core 組件產生 COM 型別程式庫 (TLB)。 該指南是手動編寫 COM 介面的本機聲明的 IDL 檔或 C/C++標頭。
 
-此外，將 .NET 框架和 .NET Core 載入到同一進程中確實具有診斷限制。 主要限制是託管元件的調試，因為無法同時調試 .NET 框架和 .NET Core。 此外，兩個運行時實例不共用託管程式集。 這意味著不可能在兩個運行時共用實際的 .NET 類型，相反，所有交互都必須限制為公開的 COM 介面協定。
+不支援[自包含](../deploying/index.md#publish-self-contained)的 COM 元件部署。 只支援 COM 元件[執行時相關部署](../deploying/index.md#publish-runtime-dependent)。
+
+此外,將 .NET框架和 .NET Core 載入到同一進程中確實具有診斷限制。 主要限制是託管元件的調試,因為無法同時調試 .NET 框架和 .NET Core。 此外,兩個運行時實例不共用託管程式集。 這意味著不可能在兩個運行時共用實際的 .NET 類型,相反,所有交互都必須限制為公開的 COM 介面協定。

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 5a3ba2838458d6e6833035186dfd69b34c780317
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 5db29046bfe67c530fe3a613c126c3841e6402e1
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80248130"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242747"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準日期和時間格式字串
 
-標準日期和時間格式字串使用單一格式規範，定義日期和時間值的文字表示。 包含多個字元（包括空格）的任何日期和時間格式字串都解釋為自訂日期和時間格式字串;有關詳細資訊，請參閱[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 標準或自訂格式字串有兩種使用方式：
+標準日期和時間格式字串使用單一格式規範，定義日期和時間值的文字表示。 包含多個字元(包括空格)的任何日期和時間格式字串都解釋為自訂日期和時間格式字串;關於詳細資訊,請參閱[自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。 標準或自訂格式字串有兩種使用方式：
 
 - 定義執行格式化作業後所產生的字串。
 
@@ -54,7 +54,7 @@ ms.locfileid: "80248130"
 |"T"|完整時間模式。<br /><br /> 詳細資訊：[完整時間 ("T") 格式規範](#LongTime)。|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|
 |"u"|國際可排序日期/時間模式。<br /><br /> 詳細資訊：[國際可排序 ("u") 格式規範](#UniversalSortable)。|使用 <xref:System.DateTime> 值：2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> 使用 <xref:System.DateTimeOffset> 值：2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|
 |"U"|國際完整日期/時間模式。<br /><br /> 詳細資訊：[國際完整 ("U") 格式規範](#UniversalFull)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|
-|"Y", "y"|年月模式。<br /><br /> 詳細資訊：[年月 ("Y") 格式規範](#YearMonth)。|2009-06-15T13：45：30 -2009年6月>日（美國）<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
+|"Y", "y"|年月模式。<br /><br /> 詳細資訊：[年月 ("Y") 格式規範](#YearMonth)。|2009-06-15T13:45:30 -2009年6月>日(美國)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
 |任何其他單一字元|未知的規範。|擲回執行階段 <xref:System.FormatException>。|
 
 ## <a name="how-standard-format-strings-work"></a>標準格式字串的運作方式
@@ -275,7 +275,7 @@ ms.locfileid: "80248130"
 
 傳遞至 `Parse` 和 `TryParse` 的 `ParseExact`、`TryParseExact`、<xref:System.DateTime> 和 <xref:System.DateTimeOffset> 方法的字串如果是這些格式，就可以使用 "O" 或 "o" 格式規範來剖析。 在 <xref:System.DateTime> 物件的案例中，您呼叫的剖析多載應該也要包含 `styles` 參數，且值為 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>。 請注意，如果您呼叫剖析方法時，使用對應於 "O" 或 "o" 格式規範的自訂格式字串，將不會取得與 "O" 或 "o" 相同的結果。 這是因為使用自訂格式字串的剖析方法，無法剖析缺少時區元件或使用 "Z" 來指示 UTC 之日期和時間值的字串表示法。
 
-下面的示例使用"o"格式指定器在美國太平洋時區的系統上顯示一系列<xref:System.DateTime>值和值<xref:System.DateTimeOffset>。
+下面的範例使用「o」格式指定器在美國太平洋時區的系統上顯示一系列<xref:System.DateTime>值和<xref:System.DateTimeOffset>值 。
 
 [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
 [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]
@@ -440,7 +440,7 @@ ms.locfileid: "80248130"
 
 [控制台] 中 [ **地區及語言選項]** 項目的設定會影響格式化作業所產生的結果字串。 這些設定是用來初始化與目前執行緒文化特性相關的 <xref:System.Globalization.DateTimeFormatInfo> 物件，該物件會提供用來管理格式的值。 使用不同設定的電腦會產生不同的結果字串。
 
-此外，如果您使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> 建構函式來將新的 <xref:System.Globalization.CultureInfo> 物件具現化，而此物件代表的文化特性與目前系統文化特性相同，則 [控制台] 中的 [地區及語言選項]**** 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。
+此外，如果您使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29> 建構函式來將新的 <xref:System.Globalization.CultureInfo> 物件具現化，而此物件代表的文化特性與目前系統文化特性相同，則 [控制台] 中的 [地區及語言選項]**** 項目所建立的任何自訂都會套用至新的 <xref:System.Globalization.CultureInfo> 物件。 您可以使用 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 建構函式來建立不反映系統自訂的 <xref:System.Globalization.CultureInfo> 物件。
 
 ### <a name="datetimeformatinfo-properties"></a>DateTimeFormatInfo 屬性
 
@@ -451,6 +451,6 @@ ms.locfileid: "80248130"
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
 - [格式化類型](../../../docs/standard/base-types/formatting-types.md)
-- [自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [自訂日期與時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [Sample: .NET Core WinForms Formatting Utility (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs) (範例：.NET Core WinForms 格式化公用程式 (C#))
 - [Sample: .NET Core WinForms Formatting Utility (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-vb) (範例：.NET Core WinForms 格式化公用程式 (Visual Basic))

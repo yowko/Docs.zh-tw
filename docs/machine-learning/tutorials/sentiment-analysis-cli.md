@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 2243aad0e787a3a594bde3dfa9884f104eab74e8
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 832124e6d027b240c4d06692ee87c84f57b982d3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546688"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243332"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>使用 ML.NET CLI 分析情感
 
@@ -27,7 +27,7 @@ ms.locfileid: "79546688"
 > - 探索為了用來定型模型所產生的 C# 程式碼
 
 > [!NOTE]
-> 本主題參考 ML.NET CLI 工具，它目前為公開預覽版，因此内容可能會有變更。 有關詳細資訊，請訪問[ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)頁面。
+> 本主題參考 ML.NET CLI 工具，它目前為公開預覽版，因此内容可能會有變更。 有關詳細資訊,請造[訪ML.NET](https://dotnet.microsoft.com/apps/machinelearning-ai/ml-dotnet)頁面。
 
 ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，向 .NET 開發人員「推廣」ML.NET，讓您不需要從頭撰寫程式碼來開始使用。
 
@@ -45,10 +45,10 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 我們將使用目前用於「情感分析」案例的資料集，這是二元分類機器學習工作。 您可以透過類似方式來使用自己的資料集，系統會為您產生模型和程式碼。
 
-1. 下載 [UCI 情感標記句子資料集 ZIP 檔案 (請參閱下列注意中的引文)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)，然後將它解壓縮到您選擇的任何資料夾。
+1. 下載 [UCI 情感標記句子資料集 ZIP 檔案 (請參閱下列注意中的引文)](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)，然後將它解壓縮到您選擇的任何資料夾。
 
     > [!NOTE]
-    > 此教學課程所使用的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人， KDD 2015，並在UCI機器學習存儲庫託管 - Dua，D.和卡拉塔尼斯基杜，E.（2017年）。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml]。 Irvine, CA: University of California, School of Information and Computer Science.
+    > 此教學課程所使用的資料集是來自 'From Group to Individual Labels using Deep Features' (從群組到使用深度特徵的個別標籤) (Kotzias 等人， KDD 2015,並在UCI機器學習存儲庫託管 - Dua,D.和卡拉塔尼斯基杜,E.(2017年)。 「UCI Machine Learning Repository (UCI 機器學習存放庫)」[http://archive.ics.uci.edu/ml]。 Irvine, CA: University of California, School of Information and Computer Science.
 
 2. 將 `yelp_labelled.txt` 檔案複製到您先前建立的任何資料夾 (例如 `/cli-test`)。
 
@@ -86,7 +86,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
     mlnet auto-train --task binary-classification --dataset "yelp_labelled.txt" --label-column-index 1 --has-header false --max-exploration-time 10
     ```
 
-    此命令運行**`mlnet auto-train`命令**：
+    這個指令執行**`mlnet auto-train`指令**:
     - 針對 **`binary-classification`** 類型的 **ML 工作**
     - 使用**資料集檔案`yelp_labelled.txt`** 作為定型和測試資料集 (CLI 會在內部使用交叉驗證，或將它分成兩個資料集：一個用於定型，另一個用於測試)
     - 其中您要預測的**目標/目的資料行** (通常稱為「標籤」****) 是**索引為 1 的資料行** (也就是第二個資料行，因為索引是以零起始)
@@ -115,7 +115,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
     不過，有時只使用準確度計量來測量並不夠，尤其是測試資料集中的標籤 (在本例中為 0 和 1) 失衡時。
 
-    有關用於評估不同模型的**指標**（如準確性、AUC、AUCPR 和 F1 分數）的其他指標和詳細資訊，請參閱[瞭解ML.NET指標](../resources/metrics.md)。
+    有關用於評估不同模型的**指標**(如準確性、AUC、AUCPR 和 F1 分數)的其他指標和詳細資訊,請參閱[瞭解ML.NET指標](../resources/metrics.md)。
 
     > [!NOTE]
     > 您可以嘗試這個完全相同的資料集，並將 `--max-exploration-time` 指定為幾分鐘 (例如三分鐘則指定 180 秒)，針對此資料集 (相當小、有 1000 個資料列) 使用不同的定型管線設定，來為您尋找更好的「最佳模型」。
@@ -233,8 +233,8 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 不過，事情會比該部落格文章中所述更簡單。 我們為您開發了更簡單的方法，並已建立可輕鬆用於 ASP.NET Core 應用程式和服務的良好「.NET Core 整合套件」****，只要在應用程式 DI 服務 (相依性插入服務) 中註冊它，即可從程式碼直接使用。 請查看下列教學課程和做法範例：
 
-- [教程：在可擴展ASP.NET核心 Web 應用和 Web API 上運行ML.NET模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
-- [示例：ASP.NET核心 WebAPI 上的可擴展ML.NET模型](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
+- [教學:在可延伸ASP.NET核心 Web 應用和 Web API 上執行ML.NET模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [範例:ASP.NET核心 WebAPI 上的可延伸ML.NET模型](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 
 ## <a name="explore-the-generated-c-code-that-was-used-to-train-the-best-quality-model"></a>探索為了用來定型「最佳品質」模型所產生的 C# 程式碼
 
@@ -244,7 +244,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 
 更重要的是，在此特定案例 (情感分析模型) 中，您也可以比較該產生的定型程式碼與下列教學課程中所述程式碼：
 
-- 比較：[教程：在情緒分析二進位分類方案中使用ML.NET。](sentiment-analysis.md)
+- 比較:[教程:在情緒分析二進位分類方案中使用ML.NET。](sentiment-analysis.md)
 
 值得將教學課程中所選擇演算法和管線設定與 CLI 工具產生的程式碼進行比較。 根據您花在逐一查看和搜尋更佳模型的時間，所選擇的演算法及其特定超參數和管線設定可能會不同。
 
@@ -260,7 +260,7 @@ ML.NET CLI 是 ML.NET 的一部分，其主要目標是在學習 ML.NET 時，�
 ## <a name="see-also"></a>另請參閱
 
 - [使用 ML.NET CLI 自動化模型定型](../automate-training-with-cli.md)
-- [教程：在可擴展ASP.NET核心 Web 應用和 Web API 上運行ML.NET模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
-- [示例：ASP.NET核心 WebAPI 上的可擴展ML.NET模型](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
+- [教學:在可延伸ASP.NET核心 Web 應用和 Web API 上執行ML.NET模型](https://aka.ms/mlnet-tutorial-netcoreintegrationpkg)
+- [範例:ASP.NET核心 WebAPI 上的可延伸ML.NET模型](https://aka.ms/mlnet-sample-netcoreintegrationpkg)
 - [ML.NET CLI auto-train 命令參考指南](../reference/ml-net-cli-reference.md)
 - [ML.NET CLI 中的遙測](../resources/ml-net-cli-telemetry.md)

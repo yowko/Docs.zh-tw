@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 9b09f5a2505888c6154a58a3512c94c51f89295b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff04b4950f48f2ba06f60b65cc3a46f1295711f3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124418"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243150"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET 中正則運算式的最佳做法
 
@@ -53,7 +53,7 @@ ms.locfileid: "77124418"
 
 若要解決這個問題，您可以執行下列操作：
 
-- 開發模式時，您應考慮回溯可能對規則運算式引擎的效能造成的影響，尤其是規則運算式的設計為處理未受限制的輸入。 有關詳細資訊，請參閱["負責回溯](#take-charge-of-backtracking)"部分。
+- 開發模式時，您應考慮回溯可能對規則運算式引擎的效能造成的影響，尤其是規則運算式的設計為處理未受限制的輸入。 有關詳細資訊,請參閱["負責回溯](#take-charge-of-backtracking)"部分。
 
 - 使用無效或幾乎有效的輸入以及有效輸入徹底測試您的規則運算式。 若要針對特殊規則運算式隨機產生輸入，您可以使用 [Rex](https://www.microsoft.com/research/project/rex-regular-expression-exploration/)，這是 Microsoft Research 提供的規則運算式探索工具。
 
@@ -81,7 +81,7 @@ ms.locfileid: "77124418"
 
 ### <a name="static-regular-expressions"></a>靜態規則運算式
 
-建議您使用靜態規則運算式方法來替代使用相同的規則運算式重複具現化規則運算式物件。 與正則運算式物件使用的正則運算式模式不同，在靜態方法調用中使用的模式的操作代碼或編譯的 Microsoft 中間語言 （MSIL） 都由正則運算式引擎在內部緩存。
+建議您使用靜態規則運算式方法來替代使用相同的規則運算式重複具現化規則運算式物件。 與正則表達式物件使用的正則運算式模式不同,在靜態方法調用中使用的模式的操作代碼或編譯的 Microsoft 中間語言 (MSIL) 都由正則運算式引擎在內部緩存。
 
 例如，事件處理常式經常會呼叫另一個方法來驗證使用者輸入。 下列程式碼中會反映這種情況，其中 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Click> 事件會用來呼叫名為 `IsValidCurrency` 的方法，該方法會檢查使用者是否已輸入貨幣符號且後面至少有一個十進位數字。
 
@@ -132,7 +132,7 @@ ms.locfileid: "77124418"
 |`\w+`|比對一個或多個文字字元。|
 |`[.?:;!]`|比對句號、問號、冒號、分號或驚嘆號。|
 
-### <a name="regular-expressions-compiled-to-an-assembly"></a>正則運算式：編譯到程式集
+### <a name="regular-expressions-compiled-to-an-assembly"></a>正規表示式:編譯到程式集
 
 .NET 也可讓您建立包含已編譯規則運算式的組件。 這樣會將規則運算式編譯的效能影響從執行階段移至設計階段。 不過，它還包含了一些額外的工作：您必須事先定義規則運算式，並且將其編譯為組件。 接著編譯器就可在編譯使用組件之規則運算式的原始程式碼時參考這個組件。 組件中的每個編譯的規則運算式都會以衍生自 <xref:System.Text.RegularExpressions.Regex> 的類別表示。
 
@@ -146,7 +146,7 @@ ms.locfileid: "77124418"
 
 如果您要使用編譯的規則運算式來最佳化效能，則不應使用反映來建立組件、載入規則運算式引擎，以及執行其模式比對方法。 因此您就必須避免動態建置規則運算式模式，並且在建立組件時指定任何模式比對選項 (例如不區分大小寫的模式比對)。 另外，您也必須將建立組件的程式碼與使用規則運算式的程式碼分開。
 
-下列範例示範如何建立內含編譯的規則運算式的組件。 它創建一個用`RegexLib.dll`單個正則運算式類命名的程式集`SentencePattern`，其中包含["解釋與編譯正則運算式](#interpreted-vs-compiled-regular-expressions)"部分中使用的句子匹配正則運算式模式。
+下列範例示範如何建立內含編譯的規則運算式的組件。 它創建一個用`RegexLib.dll`單個正則運算式類命名的程式`SentencePattern`集 ,其中包含[「解釋與編譯正則運算式](#interpreted-vs-compiled-regular-expressions)」部分中使用的句子匹配正則表達式模式。
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/compile1.cs#6)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/compile1.vb#6)]
@@ -176,7 +176,7 @@ ms.locfileid: "77124418"
 
 由於字緣與文字字元不同，也不是文字字元的子集，因此規則運算式引擎不可能在比對文字字元時跨越字緣。 這表示對於這個規則運算式來說，回溯不會使任何比對完全成功，只會造成效能降低，因為規則運算式引擎會被迫儲存每一個成功的初始文字字元比對的狀態。
 
-如果確定不需要回溯，則可以使用`(?>subexpression)`語言元素（稱為原子組）禁用它。 下列範例會使用兩個規則運算式剖析輸入字串。 首先，`\b\p{Lu}\w*\b` 會仰賴回溯。 第二，`\b\p{Lu}(?>\w*)\b` 會停用回溯。 如範例的輸出所示，兩者會產生相同的結果。
+如果確定不需要回溯,則可以使用`(?>subexpression)`語言元素(稱為原子組)禁用它。 下列範例會使用兩個規則運算式剖析輸入字串。 首先，`\b\p{Lu}\w*\b` 會仰賴回溯。 第二，`\b\p{Lu}(?>\w*)\b` 會停用回溯。 如範例的輸出所示，兩者會產生相同的結果。
 
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]
@@ -217,9 +217,9 @@ ms.locfileid: "77124418"
 
 如果您的規則運算式會處理幾乎符合規則運算式模式的輸入，它經常會依賴大量回溯，如此就會大幅影響其效能。 除了仔細考量使用回溯以及對幾乎符合的輸入進行規則運算式測試之外，務必要設定逾時值，以確保將大量回溯 (如發生的話) 的影響降至最低。
 
-正則運算式超時間隔定義正則運算式引擎在超時之前查找單個匹配項的時間週期。預設超時間隔為<xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>，這意味著正則運算式不會超時。您可以覆蓋此值並定義超時間隔，如下所示：
+正則運算式超時間隔定義正則運算式引擎在超時之前查找單個匹配項的時間週期。預設超時間隔為<xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType>,這意味著正則運算式不會超時。您可以覆寫此值並定義超時間隔,如下所示:
 
-- 在您呼叫 <xref:System.Text.RegularExpressions.Regex> 建構函式具現化 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 物件時提供逾時值。
+- 在您呼叫 <xref:System.Text.RegularExpressions.Regex> 建構函式具現化 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> 物件時提供逾時值。
 
 - 呼叫靜態模式比對方法，例如，包含 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 參數的 <xref:System.Text.RegularExpressions.Regex.Replace%28System.String%2CSystem.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 或 `matchTimeout`。
 
@@ -234,7 +234,7 @@ ms.locfileid: "77124418"
 
 ## <a name="capture-only-when-necessary"></a>必要時擷取
 
-.NET 中的規則運算式支援許多群組建構，可讓您將規則運算式模式與一或多個子運算式設為群組。 .NET 正則運算式語言中最常用的分組構造是`(`*子運算式*`)`，它定義編號捕獲組和`(?<`*名稱*`>`*子運算式*`)`，後者定義命名捕獲組。 群組建構是建立反向參考和定義套用數量詞之子運算式的要件。
+.NET 中的規則運算式支援許多群組建構，可讓您將規則運算式模式與一或多個子運算式設為群組。 .NET 正則表達式語言中最常用的分組構造`(`是*子運算*`)`式 ,它定義編號捕`(?<`獲組和*名稱*`>`*子運算式*`)`,後者定義命名捕獲組。 群組建構是建立反向參考和定義套用數量詞之子運算式的要件。
 
 不過，使用這些語言項目也有其代價。 這些語言項目會造成在 <xref:System.Text.RegularExpressions.GroupCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> 物件中填入最近使用的未命名或具名擷取，而如果單一群組建構擷取了輸入字串中的多個子字串，則這些語言項目也會在特定擷取群組的 <xref:System.Text.RegularExpressions.CaptureCollection> 屬性傳回的 <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> 物件中填入多個 <xref:System.Text.RegularExpressions.Capture> 物件。
 
@@ -273,6 +273,6 @@ ms.locfileid: "77124418"
 
 |Title|描述|
 |-----------|-----------------|
-|[正則運算式行為的詳細資訊](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|檢查 .NET 中規則運算式引擎的實作。 本主題將強調規則運算式的靈活度，並且說明開發人員應負責確保規則運算式引擎有效率且穩定地運作。|
+|[規則運算式行為的詳細資訊](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|檢查 .NET 中規則運算式引擎的實作。 本主題將強調規則運算式的靈活度，並且說明開發人員應負責確保規則運算式引擎有效率且穩定地運作。|
 |[回溯](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|說明何謂回溯以及回溯如何影響規則運算式的效能，並且檢查提供回溯之替代方式的語言項目。|
-|[正則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|描述 .NET 中規則運算式語言的項目，並且提供每個語言項目之詳細文件的連結。|
+|[規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|描述 .NET 中規則運算式語言的項目，並且提供每個語言項目之詳細文件的連結。|

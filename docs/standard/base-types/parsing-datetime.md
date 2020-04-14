@@ -1,5 +1,5 @@
 ---
-title: 如何：將字串轉換成 DateTime
+title: 將字串轉換為日期時間
 description: 了解剖析表示日期與時間的字串，以從日期與時間字串建立 DateTime 的技術。
 ms.date: 02/15/2018
 ms.technology: dotnet-standard
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - base types, parsing strings
 - DateTime object
 - time strings
-ms.openlocfilehash: 9555304e570226b2ed3b040735cf099b5a018f93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b3f0bdb3ade784f929718a3350ed3dec0c572f1
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156539"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242643"
 ---
-# <a name="parsing-date-and-time-strings-in-net"></a>在 .NET 中剖析日期和時間字串
+# <a name="parse-date-and-time-strings-in-net"></a>在 .NET 中分析日期和時間字串
 
 剖析字串以將之轉換成 <xref:System.DateTime> 物件時，會要求您指定如何將日期與時間以文字表示的相關資訊。 不同的文化特性會針對日期、月份與年份使用不同的順序。 某些時間表示法使用 24 小時制，其他則指定 "AM" 和 "PM"。 某些應用程式僅需要日期。 其他則僅需要時間。 而有部份則需要同時指定日期與時間。 將字串轉換為 <xref:System.DateTime> 物件的方法，可讓您提供所預期格式以及應用程式所需日期與時間元素的相關詳細資訊。 將文字正確轉換為 <xref:System.DateTime> 有三項子工作：
 
@@ -56,7 +56,7 @@ ms.locfileid: "78156539"
 > 本文中所有的 C# 範例皆可在您的瀏覽器中執行。 按 [執行]**** 按鈕以查看輸出。 您也可以編輯它們以進行實驗。
 
 > [!NOTE]
-> 這些示例在 GitHub 文檔存儲庫中可用於[C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions)和[視覺化基本](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions)。 或者，您可以將專案下載為[C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip)或[視覺化基本](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip)的 ZIP 檔案。
+> 這些範例在 GitHub 文件儲存庫中可用於[C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/conversions)與[視覺化基本](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/how-to/conversions)。 或者,您可以將專案下載為[C#](https://github.com/dotnet/docs/blob/master/samples/snippets/csharp/how-to/conversions.zip)或[視覺化基本](https://github.com/dotnet/docs/blob/master/samples/snippets/visualbasic/how-to/conversions.zip)的 zip 檔。
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]
@@ -88,6 +88,6 @@ ms.locfileid: "78156539"
 
 - [剖析字串](parsing-strings.md)
 - [格式化類型](formatting-types.md)
-- [.NET 中的類型轉換](type-conversion.md)
+- [在 .NET 中鍵入轉換](type-conversion.md)
 - [標準日期和時間格式](standard-date-and-time-format-strings.md)
 - [自訂日期與時間格式字串](custom-date-and-time-format-strings.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 9e55910573b3aa3aecf9082f1b77659a45f883a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 560ef4f99ca451c3b48f23988519313eed26dcb3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73196989"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243202"
 ---
 # <a name="additional-resources"></a>其他資源
 
@@ -32,7 +32,7 @@ ms.locfileid: "73196989"
 
 |URL|描述|
 |----------|----------------|
-|[Visual Basic 文件範例](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|包含 Visual Basic 和 .NET 文件的所有使用範例。|
+|[Visual Basic 文件範例](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic)|包含 Visual Basic 和 .NET 文件的所有使用範例。|
 
 ### <a name="forums"></a>論壇
 
@@ -51,7 +51,7 @@ ms.locfileid: "73196989"
 |URL|描述|
 |----------|----------------|
 |[Microsoft 支援服務](https://support.microsoft.com)|提供知識庫文件、資源下載和更新、支援網路廣播及其他服務的存取。|
-|[Visual Studio 問題](https://developercommunity.visualstudio.com)|可讓您提報 .NET 和 Visual Studio 相關的錯誤給 Microsoft，或提供建議。 您還可以通過選擇 **"説明** > **發送回饋** > **報告**視覺工作室中的問題"來報告 Bug。|
+|[Visual Studio 問題](https://developercommunity.visualstudio.com)|可讓您提報 .NET 和 Visual Studio 相關的錯誤給 Microsoft，或提供建議。 您還可以通過選擇 **「幫助** > **發送反饋** > **報告**視覺工作室中的問題」來報告 Bug。|
 
 ## <a name="third-party-resources"></a>協力廠商資源
 

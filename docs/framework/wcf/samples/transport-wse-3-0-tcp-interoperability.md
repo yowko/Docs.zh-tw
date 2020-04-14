@@ -2,12 +2,12 @@
 title: 傳輸：WSE 3.0 TCP 互通性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 55c59fe3a677d3aea8de62ae714e1007cfcbb86a
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f799f3b6968f31472acc7752846bab34351648db
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121292"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278895"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
 WSE 3.0 TCP 互通性傳輸示例演示如何實現 TCP 雙工會話作為自定義 Windows 通信基礎 (WCF) 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 以下步驟展示如何建構此自訂 WCF 傳輸:  
@@ -39,7 +39,7 @@ WSE 3.0 TCP 互通性傳輸示例演示如何實現 TCP 雙工會話作為自定
   
  一旦將 <xref:System.ServiceModel.Channels.Message> 編碼為位元組，就必須在網路上傳輸。 此時需要系統來定義訊息界限。 WSE 3.0 使用[DIME](https://docs.microsoft.com/archive/msdn-magazine/2002/december/sending-files-attachments-and-soap-messages-via-dime)版本作為其幀協定。 `WriteData` 會封裝框架邏輯，以將 byte[] 包裝在一組 DIME 記錄中。  
   
- 接收訊息的邏輯也十分類似。 主要的複雜度是在於處理通訊端讀取會傳回少於所要求之位元組的情況。 若要接收訊息，`WseTcpDuplexSessionChannel` 會讀取網路上的位元組、解碼 DIME 框架，然後使用 <xref:System.ServiceModel.Channels.MessageEncoder> 將 byte[] 轉換為 <xref:System.ServiceModel.Channels.Message>。  
+ 接收消息的邏輯類似。 主要的複雜性是處理這樣一個事實,即套接字讀取可以返回的位元組數比請求的要少。 若要接收訊息，`WseTcpDuplexSessionChannel` 會讀取網路上的位元組、解碼 DIME 框架，然後使用 <xref:System.ServiceModel.Channels.MessageEncoder> 將 byte[] 轉換為 <xref:System.ServiceModel.Channels.Message>。  
   
  基底 `WseTcpDuplexSessionChannel` 會假設是接收連線的通訊端。 基底類別接著會處理通訊端關閉。 有三個部分與通訊端關閉相關：  
   
@@ -47,7 +47,7 @@ WSE 3.0 TCP 互通性傳輸示例演示如何實現 TCP 雙工會話作為自定
   
 - On[Begin]Close -- 以正常程序關閉通訊端 (軟關閉)。  
   
-- session.CloseOutputSession -- 關閉傳出資料流 (半關閉)。  
+- 會話。關閉輸出作業階段 -- 關閉出站資料流(半關閉)。  
   
 ## <a name="channel-factory"></a>通道處理站  
  撰寫 TCP 傳輸的下一個步驟為，建立用戶端通道的 <xref:System.ServiceModel.Channels.IChannelFactory> 實作。  
@@ -170,7 +170,7 @@ Symbols:
         CONTOSO  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
+## <a name="set-up-build-and-run-the-sample"></a>設定、產生及執行範例  
   
 1. 要運行此範例,必須安裝 Microsoft .NET 的[Web 服務增強功能 (WSE) 3.0](https://www.microsoft.com/download/details.aspx?id=14089)和 WSE`TcpSyncStockService`示例。
   
@@ -179,9 +179,9 @@ Symbols:
   
 1. 在安裝 `TcpSyncStockService` 範例之後，請執行下列步驟：  
   
-    1. 開啟 Visual Studio 中的 `TcpSyncStockService` (請注意，TcpSyncStockService 範例是隨著 WSE 3.0 一起安裝， 它不屬於此範例程式碼的一部分)。  
+    1. 打開`TcpSyncStockService`視覺工作室。 (TcpSyncStock服務範例與 WSE 3.0 一起安裝。 它不是此示例代碼的一部分。  
   
-    2. 將 StockService 專案設定為啟始專案。  
+    2. 將 StockService 專案設置為啟動專案。  
   
     3. 開啟 StockService 專案中的 StockService.cs，並將 `StockService` 類別中的 [Policy] 屬性標記為註解。 這樣就會停用範例的安全性。 雖然 WCF 可以與 WSE 3.0 安全終結點互通,但禁用安全性可使此範例專注於自訂 TCP 傳輸。  
   

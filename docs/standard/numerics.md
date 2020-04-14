@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635147"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242760"
 ---
 # <a name="numerics-in-net"></a>.NET 中的數值
 
@@ -62,7 +62,7 @@ ms.locfileid: "80635147"
 
 每個浮點類型皆支援一組標準算術運算子。 <xref:System.Math?displayProperty=nameWithType> 類別能提供適用於更廣泛數學函式的方法。 .NET Core 2.0 及<xref:System.MathF?displayProperty=nameWithType>更高版本包括類,<xref:System.Single>該類提供接受 類型參數的方法。
 
-藉由使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別，您也可使用 <xref:System.Double> 和 <xref:System.Single> 中的個別位元。 <xref:System.Decimal?displayProperty=nameWithType> 結構有它自己的方法，為 <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 和 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>，用於使用十進位值的個別位元，而且還有一組自己的方法，用於執行一些額外的數學運算。
+藉由使用 <xref:System.BitConverter?displayProperty=nameWithType> 類別，您也可使用 <xref:System.Double> 和 <xref:System.Single> 中的個別位元。 <xref:System.Decimal?displayProperty=nameWithType> 結構有它自己的方法，為 <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> 和 <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29>，用於使用十進位值的個別位元，而且還有一組自己的方法，用於執行一些額外的數學運算。
   
 和<xref:System.Double><xref:System.Single>類型用於按其性質而言不精確的值(例如,兩個星之間的距離)和不需要高精度和小舍入誤差的應用。 對於需要<xref:System.Decimal?displayProperty=nameWithType>更高精度且應最小化舍入誤差的情況,請使用該類型。
 
@@ -95,4 +95,4 @@ ms.locfileid: "80635147"
 
 ## <a name="see-also"></a>另請參閱
 
-- [標準數值格式字串](base-types/standard-numeric-format-strings.md)
+- [標準格式字串](base-types/standard-numeric-format-strings.md)

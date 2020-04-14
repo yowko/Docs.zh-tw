@@ -6,18 +6,18 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 7761240055c90ae9c713b1c460e9e83316d256f9
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438234"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278947"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>教學:使用模型產生器分析 Web 應用程式中網站評論的情緒ML.NET
 
-瞭解如何從 Web 應用程式內即時註釋中分析情緒。
+瞭解如何在 Web 應用程式內即時分析來自評論的情緒。
 
-本教程介紹如何創建ASP.NET酷睿剃刀頁面應用程式,該應用程式即時從網站評論中對情緒進行分類。
+本教程介紹如何創建一個ASP.NET核心剃刀頁面應用程式,該應用程式即時從網站評論中對情緒進行分類。
 
 在本教學課程中，您會了解如何：
 
@@ -103,9 +103,9 @@ ms.locfileid: "80438234"
 
 ## <a name="evaluate-the-model"></a>評估模型
 
-定型步驟之結果將會是具備最佳效能的單一模型。 在模型生成器工具的計算步驟中,輸出部分將包含**最佳模型**條目中性能最佳的模型使用的演演演算法以及**最佳模型精度**中的指標。 此外，還會具備一個摘要表，其中包含前五個模型及其計量。
+訓練步驟的結果將是一個性能最好的模型。 在模型生成器工具的計算步驟中,輸出部分將包含**最佳模型**條目中性能最佳的模型使用的演演演算法以及**最佳模型精度**中的指標。 此外,還顯示了包含前五個模型及其指標的匯總表。
 
-若您不滿意您的正確性計量，可嘗試及改善模型正確性的一些簡單方法為增加定型模型的時間，或是使用更多資料。 否則,選擇**代碼**連結以移動到模型生成器工具中的最後一步。
+如果您對準確性指標不滿意,則嘗試提高模型準確性的一些簡單方法是增加訓練模型或使用更多數據的時間。 否則,選擇**代碼**連結以移動到模型生成器工具中的最後一步。
 
 ## <a name="add-the-code-to-make-predictions"></a>新增程式碼來進行預測
 
@@ -124,7 +124,7 @@ ms.locfileid: "80438234"
 
 ### <a name="configure-the-predictionengine-pool"></a>設定預測引擎池
 
-要進行單一預測,必須建立一個[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是線程安全的。 此外,您必須在應用程式中需要它的地方創建它的實例。 隨著應用程式的增長,此過程可能會變得難以管理。 為提高性能和線程安全性,請使用依賴項注入和服務`PredictionEnginePool`的組合,該服務將創建一個[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件,供整個應用程式使用。
+要進行單一預測,必須建立一個<xref:Microsoft.ML.PredictionEngine%602>。 <xref:Microsoft.ML.PredictionEngine%602> 不是安全執行緒。 此外,您必須在應用程式中需要它的地方創建它的實例。 隨著應用程式的增長,此過程可能會變得難以管理。 為提高性能和線程安全性,請使用依賴項注入和服務`PredictionEnginePool`的組合,該服務將創建一個<xref:Microsoft.Extensions.ObjectPool.ObjectPool%601><xref:Microsoft.ML.PredictionEngine%602>物件,供整個應用程式使用。
 
 1. 安裝*Microsoft.Extensions.ML* NuGet 套件:
 
@@ -277,7 +277,7 @@ ms.locfileid: "80438234"
 
 ## <a name="run-the-application"></a>執行應用程式
 
-現在,您的應用程式已設置,請運行應在瀏覽器中啟動的應用程式。
+現在,您的應用程式已設置,請運行應用程式,該應用程式應在瀏覽器中啟動。
 
 當應用程式啟動時,輸入*模型生成器是很酷的!* 到文本區域。 顯示的預測情緒應該*不是有毒的*。
 

@@ -2,12 +2,12 @@
 title: 序列化和中繼資料
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 1805b6ca06d584237303d1366222419da3e8b9ef
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128115"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81241915"
 ---
 # <a name="serialization-and-metadata"></a>序列化和中繼資料
 
@@ -28,7 +28,7 @@ ms.locfileid: "73128115"
 <Namespace Name="App.Models" Serialize="Required PublicAndInternal" />  
 ```  
   
- 如需範例中所使用語法的資訊，請參閱 [\<Namespace> 項目](namespace-element-net-native.md)。  
+ 有關範例使用的語法的資訊,請參閱[\<命名空間>元素](namespace-element-net-native.md)。  
   
 <a name="Microsoft"></a>
 ## <a name="microsoft-serializers"></a>Microsoft 序列化程式
@@ -37,15 +37,15 @@ ms.locfileid: "73128115"
   
 ### <a name="typeof-used-in-the-constructor"></a>用於建構函式的 typeof
 
- 如果您呼叫這些序列化類別的函式，並在C#方法呼叫中包含[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)運算子，**則不需要執行任何額外的工作**。 例如，在對序列化類別建構函式進行的下列每個呼叫中，`typeof` 關鍵字會用來做為傳遞至建構函式之運算式的一部分。  
+ 如果呼叫這些序列化類別的建構函數,並在方法呼叫中包括 C#[類型](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)運算子,**則不必執行任何其他工作**。 例如，在對序列化類別建構函式進行的下列每個呼叫中，`typeof` 關鍵字會用來做為傳遞至建構函式之運算式的一部分。  
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- .NET Native 編譯器會自動處理此程式碼。  
+ .NET 本機編譯器將自動處理此代碼。  
   
 ### <a name="typeof-used-outside-the-constructor"></a>在建構函式外部使用的 typeof
 
- 如果您呼叫這些序列化類別的處理常式，並在C#提供給此函式的 <xref:System.Type> 參數的運算式外部使用[typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)運算子，則 .NET Native 編譯器無法解析類型：  
+ 如果呼叫這些序列化類別的建構函數,並在提供給建構函數參數的<xref:System.Type>運算式之外使用 C# [typeof](../../csharp/language-reference/operators/type-testing-and-cast.md#typeof-operator)運算子,如以下代碼中,.NET 本機編譯器無法解決類型:  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73128115"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 同樣地，如果您呼叫 <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> 的函式，並提供要序列化的其他 <xref:System.Type> 物件陣列（如下列程式碼所示），則 .NET Native 編譯器無法解析這些類型。  
+ 同樣,如果調用建構函數(如<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29>和提供要序列化的其他<xref:System.Type>物件陣列)(如以下代碼中那樣,.NET本機編譯器無法解決這些類型)。  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
@@ -65,11 +65,11 @@ ms.locfileid: "73128115"
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- 如需範例中所使用語法的資訊，請參閱 [\<Type> 項目](type-element-net-native.md)。  
+ 有關範例使用的語法的資訊,請參閱[\<類型>元素](type-element-net-native.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [執行階段指示詞 (rd.xml) 組態檔參考](runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](runtime-directive-elements.md)
-- [\<類型 > 元素](type-element-net-native.md)
-- [\<Namespace> 項目](namespace-element-net-native.md)
+- [\<型態>元素](type-element-net-native.md)
+- [\<命名空間>元素](namespace-element-net-native.md)

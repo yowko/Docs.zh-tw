@@ -17,12 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: 1b61cc88de4f73abfe6d8e77f8f32c2c71e70a9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c525229eb1ba5ca00ad1042864f92621bb366d2
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158060"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243228"
 ---
 # <a name="backtracking-in-regular-expressions"></a>規則運算式中的回溯
 回溯 (Backtracking) 會在規則運算式模式包含選擇性的[數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)或[替代建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)，且規則運算式引擎返回之前儲存的狀態繼續搜尋相符項目時發生。 回溯是規則運算式的核心能力，可讓運算式功能強大且靈活，並且比對非常複雜的模式。 但同時，這項強大功能需付出相當的代價。 回溯經常是影響規則運算式引擎之效能最重要的一項因素。 幸好開發人員能夠掌控規則運算式引擎的行為，以及其使用回溯的方式。 本主題將說明回溯運作的方式，以及如何進行控制。  
@@ -100,26 +100,26 @@ ms.locfileid: "78158060"
   
 - 它會返回之前儲存的符合結果 3。 然後判斷出有兩個額外的 "a" 字元要指派至額外的擷取群組。 然而，字串結尾測試失敗。 接著它會返回符合結果 3，並嘗試比對兩個額外的擷取群組中的這兩個額外的 "a" 字元。 字串結尾測試仍然失敗。 這些失敗的比對需要經過 12 次比較。 到目前為止，總共執行了 25 次比較。  
   
- 輸入字串與規則運算式的比較會依照這種方式繼續進行，直到規則運算式引擎嘗試過所有可能的比對組合，然後得到沒有符合的結果這個結論。 由於嵌套限定詞，此比較是 O（2<sup>n</sup>） 或指數運量，其中*n*是輸入字串中的字元數。 這表示，在最糟的情況下，包含 30 個字元的輸入字串約需要進行 1,073,741,824 次比較，而包含 40 個字元的輸入字串約需要進行 1,099,511,627,776 次比較。 如果您使用這類長度甚至更長的字串，則規則運算式方法處理不符合規則運算式模式的輸入時，可能需要相當長的時間才能完成。
+ 輸入字串與規則運算式的比較會依照這種方式繼續進行，直到規則運算式引擎嘗試過所有可能的比對組合，然後得到沒有符合的結果這個結論。 由於嵌套限定符,此比較是 O(2<sup>n</sup>) 或指數運量,其中*n*是輸入字串中的字元數。 這表示，在最糟的情況下，包含 30 個字元的輸入字串約需要進行 1,073,741,824 次比較，而包含 40 個字元的輸入字串約需要進行 1,099,511,627,776 次比較。 如果您使用這類長度甚至更長的字串，則規則運算式方法處理不符合規則運算式模式的輸入時，可能需要相當長的時間才能完成。
 
 ## <a name="controlling-backtracking"></a>控制回溯  
- 回溯可讓您建立強大、靈活的規則運算式。 不過，如上一節所示，這些好處可能伴隨著令人敬謝不敏的低落效能。 為了避免大量回溯，當您具現化 <xref:System.Text.RegularExpressions.Regex> 物件或呼叫靜態規則運算式比對方法時，應該定義逾時間隔。 下一節將討論這個部分。 此外，.NET 支援三個正則運算式語言元素，這些元素限制或抑制回溯，支援複雜正則運算式，幾乎沒有性能損失：[原子組](#atomic-groups)、[查看後方斷言](#lookbehind-assertions)和[向前看斷言](#lookahead-assertions)。 如需各語言項目的詳細資訊，請參閱 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
+ 回溯可讓您建立強大、靈活的規則運算式。 不過，如上一節所示，這些好處可能伴隨著令人敬謝不敏的低落效能。 為了避免大量回溯，當您具現化 <xref:System.Text.RegularExpressions.Regex> 物件或呼叫靜態規則運算式比對方法時，應該定義逾時間隔。 下一節將討論這個部分。 此外,.NET 支援三個正則運算式語言元素,這些元素限制或抑制回溯,支援複雜正則運算式,幾乎沒有性能損失:[原子組](#atomic-groups)、[查看後方斷言](#lookbehind-assertions)和[向前看斷言](#lookahead-assertions)。 如需各語言項目的詳細資訊，請參閱 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)。  
 
 ### <a name="defining-a-time-out-interval"></a>定義逾時間隔  
- 從 .NET Framework 4.5 開始，您可以設定逾時值，表示規則運算式引擎開始搜尋單一符合項目到放棄嘗試並擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外狀況之前的最長間隔。 您可以提供執行個體規則運算式之 <xref:System.TimeSpan> 建構函式的 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 值，藉此指定逾時間隔。 此外，每一個靜態模式比對方法都有 <xref:System.TimeSpan> 參數的多載，可讓您指定逾時值。 根據預設，逾時間隔會設為 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> ，表示規則運算式引擎不會逾時。  
+ 從 .NET Framework 4.5 開始，您可以設定逾時值，表示規則運算式引擎開始搜尋單一符合項目到放棄嘗試並擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外狀況之前的最長間隔。 您可以提供執行個體規則運算式之 <xref:System.TimeSpan> 建構函式的 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> 值，藉此指定逾時間隔。 此外，每一個靜態模式比對方法都有 <xref:System.TimeSpan> 參數的多載，可讓您指定逾時值。 根據預設，逾時間隔會設為 <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> ，表示規則運算式引擎不會逾時。  
   
 > [!IMPORTANT]
 > 如果您的規則運算式倚賴回溯，建議您一定要設定逾時間隔。  
   
  <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外狀況表示規則運算式引擎在指定的逾時間隔內找不到相符項目，但不會指出擲回例外狀況的原因。 這個原因可能是大量回溯，不過也有可能是對於擲回例外狀況當時的系統負載而言，設定的逾時間隔太低。 當您處理例外狀況時，可以選擇中放棄一步比對輸入字串，或增加逾時間隔並重試比對作業。  
   
- 例如，下列程式碼會呼叫 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 建構函式來具現化逾時值為一秒的 <xref:System.Text.RegularExpressions.Regex> 物件。 規則運算式模式 `(a+)+$` 會在行尾比對一個或多個 "a" 字元的一個或多個序列，並且受限於大量回溯。 如果擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ，則範例會將逾時值增加至最大間隔三秒。 在這個間隔之後，它就會放棄嘗試比對模式。  
+ 例如，下列程式碼會呼叫 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> 建構函式來具現化逾時值為一秒的 <xref:System.Text.RegularExpressions.Regex> 物件。 規則運算式模式 `(a+)+$` 會在行尾比對一個或多個 "a" 字元的一個或多個序列，並且受限於大量回溯。 如果擲回 <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> ，則範例會將逾時值增加至最大間隔三秒。 在這個間隔之後，它就會放棄嘗試比對模式。  
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
 
 ### <a name="atomic-groups"></a>原子組
- `(?>`*子運算式*`)`語言元素禁止回溯到子運算式。 成功匹配後，它不會放棄其匹配的任何部分到後續的回溯。 例如`(?>\w*\d*)1`，在模式中，如果`1`無法匹配 ，`\d*`也不會放棄其任何匹配項，即使這意味著它將允許 成功`1`匹配。 原子組可以説明防止與失敗匹配相關的性能問題。
+ `(?>`*子表達式*`)`語言元素禁止回溯到子運算式。 成功匹配后,它不會放棄其匹配的任何部分到後續的回溯。 例如`(?>\w*\d*)1`,在模式中,`1`如果無法匹配`\d*`, 也不會放棄其任何匹配項,即使這意味著它`1`將允許 成功 匹配。 原子組可以説明防止與失敗匹配相關的性能問題。
   
  下列範例說明隱藏回溯如何在使用巢狀數量詞時改善效能。 它會測量規則運算式引擎判斷出輸入字串與兩個規則運算式不相符所需的時間。 第一個規則運算式會使用回溯嘗試比對包含出現一次或多次的一個或多個十六進位數字的字串，後面接著一個冒號，再接著一個或多個十六進位數字，最後接著兩個冒號。 第二個規則運算式與第一個完全相同，但會停用回溯。 如範例的輸出所示，停用回溯使效能大幅提升。  
   
@@ -127,9 +127,9 @@ ms.locfileid: "78158060"
  [!code-vb[Conceptual.RegularExpressions.Backtracking#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking4.vb#4)]  
 
 ### <a name="lookbehind-assertions"></a>左合樣判斷提示  
- .NET 包括兩個語言`(?<=`元素，*子運算式*`)`和`(?<!`*子運算式*`)`，與輸入字串中的前一個字元或字元匹配。 這兩個語言項目都是零寬度判斷提示，也就是說，它們會判斷緊接著目前字元前面的一或多個字元是否可由 *subexpression* 比對，而不需前進或回溯。  
+ .NET 包括兩個`(?<=`語言 元素,*子運算*`)`式 和`(?<!`*子運算*`)`式 ,與輸入字串中的前一個字元或字元匹配。 這兩個語言項目都是零寬度判斷提示，也就是說，它們會判斷緊接著目前字元前面的一或多個字元是否可由 *subexpression* 比對，而不需前進或回溯。  
   
- `(?<=`*子運算式*`)`是一個正面的看後斷言;即，當前位置之前的字元或字元必須匹配*子運算式*。 `(?<!`*子運算式*`)`是負外觀斷言;即，當前位置之前的字元或字元必須與*子運算式*不匹配。 當*子運算式*是前一個子運算式的子集時，正和負查找斷言都最有用。  
+ `(?<=`*子表達式*`)`是一個正面的看後斷言;此位置的字元或字元必須符合*子表示式*。 `(?<!`*子表達式*`)`是負外觀斷言;即,當前位置之前的字元或字元必須與*子運算*式 不匹配。 當*子表達式*是前一個子表達式的子集時,正和負查找斷言都最有用。  
   
  下列範例使用兩個同等的規則運算式模式，來驗證電子郵件地址中的使用者名稱。 第一個模式因為進行大量回溯，而受限於低落的效能。 第二個模式修改了第一個規則運算式，將巢狀數量詞取代為左合樣判斷提示。 範例的輸入顯示 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法的執行時間。  
   
@@ -158,9 +158,9 @@ ms.locfileid: "78158060"
 |`@`|比對 "\@" 記號。|  
 
 ### <a name="lookahead-assertions"></a>右合樣判斷提示  
- .NET 包括兩個語言`(?=`元素，*子運算式*`)`和`(?!`*子運算式*`)`，匹配輸入字串中的下一個字元或字元。 這兩個語言項目都是零寬度判斷提示，也就是說，它們會判斷緊接著目前字元後面的一或多個字元是否可由 *subexpression* 比對，而不需前進或回溯。  
+ .NET 包括兩個`(?=`語言 元素,*子運算*`)`式 和`(?!`*子運算*`)`式 ,匹配輸入字串中的下一個字元或字元。 這兩個語言項目都是零寬度判斷提示，也就是說，它們會判斷緊接著目前字元後面的一或多個字元是否可由 *subexpression* 比對，而不需前進或回溯。  
   
- `(?=`*子運算式*`)`是一個積極的前視斷言;即，當前位置之後的字元或字元必須匹配*子運算式*。 `(?!`*子運算式*`)`是一個負的超前斷言;即，當前位置之後的字元或字元必須與*子運算式*不匹配。 當*子運算式*是下一個子運算式的子集時，正和負的提前前斷言都非常有用。  
+ `(?=`*子表達式*`)`是一個積極的前視斷言;即,目前位置之後的字元或字元必須匹配*子運算*式 。 `(?!`*子表達式*`)`是一個負的超前斷言;即,當前位置之後的字元或字元必須與*子表達式*不匹配。 當*子表達式*是下一個子表達式的子集時,正和負的提前前斷言都非常有用。  
   
  下列範例使用兩個同等的規則運算式模式，這兩個模式會驗證完整類型名稱。 第一個模式因為進行大量回溯，而受限於低落的效能。 第二個修改了第一個規則運算式，將巢狀數量詞取代為右合樣判斷提示。 範例的輸入顯示 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 方法的執行時間。  
   
@@ -191,7 +191,7 @@ ms.locfileid: "78158060"
 ## <a name="see-also"></a>另請參閱
 
 - [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)
-- [正則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [規則運算式語言 - 快速參考](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [數量詞](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
-- [替代建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [交替建構](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
+- [群組建構](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

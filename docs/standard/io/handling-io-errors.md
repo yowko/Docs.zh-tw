@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120747"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242669"
 ---
 # <a name="handling-io-errors-in-net"></a>在 .NET 中處理 I/O 錯誤
 
@@ -39,7 +39,7 @@ ms.locfileid: "73120747"
 
 例如在 Windows 作業系統上，傳回 `ERROR_FILE_NOT_FOUND` 錯誤碼 (或 0x02) 的方法呼叫會對應至 <xref:System.IO.FileNotFoundException>，傳回 `ERROR_PATH_NOT_FOUND` 錯誤碼 (或 0x03) 的方法呼叫會對應至 <xref:System.IO.DirectoryNotFoundException>。
 
-不過，作業系統會傳回特定錯誤碼的精確條件，通常未記載或記載不佳。 因此會發生未預期的例外狀況。 例如，因為您使用目錄而不是檔案，您可預期對 <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType> 建構函式提供無效的目錄路徑會擲回 <xref:System.IO.DirectoryNotFoundException>。 不過，它也可能會擲回 <xref:System.IO.FileNotFoundException>。
+不過，作業系統會傳回特定錯誤碼的精確條件，通常未記載或記載不佳。 因此會發生未預期的例外狀況。 例如，因為您使用目錄而不是檔案，您可預期對 <xref:System.IO.DirectoryInfo.%23ctor%2A> 建構函式提供無效的目錄路徑會擲回 <xref:System.IO.DirectoryNotFoundException>。 不過，它也可能會擲回 <xref:System.IO.FileNotFoundException>。
 
 ## <a name="exception-handling-in-io-operations"></a>I/O 作業中的例外狀況處理
 

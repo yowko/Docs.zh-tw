@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c08f4309d7673d7e7fb1c6bd84307e4323411d9e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79174780"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242682"
 ---
 # <a name="globalization"></a>全球化
 
@@ -38,7 +38,7 @@ ms.locfileid: "79174780"
 
 包括 Windows 作業系統在內的許多應用程式和作業系統，也可以使用字碼頁代表字元集。 字碼頁通常包含 0x00 到 0x7F 的標準 ASCII 值，並將其他字元對應到其餘從 0x80 到 0xFF 的值。 0x80 到 0xFF 值的解譯取決於特定字碼頁。 因此，您應該盡可能避免在全球化應用程式中使用字碼頁。
 
-下列範例說明在系統上的預設字碼頁與儲存資料的字碼頁不同的情況下，解譯字碼頁資料所可能造成的危險性。 （為了類比此方案，該示例顯式指定不同的字碼頁。首先，該示例定義由希臘字母大寫字元組成的陣列。 它使用字碼頁 737 (也稱為 MS-DOS 希臘文) 將它們編碼成位元組陣列，並將其儲存至檔案。 如果擷取檔案，並使用字碼頁 737 將位元組陣列解碼，則會還原原始的字元。 然而，如果擷取檔案但使用字碼頁 1252 (也稱作 Windows-1252，代表拉丁字母的字元) 將位元組陣列解碼，則會遺失原始的字元。
+下列範例說明在系統上的預設字碼頁與儲存資料的字碼頁不同的情況下，解譯字碼頁資料所可能造成的危險性。 (為了類比此方案,該範例顯示式指定不同的代碼頁。首先,該示例定義由希臘字母大寫字元組成的陣列。 它使用字碼頁 737 (也稱為 MS-DOS 希臘文) 將它們編碼成位元組陣列，並將其儲存至檔案。 如果擷取檔案，並使用字碼頁 737 將位元組陣列解碼，則會還原原始的字元。 然而，如果擷取檔案但使用字碼頁 1252 (也稱作 Windows-1252，代表拉丁字母的字元) 將位元組陣列解碼，則會遺失原始的字元。
 
 [!code-csharp[Conceptual.Globalization#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/codepages1.cs#1)]
 [!code-vb[Conceptual.Globalization#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/codepages1.vb#1)]
@@ -66,7 +66,7 @@ ms.locfileid: "79174780"
 > [!TIP]
 > 您可以搭配 <xref:System.Globalization.StringInfo> 類別使用文字項目，而無須使用字串中的個別字元。
 
-在字串搜尋和比較中，常見的錯誤是將字串視為字元的集合，且各個都由一個 <xref:System.Char> 物件表示。 事實上，單一字元可能由一個、兩個或多個 <xref:System.Char> 物件所形成。 若字母是由 Unicode 基本拉丁字元範圍 (U+0021 到 U+007E) 以外的字元所組成，則在此文化特性的字串中最常出現上述這類字元。 下列範例嘗試在字串中尋找拉丁大寫字母 A 帶抑音符號字元 (U+00C0) 的索引。 但是，此字元可以以兩種不同的方式表示：作為單個代碼單元 （U+00C0） 或複合字元（兩個代碼單元：U+0041 和 U+0300）。 在這種情況下，字元由兩<xref:System.Char>個物件 U_0041 和 U_0300 在字串實例中表示。 範例程式碼會呼叫 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 和 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 多載，以在字串執行個體中尋找此字元的位置，但這些多載會傳回不同的結果。 第一個方法呼叫具有 <xref:System.Char> 引數；它會執行序數比較，因此找不到相符項目。 第二個呼叫具有 <xref:System.String> 引數；它會執行區分文化特性的比較，因此會找到相符項目。
+在字串搜尋和比較中，常見的錯誤是將字串視為字元的集合，且各個都由一個 <xref:System.Char> 物件表示。 事實上，單一字元可能由一個、兩個或多個 <xref:System.Char> 物件所形成。 若字母是由 Unicode 基本拉丁字元範圍 (U+0021 到 U+007E) 以外的字元所組成，則在此文化特性的字串中最常出現上述這類字元。 下列範例嘗試在字串中尋找拉丁大寫字母 A 帶抑音符號字元 (U+00C0) 的索引。 但是,此字元可以以兩種不同的方式表示:作為單個代碼單元 (U+00C0) 或複合字元(兩個代碼單元:U+0041 和 U+0300)。 在這種情況下,字元由兩<xref:System.Char>個物件 U_0041 和 U_0300 在字串實例中表示。 範例程式碼會呼叫 <xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> 和 <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> 多載，以在字串執行個體中尋找此字元的位置，但這些多載會傳回不同的結果。 第一個方法呼叫具有 <xref:System.Char> 引數；它會執行序數比較，因此找不到相符項目。 第二個呼叫具有 <xref:System.String> 引數；它會執行區分文化特性的比較，因此會找到相符項目。
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]
@@ -336,9 +336,9 @@ ms.locfileid: "79174780"
 
 - .NET 支援取代文化特性 (Culture)。 這可讓您定義新的自訂文化特性，進而補充現有標準文化特性，或完全加以取代。
 
-- 在 Windows 系統上，使用者可透過使用 [控制台] 中的 [地區和語言]**** 應用程式，自訂文化特性 (Culture) 專屬的設定。 將 <xref:System.Globalization.CultureInfo> 物件具現化時，您可透過呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來判斷其是否反映這些使用者自訂。 通常，對於最終使用者應用，應尊重使用者首選項，以便以使用者期望的格式顯示資料。
+- 在 Windows 系統上，使用者可透過使用 [控制台] 中的 [地區和語言]**** 應用程式，自訂文化特性 (Culture) 專屬的設定。 將 <xref:System.Globalization.CultureInfo> 物件具現化時，您可透過呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> 建構函式來判斷其是否反映這些使用者自訂。 通常,對於最終使用者應用,應尊重使用者首選項,以便以使用者期望的格式顯示數據。
 
 ## <a name="see-also"></a>另請參閱
 
-- [全球化和當地語系化](../../../docs/standard/globalization-localization/index.md)
+- [全球化與當地語系化](../../../docs/standard/globalization-localization/index.md)
 - [使用字串的最佳做法](../../../docs/standard/base-types/best-practices-strings.md)
