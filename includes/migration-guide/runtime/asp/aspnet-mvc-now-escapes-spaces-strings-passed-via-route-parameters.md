@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: 2278d82d5362fe217ca4bce02a052d4b440843c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7444ddbdd4a7c5f731fba8528ee2334374fc254e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67803177"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81275054"
 ---
-### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a><span data-ttu-id="0164e-101">ASP.NET MVC 現在會將透過路由參數傳入之字串中的空格逸出</span><span class="sxs-lookup"><span data-stu-id="0164e-101">ASP.NET MVC now escapes spaces in strings passed in via route parameters</span></span>
+### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a><span data-ttu-id="64546-101">ASP.NET MVC 現在會將透過路由參數傳入之字串中的空格逸出</span><span class="sxs-lookup"><span data-stu-id="64546-101">ASP.NET MVC now escapes spaces in strings passed in via route parameters</span></span>
 
 |   |   |
 |---|---|
-|<span data-ttu-id="0164e-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="0164e-102">Details</span></span>|<span data-ttu-id="0164e-103">為了遵守 RFC 2396，從路由填入動作參數時，現在會將路由路徑中的空格逸出。</span><span class="sxs-lookup"><span data-stu-id="0164e-103">In order to conform to RFC 2396, spaces in route paths are now escaped when populating action parameters from a route.</span></span> <span data-ttu-id="0164e-104">因此，雖然 <code>/controller/action/some data</code> 先前會比對路由 <code>/controller/action/{data}</code> 並提供 <code>some data</code> 作為資料參數，但現在會改為提供 <code>some%20data</code>。</span><span class="sxs-lookup"><span data-stu-id="0164e-104">So, whereas  <code>/controller/action/some data</code> would previously match the route <code>/controller/action/{data}</code> and provide <code>some data</code> as the data parameter, it will now provide <code>some%20data</code> instead.</span></span>|
-|<span data-ttu-id="0164e-105">建議</span><span class="sxs-lookup"><span data-stu-id="0164e-105">Suggestion</span></span>|<span data-ttu-id="0164e-106">您應該更新程式碼，以將路由中的字串參數設為未逸出。</span><span class="sxs-lookup"><span data-stu-id="0164e-106">Code should be updated to unescape string parameters from a route.</span></span> <span data-ttu-id="0164e-107">如果需要原始 URI，您可以使用 <xref:System.Net.HttpWebRequest.RequestUri>.OriginalString API 來存取。</span><span class="sxs-lookup"><span data-stu-id="0164e-107">If the original URI is needed, it can be accessed with the <xref:System.Net.HttpWebRequest.RequestUri>.OriginalString API.</span></span>|
-|<span data-ttu-id="0164e-108">影響範圍</span><span class="sxs-lookup"><span data-stu-id="0164e-108">Scope</span></span>|<span data-ttu-id="0164e-109">Minor</span><span class="sxs-lookup"><span data-stu-id="0164e-109">Minor</span></span>|
-|<span data-ttu-id="0164e-110">版本</span><span class="sxs-lookup"><span data-stu-id="0164e-110">Version</span></span>|<span data-ttu-id="0164e-111">4.5.2</span><span class="sxs-lookup"><span data-stu-id="0164e-111">4.5.2</span></span>|
-|<span data-ttu-id="0164e-112">類型</span><span class="sxs-lookup"><span data-stu-id="0164e-112">Type</span></span>|<span data-ttu-id="0164e-113">執行階段</span><span class="sxs-lookup"><span data-stu-id="0164e-113">Runtime</span></span>|
-|<span data-ttu-id="0164e-114">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="0164e-114">Affected APIs</span></span>|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)?displayProperty=nameWithType></li></ul>|
+|<span data-ttu-id="64546-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="64546-102">Details</span></span>|<span data-ttu-id="64546-103">為了遵守 RFC 2396，從路由填入動作參數時，現在會將路由路徑中的空格逸出。</span><span class="sxs-lookup"><span data-stu-id="64546-103">In order to conform to RFC 2396, spaces in route paths are now escaped when populating action parameters from a route.</span></span> <span data-ttu-id="64546-104">因此，雖然 <code>/controller/action/some data</code> 先前會比對路由 <code>/controller/action/{data}</code> 並提供 <code>some data</code> 作為資料參數，但現在會改為提供 <code>some%20data</code>。</span><span class="sxs-lookup"><span data-stu-id="64546-104">So, whereas  <code>/controller/action/some data</code> would previously match the route <code>/controller/action/{data}</code> and provide <code>some data</code> as the data parameter, it will now provide <code>some%20data</code> instead.</span></span>|
+|<span data-ttu-id="64546-105">建議</span><span class="sxs-lookup"><span data-stu-id="64546-105">Suggestion</span></span>|<span data-ttu-id="64546-106">您應該更新程式碼，以將路由中的字串參數設為未逸出。</span><span class="sxs-lookup"><span data-stu-id="64546-106">Code should be updated to unescape string parameters from a route.</span></span> <span data-ttu-id="64546-107">如果需要原始 URI，您可以使用 <xref:System.Net.HttpWebRequest.RequestUri>.OriginalString API 來存取。</span><span class="sxs-lookup"><span data-stu-id="64546-107">If the original URI is needed, it can be accessed with the <xref:System.Net.HttpWebRequest.RequestUri>.OriginalString API.</span></span>|
+|<span data-ttu-id="64546-108">影響範圍</span><span class="sxs-lookup"><span data-stu-id="64546-108">Scope</span></span>|<span data-ttu-id="64546-109">Minor</span><span class="sxs-lookup"><span data-stu-id="64546-109">Minor</span></span>|
+|<span data-ttu-id="64546-110">版本</span><span class="sxs-lookup"><span data-stu-id="64546-110">Version</span></span>|<span data-ttu-id="64546-111">4.5.2</span><span class="sxs-lookup"><span data-stu-id="64546-111">4.5.2</span></span>|
+|<span data-ttu-id="64546-112">類型</span><span class="sxs-lookup"><span data-stu-id="64546-112">Type</span></span>|<span data-ttu-id="64546-113">執行階段</span><span class="sxs-lookup"><span data-stu-id="64546-113">Runtime</span></span>|
+|<span data-ttu-id="64546-114">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="64546-114">Affected APIs</span></span>|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)></li></ul>|
