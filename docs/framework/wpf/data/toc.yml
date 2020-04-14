@@ -1,6 +1,6 @@
 - name: 資料繫結文件
   href: index.md
-- name: 概觀
+- name: 總覽
   href: ../../../desktop-wpf/data/data-binding-overview.md?toc=/dotnet/framework/wpf/data/toc.json&bc=/dotnet/framework/wpf/data/breadcrumb/toc.json
 - name: 繫結來源
   href: binding-sources-overview.md
@@ -8,7 +8,7 @@
   href: data-templating-overview.md
 - name: 繫結宣告
   href: binding-declarations-overview.md
-- name: 操作方式
+- name: 操作說明
   items:
     - name: 資料繫結的使用說明主題
       href: data-binding-how-to-topics.md
@@ -80,15 +80,13 @@
       href: how-to-clear-bindings.md
     - name: 尋找 DataTemplate 產生的項目
       href: how-to-find-datatemplate-generated-elements.md
-    - name: 繫結至 Web 服務
-      href: how-to-bind-to-a-web-service.md
 - name: 使用 LINQ to XML 進行資料繫結
   items:
-    - name: 概觀
+    - name: 總覽
       href: wpf-data-binding-with-linq-to-xml-overview.md
     - name: LINQ to XML 動態屬性
       items:
-        - name: 概觀
+        - name: 總覽
           displayName: LINQ to XML dynamic properties
           href: linq-to-xml-dynamic-properties.md
         - name: XAttribute 動態屬性
@@ -99,11 +97,11 @@
           items:
             - name: 屬性
               href: attribute-xelement-dynamic-property.md
-            - name: 元素
+            - name: 項目
               href: element-xelement-dynamic-property.md
-            - name: 元素
+            - name: 項目
               href: elements-xelement-dynamic-property.md
-            - name: Descendants
+            - name: 子系
               href: descendants-xelement-dynamic-property.md
             - name: 值
               href: value-xelement-dynamic-property.md
