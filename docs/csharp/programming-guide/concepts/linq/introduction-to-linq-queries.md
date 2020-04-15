@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 7fbdfa8656e3c4832226370dc6efe56964e14934
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a9d97ff14f087ddfc55986bf77f18492cbf8a04
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168501"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389584"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 查詢簡介 (C#)
-「查詢」** 是指從資料來源中擷取資料的運算式。 查詢通常以特定的查詢語言來表示。 針對各種資料來源類型開發不同的語言已有一段時間，例如用於關聯式資料庫的 SQL，以及用於 XML 的 XQuery。 因此，開發人員在過去必須針對所需支援的每種資料來源類型或資料格式，學習新的查詢語言。 LINQ 通過提供一致的模型來跨各種資料來源和格式處理資料，從而簡化了這種情況。 在 LINQ 查詢中，您始終使用物件。 使用相同的基本編碼模式來查詢和轉換 XML 文檔、SQL 資料庫、ADO.NET資料集、.NET 集合以及 LINQ 提供程式可用的任何其他格式中的資料。  
+「查詢」** 是指從資料來源中擷取資料的運算式。 查詢通常以特定的查詢語言來表示。 針對各種資料來源類型開發不同的語言已有一段時間，例如用於關聯式資料庫的 SQL，以及用於 XML 的 XQuery。 因此，開發人員在過去必須針對所需支援的每種資料來源類型或資料格式，學習新的查詢語言。 LINQ 透過提供一致的模型來跨各種資料源和格式處理資料,從而簡化了這種情況。 在 LINQ 查詢中,您始終使用物件。 使用相同的基本編碼模式來查詢和轉換 XML 文件、SQL 資料庫、ADO.NET資料集、.NET 集合以及 LINQ 提供者可用的任何其他格式中的數據。  
   
 ## <a name="three-parts-of-a-query-operation"></a>查詢作業的三個部分  
- 所有 LINQ 查詢操作由三個不同的操作組成：  
+ 所有 LINQ 查詢操作由三個不同的操作組成:  
   
 1. 取得資料來源。  
   
@@ -30,18 +30,18 @@ ms.locfileid: "79168501"
   
  [!code-csharp[CsLINQGettingStarted#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#1)]  
   
- 下圖顯示完整的查詢作業。 在 LINQ 中，查詢的執行不同于查詢本身。 換句話說，您沒有僅僅通過創建查詢變數來檢索任何資料。  
+ 下圖顯示完整的查詢作業。 在 LINQ 中,查詢的執行不同於查詢本身。 換句話說,您沒有僅僅通過創建查詢變數來檢索任何數據。  
   
  ![完整 LINQ 查詢作業的圖表。](./media/introduction-to-linq-queries/linq-query-complete-operation.png)  
   
 ## <a name="the-data-source"></a>資料來源  
  在上述範例中，因為資料來源來自陣列，意味著其也支援泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面。 這一事實意味著可以使用 LINQ 查詢它。 查詢會在 `foreach` 陳述式中執行，而 `foreach` 則需要<xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601>。 支援 <xref:System.Collections.Generic.IEnumerable%601> 或衍生介面的類型，例如泛型 <xref:System.Linq.IQueryable%601> 稱為*可查詢的類型*。  
   
- 可查詢型別無需修改或特殊處理即可用作 LINQ 資料來源。 如果來源資料尚未作為可查詢型別在記憶體中，LINQ 提供程式必須表示它。 例如 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會將 XML 文件載入可查詢的 <xref:System.Xml.Linq.XElement> 類型：  
+ 可查詢類型無需修改或特殊處理即可用作 LINQ 資料來源。 如果源數據尚未作為可查詢類型在記憶體中,LINQ 提供程式必須表示它。 例如 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 會將 XML 文件載入可查詢的 <xref:System.Xml.Linq.XElement> 類型：  
   
  [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
- 使用 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 時，請先在設計階段以手動方式或使用 [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)，來建立物件關聯式對應。 您可以針對物件撰寫查詢，而 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 則會在執行階段處理與資料庫之間的通訊。 在下列範例中，`Customers` 代表資料庫中特定的資料表，而查詢結果 <xref:System.Linq.IQueryable%601> 的類型則衍生自 <xref:System.Collections.Generic.IEnumerable%601>。  
+ 使用[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)],您首先在設計時手動或使用[LINQ 到 Visual Studio 中的 SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)創建對象關係映射。 您可以針對物件撰寫查詢，而 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 則會在執行階段處理與資料庫之間的通訊。 在下列範例中，`Customers` 代表資料庫中特定的資料表，而查詢結果 <xref:System.Linq.IQueryable%601> 的類型則衍生自 <xref:System.Collections.Generic.IEnumerable%601>。  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
@@ -53,15 +53,15 @@ IQueryable<Customer> custQuery =
     select cust;  
 ```  
   
- 有關如何創建特定類型的資料來源的詳細資訊，請參閱各種 LINQ 提供程式的文檔。 但是，基本規則非常簡單：LINQ 資料來源是支援泛型<xref:System.Collections.Generic.IEnumerable%601>介面的任何物件，或從該介面繼承的介面。  
+ 有關如何創建特定類型的數據源的詳細資訊,請參閱各種 LINQ 提供程式的文檔。 但是,基本規則非常簡單:LINQ 數據源是支援泛<xref:System.Collections.Generic.IEnumerable%601>型 介面的任何物件,或從該介面繼承的介面。  
   
 > [!NOTE]
-> 支援非泛<xref:System.Collections.ArrayList>型<xref:System.Collections.IEnumerable>介面的類型也可以用作 LINQ 資料來源。 有關詳細資訊，請參閱如何使用[LINQ （C#） 查詢 ArrayList。](./how-to-query-an-arraylist-with-linq.md)  
+> 支援非泛<xref:System.Collections.ArrayList>型<xref:System.Collections.IEnumerable>介面的類型也可以用作 LINQ 數據源。 有關詳細資訊,請參閱如何使用[LINQ (C#) 查詢 ArrayList。](./how-to-query-an-arraylist-with-linq.md)  
   
-## <a name="query"></a>查詢  
+## <a name="the-query"></a><a name="query"></a>查詢  
  查詢可指定要從一或多個資料來源擷取的資訊。 查詢也可選擇性地指定該項資訊傳回之前應該如何排序、分組和成形。 查詢是儲存在查詢變數中，並以查詢運算式初始化。 為了簡化撰寫查詢的作業，C# 已引進新的查詢語法。  
   
- 上述範例中的查詢會傳回整數陣列中的所有偶數。 此查詢運算式包含三個子句︰`from`、`where` 和 `select` （如果您熟悉 SQL，您就會注意到子句的順序與 SQL 中的順序相反。子`from`句指定資料來源，`where`子句應用篩選器，`select`子句指定返回的元素的類型。 在[語言集成查詢 （LINQ）](../../../linq/index.md)部分中詳細討論了這些和其他查詢子句。 現在，重要的是，在 LINQ 中，查詢變數本身不執行任何操作，不返回任何資料。 它只會儲存稍後執行查詢以產生結果時所需要的資訊。 如需如何在幕後建構查詢的詳細資訊，請參閱[標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)。  
+ 上述範例中的查詢會傳回整數陣列中的所有偶數。 此查詢運算式包含三個子句︰`from`、`where` 和 `select` (如果您熟悉 SQL,您就會注意到子句的順序與 SQL 中的順序相反。子`from`句指定資料來源`where`, 子句應用篩選`select`器, 子句指定返回的元素的類型。 在[語言整合查詢 (LINQ)](../../../linq/index.md)部分中詳細討論了這些和其他查詢子句。 現在,重要的是,在 LINQ 中,查詢變數本身不執行任何操作,不返回任何數據。 它只會儲存稍後執行查詢以產生結果時所需要的資訊。 如需如何在幕後建構查詢的詳細資訊，請參閱[標準查詢運算子概觀 (C#)](./standard-query-operators-overview.md)。  
   
 > [!NOTE]
 > 查詢也可以使用方法語法來表示。 如需詳細資訊，請參閱 [LINQ 中的查詢語法及方法語法](./query-syntax-and-method-syntax-in-linq.md)。  
@@ -90,8 +90,8 @@ IQueryable<Customer> custQuery =
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 C 中開始使用 LINQ#](index.md)
+- [開始使用 C# 中的 LINQ](index.md)
 - [逐步解說：在 C# 中撰寫查詢](./walkthrough-writing-queries-linq.md)
-- [語言綜合查詢（LINQ）](../../../linq/index.md)
+- [語言內容查詢(LINQ)](../../../linq/index.md)
 - [foreach、in](../../../language-reference/keywords/foreach-in.md)
-- [查詢關鍵字 （LINQ）](../../../language-reference/keywords/query-keywords.md)
+- [查詢關鍵字 (LINQ)](../../../language-reference/keywords/query-keywords.md)

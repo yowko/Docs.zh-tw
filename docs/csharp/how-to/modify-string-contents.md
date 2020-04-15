@@ -3,12 +3,12 @@ title: 如何變更字串內容 - C# 指南
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: f31fa94501ac2120e22e229dfc11babb8b8cc0f3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8e9bbe76c689d3c3f9f238ca9dd95cc7fcf98b18
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242851"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389518"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>如何變更 C 字串內容\#
 
@@ -16,7 +16,7 @@ ms.locfileid: "81242851"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-本文示範了多種技術。 您可以取代現有的文字。 您可以搜尋模式，並以其他文字取代相符的文字。 您可以將字串視為一串字元。 您也可以使用便利的方法來移除空白字元。 您應該選擇最符合您案例的技術。
+本文示範了多種技術。 您可以取代現有的文字。 您可以搜尋模式，並以其他文字取代相符的文字。 您可以將字串視為一串字元。 您也可以使用便利的方法來移除空白字元。 選擇與您的方案最匹配的技術。
 
 ## <a name="replace-text"></a>取代文字
 
@@ -48,7 +48,7 @@ ms.locfileid: "81242851"
 
 您可使用[規則運算式](../../standard/base-types/regular-expressions.md)以新文字取代文字相符模式，可由模式定義。 下列範例使用 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> 類別在來源字串中尋找模式，並以適當的大小寫加以取代。 <xref:System.Text.RegularExpressions.Regex.Replace(System.String,System.String,System.Text.RegularExpressions.MatchEvaluator,System.Text.RegularExpressions.RegexOptions)?displayProperty=nameWithType> 方法會以提供取代項目邏輯的函式作為其引數之一。 在此範例中，該函式 `LocalReplaceMatchCase` 是在範例方法中宣告的**區域函式**。 `LocalReplaceMatchCase` 會使用 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別以適當的大小寫來建置取代字串。
 
-規則運算式在搜尋及取代遵循模式的文字時相當實用，但對於已知文字則否。 [請參閱如何搜索字串](search-strings.md)以瞭解更多詳細資訊。 搜尋模式 "the\s" 會搜尋後面接著空白字元的字組 "the"。 模式的該部分會確認其不會對應來源字串中的 "there"。 如需規則運算式語言元素的詳細資訊，請參閱[規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)。
+規則運算式在搜尋及取代遵循模式的文字時相當實用，但對於已知文字則否。 關於詳細資訊,請參考[如何搜尋字串](search-strings.md)。 搜尋模式 "the\s" 會搜尋後面接著空白字元的字組 "the"。 模式的該部分會確認其不會對應來源字串中的 "there"。 如需規則運算式語言元素的詳細資訊，請參閱[規則運算式語言 - 快速參考](../../standard/base-types/regular-expression-language-quick-reference.md)。
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#5)]
 

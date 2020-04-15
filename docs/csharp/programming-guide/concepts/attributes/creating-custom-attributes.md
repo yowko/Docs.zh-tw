@@ -2,12 +2,12 @@
 title: 建立自訂屬性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 500e1977-c6de-462d-abce-78a0eb1eda22
-ms.openlocfilehash: c0f25adf0d562b659edaa8f36e72332fd0c1ee7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ec959723c339a13a40fd62388421ceacb736dfca
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595413"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389550"
 ---
 # <a name="creating-custom-attributes-c"></a>建立自訂屬性 (C#)
 您可以建立自己的自訂屬性，方法是定義屬性類別，這是直接或間接衍生自 <xref:System.Attribute> 的類別，它能快速且簡單地在中繼資料中識別屬性定義。 假設您想要用撰寫類型的程式設計人員姓名來標記類型。 您可能會定義自訂的 `Author` 屬性類別：  
@@ -66,9 +66,9 @@ class SampleClass
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection>
-- [C# 程式設計指南](../../index.md)
+- [C# 編程指南](../../index.md)
 - [撰寫自訂屬性](../../../../standard/attributes/writing-custom-attributes.md)
 - [反映 (C#)](../reflection.md)
 - [屬性 (C#)](./index.md)
 - [使用反映存取屬性 (C#)](./accessing-attributes-by-using-reflection.md)
-- [AttributeUsage (C#)](./attributeusage.md)
+- [AttributeUsage (C#)](../../../language-reference/attributes/general.md)

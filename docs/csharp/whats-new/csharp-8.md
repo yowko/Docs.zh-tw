@@ -2,12 +2,12 @@
 title: C# 8.0 - C# 指南中的新增功能
 description: 大致了解 C# 8.0 中可用的新功能。
 ms.date: 04/07/2020
-ms.openlocfilehash: 1a005750751129969f2d1e9caf156330dbe61cb2
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 2998beb378c68bead7f34e2a0963c40cf610a442
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989203"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389096"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -76,7 +76,7 @@ warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonl
 public readonly double Distance => Math.Sqrt(X * X + Y * Y);
 ```
 
-請注意,`readonly`在唯讀屬性上需要修改器。 編譯器不假定`get`訪問器不修改狀態,但您必須顯示式聲明`readonly`。 自動實現的屬性是一個例外;編譯器將所有自動實現的 getter 視為唯讀,因此此處`readonly`無需將修飾符添加`X``Y`到 和 屬性。
+請注意,`readonly`在唯讀屬性上需要修改器。 編譯器不假定`get`訪問器不修改狀態,但您必須顯示式聲明`readonly`。 自動實現的屬性是一個例外;編譯器將所有自動實現的`readonly`getter 視為 ,因此此`readonly`處無需將 修飾`X``Y`符添加到 和 屬性。
 
 編譯器強制實施`readonly`成員不修改狀態的規則。 除非刪除變更器,`readonly`否則以下方法不會編譯:
 
@@ -88,7 +88,9 @@ public readonly void Translate(int xOffset, int yOffset)
 }
 ```
 
-此功能可讓您指定您的設計意圖，以便編譯器可以強制套用，並根據該意圖進行最佳化。 您可以在上[`readonly`](../language-reference/keywords/readonly.md#readonly-member-examples)的語言參考文章中瞭解有關唯讀成員的更多內容。
+此功能可讓您指定您的設計意圖，以便編譯器可以強制套用，並根據該意圖進行最佳化。
+
+有關詳細資訊,請參閱[結構類型](../language-reference/builtin-types/struct.md)文章的[`readonly`實例成員](../language-reference/builtin-types/struct.md#readonly-instance-members)部分。
 
 ## <a name="default-interface-methods"></a>預設介面方法
 

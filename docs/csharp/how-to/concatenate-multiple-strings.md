@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 87ec5104f36d0c6cce12037e70dacf2752ef5e62
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: bbdeba4ee3526140de29ac0d7c97e9a593729d47
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121057"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389527"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>如何串聯多個字串(C# 指南)
 
@@ -37,13 +37,13 @@ ms.locfileid: "81121057"
 
 <xref:System.String.Format%2A?displayProperty=nameWithType> 也是串連字串的方法。 當您從少量元件字串建置字串時，此方法能順利執行。
 
-在其他情況下，您可能要結合迴圈中的字串，但您不知道要結合的來源字串數是多少，而且實際來源字串數可能非常大。 <xref:System.Text.StringBuilder> 類別專為這種案例而設計。 下列程式碼會使用 <xref:System.Text.StringBuilder> 類別的 <xref:System.Text.StringBuilder.Append%2A> 方法來串連字串。  
+在其他情況下,您可能正在一個迴圈中組合字串,不知道要組合多少原始字串,並且原始字串的實際數量可能很大。 <xref:System.Text.StringBuilder> 類別專為這種案例而設計。 下列程式碼會使用 <xref:System.Text.StringBuilder> 類別的 <xref:System.Text.StringBuilder.Append%2A> 方法來串連字串。  
   
 [!code-csharp-interactive[string concatenation using string builder](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#4)]  
 
 您可以閱讀有關[選擇字串串聯`StringBuilder`或類的原因](xref:System.Text.StringBuilder#StringAndSB)的更多內容。
 
-從集合加入字串的另一個選項是使用 <xref:System.String.Concat%2A?displayProperty=nameWithType> 方法。 如果應該以分隔符號分隔來源字串，請使用 <xref:System.String.Join%2A?displayProperty=nameWithType> 方法。 下列程式碼會使用這兩種方法來結合文字陣列：
+從集合加入字串的另一個選項是使用 <xref:System.String.Concat%2A?displayProperty=nameWithType> 方法。 如果<xref:System.String.Join%2A?displayProperty=nameWithType>原始字串應由分隔符分隔,請使用方法。 下列程式碼會使用這兩種方法來結合文字陣列：
 
 [!code-csharp-interactive[concatenation of string collection](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#5)]
 

@@ -2,16 +2,16 @@
 title: dotnet sln 命令
 description: dotnet-sln 命令提供方便在方案檔中新增、移除及列出專案的選項。
 ms.date: 02/14/2020
-ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 615e25e30a63b6ca36d9898cfcde565053830572
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543478"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389643"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
-**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
+**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -27,7 +27,7 @@ dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
 
 該`dotnet sln`命令提供了一種在解決方案檔中列出和修改專案的便捷方法。
 
-若要使用 `dotnet sln` 命令，方案檔必須已經存在。 如果需要創建一個命令，請使用[dotnet 新](dotnet-new.md)命令，如以下示例所示：
+若要使用 `dotnet sln` 命令，方案檔必須已經存在。 如果需要建立指令,請使用[dotnet 新](dotnet-new.md)指令,如以下範例所示:
 
 ```dotnetcli
 dotnet new sln
@@ -37,7 +37,7 @@ dotnet new sln
 
 - **`SOLUTION_FILE`**
 
-  要使用的解決方案檔。 如果省略此參數，該命令將搜索目前的目錄。 如果找不到解決方案檔或多個解決方案檔，則命令將失敗。
+  要使用的解決方案檔。 如果省略此參數,該命令將搜索當前目錄。 如果找不到解決方案檔或多個解決方案檔,則命令將失敗。
 
 ## <a name="options"></a>選項。
 
@@ -61,7 +61,7 @@ dotnet sln list [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  要使用的解決方案檔。 如果省略此參數，該命令將搜索目前的目錄。 如果找不到解決方案檔或多個解決方案檔，則命令將失敗。
+  要使用的解決方案檔。 如果省略此參數,該命令將搜索當前目錄。 如果找不到解決方案檔或多個解決方案檔,則命令將失敗。
 
 #### <a name="options"></a>選項。
 
@@ -84,7 +84,7 @@ dotnet sln add [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  要使用的解決方案檔。 如果未指定，該命令將搜索目前的目錄，如果有多個解決方案檔，則該命令將失敗。
+  要使用的解決方案檔。 如果未指定,該命令將搜索當前目錄,如果有多個解決方案檔,則該命令將失敗。
 
 - **`PROJECT_PATH`**
 
@@ -98,7 +98,7 @@ dotnet sln add [-h|--help]
 
 - **`--in-root`**
 
-  將專案放在解決方案的根目錄中，而不是創建解決方案資料夾。 自 .NET Core 3.0 SDK 起提供。
+  將專案放在解決方案的根目錄中,而不是創建解決方案資料夾。 自 .NET Core 3.0 SDK 起提供。
 
 - **`-s|--solution-folder`**
 
@@ -119,7 +119,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
 - **`SOLUTION_FILE`**
 
-  要使用的解決方案檔。 如果未指定，該命令將搜索目前的目錄，如果有多個解決方案檔，則該目錄將失敗。
+  要使用的解決方案檔。 如果未指定,該命令將搜索當前目錄,如果有多個解決方案檔,則該目錄將失敗。
 
 - **`PROJECT_PATH`**
 
@@ -133,7 +133,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
 ## <a name="examples"></a>範例
 
-- 在解決方案中列出專案：
+- 在解決方案中列出專案:
 
   ```dotnetcli
   dotnet sln todo.sln list
@@ -151,7 +151,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   dotnet sln remove todo-app/todo-app.csproj
   ```
 
-- 將多個 C# 專案添加到解決方案的根目錄：
+- 新增 C# 專案到解決方案的根目錄:
 
   ```dotnetcli
   dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj --in-root
@@ -169,14 +169,26 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
   ```
 
-- 使用 globing 模式（僅限 Unix/Linux）將多個 C# 專案添加到解決方案中：
+- 使用 globing 模式(僅限 Unix/Linux)將多個 C# 專案新增到解決方案中:
 
   ```dotnetcli
   dotnet sln todo.sln add **/*.csproj
   ```
 
-- 使用 globing 模式從解決方案中刪除多個 C# 專案（僅限 Unix/Linux）：
+- 使用 globing 模式(僅限 Windows PowerShell)將多個 C# 專案新增到解決方案中:
+
+  ```dotnetcli
+  dotnet sln todo.sln add (ls **/*.csproj)
+  ```
+
+- 使用 globing 模式從解決方案中移除多個 C# 專案(僅限 Unix/Linux):
 
   ```dotnetcli
   dotnet sln todo.sln remove **/*.csproj
+  ```
+
+- 使用 globing 模式從解決方案中移除多個 C# 專案(只有限制 Windows PowerShell):
+
+  ```dotnetcli
+  dotnet sln todo.sln remove (ls **/*.csproj)
   ```

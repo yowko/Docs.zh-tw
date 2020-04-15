@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 61527e51ea4d28cfe4589f6bed32b3c505443c22
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121162"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389734"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開發並部署 WCF 資料服務
 
@@ -42,7 +42,7 @@ ms.locfileid: "81121162"
 
 1. **本機 IIS 伺服器**
 
-     當您創建在 Internet 資訊服務 (IIS) 上運行 ASP.NET 應用程式或 ASP.NET 網站的數據服務時,我們建議您使用本地電腦上的 IIS 開發和測試數據服務。 在 IIS 上執行資料服務時，更容易在偵錯期間追蹤 HTTP 要求。 這也讓您預先決定 IIS 用來存取資料服務所需之檔案、資料庫和其他資源時所需的必要權限。 要在IIS上運行資料服務,必須確保正確安裝和配置IIS和Windows通訊基礎 (WCF),並授予對檔案系統和資料庫中的IIS帳戶的存取許可權。 如需詳細資訊，請參閱 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)。
+     當您創建在 Internet 資訊服務 (IIS) 上運行 ASP.NET 應用程式或 ASP.NET 網站的數據服務時,我們建議您使用本地電腦上的 IIS 開發和測試數據服務。 在 IIS 上執行資料服務時，更容易在偵錯期間追蹤 HTTP 要求。 這也讓您預先決定 IIS 用來存取資料服務所需之檔案、資料庫和其他資源時所需的必要權限。 要在IIS上執行資料服務,請確保正確安裝和配置IIS和Windows通訊基礎 (WCF),並授予對檔案系統和資料庫中的IIS帳戶的存取許可權。 如需詳細資訊，請參閱 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
     > [!NOTE]
     > 您必須執行具有管理員許可權的 Visual Studio,才能啟用開發環境來配置本地 IIS 伺服器。
@@ -61,7 +61,7 @@ ms.locfileid: "81121162"
 
     - 這個伺服器不包含 IIS 的額外功能，例如驗證。
 
-    - 此伺服器無法處理分塊 HTTP 流,WCF 數據服務用戶端在從數據服務訪問大型二進位數據時默認發送這些流。 有關詳細資訊,請參閱[流式處理提供者](streaming-provider-wcf-data-services.md)。
+    - 此伺服器無法處理分塊 HTTP 流,默認情況下,WCF 數據服務用戶端在從數據服務存取大型二進位數據時發送這些數據。 有關詳細資訊,請參閱[流式處理提供者](streaming-provider-wcf-data-services.md)。
 
     - 此伺服器在處理 URL 中的`.`句點 ( ) 字元時出現問題,即使 WCF 資料服務在鍵值中支援此字元。
 
@@ -74,11 +74,11 @@ ms.locfileid: "81121162"
 
 ### <a name="development-tips"></a>開發秘訣
 
-當您開發資料服務時，應該考慮下列事項：
+開發資料服務時請考慮以下事項:
 
-- 如果您計劃驗證使用者或限制特定使用者存取，請決定您資料服務的安全性需求。 如需詳細資訊，請參閱 [Securing WCF Data Services](securing-wcf-data-services.md)。
+- 如果計劃對使用者進行身份驗證或限制特定使用者的訪問,請確定數據服務的安全要求。 如需詳細資訊，請參閱 [Securing WCF Data Services](securing-wcf-data-services.md)。
 
-- 透過讓您檢查要求和回應訊息的內容對資料服務進行偵錯時，HTTP 檢查程式可能會很有幫助。 可以顯示原始封包的任何網路封包分析器可用於檢查資料服務的 HTTP 要求及其回應。
+- 通過允許您檢查請求和回應消息的內容,HTTP 檢查程式在調試數據服務時非常有用。 可以顯示原始封包的任何網路封包分析器可用於檢查資料服務的 HTTP 要求及其回應。
 
 - 除錯資料服務時,您可能希望從資料服務獲得與常規操作期間有關錯誤的詳細資訊。 您可以從資料服務取得其他錯誤資訊，方法是，將 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 屬性 (Property) 設為 `true` ，然後在資料服務類別上，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 屬性 (Property) 設為 `true`。 有關詳細資訊,請參閱[調試 WCF 數據服務](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services)後。 您還可以在 WCF 中啟用跟蹤,以查看 HTTP 消息層中引發的異常。 如需詳細資訊，請參閱 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)。
 
@@ -119,7 +119,7 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 
 ### <a name="deployment-considerations"></a>部署考量
 
-部署資料服務時，應該考慮下列事項：
+部署資料服務時請考慮以下事項:
 
 - 部署使用實體框架提供程式訪問 SQL Server 資料庫的數據服務時,可能還必須透過資料服務部署來傳播資料結構、資料或兩者。 Visual Studio 可以自動建立文稿 (.sql 檔案)以在目標資料庫中執行此操作,這些腳本可以包含在ASP.NET應用程式的 Web 部署包中。 有關詳細資訊,請參閱[如何:使用 Web 應用程式專案部署資料庫](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))。 對於ASP.NET網站,您可以通過在可視化工作室中使用**資料庫發佈嚮導**來執行此操作。 有關詳細資訊,請參閱發佈[SQL 資料庫](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
 

@@ -2,12 +2,12 @@
 title: 將您的 Windows 市集應用程式移轉至 .NET Native
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 36f9ac4647b349ff379869f3415a5fb9e55228e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241941"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389708"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>將 Windows 應用商店應用遷移到 .NET 本機
 
@@ -85,7 +85,7 @@ Windows 應用商店應用的 .NET 和 .NET 本機應用在行為上存在許多
 
 - <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> 將隱藏的成員包含基底類別中，因此可能會在非明確覆寫的情況下被覆寫。 針對其他 [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) 方法也是如此。
 
-- 當您嘗試建立特定的組合 (例如 byref 的陣列) 時，<xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> 和 <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> 不會失敗。
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>並嘗試<xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType>創建某些組合(例如`byref`, 物件陣列)時,不要失敗。
 
 - 您不能使用反映來叫用具有指標參數的成員。
 
@@ -225,7 +225,7 @@ Windows 應用商店應用的 .NET 和 .NET 本機應用在行為上存在許多
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
 
- 可支援<xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> ，但在某些情況下，它會擲回例外狀況，例如用於 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) 或 byref 變異數時。
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>支援,但在某些情況下,例如與[IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)或`byref`變體一起使用時,它會引發異常。
 
  [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)支援的已棄用 API 包括:
 
@@ -324,7 +324,7 @@ Windows 應用商店應用的 .NET 和 .NET 本機應用在行為上存在許多
 
 - 在 Managed 類型上實作 <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> 介面
 
-- 透過 [屬性，在 Managed 類型上實作](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> 介面。 不過，請注意您不能透過 `IDispatch`來呼叫 COM 物件，而且您的 Managed 物件不能實作 `IDispatch`。
+- 透過 [屬性，在 Managed 類型上實作](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> 介面。 但是,不能透過`IDispatch`呼叫 COM 物件,並且託管物件無法`IDispatch`實現 。
 
 不支援使用反映來叫用平台叫用方法。 若要解除決這項限制，您可以將此方法呼叫包裝在另一個方法中，並改用反映來呼叫包裝函式。
 
@@ -332,7 +332,7 @@ Windows 應用商店應用的 .NET 和 .NET 本機應用在行為上存在許多
 
 ### <a name="other-differences-from-net-apis-for-windows-store-apps"></a>其他與適用於 Windows 市集應用程式的 .NET API 的差異
 
-本節列出了 .NET 本機中不支援的剩餘 API。 不受支援的的最大 API 集是 Windows Communication Foundation (WCF) API。
+本節列出了 .NET 本機中不支援的剩餘 API。 最大的一組不支援的 API 是 Windows 通訊基礎 (WCF) API。
 
 **DataAnnotations (System.ComponentModel.DataAnnotations)**
 
@@ -396,7 +396,7 @@ Windows 應用商店應用的 .NET 和 .NET 本機應用在行為上存在許多
 
 **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**
 
-.NET 本機中不支援[System.ServiceModel.* 命名空間](xref:System.ServiceModel)中的類型。 其中包括下列類型：
+.NET 本機中不支援[System.ServiceModel.* 命名空間](xref:System.ServiceModel)中的類型。 這些類型包括以下類型:
 
 - <xref:System.ServiceModel.ActionNotSupportedException?displayProperty=nameWithType>
 - <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>

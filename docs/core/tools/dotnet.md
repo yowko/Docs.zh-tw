@@ -1,17 +1,17 @@
 ---
 title: dotnet 命令
-description: 瞭解 dotnet 命令（.NET Core CLI 的通用驅動程式）及其用法。
+description: 瞭解 dotnet 命令(.NET Core CLI 的通用驅動程式)及其用法。
 ms.date: 02/13/2020
-ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 9446808d7f23d762c7a3c8a58252664fc5dade5b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134081"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389601"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
-**本文適用于：✔️** .NET 核心 2.1 SDK 和更高版本
+**本文適用於:✔️** .NET 核心 2.1 SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -19,21 +19,21 @@ ms.locfileid: "80134081"
 
 ## <a name="synopsis"></a>概要
 
-要獲取有關可用命令和環境的資訊，請訪問：
+要取得有關可用命令和環境的資訊,請造訪:
 
 ```dotnetcli
 dotnet [-h|--help] [--version] [--info]
     [--list-runtimes] [--list-sdks]
 ```
 
-要運行命令（需要 SDK 安裝）：
+要執行指令(需要 SDK 安裝):
 
 ```dotnetcli
 dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity]
     [command-options] [arguments]
 ```
 
-要運行應用程式：
+要執行應用程式:
 
 ```dotnetcli
 dotnet [--additionalprobingpath] [--additional-deps]
@@ -49,15 +49,15 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 ## <a name="description"></a>描述
 
-該`dotnet`命令具有兩個函數：
+該`dotnet`指令具有兩個函數:
 
 - 它提供了用於處理 .NET Core 專案的命令。
 
-  例如，[`dotnet build`](dotnet-build.md)生成專案。 每個命令定義自己的選項和參數。 所有命令都支援列印`--help`有關如何使用該命令的簡短文檔的選項。
+  例如,[`dotnet build`](dotnet-build.md)生成專案。 每個命令定義自己的選項和參數。 所有命令都支援列印`--help`有關如何使用該命令的簡短文檔的選項。
 
 - 它運行 .NET 核心應用程式。
 
-  指定應用程式`.dll`檔的路徑以運行應用程式。 例如，`dotnet myapp.dll`運行`myapp`應用程式。 請參閱[.NET 核心應用程式部署](../deploying/index.md)以瞭解部署選項。
+  指定應用程式`.dll`檔案的路徑以執行應用程式。  執行應用程式意味著查找和執行入口點,在主控台應用的情況下`Main`, 這是方法。 例如,`dotnet myapp.dll``myapp`執行 應用程式。 請參閱[.NET 核心應用程式部署](../deploying/index.md)以瞭解部署選項。
 
 ## <a name="options"></a>選項。
 
@@ -77,7 +77,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 - **`--list-runtimes`**
 
-  列印已安裝的 .NET 核心運行時的清單。
+  列印已安裝的 .NET 核心執行時的清單。 x86 版本的 SDK 僅列出 x86 執行時,x64 版本的 SDK 僅列出 x64 執行時。
 
 - **`--list-sdks`**
 
@@ -87,9 +87,9 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
   列印出可用命令的清單。
 
-### <a name="sdk-options-for-running-a-command"></a>用於運行命令的 SDK 選項
+### <a name="sdk-options-for-running-a-command"></a>執行指令的 SDK 選項
 
-以下選項適用于`dotnet`命令。 例如： `dotnet build --help` 。
+以下選項適用於`dotnet`命令。 例如： `dotnet build --help` 。
 
 - **`-d|--diagnostics`**
 
@@ -105,11 +105,11 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 - **`command options`**
 
-  每個命令定義特定于該命令的選項。 有關可用選項的清單，請參閱特定命令頁。
+  每個命令定義特定於該命令的選項。 有關可用選項的清單,請參閱特定命令頁。
 
-### <a name="runtime-options"></a>運行時選項
+### <a name="runtime-options"></a>執行時選項
 
-運行應用程式時`dotnet`，以下選項可用。 例如： `dotnet myapp.dll --fx-version 3.1.1` 。
+執行應用程式時`dotnet`,以下選項可用。 例如： `dotnet myapp.dll --fx-version 3.1.1` 。
 
 - **`--additionalprobingpath <PATH>`**
 
@@ -125,7 +125,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 - **`--runtimeconfig`**
 
-  *runtimeconfig.json* 檔案的路徑。 *運行時 config.json*檔是包含運行時設置的設定檔。 有關詳細資訊，請參閱[.NET Core 運行時配置設置](../run-time-config/index.md#runtimeconfigjson)。
+  *runtimeconfig.json* 檔案的路徑。 *運行時 config.json*檔是包含執行時設定的設定檔。 有關詳細資訊,請參閱[.NET Core 執行時設定設定](../run-time-config/index.md#runtimeconfigjson)。
 
 - **`--roll-forward-on-no-candidate-fx <N>`****在 .NET 核心 2.x SDK 中提供。**
 
@@ -139,18 +139,18 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 - **`--roll-forward <SETTING>`****可從 .NET 核心 SDK 3.0 開始。**
 
-  控制如何向前滾動應用於應用。 `SETTING`可以是以下值之一。 如果未指定，`Minor`則為預設值。
+  控制如何向前滾動應用於應用。 `SETTING`可以是以下值之一。 如果未指定,`Minor`則為預設值。
 
   - `LatestPatch`- 向前滾動到最高補丁版本。 這會停用次要版本向前復原。
-  - `Minor`- 如果缺少請求的次要版本，請向前滾動到最低較高的次要版本。 如果要求的次要版本存在，則會使用 LatestPatch 原則。
-  - `Major`- 如果缺少請求的主要版本，則向前滾動到最低較高主版本和最低次要版本。 如果要求的主要版本存在，則會使用 Minor 原則。
-  - `LatestMinor`- 向前滾動到最高次要版本，即使存在請求的次要版本。 適用於裝載案例的元件。
-  - `LatestMajor`- 向前滾動到最高主要和最高的次要版本，即使請求的主要存在。 適用於裝載案例的元件。
+  - `Minor`- 如果缺少請求的次要版本,請向前滾動到最低較高的次要版本。 如果要求的次要版本存在，則會使用 LatestPatch 原則。
+  - `Major`- 如果缺少請求的主要版本,則向前滾動到最低較高主版本和最低次要版本。 如果要求的主要版本存在，則會使用 Minor 原則。
+  - `LatestMinor`- 向前滾動到最高次要版本,即使存在請求的次要版本。 適用於裝載案例的元件。
+  - `LatestMajor`- 向前滾動到最高主要和最高的次要版本,即使請求的主要存在。 適用於裝載案例的元件。
   - `Disable`-別向前滾 只會繫結至指定的版本。 此原則不建議一般用途，因為它會停用向前復原到最新修補程式的功能。 只有測試時才建議使用這個值。
 
-除 之外`Disable`，所有設置都將使用最高可用的修補程式版本。
+除`Disable`之外 ,所有設置都將使用最高可用的修補程式版本。
 
-前滾行為也可以在專案檔案屬性、運行時配置檔案屬性和環境變數中配置。 有關詳細資訊，請參閱[主版本運行時向前滾動](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)。
+前滾行為也可以在專案檔屬性、運行時設定檔屬性和環境變數中配置。 有關詳細資訊,請參閱[主版本執行時向前捲動](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)。
 
 ## <a name="dotnet-commands"></a>dotnet 命令
 
@@ -171,7 +171,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 | [dotnet run](dotnet-run.md)                   | 從原始檔執行應用程式。                                   |
 | [dotnet sln](dotnet-sln.md)                   | 要在方案檔中新增、移除及列出專案的選項。       |
 | [dotnet store](dotnet-store.md)               | 在執行階段套件存放區中儲存組件。                     |
-| [點網測試](dotnet-test.md)                 | 使用測試執行器執行測試。                                     |
+| [dotnet test](dotnet-test.md)                 | 使用測試執行器執行測試。                                     |
 
 ### <a name="project-references"></a>專案參考
 
@@ -195,21 +195,21 @@ Command | 函式
 [dotnet nuget delete](dotnet-nuget-delete.md) | 從伺服器刪除或取消列出套件。
 [dotnet nuget push](dotnet-nuget-push.md) | 將套件推送至伺服器並發行。
 [dotnet nuget locals](dotnet-nuget-locals.md) | 清除或列出本機 NuGet 資源，例如 http-request 快取、暫時快取，或整部電腦的全域套件資料夾。
-[點網 nuget 添加源](dotnet-nuget-add-source.md) | 添加 NuGet 源。
-[點網 nuget 禁用源](dotnet-nuget-disable-source.md) | 禁用 NuGet 源。
-[點網 nuget 啟用源](dotnet-nuget-enable-source.md) | 啟用 NuGet 源。
-[點網 nuget 清單源](dotnet-nuget-list-source.md) | 列出所有配置的 NuGet 源。
-[點網 nuget 刪除源](dotnet-nuget-remove-source.md) | 刪除 NuGet 源。
-[點網 nuget 更新源](dotnet-nuget-update-source.md) | 更新 NuGet 源。
+[dotnet nuget add source](dotnet-nuget-add-source.md) | 添加 NuGet 源。
+[dotnet nuget disable source](dotnet-nuget-disable-source.md) | 禁用 NuGet 源。
+[dotnet nuget enable source](dotnet-nuget-enable-source.md) | 啟用 NuGet 源。
+[dotnet nuget list source](dotnet-nuget-list-source.md) | 列出所有配置的 NuGet 源。
+[dotnet nuget remove source](dotnet-nuget-remove-source.md) | 刪除 NuGet 源。
+[dotnet nuget update source](dotnet-nuget-update-source.md) | 更新 NuGet 源。
 
-### <a name="global-tool-path-and-local-tools-commands"></a>全域、工具路徑和本地工具命令
+### <a name="global-tool-path-and-local-tools-commands"></a>全域、工具路徑與本地端工具指令
 
-工具是從 NuGet 包安裝並從命令提示符調用的主控台應用程式。 您可以自己編寫工具或安裝由協力廠商編寫的工具。 工具也稱為全域工具、刀具路徑工具和本地工具。 有關詳細資訊，請參閱[.NET 核心工具概述](global-tools.md)。 全域和工具路徑工具可從 .NET 核心 SDK 2.1 開始。 本地工具可從 .NET 核心 SDK 3.0 開始。
+工具是從 NuGet 套件安裝並從命令提示符呼叫的主控台應用程式。 您可以自己編寫工具或安裝由第三方編寫的工具。 工具也稱為全域工具、刀具路徑工具和本地工具。 有關詳細資訊,請參閱[.NET 核心工具概述](global-tools.md)。 全域和工具路徑工具可從 .NET 核心 SDK 2.1 開始。 本地工具可從 .NET 核心 SDK 3.0 開始。
 
 Command | 函式
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | 在電腦上安裝工具。
-[dotnet tool list](dotnet-tool-list.md) | 列出電腦上當前安裝的所有全域、工具路徑或本地工具。
+[dotnet tool list](dotnet-tool-list.md) | 列出電腦上目前安裝的所有全域、工具路徑或本地工具。
 [dotnet tool uninstall](dotnet-tool-uninstall.md) | 從電腦卸載工具。
 [dotnet tool update](dotnet-tool-update.md) | 更新安裝在電腦上的工具。
 
@@ -229,7 +229,7 @@ Command | 函式
 
 ## <a name="examples"></a>範例
 
-創建新的 .NET 核心主控台應用程式：
+建立新的 .NET 核心主控台應用程式:
 
 ```dotnetcli
 dotnet new console
@@ -241,7 +241,7 @@ dotnet new console
 dotnet build
 ```
 
-運行應用程式：
+執行應用程式:
 
 ```dotnetcli
 dotnet myapp.dll
@@ -251,7 +251,7 @@ dotnet myapp.dll
 
 - `DOTNET_ROOT`, `DOTNET_ROOT(x86)`
 
-  指定 .NET Core 運行時的位置（如果它們未安裝在預設位置）。 Windows 上的預設位置為`C:\Program Files\dotnet`。 Linux 和 macOS 上的預設`/usr/share/dotnet`位置為 。 僅當通過生成的可執行檔（應用程式主機）運行應用時，才會使用此環境變數。 `DOTNET_ROOT(x86)`在 64 位作業系統上運行 32 位可執行檔時，將改為使用。
+  指定 .NET Core 執行時的位置(如果它們未安裝在預設位置)。 Windows 上的預設位置`C:\Program Files\dotnet`為 。 Linux 與 macOS`/usr/share/dotnet`上的預設位置為 。 僅當通過生成的可執行檔(應用程式主機)運行應用時,才會使用此環境變數。 `DOTNET_ROOT(x86)`在 64 位元作業系統上運行 32 位元可執行檔時,將改為使用。
 
 - `DOTNET_PACKAGES`
 
@@ -263,7 +263,7 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  指定第一次運行時是否顯示 .NET Core 歡迎消息和遙測消息。 `true`設置為將這些消息靜音（值`true`、`1`或`yes`已接受）或設置為`false`允許（值`false`、`0`或`no`已接受）。 如果未設置，則預設值為`false`，並且消息將在首次運行時顯示。 請注意，此標誌對遙測沒有影響（請參閱`DOTNET_CLI_TELEMETRY_OPTOUT`選擇不發送遙測）。
+  指定第一次執行時是否顯示 .NET Core 歡迎消息和遙測消息。 `true`設置為將這些消息靜音(值`true`、`1`或`yes`已接受)或設置為`false`允許(值`false`、`0`或`no`已接受)。 如果未設置,則預設值為`false`,並且消息將在首次運行時顯示。 請注意,此標誌對遙測沒有影響(請參閱`DOTNET_CLI_TELEMETRY_OPTOUT`選擇不發送遙測)。
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 
@@ -271,11 +271,11 @@ dotnet myapp.dll
 
 - `DOTNET_MULTILEVEL_LOOKUP`
 
-  指定是否從全域位置解析 .NET Core 執行階段、共用架構或 SDK。 如果未設置，則預設為 1（邏輯`true`）。 設置為 0（邏輯`false`），以不從全域位置解析，並且具有隔離的 .NET Core 安裝。 如需多層級查閱的詳細資訊，請參閱 [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md) (多層級 SharedFX 查閱)。
+  指定是否從全域位置解析 .NET Core 執行階段、共用架構或 SDK。 如果未設置,則預設為 1(`true`邏輯 )。 設置為 0(`false`邏輯 ),以不從全域位置解析,並且具有隔離的 .NET Core 安裝。 如需多層級查閱的詳細資訊，請參閱 [Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md) (多層級 SharedFX 查閱)。
 
 - `DOTNET_ROLL_FORWARD`**可從 .NET 核心 3.x SDK 開始。**
 
-  確定向前滾行行為。 有關詳細資訊，請參閱本文前面`--roll-forward`的選項。
+  確定向前滾行行為。 有關詳細資訊,請參閱本文前面`--roll-forward`的選項。
 
 - `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`**在 .NET 核心 2.x SDK 中提供。**
 
@@ -283,15 +283,15 @@ dotnet myapp.dll
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
-  使用地區設定值（如`en-us`）設置 CLI UI 的語言。 支援的值與 Visual Studio 的值相同。 有關詳細資訊，請參閱[Visual Studio 安裝文檔中](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)有關更改安裝程式語言的部分。 .NET 資源管理器規則適用，因此您不必選擇完全符合項&mdash;，您也可以在樹中選擇`CultureInfo`後代。 例如，如果將其設置為`fr-CA`，CLI 將查找並使用`fr`翻譯。 如果將其設置為不支援的語言，則 CLI 將回退為英語。
+  使用區域設置值(如`en-us`)設置 CLI UI 的語言。 支援的值與 Visual Studio 的值相同。 有關詳細資訊,請參閱[Visual Studio 安裝文檔中](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)有關更改安裝程式語言的部分。 .NET 資源管理員規則適用,因此您不必選擇完全匹配&mdash;項 ,您也可以在樹`CultureInfo`中選擇 後代。 例如,如果將其設置為`fr-CA`,CLI 將查找`fr`並使用 翻譯。 如果將其設置為不支援的語言,則 CLI 將回退為英語。
 
 - `DOTNET_DISABLE_GUI_ERRORS`
 
-  對於啟用 GUI 生成的可執行檔 - 禁用對話方塊快顯視窗，該對話方塊通常顯示某些類別的錯誤。 在這種情況下，它只寫入`stderr`和退出。
+  對於啟用 GUI 生成的可執行檔 - 禁用對話框彈出視窗,該對話框通常顯示某些類別的錯誤。 在這種情況下,它只寫入`stderr`和退出。
   
 - `DOTNET_ADDITIONAL_DEPS`
 
-  等效于 CLI`--additional-deps`選項。
+  等效於 CLI`--additional-deps`選項。
 
 - `DOTNET_RUNTIME_ID`
 
@@ -299,7 +299,7 @@ dotnet myapp.dll
 
 - `DOTNET_SHARED_STORE`
 
-  "共用存儲"的位置，在某些情況下，程式集解析度會回退于該存儲。
+  "共用存儲"的位置,在某些情況下,程式集解析度會回退於該存儲。
 
 - `DOTNET_STARTUP_HOOKS`
 
@@ -307,9 +307,9 @@ dotnet myapp.dll
 
 - `COREHOST_TRACE`, `COREHOST_TRACEFILE`, `COREHOST_TRACE_VERBOSITY`
 
-  控制從宿主元件（如`dotnet.exe`）`hostfxr`和`hostpolicy`的診斷跟蹤。
+  控制從宿主元件(如`dotnet.exe`)`hostfxr``hostpolicy`和的診斷跟蹤。
 
 ## <a name="see-also"></a>另請參閱
 
 - [Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) (執行階段組態檔)
-- [.NET 核心運行時配置設置](../run-time-config/index.md)
+- [.NET 核心執行時設定設定](../run-time-config/index.md)

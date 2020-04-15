@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: fb11ff59705188f9425beedfbbbf3c244d21f587
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: cf8307517213b54041b272843232eb595660b2e9
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121502"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389510"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>如何使用 String.Split(C# 指南)分析字串
+# <a name="how-to-parse-strings-using-stringsplit-in-c"></a>如何使用 String.分割在 C 中分析字串\#
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> 方法會根據一或多個分隔符號來分割輸入字串，以建立子字串陣列。 這通常是分隔字組界限上字串的最簡單方式。 它也用來分割其他特定字元或字串上的字串。
 
@@ -26,11 +26,11 @@ ms.locfileid: "81121502"
 
 [!code-csharp-interactive[split strings on word boundaries](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#1)]
 
-每個分隔符號字元執行個體都會產生已傳回陣列中的值。 連續分隔符號字元會產生空字串，作為已傳回陣列中的值。  您可以在下列範例中看到這個項目，其使用空格作為分隔符號：
+每個分隔符號字元執行個體都會產生已傳回陣列中的值。 連續分隔符號字元會產生空字串，作為已傳回陣列中的值。 您可以在下面的範例中查看如何建立空字串,該示例使用空格字元作為分隔符。
 
 [!code-csharp-interactive[split strings with repeated separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#2)]
 
-此行為可以更輕鬆地使用格式，例如代表表格式資料的逗號分隔值 (CSV) 檔案。 連續的逗號表示空白資料行。
+此行為使表示表格數據的逗號分隔值 (CSV) 檔等格式更容易。 連續的逗號表示空白資料行。
 
 您可以傳遞選擇性 <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> 參數，以排除已傳回陣列中的任何空字串。 針對更複雜處理的已傳回集合，您可以使用 [LINQ](../programming-guide/concepts/linq/index.md) 來操作結果序列。
 

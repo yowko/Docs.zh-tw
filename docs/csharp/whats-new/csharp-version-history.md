@@ -3,12 +3,12 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 04/08/2020
-ms.openlocfilehash: d9f50a7df7966f81366acb706d719cbdd40a45fa
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: f321b9c742fed6fb1efaf8fbb1914c203dd6391b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989190"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389101"
 ---
 # <a name="the-history-of-c"></a>C\# 的歷史
 
@@ -120,7 +120,7 @@ C# 版本 4.0 與 Visual Studio 2010 一起發佈,將很難達到版本 3.0 的�
 C# 版本 5.0 與 Visual Studio 2012 一起發佈,是該語言的重點版本。 幾乎該版本的所有心血都投入了另一個奠基的語言概念：非同步程式設計的 `async` 和 `await` 模型。  以下是主要的功能清單：
 
 - [非同步成員](../async.md)
-- [呼叫端資訊屬性](../programming-guide/concepts/caller-information.md)
+- [呼叫端資訊屬性](../language-reference/attributes/caller-information.md)
 
 ### <a name="see-also"></a>另請參閱
 
@@ -158,7 +158,7 @@ C# 版本 7.0 與 Visual Studio 2017 一起發佈。 此版本擁有 C# 6.0 中�
 
 - [Out 變數](./csharp-7.md#out-variables)
 - [Tuple 和解構](./csharp-7.md#tuples)
-- [模式符合](./csharp-7.md#pattern-matching)
+- [模式比對](./csharp-7.md#pattern-matching)
 - [區域函式](./csharp-7.md#local-functions)
 - [展開的運算式主體成員](./csharp-7.md#more-expression-bodied-members)
 - [Ref 區域變數和傳回](./csharp-7.md#ref-locals-and-returns)

@@ -2,16 +2,19 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: cd017eb1866fff2ce8fd7a858b184351ef13e815
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 6ec99e77db4215184547ea2bbbe0d1ff8ad3c286
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588354"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389765"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
 XML 結構描述定義工具 (Xsd.exe) 可以從 XDR、XML 和 XSD 檔案或從執行階段組件的類別中，產生 XML 結構描述或 Common Language Runtime 類別。
+
+XML 架構定義工具 (Xsd.exe) 通常可以在以下路徑中找到:*
+_C:\\程式\\檔案 (x86) 微軟\\\\\\\\SDK 視窗 [版本] bin NETFX [版本] 工具\\_
 
 ## <a name="syntax"></a>語法
 
@@ -126,7 +129,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 您只能為 `<generateSchemas>` 項目指定下列其中一個選項。
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
 |\<assembly>|指定要產生結構描述的組件。|
 |\<type>|指定在組件中找到的型別，以用於產生結構描述。|
@@ -145,7 +148,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
  您可以對 `<generateClasses>` 項目設定的選項包括下列各項。
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
 |\<element>|指定要產生程式碼之 .xsd 檔案中的項目。|
 |\<schemaImporterExtensions>|指定衍生自 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> 類別的型別。|
@@ -156,7 +159,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |屬性|描述|
 |---------------|-----------------|
 |語言|指定要使用的程式語言。 可以選擇 `CS` (C#，此為預設值)、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#)。 您可以對實作 <xref:System.CodeDom.Compiler.CodeDomProvider> 的類別指定完整名稱。|
-|namespace|指定產生之程式碼的命名空間。 命名空間必須符合 CLR 標準 (例如，沒有空白或反斜線字元)。|
+|命名空間|指定產生之程式碼的命名空間。 命名空間必須符合 CLR 標準 (例如，沒有空白或反斜線字元)。|
 |選項|下列其中一個值：`none`、`properties` (產生屬性而非公用欄位)、`order` 或 `enableDataBinding` (請參閱先前＜XSD 檔案選項＞一節中的 `/order` 和 `/enableDataBinding` 參數)。|
 
  您也可以使用 `DataSet` 項目，控制產生 `<generateDataSet>` 程式碼的方法。 以下 XML 指定生成的`DataSet`代碼使用結構<xref:System.Data.DataTable>(如類)為指定元素創建 Visual Basic 代碼。 所產生的 DataSet 結構將會支援 LINQ 查詢。
@@ -170,7 +173,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 您可以對 `<generateDataSet>` 項目設定的選項包括下列各項。
 
-|元素|描述|
+|項目|描述|
 |-------------|-----------------|
 |\<schema>|指定用於產生程式碼的 XML 結構描述檔案。 多個 XML 結構描述檔案可以使用多個 \<schema> 元素指定。|
 
@@ -180,7 +183,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |---------------|-----------------|
 |enableLinqDataSet|指定產生的 DataSet 可使用 LINQ to DataSet 查詢。 預設值為 false。|
 |語言|指定要使用的程式語言。 可以選擇 `CS` (C#，此為預設值)、`VB` (Visual Basic)、`JS` (JScript) 或 `VJS` (Visual J#)。 您可以對實作 <xref:System.CodeDom.Compiler.CodeDomProvider> 的類別指定完整名稱。|
-|namespace|指定產生之程式碼的命名空間。 命名空間必須符合 CLR 標準 (例如，沒有空白或反斜線字元)。|
+|命名空間|指定產生之程式碼的命名空間。 命名空間必須符合 CLR 標準 (例如，沒有空白或反斜線字元)。|
 
  在最上層 `<xsd>` 項目中有一些您可以設定的屬性。 這些選項可以和任何子項目搭配使用 (`<generateSchemas>`、`<generateClasses>` 或 `<generateDataSet>`)。 下列 XML 程式碼會對名為 "IDItems" 的項目，在名為 "MyOutputDirectory" 的輸出目錄中產生程式碼。
 

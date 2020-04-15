@@ -5,36 +5,38 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: 0045d2cc0c53d17b07502948088ceec009baba5b
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 200acea81b9f00c659ddceae011430983e2b5f5b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121525"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389716"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 移轉問題
 
-本主題描述 .NET Framework 版本 3.5 Service Pack 1 與 .NET Framework 版本 4 之間的移轉問題，包含修正程式、標準合規性和安全性變更，以及根據客戶意見反應的變更。 大多數變更都不需要您的應用程式進行任何設計修改。 對於可能涉及修改的變更，請參閱表格的 [建議變更] 欄。 顯著更改按區域細分,例如,ASP.NET 和 Windows 演示基礎 (WPF)。
+本文介紹了 .NET Framework 版本 3.5 Service Pack 1 和 .NET Framework 版本 4 之間的遷移問題,包括修補程式、標準合規性和安全性更改以及基於客戶反饋的更改。 大多數變更都不需要您的應用程式進行任何設計修改。 對於可能涉及修改的,請參閱表的 **「建議更改」** 欄。 顯著更改按區域細分,例如,ASP.NET 和 Windows 演示基礎 (WPF)。
 
-有關本主題中問題的更高級別概述,請參閱[.NET 框架 4 的遷移指南](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)。
+有關本文中問題的更高級別概述,請參閱[.NET 框架 4 的遷移指南](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)。
 
-如需新功能的資訊，請參閱 [.NET Framework 4 的新功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)。
+有關新功能的資訊,請參閱[.NET 框架 4 中的新增功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)。
 
 ## <a name="aspnet-and-web"></a>ASP.NET 和 Web
 
-命名空間：<xref:System.Web>、<xref:System.Web.Mobile>、<xref:System.Web.Security>、<xref:System.Web.UI.WebControls>；組件：System.Web (在 System.Web.dll 中)
+命名空間: <xref:System.Web> <xref:System.Web.Mobile> <xref:System.Web.Security>、 、 、<xref:System.Web.UI.WebControls>
 
-| 功能 | 3.5 SP1 的差異 | 建議變更 |
-| ------- | ------------------------ | ------------------- |
+程式集:系統.Web(系統.Web.dll)
+
+| 功能  | 3.5 SP1 的差異 | 建議變更 |
+| -------- | ------------------------ | ------------------- |
 | **瀏覽器定義檔** | 瀏覽器定義檔已更新成包含新增和已更新瀏覽器及裝置的資訊。 已移除 Netscape Navigator 這類較舊的瀏覽器和裝置，並已新增 Google Chrome 和 Apple iPhone 這類較新的瀏覽器和裝置。<br><br>如果您的應用程式包含繼承自其中一個已移除瀏覽器定義的自訂瀏覽器定義，則您會看到錯誤。<br><br><xref:System.Web.HttpBrowserCapabilities> 物件 (由頁面的 `Request.Browse` 屬性所公開) 是透過瀏覽器定義檔所驅動。 因此，ASP.NET 4 中存取此物件的屬性所傳回的資訊，可能會與舊版 ASP.NET 中所傳回的資訊不同。 | 如果您的應用程式依賴舊的瀏覽器定義檔，則可以從下列資料夾中複製它們：<br><br>*Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers*<br><br>將檔案複製到相應的*\\CONFIG\\瀏覽器*資料夾中,ASP.NET 4。 在您複製檔案之後，請執行 [Aspnet_regbrowsers.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229858(v=vs.90)) 命令列工具。 有關詳細資訊,[https://www.asp.net/mobile](/aspnet/mobile/overview)請參閱網站。 |
 | **在混合 ASP.NET 版本下執行的子應用程式** | 因為發生組態或編譯錯誤，所以可能無法啟動設定為執行舊版 ASP.NET 之應用程式子系的 ASP.NET 4 應用程式。 發生的特定錯誤取決於應用程式是在 IIS 6.0 還是 IIS 7 或 IIS 7.5 下執行。 | 您可以變更受影響應用程式的組態檔，讓組態系統正確地辨識 ASP.NET 4 應用程式。 如需您必須進行之變更的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes) (ASP.NET 4 最新變更) 文件中的＜ASP.NET 4 Child Applications Fail to Start When Under ASP.NET 2.0 or ASP.NET 3.5 Applications＞(在 ASP.NET 2.0 或 ASP.NET 3.5 應用程式下時，無法啟動 ASP.NET 4 子應用程式) 一節。 |
-| **ClientID 變更** | ASP.NET 4 中的新 `clientIDMode` 設定可讓您指定 ASP.NET 如何產生 HTML 項目的 `id` 屬性。 在舊版 ASP.NET 中，預設行為相當於 `clientIDMode` 的 `AutoID` 設定。 預設設定現在為 `Predictable`。 如需詳細資訊，請參閱 [ASP.NET 網頁伺服器控制項識別](https://docs.microsoft.com/previous-versions/aspnet/1d04y8ss%28v=vs.100%29)。 | 如果您使用 Visual Studio 從 ASP.NET 2.0 或 ASP.NET 3.5 升級應用程式，則工具會自動將設定新增至 Web.config 檔案，以保留舊版 .NET Framework 的行為。 不過，如果您將 IIS 中的應用程式集區變更成以.NET Framework 4 為目標來升級應用程式，則 ASP.NET 預設會使用新模式。 若要停用新的用戶端識別碼模式，請在 Web.config 檔案中新增下列設定：<br><br>`<pages clientIDMode="AutoID" />` |
+| **ClientID 變更** | ASP.NET 4 中的新 `clientIDMode` 設定可讓您指定 ASP.NET 如何產生 HTML 項目的 `id` 屬性。 在舊版 ASP.NET 中，預設行為相當於 `clientIDMode` 的 `AutoID` 設定。 預設設定現在為 `Predictable`。 如需詳細資訊，請參閱 [ASP.NET 網頁伺服器控制項識別](https://docs.microsoft.com/previous-versions/aspnet/1d04y8ss%28v=vs.100%29)。 | 如果使用 Visual Studio 將應用程式從 ASP.NET 2.0 或 ASP.NET 3.5 升級,該工具將自動向 Web.config 檔添加一個設置,以保留早期版本的 .NET Framework 的行為。 但是,如果通過將 IIS 中的應用程式池更改為目標 .NET Framework 4 來升級應用程式,ASP.NET默認情況下使用新模式。 若要停用新的用戶端識別碼模式，請在 Web.config 檔案中新增下列設定：<br><br>`<pages clientIDMode="AutoID" />` |
 | **代碼存取安全性 (CAS)** | 已在 ASP.NET 3.5 中新增的 ASP.NET 2.0 NET 功能使用 .NET Framework 1.1 和 .NET Framework 2.0 程式碼存取安全性 (CAS) 模型。 不過，已大幅全面檢查 ASP.NET 4 中 CAS 的實作。 因此，如果部分信任 ASP.NET 應用程式依賴在全域組件快取中執行的受信任程式碼，則可能會因各種安全性例外狀況而失敗。 依賴對電腦 CAS 原則進行大量修改的部分信任應用程式可能也會失敗，並擲回安全性例外狀況。 | 在 `trust` 組態項目中使用新 `legacyCasModel` 屬性，即可將部分信任 ASP.NET 4 應用程式還原為 ASP.NET 1.1 和 2.0 的行為，如下列範例所示：<br><br>`<trust level= "Medium" legacyCasModel="true" />`<br><br>重要事項： 還原為舊版 CAS 模型可能代表安全性降低。<br><br>如需新 ASP.NET 4 程式碼存取安全性模型的詳細資訊，請參閱 [ASP.NET 4 應用程式中的程式碼存取安全性](https://docs.microsoft.com/previous-versions/dd984947(v=vs.100))。 |
-| **組態檔** | .NET Framework 和 ASP.NET 4 的根組態檔 (machine.config 檔案和根 Web.config 檔案) 已更新成包含 ASP.NET 3.5 之應用程式 Web.config 檔案中的大部分未定案組態資訊。 因為受管理 IIS 7 和 IIS 7.5 組態系統的複雜度，所以在 ASP.NET 4 以及 IIS 7 和 IIS 7.5 下執行 ASP.NET 3.5 應用程式可能會導致 ASP.NET 錯誤或 IIS 錯誤。 | 使用 Visual Studio 中的專案升級工具，以將 ASP.NET 3.5 應用程式升級至 ASP.NET 4。 Visual Studio 2010 會自動修改 ASP.NET 3.5 應用程式的 Web.config 檔案，以包含 ASP.NET 4 的適當設定。<br><br>不過，您可以使用 .NET Framework 4 來執行 ASP.NET 3.5 應用程式，而不需要重新編譯。 在該情況下，您可能必須先手動修改應用程式的 Web.config 檔案，才能在 .NET Framework 4 和 IIS 7 或 IIS 7.5 下執行應用程式。 您必須進行的特定變更取決於正在使用的軟體組合，包含 Service Pack (SP) 版本。 如需受這項變更影響的可能軟體組合以及如何解決特定組合的問題的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes) (ASP.NET 4 最新變更) 文件中的＜Configuration Errors Related to New ASP.NET 4 Root Configuration＞(與新 ASP.NET 4 根組態相關的組態錯誤) 一節。 |
-| **控制項轉譯** | 在舊版 ASP.NET 中，某些控制項已發出您無法停用的標記。 根據預設，ASP.NET 4 中不再產生這種類型的標記。 轉譯變更會影響下列控制項：<br><br>* `Image` 和 `ImageButton` 控制項不再轉譯 `border="0"` 屬性。<br>* `BaseValidator` 類別以及從中衍生的驗證控制項預設不再轉譯紅色文字。<br>* `HtmlForm` 控制項不會轉譯 `name` 屬性。<br>* `Table` 控制項不再轉譯 `border="0"` 屬性。<br><br>如果未針對使用者輸入設計的控制項 (例如，`Label` 控制項) 的 `Enabled` 屬性設定為 `false` (或者，如果它們從容器控制項繼承此設定)，則它們不再轉譯 `disabled="disabled"` 屬性。 | 如果您使用 Visual Studio 從 ASP.NET 2.0 或 ASP.NET 3.5 升級應用程式，則工具會自動將設定新增至 Web.config 檔案，以保留舊版轉譯。 不過，如果您將 IIS 中的應用程式集區變更成以.NET Framework 4 為目標來升級應用程式，則 ASP.NET 預設會使用新轉譯模式。 若要停用新的轉譯模式，請在 Web.config 檔案中新增下列設定：<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
+| **組態檔** | .NET Framework 和 ASP.NET 4 的根配置檔(電腦.config 檔和 root Web.config 檔)已更新,以包括 ASP.NET 3.5 中應用程式 Web.config 檔中找到的大多數樣板配置資訊。 因為受管理 IIS 7 和 IIS 7.5 組態系統的複雜度，所以在 ASP.NET 4 以及 IIS 7 和 IIS 7.5 下執行 ASP.NET 3.5 應用程式可能會導致 ASP.NET 錯誤或 IIS 錯誤。 | 使用 Visual Studio 中的專案升級工具，以將 ASP.NET 3.5 應用程式升級至 ASP.NET 4。 Visual Studio 2010 會自動修改 ASP.NET 3.5 應用程式的 Web.config 檔案，以包含 ASP.NET 4 的適當設定。<br><br>但是,您可以使用 .NET 框架 4 運行 ASP.NET 3.5 個應用程式,而無需重新編譯。 在這種情況下,您可能需要手動修改應用程式的 Web.config 檔,然後才能在 .NET 框架 4 下以及 IIS 7 或 IIS 7.5 下執行應用程式。 您必須進行的特定變更取決於正在使用的軟體組合，包含 Service Pack (SP) 版本。 如需受這項變更影響的可能軟體組合以及如何解決特定組合的問題的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes) (ASP.NET 4 最新變更) 文件中的＜Configuration Errors Related to New ASP.NET 4 Root Configuration＞(與新 ASP.NET 4 根組態相關的組態錯誤) 一節。 |
+| **控制項轉譯** | 在舊版 ASP.NET 中，某些控制項已發出您無法停用的標記。 根據預設，ASP.NET 4 中不再產生這種類型的標記。 轉譯變更會影響下列控制項：<br><br>* `Image` 和 `ImageButton` 控制項不再轉譯 `border="0"` 屬性。<br>* `BaseValidator` 類別以及從中衍生的驗證控制項預設不再轉譯紅色文字。<br>* `HtmlForm` 控制項不會轉譯 `name` 屬性。<br>* `Table` 控制項不再轉譯 `border="0"` 屬性。<br><br>如果未針對使用者輸入設計的控制項 (例如，`Label` 控制項) 的 `Enabled` 屬性設定為 `false` (或者，如果它們從容器控制項繼承此設定)，則它們不再轉譯 `disabled="disabled"` 屬性。 | 如果您使用 Visual Studio 從 ASP.NET 2.0 或 ASP.NET 3.5 升級應用程式，則工具會自動將設定新增至 Web.config 檔案，以保留舊版轉譯。 但是,如果通過將 IIS 中的應用程式池更改為目標 .NET Framework 4 來升級應用程式,ASP.NET默認情況下使用新的呈現模式。 若要停用新的轉譯模式，請在 Web.config 檔案中新增下列設定：<br><br>`<pages controlRenderingCompatibilityVersion="3.5" />` |
 | **預設文件中的事件處理常式** | 已要求具有與其對應之預設文件的無副檔名 URL 時，ASP.NET 4 會將 HTML `form` 項目的 `action` 屬性值轉譯為空字串。 在舊版 ASP.NET 中，`http://contoso.com` 要求會導致 Default.aspx 要求。 在該文件中，會轉譯開啟 `form` 標記，如下列範例所示：<br><br>`<form action="Default.aspx" />`<br><br>在 ASP.NET 4 中，`http://contoso.com` 要求也會導致 Default.aspx 要求，但 ASP.NET 現在會轉譯 HTML 開啟 `form` 標記，如下列範例所示：<br><br>`<form action="" />`<br><br>`action` 屬性是空字串時，IIS `DefaultDocumentModule` 物件會建立 Default.aspx 的子要求。 在大部分的情況下，應用程式碼可以辨識此子要求，Default.aspx 頁面則會正常執行。 不過，Managed 程式碼與 IIS 7 或 IIS 7.5 整合模式之間的可能互動可能會在子要求期間讓受管理 .aspx 頁面適當地停止運作。 如果發生下列狀況，預設 .aspx 文件的子要求將會導致錯誤或未預期的行為：<br><br>* 在 `form` 項目的 `action` 屬性設定為 "" 的情況下，會將 .aspx 頁面傳送至瀏覽器。<br>* 表單會回傳至 ASP.NET。<br>* 受管理 HTTP 模組會讀取實體主體的某個部分，例如 `Request.Form` 或 `Request.Params`。 這會將 POST 要求的實體主體讀入受管理記憶體中。 因此，任何以 IIS 7 或 IIS 7.5 整合模式執行的機器碼模組都無法再使用實體主體。<br>* IIS `DefaultDocumentModule` 物件最後會執行並建立對 Default.aspx 文件的子要求。 不過，因為 Managed 程式碼的某個部分已經讀取實體主體，所以沒有實體主體可用來傳送至子要求。<br>* 針對子要求執行 HTTP 管線時，會在處理常式執行階段期間執行 .aspx 檔案的處理常式。<br><br>因為沒有實體主體，所以沒有表單變數和檢視狀態。 因此，沒有可用的 .aspx 頁面處理常式資訊，可用來判斷應該引發的事件 (如果有的話)。 因此，未執行受影響 .aspx 頁面的回傳事件處理常式。 | 如需這項變更所引發問題之解決方式的資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes) (ASP.NET 4 最新變更) 文件中的＜Event Handlers Might Not Be Not Raised in a Default Document in IIS 7 or IIS 7.5 Integrated Mode＞(在預設文件中可能未以 IIS 7 或 IIS 7.5 整合模式引發事件處理常式)。 |
 | **散列演算法** | ASP.NET 使用加密和雜湊演算法來協助保護資料，例如表單驗證 Cookie 和檢視狀態。 ASP.NET 4 預設會將 <xref:System.Security.Cryptography.HMACSHA256> 演算法用於對 Cookie 和檢視狀態的雜湊作業。 舊版 ASP.NET 使用較舊的 <xref:System.Security.Cryptography.HMACSHA1> 演算法。 | 如果您執行混合使用 ASP.NET 2.0 和 ASP.NET 4 的應用程式，其中，表單驗證 Cookie 這類資料必須跨 .NET Framework 版本作用，請在 Web.config 檔案中新增下列設定，以設定 ASP.NET 4 Web 應用程式使用較舊的 <xref:System.Security.Cryptography.HMACSHA1> 演算法：<br><br>`<machineKey validation="SHA1" />` |
-| **在 Internet Explorer 中裝載控制項** | 您無法再於 Internet Explorer 中裝載 Windows Form 控制項，因為在 Web 上裝載控制項有更好的方案。 因此，IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中予以移除。 | 您可以使用下列技術，在 Web 應用程式進行自訂控制項開發：<br><br>* 您可以建立 Silverlight 應用程式，並將它設定成在瀏覽器外部執行。 如需詳細資訊，請參閱 [Out-of-Browser Support](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/dd550721%28v=vs.95%29) (瀏覽器外用支援)。<br>* 您可以建置 XAML 瀏覽器應用程式 (XBAP) 來利用 WPF 功能 (用戶端電腦上需要 .NET Framework)。 有關詳細資訊,請參閱[WPF XAML 瀏覽器應用程式概述](../wpf/app-development/wpf-xaml-browser-applications-overview.md)。 |
+| **在 Internet Explorer 中裝載控制項** | 您無法再於 Internet Explorer 中裝載 Windows Form 控制項，因為在 Web 上裝載控制項有更好的方案。 因此,IEHost.dll 和 IEExec.exe 程式集已從 .NET 框架中刪除。 | 您可以使用下列技術，在 Web 應用程式進行自訂控制項開發：<br><br>* 您可以建立 Silverlight 應用程式，並將它設定成在瀏覽器外部執行。 如需詳細資訊，請參閱 [Out-of-Browser Support](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/dd550721%28v=vs.95%29) (瀏覽器外用支援)。<br>• 您可以建構 XAML 瀏覽器應用程式 (XBAP) 以利用 WPF 功能(在用戶端電腦上需要 .NET 框架)。 有關詳細資訊,請參閱[WPF XAML 瀏覽器應用程式概述](../wpf/app-development/wpf-xaml-browser-applications-overview.md)。 |
 | **HtmlEncode 和 UrlEncode 方法** | <xref:System.Web.HttpUtility> 和 <xref:System.Web.HttpServerUtility> 類別的 `HtmlEncode` 和 `UrlEncode` 方法已更新成編碼單引號字元 (')，如下所示：<br><br>* `HtmlEncode` 方法會將單引號的執行個體編碼為 `&#39;`<br>* `UrlEncode` 方法會將單引號的執行個體編碼為 `%27` | 檢查您的程式碼，找出使用 `HtmlEncode` 和 `UrlEncode` 方法的位置，並確定編碼變更不會導致影響應用程式的變更。 |
 | **ASP.NET 2.0 應用程式中的 HttpException 錯誤** | 在 IIS 6 上啟用 ASP.NET 4 之後，IIS 6 上執行的 ASP.NET 2.0 應用程式 (在 Windows Server 2003 或 Windows Server 2003 R2 中) 可能會產生下列這類錯誤：`System.Web.HttpException: Path '/[yourApplicationRoot]/eurl.axd/[Value]' was not found.` | * 如果不需要 ASP.NET 4 即可執行網站，請重新對應網站以改成使用 ASP.NET 2.0。<br><br>-或-<br><br>* 如果需要 ASP.NET 4 才能執行網站，請將任何子 ASP.NET 2.0 虛擬目錄移至對應至 ASP.NET 2.0 的不同網站。<br><br>-或-<br><br>* 停用無副檔名 URL。 如需詳細資訊，請參閱 ASP.NET 網站之 [ASP.NET 4 Breaking Changes](/aspnet/whitepapers/aspnet4/breaking-changes) (ASP.NET 4 最新變更) 文件中的＜ASP.NET 2.0 Applications Might Generate HttpException Errors That Reference eurl.axd＞(ASP.NET 2.0 應用程式可以產生可參考 eurl.axd 的 HttpException 錯誤)。 |
 | **成員資格類型** | ASP.NET 成員資格中使用的某些類型 (例如，<xref:System.Web.Security.MembershipProvider>) 已從 System.Web.dll 移至 System.Web.ApplicationServices.dll 組件。 已移動類型，以解析用戶端和擴充 .NET Framework SKU 中類型之間的架構層相依性。 | 在 ASP.NET 4 專案中使用時，可能無法編譯已從舊版 ASP.NET 升級並使用已移動之成員資格類型的類別庫。 如果是這樣，請將類別庫專案中的參考新增至 System.Web.ApplicationServices.dll。 |
@@ -47,7 +49,7 @@ ms.locfileid: "81121525"
 | **要求驗證** | 為了改善要求驗證，會在要求生命週期稍早叫用 ASP.NET 要求驗證。 因此，會針對不適用於 .aspx 檔案的要求執行要求驗證，例如 Web 服務和自訂處理常式。 自訂 HTTP 模組在要求處理管線中執行時，要求驗證也會使用中。<br><br>基於這項變更，.aspx 檔案以外之資源的要求可能會擲回要求驗證錯誤。 要求管線中所執行的自訂程式碼 (例如，自訂 HTTP 模組) 也可能會擲回要求驗證錯誤。 | 如果必要，您可以使用 Web 組態檔中的下列設定，還原為只有觸發要求驗證之 .aspx 頁面的舊行為：<br><br>`<httpRuntime requestValidationMode="2.0" />`<br><br>警告: 如果還原到舊行為,請確保現有處理程式、模組和其他自定義代碼中的所有代碼都執行檢查可能成為 XSS 攻擊媒介的潛在不安全 HTTP 輸入。 |
 | **路由** | 如果您在 Visual Studio 2010 中建立檔案系統網站，而且網站位於資料夾名稱中包含點 (.) 的資料夾，則無法可靠地進行 URL 路由傳送。 從某些虛擬路徑傳回 HTTP 404 錯誤。 發生原因是 Visual Studio 2010 使用根虛擬目錄的不正確路徑來啟動 Visual Studio 程式開發伺服器。 | * 在檔案式網站的 [屬性]**** 頁面中，將 [虛擬路徑]**** 屬性變更為 "/"。<br><br>-或-<br><br>* 建立 Web 應用程式專案，而不是網站專案。 Web 應用程式專案沒有這個問題，而且 URL 路由傳送會運作，即使專案資料夾的名稱中有一個點也是一樣。<br><br>-或-<br><br>* 建立裝載於 IIS 中的 HTTP 網站。 在虛擬路徑和專案檔資料夾中，裝載 IIS 的網站可以有點。 |
 | **SharePoint 網站** | 如果您嘗試執行的 ASP.NET 4 網站部署為 SharePoint 網站的子系，而其包含名為 `WSS_Minimal` 的自訂部分信任層級，則會看到下列錯誤：<br><br>`Could not find permission set named 'ASP.Net'.` | 目前，沒有 SharePoint 版本與 ASP.NET 相容。 因此，您不應該嘗試將 ASP.NET 4 網站執行為 SharePoint 網站子系。 |
-| **XHTML 1.1 標準** | 若要啟用新網站的 XHTML 1.1 合規性，.NET Framework 4 中的 ASP.NET 控制項會產生符合 XHTML 1.1 標準的 HTML。 在 `<system.Web>` 項目的 Web.config 檔案中使用下列選項，以啟用這項轉譯：<br><br>`<pages controlRenderingCompatibilityVersion="4.0"/>`<br><br>此選項預設為 4.0。 基於相容性，從 Visual Studio 2008 升級的 Web 專案會啟用 3.5 設定。 | 無。 |
+| **XHTML 1.1 標準** | 為了啟用新網站的 XHTML 1.1 合規性,.NET 框架 4 中的 ASP.NET 控件將生成符合 XHTML 1.1 的 HTML。 在 `<system.Web>` 項目的 Web.config 檔案中使用下列選項，以啟用這項轉譯：<br><br>`<pages controlRenderingCompatibilityVersion="4.0"/>`<br><br>此選項預設為 4.0。 基於相容性，從 Visual Studio 2008 升級的 Web 專案會啟用 3.5 設定。 | 無。 |
 
 ## <a name="core"></a>核心
 
@@ -55,15 +57,17 @@ ms.locfileid: "81121525"
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
-| **卡空間** | Windows CardSpace 不再包含於 .NET Framework 中；它會個別予以提供。 | 請從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=199868)下載 Windows CardSpace。 |
-| **組態檔** | 已更正 .NET Framework 如何存取應用程式組態檔。 | 若應用程式設定檔名為*應用程式名稱.config,* 請將*應用程式名稱.exe.config*。例如,將*MyApp.config*重新命名為*MyApp.exe.config*。 |
-| **C# 程式碼編譯器** | 已在 <xref:Microsoft.CSharp> 命名空間中的 `Compiler`、`CompilerError` 和 `ErrorLevel` 類別不再可用，而其組件 (cscompmgd.dll) 不再包含於 .NET Framework 中。 | 在 <xref:System.CodeDom.Compiler> 命名空間中使用 <xref:System.CodeDom.Compiler.CodeDomProvider> 類別和其他類別。 如需詳細資訊，請參閱[使用 CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y2k85ax6%28v=vs.100%29)。 |
-| **裝載** (Unmanaged API) | 為了改善裝載功能，有些裝載啟用 API 已遭取代。 同處理序並存執行功能可讓應用程式在相同的處理序中載入和啟動多個版本的 .NET Framework。 例如，您可以執行的應用程式會在相同的處理序中載入根據 .NET Framework 2.0 SP1 的增益集 (或元件) 以及根據 .NET Framework 4 的增益集。 舊元件會繼續使用舊版 .NET Framework，新元件則會使用新版 .NET Framework。 | 使用[同處理序並存執行](../deployment/in-process-side-by-side-execution.md)中所述的組態。 |
-| **新的安全性模型** | 程式碼存取安全性 (CAS) 原則已關閉並取代為簡化模型，如 [.NET Framework 4 中的安全性變更](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233103%28v=vs.100%29)中所述。 | 如果您取決於應用程式中的 CAS，則可能需要修改。 如需詳細資訊，請參閱[程式碼存取安全性原則相容性和移轉](../misc/code-access-security-policy-compatibility-and-migration.md)。 |
+| **卡空間** | Windows 卡空間不再包含在 .NET 框架中;因此,Windows 卡空間已不包含在 .NET 框架中。它是單獨提供的。 | 請從 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkId=199868)下載 Windows CardSpace。 |
+| **組態檔** | 對.NET框架存取應用程式配置檔的方式進行了更正。 | 若應用程式設定檔名為*應用程式名稱.config,* 請將*應用程式名稱.exe.config*。例如,將*MyApp.config*重新命名為*MyApp.exe.config*。 |
+| **C# 程式碼編譯器** | 命名空間中的`ErrorLevel`和 類不再可用,其程式集 (cscompmgd.dll) 不再包含在`Compiler``CompilerError`<xref:Microsoft.CSharp>.NET 框架中。 | 在 <xref:System.CodeDom.Compiler> 命名空間中使用 <xref:System.CodeDom.Compiler.CodeDomProvider> 類別和其他類別。 如需詳細資訊，請參閱[使用 CodeDOM](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y2k85ax6%28v=vs.100%29)。 |
+| **裝載** (Unmanaged API) | 為了改善裝載功能，有些裝載啟用 API 已遭取代。 進程內並行執行功能使應用程式能夠在同一進程中載入和啟動多個版本的 .NET Framework。 例如,可以運行載入基於 .NET 框架 2.0 SP1 的載入項(或元件)的應用程式,以及在同一進程中基於 .NET 框架 4 的載入項。 舊元件會繼續使用舊版 .NET Framework，新元件則會使用新版 .NET Framework。 | 使用[同處理序並存執行](../deployment/in-process-side-by-side-execution.md)中所述的組態。 |
+| **新的安全性模型** | 代碼存取安全 (CAS) 策略已關閉,並替換為簡化的模型,如[.NET 框架 4 中的安全更改中](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233103%28v=vs.100%29)所述。 | 如果您取決於應用程式中的 CAS，則可能需要修改。 如需詳細資訊，請參閱[程式碼存取安全性原則相容性和移轉](../misc/code-access-security-policy-compatibility-and-migration.md)。 |
 
 ### <a name="date-and-time"></a>日期和時間
 
-命名空間：<xref:System>；組件：mscorlib (在 mscorlib.dll 中)
+網路: Namespace:<xref:System>
+
+程式集:mscorlib(在 mscorlib.dll 中)
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -74,19 +78,23 @@ ms.locfileid: "81121525"
 
 如需新中性和特定文化特性的清單，請參閱[全球化和當地語系化的新功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd997383%28v=vs.100%29)。
 
-命名空間：<xref:System.Globalization>；組件：mscorlib (在 mscorlib.dll 中)
+網路: Namespace:<xref:System.Globalization>
+
+程式集:mscorlib(在 mscorlib.dll 中)
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
-| **文化特性名稱** | 下列名稱變更會影響德文、迪維西文和非洲文文化特性：<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>：德文 (瑞士) (de-CH) 文化特性的貨幣名稱已從 "sFr." 變更 為 "Fr."。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>：迪維西文 (馬爾地夫) (dv-MV) 文化特性的完整日期模式已從 "dd/MMMM/yyyy" 變更為 "dd/MM/yyyy"。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>： 南非荷蘭文 (南非) (af-ZA) 文化特性的 P.M. 指示項已從 "nm" 變更為 "PM"。 | 請注意文化特性名稱的變更。 |
+| **文化特性名稱** | 下列名稱變更會影響德文、迪維西文和非洲文文化特性：<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>:德語 (瑞士) (de-CH) 區域性的貨幣名稱已更改為"sFr"。 為 "Fr."。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>：迪維西文 (馬爾地夫) (dv-MV) 文化特性的完整日期模式已從 "dd/MMMM/yyyy" 變更為 "dd/MM/yyyy"。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>： 南非荷蘭文 (南非) (af-ZA) 文化特性的 P.M. 指示項已從 "nm" 變更為 "PM"。 | 請注意文化特性名稱的變更。 |
 | **LCID 參數** | 為了與自動化伺服器設定中的預期行為一致，CLR 不再將 `LCID` 參數的目前文化特性 (Culture) 傳遞給未受管理的 COM 應用程式。 相反地，它會傳遞文化特性的 1033 (en-us)。 | 不需要進行任何修改，但需要所指定文化特性的原生應用程式除外。 |
 | **過時的文化特性類型** | <xref:System.Globalization.CultureTypes> 和 <xref:System.Globalization.CultureTypes> 文化特性類型現在已過時。<br><br>基於回溯相容性，<xref:System.Globalization.CultureTypes> 現在會傳回舊版 .NET Framework 所含的中性和特定文化特性，<xref:System.Globalization.CultureTypes> 現在則會傳回空清單。 | 使用 <xref:System.Globalization.CultureTypes> 列舉的其他值。 |
-| **擷取文化特性** | 從 Windows 7 開始，.NET Framework 4 會從作業系統擷取文化特性資訊，而不是儲存資料本身。 此外，.NET Framework 會與 Windows 同步，以排序資料以及設定資料大小寫。 | 無。 |
-| **Unicode 5.1 標準** | .NET Framework 現在支援所有 Unicode 5.1 字元，大約新增 1400 個字元。 其他字元包含新的符號、箭號、變音符號、標點符號、數學符號、CJK 筆劃和表意字元、其他馬來亞拉姆文和特拉古文數字字元，以及各種緬甸、拉丁、阿拉伯文、希臘文、蒙古文和斯拉夫字元。 Unicode 5.1 支援下列新的指令碼：巽丹文、雷布查文、桑塔爾文、瓦伊文、紹拉斯徹文、開亞里文、拉讓文、果魯穆奇文、歐迪亞文、坦米爾文、特拉古文、馬來亞拉姆文字元和查姆文。 | 無。 |
+| **擷取文化特性** | 從 Windows 7 開始,.NET 框架 4 從作業系統檢索區域性資訊,而不是存儲數據本身。 此外,.NET 框架與 Windows 同步以對資料進行排序和套管。 | 無。 |
+| **Unicode 5.1 標準** | .NET 框架現在支援所有 Unicode 5.1 個字元 -- 增加了大約 1400 個字元。 其他字元包含新的符號、箭號、變音符號、標點符號、數學符號、CJK 筆劃和表意字元、其他馬來亞拉姆文和特拉古文數字字元，以及各種緬甸、拉丁、阿拉伯文、希臘文、蒙古文和斯拉夫字元。 Unicode 5.1 支援下列新的指令碼：巽丹文、雷布查文、桑塔爾文、瓦伊文、紹拉斯徹文、開亞里文、拉讓文、果魯穆奇文、歐迪亞文、坦米爾文、特拉古文、馬來亞拉姆文字元和查姆文。 | 無。 |
 
 ### <a name="exceptions"></a>例外狀況
 
-命名空間：<xref:System>、<xref:System.Runtime.ExceptionServices>；組件：mscorlib (在 mscorlib.dll 中)
+命名空間: <xref:System>,<xref:System.Runtime.ExceptionServices>
+
+程式集:mscorlib(在 mscorlib.dll 中)
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -95,7 +103,9 @@ ms.locfileid: "81121525"
 
 ### <a name="reflection"></a>反射
 
-命名空間：<xref:System.Reflection>；組件：mscorlib (在 mscorlib.dll 中)
+網路: Namespace:<xref:System.Reflection>
+
+程式集:mscorlib(在 mscorlib.dll 中)
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -108,7 +118,9 @@ ms.locfileid: "81121525"
 
 ### <a name="interoperability"></a>互通性
 
-命名空間：<xref:System.Runtime.InteropServices>；組件：mscorlib (在 mscorlib.dll 中)
+網路: Namespace:<xref:System.Runtime.InteropServices>
+
+程式集:mscorlib(在 mscorlib.dll 中)
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -125,7 +137,9 @@ ms.locfileid: "81121525"
 
 下表描述先前有限制或其他問題之功能的改善。
 
-命名空間：<xref:System.Data>、<xref:System.Data.Objects.DataClasses>、<xref:System.Data.SqlClient>；組件：System.Data (在 System.Data.dll 中)、System.Data.Entity (在 System.Data.Entity.dll 中)
+命名空間: <xref:System.Data> <xref:System.Data.Objects.DataClasses>, ,<xref:System.Data.SqlClient>
+
+程式集:系統.資料(系統中.Data.dll),系統.資料.實體(在系統中.Data.Entity.dll)
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
@@ -140,7 +154,9 @@ ms.locfileid: "81121525"
 
 下表描述先前有限制或其他問題之功能的改善。
 
-命名空間：<xref:System.Data>、<xref:System.Data.Objects>、<xref:System.Data.Objects.DataClasses>；組件：System.Data.Entity (在 System.Data.Entity.dll 中)
+命名空間: <xref:System.Data> <xref:System.Data.Objects>, ,<xref:System.Data.Objects.DataClasses>
+
+程式集:系統.資料.實體(系統中.資料.實體.dll)
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
@@ -153,18 +169,22 @@ ms.locfileid: "81121525"
 
 下表描述先前有限制或其他問題之功能的改善。
 
-命名空間：<xref:System.Data.Linq>；組件：System.Data.Linq (在 System.Data.Linq.dll 中)
+網路: Namespace:<xref:System.Data.Linq>
+
+程式集:系統.Data.Linq(系統中.Data.Linq.dll)
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **事件** | 除了在載入集合時引發事件之外，如果卸載 <xref:System.Data.Linq.EntitySet%601>，<xref:System.Data.Linq.EntitySet%601> 集合現在還會對新增和移除作業引發 <xref:System.Data.Linq.EntitySet%601.ListChanged> 事件。 |
-| **查詢** | LINQ to SQL 查詢中不再忽略 `Skip(0)`。 因此，具有此方法之查詢的行為可能會不同。 例如，在某些情況下，`OrderBy` 子句需要具有 `Skip(0)`，而且，如果未包含 `OrderBy` 子句，則查詢現在會擲回 <xref:System.NotSupportedException> 例外狀況。 |
+| **查詢** | LINQ to SQL 查詢中不再忽略 `Skip(0)`。 因此，具有此方法之查詢的行為可能會不同。 例如,`OrderBy`在某些情況下,子句是必需`Skip(0)`的 ,<xref:System.NotSupportedException>`OrderBy`如果不包含 該子句,則查詢現在將引發異常。 |
 
 ### <a name="wcf-data-services"></a>WCF 資料服務
 
 下表描述先前有限制或其他問題之功能的改善。
 
-命名空間：<xref:System.Data.Services>、<xref:System.Data.Services.Client>、<xref:System.Data.Services.Common>、<xref:System.Data.Services.Providers>；組件：System.Data.Services (在 System.Data.Services.dll 中)、System.Data.Services.Client (在 System.Data.Services.Client.dll 中)
+命名空間: <xref:System.Data.Services> <xref:System.Data.Services.Client> <xref:System.Data.Services.Common>、 、 、<xref:System.Data.Services.Providers>
+
+程式集:系統.Data.服務(系統中.Data.Services.dll),系統.Data.服務.用戶端(在系統.Data.Services.Client.dll)
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
@@ -191,21 +211,25 @@ ms.locfileid: "81121525"
 
 ### <a name="applications"></a>應用程式
 
-命名空間：<xref:System.Windows>、<xref:System.Windows.Controls>；組件：PresentationFramework (在 PresentationFramework.dll 中)
+命名空間: <xref:System.Windows>,<xref:System.Windows.Controls>
+
+程式集:簡報簡報結構框架(在展示文稿框架.dll 中)
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
 | **例外處理** | 若要早期偵測到錯誤，WPF 會擲回 <xref:System.Reflection.TargetInvocationException> 並將 <xref:System.Exception.InnerException> 屬性設定為重大例外狀況，例如 <xref:System.NullReferenceException>、<xref:System.OutOfMemoryException>、<xref:System.StackOverflowException> 和 <xref:System.Security.SecurityException>，而不是攔截原始例外狀況。 | 無。 |
 | **Linked resources** | 為了讓連結更為簡單，建置應用程式時，位於專案資料夾結構以外之位置中的資源檔 (例如影像) 會使用資源檔的完整路徑，而不是將其檔案名稱作為資源識別碼。 應用程式將能夠在執行階段找出檔案。 | 無。 |
-| **部分信任應用程式** | 基於安全性考量，如果 Windows 應用程式是以部分信任執行並包含內含 HTML 的 <xref:System.Windows.Controls.WebBrowser> 控制項或 <xref:System.Windows.Controls.Frame> 控制項，則會在建立控制項時擲回 <xref:System.Security.SecurityException>。<br><br>如果符合下列所有條件，則瀏覽器應用程式會擲回例外狀況，並顯示一則訊息：<br><br>* 應用程式正在 Firefox 中執行。<br>* 應用程式是以部分信任在非受信任網站的網際網路區域中執行。<br>* 應用程式包含內含 HTML 的 <xref:System.Windows.Controls.WebBrowser> 控制項或 <xref:System.Windows.Controls.Frame> 控制項。<br><br>請注意，從信任的網站或內部網路區域執行的應用程式不會受到影響。 | 在您的瀏覽器應用程式中，您可以執行下列其中一項來簡化這項變更：<br><br>* 以完全信任執行瀏覽器應用程式。<br>* 讓客戶將應用程式的網站新增至信任的網站區域。<br>* 讓客戶在 Internet Explorer 中執行應用程式。 |
+| **部分信任應用程式** | 基於安全性考量，如果 Windows 應用程式是以部分信任執行並包含內含 HTML 的 <xref:System.Windows.Controls.WebBrowser> 控制項或 <xref:System.Windows.Controls.Frame> 控制項，則會在建立控制項時擲回 <xref:System.Security.SecurityException>。<br><br>如果符合下列所有條件，則瀏覽器應用程式會擲回例外狀況，並顯示一則訊息：<br><br>* 應用程式正在 Firefox 中執行。<br>* 應用程式是以部分信任在非受信任網站的網際網路區域中執行。<br>* 應用程式包含內含 HTML 的 <xref:System.Windows.Controls.WebBrowser> 控制項或 <xref:System.Windows.Controls.Frame> 控制項。<br><br>從受信任的網站或 Intranet 區域運行的應用程式不會受到影響。 | 在您的瀏覽器應用程式中，您可以執行下列其中一項來簡化這項變更：<br><br>* 以完全信任執行瀏覽器應用程式。<br>* 讓客戶將應用程式的網站新增至信任的網站區域。<br>* 讓客戶在 Internet Explorer 中執行應用程式。 |
 | **資源字典** | 為了改善佈景主題層級資源字典，並防止變更它們，資源字典中所定義和合併至佈景主題層級字典的可凍結資源現在一律會標示為凍結且為不變的。 這是可凍結資源的預期行為。 | 修改佈景主題層級合併字典中所定義資源的應用程式應該會複製資源，並修改複製的複本。 或者，資源可以標上 `x:Shared="false"`，因此 <xref:System.Windows.ResourceDictionary> 會在每次查詢資源時建立新的複本。 |
 | **Windows 7** | 為了讓 WPF 應用程式在 Windows 7 上運作地更好，已進行下列改善，來更正視窗的行為：<br><br>* 根據使用者互動，停駐和手勢狀態現在會如預期運作。<br>* **重疊顯示視窗、堆疊顯示視窗**和**並排顯示視窗**工作列命令現在有正確的行為，並更新適當的屬性。<br>* 最大化或最小化視窗的 `Top`、`Left`, `Width` 和 `Height` 屬性現在包含視窗的正確還原位置，而不是其他值，視監視器而定。 | 無。 |
 | **Windows 樣式和透明度** | <xref:System.Windows.Window.AllowsTransparency> 為 `true` 且 <xref:System.Windows.WindowState> 為 <xref:System.Windows.WindowState> 時，如果您嘗試將 <xref:System.Windows.Window.WindowStyle> 設定為 <xref:System.Windows.WindowStyle> 以外的值，則會擲回 <xref:System.InvalidOperationException>。 | 如果您必須在 <xref:System.Windows.Window.AllowsTransparency> 為 `true` 時變更 <xref:System.Windows.Window.WindowStyle>，則可以呼叫 Win32 `SetWindowLongPtr` 函式。 |
-| **XPS 檢視器** | WPF 不包含 Microsoft XML Paper Specification Essentials Pack (XPSEP)。 XPSEP 包含於 Windows 7 和 Windows Vista 中。<br><br>在執行未安裝 .NET Framework 3.5 SP1 之 Windows XP 的電腦上，使用 <xref:System.Windows.Controls.PrintDialog> 中以外的 WPF API 進行列印將會依賴 WINSPOOL。 將不會報告某些印表機功能，而且在列印期間不會套用某些印表機設定。 | 如果必要，請安裝 [Microsoft XML Paper Specification Essentials Pack](https://www.microsoft.com/en-us/download/details.aspx?id=11816)。 |
+| **XPS 檢視器** | WPF 不包含 Microsoft XML Paper Specification Essentials Pack (XPSEP)。 XPSEP 包含於 Windows 7 和 Windows Vista 中。<br><br>在運行 Windows XP 且未安裝 .NET 框架 3.5 SP1<xref:System.Windows.Controls.PrintDialog>的電腦上,使用 WPF API 進行列印,而不是在中的使用,將依賴於 WINSPOOL。 將不會報告某些印表機功能，而且在列印期間不會套用某些印表機設定。 | 如果必要，請安裝 [Microsoft XML Paper Specification Essentials Pack](https://www.microsoft.com/en-us/download/details.aspx?id=11816)。 |
 
 ### <a name="controls"></a>控制項
 
-命名空間：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>；組件：PresentationFramework (在 PresentationFramework.dll 中)、PresentationCore (在 PresentationCore.dll 中)、WindowsBase (在 WindowsBase.dll 中)
+命名空間: <xref:System.Windows> <xref:System.Windows.Controls> <xref:System.Windows.Data>、 、 、<xref:System.Windows.Input>
+
+程式集:簡報簡報(在展示文稿框架.dll 中)、簡報文稿核心(在展示文稿核心.dll中)、WindowsBase(在 WindowsBase.dll 中)
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -216,12 +240,14 @@ ms.locfileid: "81121525"
 | **功能表** | 若要在功能表快顯視窗中啟用 ClearType 文字，則已修改 <xref:System.Windows.Controls.ControlTemplate> 類別和 <xref:System.Windows.Controls.MenuItem> 控制項以及其他控制項。 | 應用程式不應該依賴控制項範本的視覺效果結構。 只有 <xref:System.Windows.Controls.ControlTemplate> 的具名部分才是公用合約的一部分。 如果應用程式必須在 <xref:System.Windows.Controls.ControlTemplate> 中找到特定物件，請搜尋視覺化樹狀結構中是否有特定類型，而不是依賴樹狀結構中某個物件的固定位置。 |
 | **瀏覽** | 如果 <xref:System.Windows.Controls.Frame> 直接瀏覽至某個位置，則在初始瀏覽之後，<xref:System.Windows.Navigation.NavigatingCancelEventArgs.IsNavigationInitiator> 屬性是 `true`。 這項變更可防止在啟動案例期間引發其他事件。 | 無。 |
 | **彈出視窗** | 在版面配置階段期間，現在可以呼叫 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> 委派多次，而不是只呼叫一次。 | 如果您的 <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback> 委派會根據先前的位置計算 <xref:System.Windows.Controls.Primitives.Popup> 的位置，則只有在 `popupSize`、`targetSize` 或 `offset` 參數的值變更時，才會重新計算位置。 |
-| **屬性值** | <xref:System.Windows.DependencyObject.SetCurrentValue%2A> 方法現在可讓您將屬性設定為有效值，但仍然會接受影響該屬性的任何繫結、樣式或觸發程序。 | 只要屬性值變更為某個其他動作的副作用 (包含使用者操作)，控制項作者應該就會使用 <xref:System.Windows.DependencyObject.SetCurrentValue%2A>。 |
+| **屬性值** | 該方法<xref:System.Windows.DependencyObject.SetCurrentValue%2A>現在允許您將屬性設置為有效值,儘管它繼續尊重影響該屬性的任何綁定、樣式或觸發器。 | 只要屬性值變更為某個其他動作的副作用 (包含使用者操作)，控制項作者應該就會使用 <xref:System.Windows.DependencyObject.SetCurrentValue%2A>。 |
 | **文字方塊** | 基於安全性考量，<xref:System.Windows.Forms.TextBoxBase.Copy%2A> 和 <xref:System.Windows.Forms.TextBoxBase.Cut%2A> 方法以部分信任呼叫時會以無訊息模式失敗。<br><br>此外，以程式設計方式在繼承自 <xref:System.Windows.Controls.Primitives.TextBoxBase> 的控制項上執行 <xref:System.Windows.Input.ApplicationCommands.Copy> 或 <xref:System.Windows.Input.ApplicationCommands.Cut> 屬性，將會在部分信任中予以封鎖。 不過，使用者啟動的複製和剪下命令 (例如，按一下其 <xref:System.Windows.Controls.Primitives.ButtonBase.Command> 屬性繫結至其中一個命令的按鈕) 將會運作。 透過鍵盤快速鍵和操作功能表的標準複製和剪下，仍然會如之前在部分信任中運作。 | 將 <xref:System.Windows.Input.ApplicationCommands.Copy> 或 <xref:System.Windows.Input.ApplicationCommands.Cut> 命令繫結至使用者起始的動作，例如按一下按鈕。 |
 
 ### <a name="graphics"></a>圖形
 
-命名空間：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>、<xref:System.Windows.Media.Effects>；組件：PresentationFramework (在 PresentationFramework.dll 中)、PresentationCore (在 PresentationCore.dll 中)、WindowsBase (在 WindowsBase.dll 中)
+命名空間: <xref:System.Windows> <xref:System.Windows.Controls> <xref:System.Windows.Data> <xref:System.Windows.Input>、 、 、<xref:System.Windows.Media.Effects>
+
+程式集:簡報簡報(在展示文稿框架.dll 中)、簡報文稿核心(在展示文稿核心.dll中)、WindowsBase(在 WindowsBase.dll 中)
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -231,7 +257,9 @@ ms.locfileid: "81121525"
 
 ### <a name="input"></a>輸入
 
-命名空間：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>；組件：PresentationFramework (在 PresentationFramework.dll 中)、PresentationCore (在 PresentationCore.dll 中)、WindowsBase (在 WindowsBase.dll 中)
+命名空間: <xref:System.Windows> <xref:System.Windows.Controls> <xref:System.Windows.Data>、 、 、<xref:System.Windows.Input>
+
+程式集:簡報簡報(在展示文稿框架.dll 中)、簡報文稿核心(在展示文稿核心.dll中)、WindowsBase(在 WindowsBase.dll 中)
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -242,7 +270,9 @@ ms.locfileid: "81121525"
 
 ### <a name="ui-automation"></a>UI 自動化
 
-命名空間：<xref:System.Windows>、<xref:System.Windows.Automation.Peers>、<xref:System.Windows.Automation.Provider>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>；組件：PresentationFramework (在 PresentationFramework.dll 中)、PresentationCore (在 PresentationCore.dll 中)、UIAutomationProvider (在 UIAutomationProvider.dll 中)、WindowsBase (在 WindowsBase.dll 中)
+命名空間: <xref:System.Windows> <xref:System.Windows.Automation.Peers> <xref:System.Windows.Automation.Provider> <xref:System.Windows.Controls>、 <xref:System.Windows.Data>、 、 、<xref:System.Windows.Input>
+
+程式集:簡報簡報(在展示文稿框架.dll 中)、展示文稿核心(在展示文稿核心.dll中)、UI自動化提供者(在 UI 自動化提供者.dll 中)、WindowsBase(在 WindowsBase.dll 中)
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -255,7 +285,9 @@ ms.locfileid: "81121525"
 
 ### <a name="xaml"></a>XAML
 
-命名空間：<xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>、<xref:System.Windows.Markup>；組件：PresentationFramework (在 PresentationFramework.dll 中)、PresentationCore (在 PresentationCore.dll 中)、WindowsBase (在 WindowsBase.dll 中)
+命名空間: <xref:System.Windows> <xref:System.Windows.Controls> <xref:System.Windows.Data> <xref:System.Windows.Input>、 、 、<xref:System.Windows.Markup>
+
+程式集:簡報簡報(在展示文稿框架.dll 中)、簡報文稿核心(在展示文稿核心.dll中)、WindowsBase(在 WindowsBase.dll 中)
 
 | 功能 | 3.5 SP1 的差異 | 建議變更 |
 | ------- | ------------------------ | ------------------- |
@@ -268,21 +300,25 @@ ms.locfileid: "81121525"
 
 ### <a name="schema-and-transforms"></a>結構描述和轉換
 
-命名空間：<xref:System.Xml.Linq>、<xref:System.Xml.Schema>、<xref:System.Xml.XPath>；組件：System.Xml (在 System.Xml.dll 中)、System.Xml.Linq (在 System.Xml.Linq.dll 中)
+命名空間: <xref:System.Xml.Linq><xref:System.Xml.Schema>,<xref:System.Xml.XPath>
+
+程式集:系統.Xml(在系統.Xml.dll 中),系統.Xml.Linq(在系統.Xml.Linq.dll中)
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
 | **Chameleon 結構描述** | 為了避免資料損毀，現在，Chameleon 結構描述隨附於多個結構描述時會正確地進行複製。<br><br>Chameleon 結構描述是沒有目標命名空間的結構描述，而且它們包含於其他 XSD 時，會採用匯入結構描述的目標命名空間。 它們通常用來將一般類型併入結構描述中。 |
 | **ID 函式** | 將 <xref:System.Xml.XmlReader> 物件傳遞給 XLST 時，XSLT [id 函式](/sql/xquery/functions-on-sequences-id)現在會傳回正確值，而不是 Null。<br><br>如果使用者已使用 <xref:System.Xml.Linq.XNode.CreateReader%2A> 方法從 LINQ to XML 類別建立 <xref:System.Xml.XmlReader> 物件，並且這個 <xref:System.Xml.XmlReader> 物件會傳遞至 XSLT，在過去，XSLT 中 `id` 函式的任何執行個體會傳回 Null。 這不是 `id` 函式的允許傳回值。 |
 | **命名空間屬性** | 為了避免資料損毀，<xref:System.Xml.XPath.XPathNavigator> 物件現在會正確地傳回 `x:xmlns` 屬性的本機名稱。 |
-| **命名空間聲明** | 子樹上的 <xref:System.Xml.XmlReader> 物件不再於一個 XML 項目內建立重複的命名空間宣告。 |
+| **命名空間聲明** | 子<xref:System.Xml.XmlReader>樹上的物件不再在一個 XML 元素中創建重複的命名空間聲明。 |
 | **結構描述驗證** | 為了防止錯誤的結構描述驗證，<xref:System.Xml.Schema.XmlSchemaSet> 類別允許正確且一致地編譯 XSD 結構描述。 這些結構描述可以包含其他結構描述；例如，`A.xsd` 可以包含 `B.xsd`，而後者可以包含 `C.xsd`。 編譯任何其中一個可周遊這個相依性圖表。 |
 | **文稿函數** | 函式實際可用時，[function-available 函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms256124(v=vs.100))不再正確地傳回 `false`。 |
 | **URI** | <xref:System.Xml.Linq.XElement.Load%2A> 方法現在會在 LINQ 查詢中傳回正確的 BaseURI。 |
 
 ### <a name="validation"></a>驗證
 
-命名空間：<xref:System.Xml.Linq>、<xref:System.Xml.Schema>、<xref:System.Xml.XPath>；組件：System.Xml (在 System.Xml.dll 中)、System.Xml.Linq (在 System.Xml.Linq.dll 中)
+命名空間: <xref:System.Xml.Linq><xref:System.Xml.Schema>,<xref:System.Xml.XPath>
+
+程式集:系統.Xml(在系統.Xml.dll 中),系統.Xml.Linq(在系統.Xml.Linq.dll中)
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
@@ -291,7 +327,9 @@ ms.locfileid: "81121525"
 
 ### <a name="writing"></a>撰寫
 
-命名空間：<xref:System.Xml.Linq>、<xref:System.Xml.Schema>、<xref:System.Xml.XPath>；組件：System.Xml (在 System.Xml.dll 中)、System.Xml.Linq (在 System.Xml.Linq.dll 中)
+命名空間: <xref:System.Xml.Linq><xref:System.Xml.Schema>,<xref:System.Xml.XPath>
+
+程式集:系統.Xml(在系統.Xml.dll 中),系統.Xml.Linq(在系統.Xml.Linq.dll中)
 
 | 功能 | 3.5 SP1 的差異 |
 | ------- | ------------------------ |
@@ -300,9 +338,9 @@ ms.locfileid: "81121525"
 
 ## <a name="see-also"></a>另請參閱
 
-- [.NET Framework 4 中的新型別和成員](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff641764%28v=vs.100%29)
-- [.NET Framework 4 移轉手冊](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
-- [.NET Framework 4 的新功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
-- [.NET Framework 的版本相容性](version-compatibility.md)
-- [將 Office 方案移轉至 .NET Framework 4](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)
+- [.NET 架構 4 中的新類型和成員](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff641764%28v=vs.100%29)
+- [.NET 框架的遷移指南 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
+- [.NET 架構 4 中的新增功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
+- [.NET 架構中的版本相容性](version-compatibility.md)
+- [將 Office 解決方案移轉到 .NET 框架 4](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)
 - [.NET Framework 類別庫中的過時功能](../whats-new/whats-obsolete.md)

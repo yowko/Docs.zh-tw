@@ -1,12 +1,12 @@
 ---
 title: 屬性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399746"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389546"
 ---
 # <a name="attributes-c"></a>屬性 (C#)
 
@@ -57,7 +57,7 @@ ms.locfileid: "79399746"
 
 ### <a name="attribute-targets"></a>屬性目標
 
-屬性的「目標」** 是要套用屬性的實體。 例如，屬性可套用至類別、特定的方法或整個組件。 預設情況下，屬性應用於其後面的元素。 但是，舉例來說，您也可以明確地識別是否要將屬性套用到方法、它的參數或它的傳回值。
+屬性的「目標」** 是要套用屬性的實體。 例如，屬性可套用至類別、特定的方法或整個組件。 默認情況下,屬性應用於其後面的元素。 但是，舉例來說，您也可以明確地識別是否要將屬性套用到方法、它的參數或它的傳回值。
 
 若要明確地識別屬性目標，請使用下列語法：
 
@@ -95,7 +95,7 @@ using System.Reflection;
 [!code-csharp[Applying attributes to different code elements](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#6)]
 
 > [!NOTE]
-> 不論 `ValidatedContract` 定義為有效的目標為何，都必須指定 `return` 目標，即使 `ValidatedContract` 已定義為只套用至傳回值也一樣。 換句話說，編譯器不會使用 `AttributeUsage` 資訊來解析模稜兩可的屬性目標。 如需詳細資訊，請參閱 [AttributeUsage (C#)](attributeusage.md)。
+> 不論 `ValidatedContract` 定義為有效的目標為何，都必須指定 `return` 目標，即使 `ValidatedContract` 已定義為只套用至傳回值也一樣。 換句話說，編譯器不會使用 `AttributeUsage` 資訊來解析模稜兩可的屬性目標。 如需詳細資訊，請參閱 [AttributeUsage (C#)](../../../language-reference/attributes/general.md)。
 
 ## <a name="common-uses-for-attributes"></a>屬性的常見用法
 
@@ -119,13 +119,13 @@ using System.Reflection;
 
 - [建立自訂屬性 (C#)](creating-custom-attributes.md)  
 - [使用反映存取屬性 (C#)](accessing-attributes-by-using-reflection.md)  
-- [如何使用屬性 （C#） 創建 C/C++聯合](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [如何使用屬性 (C#) 建立 C/C++聯合](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [常見屬性 (C#)](common-attributes.md)  
-- [呼叫端資訊 (C#)](../caller-information.md)  
+- [呼叫端資訊 (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../index.md)
+- [C# 編程指南](../../index.md)
 - [反映 (C#)](../reflection.md)
 - [屬性](../../../../standard/attributes/index.md)
-- [使用 C 中的屬性#](../../../tutorials/attributes.md)
+- [使用 C 的屬性#](../../../tutorials/attributes.md)

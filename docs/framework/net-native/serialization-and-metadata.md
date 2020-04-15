@@ -2,12 +2,12 @@
 title: 序列化和中繼資料
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241915"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389225"
 ---
 # <a name="serialization-and-metadata"></a>序列化和中繼資料
 
@@ -15,7 +15,7 @@ ms.locfileid: "81241915"
   
 - 反映型協力廠商序列化程式。 這些序列化程式需要修改您的執行階段指示詞檔案，將在下一節中討論。  
   
-- 您可以在 .NET Framework 類別庫中找到非反映型序列化程式。 這些序列化程式可能需要修改您的執行階段指示詞檔案，將在 [Microsoft 序列化程式](#Microsoft)一節中討論。  
+- 在 .NET Framework 類庫中找到的非反射序列化器。 這些序列化程式可能需要修改您的執行階段指示詞檔案，將在 [Microsoft 序列化程式](#Microsoft)一節中討論。  
   
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>協力廠商序列化程式
@@ -59,13 +59,13 @@ ms.locfileid: "81241915"
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
- 您必須針對每一種類型，在執行階段指示詞檔案中加入像下列的項目：  
+將每個類型的項目(如以下內容)新增到執行時指令檔:  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- 有關範例使用的語法的資訊,請參閱[\<類型>元素](type-element-net-native.md)。  
+有關範例使用的語法的資訊,請參閱[\<類型>元素](type-element-net-native.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

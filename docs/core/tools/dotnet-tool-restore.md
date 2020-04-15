@@ -1,21 +1,21 @@
 ---
 title: 點網工具還原命令
-description: dotnet 工具還原命令在您的電腦上安裝目前的目錄範圍內的 .NET Core 本地工具。
+description: dotnet 工具還原命令在您的電腦上安裝當前目錄範圍內的 .NET Core 本地工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: cb46f70afb58e482b6aedfddfbf5f3a0c40674f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d1e67ec809ddd725721698cc741f9acc99e1ce7
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146433"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389621"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
-**本文適用于：✔️** .NET Core 3.0 SDK 和更高版本
+**本文適用於:✔️** .NET Core 3.0 SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
-`dotnet tool restore`- 在電腦上安裝目前的目錄範圍內的 .NET Core 本地工具。
+`dotnet tool restore`- 在電腦上安裝當前目錄範圍內的 .NET Core 本地工具。
 
 ## <a name="synopsis"></a>概要
 
@@ -23,20 +23,20 @@ ms.locfileid: "79146433"
 dotnet tool restore <PACKAGE_NAME>
     [--configfile] [--add-source] [tool-manifest]
     [--disable-parallel] [--ignore-failed-sources]
-    [--no-cache] [-interactive] [-v|--verbosity]
+    [--no-cache] [--interactive] [-v|--verbosity]
 
 dotnet tool restore <-h|--help>
 ```
 
 ## <a name="description"></a>描述
 
-該`dotnet tool restore`命令查找目前的目錄範圍內的工具清單檔，並安裝其中列出的工具。 有關清單檔的資訊，請參閱[安裝本地工具和](global-tools.md#install-a-local-tool)[調用本地工具](global-tools.md#invoke-a-local-tool)。
+該`dotnet tool restore`命令查找目前目錄範圍內的工具清單檔,並安裝其中列出的工具。 關於清單檔案的資訊,請參考[本地端工具與](global-tools.md#install-a-local-tool)[呼叫本地端工具](global-tools.md#invoke-a-local-tool)。
 
 ## <a name="arguments"></a>引數
 
 - **`PACKAGE_NAME`**
 
-包含要安裝的 .NET Core 工具的 NuGet 包的名稱/ID。
+包含要安裝的 .NET Core 工具的 NuGet 套件的名稱/ ID。
 
 ## <a name="options"></a>選項。
 
@@ -80,9 +80,9 @@ dotnet tool restore <-h|--help>
 
 - **`dotnet tool restore`**
 
-  還原目前的目錄的本地工具。
+  還原當前目錄的本地工具。
 
 ## <a name="see-also"></a>另請參閱
 
 - [.NET 核心工具](global-tools.md)
-- [教程：使用 .NET 核心 CLI 安裝和使用 .NET 核心本地工具](local-tools-how-to-use.md)
+- [教學:使用 .NET 核心 CLI 安裝與使用 .NET 核心本地工具](local-tools-how-to-use.md)

@@ -7,16 +7,19 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 4c6996e2279693cf96c826741869d72007cf81cf
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 2bbdced0f984b653a58afba9685683e8c0891271
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249548"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389791"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
-XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描述或產生由 XML 結構描述定義的類別。 下列程序將說明如何執行這些作業。  
-  
+XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描述或產生由 XML 結構描述定義的類別。 下列程序將說明如何執行這些作業。
+
+XML 架構定義工具 (Xsd.exe) 通常可以在以下路徑中找到:*
+_C:\\程式\\檔案 (x86) 微軟\\\\\\\\SDK 視窗 [版本] bin NETFX [版本] 工具\\_
+
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>產生符合特定結構描述的類別  
   
 1. 開啟命令提示字元。  
@@ -27,7 +30,7 @@ XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描
     xsd mySchema.xsd  
     ```  
   
-     此工具只能處理參考 2001 年 3 月 16 日全球資訊網協會 XML 規格的結構描述。 換句話說，XML 架構命名空間必須為""，http://www.w3.org/2001/XMLSchema如以下示例所示。  
+     此工具只能處理參考 2001 年 3 月 16 日全球資訊網協會 XML 規格的結構描述。 換句話說,XML 架構命名空間必須為"",http://www.w3.org/2001/XMLSchema如以下範例所示。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -57,7 +60,7 @@ XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描
 - <xref:System.Data.DataSet>
 - [XML 結構描述定義工具和 XML 序列化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [XML 結構描述定義工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [XML 架構定義工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [HOW TO：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
