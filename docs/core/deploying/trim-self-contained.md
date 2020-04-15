@@ -56,7 +56,7 @@ dotnet publish -c Release -r win10-x64 --self-contained true -p:PublishSingleFil
 
 01. <span data-ttu-id="0f880-130">在 **「解決方案資源管理員」** 窗格中,右鍵單擊要發布的專案。</span><span class="sxs-lookup"><span data-stu-id="0f880-130">On the **Solution Explorer** pane, right-click on the project you want to publish.</span></span> <span data-ttu-id="0f880-131">選擇 **"發佈..."**</span><span class="sxs-lookup"><span data-stu-id="0f880-131">Select **Publish...**.</span></span>
 
-    :::image type="content" source="media/trim-self-contained/visual-studio-solution-explorer.png" alt-text="解決方案資源管理器,右鍵單擊功能表突出顯示"發佈"選項。":::
+    :::image type="content" source="media/trim-self-contained/visual-studio-solution-explorer.png" alt-text="解決方案資源管理器,右鍵單擊功能表突出顯示發佈選項。":::
 
     <span data-ttu-id="0f880-133">如果還沒有發佈設定檔,請按照說明創建一個設定檔,然後選擇 **「資料夾**目標類型」。</span><span class="sxs-lookup"><span data-stu-id="0f880-133">If you don't already have a publishing profile, follow the instructions to create one and choose the **Folder** target-type.</span></span>
 
