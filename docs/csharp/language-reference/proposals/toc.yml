@@ -74,6 +74,8 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/ranges.md
         - name: 模式型 using 與 using 宣告
           href: ../../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: 靜態區域函式
+          href: ../../../../_csharplang/proposals/csharp-8.0/static-local-functions.md
         - name: Null 聯合指派
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: 唯讀執行個體成員
