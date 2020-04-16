@@ -2,25 +2,25 @@
 title: 組態範例
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 5ac72db1fce0862381cd614499b5db4b9d95b2d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52747e6d964022d5028b0edb91dc8bc0ac0e82bc
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183908"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463961"
 ---
 # <a name="configuration-sample"></a>組態範例
 此範例示範如何使用組態檔讓服務變成可搜尋的。  
   
 > [!NOTE]
-> 這個範例會在組態中實作探索。 有關在代碼中實現發現的示例，請參閱[基本](../../../../docs/framework/wcf/samples/basic-sample.md)。  
+> 這個範例會在組態中實作探索。 有關在代碼中實現發現的範例,請參閱[基本](../../../../docs/framework/wcf/samples/basic-sample.md)。  
   
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> 如果此目錄不存在，請轉到[Windows 通信基礎 （WCF） 和 Windows 工作流基礎 （WF） 示例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通信基礎 （WCF） 和示例。 此範例位於下列目錄。  
+> 如果此目錄不存在,請轉到[Windows 通信基礎 (WCF) 和 Windows 工作流基礎 (WF) 範例 .NET 框架 4](https://www.microsoft.com/download/details.aspx?id=21459)以下載[!INCLUDE[wf1](../../../../includes/wf1-md.md)]所有 Windows 通訊基礎 (WCF) 和示例。 此範例位於下列目錄。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
@@ -85,7 +85,7 @@ ms.locfileid: "79183908"
         </endpointBehaviors>  
 ```  
   
- 有關作用域的詳細資訊，請參閱[發現查找和查找條件](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。  
+ 有關作用網域的詳細資訊,請參閱[找到搜尋與尋找條件](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)。  
   
  您也可以控制探索端點的特定詳細資料。 這是透過 <xref:System.ServiceModel.Configuration.StandardEndpointsSection> 達成。 在此範例中，所使用的通訊協定版本會經過修改，而且會加入 `maxResponseDelay` 屬性，如下列程式碼範例所示。  
   
@@ -254,12 +254,13 @@ ms.locfileid: "79183908"
   
     </standardEndpoints>  
   
-  </system.serviceModel>  
+  </system.serviceModel>
+</configuration>
 ```  
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1. 這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 有關詳細資訊，請參閱配置[HTTP 和 HTTPS](../feature-details/configuring-http-and-https.md)。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 有關詳細資訊,請參閱設定[HTTP 與 HTTPS](../feature-details/configuring-http-and-https.md)。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. 建置方案。  
   

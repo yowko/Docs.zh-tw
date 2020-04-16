@@ -2,12 +2,12 @@
 title: 點網工具還原命令
 description: dotnet 工具還原命令在您的電腦上安裝當前目錄範圍內的 .NET Core 本地工具。
 ms.date: 02/14/2020
-ms.openlocfilehash: 0d1e67ec809ddd725721698cc741f9acc99e1ce7
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: a518c2d45bbe9522bddfed4bbef61b30f1ad634b
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389621"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463336"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -21,11 +21,12 @@ ms.locfileid: "81389621"
 
 ```dotnetcli
 dotnet tool restore <PACKAGE_NAME>
-    [--configfile] [--add-source] [tool-manifest]
-    [--disable-parallel] [--ignore-failed-sources]
-    [--no-cache] [--interactive] [-v|--verbosity]
+    [--configfile <FILE>] [--add-source <SOURCE>]
+    [tool-manifest <PATH_TO_MANIFEST_FILE>] [--disable-parallel]
+    [--ignore-failed-sources] [--no-cache] [--interactive]
+    [-v|--verbosity <LEVEL>]
 
-dotnet tool restore <-h|--help>
+dotnet tool restore -h|--help
 ```
 
 ## <a name="description"></a>描述

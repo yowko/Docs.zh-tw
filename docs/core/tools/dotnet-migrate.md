@@ -2,16 +2,16 @@
 title: dotnet migrate 命令
 description: dotnet migrate 命令會移轉專案及其所有相依性。
 ms.date: 02/14/2020
-ms.openlocfilehash: 6148048c469c43320cc4459352fd2fb62f101740
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 71f587c1bfadd445aca818448bdd5f136f009fe0
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503705"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463642"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**本文適用于：✔️** .NET 核心 2.x SDK
+**本文適用於:✔️** .NET 核心 2.x SDK
 
 ## <a name="name"></a>名稱
 
@@ -20,20 +20,24 @@ ms.locfileid: "77503705"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
-dotnet migrate [-h|--help]
+dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json <REPORT_FILE>]
+    [-r|--report-file <REPORT_FILE>] [-s|--skip-project-references [Debug|Release]]
+    [--skip-backup] [-t|--template-file <TEMPLATE_FILE>] [-v|--sdk-package-version]
+    [-x|--xproj-file]
+
+dotnet migrate -h|--help
 ```
 
 ## <a name="description"></a>描述
 
-此命令已棄用。 該`dotnet migrate`命令從 .NET Core 3.0 SDK 開始不再可用。 它只能將預覽 2 .NET Core 專案遷移到 1.x .NET Core 專案，該專案已表示支援。
+此命令已棄用。 該`dotnet migrate`命令從 .NET Core 3.0 SDK 開始不再可用。 它只能將預覽 2 .NET Core 專案遷移到 1.x .NET Core 專案,該專案已表示支援。
 
 根據預設，命令會移轉根專案和根專案包含的任何專案參考。 可以在執行階段使用 `--skip-project-references` 選項停用此行為。
 
 可針對下列資產進行移轉：
 
-* 通過指定要遷移*的專案.json*檔，創建單個專案。
-* 通過將路徑傳遞到*global.json*檔，在*全域.json*檔中指定的所有目錄。
+* 通過指定要遷移*的專案.json*文件,創建單個專案。
+* 通過將路徑傳遞到*global.json*檔,在*全域.json*檔中指定的所有目錄。
 * *solution.sln* 檔案，移轉方案參考的專案。
 * 指定之目錄的所有子目錄，以遞迴方式進行。
 
@@ -76,7 +80,7 @@ dotnet migrate [-h|--help]
 
 `--skip-backup`
 
-成功遷移後，將移動*專案.json、global.json*和*global.json*`backup`*\*.xproj*移到目錄中。
+成功遷移后,將移動*專案.json、global.json*和*global.json*`backup`*\*.xproj*移到目錄中。
 
 `-t|--template-file <TEMPLATE_FILE>`
 

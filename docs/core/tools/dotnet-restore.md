@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 ms.date: 02/27/2020
-ms.openlocfilehash: 3b336e1aa097f83280de6faeef51793345520530
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: f49f0cda4424a4cc54ab7d4d4c6f729919dc7e60
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389651"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463424"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -20,13 +20,14 @@ ms.locfileid: "81389651"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel]
+dotnet restore [<ROOT>] [--configfile <FILE>] [--disable-parallel]
     [-f|--force] [--force-evaluate] [--ignore-failed-sources]
-    [--interactive] [--lock-file-path] [--locked-mode]
-    [--no-cache] [--no-dependencies] [--packages] [-r|--runtime]
-    [-s|--source] [--use-lockfile] [-v|--verbosity]
+    [--interactive] [--lock-file-path <LOCK_FILE_PATH>] [--locked-mode]
+    [--no-cache] [--no-dependencies] [--packages <PACKAGES_DIRECTORY>]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
+    [--use-lockfile] [-v|--verbosity <LEVEL>]
 
-dotnet restore [-h|--help]
+dotnet restore -h|--help
 ```
 
 ## <a name="description"></a>描述

@@ -3,16 +3,16 @@ title: dotnet nuget push 命令
 description: dotnet nuget push 命令會將套件推送至伺服器並發行。
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 96f8d008c8306a0782d5149360a24bb4097a1ec4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503667"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463525"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
+**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -21,9 +21,13 @@ ms.locfileid: "77503667"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
-    [--no-service-endpoint] [-s|--source] [--skip-duplicate] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
-dotnet nuget push [-h|--help]
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
+    [--interactive] [-k|--api-key <API_KEY>] [-n|--no-symbols]
+    [--no-service-endpoint] [-s|--source <SOURCE>] [--skip-duplicate]
+    [-sk|--symbol-api-key <API_KEY>] [-ss|--symbol-source <SOURCE>]
+    [-t|--timeout <TIMEOUT>]
+
+dotnet nuget push -h|--help
 ```
 
 ## <a name="description"></a>描述
@@ -72,7 +76,7 @@ dotnet nuget push [-h|--help]
 
 - **`--skip-duplicate`**
 
-  將多個包推送到 HTTP（S） 伺服器時，將任何 409 衝突回應視為警告，以便推送可以繼續。 自 .NET 核心 3.1 SDK 以來可用。
+  將多個包推送到 HTTP(S) 伺服器時,將任何 409 衝突回應視為警告,以便推送可以繼續。 自 .NET 核心 3.1 SDK 以來可用。
 
 - **`-sk|--symbol-api-key <API_KEY>`**
 
@@ -94,7 +98,7 @@ dotnet nuget push [-h|--help]
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-- 將*foo.nupkg*推送到正式的 NuGet 伺服器，指定 API 金鑰：
+- 將*foo.nupkg*推送到正式的 NuGet 伺服器,指定 API 金鑰:
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
@@ -134,7 +138,7 @@ dotnet nuget push [-h|--help]
   > 如果此命令無法運作，可能是舊版 SDK (.NET Core 2.1 SDK 及更舊版本) 中有 Bug 所致。
   > 若要修正此問題，請升級您的 SDK 版本，或改為執行下列命令：`dotnet nuget push **/*.nupkg`
 
-- 即使 HTTP（S） 伺服器返回 409 衝突回應，也會推送所有 *.nupkg*檔：
+- 即使 HTTP(S) 伺服器傳回 409 衝突回應,也會推送所有 *.nupkg*檔:
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate

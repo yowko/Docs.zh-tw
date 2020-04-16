@@ -1,21 +1,17 @@
 ---
-title: 點網增加參考命令
+title: 點網加入引言指令
 description: dotnet add reference 命令提供方便的選項，以新增專案對專案參考。
 ms.date: 02/14/2020
-ms.openlocfilehash: 84ea25e94efc8d84aebfeccf62c30a64551c5019
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f2bd67d181784c4858b8971d05053d196df7818e
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503795"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463738"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
-**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -23,7 +19,12 @@ ms.locfileid: "77503795"
 
 ## <a name="synopsis"></a>概要
 
-`dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
+```dotnetcli
+dotnet add [<PROJECT>] reference [-f|--framework <FRAMEWORK>]
+     [--interactive] <PROJECT_REFERENCES>
+
+dotnet add reference -h|--help
+```
 
 ## <a name="description"></a>描述
 
@@ -49,13 +50,13 @@ ms.locfileid: "77503795"
 
 ## <a name="options"></a>選項。
 
+- **`-f|--framework <FRAMEWORK>`**
+
+  僅當定位特定[框架](../../standard/frameworks.md)時,才添加專案引用。
+
 - **`-h|--help`**
 
   印出命令的簡短說明。
-
-- **`-f|--framework <FRAMEWORK>`**
-
-  僅當定位特定[框架](../../standard/frameworks.md)時，才添加專案引用。
 
 - **`--interactive`**
 

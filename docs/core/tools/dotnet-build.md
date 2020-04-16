@@ -2,16 +2,16 @@
 title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
 ms.date: 02/14/2020
-ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27deca4ab1c12314db5214c73660862a8a57a398
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503771"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463714"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
+**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -20,28 +20,30 @@ ms.locfileid: "77503771"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force]
-    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo]
-    [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
+    [-f|--framework <FRAMEWORK>] [--force] [--interactive] [--no-dependencies]
+    [--no-incremental] [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [-v|--verbosity <LEVEL>]
+    [--version-suffix <VERSION_SUFFIX>]
 
-dotnet build [-h|--help]
+dotnet build -h|--help
 ```
 
 ## <a name="description"></a>描述
 
-`dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔案包括專案代碼的中間語言 （IL） 檔與 *.dll*副檔名。  根據專案類型和設置，可能會包括其他檔，例如：
+`dotnet build` 命令會將專案及其相依性建置成一組二進位檔。 二進位檔包括專案代碼的中間語言 (IL) 檔案與 *.dll*副檔名。  根據項目類型和設定,可能會包括其他檔,例如:
 
-- 如果專案類型是目標 .NET Core 3.0 或更高版本的可執行檔，則可用於運行應用程式的可執行檔。
-- 用於使用 *.pdb*副檔名進行調試的符號檔。
-- *.deps.json*檔，其中列出了應用程式或庫的依賴項。
-- *.運行時config.json*檔，該檔指定應用程式的共用運行時及其版本。
-- 專案所依賴的其他庫（通過專案引用或 NuGet 包引用）。
+- 如果項目類型是目標 .NET Core 3.0 或更高版本的可執行檔,則可用於運行應用程式的可執行檔。
+- 用於使用 *.pdb*擴展名進行除錯的符號檔。
+- *.deps.json*檔,其中列出了應用程式或庫的依賴項。
+- *.運行時config.json*檔,該檔指定應用程式的共用運行時及其版本。
+- 項目所依賴的其他庫(通過專案引用或 NuGet 包引用)。
 
-對於面向早于 .NET Core 3.0 版本的可執行專案，NuGet 的庫依賴項通常不會複製到輸出檔案夾。  它們在運行時從 NuGet 全域包資料夾中解析。 因此，`dotnet build` 產生的結果尚未準備好轉移到另一部電腦來執行。 要創建可部署的應用程式的版本，需要發佈它（例如，使用[dotnet 發佈](dotnet-publish.md)命令）。 有關詳細資訊，請參閱[.NET 核心應用程式部署](../deploying/index.md)。
+對於面向早於 .NET Core 3.0 版本的可執行專案,NuGet 的庫依賴項通常不會複製到輸出資料夾。  它們在運行時從 NuGet 全域包資料夾中解析。 因此，`dotnet build` 產生的結果尚未準備好轉移到另一部電腦來執行。 要建立可部署的應用程式的版本,需要發佈它(例如,使用[dotnet發佈](dotnet-publish.md)命令)。 有關詳細資訊,請參閱[.NET 核心應用程式部署](../deploying/index.md)。
 
-對於針對 .NET Core 3.0 及更高版本的可執行專案，庫依賴項將複製到輸出檔案夾。 這意味著，如果沒有任何其他特定于發佈的邏輯（如 Web 專案），則生成輸出應該是可部署的。
+對於針對 .NET Core 3.0 及更高版本的可執行專案,庫依賴項將複製到輸出資料夾。 這意味著,如果沒有任何其他特定於發佈的邏輯(如 Web 專案),則生成輸出應該是可部署的。
 
-建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 執行時[`dotnet restore`](dotnet-restore.md)將創建該檔。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。 使用 .NET 酷睿 1.x SDK 時`dotnet restore`，您需要`dotnet build`在運行 之前顯式運行 。 自 .NET Core 2.0 SDK 開始，`dotnet restore` 會在您執行 `dotnet build` 時以隱含方式執行。 如果您想要在執行 build 命令時停用隱含還原，您可以跳過 `--no-restore` 選項。
+建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 執行時[`dotnet restore`](dotnet-restore.md)將創建該檔。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。 使用 .NET 酷睿 1.x`dotnet restore`SDK`dotnet build`時 ,您需要 在執行 之前顯示式執行 。 自 .NET Core 2.0 SDK 開始，`dotnet restore` 會在您執行 `dotnet build` 時以隱含方式執行。 如果您想要在執行 build 命令時停用隱含還原，您可以跳過 `--no-restore` 選項。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -53,7 +55,7 @@ dotnet build [-h|--help]
 </PropertyGroup>
 ```
 
-要生成庫，省略`<OutputType>`屬性或將其值更改為`Library`。 庫的 IL DLL 不包含進入點，無法執行。
+要產生函式庫,`<OutputType>`省略屬性或將其值`Library`變更為 。 庫的 IL DLL 不包含入口點,無法執行。
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -61,7 +63,7 @@ dotnet build [-h|--help]
 
 除了其選項，`dotnet build` 命令也接受 MSBuild 選項，例如用於設定屬性的 `-p`，以及用於定義記錄器的 `-l`。 如需這些選項的詳細資訊，請參閱 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 或者，您也可以使用 [dotnet msbuild](dotnet-msbuild.md) 命令。
 
-運行`dotnet build`等效于運行`dotnet msbuild -restore`;但是，輸出的預設詳細程度是不同的。
+執行`dotnet build`等效於`dotnet msbuild -restore`運行 ;但是,輸出的默認詳細程度是不同的。
 
 ## <a name="arguments"></a>引數
 
@@ -73,7 +75,7 @@ dotnet build [-h|--help]
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  定義組建組態。 大多數專案的預設值為 ，`Debug`但您可以覆蓋專案中的組建組態設置。
+  定義組建組態。 大多數項目的預設值為,`Debug`但您可以覆蓋專案中的生成配置設置。
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -109,7 +111,7 @@ dotnet build [-h|--help]
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  在其中放置已建置的二進位檔的目錄。 如果未指定，則預設路徑為 `./bin/<configuration>/<framework>/`。  對於具有多個目標框架的專案（通過`TargetFrameworks`屬性），還需要在指定此選項時`--framework`定義。
+  在其中放置已建置的二進位檔的目錄。 如果未指定，則預設路徑為 `./bin/<configuration>/<framework>/`。  對於具有多個目標框架的專案(通過`TargetFrameworks`屬性),還需要在指定此選項`--framework`時 定義。
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 

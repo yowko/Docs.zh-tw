@@ -2,16 +2,16 @@
 title: dotnet clean 命令
 description: dotnet clean 命令會清除目前的目錄。
 ms.date: 02/14/2020
-ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a59922feba75e940a5cee2dfeb500f4f86372870
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503749"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463706"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
+**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -20,9 +20,12 @@ ms.locfileid: "77503749"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive]
-    [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
-dotnet clean [-h|--help]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
+    [-f|--framework <FRAMEWORK>] [--interactive]
+    [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [-v|--verbosity <LEVEL>]
+
+dotnet clean -h|--help
 ```
 
 ## <a name="description"></a>描述
@@ -39,7 +42,7 @@ dotnet clean [-h|--help]
 
 * **`-c|--configuration <CONFIGURATION>`**
 
-  定義組建組態。 大多數專案的預設值為 ，`Debug`但您可以覆蓋專案中的組建組態設置。 如果在建置階段指定此選項，清除時才需要使用它。
+  定義組建組態。 大多數項目的預設值為,`Debug`但您可以覆蓋專案中的生成配置設置。 如果在建置階段指定此選項，清除時才需要使用它。
 
 * **`-f|--framework <FRAMEWORK>`**
 

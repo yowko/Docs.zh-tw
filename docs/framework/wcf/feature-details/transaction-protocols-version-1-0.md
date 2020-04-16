@@ -2,15 +2,15 @@
 title: 異動通訊協定 1.0 版
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: a19329b56bb569a04195b38877a42d635996ff1f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a775ca395e01e7ecbc676ba3ec97d19ae10b4f49
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184380"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464023"
 ---
 # <a name="transaction-protocols-version-10"></a>異動通訊協定 1.0 版
-Windows 通信基礎 （WCF） 版本 1 實現 WS-原子事務和 WS-協調協定的 1.0 版本。 有關版本 1.1 的詳細資訊，請參閱[事務協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
+Windows 通訊基礎 (WCF) 版本 1 實現 WS-原子事務和 WS-協調協定的 1.0 版本。 有關版本 1.1 的詳細資訊,請參閱[事務協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
   
 |規格/文件|連結|  
 |-----------------------------|----------|  
@@ -21,25 +21,25 @@ Windows 通信基礎 （WCF） 版本 1 實現 WS-原子事務和 WS-協調協�
   
  此主題描述 WS-Atomic 異動 (WS-AT) 安全性規格的組成，並且描述使用在異動管理員之間通訊的安全繫結程序。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試，其中包含 IBM、IONA、Sun Microsystems 和其他實作。  
   
- 下圖描述了兩個交易管理員（交易管理員 1 和交易管理員 2）以及兩個應用程式（應用程式 1 和應用程式 2）之間的互通性：  
+ 下圖描述了兩個事務管理員(事務管理員 1 和事務管理員 2)以及兩個應用程式(應用程式 1 和應用程式 2)之間的互通性:  
   
- ![顯示交易管理員之間交互的螢幕截圖。](./media/transaction-protocols/transaction-managers-flow.gif)  
+ ![顯示事務管理員互動的螢幕截圖。](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  使用一個啟動器 (I) 和一個參與者 (P) 考量一般的 WS-Coordination/WS-Atomic Transaction 案例。 啟動器和參與者都有異動管理員 (分別是 ITM 和 PTM)。 在此主題中，兩階段交易認可會稱為 2PC。  
   
 |||  
 |-|-|  
-|1. 創建協調上下文|12. 應用程式消息回應|  
-|2. 創建協調上下文回應|13. 承諾（完成）|  
-|3. 註冊（完成）|14. 準備 （2PC）|  
-|4. 寄存器回復|15. 準備 （2PC）|  
-|5. 應用程式消息|16. 已編制 （2PC）|  
-|6. 使用上下文創建協調上下文|17. 已編制 （2PC）|  
-|7. 註冊（耐用）|18. 承諾（完成）|  
-|8. 註冊回復|19. 承諾 （2PC）|  
-|9. 創建協調上下文回應|20. 提交 （2PC）|  
-|10. 登記（持久）|21. 承諾 （2PC）|  
-|11. 登記冊回復|22. 承諾 （2PC）|  
+|1. 建立協調上下文|12. 應用程式訊息回應|  
+|2. 建立協調上下文回應|13. 承諾 (完成)|  
+|3. 註冊(完成)|14. 準備 (2PC)|  
+|4. 寄存器回覆|15. 準備 (2PC)|  
+|5. 應用程式訊息|16. 已編制 (2PC)|  
+|6. 使用上下文建立協調上下文|17. 已編制 (2PC)|  
+|7. 註冊(耐用)|18. 承諾 (完成)|  
+|8. 註冊回復|19. 承諾 (2PC)|  
+|9. 建立協調上下文回應|20. 提交 (2PC)|  
+|10. 登記(持久)|21. 承諾 (2PC)|  
+|11. 登記冊回復|22. 承諾 (2PC)|  
   
  此文件描述 WS-AtomicTransaction 安全性規格的組成，並且描述使用在異動管理員之間通訊的安全繫結程序。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試。  
   
@@ -83,15 +83,15 @@ Windows 通信基礎 （WCF） 版本 1 實現 WS-原子事務和 WS-協調協�
 - B1112：在系統中每個傳送者與接收者組之間的 DNS 都必須正常運作，X.509 主體名稱檢查才會成功。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>啟動和登錄繫結組態  
- WCF 需要請求/答覆雙工綁定，並且通過 HTTPS 具有相關性。 (如需有關相互關聯與要求/回覆訊息交換模式描述的詳細資訊，請參閱第 8 節的「WS-Atomic 交易」)。  
+ WCF 需要請求/答覆雙工綁定,並且通過 HTTPS 具有相關性。 (如需有關相互關聯與要求/回覆訊息交換模式描述的詳細資訊，請參閱第 8 節的「WS-Atomic 交易」)。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 通訊協定繫結組態  
- WCF 通過 HTTPS 支援單向（資料格拉姆）消息。 訊息間的相互關聯則留待實作詳細資料中說明。  
+ WCF 透過 HTTPS 支援單向(數據格拉姆)消息。 訊息間的相互關聯則留待實作詳細資料中說明。  
   
- B2131：實現必須支援`wsa:ReferenceParameters`WS 定址中所述，以實現 WCF 2PC 消息的相關性。  
+ B2131:實現必須支援`wsa:ReferenceParameters`WS 定址中所述,以實現 WCF 2PC 消息的相關性。  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>異動管理員混合安全性繫結程序  
- 這是一個備用（混合模式）綁定，它使用傳輸安全與 WS-協調頒發權杖模型結合使用，用於標識建立目的。  啟動與登錄是兩個繫結之間唯一不同的項目。  
+ 這是一個備用(混合模式)綁定,它使用傳輸安全與 WS-協調頒發權杖模型結合使用,用於標識建立目的。  啟動與登錄是兩個繫結之間唯一不同的項目。  
   
 #### <a name="https-transport-configuration"></a>HTTPS 傳輸組態  
  X.509 憑證會用來建立交易管理員身分識別。 需要用戶端/伺服器驗證，而用戶端/伺服器授權則留待實作詳細資料中說明。  
@@ -99,7 +99,7 @@ Windows 通信基礎 （WCF） 版本 1 實現 WS-原子事務和 WS-協調協�
 #### <a name="activation-message-binding-configuration"></a>啟動訊息繫結組態  
  啟動訊息通常不會參與互通性，因為啟動訊息一般會發生在應用程式與其本機異動管理員之間。  
   
- B1221：WCF使用雙工 HTTPS 綁定（在[消息協定中](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)描述）來啟動消息。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
+ B1221:WCF使用雙工 HTTPS 綁定(在[消息協定中](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)描述)來啟動消息。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
   
  第 8 節的 WS-Atomic 異動規格進一步描述有關相互關聯與訊息交換模式的詳細資料。  
   
@@ -110,18 +110,18 @@ Windows 通信基礎 （WCF） 版本 1 實現 WS-原子事務和 WS-協調協�
  應生成`t:IssuedTokens`一個新標頭以附加到傳出`wscoor:CreateCoordinationContextResponse`消息。  
   
 #### <a name="registration-message-binding-configuration"></a>登錄訊息繫結組態  
- B1231：WCF使用雙工HTTPS綁定（在[消息協定中](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)描述）。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
+ B1231:WCF使用雙工HTTPS綁定(在[消息協定中](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)描述)。 要求與回覆訊息會使用 WS-Addressing 2004/08 來相互關聯。  
   
  第 8 節的 WS-AtomicTransaction 進一步描述有關相互關聯與訊息交換模式描述的詳細資料。  
   
- R1232：傳出`wscoor:Register`消息必須使用`IssuedTokenOverTransport`[安全協定](../../../../docs/framework/wcf/feature-details/security-protocols.md)中描述的身份驗證模式。  
+ R1232:傳出`wscoor:Register`消息必須`IssuedTokenOverTransport`使用[安全協定](../../../../docs/framework/wcf/feature-details/security-protocols.md)中描述的身份驗證模式。  
   
  必須`wsse:Timestamp`使用已頒發的元素`SecurityContextToken STx`對元素進行簽名。 這個簽章是證明與特定異動關聯之權杖的所有權，並且用來驗證異動中登錄的參與者。 RegistrationResponse 訊息會透過 HTTPS 傳回。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 通訊協定繫結組態  
- WCF 通過 HTTPS 支援單向（資料格拉姆）消息。 訊息間的相互關聯則留待實作詳細資料中說明。  
+ WCF 透過 HTTPS 支援單向(數據格拉姆)消息。 訊息間的相互關聯則留待實作詳細資料中說明。  
   
- B2131：實現必須支援`wsa:ReferenceParameters`WS 定址中所述，以實現 WCF 2PC 消息的相關性。  
+ B2131:實現必須支援`wsa:ReferenceParameters`WS 定址中所述,以實現 WCF 2PC 消息的相關性。  
   
 ## <a name="application-message-exchange"></a>應用程式訊息交換  
  應用程式可以隨意使用應用程式之間訊息的任何特定繫結程序，只要繫結程序符合下列安全性需求：  
@@ -130,9 +130,9 @@ Windows 通信基礎 （WCF） 版本 1 實現 WS-原子事務和 WS-協調協�
   
 - R2002：必須提供 `t:IssuedToken` 的完整性與機密性。  
   
- `CoordinationContext` 標頭包含 `wscoor:Identifier`。 雖然 的定義`xsd:AnyURI`允許使用絕對和相對 URI，但 WCF 僅`wscoor:Identifiers`支援 ，這是絕對 URI。  
+ `CoordinationContext` 標頭包含 `wscoor:Identifier`。 雖然的定義`xsd:AnyURI`允許使用絕對和相對 URI,但 WCF 僅`wscoor:Identifiers`支援 ,這是絕對 URI。  
   
- 如果`wscoor:Identifier`中的`wscoor:CoordinationContext`是相對 URI，則將從事務性 WCF 服務返回故障。  
+ 如果`wscoor:Identifier``wscoor:CoordinationContext`中的 是相對 URI,則將從事務性 WCF 服務返回故障。  
   
 ## <a name="message-examples"></a>訊息範例  
   
@@ -152,8 +152,8 @@ Windows 通信基礎 （WCF） 版本 1 實現 WS-原子事務和 WS-協調協�
     <a:To>https://...</a:To>  
     <wsse:Security>  
       <u:Timestamp>  
-        <wsu:Created>2005-12-15T23:36:09.921Z</u:Created>  
-        <wsu:Expires>2005-12-15T23:41:09.921Z</u:Expires>  
+        <wsu:Created>2005-12-15T23:36:09.921Z</wsu:Created>  
+        <wsu:Expires>2005-12-15T23:41:09.921Z</wsu:Expires>  
       </u:Timestamp>  
     </wsse:Security>  
   </s:Header>  
@@ -405,10 +405,10 @@ Windows 通信基礎 （WCF） 版本 1 實現 WS-原子事務和 WS-協調協�
         <!-- signature over Addressing headers, Timestamp, and Body -->  
       </Signature>  
     </wsse:Security>  
-    <wsse11:EncryptedHeader >  
+    <wsse11:EncryptedHeader>  
      <!-- encrypted wscoor:CoordinationContext header containing CCi -->  
     </wsse11:EncryptedHeader>  
-    <wsse11:EncryptedHeader
+    <wsse11:EncryptedHeader>
       <!-- encrypted wst:IssuedTokens header containing SCTi -->  
       <!-- wst:IssuedTokens header is taken verbatim from message #2 above, omitted for brevity -->  
     </wsse11:EncryptedHeader>  

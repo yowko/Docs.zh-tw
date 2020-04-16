@@ -2,12 +2,12 @@
 title: dotnet sln 命令
 description: dotnet-sln 命令提供方便在方案檔中新增、移除及列出專案的選項。
 ms.date: 02/14/2020
-ms.openlocfilehash: 615e25e30a63b6ca36d9898cfcde565053830572
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 231287477d986f9ec4a5404cc5278e76c297faa4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389643"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463404"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -20,7 +20,9 @@ ms.locfileid: "81389643"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
+dotnet sln [<SOLUTION_FILE>] [command]
+
+dotnet sln [command] -h|--help
 ```
 
 ## <a name="description"></a>描述
@@ -76,7 +78,7 @@ dotnet sln list [-h|--help]
 #### <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH> [<PROJECT_PATH>...]
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder <PATH>] <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln add [-h|--help]
 ```
 
@@ -100,7 +102,7 @@ dotnet sln add [-h|--help]
 
   將專案放在解決方案的根目錄中,而不是創建解決方案資料夾。 自 .NET Core 3.0 SDK 起提供。
 
-- **`-s|--solution-folder`**
+- **`-s|--solution-folder <PATH>`**
 
   要將專案添加到的目標解決方案資料夾路徑。 自 .NET Core 3.0 SDK 起提供。
 

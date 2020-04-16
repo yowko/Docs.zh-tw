@@ -1,27 +1,27 @@
 ---
 title: 詳細語法
-description: 瞭解程式F#設計語言中的詳細資訊和輕量語法差異。
+description: 瞭解 F# 程式設計語言中詳細語法和輕量級語法之間的區別。
 ms.date: 05/16/2016
-ms.openlocfilehash: 575585b201acc1366980cfc5cf523c4117259084
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 722807695c56beb0d681b95a78ed8cb8c1df3ddf
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421171"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463912"
 ---
 # <a name="verbose-syntax"></a>詳細語法
 
-有兩種形式的語法可用於F#語言中的許多結構： *verbose 語法*和*輕量語法*。 詳細資訊語法不常用，但具有較不敏感的縮排。 輕量語法較短，並使用縮排來表示結構的開頭和結尾，而不是像 `begin`、`end`、`in`等等的其他關鍵字。 預設語法是輕量語法。 本主題描述未啟用輕F#量語法時的結構語法。 Verbose 語法一律會啟用，因此即使您啟用了輕量語法，仍然可以針對某些結構使用 verbose 語法。 您可以使用 `#light "off"` 指示詞來停用輕量語法。
+F# 語言中的許多建構有兩種形式的語法:*詳細語法*與*輕巧的語法*。 詳細語法不常用,但優點是對縮進不太敏感。 輕量級語法較短,並使用縮進來發出構造的開始和結束信號,而不是其他關鍵字,如`begin`、、、`end``in`等。 默認語法是輕量級語法。 本主題介紹未啟用輕量級語法時 F# 構造的語法。 詳細語法始終啟用,因此即使您啟用輕量級語法,您仍可以為某些構造使用詳細語法。 您可以使用`#light "off"`該指令禁用輕量級語法。
 
-## <a name="table-of-constructs"></a>結構表
+## <a name="table-of-constructs"></a>建構表
 
-下表顯示在這兩種形式之間有F#差異的內容中，語言結構的輕量和詳細語法。 在此資料表中，角括弧（&lt;&gt;）會括住使用者提供的語法元素。 請參閱每個語言結構的檔，以取得有關這些結構內所使用之語法的詳細資訊。
+下表顯示了 F# 語言構造的輕量級和詳細語法,這些上下文中兩種窗體之間存在差異。 在此表中,角括弧&lt;&gt;( ) 括使用者提供的語法元素。 有關這些構造中使用的語法的詳細資訊,請參閱每個語言構造的文檔。
 
 <table>
 <tr>
-<th>語言結構</th>
-<th>輕量語法</th>
-<th>詳細資訊語法</th>
+<th>語言建構</th>
+<th>輕巧法</th>
+<th>詳細語法</th>
 </tr>
 <tr>
 <td>
@@ -30,8 +30,8 @@ ms.locfileid: "73421171"
 <td>
 
 ```xml
-<expression1>
-<expression2>
+<expression1 />
+<expression2 />
 ```
 
 </td><td>
@@ -44,7 +44,7 @@ ms.locfileid: "73421171"
 </tr>
 <tr><td>
 
-嵌套 `let` 系結
+巢狀`let`結合
 
 </td><td>
 
@@ -67,7 +67,7 @@ let f x =
 </td>
 </tr>
 <tr><td>
-程式碼區塊
+代碼塊
 </td><td>
 
 ```fsharp
@@ -164,7 +164,7 @@ in
 
 </td>
 </tr>
-<tr><td>記錄
+<tr><td>記錄 (record)
 </td><td>
 
 ```fsharp
@@ -208,7 +208,7 @@ type <class-name>(<params>) =
 
 </td>
 </tr>
-<tr><td>結構</td><td>
+<tr><td>structure</td><td>
 
 ```fsharp
 [<StructAttribute>]
@@ -227,7 +227,7 @@ type <structure-name> =
 
 </td>
 </tr>
-<tr><td>區分聯集</td><td>
+<tr><td>歧視工會</td><td>
 
 ```fsharp
 type <union-name> =
@@ -311,7 +311,7 @@ interface <interface-name>
 
 </td>
 </tr>
-<tr><td>類型延伸</td><td>
+<tr><td>型態延伸</td><td>
 
 ```fsharp
 type <type-name>
@@ -330,7 +330,7 @@ type <type-name>
 
 </td>
 </tr>
-<tr><td>name</td><td>
+<tr><td>module</td><td>
 
 ```fsharp
 module <module-name> =
@@ -350,7 +350,7 @@ module <module-name> =
 </tr>
 </table>
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [F# 語言參考](index.md)
 - [編譯器指示詞](compiler-directives.md)

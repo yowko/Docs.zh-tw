@@ -2,16 +2,16 @@
 title: dotnet store 命令
 description: "'dotnet store' 命令會在執行階段套件存放區中儲存指定的組件。"
 ms.date: 02/14/2020
-ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f28a9bc287a87f600bda385c579e8070cbaa5ab
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503587"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463388"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
-**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
+**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -20,7 +20,13 @@ ms.locfileid: "77503587"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]
+dotnet store -m|--manifest <PATH_TO_MANIFEST_FILE>
+    -f|--framework <FRAMEWORK_VERSION> -r|--runtime <RUNTIME_IDENTIFIER>
+    [--framework-version <FRAMEWORK_VERSION>] [--output <OUTPUT_DIRECTORY>]
+    [--skip-optimization] [--skip-symbols] [-v|--verbosity <LEVEL>]
+    [--working-dir <WORKING_DIRECTORY>]
+
+dotnet store -h|--help
 ```
 
 ## <a name="description"></a>描述
@@ -35,11 +41,11 @@ dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-
 
 - **`-m|--manifest <PATH_TO_MANIFEST_FILE>`**
 
-  「套件存放區資訊清單檔」** 是 XML 檔，包含要儲存的套件清單。 資訊清單檔的格式相容於 SDK 樣式專案格式。 因此，參考所需套件的專案檔可以搭配 `-m|--manifest` 選項，將組件儲存在執行階段套件存放區中。 若要指定多個資訊清單檔，請為每個檔案重複選項和路徑。 例如：`--manifest packages1.csproj --manifest packages2.csproj`。
+  「套件存放區資訊清單檔」** 是 XML 檔，包含要儲存的套件清單。 資訊清單檔的格式相容於 SDK 樣式專案格式。 因此，參考所需套件的專案檔可以搭配 `-m|--manifest` 選項，將組件儲存在執行階段套件存放區中。 若要指定多個資訊清單檔，請為每個檔案重複選項和路徑。 例如： `--manifest packages1.csproj --manifest packages2.csproj` 。
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  要定位的[運行時識別碼](../rid-catalog.md)。
+  要定位的[執行時識別碼](../rid-catalog.md)。
 
 ## <a name="optional-options"></a>選擇性的選項
 

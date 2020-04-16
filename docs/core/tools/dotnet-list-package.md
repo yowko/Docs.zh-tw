@@ -2,16 +2,16 @@
 title: dotnet list package 命令
 description: "'dotnet list package' 命令提供一個便利選項，可列出適用於專案或解決方案的套件參考。"
 ms.date: 02/14/2020
-ms.openlocfilehash: 1cb52b8de10b2eef2ef7465f04316e9446318763
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 12d64600d178ea8cf490a0d6917e67bd3d8c6d21
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157228"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463667"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
-**本文適用于：✔️** .NET 核心 2.2 SDK 和更高版本
+**本文適用於:✔️** .NET 核心 2.2 SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -20,9 +20,12 @@ ms.locfileid: "78157228"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch]
-   [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
-dotnet list package [-h|--help]
+dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
+    [--framework <FRAMEWORK>] [--highest-minor] [--highest-patch]
+    [--include-prerelease] [--include-transitive] [--interactive]
+    [--outdated] [--source <SOURCE>]
+
+dotnet list package -h|--help
 ```
 
 ## <a name="description"></a>描述
@@ -77,7 +80,7 @@ Project 'HelloPlugin' has the following package references
 
 - **`--framework <FRAMEWORK>`**
 
-  只顯示適用於所指定[目標 Framework](../../standard/frameworks.md) 的套件。 若要指定多個架構，請多次指定該選項。 例如：`--framework netcoreapp2.2 --framework netstandard2.0`。
+  只顯示適用於所指定[目標 Framework](../../standard/frameworks.md) 的套件。 若要指定多個架構，請多次指定該選項。 例如： `--framework netcoreapp2.2 --framework netstandard2.0` 。
 
 - **`-h|--help`**
 

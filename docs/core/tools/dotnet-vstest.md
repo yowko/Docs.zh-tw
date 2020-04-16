@@ -2,12 +2,12 @@
 title: dotnet vstest 命令
 description: dotnet vstest 命令會建置專案和其所有相依性。
 ms.date: 02/27/2020
-ms.openlocfilehash: 4941a6d08d45953039eb406a30f0ff984128ba1c
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389622"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463290"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -20,11 +20,15 @@ ms.locfileid: "81389622"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag]
-    [--Framework] [--InIsolation] [-lt|--ListTests] [--logger]
-    [--Parallel] [--ParentProcessId] [--Platform] [--Port]
-    [--ResultsDirectory] [--Settings] [--TestAdapterPath]
-    [--TestCaseFilter] [--Tests] [[--] <args>...]] [-?|--Help]
+dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag <PATH_TO_LOG_FILE>]
+    [--Framework <FRAMEWORK>] [--InIsolation] [-lt|--ListTests <FILE_NAME>]
+    [--logger <LOGGER_URI/FRIENDLY_NAME>] [--Parallel]
+    [--ParentProcessId <PROCESS_ID>] [--Platform] <PLATFORM_TYPE>
+    [--Port <PORT>] [--ResultsDirectory<PATH>] [--Settings <SETTINGS_FILE>]
+    [--TestAdapterPath <PATH>] [--TestCaseFilter <EXPRESSION>]
+    [--Tests <TEST_NAMES>] [[--] <args>...]]
+
+dotnet vstest -?|--Help
 ```
 
 ## <a name="description"></a>描述
@@ -43,11 +47,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag]
 
   在歸責模式下執行測試。 這個選項有助於隔離造成測試主機損毀的問題。 它會以 *Sequence.xml* 的形式在目前目錄中建立一個輸出檔，用來擷取損毀前的測試執行順序。
 
-- **`--Diag <Path to log file>`**
+- **`--Diag <PATH_TO_LOG_FILE>`**
 
   啟用測試平台的詳細資訊記錄檔。 記錄檔會寫入提供的檔案。
 
-- **`--Framework <Framework Version>`**
+- **`--Framework <FRAMEWORK>`**
 
   用於測試執行的目標 .NET Framework 版本。 有效值的範例包括 `.NETFramework,Version=v4.6` 或 `.NETCoreApp,Version=v1.0`。 其他支援的值為 `Framework40`、`Framework45`、`FrameworkCore10` 和 `FrameworkUap10`。
 
@@ -55,11 +59,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag]
 
   在獨立的處理序中執行測試。 這樣會降低 *vstest.console.exe* 處理序在測試中錯誤處停止的可能性，但是測試的速度可能會比較慢。
 
-- **`-lt|--ListTests <File Name>`**
+- **`-lt|--ListTests <FILE_NAME>`**
 
   列出所有從指定之測試容器探索到的測試。
 
-- **`--logger <Logger Uri/FriendlyName>`**
+- **`--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   指定測試結果的記錄器。
 
@@ -85,35 +89,35 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag]
 
   並行運行測試。 根據預設，電腦上所有的可用核心都可供使用。 通過在*執行設定*`RunConfiguration`檔中的 節點下`MaxCpuCount`設置屬性來 指定顯式內核數。
 
-- **`--ParentProcessId <ParentProcessId>`**
+- **`--ParentProcessId <PROCESS_ID>`**
 
   負責啟動目前處理序之父處理序的處理序識別碼。
 
-- **`--Platform <Platform type>`**
+- **`--Platform <PLATFORM_TYPE>`**
 
   用於測試執行的目標平台架構。 有效值是 `x86`、`x64` 和 `ARM`。
 
-- **`--Port <Port>`**
+- **`--Port <PORT>`**
 
   指定通訊端連線和接收事件訊息的連接埠。
 
-- **`--ResultsDirectory:<PathToResulsDirectory>`**
+- **`--ResultsDirectory:<PATH>`**
 
   如果測試結果目錄不存在，則會在指定的路徑中建立該目錄。
 
-- **`--Settings <Settings File>`**
+- **`--Settings <SETTINGS_FILE>`**
 
   執行測試時要使用的設定。
 
-- **`--TestAdapterPath`**
+- **`--TestAdapterPath <PATH>`**
 
   在測試回合中，從指定的路徑 (如果有的話) 使用自訂測試配接器。
 
-- **`--TestCaseFilter <Expression>`**
+- **`--TestCaseFilter <EXPRESSION>`**
 
-  執行符合指定之運算式的測試。 `<Expression>` 的格式為 `<property>Operator<value>[|&<Expression>]`，其中 Operator (運算子) 為 `=`、`!=` 或 `~` 其中之一。 運算子 `~` 具有「包含」語意，且適用於像是 `DisplayName` 的字串屬性。 括號`()`用於對子表達式進行分組。 有關詳細資訊,請參閱[測試用例篩選器](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)。
+  執行符合指定之運算式的測試。 `<EXPRESSION>` 的格式為 `<property>Operator<value>[|&<EXPRESSION>]`，其中 Operator (運算子) 為 `=`、`!=` 或 `~` 其中之一。 運算子 `~` 具有「包含」語意，且適用於像是 `DisplayName` 的字串屬性。 括號`()`用於對子表達式進行分組。 有關詳細資訊,請參閱[測試用例篩選器](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)。
 
-- **`--Tests <Test Names>`**
+- **`--Tests <TEST_NAMES>`**
 
   執行測試，其名稱符合所提供的值。 以逗號分隔多個值。
 

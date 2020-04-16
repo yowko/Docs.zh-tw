@@ -2,12 +2,12 @@
 title: dotnet new 命令
 description: dotnet new 命令會根據指定的範本建立新的 .NET Core 專案。
 ms.date: 04/10/2020
-ms.openlocfilehash: 1b1a6efa7bf2753b6c23cc7af1e26867f8632b96
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 4ad0d7e54f93582237ed9457b562957018916d36
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242877"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463604"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -20,10 +20,14 @@ ms.locfileid: "81242877"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
-    [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
-dotnet new <TEMPLATE> [-l|--list] [--type]
-dotnet new [-h|--help]
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install {PATH|NUGET_ID}]
+    [-lang|--language {C#|F#|VB}] [-n|--name <OUTPUT_NAME>]
+    [--nuget-source <SOURCE>] [-o|--output <OUTPUT_DIRECTORY>]
+    [-u|--uninstall] [--update-apply] [--update-check] [Template options]
+
+dotnet new <TEMPLATE> [-l|--list] [--type <TYPE>]
+
+dotnet new -h|--help
 ```
 
 ## <a name="description"></a>描述
@@ -121,7 +125,7 @@ dotnet new [-h|--help]
 
   所建立輸出的名稱。 如果未指定名稱，則會使用目前目錄的名稱。
 
-- **`--nuget-source`**
+- **`--nuget-source <SOURCE>`**
 
   請指定安裝期間所要使用的 NuGet 來源。 自 .NET 核心 2.1 SDK 以來可用。
 
@@ -129,9 +133,9 @@ dotnet new [-h|--help]
 
   放置所產生輸出的位置。 預設值是目前的目錄。
 
-- **`--type`**
+- **`--type <TYPE>`**
 
-  根據可用的類型篩選範本。 預先定義的值為「專案」、「項目」或「其他」。
+  根據可用的類型篩選範本。 預先定義值`project``item`為`other`或 。
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 

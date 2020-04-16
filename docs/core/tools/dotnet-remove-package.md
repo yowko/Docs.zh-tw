@@ -2,16 +2,16 @@
 title: dotnet remove package 命令
 description: dotnet remove package 命令提供方便的選項，以移除專案的 NuGet 套件參考。
 ms.date: 02/14/2020
-ms.openlocfilehash: 8eaa311748c5627351ef149012dc4dddd2ab2793
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc74ac1364a0ed027b83dab270d382f238dc00e5
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503641"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463449"
 ---
 # <a name="dotnet-remove-package"></a>dotnet remove package
 
-**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
+**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -20,7 +20,9 @@ ms.locfileid: "77503641"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]
+dotnet remove [<PROJECT>] package <PACKAGE_NAME>
+
+dotnet remove package -h|--help
 ```
 
 ## <a name="description"></a>描述
@@ -45,7 +47,7 @@ dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]
 
 ## <a name="examples"></a>範例
 
-- 從`Newtonsoft.Json`目前的目錄中的專案中刪除 NuGet 包：
+- 從`Newtonsoft.Json`目前目錄中移除 NuGet 套件:
 
   ```dotnetcli
   dotnet remove package Newtonsoft.Json

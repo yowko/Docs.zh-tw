@@ -2,14 +2,14 @@
 title: 解構元組和其他類型
 description: 了解如何解構 Tuple 和其他類型。
 ms.technology: csharp-fundamentals
-ms.date: 07/18/2016
+ms.date: 11/23/2017
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 23d193faf9702628698fe558f6667aeb130e8916
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d238f6f520653befb1464377094b93e34dde0eca
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73100673"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463131"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>解構元組和其他類型
 
@@ -106,4 +106,4 @@ C# 不提供解構非 Tuple 型別的內建支援。 不過，身為類別、結
 ## <a name="see-also"></a>另請參閱
 
 - [捨棄](discards.md)
-- [Tuples](tuples.md)
+- [Tuple](tuples.md)

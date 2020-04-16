@@ -2,16 +2,16 @@
 title: dotnet run 命令
 description: dotnet run 命令提供方便的選項，以透過原始程式碼來執行應用程式。
 ms.date: 02/19/2020
-ms.openlocfilehash: e442ed56d676ffd189ef6d394d840cea671c2dc6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28ed13a17c127ae1c61548fed8491315db279c20
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157072"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463409"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
-**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
+**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -20,10 +20,13 @@ ms.locfileid: "78157072"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile]
-    [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project]
-    [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
-dotnet run [-h|--help]
+dotnet run [-c|--configuration <CONFIGURATION>] [-f|--framework <FRAMEWORK>]
+    [--force] [--interactive] [--launch-profile <NAME>] [--no-build]
+    [--no-dependencies] [--no-launch-profile] [--no-restore]
+    [-p|--project <PATH>] [-r|--runtime <RUNTIME_IDENTIFIER>]
+    [-v|--verbosity <LEVEL>] [[--] [application arguments]]
+
+dotnet run -h|--help
 ```
 
 ## <a name="description"></a>描述
@@ -54,7 +57,7 @@ dotnet myapp.dll
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  定義組建組態。 大多數專案的預設值為 ，`Debug`但您可以覆蓋專案中的組建組態設置。
+  定義組建組態。 大多數項目的預設值為,`Debug`但您可以覆蓋專案中的生成配置設置。
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -74,7 +77,7 @@ dotnet myapp.dll
 
 - **`--launch-profile <NAME>`**
 
-  啟動應用程式時使用的啟動設定檔名稱 (如果有的話)。 啟動設定檔在*啟動設置.json*檔中定義，通常稱為`Development`和`Staging`。 `Production` 有關詳細資訊，請參閱[使用多個環境](/aspnet/core/fundamentals/environments)。
+  啟動應用程式時使用的啟動設定檔名稱 (如果有的話)。 啟動設定檔在*啟動設定.json*檔中定義,通常`Development`是`Staging`稱為`Production`與 。 有關詳細資訊,請參閱[使用多個環境](/aspnet/core/fundamentals/environments)。
 
 - **`--no-build`**
 
@@ -98,7 +101,7 @@ dotnet myapp.dll
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  指定要還原套件的目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 `-r`短選項可用，因為 .NET 核心 3.0 SDK。
+  指定要還原套件的目標執行階段。 如需執行階段識別項 (RID) 清單，請參閱 [RID 目錄](../rid-catalog.md)。 `-r`短選項可用,因為 .NET 核心 3.0 SDK。
 
 - **`-v|--verbosity <LEVEL>`**
 

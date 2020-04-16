@@ -2,16 +2,16 @@
 title: dotnet remove reference 命令
 description: dotnet remove reference 命令提供方便的選項，以移除專案對專案參考。
 ms.date: 02/14/2020
-ms.openlocfilehash: fcadf677faaf9281fb019c3c4bb16efc906b1aa1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 92d36bbbde64d806abc8f223c5f08e3f3d79ce9d
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503626"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463435"
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
-**本文適用于：✔️** .NET Core 2.x SDK 和更高版本
+**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
 
 ## <a name="name"></a>名稱
 
@@ -20,7 +20,9 @@ ms.locfileid: "77503626"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]
+dotnet remove [<PROJECT>] reference [-f|--framework <FRAMEWORK>] <PROJECT_REFERENCES>
+
+dotnet remove reference -h|--help
 ```
 
 ## <a name="description"></a>描述
