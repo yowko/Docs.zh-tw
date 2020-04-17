@@ -8,12 +8,12 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6a1662c3ef4acdde19d6833a797768f45c723aca
-  ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+  ms.openlocfilehash: 45f76b4d0df32436e5ae8e252cae80c7a63d5e36
+  ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/07/2020
-  ms.locfileid: "80805895"
+  ms.lasthandoff: 04/17/2020
+  ms.locfileid: "81607450"
 items:
 - durationInMinutes: 1
   content: >
@@ -60,7 +60,7 @@ items:
   content: "C# 6 包含新的語法，可從字串和可評估的內嵌運算式撰寫字串，以產生其他字串值。 您可以變更 `ToString` 和 `AllCaps` 方法來使用此語法：\n\n[!code-csharp[StringInterpolation](../../../../samples/snippets/csharp/tutorials/exploration/csharp6-finished/Program.cs#StringInterpolation)]  \n\n您可以直接撰寫 C# 運算式，而不是在 `{` 和 `}` 之間放置引數。 您可以在 `Main` 方法中執行相同的動作。 將現有的程式碼取代為下列程式碼：\n\n[!code-csharp[InterpolationMain](../../../../samples/snippets/csharp/tutorials/exploration/csharp6-finished/Program.cs#InterpolationMain)]  \n\n這些運算式中的變數並不限於一個。 讓我們從新的範例開始，並修改以示範您可以搭配字串內插補點使用的其他運算式。 在 `Main` 方法中將下列程式碼貼入互動式視窗：\n\n[!code-csharp[Phrases](../../../../samples/snippets/csharp/tutorials/exploration/csharp6-finished/Program.cs#Phrases)]  \n這使用 LINQ,因此您需要將以下使用敘述到互動式視窗的頂部:\n\n```csharp\nusing System.Linq;\n```\n\n您可以移除區域變數 `average`，並當作內插字串運算式的一部分來計算。 以下列程式碼取代最後兩行：\n\n```csharp\nWriteLine($\"The average word length is: {wordLength.Average()}\");\n```\n\n執行上述範例時，您會發現，`Average` 的輸出小數位數超出您想要的位數。 字串內插補點語法支援使用稍早格式化方法時可用的所有格式字串。 您在大括弧內指定了格式字串。 在運算式之後新增 `:` 以格式化︰\n\n```csharp\nWriteLine($\"The average word length is: {wordLength.Average():F2}\");\n```\n"
 - title: 快速又簡單的 Null 檢查
   durationInMinutes: 2
-  content: "`?.` (Null 條件) 運算子可讓您更輕鬆地撰寫邏輯來將 `null` 值順暢地列入考量，而不需要額外的 `if` 檢查。 若要探索此功能，一開始請將下列程式碼複製到互動式視窗來嘗試執行：\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n      string s = null;\n      Console.WriteLine(s.Length);\n    }\n}\n```\n\n當您執行範例時，它會擲回 <xref:System.NullReferenceException>。 將 `.` 成員存取運算子變更為 **null 條件運算子**：\n\n```csharp\nConsole.WriteLine(s?.Length);\n``` \n\n這項變更後沒有任何輸出。 這是因為當 `s.Length` 的結果為 `int` 時，`s?.Length` 的結果為 `int?`。 在此範例中，`s?.Length` 是 `null`。 如果左運算元為 `null`，`?.` 會傳回 `null`。 對於`?.`值類型和非空引用類型,運算符返回該類型的空類型。 除了 `?.`，您還可以使用 `?[]` 進行陣列或索引子存取。 在互動式視窗中嘗試下列程式碼：\n\n ```csharp\n char? c = s?[0];\n Console.WriteLine(c.HasValue);\n ```\n\n 多個條件運算子可結合成一個運算式。 `null` 左運算元會產生 `null` 結果，讓您輕鬆地避免巢狀 if 子句來存取成員的成員。 例如，請在互動式視窗中嘗試下列程式碼：\n\n ```csharp\n string s = null;\n bool? hasMore = s?.ToCharArray()?.GetEnumerator()?.MoveNext();\n Console.WriteLine(hasMore.HasValue);\n ```\n\n 使用 **Null 聯合運算子**來提供預設值，即可簡化上述範例：\n\n ```csharp\n bool hasMore = s?.ToCharArray()?.GetEnumerator()?.MoveNext() ?? false;\n Console.WriteLine(hasMore);\n ```\n\n **Null 條件運算子**可協助您撰寫程式碼來清楚表達您的核心邏輯，同時順暢地測試 `null` 值。\n"
+  content: "`?.` (Null 條件) 運算子可讓您更輕鬆地撰寫邏輯來將 `null` 值順暢地列入考量，而不需要額外的 `if` 檢查。 若要探索此功能，一開始請將下列程式碼複製到互動式視窗來嘗試執行：\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n      string s = null;\n      Console.WriteLine(s.Length);\n    }\n}\n```\n\n當您執行範例時，它會擲回 <xref:System.NullReferenceException>。 將 `.` 成員存取運算子變更為 **null 條件運算子**：\n\n```csharp\nConsole.WriteLine(s?.Length);\n``` \n\n這項變更後沒有任何輸出。 這是因為當 `s.Length` 的結果為 `int` 時，`s?.Length` 的結果為 `int?`。 在此範例中，`s?.Length` 是 `null`。 如果左運算元為 `null`，`?.` 會傳回 `null`。 對於`?.`值類型和非空引用類型,運算符返回該類型的空類型。 除了 `?.`，您還可以使用 `?[]` 進行陣列或索引子存取。 在互動式視窗中嘗試下列程式碼：\n\n ```csharp\n char? c = s?[0];\n Console.WriteLine(c.HasValue);\n ```\n\n 多個條件運算子可結合成一個運算式。 `null` 左運算元會產生 `null` 結果，讓您輕鬆地避免巢狀 if 子句來存取成員的成員。 例如，請在互動式視窗中嘗試下列程式碼：\n\n ```csharp\n string s = null;\n bool? hasMore = s?.ToCharArray()?.GetEnumerator()?.MoveNext();\n Console.WriteLine(hasMore.HasValue && hasMore.Value);\n ```\n\n 使用 **Null 聯合運算子**來提供預設值，即可簡化上述範例：\n\n ```csharp\n bool hasMore = s?.ToCharArray()?.GetEnumerator()?.MoveNext() ?? false;\n Console.WriteLine(hasMore);\n ```\n\n **Null 條件運算子**可協助您撰寫程式碼來清楚表達您的核心邏輯，同時順暢地測試 `null` 值。\n"
 - title: 例外狀況篩選條件
   durationInMinutes: 2
   content: "例外狀況篩選條件可讓您根據一些條件來攔截例外狀況。 通常會用來建立記錄例外狀況，但絕不會處理這些例外狀況的篩選方法。 例外狀況篩選條件是布林運算式，若應該執行 `catch` 子句，則為 `true`；若 `catch` 子句不應該攔截例外狀況，則為 `false`。 在互動式視窗中嘗試以下代碼:它將異常類型和消息記錄到主控台。 它返回`false`,表示無法處理異常。 在互動式視窗中嘗試下列程式。\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        try \n        {\n            string s = null;\n            Console.WriteLine(s.Length);\n\n        } catch (Exception e) when (LogException(e))\n        {\n        }\n        Console.WriteLine(\"Exception must have been handled\");\n    }\n\n    private static bool LogException(Exception e)\n    {\n        Console.WriteLine($\"\\tIn the log routine. Caught {e.GetType()}\");\n        Console.WriteLine($\"\\tMessage: {e.Message}\");\n        return false;\n    }\n}\n```\n\n您應該會看到來自 `LogException` 方法的訊息，後面接著預設例外狀況訊息。 若要試驗，請將 `return false` 陳述式變更為 `return true`，然後再執行一次。 現在，系統會攔截到例外狀況，且程式會完成執行。\n\n除了記錄情節，例外狀況篩選條件在下列情況可能最有用：當例外狀況的屬性會決定要採取的動作時。 例如，您可以查看 <xref:System.AggregateException> 內部以了解包含哪些例外狀況，並根據特定例外狀況採取一些適當的動作。\n"
