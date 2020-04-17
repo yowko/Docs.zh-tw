@@ -3,14 +3,14 @@ title: 針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行�
 description: 本指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 實作。
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: 393d6d89fb299e87edf55cf50991537e8afe9753
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 885a7fb3419eafa5d88ef621cf6ad04a8d48bb59
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344155"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607489"
 ---
-# <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
+# <a name="choose-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
 有兩個支援的實作，可使用 .NET 來建置伺服器端應用程式：.NET Framework 及 .NET Core。 這兩者共用許多相同的元件，而您可以在這兩者間共用程式碼。 不過，兩者間有一些基本差異，而您的選擇取決於您想要完成的目標。  本文提供有關每一個選項使用時機的指引。
 
@@ -37,7 +37,7 @@ ms.locfileid: "80344155"
 
 如果您的應用程式 (Web/服務) 必須在多個平台 (Windows、Linux 和 macOS) 上執行，請使用 .NET Core。
 
-.NET Core 支援先前所述的作業系統作為您的開發工作站。 Visual Studio 提供適用於 Windows 和 macOS 的整合式開發環境 (IDE)。 您也可以使用 Visual Studio Code，其在 macOS、Linux 和 Windows 上執行。 Visual Studio Code 支援 .NET Core，包括 IntelliSense 和偵錯。 大多數的協力廠商編輯器 (例如 Sublime、Emacs 和 VI) 都可搭配 .NET Core 使用。 這些協力廠商編輯器會透過 [Omnisharp](https://www.omnisharp.net/) 取得編輯器 IntelliSense。 您還可以避免任何代碼編輯器，並直接使用[.NET Core CLI](../core/tools/index.md)，可用於所有受支援的平臺。
+.NET Core 支援先前所述的作業系統作為您的開發工作站。 Visual Studio 提供適用於 Windows 和 macOS 的整合式開發環境 (IDE)。 您也可以使用 Visual Studio Code，其在 macOS、Linux 和 Windows 上執行。 Visual Studio Code 支援 .NET Core，包括 IntelliSense 和偵錯。 大多數的協力廠商編輯器 (例如 Sublime、Emacs 和 VI) 都可搭配 .NET Core 使用。 這些協力廠商編輯器會透過 [Omnisharp](https://www.omnisharp.net/) 取得編輯器 IntelliSense。 您還可以避免任何代碼編輯器,並直接使用[.NET Core CLI](../core/tools/index.md),可用於所有受支援的平臺。
 
 ### <a name="microservices-architecture"></a>微服務架構
 
@@ -45,7 +45,7 @@ ms.locfileid: "80344155"
 
 您可以使用的基礎結構平台有很多。 [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) 是針對大型且複雜的微服務系統所設計。 [Azure App Service](https://azure.microsoft.com/services/app-service/) 是無狀態微服務的理想選擇。 以 Docker 為依據的微服務替代方案符合任何一種微服務方法，如[容器](#containers)一節中所述。 所有的這些平台均支援 .NET Core，並使其更適合用來裝載您的微服務。
 
-有關微服務體系結構的詳細資訊，請參閱[.NET 微服務。容器化 .NET 應用程式的體系結構](../architecture/microservices/index.md)。
+有關微服務體系結構的詳細資訊,請參閱[.NET 微服務。容器化 .NET 應用程式的結構 。](../architecture/microservices/index.md)
 
 ### <a name="containers"></a>容器
 
@@ -94,7 +94,7 @@ ms.locfileid: "80344155"
 
 - 語言支援：.NET Core 目前支援 Visual Basic 和 F#，但不是所有專案類型都提供支援。 如需支援的專案範本清單，請參閱 [dotnet new 的範本選項](../core/tools/dotnet-new.md#arguments)。
 
-除了官方藍圖，還有其他要移植到 .NET Core 的架構。 如需完整清單，請參閱標記為 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的 CoreFX 問題。 這份清單並不代表 Microsoft 承諾要將這些元件帶入 .NET Core， 而是代表社群想要這樣做的期望。 如果您很重視標記為 `port-to-core` 的任何元件，請參與 GitHub 上的討論。 如果您認為缺少某些內容，則在[.NET 存儲庫](https://github.com/dotnet/runtime/issues/new)中提交新問題。
+除了官方藍圖，還有其他要移植到 .NET Core 的架構。 如需完整清單，請參閱標記為 [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) 的 CoreFX 問題。 這份清單並不代表 Microsoft 承諾要將這些元件帶入 .NET Core， 而是代表社群想要這樣做的期望。 如果您很重視標記為 `port-to-core` 的任何元件，請參與 GitHub 上的討論。 如果您認為缺少某些內容,則在[.NET 存儲庫](https://github.com/dotnet/runtime/issues/new)中提交新問題。
 
 ### <a name="a-need-to-use-a-platform-that-doesnt-support-net-core"></a>必須使用不支援 .NET Core 的平台
 
@@ -103,10 +103,10 @@ ms.locfileid: "80344155"
 ## <a name="see-also"></a>另請參閱
 
 - [在 ASP.NET 和 ASP.NET Core 之間進行選擇](/aspnet/core/choose-aspnet-framework)
-- [將目標指向 .NET Framework 的 ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
-- [目標框架](frameworks.md)
+- [將目標指向 .NET Framework 的 ASP.NET Core](/aspnet/core/introduction-to-aspnet-core#aspnet-core-targeting-net-framework)
+- [目標 Framework](frameworks.md)
 - [.NET 核心指南](../core/index.yml)
 - [從 .NET Framework 移植到 .NET Core](../core/porting/index.md)
 - [.NET 和 Docker 簡介](../core/docker/introduction.md)
 - [.NET 偵錯概觀](components.md)
-- [.NET 微服務。容器化 .NET 應用程式的體系結構](../architecture/microservices/index.md)
+- [.NET 微服務。容器化 .NET 應用程式的架構結構](../architecture/microservices/index.md)

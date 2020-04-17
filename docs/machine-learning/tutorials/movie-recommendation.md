@@ -1,18 +1,18 @@
 ---
-title: 教程：構建電影推薦者 - 矩陣分解
+title: 教學:建構電影推薦者 - 矩陣分解
 description: 本教學課程會示範如何在 .NET Core 主控台應用程式中使用 ML.NET 建置電影推薦工具。 這些步驟會使用 C# 和 Visual Studio 2019。
 author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: a221289d0c232863f03a275c26dce835f2878bf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1d7ef6226580fd3172b5714f9d7358298ba6668
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78241100"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607993"
 ---
-# <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>教程：使用矩陣分解構建具有ML.NET的電影推薦器
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorization-with-mlnet"></a>教學:使用矩陣分離具有ML.NET的電影推薦器
 
 本教學課程會示範如何在 .NET Core 主控台應用程式中使用 ML.NET 建置電影推薦工具。 這些步驟會使用 C# 和 Visual Studio 2019。
 
@@ -38,7 +38,7 @@ ms.locfileid: "78241100"
 
 ## <a name="prerequisites"></a>必要條件
 
-* [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)安裝了".NET 核心跨平臺開發"工作負載。
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更高版本或 Visual Studio 2017 版本 15.6 或更高版本,安裝了".NET 核心跨平臺開發「工作負載。
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>選取適當的機器學習工作
 
@@ -48,7 +48,7 @@ ms.locfileid: "78241100"
 
 ### <a name="create-a-project"></a>建立專案
 
-1. 開啟 Visual Studio 2017。 **從功能表**欄中選擇 **"檔** > **新專案** > "。 在 [新增專案]**** 對話方塊中，選取 [Visual C#]**** 節點，然後選取 [.NET Core]**** 節點。 然後選取 [主控台應用程式 (.NET Core)]**** 專案範本。 在 [名稱]**** 文字方塊中，鍵入 "MovieRecommender"，然後選取 [確定]**** 按鈕。
+1. 開啟 Visual Studio 2017。 **從選單**列中選擇 **「檔** > **新專案** > 」。 在 [新增專案]**** 對話方塊中，選取 [Visual C#]**** 節點，然後選取 [.NET Core]**** 節點。 然後選取 [主控台應用程式 (.NET Core)]**** 專案範本。 在 [名稱]**** 文字方塊中，鍵入 "MovieRecommender"，然後選取 [確定]**** 按鈕。
 
 2. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集：
 
@@ -56,7 +56,7 @@ ms.locfileid: "78241100"
 
 3. 安裝 **Microsoft.ML** 和 **Microsoft.ML.Recommender** NuGet 套件：
 
-    在**解決方案資源管理器**中，按右鍵專案並選擇 **"管理 NuGet 包**"。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽]**** 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝]**** 按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。 為 **Microsoft.ML.Recommender** 重複這些步驟。
+    在**解決方案資源管理員**中,右鍵單擊專案並選擇 **「管理 NuGet 包**」 。。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽]**** 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝]**** 按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。 為 **Microsoft.ML.Recommender** 重複這些步驟。
 
 4. 在您的 *Program.cs* 檔案最上方新增下列 `using` 陳述式：
 
@@ -71,9 +71,9 @@ ms.locfileid: "78241100"
 
      請務必將 \*.csv 檔案儲存至 *Data* 資料夾，或儲存在其他位置之後將 \*.csv 檔案移至 *Data* 資料夾。
 
-2. 在 [方案總管] 中，於每個 \*.csv 檔案上按一下滑鼠右鍵，然後選取 [屬性]****。 在 **"高級"** 下，將 **"複製到輸出目錄**"的值更改為 **"如果更新"，則將其更改為"複製**"。
+2. 在 [方案總管] 中，於每個 \*.csv 檔案上按一下滑鼠右鍵，然後選取 [屬性]****。 在 **「進階」** 下,將 **「複製到輸出目錄**」的值更改為 **「如果更新」,則將其更改為"複製**"。
 
-   ![使用者選擇副本（如果在 VS 中較新）的 GIF。](./media/movie-recommendation/copy-to-output-if-newer.gif)
+   ![用戶選擇副本(如果在 VS 中較新)的 GIF。](./media/movie-recommendation/copy-to-output-if-newer.gif)
 
 ## <a name="load-your-data"></a>載入您的資料
 
@@ -83,7 +83,7 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 
 以下是您 \*.csv 檔案的資料預覽：
 
-![CVS 資料集預覽的螢幕截圖。](./media/movie-recommendation/csv-file-dataset-preview.png)
+![CVS 數據集預覽的屏幕截圖。](./media/movie-recommendation/csv-file-dataset-preview.png)
 
 在 \*.csv 檔案中有四個資料行：
 
@@ -102,7 +102,7 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 | `movieId`      |               |
 | `timestamp`     |               |
 
-由您決定使用哪些 `Features` 來預測 `Label`。 您還可以使用[排列功能重要性](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)等方法來説明選擇最佳`Features`。
+由您決定使用哪些 `Features` 來預測 `Label`。 您可以使用[排列功能重要性](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)等方法來幫助`Features`選擇最佳 。
 
 在此情況下，您應該排除 `timestamp` 資料行為 `Feature`，因為時間戳記並不會實際影響使用者對特定影片的評分方式，因此無法提供更精確的預測：
 
@@ -167,15 +167,15 @@ ML.NET 中的資料以 [IDataView 類別](xref:Microsoft.ML.IDataView) 表示。
 
 ## <a name="build-and-train-your-model"></a>建置及定型您的模型
 
-ML.NET有三個主要概念：[資料](../resources/glossary.md#data)、[變形金剛](../resources/glossary.md#transformer)和[估計器](../resources/glossary.md#estimator)。
+ML.NET有三個主要概念:[資料](../resources/glossary.md#data),[變形金剛](../resources/glossary.md#transformer)和[估計器](../resources/glossary.md#estimator)。
 
 機器學習服務定型演算法需要特定格式的資料。 `Transformers` 用來將表格式資料轉換成相容的格式。
 
-![變壓器資料流程圖。](./media/movie-recommendation/data-transformer-transformed.png)
+![變壓器數據流圖。](./media/movie-recommendation/data-transformer-transformed.png)
 
 您會建立 `Estimators` 以在 ML.NET 中建立 `Transformers`。 `Estimators` 會接受資料並傳回 `Transformers`。
 
-![估計器資料流程圖。](./media/movie-recommendation/data-estimator-transformer.png)
+![估計器數據流圖。](./media/movie-recommendation/data-estimator-transformer.png)
 
 您將用於定型模型的推薦定型演算法，即為 `Estimator` 的範例。
 
@@ -320,7 +320,7 @@ public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer
 
 [!code-csharp[PredictionEngine](~/samples/snippets/machine-learning/MovieRecommendation/csharp/Program.cs#PredictionEngine "Create Prediction Engine")]
 
-[預測引擎](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，它允許您對單個資料實例執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是執行緒安全的。 在單線程或原型環境中使用是可以接受的。 為提高生產環境中的性能和執行緒安全性，請使用`PredictionEnginePool`該服務，該服務創建一個[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件，供整個應用程式使用。 請參閱有關如何[`PredictionEnginePool`在 ASP.NET核心 Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)的本指南。
+[預測引擎](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API,它允許您對單個數據實例執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是線程安全的。 在單線程或原型環境中使用是可以接受的。 為提高生產環境中的性能和線程安全性,請使用`PredictionEnginePool`該服務,該服務創建一[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)個 物件,供整個應用程式使用。 請參閱有關如何[`PredictionEnginePool`在 ASP.NET核心 Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)的本指南。
 
 > [!NOTE]
 > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。
@@ -373,7 +373,7 @@ public static void SaveModel(MLContext mlContext, DataViewSchema trainingDataVie
 
 ### <a name="use-your-saved-model"></a>使用您已儲存的模型
 
-保存已訓練的模型後，可以在不同的環境中使用該模型。 請參閱[保存和載入經過訓練的模型](../how-to-guides/save-load-machine-learning-models-ml-net.md)，瞭解如何在應用中操作經過訓練的機器學習模型。
+保存已訓練的模型后,可以在不同的環境中使用該模型。 請參閱[保存和載入經過訓練的模型](../how-to-guides/save-load-machine-learning-models-ml-net.md),瞭解如何在應用中操作經過訓練的機器學習模型。
 
 ## <a name="results"></a>結果
 
@@ -428,7 +428,7 @@ Movie 10 is recommended for user 6
 
 雖然這是不錯的起點，但在實際操作時，建議您新增其他屬性或 `Features` (例如年齡、性別、地理位置等)，如果這些也包含在資料集內。 新增更多相關 `Features` 有助於改善推薦模型的效能。
 
-如果您不確定哪個`Features`可能是與機器學習任務最相關的，還可以利用功能貢獻計算 （FCC） 和[排列功能的重要性](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)，ML.NET提供這些要素來發現最具影響力的`Features`。
+如果您不確定哪個`Features`可能是與機器學習任務最相關的,還可以利用功能貢獻計算 (FCC) 和[相片順序,ML.NET](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)提供這些要素來`Features`發現最具影響力的 。
 
 ### <a name="algorithm-hyperparameters"></a>演算法超參數
 
@@ -455,8 +455,8 @@ var options = new MatrixFactorizationTrainer.Options
 
 | 演算法       | 狀況           | 範例  |
 | ------------- |:-------------:| -----:|
-| 單一類別矩陣分解 | 當您只需要 userId 和 movieId 時，請使用此選項。 此推薦類型乃根據共同採購案例或經常同時購買的產品，也就是會根據客戶自己的採購訂單記錄向客戶推薦一組產品。 | [>試試看](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
-| 欄位感知分解機器 | 當您所擁有的功能多於 userId、productId 和評等 (如產品描述或產品價格) 時，請使用此選項來進行推薦。 此方法也會使用共同作業篩選方法。 | [>試試看](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
+| 單一類別矩陣分解 | 當您只需要 userId 和 movieId 時，請使用此選項。 此推薦類型乃根據共同採購案例或經常同時購買的產品，也就是會根據客戶自己的採購訂單記錄向客戶推薦一組產品。 | [>试试看](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/MatrixFactorization_ProductRecommendation) |
+| 欄位感知分解機器 | 當您所擁有的功能多於 userId、productId 和評等 (如產品描述或產品價格) 時，請使用此選項來進行推薦。 此方法也會使用共同作業篩選方法。 | [>试试看](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
 
 ### <a name="new-user-scenario"></a>新使用者案例
 
@@ -480,4 +480,4 @@ var options = new MatrixFactorizationTrainer.Options
 
 前進到下一個教學課程來深入了解
 > [!div class="nextstepaction"]
-> [情緒分析](sentiment-analysis.md)
+> [情感分析](sentiment-analysis.md)

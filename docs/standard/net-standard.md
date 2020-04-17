@@ -5,12 +5,12 @@ ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
-ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
+ms.openlocfilehash: 34074b420547cff802f1835656540be7b8eb58b4
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80438209"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607476"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -112,7 +112,7 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>.NET Standard 程式庫與 Visual Studio
 
-若要在 Visual Studio 中建置 .NET Standard 程式庫，請確定您已在 Windows 上安裝了 [Visual Studio 2017 版本 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) 或是更新版本，或是已在 macOS 上安裝了 [Visual Studio for Mac 版本 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 或更新版本。
+為了在 Visual Studio 中構建 .NET 標準庫,請確保在 Windows 上安裝[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或 Visual Studio 2017 版本 15.3 或更高版本,或在 mac 版本 7.1 或更高版本中安裝[Mac 版本 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)或更高版本的 Visual Studio。
 
 若在您專案中只需要使用 .NET Standard 2.0 程式庫，也可於 Visual Studio 2015 中執行。 但需要安裝 NuGet 用戶端 3.6 或更新版本。 您可從 [NuGet下載](https://www.nuget.org/downloads)頁面，下載 Visual Studio 2015 的 NuGet 用戶端。
 

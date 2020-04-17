@@ -5,12 +5,12 @@ ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: b6801b7de5a17257be706f77a7a67aa87df96524
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f1ca48ab29b04931961b52743bb6c7fab70b06d
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398927"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81608071"
 ---
 # <a name="deploy-a-model-in-an-aspnet-core-web-api"></a>在 ASP.NET Core Web API 中部署模型
 
@@ -18,7 +18,7 @@ ms.locfileid: "79398927"
 
 ## <a name="prerequisites"></a>必要條件
 
-- [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)安裝了".NET 核心跨平臺開發"工作負載。
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更高版本或 Visual Studio 2017 版本 15.6 或更高版本,安裝了".NET 核心跨平臺開發「工作負載。
 - PowerShell。
 - 預先定型的模型。 使用 [ML.NET 情感分析教學課程](../tutorials/sentiment-analysis.md)來建置您自己的模型，或是下載這個[預先定型的情感分析機器學習模型](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)
 
@@ -36,7 +36,7 @@ ms.locfileid: "79398927"
 
     在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。 選擇 "nuget.org" 作為 [套件來源]，選取 [瀏覽] 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。
 
-1. 安裝**Microsoft.Extensions.ML Nuget 套裝軟體**：
+1. 安裝**Microsoft.Extensions.ML Nuget 套件**:
 
     在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽] 索引標籤、搜尋 **Microsoft.Extensions.ML**、從清單中選取該套件，然後選取 [安裝] 按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受] 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。
 
@@ -51,7 +51,7 @@ ms.locfileid: "79398927"
 
 1. 在您的專案中建立名為 *DataModels* 的目錄以儲存資料模型：
 
-    在 [方案總管] 中，以滑鼠右鍵按一下您的專案，然後選取 [新增] > [新增資料夾]。 鍵入"資料模型"並點擊**Enter**。
+    在 [方案總管] 中，以滑鼠右鍵按一下您的專案，然後選取 [新增] > [新增資料夾]。 鍵入資料模型並點擊**Enter**。
 
 2. 在 [方案總管] 中，以滑鼠右鍵按一下 *DataModels* 目錄，然後選取 [新增] > [新增項目]。
 3. 在 [新增項目]**** 對話方塊中，選取 [類別]****，然後將 [名稱]**** 欄位變更為 *SentimentData.cs*。 接著，選取 [新增]**** 按鈕。 *SentimentData.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 using 陳述式新增至 *SentimentData.cs* 頂端：
@@ -60,7 +60,7 @@ ms.locfileid: "79398927"
     using Microsoft.ML.Data;
     ```
 
-    刪除現有類定義並將以下代碼添加到**SentimentData.cs**檔中：
+    刪除現有類別定義並將以下代碼加入**到 SentimentData.cs**檔案中:
 
     ```csharp
     public class SentimentData
@@ -74,7 +74,7 @@ ms.locfileid: "79398927"
     }
     ```
 
-4. 在解決方案資源管理器中，按右鍵 *"資料模型"* 目錄，然後選擇"**添加>新專案**。
+4. 在解決方案資源管理員中,右鍵按*下 「資料模型」* 目錄,然後選擇「**新增>新專案**。
 5. 在 [加入新項目]**** 對話方塊中，選取 [類別]****，然後將 [名稱]**** 欄位變更為 *SentimentPrediction.cs*。 接著，選取 [新增] 按鈕。 *SentimentPrediction.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 using 陳述式新增至 *SentimentPrediction.cs* 頂端：
 
     ```csharp
@@ -100,9 +100,9 @@ ms.locfileid: "79398927"
 
 ## <a name="register-predictionenginepool-for-use-in-the-application"></a>登錄 PredictionEnginePool 以在應用程式中使用
 
-要進行單個預測，必須創建 一個[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是執行緒安全的。 此外，您必須在應用程式中需要它的地方創建它的實例。 隨著應用程式的增長，此過程可能會變得難以管理。 為提高性能和執行緒安全性，請使用依賴項注入和服務`PredictionEnginePool`的組合，該服務將創建一個[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件，供整個應用程式使用。
+要進行單一預測,必須建立一個[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是線程安全的。 此外,您必須在應用程式中需要它的地方創建它的實例。 隨著應用程式的增長,此過程可能會變得難以管理。 為提高性能和線程安全性,請使用依賴項注入和服務`PredictionEnginePool`的組合,該服務將創建一個[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件,供整個應用程式使用。
 
-如果要瞭解有關[ASP.NET酷中的依賴項注入的詳細資訊，](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)以下連結提供了更多資訊。
+如果要瞭解有關[ASP.NET酷中的依賴項注入的詳細資訊,](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)以下連結提供了更多資訊。
 
 1. 開啟 *Startup.cs* 類別，並將下列 using 陳述式新增至檔案頂端：
 
@@ -123,16 +123,16 @@ ms.locfileid: "79398927"
         .FromFile(modelName: "SentimentAnalysisModel", filePath:"MLModels/sentiment_model.zip", watchForChanges: true);
     ```
 
-在高級別上，此代碼會自動初始化物件和服務，以便以後在應用程式請求時使用，而不必手動執行此操作。
+在高級別上,此代碼會自動初始化物件和服務,以便以後在應用程式請求時使用,而不必手動執行此操作。
 
-機器學習模型不是靜態的。 隨著新的培訓資料可用，模型將重新訓練和重新部署。 將最新版本的模型引入應用程式的一種方法是重新部署整個應用程式。 但是，這引入了應用程式停機時間。 該服務`PredictionEnginePool`提供了一種機制，用於重新載入更新的模型，而無需關閉應用程式。
+機器學習模型不是靜態的。 隨著新的培訓數據可用,模型將重新訓練和重新部署。 將最新版本的模型引入應用程式的一種方法是重新部署整個應用程式。 但是,這引入了應用程式停機時間。 該服務`PredictionEnginePool`提供了一種機制,用於重新載入更新的模型,而無需關閉應用程式。
 
-將`watchForChanges`參數設置為`true`，並`PredictionEnginePool`啟動[`FileSystemWatcher`](xref:System.IO.FileSystemWatcher)偵聽檔案系統更改通知並在檔發生更改時引發事件。 這提示 自動`PredictionEnginePool`重新載入模型。
+將`watchForChanges`參數設定`true`為`PredictionEnginePool`,[`FileSystemWatcher`](xref:System.IO.FileSystemWatcher)並啟動偵聽檔案系統更改通知並在檔發生更改時引發事件。 這提示`PredictionEnginePool`自動 重新載入模型。
 
-參數標識模型，`modelName`以便每個應用程式可以在更改時重新載入多個模型。
+參數識別模型,`modelName`以便每個應用程式可以在更改時重新載入多個模型。
 
 > [!TIP]
-> 或者，在使用遠端存放`FromUri`的模型時，可以使用 該方法。 不要監視檔更改的事件，而是`FromUri`輪詢遠端位置以進行更改。 輪詢間隔預設為 5 分鐘。 您可以根據應用程式的要求增加或減少輪詢間隔。 在下面的代碼示例中，`PredictionEnginePool`每分鐘輪詢存儲在指定 URI 中的模型。
+> 或者,在使用遠端存儲`FromUri`的模型時,可以使用 該方法。 不要監視檔更改的事件,而是`FromUri`輪詢遠端位置以進行更改。 輪詢間隔預設為 5 分鐘。 您可以根據應用程式的要求增加或減少輪詢間隔。 在下面的代碼示例中,`PredictionEnginePool`每分鐘輪詢儲存在指定 URI 中的模型。
 >
 >```csharp
 >services.AddPredictionEnginePool<SentimentData, SentimentPrediction>()
@@ -186,7 +186,7 @@ ms.locfileid: "79398927"
     }
     ```
 
-此程式碼會透過將預測服務傳遞至控制器的建構函式 (透過相依性插入取得) 來指派 `PredictionEnginePool`。 然後，`Predict`控制器`Post`的方法使用`PredictionEnginePool`使用`SentimentAnalysisModel``Startup`類中的註冊進行預測，如果成功，則返回結果返回給使用者。
+此程式碼會透過將預測服務傳遞至控制器的建構函式 (透過相依性插入取得) 來指派 `PredictionEnginePool`。 然後,`Predict`控制`Post`器`PredictionEnginePool`的方法`SentimentAnalysisModel``Startup`使用 使用 類中的註冊進行預測,如果成功,則返回結果返回給使用者。
 
 ## <a name="test-web-api-locally"></a>在本機測試 Web API
 
@@ -209,4 +209,4 @@ ms.locfileid: "79398927"
 
 ## <a name="next-steps"></a>後續步驟
 
-- [部署到 Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)
+- [部署至 Azure](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs#deploy-the-app-to-azure)

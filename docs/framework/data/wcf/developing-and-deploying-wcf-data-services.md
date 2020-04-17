@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 5c473f818ea874392011065dc3d07101d2ef3bf5
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389734"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607954"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開發並部署 WCF 資料服務
 
@@ -42,7 +42,7 @@ ms.locfileid: "81389734"
 
 1. **本機 IIS 伺服器**
 
-     當您創建在 Internet 資訊服務 (IIS) 上運行 ASP.NET 應用程式或 ASP.NET 網站的數據服務時,我們建議您使用本地電腦上的 IIS 開發和測試數據服務。 在 IIS 上執行資料服務時，更容易在偵錯期間追蹤 HTTP 要求。 這也讓您預先決定 IIS 用來存取資料服務所需之檔案、資料庫和其他資源時所需的必要權限。 要在IIS上執行資料服務,請確保正確安裝和配置IIS和Windows通訊基礎 (WCF),並授予對檔案系統和資料庫中的IIS帳戶的存取許可權。 如需詳細資訊，請參閱 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)。
+     當您創建在 Internet 資訊服務 (IIS) 上運行 ASP.NET 應用程式或 ASP.NET 網站的數據服務時,我們建議您使用本地電腦上的 IIS 開發和測試數據服務。 在 IIS 上執行資料服務時，更容易在偵錯期間追蹤 HTTP 要求。 這還使您能夠預先確定 IIS 訪問數據服務所需的文件、資料庫和其他資源所需的必要許可權。 要在IIS上執行資料服務,請確保正確安裝和配置IIS和Windows通訊基礎 (WCF),並授予對檔案系統和資料庫中的IIS帳戶的存取許可權。 如需詳細資訊，請參閱 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
     > [!NOTE]
     > 您必須執行具有管理員許可權的 Visual Studio,才能啟用開發環境來配置本地 IIS 伺服器。
@@ -51,7 +51,7 @@ ms.locfileid: "81389734"
 
      Visual Studio 包括一個內建的 Web 伺服器,即可視化工作室開發伺服器,它是 ASP.NET 專案的預設 Web 伺服器。 此 Web 伺服器旨在 ASP.NET 開發期間在本地電腦上運行專案。 [WCF 資料服務快速入門](quickstart-wcf-data-services.md)演示如何創建在可視化工作室開發伺服器中運行的數據服務。
 
-     當您使用 Visual Studio 開發伺服器開發資料服務時,應注意以下限制:
+     使用 Visual Studio 開發伺服器開發資料服務時,請注意以下限制:
 
     - 只能在本機電腦上存取這個伺服器。
 
@@ -68,9 +68,9 @@ ms.locfileid: "81389734"
     > [!TIP]
     > 即使可以使用 Visual Studio 開發伺服器在開發期間測試數據服務,但在部署到運行 IIS 的 Web 伺服器後,也應再次測試它們。
 
-3. **Microsoft Azure 開發環境**
+3. **Azure 開發環境**
 
-     適用於可視化工作室的 Windows Azure 工具包括一組用於在可視化工作室中開發 Windows Azure 服務的整合工具。 您可以使用這些工具開發可以部署到 Microsoft Azure 的資料服務，並在部署之前，先在本機電腦上測試資料服務。 使用 Visual Studio 開發在 Windows Azure 平臺上運行的數據服務時,請使用這些工具。 有關安裝這些工具的資訊,請參閱[Visual Studio 2015 的 Azure 工具](../../../azure/sdk/vs2015-install.md)。 有關開發在 Windows Azure 上運行的數據服務的詳細資訊,請參閱在[Windows Azure 中部署 OData 服務](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)的帖子。
+     適用於可視化工作室的 Windows Azure 工具包括一組用於在可視化工作室中開發 Azure 服務的整合工具。 使用這些工具,可以開發可部署到 Azure 的數據服務,也可以在部署之前在本地電腦上測試數據服務。 使用 Visual Studio 開發在 Azure 平臺上運行的數據服務時,請使用這些工具。 有關安裝這些工具的資訊,請參閱[Visual Studio 2015 的 Azure 工具](../../../azure/sdk/vs2015-install.md)。 有關開發在 Azure 上運行的數據服務的詳細資訊,請參閱在 Azure[中部署 OData 服務](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)的帖子。
 
 ### <a name="development-tips"></a>開發秘訣
 
@@ -92,7 +92,7 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
 
 - **IIS 裝載的 Web 服務**
 
-    當資料服務作為ASP.NET專案開發時,可以使用標準ASP.NET部署過程將其部署到IIS Web伺服器。  Visual Studio 為ASP.NET提供以下部署技術,具體取決於承載要部署的數據服務的ASP.NET項目類型。
+    當資料服務作為ASP.NET專案開發時,可以使用標準ASP.NET部署過程將其部署到IIS Web伺服器。 Visual Studio 為ASP.NET提供以下部署技術,具體取決於承載要部署的數據服務的ASP.NET項目類型。
 
   - **用於 ASP.NET Web 應用程式的部署技術**
 
@@ -113,9 +113,9 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 您可以�
     > [!TIP]
     > 在您嘗試將資料服務部署到 IIS 之前，請確認您已經測試執行 IIS 之 Web 伺服器的部署。 如需詳細資訊，請參閱 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
-- **Microsoft Azure**
+- **Azure**
 
-     可以使用 Visual Studio 的 Windows Azure 工具將數據服務部署到 Windows Azure。 可以從[微軟下載中心](https://go.microsoft.com/fwlink/?LinkID=201848)下載 Visual Studio 的 Windows Azure 工具。 有關將資料服務部署到 Windows Azure 的詳細資訊,請參閱在 Windows [Azure 中部署 OData 服務](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)的帖子。
+     可以使用 Visual Studio 的 Azure[工具](../../../azure/sdk/vs2015-install.md)將數據服務部署到 Azure。 有關將資料服務部署到 Azure 的詳細資訊,請參閱[在 Azure 中部署 OData 服務](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)。
 
 ### <a name="deployment-considerations"></a>部署考量
 

@@ -1,17 +1,17 @@
 ---
-title: 教程：對支援問題進行分類 - 多類分類
+title: 教學:對支援問題進行分類 - 多類別
 description: 了解如何在多類別分類案例中使用 ML.NET 來分類 GitHub 問題，以將它們指派至特定區域。
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 50980cd933054825bf21f955b0341dd8e66f3e62
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc0e935a36c52627903dac2a7b29d6f534695ea0
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78239933"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81608058"
 ---
-# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>教程：使用多類分類對支援問題進行分類，並ML.NET
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>教程:使用多類分類對支援問題進行分類,並ML.NET
 
 此範例教學課程會示範使用 ML.NET，透過使用 Visual Studio 中 C# 的 .NET Core 主控台應用程式，建立 GitHub 問題分類器，來定型分類及預測 GitHub 問題 Area 標籤的模型。
 
@@ -29,8 +29,7 @@ ms.locfileid: "78239933"
 
 ## <a name="prerequisites"></a>必要條件
 
-* [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)安裝了".NET 核心跨平臺開發"工作負載。
-
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更高版本或 Visual Studio 2017 版本 15.6 或更高版本,安裝了".NET 核心跨平臺開發「工作負載。
 * [Github issues tab separated file (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) (Github 問題定位字元分隔檔案 (issues_train.tsv))。
 * [Github issues test tab separated file (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) (Github 問題測試定位字元分隔檔案 (issues_test.tsv))。
 
@@ -38,7 +37,7 @@ ms.locfileid: "78239933"
 
 ### <a name="create-a-project"></a>建立專案
 
-1. 開啟 Visual Studio 2017。 **從功能表**欄中選擇 **"檔** > **新專案** > "。 在 [新增專案]**** 對話方塊中，選取 [Visual C#]**** 節點，然後選取 [.NET Core]**** 節點。 然後選取 [主控台應用程式 (.NET Core)]**** 專案範本。 在 [名稱]**** 文字方塊中，鍵入 "GitHubIssueClassification"，然後選取 [確定]**** 按鈕。
+1. 開啟 Visual Studio 2017。 **從選單**列中選擇 **「檔** > **新專案** > 」。 在 [新增專案]**** 對話方塊中，選取 [Visual C#]**** 節點，然後選取 [.NET Core]**** 節點。 然後選取 [主控台應用程式 (.NET Core)]**** 專案範本。 在 [名稱]**** 文字方塊中，鍵入 "GitHubIssueClassification"，然後選取 [確定]**** 按鈕。
 
 2. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集檔案：
 
@@ -50,13 +49,13 @@ ms.locfileid: "78239933"
 
 4. 安裝「Microsoft.ML NuGet 套件」****：
 
-    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。 選擇"nuget.org"作為"包"源，選擇"流覽"選項卡，搜索**Microsoft.ML**並選擇"**安裝**"按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。
+    在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [管理 NuGet 套件]****。 選擇「nuget.org」作為「包」源,選擇「瀏覽」選項卡,搜尋**Microsoft.ML**並選擇「**安裝**」按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。
 
 ### <a name="prepare-your-data"></a>準備您的資料
 
 1. 下載 [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) 和 [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) 資料集，並將它們儲存至先前建立的 *Data* 資料夾。 第一個資料集會將機器學習模型定型，第二個資料集則可用來評估您模型的準確率。
 
-2. 在 [方案總管] 中，於每個 \*.tsv 檔案上按一下滑鼠右鍵，然後選取 [屬性]****。 在 **"高級"** 下，將 **"複製到輸出目錄**"的值更改為 **"如果更新"，則將其更改為"複製**"。
+2. 在 [方案總管] 中，於每個 \*.tsv 檔案上按一下滑鼠右鍵，然後選取 [屬性]****。 在 **「進階」** 下,將 **「複製到輸出目錄**」的值更改為 **「如果更新」,則將其更改為"複製**"。
 
 ### <a name="create-classes-and-define-paths"></a>建立類別及定義路徑
 
@@ -102,9 +101,9 @@ ms.locfileid: "78239933"
 * 第三個資料行 `Title` (GitHub 問題標題) 是第一個用來預測 `Area` 的 `feature`
 * 第四個資料行 `Description` 是第二個用來預測 `Area` 的 `feature`
 
-`IssuePrediction` 是在模型定型後，用來進行預測的類別。 它有一個`string`（`Area`）`PredictedLabel``ColumnName`和一個屬性.  `PredictedLabel` 的使用時機是在進行預測和評估的期間。 就評估而言，會使用含有定型資料、預設值及模型的輸入。
+`IssuePrediction` 是在模型定型後，用來進行預測的類別。 它有一個`string``Area`(`PredictedLabel``ColumnName`) 與一個屬性。  `PredictedLabel` 的使用時機是在進行預測和評估的期間。 就評估而言，會使用含有定型資料、預設值及模型的輸入。
 
-所有ML.NET操作都在[MLCoNtext](xref:Microsoft.ML.MLContext)類中開始。 將 `mlContext` 初始化會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，它與 `Entity Framework` 中的 `DBContext` 相似。
+所有ML.NET操作都在[MLContext](xref:Microsoft.ML.MLContext)類中開始。 將 `mlContext` 初始化會建立新的 ML.NET 環境，可在模型建立工作流程物件間共用。 就概念而言，它與 `Entity Framework` 中的 `DBContext` 相似。
 
 ### <a name="initialize-variables-in-main"></a>在 Main 中初始化變數
 
@@ -278,7 +277,7 @@ public static void Evaluate(DataViewSchema trainingDataViewSchema)
 
 * 記錄檔遺失 - 請參閱[記錄檔遺失](../resources/glossary.md#log-loss)。 建議讓記錄檔遺失盡量接近零。
 
-* 日誌損耗減少 - 範圍從 [-inf， 1.00]， 其中 1.00 是完美的預測， 0 表示平均預測. 您希望日誌損失減少盡可能接近一個。
+* 日誌損耗減少 - 範圍從 [-inf, 1.00], 其中 1.00 是完美的預測, 0 表示平均預測. 您希望日誌損失減少盡可能接近一個。
 
 ### <a name="displaying-the-metrics-for-model-validation"></a>顯示模型驗證的計量
 
@@ -301,7 +300,7 @@ private static void SaveModelAsFile(MLContext mlContext,DataViewSchema trainingD
 }
 ```
 
-將下列程式碼新增至 `SaveModelAsFile` 方法。 此代碼使用[`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*)方法將訓練的模型序列化並將存儲為 ZIP 檔案。
+將下列程式碼新增至 `SaveModelAsFile` 方法。 此代碼使用[`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*)方法將訓練的模型序列化並將存儲為 zip 檔案。
 
 [!code-csharp[SnippetSaveModel](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#SnippetSaveModel)]
 
@@ -340,7 +339,7 @@ private static void PredictIssue()
 
 [!code-csharp[CreatePredictionEngine](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#CreatePredictionEngine)]
 
-[預測引擎](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，它允許您對單個資料實例執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是執行緒安全的。 在單線程或原型環境中使用是可以接受的。 為提高生產環境中的性能和執行緒安全性，請使用`PredictionEnginePool`該服務，該服務創建一個[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件，供整個應用程式使用。 請參閱有關如何[`PredictionEnginePool`在 ASP.NET核心 Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)的本指南。
+[預測引擎](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API,它允許您對單個數據實例執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是線程安全的。 在單線程或原型環境中使用是可以接受的。 為提高生產環境中的性能和線程安全性,請使用`PredictionEnginePool`該服務,該服務創建一[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)個 物件,供整個應用程式使用。 請參閱有關如何[`PredictionEnginePool`在 ASP.NET核心 Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)的本指南。
 
 > [!NOTE]
 > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。

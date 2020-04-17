@@ -1,17 +1,17 @@
 ---
-title: 教程：使用回歸預測價格
+title: 教學:使用回歸預測價格
 description: 本教學課程會示範如何使用 ML.NET 建置迴歸模型，特別針對紐約市的計程車費用預測價格。
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 51cef97178c2dbc6a5b572a7045bdad4bc382ba0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 91429383341cf718d38e636bd1d71dc25d30d20d
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78240983"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607967"
 ---
-# <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>教程：使用回歸與ML.NET預測價格
+# <a name="tutorial-predict-prices-using-regression-with-mlnet"></a>教學:使用回歸與ML.NET預測價格
 
 本教學課程會示範如何使用 ML.NET 建置[迴歸模型](../resources/glossary.md#regression)，特別針對紐約市的計程車費用預測價格。
 
@@ -27,7 +27,7 @@ ms.locfileid: "78240983"
 
 ## <a name="prerequisites"></a>必要條件
 
-* [Visual Studio 2017 版本 15.6 或更高版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)安裝了".NET 核心跨平臺開發"工作負載。
+* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更高版本或 Visual Studio 2017 版本 15.6 或更高版本,安裝了".NET 核心跨平臺開發「工作負載。
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
@@ -35,15 +35,15 @@ ms.locfileid: "78240983"
 
 1. 在您專案中建立名為 *Data* 的目錄以用來儲存資料集和模型檔案。
 
-1. 安裝**Microsoft.ML** NuGet 包：
+1. 安裝**Microsoft.ML** NuGet 套件:
 
-    在**解決方案資源管理器**中，按右鍵專案並選擇 **"管理 NuGet 包**"。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽]**** 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝]**** 按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。 對**Microsoft.ML.FastTree** NuGet 包執行相同的操作。
+    在**解決方案資源管理員**中,右鍵單擊專案並選擇 **「管理 NuGet 包**」 。。 選擇 "nuget.org" 作為 [套件來源]、選取 [瀏覽]**** 索引標籤、搜尋 **Microsoft.ML**、從清單中選取該套件，然後選取 [安裝]**** 按鈕。 在 [預覽變更]**** 對話方塊上，選取 [確定]**** 按鈕，然後在 [授權接受]**** 對話方塊上，如果您同意所列套件的授權條款，請選取 [我接受]****。 對**Microsoft.ML.FastTree** NuGet 包執行相同的操作。
 
 ## <a name="prepare-and-understand-the-data"></a>準備並了解資料
 
 1. 下載 [taxi-fare-train.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-train.csv) 和 [taxi-fare-test.csv](https://github.com/dotnet/machinelearning/blob/master/test/data/taxi-fare-test.csv) 資料集，並將它們儲存至您在上一個步驟所建立的 *Data* 資料夾。 我們可以使用這些資料集將機器學習模型定型，然後評估模型的準確程度。 這些資料集原先來自 [NYC TLC Taxi Trip 資料集](https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page)。
 
-1. 在**解決方案資源管理器中**，按右鍵\*每個 .csv 檔並選擇**屬性**。 在 **"高級"** 下，將 **"複製到輸出目錄**"的值更改為 **"如果更新"，則將其更改為"複製**"。
+1. 在**解決方案資源管理員中**,右鍵按\*下每個 .csv 檔案並選擇**屬性**。 在 **「進階」** 下,將 **「複製到輸出目錄**」的值更改為 **「如果更新」,則將其更改為"複製**"。
 
 1. 開啟 **taxi-fare-train.csv** 資料集，然後查看第一個資料列中的資料行標頭。 請查看每個資料行。 了解資料，並決定哪些資料行是 **features**，以及哪一個資料行是 **label**。
 
@@ -54,7 +54,7 @@ ms.locfileid: "78240983"
 * **vendor_id：** 計程車廠商的識別碼是一項特徵。
 * **rate_code：** 計程車行程的費率類型是一項特徵。
 * **passenger_count：** 行程的乘客數目是一項特徵。
-* **trip_time_in_secs：** 行程所花費的時間長度。 您想要在行程結束之前預測行程的車資。 在那一刻，你不知道這次旅行需要多長時間。 因此，行程時間不是一項特徵，您將從模型中排除這個資料行。
+* **trip_time_in_secs：** 行程所花費的時間長度。 您想要在行程結束之前預測行程的車資。 在那一刻,你不知道這次旅行需要多長時間。 因此，行程時間不是一項特徵，您將從模型中排除這個資料行。
 * **trip_distance：** 行程的距離是一項特徵。
 * **payment_type：** 付款方式 (現金或信用卡) 是一項特徵。
 * **fare_amount：** 計程車車資總計是標籤。
@@ -75,7 +75,7 @@ ms.locfileid: "78240983"
 
 `TaxiTrip` 是輸入資料類別，並含有每個資料集資料行的定義。 使用 <xref:Microsoft.ML.Data.LoadColumnAttribute> 屬性來指定資料集中來源資料行的索引。
 
-`TaxiTripFarePrediction` 類別代表預測的結果。 它有一個浮動欄位，`FareAmount`並應用了屬性`Score`<xref:Microsoft.ML.Data.ColumnNameAttribute>。 在回歸任務的情況下，"**分數"** 列包含預測的標籤值。
+`TaxiTripFarePrediction` 類別代表預測的結果。 它有浮動欄位,`FareAmount`並套用了屬性`Score`<xref:Microsoft.ML.Data.ColumnNameAttribute>。 在回歸任務的情況下,"**分數"** 列包含預測的標籤值。
 
 > [!NOTE]
 > 使用 `float` 型別表示輸入和預測資料類別中的浮點值。
@@ -130,11 +130,11 @@ ML.NET 使用 [IDataView 類別](xref:Microsoft.ML.IDataView)作為描述數字�
 
 [!code-csharp[LoadTrainData](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#6 "loading training dataset")]
 
-當您要預測出租車行程票價時，列`FareAmount`是`Label`您將預測的列（模型的輸出）。 使用`CopyColumnsEstimator`轉換類複製`FareAmount`，並添加以下代碼：
+當您要預測計程車行程票價時,列`FareAmount``Label`是 您將預測的列(模型的輸出)。 使用`CopyColumnsEstimator`轉換類別`FareAmount`複製 ,並新增以下代碼:
 
 [!code-csharp[CopyColumnsEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#7 "Use the CopyColumnsEstimator")]
 
-訓練模型的演算法需要**數值**要素，因此必須將分類資料`VendorId`（、`RateCode`和`PaymentType`） 值轉換為數字 （、`VendorIdEncoded``RateCodeEncoded`和`PaymentTypeEncoded`）。 若要進行該操作，請使用 [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) 轉換類別，這會將不同數值索引鍵值指派給每個資料行中的不同值，並新增下列程式碼：
+訓練模型的演演演算法需要**數值**要素,因此`VendorId`必須將`RateCode`分類`PaymentType`資料 (、 和`VendorIdEncoded``RateCodeEncoded`)`PaymentTypeEncoded`值轉換為數位 (、 和 )。 若要進行該操作，請使用 [OneHotEncodingTransformer](xref:Microsoft.ML.Transforms.OneHotEncodingTransformer) 轉換類別，這會將不同數值索引鍵值指派給每個資料行中的不同值，並新增下列程式碼：
 
 [!code-csharp[OneHotEncodingEstimator](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#8 "Use the OneHotEncodingEstimator")]
 
@@ -245,7 +245,7 @@ private static void TestSinglePrediction(MLContext mlContext, ITransformer model
 
 [!code-csharp[MakePredictionEngine](~/samples/snippets/machine-learning/TaxiFarePrediction/csharp/Program.cs#22 "Create the PredictionFunction")]
 
-[預測引擎](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API，它允許您對單個資料實例執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是執行緒安全的。 在單線程或原型環境中使用是可以接受的。 為提高生產環境中的性能和執行緒安全性，請使用`PredictionEnginePool`該服務，該服務創建一個[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)物件，供整個應用程式使用。 請參閱有關如何[`PredictionEnginePool`在 ASP.NET核心 Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)的本指南。
+[預測引擎](xref:Microsoft.ML.PredictionEngine%602)是一個方便的 API,它允許您對單個數據實例執行預測。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)不是線程安全的。 在單線程或原型環境中使用是可以接受的。 為提高生產環境中的性能和線程安全性,請使用`PredictionEnginePool`該服務,該服務創建一[`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601)[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602)個 物件,供整個應用程式使用。 請參閱有關如何[`PredictionEnginePool`在 ASP.NET核心 Web API 中使用](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)的本指南。
 
 > [!NOTE]
 > `PredictionEnginePool` 服務延伸模組目前處於預覽狀態。
