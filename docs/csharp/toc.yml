@@ -119,7 +119,7 @@
       href: programming-guide/types/index.md
     - name: 可為 Null 的參考型別
       href: nullable-references.md
-    - name: 使用屬性與限制式說明可為 Null 的 API
+    - name: 將 API 簽章更新為可為 Null 參考
       href: nullable-attributes.md
     - name: 命名空間
       href: programming-guide/namespaces/index.md
@@ -355,16 +355,10 @@
               href: programming-guide/concepts/attributes/index.md
             - name: 建立自訂屬性
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
-            - name: AttributeUsage
-              href: programming-guide/concepts/attributes/attributeusage.md
             - name: 使用反映存取屬性
               href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
             - name: 如何使用屬性建立 C/C++ 等位
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
-            - name: 常見屬性
-              href: programming-guide/concepts/attributes/common-attributes.md
-        - name: 呼叫者資訊
-          href: programming-guide/concepts/caller-information.md
         - name: 集合
           href: programming-guide/concepts/collections.md
         - name: 共變數和反變數
@@ -1664,6 +1658,19 @@
           href: language-reference/tokens/interpolated.md
         - name: '@ -- 逐字識別項'
           href: language-reference/tokens/verbatim.md
+    - name: 編譯器所讀取的屬性
+      items:
+        - name: 全域屬性
+          displayName: 'AssemblyName, AssemblyVersion, AssemblyCulture, AssemblyFlags, AssemblyProduct, AssemblyTrademark, AssemblyInformationalVersion, AssemblyCompany, AssemblyCopyright, AssemblyFileVersion, CLSCompliant, AssemblyTitle, AssemblyDescription, AssemblyConfiguration, AssemblyDefaultAlias'
+        - name: 一般
+          displayName: 'Conditional, Obsolete, AttributeUsage'
+          href: language-reference/attributes/general.md
+        - name: 呼叫者資訊
+          displayName: 'CallerFilePath, CallerLineNumber, CallerMemberName'
+          href: language-reference/attributes/caller-information.md
+        - name: 可為 Null 靜態分析
+          displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
+          href: language-reference/attributes/nullable-analysis.md
     - name: 'C# 前置處理器指示詞'
       items:
         - name: 總覽
