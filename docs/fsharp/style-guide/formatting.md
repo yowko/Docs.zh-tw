@@ -2,19 +2,19 @@
 title: F# 程式碼格式方針
 description: 瞭解 F# 程式碼的格式設定指南。
 ms.date: 11/04/2019
-ms.openlocfilehash: 2086b515b8ec9b69a44e2e65ca06fb320670dff2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278934"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739549"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 程式碼格式方針
 
 本文提供了如何設定代碼格式的指南,以便 F# 代碼具有:
 
-* 通常被視為更清晰
-* 符合 Visual Studio 和其他編輯器中格式工具應用的約定
+* 更清晰
+* 依視覺化工作室和其他編輯器中格式工具應用程式的約定
 * 類似於其他線上碼
 
 這些準則基於[由安-鄧潘](https://github.com/dungpa)[對 F# 格式約定的全面指南](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md)。
@@ -25,9 +25,9 @@ ms.locfileid: "81278934"
 
 ### <a name="using-spaces"></a>使用空白
 
-當需要縮進時,必須使用空格,而不是選項卡。 至少需要一個空格。 您的組織可以創建編碼標準來指定用於縮進的空間數;在發生縮進的每個級別,兩個、三個或四個縮進空間是典型的。
+當需要縮進時,必須使用空格,而不是選項卡。 至少需要一個空格。 您的組織可以創建編碼標準來指定用於縮進的空間數;在發生縮進的每個級別,2 個、3 個或 4 個縮進空間是典型的。
 
-**我們建議每個縮進 4 個空格。**
+**我們建議每個縮進四個空格。**
 
 這就是說,程式縮進是一個主觀問題。 變異是可以的,但您應該遵循的第一條規則是*縮進的一致性*。 選擇一種普遍接受的縮進樣式,並在代碼庫中系統地使用它。
 
@@ -43,7 +43,7 @@ F# 對空白敏感。 儘管空白的大多數語義都由適當的縮進覆蓋,
 let subtractThenAdd x = x - 1 + 3
 ```
 
-一元`-`運算子應始終具有立即遵循的值:
+一元`-`運算子應始終立即跟隨他們否定的值:
 
 ```fsharp
 // OK
@@ -100,7 +100,7 @@ let myFun (a: decimal) b c = a + b + c
 let myFunBad (a:decimal)(b)c = a + b + c
 ```
 
-### <a name="place-parameters-on-a-new-line-for-very-long-member-definitions"></a>將參數放在新行上,用於很長的成員定義
+### <a name="place-parameters-on-a-new-line-for-long-member-definitions"></a>將參數放在長成員定義的新行上
 
 如果您有很長的成員定義,則將參數放在新行上,並縮進它們一個作用域。
 
@@ -287,7 +287,7 @@ type SchoolPerson =
 
 從歷史上看,某些 F# 庫在名稱中使用了下劃線。 但是,這不再被廣泛接受,部分原因是它與 .NET 命名約定衝突。 也就是說,一些 F# 程式師使用強調很大,部分原因是歷史原因,寬容和尊重很重要。 但是,請注意,對於是否使用該樣式,其他人通常不喜歡這種風格。
 
-某些例外情況包括與本機組件進行互操作,其中下劃線很常見。
+一個例外包括與本機組件進行互操作,其中下劃線很常見。
 
 ### <a name="use-standard-f-operators"></a>使用標準 F# 運算子
 
@@ -325,7 +325,7 @@ F# 既繼承命名泛型類型的後綴 ML 樣`int list`式(例如 ),也繼承�
 
 ## <a name="formatting-tuples"></a>格式化中陣數
 
-中繼實體資訊資訊應為括弧,並且其中的分隔逗號應後跟單個空白,例如: `(1, 2)`。 `(x, y, z)`
+中繼實體資訊資訊設定為括弧,其中的分隔逗號應後跟單個空白,例如: `(1, 2)`。 `(x, y, z)`
 
 在組合的圖案比對中省略括弧是通常接受的:
 
@@ -354,7 +354,7 @@ let update model msg =
 
 ## <a name="formatting-discriminated-union-declarations"></a>格式化受歧視的工會聲明
 
-類型定義`|`中縮進 4 個空白:
+類型定義`|`中按四個空白縮排:
 
 ```fsharp
 // OK
@@ -393,7 +393,7 @@ let tree1 =
 
 ## <a name="formatting-record-declarations"></a>格式化記錄聲明
 
-按`{`4 個空白在類型定義中縮進,並在同一行上啟動欄位清單:
+按四`{`個空白在類型定義中縮進,並在同一行上啟動欄位清單:
 
 ```fsharp
 // OK
@@ -508,7 +508,7 @@ let rainbow2 =
         Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-與記錄指南一樣,您可能希望為大括弧專用單獨的行,並將一個範圍縮進到右側。 請注意,在某些特殊情況下,例如使用可選的無括弧包裝值時,可能需要在一行上保留一個大括弧:
+與記錄指南一樣,您可能希望為大括弧專用單獨的行,並將一個範圍縮進到右側。 在某些特殊情況下,例如使用可選的無括弧包裝值,您可能需要在一行上保留大括弧:
 
 ```fsharp
 type S = { F1: int; F2: string }
@@ -691,7 +691,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-在`let`函數中定義`let rec`的 或應在 啟動後縮進`let`4 個`function`空白 的模式匹配 ,即使使用了關鍵字:
+在`let`函數中定義`let rec`的 或應在 啟動後縮進四個`let`空白中的 模式`function`符合,即使使用關鍵字:
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -824,7 +824,7 @@ module A2 =
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>設定物件運算式與介面的格式
 
-對象運算式和介面應與在 4 個`member`空格後 縮進的方式對齊。
+對象運算式和介面應與在四個空格後縮`member`進 的方式對齊。
 
 ```fsharp
 let comparer =

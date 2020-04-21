@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 658043f8d5e149064f6da328657b2ccef9b5da94
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: a8b47e83ce9e999ea2afe94db0a21725abc2d327
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121435"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738579"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (空寬恕) 運算子 (C# 參考)
 

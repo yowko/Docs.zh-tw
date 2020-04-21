@@ -4,12 +4,12 @@ description: 了解如何在多類別分類案例中使用 ML.NET 來分類 GitH
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: fc0e935a36c52627903dac2a7b29d6f534695ea0
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: f158b8dce81e00f652496cad4ec9217c516b3e9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608058"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739705"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>教程:使用多類分類對支援問題進行分類,並ML.NET
 
@@ -27,11 +27,11 @@ ms.locfileid: "81608058"
 
 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或更高版本或 Visual Studio 2017 版本 15.6 或更高版本,安裝了".NET 核心跨平臺開發「工作負載。
-* [Github issues tab separated file (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) (Github 問題定位字元分隔檔案 (issues_train.tsv))。
-* [Github issues test tab separated file (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) (Github 問題測試定位字元分隔檔案 (issues_test.tsv))。
+* [GitHub 發出選項卡分隔的檔 (issues_train.tsv)。](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv)
+* [GitHub 發出測試選項卡分離的檔 (issues_test.tsv)。](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv)
 
 ## <a name="create-a-console-application"></a>建立主控台應用程式
 
@@ -145,7 +145,7 @@ public static IEstimator<ITransformer> ProcessData()
 
 [!code-csharp[MapValueToKey](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#MapValueToKey)]
 
-接下來，請呼叫 `mlContext.Transforms.Text.FeaturizeText`，針對每個呼叫的 `TitleFeaturized` 和 `DescriptionFeaturized`，將文字 (`Title` 和 `Description`) 資料行轉換成數值向量。 將這兩個資料行的特徵轉換附加至管線，使用的程式碼如下：
+接下來,呼叫`mlContext.Transforms.Text.FeaturizeText`, 它將文字`Title``Description`( 和 ) 列轉換為`TitleFeaturized``DescriptionFeaturized`每個被呼叫和的數位向量。 將這兩個資料行的特徵轉換附加至管線，使用的程式碼如下：
 
 [!code-csharp[FeaturizeText](~/samples/snippets/machine-learning/GitHubIssueClassification/csharp/Program.cs#FeaturizeText)]
 

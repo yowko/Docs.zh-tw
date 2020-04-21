@@ -8,20 +8,20 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-ms.openlocfilehash: 9837902bf56a402d623adbcf41558dcc568b7105
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 3e8607644c858ae804e384c974b5e81c1786c6a1
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745219"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739514"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel 控制項概觀 (Windows Form)
-Windows Forms <xref:System.Windows.Forms.LinkLabel> 控制項可讓您將 Web 樣式的連結新增至 Windows Forms 應用程式。 您可以針對可以使用 <xref:System.Windows.Forms.Label> 控制項的所有專案使用 <xref:System.Windows.Forms.LinkLabel> 控制項;您也可以將部分文字設定為檔案、資料夾或網頁的連結。  
+Windows 表<xref:System.Windows.Forms.LinkLabel>單元件允許您向 Windows 窗體應用程式添加 Web 樣式的連結。 您可以將控制項<xref:System.Windows.Forms.LinkLabel>用於可<xref:System.Windows.Forms.Label>用於控制件的所有內容;還可以將文本的一部分設置為指向檔、資料夾或網頁的連結。  
   
-## <a name="what-you-can-do-with-the-linklabel-control"></a>您可以使用 LinkLabel 控制項執行的動作  
- 除了 <xref:System.Windows.Forms.Label> 控制項的所有屬性、方法和事件之外，<xref:System.Windows.Forms.LinkLabel> 控制項也具有超連結和連結色彩的屬性。 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 屬性會設定啟動連結之文字的區域。 [<xref:System.Windows.Forms.LinkLabel.LinkColor%2A>]、[<xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>] 和 [<xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A>] 屬性會設定連結的色彩。 <xref:System.Windows.Forms.LinkLabel.LinkClicked> 事件會決定當選取連結文字時，會發生什麼事。  
+## <a name="what-you-can-do-with-the-linklabel-control"></a>使用連結標籤控制項可以做什麼  
+ 除了<xref:System.Windows.Forms.Label>控制式所有屬性、方法和事件外,<xref:System.Windows.Forms.LinkLabel>控制項還具有超連結和連結顏色的屬性。 屬性<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>設置啟動連結的文本區域。 <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>和<xref:System.Windows.Forms.LinkLabel.LinkColor%2A>屬性設置<xref:System.Windows.Forms.LinkLabel.ActiveLinkColor%2A>連結的顏色。 該<xref:System.Windows.Forms.LinkLabel.LinkClicked>事件確定選擇連結文本時會發生什麼情況。  
   
- <xref:System.Windows.Forms.LinkLabel> 控制項最簡單的用法是使用 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> 屬性來顯示單一連結，但您也可以使用 <xref:System.Windows.Forms.LinkLabel.Links%2A> 屬性來顯示多個超連結。 <xref:System.Windows.Forms.LinkLabel.Links%2A> 屬性可讓您存取連結的集合。 您也可以在每個個別 <xref:System.Windows.Forms.LinkLabel.Link> 物件的 <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> 屬性中指定資料。 <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> 屬性的值可以用來儲存要顯示的檔案位置或網站的位址。  
+ 控制項最簡單的用處<xref:System.Windows.Forms.LinkLabel>是使用<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>屬性 顯示單個連結,但<xref:System.Windows.Forms.LinkLabel.Links%2A>也可以使用 屬性 顯示多個超連結。 該<xref:System.Windows.Forms.LinkLabel.Links%2A>屬性使您能夠訪問連結的集合。 您還可以在每個單個<xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A><xref:System.Windows.Forms.LinkLabel.Link>物件的屬性中指定數據。 <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A>屬性的值可用於存儲要顯示的檔案的位置或網站的位址。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 2962de53eab132ad02aaf679fdd6037bd24fa714
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 0035f7d8aa862b4bd1b09a6f122a89786a6e295b
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463888"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738257"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型別參數的條件約束 (C# 程式設計手冊)
 
@@ -19,7 +19,7 @@ ms.locfileid: "81463888"
 
 |條件約束|描述|
 |----------------|-----------------|
-|`where T : struct`|類型參數必須是非空值類型。 關於空值型態的資訊,請參考[空數型態 。](../../language-reference/builtin-types/nullable-value-types.md) 由於所有值類型都有可訪問的無參數構造函數,因此`struct`約束意味著`new()`約束,並且不能與`new()`約束組合。 也不能將`struct`約束與`unmanaged`約束合併。|
+|`where T : struct`|類型參數必須是非空值類型。 關於空值型態的資訊,請參考[空數型態 。](../../language-reference/builtin-types/nullable-value-types.md) 由於所有值類型都有可訪問的無參數構造函數,因此`struct`約束意味著`new()`約束,並且不能與`new()`約束組合。 不能將`struct`約束與`unmanaged`約束合併。|
 |`where T : class`|型別引數必須是參考型別。 此條件約束也適用於任何類別、介面、委派或陣列型別。 在 C# 8.0 或更高`T`版本中的空 上下文中,必須是不可取消的引用類型。 |
 |`where T : class?`|類型參數必須是引用類型,可以是 null 或非空。 此條件約束也適用於任何類別、介面、委派或陣列型別。|
 |`where T : notnull`|類型參數必須是非空類型。 該參數可以是 C# 8.0 或更高版本中的非空引用類型,也可以是非空值類型。 |

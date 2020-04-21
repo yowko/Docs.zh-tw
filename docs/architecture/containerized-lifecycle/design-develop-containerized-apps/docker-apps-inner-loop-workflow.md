@@ -2,12 +2,12 @@
 title: Docker 應用程式的內部迴圈開發工作流程
 description: 了解用於開發 Docker 應用程式的「內部迴圈」工作流程。
 ms.date: 02/15/2019
-ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: bce047bd5ba75f9ef652a294ff6a15656fc5ac34
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989008"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738411"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 
@@ -156,7 +156,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 >
 > 因此，每位開發人員首先需要執行整個內部迴圈程序，以在本機進行測試並繼續開發，直到他們想要推送完整的功能或變更為原始檔控制系統。
 
-若要在您的本機環境中使用 DockerFile 建立映像，您可以使用 docker build 命令，如圖 4-25 所示 (針對由多個容器/服務所組成的應用程式，您也可以執行 `docker-compose up --build`)。
+要在本地環境中創建映射並使用 DockerFile,可以使用 docker 生成命令,如圖 4-25 所示(還可以為由多個`docker-compose up --build`容器/服務組成的應用程式運行)。
 
 ![顯示 Docker 生成命令的主控台輸出的螢幕截圖。](./media/docker-apps-inner-loop-workflow/run-docker-build-command.png)
 
@@ -263,7 +263,7 @@ docker-machine {IP} {YOUR-CONTAINER-NAME}
 
 Visual Studio Code 支援對 Docker 的偵錯，如果您使用 Node.js 和像是 .NET Core 容器的其他平台。
 
-在使用適用於 Windows 或 Mac 的 Visual Studio 時，您也可以對 Docker 中的 .NET Core 或 .NET Framework 容器進行偵錯，如下一節中所述。
+在使用 Windows 或 Mac 的可視化工作室時,還可以調試 Docker 中的 .NET Core 或 .NET 框架容器,如下一節所述。
 
 > [!TIP]
 > 要瞭解有關除錯 Node.js Docker<https://blog.docker.com/2016/07/live-debugging-docker/>容器<https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more>的更多 , 請參考與 。

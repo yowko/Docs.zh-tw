@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: eb9aa2ea8d6b1c96e0be7d377f7c047194b598de
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 481d3f7b87dbe874de010825c3c7f052e4bc33c0
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75712789"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738746"
 ---
 # <a name="while-c-reference"></a>while (C# 參考)
 
@@ -22,7 +22,7 @@ ms.locfileid: "75712789"
 
 您可以使用 [continue](continue.md) 陳述式直接逐步執行 `while` 運算式評估。 如果運算式評估為 `true`，即繼續執行迴圈中的第一個陳述式。 否則會在迴圈之後的第一個陳述式繼續執行。
 
-您也可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 陳述式結束 `while` 迴圈。
+您還可以通過`while`[goto、](goto.md)[傳回](return.md)或[引發](throw.md)語句退出迴圈。
 
 ## <a name="example"></a>範例
 
@@ -37,6 +37,6 @@ ms.locfileid: "75712789"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 編程指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [做語句](do.md)

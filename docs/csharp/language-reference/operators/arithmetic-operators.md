@@ -27,21 +27,21 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: f03084fa611c35c5504190b28fab79563d560d03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea9bf9e065b2953fd20e0503a19d1dc143064c5d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399256"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738739"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術運算子 (C# 參考)
 
-以下運算子使用數數值型別的運算元執行算數運算：
+以下運算子使用數值類型的操作數執行算術運算:
 
-- 一元[`++`（增量）、（](#increment-operator-)[`--`遞減）、（](#decrement-operator---)[`+`加號）](#unary-plus-and-minus-operators)和[`-`（減）](#unary-plus-and-minus-operators)運算子
-- 二進位[`*`（乘法），（](#multiplication-operator-)[`/`除法），（](#division-operator-)[`%`剩餘），（](#remainder-operator-)[`+`加法）](#addition-operator-)和[`-`（減法）](#subtraction-operator--)運算子
+- 一元[`++`(增量)、(](#increment-operator-)[`--`遞減)、(](#decrement-operator---)[`+`加號)](#unary-plus-and-minus-operators)和[`-`(減)](#unary-plus-and-minus-operators)運算子
+- 二進位[`*`(乘法),(](#multiplication-operator-)[`/`除法),(](#division-operator-)[`+`](#addition-operator-)[`%`](#remainder-operator-)[`-`reta)](#subtraction-operator--)
 
-這些運算子由所有[積分](../builtin-types/integral-numeric-types.md)和[浮點](../builtin-types/floating-point-numeric-types.md)數數值型別支援。
+這些運算符由所有[積分](../builtin-types/integral-numeric-types.md)和[浮點](../builtin-types/floating-point-numeric-types.md)數值類型支援。
 
 ## <a name="increment-operator-"></a>遞增運算子 ++
 
@@ -85,7 +85,7 @@ ms.locfileid: "79399256"
 
 [!code-csharp-interactive[unary plus and minus](snippets/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-[ulong](../builtin-types/integral-numeric-types.md)類型不支援一元`-`運算子。
+[ulong](../builtin-types/integral-numeric-types.md)類型不支援一`-`元 運算符。
 
 ## <a name="multiplication-operator-"></a>乘法運算子 *
 
@@ -115,7 +115,7 @@ ms.locfileid: "79399256"
 
 [!code-csharp-interactive[floating-point division](snippets/ArithmeticOperators.cs#FloatingPointDivision)]
 
-如果其中一個運算元是 `decimal`，則另一個運算元便不可以是 `float` 或 `double`，因為 `float` 或 `double` 都無法隱含轉換為 `decimal`。 您必須明確地將 `float` 或 `double` 運算元轉換為 `decimal` 型別。 有關數位類型轉換的詳細資訊，請參閱[內置數位轉換](../builtin-types/numeric-conversions.md)。
+如果其中一個運算元是 `decimal`，則另一個運算元便不可以是 `float` 或 `double`，因為 `float` 或 `double` 都無法隱含轉換為 `decimal`。 您必須明確地將 `float` 或 `double` 運算元轉換為 `decimal` 型別。 關於數位型態轉換的詳細資訊,請參考[內建數位轉換](../builtin-types/numeric-conversions.md)。
 
 ## <a name="remainder-operator-"></a>餘數運算子 %
 
@@ -137,7 +137,7 @@ ms.locfileid: "79399256"
 - `z` 的絕對值是由 `|x| - n * |y|` 產生的值，其中 `n` 為最大可能整數，小於或等於 `|x| / |y|`，而 `|x|`和 `|y|`則分別是 `x` 和 `y` 的絕對值。
 
 > [!NOTE]
-> 這種計算剩餘數的方法類似于用於整數運算元的方法，但與 IEEE 754 規範不同。 如果需要符合 IEEE 754 規範的剩餘操作，請使用 方法<xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>。
+> 這種計算剩餘數的方法類似於用於整數操作數的方法,但與 IEEE 754 規範不同。 如果需要符合 IEEE 754 規範的剩餘操作,<xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>請使用方法 。
 
 如需在非有限運算元情況中 `%` 運算子的行為，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的[餘數運算子](~/_csharplang/spec/expressions.md#remainder-operator)小節。
 
@@ -153,7 +153,7 @@ ms.locfileid: "79399256"
 
 [!code-csharp-interactive[addition operator](snippets/ArithmeticOperators.cs#Addition)]
 
-您也可以使用 `+` 運算子進行字串串連和委派組合。 有關詳細資訊，請參閱[`+`和`+=`運算子](addition-operator.md)文章。
+您還可以使用運算元`+`進行字串串聯和委託組合。 有關詳細資訊,請參閱[`+`和`+=`運算符](addition-operator.md)文章。
 
 ## <a name="subtraction-operator--"></a>減法運算子 -
 
@@ -161,7 +161,7 @@ ms.locfileid: "79399256"
 
 [!code-csharp-interactive[subtraction operator](snippets/ArithmeticOperators.cs#Subtraction)]
 
-您也可以使用 `-` 運算子進行委派移除。 有關詳細資訊，請參閱[`-`和`-=`運算子](subtraction-operator.md)文章。
+您還可以使用`-`運算元進行委託刪除。 有關詳細資訊,請參閱[`-`和`-=`運算符](subtraction-operator.md)文章。
 
 ## <a name="compound-assignment"></a>複合指派
 
@@ -187,7 +187,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment with cast](snippets/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-您還可以使用 和`+=``-=`運算子分別訂閱和取消訂閱[事件](../keywords/event.md)。 有關詳細資訊，請參閱[如何訂閱和取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
+您還可以使用與`+=``-=`運算子來訂閱與取消[訂閱事件](../keywords/event.md)。 有關詳細資訊,請參閱[如何訂閱和取消訂閱事件](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)。
 
 ## <a name="operator-precedence-and-associativity"></a>運算子優先順序和關聯性
 
@@ -204,7 +204,7 @@ x = x op y
 
 [!code-csharp-interactive[precedence and associativity](snippets/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
-有關按優先順序排序的 C# 運算子的完整清單，請參閱[C# 運算子](index.md)一文中的[運算子優先順序](index.md#operator-precedence)部分。
+有關按優先順序排序的 C# 運算子的完整清單,請參閱[C# 運算符](index.md)一文中的[運算符優先順序](index.md#operator-precedence)部分。
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>算術溢位和除數為零
 
@@ -235,22 +235,22 @@ x = x op y
 
 ## <a name="round-off-errors"></a>四捨五入錯誤
 
-由於實數和浮點算術的浮點表示的一般限制，在具有浮點類型的計算中可能會出現進位誤差。 亦即，運算式產生的結果可能不同於預期的數學結果。 下列範例將示範幾個這類案例：
+由於實數和浮點算術的浮點表示的一般限制,在具有浮點類型的計算中可能會出現舍入誤差。 亦即，運算式產生的結果可能不同於預期的數學結果。 下列範例將示範幾個這類案例：
 
 [!code-csharp-interactive[round-off errors](snippets/ArithmeticOperators.cs#RoundOffErrors)]
 
-有關詳細資訊，請參閱[系統注釋.雙精度](/dotnet/api/system.double#remarks)值、[系統、單一](/dotnet/api/system.single#remarks)或[系統。十進位](/dotnet/api/system.decimal#remarks)參考頁。
+有關詳細資訊,請參閱[系統註釋.雙精度](/dotnet/api/system.double#remarks)值、[系統、單一](/dotnet/api/system.single#remarks)或[系統。十進位](/dotnet/api/system.decimal#remarks)參考頁。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義的類型可以[重載](operator-overloading.md)`++`一元 （、、、`+``-``*``/``%``+``--`和 ） 和二進位 （、、、和`-`） 算術運算子。 當二元運算子多載時，對應的複合指派運算子也會隱含地多載。 使用者定義型別無法明確地多載複合指派運算子。
+使用者定義的類型可以[重載](operator-overloading.md)`++`一元`+``-``*``/``%``+``--`(、、、 和 ) 和`-`二進位 (、、、和) 算術運算符。 當二元運算子多載時，對應的複合指派運算子也會隱含地多載。 使用者定義型別無法明確地多載複合指派運算子。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的下列幾節：
 
-- [尾碼增量和遞減運算子](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators)
-- [首碼增量和遞減運算子](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators)
+- [尾遞減和遞減運算子](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators)
+- [前置遞減運算子](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators)
 - [一元加號運算子](~/_csharplang/spec/expressions.md#unary-plus-operator)
 - [一元減號運算子](~/_csharplang/spec/expressions.md#unary-minus-operator)
 - [乘法運算子](~/_csharplang/spec/expressions.md#multiplication-operator)

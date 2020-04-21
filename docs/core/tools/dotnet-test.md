@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 02/27/2020
-ms.openlocfilehash: f9df03cda01bdaf649394a58e96903e764193338
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2eebcbe2e4a1660da4ffa4ea9a68190c8443463a
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463382"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739094"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -49,9 +49,9 @@ dotnet test -h|--help
 
   測試專案或解決方案的路徑。 如果未指定，則會預設為目前目錄。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
-- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
   在測試執行中，從指定的路徑使用自訂測試配接器。
 
@@ -59,19 +59,19 @@ dotnet test -h|--help
 
   在歸責模式下執行測試。 此選項有助於隔離導致測試主機崩潰的問題測試。 它會以 *Sequence.xml* 的形式在目前目錄中建立一個輸出檔，用來擷取損毀前的測試執行順序。
 
-- **`c|--configuration <CONFIGURATION>`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   定義組建組態。 預設值是 `Debug`，但您的專案組態無法覆寫這個預設的 SDK 設定。
 
-- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
   測試回合啟用資料收集器。 如需詳細資訊，請參閱[監視及分析測試回合](https://aka.ms/vstest-collect)。
 
-- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
   針對測試平台啟用診斷模式，並將診斷訊息寫入至指定的檔案。
 
-- **`f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
   尋找特定[架構](../../standard/frameworks.md)的測試二進位檔。
 
@@ -79,7 +79,7 @@ dotnet test -h|--help
 
   使用指定的運算式篩選出目前專案中的測試。 如需詳細資訊，請參閱[篩選選項詳細資料](#filter-option-details)一節。 如需如何使用選擇性單元測試篩選的詳細資訊及範例，請參閱[執行選擇性單元測試](../testing/selective-unit-tests.md)。
 
-- **`h|--help`**
+- **`-h|--help`**
 
   印出命令的簡短說明。
 
@@ -87,7 +87,7 @@ dotnet test -h|--help
 
   可讓命令停止，並等候使用者輸入或進行動作。 例如完成驗證。 自 .NET Core 3.0 SDK 起提供。
 
-- **`l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   指定測試結果的記錄器。 與 MSBuild 不同,dotnet 測試不接受縮`-l "console;v=d"`寫`-l "console;verbosity=detailed"`:而不是使用 。
 

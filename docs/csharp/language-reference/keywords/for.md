@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: fc6a23cabd93323cacc33dfc4388116881c1fc84
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cb83fa015eea19b156faebb5bed18cc1f0970cc1
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74552259"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738800"
 ---
 # <a name="for-c-reference"></a>for (C# 參考)
 
 當指定的布林運算式評估為 `true` 時，`for` 陳述式會執行某個陳述式或陳述式區塊。
 
-您可以在 `for` 陳述式區塊內的任何位置，使用 [break](break.md) 陳述式跳出迴圈，或使用 [continue](continue.md) 陳述式逐步執行到迴圈中的下一個反覆運算。 您也可以使用 [goto](goto.md)、[return](return.md) 或 [throw](throw.md) 陳述式結束 `for` 迴圈。
+您可以在 `for` 陳述式區塊內的任何位置，使用 [break](break.md) 陳述式跳出迴圈，或使用 [continue](continue.md) 陳述式逐步執行到迴圈中的下一個反覆運算。 您還可以通過`for`[goto、](goto.md)[傳回](return.md)或[引發](throw.md)語句退出迴圈。
 
 ## <a name="structure-of-the-for-statement"></a>`for` 陳述式的結構
 
@@ -110,6 +110,6 @@ i++
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 編程指南](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [foreach、in](foreach-in.md)

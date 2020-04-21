@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 5086401f4616074d364c1d387b751116120d5969
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: b207db459776c9f8fa7ea247d01071eeb8c995cf
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389005"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739301"
 ---
 # <a name="attached-properties-overview"></a>附加屬性概觀
 
@@ -20,11 +20,11 @@ ms.locfileid: "81389005"
 
 ## <a name="prerequisites"></a>先決條件<a name="prerequisites"></a>
 
-本主題假設您已從 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的現有相依性屬性消費者角度了解相依性屬性，並已閱讀[相依性屬性概觀](dependency-properties-overview.md)。 要遵循本主題中的範例,您還應瞭解 XAML 並瞭解如何編寫 WPF 應用程式。
+本文假定您從類上[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]現有依賴項屬性的消費者的角度瞭解依賴項屬性,並閱讀了[依賴項屬性概述](dependency-properties-overview.md)。 要遵循本文中的範例,您還應瞭解 XAML 並瞭解如何編寫 WPF 應用程式。
 
 ## <a name="why-use-attached-properties"></a>為什麼使用額外屬性<a name="attached_properties_usage"></a>
 
-附加屬性的其中一個用途是允許不同的子項目指定父項目中實際定義的屬性的唯一值。 此情節的特定應用程式可讓子項目通知父項目，有關如何在 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中呈現它們。 屬性就是一<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>個示例。 該<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>屬性創建為附加屬性,因為它被設計為設置為在中包含<xref:System.Windows.Controls.DockPanel>的 元素上,而不是<xref:System.Windows.Controls.DockPanel>本身。 類<xref:System.Windows.Controls.DockPanel><xref:System.Windows.DependencyProperty>定義<xref:System.Windows.Controls.DockPanel.DockProperty>名為 的靜態欄位,然後作為附加屬性<xref:System.Windows.Controls.DockPanel.GetDock%2A>的<xref:System.Windows.Controls.DockPanel.SetDock%2A>公共 訪問 器提供 和 方法。
+附加屬性的一個用途是允許不同的子元素為在父元素中定義的屬性指定唯一值。 此情節的特定應用程式可讓子項目通知父項目，有關如何在 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中呈現它們。 屬性就是一<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>個示例。 該<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>屬性創建為附加屬性,因為它被設計為設置為在 包含<xref:System.Windows.Controls.DockPanel>在中的元素上,而不是自身元素<xref:System.Windows.Controls.DockPanel>上。 類<xref:System.Windows.Controls.DockPanel><xref:System.Windows.DependencyProperty>定義<xref:System.Windows.Controls.DockPanel.DockProperty>名為 的靜態欄位,然後作為附加屬性<xref:System.Windows.Controls.DockPanel.GetDock%2A>的<xref:System.Windows.Controls.DockPanel.SetDock%2A>公共 訪問 器提供 和 方法。
 
 ## <a name="attached-properties-in-xaml"></a>XAML 中的額外屬性<a name="attached_properties_xaml"></a>
 
@@ -34,13 +34,13 @@ ms.locfileid: "81389005"
 
 [!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
-請注意,使用法與靜態屬性有些類似;您始終引用擁有並<xref:System.Windows.Controls.DockPanel>註冊附加屬性的類型,而不是引用名稱指定的任何實例。
+使用法與靜態屬性有些類似;您始終引用擁有並<xref:System.Windows.Controls.DockPanel>註冊附加屬性的類型,而不是引用名稱指定的任何實例。
 
-此外，因為 XAML 中的附加屬性是您在標記中設定的屬性，所以只有設定作業才會有任何相關性。 雖然有一些間接機制可比較值 (例如樣式中的觸發程序)，但是您無法在 XAML 中直接取得屬性 (如需詳細資訊，請參閱[設定樣式和範本](../controls/styling-and-templating.md))。
+此外，因為 XAML 中的附加屬性是您在標記中設定的屬性，所以只有設定作業才會有任何相關性。 雖然有一些間接機制可比較值 (例如樣式中的觸發程序)，但是您無法在 XAML 中直接取得屬性 (如需詳細資訊，請參閱[設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md))。
 
 ### <a name="attached-property-implementation-in-wpf"></a>WPF 中的附加屬性實作
 
-在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]中,WPF 類型中存在的大多數與UI表示相關的附加屬性都作為依賴項屬性實現。 附加屬性是 XAML 概念,而依賴項屬性是 WPF 概念。 由於 WPF 附加屬性是依賴項屬性,因此它們支援依賴項屬性概念,如屬性元數據和來自該屬性元數據的預設值。
+在[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]中,WPF 類型上與UI相關的大多數附加屬性都作為依賴項屬性實現。 附加屬性是 XAML 概念,而依賴項屬性是 WPF 概念。 由於 WPF 附加屬性是依賴項屬性,因此它們支援依賴項屬性概念,如屬性元數據和來自該屬性元數據的預設值。
 
 ## <a name="how-attached-properties-are-used-by-the-owning-type"></a>擁有類型如何使用額外屬性<a name="howused"></a>
 
@@ -91,7 +91,7 @@ WPF 中的附加屬性沒有典型的 CLR"包裝器"方法,便於獲取/設置�
 
 如果類嚴格定義附加屬性以用於其他類型,則類不必派生自<xref:System.Windows.DependencyObject>。 但是,如果遵循具有附加屬性<xref:System.Windows.DependencyObject>也是依賴項屬性的整體 WPF 模型,則需要派生。
 
-通過聲明類型`public static readonly`<xref:System.Windows.DependencyProperty>欄位,將附加屬性定義為依賴項屬性。 使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法的返回值定義此欄位。 欄位名稱必須與附加的屬性名稱(隨字串`Property`一起追加)匹配,才能遵循已建立的 WPF 模式來命名標識欄位和它們表示的屬性。 附加屬性提供程式還必須提供靜態**Get_PropertyName_** 和**Set_PropertyName_** 方法作為附加屬性的訪問器;如果不這樣做,將導致屬性系統無法使用附加屬性。
+通過聲明類型`public static readonly`<xref:System.Windows.DependencyProperty>欄位,將附加屬性定義為依賴項屬性。 使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法的返回值定義此欄位。 欄位名稱必須與附加的屬性名稱(隨字串`Property`一起追加)匹配,才能遵循已建立的 WPF 模式來命名標識欄位和它們表示的屬性。 附加屬性提供程式還必須提供靜態**Get_PropertyName_** 和**Set_PropertyName_** 方法作為附加屬性的訪問器;未能執行此操作會導致屬性系統無法使用附加屬性。
 
 > [!NOTE]
 > 如果省略附加屬性的 get 訪問器,則屬性上的數據綁定在設計工具中不起作用,例如 Visual Studio 和 Visual Studio 的 Blend。

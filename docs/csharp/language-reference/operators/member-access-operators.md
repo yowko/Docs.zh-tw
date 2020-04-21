@@ -1,7 +1,7 @@
 ---
 title: 成員存取運算子與表示式 - C# 引用
 description: 了解可用於存取類型成員的 C# 運算子。
-ms.date: 03/31/2020
+ms.date: 04/17/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4e213c92ae08edd8d537017e474c33200cb4c22c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81120987"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738728"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>成員存取運算子與表示式(C# 引用)
 
@@ -155,6 +155,8 @@ if (handler != null)
     handler(…);
 }
 ```
+
+這是一種線程安全的方法,可確保僅調用非 null。 `handler` 由於委託實例是不可變的,因此任何線程都無法更改`handler`本地變數引用的值。 特別是,如果另一個線程執行`PropertyChanged`的代碼取消訂閱事件並`PropertyChanged`變`null`為`handler`之前被調用,則引用的`handler`值 不受影響。 操作員`?.`不超過一次評估其左側操作數,保證在驗證為非`null`空 操作符后不能將其更改為非空。
 
 ## <a name="invocation-expression-"></a>呼叫表示式 ()
 

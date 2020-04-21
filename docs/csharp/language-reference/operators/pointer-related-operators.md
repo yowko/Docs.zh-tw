@@ -20,22 +20,22 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: fd25cd419f8c3bfe905850e6a252f4a8cf65478c
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 7eb6666d10c44c342f69c7cfc763feb1b7b98c9d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507096"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738607"
 ---
 # <a name="pointer-related-operators-c-reference"></a>指標相關運算子 (C# 參考)
 
 您可以搭配下列運算子來使用指標：
 
-- 一元[`&`（位址）](#address-of-operator-)運算子：獲取變數的位址
-- 單位[`*`（指標間接）](#pointer-indirection-operator-)運算子：獲取指標指向的變數
-- （成員訪問）和[`->`](#pointer-member-access-operator--)[`[]`（元素訪問）](#pointer-element-access-operator-)運算子
-- 算術運算子[`+` `-`、`++`和`--`](#pointer-arithmetic-operators)
-- 比較運算子[`==` `!=`、 `<` `>`、 `<=`、 、 、 、 和`>=`](#pointer-comparison-operators)
+- 一元[`&`(位址)](#address-of-operator-)運算子:取得變數的位址
+- 單位[`*`(指標間接)](#pointer-indirection-operator-)運算符:獲取指標指向的變數
+- (成員存取)[`->`](#pointer-member-access-operator--)和[`[]`(元素存取)](#pointer-element-access-operator-)運算子
+- 算數運算子[`+``-`、`++`與`--`](#pointer-arithmetic-operators)
+- 比較運算子[`==``!=`、 `<` `>`、 `<=`、 、 、 、 、 和`>=`](#pointer-comparison-operators)
 
 如需指標型別的資訊，請參閱[指標型別](../../programming-guide/unsafe-code-pointers/pointer-types.md)。
 
@@ -48,7 +48,7 @@ ms.locfileid: "79507096"
 
 [!code-csharp[address of local](snippets/PointerOperators.cs#AddressOf)]
 
-`&` 運算子的運算元必須是固定的變數。 「固定」** 變數是位在不受[記憶體回收行程](../../../standard/garbage-collection/index.md)作業影響之儲存位置的變數。 在前述範例中，區域變數 `number` 是固定的變數，因為它位於堆疊上。 會受到記憶體回收行程影響且位在儲存位置的變數 (例如重新配置)，稱為「可移動」** 變數。 物件欄位和陣列元素是可移動變數的範例。 如果你"修復"或"pin"，你可以得到一個可移動變數的位址，它帶有一個[`fixed`語句](../keywords/fixed-statement.md)。 獲取的位址僅在`fixed`語句塊內有效。 下面的示例演示如何使用 語句`fixed`和`&`運算子：
+`&` 運算子的運算元必須是固定的變數。 「固定」** 變數是位在不受[記憶體回收行程](../../../standard/garbage-collection/index.md)作業影響之儲存位置的變數。 在前述範例中，區域變數 `number` 是固定的變數，因為它位於堆疊上。 會受到記憶體回收行程影響且位在儲存位置的變數 (例如重新配置)，稱為「可移動」** 變數。 物件欄位和陣列元素是可移動變數的範例。 如果你"修復"或"pin",你可以得到一個可移動變數的位址,它帶有一個[`fixed`語句](../keywords/fixed-statement.md)。 獲取的位址僅在`fixed`語句塊內有效。 下面的範例展示如何使用 敘`fixed`述`&`與運算子:
 
 [!code-csharp[address of fixed](snippets/PointerOperators.cs#AddressOfFixed)]
 
@@ -70,7 +70,7 @@ ms.locfileid: "79507096"
 
 ## <a name="pointer-member-access-operator--"></a>指標成員存取運算子 ->
 
-`->` 運算子結合[指標間接](#pointer-indirection-operator-)和[成員存取](member-access-operators.md#member-access-expression-)。 `x`也就是說，如果是`T*`類型的指標，並且`y`是類型的`T`可訪問成員，則是表單的運算式
+`->` 運算子結合[指標間接](#pointer-indirection-operator-)和[成員存取](member-access-operators.md#member-access-expression-)。 `x`也就是說,如果是`T*`類型的指標,並且`y`是類型的`T`可訪問成員,則是窗體的運算式
 
 ```csharp
 x->y
@@ -96,14 +96,14 @@ x->y
 
 [!code-csharp[pointer element access](snippets/PointerOperators.cs#ElementAccess)]
 
-在前面的示例中，[`stackalloc`運算式](stackalloc.md)在堆疊上分配一個區塊。
+在前面的範例中,[`stackalloc`表達式](stackalloc.md)在堆疊上分配一個記憶體區塊。
 
 > [!NOTE]
 > 指標元素存取運算子不會檢查超出範圍的錯誤。
 
 型別為 `void*` 的運算式，指標元素存取無法使用 `[]`。
 
-[陣列元素或索引子存取](member-access-operators.md#indexer-operator-)也可以使用 `[]` 運算子。
+可將`[]`運算子用於[數位元素或索引器存取](member-access-operators.md#indexer-operator-)。
 
 ## <a name="pointer-arithmetic-operators"></a>指標算術運算子
 
@@ -124,7 +124,7 @@ x->y
 - `p + n` 和 `n + p` 運算式都會產生因為將 `n * sizeof(T)` 新增到 `p` 指定位址而得到的 `T*` 型別指標。
 - `p - n` 運算式會產生因為從 `p` 指定的位址減去 `n * sizeof(T)` 而得到的 `T*` 型別指標。
 
-[ `sizeof`運算子](sizeof.md)獲取類型的大小（以位元組為單位）。
+運算元 獲取類型的大小(以位元組為單位)。 [ `sizeof`](sizeof.md)
 
 下例示範 `+` 運算子加指標的用法：
 
@@ -166,7 +166,7 @@ x->y
 
 使用括弧 `()` 變更由運算子優先順序強制執行的評估順序。
 
-有關按優先順序排序的 C# 運算子的完整清單，請參閱[C# 運算子](index.md)一文中的[運算子優先順序](index.md#operator-precedence)部分。
+有關按優先順序排序的 C# 運算子的完整清單,請參閱[C# 運算符](index.md)一文中的[運算符優先順序](index.md#operator-precedence)部分。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 

@@ -4,12 +4,12 @@ description: 瞭解 C# 可空數型態與如何使用它們
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: fcd49d7d25b0ad23363db8cb61596004b2e87a8d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888068"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738990"
 ---
 # <a name="nullable-value-types-c-reference"></a>空白值型態(C# 引用)
 
@@ -24,7 +24,7 @@ ms.locfileid: "80888068"
 
 ## <a name="declaration-and-assignment"></a>宣告與指派
 
-由於值類型是隱式轉換為相應的空值類型,因此可以將值分配給可空值類型的變數,就像對其基礎值類型執行此操作一樣。 您也可以指派 `null` 值。 例如：
+由於值類型是隱式轉換為相應的空值類型,因此可以將值分配給可空值類型的變數,就像對其基礎值類型執行此操作一樣。 您還可以分配該`null`值。 例如：
 
 [!code-csharp[declare and assign](snippets/NullableValueTypes.cs#Declaration)]
 
@@ -52,7 +52,7 @@ null 值類型的預設值`null`表示,即它是<xref:System.Nullable%601.HasVal
 
 ## <a name="conversion-from-a-nullable-value-type-to-an-underlying-type"></a>從空白型別轉換為基礎型態
 
-如果要將空數型態的值分配給非空值類型變數,則可能需要指定要分配的值以代替`null`。 使用[空聚運算子`??`](../operators/null-coalescing-operator.md)執行此動作(您也可以將<xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType>方法用於相同的目的):
+如果要將空數型態的值分配給非空值類型變數,則可能需要指定要分配的值以代替`null`。 使用[空聚接運算子`??`](../operators/null-coalescing-operator.md)執行此動作(您也可以<xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType>將方法用於相同的目的):
 
 [!code-csharp-interactive[?? operator](snippets/NullableValueTypes.cs#NullCoalescing)]
 

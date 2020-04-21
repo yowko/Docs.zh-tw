@@ -2,12 +2,12 @@
 title: dotnet 命令
 description: 瞭解 dotnet 命令(.NET Core CLI 的通用驅動程式)及其用法。
 ms.date: 02/13/2020
-ms.openlocfilehash: d700f35f3c977524ff3857da99519882eb0136e9
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463277"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739071"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -60,7 +60,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
   指定應用程式`.dll`檔案的路徑以執行應用程式。  執行應用程式意味著查找和執行入口點,在主控台應用的情況下`Main`, 這是方法。 例如,`dotnet myapp.dll``myapp`執行 應用程式。 請參閱[.NET 核心應用程式部署](../deploying/index.md)以瞭解部署選項。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 不同的選項本身可用於`dotnet`運行命令和運行應用程式。
 
@@ -264,7 +264,7 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  指定第一次執行時是否顯示 .NET Core 歡迎消息和遙測消息。 `true`設置為將這些消息靜音(值`true`、`1`或`yes`已接受)或設置為`false`允許(值`false`、`0`或`no`已接受)。 如果未設置,則預設值為`false`,並且消息將在首次運行時顯示。 請注意,此標誌對遙測沒有影響(請參閱`DOTNET_CLI_TELEMETRY_OPTOUT`選擇不發送遙測)。
+  指定第一次執行時是否顯示 .NET Core 歡迎消息和遙測消息。 `true`設置為將這些消息靜音(值`true`、`1`或`yes`已接受)或設置為`false`允許(值`false`、`0`或`no`已接受)。 如果未設置,則預設值為`false`,並且消息將在首次運行時顯示。 此標誌對遙測沒有影響(請參閱`DOTNET_CLI_TELEMETRY_OPTOUT`選擇不發送遙測)。
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 

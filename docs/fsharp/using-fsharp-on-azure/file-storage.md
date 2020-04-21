@@ -3,20 +3,20 @@ title: 使用 F# 開始使用 Azure 檔案儲存體
 description: 使用 Azure 檔案儲存體在雲端中儲存檔案資料，並從 Azure 虛擬機器 (VM) 或執行 Windows 的內部部署應用程式掛接雲端檔案共用。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 2088442e05ba36b388a3324942ebbf8c7eb263dd
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 1b38ee53f2f73f7b7f4ee12f712f487cb726d41e
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607463"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739600"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>使用 F 開始使用 Azure 檔案儲存\#
 
 Azure 檔案儲存是使用標準[伺服器訊息塊 (SMB) 協定](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx)在雲端中提供檔案共享的服務。 SMB 2.1 和 SMB 3.0 皆受到支援。 使用 Azure 檔案儲存體時，您可以快速地將依賴檔案共用功能的舊式應用程式移轉至 Azure，而不必浪費成本來重新撰寫程式。 在 Azure 虛擬機器、雲端服務或內部部署中執行的應用程式，可掛接雲端中的檔案共用，就像桌面應用程式掛接一般 SMB 共用一樣。 可同時掛接和存取檔案儲存體共用的應用程式元件數量沒有限制。
 
-有關檔案儲存的概念概述,請參閱[.NET 檔案儲存指南](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files)。
+有關檔案儲存的概念概述[,請參閱檔案存儲的 .NET 指南](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 要使用本指南,必須首先建立[Azure 儲存帳戶](https://docs.microsoft.com/azure/storage/storage-create-storage-account)。
 您還需要此帳戶的儲存存取金鑰。
@@ -133,7 +133,7 @@ Azure 儲存分析支援檔案存儲的指標。 利用度量資料，您可以�
 
 ## <a name="next-steps"></a>後續步驟
 
-請參閱這些連結以取得 Azure 檔案儲存體的相關詳細資訊。
+有關 Azure 檔存儲的詳細資訊,請參閱這些連結。
 
 ### <a name="conceptual-articles-and-videos"></a>概念性文章和影片
 

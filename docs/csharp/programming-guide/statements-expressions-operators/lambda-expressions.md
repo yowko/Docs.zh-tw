@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: c549b9fcc91401aed846afd39e656b60e16afb74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44d6ed9ac6e1c3c4d08bbd69ca808d2e740f0c4e
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937606"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738322"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 運算式 (C# 程式設計指南)
 
@@ -37,19 +37,19 @@ ms.locfileid: "75937606"
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
-Lambda 運算式也可以轉換成[運算式樹狀架構](../concepts/expression-trees/index.md)型別，如下列範例所示：
+運算式 lambdas 也可以轉換為[運算式樹](../concepts/expression-trees/index.md)類型,如下例所示:
 
 [!code-csharp-interactive[lambda is expression tree](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#ExpressionTree)]
 
-您可以在任何需要委派型別或運算式樹狀架構執行個體的程式碼中使用 Lambda 運算式，例如作為 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> 方法的引數，以傳遞應該在背景中執行的程式碼。 在[C# 中寫入 LINQ](../../linq/index.md)時，還可以使用 lambda 運算式，如下例所示：
+您可以在任何需要委派型別或運算式樹狀架構執行個體的程式碼中使用 Lambda 運算式，例如作為 <xref:System.Threading.Tasks.Task.Run(System.Action)?displayProperty=nameWithType> 方法的引數，以傳遞應該在背景中執行的程式碼。 在[C# 中寫入 LINQ](../../linq/index.md)時,也可以使用 lambda 運算式,如下例所示:
 
 [!code-csharp-interactive[lambda is argument in LINQ](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Argument)]
 
-當您使用以方法為基礎的語法呼叫 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 類別中的 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 方法時 (例如在 LINQ to Objects 和 LINQ to XML中所執行)，此參數會是委派型別 <xref:System.Func%602?displayProperty=nameWithType>。 在<xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType><xref:System.Linq.Queryable?displayProperty=nameWithType>類中調用 方法時（例如在 LINQ 到 SQL 中）時，參數類型是[`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>)運算式樹類型。 在這兩種情況下，您都可以使用相同的 Lambda 運算式來指定參數值。 那會讓兩個 `Select` 呼叫看起來很相似，但是實際上從 Lambda 建立的物件型別並不相同。
+當您使用以方法為基礎的語法呼叫 <xref:System.Linq.Enumerable?displayProperty=nameWithType> 類別中的 <xref:System.Linq.Enumerable.Select%2A?displayProperty=nameWithType> 方法時 (例如在 LINQ to Objects 和 LINQ to XML中所執行)，此參數會是委派型別 <xref:System.Func%602?displayProperty=nameWithType>。 在<xref:System.Linq.Queryable.Select%2A?displayProperty=nameWithType><xref:System.Linq.Queryable?displayProperty=nameWithType>類中調用 方法時(例如在 LINQ 到 SQL 中[`Expression<Func<TSource,TResult>>`](<xref:System.Linq.Expressions.Expression%601>))時,參數類型是 運算式樹類型。 在這兩種情況下，您都可以使用相同的 Lambda 運算式來指定參數值。 那會讓兩個 `Select` 呼叫看起來很相似，但是實際上從 Lambda 建立的物件型別並不相同。
   
 ## <a name="expression-lambdas"></a>運算式 Lambda
 
-在 `=>` 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」**。 表達lambda在[運算式樹](../concepts/expression-trees/index.md)的構造中得到了廣泛的應用。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：
+在 `=>` 運算子右邊有運算式的 Lambda 運算式稱為「運算式 Lambda」**。 表達lambda在[表達式樹](../concepts/expression-trees/index.md)的構造中得到了廣泛的應用。 運算式 Lambda 會傳回運算式的結果，並採用下列基本形式：
 
 ```csharp
 (input-parameters) => expression
@@ -141,13 +141,13 @@ public partial class Form1 : Form
 
 ## <a name="lambda-expressions-and-tuples"></a>Lambda 運算式和元組
 
-從 C# 7.0 開始，C# 語言為[tup 提供](../../tuples.md)內置支援。 您可以將元組當做引數提供給 Lambda 運算式，而您的 Lambda 運算式也可以傳回元組。 在某些情況下，C# 編譯器會使用型別推斷來判斷元組元件的類型。
+從 C# 7.0 開始,C# 語言為[tup 提供](../../tuples.md)內置支援。 您可以將元組當做引數提供給 Lambda 運算式，而您的 Lambda 運算式也可以傳回元組。 在某些情況下，C# 編譯器會使用型別推斷來判斷元組元件的類型。
 
 若要定義元組，請以括號括住其元件的逗號分隔清單。 下列範例使用具有 3 個元件的元組將一連串數字傳遞至 Lambda 運算式，這會使每個值加倍，並傳回具有三個元件的元組，其中包含乘法運算的結果。
 
 [!code-csharp-interactive[lambda and tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithoutComponentName)]
 
-通常，元組的欄位被命名為`Item1`，`Item2`等。但是，您可以定義具有命名元件的元組，如下例所示。
+通常,元組的欄位被命名為`Item1`,`Item2`等。但是,您可以定義具有命名元件的元組,如下例所示。
 
 [!code-csharp-interactive[lambda and named tuples](~/samples/snippets/csharp/programming-guide/lambda-expressions/LambdasAndTuples.cs#WithComponentName)]
 
@@ -227,10 +227,10 @@ Lambda 可以參考「外部變數」**。 這些是在定義 Lambda 運算式�
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C# 編程指南](../index.md)
 - [LINQ (Language-Integrated Query)](../concepts/linq/index.md)
-- [運算式樹狀架構](../concepts/expression-trees/index.md)
-- [與 lambda 運算式相比的局部函數](../../local-functions-vs-lambdas.md)
+- [運算式樹](../concepts/expression-trees/index.md)
+- [與 lambda 表示式相比的局部函數](../../local-functions-vs-lambdas.md)
 - [隱含型別 Lambda 運算式](../../implicitly-typed-lambda-expressions.md)
 - [Visual Studio 2008 C# 範例 (請參閱 LINQ 範例查詢檔案和 XQuery 程式)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Recursive lambda expressions (遞迴的 Lambda 運算式)](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

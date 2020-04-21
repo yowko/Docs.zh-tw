@@ -1,18 +1,18 @@
 ---
 title: ref 關鍵字 - C# 參考
-ms.date: 03/19/2020
+ms.date: 04/21/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 494a46040d6cc33c5284449779fae89705fd29c2
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805856"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738830"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -21,7 +21,7 @@ ms.locfileid: "80805856"
 - 在方法簽章和方法呼叫中，以傳址方式將引數傳遞給方法。 如需詳細資訊，請參閱[以傳址方式傳遞引數](#passing-an-argument-by-reference)。
 - 在方法簽章中，以傳參考方式將值傳回給呼叫者。 如需詳細資訊，請參閱[參考傳回值](#reference-return-values)。
 - 在成員主體中，指出參考傳回值儲存在本機作為呼叫者想要修改的參考，或是一般而言，以參考存取另一個值的區域變數。 如需詳細資訊，請參閱 [ref 區域變數](#ref-locals)。
-- 在 `struct` 宣告中來宣告 `ref struct` 或 `readonly ref struct`。 如需詳細資訊，請參閱 [ref struct 型別](#ref-struct-types)。
+- 在 `struct` 宣告中來宣告 `ref struct` 或 `readonly ref struct`。 有關詳細資訊,請參閱[`ref`](../builtin-types/struct.md#ref-struct)[結構類型](../builtin-types/struct.md)文章的結構部分。
 
 ## <a name="passing-an-argument-by-reference"></a>以傳址方式傳遞引數
 
@@ -136,23 +136,6 @@ ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref re
 呼叫者將 `GetBookByTitle` 方法所傳回的值儲存為 ref 區域變數時，呼叫者對傳回值進行的變更會反映在 `BookCollection` 物件中，如下列範例所示。
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
-
-## <a name="ref-struct-types"></a>ref struct 型別
-
-將 `ref` 修飾詞新增到 `struct` 陳述式會將該類型的執行個體定義成必須堆疊配置。 換句話說，這些類型的執行個體絶對不會在堆積上建立為另一個類別的成員。 此功能的主要動機是 <xref:System.Span%601> 及相關的結構。
-
-希望將類型 `ref struct` 保留為配置有堆疊的變數之目標，會讓編譯器強制對所有 `ref struct` 類型進行數項規則。
-
-- 您無法分隔 `ref struct`。 您不可為類型是 `object`、`dynamic` 或任何介面類型的變數，指派 `ref struct` 類型。
-- `ref struct` 型別無法實作介面。
-- 您不可將 `ref struct` 宣告為類別或一般結構的欄位成員。 這包括聲明自動實現的屬性,該屬性將創建編譯器生成的備份欄位。
-- 您不可在非同步方法中宣告類型為 `ref struct` 的區域變數。 您可以在傳<xref:System.Threading.Tasks.Task>回的同步方法中聲明,<xref:System.Threading.Tasks.Task%601>`Task`或類似類型。
-- 您不可在迭代器中宣告 `ref struct` 區域變數。
-- 您不可在 Lambda 運算式或區域函式中擷取 `ref struct` 變數。
-
-這些限制可確保您不會意外使用 `ref struct` 而將它升階成受控堆積。
-
-您可以結合修飾詞來將結構宣告為 `readonly ref`。 `readonly ref struct` 結合了 `ref struct` 與 `readonly struct` 宣告的優點與限制。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

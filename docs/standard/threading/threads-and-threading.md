@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: e29c131f8459179d0641ac9a0cb8234fbba0e7d0
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: bac2a3ca3278b48b35d0372d52bcb79025ba1148
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588435"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739722"
 ---
 # <a name="threads-and-threading"></a>執行緒與執行緒處理
 
@@ -31,7 +31,7 @@ ms.locfileid: "80588435"
 
 多執行緒可讓您用來提高應用程式的回應能力，並利用多處理器或多核心系統來提高應用程式的輸送量。
 
-請想一想傳統型應用程式，主執行緒負責處理使用者介面項目和回應使用者動作。 背景工作執行緒可用來執行耗時的作業，否則這些作業會佔用主執行緒，而導致使用者介面沒有回應。 您也可以使用專用執行緒進行網路或裝置的通訊，以更快速地回應內送訊息或事件。
+請想一想傳統型應用程式，主執行緒負責處理使用者介面項目和回應使用者動作。 背景工作執行緒可用來執行耗時的作業，否則這些作業會佔用主執行緒，而導致使用者介面沒有回應。 您還可以使用專用線程進行網路或設備通信,以便對傳入的消息或事件做出更靈敏的回應。
 
 如果您的程式執行可平行完成的作業，那麼在個別執行緒中執行這些作業，並在多處理器或多核心系統上執行程式可減少總執行時間。 在這類系統上，使用多執行緒處理可提高輸送量及回應能力。
 
@@ -39,7 +39,7 @@ ms.locfileid: "80588435"
 
 從 .NET Framework 4 開始，建議使用[工作平行程式庫 (TPL)](../parallel-programming/task-parallel-library-tpl.md) 和[平行 LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md) 來利用多執行緒處理。 如需詳細資訊，請參閱[平行程式設計](../parallel-programming/index.md)。
 
-TPL 和 PLINQ 都憑藉 <xref:System.Threading.ThreadPool> 執行緒來運作。 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 類別會為 .NET 應用程式提供背景工作執行緒集區。 您也可以使用執行緒集區執行緒。 如需詳細資訊，請參閱[受控執行緒集區](the-managed-thread-pool.md)。
+TPL 和 PLINQ 都憑藉 <xref:System.Threading.ThreadPool> 執行緒來運作。 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> 類別會為 .NET 應用程式提供背景工作執行緒集區。 您還可以使用線程池線程。 如需詳細資訊，請參閱[受控執行緒集區](the-managed-thread-pool.md)。
 
 最後，您可以使用 <xref:System.Threading.Thread?displayProperty=nameWithType> 代表受控執行緒的類別。 如需詳細資訊，請參閱[使用執行緒和執行緒處理](using-threads-and-threading.md)。
 

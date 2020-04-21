@@ -2,18 +2,18 @@
 title: 字串插補 - C# 教學課程
 description: 此教學課程示範如何使用 C# 字串插補功能，在較大字串中包含格式化運算式結果。
 ms.date: 10/23/2018
-ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22637895f241585bac4909479f225bf3cb581614
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346785"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738275"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>使用字串插補來建構格式化的字串
 
 此教學課程將教您如何使用 C# [字串插補](../../language-reference/tokens/interpolated.md)，在單一結果字串中插入值。 您將會撰寫 C# 程式碼，並查看程式碼編譯和執行的結果。 此教學課程包含一系列的課程，示範如何將值插入至字串，並以不同的方式設定那些值的格式。
 
-此教學課程要求您必須有可用於開發的電腦。 .NET 教程[Hello World 在 10 分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)提供了在 Windows、Linux 或 macOS 上設置本地開發環境的說明。 您也可以在瀏覽器中完成此教學課程的[互動式版本](interpolated-strings.yml)。
+此教學課程要求您必須有可用於開發的電腦。 .NET 教程[Hello World 在 10 分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)提供了在 Windows、Linux 或 macOS 上設置本地開發環境的說明。 您可以在瀏覽器中完成本教學的[互動式版本](interpolated-strings.yml)。
 
 ## <a name="create-an-interpolated-string"></a>建立插入字串
 
@@ -46,13 +46,13 @@ Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 
 在上節中，您使用字串插補將某個字串插入至另一個字串內部。 不過，插入運算式的結果可以是任意資料類型。 請包含插入字串中各種資料類型的值。
 
-在下列範例中，我們先定義具有 `Name` [屬性](../../properties.md)與 `ToString` [方法](../../methods.md)的[類別](../../programming-guide/classes-and-structs/classes.md)資料類型 `Vegetable`，它會[覆寫](../../language-reference/keywords/override.md)<xref:System.Object.ToString?displayProperty=nameWithType> 方法的行為。 [ `public`訪問修改器](../../language-reference/keywords/public.md)使該方法可用於任何用戶端代碼，以獲得`Vegetable`實例的字串表示形式。 在此示例中，`Vegetable.ToString`該方法返回在`Name``Vegetable`[建構函式](../../programming-guide/classes-and-structs/constructors.md)上初始化的屬性的值：
+在下列範例中，我們先定義具有 `Name` [屬性](../../properties.md)與 `ToString` [方法](../../methods.md)的[類別](../../programming-guide/classes-and-structs/classes.md)資料類型 `Vegetable`，它會[覆寫](../../language-reference/keywords/override.md)<xref:System.Object.ToString?displayProperty=nameWithType> 方法的行為。 訪問修改器 使該方法可用於任何用戶端代碼,以`Vegetable`獲得 實例的字串表示形式。 [ `public`](../../language-reference/keywords/public.md) `Vegetable.ToString`這個方法傳回在`Name``Vegetable`[建構函數](../../programming-guide/classes-and-structs/constructors.md)上初始化的屬性的值:
 
 ```csharp
 public Vegetable(string name) => Name = name;
 ```
 
-然後，我們`Vegetable`創建一個使用`item`[`new`運算子](../../language-reference/operators/new-operator.md)並為建構函式`Vegetable`的名稱命名的類的實例：
+然後,我們`Vegetable`建立使用`item`[`new`運算子](../../language-reference/operators/new-operator.md)並為建構函數`Vegetable`的名稱命名的類的實體:
 
 ```csharp
 var item = new Vegetable("eggplant");
@@ -103,7 +103,7 @@ public class Program
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
 ```
 
-在插入運算式後面接著冒號 (":") 和格式字串，即可指定格式字串。 "d" 是[標準日期和時間格式字串](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)，可呈現簡短日期格式。 "C2"是一個[標準數位格式字串](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)，它表示數位為貨幣值，在小數點後有兩位數位。
+在插入運算式後面接著冒號 (":") 和格式字串，即可指定格式字串。 "d" 是[標準日期和時間格式字串](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)，可呈現簡短日期格式。 "C2"是一個[標準數位格式字串](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier),它表示數位為貨幣值,在小數點後有兩位數位。
 
 .NET 程式庫中有多種類型都支援一組預先定義的格式字串。 其中包含所有數值類型以及日期和時間類型。 如需支援格式字串之類型的完整清單，請參閱[在 .NET 中格式化類型](../../../standard/base-types/formatting-types.md)一文中的[格式字串和 .NET 類別庫類型](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)。
 

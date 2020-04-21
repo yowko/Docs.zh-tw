@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 22713aba4f86fe493ba3d16ef09c2a71b6d55fe0
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ddd7e8c95701532010b54e5136a33d37d139f6a4
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389790"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739235"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>HOW TO：將 WCF 服務設為與 ASP.NET Web 服務用戶端交互操作
 
 要將 Windows 通訊基礎 (WCF) 服務終結點配置為與<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>ASP.NET Web 服務用戶端進行互通,請使用 該類型作為服務終結點的綁定類型。  
   
- 您可選擇啟用 HTTPS 支援及對繫結的傳輸層級用戶端驗證。 ASP.NET Web 服務客戶端不支援 MTOM<xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType>訊息編碼, 因此該屬性應保留<xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>為其預設值,即 。 ASP.Net Web 服務用戶端不支援 Web 服務安全性，因此應該將 <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> 設定為 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>。  
+ 您可選擇啟用 HTTPS 支援及對繫結的傳輸層級用戶端驗證。 ASP.NET Web 服務客戶端不支援 MTOM<xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType>訊息編碼, 因此該屬性應保留<xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>為其預設值,即 。 ASP.NET Web 服務客戶端不支援<xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType>WS-Security,<xref:System.ServiceModel.BasicHttpSecurityMode.Transport>因此 應設定為 。  
   
  要使 WCF 服務的中繼資料可用於 ASP.NET Web 服務代理生成工具(即 Web[服務描述語言工具 (Wsdl.exe)、Web](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100))[服務發現工具 (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))和 Visual Studio 中的**新增 Web 引用**功能),應公開 HTTP/GET 元資料終結點。  
   

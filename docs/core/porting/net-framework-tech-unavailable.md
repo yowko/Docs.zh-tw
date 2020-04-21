@@ -4,12 +4,12 @@ titleSuffix: ''
 description: 了解無法在 .NET Core 上使用的 .NET Framework 技術
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: 7dfec63870950f12ec933ebf09041b3c8ce2cbb5
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 65e465f78b55270b42532eb7e8803f48c048ec3c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607793"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739133"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core 上無法使用的 .NET Framework 技術
 
@@ -19,7 +19,7 @@ ms.locfileid: "81607793"
 
 ## <a name="appdomains"></a>AppDomain
 
-應用程式定義域 (AppDomain) 可將應用程式互相隔離。 AppDomain 需要執行階段支援，且通常具有較高的成本。 不支援創建其他應用域,並且將來沒有添加此功能的計劃。 對於代碼隔離,請使用單獨的進程或容器作為替代方法。 要動態載入程式集,請使用類別<xref:System.Runtime.Loader.AssemblyLoadContext>。
+應用程式定義域 (AppDomain) 可將應用程式互相隔離。 AppDomains 需要運行時支援,而且通常成本高昂。 不支援創建其他應用域,並且將來沒有添加此功能的計劃。 對於代碼隔離,請使用單獨的進程或容器作為替代方法。 要動態載入程式集,請使用類別<xref:System.Runtime.Loader.AssemblyLoadContext>。
 
 為了讓從 .NET Framework 移轉程式碼更加輕鬆，.NET Core 會公開部分 <xref:System.AppDomain> API 介面。 某些 API 會正常運作 (例如 <xref:System.AppDomain.UnhandledException?displayProperty=nameWithType>)，某些成員不會執行任何動作 (例如 <xref:System.AppDomain.SetCachePath%2A>)，而其中某些會擲回 <xref:System.PlatformNotSupportedException> (例如 <xref:System.AppDomain.CreateDomain%2A>)。 對照[dotnet/執行時 GitHub 儲存庫](https://github.com/dotnet/runtime)中的[`System.AppDomain`引用源](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Private.CoreLib/src/System/AppDomain.cs)檢查您使用的類型。 請確保選擇與已實現版本匹配的分支。
 
