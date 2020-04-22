@@ -4,12 +4,12 @@ description: 最近對 C# 語言的增強功能，可讓您撰寫可驗證的安
 ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: dc697d822c4d471d2b67ce074ab9af8fc2724b23
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: c324f3603c69555b40efa56d8e26c046c28f3a7c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389686"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021481"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>撰寫安全且有效率的 C# 程式碼
 
@@ -26,7 +26,7 @@ C# 中的新功能可讓您撰寫可驗證的安全程式碼，取得更佳的�
 - 當[`ref readonly`](language-reference/keywords/ref.md#reference-return-values)返回值`struct`大<xref:System.IntPtr.Size?displayProperty=nameWithType>於 並且存儲存留期大於返回值的方法時,請使用返回。
 - 當 `readonly struct` 的大小大於 <xref:System.IntPtr.Size?displayProperty=nameWithType> 時，基於效能原因，您應將它作為 `in` 參數傳遞。
 - 除非使用`readonly`修改`struct`器`in`聲明 參數或`readonly`方法僅 調用結構的成員,否則切勿將 傳遞為參數。 違反本指南可能會對性能產生負面影響,並可能導致模糊行為。
-- 使用[`ref struct`](language-reference/keywords/ref.md#ref-struct-types)`readonly ref struct`或<xref:System.Span%601>等<xref:System.ReadOnlySpan%601>或將記憶體用作位元組序列。
+- 使用[`ref struct`](language-reference/builtin-types/struct.md#ref-struct)`readonly ref struct`或<xref:System.Span%601>等<xref:System.ReadOnlySpan%601>或將記憶體用作位元組序列。
 
 這些技術會強迫您考慮在**參考**及**實值**這兩個競爭目標之間取得平衡。 [參考型別](programming-guide/types/index.md#reference-types)的變數會保留記憶體位置的參考。 [實值型別](programming-guide/types/index.md#value-types)的變數則會直接包含其值。 這些差異凸顯管理記憶體資源時關鍵的不同點。 **實值型別**通常會在傳遞至方法，或是從方法傳回時複製。 此行為包含在呼叫實值型別成員時，複製 `this` 的值。 複製成本與型別的大小相關。 **參考型別**則配置在受控堆積上。 每個新物件都需要新的配置，且之後都必須進行回收。 這些作業都需要時間。 參考會在參考型別作為方法的引數或從方法傳回時複製。
 

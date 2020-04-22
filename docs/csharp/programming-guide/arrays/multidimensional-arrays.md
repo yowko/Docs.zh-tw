@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#], multidimensional
 - multidimensional arrays [C#]
 ms.assetid: 020ce02e-7dff-4273-8e53-bf0b33747232
-ms.openlocfilehash: eb49f4386b6106328f1613b5ec70794ac26fc9b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ee5fae36ff844fadad7e1b6a766020319b67a83c
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715043"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021753"
 ---
 # <a name="multidimensional-arrays-c-programming-guide"></a>多維陣列 (C# 程式設計手冊)
 
@@ -28,7 +28,7 @@ ms.locfileid: "75715043"
   
  [!code-csharp[csProgGuideArrays#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#13)]  
   
- 也可以初始化陣列，而不指定順位。  
+ 還可以初始化陣列,而無需指定排名。  
   
  [!code-csharp[csProgGuideArrays#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#14)]  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75715043"
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
-- [陣 列](./index.md)
+- [C# 編程指南](../index.md)
+- [陣列](./index.md)
 - [一維陣列](./single-dimensional-arrays.md)
-- [鋸齒狀陣列](./jagged-arrays.md)
+- [不規則陣列](./jagged-arrays.md)

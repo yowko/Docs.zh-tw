@@ -1,6 +1,6 @@
 ---
 title: 結構類型 - C# 引用
-ms.date: 04/14/2020
+ms.date: 04/21/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 8013aab5580ac007875debc78208532a2d0ad1dc
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: dbe9b47625589de834b7a8021640885ca0920b96
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81388996"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021264"
 ---
 # <a name="structure-types-c-reference"></a>結構類型(C# 參考)
 
@@ -47,7 +47,7 @@ ms.locfileid: "81388996"
 
 從 C# 8.0 開始`readonly`,還可以使用 修改器聲明實例成員不修改結構的狀態。 如果無法將整個結構類型聲明為`readonly`,請`readonly`使用 修改器標記不修改結構狀態的實例成員。 在`readonly`結構中,每個實例成員都是隱式`readonly`的。
 
-在實例`readonly`成員中,不能分配給結構的實例欄位。 但是,成員`readonly`可以調用非`readonly`成員。 在這種情況下,編譯器將創建結構實例的副本,並調用該副本上的非`readonly`成員。 因此,不會修改原始結構實例。
+在`readonly`實例成員中,不能分配給結構的實例欄位。 但是,成員`readonly`可以調用非`readonly`成員。 在這種情況下,編譯器將創建結構實例的副本,並調用該副本上的非`readonly`成員。 因此,不會修改原始結構實例。
 
 通常,您將`readonly`修改器應用於以下類型的實體成員:
 
@@ -68,7 +68,7 @@ ms.locfileid: "81388996"
   > [!NOTE]
   > `get`編譯器聲明[自動實現屬性](../../programming-guide/classes-and-structs/auto-implemented-properties.md)的訪問`readonly`許可權為`readonly`,而不考慮 屬性聲明中修飾符的存在。
 
-不能將`readonly`修改符應用於結構類型的靜態成員。
+不能將`readonly`修改器應用於結構類型的靜態成員。
 
 編譯器可以使用`readonly`修改器進行性能優化。 有關詳細資訊,請參閱[編寫安全高效的 C# 代碼](../../write-safe-efficient-code.md)。
 
@@ -78,7 +78,7 @@ ms.locfileid: "81388996"
 
 - 不能聲明無參數構造函數。 每個結構類型都已提供一個隱式無參數建構函數,該建構函數產生類型的[預設值](default-values.md)。
 
-- 不能在其聲明上初始化實例欄位或屬性。 但是,您可以在其聲明上初始化[靜態](../keywords/static.md)或[const](../keywords/const.md)欄位或靜態屬性。
+- 不能在其聲明中初始化實例欄位或屬性。 但是,您可以在其聲明上初始化[靜態](../keywords/static.md)或[const](../keywords/const.md)欄位或靜態屬性。
 
 - 結構類型的構造函數必須初始化類型的所有實例欄位。
 
@@ -88,7 +88,7 @@ ms.locfileid: "81388996"
 
 ## <a name="instantiation-of-a-structure-type"></a>結構類型的實體化
 
-在 C# 中,必須先初始化聲明變數,然後才能使用它。 因為結構類型變數不能`null`(除非它是可 null[值類型的](nullable-value-types.md)變數),因此必須實例化相應類型的實例。 有幾種方法可以做到這一點。
+在 C# 中,必須先初始化聲明變數,然後才能使用它。 因為結構類型的變數不能`null`(除非它是可 null[值類型的](nullable-value-types.md)變數),因此必須實例化相應類型的實例。 有幾種方法可以做到這一點。
 
 通常,通過使用運算符調用適當的構造函數來[`new`](../operators/new-operator.md)實例化結構類型。 每個結構類型至少有一個構造函數。 這是一個隱式無參數建構函數,它產生類型的[預設值](default-values.md)。 您還可以使用[預設值運算式](../operators/default.md)生成類型的預設值。
 
@@ -102,9 +102,32 @@ ms.locfileid: "81388996"
 
 將結構類型變數作為參數傳遞給方法或從方法返回結構類型值時,將複製結構類型的整個實例。 這可能會影響代碼在涉及大型結構類型的高性能方案中的性能。 可以通過引用傳遞結構類型變數來避免值複製。 使用[`ref`](../keywords/ref.md#passing-an-argument-by-reference)、[`out`](../keywords/out-parameter-modifier.md)[`in`](../keywords/in-parameter-modifier.md)或方法參數修改器指示必須透過引用傳遞參數。 使用[ref 返回](../../programming-guide/classes-and-structs/ref-returns.md)通過引用返回方法結果。 有關詳細資訊,請參閱[編寫安全高效的 C# 代碼](../../write-safe-efficient-code.md)。
 
+## <a name="ref-struct"></a>`ref`結構
+
+從 C# 7.2 開始`ref`,您可以在 結構類型的聲明中使用修飾符。 `ref`結構類型的實例在堆疊上分配,無法轉義到託管堆。 為確保,編譯器限制`ref`結構類型的使用,如下所示:
+
+- `ref`結構不能是陣列的元素類型。
+- `ref`結構不能是類或非`ref`結構欄位的已聲明類型。
+- `ref`結構不能實現介面。
+- `ref`結構不能載入到<xref:System.ValueType?displayProperty=nameWithType>或<xref:System.Object?displayProperty=nameWithType>。
+- `ref`結構不能是類型參數。
+- `ref` [lambda 運算式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)或[局部函數](../../programming-guide/classes-and-structs/local-functions.md)無法捕獲結構變數。
+- `ref`結構變數不能在[`async`](../keywords/async.md)方法中使用。 但是,您可以在同步方法`ref`中使用結構變數,例如,在返回<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>中。
+- `ref`結構變數不能用於[發上層器](../../iterators.md)。
+
+通常,當您需要一`ref`種類型時,定義`ref`結構類型,該類型還包括結構類型的資料成員:
+
+[!code-csharp[ref struct](snippets/StructType.cs#RefStruct)]
+
+`ref`要將結構聲明為[`readonly`](#readonly-struct),在類型聲明`readonly`中`ref`組合 與修`readonly`飾符(`ref`修改符必須位於 修改器之前):
+
+[!code-csharp[readonly ref struct](snippets/StructType.cs#ReadonlyRef)]
+
+在 .NET`ref`中, 結構的<xref:System.Span%601?displayProperty=nameWithType>範<xref:System.ReadOnlySpan%601?displayProperty=nameWithType>例是與 。
+
 ## <a name="conversions"></a>轉換
 
-對於任何結構類型,都存在與和<xref:System.ValueType?displayProperty=nameWithType><xref:System.Object?displayProperty=nameWithType>類型轉換的[裝箱和取消裝箱](../../programming-guide/types/boxing-and-unboxing.md)轉換。 結構類型和它實現的任何介面之間也存在裝箱和取消裝箱轉換。
+對於任何結構類型([`ref`結構](#ref-struct)類型除外),存在<xref:System.ValueType?displayProperty=nameWithType><xref:System.Object?displayProperty=nameWithType>與和 類型轉換的[裝箱和取消裝箱](../../programming-guide/types/boxing-and-unboxing.md)轉換。 結構類型和它實現的任何介面之間也存在裝箱和取消裝箱轉換。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -114,6 +137,7 @@ ms.locfileid: "81388996"
 
 - [唯讀結構](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs)
 - [唯讀執行個體成員](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
+- [參考樣式類型的編譯時間安全性](~/_csharplang/proposals/csharp-7.2/span-safety.md)
 
 ## <a name="see-also"></a>另請參閱
 

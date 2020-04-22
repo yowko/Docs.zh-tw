@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b314b61584e45ac5e80a248e639bdac427ba4a57
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278882"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021732"
 ---
 # <a name="wcf-client-overview"></a>WCF 用戶端概述
 
@@ -42,7 +42,7 @@ ms.locfileid: "81278882"
 - 透過用戶端通道呼叫服務。  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>取得服務合約、繫結和位址  
- 在 WCF 中,服務和用戶端使用託管屬性、介面和方法對協定建模。 若要在用戶端應用程式中連接到服務，您必須取得服務合約的類型資訊。 通常,使用[ServiceModel 中數據實用程式工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)執行此操作,該工具從服務下載元資料,以您選擇的語言將其轉換為託管原始碼檔案,並創建可用於設定 WCF 用戶端物件的用戶端應用程式配置檔。 例如,如果要創建 WCF 用戶端物件以呼`MyCalculatorService`叫, 並且知道該服務的中繼`http://computerName/MyCalculatorService/Service.svc?wsdl`資料是在發表於的,則以下代碼範例展示如何使用 Svcutil.exe 獲取包含`ClientCode.vb`託管代碼中的服務協定的檔。  
+ 在 WCF 中,服務和用戶端使用託管屬性、介面和方法對協定建模。 若要在用戶端應用程式中連接到服務，您必須取得服務合約的類型資訊。 通常,您可以使用[服務模型中數據實用程式工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)獲取服務協定的類型資訊。 實用程式從服務下載中繼資料,以您選擇的語言將其轉換為託管原始碼檔,並創建可用於設定 WCF 用戶端物件的用戶端應用程式設定檔。 例如,如果要創建 WCF 用戶端物件以呼`MyCalculatorService`叫, 並且知道該服務的中繼`http://computerName/MyCalculatorService/Service.svc?wsdl`資料是在發表於的,則以下代碼範例展示如何使用 Svcutil.exe 獲取包含`ClientCode.vb`託管代碼中的服務協定的檔。  
   
 ```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  

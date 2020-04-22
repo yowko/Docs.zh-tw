@@ -1,6 +1,6 @@
 ---
 title: 例外狀況處理 (工作平行程式庫)
-ms.date: 03/30/2017
+ms.date: 04/20/2020
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-ms.openlocfilehash: 12777a5f34b8aadcc80977b8796fc2cd53c626a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa6d4b706eb11921ffd419402bcf4cf059a29b11
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134256"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021506"
 ---
 # <a name="exception-handling-task-parallel-library"></a>例外狀況處理 (工作平行程式庫)
 
@@ -28,7 +28,7 @@ ms.locfileid: "73134256"
 
 只要攔截 <xref:System.AggregateException> 而且沒有觀察到任何內部的例外狀況，就可以避免未處理的例外狀況。 不過，建議您不要這麼做，因為它在非平行案例中類似於攔截基底 <xref:System.Exception> 類型。 攔截例外狀況卻不採取特定動作從它復原，可能會讓您的程式處於不確定狀態。
 
-如果您不想要呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法來等候工作完成，則也可以擷取來自工作 <xref:System.Threading.Tasks.Task.Exception%2A> 屬性的 <xref:System.AggregateException> 例外狀況，如下例所示。 有關詳細資訊，請參閱本主題[中的 Task.exception 屬性部分的觀察異常](#observing-exceptions-by-using-the-taskexception-property)。
+如果您不想要呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法來等候工作完成，則也可以擷取來自工作 <xref:System.Threading.Tasks.Task.Exception%2A> 屬性的 <xref:System.AggregateException> 例外狀況，如下例所示。 有關詳細資訊,請參閱本主題[中的 Task.exception 屬性部分的觀察異常](#observing-exceptions-by-using-the-taskexception-property)。
 
 [!code-csharp[TPL_Exceptions#29](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/handling22.cs#29)]
 [!code-vb[TPL_Exceptions#29](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/handling22.vb#29)]
@@ -89,7 +89,14 @@ ms.locfileid: "73134256"
 [!code-csharp[TPL_Exceptions#27](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_exceptions/cs/exceptionprop21.cs#27)]
 [!code-vb[TPL_Exceptions#27](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_exceptions/vb/exceptionprop21.vb#27)]
 
-在實際應用中，接續委派會記錄例外狀況的詳細資訊，並可能產生從例外狀況復原的新工作。
+在有意義的應用程式中,延續委託可以記錄有關異常的詳細資訊,並可能生成新任務以從異常中恢復。 如果任務出現故障,以下表達式將引發異常:
+
+- `await task`
+- `task.Wait()`
+- `task.Result`
+- `task.GetAwaiter().GetResult()`
+
+使用[`try-catch`](../../csharp/language-reference/keywords/try-catch.md)語句來處理和觀察引發的異常。 或者,通過訪問屬性來<xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType>觀察異常。
 
 ## <a name="unobservedtaskexception-event"></a>UnobservedTaskException 事件
 

@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 ms.date: 02/27/2020
-ms.openlocfilehash: f49f0cda4424a4cc54ab7d4d4c6f729919dc7e60
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: c5cc9adf1d77b0ab03a61cc315d42c2f38362ad9
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463424"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021782"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -120,7 +120,7 @@ dotnet restore -h|--help
 
 - **`--no-cache`**
 
-  指定不要快取套件和 HTTP 要求。
+  指定不快取 HTTP 請求。
 
 - **`--no-dependencies`**
 

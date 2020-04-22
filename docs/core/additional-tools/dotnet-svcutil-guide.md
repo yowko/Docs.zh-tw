@@ -3,25 +3,25 @@ title: WCF svcutil 工具概觀
 description: Microsoft WCF dotnet-svcutil 工具的概觀，此工具可新增 .NET Core 和 ASP.NET Core 專案功能，與 .NET Framework 專案的 WCF svcutil 工具類似。
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: 0607c73935f319f2cc0d8d9f92d96a4c71c54edf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f500c9355112183a135c2b639807c7cd62fbbfc
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920941"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021261"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>適用於 .NET Core 的 WCF dotnet-svcutil 工具
 
-Windows 通信基礎 （WCF） **dotnet-svcutil**工具是一個 .NET 工具，用於從網路位置或 WSDL 檔案中的 Web 服務檢索中繼資料，並生成包含訪問 Web 服務操作的用戶端代理方法的 WCF 類。
+Windows 通訊基礎 (WCF) **dotnet-svcutil**工具是一個 .NET 工具,用於從網路位置或 WSDL 檔中的 Web 服務檢索元數據,並生成包含存取 Web 服務操作的用戶端代理方法的 WCF 類。
 
 類似適用於 .NET Framework 專案的 [**Service Model Metadata - svcutil**](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 工具，**dotnet-svcutil** 是一種命令列工具，可用來產生與 .NET Core 和 .NET Standard 專案相容的 Web 服務參考。
 
-**dotnet-svcutil**工具是[**WCF Web 服務參考**](wcf-web-service-reference-guide.md)視覺化工作室連接服務提供者的替代方案，該服務提供者首次附帶了 Visual Studio 2017 版本 15.5。 作為 .NET 工具**的 dotnet-svcutil**工具在 Linux、macOS 和 Windows 上提供跨平臺版本。
+**dotnet-svcutil**工具是[**WCF Web 服務參考**](wcf-web-service-reference-guide.md)可視化工作室連接服務提供者的替代方案,該服務提供者首次附帶了 Visual Studio 2017 版本 15.5。 作為 .NET 工具**的 dotnet-svcutil**工具在 Linux、macOS 和 Windows 上提供跨平臺版本。
 
 > [!IMPORTANT]
 > 您只應該參考來自信任來源的服務。 新增不信任來源的參考可能會危及安全性。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 <!-- markdownlint-disable MD025 -->
 
@@ -61,13 +61,13 @@ public interface ISayHello
     cd HelloSvcutil
     ```
 
-2. 使用以下命令在該目錄中創建新的[`dotnet new`](../tools/dotnet-new.md)C# Web 專案：
+2. 使用以下指令在該目錄中建立新的[`dotnet new`](../tools/dotnet-new.md)C# Web 專案:
 
     ```dotnetcli
     dotnet new web
     ```
 
-3. 將[`dotnet-svcutil`NuGet 包](https://nuget.org/packages/dotnet-svcutil)安裝為 CLI 工具： <!-- markdownlint-disable MD023 -->
+3. 將[`dotnet-svcutil`NuGet 套件](https://nuget.org/packages/dotnet-svcutil)安裝為 CLI 工具: <!-- markdownlint-disable MD023 -->
     # <a name="dotnet-svcutil-2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
     ```dotnetcli
@@ -75,7 +75,7 @@ public interface ISayHello
     ```
 
     # <a name="dotnet-svcutil-1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
-    使用以下`HelloSvcutil.csproj`代碼在編輯器中打開專案檔案，`Project`編輯元素，並將[`dotnet-svcutil`NuGet 包](https://nuget.org/packages/dotnet-svcutil)添加為 CLI 工具參考：
+    使用以下`HelloSvcutil.csproj`代碼在編輯器中開啟項目檔`Project`, 編輯元素,並將[`dotnet-svcutil`NuGet 套件](https://nuget.org/packages/dotnet-svcutil)加入為 CLI 工具參考:
 
     ```xml
     <ItemGroup>
@@ -111,7 +111,7 @@ public interface ISayHello
 
 ## <a name="using-the-service-reference"></a>使用服務參考
 
-1. 使用命令還原 WCF[`dotnet restore`](../tools/dotnet-restore.md)包，如下所示：
+1. 使用命令還原 WCF[`dotnet restore`](../tools/dotnet-restore.md)包,如下所示:
 
     ```dotnetcli
     dotnet restore
@@ -128,7 +128,7 @@ public interface ISayHello
 4. 編輯 `Configure` 方法以叫用 Web 服務。 若要這樣做，請建立繼承自 `ClientBase` 的類別執行個體，然後在用戶端物件呼叫方法：
 
     ```csharp
-    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         if (env.IsDevelopment())
         {
@@ -145,7 +145,7 @@ public interface ISayHello
 
     ```
 
-5. 使用命令運行應用程式，[`dotnet run`](../tools/dotnet-run.md)如下所示：
+5. 使用命令執行應用程式,[`dotnet run`](../tools/dotnet-run.md)如下所示:
 
     ```dotnetcli
     dotnet run

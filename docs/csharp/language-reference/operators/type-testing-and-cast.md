@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 5a4f1d4c0c2ddd0d3967e15090d8f8c1ac42f83e
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: bc293c359af5744eebc63c0d0f94b4cebe3d450a
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121409"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021246"
 ---
 # <a name="type-testing-operators-and-cast-expression-c-reference"></a>類型測試運算子和強制轉換表示式(C# 引用)
 
@@ -123,7 +123,7 @@ E is T ? (T)(E) : (T)null
 
 [!code-csharp-interactive[typeof operator](snippets/TypeTestingAndConversionOperators.cs#TypeOf)]
 
-您也可以搭配使用 `typeof` 運算子和未繫結的泛型型別。 未繫結泛型型別的名稱必須包含適當數目的逗號，也就是比型別參數數目少一。 下列範例顯示搭配使用 `typeof` 運算子和未繫結泛型型別的用法：
+您還可以使用運算子`typeof`與未綁定的泛型類型。 未繫結泛型型別的名稱必須包含適當數目的逗號，也就是比型別參數數目少一。 下列範例顯示搭配使用 `typeof` 運算子和未繫結泛型型別的用法：
 
 [!code-csharp-interactive[typeof unbound generic](snippets/TypeTestingAndConversionOperators.cs#TypeOfUnboundGeneric)]
 

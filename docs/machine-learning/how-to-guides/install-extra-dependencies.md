@@ -5,12 +5,12 @@ ms.date: 04/02/2020
 author: natke
 ms.author: nakersha
 ms.custom: how-to
-ms.openlocfilehash: 0b870542706c065295d48205b7780e568e267ab6
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: c427439d0950bfea38f1d6d11af84216e0f1965f
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888299"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021853"
 ---
 # <a name="install-extra-mlnet-dependencies"></a>安裝額外的 ML.NET 依賴項目
 
@@ -87,7 +87,7 @@ dotnet add package Microsoft.ML
 5. 將這裡加入為負載庫路徑:
 
     ```bash
-    sudo ldconfig /opt/intel/compilers_and_libraries_2020.0.166/linux/compiler/lib/intel64_li
+    sudo ldconfig /opt/intel/compilers_and_libraries_2020.0.166/linux/compiler/lib/intel64_lin
     ```
 
 ### <a name="mac"></a>Mac

@@ -2,12 +2,12 @@
 title: C# 保留屬性:條件屬性、過時屬性使用
 ms.date: 04/09/2020
 description: 這些屬性由編譯器解釋,以影響編譯器生成的代碼
-ms.openlocfilehash: ca3b76387de2a57380d6eb0848991d979a558662
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: c6d697dd08233ffc88900949998047137ee170a9
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389867"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021772"
 ---
 # <a name="reserved-attributes-conditionalattribute-obsoleteattribute-attributeusageattribute"></a>保留屬性:條件屬性、過時屬性、屬性使用屬性
 
@@ -19,25 +19,25 @@ ms.locfileid: "81389867"
 
 在下面的範例中,`Conditional`應用於啟用或關閉程式的診斷資訊顯示的方法:
 
-::::::code language="csharp" source="snippets/trace.cs" interactive="try-dotnet" :::
+:::code language="csharp" source="snippets/trace.cs" interactive="try-dotnet" :::
 
 如果未定義`TRACE_ON`識別碼,則不顯示追蹤輸出。 在互動式視窗中自行探索。
 
 該`Conditional`屬性通常與識別碼一起`DEBUG`使用 ,用於為除錯產生啟用追蹤和紀錄記錄功能,但在發表版本中不使用,如以下範例所示:
 
-::::::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditional" :::
+:::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditional" :::
 
 當調用標記為條件的方法時,指定的預處理符號的存在或不存在將確定調用是包含還是省略。 如果定義符號，則會包括呼叫；否則會省略呼叫。 條件方法必須是類或結構聲明中的方法,並且必須具有`void`返回類型。 與`Conditional`將方法封閉在塊`#if…#endif`內 相比,使用更簡潔、更優雅、不易出錯。
 
 如果方法有多個`Conditional`屬性,則如果定義了一個或多個條件符號(符號通過使用 OR 運算符以邏輯方式連結在一起),則包括對該方法的調用。 在下面的示例中,任一或`A``B`結果為方法調用:
 
-::::::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetMultipleConditions" :::
+:::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetMultipleConditions" :::
 
 ### <a name="using-conditional-with-attribute-classes"></a>使用`Conditional`屬性類別
 
 `Conditional` 屬性也可以套用至屬性類別定義。 在下面的示例中,自定義屬性`Documentation`將僅向元數據添加資訊(`DEBUG`如果已定義)。
 
-::::::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditionalConditionalAttribute" :::
+:::code language="csharp" source="snippets/ConditionalExamples.cs" id="SnippetConditionalConditionalAttribute" :::
 
 ## <a name="obsolete-attribute"></a>`Obsolete` 屬性
 
@@ -45,7 +45,7 @@ ms.locfileid: "81389867"
 
 在下面的範例中,`Obsolete`該屬性套用`A`於類別與`B.OldMethod`方法 。 因為套用至 `B.OldMethod` 的屬性建構函式的第二個引數設為 `true`，所以這個方法會造成編譯器錯誤，而使用 `A` 類別則只會產生警告。 不過，呼叫 `B.NewMethod` 不會產生任何警告或錯誤。 例如，當您將它與先前的定義搭配使用時，下列程式碼會產生兩個警告和一個錯誤︰
 
-::::::code language="csharp" source="snippets/ObsoleteExample.cs" interactive="try-dotnet" :::
+:::code language="csharp" source="snippets/ObsoleteExample.cs" interactive="try-dotnet" :::
 
 作為屬性建構函數的第一個參數提供的字串將顯示為警告或錯誤的一部分。 會產生 `A` 類別的兩個警告︰一個用於宣告類別參考，一個則用於類別建構函式。 該`Obsolete`屬性無需參數即可使用,但建議說明使用什麼。
 

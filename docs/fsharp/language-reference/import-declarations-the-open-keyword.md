@@ -1,20 +1,20 @@
 ---
-title: 匯入宣告：Open 關鍵字
-description: 瞭解匯F#入宣告, 以及它們如何指定模組或命名空間, 而不需使用完整名稱, 即可參考其元素。
+title: 匯入宣告：open 關鍵字
+description: 瞭解 F# 匯入聲明及其如何指定模組或命名空間,這些模組或命名空間的元素無需使用完全限定的名稱即可引用。
 ms.date: 04/04/2019
-ms.openlocfilehash: 816bac551692c3397290f64c6267ee22e4ce90fb
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0baef27c7dc3181b9da0defb1c793fec04269c09
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630570"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021539"
 ---
 # <a name="import-declarations-the-open-keyword"></a>匯入宣告：`open` 關鍵字
 
 > [!NOTE]
 > 本文中的 API 參考連結將帶您前往 MSDN。  docs.microsoft.com API 參考不完整。
 
-匯*入*宣告會指定模組或命名空間, 而不需使用完整名稱, 即可參考其元素。
+*匯入聲明*指定一個模組或命名空間,這些模組或命名空間的元素無需使用完全限定的名稱即可引用。
 
 ## <a name="syntax"></a>語法
 
@@ -24,19 +24,19 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>備註
 
-每次使用完整的命名空間或模組路徑來參考程式碼, 可以建立難以撰寫、讀取和維護的程式碼。 相反地, 您可以對`open`常用的模組和命名空間使用關鍵字, 如此一來, 當您參考該模組或命名空間的成員時, 就可以使用名稱的簡短形式, 而不是完整名稱。 這個關鍵字類似于中的`using`關鍵字C#、 `using namespace` Visual C++中的和`Imports` Visual Basic。
+每次使用完全限定的命名空間或模組路徑引用代碼可以創建難以編寫、讀取和維護的代碼。 相反,`open`您可以將關鍵字用於常用的模組和命名空間,以便在引用該模組或命名空間的成員時,可以使用名稱的簡短形式而不是完全限定的名稱。 此關鍵字類似於 C#`using`中的關鍵字、Visual `using namespace` C++ 和`Imports`Visual Basic 中的關鍵字。
 
-提供的模組或命名空間必須位於相同的專案或參考的專案或元件中。 如果不是, 您可以加入專案的參考, 或使用`-reference`命令`-`行選項`-r`(或其縮寫)。 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。
+提供的模組或命名空間必須位於同一專案或引用的專案或程式集中。 如果不是,則可以添加對專案的引用,或使用`-reference`命令行選項(或其縮寫。 `-r` 如需詳細資訊，請參閱[編譯器選項](compiler-options.md)。
 
-匯入宣告會在宣告後面的程式碼中提供名稱, 最多可在封閉式命名空間、模組或檔案的結尾。
+匯入聲明使聲明後面的代碼中的名稱可用,最多到封閉命名空間、模組或檔的結尾。
 
-當您使用多個匯入宣告時, 它們應該會出現在不同的行上。
+使用多個導入聲明時,它們應顯示在單獨的行上。
 
-下列程式碼顯示如何使用`open`關鍵字來簡化程式碼。
+以下代碼顯示了`open`關鍵字用於簡化代碼的使用。
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-當F#一個以上的開啟模組或命名空間中出現相同名稱時, 編譯器不會發出錯誤或警告。 發生歧義時, F#會將喜好設定提供給最近開啟的模組或命名空間。 例如, 在下列`empty` `empty`程式碼中, 即使`Seq.empty`位於`List`和`Seq`模組中, 還是表示。
+當多個打開的模組或命名空間中出現相同名稱時,F# 編譯器不會發出錯誤或警告。 當出現模稜兩可時,F# 優先考慮最近打開的模組或命名空間。 例如,在以下代碼中,`empty``Seq.empty`表示`empty`,即使`List``Seq`位於和模組中也是如此。
 
 ```fsharp
 open List
@@ -44,27 +44,27 @@ open Seq
 printfn "%A" empty
 ```
 
-因此, 當您開啟的模組或命名空間 (例如`List`或`Seq` ) 包含具有相同名稱的成員時, 請務必小心, 改為考慮使用限定名稱。 您應該避免程式碼相依于匯入宣告順序的任何情況。
+因此,在打開模組或命名空間(如`List``Seq`或包含具有相同名稱的成員)時要小心;相反,請考慮使用限定名稱。 應避免代碼依賴於導入聲明的順序的任何情況。
 
-## <a name="namespaces-that-are-open-by-default"></a>預設開啟的命名空間
+## <a name="namespaces-that-are-open-by-default"></a>預設視窗開啟的命名空間
 
-某些命名空間經常在程式碼F#中使用, 因為它們會以隱含方式開啟, 而不需要明確的匯入宣告。 下表顯示預設開啟的命名空間。
+某些命名空間在 F# 代碼中非常頻繁,因此無需顯式導入聲明即可隱式打開。 下表顯示了默認情況下打開的命名空間。
 
 |命名空間|描述|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|包含內F#建類型 (例如`int`和`float`) 的基本類型定義。|
-|`Microsoft.FSharp.Core.Operators`|包含基本的算數運算`+` , 例如和。 `*`|
-|`Microsoft.FSharp.Collections`|包含不可變的集合類別`List` , `Array`例如和。|
-|`Microsoft.FSharp.Control`|包含控制項結構的類型, 例如延遲評估和非同步工作流程。|
-|`Microsoft.FSharp.Text`|包含格式化 IO 的函式, 例如`printf`函數。|
+|`Microsoft.FSharp.Core`|包含內建型態(如`int``float`和) 的基本 F# 類型定義。|
+|`Microsoft.FSharp.Core.Operators`|包含基本算術運算,如`+``*`和 。|
+|`Microsoft.FSharp.Collections`|包含不可變的集合類別,`List`如`Array`與 。|
+|`Microsoft.FSharp.Control`|包含控件構造的類型,如惰性評估和異步工作流。|
+|`Microsoft.FSharp.Text`|包含格式化 IO 的`printf`功能, 如函數。|
 
-## <a name="autoopen-attribute"></a>AutoOpen 屬性
+## <a name="autoopen-attribute"></a>自動開啟屬性
 
-如果您想要`AutoOpen`在參考元件時自動開啟命名空間或模組, 可以將屬性套用至元件。 您也可以將`AutoOpen`屬性套用至模組, 以便在父模組或命名空間開啟時自動開啟該模組。 如需詳細資訊, 請參閱[AutoOpenAttribute 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d)。
+如果要在引用程式集`AutoOpen`時自動打開命名空間或模組,則可以將該屬性應用於程式集。 您還可以將`AutoOpen`該屬性應用於模組,以在打開父模組或命名空間時自動打開該模組。 有關詳細資訊,請參閱[Core.AutoOpenattribute 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d)。
 
-## <a name="requirequalifiedaccess-attribute"></a>RequireQualifiedAccess 屬性
+## <a name="requirequalifiedaccess-attribute"></a>需要限定存取屬性
 
-某些模組、記錄或等位類型可能會指定`RequireQualifiedAccess`屬性。 當您參考這些模組、記錄或等位的元素時, 不論您是否包含匯入宣告, 都必須使用限定名稱。 如果您在定義常用名稱的類型上策略性地使用此屬性, 則有助於避免名稱衝突, 進而讓程式碼更有彈性地進行程式庫中的變更。 如需詳細資訊, 請參閱[RequireQualifiedAccessAttribute 類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D)。
+某些模組、記錄或聯合類型可以指定該`RequireQualifiedAccess`屬性。 引用這些模組、記錄或聯合的元素時,無論是否包含導入聲明,都必須使用限定名稱。 如果在定義常用名稱的類型上戰略性地使用此屬性,則有助於避免名稱衝突,從而使代碼對庫中的更改更具彈性。 有關詳細資訊,請參閱[Core.要求限定 Access 屬性類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D)。
 
 ## <a name="see-also"></a>另請參閱
 

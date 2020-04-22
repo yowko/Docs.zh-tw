@@ -2,12 +2,12 @@
 title: Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 description: 了解 DevOps 工作流程的「外部迴圈」步驟
 ms.date: 02/15/2019
-ms.openlocfilehash: fdda1b6a2deb08ed97867583fcc8048d4dba880c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 44bd73bf88a743e5350e422d3ea000ca075f7383
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988969"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021292"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
 
@@ -31,7 +31,7 @@ ms.locfileid: "80988969"
 
 開發人員所產生的本機映像，只能供他們用來在自己的電腦內進行測試。 這就是為什麼必須從 SCC 程式碼啟用 DevOps 管線。
 
-Azure DevOps Services 和 Team Foundation Server 支援 Git 和 Team Foundation 版本控制。 您可以在兩者之間進行選擇，並用於端對端 Microsoft 體驗。 不過，您也可以在外部存放庫 (例如 GitHub、內部部署 Git 存放庫或 Subversion) 中管理您的程式碼，且仍然能夠與其連線，並取得程式碼作為 DevOps CI 管線的起點。
+Azure DevOps Services 和 Team Foundation Server 支援 Git 和 Team Foundation 版本控制。 您可以在兩者之間進行選擇，並用於端對端 Microsoft 體驗。 但是,您還可以在外部存儲庫(如 GitHub、本地 Git 儲存庫或 Subversion)中管理代碼,並且仍然能夠連接到它,並將代碼作為 DevOps CI 管道的起點。
 
 ## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>第三步:使用 Azure DevOps 服務和 Docker 建構、CI、整合和測試
 
@@ -184,7 +184,7 @@ Azure DevOps Services 範本可讓您產生包含特定登錄映像摘要的組�
 
 **圖5-9**. 將分散式應用程式部署到 Container Service
 
-一開始，當部署到特定叢集或協調器時，傳統上會使用每個協調器的特定部署指令碼和機制 (亦即，Kubernetes 與 Service Fabric 會有不同的部署機制)，而不是更簡單且便於使用的 `docker-compose` 工具 (以 `docker-compose.yml` 定義檔為基礎)。 但是,由於圖 5-10 所示的 Azure DevOps 服務 Docker 部署`docker-compose.yml`任務,現在還可以僅使用熟悉的 檔案部署到受支援的協調器,因為該工具為您`docker-compose.yml`執行該「翻譯」(從檔案 到協調器所需的格式)。
+一開始，當部署到特定叢集或協調器時，傳統上會使用每個協調器的特定部署指令碼和機制 (亦即，Kubernetes 與 Service Fabric 會有不同的部署機制)，而不是更簡單且便於使用的 `docker-compose` 工具 (以 `docker-compose.yml` 定義檔為基礎)。 但是,由於圖 5-10 所示的 Azure DevOps 服務 Docker 部署`docker-compose.yml`任務,現在還可以僅使用熟悉的 檔案部署到受支援的協調器,因為該工具會為您`docker-compose.yml`執行該「翻譯」(從檔案 到協調器所需的格式)。
 
 ![顯示「部署到庫伯奈斯」任務的螢幕截圖。](./media/docker-application-outer-loop-devops-workflow/add-deploy-to-kubernetes-task.png)
 

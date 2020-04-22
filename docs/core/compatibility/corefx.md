@@ -1,40 +1,40 @@
 ---
-title: 基類庫突破更改
-description: 列出 .NET CoreFx（基類庫）中的重大更改。
+title: 基類庫突破變更
+description: 列出核心 .NET 庫中的重大變化。
 ms.date: 09/20/2019
-ms.openlocfilehash: 56a3cf4f4c00a79752d5a98bb086bb9f8c0614b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8cf90ca2bc8736101c1cb8d327a93d100148937b
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147571"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021837"
 ---
-# <a name="corefx-breaking-changes"></a>酷睿突破更改
+# <a name="core-net-libraries-breaking-changes"></a>核心 .NET 函式庫已變更
 
-CoreFx 提供 .NET Core 使用的基元和其他常規類型。
+核心 .NET 函式庫提供 .NET Core 使用的基元和其他常規類型。
 
-此頁面將記錄以下重大更改：
+此頁面將記錄以下變更:
 
 | 重大變更 | 介紹的版本 |
 | - | :-: |
-| [報表版本的 API 現在報告產品，而不是檔版本](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
-| [自訂編碼器回退緩衝區實例不能遞迴](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
-| [浮點格式設置和分析行為更改](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
+| [報表版本的 API 現在報告產品,而不是檔案版本](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
+| [自訂編碼器回退緩衝區實體不能遞迴](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
+| [浮點格式設定與分析行為變更](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
 | [浮點分析操作不再失敗或引發溢出異常](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
-| [不正確非同步狀態異常移動到另一個程式集](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
-| [NET Core 3.0 在替換格式錯誤的 UTF-8 位元組序列時遵循 Unicode 最佳實踐](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences) | 3.0 |
-| [類型描述提供程式屬性移動到另一個程式集](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
+| [不合法的異步狀態異常移至另一個程式集](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
+| [NET Core 3.0 在取代格式錯誤的 UTF-8 位元組序列時遵循 Unicode 最佳實作](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences) | 3.0 |
+| [類型描述提供程式屬性移至另一個程式集](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
 | [ZipArchiveEntry 不再處理條目大小不一致的存檔](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
 | [JSON 序列化器異常類型從 JsonException 更改為"不支援例外"](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
-| [Utf8JonWriter 中（字串）空語義的更改](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
-| [JsonEncodedText.編碼方法具有額外的JavaScriptEncoder參數](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
-| [JsonFactory轉換器.創建轉換器簽名已更改](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
-| [JsonElement API 更改](#jsonelement-api-changes) | 3.0 |
+| [Utf8JonWriter 中(字串)空語義的更改](#change-in-semantics-of-stringnull-in-utf8jsonwriter) | 3.0 |
+| [JsonEncodedText.編碼方法具有額外的JAVAScriptEncoder參數](#jsonencodedtextencode-methods-have-an-additional-javascriptencoder-argument) | 3.0 |
+| [JsonFactory轉換器.建立轉換器簽名已變更](#jsonfactoryconvertercreateconverter-signature-changed) | 3.0 |
+| [JsonElement API 變更](#jsonelement-api-changes) | 3.0 |
 | [欄位資訊.SetValue 引發靜態、僅 it 欄位的異常](#fieldinfosetvalue-throws-exception-for-static-init-only-fields) | 3.0 |
-| [添加到內置結構類型的私有欄位](#private-fields-added-to-built-in-struct-types) | 2.1 |
-| [使用殼牌執行的預設值更改](#change-in-default-value-of-useshellexecute) | 2.1 |
-| [macOS 上的打開 SSL 版本](#openssl-versions-on-macos) | 2.1 |
-| [檔案系統資訊.屬性引發的未經授權的訪問異常](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
+| [新增到內建結構型態的私有欄位](#private-fields-added-to-built-in-struct-types) | 2.1 |
+| [使用殼牌執行的預設值變更](#change-in-default-value-of-useshellexecute) | 2.1 |
+| [macOS 上的開啟 SSL 版本](#openssl-versions-on-macos) | 2.1 |
+| [檔案系統資訊.屬性引發的未經授權的存取異常](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 

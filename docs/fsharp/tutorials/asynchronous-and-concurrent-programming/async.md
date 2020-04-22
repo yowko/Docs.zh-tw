@@ -2,12 +2,12 @@
 title: 非同步編程
 description: 瞭解 F# 如何基於從核心函數程式設計概念派生的語言級程式設計模型為非同步提供乾淨的支援。
 ms.date: 12/17/2018
-ms.openlocfilehash: 9b2e3057c126d84474c21fde653da5bbee32938a
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0a7d400c9778e30d6b25798239f12b7b2b0e3d82
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608032"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021516"
 ---
 # <a name="async-programming-in-f"></a>F 中的非同步編程\#
 
@@ -16,7 +16,7 @@ ms.locfileid: "81608032"
 - 顯示一個伺服器程序,該伺服器程序可以服務大量併發傳入請求,同時最小化請求處理時佔用的系統資源,等待來自該行程外部的系統或服務的輸入
 - 維護回應靈敏的 UI 或主線程,同時推進後台工作
 
-儘管後台工作通常涉及多個線程的利用,但單獨考慮非同步和多線程的概念非常重要。 事實上,它們是單獨的問題,一個並不意味著另一個。 本文中介紹的內容將更詳細地介紹這一點。
+儘管後台工作通常涉及多個線程的利用,但單獨考慮非同步和多線程的概念非常重要。 事實上,它們是單獨的問題,一個並不意味著另一個。 本文更詳細地介紹不同的概念。
 
 ## <a name="asynchrony-defined"></a>定義非同步
 
@@ -26,7 +26,7 @@ ms.locfileid: "81608032"
 - 並行性;當多個計算或單個計算的幾個部分完全同時運行時。
 - 異步;當一個或多個計算可以獨立於主程式流執行時。
 
-這三個概念都是正交概念,但很容易組合,尤其是當它們一起使用時。 例如,您可能需要並行執行多個非同步計算。 這並不意味著並行性或異步性相互暗示。
+這三個概念都是正交概念,但很容易組合,尤其是當它們一起使用時。 例如,您可能需要並行執行多個非同步計算。 這種關係並不意味著並行性或異步性相互暗示。
 
 如果考慮「非同步」一詞的詞源,則涉及兩個部分:
 
@@ -35,7 +35,7 @@ ms.locfileid: "81608032"
 
 將這兩個術語放在一起時,您將看到"非同步"表示"不是同時" 就這麼簡單！ 這個定義中沒有併發性或並行性的含義。 在實踐中也是如此。
 
-實際上,F# 中的非同步計算計畫獨立於主程式流執行。 這並不意味著併發性或並行性,也不意味著計算總是在後台發生。 事實上,非同步計算甚至可以同步執行,具體取決於計算的性質和計算執行的環境。
+實際上,F# 中的非同步計算計畫獨立於主程式流執行。 這種獨立執行並不意味著併發性或並行性,也不表示計算總是在後台發生。 事實上,非同步計算甚至可以同步執行,具體取決於計算的性質和計算執行的環境。
 
 您應該有的主要要點是非同步計算獨立於主程式流。 儘管對異步計算執行的時間或方式幾乎沒有保證,但有一些方法來編排和調度它們。 本文的其餘部分將探討 F# 異步的核心概念以及如何使用 F# 中內置的類型、函數和運算式。
 
@@ -106,7 +106,7 @@ let main argv =
 1. 將命令列參數轉換為`Async<unit>``Array.map`具有的計算。
 2. 創建一`Async<'T[]>`個計劃並在運行時並行`printTotalFileBytes`運行計算。
 3. 建立將`Async<unit>`執行並行計算並忽略此結果的
-4. 顯式運行最後一個計算`Async.RunSynchronously`與和 塊,直到它完成。
+4. 顯式運行最後一個計算`Async.RunSynchronously`,直到完成。
 
 執行此程式時,`printTotalFileBytes`每個命令列參數並行執行。 由於非同步計算獨立於程式流執行,因此它們無法按順序列印其資訊並完成執行。 計算將並行計劃,但不能保證其執行順序。
 
@@ -167,7 +167,7 @@ computation: Async<'T> * timeout: ?int -> Async<Async<'T>>
 簽章：
 
 ```fsharp
-computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
 使用時機：
@@ -185,7 +185,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 簽章：
 
 ```fsharp
-computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
+computation: Async<'T> * taskCreationOptions: ?TaskCreationOptions * cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
 使用時機：
@@ -203,7 +203,7 @@ computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellatio
 簽章：
 
 ```fsharp
-computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
+computations: seq<Async<'T>> * ?maxDegreesOfParallelism: int -> Async<'T[]>
 ```
 
 使用時機：
@@ -214,7 +214,7 @@ computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
 需要注意的:
 
 - 只有在所有計算完成後,才能訪問生成的值陣列。
-- 計算將運行,但它們最終都會得到計劃。 這意味著您不能依賴他們的執行順序。
+- 計算將在計劃結束時運行。 此行為意味著您不能依賴他們的執行順序。
 
 ### <a name="asyncsequential"></a>非同步。順序
 
@@ -242,7 +242,7 @@ computations: seq<Async<'T>> -> Async<'T[]>
 簽章：
 
 ```fsharp
-task: Task<'T>  -> Async<'T>
+task: Task<'T> -> Async<'T>
 ```
 
 使用時機：
@@ -251,7 +251,7 @@ task: Task<'T>  -> Async<'T>
 
 需要注意的:
 
-- 異常按照任務並行庫<xref:System.AggregateException>的約定進行包裝,這與 F# 異步通常顯示異常的方式不同。
+- 異常按照任務並行庫<xref:System.AggregateException>的約定進行包裝,並且此行為與 F# 異步通常顯示異常的方式不同。
 
 ### <a name="asynccatch"></a>非同步.捕獲
 
@@ -287,7 +287,7 @@ computation: Async<'T> -> Async<unit>
 
 需要注意的:
 
-- 如果必須使用此,因為您希望使用`Async.Start`或其他`Async<unit>`需要的功能,請考慮丟棄結果是否可以執行。 放棄結果只是為了適合類型簽名通常不應該做。
+- 如果由於希望使用`Async.Ignore``Async.Start`或其他需要`Async<unit>`的功能而必須使用,請考慮丟棄結果是否正常。 為了避免僅丟棄結果以適合類型簽名。
 
 ### <a name="asyncrunsynchronously"></a>非同步同步執行
 
@@ -296,7 +296,7 @@ computation: Async<'T> -> Async<unit>
 簽章：
 
 ```fsharp
-computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
+computation: Async<'T> * timeout: ?int * cancellationToken: ?CancellationToken -> 'T
 ```
 
 使用時機：
@@ -310,12 +310,12 @@ computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -
 
 ### <a name="asyncstart"></a>非同步.開始
 
-線上程池中啟動可非同步計算,計算`unit`傳回 。 不等待結果。 從`Async.Start`開始嵌套計算完全獨立於調用它們的父計算開始。 其存留期不與任何父計算相關聯。 如果取消父計算,則不會取消子計算。
+線上程池中啟動可非同步計算,計算`unit`傳回 。 不等待結果。 開始的`Async.Start`嵌套計算獨立於調用它們的父計算開始。 其存留期不與任何父計算相關聯。 如果取消父計算,則不會取消子計算。
 
 簽章：
 
 ```fsharp
-computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
+computation: Async<unit> * cancellationToken: ?CancellationToken -> unit
 ```
 
 只在:
@@ -328,7 +328,7 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 需要注意的:
 
 - 由開始`Async.Start`計算引發的異常不會傳播到調用方。 調用堆疊將完全解功能。
-- 任何有效的工作(如調用`printfn`)`Async.Start`開始 不會導致在程式執行的主線程上發生效果。
+- 任何開始的工作(如調用`printfn``Async.Start`) 不會導致程式執行的主線程上發生效果。
 
 ## <a name="interoperate-with-net"></a>與 .NET 互通
 
