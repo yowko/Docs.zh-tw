@@ -489,7 +489,7 @@
                     - name: 如何計算 CSV 文字檔案中的資料行值 (LINQ)
                       href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
                 - name: LINQ 和反映
-                  href: programming-guide/concepts/linq/linq-and-reflection.md
+                  href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: 如何使用反映查詢組件的中繼資料 (LINQ)
                   href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: LINQ 和檔案目錄
@@ -1322,7 +1322,7 @@
                   displayName: 'enum, bit flags, bit field'
                 - name: 結構類型
                   href: language-reference/builtin-types/struct.md
-                  displayName: 'struct type, readonly'
+                  displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
                 - name: 可為 Null 的實值型別
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'
