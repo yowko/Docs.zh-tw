@@ -103,5 +103,5 @@ namespace SAServer
 - [COM 資料類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
 - [如何：編輯 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
 - [型別程式庫至組件轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Tlbimp.exe (類型程式庫匯入工具)](../tools/tlbimp-exe-type-library-importer.md)
-- [Tlbexp.exe (類型程式庫匯出工具)](../tools/tlbexp-exe-type-library-exporter.md)
+- [Tlbimp.exe （類型程式庫匯入工具）](../tools/tlbimp-exe-type-library-importer.md)
+- [Tlbexp.exe （類型程式庫匯出工具）](../tools/tlbexp-exe-type-library-exporter.md)

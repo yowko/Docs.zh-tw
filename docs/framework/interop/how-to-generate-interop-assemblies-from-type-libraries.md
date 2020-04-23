@@ -20,7 +20,7 @@ ms.locfileid: "74281795"
   
 ### <a name="to-generate-an-interop-assembly-from-a-type-library"></a>從型別程式庫產生 Interop 組件  
   
-1. 請使用以下命令：  
+1. 使用下列命令：  
   
      **tlbimp** \<*type-library-file*>  
   

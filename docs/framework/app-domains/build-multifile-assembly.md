@@ -95,11 +95,11 @@ ms.locfileid: "74429564"
    vbc /t:module Stringer.vb
    ```
 
-   使用 */t:* 編譯器選項指定 **module** 參數，表示應將檔案編譯成模組，而非編譯成組件。 編譯器會產生一個稱為 Stringer 的模組， *.netmodule*，它可以加入至元件。
+   使用 **/t:** 編譯器選項指定 *module* 參數，表示應將檔案編譯成模組，而非編譯成組件。 編譯器會產生一個稱為 Stringer 的模組， *.netmodule*，它可以加入至元件。
 
 3. 使用必要的編譯器選項來編譯其他所有模組，以便指出程式碼中所參考的其他模組。 這個步驟使用 **/addmodule** 編譯器選項。
 
-   在下列範例中，名為*Client*的程式碼模組具有進入點 `Main` 方法，可參考步驟1中所建立之*Stringer*模組中的方法。
+   在下列範例中，名為*Client*的程式碼模組有一個`Main`進入點方法，它會參考在步驟1中建立的*Stringer*模組中的方法。
 
    ```cpp
    #using "Stringer.netmodule"
@@ -207,13 +207,13 @@ ms.locfileid: "74429564"
 
 5. 使用[組件連結器 (Al.exe)](../tools/al-exe-assembly-linker.md) 來建立輸出檔案，其中含有組件資訊清單。 這個檔案含有所有模組的參考資訊或者是部分組件的資源。
 
-    在命令提示字元中輸入下列命令：
+    在命令提示字元中，輸入下列命令：
 
-    **al** \<*模組名稱*> \<*模組名稱*> … **/main:** \<*方法名稱*>  **/out:** \<*檔案名稱*>  **/target:** \<*組件檔案類型*>
+    **al** \<*模組*> 名稱\<*模組名稱*> .。。 **/main：**\<*方法名稱*> **/out：**\<*檔案名*> **/target：**\<*assembly file type*>
 
-    在這個命令中，「模組名稱」引數會指定組件中包含的所有模組名稱。 **/main:** 選項指定方法名稱，這個名稱是組件的進入點。 **/out:** 選項指定輸出檔案的名稱，其中包含組件中繼資料。 **/Target：** 選項指定元件為主控台應用程式可執行檔（ *.Exe*）、Windows 可執行檔（*win.ini*）或程式庫（ *.lib*）檔案。
+    在這個命令中，「模組名稱」** 引數會指定組件中包含的所有模組名稱。 **/main:** 選項指定方法名稱，這個名稱是組件的進入點。 **/out:** 選項指定輸出檔案的名稱，其中包含組件中繼資料。 **/Target：** 選項指定元件為主控台應用程式可執行檔（*.Exe*）、Windows 可執行檔（*win.ini*）或程式庫（*.lib*）檔案。
 
-    在下列範例中， *al.exe*會建立一個元件，它是名為*myAssembly*的主控台應用程式可執行檔。 應用程式是由兩個稱為 *.netmodule*和*Stringer*的模組所組成，以及名為*myAssembly*的可執行檔，其中僅包含元件中繼資料。 元件的進入點是類別 `MainClientApp`（位於*Client .dll*）中的 `Main` 方法。
+    在下列範例中， *al.exe*會建立一個元件，它是名為*myAssembly*的主控台應用程式可執行檔。 應用程式是由兩個稱為 *.netmodule*和*Stringer*的模組所組成，以及名為*myAssembly*的可執行檔，其中僅包含元件中繼資料。 元件的進入點是類別`Main` `MainClientApp`中的方法，位於*Client .dll*中。
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
@@ -223,7 +223,7 @@ ms.locfileid: "74429564"
 
 ## <a name="see-also"></a>另請參閱
 
-- [建立元件](../../standard/assembly/create.md)
+- [建立組件](../../standard/assembly/create.md)
 - [如何：視圖元件內容](../../standard/assembly/view-contents.md)
-- [執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)
-- [多檔案元件](multifile-assemblies.md)
+- [執行時間如何找出元件](../deployment/how-the-runtime-locates-assemblies.md)
+- [多檔案組件](multifile-assemblies.md)

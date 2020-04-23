@@ -17,15 +17,15 @@ ms.locfileid: "73123478"
 
 撰寫 .NET 類型和從 Unmanaged 程式碼取用該類型，對開發人員來說是不同的活動。 本節描述幾個撰寫與 COM 用戶端交互操作之 Managed 程式碼的祕訣：
 
-- [限定交互操作的 .NET 類型](../../standard/native-interop/qualify-net-types-for-interoperation.md)。
+- [限定交互操作的 .net 類型](../../standard/native-interop/qualify-net-types-for-interoperation.md)。
 
      所有您想要公開給 COM 的 Managed 類型、方法、屬性、欄位和事件，都必須是公用的。 型別必須有公用無參數建構函式，它是可透過 COM 叫用的唯一建構函式。
 
-- [套用 Interop 屬性](../../standard/native-interop/apply-interop-attributes.md)。
+- 套用[interop 屬性](../../standard/native-interop/apply-interop-attributes.md)。
 
      Managed 程式碼中的自訂屬性，可以加強元件的互通性。
 
-- [封裝 COM 的組件](packaging-an-assembly-for-com.md)。
+- [封裝 COM 的元件](packaging-an-assembly-for-com.md)。
 
      COM 開發人員可能會要求您彙總參考及部署組件的相關步驟。
 
@@ -37,7 +37,7 @@ ms.locfileid: "73123478"
 
      組件 (與型別程式庫) 中的類型必須在設計階段登錄。 如果安裝程式不登錄組件，請指示 COM 開發人員使用 Regasm.exe。
 
-2. [參考 COM 的 .NET 類型](how-to-reference-net-types-from-com.md)。
+2. [參考 COM 的 .net 類型](how-to-reference-net-types-from-com.md)。
 
      COM 開發人員可以使用目前所用的相同工具和技術，參考組件中的類型。
 
@@ -49,7 +49,7 @@ ms.locfileid: "73123478"
 
      強式名稱組件可以安裝在全域組件快取，而且需要其發行者的簽章。 沒有強式名稱的組件必須安裝在用戶端的應用程式目錄中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [與 Unmanaged 程式碼互通](index.md)
+- [與非受控程式碼交互操作](index.md)
 - [COM Interop 範例：COM 用戶端與 .NET 伺服器](com-interop-sample-com-client-and-net-server.md)

@@ -23,7 +23,7 @@ COM Interop 同時提供使用來自 Managed 程式碼之 COM 物件的支援和
  下列各節會連結到各個主題，以描述當您可以 (或必須) 提供具有其他類型資訊的封送處理器時，自訂 Interop 包裝函式的程序。  
   
 ## <a name="in-this-section"></a>本節內容  
-[如何：手動創建包裝器](how-to-create-wrappers-manually.md)描述如何在託管原始程式碼中手動創建 COM 包裝器。
+[如何：手動建立包裝](how-to-create-wrappers-manually.md)函式描述如何在 managed 原始程式碼中手動建立 COM 包裝函式。
 
  [如何：將 Managed 程式碼 DCOM 移轉至 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)  
  描述如何將受控的 DCOM 程式碼移轉至 WCF 的最安全解決方案。  

@@ -27,7 +27,7 @@ ms.locfileid: "79180454"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>擷取桌面應用程式中的資源
 
-當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的[從 .resources 檔擷取資源](#from_file)一節中所述。  若要檢索 Windows 8.x 應用商店應用中的資源，請參閱[在 Windows 應用商店應用中創建和檢索資源](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))。  
+當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的[從 .resources 檔擷取資源](#from_file)一節中所述。  若要取出 Windows 8.x 存放區應用程式中的資源，請參閱[在 Windows store 應用程式中建立和抓取資源](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))。  
   
 <a name="from_assembly"></a>
 ## <a name="retrieving-resources-from-assemblies"></a>從組件擷取資源  

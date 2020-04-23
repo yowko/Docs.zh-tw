@@ -26,7 +26,7 @@ ms.locfileid: "73124179"
   
 ### <a name="to-import-a-library"></a>匯入程式庫  
   
-- 在 **#import** 指示詞中指定 **raw_interfaces_only** 選項。 例如:  
+- 在 **#import** 指示詞中指定 **raw_interfaces_only** 選項。 例如：  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -34,16 +34,16 @@ ms.locfileid: "73124179"
   
      -或-  
   
-- 包括 Mscorlib.tlb 的 #import 指示詞。 例如:  
+- 包括 Mscorlib.tlb 的 #import 指示詞。 例如：  
   
     ```cpp  
     #import "mscorlib.tlb"  
     #import "..\LoanLib\LoanLib.tlb"  
     ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)
 - [向 COM 註冊組件](registering-assemblies-with-com.md)
-- [呼叫 .NET 物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)) \(機器翻譯\)
+- [呼叫 .NET 物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
 - [部署供 COM 存取的應用程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

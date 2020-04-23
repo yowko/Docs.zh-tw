@@ -26,7 +26,7 @@ Interop 應用程式通常包含 .NET 用戶端組件、代表各種不同 COM �
   
 - 藉由使用內嵌的 interop 類型：從 .NET Framework 4 開始，您可以指示編譯器將 interop 元件的類型資訊內嵌到可執行檔。 編譯器只會內嵌應用程式使用的類型資訊。 您不必與應用程式一起部署 Interop 組件。 這是建議使用的技巧。  
   
-- 透過部署 Interop 組件：您可以建立 Interop 組件的標準參考。 在此情況下，Interop 組件必須與您的應用程式一起部署。 如果您運用這項技巧，但不使用私用的 COM 元件，請一律參考 COM 元件作者發佈的主要 Interop 組件 (PIA)，這是您想要併入 Managed 程式碼的 COM 元件。 如需製作和使用主要 Interop 組件的詳細資訊，請參閱[主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。  
+- 透過部署 Interop 組件：您可以建立 Interop 組件的標準參考。 在此情況下，Interop 組件必須與您的應用程式一起部署。 如果您運用這項技巧，但不使用私用的 COM 元件，請一律參考 COM 元件作者發佈的主要 Interop 組件 (PIA)，這是您想要併入 Managed 程式碼的 COM 元件。 如需產生和使用主要 Interop 組件的詳細資訊，請參閱[主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。  
   
  如果您使用內嵌的 Interop 類型，部署就會簡單且直接。 您不需要特別做什麼。 這篇文章的其餘部分會說明部署 Interop 組件和您應用程式的狀況。  
   
@@ -41,11 +41,11 @@ Interop 應用程式通常包含 .NET 用戶端組件、代表各種不同 COM �
  與應用程式建立關聯的所有 COM 元件都必須都安裝在 Windows 登錄中。 如果圖中的 Client1.exe 和 Client2.exe 安裝在不同的電腦上，您必須在兩部電腦上都登錄 COM 元件。  
   
 ### <a name="shared-assemblies"></a>共用組件  
- 多個應用程式共用的組件應該安裝在稱為全域組件快取的集中式存放庫中。 .NET 用戶端可以存取相同的 Interop 組件複本，它是簽署並安裝在全域組件快取中。 如需製作和使用主要 Interop 組件的詳細資訊，請參閱[主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。  
+ 多個應用程式共用的組件應該安裝在稱為全域組件快取的集中式存放庫中。 .NET 用戶端可以存取相同的 Interop 組件複本，它是簽署並安裝在全域組件快取中。 如需產生和使用主要 Interop 組件的詳細資訊，請參閱[主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [將 COM 元件公開給 .NET Framework](exposing-com-components.md)
 - [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)
-- [在受控程式碼中使用 COM 類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [在受控程式碼中使用 COM 型別](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [編譯 Interop 專案](compiling-an-interop-project.md)

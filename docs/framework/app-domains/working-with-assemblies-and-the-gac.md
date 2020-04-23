@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), benefits
 - access control lists [.NET Framework]
 ms.assetid: 8a18e5c2-d41d-49ef-abcb-7c27e2469433
-ms.openlocfilehash: 330555f907a5ee2ef9cfc11b0b5659a392c0dec7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7834fbc4d74b44c4bc5204ac451e92cac22e1ef5
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119711"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645424"
 ---
 # <a name="working-with-assemblies-and-the-global-assembly-cache"></a>使用組件和全域組件快取
 
@@ -44,14 +44,14 @@ ms.locfileid: "73119711"
   
  請注意，有些情況下您明確不想要將組件安裝到全域組件快取中。 如果您將構成應用程式的其中一個組件放入全域組件快取中，則可以使用 XCOPY 複製應用程式目錄，以不再複寫或安裝應用程式。 在此情況下，您也必須將組件移至全域組件快取。  
   
-## <a name="in-this-section"></a>本章節內容  
-[操作說明：將組件安裝到全域組件快取](install-assembly-into-gac.md)  
+## <a name="in-this-section"></a>本節內容  
+[如何：將元件安裝到全域組件快取中](install-assembly-into-gac.md)  
 描述將組件安裝到全域組件快取中的方式。  
   
 [操作說明：檢視全域組件快取的內容](how-to-view-the-contents-of-the-gac.md)  
 說明如何使用 [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md) 來檢視全域組件快取的內容。  
   
-[操作說明：從全域組件快取移除組件](how-to-remove-an-assembly-from-the-gac.md)  
+[如何：從全域組件快取移除組件](how-to-remove-an-assembly-from-the-gac.md)  
 說明如何使用 [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md) 來移除全域組件快取中的組件。  
   
 [使用 Serviced 元件和全域組件快取](use-serviced-components-with-the-gac.md)  
@@ -59,17 +59,17 @@ ms.locfileid: "73119711"
   
 ## <a name="related-sections"></a>相關章節  
 
-[建立組件](../../standard/assembly/create.md)  
+[建立元件](../../standard/assembly/create.md)  
 提供建立組件的概觀。  
   
 [全域組件快取](gac.md)  
 描述全域組件快取。  
   
-[操作說明：檢視組件內容](../../standard/assembly/view-contents.md)  
+[如何：檢視組件內容](../../standard/assembly/view-contents.md)  
 說明如何使用 [Ildasm.exe (IL 反組譯工具)](../tools/ildasm-exe-il-disassembler.md) 來檢視組件中的 Microsoft 中繼語言 (MSIL) 資訊。  
   
 [執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)  
 描述 Common Language Runtime 如何找出和載入構成應用程式的組件。  
   
-[使用組件設計程式](../../standard/assembly/program.md)  
+[使用組件設計程式](../../standard/assembly/index.md)  
 描述組件，即 Managed 應用程式的建置組塊。

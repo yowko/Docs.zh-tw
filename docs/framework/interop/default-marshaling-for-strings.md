@@ -232,7 +232,7 @@ End Structure
 
 解決方式為傳遞 <xref:System.Text.StringBuilder> 緩衝區作為引數，而非 <xref:System.String>。 `StringBuilder` 可以為已取值，而且由被呼叫端修改，前提是它不會超過 `StringBuilder` 的容量。 它也可以初始化為固定長度。 例如，如果您初始化 `StringBuilder` 緩衝區為 `N` 的容量，封送處理器會提供 (`N`+1) 個字元大小的緩衝區。 +1 代表 Unmanged 字串具有 null 結束字元，但 `StringBuilder` 沒有。
 
-例如，Windows [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) API 函式 (定義於 *winuser.h*) 要求呼叫端將固定長度字元緩衝區傳遞到函式撰寫視窗文字的位置。 `LpString` 指向大小為 `nMaxCount` 的呼叫端配置緩衝區。 呼叫端必須配置緩衝區，並設定 `nMaxCount` 引數為配置緩衝區的大小。 下列範例顯示在 *winuser.h* 中所定義的 `GetWindowText` 函式宣告。
+例如，Windows [`GetWindowText`](/windows/desktop/api/winuser/nf-winuser-getwindowtextw) API 函式（定義于*winuser*中）要求呼叫端傳遞固定長度的字元緩衝區，函式會將視窗的文字寫入其中。 `LpString` 指向大小為 `nMaxCount` 的呼叫端配置緩衝區。 呼叫端必須配置緩衝區，並設定 `nMaxCount` 引數為配置緩衝區的大小。 下列範例顯示在 *winuser.h* 中所定義的 `GetWindowText` 函式宣告。
 
 ```cpp
 int GetWindowText(
@@ -285,7 +285,7 @@ Public Class Window
 End Class
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [預設的封送處理行為](default-marshaling-behavior.md)
 - [封送處理字串](marshaling-strings.md)

@@ -43,7 +43,7 @@ DLL 函式的身分識別是由下列項目所組成：
   
  如需 Windows API 的完整文件，請參閱 Platform SDK。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 Unmanaged DLL 函式](consuming-unmanaged-dll-functions.md)
 - [指定進入點](specifying-an-entry-point.md)

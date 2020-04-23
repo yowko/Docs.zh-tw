@@ -29,8 +29,8 @@ ms.locfileid: "73119839"
  [!code-csharp[System.AppDomain.Load#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.load/cs/source3.cs#3)]
  [!code-vb[System.AppDomain.Load#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source3.vb#3)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用應用程式定義域設計程式](application-domains.md#programming-with-application-domains)
-- [操作說明：建立應用程式定義域](how-to-create-an-application-domain.md)
+- [如何：建立應用程式定義域](how-to-create-an-application-domain.md)
 - [使用應用程式定義域](use.md)

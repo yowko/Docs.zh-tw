@@ -1,5 +1,5 @@
 ---
-title: 作法：記錄關於服務的資訊
+title: 如何：記錄關於服務的資訊
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,7 +20,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 09/17/2019
 ms.locfileid: "71053612"
 ---
-# <a name="how-to-log-information-about-services"></a>作法：記錄關於服務的資訊
+# <a name="how-to-log-information-about-services"></a>如何：記錄關於服務的資訊
 根據預設，所有的 Windows 服務專案都能與應用程式事件記錄檔互動，並在其中寫入資訊和例外狀況。 您使用 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性來表示在您的應用程式中是否要這項功能。 根據預設，會為您以 Windows 服務專案範本建立任何服務開啟記錄。 您可以使用靜態形式的 <xref:System.Diagnostics.EventLog> 類別將服務資訊寫入記錄檔，而不需要建立 <xref:System.Diagnostics.EventLog> 元件的執行個體或手動註冊來源。  
   
  您的服務安裝程式會自動在專案中註冊每個服務，做為開啟記錄功能時，服務安裝所在電腦上的應用程式記錄檔的有效事件來源。 服務會在每次服務啟動、停止、暫停、繼續、安裝或解除安裝時記錄資訊。 它也會記錄發生的任何失敗。 使用預設行為時，您不需要撰寫任何程式碼，以將項目寫入記錄檔；服務會自動為您處理。  
@@ -46,7 +46,7 @@ ms.locfileid: "71053612"
   
 ### <a name="to-set-up-logging-to-a-custom-log"></a>設定記錄至自訂的記錄檔  
   
-1. 將 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性設定為 `false`。  
+1. 將 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 屬性設為 `false`。  
   
     > [!NOTE]
     > 您必須將 <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> 設為 false 以使用自訂的記錄檔。  

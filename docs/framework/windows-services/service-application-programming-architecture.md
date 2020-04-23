@@ -49,7 +49,7 @@ Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBas
 > [!NOTE]
 > 這些方法表示服務在其存留期間行進的狀態；服務會從某個狀態轉換到下一個狀態。 例如，您絕對不會讓服務在呼叫 <xref:System.ServiceProcess.ServiceBase.OnStart%2A> 之前回應 <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> 命令。  
   
- 還有其他數個感興趣的屬性和方法。 它們包括：  
+ 還有其他數個感興趣的屬性和方法。 其中包括：  
   
 - <xref:System.ServiceProcess.ServiceBase> 類別上的 <xref:System.ServiceProcess.ServiceBase.Run%2A> 方法。 這是服務的主要進入點。 當您使用 Windows 服務範本建立服務時，會將程式碼插入應用程式的 `Main` 方法來執行服務。 此程式碼如下所示：  
   

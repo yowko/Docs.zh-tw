@@ -31,7 +31,7 @@ ms.locfileid: "73126398"
 
 - 類型具有相同的身分識別，如下一節中所述。
 
-- 這兩個類型都適合類型等價，如[標記類型等價的 COM 類型](#marking-com-types-for-type-equivalence)一節中所述。
+- 這兩種類型都符合類型等價的資格，如[標記類型等價的 COM 類型](#marking-com-types-for-type-equivalence)一節中所述。
 
 ### <a name="type-identity"></a>類型身分識別
 
@@ -51,8 +51,8 @@ ms.locfileid: "73126398"
 
 - 讓類型成為 COM 匯入類型。 如果介面具有 <xref:System.Runtime.InteropServices.ComImportAttribute> 屬性，便是 COM 匯入類型。 如果定義介面、結構、列舉或委派所在的組件具有 <xref:System.Runtime.InteropServices.ImportedFromTypeLibAttribute> 屬性，便是 COM 匯入類型。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Type.IsEquivalentTo%2A>
-- [在受控程式碼中使用 COM 類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [在受控程式碼中使用 COM 型別](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)

@@ -30,17 +30,17 @@ ms.locfileid: "73123677"
 
  Visual Studio 的內嵌 interop 類型會在[逐步解說：從 Visual Studio 中的 Managed 元件內嵌類型](../../standard/assembly/embed-types-visual-studio.md)中示範。
 
- 若要使用命令列編譯器來參考 interop 元件，並在可執行檔中內嵌類型資訊，請使用[-C# Link （編譯器選項）](../../csharp/language-reference/compiler-options/link-compiler-option.md)或[-link （Visual Basic）](../../visual-basic/reference/command-line-compiler/link.md)編譯器參數，並指定 interop 元件的名稱。
+ 若要使用命令列編譯器來參考 interop 元件，並在可執行檔中內嵌類型資訊，請使用[-link （c # 編譯器選項）](../../csharp/language-reference/compiler-options/link-compiler-option.md)或[-link （Visual Basic）](../../visual-basic/reference/command-line-compiler/link.md)編譯器參數，並指定 interop 元件的名稱。
 
 > [!NOTE]
 > Visual C++ 應用程式無法內嵌類型資訊，但可以與執行的應用程式或增益集交互操作。
 
  若要在部署包含主要 Interop 組件的應用程式時進行編譯，請使用 **/reference** 編譯器參數，並指定 Interop 組件的名稱。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [將 COM 元件公開給 .NET Framework](exposing-com-components.md)
 - [語言獨立性以及與語言無關的元件](../../standard/language-independence-and-language-independent-components.md)
-- [在受控程式碼中使用 COM 類型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
+- [在受控程式碼中使用 COM 型別](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別](../../standard/assembly/embed-types-visual-studio.md)
 - [匯入類型程式庫做為組件](importing-a-type-library-as-an-assembly.md)

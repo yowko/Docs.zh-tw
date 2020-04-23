@@ -36,14 +36,14 @@ Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執
   
  您會以 Microsoft Visual Studio 專案來建立服務，在其中定義程式碼來控制可以傳送到服務的命令，以及在收到命令時應該採取的動作。 可傳送到服務的命令包括啟動、暫停、繼續和停止服務；您也可以執行自訂命令。  
   
- 當您建立和建置應用程式之後，可執行命令列公用程式 InstallUtil.exe，並傳入服務可執行檔的路徑來進行安裝。 您接著可以使用**服務控制管理員**來啟動、停止、暫停、繼續及設定服務。 您也可以在 [伺服器總管] 的 [服務] 節點中完成這其中許多相同的工作，或是使用 <xref:System.ServiceProcess.ServiceController> 類別來完成。  
+ 當您建立和建置應用程式之後，可執行命令列公用程式 InstallUtil.exe，並傳入服務可執行檔的路徑來進行安裝。 您接著可以使用**服務控制管理員**來啟動、停止、暫停、繼續及設定服務。 您也可以在 [伺服器總管]**** 的 [服務]**** 節點中完成這其中許多相同的工作，或是使用 <xref:System.ServiceProcess.ServiceController> 類別來完成。  
   
-## <a name="service-applications-vs-other-visual-studio-applications"></a>服務應用程式相較於其他 Visual Studio 應用程式  
+## <a name="service-applications-vs-other-visual-studio-applications"></a>服務應用程式與其他 Visual Studio 應用程式  
  服務應用程式的運作在某些方面有別於許多其他專案類型：  
   
 - 服務應用程式專案所建立的已編譯可執行檔必須先安裝在伺服器上，然後專案才能正常地運作。 您無法按 F5 鍵或 F11 鍵來偵錯或執行服務應用程式；您無法立即執行服務或逐步執行其程式碼。 反之，您必須安裝並啟動服務，然後將偵錯工具附加到服務的處理序。 如需詳細資訊，請參閱[如何：偵錯 Windows 服務應用程式](how-to-debug-windows-service-applications.md)。  
   
-- 不同於某些類型的專案，您必須為服務應用程式建立安裝元件。 安裝元件會在伺服器上安裝並註冊服務，以及使用 Windows **服務控制管理員**來建立服務項目。 如需詳細資訊，請參閱[如何：將安裝程式新增至服務應用程式](how-to-add-installers-to-your-service-application.md)。  
+- 不同於某些類型的專案，您必須為服務應用程式建立安裝元件。 安裝元件會在伺服器上安裝並註冊服務，以及使用 Windows **服務控制管理員**來建立服務項目。 如需詳細資訊，請參閱[如何：將安裝程式加入服務應用程式](how-to-add-installers-to-your-service-application.md)。  
   
 - 服務應用程式的 `Main` 方法必須針對專案所包含的服務發出 Run 命令。 `Run` 方法會將服務載入到適當伺服器上的**服務控制管理員**。 如果您使用 **Windows 服務**專案範本，即會自動撰寫這個方法。 請注意，載入服務與啟動服務不同。 如需詳細資訊，請參閱下方的「服務存留期」。  
   
@@ -78,7 +78,7 @@ Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執
   
 - 服務必須建立於 **Windows 服務**應用程式專案或其他已啟用 .NET Framework 的專案中，以便在建置時建立 .exe 檔並繼承自 <xref:System.ServiceProcess.ServiceBase> 類別。  
   
-- 包含 Windows 服務的專案必須具備專案及其服務的安裝元件。 這可輕鬆地從 [屬性] 視窗來完成。 如需詳細資訊，請參閱[如何：將安裝程式新增至服務應用程式](how-to-add-installers-to-your-service-application.md)。  
+- 包含 Windows 服務的專案必須具備專案及其服務的安裝元件。 這可輕鬆地從 [屬性]**** 視窗來完成。 如需詳細資訊，請參閱[如何：將安裝程式加入服務應用程式](how-to-add-installers-to-your-service-application.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -87,6 +87,6 @@ Microsoft Windows 服務 (以前稱為 NT 服務) 讓您能夠建立長時間執
 - [如何：建立 Windows 服務](how-to-create-windows-services.md)
 - [如何：安裝和解除安裝服務](how-to-install-and-uninstall-services.md)
 - [如何：啟動服務](how-to-start-services.md)
-- [如何：偵錯 Windows 服務應用程式](how-to-debug-windows-service-applications.md)
+- [如何： Debug Windows 服務應用程式](how-to-debug-windows-service-applications.md)
 - [逐步解說：在元件設計工具中建立 Windows 服務應用程式](walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
-- [如何：將安裝程式新增至服務應用程式](how-to-add-installers-to-your-service-application.md)
+- [如何：加入 Installer 至服務應用程式](how-to-add-installers-to-your-service-application.md)

@@ -301,7 +301,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- 以下是此服務的實現。 此實作會維護單一通道處理站來建立工作階段物件。  呼叫 `GetInstanceAddress` 時，它會建立通道，並建立指向與這個通道關聯之遠端位址的 <xref:System.ServiceModel.EndpointAddress10> 物件。   <xref:System.ServiceModel.EndpointAddress10> 是能夠以傳值方式傳回至用戶端的資料類型。
+ 以下是此服務的執行。 此實作會維護單一通道處理站來建立工作階段物件。  呼叫 `GetInstanceAddress` 時，它會建立通道，並建立指向與這個通道關聯之遠端位址的 <xref:System.ServiceModel.EndpointAddress10> 物件。   <xref:System.ServiceModel.EndpointAddress10> 是能夠以傳值方式傳回至用戶端的資料類型。
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -328,7 +328,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
 2. 在 `<services>` 區段中，宣告處理站和工作階段物件的服務端點。  這可讓用戶端與服務端點進行通訊、 取得 <xref:System.ServiceModel.EndpointAddress10> 並建立工作階段通道。  
   
- 以下是具有以下設置的示例設定檔：  
+ 以下是具有這些設定的範例設定檔：  
   
 ```xml  
 <configuration>  

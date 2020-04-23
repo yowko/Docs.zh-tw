@@ -57,5 +57,5 @@ ms.locfileid: "73457963"
 
 ## <a name="related-sections"></a>相關章節
 
-[COM 包裝器](../../standard/native-interop/com-wrappers.md)  
+[COM 包裝函式](../../standard/native-interop/com-wrappers.md)  
 描述由 COM Interop 所提供的包裝函式。

@@ -1,6 +1,6 @@
 ---
 title: 樣式及範本
-description: 瞭解 .NET Core 的 Windows 演示基礎 (WPF) 中的 XAML 資源。 瞭解與樣式和主題相關的 XAML 資源類型。
+description: 瞭解適用于 .NET Core 的 Windows Presentation Foundation （WPF）中的 XAML 資源。 瞭解與樣式和主題相關的 XAML 資源類型。
 author: thraka
 ms.author: adegeo
 ms.date: 09/09/2019
@@ -14,57 +14,57 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "82071882"
 ---
-# <a name="styles-and-templates-in-wpf"></a>WPF 中的樣式和樣本
+# <a name="styles-and-templates-in-wpf"></a>WPF 中的樣式和範本
 
-Windows 示範基礎 (WPF) 樣式和範本化是指一組功能,這些功能使開發人員和設計人員能夠為其產品創建視覺上引人注目的效果和一致的外觀。 自定義應用的外觀時,您需要一個強大的樣式和範本模型,以便維護和共用應用內部和應用程式之間的外觀。 WPF 提供該模型。
+Windows Presentation Foundation （WPF）樣式設定和範本化指的是一組功能，可讓開發人員和設計人員建立視覺上引人注目的效果，並以一致的方式呈現其產品的外觀。 自訂應用程式的外觀時，您會想要有強大的樣式設定和範本化模型，以便在應用程式內和之間進行外觀的維護和共用。 WPF 提供該模型。
 
-WPF 樣式模型的另一個功能是表示和邏輯的分離。 設計人員可以同時使用 XAML 處理應用的外觀,而開發人員則使用 C# 或 Visual Basic 處理程式設計邏輯。
+WPF 樣式模型的另一項功能是展示和邏輯的分隔。 設計工具只會在開發人員使用 c # 或 Visual Basic 處理常式設計邏輯時，只使用 XAML 來處理應用程式的外觀。
 
-此概述側重於應用程式的樣式和範本化方面,不討論任何數據綁定概念。 如需有關資料繫結的資訊，請參閱[資料繫結概觀](../data/data-binding-overview.md)。
+此總覽著重于應用程式的樣式設定和範本化方面，並不會討論任何資料系結概念。 如需有關資料繫結的資訊，請參閱[資料繫結概觀](../data/data-binding-overview.md)。
 
-瞭解資源非常重要,這些資源使樣式和範本能夠重複使用。 如需有關資源的詳細資訊，請參閱 [XAML 資源](xaml-resources-define.md)。
+請務必瞭解資源，這是啟用樣式和範本以供重複使用的方式。 如需有關資源的詳細資訊，請參閱 [XAML 資源](xaml-resources-define.md)。
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
 ## <a name="sample"></a>範例
 
-這個概述中提供的範例碼以下圖的[簡單照片瀏覽應用程式](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。
+本總覽中提供的範例程式碼是以[簡單的相片流覽應用程式](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)為基礎，如下圖所示。
 
 ![已設定樣式的 ListView](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
 
-這個簡單的相片範例使用樣式設定和範本化，來創造引人注目的使用者體驗。 該範例具有兩<xref:System.Windows.Controls.TextBlock>個元素和<xref:System.Windows.Controls.ListBox>一個綁定到圖像清單的控制項。
+這個簡單的相片範例使用樣式設定和範本化，來創造引人注目的使用者體驗。 此範例有兩<xref:System.Windows.Controls.TextBlock>個元素， <xref:System.Windows.Controls.ListBox>以及一個系結至影像清單的控制項。
 
 如需完整範例，請參閱[樣式設定和範本化範例簡介 (英文)](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。
 
 ## <a name="styles"></a>樣式
 
-可以將<xref:System.Windows.Style>a 視為將一組屬性值應用於多個元素的便捷方法。 <xref:System.Windows.FrameworkElement>可以在派生自<xref:System.Windows.FrameworkContentElement>或<xref:System.Windows.Window>或 或的任何元素上使用<xref:System.Windows.Controls.Button>樣式。
+您可以將<xref:System.Windows.Style>視為一個方便的方式，將一組屬性值套用到多個元素。 您可以對任何衍生<xref:System.Windows.FrameworkElement>自或<xref:System.Windows.FrameworkContentElement>的專案（例如<xref:System.Windows.Window>或）使用樣式。 <xref:System.Windows.Controls.Button>
 
-聲明樣式的最常見方法是作為 XAML`Resources`檔中 部分中的資源。 因為樣式是資源,因此它們遵循適用於所有資源的相同範圍規則。 簡單地說,聲明樣式會影響樣式的應用位置。 例如,如果在應用定義 XAML 檔的根元素中聲明樣式,則可以在應用中的任意位置使用該樣式。
+宣告樣式最常見的方式，就是當做 XAML 檔案中`Resources`區段的資源。 因為樣式是資源，所以它們會遵守適用于所有資源的相同範圍規則。 簡單地說，您在其中宣告樣式會影響可以套用樣式的位置。 例如，如果您在應用程式定義 XAML 檔案的根項目中宣告樣式，則樣式可以在應用程式中的任何位置使用。
 
-例如,以下 XAML 代碼聲明的兩個`TextBlock`樣式`TextBlock`為 a , 一個自動應用於所有元素, 另一個必須顯式引用。
+例如，下列 XAML 程式碼會宣告的兩個樣式`TextBlock`，一個自動套用至所有`TextBlock`專案，另一個則必須明確參考。
 
 [!code-xaml[SnippetDefaultTextBlockStyleBasedOn](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window2.xaml#SnippetDefaultTextBlockStyleBasedOn)]
 
-下面是上面聲明使用的樣式的示例。
+以下是使用上述宣告之樣式的範例。
 
 [!code-xaml[SnippetTextBlocksExplicit](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window2.xaml#SnippetTextBlocksExplicit)]
 
-![樣式化文字塊](./media/styles-and-templates-overview/stylingintro-textblocks.png)
+![樣式化的 textblock](./media/styles-and-templates-overview/stylingintro-textblocks.png)
 
-有關詳細資訊,請參閱為[控制項建立樣式](styles-templates-create-apply-style.md)。
+如需詳細資訊，請參閱[建立控制項的樣式](styles-templates-create-apply-style.md)。
 
 ## <a name="controltemplates"></a>ControlTemplates
 
-在 WPF<xref:System.Windows.Controls.ControlTemplate>中,控制件的定義控制件的外觀。 您可以通過定義<xref:System.Windows.Controls.ControlTemplate>新 控制件並將其分配給控制項來更改控制項的結構和外觀。 在許多情況下,範本為您提供足夠的靈活性,因此您不必編寫自己的自定義控制項。
+在 WPF 中， <xref:System.Windows.Controls.ControlTemplate>控制項的會定義控制項的外觀。 您可以藉由定義新<xref:System.Windows.Controls.ControlTemplate>的並將它指派給控制項，來變更控制項的結構和外觀。 在許多情況下，範本會提供您足夠的彈性，讓您不需要撰寫自己的自訂控制項。
 
-每個控制項都有一個預設樣本分配給[控制項.Template](xref:System.Windows.Controls.Control.Template)屬性。 該範本將控制件的可視化表示與控制項的功能連接起來。 由於在 XAML 中定義範本,因此無需編寫任何代碼即可更改控制項的外觀。 每個樣本都專為特定控制項而設計,<xref:System.Windows.Controls.Button>例如 。
+每個控制項都有一個指派給[control. template](xref:System.Windows.Controls.Control.Template)屬性的預設範本。 此範本會將控制項的視覺呈現方式與控制項的功能連接。 因為您在 XAML 中定義了範本，所以您可以變更控制項的外觀，而不需要撰寫任何程式碼。 每個範本都是針對特定控制項（例如）所<xref:System.Windows.Controls.Button>設計。
 
-通常,在 XAML`Resources`檔部分將範本聲明為資源。 與所有資源一樣,範圍規則適用。
+您通常會在 XAML 檔案的`Resources`區段上將範本宣告為資源。 如同所有資源，適用範圍規則。
 
-控件範本比樣式涉及更多。 這是因為控制項樣本重寫整個控制項的可視外觀,而樣式只是將屬性更改應用於現有控制項。 但是,由於控件的範本是通過設置[Control.template](xref:System.Windows.Controls.Control.Template)屬性應用的,因此可以使用樣式來定義或設置範本。
+控制項範本比樣式更多。 這是因為控制項範本會重寫整個控制項的視覺外觀，而樣式只會將屬性變更套用至現有的控制項。 不過，由於控制項的範本是藉由設定 [[控制項](xref:System.Windows.Controls.Control.Template)樣板] 屬性來套用，因此您可以使用樣式來定義或設定範本。
 
-設計器通常允許您創建現有範本的副本並對其進行修改。 例如,在可視化工作室 WPF 設計器`CheckBox`中, 選擇控制項,然後右鍵單擊並選擇 **「編輯範本** > **創建副本**」。 這個指令產生*定義樣本的樣式*。
+設計工具通常可讓您建立現有範本的複本，並加以修改。 `CheckBox`例如，在 Visual Studio WPF 設計工具中，選取控制項，然後以滑鼠右鍵按一下並選取 [**編輯範本** > ] [**建立複本**]。 此命令會產生*定義範本的樣式*。
 
 ```xaml
 <Style x:Key="CheckBoxStyle1" TargetType="{x:Type CheckBox}">
@@ -97,84 +97,84 @@ WPF 樣式模型的另一個功能是表示和邏輯的分離。 設計人員可
 ... content removed to save space ...
 ```
 
-編輯範本複本是瞭解範本工作方式的好方法。 編輯副本並更改可視化演示文稿的幾個方面,而不是創建新的空白範本。
+編輯範本的複本是瞭解範本工作方式的絕佳方式。 不是建立新的空白範本，而是編輯複本並變更視覺效果簡報的幾個部分，是比較容易的方式。
 
-例如,請參閱為[控制項建立樣本](../themes/how-to-create-apply-template.md)。
+如需範例，請參閱[建立控制項的範本](../themes/how-to-create-apply-template.md)。
 
 ### <a name="templatebinding"></a>TemplateBinding
 
-您可能已經注意到上一個中定義的樣本資源使用[樣本的結合的標記延伸](../../framework/wpf/advanced/templatebinding-markup-extension.md)。 A`TemplateBinding`是範本方案綁定的優化形式,類似於使用 建`{Binding RelativeSource={RelativeSource TemplatedParent}}`構的綁定。 `TemplateBinding`可用於將範本的某些部分綁定到控制項的屬性。 例如,每個控件都有一個<xref:System.Windows.Controls.Control.BorderThickness>屬性。 使用`TemplateBinding`管理範本中的哪個元素受此控制項設置的影響。
+您可能已注意到，在上一節中定義的範本資源會使用[TemplateBinding 標記延伸](../../framework/wpf/advanced/templatebinding-markup-extension.md)模組。 `TemplateBinding`是範本案例之系結的優化形式，類似于以所結構化的系`{Binding RelativeSource={RelativeSource TemplatedParent}}`結。 `TemplateBinding`適用于將範本的元件系結至控制項的屬性。 例如，每個控制項都有<xref:System.Windows.Controls.Control.BorderThickness>一個屬性。 使用`TemplateBinding`來管理範本中的哪個元素受此控制設定影響。
 
-### <a name="contentcontrol-and-itemscontrol"></a>內容控制和專案控制
+### <a name="contentcontrol-and-itemscontrol"></a>ContentControl 和 ItemsControl
 
-<xref:System.Windows.Controls.ContentPresenter>如果在<xref:System.Windows.Controls.ControlTemplate>中聲明的<xref:System.Windows.Controls.ContentControl><xref:System.Windows.Controls.ContentPresenter><xref:System.Windows.Controls.ContentControl.ContentTemplate%2A><xref:System.Windows.Controls.ContentControl.Content%2A>。 同樣,<xref:System.Windows.Controls.ItemsPresenter><xref:System.Windows.Controls.ControlTemplate>中<xref:System.Windows.Controls.ItemsControl>的 的 a<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A><xref:System.Windows.Controls.ItemsControl.Items%2A>將自動綁定到和 屬性。
+<xref:System.Windows.Controls.ContentPresenter>如果在<xref:System.Windows.Controls.ControlTemplate>的中宣告<xref:System.Windows.Controls.ContentControl>， <xref:System.Windows.Controls.ContentPresenter>將會自動系結至<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>和<xref:System.Windows.Controls.ContentControl.Content%2A>屬性。 同樣地， <xref:System.Windows.Controls.ItemsPresenter>在<xref:System.Windows.Controls.ControlTemplate>的中， <xref:System.Windows.Controls.ItemsControl>會自動系結至<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>和<xref:System.Windows.Controls.ItemsControl.Items%2A>屬性。
 
-## <a name="datatemplates"></a>資料範本
+## <a name="datatemplates"></a>DataTemplates
 
-在此範例應用中,有一個<xref:System.Windows.Controls.ListBox>控制項綁定到照片清單。
+在此範例應用程式中，有<xref:System.Windows.Controls.ListBox>一個系結至相片清單的控制項。
 
 [!code-xaml[ListBox](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window3.xaml#SnippetListBox)]
 
-目前<xref:System.Windows.Controls.ListBox>如下所示。
+這<xref:System.Windows.Controls.ListBox>目前看起來如下所示。
 
 ![套用範本之前的 ListBox](./media/styles-and-templates-overview/stylingintro-listboxbefore.png "StylingIntro_ListBoxBefore")
 
-大多數控制項都有某個型別的內容，而該內容通常來自您要繫結的資料。 在此範例中，該資料是相片清單。 在 WPF<xref:System.Windows.DataTemplate>中, 使用 定義數據的可視表示形式。 基本上,您放入的<xref:System.Windows.DataTemplate>,決定了數據在呈現應用中的外觀。
+大多數控制項都有某個型別的內容，而該內容通常來自您要繫結的資料。 在此範例中，該資料是相片清單。 在 WPF 中，您可以<xref:System.Windows.DataTemplate>使用來定義資料的視覺標記法。 基本上，您放入的<xref:System.Windows.DataTemplate>內容決定了呈現的應用程式中資料的外觀。
 
-在我們的範例應用中,每個自定義`Photo`物件都有一`Source`個類型字串的屬性,用於指定圖像的檔路徑。 目前，相片物件是顯示成檔案路徑。
+在我們的範例應用程式中`Photo` ，每個`Source`自訂物件都有一個字串類型的屬性，可指定影像的檔案路徑。 目前，相片物件是顯示成檔案路徑。
 
 [!code-csharp[PhotoClass](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Photo.cs#PhotoClass)]
 [!code-vb[PhotoClass](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/vb/Photo.vb#PhotoClass)]
 
-要將照片顯示為圖像,請創建一<xref:System.Windows.DataTemplate>個資源。
+若要讓相片顯示為影像，您可以將<xref:System.Windows.DataTemplate>建立為資源。
 
 [!code-xaml[DataTemplate](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window4.xaml#SnippetDataTemplate)]
 
-請注意,<xref:System.Windows.DataTemplate.DataType%2A>該屬性<xref:System.Windows.Style.TargetType%2A>與的<xref:System.Windows.Style>屬性 類似。 如果 位於資源部分中,則當您<xref:System.Windows.DataTemplate.DataType%2A>將 屬性指定為類型並省`x:Key`略 時 ,每當出現該類型時,<xref:System.Windows.DataTemplate><xref:System.Windows.DataTemplate>都會應用 。 您始終可以選擇使用分配,<xref:System.Windows.DataTemplate>`x:Key``StaticResource`然後將其設定為用於<xref:System.Windows.DataTemplate>採用類型的屬性,<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>如屬性<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>或 屬性。
+請注意， <xref:System.Windows.DataTemplate.DataType%2A>屬性與的<xref:System.Windows.Style.TargetType%2A>屬性類似<xref:System.Windows.Style>。 如果您<xref:System.Windows.DataTemplate>的位於 resources 區段中，當您將<xref:System.Windows.DataTemplate.DataType%2A>屬性指定為類型並省略時`x:Key`， <xref:System.Windows.DataTemplate>就會在該類型出現時套用。 您一律可以<xref:System.Windows.DataTemplate>選擇使用`x:Key`來指派，然後將它`StaticResource`設定為採用<xref:System.Windows.DataTemplate>類型的屬性，例如<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>屬性或<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>屬性。
 
-從本質上講,<xref:System.Windows.DataTemplate>上述示例中的定義是,每當有物件`Photo`時,它應顯示為 中的<xref:System.Windows.Controls.Image><xref:System.Windows.Controls.Border>a。 有了這個<xref:System.Windows.DataTemplate>,我們的應用程式現在看起來像這樣。
+基本上，上述<xref:System.Windows.DataTemplate>範例中的會定義當有`Photo`物件時，它應該會<xref:System.Windows.Controls.Image>在中顯示為。 <xref:System.Windows.Controls.Border> 如此<xref:System.Windows.DataTemplate>一來，我們的應用程式現在看起來像這樣。
 
 ![圖片影像](./media/styles-and-templates-overview/stylingintro-photosasimages.png "StylingIntro_PhotosAsImages")
 
-資料範本化模型還提供其他功能。 例如,<xref:System.Windows.Controls.HeaderedItemsControl>如果顯示的集合資料包含使用類型(如<xref:System.Windows.Controls.Menu>或 )<xref:System.Windows.Controls.TreeView>的其他集合<xref:System.Windows.HierarchicalDataTemplate>,則存在 。 另一個資料樣本化功能是<xref:System.Windows.Controls.DataTemplateSelector>,它允許您根據自訂邏輯<xref:System.Windows.DataTemplate>選擇 要使用的 。 如需詳細資訊，請參閱[資料範本化概觀](../../framework/wpf/data/data-templating-overview.md)，其中提供不同資料範本化功能的更深入探討。
+資料範本化模型還提供其他功能。 例如，如果您要顯示的集合<xref:System.Windows.Controls.HeaderedItemsControl>資料包含使用類型（例如<xref:System.Windows.Controls.Menu>或<xref:System.Windows.Controls.TreeView>）的其他集合，則會有。 <xref:System.Windows.HierarchicalDataTemplate> 另一個資料範本化功能<xref:System.Windows.Controls.DataTemplateSelector>是，可讓您根據自<xref:System.Windows.DataTemplate>定義邏輯選擇要使用的。 如需詳細資訊，請參閱[資料範本化概觀](../../framework/wpf/data/data-templating-overview.md)，其中提供不同資料範本化功能的更深入探討。
 
 ## <a name="triggers"></a>觸發程序
 
-觸發程序會在屬性值發生變更或在某個事件被引發時，設定屬性或啟動動作 (例如動畫)。 <xref:System.Windows.Style><xref:System.Windows.Controls.ControlTemplate>,並且<xref:System.Windows.DataTemplate>所有`Triggers`屬性都可以包含一組觸發器。 有幾種類型的觸發器。
+觸發程序會在屬性值發生變更或在某個事件被引發時，設定屬性或啟動動作 (例如動畫)。 <xref:System.Windows.Style>、 <xref:System.Windows.Controls.ControlTemplate>和<xref:System.Windows.DataTemplate>全都具有可包含`Triggers`一組觸發程式的屬性。 有數種類型的觸發程式。
 
-### <a name="propertytriggers"></a>屬性觸發器
+### <a name="propertytriggers"></a>PropertyTriggers
 
-設置<xref:System.Windows.Trigger>屬性值或基於屬性值啟動操作的 A 稱為屬性觸發器。
+<xref:System.Windows.Trigger> ，會根據屬性的值來設定屬性值或啟動動作，稱為屬性觸發程式。
 
-要演示如何使用屬性觸發器,可以使每個<xref:System.Windows.Controls.ListBoxItem>觸發器部分透明,除非已選擇。 以下樣式設置<xref:System.Windows.UIElement.Opacity%2A><xref:System.Windows.Controls.ListBoxItem>`0.5`到的值。 但是,<xref:System.Windows.Controls.ListBoxItem.IsSelected%2A>`true`當 屬性<xref:System.Windows.UIElement.Opacity%2A>為`1.0`時 ,設定為 。
+若要示範如何使用屬性觸發程式，您可以將<xref:System.Windows.Controls.ListBoxItem>每個部分透明化，除非已選取它。 下列樣式會將的<xref:System.Windows.UIElement.Opacity%2A>值設定<xref:System.Windows.Controls.ListBoxItem>為`0.5`。 不過， <xref:System.Windows.Controls.ListBoxItem.IsSelected%2A>當屬性`true`為時， <xref:System.Windows.UIElement.Opacity%2A>會設定為`1.0`。
 
 [!code-xaml[PropertyTrigger](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window5.xaml#SnippetPropertyTrigger)]
 
-此範例使用<xref:System.Windows.Trigger>設定 屬性值,但請<xref:System.Windows.Trigger>注意, 類別還具有使觸發<xref:System.Windows.TriggerBase.EnterActions%2A>器<xref:System.Windows.TriggerBase.ExitActions%2A>執行操作 的和 屬性。
+這個範例會使用<xref:System.Windows.Trigger>來設定屬性值，但請注意， <xref:System.Windows.Trigger>類別也具有<xref:System.Windows.TriggerBase.EnterActions%2A>和<xref:System.Windows.TriggerBase.ExitActions%2A>屬性，可讓觸發程式執行動作。
 
-請注意,<xref:System.Windows.FrameworkElement.MaxHeight%2A>屬性<xref:System.Windows.Controls.ListBoxItem>設定為`75`。 在下圖中,第三個專案是所選項。
+請注意， <xref:System.Windows.FrameworkElement.MaxHeight%2A>的屬性<xref:System.Windows.Controls.ListBoxItem>會設定為`75`。 在下圖中，第三個專案是選取的專案。
 
 ![已設定樣式的 ListView](./media/styles-and-templates-overview/stylingintro-triggers.png "StylingIntro_triggers")
 
 ### <a name="eventtriggers-and-storyboards"></a>EventTrigger 和分鏡腳本
 
-另一種類型的觸發器是<xref:System.Windows.EventTrigger>,它根據事件的發生啟動一組操作。 例如,以下<xref:System.Windows.EventTrigger>物件指定當滑鼠指標進入<xref:System.Windows.Controls.ListBoxItem>時<xref:System.Windows.FrameworkElement.MaxHeight%2A>, 屬性將動畫化`90``0.2`為超過 第二個週期的值。 當滑鼠指標從項目移開時，該屬性會在 `1` 秒的期間內恢復成原始值。 請注意,如何不必為<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A><xref:System.Windows.ContentElement.MouseLeave>動畫指定值。 這是因為動畫能夠記錄原始值。
+另一種類型的觸發<xref:System.Windows.EventTrigger>程式是，它會根據事件的發生次數來啟動一組動作。 例如，下列<xref:System.Windows.EventTrigger>物件指定當滑鼠指標進入時<xref:System.Windows.Controls.ListBoxItem>， <xref:System.Windows.FrameworkElement.MaxHeight%2A>屬性會在一`90` `0.2`段時間內以動畫呈現的值。 當滑鼠指標從項目移開時，該屬性會在 `1` 秒的期間內恢復成原始值。 請注意，不需要指定<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A> <xref:System.Windows.ContentElement.MouseLeave>動畫的值。 這是因為動畫能夠記錄原始值。
 
 [!code-xaml[StyleEventTriggers](~/samples/snippets/desktop-guide/wpf/styles-and-templates-intro/csharp/Window6.xaml#SnippetStyleEventTriggers)]
 
-有關詳細資訊,請參閱[情節提要概述](../../framework/wpf/graphics-multimedia/storyboards-overview.md)。
+如需詳細資訊，請參閱分鏡腳本[總覽](../../framework/wpf/graphics-multimedia/storyboards-overview.md)。
 
-在下圖中,滑鼠指向第三個專案。
+在下圖中，滑鼠指向第三個專案。
 
-![樣式範例螢幕擷取](./media/styles-and-templates-overview/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
+![樣式設定範例螢幕擷取畫面](./media/styles-and-templates-overview/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")
 
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTrigger、DataTrigger 及 MultiDataTrigger
 
-除了<xref:System.Windows.Trigger>和<xref:System.Windows.EventTrigger>之外,還有其他類型的觸發器。 <xref:System.Windows.MultiTrigger>允許您根據多個條件設置屬性值。 使用<xref:System.Windows.DataTrigger>條件的屬性<xref:System.Windows.MultiDataTrigger>為數據綁定時使用。
+除了<xref:System.Windows.Trigger>和<xref:System.Windows.EventTrigger>之外，還有其他類型的觸發程式。 <xref:System.Windows.MultiTrigger>可讓您根據多個條件來設定屬性值。 當條件<xref:System.Windows.DataTrigger>的<xref:System.Windows.MultiDataTrigger>屬性是資料系結時，您可以使用和。
 
 ## <a name="visual-states"></a>視覺狀態
 
-控制項始終處於特定**狀態**。 例如,當滑鼠在控制項的表面上移動時,控制項被視為的通用`MouseOver`狀態 。 沒有特定狀態的控件被視為處於公共`Normal`狀態。 州被分為組,前面提到的州是州組的`CommonStates`一部分。 大多數控制項有兩個狀態群組`CommonStates``FocusStates`: 與 。 套用於控制項的每個狀態群組中,控制項始終處於每個群組的一個狀態,`CommonStates.MouseOver`如`FocusStates.Unfocused`與 。 但是,控制項不能處於同一組中的兩個不同的狀態,例如`CommonStates.Normal`和`CommonStates.Disabled`。 下面是大多數控件識別和使用狀態的表。
+控制項一律處於特定**狀態**。 例如，當滑鼠移到控制項介面上方時，控制項就會被視為處於的通用狀態`MouseOver`。 沒有特定狀態的控制項會被視為處於一般`Normal`狀態。 狀態會分成群組，而先前提到的狀態會屬於狀態群組`CommonStates`的一部分。 大部分的控制項都有兩個`CommonStates`狀態`FocusStates`群組：和。 在套用至控制項的每個狀態群組中，控制項一律處於每個群組的其中一個狀態， `CommonStates.MouseOver`例如`FocusStates.Unfocused`和。 不過，控制項不能在相同群組內的兩個不同狀態中，例如`CommonStates.Normal`和`CommonStates.Disabled`。 以下是大部分控制項辨識和使用的狀態表格。
 
 | VisualState 名稱 | VisualStateGroup 名稱 | 描述 |
 | ---------------- | --------------------- | ----------- |
@@ -185,9 +185,9 @@ WPF 樣式模型的另一個功能是表示和邏輯的分離。 設計人員可
 | 已取得焦點          | FocusStates           | 控制項已取得焦點。 |
 | 未取得焦點        | FocusStates           | 控制項未取得焦點。 |
 
-透過控制項樣本<xref:System.Windows.VisualStateManager?displayProperty=fullName>的根元素上定義, 可以在控制項進入特定狀態時觸發動畫。 聲明`VisualStateManager`<xref:System.Windows.VisualStateGroup><xref:System.Windows.VisualState>和 要觀察的哪些組合。 當控制項進入監視狀態時,`VisaulStateManager`將啟動 由定義的動畫。
+藉由<xref:System.Windows.VisualStateManager?displayProperty=fullName>在控制項範本的根項目上定義，您可以在控制項進入特定狀態時觸發動畫。 `VisualStateManager`會宣告要監看<xref:System.Windows.VisualStateGroup>的<xref:System.Windows.VisualState>和組合。 當控制項進入監看狀態時，所定義的動畫`VisaulStateManager`就會啟動。
 
-例如,以下 XAML`CommonStates.MouseOver`代碼監視 狀態,為`backgroundElement`名為的元素的填充顏色設置動畫。 當控件返回到狀態`CommonStates.Normal`時,將還原`backgroundElement`命名 元素的填充顏色。
+例如，下列 XAML 程式碼會監看`CommonStates.MouseOver`狀態，以建立名為`backgroundElement`之元素的填滿色彩動畫。 當控制項返回`CommonStates.Normal`狀態時，會還原名`backgroundElement`為之元素的填滿色彩。
 
 ```xaml
 <ControlTemplate x:Key="roundbutton" TargetType="Button">
@@ -212,21 +212,21 @@ WPF 樣式模型的另一個功能是表示和邏輯的分離。 設計人員可
         ...
 ```
 
-有關情節提要的詳細資訊,請參閱[情節提要概述](../../framework/wpf/graphics-multimedia/storyboards-overview.md)。
+如需有關分鏡腳本的詳細資訊，請參閱分鏡腳本[總覽](../../framework/wpf/graphics-multimedia/storyboards-overview.md)。
 
-## <a name="shared-resources-and-themes"></a>分享資源及主題
+## <a name="shared-resources-and-themes"></a>共用的資源和主題
 
-典型的 WPF 應用可能具有多個在整個應用中應用的 UI 資源。 總之,這組資源可以被視為應用的主題。 WPF 透過使用封裝<xref:System.Windows.ResourceDictionary>為類的資源字典,支援將UI資源打包為主題。
+典型的 WPF 應用程式可能會有多個應用程式中套用的 UI 資源。 這組資源會共同視為應用程式的主題。 WPF 支援使用封裝為<xref:System.Windows.ResourceDictionary>類別的資源字典，將 UI 資源封裝為主題。
 
-WPF 主題通過使用 WPF 公開的樣式和範本機制來自定義任何元素的可視化物件來定義。
+WPF 主題是使用 WPF 公開用來自訂任何專案之視覺效果的樣式設定和範本化機制來定義。
 
-WPF 主題資源存儲在嵌入式資源字典中。 這些資源字典必須內嵌在已簽署的組件內，並且可內嵌在與程式碼本身相同的組件中，也可內嵌在並存的組件中。 對於包含 WPF 控件的程式集,主題資源位於一系列並行程式集中。
+WPF 主題資源會儲存在內嵌的資源字典中。 這些資源字典必須內嵌在已簽署的組件內，並且可內嵌在與程式碼本身相同的組件中，也可內嵌在並存的組件中。 若為 PresentationFramework，包含 WPF 控制項的元件，主題資源會在一系列並存元件中。
 
-當搜尋元素的樣式時，佈景主題會成為最後一個要查看的地方。 通常,搜索將首先遍走元素樹以搜索適當的資源,然後查看應用資源集合,最後查詢系統。 這使應用開發人員有機會在到達主題之前重新定義樹或應用級別上任何對象的樣式。
+當搜尋元素的樣式時，佈景主題會成為最後一個要查看的地方。 一般來說，搜尋會從搜尋適當資源的元素樹狀開始著手，然後查看應用程式資源集合，最後查詢系統。 這讓應用程式開發人員有機會在到達主題之前，先重新定義樹狀結構或應用層級上任何物件的樣式。
 
-您可以將資源字典定義為單個檔,以便跨多個應用重用主題。 您也可以透過定義多個資源字典來提供類型相同但值不同的資源，以建立可切換的佈景主題。 在應用級別重新定義這些樣式或其他資源是蒙皮應用的建議方法。
+您可以將資源字典定義為個別檔案，讓您跨多個應用程式重複使用主題。 您也可以透過定義多個資源字典來提供類型相同但值不同的資源，以建立可切換的佈景主題。 在應用層級重新定義這些樣式或其他資源，是為應用程式進行外觀的建議方式。
 
-要跨應用共享一組資源(包括樣式和範本),可以創建 XAML 檔並定義<xref:System.Windows.ResourceDictionary>`shared.xaml`包含對 檔的引用。
+若要在應用程式之間共用一組資源（包括樣式和範本），您可以建立 XAML 檔案，並<xref:System.Windows.ResourceDictionary>定義包含檔案參考`shared.xaml`的。
 
 ```xaml
 <ResourceDictionary.MergedDictionaries>
@@ -234,14 +234,14 @@ WPF 主題資源存儲在嵌入式資源字典中。 這些資源字典必須內
 </ResourceDictionary.MergedDictionaries>
 ```
 
-它是的`shared.xaml`共用,它本身定義了<xref:System.Windows.ResourceDictionary>包含一組樣式和畫筆資源的 ,使應用中的控制項具有一致的外觀。
+這是的共用`shared.xaml`，它本身會定義<xref:System.Windows.ResourceDictionary> ，其中包含一組樣式和筆刷資源，可讓應用程式中的控制項擁有一致的外觀。
 
-有關詳細資訊,請參閱[合併的資源字典](../../framework/wpf/advanced/merged-resource-dictionaries.md)。
+如需詳細資訊，請參閱[合併的資源字典](../../framework/wpf/advanced/merged-resource-dictionaries.md)。
 
-如果要為自定義控制項建立主題,請參閱[控制件創作概述](../../framework/wpf/controls/control-authoring-overview.md#defining-resources-at-the-theme-level)**的主題級別部分的"定義資源**"。
+如果您要建立自訂控制項的主題，請參閱[控制項撰寫總覽](../../framework/wpf/controls/control-authoring-overview.md#defining-resources-at-the-theme-level)中的在**主題層級定義資源**一節。
 
 ## <a name="see-also"></a>另請參閱
 
 - [WPF 中的 Pack URI](../../framework/wpf/app-development/pack-uris-in-wpf.md)
 - [操作說明：尋找 ControlTemplate 產生的元素](../../framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)
-- [尋找資料樣本產生的元素](../../framework/wpf/data/how-to-find-datatemplate-generated-elements.md)
+- [尋找 DataTemplate 產生的元素](../../framework/wpf/data/how-to-find-datatemplate-generated-elements.md)

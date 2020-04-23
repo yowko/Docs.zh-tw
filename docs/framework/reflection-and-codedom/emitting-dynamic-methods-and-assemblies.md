@@ -34,20 +34,20 @@ ms.locfileid: "79180533"
   
 除了 <xref:System.Reflection.Emit> 命名空間中的 Managed 類型，還有[中繼資料介面](../unmanaged-api/metadata/metadata-interfaces.md)參考文件中說明的 Unmanaged 中繼資料介面。 相較於 Unmanaged 中繼資料介面，Managed 反映發出提供較強的語意錯誤檢查，以及抽象層級較高的中繼資料。  
   
-另一項適用於中繼資料和 MSIL 的有用資源，是通用語言基礎結構 (CLI) 文件，尤其是＜第二部分：中繼資料定義和語意＞以及＜第三部分：CIL 指令集＞。 這些檔可在[Ecma網站上](https://www.ecma-international.org/publications/standards/Ecma-335.htm)線上查閱。  
+另一項適用於中繼資料和 MSIL 的有用資源，是通用語言基礎結構 (CLI) 文件，尤其是＜第二部分：中繼資料定義和語意＞以及＜第三部分：CIL 指令集＞。 您可以從[Ecma 網站](https://www.ecma-international.org/publications/standards/Ecma-335.htm)線上取得檔。  
   
 ## <a name="in-this-section"></a>本節內容
   
-[反射中的安全問題發出](security-issues-in-reflection-emit.md)  
+[反映發出中的安全性問題](security-issues-in-reflection-emit.md)  
 說明有關使用反映發出來建立動態組件的安全性問題。  
 
-[如何：定義和執行動態方法](how-to-define-and-execute-dynamic-methods.md)演示如何執行一個簡單的動態方法和綁定到類實例的動態方法。
+[如何：定義和執行動態方法](how-to-define-and-execute-dynamic-methods.md)顯示如何執行簡單的動態方法，以及系結至類別實例的動態方法。
 
-[如何：定義具有反射發出的泛型型別](how-to-define-a-generic-type-with-reflection-emit.md)演示如何使用兩個類型參數創建簡單的泛型型別，如何對類型參數應用類、介面和特殊約束，以及如何創建使用類的類型參數作為參數類型和返回類型的成員。
+[如何：使用反映發出定義泛型型別](how-to-define-a-generic-type-with-reflection-emit.md)示範如何建立具有兩個型別參數的簡單泛型型別、如何將類別、介面和特殊條件約束套用至型別參數，以及如何建立成員，以使用類別的型別參數做為參數類型和傳回型別。
 
-[如何：定義具有反射發出的泛型方法](how-to-define-a-generic-method-with-reflection-emit.md)演示如何創建、發出和調用簡單的泛型方法。
+[如何：使用反映發出定義泛型方法](how-to-define-a-generic-method-with-reflection-emit.md)說明如何建立、發出和叫用簡單的泛型方法。
 
-[動態類型生成可收集程式集](collectible-assemblies.md)引入可收集程式集，它們是動態程式集，無需卸載創建它們的應用程式域即可卸載。
+[動態類型產生的可回收元件](collectible-assemblies.md)引進了可回收元件，這是動態元件，不需要卸載其建立所在的應用程式域即可加以卸載。
   
 ## <a name="reference"></a>參考  
 

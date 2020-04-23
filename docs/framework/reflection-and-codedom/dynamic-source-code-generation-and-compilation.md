@@ -47,7 +47,7 @@ ms.locfileid: "75544994"
 
   描述如何使用 CodeDOM 產生包含欄位、屬性、方法、建構函式和進入點的類別。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
 
 - <xref:System.CodeDom>  
 

@@ -14,30 +14,30 @@ ms.locfileid: "82071938"
 
 ## <a name="sdk-downloads"></a>SDK 下載
 
-.NET 的 Azure 庫作為[NuGet 包](https://www.nuget.org/packages?q=windowsazureofficial)實現。 有關 Azure 服務組織的安裝說明,請參閱[API 參考](/dotnet/api/overview/azure/?view=azure-dotnet)。
+適用于 .NET 的 Azure 程式庫會實作為[NuGet 套件](https://www.nuget.org/packages?q=windowsazureofficial)。 如需 Azure 服務所組織的安裝指示，請參閱[API 參考](/dotnet/api/overview/azure/?view=azure-dotnet)。
 
 ## <a name="development-tools"></a>開發工具
 
-Visual Studio 具有用於內置許多 Azure 服務的工具。 某些 Azure 服務具有其他可用工具或模擬器,如[Azure 儲存資源管理員](https://azure.microsoft.com/features/storage-explorer/)。 如有必要,請參閱 Azure 服務的文檔,瞭解任何其他工具。
+Visual Studio 有許多內建 Azure 服務的工具。 某些 Azure 服務有其他可用的工具或模擬器，例如[Azure 儲存體總管](https://azure.microsoft.com/features/storage-explorer/)。 如有必要，請參閱 Azure 服務的檔，以取得任何其他工具。
 
-這些說明為您的作業系統安裝建議的啟動開發環境。
+這些指示會為您的作業系統安裝建議的起始開發環境。
 
 ## <a name="windows"></a>[Windows](#tab/windows)
 
-Visual Studio 版本 2017 及更高版本已內置支援 Azure 開發。 以下步驟描述了在可視化工作室中啟用 Azure 開發支援。
+Visual Studio 2017 和更新版本具有 Azure 開發的內建支援。 下列步驟說明如何在 Visual Studio 中啟用 Azure 開發支援。
 
-對於 Visual Studio 2015 及更早版本,<a href="vs2015-install.md">請按照以下說明操作</a>。
+針對 Visual Studio 2015 和更早版本，請<a href="vs2015-install.md">遵循這些指示</a>。
 
-### <a name="step-1-download-visual-studio-2019"></a>第 1 步:下載視覺工作室 2019
+### <a name="step-1-download-visual-studio-2019"></a>步驟1：下載 Visual Studio 2019
 
-如果您已經安裝了 Visual Studio 2019,則可以跳過此步驟。
+如果您已安裝 Visual Studio 2019，可以略過此步驟。
 
 > [!div class="nextstepaction"]
 > [下載 Visual Studio 2019](https://www.visualstudio.com/downloads/)
 
 ### <a name="step-2-install-the-two-azure-workloads"></a>步驟 2：安裝兩個 Azure 工作負載
 
-在可視化工作室安裝程式中,安裝可視化工作室(或修改現有安裝)。 確保選擇了*Azure*開發和*ASP.NET 和 Web 開發*工作負荷。
+在 Visual Studio 安裝程式中，安裝 Visual Studio （或修改現有的安裝）。 請確定已選取 [ *Azure 開發*] 和 [ *ASP.NET] 和 [網頁程式開發*] 工作負載。
 
 ### <a name="step-3-develop-with-net-on-azure"></a>步驟 3：在 Azure 上利用 .NET 進行開發
 
@@ -52,7 +52,7 @@ Visual Studio for Mac 包含您 Azure 開發所需的所有項目。
 > [!div class="nextstepaction"]
 > [下載 Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
 
-在安裝過程中,默認情況下選擇 Azure 工具。
+在安裝期間，預設會選取 Azure tools。
 
 ## <a name="linux"></a>[Linux](#tab/linux)
 

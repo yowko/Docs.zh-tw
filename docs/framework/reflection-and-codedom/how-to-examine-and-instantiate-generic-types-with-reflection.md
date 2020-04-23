@@ -113,10 +113,10 @@ ms.locfileid: "73130127"
  [!code-csharp[HowToGeneric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/ur.cs#1)]
  [!code-vb[HowToGeneric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/ur.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Type>
 - <xref:System.Reflection.MethodInfo>
-- [反映和泛用類型](reflection-and-generic-types.md)
+- [反映和泛型型別](reflection-and-generic-types.md)
 - [檢視類型資訊](viewing-type-information.md)
 - [泛型](../../standard/generics/index.md)

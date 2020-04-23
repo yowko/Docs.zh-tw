@@ -23,7 +23,7 @@ Serviced 元件 (受控碼 COM+ 元件) 都應該放在全域組件快取中。 
   
 - 若是 ASP.NET 應用程式中的 Serviced 元件，情況又不同。 如果您將包含 Serviced 元件的組件放置在應用程式基底的 bin 目錄中，並使用隨選的註冊，則系統會將組件陰影複製到下載快取，因為 ASP.NET 會使用執行階段的陰影功能。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用組件和全域組件快取](working-with-assemblies-and-the-gac.md)
-- [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil .exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)

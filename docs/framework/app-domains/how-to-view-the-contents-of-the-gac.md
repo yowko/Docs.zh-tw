@@ -39,7 +39,7 @@ gacutil /l
 > [!NOTE]
 > 在舊版 .NET Framework 中，[Shfusion.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) Windows Shell Extension 可讓您在 [檔案總管] 中檢視全域組件快取。 從 .NET Framework 4 開始，Shfusion.dll 已淘汰。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用組件和全域組件快取](working-with-assemblies-and-the-gac.md)
-- [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil .exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)

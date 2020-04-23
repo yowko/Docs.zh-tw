@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: d6bbc2648608e9542158e0f281984174447633a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119730"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645431"
 ---
 # <a name="using-application-domains"></a>使用應用程式定義域
 
@@ -19,12 +19,12 @@ ms.locfileid: "73119730"
   
 大部分的應用程式不需要建立自己的應用程式定義域，執行階段主機會為您建立任何必要的應用程式定義域。 但如果您的應用程式需要隔離程式碼或使用及卸載 DLL，您可以建立及設定其他應用程式定義域。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
-[操作說明：建立應用程式定義域](how-to-create-an-application-domain.md)  
+[如何：建立應用程式定義域](how-to-create-an-application-domain.md)  
 描述如何以程式設計方式建立應用程式定義域。  
   
-[操作說明：卸載應用程式定義域](how-to-unload-an-application-domain.md)  
+[如何：卸載應用程式定義域](how-to-unload-an-application-domain.md)  
 描述如何以程式設計方式卸載應用程式定義域。  
   
 [操作說明：設定應用程式定義域](how-to-configure-an-application-domain.md)  
@@ -42,13 +42,13 @@ ms.locfileid: "73119730"
 [陰影複製組件](shadow-copy-assemblies.md)  
 說明陰影複製如何在使用組件時更新組件，以及如何設定陰影複製。  
   
-[操作說明：接收第一個可能發生的例外狀況通知](how-to-receive-first-chance-exception-notifications.md)  
+[如何：接收第一個可能發生的例外狀況通知](how-to-receive-first-chance-exception-notifications.md)  
 說明您如何在 Common Language Runtime 開始搜尋例外狀況處理常式之前，收到已擲回例外狀況的通知。  
   
 [解析組件載入](../../standard/assembly/resolve-loads.md)  
 提供使用 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件解析組件載入失敗的指引。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
 
 <xref:System.AppDomain>  
 代表應用程式定義域。 提供建立及控制應用程式定義域的方法。  
@@ -57,14 +57,14 @@ ms.locfileid: "73119730"
 [.NET 中的組件](../../standard/assembly/index.md)  
 提供組件執行函式的概觀。  
   
-[使用組件設計程式](../../standard/assembly/program.md)  
+[使用組件設計程式](../../standard/assembly/index.md)  
 描述如何建立和簽署組件，以及如何設定組件屬性。  
   
 [發出動態方法和組件](../reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
 描述如何建立動態組件。  
   
-[應用程式定義域](application-domains.md)  
+[應用程式域](application-domains.md)  
 提供應用程式定義域的概觀。  
   
 [反映概觀](../reflection-and-codedom/reflection.md)  
-描述如何使用「反映」類別，以取得組件的相關資訊。
+描述如何使用「反映」**** 類別，以取得組件的相關資訊。

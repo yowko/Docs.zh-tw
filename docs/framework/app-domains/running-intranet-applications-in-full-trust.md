@@ -6,12 +6,12 @@ helpviewer_keywords:
 - intranet applications, running in full trust
 - running intranet applications in full trust
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
-ms.openlocfilehash: c93f84dc53abbb86cbfc4ae36e9cdcbe0bd50273
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 33b025fa62343277fc96fc7771587e95f556e7a6
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119749"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645440"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>在完全信任環境下執行內部網路應用程式
 
@@ -23,7 +23,7 @@ ms.locfileid: "73119749"
   
 - 程式庫組件必須和可執行組件位於相同的資料夾。 完全信任的授權集不提供給位於子資料夾或於不同路徑參考的組件。  
   
-- 如果可執行檔延遲載入組件，即必須使用啟動可執行檔所用的相同路徑。 例如，如果共用 \\\\網路電腦\\共用對應至某個磁碟機代號，而可執行檔是從該路徑執行，則可執行檔使用網路路徑載入的組件將不會具有完全信任。 若要在 <xref:System.Security.SecurityZone.MyComputer> 區域中延遲載入組件，可執行檔必須使用磁碟機代號路徑。  
+- 如果可執行檔延遲載入組件，即必須使用啟動可執行檔所用的相同路徑。 例如，如果共用\\ \\*網路-電腦*\\*共用*對應至磁碟機號，而可執行檔是從該路徑執行，則可執行檔使用網路路徑載入的元件將不會被授與完全信任。 若要在 <xref:System.Security.SecurityZone.MyComputer> 區域中延遲載入組件，可執行檔必須使用磁碟機代號路徑。  
   
 ## <a name="restoring-the-former-intranet-policy"></a>還原先前的內部網路原則  
 
@@ -35,6 +35,6 @@ ms.locfileid: "73119749"
   
 - 在 64 位元電腦系統登錄的 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework 機碼下，建立子機碼。 使用 DWORD 值為 1 的機碼名稱 LegacyMyComputerZone。 在 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework 機碼下建立相同的子機碼。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [使用組件設計程式](../../standard/assembly/program.md)
+- [使用組件設計程式](../../standard/assembly/index.md)

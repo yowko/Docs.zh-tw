@@ -80,5 +80,5 @@ CodeDOM 可以用來建立會產生 XML 文件的程式碼。 此程序涉及建
 ## <a name="see-also"></a>另請參閱
 
 - [使用 XML 加入程式碼註解](../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [XML 文檔注釋](../../csharp/programming-guide/xmldoc/index.md)
-- [XML 文件](/cpp/ide/xml-documentation-visual-cpp)
+- [XML 檔批註](../../csharp/programming-guide/xmldoc/index.md)
+- [XML 檔](/cpp/ide/xml-documentation-visual-cpp)

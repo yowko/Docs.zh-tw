@@ -27,7 +27,7 @@ Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資
   
 4. 從清單中選取類型程式庫，或瀏覽至 .tlb 檔案。  
   
-5. 選擇 **"確定**"。  
+5. 選擇 **[確定]**。  
   
 6. 在方案總管中，開啟所新增之參考的捷徑功能表，然後選擇 [屬性]****。  
   
@@ -40,7 +40,7 @@ Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資
   
 1. 產生[如何：從型別程式庫產生 Interop 組件](how-to-generate-interop-assemblies-from-type-libraries.md)中所述的 Interop 組件。  
   
-2. 將[-link（C# 編譯器選項）](../../csharp/language-reference/compiler-options/link-compiler-option.md)或[-link（可視基本）](../../visual-basic/reference/command-line-compiler/link.md)編譯器選項與內部程式集名稱一起嵌入到可執行檔中的 COM 類型類型資訊。  
+2. 使用[-link （c # 編譯器選項）](../../csharp/language-reference/compiler-options/link-compiler-option.md)或[-link （Visual Basic）](../../visual-basic/reference/command-line-compiler/link.md)編譯器選項加上 interop 元件名稱，將 COM 類型的類型資訊內嵌到可執行檔中。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -48,4 +48,4 @@ Visual Studio 會產生內含新增類型程式庫參考時所產生之中繼資
 - [將 COM 元件公開給 .NET Framework](exposing-com-components.md)
 - [逐步解說：在 Visual Studio 中內嵌來自 Managed 組件的型別](../../standard/assembly/embed-types-visual-studio.md)
 - [-link (C# 編譯器選項)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
-- [-連結（視覺基礎）](../../visual-basic/reference/command-line-compiler/link.md)
+- [-link （Visual Basic）](../../visual-basic/reference/command-line-compiler/link.md)

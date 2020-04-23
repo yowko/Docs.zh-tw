@@ -24,7 +24,7 @@ ms.locfileid: "80291760"
   
  本主題描述如何建立應用程式資訊清單與應用程式的關聯、建立元件資訊清單與元件的關聯，以及將元件資訊清單內嵌在組件中。  
   
-## <a name="create-an-application-manifest"></a>創建應用程式清單  
+## <a name="create-an-application-manifest"></a>建立應用程式資訊清單  
   
 1. 使用 XML 編輯器，建立 (或修改) COM 應用程式所擁有的應用程式資訊清單，而其與一或多個 Managed 元件交互操作。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "80291760"
   
 5. 儲存並命名資訊清單檔。 應用程式資訊清單的名稱就是後接 .manifest 副檔名的組件可執行檔名稱。 例如，myComApp.exe 的應用程式資訊清單檔案名稱是 myComApp.exe.manifest。  
   
-您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 有關詳細資訊，請參閱[關於並行程式集](/windows/desktop/SbsCs/about-side-by-side-assemblies-)。  
+您可以在與 COM 應用程式相同的目錄中安裝應用程式資訊清單。 或者，您可以將它當成資源新增至應用程式的.exe 檔案。 如需詳細資訊，請參閱[關於並存元件](/windows/desktop/SbsCs/about-side-by-side-assemblies-)。  
   
-## <a name="create-a-component-manifest"></a>創建元件清單  
+## <a name="create-a-component-manifest"></a>建立元件資訊清單  
   
 1. 使用 XML 編輯器，建立元件資訊清單以描述 Managed 組件。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "80291760"
   
     `/win32res:myresource.res`  
   
-     同樣，`myresource.res`包含嵌入資源的資源檔的名稱。  
+     同樣地`myresource.res` ，是包含內嵌資源的資源檔名稱。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -28,7 +28,7 @@ ms.locfileid: "73129985"
 > [!NOTE]
 > 在 .NET Framework 3.5 之前，發出程式碼需要 <xref:System.Security.Permissions.ReflectionPermission> 及 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> 旗標。 根據預設，此權限包含在 `FullTrust` 和 `Intranet` 具名權限集合中，不在 `Internet` 權限集合中。 因此，只有在程式庫有 <xref:System.Security.SecurityCriticalAttribute> 屬性，同時執行了 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的 <xref:System.Security.PermissionSet.Assert%2A> 方法，才能從部分信任使用該程式庫。 這類程式庫需要仔細的安全性檢閱，因為編碼錯誤可能會造成安全性漏洞。 .NET Framework 3.5 允許在部分信任案例中發出程式碼，而不需提出任何安全性要求，因為產生的程式碼本質上並非有權限的作業。 也就是產生的程式碼之權限不會比發出程式碼的組件還多。 這可讓發出程式碼的程式庫成為安全性透明的，並移除判斷提示 <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> 的需要，讓撰寫安全的程式庫不需要仔細的安全性檢閱。
 
-這個逐步解說將說明下列工作：
+本逐步解說將說明下列工作：
 
 - [設定簡單沙箱以測試部分信任程式碼](#Setting_up)。
 
@@ -208,7 +208,7 @@ ms.locfileid: "73129985"
 
 - 執行 `AccessPrivateMethod` 方法的第一個多載，並略過 JIT 可見度檢查。 動態方法成功編譯並執行，因為發出程式碼的組件和包含私用方法的組件相同。 因此，信任層級是相等的。 如果包含 `Worker` 類別的應用程式曾有數個組件，則同樣的程序對這些組件任一個都會成功，因為它們位於相同的信任層級。
 
-- 執行 `AccessPrivateMethod` 方法的第二個多載，再次略過 JIT 可見度檢查。 這次動態方法是在編譯時失敗，因為它會嘗試存取 <xref:System.String> 類別的 `internal` `FirstChar` 屬性。 包含 <xref:System.String> 類別的組件為完全信任。 因此，它的信任層級高於發出程式碼的組件。
+- 執行 `AccessPrivateMethod` 方法的第二個多載，再次略過 JIT 可見度檢查。 這次在編譯時，動態方法會失敗，因為它會嘗試存取`internal` `FirstChar` <xref:System.String>類別的屬性。 包含 <xref:System.String> 類別的組件為完全信任。 因此，它的信任層級高於發出程式碼的組件。
 
 這項比較會示範 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> 如何啟用部分信任的程式碼，略跳過其他部分信任程式碼的可見度檢查，卻不危及信任程式碼的安全性。
 
@@ -221,7 +221,7 @@ ms.locfileid: "73129985"
 
 - 如果您在 Visual Studio 中建置此程式碼範例，則當您將它傳遞給 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法時，必須變更類別名稱以包含命名空間。 命名空間是專案的預設名稱。 例如，如果專案是 "PartialTrust"，則類別名稱必須是 "PartialTrust.Worker"。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [反映發出中的安全性問題](security-issues-in-reflection-emit.md)
 - [如何：在沙箱中執行部分信任的程式碼](../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

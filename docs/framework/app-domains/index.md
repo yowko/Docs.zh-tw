@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application domains, programming
 - programming application domains
 ms.assetid: 96d3b8e3-bef8-4da0-9a81-9841e23a94e9
-ms.openlocfilehash: 2c849d27c70971d17bf4359ee7ae1081ee976a5f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f66eacaf30f8001cdbf3a486e5ce1c878712e2f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73119823"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644278"
 ---
 # <a name="programming-with-application-domains-and-assemblies"></a>使用應用程式定義域和組件設計程式
 
@@ -28,7 +28,7 @@ Microsoft Internet Explorer、ASP.NET 和 Windows 殼層這類主機會在執行
 [使用應用程式定義域](use.md)  
 提供建立、設定及使用應用程式定義域的範例。  
   
-[使用組件設計程式](../../standard/assembly/program.md)  
+[使用組件設計程式](../../standard/assembly/index.md)  
 描述如何建立和簽署組件，以及如何設定組件屬性。  
   
 ## <a name="related-sections"></a>相關章節  

@@ -53,7 +53,7 @@ ms.locfileid: "81243046"
 當您封裝應用程式的資源時，必須使用 Common Language Runtime 所預期的資源命名慣例來命名它們。 執行階段會依文化特性名稱識別資源。 每個文化特性都會獲指定唯一名稱，此名稱通常是下列項目的組合：與語言建立關聯的兩個字母小寫文化特性名稱以及與國家或地區建立關聯的兩個字母大寫子文化特性名稱 (必要時)。 子文化特性名稱遵循文化特性名稱，以破折號 (-) 分隔。 範例包括 ja-JP (代表在日本日文)、en-US (美式英文)、de-DE (德國德文)，或 de-AT (奧地利德文)。 請參閱 [Windows 支援的語言/地區名稱清單](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)中的 [語言標記]**** 資料行。 文化名稱遵循 [BCP 47](https://tools.ietf.org/html/bcp47) 定義的標準。
 
 > [!NOTE]
-> 兩個字母區域性名稱有一些例外,例如`zh-Hans`中文(簡體版)。
+> 兩個字母的文化特性名稱有一些例外， `zh-Hans`例如中文（簡體）。
 
 > [!NOTE]
 > 如需建立資源檔的資訊，請參閱[建立資源檔](creating-resource-files-for-desktop-apps.md)和[建立附屬組件](creating-satellite-assemblies-for-desktop-apps.md)。
@@ -71,7 +71,7 @@ ms.locfileid: "81243046"
 .NET Framework 資源後援處理序包含下列步驟：
 
 > [!TIP]
-> 您可以使用[\<相對 BindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md)配置元素來優化資源回退過程和資源程式集的運行時探測過程。 如需詳細資訊，請參閱[最佳化資源後援處理序](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一節。
+> 您可以使用[ \<relativebindforresources>>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) configuration 專案來優化資源回溯程式，以及執行時間探查資源元件的進程。 如需詳細資訊，請參閱[最佳化資源後援處理序](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)一節。
 
 1. 執行階段會先檢查[全域組件快取](../app-domains/gac.md)是否有符合應用程式之所要求文化特性的組件。
 
@@ -116,7 +116,7 @@ ms.locfileid: "81243046"
 
 - 應用程式碼不會處理 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 事件。
 
-通過將[\<相對 BindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md)`enabled`元素`true`並將其 屬性設置為應用程式配置檔來優化附屬程式集的探測,如以下示例所示。
+您可以在應用程式佈建檔中包含[ \<relativebindforresources>>](../configure-apps/file-schema/runtime/relativebindforresources-element.md)專案，並將其`enabled`屬性設定`true`為，以優化附屬元件的探查，如下列範例所示。
 
 ```xml
 <configuration>
@@ -231,7 +231,7 @@ Bon jour!
 
 ## <a name="see-also"></a>另請參閱
 
-- [桌面應用中的資源](index.md)
-- [全域程式集快取](../app-domains/gac.md)
+- [桌面應用程式中的資源](index.md)
+- [全域組件快取](../app-domains/gac.md)
 - [建立資源檔](creating-resource-files-for-desktop-apps.md)
 - [建立附屬組件](creating-satellite-assemblies-for-desktop-apps.md)

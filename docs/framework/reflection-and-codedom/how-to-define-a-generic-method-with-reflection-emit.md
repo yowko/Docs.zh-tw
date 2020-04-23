@@ -164,7 +164,7 @@ ms.locfileid: "73130166"
 [!code-csharp[GenericMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1)]
 [!code-vb[GenericMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection.Emit.MethodBuilder>
 - [操作說明：使用反映發出定義泛型型別](how-to-define-a-generic-type-with-reflection-emit.md)

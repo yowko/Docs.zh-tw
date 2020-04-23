@@ -22,10 +22,10 @@ ms.locfileid: "73130100"
  [發出動態方法和組件](emitting-dynamic-methods-and-assemblies.md)  
  描述如何在執行階段使用 Reflection.Emit 建立方法和組件。  
   
- [動態語言運行時概述](dynamic-language-runtime-overview.md)  
+ [動態語言執行時間總覽](dynamic-language-runtime-overview.md)  
  描述動態語言執行階段的功能。  
   
- [動態原始程式碼生成和編譯](dynamic-source-code-generation-and-compilation.md)  
+ [動態原始程式碼的產生和編譯](dynamic-source-code-generation-and-compilation.md)  
  描述如何產生和編譯動態原始程式碼。  
   
 ## <a name="related-sections"></a>相關章節  

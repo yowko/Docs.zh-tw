@@ -34,7 +34,7 @@ ms.locfileid: "73123629"
   
  您可以依需要命名類別和其方法。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 Unmanaged DLL 函式](consuming-unmanaged-dll-functions.md)
 - [識別 DLL 中的函式](identifying-functions-in-dlls.md)

@@ -91,7 +91,7 @@ ms.locfileid: "73130226"
 ## <a name="languages-with-initial-support"></a>初期支援的語言  
  .NET Framework 提供下列語言的程式碼編譯器和程式碼產生器：C#、Visual Basic、C++ 和 JScript。 實作特定語言的程式碼產生器和程式碼編譯器，即可擴充 CodeDOM 對其他語言的支援。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>

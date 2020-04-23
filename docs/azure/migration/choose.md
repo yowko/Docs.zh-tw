@@ -13,7 +13,7 @@ ms.locfileid: "82072106"
 ---
 # <a name="choose-the-right-azure-hosting-option"></a>選擇正確的 Azure 裝載選項
 
-本文提供 Azure 中從本地遷移到 Azure 的現有 .NET 框架應用程式時有多個選項之間的注意事項和比較。
+本文提供您在將現有的 .NET Framework 應用程式從內部部署遷移至 Azure 時，Azure 中多個選擇之間的考慮和比較。
 
 將現有 .NET 應用程式移轉至 Azure 時要考慮的基本領域如下︰
 
@@ -30,13 +30,13 @@ ms.locfileid: "82072106"
 
 |                 | Azure VM | Azure App Service | Windows 容器 |
 |-----------------|-----------|-------------------|--------------------|
-|使用時機      |<ul><li>應用程式在伺服器和本機 .msi 安裝上具有強烈相依性。</li><li>您會希望應用程式移轉路徑越簡單越好</li></ul>|應用程式與伺服器沒有相依性，是個乾淨的 ASP.NET Web 應用程式 (MVC、WebForm) 或存取資料庫伺服器的多層式架構應用程式 (Web API、WCf)。 |<ul><li>應用程式在原始伺服器上具有相依性，但這些相依性可以包含在 Docker Windows 映像中。</li><li>想要使應用程式現代化,以便實現[雲開發人員準備](../../architecture/modernize-with-azure-containers/modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)</li></ul>|
-|優點與好處  |<ul><li>最簡單的移轉路徑</li><li>熟悉的環境。 部署環境是 VM,因此類似於本地伺服器。</li></ul> |進行中的 PaaS 維護作業是在 Azure 中管理和調整應用程式最簡單的方式。 |<ul><li>雲開發人員準備與應用容器中包含的依賴項。</li><li>幾乎不需要重構 .NET /C# 代碼。</li></ul> |
-|缺點             |此為 IaaS。 維護成本昂貴。 您必須管理 VM 有關網路、負載均衡器、橫向擴展、IIS 管理等的基礎結構。 |<ul><li>並未[支援](https://appmigration.microsoft.com/assessment)所有的應用程式</li><li>某些應用可能需要重構,甚至稍微重新構建,以便它們支援 Azure 應用服務。</li></ul> |<ul><li>Docker 的技能學習曲線</li><li>某些程式碼和應用程式組態設定會變更</li></ul>|
-|需求 |比起內部部署應用程式，具有相同需求的 Windows Server VM | 在[就緒檢查](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Readiness-Checks)中指定的 Azure 應用服務要求。 |<ul><li>[Docker 引擎 - 適用於 Windows 伺服器的 2019](https://azuremarketplace.microsoft.com/marketplace/apps/cloud-infrastructure-services.docker-windows-2019)<br />或</li><li>[Azure Container Service (AKS)](https://azure.microsoft.com/services/container-service/) (此為 Kubernetes 協調器)<br />或<li>[Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) 協調器</li></ul> |
-|如何移轉 |請參閱[移轉至 Azure 虛擬機器](vm.md) | 請參閱[移轉 Azure App Service](app-service.md) | 遵循[Azure 和 Windows 容器電子書實現現有 .NET 應用的現代化](https://aka.ms/liftandshiftwithcontainersebook)中解釋的注意事項、方案和演練 |
+|使用時機      |<ul><li>應用程式在伺服器和本機 .msi 安裝上具有強烈相依性。</li><li>您會希望應用程式移轉路徑越簡單越好</li></ul>|應用程式與伺服器沒有相依性，是個乾淨的 ASP.NET Web 應用程式 (MVC、WebForm) 或存取資料庫伺服器的多層式架構應用程式 (Web API、WCf)。 |<ul><li>應用程式在原始伺服器上具有相依性，但這些相依性可以包含在 Docker Windows 映像中。</li><li>想要將應用程式現代化，使其成為[雲端 DevOps 就緒](../../architecture/modernize-with-azure-containers/modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md)</li></ul>|
+|優點與好處  |<ul><li>最簡單的移轉路徑</li><li>熟悉的環境。 部署環境是 VM，因此類似于內部部署伺服器。</li></ul> |進行中的 PaaS 維護作業是在 Azure 中管理和調整應用程式最簡單的方式。 |<ul><li>準備好讓雲端 DevOps 準備就緒，內含應用程式容器中的相依性。</li><li>幾乎不需要重構 .NET/C # 程式碼。</li></ul> |
+|缺點             |此為 IaaS。 維護成本昂貴。 您必須管理 VM 有關網路、負載平衡器、相應放大、IIS 管理等的基礎結構。 |<ul><li>並未[支援](https://appmigration.microsoft.com/assessment)所有的應用程式</li><li>有些應用程式可能需要重構，甚至是稍微重新架構，因此支援 Azure App Service。</li></ul> |<ul><li>Docker 的技能學習曲線</li><li>某些程式碼和應用程式組態設定會變更</li></ul>|
+|需求 |比起內部部署應用程式，具有相同需求的 Windows Server VM | 在[準備檢查](https://github.com/Azure/App-Service-Migration-Assistant/wiki/Readiness-Checks)中指定 Azure App Service 需求。 |<ul><li>[Docker Engine-適用于 Windows Server 2019 的 Enterprise](https://azuremarketplace.microsoft.com/marketplace/apps/cloud-infrastructure-services.docker-windows-2019)<br />或</li><li>[Azure Container Service (AKS)](https://azure.microsoft.com/services/container-service/) (此為 Kubernetes 協調器)<br />或<li>[Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/) 協調器</li></ul> |
+|如何移轉 |請參閱[移轉至 Azure 虛擬機器](vm.md) | 請參閱[移轉 Azure App Service](app-service.md) | 遵循[使用 Azure 和 Windows 容器現代化現有 .net 應用程式電子書](https://aka.ms/liftandshiftwithcontainersebook)中所述的考慮、案例和逐步解說 |
 
-以程式圖圖顯示了規劃現有 . NET Framework 應用程式遷移到 Azure 時的決策樹。 如果可行,請嘗試首先選擇選項 A,但選項 B 是最容易執行的路徑。
+下列流程圖顯示針對現有 .NET Framework 應用程式，規劃遷移至 Azure 時的決策樹。 如果可行，請先嘗試 option A，但 option B 是最簡單的執行路徑。
 
 ![顯示裝載決策樹的流程圖](../media/migration/choose/decision-tree.png)
 
@@ -55,13 +55,13 @@ Azure 虛擬網路可讓您：
 - 利用 IPsec VPN 或 ExpressRoute 保障連線的安全
 - 對子網路間的流量進行細微的控制
 - 使用虛擬應用設備建立精密的網路拓撲
-- 為您的應用程式提供一個孤立且高度安全的環境
+- 為您的應用程式取得隔離且高度安全的環境
 
 若要開始建置您自己的虛擬網路，請參閱 [Azure 虛擬網路文件](https://docs.microsoft.com/azure/virtual-network/)。
 
 ## <a name="authentication-and-authorization-considerations-when-migrating-to-azure"></a>移轉至 Azure 時的驗證和授權考量
 
-任何組織要移到雲端時的首要考量皆是安全性。 大多數公司都投入了大量的時間、資金和工程來設計和開發安全模型,因此,能夠利用現有投資(如標識存儲和單一登錄解決方案)非常重要。
+任何組織要移到雲端時的首要考量皆是安全性。 大部分的公司投入了大量的時間、金錢和工程設計和開發安全性模型，因此他們必須能夠運用現有的投資，例如身分識別存放區和單一登入解決方案。
 
 許多執行於內部部署的現有企業 B2E .NET 應用程式使用 Active Directory 進行驗證和身分識別管理。 Azure AD Connect 可讓您整合內部部署目錄與 Azure Active Directory。 若要開始，請參閱[整合您的內部部署目錄與 Azure Active Directory](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)。
 
@@ -72,4 +72,4 @@ Azure 虛擬網路可讓您：
 ## <a name="next-steps"></a>後續步驟
 
 > [!div class="nextstepaction"]
-> [將ASP.NET Web 應用程式移轉到 Azure 應用服務](app-service.md)
+> [將 ASP.NET web 應用程式遷移至 Azure App Service](app-service.md)

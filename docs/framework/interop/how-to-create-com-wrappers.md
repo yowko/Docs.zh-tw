@@ -39,7 +39,7 @@ ms.locfileid: "81121592"
 現在，您可以撰寫程式碼以存取 COM 物件。 您可以從宣告物件開始，例如使用 Visual Basic `Imports` 陳述式或 C# `Using` 陳述式。
 
 > [!NOTE]
-> 如果要對 Microsoft Office 元件進行程式設計,請首先安裝[Microsoft Office 主互通程式集可再分發](https://www.microsoft.com/Download/details.aspx?id=3508)。
+> 如果您想要程式設計 Microsoft Office 元件，請先安裝[Microsoft Office 主要 Interop 元件](https://www.microsoft.com/Download/details.aspx?id=3508)可轉散發套件。
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>使用 .NET Framework 工具建立執行階段可呼叫包裝函式  
   

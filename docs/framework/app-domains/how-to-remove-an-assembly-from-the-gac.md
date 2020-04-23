@@ -28,16 +28,16 @@ ms.locfileid: "73119859"
 
 ## <a name="removing-an-assembly-with-gacutilexe"></a>使用 Gacutil.exe 移除組件
 
-在命令提示字元中輸入下列命令：
+在命令提示字元中，輸入下列命令：
 
 **gacutil –u** \<*組件名稱*>
 
-在這個命令中，「組件名稱」是要從全域組件快取移除的組件名稱。
+在這個命令中，「組件名稱」** 是要從全域組件快取移除的組件名稱。
 
 > [!WARNING]
 > 您不應該使用 Gacutil.exe 移除生產系統上的組件，因為某個應用程式可能仍需要這個組件。 您應該改用 Windows Installer，以維護安裝在 GAC 中之每個組件的參考計數。
 
-下列範例會從全域組件快取中移除名為 `hello.dll` 的元件：
+下列範例會從全域程式集`hello.dll`緩存中移除名為的元件：
 
 ```console
 gacutil -u hello
@@ -45,13 +45,13 @@ gacutil -u hello
 
 ## <a name="removing-an-assembly-with-windows-installer"></a>使用 Windows Installer 移除組件
 
-從 [控制台] 中的 [程式和功能] 應用程式，選取您要解除安裝的應用程式。 如果安裝套件將組件放在 GAC 中，Windows Installer 會在其他應用程式未使用這些組件時，將組件移除。
+從 [控制台]**** 中的 [程式和功能]**** 應用程式，選取您要解除安裝的應用程式。 如果安裝套件將組件放在 GAC 中，Windows Installer 會在其他應用程式未使用這些組件時，將組件移除。
 
 > [!NOTE]
 > Windows Installer 會維護安裝在 GAC 中之組件的參考計數。 只有在組件的參考計數到達零時 (表示 Windows Installer 套件所安裝的任何應用程式都未使用這個組件)，才能從 GAC 中移除組件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用組件和全域組件快取](working-with-assemblies-and-the-gac.md)
-- [操作說明：將組件安裝到全域組件快取](install-assembly-into-gac.md)
-- [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md)
+- [如何：將元件安裝到全域組件快取中](install-assembly-into-gac.md)
+- [Gacutil .exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)

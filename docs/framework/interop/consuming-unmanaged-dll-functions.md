@@ -39,7 +39,7 @@ ms.locfileid: "79399970"
   
      [Visual Basic] 搭配使用**宣告**陳述式與**函式**和 **Lib** 關鍵字。 在某些罕見的情況下，您可以搭配使用 **DllImportAttribute** 與**共用函式**關鍵字。 關於這種情況本節會於稍後加以說明。  
   
-     [C]使用**DllImport屬性**標識 DLL 和函數。 以**靜態**和**外部**修飾詞來標記方法。  
+     編寫使用**DllImportAttribute**來識別 DLL 和函式。 以**靜態**和**外部**修飾詞來標記方法。  
   
      [C#] 使用 **DllImportAttribute** 來識別 DLL 和函式。 以**外部 "C"** 來標記包裝函式方法或函式。  
   
@@ -71,6 +71,6 @@ ms.locfileid: "79399970"
 
 ## <a name="see-also"></a>另請參閱
 
-- [與非託管代碼交互操作](index.md)
+- [與非受控程式碼交互操作](index.md)
 - [平台叫用範例](platform-invoke-examples.md)
 - [Interop 封送處理](interop-marshaling.md)

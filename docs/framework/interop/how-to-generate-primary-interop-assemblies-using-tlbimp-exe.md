@@ -35,7 +35,7 @@ ms.locfileid: "73123916"
 
 ### <a name="to-generate-a-primary-interop-assembly-using-tlbimpexe"></a>使用 Tlbimp.exe 產生主要 Interop 組件
 
-1. 在命令提示中，輸入：
+1. 在命令提示字元中，輸入：
 
     **tlbimp** *tlbfile*  **/primary /keyfile:** *filename* **/out:** *assemblyname*
 
@@ -67,6 +67,6 @@ tlbimp LibUtil.tlb /primary /keyfile:CompanyA.snk /namespace:CompanyA.LibUtil /o
 tlbimp MyLib.tlb /primary /keyfile:CompanyB.snk /namespace:CompanyB.MyLib /reference:CompanyA.LibUtil.dll /out:CompanyB.MyLib.dll
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何：登錄主要 Interop 組件](how-to-register-primary-interop-assemblies.md)

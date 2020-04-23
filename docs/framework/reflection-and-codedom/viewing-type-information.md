@@ -66,13 +66,13 @@ ms.locfileid: "73130022"
  [!code-csharp[Conceptual.Types.ViewInfo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source3.cs#3)]
  [!code-vb[Conceptual.Types.ViewInfo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source3.vb#3)]  
   
- 下例使用所有反映 **\*Info** 類別與 <xref:System.Reflection.BindingFlags> 列出指定類別的所有成員 (建構函式、欄位、屬性、事件和方法)，將成員區分為靜態和執行個體類別。  
+ 下列範例會使用所有的反映** \*資訊**類別和<xref:System.Reflection.BindingFlags>來列出所指定類別的所有成員（構造函式、欄位、屬性、事件和方法），並將成員分割成靜態和實例類別目錄。  
   
  [!code-cpp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.types.viewinfo/cpp/source4.cpp#4)]
  [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)]
  [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection.BindingFlags>
 - <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>
@@ -88,4 +88,4 @@ ms.locfileid: "73130022"
 - <xref:System.Reflection.FieldInfo>
 - <xref:System.Reflection.EventInfo>
 - <xref:System.Reflection.ParameterInfo>
-- [反映和泛用類型](reflection-and-generic-types.md)
+- [反映和泛型型別](reflection-and-generic-types.md)

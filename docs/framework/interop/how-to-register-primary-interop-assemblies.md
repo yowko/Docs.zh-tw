@@ -34,7 +34,7 @@ ms.locfileid: "73107686"
 
 ## <a name="to-register-a-primary-interop-assembly"></a>註冊主要 Interop 組件
 
-1. 在命令提示中，輸入：
+1. 在命令提示字元中，輸入：
 
      **regasm** *assemblyname*
 
@@ -47,7 +47,7 @@ ms.locfileid: "73107686"
 regasm CompanyA.UtilLib.dll
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用主要 Interop 組件設計程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
 - [找出主要 Interop 組件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - reflection,partial trust
 - link demands
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
-ms.openlocfilehash: 1d5289ce15c213024af576c99fe039f5d6c1a247
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1bdaf3abd39797274236ace4cb2967d2e7d199b2
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130074"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644190"
 ---
 # <a name="security-considerations-for-reflection"></a>反映的安全性考量
 
@@ -59,7 +59,7 @@ ms.locfileid: "73130074"
 
 從命令列執行的應用程式程式碼會以完全信任來執行。 只要不是標示為透明，就可以使用反映來存取安全性關鍵成員。 以部分信任來執行相同的程式碼時 (例如，在沙箱化應用程式定義域中)，組件的信任層級可決定它是否能夠存取安全性關鍵程式碼：如果組件有強式名稱，並安裝在全域組件快取中，則其為受信任的組件，可以呼叫安全性關鍵成員。 如果不受信任，則會變成透明 (即使它不是標示為透明)，而且不能存取安全性關鍵成員。
 
-如需 .NET Framework 4 的安全模型詳細資訊，請參閱[安全性變更](../security/security-changes.md)。
+如需 .NET Framework 4 的安全模型詳細資訊，請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。
 
 ## <a name="reflection-and-transparency"></a>反映和透明度
 
@@ -67,7 +67,7 @@ ms.locfileid: "73130074"
 
 |安全性層級|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|
 |--------------------|------------------------|----------------------------|---------------------------|
-|Critical|`true`|`false`|`false`|
+|重大|`true`|`false`|`false`|
 |安全關鍵|`true`|`true`|`false`|
 |透明|`false`|`false`|`true`|
 
@@ -110,13 +110,13 @@ ms.locfileid: "73130074"
 
 - 從 .NET Framework 2.0 開始，使用反映來取得非公開型別和成員的相關資訊時不需要任何權限。 在舊版中，會需要具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> 旗標的 <xref:System.Security.Permissions.ReflectionPermission>。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>
-- [安全性變更](../security/security-changes.md)
-- [程式碼存取安全性](../misc/code-access-security.md)
+- [安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)
+- [代碼啟用安全性](../misc/code-access-security.md)
 - [反映發出中的安全性問題](security-issues-in-reflection-emit.md)
 - [檢視類型資訊](viewing-type-information.md)
 - [套用屬性](../../standard/attributes/applying-attributes.md)

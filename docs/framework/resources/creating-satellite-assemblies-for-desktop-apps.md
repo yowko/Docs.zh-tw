@@ -60,15 +60,15 @@ ms.locfileid: "73458013"
 
 ## <a name="compiling-satellite-assemblies"></a>編譯附屬組件
 
-您可以使用[資源檔產生器（resgen.exe）](../tools/resgen-exe-resource-file-generator.md) ，將包含資源的文字檔或 XML （ *.resx*）檔案編譯成二進位 *.resources*檔案。 接著，您可以使用[元件連結器（al.exe）](../tools/al-exe-assembly-linker.md)將 *.resources*檔案編譯成附屬元件。 *Al.exe*會從您指定的 *.resources*檔建立元件。 附屬組件只能包含資源，而不能包含任何可執行程式碼。
+您可以使用[資源檔產生器（resgen.exe）](../tools/resgen-exe-resource-file-generator.md) ，將包含資源的文字檔或 XML （*.resx*）檔案編譯成二進位 *.resources*檔案。 接著，您可以使用[元件連結器（al.exe）](../tools/al-exe-assembly-linker.md)將 *.resources*檔案編譯成附屬元件。 *Al.exe*會從您指定的 *.resources*檔建立元件。 附屬組件只能包含資源，而不能包含任何可執行程式碼。
 
-下列*al.exe*命令會從德文資源檔字串中建立應用程式的附屬元件 `Example` *。*
+下列*al.exe*命令會從德文資源檔*字串*中，建立應用`Example`程式的附屬元件。
 
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll
 ```
 
-下列*al.exe*命令也會建立應用程式的附屬元件 `Example` 從檔案*字串. 刪除 .resources*。 **/Template**選項會使附屬元件繼承所有元件中繼資料，但父元件（*例如 .dll*）中的文化特性資訊除外。
+下列*al.exe*命令也會從檔案`Example` *字串*中建立應用程式的附屬元件。 **/Template**選項會使附屬元件繼承所有元件中繼資料，但父元件（*例如 .dll*）中的文化特性資訊除外。
 
 ```console
 al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll
@@ -81,7 +81,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 |`-target:lib`|指定將附屬組件編譯成程式庫 (.dll) 檔案。 因為附屬組件未包含可執行程式碼，而且不是應用程式的主要組件，所以您必須將附屬組件儲存為 DLL。|
 |`-embed:strings.de.resources`|當*al.exe*編譯元件時，指定要內嵌的資源檔名稱。 您可以在附屬組件中內嵌多個 .resources 檔案；但是，如果您遵循中樞和支點模型，則必須為每個文化特性編譯一個附屬組件。 不過，您可以為字串和物件建立個別的 .resources 檔案。|
 |`-culture:de`|指定要編譯之資源的文化特性。 Common Language Runtime 在搜尋所指定文化特性的資源時會使用這項資訊。 如果您省略這個選項， *al.exe*仍然會編譯資源，但當使用者要求時，執行時間將無法找到它。|
-|`-out:Example.resources.dll`|指定輸出檔案的名稱。 名稱必須遵循命名標準 <基底名稱>.resources.<副檔名>，其中 <基底名稱> 為主要組件的名稱，<副檔名> 則為有效的副檔名 (例如 .dll)。 請注意，執行階段無法根據輸出檔名稱來判斷附屬組件的文化特性；您必須使用 **/culture** 選項來指定它。|
+|`-out:Example.resources.dll`|指定輸出檔案的名稱。 名稱必須遵循命名標準 <基底名稱>**.resources.<副檔名>**，其中 <基底名稱>** 為主要組件的名稱，<副檔名>** 則為有效的副檔名 (例如 .dll)。 請注意，執行階段無法根據輸出檔名稱來判斷附屬組件的文化特性；您必須使用 **/culture** 選項來指定它。|
 |`-template:Example.dll`|指定附屬組件要從中繼承所有組件中繼資料的組件，但不包括文化特性欄位。 只有在您指定的組件具有[強式名稱](../../standard/assembly/strong-named.md)時，此選項才會影響附屬組件。|
   
  如需*al.exe*可用選項的完整清單，請參閱[元件連結器（al.exe）](../tools/al-exe-assembly-linker.md)。
@@ -99,11 +99,11 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
 3. 將其他文化特性 (en-US、fr-FR 和 ru-RU) 的支援新增至應用程式，如下所示：  
   
-    - 若要支援 en-us 或英文（美國）文化特性，請*建立名為 en-US 的資源* *檔，並*在其中儲存名為 `HelloString` 的單一字串，其值為 "Hi world！"。
+    - 若要支援 en-us 或英文（美國）文化特性，請建立名為 en-US 的資源*檔，並*在其中`HelloString` *儲存名為*的單一字串，其值為 "Hi world！"。
   
-    - 若要支援 fr-fr 或法文（法國）文化特性，請建立名為*Greeting.fr*的資源檔，或*Greeting.fr-fr.txt .txt*，然後將名為 `HelloString` 的單一字串儲存在其中，其值為 "Salut tout le monde！"。
+    - 若要支援 fr-fr 或法文（法國）文化特性，請建立名為*Greeting.fr*或*Greeting.fr-fr.txt*的資源檔，並在其中儲存名`HelloString`為的單一字串，其值為 "Salut tout le monde！"。
   
-    - 若要支援 ru-RU 或俄文（俄羅斯）文化特性，請建立名為*Greeting.ru*的資源檔，或*Greeting.ru-ru.txt*，並在其中儲存名為 `HelloString` 的單一字串，其值為 "Всемпривет！"。
+    - 若要支援 ru RU 或俄文（俄羅斯）文化特性，請建立名為*Greeting.ru*的資源檔，或*Greeting.ru-ru.txt*，並在其中儲存其值為 "Всемпривет！ `HelloString` " 的單一字串。
   
 4. 使用[resgen.exe](../tools/resgen-exe-resource-file-generator.md) ，將每個文字或 XML 資源檔編譯成二進位 *.resources*檔案。 輸出是一組檔案，其根檔案名與 *.resx*或 *.txt*檔案相同，但副檔名為 *.resources* 。 如果您使用 Visual Studio 建立範例，則會自動處理編譯程序。 如果您不是使用 Visual Studio，請執行下列命令，將 *.resx*檔案編譯為 *.resources*檔案：  
   
@@ -124,7 +124,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
     [!code-csharp[Conceptual.Resources.Locating#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
     [!code-vb[Conceptual.Resources.Locating#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]
 
-    如果應用程式的名稱為範例，而您是從命令列進行編譯，則C#編譯器的命令為：
+    如果應用程式的名稱為範例，而您是從命令列進行編譯，則 c # 編譯器的命令為：
 
     ```console
     csc Example.cs -res:Greeting.resources
@@ -184,7 +184,7 @@ sn –p TestKeyPair.snk PublicKey.snk
 al -target:lib -embed:strings.ja.resources -culture:ja -out:StringLibrary.resources.dll -delay+ -keyfile:PublicKey.snk
 ```
 
-選項指定組件連結器應該延遲簽署組件。 **-keyfile** 選項指定金鑰檔名稱，其中包含要用來延遲簽署組件的公開金鑰。
+**** 選項指定組件連結器應該延遲簽署組件。 **-Keyfile**選項會指定金鑰檔的名稱，其中包含要用來延遲簽署元件的公開金鑰。
 
 ### <a name="re-signing-an-assembly"></a>重新簽署組件
 
@@ -218,7 +218,7 @@ gacutil -i:StringLibrary.resources.dll
     sn –k ResKey.snk
     ```
 
-    如果您使用 Visual Studio，請使用專案 [屬性] 對話方塊的 [簽署] 索引標籤來產生金鑰檔。
+    如果您使用 Visual Studio，請使用專案 [屬性]**** 對話方塊的 [簽署]**** 索引標籤來產生金鑰檔。
 
 2. 使用下列[強式名稱工具（sn.exe）](../tools/sn-exe-strong-name-tool.md)命令來建立名為*PublicKey*的公用金鑰檔案：
 
@@ -235,11 +235,11 @@ gacutil -i:StringLibrary.resources.dll
 
 5. 將其他文化特性 (en-US、fr-FR 和 ru-RU 文化特性) 的支援新增至應用程式，如下所示：
 
-    - 若要支援 "en-us" 或英文（美國）文化特性，請*建立名為*en-US 的資源檔，並在其中儲存名為 `Greeting` 的單一*字串，其*值為 "Hello！"。
+    - 若要支援「en-us」或「英文（美國）」文化特性，請建立名為 en-US 的資源*檔，並*在其中`Greeting` *儲存名為*的單一字串，其值為 "Hello！"。
 
-    - 若要支援 "fr-fr" 或法文（法國）文化特性，請建立名為*Strings.fr*或*Strings.fr-fr.txt*的資源檔，並在其中儲存名為 `Greeting` 的單一字串，其值為 "Bon 日記！"。
+    - 若要支援 "fr-fr" 或法文（法國）文化特性，請建立名為*Strings.fr*的資源檔，或*Strings.fr-fr.txt* ，並將其值為 "Bon 日記！" 的`Greeting`單一字串儲存在其中。
 
-    - 若要支援「ru-RU」或俄文（俄羅斯）文化特性，請建立名為*Strings.ru*的資源檔，或*Strings.ru-ru.txt* ，並在其中儲存名為 `Greeting` 的單一字串，其值為 "Привет！"。
+    - 若要支援「ru-RU」或俄文（俄羅斯）文化特性，請建立名為*Strings.ru*的資源檔，或*Strings.ru-ru.txt* ，並在其中儲存名`Greeting`為的單一字串，其值為 "Привет！"。
 
 6. 使用 [Resgen.exe](../tools/resgen-exe-resource-file-generator.md)，將每一個文字或 XML 資源檔編譯成二進位 .resources 檔案。 輸出是一組檔案，其根檔案名與 *.resx*或 *.txt*檔案相同，但副檔名為 *.resources* 。 如果您使用 Visual Studio 建立範例，則會自動處理編譯程序。 如果您不是使用 Visual Studio，請執行下列命令，將 *.resx*檔案編譯為 *.resources*檔案：
 
@@ -252,7 +252,7 @@ gacutil -i:StringLibrary.resources.dll
 7. 將*StringLibrary*的下列*原始程式碼和預設*文化特性的資源，編譯成名為*StringLibrary*的延遲簽署程式庫元件：
 
     > [!IMPORTANT]
-    > 如果您使用命令列而非 Visual Studio 來建立範例，則應該將 <xref:System.Resources.ResourceManager> 類別建構函式的呼叫修改為 `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`。
+    > 如果您使用命令列而非 Visual Studio 來建立範例，您應該將對類別的<xref:System.Resources.ResourceManager>呼叫程式修改為。 `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);`
 
     [!code-csharp[Conceptual.Resources.Satellites#1](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#1)]
     [!code-vb[Conceptual.Resources.Satellites#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#1)]
@@ -297,9 +297,9 @@ gacutil -i:StringLibrary.resources.dll
     gacutil -i filename
     ```
 
-    其中 <檔案名稱> 是要註冊之檔案的名稱。
+    其中 <檔案名稱>** 是要註冊之檔案的名稱。
 
-13. 如果您使用 Visual Studio，請建立名為 `Example`的新**主控台應用程式**專案，並在其中新增*StringLibrary*的參考和下列原始程式碼，然後進行編譯。
+13. 如果您使用 Visual Studio，請建立名為`Example`的新**主控台應用程式**專案，並在其中新增*StringLibrary*的參考和下列原始程式碼，然後進行編譯。
 
     [!code-csharp[Conceptual.Resources.Satellites#3](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/example.cs#3)]
     [!code-vb[Conceptual.Resources.Satellites#3](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/example.vb#3)]
@@ -318,11 +318,11 @@ gacutil -i:StringLibrary.resources.dll
 
 14. 執行*範例 .exe*。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [封裝和部署資源](packaging-and-deploying-resources-in-desktop-apps.md)
 - [延遲簽署組件](../../standard/assembly/delay-sign.md)
-- [Al.exe (組件連結器)](../tools/al-exe-assembly-linker.md)
-- [Sn.exe (強式名稱工具)](../tools/sn-exe-strong-name-tool.md)
-- [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md)
+- [Al.exe （元件連結器）](../tools/al-exe-assembly-linker.md)
+- [Sn.exe （強式名稱工具）](../tools/sn-exe-strong-name-tool.md)
+- [Gacutil .exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)
 - [桌面應用程式中的資源](index.md)

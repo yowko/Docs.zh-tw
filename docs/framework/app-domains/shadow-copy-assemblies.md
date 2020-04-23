@@ -27,7 +27,7 @@ Common Language Runtime 在載入組件時會鎖定組件檔案，因此在卸�
 > [!IMPORTANT]
 > 唯一可以進行陰影複製的組件是儲存在應用程式目錄或其子目錄的，在設定應用程式定義域時可由 <xref:System.AppDomainSetup.ApplicationBase%2A> 和 <xref:System.AppDomainSetup.PrivateBinPath%2A> 屬性指定。 儲存在全域組件快取的組件不會進行陰影複製。
 
-本文包含下列章節：
+本文包含下列各節：
 
 - [啟用和使用陰影複製](#EnablingAndUsing)描述基本的用法，以及陰影複製可用的選項。
 
@@ -74,7 +74,7 @@ Common Language Runtime 在載入組件時會鎖定組件檔案，因此在卸�
 
 從 .NET Framework 4 開始，預設啟動行為會直接比較應用程式目錄中每個組件的檔案日期和時間，以及陰影複製目錄中複本的檔案日期和時間。 如果已更新組件，便會使用和舊版 .NET Framework 相同的程序複製組件；否則會載入陰影複製目錄中的複本。
 
-對於組件不常變更，且變更通常發生在組件一小部分的應用程式而言，會產生最大的效能改進。 如果應用程式中大部分的組件經常變更，則新的預設行為可能會導致效能變差。 您可以藉由將 [\<shadowCopyVerifyByTimestamp> 項目](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md) (並設定 `enabled="false"`) 新增至組態檔，還原舊版 .NET Framework 的啟動行為。
+對於組件不常變更，且變更通常發生在組件一小部分的應用程式而言，會產生最大的效能改進。 如果應用程式中大部分的組件經常變更，則新的預設行為可能會導致效能變差。 您可以藉由將[ \<shadowcopyverifybytimestamp>> 元素](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)新增至設定檔，以還原舊版 .NET Framework 的啟動行為`enabled="false"`。
 
 <a name="ObsoleteMethods"></a>
 
@@ -88,4 +88,4 @@ Common Language Runtime 在載入組件時會鎖定組件檔案，因此在卸�
 - <xref:System.AppDomainSetup.CachePath%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ApplicationName%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.ShadowCopyDirectories%2A?displayProperty=nameWithType>
-- [\<shadowCopyVerifyByTimestamp> 項目](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)
+- [\<Shadowcopyverifybytimestamp>> 元素](../configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)

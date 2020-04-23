@@ -42,7 +42,7 @@ BSTR MethodOne (BSTR b) {
  執行階段一律會使用 **CoTaskMemFree** 方法來釋放記憶體。 如果您正在使用的記憶體不是使用 **CoTaskMemAlloc** 方法配置，則必須使用 **IntPtr**，並使用適當方法手動釋放記憶體。 同樣地，您可以在絕不應該釋放記憶體的情況下避免自動釋放記憶體；例如，從 Kernel32.dll 使用 **GetCommandLine** 函式，該函式會傳回核心記憶體的指標。 如需手動釋放記憶體的詳細資訊，請參閱[緩衝區範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))。  
   
 ## <a name="default-marshaling-for-classes"></a>類別的預設封送處理  
- 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 有關使用您選擇的介面重寫類介面的資訊,請參閱[介紹類介面](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。  
+ 類別只能由 COM Interop 封送處理，並且一律會封送處理為介面。 在某些情況下，用來封送處理類別的介面就是所謂的類別介面。 如需以您選擇的介面來覆寫類別介面的相關資訊，請參閱[類別介面簡介](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)。  
   
 ### <a name="passing-classes-to-com"></a>將類別傳遞給 COM  
  將 Managed 類別傳遞給 COM 時，Interop 封送處理器會自動使用 COM Proxy 來包裝類別，並將 Proxy 產生的類別介面傳遞給 COM 方法呼叫。 Proxy 接著會將類別介面上的所有呼叫重新委派給 Managed 物件。 Proxy 也會公開類別未明確實作的其他介面。 Proxy 會代表類別自動實作 **IUnknown** 和 **IDispatch** 這類介面。  
@@ -172,7 +172,7 @@ internal class DelegateTest {
   
  格式化類型是複雜類型，其中包含在記憶體中明確控制其成員配置的資訊。 這項成員配置資訊會透過 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來提供。 配置可以是下列其中一個 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值：  
   
-- **佈局金德.自動**  
+- **Layoutkind.sequential 標示。 Auto**  
   
      表示 Common Language Runtime 可以為了更高的效率隨意重新排列類型的成員。 不過，當實值類型傳遞至 Unmanaged 程式碼時，成員的配置是可以預測的。 嘗試封送處理這類結構會自動造成例外狀況。  
   
@@ -377,8 +377,8 @@ interface _Graphics {
 |系統實值類型|IDL 類型|  
 |-----------------------|--------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|**日期**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**十進位**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**Guid**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**十**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  下列程式碼示範 Stdole2 型別程式庫中 Unmanaged 類型 **DATE**、**GUID**、**DECIMAL** 和 **OLE_COLOR** 的定義。  

@@ -36,10 +36,10 @@ ms.locfileid: "73123517"
   
      Interop 應用程式最適合部署為全域組件快取中具有[強式名稱](../../standard/assembly/strong-named.md)的已簽署組件。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [與 Unmanaged 程式碼互通](index.md)
-- [互通的設計考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
+- [與非受控程式碼交互操作](index.md)
+- [交互操作的設計考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
 - [COM Interop 範例：.NET 用戶端與 COM 伺服器](com-interop-sample-net-client-and-com-server.md)
 - [語言獨立性以及與語言無關的元件](../../standard/language-independence-and-language-independent-components.md)
-- [Gacutil.exe (全域組件快取工具)](../tools/gacutil-exe-gac-tool.md)
+- [Gacutil .exe （全域組件快取工具）](../tools/gacutil-exe-gac-tool.md)

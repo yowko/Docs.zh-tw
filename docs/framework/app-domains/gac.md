@@ -40,8 +40,8 @@ ms.locfileid: "73119924"
   
  全域組件快取中部署的組件都必須具有強式名稱。 將組件新增至全域組件快取時，會對構成組件的所有檔案執行完整性檢查。 快取執行這些完整性檢查，以確保組件並未遭到破壞，比方說，當檔案已經變更，但資訊清單不會反映變更。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET 中的組件](../../standard/assembly/index.md)
 - [使用組件和全域組件快取](working-with-assemblies-and-the-gac.md)
-- [強式名稱的組件](../../standard/assembly/strong-named.md)
+- [強式名稱的元件](../../standard/assembly/strong-named.md)

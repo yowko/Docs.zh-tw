@@ -69,7 +69,7 @@ ms.locfileid: "73130162"
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8. 定義使用泛型型別之型別參數的方法。 請注意，這類方法不是泛型，除非它們有自己的型別參數清單。 下列程式碼定義 `static` 方法 (Visual Basic 為 `Shared`)，其接受 `TFirst` 陣列並傳回包含陣列所有項目的 `List<TFirst>` (Visual Basic 為 `List(Of TFirst)`)。 若要定義這個方法，即必須在泛型型別定義 `List<T>` 呼叫 <xref:System.Type.MakeGenericType%2A>，以建立類型 `List<TFirst>`。 （當您使用 `typeof` 運算子（Visual Basic 中的`GetType`）來取得泛型型別定義時，會省略 `T`）。參數類型是使用 <xref:System.Type.MakeArrayType%2A> 方法所建立。  
+8. 定義使用泛型型別之型別參數的方法。 請注意，這類方法不是泛型，除非它們有自己的型別參數清單。 下列程式碼定義 `static` 方法 (Visual Basic 為 `Shared`)，其接受 `TFirst` 陣列並傳回包含陣列所有項目的 `List<TFirst>` (Visual Basic 為 `List(Of TFirst)`)。 若要定義這個方法，即必須在泛型型別定義 `List<T>` 呼叫 <xref:System.Type.MakeGenericType%2A>，以建立類型 `List<TFirst>`。 （當`T`您使用`typeof`運算子（`GetType`在 Visual Basic 中）來取得泛型型別定義時，會省略。）參數類型是使用<xref:System.Type.MakeArrayType%2A>方法所建立。  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -79,7 +79,7 @@ ms.locfileid: "73130162"
   
      <xref:System.Reflection.Emit.GenericTypeParameterBuilder> 不支援 <xref:System.Type.GetConstructor%2A> 方法，所以不可能直接取得 `List<TFirst>` 的建構函式。 首先，必須取得泛型型別定義 `List<T>` 的建構函式，然後呼叫能將它轉換成對應的 `List<TFirst>` 建構函式的方法。  
   
-     此程式碼範例所使用的建構函式接受 `IEnumerable<T>`。 但是請注意，這不是 <xref:System.Collections.Generic.IEnumerable%601> 泛型介面的泛型型別定義；相反地，來自 `List<T>` 的型別參數 `T` 必須取代 `IEnumerable<T>` 的型別參數 `T`。 (這似乎很令人困惑，只因為這兩個類型都有名為 `T` 的型別參數。 這就是為什麼此程式碼範例會使用 `TFirst` 和 `TSecond`的名稱）。若要取得函式引數的型別，請從泛型型別定義 `IEnumerable<T>` 開始，並使用 `List<T>`的第一個泛型型別參數來呼叫 <xref:System.Type.MakeGenericType%2A>。 建構函式引數清單必須當成陣列傳遞，本例中只有一個引數。  
+     此程式碼範例所使用的建構函式接受 `IEnumerable<T>`。 但是請注意，這不是 <xref:System.Collections.Generic.IEnumerable%601> 泛型介面的泛型型別定義；相反地，來自 `List<T>` 的型別參數 `T` 必須取代 `IEnumerable<T>` 的型別參數 `T`。 (這似乎很令人困惑，只因為這兩個類型都有名為 `T` 的型別參數。 這就是為什麼此程式碼範例會`TFirst`使用`TSecond`名稱和的原因）。若要取得函式引數的型別，請從泛型型`IEnumerable<T>`別定義<xref:System.Type.MakeGenericType%2A>開始，並使用的第一個`List<T>`泛型型別參數呼叫。 建構函式引數清單必須當成陣列傳遞，本例中只有一個引數。  
   
     > [!NOTE]
     > 當您在 C# 中使用 `typeof` 運算子時，泛型型別定義會表示為 `IEnumerable<>`；在 Visual Basic 中使用 `GetType` 運算子時，會表示為 `IEnumerable(Of )`。  
@@ -96,7 +96,7 @@ ms.locfileid: "73130162"
      [!code-csharp[EmitGenericType#8](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#8)]
      [!code-vb[EmitGenericType#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#8)]  
   
-11. 叫用方法。 `ExampleMethod` 不是泛型，但其所屬類型是泛型，因此為取得可以叫用的 <xref:System.Reflection.MethodInfo>，必須從 `Sample` 的類型定義建立建構的類型。 建構的類型使用符合 `TFirst` 條件約束的 `Example` 類別，因為它是參考型別，且有預設的無參數建構函式；也使用符合 `TSecond` 條件約束的 `ExampleDerived` 類別。 （您可以在範例程式碼一節中找到 `ExampleDerived` 的程式碼）。這兩種類型會傳遞給 <xref:System.Type.MakeGenericType%2A> 以建立結構化型別。 然後，使用 <xref:System.Type.GetMethod%2A> 方法取得 <xref:System.Reflection.MethodInfo>。  
+11. 叫用方法。 `ExampleMethod` 不是泛型，但其所屬類型是泛型，因此為取得可以叫用的 <xref:System.Reflection.MethodInfo>，必須從 `Sample` 的類型定義建立建構的類型。 建構的類型使用符合 `TFirst` 條件約束的 `Example` 類別，因為它是參考型別，且有預設的無參數建構函式；也使用符合 `TSecond` 條件約束的 `ExampleDerived` 類別。 （的程式碼`ExampleDerived`可在範例程式碼一節中找到）。這兩種類型會傳遞<xref:System.Type.MakeGenericType%2A>至，以建立結構化類型。 然後，使用 <xref:System.Type.GetMethod%2A> 方法取得 <xref:System.Reflection.MethodInfo>。  
   
      [!code-cpp[EmitGenericType#9](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#9)]
      [!code-csharp[EmitGenericType#9](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#9)]
@@ -125,7 +125,7 @@ ms.locfileid: "73130162"
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]
  [!code-vb[EmitGenericType#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#1)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
 - [使用反映發出](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))

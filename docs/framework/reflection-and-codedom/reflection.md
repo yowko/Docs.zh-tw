@@ -30,7 +30,7 @@ ms.locfileid: "79180480"
 ---
 # <a name="reflection-in-net"></a>.NET 中的反映
 
-<xref:System.Reflection>命名空間中的類以及<xref:System.Type?displayProperty=nameWithType>以及 ， 使您能夠獲取有關載入[程式集](../../standard/assembly/index.md)及其內定義的類型的資訊，例如[類](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和數值型別（即[結構和](../../standard/base-types/common-type-system.md#structures)[枚舉](../../standard/base-types/common-type-system.md#enumerations)）。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
+<xref:System.Reflection>命名<xref:System.Type?displayProperty=nameWithType>空間中的類別連同，可讓您取得已載入[元件](../../standard/assembly/index.md)和其中所定義類型的相關資訊，例如[類別](../../standard/base-types/common-type-system.md#classes)、[介面](../../standard/base-types/common-type-system.md#interfaces)和實數值型別（也就是[結構](../../standard/base-types/common-type-system.md#structures)和列舉） [ ](../../standard/base-types/common-type-system.md#enumerations)。 您也可以使用反映在執行階段建立類型執行個體，並叫用和存取它們。 如需反映特定層面的主題，請參閱此概觀結尾的[相關主題](#related_topics)。
   
 [Common Language Runtime](../../standard/clr.md) 載入器會管理[應用程式定義域](../app-domains/application-domains.md)，這會在有相同應用程式範圍的物件周圍構成定義的界限。 這個管理包含載入每個組件至適當的應用程式定義域和控制每個組件內類型階層的記憶體配置。  
   

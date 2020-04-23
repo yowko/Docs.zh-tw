@@ -13,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
-ms.openlocfilehash: af1bfb89b01a316a858cbb45bf19a26a16d90016
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7cb06da74a21dab6f60f0d4c3ac1748fcbe4526
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119943"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644307"
 ---
 # <a name="how-to-build-a-net-framework-single-file-assembly"></a>如何：建立 .NET Framework 單一檔案元件
 
@@ -31,13 +31,13 @@ ms.locfileid: "73119943"
 
 ## <a name="create-an-assembly-with-an-exe-extension"></a>建立具有 .exe 副檔名的元件
 
-在命令提示字元中輸入下列命令：
+在命令提示字元中，輸入下列命令：
 
 \<*編譯器命令*> \<*模組名稱*>
 
-在這個命令中，「編譯器命令」是您程式碼模組所用語言的編譯器命令，而「模組名稱」則是編譯至組件的程式碼模組名稱。
+在這個命令中，「編譯器命令」** 是您程式碼模組所用語言的編譯器命令，而「模組名稱」** 則是編譯至組件的程式碼模組名稱。
 
-下列範例會從名為 `myCode`的程式碼模組建立名為*myCode*的元件。
+下列範例會從名`myCode`為的程式碼模組建立名為*myCode*的元件。
 
 ```csharp
 csc myCode.cs
@@ -49,13 +49,13 @@ vbc myCode.vb
 
 ## <a name="create-an-assembly-with-an-exe-extension-and-specify-the-output-file-name"></a>建立副檔名為 .exe 的元件，並指定輸出檔名稱
 
-在命令提示字元中輸入下列命令：
+在命令提示字元中，輸入下列命令：
 
-\<*編譯器命令*>  **/out:** \<*檔案名稱*> \<*模組名稱*>
+\<*編譯器命令*> **/out：**\<*file name*> 檔案名\<*模組名稱*>
 
-在這個命令中，「編譯器命令」是您程式碼模組所用語言的編譯器命令、「檔案名稱」是輸出檔名稱，而「模組名稱」則是編譯至組件的程式碼模組名稱。
+在這個命令中，「編譯器命令」** 是您程式碼模組所用語言的編譯器命令、「檔案名稱」** 是輸出檔名稱，而「模組名稱」** 則是編譯至組件的程式碼模組名稱。
 
-下列範例會從名為 `myCode`的程式碼模組建立名為*myAssembly*的元件。
+下列範例會從名`myCode`為的程式碼模組建立名為*myAssembly*的元件。
 
 ```csharp
 csc -out:myAssembly.exe myCode.cs
@@ -70,11 +70,11 @@ vbc -out:myAssembly.exe myCode.vb
 
 若要建立程式庫元件，請在命令提示字元中輸入下列命令：
 
-\<編譯器命令>  **-t:library** \<模組名稱>
+\<*編譯器命令*> **-t:library** \<*模組名稱*>
 
-在這個命令中，「編譯器命令」是您程式碼模組所用語言的編譯器命令，而「模組名稱」則是編譯至組件的程式碼模組名稱。 您也可以使用其他編譯器選項，例如 **out:** 選項。
+在這個命令中，「編譯器命令」** 是您程式碼模組所用語言的編譯器命令，而「模組名稱」** 則是編譯至組件的程式碼模組名稱。 您也可以使用其他編譯器選項，例如 **out:** 選項。
 
-下列範例會從名為 `myCode`的程式碼模組建立名為*myCodeAssembly 的連結*庫元件。
+下列範例會從名`myCode`為的程式碼模組建立名為 myCodeAssembly 的*連結*庫元件。
 
 ```csharp
 csc -out:myCodeLibrary.dll -t:library myCode.cs
@@ -84,9 +84,9 @@ csc -out:myCodeLibrary.dll -t:library myCode.cs
 vbc -out:myCodeLibrary.dll -t:library myCode.vb
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [建立元件](../../standard/assembly/create.md)
-- [多檔案元件](multifile-assemblies.md)
+- [建立組件](../../standard/assembly/create.md)
+- [多檔案組件](multifile-assemblies.md)
 - [如何：建立多檔案元件](build-multifile-assembly.md)
-- [具有元件的程式](../../standard/assembly/program.md)
+- [具有組件的程式](../../standard/assembly/index.md)

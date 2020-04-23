@@ -33,7 +33,7 @@ ms.locfileid: "79181453"
 |------------------------|------------------|----------|-----------------|------------------------|  
 |**ELEMENT_TYPE_ARRAY**|依類型指定。|依順位指定。|選擇性依界限指定。|*類型* **[** *n*，*m* **]**|  
 |**ELEMENT_TYPE_CLASS**|Unknown|Unknown|Unknown|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|依類型指定。|1|0|*類型* **=** *n* **|**|  
+|**ELEMENT_TYPE_SZARRAY**|依類型指定。|1|0|*類型* **[** *n* **]**|  
   
 ## <a name="unmanaged-arrays"></a>Unmanaged 陣列  
  Unmanaged 陣列是具有固定或變動長度的 COM 樣式安全陣列或 C 樣式陣列。 安全陣列是自我描述陣列，具有關聯陣列資料的類型、順位和界限。 C 樣式陣列是固定下限為 0 的一維類型陣列。 封送處理服務具有這兩種類型之陣列的有限支援。  
@@ -43,8 +43,8 @@ ms.locfileid: "79181453"
   
 |Unmanaged 類型|匯入的類型|  
 |--------------------|-------------------|  
-|**安全陣列（***類型***）**|**ELEMENT_TYPE_SZARRAY****\<***轉換類型***>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。 不是順位 = 1 或下限 = 0 的安全陣列無法封送處理為 **SZARRAY**。|  
-|*類型*  **|**|**ELEMENT_TYPE_SZARRAY****\<***轉換類型***>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。|  
+|**SafeArray （** *類型* **）**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType***>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。 不是順位 = 1 或下限 = 0 的安全陣列無法封送處理為 **SZARRAY**。|  
+|*類型*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType***>**<br /><br /> 順位 = 1，下限 = 0。 只有在 Managed 簽章中提供時，才會知道大小。|  
   
 ### <a name="safe-arrays"></a>安全陣列  
  將安全陣列從型別程式庫匯入至 .NET 組件時，會將陣列轉換成一維已知類型陣列 (例如 **int**)。 套用至參數的相同類型轉換規則也會套用至陣列項目。 例如，**BSTR** 類型的安全陣列變成 Managed 字串陣列，而變異值的安全陣列變成 Managed 物件陣列。 **SAFEARRAY** 項目類型擷取自型別程式庫，並儲存至 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉的 **SAFEARRAY** 值中。  
@@ -182,8 +182,8 @@ void New3(ref String ar);
   
 |Managed 陣列類型|匯出為|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY****\<***類型***>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 類型是在簽章中提供。 順位一律為 1，下限一律為 0。 在執行階段，一律會知道大小。|  
-|**ELEMENT_TYPE_ARRAY****\<***類型***>****>***bounds**rank*排名**\<**= 邊界**>****\<**||**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 在簽章中，提供類型、順位和界限。 在執行階段，一律會知道大小。|  
+|**ELEMENT_TYPE_SZARRAY** **\<** *類型***>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 類型是在簽章中提供。 順位一律為 1，下限一律為 0。 在執行階段，一律會知道大小。|  
+|**ELEMENT_TYPE_ARRAY** **\<** *類型***\<** *bounds* *rank*等級 [界限**>**] **>** **\<** **>**|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 在簽章中，提供類型、順位和界限。 在執行階段，一律會知道大小。|  
 |**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 在執行階段，一律可辨識類型、順位、界限和大小。|  
   
  與包含 LPSTR 或 LPWSTR 之結構陣列有關的 OLE Automation 限制。  因此，必須將 [字串]**** 欄位封送處理為 **UnmanagedType.BSTR**。 否則便會擲回例外狀況。  

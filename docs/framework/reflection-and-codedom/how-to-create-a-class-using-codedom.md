@@ -116,7 +116,7 @@ The object:
   
 - 此程式碼範例需要設定 `FullTrust` 權限，才能順利執行。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 CodeDOM](using-the-codedom.md)
 - [從 CodeDOM 圖表產生和編譯原始程式碼](generating-and-compiling-source-code-from-a-codedom-graph.md)

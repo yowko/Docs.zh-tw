@@ -52,6 +52,6 @@ ms.locfileid: "73124968"
     > [!NOTE]
     > 並存執行是 .NET Framework 的功能，可讓多版執行階段，以及使用某版執行階段的多版應用程式和元件，同時在同一部電腦上執行。 並存執行和並存組件是提供並行功能的不同機制。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [如何：設定免註冊啟用的 .NET Framework 架構 COM 元件](configure-net-framework-based-com-components-for-reg.md)

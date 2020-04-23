@@ -64,7 +64,7 @@ End Module
   
  **BindToMethod** 會傳回要叫用的 <xref:System.Reflection.MethodBase>，如果不可能進行這種叫用則傳回 null 參考 (在 Visual Basic 中為 **Nothing**)。 **MethodBase** 傳回值不一定要是 *match* 參數中所包含的其中一者，雖然這是常見的情況。  
   
- 有 ByRef 引數存在時，呼叫端可能會想要取回它們。 因此，**Binder** 允許用戶端將引數的陣列對應回其原始形式，如果 **BindToMethod** 已操作引數陣列的話。 若要這樣做，必須向呼叫端保證，引數的順序不變。 依名稱傳遞引數時，**Binder** 會重新排列引數陣列，那也是呼叫端看到的情況。 如需詳細資訊，請參閱<xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>。  
+ 有 ByRef 引數存在時，呼叫端可能會想要取回它們。 因此，**Binder** 允許用戶端將引數的陣列對應回其原始形式，如果 **BindToMethod** 已操作引數陣列的話。 若要這樣做，必須向呼叫端保證，引數的順序不變。 依名稱傳遞引數時，**Binder** 會重新排列引數陣列，那也是呼叫端看到的情況。 如需詳細資訊，請參閱 <xref:System.Reflection.Binder.ReorderArgumentArray%2A?displayProperty=nameWithType>。  
   
  可用成員的集合是在類型或任何基底類型中定義的成員。 如果指定 <xref:System.Reflection.BindingFlags>，則會在集合中傳回任何存取範圍的成員。 如果未指定 **BindingFlags.NonPublic**，繫結器必須強制執行存取範圍規則。 指定 **Public** 或 **NonPublic** 繫結旗標時，您也必須指定 **Instance** 或 **Static** 繫結旗標，否則不會傳回任何成員。  
   
@@ -80,8 +80,8 @@ End Module
   
 |來源類型|目標類型|  
 |-----------------|-----------------|  
-|任何類型|基底類型|  
-|任何類型|實作的介面|  
+|任何型別|基底類型|  
+|任何型別|實作的介面|  
 |Char|UInt16、UInt32、Int32、UInt64、Int64、Single、Double|  
 |Byte|Char、UInt16、Int16、UInt32、Int32、UInt64、Int64、Single、Double|  
 |SByte|Int16、Int32、Int64、Single、Double|  
@@ -96,9 +96,9 @@ End Module
   
  <xref:System.Type> 類別具有 **Get** 方法，使用類型 **Binder** 的參數來解析對特定成員的參考。 <xref:System.Type.GetConstructor%2A?displayProperty=nameWithType>、<xref:System.Type.GetMethod%2A?displayProperty=nameWithType> 和 <xref:System.Type.GetProperty%2A?displayProperty=nameWithType> 會搜尋目前類型的特定成員，方法是提供該成員的簽章資訊。 接著回來呼叫 <xref:System.Reflection.Binder.SelectMethod%2A?displayProperty=nameWithType> 和 <xref:System.Reflection.Binder.SelectProperty%2A?displayProperty=nameWithType>，選取適當方法的指定簽章資訊。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Type.InvokeMember%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - [檢視類型資訊](viewing-type-information.md)
-- [.NET Framework 中的型別轉換](../../standard/base-types/type-conversion.md)
+- [.NET Framework 中的類型轉換](../../standard/base-types/type-conversion.md)

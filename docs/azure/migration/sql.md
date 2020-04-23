@@ -42,9 +42,9 @@ Azure 有兩種主要方式可以移轉生產 SQL Server 資料庫：
 
 ## <a name="choosing-iaas-or-paas"></a>選擇 IaaS 或 PaaS
 
-在評估資料庫移轉位置時,確定 IaaS 或 PaaS 是否適合您。
+在評估要遷移資料庫的位置時，請判斷 IaaS 或 PaaS 是否較適合您。
 
-**在 Azure VM 中選擇 SQL 伺服器,如果:**
+**如果有下列情況，請選擇 Azure Vm 中的 SQL Server：**
 
 * 您想要「隨即轉移」資料庫和應用程式，且讓變更最少或無變更。
 * 您想要完整控制資料庫伺服器和其執行位置所在的 VM。
@@ -61,9 +61,9 @@ Azure 有兩種主要方式可以移轉生產 SQL Server 資料庫：
 | 狀況 | Azure VM 中的 SQL Server | Azure SQL Database |
 |----------|-------------------------|--------------------|
 | 遷移 | 資料庫所需變更最少。 | 如果您使用 Azure SQL 中無法使用的功能 (由[資料移轉小幫手](https://www.microsoft.com/download/details.aspx?id=53595)判定)，或如果您有其他相依性，如在本機安裝的可執行檔，則可能需要變更資料庫。|
-| 管理可用性、復原及升級 | 可用性和恢復是手動配置的。 升級可以透過 [VM 擴展集](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)自動化。 | 為您自動管理。 |
+| 管理可用性、復原及升級 | 可用性和復原是以手動方式設定。 升級可以透過 [VM 擴展集](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade)自動化。 | 為您自動管理。 |
 | 基礎作業系統設定 | 手動設定。 | 為您自動管理。 |
-| 管理資料庫大小 | 每個 SQL Server 實例最多支援 64 TB 的儲存。 | 在需要水準分區之前,支援 4 TB 的儲存。 |
+| 管理資料庫大小 | 針對每個 SQL Server 實例最多支援 64 TB 的儲存體。 | 在需要水準資料分割之前，支援 4 TB 的儲存空間。 |
 | 管理成本 | 您必須管理 SQL Server 授權成本、Windows Server 授權成本以及 VM 成本 (根據核心、RAM 和儲存體)。 | 您必須管理服務成本 (根據 [eDTU 或 DTU](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu)、儲存體以及資料庫數目 (如果使用彈性集區))。 您也必須管理任何 SLA 的成本。 |
 
 若要深入了解兩者間的差異，請參閱[選擇雲端 SQL Server 選項：Azure SQL Database 或 Azure VM 上的 SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)。
@@ -74,9 +74,9 @@ Azure 有兩種主要方式可以移轉生產 SQL Server 資料庫：
 
     可以！ 所有 Microsoft SQL 工具皆可搭配使用這兩項服務。 但 SSRS 並非 Azure SQL Database 的一部分，建議您在 Azure VM 中執行它，然後將其指向您的資料庫執行個體。
 
-* **我想去PaaS,但我不確定我的資料庫是否相容。是否有工具可以提供説明?**
+* **我想要用 PaaS，但我不確定資料庫是否相容。有工具可以協助嗎？**
 
-    是。 [資料移轉小幫手](https://www.microsoft.com/download/details.aspx?id=53595)是移轉到 Azure SQL Database 的一部分所用工具。 [Azure 資料庫遷移服務](https://azure.microsoft.com/campaigns/database-migration/)是可用於 IaaS 或 PaaS 的預覽服務。
+    是。 [資料移轉小幫手](https://www.microsoft.com/download/details.aspx?id=53595)是移轉到 Azure SQL Database 的一部分所用工具。 [Azure 資料庫移轉服務](https://azure.microsoft.com/campaigns/database-migration/)是一項預覽服務，可供您用於 IaaS 或 PaaS。
 
 * **我可以預估成本嗎？**
 

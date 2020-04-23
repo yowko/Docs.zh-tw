@@ -73,7 +73,7 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**例外**|  
+|**COR_E_EXCEPTION**|**例外狀況**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND 或 ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -107,7 +107,7 @@ CMyClass::MethodThatThrows
 |**COR_E_SERIALIZATION**|**SerializationException**|  
 |**COR_E_STACKOVERFLOW 或 ERROR_STACK_OVERFLOW**|**StackOverflowException**|  
 |**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
-|**COR_E_SYSTEM**|**系統例外**|  
+|**COR_E_SYSTEM**|**SystemException**|  
 |**COR_E_TARGET**|**TargetException**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
 |**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
@@ -130,12 +130,12 @@ CMyClass::MethodThatThrows
   
 |例外狀況欄位|來自 COM 的資訊來源|  
 |---------------------|------------------------------------|  
-|**錯誤代碼**|從呼叫傳回的 HRESULT。|  
+|**錯誤碼**|從呼叫傳回的 HRESULT。|  
 |**HelpLink**|如果 **IErrorInfo->HelpContext** 是非零值，則字串是由串連 **IErrorInfo->GetHelpFile**、"#" 和 **IErrorInfo->GetHelpContext** 所構成。 否則，字串是從 **IErrorInfo->GetHelpFile** 所傳回。|  
-|**InnerException**|始終為空引用（視覺基本值中**無內容**）。|  
-|**消息**|從 **IErrorInfo->GetDescription** 傳回的字串。|  
+|**InnerException**|一律為 null 參考（在 Visual Basic 中為**任何內容**）。|  
+|**訊息**|從 **IErrorInfo->GetDescription** 傳回的字串。|  
 |**來源**|從 **IErrorInfo->GetSource** 傳回的字串。|  
-|**堆疊追蹤**|堆疊追蹤。|  
+|**StackTrace**|堆疊追蹤。|  
 |**TargetSite**|傳回失敗 HRESULT 之方法的名稱。|  
   
  如 **Message**、**Source** 和 **StackTrace** 之類的例外狀況欄位，並不適用於 **StackOverflowException**。  
@@ -143,4 +143,4 @@ CMyClass::MethodThatThrows
 ## <a name="see-also"></a>另請參閱
 
 - [進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
-- [異常](../../standard/exceptions/index.md)
+- [例外狀況](../../standard/exceptions/index.md)

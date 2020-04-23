@@ -1,6 +1,6 @@
 ---
 title: 資料繫結概觀
-description: 瞭解可在 .NET Core 的 Windows 演示文稿基礎中添加到專案中的不同數據源。 數據源可以綁定到 XAML 元素以創建動態應用。
+description: 瞭解您可以在適用于 .NET Core 的 Windows Presentation Foundation 中新增至專案的不同資料來源。 資料來源可以系結至 XAML 元素，以建立動態應用程式。
 author: thraka
 ms.date: 09/19/2019
 ms.author: adegeo
@@ -14,304 +14,304 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/24/2020
 ms.locfileid: "82072008"
 ---
-# <a name="data-binding-overview-in-wpf"></a>WPF 中的數據繫結概述
+# <a name="data-binding-overview-in-wpf"></a>WPF 中的資料系結總覽
 
-Windows 示範基礎 (WPF) 中的數據繫結為應用提供一種簡單且一致的方式來呈現資料並與之互動。 元素可以綁定到來自各種資料源的數據,其形式是 .NET 物件和 XML。 任何<xref:System.Windows.Controls.ContentControl><xref:System.Windows.Controls.Button>(<xref:System.Windows.Controls.ItemsControl>如<xref:System.Windows.Controls.ListBox><xref:System.Windows.Controls.ListView>和 ) 的任何 ,如和 , 都有內建功能,可靈活設置單個數據項或數據項集合的樣式。 您可以在資料上方產生排序、篩選和群組檢視。
+Windows Presentation Foundation （WPF）中的資料系結可提供簡單且一致的方式，讓應用程式呈現資料並與之互動。 元素可以系結至各種資料來源中的資料，其形式為 .NET 物件和 XML。 任何<xref:System.Windows.Controls.ContentControl>之類<xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ItemsControl>的專案（例如和<xref:System.Windows.Controls.ListView>）都具有內建功能，可啟用單一資料項目或資料項目集合的彈性樣式。 <xref:System.Windows.Controls.ListBox> 您可以在資料上方產生排序、篩選和群組檢視。
 
-WPF 中的數據綁定功能與傳統模型相比具有幾個優勢,包括通過多種屬性對數據綁定的固有支援、數據靈活的 UI 表示形式以及業務邏輯與 UI 的完全分離。
+WPF 中的資料系結功能有數個優於傳統模型的優點，包括透過廣泛屬性的資料系結的固有支援、彈性的資料 UI 標記法，以及從 UI 清楚區分商務邏輯。
 
-本文首先討論 WPF 數據綁定的基本概念,然後介紹數據<xref:System.Windows.Data.Binding>綁定的 類和其他功能的用法。
+本文會先討論 WPF 資料系結的基本概念，然後涵蓋<xref:System.Windows.Data.Binding>類別的使用方式，以及資料系結的其他功能。
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
 ## <a name="what-is-data-binding"></a>資料繫結是什麼？
 
-數據綁定是在應用 UI 及其顯示的數據之間建立連接的過程。 如果繫結具有正確的設定而且資料提供了適當的通知，當資料變更其值時，繫結至資料的項目就會自動反映變更。 資料繫結也代表在元素資料的外部表示變更時，基礎資料也會自動更新以反映變更。 例如,如果使用者編輯`TextBox`元素中的值,則基礎數據值將自動更新以反映該更改。
+資料系結是在應用程式 UI 與其顯示的資料之間建立連線的進程。 如果繫結具有正確的設定而且資料提供了適當的通知，當資料變更其值時，繫結至資料的項目就會自動反映變更。 資料繫結也代表在元素資料的外部表示變更時，基礎資料也會自動更新以反映變更。 例如，如果使用者編輯`TextBox`元素中的值，則會自動更新基礎資料值以反映該變更。
 
-數據綁定的典型用途是將伺服器或本地配置數據放入窗體或其他 UI 控件中。 在 WPF 中,這一概念被擴展為包括將各種屬性綁定到各種數據源。 在 WPF 中,元素的依賴項屬性可以綁定到 .NET 物件(包括與 Web 服務和 Web 屬性關聯的 ADO.NET 物件或物件)和 XML 數據。
+資料系結的一般用法是將伺服器或本機設定資料放入表單或其他 UI 控制項中。 在 WPF 中，此概念已擴充為包含將廣泛的屬性系結至各種不同的資料來源。 在 WPF 中，元素的相依性屬性可以系結至 .NET 物件（包括 ADO.NET 物件或與 Web 服務和 Web 屬性相關聯的物件）和 XML 資料。
 
-有關資料綁定的範例,請查看[資料綁定演示][data-binding-demo]中的以下應用 UI,該演示顯示拍賣專案的清單。
+如需資料系結的範例，請參閱資料系結[示範][data-binding-demo]中的下列應用程式 UI，其會顯示拍賣專案的清單。
 
-![資料繫結圖樣螢幕擷取](./media/data-binding-overview/demo.png "DataBinding_DataBindingDemo")
+![資料系結範例螢幕擷取畫面](./media/data-binding-overview/demo.png "DataBinding_DataBindingDemo")
 
-該應用程式展示資料線線的以下功能:
+應用程式會示範資料系結的下列功能：
 
-- ListBox 的內容綁定到*拍賣項目物件*的集合。 *拍賣項目物件*具有*描述*、*啟動價格*、*開始日期*、*類別*、*特殊功能*等屬性。
+- ListBox 的內容會系結至*AuctionItem*物件的集合。 *AuctionItem*物件具有如*Description*、 *StartPrice*、*起始*處、 *Category*、 *SpecialFeatures*等等的屬性。
 
-- 中顯示的數據(*拍賣項目*`ListBox`物件) 是範本化的,以便顯示每個項目的說明和當前價格。 樣本是使用 建立的<xref:System.Windows.DataTemplate>。 除此之外，每個項目的外觀取決於所顯示 *AuctionItem* 的 *SpecialFeatures* 值。 如果 *AuctionItem* 的 *SpecialFeatures* 值是 *Color*，項目就具有藍色框線。 如果值是 *Highlight*，項目就具有橘色框線和星號。 [資料範本化](#data-templating)一節會提供資料範本化的相關資訊。
+- 中顯示的資料（*AuctionItem*物件） `ListBox`會進行樣板化，以顯示每個專案的描述和目前價格。 此範本是使用所建立<xref:System.Windows.DataTemplate>。 除此之外，每個項目的外觀取決於所顯示 *AuctionItem* 的 *SpecialFeatures* 值。 如果 *AuctionItem* 的 *SpecialFeatures* 值是 *Color*，項目就具有藍色框線。 如果值是 *Highlight*，項目就具有橘色框線和星號。 [資料範本化](#data-templating)一節會提供資料範本化的相關資訊。
 
-- 用戶可以使用`CheckBoxes`提供的對數據進行分組、篩選或排序。 在上面的圖中,按**類別**分組和**按類別和日期**`CheckBoxes`排序。 您可能已經注意到，資料的群組化是依據產品的分類，且分類名稱是以字母順序排列。 雖然在圖中很難辨識，但項目在每個分類內也有以開始日期排序。 排序是使用*集合視圖*完成的。 [綁定到集合](#binding-to-collections)部分討論集合檢視。
+- 使用者可以使用提供的`CheckBoxes`來分組、篩選或排序資料。 在上圖中，已選取 [**依類別目錄**] 和 [**依類別目錄排序] 和 [日期** `CheckBoxes` ]。 您可能已經注意到，資料的群組化是依據產品的分類，且分類名稱是以字母順序排列。 雖然在圖中很難辨識，但項目在每個分類內也有以開始日期排序。 排序是使用*集合視圖*來完成。 系結[至集合](#binding-to-collections)一節會討論集合視圖。
 
-- 當使用者選擇項目時,<xref:System.Windows.Controls.ContentControl>將顯示所選項目的詳細資訊。 此體驗為*主詳細資訊機制*。 [主詳細資訊方案](#master-detail-binding-scenario)部分提供有關此類型的綁定的資訊。
+- 當使用者選取專案時，會<xref:System.Windows.Controls.ContentControl>顯示所選取專案的詳細資料。 這種體驗稱為「*主要詳細資料」案例*。 [主版詳細資料案例](#master-detail-binding-scenario)一節提供此系結類型的相關資訊。
 
-- *StartDate*屬性的類型<xref:System.DateTime>為 ,它返回包含時間到毫秒的日期。 在此應用中,已使用自訂轉換器,以便顯示較短的日期字串。 「[資料轉換](#data-conversion)」部分提供有關轉換器的資訊。
+- *起始*屬性的類型是，它<xref:System.DateTime>會傳回包含毫秒時間的日期。 在此應用程式中，已使用自訂的轉換器，因此會顯示較短的日期字串。 [[資料轉換](#data-conversion)] 區段提供有關轉換器的資訊。
 
-當使用者選擇「*添加產品*」按鈕時,將出現以下窗體。
+當使用者選取 [*新增產品*] 按鈕時，會出現下列表單。
 
 ![加入產品清單頁面](./media/data-binding-overview/demo-addproductlisting.png "DataBinding_Demo_AddProductListing")
 
-用戶可以編輯表單中的欄位,使用簡短或詳細的預覽窗格預覽產品清單,然後選擇`Submit`添加新產品清單。 任何現有的分組、篩選和排序設置都將應用於新條目。 在這種特定情形下，輸入上圖的項目會在 [Computer (電腦)]** 分類內顯示為第二個項目。
+使用者可以編輯表單中的欄位、使用簡短或詳細的預覽窗格來預覽產品清單，並選取`Submit`加入新的產品清單。 任何現有的群組、篩選和排序設定都會套用至新的專案。 在這種特定情形下，輸入上圖的項目會在 [Computer (電腦)]** 分類內顯示為第二個項目。
 
-此圖像中未顯示的驗證邏輯是*開始日期*<xref:System.Windows.Controls.TextBox>中提供的驗證邏輯。 如果使用者輸入無效日期(格式無效或過去日期),則會在旁邊使用和<xref:System.Windows.Controls.ToolTip>紅色感嘆號通知使用者<xref:System.Windows.Controls.TextBox>。 [資料驗證](#data-validation)一節會討論如何建立驗證邏輯。
+此圖中未顯示的是*開始日期* <xref:System.Windows.Controls.TextBox>中所提供的驗證邏輯。 如果使用者輸入不正確日期（格式無效或過去的日期），使用者就會收到通知， <xref:System.Windows.Controls.ToolTip>並在旁邊出現紅色驚嘆號。 <xref:System.Windows.Controls.TextBox> [資料驗證](#data-validation)一節會討論如何建立驗證邏輯。
 
-在討論上述數據綁定的不同功能之前,我們將首先討論對理解 WPF 數據綁定至關重要的基本概念。
+在進入上述的資料系結的不同功能之前，我們會先討論瞭解 WPF 資料系結的重要概念。
 
-## <a name="basic-data-binding-concepts"></a>基本資料繫結概念
+## <a name="basic-data-binding-concepts"></a>基本資料系結概念
 
-無論您綁定的是哪個元素,以及數據源的性質如何,每個綁定始終遵循下圖所示的模型。
+不論您系結的元素為何，以及資料來源的本質，每個系結一律會遵循下圖所說明的模型。
 
-![顯示基本數據綁定模型的圖表。](./media/data-binding-overview/basic-data-binding-diagram.png)
+![顯示基本資料系結模型的圖表。](./media/data-binding-overview/basic-data-binding-diagram.png)
 
-如圖所示,數據綁定實質上是綁定目標和綁定源之間的橋樑。 該圖演示了以下基本 WPF 資料繫結概念:
+如圖所示，資料系結基本上是系結目標與系結來源之間的橋樑。 此圖將示範下列基本 WPF 資料系結概念：
 
-- 通常,每個繫結有四個元件:
+- 一般而言，每個系結都有四個元件：
 
-  - 綁定目標物件。
+  - 系結目標物件。
   - 目標屬性。
   - 繫結來源。
-  - 要使用的綁定源中值的路徑。
+  - 要使用之系結來源中的值路徑。
   
-  > 例如,如果要`TextBox`將的內容綁定到`Employee.Name`屬性,則目標物件是`TextBox`,目標屬性<xref:System.Windows.Controls.TextBox.Text%2A>是 屬性,要使用的值是*Name,* 源物件是*Employ*物件。
+  > 例如， `TextBox`如果您想要將的內容系結至`Employee.Name`屬性，則目標物件是`TextBox`、目標屬性是<xref:System.Windows.Controls.TextBox.Text%2A>屬性、要使用的值是*Name*，而來源物件是*Employee*物件。
 
-- 目標屬性必須是相依性屬性。 大多數<xref:System.Windows.UIElement>屬性都是依賴項屬性,大多數依賴項屬性(只讀屬性除外)預設支援數據綁定。 (只有派生自<xref:System.Windows.DependencyObject>的類型才能定義相依項屬性<xref:System.Windows.UIElement>;並且所有`DependencyObject`類型都派生自 。
+- 目標屬性必須是相依性屬性。 大部分<xref:System.Windows.UIElement>屬性都是相依性屬性，而除了唯讀以外，大部分的相依性屬性預設都支援資料系結。 （只有衍生自的<xref:System.Windows.DependencyObject>類型可以定義相依性屬性， <xref:System.Windows.UIElement>而所有類型`DependencyObject`都是衍生自）。
 
-- 雖然圖中未顯示,但需要注意的是,綁定源對象不僅限於自定義 .NET 物件。 WPF 資料繫結支援以 .NET 物件和 XML 形式的資料。 為了提供一些範例,綁定源可以是<xref:System.Windows.UIElement>任何清單物件、ADO.NET或 Web 服務物件或包含 XML 資料的 XmlNode。 有關詳細資訊,請參閱[綁定源概述](../../framework/wpf/data/binding-sources-overview.md)。
+- 雖然未顯示在圖中，但請注意，系結來源物件不限於自訂 .NET 物件。 WPF 資料系結支援以 .NET 物件和 XML 形式呈現的資料。 為了提供一些範例，您的<xref:System.Windows.UIElement>系結來源可以是、任何清單物件、ADO.NET 或 Web 服務物件，或是包含 XML 資料的 XmlNode。 如需詳細資訊，請參閱系結[來源總覽](../../framework/wpf/data/binding-sources-overview.md)。
 
-請務必記住,在建立綁定時,您將綁定目標綁定*到*綁定源。 例如,如果要在<xref:System.Windows.Controls.ListBox>使用數據綁定中顯示某些基礎 XML 數據,則對`ListBox`XML 數據進行綁定。
+請務必記住，當您建立系結時，會將系結目標系結*至*系結來源。 例如，如果您正在使用資料系結<xref:System.Windows.Controls.ListBox> `ListBox`來顯示中的一些基礎 XML 資料，則您會將系結至 XML 資料。
 
-要建立繫結,請使用<xref:System.Windows.Data.Binding>物件 。 本文的其餘部分討論了與`Binding`對象相關的許多概念以及物件的一些屬性和用法。
+若要建立系結，您可以<xref:System.Windows.Data.Binding>使用物件。 本文的其餘部分將討論與相關的許多概念以及`Binding`物件的一些屬性和使用方式。
 
 ### <a name="direction-of-the-data-flow"></a>資料流程的方向
 
-如上圖中的箭頭所示,如果綁定源提供正確的通知,綁定的數據流可以從綁定目標轉到綁定源(例如,當使用者編輯`TextBox`值 時,源值會更改) 和/或綁定源到綁定目標(例如`TextBox`,您的內容會隨著綁定源中的更改而更新)。
+如上圖中的箭號所示，系結的資料流程可以從系結目標移到系結來源（例如，當使用者編輯的值`TextBox`）和/或從系結來源至系結目標（例如，如果系結來源提供了適當的通知，您`TextBox`的內容會更新），
 
-您可能希望你的應用允許使用者更改數據並將其傳播回源物件。 或者您可能不希望使用者更新來源資料。 您可以通過設置<xref:System.Windows.Data.Binding.Mode?displayProperty=nameWithType>來控制 資料流。
+您可以讓應用程式讓使用者變更資料，並將其傳播回來源物件。 或者您可能不希望使用者更新來源資料。 您可以藉由設定來控制資料的流程<xref:System.Windows.Data.Binding.Mode?displayProperty=nameWithType>。
 
-底線表表示不同類型的資料串流:
+下圖說明不同類型的資料流程：
 
 ![資料繫結資料流程](./media/data-binding-overview/databinding-dataflow.png "DataBinding_DataFlow")
 
-- <xref:System.Windows.Data.BindingMode.OneWay>綁定會導致對源屬性的更改自動更新目標屬性,但對目標屬性的更改不會傳播回源屬性。 如果要繫結的控制項是隱含唯讀的，這種類型的繫結很適當。 例如,您可以綁定到源(如股票代碼,或者目標屬性沒有為進行更改(如表的數據綁定背景顏色)提供控制介面。 如果不需要監視目標屬性的變更，使用 <xref:System.Windows.Data.BindingMode.OneWay> 繫結模式可以避免 <xref:System.Windows.Data.BindingMode.TwoWay> 繫結模式的額外負荷。
+- <xref:System.Windows.Data.BindingMode.OneWay>系結會使 source 屬性的變更自動更新目標屬性，但對目標屬性的變更不會傳播回來源屬性。 如果要繫結的控制項是隱含唯讀的，這種類型的繫結很適當。 例如，您可以系結至來源，例如股票行情，或您的目標屬性沒有提供用於進行變更的控制項介面，例如資料表的資料系結背景色彩。 如果不需要監視目標屬性的變更，使用 <xref:System.Windows.Data.BindingMode.OneWay> 繫結模式可以避免 <xref:System.Windows.Data.BindingMode.TwoWay> 繫結模式的額外負荷。
 
-- <xref:System.Windows.Data.BindingMode.TwoWay>綁定會導致對源屬性或目標屬性的更改,以自動更新另一個屬性。 這種類型的綁定適用於可編輯的窗體或其他完全互動式 UI 方案。 大多數屬性預設為<xref:System.Windows.Data.BindingMode.OneWay>綁定,但某些依賴項屬性(通常是使用者可編輯控件的屬性,<xref:System.Windows.Controls.TextBox.Text?displayProperty=nameWithType>如和[CheckBox.IsCheck](xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked)默認<xref:System.Windows.Data.BindingMode.TwoWay>綁定。 確定依賴項屬性在預設情況下是單向綁定還是雙向綁定的程式設計方法是獲取屬性元數據<xref:System.Windows.DependencyProperty.GetMetadata%2A?displayProperty=nameWithType>,然後檢查屬性<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A?displayProperty=nameWithType>的 布爾值。
+- <xref:System.Windows.Data.BindingMode.TwoWay>系結會使來源屬性或目標屬性的變更自動更新另一個。 這種類型的系結適用于可編輯的表單或其他完全互動式 UI 案例。 大部分屬性預設為<xref:System.Windows.Data.BindingMode.OneWay>系結，但某些相依性屬性（通常是使用者可編輯控制項的屬性<xref:System.Windows.Controls.TextBox.Text?displayProperty=nameWithType> ，例如和[核取方塊）。 IsChecked](xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked)預設為<xref:System.Windows.Data.BindingMode.TwoWay> binding。 判斷相依性屬性預設系結單向或雙向系結的程式設計方式，是使用<xref:System.Windows.DependencyProperty.GetMetadata%2A?displayProperty=nameWithType>取得屬性中繼資料，然後再檢查<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A?displayProperty=nameWithType>屬性的布林值。
 
-- <xref:System.Windows.Data.BindingMode.OneWayToSource>是綁定的<xref:System.Windows.Data.BindingMode.OneWay>反面;當目標屬性發生更改時,它將更新源屬性。 一個範例方案是,如果您只需要從 UI 重新評估源值。
+- <xref:System.Windows.Data.BindingMode.OneWayToSource>這是系結<xref:System.Windows.Data.BindingMode.OneWay>的反向。當目標屬性變更時，它會更新 source 屬性。 其中一個範例案例是，如果您只需要重新評估 UI 中的來源值。
 
-- 圖中未說明的是<xref:System.Windows.Data.BindingMode.OneTime>綁定,這將導致源屬性初始化目標屬性,但不會傳播後續更改。 如果數據上下文發生更改或數據上下文中的物件發生更改,則更改*不會*反映在目標屬性中。 如果當前狀態的快照是適當的,或者數據是真正的靜態的,則這種類型的綁定是合適的。 如果您想要以來源屬性的某些值初始化目標屬性，但無法預先得知資料內容，則此類型的繫結也很有用。 此模式本質上是一種更簡單的<xref:System.Windows.Data.BindingMode.OneWay>綁定形式,在源值不變的情況下提供更好的性能。
+- 圖中未說明的是<xref:System.Windows.Data.BindingMode.OneTime>系結，這會導致 source 屬性初始化目標屬性，但不會傳播後續的變更。 如果資料內容變更或資料內容中的物件變更，則變更*不*會反映在目標屬性中。 如果目前狀態的快照集合適，或資料是真正的靜態，則適合使用這種類型的系結。 如果您想要以來源屬性的某些值初始化目標屬性，但無法預先得知資料內容，則此類型的繫結也很有用。 此模式基本上是較簡單的<xref:System.Windows.Data.BindingMode.OneWay>系結形式，在來源值不會變更的情況下可提供較佳的效能。
 
-要偵測來源變更(<xref:System.Windows.Data.BindingMode.OneWay>適用於<xref:System.Windows.Data.BindingMode.TwoWay>與繫結),源必須實現適當的屬性更改通知機制,<xref:System.ComponentModel.INotifyPropertyChanged>如 。 [請參閱如何:實現屬性更改通知](../../framework/wpf/data/how-to-implement-property-change-notification.md),<xref:System.ComponentModel.INotifyPropertyChanged>了解 實現的示例。
+若要偵測來源變更（適用<xref:System.Windows.Data.BindingMode.OneWay>于<xref:System.Windows.Data.BindingMode.TwoWay>和系結），來源必須執行適當的屬性變更通知機制， <xref:System.ComponentModel.INotifyPropertyChanged>例如。 如需<xref:System.ComponentModel.INotifyPropertyChanged>執行的範例，請參閱[如何：執行屬性變更通知](../../framework/wpf/data/how-to-implement-property-change-notification.md)。
 
-該<xref:System.Windows.Data.Binding.Mode?displayProperty=nameWithType>屬性提供了有關綁定模式的詳細資訊以及如何指定綁定的方向的範例。
+<xref:System.Windows.Data.Binding.Mode?displayProperty=nameWithType>屬性會提供有關系結模式的詳細資訊，以及如何指定系結方向的範例。
 
-### <a name="what-triggers-source-updates"></a>觸發源更新的內容
+### <a name="what-triggers-source-updates"></a>觸發程式來源更新的內容
 
-正在<xref:System.Windows.Data.BindingMode.TwoWay>或<xref:System.Windows.Data.BindingMode.OneWayToSource>偵聽目標屬性中的更改並將其傳播回源(稱為更新源)的綁定。 舉例來說，您可以編輯 TextBox 的文字以變更基礎來源值。
+系結， <xref:System.Windows.Data.BindingMode.TwoWay>或<xref:System.Windows.Data.BindingMode.OneWayToSource>接聽目標屬性中的變更，並將它們傳播回來源，又稱為更新來源。 舉例來說，您可以編輯 TextBox 的文字以變更基礎來源值。
 
-但是,在編輯文本或完成文本編輯后是否更新了源值,控件會失去焦點? 屬性<xref:System.Windows.Data.Binding.UpdateSourceTrigger?displayProperty=nameWithType>確定觸發源更新的原因。 下圖中右箭頭的點說明瞭<xref:System.Windows.Data.Binding.UpdateSourceTrigger?displayProperty=nameWithType>屬性的作用。
+不過，當您編輯文字時，或在編輯完文字並失去焦點之後，您的來源值會更新？ <xref:System.Windows.Data.Binding.UpdateSourceTrigger?displayProperty=nameWithType>屬性會決定觸發來源更新的原因。 下圖中右箭號的點說明<xref:System.Windows.Data.Binding.UpdateSourceTrigger?displayProperty=nameWithType>屬性的角色。
 
 ![顯示 UpdateSourceTrigger 屬性角色的圖表。](./media/data-binding-overview/data-binding-updatesource-trigger.png)
 
-如果`UpdateSourceTrigger`值<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged?displayProperty=nameWithType>為 ,則當目標屬性發生更改時,<xref:System.Windows.Data.BindingMode.TwoWay>將更新<xref:System.Windows.Data.BindingMode.OneWayToSource>右箭頭指向的值或綁定。 但是,如果`UpdateSourceTrigger`值為<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>,則僅當目標屬性失去焦點時,該值僅會使用新值更新。
+如果`UpdateSourceTrigger`值為<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged?displayProperty=nameWithType>，則當目標屬性變更時， <xref:System.Windows.Data.BindingMode.TwoWay>或<xref:System.Windows.Data.BindingMode.OneWayToSource>系結的向右箭號所指向的值就會更新。 不過，如果`UpdateSourceTrigger`值為<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>，則只有當目標屬性失去焦點時，該值才會以新的值更新。
 
-與屬性<xref:System.Windows.Data.Binding.Mode%2A>類似,不同的依賴項屬性具有<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>不同的 預設值。 大多數相依性屬性的預設值為 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>，而 `TextBox.Text` 屬性具有 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> 的預設值。 `PropertyChanged`表示源更新通常在目標屬性更改時發生。 對於複選框和其他簡單控件,即時更改是可以的。 但是,對於文本欄位,每次擊鍵後更新都會降低性能,並剝奪使用者在提交到新值之前回空間和修復鍵入錯誤的通常機會。
+與屬性類似<xref:System.Windows.Data.Binding.Mode%2A> ，不同的相依性屬性有不同<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>的預設值。 大多數相依性屬性的預設值為 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>，而 `TextBox.Text` 屬性具有 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> 的預設值。 `PropertyChanged`表示當目標屬性變更時，通常會發生來源更新。 立即變更適用于核取方塊和其他簡單的控制項。 不過，針對文字欄位，在每次擊鍵之後更新可能會降低效能，並拒絕使用者在認可至新值之前，倒退鍵和修正輸入錯誤的一般機會。
 
-有關如何查找<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>依賴項屬性的預設值的資訊,請參閱屬性頁。
+如需<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>如何尋找相依性屬性之預設值的相關資訊，請參閱屬性頁。
 
-下表提供每個<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值的範例方案,<xref:System.Windows.Controls.TextBox>該範例用作範例。
+下表提供使用<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> <xref:System.Windows.Controls.TextBox>作為範例之每個值的範例案例。
 
-| UpdateSourceTrigger 值 | 更新來源值時 | 文字框的範例方案 |
+| UpdateSourceTrigger 值 | 當來源值更新時 | TextBox 的範例案例 |
 | ------------------------- | ---------------------------------- | ---------------------------- |
-| `LostFocus`( 預設<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>為 ) | 當 TextBox 控件失去焦點時。 | 與驗證邏輯關聯的文本框(請參閱下面的[數據驗證](#data-validation))。 |
-| `PropertyChanged` | 當您鍵入<xref:System.Windows.Controls.TextBox>中 時。 | 聊天室視窗中的 TextBox 控制件。 |
-| `Explicit` | 當應用程式調用<xref:System.Windows.Data.BindingExpression.UpdateSource%2A>時。 | TextBox 控制件為可編輯窗體(僅在用戶按一下提交按鈕時更新源值)。 |
+| `LostFocus`（的<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>預設值） | 當 TextBox 控制項失去焦點時。 | 與驗證邏輯相關聯的文字方塊（請參閱下面的[資料驗證](#data-validation)）。 |
+| `PropertyChanged` | 當您輸入時<xref:System.Windows.Controls.TextBox>。 | 聊天室視窗中的 TextBox 控制項。 |
+| `Explicit` | 當應用程式呼叫<xref:System.Windows.Data.BindingExpression.UpdateSource%2A>時。 | 可編輯表單中的 TextBox 控制項（只有在使用者按一下 [提交] 按鈕時，才會更新來源值）。 |
 
-例如,請參考[如何:控制文字盒文字何時更新來源](../../framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)。
+如需範例，請參閱[如何：控制 TextBox 文字更新來源](../../framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)的時機。
 
-## <a name="creating-a-binding"></a>建立繫結
+## <a name="creating-a-binding"></a>建立系結
 
-為了重構前面各節中討論的某些概念,可以使用<xref:System.Windows.Data.Binding>物件建立綁定,並且每個綁定通常有四個元件:綁定目標、目標屬性、綁定源和要使用的源值的路徑。 本節討論如何設定繫結。
+若要重新聲明先前幾節中所討論的一些概念，您可以使用<xref:System.Windows.Data.Binding>物件建立系結，而且每個系結通常會有四個元件：系結目標、目標屬性、系結來源，以及要使用之來源值的路徑。 本節討論如何設定繫結。
 
-請考慮下列範例，其中的繫結來源物件是名為 *MyData* 的類別，定義於 *SDKSample* 命名空間中。 出於展示目的 *,MyData*具有名為*ColorName*的字串屬性,其值設置為"紅色"。 因此，本範例會產生具有紅色背景的按鈕。
+請考慮下列範例，其中的繫結來源物件是名為 *MyData* 的類別，定義於 *SDKSample* 命名空間中。 基於示範目的， *MyData*有一個名為*ColorName*的字串屬性，其值會設定為 "Red"。 因此，本範例會產生具有紅色背景的按鈕。
 
 [!code-xaml[BindNonTextProperty](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/AutoConvertPropertyToColor.xaml#BindAutoConvertColor)]
 
-有關繫結聲明語法的詳細資訊以及如何在代碼中設定綁定的範例,請參閱[連結概述](../../framework/wpf/data/binding-declarations-overview.md)。
+如需系結宣告語法的詳細資訊，以及如何在程式碼中設定系結的範例，請參閱系結宣告[總覽](../../framework/wpf/data/binding-declarations-overview.md)。
 
-如果將這個範例套用到我們的基本圖表，結果會類似下圖。 此圖描述綁定<xref:System.Windows.Data.BindingMode.OneWay>,因為預設情況下,背景<xref:System.Windows.Data.BindingMode.OneWay>屬性 支援綁定。
+如果將這個範例套用到我們的基本圖表，結果會類似下圖。 此圖說明<xref:System.Windows.Data.BindingMode.OneWay>系結，因為 Background 屬性預設<xref:System.Windows.Data.BindingMode.OneWay>支援系結。
 
-![顯示數據繫結背景屬性的圖表。](./media/data-binding-overview/data-binding-button-background-example.png)
+![顯示資料系結背景屬性的圖表。](./media/data-binding-overview/data-binding-button-background-example.png)
 
-您可能想知道為什麼此繫結有效,即使*ColorName*屬性是型態字<xref:System.Windows.Controls.Control.Background%2A>串, 而<xref:System.Windows.Media.Brush>屬性是類型 。 此繫結出預設類型轉換,在[「資料轉換](#data-conversion)」部分中討論。
+您可能會想知道，即使*ColorName*屬性是字串類型，而<xref:System.Windows.Controls.Control.Background%2A>屬性的類型<xref:System.Windows.Media.Brush>是，此系結的運作原因。 這個系結會使用「[資料轉換](#data-conversion)」一節中所討論的預設型別轉換。
 
-### <a name="specifying-the-binding-source"></a>指定繫結源
+### <a name="specifying-the-binding-source"></a>指定系結來源
 
-請注意,在前面的示例中,綁定源是通過設置[DockPanel.DataContext](xref:System.Windows.FrameworkElement.DataContext)屬性來指定的。 <xref:System.Windows.Controls.Button>然後從<xref:System.Windows.FrameworkElement.DataContext%2A>繼承的值<xref:System.Windows.Controls.DockPanel>從 ,這是其父元素。 再重複聲明一次，繫結來源物件是繫結的四個必要元件之一。 因此，沒有指定繫結來源物件，就無法進行繫結。
+請注意，在上述範例中，系結來源是藉由設定[DockPanel](xref:System.Windows.FrameworkElement.DataContext)屬性來指定。 <xref:System.Windows.Controls.Button>接著會繼承的<xref:System.Windows.FrameworkElement.DataContext%2A>值<xref:System.Windows.Controls.DockPanel>，也就是它的父元素。 再重複聲明一次，繫結來源物件是繫結的四個必要元件之一。 因此，沒有指定繫結來源物件，就無法進行繫結。
 
-有數種方式可以指定繫結來源物件。 將多個<xref:System.Windows.FrameworkElement.DataContext%2A>屬性綁定到同一源時,在父元素上使用 該屬性非常有用。 然而，有時候在個別的繫結宣告上指定繫結來源可能比較恰當。 對於前面的範例,<xref:System.Windows.FrameworkElement.DataContext%2A>可以通過直接在按鈕的綁定聲明<xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType>中設置 屬性來指定綁定源,如下例所示。
+有數種方式可以指定繫結來源物件。 當您<xref:System.Windows.FrameworkElement.DataContext%2A>將多個屬性系結至相同的來源時，在父元素上使用屬性會很有用。 然而，有時候在個別的繫結宣告上指定繫結來源可能比較恰當。 在上一個範例中，您可以在<xref:System.Windows.FrameworkElement.DataContext%2A>按鈕的系結宣告上直接設定<xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType>屬性，而不使用屬性來指定系結來源，如下列範例所示。
 
 [!code-xaml[BindNonTextPropertyCompactBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/AutoConvertPropertyToColor.xaml#BindAutoConvertColorCompactBinding)]
 
-除了直接在元素<xref:System.Windows.FrameworkElement.DataContext%2A>上設置屬性外<xref:System.Windows.FrameworkElement.DataContext%2A>, 從祖先繼承值(如第一個示例中的按鈕),並通過在綁定<xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType>上設置 屬性(如最後一個示例的按鈕)顯式指定綁定源<xref:System.Windows.Data.Binding.ElementName?displayProperty=nameWithType>,還可以<xref:System.Windows.Data.Binding.RelativeSource?displayProperty=nameWithType>使用 屬性或 屬性指定綁定源。 當您<xref:System.Windows.Data.Binding.ElementName%2A>綁定到應用中的其他元素時,該屬性很有用,例如,當您使用滑塊調整按鈕的寬度時。 在<xref:System.Windows.Data.Binding.RelativeSource%2A><xref:System.Windows.Controls.ControlTemplate>或 指定的結合時,該屬性很有<xref:System.Windows.Style>用 。 有關詳細資訊,請參閱[操作:指定繫結源](../../framework/wpf/data/how-to-specify-the-binding-source.md)。
+除了直接在專案<xref:System.Windows.FrameworkElement.DataContext%2A>上設定屬性之外，也會繼承<xref:System.Windows.FrameworkElement.DataContext%2A>上階的值（例如第一個範例中的按鈕），並藉由設定系結上的<xref:System.Windows.Data.Binding.Source%2A?displayProperty=nameWithType>屬性（例如最後一個範例的按鈕）來明確指定系結來源，您也可以使用<xref:System.Windows.Data.Binding.ElementName?displayProperty=nameWithType>屬性或<xref:System.Windows.Data.Binding.RelativeSource?displayProperty=nameWithType>屬性來指定系結來源。 當<xref:System.Windows.Data.Binding.ElementName%2A>您要系結至應用程式中的其他專案時（例如，當您使用滑杆來調整按鈕的寬度）時，屬性會很有用。 在<xref:System.Windows.Data.Binding.RelativeSource%2A> <xref:System.Windows.Controls.ControlTemplate>或中指定系結時，屬性會很有用<xref:System.Windows.Style>。 如需詳細資訊，請參閱[如何：指定](../../framework/wpf/data/how-to-specify-the-binding-source.md)系結來源。
 
 ### <a name="specifying-the-path-to-the-value"></a>指定值的路徑
 
-如果綁定源是物件,則可以使用<xref:System.Windows.Data.Binding.Path?displayProperty=nameWithType>屬性 指定用於綁定的值。 如果要綁定到 XML 資料,請<xref:System.Windows.Data.Binding.XPath?displayProperty=nameWithType>使用 屬性指定值。 在某些情況下,即使數據為 XML,<xref:System.Windows.Data.Binding.Path%2A>也可以使用該屬性。 例如,如果要訪問返回的 XmlNode 的 Name 屬性(作為 XPath 查詢<xref:System.Windows.Data.Binding.Path%2A><xref:System.Windows.Data.Binding.XPath%2A>的結果),則應除該屬性之外使用 該屬性。
+如果您的系結來源是物件，您可以<xref:System.Windows.Data.Binding.Path?displayProperty=nameWithType>使用屬性來指定要用於系結的值。 如果您要系結至 XML 資料，請使用<xref:System.Windows.Data.Binding.XPath?displayProperty=nameWithType>屬性來指定值。 在某些情況下，即使您的資料為 XML <xref:System.Windows.Data.Binding.Path%2A> ，也可能適用于使用屬性。 例如，如果您想要存取所傳回 XmlNode 的 Name 屬性（因為 XPath 查詢的結果），除了<xref:System.Windows.Data.Binding.Path%2A> <xref:System.Windows.Data.Binding.XPath%2A>屬性之外，您還應該使用屬性。
 
-有關詳細資訊,請參閱和<xref:System.Windows.Data.Binding.Path%2A><xref:System.Windows.Data.Binding.XPath%2A>屬性。
+如需詳細資訊，請<xref:System.Windows.Data.Binding.Path%2A>參閱<xref:System.Windows.Data.Binding.XPath%2A>和屬性。
 
-儘管我們強調<xref:System.Windows.Data.Binding.Path%2A>要使用的值是綁定的四個必要元件之一,但在要綁定到整個物件的方案中,要使用的值將與綁定源物件相同。 在這些情況下,它適用於不指定<xref:System.Windows.Data.Binding.Path%2A>。 請思考一下下列範例。
+雖然我們已強調<xref:System.Windows.Data.Binding.Path%2A>要使用的值是系結的四個必要元件之一，但在您想要系結至整個物件的案例中，要使用的值會與系結來源物件相同。 在這些情況下，它適用于不指定<xref:System.Windows.Data.Binding.Path%2A>。 請思考一下下列範例。
 
 [!code-xaml[EmptyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/EmptyBinding.xaml#EmptyBinding)]
 
-上述範例使用空白繫結語法：{Binding}。 在這種情況下,從<xref:System.Windows.Controls.ListBox>父 DockPanel 元素繼承 DataContext(此示例中未顯示)。 沒有指定路徑時，預設會繫結到整個物件。 換句話說,在此示例中,路徑被遺漏了,因為我們將<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性綁定到整個物件。 (有關深入討論[,請參閱綁定到集合](#binding-to-collections)部分。
+上述範例使用空白繫結語法：{Binding}。 在此情況下， <xref:System.Windows.Controls.ListBox>會從父 DockPanel 元素繼承 DataCoNtext （在此範例中未顯示）。 沒有指定路徑時，預設會繫結到整個物件。 換句話說，在此範例中，路徑已被省略，因為我們將<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性系結至整個物件。 （如需深入討論，請參閱系結[至集合](#binding-to-collections)一節）。
 
-除了繫結到集合之外，當您要繫結到整個物件而非只是物件的單一屬性時，這個案例也很好用。 例如,如果源物件的類型<xref:System.String>,您可能只想綁定到字串本身。 另一個常用案例是當您要將元素繫結到具有許多屬性的物件時。
+除了繫結到集合之外，當您要繫結到整個物件而非只是物件的單一屬性時，這個案例也很好用。 例如，如果您的來源物件屬於類型<xref:System.String>，您可能只想要系結至字串本身。 另一個常用案例是當您要將元素繫結到具有許多屬性的物件時。
 
-您可能需要應用自定義邏輯,以便數據對綁定的目標屬性有意義。 如果不存在預設類型轉換,自定義邏輯可能採用自定義轉換器的形式。 有關轉換器的資訊,請參考[資料轉換](#data-conversion)。
+您可能需要套用自訂邏輯，讓資料對系結的目標屬性有意義。 如果預設類型轉換不存在，自訂邏輯的格式可能會是自訂轉換子。 如需轉換器的詳細資訊，請參閱[資料轉換](#data-conversion)。
 
 ### <a name="binding-and-bindingexpression"></a>繫結和 BindingExpression
 
-在介紹數據綁定的其他功能和用法之前,引入類<xref:System.Windows.Data.BindingExpression>非常有用。 如前一節所示,<xref:System.Windows.Data.Binding>類是聲明綁定的高級類;它提供了許多屬性,允許您指定綁定的特徵。 相關類<xref:System.Windows.Data.BindingExpression>是維護源和目標之間連接的基礎物件。 繫結包含可以跨數種繫結運算式共用的所有資訊。 a<xref:System.Windows.Data.BindingExpression>是不能共用的實例表達式,它包含<xref:System.Windows.Data.Binding>的所有 實例資訊。
+在取得資料系結的其他功能和使用方式之前，引進<xref:System.Windows.Data.BindingExpression>類別會很有説明。 如同您在先前的章節中所見<xref:System.Windows.Data.Binding> ，類別是系結宣告的高階類別;它提供許多屬性，可讓您指定系結的特性。 相關類別<xref:System.Windows.Data.BindingExpression>是基礎物件，可維護來源與目標之間的連接。 繫結包含可以跨數種繫結運算式共用的所有資訊。 <xref:System.Windows.Data.BindingExpression>是無法共用的實例運算式，而且包含的所有實例資訊<xref:System.Windows.Data.Binding>。
 
-請考慮`myDataObject`以下範例,其中是類`MyData`的實體,`myBinding`是<xref:System.Windows.Data.Binding>源`MyData`物件, 是`MyDataProperty`包含名為的字串屬性的已定義類。 此範例將`myText`的文字內容繫結為<xref:System.Windows.Controls.TextBlock>`MyDataProperty`。
+請考慮下列範例，其中`myDataObject`是`MyData`類別的`myBinding`實例、是來源<xref:System.Windows.Data.Binding>物件，而`MyData`是定義的類別，其中包含名為`MyDataProperty`的字串屬性。 這個範例會將的文字內容`myText`（的實例<xref:System.Windows.Controls.TextBlock>）系結`MyDataProperty`至。
 
 [!code-csharp[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/ManualBinding.cs#CodeOnlyBinding)]
 [!code-vb[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/ManualBinding.vb#CodeOnlyBinding)]
 
-您可以使用相同的 *myBinding* 物件建立其他繫結。 例如,可以使用*myBinding*物件將選取框的文字內容繫結到*MyDataProperty*。 在這種情況下,將有兩個共用*myBinding*<xref:System.Windows.Data.BindingExpression>物件的 實例。
+您可以使用相同的 *myBinding* 物件建立其他繫結。 例如，您可以使用*myBinding*物件，將核取方塊的文字內容系結至*MyDataProperty*。 在該案例中，將會有兩個<xref:System.Windows.Data.BindingExpression>共用*myBinding*物件的實例。
 
-通過<xref:System.Windows.Data.BindingExpression>調用<xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A>數據綁定物件來返回物件。 以下文章演示了<xref:System.Windows.Data.BindingExpression>類的一些用法:
+藉<xref:System.Windows.Data.BindingExpression>由在資料系結<xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A>物件上呼叫來傳回物件。 下列文章會示範<xref:System.Windows.Data.BindingExpression>類別的一些使用方式：
 
 - [從繫結的目標屬性取得繫結物件](../../framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)
 
-- [控制項文字文字何時更新來源](../../framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)
+- [控制 TextBox 文字更新來源的時機](../../framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)
 
 ## <a name="data-conversion"></a>資料轉換
 
-在「[創建綁定](#creating-a-binding)」部分中,按鈕為紅色,因為<xref:System.Windows.Controls.Control.Background%2A>它的屬性綁定到值為「紅色」的字串屬性。 這個字串值之所以有效,是因為類型轉換器存在於類型上<xref:System.Windows.Media.Brush>,用於將字串值轉換為 。 <xref:System.Windows.Media.Brush>
+在 [[建立](#creating-a-binding)系結] 區段中，按鈕是紅色的<xref:System.Windows.Controls.Control.Background%2A> ，因為它的屬性會系結至值為 "red" 的字串屬性。 此字串值可運作，因為類型轉換器出現在<xref:System.Windows.Media.Brush>類型上，以將字串值轉換為<xref:System.Windows.Media.Brush>。
 
-將此資訊添加到圖"[創建綁定](#creating-a-binding)「部分如下所示。
+將此資訊加入至圖表中，[建立](#creating-a-binding)系結區段看起來就像這樣。
 
-![顯示數據繫結式Default 屬性的圖表。](./media/data-binding-overview/data-binding-button-default-conversion.png)
+![顯示資料系結預設屬性的圖表。](./media/data-binding-overview/data-binding-button-default-conversion.png)
 
-但是,如果綁定源物件沒有類型字串的屬性,而是具有<xref:System.Windows.Media.Color>*類型的顏色*屬性,該怎麼辦? 在這種情況下,為了使綁定正常工作,您需要首先將*Color*屬性值<xref:System.Windows.Controls.Control.Background%2A>轉換為 屬性接受的內容。 您需要透過連接<xref:System.Windows.Data.IValueConverter>介面來建立自訂轉換器,如以下範例所示。
+不過，如果您的系結來源物件具有類型<xref:System.Windows.Media.Color>的*色彩*屬性，而不是使用字串類型的屬性，該怎麼辦？ 在這種情況下，若要讓系結能夠正常執行，您必須先將*Color*屬性值轉換成<xref:System.Windows.Controls.Control.Background%2A>屬性所接受的內容。 您必須藉由執行<xref:System.Windows.Data.IValueConverter>介面來建立自訂轉換器，如下列範例所示。
 
 [!code-csharp[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/ColorBrushConverter.cs#ColorBrushConverter)]
 [!code-vb[CodeOnlyBinding](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/ColorBrushConverter.vb#ColorBrushConverter)]
 
 如需相關資訊，請參閱 <xref:System.Windows.Data.IValueConverter>。
 
-現在使用自定義轉換器而不是預設轉換,我們的圖表如下所示。
+現在會使用自訂轉換器，而不是預設轉換，我們的圖表看起來像這樣。
 
-![顯示數據繫結定自訂轉換器的圖表。](./media/data-binding-overview/data-binding-converter-color-example.png)
+![顯示資料系結自訂轉換器的圖表。](./media/data-binding-overview/data-binding-converter-color-example.png)
 
 再重複聲明一次，預設轉換也可以使用，因為要繫結的型別中存在型別轉換器。 這個行為會取決於目標中提供的型別轉換器。 如果有疑問，請建立自己的轉換器。
 
-以下是一些典型方案,其中實現數據轉換器是有意義的:
+以下是一些典型的案例，可讓您瞭解如何執行資料轉換器：
 
-- 依據文化特性的不同，您的資料顯示方式會有所不同。 例如,您可能希望基於特定區域性中使用的約定實現貨幣轉換器或日曆日期/時間轉換器。
+- 依據文化特性的不同，您的資料顯示方式會有所不同。 例如，您可能會想要根據特定文化特性所使用的慣例，來執行貨幣轉換器或行事曆日期/時間轉換器。
 
 - 要使用的資料不見得是要變更屬性的文字值，但有可能是改為變更某些其他值，例如影像的來源，或者是顯示文字的色彩或樣式。 在這個情況下可能的轉換器使用方式，是藉由將可能不適合的屬性繫結轉換，例如將文字欄位繫結到表格儲存格的 Background 屬性。
 
-- 控制項多個控制件或多個屬性綁定到同一數據。 在這個情況下，主要繫結可能只是顯示文字，而其他繫結會處理特定顯示問題，但仍然使用相同的繫結做為來源資訊。
+- 控制項有一個以上的控制項或多個屬性系結至相同的資料。 在這個情況下，主要繫結可能只是顯示文字，而其他繫結會處理特定顯示問題，但仍然使用相同的繫結做為來源資訊。
 
-- 目標屬性具有繫結定的集合,<xref:System.Windows.Data.MultiBinding>稱為 。 對於<xref:System.Windows.Data.MultiBinding>,使用自<xref:System.Windows.Data.IMultiValueConverter>定義 從綁定的值生成最終值。 舉例來說，顏色可以由紅藍綠的值計算而來，而這些值可以來自相同或不同的繫結來源物件。 有關<xref:System.Windows.Data.MultiBinding>範例和資訊,請參閱。
+- 目標屬性具有系結的集合，稱為<xref:System.Windows.Data.MultiBinding>。 若<xref:System.Windows.Data.MultiBinding>為，您可以使用<xref:System.Windows.Data.IMultiValueConverter>自訂，從系結的值產生最終的值。 舉例來說，顏色可以由紅藍綠的值計算而來，而這些值可以來自相同或不同的繫結來源物件。 如<xref:System.Windows.Data.MultiBinding>需範例和資訊，請參閱。
 
-## <a name="binding-to-collections"></a>繫結到集合
+## <a name="binding-to-collections"></a>系結至集合
 
-綁定源物件可以被視為屬性包含數據的單個物件,也可以被視為通常分組在一起的多態物件的數據收集(例如對資料庫的查詢結果)。 到目前為止,我們只討論了綁定到單個物件。 但是,綁定到數據收集是常見方案。 例如,常見方案是使用<xref:System.Windows.Controls.ItemsControl>等<xref:System.Windows.Controls.ListBox>,<xref:System.Windows.Controls.ListView><xref:System.Windows.Controls.TreeView>或顯示資料收集,例如在[「什麼是數據綁定」](#what-is-data-binding)部分中顯示的應用中。
+系結來源物件可以視為單一物件，其屬性包含資料，或做為經常群組在一起之多型物件的資料集合（例如資料庫的查詢結果）。 到目前為止，我們只討論了單一物件的系結。 不過，系結至資料集合是常見的案例。 例如，常見的案例是<xref:System.Windows.Controls.ItemsControl>使用<xref:System.Windows.Controls.ListBox>、 <xref:System.Windows.Controls.ListView>或<xref:System.Windows.Controls.TreeView>之類的來顯示資料收集，例如在應用程式中，如「[什麼是資料](#what-is-data-binding)系結」一節所示。
 
-所幸，我們的基本圖表仍然適用。 如果要將 綁<xref:System.Windows.Controls.ItemsControl>定 到集合,則關係圖如下所示。
+所幸，我們的基本圖表仍然適用。 如果您要將系<xref:System.Windows.Controls.ItemsControl>結至集合，圖表看起來會像這樣。
 
-![顯示數據綁定項控制對象的關係圖。](./media/data-binding-overview/data-binding-itemscontrol.png)
+![顯示資料系結 ItemsControl 物件的圖表。](./media/data-binding-overview/data-binding-itemscontrol.png)
 
-如此關係圖所示,要將<xref:System.Windows.Controls.ItemsControl>綁定 到集合<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A?displayProperty=nameWithType>物件 ,屬性是要使用的屬性。 您可以將`ItemsSource`這個視為<xref:System.Windows.Controls.ItemsControl>的內容 。 綁定的原因是<xref:System.Windows.Data.BindingMode.OneWay>默認情況下`ItemsSource`屬性`OneWay`支援 綁定。
+如此圖所示，若要將<xref:System.Windows.Controls.ItemsControl>系結至集合物件<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A?displayProperty=nameWithType> ，屬性是要使用的屬性。 您可以把`ItemsSource`視為的內容<xref:System.Windows.Controls.ItemsControl>。 系結是<xref:System.Windows.Data.BindingMode.OneWay>因為`ItemsSource`屬性預設支援`OneWay`系結。
 
-### <a name="how-to-implement-collections"></a>如何實現集合
+### <a name="how-to-implement-collections"></a>如何執行集合
 
-可以枚舉實現<xref:System.Collections.IEnumerable>介面的任何集合。 但是,要設置動態綁定,以便集合中的插入或刪除自動更新 UI,集合必須<xref:System.Collections.Specialized.INotifyCollectionChanged>實現介面。 這個介面會公開每次基礎集合變更時必須引發的事件。
+您可以列舉任何會執行<xref:System.Collections.IEnumerable>介面的集合。 不過，若要設定動態系結，讓集合中的插入或刪除自動更新 UI，則集合必須執行<xref:System.Collections.Specialized.INotifyCollectionChanged>介面。 這個介面會公開每次基礎集合變更時必須引發的事件。
 
-WPF<xref:System.Collections.ObjectModel.ObservableCollection%601>提供 類,<xref:System.Collections.Specialized.INotifyCollectionChanged>它是公開 介面的數據收集的內置實現。 要完全支援將資料值從源物件傳輸到目標,集合中支援可綁定屬性的每個物件還必須實現<xref:System.ComponentModel.INotifyPropertyChanged>介面。 有關詳細資訊,請參閱[綁定源概述](../../framework/wpf/data/binding-sources-overview.md)。
+WPF 提供<xref:System.Collections.ObjectModel.ObservableCollection%601>類別，這是公開<xref:System.Collections.Specialized.INotifyCollectionChanged>介面之資料集合的內建執行。 若要完全支援將資料值從來源物件傳送至目標，集合中支援可系結屬性的每個物件<xref:System.ComponentModel.INotifyPropertyChanged>也必須執行介面。 如需詳細資訊，請參閱系結[來源總覽](../../framework/wpf/data/binding-sources-overview.md)。
 
-在實現自己的<xref:System.Collections.ObjectModel.ObservableCollection%601>集合之前,請考慮使用或現有集合類之一,<xref:System.Collections.Generic.List%601>例如<xref:System.Collections.ObjectModel.Collection%601>,<xref:System.ComponentModel.BindingList%601>和等。 如果您有高級方案並希望實現自己的集合,請考慮使用<xref:System.Collections.IList>,它提供一個非泛型的物件集合,該集合可以由索引單獨訪問,從而提供最佳性能。
+在執行您自己的集合之前， <xref:System.Collections.ObjectModel.ObservableCollection%601>請考慮使用或其中一個現有的集合類別<xref:System.Collections.Generic.List%601>， <xref:System.Collections.ObjectModel.Collection%601>例如、 <xref:System.ComponentModel.BindingList%601>和。 如果您有 advanced 案例，而且想要執行自己的集合，請考慮<xref:System.Collections.IList>使用，它會提供可由索引個別存取的非泛型物件集合，因此可提供最佳效能。
 
 ### <a name="collection-views"></a>集合檢視
 
-<xref:System.Windows.Controls.ItemsControl>綁定到數據收集后,可能需要對數據進行排序、篩選或分組。 為此,可以使用集合視圖,集合視圖是實現介面的<xref:System.ComponentModel.ICollectionView>類。
+<xref:System.Windows.Controls.ItemsControl>一旦系結至資料集合之後，您可能會想要排序、篩選或群組資料。 若要這麼做，您可以使用「集合視圖」，這是<xref:System.ComponentModel.ICollectionView>執行介面的類別。
 
-#### <a name="what-are-collection-views"></a>什麼是集合視圖?
+#### <a name="what-are-collection-views"></a>什麼是集合視圖？
 
-集合檢視是以繫結來源集合為基礎的一層，可以讓您依據排序、篩選和群組查詢來巡覽和顯示來源集合，而不需要變更基礎來源集合本身。 集合檢視也會保留集合中目前項目的指標。 如果源集合實現<xref:System.Collections.Specialized.INotifyCollectionChanged>介面<xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged>, 則事件引發的更改將傳播到檢視。
+集合檢視是以繫結來源集合為基礎的一層，可以讓您依據排序、篩選和群組查詢來巡覽和顯示來源集合，而不需要變更基礎來源集合本身。 集合檢視也會保留集合中目前項目的指標。 如果來源集合會執行<xref:System.Collections.Specialized.INotifyCollectionChanged>介面， <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged>事件所引發的變更就會傳播至 views。
 
 因為檢視不會變更基礎來源集合，每個來源集合可以有多個相關聯的檢視。 舉例來說，您可以有一個 *Task* 物件集合。 使用檢視時，您可以不同方式顯示相同資料。 舉例來說，在頁面左方您可以顯示依優先順序排序的工作，右方顯示依區域分組的工作。
 
 #### <a name="how-to-create-a-view"></a>如何建立檢視
 
-建立和使用檢視的方法之一，是直接具現化檢視物件，然後將它做為繫結來源使用。 例如,請考慮[「什麼是數據綁定」](#what-is-data-binding)部分中顯示的[數據綁定演示][data-binding-demo]應用。 應用的實現使<xref:System.Windows.Controls.ListBox>綁定到數據集上的視圖,而不是直接綁定到數據收集。 以下示例從[數據綁定演示][data-binding-demo]應用中提取。 類別<xref:System.Windows.Data.CollectionViewSource>是從繼承的類別的 XAML<xref:System.Windows.Data.CollectionView>代理程式 。 在此特定範例中,<xref:System.Windows.Data.CollectionViewSource.Source%2A>檢視的綁定到當前應用物件的*拍賣專案*集合(類型<xref:System.Collections.ObjectModel.ObservableCollection%601>)。
+建立和使用檢視的方法之一，是直接具現化檢視物件，然後將它做為繫結來源使用。 例如，請考慮「[什麼是資料](#what-is-data-binding)系結」一節中所示的資料系結[示範][data-binding-demo]應用程式。 應用程式會實作為，讓<xref:System.Windows.Controls.ListBox>直接透過資料集合（而非資料收集）系結至 view。 下列範例會從資料系結[示範][data-binding-demo]應用程式中解壓縮。 <xref:System.Windows.Data.CollectionViewSource>類別是繼承自之<xref:System.Windows.Data.CollectionView>類別的 XAML proxy。 在此特定範例中， <xref:System.Windows.Data.CollectionViewSource.Source%2A>視圖的會系結至目前應用程式物件的*AuctionItems*集合（屬於類型<xref:System.Collections.ObjectModel.ObservableCollection%601>）。
 
 [!code-xaml[CollectionView](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml#CollectionView)]
 
-然後,資源*清單 DataView*充當應用中的元素(如<xref:System.Windows.Controls.ListBox>中的綁定源)。
+然後，資源*listingDataView*會作為應用程式中元素的系結來源，例如<xref:System.Windows.Controls.ListBox>。
 
 [!code-xaml[ListBoxCollectionView](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml#ListBoxCollectionView)]
 
-要為同一集合創建另一個檢視,可以創建<xref:System.Windows.Data.CollectionViewSource>另一個實例併為其`x:Key`指定其他名稱。
+若要為相同的集合建立另一個視圖，您可以<xref:System.Windows.Data.CollectionViewSource>建立另一個實例，並`x:Key`指定不同的名稱。
 
-下表顯示了哪些檢視數據類型創建為預設集合檢視或<xref:System.Windows.Data.CollectionViewSource>基於源集合類型創建。
+下表顯示哪些視圖資料類型會建立為預設的集合視圖，或<xref:System.Windows.Data.CollectionViewSource>根據來源集合類型。
 
 | 來源集合型別                    | 集合檢視型別 | 注意 |
 | ----------------------------------------- | -------------------- | ----- |
-| <xref:System.Collections.IEnumerable>     | 基於內部類型<xref:System.Windows.Data.CollectionView> | 無法群組項目。 |
+| <xref:System.Collections.IEnumerable>     | 以為基礎的內部類型<xref:System.Windows.Data.CollectionView> | 無法群組項目。 |
 | <xref:System.Collections.IList>           | <xref:System.Windows.Data.ListCollectionView> | 最快。 |
 | <xref:System.ComponentModel.IBindingList> | <xref:System.Windows.Data.BindingListCollectionView> | |
 
-#### <a name="using-a-default-view"></a>使用預設檢視
+#### <a name="using-a-default-view"></a>使用預設的 view
 
-指定集合檢視做為繫結來源是建立和使用集合檢視的方式之一。 WPF 也會為做為繫結來源使用的每個集合建立預設集合檢視。 如果您直接繫結至集合，WPF 會繫結至它的預設檢視。 此預設檢視由同一集合的所有綁定共用,因此由一個綁定控件或代碼對預設檢視所做的更改(如排序或對當前項指標的更改,稍後討論)將反映在對同一集合的所有其他綁定中。
+指定集合檢視做為繫結來源是建立和使用集合檢視的方式之一。 WPF 也會為做為繫結來源使用的每個集合建立預設集合檢視。 如果您直接繫結至集合，WPF 會繫結至它的預設檢視。 這個預設視圖會由相同集合的所有系結共用，因此，對預設 view 進行的變更會由一個繫結控制項或程式碼（例如，稍後所討論的排序或變更目前的專案指標）反映在相同集合的所有其他系結中。
 
-要取得預設檢視,請使用方法<xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A>。 例如,請參閱[獲取資料收集的預設檢視](../../framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)。
+若要取得預設的視圖，您可以<xref:System.Windows.Data.CollectionViewSource.GetDefaultView%2A>使用方法。 如需範例，請參閱[取得資料集合的預設視圖](../../framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)。
 
-#### <a name="collection-views-with-adonet-datatables"></a>具有ADO.NET資料表的集合檢視
+#### <a name="collection-views-with-adonet-datatables"></a>具有 ADO.NET Datatable 的集合視圖
 
-為了提高性能,ADO.NET<xref:System.Data.DataTable><xref:System.Data.DataView>或 物件的集合檢視將排序和篩選委託給<xref:System.Data.DataView>, 這將導致在數據源的所有集合視圖中共用排序和篩選。 要使每個集合檢視能夠獨立排序和篩選,使用自己的<xref:System.Data.DataView>物件初始化每個集合視圖。
+為了改善效能，ADO.NET <xref:System.Data.DataTable>或<xref:System.Data.DataView>物件的集合視圖會將排序和篩選委派<xref:System.Data.DataView>給，這會導致在資料來源的所有集合視圖間共用排序和篩選。 若要讓每個集合視圖單獨進行排序和篩選，請使用自己<xref:System.Data.DataView>的物件初始化每個集合視圖。
 
 #### <a name="sorting"></a>排序
 
-如先前所述，檢視可以將排序順序套用到集合上。 當資料存在於基礎集合中時，資料本身可能有也可能沒有相關的順序。 對集合的檢視可以讓您依據所提供的比較準則，安排順序或變更預設順序。 因為是資料的用戶端檢視，常見的案例是使用者會想要針對資料行對應的值，而排序表格式資料的資料行。 藉由使用檢視，就可以套用這個使用者驅動的排序，同樣不需要對基礎集合進行任何變更，或甚至不需要重新查詢集合內容。 例如,請參閱[單擊標題時對 GridView 列進行排序](../../framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)。
+如先前所述，檢視可以將排序順序套用到集合上。 當資料存在於基礎集合中時，資料本身可能有也可能沒有相關的順序。 對集合的檢視可以讓您依據所提供的比較準則，安排順序或變更預設順序。 因為是資料的用戶端檢視，常見的案例是使用者會想要針對資料行對應的值，而排序表格式資料的資料行。 藉由使用檢視，就可以套用這個使用者驅動的排序，同樣不需要對基礎集合進行任何變更，或甚至不需要重新查詢集合內容。 如需範例，請參閱[在按一下標頭時排序 GridView 資料行](../../framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)。
 
-下面的範例顯示了應用 UI 在「[什麼是資料綁定」](#what-is-data-binding)部分中的「<xref:System.Windows.Controls.CheckBox>按類別和日期排序」 的排序邏輯。
+下列範例顯示「[什麼是資料](#what-is-data-binding)系結」一節中，應用程式<xref:System.Windows.Controls.CheckBox> UI 的「依類別目錄和日期排序」的排序邏輯。
 
 [!code-csharp[AddSortChecked](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml.cs#AddSortChecked)]
 [!code-vb[AddSortChecked](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/CollectionView.xaml.vb#AddSortChecked)]
 
 #### <a name="filtering"></a>Filtering
 
-視圖還可以將篩選器應用於集合,以便檢視僅顯示完整集合的特定子集。 您可以對資料篩選條件。 例如,正如應用在「[什麼是數據綁定」](#what-is-data-binding)部分所做的那樣,「僅顯示便宜貨<xref:System.Windows.Controls.CheckBox>」 包含篩選出成本為 25 美元或更多的項目的邏輯。 執行以下代碼以在選擇時會*將 「只顯示只討價還價」* 設定<xref:System.Windows.Data.CollectionViewSource.Filter>為 事件<xref:System.Windows.Controls.CheckBox>處理程式 。
+Views 也可以將篩選套用至集合，讓此視圖只會顯示完整集合的特定子集。 您可以對資料篩選條件。 比方說，在「[什麼是資料](#what-is-data-binding)系結」一節中，應用程式已完成，「僅顯示<xref:System.Windows.Controls.CheckBox> bargains」包含用來篩選掉成本 $25 或更多之專案的邏輯。 當選取時<xref:System.Windows.Controls.CheckBox> ，會執行下列程式碼， <xref:System.Windows.Data.CollectionViewSource.Filter>將*ShowOnlyBargainsFilter*設定為事件處理常式。
 
 [!code-csharp[ListingViewFilter](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml.cs#ListingViewFilter)]
 [!code-vb[ListingViewFilter](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/CollectionView.xaml.vb#ListingViewFilter)]
 
-*"只顯示討價還價"* 事件處理程式具有以下實現。
+*ShowOnlyBargainsFilter*事件處理常式具有下列執行。
 
 [!code-csharp[FilterEvent](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml.cs#FilterEvent)]
 [!code-vb[FilterEvent](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/CollectionView.xaml.vb#FilterEvent)]
 
-如果直接使用其中一個<xref:System.Windows.Data.CollectionView>類<xref:System.Windows.Data.CollectionViewSource>而不是 ,則可以<xref:System.Windows.Data.CollectionView.Filter%2A>使用 屬性 指定回調。 如需範例，請參閱[篩選檢視中的資料](../../framework/wpf/data/how-to-filter-data-in-a-view.md)。
+如果您直接使用其中一個<xref:System.Windows.Data.CollectionView>類別<xref:System.Windows.Data.CollectionViewSource>，而不是，則會使用<xref:System.Windows.Data.CollectionView.Filter%2A>屬性來指定回呼。 如需範例，請參閱[篩選檢視中的資料](../../framework/wpf/data/how-to-filter-data-in-a-view.md)。
 
 #### <a name="grouping"></a>分組
 
-除了查看<xref:System.Collections.IEnumerable>集合的內部類外,所有集合視圖都支援*分組*,這允許使用者將集合視圖中的集合分區為邏輯組。 群組可以是明確的，由使用者提供群組清單，或者是隱含的，讓群組依據資料動態產生。
+除了用來流覽<xref:System.Collections.IEnumerable>集合的內部類別以外，所有集合視圖都支援*群組*，這可讓使用者將集合視圖中的集合分割成邏輯群組。 群組可以是明確的，由使用者提供群組清單，或者是隱含的，讓群組依據資料動態產生。
 
-下面的範例顯示了"按類別分組"<xref:System.Windows.Controls.CheckBox>的邏輯。
+下列範例顯示「依類別分組」的邏輯<xref:System.Windows.Controls.CheckBox>。
 
 [!code-csharp[ListingGroupCheck](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml.cs#ListingGroupCheck)]
 [!code-vb[ListingGroupCheck](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/CollectionView.xaml.vb#ListingGroupCheck)]
 
 如需另一個群組範例，請參閱[實作 GridView 的 ListView 中的群組項目](../../framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)。
 
-#### <a name="current-item-pointers"></a>目前項目針
+#### <a name="current-item-pointers"></a>目前的專案指標
 
-檢視也支援目前項目的概念。 您可以在集合檢視中逐一巡覽物件。 當您巡覽時，移動項目指標可以讓您擷取集合中存在該特定位置的物件。 例如,請參閱[瀏覽資料收集檢視中的物件](../../framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)。
+檢視也支援目前項目的概念。 您可以在集合檢視中逐一巡覽物件。 當您巡覽時，移動項目指標可以讓您擷取集合中存在該特定位置的物件。 如需範例，請參閱[流覽資料 CollectionView 中的物件](../../framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)。
 
 由於 WPF 只使用檢視 (可能是您指定的檢視或集合的預設檢視) 繫結至集合，因此集合的所有繫結都有目前項目指標。 當繫結至檢視時，`Path` 值中的斜線 ("/") 字元會指定檢視的目前項目。 在下列範例中，資料內容是集合檢視。 第一行繫結至集合。 第二行繫結至集合中的目前項目。 第三行繫結至集合中目前項目的 `Description` 屬性。
 
@@ -327,124 +327,124 @@ WPF<xref:System.Collections.ObjectModel.ObservableCollection%601>提供 類,<xre
 <Button Content="{Binding /Offices/}" />
 ```
 
-目前項目指標可能會受套用至集合的任何排序或篩選所影響。 排序會將目前項目指標保留在最後選取的項目上，但現在集合檢視已在其周圍重組結構。 (可能所選專案以前位於清單的開頭,但現在所選項可能位於中間的某個位置。如果篩選后該選擇仍保留在檢視中,則篩選將保留所選項。 否則，目前項目指標會設定在篩選集合檢視的第一個項目。
+目前項目指標可能會受套用至集合的任何排序或篩選所影響。 排序會將目前項目指標保留在最後選取的項目上，但現在集合檢視已在其周圍重組結構。 （可能是選取的專案早于清單的開頭，但現在選取的專案可能在中間的某處）。篩選會保留選取的專案（如果該選項在篩選後仍維持在視圖中）。 否則，目前項目指標會設定在篩選集合檢視的第一個項目。
 
-#### <a name="master-detail-binding-scenario"></a>主詳細資訊繫結方案
+#### <a name="master-detail-binding-scenario"></a>主版詳細資料系結案例
 
-目前項目的概念不但對巡覽集合項目很有用，也能應用在主從式繫結案例。 再次考慮[「什麼是數據綁定」](#what-is-data-binding)部分中的應用 UI。 在該應用程式中,中的選擇<xref:System.Windows.Controls.ListBox>確定 中顯示的內容<xref:System.Windows.Controls.ContentControl>。 要以另一種方式放置它,在<xref:System.Windows.Controls.ListBox>選擇專案時<xref:System.Windows.Controls.ContentControl>, 將顯示所選項的詳細資訊。
+目前項目的概念不但對巡覽集合項目很有用，也能應用在主從式繫結案例。 請在「[什麼是資料](#what-is-data-binding)系結」一節中，再次考慮應用程式 UI。 在該應用程式中，中的<xref:System.Windows.Controls.ListBox>選取專案會決定中顯示<xref:System.Windows.Controls.ContentControl>的內容。 若要以另一種方式放入<xref:System.Windows.Controls.ListBox> ，當選取專案時<xref:System.Windows.Controls.ContentControl> ，會顯示所選取專案的詳細資料。
 
-您可以實作主從式案例，只要藉由讓兩或多個控制項繫結到相同檢視即可。 [數據繫結示範][data-binding-demo]的以下範例在「[什麼是資料綁定」](#what-is-data-binding)部分<xref:System.Windows.Controls.ListBox>中<xref:System.Windows.Controls.ContentControl>顯示 應用 UI 上的標記和中看到的。
+您可以實作主從式案例，只要藉由讓兩或多個控制項繫結到相同檢視即可。 下列來自資料系結[示範][data-binding-demo]的範例會顯示的標記<xref:System.Windows.Controls.ListBox> ，以及<xref:System.Windows.Controls.ContentControl>您在「[什麼是資料](#what-is-data-binding)系結」一節的應用程式 UI 上看到的。
 
 [!code-xaml[ListBoxContentControl](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml#ListBoxContentControl)]
 
-請注意,兩個控制項都綁定到同一源,*即清單 DataView*靜態資源(請參閱["如何創建視圖"部分](#how-to-create-a-view)中此資源的定義)。 此繫結有效,因為當單例物件(本<xref:System.Windows.Controls.ContentControl>例中)綁定到集合檢視時,它會自動綁定到檢視<xref:System.Windows.Data.CollectionView.CurrentItem%2A>。 對<xref:System.Windows.Data.CollectionViewSource>象 會自動同步貨幣和選擇。 如果清單控制項未綁定到<xref:System.Windows.Data.CollectionViewSource>物件,例如本示例中所示,則需要<xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A>將其 屬性`true`設置為以正常工作。
+請注意，這兩個控制項都會系結至相同的來源，也就是*listingDataView*靜態資源（請參閱[如何建立視圖一節](#how-to-create-a-view)中的此資源的定義）。 這個系結會運作，因為當單一物件<xref:System.Windows.Controls.ContentControl> （在此案例中為）系結至集合視圖時，它會<xref:System.Windows.Data.CollectionView.CurrentItem%2A>自動系結至視圖的。 <xref:System.Windows.Data.CollectionViewSource>物件會自動同步處理貨幣和選取範圍。 如果您的清單控制項未系結至<xref:System.Windows.Data.CollectionViewSource>物件，如下列範例所示，則您必須將其<xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A>屬性設定`true`為，才能讓此作業正常執行。
 
-有關其他範例,請參閱[連結到集合並根據選擇顯示資訊](../../framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md),並使用[具有階層資料的主詳細資訊模式](../../framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。
+如需其他範例，請參閱系結[至集合並根據選取專案顯示資訊](../../framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)，並[使用具有階層式資料的主版詳細模式](../../framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)。
 
-您可能已經注意到上述範例有使用範本。 事實上,如果不使用範本(由和<xref:System.Windows.Controls.ContentControl>隱式使用範本)來顯示數據,數據就不會按我們希望的方式顯示。 <xref:System.Windows.Controls.ListBox> 現在，下節中要說明資料範本化。
+您可能已經注意到上述範例有使用範本。 事實上，資料不會以我們想要的方式來顯示，而不使用範本（明確使用的<xref:System.Windows.Controls.ContentControl> ，和由隱含使用的<xref:System.Windows.Controls.ListBox>）。 現在，下節中要說明資料範本化。
 
 ## <a name="data-templating"></a>製作資料範本
 
-如果不使用數據範本,我們在["什麼是數據綁定"](#what-is-data-binding)部分中的應用 UI 如下所示。
+如果沒有使用資料範本，則「[資料](#what-is-data-binding)系結」一節中的應用程式 UI 看起來會像下面這樣。
 
 ![不含資料範本的資料繫結示範](./media/data-binding-overview/demo-no-template.png)
 
-如上一節中的示例所示,<xref:System.Windows.Controls.ListBox>控件<xref:System.Windows.Controls.ContentControl>和 綁定都綁定到*拍賣專案*的整個集合物件(或更具體地說,對集合物件的視圖)。 如果沒有有關如何顯示資料收集的特定說明,則<xref:System.Windows.Controls.ListBox>顯示基礎集合中每個物件的字串表示形式,<xref:System.Windows.Controls.ContentControl>並顯示綁定到的物件的字串表示形式。
+如前一節中的範例所示， <xref:System.Windows.Controls.ListBox>控制項和<xref:System.Windows.Controls.ContentControl>都系結至*AuctionItem*s 的整個集合物件（或更明確地說，也就是集合物件上的視圖）。 若沒有如何顯示資料收集的特定指示，會<xref:System.Windows.Controls.ListBox>顯示基礎集合中每個物件的字串表示，而會<xref:System.Windows.Controls.ContentControl>顯示其所系結之物件的字串表示。
 
-要解決此問題,應用程式定義<xref:System.Windows.DataTemplate?text=DataTemplates>。 如前一個樣本的範例的範<xref:System.Windows.Controls.ContentControl>例, 顯示式使用*詳細資訊產品清單樣本*。 當<xref:System.Windows.Controls.ListBox>集合中顯示*拍賣項目*物件時,控件隱式使用以下數據範本。
+為了解決這個問題，應用程式會<xref:System.Windows.DataTemplate?text=DataTemplates>定義。 如前一節中的範例所示，會<xref:System.Windows.Controls.ContentControl>明確使用*detailsProductListingTemplate*資料範本。 控制項<xref:System.Windows.Controls.ListBox>在集合中顯示*AuctionItem*物件時，會隱含地使用下列資料範本。
 
 [!code-xaml[AuctionItemDataTemplate](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/CollectionView.xaml#AuctionItemDataTemplate)]
 
-使用這兩個 DataTemplate 時,生成的 UI 就是[「什麼是數據綁定」](#what-is-data-binding)部分中顯示的 UI。 正如您從該螢幕截圖中看到的,除了允許您將數據放置在控制項中之外,DataTemplate 還允許您為數據定義引人注目的視覺物件。 <xref:System.Windows.DataTrigger>例如,上面<xref:System.Windows.DataTemplate>使用 s,以便具有*高光**特殊功能*值的*拍賣專案*將顯示橙色邊框和星形。
+使用這兩個 DataTemplates，產生的 UI 就是「[什麼是資料](#what-is-data-binding)系結」一節中所示。 您可以從該螢幕擷取畫面中看到，除了讓您將資料放在控制項中，DataTemplates 還可讓您為資料定義引人注目的視覺效果。 例如，在<xref:System.Windows.DataTrigger>上述<xref:System.Windows.DataTemplate>的中會使用，讓*SpecialFeatures*值為*醒目*提示的*AuctionItem*會以橙色框線和星形來顯示。
 
-關於資料樣本的詳細資訊,請參考[資料樣本概述](../../framework/wpf/data/data-templating-overview.md)。
+如需資料範本的詳細資訊，請參閱[資料範本化總覽](../../framework/wpf/data/data-templating-overview.md)。
 
 ## <a name="data-validation"></a>資料驗證
 
-大多數採用使用者輸入的應用都需要具有驗證邏輯,以確保使用者已輸入預期資訊。 驗證檢查可以基於類型、範圍、格式或其他特定於應用的要求。 本節討論數據驗證在 WPF 中的工作原理。
+接受使用者輸入的大部分應用程式都需要有驗證邏輯，以確保使用者輸入了預期的資訊。 驗證檢查可以根據類型、範圍、格式或其他應用程式特定的需求。 本節討論資料驗證在 WPF 中的運作方式。
 
-### <a name="associating-validation-rules-with-a-binding"></a>將驗證規則與繫結
+### <a name="associating-validation-rules-with-a-binding"></a>將驗證規則與系結產生關聯
 
-WPF 資料繫結模型允許您<xref:System.Windows.Data.Binding.ValidationRules%2A><xref:System.Windows.Data.Binding>與 物件關聯。 例如,下面的示例<xref:System.Windows.Controls.TextBox>將綁定`StartPrice`到名為的屬性<xref:System.Windows.Controls.ExceptionValidationRule>,並將物件添加<xref:System.Windows.Data.Binding.ValidationRules%2A?displayProperty=nameWithType>到該 屬性。
+WPF 資料系結模型可讓您與<xref:System.Windows.Data.Binding.ValidationRules%2A> <xref:System.Windows.Data.Binding>物件產生關聯。 例如，下列範例會將系結<xref:System.Windows.Controls.TextBox>至名為`StartPrice`的屬性，並<xref:System.Windows.Controls.ExceptionValidationRule>將物件加入<xref:System.Windows.Data.Binding.ValidationRules%2A?displayProperty=nameWithType>至屬性。
 
 [!code-xaml[TextboxStartPrice](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/DataValidation.xaml#TextboxStartPrice)]
 
-<xref:System.Windows.Controls.ValidationRule>物件檢查屬性的值是否有效。 WPF 有兩種類型的內<xref:System.Windows.Controls.ValidationRule>建 物件:
+<xref:System.Windows.Controls.ValidationRule>物件會檢查屬性的值是否有效。 WPF 有兩種類型的內<xref:System.Windows.Controls.ValidationRule>建物件：
 
-- <xref:System.Windows.Controls.ExceptionValidationRule>檢查在更新綁定源屬性期間引發的異常。 在上面的範例中，`StartPrice` 的型別為整數。 當使用者輸入的值無法轉換為整數時，就會擲回例外狀況，造成繫結標記為無效。 <xref:System.Windows.Controls.ExceptionValidationRule>顯式設定的替代語法是<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>將 屬性`true`設置<xref:System.Windows.Data.Binding><xref:System.Windows.Data.MultiBinding>為 或 物件。
+- 會<xref:System.Windows.Controls.ExceptionValidationRule>檢查系結來源屬性更新期間所擲回的例外狀況。 在上面的範例中，`StartPrice` 的型別為整數。 當使用者輸入的值無法轉換為整數時，就會擲回例外狀況，造成繫結標記為無效。 <xref:System.Windows.Controls.ExceptionValidationRule>明確設定的替代語法是在您<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A> `true` <xref:System.Windows.Data.Binding>的或<xref:System.Windows.Data.MultiBinding>物件上將屬性設定為。
 
-- <xref:System.Windows.Controls.DataErrorValidationRule>對象檢查由<xref:System.ComponentModel.IDataErrorInfo>實現介面的物件引發的錯誤。 有關使用此驗證規則的範例,請參閱<xref:System.Windows.Controls.DataErrorValidationRule>。 <xref:System.Windows.Controls.DataErrorValidationRule>顯式設定的替代語法是<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>將 屬性`true`設置<xref:System.Windows.Data.Binding><xref:System.Windows.Data.MultiBinding>為 或 物件。
+- <xref:System.Windows.Controls.DataErrorValidationRule>物件會檢查執行<xref:System.ComponentModel.IDataErrorInfo>介面之物件所引發的錯誤。 如需使用此驗證規則的範例，請<xref:System.Windows.Controls.DataErrorValidationRule>參閱。 <xref:System.Windows.Controls.DataErrorValidationRule>明確設定的替代語法是在您<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A> `true` <xref:System.Windows.Data.Binding>的或<xref:System.Windows.Data.MultiBinding>物件上將屬性設定為。
 
-還可以通過派生<xref:System.Windows.Controls.ValidationRule>類和<xref:System.Windows.Controls.ValidationRule.Validate%2A>實現 方法創建自己的驗證規則。 下面的範例顯示了 *「添加產品清單*」開始日期<xref:System.Windows.Controls.TextBox>"在[「什麼是數據綁定](#what-is-data-binding)」部分使用的規則。
+您也可以藉由衍生自<xref:System.Windows.Controls.ValidationRule>類別並執行<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法，來建立自己的驗證規則。 下列範例顯示「[什麼是資料](#what-is-data-binding)系結」一節中，[新增<xref:System.Windows.Controls.TextBox>產品]*清單*[開始日期] 所使用的規則。
 
 [!code-csharp[FutureDateRule](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/FutureDateRule.cs#FutureDateRule)]
 [!code-vb[FutureDateRule](~/samples/snippets/desktop-guide/wpf/data-binding-overview/vb/FutureDateRule.vb#FutureDateRule)]
 
-*StartDateEntryForm*<xref:System.Windows.Controls.TextBox>使用此*未來日期規則*,如以下示例所示。
+*StartDateEntryForm* <xref:System.Windows.Controls.TextBox>會使用此*FutureDateRule*，如下列範例所示。
 
 [!code-xaml[TextboxStartDate](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/DataValidation.xaml#TextboxStartDate)]
 
-由於<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>為 ,綁定引擎會更新每個擊鍵的源值,這意味著它還會檢查<xref:System.Windows.Data.Binding.ValidationRules%2A>集合中 每個擊鍵中的每個規則。 我們將在＜驗證程序＞一節進一步討論這個部分。
+因為<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值為， <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>系結引擎會更新每個擊鍵的來源值，這表示它也會檢查每個擊鍵<xref:System.Windows.Data.Binding.ValidationRules%2A>的集合中的每個規則。 我們將在＜驗證程序＞一節進一步討論這個部分。
 
-### <a name="providing-visual-feedback"></a>提供視覺回饋
+### <a name="providing-visual-feedback"></a>提供視覺效果的意見反應
 
-如果使用者輸入無效值,您可能需要提供有關應用 UI 上的錯誤的一些反饋。 提供此類回饋的一種方法是附加<xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType>屬性設定為自訂<xref:System.Windows.Controls.ControlTemplate>。 如上一節所示 *,StartDateEntryForm*<xref:System.Windows.Controls.TextBox>使用<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>稱為*驗證範本*。 下面的示例顯示了*驗證範本*的定義。
+如果使用者輸入不正確值，您可能會想要在應用程式 UI 上提供有關錯誤的一些意見反應。 提供這類意見反應的其中一種方式<xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType> ，就是將附加<xref:System.Windows.Controls.ControlTemplate>屬性設定為自訂。 如上一節所示， *StartDateEntryForm* <xref:System.Windows.Controls.TextBox>會使用<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>稱為*validationTemplate*。 下列範例顯示*validationTemplate*的定義。
 
 [!code-xaml[ControlTemplate](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/DataValidation.xaml#ControlTemplate)]
 
-該<xref:System.Windows.Controls.AdornedElementPlaceholder>元素指定應放置要修飾的控制項的位置。
+<xref:System.Windows.Controls.AdornedElementPlaceholder>元素會指定要裝飾之控制項的放置位置。
 
-此外,您還可以使用顯示<xref:System.Windows.Controls.ToolTip>錯誤訊息。 *StartDateEntryForm*和*StartPriceentryForm*<xref:System.Windows.Controls.TextBox>都使用樣式*文字樣式文字Box*,它建立顯示<xref:System.Windows.Controls.ToolTip>錯誤訊息的 樣式文字文字Box 。 下列範例顯示 *textStyleTextBox* 的定義。 附加屬性<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>`true`是在綁定元素的屬性上的一個或多個綁定出錯時。
+此外，您也可以使用<xref:System.Windows.Controls.ToolTip>來顯示錯誤訊息。 *StartDateEntryForm*和*StartPriceEntryForm*<xref:System.Windows.Controls.TextBox>es 都會使用 style *textStyleTextBox*，它<xref:System.Windows.Controls.ToolTip>會建立顯示錯誤訊息的。 下列範例顯示 *textStyleTextBox* 的定義。 當繫結項目<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>之`true`屬性的一個或多個系結髮生錯誤時，附加屬性為。
 
 [!code-xaml[TextBoxStyle](~/samples/snippets/desktop-guide/wpf/data-binding-overview/csharp/DataValidation.xaml#TextBoxStyle)]
 
-當出現驗證<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>錯誤<xref:System.Windows.Controls.ToolTip>時 ,使用 自訂和啟動*日期輸入窗體*<xref:System.Windows.Controls.TextBox>如下所示。
+使用自訂<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>和<xref:System.Windows.Controls.ToolTip>，當發生驗證錯誤時， *StartDateEntryForm* <xref:System.Windows.Controls.TextBox>看起來會像下面這樣。
 
 ![資料繫結驗證錯誤](./media/data-binding-overview/demo-validation-date.png "DataBindingDemo_Validation")
 
-<xref:System.Windows.Data.Binding>如果具有關聯的驗證規則,但未在綁定控制項上<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>指定, 則<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>當存在 驗證錯誤時,將使用預設值通知使用者。 默認值<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>是定義裝飾層中的紅色邊框的控制範本。 當出現驗證<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>錯誤<xref:System.Windows.Controls.ToolTip>時 ,使用預設值和 的 UI 時 *,StartPriceEntryForm*<xref:System.Windows.Controls.TextBox>的 UI 如下所示。
+如果您<xref:System.Windows.Data.Binding>有相關聯的驗證規則，但未在<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>繫結控制項上指定，則會<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>在發生驗證錯誤時，使用預設值來通知使用者。 預設值<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>是在裝飾項圖層中定義紅色框線的控制項範本。 使用預設值<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>和時<xref:System.Windows.Controls.ToolTip>，當發生驗證錯誤時， *StartPriceEntryForm* <xref:System.Windows.Controls.TextBox>的 UI 看起來會像下面這樣。
 
 ![資料繫結驗證錯誤](./media/data-binding-overview/demo-validation-price.png "DataBindingDemo_ValidationDefault")
 
-有關如何提供邏輯以驗證對話方塊中的所有控制項的範例,請參閱[對話方塊概述](../../framework/wpf/app-development/dialog-boxes-overview.md)中的「自定義對話框」 部分。
+如需如何提供邏輯來驗證對話方塊中所有控制項的範例，請參閱[對話方塊總覽](../../framework/wpf/app-development/dialog-boxes-overview.md)中的自訂對話方塊一節。
 
-### <a name="validation-process"></a>驗證過程
+### <a name="validation-process"></a>驗證流程
 
-通常驗證發生的時機，是將目標的值傳輸到繫結來源屬性的時候。 此傳輸發生在<xref:System.Windows.Data.BindingMode.TwoWay>和<xref:System.Windows.Data.BindingMode.OneWayToSource>綁定上。 要重申,源更新的原因取決於<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性的值,如[「什麼觸發源更新](#what-triggers-source-updates)」部分所述。
+通常驗證發生的時機，是將目標的值傳輸到繫結來源屬性的時候。 此傳輸發生在<xref:System.Windows.Data.BindingMode.TwoWay>和<xref:System.Windows.Data.BindingMode.OneWayToSource>系結上。 再次重申，會造成來源更新相依于<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性的值，如[觸發程式來源更新](#what-triggers-source-updates)一節中所述。
 
-以下項描述*驗證*過程。 如果在此過程中的任何時間發生驗證錯誤或其他類型的錯誤,則行程將停止:
+下列專案描述*驗證*程式。 如果在此程式中的任何時間發生驗證錯誤或其他類型的錯誤，進程就會暫停：
 
-1. 綁定引擎檢查<xref:System.Windows.Controls.ValidationRule>是否有任何自定義物件定義<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>其<xref:System.Windows.Controls.ValidationStep.RawProposedValue>設置<xref:System.Windows.Data.Binding>為 該 ,在這種情況下,<xref:System.Windows.Controls.ValidationRule.Validate%2A><xref:System.Windows.Controls.ValidationRule>它調用每個 物件上的方法,直到其中一個運行錯誤或直到所有物件都通過。
+1. 系結引擎會檢查是否有任何定義<xref:System.Windows.Controls.ValidationRule>的自訂<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>物件<xref:System.Windows.Controls.ValidationStep.RawProposedValue> <xref:System.Windows.Data.Binding>，其已設定為，在此情況下， <xref:System.Windows.Controls.ValidationRule.Validate%2A>它會在<xref:System.Windows.Controls.ValidationRule>每個上呼叫方法，直到其中一個發生錯誤，或直到全部通過為止。
 
 2. 接著，繫結引擎就會在有轉換器的情況下呼叫轉換器。
 
-3. 如果轉換器成功,綁定引擎將檢查是否有任何自定義<xref:System.Windows.Controls.ValidationRule>物件定義<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>其<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>設置<xref:System.Windows.Data.Binding>為 該 物件,在這種情況下,它<xref:System.Windows.Controls.ValidationRule.Validate%2A><xref:System.Windows.Controls.ValidationRule><xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>會調用<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>每個 已設置為 的方法,直到其中一個物件遇到錯誤或直到所有對象都通過。
+3. 如果轉換器成功，系結引擎會檢查是否有任何定義的<xref:System.Windows.Controls.ValidationRule>自訂物件<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> <xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue> <xref:System.Windows.Data.Binding>，其已設定為，在此情況下，它<xref:System.Windows.Controls.ValidationRule.Validate%2A>會在<xref:System.Windows.Controls.ValidationRule> <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設定為<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>的每一個上呼叫方法，直到其中一個專案發生錯誤，或直到全部通過為止。
 
 4. 繫結引擎會設定來源屬性。
 
-5. 綁定引擎<xref:System.Windows.Controls.ValidationRule>檢查是否有任何自定義物件定義<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>其<xref:System.Windows.Controls.ValidationStep.UpdatedValue>設置<xref:System.Windows.Data.Binding>為 該 物件,在這種情況下,它<xref:System.Windows.Controls.ValidationRule.Validate%2A><xref:System.Windows.Controls.ValidationRule><xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>會調用<xref:System.Windows.Controls.ValidationStep.UpdatedValue>每個 已設置為 的方法,直到其中一個物件遇到錯誤或直到所有物件都通過。 如果<xref:System.Windows.Controls.DataErrorValidationRule>與繫結的關聯,並且<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設定為預設值<xref:System.Windows.Controls.ValidationStep.UpdatedValue>, 此時會<xref:System.Windows.Controls.DataErrorValidationRule>檢查 。 此時,<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>`true`將檢查具有集的任何綁定。
+5. 系結引擎會檢查是否有任何定義<xref:System.Windows.Controls.ValidationRule>的自訂<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>物件<xref:System.Windows.Controls.ValidationStep.UpdatedValue> <xref:System.Windows.Data.Binding>，其已設定為，在此情況下， <xref:System.Windows.Controls.ValidationRule.Validate%2A>它會在<xref:System.Windows.Controls.ValidationRule> <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設定為<xref:System.Windows.Controls.ValidationStep.UpdatedValue>的每一個上呼叫方法，直到其中一個專案發生錯誤，或直到全部通過為止。 <xref:System.Windows.Controls.DataErrorValidationRule>如果與系結相關聯，而且其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設定為預設值， <xref:System.Windows.Controls.ValidationStep.UpdatedValue> <xref:System.Windows.Controls.DataErrorValidationRule>則會在此時檢查。 此時，會核取任何具有<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>設定為`true`的系結。
 
-6. 綁定引擎<xref:System.Windows.Controls.ValidationRule>檢查是否有任何自定義物件定義<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>其<xref:System.Windows.Controls.ValidationStep.CommittedValue>設置<xref:System.Windows.Data.Binding>為 該 物件,在這種情況下,它<xref:System.Windows.Controls.ValidationRule.Validate%2A><xref:System.Windows.Controls.ValidationRule><xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>會調用<xref:System.Windows.Controls.ValidationStep.CommittedValue>每個 已設置為 的方法,直到其中一個物件遇到錯誤或直到所有物件都通過。
+6. 系結引擎會檢查是否有任何定義<xref:System.Windows.Controls.ValidationRule>的自訂<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>物件<xref:System.Windows.Controls.ValidationStep.CommittedValue> <xref:System.Windows.Data.Binding>，其已設定為，在此情況下， <xref:System.Windows.Controls.ValidationRule.Validate%2A>它會在<xref:System.Windows.Controls.ValidationRule> <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設定為<xref:System.Windows.Controls.ValidationStep.CommittedValue>的每一個上呼叫方法，直到其中一個專案發生錯誤，或直到全部通過為止。
 
-如果<xref:System.Windows.Controls.ValidationRule>在整個過程中任何時候都未傳遞 ,綁定引擎將創建<xref:System.Windows.Controls.ValidationError>一個 物件並將其添加到<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>綁定元素 的集合中。 在綁定引擎在任何給定步驟<xref:System.Windows.Controls.ValidationRule>上運行物件之前,它會刪除該步驟<xref:System.Windows.Controls.ValidationError>期間 添加到綁<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>定元素的附加屬性的任何內容。 例如,如果設置為<xref:System.Windows.Controls.ValidationRule><xref:System.Windows.Controls.ValidationRule.ValidationStep%2A><xref:System.Windows.Controls.ValidationStep.UpdatedValue>失敗<xref:System.Windows.Controls.ValidationError>的 ,則下次發生驗證過程時,綁定引擎將刪除它調<xref:System.Windows.Controls.ValidationRule>用<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>任何<xref:System.Windows.Controls.ValidationStep.UpdatedValue>已設置為之前。
+如果在<xref:System.Windows.Controls.ValidationRule>整個過程中都不會傳遞，系結引擎會建立<xref:System.Windows.Controls.ValidationError>物件，並將它加入至綁定<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>項的集合。 在系結引擎于任何<xref:System.Windows.Controls.ValidationRule>指定的步驟執行物件之前，它會<xref:System.Windows.Controls.ValidationError>移除在該步驟期間<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>加入繫結項目之附加屬性中的任何。 <xref:System.Windows.Controls.ValidationRule>例如，如果將其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設定為<xref:System.Windows.Controls.ValidationStep.UpdatedValue>失敗，則在下一次進行驗證程式時，系結引擎會在<xref:System.Windows.Controls.ValidationError>呼叫任何<xref:System.Windows.Controls.ValidationRule>已<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設定為<xref:System.Windows.Controls.ValidationStep.UpdatedValue>的之前，立即移除該程式。
 
-當<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>不為空時,<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>元素的附加屬性設定為`true`。 此外,如果<xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>的屬性<xref:System.Windows.Data.Binding>設置為`true`,則綁定引擎<xref:System.Windows.Controls.Validation.Error?displayProperty=nameWithType>將附加事件引發元素。
+當<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>不是空的時<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> ，元素的附加屬性會設定為`true`。 此外，如果的<xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>屬性設定為<xref:System.Windows.Data.Binding> `true`，則系結引擎會在元素上引發<xref:System.Windows.Controls.Validation.Error?displayProperty=nameWithType>附加事件。
 
-另請注意,向任一方向(目標到源或源到目標)的有效值轉移將清除<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>附加屬性。
+另請注意，任一方向的有效值傳輸（目標至來源或來源至目標）都會清除<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>附加屬性。
 
-如果繫結具與其關聯的綁定<xref:System.Windows.Controls.ExceptionValidationRule>,或者<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>將 屬性`true`設定為 ,並在綁定引擎設定來源時引發異常,則綁定引擎將<xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>檢查是否有 。 您可以選擇使用<xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>回調來提供用於處理異常的自定義處理程式。 如果在<xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A><xref:System.Windows.Data.Binding>上 未指定 , 繫<xref:System.Windows.Controls.ValidationError>結引擎將建立 具有異常的<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>, 並將其新增到 綁定元素的集合中。
+如果系結具有與它<xref:System.Windows.Controls.ExceptionValidationRule>相關聯的，或<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>屬性設定為`true` ，而且當系結引擎設定來源時擲回例外狀況，則系結引擎會檢查是否有。 <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A> 您可以選擇使用<xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>回呼來提供處理例外狀況的自訂處理常式。 如果未<xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>在上指定<xref:System.Windows.Data.Binding>，系結引擎會建立<xref:System.Windows.Controls.ValidationError>具有例外狀況的，並將它新增至<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>繫結項目的集合。
 
-## <a name="debugging-mechanism"></a>除錯機制
+## <a name="debugging-mechanism"></a>調試機制
 
-您可以在綁定相關物件上設置<xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType>附加屬性以接收有關特定綁定狀態的資訊。
+您可以在系結相關<xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType>物件上設定附加屬性，以接收特定系結狀態的相關資訊。
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Controls.DataErrorValidationRule>
-- [繫結到 LINQ 查詢的結果](../../framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
+- [系結至 LINQ 查詢的結果](../../framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)
 - [資料繫結](../../framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [資料繫結示範][data-binding-demo]
-- [如何使用的文章](../../framework/wpf/data/data-binding-how-to-topics.md)
+- [資料系結示範][data-binding-demo]
+- [How-to 文章](../../framework/wpf/data/data-binding-how-to-topics.md)
 - [繫結至 ADO.NET 資料來源](../../framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
 
-[data-binding-demo]: https://github.com/microsoft/WPF-Samples/tree/master/Sample%20Applications/DataBindingDemo "資料繫結示範應用程式"
+[data-binding-demo]: https://github.com/microsoft/WPF-Samples/tree/master/Sample%20Applications/DataBindingDemo "資料系結示範應用程式"

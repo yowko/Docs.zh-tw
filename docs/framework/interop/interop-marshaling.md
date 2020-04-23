@@ -82,7 +82,7 @@ Managed 用戶端 Apartment 的預設值為 MTA；不過，.NET 用戶端的應�
 
 ## <a name="marshaling-remote-calls"></a>封送處理遠端呼叫
 
-如同跨 Apartment 封送處理，當物件位於不同的處理序時，在 Managed 和 Unmanaged 程式碼之間的每一個呼叫都需要 COM 封送處理。 例如:
+如同跨 Apartment 封送處理，當物件位於不同的處理序時，在 Managed 和 Unmanaged 程式碼之間的每一個呼叫都需要 COM 封送處理。 例如：
 
 - 在遠端主機上叫用 Managed 伺服器的 COM 用戶端會使用分散式 COM (DCOM)。
 - 在遠端主機上叫用 COM 伺服器的 Managed 用戶端會使用 DCOM。
@@ -95,7 +95,7 @@ Managed 用戶端 Apartment 的預設值為 MTA；不過，.NET 用戶端的應�
 
 Common Language Runtime 會保留 Managed 和 Unmanaged 參考的識別。 下圖顯示跨處理序和主機界限的直接 Unmanaged 參考 (上方列) 和直接 Managed 參考 (下方列) 的流程。
 
-![COM 可呼叫包裝函式和執行時間可呼叫包裝函式](./media/interop-marshaling/interop-direct-ref-across-process.gif "跨處理序和主機界限傳遞的參考")
+![COM 可呼叫包裝函式和執行階段可呼叫包裝函式](./media/interop-marshaling/interop-direct-ref-across-process.gif "跨處理序和主機界限傳遞的參考")
 
 在本圖中：
 
@@ -117,18 +117,18 @@ Common Language Runtime 會保留 Managed 和 Unmanaged 參考的識別。 下�
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|Title|描述|
 |-----------|-----------------|
 |[預設的封送處理行為](default-marshaling-behavior.md)|描述 Interop 封送處理服務用來封送處理資料的規則。|
 |[使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)|描述如何宣告方法參數，以及將引數傳遞給 Unmanaged 程式庫所匯出的函式。|
 |[使用 COM Interop 封送處理資料](marshaling-data-with-com-interop.md)|描述如何自訂 COM 包裝函式來變更封送處理行為。|
 |[如何：將 Managed 程式碼 DCOM 移轉至 WCF](how-to-migrate-managed-code-dcom-to-wcf.md)|描述如何從 DCOM 移轉至 WCF。|
 |[操作說明：對應 HRESULT 和例外狀況](how-to-map-hresults-and-exceptions.md)|描述如何將自訂例外狀況對應到 HRESULT，並提供每一個 HRESULT 與其在 .NET Framework 中可比較的例外狀況類別之完整對應。|
-|[使用泛型型別互通](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|描述使用泛型類型來取得 COM 互通性時所支援的動作。|
-|[與 Unmanaged 程式碼互通](index.md)|描述 Common Language Runtime 提供的互通性服務。|
+|[使用泛型型別交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229590(v=vs.100))|描述使用泛型類型來取得 COM 互通性時所支援的動作。|
+|[與非受控程式碼交互操作](index.md)|描述 Common Language Runtime 提供的互通性服務。|
 |[進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|提供有關將 COM 元件納入 .NET Framework 應用程式的詳細資訊連結。|
-|[互通的設計考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|提供撰寫整合式 COM 元件的秘訣。|
+|[交互操作的設計考量](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))|提供撰寫整合式 COM 元件的秘訣。|
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 <xref:System.Runtime.InteropServices?displayProperty=nameWithType>

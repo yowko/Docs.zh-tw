@@ -17,7 +17,7 @@ ms.lasthandoff: 10/30/2019
 ms.locfileid: "73130208"
 ---
 # <a name="how-to-get-type-and-member-information-by-using-reflection"></a>如何：使用反映取得類型和成員資訊
-<xref:System.Reflection> 命名空間包含許多方法，可取得有關類型及其成員的資訊。 本文示範其中一種方法，<xref:System.Type.GetMembers%2A?displayProperty=nameWithType>。 如需其他資訊，請參閱[反映總覽](reflection.md)。
+<xref:System.Reflection>命名空間包含許多方法，可取得類型及其成員的相關資訊。 本文示範其中一種方法： <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>。 如需其他資訊，請參閱[反映總覽](reflection.md)。
   
 ## <a name="example"></a>範例
 
@@ -27,8 +27,8 @@ ms.locfileid: "73130208"
 [!code-csharp[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.cs)]
 [!code-vb[Get type members](../../../samples/snippets/standard/reflection/memberinfo/gettypemembers.vb)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用應用程式域的程式](../app-domains/application-domains.md#programming-with-application-domains)
-- [反映](reflection.md)
+- [反射](reflection.md)
 - [使用應用程式域](../app-domains/use.md)

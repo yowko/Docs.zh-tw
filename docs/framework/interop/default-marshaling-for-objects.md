@@ -116,7 +116,7 @@ struct ObjectHolder {
 
 ## <a name="marshaling-object-to-interface"></a>將物件封送處理成介面
 
-向 COM 將物件公開為介面時，該介面是 Managed 類型 <xref:System.Object> 的類別介面 ( **_Object** 介面)。 在產生的型別程式庫中，這個介面類型為 **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) 或 **IUnknown** (**UnmanagedType.IUnknown**)。 COM 用戶端可以動態方式叫用 Managed 類別的成員，或其衍生類別透過 **_Object** 介面所實作的任何成員。 用戶端也可以呼叫 **QueryInterface** 取得 Managed 類型明確實作的任何其他介面。
+向 COM 將物件公開為介面時，該介面是 Managed 類型 <xref:System.Object> 的類別介面 (**_Object** 介面)。 此介面在產生的類型**IDispatch**程式庫<xref:System.Runtime.InteropServices.UnmanagedType>中會輸入為 IDispatch （）或**iunknown** （**unmanagedtype.lpwstr iunknown**）。 COM 用戶端可以動態方式叫用 Managed 類別的成員，或其衍生類別透過 **_Object** 介面所實作的任何成員。 用戶端也可以呼叫 **QueryInterface** 取得 Managed 類型明確實作的任何其他介面。
 
 ## <a name="marshaling-object-to-variant"></a>將物件封送處理成 Variant
 
@@ -240,7 +240,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |不支援。|**VT_ARRAY**|
 |不支援。|**VT_RECORD**|
 |不支援。|**VT_CY**|
-|不支援。|**VT_Variant**|
+|不支援。|**VT_VARIANT**|
 
 COM Variant 的值是透過呼叫 **IConvertible.To** *Type* 介面所決定；其中 **To** *Type* 是轉換常式，對應到從 **IConvertible.GetTypeCode** 傳回的類型。 例如，從 **IConvertible.GetTypeCode** 傳回 **TypeCode.Double** 的物件，會封送處理成 **VT_R8** 類型的 COM Variant。 您可以透過轉換為 **IConvertible** 介面及呼叫 <xref:System.IConvertible.ToDouble%2A> 方法，取得 Variant 的值 (儲存在 COM Variant 的 **dblVal** 欄位)。
 
@@ -271,10 +271,10 @@ COM Variant 的值是透過呼叫 **IConvertible.To** *Type* 介面所決定；�
 |**VT_BSTR**|<xref:System.String?displayProperty=nameWithType>|
 |**VT_INT**|<xref:System.Int32?displayProperty=nameWithType>|
 |**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|
-|**VT_ARRAY** &#124; **VT_** \*|<xref:System.Array?displayProperty=nameWithType>|
+|**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|
 |**VT_RECORD**|對應 Boxed 實值型別。|
-|**VT_Variant**|不支援。|
+|**VT_VARIANT**|不支援。|
 
 從 COM 傳遞至 Managed 程式碼再回到 COM 的 Variant 類型，在呼叫期間可能不會保留相同的 Variant 類型。 當 **VT_DISPATCH** 類型的 Variant 從 COM 傳遞至 .NET Framework 時，請考慮會發生什麼情況。 在封送處理期間，Variant 會轉換成 <xref:System.Object?displayProperty=nameWithType>。 如果接著將**物件**傳送回 COM，它會封送處理回 **VT_UNKNOWN** 類型的 Variant。 當物件從 Managed 程式碼封送處理到 COM 時產生的 Variant，不保證和最初用來產生物件的 Variant 是同一類型。
 
@@ -310,16 +310,16 @@ COM Variant 的值是透過呼叫 **IConvertible.To** *Type* 介面所決定；�
 
 下表摘要說明 Variant 和物件的傳播規則。
 
-|From|若要|變更傳播回|
+|從|至|變更傳播回|
 |----------|--------|-----------------------------|
 |**Variant**  *v*|**物件**  *o*|永不|
 |**物件**  *o*|**Variant**  *v*|永不|
-|**Variant**   ***\****  *pv*|**Ref 物件**  *o*|永遠|
-|**Ref 物件**  *o*|**Variant**   ***\****  *pv*|永遠|
+|**Variant**   ***\****  *pv*|**Ref 物件**  *o*|一律|
+|**Ref 物件**  *o*|**Variant**   ***\****  *pv*|一律|
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_\*)**|**物件**  *o*|永不|
-|**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref 物件**  *o*|只有當類型不變更時。|
+|**Variant**  *v* **（VT_BYREF** *&#124;* **VT_）**|**Ref 物件**  *o*|只有當類型不變更時。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [預設的封送處理行為](default-marshaling-behavior.md)
 - [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)

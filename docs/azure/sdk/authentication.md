@@ -45,7 +45,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-服務連接字串用於其他 Azure 服務,如[CosmosDB、Redis](https://docs.microsoft.com/azure/cosmos-db/)[的 Azure 快取](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)[與服務匯流線](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)。 您可以使用 Azure 門戶、CLI 或 PowerShell 獲取這些字串。 您也可以使用適用於 .NET 的 Azure 管理程式庫來查詢資源，從而在程式碼中建置連接字串。
+服務連接字串會在其他 Azure 服務中使用，例如[CosmosDB](https://docs.microsoft.com/azure/cosmos-db/)、 [Azure Cache for Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)和[服務匯流排](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)。 您可以使用 Azure 入口網站、CLI 或 PowerShell 來取得這些字串。 您也可以使用適用於 .NET 的 Azure 管理程式庫來查詢資源，從而在程式碼中建置連接字串。
 
 此程式碼片段會使用管理程式庫來建立儲存體帳戶的連接字串：
 
@@ -76,7 +76,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 
 現在您已建立服務主體，有兩個選項可用來驗證服務主體，從而建立和管理資源。
 
-對於這兩個選項,您需要將以下 NuGet 包添加到專案中。
+針對這兩個選項，您必須將下列 NuGet 套件新增至您的專案。
 
 ```powershell
 Install-Package Microsoft.Azure.Management.Fluent
