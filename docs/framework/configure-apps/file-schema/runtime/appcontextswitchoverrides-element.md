@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 95ae438e9fb52cc584d18a981bffb66147eb4a77
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8d5cd73bb9393533cb669581420e24297cb5ff71
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242812"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102927"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<套用中文切換覆寫>元素
 
@@ -49,7 +49,7 @@ ms.locfileid: "81242812"
 
 ### <a name="parent-elements"></a>父項目
 
-|項目|描述|
+|元素|描述|
 |-------------|-----------------|
 |`configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|
 |`runtime`|包含有關執行階段初始化選項的資訊。|
@@ -59,7 +59,7 @@ ms.locfileid: "81242812"
 
  `<AppContextSwitchOverrides>`元素`value`的屬性由一個字串組成,該字串由一個或多個分號分隔的名稱/值對組成。  每個名稱識別相容性開關,其相應的值是布爾(`true``false`或 ), 指示是否設置了該開關。 默認情況下,開關為`false`,庫提供新功能。 僅當設置開關(即其值為`true`)時,它們才提供以前的功能。 這允許庫為現有 API 提供新的行為,同時允許依賴於前一個行為的調用方退出宣告新功能。
 
- .NET 框架支援以下交換機:
+.NET 框架支援以下交換機:
 
 |切換名稱|描述|介紹|
 |-----------------|-----------------|----------------|
@@ -141,7 +141,7 @@ ms.locfileid: "81242812"
 
  庫開發人員還可以定義自定義交換機,以允許調用方退出宣告其庫的更高版本中引入的已更改功能。 如需詳細資訊，請參閱 <xref:System.AppContext> 類別。
 
-## <a name="switches-in-aspnet-applications"></a>ASP.NET應用中的交換器
+## <a name="switches-in-aspnet-apps"></a>ASP.NET應用中的交換器
 
 通過將[\<>](../appsettings/add-element-for-appsettings.md)元素添加到 Web.config 檔案[\<的應用設置>](../appsettings/index.md)部分,可以將 ASP.NET 應用程式配置為使用相容性設置。
 
@@ -179,6 +179,7 @@ ms.locfileid: "81242812"
 
 ## <a name="see-also"></a>另請參閱
 
+- [減輕 .NET 架構 4.6 及更高版本中的新行為](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<執行時>元素](runtime-element.md)
 - [\<設定>元素](../configuration-element.md)

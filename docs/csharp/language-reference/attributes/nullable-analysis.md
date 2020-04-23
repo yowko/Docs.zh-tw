@@ -2,12 +2,12 @@
 title: C# 保留屬性:可無靜態分析
 ms.date: 04/14/2020
 description: 這些屬性由編譯器解釋,以便為可無和不可取消的引用類型提供更好的靜態分析。
-ms.openlocfilehash: 0315d78db7517541efe578d8675c0f2fe45f5aea
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 33521133a6a01196e6e1ab9c3cdc191a24f1ecf3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389860"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102706"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>保留屬性有助於編譯器的空狀態靜態分析
 
@@ -129,7 +129,7 @@ public Customer FindCustomer(string lastName, string firstName)
 
 您可能已經編寫了這樣的方法,在未找到要`null`找的名稱時返回。 清楚地`null`指示找不到記錄。 這個選項, 可能會傳回類型從`Customer`變更為`Customer?`。 將返回值聲明為空引用類型明確指定此 API 的意圖。
 
-由於[泛型定義和無效性](../../nullable-attributes.md#generic-definitions-and-nullability)所涵蓋的原因,該技術不適用於泛型方法。 您可能有一個遵循類似模式的泛型方法:
+由於[泛型定義和無效性](../../nullable-migration-strategies.md#generic-definitions-and-nullability)所涵蓋的原因,該技術不適用於泛型方法。 您可能有一個遵循類似模式的泛型方法:
 
 ```csharp
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)

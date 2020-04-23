@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 44d6ed9ac6e1c3c4d08bbd69ca808d2e740f0c4e
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 6fd2dab09fe97aa4af87d82e2d23664c4347c8b3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738322"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82101991"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Lambda 運算式 (C# 程式設計指南)
 
@@ -230,7 +230,7 @@ Lambda 可以參考「外部變數」**。 這些是在定義 Lambda 運算式�
 - [C# 編程指南](../index.md)
 - [LINQ (Language-Integrated Query)](../concepts/linq/index.md)
 - [運算式樹](../concepts/expression-trees/index.md)
-- [與 lambda 表示式相比的局部函數](../../local-functions-vs-lambdas.md)
+- [區域函式與 Lambda 運算式的比較](../classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)
 - [隱含型別 Lambda 運算式](../../implicitly-typed-lambda-expressions.md)
 - [Visual Studio 2008 C# 範例 (請參閱 LINQ 範例查詢檔案和 XQuery 程式)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Recursive lambda expressions (遞迴的 Lambda 運算式)](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

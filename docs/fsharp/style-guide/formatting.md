@@ -2,12 +2,12 @@
 title: F# 程式碼格式方針
 description: 瞭解 F# 程式碼的格式設定指南。
 ms.date: 11/04/2019
-ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: dd48380a90ee92b2c1edaaabc116fa1cd8010390
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739549"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102485"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# 程式碼格式方針
 
@@ -579,10 +579,10 @@ let pascalsTriangle =
 
 ```fsharp
 // Preferred
-let squares = [ for x in 1..10 -> x*x ]
+let squares = [ for x in 1..10 -> x * x ]
 
 // Not preferred
-let squares' = [ for x in 1..10 do yield x*x ]
+let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
 在可能有條件地生成數據或可能需要`yield`計算連續運算式的情況下,需要指定較舊版本的 F# 語言。 預設的一般略`yield`這些 關鍵字,除非您必須使用較舊的 F# 語言版本進行編譯:
@@ -816,10 +816,10 @@ let function1 a b = a - b * b
 ```fsharp
 // A1 and A2 are local modules.
 module A1 =
-    let function1 a b = a*a + b*b
+    let function1 a b = a * a + b * b
 
 module A2 =
-    let function2 a b = a*a - b*b
+    let function2 a b = a * a - b * b
 ```
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>設定物件運算式與介面的格式
@@ -878,7 +878,7 @@ type MyRecord =
 
 ### <a name="formatting-attributes-on-parameters"></a>參數上的格式設定屬性
 
-屬性也可以是參數上的放置。 在這種情況下,將放在與參數相同的行上,並在名稱之前:
+屬性也可以放置在參數上。 在這種情況下,將放在與參數相同的行上,並在名稱之前:
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 494a46040d6cc33c5284449779fae89705fd29c2
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 07e1b49605c83908f7b9af25e0cb2599a97257c5
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738830"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102069"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -77,7 +77,7 @@ class CS0663_Example
   
 ## <a name="reference-return-values"></a>參考傳回值
 
-參考傳回值 (或 ref 傳回值) 是方法以傳參考方式傳回給呼叫者的值。 也就是說，呼叫者可以修改方法所傳回的值，而且該變更會反映在包含方法的物件狀態中。
+參考傳回值 (或 ref 傳回值) 是方法以傳參考方式傳回給呼叫者的值。 也就是說,調用方可以修改方法返回的值,並且該更改反映在調用方法中物件的狀態中。
 
 參考傳回值是使用 `ref` 關鍵字所定義：
 
@@ -94,6 +94,10 @@ return ref DecimalArray[0];
 ```
 
 為了讓呼叫者修改物件的狀態，參考傳回值必須儲存至明確定義為 [ref 區域變數](#ref-locals)的變數。
+
+下面是一個更完整的 ref 返回示例,顯示了方法簽名和方法正文。
+
+[!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
 所呼叫的方法也可能將傳回值宣告為 `ref readonly`，以透過傳址方式將值傳回，並且強制使呼叫程式碼無法修改傳回值。 呼叫的方法可以將值儲存在區域 [ref readonly](#ref-readonly-locals) 變數，以避免複製傳回值。
 

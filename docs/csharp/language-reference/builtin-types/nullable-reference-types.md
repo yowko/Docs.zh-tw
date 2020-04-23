@@ -2,12 +2,12 @@
 title: 空白參考型態 - C# 參考
 description: 瞭解 C# 可空參考型態以及如何使用它們
 ms.date: 04/06/2020
-ms.openlocfilehash: cbc7397ac76b43b79a4168f4c61fe2c631b4a46b
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: cb61b162b06faa51faabbcdd91e55618cdeaca73
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888313"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102693"
 ---
 # <a name="nullable-reference-types-c-reference"></a>空白引言型態 (C# 引用)
 
@@ -61,11 +61,11 @@ try
 
 :::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
 
-前面的範例演示了編譯器的靜態分析,以確定引用變數的 null 狀態。 編譯器對空檢查和賦值應用語言規則來通知其分析。  編譯器不能對方法或屬性的語義進行假設。 如果調用執行空檢查的方法,編譯器無法知道這些方法會影響變數的 null 狀態。 有許多屬性可以添加到 API 中,以便通知編譯器參數和返回值的語義。 這些屬性已應用於 .NET 核心庫中的許多常見 API。 例如,<xref:System.String.IsNullOrEmpty%2A>已更新,編譯器將該方法正確解釋為空檢查。 有關應用於空狀態靜態分析的屬性的詳細資訊,請參閱關於[null 可屬性](../../nullable-attributes.md)的文章。
+前面的範例演示了編譯器的靜態分析,以確定引用變數的 null 狀態。 編譯器對空檢查和賦值應用語言規則來通知其分析。  編譯器不能對方法或屬性的語義進行假設。 如果調用執行空檢查的方法,編譯器無法知道這些方法會影響變數的 null 狀態。 有許多屬性可以添加到 API 中,以便通知編譯器參數和返回值的語義。 這些屬性已應用於 .NET 核心庫中的許多常見 API。 例如,<xref:System.String.IsNullOrEmpty%2A>已更新,編譯器將該方法正確解釋為空檢查。 有關應用於空狀態靜態分析的屬性的詳細資訊,請參閱關於[null 可屬性](../attributes/nullable-analysis.md)的文章。
 
 ## <a name="setting-the-nullable-context"></a>設定可無效的內容
 
-有兩種方法可以控制可無效上下文。 在項目級別,可以添加`<Nullable>enable</Nullable>`專案設置。 在單個 C# 源檔案中,`#nullable enable`可以新增雜注以啟用可 null 上下文。 請參閱有關[設置空策略](../../nullable-attributes.md)的文章。
+有兩種方法可以控制可無效上下文。 在項目級別,可以添加`<Nullable>enable</Nullable>`專案設置。 在單個 C# 源檔案中,`#nullable enable`可以新增雜注以啟用可 null 上下文。 請參閱有關[設置空策略](../../nullable-migration-strategies.md)的文章。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

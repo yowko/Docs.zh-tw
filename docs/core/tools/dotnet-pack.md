@@ -2,12 +2,12 @@
 title: dotnet pack 命令
 description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
 ms.date: 02/14/2020
-ms.openlocfilehash: 3b9c46ecd5d67519728896b0018e27fb41ebd861
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2df096a088a177b77256b5d717f31e185507b249
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463503"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102810"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -55,6 +55,8 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
    <IsPackable>true</IsPackable>
 </PropertyGroup>
 ```
+
+### <a name="implicit-restore"></a>隱式還原
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 

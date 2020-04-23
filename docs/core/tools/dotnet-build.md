@@ -2,12 +2,12 @@
 title: dotnet build 命令
 description: dotnet build 命令會建置專案和其所有相依性。
 ms.date: 02/14/2020
-ms.openlocfilehash: 27deca4ab1c12314db5214c73660862a8a57a398
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1022df059493c7e045f81d4be93dff2fdab77eb1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463714"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102836"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -43,9 +43,13 @@ dotnet build -h|--help
 
 對於針對 .NET Core 3.0 及更高版本的可執行專案,庫依賴項將複製到輸出資料夾。 這意味著,如果沒有任何其他特定於發佈的邏輯(如 Web 專案),則生成輸出應該是可部署的。
 
-建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 執行時[`dotnet restore`](dotnet-restore.md)將創建該檔。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。 使用 .NET 酷睿 1.x`dotnet restore`SDK`dotnet build`時 ,您需要 在執行 之前顯示式執行 。 自 .NET Core 2.0 SDK 開始，`dotnet restore` 會在您執行 `dotnet build` 時以隱含方式執行。 如果您想要在執行 build 命令時停用隱含還原，您可以跳過 `--no-restore` 選項。
+### <a name="implicit-restore"></a>隱式還原
+
+建置會需要 *project.assets.json* 檔案，其中列出您應用程式的相依性。 執行時[`dotnet restore`](dotnet-restore.md)將創建該檔。 如果沒有資產檔案，工具就會因為無法解析參考組件而發生錯誤。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+
+### <a name="executable-or-library-output"></a>執行或函式庫輸出
 
 專案是否為可執行檔可透過專案檔中的 `<OutputType>` 屬性來判斷。 下列範例顯示會產生可執行程式碼的專案：
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: aadf555fb47963eab323bbb6105227c5b119e6f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d726ab3a882d2e6913fa69c7b82f1d6db78dd47d
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170308"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102043"
 ---
 # <a name="classes-c-programming-guide"></a>類別 (C# 程式設計手冊)
 
@@ -26,7 +26,7 @@ MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-建立物件時，會在受控堆積上配置足夠的記憶體給該特定物件，而變數只會保留該物件位置的參考。 配置以及由 CLR 的自動記憶體管理功能 (也就是「記憶體回收」**) 回收 Managed 堆積上的類型時，都需要額外負荷。 不過，記憶體回收也已獲得高度最佳化，因此在大部分情況下並不會產生效能問題。 如需記憶體回收的詳細資訊，請參閱[自動記憶體管理和記憶體回收](../../../standard/garbage-collection/gc.md)。  
+建立物件時，會在受控堆積上配置足夠的記憶體給該特定物件，而變數只會保留該物件位置的參考。 配置以及由 CLR 的自動記憶體管理功能 (也就是「記憶體回收」**) 回收 Managed 堆積上的類型時，都需要額外負荷。 不過，記憶體回收也已獲得高度最佳化，因此在大部分情況下並不會產生效能問題。 如需記憶體回收的詳細資訊，請參閱[自動記憶體管理和記憶體回收](../../../standard/garbage-collection/fundamentals.md)。  
   
 ## <a name="declaring-classes"></a>宣告類別
 
@@ -85,7 +85,7 @@ MyClass mc2 = mc;
   
 與 C++ 不同，C# 中的類別只能直接繼承自一個基底類別。 不過，因為基底類別本身可以繼承自另一個類別，所以類別可能會間接繼承多個基底類別。 基至，類別可以直接實作多個介面。 如需詳細資訊，請參閱[介面](../interfaces/index.md)。  
   
-類別可以宣告為 [abstract](../../language-reference/keywords/abstract.md)。 抽象類別包含具有簽章定義但沒有實作的抽象方法。 無法具現化抽象類別。 它們僅用於實作抽象方法的衍生類別。 相較之下，[sealed](../../language-reference/keywords/sealed.md) 類別不允許從它衍生其他類別。 有關詳細資訊，請參閱[抽象類別和密封類和類成員](abstract-and-sealed-classes-and-class-members.md)。  
+類別可以宣告為 [abstract](../../language-reference/keywords/abstract.md)。 抽象類別包含具有簽章定義但沒有實作的抽象方法。 無法具現化抽象類別。 它們僅用於實作抽象方法的衍生類別。 相較之下，[sealed](../../language-reference/keywords/sealed.md) 類別不允許從它衍生其他類別。 有關詳細資訊,請參閱[抽象類和密封類和類成員](abstract-and-sealed-classes-and-class-members.md)。  
   
 類別定義可以在不同的原始程式檔之間進行分割。 如需詳細資訊，請參閱[部分類別和方法](partial-classes-and-methods.md)。  
   
@@ -101,9 +101,9 @@ MyClass mc2 = mc;
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
+- [C# 編程指南](../index.md)
 - [物件導向程式設計](../concepts/object-oriented-programming.md)
-- [Polymorphism](polymorphism.md)
+- [多型](polymorphism.md)
 - [識別碼名稱](../inside-a-program/identifier-names.md)
 - [成員](members.md)
 - [方法](methods.md)

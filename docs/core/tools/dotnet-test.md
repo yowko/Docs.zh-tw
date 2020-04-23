@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 02/27/2020
-ms.openlocfilehash: 2eebcbe2e4a1660da4ffa4ea9a68190c8443463a
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 69b8101f9b1052f4726dce8a86234da99f5dc89c
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739094"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102735"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -43,13 +43,17 @@ dotnet test -h|--help
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
+### <a name="implicit-restore"></a>隱式還原
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
+
 ## <a name="arguments"></a>引數
 
 - **`PROJECT | SOLUTION`**
 
   測試專案或解決方案的路徑。 如果未指定，則會預設為目前目錄。
 
-## <a name="options"></a>選項
+## <a name="options"></a>選項。
 
 - **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
@@ -69,7 +73,7 @@ dotnet test -h|--help
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  針對測試平台啟用診斷模式，並將診斷訊息寫入至指定的檔案。
+  啟用測試平台的診斷模式,並將診斷消息寫入指定的檔。
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -105,11 +109,11 @@ dotnet test -h|--help
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  在其中尋找要執行的二進位檔的目錄。
+  在其中尋找要執行的二進位檔的目錄。 如果未指定，則預設路徑為 `./bin/<configuration>/<framework>/`。  對於具有多個目標框架的專案(通過`TargetFrameworks`屬性),還需要在指定此選項`--framework`時 定義。
 
 - **`-r|--results-directory <PATH>`**
 
-  要放置測試結果的目錄。 如果指定的目錄不存在，則會建立該目錄。
+  要放置測試結果的目錄。 如果指定的目錄不存在，則會建立該目錄。 預設值在`TestResults`包含專案檔的目錄中。
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -127,13 +131,13 @@ dotnet test -h|--help
 
   設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。 如需詳細資訊，請參閱 <xref:Microsoft.Build.Framework.LoggerVerbosity>。
 
-- `RunSettings`參數
+- **`RunSettings`** 參數
 
   參數作為`RunSettings`測試的配置傳遞。 指定為 "-- " 後 (注意 -- 後方的空格) 之 `[name]=[value]` 組的引數。 空格適用來分隔多個 `[name]=[value]` 組。
 
   範例： `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  有關詳細資訊,請參閱[vstest.console.exe: 傳遞執行設定 args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
+  有關詳細資訊,請參閱[透過命令列傳遞 RunSettings 參數](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 
 ## <a name="examples"></a>範例
 

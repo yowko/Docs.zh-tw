@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: a8b47e83ce9e999ea2afe94db0a21725abc2d327
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f3d06dec42ba117cd30dbf4d05fa4a6f594e57e5
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738579"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82101967"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (空寬恕) 運算子 (C# 參考)
 
@@ -43,7 +43,7 @@ null 寬容運算子的一個用例是測試參數驗證邏輯。 例如，請�
 
 [!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
 
-在前面的範例中,不需要使用 null 寬容運算符,因為編譯器有足夠的資訊來找出`p`語句`null``if`中 不能包含的資訊。 有關允許您提供有關變數的 null 狀態的其他資訊的屬性的詳細資訊,請參閱[使用屬性升級 API 以定義 null 期望值](../../nullable-attributes.md)。
+在前面的範例中,不需要使用 null 寬容運算符,因為編譯器有足夠的資訊來找出`p`語句`null``if`中 不能包含的資訊。 有關允許您提供有關變數的 null 狀態的其他資訊的屬性的詳細資訊,請參閱[使用屬性升級 API 以定義 null 期望值](../attributes/nullable-analysis.md)。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 

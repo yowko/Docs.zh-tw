@@ -2,12 +2,12 @@
 title: dotnet publish 命令
 description: dotnet 發佈命令將 .NET Core 專案或解決方案發佈到目錄。
 ms.date: 02/24/2020
-ms.openlocfilehash: ca6b6bd0151674a81e0beee7798dc6bde9c088f0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 78ed8098be1b6887fc6a2a647fd169e2bf7f7fd1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463463"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102797"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -24,7 +24,7 @@ dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
     [-f|--framework <FRAMEWORK>] [--force] [--interactive]
     [--manifest <PATH_TO_MANIFEST_FILE>] [--no-build] [--no-dependencies]
     [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
-    [-p:PublishReadyToRun] [-p:PublishSingleFile] [-p:PublishTrimmed]
+    [-p:PublishReadyToRun=true] [-p:PublishSingleFile=true] [-p:PublishTrimmed=true]
     [-r|--runtime <RUNTIME_IDENTIFIER>] [--self-contained [true|false]]
     [--no-self-contained] [-v|--verbosity <LEVEL>]
     [--version-suffix <VERSION_SUFFIX>]
@@ -42,6 +42,10 @@ dotnet publish -h|--help
 - 應用程式的相依性，這些相依性會從 NuGet 快取複製到輸出資料夾。
 
 `dotnet publish`　命令的輸出已準備好部署到裝載系統 (例如伺服器、電腦、Mac、膝上型電腦) 以供執行。 這是準備應用程式以供部署的唯一正式支援的方法。 根據專案指定的部署類型，主機系統上可能會安裝 (或不安裝) .NET Core 共用執行階段。 有關詳細資訊,請參閱發佈[.NET 核心應用 ,以及 .NET 核心 CLI](../deploying/deploy-with-cli.md)。
+
+### <a name="implicit-restore"></a>隱式還原
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -135,13 +139,13 @@ dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
 
     如果在發佈解決方案時指定了相對路徑,則每個項目的輸出將相對於專案檔位置進入一個單獨的資料夾。 如果在發佈解決方案時指定了絕對路徑,則所有專案的發佈輸出都將進入指定的資料夾。
 
-- **`-p:PublishReadyToRun`**
+- **`-p:PublishReadyToRun=true`**
 
   將應用程式程式集編譯為 ReadyToRun (R2R) 格式。 R2R 是一種預先(AOT) 編譯。 有關詳細資訊,請參閱[「準備運行圖像](../whats-new/dotnet-core-3-0.md#readytorun-images)」。。 自 .NET Core 3.0 SDK 起提供。
 
   我們建議您在發佈設定檔中而不是在命令列中指定此選項。 有關詳細資訊,請參閱[MSBuild](#msbuild)。
 
-- **`-p:PublishSingleFile`**
+- **`-p:PublishSingleFile=true`**
 
   將應用打包到特定於平臺的單檔可執行檔中。 可執行檔是自提取的,包含運行應用所需的所有依賴項(包括本機)。 第一次執行應用程式時，系統會將應用程式解壓縮到以應用程式名稱和組建識別碼為基礎的目錄。 再次執行應用程式時的啟動速度會更快。 除非使用新版本,否則應用程式不需要第二次提取自身。 自 .NET Core 3.0 SDK 起提供。
 
@@ -149,7 +153,7 @@ dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
 
   我們建議您在發佈設定檔中而不是在命令列中指定此選項。 有關詳細資訊,請參閱[MSBuild](#msbuild)。
 
-- **`-p:PublishTrimmed`**
+- **`-p:PublishTrimmed=true`**
 
   修剪未使用的庫以減小發佈自包含可執行檔時應用的部署大小。 關於詳細資訊,請參考[修剪自包含部署及執行檔](../deploying/trim-self-contained.md)。 自 .NET Core 3.0 SDK 起提供。
 

@@ -3,12 +3,12 @@ title: 垃圾資源配置設定
 description: 瞭解用於配置垃圾回收器如何管理 .NET Core 應用記憶體的運行時設置。
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607806"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102862"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>垃圾資源回收的執行時設定選項
 
@@ -24,7 +24,7 @@ ms.locfileid: "81607806"
 
 ## <a name="flavors-of-garbage-collection"></a>垃圾回收的味道
 
-垃圾回收的兩個主要類型是工作站 GC 和伺服器 GC。 有關兩者之間的差異的詳細資訊,請參閱[垃圾回收的基礎知識](../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)。
+垃圾回收的兩個主要類型是工作站 GC 和伺服器 GC。 有關兩者之間的差異的詳細資訊,請參閱[工作站和伺服器垃圾回收](../../standard/garbage-collection/workstation-server-gc.md)。
 
 垃圾回收的子口味是背景和非併發的。
 
@@ -72,7 +72,7 @@ ms.locfileid: "81607806"
 
 - 配置是否啟用後台(併發)垃圾回收。
 - 預設值:`true`已開啟 ( 。
-- 有關詳細資訊,請參閱[後臺垃圾回收](../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)和[後台伺服器垃圾回收](../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection)。
+- 有關詳細資訊,請參閱[後臺垃圾回收](../../standard/garbage-collection/background-gc.md)。
 
 | | 設定名稱 | 值 | 介紹的版本 |
 | - | - | - | - |
@@ -240,7 +240,7 @@ ms.locfileid: "81607806"
 
 - 為 GC 堆和 GC 簿記指定最大提交大小(以位元組為單位)。
 - 此設定僅適用於 64 位元電腦。
-- 默認值僅在某些情況下適用,是容器記憶體限制的 20 MB 或 75% 的較小值。 預設值適用於:
+- 默認值僅在某些情況下適用,是容器上記憶體限制的 20 MB 或 75%。 預設值適用於:
 
   - 進程在具有指定記憶體限制的容器內運行。
   - [系統.GC.HeapHard 限制百分比](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent)未設置。

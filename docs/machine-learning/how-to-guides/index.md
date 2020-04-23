@@ -2,12 +2,12 @@
 title: ML.NET 操作指南
 description: 了解如何執行特定工作協助建立自訂 AI 解決方案，以及將 Machine Learning 整合到您的.NET 應用程式。
 ms.date: 03/01/2019
-ms.openlocfilehash: 25c5cb6247c202e3ef51d0ed25b3b213fdca7a56
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: e83db6f1f754357b7e204485ea545feef9ad4a95
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607528"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102446"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>.NET Machine Learning 操作指南
 
@@ -27,15 +27,9 @@ ms.locfileid: "81607528"
 
 * [使用 ML.NET 將迴歸模型定型以預測值](train-machine-learning-model-ml-net.md)
 
-### <a name="evaluate-the-model-quality"></a>評估模型品質
-
-* [計算計量以評估模型品質。](verify-model-quality-ml-net.md)
-
 ### <a name="model-explainability"></a>模型說明特徵
 
 * [使用排列功能重要性判斷模型的功能重要性。](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
-
-* [針對模型可解釋性使用一般化累加模型與圖形函式。](use-gams-for-model-explainability.md)
 
 ## <a name="run"></a>執行
 

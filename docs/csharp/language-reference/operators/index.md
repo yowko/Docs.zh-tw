@@ -1,6 +1,6 @@
 ---
 title: C# 運算子 - C# 參考
-ms.date: 08/20/2019
+ms.date: 04/22/2020
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: f0ca111000033f9db84145a38e8d567f96b75d1d
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: fe4adf7df707eff0990e8c731a36d6177df228cf
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121083"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102017"
 ---
 # <a name="c-operators-c-reference"></a>C# 運算子 (C# 參考)
 
@@ -42,8 +42,8 @@ Console.WriteLine(a); //  output: 8
 
 | 操作員 | 類別或名稱 |
 | --------- | ---------------- |
-| [x.y](member-access-operators.md#member-access-expression-)、[x?.y](member-access-operators.md#null-conditional-operators--and-)、[x?[y]](member-access-operators.md#null-conditional-operators--and-)、[f(x)](member-access-operators.md#invocation-expression-)、[a&#91;i&#93;](member-access-operators.md#indexer-operator-)、[x++](arithmetic-operators.md#increment-operator-)、[x--](arithmetic-operators.md#decrement-operator---)、[new](new-operator.md)、[typeof](type-testing-and-cast.md#typeof-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[nameof](nameof.md)、[delegate](delegate-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[x->y](pointer-related-operators.md#pointer-member-access-operator--) | Primary |
-| [+x,](arithmetic-operators.md#unary-plus-and-minus-operators) [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [ \!x](boolean-logical-operators.md#logical-negation-operator-), [++x](arithmetic-operators.md#increment-operator-) [+x](bitwise-and-shift-operators.md#bitwise-complement-operator-), x [,](member-access-operators.md#index-from-end-operator-) [x](arithmetic-operators.md#decrement-operator---), x , [(T)x](type-testing-and-cast.md#cast-expression),[等待](await.md), [&x](pointer-related-operators.md#address-of-operator-), [*x,](pointer-related-operators.md#pointer-indirection-operator-)[真假](true-false-operators.md) | 一元 (Unary) |
+| [x.y,](member-access-operators.md#member-access-expression-) [f(x),](member-access-operators.md#invocation-expression-)&#91;[sizeof](sizeof.md) i [&#93;](member-access-operators.md#indexer-operator-), [x#](arithmetic-operators.md#increment-operator-)x [ ](new-operator.md)- x [-](arithmetic-operators.md#decrement-operator---) [>](pointer-related-operators.md#pointer-member-access-operator--) , [default](default.md) [x!](null-forgiving.md) [typeof](type-testing-and-cast.md#typeof-operator) [checked](../keywords/checked.md) [unchecked](../keywords/unchecked.md) [nameof](nameof.md) [delegate](delegate-operator.md) [stackalloc](stackalloc.md) | Primary |
+| [+x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [ \!x](boolean-logical-operators.md#logical-negation-operator-), x , [x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [x](arithmetic-operators.md#decrement-operator---), x , [x](member-access-operators.md#index-from-end-operator-) [++x](arithmetic-operators.md#increment-operator-) [, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, x, xy](member-access-operators.md#null-conditional-operators--and-), [x?y]](member-access-operators.md#null-conditional-operators--and-) [,(T)x,](type-testing-and-cast.md#cast-expression)[等待](await.md)[,&](pointer-related-operators.md#address-of-operator-) [x,[x,](pointer-related-operators.md#pointer-indirection-operator-)[真假](true-false-operators.md) | 一元 (Unary) |
 | [X.。。Y](member-access-operators.md#range-operator-) | 範圍 |
 | [switch](../../whats-new/csharp-8.md#switch-expressions) | `switch` 運算式 |
 | [x * y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-) | 乘法|

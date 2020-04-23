@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 928917d25b5f3f97c4b8cdff85efdaa1957be41e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 251046a8bd825a90d817965f9f747d08d4492197
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399312"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102030"
 ---
 # <a name="c-keywords"></a>C# 關鍵字
 
@@ -24,26 +24,26 @@ ms.locfileid: "79399312"
   
 |||||  
 |---|---|---|---|  
-|[抽象](abstract.md)|[作為](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[Bool](../builtin-types/bool.md)|  
-|[打破](break.md)|[位元組](../builtin-types/integral-numeric-types.md)|[案例](switch.md)|[catch](try-catch.md)|  
-|[字元](../builtin-types/char.md)|[已選取](checked.md)|[class](class.md)|[const](const.md)|  
-|[繼續](continue.md)|[十進位](../builtin-types/floating-point-numeric-types.md)|[預設](default.md)|[委託](../builtin-types/reference-types.md)|  
-|[做](do.md)|[雙](../builtin-types/floating-point-numeric-types.md)|[還](if-else.md)|[枚舉](../builtin-types/enum.md)|  
-|[event](event.md)|[明確](../operators/user-defined-conversion-operators.md)|[Extern](extern.md)|[false](../builtin-types/bool.md)|  
-|[最後](try-finally.md)|[fixed](fixed-statement.md)|[浮動](../builtin-types/floating-point-numeric-types.md)|[對於](for.md)|  
-|[Foreach](foreach-in.md)|[去](goto.md)|[如果](if-else.md)|[隱 式](../operators/user-defined-conversion-operators.md)|  
-|[在](in.md)|[Int](../builtin-types/integral-numeric-types.md)|[介面](interface.md)|[內部](internal.md)|
-|[是](is.md)|[鎖定](lock-statement.md)|[長](../builtin-types/integral-numeric-types.md)|[Namespace](namespace.md)|
-|[新增功能](../operators/new-operator.md)|[空](null.md)|[物件](../builtin-types/reference-types.md)|[運算元](../operators/operator-overloading.md)|
-|[出](out.md)|[覆蓋](override.md)|[Params](params.md)|[私人](private.md)|
-|[保護](protected.md)|[public](public.md)|[唯讀](readonly.md)|[ref](ref.md)|
-|[返回](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[密封](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
-[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[靜態](static.md)|[字串](../builtin-types/reference-types.md)|
-|[struct](../builtin-types/struct.md)|[開關](switch.md)|[這](this.md)|[扔](throw.md)|
+|[抽象](abstract.md)|[作為](../operators/type-testing-and-cast.md#as-operator)|[base](base.md)|[bool](../builtin-types/bool.md)|  
+|[break](break.md)|[byte](../builtin-types/integral-numeric-types.md)|[情況 下](switch.md)|[catch](try-catch.md)|  
+|[char](../builtin-types/char.md)|[檢查](checked.md)|[class](class.md)|[const](const.md)|  
+|[繼續](continue.md)|[decimal](../builtin-types/floating-point-numeric-types.md)|[預設](default.md)|[委託](../builtin-types/reference-types.md)|  
+|[do](do.md)|[double](../builtin-types/floating-point-numeric-types.md)|[else](if-else.md)|[列舉](../builtin-types/enum.md)|  
+|[event](event.md)|[明確](../operators/user-defined-conversion-operators.md)|[extern](extern.md)|[false](../builtin-types/bool.md)|  
+|[最後](try-finally.md)|[固定](fixed-statement.md)|[float](../builtin-types/floating-point-numeric-types.md)|[for](for.md)|  
+|[Foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[隱式](../operators/user-defined-conversion-operators.md)|  
+|[in](in.md)|[int](../builtin-types/integral-numeric-types.md)|[介面](interface.md)|[internal](internal.md)|
+|[is](is.md)|[鎖定](lock-statement.md)|[long](../builtin-types/integral-numeric-types.md)|[網路中](namespace.md)|
+|[新增功能](../operators/new-operator.md)|[null](null.md)|[物件](../builtin-types/reference-types.md)|[算子](../operators/operator-overloading.md)|
+|[出](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
+|[protected](protected.md)|[public](public.md)|[唯讀](readonly.md)|[ref](ref.md)|
+|[return](return.md)|[sbyte](../builtin-types/integral-numeric-types.md)|[sealed](sealed.md)|[short](../builtin-types/integral-numeric-types.md)||
+[sizeof](../operators/sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](../builtin-types/reference-types.md)|
+|[struct](../builtin-types/struct.md)|[switch](switch.md)|[this](this.md)|[throw](throw.md)|
 |[true](../builtin-types/bool.md)|[嘗試](try-catch.md)|[類型](../operators/type-testing-and-cast.md#typeof-operator)|[uint](../builtin-types/integral-numeric-types.md)|
-|[ulong](../builtin-types/integral-numeric-types.md)|[取消選取](unchecked.md)|[安全](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
-|[使用](using.md)|[使用靜態](using-static.md)|[虛擬](virtual.md)|[無效](../builtin-types/void.md)|
-|[揮發 性](volatile.md)|[而](while.md)|
+|[ulong](../builtin-types/integral-numeric-types.md)|[unchecked](unchecked.md)|[安全](unsafe.md)|[ushort](../builtin-types/integral-numeric-types.md)|
+|[使用](using.md)|[virtual](virtual.md)|[void](../builtin-types/void.md)|[volatile](volatile.md)|
+|[while](while.md)|
 
 ## <a name="contextual-keywords"></a>內容關鍵字
 
@@ -51,15 +51,15 @@ ms.locfileid: "79399312"
   
 ||||  
 |---|---|---|  
-|[新增](add.md)|[別名](extern-alias.md)|[上升](ascending.md)|
-|[async](async.md)|[等待](../operators/await.md)|[由](by.md)|
-|[降](descending.md)|[動態](../builtin-types/reference-types.md)|[等於](equals.md)|
-|[從](from-clause.md)|[get](get.md)|[全球](../operators/namespace-alias-qualifier.md)|
+|[新增](add.md)|[別名](extern-alias.md)|[ascending](ascending.md)|
+|[async](async.md)|[等待](../operators/await.md)|[by](by.md)|
+|[descending](descending.md)|[動態](../builtin-types/reference-types.md)|[equals](equals.md)|
+|[from](from-clause.md)|[get](get.md)|[全球](../operators/namespace-alias-qualifier.md)|
 |[群組](group-clause.md)|[into](into.md)|[加入](join-clause.md)|
 |[讓](let-clause.md)|[nameof](../operators/nameof.md)|[上](on.md)|
-|[orderby](orderby-clause.md)|[partial (型別)](partial-type.md)|[partial (方法)](partial-method.md)|
-|[移除](remove.md)|[選擇](select-clause.md)|[設置](set.md)|
-|[非託管（泛型型別約束）](where-generic-type-constraint.md)|[值](value.md)|[無 功](var.md)|
+|[順序](orderby-clause.md)|[部份(類型)](partial-type.md)|[部分(方法)](partial-method.md)|
+|[移除](remove.md)|[選擇](select-clause.md)|[設定](set.md)|
+|[非託管 (泛型類型約束)](where-generic-type-constraint.md)|[value](value.md)|[var](var.md)|
 |[when (篩選條件)](when.md)|[where (泛型型別條件約束)](where-generic-type-constraint.md)|[where (查詢子句)](where-clause.md)|
 |[yield](yield.md)| | |
   

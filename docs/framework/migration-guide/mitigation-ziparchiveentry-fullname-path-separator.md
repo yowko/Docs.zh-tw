@@ -8,25 +8,26 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f6c7f258fd5dbf01db4d79b73b88ddd7484f9b2
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73457729"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102615"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>風險降低：ZipArchiveEntry.FullName 路徑分隔符號
-從以 .NET Framework 4.6.1 為目標的應用程式開始，<xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> 屬性中使用的路徑分隔符號，已從舊版 .NET Framework 中使用的反斜線 ("\\") 變更為正斜線 ("/")。   呼叫 <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType> 方法的其中一個多載會建立 <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> 物件。  
+
+從以 .NET 框架 4.6.1 為目標<xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType>的應用開始, 屬性中使用的路徑分隔符從早期版本的 .NET\\Framework 中使用的反 斜杠("/")更改為向前斜杠 ("/")。 呼叫 <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType> 方法的其中一個多載會建立 <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> 物件。  
   
 ## <a name="impact"></a>影響  
  這項變更使得 .NET 實作遵守 [.ZIP File Format Specification](https://pkware.cachefly.net/webdocs/casestudies/APPNOTE.TXT) (.ZIP 檔案格式規格) 的 4.4.17.1 小節，並允許在非 Windows 系統上解壓縮 ZIP 封存。  
   
- 在非 Windows 作業系統 (例如 Macintosh) 上解壓縮以舊版 .NET Framework 為目標的應用程式所建立的 ZIP 檔案，會無法保留目錄結構。 例如，在 Macintosh 上，它會建立一組檔案，其檔案名稱會串連目錄路徑，以及任何反斜線 (\\) 字元和檔案名稱。 因此，解壓縮檔案的目錄結構會無法保留。  
+ 解壓縮由應用創建的 zip 檔案,該檔針對非 Windows 作業系統(如 MacOS)上的早期版本的 .NET Framework,無法保留目錄結構。 例如,在 MacOS 上,它創建一組檔,其檔名串聯目錄路徑、任何反斜杠\\(") 字元「和檔名。 因此，解壓縮檔案的目錄結構會無法保留。  
   
- 對於 Windows 作業系統上由 .NET Framework <xref:System.IO> 命名空間中的 API 解壓縮的 .ZIP 檔案而言，此變更的影響應該很小，因為這些 API 可以將斜線 ("/") 或反斜線 ("\\") 當做路徑分隔符號字元順利地處理。  
+ 此更改對的影響。在 .NET<xref:System.IO>框架 命名空間中由 API 在 Windows 作業系統上解壓縮的 ZIP 檔應最小,因為這些 API 可以無縫地\\處理斜杠("/")或反斜 杠("")作為路徑分隔符。  
   
 ## <a name="mitigation"></a>降低  
- 如果此行為不可取，則可以通過將配置設置添加到應用程式佈建檔的[\<運行時>](../configure-apps/file-schema/runtime/runtime-element.md)部分來退出宣告。 下圖顯示 `<runtime>` 區段及選擇退出參數。  
+ 如果此行為不可取,則可以通過將配置設置添加到應用程式配置檔的[\<運行時>](../configure-apps/file-schema/runtime/runtime-element.md)部分來選擇宣告。 下圖顯示 `<runtime>` 區段及選擇退出參數。  
   
 ```xml  
 <runtime>  
@@ -34,7 +35,7 @@ ms.locfileid: "73457729"
 </runtime>  
 ```  
   
- 此外，針對 .NET Framework 的早期版本並在 .NET Framework 4.6.1 和更高版本上運行的應用可以通過將配置設置添加到應用程式佈建檔的[\<運行時>](../configure-apps/file-schema/runtime/runtime-element.md)部分來加入宣告此行為。 下圖顯示 `<runtime>` 區段及選擇加入參數。  
+ 此外,面向 .NET Framework 的早期版本並在 .NET Framework 4.6.1 和更高版本上運行的應用可以通過將配置設置添加到應用程式配置檔的[\<運行時>](../configure-apps/file-schema/runtime/runtime-element.md)部分來選擇加入此行為。 下圖顯示 `<runtime>` 區段及選擇加入參數。  
   
 ```xml  
 <runtime>  
@@ -44,5 +45,4 @@ ms.locfileid: "73457729"
   
 ## <a name="see-also"></a>另請參閱
 
-- [重定目標變更](retargeting-changes-in-the-net-framework-4-6-1.md)
 - [應用程式相容性](application-compatibility.md)

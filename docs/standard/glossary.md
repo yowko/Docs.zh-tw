@@ -3,12 +3,12 @@ title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: e7608ee7e68300d691df51aed923db0e8b518165
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635574"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102472"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -54,9 +54,12 @@ Common Language Runtime。
 
 此 CLR 是從與 CLR 相同的程式碼基底所建置。 一開始，CoreCLR 是 Silverlight 的執行階段，其設計目的是為了在多個平台上執行，特別是 Windows 和 OS X。CoreCLR 現在是 .NET Core 的一部分，代表 CLR 的簡化版本。 它仍然是[跨平台](#cross-platform)執行階段，現在支援許多 Linux 發行版本。 CoreCLR 也是具有 JIT 和程式碼執行功能的虛擬機器。
 
-## <a name="corefx"></a>CoreFX
+## <a name="corefx"></a>CoreFx
 
 .NET Core 基底類別庫 (BCL)
+
+> [!TIP]
+> *Fx*代表*框架*。
 
 構成系統的一組庫。\* (且在有限程度上為微軟\*.)命名空間。 BCL 是 ASP.NET Core 等較高層級的應用程式架構建置所在之較低層級的一般目的架構。 .NET Core BCL 的原始碼包含在[.NET Core 運行時儲存庫](https://github.com/dotnet/runtime)中。 不過，大多數的 .NET Core API 也適用於 .NET Framework；因此您可以將 CoreFX 視為 .NET Framework BCL 的分支。
 
@@ -277,4 +280,4 @@ OS 是執行階段環境的一部分，但不是 .NET 執行階段的一部分�
 - [.NET 框架指南](../framework/index.yml)
 - [.NET Core](../core/index.yml)
 - [ASP.NET概述](/aspnet/index#pivot=aspnet)
-- [ASP.NET Core 概觀](/aspnet/index#pivot=core)
+- [ASP.NET核心概述](/aspnet/index#pivot=core)

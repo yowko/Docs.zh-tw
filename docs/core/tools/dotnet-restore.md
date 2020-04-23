@@ -2,12 +2,12 @@
 title: dotnet restore 命令
 description: 了解如何使用 dotnet restore 命令來還原相依性和專案特有工具。
 ms.date: 02/27/2020
-ms.openlocfilehash: c5cc9adf1d77b0ab03a61cc315d42c2f38362ad9
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 3deef68a9bcee389a52291c72e7e1a1019a739fd
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021782"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102784"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -34,9 +34,22 @@ dotnet restore -h|--help
 
 `dotnet restore` 命令會使用 NuGet 來還原相依性以及專案檔中指定的專案特定工具。 預設會平行執行相依性和工具的還原。
 
-若要還原相依性，NuGet 需要套件所在的摘要。 摘要通常透過 *nuget.config* 組態檔提供。 安裝 .NET 核心 SDK 時提供預設設定檔。 您可以在專案目錄中建立自己的 *nuget.config* 檔案，以指定其他摘要。 您可以使用`-s`- 選項覆*寫 nuget.config*源。
+### <a name="specify-feeds"></a>指定來源
+
+若要還原相依性，NuGet 需要套件所在的摘要。 摘要通常透過 *nuget.config* 組態檔提供。 安裝 .NET 核心 SDK 時提供預設設定檔。 要指定其他來源,請執行以下操作之一:
+
+- 在項目目錄中建立自己的*nuget.config*檔案。 有關詳細資訊,請參閱本文後面的[常見 NuGet 設定](/nuget/consume-packages/configuring-nuget-behavior)和[nuget.config 差異](#nugetconfig-differences)。
+- 使用`dotnet nuget`指令[`dotnet nuget add source`](dotnet-nuget-add-source.md)( 如 )
+
+您可以使用`-s`選項覆蓋*nuget.config*源。
+
+有關如何使用經過身份驗證的源的資訊,請參閱[使用來自經過身份驗證的來源的套件](/nuget/consume-packages/consuming-packages-authenticated-feeds)。
+
+### <a name="package-cache"></a>包快取
 
 針對相依性，您可以使用 `--packages` 引數指定已還原套件在還原作業期間的放置位置。 如果未指定，則會使用預設的 NuGet 套件快取，它位於所有作業系統上使用者主目錄的 `.nuget/packages` 目錄中。 例如，Linux 上的 */home/user1* 或 Windows 上的 *C:\Users\user1*。
+
+### <a name="project-specific-tooling"></a>特定於項目的工具
 
 針對專案特定工具，`dotnet restore` 會先還原在其中封裝工具的套件，然後繼續還原其專案檔中所指定的工具相依性。
 
