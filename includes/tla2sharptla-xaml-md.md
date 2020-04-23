@@ -6,4 +6,4 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 05/15/2019
 ms.locfileid: "65672603"
 ---
-<span data-ttu-id="22b66-101">XAML</span><span class="sxs-lookup"><span data-stu-id="22b66-101">XAML</span></span>
+<span data-ttu-id="404a7-101">XAML</span><span class="sxs-lookup"><span data-stu-id="404a7-101">XAML</span></span>
