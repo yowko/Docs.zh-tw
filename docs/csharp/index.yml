@@ -2,34 +2,34 @@
 title: C# 文件
 summary: 瞭解如何使用 .NET 平臺上的 C# 程式設計語言編寫任何應用程式。
 metadata:
-  title: C# 文檔 - 入門，教程，參考。
-  description: 學習 C# 程式設計 - 面向初級開發人員、不熟悉 C# 的開發人員以及經驗豐富的 C# / .NET 開發人員
+  title: C# 文檔 - 入門,教程,參考。
+  description: 學習 C# 編程 - 面向初級開發人員、不熟悉 C# 的開發人員以及經驗豐富的 C# / .NET 開發人員
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: a0de519e518cac70bac831cf689042e104cd1389
+  ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "75339163"
+  ms.lasthandoff: 04/23/2020
+  ms.locfileid: "82102719"
 landingContent:
 - title: 學習在 C 中程式設計#
   linkLists:
   - linkListType: get-started
     links:
-    - text: 線上，互動你好世界
+    - text: 在線,互動你好世界
       url: tutorials/intro-to-csharp/hello-world.yml
-    - text: 數學和數位（C）#
+    - text: 數學和數字(C)#
       url: tutorials/intro-to-csharp/numbers-in-csharp.yml
     - text: 入門教程
       url: tutorials/intro-to-csharp/index.md
-    - text: 使用視覺化工作室創建 C# 應用
+    - text: 使用視覺化工作室建立 C# 應用
       url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-console
   - linkListType: video
     links:
     - text: 什麼是 C#?
       url: https://channel9.msdn.com/Series/CSharp-101/What-is-C/player
-    - text: C# 101 視頻系列
+    - text: C# 101 影片
       url: https://aka.ms/dotnet3-csharp
   - linkListType: download
     links:
@@ -47,21 +47,21 @@ landingContent:
       url: programming-guide/main-and-command-args/index.md
   - linkListType: concept
     links:
-    - text: C# 和 .NET 類型系統
+    - text: C# 與 .NET 型態系統
       url: programming-guide/types/index.md
     - text: Language Integrated Query (LINQ)
       url: linq/index.md
-    - text: 非同步和等待
+    - text: 非同步與等待
       url: programming-guide/concepts/async/index.md
   - linkListType: tutorial
     links:
-    - text: 物件導向繼承
+    - text: 對物件繼承
       url: tutorials/inheritance.md
     - text: 使用 LINQ 查詢資料
       url: tutorials/working-with-linq.md
     - text: 使用字串插值格式化文字
       url: tutorials/string-interpolation.md
-    - text: 流覽所有教程
+    - text: 瀏覽所有教學
       url: tutorials/index.md
 - title: C# 8.0 中的新功能
   linkLists:
@@ -77,33 +77,33 @@ landingContent:
       url: nullable-references.md
   - linkListType: concept
     links:
-    - text: 用於無空的給 API 提供一些用
-      url: nullable-attributes.md
+    - text: 選擇空移原則
+      url: nullable-migration-strategies.md
   - linkListType: tutorial
     links:
-    - text: 使用並生成非同步流
+    - text: 使用並產生非同步串流
       url: tutorials/generate-consume-asynchronous-stream.md
-    - text: 使用可無參考型別進行開發
+    - text: 使用可無參考型態進行開發
       url: tutorials/nullable-reference-types.md
-    - text: 升級現有代碼以使用空參考型別
+    - text: 升級現有代碼以使用空引言類型
       url: tutorials/upgrade-to-nullable-references.md
-    - text: 使用模式匹配進行更具表現力的演算法
+    - text: 使用模式符合進行更具表現力的演演算法
       url: tutorials/pattern-matching.md
     - text: 具有預設介面成員的安全版本介面
       url: tutorials/default-interface-methods-versions.md
     - text: 將功能與預設介面成員混合
       url: tutorials/mixins-with-default-interface-methods.md
-    - text: 使用範圍和索引處理子集
+    - text: 使用範圍與索引處理子集
       url: tutorials/ranges-indexes.md
   - linkListType: reference
     links:
-    - text: C# 編譯器中的中斷更改
+    - text: C# 編譯器中斷變更
       url: whats-new/breaking-changes.md
 - title: C# 語言參考
   linkLists:
   - linkListType: reference
     links:
-    - text: 程式設計語言參考
+    - text: 語言參考
       url: language-reference/index.md
     - text: C# 關鍵字
       url: language-reference/keywords/index.md
