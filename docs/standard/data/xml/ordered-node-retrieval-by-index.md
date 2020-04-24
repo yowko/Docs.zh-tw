@@ -13,18 +13,18 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78156383"
 ---
-# <a name="ordered-node-retrieval-by-index"></a><span data-ttu-id="619f2-102">根據索引擷取的已排序節點</span><span class="sxs-lookup"><span data-stu-id="619f2-102">Ordered Node Retrieval by Index</span></span>
-<span data-ttu-id="619f2-103">全球資訊網協會 (W3C) XML 文件物件模型 (DOM) 也說明了 NodeList；相對於能夠處理未排序節點集的 **XmlNamedNodeMap**，NodeList 具有處理已排序節點清單的功能。</span><span class="sxs-lookup"><span data-stu-id="619f2-103">The World Wide Web Consortium (W3C) XML Document Object Model (DOM) also describes a NodeList, which has the ability to handle an ordered list of nodes, as opposed to the unordered set handled by the **XmlNamedNodeMap**.</span></span> <span data-ttu-id="619f2-104">Microsoft .NET Framework 中的 NodeList 稱為 **XmlNodeList**。</span><span class="sxs-lookup"><span data-stu-id="619f2-104">The NodeList in the Microsoft .NET Framework is called **XmlNodeList**.</span></span> <span data-ttu-id="619f2-105">傳回 **XmlNodeList** 的方法和屬性有：</span><span class="sxs-lookup"><span data-stu-id="619f2-105">Methods and properties that return an **XmlNodeList** are:</span></span>  
+# <a name="ordered-node-retrieval-by-index"></a><span data-ttu-id="183bf-102">根據索引擷取的已排序節點</span><span class="sxs-lookup"><span data-stu-id="183bf-102">Ordered Node Retrieval by Index</span></span>
+<span data-ttu-id="183bf-103">全球資訊網協會 (W3C) XML 文件物件模型 (DOM) 也說明了 NodeList；相對於能夠處理未排序節點集的 **XmlNamedNodeMap**，NodeList 具有處理已排序節點清單的功能。</span><span class="sxs-lookup"><span data-stu-id="183bf-103">The World Wide Web Consortium (W3C) XML Document Object Model (DOM) also describes a NodeList, which has the ability to handle an ordered list of nodes, as opposed to the unordered set handled by the **XmlNamedNodeMap**.</span></span> <span data-ttu-id="183bf-104">Microsoft .NET Framework 中的 NodeList 稱為 **XmlNodeList**。</span><span class="sxs-lookup"><span data-stu-id="183bf-104">The NodeList in the Microsoft .NET Framework is called **XmlNodeList**.</span></span> <span data-ttu-id="183bf-105">傳回 **XmlNodeList** 的方法和屬性有：</span><span class="sxs-lookup"><span data-stu-id="183bf-105">Methods and properties that return an **XmlNodeList** are:</span></span>  
   
-- <span data-ttu-id="619f2-106">XmlNode.ChildNodes</span><span class="sxs-lookup"><span data-stu-id="619f2-106">XmlNode.ChildNodes</span></span>  
+- <span data-ttu-id="183bf-106">XmlNode.ChildNodes</span><span class="sxs-lookup"><span data-stu-id="183bf-106">XmlNode.ChildNodes</span></span>  
   
-- <span data-ttu-id="619f2-107">XmlDocument.GetElementsByTagName</span><span class="sxs-lookup"><span data-stu-id="619f2-107">XmlDocument.GetElementsByTagName</span></span>  
+- <span data-ttu-id="183bf-107">XmlDocument.GetElementsByTagName</span><span class="sxs-lookup"><span data-stu-id="183bf-107">XmlDocument.GetElementsByTagName</span></span>  
   
-- <span data-ttu-id="619f2-108">XmlElement.GetElementsByTagName</span><span class="sxs-lookup"><span data-stu-id="619f2-108">XmlElement.GetElementsByTagName</span></span>  
+- <span data-ttu-id="183bf-108">XmlElement.GetElementsByTagName</span><span class="sxs-lookup"><span data-stu-id="183bf-108">XmlElement.GetElementsByTagName</span></span>  
   
-- <span data-ttu-id="619f2-109">XmlNode.SelectNodes</span><span class="sxs-lookup"><span data-stu-id="619f2-109">XmlNode.SelectNodes</span></span>  
+- <span data-ttu-id="183bf-109">XmlNode.SelectNodes</span><span class="sxs-lookup"><span data-stu-id="183bf-109">XmlNode.SelectNodes</span></span>  
   
- <span data-ttu-id="619f2-110">**XmlNodeList** 有一個 **Count** 屬性，可以用於將迴圈重複寫入 **XmlNodeList** 中的節點，如同下列程式碼範例所示：</span><span class="sxs-lookup"><span data-stu-id="619f2-110">The **XmlNodeList** has a **Count** property that can be used to write loops to iterate over the nodes in the **XmlNodeList**, as shown in the following code sample:</span></span>  
+ <span data-ttu-id="183bf-110">**XmlNodeList** 有一個 **Count** 屬性，可以用於將迴圈重複寫入 **XmlNodeList** 中的節點，如同下列程式碼範例所示：</span><span class="sxs-lookup"><span data-stu-id="183bf-110">The **XmlNodeList** has a **Count** property that can be used to write loops to iterate over the nodes in the **XmlNodeList**, as shown in the following code sample:</span></span>  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -53,7 +53,7 @@ for (int i=0; i < elemList.Count; i++)
 }
 ```  
   
- <span data-ttu-id="619f2-111">除了 **Count** 屬性之外，還有 **GetEnumerator** 方法可對 `foreach`XmlNodeList**中的節點集合提供** 樣式反覆運算。</span><span class="sxs-lookup"><span data-stu-id="619f2-111">In addition to the **Count** property, there is a **GetEnumerator** method that provides a, `foreach` style iteration over the collection of nodes in the **XmlNodeList**.</span></span> <span data-ttu-id="619f2-112">下列程式碼範例顯示 `foreach` 陳述式的使用情形。</span><span class="sxs-lookup"><span data-stu-id="619f2-112">The following code example shows the use of the `foreach` statement.</span></span>  
+ <span data-ttu-id="183bf-111">除了 **Count** 屬性之外，還有 **GetEnumerator** 方法可對 **XmlNodeList** 中的節點集合提供 `foreach` 樣式反覆運算。</span><span class="sxs-lookup"><span data-stu-id="183bf-111">In addition to the **Count** property, there is a **GetEnumerator** method that provides a, `foreach` style iteration over the collection of nodes in the **XmlNodeList**.</span></span> <span data-ttu-id="183bf-112">下列程式碼範例顯示 `foreach` 陳述式的使用情形。</span><span class="sxs-lookup"><span data-stu-id="183bf-112">The following code example shows the use of the `foreach` statement.</span></span>  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -90,8 +90,8 @@ End While
   }  
 ```  
   
- <span data-ttu-id="619f2-113">如需 **XmlNodeList** 上可以使用之方法和屬性的詳細資訊，請參閱 <xref:System.Xml.XmlNodeList>。</span><span class="sxs-lookup"><span data-stu-id="619f2-113">For more information on the methods and properties available on the **XmlNodeList**, see <xref:System.Xml.XmlNodeList>.</span></span>  
+ <span data-ttu-id="183bf-113">如需 **XmlNodeList** 上可以使用之方法和屬性的詳細資訊，請參閱 <xref:System.Xml.XmlNodeList>。</span><span class="sxs-lookup"><span data-stu-id="183bf-113">For more information on the methods and properties available on the **XmlNodeList**, see <xref:System.Xml.XmlNodeList>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="619f2-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="619f2-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="183bf-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="183bf-114">See also</span></span>
 
-- [<span data-ttu-id="619f2-115">XML 文件物件模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="619f2-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [<span data-ttu-id="183bf-115">XML 文件物件模型 (DOM)</span><span class="sxs-lookup"><span data-stu-id="183bf-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

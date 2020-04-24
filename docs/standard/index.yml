@@ -1,20 +1,24 @@
 ### YamlMime:Landing
 title: .NET 文件
-summary: 瞭解 .NET,這是一個用於構建許多不同類型的應用程式的開源開發人員平臺。
+summary: 深入瞭解 .NET，這是一種開放原始碼開發人員平臺，可用於建立許多不同類型的應用程式。
 metadata:
   title: .NET 文件
-  description: 瞭解 .NET,這是一個用於構建許多不同類型的應用程式的開源開發人員平臺。
+  description: 深入瞭解 .NET，這是一種開放原始碼開發人員平臺，可用於建立許多不同類型的應用程式。
   ms.topic: landing-page
-  ms.date: 03/27/2020
-  ms.openlocfilehash: 5984996b59cfb89e5f165bf966722093c0992eea
-  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.date: 04/22/2020
+  ms.openlocfilehash: 67fa6bb8c14ef3fad05b4874553a9ce75f811833
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/03/2020
-  ms.locfileid: "80636077"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135811"
 landingContent:
 - title: 瞭解 .NET
   linkLists:
+  - linkListType: download
+    links:
+    - text: 下載 .NET SDK
+      url: https://dotnet.microsoft.com/download
   - linkListType: overview
     links:
     - text: .NET 教學課程
@@ -35,7 +39,7 @@ landingContent:
       url: choosing-core-framework-server.md
   - linkListType: whats-new
     links:
-    - text: .NET 標準中的新增功能
+    - text: .NET Standard 的新功能
       url: whats-new/whats-new-in-dotnet-standard.md
     - text: .NET Core 的新功能
       url: ../core/whats-new/dotnet-core-3-1.md
@@ -43,49 +47,49 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: 序列化和序列化 JSON
+    - text: 序列化和還原序列化 JSON
       url: serialization/system-text-json-overview.md
   - linkListType: how-to-guide
     links:
-    - text: 使用 C 序列化與反序列化 JSON#
+    - text: 使用 C 序列化和還原序列化 JSON#
       url: serialization/system-text-json-how-to.md
-    - text: 從牛頓軟.Json 遷移到系統.Text.Json
+    - text: 從 Newtonsoft 遷移至 System.web. Json
       url: serialization/system-text-json-migrate-from-newtonsoft-how-to.md
-    - text: 為 JSON 序列化編寫自訂轉換器
+    - text: 撰寫 JSON 序列化的自訂轉換器
       url: serialization/system-text-json-converters-how-to.md
   - linkListType: sample
     links:
-    - text: XML 序列化範例
+    - text: XML 序列化的範例
       url: serialization/examples-of-xml-serialization.md
-- title: 格式化與轉換日期、數位和字串
+- title: 格式化和轉換日期、數位和字串
   linkLists:
   - linkListType: concept
     links:
-    - text: 數位格式字串
+    - text: 數值格式字串
       url: base-types/standard-numeric-format-strings.md
-    - text: 日期與時間格式字串
+    - text: 日期和時間格式字串
       url: base-types/standard-date-and-time-format-strings.md
-    - text: 複合格式化
+    - text: 複合格式
       url: base-types/composite-formatting.md
-    - text: 轉換時區之間的時間
+    - text: 在各時區之間轉換時間
       url: datetime/converting-between-time-zones.md
-    - text: 從字串修剪和移除字元
+    - text: 修剪和移除字串中的字元
       url: base-types/trimming.md
     - text: .NET 中的規則運算式
       url: base-types/regular-expressions.md
   - linkListType: how-to-guide
     links:
-    - text: 將字串轉換為日期時間
+    - text: 將字串轉換成 DateTime
       url: base-types/parsing-datetime.md
-    - text: 以前導零填充數位
+    - text: 在數字開頭填補多個零
       url: base-types/how-to-pad-a-number-with-leading-zeros.md
-    - text: 以日期與時間值顯示毫秒
+    - text: 在日期與時間值中顯示毫秒
       url: base-types/how-to-display-milliseconds-in-date-and-time-values.md
   - linkListType: reference
     links:
     - text: 規則運算式語言
       url: base-types/regular-expression-language-quick-reference.md
-- title: 設計類和庫
+- title: 設計類別和程式庫
   linkLists:
   - linkListType: overview
     links:
@@ -95,9 +99,9 @@ landingContent:
     links:
     - text: 命名慣例
       url: design-guidelines/general-naming-conventions.md
-    - text: 資本化約定
+    - text: 大小寫慣例
       url: design-guidelines/capitalization-conventions.md
-- title: 使用事件與例外
+- title: 使用事件和例外狀況
   linkLists:
   - linkListType: concept
     links:
@@ -107,9 +111,9 @@ landingContent:
       url: events/index.md
   - linkListType: how-to-guide
     links:
-    - text: 使用 try-catch 塊擷取例外
+    - text: 使用 try-catch 區塊來攔截例外狀況
       url: exceptions/how-to-use-the-try-catch-block-to-catch-exceptions.md
-    - text: 引發及使用事件
+    - text: 引發和使用事件
       url: events/how-to-raise-and-consume-events.md
 - title: 檔案和資料流 I/O
   linkLists:
@@ -133,11 +137,11 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: 垃圾回收基礎知識
+    - text: 垃圾收集基礎
       url: garbage-collection/fundamentals.md
-    - text: 實現處置方法
+    - text: 實作 Dispose 方法
       url: garbage-collection/implementing-dispose.md
-- title: 瞭解並行編程
+- title: 深入瞭解平行程式設計
   linkLists:
   - linkListType: overview
     links:
@@ -155,5 +159,5 @@ landingContent:
     links:
     - text: 使用 Parallel.ForEach 寫入一個簡單的平行程式
       url: parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md
-    - text: 從工作傳回值
+    - text: 傳回工作的值
       url: parallel-programming/how-to-return-a-value-from-a-task.md
