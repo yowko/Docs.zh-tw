@@ -30,7 +30,7 @@
   items:
     - name: ASP.NET Core
       href: aspnetcore.md
-    - name: CoreFx
+    - name: Core .NET 程式庫
       href: corefx.md
     - name: 密碼編譯
       href: cryptography.md
