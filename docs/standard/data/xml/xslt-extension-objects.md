@@ -36,7 +36,7 @@ ms.locfileid: "75709708"
   
 3. 將 <xref:System.Xml.Xsl.XsltArgumentList> 物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [XSLT 安全性考量](../../../../docs/standard/data/xml/xslt-security-considerations.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：啟動應用程式併發送按鍵 - 視覺基礎知識
+title: 如何：啟動應用程式並將按鍵傳送至 Visual Basic
 ms.date: 10/23/2019
 helpviewer_keywords:
 - keystrokes, sending
@@ -14,9 +14,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "72919397"
 ---
-# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>如何：啟動應用程式併發送按鍵（可視基本）
+# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>如何：啟動應用程式並將按鍵傳送（Visual Basic）
 
-本示例使用<xref:Microsoft.VisualBasic.Interaction.Shell%2A>方法啟動記事本應用程式，然後使用[My.Computer.鍵盤.SendKeys](xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A)方法發送擊鍵來列印句子。
+這個範例會使用<xref:Microsoft.VisualBasic.Interaction.Shell%2A>方法來啟動 [記事本] 應用程式，然後使用 [ [my.user](xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A) ] 方法傳送按鍵來列印句子。
 
 ## <a name="example"></a>範例
 
@@ -24,7 +24,7 @@ ms.locfileid: "72919397"
 
 ## <a name="robust-programming"></a>穩固程式設計
 
-如果<xref:System.ArgumentException>找不到具有請求的進程識別碼的應用程式，則引發異常。  
+如果<xref:System.ArgumentException>找不到具有所要求進程識別碼的應用程式，就會引發例外狀況。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性
 

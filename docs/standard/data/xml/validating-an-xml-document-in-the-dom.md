@@ -86,7 +86,7 @@ ms.locfileid: "75710033"
 
  如需說明 <xref:System.Xml.Schema.ValidationEventHandler> 的範例，請參閱上述＜將 XML 文件載入到 DOM 時進行驗證＞及＜驗證 DOM 中的 XML 文件＞。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XmlReader>

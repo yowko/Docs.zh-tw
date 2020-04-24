@@ -1,5 +1,5 @@
 ---
-title: 故障排除：讀取和寫入文字檔
+title: 疑難排解：讀取和寫入文字檔
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting file I/O
@@ -40,5 +40,5 @@ ms.locfileid: "74333791"
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [寫入檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
 - [使用 TextFieldParser 物件剖析文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

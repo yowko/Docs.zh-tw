@@ -1,5 +1,5 @@
 ---
-title: 如何：從固定寬度文字檔讀取
+title: 如何：從固定寬度的文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fixed-width text file

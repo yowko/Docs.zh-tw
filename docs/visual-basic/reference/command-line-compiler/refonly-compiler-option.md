@@ -28,11 +28,11 @@ ms.locfileid: "74348581"
 
 ## <a name="remarks"></a>備註
 
-Visual Basic 支援從15.3 版開始的 `-refonly` 交換器。
+Visual Basic 支援從`-refonly` 15.3 版開始的交換器。
 
 參考元件是一種特殊類型的元件，其中只包含代表程式庫公用 API 介面所需的最小中繼資料量。 其中包括在建立工具中參考元件時，所有重要成員的宣告，但會排除所有成員的執行，以及對其 API 合約沒有明顯影響的私用成員宣告。 如需詳細資訊，請參閱 .NET 中的[參考元件](../../../standard/assembly/reference-assemblies.md)指南。
 
-`-refonly` 和 [`-refout`](refout-compiler-option.md) 選項互斥。
+`-refonly`和[`-refout`](refout-compiler-option.md)選項互斥。
 
 ## <a name="see-also"></a>另請參閱
 

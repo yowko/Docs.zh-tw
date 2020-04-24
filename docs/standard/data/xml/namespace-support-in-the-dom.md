@@ -23,6 +23,6 @@ XML 文件物件模型 (DOM) 具有完全的命名空間感知。 只有命名�
   
 - 如果找到冒號，則名稱會根據第一個冒號字元的位置分成兩個部分。 前置詞會設為冒號之前找到的字串，而且區域名稱會設為冒號之後找到的字串。 對於沒有採用 NamespaceURI 值的方法，NamespaceURI 不會解析且會維持設定為空字串。 否則，NamespaceURI 會設為傳入方法的字串。 如果沒有指定前置詞，那麼 **Save** 方法以及 **InnerXml** 和 **OuterXml** 屬性會失敗。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

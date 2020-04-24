@@ -20,10 +20,10 @@ ms.locfileid: "75711073"
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  
 |Double.NegativeInfinity|"-INF"|  
-|DateTime|格式為 yyyy-MM-ddTHH:mm:sszzzzzz 及其子集。|  
+|Datetime|格式為 yyyy-MM-ddTHH:mm:sszzzzzz 及其子集。|  
 |Timespan|格式為 PnYnMnTnHnMnS，例如 `P2Y10M15DT10H30M20S` 代表期間為 2 年 10 個月 15 天 10 小時 30 分鐘 20 秒。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [XML 資料類型轉換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
-- [將字串轉換成 .NET Framework 資料類型](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
+- [XML 資料型別轉換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
+- [將字串轉換成 .NET Framework 資料型別](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)

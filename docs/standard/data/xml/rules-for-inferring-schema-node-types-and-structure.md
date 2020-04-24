@@ -42,7 +42,7 @@ ms.locfileid: "75710241"
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|Schema|  
+|XML|結構描述|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root>text</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root" type="xs:string" />`<br /><br /> `</xs:schema>`|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "75710241"
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|Schema|  
+|XML|結構描述|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<empty/>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="empty" />`<br /><br /> `</xs:schema>`|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "75710241"
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|Schema|  
+|XML|結構描述|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<empty attribute1="text"/>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="empty">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75710241"
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|Schema|  
+|XML|結構描述|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root attribute1="text">value</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:simpleContent>`<br /><br /> `<xs:extension base="xs:string">`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:extension>`<br /><br /> `</xs:simpleContent>`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -81,7 +81,7 @@ ms.locfileid: "75710241"
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|Schema|  
+|XML|結構描述|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root>`<br /><br /> `<subElement/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:element name="subElement" />`<br /><br /> `</xs:sequence>`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -93,7 +93,7 @@ ms.locfileid: "75710241"
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|Schema|  
+|XML|結構描述|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root attribute1="text">`<br /><br /> `<subElement1/>`<br /><br /> `<subElement2/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:element name="subElement1" />`<br /><br /> `<xs:element name="subElement2" />`<br /><br /> `</xs:sequence>`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "75710241"
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|Schema|  
+|XML|結構描述|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root>`<br /><br /> `<subElement1/>`<br /><br /> `<subElement2/>`<br /><br /> `<subElement1/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:choice maxOccurs="unbounded">`<br /><br /> `<xs:element name="subElement1" />`<br /><br /> `<xs:element name="subElement2" />`<br /><br /> `</xs:choice>`<br /><br /> `</xs:sequence>`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -117,7 +117,7 @@ ms.locfileid: "75710241"
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-|XML|Schema|  
+|XML|結構描述|  
 |---------|------------|  
 |`<?xml version="1.0"?>`<br /><br /> `<root attribute1="text">`<br /><br /> `<subElement1/>`<br /><br /> `<subElement2/>`<br /><br /> `<subElement1/>`<br /><br /> `</root>`|`<?xml version="1.0" encoding="utf-8"?>`<br /><br /> `<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xml`<br /><br /> `ns:xs="http://www.w3.org/2001/XMLSchema">`<br /><br /> `<xs:element name="root">`<br /><br /> `<xs:complexType>`<br /><br /> `<xs:sequence>`<br /><br /> `<xs:choice maxOccurs="unbounded">`<br /><br /> `<xs:element name="subElement1" />`<br /><br /> `<xs:element name="subElement2" />`<br /><br /> `</xs:choice>`<br /><br /> `</xs:sequence>`<br /><br /> `<xs:attribute name="attribute1" type="xs:string" use="required" />`<br /><br /> `</xs:complexType>`<br /><br /> `</xs:element>`<br /><br /> `</xs:schema>`|  
   
@@ -133,21 +133,21 @@ ms.locfileid: "75710241"
 ## <a name="other-node-type-inference-rules"></a>其他節點型別推斷規則  
  下表所說明的推斷規則，可用來處理指示、註解、實體參考、CDATA、文件型別與命名空間節點。  
   
-|節點類型|轉譯|  
+|節點類型|翻譯|  
 |---------------|-----------------|  
-|處理指示|忽略：|  
-|註解|忽略：|  
+|處理指示|忽略。|  
+|註解|忽略。|  
 |實體參考|<xref:System.Xml.Schema.XmlSchemaInference> 類別不處理實體參考。 若 XML 文件中含有實體參考，您必須使用可擴充實體的讀取器。 例如，您可以將 <xref:System.Xml.XmlTextReader> 傳遞為參數，並將其 <xref:System.Xml.XmlTextReader.EntityHandling%2A> 屬性設定為 <xref:System.Xml.EntityHandling.ExpandEntities>。 若發現實體參考，但讀取器並未擴充實體，則會擲回例外狀況。|  
 |CDATA|XML 文件中的任何 `<![CDATA[ … ]]` 區段都會被推斷為 `xs:string`。|  
-|文件類型|忽略：|  
-|命名空間|忽略：|  
+|文件型別|忽略。|  
+|命名空間|忽略。|  
   
  如需結構描述推斷程序的詳細資訊，請參閱[從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
 - [推斷 XML 結構描述](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
 - [從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [推斷簡單類型的規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+- [推斷簡單型別的規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

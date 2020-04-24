@@ -43,13 +43,13 @@ ms.locfileid: "74345893"
 
 C:\Documents and Settings\\`username`\Application Data
 
-`CompanyName`、 `ProductName`和 `ProductVersion` 的值都來自應用程式的組件資訊。 記錄檔名稱的格式為 *AssemblyName*.log，其中 *AssemblyName* 為不含副檔名的組件檔案名稱。 如果需要多個日誌檔，例如當應用程式嘗試寫入日誌時原始日誌無法接通，日誌檔案名的表單是*AssemblyName*-*反覆運算*.log，其中`iteration`為正`Integer`。
+`CompanyName`、 `ProductName`和 `ProductVersion` 的值都來自應用程式的組件資訊。 記錄檔名稱的格式為 *AssemblyName*.log，其中 *AssemblyName* 為不含副檔名的組件檔案名稱。 如果需要一個以上的記錄檔（例如當應用程式嘗試寫入記錄檔時，原始記錄檔無法使用時），記錄檔名稱的格式為*AssemblyName*-*反復*專案 .log，其中`iteration`為正。 `Integer`
 
 您可以藉由加入或變更電腦和應用程式的組態檔以覆寫預設行為。 如需詳細資訊，請參閱 [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)。
 
 ## <a name="configuring-log-settings"></a>設定記錄檔設定
 
-該`Log`物件具有一個預設實現，該實現在沒有應用程式佈建檔的情況下工作。要更改預設值，必須添加包含新設置的設定檔。 如需詳細資訊，請參閱 [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。
+`Log`物件具有不含應用程式佈建檔（app.config）運作的預設實值。若要變更預設值，您必須加入具有新設定的設定檔。 如需詳細資訊，請參閱 [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)。
 
 記錄檔組態區段位於 app.config 檔案主 `<system.diagnostics>` 節點的 `<configuration>` 節點中。 記錄檔資訊在數個節點內定義︰
 

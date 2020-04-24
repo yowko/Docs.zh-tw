@@ -34,7 +34,7 @@ ms.locfileid: "74333812"
   
 1. 按一下 [檔案] 功能表上的 [新增專案]。********  
   
-     此時會出現 [新增專案]**** 對話方塊。  
+     [新增專案]  對話方塊隨即出現。  
   
 2. 在 [已安裝的範本] 窗格中，展開 [Visual Basic]，然後按一下 [Windows]。************ 在中間的 [範本] 窗格中，按一下 [Windows Forms 應用程式]。********  
   
@@ -47,9 +47,9 @@ ms.locfileid: "74333812"
     |控制|屬性|值|  
     |-------------|--------------|-----------|  
     |**ListBox**|**名稱**|`filesListBox`|  
-    |**Button**|**名稱**<br /><br /> **文本**|`browseButton`<br /><br /> **瀏覽**|  
-    |**Button**|**名稱**<br /><br /> **文本**|`examineButton`<br /><br /> **檢查**|  
-    |**核取方塊**|**名稱**<br /><br /> **文本**|`saveCheckBox`<br /><br /> **儲存結果**|  
+    |**Button**|**名稱**<br /><br /> **Text**|`browseButton`<br /><br /> **瀏覽**|  
+    |**Button**|**名稱**<br /><br /> **Text**|`examineButton`<br /><br /> **檢查**|  
+    |**CheckBox**|**名稱**<br /><br /> **Text**|`saveCheckBox`<br /><br /> **儲存結果**|  
     |**FolderBrowserDialog**|**名稱**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>若要選取資料夾，並列出資料夾中的檔案  
@@ -98,7 +98,7 @@ ms.locfileid: "74333812"
   
      <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> 方法會將檔案內容讀入 <xref:System.IO.StreamReader>。 系統會由 `StreamReader` 取得第一行的內容，並將其新增至 `StringBuilder`。  
   
-4. 執行應用程式。 按一下 [瀏覽]，並瀏覽至包含 .txt 檔案的資料夾。**** 按一下 [確定]****。  
+4. 執行應用程式。 按一下 [瀏覽]，並瀏覽至包含 .txt 檔案的資料夾。**** 按一下 [確定]  。  
   
      選取 `ListBox` 中的檔案，然後按一下 [檢查]****。 `MessageBox` 隨即顯示檔案資訊。  
   

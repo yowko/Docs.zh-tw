@@ -76,6 +76,6 @@ ms.locfileid: "75710657"
 |Comment node|<xref:System.Xml.XPath.XPathNavigator>|
 |Processing instruction node|<xref:System.Xml.XPath.XPathNavigator>|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [System.Xml 類別中的類型支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+- [System.Xml 類別中的型別支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

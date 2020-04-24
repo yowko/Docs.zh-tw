@@ -31,9 +31,9 @@ ms.locfileid: "75710670"
 |CDATASection|CDATASection 的內容。|  
 |註解|註解的內容。|  
 |ProcessingInstruction|內容 (目標除外)。|  
-|文字|文字內容。|  
+|Text|文字的內容。|  
 |XmlDeclaration|宣告的內容 (`<?xml` 及 `?>` 標記除外)。|  
-|Whitespace|泛空白字元的值。 該值可以設為四個可以辨識的 XML 空白字元其中之一：空格、定位字元、CR 或 LF。|  
+|空白|泛空白字元的值。 該值可以設為四個可以辨識的 XML 空白字元其中之一：空格、定位字元、CR 或 LF。|  
 |SignificantWhitespace|顯著泛空白字元的值。 該值可以設為四個可以辨識的 XML 空白字元其中之一：空格、定位字元、CR 或 LF。|  
   
  未列在表格中的任何節點型別都是無效節點型別，不可設定值。 在任何其他節點型別上設定值都會擲回 <xref:System.InvalidOperationException>。  
@@ -44,6 +44,6 @@ ms.locfileid: "75710670"
   
  在可編輯之節點中加入或移除唯讀子節點有效。 不過，嘗試修改唯讀節點本身會擲回 <xref:System.InvalidOperationException>。 修改 <xref:System.Xml.XmlEntityReference> 節點的子節點便是一個範例。 子節點是唯讀的，而且無法修改。 對其進行修改的任何嘗試，都會擲回 <xref:System.InvalidOperationException>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

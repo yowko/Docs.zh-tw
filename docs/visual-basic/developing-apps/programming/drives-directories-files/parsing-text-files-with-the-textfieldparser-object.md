@@ -1,5 +1,5 @@
 ---
-title: 使用 TextFieldParser 物件分析文字檔
+title: 使用 TextFieldParser 物件剖析文字檔
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, using

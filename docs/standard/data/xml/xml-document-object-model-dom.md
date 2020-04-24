@@ -42,7 +42,7 @@ XML 文件物件模型 (DOM) 類別是記憶體中 XML 文件的表示法。 DOM
 - 擷取整個節點，除了節點所包含的資訊之外，還有項目節點中的內容。
 
   > [!NOTE]
-  > 若應用程式不需要 DOM 所提供的結構或編輯功能，則 **XmlReader** 與 **XmlWriter** 類別會提供對 XML 的無快取、順向資料流存取。 如需詳細資訊，請參閱<xref:System.Xml.XmlReader>和<xref:System.Xml.XmlWriter>。
+  > 若應用程式不需要 DOM 所提供的結構或編輯功能，則 **XmlReader** 與 **XmlWriter** 類別會提供對 XML 的無快取、順向資料流存取。 如需詳細資訊，請參閱 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter>。
 
 **Node** 物件有一組方法和屬性，以及基本且完整定義的特性。 這些特性的其中一些是：
 
@@ -50,13 +50,13 @@ XML 文件物件模型 (DOM) 類別是記憶體中 XML 文件的表示法。 DOM
 
 - 大多數的節點可以有多重子節點，就是在正下方的節點。 下列是可以有子節點的節點型別清單。
 
-  - **Document**
+  - **文件**
 
   - **DocumentFragment**
 
   - **EntityReference**
 
-  - **目**
+  - **元素**
 
   - **屬性**
 
@@ -74,7 +74,7 @@ Microsoft 已擴充 API，使其可在全球資訊網協會 (W3C) DOM 層級 1 �
 
 DOM 對於將 XML 資料讀入記憶體以變更它的結構、加入或移除節點，或修改在項目所包含之內容中的節點所儲存的資料時最有用。 但是，在其他案例中，可使用其他比 DOM 更快速的類別。 對於快速、無快取、順向資料流的 XML 存取，請使用 **XmlReader** 與 **XmlWriter**。 如果您需要具游標模型和 **XPath** 的隨機存取，請使用 **XPathNavigator** 類別。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [XML 節點的類型](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
-- [將物件階層對應至 XML 資料](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+- [XML 節點的型別](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
+- [將物件階層架構對應至 XML 資料](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

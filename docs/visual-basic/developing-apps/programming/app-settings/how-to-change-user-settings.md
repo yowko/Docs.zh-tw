@@ -1,5 +1,5 @@
 ---
-title: 如何：變更使用者設定
+title: 作法：變更使用者設定
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user settings [Visual Basic], changing in Visual Basic

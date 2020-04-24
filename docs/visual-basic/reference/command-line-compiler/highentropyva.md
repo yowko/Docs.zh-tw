@@ -23,14 +23,14 @@ ms.locfileid: "74344244"
   
 ## <a name="arguments"></a>引數  
  `+` &#124; `-`  
- 選擇性。 此選項預設為關閉，或者，如果您指定 `-highentropyva-`。 如果您指定 `-highentropyva` 或 `-highentropyva+`，則此選項為 on。  
+ 選擇性。 此選項預設為關閉，或者，如果您`-highentropyva-`指定，則為。 如果您指定`-highentropyva`或`-highentropyva+`，此選項為 on。  
   
 ## <a name="remarks"></a>備註  
  如果您指定此選項，當核心隨機化進程的位址空間配置作為 ASLR 的一部分時，相容的 Windows 核心版本可能會使用較高程度的熵。 如果核心使用較高的熵程度，則可以將更多的位址配置給記憶體區域，例如堆疊和堆積。 因此更難猜測特定記憶體區域的位置。  
   
  當選項為 on 時，目標可執行檔及其相依的任何模組，必須能夠在這些模組以64位進程執行時，處理大於 4 gb 的指標值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

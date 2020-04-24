@@ -32,16 +32,16 @@ ms.locfileid: "72005204"
 |`namespace`|要用來括住目前專案之所有類型宣告的命名空間名稱。|  
   
 ## <a name="remarks"></a>備註  
- 如果您使用 Visual Studio 可執行檔（Devenv）來編譯在 Visual Studio 整合式開發環境中建立的專案，請使用 `-rootnamespace` 來指定 <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> 屬性的值。 如需詳細資訊，請參閱[Devenv 命令列參數](/visualstudio/ide/reference/devenv-command-line-switches)。  
+ 如果您使用 Visual Studio 可執行檔（Devenv）來編譯在 Visual Studio 整合式開發環境中建立的專案，請使用`-rootnamespace`來指定<xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A>屬性的值。 如需詳細資訊，請參閱[Devenv 命令列參數](/visualstudio/ide/reference/devenv-command-line-switches)。  
   
  使用 common language runtime MSIL 解譯器（`Ildasm.exe`）來查看輸出檔案中的命名空間名稱。  
   
 |在 Visual Studio 的整合式開發環境中設定-rootnamespace|  
 |---|  
-|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [應用程式] 索引標籤。<br />3.修改 [**根命名空間**] 方塊中的值。|  
+|1. 在**方案總管**中選取專案。 按一下 [專案]**** 功能表上的 [屬性]****。 <br />2. 按一下 [**應用程式**] 索引標籤。<br />3. 修改 [**根命名空間**] 方塊中的值。|  
   
 ## <a name="example"></a>範例  
- 下列程式碼會編譯 `In.vb`，並將命名空間中的所有類型宣告括住 `mynamespace`。  
+ 下列程式碼會`In.vb`編譯並括住命名空間`mynamespace`中的所有類型宣告。  
   
 ```console
 vbc -rootnamespace:mynamespace in.vb  
@@ -50,5 +50,5 @@ vbc -rootnamespace:mynamespace in.vb
 ## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
-- [Ildasm.exe (IL 反組譯工具)](../../../framework/tools/ildasm-exe-il-disassembler.md)
+- [Ildasm （IL 解譯器）](../../../framework/tools/ildasm-exe-il-disassembler.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

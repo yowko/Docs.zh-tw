@@ -1,5 +1,5 @@
 ---
-title: 如何：撥接與序列埠連接的數據機
+title: 作法：撥接與序列埠連接的數據機
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modems [Visual Basic], dialing
@@ -51,7 +51,7 @@ ms.locfileid: "74345631"
 
  此範例假設數據機已連接至 COM1。 建議您的程式碼允許使用者從可用序列埠清單中選取想要的序列埠。 如需詳細資訊，請參閱[如何：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)。  
   
- 此範例使用 `Using` 區塊以確保應用程式即使擲回例外狀況，也可關閉序列埠。 有關詳細資訊，請參閱[使用語句](../../../../visual-basic/language-reference/statements/using-statement.md)。  
+ 此範例使用 `Using` 區塊以確保應用程式即使擲回例外狀況，也可關閉序列埠。 如需詳細資訊，請參閱[Using 語句](../../../../visual-basic/language-reference/statements/using-statement.md)。  
   
  在此範例中，應用程式會在撥接數據機之後中斷與序列埠的連接。 實際上，您會想要將資料傳輸至數據機，或從中傳輸出。 如需詳細資訊，請參閱[如何：接收來自序列埠的字串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)。  
   
@@ -59,6 +59,6 @@ ms.locfileid: "74345631"
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
-- [如何：將字串傳送至序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [如何：接收來自序列埠的字串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
-- [如何：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+- [作法：將字串傳送至序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
+- [作法：接收來自序列埠的字串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+- [作法：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

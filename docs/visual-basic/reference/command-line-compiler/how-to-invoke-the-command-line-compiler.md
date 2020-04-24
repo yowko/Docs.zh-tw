@@ -28,9 +28,9 @@ ms.locfileid: "74344264"
 
 3. 叫用 Visual Studio 的開發人員命令提示字元。
 
-4. 在命令列中，輸入 `vbc.exe` *sourceFileName* ，然後按 enter。
+4. 在命令列中輸入`vbc.exe` *sourceFileName* ，然後按 enter。
 
-    例如，如果您將原始程式碼儲存在名為 `SourceFiles`的目錄中，您會開啟命令提示字元，然後輸入 `cd SourceFiles` 變更為該目錄。 如果目錄包含名為 `Source.vb`的原始程式檔，您可以輸入 `vbc.exe Source.vb`來進行編譯。
+    例如，如果您將原始程式碼儲存在名`SourceFiles`為的目錄中，您會開啟命令提示字元，然後`cd SourceFiles`輸入以變更至該目錄。 如果目錄包含名為`Source.vb`的原始程式檔，您可以輸入`vbc.exe Source.vb`來編譯它。
 
 ## <a name="to-set-the-path-environment-variable-to-the-compiler-for-the-windows-command-prompt"></a>若要將 PATH 環境變數設定為 Windows 命令提示字元的編譯器
 
@@ -38,7 +38,7 @@ ms.locfileid: "74344264"
 
     編譯器所在目錄的確切名稱，取決於 Windows 目錄的位置和安裝的「.NET Framework」版本。 如果您已安裝多個版本的「.NET Framework」，您必須決定要使用哪個版本（通常是最新版本）。
 
-2. 在 **開始** 功能表中，以滑鼠右鍵按一下 **我的電腦**，然後從快捷方式功能表按一下 **屬性**。
+2. 在 [**開始**] 功能表中，以滑鼠右鍵按一下 [**我的電腦**，然後從快捷方式功能表按一下 [**屬性**]。
 
 3. 按一下 [**進階**] 索引標籤，然後按一下 [**環境變數**]。
 
@@ -54,11 +54,11 @@ ms.locfileid: "74344264"
 
 1. 在 [**開始**] 功能表中，按一下 [**附屬**應用程式] 資料夾，然後開啟**Windows 命令提示**字元。
 
-2. 在命令列中，輸入 `vbc.exe`*sourceFileName* ，然後按 enter。
+2. 在命令列中輸入`vbc.exe` *sourceFileName* ，然後按 enter。
 
-     例如，如果您將原始程式碼儲存在名為 `SourceFiles`的目錄中，您會開啟命令提示字元，然後輸入 `cd SourceFiles` 變更為該目錄。 如果目錄包含名為 `Source.vb`的原始程式檔，您可以輸入 `vbc.exe Source.vb`來進行編譯。
+     例如，如果您將原始程式碼儲存在名`SourceFiles`為的目錄中，您會開啟命令提示字元，然後`cd SourceFiles`輸入以變更至該目錄。 如果目錄包含名為`Source.vb`的原始程式檔，您可以輸入`vbc.exe Source.vb`來編譯它。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

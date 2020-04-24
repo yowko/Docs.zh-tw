@@ -24,22 +24,22 @@ ms.locfileid: "74350843"
   
 ## <a name="arguments"></a>引數  
  `+` &#124; `-`  
- 選擇性。 此選項的預設值為 `-utf8output-`，這表示編譯器輸出不會使用 UTF-8 編碼。 指定 `-utf8output` 等同於指定 `-utf8output+`。  
+ 選擇性。 這個選項的預設值是`-utf8output-`，這表示編譯器輸出不會使用 utf-8 編碼。 指定 `-utf8output` 等同於指定 `-utf8output+`。  
   
 ## <a name="remarks"></a>備註  
- 在某些國際設定中，編譯器輸出無法正確地顯示在主控台中。 在這種情況下，請使用 `-utf8output`，並將編譯器輸出重新導向至檔案。  
+ 在某些國際設定中，編譯器輸出無法正確地顯示在主控台中。 在這種情況下`-utf8output` ，請使用，並將編譯器輸出重新導向至檔案。  
   
 > [!NOTE]
-> Visual Studio 開發環境中無法使用 [`-utf8output`] 選項;只有在從命令列編譯時，才可以使用它。  
+> 此`-utf8output`選項無法在 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會編譯 `In.vb`，並指示編譯器使用 UTF-8 編碼來顯示輸出。  
+ 下列程式碼會`In.vb`編譯並指示編譯器使用 utf-8 編碼來顯示輸出。  
   
 ```console  
 vbc -utf8output in.vb  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

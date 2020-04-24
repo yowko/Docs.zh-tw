@@ -115,7 +115,7 @@ public class Sample
 
 這個範例顯示下列輸出：
 
-**Output**
+**輸出**
 
 顯示集合中的所有屬性 (Attribute)。
 
@@ -258,6 +258,6 @@ using System.Xml;
 XmlAttribute attr = doc.DocumentElement.Attributes[0];
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

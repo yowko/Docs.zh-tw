@@ -18,7 +18,7 @@ ms.locfileid: "75709630"
 > [!NOTE]
 > 在 .NET Framework 2.0 版中，<xref:System.Xml.Xsl.XslTransform> 類別已過時。 <xref:System.Xml.Xsl.XslCompiledTransform> 類別是 XSLT 引擎的新實作。 其中包含效能增進與新的安全性功能。 建議的作法是使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別建立 XSLT 應用程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)  
  提供有關使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別的資訊。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75709630"
  [使用 XslTransform 類別進行 XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  提供有關使用 <xref:System.Xml.Xsl.XslTransform> 類別的資訊。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
  <xref:System.Xml.Xsl.XsltArgumentList>  
  <xref:System.Xml.Xsl.XsltSettings>  

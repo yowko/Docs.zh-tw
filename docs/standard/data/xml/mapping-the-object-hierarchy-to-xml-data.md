@@ -30,7 +30,7 @@ ms.locfileid: "78160023"
   
  輸入表示在記憶體中，顯示成下列具指派節點型別屬性的節點樹狀：  
   
- ![範例節點樹狀結構](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![範例節點樹狀](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
 Book 和 title 節點的樹狀表示  
   
  `book` 項目會成為 **XmlElement** 物件，下一個項目 `title` 也會成為 **XmlElement**，而項目內容會成為 **XmlText** 物件。 查看 **XmlElement** 方法和屬性時，方法和屬性與 **XmlText** 物件中可以使用的方法和屬性不同。 因此了解 XML 標記會變成何種節點型別變得很重要，因為它的節點型別會決定可以執行的動作。  

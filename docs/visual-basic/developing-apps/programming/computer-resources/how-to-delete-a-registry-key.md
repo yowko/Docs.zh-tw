@@ -1,5 +1,5 @@
 ---
-title: 如何：刪除登錄機碼
+title: 作法：刪除登錄機碼
 ms.date: 07/20/2015
 f1_keywords:
 - vb.DeleteSetting

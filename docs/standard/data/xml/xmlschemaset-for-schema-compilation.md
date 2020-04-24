@@ -249,7 +249,7 @@ foreach (XmlSchema schema in schemaSet.Schemas())
   
  如需有關使用 <xref:System.Xml.Schema.XmlSchemaSet> 驗證 XML 文件的詳細資訊，請參閱 [使用 XmlSchemaSet 驗證 XML 結構描述 (XSD)](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>
 - <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>

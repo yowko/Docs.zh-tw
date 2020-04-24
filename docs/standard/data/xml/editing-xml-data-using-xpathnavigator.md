@@ -13,7 +13,7 @@ ms.locfileid: "75710956"
 # <a name="editing-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 編輯 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供一些可從 <xref:System.Xml.XmlDocument> 物件所包含之 XML 文件插入、修改及移除節點與值的方法。 若要使用其中任一方法來插入、修改及移除節點與值，<xref:System.Xml.XPath.XPathNavigator> 物件必須可編輯，也就是說，其 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 屬性必須為 True。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 XPathNavigator 插入 XML 資料](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
  說明如何使用 <xref:System.Xml.XmlDocument> 類別，將同層級節點、子節點、屬性節點及值插入至 <xref:System.Xml.XPath.XPathNavigator> 物件中。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "75710956"
  [使用 XPathNavigator 移除 XML 資料](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)  
  說明如何使用 <xref:System.Xml.XmlDocument> 類別，移除 <xref:System.Xml.XPath.XPathNavigator> 物件中的節點及值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

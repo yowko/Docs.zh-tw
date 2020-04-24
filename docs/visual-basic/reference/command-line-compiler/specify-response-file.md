@@ -36,14 +36,14 @@ ms.locfileid: "74348544"
 @file1.rsp @file2.rsp
 ```
 
-在回應檔中，多個編譯器選項和原始程式碼檔可能會出現在一行上。 單一編譯器選項規格必須出現在一行（不能跨越多行）。 回應檔可以有以 `#` 符號開頭的批註。
+在回應檔中，多個編譯器選項和原始程式碼檔可能會出現在一行上。 單一編譯器選項規格必須出現在一行（不能跨越多行）。 回應檔可以有以`#`符號開頭的批註。
 
 您可以結合在命令列上指定的選項與一個或多個回應檔中指定的選項。 編譯器會在遇到命令選項時進行處理。 因此，命令列引數可以覆寫回應檔中先前列出的選項。 相反地，回應檔中的選項會覆寫先前在命令列或其他回應檔中列出的選項。
 
-Visual Basic 提供 Vbc .rsp 檔案，該檔案位於與 Vbc 檔案相同的目錄中。 除非使用 [`-noconfig`] 選項，否則預設會包含 Vbc .rsp 檔案。 如需詳細資訊，請參閱[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)。
+Visual Basic 提供 Vbc .rsp 檔案，該檔案位於與 Vbc 檔案相同的目錄中。 除非使用`-noconfig`選項，否則預設會包含 Vbc 檔案。 如需詳細資訊，請參閱[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)。
 
 > [!NOTE]
-> Visual Studio 開發環境中無法使用 [`@`] 選項;只有在從命令列編譯時，才可以使用它。
+> 此`@`選項無法在 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。
 
 ## <a name="example"></a>範例
 
@@ -59,13 +59,13 @@ source2.vb
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用 `@` 選項搭配名為 `File1.rsp`的回應檔。
+下列範例示範如何搭配使用`@`選項與名為`File1.rsp`的回應檔。
 
 ```console
 vbc @file1.rsp
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)

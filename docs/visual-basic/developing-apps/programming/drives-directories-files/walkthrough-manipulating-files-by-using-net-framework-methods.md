@@ -38,17 +38,17 @@ ms.locfileid: "74333776"
 
 2. 按一下 [新增專案] 窗格的 [Windows 應用程式]。********
 
-3. 在 **"名稱"** 框中`MyDiary`鍵入，然後按一下 **"確定**"。
+3. 在 [**名稱**] 方塊`MyDiary`中輸入，然後按一下 **[確定]**。
 
-     視覺化工作室將專案添加到**解決方案資源管理器**，Windows**表單設計器**將打開。
+     Visual Studio 會將專案加入**方案總管**， **Windows Form 設計工具**隨即開啟。
 
 4. 將下表的控制項新增至表單，並設定其屬性的對應值。
 
-|**物件**|**屬性**|**價值**|
+|**目標**|**屬性**|**ReplTest1**|
 |---|---|---|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **文本**|`Submit`<br /><br /> **提交項目**|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **文本**|`Clear`<br /><br /> **清除項目**|
-|<xref:System.Windows.Forms.TextBox>|**名稱**<br /><br /> **文本**<br /><br /> **多行**|`Entry`<br /><br /> **請輸入某些內容。**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**|`Submit`<br /><br /> **提交項目**|
+|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**|`Clear`<br /><br /> **清除項目**|
+|<xref:System.Windows.Forms.TextBox>|**名稱**<br /><br /> **Text**<br /><br /> **多行**|`Entry`<br /><br /> **請輸入某些內容。**<br /><br /> `False`|
 
 ## <a name="writing-to-the-file"></a>寫入檔案
 
@@ -95,10 +95,10 @@ ms.locfileid: "74333776"
 
 |控制|屬性|值|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.TextBox>|**名稱**<br /><br /> **可見**<br /><br /> **大小**<br /><br /> **多行**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **文本**|`Display`<br /><br /> **顯示器**|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **文本**|`GetEntries`<br /><br /> **取得項目**|
-|<xref:System.Windows.Forms.ComboBox>|**名稱**<br /><br /> **文本**<br /><br /> **啟用**|`PickEntries`<br /><br /> **選取項目**<br /><br /> `False`|
+|<xref:System.Windows.Forms.TextBox>|**名稱**<br /><br /> **亮起**<br /><br /> **大小**<br /><br /> **多行**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
+|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**|`Display`<br /><br /> **顯示器**|
+|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**|`GetEntries`<br /><br /> **取得項目**|
+|<xref:System.Windows.Forms.ComboBox>|**名稱**<br /><br /> **Text**<br /><br /> **已啟用**|`PickEntries`<br /><br /> **選取項目**<br /><br /> `False`|
 
 ### <a name="to-populate-the-combo-box"></a>若要填入下拉式方塊
 
@@ -124,9 +124,9 @@ ms.locfileid: "74333776"
 
 |控制|屬性|值|
 |-------------|----------------|------------|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **文本**<br /><br /> **啟用**|`DeleteEntry`<br /><br /> **刪除項目**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **文本**<br /><br /> **啟用**|`EditEntry`<br /><br /> **編輯項目**<br /><br /> `False`|
-|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **文本**<br /><br /> **啟用**|`SubmitEdit`<br /><br /> **提交編輯**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**<br /><br /> **已啟用**|`DeleteEntry`<br /><br /> **刪除項目**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**<br /><br /> **已啟用**|`EditEntry`<br /><br /> **編輯項目**<br /><br /> `False`|
+|<xref:System.Windows.Forms.Button>|**名稱**<br /><br /> **Text**<br /><br /> **已啟用**|`SubmitEdit`<br /><br /> **提交編輯**<br /><br /> `False`|
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>若要啟用項目的刪除和修改功能
 
@@ -150,7 +150,7 @@ ms.locfileid: "74333776"
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 
-若要測試您的程式碼，請按 F5 以編譯應用程式。 按一下 [取得項目]，並選取項目，然後按一下 [顯示]。******** 此項目會出現在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。 按一下 [編輯項目]****。 此項目會出現在 `Entry`<xref:System.Windows.Forms.TextBox> 中。 編輯 中的`Entry`<xref:System.Windows.Forms.TextBox>條目，然後按一下"**提交編輯**"。 開啟 `MyDiary.txt` 檔案，確認您的修正。 現在，選取項目，然後按一下 [刪除項目]****。 當 <xref:System.Windows.Forms.MessageBox> 要求確認時，請按一下 [確定]****。 關閉應用程式，並開啟 `MyDiary.txt` 以確認刪除。
+若要測試您的程式碼，請按 F5 以編譯應用程式。 按一下 [取得項目]，並選取項目，然後按一下 [顯示]。******** 此項目會出現在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。 按一下 [編輯項目]****。 此項目會出現在 `Entry`<xref:System.Windows.Forms.TextBox> 中。 編輯中的專案， `Entry` <xref:System.Windows.Forms.TextBox>然後按一下 [**提交編輯**]。 開啟 `MyDiary.txt` 檔案，確認您的修正。 現在，選取項目，然後按一下 [刪除項目]****。 當 <xref:System.Windows.Forms.MessageBox> 要求確認時，請按一下 [確定]****。 關閉應用程式，並開啟 `MyDiary.txt` 以確認刪除。
 
 ## <a name="see-also"></a>另請參閱
 

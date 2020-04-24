@@ -1,5 +1,5 @@
 ---
-title: 如何：讀取登錄機碼的值
+title: 作法：讀取登錄機碼的值
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in

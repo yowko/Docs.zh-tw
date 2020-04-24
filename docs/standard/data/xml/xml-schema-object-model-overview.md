@@ -36,9 +36,9 @@ Microsoft .NET Framework 中的結構描述物件模型 (SOM) 是一個豐富的
   
  如需 <xref:System.Xml.Schema> 命名空間中每個類別的詳細資訊，請參閱 .NET Framework 類別庫中的 <xref:System.Xml.Schema> 命名空間參考文件。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [讀取及寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)

@@ -51,6 +51,6 @@ if (((object)node1.Name) == ((object)node2.Name))
   
  上述在兩個文件之間傳遞的名稱表是相同類型的文件要重複處理 (例如在電子商務網站上排序文件) 情況下的典型案例，它會依據 XML 結構描述定義語言 (XSD) 描述結構或文件類型定義 (DTD)，而且相同的字串會重複。 當多重文件中出現相同的項目名稱時，使用相同的名稱表可以改善效能。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

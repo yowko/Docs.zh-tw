@@ -26,12 +26,12 @@ ms.locfileid: "72005534"
   
 |詞彙|定義|  
 |---|---|  
-|`container`|必要項。 包含金鑰的容器檔案。 如果名稱包含空格，請用引號（""）括住檔案名。|  
+|`container`|必要。 包含金鑰的容器檔案。 如果名稱包含空格，請用引號（""）括住檔案名。|  
   
 ## <a name="remarks"></a>備註  
- 編譯器會藉由將公開金鑰插入組件資訊清單中，並使用私密金鑰簽署最終元件，來建立可共用的元件。 若要產生金鑰檔，請在命令列中輸入 `sn -k file`。 @No__t-0 選項會將金鑰組安裝到容器中。 如需詳細資訊，請參閱[sn.exe （強式名稱工具）](../../../framework/tools/sn-exe-strong-name-tool.md)）。  
+ 編譯器會藉由將公開金鑰插入組件資訊清單中，並使用私密金鑰簽署最終元件，來建立可共用的元件。 若要產生金鑰檔，請在命令列中輸入 `sn -k file`。 `-i`選項會將金鑰組安裝到容器中。 如需詳細資訊，請參閱[sn.exe （強式名稱工具）](../../../framework/tools/sn-exe-strong-name-tool.md)）。  
   
- 如果您使用 `-target:module` 進行編譯，金鑰檔的名稱會保留在模組中，並併入當您使用[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)編譯元件時所建立的元件中。  
+ 如果您使用進行`-target:module`編譯，則金鑰檔的名稱會保留在模組中，並併入當您使用[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)編譯元件時所建立的元件中。  
   
  您也可以在任何 Microsoft 中繼語言 (MSIL) 模組的原始程式碼中，將這個選項指定為自訂屬性 (<xref:System.Reflection.AssemblyKeyNameAttribute>)。  
   
@@ -40,10 +40,10 @@ ms.locfileid: "72005534"
  如需簽署元件的詳細資訊，請參閱[建立和使用強式名稱的元件](../../../standard/assembly/create-use-strong-named.md)。  
   
 > [!NOTE]
-> @No__t-0 選項無法從 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。  
+> 此`-keycontainer`選項無法在 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會將來源檔案編譯 `Input.vb`，並指定金鑰容器。  
+ 下列程式碼會編譯原始`Input.vb`程式檔，並指定金鑰容器。  
   
 ```console  
 vbc -keycontainer:key1 input.vb  

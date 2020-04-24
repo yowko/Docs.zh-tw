@@ -13,7 +13,7 @@ ms.locfileid: "75706262"
 
 當類型需要跨越受控程式碼和機器碼之間的界限時，**封送處理**便是轉換類型的程序。
 
-之所以需要進行封送處理，是因受控程式碼和非受控程式碼中的類型並不相同。 例如，在 managed 程式碼中，您有一個 `String`，而非受控世界字串可以是 Unicode （「寬」）、非 Unicode、以 null 終止的、ASCII 等等。根據預設，P/Invoke 子系統會依照本文所述的預設行為，嘗試執行正確的動作。 不過，在您需要進行額外控制的情況下，您可以運用 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 屬性來指定非受控端的預期類型。 比方說，如果您想要用以 null 終止的 ANSI 字串形式來傳送字串，您可以下列方式執行它︰
+之所以需要進行封送處理，是因受控程式碼和非受控程式碼中的類型並不相同。 例如，在 managed 程式碼中，您有`String`，而在非受控世界字串中可以是 unicode （「寬」）、非 Unicode、以 null 終止的、ASCII 等等。根據預設，P/Invoke 子系統會依照本文所述的預設行為，嘗試執行正確的動作。 不過，在您需要進行額外控制的情況下，您可以運用 [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) 屬性來指定非受控端的預期類型。 比方說，如果您想要用以 null 終止的 ANSI 字串形式來傳送字串，您可以下列方式執行它︰
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
@@ -26,7 +26,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 第一個表格會描述 P/Invoke 和欄位封送處理的封送處理皆相同之各種不同類型的對應。
 
-| .NET 型別 | 原生類型  |
+| .NET 類型 | 原生類型  |
 |-----------|-------------------------|
 | `byte`    | `uint8_t`               |
 | `sbyte`   | `int8_t`                |
@@ -51,14 +51,14 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 如果您是以參數或結構的形式進行封送處理，則有幾個封送處理類別具有不同的預設值。
 
-| .NET 型別 | 原生類型 (參數) | 原生類型 (欄位) |
+| .NET 類型 | 原生類型 (參數) | 原生類型 (欄位) |
 |-----------|-------------------------|---------------------|
 | .NET 陣列 | 針對陣列元素原生表示法之陣列開頭的指標。 | 需要有 `[MarshalAs]` 屬性，否則不允許|
 | 具有 `Sequential` 或 `Explicit`之 `LayoutKind` 的類別 | 針對類別之原生表示法的指標 | 類別的原生表示法 |
 
 下表包含僅限 Windows 的預設封送處理規則。 在非 Windows 平台上，您無法對這些類型進行封送處理。
 
-| .NET 型別 | 原生類型 (參數) | 原生類型 (欄位) |
+| .NET 類型 | 原生類型 (參數) | 原生類型 (欄位) |
 |-----------|-------------------------|---------------------|
 | `object`  | `VARIANT`               | `IUnknown*`         |
 | `System.Array` | COM 介面 | 需要有 `[MarshalAs]` 屬性，否則不允許 |
@@ -69,7 +69,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 某些類型只能以參數 (而非欄位) 的形式進行封送處理。 這些類型已列於下表中：
 
-| .NET 型別 | 原生類型 (僅限參數) |
+| .NET 類型 | 原生類型 (僅限參數) |
 |-----------|------------------------------|
 | `System.Text.StringBuilder` | `char*` 或 `char16_t*`，取決於 P/Invoke 的 `CharSet`。  請參閱[字元集文件](charset.md)。 |
 | `System.ArgIterator` | `va_list` (僅限 Windows x86/x64/arm64) |
@@ -82,7 +82,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 當您對.NET 中的 COM 物件呼叫方法時，.NET 執行階段會依據常用的 COM 語意，變更此預設封送規則。 下表列出 .NET 執行階段在 COM 案例中使用的規則：
 
-| .NET 型別 | 原生類型 (COM 方法呼叫) |
+| .NET 類型 | 原生類型 (COM 方法呼叫) |
 |-----------|--------------------------------|
 | `bool`    | `VARIANT_BOOL`                 |
 | `StringBuilder` | `LPWSTR`                 |

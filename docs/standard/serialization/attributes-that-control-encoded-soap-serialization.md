@@ -17,13 +17,13 @@ ms.locfileid: "61794936"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>控制編碼 SOAP 序列化的屬性
 
-名為 World Wide Web Consortium (W3C) 文件[簡易物件存取通訊協定 (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)包含描述 SOAP 參數如何編碼的選擇性章節 （第 5 節）。 若要遵循第 5 節的規格，您必須使用在 <xref:System.Xml.Serialization> 命名空間中的特殊屬性集。 套用適合類別與類別成員的那些屬性，然後使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化類別的執行個體。
+名為「[簡單物件存取通訊協定（SOAP） 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) 」的全球資訊網協會（W3C）檔包含一個選擇性區段（第5節），描述如何編碼 SOAP 參數。 若要遵循第 5 節的規格，您必須使用在 <xref:System.Xml.Serialization> 命名空間中的特殊屬性集。 套用適合類別與類別成員的那些屬性，然後使用 <xref:System.Xml.Serialization.XmlSerializer> 序列化類別的執行個體。
 
-下表顯示屬性、其可套用位置及作用。 如需使用這些屬性控制 XML 序列化的詳細資訊，請參閱[How to:物件序列化為 SOAP 編碼的 XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)和[How to:覆寫編碼的 SOAP XML 序列化](how-to-override-encoded-soap-xml-serialization.md)。
+下表顯示屬性、其可套用位置及作用。 如需使用這些屬性來控制 XML 序列化的詳細資訊，請參閱[如何：將物件序列化為 SOAP 編碼的 XML 資料流](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)和[如何：覆寫編碼的 SOAP XML 序列化](how-to-override-encoded-soap-xml-serialization.md)。
 
 如需屬性的詳細資訊，請參閱[屬性](../../../docs/standard/attributes/index.md)。
 
-|屬性|適用於|指定|
+|屬性|適用對象|指定|
 |---------------|----------------|---------------|
 |<xref:System.Xml.Serialization.SoapAttributeAttribute>|公用欄位、屬性、參數或傳回值。|類別成員將會序列化成 XML 屬性。|
 |<xref:System.Xml.Serialization.SoapElementAttribute>|公用欄位、屬性、參數或傳回值。|類別將會序列化成 XML 項目。|
@@ -35,9 +35,9 @@ ms.locfileid: "61794936"
 ## <a name="see-also"></a>另請參閱
 
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
-- [如何：將物件序列化為 SOAP 編碼的 XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
-- [如何：覆寫編碼的 SOAP XML 序列化](how-to-override-encoded-soap-xml-serialization.md)
+- [如何：將物件序列化為 SOAP 編碼的 XML 資料流](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [如何：覆寫已編碼的 SOAP XML 序列化](how-to-override-encoded-soap-xml-serialization.md)
 - [屬性](../../../docs/standard/attributes/index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [如何：將物件序列化](how-to-serialize-an-object.md)
+- [HOW TO：序列化物件](how-to-serialize-an-object.md)
 - [如何：還原序列化物件](how-to-deserialize-an-object.md)

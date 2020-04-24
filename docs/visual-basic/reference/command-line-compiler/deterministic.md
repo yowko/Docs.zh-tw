@@ -24,7 +24,7 @@ ms.locfileid: "75716796"
 
 ## <a name="remarks"></a>備註
 
-根據預設，一組指定輸入的編譯器輸出是唯一的，因為編譯器會新增時間戳記以及透過亂數所產生的 GUID。 您可以使用 `-deterministic` 選項來產生「確定性組件」，這是只要輸入維持不變，其二進位內容在編譯之間就相同的組件。
+根據預設，一組指定輸入的編譯器輸出是唯一的，因為編譯器會新增時間戳記以及透過亂數所產生的 GUID。 您可以使用 `-deterministic` 選項來產生「確定性組件」**，這是只要輸入維持不變，其二進位內容在編譯之間就相同的組件。
 
 編譯器會基於確定性而考慮下列輸入：
 
@@ -50,7 +50,7 @@ ms.locfileid: "75716796"
 
 來源公開可用時，確定性編譯可以用於建立是否從信任的來源編譯二進位檔。 它也可以用於持續建置系統，確定是否需要執行與二進位檔變更相依的建置步驟。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

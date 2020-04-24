@@ -44,7 +44,7 @@ Console.WriteLine(total);
 ### <a name="position-and-last-functions"></a>position 及 last 函式  
  會多載 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 方法。 其中一個 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 方法會採用 <xref:System.Xml.XPath.XPathNodeIterator> 物件做為參數。 此特定 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 方法與僅將 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 物件做為參數的 <xref:System.Xml.XPath.XPathExpression> 方法相同，只是它允許節點集引數來指定要執行評估的目前內容。 此內容對於 XPath `position()` 及 `last()` 函式是必要的，因為它們相對於目前的內容節點。 除非是用做位置步驟中的述詞，否則 `position()` 及 `last()` 函式需要節點集的參考以進行評估，否則 `position` 及 `last` 函式會傳回 `0`。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
@@ -52,6 +52,6 @@ Console.WriteLine(total);
 - [使用 XPath 資料模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
 - [使用 XPathNavigator 選取 XML 資料](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
 - [使用 XPathNavigator 比對節點](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
-- [使用 XPath 查詢辨識的節點類型](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
-- [XPath 查詢和命名空間](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
+- [在 XPath 查詢中辨識的節點型別](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
+- [XPath 查詢及命名空間](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)
 - [編譯 XPath 運算式](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)

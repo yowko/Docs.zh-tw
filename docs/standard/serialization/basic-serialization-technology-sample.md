@@ -29,11 +29,11 @@ ms.locfileid: "71353147"
 
 2. 根據您選擇的程式設計語言，按兩下 SerializationCS.sln、SerializationJSL.sln 或 SerializationVB.sln 檔案的圖示，在 Visual Studio 中開啟這個檔案。
 
-3. 在 [建置] 功能表中，選取 [建置方案]。
+3. 在 [建置]**** 功能表中，選取 [建置方案]****。
 
  這個範例應用程式將建置於預設的 \bin 或 \bin\Debug 子目錄中。
 
-### <a name="to-run-the-sample"></a>若要執行範例
+### <a name="to-run-the-sample"></a>執行範例
 
 1. 巡覽至包含已建置之可執行檔的目錄。
 
@@ -72,19 +72,19 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 
 - 執行階段序列化
 
-  - <xref:System.Runtime.Serialization.IFormatter> 用來參考 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 或 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 物件。
+  - <xref:System.Runtime.Serialization.IFormatter>用來參考<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>或<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>物件。
 
-  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 用來將連結清單序列化為二進位格式的資料流程。 二進位格式子使用的格式只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型別才了解。 不過，資料相當簡明。
+  - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>用來將連結清單序列化為二進位格式的資料流程。 二進位格式子使用的格式只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型別才了解。 不過，資料相當簡明。
 
-  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 用來將連結清單序列化為 SOAP 格式的資料流程。 SOAP 是一種標準格式。
+  - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>用來將連結清單序列化為 SOAP 格式的資料流程。 SOAP 是一種標準格式。
 
 - 資料流 I/O
 
-  - <xref:System.IO.Stream> 用來序列化和還原序列化。 這個範例所用的特定資料流型別是 <xref:System.IO.FileStream> 型別。 不過，序列化可以使用衍生自 <xref:System.IO.Stream> 的任何型別。
+  - <xref:System.IO.Stream> 用來執行序列化及還原序列化。 這個範例所用的特定資料流型別是 <xref:System.IO.FileStream> 型別。 不過，序列化可以使用衍生自 <xref:System.IO.Stream> 的任何型別。
 
-  - <xref:System.IO.File> 用來建立 <xref:System.IO.FileStream> 物件，以便在磁片上讀取和建立檔案。
+  - <xref:System.IO.File> 用來建立 <xref:System.IO.FileStream> 物件，以便在磁碟上讀取及建立檔案。
 
-  - <xref:System.IO.FileStream> 用來序列化和還原序列化連結清單。
+  - <xref:System.IO.FileStream> 用來將連結串列序列化及還原序列化。
 
 ## <a name="see-also"></a>另請參閱
 

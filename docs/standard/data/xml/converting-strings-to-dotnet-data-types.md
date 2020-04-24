@@ -49,7 +49,7 @@ writer.WriteElementString("Date", XmlConvert.ToString(date));
   
  **輸出**  
   
- `<Date>2001-08-04T00:00:00</Date>`第 1 課：建立 Windows Azure 儲存體物件{2}。  
+ `<Date>2001-08-04T00:00:00</Date>`.  
   
  下列程式碼會將整數轉換成字串：  
   
@@ -133,5 +133,5 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
   
 ## <a name="see-also"></a>另請參閱
 
-- [XML 資料類型轉換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
-- [將 .NET Framework 類型轉換成字串](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)
+- [XML 資料型別轉換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
+- [將 .NET Framework 型別轉換成字串](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

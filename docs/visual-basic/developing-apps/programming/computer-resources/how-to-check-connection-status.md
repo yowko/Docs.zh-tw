@@ -1,5 +1,5 @@
 ---
-title: 如何：檢查連接狀態
+title: 作法：檢查連線狀態
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web connections [Visual Basic]

@@ -24,7 +24,7 @@ ms.locfileid: "62018012"
   
 1. 使用 [XML 結構描述定義工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)建立類別。  
   
-2. 套用在 `System.Xml.Serialization`中發現的一個或多個特殊屬性。 請參閱＜控制編碼 SOAP 序列化的屬性＞中的清單。  
+2. 套用在 中發現的一個或多個特殊屬性。 請參閱＜控制編碼 SOAP 序列化的屬性＞中的清單。  
   
 3. 藉由建立新的 `XmlTypeMapping` 及使用已序列化類別的型別叫用 `SoapReflectionImporter` 方法，來建立 `ImportTypeMapping`。  
   
@@ -73,8 +73,8 @@ XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);
 ## <a name="see-also"></a>另請參閱
 
 - [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [可控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
-- [以 XML Web 服務進行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [如何：將物件序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
+- [使用 XML Web Service 進行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
+- [HOW TO：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [如何：覆寫編碼的 SOAP XML 序列化](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
+- [如何：覆寫已編碼的 SOAP XML 序列化](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)

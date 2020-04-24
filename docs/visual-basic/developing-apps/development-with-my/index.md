@@ -43,7 +43,7 @@ Visual Basic 提供可進行快速應用程式開發的新功能來提高產能�
  [My 如何相依於專案類型](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  提供有關 `My` 功能可在不同專案型別中使用的詳細資料。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>

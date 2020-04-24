@@ -86,10 +86,10 @@ ms.locfileid: "75711138"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [讀取及寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)

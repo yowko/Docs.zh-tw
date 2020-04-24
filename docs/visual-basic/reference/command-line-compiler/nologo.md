@@ -24,19 +24,19 @@ ms.locfileid: "74335440"
 ```  
   
 ## <a name="remarks"></a>備註  
- 如果您指定 `-nologo`，編譯器不會顯示著作權橫幅。 `-nologo` 預設為非作用中。  
+ 如果您指定`-nologo`，編譯器不會顯示著作權橫幅。 `-nologo` 預設為非作用中。  
   
 > [!NOTE]
-> Visual Studio 開發環境中無法使用 [`-nologo`] 選項;只有在從命令列編譯時，才可以使用它。  
+> 此`-nologo`選項無法在 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會編譯 `T2.vb`，且不會顯示著作權橫幅。  
+ 下列程式碼會`T2.vb`編譯並不顯示著作權橫幅。  
   
 ```console
 vbc -nologo t2.vb  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

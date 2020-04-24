@@ -30,7 +30,7 @@ ms.locfileid: "72005287"
 
 `-quiet` 預設為非作用中。 當編譯器報告語法相關的錯誤或警告時，它也會從原始程式碼輸出這一行。 對於剖析編譯器輸出的應用程式而言，編譯器可能更方便只輸出診斷的文字。
 
-在下列範例中，`Module1` 會在編譯時輸出包含原始程式碼的錯誤，而不 `-quiet`。
+在下列範例中， `Module1`會在不`-quiet`使用編譯時輸出包含原始程式碼的錯誤。
 
 ```vb
 Module Module1
@@ -49,18 +49,18 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         ~
 ```
 
-以 `-quiet` 編譯，編譯器只會輸出下列內容：
+以編譯`-quiet`時，編譯器只會輸出下列內容：
 
 ```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> @No__t-0 選項無法從 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。
+> 此`-quiet`選項無法在 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。
 
 ## <a name="example"></a>範例
 
-下列程式碼會編譯 `T2.vb`，而且不會顯示語法相關編譯器診斷的程式碼：
+下列程式碼會`T2.vb`編譯，且不會顯示語法相關編譯器診斷的程式碼：
 
 ```console
 vbc -quiet t2.vb

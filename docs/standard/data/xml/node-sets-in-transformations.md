@@ -56,7 +56,7 @@ ms.locfileid: "75710553"
 </bookstore>  
 ```  
   
-## <a name="output"></a>Output  
+## <a name="output"></a>輸出  
   
 ```output  
 ******  
@@ -72,7 +72,7 @@ History of Trenton Vol 3
 ******  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [使用 XslTransform 類別進行 XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)

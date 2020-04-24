@@ -14,11 +14,11 @@ ms.locfileid: "72523963"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>在 Visual Basic 應用程式中存取資料
 
-Visual Basic 包括數個新功能，以協助開發可存取資料的應用程式。 將項目從[資料來源視窗](/visualstudio/data-tools/add-new-data-sources)拖曳至表單，以建立 Windows 應用程式的資料繫結表單。 將項目從 [資料來源] 視窗拖曳至現有控制項，以將控制項繫結至資料。
+Visual Basic 包括數個新功能，以協助開發可存取資料的應用程式。 將項目從[資料來源視窗](/visualstudio/data-tools/add-new-data-sources)拖曳至表單，以建立 Windows 應用程式的資料繫結表單。 將項目從 [資料來源] 視窗拖曳至現有控制項，以將控制項繫結至資料。****
 
 ## <a name="related-sections"></a>相關章節
 
-[存取 Visual Studio 中的資料](/visualstudio/data-tools/)  
+[在 Visual Studio 中存取資料](/visualstudio/data-tools/)  
 提供頁面的連結，這些頁面討論如何將資料存取功能納入應用程式。
 
 [適用於 .NET 的 Visual Studio Data Tools](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
@@ -30,7 +30,7 @@ Visual Basic 包括數個新功能，以協助開發可存取資料的應用程�
 [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
 提供 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] 的相關資訊。 包括程式設計範例。  
 
-[LINQ to SQL Tools in Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2) (Visual Studio 中的 LINQ to SQL 工具)  
+[Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
 提供主題的連結，這些主題與如何在應用程式中建立 [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md) 物件模型相關。
 
 [使用多層式架構 (N-Tier) 應用程式中的資料集](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  

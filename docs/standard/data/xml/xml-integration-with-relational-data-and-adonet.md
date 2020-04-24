@@ -47,4 +47,4 @@ ms.locfileid: "78155616"
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 DataSet 中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [在資料集中使用 XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

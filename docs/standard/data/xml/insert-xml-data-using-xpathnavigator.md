@@ -328,7 +328,7 @@ document.Save("book.xml");
 ## <a name="saving-an-xml-document"></a>儲存 XML 文件  
  使用 <xref:System.Xml.XmlDocument> 類別的方法，將用本主題中說明之方法對 <xref:System.Xml.XmlDocument> 物件所做的變更儲存下來。 如需儲存 <xref:System.Xml.XmlDocument> 物件之變更的詳細資訊，請參閱[儲存與寫入文件](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

@@ -32,7 +32,7 @@ ms.locfileid: "75709604"
 
 - XmlReader
 
-- 表示 URL 的字串
+- 表示 URL 的字串 
 
 上述每個輸入類別都有不同的 <xref:System.Xml.Xsl.XslTransform.Load%2A> 方法。 有些方法會採用上述其中一個類別與 <xref:System.Xml.XmlResolver> 類別的組合，來做為引數。 <xref:System.Xml.XmlResolver> 會尋找樣式表中可發現之 `<xsl:import>` 或 `<xsl:include>` 所參考的資源。 下列幾種方法會採用字串 (<xref:System.Xml.XmlReader>) 或 <xref:System.Xml.XPath.XPathNavigator> 做為輸入。
 
@@ -80,7 +80,7 @@ public void Load(XPathNavigator, XmlResolver, Evidence);
 
 如需安全性層級、辨識項，以及辨識項將會如何影響 `document()` 函式的詳細資訊，請參閱[解析外部的 XSLT 樣式表和文件](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md) 。
 
-可提供樣式表數個輸入參數。 樣式表也可以呼叫擴充物件上的函式。 參數和擴充物件都可透過 <xref:System.Xml.Xsl.XsltArgumentList> 類別提供給樣式表。 如需 <xref:System.Xml.Xsl.XsltArgumentList>的詳細資訊，請參閱 <xref:System.Xml.Xsl.XsltArgumentList>。
+可提供樣式表數個輸入參數。 樣式表也可以呼叫擴充物件上的函式。 參數和擴充物件都可透過 <xref:System.Xml.Xsl.XsltArgumentList> 類別提供給樣式表。 如需 <xref:System.Xml.Xsl.XsltArgumentList> 的詳細資訊，請參閱<xref:System.Xml.Xsl.XsltArgumentList>。
 
 ## <a name="recommended-secure-use-of-xsltransform-class"></a>建議的 XslTransform 類別安全使用法
 
@@ -221,7 +221,7 @@ print_root.xsl
 
 下列表格將針對 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法列出已過時的方法和新的方法。 新方法採用的是 <xref:System.Xml.XmlResolver> 物件。
 
-|.NET Framework 1.0 版過時的 Transform 方法|.NET Framework 1.1 版替代的 Transform 方法|
+|.NET Framework 1.0 版過時的 Transform 方法 |.NET Framework 1.1 版替代的 Transform 方法|
 |-----------------------------------------------------------|--------------------------------------------------------------|
 |XmlReader Transform(XPathNavigator input, XsltArgumentList args)|XmlReader Transform(XPathNavigator  input, XsltArgumentList args, XmlResolver resolver)|
 |XmlReader Transform(IXPathNavigable input, XsltArgumentList args)|XmlReader Transform(IXPathNavigable input, XsltArgumentList args, XmlResolver resolver)|
@@ -235,7 +235,7 @@ print_root.xsl
 
 在 .NET Framework 版本 1.1 中，<xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> 屬性已遭淘汰。 請改用新的 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 多載，它採用的是 <xref:System.Xml.XmlResolver> 物件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [使用 XslTransform 類別進行 XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)

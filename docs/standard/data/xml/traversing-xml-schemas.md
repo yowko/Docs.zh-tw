@@ -31,7 +31,7 @@ ms.locfileid: "75710111"
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>、<xref:System.Xml.Schema.XmlSchemaInclude>、<xref:System.Xml.Schema.XmlSchemaImport> 或 <xref:System.Xml.Schema.XmlSchemaRedefine>|
 |<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (可提供對所有全域層級項目、屬性及型別的存取權)。|
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|
-|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>中， <xref:System.Xml.Schema.XmlSchemaSimpleType>中， <xref:System.Xml.Schema.XmlSchemaComplexType>|
+|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (提供對不屬於結構描述命名空間之屬性的存取權)|
 
 > [!NOTE]
@@ -67,10 +67,10 @@ ms.locfileid: "75710111"
 
 [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)主題中的程式碼範例使用 <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> 集合，將屬性 `CustomerId` 加入至 `Customer` 項目。 這是前結構描述編譯屬性。 對應的後結構描述編譯資訊集屬性為 <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> 集合，其保留複雜型別的所有屬性，包括透過型別衍生繼承的那些屬性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [讀取及寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [併入或匯入 XML 結構描述](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)

@@ -20,6 +20,6 @@ ms.locfileid: "75710982"
   
  雖然 **XmlDataDocument** 是 **XmlDocument** 的衍生類別，但是 **XmlDataDocument** 卻不能建立實體參考。 這是因為 **EntityReference** 子系是唯讀的。 **EntityReference** 節點的子系可以擴展一個以上的區域。 因此，與包含部分 **EntityReference** 的區域相關之資料列的部分也會是唯讀的。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

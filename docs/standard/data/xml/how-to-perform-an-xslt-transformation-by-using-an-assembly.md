@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用組件執行 XSLT 轉換
+title: 作法：使用組件執行 XSLT 轉換
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,7 +13,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78155971"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>HOW TO：使用組件執行 XSLT 轉換
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>作法：使用組件執行 XSLT 轉換
 XSLT 編譯器 (xsltc.exe) 會編譯 XSLT 樣式表並產生組件。 然後此組件可以直接傳遞到 <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> 方法中。  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>將 XML 和 XSLT 檔案複製到本機電腦  
@@ -177,7 +177,7 @@ xslt.Load(typeof(Transform));
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"));  
 ```
   
-。 如需有關 Assembly. Load 方法的詳細資訊，請參閱 <xref:System.Reflection.Assembly.Load%2A>。  
+。 如需元件的詳細資訊，請參閱<xref:System.Reflection.Assembly.Load%2A>。  
   
 ## <a name="see-also"></a>另請參閱
 

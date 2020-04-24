@@ -1,5 +1,5 @@
 ---
-title: 如何：上傳一個檔案
+title: 作法：上傳檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -51,5 +51,5 @@ ms.locfileid: "74345564"
 
 - <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A>
-- [如何：下載檔案](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
+- [作法：下載檔案](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)
 - [如何：剖析檔案路徑](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

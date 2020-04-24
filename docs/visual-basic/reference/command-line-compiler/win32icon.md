@@ -29,16 +29,16 @@ ms.locfileid: "72004640"
 |`filename`|要加入至輸出檔的 .ico 檔案。 將檔案名括在引號（""）中（如果它包含空格）。|  
   
 ## <a name="remarks"></a>備註  
- 您可以使用 Microsoft Windows 資源編譯器（RC）來建立 .ico 檔案。 當您編譯視覺效果C++程式時，會叫用資源編譯器;會從 .rc 檔案建立 .ico 檔案。 `-win32icon` 和 `-win32resource` 選項是互斥的。  
+ 您可以使用 Microsoft Windows 資源編譯器（RC）來建立 .ico 檔案。 當您編譯 Visual C++ 程式時，會叫用資源編譯器;會從 .rc 檔案建立 .ico 檔案。 `-win32icon` 和 `-win32resource` 選項互斥。  
   
  請參閱[-linkresource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/linkresource.md)來參考 .NET Framework 資源檔，或使用[-resource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/resource.md)來附加 .NET Framework 資源檔。 請參閱[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)以匯入 .res 檔案。  
   
 |若要在 Visual Studio IDE 中設定-win32icon|  
 |---|  
-|1. 在**方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2. 按一下 [**應用程式**] 索引標籤。<br />3. 修改 [**圖示**] 方塊中的值。|  
+|1. 在**方案總管**中選取專案。 按一下 [專案]**** 功能表上的 [屬性]****。 <br />2. 按一下 [**應用程式**] 索引標籤。<br />3. 修改 [**圖示**] 方塊中的值。|  
   
 ## <a name="example"></a>範例  
- 下列程式碼會編譯 `In.vb` 並附加 .ico 檔案，`Rf.ico`。  
+ 下列程式碼會`In.vb`編譯並附加 .ico 檔案`Rf.ico`。  
   
 ```console
 vbc -win32icon:rf.ico in.vb  

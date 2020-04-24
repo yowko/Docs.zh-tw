@@ -28,7 +28,7 @@ ms.locfileid: "71053352"
   
 - [JSON 序列化](system-text-json-overview.md)只會序列化公用屬性，而且不會保留型別精確度。 JSON 是一種開放式標準，是在網路上共用資料的理想選擇。
 
-## <a name="reference"></a>參考資料
+## <a name="reference"></a>參考
 
 <xref:System.Runtime.Serialization>  
 包含類別，可以用來序列化和還原序列化物件。

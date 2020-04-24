@@ -1,5 +1,5 @@
 ---
-title: 如何：讀取應用程式設定
+title: 作法：讀取應用程式設定
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading application settings

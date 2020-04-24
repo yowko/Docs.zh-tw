@@ -29,7 +29,7 @@ Visual Basic 提供命令列編譯器，做為從 Visual Studio 整合式開發�
 若要從 Visual Studio IDE 內編譯來源檔案，請從 [**組建**] 功能表選擇 [**組建**] 命令。
 
 > [!TIP]
-> 當您使用 Visual Studio IDE 來建立專案檔時，可以在 [輸出] 視窗中顯示相關聯的**vbc**命令及其參數的相關資訊。 若要顯示這項資訊，請開啟 [[選項] 對話方塊、[專案和方案]、[建立並執行]](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然後將 [ **MSBuild 專案組建輸出詳細**資訊] 設定為 [**一般**] 或更高層級的詳細資訊。 如需詳細資訊，請參閱[如何：檢閱、儲存和設定建置記錄檔](/visualstudio/ide/how-to-view-save-and-configure-build-log-files)。
+> 當您使用 Visual Studio IDE 來建立專案檔時，可以在 [輸出] 視窗中顯示相關聯的**vbc**命令及其參數的相關資訊。 若要顯示這項資訊，請開啟 [[選項] 對話方塊、[專案和方案]、[建立並執行]](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)，然後將 [ **MSBuild 專案組建輸出詳細**資訊] 設定為 [**一般**] 或更高層級的詳細資訊。 如需詳細資訊，請參閱[如何：查看、儲存和設定組建記錄](/visualstudio/ide/how-to-view-save-and-configure-build-log-files)檔。
 
 您可以在命令提示字元中使用 MSBuild 來編譯專案（. vbproj）檔案。 如需詳細資訊，請參閱[命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)和[逐步解說：使用 MSBuild](/visualstudio/msbuild/walkthrough-using-msbuild)。
 
@@ -49,5 +49,5 @@ Visual Basic 提供命令列編譯器，做為從 Visual Studio 整合式開發�
 [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
 描述如何編譯器代碼的特定區段。
 
-[在 Visual Studio 中建置和清除專案與方案](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \
+[在 Visual Studio 中建立和清除專案與方案](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \
 描述如何組織將包含在不同組建中的內容、選擇專案屬性，並確保專案以正確的順序建立。

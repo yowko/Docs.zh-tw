@@ -20,7 +20,7 @@ ms.locfileid: "75709851"
   
  如需將轉換套用至關聯式資料的詳細資訊，請參閱[將 XSLT 轉換套用至 DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlDataDocument>
 - [資料集和 XmlDataDocument 同步處理](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)

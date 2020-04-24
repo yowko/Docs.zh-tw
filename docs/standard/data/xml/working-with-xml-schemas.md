@@ -15,7 +15,7 @@ ms.locfileid: "75710007"
   
  如需 XML 的詳細資訊，請參閱 [W3C XML 1.0 建議事項](https://www.w3.org/TR/REC-xml/) (英文)。 如需 XML 結構描述的詳細資訊，請參閱 [W3C XML 結構描述第一部：結構建議事項](https://www.w3.org/TR/xmlschema-1/)及 [W3C XML 結構描述第二部：資料型別建議事項](https://www.w3.org/TR/xmlschema-2/)的建議。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
  討論 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的結構描述物件模型 (SOM)，其提供了一組類別，可讓您從檔案讀取結構描述定義語言 (XSD) 結構描述，或以程式設計方式建立記憶體中結構描述。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "75710007"
  [推斷 XML 結構描述](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
  討論如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 類別，從 XML 文件的結構推斷 XSD 結構描述。  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Xml.Schema.XmlSchemaSet> &#124; <xref:System.Xml.Schema.XmlSchemaInference> &#124; <xref:System.Xml.XmlReader>  
   
 ## <a name="related-sections"></a>相關章節  

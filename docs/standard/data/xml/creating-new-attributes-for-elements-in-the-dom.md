@@ -102,7 +102,7 @@ doc.DocumentElement.SetAttributeNode(attr)
 doc.DocumentElement.SetAttributeNode(attr);
 ```
 
-**Output**
+**輸出**
 
 ```xml
 <book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">
@@ -114,7 +114,7 @@ doc.DocumentElement.SetAttributeNode(attr);
 
 您也可以建立 **XmlAttribute** 節點並且使用 **InsertBefore** 或 **InsertAfter** 方法將它置於集合的適當位置中。 如果屬性集合中已經有相同名稱的屬性存在，那麼現有的 **XmlAttribute** 節點會從集合中移除，而且新 **XmlAttribute** 節點會插入。 執行方法與 **SetAttribute** 方法相同。 如同參數，這些方法會以現有節點作為參考點來執行 **InsertBefore** 與 **InsertAfter**。 若未提供可指出要在何處插入新節點的參考節點，根據預設，**InsertAfter** 方法會將新節點插入集合的開頭。 若未提供參考節點，根據預設，**InsertBefore** 的位置將是在集合的結尾。
 
-如果您建立了屬性的**XmlNamedNodeMap** ，您可以使用 <xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A> 方法，依名稱加入屬性。 如需詳細資訊，請參閱 [NamedNodeMap 和 NodeList 中的節點集合](node-collections-in-namednodemaps-and-nodelists.md)。
+如果您建立了屬性的**XmlNamedNodeMap** ，您可以使用<xref:System.Xml.XmlNamedNodeMap.SetNamedItem%2A>方法，依名稱加入屬性。 如需詳細資訊，請參閱 [NamedNodeMap 和 NodeList 中的節點集合](node-collections-in-namednodemaps-and-nodelists.md)。
 
 ## <a name="default-attributes"></a>預設屬性
 
@@ -124,6 +124,6 @@ doc.DocumentElement.SetAttributeNode(attr);
 
 屬性節點的值會成為它的子節點。 唯一的有效子節點有兩種類型： **XmlText**節點和**XmlEntityReference**節點。 這些子節點讓像 **FirstChild** 和 **LastChild** 的方法能夠將它們當成子節點處理。 這種擁有子節點的屬性的區別在嘗試移除屬性或屬性子節點時很重要。 如需詳細資訊，請參閱[移除 DOM 中項目節點的屬性](removing-attributes-from-an-element-node-in-the-dom.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](xml-document-object-model-dom.md)

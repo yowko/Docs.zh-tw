@@ -97,10 +97,10 @@ XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />
   
  如需 `<xs:import />`、`<xs:include />` 及 `<xs:redefine />` 項目與 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 和 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別的詳細資訊，請參閱 [W3C XML 結構描述](https://www.w3.org/XML/Schema) (英文) 及 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間類別參考文件。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [讀取及寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)

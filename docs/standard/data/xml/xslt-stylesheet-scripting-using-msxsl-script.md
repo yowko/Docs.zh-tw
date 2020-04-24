@@ -29,7 +29,7 @@ ms.locfileid: "78160205"
   
  其中 `msxsl` 是繫結至命名空間 `urn:schemas-microsoft-com:xslt` 的前置詞。  
   
- `language` 屬性不是強制性的，但若指定，其值必須為下列其中之一： `C#`、`VB`、`JScript`、`JavaScript`、`VisualBasic`或 `CSharp`。 如果沒有指定的話，語言預設為 JScript。 `language-name` 不區分大小寫，因此 'JavaScript' 和 'javascript' 是一樣的。  
+ 屬性`language`不是強制性的，但若指定，其值必須為下列其中一項`C#`： `VB`、 `JScript`、 `JavaScript`、 `VisualBasic`、或`CSharp`。 如果沒有指定的話，語言預設為 JScript。 `language-name` 不區分大小寫，因此 'JavaScript' 和 'javascript' 是一樣的。  
   
  `implements-prefix` 屬性是必要的。 這個屬性用來宣告命名空間，並把它與指令碼區塊產生關聯。 這個屬性的值是表示命名空間的前置詞。 這個命名空間可以被定義在樣式表內的某處。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "78160205"
   
  函式可在 `msxsl:script` 項目內進行宣告。 下表顯示根據預設所支援的命名空間。 您可以使用所列之命名空間以外的類別。 不過這些類別必須是完整限定。  
   
-|預設的命名空間|描述|  
+|預設的命名空間|說明|  
 |------------------------|-----------------|  
-|系統|系統類別。|  
+|System|系統類別。|  
 |System.Collection|集合類別。|  
 |System.Text|文字類別。|  
 |System.Text.RegularExpressions|規則運算式類別。|  

@@ -31,11 +31,11 @@ ms.locfileid: "75716697"
 -r:fileList  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>引數  
   
 |詞彙|定義|  
 |---|---|  
-|`fileList`|必要項。 以逗號分隔的組件檔案名稱清單。 如果檔案名稱包含空格，請用引號括住名稱。|  
+|`fileList`|必要。 以逗號分隔的組件檔案名稱清單。 如果檔案名稱包含空格，請用引號括住名稱。|  
   
 ## <a name="remarks"></a>備註  
  您匯入的檔案必須包含元件中繼資料。 只有公用類型才會顯示在元件外部。 [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)選項會從模組匯入中繼資料。  
@@ -50,21 +50,21 @@ ms.locfileid: "75716697"
   
  為了讓編譯器辨識元件中的型別（而不是模組），必須強制解析型別。 如何執行這項操作的其中一個範例是定義類型的實例。 其他方式可用來解析編譯器元件中的型別名稱。 例如，如果您繼承自元件中的類型，則編譯器會知道該類型名稱。  
   
- 預設會使用用來參考常用 .NET Framework 元件的 Vbc 回應檔。 如果您不想讓編譯器使用 Vbc，請使用 `-noconfig`。  
+ 預設會使用用來參考常用 .NET Framework 元件的 Vbc 回應檔。 如果`-noconfig`您不想讓編譯器使用 Vbc，請使用。  
   
  `-reference` 的簡短形式為 `-r`。  
   
 ## <a name="example"></a>範例  
- 下列命令會將原始程式檔 `Input.vb` 和參考元件從 `Metad1.dll` 和 `Metad2.dll` 編譯成產生 `Out.exe`。  
+ 下列`Input.vb`命令會從`Metad1.dll` `Metad2.dll`編譯原始程式檔和參考元件，並`Out.exe`產生。  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [-target （Visual Basic）](../../../visual-basic/reference/command-line-compiler/target.md)
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
+- [公開](../../../visual-basic/language-reference/modifiers/public.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

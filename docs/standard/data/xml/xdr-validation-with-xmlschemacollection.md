@@ -154,7 +154,7 @@ namespace ValidationSample
 </Schema>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlValidatingReader.ValidationType%2A>
 - [XmlSchemaCollection 結構描述編譯](xmlschemacollection-schema-compilation.md)

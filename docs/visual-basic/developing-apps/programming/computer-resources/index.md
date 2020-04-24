@@ -1,5 +1,5 @@
 ---
-title: 訪問電腦資源
+title: 存取電腦資源
 ms.date: 07/20/2015
 helpviewer_keywords:
 - computer resources [Visual Basic]

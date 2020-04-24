@@ -1,5 +1,5 @@
 ---
-title: <add> 的 <schemaImporterExtensions> 項目
+title: <schemaImporterExtensions> 的 <add> 項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
@@ -12,7 +12,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159932"
 ---
-# <a name="add-element-for-schemaimporterextensions"></a>\<新增 \<schemaImporterExtensions 的 > 元素 >
+# <a name="add-element-for-schemaimporterextensions"></a>\<新增 schemaImporterExtensions> 的\<> 元素
 加入 <xref:System.Xml.Serialization.XmlSchemaImporter> 使用的型別，將 XSD 型別對應至 .NET Framework 型別。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)。  
   
  \<configuration>  
@@ -26,8 +26,8 @@ ms.locfileid: "78159932"
 <add name = "typeName" type="fully qualified type [,Version=version number] [,Culture=culture] [,PublicKeyToken= token]"/>  
 ```  
   
-## <a name="attributes-and-elements"></a>屬性和元素  
- 下列章節說明屬性、子項目和父項目。  
+## <a name="attributes-and-elements"></a>屬性和項目  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
@@ -63,5 +63,5 @@ ms.locfileid: "78159932"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
-- [\<system.xml.serialization> 項目](../../../docs/standard/serialization/system-xml-serialization-element.md)
-- [\<schemaImporterExtensions>元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<> 元素的 system.object 序列化](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [\<schemaImporterExtensions> 元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)

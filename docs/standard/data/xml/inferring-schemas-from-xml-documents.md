@@ -80,10 +80,10 @@ ms.locfileid: "75710748"
 ## <a name="schemas-that-cannot-be-refined"></a>無法進一步調整的結構描述  
  有些 W3C XML 結構描述建構在指定要調整的型別時會擲回例外狀況，則 XML 結構描述定義語言 (XSD) 結構描述 <xref:System.Xml.Schema.XmlSchemaInference> 處理序無法處理這類的結構描述。 最上層建構元不屬於序列的複雜型別即是一例。 在結構描述物件模型 (SOM) 中，它會對應至 <xref:System.Xml.Schema.XmlSchemaComplexType> 屬性不屬於 <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> 之執行個體的 <xref:System.Xml.Schema.XmlSchemaSequence>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
 - [推斷 XML 結構描述](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
-- [推斷結構描述節點類型和結構的規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
-- [推斷簡單類型的規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+- [推斷結構描述節點型別與結構的規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+- [推斷簡單型別的規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

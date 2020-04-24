@@ -15,30 +15,30 @@ ms.locfileid: "75447192"
 
 ## <a name="query-result-metadata"></a>查詢結果中繼資料
 
-您可以在 `SqliteDataReader`上使用 <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> 方法，來抓取有關查詢結果的中繼資料。 傳回的 <xref:System.Data.DataTable> 包含下列資料行：
+您可以使用上<xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> `SqliteDataReader`的方法，來抓取有關查詢結果的中繼資料。 傳回<xref:System.Data.DataTable>的包含下列資料行：
 
-| 資料行             | 類型    | 描述                                                               |
+| 資料行             | 類型    | 說明                                                               |
 | ------------------ | ------- | ------------------------------------------------------------------------- |
 | `AllowDBNull`      | Boolean | 如果來源資料行可為 Null，則為 True。                                    |
-| `BaseCatalogName`  | 字串  | 來源資料行的資料庫名稱。 運算式的一律為 Null。    |
-| `BaseColumnName`   | 字串  | 原始資料行的 unaliased 名稱。 運算式的一律為 Null。    |
-| `BaseSchemaName`   | 字串  | 一律為 Null。 SQLite 不支援架構。                              |
-| `BaseServerName`   | 字串  | 連接字串中指定之資料庫檔案的路徑。         |
-| `BaseTableName`    | 字串  | 原始資料行的資料表名稱。 運算式的一律為 Null。       |
-| `ColumnName`       | 字串  | 結果集中資料行的名稱或別名。                        |
+| `BaseCatalogName`  | String  | 來源資料行的資料庫名稱。 運算式的一律為 Null。    |
+| `BaseColumnName`   | String  | 原始資料行的 unaliased 名稱。 運算式的一律為 Null。    |
+| `BaseSchemaName`   | String  | 一律為 Null。 SQLite 不支援架構。                              |
+| `BaseServerName`   | String  | 連接字串中指定之資料庫檔案的路徑。         |
+| `BaseTableName`    | String  | 原始資料行的資料表名稱。 運算式的一律為 Null。       |
+| `ColumnName`       | String  | 結果集中資料行的名稱或別名。                        |
 | `ColumnOrdinal`    | Int32   | 結果集中資料行的序數。                              |
-| `ColumnSize`       | Int32   | 一律為-1。 這可能會在 `Microsoft.Data.Sqlite`的未來版本中變更。   |
+| `ColumnSize`       | Int32   | 一律為-1。 這在未來的`Microsoft.Data.Sqlite`版本中可能會變更。   |
 | `DataType`         | 類型    | 資料行的預設 .NET 資料類型。                                 |
-| `DataTypeName`     | 字串  | 資料行的 SQLite 資料類型。                                       |
+| `DataTypeName`     | String  | 資料行的 SQLite 資料類型。                                       |
 | `IsAliased`        | Boolean | 如果資料行名稱在結果集中為別名，則為 True。                     |
 | `IsAutoIncrement`  | Boolean | 如果來源資料行是使用自動遞增關鍵字所建立，則為 True。     |
 | `IsExpression`     | Boolean | 如果資料行來自查詢中的運算式，則為 True。            |
 | `IsKey`            | Boolean | 如果來源資料行是主要索引鍵的一部分，則為 True。                     |
 | `IsUnique`         | Boolean | 如果來源資料行是唯一的，則為 True。                                      |
-| `NumericPrecision` | Int16   | 一律為 Null。 這可能會在 `Microsoft.Data.Sqlite`的未來版本中變更。 |
-| `NumericScale`     | Int16   | 一律為 Null。 這可能會在 `Microsoft.Data.Sqlite`的未來版本中變更。 |
+| `NumericPrecision` | Int16   | 一律為 Null。 這在未來的`Microsoft.Data.Sqlite`版本中可能會變更。 |
+| `NumericScale`     | Int16   | 一律為 Null。 這在未來的`Microsoft.Data.Sqlite`版本中可能會變更。 |
 
-下列範例示範如何使用 `GetSchemaTable` 來建立會顯示結果相關中繼資料的 debug 字串：
+下列範例示範如何使用`GetSchemaTable`來建立會顯示結果相關中繼資料的 debug 字串：
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/ResultMetadataSample/Program.cs?name=snippet_ResultMetadata)]
 
@@ -72,7 +72,7 @@ FROM sqlite_master AS t,
 WHERE t.type = 'table';
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [SQL Database 架構的儲存體](https://www.sqlite.org/fileformat.html#storage_of_the_sql_database_schema)
 * [PRAGMA 語句](https://www.sqlite.org/pragma.html)

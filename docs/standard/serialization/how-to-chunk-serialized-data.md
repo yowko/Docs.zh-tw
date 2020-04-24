@@ -34,13 +34,13 @@ ms.locfileid: "64602426"
   
 ### <a name="to-implement-server-side-chunking"></a>實作伺服器端區分區塊的功能  
   
-1. 在伺服器機器上，Web 方法必須關閉 ASP.NET 緩衝並傳回實作 <xref:System.Xml.Serialization.IXmlSerializable>的型別。  
+1. 在伺服器機器上，Web 方法必須關閉 ASP.NET 緩衝並傳回實作 的型別。  
   
 2. 實作 <xref:System.Xml.Serialization.IXmlSerializable> 的型別會將 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A> 方法中的資料區分區塊。  
   
 ### <a name="to-implement-client-side-processing"></a>實作用戶端處理  
   
-1. 變更用戶端 Proxy 上的 Web 方法以傳回實作 <xref:System.Xml.Serialization.IXmlSerializable>的型別。 您可以使用 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> 自動執行這個作業，不過在此不予以討論。  
+1. 變更用戶端 Proxy 上的 Web 方法以傳回實作 的型別。 您可以使用 <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension> 自動執行這個作業，不過在此不予以討論。  
   
 2. 實作 <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 方法讀取區分成區塊的資料流並將位元組寫入磁碟。 此實作也引發圖形控制項可使用的進度事件，例如進度列。  
   

@@ -20,7 +20,7 @@ ms.locfileid: "73130837"
   
  不同的 <xref:System.Xml.XmlDocument.Load%2A> 方法會影響載入 XML 文件物件模型 (DOM) 時建立的節點。 下表列出某些 <xref:System.Xml.XmlDocument.Load%2A> 方法及說明這些方法之主題間的差異。  
   
-|主旨|主題|  
+|主體|主題|  
 |-------------|-----------|  
 |建立泛空白字元節點|用來載入 DOM 的物件會影響在 DOM 中產生的泛空白字元及顯著泛空白字元節點。 如需詳細資訊，請參閱[載入 DOM 時處理泛空白字元和顯著泛空白字元](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md)。|  
 |從特定節點開始載入 XML 或載入整個 XML 文件|使用 <xref:System.Xml.XmlDocument.Load%2A?displayProperty=nameWithType> 方法可將資料從特定節點載入至 DOM。 如需詳細資訊，請參閱[從讀取器載入資料](../../../../docs/standard/data/xml/load-data-from-a-reader.md)。|  
@@ -68,6 +68,6 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

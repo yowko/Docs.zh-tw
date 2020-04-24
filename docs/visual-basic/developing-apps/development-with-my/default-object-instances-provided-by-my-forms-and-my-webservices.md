@@ -20,15 +20,15 @@ ms.locfileid: "74330211"
   
 ## <a name="default-instances"></a>預設實例  
 
- 預設實例是執行時間所提供之類別的實例，不需要使用 `Dim` 和 `New` 語句來宣告和具現化。 下列範例示範如何宣告並具現化稱為 `Form1`之 <xref:System.Windows.Forms.Form> 類別的實例，以及如何透過 `My.Forms`取得此 <xref:System.Windows.Forms.Form> 類別的預設實例。  
+ 預設實例是執行時間所提供之類別的實例，不需要使用`Dim`和`New`語句來宣告和具現化。 下列範例示範您可能已經宣告並<xref:System.Windows.Forms.Form>具現化類別的實例`Form1`，而您現在可以透過<xref:System.Windows.Forms.Form> `My.Forms`取得這個類別的預設實例。  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- `My.Forms` 物件會針對存在於專案中的每個 `Form` 類別，傳回預設實例的集合。 同樣地，`My.WebServices` 會針對您在應用程式中建立參考的每個 Web 服務，提供 proxy 類別的預設實例。  
+ `My.Forms`物件會針對存在於專案中的每個`Form`類別，傳回預設實例的集合。 同樣地`My.WebServices` ，為您在應用程式中建立參考的每個 Web 服務，提供 proxy 類別的預設實例。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [My.Forms 物件](../../../visual-basic/language-reference/objects/my-forms-object.md)
 - [My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)

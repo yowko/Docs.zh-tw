@@ -28,7 +28,7 @@ ms.locfileid: "72581409"
 
 ## <a name="remarks"></a>備註
 
-您可以使用下列兩種形式的其中一種來指定 `-optioncompare`： `-optioncompare:binary` 使用二進位字串比較，以及 `-optioncompare:text` 使用文字字串比較。 根據預設，編譯器會使用 `-optioncompare:binary`。
+您可以指定`-optioncompare`兩種形式的其中一`-optioncompare:binary`種：使用二進位字串比較， `-optioncompare:text`並使用文字字串比較。 根據預設，編譯器會使用`-optioncompare:binary`。
 
 在 Microsoft Windows 中，目前的字碼頁會決定二進位排序次序。 典型的二進位排序次序如下所示：
 
@@ -40,9 +40,9 @@ ms.locfileid: "72581409"
 
 ### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中設定-optioncompare
 
-1. 在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。
+1. 在 **方案總管**中選取專案。 按一下 [專案]**** 功能表上的 [屬性]****。
 
-2. 按一下 [編譯] 索引標籤。
+2. 按一下 [編譯]**** 索引標籤。
 
 3. 修改 [**選項比較**] 方塊中的值。
 
@@ -52,13 +52,13 @@ ms.locfileid: "72581409"
 
 ## <a name="example"></a>範例
 
-下列程式碼會編譯 `ProjFile.vb` 並使用二進位字串比較。
+下列程式碼會`ProjFile.vb`編譯並使用二進位字串比較。
 
 ```console
 vbc -optioncompare:binary projFile.vb
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)

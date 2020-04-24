@@ -26,14 +26,14 @@ ms.locfileid: "75710098"
 > [!NOTE]
 > 在 .NET Framework 1.0 版中，需要 <xref:System.Xml.XmlConvert> 類別以在 XML 結構描述與 CLR 類型之間進行轉換。  
   
-## <a name="in-this-section"></a>本章節內容  
- [將 XML 資料類型對應至 CLR 類型](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  
+## <a name="in-this-section"></a>本節內容  
+ [將 XML 資料型別對應至 CLR 型別](../../../../docs/standard/data/xml/mapping-xml-data-types-to-clr-types.md)  
  說明 XML 資料類型與 CLR 類型的預設對應。  
   
- [XML 類型支援實作注意事項](../../../../docs/standard/data/xml/xml-type-support-implementation-notes.md)  
+ [XML 型別支援實作注意事項](../../../../docs/standard/data/xml/xml-type-support-implementation-notes.md)  
  討論部分類型支援實作細節。  
   
- [XML 資料類型轉換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+ [XML 資料型別轉換](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
  說明如何使用 <xref:System.Xml.XmlConvert> 類別在 XML 結構描述與 CLR 類型之間進行轉換。  
   
 ## <a name="related-sections"></a>相關章節  

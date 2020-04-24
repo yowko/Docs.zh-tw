@@ -62,7 +62,7 @@ macOS 範例使用相同的函式，而唯一的差別在於 `DllImport` 屬性�
 
 上述兩個範例依參數而定，在這兩種情況下，參數會被指定為 Managed 類型。 執行階段會執行「正確的動作」，並將這些項目處理成對等於另一端的項目。 在我們的[類型封送處理](type-marshaling.md)頁面上了解類型如何封送至機器碼。
 
-## <a name="more-resources"></a>更多資源
+## <a name="more-resources"></a>其他資源
 
 - [PInvoke.net wiki](https://www.pinvoke.net/) \(英文\) 是一個絕佳的 Wiki 網頁，具有通用的 Windows API，以及如何呼叫它們的相關資訊。
 - [C++/CLI 中的 P/Invoke](/cpp/dotnet/native-and-dotnet-interoperability)

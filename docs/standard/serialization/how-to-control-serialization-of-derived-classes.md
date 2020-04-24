@@ -239,5 +239,5 @@ public class Run
 - <xref:System.Xml.Serialization.XmlAttributes>
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
 - [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [如何：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [HOW TO：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：指定 XML 資料流的替代元素名稱](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

@@ -13,7 +13,7 @@ ms.locfileid: "75710137"
 # <a name="selecting-evaluating-and-matching-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 選取、評估及比對 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別會提供使用 XPath 查詢選取 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中節點的方法，評估及檢查 XPath 運算式的結果，以及決定 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的節點是否符合指定的 XPath 運算式。 下列主題說明了這些及其他與選取、評估及比對 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中之節點相關的概念。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 XPathNavigator 選取 XML 資料](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
  說明一組 <xref:System.Xml.XPath.XPathNavigator> 類別方法，其用於使用 XPath 運算式選取 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中的一組節點。  
   
@@ -23,16 +23,16 @@ ms.locfileid: "75710137"
  [使用 XPathNavigator 比對節點](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
  說明用於決定節點是否符合 XPath 運算式之 <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 類別的 <xref:System.Xml.XPath.XPathNavigator> 方法。  
   
- [使用 XPath 查詢辨識的節點類型](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+ [在 XPath 查詢中辨識的節點型別](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
  說明 XPath 查詢中辨識的節點型別。  
   
- [XPath 查詢和命名空間](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
+ [XPath 查詢及命名空間](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)  
  說明 XPath 查詢中命名空間的使用。  
   
  [編譯 XPath 運算式](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)  
  說明表示已編譯 XPath 查詢的 <xref:System.Xml.XPath.XPathExpression> 類別。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

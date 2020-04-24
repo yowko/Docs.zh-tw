@@ -13,7 +13,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/03/2019
 ms.locfileid: "73459271"
 ---
-# <a name="datetimeserialization-element"></a>\<dateTimeSerialization > 元素
+# <a name="datetimeserialization-element"></a>\<dateTimeSerialization> 元素
 判斷 <xref:System.DateTime> 物件的序列化模式。  
   
  \<configuration>  
@@ -28,34 +28,34 @@ ms.locfileid: "73459271"
 ```  
   
 ## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
+ 下列章節說明屬性、子元素和父元素。  
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |----------------|-----------------|  
-|`mode`|選擇項。 指定序列化模式。 設定為其中一個 <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> 值。 預設值為 **RoundTrip**。|  
+|`mode`|選擇性。 指定序列化模式。 設定為其中一個 <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> 值。 預設值為 **RoundTrip**。|  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |system.xml.serialization|用來控制 XML 序列化的最上層項目。|  
   
 ## <a name="remarks"></a>備註  
- 在 .NET Framework 的 1.0、1.1 和 2.0 版以及更新版本中，將此屬性設定為 **Local** 時，<xref:System.DateTime> 物件一定會格式化為當地時間。 也就是說，本地時區資訊一定會包含在序列化資料中。 將此屬性設定為 **Local**，確保與舊版 .NET Framework 的相容性。  
+ 在版本1.0、1.1、2.0 和更新版本的 .NET Framework 中，當這個屬性設定為**local**時， <xref:System.DateTime>物件一律會格式化為當地時間。 也就是說，本地時區資訊一定會包含在序列化資料中。 將此屬性設定為 **Local**，確保與舊版 .NET Framework 的相容性。  
   
- 在將此屬性設定為 **Roundtrip** 的 .NET Framework 2.0 版及更新版本中，會檢查 <xref:System.DateTime> 物件以判斷其位於當地時區、UTC 或非特定時區。 然後 <xref:System.DateTime> 物件會以保留此資訊的方式序列化。 這是預設行為，並建議所有新的應用程式不要與舊版 Framework 進行通訊。  
+ 在版本2.0 和更新版本的 .NET Framework 中，將此屬性設定為**Roundtrip**[往返<xref:System.DateTime> ]，會檢查物件以判斷它們是在當地、UTC 還是未指定的時區。 然後 <xref:System.DateTime> 物件會以保留此資訊的方式序列化。 這是預設行為，並建議所有新的應用程式不要與舊版 Framework 進行通訊。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.DateTime>
 - <xref:System.Xml.Serialization.XmlSchemaImporter>
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
-- [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<schemaImporterExtensions>元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<新增 \<schemaImporterExtensions 的 > 元素 >](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
-- [\<system.xml.serialization> 項目](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [設定檔架構](../../../docs/framework/configure-apps/file-schema/index.md)
+- [\<schemaImporterExtensions> 元素](../../../docs/standard/serialization/schemaimporterextensions-element.md)
+- [\<新增 schemaImporterExtensions>的\<> 元素](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [\<> 元素的 system.object 序列化](../../../docs/standard/serialization/system-xml-serialization-element.md)

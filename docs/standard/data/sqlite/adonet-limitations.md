@@ -15,9 +15,9 @@ ADO.NET 提供許多抽象概念的執行，但有一些限制。
 
 ## <a name="database-schema-information"></a>資料庫架構資訊
 
-您可以使用 <xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A> 方法，取得有關查詢結果的中繼資料。
+您可以使用<xref:Microsoft.Data.Sqlite.SqliteDataReader.GetSchemaTable%2A>方法來取得有關查詢結果的中繼資料。
 
-未執行 `DbConnection.GetSchema()`。 此 API 未妥善定義，因此建議您直接使用標準 SQLite Api （例如[sqlite_master](https://www.sqlite.org/fileformat.html#storage_of_the_sql_database_schema)資料表和[table_info](https://www.sqlite.org/pragma.html#pragma_table_info) PRAGMA）來抓取資料庫中繼資料。
+`DbConnection.GetSchema()`未執行。 此 API 未妥善定義，因此建議您直接使用標準 SQLite Api （例如[sqlite_master](https://www.sqlite.org/fileformat.html#storage_of_the_sql_database_schema)資料表和[table_info](https://www.sqlite.org/pragma.html#pragma_table_info) PRAGMA）來抓取資料庫中繼資料。
 
 如需詳細資訊，請參閱[中繼資料](metadata.md)。
 
@@ -29,9 +29,9 @@ Microsoft. Sqlite 尚未支援 System.object。 請改用 ADO.NET 的交易。 �
 
 ## <a name="data-adapters"></a>資料介面卡
 
-`DbDataAdapter` 尚未由 Microsoft. Sqlite 執行。 這表示您只能使用 ADO.NET `DataSet` 和 `DataTable` 來載入資料，而不會進行更新。
+`DbDataAdapter`尚未由 Microsoft. Sqlite 執行。 這表示您只能使用 ADO.NET `DataSet`和`DataTable`來載入資料，而不會進行更新。
 
-使用問題[#13838](https://github.com/dotnet/efcore/issues/13838) ，提供有關執行 `DbDataAdapter`的意見反應。
+使用問題[#13838](https://github.com/dotnet/efcore/issues/13838) ，提供有關執行`DbDataAdapter`的意見反應。
 
 ## <a name="output-parameters"></a>輸出參數
 
@@ -47,9 +47,9 @@ SQLite 不支援預存程式。
 
 ## <a name="isolation-levels"></a>隔離層級
 
-SQLite 交易不支援 `Chaos` 和 `Snapshot` 隔離等級。
+SQLite `Chaos`交易`Snapshot`中不支援和隔離等級。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [非同步限制](async.md)
 * [資料類型](types.md)

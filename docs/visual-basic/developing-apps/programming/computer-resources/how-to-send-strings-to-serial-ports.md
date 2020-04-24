@@ -1,5 +1,5 @@
 ---
-title: 如何：將字串傳送至序列埠
+title: 作法：將字串傳送至序列埠
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ports, sending strings to
@@ -38,11 +38,11 @@ ms.locfileid: "74345591"
 
  此範例假設電腦使用的是 `COM1`；為了具有更大的彈性，程式碼應該允許使用者從可用序列埠清單中選取想要的序列埠。 如需詳細資訊，請參閱[如何：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)。  
   
- 此範例使用 `Using` 區塊以確保應用程式即使擲回例外狀況，也可關閉序列埠。 有關詳細資訊，請參閱[使用語句](../../../../visual-basic/language-reference/statements/using-statement.md)。  
+ 此範例使用 `Using` 區塊以確保應用程式即使擲回例外狀況，也可關閉序列埠。 如需詳細資訊，請參閱[Using 語句](../../../../visual-basic/language-reference/statements/using-statement.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
-- [如何：撥接與序列埠連接的數據機](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
-- [如何：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+- [作法：撥接與序列埠連接的數據機](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
+- [作法：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

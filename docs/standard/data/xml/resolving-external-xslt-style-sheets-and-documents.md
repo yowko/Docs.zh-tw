@@ -41,7 +41,7 @@ ms.locfileid: "75710293"
   
  呼叫 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法時，即會針對載入期間所提供的辨識項計算使用權限，接著將該使用權限集合指派給整個轉換程序。 若 `document()` 函式試圖啟始的動作所需要之使用權限，在使用權限集合中找不到，則會擲回例外狀況。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 XslTransform 類別進行 XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)
 - [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

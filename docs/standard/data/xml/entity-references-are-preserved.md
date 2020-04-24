@@ -22,7 +22,7 @@ ms.locfileid: "75710917"
   
  當 DOM 遇到 `&publisher;` 參照時，就會建置 **XmlEntityReference** 節點。 **XmlEntityReference** 包含從實體宣告中的內容所複製的子節點。 先前的程式碼範例包含實體宣告中的文字，因此 **XmlText** 節點會建立為實體參照節點的子節點。  
   
- ![保留實體參考的樹狀結構](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
+ ![保留實體參考的樹狀](../../../../docs/standard/data/xml/media/xmlentityref-notexpanded-nodes.gif "xmlentityref_notexpanded_nodes")  
 保留之實體參照的樹狀  
   
  **XmlEntityReference** 的子節點是在遇到實體宣告時，由 **XmlEntity** 節點建立的所有子節點的複本。  
@@ -32,6 +32,6 @@ ms.locfileid: "75710917"
   
  根據預設，會保留 `&abc;` 之類的一般實體，且一律會建立 **XmlEntityReference** 節點。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：從逗號分隔的文字檔中讀取
+title: 如何：從逗號分隔文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], parsing

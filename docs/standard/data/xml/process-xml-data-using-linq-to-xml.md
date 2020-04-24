@@ -19,11 +19,11 @@ LINQ to XML 是 .NET Framework 3.5 版中用來處理 XML 資料的新模型。 
   
  如需其用法的詳細討論，請參閱 [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 和 [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)。 如需 LINQ 架構的概觀，請參閱 [Language-Integrated Query (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md) 或 [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Linq>
 - <xref:System.Linq>
-- [LINQ to XML 與 DOM （C#）的比較](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
+- [LINQ to XML 與 DOM 的比較（c #）](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
 - [LINQ to XML 與 DOM 的比較（Visual Basic）](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
-- [LINQ to XML 與其他 XML 技術（C#）的比較](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
+- [LINQ to XML 與其他 XML 技術的比較（c #）](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
 - [LINQ to XML 與其他 XML 技術（Visual Basic）比較](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

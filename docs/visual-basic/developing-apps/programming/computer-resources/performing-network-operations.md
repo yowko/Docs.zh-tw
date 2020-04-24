@@ -18,13 +18,13 @@ ms.locfileid: "74345545"
   
 ## <a name="in-this-section"></a>本節內容  
 
- [如何：上傳檔](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ [作法：上傳檔案](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
  示範如何使用 `My.Computer.Network` 上傳檔案，並將它儲存到遠端位置。  
   
- [如何：下載檔案](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
+ [作法：下載檔案](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-download-a-file.md)  
  示範如何使用 `My.Computer.Network` 下載遠端位置的檔案。  
   
- [如何：檢查連接狀態](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
+ [作法：檢查連線狀態](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-check-connection-status.md)  
  示範如何判斷電腦是否具有正常運作的網路連線。  
   
 ## <a name="reference"></a>參考  

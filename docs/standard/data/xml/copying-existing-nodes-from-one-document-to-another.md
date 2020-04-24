@@ -38,6 +38,6 @@ ms.locfileid: "75711021"
 > [!NOTE]
 > 雖然 DocumentType 節點可以匯入，但是一份文件只能有一個 DocumentType。 因此，當您匯入文件型別之後，在將它插入樹狀之前，您必須確定文件中有文件型別。 如需移除節點的資訊，請參閱[從 XML 文件移除節點、內容和值](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

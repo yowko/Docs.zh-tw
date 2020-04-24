@@ -24,7 +24,7 @@ ms.locfileid: "74345509"
 
 本表會列出並說明用於存取序列埠的主要列舉︰
 
-|列舉型別|描述|
+|列舉型別|說明|
 |---|---|
 |<xref:System.IO.Ports.Handshake>|指定建立 <xref:System.IO.Ports.SerialPort> 物件之序列埠通訊使用的控制通訊協定。|
 |<xref:System.IO.Ports.Parity>|指定 <xref:System.IO.Ports.SerialPort> 物件的同位位元。|

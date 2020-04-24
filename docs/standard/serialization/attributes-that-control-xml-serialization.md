@@ -23,7 +23,7 @@ ms.locfileid: "61794962"
   
  如需屬性的詳細資訊，請參閱[屬性](../../../docs/standard/attributes/index.md)。  
   
-|屬性|適用於|指定|  
+|屬性|適用對象|指定|  
 |---------------|----------------|---------------|  
 |<xref:System.Xml.Serialization.XmlAnyAttributeAttribute>|公用欄位、屬性、參數或傳回 <xref:System.Xml.XmlAttribute> 物件陣列的傳回值。|當還原序列化時，陣列將填入代表所有結構描述未知之 XML 屬性的 <xref:System.Xml.XmlAttribute> 物件。|  
 |<xref:System.Xml.Serialization.XmlAnyElementAttribute>|公用欄位、屬性、參數或傳回 <xref:System.Xml.XmlElement> 物件陣列的傳回值。|當還原序列化時，陣列將填入代表所有結構描述未知之 XML 項目的 <xref:System.Xml.XmlElement> 物件。|  
@@ -48,6 +48,6 @@ ms.locfileid: "61794962"
 - [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [使用屬性控制 XML 序列化](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [如何：指定 XML Stream 的替代項目名稱](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [如何：將物件序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [如何：指定 XML 資料流的替代元素名稱](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [HOW TO：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

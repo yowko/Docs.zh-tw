@@ -26,15 +26,15 @@ ms.locfileid: "74343551"
   
 |詞彙|定義|  
 |---|---|  
-|`id`|必要。 編譯器會使用 `id` 所指定的字碼頁來解讀來源檔案的編碼方式。|  
+|`id`|必要。 編譯器會使用所指定的字碼頁`id`來解讀來源檔案的編碼方式。|  
   
 ## <a name="remarks"></a>備註  
- 若要編譯以特定編碼方式儲存的原始程式碼，您可以使用 `-codepage` 來指定應該使用的字碼頁。 `-codepage` 選項會套用至編譯中的所有原始程式碼檔。 如需詳細資訊，請參閱[.NET Framework 中的字元編碼](../../../standard/base-types/character-encoding.md)。  
+ 若要編譯以特定編碼方式儲存的原始程式碼，您可以`-codepage`使用來指定應該使用的字碼頁。 此`-codepage`選項適用于編譯中的所有原始程式碼檔。 如需詳細資訊，請參閱[.NET Framework 中的字元編碼](../../../standard/base-types/character-encoding.md)。  
   
- 如果原始程式碼檔案是使用目前的 ANSI 字碼頁、Unicode 或 UTF-8 （含簽章）儲存，則不需要 `-codepage` 選項。 Visual Studio 預設會儲存目前 ANSI 字碼頁的所有原始程式碼檔，除非使用者在 [**編碼**] 對話方塊中指定另一種編碼方式。 Visual Studio 使用 [**編碼**] 對話方塊來開啟以不同字碼頁儲存的原始程式碼檔案。  
+ 如果`-codepage`原始程式碼檔案是使用目前的 ANSI 字碼頁、UNICODE 或 utf-8 （含簽章）儲存，則不需要選項。 Visual Studio 預設會儲存目前 ANSI 字碼頁的所有原始程式碼檔，除非使用者在 [**編碼**] 對話方塊中指定另一種編碼方式。 Visual Studio 使用 [**編碼**] 對話方塊來開啟以不同字碼頁儲存的原始程式碼檔案。  
   
 > [!NOTE]
-> Visual Studio 開發環境中無法使用 [`-codepage`] 選項;只有在從命令列編譯時，才可以使用它。  
+> 此`-codepage`選項無法在 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -37,6 +37,6 @@ StringWriter fs = new StringWriter();
 Xslt.Transform(doc, null, fs, null);  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XslTransform 類別實作 XSLT 處理器](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

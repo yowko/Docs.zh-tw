@@ -27,5 +27,5 @@ ms.locfileid: "75706331"
 ## <a name="see-also"></a>另請參閱
 
 - [平台叫用 (P/Invoke)](pinvoke.md)
-- [型別封送處理](type-marshaling.md)
+- [類型封送處理](type-marshaling.md)
 - [原生互通性最佳做法](best-practices.md)

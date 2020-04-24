@@ -33,11 +33,11 @@ ms.locfileid: "75716747"
 -l:fileList  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>引數  
   
 |詞彙|定義|  
 |---|---|  
-|`fileList`|必要項。 以逗號分隔的組件檔案名稱清單。 如果檔案名稱包含空格，請用引號括住名稱。|  
+|`fileList`|必要。 以逗號分隔的組件檔案名稱清單。 如果檔案名稱包含空格，請用引號括住名稱。|  
   
 ## <a name="remarks"></a>備註  
  `-link` 選項可讓您部署具有內嵌類型資訊的應用程式。 應用程式接著可以使用執行階段組件中實作內嵌類型資訊的類型，而不需要參考執行階段組件。 如果執行階段組件有許多發行版本，包含內嵌類型資訊的應用程式不需要重新編譯，就可以搭配各種版本使用。 如需範例，請參閱 [Walkthrough: Embedding Types from Managed Assemblies](../../../standard/assembly/embed-types-visual-studio.md) (逐步解說：從 Managed 組件內嵌類型)。  
@@ -59,7 +59,7 @@ ms.locfileid: "75716747"
   
  請使用[-libpath](libpath.md)來指定您的一或多個元件參考所在的目錄。  
   
- 如同[-reference](reference.md)編譯器選項，`-link` 編譯器選項會使用 Vbc 回應檔，該檔案會參考經常使用的 .NET Framework 元件。 如果您不想要編譯器使用 Vbc .rsp 檔案，請使用[-noconfig](noconfig.md)編譯器選項。  
+ 如同[-reference](reference.md)編譯器選項， `-link`編譯器選項會使用會參考常用 .NET Framework 元件的 Vbc 回應檔。 如果您不想要編譯器使用 Vbc .rsp 檔案，請使用[-noconfig](noconfig.md)編譯器選項。  
   
  `-link` 的簡短形式為 `-l`。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "75716747"
  下列各節說明在內嵌 Interop 類型的應用程式中使用泛型型別時的限制。  
   
 ### <a name="generic-interfaces"></a>泛型介面  
- 無法使用從 Interop 組件內嵌的泛型介面。 這在下列範例中顯示。  
+ 無法使用從 Interop 組件內嵌的泛型介面。 下列範例會顯示這一點。  
   
  [!code-vb[VbLinkCompiler#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#1)]  
   
@@ -83,16 +83,16 @@ ms.locfileid: "75716747"
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>範例  
- 下列命令列會將原始程式檔 `OfficeApp.vb` 和參考元件從 `COMData1.dll` 和 `COMData2.dll` 編譯成產生 `OfficeApp.exe`。  
+ 下列`OfficeApp.vb`命令列會從`COMData1.dll`編譯原始程式檔和參考元件， `COMData2.dll`並產生`OfficeApp.exe`。  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll -out:OfficeApp.exe OfficeApp.vb  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](index.md)
-- [逐步解說：從 Managed 組件內嵌類型](../../../standard/assembly/embed-types-visual-studio.md)
+- [Walkthrough: Embedding Types from Managed Assemblies (逐步解說：從 Managed 組件內嵌類型)](../../../standard/assembly/embed-types-visual-studio.md)
 - [-reference （Visual Basic）](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)

@@ -15,15 +15,15 @@ XML 文件物件模型 (DOM) 會將 XML 資料視為一組標準物件來處理�
   
  <xref:System.Xml.XmlDocument> 類別表示 XML 文件。 它包含可用於擷取及建立所有其他 XML 物件的成員。 透過 <xref:System.Xml.XmlDocument> 及其相關類別，您可以建構 XML 文件、載入並存取資料、修改資料，以及儲存變更。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)  
   
-- [XML 節點的類型](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [XML 節點的型別](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
   
-- [XML 文件物件模型 (DOM) 階層](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)  
+- [XML 文件物件模型 (DOM) 階層架構](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md)  
   
-- [將物件階層對應至 XML 資料](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)  
+- [將物件階層架構對應至 XML 資料](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)  
   
 - [建立 XML 文件](../../../../docs/standard/data/xml/xml-document-creation.md)  
   
@@ -39,7 +39,7 @@ XML 文件物件模型 (DOM) 會將 XML 資料視為一組標準物件來處理�
   
 - [儲存與寫入文件](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)  
   
-- [使用 XPath 導覽選取節點](../../../../docs/standard/data/xml/select-nodes-using-xpath-navigation.md)  
+- [使用 XPath 巡覽選取節點](../../../../docs/standard/data/xml/select-nodes-using-xpath-navigation.md)  
   
 - [解析外部資源](../../../../docs/standard/data/xml/resolving-external-resources.md)  
   
@@ -49,7 +49,7 @@ XML 文件物件模型 (DOM) 會將 XML 資料視為一組標準物件來處理�
   
 - [動態更新 NodeList 和 NamedNodeMap](../../../../docs/standard/data/xml/dynamic-updates-to-nodelists-and-namednodemaps.md)  
   
-- [DOM 中的命名空間支援](../../../../docs/standard/data/xml/namespace-support-in-the-dom.md)  
+- [DOM 中支援的命名空間](../../../../docs/standard/data/xml/namespace-support-in-the-dom.md)  
   
 - [使用 XmlNodeChangedEventArgs 之 XML 文件中的事件處理](../../../../docs/standard/data/xml/event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md)  
   

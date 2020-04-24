@@ -18,7 +18,7 @@ ms.locfileid: "78159867"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>如何限定 XML 元素和 XML 屬性名稱
 
-<xref:System.Xml.Serialization.XmlSerializerNamespaces> 類別的實例所包含的 XML 命名空間，必須符合[在 XML 中稱為命名空間](https://www.w3.org/TR/REC-xml-names/)的全球資訊網協會（W3C）規格。
+<xref:System.Xml.Serialization.XmlSerializerNamespaces>類別實例所包含的 XML 命名空間必須符合[在 XML 中稱為命名空間](https://www.w3.org/TR/REC-xml-names/)的全球資訊網協會（W3C）規格。
 
 XML 命名空間提供限定 XML 文件中 XML 項目和 XML 屬性名稱的方法。 限定名稱 (Qualified Name) 是由前置詞和本機名稱所組成，並以半形冒號 (:) 隔開。 前置詞的作用只是個替代符號 (Placeholder)，它會對應到指定命名空間的 URI。 通用管理的 URI 命名空間和本機名稱的組合會產生保證是通用唯一的名稱。
 
@@ -40,7 +40,7 @@ XML 命名空間提供限定 XML 文件中 XML 項目和 XML 屬性名稱的方�
 
 ## <a name="example"></a>範例
 
-下列範例建立 `XmlSerializerNamespaces`，並在物件加入兩個前置詞和命名空間配對。 程式碼建立用來系列化 `XmlSerializer` 類別執行個體的 `Books`。 程式碼以 `Serialize``XmlSerializerNamespaces`呼叫 {3} 方法，讓 XML 能包含有前置詞的命名空間。
+下列範例建立 `XmlSerializerNamespaces`，並在物件加入兩個前置詞和命名空間配對。 程式碼建立用來系列化 `XmlSerializer` 類別執行個體的 `Books`。 程式碼以 呼叫  方法，讓 XML 能包含有前置詞的命名空間。
 
 ```vb
 Imports System.IO
@@ -168,7 +168,7 @@ public class Price
 - [XML 結構描述定義工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML 序列化簡介](introducing-xml-serialization.md)
 - [XmlSerializer 類別](xref:System.Xml.Serialization.XmlSerializer)
-- [可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
+- [控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
 - [如何：指定 XML 資料流的替代元素名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [如何：序列化物件](how-to-serialize-an-object.md)
+- [HOW TO：序列化物件](how-to-serialize-an-object.md)
 - [如何：還原序列化物件](how-to-deserialize-an-object.md)

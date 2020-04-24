@@ -49,6 +49,6 @@ ms.locfileid: "75710995"
 |<xref:System.Xml.XmlNode.PrependChild%2A>|將節點加入至指定節點之子節點的清單開頭。 如果加入的節點為 <xref:System.Xml.XmlDocumentFragment>，則文件片段的全部內容都會移至此節點的子清單中。 如需詳細資訊，請參閱 <xref:System.Xml.XmlNode.PrependChild%2A> 方法。|  
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|將 <xref:System.Xml.XmlAttribute> 節點附加至與項目關聯之屬性集合的結尾。 如需詳細資訊，請參閱 <xref:System.Xml.XmlAttributeCollection.Append%2A> 方法。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

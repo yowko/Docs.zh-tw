@@ -26,7 +26,7 @@ Visual Basic 命令列編譯器提供從 Visual Studio 整合式開發環境（I
 [從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
 描述 Visual Basic 的命令列編譯器，這是從 Visual Studio IDE 內的編譯器所提供的替代方法。
 
-[依字母順序列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
+[Visual Basic Compiler Options Listed Alphabetically](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
 列出依字母順序排列的資料表中的編譯器選項
 
 [依分類列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  

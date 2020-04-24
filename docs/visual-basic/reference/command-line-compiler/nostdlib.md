@@ -23,16 +23,16 @@ ms.locfileid: "74347917"
 ```  
   
 ## <a name="remarks"></a>備註  
- `-nostdlib` 選項會移除對 System.object 元件的自動參考，並防止編譯器讀取 Vbc .rsp 檔案。 與 Vbc 檔案位於相同目錄中的 Vbc .rsp 檔案，會參考常用的 .NET Framework 元件，並匯入 `System` 和 `Microsoft.VisualBasic` 命名空間。  
+ `-nostdlib`選項會移除對 system.object 元件的自動參考，並防止編譯器讀取 Vbc .rsp 檔案。 與 Vbc 檔案位於相同目錄中的 Vbc .rsp 檔案，會參考常用的 .NET Framework 元件，並匯入`System`和`Microsoft.VisualBasic`命名空間。  
   
 > [!NOTE]
 > 我們一律會參考 Mscorlib.dll 和 Microsoft。  
   
 > [!NOTE]
-> Visual Studio 開發環境中無法使用 [`-nostdlib`] 選項;只有在從命令列編譯時，才可以使用它。  
+> 此`-nostdlib`選項無法在 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會在不參考標準程式庫的情況下編譯 `T2.vb`。 您必須將 `_MYTYPE` 的條件式編譯常數設定為字串 "Empty"，才能移除 `My` 物件。  
+ 下列程式碼會`T2.vb`進行編譯，而不會參考標準程式庫。 您必須將`_MYTYPE`條件式編譯常數設定為字串 "Empty"，才能移除該`My`物件。  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  

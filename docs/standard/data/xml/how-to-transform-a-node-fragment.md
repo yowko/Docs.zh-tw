@@ -1,5 +1,5 @@
 ---
-title: HOW TO：轉換節點片段
+title: 作法：轉換節點片段
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,7 +13,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710813"
 ---
-# <a name="how-to-transform-a-node-fragment"></a>HOW TO：轉換節點片段
+# <a name="how-to-transform-a-node-fragment"></a>作法：轉換節點片段
 當您轉換包含於 <xref:System.Xml.XmlDocument> 或 <xref:System.Xml.XPath.XPathDocument> 物件的資料時，XSLT 轉換會套用至整個文件。 換言之，如果您要傳入的節點不是文件的根節點，則不會阻止轉換程序取得已載入文件中的所有節點。 若要轉換節點片段，您必須建立僅含有該節點片段的單獨物件，再將該物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
 ## <a name="procedures"></a>程序  
@@ -42,9 +42,9 @@ ms.locfileid: "75710813"
 ##### <a name="singlexsl"></a>single.xsl  
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
-### <a name="output"></a>Output  
+### <a name="output"></a>輸出  
  書名為《The Confidence Man》。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

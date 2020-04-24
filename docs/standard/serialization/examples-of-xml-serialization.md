@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>序列化 XmlElement 與 XmlNode
 
-您也可以序列化 <xref:System.Xml.XmlElement> 或 <xref:System.Xml.XmlNode> 類別的實例，如下列程式碼範例所示。
+您也可以序列化<xref:System.Xml.XmlElement>或<xref:System.Xml.XmlNode>類別的實例，如下列程式碼範例所示。
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -367,9 +367,9 @@ public class Employee {
 
 在此範例中，會序列化名為 `PurchaseOrder` 的類別，然後再將其還原序列化。 也包含名為 `Address` 的第二類別，因為名為 `ShipTo` 的公用欄位必須設定為 `Address`。 同樣地，會包含 `OrderedItem` 類別，因為 `OrderedItem` 物件的陣列必須設定為 `OrderedItems` 欄位。 最後，名為 `Test` 的類別包含序列化與還原序列化類別的程式碼。
 
-`CreatePO` 方法會建立 `PurchaseOrder`、`Address` 和 `OrderedItem` 類別物件，並且設定公用欄位的值。 該方法也建構用來序列化及還原序列化 <xref:System.Xml.Serialization.XmlSerializer>`PurchaseOrder`之 {3} 類別的執行個體。 請注意，程式碼把要序列化之類別的型別傳遞給建構函式。 程式碼也建立用來將 XML 資料流寫入 XML 文件的 `FileStream`。
+`CreatePO` 方法會建立 `PurchaseOrder`、`Address` 和 `OrderedItem` 類別物件，並且設定公用欄位的值。 該方法也建構用來序列化及還原序列化 之  類別的執行個體。 請注意，程式碼把要序列化之類別的型別傳遞給建構函式。 程式碼也建立用來將 XML 資料流寫入 XML 文件的 `FileStream`。
 
-`ReadPo` 方法比較簡單。 它只會建立要還原序列化的物件，並讀出它們的值。 如同 `CreatePo` 方法，您必須先建立 <xref:System.Xml.Serialization.XmlSerializer>，傳遞要還原序列化之類別的型別以還原序列化為函式。 同時，需要有 <xref:System.IO.FileStream> 讀取 XML 文件。 若要還原序列化物件，以 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 做為引數呼叫 <xref:System.IO.FileStream> 方法。 還原序列化物件必須轉型為型別 `PurchaseOrder`{2}的物件變數。 然後程式碼會讀取已還原序列化的 `PurchaseOrder`{2}值。 請注意，您也可以讀取已建立的 PO.xml 檔案，檢視實際的 XML 輸出。
+`ReadPo` 方法比較簡單。 它只會建立要還原序列化的物件，並讀出它們的值。 如同`CreatePo`方法，您必須先建立，傳遞要<xref:System.Xml.Serialization.XmlSerializer>還原序列化之類別的型別，以還原序列化為函式。 同時，需要有 <xref:System.IO.FileStream> 讀取 XML 文件。 若要還原序列化物件，以 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 做為引數呼叫 <xref:System.IO.FileStream> 方法。 還原序列化物件必須轉型為型別 的物件變數。 然後程式碼會讀取已還原序列化的 值。 請注意，您也可以讀取已建立的 PO.xml 檔案，檢視實際的 XML 輸出。
 
 ```vb
 Imports System.IO
@@ -767,11 +767,11 @@ XML 輸出可能類似下列所示。
 </PurchaseOrder>
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 序列化簡介](introducing-xml-serialization.md)
 - [使用屬性控制 XML 序列化](controlling-xml-serialization-using-attributes.md)
-- [可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
+- [控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
 - [XmlSerializer 類別](xref:System.Xml.Serialization.XmlSerializer)
-- [如何：序列化物件](how-to-serialize-an-object.md)
+- [HOW TO：序列化物件](how-to-serialize-an-object.md)
 - [如何：還原序列化物件](how-to-deserialize-an-object.md)
