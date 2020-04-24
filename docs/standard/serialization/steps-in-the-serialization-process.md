@@ -25,7 +25,7 @@ ms.locfileid: "75741046"
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [二進位序列化](binary-serialization.md)
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

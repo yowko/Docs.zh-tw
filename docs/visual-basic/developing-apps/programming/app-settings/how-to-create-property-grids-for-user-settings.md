@@ -1,5 +1,5 @@
 ---
-title: 如何：建立使用者設定的屬性方格
+title: 作法：建立使用者設定的屬性方格
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], creating property grids for user settings
@@ -21,7 +21,7 @@ ms.locfileid: "74329604"
 > [!NOTE]
 > 為了確保此範例正常運作，您的應用程式必須已設定其使用者設定。 如需詳細資訊，請參閱[管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
   
- `My.Settings` 物件會將每項設定公開為屬性。 屬性名稱與設定名稱相同，而屬性類型與設定類型相同。 設置的 **"範圍"** 確定屬性是否為唯讀屬性;因此，該屬性是否為唯讀屬性。**應用程式**範圍設置的屬性是唯讀的，而**使用者**範圍設置的屬性是讀寫。 如需詳細資訊，請參閱 [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
+ `My.Settings` 物件會將每項設定公開為屬性。 屬性名稱與設定名稱相同，而屬性類型與設定類型相同。 設定的**範圍**會決定屬性是否為唯讀;**應用程式**範圍設定的屬性為唯讀，而**使用者**範圍設定的屬性為讀寫。 如需詳細資訊，請參閱 [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  
   
 > [!NOTE]
 > 您無法在執行階段變更或儲存應用程式範圍設定的值。 只有在建立應用程式時 (透過 [專案設計工具]或藉由編輯應用程式的組態檔)，才能變更應用程式範圍的設定。**** 如需詳細資訊，請參閱[管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  

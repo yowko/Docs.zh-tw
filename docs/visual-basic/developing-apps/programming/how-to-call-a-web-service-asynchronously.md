@@ -23,7 +23,7 @@ Proxy 類別允許您同步呼叫 Web 服務方法，您的應用程式會在該
 > [!NOTE]
 > 這個程式碼在 Web 應用程式中無效，因為 ASP.NET 不支援 `My.WebServices` 物件。
 
-## <a name="call-a-web-service-asynchronously"></a>非同步調用 Web 服務
+## <a name="call-a-web-service-asynchronously"></a>以非同步方式呼叫 Web 服務
 
 1. 參考 DemoTemperatureService Web 服務，網址為 `http://www.xmethods.net`。 位址是
 

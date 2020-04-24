@@ -40,4 +40,4 @@ ms.locfileid: "74334490"
 - <xref:System.IO.StreamWriter>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileWriter%2A>
 - [如何：從文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)
-- [寫入檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

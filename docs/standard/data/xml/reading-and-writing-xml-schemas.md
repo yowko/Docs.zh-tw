@@ -45,7 +45,7 @@ ms.locfileid: "75710410"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)

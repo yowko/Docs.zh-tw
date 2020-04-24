@@ -33,7 +33,7 @@ ms.locfileid: "75710397"
   
  擴充實體參考，並且以 Microsoft Press 內容取代 `&publisher;`，會產生下列擴充的 XML。  
   
- **Output**  
+ **輸出**  
   
 ```xml  
 <author>Fred</author>  
@@ -42,7 +42,7 @@ ms.locfileid: "75710397"
   
  實體有許多種類。 下圖將說明實體型別和術語的解析。  
   
- ![實體類型階層結構流程圖](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
+ ![實體類型階層流程圖](../../../../docs/standard/data/xml/media/entity-hierarchy.gif "Entity_hierarchy")  
   
  XML 文件物件模型 (DOM) 的 Microsoft .Net Framework 實作預設會保留實體參考，並且在 XML 載入時不會擴充實體。 這表示當文件載入 DOM 時，會建立含有參考變數 `&publisher;` 的 **XmlEntityReference** 節點，其中包含代表 DTD 中所宣告之實體內容的子節點。  
   
@@ -52,6 +52,6 @@ ms.locfileid: "75710397"
   
  實體參考是否會擴充的差異在於記憶體中 DOM 樹狀結構中產生了哪些節點。 [保留實體參考](../../../../docs/standard/data/xml/entity-references-are-preserved.md)和[實體參考已擴充且沒有保留](../../../../docs/standard/data/xml/entity-references-are-expanded-and-not-preserved.md)主題會說明所產生之節點的差異。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

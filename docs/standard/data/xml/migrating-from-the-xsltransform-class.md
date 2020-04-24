@@ -21,7 +21,7 @@ XSLT 架構已在 Visual Studio 2005 版本中重新設計。 <xref:System.Xml.X
 
 ## <a name="performance"></a>效能
 
-<xref:System.Xml.Xsl.XslCompiledTransform> 類別包括許多效能改進。 類似於 Common Language Runtime (CLR) 處理其他程式設計語言的方式，新版 XSLT 處理器會將 XSLT 樣式表編譯成常見的中繼格式。 樣式表編譯完成後，即可予以快取和重複使用。
+<xref:System.Xml.Xsl.XslCompiledTransform> 類別包括許多效能改進。 類似於 Common Language Runtime (CLR) 處理其他程式設計語言的方式，新版 XSLT 處理器會將 XSLT 樣式表編譯成常見的中繼格式。 樣式表一旦編譯完畢，便可對其進行快取及重複使用。
 
 <xref:System.Xml.Xsl.XslCompiledTransform> 類別還包括其他最佳化功能，讓其速度要比 <xref:System.Xml.Xsl.XslTransform> 類別快很多。
 
@@ -67,7 +67,7 @@ writer.Close();
 
 ### <a name="debug-option"></a>偵錯選項
 
-<xref:System.Xml.Xsl.XslCompiledTransform> 類別可以產生偵錯資訊，此資訊可讓您使用 Microsoft Visual Studio 偵錯工具來偵錯樣式表。 如需詳細資訊，請參閱 <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>。
+<xref:System.Xml.Xsl.XslCompiledTransform> 類別可以產生偵錯資訊，此資訊可讓您使用 Microsoft Visual Studio 偵錯工具來偵錯樣式表。 如需相關資訊，請參閱 <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>。
 
 ## <a name="behavioral-differences"></a>行為的差異
 
@@ -125,7 +125,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 
 - 與結構描述相關的 XPath 擴充函式：<xref:System.Xml.Xsl.XslCompiledTransform> 原本就不支援這些函式。 不過，它們可以實作為擴充函式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

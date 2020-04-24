@@ -33,7 +33,7 @@ ms.locfileid: "74352112"
  [存取應用程式 Web 服務](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  包含的文件說明如何使用 `My.WebServices` 物件來存取應用程式所參考的 Web 服務。  
   
- [存取應用程式設定](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  包含的文件說明如何使用 `My.Settings` 物件來存取應用程式的設定。  
   
  [處理磁碟機、目錄和檔案](drives-directories-files/index.md)  

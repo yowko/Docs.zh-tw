@@ -1,5 +1,5 @@
 ---
-title: 如何：寫入應用程式事件記錄檔
+title: 作法：寫入應用程式事件記錄檔
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Computer.EventLog element
@@ -34,7 +34,7 @@ ms.locfileid: "74352052"
 
     2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
 
-    3. 按一下 **[新增]**。
+    3. 按一下 **[新增]** 。
 
 2. 在應用程式組態檔中找出 `<listeners>` 區段。
 
@@ -73,5 +73,5 @@ ms.locfileid: "74352052"
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [作法：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
 - [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)

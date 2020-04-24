@@ -18,16 +18,16 @@ ms.locfileid: "74329601"
   
 ## <a name="in-this-section"></a>本節內容  
 
- [如何：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
+ [作法：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)  
  示範如何顯示可用的序列埠。  
   
- [如何：撥接與序列埠連接的數據機](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ [作法：撥接與序列埠連接的數據機](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
  示範如何撥接連接到電腦序列埠的數據機。  
   
- [如何：將字串傳送至序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ [作法：將字串傳送至序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
  示範如何將字串傳送至電腦的序列埠。  
   
- [如何：接收來自序列埠的字串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
+ [作法：接收來自序列埠的字串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)  
  示範如何接收來自電腦序列埠的字串。  
   
  [.NET Framework 中的連接埠作業](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  

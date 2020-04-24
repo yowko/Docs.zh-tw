@@ -84,7 +84,7 @@ ms.locfileid: "74353595"
 
     2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
 
-    3. 按一下 **[新增]**。
+    3. 按一下 **[新增]** 。
 
 2. 找出位於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<switches>` 區段。
 
@@ -160,7 +160,7 @@ ms.locfileid: "74353595"
 
     2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
 
-    3. 按一下 **[新增]**。
+    3. 按一下 **[新增]** 。
 
 2. 在方案總管中，以滑鼠右鍵按一下 app.config。**** 選擇 [開啟]****。
 
@@ -255,7 +255,7 @@ ms.locfileid: "74353595"
 
 - [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
 - [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [逐步解說：建立自訂的記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [逐步解說：建立自訂記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
+- [作法：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [追蹤參數](../../../../framework/debug-trace-profile/trace-switches.md)
 - [記錄來自應用程式的資訊](../../../../visual-basic/developing-apps/programming/log-info/index.md)

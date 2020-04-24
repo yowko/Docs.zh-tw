@@ -1,5 +1,5 @@
 ---
-title: 'How to: Write Event Information to a Text File'
+title: 作法：將事件資訊寫入文字檔
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs [Visual Studio], writing event information
@@ -29,7 +29,7 @@ ms.locfileid: "74352077"
 
     2. 在 [加入新項目] **** 對話方塊中，選擇 [應用程式組態檔] ****。
 
-    3. 按一下 **[新增]**。
+    3. 按一下 **[新增]** 。
 
 2. 在應用程式組態檔中找出 `<listeners>` 區段。
 
@@ -72,4 +72,4 @@ ms.locfileid: "74352077"
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [作法：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

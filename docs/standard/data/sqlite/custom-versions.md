@@ -19,9 +19,9 @@ SQLitePCLRaw 提供配套套件，可讓您輕鬆地在不同的平臺上帶入�
 
 根據預設，SQLitePCLRaw 中會引進主要的 Microsoft 資料 Sqlite 封裝 bundle_e_sqlite3。
 
-若要使用不同的配套，請改為安裝 `Microsoft.Data.Sqlite.Core` 套件，以及您要使用的配套套件。 套件組合會由 Microsoft 自動初始化。
+若要使用不同的配套，請`Microsoft.Data.Sqlite.Core`將套件與您要使用的配套套件一起安裝。 套件組合會由 Microsoft 自動初始化。
 
-| 組合 | 描述 |
+| 組合 | 說明 |
 | --- | --- |
 | SQLitePCLRaw。 bundle_e_sqlite3 | 在所有平臺上提供一致版本的 SQLite。 包含 FTS4、FTS5、JSON1 和 R * 樹狀目錄延伸模組。 這是預設值。 |
 | SQLitePCLRaw。 bundle_green | 與 bundle_e_sqlite3 相同，除非在 iOS 上使用系統 SQLite 程式庫。 |
@@ -31,14 +31,14 @@ SQLitePCLRaw 提供配套套件，可讓您輕鬆地在不同的平臺上帶入�
 
 例如，若要使用非官方的開放原始碼組建 SQLCipher，請使用下列命令。
 
-### <a name="net-core-clitabnetcore-cli"></a>[.NET Core CLI](#tab/netcore-cli)
+### <a name="net-core-cli"></a>[.NET Core CLI](#tab/netcore-cli)
 
 ```dotnetcli
 dotnet add package Microsoft.Data.Sqlite.Core
 dotnet add package SQLitePCLRaw.bundle_e_sqlcipher
 ```
 
-### <a name="visual-studiotabvisual-studio"></a>[Visual Studio](#tab/visual-studio)
+### <a name="visual-studio"></a>[Visual Studio](#tab/visual-studio)
 
 ``` PowerShell
 Install-Package Microsoft.Data.Sqlite.Core
@@ -49,7 +49,7 @@ Install-Package SQLitePCLRaw.bundle_e_sqlcipher
 
 ## <a name="sqlitepclraw-providers"></a>SQLitePCLRaw 提供者
 
-您可以使用自己的 SQLite 組建，方法是利用 `SQLitePCLRaw.provider.dynamic_cdecl` 套件。 在此情況下，您必須負責使用您的應用程式來部署原生程式庫。 請注意，使用您的應用程式部署原生程式庫的詳細資料，會根據您所使用的 .NET 平臺和執行時間而有很大的差異。
+您可以利用`SQLitePCLRaw.provider.dynamic_cdecl`套件來使用自己的 SQLite 組建。 在此情況下，您必須負責使用您的應用程式來部署原生程式庫。 請注意，使用您的應用程式部署原生程式庫的詳細資料，會根據您所使用的 .NET 平臺和執行時間而有很大的差異。
 
 首先，您必須執行 IGetFunctionPointer。 在 .NET Core 上執行的方式相當簡單。
 

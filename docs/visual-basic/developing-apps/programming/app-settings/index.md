@@ -1,5 +1,5 @@
 ---
-title: 訪問應用程式設定
+title: 存取應用程式設定
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings

@@ -41,4 +41,4 @@ ms.locfileid: "74348884"
 ## <a name="see-also"></a>另請參閱
 
 - [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [寫入檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

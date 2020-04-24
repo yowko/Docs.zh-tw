@@ -30,7 +30,7 @@ ms.locfileid: "74348902"
  [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  列出主題，說明如何使用 `My.Computer.FileSystem` 物件從檔案讀取  
   
- [寫入檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  列出主題，說明如何使用 `My.Computer.FileSystem` 物件寫入檔案  
   
  [建立、刪除和移動檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  

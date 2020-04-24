@@ -23,7 +23,7 @@ Visual Basic 語言規格是有關 Visual Basic 文法和語法的所有問題�
 
 規格的相關問題應該在 [dotnet/vblang](https://github.com/dotnet/vblang/issues) 存放庫中建立。 或者，如果您有興趣修正所發現的任何錯誤，您可以提交[提取要求](https://github.com/dotnet/vblang/pulls)至相同的存放庫。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 語言參考](../../../visual-basic/language-reference/index.md)
 

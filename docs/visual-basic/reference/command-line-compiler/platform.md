@@ -48,7 +48,7 @@ ms.locfileid: "74352351"
   
 - 使用其元件不存在於所有平台的平台叫用或 COM Interop。  
   
- 如果您知道您的程式碼將在其上執行之架構的假設，則 **-platform**選項會減輕一些問題。 尤其是：  
+ 如果您知道您的程式碼將在其上執行之架構的假設，則 **-platform**選項會減輕一些問題。 具體來說：  
   
 - 如果您決定以 64 位元平台為目標，並在 32 位元電腦上執行應用程式，錯誤訊息會遠遠較早出現，而且會較以平台為目標，超過以不使用這個參數所發生的錯誤為目標。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74352351"
 vbc -platform:x86 myFile.vb  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [-target （Visual Basic）](target.md)
 - [Visual Basic 命令列編譯器](index.md)

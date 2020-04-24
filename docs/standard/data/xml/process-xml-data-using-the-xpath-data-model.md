@@ -17,7 +17,7 @@ ms.locfileid: "75710436"
   
  下列各節將根據會傳回 <xref:System.Xml.XPath.XPathNavigator> 類別的類別來說明此類別的功能。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 XPathDocument 及 XmlDocument 讀取 XML 資料](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
  說明如何建立唯讀 <xref:System.Xml.XPath.XPathDocument> 類別物件以讀取 XML 文件，以及如何建立可編輯的 <xref:System.Xml.XmlDocument> 類別物件以讀取及編輯 XML 文件。 本主題還說明如何從每個類別傳回 <xref:System.Xml.XPath.XPathNavigator> 物件，以巡覽及編輯 XML 文件。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "75710436"
  [使用 XPathNavigator 進行結構描述驗證](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)  
  說明驗證 <xref:System.Xml.XPath.XPathDocument> 或 <xref:System.Xml.XmlDocument> 物件中包含之 XML 內容的方式。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

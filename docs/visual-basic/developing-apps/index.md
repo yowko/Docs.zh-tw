@@ -41,5 +41,5 @@ ms.locfileid: "74349256"
  [Visual Basic 程式設計指南](../../visual-basic/programming-guide/index.md)  
  逐步解說使用 Visual Basic 進行程式設計的基本要素。  
   
- [視覺基礎語言參考](../../visual-basic/language-reference/index.md)  
+ [Visual Basic 語言參考](../../visual-basic/language-reference/index.md)  
  包含 Visual Basic 語言的參考文件。

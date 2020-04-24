@@ -1,5 +1,5 @@
 ---
-title: HOW TO：移轉 XslTransform 程式碼
+title: 作法：移轉 XslTransform 程式碼
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,7 +13,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710839"
 ---
-# <a name="how-to-migrate-your-xsltransform-code"></a>HOW TO：移轉 XslTransform 程式碼
+# <a name="how-to-migrate-your-xsltransform-code"></a>作法：移轉 XslTransform 程式碼
 設計的新版 XSLT 類別與現有類別非常類似。 <xref:System.Xml.Xsl.XslCompiledTransform> 類別取代了 <xref:System.Xml.Xsl.XslTransform> 類別。 使用 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法編譯樣式表。 使用 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法執行轉換。 下列程序顯示常見的 XSLT 工作，並比較使用 <xref:System.Xml.Xsl.XslTransform> 類別的程式碼與使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別的程式碼。  
   
 ### <a name="to-transform-a-file-and-output-to-a-uri"></a>轉換檔案及輸出為 URI  
@@ -91,7 +91,7 @@ ms.locfileid: "75710839"
      [!code-csharp[XML_Migration#18](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#18)]
      [!code-vb[XML_Migration#18](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#18)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)
 - [使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

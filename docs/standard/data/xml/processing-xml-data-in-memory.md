@@ -19,7 +19,7 @@ Microsoft .NET Framework 包含三種處理 XML 資料的模型：<xref:System.X
   
  [LINQ to XML](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 是 .NET Framework 3.5 版中推出的模型，用來處理 XML 資料。 它是利用 [Language-Integrated Query (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md) 的記憶體內部模型。 LINQ 會擴充 C# 和 Visual Basic 的語言語法，以提供新的查詢功能。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [使用 DOM 模型處理 XML 資料](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
  討論如何使用 <xref:System.Xml.XmlDocument> 及其相關類別來處理 XML 資料。  
   

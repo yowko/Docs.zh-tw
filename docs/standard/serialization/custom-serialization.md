@@ -179,7 +179,7 @@ End Class
   
  物件由內向外重新建構；在還原序列化期間呼叫方法可能會造成無法想像的副作用，因為呼叫的方法可能參考該呼叫尚未還原序列化時的物件參考。 如果還原序列化的類別實作 <xref:System.Runtime.Serialization.IDeserializationCallback>，在整個物件圖形還原序列化後，即自動呼叫 <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%2A> 方法。 此時，所有參考的子物件已完整還原。 雜湊表是不使用事件接聽程式就很難還原序列化的常見類別範例。 在還原序列化期間擷取索引鍵與值組很容易，但將這些物件加回雜湊表卻會造成問題，因為無法保證從雜湊表衍生的類別已還原序列化。 因此於此階段呼叫雜湊表上的方法實屬不當。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [二進位序列化](binary-serialization.md)
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

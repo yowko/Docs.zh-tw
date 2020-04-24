@@ -46,20 +46,20 @@ SQLite 會將其他的語義套用至資料行類型，將它們直接對應至 
 
 Sqlite 的[連接字串](connection-strings.md)關鍵字較少。 下表顯示可以改為使用的替代方案。
 
-| 關鍵字          | 選項                                         |
+| 關鍵字          | 替代函式                                         |
 | ---------------- | --------------------------------------------------- |
-| 快取大小       | 傳送 `PRAGMA cache_size = <pages>`                  |
+| 快取大小       | 發送`PRAGMA cache_size = <pages>`                  |
 | 預設逾時  | 在 SqliteConnection 上使用 DefaultTimeout 屬性 |
 | FailIfMissing    | 使用`Mode=ReadWrite`                                |
 | FullUri          | 使用資料來源關鍵字                         |
-| 記錄模式     | 傳送 `PRAGMA journal_mode = <mode>`                 |
-| 舊版格式    | 傳送 `PRAGMA legacy_file_format = 1`                |
-| 最大頁面計數   | 傳送 `PRAGMA max_page_count = <pages>`              |
-| 頁面大小        | 傳送 `PRAGMA page_size = <bytes>`                   |
+| 記錄模式     | 發送`PRAGMA journal_mode = <mode>`                 |
+| 舊版格式    | 發送`PRAGMA legacy_file_format = 1`                |
+| 最大頁面計數   | 發送`PRAGMA max_page_count = <pages>`              |
+| 頁面大小        | 發送`PRAGMA page_size = <bytes>`                   |
 | 唯讀        | 使用`Mode=ReadOnly`                                 |
-| 同步      | 傳送 `PRAGMA synchronous = <mode>`                  |
-| URI              | 使用資料來源關鍵字                         |
-| UseUTF16Encoding | 傳送 `PRAGMA encoding = 'UTF-16'`                   |
+| 同步      | 發送`PRAGMA synchronous = <mode>`                  |
+| Uri              | 使用資料來源關鍵字                         |
+| UseUTF16Encoding | 發送`PRAGMA encoding = 'UTF-16'`                   |
 
 ## <a name="authorization"></a>授權
 
@@ -73,10 +73,10 @@ Microsoft. Sqlite 沒有任何 API 公開 SQLite 的資料變更通知。 使用
 
 在建立虛擬資料表模組時，Sqlite 沒有任何 API。 使用 [問題[#13823](https://github.com/dotnet/efcore/issues/13823) ] 來提供有關此功能的意見反應。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [資料類型](types.md)
 * [連接字串](connection-strings.md)
-* [加密](encryption.md)
+* [加密][](encryption.md)
 * [ADO.NET 限制](adonet-limitations.md)
 * [Dapper 限制](dapper-limitations.md)

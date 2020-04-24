@@ -16,7 +16,7 @@ ms.locfileid: "75937936"
 > [!NOTE]
 > 雖然 <xref:System.Xml.Xsl.XslCompiledTransform> 類別的整體效能優於 <xref:System.Xml.Xsl.XslTransform> 類別，但是在轉換時第一次呼叫 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 類別的 <xref:System.Xml.Xsl.XslCompiledTransform> 方法之執行速度可能會比 <xref:System.Xml.Xsl.XslTransform.Load%2A> 類別的 <xref:System.Xml.Xsl.XslTransform> 方法慢許多。 這是因為在載入之前必須先編譯 XSLT 檔案。 如需詳細資訊，請參閱下列部落格文章：[XslCompiledTransform 比 XslTransform 還慢嗎？](https://docs.microsoft.com/archive/blogs/antosha/xslcompiledtransform-slower-than-xsltransform) (英文)  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [XslCompiledTransform 類別的輸入](../../../../docs/standard/data/xml/inputs-to-the-xslcompiledtransform-class.md)  
  說明可用的 XSLT 輸入選項。  
   
@@ -32,13 +32,13 @@ ms.locfileid: "75937936"
 |||  
 |-|-|  
 |[可復原的 XSLT 錯誤](../../../../docs/standard/data/xml/recoverable-xslt-errors.md)|列出全球資訊網協會 (W3C) XSLT 1.0 版建議事項所允許的判別行為，以及說明 <xref:System.Xml.Xsl.XslCompiledTransform> 類別如何處理這些行為。|  
-|[如何：轉換節點片段](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md)|描述如何轉換節點片段。|  
+|[作法：轉換節點片段](../../../../docs/standard/data/xml/how-to-transform-a-node-fragment.md)|描述如何轉換節點片段。|  
   
 ## <a name="related-sections"></a>相關章節  
  [從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)  
  討論如何從 <xref:System.Xml.Xsl.XslTransform> 類別移轉程式碼  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Xsl.XsltSettings>
 - <xref:System.Xml.Xsl.XsltMessageEncounteredEventArgs>

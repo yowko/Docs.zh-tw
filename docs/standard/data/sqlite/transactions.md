@@ -9,13 +9,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75447136"
 ---
-# <a name="transactions"></a>異動
+# <a name="transactions"></a>交易
 
 交易可讓您將多個 SQL 語句組成單一工作單位，並以一個不可部分完成的單位認可到資料庫。 如果交易中的任何語句失敗，則可以復原先前語句所做的變更。 當交易啟動時，資料庫的初始狀態會保留下來。 當一次對資料庫進行許多變更時，使用交易也可以改善 SQLite 上的效能。
 
 ## <a name="concurrency"></a>並行
 
-在 SQLite 中，一次只能有一個交易在資料庫中有暫止的變更。 因此，<xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> 的呼叫和 <xref:Microsoft.Data.Sqlite.SqliteCommand> 上的 `Execute` 方法，可能會在其他交易花費太長的時間才能完成。
+在 SQLite 中，一次只能有一個交易在資料庫中有暫止的變更。 因此，對的呼叫<xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A>和`Execute`方法可能會在<xref:Microsoft.Data.Sqlite.SqliteCommand>其他交易花費太長的時間才能完成。
 
 如需有關鎖定、重試和超時的詳細資訊，請參閱[資料庫錯誤](database-errors.md)。
 
@@ -31,8 +31,8 @@ SQLite 也支援使用共用快取時的**讀取未**認可。 此層級允許�
 
 - *幻像*是在交易期間變更或加入以符合查詢 where 子句的資料列。 如果允許的話，相同的查詢在相同交易中執行兩次時，可能會傳回不同的資料列。
 
-Sqlite 會將傳遞給 <xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A> 的 IsolationLevel 視為最小層級。 實際的隔離等級會升級為讀取未認可或可序列化。
+Sqlite 會將傳遞至<xref:Microsoft.Data.Sqlite.SqliteConnection.BeginTransaction%2A>的 IsolationLevel 視為最小層級。 實際的隔離等級會升級為讀取未認可或可序列化。
 
-下列程式碼會模擬中途讀取。 請注意，連接字串必須包含 `Cache=Shared`。
+下列程式碼會模擬中途讀取。 請注意，連接字串必須包含`Cache=Shared`。
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DirtyReadSample/Program.cs?name=snippet_DirtyRead)]

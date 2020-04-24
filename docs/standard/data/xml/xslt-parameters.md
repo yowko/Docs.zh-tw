@@ -24,7 +24,7 @@ XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xre
   
 3. 將 <xref:System.Xml.Xsl.XsltArgumentList> 物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
-## <a name="parameter-types"></a>參數類型  
+## <a name="parameter-types"></a>參數型別  
  參數物件應對應至 W3C 型別。 下表顯示對應的 W3C 型別、對等的 Microsoft .NET 類別 (型別)，以及 W3C 型別是 XPath 型別還是 XSLT 型別。  
   
 |W3C 類型|對等的 .NET 類別 (型別)|XPath 或 XSLT 型別|  
@@ -34,7 +34,7 @@ XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xre
 |`Number`|<xref:System.Double?displayProperty=nameWithType>|XPath|  
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XSLT|  
 |`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XPath|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|XPath|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator []**|XPath|  
   
  *這相當於含有單一節點的節點集。  
   
@@ -56,7 +56,7 @@ XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xre
 ##### <a name="discountxsl"></a>discount.xsl  
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
-### <a name="output"></a>Output  
+### <a name="output"></a>輸出  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -66,6 +66,6 @@ XSLT 參數可使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法加入至 <xre
 </order>  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)

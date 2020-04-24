@@ -17,10 +17,10 @@ ms.locfileid: "74352858"
 本主題提供如何使用 .NET Framework Class Library 的相關資訊連結。  
   
 ## <a name="related-sections"></a>相關章節  
- [使用者入門](../../framework/get-started/index.md)  
+ [快速入門](../../framework/get-started/index.md)  
  提供 .NET Framework 的完整概觀與其他資源的連結。  
   
- [類別庫概觀](../../standard/class-library-overview.md)  
+ [類別庫總覽](../../standard/class-library-overview.md)  
  介紹類別、介面和實值型別，協助加速和優化開發流程，並提供系統功能的存取權。  
   
  [開發指南](../../framework/development-guide.md)  

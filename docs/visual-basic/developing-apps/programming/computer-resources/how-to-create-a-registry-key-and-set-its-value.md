@@ -1,5 +1,5 @@
 ---
-title: 如何：建立登錄機碼並設定其值
+title: 作法：建立登錄機碼並設定其值
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey

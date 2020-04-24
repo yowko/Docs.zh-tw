@@ -1,5 +1,5 @@
 ---
-title: 如何：寫入記錄訊息
+title: 作法：寫入記錄檔訊息
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object, writing log messages
@@ -33,7 +33,7 @@ ms.locfileid: "74352061"
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [作法：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
 - [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
 - [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
 - [逐步解說：篩選 My.Application.Log 輸出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)

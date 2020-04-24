@@ -23,7 +23,7 @@ ms.locfileid: "75937751"
 |`-additionalfile`|命名不會直接影響程式碼產生，但可能被分析器用來產生錯誤或警告的其他檔案。|  
 |[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)|讓編譯器將所指定檔案的類型資訊全部提供給您目前編譯的專案。|  
 |`-analyzer`|從這個組件執行分析器 (簡短形式：-a)|  
-|.[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定 DLL 的基底位址。|  
+|[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|指定 DLL 的基底位址。|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|建立檔案，其中包含可簡化錯誤回報的資訊。|  
 |`-checksumalgorithm:<alg>`|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設值) 或 SHA256。 <br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256 或更好的方式。|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|指定編譯過程中所有原始程式碼檔使用的字碼頁。|  
@@ -36,13 +36,13 @@ ms.locfileid: "75937751"
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|指定要對齊輸出檔案區段的位置。|  
 |[-help](../../../visual-basic/reference/command-line-compiler/help.md)|顯示編譯器選項。 此命令的效用等同於指定 `-?` 選項。 未執行編譯。|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|指出特定可執行檔是否支援高熵位址空間配置隨機載入 (ASLR)。|  
-|[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|從指定的組件匯入命名空間。|  
+|[-匯入](../../../visual-basic/reference/command-line-compiler/imports.md)|從指定的組件匯入命名空間。|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|指定金鑰組的金鑰容器名稱，為組件提供強式名稱。|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|指定一個檔案，其中包含可為組件提供強式名稱的金鑰或金鑰組。|  
 |[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|指定語言版本： 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0。|  
 |[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|指定[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)選項所參考之元件的位置。|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|建立與 Managed 資源的連結。|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定類別，其中包含要在啟動時使用的 `Sub Main` 程式。|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|指定類別，其中包含要`Sub Main`在啟動時使用的程式。|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|指定將包含模組的組件名稱。|  
 |`-modulename:<string>`|指定來源模組的名稱|  
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|設定編譯器以 .NET Compact Framework 為目標。|  
@@ -58,15 +58,15 @@ ms.locfileid: "75937751"
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|強制執行嚴格的語意。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|指定輸出檔。|  
 |<code>-parallel[+&#124;-]</code>|指定是否要使用並行組建 (+)。|  
-|[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|指定編譯器為輸出檔設為目標的處理器平台。|  
+|[-平臺](../../../visual-basic/reference/command-line-compiler/platform.md)|指定編譯器為輸出檔設為目標的處理器平台。|  
 |`-preferreduilang`|指定慣用的輸出語言名稱。|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|防止編譯器顯示語法相關錯誤和警告的程式碼。|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|搜尋要編譯之原始程式檔的子目錄。|  
-|[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|從組匯入中繼資料。|  
+|[-參考](../../../visual-basic/reference/command-line-compiler/reference.md)|從組匯入中繼資料。|  
 |[-refonly](refonly-compiler-option.md)|只輸出參考元件。|
 |[-refout](refout-compiler-option.md)|指定參考元件的輸出路徑。|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|停用整數的溢位檢查。|  
-|[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|將 Managed 資源內嵌至組件中。|  
+|[-資源](../../../visual-basic/reference/command-line-compiler/resource.md)|將 Managed 資源內嵌至組件中。|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|指定所有類型宣告的命名空間。|  
 |`-ruleset:<file>`|指定停用特定診斷的規則集檔案。|  
 |[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|指定 Mscorlib.dll 和 Microsoft.VisualBasic.dll 的位置。|  
@@ -80,7 +80,7 @@ ms.locfileid: "75937751"
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|識別要內嵌到專案的可攜式執行檔 (PE) 中的使用者定義 Win32 應用程式資訊清單檔。|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|將 Win32 資源插入輸出檔中。|  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [依分類列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
-- [管理專案及解決方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
+- [管理專案和解決方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

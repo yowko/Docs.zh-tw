@@ -20,11 +20,11 @@ ms.locfileid: "76795172"
 
 ## <a name="setjmplongjmp-behaviors"></a>Setjmp/Longjmp 行為
 
-不支援與 `setjmp` 和 `longjmp` C 函式的 Interop。 您無法使用 `longjmp` 略過受控框架。
+不支援`setjmp`與`longjmp`和 C 函式的 Interop。 您不能`longjmp`使用略過 managed 框架。
 
 如需詳細資訊，請參閱[longjmp 檔](https://docs.microsoft.com/cpp/c-runtime-library/reference/longjmp)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [例外狀況](index.md)
 - [使用原生程式庫的 Interop](https://www.mono-project.com/docs/advanced/pinvoke/#runtime-exception-propagation)

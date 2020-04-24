@@ -1,5 +1,5 @@
 ---
-title: 如何：在應用程式啟動或關閉時記錄訊息
+title: 作法：在應用程式啟動或關閉時記錄訊息
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, shutdown
@@ -22,7 +22,7 @@ ms.locfileid: "74352103"
   
 ### <a name="to-access-the-applications-event-handler-code"></a>存取應用程式的事件處理常式程式碼  
   
-1. 在 **方案總管**中選取專案。 在 **"專案"** 功能表上，選擇 **"屬性**"。  
+1. 在 **方案總管**中選取專案。 在 [**專案**] 功能表上，選擇 [**屬性**]。  
   
 2. 按一下 [應用程式] **** 索引標籤。  
   
@@ -65,5 +65,5 @@ ms.locfileid: "74352103"
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [專案設計工具、應用程式頁面 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)

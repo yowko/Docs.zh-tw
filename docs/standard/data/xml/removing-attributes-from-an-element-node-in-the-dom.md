@@ -37,6 +37,6 @@ ms.locfileid: "75710345"
   
  當使用 <xref:System.Xml.XmlAttribute> 呼叫時，<xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> 方法會將屬性值設為 String.Empty，因為屬性一定要有值。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 文件物件模型 (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

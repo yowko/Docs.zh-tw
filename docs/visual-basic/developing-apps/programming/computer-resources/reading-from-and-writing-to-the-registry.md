@@ -21,13 +21,13 @@ ms.locfileid: "74349755"
   
 ## <a name="in-this-section"></a>本節內容  
 
- [如何：建立登錄機碼並設定其值](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
+ [作法：建立登錄機碼並設定其值](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
  描述如何使用 `My.Computer.Registry` 物件的 `CreateSubKey` 和 `SetValue` 方法來建立登錄機碼，並設定其值。  
   
- [如何：讀取登錄機碼的值](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
+ [作法：讀取登錄機碼的值](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
  描述如何使用 `My.Computer.Registry` 物件的 `GetValue` 方法來讀取登錄機碼中的值。  
   
- [如何：刪除登錄機碼](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
+ [作法：刪除登錄機碼](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
  描述如何使用 `My.Computer.Registry.CurrentUser` 屬性的 `DeleteSubKey` 方法來刪除登錄機碼。  
   
  [使用 Microsoft.Win32 命名空間讀取和寫入登錄](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  

@@ -47,4 +47,4 @@ ms.locfileid: "74348876"
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
-- [寫入檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

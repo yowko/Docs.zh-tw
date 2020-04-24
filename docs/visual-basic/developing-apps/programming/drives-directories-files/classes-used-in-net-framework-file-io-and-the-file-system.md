@@ -63,6 +63,6 @@ ms.locfileid: "74348921"
 ## <a name="see-also"></a>另請參閱
 
 - [撰寫資料流](../../../../standard/io/composing-streams.md)
-- [檔和流 I/O](../../../../standard/io/index.md)
-- [非同步檔案 I/O](../../../../standard/io/asynchronous-file-i-o.md)
+- [檔案和資料流程 i/o](../../../../standard/io/index.md)
+- [非同步檔案 i/o](../../../../standard/io/asynchronous-file-i-o.md)
 - [.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

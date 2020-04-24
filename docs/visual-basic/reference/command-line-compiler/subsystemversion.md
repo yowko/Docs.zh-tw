@@ -66,9 +66,9 @@ ms.locfileid: "74802157"
 
 ## <a name="setting-this-option"></a>設定這個選項
 
-若要在 Visual Studio 中設定 **-subsystemversion**編譯器選項，您必須開啟 vbproj 檔案，並在 MSBuild XML 中指定 `SubsystemVersion` 屬性的值。 您不能在 Visual Studio IDE 中設定此選項。 如需詳細資訊，請參閱本主題稍早的＜預設值＞或[通用的 MSBuild 專案屬性](/visualstudio/msbuild/common-msbuild-project-properties)。
+若要在 Visual Studio 中設定 **-subsystemversion**編譯器選項，您必須開啟 vbproj 檔案，並在 MSBuild XML 中指定`SubsystemVersion`屬性的值。 您不能在 Visual Studio IDE 中設定此選項。 如需詳細資訊，請參閱本主題稍早的＜預設值＞或[通用的 MSBuild 專案屬性](/visualstudio/msbuild/common-msbuild-project-properties)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 

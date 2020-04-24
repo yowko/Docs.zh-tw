@@ -47,7 +47,7 @@ ms.locfileid: "74348915"
  [如何：建立檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-file.md)  
  示範如何建立檔案。  
   
- [如何：刪除檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
+ [如何：刪除檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-delete-a-file.md)  
  示範如何刪除檔案。  
   
  [如何：尋找具有特定模式的檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-files-with-a-specific-pattern.md)  
@@ -123,5 +123,5 @@ ms.locfileid: "74348915"
  [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  列出與讀取檔案建立關聯的工作。  
   
- [寫入檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
+ [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  列出有關寫入檔案的工作。

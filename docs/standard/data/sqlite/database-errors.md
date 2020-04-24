@@ -11,7 +11,7 @@ ms.locfileid: "75447269"
 ---
 # <a name="database-errors"></a>資料庫錯誤
 
-遇到 SQLite 錯誤時，會擲回 <xref:Microsoft.Data.Sqlite.SqliteException>。 訊息是由 SQLite 所提供。 `SqliteErrorCode` 和 `SqliteExtendedErrorCode` 屬性包含錯誤的 SQLite[結果碼](https://www.sqlite.org/rescode.html)。
+<xref:Microsoft.Data.Sqlite.SqliteException>當遇到 SQLite 錯誤時，就會擲回。 訊息是由 SQLite 所提供。 和屬性包含錯誤的 SQLite[結果程式碼。](https://www.sqlite.org/rescode.html) `SqliteErrorCode` `SqliteExtendedErrorCode`
 
 任何時間都可能發生錯誤。 Sqlite 會與原生的 SQLite 程式庫互動。 下列清單顯示錯誤可能發生的常見案例：
 
@@ -28,21 +28,21 @@ SQLite 在鎖定資料表和資料庫檔案時非常積極。 如果您的應用
 
 每當 Microsoft Data Sqlite 遇到忙碌或鎖定的錯誤時，它會自動重試，直到成功或到達命令逾時為止。
 
-您可以藉由設定 <xref:Microsoft.Data.Sqlite.SqliteCommand.CommandTimeout%2A>來增加命令的超時時間。 預設的超時時間為30秒。 `0` 的值表示沒有超時。
+您可以藉由設定<xref:Microsoft.Data.Sqlite.SqliteCommand.CommandTimeout%2A>來增加命令的超時時間。 預設的超時時間為30秒。 的`0`值表示沒有 timeout。
 
 ```csharp
 // Retry for 60 seconds while locked
 command.CommandTimeout = 60;
 ```
 
-然後，Sqlite 有時需要建立隱含的命令物件。 例如，在 BeginTransaction 期間。 若要設定這些命令的超時時間，請使用 <xref:Microsoft.Data.Sqlite.SqliteConnection.DefaultTimeout%2A>。
+然後，Sqlite 有時需要建立隱含的命令物件。 例如，在 BeginTransaction 期間。 若要設定這些命令的超時時間， <xref:Microsoft.Data.Sqlite.SqliteConnection.DefaultTimeout%2A>請使用。
 
 ```csharp
 // Set the default timeout of all commands on this connection
 connection.DefaultTimeout = 60;
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 * [SQLite 錯誤碼](https://www.sqlite.org/rescode.html)
 * [SQLite 中的檔案鎖定](https://www.sqlite.org/lockingv3.html)

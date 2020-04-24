@@ -29,7 +29,7 @@ ms.locfileid: "75348440"
 
 版本相容序列化 (VTS) 為 .NET Framework 2.0 引進的一組功能，讓變更序列化型別隨著時間更加簡單。 具體地說，VTS 功能是為套用 <xref:System.SerializableAttribute> 屬性的類別啟用，包括泛型型別。 VTS 可在不破壞與其他版本之型別相容性的情況下，將新欄位加入那些類別。 如需可用的範例應用程式，請參閱[版本相容序列化技術範例](version-tolerant-serialization-technology-sample.md)。
 
-使用 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>時，會啟用 VTS 功能。 除此之外，使用 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>時，除了沒有直接關聯的資料容錯功能外，其他所有功能都會啟用。 如需使用這些類別進行序列化的詳細資訊，請參閱[二進位序列化](binary-serialization.md)。
+使用 時，會啟用 VTS 功能。 除此之外，使用 時，除了沒有直接關聯的資料容錯功能外，其他所有功能都會啟用。 如需使用這些類別進行序列化的詳細資訊，請參閱[二進位序列化](binary-serialization.md)。
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
@@ -132,7 +132,7 @@ End Class
 
 #### <a name="using-callbacks"></a>使用回呼
 
-若要使用回呼，將適當屬性套用至接受 <xref:System.Runtime.Serialization.StreamingContext> 參數的方法。 每個類別只有一個方法可以使用每個這些屬性來標示。 例如:
+若要使用回呼，將適當屬性套用至接受 <xref:System.Runtime.Serialization.StreamingContext> 參數的方法。 每個類別只有一個方法可以使用每個這些屬性來標示。 例如：
 
 ```csharp
 [OnDeserializing]
@@ -264,7 +264,7 @@ End Class
 
 某些使用者可能因為伺服器和用戶端上需要不同版本的類別，而需要控制要序列化和還原序列化的類別。 <xref:System.Runtime.Serialization.SerializationBinder> 是抽象類別，用來控制序列化和還原序列化期間使用的實際型別。 若要使用此類別，請從 <xref:System.Runtime.Serialization.SerializationBinder> 衍生一個類別，然後覆寫 <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> 和 <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> 方法。 如需詳細資訊，請參閱[使用 SerializationBinder 控制序列化和還原序列化](../../framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)。
 
-## <a name="best-practices"></a>最佳做法
+## <a name="best-practices"></a>最佳作法
 
 若要確定版本控制行為適當，修改版本中的型別時，請遵循這些規則：
 

@@ -46,7 +46,7 @@ ms.locfileid: "75559894"
     var myObject = (MySerializableClass) mySerializer.Deserialize(myFileStream)
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XML 序列化簡介](introducing-xml-serialization.md)
-- [如何：序列化物件](how-to-serialize-an-object.md)
+- [HOW TO：序列化物件](how-to-serialize-an-object.md)

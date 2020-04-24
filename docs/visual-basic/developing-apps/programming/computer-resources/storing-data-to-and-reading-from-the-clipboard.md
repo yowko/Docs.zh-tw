@@ -1,5 +1,5 @@
 ---
-title: 將資料存儲到剪貼簿並從剪貼簿讀取
+title: 在剪貼簿儲存和讀取資料
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)
@@ -62,7 +62,7 @@ ms.locfileid: "74349738"
   
  [!code-vb[VbVbcnMyClipboard#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#2)]  
   
- 使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> 方法，將資料寫入剪貼簿。 本示例以自訂`DataObject``dataChunk`格式`specialFormat`將 寫入剪貼簿。  
+ 使用 <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetData%2A> 方法，將資料寫入剪貼簿。 這個範例會以`DataObject` `dataChunk`自訂格式`specialFormat`將寫入至剪貼簿。  
   
  [!code-vb[VbVbcnMyClipboard#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyClipboard/VB/Class1.vb#7)]  
   
@@ -78,5 +78,5 @@ ms.locfileid: "74349738"
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.GetAudioStream%2A>
 - <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy.SetDataObject%2A>
-- [如何：從 XML 檔讀取物件資料](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
-- [如何：將物件資料寫入 XML 檔](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)
+- [如何：從 XML 檔案讀取物件資料](../../../programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [如何：將物件資料寫入 XML 檔案](../../../programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)

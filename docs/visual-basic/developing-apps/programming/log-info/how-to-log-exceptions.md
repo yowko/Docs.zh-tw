@@ -1,5 +1,5 @@
 ---
-title: 如何：記錄例外狀況
+title: 作法：記錄例外狀況
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, logging
@@ -44,7 +44,7 @@ ms.locfileid: "74352080"
   
 ### <a name="to-log-an-unhandled-exception"></a>記錄未處理的例外狀況  
   
-1. 在 **方案總管**中選取專案。 在 **"專案"** 功能表上，選擇 **"屬性**"。  
+1. 在 **方案總管**中選取專案。 在 [**專案**] 功能表上，選擇 [**屬性**]。  
   
 2. 按一下 [應用程式] **** 索引標籤。  
   
@@ -72,6 +72,6 @@ ms.locfileid: "74352080"
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [作法：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
 - [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

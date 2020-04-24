@@ -26,7 +26,7 @@ XSLT 語言具有一組豐富的功能，可讓您擁有強大的能力與彈性
 ### <a name="style-sheet-scripts"></a>樣式表指令碼  
  指令碼可透過 `msxsl:script` 擴充項目內嵌在樣式表中。 指令碼支援是 <xref:System.Xml.Xsl.XslCompiledTransform> 類別上的選擇性功能 (預設為停用)。 可透過將 <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> 屬性設為 `true`，並將 <xref:System.Xml.Xsl.XsltSettings> 物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 方法，即可啟用指令碼。  
   
-#### <a name="guidelines"></a>方針  
+#### <a name="guidelines"></a>指導方針  
  僅在樣式表來自受信任來源時啟用指令碼。 如果無法驗證樣式表的來源，或樣式表不是來自受信任來源，請傳入 `null` 做為 XSLT 設定引數。  
   
 ## <a name="external-resources"></a>外部資源  
@@ -41,7 +41,7 @@ XSLT 語言具有一組豐富的功能，可讓您擁有強大的能力與彈性
   
  <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 及 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法都包含多載，可接受 <xref:System.Xml.XmlResolver> 做為其中一個引數。 如果未指定 <xref:System.Xml.XmlResolver>，則會使用沒有任何認證的預設 <xref:System.Xml.XmlUrlResolver>。  
   
-#### <a name="guidelines"></a>方針  
+#### <a name="guidelines"></a>指導方針  
  僅在樣式表來自受信任來源時啟用 `document()` 函式。  
   
  下列清單說明何時您可能想要指定 <xref:System.Xml.XmlResolver> 物件：  
@@ -54,8 +54,8 @@ XSLT 語言具有一組豐富的功能，可讓您擁有強大的能力與彈性
   
 - 如果要確保不存取任何外部資源，您可對 `null` 引數指定 <xref:System.Xml.XmlResolver>。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [XSLT 轉換](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [XSLT 處理期間解析外部資源](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)
-- [程式碼存取安全性](../../../../docs/framework/misc/code-access-security.md)
+- [代碼啟用安全性](../../../../docs/framework/misc/code-access-security.md)
