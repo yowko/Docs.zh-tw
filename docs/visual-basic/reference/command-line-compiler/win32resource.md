@@ -16,37 +16,37 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72004957"
 ---
-# <a name="-win32resource"></a><span data-ttu-id="d0003-102">-win32resource</span><span class="sxs-lookup"><span data-stu-id="d0003-102">-win32resource</span></span>
-<span data-ttu-id="d0003-103">將 Win32 資源檔插入輸出檔中。</span><span class="sxs-lookup"><span data-stu-id="d0003-103">Inserts a Win32 resource file in the output file.</span></span>  
+# <a name="-win32resource"></a><span data-ttu-id="ab84a-102">-win32resource</span><span class="sxs-lookup"><span data-stu-id="ab84a-102">-win32resource</span></span>
+<span data-ttu-id="ab84a-103">將 Win32 資源檔插入輸出檔中。</span><span class="sxs-lookup"><span data-stu-id="ab84a-103">Inserts a Win32 resource file in the output file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0003-104">語法</span><span class="sxs-lookup"><span data-stu-id="d0003-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab84a-104">語法</span><span class="sxs-lookup"><span data-stu-id="ab84a-104">Syntax</span></span>  
   
 ```console  
 -win32resource:filename  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="d0003-105">引數</span><span class="sxs-lookup"><span data-stu-id="d0003-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="ab84a-105">引數</span><span class="sxs-lookup"><span data-stu-id="ab84a-105">Arguments</span></span>  
  `filename`  
- <span data-ttu-id="d0003-106">要新增至輸出檔的資源檔名稱。</span><span class="sxs-lookup"><span data-stu-id="d0003-106">The name of the resource file to add to your output file.</span></span> <span data-ttu-id="d0003-107">將檔案名括在引號（""）中（如果它包含空格）。</span><span class="sxs-lookup"><span data-stu-id="d0003-107">Enclose the file name in quotation marks (" ") if it contains a space.</span></span>  
+ <span data-ttu-id="ab84a-106">要新增至輸出檔的資源檔名稱。</span><span class="sxs-lookup"><span data-stu-id="ab84a-106">The name of the resource file to add to your output file.</span></span> <span data-ttu-id="ab84a-107">將檔案名括在引號（""）中（如果它包含空格）。</span><span class="sxs-lookup"><span data-stu-id="ab84a-107">Enclose the file name in quotation marks (" ") if it contains a space.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d0003-108">備註</span><span class="sxs-lookup"><span data-stu-id="d0003-108">Remarks</span></span>  
- <span data-ttu-id="d0003-109">您可以使用 Microsoft Windows 資源編譯器（RC）來建立 Win32 資源檔。</span><span class="sxs-lookup"><span data-stu-id="d0003-109">You can create a Win32 resource file with the Microsoft Windows Resource Compiler (RC).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ab84a-108">備註</span><span class="sxs-lookup"><span data-stu-id="ab84a-108">Remarks</span></span>  
+ <span data-ttu-id="ab84a-109">您可以使用 Microsoft Windows 資源編譯器（RC）來建立 Win32 資源檔。</span><span class="sxs-lookup"><span data-stu-id="ab84a-109">You can create a Win32 resource file with the Microsoft Windows Resource Compiler (RC).</span></span>  
   
- <span data-ttu-id="d0003-110">Win32 資源可以包含版本或點陣圖（圖示）資訊，協助您在 [檔案**瀏覽器**] 中識別您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="d0003-110">A Win32 resource can contain version or bitmap (icon) information that helps identify your application in **File Explorer**.</span></span> <span data-ttu-id="d0003-111">如果您未指定 `-win32resource`，編譯器會根據元件版本產生版本資訊。</span><span class="sxs-lookup"><span data-stu-id="d0003-111">If you do not specify `-win32resource`, the compiler generates version information based on the assembly version.</span></span> <span data-ttu-id="d0003-112">`-win32resource` 和 `-win32icon` 選項是互斥的。</span><span class="sxs-lookup"><span data-stu-id="d0003-112">The `-win32resource` and `-win32icon` options are mutually exclusive.</span></span>  
+ <span data-ttu-id="ab84a-110">Win32 資源可以包含版本或點陣圖（圖示）資訊，協助您在 [檔案**瀏覽器**] 中識別您的應用程式。</span><span class="sxs-lookup"><span data-stu-id="ab84a-110">A Win32 resource can contain version or bitmap (icon) information that helps identify your application in **File Explorer**.</span></span> <span data-ttu-id="ab84a-111">如果您未指定`-win32resource`，編譯器會根據元件版本產生版本資訊。</span><span class="sxs-lookup"><span data-stu-id="ab84a-111">If you do not specify `-win32resource`, the compiler generates version information based on the assembly version.</span></span> <span data-ttu-id="ab84a-112">`-win32resource` 和 `-win32icon` 選項互斥。</span><span class="sxs-lookup"><span data-stu-id="ab84a-112">The `-win32resource` and `-win32icon` options are mutually exclusive.</span></span>  
   
- <span data-ttu-id="d0003-113">請參閱[-linkresource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/linkresource.md)來參考 .NET Framework 資源檔，或使用[-resource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/resource.md)來附加 .NET Framework 資源檔。</span><span class="sxs-lookup"><span data-stu-id="d0003-113">See [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) to reference a .NET Framework resource file, or [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) to attach a .NET Framework resource file.</span></span>  
+ <span data-ttu-id="ab84a-113">請參閱[-linkresource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/linkresource.md)來參考 .NET Framework 資源檔，或使用[-resource （Visual Basic）](../../../visual-basic/reference/command-line-compiler/resource.md)來附加 .NET Framework 資源檔。</span><span class="sxs-lookup"><span data-stu-id="ab84a-113">See [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) to reference a .NET Framework resource file, or [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) to attach a .NET Framework resource file.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="d0003-114">Visual Studio 開發環境中無法使用 [`-win32resource`] 選項;只有在從命令列編譯時，才可以使用它。</span><span class="sxs-lookup"><span data-stu-id="d0003-114">The `-win32resource` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
+> <span data-ttu-id="ab84a-114">此`-win32resource`選項無法在 Visual Studio 開發環境中使用;只有在從命令列編譯時，才可以使用它。</span><span class="sxs-lookup"><span data-stu-id="ab84a-114">The `-win32resource` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d0003-115">範例</span><span class="sxs-lookup"><span data-stu-id="d0003-115">Example</span></span>  
- <span data-ttu-id="d0003-116">下列程式碼會編譯 `In.vb` 並附加 Win32 資源檔，`Rf.res`：</span><span class="sxs-lookup"><span data-stu-id="d0003-116">The following code compiles `In.vb` and attaches a Win32 resource file, `Rf.res`:</span></span>  
+## <a name="example"></a><span data-ttu-id="ab84a-115">範例</span><span class="sxs-lookup"><span data-stu-id="ab84a-115">Example</span></span>  
+ <span data-ttu-id="ab84a-116">下列程式碼會`In.vb`編譯並附加 Win32 資源檔`Rf.res`：</span><span class="sxs-lookup"><span data-stu-id="ab84a-116">The following code compiles `In.vb` and attaches a Win32 resource file, `Rf.res`:</span></span>  
   
 ```console  
 vbc -win32resource:rf.res in.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d0003-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d0003-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab84a-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ab84a-117">See also</span></span>
 
-- [<span data-ttu-id="d0003-118">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="d0003-118">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="d0003-119">編譯命令列範例</span><span class="sxs-lookup"><span data-stu-id="d0003-119">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [<span data-ttu-id="ab84a-118">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="ab84a-118">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="ab84a-119">編譯命令列範例</span><span class="sxs-lookup"><span data-stu-id="ab84a-119">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
