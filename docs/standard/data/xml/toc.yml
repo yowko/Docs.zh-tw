@@ -170,19 +170,19 @@
                   href: script-blocks-using-msxsl-script.md
             - name: 可復原的 XSLT 錯誤
               href: recoverable-xslt-errors.md
-            - name: HOW TO：轉換節點片段
+            - name: 作法：轉換節點片段
               href: how-to-transform-a-node-fragment.md
         - name: 從 XslTransform 類別移轉
           href: migrating-from-the-xsltransform-class.md
           items:
-            - name: HOW TO：移轉 XslTransform 程式碼
+            - name: 作法：移轉 XslTransform 程式碼
               href: how-to-migrate-your-xsltransform-code.md
         - name: XSLT 安全性考量
           href: xslt-security-considerations.md
         - name: XSLT 編譯器 (xsltc.exe)
           href: xslt-compiler-xsltc-exe.md
           items:
-            - name: HOW TO：使用組件執行 XSLT 轉換
+            - name: 作法：使用組件執行 XSLT 轉換
               href: how-to-perform-an-xslt-transformation-by-using-an-assembly.md
         - name: 使用 XslTransform 類別進行 XSLT 轉換
           href: xslt-transformations-with-the-xsltransform-class.md
