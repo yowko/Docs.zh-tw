@@ -14,25 +14,25 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/15/2020
 ms.locfileid: "74329544"
 ---
-# <a name="accessing-the-keyboard-visual-basic"></a><span data-ttu-id="70d31-102">存取鍵盤 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70d31-102">Accessing the Keyboard (Visual Basic)</span></span>
+# <a name="accessing-the-keyboard-visual-basic"></a><span data-ttu-id="ab199-102">存取鍵盤 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ab199-102">Accessing the Keyboard (Visual Basic)</span></span>
 
-<span data-ttu-id="70d31-103">`My.Computer.Keyboard` 物件提供的屬性可存取鍵盤目前的狀態，例如目前已按下哪些按鍵，並提供方法將按鍵輸入傳送至使用中的視窗。</span><span class="sxs-lookup"><span data-stu-id="70d31-103">The `My.Computer.Keyboard` object provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.</span></span>  
+<span data-ttu-id="ab199-103">`My.Computer.Keyboard` 物件提供的屬性可存取鍵盤目前的狀態，例如目前已按下哪些按鍵，並提供方法將按鍵輸入傳送至使用中的視窗。</span><span class="sxs-lookup"><span data-stu-id="ab199-103">The `My.Computer.Keyboard` object provides properties for accessing the current state of the keyboard, such as what keys are currently pressed, and provides a method to send keystrokes to the active window.</span></span>  
   
-## <a name="tasks"></a><span data-ttu-id="70d31-104">工作</span><span class="sxs-lookup"><span data-stu-id="70d31-104">Tasks</span></span>  
+## <a name="tasks"></a><span data-ttu-id="ab199-104">工作</span><span class="sxs-lookup"><span data-stu-id="ab199-104">Tasks</span></span>  
 
- <span data-ttu-id="70d31-105">此表列出與 `My.Computer.Keyboard` 物件建立關聯的工作，並指向示範各項工作執行方法的主題。</span><span class="sxs-lookup"><span data-stu-id="70d31-105">This table lists tasks associated with the `My.Computer.Keyboard` object and points to topics demonstrating how to perform each task.</span></span>  
+ <span data-ttu-id="ab199-105">此表列出與 `My.Computer.Keyboard` 物件建立關聯的工作，並指向示範各項工作執行方法的主題。</span><span class="sxs-lookup"><span data-stu-id="ab199-105">This table lists tasks associated with the `My.Computer.Keyboard` object and points to topics demonstrating how to perform each task.</span></span>  
   
-|<span data-ttu-id="70d31-106">至</span><span class="sxs-lookup"><span data-stu-id="70d31-106">To</span></span>|<span data-ttu-id="70d31-107">請參閱</span><span class="sxs-lookup"><span data-stu-id="70d31-107">See</span></span>|  
+|<span data-ttu-id="ab199-106">至</span><span class="sxs-lookup"><span data-stu-id="ab199-106">To</span></span>|<span data-ttu-id="ab199-107">請參閱</span><span class="sxs-lookup"><span data-stu-id="ab199-107">See</span></span>|  
 |--------|---------|  
-|<span data-ttu-id="70d31-108">判斷 CAPS LOCK 是否開啟</span><span class="sxs-lookup"><span data-stu-id="70d31-108">Determine whether CAPS LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
-|<span data-ttu-id="70d31-109">判斷 SHIFT 鍵是否關閉</span><span class="sxs-lookup"><span data-stu-id="70d31-109">Determine whether the SHIFT key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  
-|<span data-ttu-id="70d31-110">判斷 ALT 鍵是否關閉</span><span class="sxs-lookup"><span data-stu-id="70d31-110">Determine whether the ALT key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.AltKeyDown%2A>|  
-|<span data-ttu-id="70d31-111">判斷 CTRL 鍵是否關閉</span><span class="sxs-lookup"><span data-stu-id="70d31-111">Determine whether the CTRL key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
-|<span data-ttu-id="70d31-112">判斷 NUM LOCK 是否開啟</span><span class="sxs-lookup"><span data-stu-id="70d31-112">Determine whether NUM LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
-|<span data-ttu-id="70d31-113">判斷 SCROLL LOCK 是否開啟</span><span class="sxs-lookup"><span data-stu-id="70d31-113">Determine whether SCROLL LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
-|<span data-ttu-id="70d31-114">啟動應用程式並且將按鍵輸入傳送至該應用程式</span><span class="sxs-lookup"><span data-stu-id="70d31-114">Start an application and send it keystrokes</span></span>|[<span data-ttu-id="70d31-115">如何：啟動應用程式並且將按鍵傳送至該應用程式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="70d31-115">How to: Start an Application and Send it Keystrokes (Visual Basic)</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
+|<span data-ttu-id="ab199-108">判斷 CAPS LOCK 是否開啟</span><span class="sxs-lookup"><span data-stu-id="ab199-108">Determine whether CAPS LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
+|<span data-ttu-id="ab199-109">判斷 SHIFT 鍵是否關閉</span><span class="sxs-lookup"><span data-stu-id="ab199-109">Determine whether the SHIFT key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  
+|<span data-ttu-id="ab199-110">判斷 ALT 鍵是否關閉</span><span class="sxs-lookup"><span data-stu-id="ab199-110">Determine whether the ALT key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.AltKeyDown%2A>|  
+|<span data-ttu-id="ab199-111">判斷 CTRL 鍵是否關閉</span><span class="sxs-lookup"><span data-stu-id="ab199-111">Determine whether the CTRL key is down</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
+|<span data-ttu-id="ab199-112">判斷 NUM LOCK 是否開啟</span><span class="sxs-lookup"><span data-stu-id="ab199-112">Determine whether NUM LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
+|<span data-ttu-id="ab199-113">判斷 SCROLL LOCK 是否開啟</span><span class="sxs-lookup"><span data-stu-id="ab199-113">Determine whether SCROLL LOCK is on</span></span>|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
+|<span data-ttu-id="ab199-114">啟動應用程式並且將按鍵輸入傳送至該應用程式</span><span class="sxs-lookup"><span data-stu-id="ab199-114">Start an application and send it keystrokes</span></span>|[<span data-ttu-id="ab199-115">如何：啟動應用程式並且將按鍵傳送至該應用程式 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ab199-115">How to: Start an Application and Send it Keystrokes (Visual Basic)</span></span>](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
   
-## <a name="see-also"></a><span data-ttu-id="70d31-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="70d31-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab199-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ab199-116">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Devices.Keyboard>
 - <xref:System.Windows.Forms.Keys?displayProperty=nameWithType>
