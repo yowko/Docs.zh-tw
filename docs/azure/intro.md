@@ -11,7 +11,7 @@ ms.locfileid: "82072141"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure 與 .NET 簡介
 
-本文檔概述了關鍵概念和服務 .NET 開發人員應熟悉以開始使用 Azure 服務開發應用。
+本檔概述 .NET 開發人員應該熟悉的重要概念和服務，以開始使用 Azure 服務來開發應用程式。
 
 ## <a name="key-concepts"></a>重要概念
 
@@ -47,9 +47,9 @@ Azure 中的託管可分為三類。
 * [Azure 虛擬機器](https://docs.microsoft.com/azure/virtual-machines/)：如果因為特定相依性，使得 App Service 無法符合您託管現有應用程式的需求，那麼最簡單的方式是從虛擬機器開始使用。 若要開始使用虛擬機器和 ASP.NET 或 WCF，請參閱[將 ASP.NET 應用程式部署到 Azure 虛擬機器](https://tutorials.visualstudio.com/aspnet-vm/intro)。
 
 > [!TIP]
-> 有關選擇服務的詳細資訊,請參閱[為應用程式選擇 Azure 計算服務](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree)。
+> 如需有關選擇服務的詳細資訊，請參閱[為您的應用程式選擇 Azure 計算服務](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree)。
 
-## <a name="choose-a-data-storage-service"></a>選擇資料儲存服務
+## <a name="choose-a-data-storage-service"></a>選擇資料儲存體服務
 
 根據您的需求，Azure 提供多個儲存資料的服務。 適用於 .NET 開發人員的最常見資料服務為：
 
@@ -76,6 +76,6 @@ Azure 中的託管可分為三類。
 ## <a name="next-steps"></a>後續步驟
 
 * [將第一個 ASP.NET Core Web 應用程式部署至 Azure](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet)
-* [瞭解 .NET 的 Azure SDK 中的身份驗證](./sdk/authentication.md)
+* [瞭解 Azure SDK for .NET 中的驗證](./sdk/authentication.md)
 * [診斷雲端應用程式中的錯誤](https://blogs.msdn.microsoft.com/webdev/2018/02/07/diagnosing-errors-on-your-cloud-apps)
 * 下載免費電子書：[適用於 .NET 開發人員的 Azure 快速入門手冊](https://www.microsoft.com/net/download/thank-you/azure-quick-start-ebook)
