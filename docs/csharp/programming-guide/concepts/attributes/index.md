@@ -1,12 +1,12 @@
 ---
 title: 屬性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389546"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645479"
 ---
 # <a name="attributes-c"></a>屬性 (C#)
 
@@ -81,7 +81,7 @@ ms.locfileid: "81389546"
 
 您可以指定`field`屬性套用至支援欄位的目標值建立[自動實作屬性](../../../properties.md)。
 
-下列範例示範如何將屬性套用到組件和模組。 如需詳細資訊，請參閱[常見屬性 (C#)](common-attributes.md)。
+下列範例示範如何將屬性套用到組件和模組。 如需詳細資訊，請參閱[常見屬性 (C#)](../../../language-reference/attributes/global.md)。
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ using System.Reflection;
 - [建立自訂屬性 (C#)](creating-custom-attributes.md)  
 - [使用反映存取屬性 (C#)](accessing-attributes-by-using-reflection.md)  
 - [如何使用屬性 (C#) 建立 C/C++聯合](how-to-create-a-c-cpp-union-by-using-attributes.md)  
-- [常見屬性 (C#)](common-attributes.md)  
+- [常見屬性 (C#)](../../../language-reference/attributes/global.md)  
 - [呼叫端資訊 (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>另請參閱

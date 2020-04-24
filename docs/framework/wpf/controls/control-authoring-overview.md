@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: a6ab5463cc28aa590454ae1304714d3d12ee7c6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243267"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646129"
 ---
 # <a name="control-authoring-overview"></a>控制項創作概述
 
@@ -38,7 +38,7 @@ ms.locfileid: "81243267"
 
 - **觸發器。** 允許您<xref:System.Windows.Trigger>動態更改控制件的外觀和行為,而無需創建新控制項。 例如,假設您應用程式中有多個<xref:System.Windows.Controls.ListBox>控制項,並希望每個<xref:System.Windows.Controls.ListBox>控制項中的項在選擇時為粗體和紅色。 您的第一本能可能是建立一個類別,該類別繼承<xref:System.Windows.Controls.ListBox>並重<xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A>寫 方法以更改所選項的外觀,但更好的方法是將觸發器添加到更改所選項外觀的<xref:System.Windows.Controls.ListBoxItem>樣式 。 觸發程序可讓您變更屬性值，或是依據屬性值採取動作。 使您能夠<xref:System.Windows.EventTrigger>在發生事件時執行操作。
 
-如需樣式、範本和觸發程序的詳細資訊，請參閱[設定樣式和範本](styling-and-templating.md)。
+如需樣式、範本和觸發程序的詳細資訊，請參閱[設定樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)。
 
 一般而言，若您的控制項可以對應到現有控制項的功能，但您希望控制項看起來不太一樣，則應該先考慮是否能使用本節中所討論的任何方法來變更現有控制項的外觀。
 

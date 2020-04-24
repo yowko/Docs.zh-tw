@@ -7,88 +7,88 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: dc56c09677d1054e8f264169b78638fa83bd7d9e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: eafbf54552566011fef9d2dbeb5e9f9fa3facabd
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734686"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646307"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Form 中的使用者輸入驗證
-當使用者在您的應用程式中輸入資料時，您可能會想要在應用程式使用資料之前先驗證其是否有效。 您可能需要某些文字欄位不是長度為零、欄位要格式化為電話號碼或其他類型的格式正確的資料，或字串未包含任何可能用來危害資料庫安全性的不安全字元。 Windows Forms 提供數種方式，讓您在應用程式中驗證輸入。  
+當使用者在應用程式中輸入數據時,您可能希望在應用程式使用數據之前驗證數據是否有效。 您可以要求某些文字欄位不是零長度,欄位必須格式化為電話號碼或其他類型的格式良好的資料,或者字串不包含任何可能用於危害資料庫安全性的不安全字元。 Windows 表單提供測試應用程式中輸入的方法。  
   
-## <a name="validation-with-the-maskedtextbox-control"></a>使用 MaskedTextBox 控制項進行驗證  
- 如果您需要讓使用者以妥善定義的格式（例如電話號碼或元件編號）輸入資料，可以使用 <xref:System.Windows.Forms.MaskedTextBox> 控制項，以最少的程式碼來完成這項操作。 *遮罩*是由遮罩語言中的字元所組成的字串，可指定要在文字方塊中的任何指定位置輸入哪些字元。 控制項會向使用者顯示一組提示。 如果使用者輸入不正確的專案（例如，使用者在需要數位時鍵入字母），控制項會自動拒絕輸入。  
+## <a name="validation-with-the-maskedtextbox-control"></a>使用遮罩  
+ 如果需要要求使用者以定義良好的格式(如電話號碼或部件號)輸入數據,則可以使用<xref:System.Windows.Forms.MaskedTextBox>控制項快速且使用最少的代碼完成此任務。 *蒙版*是由掩蔽語言中的字元組成的字串,用於指定可以在文本框中的任何給定位置輸入哪些字元。 該控件向用戶顯示一組提示。 如果用戶鍵入不正確的條目,例如,當使用者在需要數位時鍵入字母,控件將自動拒絕輸入。  
   
- <xref:System.Windows.Forms.MaskedTextBox> 所使用的遮罩語言非常有彈性。 它可讓您指定必要的字元、選擇性字元、常值字元，例如連字號和括弧、貨幣字元和日期分隔符號。 當系結至資料來源時，控制項也能正常運作。 資料系結上的 <xref:System.Windows.Forms.Binding.Format> 事件可用來重新格式化傳入的資料，以符合遮罩，而 <xref:System.Windows.Forms.Binding.Parse> 事件則可用來重新格式化傳出資料，以符合資料欄位的規格。  
+ 所使用的掩蔽語言<xref:System.Windows.Forms.MaskedTextBox>非常靈活。 它允許您指定所需的字元、可選字元、字面字元(如連字元和括弧、貨幣字元和日期分隔符)。 綁定到數據源時,該控件也工作正常。 數據<xref:System.Windows.Forms.Binding.Format>綁定上的事件可用於重格式化傳入數據以符合掩碼,<xref:System.Windows.Forms.Binding.Parse>該事件可用於重格式化傳出數據以符合數據欄位的規範。  
   
- 如需詳細資訊，請參閱[MaskedTextBox Control](./controls/maskedtextbox-control-windows-forms.md)。  
+ 關於詳細資訊,請參閱[影像文字盒控制 。](./controls/maskedtextbox-control-windows-forms.md)  
   
 ## <a name="event-driven-validation"></a>事件驅動驗證  
- 如果您想要完全以程式設計方式控制驗證，或需要執行複雜的驗證檢查，您應該使用大部分 Windows Forms 控制項內建的驗證事件。 每個接受自由形式使用者輸入的控制項都有一個 <xref:System.Windows.Forms.Control.Validating> 事件，每當控制項需要進行資料驗證時，就會發生這種情況。 在 <xref:System.Windows.Forms.Control.Validating> 事件處理方法中，您可以透過數種方式來驗證使用者輸入。 例如，如果您有一個必須包含郵遞區號的文字方塊，您可以利用下列方式來執行驗證：  
+ 如果要對驗證進行完全程式設計控制,或者需要執行複雜的驗證檢查,則應使用大多數 Windows 窗體控制項中內置的驗證事件。 接受自由格式使用者輸入的每個控制項都有一個<xref:System.Windows.Forms.Control.Validating>事件,該事件將在控制項需要數據驗證時發生。 在<xref:System.Windows.Forms.Control.Validating>事件處理方法中,您可以通過多種方式驗證使用者輸入。 例如,如果您有一個必須包含郵遞區編碼的文本框,則可以通過以下方式執行驗證:  
   
-- 如果郵遞區號必須屬於特定的 zip 代碼群組，您可以對輸入執行字串比較，以驗證使用者輸入的資料。 例如，如果郵遞區號必須位於 {10001，10002，10003} 的集合中，則您可以使用字串比較來驗證資料。  
+- 如果郵政編碼必須屬於特定的郵政編碼組,則可以對輸入執行字串比較,以驗證使用者輸入的數據。 例如,如果郵政編碼必須位於集 {10001、10002、10003}中,則可以使用字串比較來驗證數據。  
   
-- 如果郵遞區號必須是特定的表單，您可以使用正則運算式來驗證使用者所輸入的資料。 例如，若要驗證 `#####` 或 `#####-####`的表單，您可以使用正則運算式 `^(\d{5})(-\d{4})?$`。 若要驗證 `A#A #A#`的表單，您可以使用正則運算式 `[A-Z]\d[A-Z] \d[A-Z]\d`。 如需正則運算式的詳細資訊，請參閱[.NET Framework 正則運算式](../../standard/base-types/regular-expressions.md)和[正則運算式範例](../../standard/base-types/regular-expression-examples.md)。  
+- 如果郵政編碼必須採用特定形式,則可以使用正則表達式來驗證使用者輸入的數據。 例如,要驗證窗體`#####``#####-####`或 ,可以使用正規表示`^(\d{5})(-\d{4})?$`式 。 要驗證表單`A#A #A#`,可以使用正規表示式`[A-Z]\d[A-Z] \d[A-Z]\d`。 有關正規表示式的詳細資訊,請參閱[.NET 框架正規表示式](../../standard/base-types/regular-expressions.md)與[正規表示式範例](../../standard/base-types/regular-expression-example-scanning-for-hrefs.md)。  
   
-- 如果郵遞區號必須是有效的美國郵遞區號，您可以呼叫 Zip 代碼 Web 服務來驗證使用者所輸入的資料。  
+- 如果郵政編碼必須是有效的美國郵政編碼,您可以調用郵政編碼 Web 服務來驗證使用者輸入的數據。  
   
- <xref:System.Windows.Forms.Control.Validating> 的事件是由 <xref:System.ComponentModel.CancelEventArgs>類型的物件所提供。 如果您判斷控制項的資料無效，可以將此物件的 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 屬性設定為 `true`，以取消 <xref:System.Windows.Forms.Control.Validating> 事件。 如果您未設定 <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> 屬性，Windows Forms 會假設該控制項的驗證成功，並引發 <xref:System.Windows.Forms.Control.Validated> 事件。  
+ 事件<xref:System.Windows.Forms.Control.Validating>提供類型的<xref:System.ComponentModel.CancelEventArgs>物件 。 如果確定控制項的數據無效,則可以通過將此物件的<xref:System.Windows.Forms.Control.Validating><xref:System.ComponentModel.CancelEventArgs.Cancel%2A>屬性`true`設置為取消事件。 如果不設置屬性,Windows<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>窗體將假定該控件的驗證成功,並引發<xref:System.Windows.Forms.Control.Validated>該 事件。  
   
- 如需在 <xref:System.Windows.Controls.TextBox>中驗證電子郵件地址的程式碼範例，請參閱 <xref:System.Windows.Forms.Control.Validating>。  
+ 認證的電子郵件地址的代碼範例,<xref:System.Windows.Controls.TextBox>請參考<xref:System.Windows.Forms.Control.Validating>。  
   
-### <a name="data-binding-and-event-driven-validation"></a>資料系結和事件驅動驗證  
- 當您將控制項系結至資料來源（例如資料庫資料表）時，驗證會非常有用。 藉由使用驗證，您可以確定控制項的資料符合資料來源所需的格式，而且不包含任何特殊字元，例如引號和反斜線可能不安全。  
+### <a name="data-binding-and-event-driven-validation"></a>資料繫結和事件驅動驗證  
+ 當您將控制項裝置綁定到資料來源(如資料庫表)時,驗證非常有用。 通過使用驗證,可以確保控件的數據滿足數據來源所需的格式,並且不包含任何可能不安全的特殊字元,如引號和斜杠。  
   
- 當您使用資料系結時，控制項中的資料會在 <xref:System.Windows.Forms.Control.Validating> 事件執行期間與資料來源進行同步處理。 如果您取消 <xref:System.Windows.Forms.Control.Validating> 事件，資料將不會與資料來源同步處理。  
+ 使用數據綁定時,控件中的數據在執行<xref:System.Windows.Forms.Control.Validating>事件期間會與數據源同步。 如果取消該<xref:System.Windows.Forms.Control.Validating>事件,數據將不會與數據源同步。  
   
 > [!IMPORTANT]
-> 如果您有在 <xref:System.Windows.Forms.Control.Validating> 事件之後發生的自訂驗證，則不會影響資料系結。 例如，如果您在 <xref:System.Windows.Forms.Control.Validated> 事件中有嘗試取消資料系結的程式碼，資料系結仍然會發生。 在此情況下，若要在 <xref:System.Windows.Forms.Control.Validated> 事件中執行驗證，請將控制項的 [**資料來源更新模式]** 屬性（**在 [（** 資料系結）]\\ **（** [資料系結]）從**OnValidation**變更為 [**永不**]，並將*控制項*`.DataBindings["` *\<YOURFIELD >* `"].WriteValue()` 加入您的驗證程式  
+> 如果<xref:System.Windows.Forms.Control.Validating>具有在事件發生後進行的自定義驗證,則不會影響數據綁定。 例如,如果<xref:System.Windows.Forms.Control.Validated>嘗試取消數據綁定的事件有代碼,則數據綁定仍將發生。 在這種情況下,要<xref:System.Windows.Forms.Control.Validated>在事件中執行驗證,請將控制項的**資料來源更新模式**屬性(**下(資料綁定)(**\\**進階)** 從**On 驗證**更改為**從不**,並將*控制*`.DataBindings["`*\<YOURFIELD>*`"].WriteValue()`添加到驗證代碼中。  
   
-### <a name="implicit-and-explicit-validation"></a>隱含和明確驗證  
- 那麼，控制項的資料何時會通過驗證？ 這是由開發人員所負責。 視應用程式的需求而定，您可以使用隱含或明確驗證。  
+### <a name="implicit-and-explicit-validation"></a>隱含及繪圖型驗證  
+ 那麼,控件的數據何時得到驗證? 這由您,開發人員決定。 您可以根據應用程式的需求使用隱式或顯式驗證。  
   
-#### <a name="implicit-validation"></a>隱含驗證  
- 隱含驗證方法會在使用者輸入資料時進行驗證。 您可以在控制項中輸入資料時進行驗證，方法是讀取按下的按鍵，或在使用者將輸入焦點放在某個控制項時，更頻繁地進行，並移至下一個控制項。 當您想要讓使用者在資料正常運作時立即提供相關意見反應時，這個方法很有用。  
+#### <a name="implicit-validation"></a>隱式驗證  
+ 隱式驗證方法在使用者輸入數據時驗證數據。 通過在按鍵時讀取數據輸入數據時驗證數據,或者當使用者將輸入焦點從一個控制項移開並移動到下一個控制項時,更常見的驗證數據。 當您希望向使用者提供有關數據工作時的即時反饋時,此方法非常有用。  
   
- 如果您想要對控制項使用隱含驗證，則必須將該控制項的 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 屬性設定為 <xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange> 或 <xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>。 如果您取消 <xref:System.Windows.Forms.Control.Validating> 事件，控制項的行為將取決於您指派給 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>的值。 如果您指派 <xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange>，取消事件將導致 <xref:System.Windows.Forms.Control.Validated> 事件不會發生。 輸入焦點會保留在目前的控制項上，直到使用者將資料變更為有效的輸入為止。 如果您指派 <xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>，當您取消事件時不會發生 <xref:System.Windows.Forms.Control.Validated> 事件，但焦點仍然會變更為下一個控制項。  
+ 如果要對控制項使用隱式驗證,則必須將該控制項的屬性<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>設定<xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange>為<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>或 。 如果取消此<xref:System.Windows.Forms.Control.Validating>事件,控制項的行為將由分配給的值<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>決定 。 如果分配<xref:System.Windows.Forms.AutoValidate.EnablePreventFocusChange>,取消事件將<xref:System.Windows.Forms.Control.Validated>導致 事件不會發生。 輸入焦點將保留在當前控制項上,直到使用者將資料更改為有效輸入。 如果分配<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>了<xref:System.Windows.Forms.Control.Validated>,則取消事件時不會發生事件,但焦點仍將更改為下一個控件。  
   
- 將 <xref:System.Windows.Forms.AutoValidate.Disable> 指派給 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 屬性可防止全部隱含驗證。 若要驗證您的控制項，您必須使用明確驗證。  
+ 分配給<xref:System.Windows.Forms.AutoValidate.Disable><xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>屬性 可完全防止隱式驗證。 要驗證控件,必須使用顯式驗證。  
   
 #### <a name="explicit-validation"></a>明確驗證  
- 明確驗證方法會一次驗證資料。 您可以驗證資料以回應使用者動作，例如按一下 [儲存] 按鈕或 [下一步] 連結。 當使用者動作發生時，您可以透過下列其中一種方式來觸發明確驗證：  
+ 顯式驗證方法一次驗證數據。 您可以驗證數據以回應使用者操作,例如按一下「儲存」按鈕或「下一步」連結。 發生使用者操作時,可以通過以下方式之一觸發顯式驗證:  
   
-- 呼叫 <xref:System.Windows.Forms.ContainerControl.Validate%2A> 來驗證最後一個控制項是否失去焦點。  
+- 調用<xref:System.Windows.Forms.ContainerControl.Validate%2A>以驗證最後一個控件失去焦點。  
   
-- 呼叫 <xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A> 來驗證表單或容器控制項中的所有子控制項。  
+- 呼叫<xref:System.Windows.Forms.ContainerControl.ValidateChildren%2A>以驗證表單或容器控制件中的所有子控制件。  
   
-- 呼叫自訂方法以手動驗證控制項中的資料。  
+- 調用自定義方法以手動驗證控制項中的數據。  
   
-#### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Windows Forms 控制項的預設隱含驗證行為  
- 不同的 Windows Forms 控制項的 <xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> 屬性有不同的預設值。 下表顯示最常見的控制項及其預設值。  
+#### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Windows 表單控制項的預設隱式驗證行為  
+ 不同的 Windows 窗體控<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A>件對其 屬性具有不同的預設值。 下表顯示了最常見的控制件及其預設值。  
   
-|控制項|預設驗證行為|  
+|控制|預設驗證行為|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
-|<xref:System.Windows.Forms.PropertyGrid>|屬性未在 Visual Studio 中公開|  
-|<xref:System.Windows.Forms.ToolStripContainer>|屬性未在 Visual Studio 中公開|  
+|<xref:System.Windows.Forms.PropertyGrid>|未在視覺工作室中公開的屬性|  
+|<xref:System.Windows.Forms.ToolStripContainer>|未在視覺工作室中公開的屬性|  
 |<xref:System.Windows.Forms.SplitContainer>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
   
-## <a name="closing-the-form-and-overriding-validation"></a>關閉表單並覆寫驗證  
- 當控制項維護焦點時，因為它所包含的資料無效，所以無法以平常的其中一種方式關閉父表單：  
+## <a name="closing-the-form-and-overriding-validation"></a>關閉表單與覆寫驗證  
+ 當控件由於它包含的資料無效而保持焦點時,不可能以通常的方式之一關閉父窗體:  
   
-- 按一下 [**關閉**] 按鈕。  
+- 通過按下 **「關閉**」按鈕。  
   
-- 在 [**系統**] 功能表中選取 [**關閉**]。  
+- 通過在 **「系統**」功能表中選擇 **「關閉**」。  
   
-- 藉由以程式設計方式呼叫 <xref:System.Windows.Forms.Form.Close%2A> 方法。  
+- 通過以程式設計<xref:System.Windows.Forms.Form.Close%2A>方式調用方法。  
   
- 不過，在某些情況下，您可能會想要讓使用者關閉表單，而不論控制項中的值是否有效。 您可以藉由建立表單之 <xref:System.Windows.Forms.Form.FormClosing> 事件的處理常式，覆寫驗證，並關閉仍然包含無效資料的表單。 在事件中，將 [<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>] 屬性設定為 [`false`]。 這會強制關閉表單。 如需詳細資訊和範例，請參閱 <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>。  
+ 但是,在某些情況下,您可能希望讓使用者關閉窗體,而不管控件中的值是否有效。 您可以透過為表<xref:System.Windows.Forms.Form.FormClosing>單的事件建立處理程式來覆蓋驗證並關閉仍包含無效資料的表單。 在這種情況下,將<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>屬性設定`false`為 。 這將強制窗體關閉。 如需詳細資訊和範例，請參閱 <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>。  
   
 > [!NOTE]
-> 如果您強制表單以這種方式關閉，表單控制項中尚未儲存的任何資料都會遺失。 此外，強制回應表單在關閉時，不會驗證控制項的內容。 您仍然可以使用控制項驗證來鎖定控制項的焦點，但不需要擔心與關閉表單相關聯的行為。  
+> 如果強制以這種方式關閉窗體,則窗體控件中尚未保存的任何數據都將丟失。 此外,模態窗體在關閉控制項時不會驗證它們的內容。 您仍可以使用控制項驗證將焦點鎖定到控制項,但不必擔心與關閉窗體相關的行為。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -96,4 +96,4 @@ ms.locfileid: "76734686"
 - <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.FormClosingEventArgs?displayProperty=nameWithType>
 - [MaskedTextBox 控制項](./controls/maskedtextbox-control-windows-forms.md)
-- [規則運算式範例](../../standard/base-types/regular-expression-examples.md)
+- [規則運算式範例](../../standard/base-types/regular-expression-example-scanning-for-hrefs.md)

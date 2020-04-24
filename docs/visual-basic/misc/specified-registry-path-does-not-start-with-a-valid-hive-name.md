@@ -2,12 +2,12 @@
 title: 指定的登錄路徑開頭不是有效的登錄區名稱
 ms.date: 07/20/2015
 ms.assetid: afb1a03b-4516-450b-aab1-827a93f9e99d
-ms.openlocfilehash: 9686ade2043e48bebceb53fadc647b9229aeb660
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1fcd7fe76a76eec2f31f5cada92f6ef6dcd2a3c1
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660974"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646084"
 ---
 # <a name="specified-registry-path-does-not-start-with-a-valid-hive-name"></a>指定的登錄路徑開頭不是有效的登錄區名稱
 指定的登錄路徑開頭不是有效的登錄區名稱。 有效的登錄區名稱如下：  
@@ -32,6 +32,6 @@ ms.locfileid: "64660974"
   
 ## <a name="see-also"></a>另請參閱
 
-- [操作字串](../../standard/base-types/manipulating-strings.md)
+- [操作字串](../../standard/base-types/best-practices-strings.md)
 - [讀取和寫入登錄 (Visual Basic)](../developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
-- [My.Computer.Registry](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)
+- [我的.計算機.註冊](xref:Microsoft.VisualBasic.MyServices.RegistryProxy)

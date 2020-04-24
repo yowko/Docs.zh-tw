@@ -7,26 +7,26 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 313af6046fda8dd8905e8bda4e8c4aec187ef8bf
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 7c36f6126f0d779a43a22fc11e647ba2d3b03a30
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568409"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646062"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>如何：建立發行者原則
 
-元件的廠商可以指出應用程式應該使用較新版本的元件，方法是包含發行者原則檔案與已升級的元件。 發行者原則檔會指定元件重新導向和程式碼基底設定，並使用與應用程式佈建檔相同的格式。 發行者原則檔會編譯成元件，並放在全域組件快取中。
+程式集的供應商可以聲明應用程式應使用較新版本的程式集,通過將發佈者策略檔與升級的程式集一起。 發行者策略檔指定程式集重定向和代碼庫設置,並使用與應用程式設定檔相同的格式。 發行者策略檔編譯到程式集中並放置在全域程式集緩存中。
 
-建立發行者原則包含三個步驟：
+建立發行者政策涉及三個步驟:
 
-1. 建立發行者原則檔。
+1. 建立發行者策略檔。
 
-2. 建立發行者原則元件。
+2. 建立發行者策略程式集。
 
-3. 將發行者原則元件加入至全域組件快取。
+3. 將發行者策略程式集添加到全域程式集緩存。
 
-重新導向[元件版本](redirect-assembly-versions.md)中會描述發行者原則的架構。 下列範例顯示將一個 `myAssembly` 版本重新導向至另一個版本的發行者原則檔。
+發行者策略的架構在[重定向程式集版本](redirect-assembly-versions.md)中描述。 下面的範例顯示一個發行者策略檔,該檔將一`myAssembly`個版本重定向到另一個版本。
 
 ```xml
 <configuration>
@@ -45,13 +45,13 @@ ms.locfileid: "74568409"
 </configuration>
 ```
 
-若要瞭解如何指定程式碼基底，請參閱[指定元件的位置](specify-assembly-location.md)。
+要瞭解如何指定程式庫,請參閱[指定程式集的位置](specify-assembly-location.md)。
 
-## <a name="creating-the-publisher-policy-assembly"></a>建立發行者原則元件
+## <a name="creating-the-publisher-policy-assembly"></a>建立發行者原則程式集
 
-使用[元件連結器（al.exe）](../tools/al-exe-assembly-linker.md)來建立發行者原則元件。
+使用[程式集連結器 (Al.exe)](../tools/al-exe-assembly-linker.md)建立發行者策略程式集。
 
-#### <a name="to-create-a-publisher-policy-assembly"></a>若要建立發行者原則元件
+#### <a name="to-create-a-publisher-policy-assembly"></a>建立發行者原則程式集
 
 在命令提示字元中輸入下列命令：
 
@@ -59,38 +59,38 @@ ms.locfileid: "74568409"
 al /link:publisherPolicyFile /out:publisherPolicyAssemblyFile /keyfile:keyPairFile /platform:processorArchitecture
 ```
 
-在此命令中：
+在這個命令中：
 
-- `publisherPolicyFile` 引數是發行者原則檔的名稱。
+- 參數`publisherPolicyFile`是發布者策略檔的名稱。
 
-- `publisherPolicyAssemblyFile` 引數是此命令所產生之發行者原則元件的名稱。 元件檔案名的格式必須如下：
+- 該`publisherPolicyAssemblyFile`參數是此命令產生的發行者策略程式集的名稱。 程式集檔名稱必須遵循以下格式:
 
-  ' majorNumber. minorNumber. mainAssemblyName .dll '
+  "策略.主要編號.次要編號.mainAssemblyname.dll"
 
-- `keyPairFile` 引數是包含金鑰組的檔案名。 您必須使用相同的金鑰組來簽署元件和發行者原則元件。
+- 參數`keyPairFile`是包含金鑰對的檔的名稱。 您必須使用相同的金鑰對對程式集和發行者策略程式集進行簽名。
 
-- `processorArchitecture` 引數會識別特定處理器元件的目標平臺。
+- 參數`processorArchitecture`標識處理器特定程式集的目標平臺。
 
   > [!NOTE]
-  > 從 .NET Framework 2.0 開始，可以取得以特定處理器架構為目標的功能。
+  > 從 .NET 框架 2.0 開始,可以定位特定處理器體系結構。
 
-從 .NET Framework 2.0 開始，可以取得以特定處理器架構為目標的功能。 下列命令會從名為 `pub.config`的發行者原則檔案建立名為 `policy.1.0.myAssembly` 的發行者原則元件，並使用 `sgKey.snk` 檔案中的金鑰組，將強式名稱指派給元件，並指定元件以 x86 處理器架構為目標。
+從 .NET 框架 2.0 開始,可以定位特定處理器體系結構。 以下命令創建一個發佈者策略程式集`policy.1.0.myAssembly`,該程式集從稱為`pub.config`的 發行者策略檔調用`sgKey.snk`,使用 檔中的密鑰對向程式集分配強名稱,並指定程式集以 x86 處理器體系結構為目標。
 
 ```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
 ```
 
-發行者原則元件必須符合其適用之元件的處理器架構。 因此，如果您的元件具有 <xref:System.Reflection.ProcessorArchitecture.MSIL>的 <xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A> 值，則必須使用 `/platform:anycpu`來建立該元件的發行者原則元件。 您必須為每個處理器特定的元件提供個別的發行者原則元件。
+發行者策略程式集必須與它所應用的程式集的處理器體系結構匹配。 因此,如果程式集的值<xref:System.Reflection.AssemblyName.ProcessorArchitecture%2A>為<xref:System.Reflection.ProcessorArchitecture.MSIL>`/platform:anycpu` 您必須為每個特定於處理器的程式集提供單獨的發行者策略程式集。
 
-這項規則的結果是，若要變更元件的處理器架構，您必須變更版本號碼的主要或次要元件，讓您可以使用正確的處理器架構來提供新的發行者原則元件。 當您的元件有不同的處理器架構時，舊的發行者原則元件無法服務您的元件。
+此規則的結果是,為了更改程式集的處理器體系結構,必須更改版本號的主要或次要元件,以便可以使用正確的處理器體系結構提供新的發行者策略程式集。 一旦程式集具有不同的處理器體系結構,舊的發行者策略程式集將無法為程式集提供服務。
 
-另一個結果是版本2.0 連結器無法用來建立使用舊版 .NET Framework 所編譯之元件的發行者原則元件，因為它一律會指定處理器架構。
+另一個後果是,版本 2.0 連結器不能用於為使用早期版本的 .NET Framework 編譯的程式集創建發行者策略程式集,因為它始終指定處理器體系結構。
 
-## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>將發行者原則元件加入至全域組件快取
+## <a name="adding-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>將宣告者政策程式集到全域程式集快取
 
-使用[全域組件快取工具（Gacutil）](../tools/gacutil-exe-gac-tool.md) ，將發行者原則元件加入至全域組件快取。
+使用[全域程式集快取工具 (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md)將發布者策略程式集添加到全域程式集緩存。
 
-### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>將發行者原則元件加入至全域組件快取
+### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>將宣告者政策程式集到全域程式集快取
 
 在命令提示字元中輸入下列命令：
 
@@ -98,20 +98,20 @@ al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:
 gacutil /i publisherPolicyAssemblyFile
 ```
 
-下列命令會將 `policy.1.0.myAssembly.dll` 新增至全域組件快取。
+以下命令添加到`policy.1.0.myAssembly.dll`全域程式集緩存。
 
 ```console
 gacutil /i policy.1.0.myAssembly.dll
 ```
 
 > [!IMPORTANT]
-> 發行者原則元件無法加入全域組件快取中，除非 `/link` 引數中指定的原始發行者原則檔與元件位於相同的目錄中。
+> 除非`/link`參數中指定的原始發行者策略檔與程式集位於同一目錄中,否則無法將發行者策略程式集添加到全域程式集緩存中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [使用組件設計程式](../../standard/assembly/program.md)
+- [使用組件設計程式](../../standard/assembly/index.md)
 - [執行階段如何找出組件](../deployment/how-the-runtime-locates-assemblies.md)
-- [使用設定檔設定應用程式](index.md)
-- [執行階段設定結構描述](./file-schema/runtime/index.md)
-- [組態檔結構描述](./file-schema/index.md)
+- [使用組態檔設定應用程式](index.md)
+- [執行時設定架構](./file-schema/runtime/index.md)
+- [設定檔案架構](./file-schema/index.md)
 - [重新導向組件版本](redirect-assembly-versions.md)

@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-ms.openlocfilehash: 93fcd3215bdcbb30960f19e23ae15f32bb9ddd84
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 61429babf7378b9d271ffd60a6228ae4bfe7a5e5
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716089"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644253"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>工作平行程式庫和 PLINQ 中的 ETW 事件
 
-工作平行程式庫和 PLINQ 都會產生 Windows 事件追蹤 (ETW) 事件，您可使用 Windows Performance Analyzer 等工具，利用這些事件對應用程式進行程式碼剖析和疑難排解。 不過，在大部分的情況下，分析平行應用程式程式碼的最佳方式是在 Visual Studio 中使用並行[視覺化](/visualstudio/profiling/concurrency-visualizer)。
+工作平行程式庫和 PLINQ 都會產生 Windows 事件追蹤 (ETW) 事件，您可使用 Windows Performance Analyzer 等工具，利用這些事件對應用程式進行程式碼剖析和疑難排解。 但是,在大多數情況下,分析並行應用程式代碼的最佳方式是在可視化工作室中使用[併發可視化工具](/visualstudio/profiling/concurrency-visualizer)。
 
 ## <a name="task-parallel-library-etw-events"></a>工作平行程式庫 ETW 事件
 
@@ -29,7 +29,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>使用者資料
 
-|**Name**|**Type**|**描述**|
+|**名稱**|**型別**|**說明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|啟動迴圈的 TaskScheduler 識別碼。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|啟動迴圈的工作識別碼。|
@@ -45,7 +45,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>使用者資料
 
-|**Name**|**Type**|**描述**|
+|**名稱**|**型別**|**說明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|啟動迴圈的 TaskScheduler 識別碼。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|啟動迴圈的工作識別碼。|
@@ -59,7 +59,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>使用者資料
 
-|**Name**|**Type**|**描述**|
+|**名稱**|**型別**|**說明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|啟動迴圈的 TaskScheduler 識別碼。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|啟動迴圈的工作識別碼。|
@@ -75,7 +75,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>使用者資料
 
-|**Name**|**Type**|**描述**|
+|**名稱**|**型別**|**說明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|啟動迴圈的 TaskScheduler 識別碼。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|啟動迴圈的工作識別碼。|
@@ -93,7 +93,7 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>使用者資料
 
-|**Name**|**Type**|**描述**|
+|**名稱**|**型別**|**說明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|啟動迴圈的 TaskScheduler 識別碼。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|啟動迴圈的工作識別碼。|
@@ -106,14 +106,14 @@ EVENT_DESCRIPTOR.Id = 1
 
 #### <a name="user-data"></a>使用者資料
 
-|**Name**|**Type**|**描述**|
+|**名稱**|**型別**|**說明**|
 |--------------|--------------|---------------------|
 |OriginatingTaskSchedulerID|<xref:System.Int32?displayProperty=nameWithType>|啟動迴圈的 TaskScheduler 識別碼。|
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|啟動迴圈的工作識別碼。|
 |QueryID|<xref:System.Int32?displayProperty=nameWithType>|唯一的查詢識別碼。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 中的 ETW 事件](etw-events.md)
 - [工作平行程式庫 (TPL)](../../standard/parallel-programming/task-parallel-library-tpl.md)
-- [平行 LINQ (PLINQ)](../../standard/parallel-programming/parallel-linq-plinq.md)
+- [平行 LINQ (PLINQ)](../../standard/parallel-programming/introduction-to-plinq.md)

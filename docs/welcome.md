@@ -3,12 +3,12 @@ title: 歡迎使用 .NET
 description: 開始使用 .NET 系列的技術。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 64b9b0402631d34adc7ebd3bf8f7bc13416026b0
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635956"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646285"
 ---
 # <a name="welcome-to-net"></a>歡迎使用 .NET
 
@@ -33,7 +33,7 @@ ms.locfileid: "80635956"
 
 如需新增至 .NET 實作的最新功能與支援語言的相關資訊，請參閱以下文章：
 
-- [.NET Core 的新功能](core/whats-new/index.md)
+- [.NET Core 3.1 的新功能](core/whats-new/dotnet-core-3-1.md)
 - [.NET Framework 中的新功能](framework/whats-new/index.md)
 - [C# 的新功能](csharp/whats-new/index.md)
 - [Visual Basic 的新功能](visual-basic/getting-started/whats-new.md)
@@ -49,7 +49,7 @@ ms.locfileid: "80635956"
 - [F# 指南](fsharp/index.yml)
 - [視覺基本指南](visual-basic/index.yml)
 - [ML.NET指南](machine-learning/index.yml)
-- [.NET for Apache Spark](spark/index.yml)
+- [適用於 Apache Spark 的 .NET](spark/index.yml)
 - [.NET 應用程式架構](architecture/index.yml)
 
 此外，您可以瀏覽 [.NET API 參考](/dotnet/api)。
@@ -66,7 +66,7 @@ ms.locfileid: "80635956"
 
 - [.NET Core Home](https://github.com/dotnet/core) (.NET Core 首頁)
 - [.NET 核心執行時](https://github.com/dotnet/runtime)
-- [.NET 核心 SDK](https://github.com/dotnet/sdk)
+- [.NET Core SDK](https://github.com/dotnet/sdk)
 - [Roslyn (C# and Visual Basic) Compiler Platform and IDE Tools](https://github.com/dotnet/roslyn) (Roslyn (C# 和 Visual Basic) 編譯器平台和 IDE 工具)
 - [F# Compiler and IDE Tools](https://github.com/dotnet/fsharp) (F# 編譯器和 IDE 工具)
 - [Windows Forms](https://github.com/dotnet/winforms)

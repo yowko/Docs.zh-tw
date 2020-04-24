@@ -1,17 +1,17 @@
 ---
-title: 在 Debian 10 上安裝 .NET 內核 - 套裝軟體管理器 - .NET 內核
-description: 使用包管理器在 Debian 10 上安裝 .NET 核心 SDK 和運行時。
+title: 在 Debian 10 安裝 .NET 內核 - 套件管理員 - .NET 內核
+description: 使用包管理員在 Debian 10 上安裝 .NET 核心 SDK 和執行時。
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: fd6f42684aa9fb3ea9429b80f858459698a1b825
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: a312496ed9a26783198cdd038db7ffa2bdc7381e
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134320"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645283"
 ---
-# <a name="debian-10-package-manager---install-net-core"></a>Debian 10 套裝軟體管理器 - 安裝 .NET 內核
+# <a name="debian-10-package-manager---install-net-core"></a>Debian 10 套件管理員 -安裝 .NET 內核
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
@@ -19,12 +19,12 @@ ms.locfileid: "80134320"
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>註冊 Microsoft 金鑰和摘要
+## <a name="add-microsoft-repository-key-and-feed"></a>新增 Microsoft 儲存函式庫金鑰和來源
 
-在安裝 .NET 之前，您需要：
+在安裝 .NET 之前,您需要:
 
-- 註冊微軟金鑰。
-- 註冊產品存儲庫。
+- 將 Microsoft 包簽署金鑰添加到受信任金鑰清單中。
+- 將儲存庫添加到包管理員。
 - 安裝所需的依賴項。
 
 每部電腦只需要執行這項作業一次。
@@ -40,9 +40,9 @@ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 ```
 
-## <a name="install-the-net-core-sdk"></a>安裝 .NET Core SDK
+## <a name="install-the-net-core-sdk"></a>安裝 .NET 核心 SDK
 
-更新可供安裝的產品，然後安裝 .NET 核心 SDK。 在終端中，運行以下命令。
+更新可供安裝的產品,然後安裝 .NET 核心 SDK。 在終端中,運行以下命令。
 
 ```bash
 sudo apt-get update
@@ -51,9 +51,9 @@ sudo apt-get update
 sudo apt-get install dotnet-sdk-3.1
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a>安裝ASP.NET核心運行時
+## <a name="install-the-aspnet-core-runtime"></a>安裝ASP.NET核心執行時
 
-更新可供安裝的產品，然後安裝ASP.NET運行時。 在終端中，運行以下命令。
+更新可供安裝的產品,然後安裝ASP.NET運行時。 在終端中,運行以下命令。
 
 ```bash
 sudo apt-get update
@@ -62,9 +62,9 @@ sudo apt-get update
 sudo apt-get install aspnetcore-runtime-3.1
 ```
 
-## <a name="install-the-net-core-runtime"></a>安裝 .NET 核心運行時
+## <a name="install-the-net-core-runtime"></a>安裝 .NET 核心執行時
 
-更新可用於安裝的產品，然後安裝 .NET Core 運行時。 在終端中，運行以下命令。
+更新可用於安裝的產品,然後安裝 .NET Core 運行時。 在終端中,運行以下命令。
 
 ```bash
 sudo apt-get update
@@ -77,10 +77,10 @@ sudo apt-get install dotnet-runtime-3.1
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
 
-## <a name="troubleshoot-the-package-manager"></a>排除包管理器故障
+## <a name="troubleshoot-the-package-manager"></a>排除套件管理員故障
 
 本節提供有關在使用包管理器安裝 .NET Core 時可能得到的常見錯誤的資訊。
 
-### <a name="failed-to-fetch"></a>無法提取
+### <a name="failed-to-fetch"></a>無法擷取
 
 [!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

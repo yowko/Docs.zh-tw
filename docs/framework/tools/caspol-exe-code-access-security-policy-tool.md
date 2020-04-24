@@ -15,23 +15,23 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: 792d89351b3759984b085fd8aee9c3ae8e012c09
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5a4068d0bf6f6f158ea9b2880785e227f96243d
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180407"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645577"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
   
 > [!IMPORTANT]
-> 從 .NET 框架 4 開始，Caspol.exe 不會影響 CAS 策略，`true`[\<除非舊 CasPolicy> 元素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)設置為 。 只有在您選擇使用 CAS 原則後，CasPol.exe 所顯示或修改的任何設定才會影響應用程式。 如需詳細資訊，請參閱[安全性變更](../security/security-changes.md)。  
+> 從 .NET 架構 4 開始,Caspol.exe 不會`true`影響 CAS 策略,[\<除非舊 CasPolicy> 元素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)設定為 。 只有在您選擇使用 CAS 原則後，CasPol.exe 所顯示或修改的任何設定才會影響應用程式。 如需詳細資訊，請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。  
   
 > [!NOTE]
 > 64 位元電腦包含 64 位元和 32 位元版本的安全性原則。 為了確保您的原則變更同時套用至 32 位元和 64 位元應用程式，請執行 Caspol.exe 的 32 位元和 64 位元這兩種版本。  
   
- 程式碼存取安全性原則工具會自動隨 .NET Framework 和 Visual Studio 安裝。 您可以在 32 位元系統上的 %windir%\Microsoft.NET\Framework\\*版本* 或 64 位元系統上的 %windir%\Microsoft.NET\Framework64\\*版本* 找到 Caspol.exe  （例如，64 位系統上的 .NET 框架 4 的位置為 %windir%\Microsoft.NET_Framework64_v4.030319_caspol.exe。如果您的電腦並排運行多個版本的 .NET Framework，則該工具的多個版本可能會安裝。 您可以從安裝目錄執行此工具。 不過，建議您使用[命令提示字元](developer-command-prompt-for-vs.md)，就不需要巡覽至安裝資料夾。  
+ 程式碼存取安全性原則工具會自動隨 .NET Framework 和 Visual Studio 安裝。 您可以在 32 位元系統上的 %windir%\Microsoft.NET\Framework\\*版本* 或 64 位元系統上的 %windir%\Microsoft.NET\Framework64\\*版本* 找到 Caspol.exe  (例如,64 位元系統上的 .NET 框架 4 的位置為 %windir%\Microsoft.NET_Framework64_v4.030319_caspol.exe。如果您的電腦並排運行多個版本的 .NET Framework,則該工具的多個版本可能會安裝。 您可以從安裝目錄執行此工具。 不過，建議您使用[命令提示字元](developer-command-prompt-for-vs.md)，就不需要巡覽至安裝資料夾。  
   
  在命令提示字元中，請輸入下列項目：  
   
@@ -54,7 +54,7 @@ caspol [options]
 |**-customall**  *path*<br /><br /> 或<br /><br /> **-ca**  *path*|指出這個選項之後的所有選項都會套用至電腦、企業和指定的自訂使用者原則。 您必須使用 *path* 引數來指定自訂使用者的安全性組態檔位置。|  
 |**-cu**[**stomuser**] *path*|允許管理不屬於目前執行 Caspol.exe 之使用者的自訂使用者原則。 您必須使用 *path* 引數來指定自訂使用者的安全性組態檔位置。|  
 |**-企業**<br /><br /> 或<br /><br /> **-en**|指出這個選項之後的所有選項都會套用至企業層級原則。 不是企業系統管理員的使用者沒有足夠的權限可修改企業原則，但是可以檢視原則。 在非企業情節中，這個原則預設不會與電腦和使用者原則牴觸。|  
-|**-e**[**xecution**] {**on** &#124; **off**}|開啟或關閉在程式碼開始執行前檢查要執行之權限的機制。 **注：** 此開關在 .NET 框架 4 和更高版本中被刪除。 如需詳細資訊，請參閱[安全性變更](../security/security-changes.md)。|  
+|**-e**[**xecution**] {**on** &#124; **off**}|開啟或關閉在程式碼開始執行前檢查要執行之權限的機制。 **註:** 此開關在 .NET 框架 4 和更高版本中被刪除。 如需詳細資訊，請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。|  
 |**-f**=**奧爾西**||抑制工具的自行解構測試，並依照使用者指定的方式變更原則。 一般來說，Caspol.exe 會檢查是否有造成 Caspol.exe 本身無法正常執行的任何原則變更，如果有的話，Caspol.exe 不會儲存該原則變更，而且會印出錯誤訊息。 若要強制 Caspol.exe 變更原則 (即使這個原則會造成 Caspol.exe 本身無法執行)，請使用 **–force** 選項。|  
 |**-h**=**埃爾普**||顯示 Caspol.exe 的命令語法和選項。|  
 |**-l**=**ist**=|列出程式碼群組階層架構以及所指定電腦、使用者、企業或所有原則層級的權限集合。 Caspol.exe 會先顯示程式碼群組的標籤，後面接著名稱 (如果不是 null 的話)。|  
@@ -73,7 +73,7 @@ caspol [options]
 |**-resetlockdown**<br /><br /> 或<br /><br /> **-rsld**|將原則回復為預設狀態的更嚴格版本並將它保存至磁碟，建立先前電腦原則的備份並將它保存至稱為 `security.config.bac` 的檔案。  鎖定原則類似於預設原則，差別在於鎖定原則不會授與可從 `Local Intranet`、`Trusted Sites` 和 `Internet` 區域撰寫程式碼的權限，而且對應的程式碼群組沒有子程式碼群組。|  
 |**-resolvegroup** *assembly_file*<br /><br /> 或<br /><br /> **-rsg**  *assembly_file*|顯示特定組件 (*assembly_file*) 所屬的程式碼群組。 根據預設，這個選項會顯示組件所屬的電腦、使用者和企業原則層級。 若只要檢視一個原則層級，請搭配使用這個選項與 **-machine**、**-user** 或 **-enterprise** 選項。|  
 |**-resolveperm** *assembly_file*<br /><br /> 或<br /><br /> **-rsp** *assembly_file*|在允許組件執行的情況下，顯示指定 (或預設) 的安全性原則層級會授與該組件的所有權限。 *assembly_file* 引數會指定組件。 如果指定 **-all** 選項，Caspol.exe 會根據使用者、電腦和企業原則計算組件的權限；若未指定，則會套用預設行為規則。|  
-|**-s**[**ecurity**] {**on** &#124; **off**}|開啟或關閉程式碼存取安全性。 指定 **-s off** 選項時，並不會停用以角色為基礎的安全性。 **注：** 此開關在 .NET 框架 4 和更高版本中被刪除。 如需詳細資訊，請參閱[安全性變更](../security/security-changes.md)。 **注意：** 停用程式碼存取安全性時，所有的程式碼存取要求都會成功。 停用程式碼存取安全性會讓系統容易受惡意程式碼的攻擊，如病毒和破壞程式。 關閉安全性可獲得額外的效能，但是只有在已採取其他安全措施來協助確保整體系統安全性沒有漏洞的情況下，才可以這樣做。 其他安全性措施的範例，包括從公用網路中斷連結、用實際方法保全電腦等等。|  
+|**-s**[**ecurity**] {**on** &#124; **off**}|開啟或關閉程式碼存取安全性。 指定 **-s off** 選項時，並不會停用以角色為基礎的安全性。 **註:** 此開關在 .NET 框架 4 和更高版本中被刪除。 如需詳細資訊，請參閱[安全性變更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)。 **注意：** 停用程式碼存取安全性時，所有的程式碼存取要求都會成功。 停用程式碼存取安全性會讓系統容易受惡意程式碼的攻擊，如病毒和破壞程式。 關閉安全性可獲得額外的效能，但是只有在已採取其他安全措施來協助確保整體系統安全性沒有漏洞的情況下，才可以這樣做。 其他安全性措施的範例，包括從公用網路中斷連結、用實際方法保全電腦等等。|  
 |**-u**=**ser**||指出這個選項之後的所有選項都會套用至執行 Caspol.exe 之使用者的使用者層級原則。 對於非系統管理使用者，**-user** 是預設值。|  
 |**-?**|顯示 Caspol.exe 的命令語法和選項。|  
   
@@ -247,4 +247,4 @@ caspol -all -resolveperm testassembly
 ## <a name="see-also"></a>另請參閱
 
 - [工具](index.md)
-- [命令提示字元](developer-command-prompt-for-vs.md)
+- [指令提示](developer-command-prompt-for-vs.md)

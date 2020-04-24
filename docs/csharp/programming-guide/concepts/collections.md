@@ -2,12 +2,12 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: a560155b936aef7a4a346d39eaed75e0a85c1a73
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2996648690fc03b5f1d6a90e0be96155c5a24ed
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169879"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645473"
 ---
 # <a name="collections-c"></a>集合 (C#)
 
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>使用 LINQ 存取集合
 
-LINQ (Language-Integrated Query (LINQ)) 可用來存取集合。 LINQ 查詢提供篩選、排序和分組功能。 有關詳細資訊，請參閱在[C# 中使用 LINQ 入門](linq/index.md)。
+LINQ (Language-Integrated Query (LINQ)) 可用來存取集合。 LINQ 查詢提供篩選、排序和分組功能。 有關詳細資訊,請參閱在[C# 中使用 LINQ 入門](linq/index.md)。
 
 下列範例會對泛型 `List` 執行 LINQ 查詢。 LINQ 查詢會傳回包含結果的不同集合。
 
@@ -561,7 +561,7 @@ public class Color
 
 <a name="BKMK_Iterators"></a>
 
-## <a name="iterators"></a>Iterator
+## <a name="iterators"></a>迭代器
 
 「迭代器」** 是用來在集合上執行自訂反覆項目。 迭代器可以是方法或 `get` 存取子。 迭代器會使用 [yield return](../../language-reference/keywords/yield.md) 陳述式，一次一個地傳回集合中的每個項目。
 
@@ -602,8 +602,8 @@ private static IEnumerable<int> EvenSequence(
 - [程式設計概念 (C#)](./index.md)
 - [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (C#)](./linq/linq-to-objects.md)
-- [平行 LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [平行 LINQ (PLINQ)](../../../standard/parallel-programming/introduction-to-plinq.md)
 - [集合和資料結構](../../../standard/collections/index.md)
 - [選取集合類別](../../../standard/collections/selecting-a-collection-class.md)
-- [在集合內比較和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)
-- [何時使用泛型集合](../../../standard/collections/when-to-use-generic-collections.md)
+- [集合中的比較和排序](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [何時使用一般集合](../../../standard/collections/when-to-use-generic-collections.md)

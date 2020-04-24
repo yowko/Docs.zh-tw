@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c73a61b8c251b12d5b3dac67535632322779a6af
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80636021"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644060"
 ---
 # <a name="dependency-properties-overview"></a>相依性屬性概觀
 
@@ -123,7 +123,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 > [!NOTE]
 > 繫結視為區域數值，這表示如果您設定另一個區域數值，就會排除繫結。 如需詳細資訊，請參閱[相依性屬性值優先順序](dependency-property-value-precedence.md)。
 
-為了產生資料繫結作業的 <xref:System.Windows.DependencyObject> 來源屬性值中變更之通知，相依性屬性或 <xref:System.Windows.DependencyObject> 類別並不原生支援 <xref:System.ComponentModel.INotifyPropertyChanged>。 如需如何建立資料繫結所用屬性的詳細資訊，該資料繫結可以報告資料繫結目標的變更，請參閱[資料繫結概觀](../data/data-binding-overview.md)。
+為了產生資料繫結作業的 <xref:System.Windows.DependencyObject> 來源屬性值中變更之通知，相依性屬性或 <xref:System.Windows.DependencyObject> 類別並不原生支援 <xref:System.ComponentModel.INotifyPropertyChanged>。 如需如何建立資料繫結所用屬性的詳細資訊，該資料繫結可以報告資料繫結目標的變更，請參閱[資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)。
 
 ### <a name="styles"></a>樣式
 樣式和範本是使用相依性屬性的兩大激勵案例。 樣式特別適用於設定定義應用程式 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 的屬性。 樣式通常會定義為 XAML 中的資源。 樣式與屬性系統互動，因為它們通常包含特定屬性的 "setter"，以及根據另一個屬性的即時值變更屬性值的「觸發程序」。
@@ -134,7 +134,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyle)]
 
-有關詳細資訊,請參閱[樣式和範本](../controls/styling-and-templating.md)化。
+有關詳細資訊,請參閱[樣式和範本](../../../desktop-wpf/fundamentals/styles-templates-overview.md)化。
 
 ### <a name="animations"></a>Animations
 相依性屬性可以動畫方式顯示。 套用並執行動畫時，動畫顯示值的運作優先於屬性可能執行的任何值 (例如本機值)。

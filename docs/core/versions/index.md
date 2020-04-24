@@ -2,12 +2,12 @@
 title: .NET Core Runtime 與 SDK 如何進行版本設定
 description: 此文章說明 .NET Core SDK 與 Runtime 如何進行版本設定 (類似語意式版本設定)。
 ms.date: 07/26/2018
-ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f166a6dfc1c9127eb629365efd628855489a60cb
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75777322"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644388"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 版本設定概觀
 
@@ -23,14 +23,14 @@ ms.locfileid: "75777322"
 
 SDK 版本號碼的第三個位置同時傳達次要與修補號碼。 次要版本會被乘以 100。 次要版本 1、修補版本 2 將以 102 表示。 最後兩位數代表修補號碼。 例如，.NET Core 2.2 的發行可能會建立如下表的發行版本：
 
-| 變更                | .NET Core 執行階段 | .NET 核心\*SDK （ ） |
+| 變更                | .NET Core 執行階段 | .NET\*核心 SDK ( ) |
 |-----------------------|-------------------|-------------------|
 | 初始版本       | 2.2.0             | 2.2.100           |
 | SDK 修補程式             | 2.2.0             | 2.2.101           |
 | 執行階段與 SDK 修補程式 | 2.2.1             | 2.2.102           |
 | SDK 功能變更    | 2.2.1             | 2.2.200           |
 
-（\*） 此圖表使用 2.2 .NET 核心運行時作為示例，因為歷史工件意味著 .NET Core 2.1 的第一個 SDK 是 2.1.300。 如需詳細資訊，請參閱 [.NET Core 版本選擇](selection.md)。
+(\*) 此圖表使用 2.2 .NET 核心運行時作為示例,因為歷史工件意味著 .NET Core 2.1 的第一個 SDK 是 2.1.300。 如需詳細資訊，請參閱 [.NET Core 版本選擇](selection.md)。
 
 注意：
 
@@ -106,8 +106,8 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="see-also"></a>另請參閱
 
-- [目標框架](../../standard/frameworks.md)
-- [.NET Core 發佈封裝](../build/distribution-packaging.md)
+- [目標 Framework](../../standard/frameworks.md)
+- [.NET Core 發佈封裝](../distribution-packaging.md)
 - [.NET Core 支援週期資料表](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3) (.NET Core 2+ 版本繫結)
 - [.NET Core 的 Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)

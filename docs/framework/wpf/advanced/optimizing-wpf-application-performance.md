@@ -1,5 +1,5 @@
 ---
-title: 優化應用程式效能
+title: 優化應用效能
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application rendering [WPF], performance
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: cc6ea051401199a87965565c920068fd55cb05d0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 54d69e87ef2a9c5318e394422e3bcfcabcc76210
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743941"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646254"
 ---
 # <a name="optimizing-wpf-application-performance"></a>最佳化 WPF 應用程式效能
-本節的目的是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式開發人員的參考，以尋找改善其應用程式效能的方法。 如果您是 Microsoft .NET Framework 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]新手的開發人員，您應該先熟悉這兩個平臺。 本章節假設您對兩者都有了解，而且是針對已經知道要讓應用程式啟動並執行的程式設計人員所撰寫的。  
+本節旨在為[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]尋求提高應用程式性能的應用程式開發人員提供參考。 如果您是 Microsoft .NET 框架的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開發人員, 並且應首先熟悉這兩個平臺。 本節假定兩者的工作知識,並編寫給已經瞭解到足以啟動和運行其應用程式的程式師。  
   
 > [!NOTE]
-> 本節所提供的效能資料是以在 2.8 GHz 電腦上執行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式為基礎，其中包含 512 RAM 和一個 ATI Radeon 9700 圖形配接器。  
+> 本節中提供的性能數據基於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]在具有 512 RAM 的 2.8 GHz PC 和 ATI Radeon 9700 顯卡上運行的應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
  [應用程式效能規劃](planning-for-application-performance.md)  
@@ -49,17 +49,17 @@ ms.locfileid: "76743941"
 - <xref:System.Windows.Media.RenderCapability>
 - [圖形轉譯層](graphics-rendering-tiers.md)
 - [WPF 圖形轉譯概觀](../graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [版面配置](layout.md)
+- [配置](layout.md)
 - [WPF 中的樹狀結構](trees-in-wpf.md)
 - [繪圖物件概觀](../graphics-multimedia/drawing-objects-overview.md)
 - [使用 DrawingVisual 物件](../graphics-multimedia/using-drawingvisual-objects.md)
 - [相依性屬性概觀](dependency-properties-overview.md)
 - [Freezable 物件概觀](freezable-objects-overview.md)
-- [XAML 資源](xaml-resources.md)
+- [XAML 資源](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [WPF 中的文件](documents-in-wpf.md)
 - [繪製格式化的文字](drawing-formatted-text.md)
 - [WPF 中的印刷樣式](typography-in-wpf.md)
-- [資料繫結概觀](../../../desktop-wpf/data/data-binding-overview.md)
+- [資料繫結概述](../../../desktop-wpf/data/data-binding-overview.md)
 - [瀏覽概觀](../app-development/navigation-overview.md)
-- [動畫祕訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)
+- [動畫秘訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)
 - [逐步解說：在 WPF 應用程式中快取應用程式資料](walkthrough-caching-application-data-in-a-wpf-application.md)

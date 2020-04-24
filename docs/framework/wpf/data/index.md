@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: aa8f872e807eccb81d0f1ca2c838485bb254c7c0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a1ea8e10225eb9a4dcd4f20a23820c3757445fbf
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460295"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646442"
 ---
 # <a name="data"></a>資料
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 元素可以系結至各種資料來源中的資料，其格式為 common language runtime （CLR）物件和 XML。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也提供透過拖放作業傳輸資料的機制。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 元素可以以通用語言執行時 (CLR) 物件和 XML 的形式綁定到來自各種資料源的數據。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也提供透過拖放作業傳輸資料的機制。  
   
-## <a name="in-this-section"></a>本章節內容  
- [資料繫結](data-binding-wpf.md)  
+## <a name="in-this-section"></a>本節內容  
+ [資料繫結](../../../desktop-wpf/data/data-binding-overview.md)  
  [拖放](../advanced/drag-and-drop.md)  
   
-## <a name="reference"></a>參考資料  
+## <a name="reference"></a>參考  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -38,7 +38,7 @@ ms.locfileid: "73460295"
   
  [資料繫結](../advanced/optimizing-performance-data-binding.md)  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-- [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [逐步解說：我的第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [逐步解說：在 WPF 應用程式中快取應用程式資料](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

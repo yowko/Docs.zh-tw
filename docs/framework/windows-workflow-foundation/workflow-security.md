@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 36d03a2fca8f143b98338050fc9da4490960bda9
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 2a9b26f8da7616480f69a6c4580b8d351833c9ee
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837515"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646309"
 ---
 # <a name="workflow-security"></a>工作流程安全性
-Windows Workflow Foundation （WF）與數種不同的技術整合，例如 Microsoft SQL Server 和 Windows Communication Foundation （WCF）。 如果與這些技術互動的方式不適當，可能會造成工作流程上的安全性問題。
+Windows 工作流基礎 (WF) 與多種不同技術集成,如 Microsoft SQL 伺服器和 Windows 通信基礎 (WCF)。 如果與這些技術互動的方式不適當，可能會造成工作流程上的安全性問題。
 
 ## <a name="persistence-security-concerns"></a>持續性安全性考量
 
@@ -38,14 +38,14 @@ Windows Workflow Foundation （WF）與數種不同的技術整合，例如 Micr
 
 ## <a name="considerations-for-workflowservicehost"></a>WorkflowServiceHost 的考量
 
-- 應保護工作流程中使用的 Windows Communication Foundation （WCF）端點。 如需詳細資訊，請參閱[WCF 安全性總覽](../wcf/feature-details/security-overview.md)。
+- 應保護工作流中使用的 Windows 通信基礎 (WCF) 終結點。 有關詳細資訊,請參閱[WCF 安全概述](../wcf/feature-details/security-overview.md)。
 
-- 可使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 實作主機層級授權。 如需詳細資訊，請參閱[如何：建立服務的自訂授權管理員](../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)。
+- 可使用 <xref:System.ServiceModel.ServiceAuthorizationManager> 實作主機層級授權。 有關詳細資訊[,請參閱如何:為服務建立自訂授權管理員](../wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)。
 
 - 傳入訊息的 ServiceSecurityContext 也可在工作流程內取得，方法是存取 OperationContext。
 
 ## <a name="wf-security-pack-ctp"></a>WF Security Pack CTP
- Microsoft WF Security Pack CTP 1 是一組活動的第一個「社區技術預覽」（CTP）版本，也是以[.NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) （WF 4）和[Windows IDENTITY Foundation （WIF）](../security/index.md)中的[Windows Workflow Foundation](index.md)為基礎的實施。  Microsoft WF Security Pack CTP 1 包含活動及其設計工具，說明如何使用工作流程輕鬆進行各種安全性相關的案例，包括：
+ 微軟 WF 安全包社區技術預覽 (CTP) 1 是基於[.NET 框架 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0x726c2(v=vs.100)) (WF 4) 和 Windows[標識基礎 (WIF)](https://docs.microsoft.com/previous-versions/dotnet/framework/security/index)中的[Windows 工作流基礎](index.md)的一組活動及其實現。 Microsoft WF Security Pack CTP 1 包含活動及其設計工具，說明如何使用工作流程輕鬆進行各種安全性相關的案例，包括：
 
 1. 在工作流程中模擬用戶端身分識別
 
@@ -55,4 +55,4 @@ Windows Workflow Foundation （WF）與數種不同的技術整合，例如 Micr
 
 4. 使用 WS-Trust ActAs 將用戶端安全性權杖傳到後端服務 (以宣告為基礎的委派)
 
-如需詳細資訊和下載 WF Security Pack CTP，請參閱： [Wf Security PACK ctp](https://archive.codeplex.com/?p=wf)
+有關詳細資訊並下載 WF 安全包 CTP,請參閱[:WF 安全包 CTP](https://archive.codeplex.com/?p=wf)

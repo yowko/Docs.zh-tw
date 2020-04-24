@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 9381873faa8cca1accf95d823f5183a218d28813
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463917"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646422"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>教學:在 Visual Studio 2019 建立您的第一個 WPF 應用程式
 
@@ -358,7 +358,7 @@ ms.locfileid: "81463917"
 
 ## <a name="style-controls"></a>樣式控制項
 
-對於 UI 中相同類型的所有元素,各種元素的外觀通常相同。 UI 使用[樣式](../controls/styling-and-templating.md)使外觀可跨多個元素重用。 樣式的可重用性有助於簡化 XAML 的創建和管理。 本節會將先前步驟中定義的個別元素屬性 (Attribute) 取代為樣式。
+對於 UI 中相同類型的所有元素,各種元素的外觀通常相同。 UI 使用[樣式](../../../desktop-wpf/fundamentals/styles-templates-overview.md)使外觀可跨多個元素重用。 樣式的可重用性有助於簡化 XAML 的創建和管理。 本節會將先前步驟中定義的個別元素屬性 (Attribute) 取代為樣式。
 
 1. 開啟*應用程式.xaml*或*App.xaml*。
 
@@ -481,7 +481,7 @@ ms.locfileid: "81463917"
 在本演練中,您學習了使用 Windows 演示文稿基礎 (WPF) 創建 UI 的多種技術。 現在,您應該對數據綁定 .NET 應用的構建基塊有基本的瞭解。 如需 WPF 架構和程式設計模型的詳細資訊，請參閱下列主題：
 
 - [WPF 架構](../advanced/wpf-architecture.md)
-- [XAML 概述 (WPF)](../advanced/xaml-overview-wpf.md)
+- [XAML 概述 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [相依屬性概述](../advanced/dependency-properties-overview.md)
 - [配置](../advanced/layout.md)
 

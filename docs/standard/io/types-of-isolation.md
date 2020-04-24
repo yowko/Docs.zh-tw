@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 9bbd2c3cdca9b2eaee268738bf99189b0be78eba
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 0e8be9b1d12d40f8135d21abe9dd6cb0b63bb2d8
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635738"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646399"
 ---
 # <a name="types-of-isolation"></a>隔離的類型
 對隔離儲存區的存取永遠限制於建立該隔離儲存區的使用者。 為實作這種類型的隔離，通用語言執行階段會使用作業系統可辨識的相同使用者身分識別概念，這是與開啟儲存區時，與程式碼執行所在處理序相關聯的身分識別。 此身分識別是一個經過驗證的使用者身分識別，但是模擬可能會造成目前使用者的身分識別動態變更。  
@@ -32,7 +32,7 @@ ms.locfileid: "80635738"
   
 - 網域身分識別代表應用程式的辨識項，若是 Web 應用程式，則可能是完整 URL。 針對殼層裝載的程式碼，網域身分識別可能會以應用程式目錄路徑為基礎。 例如，如果可執行檔從路徑 C:\Office\MyApp.exe 執行，網域身分識別將為 C:\Office\MyApp.exe。  
   
-- 組件身分識別是組件的辨識項。 這可能是來自密碼編譯數位簽章，它可以是組件的[強式名稱](../assembly/strong-named.md)、組件的軟體發行者或其 URL 識別。 如果組件同時具有強式名稱和軟體發行者身分識別，則會使用軟體發行者身分識別。 如果組件來自網際網路，且未經過簽署，則會使用 URL 識別。 如需有關組件和強式名稱的詳細資訊，請參閱[使用組件進行設計程式](/dotnet/standard/assembly/index)。  
+- 組件身分識別是組件的辨識項。 這可能是來自密碼編譯數位簽章，它可以是組件的[強式名稱](../assembly/strong-named.md)、組件的軟體發行者或其 URL 識別。 如果組件同時具有強式名稱和軟體發行者身分識別，則會使用軟體發行者身分識別。 如果組件來自網際網路，且未經過簽署，則會使用 URL 識別。 如需有關組件和強式名稱的詳細資訊，請參閱[使用組件進行設計程式](../assembly/index.md)。  
   
 - 漫遊存放區會與具有漫遊使用者設定檔的使用者一起移動。 檔案會寫入網路目錄，且會下載到使用者登入的任何電腦。 如需有關漫遊使用者設定檔的詳細資訊，請參閱 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>。  
   
