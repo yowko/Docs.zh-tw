@@ -16,4 +16,4 @@ ms.locfileid: "77627370"
 - [COM 包裝函式](./com-wrappers.md)
 - [COM 可呼叫包裝函式](./com-callable-wrapper.md)
 - [執行階段可呼叫的包裝函式](./runtime-callable-wrapper.md)
-- [限定 COM 交互操作的 .NET 型別](./qualify-net-types-for-interoperation.md)
+- [限定用於 COM 交互操作的 .NET 類型](./qualify-net-types-for-interoperation.md)

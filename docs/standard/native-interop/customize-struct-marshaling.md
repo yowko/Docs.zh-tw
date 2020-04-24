@@ -24,13 +24,13 @@ ms.locfileid: "79400369"
 
 ✔️ 務必只在封送處理中使用 `LayoutKind.Explicit` (當您的原生結構也有明確的配置 (例如聯集) 時)。
 
-❌如果需要在`LayoutKind.Explicit`.NET Core 3.0 之前定位運行時，則在非 Windows 平臺上對結構進行封送時使用。 3.0 之前的 .NET Core 運行時不支援按值將顯式結構傳遞給英特爾或 AMD 64 位非 Windows 系統上的本機函數。 不過，執行階段支援在所有平台上以傳參考方式傳遞明確結構。
+❌如果您`LayoutKind.Explicit`需要以 .net Core 3.0 之前的執行時間為目標，請避免在非 Windows 平臺上封送處理結構時使用。 3.0 之前的 .NET Core 執行時間不支援在 Intel 或 AMD 64 位非 Windows 系統上，以傳值方式將明確結構傳遞至原生函式。 不過，執行階段支援在所有平台上以傳參考方式傳遞明確結構。
 
 ## <a name="customizing-boolean-field-marshaling"></a>自訂布林值欄位封送處理
 
 機器碼有許多不同的布林值表示法。 在 Windows 上，有三種方式可以代表布林值。 執行階段不知道您結構的原生定義，因此它可以做到的最佳程度是猜測如何封送處理您的布林值。 .NET 執行階段提供一種方式來指出如何封送處理您的布林值欄位。 下列範例示範如何將 .NET `bool` 封送處理為不同的原生布林值類型。
 
-布林值預設為本機 4 位元組 Win32[`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL)值封送，如以下示例所示：
+布林值預設為封送處理為原生4位元組[`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) Win32 值，如下列範例所示：
 
 ```csharp
 public struct WinBool
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>自訂十進位欄位封送處理
 
-如果您正在處理 Windows，則可能會遇到一些使用本機[`CY`或`CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1)結構的 API。 預設情況下，.NET`decimal`類型對本機[`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1)結構進行封送。 不過，您可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 搭配 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值來指示封送處理器將 `decimal` 值轉換為原生 `CY` 值。
+如果您使用的是 Windows，您可能會遇到一些使用原生[ `CY`或`CURRENCY` ](/windows/win32/api/wtypes/ns-wtypes-cy~r1)結構的 api。 根據預設，.NET `decimal`類型會封送處理至[`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1)原生結構。 不過，您可以使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 搭配 <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> 值來指示封送處理器將 `decimal` 值轉換為原生 `CY` 值。
 
 ```csharp
 public struct Currency

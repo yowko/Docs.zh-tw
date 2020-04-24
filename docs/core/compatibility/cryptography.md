@@ -1,27 +1,32 @@
 ---
-title: 加密中斷更改
-description: 列出 .NET Core 中與密碼學相關的重大更改。
-ms.date: 02/10/2020
-ms.openlocfilehash: c25eefa8e3ee01ed7a1df4ec4aa9225f2c347a4d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+title: 密碼編譯的重大變更
+description: 列出 .NET Core 中的密碼編譯相關的重大變更。
+ms.date: 04/22/2020
+ms.openlocfilehash: 66049473083d87b4c84408f35a04193a4563c2b3
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449207"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135593"
 ---
-# <a name="cryptography-breaking-changes"></a>加密中斷更改
+# <a name="cryptography-breaking-changes"></a>密碼編譯的重大變更
 
-此頁面將記錄以下重大更改：
+下列重大變更記載于此頁面：
 
-| 重大變更 | 介紹的版本 |
+| 重大變更 | 引進的版本 |
 | - | :-: |
-| [信封Cm預設為 AES-256 加密](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
-| [RSAOpenSsl 金鑰生成的最低大小已增加](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3.0 |
-| [.NET 核心 3.0 更喜歡 OpenSSL 1.1.x 到 OpenSSL 1.0.x](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
-| [在 Pkcs8PrivateKeyInfo 建構函式中更好的參數驗證](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor) | 3.0 |
-| [簽名Cms的布林參數.計算簽名得到尊重](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
+| [Linux 上不再支援開始信任的憑證語法](#begin-trusted-certificate-syntax-no-longer-supported-for-root-certificates-on-linux) | 3.0 |
+| [EnvelopedCms 預設為 AES-256 加密](#envelopedcms-defaults-to-aes-256-encryption) | 3.0 |
+| [RSAOpenSsl 金鑰產生的大小下限已增加](#minimum-size-for-rsaopenssl-key-generation-has-increased) | 3.0 |
+| [.NET Core 3.0 傾向于將 OpenSSL 1.1. x OpenSSL 1.0. x](#net-core-30-prefers-openssl-11x-to-openssl-10x) | 3.0 |
+| [Pkcs8PrivateKeyInfo 的函式中有更好的引數驗證](#better-argument-validation-in-the-pkcs8privatekeyinfo-constructor) | 3.0 |
+| [遵守 SignedCms 的布林值參數。 ComputeSignature](#boolean-parameter-of-signedcmscomputesignature-is-respected) | 2.1 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
+
+[!INCLUDE [begin-trusted-cert-linux](~/includes/core-changes/cryptography/3.0/begin-trusted-cert-linux.md)]
+
+***
 
 [!INCLUDE[EnvelopedCms defaults to AES-256 encryption](~/includes/core-changes/cryptography/3.0/envelopedcms-defaults-to-aes256.md)]
 

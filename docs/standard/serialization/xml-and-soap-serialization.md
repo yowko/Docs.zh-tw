@@ -18,7 +18,7 @@ ms.locfileid: "80588381"
 ---
 # <a name="xml-and-soap-serialization"></a>XML 和 SOAP 序列化
 
-XML 序列化將物件的公共欄位和屬性以及方法的參數和返回值轉換為符合特定 XML 架構定義語言 (XSD) 文件的 XML 流。 XML 序列化會產生強型別 (Strongly Typed) 類別，其中包含的公用屬性和欄位都轉換為序列格式 (此例為 XML) 以進行儲存或傳輸。
+XML 序列化會將物件的公用欄位和屬性，以及方法的參數和傳回值，轉換（序列化）為符合特定 XML 架構定義語言（XSD）檔的 XML 資料流程。 XML 序列化會產生強型別 (Strongly Typed) 類別，其中包含的公用屬性和欄位都轉換為序列格式 (此例為 XML) 以進行儲存或傳輸。
 
 因為 XML 為開放標準，無論是何種平台，XML 資料流都可依需要由任何應用程式處理。 例如，使用 ASP.NET 建立的 XML Web 服務以 <xref:System.Xml.Serialization.XmlSerializer> 類別建立 XML 資料流，在網際網路或內部網路的 XML Web 服務應用程式之間傳遞資料。 相反地，還原序列化採用這樣的 XML 資料流並重建物件。
 
@@ -29,4 +29,4 @@ XML 序列化也可用來將物件序列化為與 SOAP 規格相符的 XML 資�
 ## <a name="see-also"></a>另請參閱
 
 - [二進位序列化](binary-serialization.md)
-- [使用ASP.NET和XML Web服務客戶端建立的 XML Web 服務](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))
+- [使用 ASP.NET 和 XML Web Service 用戶端所建立的 XML Web 服務](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))

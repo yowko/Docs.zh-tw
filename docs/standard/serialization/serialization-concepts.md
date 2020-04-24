@@ -30,7 +30,7 @@ Common Language Runtime 管理物件在記憶體中儲存的方式，並使用[�
  [二進位序列化](../../../docs/standard/serialization/binary-serialization.md)  
  說明 Common Language Runtime 中所含的二進位序列化機制。  
   
- [.Net 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+ [.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
  說明 .NET Framework 中可用來進行遠端通訊的各種通訊方法。  
   
  [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

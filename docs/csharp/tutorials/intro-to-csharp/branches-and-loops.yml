@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: 清單集合
-  ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: b0a967ea2e5212887d617e76b4ecb445cfbb8b55
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "73969419"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135928"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: 使用 if 陳述式來做決策
   durationInMinutes: 4
   content: >
-    在互動式視窗中執行下列程式碼。 選擇"**輸入對焦模式"** 按鈕。 然後，在互動式視窗中鍵入以下代碼塊，然後選擇 **"運行**：
+    在互動式視窗中執行下列程式碼。 選取 [**進入焦點模式]** 按鈕。 然後，在互動式視窗中輸入下列程式碼區塊，然後選取 [**執行**]：
 
 
     ```csharp
@@ -38,7 +38,7 @@ items:
     ```
 
 
-    如果在您的環境中運行此參數，則應按照[本地版本的](branches-and-loops-local.md)說明操作。
+    如果您在環境中執行此程式，則應該改為遵循[本機版本](branches-and-loops-local.md)的指示。
 
 
     修改 `b` 的宣告，讓總和小於 10：
@@ -51,7 +51,7 @@ items:
     ```
 
 
-    再次選擇 **"運行"** 按鈕。 因為答案小於 10，所以不會印出任何東西。 您正在測試的**條件**為 False。 您尚未有可執行的程式碼，因為您在 `if` 陳述式中僅撰寫了一個可能的分支：True 分支。
+    再次選取 [**執行**] 按鈕。 因為答案小於 10，所以不會印出任何東西。 您正在測試的**條件**為 False。 您尚未有可執行的程式碼，因為您在 `if` 陳述式中僅撰寫了一個可能的分支：True 分支。
 
 
     > [!TIP]
@@ -150,13 +150,13 @@ items:
     這與先前使用的 `while` 迴圈和 `do` 迴圈有相同的功能。 `for` 陳述式有三個部分來控制其運作方式。
 
 
-    第一部分是**初始化器**：`int counter = 0;`聲明這是`counter`迴圈變數，並將其初始值設置到`0`。
+    第一個部分是**for 初始化運算式**： `int counter = 0;`宣告`counter`是迴圈變數，並將它的初始值設為`0`。
 
 
-    中間部分是**條件**：`counter < 10`聲明只要計數器的值小於 10，此`for`迴圈將繼續執行。
+    中間部分是**for 條件**： `counter < 10`宣告此`for`迴圈只要 counter 的值小於10，就會繼續執行。
 
 
-    最後一部分是**for 反覆運算器**：`counter++`指定如何在語句後`for`執行塊後修改迴圈變數。 在這裡，它指定 `counter` 應該在每次執行區塊之後遞增 1。
+    最後一個部分是**for iterator**： `counter++`指定在`for`語句後面執行區塊之後，如何修改迴圈變數。 在這裡，它指定 `counter` 應該在每次執行區塊之後遞增 1。
 
 
     您可以自行實驗這些部分。 請嘗試下列各項：
@@ -173,6 +173,9 @@ items:
     > [!NOTE]
 
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
+- title: 建立的嵌套迴圈
+  durationInMinutes: 10
+  content: "或`while` `for`迴圈`do`可以嵌套在另一個迴圈內，以使用外部迴圈中每個專案與內部迴圈中的每個專案的組合來建立矩陣。 讓我們來建立一組英數位元，以代表資料列和資料行。\n\n一個`for`迴圈可以產生資料列：\n\n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  Console.WriteLine($\"The row is {row}\");\n}\n```\n\n另一個迴圈可以產生資料行：\n\n```csharp\nfor (char column = 'a'; column < 'k'; column++)\n{\n  Console.WriteLine($\"The column is {column}\");\n}\n```\n\n您可以將一個迴圈放在另一個，以形成配對：\n  \n```csharp\nfor (int row = 1; row < 11; row++)\n{\n  for (char column = 'a'; column < 'k'; column++)\n  {\n    Console.WriteLine($\"The cell is ({row}, {column})\");\n  }\n}\n```\n\n您可以看到外部迴圈會針對內部迴圈的每個完整執行遞增一次。 反轉資料列和資料行的嵌套，並查看您自己的變更。\n"
 - title: 結合分支和迴圈
   durationInMinutes: 12
   content: >
@@ -221,7 +224,7 @@ items:
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - title: 恭喜！
   content: >-
-    您已經完成＜分支和迴圈＞互動式教學課程。 您可以選擇下面的**清單集合**連結來開始下一個互動式教程，也可以訪問[.NET 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下載 .NET Core SDK、在電腦上創建專案以及繼續編碼。 "後續步驟"部分將帶您回到這些教程。
+    您已經完成＜分支和迴圈＞互動式教學課程。 您可以選取下方的**清單集合**連結來啟動下一個互動式教學課程，或者您可以流覽[.net 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)來下載 .NET Core SDK、在您的電腦上建立專案，並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
 
 
     您可以在下列主題中深入了解這些概念：

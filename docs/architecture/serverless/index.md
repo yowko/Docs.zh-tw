@@ -3,19 +3,21 @@ title: 無伺服器應用程式：架構、模式和 Azure 實作
 description: 無伺服器架構指南。 了解實作企業應用程式的無伺服器架構 (與基礎結構即服務 [IaaS] 或平台即服務 [PaaS] 相對) 的時機、原因和方式。
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 9dea7dbccb5c9e125f792e6a7287a7dd2fad26f1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/22/2020
+ms.openlocfilehash: 16e658a99feda6537189a45b53da514e67766999
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73093540"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135683"
 ---
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>無伺服器應用程式：架構、模式和 Azure 實作
 
-![顯示無伺服器應用電子書封面的螢幕截圖。](./media/index/serverless-apps-cover.jpg)
+![顯示無伺服器應用程式電子書封面的螢幕擷取畫面。](./media/index/serverless-apps-cover-v3.png)
 
-> 下載：<https://aka.ms/serverless-ebook>
+**版本 v3.0** -已更新為 Azure Functions v3
+
+> 下載：<https://aka.ms/serverlessbookpdf>
 
 發行者
 
@@ -27,7 +29,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright © 2018 by Microsoft Corporation
+Microsoft &copy; Corporation 的著作權2018-2020
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
 
@@ -43,17 +45,17 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 
 作者︰
 
-> **[傑瑞米·利內斯](https://twitter.com/jeremylikness)**，微軟公司高級雲宣導者。
+> **[Jeremy Likness](https://twitter.com/jeremylikness)**，Microsoft Corp 的資深 .Net 資料程式經理。
 
 參與者：
 
-> **[塞西爾·菲力浦](https://twitter.com/cecilphillip)**，微軟公司高級雲宣導者。
+> Microsoft Corp 的資深雲端提倡者**[Cecil Phillip](https://twitter.com/cecilphillip)**。
 
 編輯者：
 
-> **[比爾·瓦格納](https://twitter.com/billwagner)**，微軟公司高級內容開發者。
+> **[Bill Wagner](https://twitter.com/billwagner)**，Microsoft Corp 的資深內容開發人員。
 
-> **[MairaWenzel，](https://twitter.com/mairacw)** 微軟公司高級內容開發者。
+> Microsoft Corp 的資深內容開發人員**[Maira Wenzel](https://twitter.com/mairacw)**。
 
 參與者和檢閱者：
 
@@ -88,7 +90,7 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 - 儲存體備份傳送至何處？
 - 應該具有備用電力嗎？
 
-這份清單還不只如此，而且額外負荷也很龐大。 在許多情況下，IT 部門不得已，必須處理許多浪費的資源。 浪費是由於過度分配伺服器作為災害復原備份機和待命伺服器，以實現橫向擴展。幸運的是，虛擬機器 （VM） 引入虛擬化技術（如[Hyper-V）](/virtualization/hyper-v-on-windows/about/)產生了基礎架構即服務 （IaaS）。 虛擬化的基礎結構可讓作業設定一組標準的伺服器作為骨幹，而創造出彈性的環境，可「視需求」佈建唯一的伺服器。 更重要的是，虛擬化為使用雲端提供虛擬機器「作為服務」創造了很棒的條件。 公司可以不用擔心備用電力或實體電腦。 相反地，則是以虛擬環境為重心。
+這份清單還不只如此，而且額外負荷也很龐大。 在許多情況下，IT 部門不得已，必須處理許多浪費的資源。 浪費的原因是過度佈建服務器作為損毀修復和待命伺服器的備份電腦，以啟用相應放大。幸運的是，使用虛擬機器（Vm）的虛擬化技術（如[hyper-v](/virtualization/hyper-v-on-windows/about/)）引進了基礎結構即服務（IaaS）。 虛擬化的基礎結構可讓作業設定一組標準的伺服器作為骨幹，而創造出彈性的環境，可「視需求」佈建唯一的伺服器。 更重要的是，虛擬化為使用雲端提供虛擬機器「作為服務」創造了很棒的條件。 公司可以不用擔心備用電力或實體電腦。 相反地，則是以虛擬環境為重心。
 
 因為作業仍需負責處理各種工作，所以 IaaS 仍然需要龐大的額外負荷。 這些工作包括：
 
@@ -97,7 +99,7 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 - 保持最新的作業系統。
 - 監視應用程式。
 
-下一階段的演進則提供平台即服務 (PaaS)，以減少額外負荷。 利用 PaaS，雲端提供者可處理作業系統、安全性修補程式，甚至是必要套件，以支援特定平台。 開發人員並不需要建置 VM，然後設定 .NET Framework 和 Internet Information Services (IIS) 伺服器，只要選擇「平台目標」，如「Web 應用程式」或「API 端點」，然後直接部署程式碼。 基礎結構問題已減少為：
+下一階段的演進則提供平台即服務 (PaaS)，以減少額外負荷。 利用 PaaS，雲端提供者可處理作業系統、安全性修補程式，甚至是必要套件，以支援特定平台。 開發人員可以直接選擇「平臺目標」（例如「web 應用程式」或「API 端點」）並直接部署程式碼，而不需建立 VM，然後再設定 .NET 並啟動 Internet Information Services （IIS）伺服器。 基礎結構問題已減少為：
 
 - 需要何種大小的服務？
 - 服務如何相應放大 (新增更多伺服器或節點)？
@@ -118,7 +120,7 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 
 ### <a name="additional-resources"></a>其他資源
 
-- [Azure 體系結構中心](https://docs.microsoft.com/azure/architecture/)
+- [Azure 架構中心](https://docs.microsoft.com/azure/architecture/)
 - [雲端應用程式的最佳做法](https://docs.microsoft.com/azure/architecture/best-practices/api-design)
 
 ## <a name="who-should-use-the-guide"></a>誰應該使用本指南

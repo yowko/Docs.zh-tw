@@ -31,7 +31,7 @@ XML 序列化為 XML Web 服務架構中使用的基礎傳輸機制，由 <xref:
  XML Web Service 所產生的 XML 可以使用常值或已編碼的兩種方式之一進行格式化，如[自訂 SOAP 訊息格式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))中所述。 因此有兩組屬性控制 XML 序列化。 列在[控制 XML 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)中的屬性設計用來控制常值樣式 XML。 列在[控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)中的屬性則可控制編碼樣式。 您可選擇性地套用這些屬性，自訂應用程式傳回其中一種或同時兩種樣式。 除此之外，可將這些屬性套用至傳回值和參數 (如果適合的話)。  
   
 ### <a name="example-of-using-both-styles"></a>同時使用兩種樣式的範例  
- 當您建立 XML Web 服務，可同時使用方法上的兩組屬性。 在下列程式碼範例中，名為 `MyService``MyLiteralMethod`的類別包含兩個 XML Web 服務方法：`MyEncodedMethod` 及 {4}。 兩種方法都執行相同功能：傳回 `Order` 類別的執行個體。 在 `Order` 類別中，<xref:System.Xml.Serialization.XmlTypeAttribute> 以及 <xref:System.Xml.Serialization.SoapTypeAttribute> 屬性 (attribute) 都套用至 `OrderID` 欄位，而且兩個屬性 (attribute) 的 `ElementName` 屬性 (property) 都設為不同值。  
+ 當您建立 XML Web 服務，可同時使用方法上的兩組屬性。 在下列程式碼範例中，名為 的類別包含兩個 XML Web 服務方法： 及 。 兩種方法都執行相同功能：傳回 `Order` 類別的執行個體。 在 `Order` 類別中，<xref:System.Xml.Serialization.XmlTypeAttribute> 以及 <xref:System.Xml.Serialization.SoapTypeAttribute> 屬性 (attribute) 都套用至 `OrderID` 欄位，而且兩個屬性 (attribute) 的 `ElementName` 屬性 (property) 都設為不同值。  
   
  若要執行這個範例，請將程式碼貼至副檔名為 .asmx 的檔案中，並將該檔置於 Internet Information Services (IIS) 管理的虛擬目錄中。 從 Internet Explorer 這類 HTML 瀏覽器中，輸入電腦、虛擬目錄及檔案的名稱。  
   
@@ -261,9 +261,9 @@ public class Order {
 ## <a name="see-also"></a>另請參閱
 
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)
-- [可控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)
+- [控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)
 - [如何：將物件序列化為 SOAP 編碼的 XML 資料流](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
 - [如何：覆寫已編碼的 SOAP XML 序列化](how-to-override-encoded-soap-xml-serialization.md)
 - [XML 序列化簡介](introducing-xml-serialization.md)
-- [如何：序列化物件](how-to-serialize-an-object.md)
+- [HOW TO：序列化物件](how-to-serialize-an-object.md)
 - [如何：還原序列化物件](how-to-deserialize-an-object.md)

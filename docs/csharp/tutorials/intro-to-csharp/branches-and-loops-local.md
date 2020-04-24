@@ -3,22 +3,22 @@ title: 分支和迴圈 - C# 教學課程簡介
 description: 在這個關於分支和迴圈的教學課程中，您將會撰寫 C# 程式碼以探索支援條件式分支和迴圈的語言語法，以重複執行陳述式。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8c10a7462b7c27c5353aee6d957732a8d161015
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73739134"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135941"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>透過分支和迴圈陳述式了解條件式邏輯
 
 此教學課程將教您如何撰寫程式碼來檢查變數，並根據那些變數來變更執行路徑。 您將會撰寫 C# 程式碼，並查看程式碼編譯和執行的結果。 此教學課程包含一系列探索 C# 中分支和迴圈建構的課程。 這些課程會教導您 C# 語言的基本概念。
 
-此教學課程要求您必須有可用於開發的電腦。 .NET 教程[Hello World 在 10 分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)提供了在 Windows、Linux 或 macOS 上設置本地開發環境的說明。 您可以在[熟悉開發工具](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
+此教學課程要求您必須有可用於開發的電腦。 .NET 教學課程[Hello World 在10分鐘內](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)，有在 Windows、Linux 或 macOS 上設定本機開發環境的指示。 您可以在[熟悉開發工具](local-environment.md)中快速檢視將會用到的命令，並取得可提供詳細資料的連結。
 
 ## <a name="make-decisions-using-the-if-statement"></a>使用 `if` 陳述式來做決策
 
-建立名為 *branches-tutorial* 的目錄。 使目前的目錄並運行以下命令：
+建立名為 *branches-tutorial* 的目錄。 將它設為目前的目錄，然後執行下列命令：
 
 ```dotnetcli
 dotnet new console -n BranchesAndLoops -o .
@@ -48,7 +48,7 @@ int b = 3;
 > [!TIP]
 > 在您探索 C# (或任何程式設計語言) 時，可能會在撰寫程式碼時犯錯。 編譯器會找出並回報錯誤。 仔細查看錯誤輸出，以及產生該錯誤的程式碼。 編譯器錯誤通常可以協助找出問題。
 
-此第一個範例示範 `if` 和布林值類型的功能。 *布林是*一個變數，它可以具有兩個值之一：`true`或`false`。 C# 會針對布林值變數定義特殊類型：`bool`。 `if` 陳述式會檢查 `bool` 的值。 當值為 `true` 時，就會執行 `if` 之後的陳述式。 否則，就會略過。
+此第一個範例示範 `if` 和布林值類型的功能。 「*布林*值」是一個變數，可以有兩個值`true`的`false`其中一個：或。 C# 會針對布林值變數定義特殊類型：`bool`。 `if` 陳述式會檢查 `bool` 的值。 當值為 `true` 時，就會執行 `if` 之後的陳述式。 否則，就會略過。
 
 這個流程可以檢查條件，並根據條件來執行陳述式，因此非常實用。
 
@@ -235,11 +235,11 @@ for (int index = 0; index < 10; index++)
 
 這與先前使用的 `while` 迴圈和 `do` 迴圈有相同的功能。 `for` 陳述式有三個部分來控制其運作方式。
 
-第一部分是**初始化器**：`int index = 0;`聲明這是`index`迴圈變數，並將其初始值設置到`0`。
+第一個部分是**for 初始化運算式**： `int index = 0;`宣告`index`是迴圈變數，並將它的初始值設為`0`。
 
-中間部分是**條件**：`index < 10`聲明只要計數器的值小於 10，此`for`迴圈將繼續執行。
+中間部分是**for 條件**： `index < 10`宣告此`for`迴圈只要 counter 的值小於10，就會繼續執行。
 
-最後一部分是**for 反覆運算器**：`index++`指定如何在語句後`for`執行塊後修改迴圈變數。 在這裡，它指定 `index` 應該在每次執行區塊之後遞增 1。
+最後一個部分是**for iterator**： `index++`指定在`for`語句後面執行區塊之後，如何修改迴圈變數。 在這裡，它指定 `index` 應該在每次執行區塊之後遞增 1。
 
 您可以自行實驗這些部分。 請嘗試下列各項：
 
@@ -247,6 +247,42 @@ for (int index = 0; index < 10; index++)
 - 變更條件，以不同的值停止。
 
 當您完成後，我們會繼續使用您學到的內容來撰寫一些程式碼。
+
+## <a name="created-nested-loops"></a>建立的嵌套迴圈
+
+或`while` `for`迴圈`do`可以嵌套在另一個迴圈內，以使用外部迴圈中每個專案與內部迴圈中的每個專案的組合來建立矩陣。 讓我們來建立一組英數位元，以代表資料列和資料行。
+
+一個`for`迴圈可以產生資料列：
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    Console.WriteLine($"The row is {row}");
+}
+```
+
+另一個迴圈可以產生資料行：
+
+```csharp
+for (char column = 'a'; column < 'k'; column++)
+{
+    Console.WriteLine($"The column is {column}");
+}
+```
+
+您可以將一個迴圈放在另一個，以形成配對：
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    for (char column = 'a'; column < 'k'; column++)
+    {
+        Console.WriteLine($"The cell is ({row}, {column})");
+    }
+}
+```
+
+您可以看到外部迴圈會針對內部迴圈的每個完整執行遞增一次。 反轉資料列和資料行的嵌套，並查看您自己的變更。
 
 ## <a name="combine-branches-and-loops"></a>結合分支和迴圈
 

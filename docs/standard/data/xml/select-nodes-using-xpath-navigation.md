@@ -127,7 +127,7 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 > [!NOTE]
 > 如果 XPath 運算式不包含前置詞，則會假設命名空間統一資源識別元 (URI) 為空白的命名空間。 如果 XML 包含預設命名空間，則仍必須將前置詞及命名空間 URI 加入至 <xref:System.Xml.XmlNamespaceManager>，否則就不會選取任何節點。  
   
-#### <a name="input-file"></a>輸入檔  
+#### <a name="input-file"></a>輸入檔案  
  下列是在本主題的範例中做為輸入檔案的 bookstore.xml 檔案：  
   
 ```xml  

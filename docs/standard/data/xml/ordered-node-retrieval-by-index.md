@@ -53,7 +53,7 @@ for (int i=0; i < elemList.Count; i++)
 }
 ```  
   
- 除了 **Count** 屬性之外，還有 **GetEnumerator** 方法可對 `foreach`XmlNodeList**中的節點集合提供** 樣式反覆運算。 下列程式碼範例顯示 `foreach` 陳述式的使用情形。  
+ 除了 **Count** 屬性之外，還有 **GetEnumerator** 方法可對 **XmlNodeList** 中的節點集合提供 `foreach` 樣式反覆運算。 下列程式碼範例顯示 `foreach` 陳述式的使用情形。  
   
 ```vb  
 Dim doc As New XmlDocument()  

@@ -27,7 +27,7 @@ ms.locfileid: "80248039"
 屬性可用來控制物件的 XML 序列化或從相同的類別集建立其他的 XML 資料流。 如需建立替代 XML 資料流的詳細資料，請參閱[如何：指定 XML 資料流的替代項目名稱](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)。
 
 > [!NOTE]
-> 如果生成的 XML 必須符合萬維網聯盟 （W3C） 文檔標題為["簡單物件訪問協定 （SOAP） 1.1"](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)的文檔的第 5 節，請使用[控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)中列出的屬性。
+> 如果產生的 XML 必須符合標題為「[簡單物件存取通訊協定（SOAP） 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)」之全球資訊網協會（W3C）檔的第5節，請使用屬性中所列的屬性[來控制編碼的 SOAP 序列化](attributes-that-control-encoded-soap-serialization.md)。
 
 根據預設，XML 項目名稱是由類別或成員名稱決定。 在名為 `Book` 的簡單類別中，名為 `ISBN` 的欄位將會產生 XML 項目標記 \<ISBN>，如下列範例所示。
 
@@ -241,7 +241,7 @@ public class Group {
 </Group>
 ```
 
-另一種區別這兩種 XML 資料流的方法是使用 XML 結構描述定義工具，從編譯的程式碼中產生 XML 結構描述 (XSD) 文件檔案  （有關使用該工具的更多詳細資訊，請參閱[XML 架構定義工具和 XML 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)。當沒有屬性應用於欄位時，架構會以以下方式描述元素。
+另一種區別這兩種 XML 資料流的方法是使用 XML 結構描述定義工具，從編譯的程式碼中產生 XML 結構描述 (XSD) 文件檔案  （如需使用此工具的詳細資訊，請參閱[Xml 架構定義工具和 Xml 序列化](the-xml-schema-definition-tool-and-xml-serialization.md)）。當欄位未套用任何屬性時，架構會以下列方式描述元素。
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />
@@ -317,7 +317,7 @@ public class Group {
 
 ## <a name="see-also"></a>另請參閱
 
-- [可控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
+- [控制 XML 序列化的屬性](attributes-that-control-xml-serialization.md)
 - [控制編碼 SOAP 序列化的屬性](attributes-that-control-encoded-soap-serialization.md)
 - [XML 序列化簡介](introducing-xml-serialization.md)
 - [XML 序列化範例](examples-of-xml-serialization.md)

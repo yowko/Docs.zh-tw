@@ -13,7 +13,7 @@ ms.locfileid: "80391217"
 
 .NET 提供您各種自訂原生互通性程式碼的方式。 本文包含 Microsoft 的 .NET 小組在原生互通性上遵循的指導方針。
 
-## <a name="general-guidance"></a>一般指引
+## <a name="general-guidance"></a>一般方針
 
 本節中的指導方針適用於所有互通案例。
 
@@ -27,7 +27,7 @@ ms.locfileid: "80391217"
 
 ## <a name="dllimport-attribute-settings"></a>DllImport 屬性設定
 
-| 設定 | 預設 | 建議 | 詳細資料 |
+| 設定 | Default | 建議 | 詳細資料 |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  保留預設值  | 當此項目明確設為 False 時，失敗的 HRESULT 傳回值會轉換成例外狀況 (結果為定義中的傳回值會變成 Null)。|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | 取決於 API  | 如果 API 使用 GetLastError 並使用 Marshal.GetLastWin32Error 來取得值，請將此項目設為 True。 如果 API 設定的條件指出有錯誤，請先取得該錯誤再進行其他呼叫，以避免不小心複寫它。|
@@ -44,14 +44,14 @@ ms.locfileid: "80391217"
 
 ❌避免`StringBuilder`參數。 `StringBuilder` 封送處理「一律」** 會建立原生緩衝區複本。 因此，這麼做可能非常沒有效率。 請考慮呼叫接受字串之 Windows API 的典型案例：
 
-1. 創建所需容量的 SB（分配託管容量）**{1}**
+1. 建立所需容量的 SB （配置受控容量）**{1}**
 2. 叫用
-   1. 分配本機緩衝區**{2}**
+   1. 配置原生緩衝區**{2}**
    2. 若為 ，則複製內容 (`StringBuilder` 參數的預設值)`[In]` __
    3. 若為 `[Out]` **，則將原生緩衝區複製到新配置的受控陣列中 {3} (也是 `StringBuilder` 的預設值)** __
-3. `ToString()`分配另一個託管陣列**{4}**
+3. `ToString()`配置另一個受控陣列**{4}**
 
-這是*{4}* 從本機代碼中獲取字串的分配。 要限制此情況最好的方式是在其他呼叫中重複使用 `StringBuilder`，但這樣仍然只儲存 *1* 配置。 這樣比較好使用及從 `ArrayPool` 快取字元緩衝區，而且在後續的呼叫您可以直接取得 `ToString()` 的配置。
+這是*{4}* 從原生程式碼取得字串的配置。 要限制此情況最好的方式是在其他呼叫中重複使用 `StringBuilder`，但這樣仍然只儲存 *1* 配置。 這樣比較好使用及從 `ArrayPool` 快取字元緩衝區，而且在後續的呼叫您可以直接取得 `ToString()` 的配置。
 
 `StringBuilder` 的另一個問題是它一律會將傳回緩衝區備份複製到第一個 Null。 如果傳回的字串沒有中止，或者它是雙重 Null 結尾的字串，則您 P/Invoke 最佳的狀態會是不正確。
 
@@ -61,11 +61,11 @@ ms.locfileid: "80391217"
 
 如需字串封送處理的詳細資訊，請參閱[字串的預設封送處理](../../framework/interop/default-marshaling-for-strings.md)和[自訂字串封送處理](customize-parameter-marshaling.md#customizing-string-parameters)。
 
-> __特定于視窗__對於`[Out]`字串，CLR 預設情況下`CoTaskMemFree`將使用釋放字串或`SysStringFree`標記為`UnmanagedType.BSTR`的字串。
-> **對於大多數具有輸出字串緩衝區的 API：** 傳入的字元計數必須包括 null。 如果傳回值小於呼叫接收的傳入字元計數，則該值是「不含」** 尾端 Null 的字元數目。 否則，該計數為緩衝區「包含」** Null 字元所需的大小。
+> __Windows 特定__針對`[Out]`字串，CLR 預設會`CoTaskMemFree`使用來釋放字串或`SysStringFree`標示為`UnmanagedType.BSTR`的字串。
+> **針對具有輸出字串緩衝區的大部分 api：** 傳入的字元計數必須包含 null。 如果傳回值小於呼叫接收的傳入字元計數，則該值是「不含」** 尾端 Null 的字元數目。 否則，該計數為緩衝區「包含」** Null 字元所需的大小。
 >
-> - 傳遞 5，獲取 4：字串長 4 個字元，尾隨 null。
-> - 傳遞 5，獲取 6：字串為 5 個字元長，需要 6 個字元緩衝區來容納 null。
+> - 傳入5，取得4：字串長度為4個字元，結尾為 null。
+> - 傳入5，get 6：字串長度為5個字元，需要6個字元的緩衝區來保存 null。
 > [字串的 Windows 資料類型](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>布林值參數和欄位
@@ -80,7 +80,7 @@ GUID 可直接在特徵標記中使用。 許多 Windows API 都接受 `GUID&` �
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-❌請勿用於`[MarshalAs(UnmanagedType.LPStruct)]`GUID 參數`ref`以外的任何內容。
+❌請勿針對`ref` GUID `[MarshalAs(UnmanagedType.LPStruct)]`參數以外的任何專案使用。
 
 ## <a name="blittable-types"></a>Blittable 類型
 
@@ -120,18 +120,18 @@ public struct UnicodeCharStruct
 
 ✔️ 請這樣做 盡可能讓您的結構是 Blittable 的。
 
-如需詳細資訊，請參閱
+如需詳細資訊，請參閱：
 
 - [Blittable 和非 Blittable 類型](../../framework/interop/blittable-and-non-blittable-types.md)
-- [類型封送](type-marshaling.md)
+- [類型封送處理](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>讓受控物件保持運作
 
 `GC.KeepAlive()` 會確保物件在範圍保持運作，直到叫用 KeepAlive 方法。
 
-[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)允許編組在 P/Invoke 的持續時間內使物件保持活動狀態。 可以使用它，而不使用方法特徵標記中的 `IntPtr`。 應改為使用 `SafeHandle`，它可有效地取代此類別。
+[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)允許封送處理器在 P/Invoke 期間讓物件維持運作狀態。 可以使用它，而不使用方法特徵標記中的 `IntPtr`。 應改為使用 `SafeHandle`，它可有效地取代此類別。
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)允許固定託管物件，並將本機指標獲取到該物件。 基本模式為：
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)允許釘選 managed 物件，並取得其原生指標。 基本模式為：
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -199,7 +199,7 @@ handle.Free();
 
 Windows `PVOID` 是 C `void*`，可以作為 `IntPtr` 或 `UIntPtr` 來封送，但建議盡可能使用 `void*`。
 
-[視窗資料類型](/windows/desktop/WinProg/windows-data-types)
+[Windows 資料類型](/windows/desktop/WinProg/windows-data-types)
 
 [資料類型範圍](/cpp/cpp/data-type-ranges)
 
@@ -217,9 +217,9 @@ Blittable 結構效能更好，因為封送處理層可以直接使用它們。 
 
 ✔️ 請這樣做 針對 Blittable 結構使用 C# `sizeof()`，而不使用 `Marshal.SizeOf<MyStruct>()`，以改善效能。
 
-❌AVOID`System.Delegate`使用`System.MulticastDelegate`或欄位來表示結構中的函數指標欄位。
+❌避免使用`System.Delegate`或`System.MulticastDelegate`欄位來表示結構中的函式指標欄位。
 
-由於<xref:System.Delegate?displayProperty=fullName>並且<xref:System.MulticastDelegate?displayProperty=fullName>沒有必需的簽名，它們不保證傳入的委託與本機代碼所需的簽名匹配。 此外，在 .NET Framework 和 .NET Core 中，如果`System.Delegate`本機`System.MulticastDelegate`表示中的欄位值不是包裝託管委託的函數指標，則將包含 或從其本機表示形式為管理物件的結構封送到託管物件可能會破壞運行時的穩定。 在 .NET 5 和更高版本中，`System.Delegate`不支援`System.MulticastDelegate`將 或 欄位從本機表示形式封送到託管物件。 使用特定的委託類型而不是`System.Delegate`或`System.MulticastDelegate`。
+由於<xref:System.Delegate?displayProperty=fullName>和<xref:System.MulticastDelegate?displayProperty=fullName>沒有所需的簽章，因此不保證傳入的委派會符合原生程式碼所預期的簽章。 此外，在 .NET Framework 和 .NET Core 中，如果原生表示`System.Delegate`法`System.MulticastDelegate`中的欄位值不是包裝 managed 委派的函式指標，則將包含或其原生標記法的結構封送處理至 managed 物件可能會使執行時間不穩定。 在 .NET 5 和更新版本中，不`System.Delegate`支援`System.MulticastDelegate`將或欄位從原生表示封送處理至 managed 物件。 請使用特定的委派類型， `System.Delegate`而`System.MulticastDelegate`不是或。
 
 ### <a name="fixed-buffers"></a>固定緩衝區
 

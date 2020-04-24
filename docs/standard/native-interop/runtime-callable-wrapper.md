@@ -52,8 +52,8 @@ Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) �
   
 |介面|描述|  
 |---------------|-----------------|  
-|**IConnectionPoint** 和 **IConnectionPointContainer**|RCW 會將公開連接點事件樣式的物件，轉換成委派架構的事件。|  
-|**IDispatchEx** (僅限 .NET Framework) |如果類別實作 **IDispatchEx**，RCW 就會實作 **IExpando**。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫呼叫。|  
+|**IConnectionPoint**和**IConnectionPointContainer**|RCW 會將公開連接點事件樣式的物件，轉換成委派架構的事件。|  
+|**IDispatchEx** (僅限 .NET Framework) |如果類別實作 **IDispatchEx**，RCW 就會實作 **IExpando**。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸模組，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫的呼叫。|  
 |**IEnumVARIANT**|可讓支援列舉的 COM 類型被視為集合來處理。|  
   
 ## <a name="see-also"></a>另請參閱
@@ -61,4 +61,4 @@ Common Language Runtime 會透過名為執行階段可呼叫包裝函式 (RCW) �
 - [COM 包裝函式](com-wrappers.md)
 - [COM 可呼叫包裝函式](com-callable-wrapper.md)
 - [型別程式庫至組件轉換的摘要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [匯入型別程式庫作為組件](../../framework/interop/importing-a-type-library-as-an-assembly.md)
+- [匯入類型程式庫做為組件](../../framework/interop/importing-a-type-library-as-an-assembly.md)

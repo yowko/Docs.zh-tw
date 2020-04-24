@@ -4,12 +4,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 0a614f628faa98be778c627573e4dddc462c9107
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1f0d513e8bfd1668ee548315597385c555d374ef
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121966"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135772"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 與 Span\<T> 使用指導方針
 
@@ -23,9 +23,9 @@ ms.locfileid: "73121966"
 
 - **擁有權**。 緩衝區執行個體的擁有者必須負責處理存留期管理，其中包括終結不再使用的緩衝區。 所有緩衝區都具有單一擁有者。 擁有者通常是建立緩衝區，或是從處理站接收緩衝區的元件。 擁有權也可以被轉移；**元件 A** 可以將緩衝區的控制轉移給**元件 B**，這會使**元件 A** 無法繼續使用該緩衝區，且**元件 B** 需負責在該緩衝區不再使用時終結它。
 
-- **消費**. 緩衝區執行個體的取用者可以透過從緩衝區執行個體進行讀取，或在某些情況下對它進行寫入，來使用該緩衝區執行個體。 緩衝區一次可以有一個取用者，除非已提供某種外部同步處理機制。 請注意，作用中的緩衝區取用者並不一定是該緩衝區的擁有者。
+- **耗用量**。 緩衝區執行個體的取用者可以透過從緩衝區執行個體進行讀取，或在某些情況下對它進行寫入，來使用該緩衝區執行個體。 緩衝區一次可以有一個取用者，除非已提供某種外部同步處理機制。 請注意，作用中的緩衝區取用者並不一定是該緩衝區的擁有者。
 
-- **租賃**. 租用是特定元件可作為緩衝區取用者的時間長度。
+- **租用**。 租用是特定元件可作為緩衝區取用者的時間長度。
 
 下列虛擬程式碼範例會說明這三個概念。 它包含能具現化 <xref:System.Char> 類型之 <xref:System.Memory%601> 緩衝區的 `Main` 方法，呼叫 `WriteInt32ToBuffer` 方法以將某個整數的字串表示法寫入該緩衝區，然後呼叫 `DisplayBufferToConsole` 方法來顯示該緩衝區的值。
 
@@ -76,7 +76,7 @@ class Program
 
 [!code-csharp[ownership](~/samples/snippets/standard/buffers/memory-t/owner/owner.cs)]
 
-我們還可以使用 編寫[`using`](../../csharp/language-reference/keywords/using-statement.md)此示例：
+我們也可以使用撰寫此範例[`using`](../../csharp/language-reference/keywords/using-statement.md)：
 
 [!code-csharp[ownership-using](~/samples/snippets/standard/buffers/memory-t/owner-using/owner-using.cs)]
 
@@ -86,7 +86,7 @@ class Program
 
 - `WriteInt32ToBuffer` 和 `DisplayBufferToConsole` 方法接受 <xref:System.Memory%601> 作為公用 API。 因此，它們是該緩衝區的取用者。 且它們之間一次只有一個會取用緩衝區。
 
-雖然 `WriteInt32ToBuffer` 方法的目的是要將值寫入緩衝區，但 `DisplayBufferToConsole` 方法則不會這麼做。 為了反映此情況，它可以接受 <xref:System.ReadOnlyMemory%601>類型的引數。 有關 的其他<xref:System.ReadOnlyMemory%601>資訊，請參閱[規則#2：如果緩衝區應只\<讀，請使用 readOnlySpan T> 或 ReadOnlyMemory\<T>。](#rule-2)
+雖然 `WriteInt32ToBuffer` 方法的目的是要將值寫入緩衝區，但 `DisplayBufferToConsole` 方法則不會這麼做。 為了反映此情況，它可以接受 <xref:System.ReadOnlyMemory%601>類型的引數。 如需有關的<xref:System.ReadOnlyMemory%601>詳細資訊，請參閱[Rule #2\<：使用 ReadOnlySpan T\<> 或 ReadOnlyMemory t> （如果緩衝區應該是唯讀的](#rule-2)）。
 
 ### <a name="ownerless-memoryt-instances"></a>「無擁有者」的 Memory\<T> 執行個體
 
@@ -100,7 +100,7 @@ class Program
 
 一開始建立 <xref:System.Memory%601> 執行個體的方法，便是緩衝區的隱含擁有者。 擁有權並無法被轉移到任何其他元件，因為沒有 <xref:System.Buffers.IMemoryOwner%601> 執行個體來促成該轉移。 (或者，您也可以想像執行階段的記憶體回收行程擁有該緩衝區，而所有方法皆只是取用該緩衝區)。
 
-## <a name="usage-guidelines"></a>使用方式指南
+## <a name="usage-guidelines"></a>使用指導方針
 
 由於記憶體區塊具有擁有者，同時會被傳遞至多個元件，且某些元件則會在特定的記憶體區塊上運作，因此有必要針對 <xref:System.Memory%601> 和 <xref:System.Span%601> 的使用建立指導方針。  指導方針之所以必要，是因為：
 
@@ -112,7 +112,7 @@ class Program
 
 下列為針對順利使用 <xref:System.Memory%601> 和其相關類型的建議。 請注意，除非我們明確提及，否則適用於 <xref:System.Memory%601> 和 <xref:System.Span%601> 的指引，同時也會適用於 <xref:System.ReadOnlyMemory%601> 和 <xref:System.ReadOnlySpan%601>。
 
-**規則#1：對於同步 API，如果可能\<，請使用 span\<T>而不是記憶體 T>作為參數。**
+**規則 #1：若是同步 API，請使用 Span\<t> 而不是\<記憶體 T> 作為參數（如果可能的話）。**
 
 <xref:System.Span%601> 比起 <xref:System.Memory%601> 更為靈活，且可以代表較廣泛類型的連續記憶體緩衝區。 <xref:System.Span%601> 也能夠提供比 <xref:System.Memory%601> 更為優異的效能。 最後，雖然 Span\<T> 並無法轉換為 Memory\<T>，您可以使用 <xref:System.Memory%601.Span?displayProperty=nameWithType> 屬性來將 <xref:System.Memory%601> 執行個體轉換為 <xref:System.Span%601>。 因此如果您的呼叫端具有 <xref:System.Memory%601> 執行個體，它們仍然可以搭配 <xref:System.Span%601> 參數來呼叫您的方法。
 
@@ -122,7 +122,7 @@ class Program
 
 <a name="rule-2" />
 
-**規則#2：如果緩衝區應只\<讀，則使用 readOnlySpan T>或 ReadOnlyMemory\<T>。**
+**規則 #2：如果緩衝區\<應該是唯讀的\<，請使用 ReadOnlySpan t> 或 ReadOnlyMemory t>。**
 
 在稍早的範例中，`DisplayBufferToConsole` 方法只會從緩衝區讀取，它並不會修改緩衝區的內容。 方法簽章應變更為下列項目。
 
@@ -138,7 +138,7 @@ void DisplayBufferToConsole(ReadOnlySpan<char> buffer);
 
 `DisplayBufferToConsole` 方法現在能與幾乎所有已知的緩衝區類型搭配運作：`T[]`、搭配 [stackalloc](../../csharp/language-reference/operators/stackalloc.md) 配置的儲存體等。 您甚至可以直接將 <xref:System.String> 傳遞給它！
 
-**規則#3：如果方法接受記憶體\<T>並`void`返回 ，則在方法返回\<後，不得使用記憶體 T>實例。**
+**規則 #3：如果您的方法接受\<記憶體 t> 並`void`傳回，在方法傳回之後，\<您就不能使用記憶體 t> 實例。**
 
 這與稍早提及的「租用」相關。 會傳回 void 的方法針對 <xref:System.Memory%601> 執行個體的租用，會在該方法進入時開始，並在方法離開時結束。 請參考下列範例，其會根據來自主控台的輸入，以迴圈方式呼叫 `Log`。
 
@@ -172,7 +172,7 @@ static void Log(ReadOnlyMemory<char> message)
 
    [!code-csharp[defensive-copy](~/samples/snippets/standard/buffers/memory-t/task-returning/task-returning.cs#1)]
 
-**規則#4：如果方法接受記憶體\<T>並返回任務，則在任務轉換到終端狀態\<後，不得使用記憶體 T>實例。**
+**規則 #4：如果您的方法接受記憶體\<t> 並傳回工作，則在工作轉換為結束狀態\<之後，您就不能使用記憶體 t> 實例。**
 
 這基本上是規則 #3 的非同步變化。 先前範例的 `Log` 方法可以透過下列方式撰寫來符合此規則：
 
@@ -182,7 +182,7 @@ static void Log(ReadOnlyMemory<char> message)
 
 此指南適用於會傳回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask%601>，或任何類似類型的方法。
 
-**規則#5：如果建構函式接受記憶體\<T>作為參數，則構造物件的實例方法假定為記憶體\<T>實例的消費者。**
+**規則 #5：如果您的函式\<接受以記憶體 t> 做為參數，則會假設已建立結構化物件上的實例\<方法是記憶體 t> 實例的取用者。**
 
 請考慮下列範例：
 
@@ -205,7 +205,7 @@ void PrintAllOddValues(ReadOnlyMemory<int> input)
 
 在這裡，`OddValueExtractor` 建構函式會接受 `ReadOnlyMemory<int>` 作為建構函式參數，因此建構函式本身是 `ReadOnlyMemory<int>` 執行個體的取用者，且已傳回值上的所有執行個體方法也都會是原始 `ReadOnlyMemory<int>` 執行個體的取用者。 這代表 `TryReadNextOddValue` 會取用 `ReadOnlyMemory<int>` 執行個體，就算該執行個體不會直接被傳遞至 `TryReadNextOddValue` 方法也一樣。
 
-**規則#6：如果類型上具有可設置的\<記憶體 T>類型屬性（或等效實例方法），則該物件的實例方法假定為記憶體\<T>實例的消費者。**
+**規則 #6：如果您在類型上有\<可設定的記憶體 T> 類型屬性（或對等的實例方法），則會假設該物件上的實例方法是記憶體\<T> 實例的取用者。**
 
 這基本上是規則 #5 的變化。 此規則之所以存在，是因為我們會假設屬性設定者或對等方法會擷取或保留其輸入，好讓相同物件上的執行個體方法能夠運用擷取的狀態。
 
@@ -225,7 +225,7 @@ class Person
 }
 ```
 
-**規則#7：如果您有一個 IMemoryOwner\<T>引用，則必須在某個時候釋放它或轉移其擁有權（但不是兩者）。**
+**規則 #7：如果您有 Imemoryowner t>\<T> 參考，您必須在某個時間點處置它，或轉移其擁有權（但不能兩者）。**
 
 由於 <xref:System.Memory%601> 執行個體可由受控或非受控記憶體支援，擁有者必須在 <xref:System.Memory%601> 執行個體上的作業完成時呼叫 <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType>。 或者，擁有者可以將 <xref:System.Buffers.IMemoryOwner%601> 執行個體的擁有權轉換給不同的元件，而在轉換之後，取得擁有權的元件便必須負責在適當的時機呼叫 <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType> (將於稍後詳述)。
 
@@ -233,7 +233,7 @@ class Person
 
 此規則也適用於呼叫 Factory 方法 (例如 <xref:System.Buffers.MemoryPool%601.Rent%2A?displayProperty=nameWithType>) 的程式碼。 呼叫者會成為傳回 <xref:System.Buffers.IMemoryOwner%601> 的擁有者，並須負責在完成時處置執行個體。
 
-**規則#8：如果您的 API 曲面中具有\<IMemoryOwner T> 參數，則接受該實例的擁有權。**
+**規則 #8：如果您的 API 介面\<中有 imemoryowner t> T> 參數，則會接受該實例的擁有權。**
 
 接受此類型的執行個體，便代表您的元件意圖取得此執行個體的擁有權。 您的元件必須負責進行規則 #7 中所述的適當處置。
 
@@ -242,9 +242,9 @@ class Person
 > [!IMPORTANT]
 > 如果您的建構函式會接受 <xref:System.Buffers.IMemoryOwner%601> 作為參數，其類型應實作 <xref:System.IDisposable>，且您的 <xref:System.IDisposable.Dispose%2A> 方法應該要呼叫 <xref:System.Buffers.MemoryPool%601.Dispose%2A?displayProperty=nameWithType>。
 
-**規則#9：如果要包裝同步 p/調用方法，則 API 應接受 span\<T>作為參數。**
+**規則 #9：如果您要包裝同步 p/invoke 方法，您的 API 應該接受 Span\<T> 作為參數。**
 
-根據規則 #1，<xref:System.Span%601> 通常是應該用於同步 API 的正確類型。 您可以通過[`fixed`](../../csharp/language-reference/keywords/fixed-statement.md)關鍵字固定<xref:System.Span%601>實例，如以下示例所示。
+根據規則 #1，<xref:System.Span%601> 通常是應該用於同步 API 的正確類型。 您可以透過<xref:System.Span%601> [`fixed`](../../csharp/language-reference/keywords/fixed-statement.md)關鍵字釘選實例，如下列範例所示。
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -282,9 +282,9 @@ public unsafe int ManagedWrapper(Span<byte> data)
 }
 ```
 
-**規則#10：如果要包裝非同步 p/調用方法，則 API 應接受記憶體\<T>作為參數。**
+**規則 #10：如果您要包裝非同步 p/invoke 方法，您的 API 應該接受\<記憶體 T> 做為參數。**
 
-由於不能跨非同步[`fixed`](../../csharp/language-reference/keywords/fixed-statement.md)操作使用關鍵字，因此無論實例表示的<xref:System.Memory%601.Pin%2A?displayProperty=nameWithType>連續記憶體類型<xref:System.Memory%601>如何，都使用 方法固定實例。 下列範例示範如何使用此 API 來執行非同步 p/invoke 呼叫。
+由於您無法跨非同步[`fixed`](../../csharp/language-reference/keywords/fixed-statement.md)操作使用關鍵字，因此您可以使用<xref:System.Memory%601.Pin%2A?displayProperty=nameWithType>方法來釘<xref:System.Memory%601>選實例，而不論實例所代表的連續記憶體種類為何。 下列範例示範如何使用此 API 來執行非同步 p/invoke 呼叫。
 
 ```csharp
 using System.Runtime.InteropServices;
@@ -336,7 +336,7 @@ public unsafe Task<int> ManagedWrapperAsync(Memory<byte> data)
 private static void MyCompletedCallbackImplementation(IntPtr state, int result)
 {
     GCHandle handle = (GCHandle)state;
-    var actualState = (MyCompletedCallbackState)state;
+    var actualState = (MyCompletedCallbackState)(handle.Target);
     handle.Free();
     actualState.MemoryHandle.Dispose();
 

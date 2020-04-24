@@ -13,7 +13,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80249535"
 ---
-# <a name="xmlserializer-element"></a>\<xml 序列化器>元素
+# <a name="xmlserializer-element"></a>\<xmlSerializer> 元素
 指定是否已完成 <xref:System.Xml.Serialization.XmlSerializer> 進度的其他檢查。  
   
  \<configuration>  
@@ -30,10 +30,10 @@ ms.locfileid: "80249535"
   
 ### <a name="attributes"></a>屬性  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |**checkDeserializeAdvances**|指定是否已檢查 <xref:System.Xml.Serialization.XmlSerializer>的進度。 設定屬性為 "true" 或 "false"。 預設為 "true"。|  
-|**useLegacySerializationGeneration**|指定 <xref:System.Xml.Serialization.XmlSerializer> 是否使用舊版序列化產生作業，此作業會將 C# 程式碼寫入至檔案並編譯成組件，藉此產成組件。 預設值為**false**。|  
+|**useLegacySerializationGeneration**|指定 <xref:System.Xml.Serialization.XmlSerializer> 是否使用舊版序列化產生作業，此作業會將 C# 程式碼寫入至檔案並編譯成組件，藉此產成組件。 預設值為 **false**。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -42,7 +42,7 @@ ms.locfileid: "80249535"
   
 |元素|描述|  
 |-------------|-----------------|  
-|[\<系統.xml.序列化>元素](../../../docs/standard/serialization/system-xml-serialization-element.md)|包含 <xref:System.Xml.Serialization.XmlSerializer> 及 <xref:System.Xml.Serialization.XmlSchemaImporter> 類別的組態設定。|  
+|[\<> 元素的 system.object 序列化](../../../docs/standard/serialization/system-xml-serialization-element.md)|包含 <xref:System.Xml.Serialization.XmlSerializer> 及 <xref:System.Xml.Serialization.XmlSchemaImporter> 類別的組態設定。|  
   
 ## <a name="remarks"></a>備註  
  根據預設， <xref:System.Xml.Serialization.XmlSerializer> 提供額外層級的安全性，在還原序列化未受信任的資料時，避免潛在的拒絕服務攻擊。 做法是嘗試在還原序列化期間，偵測無限迴圈。 若偵測到這樣的狀況，將擲回例外狀況並顯示下列訊息：「內部錯誤: 還原序列化無法處理基礎資料流」。  
@@ -63,5 +63,5 @@ ms.locfileid: "80249535"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [\<系統.xml.序列化>元素](../../../docs/standard/serialization/system-xml-serialization-element.md)
+- [\<> 元素的 system.object 序列化](../../../docs/standard/serialization/system-xml-serialization-element.md)
 - [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)

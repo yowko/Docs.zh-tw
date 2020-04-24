@@ -39,13 +39,13 @@ ms.locfileid: "78159789"
 ### <a name="choosing-the-right-serialization-technology-to-support"></a>選擇要支援的正確序列化技術  
  任何給定型別都可以支援零個、一個或多個序列化技術。  
   
-- 如果可能需要在 Web 服務中持續保存或使用類型的執行個體，請考慮支援「資料合約序列化」。  
+- 如果可能需要在 Web 服務中持續保存或使用類型的執行個體，請考慮支援「資料合約序列化」**。  
   
-- 如果您需要針對序列化類型時所產生之 XML 格式的更大控制權，請考慮支援「XML 序列化」來取代資料合約序列化，或是兩者都支援。  
+- 如果您需要針對序列化類型時所產生之 XML 格式的更大控制權，請考慮支援「XML 序列化」** 來取代資料合約序列化，或是兩者都支援。  
   
      在您需要使用資料合約序列化所不支援的 XML 建構的某些互通性情況下 (例如，為了產生 XML 屬性)，就可能需要這樣的處理方式。  
   
-- 如果類別的執行個體需要橫跨 .NET 遠端處理界限，請考慮支援「執行階段序列化」。  
+- 如果類別的執行個體需要橫跨 .NET 遠端處理界限，請考慮支援「執行階段序列化」**。  
   
 - 請避免針對一般持續性理由來支援執行階段序列化或 XML 序列化。 請改用資料合約序列化。  
   
@@ -64,16 +64,16 @@ ms.locfileid: "78159789"
   
 3. 請考慮針對還原序列化之執行個體的初始化使用序列化回呼。  
   
-     當還原序列化物件時，不會呼叫建構函式。 因此，正常建構期間所執行的任何邏輯都需要實作為其中一個「序列化回呼」。  
+     當還原序列化物件時，不會呼叫建構函式。 因此，正常建構期間所執行的任何邏輯都需要實作為其中一個「序列化回呼」**。  
   
      [!code-csharp[SerializationGuidelines#3](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#3)]
      [!code-vb[SerializationGuidelines#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#3)]  
   
-     <xref:System.Runtime.Serialization.OnDeserializedAttribute> 屬性是最常用的回呼屬性。 系列中的其他屬性為 <xref:System.Runtime.Serialization.OnDeserializingAttribute>、<xref:System.Runtime.Serialization.OnSerializingAttribute>和 <xref:System.Runtime.Serialization.OnSerializedAttribute>。 這些屬性可用來分別標記在還原序列化之前、序列化之前以及最後在序列化之後所執行的回呼。  
+     <xref:System.Runtime.Serialization.OnDeserializedAttribute> 屬性是最常用的回呼屬性。 系列中的其他屬性為<xref:System.Runtime.Serialization.OnDeserializingAttribute>、 <xref:System.Runtime.Serialization.OnSerializingAttribute>和。 <xref:System.Runtime.Serialization.OnSerializedAttribute> 這些屬性可用來分別標記在還原序列化之前、序列化之前以及最後在序列化之後所執行的回呼。  
   
 4. 當您還原序列化複雜物件圖形時，請考慮使用 <xref:System.Runtime.Serialization.KnownTypeAttribute> 來指示應該使用的具象型別。  
   
-     例如，如果還原序列化之資料成員的某個類型以抽象類別來表示，則序列化程式將需要「已知類型」資訊來決定哪一個具象類型要執行個體化以及指派給成員。 如果已知型別不是使用此屬性所指定，它需要明確傳遞給序列化程式 (您可以將已知型別傳遞給序列化程式建構函式來進行這項處理)，或者需要在組態檔中指定已知型別。  
+     例如，如果還原序列化之資料成員的某個類型以抽象類別來表示，則序列化程式將需要「已知類型」** 資訊來決定哪一個具象類型要執行個體化以及指派給成員。 如果已知型別不是使用此屬性所指定，它需要明確傳遞給序列化程式 (您可以將已知型別傳遞給序列化程式建構函式來進行這項處理)，或者需要在組態檔中指定已知型別。  
   
      [!code-csharp[SerializationGuidelines#4](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#4)]
      [!code-vb[SerializationGuidelines#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#4)]  
@@ -94,7 +94,7 @@ ms.locfileid: "78159789"
      如需詳細資訊，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。  
   
 #### <a name="supporting-xml-serialization"></a>支援 XML 序列化  
- 資料合約序列化是 .NET Framework 中的主要 (預設) 序列化技術，但是資料合約序列化不支援一些序列化情節。 例如，它無法讓您完全控制序列化程式所產生或使用之 XML 的形狀。 如果需要這樣的精確控制，必須使用「XML 序列化」，而且您需要設計您的類型來支援這項序列化技術。  
+ 資料合約序列化是 .NET Framework 中的主要 (預設) 序列化技術，但是資料合約序列化不支援一些序列化情節。 例如，它無法讓您完全控制序列化程式所產生或使用之 XML 的形狀。 如果需要這樣的精確控制，必須使用「XML 序列化」**，而且您需要設計您的類型來支援這項序列化技術。  
   
 1. 請避免專門為了 XML 序列化來設計型別，除非您有非常強烈的理由為了控制所產生之 XML 的形狀。 這項序列化技術已經由前一節所討論的資料合約序列化所取代。  
   
@@ -103,19 +103,19 @@ ms.locfileid: "78159789"
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
   
-2. 如果您希望對序列化 XML 的形狀有更大的控制權，而不是套用 XML 序列化屬性來使用提供的控制權，請考慮實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面。 介面的兩個方法，<xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A> 和 <xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>，可讓您完全控制已序列化的 XML 資料流程。 您也可以藉由套用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性來控制為此型別產生的 XML 結構描述。  
+2. 如果您希望對序列化 XML 的形狀有更大的控制權，而不是套用 XML 序列化屬性來使用提供的控制權，請考慮實作 <xref:System.Xml.Serialization.IXmlSerializable> 介面。 介面的兩個方法（ <xref:System.Xml.Serialization.IXmlSerializable.ReadXml%2A>和<xref:System.Xml.Serialization.IXmlSerializable.WriteXml%2A>）可讓您完全控制已序列化的 XML 資料流程。 您也可以藉由套用 <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 屬性來控制為此型別產生的 XML 結構描述。  
   
 #### <a name="supporting-runtime-serialization"></a>支援執行階段序列化  
- 「執行階段序列化」是 .NET 遠端處理所使用的技術。 如果您認為您的型別將會使用 .NET 遠端處理來傳輸，則需要確定型別有支援執行階段序列化。  
+ 「執行階段序列化」** 是 .NET 遠端處理所使用的技術。 如果您認為您的型別將會使用 .NET 遠端處理來傳輸，則需要確定型別有支援執行階段序列化。  
   
- 「執行階段序列化」的基本支援可以藉由套用 <xref:System.SerializableAttribute> 屬性來提供，而更進階的案例則牽涉到實作簡單的「執行階段可序列化模式」(實作 -<xref:System.Runtime.Serialization.ISerializable> 並提供序列化建構函式)。  
+ 「執行階段序列化」** 的基本支援可以藉由套用 <xref:System.SerializableAttribute> 屬性來提供，而更進階的案例則牽涉到實作簡單的「執行階段可序列化模式」**(實作 -<xref:System.Runtime.Serialization.ISerializable> 並提供序列化建構函式)。  
   
 1. 如果您的型別將會搭配 .NET 遠端處理使用，請考慮支援執行階段序列化。 例如，<xref:System.AddIn> 命名空間會使用 .NET 遠端處理，因此在 **System.AddIn** 增益集之間交換的所有類型都需要支援執行階段序列化。  
   
      [!code-csharp[SerializationGuidelines#7](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#7)]
      [!code-vb[SerializationGuidelines#7](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#7)]  
   
-2. 如果您想要擁有序列化處理序的完整控制權，請考慮實作「執行階段可序列化模式」。 例如，如果您想要在資料序列化或還原序列化時加以轉換。  
+2. 如果您想要擁有序列化處理序的完整控制權，請考慮實作「執行階段可序列化模式」**。 例如，如果您想要在資料序列化或還原序列化時加以轉換。  
   
      此模式非常簡單。 您只需要實作 <xref:System.Runtime.Serialization.ISerializable> 介面，並提供還原序列化物件時使用的特殊建構函式。  
   
@@ -141,7 +141,7 @@ ms.locfileid: "78159789"
 
 - [使用資料合約](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [資料合約序列化程式](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [資料合約序列化程式支援的類型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [資料合約序列化程式支援的型別](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [二進位序列化](binary-serialization.md)
 - [.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML 和 SOAP 序列化](xml-and-soap-serialization.md)

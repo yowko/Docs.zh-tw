@@ -28,7 +28,7 @@ ms.locfileid: "78159243"
 ## <a name="design-time-attributes"></a>設計階段屬性  
  您可以使用設計階段屬性來調整 COM Interop 工具和 API 所執行的轉換處理結果。 下表描述您可以套用到 Managed 原始程式碼的屬性。 COM Interop 工具偶爾也會套用下表所述的屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.AutomationProxyAttribute>|指定類型是否應使用 Automation 封送處理器或自訂的 Proxy 和 Stub 來進行封送處理。|  
 |<xref:System.Runtime.InteropServices.ClassInterfaceAttribute>|控制對類別所產生之介面的類型。|  
@@ -56,7 +56,7 @@ ms.locfileid: "78159243"
 ## <a name="conversion-tool-attributes"></a>轉換工具屬性  
  下表描述 COM Interop 工具在轉換處理期間套用的屬性。 您不會在設計階段套用這些屬性。  
   
-|屬性|描述|  
+|屬性|說明|  
 |---------------|-----------------|  
 |<xref:System.Runtime.InteropServices.ComAliasNameAttribute>|表示參數或欄位類型的 COM 別名。 可用於屬性參數、欄位或傳回值。|  
 |<xref:System.Runtime.InteropServices.ComConversionLossAttribute>|表示類別或介面的相關資訊在從型別程式庫匯入組件時遺失。|  
@@ -71,5 +71,5 @@ ms.locfileid: "78159243"
 - <xref:System.Runtime.InteropServices>
 - [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [屬性](../../../docs/standard/attributes/index.md)
-- [限定互通的 .NET 類型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
+- [限定交互操作的 .NET 類型](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
 - [封裝 COM 的 .NET Framework 組件](../../../docs/framework/interop/packaging-an-assembly-for-com.md)

@@ -65,7 +65,7 @@ XML 命名空間會將 XML 文件中的項目與屬性名稱連結到自訂和�
   
  以下是您可以使用 <xref:System.Xml.XmlNamespaceManager> 類別執行的一些管理和查詢工作。 如需詳細資訊和範例，請追蹤每個方法或屬性的參考頁面連結。  
   
-|至|使用|  
+|至|用法|  
 |--------|---------|  
 |加入命名空間|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> 方法|  
 |移除命名空間|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> 方法|  

@@ -17,8 +17,8 @@ ms.locfileid: "81389791"
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>How to: Use the XML Schema Definition Tool to Generate Classes and XML Schema Documents
 XML 結構描述定義工具 (Xsd.exe) 讓您產生說明類別的 XML 結構描述或產生由 XML 結構描述定義的類別。 下列程序將說明如何執行這些作業。
 
-XML 架構定義工具 (Xsd.exe) 通常可以在以下路徑中找到:*
-_C:\\程式\\檔案 (x86) 微軟\\\\\\\\SDK 視窗 [版本] bin NETFX [版本] 工具\\_
+XML 架構定義工具（Xsd.exe）通常可以在下列路徑中找到： \
+_C：\\Program Files （x86）\\Microsoft sdk\\Windows\\{version}\\bin\\NETFX {version} 工具\\_
 
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>產生符合特定結構描述的類別  
   
@@ -30,7 +30,7 @@ _C:\\程式\\檔案 (x86) 微軟\\\\\\\\SDK 視窗 [版本] bin NETFX [版本] �
     xsd mySchema.xsd  
     ```  
   
-     此工具只能處理參考 2001 年 3 月 16 日全球資訊網協會 XML 規格的結構描述。 換句話說,XML 架構命名空間必須為"",http://www.w3.org/2001/XMLSchema如以下範例所示。  
+     此工具只能處理參考 2001 年 3 月 16 日全球資訊網協會 XML 規格的結構描述。 換句話說，XML 架構命名空間必須是 "http://www.w3.org/2001/XMLSchema"，如下列範例所示。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
@@ -60,7 +60,7 @@ _C:\\程式\\檔案 (x86) 微軟\\\\\\\\SDK 視窗 [版本] bin NETFX [版本] �
 - <xref:System.Data.DataSet>
 - [XML 結構描述定義工具和 XML 序列化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [XML 架構定義工具 (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [XML 架構定義工具（Xsd.exe）](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [HOW TO：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

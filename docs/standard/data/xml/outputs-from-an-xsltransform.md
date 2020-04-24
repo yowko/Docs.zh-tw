@@ -33,7 +33,7 @@ ms.locfileid: "78159633"
   
 - omit-xml-declaration  
   
-- standalone  
+- 獨立  
   
 - doctype-public  
   
@@ -41,7 +41,7 @@ ms.locfileid: "78159633"
   
 - cdata-section-elements  
   
-- 縮排  
+- indent  
   
     > [!NOTE]
     > \*當 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法傳送其輸出給 <xref:System.IO.TextWriter> 時，將會忽略編碼屬性。 會改用 <xref:System.IO.TextWriter> 上的編碼屬性。

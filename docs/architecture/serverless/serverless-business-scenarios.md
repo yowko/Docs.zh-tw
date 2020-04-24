@@ -1,102 +1,123 @@
 ---
-title: 無伺服器應用的業務方案和用例示例
-description: 通過訪問從映射處理到移動後端和 ETL 管道的樣本，通過動手方法學習無伺服器。
+title: 無伺服器應用程式的範例商務案例和使用案例
+description: 存取從影像處理到行動支援和 ETL 管線範圍的範例，以瞭解無伺服器的實際操作方法。
 author: JEREMYLIKNESS
 ms.author: jeliknes
-ms.date: 06/26/2018
-ms.openlocfilehash: 5f0d7a4c5cd736d1168ec76c1c0ea19627505f15
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/17/2020
+ms.openlocfilehash: 5c2ee70b86fbc9a54d2a532eaa3d7509f23825df
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76787886"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135655"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>無伺服器商務情節和使用案例
 
-對於無伺服器應用程式，有許多用例和方案。 本章包括說明不同方案的示例。 這些方案包括指向相關文檔和公共原始程式碼存儲庫的連結。 本章中的示例使您能夠開始構建和實現無伺服器解決方案。
+無伺服器應用程式有許多使用案例和情節。 本章包含說明不同案例的範例。 這些案例包括相關檔和公用原始程式碼存放庫的連結。 本章中的範例可讓您開始建立自己的建築物和執行無伺服器解決方案。
 
-## <a name="analyze-and-archive-images"></a>分析和存檔圖像
+## <a name="big-data-processing"></a>巨量資料處理
 
-此示例演示無伺服器事件（事件網格）、工作流（邏輯應用）和代碼（Azure 函數）。 它還演示如何與其他資源集成，在這種情況下，用於圖像分析的認知服務。
+![地圖/減少圖表](https://docs.microsoft.com/samples/azure-samples/durablefunctions-mapreduce-dotnet/big-data-processing-serverless-mapreduce-on-azure/media/mapreducearchitecture.png)
 
-主控台應用程式允許您傳遞指向 Web 上 URL 的連結。 應用將 URL 發佈為事件網格消息。 並行，無伺服器函數應用和邏輯應用訂閱消息。 無伺服器函數應用將映射序列化到 blob 存儲。 它還在 Azure 表存儲中存儲資訊。 中繼資料存儲原始圖像 URL 和 blob 圖像的名稱。 邏輯應用與自訂視覺 API 交互以分析圖像並創建電腦生成的字幕。 標題存儲在中繼資料表中。
+這個範例會使用無伺服器，在大型資料集上進行對應/減少作業。 它會判斷2017中每日紐約的黃色計程車行程的平均速度。
 
-![分析和存檔圖像體系結構](./media/image-processing-example.png)
+[海量資料處理： Azure 上的無伺服器 MapReduce](https://docs.microsoft.com/samples/azure-samples/durablefunctions-mapreduce-dotnet/big-data-processing-serverless-mapreduce-on-azure/)
 
-單獨的單頁應用程式 （SPA） 調用無伺服器函數來獲取圖像和中繼資料的清單。 對於每個映射，它調用另一個從存檔中傳遞圖像資料的函數。 最終結果是具有自動字幕的庫。
+## <a name="create-serverless-applications-hands-on-lab"></a>建立無伺服器應用程式：實際操作實驗室
 
-![自動圖像庫](./media/automated-image-gallery.png)
+瞭解如何使用函式來執行伺服器端邏輯，並建立無伺服器架構。
 
-完整的存儲庫和說明，以建立邏輯應用程式在這裡可用：[事件網格膠水](https://github.com/JeremyLikness/Event-Grid-Glue)。
+- 選擇適用于您企業的最佳 Azure 服務
+- 建立 Azure Functions
+- 使用觸發程序
+- 連結函式
+- 長時間執行的工作流程
+- 監視
+- 開發、測試和部署
 
-## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>使用 Xamarin 的跨平臺移動用戶端。
+[建立無伺服器應用程式](https://docs.microsoft.com/learn/paths/create-serverless-applications/)
 
-瞭解如何在 Azure Web 門戶或視覺化工作室中實現簡單的無伺服器 Azure 函數。 使用在 Android、iOS 和 Windows 上運行的 Xamarin.表單構建用戶端。 然後，對應用程式進行優化，使用 JavaScript 物件標記法 （JSON） 作為伺服器和具有無伺服器後端的移動用戶端之間的通信介質。
+## <a name="customer-reviews"></a>客戶評論
 
-有關詳細資訊，請參閱使用[Xamarin.Forms 用戶端實現簡單的 Azure 函數](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)。
+這個範例會展示 Visual Studio 中 c # 類別庫的新 Azure Functions 工具。 建立網站，讓客戶提交儲存在 Azure 儲存體 blob 和 CosmosDB 中的產品評論。 使用 Azure 認知服務新增 Azure 函式，以執行客戶審核的自動化審核。 使用 Azure 儲存體佇列，將網站與函數分離。
 
-## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>生成具有無伺服器圖像識別的照片鑲嵌
+[客戶評論應用程式與認知服務](https://docs.microsoft.com/samples/azure-samples/functions-customer-reviews/customer-reviews-cognitive-services/)
 
-該示例使用 Azure 函數和 Microsoft 認知服務自訂視覺服務從輸入圖像生成照片鑲嵌。 模型經過培訓，可以識別圖像。 上傳圖像時，它會識別圖像，並使用必應搜索。 使用搜尋結果重新組合原始圖像。
+## <a name="docker-linux-image-support"></a>Docker Linux 映射支援
 
-![奧蘭多眼照片和馬賽克](./media/orlando-eye-both.png)
+這個範例會示範如何建立， `Dockerfile`以在 Linux Docker 容器上建立和執行 Azure Functions。
 
-例如，您可以使用奧蘭多地標（如奧蘭多眼）訓練模型。 自訂視覺將識別奧蘭多眼的圖像，該功能將創建由必應圖像搜尋結果組成的"奧蘭多眼"照片馬賽克。
+[Linux 上的 Azure Functions](https://docs.microsoft.com/samples/azure-samples/functions-linux-custom-image/azure-functions-on-linux-custom-image-tutorial-sample-project/)
 
-有關詳細資訊，請參閱[Azure 函數照片鑲嵌產生器](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)。
+## <a name="file-processing-and-validation"></a>檔案處理和驗證
 
-## <a name="migrate-an-existing-application-to-the-cloud"></a>將現有應用程式遷移到雲
+這個範例會剖析來自假設客戶的一組 CSV 檔案。 它可確保客戶「批次」所需的所有檔案都已準備就緒，然後驗證每個檔案的結構。 不同的解決方案會使用 Azure Functions、Logic Apps 和 Durable Functions 來呈現。
 
-如前幾章所述，通常採用 N-Tier 體系結構在本地託管應用程式。 儘管使用虛擬機器遷移資源是雲風險最小的路徑，但許多公司選擇利用這個機會重構其應用程式。 幸運的是，重構不一定是"全無"的努力。 事實上，可以遷移應用，然後零敲碎打地將元件替換為雲本機組件。
+[使用 Azure Functions、Logic Apps 和 Durable Functions 進行檔案處理和驗證](https://docs.microsoft.com/samples/azure-samples/serverless-file-validation/file-processing-and-validation-using-azure-functions-logic-apps-and-durable-functions/)
 
-應用程式使用 Azure 函數的代理功能來啟用重構終結點，從舊本地代碼到無伺服器終結點。
+## <a name="game-data-visualization"></a>遊戲資料視覺效果
 
-![移轉架構](./media/migration-architecture.png)
+![遊戲遙測](https://docs.microsoft.com/samples/azure-samples/gaming-in-editor-telemetry/in-editor-telemetry-visualization/media/points.png)
 
-代理提供單個 API 終結點，該終結點在移動到無伺服器函數時可重新路由各個請求。
+開發人員如何為其遊戲實作為編輯器內資料視覺效果解決方案的範例。 事實上，Unreal Engine 4 外掛程式和 Unity 外掛程式是使用此範例作為其後端所開發。 服務元件與遊戲引擎無關。
 
-您可以查看貫穿整個遷移的視頻：[使用無伺服器 Azure 函數提升和移動](https://channel9.msdn.com/Events/Connect/2017/E102)。 訪問示例代碼：[自取自己的應用](https://github.com/JeremyLikness/bring-own-app-connect-17)。
+[編輯器內遊戲遙測視覺效果](https://docs.microsoft.com/samples/azure-samples/gaming-in-editor-telemetry/in-editor-telemetry-visualization/)
 
-## <a name="parse-a-csv-file-and-insert-into-a-database"></a>分析 CSV 檔並插入資料庫
+## <a name="graphql"></a>GraphQL
 
-擷取、轉換和下載 （ETL） 是集成不同系統的常見業務功能。 傳統方法通常涉及設置專用 FTP 伺服器，然後部署計畫作業來分析檔並將其轉換為業務用途。 無伺服器體系結構使作業更容易，因為上載檔時可能會觸發觸發器。 Azure 函數通過專注于特定問題的小型程式碼片段的理想組合來處理 ETL 等任務。
+建立可公開 GraphQL API 的無伺服器函式。
 
-![顯示 csv 解析過程的螢幕截圖。](./media/serverless-business-scenarios/csv-parse-database-import.png)
+[GraphQL 的無伺服器函式](https://github.com/softchris/graphql-workshop-dotnet/blob/master/docs/workshop/4.md)
 
-有關原始程式碼和動手實驗，請參閱[CSV 導入實驗室](https://github.com/JeremyLikness/azure-fn-file-process-hol)。
+## <a name="internet-of-things-iot-reliable-edge-relay"></a>物聯網（IoT）可靠的邊緣轉送
 
-## <a name="shorten-links-and-track-metrics"></a>縮短連結並跟蹤指標
+![IoT 架構](https://docs.microsoft.com/samples/azure-samples/iot-reliable-edge-relay/iot-reliable-edge-relay/media/architecture.png)
 
-連結縮短工具最初説明編碼URL在短推特帖子，以適應140個字元的限制。 它們已發展到包括多種用途，最常見的是跟蹤分析的點擊率。 連結縮短器方案是一個完全無伺服器的應用程式，用於管理連結和報告指標。
+這個範例會執行新的通訊協定，以啟用來自 IoT 裝置的可靠上游通訊。 它會自動進行資料差距偵測和回填。
 
-Azure 函數用於為單頁應用程式 （SPA） 提供服務，該應用程式允許您粘貼長 URL 並生成短 URL。 URL 被標記以跟蹤市場活動（主題）和媒介（如連結發佈到的社交網路）等內容。 短代碼作為鍵存儲在 Azure 表存儲中，長 URL 作為值。 按一下短連結時，另一個函數會查找長 URL，發送重定向，並將有關事件的資訊放在佇列中。 另一個 Azure 函數處理佇列並將資訊放入 Azure Cosmos DB 中。
+[IoT 可靠的邊緣轉送](https://docs.microsoft.com/samples/azure-samples/iot-reliable-edge-relay/iot-reliable-edge-relay/)
 
-![連結縮短器體系結構](./media/link-shortener-architecture.png)
+## <a name="microservices-reference-architecture"></a>微服務參考架構
 
-然後，您可以創建 Power BI 儀表板來收集有關收集的資料的見解。 在後端，應用程式見解提供了重要的指標。 遙測包括普通使用者重定向所需的時間以及訪問 Azure 表存儲所需的時間。
+![參考架構](https://docs.microsoft.com/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/media/macro-architecture.png)
 
-![電源 BI 示例](./media/power-bi-example.png)
+參考架構，引導您完成設計、開發及傳遞 Rideshare by Relecloud 應用程式（虛構公司）所牽涉到的決策制定流程。 其中包含設定和部署所有架構元件的實際操作指示。
 
-完整的連結縮短器存儲庫與說明可在這裡：[無伺服器 URL 縮短器](https://github.com/jeremylikness/serverless-url-shortener). 您可以在此處閱讀有關簡化版本[：Azure 存儲，用於無伺服器 .NET 應用，在幾分鐘內](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)即可。
+[無伺服器微服務參考架構](https://docs.microsoft.com/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/)
 
-## <a name="verify-device-connectivity-using-a-ping"></a>使用 ping 驗證設備連接
+## <a name="migrate-console-apps-to-serverless"></a>將主控台應用程式遷移至無伺服器
 
-該示例由 Azure IoT 中心和 Azure 函陣列成。 IoT 中心上的新消息將觸發 Azure 函數。 無伺服器代碼將相同的消息內容發送回發送它的設備。 專案具有解決方案所需的所有代碼和部署配置。
+這個範例是泛型函式（`.csx`檔案），可以用來將任何主控台應用程式轉換成 Azure Functions 中的 HTTP web 服務。 您只需要編輯設定檔，並指定要將哪些輸入參數當做引數傳遞至`.exe`。
 
-有關詳細資訊，請參閱[Azure IoT 中心 ping](https://github.com/Azure-Samples/iot-hub-node-ping)。
+[在 Azure Functions 上執行主控台應用程式](https://docs.microsoft.com/samples/azure-samples/functions-dotnet-migrating-console-apps/run-console-apps-on-azure-functions/)
+
+## <a name="serverless-for-mobile"></a>適用于 mobile 的無伺服器
+
+Azure Functions 很容易執行和維護，而且可透過 HTTP 存取。 這是為行動應用程式執行 API 的絕佳方式。 Microsoft 透過 Xamarin 提供適用于 iOS、Android 和 Windows 的絕佳跨平臺工具。 因此，Xamarin 和 Azure Functions 都能完美搭配運作。 本文說明如何在 Azure 入口網站中或在 Visual Studio 中先執行 Azure 函式，並使用在 Android、iOS 和 Windows 上執行的 Xamarin 建立跨平臺用戶端。
+
+[使用 Xamarin. Forms 用戶端來執行簡單的 Azure 函數](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
+
+## <a name="serverless-messaging"></a>無伺服器訊息
+
+這個範例示範如何利用 Durable Functions 的「扇線」模式，在任意數目的會話/資料分割上載入任意數目的訊息。 它的目標是服務匯流排、事件中樞或儲存體佇列。 此範例也會新增使用其他 Azure 函式來取用這些訊息的功能，並將產生的計時資料載入至另一個事件中樞。 然後將資料內嵌至 Azure 資料總管之類的分析服務。
+
+[使用 Azure Functions，透過服務匯流排、事件中樞和儲存體佇列產生和取用訊息](https://docs.microsoft.com/samples/azure-samples/durable-functions-producer-consumer/product-consume-messages-az-functions/)
 
 ## <a name="recommended-resources"></a>建議的資源
 
-- [Azure 功能照片鑲嵌產生器](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)
-- [Azure IoT 中樞 ping](https://github.com/Azure-Samples/iot-hub-node-ping)
-- [用於無伺服器 .NET 應用的 Azure 存儲，在幾分鐘內](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
-- [自帶應用](https://github.com/JeremyLikness/bring-own-app-connect-17)
-- [CSV 導入實驗室](https://github.com/JeremyLikness/azure-fn-file-process-hol)
-- [事件網格粘合](https://github.com/JeremyLikness/Event-Grid-Glue)
-- [使用 Xamarin 實現簡單的 Azure 函數。](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
-- [使用無伺服器 Azure 功能提升和移動](https://channel9.msdn.com/Events/Connect/2017/E102)
-- [無伺服器 URL 縮短器](https://github.com/jeremylikness/serverless-url-shortener)
+- [Linux 上的 Azure Functions](https://docs.microsoft.com/samples/azure-samples/functions-linux-custom-image/azure-functions-on-linux-custom-image-tutorial-sample-project/)
+- [海量資料處理： Azure 上的無伺服器 MapReduce](https://docs.microsoft.com/samples/azure-samples/durablefunctions-mapreduce-dotnet/big-data-processing-serverless-mapreduce-on-azure/)
+- [建立無伺服器應用程式](https://docs.microsoft.com/learn/paths/create-serverless-applications/)
+- [客戶評論應用程式與認知服務](https://docs.microsoft.com/samples/azure-samples/functions-customer-reviews/customer-reviews-cognitive-services/)
+- [使用 Azure Functions、Logic Apps 和 Durable Functions 進行檔案處理和驗證](https://docs.microsoft.com/samples/azure-samples/serverless-file-validation/file-processing-and-validation-using-azure-functions-logic-apps-and-durable-functions/)
+- [使用 Xamarin. Forms 用戶端來執行簡單的 Azure 函數](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
+- [編輯器內遊戲遙測視覺效果](https://docs.microsoft.com/samples/azure-samples/gaming-in-editor-telemetry/in-editor-telemetry-visualization/)
+- [IoT 可靠的邊緣轉送](https://docs.microsoft.com/samples/azure-samples/iot-reliable-edge-relay/iot-reliable-edge-relay/)
+- [使用 Azure Functions，透過服務匯流排、事件中樞和儲存體佇列產生和取用訊息](https://docs.microsoft.com/samples/azure-samples/durable-functions-producer-consumer/product-consume-messages-az-functions/)
+- [在 Azure Functions 上執行主控台應用程式](https://docs.microsoft.com/samples/azure-samples/functions-dotnet-migrating-console-apps/run-console-apps-on-azure-functions/)
+- [GraphQL 的無伺服器函式](https://github.com/softchris/graphql-workshop-dotnet/blob/master/docs/workshop/4.md)
+- [無伺服器微服務參考架構](https://docs.microsoft.com/samples/azure-samples/serverless-microservices-reference-architecture/serverless-microservices-reference-architecture/)
 
 >[!div class="step-by-step"]
->[上一個](orchestration-patterns.md)
->[下一個](serverless-conclusion.md)
+>[上一頁](orchestration-patterns.md)
+>[下一頁](serverless-conclusion.md)
