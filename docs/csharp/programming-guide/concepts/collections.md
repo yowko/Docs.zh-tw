@@ -2,57 +2,57 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: a560155b936aef7a4a346d39eaed75e0a85c1a73
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2996648690fc03b5f1d6a90e0be96155c5a24ed
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169879"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645473"
 ---
-# <a name="collections-c"></a><span data-ttu-id="4a392-102">集合 (C#)</span><span class="sxs-lookup"><span data-stu-id="4a392-102">Collections (C#)</span></span>
+# <a name="collections-c"></a><span data-ttu-id="bdb62-102">集合 (C#)</span><span class="sxs-lookup"><span data-stu-id="bdb62-102">Collections (C#)</span></span>
 
-<span data-ttu-id="4a392-103">在許多應用程式中，您想要建立和管理相關物件的群組。</span><span class="sxs-lookup"><span data-stu-id="4a392-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="4a392-104">有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>
+<span data-ttu-id="bdb62-103">在許多應用程式中，您想要建立和管理相關物件的群組。</span><span class="sxs-lookup"><span data-stu-id="bdb62-103">For many applications, you want to create and manage groups of related objects.</span></span> <span data-ttu-id="bdb62-104">有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-104">There are two ways to group objects: by creating arrays of objects, and by creating collections of objects.</span></span>
 
-<span data-ttu-id="4a392-105">陣列是最適用於建立和處理固定數目的強類型物件。</span><span class="sxs-lookup"><span data-stu-id="4a392-105">Arrays are most useful for creating and working with a fixed number of strongly-typed objects.</span></span> <span data-ttu-id="4a392-106">如需陣列的資訊，請參閱[陣列](../arrays/index.md)。</span><span class="sxs-lookup"><span data-stu-id="4a392-106">For information about arrays, see [Arrays](../arrays/index.md).</span></span>
+<span data-ttu-id="bdb62-105">陣列是最適用於建立和處理固定數目的強類型物件。</span><span class="sxs-lookup"><span data-stu-id="bdb62-105">Arrays are most useful for creating and working with a fixed number of strongly-typed objects.</span></span> <span data-ttu-id="bdb62-106">如需陣列的資訊，請參閱[陣列](../arrays/index.md)。</span><span class="sxs-lookup"><span data-stu-id="bdb62-106">For information about arrays, see [Arrays](../arrays/index.md).</span></span>
 
-<span data-ttu-id="4a392-107">集合會提供較具彈性的方式來使用物件群組。</span><span class="sxs-lookup"><span data-stu-id="4a392-107">Collections provide a more flexible way to work with groups of objects.</span></span> <span data-ttu-id="4a392-108">與陣列不同的是，您使用的物件群組可依程式變更的需要來動態增減。</span><span class="sxs-lookup"><span data-stu-id="4a392-108">Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change.</span></span> <span data-ttu-id="4a392-109">對於某些集合，您可以將索引鍵值指派給您放入集合的任何物件，讓您可以藉由使用索引鍵快速擷取物件。</span><span class="sxs-lookup"><span data-stu-id="4a392-109">For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.</span></span>
+<span data-ttu-id="bdb62-107">集合會提供較具彈性的方式來使用物件群組。</span><span class="sxs-lookup"><span data-stu-id="bdb62-107">Collections provide a more flexible way to work with groups of objects.</span></span> <span data-ttu-id="bdb62-108">與陣列不同的是，您使用的物件群組可依程式變更的需要來動態增減。</span><span class="sxs-lookup"><span data-stu-id="bdb62-108">Unlike arrays, the group of objects you work with can grow and shrink dynamically as the needs of the application change.</span></span> <span data-ttu-id="bdb62-109">對於某些集合，您可以將索引鍵值指派給您放入集合的任何物件，讓您可以藉由使用索引鍵快速擷取物件。</span><span class="sxs-lookup"><span data-stu-id="bdb62-109">For some collections, you can assign a key to any object that you put into the collection so that you can quickly retrieve the object by using the key.</span></span>
 
-<span data-ttu-id="4a392-110">集合是類別，因此您必須在將項目加入該集合之前，宣告類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="4a392-110">A collection is a class, so you must declare an instance of the class before you can add elements to that collection.</span></span>
+<span data-ttu-id="bdb62-110">集合是類別，因此您必須在將項目加入該集合之前，宣告類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="bdb62-110">A collection is a class, so you must declare an instance of the class before you can add elements to that collection.</span></span>
 
-<span data-ttu-id="4a392-111">如果集合包含只有一個資料類型的項目，則可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間內的其中一個類別。</span><span class="sxs-lookup"><span data-stu-id="4a392-111">If your collection contains elements of only one data type, you can use one of the classes in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="4a392-112">泛型集合會強制類型安全，如此就不會加入其他資料類型。</span><span class="sxs-lookup"><span data-stu-id="4a392-112">A generic collection enforces type safety so that no other data type can be added to it.</span></span> <span data-ttu-id="4a392-113">當您從泛型集合中擷取項目時，並不需要判斷其資料類型或將其轉換。</span><span class="sxs-lookup"><span data-stu-id="4a392-113">When you retrieve an element from a generic collection, you do not have to determine its data type or convert it.</span></span>
+<span data-ttu-id="bdb62-111">如果集合包含只有一個資料類型的項目，則可使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間內的其中一個類別。</span><span class="sxs-lookup"><span data-stu-id="bdb62-111">If your collection contains elements of only one data type, you can use one of the classes in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.</span></span> <span data-ttu-id="bdb62-112">泛型集合會強制類型安全，如此就不會加入其他資料類型。</span><span class="sxs-lookup"><span data-stu-id="bdb62-112">A generic collection enforces type safety so that no other data type can be added to it.</span></span> <span data-ttu-id="bdb62-113">當您從泛型集合中擷取項目時，並不需要判斷其資料類型或將其轉換。</span><span class="sxs-lookup"><span data-stu-id="bdb62-113">When you retrieve an element from a generic collection, you do not have to determine its data type or convert it.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="4a392-114">在本主題的範例中，請包括 `System.Collections.Generic` 和 `System.Linq` 命名空間的 [using](../../language-reference/keywords/using-directive.md) 指示詞。</span><span class="sxs-lookup"><span data-stu-id="4a392-114">For the examples in this topic, include [using](../../language-reference/keywords/using-directive.md) directives for the `System.Collections.Generic` and `System.Linq` namespaces.</span></span>
+> <span data-ttu-id="bdb62-114">在本主題的範例中，請包括 `System.Collections.Generic` 和 `System.Linq` 命名空間的 [using](../../language-reference/keywords/using-directive.md) 指示詞。</span><span class="sxs-lookup"><span data-stu-id="bdb62-114">For the examples in this topic, include [using](../../language-reference/keywords/using-directive.md) directives for the `System.Collections.Generic` and `System.Linq` namespaces.</span></span>
 
- <span data-ttu-id="4a392-115">**在本主題中**</span><span class="sxs-lookup"><span data-stu-id="4a392-115">**In this topic**</span></span>
+ <span data-ttu-id="bdb62-115">**在本主題中**</span><span class="sxs-lookup"><span data-stu-id="bdb62-115">**In this topic**</span></span>
 
-- [<span data-ttu-id="4a392-116">使用簡單的集合</span><span class="sxs-lookup"><span data-stu-id="4a392-116">Using a Simple Collection</span></span>](#BKMK_SimpleCollection)
+- [<span data-ttu-id="bdb62-116">使用簡單的集合</span><span class="sxs-lookup"><span data-stu-id="bdb62-116">Using a Simple Collection</span></span>](#BKMK_SimpleCollection)
 
-- [<span data-ttu-id="4a392-117">集合的種類</span><span class="sxs-lookup"><span data-stu-id="4a392-117">Kinds of Collections</span></span>](#BKMK_KindsOfCollections)
+- [<span data-ttu-id="bdb62-117">集合的種類</span><span class="sxs-lookup"><span data-stu-id="bdb62-117">Kinds of Collections</span></span>](#BKMK_KindsOfCollections)
 
-  - [<span data-ttu-id="4a392-118">System.Collections.Generic 類別</span><span class="sxs-lookup"><span data-stu-id="4a392-118">System.Collections.Generic Classes</span></span>](#BKMK_Generic)
+  - [<span data-ttu-id="bdb62-118">System.Collections.Generic 類別</span><span class="sxs-lookup"><span data-stu-id="bdb62-118">System.Collections.Generic Classes</span></span>](#BKMK_Generic)
 
-  - [<span data-ttu-id="4a392-119">System.Collections.Concurrent 類別</span><span class="sxs-lookup"><span data-stu-id="4a392-119">System.Collections.Concurrent Classes</span></span>](#BKMK_Concurrent)
+  - [<span data-ttu-id="bdb62-119">System.Collections.Concurrent 類別</span><span class="sxs-lookup"><span data-stu-id="bdb62-119">System.Collections.Concurrent Classes</span></span>](#BKMK_Concurrent)
 
-  - [<span data-ttu-id="4a392-120">System.Collections 類別</span><span class="sxs-lookup"><span data-stu-id="4a392-120">System.Collections Classes</span></span>](#BKMK_Collections)
+  - [<span data-ttu-id="bdb62-120">System.Collections 類別</span><span class="sxs-lookup"><span data-stu-id="bdb62-120">System.Collections Classes</span></span>](#BKMK_Collections)
 
-- [<span data-ttu-id="4a392-121">實作索引鍵/值組集合</span><span class="sxs-lookup"><span data-stu-id="4a392-121">Implementing a Collection of Key/Value Pairs</span></span>](#BKMK_KeyValuePairs)
+- [<span data-ttu-id="bdb62-121">實作索引鍵/值組集合</span><span class="sxs-lookup"><span data-stu-id="bdb62-121">Implementing a Collection of Key/Value Pairs</span></span>](#BKMK_KeyValuePairs)
 
-- [<span data-ttu-id="4a392-122">使用 LINQ 存取集合</span><span class="sxs-lookup"><span data-stu-id="4a392-122">Using LINQ to Access a Collection</span></span>](#BKMK_LINQ)
+- [<span data-ttu-id="bdb62-122">使用 LINQ 存取集合</span><span class="sxs-lookup"><span data-stu-id="bdb62-122">Using LINQ to Access a Collection</span></span>](#BKMK_LINQ)
 
-- [<span data-ttu-id="4a392-123">排序集合</span><span class="sxs-lookup"><span data-stu-id="4a392-123">Sorting a Collection</span></span>](#BKMK_Sorting)
+- [<span data-ttu-id="bdb62-123">排序集合</span><span class="sxs-lookup"><span data-stu-id="bdb62-123">Sorting a Collection</span></span>](#BKMK_Sorting)
 
-- [<span data-ttu-id="4a392-124">定義自訂集合</span><span class="sxs-lookup"><span data-stu-id="4a392-124">Defining a Custom Collection</span></span>](#BKMK_CustomCollection)
+- [<span data-ttu-id="bdb62-124">定義自訂集合</span><span class="sxs-lookup"><span data-stu-id="bdb62-124">Defining a Custom Collection</span></span>](#BKMK_CustomCollection)
 
-- [<span data-ttu-id="4a392-125">迭代器</span><span class="sxs-lookup"><span data-stu-id="4a392-125">Iterators</span></span>](#BKMK_Iterators)
+- [<span data-ttu-id="bdb62-125">迭代器</span><span class="sxs-lookup"><span data-stu-id="bdb62-125">Iterators</span></span>](#BKMK_Iterators)
 
 <a name="BKMK_SimpleCollection"></a>
 
-## <a name="using-a-simple-collection"></a><span data-ttu-id="4a392-126">使用簡單的集合</span><span class="sxs-lookup"><span data-stu-id="4a392-126">Using a Simple Collection</span></span>
+## <a name="using-a-simple-collection"></a><span data-ttu-id="bdb62-126">使用簡單的集合</span><span class="sxs-lookup"><span data-stu-id="bdb62-126">Using a Simple Collection</span></span>
 
-<span data-ttu-id="4a392-127">本節中的範例使用泛型 <xref:System.Collections.Generic.List%601> 類別，能夠讓您使用強型別物件清單。</span><span class="sxs-lookup"><span data-stu-id="4a392-127">The examples in this section use the generic <xref:System.Collections.Generic.List%601> class, which enables you to work with a strongly typed list of objects.</span></span>
+<span data-ttu-id="bdb62-127">本節中的範例使用泛型 <xref:System.Collections.Generic.List%601> 類別，能夠讓您使用強型別物件清單。</span><span class="sxs-lookup"><span data-stu-id="bdb62-127">The examples in this section use the generic <xref:System.Collections.Generic.List%601> class, which enables you to work with a strongly typed list of objects.</span></span>
 
-<span data-ttu-id="4a392-128">以下範例會建立字串清單，並使用 [foreach](../../language-reference/keywords/foreach-in.md) 陳述式逐一查看字串。</span><span class="sxs-lookup"><span data-stu-id="4a392-128">The following example creates a list of strings and then iterates through the strings by using a [foreach](../../language-reference/keywords/foreach-in.md) statement.</span></span>
+<span data-ttu-id="bdb62-128">以下範例會建立字串清單，並使用 [foreach](../../language-reference/keywords/foreach-in.md) 陳述式逐一查看字串。</span><span class="sxs-lookup"><span data-stu-id="bdb62-128">The following example creates a list of strings and then iterates through the strings by using a [foreach](../../language-reference/keywords/foreach-in.md) statement.</span></span>
 
 ```csharp
 // Create a list of strings.
@@ -70,9 +70,9 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-<span data-ttu-id="4a392-129">如果預先知道集合的內容，即可使用「集合初始設定式」\*\* 來初始化集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-129">If the contents of a collection are known in advance, you can use a *collection initializer* to initialize the collection.</span></span> <span data-ttu-id="4a392-130">如需詳細資訊，請參閱[物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)。</span><span class="sxs-lookup"><span data-stu-id="4a392-130">For more information, see [Object and Collection Initializers](../classes-and-structs/object-and-collection-initializers.md).</span></span>
+<span data-ttu-id="bdb62-129">如果預先知道集合的內容，即可使用「集合初始設定式」\*\* 來初始化集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-129">If the contents of a collection are known in advance, you can use a *collection initializer* to initialize the collection.</span></span> <span data-ttu-id="bdb62-130">如需詳細資訊，請參閱[物件和集合初始設定式](../classes-and-structs/object-and-collection-initializers.md)。</span><span class="sxs-lookup"><span data-stu-id="bdb62-130">For more information, see [Object and Collection Initializers](../classes-and-structs/object-and-collection-initializers.md).</span></span>
 
-<span data-ttu-id="4a392-131">下列範例與前一個範例相同，但有一點除外，就是集合初始設定式是用來將項目加入集合中。</span><span class="sxs-lookup"><span data-stu-id="4a392-131">The following example is the same as the previous example, except a collection initializer is used to add elements to the collection.</span></span>
+<span data-ttu-id="bdb62-131">下列範例與前一個範例相同，但有一點除外，就是集合初始設定式是用來將項目加入集合中。</span><span class="sxs-lookup"><span data-stu-id="bdb62-131">The following example is the same as the previous example, except a collection initializer is used to add elements to the collection.</span></span>
 
 ```csharp
 // Create a list of strings by using a
@@ -87,9 +87,9 @@ foreach (var salmon in salmons)
 // Output: chinook coho pink sockeye
 ```
 
-<span data-ttu-id="4a392-132">您可以使用 [for](../../language-reference/keywords/for.md) 陳述式來逐一查看集合，而不是使用 `foreach` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="4a392-132">You can use a [for](../../language-reference/keywords/for.md) statement instead of a `foreach` statement to iterate through a collection.</span></span> <span data-ttu-id="4a392-133">您可以藉由依索引位置存取集合項目來完成這項作業。</span><span class="sxs-lookup"><span data-stu-id="4a392-133">You accomplish this by accessing the collection elements by the index position.</span></span> <span data-ttu-id="4a392-134">項目的索引以 0 開始，並以項目計數減 1 結束。</span><span class="sxs-lookup"><span data-stu-id="4a392-134">The index of the elements starts at 0 and ends at the element count minus 1.</span></span>
+<span data-ttu-id="bdb62-132">您可以使用 [for](../../language-reference/keywords/for.md) 陳述式來逐一查看集合，而不是使用 `foreach` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="bdb62-132">You can use a [for](../../language-reference/keywords/for.md) statement instead of a `foreach` statement to iterate through a collection.</span></span> <span data-ttu-id="bdb62-133">您可以藉由依索引位置存取集合項目來完成這項作業。</span><span class="sxs-lookup"><span data-stu-id="bdb62-133">You accomplish this by accessing the collection elements by the index position.</span></span> <span data-ttu-id="bdb62-134">項目的索引以 0 開始，並以項目計數減 1 結束。</span><span class="sxs-lookup"><span data-stu-id="bdb62-134">The index of the elements starts at 0 and ends at the element count minus 1.</span></span>
 
-<span data-ttu-id="4a392-135">下列範例會使用 `for` 來逐一查看集合的項目，而不是使用 `foreach`。</span><span class="sxs-lookup"><span data-stu-id="4a392-135">The following example iterates through the elements of a collection by using `for` instead of `foreach`.</span></span>
+<span data-ttu-id="bdb62-135">下列範例會使用 `for` 來逐一查看集合的項目，而不是使用 `foreach`。</span><span class="sxs-lookup"><span data-stu-id="bdb62-135">The following example iterates through the elements of a collection by using `for` instead of `foreach`.</span></span>
 
 ```csharp
 // Create a list of strings by using a
@@ -103,7 +103,7 @@ for (var index = 0; index < salmons.Count; index++)
 // Output: chinook coho pink sockeye
 ```
 
-<span data-ttu-id="4a392-136">下列範例透過指定要移除的物件，從集合中移除項目。</span><span class="sxs-lookup"><span data-stu-id="4a392-136">The following example removes an element from the collection by specifying the object to remove.</span></span>
+<span data-ttu-id="bdb62-136">下列範例透過指定要移除的物件，從集合中移除項目。</span><span class="sxs-lookup"><span data-stu-id="bdb62-136">The following example removes an element from the collection by specifying the object to remove.</span></span>
 
 ```csharp
 // Create a list of strings by using a
@@ -122,7 +122,7 @@ foreach (var salmon in salmons)
 // Output: chinook pink sockeye
 ```
 
-<span data-ttu-id="4a392-137">下列範例會移除泛型清單中的項目。</span><span class="sxs-lookup"><span data-stu-id="4a392-137">The following example removes elements from a generic list.</span></span> <span data-ttu-id="4a392-138">使用以遞減順序反覆運算的 [for](../../language-reference/keywords/for.md) 陳述式，而不是 `foreach` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="4a392-138">Instead of a `foreach` statement, a [for](../../language-reference/keywords/for.md) statement that iterates in descending order is used.</span></span> <span data-ttu-id="4a392-139">這是因為 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 方法導致在已移除之項目後面的項目具有較低的索引值。</span><span class="sxs-lookup"><span data-stu-id="4a392-139">This is because the <xref:System.Collections.Generic.List%601.RemoveAt%2A> method causes elements after a removed element to have a lower index value.</span></span>
+<span data-ttu-id="bdb62-137">下列範例會移除泛型清單中的項目。</span><span class="sxs-lookup"><span data-stu-id="bdb62-137">The following example removes elements from a generic list.</span></span> <span data-ttu-id="bdb62-138">使用以遞減順序反覆運算的 [for](../../language-reference/keywords/for.md) 陳述式，而不是 `foreach` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="bdb62-138">Instead of a `foreach` statement, a [for](../../language-reference/keywords/for.md) statement that iterates in descending order is used.</span></span> <span data-ttu-id="bdb62-139">這是因為 <xref:System.Collections.Generic.List%601.RemoveAt%2A> 方法導致在已移除之項目後面的項目具有較低的索引值。</span><span class="sxs-lookup"><span data-stu-id="bdb62-139">This is because the <xref:System.Collections.Generic.List%601.RemoveAt%2A> method causes elements after a removed element to have a lower index value.</span></span>
 
 ```csharp
 var numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -146,7 +146,7 @@ numbers.ForEach(
 // Output: 0 2 4 6 8
 ```
 
-<span data-ttu-id="4a392-140">如需 <xref:System.Collections.Generic.List%601> 中的項目類型，您也可以定義自己的類別。</span><span class="sxs-lookup"><span data-stu-id="4a392-140">For the type of elements in the <xref:System.Collections.Generic.List%601>, you can also define your own class.</span></span> <span data-ttu-id="4a392-141">在下列範例中，<xref:System.Collections.Generic.List%601> 使用的 `Galaxy` 類別是在程式碼中定義的。</span><span class="sxs-lookup"><span data-stu-id="4a392-141">In the following example, the `Galaxy` class that is used by the <xref:System.Collections.Generic.List%601> is defined in the code.</span></span>
+<span data-ttu-id="bdb62-140">如需 <xref:System.Collections.Generic.List%601> 中的項目類型，您也可以定義自己的類別。</span><span class="sxs-lookup"><span data-stu-id="bdb62-140">For the type of elements in the <xref:System.Collections.Generic.List%601>, you can also define your own class.</span></span> <span data-ttu-id="bdb62-141">在下列範例中，<xref:System.Collections.Generic.List%601> 使用的 `Galaxy` 類別是在程式碼中定義的。</span><span class="sxs-lookup"><span data-stu-id="bdb62-141">In the following example, the `Galaxy` class that is used by the <xref:System.Collections.Generic.List%601> is defined in the code.</span></span>
 
 ```csharp
 private static void IterateThroughList()
@@ -180,72 +180,72 @@ public class Galaxy
 
 <a name="BKMK_KindsOfCollections"></a>
 
-## <a name="kinds-of-collections"></a><span data-ttu-id="4a392-142">集合的種類</span><span class="sxs-lookup"><span data-stu-id="4a392-142">Kinds of Collections</span></span>
+## <a name="kinds-of-collections"></a><span data-ttu-id="bdb62-142">集合的種類</span><span class="sxs-lookup"><span data-stu-id="bdb62-142">Kinds of Collections</span></span>
 
-<span data-ttu-id="4a392-143">.NET Framework 會提供很多常見的集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-143">Many common collections are provided by the .NET Framework.</span></span> <span data-ttu-id="4a392-144">各個類型的集合都是針對特定用途來設計。</span><span class="sxs-lookup"><span data-stu-id="4a392-144">Each type of collection is designed for a specific purpose.</span></span>
+<span data-ttu-id="bdb62-143">.NET Framework 會提供很多常見的集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-143">Many common collections are provided by the .NET Framework.</span></span> <span data-ttu-id="bdb62-144">各個類型的集合都是針對特定用途來設計。</span><span class="sxs-lookup"><span data-stu-id="bdb62-144">Each type of collection is designed for a specific purpose.</span></span>
 
-<span data-ttu-id="4a392-145">下列集合類別的群組將在本節介紹：</span><span class="sxs-lookup"><span data-stu-id="4a392-145">Some of the common collection classes are described in this section:</span></span>
+<span data-ttu-id="bdb62-145">下列集合類別的群組將在本節介紹：</span><span class="sxs-lookup"><span data-stu-id="bdb62-145">Some of the common collection classes are described in this section:</span></span>
 
-- <span data-ttu-id="4a392-146"><xref:System.Collections.Generic> 類別</span><span class="sxs-lookup"><span data-stu-id="4a392-146"><xref:System.Collections.Generic> classes</span></span>
+- <span data-ttu-id="bdb62-146"><xref:System.Collections.Generic> 類別</span><span class="sxs-lookup"><span data-stu-id="bdb62-146"><xref:System.Collections.Generic> classes</span></span>
 
-- <span data-ttu-id="4a392-147"><xref:System.Collections.Concurrent> 類別</span><span class="sxs-lookup"><span data-stu-id="4a392-147"><xref:System.Collections.Concurrent> classes</span></span>
+- <span data-ttu-id="bdb62-147"><xref:System.Collections.Concurrent> 類別</span><span class="sxs-lookup"><span data-stu-id="bdb62-147"><xref:System.Collections.Concurrent> classes</span></span>
 
-- <span data-ttu-id="4a392-148"><xref:System.Collections> 類別</span><span class="sxs-lookup"><span data-stu-id="4a392-148"><xref:System.Collections> classes</span></span>
+- <span data-ttu-id="bdb62-148"><xref:System.Collections> 類別</span><span class="sxs-lookup"><span data-stu-id="bdb62-148"><xref:System.Collections> classes</span></span>
 
 <a name="BKMK_Generic"></a>
 
-### <a name="systemcollectionsgeneric-classes"></a><span data-ttu-id="4a392-149">System.Collections.Generic 類別</span><span class="sxs-lookup"><span data-stu-id="4a392-149">System.Collections.Generic Classes</span></span>
+### <a name="systemcollectionsgeneric-classes"></a><span data-ttu-id="bdb62-149">System.Collections.Generic 類別</span><span class="sxs-lookup"><span data-stu-id="bdb62-149">System.Collections.Generic Classes</span></span>
 
-<span data-ttu-id="4a392-150">藉由使用 <xref:System.Collections.Generic> 命名空間的其中一個類別，您可以建立泛型集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-150">You can create a generic collection by using one of the classes in the <xref:System.Collections.Generic> namespace.</span></span> <span data-ttu-id="4a392-151">當集合中每個項目的資料類型相同時，泛型集合就相當有用。</span><span class="sxs-lookup"><span data-stu-id="4a392-151">A generic collection is useful when every item in the collection has the same data type.</span></span> <span data-ttu-id="4a392-152">泛型集合會透過只允許加入所需資料類型的方式，強制使用強式類型。</span><span class="sxs-lookup"><span data-stu-id="4a392-152">A generic collection enforces strong typing by allowing only the desired data type to be added.</span></span>
+<span data-ttu-id="bdb62-150">藉由使用 <xref:System.Collections.Generic> 命名空間的其中一個類別，您可以建立泛型集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-150">You can create a generic collection by using one of the classes in the <xref:System.Collections.Generic> namespace.</span></span> <span data-ttu-id="bdb62-151">當集合中每個項目的資料類型相同時，泛型集合就相當有用。</span><span class="sxs-lookup"><span data-stu-id="bdb62-151">A generic collection is useful when every item in the collection has the same data type.</span></span> <span data-ttu-id="bdb62-152">泛型集合會透過只允許加入所需資料類型的方式，強制使用強式類型。</span><span class="sxs-lookup"><span data-stu-id="bdb62-152">A generic collection enforces strong typing by allowing only the desired data type to be added.</span></span>
 
-<span data-ttu-id="4a392-153">下表列出 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間的一些常用類別：</span><span class="sxs-lookup"><span data-stu-id="4a392-153">The following table lists some of the frequently used classes of the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace:</span></span>
+<span data-ttu-id="bdb62-153">下表列出 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間的一些常用類別：</span><span class="sxs-lookup"><span data-stu-id="bdb62-153">The following table lists some of the frequently used classes of the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace:</span></span>
 
-|<span data-ttu-id="4a392-154">類別</span><span class="sxs-lookup"><span data-stu-id="4a392-154">Class</span></span>|<span data-ttu-id="4a392-155">描述</span><span class="sxs-lookup"><span data-stu-id="4a392-155">Description</span></span>|
+|<span data-ttu-id="bdb62-154">類別</span><span class="sxs-lookup"><span data-stu-id="bdb62-154">Class</span></span>|<span data-ttu-id="bdb62-155">描述</span><span class="sxs-lookup"><span data-stu-id="bdb62-155">Description</span></span>|
 |---|---|
-|<xref:System.Collections.Generic.Dictionary%602>|<span data-ttu-id="4a392-156">表示根據索引鍵所整理的索引鍵/值組集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-156">Represents a collection of key/value pairs that are organized based on the key.</span></span>|
-|<xref:System.Collections.Generic.List%601>|<span data-ttu-id="4a392-157">表示可以依照索引存取的物件清單。</span><span class="sxs-lookup"><span data-stu-id="4a392-157">Represents a list of objects that can be accessed by index.</span></span> <span data-ttu-id="4a392-158">提供搜尋、排序和修改清單的方法。</span><span class="sxs-lookup"><span data-stu-id="4a392-158">Provides methods to search, sort, and modify lists.</span></span>|
-|<xref:System.Collections.Generic.Queue%601>|<span data-ttu-id="4a392-159">表示物件的先進先出 (FIFO) 集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-159">Represents a first in, first out (FIFO) collection of objects.</span></span>|
-|<xref:System.Collections.Generic.SortedList%602>|<span data-ttu-id="4a392-160">代表根據關聯的 <xref:System.Collections.Generic.IComparer%601> 實作，依索引鍵所排序的索引鍵/值組集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-160">Represents a collection of key/value pairs that are sorted by key based on the associated <xref:System.Collections.Generic.IComparer%601> implementation.</span></span>|
-|<xref:System.Collections.Generic.Stack%601>|<span data-ttu-id="4a392-161">表示物件的後進先出 (LIFO) 集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-161">Represents a last in, first out (LIFO) collection of objects.</span></span>|
+|<xref:System.Collections.Generic.Dictionary%602>|<span data-ttu-id="bdb62-156">表示根據索引鍵所整理的索引鍵/值組集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-156">Represents a collection of key/value pairs that are organized based on the key.</span></span>|
+|<xref:System.Collections.Generic.List%601>|<span data-ttu-id="bdb62-157">表示可以依照索引存取的物件清單。</span><span class="sxs-lookup"><span data-stu-id="bdb62-157">Represents a list of objects that can be accessed by index.</span></span> <span data-ttu-id="bdb62-158">提供搜尋、排序和修改清單的方法。</span><span class="sxs-lookup"><span data-stu-id="bdb62-158">Provides methods to search, sort, and modify lists.</span></span>|
+|<xref:System.Collections.Generic.Queue%601>|<span data-ttu-id="bdb62-159">表示物件的先進先出 (FIFO) 集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-159">Represents a first in, first out (FIFO) collection of objects.</span></span>|
+|<xref:System.Collections.Generic.SortedList%602>|<span data-ttu-id="bdb62-160">代表根據關聯的 <xref:System.Collections.Generic.IComparer%601> 實作，依索引鍵所排序的索引鍵/值組集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-160">Represents a collection of key/value pairs that are sorted by key based on the associated <xref:System.Collections.Generic.IComparer%601> implementation.</span></span>|
+|<xref:System.Collections.Generic.Stack%601>|<span data-ttu-id="bdb62-161">表示物件的後進先出 (LIFO) 集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-161">Represents a last in, first out (LIFO) collection of objects.</span></span>|
 
-<span data-ttu-id="4a392-162">如需其他資訊，請參閱[常用的集合類型](../../../standard/collections/commonly-used-collection-types.md)、[選取集合類別](../../../standard/collections/selecting-a-collection-class.md)和 <xref:System.Collections.Generic>。</span><span class="sxs-lookup"><span data-stu-id="4a392-162">For additional information, see [Commonly Used Collection Types](../../../standard/collections/commonly-used-collection-types.md), [Selecting a Collection Class](../../../standard/collections/selecting-a-collection-class.md), and <xref:System.Collections.Generic>.</span></span>
+<span data-ttu-id="bdb62-162">如需其他資訊，請參閱[常用的集合類型](../../../standard/collections/commonly-used-collection-types.md)、[選取集合類別](../../../standard/collections/selecting-a-collection-class.md)和 <xref:System.Collections.Generic>。</span><span class="sxs-lookup"><span data-stu-id="bdb62-162">For additional information, see [Commonly Used Collection Types](../../../standard/collections/commonly-used-collection-types.md), [Selecting a Collection Class](../../../standard/collections/selecting-a-collection-class.md), and <xref:System.Collections.Generic>.</span></span>
 
 <a name="BKMK_Concurrent"></a>
 
-### <a name="systemcollectionsconcurrent-classes"></a><span data-ttu-id="4a392-163">System.Collections.Concurrent 類別</span><span class="sxs-lookup"><span data-stu-id="4a392-163">System.Collections.Concurrent Classes</span></span>
+### <a name="systemcollectionsconcurrent-classes"></a><span data-ttu-id="bdb62-163">System.Collections.Concurrent 類別</span><span class="sxs-lookup"><span data-stu-id="bdb62-163">System.Collections.Concurrent Classes</span></span>
 
-<span data-ttu-id="4a392-164">在 .NET Framework 4 或更新版本中，<xref:System.Collections.Concurrent> 命名空間中的集合提供了有效率的安全執行緒作業，可從多個執行緒存取集合項目。</span><span class="sxs-lookup"><span data-stu-id="4a392-164">In the .NET Framework 4 or newer, the collections in the <xref:System.Collections.Concurrent> namespace provide efficient thread-safe operations for accessing collection items from multiple threads.</span></span>
+<span data-ttu-id="bdb62-164">在 .NET Framework 4 或更新版本中，<xref:System.Collections.Concurrent> 命名空間中的集合提供了有效率的安全執行緒作業，可從多個執行緒存取集合項目。</span><span class="sxs-lookup"><span data-stu-id="bdb62-164">In the .NET Framework 4 or newer, the collections in the <xref:System.Collections.Concurrent> namespace provide efficient thread-safe operations for accessing collection items from multiple threads.</span></span>
 
-<span data-ttu-id="4a392-165">每當有多個執行緒同時存取集合時，應該使用 <xref:System.Collections.Concurrent> 命名空間中的類別來代替 <xref:System.Collections.Generic?displayProperty=nameWithType> 和 <xref:System.Collections?displayProperty=nameWithType> 命名空間中的對應類型。</span><span class="sxs-lookup"><span data-stu-id="4a392-165">The classes in the <xref:System.Collections.Concurrent> namespace should be used instead of the corresponding types in the <xref:System.Collections.Generic?displayProperty=nameWithType> and <xref:System.Collections?displayProperty=nameWithType> namespaces whenever multiple threads are accessing the collection concurrently.</span></span> <span data-ttu-id="4a392-166">如需詳細資訊，請參閱[安全執行緒集合](../../../standard/collections/thread-safe/index.md)和 <xref:System.Collections.Concurrent>。</span><span class="sxs-lookup"><span data-stu-id="4a392-166">For more information, see [Thread-Safe Collections](../../../standard/collections/thread-safe/index.md) and <xref:System.Collections.Concurrent>.</span></span>
+<span data-ttu-id="bdb62-165">每當有多個執行緒同時存取集合時，應該使用 <xref:System.Collections.Concurrent> 命名空間中的類別來代替 <xref:System.Collections.Generic?displayProperty=nameWithType> 和 <xref:System.Collections?displayProperty=nameWithType> 命名空間中的對應類型。</span><span class="sxs-lookup"><span data-stu-id="bdb62-165">The classes in the <xref:System.Collections.Concurrent> namespace should be used instead of the corresponding types in the <xref:System.Collections.Generic?displayProperty=nameWithType> and <xref:System.Collections?displayProperty=nameWithType> namespaces whenever multiple threads are accessing the collection concurrently.</span></span> <span data-ttu-id="bdb62-166">如需詳細資訊，請參閱[安全執行緒集合](../../../standard/collections/thread-safe/index.md)和 <xref:System.Collections.Concurrent>。</span><span class="sxs-lookup"><span data-stu-id="bdb62-166">For more information, see [Thread-Safe Collections](../../../standard/collections/thread-safe/index.md) and <xref:System.Collections.Concurrent>.</span></span>
 
-<span data-ttu-id="4a392-167"><xref:System.Collections.Concurrent> 命名空間中包含一些類別，包括 <xref:System.Collections.Concurrent.BlockingCollection%601>、<xref:System.Collections.Concurrent.ConcurrentDictionary%602>、<xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601>。</span><span class="sxs-lookup"><span data-stu-id="4a392-167">Some classes included in the <xref:System.Collections.Concurrent> namespace are <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, and <xref:System.Collections.Concurrent.ConcurrentStack%601>.</span></span>
+<span data-ttu-id="bdb62-167"><xref:System.Collections.Concurrent> 命名空間中包含一些類別，包括 <xref:System.Collections.Concurrent.BlockingCollection%601>、<xref:System.Collections.Concurrent.ConcurrentDictionary%602>、<xref:System.Collections.Concurrent.ConcurrentQueue%601> 和 <xref:System.Collections.Concurrent.ConcurrentStack%601>。</span><span class="sxs-lookup"><span data-stu-id="bdb62-167">Some classes included in the <xref:System.Collections.Concurrent> namespace are <xref:System.Collections.Concurrent.BlockingCollection%601>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602>, <xref:System.Collections.Concurrent.ConcurrentQueue%601>, and <xref:System.Collections.Concurrent.ConcurrentStack%601>.</span></span>
 
 <a name="BKMK_Collections"></a>
 
-### <a name="systemcollections-classes"></a><span data-ttu-id="4a392-168">System.Collections 類別</span><span class="sxs-lookup"><span data-stu-id="4a392-168">System.Collections Classes</span></span>
+### <a name="systemcollections-classes"></a><span data-ttu-id="bdb62-168">System.Collections 類別</span><span class="sxs-lookup"><span data-stu-id="bdb62-168">System.Collections Classes</span></span>
 
-<span data-ttu-id="4a392-169"><xref:System.Collections?displayProperty=nameWithType> 命名空間中的類別不會將項目儲存為特別類型物件，而是會儲存為 `Object` 類型的物件。</span><span class="sxs-lookup"><span data-stu-id="4a392-169">The classes in the <xref:System.Collections?displayProperty=nameWithType> namespace do not store elements as specifically typed objects, but as objects of type `Object`.</span></span>
+<span data-ttu-id="bdb62-169"><xref:System.Collections?displayProperty=nameWithType> 命名空間中的類別不會將項目儲存為特別類型物件，而是會儲存為 `Object` 類型的物件。</span><span class="sxs-lookup"><span data-stu-id="bdb62-169">The classes in the <xref:System.Collections?displayProperty=nameWithType> namespace do not store elements as specifically typed objects, but as objects of type `Object`.</span></span>
 
-<span data-ttu-id="4a392-170">可能的話，您應該使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間或 <xref:System.Collections.Concurrent> 命名空間中的泛型集合，而非 `System.Collections` 命名空間中的傳統類型。</span><span class="sxs-lookup"><span data-stu-id="4a392-170">Whenever possible, you should use the generic collections in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace or the <xref:System.Collections.Concurrent> namespace instead of the legacy types in the `System.Collections` namespace.</span></span>
+<span data-ttu-id="bdb62-170">可能的話，您應該使用 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間或 <xref:System.Collections.Concurrent> 命名空間中的泛型集合，而非 `System.Collections` 命名空間中的傳統類型。</span><span class="sxs-lookup"><span data-stu-id="bdb62-170">Whenever possible, you should use the generic collections in the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace or the <xref:System.Collections.Concurrent> namespace instead of the legacy types in the `System.Collections` namespace.</span></span>
 
-<span data-ttu-id="4a392-171">下表列出 `System.Collections` 命名空間的一些常用類別：</span><span class="sxs-lookup"><span data-stu-id="4a392-171">The following table lists some of the frequently used classes in the `System.Collections` namespace:</span></span>
+<span data-ttu-id="bdb62-171">下表列出 `System.Collections` 命名空間的一些常用類別：</span><span class="sxs-lookup"><span data-stu-id="bdb62-171">The following table lists some of the frequently used classes in the `System.Collections` namespace:</span></span>
 
-|<span data-ttu-id="4a392-172">類別</span><span class="sxs-lookup"><span data-stu-id="4a392-172">Class</span></span>|<span data-ttu-id="4a392-173">描述</span><span class="sxs-lookup"><span data-stu-id="4a392-173">Description</span></span>|
+|<span data-ttu-id="bdb62-172">類別</span><span class="sxs-lookup"><span data-stu-id="bdb62-172">Class</span></span>|<span data-ttu-id="bdb62-173">描述</span><span class="sxs-lookup"><span data-stu-id="bdb62-173">Description</span></span>|
 |---|---|
-|<xref:System.Collections.ArrayList>|<span data-ttu-id="4a392-174">代表會視需要動態增加大小的物件陣列。</span><span class="sxs-lookup"><span data-stu-id="4a392-174">Represents an array of objects whose size is dynamically increased as required.</span></span>|
-|<xref:System.Collections.Hashtable>|<span data-ttu-id="4a392-175">代表根據索引鍵的雜湊程式碼，所整理的索引鍵/值組集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-175">Represents a collection of key/value pairs that are organized based on the hash code of the key.</span></span>|
-|<xref:System.Collections.Queue>|<span data-ttu-id="4a392-176">表示物件的先進先出 (FIFO) 集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-176">Represents a first in, first out (FIFO) collection of objects.</span></span>|
-|<xref:System.Collections.Stack>|<span data-ttu-id="4a392-177">表示物件的後進先出 (LIFO) 集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-177">Represents a last in, first out (LIFO) collection of objects.</span></span>|
+|<xref:System.Collections.ArrayList>|<span data-ttu-id="bdb62-174">代表會視需要動態增加大小的物件陣列。</span><span class="sxs-lookup"><span data-stu-id="bdb62-174">Represents an array of objects whose size is dynamically increased as required.</span></span>|
+|<xref:System.Collections.Hashtable>|<span data-ttu-id="bdb62-175">代表根據索引鍵的雜湊程式碼，所整理的索引鍵/值組集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-175">Represents a collection of key/value pairs that are organized based on the hash code of the key.</span></span>|
+|<xref:System.Collections.Queue>|<span data-ttu-id="bdb62-176">表示物件的先進先出 (FIFO) 集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-176">Represents a first in, first out (FIFO) collection of objects.</span></span>|
+|<xref:System.Collections.Stack>|<span data-ttu-id="bdb62-177">表示物件的後進先出 (LIFO) 集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-177">Represents a last in, first out (LIFO) collection of objects.</span></span>|
 
-<span data-ttu-id="4a392-178"><xref:System.Collections.Specialized> 命名空間會提供特製化類型和強型別集合類別，例如只有字串的集合，以及連結串列和 Hybrid 字典。</span><span class="sxs-lookup"><span data-stu-id="4a392-178">The <xref:System.Collections.Specialized> namespace provides specialized and strongly typed collection classes, such as string-only collections and linked-list and hybrid dictionaries.</span></span>
+<span data-ttu-id="bdb62-178"><xref:System.Collections.Specialized> 命名空間會提供特製化類型和強型別集合類別，例如只有字串的集合，以及連結串列和 Hybrid 字典。</span><span class="sxs-lookup"><span data-stu-id="bdb62-178">The <xref:System.Collections.Specialized> namespace provides specialized and strongly typed collection classes, such as string-only collections and linked-list and hybrid dictionaries.</span></span>
 
 <a name="BKMK_KeyValuePairs"></a>
 
-## <a name="implementing-a-collection-of-keyvalue-pairs"></a><span data-ttu-id="4a392-179">實作索引鍵/值組集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-179">Implementing a Collection of Key/Value Pairs</span></span>
+## <a name="implementing-a-collection-of-keyvalue-pairs"></a><span data-ttu-id="bdb62-179">實作索引鍵/值組集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-179">Implementing a Collection of Key/Value Pairs</span></span>
 
-<span data-ttu-id="4a392-180"><xref:System.Collections.Generic.Dictionary%602> 泛型集合可讓您使用每個項目的索引鍵來存取集合中的項目。</span><span class="sxs-lookup"><span data-stu-id="4a392-180">The <xref:System.Collections.Generic.Dictionary%602> generic collection enables you to access to elements in a collection by using the key of each element.</span></span> <span data-ttu-id="4a392-181">加入字典中的每一個項目都是由值及其關聯索引鍵所組成。</span><span class="sxs-lookup"><span data-stu-id="4a392-181">Each addition to the dictionary consists of a value and its associated key.</span></span> <span data-ttu-id="4a392-182">使用其索引鍵擷取值的速度非常快，因為 `Dictionary` 類別是實作為雜湊表。</span><span class="sxs-lookup"><span data-stu-id="4a392-182">Retrieving a value by using its key is fast because the `Dictionary` class is implemented as a hash table.</span></span>
+<span data-ttu-id="bdb62-180"><xref:System.Collections.Generic.Dictionary%602> 泛型集合可讓您使用每個項目的索引鍵來存取集合中的項目。</span><span class="sxs-lookup"><span data-stu-id="bdb62-180">The <xref:System.Collections.Generic.Dictionary%602> generic collection enables you to access to elements in a collection by using the key of each element.</span></span> <span data-ttu-id="bdb62-181">加入字典中的每一個項目都是由值及其關聯索引鍵所組成。</span><span class="sxs-lookup"><span data-stu-id="bdb62-181">Each addition to the dictionary consists of a value and its associated key.</span></span> <span data-ttu-id="bdb62-182">使用其索引鍵擷取值的速度非常快，因為 `Dictionary` 類別是實作為雜湊表。</span><span class="sxs-lookup"><span data-stu-id="bdb62-182">Retrieving a value by using its key is fast because the `Dictionary` class is implemented as a hash table.</span></span>
 
-<span data-ttu-id="4a392-183">下列範例會使用 `foreach` 陳述式建立 `Dictionary` 集合並逐一查看字典。</span><span class="sxs-lookup"><span data-stu-id="4a392-183">The following example creates a `Dictionary` collection and iterates through the dictionary by using a `foreach` statement.</span></span>
+<span data-ttu-id="bdb62-183">下列範例會使用 `foreach` 陳述式建立 `Dictionary` 集合並逐一查看字典。</span><span class="sxs-lookup"><span data-stu-id="bdb62-183">The following example creates a `Dictionary` collection and iterates through the dictionary by using a `foreach` statement.</span></span>
 
 ```csharp
 private static void IterateThruDictionary()
@@ -294,7 +294,7 @@ public class Element
 }
 ```
 
-<span data-ttu-id="4a392-184">若要改為使用集合初始設定式建置 `Dictionary` 集合，您可以使用下列方法取代 `BuildDictionary` 和 `AddToDictionary` 方法。</span><span class="sxs-lookup"><span data-stu-id="4a392-184">To instead use a collection initializer to build the `Dictionary` collection, you can replace the `BuildDictionary` and `AddToDictionary` methods with the following method.</span></span>
+<span data-ttu-id="bdb62-184">若要改為使用集合初始設定式建置 `Dictionary` 集合，您可以使用下列方法取代 `BuildDictionary` 和 `AddToDictionary` 方法。</span><span class="sxs-lookup"><span data-stu-id="bdb62-184">To instead use a collection initializer to build the `Dictionary` collection, you can replace the `BuildDictionary` and `AddToDictionary` methods with the following method.</span></span>
 
 ```csharp
 private static Dictionary<string, Element> BuildDictionary2()
@@ -313,7 +313,7 @@ private static Dictionary<string, Element> BuildDictionary2()
 }
 ```
 
-<span data-ttu-id="4a392-185">下列範例會使用 <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> 方法和 `Dictionary` 的 <xref:System.Collections.Generic.Dictionary%602.Item%2A> 屬性來依索引鍵快速尋找項目。</span><span class="sxs-lookup"><span data-stu-id="4a392-185">The following example uses the <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> method and the <xref:System.Collections.Generic.Dictionary%602.Item%2A> property of `Dictionary` to quickly find an item by key.</span></span> <span data-ttu-id="4a392-186">藉由使用 C# 中的 `elements[symbol]`，`Item` 屬性可讓您存取 `elements` 集合中的項目。</span><span class="sxs-lookup"><span data-stu-id="4a392-186">The `Item` property enables you to access an item in the `elements` collection by using the `elements[symbol]` in C#.</span></span>
+<span data-ttu-id="bdb62-185">下列範例會使用 <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> 方法和 `Dictionary` 的 <xref:System.Collections.Generic.Dictionary%602.Item%2A> 屬性來依索引鍵快速尋找項目。</span><span class="sxs-lookup"><span data-stu-id="bdb62-185">The following example uses the <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> method and the <xref:System.Collections.Generic.Dictionary%602.Item%2A> property of `Dictionary` to quickly find an item by key.</span></span> <span data-ttu-id="bdb62-186">藉由使用 C# 中的 `elements[symbol]`，`Item` 屬性可讓您存取 `elements` 集合中的項目。</span><span class="sxs-lookup"><span data-stu-id="bdb62-186">The `Item` property enables you to access an item in the `elements` collection by using the `elements[symbol]` in C#.</span></span>
 
 ```csharp
 private static void FindInDictionary(string symbol)
@@ -332,7 +332,7 @@ private static void FindInDictionary(string symbol)
 }
 ```
 
-<span data-ttu-id="4a392-187">下列範例會使用 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 方法依索引鍵來快速尋找項目。</span><span class="sxs-lookup"><span data-stu-id="4a392-187">The following example instead uses the <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> method quickly find an item by key.</span></span>
+<span data-ttu-id="bdb62-187">下列範例會使用 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 方法依索引鍵來快速尋找項目。</span><span class="sxs-lookup"><span data-stu-id="bdb62-187">The following example instead uses the <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> method quickly find an item by key.</span></span>
 
 ```csharp
 private static void FindInDictionary2(string symbol)
@@ -349,11 +349,11 @@ private static void FindInDictionary2(string symbol)
 
 <a name="BKMK_LINQ"></a>
 
-## <a name="using-linq-to-access-a-collection"></a><span data-ttu-id="4a392-188">使用 LINQ 存取集合</span><span class="sxs-lookup"><span data-stu-id="4a392-188">Using LINQ to Access a Collection</span></span>
+## <a name="using-linq-to-access-a-collection"></a><span data-ttu-id="bdb62-188">使用 LINQ 存取集合</span><span class="sxs-lookup"><span data-stu-id="bdb62-188">Using LINQ to Access a Collection</span></span>
 
-<span data-ttu-id="4a392-189">LINQ (Language-Integrated Query (LINQ)) 可用來存取集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-189">LINQ (Language-Integrated Query) can be used to access collections.</span></span> <span data-ttu-id="4a392-190">LINQ 查詢提供篩選、排序和分組功能。</span><span class="sxs-lookup"><span data-stu-id="4a392-190">LINQ queries provide filtering, ordering, and grouping capabilities.</span></span> <span data-ttu-id="4a392-191">有關詳細資訊，請參閱在[C# 中使用 LINQ 入門](linq/index.md)。</span><span class="sxs-lookup"><span data-stu-id="4a392-191">For more information, see [Getting Started with LINQ in C#](linq/index.md).</span></span>
+<span data-ttu-id="bdb62-189">LINQ (Language-Integrated Query (LINQ)) 可用來存取集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-189">LINQ (Language-Integrated Query) can be used to access collections.</span></span> <span data-ttu-id="bdb62-190">LINQ 查詢提供篩選、排序和分組功能。</span><span class="sxs-lookup"><span data-stu-id="bdb62-190">LINQ queries provide filtering, ordering, and grouping capabilities.</span></span> <span data-ttu-id="bdb62-191">有關詳細資訊,請參閱在[C# 中使用 LINQ 入門](linq/index.md)。</span><span class="sxs-lookup"><span data-stu-id="bdb62-191">For more information, see [Getting Started with LINQ in C#](linq/index.md).</span></span>
 
-<span data-ttu-id="4a392-192">下列範例會對泛型 `List` 執行 LINQ 查詢。</span><span class="sxs-lookup"><span data-stu-id="4a392-192">The following example runs a LINQ query against a generic `List`.</span></span> <span data-ttu-id="4a392-193">LINQ 查詢會傳回包含結果的不同集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-193">The LINQ query returns a different collection that contains the results.</span></span>
+<span data-ttu-id="bdb62-192">下列範例會對泛型 `List` 執行 LINQ 查詢。</span><span class="sxs-lookup"><span data-stu-id="bdb62-192">The following example runs a LINQ query against a generic `List`.</span></span> <span data-ttu-id="bdb62-193">LINQ 查詢會傳回包含結果的不同集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-193">The LINQ query returns a different collection that contains the results.</span></span>
 
 ```csharp
 private static void ShowLINQ()
@@ -398,13 +398,13 @@ public class Element
 
 <a name="BKMK_Sorting"></a>
 
-## <a name="sorting-a-collection"></a><span data-ttu-id="4a392-194">為集合排序</span><span class="sxs-lookup"><span data-stu-id="4a392-194">Sorting a Collection</span></span>
+## <a name="sorting-a-collection"></a><span data-ttu-id="bdb62-194">為集合排序</span><span class="sxs-lookup"><span data-stu-id="bdb62-194">Sorting a Collection</span></span>
 
-<span data-ttu-id="4a392-195">下列範例說明排序集合的程序。</span><span class="sxs-lookup"><span data-stu-id="4a392-195">The following example illustrates a procedure for sorting a collection.</span></span> <span data-ttu-id="4a392-196">此範例排序儲存在 <xref:System.Collections.Generic.List%601> 中的 `Car` 類別執行個體。</span><span class="sxs-lookup"><span data-stu-id="4a392-196">The example sorts instances of the `Car` class that are stored in a <xref:System.Collections.Generic.List%601>.</span></span> <span data-ttu-id="4a392-197">`Car` 類別實作 <xref:System.IComparable%601> 介面，而這個介面要求實作 <xref:System.IComparable%601.CompareTo%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="4a392-197">The `Car` class implements the <xref:System.IComparable%601> interface, which requires that the <xref:System.IComparable%601.CompareTo%2A> method be implemented.</span></span>
+<span data-ttu-id="bdb62-195">下列範例說明排序集合的程序。</span><span class="sxs-lookup"><span data-stu-id="bdb62-195">The following example illustrates a procedure for sorting a collection.</span></span> <span data-ttu-id="bdb62-196">此範例排序儲存在 <xref:System.Collections.Generic.List%601> 中的 `Car` 類別執行個體。</span><span class="sxs-lookup"><span data-stu-id="bdb62-196">The example sorts instances of the `Car` class that are stored in a <xref:System.Collections.Generic.List%601>.</span></span> <span data-ttu-id="bdb62-197">`Car` 類別實作 <xref:System.IComparable%601> 介面，而這個介面要求實作 <xref:System.IComparable%601.CompareTo%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="bdb62-197">The `Car` class implements the <xref:System.IComparable%601> interface, which requires that the <xref:System.IComparable%601.CompareTo%2A> method be implemented.</span></span>
 
-<span data-ttu-id="4a392-198">每次對 <xref:System.IComparable%601.CompareTo%2A> 方法的呼叫都會進行用於排序的單一比較。</span><span class="sxs-lookup"><span data-stu-id="4a392-198">Each call to the <xref:System.IComparable%601.CompareTo%2A> method makes a single comparison that is used for sorting.</span></span> <span data-ttu-id="4a392-199">當目前物件和另一個物件比較時，在 `CompareTo` 方法中的使用者撰寫程式碼會傳回值。</span><span class="sxs-lookup"><span data-stu-id="4a392-199">User-written code in the `CompareTo` method returns a value for each comparison of the current object with another object.</span></span> <span data-ttu-id="4a392-200">如果目前物件比另一個物件小則傳回的值小於零，如果目前物件比另一個物件大則傳回的值大於零，如果它們相等則傳回零。</span><span class="sxs-lookup"><span data-stu-id="4a392-200">The value returned is less than zero if the current object is less than the other object, greater than zero if the current object is greater than the other object, and zero if they are equal.</span></span> <span data-ttu-id="4a392-201">這可讓您以程式碼定義大於、小於、等於的準則。</span><span class="sxs-lookup"><span data-stu-id="4a392-201">This enables you to define in code the criteria for greater than, less than, and equal.</span></span>
+<span data-ttu-id="bdb62-198">每次對 <xref:System.IComparable%601.CompareTo%2A> 方法的呼叫都會進行用於排序的單一比較。</span><span class="sxs-lookup"><span data-stu-id="bdb62-198">Each call to the <xref:System.IComparable%601.CompareTo%2A> method makes a single comparison that is used for sorting.</span></span> <span data-ttu-id="bdb62-199">當目前物件和另一個物件比較時，在 `CompareTo` 方法中的使用者撰寫程式碼會傳回值。</span><span class="sxs-lookup"><span data-stu-id="bdb62-199">User-written code in the `CompareTo` method returns a value for each comparison of the current object with another object.</span></span> <span data-ttu-id="bdb62-200">如果目前物件比另一個物件小則傳回的值小於零，如果目前物件比另一個物件大則傳回的值大於零，如果它們相等則傳回零。</span><span class="sxs-lookup"><span data-stu-id="bdb62-200">The value returned is less than zero if the current object is less than the other object, greater than zero if the current object is greater than the other object, and zero if they are equal.</span></span> <span data-ttu-id="bdb62-201">這可讓您以程式碼定義大於、小於、等於的準則。</span><span class="sxs-lookup"><span data-stu-id="bdb62-201">This enables you to define in code the criteria for greater than, less than, and equal.</span></span>
 
-<span data-ttu-id="4a392-202">在 `ListCars` 方法中，`cars.Sort()` 陳述式會排序清單。</span><span class="sxs-lookup"><span data-stu-id="4a392-202">In the `ListCars` method, the `cars.Sort()` statement sorts the list.</span></span> <span data-ttu-id="4a392-203">對 <xref:System.Collections.Generic.List%601> 之 <xref:System.Collections.Generic.List%601.Sort%2A> 方法的這個呼叫，會導致 `CompareTo` 方法對 `List` 的 `Car` 物件自動呼叫。</span><span class="sxs-lookup"><span data-stu-id="4a392-203">This call to the <xref:System.Collections.Generic.List%601.Sort%2A> method of the <xref:System.Collections.Generic.List%601> causes the `CompareTo` method to be called automatically for the `Car` objects in the `List`.</span></span>
+<span data-ttu-id="bdb62-202">在 `ListCars` 方法中，`cars.Sort()` 陳述式會排序清單。</span><span class="sxs-lookup"><span data-stu-id="bdb62-202">In the `ListCars` method, the `cars.Sort()` statement sorts the list.</span></span> <span data-ttu-id="bdb62-203">對 <xref:System.Collections.Generic.List%601> 之 <xref:System.Collections.Generic.List%601.Sort%2A> 方法的這個呼叫，會導致 `CompareTo` 方法對 `List` 的 `Car` 物件自動呼叫。</span><span class="sxs-lookup"><span data-stu-id="bdb62-203">This call to the <xref:System.Collections.Generic.List%601.Sort%2A> method of the <xref:System.Collections.Generic.List%601> causes the `CompareTo` method to be called automatically for the `Car` objects in the `List`.</span></span>
 
 ```csharp
 private static void ListCars()
@@ -478,15 +478,15 @@ public class Car : IComparable<Car>
 
 <a name="BKMK_CustomCollection"></a>
 
-## <a name="defining-a-custom-collection"></a><span data-ttu-id="4a392-204">定義自訂集合</span><span class="sxs-lookup"><span data-stu-id="4a392-204">Defining a Custom Collection</span></span>
+## <a name="defining-a-custom-collection"></a><span data-ttu-id="bdb62-204">定義自訂集合</span><span class="sxs-lookup"><span data-stu-id="bdb62-204">Defining a Custom Collection</span></span>
 
-<span data-ttu-id="4a392-205">您可以透過實作 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 介面來定義集合。</span><span class="sxs-lookup"><span data-stu-id="4a392-205">You can define a collection by implementing the <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Collections.IEnumerable> interface.</span></span>
+<span data-ttu-id="bdb62-205">您可以透過實作 <xref:System.Collections.Generic.IEnumerable%601> 或 <xref:System.Collections.IEnumerable> 介面來定義集合。</span><span class="sxs-lookup"><span data-stu-id="bdb62-205">You can define a collection by implementing the <xref:System.Collections.Generic.IEnumerable%601> or <xref:System.Collections.IEnumerable> interface.</span></span>
 
-<span data-ttu-id="4a392-206">雖然您可以定義自訂集合，但是使用包含在 .NET Framework 中的集合 (本主題稍早在[集合的種類](#BKMK_KindsOfCollections)中所述) 通常會比較好。</span><span class="sxs-lookup"><span data-stu-id="4a392-206">Although you can define a custom collection, it is usually better to instead use the collections that are included in the .NET Framework, which are described in [Kinds of Collections](#BKMK_KindsOfCollections) earlier in this topic.</span></span>
+<span data-ttu-id="bdb62-206">雖然您可以定義自訂集合，但是使用包含在 .NET Framework 中的集合 (本主題稍早在[集合的種類](#BKMK_KindsOfCollections)中所述) 通常會比較好。</span><span class="sxs-lookup"><span data-stu-id="bdb62-206">Although you can define a custom collection, it is usually better to instead use the collections that are included in the .NET Framework, which are described in [Kinds of Collections](#BKMK_KindsOfCollections) earlier in this topic.</span></span>
 
-<span data-ttu-id="4a392-207">下列範例會定義名為 `AllColors` 的自訂集合類別。</span><span class="sxs-lookup"><span data-stu-id="4a392-207">The following example defines a custom collection class named `AllColors`.</span></span> <span data-ttu-id="4a392-208">這個類別實作 <xref:System.Collections.IEnumerable> 介面，該介面要求實作 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="4a392-208">This class implements the <xref:System.Collections.IEnumerable> interface, which requires that the <xref:System.Collections.IEnumerable.GetEnumerator%2A> method be implemented.</span></span>
+<span data-ttu-id="bdb62-207">下列範例會定義名為 `AllColors` 的自訂集合類別。</span><span class="sxs-lookup"><span data-stu-id="bdb62-207">The following example defines a custom collection class named `AllColors`.</span></span> <span data-ttu-id="bdb62-208">這個類別實作 <xref:System.Collections.IEnumerable> 介面，該介面要求實作 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="bdb62-208">This class implements the <xref:System.Collections.IEnumerable> interface, which requires that the <xref:System.Collections.IEnumerable.GetEnumerator%2A> method be implemented.</span></span>
 
-<span data-ttu-id="4a392-209">`GetEnumerator` 方法會傳回 `ColorEnumerator` 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="4a392-209">The `GetEnumerator` method returns an instance of the `ColorEnumerator` class.</span></span> <span data-ttu-id="4a392-210">`ColorEnumerator` 實作 <xref:System.Collections.IEnumerator> 介面，而此介面會要求實作 <xref:System.Collections.IEnumerator.Current%2A> 屬性、<xref:System.Collections.IEnumerator.MoveNext%2A> 方法和 <xref:System.Collections.IEnumerator.Reset%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="4a392-210">`ColorEnumerator` implements the <xref:System.Collections.IEnumerator> interface, which requires that the <xref:System.Collections.IEnumerator.Current%2A> property, <xref:System.Collections.IEnumerator.MoveNext%2A> method, and <xref:System.Collections.IEnumerator.Reset%2A> method be implemented.</span></span>
+<span data-ttu-id="bdb62-209">`GetEnumerator` 方法會傳回 `ColorEnumerator` 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="bdb62-209">The `GetEnumerator` method returns an instance of the `ColorEnumerator` class.</span></span> <span data-ttu-id="bdb62-210">`ColorEnumerator` 實作 <xref:System.Collections.IEnumerator> 介面，而此介面會要求實作 <xref:System.Collections.IEnumerator.Current%2A> 屬性、<xref:System.Collections.IEnumerator.MoveNext%2A> 方法和 <xref:System.Collections.IEnumerator.Reset%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="bdb62-210">`ColorEnumerator` implements the <xref:System.Collections.IEnumerator> interface, which requires that the <xref:System.Collections.IEnumerator.Current%2A> property, <xref:System.Collections.IEnumerator.MoveNext%2A> method, and <xref:System.Collections.IEnumerator.Reset%2A> method be implemented.</span></span>
 
 ```csharp
 private static void ListColors()
@@ -561,15 +561,15 @@ public class Color
 
 <a name="BKMK_Iterators"></a>
 
-## <a name="iterators"></a><span data-ttu-id="4a392-211">Iterator</span><span class="sxs-lookup"><span data-stu-id="4a392-211">Iterators</span></span>
+## <a name="iterators"></a><span data-ttu-id="bdb62-211">迭代器</span><span class="sxs-lookup"><span data-stu-id="bdb62-211">Iterators</span></span>
 
-<span data-ttu-id="4a392-212">「迭代器」\*\* 是用來在集合上執行自訂反覆項目。</span><span class="sxs-lookup"><span data-stu-id="4a392-212">An *iterator* is used to perform a custom iteration over a collection.</span></span> <span data-ttu-id="4a392-213">迭代器可以是方法或 `get` 存取子。</span><span class="sxs-lookup"><span data-stu-id="4a392-213">An iterator can be a method or a `get` accessor.</span></span> <span data-ttu-id="4a392-214">迭代器會使用 [yield return](../../language-reference/keywords/yield.md) 陳述式，一次一個地傳回集合中的每個項目。</span><span class="sxs-lookup"><span data-stu-id="4a392-214">An iterator uses a [yield return](../../language-reference/keywords/yield.md) statement to return each element of the collection one at a time.</span></span>
+<span data-ttu-id="bdb62-212">「迭代器」\*\* 是用來在集合上執行自訂反覆項目。</span><span class="sxs-lookup"><span data-stu-id="bdb62-212">An *iterator* is used to perform a custom iteration over a collection.</span></span> <span data-ttu-id="bdb62-213">迭代器可以是方法或 `get` 存取子。</span><span class="sxs-lookup"><span data-stu-id="bdb62-213">An iterator can be a method or a `get` accessor.</span></span> <span data-ttu-id="bdb62-214">迭代器會使用 [yield return](../../language-reference/keywords/yield.md) 陳述式，一次一個地傳回集合中的每個項目。</span><span class="sxs-lookup"><span data-stu-id="bdb62-214">An iterator uses a [yield return](../../language-reference/keywords/yield.md) statement to return each element of the collection one at a time.</span></span>
 
-<span data-ttu-id="4a392-215">您會使用 [foreach](../../language-reference/keywords/foreach-in.md) 陳述式來呼叫迭代器。</span><span class="sxs-lookup"><span data-stu-id="4a392-215">You call an iterator by using a [foreach](../../language-reference/keywords/foreach-in.md) statement.</span></span> <span data-ttu-id="4a392-216">`foreach` 迴圈的每個反覆項目都會呼叫迭代器。</span><span class="sxs-lookup"><span data-stu-id="4a392-216">Each iteration of the `foreach` loop calls the iterator.</span></span> <span data-ttu-id="4a392-217">在迭代器中到達 `yield return` 陳述式時，會傳回運算式，並保留程式碼中的目前位置。</span><span class="sxs-lookup"><span data-stu-id="4a392-217">When a `yield return` statement is reached in the iterator, an expression is returned, and the current location in code is retained.</span></span> <span data-ttu-id="4a392-218">下一次呼叫迭代器時，便會從這個位置重新開始執行。</span><span class="sxs-lookup"><span data-stu-id="4a392-218">Execution is restarted from that location the next time that the iterator is called.</span></span>
+<span data-ttu-id="bdb62-215">您會使用 [foreach](../../language-reference/keywords/foreach-in.md) 陳述式來呼叫迭代器。</span><span class="sxs-lookup"><span data-stu-id="bdb62-215">You call an iterator by using a [foreach](../../language-reference/keywords/foreach-in.md) statement.</span></span> <span data-ttu-id="bdb62-216">`foreach` 迴圈的每個反覆項目都會呼叫迭代器。</span><span class="sxs-lookup"><span data-stu-id="bdb62-216">Each iteration of the `foreach` loop calls the iterator.</span></span> <span data-ttu-id="bdb62-217">在迭代器中到達 `yield return` 陳述式時，會傳回運算式，並保留程式碼中的目前位置。</span><span class="sxs-lookup"><span data-stu-id="bdb62-217">When a `yield return` statement is reached in the iterator, an expression is returned, and the current location in code is retained.</span></span> <span data-ttu-id="bdb62-218">下一次呼叫迭代器時，便會從這個位置重新開始執行。</span><span class="sxs-lookup"><span data-stu-id="bdb62-218">Execution is restarted from that location the next time that the iterator is called.</span></span>
 
-<span data-ttu-id="4a392-219">如需詳細資訊，請參閱[迭代器 (C#)](./iterators.md)。</span><span class="sxs-lookup"><span data-stu-id="4a392-219">For more information, see [Iterators (C#)](./iterators.md).</span></span>
+<span data-ttu-id="bdb62-219">如需詳細資訊，請參閱[迭代器 (C#)](./iterators.md)。</span><span class="sxs-lookup"><span data-stu-id="bdb62-219">For more information, see [Iterators (C#)](./iterators.md).</span></span>
 
-<span data-ttu-id="4a392-220">下列範例使用了 iterator 方法。</span><span class="sxs-lookup"><span data-stu-id="4a392-220">The following example uses an iterator method.</span></span> <span data-ttu-id="4a392-221">Iterator 方法具有 [for](../../language-reference/keywords/for.md) 迴圈內的 `yield return` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="4a392-221">The iterator method has a `yield return` statement that is inside a [for](../../language-reference/keywords/for.md) loop.</span></span> <span data-ttu-id="4a392-222">在 `ListEvenNumbers` 方法中，`foreach` 陳述式主體的每個反覆項目都會建立對 Iterator 方法的呼叫，這個方法將繼續執行下一個 `yield return` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="4a392-222">In the `ListEvenNumbers` method, each iteration of the `foreach` statement body creates a call to the iterator method, which proceeds to the next `yield return` statement.</span></span>
+<span data-ttu-id="bdb62-220">下列範例使用了 iterator 方法。</span><span class="sxs-lookup"><span data-stu-id="bdb62-220">The following example uses an iterator method.</span></span> <span data-ttu-id="bdb62-221">Iterator 方法具有 [for](../../language-reference/keywords/for.md) 迴圈內的 `yield return` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="bdb62-221">The iterator method has a `yield return` statement that is inside a [for](../../language-reference/keywords/for.md) loop.</span></span> <span data-ttu-id="bdb62-222">在 `ListEvenNumbers` 方法中，`foreach` 陳述式主體的每個反覆項目都會建立對 Iterator 方法的呼叫，這個方法將繼續執行下一個 `yield return` 陳述式。</span><span class="sxs-lookup"><span data-stu-id="bdb62-222">In the `ListEvenNumbers` method, each iteration of the `foreach` statement body creates a call to the iterator method, which proceeds to the next `yield return` statement.</span></span>
 
 ```csharp
 private static void ListEvenNumbers()
@@ -596,14 +596,14 @@ private static IEnumerable<int> EvenSequence(
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="4a392-223">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4a392-223">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bdb62-223">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bdb62-223">See also</span></span>
 
-- [<span data-ttu-id="4a392-224">物件和集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="4a392-224">Object and Collection Initializers</span></span>](../classes-and-structs/object-and-collection-initializers.md)
-- [<span data-ttu-id="4a392-225">程式設計概念 (C#)</span><span class="sxs-lookup"><span data-stu-id="4a392-225">Programming Concepts (C#)</span></span>](./index.md)
-- [<span data-ttu-id="4a392-226">Option Strict 陳述式</span><span class="sxs-lookup"><span data-stu-id="4a392-226">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [<span data-ttu-id="4a392-227">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="4a392-227">LINQ to Objects (C#)</span></span>](./linq/linq-to-objects.md)
-- [<span data-ttu-id="4a392-228">平行 LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="4a392-228">Parallel LINQ (PLINQ)</span></span>](../../../standard/parallel-programming/parallel-linq-plinq.md)
-- [<span data-ttu-id="4a392-229">集合和資料結構</span><span class="sxs-lookup"><span data-stu-id="4a392-229">Collections and Data Structures</span></span>](../../../standard/collections/index.md)
-- [<span data-ttu-id="4a392-230">選取集合類別</span><span class="sxs-lookup"><span data-stu-id="4a392-230">Selecting a Collection Class</span></span>](../../../standard/collections/selecting-a-collection-class.md)
-- [<span data-ttu-id="4a392-231">在集合內比較和排序</span><span class="sxs-lookup"><span data-stu-id="4a392-231">Comparisons and Sorts Within Collections</span></span>](../../../standard/collections/comparisons-and-sorts-within-collections.md)
-- [<span data-ttu-id="4a392-232">何時使用泛型集合</span><span class="sxs-lookup"><span data-stu-id="4a392-232">When to Use Generic Collections</span></span>](../../../standard/collections/when-to-use-generic-collections.md)
+- [<span data-ttu-id="bdb62-224">物件和集合初始設定式</span><span class="sxs-lookup"><span data-stu-id="bdb62-224">Object and Collection Initializers</span></span>](../classes-and-structs/object-and-collection-initializers.md)
+- [<span data-ttu-id="bdb62-225">程式設計概念 (C#)</span><span class="sxs-lookup"><span data-stu-id="bdb62-225">Programming Concepts (C#)</span></span>](./index.md)
+- [<span data-ttu-id="bdb62-226">Option Strict 陳述式</span><span class="sxs-lookup"><span data-stu-id="bdb62-226">Option Strict Statement</span></span>](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [<span data-ttu-id="bdb62-227">LINQ to Objects (C#)</span><span class="sxs-lookup"><span data-stu-id="bdb62-227">LINQ to Objects (C#)</span></span>](./linq/linq-to-objects.md)
+- [<span data-ttu-id="bdb62-228">平行 LINQ (PLINQ)</span><span class="sxs-lookup"><span data-stu-id="bdb62-228">Parallel LINQ (PLINQ)</span></span>](../../../standard/parallel-programming/introduction-to-plinq.md)
+- [<span data-ttu-id="bdb62-229">集合和資料結構</span><span class="sxs-lookup"><span data-stu-id="bdb62-229">Collections and Data Structures</span></span>](../../../standard/collections/index.md)
+- [<span data-ttu-id="bdb62-230">選取集合類別</span><span class="sxs-lookup"><span data-stu-id="bdb62-230">Selecting a Collection Class</span></span>](../../../standard/collections/selecting-a-collection-class.md)
+- [<span data-ttu-id="bdb62-231">集合中的比較和排序</span><span class="sxs-lookup"><span data-stu-id="bdb62-231">Comparisons and Sorts Within Collections</span></span>](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [<span data-ttu-id="bdb62-232">何時使用一般集合</span><span class="sxs-lookup"><span data-stu-id="bdb62-232">When to Use Generic Collections</span></span>](../../../standard/collections/when-to-use-generic-collections.md)

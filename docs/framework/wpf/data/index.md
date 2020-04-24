@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], data
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
-ms.openlocfilehash: aa8f872e807eccb81d0f1ca2c838485bb254c7c0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a1ea8e10225eb9a4dcd4f20a23820c3757445fbf
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460295"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646442"
 ---
-# <a name="data"></a><span data-ttu-id="59731-102">資料</span><span class="sxs-lookup"><span data-stu-id="59731-102">Data</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="59731-103">資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。</span><span class="sxs-lookup"><span data-stu-id="59731-103">data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="59731-104">元素可以系結至各種資料來源中的資料，其格式為 common language runtime （CLR）物件和 XML。</span><span class="sxs-lookup"><span data-stu-id="59731-104">Elements can be bound to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="59731-105">也提供透過拖放作業傳輸資料的機制。</span><span class="sxs-lookup"><span data-stu-id="59731-105">also provides a mechanism for the transfer of data through drag-and-drop operations.</span></span>  
+# <a name="data"></a><span data-ttu-id="3892f-102">資料</span><span class="sxs-lookup"><span data-stu-id="3892f-102">Data</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="3892f-103">資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。</span><span class="sxs-lookup"><span data-stu-id="3892f-103">data binding provides a simple and consistent way for applications to present and interact with data.</span></span> <span data-ttu-id="3892f-104">元素可以以通用語言執行時 (CLR) 物件和 XML 的形式綁定到來自各種資料源的數據。</span><span class="sxs-lookup"><span data-stu-id="3892f-104">Elements can be bound to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="3892f-105">也提供透過拖放作業傳輸資料的機制。</span><span class="sxs-lookup"><span data-stu-id="3892f-105">also provides a mechanism for the transfer of data through drag-and-drop operations.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="59731-106">本章節內容</span><span class="sxs-lookup"><span data-stu-id="59731-106">In This Section</span></span>  
- [<span data-ttu-id="59731-107">資料繫結</span><span class="sxs-lookup"><span data-stu-id="59731-107">Data Binding</span></span>](data-binding-wpf.md)  
- [<span data-ttu-id="59731-108">拖放</span><span class="sxs-lookup"><span data-stu-id="59731-108">Drag and Drop</span></span>](../advanced/drag-and-drop.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3892f-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="3892f-106">In This Section</span></span>  
+ [<span data-ttu-id="3892f-107">資料繫結</span><span class="sxs-lookup"><span data-stu-id="3892f-107">Data Binding</span></span>](../../../desktop-wpf/data/data-binding-overview.md)  
+ [<span data-ttu-id="3892f-108">拖放</span><span class="sxs-lookup"><span data-stu-id="3892f-108">Drag and Drop</span></span>](../advanced/drag-and-drop.md)  
   
-## <a name="reference"></a><span data-ttu-id="59731-109">參考資料</span><span class="sxs-lookup"><span data-stu-id="59731-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3892f-109">參考</span><span class="sxs-lookup"><span data-stu-id="3892f-109">Reference</span></span>  
  <xref:System.Windows.Data>  
   
  <xref:System.Windows.Data.Binding>  
@@ -31,14 +31,14 @@ ms.locfileid: "73460295"
   
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
-## <a name="related-sections"></a><span data-ttu-id="59731-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="59731-110">Related Sections</span></span>  
- [<span data-ttu-id="59731-111">控制項</span><span class="sxs-lookup"><span data-stu-id="59731-111">Controls</span></span>](../controls/index.md)  
+## <a name="related-sections"></a><span data-ttu-id="3892f-110">相關章節</span><span class="sxs-lookup"><span data-stu-id="3892f-110">Related Sections</span></span>  
+ [<span data-ttu-id="3892f-111">控制項</span><span class="sxs-lookup"><span data-stu-id="3892f-111">Controls</span></span>](../controls/index.md)  
   
- [<span data-ttu-id="59731-112">設定樣式和範本</span><span class="sxs-lookup"><span data-stu-id="59731-112">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
+ [<span data-ttu-id="3892f-112">設定樣式和範本</span><span class="sxs-lookup"><span data-stu-id="3892f-112">Styling and Templating</span></span>](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   
- [<span data-ttu-id="59731-113">資料繫結</span><span class="sxs-lookup"><span data-stu-id="59731-113">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)  
+ [<span data-ttu-id="3892f-113">資料繫結</span><span class="sxs-lookup"><span data-stu-id="3892f-113">Data Binding</span></span>](../advanced/optimizing-performance-data-binding.md)  
   
-## <a name="see-also"></a><span data-ttu-id="59731-114">請參閱</span><span class="sxs-lookup"><span data-stu-id="59731-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3892f-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3892f-114">See also</span></span>
 
-- [<span data-ttu-id="59731-115">逐步解說：我的第一個 WPF 傳統型應用程式</span><span class="sxs-lookup"><span data-stu-id="59731-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [<span data-ttu-id="59731-116">逐步解說：在 WPF 應用程式中快取應用程式資料</span><span class="sxs-lookup"><span data-stu-id="59731-116">Walkthrough: Caching Application Data in a WPF Application</span></span>](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [<span data-ttu-id="3892f-115">逐步解說：我的第一個 WPF 桌面應用程式</span><span class="sxs-lookup"><span data-stu-id="3892f-115">Walkthrough: My first WPF desktop application</span></span>](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [<span data-ttu-id="3892f-116">逐步解說：在 WPF 應用程式中快取應用程式資料</span><span class="sxs-lookup"><span data-stu-id="3892f-116">Walkthrough: Caching Application Data in a WPF Application</span></span>](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
