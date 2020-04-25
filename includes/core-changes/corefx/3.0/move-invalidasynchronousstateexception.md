@@ -1,32 +1,32 @@
 ---
-ms.openlocfilehash: ace0a4a60ad4d3f3a13cf4bdb2431e61d04ad8e7
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: d1562cb76f37b6cc2aeb6fe2f7c17c393e169e84
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021637"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158464"
 ---
-### <a name="invalidasynchronousstateexception-moved-to-another-assembly"></a>不合法的異步狀態異常移至另一個程式集
+### <a name="invalidasynchronousstateexception-moved-to-another-assembly"></a>System.componentmodel.invalidasynchronousstateexception 已移至另一個元件
 
-類<xref:System.ComponentModel.InvalidAsynchronousStateException>已移動。
+已<xref:System.ComponentModel.InvalidAsynchronousStateException>移動類別。
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Core 2.2 和<xref:System.ComponentModel.InvalidAsynchronousStateException>早期版本中,類位於*System.元件模型.TypeConverter*程式集中。
+在 .NET Core 2.2 和更早版本中<xref:System.ComponentModel.InvalidAsynchronousStateException> ，類別位於*system.workflow.componentmodel.activity*中。
 
-從 .NET Core 3.0 開始,它位於*系統.元件模型.原始程式集中*。
+從 .NET Core 3.0 開始，它會在*system.workflow.componentmodel.activity*元件中找到。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="recommended-action"></a>建議的動作
 
-此更改僅影響使用反射來載入 的<xref:System.ComponentModel.InvalidAsynchronousStateException>應用程式 ,方法是調用<xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>方法,<xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>如或重載,假定類型位於特定程式集中。 如果是這種情況,則應更新方法調用中引用的程式集以反映類型的新程式集位置。
+這項變更只會影響使用反映的應用程式<xref:System.ComponentModel.InvalidAsynchronousStateException>來載入，其方式是<xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>呼叫方法（例如<xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> ）或的多載，其假設該類型是在特定元件中。 如果是這種情況，請更新方法呼叫中所參考的元件，以反映類型的新元件位置。
 
 #### <a name="category"></a>類別
 
-核心 .NET 函式庫
+Core .NET 程式庫
 
 #### <a name="affected-apis"></a>受影響的 API
 

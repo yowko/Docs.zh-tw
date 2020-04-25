@@ -1,17 +1,17 @@
 ---
-title: 點網加入引言指令
+title: dotnet 新增參考命令
 description: dotnet add reference 命令提供方便的選項，以新增專案對專案參考。
 ms.date: 02/14/2020
-ms.openlocfilehash: f2bd67d181784c4858b8971d05053d196df7818e
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b261e24ed6a9d5bd489d317d2663b1420b5c34ff
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463738"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158316"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
-**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -52,7 +52,7 @@ dotnet add reference -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  僅當定位特定[框架](../../standard/frameworks.md)時,才添加專案引用。
+  只有在以使用 TFM 格式的特定[架構](../../standard/frameworks.md)為目標時，才會加入專案參考。
 
 - **`-h|--help`**
 
@@ -60,7 +60,7 @@ dotnet add reference -h|--help
 
 - **`--interactive`**
 
-  允許命令停止並等候使用者輸入或動作 (例如完成驗證)。 自 .NET Core 3.0 SDK 起提供。
+  允許命令停止並等候使用者輸入或動作（通常用來完成驗證）。 自 .NET Core 3.0 SDK 起提供。
 
 ## <a name="examples"></a>範例
 

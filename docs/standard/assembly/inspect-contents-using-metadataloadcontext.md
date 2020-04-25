@@ -1,44 +1,44 @@
 ---
-title: 如何:使用中繼資料載入中文檢查程式集內容
-description: 瞭解如何使用中繼資料 LoadContext,這是 API,讓您能夠載入 .NET 程式集以進行檢查。
+title: 如何：使用 MetadataLoadCoNtext 檢查元件內容
+description: 瞭解如何使用 MetadataLoadCoNtext，這是一個 API，可讓您載入 .NET 元件以供檢查之用。
 author: MSDN-WhiteKnight
 ms.date: 03/10/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: d2589d51a6e0611504c0133d293d3fdfae32553c
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 90c84147c52199afc42a2efc297bc7fe40658ec7
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242656"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141192"
 ---
-# <a name="how-to-inspect-assembly-contents-using-metadataloadcontext"></a>如何:使用中繼資料載入中文檢查程式集內容
+# <a name="how-to-inspect-assembly-contents-using-metadataloadcontext"></a>如何：使用 MetadataLoadCoNtext 檢查元件內容
 
-默認情況下,.NET 中的反射 API 使開發人員能夠檢查載入主執行上下文中的程式集的內容。 但是,有時無法將程式集載入到執行上下文中,例如,因為它是為另一個平臺或處理器體系結構編譯的,或者它是[一個引用程式集](reference-assemblies.md)。 API<xref:System.Reflection.MetadataLoadContext?displayProperty=fullName>允許您載入和檢查此類程式集。 載入的<xref:System.Reflection.MetadataLoadContext>程式集僅被視為元數據,也就是說,可以檢查程式集中的類型,但不能執行其中包含的任何代碼。 與主執行上下文不同,不會<xref:System.Reflection.MetadataLoadContext>自動載入來自當前目錄的依賴項;因此,不會從當前目錄中載入依賴項。相反,它使用傳遞給它提供的<xref:System.Reflection.MetadataAssemblyResolver>自定義綁定邏輯。
+.NET 中的反映 API 預設可讓開發人員檢查載入主要執行內容之元件的內容。 不過，有時無法將元件載入執行內容中，例如，它是針對另一個平臺或處理器架構所編譯，或是[參考元件](reference-assemblies.md)。 <xref:System.Reflection.MetadataLoadContext?displayProperty=fullName> API 可讓您載入及檢查這類元件。 載入至的<xref:System.Reflection.MetadataLoadContext>元件只會被視為中繼資料，也就是說，您可以檢查元件中的類型，但無法執行其中包含的任何程式碼。 與主要執行內容不同的是<xref:System.Reflection.MetadataLoadContext> ，不會自動從目前目錄載入相依性;相反地，它會使用傳遞給它的<xref:System.Reflection.MetadataAssemblyResolver>所提供的自訂系結邏輯。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
-要使用<xref:System.Reflection.MetadataLoadContext>,請安裝[系統。反射.元數據載入上下文](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext)NuGet 包。 它支援任何 .NET 標準 2.0 標準,例如 .NET 核心 2.0 或 .NET 框架 4.6.1。
+若要<xref:System.Reflection.MetadataLoadContext>使用，請安裝[MetadataLoadCoNtext](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext) NuGet 套件。 這在任何 .NET Standard 2.0 相容的目標架構（例如 .NET Core 2.0 或 .NET Framework 4.6.1）上都受到支援。
 
-## <a name="create-metadataassemblyresolver-for-metadataloadcontext"></a>為中繼資料載入中建立中繼資料程式集解析器
+## <a name="create-metadataassemblyresolver-for-metadataloadcontext"></a>建立 MetadataLoadCoNtext 的 MetadataAssemblyResolver
 
-創建<xref:System.Reflection.MetadataLoadContext>需要提供的<xref:System.Reflection.MetadataAssemblyResolver>實例。 提供一個最簡單的方法是使用,<xref:System.Reflection.PathAssemblyResolver>它解析來自給定程式集路徑字串集合中的程式集。 除了要直接檢查的程式集之外,此集合還應包含所有所需的依賴項。 例如,要讀取位於外部程式集中的自定義屬性,應包含該程式集,否則將引發異常。 在大多數情況下,應至少包括*核心程式集*,即包含內建系統類型的程式集,如<xref:System.Object?displayProperty=nameWithType>。 以下程式碼示範<xref:System.Reflection.PathAssemblyResolver>如何 使用由已檢查程式集與目前執行時的核心程式集組成的集合建立:
+建立<xref:System.Reflection.MetadataLoadContext>需要提供的實例<xref:System.Reflection.MetadataAssemblyResolver>。 提供一個最簡單的方法是使用<xref:System.Reflection.PathAssemblyResolver>，它會解析指定的元件路徑字串集合中的元件。 除了您想要直接檢查的元件之外，此集合也應包含所有必要的相依性。 例如，若要讀取位於外部元件中的自訂屬性，您應該包含該元件，否則會擲回例外狀況。 在大部分情況下，您應該至少包含*核心元件*，也就是包含內建系統類型的元件，例如<xref:System.Object?displayProperty=nameWithType>。 下列程式碼示範如何<xref:System.Reflection.PathAssemblyResolver>使用由已檢查元件和目前執行時間核心元件所組成的集合，來建立。
 
 [!code-csharp[](snippets/inspect-contents-using-metadataloadcontext/MetadataLoadContextSnippets.cs#CoreAssembly)]
 
-如果需要存取所有 BCL 類型,可以在集合中包括所有運行時程式集。 以下程式碼示範<xref:System.Reflection.PathAssemblyResolver>如何 使用由已檢查的程式集與目前執行時的所有程式集組成的集合建立:
+如果您需要存取所有 BCL 類型，您可以在集合中包含所有執行時間元件。 下列程式碼示範如何<xref:System.Reflection.PathAssemblyResolver>使用由已檢查元件和目前執行時間的所有元件所組成的集合，來建立。
 
 [!code-csharp[](snippets/inspect-contents-using-metadataloadcontext/MetadataLoadContextSnippets.cs#RuntimeAssemblies)]
 
-## <a name="create-metadataloadcontext"></a>建立中繼資料載入中文
+## <a name="create-metadataloadcontext"></a>建立 MetadataLoadCoNtext
 
-要創建<xref:System.Reflection.MetadataLoadContext>調用其建構函<xref:System.Reflection.MetadataLoadContext.%23ctor%28System.Reflection.MetadataAssemblyResolver%2CSystem.String%29>數 ,將以前<xref:System.Reflection.MetadataAssemblyResolver>創建的 參數傳遞為第一個參數,將核心程式集名稱傳遞給第二個參數。 您可以省略核心程式集名稱,在這種情況下,構造函數將嘗試使用預設名稱:"mscorlib"、"System.Runtime"或"net標準"。
+若要建立<xref:System.Reflection.MetadataLoadContext>，請叫用<xref:System.Reflection.MetadataLoadContext.%23ctor%28System.Reflection.MetadataAssemblyResolver%2CSystem.String%29>其函式，並<xref:System.Reflection.MetadataAssemblyResolver>將先前建立的當做第一個參數，並將核心元件名稱傳遞為第二個參數。 您可以省略核心元件名稱，在此情況下，此函式會嘗試使用預設名稱： "mscorlib"、"System.web" 或 "netstandard"。
 
-創建上下文後,可以使用方法(如<xref:System.Reflection.MetadataLoadContext.LoadFromAssemblyPath%2A>) 將程式集載入其中。 您可以在載入的程式集上使用所有反射 API,但涉及代碼執行的程式集除外。 該方法<xref:System.Reflection.MemberInfo.GetCustomAttributes%2A>確實涉及建構函數的執行,因此,當您需要在中<xref:System.Reflection.MemberInfo.GetCustomAttributesData%2A>檢查 自訂屬性時,請<xref:System.Reflection.MetadataLoadContext>使用方法 。
+建立內容之後，您可以使用之類的方法，將元件載入其中<xref:System.Reflection.MetadataLoadContext.LoadFromAssemblyPath%2A>。 除了涉及程式碼執行的元件以外，您可以在載入的元件上使用所有反映 Api。 <xref:System.Reflection.MemberInfo.GetCustomAttributes%2A>方法包含執行的函式，因此，當您需要<xref:System.Reflection.MemberInfo.GetCustomAttributesData%2A>檢查中的自訂屬性時，請改用方法<xref:System.Reflection.MetadataLoadContext>。
 
-以下代碼範例建立<xref:System.Reflection.MetadataLoadContext>,將程式集載入到控制台中,並將程式集屬性輸出到控制台中:
+下列程式碼範例會<xref:System.Reflection.MetadataLoadContext>建立、將元件載入其中，並將元件屬性輸出到主控台：
 
 [!code-csharp[](snippets/inspect-contents-using-metadataloadcontext/MetadataLoadContextSnippets.cs#CreateContext)]
 
 ## <a name="example"></a>範例
 
-有關完整的程式碼範例,請參考[使用中繼資料載入的文字範例](https://github.com/dotnet/samples/tree/master/core/assembly/MetadataLoadContext)。
+如需完整的程式碼範例，請參閱[使用 MetadataLoadCoNtext 檢查元件內容範例](https://docs.microsoft.com/samples/dotnet/samples/inspect-assembly-contents-using-metadataloadcontext/)。

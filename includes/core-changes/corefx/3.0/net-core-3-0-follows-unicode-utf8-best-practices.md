@@ -1,42 +1,42 @@
 ---
-ms.openlocfilehash: 843c78bb4e4f88d9ac58308a91ab8278364c9580
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: becae23cd810623bbb33c693b707c2d4735aeece
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021648"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158463"
 ---
-### <a name="net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences"></a>.NET Core 3.0 在取代格式錯誤的 UTF-8 位元組序列時遵循 Unicode 最佳實作
+### <a name="replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines"></a>取代格式不正確的 UTF-8 位元組序列遵循 Unicode 方針
 
-當類<xref:System.Text.UTF8Encoding>在位元組到字元轉碼操作期間遇到格式錯誤的 UTF-8 位元組序列時,它將在輸出字串中用''(U+FFFD 替換字元)替換該序列。 .NET Core 3.0 不同於早期版本的 .NET Core 和 .NET Framework,在轉碼操作期間遵循 Unicode 最佳做法執行此替換。
+當<xref:System.Text.UTF8Encoding>類別在位元組對字元轉碼作業期間遇到格式不正確的 utf-8 位元組序列時，它會以輸出字串中的 ' ' （U + FFFD 取代字元）字元取代該序列。 .NET Core 3.0 與舊版 .NET Core 和 .NET Framework 的不同之處，是遵循在轉碼作業期間執行此取代的 Unicode 最佳作法。
 
-這是改進整個 .NET 的 UTF-8<xref:System.Text.Unicode.Utf8?displayProperty=nameWithType>處理(<xref:System.Text.Rune?displayProperty=nameWithType>包括新 類型和 類型)的更大努力的一部分。 該<xref:System.Text.UTF8Encoding>類型得到了改進的錯誤處理機制,以便生成與新引入的類型一致的輸出。
+這是改善整個 .NET 的 UTF-8 處理工作的一部分，包括新<xref:System.Text.Unicode.Utf8?displayProperty=nameWithType>的和<xref:System.Text.Rune?displayProperty=nameWithType>類型。 <xref:System.Text.UTF8Encoding>類型已獲得改善的錯誤處理機制，因此它會產生與新引進之類型一致的輸出。
 
 #### <a name="change-description"></a>變更描述
 
-從 .NET Core 3.0 開始,當將<xref:System.Text.UTF8Encoding>位元組轉碼 轉給字元時,類根據 Unicode 最佳實務執行字元替換。 所使用的替換機制由[Unicode 標準版本 12.0、第 3.9(PDF) 在](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf)標題為_U_FFFD 替換最大子部分_的標題中描述。
+從 .NET Core 3.0 開始，在將位元組轉換成字元時<xref:System.Text.UTF8Encoding> ，類別會根據 Unicode 最佳做法執行字元替換。 使用的替代機制會在標題為_U + FFFD 替換為_[最大部分] 的標題中[，以12.0、秒3.9 （PDF）](https://www.unicode.org/versions/Unicode12.0.0/ch03.pdf)的形式加以描述。
 
-只當輸入位元組序列包含格式錯誤的 UTF-8 資料時,_此行為才_適用。 此外,<xref:System.Text.UTF8Encoding>如果實例已建`throwOnInvalidBytes: true`構 (請參閱 [UTF8 編碼建構函數<xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>`UTF8Encoding`文檔](, 實例將繼續引發無效的輸入,而不是執行 U_FFFD 替換。
+只有當輸入位元組序列包含格式不正確的 UTF-8 資料時，_才_會套用此行為。 此外，如果實例<xref:System.Text.UTF8Encoding>是使用`throwOnInvalidBytes: true`所建立，則`UTF8Encoding`實例會繼續在不正確輸入中擲回，而不是執行 U + FFFD 取代。 如需有關此函數`UTF8Encoding`的詳細資訊<xref:System.Text.UTF8Encoding.%23ctor(System.Boolean,System.Boolean)>，請參閱。
 
-下面說明瞭此變更對無效的 3 位元組輸入的影響:
+下表說明此變更與無效3位元組輸入的影響：
 
-|變形的 3 位元組輸入|在 .NET 核心 3.0 之前輸出|輸出以 .NET 核心 3.0 開頭|
-|---|---|---|
-| `[ ED A0 90 ]` | `[ FFFD FFFD ]`(2 個字元輸出)| `[ FFFD FFFD FFFD ]`(3 個字元輸出)|
+| 3位元組輸入格式錯誤 | .NET Core 3.0 之前的輸出          | 從 .NET Core 3.0 開始的輸出        |
+|-------------------------|--------------------------------------|-------------------------------------------|
+| `[ ED A0 90 ]`          | `[ FFFD FFFD ]`（2個字元輸出） | `[ FFFD FFFD FFFD ]`（3個字元輸出） |
 
-根據先前連結的 Unicode 標準 PDF_表 3-9,_ 此 3 字元輸出是首選輸出。
+根據先前連結之 Unicode 標準 PDF 的_資料表 3-9_ ，3個字元的輸出是慣用的輸出。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="recommended-action"></a>建議的動作
 
-開發人員不需要執行任何操作。
+開發人員不需要採取任何動作。
 
 #### <a name="category"></a>類別
 
-核心 .NET 函式庫
+Core .NET 程式庫
 
 #### <a name="affected-apis"></a>受影響的 API
 

@@ -2,12 +2,12 @@
 title: 執行階段套件存放區
 description: 了解如何使用 .NET Core 所使用的執行階段套件存放區和目標資訊清單。
 ms.date: 08/12/2017
-ms.openlocfilehash: ba3182b682e8a47397ac09ed46afe25190d34e5f
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 4395370c3bb2d97511d549a63813022fb8cac4b7
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134266"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158281"
 ---
 # <a name="runtime-package-store"></a>執行階段套件存放區
 
@@ -72,13 +72,13 @@ dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> -
 dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcoreapp2.0 --framework-version 2.0.0
 ```
 
-通過在命令中重複選項和路徑，可以將多個目標包[`dotnet store`](../tools/dotnet-store.md)存儲清單路徑傳遞給單個命令。
+您可以在命令中重複選項和路徑，以將[`dotnet store`](../tools/dotnet-store.md)多個目標套件存放區資訊清單路徑傳遞至單一命令。
 
 根據預設，命令的輸出位在使用者設定檔的 *.dotnet/store* 子目錄下的套件存放區中。 您可以使用 `--output <OUTPUT_DIRECTORY>` 選項指定不同的位置。 存放區的根目錄包含目標資訊清單 *artifact.xml* 檔案。 此檔案可供下載，並可供想要在發行時以此存放區為目標的應用程式作者使用。
 
 **範例**
 
-執行上例後，會產生以下 *artifact.xml* 檔案。 請注意，[`Castle.Core`](https://www.nuget.org/packages/Castle.Core/)它是 的依賴項`Moq`，因此它會自動包含在*工件.xml*清單檔中。
+執行上例後，會產生以下 *artifact.xml* 檔案。 請注意[`Castle.Core`](https://www.nuget.org/packages/Castle.Core/) ，是的相依`Moq`性，因此它會自動包含，並出現在*config.xml*資訊清單檔案中。
 
 ```xml
 <StoreArtifacts>
@@ -90,7 +90,7 @@ dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcorea
 
 ## <a name="publishing-an-app-against-a-target-manifest"></a>針對目標資訊清單發行應用程式
 
-如果磁片上具有目標清單檔，則在使用[`dotnet publish`](../tools/dotnet-publish.md)以下命令發佈應用時指定檔的路徑：
+如果您有磁片上的目標資訊清單檔案，請在使用[`dotnet publish`](../tools/dotnet-publish.md)命令發佈應用程式時指定檔案的路徑：
 
 ```dotnetcli
 dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
@@ -106,9 +106,15 @@ dotnet publish --manifest manifest.xml
 
 重複選項和路徑 (例如 `--manifest manifest1.xml --manifest manifest2.xml`)，以在發行應用程式時，指定多個目標資訊清單。 當您這樣做時，會針對提供給命令的目標資訊清單檔中指定的套件聯集修剪應用程式。
 
+如果您部署的應用程式具有存在於部署中的資訊清單相依性 (組件位於 *bin* 資料夾)，主機對該組件「不會使用」** 執行階段套件存放區。 無論主機的執行階段套件存放區是否有 *bin* 資料夾組件，都使用它。
+
+資訊清單中指示的相依性版本，必須符合執行階段套件存放區中的相依性版本。 如果目標資訊清單中的相依性版本與執行階段套件存放區的版本不相符，而應用程式的部署中不包含必要的套件版本，則應用程式無法啟動。 例外狀況包含目標資訊清單的名稱，為執行階段套件存放區組件所稱呼的名稱，有利於針對不符合進行疑難排解。
+
+於發行時「修剪」** 部署，已發行的輸出只保留您指定的資訊清單套件特定版本。 主機必須要有指定版本的套件，應用程式才能啟動。
+
 ## <a name="specifying-target-manifests-in-the-project-file"></a>在專案檔中指定目標資訊清單
 
-使用[`dotnet publish`](../tools/dotnet-publish.md)命令指定目標清單的替代方法是在專案檔案中將它們指定為**\<目標清單>** 標記下的路徑分號分隔清單。
+使用[`dotnet publish`](../tools/dotnet-publish.md)命令指定目標資訊清單的替代方法，是在專案檔中將它們指定為** \<TargetManifestFiles>** 標籤底下以分號分隔的路徑清單。
 
 ```xml
 <PropertyGroup>
@@ -116,17 +122,17 @@ dotnet publish --manifest manifest.xml
 </PropertyGroup>
 ```
 
-只有當應用程式的目標環境為已知時，例如 .NET Core 專案，才在專案檔中指定目標資訊清單。 這不是開放原始碼專案的情況。 開放原始碼專案的使用者通常會將它部署到不同的生產環境中。 這些生產環境通常會有不同的預先安裝的套件集。 不能在這樣的環境中對目標清單進行假設，因此應使用`--manifest`選項。 [`dotnet publish`](../tools/dotnet-publish.md)
+只有當應用程式的目標環境為已知時，例如 .NET Core 專案，才在專案檔中指定目標資訊清單。 這不是開放原始碼專案的情況。 開放原始碼專案的使用者通常會將它部署到不同的生產環境中。 這些生產環境通常會有不同的預先安裝的套件集。 您無法對這類環境中的目標資訊清單進行假設，因此，您`--manifest`應該使用[`dotnet publish`](../tools/dotnet-publish.md)的選項。
 
-## <a name="aspnet-core-implicit-store"></a>ASP.NET Core 隱含存放區
+## <a name="aspnet-core-implicit-store-net-core-20-only"></a>ASP.NET Core 隱含存放區（僅限 .NET Core 2.0）
 
 ASP.NET Core 隱含存放區只適用於 ASP.NET Core 2.0。 強烈建議應用程式使用 ASP.NET Core 2.1 和更新版本，這些**不**會使用隱含存放區。 ASP.NET Core 2.1 和更新版本會使用共用的架構。
 
-當應用程式部署為[與 Framework 相依的部署 (FDD)](index.md#publish-runtime-dependent) 應用程式時，ASP.NET Core 應用程式會以隱含方式使用執行階段套件存放區功能。 中[`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk)的目標包括引用目標系統上的隱式包存儲的清單。 此外，任何相依於 `Microsoft.AspNetCore.All` 套件的 FDD 應用程式，都會造成已發行的應用程式只包含應用程式及其資產，不包含 `Microsoft.AspNetCore.All` 中繼套件列出的套件。 假設這些套件存在於目標系統上。
+針對 .NET Core 2.0，當應用程式部署為[執行時間相依的部署](index.md#publish-runtime-dependent)應用程式時，ASP.NET Core 應用程式會隱含地使用執行時間套件存放區功能。 中[`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk)的目標包含參考目標系統上隱含封裝存放區的資訊清單。 此外，相依于此`Microsoft.AspNetCore.All`套件的任何執行時間相依應用程式都會產生已發佈的應用程式，其中只包含應用程式及其資產，而非`Microsoft.AspNetCore.All`中繼套件中所列的套件。 假設這些套件存在於目標系統上。
 
 安裝 .NET Core SDK 時，執行階段套件存放區會安裝在主機上。 其他的安裝程式可能會提供執行階段套件存放區，包括 .NET Core SDK 的 Zip/tarball 安裝、`apt-get`、Red Hat Yum、.NET Core Windows Server 裝載組合，以及手動的執行階段套件存放區安裝。
 
-部署[與 Framework 相依的部署 (FDD)](index.md#publish-runtime-dependent) 應用程式時，請確定目標環境已安裝 .NET Core SDK。 如果應用部署到不包含ASP.NET酷睿的環境，則可以通過指定`false`**\<PublishAspNetCoreTarget>** 在專案檔案中設置為"隱式存儲"，如以下示例所示：
+部署執行時間[相依的部署](index.md#publish-runtime-dependent)應用程式時，請確定目標環境已安裝 .NET Core SDK。 如果將應用程式部署至不包含 ASP.NET Core 的環境，您可以在專案檔中指定** \<publishwithaspnetcoretargetmanifest>>** 設定為`false` ，以退出宣告隱含存放區，如下列範例所示：
 
 ```xml
 <PropertyGroup>
@@ -135,13 +141,7 @@ ASP.NET Core 隱含存放區只適用於 ASP.NET Core 2.0。 強烈建議應用�
 ```
 
 > [!NOTE]
-> 若為[獨立部署 (SCD)](index.md#publish-self-contained) 應用程式，假設目標系統不必然包含必要的資訊清單套件。 因此，`true`無法為 SCD 應用設置**\<發佈AspNetCoreTargetmanifest>。**
-
-如果您部署的應用程式具有存在於部署中的資訊清單相依性 (組件位於 *bin* 資料夾)，主機對該組件「不會使用」** 執行階段套件存放區。 無論主機的執行階段套件存放區是否有 *bin* 資料夾組件，都使用它。
-
-資訊清單中指示的相依性版本，必須符合執行階段套件存放區中的相依性版本。 如果目標資訊清單中的相依性版本與執行階段套件存放區的版本不相符，而應用程式的部署中不包含必要的套件版本，則應用程式無法啟動。 例外狀況包含目標資訊清單的名稱，為執行階段套件存放區組件所稱呼的名稱，有利於針對不符合進行疑難排解。
-
-於發行時「修剪」** 部署，已發行的輸出只保留您指定的資訊清單套件特定版本。 主機必須要有指定版本的套件，應用程式才能啟動。
+> 針對[獨立部署](index.md#publish-self-contained)應用程式，假設目標系統不一定包含必要的資訊清單套件。 因此， ** \<** 獨立應用程式的 publishwithaspnetcoretargetmanifest>>`true`無法設定為。
 
 ## <a name="see-also"></a>另請參閱
 

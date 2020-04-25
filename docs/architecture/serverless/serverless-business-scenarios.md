@@ -4,12 +4,12 @@ description: 存取從影像處理到行動支援和 ETL 管線範圍的範例�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 04/17/2020
-ms.openlocfilehash: 5c2ee70b86fbc9a54d2a532eaa3d7509f23825df
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: 3cb3b73325fccc327ccf17f7298048f2eeb3577a
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135655"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158446"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>無伺服器商務情節和使用案例
 
@@ -93,13 +93,13 @@ ms.locfileid: "82135655"
 
 ## <a name="serverless-for-mobile"></a>適用于 mobile 的無伺服器
 
-Azure Functions 很容易執行和維護，而且可透過 HTTP 存取。 這是為行動應用程式執行 API 的絕佳方式。 Microsoft 透過 Xamarin 提供適用于 iOS、Android 和 Windows 的絕佳跨平臺工具。 因此，Xamarin 和 Azure Functions 都能完美搭配運作。 本文說明如何在 Azure 入口網站中或在 Visual Studio 中先執行 Azure 函式，並使用在 Android、iOS 和 Windows 上執行的 Xamarin 建立跨平臺用戶端。
+Azure Functions 很容易執行和維護，而且可透過 HTTP 存取。 這是為行動應用程式執行 API 的絕佳方式。 Microsoft 透過 Xamarin 提供適用于 iOS、Android 和 Windows 的絕佳跨平臺工具。 因此，Xamarin 和 Azure Functions 都能完美搭配運作。 本文說明如何在 Azure 入口網站中或一開始先在 Visual Studio 中執行 Azure 函式，並使用在 Android、iOS 和 Windows 上執行的 Xamarin 建立跨平臺用戶端。
 
 [使用 Xamarin. Forms 用戶端來執行簡單的 Azure 函數](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
 
 ## <a name="serverless-messaging"></a>無伺服器訊息
 
-這個範例示範如何利用 Durable Functions 的「扇線」模式，在任意數目的會話/資料分割上載入任意數目的訊息。 它的目標是服務匯流排、事件中樞或儲存體佇列。 此範例也會新增使用其他 Azure 函式來取用這些訊息的功能，並將產生的計時資料載入至另一個事件中樞。 然後將資料內嵌至 Azure 資料總管之類的分析服務。
+這個範例示範如何利用 Durable Functions 的「展開傳送」模式，在任意數目的會話/資料分割上載入任意數目的訊息。 它的目標是服務匯流排、事件中樞或儲存體佇列。 此範例也會新增使用其他 Azure 函式來取用這些訊息的功能，並將產生的計時資料載入至另一個事件中樞。 然後將資料內嵌至 Azure 資料總管之類的分析服務。
 
 [使用 Azure Functions，透過服務匯流排、事件中樞和儲存體佇列產生和取用訊息](https://docs.microsoft.com/samples/azure-samples/durable-functions-producer-consumer/product-consume-messages-az-functions/)
 

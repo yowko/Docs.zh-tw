@@ -4,12 +4,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 1f0d513e8bfd1668ee548315597385c555d374ef
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: b89969f212da6ac90d0fb0d1bf388626e136b92e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135772"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158589"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> 與 Span\<T> 使用指導方針
 
@@ -23,7 +23,7 @@ ms.locfileid: "82135772"
 
 - **擁有權**。 緩衝區執行個體的擁有者必須負責處理存留期管理，其中包括終結不再使用的緩衝區。 所有緩衝區都具有單一擁有者。 擁有者通常是建立緩衝區，或是從處理站接收緩衝區的元件。 擁有權也可以被轉移；**元件 A** 可以將緩衝區的控制轉移給**元件 B**，這會使**元件 A** 無法繼續使用該緩衝區，且**元件 B** 需負責在該緩衝區不再使用時終結它。
 
-- **耗用量**。 緩衝區執行個體的取用者可以透過從緩衝區執行個體進行讀取，或在某些情況下對它進行寫入，來使用該緩衝區執行個體。 緩衝區一次可以有一個取用者，除非已提供某種外部同步處理機制。 請注意，作用中的緩衝區取用者並不一定是該緩衝區的擁有者。
+- **耗用量**。 緩衝區執行個體的取用者可以透過從緩衝區執行個體進行讀取，或在某些情況下對它進行寫入，來使用該緩衝區執行個體。 緩衝區一次可以有一個取用者，除非已提供某種外部同步處理機制。 緩衝區的主動取用者不一定是緩衝區的擁有者。
 
 - **租用**。 租用是特定元件可作為緩衝區取用者的時間長度。
 
@@ -86,7 +86,7 @@ class Program
 
 - `WriteInt32ToBuffer` 和 `DisplayBufferToConsole` 方法接受 <xref:System.Memory%601> 作為公用 API。 因此，它們是該緩衝區的取用者。 且它們之間一次只有一個會取用緩衝區。
 
-雖然 `WriteInt32ToBuffer` 方法的目的是要將值寫入緩衝區，但 `DisplayBufferToConsole` 方法則不會這麼做。 為了反映此情況，它可以接受 <xref:System.ReadOnlyMemory%601>類型的引數。 如需有關的<xref:System.ReadOnlyMemory%601>詳細資訊，請參閱[Rule #2\<：使用 ReadOnlySpan T\<> 或 ReadOnlyMemory t> （如果緩衝區應該是唯讀的](#rule-2)）。
+雖然 `WriteInt32ToBuffer` 方法的目的是要將值寫入緩衝區，但 `DisplayBufferToConsole` 方法則不會這麼做。 為了反映此情況，它可以接受 <xref:System.ReadOnlyMemory%601>類型的引數。 如需有關的<xref:System.ReadOnlyMemory%601>詳細資訊，請參閱[規則 #2\<：如果緩衝區應該\<是唯讀的，請使用 ReadOnlySpan T> 或 ReadOnlyMemory t>](#rule-2)。
 
 ### <a name="ownerless-memoryt-instances"></a>「無擁有者」的 Memory\<T> 執行個體
 
@@ -110,7 +110,7 @@ class Program
 
 - 雖然 <xref:System.Span%601> 的堆疊配置特性能對效能進行最佳化，並使 <xref:System.Span%601> 成為在記憶體區塊上運作的偏好類型，但它也會使 <xref:System.Span%601> 受制於某些顯著限制。 請務必了解 <xref:System.Span%601> 和 <xref:System.Memory%601>的個別使用時機。
 
-下列為針對順利使用 <xref:System.Memory%601> 和其相關類型的建議。 請注意，除非我們明確提及，否則適用於 <xref:System.Memory%601> 和 <xref:System.Span%601> 的指引，同時也會適用於 <xref:System.ReadOnlyMemory%601> 和 <xref:System.ReadOnlySpan%601>。
+下列為針對順利使用 <xref:System.Memory%601> 和其相關類型的建議。 適用于<xref:System.Memory%601>和<xref:System.Span%601>的指引也適用于<xref:System.ReadOnlyMemory%601>和<xref:System.ReadOnlySpan%601> ，除非我們明確注意其他事項。
 
 **規則 #1：若是同步 API，請使用 Span\<t> 而不是\<記憶體 T> 作為參數（如果可能的話）。**
 

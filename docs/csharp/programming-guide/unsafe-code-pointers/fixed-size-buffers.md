@@ -1,16 +1,16 @@
 ---
 title: 固定大小緩衝區 - C# 程式設計指南
-ms.date: 04/20/2018
+ms.date: 04/23/2020
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 6770497b23212f1786b4f4a620ed2b650079c44b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5920dd125ded34969d60feb299568b56402056ab
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157022"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140547"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定大小緩衝區 (C# 程式設計手冊)
 
@@ -24,7 +24,7 @@ private fixed char name[30];
 
 在安全的程式碼中，包含陣列的 C# 結構不包含陣列項目。 相反地，該結構會包含元素的參考。 您可以將固定大小的陣列嵌入用於[不安全](../../language-reference/keywords/unsafe.md)程式碼區塊的 [struct](../../language-reference/builtin-types/struct.md)。
 
-以下`struct`大小不依賴于陣列中的元素數，因為`pathName`引用：
+下列`struct`的大小不會取決於陣列中的元素數目，因為`pathName`是參考：
 
 [!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
 
@@ -38,19 +38,43 @@ private fixed char name[30];
 
 另一個常見的固定大小陣列是 [bool](../../language-reference/builtin-types/bool.md) 陣列。 `bool` 陣列中的元素大小一律為一個位元組。 `bool` 陣列不適用於建立位元陣列或緩衝區。
 
-> [!NOTE]
-> 除了使用 [stackalloc](../../language-reference/operators/stackalloc.md) 所建立的記憶體以外，C# 編譯器和 Common Language Runtime (CLR) 不會執行任何安全性緩衝區溢位檢查。 請與所有不安全的程式碼一樣小心使用。
+固定大小的緩衝區會使用來<xref:System.Runtime.CompilerServices.UnsafeValueTypeAttribute?displayProperty=nameWithType>編譯，這會指示 common language RUNTIME （CLR）類型包含可能溢位的非受控陣列。 這類似于使用[stackalloc](../../language-reference/operators/stackalloc.md)所建立的記憶體，它會自動啟用 CLR 中的緩衝區溢位偵測功能。 上一個範例顯示如何在中存在固定大小的緩衝區`unsafe struct`。
 
-不安全的緩衝區與一般陣列的差異如下：
+```csharp
+internal unsafe struct Buffer
+{
+    public fixed char fixedBuffer[128];
+}
+```
 
-- 您只能在不安全的內容中使用不安全的緩衝區。
-- 不安全的緩衝區一律是向量或一維陣列。
-- 陣列的宣告應包含計數，例如 `char id[8]`。 您不能使用 `char id[]`。
-- 不安全的緩衝區只能是不安全內容中結構的執行個體欄位。
+編譯器產生的 c # `Buffer`的屬性如下所示：
+
+```csharp
+internal struct Buffer
+{
+    [StructLayout(LayoutKind.Sequential, Size = 256)]
+    [CompilerGenerated]
+    [UnsafeValueType]
+    public struct <fixedBuffer>e__FixedBuffer
+    {
+        public char FixedElementField;
+    }
+
+    [FixedBuffer(typeof(char), 128)]
+    public <fixedBuffer>e__FixedBuffer fixedBuffer;
+}
+```
+
+固定大小緩衝區與一般陣列有下列不同之處：
+
+- 僅可用於[不安全](../../language-reference/keywords/unsafe.md)的內容中。
+- 只能是結構的實例欄位。
+- 它們一律是向量或一維陣列。
+- 宣告應包含長度，例如`fixed char id[8]`。 您不能使用 `fixed char id[]`。
 
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../index.md)
-- [Unsafe 程式碼和指標](index.md)
+- [C # 程式設計指南](../index.md)
+- [不安全的程式碼和指標](index.md)
 - [fixed 陳述式](../../language-reference/keywords/fixed-statement.md)
-- [互 操作 性](../interop/index.md)
+- [互通性](../interop/index.md)
