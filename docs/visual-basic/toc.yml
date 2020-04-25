@@ -29,7 +29,7 @@
         - name: Accessing Application Settings
           href: developing-apps/programming/app-settings/index.md
         - name: 處理磁碟機、目錄和檔案
-          href: developing-apps/programming/drives-directories-files/processing.md
+          href: developing-apps/programming/drives-directories-files/index.md
     - name: 使用 My 進行開發
       href: developing-apps/development-with-my/index.md
       items:
@@ -1414,6 +1414,6 @@
     - name: 語言規格
       href: reference/language-specification/
 - name: 範例應用程式
-  href: sample-applications.md
+  href: 'https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic'
 - name: 逐步解說
   href: walkthroughs.md
