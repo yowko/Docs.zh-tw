@@ -7,7 +7,7 @@
       href: xaml-in-wpf.md
       items:
         - name: XAML 概觀 (WPF)
-          href: xaml-overview-wpf.md
+          href: ../../../desktop-wpf/fundamentals/xaml.md
         - name: XAML 語法詳細資料
           href: xaml-syntax-in-detail.md
         - name: WPF 中的程式碼後置和 XAML
@@ -290,7 +290,7 @@
       href: resources-wpf.md
       items:
         - name: XAML 資源
-          href: xaml-resources.md
+          href: ../../../desktop-wpf/fundamentals/xaml-resources-define.md
           items:
             - name: 資源和程式碼
               href: resources-and-code.md
