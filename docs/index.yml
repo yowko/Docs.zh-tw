@@ -10,15 +10,18 @@ metadata:
   ms.collection: collection
   author: BillWagner
   ms.author: wiwagn
-  ms.date: 12/19/2019
-  ms.openlocfilehash: 466059d4fb685a04e55cd43c75debbe24099c86e
-  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.date: 04/21/2020
+  ms.openlocfilehash: 31d7e3e916971e605e814f36f412b46210c533b6
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/03/2020
-  ms.locfileid: "80635766"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135564"
 highlightedContent:
   items:
+  - title: 下載 .NET
+    itemType: download
+    url: https://dotnet.microsoft.com/download
   - title: C# 簡介。 快速互動式開始。
     itemType: get-started
     url: csharp/tutorials/intro-to-csharp/hello-world.yml
@@ -56,6 +59,12 @@ conceptualContent:
     - url: core/tutorials/index.md
       itemType: tutorial
       text: 教學課程
+    - url: https://dotnet.microsoft.com/platform/community
+      itemType: whats-new
+      text: 社群
+    - url: https://dotnetfoundation.org/
+      itemType: overview
+      text: .NET Foundation
   - title: .NET 概念
     summary: 了解 .NET 的基本概念
     links:
@@ -89,7 +98,7 @@ conceptualContent:
     - url: core/sdk.md
       itemType: download
       text: 下載 .NET Core SDK
-    - url: core/tools/index.md
+    - url: https://dotnet.microsoft.com/download
       itemType: overview
       text: .NET Core CLI 概觀
     - url: core/porting/index.md
