@@ -36,7 +36,7 @@
               href: iclrdatatarget-gettlsvalue-method.md
             - name: ReadVirtual 方法
               href: iclrdatatarget-readvirtual-method.md
-            - name: 要求方法
+            - name: Request 方法
               href: iclrdatatarget-request-method.md
             - name: SetThreadContext 方法
               href: iclrdatatarget-setthreadcontext-method.md
@@ -1608,6 +1608,11 @@
           href: cordebugexceptionobjectstackframe-structure.md
         - name: CorDebugGuidToTypeMapping 結構
           href: cordebugguidtotypemapping-structure.md
+        - name: DacpGetModuleAddress 結構
+          href: dacpgetmoduleaddress-structure.md
+          items:
+            - name: 'DacpGetModuleAddress::要求方法'
+              href: dacpgetmoduleaddress-request-method.md
         - name: DacpMethodDescData 結構
           href: dacpmethoddescdata-structure.md
         - name: DacpMethodData 結構

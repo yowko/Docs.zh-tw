@@ -119,8 +119,8 @@
       href: programming-guide/types/index.md
     - name: 可為 Null 的參考型別
       href: nullable-references.md
-    - name: 將 API 簽章更新為可為 Null 參考
-      href: nullable-attributes.md
+    - name: 選擇可為 Null 之參考型別的策略
+      href: nullable-migration-strategies.md
     - name: 命名空間
       href: programming-guide/namespaces/index.md
     - name: 基本類型
@@ -1200,6 +1200,8 @@
               href: programming-guide/xmldoc/exception.md
             - name: <include>
               href: programming-guide/xmldoc/include.md
+            - name: <inheritdoc>
+              href: programming-guide/xmldoc/inheritdoc.md
             - name: <list>
               href: programming-guide/xmldoc/list.md
             - name: <para>
