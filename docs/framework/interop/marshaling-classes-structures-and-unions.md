@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data marshaling, platform invoke
 - marshaling, platform invoke
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
-ms.openlocfilehash: d761d8ed7488e99f29d4844d061867915a624b96
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 708ed6a232950cb69796f105f6f198749ed53a24
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960012"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200011"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送處理類別、結構和等位
 
@@ -31,7 +31,7 @@ ms.locfileid: "74960012"
 
 下表列出類別、結構和等位的封送處理選項，並描述其用法，以及提供對應平台的叫用範例連結。
 
-|類型|描述|範例|
+|類型|說明|範例|
 |----------|-----------------|------------|
 |傳值呼叫|做為 In/Out 參數，如 Managed 案例，會傳遞具有整數成員的類別。|[SysTime 範例](#systime-sample)|
 |結構傳值。|傳遞結構做為 In 參數。|[結構範例](#structures-sample)|
@@ -42,6 +42,7 @@ ms.locfileid: "74960012"
 |整數結構和傳址字串的陣列。|傳遞包含整數和字串做為 Out 參數的結構陣列。 所呼叫的函式會配置此陣列的記憶體。|[OutArrayOfStructs 範例](#outarrayofstructs-sample)|
 |具有實值類型的等位。|傳遞具有實值類型的等位 (整數和雙精度浮點數)。|[等位範例](#unions-sample)|
 |具有混合類型的等位。|傳遞具有混合類型的等位 (整數和字串)。|[等位範例](#unions-sample)|
+|具有平臺特定版面配置的結構。|傳遞具有原生封裝定義的類型。|[平臺範例](#platform-sample)|
 |在結構中的 null 值。|傳遞 Null 參考 (在 Visual Basic 中為 **Nothing**)，而非實值型別的參考。|[HandleRef 範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/hc662t8k(v=vs.85))|
 
 ## <a name="structures-sample"></a>結構範例
@@ -222,6 +223,85 @@ union MYUNION2
 [!code-csharp[Conceptual.Interop.Marshaling#29](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/unions.cs#29)]
 [!code-vb[Conceptual.Interop.Marshaling#29](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/unions.vb#29)]
 
+## <a name="platform-sample"></a>平臺範例
+
+在某些情況下`struct` ， `union`和版面配置可能會根據目標平臺而有所不同。 例如，在 COM 案例[`STRRET`](/windows/win32/api/shtypes/ns-shtypes-strret)中定義時，請考慮類型：
+
+```c++
+#include <pshpack8.h> /* Defines the packing of the struct */
+typedef struct _STRRET
+    {
+    UINT uType;
+    /* [switch_is][switch_type] */ union
+        {
+        /* [case()][string] */ LPWSTR pOleStr;
+        /* [case()] */ UINT uOffset;
+        /* [case()] */ char cStr[ 260 ];
+        }  DUMMYUNIONNAME;
+    }  STRRET;
+#include <poppack.h>
+```
+
+上述`struct`的會以 Windows 標頭宣告，而這些標頭會影響類型的記憶體配置。 在受管理的環境中定義時，需要這些版面配置詳細資料，才能正確地與機器碼互通。
+
+在32位進程中，此類型的正確 managed 定義如下：
+
+``` CSharp
+[StructLayout(LayoutKind.Explicit, Size = 264)]
+public struct STRRET_32
+{
+    [FieldOffset(0)]
+    public uint uType;
+
+    [FieldOffset(4)]
+    public IntPtr pOleStr;
+
+    [FieldOffset(4)]
+    public uint uOffset;
+
+    [FieldOffset(4)]
+    public IntPtr cStr;
+}
+```
+
+在64位進程上，大小*和*欄位位移會不同。 正確的版面配置如下：
+
+``` CSharp
+[StructLayout(LayoutKind.Explicit, Size = 272)]
+public struct STRRET_64
+{
+    [FieldOffset(0)]
+    public uint uType;
+
+    [FieldOffset(8)]
+    public IntPtr pOleStr;
+
+    [FieldOffset(8)]
+    public uint uOffset;
+
+    [FieldOffset(8)]
+    public IntPtr cStr;
+}
+```
+
+如果無法在 interop 案例中正確考慮原生配置，可能會導致隨機損毀或更糟，計算不正確。
+
+根據預設，.NET 元件可以在32位和64位版本的 .NET 執行時間中執行。 應用程式必須等到執行時間，才能決定要使用哪些先前的定義。
+
+下列程式碼片段顯示如何在執行時間于32位和64位定義之間進行選擇的範例。
+
+```CSharp
+if (IntPtr.Size == 8)
+{
+    // Use the STRRET_64 definition
+}
+else
+{
+    Debug.Assert(IntPtr.Size == 4);
+    // Use the STRRET_32 definition
+}
+```
+
 ## <a name="systime-sample"></a>SysTime 範例
 
 這個範例示範如何將指向類別的指標傳遞至需要指向結構指標的 Unmanaged 函式。
@@ -301,7 +381,7 @@ typedef struct _MYSTRSTRUCT2
 [!code-csharp[Conceptual.Interop.Marshaling#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/outarrayofstructs.cs#21)]
 [!code-vb[Conceptual.Interop.Marshaling#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)
 - [封送處理字串](marshaling-strings.md)

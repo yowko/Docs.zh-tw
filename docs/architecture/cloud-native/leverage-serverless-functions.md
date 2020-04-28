@@ -1,29 +1,29 @@
 ---
 title: 利用無伺服器函式
 description: 利用雲端原生應用程式中的無伺服器和 Azure Functions
-ms.date: 06/30/2019
-ms.openlocfilehash: 77ddef0eb8844ea1b55cd2fc5ec8aa12593c8631
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.date: 04/13/2020
+ms.openlocfilehash: 176499e3cd0349cd689b9d13d1c237a6343d13f3
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087113"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199738"
 ---
 # <a name="leveraging-serverless-functions"></a>利用無伺服器函式
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-在管理完整機器和作業系統以利用雲端功能的範圍中，無伺服器的最大目的在於您的程式碼，而您只需支付程式碼執行時的費用。 Azure Functions 提供一種方式，可在您的應用程式中建立無伺服器功能。
+在管理實體機器以利用雲端功能的範圍中，無伺服器存在於極致端。 您的程式碼是唯一的責任，而您只需支付程式碼的執行時間。 Azure Functions 提供在雲端原生應用程式中建立無伺服器功能的方式。
 
 ## <a name="what-is-serverless"></a>什麼是無伺服器？
 
-無伺服器運算並不表示執行您的應用程式時，不會有一台伺服器，那就是程式碼仍會在某個伺服器上執行。 差別在於應用程式開發小組不再需要自行顧慮管理伺服器基礎結構。 無伺服器運算解決方案（例如 Azure Functions 協助小組提高生產力，並可讓組織將其資源優化，並將焦點放在提供解決方案。
+無伺服器是雲端運算的相對新服務模型。 這並不表示伺服器是選擇性的，您的程式碼仍會在某個伺服器上執行。 差別在於應用程式小組不再關心管理伺服器基礎結構的問題。 取而代之的是，雲端廠商擁有此責任。 開發小組供應商務解決方案給客戶，而不是配管，以提高生產力。
 
-無伺服器運算會使用事件觸發的無狀態容器來裝載您的應用程式或部分應用程式。 無伺服器平臺可以視需要相應放大和縮小以符合需求。 像 Azure Functions 的平臺可以輕鬆直接存取其他 Azure 服務，例如佇列、事件和儲存體。
+無伺服器運算會使用事件觸發的無狀態容器來裝載您的服務。 他們可以視需要相應放大和縮小以符合需求。 無伺服器平臺（如 Azure Functions）與其他 Azure 服務（例如佇列、事件和儲存體）緊密整合。
 
 ## <a name="what-challenges-are-solved-by-serverless"></a>無伺服器可解決哪些挑戰？
 
-無伺服器是從執行您自己的硬體開始的最終抽象概念。 開發人員可以專門專注于撰寫程式碼來解決商務問題，而不需要考慮下列任何可能在裝載您自己的伺服器時所需的工作：
+無伺服器平臺會解決許多耗時且昂貴的問題：
 
 - 購買機器和軟體授權
 - 存放、保護、設定和維護電腦及其網路功能、電源和 A/C 需求
@@ -31,36 +31,37 @@ ms.locfileid: "73087113"
 - 設定網頁伺服器或機器服務來裝載應用程式軟體
 - 在其平臺中設定應用程式軟體
 
-許多公司都採用數十個員工成員，並配置大型預算來支援這些硬體基礎結構的考慮。 直接移至雲端可以排除其中一些問題;將應用程式一直轉移到無伺服器，可以排除其餘部分。
+許多公司會配置大型預算來支援硬體基礎結構的考慮。 移至雲端有助於降低這些成本;將應用程式轉移到無伺服器有助於排除它們。
+
+## <a name="what-is-the-difference-between-a-microservice-and-a-serverless-function"></a>微服務與無伺服器函式之間的差異為何？
+
+一般來說，微服務會封裝商務功能，例如線上電子商務網站的購物車。 它會公開多個可讓使用者管理其購物體驗的作業。 不過，函式是一個小型、輕量的程式碼區塊，會執行單一用途的作業來回應事件。
+微服務通常是用來回應要求，通常是來自介面。 要求可以是 HTTP Rest，或以 gRPC 為基礎。 無伺服器服務會回應事件。 其事件驅動架構適合用來處理簡短執行的背景工作。
 
 ## <a name="what-scenarios-are-appropriate-for-serverless"></a>什麼是適用于無伺服器的案例？
 
-無伺服器會使用個別的簡短執行函式，以回應某個觸發程式來進行呼叫。 這讓它們適合用來處理背景工作。
+無伺服器會公開針對回應觸發程式而叫用的個別短期執行函數。 這讓它們適合用來處理背景工作。
 
-例如，應用程式可能需要在處理要求的過程中傳送電子郵件。 您不需要在處理 web 要求時傳送電子郵件，而是將電子郵件的詳細資料放在佇列上，並使用 Azure 函式來挑選訊息並傳送電子郵件。 應用程式的許多不同元件（或甚至許多應用程式）都可以利用這個相同的 Azure 函式，為應用程式提供改善的效能和擴充性，並使用以[佇列為基礎的負載調節](https://docs.microsoft.com/azure/architecture/patterns/queue-based-load-leveling)來避免與傳送電子郵件相關的瓶頸。
+應用程式可能需要傳送電子郵件，做為工作流程中的步驟。 將訊息詳細資料放在佇列上，而不是在微服務要求中傳送通知。 Azure 函數可以清除佇列訊息，並以非同步方式傳送電子郵件。 這麼做可以改善微服務的效能和擴充性。 以[佇列為基礎的負載調節](https://docs.microsoft.com/azure/architecture/patterns/queue-based-load-leveling)可以執行，以避免與傳送電子郵件相關的瓶頸。 此外，您可以在許多不同的應用程式中重複使用此獨立服務作為公用程式。
 
-雖然應用程式和 Azure Functions 之間的[發行者/訂閱者模式](https://docs.microsoft.com/azure/architecture/patterns/publisher-subscriber)是最常見的模式，但其他模式也是可行的。 Azure Functions 可以由其他事件觸發，例如 Azure Blob 儲存體的變更。 支援的影像上傳的應用程式可能有負責建立縮圖影像的 Azure 函式，或將上傳影像的大小調整為一致的維度，或優化影像大小。 所有這項功能都可以透過插入 Azure Blob 儲存體直接觸發，讓應用程式本身的複雜性和工作負載保持不變。
+佇列和主題的非同步訊息是觸發無伺服器函式的常見模式。 不過，Azure Functions 可以由其他事件觸發，例如 Azure Blob 儲存體的變更。 支援影像上傳的服務可能會有負責優化影像大小的 Azure 函數。 函式可以透過插入 Azure Blob 儲存體直接觸發，讓微服務作業的複雜性變得更複雜。
 
-許多應用程式都有長時間執行的進程，做為其工作流程的一部分。 這些工作通常會在使用者與應用程式互動的過程中完成，強制使用者等待並對其體驗造成負面影響。 無伺服器運算提供了在使用者互動迴圈外執行較慢工作的絕佳方式，而這些工作可以輕鬆地隨需求調整，而不需要調整整個應用程式。
+許多服務在其工作流程中都有長時間執行的進程。 這些工作通常會在使用者與應用程式互動的過程中完成。 這些工作可以強制使用者等待，對他們的體驗造成負面影響。 無伺服器運算提供絕佳的方式，在使用者互動迴圈之外移動較慢的工作。 這些工作可以隨需求調整，而不需要調整整個應用程式。
 
 ## <a name="when-should-you-avoid-serverless"></a>何時應該避免無伺服器？
 
-無伺服器運算最適合用於不會封鎖使用者介面的工作。 這表示它們不是直接裝載 web 應用程式或 web Api 的理想選擇。 其主要原因是無伺服器解決方案會依需求布建和調整。 當需要新的函式實例時（稱為*冷啟動*），需要一些時間來布建。 這次通常是幾秒鐘的時間，但可能會因為各種不同的因素而變長。 單一實例通常會無限期地保持運作（例如，定期向其提出要求），但如果實例數目需要相應增加，則會保留冷啟動問題。
+無伺服器解決方案會依需求布建和調整。 叫用新的實例時，冷啟動是常見的問題。 冷啟動是布建這個實例所花費的時間。 一般來說，此延遲可能是幾秒鐘，但可能會因為各種因素而較長。 一旦布建之後，只要單一實例收到定期要求，就會保持運作狀態。 但是，如果服務的呼叫頻率較低，Azure 可能會將它從記憶體中移除，並在 reinvoked 時要求冷啟動。 當函數向外延展至新的實例時，也需要冷啟動。
+
+圖3-10 顯示冷啟動模式。 請注意，應用程式冷時所需的額外步驟。
 
 ![冷與暖開機](./media/cold-start-warm-start.png)
 **圖 3-10**。 冷啟動和暖開機。
 
-如果您需要避免冷啟動，您可以選擇從取用[方案切換到專用的方案](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)。 您也可以使用 premium 方案[設定一或多個預先準備就緒的實例](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances)，因此當您需要新增另一個實例時，它已經啟動並準備就緒。 這些選項可以減輕與無伺服器運算相關的其中一個重要考慮。
+若要避免冷啟動，您可以從取用[方案切換至專用方案](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)。 您也可以使用 premium 方案升級來設定一個或多個[預先準備就緒的實例](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances)。 在這些情況下，當您需要加入另一個實例時，它已經啟動並準備好了。 這些選項可協助降低與無伺服器運算相關聯的冷啟動問題。
 
-您通常也應該避免長時間執行之工作的無伺服器。 它們最適用于可快速完成的一小段工作。 大部分的無伺服器平臺都需要在幾分鐘內完成個別的函式。 Azure Functions 預設為5分鐘的超時期間（最多可設定10分鐘）。 Azure Functions premium 方案也可以緩和此問題，並將時間輸出預設為30分鐘，並允許設定未限制的更高限制。
+雲端提供者會根據計算執行時間和耗用的記憶體，為無伺服器計費。 長時間執行的作業或高記憶體耗用量工作負載不一定是無伺服器的最佳候選項目。 無伺服器函式偏好可快速完成的小型工作區塊。 大部分的無伺服器平臺都需要在幾分鐘內完成個別的函式。 Azure Functions 預設為5分鐘的超時期間，最多可設定10分鐘。 Azure Functions premium 方案也可以緩和此問題，並將超時時間設定為30分鐘，而此限制可加以設定。 計算時間不是行事歷時間。 使用[Azure Durable Functions 架構](https://docs.microsoft.com/azure/azure-functions/durable/durable-functions-overview?tabs=csharp)的更多先進函式可能會在數天的期間暫停執行。 計費是以實際執行時間為基礎-當函式喚醒並繼續處理時。
 
-最後，針對應用程式內的特定工作運用無伺服器，會增加複雜度。 通常最好先以模組化、鬆散耦合的方式來設計您的應用程式，然後找出無伺服器可提供的優點，使額外的複雜性更有價值。 許多較小的應用程式在單一整合式部署中都可以順利執行，而不需要無伺服器運算所需的分散式應用程式架構。
-
-## <a name="references"></a>參考
-
-- [瞭解無伺服器冷啟動](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)
-- [預先準備就緒 Azure Functions 實例](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances)
-- [使用自訂映射在 Linux 上建立函式](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)
+最後，利用 Azure Functions 的應用程式工作會增加複雜度。 最好先使用模組化、鬆散結合的設計來架構您的應用程式。 然後，找出無伺服器可提供的優點，以證明額外的複雜性。
 
 >[!div class="step-by-step"]
 >[上一頁](leverage-containers-orchestrators.md)

@@ -4,18 +4,18 @@ description: 本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 18449ea02b7f9e89744a0f3088f80b7a51a807da
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 6ae5de0381c8796faee74abd40f688214ab13211
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987890"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199959"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 
-![《建築師現代 Web 應用程式指南》的封面圖像。](./media/index/web-application-guide-cover-image.png)
+![架構現代化 Web 應用程式指南的書籍封面影像。](./media/index/web-application-guide-cover-image.png)
 
-**編輯 v3.1** - 更新至ASP.NET核心 3.1
+**版本 3.1** -更新為 ASP.NET Core 3。1
 
 發行者
 
@@ -27,11 +27,11 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-版權© 2020 年由微軟公司
+Microsoft Corporation 的著作權©2020
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
 
-本書依照「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路網站參考) 可能會隨時變更，恕不另行通知。
+本書依照「現況」提供，代表作者的觀點和意見。 本書中所述之觀點、意見與資訊 (包括 URL 及其他網際網路的網站參考) 如有變更，恕不另行通知。
 
 此處描述的一些範例僅供說明之用，純屬虛構。 並未影射或關聯任何真實的人、事、物。
 
@@ -39,7 +39,7 @@ Microsoft 與列於 https://www.microsoft.com「商標」網頁的商標是 Micr
 
 Mac 與 macOS 是 Apple Inc. 的商標。
 
-Docker 鯨魚標誌是 Docker, Inc. 經許可使用的註冊商標。
+Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 
 所有其他商標和標誌屬於其各自擁有者的財產。
 
@@ -83,9 +83,9 @@ Docker 鯨魚標誌是 Docker, Inc. 經許可使用的註冊商標。
 
 ## <a name="purpose"></a>目的
 
-本指南提供有關使用 ASP.NET核心和 Azure 構建*單片*Web 應用程式提供的端到端指南。 此處的「整合型」是指這些應用程式會部署為單一單位，而不是互動服務和應用程式的集合。
+本指南提供使用 ASP.NET Core 和*Azure 建立整合*型 web 應用程式的端對端指引。 此處的「整合型」是指這些應用程式會部署為單一單位，而不是互動服務和應用程式的集合。
 
-本指南是對[_「.NET 微服務」的補充。容器化 .NET 應用程式的體系結構_",](../microservices/index.md)它更側重於 Docker、微服務和容器部署以承載企業應用程式。
+本指南是[".Net 微服務" 的補充 _。容器化 .NET 應用程式的架構_](../microservices/index.md)」，著重在 Docker、微服務及部署容器以裝載企業應用程式。
 
 ### <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務。 容器化 .NET 應用程式的架構
 
@@ -102,7 +102,7 @@ Docker 鯨魚標誌是 Docker, Inc. 經許可使用的註冊商標。
 
 ## <a name="how-you-can-use-this-guide"></a>此指南的使用方式
 
-本指南已壓縮成相當小的文件，著重於使用現代化 .NET 技術和 Windows Azure 來建置 Web 應用程式。 因此，可以完整讀取它，以提供對這類應用程式和其技術考量的基礎了解。 本指南與其範例應用程式也可以作為起點或參考。 使用相關聯的範例應用程式作為您專屬應用程式的範本，或查看如何組織應用程式的元件組件。 當您要為專屬應用程式權衡這些選擇時，請回頭參考指南內架構和技術選項的原則與說明還有決策考量。
+本指南已壓縮成一個相對較小的檔，著重于使用現代化 .NET 技術和 Azure 來建立 web 應用程式。 因此，可以完整讀取它，以提供對這類應用程式和其技術考量的基礎了解。 本指南與其範例應用程式也可以作為起點或參考。 使用相關聯的範例應用程式作為您專屬應用程式的範本，或查看如何組織應用程式的元件組件。 當您要為專屬應用程式權衡這些選擇時，請回頭參考指南內架構和技術選項的原則與說明還有決策考量。
 
 請隨意將本指南轉寄給您的小組，協助確保對這些考量和機會有共同的了解。 讓所有人都使用一組共用術語和基礎原則，有助確保套用一致的架構模式和做法。
 

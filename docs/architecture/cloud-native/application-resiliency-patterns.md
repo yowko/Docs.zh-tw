@@ -2,12 +2,12 @@
 title: 應用程式復原模式
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |應用程式復原模式
 ms.date: 06/30/2019
-ms.openlocfilehash: 13811efaa88e0bd2824add1c8712b78b18d46375
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6805603f349578655b2535c7346af368c5ce1841
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087754"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199686"
 ---
 # <a name="application-resiliency-patterns"></a>應用程式復原模式
 
@@ -19,17 +19,17 @@ ms.locfileid: "73087754"
 
 ![Polly 架構](./media/polly-resiliency-framework.png)
 
-**圖 6-2**. Polly 復原架構功能
+**圖 6-2**。 Polly 復原架構功能
 
 請注意，在上圖中，復原原則會套用至要求訊息，不論是來自外部用戶端還是其他後端服務。 其目標是要補償可能暫時無法使用之服務的要求。 這些短暫的中斷通常會以 [圖 6-3] 所示的 HTTP 狀態碼來進行資訊清單。
 
 ![要重試的 HTTP 狀態碼](./media/http-status-codes.png)
 
-**圖 6-3**. 要重試的 HTTP 狀態碼
+**圖 6-3**。 要重試的 HTTP 狀態碼
 
-問題：您是否要重試 HTTP 狀態碼 403-禁止？ No。 在這裡，系統會正常運作，但會通知呼叫者未獲授權執行要求的作業。 請務必小心，只重試失敗所造成的作業。
+問題：您是否要重試 HTTP 狀態碼 403-禁止？ 否。 在這裡，系統會正常運作，但會通知呼叫者未獲授權執行要求的作業。 請務必小心，只重試失敗所造成的作業。
 
-如第1章所建議，建立雲端原生應用程式的 Microsoft 開發人員應該以 .NET Core 為目標。 2\.1 版引進了[HTTPClientFactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore)程式庫，可用於建立與 URL 型資源互動的 HTTP 用戶端實例。 取代原始的 HTTPClient 類別，factory 類別支援許多增強功能，其中一個與 Polly 復原程式庫[緊密整合](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md)。 有了這項功能，您就可以在應用程式啟動類別中輕鬆定義復原原則，以處理部分失敗和連接問題。
+如第1章所建議，建立雲端原生應用程式的 Microsoft 開發人員應該以 .NET Core 為目標。 2.1 版引進了[HTTPClientFactory](https://www.stevejgordon.co.uk/introduction-to-httpclientfactory-aspnetcore)程式庫，可用於建立與 URL 型資源互動的 HTTP 用戶端實例。 取代原始的 HTTPClient 類別，factory 類別支援許多增強功能，其中一個與 Polly 復原程式庫[緊密整合](../microservices/implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md)。 有了這項功能，您就可以在應用程式啟動類別中輕鬆定義復原原則，以處理部分失敗和連接問題。
 
 接下來，讓我們展開重試和斷路器模式。
 
@@ -54,9 +54,9 @@ ms.locfileid: "73087754"
 
 ## <a name="circuit-breaker-pattern"></a>斷路器模式
 
-雖然重試模式可以協助搶救在部分失敗中光子的要求，但在某些情況下，失敗可能是因為無法預期的事件而需要較長的時間來解決。 這些錯誤的嚴重性可能從失去部分連線到服務完全失敗。 在這些情況下，應用程式會持續重試不太可能成功的作業，這是無意義的。
+雖然重試模式可以協助搶救在部分失敗中光子的要求，但在某些情況下，失敗可能是因為無法預期的事件而需要較長的時間來解決。 這些錯誤的嚴重性範圍包含失去部分連線到整個服務無法運作。 在這些情況下，應用程式會持續重試不太可能成功的作業，這是無意義的。
 
-為了讓事情更糟，在無回應的服務上執行連續的重試作業，可以將您移至自我加諸的阻絕服務案例，其中會持續呼叫耗盡資源（例如記憶體、執行緒和資料庫）來淹沒服務連接，導致系統中使用相同資源的不相關部分發生失敗。
+為了讓事情更糟，在未回應的服務上執行連續的重試作業，可以將您移至自我加入的阻絕服務案例，其中會持續呼叫耗盡資源（例如記憶體、執行緒和資料庫連接），導致系統中使用相同資源的不相關部分發生錯誤。
 
 在這些情況下，最好是讓作業立即失敗，而且只有在可能成功時才嘗試叫用服務。
 

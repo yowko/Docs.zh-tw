@@ -1,31 +1,32 @@
 ---
 title: 產生及使用非同步資料流
-description: 這個進階教學課程說明產生及取用非同步資料流提供更自然的方式來處理能以非同步方式產生之資料序列的案例。
+description: 這個 advanced 教學課程會示範如何產生和使用非同步資料流程。 非同步資料流程提供更自然的方法來處理可能以非同步方式產生的資料序列。
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: de090eb9cc1e8b511956313ab5169ee4d07a492f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03254e5208a048469f4753d632de7b0d451cde40
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156736"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200102"
 ---
-# <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教程：使用 C# 8.0 和 .NET Core 3.0 生成和使用非同步流
+# <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>教學課程：使用 c # 8.0 和 .NET Core 3.0 產生和使用非同步資料流程
 
-C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生資料流中的元素時，它會建構資料來源資料流處理模型。 非同步資料流仰賴 .NET Standard 2.1 中引進並在 .NET Core 3.0 中實作的新介面來針對非同步資料流處理資料來源提供自然程式設計模型。
+C # 8.0 引進**非同步資料流程**，它會建立資料流程的資料流程來源模型。 資料流程通常會以非同步方式抓取或產生元素。 非同步資料流程依賴 .NET Standard 2.1 中引進的新介面。 這些介面在 .NET Core 3.0 和更新版本中受到支援。 它們會為非同步串流資料來源提供自然的程式設計模型。
 
-在本教學課程中，您將了解如何：
+您將在本教學課程中了解如何：
 
 > [!div class="checklist"]
 >
 > - 建立會以非同步方式產生資料元素序列的資料來源。
 > - 以非同步方式取用資料來源。
+> - 支援非同步資料流程的取消和捕捉內容。
 > - 識別何時應該使用新的介面與資料來源，而非先前的同步資料來源。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-您需要設置電腦以運行 .NET Core，包括 C# 8.0 編譯器。 C# 8 編譯器可從[Visual Studio 2019 版本 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.NET Core 3.0 SDK](https://dotnet.microsoft.com/download)開始。
+您必須設定電腦以執行 .NET Core，包括 c # 8.0 編譯器。 從[Visual Studio 2019 16.3 版](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)或[.NET Core 3.0 SDK](https://dotnet.microsoft.com/download)開始，可以使用 c # 8 編譯器。
 
 您將必須建立 [GitHub 存取權杖](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token)，以便存取 GitHub GraphQL 端點。 為您的 GitHub 存取權杖選取下列權限：
 
@@ -41,13 +42,13 @@ C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生
 
 ## <a name="run-the-starter-application"></a>執行入門應用程式
 
-您可以從我們的 [dotnet/samples](https://github.com/dotnet/samples) 存放庫 (位於 [csharp/tutorials/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/start) 資料夾中) 取得此教學課程中使用的入門應用程式程式碼。
+您可以從[csharp/教學課程/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start)資料夾中的[dotnet/](https://github.com/dotnet/docs)檔存放庫，取得本教學課程中使用之入門應用程式的程式碼。
 
 入門應用程式是主控台應用程式，它使用 [GitHub GraphQL](https://developer.github.com/v4/) 介面來擷取 [dotnet/docs](https://github.com/dotnet/docs) 存放庫中最近撰寫的議題。 從查看入門應用程式 `Main` 方法的下列程式碼開始：
 
-[!code-csharp[StarterAppMain](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#StarterAppMain)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetStarterAppMain" :::
 
-您可以將 `GitHubKey` 環境變數設定到您的個人存取權杖，或可以您可以將 `GenEnvVariable` 呼叫中的最後一個引數取代為您自己的個人存取權杖。 若您會隨著其他項目儲存原始程式碼，或請不要將您的存取碼放在原始程式碼中，也不要將它放在共用原始程式碼存放庫中。
+您可以將 `GitHubKey` 環境變數設定到您的個人存取權杖，或可以您可以將 `GenEnvVariable` 呼叫中的最後一個引數取代為您自己的個人存取權杖。 如果您要與其他人共用原始碼，請勿將您的存取程式碼放在原始程式碼中。 絕對不要將存取代碼上傳至共用來源存放庫。
 
 建立 GitHub 用戶端之後，`Main` 中的程式碼會建立進度報告物件與取消權杖。 一旦建立那些物件，`Main` 就會呼叫 `runPagedQueryAsync` 以擷取最近的 250 個已建立議題。 該工作完成之後，會顯示結果。
 
@@ -57,13 +58,13 @@ C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生
 
 實作會揭示為何您觀察到上一節中討論的行為。 檢查 `runPagedQueryAsync` 的程式碼：
 
-[!code-csharp[RunPagedQueryStarter](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#RunPagedQuery)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetRunPagedQuery" :::
 
-讓我們專注在分頁上述程式碼的演算法與非同步結構。 （有關 GitHub 圖形 QL API 的詳細資訊，請參閱[GitHub GraphQL 文檔](https://developer.github.com/v4/guides/)。該方法`runPagedQueryAsync`枚舉了從最近到最舊的問題。 它會要求每頁 25 個議題，並檢查回應的 `pageInfo` 結構以使用上一頁繼續。 這遵循 GraphQL 對多頁回應的標準分頁支援。 回應包括 `pageInfo` 物件，此物件包括 `hasPreviousPages` 值與用來要求上一頁的 `startCursor` 值。 議題位於 `nodes` 陣列中。 `runPagedQueryAsync` 方法會將這些節點附加到包含來自所有頁面之結果的陣列。
+讓我們專注在分頁上述程式碼的演算法與非同步結構。 （如需 GitHub GraphQL API 的詳細資訊，您可以參閱[Github GraphQL 檔](https://developer.github.com/v4/guides/)）。`runPagedQueryAsync`方法會列舉最新到最舊的問題。 它會要求每頁 25 個議題，並檢查回應的 `pageInfo` 結構以使用上一頁繼續。 這遵循 GraphQL 對多頁回應的標準分頁支援。 回應包括 `pageInfo` 物件，此物件包括 `hasPreviousPages` 值與用來要求上一頁的 `startCursor` 值。 議題位於 `nodes` 陣列中。 `runPagedQueryAsync` 方法會將這些節點附加到包含來自所有頁面之結果的陣列。
 
 擷取並還原一頁的結果之後，`runPagedQueryAsync` 會回報進度並檢查取消。 若已要求取消，`runPagedQueryAsync` 會擲回 <xref:System.OperationCanceledException>。
 
-此程式碼中有許多元素可以改進。 最重要的是，`runPagedQueryAsync` 必須為傳回的所有議題配置儲存體。 此案例會在第 250 個議題停止，因為擷取所有未決議題將需要多得多的記憶體來儲存所以已擷取的議題。 此外，支援進度與支援取消的通訊協定讓第一次讀取演算法時更難以理解。 您必須查看進度類別以尋找回報進度之處。 您也必須透過 <xref:System.Threading.CancellationTokenSource> 與其關聯的 <xref:System.Threading.CancellationToken> 來追蹤通訊，以了解要求取消之處與授與權限之處。
+此程式碼中有許多元素可以改進。 最重要的是，`runPagedQueryAsync` 必須為傳回的所有議題配置儲存體。 此案例會在第 250 個議題停止，因為擷取所有未決議題將需要多得多的記憶體來儲存所以已擷取的議題。 支援進度報告和取消的通訊協定會使演算法更難理解其第一次閱讀。 涉及更多類型和 Api。 您必須透過<xref:System.Threading.CancellationTokenSource>和其相關聯<xref:System.Threading.CancellationToken>的來追蹤通訊，以瞭解要求取消的位置及授與的位置。
 
 ## <a name="async-streams-provide-a-better-way"></a>非同步資料流提供更好的方式
 
@@ -71,30 +72,9 @@ C# 8.0 引進了**非同步資料流**，當能以非同步方式擷取或產生
 
 這些新語言功能仰賴 .NET Standard 2.1 中新增並在 .NET Core 3.0 中實作的三個新介面：
 
-```csharp
-namespace System.Collections.Generic
-{
-    public interface IAsyncEnumerable<out T>
-    {
-        IAsyncEnumerator<T> GetAsyncEnumerator(CancellationToken cancellationToken = default);
-    }
-
-    public interface IAsyncEnumerator<out T> : IAsyncDisposable
-    {
-        T Current { get; }
-
-        ValueTask<bool> MoveNextAsync();
-    }
-}
-
-namespace System
-{
-    public interface IAsyncDisposable
-    {
-        ValueTask DisposeAsync();
-    }
-}
-```
+- <xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>
+- <xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType>
+- <xref:System.IAsyncDisposable?displayProperty=nameWithType>
 
 這三個介面對大部分的 C# 開發人員來說應該都很熟悉。 它們的運作方式與行為類似其同步對等項：
 
@@ -108,37 +88,67 @@ namespace System
 
 接著，轉換 `runPagedQueryAsync` 方法以產生非同步資料流。 首先，變更f `runPagedQueryAsync` 的簽章以傳回 `IAsyncEnumerable<JToken>`，並從參數清單移除取消權杖與進度物件，如下列程式碼所示：
 
-[!code-csharp[FinishedSignature](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#UpdateSignature)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetUpdateSignature" :::
 
 入門程式碼會在擷取頁面時處理每一頁，如下列程式碼所示：
 
-[!code-csharp[StarterPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#ProcessPage)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetProcessPage" :::
 
 使用下列程式碼取代那三行：
 
-[!code-csharp[FinishedPaging](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#YieldReturnPage)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetYieldReturnPage" :::
 
 您也可以移除此方法中稍早的 `finalResults` 宣告以及遵循您先前修改之迴圈的 `return` 陳述式。
 
-您已完成變更以產生非同步資料流。 已完成的方法看起來應該類似下面的程式碼：
+您已完成變更以產生非同步資料流。 完成的方法應該類似下列程式碼：
 
-[!code-csharp[FinishedGenerate](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#GenerateAsyncStream)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetGenerateAsyncStream" :::
 
 接著，您必須變更取用集合以取用非同步資料流的程式碼。 在 `Main` 中尋找會處理議題集合的下列程式碼：
 
-[!code-csharp[EnumerateOldStyle](~/samples/snippets/csharp/tutorials/AsyncStreams/start/IssuePRreport/IssuePRreport/Program.cs#EnumerateOldStyle)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/start/Program.cs" id="SnippetEnumerateOldStyle" :::
 
 使用下列 `await foreach` 迴圈取代該程式碼：
 
-[!code-csharp[FinishedEnumerateAsyncStream](~/samples/snippets/csharp/tutorials/AsyncStreams/finished/IssuePRreport/IssuePRreport/Program.cs#EnumerateAsyncStream)]
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateAsyncStream" :::
 
-預設情況元素在捕獲的上下文中處理。 如果要禁用上下文捕獲，請使用<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>擴充方法。 有關同步上下文和捕獲當前上下文的詳細資訊，請參閱有關[使用基於任務的非同步模式](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)的文章。
+新介面<xref:System.Collections.Generic.IAsyncEnumerator%601>衍生自<xref:System.IAsyncDisposable>。 這表示當迴圈完成時，先前的迴圈會以非同步方式處置資料流程。 您可以想像一下迴圈看起來像下列程式碼：
 
-您可以從 [dotnet/samples](https://github.com/dotnet/samples) 存放庫 (位於 [csharp/tutorials/AsyncStreams](https://github.com/dotnet/samples/tree/master/csharp/tutorials/AsyncStreams/finished) 資料夾中) 取得已完成之教學課程的程式碼。
+```csharp
+int num = 0;
+var enumerator = runPagedQueryAsync(client, PagedIssueQuery, "docs").GetEnumeratorAsync();
+try
+{
+    while (await enumerator.MoveNextAsync())
+    {
+        var issue = enumerator.Current;
+        Console.WriteLine(issue);
+        Console.WriteLine($"Received {++num} issues in total");
+    }
+} finally
+{
+    if (enumerator != null)
+        await enumerator.DisposeAsync();
+}
+```
+
+根據預設，資料流程元素會在已捕捉的內容中處理。 如果您想要停用內容的捕捉，請使用<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType>擴充方法。 如需同步處理內容及取得目前內容的詳細資訊，請參閱有關[使用以工作為基礎的非同步模式](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)的文章。
+
+非同步資料流程支援使用與其他`async`方法相同的通訊協定取消。 您會修改非同步反覆運算器方法的簽章，如下所示，以支援取消：
+
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetGenerateWithCancellation" :::
+
+<xref:System.Runtime.CompilerServices.EnumeratorCancellationAttribute?dipslayProperty=nameWithType>屬性會使編譯器產生的<xref:System.Collections.Generic.IAsyncEnumerator%601>程式碼，讓非同步反覆運算器的主體能夠`GetAsyncEnumerator`看見該 token 做為該引數。 在`runQueryAsync`中，您可以檢查權杖的狀態，並在要求時取消進一步的工作。
+
+您可以使用另一個擴充<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.WithCancellation%2A>方法，將解除標記傳遞給非同步資料流程。 您將修改列舉問題的迴圈，如下所示：
+
+:::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
+
+您可以從[csharp/教學課程/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished)資料夾中的[dotnet/](https://github.com/dotnet/docs)檔存放庫取得已完成之教學課程的程式碼。
 
 ## <a name="run-the-finished-application"></a>執行已完成的應用程式
 
-再次執行應用程式。 將其行為與入門應用程式的行為進行比較。 當第一個結果頁面可用時會儘快列舉。 您會發現要求並擷取每個新頁面時會暫停一些時間，燃後快速列舉下一個頁面的結果。 不需要 `try` / `catch` 區塊就能處理取消：呼叫者可以停止列舉集合。 系統會明確回報進度，因為非同步資料流會在下載每個頁面時產生結果。 返回的每個問題的狀態都無縫地包含在迴圈中`await foreach`。 不需要回檔物件來跟蹤進度。
+再次執行應用程式。 將其行為與入門應用程式的行為進行比較。 當第一個結果頁面可用時會儘快列舉。 您會發現要求並擷取每個新頁面時會暫停一些時間，燃後快速列舉下一個頁面的結果。 不需要 `try` / `catch` 區塊就能處理取消：呼叫者可以停止列舉集合。 系統會明確回報進度，因為非同步資料流會在下載每個頁面時產生結果。 傳回之每個問題的狀態會順暢地包含`await foreach`在迴圈中。 您不需要回呼物件來追蹤進度。
 
 您可以透過檢查程式碼看到記憶體使用狀況的改進。 您再也不需要在列舉結果之前配置集合以儲存所有結果。 呼叫者可以決定如何取用結果，以及是否需要儲存體集合。
 

@@ -1,16 +1,16 @@
 ---
-title: 為 Azure 建構雲本機 .NET 應用程式
-description: 利用 Azure 的容器、微服務和無伺服器功能構建雲本機應用程式的指南。
+title: 架構適用于 Azure 的雲端原生 .NET 應用程式
+description: 建立雲端原生應用程式的指南，利用 Azure 的容器、微服務和無伺服器功能。
 author: ardalis
-ms.date: 03/07/2019
-ms.openlocfilehash: cf3be07f0d37aacf4f0252ef2f4d922b7be93eee
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 04/23/2020
+ms.openlocfilehash: ebef97fb355cbf682b37ee441a19fbbfdd2d0dc3
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989060"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199816"
 ---
-# <a name="architecting-cloud-native-net-applications-for-azure"></a>為 Azure 建構雲本機 .NET 應用程式
+# <a name="architecting-cloud-native-net-applications-for-azure"></a>架構適用于 Azure 的雲端原生 .NET 應用程式
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-版權&copy;所有 2019 由微軟公司
+Microsoft &copy; Corporation 的著作權2019
 
 著作權所有，並保留一切權利。 本書內容的任何部分在未經過發行者書面許可下，不得以任何形式或透過任何方式進行重製或傳送。
 
@@ -38,45 +38,51 @@ Microsoft 與列於 https://www.microsoft.com「商標」網頁的商標是 Micr
 
 Mac 與 macOS 是 Apple Inc. 的商標。
 
-Docker 鯨魚標誌是 Docker, Inc. 經許可使用的註冊商標。
+Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 
 所有其他商標和標誌屬於其各自擁有者的財產。
 
 作者：
 
-> **Steve "ardalis" Smith** - 軟體架構設計人員和講師 - [Ardalis.com](https://ardalis.com)
+> **Vettor**，首席雲端系統架構師/IP 架構師- [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)，Microsoft
 >
-> **羅布維托 -** 微軟 - 首席雲系統架構師/IP 架構師 - [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
+> **Steve "ardalis" Smith**，軟體架構師和訓練人員- [Ardalis.com](https://ardalis.com)
 
-參與者和審閱者:
+參與者和審核者：
 
-> **塞薩爾·德拉托雷**,微軟.NET團隊首席項目經理
+> **Cesar De La Torre**，首席計畫經理，.net 小組，Microsoft
 >
-> **Nish Anil**，Microsoft NET 小組資深方案經理
+> **Nish Anil**，Microsoft 的資深計畫經理，.net 團隊
+>
+> **Jeremy Likeness**，Microsoft 的資深計畫經理，.net 團隊
+>
+> Microsoft 資深雲端提倡者**Cecil Phillip**
+
+深入瞭解 eShopOnContainers
 
 編輯者：
 
-> **Maira Wenzel**, Sr. 內容開發人員, .NET 團隊, 微軟
+> **Maira Wenzel**，Microsoft 的計畫經理，.net 團隊
 
 ## <a name="who-should-use-this-guide"></a>誰應該使用本指南
 
-本指南的讀者主要是開發人員、開發主管和架構師,他們有興趣學習如何構建專為雲設計的應用程式。
+本指南的物件主要是開發人員、開發組長和架構設計人員，有興趣學習如何建立專為雲端設計的應用程式。
 
-次要受眾是計劃選擇是否使用雲原生方法構建應用程式的技術決策者。
+次要物件是技術決策者，他們打算選擇是否要使用雲端原生方法來建立應用程式。
 
 ## <a name="how-you-can-use-this-guide"></a>此指南的使用方式
 
-本指南首先定義雲本機,並介紹使用雲原生原則和技術構建的參考應用程式。 除了前兩章之外,本書的其餘部分被分解為特定章節,重點討論大多數雲原生應用程式共有的主題。 您可以跳轉到以下任一章節,瞭解雲本機方法:
+本指南一開始會定義雲端原生，並介紹使用雲端原生原則和技術建立的參考應用程式。 除了這前兩個章節以外，本書的其餘部分會細分為著重于大部分雲端原生應用程式常見主題的特定章節。 您可以跳至下列任一章節，以瞭解雲端原生方法：
 
-- 資料與資料存取
+- 資料和資料存取
 - 通訊模式
-- 擴充和可擴充性
-- 應用程式恢復能力
+- 調整和擴充性
+- 應用程式復原
 - 監視與健康狀態
-- 身份和安全
+- 身分識別與安全性
 - DevOps
 
-本指南以 PDF 格式和連線形式提供。 請隨時將本文檔或指向其在線版本的連結轉發給您的團隊,以幫助確保對這些主題達成共識。 這些主題大多得益於對基本原則和模式的一致理解,以及與這些主題相關的決策所涉及的權衡。 本文件的目標是為團隊及其領導者提供所需的資訊,以便對其應用程式的體系結構、開發和託管做出明智的決策。
+本指南以 PDF 形式和線上版本提供。 請隨意將本檔或其線上版本的連結轉寄給您的小組，以協助確保這些主題的一般瞭解。 大部分的主題都是以一致的方式瞭解基礎原則和模式，以及與這些主題相關的決策所牽涉到的取捨。 本檔的目標是要為小組及其領導者提供針對其應用程式架構、開發和裝載做出明智決策所需的資訊。
 
 >[!div class="step-by-step"]
 >[下一步](introduction.md)

@@ -4,12 +4,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 84131bc503a106961419a27fc4e3e0f2d82306a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed18c42cd28412a967c94a65c2a92b0b75097b52
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846229"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199725"
 ---
 # <a name="new-operator-c-reference"></a>new 運算子 (C# 參考)
 
@@ -47,9 +47,9 @@ ms.locfileid: "78846229"
 
 ## <a name="destruction-of-type-instances"></a>型別執行個體的解構
 
-您不需要終結先前建立的型別執行個體。 參考和實值型別的執行個體都會自動終結。 實值型別的執行個體會在內容包含它們時立即終結。 參考型別的執行個體則會由[記憶體回收行程](../../../standard/garbage-collection/index.md)在移除執行個體的最後一個參考後，於未指定的時間終結。
+您不需要終結先前建立的型別執行個體。 參考和實值型別的執行個體都會自動終結。 實值型別的執行個體會在內容包含它們時立即終結。 在移除最後一個參考之後，[垃圾收集](../../../standard/garbage-collection/index.md)行程會在未指定的時間內終結參考型別的實例。
 
-對於包含非託管資源的類型實例（例如檔案控制代碼），建議採用確定性清理，以確保它們包含的資源儘快釋放。 如需詳細資訊，請參閱 <xref:System.IDisposable?displayProperty=nameWithType> API 參考和 [using 陳述式](../keywords/using-statement.md)一文。
+對於包含非受控資源的類型實例（例如，檔案控制代碼），建議使用具決定性的清除，以確保其所包含的資源能儘快釋放。 如需詳細資訊，請參閱 <xref:System.IDisposable?displayProperty=nameWithType> API 參考和 [using 陳述式](../keywords/using-statement.md)一文。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
@@ -59,8 +59,8 @@ ms.locfileid: "78846229"
 
 如需詳細資訊，請參閱 [C# 語言規格](~/_csharplang/spec/introduction.md)的 [new 運算子](~/_csharplang/spec/expressions.md#the-new-operator)一節。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C# 參考](../index.md)
-- [C# 運算子](index.md)
-- [物件和集合初始化器](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [C # 運算子](index.md)
+- [物件和集合初始化運算式](../../programming-guide/classes-and-structs/object-and-collection-initializers.md)
