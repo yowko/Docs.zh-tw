@@ -2,18 +2,18 @@
 title: dotnet new 命令
 description: dotnet new 命令會根據指定的範本建立新的 .NET Core 專案。
 ms.date: 04/10/2020
-ms.openlocfilehash: 1979f98a6005a414acc64c5eaa086a88aca9f033
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 9a68baafa7ac3e6ad2fdc8f1c6e8621d6e15f1ff
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102823"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506853"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
-**本文適用於:✔️** .NET Core 2.0 SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 2.0 SDK 和更新版本
 
-## <a name="name"></a>名稱
+## <a name="name"></a>Name
 
 `dotnet new` - 根據指定的範本建立新的專案、組態檔或方案。
 
@@ -32,11 +32,11 @@ dotnet new -h|--help
 
 ## <a name="description"></a>描述
 
-該`dotnet new`指令基於範本創建 .NET Core 專案或其他專案。
+`dotnet new`命令會根據範本建立 .net Core 專案或其他成品。
 
 命令會呼叫[範本引擎](https://github.com/dotnet/templating)，以根據指定的範本和選項在磁碟上建立成品。
 
-### <a name="implicit-restore"></a>隱式還原
+### <a name="implicit-restore"></a>隱含還原
 
 [!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
@@ -46,84 +46,84 @@ dotnet new -h|--help
 
   要在叫用命令時具現化的範本。 每個範本可能會有您可以傳遞的特定選項。 如需詳細資訊，請參閱[範本選項](#template-options)。
 
-  您可以執行`dotnet new --list`以查看所有已安裝範本的清單。 如果`TEMPLATE`該值與返回表中的 **「樣本**」或 **「短名稱」** 欄中的文字不匹配,則對這兩列執行子字串匹配。
+  您可以執行`dotnet new --list`或`dotnet new -l`來查看所有已安裝的範本清單。 如果`TEMPLATE`值不完全符合所傳回資料表之 [樣板 **] 或 [** **簡短名稱**] 資料行中的文字，則會在這兩個數據行上執行子字串相符。
 
-  從 .NET Core 3.0 SDK 開始,當您`dotnet new`在以下條件下調用 指令時,CLI 會搜索NuGet.org中的樣本:
+  從 .NET Core 3.0 SDK 開始，當您在下列情況下叫用`dotnet new`命令時，CLI 會在 NuGet.org 中搜尋範本：
 
-  - 如果 CLI 在`dotnet new`調用 時找不到範本匹配,甚至不是部分範本。
-  - 如果有較新版本的範本可用。 在這種情況下,將創建專案或專案,但 CLI 會警告您有關範本的更新版本。
+  - 如果 CLI 在叫用時找不到相符`dotnet new`的範本，甚至不是部分。
+  - 如果有較新版本的範本可用，則為。 在此情況下，會建立專案或成品，但 CLI 會警告您有關範本的更新版本。
 
-  此命令包含預設的範本清單。 使用 `dotnet new -l` 以取得可用範本的清單。 下表顯示了預安裝的 .NET Core SDK 的範本。 範本的預設語言會顯示在方括號內。 按下短名稱連結以查看特定的範本選項。
+  下表顯示隨 .NET Core SDK 預先安裝的範本。 範本的預設語言會顯示在方括號內。 按一下 [簡短名稱] 連結，以查看特定的範本選項。
 
-| 範本                                    | 簡短名稱                      | Language     | Tags                                  | 介紹 |
+| 範本                                    | 簡短名稱                      | Language     | Tags                                  | 引導 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
-| 主控台應用程式                          | [安慰](#console)             | [C#], F#, VB | 通用/主控台                        | 1.0        |
+| 主控台應用程式                          | [控制](#console)             | [C#], F#, VB | 通用/主控台                        | 1.0        |
 | 類別庫                                | [classlib](#classlib)           | [C#], F#, VB | 通用/程式庫                        | 1.0        |
-| WPF 應用程式                              | [Wpf](#wpf)                     | [C#]         | 公開/WPF                            | 3.0        |
-| WPF 類庫                            | [wpflib](#wpf)                  | [C#]         | 公開/WPF                            | 3.0        |
-| WPF 自訂控制項程式庫                   | [wpf自訂控制lib](#wpf)     | [C#]         | 公開/WPF                            | 3.0        |
-| WPF 使用者控制項程式庫                     | [wpfuser 控制lib](#wpf)       | [C#]         | 公開/WPF                            | 3.0        |
-| 視窗表單(贏表單)應用程式         | [溫窗體](#winforms)           | [C#]         | 通用/雙贏                       | 3.0        |
-| 視窗表單(獲勝表單)類別庫       | [溫多利布](#winforms)        | [C#]         | 通用/雙贏                       | 3.0        |
-| 工人服務                               | [工人](#web-others)           | [C#]         | 公用/工人/網路                     | 3.0        |
-| 單元測試專案                            | [mstest](#test)                 | [C#], F#, VB | 測試/MSTest                           | 1.0        |
-| NUnit 3 測試專案                         | [Nunit](#nunit)                  | [C#], F#, VB | 測試/NUnit                            | 2.1.400    |
+| WPF 應用程式                              | [wpf](#wpf)                     | [C#]         | Common/WPF                            | 3.0        |
+| WPF 類別庫                            | [wpflib](#wpf)                  | [C#]         | Common/WPF                            | 3.0        |
+| WPF 自訂控制項程式庫                   | [wpfcustomcontrollib](#wpf)     | [C#]         | Common/WPF                            | 3.0        |
+| WPF 使用者控制項程式庫                     | [wpfusercontrollib](#wpf)       | [C#]         | Common/WPF                            | 3.0        |
+| Windows Forms （WinForms）應用程式         | [winforms](#winforms)           | [C#]         | Common/WinForms                       | 3.0        |
+| Windows Forms （WinForms）類別庫       | [winformslib](#winforms)        | [C#]         | Common/WinForms                       | 3.0        |
+| 背景工作服務                               | [工作](#web-others)           | [C#]         | 一般/背景工作/Web                     | 3.0        |
+| 單元測試專案                            | [mstest.exe](#test)                 | [C#], F#, VB | 測試/MSTest                           | 1.0        |
+| NUnit 3 測試專案                         | [nunit](#nunit)                  | [C#], F#, VB | 測試/NUnit                            | 2.1.400    |
 | NUnit 3 測試項目                            | `nunit-test`                    | [C#], F#, VB | 測試/NUnit                            | 2.2        |
-| xUnit 測試專案                           | [森特](#test)                  | [C#], F#, VB | 測試/XUnit                            | 1.0        |
-| 剃刀元件                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
-| Razor 頁面                                   | [網頁](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
+| xUnit 測試專案                           | [xunit](#test)                  | [C#], F#, VB | 測試/XUnit                            | 1.0        |
+| Razor 元件                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
+| Razor 頁面                                   | [本頁](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
-| 布拉佐伺服器應用程式                            | [布拉佐伺服器](#blazorserver)   | [C#]         | 網路/布拉佐爾                            | 3.0        |
-| 空的 ASP.NET Core                           | [Web](#web)                     | [C#]、F#     | Web/空白                             | 1.0        |
-| ASP.NET Core Web 應用程式 (模型檢視控制器) | [Mvc](#web-options)             | [C#]、F#     | Web/MVC                               | 1.0        |
-| ASP.NET Core Web 應用程式                         | [網路應用程式, 剃鬚刀](#web-options)   | [C#]         | Web/MVC/Razor 頁面                   | 2.2, 2.0   |
-| ASP.NET Core 與 Angular                    | [角](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
+| Blazor 伺服器應用程式                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
+| 空的 ASP.NET Core                           | [網路](#web)                     | [C#]、F#     | Web/空白                             | 1.0        |
+| ASP.NET Core Web 應用程式 (模型檢視控制器) | [mvc](#web-options)             | [C#]、F#     | Web/MVC                               | 1.0        |
+| ASP.NET Core Web 應用程式                         | [webapp，razor](#web-options)   | [C#]         | Web/MVC/Razor 頁面                   | 2.2、2。0   |
+| ASP.NET Core 與 Angular                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
 | ASP.NET Core 與 React.js                   | [反應](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
 | ASP.NET Core 與 React.js 和 Redux         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
 | Razor 類別庫                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/程式庫/Razor 類別庫 | 2.1        |
-| ASP.NET Core Web API                         | [韋薩皮](#webapi)               | [C#]、F#     | Web/WebAPI                            | 1.0        |
-| ASP.NET核心 gRPC 服務                    | [grpc](#web-others)             | [C#]         | 網路/gRPC                              | 3.0        |
-| 協定緩衝區檔案                         | [原](#namespace)             |              | 網路/gRPC                              | 3.0        |
-| 點網 gitignore 檔案                        | `gitignore`                     |              | Config                                | 3.0        |
+| ASP.NET Core Web API                         | [webapi](#webapi)               | [C#]、F#     | Web/WebAPI                            | 1.0        |
+| ASP.NET Core gRPC 服務                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
+| dotnet .gitignore 檔                        | `gitignore`                     |              | Config                                | 3.0        |
 | global.json 檔案                             | [globaljson](#globaljson)       |              | Config                                | 2.0        |
 | NuGet 組態                                 | `nugetconfig`                   |              | Config                                | 1.0        |
-| 點網本地工具清單檔案              | `tool-manifest`                 |              | Config                                | 3.0        |
+| Dotnet 本機工具資訊清單檔              | `tool-manifest`                 |              | Config                                | 3.0        |
 | Web 組態                                   | `webconfig`                     |              | Config                                | 1.0        |
 | 方案檔                                | `sln`                           |              | 解決方法                              | 1.0        |
+| 通訊協定緩衝區檔案                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`--dry-run`**
 
-  顯示運行給定命令時將會發生什麼情況的摘要。 自 .NET 核心 2.2 SDK 以來可用。
+  若指定的命令會導致建立範本，則顯示執行時會發生的情況摘要。 自 .NET Core 2.2 SDK 起提供。
 
 - **`--force`**
 
-  強制產生內容，即使它會變更現有的檔案。 當選擇的範本將覆蓋輸出目錄中的現有檔時,這是必需的。
+  強制產生內容，即使它會變更現有的檔案。 當選擇的範本會覆寫輸出目錄中的現有檔案時，這是必要的。
 
 - **`-h|--help`**
 
-  印出命令的說明。 可以為`dotnet new`命令本身或任何範本調用它。 例如： `dotnet new mvc --help` 。
+  印出命令的說明。 您可以針對`dotnet new`命令本身或任何範本叫用它。 例如： `dotnet new mvc --help` 。
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
-  從`PATH``NUGET_ID`或安裝 提供的範本包。 若您想要安裝預先發行版本的範本套件，就必須以 `<package-name>::<package-version>` 的格式指定版本。 默認情況下,`dotnet new`將\*傳遞 版本,該版本表示最新的穩定包版本。 請參閱[「示例](#examples)」部分中的範例。
+  從或`PATH` `NUGET_ID`提供的安裝範本套件。 若您想要安裝預先發行版本的範本套件，就必須以 `<package-name>::<package-version>` 的格式指定版本。 根據預設， `dotnet new`會\*傳遞代表最新穩定封裝版本的版本。 請參閱[範例](#examples)一節中的範例。
   
-  如果在運行此命令時已安裝範本的版本,則範本將更新為指定版本,如果沒有指定版本,則該範本將更新到最新的穩定版本。
+  當您執行此命令時，如果已安裝某個版本的範本，此範本將會更新為指定的版本，或如果未指定任何版本，則為最新的穩定版本。
 
   如需建立自訂範本的資訊，請參閱 [dotnet new的自訂範本](custom-templates.md)。
 
 - **`-l|--list`**
 
-  列出包含指定名稱的範本。 如果未指定名稱,則列出所有範本。
+  列出包含指定名稱的範本。 如果未指定名稱，則會列出所有範本。
 
 - **`-lang|--language {C#|F#|VB}`**
 
   要建立的範本語言。 接受的語言會因範本而有所不同 (請參閱[引數](#arguments)一節中的預設值)。 並非所有範本都適用。
 
   > [!NOTE]
-  > 某些 Shell 會將 `#` 解譯為特殊字元。 在這些情況下,將語言參數值括在引號中。 例如： `dotnet new console -lang "F#"` 。
+  > 某些 Shell 會將 `#` 解譯為特殊字元。 在這些情況下，請以引號括住語言參數值。 例如： `dotnet new console -lang "F#"` 。
 
 - **`-n|--name <OUTPUT_NAME>`**
 
@@ -131,7 +131,7 @@ dotnet new -h|--help
 
 - **`--nuget-source <SOURCE>`**
 
-  請指定安裝期間所要使用的 NuGet 來源。 自 .NET 核心 2.1 SDK 以來可用。
+  請指定安裝期間所要使用的 NuGet 來源。 自 .NET Core 2.1 SDK 起提供。
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
@@ -139,25 +139,25 @@ dotnet new -h|--help
 
 - **`--type <TYPE>`**
 
-  根據可用的類型篩選範本。 預先定義值`project``item`為`other`或 。
+  根據可用的類型篩選範本。 預先定義的`project`值`item`為、 `other`和。
 
 - **`-u|--uninstall [PATH|NUGET_ID]`**
 
-  在`PATH``NUGET_ID`或 上卸載範本包。 未指定`<PATH|NUGET_ID>`該值時,將顯示所有當前安裝的範本包及其關聯的範本。 指定`NUGET_ID`時,不包括版本號。
+  在或`PATH` `NUGET_ID`提供的上卸載範本套件。 未指定`<PATH|NUGET_ID>`值時，會顯示所有目前已安裝的範本套件及其關聯的範本。 指定`NUGET_ID`時，請勿包含版本號碼。
 
-  如果不為此選項指定參數,該命令將列出已安裝的範本及其詳細資訊。
+  如果您未指定此選項的參數，此命令會列出已安裝的範本和其相關詳細資料。
 
   > [!NOTE]
-  > 若要使用 `PATH` 將範本解除安裝，您需要使路徑成為完整路徑。 例如 *,C:/使用者\</ 使用者>/文檔/範本/加西亞軟體.ConsoleTemplate.CSharp*將工作,但 *./GarciaSoftware.ConsoleTemplate.CSharp*從包含的資料夾中不會。
-  > 不要在範本路徑上包含最終終止目錄斜杠。
+  > 若要使用 `PATH` 將範本解除安裝，您需要使路徑成為完整路徑。 例如， *C：/Users/\<USER>/documents/templates/garciasoftware.consoletemplate.csharp*可正常執行，但包含資料夾中的 *./garciasoftware.consoletemplate.csharp*則不會。
+  > 請勿在您的範本路徑上包含最後終止的目錄斜線。
 
 - **`--update-apply`**
 
-  檢查目前安裝的範本包是否有可用的更新並安裝它們。 自 .NET Core 3.0 SDK 起提供。
+  檢查目前已安裝的範本套件是否有可用的更新，並加以安裝。 自 .NET Core 3.0 SDK 起提供。
 
 - **`--update-check`**
 
-  檢查當前安裝的範本包是否有可用的更新。 自 .NET Core 3.0 SDK 起提供。
+  檢查目前是否已安裝的範本套件是否有可用的更新。 自 .NET Core 3.0 SDK 起提供。
 
 ## <a name="template-options"></a>範本選項
 
@@ -167,9 +167,9 @@ dotnet new -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要定位[的框架](../../standard/frameworks.md)。 自 .NET Core 3.0 SDK 起提供。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 自 .NET Core 3.0 SDK 起提供。
 
-  下表根據您使用的 SDK 版本號列出預設值:
+  下表根據您所使用的 SDK 版本號碼，列出預設值：
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
@@ -178,13 +178,13 @@ dotnet new -h|--help
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  在`LangVersion`建立的項目檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。 不支援 F#。 自 .NET 核心 2.2 SDK 以來可用。
+  在建立`LangVersion`的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。 不支援 F#。 自 .NET Core 2.2 SDK 起提供。
 
-  有關預設 C# 版本的清單,請參閱[預設值](../../csharp/language-reference/configure-language-version.md#defaults)。
+  如需預設 c # 版本的清單，請參閱[預設值](../../csharp/language-reference/configure-language-version.md#defaults)。
 
 - **`--no-restore`**
 
-  如果指定,則不會在項目創建期間執行隱式還原。 自 .NET 核心 2.2 SDK 以來可用。
+  若已指定，則不會在專案建立期間執行隱含還原。 自 .NET Core 2.2 SDK 起提供。
 
 ***
 
@@ -192,75 +192,75 @@ dotnet new -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要定位[的框架](../../standard/frameworks.md)。 值：`netcoreapp<version>` 建立 .NET Core 類別庫或 `netstandard<version>` 建立 .NET Standard 類別庫。 預設值是 `netstandard2.0`。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 值：`netcoreapp<version>` 建立 .NET Core 類別庫或 `netstandard<version>` 建立 .NET Standard 類別庫。 預設值是 `netstandard2.0`。
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  在`LangVersion`建立的項目檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。 不支援 F#。 自 .NET 核心 2.2 SDK 以來可用。
+  在建立`LangVersion`的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。 不支援 F#。 自 .NET Core 2.2 SDK 起提供。
 
-  有關預設 C# 版本的清單,請參閱[預設值](../../csharp/language-reference/configure-language-version.md#defaults)。
+  如需預設 c # 版本的清單，請參閱[預設值](../../csharp/language-reference/configure-language-version.md#defaults)。
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 ***
 
-### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a>wpf, wpflib, wpf自定義控制lib, wpfusercontrollib
+### <a name="wpf-wpflib-wpfcustomcontrollib-wpfusercontrollib"></a><a name="wpf"></a>wpf、wpflib、wpfcustomcontrollib、wpfusercontrollib
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要定位[的框架](../../standard/frameworks.md)。 預設值是 `netcoreapp3.1`。 自 .NET 核心 3.1 SDK 以來可用。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 預設值是 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起提供。
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  在`LangVersion`建立的項目檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。
+  在建立`LangVersion`的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。
 
-  有關預設 C# 版本的清單,請參閱[預設值](../../csharp/language-reference/configure-language-version.md#defaults)。
+  如需預設 c # 版本的清單，請參閱[預設值](../../csharp/language-reference/configure-language-version.md#defaults)。
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 ***
 
-### <a name="winforms-winformslib"></a><a name="winforms"></a>勝利,溫多利布
+### <a name="winforms-winformslib"></a><a name="winforms"></a>winforms、winformslib
 
 - **`--langVersion <VERSION_NUMBER>`**
 
-  在`LangVersion`建立的項目檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。
+  在建立`LangVersion`的專案檔中設定屬性。 例如，使用 `--langVersion 7.3` 可使用 C# 7.3。
 
-  有關預設 C# 版本的清單,請參閱[預設值](../../csharp/language-reference/configure-language-version.md#defaults)。
+  如需預設 c # 版本的清單，請參閱[預設值](../../csharp/language-reference/configure-language-version.md#defaults)。
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 ***
 
-### <a name="worker-grpc"></a><a name="web-others"></a>工人, grpc
+### <a name="worker-grpc"></a><a name="web-others"></a>worker、grpc
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要定位[的框架](../../standard/frameworks.md)。 預設值是 `netcoreapp3.1`。 自 .NET 核心 3.1 SDK 以來可用。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 預設值是 `netcoreapp3.1`。 自 .NET Core 3.1 SDK 起提供。
 
 - **`--exclude-launch-settings`**
 
-  從生成的範本中排除*啟動設置.json。*
+  從產生的範本排除*launchsettings.json。*
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 ***
 
-### <a name="mstest-xunit"></a><a name="test"></a>斯泰斯特, 迅達
+### <a name="mstest-xunit"></a><a name="test"></a>mstest、xunit
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要定位[的框架](../../standard/frameworks.md)。 選項可用,因為 .NET 核心 3.0 SDK。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 自 .NET Core 3.0 SDK 起可用的選項。
 
-  下表根據您使用的 SDK 版本號列出預設值:
+  下表根據您所使用的 SDK 版本號碼，列出預設值：
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
@@ -269,21 +269,21 @@ dotnet new -h|--help
 
 - **`-p|--enable-pack`**
 
-  使用[dotnet 套件](dotnet-pack.md)為專案啟用打包。
+  使用[dotnet pack](dotnet-pack.md)啟用專案的封裝。
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 ***
 
-### <a name="nunit"></a>Nunit
+### <a name="nunit"></a>nunit
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要定位[的框架](../../standard/frameworks.md)。
+  指定要設為目標的[架構](../../standard/frameworks.md)。
 
-  下表根據您使用的 SDK 版本號列出預設值:
+  下表根據您所使用的 SDK 版本號碼，列出預設值：
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
@@ -294,11 +294,11 @@ dotnet new -h|--help
 
 - **`-p|--enable-pack`**
 
-  使用[dotnet 套件](dotnet-pack.md)為專案啟用打包。
+  使用[dotnet pack](dotnet-pack.md)啟用專案的封裝。
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 ***
 
@@ -306,23 +306,23 @@ dotnet new -h|--help
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
-  生成的代碼的命名空間。 預設值是 `MyApp.Namespace`。
+  產生之程式碼的命名空間。 預設值是 `MyApp.Namespace`。
 
 - **`-np|--no-pagemodel`**
 
-  創建沒有頁面模型的頁面。
+  建立不含 PageModel 的頁面。
 
 ***
 
-### <a name="viewimports-proto"></a><a name="namespace"></a>檢視導入, 原型
+### <a name="viewimports-proto"></a><a name="namespace"></a>viewimports.cshtml，proto
 
 - **`-na|--namespace <NAMESPACE_NAME>`**
 
-  生成的代碼的命名空間。 預設值是 `MyApp.Namespace`。
+  產生之程式碼的命名空間。 預設值是 `MyApp.Namespace`。
 
 ***
 
-### <a name="blazorserver"></a>布拉佐伺服器
+### <a name="blazorserver"></a>blazorserver
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
@@ -337,59 +337,59 @@ dotnet new -h|--help
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  要連接到的 Azure 活動目錄 B2C 實體。 搭配 `IndividualB2C` 驗證使用。 預設值是 `https://login.microsoftonline.com/tfp/`。
+  要連接的 Azure Active Directory B2C 實例。 搭配 `IndividualB2C` 驗證使用。 預設值是 `https://login.microsoftonline.com/tfp/`。
 
 - **`-ssp|--susi-policy-id <ID>`**
 
-  此項目的登錄和註冊策略 ID。 搭配 `IndividualB2C` 驗證使用。
+  此專案的登入和註冊原則識別碼。 搭配 `IndividualB2C` 驗證使用。
 
 - **`-rp|--reset-password-policy-id <ID>`**
 
-  此專案的重置密碼策略 ID。 搭配 `IndividualB2C` 驗證使用。
+  此專案的重設密碼原則識別碼。 搭配 `IndividualB2C` 驗證使用。
 
 - **`-ep|--edit-profile-policy-id <ID>`**
 
-  此項目的編輯設定檔策略 ID。 搭配 `IndividualB2C` 驗證使用。
+  此專案的編輯設定檔原則識別碼。 搭配 `IndividualB2C` 驗證使用。
 
 - **`--aad-instance <INSTANCE>`**
 
-  要連接到的 Azure 活動目錄實例。 搭配 `SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
+  要連接的 Azure Active Directory 實例。 搭配 `SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
 
 - **`--client-id <ID>`**
 
-  此專案的用戶端 ID。 搭配 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
+  此專案的用戶端識別碼。 搭配 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
 
 - **`--domain <DOMAIN>`**
 
-  目錄租戶的域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `qualified.domain.name`。
+  目錄租使用者的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `qualified.domain.name`。
 
 - **`--tenant-id <ID>`**
 
-  要連接到的目錄的租戶 ID ID。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
+  要連接之目錄的 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
 
 - **`--callback-path <PATH>`**
 
-  重定向URI的應用程式基本路徑中的請求路徑。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `/signin-oidc`。
+  應用程式的重新導向 URI 基底路徑中的要求路徑。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `/signin-oidc`。
 
 - **`-r|--org-read-access`**
 
-  允許此應用程式讀取訪問目錄。 僅適用於 `SingleOrg` 或 `MultiOrg` 驗證。
+  允許此應用程式讀取目錄的許可權。 僅適用於 `SingleOrg` 或 `MultiOrg` 驗證。
 
 - **`--exclude-launch-settings`**
 
-  從生成的範本中排除*啟動設置.json。*
+  從產生的範本排除*launchsettings.json。*
 
 - **`--no-https`**
 
-  關閉 HTTPS。 僅當 、`Individual`或`IndividualB2C`未`SingleOrg``--auth`用於`MultiOrg`時 ,此選項才適用。
+  關閉 HTTPS。 只有當、 `Individual`、 `IndividualB2C` `SingleOrg`或`MultiOrg`不是用於時，才會套用`--auth`此選項。
 
 - **`-uld|--use-local-db`**
 
-  指定本地資料庫應使用而不是 SQLite。 僅適用於 `Individual` 或 `IndividualB2C` 驗證。
+  指定應該使用 LocalDB，而不是 SQLite。 僅適用於 `Individual` 或 `IndividualB2C` 驗證。
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 ***
 
@@ -397,13 +397,13 @@ dotnet new -h|--help
 
 - **`--exclude-launch-settings`**
 
-  從生成的範本中排除*啟動設置.json。*
+  從產生的範本排除*launchsettings.json。*
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要定位[的框架](../../standard/frameworks.md)。 選項在 .NET 核心 2.2 SDK 中不可用。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 無法在 .NET Core 2.2 SDK 中使用選項。
 
-  下表根據您使用的 SDK 版本號列出預設值:
+  下表根據您所使用的 SDK 版本號碼，列出預設值：
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
@@ -413,7 +413,7 @@ dotnet new -h|--help
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 - **`--no-https`**
 
@@ -421,7 +421,7 @@ dotnet new -h|--help
 
 ***
 
-### <a name="mvc-webapp"></a><a name="web-options"></a>mvc, 網路應用
+### <a name="mvc-webapp"></a><a name="web-options"></a>mvc、webapp
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
@@ -436,47 +436,47 @@ dotnet new -h|--help
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  要連接到的 Azure 活動目錄 B2C 實體。 搭配 `IndividualB2C` 驗證使用。 預設值是 `https://login.microsoftonline.com/tfp/`。
+  要連接的 Azure Active Directory B2C 實例。 搭配 `IndividualB2C` 驗證使用。 預設值是 `https://login.microsoftonline.com/tfp/`。
 
 - **`-ssp|--susi-policy-id <ID>`**
 
-  此項目的登錄和註冊策略 ID。 搭配 `IndividualB2C` 驗證使用。
+  此專案的登入和註冊原則識別碼。 搭配 `IndividualB2C` 驗證使用。
 
 - **`-rp|--reset-password-policy-id <ID>`**
 
-  此專案的重置密碼策略 ID。 搭配 `IndividualB2C` 驗證使用。
+  此專案的重設密碼原則識別碼。 搭配 `IndividualB2C` 驗證使用。
 
 - **`-ep|--edit-profile-policy-id <ID>`**
 
-  此項目的編輯設定檔策略 ID。 搭配 `IndividualB2C` 驗證使用。
+  此專案的編輯設定檔原則識別碼。 搭配 `IndividualB2C` 驗證使用。
 
 - **`--aad-instance <INSTANCE>`**
 
-  要連接到的 Azure 活動目錄實例。 搭配 `SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
+  要連接的 Azure Active Directory 實例。 搭配 `SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
 
 - **`--client-id <ID>`**
 
-  此專案的用戶端 ID。 搭配 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
+  此專案的用戶端識別碼。 搭配 `IndividualB2C`、`SingleOrg` 或 `MultiOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
 
 - **`--domain <DOMAIN>`**
 
-  目錄租戶的域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `qualified.domain.name`。
+  目錄租使用者的網域。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `qualified.domain.name`。
 
 - **`--tenant-id <ID>`**
 
-  要連接到的目錄的租戶 ID ID。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
+  要連接之目錄的 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
 
 - **`--callback-path <PATH>`**
 
-  重定向URI的應用程式基本路徑中的請求路徑。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `/signin-oidc`。
+  應用程式的重新導向 URI 基底路徑中的要求路徑。 搭配 `SingleOrg` 或 `IndividualB2C` 驗證使用。 預設值是 `/signin-oidc`。
 
 - **`-r|--org-read-access`**
 
-  允許此應用程式讀取訪問目錄。 僅適用於 `SingleOrg` 或 `MultiOrg` 驗證。
+  允許此應用程式讀取目錄的許可權。 僅適用於 `SingleOrg` 或 `MultiOrg` 驗證。
 
 - **`--exclude-launch-settings`**
 
-  從生成的範本中排除*啟動設置.json。*
+  從產生的範本排除*launchsettings.json。*
 
 - **`--no-https`**
 
@@ -484,13 +484,13 @@ dotnet new -h|--help
 
 - **`-uld|--use-local-db`**
 
-  指定本地資料庫應使用而不是 SQLite。 僅適用於 `Individual` 或 `IndividualB2C` 驗證。
+  指定應該使用 LocalDB，而不是 SQLite。 僅適用於 `Individual` 或 `IndividualB2C` 驗證。
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要定位[的框架](../../standard/frameworks.md)。 選項可用,因為 .NET 核心 3.0 SDK。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 自 .NET Core 3.0 SDK 起可用的選項。
 
-  下表根據您使用的 SDK 版本號列出預設值:
+  下表根據您所使用的 SDK 版本號碼，列出預設值：
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
@@ -499,19 +499,19 @@ dotnet new -h|--help
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 - **`--use-browserlink`**
 
-  在專案中包括瀏覽器連結。 選項在 .NET Core 2.2 和 3.1 SDK 中不可用。
+  在專案中包含 BrowserLink。 無法在 .NET Core 2.2 和 3.1 SDK 中使用選項。
 
 - **`-rrc|--razor-runtime-compilation`**
 
-  決定項目是否設定為除錯產生中使用[Razor 執行時編譯](/aspnet/core/mvc/views/view-compilation#runtime-compilation)。 選項可用,因為 .NET 核心 3.1 SDK。
+  判斷專案是否設定為使用 Debug 組建中的[Razor 執行時間編譯](/aspnet/core/mvc/views/view-compilation#runtime-compilation)。 自 .NET Core 3.1.201 SDK 起可用的選項。
 
 ***
 
-### <a name="angular-react"></a><a name="spa"></a>角,反應
+### <a name="angular-react"></a><a name="spa"></a>角度、反應
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
@@ -524,25 +524,25 @@ dotnet new -h|--help
 
 - **`--exclude-launch-settings`**
 
-  從生成的範本中排除*啟動設置.json。*
+  從產生的範本排除*launchsettings.json。*
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 - **`--no-https`**
 
-  關閉 HTTPS。 僅當身份驗證為`None`時,此選項才適用。
+  關閉 HTTPS。 只有在驗證為時，才`None`會套用此選項。
 
 - **`-uld|--use-local-db`**
 
-  指定本地資料庫應使用而不是 SQLite。 僅適用於 `Individual` 或 `IndividualB2C` 驗證。 自 .NET Core 3.0 SDK 起提供。
+  指定應該使用 LocalDB，而不是 SQLite。 僅適用於 `Individual` 或 `IndividualB2C` 驗證。 自 .NET Core 3.0 SDK 起提供。
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要定位[的框架](../../standard/frameworks.md)。 選項在 .NET 核心 2.2 SDK 中不可用。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 無法在 .NET Core 2.2 SDK 中使用選項。
 
-  下表根據您使用的 SDK 版本號列出預設值:
+  下表根據您所使用的 SDK 版本號碼，列出預設值：
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
@@ -556,13 +556,13 @@ dotnet new -h|--help
 
 - **`--exclude-launch-settings`**
 
-  從生成的範本中排除*啟動設置.json。*
+  從產生的範本排除*launchsettings.json。*
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要定位[的框架](../../standard/frameworks.md)。 選項在 .NET 核心 2.2 SDK 中不可用。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 無法在 .NET Core 2.2 SDK 中使用選項。
 
-  下表根據您使用的 SDK 版本號列出預設值:
+  下表根據您所使用的 SDK 版本號碼，列出預設值：
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
@@ -572,7 +572,7 @@ dotnet new -h|--help
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 - **`--no-https`**
 
@@ -584,11 +584,11 @@ dotnet new -h|--help
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 - **`-s|--support-pages-and-views`**
 
-  除了元件添加到此庫之外,還支援添加傳統的 Razor 頁面和檢視。 自 .NET Core 3.0 SDK 起提供。
+  支援將傳統的 Razor 頁面和 Views 新增至此程式庫的元件。 自 .NET Core 3.0 SDK 起提供。
 
 ***
   
@@ -605,49 +605,49 @@ dotnet new -h|--help
 
 - **`--aad-b2c-instance <INSTANCE>`**
 
-  要連接到的 Azure 活動目錄 B2C 實體。 搭配 `IndividualB2C` 驗證使用。 預設值是 `https://login.microsoftonline.com/tfp/`。
+  要連接的 Azure Active Directory B2C 實例。 搭配 `IndividualB2C` 驗證使用。 預設值是 `https://login.microsoftonline.com/tfp/`。
 
 - **`-ssp|--susi-policy-id <ID>`**
 
-  此項目的登錄和註冊策略 ID。 搭配 `IndividualB2C` 驗證使用。
+  此專案的登入和註冊原則識別碼。 搭配 `IndividualB2C` 驗證使用。
 
 - **`--aad-instance <INSTANCE>`**
 
-  要連接到的 Azure 活動目錄實例。 搭配 `SingleOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
+  要連接的 Azure Active Directory 實例。 搭配 `SingleOrg` 驗證使用。 預設值是 `https://login.microsoftonline.com/`。
 
 - **`--client-id <ID>`**
 
-  此專案的用戶端 ID。 搭配 `IndividualB2C` 或 `SingleOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
+  此專案的用戶端識別碼。 搭配 `IndividualB2C` 或 `SingleOrg` 驗證使用。 預設值是 `11111111-1111-1111-11111111111111111`。
 
 - **`--domain <DOMAIN>`**
 
-  目錄租戶的域。 搭配 `IndividualB2C` 或 `SingleOrg` 驗證使用。 預設值是 `qualified.domain.name`。
+  目錄租使用者的網域。 搭配 `IndividualB2C` 或 `SingleOrg` 驗證使用。 預設值是 `qualified.domain.name`。
 
 - **`--tenant-id <ID>`**
 
-  要連接到的目錄的租戶 ID ID。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
+  要連接之目錄的 TenantId 識別碼。 搭配 `SingleOrg` 驗證使用。 預設值是 `22222222-2222-2222-2222-222222222222`。
 
 - **`-r|--org-read-access`**
 
-  允許此應用程式讀取訪問目錄。 僅適用於`SingleOrg`身份驗證。
+  允許此應用程式讀取目錄的許可權。 僅適用于`SingleOrg`驗證。
 
 - **`--exclude-launch-settings`**
 
-  從生成的範本中排除*啟動設置.json。*
+  從產生的範本排除*launchsettings.json。*
 
 - **`--no-https`**
 
-  關閉 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 並未新增至 `Startup.Configure`。 此選項僅適用於或不`SingleOrg`用於身份`IndividualB2C`驗證 時。
+  關閉 HTTPS。 `app.UseHsts` 和 `app.UseHttpsRedirection` 並未新增至 `Startup.Configure`。 只有當或`SingleOrg`未用於`IndividualB2C`驗證時，此選項才適用。
 
 - **`-uld|--use-local-db`**
 
-  指定本地資料庫應使用而不是 SQLite。 僅適用於`IndividualB2C`身份驗證。
+  指定應該使用 LocalDB，而不是 SQLite。 僅適用于`IndividualB2C`驗證。
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  指定要定位[的框架](../../standard/frameworks.md)。 選項在 .NET 核心 2.2 SDK 中不可用。
+  指定要設為目標的[架構](../../standard/frameworks.md)。 無法在 .NET Core 2.2 SDK 中使用選項。
 
-  下表根據您使用的 SDK 版本號列出預設值:
+  下表根據您所使用的 SDK 版本號碼，列出預設值：
 
   | SDK 版本 | 預設值   |
   |-------------|-----------------|
@@ -657,7 +657,7 @@ dotnet new -h|--help
 
 - **`--no-restore`**
 
-  在項目創建期間不執行隱式還原。
+  在專案建立期間不會執行隱含還原。
 
 ***
 
@@ -665,7 +665,7 @@ dotnet new -h|--help
 
 - **`--sdk-version <VERSION_NUMBER>`**
 
-  指定要在*global.json*檔中使用的 .NET Core SDK 的版本。
+  指定要在*global json*檔案中使用的 .NET Core SDK 版本。
 
 ***
 
@@ -683,7 +683,7 @@ dotnet new -h|--help
   dotnet new console -lang F#
   ```
 
-- 在指定的目錄中建立 .NET 標準類別庫專案:
+- 在指定的目錄中建立 .NET Standard 類別庫專案：
 
   ```dotnetcli
   dotnet new classlib -lang VB -o MyLibrary
@@ -701,7 +701,7 @@ dotnet new -h|--help
   dotnet new xunit
   ```
 
-- 列出可用於單頁應用程式 (SPA) 樣本的所有樣本:
+- 列出適用于單一頁面應用程式（SPA）範本的所有範本：
 
   ```dotnetcli
   dotnet new spa -l
@@ -719,25 +719,25 @@ dotnet new -h|--help
   dotnet new ng
   ```
 
-- 安裝 ASP.NET核心的 SPA 樣本版本 2.0:
+- 安裝適用于 ASP.NET Core 的 SPA 範本2.0 版：
 
   ```dotnetcli
   dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0
   ```
 
-- 列出已安裝的範本及其詳細資訊,包括如何卸載它們:
+- 列出已安裝的範本和其詳細資料，包括如何將它們卸載：
 
   ```dotnetcli
   dotnet new -u
   ```
 
-- 在目前的目錄中建立*全域.json*將 SDK 版本設定為 3.1.101:
+- 在目前目錄中建立*json* ，將 SDK 版本設定為3.1.101：
 
   ```dotnetcli
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [dotnet new 的自訂範本](custom-templates.md)
 - [建立適用於 dotnet new 的自訂範本](../tutorials/cli-templates-create-item-template.md)

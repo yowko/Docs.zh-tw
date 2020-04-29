@@ -1,21 +1,21 @@
 ---
-title: Iterator
+title: 迭代器
 description: 了解如何使用內建 C# 迭代器，以及如何建立您自己的自訂迭代器方法。
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 1933ecf83e9fa234f9b88c815d8ab527997c97f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: efa755c2243c18fb51b653abccb2bfc702bbc055
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79399613"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507373"
 ---
-# <a name="iterators"></a>Iterator
+# <a name="iterators"></a>迭代器
 
 您撰寫的幾乎所有程式或多或少都需要逐一查看集合。 您將會撰寫程式碼，以查看集合中的每個項目。
 
-您也會建立迭代器方法，也就是為該類別的項目產生迭代器的方法。 這些方法可用於：
+您也會建立反覆運算器方法，這是可產生 iterator 的方法（也就是會針對該類別的元素來進行容器的物件，特別是清單）。 這些方法可用於：
 
 + 在集合中的每個項目上執行動作。
 + 列舉自訂集合。

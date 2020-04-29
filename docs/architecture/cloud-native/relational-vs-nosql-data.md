@@ -3,12 +3,12 @@ title: 關聯式與NoSQL 資料
 description: 瞭解雲端原生應用程式中的關聯式和 NoSQL 資料
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: c074be0c973156c1757b97ffc727711d5dd072af
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a2561b0abfc1975badfafeeb4fa2f2c6429814be
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199975"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507360"
 ---
 # <a name="relational-vs-nosql-data"></a>關聯式與NoSQL 資料
 
@@ -226,7 +226,7 @@ Azure Cosmos DB 提供五個定義完善的[一致性模型](https://docs.micros
 
 **圖 5-16**： Cosmos DB 一致性層級描述
 
-在[Cosmos DB 一致性層級入門一](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)文中，Microsoft Cloud 開發人員提倡者 Jeremy Likeness 提供五種模型的絕佳說明。
+在[Cosmos DB 一致性層級入門一](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)文中，Microsoft 程式經理 Jeremy Likness 提供五種模型的絕佳說明。
 
 ### <a name="partitioning"></a>資料分割
 

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - tasks, further reading
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
-ms.openlocfilehash: d424c04f52e08b0fdb72e187bd8999ef16427080
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c6823808bf457cf23fbef8f7000d38604474a8a
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73134220"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507477"
 ---
 # <a name="for-further-reading-parallel-programming"></a>進一步閱讀 (平行程式設計)
 
@@ -22,9 +22,9 @@ ms.locfileid: "73134220"
 
 - [使用 .NET 的平行程式設計](https://devblogs.microsoft.com/pfxteam/) \(英文\) 部落格包含許多有關 .NET 中平行程式設計的深度文章。
 
-- [使用 .NET Framework 進行平行程式設計的範例](https://code.msdn.microsoft.com/ParExtSamples)網頁包含了許多示範中級和進階平行程式設計技術的範例。
+- [使用 .Net Core & .NET Standard] 頁面進行平行程式設計的範例](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)包含許多示範中繼和先進平行程式設計技術的範例。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [平行計算開發人員中心](https://msdn.microsoft.com/vstudio/bb964701)
 - [以 Visual C++ 進行平行程式設計](/cpp/parallel/parallel-programming-in-visual-cpp)

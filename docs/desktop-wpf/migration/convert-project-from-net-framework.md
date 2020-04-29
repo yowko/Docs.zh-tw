@@ -4,12 +4,12 @@ description: 瞭解如何將 Windows Presentation Foundation （WPF）應用程�
 author: mjrousos
 ms.date: 09/12/2019
 ms.author: mikerou
-ms.openlocfilehash: f52005e7c8a6312b8c4e09a950f1f635af1894e4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: ccd2fc5a49d9c2d31c693e48099732614b568c7b
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "82071308"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507451"
 ---
 # <a name="migrating-wpf-apps-to-net-core"></a>將 WPF 應用程式遷移至 .NET Core
 
@@ -162,7 +162,7 @@ Bean Trader 範例的 NuGet 相依性全都以 .NET Standard/.NET Core 為目標
 
 如果您的應用程式未使用新的[SDK 樣式專案檔案格式](../../core/tools/csproj.md)，您將需要新的專案檔來以 .net Core 為目標。 您可以取代現有的 .csproj 檔案，或者，如果您想要讓現有專案保持不變的目前狀態，您可以加入以 .NET Core 為目標的新 .csproj 檔案。 您可以使用具有[多目標](../../standard/library-guidance/cross-platform-targeting.md)（指定多個`<TargetFrameworks>`目標）的單一 SDK 樣式專案檔，建立適用于 .NET Framework 和 .net Core 的應用程式版本。
 
-若要建立新的專案檔，您可以在 Visual Studio 中建立新的 WPF 專案， `dotnet new wpf`或在臨時目錄中使用命令來產生專案檔案，然後將它複製/重新命名為正確的位置。 另外還有一個以社區建立的工具[CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017)，可以自動化部分專案檔案遷移。 此工具很有説明，但仍需要人工檢查結果，以確保所有的遷移詳細資料都正確無誤。 工具無法以最佳方式處理的一個特定區域是從*套件 .config*檔案遷移 NuGet 套件。 如果此工具在專案檔上執行，而該檔案仍使用*封裝 .config*檔案來參考 NuGet 套件，它會自動`<PackageReference>`遷移至元素，但會`<PackageReference>`為*所有*封裝加入元素，而不只是最上層的套件。 如果您已經使用 Visual Studio 遷移`<PackageReference>`至專案（如您在此範例中所做的），則工具可以協助進行其餘的轉換。 就像 Scott Hanselman 在[他的](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx)文章中建議您在遷移 .csproj 檔案時，以手動方式移植是教育的，如果您只需要幾個專案，就會得到更好的結果。 但是，如果您要移植數十個或上百個專案檔，則 [CsprojToVs2017] 之類的工具可能會是協助。
+若要建立新的專案檔，您可以在 Visual Studio 中建立新的 WPF 專案， `dotnet new wpf`或在臨時目錄中使用命令來產生專案檔案，然後將它複製/重新命名為正確的位置。 另外還有一個以社區建立的工具[CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017)，可以自動化部分專案檔案遷移。 此工具很有説明，但仍需要人工檢查結果，以確保所有的遷移詳細資料都正確無誤。 工具無法以最佳方式處理的一個特定區域是從*套件 .config*檔案遷移 NuGet 套件。 如果此工具在專案檔上執行，而該檔案仍使用*封裝 .config*檔案來參考 NuGet 套件，它會自動`<PackageReference>`遷移至元素，但會`<PackageReference>`為*所有*封裝加入元素，而不只是最上層的套件。 如果您已經使用 Visual Studio 遷移`<PackageReference>`至專案（如您在此範例中所做的），則工具可以協助進行其餘的轉換。 就像 Scott Hanselman 在[他的](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx)文章中建議您在遷移 .csproj 檔案時，以手動方式移植是教育的，如果您只需要幾個專案，就會得到更好的結果。 但是，如果您要移植數十個或數百個專案檔，那麼[CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017)之類的工具就可以提供協助。
 
 若要建立 Bean Trader 範例的新專案檔，請在`dotnet new wpf`臨時目錄中執行，並將產生的 *.csproj*檔案移至*BeanTraderClient*資料夾，並將它重新命名為**BeanTraderClient. Core .csproj**。
 

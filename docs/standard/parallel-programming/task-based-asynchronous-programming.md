@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 51292d977f2be87cec7c3481f5004fe5fe756224
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 66904a24817eee0161d877ace7f4584d58fe30f0
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74204546"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507568"
 ---
 # <a name="task-based-asynchronous-programming"></a>工作型非同步程式設計
 
@@ -268,7 +268,7 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 
 建議您不要繼承自 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 或 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>， 建議您改用 <xref:System.Threading.Tasks.Task.AsyncState%2A> 屬性，建立其他資料或狀態與 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 物件的關聯。 您也可以使用擴充方法，擴充 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 類別的功能。 如需擴充方法的詳細資訊，請參閱[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)和[擴充方法](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)。
 
-如果必須從<xref:System.Threading.Tasks.Task>繼承<xref:System.Threading.Tasks.Task%601>或 ，不能<xref:System.Threading.Tasks.Task.Run%2A>使用 或<xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>，<xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType>或 ， 或 類來創建自訂任務類型的實例，因為這些<xref:System.Threading.Tasks.Task>機制<xref:System.Threading.Tasks.Task%601>僅創建 和 物件。 此外，也不可以使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 所提供的工作接續機制來建立自訂工作類型執行個體，因為這些機制也是只建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。
+如果您必須繼承自<xref:System.Threading.Tasks.Task>或<xref:System.Threading.Tasks.Task%601>，您就無法<xref:System.Threading.Tasks.Task.Run%2A>使用、或<xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>、 <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>或<xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType>類別來建立自訂工作類型的實例，因為這些機制只<xref:System.Threading.Tasks.Task>會建立<xref:System.Threading.Tasks.Task%601>和物件。 此外，也不可以使用 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory> 和 <xref:System.Threading.Tasks.TaskFactory%601> 所提供的工作接續機制來建立自訂工作類型執行個體，因為這些機制也是只建立 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 物件。
 
 ## <a name="related-topics"></a>相關主題
 
@@ -278,16 +278,16 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 |[附加與中斷連結的子工作](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|說明附加的與中斷連結的子工作之間的差異。|
 |[工作取消](../../../docs/standard/parallel-programming/task-cancellation.md)|說明 <xref:System.Threading.Tasks.Task> 物件內建的取消支援。|
 |[例外狀況處理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|說明並行執行緒上發生例外狀況時的處理方式。|
-|[如何：使用 Parallel.Invoke 執行平行作業](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.Invoke%2A>。|
-|[如何：傳回工作的值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|說明如何從工作傳回值。|
-|[如何：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|說明如何取消工作。|
-|[如何：建立經過預先計算的工作](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|描述如何使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法擷取保留在快取中之非同步下載作業的結果。|
-|[如何：使用平行工作周遊二進位樹狀](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|說明如何使用工作，在二進位樹狀目錄中周遊。|
-|[操作說明：解除包裝巢狀工作](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|示範如何使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 擴充方法。|
-|[資料並行性](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 建立資料的平行迴圈。|
-|[並行程式設計](../../../docs/standard/parallel-programming/index.md)|.NET Framework 平行程式設計的最上層節點。|
+|[作法：使用 Parallel.Invoke 執行平行作業](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.Invoke%2A>。|
+|[作法：從工作傳回值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|說明如何從工作傳回值。|
+|[作法：取消工作及其子系](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|說明如何取消工作。|
+|[作法：建立經過預先計算的工作](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|描述如何使用 <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> 方法擷取保留在快取中之非同步下載作業的結果。|
+|[作法：使用平行工作周遊二進位樹狀目錄](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|說明如何使用工作，在二進位樹狀目錄中周遊。|
+|[作法：解除包裝巢狀工作](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|示範如何使用 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 擴充方法。|
+|[資料平行處理](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|說明如何使用 <xref:System.Threading.Tasks.Parallel.For%2A> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A> 建立資料的平行迴圈。|
+|[平行程式設計](../../../docs/standard/parallel-programming/index.md)|.NET Framework 平行程式設計的最上層節點。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [並行程式設計](../../../docs/standard/parallel-programming/index.md)
-- [使用 .NET Framework 進行平行程式設計的範例](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+- [平行程式設計](../../../docs/standard/parallel-programming/index.md)
+- [使用 .NET Core & 進行平行程式設計的範例 .NET Standard](/samples/browse/?products=dotnet-core%2Cdotnet-standard&term=parallel)

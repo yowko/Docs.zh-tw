@@ -3,12 +3,12 @@ title: 架構適用于 Azure 的雲端原生 .NET 應用程式
 description: 建立雲端原生應用程式的指南，利用 Azure 的容器、微服務和無伺服器功能。
 author: ardalis
 ms.date: 04/23/2020
-ms.openlocfilehash: ebef97fb355cbf682b37ee441a19fbbfdd2d0dc3
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199816"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507386"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>架構適用于 Azure 的雲端原生 .NET 應用程式
 
@@ -54,7 +54,7 @@ Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 >
 > **Nish Anil**，Microsoft 的資深計畫經理，.net 團隊
 >
-> **Jeremy Likeness**，Microsoft 的資深計畫經理，.net 團隊
+> **Jeremy Likness**，Microsoft 的資深計畫經理，.net 團隊
 >
 > Microsoft 資深雲端提倡者**Cecil Phillip**
 

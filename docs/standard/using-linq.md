@@ -1,6 +1,6 @@
 ---
 title: LINQ (Language Integrated Query)
-description: 瞭解 LINQ 如何提供語言級查詢功能和 C# 和 Visual Basic API，作為編寫表達性聲明性代碼的一種方式。
+description: '瞭解 LINQ 如何將語言層級查詢功能和 API 提供給 c #，並 Visual Basic 做為撰寫表達性、宣告式程式碼的方式。'
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -9,18 +9,18 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eafd8f78c3d8de1ba064021111f869571d5a570f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76872f3ba3ed5106a4cb5bfdd918ae607acc092d
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160322"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507516"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (Language Integrated Query)
 
 ## <a name="what-is-it"></a>這是什麼？
 
-LINQ 提供語言級查詢功能和到 C# 和 Visual Basic[的更高階函數](https://en.wikipedia.org/wiki/Higher-order_function)API，作為編寫表達性聲明性代碼的一種方式。
+LINQ 提供語言層級的查詢功能，以及[更高順序](https://en.wikipedia.org/wiki/Higher-order_function)的函式 API 給 c #，Visual Basic 做為撰寫表達性、宣告式程式碼的方式。
 
 語言層級查詢語法︰
 
@@ -161,7 +161,7 @@ API 語法只是一個使用查詢語法的更簡潔方法嗎？
 
 ## <a name="essential-samples"></a>基本範例
 
-如需 LINQ 範例的真正完整清單，請瀏覽 [101 LINQ Samples](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b) (LINQ 範例入門)。
+如需 LINQ 範例的真正完整清單，請瀏覽 [101 LINQ Samples](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/) (LINQ 範例入門)。
 
 以下是一些 LINQ 基本部分的簡單示範。 這些示範並不完整，因為 LINQ 提供的功能遠比此處說明的功能還多。
 
@@ -354,7 +354,7 @@ End Function
 
 PLINQ 或 Parallel LINQ，都是 LINQ 運算式的平行執行引擎。 換句話說，標準 LINQ 運算式可以在任意數目的執行緒上進行完整的平行處理。 這是透過在執行運算式之前呼叫 `AsParallel()` 所完成的。
 
-請考慮下列：
+請考慮下列事項：
 
 ```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)
@@ -394,6 +394,6 @@ Public Shared GetAllFacebookUserLikesMessage(facebookUsers As IEnumerable(Of Fac
 
 ## <a name="further-resources"></a>其他資源︰
 
-* [101 LINQ 範例](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-* [Linqpad，](https://www.linqpad.net/)一個遊樂場環境和資料庫查詢引擎，用於 C#/F#/視覺基礎
+* [101 LINQ 範例](https://docs.microsoft.com/samples/dotnet/try-samples/101-linq-samples/)
+* [Linqpad](https://www.linqpad.net/)，這是適用于 c #/F #/Visual Basic 的遊樂場環境和資料庫查詢引擎
 * [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)，為學習 LINQ-to-object 如何實作的電子書

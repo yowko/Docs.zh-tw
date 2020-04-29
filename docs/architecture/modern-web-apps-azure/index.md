@@ -4,12 +4,12 @@ description: 本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 6ae5de0381c8796faee74abd40f688214ab13211
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 936a068507116033ad178f26e77945f30f70387e
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199959"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507189"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 
@@ -50,6 +50,12 @@ Docker whale 標誌是 Docker，Inc. 的注冊商標，由許可權使用。
 編輯者：
 
 > **Maira Wenzel**
+
+## <a name="action-links"></a>動作連結
+
+- 本電子書也提供 PDF 格式（僅限英文版）[下載](https://aka.ms/webappebook)
+
+- 複製/派生[GitHub 上](https://github.com/dotnet-architecture/eShopOnWeb)的參考應用程式 eShopOnWeb
 
 ## <a name="introduction"></a>簡介
 
