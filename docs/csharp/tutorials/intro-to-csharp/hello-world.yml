@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 6e3742991820a8805b3c9b57767079940899d8fc
-  ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+  ms.openlocfilehash: 77180064f810cf70b1ec0ef3d72bbd9005b78a47
+  ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 03/18/2020
-  ms.locfileid: "79507005"
+  ms.lasthandoff: 04/30/2020
+  ms.locfileid: "82595906"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: 執行您的第一個 C# 程式
   durationInMinutes: 2
   content: >
-    在互動式視窗中執行下列程式碼。 選擇"**輸入對焦模式"** 按鈕。 然後，在互動式視窗中鍵入以下代碼塊，然後選擇 **"運行**：
+    在互動式視窗中執行下列程式碼。 選取 [**進入焦點模式]** 按鈕。 然後，在互動式視窗中輸入下列程式碼區塊，然後選取 [**執行**]：
 
 
     ```csharp
@@ -96,7 +96,7 @@ items:
     ```
 
 
-    選擇"再次**運行**"以查看結果。
+    再次選取 [**執行**] 以查看結果。
 
 
     您已使用 `+` 從**變數**和**常數**字串建置字串。 有更好的方法。
@@ -118,7 +118,7 @@ items:
     ```
 
 
-    選擇"再次**運行**"以查看結果。 訊息應該是 "Hello Maira"，而非 "Hello {aFriend}"。
+    再次選取 [**執行**] 以查看結果。 訊息應該是 "Hello Maira"，而非 "Hello {aFriend}"。
 
 
     > [!NOTE]
@@ -167,7 +167,7 @@ items:
 - title: 使用字串完成更多工作
   durationInMinutes: 5
   content: >
-    您一直在使用**方法**，<xref:System.Console.WriteLine%2A?displayProperty=nameWithType>來列印消息。 **方法**是實作某些動作的程式碼區塊。 它具有名稱，以便於您可以存取。
+    您已使用**方法** <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>來列印訊息。 **方法**是實作某些動作的程式碼區塊。 它具有名稱，以便於您可以存取。
 
 
     假設您的字串有您不想要顯示的開頭或尾端空格。 您想要**修剪**字串的空格。
@@ -199,10 +199,13 @@ items:
     ```
 
 
+    `[`方括弧， `]`並協助視覺化、 `Trim` `TrimStart`和`TrimEnd`方法所執行的動作。 括弧會顯示空白字元的開始和結束位置。
+
+
     此範例強調了處理字串的幾個重要概念。 操作字串的方法會傳回新字串物件，而不是就地修改。 您可以看到，每次呼叫 `Trim` 方法時都會傳回新字串，但不會變更原始訊息。
 
 
-    還有其他方法可以用來處理字串。 例如，您以前在編輯器或文字處理器中應該用過搜尋和取代命令。 <xref:System.String.Replace%2A> 方法會在字串中執行類似的操作。 它會搜尋子字串，並以不同的文字來取代。 該方法<xref:System.String.Replace%2A>採用兩**個參數**。 參數就是括號之間的字串。 第一個字串是要搜尋的文字。 第二個字串是用來取代的文字。 試試看吧。 新增下列程式碼。 輸入該程式碼，當您開始在 `sayHello` 變數後面輸入 `.Re` 時會看到提示：
+    還有其他方法可以用來處理字串。 例如，您以前在編輯器或文字處理器中應該用過搜尋和取代命令。 <xref:System.String.Replace%2A> 方法會在字串中執行類似的操作。 它會搜尋子字串，並以不同的文字來取代。 <xref:System.String.Replace%2A>方法接受兩個**參數**。 參數就是括號之間的字串。 第一個字串是要搜尋的文字。 第二個字串是用來取代的文字。 試試看吧。 新增下列程式碼。 輸入該程式碼，當您開始在 `sayHello` 變數後面輸入 `.Re` 時會看到提示：
 
 
     ```csharp
@@ -250,7 +253,7 @@ items:
     ```
 
 
-    <xref:System.String.Contains%2A> 方法會傳回一個**布林**值，告訴您是否已找到您要搜尋的字串。 **布林值**會儲存 `true` 或 `false` 值。 當顯示為文本輸出時，它們將大寫： `True` `False`和 。 您將在稍後的課程中深入了解**布林值**。
+    <xref:System.String.Contains%2A> 方法會傳回一個**布林**值，告訴您是否已找到您要搜尋的字串。 **布林值**會儲存 `true` 或 `false` 值。 以文字輸出顯示時，分別為大寫： `True`和`False`。 您將在稍後的課程中深入了解**布林值**。
 
 
     ***挑戰***
@@ -296,7 +299,7 @@ items:
 
     > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - content: >-
-    您已經完成 "Hello C#" 的 C# 教學課程簡介。 您可以選擇下面的**C# 連結中的"數位"** 以啟動下一個互動式教程，也可以訪問[.NET 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下載 .NET Core SDK、在電腦上創建專案以及繼續編碼。 "後續步驟"部分將帶您回到這些教程。
+    您已經完成 "Hello C#" 的 C# 教學課程簡介。 您可以在下方選取 [ **c # 中的數位**] 連結以開始下一個互動式教學課程，或者您可以造訪[.net 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下載 .NET Core SDK、在您的電腦上建立專案，並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
 
 
     如需進一步閱讀有關 `string` 類型的資訊：
