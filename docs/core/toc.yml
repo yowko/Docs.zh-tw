@@ -14,14 +14,14 @@
       href: install/runtime.md
     - name: 支援的 OS 和相依性
       href: install/dependencies.md
+    - name: 管理 .NET 範本
+      href: install/templates.md
     - name: macOS Notarization 問題
       href: install/macos-notarization-issues.md
     - name: 如何檢查 .NET Core 版本
       href: install/how-to-detect-installed-versions.md
     - name: Linux 套件管理員
       items:
-        - name: Ubuntu 20.04
-          href: install/linux-package-manager-ubuntu-2004.md
         - name: Ubuntu 19.10
           href: install/linux-package-manager-ubuntu-1910.md
         - name: Ubuntu 19.04
