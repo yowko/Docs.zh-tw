@@ -488,7 +488,11 @@
     - name: 安全執行緒集合
       href: collections/thread-safe/
 - name: .NET 中的數值
-  href: numerics.md
+  items:
+    - name: 總覽
+      href: numerics.md
+    - name: 啟用 SIMD 的類型
+      href: simd.md
 - name: 日期、時間和時區
   href: datetime/
 - name: 事件
