@@ -2,12 +2,12 @@
 title: 基類庫的重大變更
 description: 列出核心 .NET 程式庫中的重大變更。
 ms.date: 09/20/2019
-ms.openlocfilehash: bc80f27a8a98890a93ad3b99e09ea7ea380d506c
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 3356017ee49e7cd42e40234ea2c637fe85db7d71
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158465"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595675"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>核心 .NET 程式庫的重大變更
 
@@ -36,6 +36,7 @@ ms.locfileid: "82158465"
 | [MacOS 上的 OpenSSL 版本](#openssl-versions-on-macos) | 2.1 |
 | [FileSystemInfo 擲回的 System.unauthorizedaccessexception](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1.0 |
 | [不支援處理損毀的進程狀態例外狀況](#handling-corrupted-state-exceptions-is-not-supported) | 1.0 |
+| [UriBuilder 屬性不再前面加上前置字元](#uribuilder-properties-no-longer-prepend-leading-characters) | 1.0 |
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
@@ -116,5 +117,9 @@ ms.locfileid: "82158465"
 ***
 
 [!INCLUDE [corrupted-state-exceptions](~/includes/core-changes/corefx/1.0/corrupted-state-exceptions.md)]
+
+***
+
+[!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
 
 ***

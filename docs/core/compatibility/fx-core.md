@@ -3,12 +3,12 @@ title: 重大變更-.NET Framework 至 .NET Core
 titleSuffix: ''
 description: 列出從 .NET Framework 到 .NET Core 的重大變更。
 ms.date: 12/18/2019
-ms.openlocfilehash: 6a6cbffed5a54e3683832da54d408d77bb553cf1
-ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+ms.openlocfilehash: df5907e05c6a2aed478d64cc40c5d6f051f92f96
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82135619"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595698"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>從 .NET Framework 遷移至 .NET Core 的突破性變更
 
@@ -22,6 +22,7 @@ ms.locfileid: "82135619"
 - [預設值為 UseShellExecute 的變更](#change-in-default-value-of-useshellexecute)
 - [FileSystemInfo 擲回的 System.unauthorizedaccessexception](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
 - [不支援處理損毀的進程狀態例外狀況](#handling-corrupted-state-exceptions-is-not-supported)
+- [UriBuilder 屬性不再前面加上前置字元](#uribuilder-properties-no-longer-prepend-leading-characters)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -36,6 +37,10 @@ ms.locfileid: "82135619"
 ***
 
 [!INCLUDE [corrupted-state-exceptions](~/includes/core-changes/corefx/1.0/corrupted-state-exceptions.md)]
+
+***
+
+[!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
 
 ***
 
@@ -69,7 +74,7 @@ ms.locfileid: "82135619"
 - [變更 AccessibleObject 的存取權。 RuntimeIDFirstItem](#change-of-access-for-accessibleobjectruntimeidfirstitem)
 - [已從 Windows Forms 移除重複的 Api](#duplicated-apis-removed-from-windows-forms)
 
-### <a name="net-core-31"></a>.NET Core 3。1
+### <a name="net-core-31"></a>.NET Core 3.1
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/3.1/remove-controls-3.1.md)]
 

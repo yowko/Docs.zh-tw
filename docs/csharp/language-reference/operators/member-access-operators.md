@@ -1,5 +1,5 @@
 ---
-title: 成員存取運算子與表示式 - C# 引用
+title: '成員存取運算子和運算式-c # 參考'
 description: 了解可用於存取類型成員的 C# 運算子。
 ms.date: 04/17/2020
 author: pkulikov
@@ -32,29 +32,29 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 4e213c92ae08edd8d537017e474c33200cb4c22c
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 86c8cce79e447bee638e1c5c7cb2fdbc64f630f3
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738728"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595893"
 ---
-# <a name="member-access-operators-and-expressions-c-reference"></a>成員存取運算子與表示式(C# 引用)
+# <a name="member-access-operators-and-expressions-c-reference"></a>成員存取運算子和運算式（c # 參考）
 
-存取類型成員時,可以使用以下運算子和表示式:
+當您存取類型成員時，可以使用下列運算子和運算式：
 
-- (成員存取):存取命名空間或類型[`.`](#member-access-expression-)的成員
-- [(陣列元素或索引器存取): 存取陣列元素或類型`[]`索引器](#indexer-operator-)
-- [與`?[]`條件運算子:僅在操作數為非空時執行成員或元素`?.`](#null-conditional-operators--and-)存取操作
-- (呼叫) :呼叫被存取的方法或呼[`()`](#invocation-expression-)叫委託
-- [(索引從末尾):指示元素位置來自序列的末尾`^`](#index-from-end-operator-)
-- (範圍):指定可用於取得序列元素範圍的索引範圍[`..`](#range-operator-)
+- （成員存取）：若要存取命名空間或類型的成員[ `.` ](#member-access-expression-)
+- [（陣列元素或索引子存取）：用來存取陣列專案或類型索引子`[]` ](#indexer-operator-)
+- [和`?[]` null 條件運算子）：只有在運算元不是 null 時，才會執行成員或元素存取`?.` ](#null-conditional-operators--and-)作業。
+- （調用）：呼叫存取的方法或叫用委派[ `()` ](#invocation-expression-)
+- [（從 end 開始的索引）：表示元素位置是從序列結尾`^` ](#index-from-end-operator-)
+- （範圍）：指定可用於取得序列元素範圍的索引範圍[ `..` ](#range-operator-)
 
-## <a name="member-access-expression-"></a>成員存取式 .
+## <a name="member-access-expression-"></a>成員存取運算式。
 
 您會使用 `.` 語彙基元來存取命名空間或類型的成員，如下列範例所示：
 
-- 使用`.`命名空間中的嵌套命名空間,例如[`using`以下指令](../keywords/using-directive.md)範例的範例 :
+- 使用`.`來存取命名空間內的嵌套命名空間，如[ `using`下列指示詞](../keywords/using-directive.md)範例所示：
 
   [!code-csharp[nested namespaces](snippets/MemberAccessOperators.cs#NestedNamespace)]
 
@@ -62,7 +62,7 @@ ms.locfileid: "81738728"
 
   [!code-csharp[qualified name](snippets/MemberAccessOperators.cs#QualifiedName)]
 
-  使用[`using`指令](../keywords/using-directive.md)使限定名稱的使用成為可選名稱。
+  使用指示詞，以選擇性地使用限定名稱。 [ `using` ](../keywords/using-directive.md)
 
 - 使用 `.` 來存取[類型成員](../../programming-guide/classes-and-structs/index.md#members) (靜態及非靜態)，如下列程式碼所示：
 
@@ -88,11 +88,11 @@ ms.locfileid: "81738728"
 
 ### <a name="indexer-access"></a>索引子存取
 
-下面的範例使用 .NET<xref:System.Collections.Generic.Dictionary%602>類型來展示索引器存取:
+下列範例會使用 .NET <xref:System.Collections.Generic.Dictionary%602>類型來示範索引子存取：
 
 [!code-csharp-interactive[indexer access](snippets/MemberAccessOperators.cs#Indexers)]
 
-索引子可讓您透過與陣列編製索引類似的方式，為使用者定義型別的執行個體編製索引。 與陣列索引(必須整數)不同,索引器參數可以聲明為任何類型的索引器參數。
+索引子可讓您透過與陣列編製索引類似的方式，為使用者定義型別的執行個體編製索引。 不同于陣列索引（必須是整數），索引子參數可以宣告為任何類型。
 
 如需索引子的詳細資訊，請參閱[索引子](../../programming-guide/indexers/index.md)。
 
@@ -109,13 +109,13 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null 條件運算子 ?. 和 ?[]
 
-在 C# 6 和更高版本中可用,null 條件運算元`?.`僅當該 操作`?[]`數計算為非 null 時,才會將[成員訪問](#member-access-expression-)、或[元素存取](#indexer-operator-)操作應用於其操作數;否則,它將返回`null`。 那是
+在 c # 6 和更新版本中提供，如果運算元評估為非 null， `?.`則 null 條件運算子只`?[]`會將[成員存取](#member-access-expression-)、或專案[存取](#indexer-operator-)、、作業套用至其運算元;否則，它會`null`傳回。 那是
 
-- 如果`a`計算到`null`,`a?.x``a?[x]`結果`null`為 。
-- 如果`a`計算為`a?.x`非空,則`a?[x]`或的結果`a.x`與`a[x]`或的結果相同。
+- 如果`a`評估為`null`， `a?.x`或`a?[x]`的結果為`null`。
+- 如果`a`評估為非 null `a?.x` ，或`a?[x]`的結果會分別與`a.x`或`a[x]`的結果相同。
 
   > [!NOTE]
-  > 如果`a.x``a[x]`或引發異常`a?.x`,`a?[x]`或將為非`a`null 引發相同的異常。 例如,`a`如果是非空陣列實體,並且`x`超出的邊界`a`,`a?[x]`則將引發<xref:System.IndexOutOfRangeException>。
+  > 如果`a.x`或`a[x]`擲回例外狀況`a?.x` ， `a?[x]`或會針對非 null `a`擲回相同的例外狀況。 `a`例如，如果是非 null 陣列實例，而且`x`超出的範圍`a`， `a?[x]`則會擲回。 <xref:System.IndexOutOfRangeException>
 
 Null 條件運算子會執行最少運算。 換句話說，如果條件式成員或項目存取作業鏈結中的一個作業傳回 `null`，則鏈結的其餘部分不會執行。 在下列範例中，如果 `A` 評估為 `null`，則不會評估 `B`；如果 `A` 或 `B` 評估為 `null`，則不會評估 `C`：
 
@@ -128,15 +128,18 @@ A?.B?[C];
 
 [!code-csharp-interactive[null-conditional operators](snippets/MemberAccessOperators.cs#NullConditional)]
 
-前面的範例還使用[null 合併運算`??`符](null-coalescing-operator.md)指定一個替代運算式,以計算 null`null`條件操作的結果為 時計算的運算式。
+上述範例也會使用[null 聯合運算子`??` ](null-coalescing-operator.md)來指定要評估的替代運算式，以防 null 條件運算的結果為。 `null`
 
-如果`a.x``a[x]`或非空數型態`T``a?.x`,`a?[x]`或是一個[非空白型態 。](../builtin-types/nullable-value-types.md)`T?` 如果需要類型`T`表示式,請將空合併運算子`??`應用於 null 條件表示式,如下例所示:
+如果`a.x`或`a[x]`屬於不可為 null 的實值型`T`別`a?.x` ， `a?[x]`或為對應的[可為 null 實值型](../builtin-types/nullable-value-types.md) `T?`別。 如果您需要類型`T`為的運算式，請將 null 聯合運算子`??`套用至 null 條件運算式，如下列範例所示：
 
 [!code-csharp-interactive[null-conditional with null-coalescing](snippets/MemberAccessOperators.cs#NullConditionalWithNullCoalescing)]
 
-在`??`前面的範例中,如果不使用運算子,請`numbers?.Length < 2`計算到`false`時`numbers`為`null`。
+在`??`上述範例中，如果您不使用運算子， `numbers?.Length < 2`則會在`false`為`numbers` `null`時評估為。
 
 Null 條件成員存取運算子 `?.` 也被稱為 Elvis 運算子。
+
+> [!NOTE]
+> 在 c # 8 中，null 條件運算子會以非預期的方式與[null 容許運算子](null-forgiving.md)互動。 例如，運算式`x?.y!.z`會剖析為`(x?.y)!.z`。 由於這種轉譯， `z`即使`x`為`null`，也會評估，這可能會導致<xref:System.NullReferenceException>。
 
 ### <a name="thread-safe-delegate-invocation"></a>安全執行緒委派引動流程
 
@@ -156,9 +159,9 @@ if (handler != null)
 }
 ```
 
-這是一種線程安全的方法,可確保僅調用非 null。 `handler` 由於委託實例是不可變的,因此任何線程都無法更改`handler`本地變數引用的值。 特別是,如果另一個線程執行`PropertyChanged`的代碼取消訂閱事件並`PropertyChanged`變`null`為`handler`之前被調用,則引用的`handler`值 不受影響。 操作員`?.`不超過一次評估其左側操作數,保證在驗證為非`null`空 操作符后不能將其更改為非空。
+這是一個安全線程的方法，可確保只會叫用非`handler` null 的。 由於委派實例是不可變的，因此沒有任何執行緒可以變更`handler`區域變數所參考的值。 特別是，如果由另一個執行緒執行的程式碼取消`PropertyChanged`訂閱事件`PropertyChanged` ， `null`並`handler`在叫用之前變成，則`handler`所參考的值將不會受到影響。 `?.`運算子不會多次評估其左邊的運算元，確保在驗證為非 null 之後無法將它`null`變更為。
 
-## <a name="invocation-expression-"></a>呼叫表示式 ()
+## <a name="invocation-expression-"></a>調用運算式（）
 
 使用括弧 `()` 來呼叫[方法](../../programming-guide/classes-and-structs/methods.md)或叫用[委派](../../programming-guide/delegates/index.md)。
 
@@ -174,37 +177,37 @@ if (handler != null)
 
 [Cast 運算式](type-testing-and-cast.md#cast-expression) \(其能執行明確類型轉換\) 也會使用括號。
 
-## <a name="index-from-end-operator-"></a>來自終端運算子索引 |
+## <a name="index-from-end-operator-"></a>來自 end 運算子 ^ 的索引
 
-在 C# 8.0`^`及更高 版本中可用,運算符指示序列末尾的元素位置。 對於長度`length`序列`^n`, 指向具有序列開頭`length - n`偏移 的元素。 例如,`^1`指向序列的最後一個元素,`^length`並指向序列的第一個元素。
+在 c # 8.0 和更新版本中`^`提供，運算子表示從序列結尾的元素位置。 針對長度`length`的序列， `^n`會指向具有從序列開頭位移`length - n`的元素。 例如， `^1`指向序列的最後一個專案，並`^length`指向序列的第一個元素。
 
 [!code-csharp[index from end](snippets/MemberAccessOperators.cs#IndexFromEnd)]
 
-如前面的示例所示,表達式`^e`是類型<xref:System.Index?displayProperty=nameWithType>。 在表示式`^e`中,必須`e`將的結果隱式轉換`int`為 。
+如上述範例所示，expression `^e`的<xref:System.Index?displayProperty=nameWithType>類型為。 在 expression `^e`中，的結果`e`必須可以隱含地轉換`int`為。
 
-您還可以使用運算子`^`與[範圍運算子](#range-operator-)一起建立一系列索引。 有關詳細資訊,請參閱[索引和範圍](../../tutorials/ranges-indexes.md)。
+您也可以搭配使用`^`運算子與[範圍運算子](#range-operator-)來建立索引的範圍。 如需詳細資訊，請參閱[索引和範圍](../../tutorials/ranges-indexes.md)。
 
-## <a name="range-operator-"></a>範圍運算子 ..
+## <a name="range-operator-"></a>範圍運算子.。
 
-在 C# 8.0`..`及更高 版本中提供,運算符指定一系列索引的開始和結束作為其操作數。 左側操作數是範圍的*包容性*開始。 右側操作數是範圍的*獨佔*端。 其中任一操作數可以是序列開頭或末尾的索引,如下例所示:
+在 c # 8.0 和更新版本中`..`提供，運算子會將索引範圍的開始和結束指定為其運算元。 左側運算元是範圍的*內含*開頭。 右運算元是範圍的*獨佔*結束。 其中一個運算元可以是從序列開頭或結尾的索引，如下列範例所示：
 
 [!code-csharp[range examples](snippets/MemberAccessOperators.cs#Ranges)]
 
-如前面的示例所示,表達式`a..b`是類型<xref:System.Range?displayProperty=nameWithType>。 在表示式`a..b`中,`a``b`與 的結果必須隱式`int`<xref:System.Index>轉換為 或 。
+如上述範例所示，expression `a..b`的<xref:System.Range?displayProperty=nameWithType>類型為。 在 expression `a..b`中， `a`和`b`的結果必須可以隱含地轉換`int`為<xref:System.Index>或。
 
-您可以省略`..`運算子的任何操作數以取得開放式範圍:
+您可以省略`..`運算子的任何運算元，以取得開放式結束範圍：
 
-- `a..`等效於`a..^0`
-- `..b`等效於`0..b`
-- `..`等效於`0..^0`
+- `a..`相當於`a..^0`
+- `..b`相當於`0..b`
+- `..`相當於`0..^0`
 
 [!code-csharp[ranges with omitted operands](snippets/MemberAccessOperators.cs#RangesOptional)]
 
-有關詳細資訊,請參閱[索引和範圍](../../tutorials/ranges-indexes.md)。
+如需詳細資訊，請參閱[索引和範圍](../../tutorials/ranges-indexes.md)。
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-不能`.``()`重`^`載`..`、 和運算子。 `[]` 運算子也會視為不可多載的運算子。 請使用[索引子](../../programming-guide/indexers/index.md)以支援使用使用者定義型別編製索引。
+`.`、 `()`、 `^`和`..`運算子無法多載。 `[]` 運算子也會視為不可多載的運算子。 請使用[索引子](../../programming-guide/indexers/index.md)以支援使用使用者定義型別編製索引。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -215,11 +218,11 @@ if (handler != null)
 - [Null 條件運算子](~/_csharplang/spec/expressions.md#null-conditional-operator)
 - [引動流程運算式](~/_csharplang/spec/expressions.md#invocation-expressions)
 
-有關索引和範圍的詳細資訊,請參閱[功能建議註釋](~/_csharplang/proposals/csharp-8.0/ranges.md)。
+如需索引和範圍的詳細資訊，請參閱[功能提案注意事項](~/_csharplang/proposals/csharp-8.0/ranges.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 運算子](index.md)
+- [C # 運算子](index.md)
 - [?? (Null 聯合運算子)](null-coalescing-operator.md)
 - [:: 運算子](namespace-alias-qualifier.md)

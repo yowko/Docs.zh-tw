@@ -1,17 +1,17 @@
 ---
 title: dotnet pack 命令
 description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
-ms.date: 02/14/2020
-ms.openlocfilehash: 2df096a088a177b77256b5d717f31e185507b249
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.date: 04/28/2020
+ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102810"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595750"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -32,19 +32,19 @@ dotnet pack -h|--help
 
 ## <a name="description"></a>描述
 
-`dotnet pack` 命令會建置專案，並建立 NuGet 套件。 此命令的結果是 NuGet 包(即 *.nupkg*檔)。
+`dotnet pack` 命令會建置專案，並建立 NuGet 套件。 此命令的結果是 NuGet 套件（也就是*nupkg*檔案）。
 
-如果要產生包含除錯符號的套件,可以使用兩個選項:
+如果您想要產生包含 debug 符號的封裝，您有兩個可用的選項：
 
-- `--include-symbols`- 它建立符號包。
-- `--include-source`- 它建立符號包,其中包含`src`包含來源檔案的資料夾。
+- `--include-symbols`-它會建立符號套件。
+- `--include-source`-它會建立符號套件，並`src`在其中包含來源檔案的資料夾。
 
 封裝專案的 NuGet 相依性會新增至 *.nuspec* 檔案，因此在安裝套件時可以正確地解析它們。 專案對專案參考不會封裝到專案內。 目前，如果您有專案對專案相依性，則必須一個專案各一個套件。
 
 `dotnet pack` 預設會先建置專案。 如果您想要避免這種行為，請傳遞 `--no-build` 選項。 這個選項通常適用於您知道先前剛建立程式碼的持續整合 (CI) 組建案例。
 
 > [!NOTE]
-> 在某些情況下,無法執行隱式生成。 設置時`GeneratePackageOnBuild`可能會發生這種情況,以避免生成目標和包目標之間存在循環依賴關係。 如果存在鎖定的檔或其他問題,生成也可能失敗。
+> 在某些情況下，無法執行隱含組建。 設定時`GeneratePackageOnBuild`可能會發生這種情況，以避免組建和套件目標之間有迴圈相依性。 如果有鎖定的檔案或其他問題，組建也可能會失敗。
 
 您可以提供 MSBuild 屬性給 `dotnet pack` 命令來壓縮程序。 如需詳細資訊，請參閱 [NuGet 中繼資料屬性](csproj.md#nuget-metadata-properties)和 [MSBuild 命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)。 [範例](#examples)一節示範針對數個不同案例使用 MSBuild -p 參數的方法。
 
@@ -56,7 +56,7 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 </PropertyGroup>
 ```
 
-### <a name="implicit-restore"></a>隱式還原
+### <a name="implicit-restore"></a>隱含還原
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -64,13 +64,13 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 `PROJECT | SOLUTION`
 
-  要打包的專案或解決方案。 它要麼是[csproj 檔案](csproj.md)、解決方案檔或目錄的路徑。 如果未指定,該命令將搜索當前目錄以搜索專案或解決方案檔。
+  要包裝的專案或方案。 它是[.csproj](csproj.md)檔案、方案檔或目錄的路徑。 如果未指定，命令會在目前的目錄中搜尋專案或方案檔。
 
 ## <a name="options"></a>選項。
 
 - **`-c|--configuration <CONFIGURATION>`**
 
-  定義組建組態。 大多數項目的預設值為,`Debug`但您可以覆蓋專案中的生成配置設置。
+  定義組建組態。 大部分專案的預設值為`Debug`，但您可以覆寫專案中的組建設定。
 
 - **`--force`**
 
@@ -82,11 +82,11 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
 
 - **`--include-source`**
 
-  除了輸出目錄中的常規 NuGet 包之外,還包括調試符號 NuGet 包。 源檔包含在符號包中的`src`資料夾中。
+  除了輸出目錄中的一般 NuGet 套件外，還包含 debug 符號 NuGet 套件。 來源檔案會包含在符號封裝`src`內的資料夾中。
 
 - **`--include-symbols`**
 
-  除了輸出目錄中的常規 NuGet 包之外,還包括調試符號 NuGet 包。
+  除了輸出目錄中的一般 NuGet 套件外，還包含 debug 符號 NuGet 套件。
 
 - **`--interactive`**
 
@@ -172,14 +172,20 @@ Web 專案預設無法封裝。 若要覆寫預設行為，請將下列屬性新
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- 包裝專案並使用特定的執行時(Windows 10)進行還原操作:
+- 封裝專案，並使用特定執行時間（Windows 10）進行還原作業：
 
   ```dotnetcli
   dotnet pack --runtime win10-x64
   ```
 
-- 使用 [.nuspec 檔案](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)來封裝專案：
+- 使用*nuspec*檔案封裝專案：
 
   ```dotnetcli
   dotnet pack ~/projects/app1/project.csproj -p:NuspecFile=~/projects/app1/project.nuspec -p:NuspecBasePath=~/projects/app1/nuget
   ```
+
+  如需如何使用`NuspecFile`、 `NuspecBasePath`和`NuspecProperties`的詳細資訊，請參閱下列資源：
+  
+  - [使用 .nuspec 封裝](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec)
+  - [用來建立自訂套件的先進擴充功能點](https://docs.microsoft.com/nuget/reference/msbuild-targets#advanced-extension-points-to-create-customized-package)
+  - [全域屬性](https://docs.microsoft.com/visualstudio/msbuild/msbuild-properties?view=vs-2019#global-properties)

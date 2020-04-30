@@ -4,12 +4,12 @@ description: 了解 .NET Core 如何自動為您的程式尋找及選擇執行�
 author: thraka
 ms.author: adegeo
 ms.date: 03/24/2020
-ms.openlocfilehash: 26aecdf2bf3ebd033e80eec26159eb9fa3cd54dd
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 3c3d9b4ec5a68c88bdd0a45acfb49191f22abda4
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345164"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595724"
 ---
 # <a name="select-the-net-core-version-to-use"></a>選取要使用的 .NET Core 版本
 
@@ -38,7 +38,7 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 
 在罕見的情況下，您可能需要使用舊版的 SDK。 您可以在 [*global.json* 檔案](../tools/global-json.md)中指定該版本。 「使用最新版」原則表示您只會使用 *global.json* 指定比最新安裝版本更早的 .NET Core SDK 版本。
 
-*global.json* 可能放在檔案階層中的任何地方。 CLI 會從專案目錄向上搜尋，以找到第一個 *global.json*。 您可以根據指定的 *global.json* 在檔案系統中的位置，來控制其所套用的專案。 .NET CLI 會從目前的工作目錄向上反覆巡覽路徑，以搜尋 *global.json* 檔案。 第一個找到的 *global.json* 檔案指定所使用的版本。 如果安裝了該 SDK 版本，則使用該版本。 如果未找到*全域.json*中指定的 SDK，則 .NET CLI 使用[匹配規則](../tools/global-json.md#matching-rules)來選擇相容的 SDK，如果未找到，則失敗。
+*global.json* 可能放在檔案階層中的任何地方。 CLI 會從專案目錄向上搜尋，以找到第一個 *global.json*。 您可以根據指定的 *global.json* 在檔案系統中的位置，來控制其所套用的專案。 .NET CLI 會從目前的工作目錄向上反覆巡覽路徑，以搜尋 *global.json* 檔案。 第一個找到的 *global.json* 檔案指定所使用的版本。 如果已安裝該 SDK 版本，則會使用該版本。 如果找不到在*global.asax*中指定的 sdk，則 .net CLI 會使用比對[規則](../tools/global-json.md#matching-rules)來選取相容的 sdk，如果找不到，則會失敗。
 
 下列範例示範 *global.json* 語法：
 
@@ -72,38 +72,38 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 <TargetFrameworks>netcoreapp3.0;net47</TargetFrameworks>
 ```
 
-指定的 SDK 支援一組固定的架構，限制為其隨附執行階段的目標 Framework。 例如，.NET Core 3.0 SDK 包括 .NET Core 3.0 運行時，這是目標`netcoreapp3.0`框架的實現。 .NET Core 3.0 `netcoreapp2.1`SDK `netcoreapp2.2` `netcoreapp3.0`支援 、、不支援`netcoreapp3.1`（或更高）。 安裝 .NET 核心 3.1 SDK`netcoreapp3.1`來構建 。
+指定的 SDK 支援一組固定的架構，限制為其隨附執行階段的目標 Framework。 例如，.NET Core 3.0 SDK 包含 .NET Core 3.0 執行時間，這是`netcoreapp3.0`目標 framework 的執行。 .Net Core 3.0 SDK 支援、 `netcoreapp2.1` `netcoreapp2.2`、 `netcoreapp3.0`，但不`netcoreapp3.1`支援（或更高版本）。 您會安裝 .NET Core 3.1 SDK 來建立`netcoreapp3.1`。
 
-.NET Standard 目標 Framework 也限制為 SDK 隨附執行階段的目標 Framework。 .NET 核心 3.1 SDK 被`netstandard2.1`限制為 。 如需詳細資訊，請參閱 [.NET Standard](../../standard/net-standard.md)。
+.NET Standard 目標 Framework 也限制為 SDK 隨附執行階段的目標 Framework。 .NET Core 3.1 SDK 的上限為`netstandard2.1`。 如需詳細資訊，請參閱 [.NET Standard](../../standard/net-standard.md)。
 
 ## <a name="framework-dependent-apps-roll-forward"></a>架構相依應用程式向前復原
 
-當您使用 從 源使用[`dotnet run`](../tools/dotnet-run.md)運行應用程式時，使用 從[`dotnet myapp.dll`](../tools/dotnet.md#description)與 的框架[**相關的部署**](../deploying/index.md#publish-runtime-dependent)運行應用程式，或者從`myapp.exe`與`dotnet`的[**與 框架相關的可執行檔**](../deploying/index.md#publish-runtime-dependent)運行應用程式時，可執行檔是應用程式的**主機**。
+當您從使用的來源執行應用[`dotnet run`](../tools/dotnet-run.md)程式時，從使用[`dotnet myapp.dll`](../tools/dotnet.md#description)的[**framework 相依部署**](../deploying/index.md#publish-runtime-dependent)，或從與[**framework 相依的可執行檔**](../deploying/index.md#publish-runtime-dependent)使用`myapp.exe`， `dotnet`可執行檔是應用程式的**主機**。
 
 該主機會選擇電腦上最新安裝的修補程式版本。 例如，如果您在專案檔中指定 `netcoreapp3.0`，且 `3.0.4` 是最新安裝的 .NET 執行階段，則會使用 `3.0.4` 執行階段。
 
 如果找不到可接受的 `3.0.*` 版本，則會使用新的 `3.*` 版本。 例如，如果您指定 `netcoreapp3.0` 並只安裝 `3.1.0`，應用程式會使用 `3.1.0` 執行階段來執行。 此行為稱為「次要版本向前復原」。 也不會考慮舊版。 若未安裝可接受的執行階段，應用程式將不會執行。
 
-如果您針對 3.0，一些使用示例演示了該行為：
+如果您將目標設為3.0，則幾個使用範例會示範此行為：
 
-- ✔️ 3.0 指定。 3.0.5 是安裝的最高修補程式版本。 使用 3.0.5。
-- ❌指定 3.0。 未安裝 3.0.* 版本。 2.1.1 是安裝的最高運行時。 顯示錯誤訊息。
-- ✔️ 3.0 指定。 未安裝 3.0.* 版本。 3.1.0 是安裝的最高執行階段版本。 使用 3.1.0。
-- ❌指定 2.0。 未安裝 2.x 版本。 3.0.0 是安裝的最高運行時。 顯示錯誤訊息。
+- 已指定✔️3.0。 3.0.5 是已安裝的最高修補程式版本。 會使用3.0.5。
+- ❌已指定3.0。 沒有 3.0. * 版本已安裝。 2.1.1 是安裝的最高執行時間。 顯示錯誤訊息。
+- 已指定✔️3.0。 沒有 3.0. * 版本已安裝。 3.1.0 是安裝的最高執行階段版本。 會使用3.1.0。
+- ❌已指定2.0。 未安裝 2.x 版本。 3.0.0 是安裝的最高執行時間。 顯示錯誤訊息。
 
 次要版本向前復原有一個可能會影響終端使用者的副作用。 請考慮下列案例：
 
-1. 應用程式指定 3.0 是必需的。
-2. 運行時，未安裝版本 3.0.*，但是，3.1.0 是。 將使用版本 3.1.0。
-3. 稍後，使用者安裝 3.0.5 並再次運行應用程式，現在將使用 3.0.5。
+1. 應用程式會指定需要3.0。
+2. 不過，執行時，不會安裝版本 3.0. *，3.1.0 是。 將使用版本3.1.0。
+3. 之後，使用者會安裝3.0.5 並再次執行應用程式，現在將會使用3.0.5。
 
-3.0.5 和 3.1.0 的行為可能不同，尤其是對於序列化二進位資料等方案。
+3.0.5 和3.1.0 的行為可能不同，特別是針對序列化二進位資料等案例。
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>獨立部署包含選取的執行階段
 
 您可以將應用程式發佈為[**獨立散發**](../deploying/index.md#publish-self-contained)。 此方法會將 .NET Core 執行階段和程式庫與您的應用程式配套。 獨立部署不會相依於執行階段環境。 執行階段版本選取發生於發佈時，而不是執行時。
 
-發佈過程會選取指定執行階段系列的最新修補程式版本。 例如，`dotnet publish`如果 .NET Core 3.0 運行時系列中的最新修補程式版本是 .NET Core 3.0.4，則選擇 .NET Core 3.0.4。 目標 Framework (包括最新安裝的安全性修補程式) 會封裝於應用程式。
+發佈過程會選取指定執行階段系列的最新修補程式版本。 例如，如果`dotnet publish` .net core 3.0.4 是 .net core 3.0 執行時間系列中的最新修補程式版本，則會選取它。 目標 Framework (包括最新安裝的安全性修補程式) 會封裝於應用程式。
 
 如果不符合針對應用程式指定的最低版本，就會發生錯誤。 `dotnet publish` 會繫結至最新的執行階段修補程式版本 (指定的主要.次要版本系列內)。 `dotnet publish` 不支援 `dotnet run` 的向前復原語意。 如需修補程式和獨立部署的詳細資訊，請參閱部署 .NET Core 應用程式中有關[執行階段修補程式選取](../deploying/runtime-patch-selection.md)的文章。
 
@@ -117,5 +117,5 @@ SDK 命令包含 `dotnet new` 和 `dotnet run`。 .NET Core CLI 針對每個 `do
 
 ## <a name="see-also"></a>另請參閱
 
-- [下載並安裝 .NET 核心](../install/index.md)。
-- [如何刪除 .NET 核心運行時和 SDK](remove-runtime-sdk-versions.md)。
+- [下載並安裝 .Net Core](../install/index.md)。
+- [如何移除 .Net Core 執行時間和 SDK](../install/remove-runtime-sdk-versions.md)。
