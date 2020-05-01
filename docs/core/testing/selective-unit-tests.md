@@ -2,21 +2,28 @@
 title: 執行多樣化選擇的單元測試
 description: 如何在 .NET Core 中使用篩選運算式搭配 dotnet 測試命令執行多樣化選擇的單元測試。
 author: smadala
-ms.date: 03/22/2017
-ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/29/2020
+ms.openlocfilehash: e66455b5ac012114c45d998fae11da7ee769fbe2
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543504"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624913"
 ---
 # <a name="running-selective-unit-tests"></a>執行多樣化選擇的單元測試
 
 透過 .NET Core 中的 `dotnet test` 命令，您可以使用篩選運算式來執行選擇性測試。 本文示範如何篩選所要執行的測試。 下列範例使用`dotnet test`。 若要使用`vstest.console.exe`，請以取代 `--testcasefilter:` 取代 `--filter`。
 
-> [!NOTE]
-> 使用包含驚嘆號 （！） 的`*nix`篩選器需要從保留開始`!`轉義。 例如，如果命名空間包含集成測試：，`dotnet test --filter FullyQualifiedName\!~IntegrationTests`則此篩選器將跳過所有測試。
-> 請注意驚嘆號前面的反斜線。
+## <a name="character-escaping"></a>字元轉義
+
+在上`*nix`使用包含驚嘆號（！）的篩選時，需要`!`進行轉義，因為是保留的。 例如，如果命名空間包含 IntegrationTests： `dotnet test --filter FullyQualifiedName\!~IntegrationTests`，則此篩選會略過所有測試。
+請記下驚嘆號前面的反斜線。
+
+對於`FullyQualifiedName`包含泛型型別參數之逗號的值，請使用來將`%2C`逗號換成。 例如：
+
+```dotnetcli
+dotnet test --filter "FullyQualifiedName=MyNamespace.MyTestsClass<ParameterType1%2CParameterType2>.MyTestMethod"
+```
 
 ## <a name="mstest"></a>MSTest
 
@@ -148,3 +155,5 @@ namespace NUnitNamespace
 | <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | 執行 `FullyQualifiedName` **或** `TestCategory` 中之 `UnitTest1` 為 `CategoryA` 的測試。 |
 | `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | 執行 `FullyQualifiedName` **及** `TestCategory` 中之 `UnitTest1` 為 `CategoryA` 的測試。 |
 | <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | 執行 `FullyQualifiedName` 所含之 `UnitTest1` **及** `TestCategory` 為 `CategoryA` **或** `Priority` 為 1 的測試。 |
+
+如需詳細資訊，請參閱[TestCase filter](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)。

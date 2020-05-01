@@ -1,17 +1,17 @@
 ---
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
-ms.date: 02/27/2020
-ms.openlocfilehash: 69b8101f9b1052f4726dce8a86234da99f5dc89c
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.date: 04/29/2020
+ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102735"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624887"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
-**本文適用於:✔️** .NET 核心 2.1 SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -37,13 +37,13 @@ dotnet test -h|--help
 
 ## <a name="description"></a>描述
 
-`dotnet test` 命令是用來在指定的專案中執行單元測試。 `dotnet test` 命令會啟動為專案指定的測試執行器主控台應用程式。 測試執行器會執行針對單元測試架構 (例如 MSTest、NUnit 或 xUnit) 定義的測試，並報告每項測試成功還是失敗。 如果所有測試都成功，則測試執行器會傳回 0 作為結束代碼；如果有任何測試失敗，則會傳回 1。 測試執行器和單元測試程式庫會封裝為 NuGet 套件，並還原為專案的一般相依性。
+`dotnet test` 命令是用來在指定的專案中執行單元測試。 `dotnet test` 命令會啟動為專案指定的測試執行器主控台應用程式。 測試執行器會執行針對單元測試架構 (例如 MSTest、NUnit 或 xUnit) 定義的測試，並報告每項測試成功還是失敗。 如果所有測試都成功，則測試執行器會傳回 0 作為結束代碼；如果有任何測試失敗，則會傳回 1。 針對多目標專案，會針對每個目標架構執行測試。 測試執行器和單元測試程式庫會封裝為 NuGet 套件，並還原為專案的一般相依性。
 
 測試專案會使用一般 `<PackageReference>` 元素指定測試執行器，如下列範例專案檔中所示：
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-### <a name="implicit-restore"></a>隱式還原
+### <a name="implicit-restore"></a>隱含還原
 
 [!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
@@ -51,7 +51,7 @@ dotnet test -h|--help
 
 - **`PROJECT | SOLUTION`**
 
-  測試專案或解決方案的路徑。 如果未指定，則會預設為目前目錄。
+  測試專案或方案的路徑。 如果未指定，則會預設為目前目錄。
 
 ## <a name="options"></a>選項。
 
@@ -61,7 +61,7 @@ dotnet test -h|--help
 
 - **`--blame`**
 
-  在歸責模式下執行測試。 此選項有助於隔離導致測試主機崩潰的問題測試。 它會以 *Sequence.xml* 的形式在目前目錄中建立一個輸出檔，用來擷取損毀前的測試執行順序。
+  在歸責模式下執行測試。 此選項有助於隔離導致測試主控制項損毀的問題測試。 它會以 *Sequence.xml* 的形式在目前目錄中建立一個輸出檔，用來擷取損毀前的測試執行順序。
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -73,7 +73,7 @@ dotnet test -h|--help
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  啟用測試平台的診斷模式,並將診斷消息寫入指定的檔。
+  啟用測試平臺的診斷模式，並將診斷訊息寫入至指定的檔案。
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -93,15 +93,15 @@ dotnet test -h|--help
 
 - **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
-  指定測試結果的記錄器。 與 MSBuild 不同,dotnet 測試不接受縮`-l "console;v=d"`寫`-l "console;verbosity=detailed"`:而不是使用 。
+  指定測試結果的記錄器。 不同于`-l "console;v=d"` MSBuild，dotnet 測試不接受縮寫：而不`-l "console;verbosity=detailed"`是使用。
 
 - **`--no-build`**
 
-  不會在執行前建置測試專案。 它還隱式設置`--no-restore`- 標誌。
+  不會在執行前建置測試專案。 它也會隱含地設定`--no-restore` -旗標。
 
 - **`--nologo`**
 
-  在不顯示 Microsoft 測試平台橫幅的情況下運行測試。 自 .NET Core 3.0 SDK 起提供。
+  執行測試而不顯示 Microsoft TestPlatform 橫幅。 自 .NET Core 3.0 SDK 起提供。
 
 - **`--no-restore`**
 
@@ -109,19 +109,22 @@ dotnet test -h|--help
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  在其中尋找要執行的二進位檔的目錄。 如果未指定，則預設路徑為 `./bin/<configuration>/<framework>/`。  對於具有多個目標框架的專案(通過`TargetFrameworks`屬性),還需要在指定此選項`--framework`時 定義。
+  在其中尋找要執行的二進位檔的目錄。 如果未指定，則預設路徑為 `./bin/<configuration>/<framework>/`。  針對具有多個目標 framework 的專案（ `TargetFrameworks`透過屬性），您也需要在`--framework`指定此選項時定義。 `dotnet test`一律從輸出目錄執行測試。 您可以使用<xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType>來取用輸出目錄中的測試資產。
 
 - **`-r|--results-directory <PATH>`**
 
-  要放置測試結果的目錄。 如果指定的目錄不存在，則會建立該目錄。 預設值在`TestResults`包含專案檔的目錄中。
+  要放置測試結果的目錄。 如果指定的目錄不存在，則會建立該目錄。 預設值是`TestResults`在包含專案檔的目錄中。
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  要測試的目標運行時。
+  要測試的目標執行時間。
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  用來執行測試的 `.runsettings` 檔案。 [使用 `.runsettings` 檔案設定單元測試](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)。
+  用來執行測試的 `.runsettings` 檔案。 請注意， `TargetPlatform`元素（x86 | x64）對沒有任何作用`dotnet test`。 若要執行以 x86 為目標的測試，請安裝 x86 版本的 .NET Core。 路徑上*dotnet*的位就是用來執行測試的。 如需詳細資訊，請參閱下列資源：
+
+  - [使用 `.runsettings` 檔案設定單元測試](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)。
+  - [設定測試回合](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md) \(英文\)
 
 - **`-t|--list-tests`**
 
@@ -131,13 +134,13 @@ dotnet test -h|--help
 
   設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。 如需詳細資訊，請參閱 <xref:Microsoft.Build.Framework.LoggerVerbosity>。
 
-- **`RunSettings`** 參數
+- **`RunSettings`** 參量
 
-  參數作為`RunSettings`測試的配置傳遞。 指定為 "-- " 後 (注意 -- 後方的空格) 之 `[name]=[value]` 組的引數。 空格適用來分隔多個 `[name]=[value]` 組。
+  引數會當做`RunSettings`測試的設定來傳遞。 指定為 "-- " 後 (注意 -- 後方的空格) 之 `[name]=[value]` 組的引數。 空格適用來分隔多個 `[name]=[value]` 組。
 
   範例： `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  有關詳細資訊,請參閱[透過命令列傳遞 RunSettings 參數](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
+  如需詳細資訊，請參閱[透過命令列傳遞 .runsettings 引數](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 
 ## <a name="examples"></a>範例
 
@@ -153,13 +156,13 @@ dotnet test -h|--help
   dotnet test ~/projects/test1/test1.csproj
   ```
 
-- 在目前的目錄中執行項目中的測試,並產生 trx 格式的測試結果檔:
+- 在目前目錄的專案中執行測試，並產生 .trx 格式的測試結果檔案：
 
   ```dotnetcli
   dotnet test --logger trx
   ```
 
-- 在目前目錄中的項目中執行測試,並記錄到主控台的詳細詳細詳細內容:
+- 在目前目錄中執行專案中的測試，並使用主控台的詳細詳細資訊記錄：
 
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
@@ -195,7 +198,7 @@ dotnet test -h|--help
 
 | 運算子            | 函式 |
 | ------------------- | -------- |
-| <code>&#124;</code> | OR       |
+| <code>&#124;</code> | 或者       |
 | `&`                 | AND      |
 
 使用條件運算子時，您可以使用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。
@@ -204,6 +207,6 @@ dotnet test -h|--help
 
 ## <a name="see-also"></a>另請參閱
 
-- [框架與目標](../../standard/frameworks.md)
+- [架構和目標](../../standard/frameworks.md)
 - [.NET Core 執行階段識別項 (RID) 目錄](../rid-catalog.md)
-- [以命令列傳遞執行設定參數](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)
+- [透過命令列傳遞 .runsettings 引數](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

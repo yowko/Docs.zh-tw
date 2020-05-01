@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 772f37f1fc7446eae66f0cd0f12adb5e2e41997d
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 2a8db2882968dbcbe6a8868ab6fe1c128c94a41f
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595945"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624874"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! （null-容許）運算子（c # 參考）
 
@@ -20,7 +20,7 @@ ms.locfileid: "82595945"
 Null 容許運算子在執行時間沒有任何作用。 它只會影響編譯器的靜態流程分析，方法是變更運算式的 null 狀態。 在執行時間，expression `x!`會評估為基礎運算式`x`的結果。
 
 > [!NOTE]
-> 在 c # 8 中，null 容許運算子會以非預期的方式與[null 條件運算子](member-access-operators.md#null-conditional-operators--and-)互動。 運算式`x?.y!.z`會剖析為`(x?.y)!.z`。 由於這項轉譯`z`會進行評估， `x`即使`null`為，這可能會導致<xref:System.NullReferenceException>。
+> 在 c # 8 中，null 容許運算子會終止前面的[null 條件](member-access-operators.md#null-conditional-operators--and-)運算清單。 例如，運算式`x?.y!.z`會剖析為`(x?.y)!.z`。 由於這種轉譯， `z`即使`x`為`null`，也會評估，這可能會導致<xref:System.NullReferenceException>。
 
 如需可為 null 的參考型別功能的詳細資訊，請參閱[可為 null 的參考型別](../builtin-types/nullable-reference-types.md)。
 

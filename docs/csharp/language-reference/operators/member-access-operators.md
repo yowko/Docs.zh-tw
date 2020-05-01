@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 86c8cce79e447bee638e1c5c7cb2fdbc64f630f3
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 37a6cb7cd32a9d60607aec51b1994e4717c5349a
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595893"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624861"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>成員存取運算子和運算式（c # 參考）
 
@@ -139,7 +139,7 @@ A?.B?[C];
 Null 條件成員存取運算子 `?.` 也被稱為 Elvis 運算子。
 
 > [!NOTE]
-> 在 c # 8 中，null 條件運算子會以非預期的方式與[null 容許運算子](null-forgiving.md)互動。 例如，運算式`x?.y!.z`會剖析為`(x?.y)!.z`。 由於這種轉譯， `z`即使`x`為`null`，也會評估，這可能會導致<xref:System.NullReferenceException>。
+> 在 c # 8 中， [null 容許運算子](null-forgiving.md)會終止前面的 null 條件運算清單。 例如，運算式`x?.y!.z`會剖析為`(x?.y)!.z`。 由於這種轉譯， `z`即使`x`為`null`，也會評估，這可能會導致<xref:System.NullReferenceException>。
 
 ### <a name="thread-safe-delegate-invocation"></a>安全執行緒委派引動流程
 
