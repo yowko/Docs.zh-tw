@@ -3,16 +3,16 @@ title: dotnet nuget push 命令
 description: dotnet nuget push 命令會將套件推送至伺服器並發行。
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 96f8d008c8306a0782d5149360a24bb4097a1ec4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463525"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728347"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**本文適用於:✔️** .NET Core 2.x SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 2.x SDK 和更新版本
 
 ## <a name="name"></a>名稱
 
@@ -33,6 +33,8 @@ dotnet nuget push -h|--help
 ## <a name="description"></a>描述
 
 `dotnet nuget push` 命令會將套件推送至伺服器並發行。 推送命令會使用在系統 NuGet 組態檔案或組態檔案鏈中找到的伺服器及認證詳細資料。 如需組態檔的詳細資訊，請參閱[設定 NuGet 行為](/nuget/consume-packages/configuring-nuget-behavior)。 NuGet 預設組態的取得方式如下：載入 *%AppData%\NuGet\NuGet.config* (Windows) 或 *$HOME/.local/share* (Linux/macOS)，接著從磁碟機根目錄開始直到目前目錄，載入其中的任何 *nuget.config* 或 *.nuget\nuget.config*。
+
+命令會推送現有的封裝。 它不會建立封裝。 若要建立封裝，請[`dotnet pack`](dotnet-pack.md)使用。
 
 ## <a name="arguments"></a>引數
 
@@ -76,7 +78,7 @@ dotnet nuget push -h|--help
 
 - **`--skip-duplicate`**
 
-  將多個包推送到 HTTP(S) 伺服器時,將任何 409 衝突回應視為警告,以便推送可以繼續。 自 .NET 核心 3.1 SDK 以來可用。
+  將多個封裝推送至 HTTP （S）伺服器時，會將任何409衝突回應視為警告，讓推送可以繼續進行。 自 .NET Core 3.1 SDK 起提供。
 
 - **`-sk|--symbol-api-key <API_KEY>`**
 
@@ -92,13 +94,13 @@ dotnet nuget push -h|--help
 
 ## <a name="examples"></a>範例
 
-- 將 *foo.nupkg* 推送至預設推送來源，指定 API 金鑰：
+- 將*foo. nupkg*推送至預設推送來源，並指定 API 金鑰：
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-- 將*foo.nupkg*推送到正式的 NuGet 伺服器,指定 API 金鑰:
+- 將*foo. nupkg*推送至官方 NuGet 伺服器，並指定 API 金鑰：
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
@@ -110,25 +112,25 @@ dotnet nuget push -h|--help
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-- 將 *foo.nupkg* 推送至預設推送來源：
+- 將*foo. nupkg*推送至預設推送來源：
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-- 將 *foo.symbols.nupkg* 推送至預設符號來源：
+- 將*foo. nupkg*推送至預設符號來源：
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-- 將 *foo.nupkg* 推送至預設推送來源，指定 360 秒逾時：
+- 將*foo. nupkg*推送至預設推送來源，並指定360秒的超時時間：
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-- 將目前目錄中的所有 *.nupkg* 檔案推送至預設推送來源：
+- 將目前目錄中的所有*nupkg*檔案推送至預設推送來源：
 
   ```dotnetcli
   dotnet nuget push *.nupkg
@@ -138,8 +140,17 @@ dotnet nuget push -h|--help
   > 如果此命令無法運作，可能是舊版 SDK (.NET Core 2.1 SDK 及更舊版本) 中有 Bug 所致。
   > 若要修正此問題，請升級您的 SDK 版本，或改為執行下列命令：`dotnet nuget push **/*.nupkg`
 
-- 即使 HTTP(S) 伺服器傳回 409 衝突回應,也會推送所有 *.nupkg*檔:
+- 推送所有*的 nupkg*檔案，即使 HTTP （S）伺服器傳回409衝突回應也一樣：
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate
   ```
+
+- 將目前目錄中的所有*nupkg*檔案推送至本機摘要目錄：
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg -s c:\mydir
+  ```
+
+  此命令不會將封裝儲存在階層式資料夾結構中，這是建議用來優化效能的方式。 如需詳細資訊，請參閱[本機](//nuget/hosting-packages/local-feeds)摘要。
+  

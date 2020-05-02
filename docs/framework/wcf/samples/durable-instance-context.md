@@ -2,12 +2,12 @@
 title: 永久性執行個體內容
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 604a617dc03bf06b71fe3019b58b2161216ee3e0
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: d70617fef7ebe0a94e22e858ee403d5d4f1840e3
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141190"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728400"
 ---
 # <a name="durable-instance-context"></a>永久性執行個體內容
 
@@ -18,9 +18,9 @@ ms.locfileid: "82141190"
 
 這個範例牽涉到擴充 WCF 的通道層和服務模型層。 因此，在進入實作的詳細資訊之前，您必須先了解一些基礎概念。
 
-在現實生活中，您經常可以發現永久性執行個體內容的例子。 例如，購物車應用程式可以在購物到一半時先暫停，改天再繼續購物。 因此當我們隔天造訪購物車時，已還原原始的內容。 請特別注意，當您中斷連線時，購物車應用程式 (在伺服器上) 不會維護購物車執行個體。 而是將其狀態保存至永久性儲存媒體，並在您對還原的內容建構新執行個體時使用該狀態。 因此，提供相同內容的服務執行個體與之前的執行個體不同 (因為它們沒有相同的記憶體位址)。
+在現實生活中，您經常可以發現永久性執行個體內容的例子。 例如，購物車應用程式可以暫停購物，並在另一天繼續進行。 因此當我們隔天造訪購物車時，已還原原始的內容。 請特別注意，當您中斷連線時，購物車應用程式 (在伺服器上) 不會維護購物車執行個體。 而是將其狀態保存至永久性儲存媒體，並在您對還原的內容建構新執行個體時使用該狀態。 因此，提供相同內容的服務執行個體與之前的執行個體不同 (因為它們沒有相同的記憶體位址)。
 
-永久性執行個體內容可能是由小型通訊協定所產生，而這個小型通訊協定會在用戶端和服務之間交換內容識別碼。 您會在用戶端上建立此內容識別碼，並傳輸至服務。 建立服務執行個體時，服務執行階段會嘗試從持續性儲存體 (Persistent Storage) (預設為 SQL Server 2005 資料庫) 載入對應至此內容識別碼的持續狀態。 如果沒有可用的狀態，新執行個體就會使用本身的預設狀態。 服務實作會使用自訂屬性，以標示會變更服務實作狀態的作業，讓執行階段可以在呼叫作業之後儲存服務執行個體。
+永久性執行個體內容可能是由小型通訊協定所產生，而這個小型通訊協定會在用戶端和服務之間交換內容識別碼。 您會在用戶端上建立此內容識別碼，並傳輸至服務。 建立服務執行個體時，服務執行階段會嘗試從持續性儲存體 (Persistent Storage) (預設為 SQL Server 2005 資料庫) 載入對應至此內容識別碼的持續狀態。 如果沒有可用的狀態，則新的實例會有其預設狀態。 服務實作會使用自訂屬性，以標示會變更服務實作狀態的作業，讓執行階段可以在呼叫作業之後儲存服務執行個體。
 
 在前面的描述中，有兩個易辨的步驟可達到目標：
 
@@ -28,11 +28,11 @@ ms.locfileid: "82141190"
 
 2. 變更服務本機行為，以實作自訂執行個體邏輯。
 
-由於清單中的第一項會影響網路上的訊息，因此不應該將該項時做為自訂通道，並應該連結至通道層。 後一項只會影響服務本機行為，因此可藉由延伸數個服務擴充點來進行實作。 在接下來的章節中，將會討論這些延伸項目。
+因為清單中的第一個會影響網路上的訊息，所以應該實作為自訂通道，並連結至通道層。 後一項只會影響服務本機行為，因此可藉由延伸數個服務擴充點來進行實作。 在接下來的章節中，將會討論這些延伸項目。
 
 ## <a name="durable-instancecontext-channel"></a>永久性 InstanceContext 通道
 
-您應該查看的第一項為通道層延伸項目。 撰寫自訂通道的第一個步驟為決定通道的通訊結構。 引入新的網路通訊協定時，通道應該可以和通道堆疊中絕大多數的其他通道搭配使用。 因此，該通道支援所有訊息交換模式。 但是不管其通訊結構為何，通道的核心功能都是一樣的。 更具體來說，從用戶端的角度，應該將內容識別碼寫出至訊息；而從服務的角度來看，應該從訊息讀取此內容識別碼，並傳遞至較上層。 因此，將會針對所有永久性執行個體內容通道實作，建立充當為抽象基底類別的 `DurableInstanceContextChannelBase` 類別。 這個類別包含一般狀態電腦管理函式以及兩個受保護的成員，可在訊息之間套用及讀取內容資訊。
+您應該查看的第一項為通道層延伸項目。 撰寫自訂通道的第一個步驟為決定通道的通訊結構。 引進新的有線通訊協定時，通道應該會與通道堆疊中幾乎任何其他通道搭配使用。 因此，該通道支援所有訊息交換模式。 但是不管其通訊結構為何，通道的核心功能都是一樣的。 更具體來說，從用戶端的角度，應該將內容識別碼寫出至訊息；而從服務的角度來看，應該從訊息讀取此內容識別碼，並傳遞至較上層。 因此，將會針對所有永久性執行個體內容通道實作，建立充當為抽象基底類別的 `DurableInstanceContextChannelBase` 類別。 這個類別包含一般狀態電腦管理函式以及兩個受保護的成員，可在訊息之間套用及讀取內容資訊。
 
 ```csharp
 class DurableInstanceContextChannelBase
@@ -51,7 +51,7 @@ class DurableInstanceContextChannelBase
 
 這兩個方法會使用 `IContextManager` 實作，以在訊息之間寫入和讀取內容識別碼  （`IContextManager`是一種自訂介面，可用來定義所有內容管理員的合約）。通道可以在自訂 SOAP 標頭或 HTTP cookie 標頭中包含內容識別碼。 每個內容管理員實作都繼承自 `ContextManagerBase` 類別，而這個類別則包含用於所有內容管理員的一般功能。 您可以使用此類別中的 `GetContextId` 方法，從用戶端產生內容識別碼。 第一次產生內容識別碼時，方法會將此內容識別碼儲存至文字檔，而這個文字檔的名稱則是由遠端端點位址 (將使用 @ 字元取代典型 URI 中無效的檔案名稱字元) 所建構。
 
-之後相同的遠端端點需要此內容識別碼時，就會檢查是否有適當的檔案。 如果有，就會讀取內容識別碼並傳回。 否則會傳回新產生的內容識別碼，並儲存至檔案。 使用預設組態時，這些檔案會放置在 ContextStore 目錄中，而這個目錄則是在目前使用者的暫存目錄中。 不過，您可以使用繫結項目來設定這個位置。
+之後相同的遠端端點需要此內容識別碼時，就會檢查是否有適當的檔案。 如果有，就會讀取內容識別碼並傳回。 否則會傳回新產生的內容識別碼，並儲存至檔案。 使用預設設定時，這些檔案會放在名為 CoNtextStore 的目錄中，其位於目前使用者的臨時目錄中。 不過，您可以使用繫結項目來設定這個位置。
 
 您可以設定傳輸內容識別碼的機制。 這個內容識別碼可以寫入 HTTP Cookie 標頭或自訂 SOAP 標頭。 自訂 SOAP 標頭方法可讓您使用此通訊協定搭配非 HTTP 通訊協定 (例如，TCP 或具名管道)。 有兩個可實作這兩個選項的類別，`MessageHeaderContextManager` 和 `HttpCookieContextManager`。
 
@@ -87,9 +87,9 @@ IContextManager contextManager =
 message.Properties.Add(DurableInstanceContextUtility.ContextIdProperty, contextId);
 ```
 
-在繼續處理之前，您需要已了解如何使用 `Properties` 類別中的 `Message` 集合。 一般來說，在通道層中將資料從較低層傳遞至較高層時，就會使用此 `Properties` 集合。 如此一來，就可以使用一致的方法對較高層提供需要的資料，而不用在意通訊協定詳細資料。 換句話說，通道層可以將內容識別碼當做 SOAP 標頭或 HTTP Cookie 標頭而傳送和接收。 但這些較高層不需要知道這些細節，因為通道層會在 `Properties` 擊盒中提供此資訊。
+在繼續處理之前，您需要已了解如何使用 `Properties` 類別中的 `Message` 集合。 一般來說，在通道層中將資料從較低層傳遞至較高層時，就會使用此 `Properties` 集合。 如此一來，就可以使用一致的方法對較高層提供需要的資料，而不用在意通訊協定詳細資料。 換句話說，通道層可以將內容識別碼當做 SOAP 標頭或 HTTP cookie 標頭來傳送和接收。 但這些較高層不需要知道這些細節，因為通道層會在 `Properties` 擊盒中提供此資訊。
 
-現在使用 `DurableInstanceContextChannelBase` 類別時，就必須實作將這十個必要的介面放置在適當的位置 (IOutputChannel、IInputChannel、IOutputSessionChannel、IInputSessionChannel、IRequestChannel、IReplyChannel、IRequestSessionChannel、IReplySessionChannel、IDuplexChannel、IDuplexSessionChannel)。 這些介面類似於每個可用的訊息交換模式 (資料包、單工、雙工與其工作階段變數)。 這些實作都會繼承先前所述的基底類別，並會適當地呼叫 `ApplyContext` 和 `ReadContextId`。 例如實作 IOutputChannel 介面的 `DurableInstanceContextOutputChannel`，它會從傳送訊息的每個方法中呼叫 `ApplyContext` 方法。
+現在使用 `DurableInstanceContextChannelBase` 類別時，就必須實作將這十個必要的介面放置在適當的位置 (IOutputChannel、IInputChannel、IOutputSessionChannel、IInputSessionChannel、IRequestChannel、IReplyChannel、IRequestSessionChannel、IReplySessionChannel、IDuplexChannel、IDuplexSessionChannel)。 它們類似每個可用的訊息交換模式（資料包、單工、雙工和其會話變異）。 這些每一個執行都會繼承先前所述的基類， `ApplyContext`並`ReadContextId`適當地呼叫和。 例如實作 IOutputChannel 介面的 `DurableInstanceContextOutputChannel`，它會從傳送訊息的每個方法中呼叫 `ApplyContext` 方法。
 
 ```csharp
 public void Send(Message message, TimeSpan timeout)
@@ -100,7 +100,7 @@ public void Send(Message message, TimeSpan timeout)
 }
 ```
 
-另一方面，`DurableInstanceContextInputChannel`，它會實作 `IInputChannel` 介面，並在接收訊息的每個方法中呼叫 `ReadContextId` 方法。
+另一方面， `DurableInstanceContextInputChannel` -這會執行`IInputChannel`介面-呼叫每個方法中`ReadContextId`的方法，以接收訊息。
 
 ```csharp
 public Message Receive(TimeSpan timeout)
@@ -136,7 +136,7 @@ public interface IStorageManager
 }
 ```
 
-`SqlServerStorageManager` 類別包含預設 `IStorageManager` 實作。 在其 `SaveInstance` 方法中，將會使用 XmlSerializer 序列化提供的物件，並且將此物件儲存至 SQL Server 資料庫。
+`SqlServerStorageManager` 類別包含預設 `IStorageManager` 實作。 在其`SaveInstance`方法中，會使用 XmlSerializer 序列化給定的物件，並將它儲存到 SQL Server 資料庫。
 
 ```csharp
 XmlSerializer serializer = new XmlSerializer(state.GetType());
@@ -171,7 +171,7 @@ using (SqlConnection connection = new SqlConnection(GetConnectionString()))
 }
 ```
 
-在 `GetInstance` 方法中，將會針對提供的內容識別碼讀取序列化的資料，而從中建構的物件則會傳回呼叫者。
+在`GetInstance`方法中，會針對指定的內容識別碼讀取序列化資料，而從它所建立的物件會傳回給呼叫者。
 
 ```csharp
 object data;
@@ -282,7 +282,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
 
 如先前所述，您會從 `Properties` 類別的 `Message` 集合中讀取內容識別碼，並將它傳遞至延伸類別的建構函式。 這樣便可示範如何使用一致的方法，在各層之間交換資訊。
 
-下一個重要的步驟為覆寫服務執行個體的建立處理序。 WCF 允許執行自訂的具現化行為，並使用 IInstanceProvider 介面將它們連結至執行時間。 將實作新 `InstanceProvider` 類別以執行該工作。 在建構函式中，將會接受預期來自執行個體提供者的服務類型。 稍後將使用此服務類型來建立新的執行個體。 在 `GetInstance` 實作中，將會建立用來尋找持續性執行個體的存放管理員執行個體。 如果傳回 `null`，則會執行個體化服務類型的新執行個體，並傳回呼叫者。
+下一個重要的步驟為覆寫服務執行個體的建立處理序。 WCF 允許執行自訂的具現化行為，並使用 IInstanceProvider 介面將它們連結至執行時間。 將實作新 `InstanceProvider` 類別以執行該工作。 在此函數中，接受來自執行個體提供者的服務類型。 稍後將使用此服務類型來建立新的執行個體。 在`GetInstance`執行期間，會建立存放管理員的實例來尋找保存的實例。 如果傳回`null`，則會具現化服務類型的新實例，並將其傳回給呼叫端。
 
 ```csharp
 public object GetInstance(InstanceContext instanceContext, Message message)
@@ -302,11 +302,11 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }
 ```
 
-下一個重要的步驟為將 `InstanceContextExtension`、`InstanceContextInitializer` 和 `InstanceProvider` 類別安裝至服務模型執行階段。 您可以使用自訂屬性以標示服務實作類別，便可安裝行為。 `DurableInstanceContextAttribute` 中包含這個屬性的實作，並且會實作 `IServiceBehavior` 介面以擴充整個服務執行階段。
+下一個重要步驟是將`InstanceContextExtension`、 `InstanceContextInitializer`和`InstanceProvider`類別安裝到服務模型執行時間。 您可以使用自訂屬性以標示服務實作類別，便可安裝行為。 `DurableInstanceContextAttribute` 中包含這個屬性的實作，並且會實作 `IServiceBehavior` 介面以擴充整個服務執行階段。
 
-這個類別所擁有的屬性，可以接受要使用的存放管理員類型。 透過這種方法的實作，使用者便可指定自己的 `IStorageManager` 實作做為這個屬性的參數。
+這個類別所擁有的屬性，可以接受要使用的存放管理員類型。 如此一來，此實作為可讓使用者指定自己`IStorageManager`的實作為這個屬性的參數。
 
-在 `ApplyDispatchBehavior` 實作中，將會驗證現行 `InstanceContextMode` 屬性的 `ServiceBehavior`。 如果這個屬性設定為 Singleton，就無法啟用永久性執行個體，並且會擲回 `InvalidOperationException` 以通知主機。
+在`ApplyDispatchBehavior`執行時， `InstanceContextMode`會驗證目前`ServiceBehavior`屬性的。 如果這個屬性設定為 Singleton，就無法啟用永久性執行個體，並且會擲回 `InvalidOperationException` 以通知主機。
 
 ```csharp
 ServiceBehaviorAttribute serviceBehavior =
@@ -351,13 +351,13 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 
 不會變得是將服務執行個體儲存至持續性儲存體。 如前所述，已提供必要的功能讓您在 `IStorageManager` 實作中儲存狀態。 我們現在必須將此與 WCF 執行時間進行整合。 也需要適用於服務實作類別方法的其他屬性。 而這個屬性應該會套用至變更服務執行個體狀態的方法。
 
-`SaveStateAttribute` 類別會實作此功能。 它也會`IOperationBehavior`執行類別，以修改每個作業的 WCF 執行時間。 當使用這個屬性來標記方法時，WCF 執行時間會在`ApplyBehavior`結構化適當`DispatchOperation`的時叫用方法。 在這個方法實作中，程式碼只需要一行：
+`SaveStateAttribute` 類別會實作此功能。 它也會`IOperationBehavior`執行類別，以修改每個作業的 WCF 執行時間。 當使用這個屬性來標記方法時，WCF 執行時間會在`ApplyBehavior`結構化適當`DispatchOperation`的時叫用方法。 這個方法的實行中有一行程式碼：
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
 ```
 
-這個指示會建立 `OperationInvoker` 型別的執行個體，並將它指派至已建構之 `Invoker` 的 `DispatchOperation` 屬性。 `OperationInvoker` 類別則是對 `DispatchOperation` 所建立之預設作業啟動程式的包裝函式。 此類別會實作 `IOperationInvoker` 介面。 在 `Invoke` 方法實作中，實際的方法叫用會委派至內部作業啟動程式。 但是在傳回結果之前，可以使用 `InstanceContext` 中的存放管理員來儲存服務執行個體。
+這個指示會建立 `OperationInvoker` 型別的執行個體，並將它指派至已建構之 `Invoker` 的 `DispatchOperation` 屬性。 `OperationInvoker` 類別則是對 `DispatchOperation` 所建立之預設作業啟動程式的包裝函式。 此類別會實作 `IOperationInvoker` 介面。 在`Invoke`方法執行中，會將實際的方法叫用委派給內部作業啟動項。 但是在傳回結果之前，可以使用 `InstanceContext` 中的存放管理員來儲存服務執行個體。
 
 ```csharp
 object result = innerOperationInvoker.Invoke(instance,
@@ -374,7 +374,7 @@ return result;
 
 ## <a name="using-the-extension"></a>使用延伸項目
 
-通道層和服務模型層延伸都已完成，而且現在可以在 WCF 應用程式中使用。 服務必須使用自訂繫結將通道新增至通道堆疊，然後以適當的屬性標示服務實作類別。
+通道層和服務模型層延伸都已完成，而且現在可以在 WCF 應用程式中使用。 服務必須使用自訂系結將通道新增至通道堆疊，然後以適當的屬性標示服務執行類別。
 
 ```csharp
 [DurableInstanceContext]

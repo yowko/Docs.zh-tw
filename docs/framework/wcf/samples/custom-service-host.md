@@ -2,12 +2,12 @@
 title: 自訂服務裝載
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 6470249c557d571dfee165d57ce518d475340093
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 70d527599c310cba694624839f14a313f6000337
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140944"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728436"
 ---
 # <a name="custom-service-host"></a>自訂服務裝載
 這個範例會示範如何使用 <xref:System.ServiceModel.ServiceHost> 類別的自訂衍生，以變更服務的執行階段行為。 這個方法會提供可重複使用替代方案，以便透過常用方法來設定大量服務。 此範例也會示範如何使用 <xref:System.ServiceModel.Activation.ServiceHostFactory> 類別，以便在網際網路資訊服務 (IIS) 或 Windows Process Activation Service (WAS) 裝載環境中使用自訂 ServiceHost。  
@@ -22,17 +22,17 @@ ms.locfileid: "82140944"
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
 ## <a name="about-the-scenario"></a>關於案例
- 為避免不慎洩漏可能的敏感性服務中繼資料，Windows Communication Foundation （WCF）服務的預設設定會停用中繼資料發行。 這個行為依預設為安全行為，但也表示您無法使用中繼資料匯入工具 (例如 Svcutil.exe) 來產生呼叫服務所需的用戶端程式碼，除非組態中已明確啟用服務的中繼發行行為。  
+ 為避免不慎洩漏可能的敏感性服務中繼資料，Windows Communication Foundation （WCF）服務的預設設定會停用中繼資料發行。 此行為預設是安全的，但也表示您無法使用中繼資料匯入工具（例如 Svcutil）來產生呼叫服務所需的用戶端程式代碼，除非在設定中明確啟用服務的中繼資料發行行為。  
   
  啟用大量服務的中繼資料發行，需要將相同的組態項目加入至每個個別服務，而這會產生大量組態資訊，這些資訊基本上都是相同的。 除了個別設定每個服務，也撰寫命令式程式碼，讓中繼資料一次發行，然後在數個不同的服務中重複使用該程式碼。 這是藉由建立衍生自 <xref:System.ServiceModel.ServiceHost> 並覆寫 `ApplyConfiguration`() 方法，以命令方式新增中繼資料發行行為的新類別來達成。  
   
 > [!IMPORTANT]
-> 為了清楚說明，這個範例示範如何建立不安全的中繼資料發行端點。 未經驗證的匿名使用者可能可以使用這類端點，所以部署前必須小心謹慎，才能確保公開服務中繼資料是否適切。  
+> 為了清楚說明，這個範例示範如何建立不安全的中繼資料發行端點。 這類端點可能會提供給匿名未驗證的取用者使用，而且必須在部署這類端點之前小心處理，以確保公開服務的中繼資料是適當的。  
   
 ## <a name="implementing-a-custom-servicehost"></a>實作自訂 ServiceHost
- <xref:System.ServiceModel.ServiceHost> 類別會公開數個繼承者可覆寫以變更服務之執行階段行為的有用虛擬方法。 例如，`ApplyConfiguration`() 方法會從組態存放區讀取服務組態資訊，並因此變更主機的 <xref:System.ServiceModel.Description.ServiceDescription>。 預設實作會從應用程式的組態檔讀取組態。 自訂實作可以覆寫 `ApplyConfiguration`()，以進一步使用命令式程式碼變更 <xref:System.ServiceModel.Description.ServiceDescription>，或甚至完全取代預設組態存放區。 例如，從資料庫而不是從應用程式的組態檔讀取服務的端點組態。  
+ <xref:System.ServiceModel.ServiceHost> 類別會公開數個繼承者可覆寫以變更服務之執行階段行為的有用虛擬方法。 例如，`ApplyConfiguration`() 方法會從組態存放區讀取服務組態資訊，並因此變更主機的 <xref:System.ServiceModel.Description.ServiceDescription>。 預設的執行會從應用程式的設定檔讀取設定。 自訂實作可以覆寫 `ApplyConfiguration`()，以進一步使用命令式程式碼變更 <xref:System.ServiceModel.Description.ServiceDescription>，或甚至完全取代預設組態存放區。 例如，從資料庫讀取服務的端點設定，而不是從應用程式的設定檔。  
   
- 在此範例中，會希望建置新增 ServiceMetadataBehavior 的自訂 ServiceHost (可啟用中繼資料發行)，即使此行為未明確新增在服務的組態檔中也一樣。 若要達到此目的，可建立繼承自 <xref:System.ServiceModel.ServiceHost> 的新類別，並覆寫 `ApplyConfiguration`()。  
+ 在此範例中，我們想要建立自訂的 ServiceHost 來新增 ServiceMetadataBehavior （這會啟用中繼資料發行），即使此行為未明確新增至服務的設定檔也一樣。 若要完成此動作，請建立繼承自<xref:System.ServiceModel.ServiceHost>的新類別`ApplyConfiguration`，並覆寫（）。  
   
 ```csharp
 class SelfDescribingServiceHost : ServiceHost  
@@ -57,7 +57,7 @@ class SelfDescribingServiceHost : ServiceHost
 }  
 ```  
   
- 由於不想要忽略應用程式組態檔中已提供的任何組態，覆寫 `ApplyConfiguration`() 時所執行的第一個動做為呼叫基底實作。 完成此方法時，就可以使用下列命令式程式碼，以命令方式將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 新增至描述。  
+ 因為我們不想要忽略應用程式佈建檔案中所提供的任何設定，所以覆寫`ApplyConfiguration`（）的第一件事就是呼叫基底執行。 完成此方法時，就可以使用下列命令式程式碼，以命令方式將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 新增至描述。  
   
 ```csharp
 ServiceMetadataBehavior mexBehavior = this.Description.Behaviors.Find<ServiceMetadataBehavior>();  
@@ -74,7 +74,7 @@ else
 }  
 ```  
   
- 覆寫 `ApplyConfiguration`() 必須執行的最後一個動作為新增預設中繼資料端點。 一般來說，會在服務主機的 BaseAddresses 集合中，對每個 URI 建立一個中繼資料端點。  
+ 覆寫 `ApplyConfiguration`() 必須執行的最後一個動作為新增預設中繼資料端點。 依照慣例，會為服務主機的 BaseAddresses 集合中的每個 URI 建立一個中繼資料端點。  
   
 ```csharp
 //Add a metadata endpoint at each base address  
@@ -119,7 +119,7 @@ SelfDescribingServiceHost host =
 host.Open();  
 ```  
   
- 自訂主機仍會從應用程式的組態檔中讀取服務的端點組態，就如使用預設 <xref:System.ServiceModel.ServiceHost> 類別裝載服務一樣。 不過，由於新增邏輯以在自訂主機內啟用中繼資料發行，就不再需要於組態中明確啟用中繼資料發行行為。 當您建置其中包含多個服務的應用程式，而且想要在每個服務上啟用中繼資料發行，但不想要重複撰寫相同的組態項目時，這個方法特別有用。  
+ 我們的自訂主機仍會從應用程式的設定檔讀取服務的端點設定，如同我們已使用預設<xref:System.ServiceModel.ServiceHost>類別來裝載服務。 不過，由於新增邏輯以在自訂主機內啟用中繼資料發行，就不再需要於組態中明確啟用中繼資料發行行為。 當您建置其中包含多個服務的應用程式，而且想要在每個服務上啟用中繼資料發行，但不想要重複撰寫相同的組態項目時，這個方法特別有用。  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>在 IIS 或 WAS 中使用自訂 ServiceHost  
  在自我裝載案例中使用自訂服務主機很簡單，因為這是您的應用程式程式碼，而且主要負責建立及開啟服務主機執行個體。 不過，在 IIS 或 WAS 裝載環境中，WCF 基礎結構會動態具現化服務的主機，以回應傳入的訊息。 自訂服務主機也可以在此裝載環境中使用，但形式上在 ServiceHostFactory 中需要額外的程式碼。 下列程式碼會顯示 <xref:System.ServiceModel.Activation.ServiceHostFactory> 衍生，而這個衍生會傳回自訂 `SelfDescribingServiceHost` 的執行個體。  
@@ -141,9 +141,9 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
 }  
 ```  
   
- 如您所見，實作自訂 ServiceHostFactory 非常簡單。 所有自訂邏輯都在 ServiceHost 實作內部，而處理站會傳回衍生類別的執行個體。  
+ 如您所見，執行自訂 ServiceHostFactory 相當簡單。 所有自訂邏輯都在 ServiceHost 實作內部，而處理站會傳回衍生類別的執行個體。  
   
- 若要搭配使用自訂處理站和服務實作，必須將一些額外的中繼資料新增至服務的 .svc 檔。  
+ 若要搭配服務執行使用自訂處理站，我們必須將一些額外的中繼資料新增至服務的 .svc 檔案。  
   
 ```xml
 <% @ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"
@@ -151,10 +151,10 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>
 ```
   
- 在這裡會將額外的 `Factory` 屬性新增至 `@ServiceHost` 指示詞，並傳遞自訂處理站的 CLR 型別名稱做為屬性值。 當 IIS 或 WAS 收到此服務的訊息時，WCF 裝載基礎結構會先建立 ServiceHostFactory 的實例，然後藉由呼叫`ServiceHostFactory.CreateServiceHost()`來具現化服務主機本身。  
+ 在這裡，我們已將`Factory`額外的屬性`@ServiceHost`新增至指示詞，並將自訂 factory 的 CLR 型別名稱傳遞為屬性的值。 當 IIS 或 WAS 收到此服務的訊息時，WCF 裝載基礎結構會先建立 ServiceHostFactory 的實例，然後藉由呼叫`ServiceHostFactory.CreateServiceHost()`來具現化服務主機本身。  
   
 ## <a name="running-the-sample"></a>執行範例  
- 雖然此範例確實提供了完整功能的用戶端和服務實作，但此範例的目的為說明如何使用自訂主機，變更服務的執行個體行為。請執行下列步驟：  
+ 雖然此範例提供功能完整的用戶端和服務執行，但此範例的重點在於說明如何透過自訂主機來改變服務的執行時間行為。請執行下列步驟：  
   
 ### <a name="observe-the-effect-of-the-custom-host"></a>觀察自訂主機的效果
   

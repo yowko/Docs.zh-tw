@@ -4,12 +4,12 @@ description: 了解如何使用.NET Portability Analyzer 工具來評估程式�
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: ef6173fe5da798c1fff5d2eb723a91875905e400
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507529"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728449"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -27,14 +27,14 @@ ms.locfileid: "82507529"
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>如何使用 .NET 可攜性分析器
 
-若要開始在 Visual Studio 中使用 .NET 可攜性分析器，您必須從 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) 下載及安裝此延伸模組。 它適用於 Visual Studio 2017 和更新版本。 您可以在 Visual Studio 透過**分析** > 可**移植性分析器設定**來進行設定，並選取您的目標平臺，這是您想要評估與目前元件建立所在平臺/版本相比較的可攜性差距的 .net 平臺/版本。
+若要開始在 Visual Studio 中使用 .NET 可攜性分析器，您必須從 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) 下載及安裝此延伸模組。 它適用於 Visual Studio 2017 和更新版本。 在 Visual Studio 透過**分析** > 可**移植性分析器設定**來進行設定，並選取您的目標平臺，這是您想要評估與目前元件建立所在平臺/版本相比較的可攜性差距的 .net 平臺/版本。
 
 ![可攜性分析器的螢幕擷取畫面。](./media/portability-analyzer/portability-screenshot.png)
 
 您也可以使用 ApiPort 主控台應用程式，可從 [ApiPort 存放庫](https://aka.ms/apiportdownload)下載。 您可以使用 `listTargets` 命令選項來顯示可用的目標清單，然後指定 `-t` 或 `--target` 命令選項來挑選目標平台。
 
 ### <a name="analyze-portability"></a>分析可攜性
-若要在 Visual Studio 中分析整個專案，在 [方案總管]**** 中以滑鼠右鍵按一下您的專案，然後選取 [分析組件可攜性]****。 否則，請移至 [分析]**** 功能表，然後選取 [Analyze Assembly Portability] (分析組件可攜性)****。 從這裡選取專案的可執行檔或 DLL。
+若要在 Visual Studio 中分析整個專案，在 [方案總管]**** 中以滑鼠右鍵按一下您的專案，然後選取 [分析組件可攜性]****。 否則，請移至 [分析]**** 功能表，然後選取 [Analyze Assembly Portability] (分析組件可攜性)****。 從該處選取您專案的可執行檔或 DLL。
 
 ![方案總管的可攜性分析器螢幕擷取畫面。](./media/portability-analyzer/portability-solution-explorer.png)
 
@@ -67,7 +67,7 @@ ms.locfileid: "82507529"
 - 目標成員：目標平台缺少方法
 - 組件名稱：缺少之 API 所在的 .NET Framework 組件。
 - 每個選取的目標平臺都是一個資料行，例如「.NET Core」：「不支援」的值表示此目標平臺不支援此 API。
-- 建議的變更：建議變更 API 或技術。 目前，許多 API 的此欄位為空白或過期。 因為 API 太多，導致我們難以繼續。 我們將尋找替代解決方案，來為客戶提供有用的資訊。
+- 建議的變更：要變更為的建議 API 或技術。 目前，許多 Api 的此欄位是空的或過期的。 由於有大量的 Api，我們有很大的挑戰讓它保持在最新狀態。 我們正在查看可為客戶提供實用資訊的替代解決方案。
 
 #### <a name="missing-assemblies"></a>缺少的組件
 

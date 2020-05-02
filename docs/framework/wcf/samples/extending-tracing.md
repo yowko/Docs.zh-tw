@@ -2,15 +2,16 @@
 title: 擴充追蹤
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: ad46f09c69e94146f9e1569eb506cb350a2a9307
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: e61265210640d2b801ad55b9dc5a357cc4f161a7
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141242"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728388"
 ---
-# <a name="extending-tracing"></a>擴充追蹤
-這個範例會示範如何在用戶端和服務程式代碼中撰寫使用者定義的活動追蹤，以擴充 Windows Communication Foundation （WCF）追蹤功能。 這樣可以讓使用者建立追蹤活動，並將追蹤分組成工作的邏輯單位 (Logical Unit)。 也可以透過傳輸 (在相同的端點內) 以及傳播 (跨端點) 方式來關聯活動。 在此範例中，用戶端與服務都會啟用追蹤。 如需如何在用戶端和服務設定檔中啟用追蹤的詳細資訊，請參閱[追蹤和訊息記錄](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)。  
+# <a name="extend-tracing"></a>延伸追蹤
+
+這個範例會示範如何在用戶端和服務程式代碼中撰寫使用者定義的活動追蹤，以擴充 Windows Communication Foundation （WCF）追蹤功能。 撰寫使用者定義的活動追蹤，可讓使用者建立追蹤活動，並將追蹤群組為工作的邏輯單位。 也可以透過傳輸 (在相同的端點內) 以及傳播 (跨端點) 方式來關聯活動。 在此範例中，用戶端與服務都會啟用追蹤。 如需如何在用戶端和服務設定檔中啟用追蹤的詳細資訊，請參閱[追蹤和訊息記錄](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)。  
   
  這個範例是以[消費者入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)為基礎。  
   
@@ -29,7 +30,7 @@ ms.locfileid: "82141242"
 ## <a name="tracing-and-activity-propagation"></a>追蹤與活動傳播  
  使用者定義的活動追蹤可讓使用者建立自己的追蹤活動，將追蹤分組成工作邏輯單元、透過傳輸和傳播來使活動相互關聯，以及降低 WCF 追蹤的效能成本（例如，記錄檔的磁碟空間成本）。  
   
-### <a name="adding-custom-sources"></a>新增自訂來源  
+### <a name="add-custom-sources"></a>新增自訂來源  
  使用者定義的追蹤可以同時新增至用戶端與服務程式碼。 將追蹤來源加入至用戶端或服務設定檔，可讓您記錄這些自訂追蹤，並顯示在[服務追蹤檢視器工具（svctraceviewer.exe .exe）](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)中。 下列程式碼示範如何將名為 `ServerCalculatorTraceSource` 之使用者定義的追蹤來源新增至組態檔。  
   
 ```xml  
@@ -67,7 +68,7 @@ ms.locfileid: "82141242"
 ....
 ```  
   
-### <a name="correlating-activities"></a>關聯活動  
+### <a name="correlate-activities"></a>相互關聯活動  
  若要直接關聯跨端點的活動，在 `propagateActivity` 追蹤來源中的 `true` 屬性必須設定為 `System.ServiceModel`。 此外，若要傳播追蹤而不經過 WCF 活動，必須關閉 [System.servicemodel 活動追蹤]。 這項設定將如下列程式碼範例所示。  
   
 > [!NOTE]
@@ -85,10 +86,10 @@ ms.locfileid: "82141242"
 </system.diagnostics>  
 ```  
   
-### <a name="lessening-performance-cost"></a>降低效能成本  
- 將 `ActivityTracing` 追蹤來源中的 `System.ServiceModel` 設定為 Off 時會產生追蹤檔，其中只包含使用者定義的活動追蹤，而不包含任何 ServiceModel 活動追蹤。 這樣會使記錄檔的大小變小許多。 不過，與 WCF 處理追蹤相互關聯的機會會遺失。  
+### <a name="lessen-performance-cost"></a>降低效能成本  
+ 將 `ActivityTracing` 追蹤來源中的 `System.ServiceModel` 設定為 Off 時會產生追蹤檔，其中只包含使用者定義的活動追蹤，而不包含任何 ServiceModel 活動追蹤。 排除 System.servicemodel 活動追蹤會產生更小的記錄檔。 不過，與 WCF 處理追蹤相互關聯的機會會遺失。  
   
-##### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
+## <a name="set-up-build-and-run-the-sample"></a>設定、建立和執行範例  
   
 1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   

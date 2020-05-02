@@ -2,14 +2,15 @@
 title: 工作階段和佇列
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: 489a8f5e782faca679991809e575e98153de95e0
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: ce8cdd08f9bc34d03a014b253024a2b756d4c82a
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140594"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728460"
 ---
-# <a name="sessions-and-queues"></a>工作階段和佇列
+# <a name="sessions-and-queues"></a>會話和佇列
+
 這個範例示範如何透過訊息佇列 (MSMQ) 傳輸，傳送和接收佇列通訊中的一組相關訊息。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
   
 > [!NOTE]
@@ -172,7 +173,7 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
 > [!NOTE]
 > 您對工作階段中的所有訊息只能使用單一交易，而且必須在認可交易之前傳送工作階段中的所有訊息。 關閉用戶端就會關閉工作階段。 因此，必須在異動完成之前先關閉用戶端，才能將工作階段中的所有訊息傳送至佇列。  
   
- 當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。  
+ 當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。  
   
  在用戶端上：  
   
@@ -205,7 +206,7 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
         Order status: Pending  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
+### <a name="set-up-build-and-run-the-sample"></a>設定、建立和執行範例  
   
 1. 請確定您已[針對 Windows Communication Foundation 範例執行一次安裝程式](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
@@ -215,7 +216,7 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
   
  根據預設，傳輸安全性會透過 <xref:System.ServiceModel.NetMsmqBinding> 啟用。 MSMQ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>傳輸安全性有兩個相關的屬性，而且<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.`根據預設，驗證模式會設定為`Windows` ，而保護層級會設定為。 `Sign` 若要 MSMQ 提供驗證及簽署功能，MSMQ 必須是網域的一部分，而且必須安裝 MSMQ 的 Active Directory 整合選項。 如果您在不符合這些條件的電腦上執行這個範例，就會收到錯誤。  
   
-### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>若要在加入工作群組，或是沒有 Active Directory 整合的電腦上執行這個範例  
+### <a name="run-the-sample-on-a-computer-joined-to-a-workgroup"></a>在加入工作組的電腦上執行範例  
   
 1. 如果您的電腦不是網域的一部分，或是沒有安裝 Active Directory 整合，請將驗證模式和保護層級設定為 `None`，以關閉傳輸安全性，如下列範例組態所示。  
   

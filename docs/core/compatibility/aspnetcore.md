@@ -2,15 +2,15 @@
 title: ASP.NET Core 的重大變更
 titleSuffix: ''
 description: 列出 ASP.NET Core 中的重大變更。
-ms.date: 04/28/2020
+ms.date: 04/29/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 454735028f8c0923b99e85ade30f498f13dd6cab
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 63d39b1aa6e46b6bcbeb5a409efacac01dea4262
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507139"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728324"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core 的重大變更
 
@@ -41,6 +41,7 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 - [HTTP：瀏覽器 SameSite 變更影響驗證](#http-browser-samesite-changes-impact-authentication)
 - [HTTP： DefaultHttpCoNtext 擴充性已移除](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP： HeaderNames 欄位已變更為靜態唯讀](#http-headernames-constants-changed-to-static-readonly)
+- [HTTP： IHttpClientFactory 記錄整數狀態碼所建立的 HttpClient 實例](#http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes)
 - [HTTP：回應主體基礎結構變更](#http-response-body-infrastructure-changes)
 - [HTTP：某些 cookie SameSite 預設值已變更](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP：預設停用同步 IO](#http-synchronous-io-disabled-in-all-servers)
@@ -54,6 +55,7 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 - [Kestrel：要求尾標頭已移至新的集合](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel：傳輸抽象層變更](#kestrel-transport-abstractions-removed-and-made-public)
 - [當地語系化：已標記為過時的 Api](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [當地語系化：已移除 ResourceManagerWithCultureStringLocalizer 類別和 WithCulture 介面成員](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [記錄： DebugLogger 類別已設為內部](#logging-debuglogger-class-made-internal)
 - [MVC：已移除控制器動作非同步尾碼](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC： JsonResult 已移至 AspNetCore. Core](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
@@ -87,7 +89,15 @@ ASP.NET Core 提供 .NET Core 所使用的 web 應用程式開發功能。
 
 ***
 
+[!INCLUDE[HTTP: HttpClient instances created by IHttpClientFactory log integer status codes](~/includes/core-changes/aspnetcore/5.0/http-httpclient-instances-log-integer-status-codes.md)]
+
+***
+
 [!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
+
+***
+
+[!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
 
 ***
 

@@ -2,12 +2,12 @@
 title: 探索安全性範例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 94de324469d0d649a184dec5847e1a5c4cbba2cc
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141161"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728412"
 ---
 # <a name="discovery-security-sample"></a>探索安全性範例
 
@@ -16,7 +16,7 @@ ms.locfileid: "82141161"
  自訂通道會針對探索和公告端點，套用到現有通道堆疊的頂端。 如此一來，每個傳送的訊息都會套用簽章標頭。 系統會驗證收到之訊息上的簽章，而且當該簽章不符或訊息沒有簽章時，就會捨棄訊息。 為簽署與驗證訊息，此範例使用憑證。  
   
 ## <a name="discussion"></a>討論區  
- WCF 可以延伸，而且可讓使用自訂所需的通道。 此範例會實作可建立安全通道的探索安全繫結項目。 安全通道會套用並驗證訊息簽章，而且會套用到目前堆疊的頂端。  
+ WCF 是可擴充的，可讓使用者視需要自訂通道。 此範例會實作可建立安全通道的探索安全繫結項目。 安全通道會套用並驗證訊息簽章，而且會套用到目前堆疊的頂端。  
   
  安全繫結項目會建立安全通道處理站與通道接聽項。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82141161"
   
  為計算簽章，此範例決定展開的簽章項目。 XML 簽章 (`SignedInfo`) 會使用 WS-Discovery 規格所要求的 `ds` 命名空間前置詞建立。 探索與定址命名空間中的本文和所有標頭都會在簽章中參考，因此無法進行竄改。 每個參考的專案都會使用專屬的標準化http://www.w3.org/2001/10/xml-exc-c14n# （）進行轉換，然後再計算 sha-1 摘要值（http://www.w3.org/2000/09/xmldsig#sha1 ）。 根據所有參考的元素及其摘要值，會使用 RSA 演算法（http://www.w3.org/2000/09/xmldsig#rsa-sha1 ）來計算簽章值。  
   
- 訊息會使用用戶端指定的憑證簽署。 建立繫結項目時，必須指定存放位置、名稱和憑證主體名稱。 精簡簽章中的 `KeyId` 表示簽章權杖的金鑰識別碼，而且是簽署權杖的主體金鑰識別碼 (SKI)，或 (如果 SKI 不存在) 簽署權杖公開金鑰的 SHA-1 雜湊。  
+ 訊息會使用用戶端指定的憑證簽署。 建立繫結項目時，必須指定存放區位置、名稱和憑證主體名稱。 精簡簽章中的 `KeyId` 表示簽章權杖的金鑰識別碼，而且是簽署權杖的主體金鑰識別碼 (SKI)，或 (如果 SKI 不存在) 簽署權杖公開金鑰的 SHA-1 雜湊。  
   
 ## <a name="secure-channel-listener"></a>安全通道接聽項  
  安全通道接聽項會建立可驗證收到之訊息中精簡簽章的輸入或雙工通道。 為驗證簽章，系統會使用訊息內附加之精簡簽章中指定的 `KeyId` 來選取指定之存放區中的憑證。 如果訊息沒有簽章或簽章檢查失敗，就會捨棄訊息。 為使用安全繫結，此範例會使用加入的探索安全繫結項目，定義可建立自訂 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 和 <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> 的處理站。 這些安全端點可用於探索公告接聽項和可搜尋的服務。  
