@@ -14,6 +14,8 @@
       href: install/runtime.md
     - name: 支援的 OS 和相依性
       href: install/dependencies.md
+    - name: 移除過時的執行階段及 SDK
+      href: install/remove-runtime-sdk-versions.md
     - name: 管理 .NET 範本
       href: install/templates.md
     - name: macOS Notarization 問題
@@ -36,6 +38,8 @@
           href: install/linux-package-manager-debian10.md
         - name: Debian 9
           href: install/linux-package-manager-debian9.md
+        - name: Fedora 32
+          href: install/linux-package-manager-fedora32.md
         - name: Fedora 31
           href: install/linux-package-manager-fedora31.md
         - name: Fedora 30
@@ -393,8 +397,6 @@
       href: versions/index.md
     - name: .NET Core 版本選取
       href: versions/selection.md
-    - name: 移除過時的執行階段及 SDK
-      href: versions/remove-runtime-sdk-versions.md
 - name: 執行階段識別碼 (RID) 目錄
   href: rid-catalog.md
 - name: 相依性管理與載入

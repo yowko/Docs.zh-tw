@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 04/21/2020
-  ms.openlocfilehash: 7680641385e013711e62a8585149ea204e327c95
-  ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+  ms.openlocfilehash: e1f4da6baefc39281a6dd4a5558d9f961a8f98a5
+  ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/29/2020
-  ms.locfileid: "82507490"
+  ms.lasthandoff: 05/01/2020
+  ms.locfileid: "82624926"
 highlightedContent:
   items:
   - title: 下載 .NET
@@ -98,7 +98,7 @@ conceptualContent:
     - url: core/sdk.md
       itemType: download
       text: 下載 .NET Core SDK
-    - url: https://dotnet.microsoft.com/download
+    - url: core/tools/index.md
       itemType: overview
       text: .NET Core CLI 概觀
     - url: core/porting/index.md
@@ -225,8 +225,8 @@ additionalContent:
         text: .NET Core IoT 程式庫
       - url: https://www.nuget.org/packages/System.Device.Gpio
         text: System.Device.Gpio NuGet 套件
-  - title: API 參考章節
-    summary: 依照您的需要搜尋 .NET API 參考文件。
+  - title: API 及語言參考
+    summary: 搜尋 .NET API 及語言參考文件。
     items:
     - title: .NET Core API 參考
       summary: .NET Core 的 API 參考文件
