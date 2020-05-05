@@ -3,12 +3,12 @@ title: 開始使用語法轉換 (Roslyn API)
 description: 周遊、查詢和查核語法樹狀結構的簡介。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 5045dca839daba1070b34720e72cc9c4f7b94828
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 232fe5fcba35f152dbc3f00b2f2c092b5df0dd35
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240606"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794789"
 ---
 # <a name="get-started-with-syntax-transformation"></a>開始使用語法轉換
 
@@ -30,7 +30,7 @@ ms.locfileid: "78240606"
 
 第一個語法轉換將會示範 Factory 方法。 您會使用 `using System.Collections.Generic;` 陳述式取代 `using System.Collections;` 陳述式。 此範例示範如何使用 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> Factory 方法建立 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> 物件。 針對每種**節點**、**權杖**或 **Trivia**，會有一個建立該型別執行個體的 Factory 方法。 您會透過由下往上撰寫節點的方式來建立語法樹狀結構。 然後，使用您建立的新樹狀結構來取代現有節點，以轉換現有的程式。
 
-啟動 Visual Studio，然後建立新的 C# **獨立程式碼分析工具**專案。 在視覺化工作室中，選擇 **"檔** > **新專案** > **Project**"以顯示新專案對話方塊。 在**視覺化 C#** > **可擴充性**下選擇**獨立代碼分析工具**。 此快速入門有兩個範例專案，因此請將方案命名為 **SyntaxTransformationQuickStart**，並將專案命名為 **ConstructionCS**。 按一下 [確定]****。
+啟動 Visual Studio，然後建立新的 C# **獨立程式碼分析工具**專案。 在 Visual Studio 中，**選擇** > [檔案] [**新增** > **專案**] 以顯示 [新增專案] 對話方塊。 在**Visual c #** > 擴充性下 **，選擇****獨立程式碼分析工具**。 此快速入門有兩個範例專案，因此請將方案命名為 **SyntaxTransformationQuickStart**，並將專案命名為 **ConstructionCS**。 按一下 [確定]  。
 
 此專案使用 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> 類別方法來建構代表 `System.Collections.Generic` 命名空間的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>。
 
@@ -59,7 +59,7 @@ ms.locfileid: "78240606"
 
 [!code-csharp[create the full identifier](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#CreateFullNamespace "Build the System.Collections.Generic identifier")]
 
-重新執行程式，以查看您是否已針對要加入的程式碼建置樹狀結構。
+再次執行程式，以查看您已建立要新增之程式碼的樹狀結構。
 
 ### <a name="create-a-modified-tree"></a>建立已修改的樹狀結構
 
@@ -94,9 +94,9 @@ ms.locfileid: "78240606"
 
 `With*` 與 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 方法提供簡便的方式讓您轉換語法樹狀結構的個別分支。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> 類別會在語法樹狀結構上執行多次轉換。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> 類別是 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType> 的子類別。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> 會將轉換套用到 <xref:Microsoft.CodeAnalysis.SyntaxNode> 的特定型別。 您可以將轉換套用到多種型別的 <xref:Microsoft.CodeAnalysis.SyntaxNode> 物件 (當它們出現在語法樹狀結構中時)。 此快速入門中的第二個目標是建立命令列重構，以移除可以使用型別推斷之處的區域變數宣告中的明確型別。
 
-創建新的 C#**獨立代碼分析工具**專案。 在 Visual Studio 中，以滑鼠右鍵按一下 `SyntaxTransformationQuickStart` 方案節點。 選擇 **"** > **添加新專案**"以顯示 **"新專案"對話方塊**。 在**視覺化 C#** > **可擴充性**下，選擇**獨立代碼分析工具**。 將您的專案命名為 `TransformationCS`，然後按一下 [確定]。
+建立新的 c #**獨立程式碼分析工具**專案。 在 Visual Studio 中，以滑鼠右鍵按一下 `SyntaxTransformationQuickStart` 方案節點。 選擇 [**加入** > **新專案**] 以顯示 [**新增專案] 對話方塊**。 在 [ **Visual c #** > 擴充性]**下，選擇**[**獨立程式碼分析工具**]。 將您的專案命名為 `TransformationCS`，然後按一下 [確定]。
 
-第一個步驟是建立衍生自 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> 的類別以執行轉換。 將新類別檔案加入到專案中。 在視覺化工作室中，選擇 **"專案** > **添加類..."。** 在"**添加新專案"** 對話方塊中`TypeInferenceRewriter.cs`，作為檔案名。
+第一個步驟是建立衍生自 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter> 的類別以執行轉換。 將新類別檔案加入到專案中。 在 Visual Studio 中，選擇 [**專案** > ] [**新增類別**...]。在 [**加入新專案**] 對話方塊`TypeInferenceRewriter.cs`中，輸入做為檔案名。
 
 將下列 using 指示詞加入到 `TypeInferenceRewriter.cs` 檔案中：
 
@@ -174,10 +174,10 @@ Type variable;
 
 您應該會在 `File.WriteAllText` 程式碼下面看到 Squiggle (通知)。 選取燈泡，然後新增所需的 `using System.IO;` 陳述式。
 
-只差一點! 還剩下一個步驟：建立測試 <xref:Microsoft.CodeAnalysis.Compilation>。 因為您完全沒有在此快速入門中使用任何型別推斷，它將會讓您有一個完美的測試案例。 但很可惜，從 C# 專案檔案建立編譯不在此逐步解說的範圍內。 但是，若您仔細依照下列指示，就有希望。 以下列程式碼取代 `CreateTestCompilation` 方法的內容。 它會建立一個測試編譯，根據條件比對此快速入門中所述的專案：
+只差一點! 剩下一個步驟：建立測試<xref:Microsoft.CodeAnalysis.Compilation>。 因為您完全沒有在此快速入門中使用任何型別推斷，它將會讓您有一個完美的測試案例。 但很可惜，從 C# 專案檔案建立編譯不在此逐步解說的範圍內。 但是，若您仔細依照下列指示，就有希望。 以下列程式碼取代 `CreateTestCompilation` 方法的內容。 它會建立一個測試編譯，根據條件比對此快速入門中所述的專案：
 
 [!code-csharp[CreateTestCompilation](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/Program.cs#CreateTestCompilation "Create a test compilation using the code written for this quickstart.")]
 
-祝好運，執行該專案。 在視覺化工作室中，選擇**調試** > **啟動調試**。 Visual Studio 應該會提示您專案中的檔案已變更。 按一 [全部皆是]**** 以重新載入已修改的檔案。 檢查它們。 請注意，即使沒有那些明確與多餘的型別規範，程式碼看起來也非常簡潔。
+祝好運，執行該專案。 在 Visual Studio 中，選擇 [**調試** > **開始調試**]。 Visual Studio 應該會提示您專案中的檔案已變更。 按一 [全部皆是]**** 以重新載入已修改的檔案。 檢查它們。 請注意，即使沒有那些明確與多餘的型別規範，程式碼看起來也非常簡潔。
 
-恭喜！ 您已使用**編譯器 API** 來撰寫自己的重構，以在 C# 專案的所有檔案中搜尋特定語法模式、針對符合這些模式的原始程式碼來分析其語意，並加以轉換。 您現在已經成為正式的重構作者！
+恭喜！ 您已使用**編譯器 API** 來撰寫自己的重構，以在 C# 專案的所有檔案中搜尋特定語法模式、針對符合這些模式的原始程式碼來分析其語意，並加以轉換。 您現在已正式成為重構作者！

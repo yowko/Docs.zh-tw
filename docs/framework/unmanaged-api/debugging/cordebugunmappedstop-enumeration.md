@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a684f7d7-d0c2-4690-b721-639e613f11f8
 topic_type:
 - apiref
-ms.openlocfilehash: 23e168b0f322a580917c3fcfcb767a7d4d4628f6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 772f1f0dee260ad3752b2f89e5fbe0d6bc27b87b
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793878"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795647"
 ---
 # <a name="cordebugunmappedstop-enumeration"></a>CorDebugUnmappedStop 列舉
 指定可在步進器執行程式碼時觸發暫止的未對應程式碼類型。  
@@ -38,9 +38,9 @@ typedef enum CorDebugUnmappedStop {
 } CorDebugUnmappedStop;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|說明|  
 |------------|-----------------|  
 |`STOP_NONE`|請勿在任何類型的未對應程式碼中停止。|  
 |`STOP_PROLOG`|在初構程式碼中停止。|  
@@ -54,13 +54,13 @@ typedef enum CorDebugUnmappedStop {
  使用[ICorDebugStepper：： SetUnmappedStopMask](icordebugstepper-setunmappedstopmask-method.md)方法來設定旗標，以指定分檔器將停止的未對應程式碼。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

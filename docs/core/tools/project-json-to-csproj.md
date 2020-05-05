@@ -3,12 +3,12 @@ title: project.json 與 csproj 比較
 description: 查看 project.json 與 csproj 項目的對應。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: feaa7e9cde7e1aa4dfe94d699b14a018fc728f27
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451101"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794619"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
 
@@ -30,7 +30,7 @@ ms.locfileid: "77451101"
 
 ## <a name="common-top-level-properties"></a>常見的最上層屬性
 
-### <a name="name"></a>NAME
+### <a name="name"></a>name
 
 ```json
 {
@@ -52,7 +52,7 @@ ms.locfileid: "77451101"
 如果 `buildOptions\outputName` 屬性定義於 project.json，則 `<AssemblyName>` 會有與 `<PackageId>` 不同的值。
 如需詳細資訊，請參閱[其他常見的建置選項](#other-common-build-options)。
 
-### <a name="version"></a>version
+### <a name="version"></a>版本
 
 ```json
 {
@@ -486,7 +486,7 @@ And it's really great!</Description>
 ```
 
 MSBuild 中的 `owners` 項目沒有對應項。
-對於`summary`，可以使用 MSBuild`<Description>`屬性，即使 的值`summary`不會自動遷移到該屬性，因為該屬性對應到元素。 [`description`](#other-common-root-level-options)
+針對`summary`，您可以使用 MSBuild `<Description>`屬性，即使的值`summary`不會自動遷移至該屬性，因為該屬性會對應至[`description`](#other-common-root-level-options)專案。
 
 ## <a name="scripts"></a>指令碼
 
@@ -673,6 +673,6 @@ MSBuild 中的 `owners` 項目沒有對應項。
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [CLI 中變更的高階概觀](../tools/cli-msbuild-architecture.md)
+- [CLI 中變更的高階概觀](cli-msbuild-architecture.md)

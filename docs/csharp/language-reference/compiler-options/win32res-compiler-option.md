@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 39f02c4c2e060c4be40002a2f48b0da31004a9ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bb1614fcf28c62a9000c9b96af2f046f329fb1e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606205"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794373"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (C# 編譯器選項)
 **-win32res** 選項會將 Win32 資源插入至輸出檔案中。  
@@ -30,11 +30,11 @@ ms.locfileid: "69606205"
  您想要新增至輸出檔的資源檔。  
   
 ## <a name="remarks"></a>備註  
- 您可以使用[資源編譯器](../../language-reference/compiler-options/resource-compiler-option.md)建立 Win32 資源檔。 資源編譯器是在編譯 Visual C++ 程式時叫用，而 .res 檔案則是從 .rc 檔案建立。  
+ 您可以使用[資源編譯器](resource-compiler-option.md)建立 Win32 資源檔。 資源編譯器是在編譯 Visual C++ 程式時叫用，而 .res 檔案則是從 .rc 檔案建立。  
   
  Win32 資源可以包含版本或點陣圖 (圖示) 資訊，這項資訊可以協助您在 [檔案總管] 中識別應用程式。 如果您未指定 **-win32res**，編譯器會根據組件版本產生版本資訊。  
   
- 請參閱[-連結資源](./linkresource-compiler-option.md)（要引用）或[-資源](./resource-compiler-option.md)（附加）.NET 框架資源檔。  
+ 請參閱[-linkresource](./linkresource-compiler-option.md) （以參考）或[-resource](./resource-compiler-option.md) （以附加） .NET Framework 資源檔。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
@@ -51,7 +51,7 @@ ms.locfileid: "69606205"
 csc -win32res:rf.res in.cs  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [C# 編譯器選項](./index.md)
+- [C # 編譯器選項](./index.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)

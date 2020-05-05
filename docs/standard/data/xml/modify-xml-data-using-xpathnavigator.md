@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
-ms.openlocfilehash: 906de1ded4961b7c67d48a010555d139df97cded
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1770eb08055fd244bd0f220fed6d1641c35174fd
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710631"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794347"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>使用 XPathNavigator 修改 XML 資料
 <xref:System.Xml.XPath.XPathNavigator> 類別提供一組可用於修改 XML 文件中節點及值的方法。 為了使用這些方法，<xref:System.Xml.XPath.XPathNavigator> 物件必須是可編輯的，也就是說，它的 <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 屬性必須為 `true`。  
@@ -225,7 +225,7 @@ Console.WriteLine(navigator.OuterXml);
 ```xml  
 <root xmlns:a="http://www.contoso.com">  
     <parent a:parent-id="1234" xmlns:a="http://www.contoso.com/parent-id">  
-        <a:child xmlns:a="http://www.contoso.com/">  
+        <a:child xmlns:a="http://www.contoso.com/" />  
     </parent>  
 </root>  
 ```  
@@ -246,7 +246,7 @@ Console.WriteLine(navigator.OuterXml);
 ## <a name="saving-an-xml-document"></a>儲存 XML 文件  
  儲存對 <xref:System.Xml.XmlDocument> 物件所進行的變更 (由本主題中說明的編輯方法所導致) 是使用 <xref:System.Xml.XmlDocument> 類別的方法來執行。 如需儲存 <xref:System.Xml.XmlDocument> 物件之變更的詳細資訊，請參閱[儲存與寫入文件](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

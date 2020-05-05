@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 48ab765db7c839ed0dd14df5e6b30f5bd6c0d29b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8082dbd7398b6634b68f1dd2887cd55d6798a5d9
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173532"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795153"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>使用存取範圍層級的限制 (C# 參考)
 
@@ -22,18 +22,18 @@ public class MyClass: BaseClass {...} // Error
 
 下表摘要說明所宣告存取範圍層級的限制。
 
-|Context|備註|
+|內容|備註|
 |-------------|-------------|
-|[類](../../programming-guide/classes-and-structs/classes.md)|類別類型的直接基底類別至少必須可以像類別類型本身一樣地存取。|
+|[類別](../../programming-guide/classes-and-structs/classes.md)|類別類型的直接基底類別至少必須可以像類別類型本身一樣地存取。|
 |[介面](../../programming-guide/interfaces/index.md)|介面類型的明確基底介面至少必須可以像介面類型本身一樣地存取。|
 |[委派](../../programming-guide/delegates/index.md)|委派類型的傳回類型和參數類型至少必須可以像委派類型本身一樣地存取。|
 |[常數](../../programming-guide/classes-and-structs/constants.md)|常數的類型至少必須可以像常數本身一樣地存取。|
-|[領域](../../programming-guide/classes-and-structs/fields.md)|欄位的類型至少必須可以像欄位本身一樣地存取。|
+|[欄位](../../programming-guide/classes-and-structs/fields.md)|欄位的類型至少必須可以像欄位本身一樣地存取。|
 |[方法](../../programming-guide/classes-and-structs/methods.md)|方法的傳回類型和參數類型至少必須可以像方法本身一樣地存取。|
 |[屬性](../../programming-guide/classes-and-structs/properties.md)|屬性的類型至少必須可以像屬性本身一樣地存取。|
 |[事件](../../programming-guide/events/index.md)|事件的類型至少必須可以像事件本身一樣地存取。|
 |[索引子](../../programming-guide/indexers/index.md)|索引子的類型和參數類型至少必須可以像索引子本身一樣地存取。|
-|[運營商](../operators/index.md)|運算子的傳回類型和參數類型至少必須可以像運算子本身一樣地存取。|
+|[操作員](../operators/index.md)|運算子的傳回類型和參數類型至少必須可以像運算子本身一樣地存取。|
 |[建構函式](../../programming-guide/classes-and-structs/constructors.md)|建構函式的參數類型至少必須可以像建構函式本身一樣地存取。|
 
 ## <a name="example"></a>範例
@@ -107,16 +107,16 @@ public class A
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [C# 參考](../../language-reference/index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
-- [C# 關鍵字](../../language-reference/keywords/index.md)
-- [存取修飾詞](../../language-reference/keywords/access-modifiers.md)
-- [存取範圍定義域](../../language-reference/keywords/accessibility-domain.md)
-- [協助工具級別](../../language-reference/keywords/accessibility-levels.md)
+- [C # 參考](../index.md)
+- [C # 程式設計指南](../../programming-guide/index.md)
+- [C # 關鍵字](index.md)
+- [存取修飾詞](access-modifiers.md)
+- [協助工具定義域](accessibility-domain.md)
+- [協助工具層級](accessibility-levels.md)
 - [存取修飾詞](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [public](../../language-reference/keywords/public.md)
-- [私人](../../language-reference/keywords/private.md)
-- [保護](../../language-reference/keywords/protected.md)
-- [內部](../../language-reference/keywords/internal.md)
+- [公立](public.md)
+- [私人](private.md)
+- [受保護](protected.md)
+- [內部](internal.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - native API reference [.NET Framework]
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
-ms.openlocfilehash: f7dd78b889129998dee31a22f5dd23325613b8ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9b8671f2bd278e9e6153476d742f43150a4f6e3e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73092019"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795608"
 ---
 # <a name="unmanaged-api-reference"></a>Unmanaged API 參考
 本節包含與 Managed 程式碼相關之應用程式 (例如執行階段主機、編譯器、反組譯工具、模糊化工具、偵錯工具和分析工具) 可用的 Unmanaged API 的資訊。  
@@ -39,19 +39,19 @@ ms.locfileid: "73092019"
  [診斷符號存放區](./diagnostics/index.md)  
  描述診斷符號儲存 API，其可讓編譯器產生供偵錯工具使用的符號資訊。  
   
- [融合](./fusion/index.md)  
+ [合成](./fusion/index.md)  
  描述融合 API，其可讓執行階段主機存取應用程式資源的屬性，以為應用程式找出這些資源的正確版本。  
   
  [裝載](./hosting/index.md)  
  描述裝載 API，其可讓 Unmanaged 主機將 CLR 整合至其應用程式。  
   
- [元](./metadata/index.md)  
+ [中繼資料](./metadata/index.md)  
  描述中繼資料 API，其可讓編譯器之類的用戶端無需由 CLR 載入類型，即可產生或存取元件的中繼資料。  
   
- [分析](./profiling/index.md)  
+ [程式碼剖析](./profiling/index.md)  
  描述分析 API，其可讓分析工具透過 CLR 監視程式的執行。  
   
- [強命名](./strong-naming/index.md)  
+ [強式命名](./strong-naming/index.md)  
  描述強式命名 API，其可讓用戶端管理組件的強式命名簽署。  
 
  [WMI 和效能計數器](wmi/index.md)  
@@ -61,4 +61,4 @@ ms.locfileid: "73092019"
  描述組件轉換至類型程式庫的程序期間，類型程式庫匯出工具 (Tlbexp.exe) 所使用的兩個 Helper 函式和介面。  
   
 ## <a name="related-sections"></a>相關章節  
- [開發指南](../../../docs/framework/development-guide.md)  
+ [開發指南](../development-guide.md)  

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2d991a7835d22af2c780b020d6884f626908665e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710748"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796167"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>從 XML 文件推斷結構描述
 本主題說明如何使用 <xref:System.Xml.Schema.XmlSchemaInference> 類別，從 XML 文件結構推斷 XML 結構描述定義語言 (XSD) 結構描述。  
@@ -29,7 +29,7 @@ ms.locfileid: "75710748"
     <child>One</child>  
     <child>Two</child>  
 </parent>  
-<parent attribute1="A">  
+<parent attribute1="A" />
 ```  
   
  在上述範例中，`attribute1` 處理序發現 `6` 屬性的值為 <xref:System.Xml.Schema.XmlSchemaInference> 時，會假設此屬性的型別為 `xs:unsignedByte`。 `parent` 處理序發現第二個 <xref:System.Xml.Schema.XmlSchemaInference> 項目時，即會將型別修改為 `xs:string` 而放寬條件約束，因為 `attribute1` 屬性的值此時為 `A`。 同樣地，所有 `minOccurs` 項目中在結構描述內進行推斷的 `child` 屬性，也會放寬為 `minOccurs="0"`，因為第二個父項目沒有項目子系。  
@@ -80,7 +80,7 @@ ms.locfileid: "75710748"
 ## <a name="schemas-that-cannot-be-refined"></a>無法進一步調整的結構描述  
  有些 W3C XML 結構描述建構在指定要調整的型別時會擲回例外狀況，則 XML 結構描述定義語言 (XSD) 結構描述 <xref:System.Xml.Schema.XmlSchemaInference> 處理序無法處理這類的結構描述。 最上層建構元不屬於序列的複雜型別即是一例。 在結構描述物件模型 (SOM) 中，它會對應至 <xref:System.Xml.Schema.XmlSchemaComplexType> 屬性不屬於 <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> 之執行個體的 <xref:System.Xml.Schema.XmlSchemaSequence>。  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
 - [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

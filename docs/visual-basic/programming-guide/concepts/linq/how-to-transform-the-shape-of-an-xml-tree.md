@@ -1,16 +1,16 @@
 ---
-title: 如何：轉換 XML 樹狀的型態
+title: 作法：轉換 XML 樹狀結構的組織結構
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-ms.openlocfilehash: 67ffd5f50572c0deba75c664ffd0e12ecfabf730
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 24cf02d84b498fc4b41238b1adaf7316cb139a10
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332411"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796102"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>如何：轉換 XML 樹狀結構的圖形（Visual Basic）
-XML 文件的「組織結構」會參考其項目名稱、屬性名稱，及其階層的特性。  
+XML 文件的「組織結構」** 會參考其項目名稱、屬性名稱，及其階層的特性。  
   
  有時候您必須變更 XML 文件的組織結構。 例如，您可能想要將現有的 XML 文件傳送到需要不同項目和屬性名稱的其他系統。 您可以瀏覽文件，在必要時刪除並重新命名項目，但使用功能結構會使程式碼更容易讀取與維護。 如需功能結構的詳細資訊，請參閱[功能性結構（LINQ to XML）（Visual Basic）](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)。  
   
@@ -56,7 +56,7 @@ Console.WriteLine(newCustOrd)
  此程式碼會產生下列輸出：  
   
 ```xml  
-        <Root>  
+<Root>  
 <Customer CustomerID="GREAL">  
   <CompanyName>Great Lakes Food Market</CompanyName>  
   <ContactName>Howard Snyder</ContactName>  
@@ -86,7 +86,8 @@ Console.WriteLine(newCustOrd)
   </FullAddress>  
   <Orders />  
 </Customer>  
-. . .  
+...
+</Root>
 ```  
   
 ## <a name="example"></a>範例  
