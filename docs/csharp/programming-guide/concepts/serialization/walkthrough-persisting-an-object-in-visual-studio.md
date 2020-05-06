@@ -1,12 +1,12 @@
 ---
 title: 逐步解說：使用 C# 保存物件
 ms.date: 04/26/2018
-ms.openlocfilehash: 85c5d1b711180eda5734d5860d996242c6bc89d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bbe239008629d687084af7e28a75fa68560ca0ab
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167566"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796063"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>逐步解說：使用 C\# 保存物件
 
@@ -20,7 +20,7 @@ ms.locfileid: "79167566"
 > [!IMPORTANT]
 > 這個範例會使用二進位格式檔案來儲存資料。 這些格式不適用於敏感性資料，例如密碼或信用卡資訊。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - 若要建置並執行，請安裝 [.NET Core SDK](https://dotnet.microsoft.com/download)。
 
@@ -99,7 +99,7 @@ New customer value: Henry Clay
 
 您現在可以再次建置並執行應用程式。 第一次執行時，請注意利率會從 7.5 開始，然後變更為 7.1。 關閉應用程式，然後再重新執行。 現在，應用程式會列印訊息，表示它已讀取儲存的檔案，而利率即使在變更它的程式碼之前也是 7.1。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [序列化 (C#)](index.md)
-- [C# 程式設計指南](../..//index.md)
+- [C # 程式設計指南](../../index.md)

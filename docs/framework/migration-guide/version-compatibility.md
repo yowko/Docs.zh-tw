@@ -1,5 +1,5 @@
 ---
-title: .NET 架構中的版本相容性
+title: .NET Framework 中的版本相容性
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 2e268753bf5941e9d28ee2bdd82ce77016ddf01a
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: c3bc92b89a46fc947b4d7e67644930374eeab2e4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102979"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795998"
 ---
 # <a name="version-compatibility"></a>版本相容性
 
-回溯相容性表示針對特定平台版本開發的應用程式將會在該平台的較新版本上執行。 .NET Framework 嘗試最大化向後相容性:為 .NET Framework 的一個版本編寫的原始程式碼應編譯於 .NET Framework 的更高版本,而在 .NET Framework 的一個版本上運行的二進位檔案應在 .NET Framework 的更高版本中的行為相同。
+回溯相容性表示針對特定平台版本開發的應用程式將會在該平台的較新版本上執行。 .NET Framework 嘗試最大化回溯相容性：針對一個 .NET Framework 版本所撰寫的原始程式碼應該在較新版本的 .NET Framework 上編譯，而在某個 .NET Framework 版本上執行的二進位檔，其行為應該會與更新版本的 .NET Framework 相同。
 
-## <a name="version-compatibility-for-apps"></a><a name="Apps"></a>套用的版本相容性
+## <a name="version-compatibility-for-apps"></a><a name="Apps"></a>應用程式的版本相容性
 
-默認情況下,應用在為其構建的.NET框架版本上運行。 如果該版本不存在，且應用程式組態檔不會定義支援的版本，則可能會發生 .NET Framework 初始化錯誤。 在此例中，嘗試執行應用程式的作業將會失敗。
+根據預設，應用程式會在其所建立的 .NET Framework 版本上執行。 如果該版本不存在，且應用程式組態檔不會定義支援的版本，則可能會發生 .NET Framework 初始化錯誤。 在此例中，嘗試執行應用程式的作業將會失敗。
 
-要定義應用運行的特定版本,請向應用的設定檔中添加一個或多個[\<受支援的 Runtime>](../configure-apps/file-schema/startup/supportedruntime-element.md)元素。 每一個 `<supportedRuntime>` 項目都會列出支援的執行階段版本，最先指定的是最優先的版本，而最後指定的則是優先順序最低的版本。
+若要定義應用程式執行所在的特定版本，請將一或多個[ \<supportedruntime>>](../configure-apps/file-schema/startup/supportedruntime-element.md)元素新增至應用程式的設定檔。 每一個 `<supportedRuntime>` 項目都會列出支援的執行階段版本，最先指定的是最優先的版本，而最後指定的則是優先順序最低的版本。
 
 ```xml
 <configuration>
@@ -33,7 +33,7 @@ ms.locfileid: "82102979"
 </configuration>
 ```
 
-如需詳細資訊，請參閱[如何：設定應用程式以支援 .NET Framework 4 或 4.x](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)。
+如需詳細資訊，請參閱[如何：設定應用程式以支援 .NET Framework 4 或 4.x](how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)。
 
 ## <a name="version-compatibility-for-components"></a>元件的版本相容性
 
@@ -49,9 +49,9 @@ ms.locfileid: "82102979"
 
 如果您的應用程式或元件在 .NET Framework 4.5 (包括其點版本，.NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2 或 4.8) 上無法如預期運作，請使用下列檢查清單：
 
-- 如果應用已開發為以 .NET 框架 4.0 開頭的任何版本的 .NET Framework 上運行,請參閱[應用程式相容性](application-compatibility.md),以在目標 .NET Framework 版本和應用運行的版本之間生成更改清單。
+- 如果您的應用程式是在從 .NET Framework 4.0 開始的任何 .NET Framework 版本上執行，請參閱[應用程式相容性](application-compatibility.md)，以產生目標 .NET Framework 版本與執行應用程式的版本之間的變更清單。
 
-- 如果您有 .NET Framework 3.5 應用程式，另請參閱 [.NET Framework 4 移轉問題](../migration-guide/net-framework-4-migration-issues.md)。
+- 如果您有 .NET Framework 3.5 應用程式，另請參閱 [.NET Framework 4 移轉問題](net-framework-4-migration-issues.md)。
 
 - 如果您有 .NET Framework 2.0 應用程式，另請參閱 [.NET Framework 3.5 SP1 中的變更](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10))。
 
@@ -65,12 +65,12 @@ ms.locfileid: "82102979"
 
 ## <a name="side-by-side-execution"></a>並存執行
 
-如果找不到適合您的問題的解決方法,請記住.NET Framework 4.5(或其其中一個點版本)與版本 1.1、2.0 和 3.5 並行運行,並且是替換版本 4 的就地更新。 對於針對版本 1.1、2.0 和 3.5 的應用,可以在目標電腦上安裝適當的版本 .NET Framework,以在其最佳環境中運行應用。 如需並存執行的詳細資訊，請參閱[並存執行](../deployment/side-by-side-execution.md)。
+如果您找不到問題的適當因應措施，請記住 .NET Framework 4.5 （或其小數點版本之一）與版本1.1、2.0 和3.5 並存執行，而且是取代第4版的就地更新。 針對以1.1、2.0 和3.5 版為目標的應用程式，您可以在目的電腦上安裝適當版本的 .NET Framework，以在其最佳環境中執行應用程式。 如需並存執行的詳細資訊，請參閱[並存執行](../deployment/side-by-side-execution.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [新功能](../whats-new/index.md)
 - [類別庫中的過時功能](../whats-new/whats-obsolete.md)
-- [應用程式相容性](../migration-guide/application-compatibility.md)
-- [.NET 框架官方支援政策](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
-- [.NET 框架 4 移轉問題](../migration-guide/net-framework-4-migration-issues.md)
+- [應用程式相容性](application-compatibility.md)
+- [.NET Framework 官方支援原則](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
+- [.NET Framework 4 個遷移問題](net-framework-4-migration-issues.md)

@@ -2,26 +2,26 @@
 title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
-ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 81ef8106add757cf3c83aa7dc130f5474b936461
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79399319"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794698"
 ---
 # <a name="how-to-c"></a>操作說明 (C#)
 
-在 C# 指南的"如何"部分中，您可以快速找到常見問題的解答。 在某些形況下，文章可能會列在多個章節內。 這是因為我們希望使用者能從多個搜尋管道輕鬆找到這些文章。
+在 c # 指南的 how to 區段中，您可以找到常見問題的快速解答。 在某些形況下，文章可能會列在多個章節內。 這是因為我們希望使用者能從多個搜尋管道輕鬆找到這些文章。
 
 ## <a name="general-c-concepts"></a>一般 C# 概念
 
-有幾個提示和技巧是常見的 C# 開發人員實踐：
+有幾個秘訣和訣竅是常見的 c # 開發人員作法：
 
 - [使用物件初始設定式將物件初始化](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md)。
 - [了解向方法傳遞結構及類別的不同](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
 - [使用運算子多載](../language-reference/operators/operator-overloading.md)。
-- [實現並調用自訂擴充方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
-- 甚至 C# 程式師可能也想[使用`My`Visual Basic 中的命名空間](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
+- [執行並呼叫自訂擴充方法](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
+- 甚至 c # 程式設計人員可能會想要[使用來自 Visual Basic 的`My`命名空間](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
 - [使用擴充方法建立 `enum` 類型的新方法](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。
 
 ### <a name="class-and-struct-members"></a>類別和結構成員
@@ -63,7 +63,7 @@ ms.locfileid: "79399319"
 - [將字串轉換為 `DateTime`](../../standard/base-types/parsing-datetime.md)。
 - [將位元組陣列轉換為 int](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md)。
 - [將字串轉換為數字](../programming-guide/types/how-to-convert-a-string-to-a-number.md)。
-- [使用模式比對，以 `as` 和 `is` 運算子安全地轉換至其他類型](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)。
+- [使用模式比對，以 `as` 和 `is` 運算子安全地轉換至其他類型](safely-cast-using-pattern-matching-is-and-as-operators.md)。
 - [定義自訂型別轉換](../language-reference/operators/user-defined-conversion-operators.md).
 - [決定類型是不是可為 Null 的實值型別](../language-reference/builtin-types/nullable-value-types.md#how-to-identify-a-nullable-value-type)。
 - [在可為 Null 與不可為 Null 的實值型別間轉換](../language-reference/builtin-types/nullable-value-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type)。

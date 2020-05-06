@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c3f1fcda8a8a6abc58d35bf37e51485bb3590fa3
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714517"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794633"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>在 .NET Core 上使用 Microsoft XML 序列化程式產生器
 
@@ -26,11 +26,11 @@ ms.locfileid: "75714517"
 
 [Microsoft.XmlSerializer.Generator NuGet 套件](https://www.nuget.org/packages/Microsoft.XmlSerializer.Generator)類似於 [XML 序列化程式產生器 (sgen.exe)](../../standard/serialization/xml-serializer-generator-tool-sgen-exe.md)，是 .NET Core 和 .NET Standard 專案的對等項目。 此套件能夠為組件中包含的類型建立 XML 序列化組件，可在將這些類型的物件序列化或還原序列化時，使用 <xref:System.Xml.Serialization.XmlSerializer> 來提升 XML 序列化的啟動效能。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 若要完成本教學課程：
 
-- [.NET 核心 2.1 SDK](https://dotnet.microsoft.com/download)或更高版本。
+- [.Net Core 2.1 SDK](https://dotnet.microsoft.com/download)或更新版本。
 - 您慣用的程式碼編輯器。
 
 > [!TIP]
@@ -50,7 +50,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>在 MyApp 專案中新增 Microsoft.XmlSerializer.Generator 套件的參考
 
-使用[`dotnet add package`](../tools//dotnet-add-package.md)命令在專案中增加參考。
+使用[`dotnet add package`](../tools/dotnet-add-package.md)命令，在您的專案中加入參考。
 
 輸入：
 
@@ -64,7 +64,7 @@ dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 
 在文字編輯器中，開啟 *MyApp.csproj*。
 
-運行該[`dotnet add package`](../tools//dotnet-add-package.md)命令後，以下行將添加到*MyApp.csproj*專案檔案中：
+執行[`dotnet add package`](../tools/dotnet-add-package.md)命令之後，會將下列幾行新增至您的*MyApp .csproj*專案檔：
 
  ```xml
  <ItemGroup>
@@ -112,7 +112,7 @@ dotnet run
 ```
 
 > [!NOTE]
-> [`dotnet run`](../tools/dotnet-run.md)調用[`dotnet build`](../tools/dotnet-build.md)以確保生成目標已生成，然後調用`dotnet <assembly.dll>`以運行目標應用程式。
+> [`dotnet run`](../tools/dotnet-run.md)呼叫[`dotnet build`](../tools/dotnet-build.md)以確保組建目標已建立，然後呼叫`dotnet <assembly.dll>`以執行目標應用程式。
 
 > [!IMPORTANT]
 > 本教學課程中所示用於執行應用程式的命令和步驟，僅供開發階段使用。 準備好部署應用程式之後，請查看不同的 .NET Core 應用程式[部署策略](../deploying/index.md)和 [`dotnet publish`](../tools/dotnet-publish.md) 命令。
@@ -131,5 +131,5 @@ dotnet run
 ## <a name="related-resources"></a>相關資源
 
 - [XML 序列化簡介](../../standard/serialization/introducing-xml-serialization.md)
-- [如何使用 Xml 序列化器 （C#） 序列化](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [如何使用 XmlSerializer 進行序列化（c #）](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
 - [如何：使用 XmlSerializer 進行序列化 (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

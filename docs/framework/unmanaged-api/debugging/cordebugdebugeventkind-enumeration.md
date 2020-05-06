@@ -10,15 +10,15 @@ api_type:
 ms.assetid: 6075a6cd-97e6-4472-a090-0dd14860d1f3
 topic_type:
 - apiref
-ms.openlocfilehash: de4ac1f39ea9cfb4b616bd4e2c85e5de530dbb0b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7db7c9e17d87b91e09d5d010d40431cba5385df
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132223"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795985"
 ---
 # <a name="cordebugdebugeventkind-enumeration"></a>CorDebugDebugEventKind 列舉
-表示[DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md)方法解碼其資訊的事件種類。  
+表示[DecodeEvent](icordebugprocess6-decodeevent-method.md)方法解碼其資訊的事件種類。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,9 +33,9 @@ typedef enum CorDebugDebugEventKind {
 } CorDebugRecordFormat;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|成員|描述|  
+|member|說明|  
 |------------|-----------------|  
 |`DEBUG_EVENT_KIND_MODULE_LOADED`|模組載入事件。|  
 |`DEBUG_EVENT_KIND_MODULE_UNLOADED`|模組卸載事件。|  
@@ -45,20 +45,20 @@ typedef enum CorDebugDebugEventKind {
 |`DEBUG_EVENT_KIND_MANAGED_EXCEPTION_UNHANDLED`|未處理的例外狀況。|  
   
 ## <a name="remarks"></a>備註  
- 呼叫[ICorDebugDebugEvent：： GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md)方法會傳回 `CorDebugDebugEventKind` 列舉的成員。  
+ `CorDebugDebugEventKind`列舉的成員會藉由呼叫[ICorDebugDebugEvent：： GetEventKind](icordebugdebugevent-geteventkind-method.md)方法來傳回。  
   
 > [!NOTE]
 > 這個列舉僅適用於 .NET Native 偵錯案例。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 
-- [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [偵錯列舉](debugging-enumerations.md)
