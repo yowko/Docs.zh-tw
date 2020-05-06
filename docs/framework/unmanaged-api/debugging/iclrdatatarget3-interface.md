@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d2711bdf-64b3-404c-a0c3-01ba4907f703
 topic_type:
 - apiref
-ms.openlocfilehash: f7635dc3fad9b3de30fa052c7d2e67a7e6953fb3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: af944a9c2bb04f37b06f27cfbe38e23c9613d768
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789049"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860410"
 ---
 # <a name="iclrdatatarget3-interface"></a>ICLRDataTarget3 介面
 [ICLRDataTarget2](iclrdatatarget2-interface.md)的子類別，可提供例外狀況資訊的存取權。  
@@ -32,13 +32,13 @@ ms.locfileid: "76789049"
  API 用戶端 (也就是偵錯工具) 必須針對適合的特定目標處理序實作這個介面。 例如，即時處理序的實作與記憶體傾印的實作不同。 目標可能不支援修改其記憶體區域。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** ClrData .idl，ClrData。h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
+ **.NET Framework 版本：**[!INCLUDE[v451_update](../../../../includes/net-current-v451-nov-plus.md)]  
   
 ## <a name="see-also"></a>請參閱
 

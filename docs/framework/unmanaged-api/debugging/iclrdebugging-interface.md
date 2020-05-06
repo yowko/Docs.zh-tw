@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 429d8fce-b1b1-49d7-895c-28c1c1aa2dbd
 topic_type:
 - apiref
-ms.openlocfilehash: 9a768535c3bf69b5127777de4cee27054943091d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a3d4297e3b16dd1637e6293dbf7f04d4fbeda50f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793634"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860391"
 ---
 # <a name="iclrdebugging-interface"></a>ICLRDebugging 介面
 提供處理載入及卸載模組以進行偵錯的方法。  
@@ -32,16 +32,16 @@ ms.locfileid: "76793634"
 |[CanUnloadNow 方法](iclrdebugging-canunloadnow-method.md)|判斷[ICLRDebuggingLibraryProvider](iclrdebugginglibraryprovider-interface.md)介面所提供的程式庫是否仍在使用中，或是否可以卸載。|  
   
 ## <a name="remarks"></a>備註  
- 您可以使用[CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)函數來取得 `ICLRDebugging` 介面的實例。  
+ 您可以使用[CLRCreateInstance](../hosting/clrcreateinstance-function.md)函數來取得`ICLRDebugging`介面的實例。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

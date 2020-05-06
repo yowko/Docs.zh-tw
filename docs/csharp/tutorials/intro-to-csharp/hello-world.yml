@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 77180064f810cf70b1ec0ef3d72bbd9005b78a47
-  ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+  ms.openlocfilehash: 025b3e0fcaf693be00f1ca396b92617d6faf31aa
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: MT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 04/30/2020
-  ms.locfileid: "82595906"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860975"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,11 +38,6 @@ items:
 
 
     讓我們繼續探索。 本課程的其餘部分會探索使用 `string` 型別，它代表 C# 中的文字。 就像 `Console` 型別，`string` 型別也具有方法。 `string` 方法可以處理文字。
-
-
-    > [!NOTE]
-
-    > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - title: 宣告和使用變數
   durationInMinutes: 3
   content: >
@@ -119,11 +114,6 @@ items:
 
 
     再次選取 [**執行**] 以查看結果。 訊息應該是 "Hello Maira"，而非 "Hello {aFriend}"。
-
-
-    > [!NOTE]
-
-    > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - title: 處理字串
   durationInMinutes: 5
   content: >
@@ -159,11 +149,6 @@ items:
     > [!TIP]
 
     > 這是您自行探索的好時機。 您已學到 `Console.WriteLine()` 將文字寫至螢幕。 您已學到如何宣告變數，以及將字串串連在一起。 在互動式視窗中實驗。 視窗具有稱為 **IntelliSense** 的功能，這個功能會提供可執行的動作建議給您。 在 `firstFriend` 中的 `d` 後面輸入 `.`。 您會看到您可以使用的屬性和方法建議清單。
-
-
-    > [!NOTE]
-
-    > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - title: 使用字串完成更多工作
   durationInMinutes: 5
   content: >
@@ -231,11 +216,6 @@ items:
     Console.WriteLine(sayHello.ToLower());
 
     ```
-
-
-    > [!NOTE]
-
-    > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - title: 搜尋字串
   durationInMinutes: 10
   content: >
@@ -268,11 +248,6 @@ items:
 
 
     如果開頭為 "You" 且結尾為 "hello"，則應該會取得 `true`，如果開頭或結尾為 "goodbye"，則為 false。
-
-
-    > [!NOTE]
-
-    > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - title: 完成挑戰
   durationInMinutes: 3
   content: >
@@ -293,11 +268,6 @@ items:
     Console.WriteLine(songLyrics.EndsWith("goodbye"));
 
     ```
-
-
-    > [!NOTE]
-
-    > 此線上程式碼撰寫體驗仍處於預覽模式。 如果您遇到問題，請在 [dotnet/try 存放庫](https://github.com/dotnet/try/issues) \(英文\) 中回報。
 - content: >-
     您已經完成 "Hello C#" 的 C# 教學課程簡介。 您可以在下方選取 [ **c # 中的數位**] 連結以開始下一個互動式教學課程，或者您可以造訪[.net 網站](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)下載 .NET Core SDK、在您的電腦上建立專案，並繼續撰寫程式碼。 「後續步驟」一節會帶您回到這些教學課程。
 

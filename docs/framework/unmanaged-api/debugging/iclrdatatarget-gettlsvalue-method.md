@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d8a7730-edc9-4728-898f-41b219cf5a28
 topic_type:
 - apiref
-ms.openlocfilehash: d4e7c055480ea611357d5d3e18ac4306acf4d0b0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 141dc8632812ab4a2ce82864cde56337025baa28
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785411"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860579"
 ---
 # <a name="iclrdatatargetgettlsvalue-method"></a>ICLRDataTarget::GetTLSValue 方法
 從目標進程中指定之執行緒的執行緒區域儲存區（TLS）取得值。 這個方法是由 common language runtime （CLR）資料存取服務呼叫。  
@@ -43,19 +43,19 @@ HRESULT GetTLSValue (
  在位置的索引。 這個值必須是指定之執行緒本機存放區中的有效索引。  
   
  `value`  
- 脫銷`CLRDATA_ADDRESS` 值的指標，指定從指定的 TLS 位置傳回的值。  
+ 脫銷`CLRDATA_ADDRESS`值的指標，指定從指定的 TLS 位置傳回的值。  
   
 ## <a name="remarks"></a>備註  
  此方法是由偵錯應用程式的作者來實作。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** ClrData .idl，ClrData。h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

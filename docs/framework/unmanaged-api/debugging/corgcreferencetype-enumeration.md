@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: 17d47b6242bb12ff5ca3cfbde3e4ec183b9c19fc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d156f103c3812c91da380e722a1c6c95d621df4c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793868"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860925"
 ---
 # <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 列舉
 識別要進行記憶體回收的物件來源。  
@@ -46,7 +46,7 @@ typedef enum {
 } CorGCReferenceType  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |成員名稱|描述|  
 |-----------------|-----------------|  
@@ -65,20 +65,20 @@ typedef enum {
 |`CorHandleAll`|傳回控制碼資料表中的所有參考。 此值僅供[ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)方法使用。|  
   
 ## <a name="remarks"></a>備註  
- `CorGCReferenceType` 列舉的使用方式如下：  
+ 列舉`CorGCReferenceType`的用途如下：  
   
-- 做為[COR_GC_REFERENCE](cor-gc-reference-structure.md)結構的 [`type`] 欄位的值，它會指出參考或控制碼的來源。  
+- 做為 COR_GC_REFERENCE 結構之`type`欄位的值[COR_GC_REFERENCE](cor-gc-reference-structure.md) ，它會指出參考或控制碼的來源。  
   
-- 做為[ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)方法的 `types` 引數，它會指定要包含在列舉中的控制碼類型。  
+- 做為`types` [ICorDebugProcess5：： EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)方法的引數，它會指定要包含在列舉中的控制碼類型。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

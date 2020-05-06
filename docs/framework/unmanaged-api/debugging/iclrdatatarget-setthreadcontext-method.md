@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-ms.openlocfilehash: d76a907434b12b85aaedeef169390ec6f0df724a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b8c4b4e585bba4df39a743273221f38ce14a9b9d
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179120"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860527"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext 方法
-設置目標進程中指定執行緒的當前上下文。 此方法由通用語言運行時 （CLR） 資料訪問服務調用。  
+設定目標進程中指定之執行緒的目前內容。 這個方法是由 common language runtime （CLR）資料存取服務呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,28 +38,28 @@ HRESULT SetThreadContext (
   
 ## <a name="parameters"></a>參數  
  `threadID`  
- [在]目標進程中線程的作業系統識別碼。  
+ 在目標進程中線程的作業系統識別碼。  
   
  `contextSize`  
- [在]上下文的大小。  
+ 在內容的大小。  
   
  `context`  
- [在]指向包含上下文的緩衝區的指標。  
+ 在包含內容之緩衝區的指標。  
   
- 緩衝區中`context`的資料將以 Win32`CONTEXT`結構的格式表示。 上下文指定特定于處理器的寄存器資料，因此 Win32`CONTEXT`結構的定義取決於處理器的體系結構。 有關 Win32`CONTEXT`結構的定義，請參閱 WinNT.h 標標頭檔。  
+ `context`緩衝區中的資料將會採用 Win32 `CONTEXT`結構的格式。 內容會指定處理器特定的暫存器資料，因此 Win32 `CONTEXT`結構的定義取決於處理器的架構。 如需 Win32 `CONTEXT`結構的定義，請參閱 WinNT 標頭檔。  
   
 ## <a name="remarks"></a>備註  
  此方法是由偵錯應用程式的作者來實作。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** ClrData.idl， ClrData.h  
+ **標頭：** ClrData .idl，ClrData。h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRDataTarget 介面](iclrdatatarget-interface.md)

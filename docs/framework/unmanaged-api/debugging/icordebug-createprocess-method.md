@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: cb16bae2dfe151d04c40269a8e6872ecb49b4269
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b9ae2b36bff9b4a6c048a8de99fa7d09350b1401
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789003"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859704"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 方法
 在偵錯工具的控制項底下啟動進程和其主要執行緒。  
@@ -52,13 +52,13 @@ HRESULT CreateProcess (
  在以 null 結束的字串指標，指定啟動的進程所要執行的命令列。 應用程式名稱（例如，"SomeApp"）必須是第一個引數。  
   
  `lpProcessAttributes`  
- 在Win32 `SECURITY_ATTRIBUTES` 結構的指標，指定進程的安全描述項。 如果 `lpProcessAttributes` 為 null，進程會取得預設的安全描述項。  
+ 在Win32 `SECURITY_ATTRIBUTES`結構的指標，指定進程的安全描述項。 如果`lpProcessAttributes`為 null，進程會取得預設的安全描述項。  
   
  `lpThreadAttributes`  
- 在Win32 `SECURITY_ATTRIBUTES` 結構的指標，指定進程之主要執行緒的安全描述項。 如果 `lpThreadAttributes` 為 null，則執行緒會取得預設的安全描述項。  
+ 在Win32 `SECURITY_ATTRIBUTES`結構的指標，指定進程主要執行緒的安全描述項。 如果`lpThreadAttributes`為 null，則執行緒會取得預設的安全描述項。  
   
  `bInheritHandles`  
- 在設定為 `true`，表示已啟動的進程會繼承呼叫進程中的每個可繼承控制碼，或 `false` 表示不繼承控制碼。 繼承的控制碼與原始控制碼具有相同的值和存取權限。  
+ 在設定為`true` ，表示已啟動的進程會繼承呼叫進程中的每個可繼承控制碼`false` ，或表示不會繼承控制碼。 繼承的控制碼與原始控制碼具有相同的值和存取權限。  
   
  `dwCreationFlags`  
  在[Win32 進程建立旗標](/windows/win32/procthread/process-creation-flags)的位元組合，可控制優先順序類別和已啟動進程的行為。  
@@ -70,10 +70,10 @@ HRESULT CreateProcess (
  在以 null 結束的字串指標，指定進程目前目錄的完整路徑。 如果此參數為 null，新的進程將會具有與呼叫進程相同的目前磁片磁碟機和目錄。  
   
  `lpStartupInfo`  
- 在Win32 `STARTUPINFOW` 結構的指標，指定啟動之進程的視窗站、桌面、標準控制碼，以及主視窗的外觀。  
+ 在Win32 `STARTUPINFOW`結構的指標，指定視窗站、桌面、標準控制碼，以及啟動之進程的主視窗外觀。  
   
  `lpProcessInformation`  
- 在Win32 `PROCESS_INFORMATION` 結構的指標，指定要啟動之進程的識別資訊。  
+ 在Win32 `PROCESS_INFORMATION`結構的指標，指定要啟動之進程的識別資訊。  
   
  `debuggingFlags`  
  在指定偵錯工具選項的 CorDebugCreateProcessFlags 列舉值。  
@@ -82,22 +82,22 @@ HRESULT CreateProcess (
  脫銷代表進程之 ICorDebugProcess 物件的位址指標。  
   
 ## <a name="remarks"></a>備註  
- 這個方法的參數與 Win32 `CreateProcess` 方法的參數相同。  
+ 這個方法的參數與 Win32 `CreateProcess`方法的參數相同。  
   
- 若要啟用非受控混合模式的調試，請將&#124; `dwCreationFlags` 設定為 DEBUG_PROCESS DEBUG_ONLY_THIS_PROCESS。 如果您只想要使用受管理的調試，請勿設定這些旗標。  
+ 若要啟用非受控混合模式的調試`dwCreationFlags` ，請將設定為 DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS。 如果您只想要使用受管理的調試，請勿設定這些旗標。  
   
- 若偵錯工具和要進行調試的進程（附加的進程）共用單一主控台，而且使用 interop 偵錯工具，則附加的進程可能會保留主控台鎖定，並在 debug 事件停止。 然後偵錯工具會封鎖任何使用主控台的嘗試。 若要避免這個問題，請在 `dwCreationFlags` 參數中設定 CREATE_NEW_CONSOLE 旗標。  
+ 若偵錯工具和要進行調試的進程（附加的進程）共用單一主控台，而且使用 interop 偵錯工具，則附加的進程可能會保留主控台鎖定，並在 debug 事件停止。 然後偵錯工具會封鎖任何使用主控台的嘗試。 若要避免這個問題，請在`dwCreationFlags`參數中設定 CREATE_NEW_CONSOLE 旗標。  
   
  在 Win9x 和非 x86 平臺（例如 IA-64 型和以 AMD64 為基礎的平臺）上不支援 Interop 調試。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 
