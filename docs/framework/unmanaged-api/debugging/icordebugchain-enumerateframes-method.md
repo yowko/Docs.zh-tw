@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9fcefa98-750d-4168-8915-8173a43accf2
 topic_type:
 - apiref
-ms.openlocfilehash: 0b024d3396dfe1796fcb18afa122d4aee39c4ccc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c8a62d8b4a4db0f36d991c32dbfc5bad68780f1b
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132714"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894686"
 ---
 # <a name="icordebugchainenumerateframes-method"></a>ICorDebugChain::EnumerateFrames 方法
 取得列舉值，其中包含鏈中的所有 managed 堆疊框架，從最新的框架開始。  
@@ -40,13 +40,13 @@ HRESULT EnumerateFrames (
 ## <a name="remarks"></a>備註  
  鏈代表執行緒的實體呼叫堆疊。  
   
- 僅針對受管理的鏈呼叫 `EnumerateFrames` 方法。 偵錯工具開發介面不會提供方法來取得未受管理的鏈中包含的框架。 偵錯工具必須使用其他方法來取得此資訊。  
+ 應該`EnumerateFrames`只針對受管理的鏈呼叫方法。 偵錯工具開發介面不會提供方法來取得未受管理的鏈中包含的框架。 偵錯工具必須使用其他方法來取得此資訊。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

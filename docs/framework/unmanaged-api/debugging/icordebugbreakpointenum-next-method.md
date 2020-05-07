@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2e6bbaea-79ba-448c-a0e3-7c90fc7c2939
 topic_type:
 - apiref
-ms.openlocfilehash: d29576c6f073f1d0e8e0aea417fc38c09a8327c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: af90886390b59932d3ae146a70fc2901ec1c378d
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122737"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894660"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>ICorDebugBreakpointEnum::Next 方法
 從列舉中取得指定數目的 ICorDebugBreakpoint 實例，從目前位置開始。  
@@ -38,19 +38,19 @@ HRESULT Next (
   
 ## <a name="parameters"></a>參數  
  `celt`  
- 在要抓取 `ICorDebugBreakpoint` 實例的數目。  
+ 在要抓取的`ICorDebugBreakpoint`實例數目。  
   
  `breakpoints`  
- 脫銷指標陣列，其中每一個都會指向代表中斷點的 `ICorDebugBreakpoint` 物件。  
+ 脫銷指標陣列，其中每一個都會指向代表中斷點的`ICorDebugBreakpoint`物件。  
   
  `pceltFetched`  
- 脫銷實際傳回的 `ICorDebugBreakpoint` 實例數目的指標。 如果 `celt` 是一個，這個值可能會是 null。  
+ 脫銷實際傳回之`ICorDebugBreakpoint`實例數目的指標。 如果`celt`是一個，這個值可能會是 null。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

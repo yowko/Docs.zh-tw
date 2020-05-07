@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e83c82c-593d-4691-90b0-383d218b415e
 topic_type:
 - apiref
-ms.openlocfilehash: 9a4cf1f9ea1ccb174b5fb9336040d5e168653fb1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e6401731844f2ce7a1d9fec1c94019f763870fe7
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088280"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894985"
 ---
 # <a name="icordebugarrayvaluegetrank-method"></a>ICorDebugArrayValue::GetRank 方法
 取得陣列的維度數目。  
@@ -35,13 +35,13 @@ HRESULT GetRank (
   
 ## <a name="parameters"></a>參數  
  `pnRank`  
- 脫銷這個 `ICorDebugArrayValue` 物件中維度數目的指標。  
+ 脫銷這個`ICorDebugArrayValue`物件中維度數目的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46842618-0fe4-480b-871c-82fba82d23d9
 topic_type:
 - apiref
-ms.openlocfilehash: b02fb0a18bfbc2e93ec204706ca1f17dde5d8c8a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 40582b1289875d5151ea96e3153c6e4760737e84
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125705"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893814"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>ICorDebugCode::CreateBreakpoint 方法
 在此程式碼區段中，于指定的位移處建立中斷點。  
@@ -47,10 +47,10 @@ HRESULT CreateBreakpoint (
  如果這段程式碼是 Microsoft 中繼語言（MSIL）程式碼，而且有即時（JIT）編譯的機器碼，則中斷點也會套用在 JIT 編譯的程式碼中。 （如果稍後再以 JIT 編譯程式碼，也是如此）。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

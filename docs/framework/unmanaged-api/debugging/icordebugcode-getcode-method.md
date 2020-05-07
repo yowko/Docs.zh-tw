@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: fde76c3b34fcc9f2321f3426d2801b310f681067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 59a497d203d241bbc6e0f884007d4a401c112073
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178990"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893658"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode 方法
-獲取指定函數的所有代碼，這些代碼為拆卸格式化。 此方法已在 .NET 框架版本 2.0 中棄用。 使用[ICorDebugCode2：：請改為獲取代碼塊](icordebugcode2-getcodechunks-method.md)。  
+取得指定函式的所有程式碼，格式化為可進行反組譯。 這個方法已在 .NET Framework 版本2.0 中被取代。 請改用[ICorDebugCode2：： GetCodeChunks](icordebugcode2-getcodechunks-method.md) 。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,31 +40,31 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>參數  
  `startOffset`  
- [在]函數開頭的偏移量。  
+ 在函數開頭的位移。  
   
  `endOffset`  
- [在]函數末尾的偏移量。  
+ 在函數結尾的位移。  
   
  `cBufferAlloc`  
- [在]要將代碼返回到`buffer`的陣列的大小。  
+ 在將傳回程序代碼`buffer`的陣列大小。  
   
  `buffer`  
- [出]將代碼返回到的陣列。  
+ 脫銷將傳回程序代碼的陣列。  
   
  `pcBufferSize`  
- [出]返回的位元組數。  
+ 脫銷傳回的位元組數目。  
   
 ## <a name="remarks"></a>備註  
- 如果函數的代碼已劃分為多個區塊，則它們按增加本機偏移的順序串聯。 未檢查指令邊界。  
+ 如果函式的程式碼已分成多個區塊，則會以增加的原生位移順序串連它們。 不會檢查指令界限。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：** 1.1， 1.0  
+ **.NET Framework 版本：** 1.1、1。0  
   
 ## <a name="see-also"></a>另請參閱
 

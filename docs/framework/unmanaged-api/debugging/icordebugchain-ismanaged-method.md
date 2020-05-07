@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17b389a0-1a4d-4e8a-8613-9bc1769930f9
 topic_type:
 - apiref
-ms.openlocfilehash: 481f6d08e11a5f315c64b3d58df4ab291fa42e78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 55036fcdbd186f91c0e94fb05f3023cf614751f7
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123854"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894256"
 ---
 # <a name="icordebugchainismanaged-method"></a>ICorDebugChain::IsManaged 方法
 取得值，指出這個鏈是否正在執行 managed 程式碼。  
@@ -35,13 +35,13 @@ HRESULT IsManaged (
   
 ## <a name="parameters"></a>參數  
  `pManaged`  
- [out] `true` 如果此鏈正在執行 managed 程式碼，則為，否則，`false`。  
+ 脫銷`true`如果這個鏈正在執行 managed 程式碼，則為，否則為`false`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

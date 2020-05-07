@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: fffe5616-0896-4426-ab5e-21869b514883
 topic_type:
 - apiref
-ms.openlocfilehash: 2d3f8360a1fb1164fd4e26f85246251409bee376
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 44bb98f54debb129f951cc388fea81ca0f17b20c
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788954"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895313"
 ---
 # <a name="icordebugterminate-method"></a>ICorDebug::Terminate 方法
-終止 `ICorDebug` 物件。  
+終止`ICorDebug`物件。  
   
 > [!NOTE]
-> 在針對所有正在進行調試的進程收到[ICorDebugManagedCallback：： ExitProcess](icordebugmanagedcallback-exitprocess-method.md)回呼之前，不應呼叫 `Terminate`。  
+> `Terminate`必須等到針對所有正在進行調試的進程收到[ICorDebugManagedCallback：： ExitProcess](icordebugmanagedcallback-exitprocess-method.md)回呼之後，才能呼叫。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,17 +35,17 @@ HRESULT Terminate ();
 ```  
   
 ## <a name="remarks"></a>備註  
- 當不再需要 `ICorDebug` 物件時，必須呼叫 `Terminate`。  
+ `Terminate`當不再需要物件時`ICorDebug` ，必須呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [ICorDebug 介面](icordebug-interface.md)

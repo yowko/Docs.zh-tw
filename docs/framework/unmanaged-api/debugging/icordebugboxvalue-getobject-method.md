@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a867a5b-bf94-493f-a4f5-b28685cf5325
 topic_type:
 - apiref
-ms.openlocfilehash: 475cc6c688262f318aa7f844b975ad69fa80bbe9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 401f052b881c1a0cfa065ba60c93aca1706f34f4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122827"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894789"
 ---
 # <a name="icordebugboxvaluegetobject-method"></a>ICorDebugBoxValue::GetObject 方法
 取得已裝箱的值。  
@@ -38,10 +38,10 @@ HRESULT GetObject (
  脫銷代表已裝箱值之 ICorDebugObjectValue 物件位址的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

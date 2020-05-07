@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c568b737-fdb2-4816-accd-051f5ab760f1
 topic_type:
 - apiref
-ms.openlocfilehash: 217ca0a850926e5f697340cece264c6ed442a9bb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9f785eafa8925324e3bd269ca08a3b1367b74c44
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125648"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893581"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction 方法
 取得與這個 "ICorDebugCode" 相關聯的 "ICorDebugFunction"。  
@@ -38,13 +38,13 @@ HRESULT GetFunction (
  脫銷函式位址的指標。  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugCode` 和 `ICorDebugFunction` 維護一對一關聯性。  
+ `ICorDebugCode`和`ICorDebugFunction`會維護一對一關聯性。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

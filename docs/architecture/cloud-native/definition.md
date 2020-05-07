@@ -3,12 +3,12 @@ title: 雲端原生的定義
 description: 瞭解為雲端原生系統提供探源的基本要素
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: ba11cb1cf0d9d7ef9734ad49aee1df22f285fc4c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199777"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895609"
 ---
 # <a name="defining-cloud-native"></a>定義雲端原生
 
@@ -35,8 +35,8 @@ ms.locfileid: "82199777"
 | 公司 | 體驗 |
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | 在生產環境中有600個以上的服務。 每天部署一百次。 |
-| [Uber](https://eng.uber.com/micro-deploy/) | 在生產環境中儲存了1000項以上的服務。 每週部署數千個組建。 |
-| [微信](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | 在生產環境中有300個以上的服務。 每天會進行大約1000的變更。 |
+| [Uber](https://eng.uber.com/micro-deploy/) | 在生產環境中有1000個以上的服務。 每週部署數千次。 |
+| [微信](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | 在生產環境中有300個以上的服務。 每天部署1000次。 |
 
 如您所見，Netflix、Uber 和 WeChat 會公開由數百個獨立微服務所組成的系統。 此架構樣式可讓他們快速回應市場狀況。 他們可以立即更新即時、複雜應用程式的小型區域，並視需要個別調整這些區域。
 
@@ -80,7 +80,7 @@ Azure 雲端平臺支援這種高度彈性的基礎結構，其中包含自動�
 | :-------- | :-------- | :-------- |
 | 1 | 程式碼基底 | 每個微服務的單一程式碼基底，儲存在自己的存放庫中。 透過版本控制進行追蹤，它可以部署到多個環境（QA、預備、生產）。 |
 | 2 | 相依性 | 每個微服務都會隔離並封裝自己的相依性，並在不影響整個系統的情況下進行變更。 |
-| 3 | 設定  | 設定資訊會從微服務和外部化移出，並透過程式碼之外的設定管理工具。 相同的部署可以跨已套用正確設定的環境進行傳播。  |
+| 3 | 組態  | 設定資訊會從微服務和外部化移出，並透過程式碼之外的設定管理工具。 相同的部署可以跨已套用正確設定的環境進行傳播。  |
 | 4 | 支援服務 | 輔助資源（資料存放區、快取、訊息代理程式）應透過可定址的 URL 公開。 這麼做會將資源與應用程式分離，使其可互換。  |
 | 5 | 組建、發行、執行 | 每個版本都必須在組建、發行和執行階段強制執行嚴格的分隔。 每個都應該以唯一識別碼標記，並支援復原的能力。 新式 CI/CD 系統有助於滿足此原則。 |
 | 6 | 處理序 | 每個微服務都應該在它自己的進程中執行，與其他正在執行的服務隔離。 將需要的狀態外部化至支援服務，例如分散式快取或資料存放區。 |
@@ -95,7 +95,7 @@ Azure 雲端平臺支援這種高度彈性的基礎結構，其中包含自動�
 
 |    |  新因素 | 說明  |
 | :-------- | :-------- | :-------- |
-| 13 | API 第一個 | 將所有專案變成一項服務。 假設您的程式碼將由前端用戶端、閘道或其他服務使用。 |
+| 13 | API 優先 | 將所有專案變成一項服務。 假設您的程式碼將由前端用戶端、閘道或其他服務使用。 |
 | 14 | 遙測 | 在工作站上，您可以深入瞭解您的應用程式及其行為。 在雲端中，您不會這麼做。 請確定您的設計包含「監視」、「網域特定」和「健康情況/系統」資料的集合。 |
 | 15 | 驗證/授權  | 從起始處執行身分識別。 請考慮公用雲端中可用的[RBAC （角色型存取控制）](https://docs.microsoft.com/azure/role-based-access-control/overview)功能。  |
 
@@ -167,7 +167,7 @@ Azure 雲端平臺支援這種高度彈性的基礎結構，其中包含自動�
 
 - 每個微服務都可以獨立調整。 您不會將整個應用程式調整為單一單位，而是只向外延展那些需要更多處理能力或網路頻寬的服務。 這個更細緻的調整方法可提供更好的系統控制，並在您調整系統的部分（而非所有專案）時，協助降低整體成本。
 
-瞭解微服務的絕佳參考指南是[.Net 微服務：容器化 .Net 應用程式的架構](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)。 本書深入探討微服務的設計與架構。 這是隨附于 Microsoft 免費下載的[完整堆疊微服務參考架構](https://github.com/dotnet-architecture/eShopOnContainers)。
+瞭解微服務的絕佳參考指南是[.Net 微服務：容器化 .Net 應用程式的架構](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)。 本書深入探討微服務的設計與架構。 這是隨附于 Microsoft 免費下載的[完整堆疊微服務參考架構](https://github.com/dotnet-architecture/eShopOnContainers)。
 
 ### <a name="developing-microservices"></a>開發微服務
 

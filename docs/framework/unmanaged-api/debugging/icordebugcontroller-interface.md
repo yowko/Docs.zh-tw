@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-ms.openlocfilehash: d6c923f03309da3ad8092ea6119e7d850120ee2c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e494bbb24e8f2245593e7945625e72e70ae1dde5
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783796"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892762"
 ---
 # <a name="icordebugcontroller-interface"></a>ICorDebugController 介面
 
@@ -41,20 +41,20 @@ ms.locfileid: "76783796"
 |[Terminate 方法](icordebugcontroller-terminate-method.md)|使用指定的結束代碼終止進程。|  
   
 ## <a name="remarks"></a>備註  
- 如果 `ICorDebugController` 正在控制進程，範圍會包含進程的所有線程。 如果 `ICorDebugController` 控制應用程式域，則範圍只會包含該特定應用程式域的執行緒。  
+ 如果`ICorDebugController`正在控制進程，範圍會包含進程的所有線程。 如果`ICorDebugController`正在控制應用程式域，範圍只會包含該特定應用程式域的執行緒。  
   
 > [!NOTE]
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯介面](debugging-interfaces.md)

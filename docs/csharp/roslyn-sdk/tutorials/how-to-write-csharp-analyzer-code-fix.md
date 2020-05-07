@@ -3,12 +3,12 @@ title: 教學課程：撰寫您的第一個分析器和程式碼修正
 description: 本教學課程提供 使用 .NET Compiler SDK (Roslyn API) 來建置分析器和程式碼修正的逐步指示。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: f6fc21c010f9b5fcd5e709ef822639c020a7c93b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d6c3ddff288bf114e1c257ae77ebf3a419913990
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240546"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895443"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>教學課程：撰寫您的第一個分析器和程式碼修正
 
@@ -16,12 +16,12 @@ ms.locfileid: "78240546"
 
 在本教學課程中，您將探索如何使用 Roslyn API 建立**分析器**和隨附的**程式碼修正**。 分析器是執行原始程式碼分析並向使用者報告問題的方式之一。 分析器也可以選擇性地提供程式碼修正，以顯示對使用者的原始程式碼所做的修改。 本教學課程所建立的分析器會尋找可使用 `const` 修飾詞來宣告、但並未這麼做的區域變數宣告。 隨附的程式碼修正會修改這些宣告，而新增 `const` 修飾詞。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
-- [視覺工作室 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
-- [視覺工作室 2019](https://www.visualstudio.com/downloads)
+- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+- [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-您需要通過視覺化工作室安裝程式安裝 **.NET 編譯器平臺 SDK：**
+您必須透過 Visual Studio 安裝程式安裝 **.NET COMPILER PLATFORM SDK** ：
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -60,7 +60,7 @@ Console.WriteLine(x);
 > [!TIP]
 > 當您執行分析器時，您會啟動 Visual Studio 的第二個複本。 此複本會使用不同的登錄區來儲存設定。 這可讓您區分兩個 Visual Studio 複本中的的視覺化設定。 您可以挑選不同的佈景主題，用於 Visual Studio 的實驗性執行。 此外，請勿使用 Visual Studio 的實驗性執行漫遊您的設定或登入 Visual Studio 帳戶。 設定會因此而不同。
 
-在剛剛啟動的第二個 Visual Studio 實例中，創建新的 C# 主控台應用程式專案（.NET Core 或 .NET 框架專案將工作 -- 分析器在源級別工作。使用波浪底線將滑鼠懸停在標記上，並顯示分析器提供的警告文本。
+在您剛啟動的第二個 Visual Studio 實例中，建立新的 c # 主控台應用程式專案（.NET Core 或 .NET Framework 專案可正常執行--分析器會在來源層級工作）。將滑鼠停留在具有波浪底線的標記上方，分析器所提供的警告文字隨即出現。
 
 範本會建立分析器，以針對每個在類型名稱中包含小寫字母的類型宣告回報警告，如下圖所示：
 
@@ -148,7 +148,7 @@ if (localDeclaration.Modifiers.Any(SyntaxKind.ConstKeyword))
 
 最後，您必須確認變數有可能是 `const`。 其意義是確定變數在初始化後未曾進行指派。
 
-您將使用 <xref:Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext> 執行某種語意分析。 您可以使用 `context` 引數判斷區域變數宣告是否可設為 `const`。 <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> 代表單一來源檔案中的所有語意資訊。 您可以在說明[語意模型](../work-with-semantics.md)的文章中深入了解相關資訊。 您將使用 <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> 執行區域宣告陳述式的資料流程分析。 然後，您可以使用此資料流程分析的結果，確保區域變數不會在其他任何位置以新值寫入。 呼叫 <xref:Microsoft.CodeAnalysis.ModelExtensions.GetDeclaredSymbol%2A> 擴充方法以擷取變數的 <xref:Microsoft.CodeAnalysis.ILocalSymbol>，並確認它並未包含於資料流程分析的 <xref:Microsoft.CodeAnalysis.DataFlowAnalysis.WrittenOutside%2A?displayProperty=nameWithType> 集合中。 請在 `AnalyzeNode` 方法的結尾新增下列程式碼：
+您將使用 <xref:Microsoft.CodeAnalysis.Diagnostics.SyntaxNodeAnalysisContext> 執行某種語意分析。 您可以使用 `context` 引數判斷區域變數宣告是否可設為 `const`。 <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType>代表單一來源檔案中的所有語義資訊。 您可以在說明[語意模型](../work-with-semantics.md)的文章中深入了解相關資訊。 您將使用 <xref:Microsoft.CodeAnalysis.SemanticModel?displayProperty=nameWithType> 執行區域宣告陳述式的資料流程分析。 然後，您可以使用此資料流程分析的結果，確保區域變數不會在其他任何位置以新值寫入。 呼叫 <xref:Microsoft.CodeAnalysis.ModelExtensions.GetDeclaredSymbol%2A> 擴充方法以擷取變數的 <xref:Microsoft.CodeAnalysis.ILocalSymbol>，並確認它並未包含於資料流程分析的 <xref:Microsoft.CodeAnalysis.DataFlowAnalysis.WrittenOutside%2A?displayProperty=nameWithType> 集合中。 請在 `AnalyzeNode` 方法的結尾新增下列程式碼：
 
 ```csharp
 // Perform data flow analysis on the local declaration.
@@ -265,7 +265,7 @@ using Microsoft.CodeAnalysis.Formatting;
 
 分析器絕大多數測試的程式碼都會遵循這兩種模式之一。 在第一個步驟中，您可以將這些測試修改為資料驅動型測試。 然後，只要新增字串常數以代表不同的測試輸入，即可輕易建立新的測試。
 
-為了提高效率，我們的第一個步驟是將兩個測試重構為資料驅動型測試。 然後，您只需要為每個新的測試定義幾個字串常數即可。 在進行重構時，請將這兩種方法重新命名為更適當的名稱。 請將 `TestMethod1` 取代為確保不會引發任何診斷的這項測試：
+為了提高效率，我們的第一個步驟是將兩個測試重構為資料驅動型測試。 然後，您只需要為每個新的測試定義幾個字串常數即可。 當您進行重構時，請將這兩種方法重新命名為更好的名稱。 請將 `TestMethod1` 取代為確保不會引發任何診斷的這項測試：
 
 ```csharp
 [DataTestMethod]
