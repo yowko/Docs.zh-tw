@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-ms.openlocfilehash: 0332fae46d6a65cfb7cc0b929cc2fd0d97e1790e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e285df37d83ff73fe29fe293380a4053cb5a9eea
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179150"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860549"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual 方法
-將資料從指定的虛擬記憶體位址讀取到指定的緩衝區中。  
+將資料從指定的虛擬記憶體位址讀入指定的緩衝區。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,26 +39,26 @@ HRESULT ReadVirtual (
   
 ## <a name="parameters"></a>參數  
  `address`  
- [在]存儲虛擬記憶體位址的CLRDATA_ADDRESS。  
+ 在儲存虛擬記憶體位址的 CLRDATA_ADDRESS。  
   
  `buffer`  
- [出]指向接收資料的緩衝區的指標。  
+ 脫銷接收資料之緩衝區的指標。  
   
  `bytesRequested`  
- [在]緩衝區的長度。  
+ 在緩衝區的長度。  
   
  `bytesRead`  
- [出]指向返回的位元組數的指標。  
+ 脫銷傳回位元組數的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
- **標題：** ClrData.idl， ClrData.h  
+ **標頭：** ClrData .idl，ClrData。h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICLRDataTarget 介面](iclrdatatarget-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 191015da-f54a-4bac-a28a-1de7ab3c3428
 topic_type:
 - apiref
-ms.openlocfilehash: 24d245bbb0f9ac86e321491e0af3b66b1e011baa
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e33029e8244fdfa180a79aa4a5b05b07f594d928
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789210"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860904"
 ---
 # <a name="corpubpublish-coclass"></a>CorpubPublish Coclass
 提供介面來發行應用程式定義域和處理序的相關資訊。  
@@ -50,13 +50,13 @@ coclass CorpubPublish {
  典型的發行案例牽涉到想要在應用程式域內的電腦上，對其執行的 managed 程式碼進行 debug 的開發人員。 裝載環境可能會在進程內執行一個以上的應用程式域。 開發人員想要使用圖形化使用者介面或其他方法來列出在電腦上執行的所有處理常式，並挑選特定的進程。 清單應包含執行 managed 程式碼之進程內的所有應用程式域。 然後，開發人員可以識別特定的應用程式域，並將偵錯工具附加至該網域。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorPub .idl  
   
  **程式庫：** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

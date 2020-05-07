@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-ms.openlocfilehash: d0c283232ff8eca1af9f3ff4448fb7f4c81d554f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7bbb49dc6ee9b1d29dd61ccdcfdacb62740133ed
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789040"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860272"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary 方法
 
@@ -45,7 +45,7 @@ HRESULT ProvideLibrary(
 在儲存在 PE 檔案之 COFF 檔案標頭中的日期時間戳記。
 
 `pLibraryProvider` \
-在[`SizeOfImage`] 欄位儲存在 PE 檔案的 COFF 選擇性檔案標頭中。
+在儲存`SizeOfImage`在 PE 檔案之 COFF 選擇性檔案標頭中的欄位。
 
 `hModule` \
 脫銷要求之模組的控制碼。
@@ -56,30 +56,30 @@ HRESULT ProvideLibrary(
 
 |HRESULT|描述|
 |-------------|-----------------|
-|S_OK|此方法已順利完成。|
+|S_OK|已成功完成命令。|
 
 ## <a name="exceptions"></a>例外狀況
 
 ## <a name="remarks"></a>備註
 
-`ProvideLibrary` 可讓偵錯工具提供用來偵測特定 CLR 檔案（例如 mscordbi.dll 和 mscordacwks）所需的模組。 模組控制碼必須保持有效，直到呼叫[ICLRDebugging：： CanUnloadNow](iclrdebugging-canunloadnow-method.md)方法指出它們可能被釋放為止，此時呼叫端會負責釋放控制碼。
+`ProvideLibrary`可讓偵錯工具提供用來偵測特定 CLR 檔案（例如 mscordbi.dll 和 mscordacwks）所需的模組。 模組控制碼必須保持有效，直到呼叫[ICLRDebugging：： CanUnloadNow](iclrdebugging-canunloadnow-method.md)方法指出它們可能被釋放為止，此時呼叫端會負責釋放控制碼。
 
 偵錯工具可能會使用任何可用的方法來尋找或購買偵錯工具模組。
 
 > [!IMPORTANT]
-> 這項功能可讓 API 呼叫端提供包含可執行檔的模組，以及可能的惡意程式碼。 作為安全性預防措施，呼叫端不應該使用 `ProvideLibrary` 來散發不願意自行執行的任何程式碼。
+> 這項功能可讓 API 呼叫端提供包含可執行檔的模組，以及可能的惡意程式碼。 做為安全性預防措施，呼叫端不應該`ProvideLibrary`使用來散發不願意自行執行的任何程式碼。
 >
 > 如果在已發行的程式庫（例如 mscordbi.dll 或 mscordacwks）中發現嚴重的安全性問題，則可以修補填充碼來辨識檔案的錯誤版本。 填充碼接著可以發出已修補之檔案版本的要求，並在回應任何要求時，拒絕不正確的版本。 只有在使用者已修補新版本的填充碼時，才會發生這種情況。 未修補的版本將會保持易受攻擊。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** CorDebug.idl、CorDebug.h
 
 **程式庫：** CorGuids.lib
 
-**.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
+**.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]
 
 ## <a name="see-also"></a>請參閱
 

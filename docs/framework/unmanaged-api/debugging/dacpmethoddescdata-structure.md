@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d623fe862eaf5902fd89d0e512dd07f73a03246f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793850"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860812"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData 結構
 
@@ -52,16 +52,16 @@ struct DacpMethodDescData
 };
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
-| 成員                       | 描述                                                                                     |
+| member                       | 描述                                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------------------------- |
 | `bHasNativeCode`             | 指出執行時間是否具有原生程式碼，可用於指定的方法具現化。 |
 | `bIsDynamic`                 | 指出此方法是否透過輕量程式碼產生動態產生。           |
 | `wSlotNumber`                | 方法資料表中的方法位置編號。                                                   |
 | `NativeCodeAddr`             | 方法的初始原生位址。                                                            |
 | `data`                       | 執行時間內部使用之緩衝區的指標。                                             |
-| `MethodDescPtr`              | 執行時間中 `MethodDesc` 的指標。                                                     |
+| `MethodDescPtr`              | 執行時間中`MethodDesc`的指標。                                                     |
 | `nativeCodeInfo`             | 執行時間內部用來追蹤方法之緩衝區的指標。                            |
 | `moduleInfo`                 | 執行時間內部用來取得模組資訊之緩衝區的指標。                      |
 | `MDToken`                    | 與指定方法相關聯的 Token。                                                         |
@@ -78,13 +78,13 @@ struct DacpMethodDescData
 這個結構存在於執行時間中，而且不會透過任何標頭或程式庫檔案來公開。 若要使用它，請依照上面的指定定義結構。
 
 ## <a name="requirements"></a>需求
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
 **標頭：** 無  
 連結**庫：** 無  
-**.NET framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>請參閱
 
 - [偵錯](index.md)
 - [偵錯結構](debugging-structures.md)
-- [一般資料類型](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)
+- [一般資料類型](../common-data-types-unmanaged-api-reference.md)
