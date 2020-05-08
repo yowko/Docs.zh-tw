@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5f54a34-6335-4708-b407-a756ec70fab4
 topic_type:
 - apiref
-ms.openlocfilehash: 3836b6c08098d38516c8a25260fb28998a2317fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a2b76cb59a95082e0cf9c0884b8277cca3c8fe8d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084787"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976066"
 ---
 # <a name="icordebugeval2newstringwithlength-method"></a>ICorDebugEval2::NewStringWithLength 方法
 使用指定的內容，建立指定長度的字串。  
@@ -42,15 +42,15 @@ HRESULT NewStringWithLength (
  在字串的長度。  
   
 ## <a name="remarks"></a>備註  
- 如果字串尾端的 null 字元必須位於 managed 字串中，則 `NewStringWithLength` 方法的呼叫端必須確保字串長度包含尾端的 null 字元。  
+ 如果字串尾端的 null 字元應該在 managed 字串中，則`NewStringWithLength`方法的呼叫端必須確保字串長度包含尾端的 null 字元。  
   
  此字串一律會線上程目前執行所在的應用程式域中建立。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

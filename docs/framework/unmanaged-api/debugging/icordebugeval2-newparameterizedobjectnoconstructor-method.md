@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f15b5b78-94f4-4eb9-b3b3-a621272f357c
 topic_type:
 - apiref
-ms.openlocfilehash: 770a9280d27c84b950e00e71328c9b28e61c9e7c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90fce1710f97341fb49be1d07f7af2edf8cb848c
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084814"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976079"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>ICorDebugEval2::NewParameterizedObjectNoConstructor 方法
-Instantiates a new parameterized type object of the specified class without attempting to call a constructor method.  
+將指定類別的新參數化型別物件具現化，而不嘗試呼叫函式方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,22 +37,22 @@ HRESULT NewParameterizedObjectNoConstructor (
   
 ## <a name="parameters"></a>參數  
  `pClass`  
- [in] A pointer to an ICorDebugClass object that represents the class of the object to be instantiated.  
+ 在ICorDebugClass 物件的指標，表示要具現化之物件的類別。  
   
  `nTypeArgs`  
- [in] The number of type arguments passed.  
+ 在傳遞的型別引數數目。  
   
  `ppTypeArgs`  
- [in] An array of pointers, each of which points to an ICorDebugType object that represents a type argument for the object that is being instantiated.  
+ 在指標的陣列，其中每一個都會指向 ICorDebugType 物件，代表正在具現化之物件的型別引數。  
   
 ## <a name="remarks"></a>備註  
- The `NewParameterizedObjectNoConstructor` method will fail if an incorrect number of type arguments or the wrong types of type arguments are passed.  
+ 如果`NewParameterizedObjectNoConstructor`傳遞的類型引數數目不正確或類型引數的類型錯誤，此方法將會失敗。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

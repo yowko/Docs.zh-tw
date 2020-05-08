@@ -2,12 +2,12 @@
 title: dotnet test 命令
 description: dotnet test 命令是用來在指定的專案中執行單元測試。
 ms.date: 04/29/2020
-ms.openlocfilehash: a8218b6596601069b89a60ad018adf89a1f47cf6
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624887"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975429"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,7 +20,7 @@ ms.locfileid: "82624887"
 ## <a name="synopsis"></a>概要
 
 ```dotnetcli
-dotnet test [<PROJECT> | <SOLUTION>]
+dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
     [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
     [-c|--configuration <CONFIGURATION>]
     [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
@@ -37,11 +37,15 @@ dotnet test -h|--help
 
 ## <a name="description"></a>描述
 
-`dotnet test` 命令是用來在指定的專案中執行單元測試。 `dotnet test` 命令會啟動為專案指定的測試執行器主控台應用程式。 測試執行器會執行針對單元測試架構 (例如 MSTest、NUnit 或 xUnit) 定義的測試，並報告每項測試成功還是失敗。 如果所有測試都成功，則測試執行器會傳回 0 作為結束代碼；如果有任何測試失敗，則會傳回 1。 針對多目標專案，會針對每個目標架構執行測試。 測試執行器和單元測試程式庫會封裝為 NuGet 套件，並還原為專案的一般相依性。
+`dotnet test`命令是用來在指定的方案中執行單元測試。 此`dotnet test`命令會建立方案，並針對方案中的每個測試專案執行測試主機應用程式。 測試主機會使用測試架構在指定的專案中執行測試，例如： MSTest、NUnit 或 xUnit，並報告每項測試的成功或失敗。 如果所有測試都成功，則測試執行器會傳回 0 作為結束代碼；如果有任何測試失敗，則會傳回 1。
+
+針對多目標專案，會針對每個目標架構執行測試。 測試主機和單元測試架構會封裝為 NuGet 套件，並還原為專案的一般相依性。
 
 測試專案會使用一般 `<PackageReference>` 元素指定測試執行器，如下列範例專案檔中所示：
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
+
+其中`Microsoft.NET.Test.Sdk`是測試主機， `xunit`是測試架構。 和`xunit.runner.visualstudio`是一個測試介面卡，可讓 xUnit 架構與測試主機搭配使用。
 
 ### <a name="implicit-restore"></a>隱含還原
 
@@ -49,19 +53,24 @@ dotnet test -h|--help
 
 ## <a name="arguments"></a>引數
 
-- **`PROJECT | SOLUTION`**
+- **`PROJECT | SOLUTION | DIRECTORY | DLL`**
 
-  測試專案或方案的路徑。 如果未指定，則會預設為目前目錄。
+  - 測試專案的路徑。
+  - 解決方案的路徑。
+  - 包含專案或方案之目錄的路徑。
+  - 測試專案 *.dll*檔案的路徑。
 
-## <a name="options"></a>選項。
+  如果未指定，則會搜尋目前目錄中的專案或方案。
+
+## <a name="options"></a>選項
 
 - **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-  在測試執行中，從指定的路徑使用自訂測試配接器。
+  要搜尋其他測試介面卡之目錄的路徑。 只 *.dll*會檢查具有尾碼`.TestAdapter.dll`的 .dll 檔案。 如果未指定，則會搜尋 test *.dll*的目錄。
 
 - **`--blame`**
 
-  在歸責模式下執行測試。 此選項有助於隔離導致測試主控制項損毀的問題測試。 它會以 *Sequence.xml* 的形式在目前目錄中建立一個輸出檔，用來擷取損毀前的測試執行順序。
+  在歸責模式下執行測試。 此選項有助於隔離導致測試主控制項損毀的問題測試。 當偵測到損毀時，它會在中建立`TestResults/<Guid>/<Guid>_Sequence.xml`一個序列檔案，以捕捉損毀前執行的測試順序。
 
 - **`-c|--configuration <CONFIGURATION>`**
 
@@ -73,11 +82,11 @@ dotnet test -h|--help
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  啟用測試平臺的診斷模式，並將診斷訊息寫入至指定的檔案。
+  啟用測試平臺的診斷模式，並將診斷訊息寫入至指定的檔案和其旁邊的檔案。 記錄訊息的程式會決定要建立哪些檔案（例如， `*.host_<date>.txt`用於測試主機記錄檔），以及`*.datacollector_<date>.txt`用於資料收集器記錄檔的進程。
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  尋找特定[架構](../../standard/frameworks.md)的測試二進位檔。
+  強制針對測試二進位`dotnet`檔使用或 .NET Framework 測試主機。 此選項只會決定要使用的主機類型。 實際使用的 framework 版本是由測試專案的 *.runtimeconfig.json*所決定。 若未指定，則會使用[TargetFramework 元件屬性](/dotnet/api/system.runtime.versioning.targetframeworkattribute)來判斷主機的類型。 從 *.dll*中移除該屬性時，會使用 .NET Framework 主機。
 
 - **`--filter <EXPRESSION>`**
 
@@ -132,13 +141,13 @@ dotnet test -h|--help
 
 - **`-v|--verbosity <LEVEL>`**
 
-  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。 如需詳細資訊，請參閱 <xref:Microsoft.Build.Framework.LoggerVerbosity>。
+  設定命令的詳細資訊層級。 允許的值為 `q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]` 和 `diag[nostic]`。 預設值為 `minimal`。 如需詳細資訊，請參閱<xref:Microsoft.Build.Framework.LoggerVerbosity>。
 
 - **`RunSettings`** 參量
 
-  引數會當做`RunSettings`測試的設定來傳遞。 指定為 "-- " 後 (注意 -- 後方的空格) 之 `[name]=[value]` 組的引數。 空格適用來分隔多個 `[name]=[value]` 組。
+ 在`RunSettings` "--" 之後，內嵌會當做命令列上的最後一個引數傳遞（請注意--後面的空格）。 Inline `RunSettings`會指定`[name]=[value]`成對的。 空格適用來分隔多個 `[name]=[value]` 組。
 
-  範例： `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
+  範例：`dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
   如需詳細資訊，請參閱[透過命令列傳遞 .runsettings 引數](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)。
 
@@ -167,6 +176,12 @@ dotnet test -h|--help
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
   ```
+  
+  - 在目前目錄中的專案中執行測試，並在測試主控制項損毀時回報進行中的測試：
+
+  ```dotnetcli
+  dotnet test --blame
+  ```
 
 ## <a name="filter-option-details"></a>篩選選項詳細資料
 
@@ -183,7 +198,7 @@ dotnet test -h|--help
 
 `<operator>` 描述屬性和值之間的關聯性：
 
-| 運算子 | 函式        |
+| 運算子 | 函數        |
 | :------: | --------------- |
 | `=`      | 完全相符     |
 | `!=`     | 不完全相符 |
@@ -196,9 +211,9 @@ dotnet test -h|--help
 
 運算式可以使用條件運算子聯結：
 
-| 運算子            | 函式 |
+| 運算子            | 函數 |
 | ------------------- | -------- |
-| <code>&#124;</code> | 或者       |
+| <code>&#124;</code> | 或       |
 | `&`                 | AND      |
 
 使用條件運算子時，您可以使用括弧括住運算式 (例如，`(Name~TestMethod1) | (Name~TestMethod2)`)。

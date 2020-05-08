@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget2 介面
 ms.date: 03/30/2017
 ms.assetid: 13f11388-2f91-48d8-98d6-6a4a63cb5746
-ms.openlocfilehash: 472ea0b3d54c025cdd69957765ad2663c7288b15
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1c598d23cac77e50cf302e6936b88b5eb6e558c2
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783563"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976430"
 ---
 # <a name="icordebugdatatarget2-interface"></a>ICorDebugDataTarget2 介面
 以邏輯方式擴充[ICorDebugDataTarget](icordebugdatatarget-interface.md)介面。  
@@ -28,15 +28,15 @@ ms.locfileid: "76783563"
 > 這個介面僅適用於 .NET 原生。 如果您在 .NET 原生之外針對 ICorDebug 案例實作這個介面，Common Language Runtime 會忽略這個介面。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯介面](debugging-interfaces.md)
 - [偵錯](index.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-ms.openlocfilehash: 9476bcc9706e89fd3d7e0abc14031f70a0aa0ad0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d589bfc3093d03d87acb47ade0fc6c972bcd335
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084829"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976105"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray 方法
-Allocates a new array of the specified element type and dimensions.  
+配置指定之元素類型和維度的新陣列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,25 +38,25 @@ HRESULT NewParameterizedArray(
   
 ## <a name="parameters"></a>參數  
  `pElementType`  
- [in] A pointer to an ICorDebugType object that represents the type of element stored in the array.  
+ 在ICorDebugType 物件的指標，代表儲存在陣列中的元素類型。  
   
  `rank`  
- [in] The number of dimensions of the array. In the .NET Framework version 2.0, this value must be 1.  
+ 在陣列的維度數目。 在 .NET Framework 版本2.0 中，此值必須是1。  
   
  `dims`  
- [in] The size, in bytes, of each dimension of the array.  
+ 在陣列的每個維度大小（以位元組為單位）。  
   
  `lowBounds`  
- [in] 選用。 The lower bound of each dimension of the array. If this value is omitted, a lower bound of zero is assumed for each dimension.  
+ [in] 選用。 陣列的每個維度下限。 如果省略此值，則會假設每個維度的下限為零。  
   
 ## <a name="remarks"></a>備註  
- The elements of the array may be instances of a generic type. The array is always created in the application domain in which the thread is currently running. In the .NET Framework 2.0, the value of `rank` must be 1.  
+ 陣列的元素可以是泛型型別的實例。 陣列一律會建立線上程目前執行所在的應用程式域中。 在 .NET Framework 2.0 中，的值`rank`必須是1。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK 概念和物件模型
 description: 這個概觀提供有效率地使用 .NET 編譯器 SDK 所需的背景。 您將學習 API 層、所含的主要類型和整體物件模型。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156957"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975936"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>了解 .NET Compiler Platform SDK 模型
 
@@ -53,7 +53,7 @@ C# 互動 REPL (「讀取、求值、輸出」迴圈) 會使用這些 API。 REP
 
 ### <a name="workspaces-apis"></a>工作區 API
 
-[工作區] 層會包含工作區 API，這是執行程式碼分析以及重構整個方案的起點。 它可協助您將方案中的所有專案資訊都組織成單一物件模型，以讓您直接存取編譯器層物件模型，而不需要剖析檔案、設定選項，或管理專案對專案相依性。
+[工作區] 層會包含工作區 API，這是執行程式碼分析以及重構整個方案的起點。 它可協助您將方案中所有專案的相關資訊組織成單一物件模型，讓您直接存取編譯器層物件模型，而不需要剖析檔案、設定選項，或管理專案對專案的相依性。
 
 此外，工作區層具有實作程式碼分析以及重構工具時所使用的一組 API，而這些工具在 Visual Studio IDE 這類主機環境內運作。 範例包含 [尋找所有參考]、[格式] 和 [程式碼產生 API]。
 

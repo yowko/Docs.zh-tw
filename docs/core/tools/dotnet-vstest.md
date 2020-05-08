@@ -2,20 +2,23 @@
 title: dotnet vstest 命令
 description: dotnet vstest 命令會建置專案和其所有相依性。
 ms.date: 02/27/2020
-ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: f7db58f4aab59354b8c69ce0371324c23482dafe
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463290"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975390"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
-**本文適用於:✔️** .NET 核心 2.1 SDK 和更高版本
+**本文適用于：** ✔️ .net CORE 2.1 SDK 和更新版本
+
+> [!IMPORTANT]
+> `dotnet vstest`命令已由`dotnet test`取代，現在可用來執行元件。 請參閱 [`dotnet test`](dotnet-test.md)。
 
 ## <a name="name"></a>名稱
 
-`dotnet-vstest` - 從指定的檔案執行測試。
+`dotnet-vstest`-從指定的元件執行測試。
 
 ## <a name="synopsis"></a>概要
 
@@ -41,7 +44,7 @@ dotnet vstest -?|--Help
 
   從指定的組件執行測試。 以空格分隔多個測試組件名稱。 支援萬用字元。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`--Blame`**
 
@@ -87,7 +90,7 @@ dotnet vstest -?|--Help
 
 - **`--Parallel`**
 
-  並行運行測試。 根據預設，電腦上所有的可用核心都可供使用。 通過在*執行設定*`RunConfiguration`檔中的 節點下`MaxCpuCount`設置屬性來 指定顯式內核數。
+  以平行方式執行測試。 根據預設，電腦上所有的可用核心都可供使用。 在 *.runsettings*檔案中的`RunConfiguration`節點下設定屬性`MaxCpuCount` ，以指定明確的核心數目。
 
 - **`--ParentProcessId <PROCESS_ID>`**
 
@@ -115,11 +118,11 @@ dotnet vstest -?|--Help
 
 - **`--TestCaseFilter <EXPRESSION>`**
 
-  執行符合指定之運算式的測試。 `<EXPRESSION>` 的格式為 `<property>Operator<value>[|&<EXPRESSION>]`，其中 Operator (運算子) 為 `=`、`!=` 或 `~` 其中之一。 運算子 `~` 具有「包含」語意，且適用於像是 `DisplayName` 的字串屬性。 括號`()`用於對子表達式進行分組。 有關詳細資訊,請參閱[測試用例篩選器](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)。
+  執行符合指定之運算式的測試。 `<EXPRESSION>` 的格式為 `<property>Operator<value>[|&<EXPRESSION>]`，其中 Operator (運算子) 為 `=`、`!=` 或 `~` 其中之一。 運算子 `~` 具有「包含」語意，且適用於像是 `DisplayName` 的字串屬性。 括弧`()`是用來將子運算式分組。 如需詳細資訊，請參閱[TestCase filter](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)。
 
 - **`--Tests <TEST_NAMES>`**
 
-  執行測試，其名稱符合所提供的值。 以逗號分隔多個值。
+  執行測試，其名稱符合所提供的值。 請使用逗號分隔多個值。
 
 - **`-?|--Help`**
 
@@ -135,19 +138,19 @@ dotnet vstest -?|--Help
 
 ## <a name="examples"></a>範例
 
-執行*測試在我的測試項目.dll*:
+在*mytestproject.dll*中執行測試：
 
 ```dotnetcli
 dotnet vstest mytestproject.dll
 ```
 
-在*mytestproject.dll*執行測試 ,匯出到具有自訂名稱的自訂資料夾:
+在*mytestproject.dll*中執行測試，並使用自訂名稱匯出至自訂資料夾：
 
 ```dotnetcli
 dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path
 ```
 
-測試*在我的測試項目.dll**與我的其他測試專案.exe*:
+在*mytestproject.dll*和*myothertestproject.exe*中執行測試：
 
 ```dotnetcli
 dotnet vstest mytestproject.dll myothertestproject.exe
