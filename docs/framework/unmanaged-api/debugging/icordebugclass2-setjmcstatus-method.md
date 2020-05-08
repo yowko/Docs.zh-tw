@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 077e6c7f-f857-480c-bebb-76ee1de4e8fc
 topic_type:
 - apiref
-ms.openlocfilehash: a862dd3f6a9c10c6b3a5a0bb41208d351c4ca9f1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9fb2f960098e970b4d3d9f0be499f4d9fda6558e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125696"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893901"
 ---
 # <a name="icordebugclass2setjmcstatus-method"></a>ICorDebugClass2::SetJMCStatus 方法
 針對類別的每個方法，設定一個值，指出此方法是否為使用者定義的程式碼。  
@@ -35,18 +35,18 @@ HRESULT SetJMCStatus (
   
 ## <a name="parameters"></a>參數  
  `bIsJustMyCode`  
- 在設定為 `true`，表示該方法是使用者定義的程式碼;否則，請將設定為 `false`。  
+ 在將設定`true`為，表示該方法是使用者定義的程式碼;否則，請將`false`設定為。  
   
 ## <a name="remarks"></a>備註  
  只有 my code （JMC）分檔器會略過非使用者定義的程式碼。 使用者定義的程式碼必須是可偵錯工具代碼的子集。  
   
- 如果不能設定任何方法的值，則 `SetJMCStatus` 會傳回值為 S_FALSE 的 HRESULT，即使它成功設定所有其他方法的值也一樣。  
+ `SetJMCStatus`如果無法設定任何方法的值，則會傳回 S_FALSE 的 HRESULT 值，即使它成功設定所有其他方法的值也一樣。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -1,13 +1,13 @@
 ---
 title: 將 eShopOnContainers 對應至 Azure 服務
 description: 將 eShopOnContainers 對應至 Azure 服務，例如 Azure Kubernetes Service、API 閘道和 Azure 服務匯流排。
-ms.date: 06/30/2019
-ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 04/20/2020
+ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781220"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895506"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>將 eShopOnContainers 對應至 Azure 服務
 
@@ -28,7 +28,7 @@ ms.locfileid: "76781220"
 
 AKS 為個別的容器叢集提供管理服務。 應用程式會為上述架構圖中顯示的每個微服務部署個別的 AKS 叢集。 這種方法可讓每個個別服務根據其資源需求獨立進行調整。 每個微服務也可以獨立部署，而且在理想的情況下，這類部署應該會產生零的系統停機時間。
 
-## <a name="api-gateway"></a>API 閘道
+## <a name="api-gateway"></a>API Gateway
 
 EShopOnContainers 應用程式有多個前端用戶端和多個不同的後端服務。 用戶端應用程式與支援它們的微服務之間不會有一對一的對應關係。 在這種情況下，以安全的方式撰寫用戶端軟體以與各種後端服務互動時，可能會有很大的複雜性。 每個用戶端都需要自行解決這項複雜性，因而導致重複，以及在服務變更或新原則執行時進行更新的許多位置。
 
@@ -44,7 +44,7 @@ Azure 入口網站，您可以在其中定義 API 架構，並將不同的 Api �
 
 如果您的應用程式使用 AKS，另一個選項是將 Azure 閘道輸入控制器部署為 AKS 叢集中的 pod。 這可讓您的叢集與 Azure 應用程式閘道整合，讓閘道能夠對 AKS pod 的流量進行負載平衡。 [深入瞭解適用于 AKS 的 Azure 閘道輸入控制器](https://github.com/Azure/application-gateway-kubernetes-ingress)。
 
-## <a name="data"></a>Data
+## <a name="data"></a>資料
 
 EShopOnContainers 所使用的各種後端服務會有不同的儲存需求。 有數個微服務使用 SQL Server 資料庫。 購物籃微服務會利用 Redis 快取來保存其持續性。 位置微服務需要 MongoDB API 來取得其資料。 Azure 支援每種資料格式。
 
@@ -54,26 +54,15 @@ EShopOnContainers 應用程式會將使用者目前的購物籃儲存在要求�
 
 [位置] 微服務會使用 MongoDB NoSQL 資料庫來保存其持續性。 在開發期間，資料庫可以部署在自己的容器中，而在生產環境中，服務可以利用[Azure Cosmos DB 適用于 MongoDB 的 API](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)。 Azure Cosmos DB 的優點之一，就是能夠利用多個不同的通訊協定，包括 SQL API 和常見的 NoSQL Api，包括 MongoDB、Cassandra、Gremlin 和 Azure 表格儲存體。 Azure Cosmos DB 提供完全受控且全域散發的資料庫即服務，可進行調整以符合使用它的服務需求。
 
-[第5章](database-per-microservice.md)會詳細說明雲端原生應用程式中的分散式資料。
+[第5章](distributed-data.md)會詳細說明雲端原生應用程式中的分散式資料。
 
 ## <a name="event-bus"></a>事件匯流排
 
 應用程式會使用事件來傳達不同服務之間的變更。 這項功能可以使用各種不同的實作為實作為，而在本機 eShopOnContainers 應用程式會使用[RabbitMQ](https://www.rabbitmq.com/)。 在 Azure 中裝載時，應用程式會利用[Azure 服務匯流排](https://docs.microsoft.com/azure/service-bus/)來進行訊息處理。 Azure 服務匯流排是完全受控的整合訊息代理人，可讓應用程式和服務以分離、可靠且非同步方式彼此通訊。 Azure 服務匯流排支援個別的佇列，以及不同的*主題*來支援「發行者」訂閱者案例。 EShopOnContainers 應用程式會利用 Azure 服務匯流排的主題來支援將訊息從一個微服務散發到任何其他需要回應指定訊息的微服務。
 
-## <a name="resiliency"></a>恢復
+## <a name="resiliency"></a>災害復原
 
 一旦部署到生產環境後，eShopOnContainers 應用程式就能夠利用數個可用的 Azure 服務來改善其復原能力。 應用程式會發佈健康情況檢查，其可與 Application Insights 整合，以根據應用程式的可用性提供報告和警示。 Azure 資源也會提供診斷記錄，以用來識別及更正錯誤和效能問題。 資源記錄會提供應用程式使用不同 Azure 資源的時機和方式的詳細資訊。 您將在[第6章](resiliency.md)深入瞭解雲端原生復原功能。
-
-## <a name="references"></a>參考
-
-- [EShopOnContainers 架構](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
-- [協調微服務和多容器應用程式的高延展性和可用性](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
-- [Azure API 管理](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
-- [Azure SQL Database 總覽](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
-- [Azure Cache for Redis](https://azure.microsoft.com/services/cache/)
-- [Azure Cosmos DB 適用于 MongoDB 的 API](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
-- [Azure 服務匯流排](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Azure 監視器總覽](https://docs.microsoft.com/azure/azure-monitor/overview)
 
 >[!div class="step-by-step"]
 >[上一頁](introduce-eshoponcontainers-reference-app.md)

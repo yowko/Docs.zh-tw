@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-ms.openlocfilehash: 53d8d219a13f2dade16a338efccf0837f8de0158
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b92c3d3328c657762ed002155ef4947a9292b19e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784380"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894735"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint 介面
 
@@ -29,26 +29,26 @@ ms.locfileid: "76784380"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Activate 方法](icordebugbreakpoint-activate-method.md)|設定此 `ICorDebugBreakpoint`的作用中狀態。|  
-|[IsActive 方法](icordebugbreakpoint-isactive-method.md)|取得值，指出此 `ICorDebugBreakpoint` 是否為使用中。|  
+|[Activate 方法](icordebugbreakpoint-activate-method.md)|設定這個`ICorDebugBreakpoint`的作用中狀態。|  
+|[IsActive 方法](icordebugbreakpoint-isactive-method.md)|取得值，指出這個`ICorDebugBreakpoint`是否為使用中。|  
   
 ## <a name="remarks"></a>備註  
- 中斷點不直接支援條件運算式。 如果需要這類功能，偵錯工具必須在 `ICorDebugBreakpoint`上執行。  
+ 中斷點不直接支援條件運算式。 如果需要這類功能，偵錯工具必須在之上執行`ICorDebugBreakpoint`。  
   
- ICorDebugFunctionBreakpoint 介面會擴充 `ICorDebugBreakpoint`，以支援函式內的中斷點。  
+ ICorDebugFunctionBreakpoint 介面會擴充`ICorDebugBreakpoint`以支援函式內的中斷點。  
   
 > [!NOTE]
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯介面](debugging-interfaces.md)

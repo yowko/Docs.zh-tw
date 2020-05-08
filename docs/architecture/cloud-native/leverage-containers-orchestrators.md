@@ -2,12 +2,12 @@
 title: 利用容器和協調器
 description: 在 Azure 中利用 Docker 容器和 Kubernetes 協調器
 ms.date: 04/13/2020
-ms.openlocfilehash: 3d94433250f02a8df2c27ebc89a101e1e8d15030
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199829"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895556"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>利用容器和協調器
 
@@ -55,10 +55,29 @@ Docker 是最受歡迎的容器管理平臺。 其適用于 Linux 或 Windows �
 
 容器是不可變的。 定義容器之後，您可以用完全相同的方式重新建立並執行它。 這種不會將其本身用於以元件為基礎的設計。 如果應用程式的某些部分的發展方式不同，當您可以直接部署最常變更的元件時，為何要重新部署整個應用程式？ 應用程式的不同功能和跨領域考慮可能會分成不同的單位。 圖3-2 顯示單一應用程式如何藉由委派特定的功能來利用容器和微服務。 應用程式本身的其餘功能也已容器化。
 
+容器是不可變的。 定義容器之後，您可以用完全相同的方式重新建立並執行它。 這種不會將其本身用於以元件為基礎的設計。 如果應用程式的某些部分的發展方式不同，當您可以直接部署最常變更的元件時，為何要重新部署整個應用程式？ 應用程式的不同功能和跨領域考慮可能會分成不同的單位。 圖3-2 顯示單一應用程式如何藉由委派特定的功能來利用容器和微服務。 應用程式本身的其餘功能也已容器化。
+
 ![將整合型應用程式分解成在後端使用微服務。](./media/breaking-up-monolith-with-backend-microservices.png)
 **圖 3-2**。 將整合型應用程式分解成在後端使用微服務。
 
 每個雲端原生服務都會在個別的容器中建立及部署。 每個都可以視需要進行更新。 個別服務可以裝載于節點上，並具有適用于每個服務的資源。 在中執行的每個服務都不變、在開發、測試和生產環境之間共用，而且可以輕鬆建立版本。 應用程式的不同區域之間的結合，會明確成為服務之間的呼叫或訊息，而不是單體內的編譯時間相依性。 您也可以選擇最符合指定功能的技術，而不需要變更應用程式的其餘部分。
+
+容器化服務需要自動化管理。 手動管理一大組獨立部署的容器並不可行。 例如，請考慮下列工作：
+
+- 如何在多部電腦的叢集上布建容器實例？
+- 一旦部署之後，容器會如何探索並彼此通訊？
+- 容器如何依需求相應縮小或放大？
+- 如何監視每個容器的健全狀況？
+- 如何保護容器免于硬體和軟體失敗？
+- 如何將即時應用程式的容器升級為零停機時間？
+
+容器協調器會解決這些問題，並將這些考慮自動化。
+
+在雲端原生的生態系統中，Kubernetes 已成為事實上的容器協調器。 這是由雲端原生運算基礎（由 CNCF）所管理的開放原始碼平臺。 Kubernetes 會將容器化工作負載的部署、調整和操作方面的顧慮自動化到機器叢集上。 不過，安裝和管理 Kubernetes 非常複雜。
+
+更好的方法是利用 Kubernetes 作為雲端廠商的受控服務。 Azure 雲端具備一個完全受控的 Kubernetes 平臺，並[Azure Kubernetes Service （AKS）](https://azure.microsoft.com/services/kubernetes-service/)。 AKS 會將管理 Kubernetes 的複雜性和操作負擔抽象化。 您會使用 Kubernetes 作為雲端服務;Microsoft 會負責管理和支援它。 AKS 也與其他 Azure 服務和開發工具緊密整合。
+
+AKS 是以叢集為基礎的技術。 同盟虛擬機器或節點的集區會部署到 Azure 雲端。 它們會構成高可用性環境或叢集。 叢集會以流暢的單一實體形式呈現給您的雲端原生應用程式。 實際上，AKS 會依照預先定義的策略，將您的容器化服務部署在這些節點上，以平均分配負載。
 
 容器化服務需要自動化管理。 手動管理一大組獨立部署的容器並不可行。 例如，請考慮下列工作：
 
@@ -144,7 +163,7 @@ status:
 
 ## <a name="development-resources"></a>開發資源
 
-本節顯示的開發資源簡短清單，可協助您開始使用容器和協調器來進行下一個應用程式。 如果您要尋找如何設計雲端原生微服務架構應用程式的指引，請閱讀這本書隨附的[.Net 微服務：容器化 .Net 應用程式的架構](https://aka.ms/microservicesebook)。
+本節顯示的開發資源簡短清單，可協助您開始使用容器和協調器來進行下一個應用程式。 如果您要尋找如何設計雲端原生微服務架構應用程式的指引，請閱讀這本書隨附的[.Net 微服務：容器化 .Net 應用程式的架構](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)。
 
 ### <a name="local-kubernetes-development"></a>本機 Kubernetes 開發
 
@@ -219,15 +238,19 @@ ENTRYPOINT ["dotnet", "WebApplication3.dll"]
 
 此外，您隨時都可以將 Docker 支援新增至現有的 ASP.NET Core 應用程式。 在 [Visual Studio 方案總管中，以滑鼠右鍵按一下專案並**新增** > **Docker 支援**，如圖3-8 所示。
 
-![Visual Studio 新增 Docker 支援](./media/visual-studio-add-docker-support.png)
-
-**圖 3-8**。 Visual Studio 新增 Docker 支援
+**圖 3-8**。 將 Docker 支援新增至 Visual Studio
 
 您也可以新增容器協調流程支援，如圖3-8 所示。 根據預設，orchestrator 會使用 Kubernetes 和 Helm。 一旦您選擇協調器， `azds.yaml`檔案就會新增至專案根目錄，並加入一個`charts`資料夾，其中包含用來設定和部署應用程式至 Kubernetes 的 Helm 圖表。 圖3-9 顯示新專案中產生的檔案。
 
-![Visual Studio 新增協調器支援](./media/visual-studio-add-orchestrator-support.png)
+您也可以新增容器協調流程支援，如圖3-8 所示。 根據預設，orchestrator 會使用 Kubernetes 和 Helm。 一旦您選擇協調器， `azds.yaml`檔案就會新增至專案根目錄，並加入一個`charts`資料夾，其中包含用來設定和部署應用程式至 Kubernetes 的 Helm 圖表。 圖3-9 顯示新專案中產生的檔案。
 
-**圖 3-9**。 Visual Studio 新增協調器支援
+**圖 3-9**。 將協調流程支援新增至 Visual Studio
+
+### <a name="visual-studio-code-docker-tooling"></a>Visual Studio Code Docker 工具
+
+有一些擴充功能可用於支援 Docker 開發的 Visual Studio Code。
+
+Microsoft 提供[Docker for Visual Studio Code 延伸](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)模組。 此延伸模組可簡化將容器支援新增至應用程式的過程。 它會 scaffold 所需的檔案、建立 Docker 映射，並可讓您在容器內對應用程式進行調試。 延伸模組具備視覺化瀏覽器的功能，可讓您輕鬆地對容器和映射採取動作，例如啟動、停止、檢查、移除等等。 延伸模組也支援 Docker Compose 可讓您將多個執行中的容器當做單一單位來管理。
 
 >[!div class="step-by-step"]
 >[上一頁](scale-applications.md)

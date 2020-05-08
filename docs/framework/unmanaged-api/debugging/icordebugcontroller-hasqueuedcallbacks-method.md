@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d6a1cd9-370b-4462-adbf-e3980e897ea7
 topic_type:
 - apiref
-ms.openlocfilehash: c33193bd64030852441c7ca60cee4a000b09156c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: bd656445c2451d0583ddbc45e71c9e090bb80305
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788917"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892783"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a>ICorDebugController::HasQueuedCallbacks 方法
 取得值，指出目前是否已針對指定的執行緒將任何 managed 回呼排入佇列。  
@@ -39,22 +39,22 @@ HRESULT HasQueuedCallbacks (
  在代表執行緒之 "ICorDebugThread" 物件的指標。  
   
  `pbQueued`  
- 脫銷如果目前已針對指定的執行緒將任何 managed 回呼排入佇列，則為 `true` 的值指標。否則，`false`。  
+ 脫銷值的指標，如果目前已`true`針對指定的執行緒將任何 managed 回呼排入佇列，則為;否則為`false`。  
   
- 如果指定了 `pThread` 參數的 null，`HasQueuedCallbacks` 會傳回 `true` （如果有任何執行緒目前已排入佇列的受控回呼）。  
+ 如果為`pThread`參數指定 null， `HasQueuedCallbacks`將會`true`在目前有 managed 回呼排入佇列給任何執行緒時傳回。  
   
 ## <a name="remarks"></a>備註  
  回呼會一次分派一個，每次呼叫[ICorDebugController：： Continue](icordebugcontroller-continue-method.md)時。 如果偵錯工具想要報告同時發生的多個偵測事件，可以檢查此旗標。  
   
- 當偵測事件排入佇列時，它們已經發生，因此偵錯工具必須清空整個佇列，以確保偵錯工具的狀態。 （呼叫 `ICorDebugController::Continue` 以清空佇列）。例如，如果佇列包含執行緒*x*上的兩個偵錯工具事件，而且偵錯工具在第一個偵錯工具之後暫停執行緒*x* ，然後呼叫 `ICorDebugController::Continue`，則執行緒*x*的第二個偵錯工具事件將會分派，但執行緒已暫停。  
+ 當偵測事件排入佇列時，它們已經發生，因此偵錯工具必須清空整個佇列，以確保偵錯工具的狀態。 （呼叫`ICorDebugController::Continue`以清空佇列）。例如，如果佇列包含執行緒*x*上的兩個偵測事件，而偵錯工具在第一次調試事件之後暫停執行緒*x* ， `ICorDebugController::Continue`然後再呼叫，則執行緒*x*的第二個偵錯工具事件將會分派，雖然執行緒已暫止。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
