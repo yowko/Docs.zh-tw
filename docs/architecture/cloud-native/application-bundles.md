@@ -2,12 +2,12 @@
 title: 雲端原生應用程式套件組合
 description: 架構適用于 Azure 的雲端原生 .NET 應用程式 |雲端原生應用程式套件組合
 ms.date: 06/30/2019
-ms.openlocfilehash: 0c67035af08d3c337ff027f3742e1ce8a83f8d0f
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 6f85ca14ff4d17f9c7a90a9ace51a1448b89fcb3
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71183711"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895674"
 ---
 # <a name="cloud-native-application-bundles"></a>雲端原生應用程式套件組合
 
@@ -78,7 +78,8 @@ CNAB 格式也有彈性，讓它可用於任何雲端。 它甚至可以用於�
 
 ## <a name="devops-decisions"></a>DevOps 決策
 
-在 DevOps 的空間中，有很多絕佳的工具可讓您順利完成。 開始使用 DevOps 旅程的最愛書是[Phoenix 專案](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/)，其遵循將虛構公司從 NoOps 轉換為 DevOps。 其中一件事是：部署複雜的雲端原生應用程式時，DevOps 不再是「不錯的」。 這是一項需求，而且應該在任何專案開始時規劃和資源。
+在 DevOps 的空間中，有很多絕佳的工具可讓您順利完成。 開始使用 DevOps 旅程的最愛書是[Phoenix 專案](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/)，其遵循將虛構公司從 NoOps 轉換為 DevOps。 其中一件事就是：部署複雜的雲端原生應用程式時，DevOps 不再是「好用」。 這是一項需求，而且應該在任何專案開始時規劃和資源。
 
 >[!div class="step-by-step"]
->[上一步](infrastructure-as-code.md)
+>[上一頁](infrastructure-as-code.md)
+>[下一頁](summary.md)

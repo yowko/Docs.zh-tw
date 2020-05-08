@@ -3,12 +3,12 @@ title: 雲端原生通訊模式
 description: 瞭解雲端原生應用程式中的重要服務通訊考慮
 author: robvet
 ms.date: 08/31/2019
-ms.openlocfilehash: 3bda9baa516b7bd8f893e0f58bbe5e2bfde2b61d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214015"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895622"
 ---
 # <a name="cloud-native-communication-patterns"></a>雲端原生通訊模式
 
@@ -26,7 +26,7 @@ ms.locfileid: "71214015"
 
 ![Azure 中的 Kubernetes 叢集](./media/kubernetes-cluster-in-azure.png)
 
-**圖 4-1**： Azure 中的 Kubernetes 叢集
+**圖 4-1**。 Azure 中的 Kubernetes 叢集
 
 在整個叢集中，微服務透過 Api 和訊息技術彼此通訊。
 
@@ -44,7 +44,7 @@ ms.locfileid: "71214015"
 
 - 訊息加密/解密變得很重要。
 
-[.Net 微服務：容器化 .Net 應用程式的架構](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)（可從 Microsoft 免費取得）提供微服務應用程式通訊模式的深入涵蓋範圍。 在本章中，我們會提供這些模式的高階概述，以及 Azure 雲端中可用的實作為選項。
+[.Net 微服務：容器化 .Net 應用程式的架構](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)（可從 Microsoft 免費取得）提供微服務應用程式通訊模式的深入涵蓋範圍。 在本章中，我們會提供這些模式的高階概述，以及 Azure 雲端中可用的實作為選項。
 
 在本章中，我們會先解決前端應用程式與後端微服務之間的通訊。 然後，我們將探討後端微服務彼此通訊。 我們將探討 up 和 gRPC 通訊技術。 最後，我們將使用服務網格技術來探討新的創新通訊模式。 我們也將瞭解 Azure 雲端如何提供不同種類的支援*服務*，以支援雲端原生通訊。
 

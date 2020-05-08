@@ -3,14 +3,14 @@ title: .NET Core SDK 和執行時間相依性-.NET Core
 description: 詳細說明在 Windows、Linux 和 macOS 上安裝 .NET Core SDK 和執行時間的作業系統和 CPU 架構必要條件。
 author: leecow
 ms.author: leecow
-ms.date: 12/04/2019
+ms.date: 04/30/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 42765d4402dfa17d4e962b2ecaf7a83e91853c76
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 280aa1431686ff99257580bb024a84b1e57f85c0
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140984"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895481"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core 相依性和需求
 
@@ -262,7 +262,7 @@ Ubuntu 發行版本需要安裝下列程式庫：
 - libgdiplus （6.0.1 版或更新版本）
 
 > [!WARNING]
-> 最新版的 Ubuntu 包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱 <https://www.mono-project.com/download/stable/>。
+> 最新版的 Ubuntu 包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。
 
 ### <a name="centos-and-fedora"></a>CentOS 與 Fedora
 
@@ -289,7 +289,25 @@ Fedora 使用者：如果您的 OpenSSL 版本 >= 1.1，您必須安裝相容性
 - libgdiplus （6.0.1 版或更新版本）
 
 > [!WARNING]
-> 大部分的 CentOS 和 Fedora 版本都包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱 <https://www.mono-project.com/download/stable/>。
+> 大部分的 CentOS 和 Fedora 版本都包含舊版的 libgdiplus。 您可以藉由將 Mono 存放庫新增至您的系統，來安裝最新版本的 libgdiplus。 如需詳細資訊，請參閱<https://www.mono-project.com/download/stable/>。
+
+### <a name="alpine"></a>Alpine
+
+Alpine 發行版本需要安裝下列程式庫：
+
+- icu-程式庫（如果停用全球化則不需要此功能）
+- krb5-libs
+- libcurl
+- libintl
+- libssl1.0.0 1.1 （適用于 Alpine 3.9 或更新版本）或 libssl1.0.0 1.0 （適用于舊版）
+- libstdc++
+- lttng-ust
+- numactl （選擇性，僅適用于已啟用 NUMA 的裝置）
+- zlib
+
+針對使用*system.web*元件的 .net Core 應用程式，您也需要下列相依性：
+
+- libgdiplus （僅適用于 edge/測試存放庫）
 
 ::: zone-end
 

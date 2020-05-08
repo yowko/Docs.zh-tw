@@ -2,12 +2,12 @@
 title: 在 Azure 中部署容器
 description: 使用 Azure Container Registry、Azure Kubernetes Service 和 Azure Dev Spaces 在 Azure 中部署容器。
 ms.date: 04/13/2020
-ms.openlocfilehash: 6238460c6129583c34e6b328c38ed9042f32f3d6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 57a4739d39b8ad022d699d54255f56f16d305440
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199556"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895608"
 ---
 # <a name="deploying-containers-in-azure"></a>在 Azure 中部署容器
 
@@ -108,8 +108,8 @@ az acr build --image sample/hello-world:v1  --registry myContainerRegistry008 --
 
 若要瞭解 Azure Dev Spaces 的值，請在 Microsoft Azure，讓我在容器的領導處 Gabe Monroy 分享此報價：
 
-> 假設您是新的員工，嘗試修正由數十個元件組成的複雜微服務應用程式中的 bug，每一個都有自己的設定和支援服務。 若要開始使用，您必須設定本機開發環境，讓它可以模擬生產，包括設定您的 IDE、建立工具鏈、容器化服務相依性、本機 Kubernetes 環境、支援服務的模擬等等。 只要設定您的開發環境，修正該第一個錯誤可能需要數天的時間。
-> 或者，您可以使用 Dev Spaces 和 AKS。
+> 「想像一下，您是一名新員工，嘗試修正包含數十個元件的複雜微服務應用程式中的 bug，每一個都有自己的設定和支援服務。 若要開始使用，您必須設定本機開發環境，讓它可以模擬生產，包括設定您的 IDE、建立工具鏈、容器化服務相依性、本機 Kubernetes 環境、支援服務的模擬等等。 只要設定您的開發環境，修正該第一個錯誤可能需要數天的時間。
+> 或者，您可以使用 Dev Spaces 和 AKS。」
 
 處理 Azure Dev Spaces 的套裝程式含下列步驟：
 

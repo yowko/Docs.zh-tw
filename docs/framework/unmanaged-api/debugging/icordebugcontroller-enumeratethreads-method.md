@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 73f536f6-4668-4a4a-b3e4-ac7df862d5be
 topic_type:
 - apiref
-ms.openlocfilehash: 815dc63a2dedecc613506b0f98702f58d6e7bd04
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4d69f13d4716b43c815148ff0fe4aa087b57c6e5
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76783793"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892760"
 ---
 # <a name="icordebugcontrollerenumeratethreads-method"></a>ICorDebugController::EnumerateThreads 方法
 取得進程中使用中 managed 執行緒的列舉值。  
@@ -41,12 +41,12 @@ HRESULT EnumerateThreads (
  在分派[ICorDebugManagedCallback：： CreateThread](icordebugmanagedcallback-createthread-method.md)回呼之後，以及在分派[ICorDebugManagedCallback：： ExitThread](icordebugmanagedcallback-exitthread-method.md)回呼之前，會將執行緒視為作用中。 Managed 執行緒可能不一定會在其堆疊上有任何受控框架。 即使在[ICorDebugManagedCallback：： CreateProcess](icordebugmanagedcallback-createprocess-method.md)回呼之前，也可以列舉執行緒。 列舉自然會是空的。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱

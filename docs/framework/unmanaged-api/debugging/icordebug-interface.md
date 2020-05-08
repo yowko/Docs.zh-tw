@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-ms.openlocfilehash: 0ca66f001d04bc86b64e0fe2d1cd37559e4fc633
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 66b50bad0e8d2622922da96c213643ac3be83a9e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785109"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895364"
 ---
 # <a name="icordebug-interface"></a>ICorDebug 介面
 提供可讓開發人員在 common language runtime （CLR）環境中，對應用程式進行 debug 的方法。  
@@ -39,25 +39,25 @@ ms.locfileid: "76785109"
 |[Initialize 方法](icordebug-initialize-method.md)|初始化 `ICorDebug` 物件。|  
 |[SetManagedHandler 方法](icordebug-setmanagedhandler-method.md)|指定 managed 事件的事件處理常式物件。|  
 |[SetUnmanagedHandler 方法](icordebug-setunmanagedhandler-method.md)|指定非受控事件的事件處理常式物件。|  
-|[Terminate 方法](icordebug-terminate-method.md)|終止 `ICorDebug` 物件。|  
+|[Terminate 方法](icordebug-terminate-method.md)|終止`ICorDebug`物件。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebug` 代表偵錯工具進程的事件處理迴圈。 偵錯工具必須等到所有進程中的[ICorDebugManagedCallback：： ExitProcess](icordebugmanagedcallback-exitprocess-method.md)回呼，才會釋放此介面。  
+ `ICorDebug`表示偵錯工具進程的事件處理迴圈。 偵錯工具必須等到所有進程中的[ICorDebugManagedCallback：： ExitProcess](icordebugmanagedcallback-exitprocess-method.md)回呼，才會釋放此介面。  
   
- `ICorDebug` 物件是用來控制所有進一步 managed 調試的初始物件。 在 .NET Framework 版本1.0 和1.1 中，此物件是從 COM 建立的 `CoClass` 物件。 在 .NET Framework 版本2.0 中，此物件不再是 `CoClass` 物件。 它必須由[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)函式所建立，這是更容易感知版本的功能。 這項新的建立功能可讓用戶端取得 `ICorDebug`的特定執行，這也會模擬特定版本的調試 API。  
+ `ICorDebug`物件是用來控制所有進一步 managed 調試的初始物件。 在 .NET Framework 版本1.0 和1.1 中，此物件是從`CoClass` COM 建立的物件。 在 .NET Framework 版本2.0 中，此物件不再是`CoClass`物件。 它必須由[CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md)函式所建立，這是更容易感知版本的功能。 這個新的建立功能可讓用戶端取得的特定`ICorDebug`執行，這也會模擬特定版本的調試 API。  
   
 > [!NOTE]
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯介面](debugging-interfaces.md)

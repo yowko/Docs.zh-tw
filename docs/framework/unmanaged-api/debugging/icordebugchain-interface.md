@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f671f519-1cb3-4ae5-b9f1-abc5e783459f
 topic_type:
 - apiref
-ms.openlocfilehash: f4bacfe94178ea78b1c3afd15a2e100076c38a84
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6ae0fec0f8de2bbe3862f9f70ed9cf3d32af34c4
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777988"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894206"
 ---
 # <a name="icordebugchain-interface"></a>ICorDebugChain 介面
 
@@ -43,20 +43,20 @@ ms.locfileid: "76777988"
 |[IsManaged 方法](icordebugchain-ismanaged-method.md)|取得值，指出這個鏈是否正在執行 managed 程式碼。|  
   
 ## <a name="remarks"></a>備註  
- 鏈中的堆疊框架會佔用連續的堆疊空間，並共用相同的執行緒和內容。 連鎖可能代表受控或非受控碼鏈。 空的 `ICorDebugChain` 實例代表非受控碼鏈。  
+ 鏈中的堆疊框架會佔用連續的堆疊空間，並共用相同的執行緒和內容。 連鎖可能代表受控或非受控碼鏈。 空`ICorDebugChain`的實例代表非受控碼鏈。  
   
 > [!NOTE]
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [偵錯介面](debugging-interfaces.md)

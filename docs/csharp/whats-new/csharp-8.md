@@ -2,12 +2,12 @@
 title: 'C # 8.0 的新功能-c # 指南'
 description: 大致了解 C# 8.0 中可用的新功能。
 ms.date: 04/07/2020
-ms.openlocfilehash: 8935660d175cc3ee404ee374e3a58fc47d283771
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 27c2d7e2d6f0e665e7abe4fdcfb94c140224cc89
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794568"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895427"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -183,7 +183,7 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
     location switch
     {
         { State: "WA" } => salePrice * 0.06M,
-        { State: "MN" } => salePrice * 0.75M,
+        { State: "MN" } => salePrice * 0.075M,
         { State: "MI" } => salePrice * 0.05M,
         // other cases removed for brevity...
         _ => 0M

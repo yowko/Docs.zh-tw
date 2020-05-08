@@ -2,12 +2,12 @@
 title: 為雲端原生服務結合容器和無伺服器方法
 description: 結合容器和 Kubernetes 與無伺服器方法
 ms.date: 04/23/2020
-ms.openlocfilehash: fe9e9fd5d07132971d64bc6433a762fb7bd22048
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a6ae17543c9075ca84126a4c19f9f51887f7fe9a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199660"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895641"
 ---
 # <a name="combining-containers-and-serverless-approaches"></a>結合容器和無伺服器方法
 
@@ -35,7 +35,11 @@ func init ProjectName --worker-runtime dotnet --docker
 
 ## <a name="how-to-combine-serverless-and-kubernetes-with-keda"></a>如何結合無伺服器和 Kubernetes 與 KEDA
 
-Azure 函式會根據以其為目標的事件速率，自動調整以滿足需求。 您一律可以利用 AKS 來裝載您的函式，並使用以 Kubernetes 為基礎的事件驅動自動調整，或 KEDA。 當沒有發生任何事件時，KEDA 可以相應減少為零個實例。 [深入瞭解如何使用 KEDA 調整 Azure](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda)函式。
+在本章中，您已瞭解 Azure Functions 的平臺會自動相應放大以符合需求。 不過，將容器化函式部署到 AKS 時，您會失去內建的調整功能。 若要解決這種情況，就會產生以[Kubernetes 為基礎的事件驅動（KEDA）](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda)。 它可為包含容器化函`event-driven Kubernetes workloads,`式提供更細緻的自動調整功能。
+
+KEDA 提供事件驅動的調整功能給 Docker 容器中的函式執行時間。 KEDA 可以根據負載，從零個實例（沒有發生的事件） `n instances`相應縮小至。 它會將自訂計量公開至 Kubernetes 自動調整程式（水準 Pod 自動調整程式）來啟用自動調整。 將函式容器與 KEDA 搭配使用，可讓您在任何 Kubernetes 叢集中複寫無伺服器函式功能。
+
+值得注意的是，KEDA 專案現在是由雲端原生運算基礎（由 CNCF）所管理。
 
 >[!div class="step-by-step"]
 >[上一頁](leverage-serverless-functions.md)

@@ -3,12 +3,12 @@ title: dotnet nuget push 命令
 description: dotnet nuget push 命令會將套件推送至伺服器並發行。
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 1e7831de4c041591b3602e405418f89f1d1d27d1
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728347"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895462"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -42,7 +42,7 @@ dotnet nuget push -h|--help
 
   指定套件推送目標的檔案路徑。
 
-## <a name="options"></a>選項。
+## <a name="options"></a>選項
 
 - **`-d|--disable-buffering`**
 
@@ -152,5 +152,4 @@ dotnet nuget push -h|--help
   dotnet nuget push *.nupkg -s c:\mydir
   ```
 
-  此命令不會將封裝儲存在階層式資料夾結構中，這是建議用來優化效能的方式。 如需詳細資訊，請參閱[本機](//nuget/hosting-packages/local-feeds)摘要。
-  
+  此命令不會將封裝儲存在階層式資料夾結構中，這是建議用來優化效能的方式。 如需詳細資訊，請參閱[本機](/nuget/hosting-packages/local-feeds)摘要。  

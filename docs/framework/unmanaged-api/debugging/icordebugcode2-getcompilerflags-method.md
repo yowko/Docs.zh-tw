@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 532e9dfd-d114-4c75-b952-1accce102643
 topic_type:
 - apiref
-ms.openlocfilehash: 4ad1fb1bcb43dda9796b54cbf868f89c001995da
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 734a05d96aed309541708d4e6f80ed61cab85637
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777896"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893491"
 ---
 # <a name="icordebugcode2getcompilerflags-method"></a>ICorDebugCode2::GetCompilerFlags 方法
 
@@ -41,10 +41,10 @@ HRESULT GetCompilerFlags (
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** CorDebug.idl、CorDebug.h
 
 **程式庫：** CorGuids.lib
 
-**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

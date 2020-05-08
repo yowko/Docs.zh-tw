@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8d1def7-0ebc-4314-a3a2-fd36a75973e7
 topic_type:
 - apiref
-ms.openlocfilehash: 55e331ff4e6ada73dc92bb2e880f555887639714
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 17bf4c92b1e1347a8fe790c8df5937de0f95df4d
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088784"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895076"
 ---
 # <a name="icordebugappdomainenumnext-method"></a>ICorDebugAppDomainEnum::Next 方法
 從目前的資料指標位置開始，取得集合中指定的應用程式域數目。  
@@ -44,13 +44,13 @@ HRESULT Next (
  脫銷指標陣列，其中每一個都會指向代表應用程式域的 ICorDebugAppDomain 物件。  
   
  `pceltFetched`  
- 脫銷實際傳回的應用程式網域數目的指標。 如果 `celt` 是一個，這個值可能會是 null。  
+ 脫銷實際傳回的應用程式網域數目的指標。 如果`celt`是一個，這個值可能會是 null。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

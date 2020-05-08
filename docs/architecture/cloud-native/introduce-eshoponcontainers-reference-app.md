@@ -2,12 +2,12 @@
 title: EShopOnContainers 參考應用程式簡介
 description: 介紹適用于 ASP.NET Core 和 Azure 的 eShopOnContainers Cloud Native 微服務 Reference 應用程式。
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d55f248acbc34bcc76d38987d7e1d537cf6065a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087249"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895531"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers 參考應用程式簡介
 
@@ -17,7 +17,7 @@ Microsoft 與領先的社區專家合作，已產生全功能的雲端原生微�
 
 ![eShopOnContainers 範例應用程式螢幕擷取畫面。](./media/eshoponcontainers-sample-app-screenshot.png)
 
-**圖 2-1**. eShopOnContainers 範例應用程式螢幕擷取畫面。
+**圖 2-1**。 eShopOnContainers 範例應用程式螢幕擷取畫面。
 
 在開始本章之前，建議您先下載[eShopOnContainers reference 應用程式](https://github.com/dotnet-architecture/eShopOnContainers)。 如果您這樣做，您就可以更輕鬆地追蹤所呈現的資訊。
 
@@ -25,12 +25,12 @@ Microsoft 與領先的社區專家合作，已產生全功能的雲端原生微�
 
 讓我們先複習一下應用程式的功能和需求。 EShopOnContainers 應用程式代表銷售各種實體產品（例如 t 恤和咖啡馬克杯）的線上商店。 如果您之前已在線上購買任何專案，使用存放區的體驗應該相當熟悉。 以下是存放區所實行的一些基本功能：
 
-- 列出目錄專案
+- 列出目錄項目
 - 依類型篩選項目
 - 依品牌篩選項目
 - 將專案新增至購物籃
 - 編輯或移除購物籃中的專案
-- 準備
+- 簽出
 - 註冊帳戶
 - 登入
 - 登出
@@ -64,13 +64,13 @@ EShopOnContainers 應用程式可從透過 HTTPS 存取應用程式的 web 或�
 
 ![Visual Studio 方案中的專案。](./media/projects-in-visual-studio-solution.png)
 
-**圖 2-4**： Visual Studio 方案中的專案。
+**圖 2-4**。 Visual Studio 方案中的專案。
 
 程式碼會組織成支援不同的微服務，而在每個微服務中，程式碼會細分為領域邏輯、基礎結構考慮，以及使用者介面或服務端點。 在許多情況下，Azure 服務會在生產環境中滿足每個服務的相依性，以及用於本機開發的替代選項。 讓我們來檢查應用程式的需求如何對應至 Azure 服務。
 
-## <a name="understanding-microservices"></a>瞭解微服務
+## <a name="understanding-microservices"></a>了解微服務
 
-本書著重在使用 Azure 技術建立的雲端原生應用程式。 若要深入瞭解微服務的最佳做法，以及如何架構微服務型應用程式，請閱讀隨附的《 [.Net 微服務：容器化 .Net 應用程式的架構](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture)》一書。 本書可從線上、PDF 或 eReader 格式取得。
+本書著重在使用 Azure 技術建立的雲端原生應用程式。 若要深入瞭解微服務的最佳做法，以及如何架構微服務型應用程式，請閱讀隨附的《 [.Net 微服務：容器化 .Net 應用程式的架構](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)》一書。
 
 >[!div class="step-by-step"]
 >[上一頁](candidate-apps.md)
