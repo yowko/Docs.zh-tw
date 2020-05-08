@@ -3,12 +3,12 @@ title: 在 Visual Studio 中使用 Roslyn 語法視覺化檢視瀏覽程式碼
 description: 語法視覺化檢視提供了視覺化工具來瀏覽 .NET 編譯器平台 SDK 為程式碼產生的模型。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 27e5a1f0b31dd2af2ac779223538b03cdb4db0c5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7a34fda909bd044a9e65a8353d5626b533730e3
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156983"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975923"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>在 Visual Studio 中使用 Roslyn 語法視覺化檢視瀏覽程式碼
 
@@ -20,7 +20,7 @@ ms.locfileid: "79156983"
 
 ## <a name="syntax-visualizer"></a>語法視覺化檢視
 
-**語法視覺化檢視**允許在 Visual Studio IDE 內的當前活動編輯器視窗中檢查 C# 或 Visual Basic 代碼檔的語法樹。 通過按一下 **"查看** > **其他 Windows** > **語法視覺化檢視**"，可以啟動視覺化檢視。  您也可以使用右上角的 [快速啟動]**** 工具列。 輸入 "syntax"，開啟語法視覺化檢視**** 的命令應該會出現。
+此**Syntax Visualizer**可讓您檢查 c # 的語法樹狀結構，或在 Visual Studio IDE 的目前現用編輯器視窗中 Visual Basic 程式碼檔案。 您可以按一下 [**觀看** > **其他視窗** > **Syntax Visualizer**] 來啟動此視覺化檢視。  您也可以使用右上角的 [快速啟動]**** 工具列。 輸入 "syntax"，開啟語法視覺化檢視**** 的命令應該會出現。
 
 此命令會將語法視覺化檢視開啟為浮動的工具視窗。 如果您還沒有開啟的程式碼編輯器視窗，顯示將為空白，如下圖所示。
 
@@ -28,7 +28,7 @@ ms.locfileid: "79156983"
 
 將此工具視窗停駐在 Visual Studio 內方便的位置，例如左側。 視覺化檢視會顯示目前程式碼檔案的相關資訊。
 
-使用 **"檔** > **新專案"** 命令創建新專案。 您可以創建視覺化基本專案或 C# 專案。 當 Visual Studio 開啟這個專案的主要程式碼檔案時，視覺化檢視會顯示其語法樹狀目錄。 您可以在此 Visual Studio 實例中打開任何現有的 C# / Visual Basic 檔，視覺化檢視將顯示該檔的語法樹。 如果您在 Visual Studio 內開啟了多個程式碼檔案，視覺化檢視會顯示目前使用中程式碼檔案 (具有鍵盤焦點的程式碼檔案) 的語法樹狀目錄。
+使用 **[檔案** > ] [**新增專案**] 命令來建立新的專案。 您可以建立 Visual Basic 或 c # 專案。 當 Visual Studio 開啟這個專案的主要程式碼檔案時，視覺化檢視會顯示其語法樹狀目錄。 您可以在這個 Visual Studio 實例中開啟任何現有的 c #/Visual Basic 檔案，而視覺化程式會顯示該檔案的語法樹狀結構。 如果您在 Visual Studio 內開啟了多個程式碼檔案，視覺化檢視會顯示目前使用中程式碼檔案 (具有鍵盤焦點的程式碼檔案) 的語法樹狀目錄。
 
 <!-- markdownlint-disable MD025 -->
 
@@ -36,7 +36,7 @@ ms.locfileid: "79156983"
 ![視覺化 C# 語法樹狀目錄](media/syntax-visualizer/visualize-csharp.png)
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
-![視覺化視覺化基本語法樹](media/syntax-visualizer/visualize-visual-basic.png)
+![視覺化 Visual Basic 語法樹狀結構](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
 
@@ -49,7 +49,7 @@ ms.locfileid: "79156983"
 有兩種方式可瀏覽樹狀結構：
 
 * 展開，或按一下樹狀結構中的項目。 視覺化檢視會在程式碼編輯器中自動選取對應至此項目範圍的文字。
-* 在程式碼編輯器中，按一下或選取文字。 在前面的視覺化基本示例中，如果在代碼編輯器中選擇包含"模組 1"的行，視覺化檢視將自動導航到樹中的相應 Module語句節點。
+* 在程式碼編輯器中，按一下或選取文字。 在上述 Visual Basic 範例中，如果您在程式碼編輯器中選取包含 "Module Module1" 的行，則視覺化檢視會自動流覽至樹狀結構中對應的 ModuleStatement 節點。
 
 視覺化檢視會反白顯示樹狀結構中，範圍最符合文字編輯器中所選取文字之範圍的項目。
 
@@ -69,13 +69,13 @@ ms.locfileid: "79156983"
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
-對與上述視覺基本示例中的方法對應的方法對應`Main()`的**SubBlock**節點嘗試相同的嘗試。 視覺化檢視會顯示看似如下的語法圖：
+針對**SubBlock**節點，嘗試與前述 Visual Basic 範例中`Main()`的方法對應的相同。 視覺化檢視會顯示看似如下的語法圖：
 
-![查看視覺化基本語法圖](media/syntax-visualizer/visual-basic-syntax-graph.png)
+![查看 Visual Basic 語法圖形](media/syntax-visualizer/visual-basic-syntax-graph.png)
 
 ---
 
-語法圖表檢視器有顯示圖例色彩配置的選項。 您也可以將滑鼠停留在語法圖中的個別項目，檢視對應至該項目的屬性。
+語法圖表檢視器可以選擇是否要顯示其色彩配置的圖例。 您也可以將滑鼠停留在語法圖中的個別項目，檢視對應至該項目的屬性。
 
 您可以重複在樹狀結構中檢視不同項目的語法圖，圖形一律會顯示在 Visual Studio 內的同一個視窗。 您可以將這個視窗停駐在 Visual Studio 內方便的位置，如此便不需要切換索引標籤來檢視新的語法圖。 底端 (在程式碼編輯器視窗下) 通常很方便。
 
@@ -105,9 +105,9 @@ ms.locfileid: "79156983"
 
 ![常數值](media/syntax-visualizer/constant-value.png)
 
-前面的示例也可以在視覺化基本版中複製。 鍵入`Dim x As Double = 1 + 1`視覺化基本檔。 在程式碼編輯器視窗中選取運算式 `1 + 1`。 視覺化檢視會在視覺化檢視中反白顯示對應的 **AddExpression** 節點。 對這個 **AddExpression** 重複上述步驟，您應該會看到相同的結果。
+上述範例也可以在 Visual Basic 中進行複寫。 輸入`Dim x As Double = 1 + 1` Visual Basic 檔案。 在程式碼編輯器視窗中選取運算式 `1 + 1`。 視覺化檢視會在視覺化檢視中反白顯示對應的 **AddExpression** 節點。 對這個 **AddExpression** 重複上述步驟，您應該會看到相同的結果。
 
-在視覺化基礎知識中檢查更多代碼。 使用以下代碼更新主視覺化基本檔：
+在 Visual Basic 中檢查更多程式碼。 使用下列程式碼更新您的主要 Visual Basic 檔案：
 
 ```vb
 Imports C = System.Console
@@ -131,7 +131,7 @@ End Module
 
 ![檢視方法宣告的符號](media/syntax-visualizer/method-symbol.png)
 
-上述視覺化基本示例可以輕鬆地在 C# 中複製。 輸入 `using C = System.Console;` 取代 `Imports C = System.Console`作為別名。 C# 的上述步驟會在視覺化檢視視窗中產生相同的結果。
+您可以在 c # 中輕鬆地複寫上述 Visual Basic 範例。 輸入 `using C = System.Console;` 取代 `Imports C = System.Console`作為別名。 C# 的上述步驟會在視覺化檢視視窗中產生相同的結果。
 
 只能在節點上使用語意檢查作業。 它們不適用於語彙基元或邏輯。 並非所有節點都有有趣的語意資訊可以檢查。 當節點不具有趣的語意資訊時，按一下 [檢視 \* 符號 (如果有的話)]**** 會顯示空白的屬性方格。
 
@@ -139,4 +139,4 @@ End Module
 
 ## <a name="closing-the-syntax-visualizer"></a>關閉語法視覺化檢視
 
-當您不使用視覺化檢視視窗來檢查原始碼時，可以將它關閉。 當您巡覽程式碼中，編輯並變更原始碼時，語法視覺化檢視會更新它的顯示畫面。 您不使用它時，它可能會令人分心。
+當您不使用視覺化檢視視窗來檢查原始碼時，可以將它關閉。 當您流覽程式碼、編輯和變更來源時，語法視覺化檢視會更新其顯示。 您不使用它時，它可能會令人分心。

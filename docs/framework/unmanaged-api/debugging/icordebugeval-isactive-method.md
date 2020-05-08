@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bf2bba24-d278-43bd-b1c5-35680e748d3e
 topic_type:
 - apiref
-ms.openlocfilehash: bd10af53d7803964ed6e699ce5328aa8a860216c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4ee055812eb8dce2dc86f834dde92d7de5e1fdf9
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085026"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976209"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive 方法
 取得值，指出這個 ICorDebugEval 物件目前是否正在執行。  
@@ -38,10 +38,10 @@ HRESULT IsActive (
  脫銷指出此評估是否作用中的值指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

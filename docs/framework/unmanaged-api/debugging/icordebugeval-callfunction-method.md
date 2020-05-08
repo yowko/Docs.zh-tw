@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f470c5c-e1c0-4d8d-aad8-830f113ae751
 topic_type:
 - apiref
-ms.openlocfilehash: 4ac26ef4449dc02230f26b1247616b4587d217b7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1cf0080945ad78565fae3fedb454ceba7825cb4a
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085163"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976235"
 ---
 # <a name="icordebugevalcallfunction-method"></a>ICorDebugEval::CallFunction 方法
 
@@ -51,11 +51,11 @@ HRESULT CallFunction (
 
 ## <a name="remarks"></a>備註
 
-如果函式是虛擬的，`CallFunction` 將會執行虛擬分派。 如果函式在不同的應用程式域中，只要所有引數也在該應用程式域中，就會發生轉換。
+如果函式是虛擬的`CallFunction` ，將會執行虛擬分派。 如果函式在不同的應用程式域中，只要所有引數也在該應用程式域中，就會發生轉換。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** CorDebug.idl、CorDebug.h
 
@@ -63,6 +63,6 @@ HRESULT CallFunction (
 
 **.NET Framework 版本：** 1.1、1。0
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [CallParameterizedFunction 方法](icordebugeval2-callparameterizedfunction-method.md)

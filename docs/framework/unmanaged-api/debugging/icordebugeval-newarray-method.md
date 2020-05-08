@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc79a67d-5368-434d-a943-209db90491b9
 topic_type:
 - apiref
-ms.openlocfilehash: 13ac5379992f4e768b09a03d31591143ba9bf627
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 496a6a7e01dec8aa90ba4e849c431ccd499ef53d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788728"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976196"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray 方法
 配置指定之元素類型和維度的新陣列。  
@@ -59,10 +59,10 @@ HRESULT NewArray (
  陣列一律會建立線上程目前執行所在的應用程式域中。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET Framework 版本：** 1.1、1.0
+ **.NET Framework 版本：** 1.1、1。0

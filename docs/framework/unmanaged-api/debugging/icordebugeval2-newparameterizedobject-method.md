@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d705463-e640-4249-8036-4e8206d03cfe
 topic_type:
 - apiref
-ms.openlocfilehash: 5d01ab0b6b5d489b2181056129e22661a50108a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f6ede42ac90f65f934e285f879bcef62d13b65cb
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084849"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976092"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject 方法
 具現化新的參數化型別物件，並呼叫物件的函式方法。  
@@ -54,13 +54,13 @@ HRESULT NewParameterizedObject (
  在指標的陣列，其中每一個都會指向 ICorDebugValue 物件，代表傳遞至此函式的引數值。  
   
 ## <a name="remarks"></a>備註  
- 物件的函式可能會採用 <xref:System.Type> 參數。  
+ 物件的函式可能會<xref:System.Type>採用參數。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
