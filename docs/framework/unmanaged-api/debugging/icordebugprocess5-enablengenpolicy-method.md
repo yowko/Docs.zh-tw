@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b8e15ca-3c72-4685-a937-da4c739cb9e9
 topic_type:
 - apiref
-ms.openlocfilehash: 9497bea9b7cc5eb98876c923858dbcbc6adf9d07
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: fa3cbfee0359b8477f9efe88fe72837b86611bf7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792455"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212798"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>ICorDebugProcess5::EnableNGENPolicy 方法
 設定值，決定應用程式在 managed 偵錯工具下執行時，載入原生影像的方式。  
@@ -38,18 +38,18 @@ HRESULT EnableNGENPolicy(
  在[CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md)常數，可決定應用程式在 managed 偵錯工具下執行時，載入原生影像的方式。  
   
 ## <a name="remarks"></a>備註  
- 如果原則設定成功，此方法會傳回 `S_OK`。 如果 `ePolicy` 超出[CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md)所定義之列舉值的範圍，此方法會傳回 `E_INVALIDARG` 而方法呼叫則不會有任何作用。 如果無法更新原生映射產生器（Ngen.exe）的原則，則此方法會傳回 `E_FAIL`。  
+ 如果已成功設定原則，則方法會傳回 `S_OK` 。 如果超出 `ePolicy` [CorDebugNGenPolicy](cordebugngenpolicy-enumeration.md)所定義之列舉值的範圍，此方法會傳回 `E_INVALIDARG` ，且方法呼叫不會有任何作用。 如果無法更新原生映射產生器（Ngen.exe）的原則，則方法會傳回 `E_FAIL` 。  
   
- 在進程的存留期間，任何時間都可以呼叫 `ICorDebugProcess5::EnableNGenPolicy` 方法。 原則會在設定原則之後載入的任何模組生效。  
+ 在 `ICorDebugProcess5::EnableNGenPolicy` 進程的存留期間內，任何時間都可以呼叫方法。 原則會在設定原則之後載入的任何模組生效。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

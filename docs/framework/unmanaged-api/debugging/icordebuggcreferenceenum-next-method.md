@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 91b1345c-a94f-4ef8-9696-3823d06c6d05
 topic_type:
 - apiref
-ms.openlocfilehash: d87f414e9dfd05a519b60efc7ecdd5328a6dd86f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1cf6f9c5fe8777f3333e449a804a3c3a0a64ff19
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178872"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213084"
 ---
 # <a name="icordebuggcreferenceenumnext-method"></a>ICorDebugGCReferenceEnum::Next 方法
-獲取指定數量的[COR_GC_REFERENCE](cor-gc-reference-structure.md)實例，這些實例包含有關將垃圾回收的物件的資訊。  
+取得指定的[COR_GC_REFERENCE](cor-gc-reference-structure.md)實例數目，其中包含將被垃圾收集之物件的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,26 +36,26 @@ HRESULT Next(
   
 ## <a name="parameters"></a>參數  
  celt  
- [在]要檢索的根數。  
+ 在要抓取的根數目。  
   
- 根  
- [出]指標陣列，每個指標都指向表示要垃圾回收的物件的根[COR_GC_REFERENCE](cor-gc-reference-structure.md)物件。  
+ 方根  
+ 脫銷指標陣列，其中每一個都會指向一個[COR_GC_REFERENCE](cor-gc-reference-structure.md)物件，代表要進行垃圾收集之物件的根。  
   
  pceltFetched  
- [出]指向中實際返回的物件數[COR_GC_REFERENCE](cor-gc-reference-structure.md)的指標`roots`。 如果 `celt` 為 1，則這個值可能是 `null`。  
+ 脫銷中實際傳回之[COR_GC_REFERENCE](cor-gc-reference-structure.md)物件數目的指標 `roots` 。 如果 `celt` 為 1，則這個值可能是 `null`。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugGCReferenceEnum 介面](icordebuggcreferenceenum-interface.md)
 - [偵錯介面](debugging-interfaces.md)

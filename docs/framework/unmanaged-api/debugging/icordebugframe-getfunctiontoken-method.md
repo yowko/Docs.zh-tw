@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a46925b3-3bf8-404f-9f30-a86ae41032c1
 topic_type:
 - apiref
-ms.openlocfilehash: e7821022e6966dbdea90d57b6899f09b2ed1964e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6e214131aeb2d6d17ea4b0a730b5fc77428a7ca8
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090532"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213682"
 ---
 # <a name="icordebugframegetfunctiontoken-method"></a>ICorDebugFrame::GetFunctionToken 方法
 取得包含與此堆疊框架相關聯之程式碼的函式的元資料標記。  
@@ -35,13 +35,13 @@ HRESULT GetFunctionToken (
   
 ## <a name="parameters"></a>參數  
  `pToken`  
- 脫銷參考函數中繼資料之 `mdMethodDef` token 的指標。  
+ 脫銷參考函式 `mdMethodDef` 中繼資料之標記的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

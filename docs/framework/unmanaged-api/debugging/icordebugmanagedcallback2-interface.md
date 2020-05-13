@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cf7b7cfa-1c4b-4d8c-be70-4f9ed15a788b
 topic_type:
 - apiref
-ms.openlocfilehash: 43982ebb634843c0130c3321aa84c90b84e8c786
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b00be90316598e458f01f6cd440d0ad0a2e79c50
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793306"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212356"
 ---
 # <a name="icordebugmanagedcallback2-interface"></a>ICorDebugManagedCallback2 介面
-提供方法來支援偵錯工具例外狀況處理和 Managed 偵錯助理 (MDA)。 `ICorDebugManagedCallback2` 是[ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)介面的邏輯擴充。  
+提供方法來支援偵錯工具例外狀況處理和 Managed 偵錯助理 (MDA)。 `ICorDebugManagedCallback2`是[ICorDebugManagedCallback](icordebugmanagedcallback-interface.md)介面的邏輯擴充。  
   
 ## <a name="methods"></a>方法  
   
@@ -38,24 +38,24 @@ ms.locfileid: "76793306"
 |[MDANotification 方法](icordebugmanagedcallback2-mdanotification-method.md)|提供程式碼執行已遇到 managed 偵錯工具（MDA）訊息的通知。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugManagedCallback2` 介面會擴充 `ICorDebugManagedCallback` 介面，以處理 .NET Framework 版本2.0 中引進的新 debug 事件。  
+ `ICorDebugManagedCallback2`介面會擴充 `ICorDebugManagedCallback` 介面，以處理 .NET Framework 版本2.0 中引進的新 debug 事件。  
   
- 偵錯工具必須在 .NET Framework 2.0 應用程式中進行 `ICorDebugManagedCallback2` 時，才會執行。 `ICorDebugManagedCallback` 或 `ICorDebugManagedCallback2` 的實例會當做回呼物件傳遞至[ICorDebug：： SetManagedHandler](icordebug-setmanagedhandler-method.md)。  
+ `ICorDebugManagedCallback2`如果偵錯工具正在進行 .NET Framework 2.0 應用程式的偵錯工具，就必須加以執行。 或的實例 `ICorDebugManagedCallback` `ICorDebugManagedCallback2` 會當做回呼物件傳遞至[ICorDebug：： SetManagedHandler](icordebug-setmanagedhandler-method.md)。  
   
 > [!NOTE]
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 
-- [使用 Managed 偵錯助理診斷錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [使用 Managed 偵錯助理診斷錯誤](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [偵錯介面](debugging-interfaces.md)
 - [ICorDebugManagedCallback 介面](icordebugmanagedcallback-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 73332138-5fea-441f-b893-61af87d45a42
 topic_type:
 - apiref
-ms.openlocfilehash: 1ef6af11851acbe0f7e9469c9432ff09f9228608
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1a57b7ceb6da961fba1f0d6e8e0ba1aa88ca0541
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792499"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213487"
 ---
 # <a name="icordebugprocess2-interface"></a>ICorDebugProcess2 Interface
 ICorDebugProcess 介面的邏輯延伸，代表執行 managed 程式碼的進程。  
@@ -28,8 +28,8 @@ ICorDebugProcess 介面的邏輯延伸，代表執行 managed 程式碼的進程
   
 |方法|描述|  
 |------------|-----------------|  
-|[ClearUnmanagedBreakpoint 方法](icordebugprocess2-clearunmanagedbreakpoint-method.md)|移除先前呼叫 `ICorDebugProcess2::SetUnmanagedBreakpoint`所設定之指定位移處的中斷點。|  
-|[GetDesiredNGENCompilerFlags 方法](icordebugprocess2-getdesiredngencompilerflags-method.md)|取得必須針對 common language runtime （CLR）設定的旗標，以將影像載入此 `ICorDebugProcess2`所參考的進程中。|  
+|[ClearUnmanagedBreakpoint 方法](icordebugprocess2-clearunmanagedbreakpoint-method.md)|移除先前呼叫所設定之指定位移處的中斷點 `ICorDebugProcess2::SetUnmanagedBreakpoint` 。|  
+|[GetDesiredNGENCompilerFlags 方法](icordebugprocess2-getdesiredngencompilerflags-method.md)|取得必須針對 common language runtime （CLR）設定的旗標，以便將影像載入這個所參考的進程中 `ICorDebugProcess2` 。|  
 |[GetReferenceValueFromGCHandle 方法](icordebugprocess2-getreferencevaluefromgchandle-method.md)|取得具有垃圾收集控制碼之指定 managed 物件的參考指標。|  
 |[GetThreadForTaskID 方法](icordebugprocess2-getthreadfortaskid-method.md)|取得具有指定識別碼之工作執行所在的執行緒。|  
 |[GetVersion 方法](icordebugprocess2-getversion-method.md)|取得正在進行偵錯工具的 CLR 版本。|  
@@ -42,13 +42,13 @@ ICorDebugProcess 介面的邏輯延伸，代表執行 managed 程式碼的進程
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

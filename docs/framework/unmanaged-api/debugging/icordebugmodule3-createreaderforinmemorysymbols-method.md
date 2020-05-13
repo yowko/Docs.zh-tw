@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af317171-d66d-4114-89eb-063554c74940
 topic_type:
 - apiref
-ms.openlocfilehash: 6596689af6533bb00f41b0d03805b3383ae8c3cc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2a8200f942405395429db182b7501a07fc1f930a
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792946"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212317"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols 方法
 建立動態模組的偵錯工具符號讀取器。  
@@ -35,7 +35,7 @@ HRESULT CreateReaderForInMemorySymbols (
   
 ## <a name="parameters"></a>參數  
  riid  
- 在要傳回之 COM 介面的 IID。 一般來說，這是[ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)。  
+ 在要傳回之 COM 介面的 IID。 一般來說，這是[ISymUnmanagedReader 介面](../diagnostics/isymunmanagedreader-interface.md)。  
   
  ppObj  
  脫銷傳回之介面指標的指標。  
@@ -61,7 +61,7 @@ HRESULT CreateReaderForInMemorySymbols (
  動態模組在載入第一個類型（如[LoadClass 方法](icordebugmanagedcallback-loadclass-method.md)回呼所指示）之前，不會有任何可用的符號。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   

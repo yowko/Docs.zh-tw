@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bdd7f4c-19f2-4ede-875e-603773e8c128
 topic_type:
 - apiref
-ms.openlocfilehash: 47647bf0460507b4c88b47bf87bfcc3bf620aecc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 143eefd557511f80007c88c1678143a885377467
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137214"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212980"
 ---
 # <a name="icordebugprocess2getreferencevaluefromgchandle-method"></a>ICorDebugProcess2::GetReferenceValueFromGCHandle 方法
 取得具有垃圾收集控制碼之指定 managed 物件的參考指標。  
@@ -36,7 +36,7 @@ HRESULT GetReferenceValueFromGCHandle (
   
 ## <a name="parameters"></a>參數  
  `handle`  
- 在具有垃圾收集控制碼之 managed 物件的指標。 這個值是 <xref:System.IntPtr> 物件，而且可以從受管理物件的 <xref:System.Runtime.InteropServices.GCHandle> 中抓取。  
+ 在具有垃圾收集控制碼之 managed 物件的指標。 這個值是 <xref:System.IntPtr> 物件，而且可以從 <xref:System.Runtime.InteropServices.GCHandle> 受管理物件的抓取。  
   
  `pOutValue`  
  脫銷ICorDebugReferenceValue 物件位址的指標，表示指定之 managed 物件的參考。  
@@ -47,13 +47,13 @@ HRESULT GetReferenceValueFromGCHandle (
  傳回的參考與一般參考的行為類似。 當程式碼在中斷點之後繼續執行時，就會停用它。 目標物件的存留期不會受到參考值的存留期影響。  
   
 > [!NOTE]
-> `GetReferenceValueFromGCHandle` 方法不會驗證控制碼。 因此，如果傳遞了不正確控制碼，`GetReferenceValueFromGCHandle` 方法可能會損毀偵錯工具和正在進行調試的程式碼。  
+> `GetReferenceValueFromGCHandle`方法不會驗證控制碼。 因此， `GetReferenceValueFromGCHandle` 如果傳遞了不正確控制碼，方法可能會損毀偵錯工具和正在進行調試的程式碼。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-ms.openlocfilehash: 29006eba3d3a523fd24a461207ab12222a639782
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2c7f7b722abac6acf71d3b64276862441695a5f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178595"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212785"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields 方法
-提供有關屬於類型的欄位的資訊。  
+提供屬於類型之欄位的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,30 +38,30 @@ HRESULT GetTypeFields(
   
 ## <a name="parameters"></a>參數  
  `id`  
- [在]檢索欄位資訊的類型的類型識別碼。  
+ 在要抓取其欄位資訊之類型的識別碼。  
   
  `celt`  
- [在]要檢索欄位資訊[COR_FIELD](cor-field-structure.md)物件數。  
+ 在要抓取其欄位資訊的[COR_FIELD](cor-field-structure.md)物件數目。  
   
  `fields`  
- [出]COR_FIELD[物件陣列](cor-field-structure.md)，提供有關屬於該類型的欄位的資訊。  
+ 脫銷[COR_FIELD](cor-field-structure.md)物件的陣列，提供屬於該類型之欄位的相關資訊。  
   
  `pceltNeeded`  
- [出]指向 中包含的`fields`[COR_FIELD](cor-field-structure.md)物件的數量的指標。  
+ 脫銷所包含之[COR_FIELD](cor-field-structure.md)物件數目的指標 `fields` 。  
   
 ## <a name="remarks"></a>備註  
- 參數`celt`指定方法用於填充`fields`的欄位資訊的欄位數應對應于`COR_TYPE_LAYOUT::numFields`欄位的值。  
+ `celt`參數，指定方法用來填入其欄位資訊的欄位數目 `fields` ，應對應至欄位的值 `COR_TYPE_LAYOUT::numFields` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugProcess5 介面](icordebugprocess5-interface.md)
 - [偵錯介面](debugging-interfaces.md)

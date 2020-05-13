@@ -2,12 +2,12 @@
 title: 來源連結與 .NET 程式庫
 description: 使用來源連結改善 .NET 程式庫偵錯的最佳做法建議。
 ms.date: 01/15/2019
-ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0261019087bce8e9d088a90c5e36bdd0b22f556b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76744547"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212421"
 ---
 # <a name="source-link"></a>來源連結
 
@@ -21,9 +21,9 @@ ms.locfileid: "76744547"
 
 使用來源連結的指示位於 [dotnet/sourceLink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub 存放庫。
 
-您可以使用 [NuGet 套件總管](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)確認來源連結中繼資料已成功內嵌在套件中。 檢查`Repository`中繼資料是否存在提交識別碼，並且 .pdb 檔是否與每個目標的 .dll 一起位於其中。
+您可以使用 [NuGet 套件總管](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)確認來源連結中繼資料已成功內嵌在套件中。 檢查 `Repository` 具有認可識別碼的中繼資料是否存在，而且 .pdb 檔案會與每個目標的 .dll 一起找出。
 
-![NuGet 包資源管理器中的源連結](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet 包資源管理器中的源連結")
+![NuGet 封裝瀏覽器中的來源連結](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet 封裝瀏覽器中的來源連結")
 
 ✔️ 請考慮使用來源連結以將原始程式碼控制中繼資料新增到您的組件與 NuGet 套件。
 
@@ -38,6 +38,10 @@ ms.locfileid: "76744547"
 
 > 如需最佳偵錯體驗，您的程式庫應該發佈符號檔，以及使用來源連結。 如需有關符號檔和符號套件的詳細資訊，請參閱[符號套件](./nuget.md#symbol-packages)。
 
+✔️考慮啟用具決定性的組建。
+
+> 具決定性的組建可讓您驗證產生的二進位檔是從指定的來源建立，並提供追蹤性。 如需決定性組建的詳細資訊，以及啟用它們的指示，請參閱[決定性的組建](https://github.com/clairernovotny/DeterministicBuilds)。
+
 >[!div class="step-by-step"]
->[上一個](dependencies.md)
->[下一個](publish-nuget-package.md)
+>[上一個](dependencies.md) 
+>[下一步](publish-nuget-package.md)
