@@ -4,30 +4,30 @@ description: 了解如何使用.NET Portability Analyzer 工具來評估程式�
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 94dd6de8839b03bbdc33ae1ed03599853241d40b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728449"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209362"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
 要讓您的程式庫支援多平台？ 想要查看需要多少工作才能讓您的 .NET Framework 應用程式在 .NET Core 上執行？ [.Net 可攜性分析器](https://github.com/microsoft/dotnet-apiport)是一種工具，可分析元件，並提供有關 .net api 的詳細報表，這些應用程式或程式庫在您指定的目標 .net 平臺上是可移植的。 可攜性分析器以[Visual Studio 延伸](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)模組的形式提供，它會分析每個專案的一個元件，並作為[ApiPort 主控台應用程式](https://aka.ms/apiportdownload)，以根據指定的檔案或目錄來分析元件。
 
-當您將專案轉換成以新平臺（例如 .NET Core）為目標時，您可以使用以 Roslyn 為基礎的[Api 分析器工具](api-analyzer.md)來<xref:System.PlatformNotSupportedException>識別引發例外狀況和其他相容性問題的 api。
+當您將專案轉換成以新平臺（例如 .NET Core）為目標時，您可以使用以 Roslyn 為基礎的[Api 分析器工具](api-analyzer.md)來識別引發 <xref:System.PlatformNotSupportedException> 例外狀況和其他相容性問題的 api。
 
 ## <a name="common-targets"></a>常見目標
 
-- [.NET core](../../core/index.yml)︰具有模組化的設計，採用並存，並且適合在跨平台的情況下使用。 並存可讓您採用新的 .NET Core 版本，而不會中斷其他應用程式。 如果您的目標，是要將應用程式移植到 .NET Core 來支援跨平台，這是建議的目標。
-- .[NET Standard](../../standard/net-standard.md)：包含適用于所有 .net 部署的 .NET Standard api。 如果您的目標，是讓程式庫在所有支援 .NET 的平台上執行，這是建議的目標。
+- [.Net Core](../../core/index.yml)：具有模組化的設計，支援並存安裝，並以跨平臺案例為目標。 並存安裝可讓您採用新的 .NET Core 版本，而不會中斷其他應用程式。 如果您的目標是要將您的應用程式移植到 .NET Core 並支援多個平臺，這是建議的目標。
+- .[NET Standard](../../standard/net-standard.md)：包含適用于所有 .net 部署的 .NET Standard api。 如果您的目標是要讓您的程式庫在所有 .NET 支援的平臺上執行，建議使用目標。
 - [ASP.NET Core](/aspnet/core)：以 .Net Core 為基礎的新式 web 架構。 如果您的目標，是要將 Web 應用程式移植到 .NET Core 來支援多平台，這是建議的目標。
 - .NET Core +[平臺延伸](../../core/porting/windows-compat-pack.md)模組：除了 Windows 相容性套件以外，還包含 .Net core api，提供許多可用的 .NET Framework 技術。 如需將您的應用程式從 .NET Framework 移植到 Windows 上的 .NET Core，這是建議的目標。
 - .NET Standard +[平臺擴充](../../core/porting/windows-compat-pack.md)功能：除了 Windows 相容性套件以外，還包括 .NET Standard api，其提供許多 .NET Framework 可用的技術。 如需將您的程式庫從 .NET Framework 移植到 Windows 上的 .NET Core，這是建議的目標。
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>如何使用 .NET 可攜性分析器
 
-若要開始在 Visual Studio 中使用 .NET 可攜性分析器，您必須從 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) 下載及安裝此延伸模組。 它適用於 Visual Studio 2017 和更新版本。 在 Visual Studio 透過**分析** > 可**移植性分析器設定**來進行設定，並選取您的目標平臺，這是您想要評估與目前元件建立所在平臺/版本相比較的可攜性差距的 .net 平臺/版本。
+若要開始在 Visual Studio 中使用 .NET 可攜性分析器，您必須從 [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) 下載及安裝此延伸模組。 它適用於 Visual Studio 2017 和更新版本。 在 Visual Studio 透過分析可**Analyze**  >  **移植性分析器設定**來進行設定，並選取您的目標平臺，這是您想要評估與目前元件建立所在平臺/版本相比較的可攜性差距的 .net 平臺/版本。
 
 ![可攜性分析器的螢幕擷取畫面。](./media/portability-analyzer/portability-screenshot.png)
 
@@ -67,7 +67,7 @@ ms.locfileid: "82728449"
 - 目標成員：目標平台缺少方法
 - 組件名稱：缺少之 API 所在的 .NET Framework 組件。
 - 每個選取的目標平臺都是一個資料行，例如「.NET Core」：「不支援」的值表示此目標平臺不支援此 API。
-- 建議的變更：要變更為的建議 API 或技術。 目前，許多 Api 的此欄位是空的或過期的。 由於有大量的 Api，我們有很大的挑戰讓它保持在最新狀態。 我們正在查看可為客戶提供實用資訊的替代解決方案。
+- 建議的變更：要變更為的建議 API 或技術。 目前，許多 Api 的此欄位是空的或過期的。 由於有大量的 Api，我們有很大的挑戰讓它保持在最新狀態。 我們正在探討可提供實用資訊給客戶的替代解決方案。
 
 #### <a name="missing-assemblies"></a>缺少的組件
 

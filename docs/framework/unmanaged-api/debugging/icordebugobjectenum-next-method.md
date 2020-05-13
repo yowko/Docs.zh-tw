@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-ms.openlocfilehash: e9b32980a5606629676549905d3c9956633f25b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 70514464f27d6123a4de1d5800ed016a39541287
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178694"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207548"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next 方法
-從枚舉中獲取指定數量的物件的相對虛擬位址 （RVA），從當前位置開始。  
+從目前位置開始，取得列舉中指定物件數目的相對虛擬位址（Rva）。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,18 +41,18 @@ HRESULT Next (
  [in] 要擷取的物件數目。  
   
  `objects`  
- [出]指標陣列，每個指標都指向CORDB_ADDRESS物件。  
+ 脫銷指標陣列，其中每一個都會指向 CORDB_ADDRESS 物件。  
   
  `pceltFetched`  
- [出]指向實際返回的物件數的指標。 此值可以是 null（如果是`celt`1）。  
+ 脫銷實際傳回之物件數目的指標。 如果是一個，這個值可能會是 null `celt` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱

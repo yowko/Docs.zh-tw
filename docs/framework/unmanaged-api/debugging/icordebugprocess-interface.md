@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-ms.openlocfilehash: b2429052173a187297b67c756213e5d27a79298b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ab48efccc88787f099a182627777db95304cdc3e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792597"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212070"
 ---
 # <a name="icordebugprocess-interface"></a>ICorDebugProcess 介面
 表示執行 Managed 程式碼的處理序。 這個介面是 ICorDebugController 的子類別。  
@@ -43,7 +43,7 @@ ms.locfileid: "76792597"
 |[ModifyLogSwitch 方法](icordebugprocess-modifylogswitch-method.md)|設定指定之記錄參數的嚴重性層級。|  
 |[ReadMemory 方法](icordebugprocess-readmemory-method.md)|從進程讀取記憶體。|  
 |[SetThreadContext 方法](icordebugprocess-setthreadcontext-method.md)|設定指定執行緒的內容。|  
-|[ThreadForFiberCookie 方法](icordebugprocess-threadforfibercookie-method.md)|已取代。|  
+|[ThreadForFiberCookie 方法](icordebugprocess-threadforfibercookie-method.md)|已被取代。|  
 |[WriteMemory 方法](icordebugprocess-writememory-method.md)|將資料寫入進程中的記憶體區域。|  
   
 ## <a name="remarks"></a>備註  
@@ -52,13 +52,13 @@ ms.locfileid: "76792597"
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

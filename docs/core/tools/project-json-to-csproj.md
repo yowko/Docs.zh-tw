@@ -3,12 +3,12 @@ title: project.json 與 csproj 比較
 description: 查看 project.json 與 csproj 項目的對應。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: feaa7e9cde7e1aa4dfe94d699b14a018fc728f27
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: a997b48f645ed58d15610a68aee7c67411f9763f
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794619"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205840"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 與 csproj 屬性的對應
 
@@ -38,7 +38,7 @@ ms.locfileid: "82794619"
 }
 ```
 
-不再支援。 在 csproj 中，這會依專案檔名來判斷，而該名稱通常與目錄名稱相符。 例如： `MyProjectName.csproj` 。
+不再支援。 在 csproj 中，這會依專案檔名來判斷，而該名稱通常與目錄名稱相符。 例如 `MyProjectName.csproj`。
 
 根據預設，專案檔名也會指定 `<AssemblyName>` 和 `<PackageId>` 屬性的值。
 
@@ -52,7 +52,7 @@ ms.locfileid: "82794619"
 如果 `buildOptions\outputName` 屬性定義於 project.json，則 `<AssemblyName>` 會有與 `<PackageId>` 不同的值。
 如需詳細資訊，請參閱[其他常見的建置選項](#other-common-build-options)。
 
-### <a name="version"></a>版本
+### <a name="version"></a>version
 
 ```json
 {
@@ -179,7 +179,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-請注意，移轉專案中的 `<RuntimeFrameworkVersion>` 值取決於您已安裝的 SDK 版本。
+已 `<RuntimeFrameworkVersion>` 遷移專案中的值取決於已安裝的 SDK 版本。
 
 ### <a name="top-level-dependencies"></a>最上層相依性
 
@@ -485,8 +485,7 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-MSBuild 中的 `owners` 項目沒有對應項。
-針對`summary`，您可以使用 MSBuild `<Description>`屬性，即使的值`summary`不會自動遷移至該屬性，因為該屬性會對應至[`description`](#other-common-root-level-options)專案。
+MSBuild 中的 `owners` 項目沒有對應項。 對於 `summary` ，您可以使用 MSBuild `<Description>` 屬性。 的值 `summary` 不會自動遷移至該屬性，因為該屬性會對應至 [`description`](#other-common-root-level-options) 元素。
 
 ## <a name="scripts"></a>指令碼
 
@@ -499,7 +498,7 @@ MSBuild 中的 `owners` 項目沒有對應項。
 }
 ```
 
-其在 MSBuild 中的對應項是 [targets](/visualstudio/msbuild/msbuild-targets)：
+其在 MSBuild 中的對等專案為[目標](/visualstudio/msbuild/msbuild-targets)：
 
 ```xml
 <Target Name="MyPreCompileTarget" BeforeTargets="Build">
@@ -528,7 +527,7 @@ MSBuild 中的 `owners` 項目沒有對應項。
 }
 ```
 
-除了 "System.GC.Server" 屬性，此群組中的所有其他設定都會放置在專案資料夾中名為 *runtimeconfig.template.json* 的檔案，其選項會在移轉程序期間上移至根物件：
+除了屬性以外，此群組中的所有設定 `System.GC.Server` 都會放入專案資料夾中名為 *.runtimeconfig.json*的檔案中，並在遷移過程中將選項提升為根物件：
 
 ```json
 {
@@ -541,7 +540,7 @@ MSBuild 中的 `owners` 項目沒有對應項。
 }
 ```
 
-"System.GC.Server" 屬性會移轉至 csproj 檔案：
+`System.GC.Server`屬性會遷移到 .csproj 檔案中：
 
 ```xml
 <PropertyGroup>
@@ -569,7 +568,7 @@ MSBuild 中的 `owners` 項目沒有對應項。
 }
 ```
 
-在 csproj 中不支援。 您必須改為在 *.nuspec* 檔案中建立包含內容檔。
+在 csproj 中不支援。 相反地，請在您的*nuspec*檔案中建立包含內容檔案。
 如需詳細資訊，請參閱[包含內容檔](/nuget/schema/nuspec#including-content-files)。
 
 ## <a name="files"></a>files
@@ -621,8 +620,7 @@ MSBuild 中的 `owners` 項目沒有對應項。
 ```
 
 > [!NOTE]
-> .NET Core SDK 會自動新增許多預設 [Glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))。
-> 如需詳細資訊，請參閱 [Default Compile Item Values](https://aka.ms/sdkimplicititems) (預設編譯項目值)。
+> .NET Core SDK 會自動新增許多預設 [Glob 模式](https://en.wikipedia.org/wiki/Glob_(programming))。 如需詳細資訊，請參閱[預設編譯包含](../project-sdk/overview.md#default-compilation-includes)。
 
 所有 MSBuild `ItemGroup` 項目都支援 `Include`、`Exclude` 和 `Remove`。
 

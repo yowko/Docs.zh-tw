@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a67fa1b-2419-4cd0-aad4-6f46a0719b4b
 topic_type:
 - apiref
-ms.openlocfilehash: c071a7ddb7d8d3f0e6487ab85284c45f9a7f0372
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad1a91e42f582ce96906da5cbf00ca89acb18499
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178834"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210289"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>ICorDebugILFrame::EnumerateLocalVariables 方法
-獲取此幀中區域變數的枚舉器。  
+取得此框架中區域變數的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,13 +38,13 @@ HRESULT EnumerateLocalVariables(
  [out] ICorDebugValueEnum 物件的位址指標，此物件是這個框架中區域變數的列舉程式。  
   
 ## <a name="remarks"></a>備註  
- `EnumerateLocalVariables`獲取一個枚舉器，該枚舉器可以列出此 ICorDebugILFrame 物件表示的調用幀中可用的區域變數。 該清單可能不包括正在運行的函數中的所有區域變數，因為其中一些變數可能未處於活動狀態。  
+ `EnumerateLocalVariables`取得列舉值，可列出這個 ICorDebugILFrame 物件所代表的呼叫框架中可用的區域變數。 清單可能不會包含執行中函式中的所有區域變數，因為其中有些變數可能不在作用中。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

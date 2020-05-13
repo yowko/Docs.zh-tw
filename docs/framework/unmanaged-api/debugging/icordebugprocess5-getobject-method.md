@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: 4b48132ee60bcaebb218d8f583de6558372f5055
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: de570507c4312f09def0908b9d56e5371c63527e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178602"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207284"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject 方法
-將物件位址轉換為"ICorDebugObjectValue"物件。  
+將物件位址轉換成 "ICorDebugObjectValue" 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,24 +36,24 @@ HRESULT GetObject(
   
 ## <a name="parameters"></a>參數  
  `addr`  
- [在]物件位址。  
+ 在物件位址。  
   
  `ppObject`  
- [出]指向"ICorDebugObjectValue"物件位址的指標。  
+ 脫銷"ICorDebugObjectValue" 物件位址的指標。  
   
 ## <a name="remarks"></a>備註  
- 如果不`addr`指向有效的託管物件，`GetObject`則 方法將返回`E_FAIL`。  
+ 如果 `addr` 未指向有效的 managed 物件，則方法會傳回 `GetObject` `E_FAIL` 。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugProcess5 介面](icordebugprocess5-interface.md)
 - [偵錯介面](debugging-interfaces.md)

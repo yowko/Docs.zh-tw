@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5cf5056-da4d-4629-914d-afe42a5393df
 topic_type:
 - apiref
-ms.openlocfilehash: 7a27b8ec512498c7bf817aca36267c37d8070a4c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1f1e42cd929d2d6282d282cf62dce00104b3a925
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788574"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210237"
 ---
 # <a name="icordebugilframe-interface"></a>ICorDebugILFrame 介面
 
@@ -40,19 +40,19 @@ ms.locfileid: "76788574"
 |[SetIP 方法](icordebugilframe-setip-method.md)|將指令指標設定為 MSIL 程式碼中指定的位移位置。|  
   
 ## <a name="remarks"></a>備註  
- `ICorDebugILFrame` 介面是特製化的 ICorDebugFrame 介面。 它可用於 MSIL 程式碼框架或即時（JIT）編譯的框架。 JIT 編譯的框架會同時執行 `ICorDebugILFrame` 介面和 ICorDebugNativeFrame 介面。  
+ `ICorDebugILFrame`介面是特製化的 ICorDebugFrame 介面。 它可用於 MSIL 程式碼框架或即時（JIT）編譯的框架。 JIT 編譯的框架會同時執行 `ICorDebugILFrame` 介面和 ICorDebugNativeFrame 介面。  
   
 > [!NOTE]
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

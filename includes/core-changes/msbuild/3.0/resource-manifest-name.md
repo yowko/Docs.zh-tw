@@ -1,85 +1,43 @@
 ---
-ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f24a29a00a1bff34a452c43716d76bf72ef277b5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78967831"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206219"
 ---
-### <a name="resource-manifest-file-names"></a>資源清單檔案名
+### <a name="resource-manifest-file-name-change"></a>資源資訊清單檔案名變更
 
-從 .NET Core 3.0 開始，生成的資源清單檔案名已更改。
+從 .NET Core 3.0 開始，在預設的情況下，MSBuild 會為資源檔產生不同的資訊清單檔名稱。
 
-#### <a name="version-introduced"></a>介紹的版本
+#### <a name="version-introduced"></a>引進的版本
 
 3.0
 
 #### <a name="change-description"></a>變更描述
 
-在 .NET Core 3.0 之前，當在 MSBuild 專案檔案中為資源 *（.resx*） 檔設置[DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile)中繼資料時，生成的清單名稱是*Namespace.classname.resources*。 未設置["依賴"](/visualstudio/msbuild/common-msbuild-project-items#compile)時，生成的清單名稱為*Namespace.classname.folderpath相對問題.文化.資源*。
+在 .NET Core 3.0 之前，如果未 `LogicalName` `ManifestResourceName` `DependentUpon` 針對專案檔中的專案指定任何、或中繼資料，MSBuild 會 `EmbeddedResource` 在模式中產生資訊清單檔名稱 `<RootNamespace>.<ResourceFilePathFromProjectRoot>.resources` 。 如果 `RootNamespace` 專案檔中未定義，則會預設為專案名稱。 例如，在根專案*目錄中名為 form1.vb*的資源檔產生的資訊清單名稱是*MyProject*。
 
-從 .NET Core 3.0 開始，當 *.resx*檔與同名原始檔案同時位於時，例如，在 Windows 表單應用中，資源清單名稱從原始檔案中第一種類型的全名生成。 例如，如果*Type.cs*與*Type.resx*同地，則生成的清單名稱為*Namespace.classname.resources*。 但是，如果修改 *.resx*檔`EmbeddedResource`的屬性上的任何屬性，則生成的清單檔案名可能不同：
+從 .NET Core 3.0 開始，如果資源檔與相同名稱的原始程式檔共置（例如， *form1.vb 和* *Form1.cs*），MSBuild 會使用來源檔案中的型別資訊，在模式中產生資訊清單檔名稱 `<Namespace>.<ClassName>.resources` 。 命名空間和類別名稱是從共置的來源檔案中的第一個類型解壓縮而來。 例如，與名為*Form1.cs*的*原始程式檔*共存的資源檔產生的資訊清單名稱是*MyNamespace*。 要注意的重點是，檔案名的第一個部分與舊版的 .NET Core （*MyNamespace* ，而不是*MyProject*）不同。
 
-- 如果屬性`LogicalName`上`EmbeddedResource`的屬性已設置，則該值將用作資源清單檔案名。
+> [!NOTE]
+> 如果您在 `LogicalName` `ManifestResourceName` 專案檔中的 `DependentUpon` 專案上指定、或中繼資料 `EmbeddedResource` ，則這項變更不會影響該資源檔。
 
-  範例：
-
-  ```xml
-  <EmbeddedResource Include="X.resx" LogicalName="SomeName.resources" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" LogicalName="SomeName.resources" />
-  ```
-
-  **生成的資源清單檔案名**：*某些名稱.資源*（無論 *.resx*檔案名或區域性或任何其他中繼資料）。
-
-- 如果未`LogicalName`設置，但`ManifestResourceName``EmbeddedResource`屬性上的屬性已設置，則其值與檔副檔名 *.resources*結合使用，用作資源清單檔案名。
-
-  範例：
-
-  ```xml
-  <EmbeddedResource Include="X.resx" ManifestResourceName="SomeName" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" ManifestResourceName="SomeName.fr-FR" />
-  ```
-
-  **生成的資源清單檔案名**：*某些名稱.資源*或*SomeName.fr-FR.資源*。
-
-- 如果以前的規則不適用，並且`DependentUpon``EmbeddedResource`元素上的屬性設置為原始檔案，則原始檔案中的第一類的類型名稱將用於資源清單檔案名。 更具體地說，生成的檔案名是*\[Namespace.Classname 。文化]資源*。
-
-  範例：
-
-  ```xml
-  <EmbeddedResource Include="X.resx" DependentUpon="MyTypes.cs">
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" DependentUpon="MyTypes.cs">
-  ```
-
-  **生成的資源清單檔案名** *：Namespace.Classname.資源*或*Namespace.Classname.fr-FR.資源*（`Namespace.Classname`其中是*MyTypes.cs*中第一類的名稱）。
-
-- 如果`EmbeddedResourceUseDependentUponConvention`前面的規則不適用，則是`true`（.NET Core 的預設值），並且有一個原始檔案與具有相同基本檔案名的 *.resx*檔共存，則 *.resx*檔依賴于匹配的原始檔案，並且生成的名稱與上一個規則相同。 這是 .NET Core 專案的"預設設置"規則。
-  
-  範例：
-  
-  MyTypes.cs*和* *MyTypes.resx*或*MyTypes.fr-FR.resx*的檔存在於同一資料夾中。
-  
-  **生成的資源清單檔案名** *：Namespace.Classname.資源*或*Namespace.Classname.fr-FR.資源*（`Namespace.Classname`其中是*MyTypes.cs*中第一類的名稱）。
-
-- 如果上述規則都不適用，則生成的資源清單檔案名為*RootNamespace。\[文化。資源*. 相對路徑是`Link``EmbeddedResource`元素屬性的值（如果設置為）。 否則，相對路徑是`Identity``EmbeddedResource`元素屬性的值。 在 Visual Studio 中，這是從專案根到解決方案資源管理器中檔的路徑。
+這項重大變更是透過將 `EmbeddedResourceUseDependentUponConvention` 屬性新增至 .Net Core 專案而引進的。 根據預設，資源檔不會明確列在 .NET Core 專案檔中，因此沒有 `DependentUpon` 中繼資料可指定如何命名產生的 *.resources*檔案。 當 `EmbeddedResourceUseDependentUponConvention` 設定為 `true` （預設值）時，MSBuild 會尋找共置的原始程式檔，並從該檔案中解壓縮命名空間和類別名稱。 如果您將設定 `EmbeddedResourceUseDependentUponConvention` 為 `false` ，MSBuild 會根據先前的行為（結合和相對檔案路徑）來產生資訊清單名稱 `RootNamespace` 。
 
 #### <a name="recommended-action"></a>建議的動作
 
-如果您對生成的清單名稱不滿意，您可以：
+在大部分情況下，開發人員不需要採取任何動作，您的應用程式應該會繼續運作。 不過，如果這項變更會中斷您的應用程式，您可以執行下列其中一項：
 
-- 根據前面描述的命名規則之一修改資源檔中繼資料。
+- 將您的程式碼變更為預期新的資訊清單名稱。
 
-- 設置為`EmbeddedResourceUseDependentUponConvention``false`專案檔案中，以完全退出新約定：
+- `EmbeddedResourceUseDependentUponConvention`在您的專案檔中將設定為，以退出宣告新的命名慣例 `false` 。
 
-   ```xml
-   <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
-   ```
-
-   > [!NOTE]
-   > 如果`LogicalName`或`ManifestResourceName`屬性存在，則其值仍將用於生成的檔案名。
+  ```xml
+  <PropertyGroup>
+    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
+  </PropertyGroup>
+  ```
 
 #### <a name="category"></a>類別
 
@@ -87,4 +45,4 @@ MSBuild
 
 #### <a name="affected-apis"></a>受影響的 API
 
-N/A
+不適用

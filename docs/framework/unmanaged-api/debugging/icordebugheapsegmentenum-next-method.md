@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: 8a267ec7123edb73ad51f0781a78344119ec6f21
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c9999961ec20a31cf82d5ad60104bcdd04c340d1
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178886"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210172"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next 方法
-獲取包含有關託管堆記憶體區域[資訊的指定](cor-heapobject-structure.md)COR_HEAPOBJECT實例數。  
+取得指定的[COR_HEAPOBJECT](cor-heapobject-structure.md)實例數目，其中包含 managed 堆積的記憶體區域相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,26 +36,26 @@ HRESULT Next(
   
 ## <a name="parameters"></a>參數  
  celt  
- [在]要檢索的段數。  
+ 在要抓取的區段數目。  
   
  區段  
- [出]指標陣列，每個指標都[指向COR_HEAPOBJECT物件](cor-heapobject-structure.md)，該物件提供有關託管堆中記憶體區域的資訊。  
+ 脫銷指標的陣列，其中每一個都會指向一個[COR_HEAPOBJECT](cor-heapobject-structure.md)物件，以提供受控堆積中的記憶體區域相關資訊。  
   
  pceltFetched  
- [出]指向 中實際[返回COR_HEAPOBJECT物件的](cor-heapobject-structure.md)數量的指標`segments`。 如果 `celt` 為 1，則這個值可能是 `null`。  
+ 脫銷中實際傳回之[COR_HEAPOBJECT](cor-heapobject-structure.md)物件數目的指標 `segments` 。 如果 `celt` 為 1，則這個值可能是 `null`。  
   
 ## <a name="remarks"></a>備註  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugHeapSegmentEnum 介面](icordebugheapsegmentenum-interface.md)
 - [偵錯介面](debugging-interfaces.md)

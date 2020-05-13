@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9538ceb-230a-4079-9cb2-903dbf5c1848
 topic_type:
 - apiref
-ms.openlocfilehash: 703f159c5bc6b73dcd0e770bdeb61f676aae034c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 62d45da44a95eae399fbbd287aa997a5f913d0b0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792370"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209652"
 ---
 # <a name="icordebugprocess5getgcheapinformation-method"></a>ICorDebugProcess5::GetGCHeapInformation 方法
 提供有關垃圾收集堆積的一般資訊，包括目前是否可列舉。  
@@ -38,16 +38,16 @@ HRESULT GetGCHeapInformation(
  脫銷提供有關垃圾收集堆積之一般資訊的[COR_HEAPINFO](cor-heapinfo-structure.md)值指標。  
   
 ## <a name="remarks"></a>備註  
- 在列舉堆積或個別堆積區域之前，必須先呼叫 `ICorDebugProcess5::GetGCHeapInformation` 方法，以確保進程中的垃圾收集結構目前有效。 當集合正在進行時，無法逐步執行垃圾收集堆積。 否則，列舉可能會捕捉到不正確垃圾收集結構。  
+ 在 `ICorDebugProcess5::GetGCHeapInformation` 列舉堆積或個別堆積區域之前，必須先呼叫方法，以確保進程中的垃圾收集結構目前有效。 當集合正在進行時，無法逐步執行垃圾收集堆積。 否則，列舉可能會捕捉到不正確垃圾收集結構。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

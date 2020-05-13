@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: a97c14d83f99c847bb8569a33e175ab6eb5bccd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d98df05291ed8405addcfd183d7e02332e4e025
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178613"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209691"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences 方法
-獲取進程中要垃圾回收的所有物件的枚舉器。  
+取得要在進程中進行垃圾收集之所有物件的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,24 +36,24 @@ HRESULT EnumerateGCReferences(
   
 ## <a name="parameters"></a>參數  
  `enumerateWeakReferences`  
- [在]指示是否也枚舉弱引用的布林值。 如果是`enumerateWeakReferences``true`，`ppEnum`則枚舉器同時包含強引用和弱引用。 如果`enumerateWeakReferences``false`為 ，則枚舉器僅包含強引用。  
+ 在布林值，指出是否也要列舉弱式參考。 如果 `enumerateWeakReferences` 為 `true` ，列舉值會 `ppEnum` 同時包含強式參考和弱式參考。 如果 `enumerateWeakReferences` 為 `false` ，則列舉值只會包含強式參考。  
   
  `ppEnum`  
- [出]指向[ICorDebugGC 參考Enum](icordebuggcreferenceenum-interface.md)位址的指標，該位址是要垃圾回收的物件的枚舉器。  
+ 脫銷[ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md)位址的指標，這是要進行垃圾收集之物件的列舉值。  
   
 ## <a name="remarks"></a>備註  
- 此方法提供了一種確定進程中任何託管物件的完整根鏈的方法，並可用於確定物件仍然處於活動狀態的原因。  
+ 這個方法可讓您判斷進程中任何 managed 物件的完整根鏈，並可用來判斷物件為何仍然處於作用中狀態。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [ICorDebugProcess5 介面](icordebugprocess5-interface.md)
 - [偵錯介面](debugging-interfaces.md)

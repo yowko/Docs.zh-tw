@@ -17,19 +17,20 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: 477095ada6e44f66cbc60cd80375da9a87f38e39
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ff40e8759b1732d4ad228b1414f96f9c37e5ac5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79180610"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209769"
 ---
-# <a name="using-udp-services"></a>使用 UDP 服務
+# <a name="use-udp-services"></a>使用 UDP 服務
+
 <xref:System.Net.Sockets.UdpClient> 類別使用 UDP 與網路服務通訊。 <xref:System.Net.Sockets.UdpClient> 類別屬性和方法使用 UDP 取出建立 <xref:System.Net.Sockets.Socket> 來要求和接收資料的詳細資料。
 
 使用者資料包通訊協定 (UDP) 是一種簡單的通訊協定，致力於將資料傳遞到遠端主機。 不過，因為 UDP 通訊協定是一種無連線的通訊協定，所以傳送到遠端端點的 UDP 資料包不保證會送達，也不保證會以傳送的相同順序送達。 使用 UDP 應用程式必須準備好處理遺失、重複和不依順序的資料包。
 
-若要使用 UDP 傳送資料包，您必須知道裝載所需服務的網路裝置的網路位址，以及服務用來通訊的 UDP 連接埠編號。 Internet Assigned Numbers Authority (Iana) 定義了通用服務的連接埠編號。(請參閱[服務名稱與傳輸通訊協定連接埠號碼登錄](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) \(英文\))。 不在 Iana 清單上之服務的連接埠編號範圍可以是 1,024 到 65,535。
+若要使用 UDP 傳送資料包，您必須知道裝載所需服務的網路裝置的網路位址，以及服務用來通訊的 UDP 連接埠編號。 網際網路指派的號碼授權單位（IANA）定義了泛型服務的埠號碼（請參閱[服務名稱和傳輸通訊協定埠號碼](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)登錄）。 不在 IANA 清單上的服務，其埠號碼會在1024到65535的範圍內。
 
 特殊的網路位址可用來支援 IP 型網路上的 UDP 廣播訊息。 下列討論內容會以網際網路上使用的 IP 第 4 版位址系列作為範例。
 

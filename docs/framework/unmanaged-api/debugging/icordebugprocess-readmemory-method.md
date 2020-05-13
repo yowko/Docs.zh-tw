@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: 383e3f8990a1f355c94ff5e9f9daa69bdbdd97bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccd2350589126109ff11da439a8b83abfc4b91fa
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178656"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210471"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory 方法
-讀取此過程的指定記憶體區域。  
+讀取這個進程的指定記憶體區域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,29 +37,29 @@ HRESULT ReadMemory(
   
 ## <a name="parameters"></a>參數  
  `address`  
- [在]指定`CORDB_ADDRESS`要讀取的記憶體的基本位址的值。  
+ 在`CORDB_ADDRESS`值，指定要讀取之記憶體的基底位址。  
   
  `size`  
- [在]要從記憶體中讀取的位元組數。  
+ 在要從記憶體中讀取的位元組數目。  
   
  `buffer`  
- [出]接收記憶體內容的緩衝區。  
+ 脫銷接收記憶體內容的緩衝區。  
   
  `read`  
- [出]指向傳輸到指定緩衝區的位元組數的指標。  
+ 脫銷傳送到指定緩衝區的位元組數目指標。  
   
 ## <a name="remarks"></a>備註  
- 該方法`ReadMemory`主要用於內部調試，以檢查調試器的非託管部分正在使用的記憶體區域。 此方法還可用於讀取 Microsoft 中間語言 （MSIL） 代碼和本機 JIT 編譯代碼。  
+ `ReadMemory`方法主要是供 interop 偵錯工具用來檢查偵錯工具的非受控部分所使用的記憶體區域。 這個方法也可以用來讀取 Microsoft 中繼語言（MSIL）程式碼和原生 JIT 編譯程式碼。  
   
- 任何託管中斷點都將從`buffer`參數中返回的資料中刪除。 [ICorDebugProcess2：：：setUn託管中斷點](icordebugprocess2-setunmanagedbreakpoint-method.md)設置的本機中斷點不會進行調整。  
+ 任何受控中斷點都會從參數中傳回的資料中移除 `buffer` 。 [ICorDebugProcess2：： SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)所設定的原生中斷點不會進行任何調整。  
   
- 不執行進程記憶體的緩存。  
+ 不會執行進程記憶體的快取。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET 框架版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

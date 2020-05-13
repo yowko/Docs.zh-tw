@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 32e4d6fa-e5a3-413e-9166-d5e2871d3114
 topic_type:
 - apiref
-ms.openlocfilehash: c573e6b768aee1e8b681dcf2e828dc24d409025b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 105e56f2508eabbb6876a09d35e6abfbfc08950b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793006"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212239"
 ---
 # <a name="icordebugmodule-interface"></a>ICorDebugModule 介面
 
@@ -35,7 +35,7 @@ ms.locfileid: "76793006"
 |[GetAssembly 方法](icordebugmodule-getassembly-method.md)|取得此模組的包含元件。|  
 |[GetBaseAddress 方法](icordebugmodule-getbaseaddress-method.md)|取得模組的基底位址。|  
 |[GetClassFromToken 方法](icordebugmodule-getclassfromtoken-method.md)|從中繼資料取得 ICorDebugClass。|  
-|[GetEditAndContinueSnapshot 方法](icordebugmodule-geteditandcontinuesnapshot-method.md)|已取代。|  
+|[GetEditAndContinueSnapshot 方法](icordebugmodule-geteditandcontinuesnapshot-method.md)|已被取代。|  
 |[GetFunctionFromRVA 方法](icordebugmodule-getfunctionfromrva-method.md)|未實作。|  
 |[GetFunctionFromToken 方法](icordebugmodule-getfunctionfromtoken-method.md)|取得元資料標記所指定的函式。|  
 |[GetGlobalVariableValue 方法](icordebugmodule-getglobalvariablevalue-method.md)|取得指定之全域變數的值物件。|  
@@ -53,13 +53,13 @@ ms.locfileid: "76793006"
 > 這個介面不支援跨電腦或跨處理序的遠端呼叫。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

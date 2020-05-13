@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaf5938d-179c-4eaa-8d35-8523a4fadded
 topic_type:
 - apiref
-ms.openlocfilehash: 482afd09ce370fb1247864b9ac2032ee7e3a1dca
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8f66369d3ac5ddcfe38fe579cac728eb3a250165
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788282"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205632"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>ICorDebugManagedCallback2::ExceptionUnwind 方法
 提供例外狀況回溯程式期間的狀態通知。  
@@ -50,18 +50,18 @@ HRESULT ExceptionUnwind (
  在[CorDebugExceptionFlags](cordebugexceptionflags-enumeration.md)列舉的值，指定例外狀況的其他相關資訊。  
   
 ## <a name="remarks"></a>備註  
- 在例外狀況處理常式的回溯階段期間，會在不同的時間點呼叫 `ExceptionUnwind`。 在回溯單一例外狀況時，可以多次呼叫 `ExceptionUnwind`。  
+ `ExceptionUnwind`在例外狀況處理常式的回溯階段期間，會在不同的時間點呼叫。 `ExceptionUnwind`在回溯單一例外狀況時，可以呼叫多次。  
   
- 如果 `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED，指令指標將會線上程的分葉框架中，在此位置之前的序列點（這可能是之前的幾個指示）導致例外狀況的指令。  
+ 如果 `dwEventType` = DEBUG_EXCEPTION_INTERCEPTED，則指令指標將會線上程的分葉框架中，在序列點之前（這可能是之前的幾個指示），這是導致例外狀況的指令。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

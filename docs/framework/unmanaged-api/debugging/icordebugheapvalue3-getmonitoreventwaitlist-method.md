@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-ms.openlocfilehash: 15900fab59d172ada67d8aefeab698e1b44f808e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 923e9b0821788143fff59eafe10d1802583df7a6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794396"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210419"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList 方法
 提供在與監視器鎖定相關聯的事件上排入佇列之執行緒的已排序清單。  
@@ -48,24 +48,24 @@ HRESULT GetMonitorEventWaitList (
 ## <a name="exceptions"></a>例外狀況  
   
 ## <a name="remarks"></a>備註  
- 清單中的第一個執行緒是 <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>下一次呼叫所釋放的第一個執行緒。 清單中的下一個執行緒會在下列呼叫中釋放，依此類推。  
+ 清單中的第一個執行緒是下一個呼叫所釋放的第一個執行緒 <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType> 。 清單中的下一個執行緒會在下列呼叫中釋放，依此類推。  
   
  如果清單不是空的，這個方法會傳回 S_OK。 如果清單是空的，此方法會傳回 S_FALSE;在此情況下，列舉仍然有效，但它是空的。  
   
  在任一情況下，列舉介面僅適用于目前已同步處理狀態的持續時間。 不過，從它所分配的執行緒介面是有效的，直到執行緒結束為止。  
   
- 如果 `ppThreadEnum` 不是有效的指標，則結果會是未定義的。  
+ 如果不是 `ppThreadEnum` 有效的指標，則結果會是未定義的。  
   
  如果發生錯誤，因此無法判斷線程是否正在等候監視器，此方法會傳回表示失敗的 HRESULT。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

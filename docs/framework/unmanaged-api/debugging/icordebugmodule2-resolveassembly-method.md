@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ddf9085c-7161-44bd-9609-cd2732b9009f
 topic_type:
 - apiref
-ms.openlocfilehash: 0809a149a5a5a5e9adea059140d7b4b456337ef3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e64e39d10d20f63430ffe9d2c4df8643e286a677
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125310"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210017"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly 方法
 
@@ -38,21 +38,21 @@ HRESULT ResolveAssembly (
 ## <a name="parameters"></a>參數
 
 `tkAssemblyRef`\
-在參考元件的 `mdToken` 值。
+在`mdToken`參考元件的值。
 
 `ppAssembly`\
 脫銷表示元件之 ICorDebugAssembly 物件的位址指標。
 
 ## <a name="remarks"></a>備註
 
-如果在呼叫 `ResolveAssembly` 時尚未載入元件，則會傳回 CORDBG_E_CANNOT_RESOLVE_ASSEMBLY 的 HRESULT 值。
+如果在呼叫時尚未載入元件 `ResolveAssembly` ，則會傳回 CORDBG_E_CANNOT_RESOLVE_ASSEMBLY 的 HRESULT 值。
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。
 
 **標頭：** CorDebug.idl、CorDebug.h
 
 **程式庫：** CorGuids.lib
 
-**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

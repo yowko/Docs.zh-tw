@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-ms.openlocfilehash: 5dd93dcc29ace6573e313f732c45af0dfbb900e1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4a01ccd4e5cb9aadc6a693b2c6ceaff31c114bbc
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782218"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209886"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf 方法
-檢查 `this` 的內部框架是否比指定的 ICorDebugFrame 物件更接近分葉。  
+檢查 `this` 內部框架是否比指定的 ICorDebugFrame 物件更接近分葉。  
   
 ## <a name="syntax"></a>語法  
   
@@ -34,10 +34,10 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 ## <a name="parameters"></a>參數  
  `pFrameToCompare`  
- 在`ICorDebugFrame` 物件的比較指標。  
+ 在比較物件的指標 `ICorDebugFrame` 。  
   
  `pIsCloser`  
- [out] `true` 如果 `this` 內部框架比 `pFrameToCompare`所指定的框架更接近分葉，否則，`false`。  
+ [out] `true`如果 `this` 內部框架比指定的框架更接近分葉 `pFrameToCompare` ，則為，否則為 `false` 。  
   
 ## <a name="return-value"></a>傳回值  
  這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
@@ -49,16 +49,16 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |E_INVALIDARG|`pFrameToCompare` 或 `pIsCloser` 為 null。|  
   
 ## <a name="remarks"></a>備註  
- `IsCloserToLeaf` 可用來執行將內部框架與堆疊上的其他框架交錯的原則。  
+ `IsCloserToLeaf`可以用來執行將內部框架與堆疊上的其他框架交錯的原則。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 

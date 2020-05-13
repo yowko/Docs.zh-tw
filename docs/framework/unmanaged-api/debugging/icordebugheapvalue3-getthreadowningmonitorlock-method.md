@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: 8be7c0e32f6183deb354d8b3936ef55c2520fe9f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9cc68e39dfef096b8ab6a8ba743f7a516cc349be
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788613"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210406"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock 方法
 傳回擁有這個物件之監視器鎖定的 managed 執行緒。  
@@ -46,7 +46,7 @@ HRESULT GetThreadOwningMonitorLock (
   
 |HRESULT|描述|  
 |-------------|-----------------|  
-|S_OK|此方法已順利完成。|  
+|S_OK|已成功完成命令。|  
 |S_FALSE|沒有受控執行緒擁有此物件上的監視鎖定。|  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -58,20 +58,20 @@ HRESULT GetThreadOwningMonitorLock (
   
 - 執行緒物件是有效的，直到執行緒結束為止。  
   
- 如果沒有 managed 執行緒擁有這個物件的監視器鎖定，`ppThread` 和 `pAcquisitionCount` 就不會變更，而且方法會傳回 S_FALSE。  
+ 如果沒有 managed 執行緒擁有這個物件的監視器鎖定，且未變更 `ppThread` `pAcquisitionCount` ，則方法會傳回 S_FALSE。  
   
- 如果 `ppThread` 或 `pAcquisitionCount` 不是有效的指標，則結果會是未定義的。  
+ 如果 `ppThread` 或不是 `pAcquisitionCount` 有效的指標，則結果會是未定義的。  
   
  如果發生錯誤，因此無法判斷哪個執行緒擁有此物件的監視器鎖定，此方法會傳回表示失敗的 HRESULT。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>請參閱
 
