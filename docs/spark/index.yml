@@ -1,9 +1,9 @@
 ### YamlMime:Landing
-title: 阿帕奇火花文檔的 .NET
-summary: 瞭解如何使用 .NET 用於 Apache Spark 處理批量資料、即時流、機器學習以及使用 Apache Spark 編寫 .NET 代碼的任意位置進行臨時查詢。
+title: 適用於 Apache Spark 的 .NET 文件
+summary: 瞭解如何在您撰寫 .NET 程式碼的任何地方，使用 .NET for Apache Spark 來處理資料的批次、即時串流、機器學習和臨機操作 Apache Spark 查詢。
 metadata:
-  title: 阿帕奇火花文檔的 .NET
-  description: 瞭解如何使用 .NET 用於 Apache Spark 處理批量資料、即時流、機器學習以及使用 Apache Spark 編寫 .NET 代碼的任意位置進行臨時查詢。
+  title: 適用於 Apache Spark 的 .NET 文件
+  description: 瞭解如何在您撰寫 .NET 程式碼的任何地方，使用 .NET for Apache Spark 來處理資料的批次、即時串流、機器學習和臨機操作 Apache Spark 查詢。
   services: service
   ms.prod: dotnet-spark
   ms.topic: landing-page
@@ -11,44 +11,62 @@ metadata:
   author: mamccrea
   ms.author: mamccrea
   ms.date: 09/11/2019
+  ms.openlocfilehash: 5b477daf0f52d48a6f068fa8eafeb1b787d19c39
+  ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+  ms.translationtype: MT
+  ms.contentlocale: zh-TW
+  ms.lasthandoff: 05/12/2020
+  ms.locfileid: "83212223"
 landingContent:
-  - title: 關於 .NET 的阿帕奇火花
-    linkLists:
-      - linkListType: whats-new
-        links:
-          - text: .NET 文件中的新功能
-            url: /dotnet/whats-new/index
-      - linkListType: overview
-        links:
-          - text: 什麼是 .NET for Apache Spark？
-            url: what-is-apache-spark-dotnet.md
-      - linkListType: reference
-        links:
-          - text: API 參考
-            url: /dotnet/api/?view=spark-dotnet
-          - text: GitHub
-            url: 'https://github.com/dotnet/spark'
-  - title: 開始使用
-    linkLists:
-      - linkListType: tutorial
-        links:
-          - text: 開始使用適用於 Apache Spark 的 .NET
-            url: tutorials/get-started.md
-      - linkListType: learn
-        links:
-          - text: 在 Windows 或 Linux 上 10 分鐘內開始
-            url: 'https://dotnet.microsoft.com/learn/data/spark-tutorial/intro'
-  - title: 為 Apache Spark 應用程式部署 .NET
-    linkLists:
-      - linkListType: deploy
-        links:
-          - text: 部署至 Azure HDInsight
-            url: tutorials/hdinsight-deployment.md
-          - text: 部署至 AWS EMR Spark
-            url: tutorials/amazon-emr-spark-deployment.md
-          - text: 部署至 Databricks
-            url: tutorials/databricks-deployment.md
-      - linkListType: how-to-guide
-        links:
-          - text: 為您的應用程式偵錯
-            url: how-to-guides/debug.md
+- title: 適用于 Apache Spark 基本概念的 .NET
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: .NET 文件中的新功能
+      url: /dotnet/whats-new/index
+  - linkListType: overview
+    links:
+    - text: 什麼是 .NET for Apache Spark？
+      url: what-is-apache-spark-dotnet.md
+  - linkListType: reference
+    links:
+    - text: API 參考
+      url: /dotnet/api/?view=spark-dotnet
+    - text: GitHub
+      url: https://github.com/dotnet/spark
+- title: 10 分鐘快速入門
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 開始使用適用於 Apache Spark 的 .NET
+      url: tutorials/get-started.md
+  - linkListType: learn
+    links:
+    - text: 在 Windows 或 Linux 上的10分鐘內開始使用
+      url: https://dotnet.microsoft.com/learn/data/spark-tutorial/intro
+- title: 部署適用于 Apache Spark 應用程式的 .NET
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: 部署至 Azure HDInsight
+      url: tutorials/hdinsight-deployment.md
+    - text: 部署至 AWS EMR Spark
+      url: tutorials/amazon-emr-spark-deployment.md
+    - text: 部署至 Databricks
+      url: tutorials/databricks-deployment.md
+  - linkListType: how-to-guide
+    links:
+    - text: 偵錯應用程式
+      url: how-to-guides/debug.md
+    - text: 部署背景工作角色和 UDF 二進位檔
+      url: how-to-guides/deploy-worker-udf-binaries.md
+- title: 海量資料處理
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 批次處理
+      url: tutorials/batch-processing.md
+    - text: 結構化串流
+      url: tutorials/streaming.md
+    - text: 情感分析
+      url: tutorials/ml-sentiment-analysis.md

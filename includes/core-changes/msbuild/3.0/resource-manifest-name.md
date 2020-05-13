@@ -1,90 +1,48 @@
 ---
-ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f24a29a00a1bff34a452c43716d76bf72ef277b5
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78967831"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206219"
 ---
-### <a name="resource-manifest-file-names"></a><span data-ttu-id="b5b69-101">資源清單檔案名</span><span class="sxs-lookup"><span data-stu-id="b5b69-101">Resource manifest file names</span></span>
+### <a name="resource-manifest-file-name-change"></a><span data-ttu-id="50052-101">資源資訊清單檔案名變更</span><span class="sxs-lookup"><span data-stu-id="50052-101">Resource manifest file name change</span></span>
 
-<span data-ttu-id="b5b69-102">從 .NET Core 3.0 開始，生成的資源清單檔案名已更改。</span><span class="sxs-lookup"><span data-stu-id="b5b69-102">Starting in .NET Core 3.0, the generated resource manifest file name has changed.</span></span>
+<span data-ttu-id="50052-102">從 .NET Core 3.0 開始，在預設的情況下，MSBuild 會為資源檔產生不同的資訊清單檔名稱。</span><span class="sxs-lookup"><span data-stu-id="50052-102">Starting in .NET Core 3.0, in the default case, MSBuild generates a different manifest file name for resource files.</span></span>
 
-#### <a name="version-introduced"></a><span data-ttu-id="b5b69-103">介紹的版本</span><span class="sxs-lookup"><span data-stu-id="b5b69-103">Version introduced</span></span>
+#### <a name="version-introduced"></a><span data-ttu-id="50052-103">引進的版本</span><span class="sxs-lookup"><span data-stu-id="50052-103">Version introduced</span></span>
 
-<span data-ttu-id="b5b69-104">3.0</span><span class="sxs-lookup"><span data-stu-id="b5b69-104">3.0</span></span>
+<span data-ttu-id="50052-104">3.0</span><span class="sxs-lookup"><span data-stu-id="50052-104">3.0</span></span>
 
-#### <a name="change-description"></a><span data-ttu-id="b5b69-105">變更描述</span><span class="sxs-lookup"><span data-stu-id="b5b69-105">Change description</span></span>
+#### <a name="change-description"></a><span data-ttu-id="50052-105">變更描述</span><span class="sxs-lookup"><span data-stu-id="50052-105">Change description</span></span>
 
-<span data-ttu-id="b5b69-106">在 .NET Core 3.0 之前，當在 MSBuild 專案檔案中為資源 *（.resx*） 檔設置[DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile)中繼資料時，生成的清單名稱是*Namespace.classname.resources*。</span><span class="sxs-lookup"><span data-stu-id="b5b69-106">Prior to .NET Core 3.0, when [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) metadata was set for a resource (*.resx*) file in the MSBuild project file, the generated manifest name was *Namespace.Classname.resources*.</span></span> <span data-ttu-id="b5b69-107">未設置["依賴"](/visualstudio/msbuild/common-msbuild-project-items#compile)時，生成的清單名稱為*Namespace.classname.folderpath相對問題.文化.資源*。</span><span class="sxs-lookup"><span data-stu-id="b5b69-107">When [DependentUpon](/visualstudio/msbuild/common-msbuild-project-items#compile) was not set, the generated manifest name was *Namespace.Classname.FolderPathRelativeToRoot.Culture.resources*.</span></span>
+<span data-ttu-id="50052-106">在 .NET Core 3.0 之前，如果未 `LogicalName` `ManifestResourceName` `DependentUpon` 針對專案檔中的專案指定任何、或中繼資料，MSBuild 會 `EmbeddedResource` 在模式中產生資訊清單檔名稱 `<RootNamespace>.<ResourceFilePathFromProjectRoot>.resources` 。</span><span class="sxs-lookup"><span data-stu-id="50052-106">Prior to .NET Core 3.0, if no `LogicalName`, `ManifestResourceName`, or `DependentUpon` metadata was specified for an `EmbeddedResource` item in the project file, MSBuild generated a manifest file name in the pattern `<RootNamespace>.<ResourceFilePathFromProjectRoot>.resources`.</span></span> <span data-ttu-id="50052-107">如果 `RootNamespace` 專案檔中未定義，則會預設為專案名稱。</span><span class="sxs-lookup"><span data-stu-id="50052-107">If `RootNamespace` is not defined in the project file, it defaults to the project name.</span></span> <span data-ttu-id="50052-108">例如，在根專案*目錄中名為 form1.vb*的資源檔產生的資訊清單名稱是*MyProject*。</span><span class="sxs-lookup"><span data-stu-id="50052-108">For example, the generated manifest name for a resource file named *Form1.resx* in the root project directory was *MyProject.Form1.resources*.</span></span>
 
-<span data-ttu-id="b5b69-108">從 .NET Core 3.0 開始，當 *.resx*檔與同名原始檔案同時位於時，例如，在 Windows 表單應用中，資源清單名稱從原始檔案中第一種類型的全名生成。</span><span class="sxs-lookup"><span data-stu-id="b5b69-108">Starting in .NET Core 3.0, when a *.resx* file is colocated with a source file of the same name, for example, in Windows Forms apps, the resource manifest name is generated from the full name of the first type in the source file.</span></span> <span data-ttu-id="b5b69-109">例如，如果*Type.cs*與*Type.resx*同地，則生成的清單名稱為*Namespace.classname.resources*。</span><span class="sxs-lookup"><span data-stu-id="b5b69-109">For example, if *Type.cs* is colocated with *Type.resx*, the generated manifest name is *Namespace.Classname.resources*.</span></span> <span data-ttu-id="b5b69-110">但是，如果修改 *.resx*檔`EmbeddedResource`的屬性上的任何屬性，則生成的清單檔案名可能不同：</span><span class="sxs-lookup"><span data-stu-id="b5b69-110">However, if you modify any of the attributes on the `EmbeddedResource` property for the *.resx* file, the generated manifest file name may be different:</span></span>
+<span data-ttu-id="50052-109">從 .NET Core 3.0 開始，如果資源檔與相同名稱的原始程式檔共置（例如， *form1.vb 和* *Form1.cs*），MSBuild 會使用來源檔案中的型別資訊，在模式中產生資訊清單檔名稱 `<Namespace>.<ClassName>.resources` 。</span><span class="sxs-lookup"><span data-stu-id="50052-109">Starting in .NET Core 3.0, if a resource file is colocated with a source file of the same name (for example, *Form1.resx* and *Form1.cs*), MSBuild uses type information from the source file to generate the manifest file name in the pattern `<Namespace>.<ClassName>.resources`.</span></span> <span data-ttu-id="50052-110">命名空間和類別名稱是從共置的來源檔案中的第一個類型解壓縮而來。</span><span class="sxs-lookup"><span data-stu-id="50052-110">The namespace and class name are extracted from the first type in the colocated source file.</span></span> <span data-ttu-id="50052-111">例如，與名為*Form1.cs*的*原始程式檔*共存的資源檔產生的資訊清單名稱是*MyNamespace*。</span><span class="sxs-lookup"><span data-stu-id="50052-111">For example, the generated manifest name for a resource file named *Form1.resx* that's colocated with a source file named *Form1.cs* is *MyNamespace.Form1.resources*.</span></span> <span data-ttu-id="50052-112">要注意的重點是，檔案名的第一個部分與舊版的 .NET Core （*MyNamespace* ，而不是*MyProject*）不同。</span><span class="sxs-lookup"><span data-stu-id="50052-112">The key thing to note is that the first part of the file name is different to prior versions of .NET Core (*MyNamespace* instead of *MyProject*).</span></span>
 
-- <span data-ttu-id="b5b69-111">如果屬性`LogicalName`上`EmbeddedResource`的屬性已設置，則該值將用作資源清單檔案名。</span><span class="sxs-lookup"><span data-stu-id="b5b69-111">If the `LogicalName` attribute on the `EmbeddedResource` property is set, that value is used as the resource manifest file name.</span></span>
+> [!NOTE]
+> <span data-ttu-id="50052-113">如果您在 `LogicalName` `ManifestResourceName` 專案檔中的 `DependentUpon` 專案上指定、或中繼資料 `EmbeddedResource` ，則這項變更不會影響該資源檔。</span><span class="sxs-lookup"><span data-stu-id="50052-113">If you have `LogicalName`, `ManifestResourceName`, or `DependentUpon` metadata specified on an `EmbeddedResource` item in the project file, then this change does not affect that resource file.</span></span>
 
-  <span data-ttu-id="b5b69-112">範例：</span><span class="sxs-lookup"><span data-stu-id="b5b69-112">Examples:</span></span>
+<span data-ttu-id="50052-114">這項重大變更是透過將 `EmbeddedResourceUseDependentUponConvention` 屬性新增至 .Net Core 專案而引進的。</span><span class="sxs-lookup"><span data-stu-id="50052-114">This breaking change was introduced with the addition of the `EmbeddedResourceUseDependentUponConvention` property to .NET Core projects.</span></span> <span data-ttu-id="50052-115">根據預設，資源檔不會明確列在 .NET Core 專案檔中，因此沒有 `DependentUpon` 中繼資料可指定如何命名產生的 *.resources*檔案。</span><span class="sxs-lookup"><span data-stu-id="50052-115">By default, resource files aren't explicitly listed in a .NET Core project file, so they have no `DependentUpon` metadata to specify how to name the generated *.resources* file.</span></span> <span data-ttu-id="50052-116">當 `EmbeddedResourceUseDependentUponConvention` 設定為 `true` （預設值）時，MSBuild 會尋找共置的原始程式檔，並從該檔案中解壓縮命名空間和類別名稱。</span><span class="sxs-lookup"><span data-stu-id="50052-116">When `EmbeddedResourceUseDependentUponConvention` is set to `true`, which is the default, MSBuild looks for a colocated source file and extracts a namespace and class name from that file.</span></span> <span data-ttu-id="50052-117">如果您將設定 `EmbeddedResourceUseDependentUponConvention` 為 `false` ，MSBuild 會根據先前的行為（結合和相對檔案路徑）來產生資訊清單名稱 `RootNamespace` 。</span><span class="sxs-lookup"><span data-stu-id="50052-117">If you set `EmbeddedResourceUseDependentUponConvention` to `false`, MSBuild generates the manifest name according to the previous behavior, which combines `RootNamespace` and the relative file path.</span></span>
 
-  ```xml
-  <EmbeddedResource Include="X.resx" LogicalName="SomeName.resources" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" LogicalName="SomeName.resources" />
-  ```
+#### <a name="recommended-action"></a><span data-ttu-id="50052-118">建議的動作</span><span class="sxs-lookup"><span data-stu-id="50052-118">Recommended action</span></span>
 
-  <span data-ttu-id="b5b69-113">**生成的資源清單檔案名**：*某些名稱.資源*（無論 *.resx*檔案名或區域性或任何其他中繼資料）。</span><span class="sxs-lookup"><span data-stu-id="b5b69-113">**Generated resource manifest file name**: *SomeName.resources* (regardless of the *.resx* file name or culture or any other metadata).</span></span>
+<span data-ttu-id="50052-119">在大部分情況下，開發人員不需要採取任何動作，您的應用程式應該會繼續運作。</span><span class="sxs-lookup"><span data-stu-id="50052-119">In most cases, no action is required on the part of the developer, and your app should continue to work.</span></span> <span data-ttu-id="50052-120">不過，如果這項變更會中斷您的應用程式，您可以執行下列其中一項：</span><span class="sxs-lookup"><span data-stu-id="50052-120">However, if this change breaks your app, you can either:</span></span>
 
-- <span data-ttu-id="b5b69-114">如果未`LogicalName`設置，但`ManifestResourceName``EmbeddedResource`屬性上的屬性已設置，則其值與檔副檔名 *.resources*結合使用，用作資源清單檔案名。</span><span class="sxs-lookup"><span data-stu-id="b5b69-114">If `LogicalName` is not set, but the `ManifestResourceName` attribute on the `EmbeddedResource` property is set, its value, combined with the file extension *.resources*, is used as the resource manifest file name.</span></span>
+- <span data-ttu-id="50052-121">將您的程式碼變更為預期新的資訊清單名稱。</span><span class="sxs-lookup"><span data-stu-id="50052-121">Change your code to expect the new manifest name.</span></span>
 
-  <span data-ttu-id="b5b69-115">範例：</span><span class="sxs-lookup"><span data-stu-id="b5b69-115">Examples:</span></span>
+- <span data-ttu-id="50052-122">`EmbeddedResourceUseDependentUponConvention`在您的專案檔中將設定為，以退出宣告新的命名慣例 `false` 。</span><span class="sxs-lookup"><span data-stu-id="50052-122">Opt out of the new naming convention by setting `EmbeddedResourceUseDependentUponConvention` to `false` in your project file.</span></span>
 
   ```xml
-  <EmbeddedResource Include="X.resx" ManifestResourceName="SomeName" />
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" ManifestResourceName="SomeName.fr-FR" />
+  <PropertyGroup>
+    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
+  </PropertyGroup>
   ```
 
-  <span data-ttu-id="b5b69-116">**生成的資源清單檔案名**：*某些名稱.資源*或*SomeName.fr-FR.資源*。</span><span class="sxs-lookup"><span data-stu-id="b5b69-116">**Generated resource manifest file name**: *SomeName.resources* or *SomeName.fr-FR.resources*.</span></span>
+#### <a name="category"></a><span data-ttu-id="50052-123">類別</span><span class="sxs-lookup"><span data-stu-id="50052-123">Category</span></span>
 
-- <span data-ttu-id="b5b69-117">如果以前的規則不適用，並且`DependentUpon``EmbeddedResource`元素上的屬性設置為原始檔案，則原始檔案中的第一類的類型名稱將用於資源清單檔案名。</span><span class="sxs-lookup"><span data-stu-id="b5b69-117">If the previous rules don't apply, and the `DependentUpon` attribute on the `EmbeddedResource` element is set to a source file, the type name of the first class in the source file is used in the resource manifest file name.</span></span> <span data-ttu-id="b5b69-118">更具體地說，生成的檔案名是*\[Namespace.Classname 。文化]資源*。</span><span class="sxs-lookup"><span data-stu-id="b5b69-118">More specifically, the generated file name is *Namespace.Classname\[.Culture].resources*.</span></span>
+<span data-ttu-id="50052-124">MSBuild</span><span class="sxs-lookup"><span data-stu-id="50052-124">MSBuild</span></span>
 
-  <span data-ttu-id="b5b69-119">範例：</span><span class="sxs-lookup"><span data-stu-id="b5b69-119">Examples:</span></span>
+#### <a name="affected-apis"></a><span data-ttu-id="50052-125">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="50052-125">Affected APIs</span></span>
 
-  ```xml
-  <EmbeddedResource Include="X.resx" DependentUpon="MyTypes.cs">
-  -or-
-  <EmbeddedResource Include="X.fr-FR.resx" DependentUpon="MyTypes.cs">
-  ```
-
-  <span data-ttu-id="b5b69-120">**生成的資源清單檔案名** *：Namespace.Classname.資源*或*Namespace.Classname.fr-FR.資源*（`Namespace.Classname`其中是*MyTypes.cs*中第一類的名稱）。</span><span class="sxs-lookup"><span data-stu-id="b5b69-120">**Generated resource manifest file name**: *Namespace.Classname.resources* or *Namespace.Classname.fr-FR.resources* (where `Namespace.Classname` is the name of the first class in *MyTypes.cs*).</span></span>
-
-- <span data-ttu-id="b5b69-121">如果`EmbeddedResourceUseDependentUponConvention`前面的規則不適用，則是`true`（.NET Core 的預設值），並且有一個原始檔案與具有相同基本檔案名的 *.resx*檔共存，則 *.resx*檔依賴于匹配的原始檔案，並且生成的名稱與上一個規則相同。</span><span class="sxs-lookup"><span data-stu-id="b5b69-121">If the previous rules don't apply, `EmbeddedResourceUseDependentUponConvention` is `true` (the default for .NET Core), and there's a source file colocated with a *.resx* file that has the same base file name, the *.resx* file is made dependent upon the matching source file, and the generated name is the same as in the previous rule.</span></span> <span data-ttu-id="b5b69-122">這是 .NET Core 專案的"預設設置"規則。</span><span class="sxs-lookup"><span data-stu-id="b5b69-122">This is the "default settings" rule for .NET Core projects.</span></span>
-  
-  <span data-ttu-id="b5b69-123">範例：</span><span class="sxs-lookup"><span data-stu-id="b5b69-123">Examples:</span></span>
-  
-  <span data-ttu-id="b5b69-124">MyTypes.cs*和* *MyTypes.resx*或*MyTypes.fr-FR.resx*的檔存在於同一資料夾中。</span><span class="sxs-lookup"><span data-stu-id="b5b69-124">Files *MyTypes.cs* and *MyTypes.resx* or *MyTypes.fr-FR.resx* exist in the same folder.</span></span>
-  
-  <span data-ttu-id="b5b69-125">**生成的資源清單檔案名** *：Namespace.Classname.資源*或*Namespace.Classname.fr-FR.資源*（`Namespace.Classname`其中是*MyTypes.cs*中第一類的名稱）。</span><span class="sxs-lookup"><span data-stu-id="b5b69-125">**Generated resource manifest file name**: *Namespace.Classname.resources* or *Namespace.Classname.fr-FR.resources* (where `Namespace.Classname` is the name of the first class in *MyTypes.cs*).</span></span>
-
-- <span data-ttu-id="b5b69-126">如果上述規則都不適用，則生成的資源清單檔案名為*RootNamespace。\[文化。資源*.</span><span class="sxs-lookup"><span data-stu-id="b5b69-126">If none of the previous rules apply, the generated resource manifest file name is *RootNamespace.RelativePathWithDotsForSlashes.\[Culture.]resources*.</span></span> <span data-ttu-id="b5b69-127">相對路徑是`Link``EmbeddedResource`元素屬性的值（如果設置為）。</span><span class="sxs-lookup"><span data-stu-id="b5b69-127">The relative path is the value of the `Link` attribute of the `EmbeddedResource` element if it's set.</span></span> <span data-ttu-id="b5b69-128">否則，相對路徑是`Identity``EmbeddedResource`元素屬性的值。</span><span class="sxs-lookup"><span data-stu-id="b5b69-128">Otherwise, the relative path is the value of the `Identity` attribute of the `EmbeddedResource` element.</span></span> <span data-ttu-id="b5b69-129">在 Visual Studio 中，這是從專案根到解決方案資源管理器中檔的路徑。</span><span class="sxs-lookup"><span data-stu-id="b5b69-129">In Visual Studio, this is the path from the project root to the file in Solution Explorer.</span></span>
-
-#### <a name="recommended-action"></a><span data-ttu-id="b5b69-130">建議的動作</span><span class="sxs-lookup"><span data-stu-id="b5b69-130">Recommended action</span></span>
-
-<span data-ttu-id="b5b69-131">如果您對生成的清單名稱不滿意，您可以：</span><span class="sxs-lookup"><span data-stu-id="b5b69-131">If you're unsatisfied with the generated manifest names, you can:</span></span>
-
-- <span data-ttu-id="b5b69-132">根據前面描述的命名規則之一修改資源檔中繼資料。</span><span class="sxs-lookup"><span data-stu-id="b5b69-132">Modify your resource file metadata according to one of the previously described naming rules.</span></span>
-
-- <span data-ttu-id="b5b69-133">設置為`EmbeddedResourceUseDependentUponConvention``false`專案檔案中，以完全退出新約定：</span><span class="sxs-lookup"><span data-stu-id="b5b69-133">Set `EmbeddedResourceUseDependentUponConvention` to `false` in your project file to opt out of the new convention entirely:</span></span>
-
-   ```xml
-   <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
-   ```
-
-   > [!NOTE]
-   > <span data-ttu-id="b5b69-134">如果`LogicalName`或`ManifestResourceName`屬性存在，則其值仍將用於生成的檔案名。</span><span class="sxs-lookup"><span data-stu-id="b5b69-134">If the `LogicalName` or `ManifestResourceName` attributes are present, their values will still be used for the generated file name.</span></span>
-
-#### <a name="category"></a><span data-ttu-id="b5b69-135">類別</span><span class="sxs-lookup"><span data-stu-id="b5b69-135">Category</span></span>
-
-<span data-ttu-id="b5b69-136">MSBuild</span><span class="sxs-lookup"><span data-stu-id="b5b69-136">MSBuild</span></span>
-
-#### <a name="affected-apis"></a><span data-ttu-id="b5b69-137">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="b5b69-137">Affected APIs</span></span>
-
-<span data-ttu-id="b5b69-138">N/A</span><span class="sxs-lookup"><span data-stu-id="b5b69-138">N/A</span></span>
+<span data-ttu-id="50052-126">不適用</span><span class="sxs-lookup"><span data-stu-id="50052-126">N/A</span></span>
