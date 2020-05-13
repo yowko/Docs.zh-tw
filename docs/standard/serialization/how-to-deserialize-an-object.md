@@ -1,5 +1,6 @@
 ---
 title: 如何使用 XmlSerializer 還原序列化物件
+description: 瞭解如何還原序列化物件。 傳輸格式會決定是否要建立資料流程或檔案物件。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,22 +9,22 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: c24ba466a208fe5abdbf565169c41c4ee3f47482
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: e08ae0d77539219223650fd3bcbd1bcee4df2739
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559894"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379107"
 ---
-# <a name="how-to-deserialize-an-object-using-xmlserializer"></a><span data-ttu-id="09aea-102">如何使用 XmlSerializer 還原序列化物件</span><span class="sxs-lookup"><span data-stu-id="09aea-102">How to deserialize an object using XmlSerializer</span></span>
+# <a name="how-to-deserialize-an-object-using-xmlserializer"></a><span data-ttu-id="8e828-104">如何使用 XmlSerializer 還原序列化物件</span><span class="sxs-lookup"><span data-stu-id="8e828-104">How to deserialize an object using XmlSerializer</span></span>
 
-<span data-ttu-id="09aea-103">當您還原序列化物件時，傳輸格式決定您會建立資料流或檔案物件。</span><span class="sxs-lookup"><span data-stu-id="09aea-103">When you deserialize an object, the transport format determines whether you will create a stream or file object.</span></span> <span data-ttu-id="09aea-104">決定傳輸格式後，您可視需要呼叫 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 或 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="09aea-104">After the transport format is determined, you can call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> or <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> methods, as required.</span></span>
+<span data-ttu-id="8e828-105">當您還原序列化物件時，傳輸格式決定您會建立資料流或檔案物件。</span><span class="sxs-lookup"><span data-stu-id="8e828-105">When you deserialize an object, the transport format determines whether you will create a stream or file object.</span></span> <span data-ttu-id="8e828-106">決定傳輸格式後，您可視需要呼叫 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 或 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 方法。</span><span class="sxs-lookup"><span data-stu-id="8e828-106">After the transport format is determined, you can call the <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> or <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> methods, as required.</span></span>
 
-## <a name="to-deserialize-an-object"></a><span data-ttu-id="09aea-105">還原序列化物件</span><span class="sxs-lookup"><span data-stu-id="09aea-105">To deserialize an object</span></span>
+## <a name="to-deserialize-an-object"></a><span data-ttu-id="8e828-107">還原序列化物件</span><span class="sxs-lookup"><span data-stu-id="8e828-107">To deserialize an object</span></span>
 
-1. <span data-ttu-id="09aea-106">使用要還原序列化的物件型別，建構 <xref:System.Xml.Serialization.XmlSerializer>。</span><span class="sxs-lookup"><span data-stu-id="09aea-106">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object to deserialize.</span></span>
+1. <span data-ttu-id="8e828-108">使用要還原序列化的物件型別，建構 <xref:System.Xml.Serialization.XmlSerializer>。</span><span class="sxs-lookup"><span data-stu-id="8e828-108">Construct a <xref:System.Xml.Serialization.XmlSerializer> using the type of the object to deserialize.</span></span>
 
-1. <span data-ttu-id="09aea-107">呼叫 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 方法以產生物件的複本。</span><span class="sxs-lookup"><span data-stu-id="09aea-107">Call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method to produce a replica of the object.</span></span> <span data-ttu-id="09aea-108">還原序列化時，您必須將傳回的物件轉換為原始的類型，如下列範例所示，它會從檔案還原序列化物件（雖然也可以從資料流程還原序列化）。</span><span class="sxs-lookup"><span data-stu-id="09aea-108">When deserializing, you must cast the returned object to the type of the original, as shown in the following example, which deserializes the object from a file (although it could also be deserialized from a stream).</span></span>
+1. <span data-ttu-id="8e828-109">呼叫 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 方法以產生物件的複本。</span><span class="sxs-lookup"><span data-stu-id="8e828-109">Call the <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> method to produce a replica of the object.</span></span> <span data-ttu-id="8e828-110">還原序列化時，您必須將傳回的物件轉換為原始的類型，如下列範例所示，它會從檔案還原序列化物件（雖然也可以從資料流程還原序列化）。</span><span class="sxs-lookup"><span data-stu-id="8e828-110">When deserializing, you must cast the returned object to the type of the original, as shown in the following example, which deserializes the object from a file (although it could also be deserialized from a stream).</span></span>
 
     ```vb
     ' Construct an instance of the XmlSerializer with the type
@@ -46,7 +47,7 @@ ms.locfileid: "75559894"
     var myObject = (MySerializableClass) mySerializer.Deserialize(myFileStream)
     ```
 
-## <a name="see-also"></a><span data-ttu-id="09aea-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="09aea-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8e828-111">請參閱</span><span class="sxs-lookup"><span data-stu-id="8e828-111">See also</span></span>
 
-- [<span data-ttu-id="09aea-110">XML 序列化簡介</span><span class="sxs-lookup"><span data-stu-id="09aea-110">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)
-- [<span data-ttu-id="09aea-111">HOW TO：序列化物件</span><span class="sxs-lookup"><span data-stu-id="09aea-111">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)
+- [<span data-ttu-id="8e828-112">XML 序列化簡介</span><span class="sxs-lookup"><span data-stu-id="8e828-112">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)
+- [<span data-ttu-id="8e828-113">HOW TO：序列化物件</span><span class="sxs-lookup"><span data-stu-id="8e828-113">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)

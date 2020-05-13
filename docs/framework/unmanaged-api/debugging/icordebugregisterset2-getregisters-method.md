@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: dbc498a8-ba3f-42f2-bdd9-b623c77a1019
 topic_type:
 - apiref
-ms.openlocfilehash: 54a5fb50a0177fe9886582c112f16ce871ea9df4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b7a356d80d63fae65191bbf4fc0a23d7e02004c9
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792068"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378223"
 ---
-# <a name="icordebugregisterset2getregisters-method"></a><span data-ttu-id="20dca-102">ICorDebugRegisterSet2::GetRegisters 方法</span><span class="sxs-lookup"><span data-stu-id="20dca-102">ICorDebugRegisterSet2::GetRegisters Method</span></span>
-<span data-ttu-id="20dca-103">取得給定位元遮罩所指定之每個暫存器的值（適用于目前執行程式碼的平臺）。</span><span class="sxs-lookup"><span data-stu-id="20dca-103">Gets the value of each register (for the platform on which code is currently executing) that is specified by the given bit mask.</span></span>  
+# <a name="icordebugregisterset2getregisters-method"></a><span data-ttu-id="5e25c-102">ICorDebugRegisterSet2::GetRegisters 方法</span><span class="sxs-lookup"><span data-stu-id="5e25c-102">ICorDebugRegisterSet2::GetRegisters Method</span></span>
+<span data-ttu-id="5e25c-103">取得給定位元遮罩所指定之每個暫存器的值（適用于目前執行程式碼的平臺）。</span><span class="sxs-lookup"><span data-stu-id="5e25c-103">Gets the value of each register (for the platform on which code is currently executing) that is specified by the given bit mask.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="20dca-104">語法</span><span class="sxs-lookup"><span data-stu-id="20dca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5e25c-104">語法</span><span class="sxs-lookup"><span data-stu-id="5e25c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetRegisters (  
@@ -36,38 +36,38 @@ HRESULT GetRegisters (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="20dca-105">參數</span><span class="sxs-lookup"><span data-stu-id="20dca-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5e25c-105">參數</span><span class="sxs-lookup"><span data-stu-id="5e25c-105">Parameters</span></span>  
  `maskCount`  
- <span data-ttu-id="20dca-106">在`mask` 陣列的大小（以位元組為單位）。</span><span class="sxs-lookup"><span data-stu-id="20dca-106">[in] The size, in bytes, of the `mask` array.</span></span>  
+ <span data-ttu-id="5e25c-106">在陣列的大小（以位元組為單位） `mask` 。</span><span class="sxs-lookup"><span data-stu-id="5e25c-106">[in] The size, in bytes, of the `mask` array.</span></span>  
   
  `mask`  
- <span data-ttu-id="20dca-107">在位元組陣列，其中每個位對應至暫存器。</span><span class="sxs-lookup"><span data-stu-id="20dca-107">[in] An array of bytes, each bit of which corresponds to a register.</span></span> <span data-ttu-id="20dca-108">如果位為1，則會抓取對應的暫存器值。</span><span class="sxs-lookup"><span data-stu-id="20dca-108">If the bit is 1, the corresponding register's value will be retrieved.</span></span>  
+ <span data-ttu-id="5e25c-107">在位元組陣列，其中每個位對應至暫存器。</span><span class="sxs-lookup"><span data-stu-id="5e25c-107">[in] An array of bytes, each bit of which corresponds to a register.</span></span> <span data-ttu-id="5e25c-108">如果位為1，則會抓取對應的暫存器值。</span><span class="sxs-lookup"><span data-stu-id="5e25c-108">If the bit is 1, the corresponding register's value will be retrieved.</span></span>  
   
  `regCount`  
- <span data-ttu-id="20dca-109">在要抓取的暫存器值數目。</span><span class="sxs-lookup"><span data-stu-id="20dca-109">[in] The number of register values to be retrieved.</span></span>  
+ <span data-ttu-id="5e25c-109">在要抓取的暫存器值數目。</span><span class="sxs-lookup"><span data-stu-id="5e25c-109">[in] The number of register values to be retrieved.</span></span>  
   
  `regBuffer`  
- <span data-ttu-id="20dca-110">脫銷`CORDB_REGISTER` 物件的陣列，其中每一個都會接收暫存器的值。</span><span class="sxs-lookup"><span data-stu-id="20dca-110">[out] An array of `CORDB_REGISTER` objects, each of which receives the value of a register.</span></span>  
+ <span data-ttu-id="5e25c-110">脫銷物件的陣列 `CORDB_REGISTER` ，其中每一個都會接收暫存器的值。</span><span class="sxs-lookup"><span data-stu-id="5e25c-110">[out] An array of `CORDB_REGISTER` objects, each of which receives the value of a register.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="20dca-111">備註</span><span class="sxs-lookup"><span data-stu-id="20dca-111">Remarks</span></span>  
- <span data-ttu-id="20dca-112">`GetRegisters` 方法會從遮罩所指定的暫存器中傳回值的陣列。</span><span class="sxs-lookup"><span data-stu-id="20dca-112">The `GetRegisters` method returns an array of values from the registers that are specified by the mask.</span></span> <span data-ttu-id="20dca-113">陣列不包含未設定其 mask 位的暫存器值。</span><span class="sxs-lookup"><span data-stu-id="20dca-113">The array does not contain values of registers whose mask bit is not set.</span></span> <span data-ttu-id="20dca-114">因此，`regBuffer` 陣列的大小必須等於遮罩中的1。</span><span class="sxs-lookup"><span data-stu-id="20dca-114">Thus, the size of the `regBuffer` array must be equal to the number of 1's in the mask.</span></span> <span data-ttu-id="20dca-115">如果 `regCount` 的值太小，用於遮罩所指示的暫存器數目，則較高編號的暫存器值將會從集合中截斷。</span><span class="sxs-lookup"><span data-stu-id="20dca-115">If the value of `regCount` is too small for the number of registers indicated by the mask, the values of the higher numbered registers will be truncated from the set.</span></span> <span data-ttu-id="20dca-116">如果 `regCount` 太大，則不會修改未使用的 `regBuffer` 元素。</span><span class="sxs-lookup"><span data-stu-id="20dca-116">If `regCount` is too large, the unused `regBuffer` elements will be unmodified.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5e25c-111">備註</span><span class="sxs-lookup"><span data-stu-id="5e25c-111">Remarks</span></span>  
+ <span data-ttu-id="5e25c-112">`GetRegisters`方法會從遮罩所指定的暫存器中傳回值的陣列。</span><span class="sxs-lookup"><span data-stu-id="5e25c-112">The `GetRegisters` method returns an array of values from the registers that are specified by the mask.</span></span> <span data-ttu-id="5e25c-113">陣列不包含未設定其 mask 位的暫存器值。</span><span class="sxs-lookup"><span data-stu-id="5e25c-113">The array does not contain values of registers whose mask bit is not set.</span></span> <span data-ttu-id="5e25c-114">因此，陣列的大小 `regBuffer` 必須等於遮罩中的1。</span><span class="sxs-lookup"><span data-stu-id="5e25c-114">Thus, the size of the `regBuffer` array must be equal to the number of 1's in the mask.</span></span> <span data-ttu-id="5e25c-115">如果的值 `regCount` 太小，用於遮罩所指示的暫存器數目，則較高編號的暫存器值將會從集合中截斷。</span><span class="sxs-lookup"><span data-stu-id="5e25c-115">If the value of `regCount` is too small for the number of registers indicated by the mask, the values of the higher numbered registers will be truncated from the set.</span></span> <span data-ttu-id="5e25c-116">如果 `regCount` 太大，則不會修改未使用的 `regBuffer` 元素。</span><span class="sxs-lookup"><span data-stu-id="5e25c-116">If `regCount` is too large, the unused `regBuffer` elements will be unmodified.</span></span>  
   
- <span data-ttu-id="20dca-117">如果遮罩會指出無法使用的暫存器，則會傳回該暫存器的不定值。</span><span class="sxs-lookup"><span data-stu-id="20dca-117">If an unavailable register is indicated by the mask, an indeterminate value will be returned for that register.</span></span>  
+ <span data-ttu-id="5e25c-117">如果遮罩會指出無法使用的暫存器，則會傳回該暫存器的不定值。</span><span class="sxs-lookup"><span data-stu-id="5e25c-117">If an unavailable register is indicated by the mask, an indeterminate value will be returned for that register.</span></span>  
   
- <span data-ttu-id="20dca-118">若平臺具有64以上的暫存器，則需要 `ICorDebugRegisterSet2::GetRegisters` 方法。</span><span class="sxs-lookup"><span data-stu-id="20dca-118">The `ICorDebugRegisterSet2::GetRegisters` method is necessary for platforms which have more than 64 registers.</span></span> <span data-ttu-id="20dca-119">例如，IA64 具有128一般用途暫存器和128浮點暫存器，因此您在位元遮罩中需要超過64位。</span><span class="sxs-lookup"><span data-stu-id="20dca-119">For example, IA64 has 128 general purpose registers and 128 floating-point registers, so you need more than 64-bits in the bit mask.</span></span>  
+ <span data-ttu-id="5e25c-118">若平臺具有64以上的暫存器，則此為 `ICorDebugRegisterSet2::GetRegisters` 必要方法。</span><span class="sxs-lookup"><span data-stu-id="5e25c-118">The `ICorDebugRegisterSet2::GetRegisters` method is necessary for platforms which have more than 64 registers.</span></span> <span data-ttu-id="5e25c-119">例如，IA64 具有128一般用途暫存器和128浮點暫存器，因此您在位元遮罩中需要超過64位。</span><span class="sxs-lookup"><span data-stu-id="5e25c-119">For example, IA64 has 128 general purpose registers and 128 floating-point registers, so you need more than 64-bits in the bit mask.</span></span>  
   
- <span data-ttu-id="20dca-120">如果您沒有超過64暫存器（例如 x86 之類的平臺），`GetRegisters` 方法實際上只會將 `mask` 位元組陣列中的位元組轉譯成 `ULONG64`，然後呼叫[ICorDebugRegisterSet：： GetRegisters](icordebugregisterset-getregisters-method.md)方法，這會採用 `ULONG64` 遮罩。</span><span class="sxs-lookup"><span data-stu-id="20dca-120">If you do not have more than 64 registers, as is the case on platforms such as x86, the `GetRegisters` method actually just translates the bytes in the `mask` byte array into a `ULONG64` and then calls the [ICorDebugRegisterSet::GetRegisters](icordebugregisterset-getregisters-method.md) method, which takes the `ULONG64` mask.</span></span>  
+ <span data-ttu-id="5e25c-120">如果您沒有超過64暫存器（如 x86 之類的平臺）， `GetRegisters` 方法實際上只會將位元組陣列中的位元組轉譯 `mask` 成 `ULONG64` ，然後呼叫[ICorDebugRegisterSet：： GetRegisters](icordebugregisterset-getregisters-method.md)方法，它會採用 `ULONG64` 遮罩。</span><span class="sxs-lookup"><span data-stu-id="5e25c-120">If you do not have more than 64 registers, as is the case on platforms such as x86, the `GetRegisters` method actually just translates the bytes in the `mask` byte array into a `ULONG64` and then calls the [ICorDebugRegisterSet::GetRegisters](icordebugregisterset-getregisters-method.md) method, which takes the `ULONG64` mask.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="20dca-121">需求</span><span class="sxs-lookup"><span data-stu-id="20dca-121">Requirements</span></span>  
- <span data-ttu-id="20dca-122">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="20dca-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e25c-121">需求</span><span class="sxs-lookup"><span data-stu-id="5e25c-121">Requirements</span></span>  
+ <span data-ttu-id="5e25c-122">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5e25c-122">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="20dca-123">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="20dca-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="5e25c-123">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="5e25c-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="20dca-124">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="20dca-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5e25c-124">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5e25c-124">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="20dca-125">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="20dca-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5e25c-125">**.NET Framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5e25c-125">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="20dca-126">請參閱</span><span class="sxs-lookup"><span data-stu-id="20dca-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e25c-126">請參閱</span><span class="sxs-lookup"><span data-stu-id="5e25c-126">See also</span></span>
 
-- [<span data-ttu-id="20dca-127">ICorDebugRegisterSet2 介面</span><span class="sxs-lookup"><span data-stu-id="20dca-127">ICorDebugRegisterSet2 Interface</span></span>](icordebugregisterset2-interface.md)
-- [<span data-ttu-id="20dca-128">ICorDebugRegisterSet 介面</span><span class="sxs-lookup"><span data-stu-id="20dca-128">ICorDebugRegisterSet Interface</span></span>](icordebugregisterset-interface.md)
+- [<span data-ttu-id="5e25c-127">ICorDebugRegisterSet2 介面</span><span class="sxs-lookup"><span data-stu-id="5e25c-127">ICorDebugRegisterSet2 Interface</span></span>](icordebugregisterset2-interface.md)
+- [<span data-ttu-id="5e25c-128">ICorDebugRegisterSet 介面</span><span class="sxs-lookup"><span data-stu-id="5e25c-128">ICorDebugRegisterSet Interface</span></span>](icordebugregisterset-interface.md)
