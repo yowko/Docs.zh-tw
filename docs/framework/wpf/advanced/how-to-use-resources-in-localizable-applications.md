@@ -1,27 +1,34 @@
 ---
-title: HOW TO：在可當地語系化的應用程式中使用資源
+title: 如何：在可當地語系化的應用程式中使用資源
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applications [WPF], localizable
 - localizable applications [WPF]
 ms.assetid: 08539ad6-7fca-4f34-b82b-ff439e11dfa7
-ms.openlocfilehash: 3634bb72cbacfb02b0a1230a47a1664cb8ce5009
-ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.openlocfilehash: 8f516a86036656b98add23d38c588b5c19be4d7a
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68238468"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212471"
 ---
-# <a name="how-to-use-resources-in-localizable-applications"></a><span data-ttu-id="a7dc8-102">作法：在可當地語系化的應用程式中使用資源</span><span class="sxs-lookup"><span data-stu-id="a7dc8-102">How to: Use Resources in Localizable Applications</span></span>
-<span data-ttu-id="a7dc8-103">當地語系化表示適應[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]不同文化特性。</span><span class="sxs-lookup"><span data-stu-id="a7dc8-103">Localization means to adapt a [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] to different cultures.</span></span> <span data-ttu-id="a7dc8-104">若要執行這項操作，必須翻譯標題、說明文字、清單方塊項目等文字。</span><span class="sxs-lookup"><span data-stu-id="a7dc8-104">To do this, text such as titles, captions, list box items and so forth have to be translated.</span></span> <span data-ttu-id="a7dc8-105">為了簡化翻譯過程，會將要翻譯的項目收集到資源檔中。</span><span class="sxs-lookup"><span data-stu-id="a7dc8-105">To make translation easier the items to be translated are collected into resource files.</span></span> <span data-ttu-id="a7dc8-106">請參閱[將應用程式當地語系化](how-to-localize-an-application.md)如需如何建立當地語系化的資源檔的詳細資訊。</span><span class="sxs-lookup"><span data-stu-id="a7dc8-106">See [Localize an Application](how-to-localize-an-application.md) for information on how to create a resource file for localization.</span></span> <span data-ttu-id="a7dc8-107">若要讓[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式當地語系化，開發人員建置成資源組件的所有可當地語系化的資源。</span><span class="sxs-lookup"><span data-stu-id="a7dc8-107">To make a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application localizable, developers need to build all the localizable resources into a resource assembly.</span></span> <span data-ttu-id="a7dc8-108">資源組件已當地語系化成不同的語言和程式碼後置使用資源管理 API 來載入。</span><span class="sxs-lookup"><span data-stu-id="a7dc8-108">The resource assembly is localized into different languages, and the code-behind uses resource management API to load.</span></span> <span data-ttu-id="a7dc8-109">其中一個所需的檔案[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式是專案檔 (.proj)。</span><span class="sxs-lookup"><span data-stu-id="a7dc8-109">One of the files required for a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application is a project file (.proj).</span></span> <span data-ttu-id="a7dc8-110">專案檔案應該包含您在應用程式中使用的所有資源。</span><span class="sxs-lookup"><span data-stu-id="a7dc8-110">All resources that you use in your application should be included in the project file.</span></span> <span data-ttu-id="a7dc8-111">下列程式碼範例會顯示這點。</span><span class="sxs-lookup"><span data-stu-id="a7dc8-111">The following code example shows this.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="a7dc8-112">範例</span><span class="sxs-lookup"><span data-stu-id="a7dc8-112">Example</span></span>  
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]  
-  
- `<Resource Include="data\picture1.jpg"/>`  
-  
- `<EmbeddedResource Include="data\stringtable.en-US.restext"/>`  
-  
- <span data-ttu-id="a7dc8-113">若要在您的應用程式中使用資源，您具現化<xref:System.Resources.ResourceManager>並載入您想要使用的資源。</span><span class="sxs-lookup"><span data-stu-id="a7dc8-113">To use a resource in your application, you instantiate <xref:System.Resources.ResourceManager> and load the resource you want to use.</span></span> <span data-ttu-id="a7dc8-114">以下示範如何執行這項操作。</span><span class="sxs-lookup"><span data-stu-id="a7dc8-114">The following demonstrates how to do this.</span></span>  
-  
- [!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
+# <a name="how-to-use-resources-in-localizable-apps"></a><span data-ttu-id="d386e-102">如何：在可當地語系化的應用程式中使用資源</span><span class="sxs-lookup"><span data-stu-id="d386e-102">How to: Use resources in localizable apps</span></span>
+
+<span data-ttu-id="d386e-103">當地語系化是指將使用者介面調整成不同的文化特性。</span><span class="sxs-lookup"><span data-stu-id="d386e-103">Localization means to adapt a user interface to different cultures.</span></span> <span data-ttu-id="d386e-104">若要這樣做，您必須翻譯標題、標題和清單方塊專案等文字。</span><span class="sxs-lookup"><span data-stu-id="d386e-104">To do this, text such as titles, captions, and list box items must be translated.</span></span> <span data-ttu-id="d386e-105">為了讓翻譯變得更容易，要轉譯的專案會收集到資源檔中。</span><span class="sxs-lookup"><span data-stu-id="d386e-105">To make translation easier, the items to be translated are collected into resource files.</span></span> <span data-ttu-id="d386e-106">如需如何建立資源檔以進行當地語系化的詳細資訊，請參閱[當地語系化應用程式](how-to-localize-an-application.md)。</span><span class="sxs-lookup"><span data-stu-id="d386e-106">See [Localize an app](how-to-localize-an-application.md) for information on how to create a resource file for localization.</span></span> <span data-ttu-id="d386e-107">若要讓 WPF 應用程式當地語系化，開發人員需要將所有可當地語系化的資源建立到資源元件中。</span><span class="sxs-lookup"><span data-stu-id="d386e-107">To make a WPF application localizable, developers need to build all the localizable resources into a resource assembly.</span></span> <span data-ttu-id="d386e-108">資源元件已當地語系化成不同的語言，而程式碼後置使用資源管理 API 來載入。</span><span class="sxs-lookup"><span data-stu-id="d386e-108">The resource assembly is localized into different languages, and the code-behind uses resource management API to load.</span></span>
+
+## <a name="example"></a><span data-ttu-id="d386e-109">範例</span><span class="sxs-lookup"><span data-stu-id="d386e-109">Example</span></span>
+
+<span data-ttu-id="d386e-110">WPF 應用程式所需的其中一個檔案是專案檔（proj）。</span><span class="sxs-lookup"><span data-stu-id="d386e-110">One of the files required for a WPF application is a project file (.proj).</span></span> <span data-ttu-id="d386e-111">專案檔案應該包含您在應用程式中使用的所有資源。</span><span class="sxs-lookup"><span data-stu-id="d386e-111">All resources that you use in your application should be included in the project file.</span></span> <span data-ttu-id="d386e-112">下列 XAML 範例顯示這種情況。</span><span class="sxs-lookup"><span data-stu-id="d386e-112">The following XAML example shows this.</span></span>
+
+```xaml
+<Resource Include="data\picture1.jpg"/>  
+<EmbeddedResource Include="data\stringtable.en-US.restext"/>
+```
+
+<span data-ttu-id="d386e-113">若要在您的應用程式中使用資源，請具現化 <xref:System.Resources.ResourceManager> 並載入您要使用的資源。</span><span class="sxs-lookup"><span data-stu-id="d386e-113">To use a resource in your application, instantiate <xref:System.Resources.ResourceManager> and load the resource you want to use.</span></span> <span data-ttu-id="d386e-114">下列 c # 程式碼示範如何執行這項操作。</span><span class="sxs-lookup"><span data-stu-id="d386e-114">The following C# code demonstrates how to do this.</span></span>
+
+[!code-csharp[LocalizationResources#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationResources/CSharp/page1.xaml.cs#2)]
+
+## <a name="see-also"></a><span data-ttu-id="d386e-115">請參閱</span><span class="sxs-lookup"><span data-stu-id="d386e-115">See also</span></span>
+
+- [<span data-ttu-id="d386e-116">將應用程式當地語系化</span><span class="sxs-lookup"><span data-stu-id="d386e-116">Localize an app</span></span>](how-to-localize-an-application.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b1edba68-9c36-4f69-be9f-678ce0b33480
 topic_type:
 - apiref
-ms.openlocfilehash: 8070b0693b5718ad8b4cbeb9bf5792cb7f4a0a85
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 50b0859d6727a25906f2c8b0f3fe96da228ab886
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792396"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213552"
 ---
-# <a name="icordebugprocess5enumerateheapregions-method"></a><span data-ttu-id="a3cc4-102">ICorDebugProcess5::EnumerateHeapRegions 方法</span><span class="sxs-lookup"><span data-stu-id="a3cc4-102">ICorDebugProcess5::EnumerateHeapRegions Method</span></span>
-<span data-ttu-id="a3cc4-103">取得 managed 堆積記憶體範圍的列舉值。</span><span class="sxs-lookup"><span data-stu-id="a3cc4-103">Gets an enumerator for the memory ranges of the managed heap.</span></span>  
+# <a name="icordebugprocess5enumerateheapregions-method"></a><span data-ttu-id="4d8c1-102">ICorDebugProcess5::EnumerateHeapRegions 方法</span><span class="sxs-lookup"><span data-stu-id="4d8c1-102">ICorDebugProcess5::EnumerateHeapRegions Method</span></span>
+<span data-ttu-id="4d8c1-103">取得 managed 堆積記憶體範圍的列舉值。</span><span class="sxs-lookup"><span data-stu-id="4d8c1-103">Gets an enumerator for the memory ranges of the managed heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a3cc4-104">語法</span><span class="sxs-lookup"><span data-stu-id="a3cc4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d8c1-104">語法</span><span class="sxs-lookup"><span data-stu-id="4d8c1-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumerateHeapRegions(  
@@ -33,27 +33,27 @@ HRESULT EnumerateHeapRegions(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a3cc4-105">參數</span><span class="sxs-lookup"><span data-stu-id="a3cc4-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4d8c1-105">參數</span><span class="sxs-lookup"><span data-stu-id="4d8c1-105">Parameters</span></span>  
  `ppRegions`  
- <span data-ttu-id="a3cc4-106">脫銷[ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)介面物件之位址的指標，這是物件位於 managed 堆積中的記憶體範圍的列舉值。</span><span class="sxs-lookup"><span data-stu-id="a3cc4-106">[out] A pointer to the address of an [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md) interface object that is an enumerator for the ranges of memory in which objects reside in the managed heap.</span></span>  
+ <span data-ttu-id="4d8c1-106">脫銷[ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)介面物件之位址的指標，這是物件位於 managed 堆積中的記憶體範圍的列舉值。</span><span class="sxs-lookup"><span data-stu-id="4d8c1-106">[out] A pointer to the address of an [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md) interface object that is an enumerator for the ranges of memory in which objects reside in the managed heap.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a3cc4-107">備註</span><span class="sxs-lookup"><span data-stu-id="a3cc4-107">Remarks</span></span>  
- <span data-ttu-id="a3cc4-108">在呼叫 `ICorDebugProcess5::EnumerateHeapRegions` 方法之前，您應該呼叫[ICorDebugProcess5：： GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md)方法，並檢查所傳回[COR_HEAPINFO](cor-heapinfo-structure.md)物件的 `areGCStructuresValid` 欄位值，以確保其目前狀態中的垃圾收集堆積是可列舉的。</span><span class="sxs-lookup"><span data-stu-id="a3cc4-108">Before calling the `ICorDebugProcess5::EnumerateHeapRegions` method, you should call the [ICorDebugProcess5::GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) method and examine the value of the `areGCStructuresValid` field of the returned [COR_HEAPINFO](cor-heapinfo-structure.md) object to ensure that the garbage collection heap in its current state is enumerable.</span></span> <span data-ttu-id="a3cc4-109">此外，如果您在進程的存留期間過早附加記憶體區域，則 `ICorDebugProcess5::EnumerateHeapRegions` 方法會傳回 `E_FAIL`。</span><span class="sxs-lookup"><span data-stu-id="a3cc4-109">In addition, the `ICorDebugProcess5::EnumerateHeapRegions` method returns `E_FAIL` if you attach too early in the lifetime of the process, before memory regions are created.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4d8c1-107">備註</span><span class="sxs-lookup"><span data-stu-id="4d8c1-107">Remarks</span></span>  
+ <span data-ttu-id="4d8c1-108">呼叫方法之前 `ICorDebugProcess5::EnumerateHeapRegions` ，您應該呼叫[ICorDebugProcess5：： GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md)方法，並檢查 `areGCStructuresValid` 所傳回[COR_HEAPINFO](cor-heapinfo-structure.md)物件之欄位的值，以確保其目前狀態中的垃圾收集堆積是可列舉的。</span><span class="sxs-lookup"><span data-stu-id="4d8c1-108">Before calling the `ICorDebugProcess5::EnumerateHeapRegions` method, you should call the [ICorDebugProcess5::GetGCHeapInformation](icordebugprocess5-getgcheapinformation-method.md) method and examine the value of the `areGCStructuresValid` field of the returned [COR_HEAPINFO](cor-heapinfo-structure.md) object to ensure that the garbage collection heap in its current state is enumerable.</span></span> <span data-ttu-id="4d8c1-109">此外， `ICorDebugProcess5::EnumerateHeapRegions` `E_FAIL` 如果您在進程的存留期間內過早附加，則在建立記憶體區域之前，方法會傳回。</span><span class="sxs-lookup"><span data-stu-id="4d8c1-109">In addition, the `ICorDebugProcess5::EnumerateHeapRegions` method returns `E_FAIL` if you attach too early in the lifetime of the process, before memory regions are created.</span></span>  
   
- <span data-ttu-id="a3cc4-110">這個方法一定會列舉可能包含 managed 物件的所有記憶體區域，但不保證 managed 物件實際上位於這些區域中。</span><span class="sxs-lookup"><span data-stu-id="a3cc4-110">This method is guaranteed to enumerate all memory regions that may contain managed objects, but it does not guarantee that managed objects actually reside in those regions.</span></span> <span data-ttu-id="a3cc4-111">[ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)集合物件可能包含空的或保留的記憶體區域。</span><span class="sxs-lookup"><span data-stu-id="a3cc4-111">The [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md) collection object may include empty or reserved memory regions.</span></span>  
+ <span data-ttu-id="4d8c1-110">這個方法一定會列舉可能包含 managed 物件的所有記憶體區域，但不保證 managed 物件實際上位於這些區域中。</span><span class="sxs-lookup"><span data-stu-id="4d8c1-110">This method is guaranteed to enumerate all memory regions that may contain managed objects, but it does not guarantee that managed objects actually reside in those regions.</span></span> <span data-ttu-id="4d8c1-111">[ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)集合物件可能包含空的或保留的記憶體區域。</span><span class="sxs-lookup"><span data-stu-id="4d8c1-111">The [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md) collection object may include empty or reserved memory regions.</span></span>  
   
- <span data-ttu-id="a3cc4-112">[ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)介面物件是衍生自 ICorDebugEnum 介面的標準列舉值，可讓您列舉[COR_SEGMENT](cor-segment-structure.md)物件。</span><span class="sxs-lookup"><span data-stu-id="a3cc4-112">The [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md) interface object is a standard enumerator derived from the ICorDebugEnum interface that allows you to enumerate [COR_SEGMENT](cor-segment-structure.md) objects.</span></span> <span data-ttu-id="a3cc4-113">每個[COR_SEGMENT](cor-segment-structure.md)物件都會提供特定區段之記憶體範圍的相關資訊，以及該區段中的物件產生。</span><span class="sxs-lookup"><span data-stu-id="a3cc4-113">Each [COR_SEGMENT](cor-segment-structure.md) object provides information about the memory range of a particular segment, along with the generation of the objects in that segment.</span></span>  
+ <span data-ttu-id="4d8c1-112">[ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)介面物件是衍生自 ICorDebugEnum 介面的標準列舉值，可讓您列舉[COR_SEGMENT](cor-segment-structure.md)物件。</span><span class="sxs-lookup"><span data-stu-id="4d8c1-112">The [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md) interface object is a standard enumerator derived from the ICorDebugEnum interface that allows you to enumerate [COR_SEGMENT](cor-segment-structure.md) objects.</span></span> <span data-ttu-id="4d8c1-113">每個[COR_SEGMENT](cor-segment-structure.md)物件都會提供特定區段之記憶體範圍的相關資訊，以及該區段中的物件產生。</span><span class="sxs-lookup"><span data-stu-id="4d8c1-113">Each [COR_SEGMENT](cor-segment-structure.md) object provides information about the memory range of a particular segment, along with the generation of the objects in that segment.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a3cc4-114">需求</span><span class="sxs-lookup"><span data-stu-id="a3cc4-114">Requirements</span></span>  
- <span data-ttu-id="a3cc4-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a3cc4-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4d8c1-114">需求</span><span class="sxs-lookup"><span data-stu-id="4d8c1-114">Requirements</span></span>  
+ <span data-ttu-id="4d8c1-115">**平台：** 請參閱[系統需求](../../get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4d8c1-115">**Platforms:** See [System Requirements](../../get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a3cc4-116">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a3cc4-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4d8c1-116">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4d8c1-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a3cc4-117">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a3cc4-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4d8c1-117">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4d8c1-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="a3cc4-118">**.NET framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a3cc4-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ <span data-ttu-id="4d8c1-118">**.NET Framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d8c1-118">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a3cc4-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="a3cc4-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4d8c1-119">請參閱</span><span class="sxs-lookup"><span data-stu-id="4d8c1-119">See also</span></span>
 
-- [<span data-ttu-id="a3cc4-120">ICorDebugProcess5 介面</span><span class="sxs-lookup"><span data-stu-id="a3cc4-120">ICorDebugProcess5 Interface</span></span>](icordebugprocess5-interface.md)
-- [<span data-ttu-id="a3cc4-121">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="a3cc4-121">Debugging Interfaces</span></span>](debugging-interfaces.md)
+- [<span data-ttu-id="4d8c1-120">ICorDebugProcess5 介面</span><span class="sxs-lookup"><span data-stu-id="4d8c1-120">ICorDebugProcess5 Interface</span></span>](icordebugprocess5-interface.md)
+- [<span data-ttu-id="4d8c1-121">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="4d8c1-121">Debugging Interfaces</span></span>](debugging-interfaces.md)
